@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/internal/os/KernelAllocationStats$ProcessDmabuf;
 
     invoke-static {p1}, Lcom/android/server/am/pmm/DmaBufLeakDetector;->$r8$lambda$L1ctvSx_CP27YiqPQ2XtxKQjGpY(Lcom/android/internal/os/KernelAllocationStats$ProcessDmabuf;)I

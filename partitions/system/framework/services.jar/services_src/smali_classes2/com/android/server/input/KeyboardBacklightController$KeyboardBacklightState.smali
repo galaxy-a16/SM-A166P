@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBrightnessLevel(Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightState;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightState;->mBrightnessLevel:I
 
     return p0
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLight(Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightState;)Landroid/hardware/lights/Light;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightState;->mLight:Landroid/hardware/lights/Light;
 
     return-object p0
@@ -31,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fputmBrightnessLevel(Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightState;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightState;->mBrightnessLevel:I
 
     return-void
@@ -40,10 +37,8 @@
 .method public constructor <init>(Landroid/hardware/lights/Light;)V
     .locals 0
 
-    .line 485
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 486
     iput-object p1, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightState;->mLight:Landroid/hardware/lights/Light;
 
     return-void
@@ -54,7 +49,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 491
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

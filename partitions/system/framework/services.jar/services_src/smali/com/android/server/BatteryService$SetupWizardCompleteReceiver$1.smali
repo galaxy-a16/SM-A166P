@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService$SetupWizardCompleteReceiver;)V
     .locals 0
 
-    .line 1968
     iput-object p1, p0, Lcom/android/server/BatteryService$SetupWizardCompleteReceiver$1;->this$1:Lcom/android/server/BatteryService$SetupWizardCompleteReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 0
 
-    .line 1971
     iget-object p0, p0, Lcom/android/server/BatteryService$SetupWizardCompleteReceiver$1;->this$1:Lcom/android/server/BatteryService$SetupWizardCompleteReceiver;
 
     iget-object p0, p0, Lcom/android/server/BatteryService$SetupWizardCompleteReceiver;->this$0:Lcom/android/server/BatteryService;

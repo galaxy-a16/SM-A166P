@@ -16,13 +16,10 @@
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcom/android/server/permission/jarjar/kotlin/Pair;->first:Ljava/lang/Object;
 
-    .line 28
     iput-object p2, p0, Lcom/android/server/permission/jarjar/kotlin/Pair;->second:Ljava/lang/Object;
 
     return-void
@@ -33,7 +30,6 @@
 .method public final component1()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/permission/jarjar/kotlin/Pair;->first:Ljava/lang/Object;
 
     return-object p0
@@ -42,7 +38,6 @@
 .method public final component2()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/permission/jarjar/kotlin/Pair;->second:Ljava/lang/Object;
 
     return-object p0
@@ -51,7 +46,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 0
     const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
@@ -102,7 +96,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/permission/jarjar/kotlin/Pair;->first:Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -141,7 +134,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

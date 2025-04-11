@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 64
     invoke-direct {p0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public mayGrantPermission()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

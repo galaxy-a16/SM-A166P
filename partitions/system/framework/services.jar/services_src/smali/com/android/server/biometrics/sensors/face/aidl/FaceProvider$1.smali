@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;I)V
     .locals 0
 
-    .line 225
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;
 
     iput p2, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider$1;->val$sensorId:I
@@ -28,7 +27,6 @@
 .method public onUserSwitching(I)V
     .locals 3
 
-    .line 229
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;->-$$Nest$mgetTag(Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;)Ljava/lang/String;
@@ -51,7 +49,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;->-$$Nest$fgetmIsFirstOnUserSwitching(Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;)Ljava/lang/Boolean;
@@ -64,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 231
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -73,7 +69,6 @@
 
     if-nez p1, :cond_0
 
-    .line 233
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;->-$$Nest$mgetTag(Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;)Ljava/lang/String;
@@ -86,7 +81,6 @@
 
     return-void
 
-    .line 237
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;
 

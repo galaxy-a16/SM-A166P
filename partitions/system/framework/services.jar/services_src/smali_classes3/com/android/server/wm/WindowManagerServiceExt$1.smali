@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerServiceExt;)V
     .locals 0
 
-    .line 123
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerServiceExt$1;->this$0:Lcom/android/server/wm/WindowManagerServiceExt;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

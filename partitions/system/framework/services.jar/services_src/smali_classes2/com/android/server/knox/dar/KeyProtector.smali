@@ -11,14 +11,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .line 32
     invoke-direct {p0}, Lcom/android/server/knox/dar/KeyProtectorBase;-><init>()V
 
     return-void
@@ -27,30 +25,25 @@
 .method public static getInstance()Lcom/android/server/knox/dar/KeyProtector;
     .locals 2
 
-    .line 36
     sget-object v0, Lcom/android/server/knox/dar/KeyProtector;->sInstance:Lcom/android/server/knox/dar/KeyProtector;
 
     if-nez v0, :cond_1
 
-    .line 37
     const-class v0, Lcom/android/server/knox/dar/KeyProtector;
 
     monitor-enter v0
 
-    .line 38
     :try_start_0
     sget-object v1, Lcom/android/server/knox/dar/KeyProtector;->sInstance:Lcom/android/server/knox/dar/KeyProtector;
 
     if-nez v1, :cond_0
 
-    .line 39
     new-instance v1, Lcom/android/server/knox/dar/KeyProtector;
 
     invoke-direct {v1}, Lcom/android/server/knox/dar/KeyProtector;-><init>()V
 
     sput-object v1, Lcom/android/server/knox/dar/KeyProtector;->sInstance:Lcom/android/server/knox/dar/KeyProtector;
 
-    .line 41
     :cond_0
     monitor-exit v0
 
@@ -65,7 +58,6 @@
 
     throw v1
 
-    .line 43
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/server/knox/dar/KeyProtector;->sInstance:Lcom/android/server/knox/dar/KeyProtector;
@@ -80,7 +72,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 301
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,7 +106,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 202
     array-length v1, p1
 
     const/16 v2, 0x20
@@ -131,20 +121,17 @@
 
     const/16 v2, 0xc
 
-    .line 209
     :try_start_0
     invoke-static {p2, v1, v2}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v1
 
-    .line 210
     array-length v3, p2
 
     invoke-static {p2, v2, v3}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object p2
 
-    .line 211
     new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string v3, "AES"
@@ -153,12 +140,10 @@
 
     const-string p1, "AES/GCM/NoPadding"
 
-    .line 212
     invoke-static {p1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object p1
 
-    .line 216
     new-instance v3, Ljavax/crypto/spec/GCMParameterSpec;
 
     const/16 v4, 0x80
@@ -169,7 +154,6 @@
 
     invoke-virtual {p1, v1, v2, v3}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 217
     invoke-virtual {p1, p2}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object p0
@@ -183,10 +167,8 @@
 
     const-string p2, "fast decryption - Unexpected error"
 
-    .line 219
     invoke-static {v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -196,7 +178,6 @@
     :goto_1
     const-string p1, "fast decryption - Only supported for 32-bytes key"
 
-    .line 203
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
@@ -205,12 +186,10 @@
 .method public delete(Ljava/lang/String;I)Z
     .locals 7
 
-    .line 151
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/KeyProtector;->attach(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 153
     invoke-virtual {p0, v0}, Lcom/android/server/knox/dar/KeyProtectorBase;->checkSecretKey(Ljava/lang/String;)Z
 
     move-result v1
@@ -244,7 +223,6 @@
     :goto_0
     move v0, v3
 
-    .line 154
     :goto_1
     invoke-virtual {p0, p2, p1}, Lcom/android/server/knox/dar/KeyProtector;->deleteFile(ILjava/lang/String;)Z
 
@@ -254,7 +232,6 @@
 
     if-nez v0, :cond_2
 
-    .line 157
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -278,7 +255,6 @@
     :cond_2
     if-nez v1, :cond_3
 
-    .line 160
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,12 +289,10 @@
 .method public final deleteFile(ILjava/lang/String;)Z
     .locals 1
 
-    .line 284
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 285
     invoke-static {p1}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v0
@@ -349,7 +323,6 @@
 
     move-result-object p0
 
-    .line 287
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -368,19 +341,16 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 289
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 291
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
@@ -393,7 +363,6 @@
     :catch_0
     move-exception p0
 
-    .line 293
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -412,7 +381,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 175
     array-length v1, p1
 
     const/16 v2, 0x20
@@ -421,7 +389,6 @@
 
     goto :goto_2
 
-    .line 181
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/ByteArrayOutputStream;
@@ -430,7 +397,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 182
     :try_start_1
     new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -440,40 +406,32 @@
 
     const-string p1, "AES/GCM/NoPadding"
 
-    .line 183
     invoke-static {p1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object p1
 
     const/4 v3, 0x1
 
-    .line 187
     invoke-virtual {p1, v3, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 188
     invoke-virtual {p1, p2}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object p2
 
-    .line 189
     invoke-virtual {p1}, Ljavax/crypto/Cipher;->getIV()[B
 
     move-result-object p1
 
-    .line 191
     invoke-virtual {v1, p1}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 192
     invoke-virtual {v1, p2}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 193
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 194
     :try_start_2
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_2
@@ -484,7 +442,6 @@
     :catchall_0
     move-exception p1
 
-    .line 181
     :try_start_3
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_3
@@ -508,10 +465,8 @@
 
     const-string p2, "fast encryption - Unexpected error"
 
-    .line 195
     invoke-static {v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -521,7 +476,6 @@
     :goto_2
     const-string p1, "fast encryption - Only supported for 32-bytes key"
 
-    .line 176
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
@@ -530,19 +484,16 @@
 .method public exists(Ljava/lang/String;I)Z
     .locals 1
 
-    .line 167
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/KeyProtector;->attach(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 168
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/KeyProtectorBase;->checkSecretKey(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 169
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -582,13 +533,11 @@
 
     goto/16 :goto_1
 
-    .line 58
     :cond_0
     invoke-virtual {p0, p2, p3}, Lcom/android/server/knox/dar/KeyProtector;->attach(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 60
     :try_start_0
     invoke-virtual {p0, v2}, Lcom/android/server/knox/dar/KeyProtectorBase;->setSecretKey(Ljava/lang/String;)Z
 
@@ -596,36 +545,30 @@
 
     if-eqz v3, :cond_4
 
-    .line 61
     invoke-virtual {p0, v2}, Lcom/android/server/knox/dar/KeyProtectorBase;->getSecretKey(Ljava/lang/String;)Ljavax/crypto/SecretKey;
 
     move-result-object v3
 
     const-string v4, "AES/GCM/NoPadding"
 
-    .line 62
     invoke-static {v4}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v4
 
     const/4 v5, 0x1
 
-    .line 65
     invoke-virtual {v4, v5, v3}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 66
     invoke-virtual {v4, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object p1
 
-    .line 67
     invoke-virtual {v4}, Ljavax/crypto/Cipher;->getIV()[B
 
     move-result-object v2
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 83
     new-instance v3, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v3}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -636,7 +579,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_1
     array-length v4, v2
 
@@ -645,7 +587,6 @@
 
     if-eq v4, v6, :cond_2
 
-    .line 87
     :try_start_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -663,21 +604,17 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     invoke-virtual {p0, p2, p3}, Lcom/android/server/knox/dar/KeyProtector;->delete(Ljava/lang/String;I)Z
 
     return v1
 
-    .line 94
     :cond_2
     invoke-virtual {v3, v2}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 95
     invoke-virtual {v3, p1}, Ljava/io/ByteArrayOutputStream;->write([B)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 103
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p1
@@ -690,10 +627,8 @@
 
     const-string p1, "Failed to write into file..."
 
-    .line 104
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     invoke-virtual {p0, p2, p3}, Lcom/android/server/knox/dar/KeyProtector;->delete(Ljava/lang/String;I)Z
 
     return v1
@@ -701,7 +636,6 @@
     :cond_3
     const-string p0, "Successfully wrote into file!"
 
-    .line 112
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v5
@@ -711,18 +645,14 @@
 
     const-string v2, "Failed to concatenate byte arrays"
 
-    .line 97
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 99
     invoke-virtual {p0, p2, p3}, Lcom/android/server/knox/dar/KeyProtector;->delete(Ljava/lang/String;I)Z
 
     return v1
 
-    .line 69
     :cond_4
     :try_start_2
     new-instance p1, Ljava/lang/Exception;
@@ -738,10 +668,8 @@
     :catch_1
     move-exception p1
 
-    .line 72
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 76
     invoke-virtual {p0, v2}, Lcom/android/server/knox/dar/KeyProtectorBase;->deleteSecretKey(Ljava/lang/String;)Z
 
     return v1
@@ -750,7 +678,6 @@
     :goto_1
     const-string p0, "Wrong input parameter..."
 
-    .line 51
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -759,12 +686,10 @@
 .method public final readFile(ILjava/lang/String;)[B
     .locals 2
 
-    .line 226
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 227
     invoke-static {p1}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v0
@@ -795,7 +720,6 @@
 
     move-result-object p0
 
-    .line 229
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -814,12 +738,10 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 234
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -828,7 +750,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 236
     :try_start_0
     new-instance p0, Ljava/io/FileInputStream;
 
@@ -838,23 +759,19 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 237
     :try_start_1
     invoke-virtual {p0}, Ljava/io/FileInputStream;->available()I
 
     move-result p1
 
-    .line 238
     new-array p2, p1, [B
 
-    .line 239
     invoke-virtual {p0, p2}, Ljava/io/FileInputStream;->read([B)I
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 247
     :try_start_2
     invoke-virtual {p0}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -901,7 +818,6 @@
 
     move-object p0, p2
 
-    .line 243
     :goto_0
     :try_start_3
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
@@ -915,7 +831,6 @@
 
     move-object p0, p2
 
-    .line 241
     :goto_1
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_3
@@ -923,7 +838,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 247
     :goto_2
     :try_start_4
     invoke-virtual {p2}, Ljava/io/FileInputStream;->close()V
@@ -944,7 +858,6 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 250
     :catch_5
     :cond_1
     throw p1
@@ -958,7 +871,6 @@
 .method public release(Ljava/lang/String;I)[B
     .locals 5
 
-    .line 122
     invoke-virtual {p0, p2, p1}, Lcom/android/server/knox/dar/KeyProtector;->readFile(ILjava/lang/String;)[B
 
     move-result-object v0
@@ -971,13 +883,11 @@
 
     const/16 v3, 0xc
 
-    .line 125
     :try_start_0
     invoke-static {v0, v2, v3}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v2
 
-    .line 126
     array-length v4, v0
 
     invoke-static {v0, v3, v4}, Ljava/util/Arrays;->copyOfRange([BII)[B
@@ -986,12 +896,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 133
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/KeyProtector;->attach(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 135
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/KeyProtectorBase;->getSecretKey(Ljava/lang/String;)Ljavax/crypto/SecretKey;
 
@@ -999,12 +907,10 @@
 
     const-string p1, "AES/GCM/NoPadding"
 
-    .line 136
     invoke-static {p1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object p1
 
-    .line 140
     new-instance p2, Ljavax/crypto/spec/GCMParameterSpec;
 
     const/16 v3, 0x80
@@ -1015,7 +921,6 @@
 
     invoke-virtual {p1, v2, p0, p2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 141
     invoke-virtual {p1, v0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object v1
@@ -1027,7 +932,6 @@
     :catch_0
     move-exception p0
 
-    .line 143
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -1039,10 +943,8 @@
 
     const-string p2, "Failed in copying array..."
 
-    .line 128
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -1053,12 +955,10 @@
 .method public final writeToFile(ILjava/lang/String;[B)Z
     .locals 1
 
-    .line 257
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 258
     invoke-static {p1}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v0
@@ -1089,7 +989,6 @@
 
     move-result-object p0
 
-    .line 260
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1108,14 +1007,12 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
-    .line 264
     :try_start_0
     new-instance p2, Ljava/io/FileOutputStream;
 
@@ -1125,18 +1022,15 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 265
     :try_start_1
     invoke-virtual {p2, p3}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 266
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->flush()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 275
     :try_start_2
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -1173,7 +1067,6 @@
 
     move-object p0, p1
 
-    .line 271
     :goto_0
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -1182,7 +1075,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 275
     :goto_1
     :try_start_4
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
@@ -1198,7 +1090,6 @@
 
     move-object p0, p1
 
-    .line 269
     :goto_2
     :try_start_5
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
@@ -1223,13 +1114,11 @@
     :goto_5
     if-eqz p2, :cond_1
 
-    .line 275
     :try_start_6
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_6
 
-    .line 278
     :catch_6
     :cond_1
     throw p0

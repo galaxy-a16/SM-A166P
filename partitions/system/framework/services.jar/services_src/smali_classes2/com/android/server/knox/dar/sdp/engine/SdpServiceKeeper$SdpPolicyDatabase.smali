@@ -7,7 +7,6 @@
 .method public static bridge synthetic -$$Nest$mgetPolicyLocked(Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->getPolicyLocked(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;
 
     move-result-object p0
@@ -18,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$mputPolicyLocked(Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->putPolicyLocked(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;)I
 
     move-result p0
@@ -29,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$mremovePolicyLocked(Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->removePolicyLocked(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)V
 
     return-void
@@ -38,7 +35,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 549
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +43,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -58,12 +53,10 @@
 .method public final byteToHex([B)Ljava/lang/String;
     .locals 4
 
-    .line 850
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 851
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -73,7 +66,6 @@
 
     aget-byte v2, p1, v1
 
-    .line 852
     invoke-static {v2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v2
@@ -94,7 +86,6 @@
 
     goto :goto_0
 
-    .line 853
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -112,13 +103,11 @@
 
     const/4 v1, 0x0
 
-    .line 785
     :try_start_0
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v2
 
-    .line 786
     new-instance v3, Ljava/io/FileInputStream;
 
     invoke-direct {v3, p2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -133,7 +122,6 @@
     :try_start_1
     new-array p2, p2, [B
 
-    .line 790
     :goto_0
     invoke-virtual {v3, p2}, Ljava/io/FileInputStream;->read([B)I
 
@@ -145,23 +133,19 @@
 
     const/4 v5, 0x0
 
-    .line 791
     invoke-virtual {v2, p2, v5, v4}, Ljava/security/MessageDigest;->update([BII)V
 
     goto :goto_0
 
-    .line 794
     :cond_0
     invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p2
 
-    .line 798
     array-length v2, p2
 
     if-lez v2, :cond_1
 
-    .line 799
     invoke-virtual {p0, p2}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->byteToHex([B)Ljava/lang/String;
 
     move-result-object p0
@@ -173,7 +157,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 811
     :cond_1
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
@@ -185,7 +168,6 @@
     :catch_0
     move-exception p0
 
-    .line 814
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -211,7 +193,6 @@
 
     move-object v3, v1
 
-    .line 807
     :goto_2
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -220,7 +201,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 811
     :try_start_4
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_4
@@ -231,7 +211,6 @@
     :catch_4
     move-exception p0
 
-    .line 814
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_4
@@ -252,17 +231,14 @@
     :try_start_5
     const-string p2, "File Not found..."
 
-    .line 804
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 805
     invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     if-eqz v3, :cond_2
 
-    .line 811
     :try_start_6
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_6
@@ -273,7 +249,6 @@
     :catch_6
     move-object v3, v1
 
-    .line 802
     :catch_7
     :try_start_7
     new-instance p0, Ljava/lang/StringBuilder;
@@ -296,7 +271,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 811
     :try_start_8
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_8
@@ -319,10 +293,8 @@
     :catch_8
     move-exception p1
 
-    .line 814
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 816
     :cond_3
     :goto_6
     throw p0
@@ -337,7 +309,6 @@
 
     const/4 p1, 0x0
 
-    .line 840
     invoke-static {p0, p1}, Ljava/util/Arrays;->fill([BB)V
 
     return-object p0
@@ -346,19 +317,16 @@
 .method public final getPolicyLocked(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;
     .locals 7
 
-    .line 557
     new-instance v0, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;
 
     invoke-direct {v0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;-><init>(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)V
 
-    .line 559
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->loadHash(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)[B
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 562
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->getPolicyXmlFile(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)Ljava/io/File;
 
@@ -371,7 +339,6 @@
     :catch_0
     move-exception v3
 
-    .line 564
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     move-object v3, v2
@@ -385,7 +352,6 @@
 
     goto :goto_2
 
-    .line 575
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->generateSalt(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)[B
 
@@ -397,7 +363,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 578
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -418,7 +383,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 579
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -439,7 +403,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :cond_1
     invoke-static {p1, v1}, Ljava/util/Arrays;->equals([B[B)Z
 
@@ -449,12 +412,10 @@
 
     const-string p0, "Policy file tempered!"
 
-    .line 583
     invoke-static {v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
 
-    .line 587
     :cond_2
     :try_start_1
     new-instance p1, Ljava/io/FileInputStream;
@@ -463,19 +424,16 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 588
     :try_start_2
     invoke-virtual {p0, p1, v0}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->parseXml(Ljava/io/InputStream;Lorg/xml/sax/helpers/DefaultHandler;)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 589
     :try_start_3
     invoke-virtual {p1}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 595
     invoke-static {v0}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->-$$Nest$mgetSdpPolicy(Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;)Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;
 
     move-result-object p0
@@ -485,7 +443,6 @@
     :catchall_0
     move-exception p0
 
-    .line 587
     :try_start_4
     invoke-virtual {p1}, Ljava/io/FileInputStream;->close()V
     :try_end_4
@@ -507,12 +464,10 @@
     :catch_1
     move-exception p0
 
-    .line 590
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     const-string p0, "engine_poilcy xml io failed"
 
-    .line 591
     invoke-static {v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
@@ -521,7 +476,6 @@
     :goto_2
     const-string p0, "No policy file or its hash"
 
-    .line 568
     invoke-static {v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
@@ -530,7 +484,6 @@
 .method public final getPolicyXmlFile(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)Ljava/io/File;
     .locals 2
 
-    .line 553
     new-instance p0, Ljava/io/File;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -573,12 +526,10 @@
 .method public final loadHash(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)[B
     .locals 4
 
-    .line 830
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 831
     invoke-static {}, Lcom/android/server/knox/dar/KeyProtector;->getInstance()Lcom/android/server/knox/dar/KeyProtector;
 
     move-result-object p0
@@ -587,7 +538,6 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 832
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
     move-result-object v3
@@ -606,12 +556,10 @@
 
     move-result p1
 
-    .line 831
     invoke-virtual {p0, v2, p1}, Lcom/android/server/knox/dar/KeyProtector;->release(Ljava/lang/String;I)[B
 
     move-result-object p0
 
-    .line 833
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -620,26 +568,21 @@
 .method public parseXml(Ljava/io/InputStream;Lorg/xml/sax/helpers/DefaultHandler;)Z
     .locals 0
 
-    .line 694
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/SAXParserFactory;->newInstance()Ljavax/xml/parsers/SAXParserFactory;
 
     move-result-object p0
 
-    .line 695
     invoke-virtual {p0}, Ljavax/xml/parsers/SAXParserFactory;->newSAXParser()Ljavax/xml/parsers/SAXParser;
 
     move-result-object p0
 
-    .line 696
     invoke-virtual {p0}, Ljavax/xml/parsers/SAXParser;->getXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object p0
 
-    .line 698
     invoke-interface {p0, p2}, Lorg/xml/sax/XMLReader;->setContentHandler(Lorg/xml/sax/ContentHandler;)V
 
-    .line 699
     new-instance p2, Lorg/xml/sax/InputSource;
 
     invoke-direct {p2, p1}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/InputStream;)V
@@ -655,7 +598,6 @@
     :catch_0
     move-exception p0
 
-    .line 704
     invoke-virtual {p0}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
 
     :goto_0
@@ -666,7 +608,6 @@
     :catch_1
     move-exception p0
 
-    .line 701
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -685,7 +626,6 @@
 
     const-string v3, "SdpServiceKeeper"
 
-    .line 601
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->getPolicyXmlFile(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)Ljava/io/File;
 
@@ -695,60 +635,49 @@
 
     const/16 v5, -0x63
 
-    .line 609
     :try_start_1
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v6
 
-    .line 610
     invoke-virtual {v6}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v6
 
-    .line 612
     invoke-virtual {v6}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v6
 
     const-string v7, "engine_policy"
 
-    .line 613
     invoke-interface {v6, v7}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v7
 
-    .line 614
     invoke-interface {v6, v7}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
     const-string/jumbo v8, "owner"
 
-    .line 617
     invoke-interface {v6, v8}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v8
 
-    .line 618
     invoke-interface {v6, v1}, Lorg/w3c/dom/Document;->createAttribute(Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
     move-result-object v9
 
-    .line 619
     invoke-interface {v6, v0}, Lorg/w3c/dom/Document;->createAttribute(Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
     move-result-object v10
 
-    .line 621
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
     move-result-object v11
 
     invoke-interface {v9, v11}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 622
     invoke-interface {v8, v9}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 624
     invoke-virtual {p2}, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->getOwner()Lcom/samsung/android/knox/sdp/core/SdpDomain;
 
     move-result-object v9
@@ -759,27 +688,22 @@
 
     invoke-interface {v10, v9}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 625
     invoke-interface {v8, v10}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 627
     invoke-interface {v7, v8}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 630
     invoke-virtual {p2}, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->getPrivilegedApps()Ljava/util/List;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 631
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v8
 
     if-nez v8, :cond_0
 
-    .line 632
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -799,53 +723,43 @@
 
     const-string/jumbo v9, "privileged_app"
 
-    .line 633
     invoke-interface {v6, v9}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v9
 
-    .line 634
     invoke-interface {v6, v1}, Lorg/w3c/dom/Document;->createAttribute(Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
     move-result-object v10
 
-    .line 635
     invoke-interface {v6, v0}, Lorg/w3c/dom/Document;->createAttribute(Ljava/lang/String;)Lorg/w3c/dom/Attr;
 
     move-result-object v11
 
-    .line 637
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
     move-result-object v12
 
     invoke-interface {v10, v12}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 638
     invoke-interface {v9, v10}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 640
     invoke-virtual {v8}, Lcom/samsung/android/knox/sdp/core/SdpDomain;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-interface {v11, v8}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 641
     invoke-interface {v9, v11}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 643
     invoke-interface {v7, v9}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
     goto :goto_0
 
-    .line 648
     :cond_0
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object p2
 
-    .line 649
     invoke-virtual {p2}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object p2
@@ -854,26 +768,21 @@
 
     const-string/jumbo v1, "yes"
 
-    .line 650
     invoke-virtual {p2, v0, v1}, Ljavax/xml/transform/Transformer;->setOutputProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 651
     new-instance v0, Ljavax/xml/transform/dom/DOMSource;
 
     invoke-direct {v0, v6}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 652
     new-instance v1, Ljavax/xml/transform/stream/StreamResult;
 
     invoke-direct {v1, v4}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 654
     invoke-virtual {p2, v0, v1}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
     :try_end_1
     .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljavax/xml/transform/TransformerException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 662
     invoke-virtual {p0, p1, v4}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->saveHash(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;Ljava/io/File;)Z
 
     move-result p0
@@ -882,7 +791,6 @@
 
     const-string/jumbo p0, "putPolicyLocked :: SUCCESS"
 
-    .line 663
     invoke-static {v3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -892,7 +800,6 @@
     :cond_1
     const-string p0, "can\'t store hash to key protector"
 
-    .line 667
     invoke-static {v3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v5
@@ -900,10 +807,8 @@
     :catch_0
     move-exception p0
 
-    .line 657
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 658
     invoke-static {v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v5
@@ -911,10 +816,8 @@
     :catch_1
     move-exception p0
 
-    .line 603
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 604
     invoke-static {v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 p0, -0xc
@@ -927,7 +830,6 @@
 
     const-string v0, "SdpServiceKeeper"
 
-    .line 674
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->getPolicyXmlFile(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)Ljava/io/File;
 
@@ -935,7 +837,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 681
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result p0
@@ -944,16 +845,13 @@
 
     const-string p0, "Couldn\'t remove policy file!"
 
-    .line 682
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 684
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 685
     invoke-static {}, Lcom/android/server/knox/dar/KeyProtector;->getInstance()Lcom/android/server/knox/dar/KeyProtector;
 
     move-result-object p0
@@ -962,7 +860,6 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 686
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
     move-result-object v4
@@ -981,7 +878,6 @@
 
     move-result p1
 
-    .line 685
     invoke-virtual {p0, v3, p1}, Lcom/android/server/knox/dar/KeyProtector;->delete(Ljava/lang/String;I)Z
 
     move-result p0
@@ -990,10 +886,8 @@
 
     const-string/jumbo p0, "removePolicyLocked failure"
 
-    .line 688
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 689
     :cond_1
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1002,12 +896,10 @@
     :catch_0
     move-exception p0
 
-    .line 676
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     const-string p0, " removePolicyLocked  failed"
 
-    .line 677
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1016,7 +908,6 @@
 .method public final saveHash(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;Ljava/io/File;)Z
     .locals 4
 
-    .line 821
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/engine/SdpServiceKeeper$SdpPolicyDatabase;->generateSalt(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)[B
 
     move-result-object v0
@@ -1025,12 +916,10 @@
 
     move-result-object p0
 
-    .line 822
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 823
     invoke-static {}, Lcom/android/server/knox/dar/KeyProtector;->getInstance()Lcom/android/server/knox/dar/KeyProtector;
 
     move-result-object p2
@@ -1039,7 +928,6 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 824
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
     move-result-object v3
@@ -1058,12 +946,10 @@
 
     move-result p1
 
-    .line 823
     invoke-virtual {p2, p0, v2, p1}, Lcom/android/server/knox/dar/KeyProtector;->protect([BLjava/lang/String;I)Z
 
     move-result p0
 
-    .line 825
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0

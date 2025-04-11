@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$mupdatePressureInfo(Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->updatePressureInfo(I)V
 
     return-void
@@ -34,24 +33,20 @@
 .method public constructor <init>()V
     .locals 6
 
-    .line 998
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 990
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$sfgetMEM_AVAIL_LOW_THRESHOLD_KB()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memAvailLowThresholdKB:J
 
-    .line 991
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$sfgetMEM_FREE_LOW_THRESHOLD_KB()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memFreeLowThresholdKB:J
 
-    .line 992
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$sfgetMEM_FREE_LOW_THRESHOLD_KB()J
 
     move-result-wide v0
@@ -64,20 +59,16 @@
 
     const/4 v0, 0x0
 
-    .line 993
     iput-boolean v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->appLaunch:Z
 
-    .line 994
     iput-boolean v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->cameraLaunch:Z
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
-    .line 999
     iput-object v1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
-    .line 1000
     new-instance v2, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$sfgetPSI_CPU_THRESHOLD_MS()I
@@ -92,7 +83,6 @@
 
     aput-object v2, v1, v0
 
-    .line 1001
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     new-instance v0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
@@ -117,7 +107,6 @@
 .method public getMemAvailLowThresholdKB()J
     .locals 2
 
-    .line 1140
     iget-wide v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memAvailLowThresholdKB:J
 
     return-wide v0
@@ -126,7 +115,6 @@
 .method public getMemFreeLowThresholdKB()J
     .locals 2
 
-    .line 1145
     iget-wide v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memFreeLowThresholdKB:J
 
     return-wide v0
@@ -135,7 +123,6 @@
 .method public getPsiCpuThresholdMS()I
     .locals 1
 
-    .line 1107
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x0
@@ -152,7 +139,6 @@
 .method public getPsiCpuWindowMS()I
     .locals 1
 
-    .line 1123
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x0
@@ -169,7 +155,6 @@
 .method public getPsiMemThresholdMS()I
     .locals 1
 
-    .line 1115
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x1
@@ -186,7 +171,6 @@
 .method public getPsiMemWindowMS()I
     .locals 1
 
-    .line 1131
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x1
@@ -203,7 +187,6 @@
 .method public isCpuBusy()Z
     .locals 1
 
-    .line 1103
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x0
@@ -220,7 +203,6 @@
 .method public isInAppLaunch()Z
     .locals 0
 
-    .line 1051
     iget-boolean p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->appLaunch:Z
 
     return p0
@@ -229,7 +211,6 @@
 .method public isInCameraLaunch()Z
     .locals 0
 
-    .line 1068
     iget-boolean p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->cameraLaunch:Z
 
     return p0
@@ -238,12 +219,10 @@
 .method public isMemFreeLow()Z
     .locals 4
 
-    .line 1177
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smgetFreeMemoryNative()J
 
     move-result-wide v0
 
-    .line 1178
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,7 +243,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;Z)V
 
-    .line 1179
     iget-wide v2, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memFreeLowThresholdKB:J
 
     cmp-long p0, v0, v2
@@ -285,12 +263,10 @@
 .method public isMemFreeSafe()Z
     .locals 4
 
-    .line 1184
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smgetFreeMemoryNative()J
 
     move-result-wide v0
 
-    .line 1185
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,7 +287,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;Z)V
 
-    .line 1186
     iget-wide v2, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memFreeSafeThresholdKB:J
 
     cmp-long p0, v0, v2
@@ -332,7 +307,6 @@
 .method public resetAppLaunch()V
     .locals 1
 
-    .line 1042
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smreadAmAppLaunch()I
 
     move-result v0
@@ -341,7 +315,6 @@
 
     const/4 v0, 0x0
 
-    .line 1044
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->setAppLaunch(Z)V
 
     goto :goto_0
@@ -351,7 +324,6 @@
 
     const/16 v0, 0x3e8
 
-    .line 1046
     invoke-static {p0, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smsendMessage(II)V
 
     :goto_0
@@ -363,7 +335,6 @@
 
     const/4 v0, 0x0
 
-    .line 1064
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->setCameraLaunch(Z)V
 
     return-void
@@ -372,10 +343,8 @@
 .method public setAppLaunch(Z)V
     .locals 2
 
-    .line 1033
     iput-boolean p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->appLaunch:Z
 
-    .line 1034
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -400,10 +369,8 @@
 
     const/16 v0, 0x7d0
 
-    .line 1036
     invoke-static {p1, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smsendMessage(II)V
 
-    .line 1038
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->updateSystemStatus()V
 
@@ -413,10 +380,8 @@
 .method public setCameraLaunch(Z)V
     .locals 2
 
-    .line 1055
     iput-boolean p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->cameraLaunch:Z
 
-    .line 1056
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -439,10 +404,8 @@
 
     const/16 v0, 0x1388
 
-    .line 1058
     invoke-static {p1, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smsendMessage(II)V
 
-    .line 1060
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->updateSystemStatus()V
 
@@ -452,7 +415,6 @@
 .method public setMemAvailLowThresholdKB(J)V
     .locals 2
 
-    .line 1155
     iget-wide v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memAvailLowThresholdKB:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -471,7 +433,6 @@
 
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 1156
     iput-wide p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memAvailLowThresholdKB:J
 
     return-void
@@ -480,7 +441,6 @@
 .method public setMemFreeLowThresholdKB(J)V
     .locals 2
 
-    .line 1161
     iget-wide v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memFreeLowThresholdKB:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -499,14 +459,12 @@
 
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 1162
     iput-wide p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memFreeLowThresholdKB:J
 
     const-wide/32 v0, 0x7d000
 
     add-long/2addr p1, v0
 
-    .line 1163
     iput-wide p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memFreeSafeThresholdKB:J
 
     return-void
@@ -515,7 +473,6 @@
 .method public setPsiCpuThresholdMS(I)V
     .locals 1
 
-    .line 1111
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x0
@@ -530,7 +487,6 @@
 .method public setPsiCpuWindowMS(I)V
     .locals 1
 
-    .line 1127
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x0
@@ -545,7 +501,6 @@
 .method public setPsiMemThresholdMS(I)V
     .locals 1
 
-    .line 1119
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x1
@@ -560,7 +515,6 @@
 .method public setPsiMemWindowMS(I)V
     .locals 1
 
-    .line 1135
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     const/4 v0, 0x1
@@ -575,10 +529,8 @@
 .method public start()V
     .locals 2
 
-    .line 1005
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smcreateStatusMonitorNative()I
 
-    .line 1006
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->getPsiCpuThresholdMS()I
 
     move-result v0
@@ -589,7 +541,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smopenCpuStatusMonitorNative(II)I
 
-    .line 1007
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->getPsiMemThresholdMS()I
 
     move-result v0
@@ -600,7 +551,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smopenMemStatusMonitorNative(II)I
 
-    .line 1009
     new-instance v0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor$StatusMonitorThread;
 
     const/4 v1, 0x0
@@ -609,24 +559,20 @@
 
     iput-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->statusMonitorThread:Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor$StatusMonitorThread;
 
-    .line 1010
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 1012
     new-instance v0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memInfo:Lcom/android/internal/util/MemInfoReader;
 
-    .line 1013
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$sfgetMEM_AVAIL_LOW_THRESHOLD_KB()J
 
     move-result-wide v0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->setMemAvailLowThresholdKB(J)V
 
-    .line 1014
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$sfgetMEM_FREE_LOW_THRESHOLD_KB()J
 
     move-result-wide v0
@@ -635,7 +581,6 @@
 
     const-string p0, "SystemStatusMonitor start"
 
-    .line 1015
     invoke-static {p0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
     return-void
@@ -644,30 +589,24 @@
 .method public stop()V
     .locals 2
 
-    .line 1019
     iget-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->statusMonitorThread:Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor$StatusMonitorThread;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor$StatusMonitorThread;->needToExit:Z
 
-    .line 1020
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smcloseCpuStatusMonitorNative()V
 
-    .line 1021
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smcloseMemStatusMonitorNative()V
 
-    .line 1022
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->-$$Nest$smdestroyStatusMonitorNative()V
 
     const/4 v0, 0x0
 
-    .line 1024
     iput-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->memInfo:Lcom/android/internal/util/MemInfoReader;
 
     const-string p0, "SystemStatusMonitor stop"
 
-    .line 1025
     invoke-static {p0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
     return-void
@@ -691,7 +630,6 @@
 
     if-lez v1, :cond_0
 
-    .line 1096
     iget-object v1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->resources:[Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;
 
     aget-object v1, v1, v0
@@ -703,7 +641,6 @@
 
     goto :goto_0
 
-    .line 1099
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;->updateSystemStatus()V
 
@@ -713,7 +650,6 @@
 .method public updateSystemStatus()V
     .locals 0
 
-    .line 1029
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->getReclaimPolicyManager()Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimPolicyManager;
 
     move-result-object p0

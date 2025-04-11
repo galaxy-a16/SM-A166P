@@ -21,34 +21,28 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mSharedPrefKeyTypeMap:Ljava/util/Map;
 
-    .line 42
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mIntegerDefaultKeyMap:Ljava/util/Map;
 
-    .line 54
     iput-object p1, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mContext:Landroid/content/Context;
 
-    .line 55
     invoke-virtual {p0}, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->registerObservingItems()V
 
     return-void
@@ -59,12 +53,10 @@
 .method public final getSharedPreference()Landroid/content/SharedPreferences;
     .locals 3
 
-    .line 98
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mPref:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "multiwindow.property"
@@ -77,7 +69,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mPref:Landroid/content/SharedPreferences;
 
-    .line 101
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mPref:Landroid/content/SharedPreferences;
 
@@ -87,7 +78,6 @@
 .method public final populate(Landroid/os/Bundle;Ljava/util/Map;)Z
     .locals 7
 
-    .line 74
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -114,45 +104,38 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 75
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    .line 76
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/Class;
 
-    .line 77
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-ne v3, v5, :cond_0
 
-    .line 79
     iget-object v3, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mSharedPrefKeyTypeMap:Ljava/util/Map;
 
     if-ne p2, v3, :cond_2
 
-    .line 80
     invoke-virtual {p0}, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->getSharedPreference()Landroid/content/SharedPreferences;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 82
     invoke-interface {v3, v4, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
     goto :goto_1
 
-    .line 84
     :cond_1
     sget-object v3, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->TAG:Ljava/lang/String;
 
@@ -163,7 +146,6 @@
     :cond_2
     move v3, v1
 
-    .line 87
     :goto_1
     iget-object v5, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mIntegerDefaultKeyMap:Ljava/util/Map;
 
@@ -181,14 +163,12 @@
 
     move-result v5
 
-    .line 88
     invoke-virtual {p1, v4, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v5
 
     if-eq v3, v5, :cond_0
 
-    .line 89
     invoke-virtual {p1, v4, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const/4 v2, 0x1
@@ -202,7 +182,6 @@
 .method public populateState(Landroid/os/Bundle;I)I
     .locals 0
 
-    .line 68
     iget-object p2, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mSharedPrefKeyTypeMap:Ljava/util/Map;
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->populate(Landroid/os/Bundle;Ljava/util/Map;)Z
@@ -217,7 +196,6 @@
 .method public registerObservingItems()V
     .locals 2
 
-    .line 61
     iget-object p0, p0, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->mSharedPrefKeyTypeMap:Ljava/util/Map;
 
     const-string/jumbo v0, "mw_immersive_mode"

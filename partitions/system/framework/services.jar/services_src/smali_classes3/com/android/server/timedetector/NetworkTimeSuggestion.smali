@@ -15,10 +15,8 @@
 .method public constructor <init>(Landroid/app/time/UnixEpochTime;I)V
     .locals 1
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -29,12 +27,10 @@
 
     if-ltz p2, :cond_0
 
-    .line 65
     iput p2, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mUncertaintyMillis:I
 
     return-void
 
-    .line 63
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -54,7 +50,6 @@
 
     move-object v2, v1
 
-    .line 132
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
@@ -62,7 +57,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 133
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     move-result v4
@@ -138,7 +132,6 @@
     :goto_1
     packed-switch v5, :pswitch_data_0
 
-    .line 148
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -159,7 +152,6 @@
 
     throw p0
 
-    .line 144
     :pswitch_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -175,7 +167,6 @@
 
     goto :goto_0
 
-    .line 140
     :pswitch_1
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -191,7 +182,6 @@
 
     goto :goto_0
 
-    .line 136
     :pswitch_2
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -214,7 +204,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 163
     new-instance p0, Landroid/app/time/UnixEpochTime;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -227,10 +216,8 @@
 
     invoke-direct {p0, v3, v4, v0, v1}, Landroid/app/time/UnixEpochTime;-><init>(JJ)V
 
-    .line 164
     new-instance v0, Lcom/android/server/timedetector/NetworkTimeSuggestion;
 
-    .line 165
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -239,7 +226,6 @@
 
     const-string p0, "Command line injection"
 
-    .line 166
     filled-new-array {p0}, [Ljava/lang/String;
 
     move-result-object p0
@@ -248,7 +234,6 @@
 
     return-object v0
 
-    .line 160
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -258,7 +243,6 @@
 
     throw p0
 
-    .line 157
     :cond_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -268,7 +252,6 @@
 
     throw p0
 
-    .line 154
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -300,7 +283,6 @@
 
     const-string v0, "Network"
 
-    .line 172
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -311,23 +293,18 @@
 
     const-string v0, "  --elapsed_realtime <elapsed realtime millis> - the elapsed realtime millis when unix epoch time was read"
 
-    .line 173
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --unix_epoch_time <Unix epoch time millis>"
 
-    .line 175
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --uncertainty_millis <Uncertainty millis> - a positive error bound (+/-) estimate for unix epoch time"
 
-    .line 176
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 178
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
-    .line 179
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -362,19 +339,16 @@
 .method public varargs addDebugInfo([Ljava/lang/String;)V
     .locals 1
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mDebugInfo:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 93
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mDebugInfo:Ljava/util/ArrayList;
 
-    .line 95
     :cond_0
     iget-object p0, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mDebugInfo:Ljava/util/ArrayList;
 
@@ -396,7 +370,6 @@
 
     return v0
 
-    .line 103
     :cond_0
     instance-of v1, p1, Lcom/android/server/timedetector/NetworkTimeSuggestion;
 
@@ -406,11 +379,9 @@
 
     return v2
 
-    .line 106
     :cond_1
     check-cast p1, Lcom/android/server/timedetector/NetworkTimeSuggestion;
 
-    .line 107
     iget-object v1, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mUnixEpochTime:Landroid/app/time/UnixEpochTime;
 
     iget-object v3, p1, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mUnixEpochTime:Landroid/app/time/UnixEpochTime;
@@ -439,7 +410,6 @@
 .method public getUncertaintyMillis()I
     .locals 0
 
-    .line 76
     iget p0, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mUncertaintyMillis:I
 
     return p0
@@ -448,7 +418,6 @@
 .method public getUnixEpochTime()Landroid/app/time/UnixEpochTime;
     .locals 0
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mUnixEpochTime:Landroid/app/time/UnixEpochTime;
 
     return-object p0
@@ -457,7 +426,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mUnixEpochTime:Landroid/app/time/UnixEpochTime;
 
     iget p0, p0, Lcom/android/server/timedetector/NetworkTimeSuggestion;->mUncertaintyMillis:I
@@ -480,7 +448,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 118
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService$ObbState;)V
     .locals 0
 
-    .line 4819
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4820
     iput-object p1, p0, Lcom/android/server/StorageManagerService$ObbAction;->mObbState:Lcom/android/server/StorageManagerService$ObbState;
 
     return-void
@@ -25,7 +23,6 @@
 .method public execute(Lcom/android/server/StorageManagerService$ObbActionHandler;)V
     .locals 0
 
-    .line 4827
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService$ObbAction;->handleExecute()V
     :try_end_0
@@ -36,7 +33,6 @@
     :catch_0
     move-exception p1
 
-    .line 4829
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService$ObbAction;->notifyObbStateChange(Lcom/android/server/StorageManagerService$ObbException;)V
 
     :goto_0
@@ -49,7 +45,6 @@
 .method public notifyObbStateChange(I)V
     .locals 2
 
-    .line 4841
     iget-object p0, p0, Lcom/android/server/StorageManagerService$ObbAction;->mObbState:Lcom/android/server/StorageManagerService$ObbState;
 
     if-eqz p0, :cond_1
@@ -60,7 +55,6 @@
 
     goto :goto_0
 
-    .line 4846
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService$ObbState;->rawPath:Ljava/lang/String;
@@ -78,7 +72,6 @@
 
     const-string p1, "StorageEventListener went away while calling onObbStateChanged"
 
-    .line 4848
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -91,10 +84,8 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 4836
     invoke-static {v0, p1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4837
     iget p1, p1, Lcom/android/server/StorageManagerService$ObbException;->status:I
 
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService$ObbAction;->notifyObbStateChange(I)V

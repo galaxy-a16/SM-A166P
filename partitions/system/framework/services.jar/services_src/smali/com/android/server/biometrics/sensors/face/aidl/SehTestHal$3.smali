@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)V
     .locals 0
 
-    .line 359
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public deliverAcquiredEvent(II)V
     .locals 2
 
-    .line 363
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
@@ -37,22 +35,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 364
     new-instance v0, Landroid/hardware/biometrics/face/EnrollmentFrame;
 
     invoke-direct {v0}, Landroid/hardware/biometrics/face/EnrollmentFrame;-><init>()V
 
-    .line 365
     iget-object v1, v0, Landroid/hardware/biometrics/face/EnrollmentFrame;->data:Landroid/hardware/biometrics/face/BaseFrame;
 
     int-to-byte p1, p1
 
     iput-byte p1, v1, Landroid/hardware/biometrics/face/BaseFrame;->acquiredInfo:B
 
-    .line 366
     iput p2, v1, Landroid/hardware/biometrics/face/BaseFrame;->vendorCode:I
 
-    .line 367
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->-$$Nest$fgetmCallback(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)Landroid/hardware/biometrics/face/ISessionCallback;
@@ -63,23 +57,19 @@
 
     goto :goto_0
 
-    .line 369
     :cond_0
     new-instance v0, Landroid/hardware/biometrics/face/AuthenticationFrame;
 
     invoke-direct {v0}, Landroid/hardware/biometrics/face/AuthenticationFrame;-><init>()V
 
-    .line 370
     iget-object v1, v0, Landroid/hardware/biometrics/face/AuthenticationFrame;->data:Landroid/hardware/biometrics/face/BaseFrame;
 
     int-to-byte p1, p1
 
     iput-byte p1, v1, Landroid/hardware/biometrics/face/BaseFrame;->acquiredInfo:B
 
-    .line 371
     iput p2, v1, Landroid/hardware/biometrics/face/BaseFrame;->vendorCode:I
 
-    .line 372
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->-$$Nest$fgetmCallback(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)Landroid/hardware/biometrics/face/ISessionCallback;
@@ -95,7 +85,6 @@
     :catch_0
     move-exception p0
 
-    .line 375
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -107,7 +96,6 @@
 
     if-lez p1, :cond_0
 
-    .line 401
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
@@ -127,7 +115,6 @@
 
     goto :goto_0
 
-    .line 403
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
@@ -144,7 +131,6 @@
     :catch_0
     move-exception p0
 
-    .line 406
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -154,7 +140,6 @@
 .method public deliverEnrollResult(I)V
     .locals 1
 
-    .line 391
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
@@ -177,7 +162,6 @@
     :catch_0
     move-exception p0
 
-    .line 393
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -187,7 +171,6 @@
 .method public deliverErrorEvent(II)V
     .locals 0
 
-    .line 382
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
@@ -206,7 +189,6 @@
     :catch_0
     move-exception p0
 
-    .line 384
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

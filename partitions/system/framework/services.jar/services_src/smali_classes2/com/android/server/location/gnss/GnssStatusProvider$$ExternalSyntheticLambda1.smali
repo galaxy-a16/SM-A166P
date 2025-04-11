@@ -20,7 +20,6 @@
 .method public final operate(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/location/IGnssStatusListener;
 
     invoke-interface {p1}, Landroid/location/IGnssStatusListener;->onGnssStarted()V

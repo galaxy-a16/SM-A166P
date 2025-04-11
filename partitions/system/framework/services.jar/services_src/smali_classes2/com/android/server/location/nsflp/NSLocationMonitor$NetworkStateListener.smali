@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/location/nsflp/NSLocationMonitor;I)V
     .locals 0
 
-    .line 611
     iput-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$NetworkStateListener;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
-    .line 614
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -41,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/nsflp/NSLocationMonitor;ILcom/android/server/location/nsflp/NSLocationMonitor$NetworkStateListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/nsflp/NSLocationMonitor$NetworkStateListener;-><init>(Lcom/android/server/location/nsflp/NSLocationMonitor;I)V
 
     return-void
@@ -58,23 +55,19 @@
 
     const-string/jumbo p0, "onServiceStateChanged null"
 
-    .line 620
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 624
     :cond_0
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getState()I
 
     move-result v1
 
-    .line 625
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getChannelNumber()I
 
     move-result v2
 
-    .line 626
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,7 +94,6 @@
 
     const/4 v4, 0x1
 
-    .line 633
     invoke-virtual {p1, v3, v4}, Landroid/telephony/ServiceState;->getNetworkRegistrationInfo(II)Landroid/telephony/NetworkRegistrationInfo;
 
     move-result-object p1
@@ -110,17 +102,14 @@
 
     if-eqz p1, :cond_2
 
-    .line 637
     invoke-virtual {p1}, Landroid/telephony/NetworkRegistrationInfo;->getAccessNetworkTechnology()I
 
     move-result v5
 
-    .line 638
     invoke-static {v5}, Landroid/telephony/TelephonyManager;->getNetworkTypeName(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 639
     invoke-virtual {p1}, Landroid/telephony/NetworkRegistrationInfo;->getNrState()I
 
     move-result p1
@@ -131,7 +120,6 @@
 
     move v3, v4
 
-    .line 641
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -166,7 +154,6 @@
     :cond_2
     const-string p1, "Failed to get registration info from serviceState"
 
-    .line 643
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v5, -0x1
@@ -175,7 +162,6 @@
 
     move v4, v3
 
-    .line 646
     :goto_0
     new-instance p1, Landroid/os/Bundle;
 
@@ -183,35 +169,28 @@
 
     const-string/jumbo v0, "serviceState"
 
-    .line 647
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "isRegistered"
 
-    .line 648
     invoke-virtual {p1, v0, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string/jumbo v0, "nrState"
 
-    .line 649
     invoke-virtual {p1, v0, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v0, "channelNumber"
 
-    .line 650
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "networkType"
 
-    .line 651
     invoke-virtual {p1, v0, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "networkTypeName"
 
-    .line 652
     invoke-virtual {p1, v0, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 654
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$NetworkStateListener;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmNSConnectionHelper(Lcom/android/server/location/nsflp/NSLocationMonitor;)Lcom/android/server/location/nsflp/NSConnectionHelper;

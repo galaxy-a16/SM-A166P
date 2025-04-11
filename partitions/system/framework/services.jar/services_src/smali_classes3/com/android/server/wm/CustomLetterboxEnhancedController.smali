@@ -33,7 +33,6 @@
 .method public static synthetic $r8$lambda$6bU2BwmUBlKgAO7ijiCh6H1uDvw(Lcom/android/server/wm/CustomLetterboxEnhancedController;ZLcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->lambda$refreshLetterboxLocked$2(ZLcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -42,7 +41,6 @@
 .method public static synthetic $r8$lambda$HnsxE1mpQTOoqt6AC2l8S8O_Rrc(Lcom/android/server/wm/CustomLetterboxEnhancedController;JZ)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->lambda$scheduleCompleteLetterboxEnhanced$1(JZ)V
 
     return-void
@@ -51,7 +49,6 @@
 .method public static synthetic $r8$lambda$OoqM76CpaJwM61tVE4eYqAMs2Qg(Lcom/android/server/wm/CustomLetterboxEnhancedController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->lambda$onCommitVisibleWallpapers$3()V
 
     return-void
@@ -60,7 +57,6 @@
 .method public static synthetic $r8$lambda$hEbrE8-GdCco1CagG0mzZiTZ2t8(Lcom/android/server/wm/CustomLetterboxEnhancedController;Lcom/android/server/wm/Task;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->hasCustomLetterboxEnabledLocked(Lcom/android/server/wm/Task;)Z
 
     move-result p0
@@ -71,7 +67,6 @@
 .method public static synthetic $r8$lambda$sdCeyjCskXAcVGmV5qdgk8Jso00(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->lambda$hasCustomLetterboxEnabledLocked$0(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result p0
@@ -82,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$smenhancedReasonToString(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->enhancedReasonToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -93,37 +87,30 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;)V
     .locals 1
 
-    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 102
     iput-boolean v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mShouldShowLetterbox:Z
 
-    .line 106
     new-instance v0, Lcom/android/server/wm/CustomLetterboxEnhancedController$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/wm/CustomLetterboxEnhancedController;)V
 
     iput-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mOnApplyLetterboxEnhanced:Ljava/lang/Runnable;
 
-    .line 110
     new-instance v0, Lcom/android/server/wm/CustomLetterboxEnhancedController$EnhancedControllerToken;
 
     invoke-direct {v0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$EnhancedControllerToken;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mToken:Landroid/os/Binder;
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
 
-    .line 114
     iget-object p1, p1, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iput-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 115
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mTransactionFactory:Ljava/util/function/Supplier;
 
     invoke-interface {p1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
@@ -134,7 +121,6 @@
 
     iput-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mTmpTransaction:Landroid/view/SurfaceControl$Transaction;
 
-    .line 116
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
@@ -157,7 +143,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 331
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -228,7 +213,6 @@
 .method public static synthetic lambda$hasCustomLetterboxEnabledLocked$0(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 1
 
-    .line 163
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->isVisibleRequested()Z
 
     move-result v0
@@ -245,7 +229,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 164
     :cond_0
     invoke-static {p0}, Lcom/android/server/wm/CustomLetterboxConfiguration;->isCustomLetterboxEnabled(Lcom/android/server/wm/ActivityRecord;)Z
 
@@ -267,7 +250,6 @@
 .method private synthetic lambda$onCommitVisibleWallpapers$3()V
     .locals 2
 
-    .line 254
     invoke-virtual {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->isViewVisible()Z
 
     move-result v0
@@ -276,7 +258,6 @@
 
     return-void
 
-    .line 257
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -286,7 +267,6 @@
 
     monitor-enter v0
 
-    .line 258
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->isHomeOrRecentsVisibleLocked()Z
 
@@ -294,7 +274,6 @@
 
     if-nez v1, :cond_1
 
-    .line 259
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -303,7 +282,6 @@
 
     return-void
 
-    .line 261
     :cond_1
     :try_start_1
     monitor-exit v0
@@ -314,7 +292,6 @@
 
     const/4 v0, 0x0
 
-    .line 262
     invoke-virtual {p0, v0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->setViewVisible(Z)V
 
     return-void
@@ -322,7 +299,6 @@
     :catchall_0
     move-exception p0
 
-    .line 261
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -336,7 +312,6 @@
 .method private synthetic lambda$refreshLetterboxLocked$2(ZLcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 244
     iget-object p2, p2, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
     if-eqz p1, :cond_0
@@ -357,7 +332,6 @@
 .method private synthetic lambda$scheduleCompleteLetterboxEnhanced$1(JZ)V
     .locals 1
 
-    .line 204
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -366,11 +340,9 @@
 
     monitor-enter v0
 
-    .line 205
     :try_start_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->completeLetterboxEnhancedLocked(JZ)V
 
-    .line 206
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -397,14 +369,12 @@
 .method public addWindowLocked(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final applyLetterboxEnhancedIfNeededLocked(ZZZZ)V
     .locals 2
 
-    .line 130
     invoke-virtual {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->isAvailable()Z
 
     move-result v0
@@ -413,7 +383,6 @@
 
     return-void
 
-    .line 133
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->getEnhancedReasonLocked(ZZ)I
 
@@ -434,7 +403,6 @@
     :cond_1
     move p1, p2
 
-    .line 135
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedEnabled:Z
 
@@ -442,11 +410,9 @@
 
     move p2, v0
 
-    .line 136
     :cond_2
     iput-boolean p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedEnabled:Z
 
-    .line 137
     iput-boolean p4, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplayDeviceTypeChanged:Z
 
     if-nez p2, :cond_3
@@ -455,7 +421,6 @@
 
     if-eqz p3, :cond_4
 
-    .line 139
     :cond_3
     invoke-virtual {p0, p2}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->applyLetterboxEnhancedLocked(Z)V
 
@@ -466,7 +431,6 @@
 .method public final applyLetterboxEnhancedLocked(Z)V
     .locals 4
 
-    .line 168
     iget-wide v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mSeq:J
 
     const-wide/16 v2, 0x1
@@ -475,7 +439,6 @@
 
     iput-wide v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mSeq:J
 
-    .line 169
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -502,7 +465,6 @@
 
     iget v1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedReason:I
 
-    .line 171
     invoke-static {v1}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->enhancedReasonToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -521,7 +483,6 @@
 
     const/4 v1, 0x6
 
-    .line 173
     invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object v1
@@ -534,28 +495,22 @@
 
     const-string v1, "CustomLetterbox"
 
-    .line 169
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     iput-boolean p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWaitingForEnhancedEnabled:Z
 
     const/4 p1, 0x1
 
-    .line 175
     invoke-virtual {p0, p1, p1}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->refreshLetterboxLocked(ZZ)V
 
-    .line 177
     invoke-virtual {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->removeCallbacks()V
 
-    .line 178
     iget-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mOnApplyLetterboxEnhanced:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 179
     iget-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mOnApplyLetterboxEnhanced:Ljava/lang/Runnable;
@@ -568,7 +523,6 @@
 .method public final completeLetterboxEnhancedLocked(JZ)V
     .locals 2
 
-    .line 211
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->isInvalidSeqLocked(J)Z
 
     move-result p1
@@ -577,7 +531,6 @@
 
     return-void
 
-    .line 214
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -605,7 +558,6 @@
 
     iget p2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedReason:I
 
-    .line 216
     invoke-static {p2}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->enhancedReasonToString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -624,17 +576,14 @@
 
     const-string p2, "CustomLetterbox"
 
-    .line 214
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
-    .line 218
     iput-boolean p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWaitingForEnhancedEnabled:Z
 
     if-eqz p3, :cond_2
 
-    .line 219
     iget-boolean p2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedEnabled:Z
 
     if-nez p2, :cond_1
@@ -653,7 +602,6 @@
     :goto_1
     invoke-virtual {p0, p2, p1}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->refreshLetterboxLocked(ZZ)V
 
-    .line 220
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_LETTERBOX_ENHANCED_HIDING_WALLPAPER:Z
 
     if-eqz p1, :cond_3
@@ -664,7 +612,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 221
     iget-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
 
     iget p2, p1, Lcom/android/server/wm/DisplayContent;->pendingLayoutChanges:I
@@ -673,7 +620,6 @@
 
     iput p2, p1, Lcom/android/server/wm/DisplayContent;->pendingLayoutChanges:I
 
-    .line 223
     :cond_3
     iget-object p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -685,15 +631,12 @@
 .method public dumpLocked(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 290
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p2, "CustomLetterboxEnhancedController(mDisplayId="
 
-    .line 291
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 292
     iget-object p2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
 
     iget p2, p2, Lcom/android/server/wm/DisplayContent;->mDisplayId:I
@@ -702,38 +645,30 @@
 
     const-string p2, ")"
 
-    .line 293
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 294
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo p2, "mSeq="
 
-    .line 295
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 296
     iget-wide v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mSeq:J
 
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->print(J)V
 
     const-string p2, ", mEnhancedEnabled="
 
-    .line 297
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 298
     iget-boolean p2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedEnabled:Z
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Z)V
 
     const-string p2, ", mEnhancedReason="
 
-    .line 299
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 300
     iget p2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedReason:I
 
     invoke-static {p2}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->enhancedReasonToString(I)Ljava/lang/String;
@@ -742,33 +677,26 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 301
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 302
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo p2, "mShouldShowLetterbox="
 
-    .line 303
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 304
     iget-boolean p2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mShouldShowLetterbox:Z
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Z)V
 
     const-string p2, ", mWaitingForEnhancedEnabled="
 
-    .line 305
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 306
     iget-boolean p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWaitingForEnhancedEnabled:Z
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 307
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -777,7 +705,6 @@
 .method public final failLetterboxEnhanced()V
     .locals 4
 
-    .line 227
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -789,7 +716,6 @@
     :try_start_0
     const-string v1, "CustomLetterbox"
 
-    .line 228
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -816,7 +742,6 @@
 
     iget v3, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedReason:I
 
-    .line 230
     invoke-static {v3}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->enhancedReasonToString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -827,20 +752,16 @@
 
     move-result-object v2
 
-    .line 228
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 231
     iput-boolean v1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWaitingForEnhancedEnabled:Z
 
     const/4 v1, 0x1
 
-    .line 232
     invoke-virtual {p0, v1, v1}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->refreshLetterboxLocked(ZZ)V
 
-    .line 233
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -865,14 +786,12 @@
 .method public final getCapturedBlurWallpaperInfo()Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;
     .locals 6
 
-    .line 391
     new-instance v0, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;-><init>(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo-IA;)V
 
-    .line 392
     iget-object v1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -881,28 +800,23 @@
 
     monitor-enter v1
 
-    .line 393
     :try_start_0
     iget-wide v2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mSeq:J
 
     invoke-static {v0, v2, v3}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmSeq(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;J)V
 
-    .line 394
     iget-boolean v2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedEnabled:Z
 
     invoke-static {v0, v2}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmEnabled(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;Z)V
 
-    .line 395
     iget v2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedReason:I
 
     invoke-static {v0, v2}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmReason(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;I)V
 
-    .line 396
     iget-boolean v2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedEnabled:Z
 
     if-nez v2, :cond_0
 
-    .line 397
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -911,7 +825,6 @@
 
     return-object v0
 
-    .line 399
     :cond_0
     :try_start_1
     invoke-static {}, Lcom/android/server/wm/CustomLetterboxConfiguration;->getLetterboxBackgroundWallpaperBlurRadius()I
@@ -920,7 +833,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmBlurRadius(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;I)V
 
-    .line 400
     iget-object v2, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
 
     iget-object v2, v2, Lcom/android/server/wm/DisplayContent;->mWallpaperController:Lcom/android/server/wm/WallpaperController;
@@ -933,15 +845,12 @@
 
     if-nez v2, :cond_1
 
-    .line 402
     invoke-static {v0, v3}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmEnabled(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;Z)V
 
     const/4 p0, 0x7
 
-    .line 403
     invoke-static {v0, p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmReason(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;I)V
 
-    .line 404
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -950,7 +859,6 @@
 
     return-object v0
 
-    .line 406
     :cond_1
     :try_start_2
     iget-object v4, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
@@ -965,21 +873,18 @@
 
     move-result-object v4
 
-    .line 407
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v5
 
     invoke-static {v0, v5}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmWidth(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;I)V
 
-    .line 408
     invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
     move-result v4
 
     invoke-static {v0, v4}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmHeight(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;I)V
 
-    .line 409
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fgetmWidth(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;)I
 
     move-result v4
@@ -994,22 +899,18 @@
 
     invoke-static {v0, p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmScreenshot(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;Landroid/graphics/Bitmap;)V
 
-    .line 410
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fgetmScreenshot(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     if-nez p0, :cond_2
 
-    .line 411
     invoke-static {v0, v3}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmEnabled(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;Z)V
 
     const/16 p0, 0x8
 
-    .line 412
     invoke-static {v0, p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmReason(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;I)V
 
-    .line 413
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -1018,7 +919,6 @@
 
     return-object v0
 
-    .line 417
     :cond_2
     :try_start_3
     invoke-virtual {v2}, Lcom/android/server/wm/WindowState;->getConfiguration()Landroid/content/res/Configuration;
@@ -1031,7 +931,6 @@
 
     move-result-object p0
 
-    .line 418
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fgetmWidth(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;)I
 
     move-result v2
@@ -1046,14 +945,12 @@
 
     move-result v2
 
-    .line 419
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
 
     move-result v3
 
     if-eq v2, v3, :cond_4
 
-    .line 420
     :cond_3
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
@@ -1061,14 +958,12 @@
 
     invoke-static {v0, v2}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmWallpaperWidth(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;I)V
 
-    .line 421
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
 
     move-result p0
 
     invoke-static {v0, p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;->-$$Nest$fputmWallpaperHeight(Lcom/android/server/wm/CustomLetterboxEnhancedController$CapturedBlurWallpaperInfo;I)V
 
-    .line 423
     :cond_4
     monitor-exit v1
     :try_end_3
@@ -1107,7 +1002,6 @@
 
     return p0
 
-    .line 153
     :cond_1
     iget-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
 
@@ -1117,14 +1011,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 154
     invoke-virtual {p1}, Lcom/android/server/wm/TaskDisplayArea;->getRootHomeTask()Lcom/android/server/wm/Task;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    .line 155
     invoke-virtual {p1}, Lcom/android/server/wm/TaskDisplayArea;->getRootHomeTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
@@ -1139,7 +1031,6 @@
 
     return p0
 
-    .line 158
     :cond_2
     iget-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
 
@@ -1167,7 +1058,6 @@
 .method public final getScreenshotLocked(II)Landroid/graphics/Bitmap;
     .locals 10
 
-    .line 428
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mExt:Lcom/android/server/wm/WindowManagerServiceExt;
@@ -1176,7 +1066,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
 
-    .line 429
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
     move-result v2
@@ -1197,14 +1086,12 @@
 
     move v7, p2
 
-    .line 428
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/wm/WmScreenshotController;->takeScreenshotToTargetWindow(IIZLandroid/graphics/Rect;IIZZ)Lcom/samsung/android/view/ScreenshotResult;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 432
     invoke-virtual {p0}, Lcom/samsung/android/view/ScreenshotResult;->getCapturedBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1221,7 +1108,6 @@
 .method public getToken()Landroid/os/Binder;
     .locals 0
 
-    .line 342
     iget-object p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mToken:Landroid/os/Binder;
 
     return-object p0
@@ -1230,7 +1116,6 @@
 .method public final hasCustomLetterboxEnabledLocked(Lcom/android/server/wm/Task;)Z
     .locals 0
 
-    .line 163
     new-instance p0, Lcom/android/server/wm/CustomLetterboxEnhancedController$$ExternalSyntheticLambda4;
 
     invoke-direct {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController$$ExternalSyntheticLambda4;-><init>()V
@@ -1255,7 +1140,6 @@
 .method public isAvailable()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1264,7 +1148,6 @@
 .method public isDisplayDeviceTypeChanged()Z
     .locals 1
 
-    .line 186
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -1273,7 +1156,6 @@
 
     monitor-enter v0
 
-    .line 187
     :try_start_0
     iget-boolean p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplayDeviceTypeChanged:Z
 
@@ -1288,7 +1170,6 @@
     :catchall_0
     move-exception p0
 
-    .line 188
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1302,7 +1183,6 @@
 .method public final isHomeOrRecentsVisibleLocked()Z
     .locals 1
 
-    .line 267
     iget-boolean v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mEnhancedEnabled:Z
 
     if-nez v0, :cond_0
@@ -1327,7 +1207,6 @@
 .method public final isInvalidSeqLocked(J)Z
     .locals 2
 
-    .line 124
     iget-wide v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mSeq:J
 
     cmp-long p0, p1, v0
@@ -1348,7 +1227,6 @@
 .method public isViewVisible()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1357,7 +1235,6 @@
 .method public final isWaitingForEnhancedEnabledLocked()Z
     .locals 0
 
-    .line 286
     iget-boolean p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWaitingForEnhancedEnabled:Z
 
     return p0
@@ -1366,7 +1243,6 @@
 .method public onApplyLetterboxEnhanced()V
     .locals 2
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -1377,11 +1253,9 @@
 
     const/4 v1, 0x0
 
-    .line 193
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWaitingForEnhancedEnabled:Z
 
-    .line 194
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1406,7 +1280,6 @@
 .method public onCommitVisibleWallpapers()V
     .locals 2
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/wm/CustomLetterboxEnhancedController$$ExternalSyntheticLambda3;
@@ -1421,18 +1294,15 @@
 .method public final refreshLetterboxLocked(ZZ)V
     .locals 2
 
-    .line 237
     iget-boolean v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mShouldShowLetterbox:Z
 
     if-ne p1, v0, :cond_0
 
     return-void
 
-    .line 240
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mShouldShowLetterbox:Z
 
-    .line 241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1457,7 +1327,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     iget-object p1, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mDisplay:Lcom/android/server/wm/DisplayContent;
 
     new-instance v0, Lcom/android/server/wm/CustomLetterboxEnhancedController$$ExternalSyntheticLambda2;
@@ -1470,7 +1339,6 @@
 
     return-void
 
-    .line 249
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mTmpTransaction:Landroid/view/SurfaceControl$Transaction;
 
@@ -1482,21 +1350,18 @@
 .method public removeCallbacks()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public removeWindowLocked(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final scheduleCompleteLetterboxEnhanced(JZ)V
     .locals 2
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -1505,7 +1370,6 @@
 
     monitor-enter v0
 
-    .line 199
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->isInvalidSeqLocked(J)Z
 
@@ -1513,7 +1377,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 200
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1522,7 +1385,6 @@
 
     return-void
 
-    .line 202
     :cond_0
     :try_start_1
     monitor-exit v0
@@ -1531,7 +1393,6 @@
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 203
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/wm/CustomLetterboxEnhancedController$$ExternalSyntheticLambda5;
@@ -1545,7 +1406,6 @@
     :catchall_0
     move-exception p0
 
-    .line 202
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -1559,14 +1419,12 @@
 .method public setViewVisible(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final shouldHideView()Z
     .locals 2
 
-    .line 271
     iget-object v0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -1575,7 +1433,6 @@
 
     monitor-enter v0
 
-    .line 272
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->isHomeOrRecentsVisibleLocked()Z
 
@@ -1587,7 +1444,6 @@
 
     iget-object v1, v1, Lcom/android/server/wm/DisplayContent;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 273
     invoke-virtual {v1}, Lcom/android/server/wm/ActivityTaskManagerService;->getTransitionController()Lcom/android/server/wm/TransitionController;
 
     move-result-object v1
@@ -1602,7 +1458,6 @@
 
     iget-object v1, v1, Lcom/android/server/wm/DisplayContent;->mWallpaperController:Lcom/android/server/wm/WallpaperController;
 
-    .line 274
     invoke-virtual {v1}, Lcom/android/server/wm/WallpaperController;->isWallpaperVisible()Z
 
     move-result v1
@@ -1611,7 +1466,6 @@
 
     goto :goto_0
 
-    .line 277
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/CustomLetterboxEnhancedController;->shouldShowLetterboxLocked()Z
 
@@ -1625,7 +1479,6 @@
 
     return p0
 
-    .line 275
     :cond_1
     :goto_0
     :try_start_1
@@ -1642,7 +1495,6 @@
     :catchall_0
     move-exception p0
 
-    .line 278
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -1656,7 +1508,6 @@
 .method public shouldHideWallpaper()Z
     .locals 1
 
-    .line 336
     invoke-static {}, Lcom/android/server/wm/CustomLetterboxConfiguration;->isAllowWallpaperBelowLetterbox()Z
 
     move-result v0
@@ -1685,7 +1536,6 @@
 .method public final shouldShowLetterboxLocked()Z
     .locals 0
 
-    .line 282
     iget-boolean p0, p0, Lcom/android/server/wm/CustomLetterboxEnhancedController;->mShouldShowLetterbox:Z
 
     return p0

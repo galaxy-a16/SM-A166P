@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient;)V
     .locals 0
 
-    .line 105
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onSysUiDismissed()V
     .locals 0
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AcquisitionClient;->onUserCanceled()V
@@ -38,7 +36,6 @@
 .method public onSysUiError(II)V
     .locals 1
 
-    .line 114
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient;
 
     const/4 p2, 0x5
@@ -47,7 +44,6 @@
 
     invoke-virtual {p1, p2, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient;->onError(II)V
 
-    .line 115
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseEnrollClient;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AcquisitionClient;->cancel()V

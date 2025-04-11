@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public generateCertificateRequest(Z[Landroid/hardware/security/keymint/MacedPublicKey;[B[BLandroid/hardware/security/keymint/DeviceInfo;Landroid/hardware/security/keymint/ProtectedData;)[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -38,7 +36,6 @@
 .method public generateCertificateRequestV2([Landroid/hardware/security/keymint/MacedPublicKey;[B)[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -47,7 +44,6 @@
 .method public getHardwareInfo()Landroid/hardware/security/keymint/RpcHardwareInfo;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0

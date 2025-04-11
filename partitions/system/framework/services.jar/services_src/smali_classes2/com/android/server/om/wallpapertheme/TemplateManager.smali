@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetTAG(Lcom/android/server/om/wallpapertheme/TemplateManager;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmThemePalette(Lcom/android/server/om/wallpapertheme/TemplateManager;)Lcom/android/server/om/wallpapertheme/ThemePalette;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mThemePalette:Lcom/android/server/om/wallpapertheme/ThemePalette;
 
     return-object p0
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$mgetColorFromName(Lcom/android/server/om/wallpapertheme/TemplateManager;Ljava/lang/String;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/TemplateManager;->getColorFromName(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -48,32 +45,26 @@
 .method public constructor <init>(Lcom/android/server/om/wallpapertheme/MetaDataManager;Lcom/android/server/om/wallpapertheme/ThemePalette;)V
     .locals 1
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "SWT_TemplateManager"
 
-    .line 33
     iput-object v0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
-    .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mUidTemplate:Ljava/util/List;
 
-    .line 38
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mColorTemplate:Ljava/util/HashMap;
 
-    .line 41
     iput-object p2, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mThemePalette:Lcom/android/server/om/wallpapertheme/ThemePalette;
 
-    .line 42
     iput-object p1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mMetaDataManager:Lcom/android/server/om/wallpapertheme/MetaDataManager;
 
     return-void
@@ -86,15 +77,12 @@
 
     const-string v0, "- TEMPLATE -"
 
-    .line 430
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, " [UID ITEMS]"
 
-    .line 431
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 432
     iget-object v0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mUidTemplate:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -114,7 +102,6 @@
 
     check-cast v1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;
 
-    .line 433
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,10 +141,8 @@
     :cond_0
     const-string v0, " [COLOR ITEMS]"
 
-    .line 435
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 436
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mColorTemplate:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -181,7 +166,6 @@
 
     check-cast v0, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;
 
-    .line 437
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -237,7 +221,6 @@
 .method public getBooleans(Ljava/lang/String;)Ljava/util/List;
     .locals 1
 
-    .line 382
     new-instance v0, Lcom/android/server/om/wallpapertheme/TemplateManager$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/om/wallpapertheme/TemplateManager$2;-><init>(Lcom/android/server/om/wallpapertheme/TemplateManager;)V
@@ -258,14 +241,12 @@
 
     const-string v1, "#"
 
-    .line 306
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 307
     invoke-static/range {p1 .. p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result v0
@@ -279,12 +260,10 @@
     :cond_0
     const-string v1, "_"
 
-    .line 309
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 310
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -298,7 +277,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 313
     aget-object v4, v0, v1
 
     invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
@@ -428,7 +406,6 @@
     :pswitch_4
     move v4, v1
 
-    .line 333
     :goto_2
     aget-object v0, v0, v9
 
@@ -756,7 +733,6 @@
 
     move v3, v1
 
-    .line 377
     :goto_4
     iget-object v0, v0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mThemePalette:Lcom/android/server/om/wallpapertheme/ThemePalette;
 
@@ -826,7 +802,6 @@
 .method public getColors(Ljava/lang/String;)Ljava/util/List;
     .locals 1
 
-    .line 268
     new-instance v0, Lcom/android/server/om/wallpapertheme/TemplateManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/om/wallpapertheme/TemplateManager$1;-><init>(Lcom/android/server/om/wallpapertheme/TemplateManager;)V
@@ -843,7 +818,6 @@
 .method public getInteger(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 1
 
-    .line 404
     new-instance v0, Lcom/android/server/om/wallpapertheme/TemplateManager$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/om/wallpapertheme/TemplateManager$3;-><init>(Lcom/android/server/om/wallpapertheme/TemplateManager;)V
@@ -860,12 +834,10 @@
 .method public final initColorTemplate(Lorg/json/JSONArray;Ljava/util/HashMap;)V
     .locals 4
 
-    .line 105
     invoke-virtual {p2}, Ljava/util/HashMap;->clear()V
 
     const/4 p0, 0x0
 
-    .line 106
     :goto_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -873,14 +845,12 @@
 
     if-ge p0, v0, :cond_5
 
-    .line 107
     invoke-virtual {p1, p0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v0
 
     const-string/jumbo v1, "name"
 
-    .line 108
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v2
@@ -897,20 +867,17 @@
 
     goto :goto_4
 
-    .line 111
     :cond_0
     new-instance v3, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;
 
     invoke-direct {v3}, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;-><init>()V
 
-    .line 112
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v3, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;->name:Ljava/lang/String;
 
-    .line 113
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -919,7 +886,6 @@
 
     const-string v1, "colorDark"
 
-    .line 114
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v2
@@ -940,7 +906,6 @@
 
     const-string v1, "colorLightGray"
 
-    .line 115
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v2
@@ -961,7 +926,6 @@
 
     const-string v1, "colorDarkGray"
 
-    .line 116
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v2
@@ -980,7 +944,6 @@
     :goto_3
     iput-object v0, v3, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;->colorDarkGray:Ljava/lang/String;
 
-    .line 117
     iget-object v0, v3, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;->name:Ljava/lang/String;
 
     invoke-virtual {p2, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -998,7 +961,6 @@
 .method public final initTemplate(Ljava/lang/String;)V
     .locals 4
 
-    .line 69
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -1009,12 +971,10 @@
     :try_start_1
     const-string/jumbo p1, "template"
 
-    .line 76
     invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
 
-    .line 77
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mUidTemplate:Ljava/util/List;
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/om/wallpapertheme/TemplateManager;->initUidTemplate(Lorg/json/JSONArray;Ljava/util/List;)V
@@ -1026,7 +986,6 @@
     :catch_0
     move-exception p1
 
-    .line 79
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1049,12 +1008,10 @@
     :try_start_2
     const-string p1, "color-template"
 
-    .line 83
     invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mColorTemplate:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/om/wallpapertheme/TemplateManager;->initColorTemplate(Lorg/json/JSONArray;Ljava/util/HashMap;)V
@@ -1066,7 +1023,6 @@
     :catch_1
     move-exception p1
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1091,7 +1047,6 @@
     :catch_2
     move-exception p1
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1116,14 +1071,12 @@
 .method public final initUidTemplate(Lorg/json/JSONArray;Ljava/util/List;)V
     .locals 6
 
-    .line 91
     invoke-interface {p2}, Ljava/util/List;->clear()V
 
     const/4 p0, 0x0
 
     move v0, p0
 
-    .line 92
     :goto_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -1131,19 +1084,16 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 93
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v1
 
-    .line 94
     new-instance v2, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;
 
     invoke-direct {v2}, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;-><init>()V
 
     const-string/jumbo v3, "theme"
 
-    .line 95
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -1154,12 +1104,10 @@
 
     move-result-object v3
 
-    .line 96
     aget-object v4, v3, p0
 
     iput-object v4, v2, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->theme:Ljava/lang/String;
 
-    .line 97
     array-length v4, v3
 
     const/4 v5, 0x2
@@ -1171,7 +1119,6 @@
     :cond_0
     const-string/jumbo v3, "uid"
 
-    .line 98
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -1180,7 +1127,6 @@
 
     const-string/jumbo v3, "opacity"
 
-    .line 99
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v4
@@ -1203,7 +1149,6 @@
 
     iput-object v1, v2, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->opacity:Ljava/lang/Integer;
 
-    .line 100
     invoke-interface {p2, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v0, v0, 0x1
@@ -1217,7 +1162,6 @@
 .method public loadStaticTemplate(Landroid/content/Context;)V
     .locals 3
 
-    .line 46
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1231,20 +1175,17 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 47
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/TemplateManager;->readFromInputStream(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 48
     invoke-virtual {p0, v0}, Lcom/android/server/om/wallpapertheme/TemplateManager;->initTemplate(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz p1, :cond_1
 
-    .line 49
     :try_start_2
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -1257,7 +1198,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 46
     :try_start_3
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -1280,7 +1220,6 @@
     :catch_0
     move-exception p1
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1299,7 +1238,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     :cond_1
     :goto_1
     iget-object p1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
@@ -1344,7 +1282,6 @@
 .method public loadTemplateFromUri(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 1
 
-    .line 57
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1356,7 +1293,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/TemplateManager;->readFromInputStream(Ljava/io/InputStream;)Ljava/lang/String;
 
@@ -1368,7 +1304,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 59
     :try_start_2
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -1381,7 +1316,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 57
     :try_start_3
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -1404,14 +1338,12 @@
     :catch_0
     move-exception p1
 
-    .line 60
     iget-object p2, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     const-string v0, "Failed at loadTemplate, e = "
 
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 62
     :cond_1
     :goto_1
     iget-object p1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
@@ -1456,7 +1388,6 @@
 .method public final readFromInputStream(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 3
 
-    .line 239
     new-instance p0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -1465,7 +1396,6 @@
 
     new-array v0, v0, [B
 
-    .line 242
     :goto_0
     invoke-virtual {p1, v0}, Ljava/io/InputStream;->read([B)I
 
@@ -1477,7 +1407,6 @@
 
     const/4 v2, 0x0
 
-    .line 243
     invoke-virtual {p0, v0, v2, v1}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_0
@@ -1485,7 +1414,6 @@
     :cond_0
     const-string p1, "UTF-8"
 
-    .line 245
     invoke-virtual {p0, p1}, Ljava/io/ByteArrayOutputStream;->toString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -1505,7 +1433,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 253
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mUidTemplate:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1525,7 +1452,6 @@
 
     check-cast v3, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;
 
-    .line 254
     iget-object v4, v3, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->uid:Ljava/lang/String;
 
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1534,14 +1460,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 255
     invoke-interface {p2, v3}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
-    .line 258
     :cond_1
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mMetaDataManager:Lcom/android/server/om/wallpapertheme/MetaDataManager;
 
@@ -1567,18 +1491,15 @@
 
     const-string/jumbo v0, "theming-templates"
 
-    .line 123
     :try_start_0
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 124
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 125
     invoke-static {p1}, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeUtils;->getPackageResources(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/content/res/Resources;
 
     move-result-object v3
@@ -1587,7 +1508,6 @@
 
     return-void
 
-    .line 129
     :cond_0
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1599,7 +1519,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 130
     :try_start_1
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
 
@@ -1609,12 +1528,10 @@
 
     const-string v0, ",|\\s"
 
-    .line 131
     invoke-virtual {v4, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 132
     array-length v2, v0
 
     const/4 v4, 0x0
@@ -1626,7 +1543,6 @@
 
     const-string/jumbo v7, "raw"
 
-    .line 133
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
@@ -1639,7 +1555,6 @@
 
     if-lez v7, :cond_2
 
-    .line 135
     :try_start_2
     invoke-virtual {v3, v7}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -1648,20 +1563,17 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 136
     :try_start_3
     invoke-virtual {p0, v6}, Lcom/android/server/om/wallpapertheme/TemplateManager;->readFromInputStream(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 137
     invoke-virtual {p0, v7, v1}, Lcom/android/server/om/wallpapertheme/TemplateManager;->updateTemplate(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     if-eqz v6, :cond_3
 
-    .line 138
     :try_start_4
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -1675,7 +1587,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 135
     :try_start_5
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -1699,7 +1610,6 @@
     :catch_0
     move-exception v6
 
-    .line 139
     :try_start_7
     iget-object v7, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
@@ -1719,7 +1629,6 @@
 
     goto :goto_2
 
-    .line 142
     :cond_2
     iget-object v7, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
@@ -1745,7 +1654,6 @@
 
     goto :goto_0
 
-    .line 146
     :cond_4
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -1755,7 +1663,6 @@
 
     if-lez p1, :cond_6
 
-    .line 148
     :try_start_8
     invoke-virtual {v3, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -1764,20 +1671,17 @@
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
 
-    .line 149
     :try_start_9
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/TemplateManager;->readFromInputStream(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 150
     invoke-virtual {p0, v0, v1}, Lcom/android/server/om/wallpapertheme/TemplateManager;->updateTemplate(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
     if-eqz p1, :cond_6
 
-    .line 151
     :try_start_a
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_a
@@ -1791,7 +1695,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 148
     :try_start_b
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_b
@@ -1815,7 +1718,6 @@
     :catch_1
     move-exception p1
 
-    .line 152
     :try_start_d
     iget-object v0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
@@ -1840,7 +1742,6 @@
     :catch_2
     move-exception p1
 
-    .line 157
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1869,7 +1770,6 @@
 
     const/4 v0, 0x0
 
-    .line 213
     :goto_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -1877,14 +1777,12 @@
 
     if-ge v0, v1, :cond_7
 
-    .line 214
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v1
 
     const-string/jumbo v2, "name"
 
-    .line 215
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v3
@@ -1901,20 +1799,17 @@
 
     goto/16 :goto_4
 
-    .line 219
     :cond_0
     new-instance v4, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;
 
     invoke-direct {v4}, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;-><init>()V
 
-    .line 220
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, v4, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;->name:Ljava/lang/String;
 
-    .line 221
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -1923,7 +1818,6 @@
 
     const-string v2, "colorDark"
 
-    .line 222
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v3
@@ -1944,7 +1838,6 @@
 
     const-string v2, "colorLightGray"
 
-    .line 223
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v3
@@ -1965,7 +1858,6 @@
 
     const-string v2, "colorDarkGray"
 
-    .line 224
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v3
@@ -1984,7 +1876,6 @@
     :goto_3
     iput-object v1, v4, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;->colorDarkGray:Ljava/lang/String;
 
-    .line 227
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mColorTemplate:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -2008,7 +1899,6 @@
 
     check-cast v2, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;
 
-    .line 228
     iget-object v3, v2, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;->name:Ljava/lang/String;
 
     iget-object v5, v4, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;->name:Ljava/lang/String;
@@ -2019,7 +1909,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 229
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2046,14 +1935,12 @@
 
     invoke-static {v1, v3}, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeManager;->saveSWTLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 230
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mColorTemplate:Ljava/util/HashMap;
 
     iget-object v2, v2, Lcom/android/server/om/wallpapertheme/TemplateManager$ColorItem;->name:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     :cond_5
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mColorTemplate:Ljava/util/HashMap;
 
@@ -2063,7 +1950,6 @@
 
     goto :goto_5
 
-    .line 216
     :cond_6
     :goto_4
     iget-object v2, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
@@ -2096,7 +1982,6 @@
 .method public final updateTemplate(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    .line 164
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -2107,12 +1992,10 @@
     :try_start_1
     const-string/jumbo p1, "template"
 
-    .line 171
     invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
 
-    .line 172
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/wallpapertheme/TemplateManager;->updateUidTemplate(Lorg/json/JSONArray;Ljava/lang/String;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
@@ -2122,7 +2005,6 @@
     :catch_0
     move-exception p1
 
-    .line 174
     iget-object v1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2145,12 +2027,10 @@
     :try_start_2
     const-string p1, "color-template"
 
-    .line 178
     invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
 
-    .line 179
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/wallpapertheme/TemplateManager;->updateColorTemplate(Lorg/json/JSONArray;Ljava/lang/String;)V
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
@@ -2160,7 +2040,6 @@
     :catch_1
     move-exception p1
 
-    .line 181
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2185,7 +2064,6 @@
     :catch_2
     move-exception p1
 
-    .line 166
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2212,28 +2090,24 @@
 
     const/4 v0, 0x0
 
-    .line 187
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v1
 
     const-string/jumbo v2, "uid"
 
-    .line 188
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v3, "-"
 
-    .line 189
     invoke-virtual {v1, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
     aget-object v1, v1, v0
 
-    .line 190
     iget-object v4, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2258,12 +2132,10 @@
 
     invoke-static {v4, p2}, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeManager;->saveSWTLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 193
     iget-object v4, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mUidTemplate:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2284,7 +2156,6 @@
 
     check-cast v5, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;
 
-    .line 194
     iget-object v6, v5, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->uid:Ljava/lang/String;
 
     if-eqz v6, :cond_0
@@ -2307,12 +2178,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 195
     invoke-interface {p2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 198
     :cond_1
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2331,14 +2200,12 @@
 
     check-cast v1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;
 
-    .line 199
     iget-object v3, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mUidTemplate:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 202
     :cond_2
     :goto_2
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
@@ -2347,26 +2214,22 @@
 
     if-ge v0, p2, :cond_4
 
-    .line 203
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object p2
 
-    .line 204
     new-instance v1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;
 
     invoke-direct {v1}, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;-><init>()V
 
     const-string/jumbo v3, "theme"
 
-    .line 205
     invoke-virtual {p2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->theme:Ljava/lang/String;
 
-    .line 206
     invoke-virtual {p2, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -2375,7 +2238,6 @@
 
     const-string/jumbo v3, "opacity"
 
-    .line 207
     invoke-virtual {p2, v3}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
     move-result v4
@@ -2398,7 +2260,6 @@
 
     iput-object p2, v1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->opacity:Ljava/lang/Integer;
 
-    .line 208
     iget-object p2, p0, Lcom/android/server/om/wallpapertheme/TemplateManager;->mUidTemplate:Ljava/util/List;
 
     invoke-interface {p2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z

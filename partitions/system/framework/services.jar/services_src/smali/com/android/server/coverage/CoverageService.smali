@@ -14,7 +14,6 @@
     :try_start_0
     const-string/jumbo v0, "org.jacoco.agent.rt.RT"
 
-    .line 47
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -26,7 +25,6 @@
     :catch_0
     const/4 v0, 0x0
 
-    .line 51
     :goto_0
     sput-boolean v0, Lcom/android/server/coverage/CoverageService;->ENABLED:Z
 
@@ -36,7 +34,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 38
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     return-void
@@ -47,7 +44,6 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 8
 
-    .line 60
     new-instance v0, Lcom/android/server/coverage/CoverageService$CoverageCommand;
 
     const/4 v1, 0x0

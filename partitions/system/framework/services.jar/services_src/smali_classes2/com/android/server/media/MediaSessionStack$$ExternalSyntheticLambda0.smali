@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/media/MediaSessionStack$$ExternalSyntheticLambda0;->f$0:Ljava/util/ArrayList;
@@ -27,7 +26,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/MediaSessionStack$$ExternalSyntheticLambda0;->f$0:Ljava/util/ArrayList;
 
     check-cast p1, Ljava/lang/Integer;

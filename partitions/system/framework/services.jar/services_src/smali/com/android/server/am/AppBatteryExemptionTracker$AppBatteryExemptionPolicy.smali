@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$gLQCjkdQStU4ccz9MqYIcyan0CY(Lcom/android/server/am/AppBatteryExemptionTracker;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/AppBatteryExemptionTracker;->-$$Nest$mtrimDurations(Lcom/android/server/am/AppBatteryExemptionTracker;)V
 
     return-void
@@ -22,17 +21,14 @@
 
     const-string v5, "bg_current_drain_window"
 
-    .line 527
     iget-object v0, p2, Lcom/android/server/am/BaseAppStateTracker;->mContext:Landroid/content/Context;
 
-    .line 530
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     const v1, 0x10e003e
 
-    .line 531
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
@@ -45,7 +41,6 @@
 
     move-object v2, p2
 
-    .line 527
     invoke-direct/range {v0 .. v7}, Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;-><init>(Lcom/android/server/am/BaseAppStateTracker$Injector;Lcom/android/server/am/BaseAppStateEventsTracker;Ljava/lang/String;ZLjava/lang/String;J)V
 
     return-void
@@ -56,15 +51,12 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 546
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "APP BATTERY EXEMPTION TRACKER POLICY SETTINGS:"
 
-    .line 547
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 549
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +71,6 @@
 
     move-result-object p2
 
-    .line 550
     invoke-super {p0, p1, p2}, Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
@@ -88,7 +79,6 @@
 .method public onMaxTrackingDurationChanged(J)V
     .locals 0
 
-    .line 536
     iget-object p0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     move-object p1, p0
@@ -113,7 +103,6 @@
 .method public onTrackerEnabled(Z)V
     .locals 0
 
-    .line 541
     iget-object p0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast p0, Lcom/android/server/am/AppBatteryExemptionTracker;

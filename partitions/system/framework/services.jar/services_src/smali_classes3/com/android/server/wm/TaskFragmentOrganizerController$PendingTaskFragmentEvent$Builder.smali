@@ -25,13 +25,10 @@
 .method public constructor <init>(ILandroid/window/ITaskFragmentOrganizer;)V
     .locals 0
 
-    .line 896
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 897
     iput p1, p0, Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;->mEventType:I
 
-    .line 898
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p2, Landroid/window/ITaskFragmentOrganizer;
@@ -46,7 +43,6 @@
 .method public build()Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent;
     .locals 11
 
-    .line 932
     new-instance v10, Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent;
 
     iget v1, p0, Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;->mEventType:I
@@ -77,7 +73,6 @@
 .method public setActivity(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;
     .locals 1
 
-    .line 917
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -92,7 +87,6 @@
 .method public setErrorCallbackToken(Landroid/os/IBinder;)Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;
     .locals 0
 
-    .line 907
     iput-object p1, p0, Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;->mErrorCallbackToken:Landroid/os/IBinder;
 
     return-object p0
@@ -101,7 +95,6 @@
 .method public setException(Ljava/lang/Throwable;)Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;
     .locals 1
 
-    .line 912
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -116,7 +109,6 @@
 .method public setOpType(I)Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;
     .locals 0
 
-    .line 927
     iput p1, p0, Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;->mOpType:I
 
     return-object p0
@@ -125,7 +117,6 @@
 .method public setTask(Lcom/android/server/wm/Task;)Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;
     .locals 1
 
-    .line 922
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -140,7 +131,6 @@
 .method public setTaskFragment(Lcom/android/server/wm/TaskFragment;)Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;
     .locals 0
 
-    .line 902
     iput-object p1, p0, Lcom/android/server/wm/TaskFragmentOrganizerController$PendingTaskFragmentEvent$Builder;->mTaskFragment:Lcom/android/server/wm/TaskFragment;
 
     return-object p0

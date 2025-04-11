@@ -7,7 +7,6 @@
 .method public static writeWmAddToStopping(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 195
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -32,7 +31,6 @@
 
     const/16 v0, 0x797c
 
-    .line 231
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
     return-void
@@ -43,7 +41,6 @@
 
     const/16 v0, 0x791f
 
-    .line 223
     invoke-static {v0, p0, p1}, Landroid/util/EventLog;->writeEvent(IJ)I
 
     return-void
@@ -52,7 +49,6 @@
 .method public static writeWmCreateTask(IIIII)V
     .locals 0
 
-    .line 143
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -87,7 +83,6 @@
 .method public static writeWmDestroyActivity(IIILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 171
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -114,7 +109,6 @@
 .method public static writeWmEnterPip(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 263
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -137,7 +131,6 @@
 .method public static writeWmFailedToPause(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 163
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -160,7 +153,6 @@
 .method public static writeWmFinishActivity(IIILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 131
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -187,7 +179,6 @@
 .method public static writeWmFocusedRootTask(IIIILjava/lang/String;)V
     .locals 0
 
-    .line 187
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -218,7 +209,6 @@
 .method public static writeWmIdleActivity(IILjava/lang/String;)V
     .locals 0
 
-    .line 275
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -241,7 +231,6 @@
 .method public static writeWmNoSurfaceMemory(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 203
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -260,7 +249,6 @@
 .method public static writeWmOccludedChanged(II)V
     .locals 0
 
-    .line 271
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -283,7 +271,6 @@
 .method public static writeWmPauseActivity(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 167
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -306,7 +293,6 @@
 .method public static writeWmRelaunchActivity(IIILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 179
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -333,7 +319,6 @@
 .method public static writeWmRelaunchResumeActivity(IIILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 175
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -360,7 +345,6 @@
 .method public static writeWmRequestedOrientation(ILjava/lang/String;)V
     .locals 0
 
-    .line 235
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -379,7 +363,6 @@
 .method public static writeWmRestartActivity(IIILjava/lang/String;)V
     .locals 0
 
-    .line 151
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -406,7 +389,6 @@
 .method public static writeWmResumeActivity(IIILjava/lang/String;)V
     .locals 0
 
-    .line 155
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -433,7 +415,6 @@
 .method public static writeWmSetKeyguardOccluded(IIILjava/lang/String;)V
     .locals 0
 
-    .line 227
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -460,7 +441,6 @@
 .method public static writeWmSetKeyguardShown(IIIIILjava/lang/String;)V
     .locals 6
 
-    .line 199
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -497,7 +477,6 @@
 .method public static writeWmSetRequestedOrientation(ILjava/lang/String;)V
     .locals 0
 
-    .line 219
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -516,7 +495,6 @@
 .method public static writeWmSetResumedActivity(ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 183
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -535,7 +513,6 @@
 .method public static writeWmSetShowWhenLocked(IILjava/lang/String;I)V
     .locals 0
 
-    .line 283
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -562,7 +539,6 @@
 .method public static writeWmSleepToken(IILjava/lang/String;)V
     .locals 0
 
-    .line 267
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -585,7 +561,6 @@
 .method public static writeWmStopActivity(IILjava/lang/String;)V
     .locals 0
 
-    .line 191
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -610,7 +585,6 @@
 
     const/16 v0, 0x7919
 
-    .line 207
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -619,7 +593,6 @@
 .method public static writeWmTaskMoved(IIIII)V
     .locals 0
 
-    .line 211
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -654,7 +627,6 @@
 .method public static writeWmTaskRemoved(IIILjava/lang/String;I)V
     .locals 0
 
-    .line 215
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -685,7 +657,6 @@
 .method public static writeWmTaskToFront(III)V
     .locals 0
 
-    .line 135
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -712,7 +683,6 @@
 .method public static writeWmTaskWindowingModeChanged(III)V
     .locals 0
 
-    .line 243
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -739,7 +709,6 @@
 .method public static writeWmUserRotationChanged(III)V
     .locals 0
 
-    .line 239
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0

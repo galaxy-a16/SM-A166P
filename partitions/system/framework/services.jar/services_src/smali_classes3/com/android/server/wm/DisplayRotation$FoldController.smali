@@ -43,7 +43,6 @@
 .method public static synthetic $r8$lambda$_7j8F-BQrhXx0qQX0rMR8fyeHwM(Lcom/android/server/wm/DisplayRotation$FoldController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->lambda$onPhysicalDisplayChanged$0()V
 
     return-void
@@ -52,7 +51,6 @@
 .method public static synthetic $r8$lambda$uEX9Zw0ZRZSKWvIHDf3vxj4YdYY(Lcom/android/server/wm/DisplayRotation$FoldController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->lambda$onHingeAngleChanged$1()V
 
     return-void
@@ -61,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceState(Lcom/android/server/wm/DisplayRotation$FoldController;)Lcom/android/server/wm/DeviceStateController$DeviceState;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     return-object p0
@@ -70,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHalfFoldSavedRotation(Lcom/android/server/wm/DisplayRotation$FoldController;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mHalfFoldSavedRotation:I
 
     return p0
@@ -79,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInHalfFoldTransition(Lcom/android/server/wm/DisplayRotation$FoldController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mInHalfFoldTransition:Z
 
     return p0
@@ -88,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastDisplaySwitchTime(Lcom/android/server/wm/DisplayRotation$FoldController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mLastDisplaySwitchTime:J
 
     return-wide v0
@@ -97,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastHingeAngleEventTime(Lcom/android/server/wm/DisplayRotation$FoldController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mLastHingeAngleEventTime:J
 
     return-wide v0
@@ -106,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPauseAutorotationDuringUnfolding(Lcom/android/server/wm/DisplayRotation$FoldController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mPauseAutorotationDuringUnfolding:Z
 
     return p0
@@ -115,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$fgetmShouldDisableRotationSensor(Lcom/android/server/wm/DisplayRotation$FoldController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldDisableRotationSensor:Z
 
     return p0
@@ -124,7 +115,6 @@
 .method public static bridge synthetic -$$Nest$fgetmShouldIgnoreSensorRotation(Lcom/android/server/wm/DisplayRotation$FoldController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldIgnoreSensorRotation:Z
 
     return p0
@@ -133,42 +123,34 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayRotation;)V
     .locals 9
 
-    .line 2053
     iput-object p1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2035
     iput v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mHalfFoldSavedRotation:I
 
-    .line 2037
     sget-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->UNKNOWN:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     const-wide/16 v0, 0x0
 
-    .line 2039
     iput-wide v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mLastHingeAngleEventTime:J
 
-    .line 2040
     iput-wide v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mLastDisplaySwitchTime:J
 
     const/4 v0, 0x0
 
-    .line 2043
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mInHalfFoldTransition:Z
 
-    .line 2054
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mTabletopRotations:Ljava/util/Set;
 
-    .line 2055
     invoke-static {p1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmContext(Lcom/android/server/wm/DisplayRotation;)Landroid/content/Context;
 
     move-result-object v1
@@ -187,7 +169,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 2058
     array-length v3, v1
 
     move v4, v0
@@ -213,7 +194,6 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 2073
     sget-boolean v6, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v6, :cond_4
@@ -236,7 +216,6 @@
 
     goto :goto_1
 
-    .line 2070
     :cond_0
     iget-object v5, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mTabletopRotations:Ljava/util/Set;
 
@@ -250,7 +229,6 @@
 
     goto :goto_1
 
-    .line 2067
     :cond_1
     iget-object v5, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mTabletopRotations:Ljava/util/Set;
 
@@ -264,7 +242,6 @@
 
     goto :goto_1
 
-    .line 2064
     :cond_2
     iget-object v5, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mTabletopRotations:Ljava/util/Set;
 
@@ -276,7 +253,6 @@
 
     goto :goto_1
 
-    .line 2061
     :cond_3
     iget-object v5, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mTabletopRotations:Ljava/util/Set;
 
@@ -292,7 +268,6 @@
 
     goto :goto_0
 
-    .line 2080
     :cond_5
     sget-boolean v1, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
@@ -304,7 +279,6 @@
 
     invoke-static {v1, v3, v0, v2, v2}, Lcom/android/internal/protolog/ProtoLogImpl;->w(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2084
     :cond_6
     invoke-static {p1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmContext(Lcom/android/server/wm/DisplayRotation;)Landroid/content/Context;
 
@@ -322,14 +296,12 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mIsDisplayAlwaysSeparatingHinge:Z
 
-    .line 2087
     new-instance v0, Lcom/android/server/wm/DisplayRotation$FoldController$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/wm/DisplayRotation$FoldController$1;-><init>(Lcom/android/server/wm/DisplayRotation$FoldController;Lcom/android/server/wm/DisplayRotation;)V
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mActivityBoundsUpdateCallback:Ljava/lang/Runnable;
 
-    .line 2107
     invoke-static {p1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmContext(Lcom/android/server/wm/DisplayRotation;)Landroid/content/Context;
 
     move-result-object v0
@@ -348,7 +320,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 2111
     invoke-static {p1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmContext(Lcom/android/server/wm/DisplayRotation;)Landroid/content/Context;
 
     move-result-object v0
@@ -365,7 +336,6 @@
 
     iput v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDisplaySwitchRotationBlockTimeMs:I
 
-    .line 2113
     invoke-static {p1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmContext(Lcom/android/server/wm/DisplayRotation;)Landroid/content/Context;
 
     move-result-object v0
@@ -382,7 +352,6 @@
 
     iput v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mHingeAngleRotationBlockTimeMs:I
 
-    .line 2115
     invoke-static {p1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmContext(Lcom/android/server/wm/DisplayRotation;)Landroid/content/Context;
 
     move-result-object p1
@@ -399,7 +368,6 @@
 
     iput p1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mMaxHingeAngle:I
 
-    .line 2117
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->registerSensorManager()V
 
     :cond_7
@@ -409,7 +377,6 @@
 .method private synthetic lambda$onHingeAngleChanged$1()V
     .locals 1
 
-    .line 2292
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmLock(Lcom/android/server/wm/DisplayRotation;)Ljava/lang/Object;
@@ -418,11 +385,9 @@
 
     monitor-enter v0
 
-    .line 2293
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->updateSensorRotationBlockIfNeeded()V
 
-    .line 2294
     monitor-exit v0
 
     return-void
@@ -440,7 +405,6 @@
 .method private synthetic lambda$onPhysicalDisplayChanged$0()V
     .locals 1
 
-    .line 2279
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmLock(Lcom/android/server/wm/DisplayRotation;)Ljava/lang/Object;
@@ -449,11 +413,9 @@
 
     monitor-enter v0
 
-    .line 2280
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->updateSensorRotationBlockIfNeeded()V
 
-    .line 2281
     monitor-exit v0
 
     return-void
@@ -477,7 +439,6 @@
 
     move-object/from16 v1, p1
 
-    .line 2195
     sget-boolean v2, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v2, :cond_0
@@ -580,7 +541,6 @@
 
     invoke-static {v2, v4, v5, v6, v3}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2201
     :cond_0
     iget-object v2, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
@@ -588,12 +548,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 2202
     iput-object v1, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     return-void
 
-    .line 2205
     :cond_1
     sget-object v3, Lcom/android/server/wm/DeviceStateController$DeviceState;->HALF_FOLDED:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
@@ -603,7 +561,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 2209
     iget-object v2, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v2}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/DisplayRotation;)Lcom/android/server/wm/DisplayContent;
@@ -618,7 +575,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wm/DisplayRotationReversionController;->beforeOverrideApplied(I)V
 
-    .line 2211
     iget-object v2, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v2}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmRotation(Lcom/android/server/wm/DisplayRotation;)I
@@ -627,10 +583,8 @@
 
     iput v2, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->mHalfFoldSavedRotation:I
 
-    .line 2212
     iput-object v1, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
-    .line 2215
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmService(Lcom/android/server/wm/DisplayRotation;)Lcom/android/server/wm/WindowManagerService;
@@ -644,13 +598,10 @@
     :cond_2
     const/4 v2, 0x1
 
-    .line 2218
     iput-boolean v2, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->mInHalfFoldTransition:Z
 
-    .line 2219
     iput-object v1, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
-    .line 2221
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmService(Lcom/android/server/wm/DisplayRotation;)Lcom/android/server/wm/WindowManagerService;
@@ -659,7 +610,6 @@
 
     invoke-virtual {v1, v4, v4}, Lcom/android/server/wm/WindowManagerService;->updateRotation(ZZ)V
 
-    .line 2225
     :goto_0
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
@@ -669,7 +619,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2226
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -686,7 +635,6 @@
 .method public isDeviceInPosture(Lcom/android/server/wm/DeviceStateController$DeviceState;Z)Z
     .locals 3
 
-    .line 2151
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     const/4 v1, 0x0
@@ -695,7 +643,6 @@
 
     return v1
 
-    .line 2154
     :cond_0
     sget-object p1, Lcom/android/server/wm/DeviceStateController$DeviceState;->HALF_FOLDED:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
@@ -703,7 +650,6 @@
 
     if-ne v0, p1, :cond_2
 
-    .line 2155
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mTabletopRotations:Ljava/util/Set;
 
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
@@ -734,7 +680,6 @@
 .method public isSeparatingHinge()Z
     .locals 2
 
-    .line 2165
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     sget-object v1, Lcom/android/server/wm/DeviceStateController$DeviceState;->HALF_FOLDED:Lcom/android/server/wm/DeviceStateController$DeviceState;
@@ -767,7 +712,6 @@
 .method public onDisplayRemoved()V
     .locals 1
 
-    .line 2145
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
@@ -776,7 +720,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2146
     invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
     :cond_0
@@ -786,7 +729,6 @@
 .method public onHingeAngleChanged(F)V
     .locals 3
 
-    .line 2286
     iget v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mMaxHingeAngle:I
 
     int-to-float v0, v0
@@ -795,7 +737,6 @@
 
     if-gez p1, :cond_0
 
-    .line 2287
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayRotation;->uptimeMillis()J
@@ -804,10 +745,8 @@
 
     iput-wide v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mLastHingeAngleEventTime:J
 
-    .line 2289
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->updateSensorRotationBlockIfNeeded()V
 
-    .line 2291
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayRotation;->getHandler()Landroid/os/Handler;
@@ -831,14 +770,12 @@
 .method public onPhysicalDisplayChanged()V
     .locals 4
 
-    .line 2263
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mPauseAutorotationDuringUnfolding:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2265
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
@@ -848,7 +785,6 @@
 
     iput-wide v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mLastDisplaySwitchTime:J
 
-    .line 2267
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     sget-object v1, Lcom/android/server/wm/DeviceStateController$DeviceState;->OPEN:Lcom/android/server/wm/DeviceStateController$DeviceState;
@@ -875,19 +811,15 @@
     :goto_1
     if-eqz v0, :cond_3
 
-    .line 2273
     iput-boolean v2, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldDisableRotationSensor:Z
 
-    .line 2274
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$mupdateOrientationListenerLw(Lcom/android/server/wm/DisplayRotation;)V
 
-    .line 2277
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->updateSensorRotationBlockIfNeeded()V
 
-    .line 2278
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayRotation;->getHandler()Landroid/os/Handler;
@@ -910,7 +842,6 @@
 .method public overrideFrozenRotation()Z
     .locals 1
 
-    .line 2171
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     sget-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->HALF_FOLDED:Lcom/android/server/wm/DeviceStateController$DeviceState;
@@ -931,7 +862,6 @@
 .method public final registerSensorManager()V
     .locals 4
 
-    .line 2122
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmContext(Lcom/android/server/wm/DisplayRotation;)Landroid/content/Context;
@@ -952,33 +882,28 @@
 
     const/16 v1, 0x24
 
-    .line 2125
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2128
     new-instance v1, Lcom/android/server/wm/DisplayRotation$FoldController$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/wm/DisplayRotation$FoldController$2;-><init>(Lcom/android/server/wm/DisplayRotation$FoldController;)V
 
     iput-object v1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mHingeAngleSensorEventListener:Landroid/hardware/SensorEventListener;
 
-    .line 2138
     iget-object v2, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
-    .line 2139
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->getHandler()Landroid/os/Handler;
 
     move-result-object p0
 
     const/4 v3, 0x0
 
-    .line 2138
     invoke-virtual {v2, v1, v0, v3, p0}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Handler;)Z
 
     :cond_0
@@ -988,15 +913,12 @@
 .method public revertOverriddenRotation()I
     .locals 3
 
-    .line 2186
     iget v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mHalfFoldSavedRotation:I
 
     const/4 v1, -0x1
 
-    .line 2187
     iput v1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mHalfFoldSavedRotation:I
 
-    .line 2188
     iget-object v1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {v1}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/DisplayRotation;)Lcom/android/server/wm/DisplayContent;
@@ -1009,12 +931,10 @@
 
     const/4 v2, 0x2
 
-    .line 2189
     invoke-virtual {v1, v2}, Lcom/android/server/wm/DisplayRotationReversionController;->revertOverride(I)Z
 
     const/4 v1, 0x0
 
-    .line 2190
     iput-boolean v1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mInHalfFoldTransition:Z
 
     return v0
@@ -1023,7 +943,6 @@
 .method public shouldDisableRotationSensor()Z
     .locals 0
 
-    .line 2235
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldDisableRotationSensor:Z
 
     return p0
@@ -1032,7 +951,6 @@
 .method public shouldIgnoreSensorRotation()Z
     .locals 0
 
-    .line 2231
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldIgnoreSensorRotation:Z
 
     return p0
@@ -1041,7 +959,6 @@
 .method public shouldRevertOverriddenRotation()Z
     .locals 2
 
-    .line 2176
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mDeviceState:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     sget-object v1, Lcom/android/server/wm/DeviceStateController$DeviceState;->OPEN:Lcom/android/server/wm/DeviceStateController$DeviceState;
@@ -1062,7 +979,6 @@
 
     move-result-object v0
 
-    .line 2179
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getRotationReversionController()Lcom/android/server/wm/DisplayRotationReversionController;
 
     move-result-object v0
@@ -1097,14 +1013,12 @@
 .method public final updateSensorRotationBlockIfNeeded()V
     .locals 6
 
-    .line 2239
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayRotation;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 2240
     iget-wide v2, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mLastDisplaySwitchTime:J
 
     sub-long v2, v0, v2
@@ -1142,33 +1056,27 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 2244
     :goto_1
     iget-boolean v1, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldIgnoreSensorRotation:Z
 
     if-eq v0, v1, :cond_3
 
-    .line 2245
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldIgnoreSensorRotation:Z
 
     if-nez v0, :cond_3
 
-    .line 2249
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldDisableRotationSensor:Z
 
     if-eqz v0, :cond_2
 
-    .line 2251
     iput-boolean v3, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->mShouldDisableRotationSensor:Z
 
-    .line 2252
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 
     invoke-static {p0}, Lcom/android/server/wm/DisplayRotation;->-$$Nest$mupdateOrientationListenerLw(Lcom/android/server/wm/DisplayRotation;)V
 
     goto :goto_2
 
-    .line 2256
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController;->this$0:Lcom/android/server/wm/DisplayRotation;
 

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     invoke-static {p0}, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->$r8$lambda$eTAyejDPssWpGCiN-35gZ_pXMoI(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)V

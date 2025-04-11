@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEncryptedEscrowSplit0(Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;)[B
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mEncryptedEscrowSplit0:[B
 
     return-object p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEscrowSplit1(Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;)[B
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mEscrowSplit1:[B
 
     return-object p0
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmVersion(Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;)B
     .locals 0
 
-    .line 0
     iget-byte p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mVersion:B
 
     return p0
@@ -48,13 +45,10 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .line 499
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 500
     iput-byte p1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mVersion:B
 
-    .line 501
     invoke-virtual {p0}, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->createSdpToken()V
 
     return-void
@@ -63,7 +57,6 @@
 .method public static create()Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;
     .locals 5
 
-    .line 600
     new-instance v0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;
 
     const/4 v1, 0x3
@@ -72,20 +65,16 @@
 
     const/16 v1, 0x20
 
-    .line 602
     invoke-static {v1}, Lcom/android/server/locksettings/SecureRandomUtils;->randomBytes(I)[B
 
     move-result-object v2
 
-    .line 604
     invoke-static {v1}, Lcom/android/server/locksettings/SecureRandomUtils;->randomBytes(I)[B
 
     move-result-object v1
 
-    .line 605
     invoke-virtual {v0, v2, v1}, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->recreate([B[B)V
 
-    .line 606
     iget-object v3, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSyntheticPassword:[B
 
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_E0()[B
@@ -96,7 +85,6 @@
 
     move-result-object v2
 
-    .line 608
     invoke-virtual {v0, v2, v1}, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->setEscrowData([B[B)V
 
     return-object v0
@@ -107,7 +95,6 @@
 .method public final createSdpToken()V
     .locals 2
 
-    .line 667
     new-instance v0, Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationSdpToken;
 
     const/4 v1, 0x0
@@ -118,15 +105,12 @@
 
     const/4 v1, 0x0
 
-    .line 668
     invoke-virtual {v0, v1}, Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationSdpToken;->setSecureMode(I)V
 
-    .line 669
     iget-object v0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSdpToken:Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationSdpToken;
 
     invoke-virtual {v0, v1}, Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationSdpToken;->setDestroyed(Z)V
 
-    .line 670
     iput-boolean v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSecureFolderAuthToken:Z
 
     return-void
@@ -135,7 +119,6 @@
 .method public deriveFileBasedEncryptionKey()[B
     .locals 1
 
-    .line 542
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_FBE_KEY()[B
 
     move-result-object v0
@@ -150,7 +133,6 @@
 .method public deriveGkPassword()[B
     .locals 1
 
-    .line 533
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_SP_GK_AUTH()[B
 
     move-result-object v0
@@ -165,7 +147,6 @@
 .method public deriveKeyStorePassword()[B
     .locals 1
 
-    .line 524
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_KEY_STORE_PASSWORD()[B
 
     move-result-object v0
@@ -184,7 +165,6 @@
 .method public deriveMetricsKey()[B
     .locals 1
 
-    .line 555
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_PASSWORD_METRICS()[B
 
     move-result-object v0
@@ -199,7 +179,6 @@
 .method public derivePasswordHashFactor()[B
     .locals 1
 
-    .line 550
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_PASSWORD_HASH()[B
 
     move-result-object v0
@@ -214,7 +193,6 @@
 .method public deriveSdpMasterKey()[B
     .locals 1
 
-    .line 717
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_SDP_MASTER_KEY()[B
 
     move-result-object v0
@@ -229,7 +207,6 @@
 .method public deriveSdpMasterKeyPersonalized()[B
     .locals 1
 
-    .line 721
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_SDP_MASTER_KEY()[B
 
     move-result-object v0
@@ -250,14 +227,12 @@
 .method public final deriveSubkey([B)[B
     .locals 2
 
-    .line 509
     iget-byte v0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mVersion:B
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_0
 
-    .line 510
     new-instance v0, Lcom/android/server/locksettings/SP800Derive;
 
     iget-object p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSyntheticPassword:[B
@@ -268,14 +243,12 @@
 
     move-result-object p0
 
-    .line 511
     invoke-virtual {v0, p1, p0}, Lcom/android/server/locksettings/SP800Derive;->withContext([B[B)[B
 
     move-result-object p0
 
     return-object p0
 
-    .line 513
     :cond_0
     iget-object p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSyntheticPassword:[B
 
@@ -293,7 +266,6 @@
 .method public deriveVendorAuthSecret()[B
     .locals 1
 
-    .line 546
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_AUTHSECRET_KEY()[B
 
     move-result-object v0
@@ -308,7 +280,6 @@
 .method public deriveVendorAuthSecretEncryptionKey()[B
     .locals 1
 
-    .line 559
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_AUTHSECRET_ENCRYPTION_KEY()[B
 
     move-result-object v0
@@ -323,7 +294,6 @@
 .method public getEscrowSecret()[B
     .locals 2
 
-    .line 632
     iget-object v0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mEncryptedEscrowSplit0:[B
 
     if-nez v0, :cond_0
@@ -332,7 +302,6 @@
 
     return-object p0
 
-    .line 635
     :cond_0
     iget-object v0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSyntheticPassword:[B
 
@@ -352,7 +321,6 @@
 .method public getSecureFolderAuthToken()Z
     .locals 0
 
-    .line 660
     iget-boolean p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSecureFolderAuthToken:Z
 
     return p0
@@ -361,7 +329,6 @@
 .method public getSyntheticPassword()[B
     .locals 0
 
-    .line 643
     iget-object p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSyntheticPassword:[B
 
     return-object p0
@@ -370,7 +337,6 @@
 .method public getVersion()B
     .locals 0
 
-    .line 651
     iget-byte p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mVersion:B
 
     return p0
@@ -379,7 +345,6 @@
 .method public isSdpMdfppMode()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -388,7 +353,6 @@
 .method public final recreate([B[B)V
     .locals 1
 
-    .line 617
     invoke-static {}, Lcom/android/server/locksettings/SyntheticPasswordManager;->-$$Nest$sfgetPERSONALIZATION_SP_SPLIT()[B
 
     move-result-object v0
@@ -413,7 +377,6 @@
 .method public recreateDirectly([B)V
     .locals 1
 
-    .line 593
     array-length v0, p1
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -428,17 +391,14 @@
 .method public recreateFromEscrow([B)V
     .locals 1
 
-    .line 584
     iget-object v0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mEscrowSplit1:[B
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 585
     iget-object v0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mEncryptedEscrowSplit0:[B
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 586
     iget-object v0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mEscrowSplit1:[B
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->recreate([B[B)V
@@ -449,10 +409,8 @@
 .method public setEscrowData([B[B)V
     .locals 0
 
-    .line 568
     iput-object p1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mEncryptedEscrowSplit0:[B
 
-    .line 569
     iput-object p2, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mEscrowSplit1:[B
 
     return-void
@@ -463,7 +421,6 @@
 
     const/4 p1, 0x1
 
-    .line 656
     iput-boolean p1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;->mSecureFolderAuthToken:Z
 
     return-void

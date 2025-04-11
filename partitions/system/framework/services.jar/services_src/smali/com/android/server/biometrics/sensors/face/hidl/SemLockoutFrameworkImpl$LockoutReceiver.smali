@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl;)V
     .locals 0
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl$LockoutReceiver;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl;Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl$LockoutReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl$LockoutReceiver;-><init>(Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 39
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -58,7 +55,6 @@
 
     const-string p1, "com.android.server.biometrics.face.ACTION_LOCKOUT_RESET"
 
-    .line 40
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -73,12 +69,10 @@
 
     const/4 v0, 0x0
 
-    .line 41
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 42
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl$LockoutReceiver;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl;
 
     invoke-virtual {p2, p1}, Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl;->getLockoutModeForUser(I)I
@@ -89,7 +83,6 @@
 
     if-eq p2, v1, :cond_0
 
-    .line 43
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl$LockoutReceiver;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/biometrics/sensors/face/hidl/SemLockoutFrameworkImpl;->resetFailedAttemptsForUser(ZI)V

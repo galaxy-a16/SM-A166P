@@ -39,7 +39,6 @@
 .method public static synthetic $r8$lambda$Dav5uyX2AgyrGMZQcm0pvoVN7-A(Lcom/android/server/utils/quota/CountQuotaTracker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/utils/quota/CountQuotaTracker;->lambda$new$0()V
 
     return-void
@@ -48,7 +47,6 @@
 .method public static synthetic $r8$lambda$FDz6ekDsOZT1IOWa2Y-PoCWjMSA(Lcom/android/server/utils/quota/CountQuotaTracker;Landroid/util/proto/ProtoOutputStream;ILjava/lang/String;Ljava/lang/String;Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/utils/quota/CountQuotaTracker;->lambda$dump$8(Landroid/util/proto/ProtoOutputStream;ILjava/lang/String;Ljava/lang/String;Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)V
 
     return-void
@@ -57,7 +55,6 @@
 .method public static synthetic $r8$lambda$W7bqGbfxr3KpweNVx_aKRNe2wAg(Ljava/lang/Void;)Landroid/util/LongArrayQueue;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/utils/quota/CountQuotaTracker;->lambda$new$4(Ljava/lang/Void;)Landroid/util/LongArrayQueue;
 
     move-result-object p0
@@ -68,7 +65,6 @@
 .method public static synthetic $r8$lambda$bGRhq5yRasiv28Z48_VuwkEi6j0(JLcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/utils/quota/CountQuotaTracker;->lambda$invalidateAllExecutionStatsLocked$2(JLcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)V
 
     return-void
@@ -77,7 +73,6 @@
 .method public static synthetic $r8$lambda$cA8ysKjrcVI0Pae5GnWwGICxjyI(Ljava/lang/Void;)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/utils/quota/CountQuotaTracker;->lambda$new$5(Ljava/lang/Void;)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
     move-result-object p0
@@ -88,7 +83,6 @@
 .method public static synthetic $r8$lambda$dnCRxma8EXcq3V7mrECDj_7cHqw(Lcom/android/server/utils/quota/CountQuotaTracker;Lcom/android/server/utils/quota/UptcMap;ILjava/lang/String;Ljava/lang/String;Landroid/util/LongArrayQueue;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/utils/quota/CountQuotaTracker;->lambda$maybeUpdateAllQuotaStatusLocked$1(Lcom/android/server/utils/quota/UptcMap;ILjava/lang/String;Ljava/lang/String;Landroid/util/LongArrayQueue;)V
 
     return-void
@@ -97,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCategoryCountWindowSizesMs(Lcom/android/server/utils/quota/CountQuotaTracker;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCategoryCountWindowSizesMs:Landroid/util/ArrayMap;
 
     return-object p0
@@ -106,14 +99,12 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 65
     const-class v0, Lcom/android/server/utils/quota/CountQuotaTracker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 68
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,7 +131,6 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/utils/quota/Categorizer;)V
     .locals 1
 
-    .line 164
     new-instance v0, Lcom/android/server/utils/quota/QuotaTracker$Injector;
 
     invoke-direct {v0}, Lcom/android/server/utils/quota/QuotaTracker$Injector;-><init>()V
@@ -153,17 +143,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/utils/quota/Categorizer;Lcom/android/server/utils/quota/QuotaTracker$Injector;)V
     .locals 1
 
-    .line 170
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;-><init>(Landroid/content/Context;Lcom/android/server/utils/quota/Categorizer;Lcom/android/server/utils/quota/QuotaTracker$Injector;)V
 
-    .line 128
     new-instance p2, Lcom/android/server/utils/quota/UptcMap;
 
     invoke-direct {p2}, Lcom/android/server/utils/quota/UptcMap;-><init>()V
 
     iput-object p2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
-    .line 132
     new-instance p2, Lcom/android/server/utils/quota/UptcMap;
 
     invoke-direct {p2}, Lcom/android/server/utils/quota/UptcMap;-><init>()V
@@ -172,34 +159,28 @@
 
     const-wide/16 p2, 0x0
 
-    .line 137
     iput-wide p2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mNextCleanupTimeElapsed:J
 
-    .line 139
     new-instance v0, Lcom/android/server/utils/quota/CountQuotaTracker$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/utils/quota/CountQuotaTracker$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/utils/quota/CountQuotaTracker;)V
 
     iput-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventCleanupAlarmListener:Landroid/app/AlarmManager$OnAlarmListener;
 
-    .line 144
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCategoryCountWindowSizesMs:Landroid/util/ArrayMap;
 
-    .line 153
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxCategoryCounts:Landroid/util/ArrayMap;
 
-    .line 157
     iput-wide p2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxPeriodMs:J
 
-    .line 501
     new-instance p2, Lcom/android/server/utils/quota/CountQuotaTracker$EarliestEventTimeFunctor;
 
     const/4 p3, 0x0
@@ -208,28 +189,24 @@
 
     iput-object p2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEarliestEventTimeFunctor:Lcom/android/server/utils/quota/CountQuotaTracker$EarliestEventTimeFunctor;
 
-    .line 637
     new-instance p2, Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;
 
     invoke-direct {p2, p0, p3}, Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;-><init>(Lcom/android/server/utils/quota/CountQuotaTracker;Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor-IA;)V
 
     iput-object p2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mDeleteOldEventTimesFunctor:Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;
 
-    .line 668
     new-instance p2, Lcom/android/server/utils/quota/CountQuotaTracker$$ExternalSyntheticLambda1;
 
     invoke-direct {p2}, Lcom/android/server/utils/quota/CountQuotaTracker$$ExternalSyntheticLambda1;-><init>()V
 
     iput-object p2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCreateLongArrayQueue:Ljava/util/function/Function;
 
-    .line 669
     new-instance p2, Lcom/android/server/utils/quota/CountQuotaTracker$$ExternalSyntheticLambda2;
 
     invoke-direct {p2}, Lcom/android/server/utils/quota/CountQuotaTracker$$ExternalSyntheticLambda2;-><init>()V
 
     iput-object p2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCreateExecutionStats:Ljava/util/function/Function;
 
-    .line 172
     new-instance p2, Lcom/android/server/utils/quota/CountQuotaTracker$CqtHandler;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -246,34 +223,28 @@
 .method private synthetic lambda$dump$8(Landroid/util/proto/ProtoOutputStream;ILjava/lang/String;Ljava/lang/String;Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)V
     .locals 9
 
-    .line 764
     invoke-virtual {p0, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->isIndividualQuotaFreeLocked(ILjava/lang/String;)Z
 
     move-result v0
 
     const-wide v1, 0x20b00000003L
 
-    .line 766
     invoke-virtual {p1, v1, v2}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v3
 
-    .line 768
     new-instance v5, Lcom/android/server/utils/quota/Uptc;
 
     invoke-direct {v5, p2, p3, p4}, Lcom/android/server/utils/quota/Uptc;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     const-wide v6, 0x10b00000001L
 
-    .line 769
     invoke-virtual {v5, p1, v6, v7}, Lcom/android/server/utils/quota/Uptc;->dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
 
     const-wide v5, 0x10800000002L
 
-    .line 771
     invoke-virtual {p1, v5, v6, v0}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
-    .line 773
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/utils/quota/UptcMap;->get(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
@@ -286,7 +257,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 775
     invoke-virtual {p0}, Landroid/util/LongArrayQueue;->size()I
 
     move-result p4
@@ -296,19 +266,16 @@
     :goto_0
     if-ltz p4, :cond_0
 
-    .line 776
     invoke-virtual {p1, v1, v2}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v5
 
-    .line 777
     invoke-virtual {p0, p4}, Landroid/util/LongArrayQueue;->get(I)J
 
     move-result-wide v7
 
     invoke-virtual {p1, p2, p3, v7, v8}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    .line 778
     invoke-virtual {p1, v5, v6}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     add-int/lit8 p4, p4, -0x1
@@ -318,48 +285,40 @@
     :cond_0
     const-wide v0, 0x20b00000004L
 
-    .line 782
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v0
 
-    .line 784
     iget-wide v5, p5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
     invoke-virtual {p1, p2, p3, v5, v6}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
     const-wide p2, 0x10300000002L
 
-    .line 787
     iget-wide v5, p5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->windowSizeMs:J
 
     invoke-virtual {p1, p2, p3, v5, v6}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
     const-wide p2, 0x10500000003L
 
-    .line 790
     iget p0, p5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countLimit:I
 
     invoke-virtual {p1, p2, p3, p0}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
     const-wide p2, 0x10500000004L
 
-    .line 791
     iget p0, p5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
     invoke-virtual {p1, p2, p3, p0}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
     const-wide p2, 0x10300000005L
 
-    .line 794
     iget-wide p4, p5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->inQuotaTimeElapsed:J
 
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    .line 797
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
-    .line 799
     invoke-virtual {p1, v3, v4}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -370,7 +329,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 455
     iput-wide p0, p2, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
     :cond_0
@@ -380,17 +338,14 @@
 .method private synthetic lambda$maybeUpdateAllQuotaStatusLocked$1(Lcom/android/server/utils/quota/UptcMap;ILjava/lang/String;Ljava/lang/String;Landroid/util/LongArrayQueue;)V
     .locals 0
 
-    .line 332
     invoke-virtual {p1, p2, p3, p4}, Lcom/android/server/utils/quota/UptcMap;->contains(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result p5
 
     if-nez p5, :cond_0
 
-    .line 333
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/utils/quota/CountQuotaTracker;->maybeUpdateStatusForUptcLocked(ILjava/lang/String;Ljava/lang/String;)Z
 
-    .line 334
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-virtual {p1, p2, p3, p4, p0}, Lcom/android/server/utils/quota/UptcMap;->add(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
@@ -402,7 +357,6 @@
 .method private synthetic lambda$new$0()V
     .locals 1
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mHandler:Landroid/os/Handler;
 
     const/4 v0, 0x1
@@ -419,7 +373,6 @@
 .method public static synthetic lambda$new$4(Ljava/lang/Void;)Landroid/util/LongArrayQueue;
     .locals 0
 
-    .line 668
     new-instance p0, Landroid/util/LongArrayQueue;
 
     invoke-direct {p0}, Landroid/util/LongArrayQueue;-><init>()V
@@ -430,7 +383,6 @@
 .method public static synthetic lambda$new$5(Ljava/lang/Void;)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
     .locals 0
 
-    .line 669
     new-instance p0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
     invoke-direct {p0}, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;-><init>()V
@@ -443,7 +395,6 @@
 .method public bridge synthetic clear()V
     .locals 0
 
-    .line 64
     invoke-super {p0}, Lcom/android/server/utils/quota/QuotaTracker;->clear()V
 
     return-void
@@ -452,7 +403,6 @@
 .method public deleteObsoleteEventsLocked()V
     .locals 1
 
-    .line 643
     iget-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mDeleteOldEventTimesFunctor:Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;
@@ -465,12 +415,10 @@
 .method public dropEverythingLocked()V
     .locals 1
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mExecutionStatsCache:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {v0}, Lcom/android/server/utils/quota/UptcMap;->clear()V
 
-    .line 277
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {p0}, Lcom/android/server/utils/quota/UptcMap;->clear()V
@@ -481,7 +429,6 @@
 .method public bridge synthetic dump(Landroid/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 64
     invoke-super {p0, p1}, Lcom/android/server/utils/quota/QuotaTracker;->dump(Landroid/util/IndentingPrintWriter;)V
 
     return-void
@@ -490,25 +437,21 @@
 .method public dump(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 11
 
-    .line 747
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
-    .line 749
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const-wide v1, 0x10b00000001L
 
-    .line 750
     :try_start_0
     invoke-super {p0, p1, v1, v2}, Lcom/android/server/utils/quota/QuotaTracker;->dump(Landroid/util/proto/ProtoOutputStream;J)V
 
     const/4 v3, 0x0
 
-    .line 752
     :goto_0
     iget-object v4, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCategoryCountWindowSizesMs:Landroid/util/ArrayMap;
 
@@ -518,7 +461,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 753
     iget-object v4, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCategoryCountWindowSizesMs:Landroid/util/ArrayMap;
 
     invoke-virtual {v4, v3}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -529,18 +471,14 @@
 
     const-wide v5, 0x20b00000002L
 
-    .line 754
     invoke-virtual {p1, v5, v6}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v5
 
-    .line 755
     invoke-virtual {v4, p1, v1, v2}, Lcom/android/server/utils/quota/Category;->dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
 
-    .line 756
     iget-object v7, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxCategoryCounts:Landroid/util/ArrayMap;
 
-    .line 757
     invoke-virtual {v7, v4}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
@@ -553,13 +491,10 @@
 
     const-wide v8, 0x10500000002L
 
-    .line 756
     invoke-virtual {p1, v8, v9, v7}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
-    .line 758
     iget-object v7, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCategoryCountWindowSizesMs:Landroid/util/ArrayMap;
 
-    .line 759
     invoke-virtual {v7, v4}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -572,17 +507,14 @@
 
     const-wide v9, 0x10300000003L
 
-    .line 758
     invoke-virtual {p1, v9, v10, v7, v8}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    .line 760
     invoke-virtual {p1, v5, v6}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 763
     :cond_0
     iget-object v1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mExecutionStatsCache:Lcom/android/server/utils/quota/UptcMap;
 
@@ -592,10 +524,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/utils/quota/UptcMap;->forEach(Lcom/android/server/utils/quota/UptcMap$UptcDataConsumer;)V
 
-    .line 802
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
-    .line 803
     monitor-exit v0
 
     return-void
@@ -613,7 +543,6 @@
 .method public getEvents(ILjava/lang/String;Ljava/lang/String;)Landroid/util/LongArrayQueue;
     .locals 0
 
-    .line 676
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/UptcMap;->get(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
@@ -630,7 +559,6 @@
 
     const/4 v0, 0x1
 
-    .line 376
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/utils/quota/CountQuotaTracker;->getExecutionStatsLocked(ILjava/lang/String;Ljava/lang/String;Z)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
     move-result-object p0
@@ -641,12 +569,10 @@
 .method public final getExecutionStatsLocked(ILjava/lang/String;Ljava/lang/String;Z)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
     .locals 7
 
-    .line 384
     iget-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mExecutionStatsCache:Lcom/android/server/utils/quota/UptcMap;
 
     iget-object v1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCreateExecutionStats:Ljava/util/function/Function;
 
-    .line 385
     invoke-virtual {v0, p1, p2, p3, v1}, Lcom/android/server/utils/quota/UptcMap;->getOrCreate(ILjava/lang/String;Ljava/lang/String;Ljava/util/function/Function;)Ljava/lang/Object;
 
     move-result-object v0
@@ -655,24 +581,20 @@
 
     if-eqz p4, :cond_1
 
-    .line 387
     iget-object p4, p0, Lcom/android/server/utils/quota/QuotaTracker;->mCategorizer:Lcom/android/server/utils/quota/Categorizer;
 
     invoke-interface {p4, p1, p2, p3}, Lcom/android/server/utils/quota/Categorizer;->getCategory(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;
 
     move-result-object p4
 
-    .line 388
     iget-object v1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCategoryCountWindowSizesMs:Landroid/util/ArrayMap;
 
     const-wide v2, 0x7fffffffffffffffL
 
-    .line 389
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    .line 388
     invoke-virtual {v1, p4, v2}, Landroid/util/ArrayMap;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -683,7 +605,6 @@
 
     move-result-wide v1
 
-    .line 390
     iget-object v3, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxCategoryCounts:Landroid/util/ArrayMap;
 
     const v4, 0x7fffffff
@@ -702,7 +623,6 @@
 
     move-result p4
 
-    .line 391
     iget-wide v3, v0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
     iget-object v5, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInjector:Lcom/android/server/utils/quota/QuotaTracker$Injector;
@@ -725,14 +645,11 @@
 
     if-eq v3, p4, :cond_1
 
-    .line 395
     :cond_0
     iput-wide v1, v0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->windowSizeMs:J
 
-    .line 396
     iput p4, v0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countLimit:I
 
-    .line 397
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/utils/quota/CountQuotaTracker;->updateExecutionStatsLocked(ILjava/lang/String;Ljava/lang/String;Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)V
 
     :cond_1
@@ -742,7 +659,6 @@
 .method public getHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 284
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -751,7 +667,6 @@
 .method public getInQuotaTimeElapsedLocked(ILjava/lang/String;Ljava/lang/String;)J
     .locals 0
 
-    .line 291
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/CountQuotaTracker;->getExecutionStatsLocked(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
     move-result-object p0
@@ -764,12 +679,10 @@
 .method public getLimit(Lcom/android/server/utils/quota/Category;)I
     .locals 3
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 250
     :try_start_0
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxCategoryCounts:Landroid/util/ArrayMap;
 
@@ -781,7 +694,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 254
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -790,7 +702,6 @@
 
     return p0
 
-    .line 252
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -819,7 +730,6 @@
     :catchall_0
     move-exception p0
 
-    .line 255
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -830,12 +740,10 @@
 .method public getWindowSizeMs(Lcom/android/server/utils/quota/Category;)J
     .locals 3
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 263
     :try_start_0
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCategoryCountWindowSizesMs:Landroid/util/ArrayMap;
 
@@ -847,7 +755,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 267
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p0
@@ -856,7 +763,6 @@
 
     return-wide p0
 
-    .line 265
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -885,7 +791,6 @@
     :catchall_0
     move-exception p0
 
-    .line 268
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -898,7 +803,6 @@
 
     if-nez p2, :cond_0
 
-    .line 298
     sget-object p0, Lcom/android/server/utils/quota/CountQuotaTracker;->TAG:Ljava/lang/String;
 
     const-string p1, "Told app removed but given null package name."
@@ -907,13 +811,11 @@
 
     return-void
 
-    .line 302
     :cond_0
     iget-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/utils/quota/UptcMap;->delete(ILjava/lang/String;)Landroid/util/ArrayMap;
 
-    .line 303
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mExecutionStatsCache:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/utils/quota/UptcMap;->delete(ILjava/lang/String;)Landroid/util/ArrayMap;
@@ -924,12 +826,10 @@
 .method public handleRemovedUserLocked(I)V
     .locals 1
 
-    .line 309
     iget-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {v0, p1}, Lcom/android/server/utils/quota/UptcMap;->delete(I)V
 
-    .line 310
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mExecutionStatsCache:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/quota/UptcMap;->delete(I)V
@@ -940,14 +840,12 @@
 .method public final invalidateAllExecutionStatsLocked()V
     .locals 3
 
-    .line 452
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInjector:Lcom/android/server/utils/quota/QuotaTracker$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/utils/quota/QuotaTracker$Injector;->getElapsedRealtime()J
 
     move-result-wide v0
 
-    .line 453
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mExecutionStatsCache:Lcom/android/server/utils/quota/UptcMap;
 
     new-instance v2, Lcom/android/server/utils/quota/CountQuotaTracker$$ExternalSyntheticLambda3;
@@ -962,7 +860,6 @@
 .method public final isUnderCountQuotaLocked(Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)Z
     .locals 0
 
-    .line 367
     iget p0, p1, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
     iget p1, p1, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countLimit:I
@@ -983,7 +880,6 @@
 .method public bridge synthetic isWithinQuota(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 64
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->isWithinQuota(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -994,7 +890,6 @@
 .method public isWithinQuotaLocked(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 2
 
-    .line 317
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker;->isEnabledLocked()Z
 
     move-result v0
@@ -1005,7 +900,6 @@
 
     return v1
 
-    .line 320
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/utils/quota/QuotaTracker;->isQuotaFreeLocked(ILjava/lang/String;)Z
 
@@ -1015,7 +909,6 @@
 
     return v1
 
-    .line 324
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/CountQuotaTracker;->getExecutionStatsLocked(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
@@ -1031,7 +924,6 @@
 .method public final isWithinQuotaLocked(Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)Z
     .locals 0
 
-    .line 362
     invoke-virtual {p0, p1}, Lcom/android/server/utils/quota/CountQuotaTracker;->isUnderCountQuotaLocked(Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)Z
 
     move-result p0
@@ -1042,7 +934,6 @@
 .method public maybeScheduleCleanupAlarmLocked()V
     .locals 8
 
-    .line 508
     iget-wide v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mNextCleanupTimeElapsed:J
 
     iget-object v2, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInjector:Lcom/android/server/utils/quota/QuotaTracker$Injector;
@@ -1057,20 +948,17 @@
 
     return-void
 
-    .line 519
     :cond_0
     iget-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEarliestEventTimeFunctor:Lcom/android/server/utils/quota/CountQuotaTracker$EarliestEventTimeFunctor;
 
     invoke-virtual {v0}, Lcom/android/server/utils/quota/CountQuotaTracker$EarliestEventTimeFunctor;->reset()V
 
-    .line 520
     iget-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     iget-object v1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEarliestEventTimeFunctor:Lcom/android/server/utils/quota/CountQuotaTracker$EarliestEventTimeFunctor;
 
     invoke-virtual {v0, v1}, Lcom/android/server/utils/quota/UptcMap;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 521
     iget-object v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEarliestEventTimeFunctor:Lcom/android/server/utils/quota/CountQuotaTracker$EarliestEventTimeFunctor;
 
     iget-wide v0, v0, Lcom/android/server/utils/quota/CountQuotaTracker$EarliestEventTimeFunctor;->earliestTimeElapsed:J
@@ -1083,13 +971,11 @@
 
     return-void
 
-    .line 533
     :cond_1
     iget-wide v2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxPeriodMs:J
 
     add-long/2addr v0, v2
 
-    .line 534
     iget-wide v2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mNextCleanupTimeElapsed:J
 
     sub-long v2, v0, v2
@@ -1105,12 +991,10 @@
     :cond_2
     move-wide v4, v0
 
-    .line 539
     iput-wide v4, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mNextCleanupTimeElapsed:J
 
     const/4 v3, 0x3
 
-    .line 540
     sget-object v6, Lcom/android/server/utils/quota/CountQuotaTracker;->ALARM_TAG_CLEANUP:Ljava/lang/String;
 
     iget-object v7, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventCleanupAlarmListener:Landroid/app/AlarmManager$OnAlarmListener;
@@ -1125,12 +1009,10 @@
 .method public maybeUpdateAllQuotaStatusLocked()V
     .locals 3
 
-    .line 330
     new-instance v0, Lcom/android/server/utils/quota/UptcMap;
 
     invoke-direct {v0}, Lcom/android/server/utils/quota/UptcMap;-><init>()V
 
-    .line 331
     iget-object v1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     new-instance v2, Lcom/android/server/utils/quota/CountQuotaTracker$$ExternalSyntheticLambda5;
@@ -1145,16 +1027,13 @@
 .method public maybeUpdateQuotaStatus(ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 343
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 344
     :try_start_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/CountQuotaTracker;->maybeUpdateStatusForUptcLocked(ILjava/lang/String;Ljava/lang/String;)Z
 
-    .line 345
     monitor-exit v0
 
     return-void
@@ -1174,17 +1053,14 @@
 
     const/4 v0, 0x0
 
-    .line 585
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/utils/quota/CountQuotaTracker;->getExecutionStatsLocked(ILjava/lang/String;Ljava/lang/String;Z)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
     move-result-object v1
 
-    .line 584
     invoke-virtual {p0, v1}, Lcom/android/server/utils/quota/CountQuotaTracker;->isWithinQuotaLocked(Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)Z
 
     move-result v1
 
-    .line 588
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker;->isEnabledLocked()Z
 
     move-result v2
@@ -1201,13 +1077,11 @@
 
     goto :goto_0
 
-    .line 592
     :cond_0
     invoke-virtual {p0, p1, p2, p3, v3}, Lcom/android/server/utils/quota/CountQuotaTracker;->getExecutionStatsLocked(ILjava/lang/String;Ljava/lang/String;Z)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
     move-result-object v2
 
-    .line 591
     invoke-virtual {p0, v2}, Lcom/android/server/utils/quota/CountQuotaTracker;->isWithinQuotaLocked(Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)Z
 
     move-result v2
@@ -1221,19 +1095,16 @@
     :goto_1
     if-nez v2, :cond_2
 
-    .line 596
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->maybeScheduleStartAlarmLocked(ILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 598
     :cond_2
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->cancelScheduledStartAlarmLocked(ILjava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     if-eq v1, v2, :cond_3
 
-    .line 607
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->postQuotaStatusChanged(ILjava/lang/String;Ljava/lang/String;)V
 
     return v3
@@ -1245,12 +1116,10 @@
 .method public noteEvent(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 10
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 184
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker;->isEnabledLocked()Z
 
@@ -1268,7 +1137,6 @@
 
     goto/16 :goto_2
 
-    .line 187
     :cond_0
     iget-object v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInjector:Lcom/android/server/utils/quota/QuotaTracker$Injector;
 
@@ -1276,34 +1144,28 @@
 
     move-result-wide v3
 
-    .line 189
     iget-object v1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     iget-object v5, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCreateLongArrayQueue:Ljava/util/function/Function;
 
-    .line 190
     invoke-virtual {v1, p1, p2, p3, v5}, Lcom/android/server/utils/quota/UptcMap;->getOrCreate(ILjava/lang/String;Ljava/lang/String;Ljava/util/function/Function;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/util/LongArrayQueue;
 
-    .line 191
     invoke-virtual {v1, v3, v4}, Landroid/util/LongArrayQueue;->addLast(J)V
 
-    .line 192
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/CountQuotaTracker;->getExecutionStatsLocked(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
     move-result-object v5
 
-    .line 193
     iget v6, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
     add-int/2addr v6, v2
 
     iput v6, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
-    .line 194
     iget-wide v6, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
     iget-wide v8, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->windowSizeMs:J
@@ -1316,19 +1178,16 @@
 
     iput-wide v6, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
-    .line 196
     iget v2, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
     iget v6, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countLimit:I
 
     if-ne v2, v6, :cond_2
 
-    .line 197
     iget-wide v6, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->windowSizeMs:J
 
     sub-long/2addr v3, v6
 
-    .line 198
     :goto_0
     invoke-virtual {v1}, Landroid/util/LongArrayQueue;->size()I
 
@@ -1344,12 +1203,10 @@
 
     if-gez v2, :cond_1
 
-    .line 199
     invoke-virtual {v1}, Landroid/util/LongArrayQueue;->removeFirst()J
 
     goto :goto_0
 
-    .line 201
     :cond_1
     invoke-virtual {v1}, Landroid/util/LongArrayQueue;->peekFirst()J
 
@@ -1361,7 +1218,6 @@
 
     iput-wide v1, v5, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->inQuotaTimeElapsed:J
 
-    .line 202
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->postQuotaStatusChanged(ILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
@@ -1373,12 +1229,10 @@
 
     mul-int/lit8 v6, v6, 0x4
 
-    .line 203
     div-int/lit8 v6, v6, 0x5
 
     if-ne v2, v6, :cond_3
 
-    .line 206
     sget-object v1, Lcom/android/server/utils/quota/CountQuotaTracker;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1405,12 +1259,10 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     :cond_3
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/utils/quota/CountQuotaTracker;->maybeScheduleCleanupAlarmLocked()V
 
-    .line 210
     invoke-virtual {p0, v5}, Lcom/android/server/utils/quota/CountQuotaTracker;->isWithinQuotaLocked(Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;)Z
 
     move-result p0
@@ -1419,7 +1271,6 @@
 
     return p0
 
-    .line 185
     :cond_4
     :goto_2
     monitor-exit v0
@@ -1429,7 +1280,6 @@
     :catchall_0
     move-exception p0
 
-    .line 211
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1448,12 +1298,10 @@
 
     if-ltz v0, :cond_1
 
-    .line 228
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 229
     :try_start_0
     iget-object v1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxCategoryCounts:Landroid/util/ArrayMap;
 
@@ -1469,19 +1317,16 @@
 
     const-wide v2, 0x9a7ec800L
 
-    .line 231
     invoke-static {p3, p4, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p3
 
     const-wide/16 v2, 0x4e20
 
-    .line 230
     invoke-static {v2, v3, p3, p4}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p3
 
-    .line 232
     iget-object v2, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mCategoryCountWindowSizesMs:Landroid/util/ArrayMap;
 
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1498,7 +1343,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 234
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -1513,18 +1357,15 @@
 
     if-nez p1, :cond_0
 
-    .line 236
     monitor-exit v0
 
     return-void
 
-    .line 238
     :cond_0
     iget-object p1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mDeleteOldEventTimesFunctor:Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;
 
     invoke-static {p1}, Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;->-$$Nest$mupdateMaxPeriod(Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;)V
 
-    .line 239
     iget-object p1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mDeleteOldEventTimesFunctor:Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;
 
     invoke-static {p1}, Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;->-$$Nest$fgetmMaxPeriodMs(Lcom/android/server/utils/quota/CountQuotaTracker$DeleteEventTimesFunctor;)J
@@ -1533,15 +1374,12 @@
 
     iput-wide p1, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxPeriodMs:J
 
-    .line 240
     invoke-virtual {p0}, Lcom/android/server/utils/quota/CountQuotaTracker;->invalidateAllExecutionStatsLocked()V
 
-    .line 241
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 242
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker;->scheduleQuotaCheck()V
 
     return-void
@@ -1549,7 +1387,6 @@
     :catchall_0
     move-exception p0
 
-    .line 241
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1557,7 +1394,6 @@
 
     throw p0
 
-    .line 226
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1571,7 +1407,6 @@
 .method public bridge synthetic setEnabled(Z)V
     .locals 0
 
-    .line 64
     invoke-super {p0, p1}, Lcom/android/server/utils/quota/QuotaTracker;->setEnabled(Z)V
 
     return-void
@@ -1582,17 +1417,14 @@
 
     const/4 v0, 0x0
 
-    .line 408
     iput v0, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
-    .line 409
     iget v0, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countLimit:I
 
     const-wide v1, 0x7fffffffffffffffL
 
     if-nez v0, :cond_0
 
-    .line 411
     iput-wide v1, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->inQuotaTimeElapsed:J
 
     goto :goto_0
@@ -1600,10 +1432,8 @@
     :cond_0
     const-wide/16 v3, 0x0
 
-    .line 413
     iput-wide v3, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->inQuotaTimeElapsed:J
 
-    .line 418
     :goto_0
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInjector:Lcom/android/server/utils/quota/QuotaTracker$Injector;
 
@@ -1611,14 +1441,12 @@
 
     move-result-wide v3
 
-    .line 419
     iget-wide v5, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mMaxPeriodMs:J
 
     add-long/2addr v5, v3
 
     iput-wide v5, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
-    .line 421
     iget-object p0, p0, Lcom/android/server/utils/quota/CountQuotaTracker;->mEventTimes:Lcom/android/server/utils/quota/UptcMap;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/UptcMap;->get(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
@@ -1634,12 +1462,10 @@
     :cond_1
     sub-long/2addr v1, v3
 
-    .line 430
     iget-wide p1, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->windowSizeMs:J
 
     sub-long p1, v3, p1
 
-    .line 431
     invoke-virtual {p0}, Landroid/util/LongArrayQueue;->size()I
 
     move-result p3
@@ -1649,7 +1475,6 @@
     :goto_1
     if-ltz p3, :cond_4
 
-    .line 432
     invoke-virtual {p0, p3}, Landroid/util/LongArrayQueue;->get(I)J
 
     move-result-wide v5
@@ -1660,7 +1485,6 @@
 
     goto :goto_2
 
-    .line 437
     :cond_2
     iget v0, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
@@ -1670,19 +1494,16 @@
 
     sub-long v7, v5, p1
 
-    .line 438
     invoke-static {v1, v2, v7, v8}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v1
 
-    .line 440
     iget v0, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
     iget v7, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countLimit:I
 
     if-lt v0, v7, :cond_3
 
-    .line 441
     iget-wide v7, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->inQuotaTimeElapsed:J
 
     iget-wide v9, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->windowSizeMs:J
@@ -1704,7 +1525,6 @@
     :goto_2
     add-long/2addr v3, v1
 
-    .line 446
     iput-wide v3, p4, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
     return-void

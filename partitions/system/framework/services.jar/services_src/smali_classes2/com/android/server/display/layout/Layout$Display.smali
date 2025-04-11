@@ -27,34 +27,24 @@
 .method public constructor <init>(Landroid/view/DisplayAddress;IZLjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 287
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 288
     iput-object p1, p0, Lcom/android/server/display/layout/Layout$Display;->mAddress:Landroid/view/DisplayAddress;
 
-    .line 289
     iput p2, p0, Lcom/android/server/display/layout/Layout$Display;->mLogicalDisplayId:I
 
-    .line 290
     iput-boolean p3, p0, Lcom/android/server/display/layout/Layout$Display;->mIsEnabled:Z
 
-    .line 291
     iput-object p4, p0, Lcom/android/server/display/layout/Layout$Display;->mDisplayGroupName:Ljava/lang/String;
 
-    .line 292
     iput p6, p0, Lcom/android/server/display/layout/Layout$Display;->mPosition:I
 
-    .line 293
     iput-object p5, p0, Lcom/android/server/display/layout/Layout$Display;->mThermalBrightnessThrottlingMapId:Ljava/lang/String;
 
-    .line 294
     iput-object p8, p0, Lcom/android/server/display/layout/Layout$Display;->mRefreshRateZoneId:Ljava/lang/String;
 
-    .line 295
     iput-object p9, p0, Lcom/android/server/display/layout/Layout$Display;->mThermalRefreshRateThrottlingMapId:Ljava/lang/String;
 
-    .line 296
     iput p7, p0, Lcom/android/server/display/layout/Layout$Display;->mLeadDisplayId:I
 
     return-void
@@ -63,7 +53,6 @@
 .method public synthetic constructor <init>(Landroid/view/DisplayAddress;IZLjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Lcom/android/server/display/layout/Layout$Display-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p9}, Lcom/android/server/display/layout/Layout$Display;-><init>(Landroid/view/DisplayAddress;IZLjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -74,7 +63,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 316
     instance-of v0, p1, Lcom/android/server/display/layout/Layout$Display;
 
     const/4 v1, 0x0
@@ -83,11 +71,9 @@
 
     return v1
 
-    .line 320
     :cond_0
     check-cast p1, Lcom/android/server/display/layout/Layout$Display;
 
-    .line 322
     iget-boolean v0, p1, Lcom/android/server/display/layout/Layout$Display;->mIsEnabled:Z
 
     iget-boolean v2, p0, Lcom/android/server/display/layout/Layout$Display;->mIsEnabled:Z
@@ -110,7 +96,6 @@
 
     iget-object v2, p1, Lcom/android/server/display/layout/Layout$Display;->mDisplayGroupName:Ljava/lang/String;
 
-    .line 325
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -121,7 +106,6 @@
 
     iget-object v2, p1, Lcom/android/server/display/layout/Layout$Display;->mAddress:Landroid/view/DisplayAddress;
 
-    .line 326
     invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -132,7 +116,6 @@
 
     iget-object v2, p1, Lcom/android/server/display/layout/Layout$Display;->mThermalBrightnessThrottlingMapId:Ljava/lang/String;
 
-    .line 327
     invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -143,7 +126,6 @@
 
     iget-object v2, p0, Lcom/android/server/display/layout/Layout$Display;->mRefreshRateZoneId:Ljava/lang/String;
 
-    .line 329
     invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -160,7 +142,6 @@
 
     iget-object p1, p1, Lcom/android/server/display/layout/Layout$Display;->mThermalRefreshRateThrottlingMapId:Ljava/lang/String;
 
-    .line 331
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -176,7 +157,6 @@
 .method public getAddress()Landroid/view/DisplayAddress;
     .locals 0
 
-    .line 351
     iget-object p0, p0, Lcom/android/server/display/layout/Layout$Display;->mAddress:Landroid/view/DisplayAddress;
 
     return-object p0
@@ -185,7 +165,6 @@
 .method public getDisplayGroupName()Ljava/lang/String;
     .locals 0
 
-    .line 363
     iget-object p0, p0, Lcom/android/server/display/layout/Layout$Display;->mDisplayGroupName:Ljava/lang/String;
 
     return-object p0
@@ -194,7 +173,6 @@
 .method public getLeadDisplayId()I
     .locals 0
 
-    .line 391
     iget p0, p0, Lcom/android/server/display/layout/Layout$Display;->mLeadDisplayId:I
 
     return p0
@@ -203,7 +181,6 @@
 .method public getLogicalDisplayId()I
     .locals 0
 
-    .line 355
     iget p0, p0, Lcom/android/server/display/layout/Layout$Display;->mLogicalDisplayId:I
 
     return p0
@@ -212,7 +189,6 @@
 .method public getPosition()I
     .locals 0
 
-    .line 384
     iget p0, p0, Lcom/android/server/display/layout/Layout$Display;->mPosition:I
 
     return p0
@@ -221,7 +197,6 @@
 .method public getRefreshRateThermalThrottlingMapId()Ljava/lang/String;
     .locals 0
 
-    .line 395
     iget-object p0, p0, Lcom/android/server/display/layout/Layout$Display;->mThermalRefreshRateThrottlingMapId:Ljava/lang/String;
 
     return-object p0
@@ -230,7 +205,6 @@
 .method public getRefreshRateZoneId()Ljava/lang/String;
     .locals 0
 
-    .line 368
     iget-object p0, p0, Lcom/android/server/display/layout/Layout$Display;->mRefreshRateZoneId:Ljava/lang/String;
 
     return-object p0
@@ -239,7 +213,6 @@
 .method public getThermalBrightnessThrottlingMapId()Ljava/lang/String;
     .locals 0
 
-    .line 377
     iget-object p0, p0, Lcom/android/server/display/layout/Layout$Display;->mThermalBrightnessThrottlingMapId:Ljava/lang/String;
 
     return-object p0
@@ -248,7 +221,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 338
     iget-boolean v0, p0, Lcom/android/server/display/layout/Layout$Display;->mIsEnabled:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
@@ -261,21 +233,18 @@
 
     mul-int/2addr v0, v1
 
-    .line 339
     iget v2, p0, Lcom/android/server/display/layout/Layout$Display;->mPosition:I
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 340
     iget v2, p0, Lcom/android/server/display/layout/Layout$Display;->mLogicalDisplayId:I
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 341
     iget-object v2, p0, Lcom/android/server/display/layout/Layout$Display;->mDisplayGroupName:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -286,7 +255,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 342
     iget-object v2, p0, Lcom/android/server/display/layout/Layout$Display;->mAddress:Landroid/view/DisplayAddress;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -297,7 +265,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 343
     iget-object v2, p0, Lcom/android/server/display/layout/Layout$Display;->mThermalBrightnessThrottlingMapId:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -308,7 +275,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 344
     iget-object v2, p0, Lcom/android/server/display/layout/Layout$Display;->mRefreshRateZoneId:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -319,14 +285,12 @@
 
     mul-int/2addr v0, v1
 
-    .line 345
     iget v2, p0, Lcom/android/server/display/layout/Layout$Display;->mLeadDisplayId:I
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 346
     iget-object p0, p0, Lcom/android/server/display/layout/Layout$Display;->mThermalRefreshRateThrottlingMapId:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -341,7 +305,6 @@
 .method public isEnabled()Z
     .locals 0
 
-    .line 359
     iget-boolean p0, p0, Lcom/android/server/display/layout/Layout$Display;->mIsEnabled:Z
 
     return p0
@@ -350,7 +313,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 301
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -367,7 +329,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 303
     iget-boolean v1, p0, Lcom/android/server/display/layout/Layout$Display;->mIsEnabled:Z
 
     if-eqz v1, :cond_0
@@ -398,7 +359,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 306
     iget v1, p0, Lcom/android/server/display/layout/Layout$Display;->mPosition:I
 
     const/4 v2, -0x1

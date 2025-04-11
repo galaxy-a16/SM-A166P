@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 2094
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$1;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .line 2096
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.intent.action.BOOT_COMPLETED"
 
-    .line 2097
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -40,7 +37,6 @@
 
     return-void
 
-    .line 2101
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$1;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -48,12 +44,10 @@
 
     iput-boolean p2, p1, Lcom/android/server/policy/PhoneWindowManagerExt;->mBootCompleted:Z
 
-    .line 2102
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SPEN:Z
 
     if-eqz v0, :cond_4
 
-    .line 2104
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->getPenState()I
@@ -79,7 +73,6 @@
     :goto_0
     move v2, p2
 
-    .line 2106
     :goto_1
     iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt$1;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -99,7 +92,6 @@
 
     if-eq v3, v4, :cond_4
 
-    .line 2107
     iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt$1;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     if-ne p1, v1, :cond_3
@@ -114,7 +106,6 @@
 
     invoke-virtual {v3, v0, v1, v2, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->notifyPenSwitchChanged(JZZ)V
 
-    .line 2112
     :cond_4
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$1;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 

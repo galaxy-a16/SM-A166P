@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 669
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -26,7 +25,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 681
     iget-object p0, p0, Lcom/android/server/slice/SliceManagerService$Lifecycle;->mService:Lcom/android/server/slice/SliceManagerService;
 
     invoke-static {p0}, Lcom/android/server/slice/SliceManagerService;->-$$Nest$msystemReady(Lcom/android/server/slice/SliceManagerService;)V
@@ -38,7 +36,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 674
     new-instance v0, Lcom/android/server/slice/SliceManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -51,7 +48,6 @@
 
     const-string/jumbo v1, "slice"
 
-    .line 675
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -60,7 +56,6 @@
 .method public onUserStopping(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 692
     iget-object p0, p0, Lcom/android/server/slice/SliceManagerService$Lifecycle;->mService:Lcom/android/server/slice/SliceManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -75,7 +70,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 687
     iget-object p0, p0, Lcom/android/server/slice/SliceManagerService$Lifecycle;->mService:Lcom/android/server/slice/SliceManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I

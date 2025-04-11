@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsService;)V
     .locals 0
 
-    .line 5315
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$8;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .line 5318
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -45,29 +43,24 @@
 
     const-string/jumbo v2, "onReceive :: android.intent.action.DUMP_SYNTHETIC_PASSWORD"
 
-    .line 5319
     invoke-static {p1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p1, "cred"
 
-    .line 5321
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string/jumbo v2, "token"
 
-    .line 5322
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 5323
     invoke-virtual {p2, v1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 5325
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$8;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmSpDump(Lcom/android/server/locksettings/LockSettingsService;)Lcom/android/server/locksettings/SyntheticPasswordDump;
@@ -81,7 +74,6 @@
     :cond_0
     const-string p1, "android.intent.action.DUMP_DUALDAR_PASSWORD"
 
-    .line 5328
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -100,22 +92,18 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 5329
     invoke-static {v3, p1, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 5331
     invoke-virtual {p2, v1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string/jumbo v0, "path"
 
-    .line 5332
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 5334
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$8;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmContext(Lcom/android/server/locksettings/LockSettingsService;)Landroid/content/Context;
@@ -126,7 +114,6 @@
 
     move-result-object p0
 
-    .line 5335
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDARDaemonProxy;->dumpSecret(ILjava/lang/String;)Z
 
     goto :goto_0
@@ -134,7 +121,6 @@
     :cond_1
     const-string p1, "android.intent.action.CHECK_DUALDAR_POLICY_PACKAGES"
 
-    .line 5336
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -149,15 +135,12 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 5337
     invoke-static {v3, p1, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 5339
     invoke-virtual {p2, v1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 5341
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$8;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmContext(Lcom/android/server/locksettings/LockSettingsService;)Landroid/content/Context;
@@ -168,7 +151,6 @@
 
     move-result-object p0
 
-    .line 5342
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/DualDarDoPolicyChecker;->checkDualDarDoPolicy(I)V
 
     :cond_2

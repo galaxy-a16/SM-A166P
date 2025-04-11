@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/log/BiometricContextProvider;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/biometrics/log/BiometricContextProvider$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/biometrics/log/BiometricContextProvider;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricContextProvider$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/biometrics/log/BiometricContextProvider;
 
     invoke-static {p0}, Lcom/android/server/biometrics/log/BiometricContextProvider;->$r8$lambda$q-HXXZR2XpmoPc7TBm0GSB0UdIQ(Lcom/android/server/biometrics/log/BiometricContextProvider;)V

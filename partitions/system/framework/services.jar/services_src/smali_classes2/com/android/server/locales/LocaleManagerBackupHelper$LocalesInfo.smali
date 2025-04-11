@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 462
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 463
     iput-object p1, p0, Lcom/android/server/locales/LocaleManagerBackupHelper$LocalesInfo;->mLocales:Ljava/lang/String;
 
-    .line 464
     iput-boolean p2, p0, Lcom/android/server/locales/LocaleManagerBackupHelper$LocalesInfo;->mSetFromDelegate:Z
 
     return-void

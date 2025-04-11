@@ -52,7 +52,6 @@
 .method public scheduleInvalidateAuthenticatorId(IILandroid/hardware/biometrics/IInvalidationCallback;)V
     .locals 0
 
-    .line 73
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Providers that support invalidation must override this method"
@@ -80,7 +79,6 @@
 .method public scheduleWatchdog(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -126,7 +124,6 @@
 .method public semShouldRemoveTemplate()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

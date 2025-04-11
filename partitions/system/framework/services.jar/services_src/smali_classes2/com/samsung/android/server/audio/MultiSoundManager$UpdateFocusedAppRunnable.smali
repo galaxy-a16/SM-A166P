@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/MultiSoundManager;I)V
     .locals 0
 
-    .line 1219
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1220
     iput p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;->mTaskId:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public run()V
     .locals 5
 
-    .line 1226
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->-$$Nest$fgetmTaskStack(Lcom/samsung/android/server/audio/MultiSoundManager;)Ljava/util/HashMap;
@@ -53,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1227
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->-$$Nest$fgetmTaskStack(Lcom/samsung/android/server/audio/MultiSoundManager;)Ljava/util/HashMap;
@@ -78,7 +74,6 @@
 
     goto :goto_0
 
-    .line 1229
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
@@ -92,7 +87,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 1231
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,7 +107,6 @@
 
     return-void
 
-    .line 1234
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
@@ -133,7 +126,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1236
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
@@ -143,7 +135,6 @@
 
     invoke-interface {p0, v0}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->updateForegroundUid(I)V
 
-    .line 1237
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

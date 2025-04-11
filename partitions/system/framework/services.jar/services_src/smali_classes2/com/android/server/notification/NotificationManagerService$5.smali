@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;)V
     .locals 0
 
-    .line 2570
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$5;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 12
 
-    .line 2573
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 
     return-void
 
-    .line 2577
     :cond_0
     invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$sfgetACTION_NOTIFICATION_TIMEOUT()Ljava/lang/String;
 
@@ -45,14 +42,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 2579
     iget-object p1, p0, Lcom/android/server/notification/NotificationManagerService$5;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object p1, p1, Lcom/android/server/notification/NotificationManagerService;->mNotificationLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 2580
     :try_start_0
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$5;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -66,14 +61,12 @@
 
     move-result-object p2
 
-    .line 2581
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p2, :cond_1
 
-    .line 2583
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$5;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {p2}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
@@ -92,7 +85,6 @@
 
     move-result v2
 
-    .line 2584
     invoke-virtual {p2}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object p0
@@ -109,7 +101,6 @@
 
     move-result-object v4
 
-    .line 2585
     invoke-virtual {p2}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object p0
@@ -124,7 +115,6 @@
 
     const/4 v8, 0x1
 
-    .line 2587
     invoke-virtual {p2}, Lcom/android/server/notification/NotificationRecord;->getUserId()I
 
     move-result v9
@@ -133,7 +123,6 @@
 
     const/4 v11, 0x0
 
-    .line 2583
     invoke-virtual/range {v0 .. v11}, Lcom/android/server/notification/NotificationManagerService;->cancelNotification(IILjava/lang/String;Ljava/lang/String;IIIZIILcom/android/server/notification/ManagedServices$ManagedServiceInfo;)V
 
     goto :goto_0
@@ -141,7 +130,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2581
     :try_start_1
     monitor-exit p1
     :try_end_1

@@ -7,7 +7,6 @@
 .method public static getSeinfoUser(Lcom/android/server/pm/pkg/PackageUserState;)Ljava/lang/String;
     .locals 0
 
-    .line 33
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->isInstantApp()Z
 
     move-result p0

@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayId(Lcom/android/server/wm/RootWindowContainer$SleepToken;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mDisplayId:I
 
     return p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTag(Lcom/android/server/wm/RootWindowContainer$SleepToken;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mTag:Ljava/lang/String;
 
     return-object p0
@@ -37,26 +35,20 @@
 .method public constructor <init>(Ljava/lang/String;IZ)V
     .locals 2
 
-    .line 4226
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4227
     iput-object p1, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mTag:Ljava/lang/String;
 
-    .line 4228
     iput p2, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mDisplayId:I
 
-    .line 4229
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mAcquireTime:J
 
-    .line 4230
     iput-boolean p3, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mIsSwappingDisplay:Z
 
-    .line 4231
     invoke-static {p1, p2}, Lcom/android/server/wm/RootWindowContainer;->-$$Nest$smmakeSleepTokenKey(Ljava/lang/String;I)I
 
     move-result p1
@@ -71,12 +63,10 @@
 .method public isDisplaySwapping()Z
     .locals 4
 
-    .line 4235
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 4236
     iget-wide v2, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mAcquireTime:J
 
     sub-long/2addr v0, v2
@@ -91,7 +81,6 @@
 
     return p0
 
-    .line 4239
     :cond_0
     iget-boolean p0, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mIsSwappingDisplay:Z
 
@@ -101,7 +90,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 4244
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,7 +110,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 4245
     iget-boolean v1, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mIsSwappingDisplay:Z
 
     if-eqz v1, :cond_0
@@ -143,7 +130,6 @@
 
     iget-wide v1, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mAcquireTime:J
 
-    .line 4246
     invoke-static {v1, v2}, Landroid/util/TimeUtils;->formatUptime(J)Ljava/lang/String;
 
     move-result-object p0
@@ -164,7 +150,6 @@
 .method public writeTagToProto(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 0
 
-    .line 4250
     iget-object p0, p0, Lcom/android/server/wm/RootWindowContainer$SleepToken;->mTag:Ljava/lang/String;
 
     invoke-virtual {p1, p2, p3, p0}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V

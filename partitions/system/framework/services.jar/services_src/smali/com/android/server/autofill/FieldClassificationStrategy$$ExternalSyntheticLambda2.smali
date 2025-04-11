@@ -28,7 +28,6 @@
 .method public synthetic constructor <init>(Landroid/os/RemoteCallback;Ljava/util/List;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Landroid/util/ArrayMap;Landroid/util/ArrayMap;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/FieldClassificationStrategy$$ExternalSyntheticLambda2;->f$0:Landroid/os/RemoteCallback;
@@ -55,7 +54,6 @@
 .method public final run(Landroid/service/autofill/IAutofillFieldClassificationService;)V
     .locals 9
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/autofill/FieldClassificationStrategy$$ExternalSyntheticLambda2;->f$0:Landroid/os/RemoteCallback;
 
     iget-object v1, p0, Lcom/android/server/autofill/FieldClassificationStrategy$$ExternalSyntheticLambda2;->f$1:Ljava/util/List;

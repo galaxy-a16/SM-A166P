@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/att/iqi/libs/IQIServiceBroker$7;)V
     .locals 0
 
-    .line 786
     iput-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker$7$1;->this$1:Lcom/att/iqi/libs/IQIServiceBroker$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 789
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker$7$1;->this$1:Lcom/att/iqi/libs/IQIServiceBroker$7;
 
     iget-object v0, v0, Lcom/att/iqi/libs/IQIServiceBroker$7;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
@@ -37,10 +35,8 @@
     :try_start_0
     const-string v1, "binderDied"
 
-    .line 790
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->logw(Ljava/lang/String;)V
 
-    .line 791
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker$7$1;->this$1:Lcom/att/iqi/libs/IQIServiceBroker$7;
 
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker$7;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
@@ -49,7 +45,6 @@
 
     invoke-static {p0, v1}, Lcom/att/iqi/libs/IQIServiceBroker;->-$$Nest$fputmImplementingBinderInterface(Lcom/att/iqi/libs/IQIServiceBroker;Lcom/att/iqi/IIQIService;)V
 
-    .line 792
     monitor-exit v0
 
     return-void

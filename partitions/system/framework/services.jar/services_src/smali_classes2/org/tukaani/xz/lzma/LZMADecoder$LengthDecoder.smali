@@ -11,7 +11,6 @@
 .method public constructor <init>(Lorg/tukaani/xz/lzma/LZMADecoder;)V
     .locals 0
 
-    .line 186
     iput-object p1, p0, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;->this$0:Lorg/tukaani/xz/lzma/LZMADecoder;
 
     invoke-direct {p0, p1}, Lorg/tukaani/xz/lzma/LZMACoder$LengthCoder;-><init>(Lorg/tukaani/xz/lzma/LZMACoder;)V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lorg/tukaani/xz/lzma/LZMADecoder;Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;-><init>(Lorg/tukaani/xz/lzma/LZMADecoder;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public decode(I)I
     .locals 3
 
-    .line 188
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;->this$0:Lorg/tukaani/xz/lzma/LZMADecoder;
 
     invoke-static {v0}, Lorg/tukaani/xz/lzma/LZMADecoder;->-$$Nest$fgetrc(Lorg/tukaani/xz/lzma/LZMADecoder;)Lorg/tukaani/xz/rangecoder/RangeDecoder;
@@ -50,7 +47,6 @@
 
     if-nez v0, :cond_0
 
-    .line 189
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;->this$0:Lorg/tukaani/xz/lzma/LZMADecoder;
 
     invoke-static {v0}, Lorg/tukaani/xz/lzma/LZMADecoder;->-$$Nest$fgetrc(Lorg/tukaani/xz/lzma/LZMADecoder;)Lorg/tukaani/xz/rangecoder/RangeDecoder;
@@ -69,7 +65,6 @@
 
     return p0
 
-    .line 191
     :cond_0
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;->this$0:Lorg/tukaani/xz/lzma/LZMADecoder;
 
@@ -87,7 +82,6 @@
 
     if-nez v0, :cond_1
 
-    .line 192
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;->this$0:Lorg/tukaani/xz/lzma/LZMADecoder;
 
     invoke-static {v0}, Lorg/tukaani/xz/lzma/LZMADecoder;->-$$Nest$fgetrc(Lorg/tukaani/xz/lzma/LZMADecoder;)Lorg/tukaani/xz/rangecoder/RangeDecoder;
@@ -108,7 +102,6 @@
 
     return p0
 
-    .line 195
     :cond_1
     iget-object p1, p0, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;->this$0:Lorg/tukaani/xz/lzma/LZMADecoder;
 

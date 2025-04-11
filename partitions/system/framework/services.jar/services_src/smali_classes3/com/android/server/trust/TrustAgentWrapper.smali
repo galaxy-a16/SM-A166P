@@ -65,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAlarmIntent(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/content/Intent;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmIntent:Landroid/content/Intent;
 
     return-object p0
@@ -74,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAlarmManager(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/app/AlarmManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmManager:Landroid/app/AlarmManager;
 
     return-object p0
@@ -83,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAlarmPendingIntent(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/app/PendingIntent;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmPendingIntent:Landroid/app/PendingIntent;
 
     return-object p0
@@ -92,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBound(Lcom/android/server/trust/TrustAgentWrapper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mBound:Z
 
     return p0
@@ -101,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallback(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/service/trust/ITrustAgentServiceCallback;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mCallback:Landroid/service/trust/ITrustAgentServiceCallback;
 
     return-object p0
@@ -110,7 +105,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -119,7 +113,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -128,7 +121,6 @@
 .method public static bridge synthetic -$$Nest$fgetmManagingTrust(Lcom/android/server/trust/TrustAgentWrapper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mManagingTrust:Z
 
     return p0
@@ -137,7 +129,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMaximumTimeToLock(Lcom/android/server/trust/TrustAgentWrapper;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mMaximumTimeToLock:J
 
     return-wide v0
@@ -146,7 +137,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMessage(Lcom/android/server/trust/TrustAgentWrapper;)Ljava/lang/CharSequence;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mMessage:Ljava/lang/CharSequence;
 
     return-object p0
@@ -155,7 +145,6 @@
 .method public static bridge synthetic -$$Nest$fgetmName(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/content/ComponentName;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mName:Landroid/content/ComponentName;
 
     return-object p0
@@ -164,7 +153,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPendingSuccessfulUnlock(Lcom/android/server/trust/TrustAgentWrapper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mPendingSuccessfulUnlock:Z
 
     return p0
@@ -173,7 +161,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSetTrustAgentFeaturesToken(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mSetTrustAgentFeaturesToken:Landroid/os/IBinder;
 
     return-object p0
@@ -182,7 +169,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTrustAgentService(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/service/trust/ITrustAgentService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     return-object p0
@@ -191,7 +177,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTrustDisabledByDpm(Lcom/android/server/trust/TrustAgentWrapper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustDisabledByDpm:Z
 
     return p0
@@ -200,7 +185,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTrustManagerService(Lcom/android/server/trust/TrustAgentWrapper;)Lcom/android/server/trust/TrustManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustManagerService:Lcom/android/server/trust/TrustManagerService;
 
     return-object p0
@@ -209,7 +193,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserId(Lcom/android/server/trust/TrustAgentWrapper;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mUserId:I
 
     return p0
@@ -218,7 +201,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWithinSecurityLockdownWindow(Lcom/android/server/trust/TrustAgentWrapper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWithinSecurityLockdownWindow:Z
 
     return p0
@@ -227,7 +209,6 @@
 .method public static bridge synthetic -$$Nest$fputmAlarmPendingIntent(Lcom/android/server/trust/TrustAgentWrapper;Landroid/app/PendingIntent;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmPendingIntent:Landroid/app/PendingIntent;
 
     return-void
@@ -236,7 +217,6 @@
 .method public static bridge synthetic -$$Nest$fputmDisplayTrustGrantedMessage(Lcom/android/server/trust/TrustAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mDisplayTrustGrantedMessage:Z
 
     return-void
@@ -245,7 +225,6 @@
 .method public static bridge synthetic -$$Nest$fputmManagingTrust(Lcom/android/server/trust/TrustAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mManagingTrust:Z
 
     return-void
@@ -254,7 +233,6 @@
 .method public static bridge synthetic -$$Nest$fputmMessage(Lcom/android/server/trust/TrustAgentWrapper;Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mMessage:Ljava/lang/CharSequence;
 
     return-void
@@ -263,7 +241,6 @@
 .method public static bridge synthetic -$$Nest$fputmPendingSuccessfulUnlock(Lcom/android/server/trust/TrustAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mPendingSuccessfulUnlock:Z
 
     return-void
@@ -272,7 +249,6 @@
 .method public static bridge synthetic -$$Nest$fputmSetTrustAgentFeaturesToken(Lcom/android/server/trust/TrustAgentWrapper;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mSetTrustAgentFeaturesToken:Landroid/os/IBinder;
 
     return-void
@@ -281,7 +257,6 @@
 .method public static bridge synthetic -$$Nest$fputmTrustAgentService(Lcom/android/server/trust/TrustAgentWrapper;Landroid/service/trust/ITrustAgentService;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     return-void
@@ -290,7 +265,6 @@
 .method public static bridge synthetic -$$Nest$fputmTrustDisabledByDpm(Lcom/android/server/trust/TrustAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustDisabledByDpm:Z
 
     return-void
@@ -299,7 +273,6 @@
 .method public static bridge synthetic -$$Nest$fputmTrustable(Lcom/android/server/trust/TrustAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustable:Z
 
     return-void
@@ -308,7 +281,6 @@
 .method public static bridge synthetic -$$Nest$fputmTrusted(Lcom/android/server/trust/TrustAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrusted:Z
 
     return-void
@@ -317,7 +289,6 @@
 .method public static bridge synthetic -$$Nest$fputmWaitingForTrustableDowngrade(Lcom/android/server/trust/TrustAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWaitingForTrustableDowngrade:Z
 
     return-void
@@ -326,7 +297,6 @@
 .method public static bridge synthetic -$$Nest$fputmWithinSecurityLockdownWindow(Lcom/android/server/trust/TrustAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWithinSecurityLockdownWindow:Z
 
     return-void
@@ -335,7 +305,6 @@
 .method public static bridge synthetic -$$Nest$monError(Lcom/android/server/trust/TrustAgentWrapper;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     return-void
@@ -344,7 +313,6 @@
 .method public static bridge synthetic -$$Nest$monTrustTimeout(Lcom/android/server/trust/TrustAgentWrapper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/trust/TrustAgentWrapper;->onTrustTimeout()V
 
     return-void
@@ -353,7 +321,6 @@
 .method public static bridge synthetic -$$Nest$mscheduleRestart(Lcom/android/server/trust/TrustAgentWrapper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/trust/TrustAgentWrapper;->scheduleRestart()V
 
     return-void
@@ -362,7 +329,6 @@
 .method public static bridge synthetic -$$Nest$msetCallback(Lcom/android/server/trust/TrustAgentWrapper;Landroid/service/trust/ITrustAgentServiceCallback;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustAgentWrapper;->setCallback(Landroid/service/trust/ITrustAgentServiceCallback;)V
 
     return-void
@@ -371,7 +337,6 @@
 .method public static bridge synthetic -$$Nest$msetSecurityWindowTimer(Lcom/android/server/trust/TrustAgentWrapper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/trust/TrustAgentWrapper;->setSecurityWindowTimer()V
 
     return-void
@@ -380,7 +345,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/trust/TrustAgentWrapper;->DEBUG:Z
 
     return v0
@@ -389,7 +353,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 65
     sget-boolean v0, Lcom/android/server/trust/TrustManagerService;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/trust/TrustAgentWrapper;->DEBUG:Z
@@ -400,64 +363,52 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/trust/TrustManagerService;Landroid/content/Intent;Landroid/os/UserHandle;)V
     .locals 8
 
-    .line 471
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 105
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mPendingSuccessfulUnlock:Z
 
-    .line 109
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWaitingForTrustableDowngrade:Z
 
-    .line 110
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWithinSecurityLockdownWindow:Z
 
-    .line 120
     new-instance v1, Lcom/android/server/trust/TrustAgentWrapper$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/trust/TrustAgentWrapper$1;-><init>(Lcom/android/server/trust/TrustAgentWrapper;)V
 
     iput-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustableDowngradeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 133
     new-instance v3, Lcom/android/server/trust/TrustAgentWrapper$2;
 
     invoke-direct {v3, p0}, Lcom/android/server/trust/TrustAgentWrapper$2;-><init>(Lcom/android/server/trust/TrustAgentWrapper;)V
 
     iput-object v3, p0, Lcom/android/server/trust/TrustAgentWrapper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 145
     new-instance v2, Lcom/android/server/trust/TrustAgentWrapper$3;
 
     invoke-direct {v2, p0}, Lcom/android/server/trust/TrustAgentWrapper$3;-><init>(Lcom/android/server/trust/TrustAgentWrapper;)V
 
     iput-object v2, p0, Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
 
-    .line 321
     new-instance v2, Lcom/android/server/trust/TrustAgentWrapper$4;
 
     invoke-direct {v2, p0}, Lcom/android/server/trust/TrustAgentWrapper$4;-><init>(Lcom/android/server/trust/TrustAgentWrapper;)V
 
     iput-object v2, p0, Lcom/android/server/trust/TrustAgentWrapper;->mCallback:Landroid/service/trust/ITrustAgentServiceCallback;
 
-    .line 430
     new-instance v2, Lcom/android/server/trust/TrustAgentWrapper$5;
 
     invoke-direct {v2, p0}, Lcom/android/server/trust/TrustAgentWrapper$5;-><init>(Lcom/android/server/trust/TrustAgentWrapper;)V
 
     iput-object v2, p0, Lcom/android/server/trust/TrustAgentWrapper;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 472
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mContext:Landroid/content/Context;
 
-    .line 473
     iput-object p2, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustManagerService:Lcom/android/server/trust/TrustManagerService;
 
     const-string p2, "alarm"
 
-    .line 474
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p2
@@ -466,21 +417,18 @@
 
     iput-object p2, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 475
     invoke-virtual {p4}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result p2
 
     iput p2, p0, Lcom/android/server/trust/TrustAgentWrapper;->mUserId:I
 
-    .line 476
     invoke-virtual {p3}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/server/trust/TrustAgentWrapper;->mName:Landroid/content/ComponentName;
 
-    .line 478
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "android.server.trust.TRUST_EXPIRED_ACTION"
@@ -497,7 +445,6 @@
 
     const/4 v6, 0x1
 
-    .line 479
     invoke-virtual {v4, v6}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object v7
@@ -508,46 +455,38 @@
 
     invoke-virtual {v4, v7}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 480
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v4, v7}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 482
     new-instance v7, Landroid/content/IntentFilter;
 
     invoke-direct {v7, v5}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 483
     invoke-virtual {v4}, Landroid/content/Intent;->getScheme()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v7, v5}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 484
     invoke-virtual {v4, v6}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 485
     invoke-virtual {v7, v4, v0}, Landroid/content/IntentFilter;->addDataPath(Ljava/lang/String;I)V
 
-    .line 487
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v4, "android.intent.action.SCREEN_OFF"
 
     invoke-direct {v0, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 491
     invoke-virtual {p0}, Lcom/android/server/trust/TrustAgentWrapper;->scheduleRestart()V
 
     const v4, 0x4000001
 
-    .line 492
     invoke-virtual {p1, p3, v2, v4, p4}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
     move-result p3
@@ -568,15 +507,12 @@
 
     move v7, p0
 
-    .line 495
     invoke-virtual/range {v2 .. v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
-    .line 497
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     goto :goto_0
 
-    .line 499
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -609,21 +545,18 @@
 .method public destroy()V
     .locals 3
 
-    .line 725
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 726
     iget-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mBound:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 729
     :cond_0
     sget-boolean v0, Lcom/android/server/trust/TrustAgentWrapper;->DEBUG:Z
 
@@ -653,7 +586,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 730
     :cond_1
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustManagerService:Lcom/android/server/trust/TrustManagerService;
 
@@ -665,7 +597,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/trust/TrustArchive;->logAgentStopped(ILandroid/content/ComponentName;)V
 
-    .line 731
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mConnection:Landroid/content/ServiceConnection;
@@ -674,17 +605,14 @@
 
     const/4 v0, 0x0
 
-    .line 732
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mBound:Z
 
-    .line 733
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 734
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustableDowngradeReceiver:Landroid/content/BroadcastReceiver;
@@ -693,13 +621,10 @@
 
     const/4 v0, 0x0
 
-    .line 735
     iput-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
-    .line 736
     iput-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mSetTrustAgentFeaturesToken:Landroid/os/IBinder;
 
-    .line 737
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
 
     const/4 v0, 0x2
@@ -712,25 +637,20 @@
 .method public downgradeToTrustable()V
     .locals 2
 
-    .line 684
     iget-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWaitingForTrustableDowngrade:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 685
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWaitingForTrustableDowngrade:Z
 
-    .line 686
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrusted:Z
 
     const/4 v1, 0x1
 
-    .line 687
     iput-boolean v1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustable:Z
 
-    .line 688
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustManagerService:Lcom/android/server/trust/TrustManagerService;
 
     iget p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mUserId:I
@@ -744,7 +664,6 @@
 .method public getMessage()Ljava/lang/CharSequence;
     .locals 0
 
-    .line 713
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mMessage:Ljava/lang/CharSequence;
 
     return-object p0
@@ -753,7 +672,6 @@
 .method public getScheduledRestartUptimeMillis()J
     .locals 2
 
-    .line 754
     iget-wide v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mScheduledRestartUptimeMillis:J
 
     return-wide v0
@@ -762,7 +680,6 @@
 .method public isBound()Z
     .locals 0
 
-    .line 745
     iget-boolean p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mBound:Z
 
     return p0
@@ -771,7 +688,6 @@
 .method public isConnected()Z
     .locals 0
 
-    .line 741
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     if-eqz p0, :cond_0
@@ -790,7 +706,6 @@
 .method public isManagingTrust()Z
     .locals 1
 
-    .line 709
     iget-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mManagingTrust:Z
 
     if-eqz v0, :cond_0
@@ -813,7 +728,6 @@
 .method public isTrustable()Z
     .locals 1
 
-    .line 667
     iget-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustable:Z
 
     if-eqz v0, :cond_0
@@ -840,7 +754,6 @@
 .method public isTrustableOrWaitingForDowngrade()Z
     .locals 1
 
-    .line 671
     iget-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWaitingForTrustableDowngrade:Z
 
     if-nez v0, :cond_1
@@ -869,7 +782,6 @@
 .method public isTrusted()Z
     .locals 1
 
-    .line 663
     iget-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrusted:Z
 
     if-eqz v0, :cond_0
@@ -898,10 +810,8 @@
 
     const/4 v0, 0x0
 
-    .line 571
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWithinSecurityLockdownWindow:Z
 
-    .line 573
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
@@ -916,7 +826,6 @@
     :catch_0
     move-exception v0
 
-    .line 575
     invoke-virtual {p0, v0}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :cond_0
@@ -927,7 +836,6 @@
 .method public onDeviceUnlocked()V
     .locals 1
 
-    .line 584
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
@@ -942,7 +850,6 @@
     :catch_0
     move-exception v0
 
-    .line 586
     invoke-virtual {p0, v0}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :cond_0
@@ -957,7 +864,6 @@
 
     const-string v0, "Exception "
 
-    .line 504
     invoke-static {p0, v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -966,7 +872,6 @@
 .method public onEscrowTokenActivated(JI)V
     .locals 2
 
-    .line 595
     sget-boolean v0, Lcom/android/server/trust/TrustAgentWrapper;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -995,7 +900,6 @@
 
     invoke-static {v0, p3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 596
     :cond_0
     iget-object p3, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
@@ -1003,7 +907,6 @@
 
     const/4 v0, 0x1
 
-    .line 598
     :try_start_0
     invoke-interface {p3, p1, p2, v0}, Landroid/service/trust/ITrustAgentService;->onTokenStateReceived(JI)V
     :try_end_0
@@ -1014,7 +917,6 @@
     :catch_0
     move-exception p1
 
-    .line 601
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :cond_1
@@ -1025,7 +927,6 @@
 .method public final onTrustTimeout()V
     .locals 1
 
-    .line 509
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
@@ -1040,7 +941,6 @@
     :catch_0
     move-exception v0
 
-    .line 511
     invoke-virtual {p0, v0}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :cond_0
@@ -1051,18 +951,15 @@
 .method public onUnlockAttempt(Z)V
     .locals 1
 
-    .line 520
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     if-eqz v0, :cond_0
 
-    .line 521
     invoke-interface {v0, p1}, Landroid/service/trust/ITrustAgentService;->onUnlockAttempt(Z)V
 
     goto :goto_0
 
-    .line 523
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mPendingSuccessfulUnlock:Z
     :try_end_0
@@ -1073,7 +970,6 @@
     :catch_0
     move-exception p1
 
-    .line 526
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :goto_0
@@ -1083,13 +979,11 @@
 .method public onUnlockLockout(I)V
     .locals 1
 
-    .line 559
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     if-eqz v0, :cond_0
 
-    .line 560
     invoke-interface {v0, p1}, Landroid/service/trust/ITrustAgentService;->onUnlockLockout(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1099,7 +993,6 @@
     :catch_0
     move-exception p1
 
-    .line 563
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :cond_0
@@ -1110,13 +1003,11 @@
 .method public onUserMayRequestUnlock()V
     .locals 1
 
-    .line 546
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     if-eqz v0, :cond_0
 
-    .line 547
     invoke-interface {v0}, Landroid/service/trust/ITrustAgentService;->onUserMayRequestUnlock()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1126,7 +1017,6 @@
     :catch_0
     move-exception v0
 
-    .line 550
     invoke-virtual {p0, v0}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :cond_0
@@ -1137,13 +1027,11 @@
 .method public onUserRequestedUnlock(Z)V
     .locals 1
 
-    .line 535
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     if-eqz v0, :cond_0
 
-    .line 536
     invoke-interface {v0, p1}, Landroid/service/trust/ITrustAgentService;->onUserRequestedUnlock(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1153,7 +1041,6 @@
     :catch_0
     move-exception p1
 
-    .line 539
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :cond_0
@@ -1164,14 +1051,12 @@
 .method public final scheduleRestart()V
     .locals 6
 
-    .line 758
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 759
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -1182,7 +1067,6 @@
 
     iput-wide v2, p0, Lcom/android/server/trust/TrustAgentWrapper;->mScheduledRestartUptimeMillis:J
 
-    .line 760
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageAtTime(IJ)Z
@@ -1193,13 +1077,11 @@
 .method public final setCallback(Landroid/service/trust/ITrustAgentServiceCallback;)V
     .locals 1
 
-    .line 607
     :try_start_0
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     if-eqz v0, :cond_0
 
-    .line 608
     invoke-interface {v0, p1}, Landroid/service/trust/ITrustAgentService;->setCallback(Landroid/service/trust/ITrustAgentServiceCallback;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1209,7 +1091,6 @@
     :catch_0
     move-exception p1
 
-    .line 611
     invoke-virtual {p0, p1}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
     :cond_0
@@ -1222,10 +1103,8 @@
 
     const/4 v0, 0x1
 
-    .line 693
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mWithinSecurityLockdownWindow:Z
 
-    .line 694
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -1234,7 +1113,6 @@
 
     add-long v6, v0, v2
 
-    .line 695
     iget-object v4, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmManager:Landroid/app/AlarmManager;
 
     const/4 v5, 0x2
@@ -1245,12 +1123,10 @@
 
     invoke-direct {v9, p0}, Lcom/android/server/trust/TrustAgentWrapper$6;-><init>(Lcom/android/server/trust/TrustAgentWrapper;)V
 
-    .line 705
     invoke-static {}, Landroid/os/Handler;->getMain()Landroid/os/Handler;
 
     move-result-object v10
 
-    .line 695
     invoke-virtual/range {v4 .. v10}, Landroid/app/AlarmManager;->setExact(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;Landroid/os/Handler;)V
 
     return-void
@@ -1261,7 +1137,6 @@
 
     const/4 v0, 0x0
 
-    .line 676
     iput-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustable:Z
 
     return-void
@@ -1270,7 +1145,6 @@
 .method public shouldDisplayTrustGrantedMessage()Z
     .locals 0
 
-    .line 721
     iget-boolean p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mDisplayTrustGrantedMessage:Z
 
     return p0
@@ -1279,7 +1153,6 @@
 .method public updateDevicePolicyFeatures()Z
     .locals 9
 
-    .line 617
     sget-boolean v0, Lcom/android/server/trust/TrustAgentWrapper;->DEBUG:Z
 
     const-string v1, "TrustAgentWrapper"
@@ -1311,25 +1184,21 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 619
     :try_start_0
     iget-object v3, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     if-eqz v3, :cond_5
 
-    .line 620
     iget-object v3, p0, Lcom/android/server/trust/TrustAgentWrapper;->mContext:Landroid/content/Context;
 
     const-string v4, "device_policy"
 
-    .line 621
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/app/admin/DevicePolicyManager;
 
-    .line 623
     iget v4, p0, Lcom/android/server/trust/TrustAgentWrapper;->mUserId:I
 
     const/4 v5, 0x0
@@ -1342,7 +1211,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 625
     iget-object v4, p0, Lcom/android/server/trust/TrustAgentWrapper;->mName:Landroid/content/ComponentName;
 
     iget v6, p0, Lcom/android/server/trust/TrustAgentWrapper;->mUserId:I
@@ -1357,7 +1225,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 628
     :try_start_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1378,7 +1245,6 @@
     :cond_1
     if-eqz v4, :cond_4
 
-    .line 629
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v7
@@ -1387,7 +1253,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 631
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1416,7 +1281,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     :cond_2
     new-instance v0, Landroid/os/Binder;
 
@@ -1424,7 +1288,6 @@
 
     iput-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mSetTrustAgentFeaturesToken:Landroid/os/IBinder;
 
-    .line 635
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
 
     invoke-interface {v1, v4, v0}, Landroid/service/trust/ITrustAgentService;->onConfigure(Ljava/util/List;Landroid/os/IBinder;)V
@@ -1433,7 +1296,6 @@
 
     goto :goto_0
 
-    .line 638
     :cond_3
     :try_start_2
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustAgentService:Landroid/service/trust/ITrustAgentService;
@@ -1446,7 +1308,6 @@
 
     move v6, v2
 
-    .line 640
     :cond_4
     :goto_0
     :try_start_3
@@ -1456,30 +1317,24 @@
 
     move-result-wide v0
 
-    .line 641
     iget-wide v3, p0, Lcom/android/server/trust/TrustAgentWrapper;->mMaximumTimeToLock:J
 
     cmp-long v3, v0, v3
 
     if-eqz v3, :cond_6
 
-    .line 644
     iput-wide v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mMaximumTimeToLock:J
 
-    .line 645
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmPendingIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_6
 
-    .line 646
     iget-object v1, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v1, v0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 647
     iput-object v5, p0, Lcom/android/server/trust/TrustAgentWrapper;->mAlarmPendingIntent:Landroid/app/PendingIntent;
 
-    .line 648
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
@@ -1505,21 +1360,17 @@
 
     move v6, v2
 
-    .line 653
     :goto_1
     invoke-virtual {p0, v0}, Lcom/android/server/trust/TrustAgentWrapper;->onError(Ljava/lang/Exception;)V
 
-    .line 655
     :cond_6
     :goto_2
     iget-boolean v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustDisabledByDpm:Z
 
     if-eq v0, v6, :cond_7
 
-    .line 656
     iput-boolean v6, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustDisabledByDpm:Z
 
-    .line 657
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mTrustManagerService:Lcom/android/server/trust/TrustManagerService;
 
     iget p0, p0, Lcom/android/server/trust/TrustAgentWrapper;->mUserId:I

@@ -33,11 +33,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 35
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 36
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/location/injector/AlarmHelper;->setDelayedAlarmInternal(JLandroid/app/AlarmManager$OnAlarmListener;Landroid/os/WorkSource;)V
 
     return-void

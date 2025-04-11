@@ -41,90 +41,72 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 42
     iput-boolean v0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeInfinitiveArrays:Z
 
-    .line 43
     iput-boolean v0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeInfinitiveMaps:Z
 
-    .line 44
     iput-boolean v0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeInfinitiveByteStrings:Z
 
-    .line 45
     iput-boolean v0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeInfinitiveUnicodeStrings:Z
 
-    .line 46
     iput-boolean v0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeRationalNumbers:Z
 
-    .line 47
     iput-boolean v0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeLanguageTaggedStrings:Z
 
     const/4 v0, 0x0
 
-    .line 48
     iput-boolean v0, p0, Lco/nstant/in/cbor/CborDecoder;->rejectDuplicateKeys:Z
 
-    .line 55
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     iput-object p1, p0, Lco/nstant/in/cbor/CborDecoder;->inputStream:Ljava/io/InputStream;
 
-    .line 57
     new-instance v0, Lco/nstant/in/cbor/decoder/UnsignedIntegerDecoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/decoder/UnsignedIntegerDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborDecoder;->unsignedIntegerDecoder:Lco/nstant/in/cbor/decoder/UnsignedIntegerDecoder;
 
-    .line 58
     new-instance v0, Lco/nstant/in/cbor/decoder/NegativeIntegerDecoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/decoder/NegativeIntegerDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborDecoder;->negativeIntegerDecoder:Lco/nstant/in/cbor/decoder/NegativeIntegerDecoder;
 
-    .line 59
     new-instance v0, Lco/nstant/in/cbor/decoder/ByteStringDecoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/decoder/ByteStringDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborDecoder;->byteStringDecoder:Lco/nstant/in/cbor/decoder/ByteStringDecoder;
 
-    .line 60
     new-instance v0, Lco/nstant/in/cbor/decoder/UnicodeStringDecoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/decoder/UnicodeStringDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborDecoder;->unicodeStringDecoder:Lco/nstant/in/cbor/decoder/UnicodeStringDecoder;
 
-    .line 61
     new-instance v0, Lco/nstant/in/cbor/decoder/ArrayDecoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/decoder/ArrayDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborDecoder;->arrayDecoder:Lco/nstant/in/cbor/decoder/ArrayDecoder;
 
-    .line 62
     new-instance v0, Lco/nstant/in/cbor/decoder/MapDecoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/decoder/MapDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborDecoder;->mapDecoder:Lco/nstant/in/cbor/decoder/MapDecoder;
 
-    .line 63
     new-instance v0, Lco/nstant/in/cbor/decoder/TagDecoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/decoder/TagDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborDecoder;->tagDecoder:Lco/nstant/in/cbor/decoder/TagDecoder;
 
-    .line 64
     new-instance v0, Lco/nstant/in/cbor/decoder/SpecialDecoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/decoder/SpecialDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
@@ -139,15 +121,12 @@
 .method public final decodeLanguageTaggedString(Lco/nstant/in/cbor/model/DataItem;)Lco/nstant/in/cbor/model/DataItem;
     .locals 1
 
-    .line 171
     instance-of p0, p1, Lco/nstant/in/cbor/model/Array;
 
     if-eqz p0, :cond_3
 
-    .line 175
     check-cast p1, Lco/nstant/in/cbor/model/Array;
 
-    .line 177
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Array;->getDataItems()Ljava/util/List;
 
     move-result-object p0
@@ -160,7 +139,6 @@
 
     if-ne p0, v0, :cond_2
 
-    .line 181
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Array;->getDataItems()Ljava/util/List;
 
     move-result-object p0
@@ -173,12 +151,10 @@
 
     check-cast p0, Lco/nstant/in/cbor/model/DataItem;
 
-    .line 183
     instance-of v0, p0, Lco/nstant/in/cbor/model/UnicodeString;
 
     if-eqz v0, :cond_1
 
-    .line 187
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Array;->getDataItems()Ljava/util/List;
 
     move-result-object p1
@@ -191,25 +167,20 @@
 
     check-cast p1, Lco/nstant/in/cbor/model/DataItem;
 
-    .line 189
     instance-of v0, p1, Lco/nstant/in/cbor/model/UnicodeString;
 
     if-eqz v0, :cond_0
 
-    .line 193
     check-cast p0, Lco/nstant/in/cbor/model/UnicodeString;
 
-    .line 194
     check-cast p1, Lco/nstant/in/cbor/model/UnicodeString;
 
-    .line 196
     new-instance v0, Lco/nstant/in/cbor/model/LanguageTaggedString;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/model/LanguageTaggedString;-><init>(Lco/nstant/in/cbor/model/UnicodeString;Lco/nstant/in/cbor/model/UnicodeString;)V
 
     return-object v0
 
-    .line 190
     :cond_0
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -219,7 +190,6 @@
 
     throw p0
 
-    .line 184
     :cond_1
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -229,7 +199,6 @@
 
     throw p0
 
-    .line 178
     :cond_2
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -239,7 +208,6 @@
 
     throw p0
 
-    .line 172
     :cond_3
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -253,7 +221,6 @@
 .method public decodeNext()Lco/nstant/in/cbor/model/DataItem;
     .locals 6
 
-    .line 124
     :try_start_0
     iget-object v0, p0, Lco/nstant/in/cbor/CborDecoder;->inputStream:Ljava/io/InputStream;
 
@@ -271,7 +238,6 @@
 
     return-object p0
 
-    .line 131
     :cond_0
     sget-object v1, Lco/nstant/in/cbor/CborDecoder$1;->$SwitchMap$co$nstant$in$cbor$model$MajorType:[I
 
@@ -287,7 +253,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 166
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -308,7 +273,6 @@
 
     throw p0
 
-    .line 147
     :pswitch_0
     iget-object v1, p0, Lco/nstant/in/cbor/CborDecoder;->tagDecoder:Lco/nstant/in/cbor/decoder/TagDecoder;
 
@@ -316,14 +280,12 @@
 
     move-result-object v0
 
-    .line 148
     invoke-virtual {p0}, Lco/nstant/in/cbor/CborDecoder;->decodeNext()Lco/nstant/in/cbor/model/DataItem;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
-    .line 152
     iget-boolean v2, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeRationalNumbers:Z
 
     if-eqz v2, :cond_1
@@ -338,14 +300,12 @@
 
     if-nez v2, :cond_1
 
-    .line 153
     invoke-virtual {p0, v1}, Lco/nstant/in/cbor/CborDecoder;->decodeRationalNumber(Lco/nstant/in/cbor/model/DataItem;)Lco/nstant/in/cbor/model/DataItem;
 
     move-result-object p0
 
     return-object p0
 
-    .line 154
     :cond_1
     iget-boolean v2, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeLanguageTaggedStrings:Z
 
@@ -361,7 +321,6 @@
 
     if-nez v2, :cond_2
 
-    .line 155
     invoke-virtual {p0, v1}, Lco/nstant/in/cbor/CborDecoder;->decodeLanguageTaggedString(Lco/nstant/in/cbor/model/DataItem;)Lco/nstant/in/cbor/model/DataItem;
 
     move-result-object p0
@@ -371,7 +330,6 @@
     :cond_2
     move-object p0, v1
 
-    .line 158
     :goto_0
     invoke-virtual {p0}, Lco/nstant/in/cbor/model/DataItem;->hasTag()Z
 
@@ -379,20 +337,17 @@
 
     if-eqz v2, :cond_3
 
-    .line 159
     invoke-virtual {p0}, Lco/nstant/in/cbor/model/DataItem;->getTag()Lco/nstant/in/cbor/model/Tag;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 160
     :cond_3
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/model/DataItem;->setTag(Lco/nstant/in/cbor/model/Tag;)V
 
     return-object v1
 
-    .line 150
     :cond_4
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -402,7 +357,6 @@
 
     throw p0
 
-    .line 145
     :pswitch_1
     iget-object p0, p0, Lco/nstant/in/cbor/CborDecoder;->specialDecoder:Lco/nstant/in/cbor/decoder/SpecialDecoder;
 
@@ -412,7 +366,6 @@
 
     return-object p0
 
-    .line 143
     :pswitch_2
     iget-object p0, p0, Lco/nstant/in/cbor/CborDecoder;->unsignedIntegerDecoder:Lco/nstant/in/cbor/decoder/UnsignedIntegerDecoder;
 
@@ -422,7 +375,6 @@
 
     return-object p0
 
-    .line 141
     :pswitch_3
     iget-object p0, p0, Lco/nstant/in/cbor/CborDecoder;->unicodeStringDecoder:Lco/nstant/in/cbor/decoder/UnicodeStringDecoder;
 
@@ -432,7 +384,6 @@
 
     return-object p0
 
-    .line 139
     :pswitch_4
     iget-object p0, p0, Lco/nstant/in/cbor/CborDecoder;->negativeIntegerDecoder:Lco/nstant/in/cbor/decoder/NegativeIntegerDecoder;
 
@@ -442,7 +393,6 @@
 
     return-object p0
 
-    .line 137
     :pswitch_5
     iget-object p0, p0, Lco/nstant/in/cbor/CborDecoder;->mapDecoder:Lco/nstant/in/cbor/decoder/MapDecoder;
 
@@ -452,7 +402,6 @@
 
     return-object p0
 
-    .line 135
     :pswitch_6
     iget-object p0, p0, Lco/nstant/in/cbor/CborDecoder;->byteStringDecoder:Lco/nstant/in/cbor/decoder/ByteStringDecoder;
 
@@ -462,7 +411,6 @@
 
     return-object p0
 
-    .line 133
     :pswitch_7
     iget-object p0, p0, Lco/nstant/in/cbor/CborDecoder;->arrayDecoder:Lco/nstant/in/cbor/decoder/ArrayDecoder;
 
@@ -475,7 +423,6 @@
     :catch_0
     move-exception p0
 
-    .line 126
     new-instance v0, Lco/nstant/in/cbor/CborException;
 
     invoke-direct {v0, p0}, Lco/nstant/in/cbor/CborException;-><init>(Ljava/lang/Throwable;)V
@@ -500,15 +447,12 @@
 .method public final decodeRationalNumber(Lco/nstant/in/cbor/model/DataItem;)Lco/nstant/in/cbor/model/DataItem;
     .locals 1
 
-    .line 200
     instance-of p0, p1, Lco/nstant/in/cbor/model/Array;
 
     if-eqz p0, :cond_3
 
-    .line 204
     check-cast p1, Lco/nstant/in/cbor/model/Array;
 
-    .line 206
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Array;->getDataItems()Ljava/util/List;
 
     move-result-object p0
@@ -521,7 +465,6 @@
 
     if-ne p0, v0, :cond_2
 
-    .line 210
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Array;->getDataItems()Ljava/util/List;
 
     move-result-object p0
@@ -534,12 +477,10 @@
 
     check-cast p0, Lco/nstant/in/cbor/model/DataItem;
 
-    .line 212
     instance-of v0, p0, Lco/nstant/in/cbor/model/Number;
 
     if-eqz v0, :cond_1
 
-    .line 216
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Array;->getDataItems()Ljava/util/List;
 
     move-result-object p1
@@ -552,25 +493,20 @@
 
     check-cast p1, Lco/nstant/in/cbor/model/DataItem;
 
-    .line 218
     instance-of v0, p1, Lco/nstant/in/cbor/model/Number;
 
     if-eqz v0, :cond_0
 
-    .line 222
     check-cast p0, Lco/nstant/in/cbor/model/Number;
 
-    .line 223
     check-cast p1, Lco/nstant/in/cbor/model/Number;
 
-    .line 225
     new-instance v0, Lco/nstant/in/cbor/model/RationalNumber;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/model/RationalNumber;-><init>(Lco/nstant/in/cbor/model/Number;Lco/nstant/in/cbor/model/Number;)V
 
     return-object v0
 
-    .line 219
     :cond_0
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -580,7 +516,6 @@
 
     throw p0
 
-    .line 213
     :cond_1
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -590,7 +525,6 @@
 
     throw p0
 
-    .line 207
     :cond_2
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -600,7 +534,6 @@
 
     throw p0
 
-    .line 201
     :cond_3
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -614,7 +547,6 @@
 .method public isAutoDecodeInfinitiveArrays()Z
     .locals 0
 
-    .line 229
     iget-boolean p0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeInfinitiveArrays:Z
 
     return p0
@@ -623,7 +555,6 @@
 .method public isAutoDecodeInfinitiveByteStrings()Z
     .locals 0
 
-    .line 245
     iget-boolean p0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeInfinitiveByteStrings:Z
 
     return p0
@@ -632,7 +563,6 @@
 .method public isAutoDecodeInfinitiveMaps()Z
     .locals 0
 
-    .line 237
     iget-boolean p0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeInfinitiveMaps:Z
 
     return p0
@@ -641,7 +571,6 @@
 .method public isAutoDecodeInfinitiveUnicodeStrings()Z
     .locals 0
 
-    .line 254
     iget-boolean p0, p0, Lco/nstant/in/cbor/CborDecoder;->autoDecodeInfinitiveUnicodeStrings:Z
 
     return p0
@@ -650,7 +579,6 @@
 .method public isRejectDuplicateKeys()Z
     .locals 0
 
-    .line 281
     iget-boolean p0, p0, Lco/nstant/in/cbor/CborDecoder;->rejectDuplicateKeys:Z
 
     return p0

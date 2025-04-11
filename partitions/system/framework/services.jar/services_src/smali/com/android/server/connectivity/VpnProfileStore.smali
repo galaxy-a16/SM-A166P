@@ -17,7 +17,6 @@
 .method public get(Ljava/lang/String;)[B
     .locals 0
 
-    .line 53
     invoke-static {p1}, Landroid/security/LegacyVpnProfileStore;->get(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -28,7 +27,6 @@
 .method public list(Ljava/lang/String;)[Ljava/lang/String;
     .locals 0
 
-    .line 75
     invoke-static {p1}, Landroid/security/LegacyVpnProfileStore;->list(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -39,7 +37,6 @@
 .method public put(Ljava/lang/String;[B)Z
     .locals 0
 
-    .line 39
     invoke-static {p1, p2}, Landroid/security/LegacyVpnProfileStore;->put(Ljava/lang/String;[B)Z
 
     move-result p0
@@ -50,7 +47,6 @@
 .method public remove(Ljava/lang/String;)Z
     .locals 0
 
-    .line 64
     invoke-static {p1}, Landroid/security/LegacyVpnProfileStore;->remove(Ljava/lang/String;)Z
 
     move-result p0

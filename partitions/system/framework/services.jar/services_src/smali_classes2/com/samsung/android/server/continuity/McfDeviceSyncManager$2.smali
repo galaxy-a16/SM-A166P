@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)V
     .locals 0
 
-    .line 89
     iput-object p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onChanged(II)V
     .locals 3
 
-    .line 92
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fgetmPreconditionObserver(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Lcom/samsung/android/server/continuity/PreconditionObserver;
@@ -38,7 +36,6 @@
 
     move-result v0
 
-    .line 93
     iget-object v1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fgetmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Z
@@ -49,7 +46,6 @@
 
     return-void
 
-    .line 96
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -85,12 +81,10 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     iget-object v1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v1, v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fputmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;Z)V
 
-    .line 99
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fgetmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Z
@@ -103,12 +97,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 100
     iget-object p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {p1, v1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$mremoveMessage(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;I)V
 
-    .line 101
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     const-wide/16 v0, 0x0
@@ -117,7 +109,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_1
     iget-object p2, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
@@ -127,7 +118,6 @@
 
     if-lez p1, :cond_2
 
-    .line 105
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     const-wide/16 p1, 0xbb8
@@ -136,7 +126,6 @@
 
     goto :goto_0
 
-    .line 107
     :cond_2
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
@@ -149,7 +138,6 @@
 .method public onPackageReplaced(Z)V
     .locals 4
 
-    .line 114
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fgetmPreconditionObserver(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Lcom/samsung/android/server/continuity/PreconditionObserver;
@@ -160,7 +148,6 @@
 
     move-result v0
 
-    .line 115
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,12 +178,10 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     iget-object v1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v1, v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fputmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;Z)V
 
-    .line 118
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fgetmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Z
@@ -207,7 +192,6 @@
 
     return-void
 
-    .line 122
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
@@ -217,7 +201,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 124
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     const-wide/16 v2, 0x3e8
@@ -226,7 +209,6 @@
 
     goto :goto_0
 
-    .line 126
     :cond_1
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
@@ -241,7 +223,6 @@
 .method public onPackageRestarted()V
     .locals 4
 
-    .line 132
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fgetmPreconditionObserver(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Lcom/samsung/android/server/continuity/PreconditionObserver;
@@ -252,7 +233,6 @@
 
     move-result v0
 
-    .line 133
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -283,12 +263,10 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     iget-object v1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v1, v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fputmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;Z)V
 
-    .line 136
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fgetmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Z
@@ -299,7 +277,6 @@
 
     return-void
 
-    .line 140
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
@@ -307,7 +284,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$mremoveMessage(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;I)V
 
-    .line 141
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$2;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     const/4 v0, 0x6

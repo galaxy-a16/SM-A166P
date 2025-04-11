@@ -9,7 +9,6 @@
 
     const/4 v0, 0x0
 
-    .line 75
     :try_start_0
     invoke-static {p0, p1}, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->-$$Nest$smgetPackageSignatureHexInfo(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
@@ -17,7 +16,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 78
     invoke-static {p0, p1}, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->-$$Nest$smisPlatformKeySigned(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -38,7 +36,6 @@
 
     const/4 v0, 0x0
 
-    .line 62
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -50,14 +47,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 63
     iget-object p1, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-boolean p1, p1, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
     if-eqz p1, :cond_0
 
-    .line 64
     iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0

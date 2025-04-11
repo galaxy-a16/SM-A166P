@@ -7,7 +7,6 @@
 .method public static final getName(B)Ljava/lang/String;
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_1
 
     const/4 v0, 0x1

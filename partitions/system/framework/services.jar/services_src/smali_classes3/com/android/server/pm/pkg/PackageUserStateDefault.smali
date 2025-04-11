@@ -20,7 +20,6 @@
 .method public getAllOverlayPaths()Landroid/content/pm/overlay/OverlayPaths;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public getCeDataInode()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -38,7 +36,6 @@
 .method public getDisabledComponents()Landroid/util/ArraySet;
     .locals 0
 
-    .line 65
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
@@ -49,7 +46,6 @@
 .method public bridge synthetic getDisabledComponents()Ljava/util/Set;
     .locals 0
 
-    .line 34
     invoke-virtual {p0}, Lcom/android/server/pm/pkg/PackageUserStateDefault;->getDisabledComponents()Landroid/util/ArraySet;
 
     move-result-object p0
@@ -60,7 +56,6 @@
 .method public getDisabledComponentsNoCopy()Lcom/android/server/utils/WatchedArraySet;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -69,7 +64,6 @@
 .method public getDistractionFlags()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -78,7 +72,6 @@
 .method public getEnabledComponents()Landroid/util/ArraySet;
     .locals 0
 
-    .line 71
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
@@ -89,7 +82,6 @@
 .method public bridge synthetic getEnabledComponents()Ljava/util/Set;
     .locals 0
 
-    .line 34
     invoke-virtual {p0}, Lcom/android/server/pm/pkg/PackageUserStateDefault;->getEnabledComponents()Landroid/util/ArraySet;
 
     move-result-object p0
@@ -100,7 +92,6 @@
 .method public getEnabledComponentsNoCopy()Lcom/android/server/utils/WatchedArraySet;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -109,7 +100,6 @@
 .method public getEnabledState()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -118,7 +108,6 @@
 .method public getFirstInstallTimeMillis()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -127,7 +116,6 @@
 .method public getHarmfulAppWarning()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -136,7 +124,6 @@
 .method public getInstallReason()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -145,7 +132,6 @@
 .method public getLastDisableAppCaller()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -154,7 +140,6 @@
 .method public getOverlayPaths()Landroid/content/pm/overlay/OverlayPaths;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -163,7 +148,6 @@
 .method public getOverrideLabelIconForComponent(Landroid/content/ComponentName;)Landroid/util/Pair;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -172,7 +156,6 @@
 .method public getSharedLibraryOverlayPaths()Ljava/util/Map;
     .locals 0
 
-    .line 49
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
@@ -183,7 +166,6 @@
 .method public getSplashScreenTheme()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -192,7 +174,6 @@
 .method public getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -201,7 +182,6 @@
 .method public getUninstallReason()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -210,7 +190,6 @@
 .method public isComponentDisabled(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -219,7 +198,6 @@
 .method public isComponentEnabled(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -228,7 +206,6 @@
 .method public isHidden()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -237,7 +214,6 @@
 .method public isInstalled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -246,7 +222,6 @@
 .method public isInstantApp()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -255,7 +230,6 @@
 .method public isNotLaunched()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -264,7 +238,6 @@
 .method public isStopped()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -273,7 +246,6 @@
 .method public isSuspended()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -282,7 +254,6 @@
 .method public isVirtualPreload()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

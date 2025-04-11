@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/trust/TrustManagerService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 2093
     iput-object p1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    .line 2096
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, -0x1
@@ -38,7 +36,6 @@
     :pswitch_0
     goto/16 :goto_2
 
-    .line 2110
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -48,7 +45,6 @@
 
     goto/16 :goto_2
 
-    .line 2172
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -58,7 +54,6 @@
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2173
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -67,14 +62,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 2174
     invoke-virtual {v0}, Lcom/android/server/trust/TrustManagerService$TrustTimeoutAlarmListener;->isQueued()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 2175
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -83,7 +76,6 @@
 
     goto/16 :goto_2
 
-    .line 2107
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -100,7 +92,6 @@
 
     goto/16 :goto_2
 
-    .line 2166
     :pswitch_4
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -108,7 +99,6 @@
 
     move v2, v3
 
-    .line 2168
     :cond_1
     iget p1, p1, Landroid/os/Message;->arg2:I
 
@@ -121,7 +111,6 @@
     :cond_2
     sget-object p1, Lcom/android/server/trust/TrustManagerService$TimeoutType;->TRUSTED:Lcom/android/server/trust/TrustManagerService$TimeoutType;
 
-    .line 2169
     :goto_0
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -129,13 +118,11 @@
 
     goto/16 :goto_2
 
-    .line 2158
     :pswitch_5
     iget v0, p1, Landroid/os/Message;->arg2:I
 
     if-ne v0, v3, :cond_3
 
-    .line 2159
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -144,7 +131,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$mupdateTrust(Lcom/android/server/trust/TrustManagerService;IIZLcom/android/internal/infra/AndroidFuture;)V
 
-    .line 2161
     :cond_3
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -158,7 +144,6 @@
 
     move-result v0
 
-    .line 2163
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -167,7 +152,6 @@
 
     goto/16 :goto_2
 
-    .line 2113
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -179,7 +163,6 @@
 
     goto/16 :goto_2
 
-    .line 2141
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -189,7 +172,6 @@
 
     goto/16 :goto_2
 
-    .line 2145
     :pswitch_8
     iget-object p1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -199,7 +181,6 @@
 
     monitor-enter v0
 
-    .line 2146
     :try_start_0
     iget-object p1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -211,12 +192,10 @@
 
     move-result-object p1
 
-    .line 2147
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2149
     :goto_1
     invoke-virtual {p1}, Landroid/util/SparseBooleanArray;->size()I
 
@@ -224,17 +203,14 @@
 
     if-ge v2, v0, :cond_6
 
-    .line 2150
     invoke-virtual {p1, v2}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v0
 
-    .line 2151
     invoke-virtual {p1, v2}, Landroid/util/SparseBooleanArray;->valueAt(I)Z
 
     move-result v1
 
-    .line 2152
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v3}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fgetmLockPatternUtils(Lcom/android/server/trust/TrustManagerService;)Lcom/android/internal/widget/LockPatternUtils;
@@ -247,7 +223,6 @@
 
     if-eq v1, v3, :cond_4
 
-    .line 2153
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v3}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fgetmLockPatternUtils(Lcom/android/server/trust/TrustManagerService;)Lcom/android/internal/widget/LockPatternUtils;
@@ -264,7 +239,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2147
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -272,7 +246,6 @@
 
     throw p0
 
-    .line 2136
     :pswitch_9
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -280,7 +253,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fputmCurrentUser(Lcom/android/server/trust/TrustManagerService;I)V
 
-    .line 2137
     iget-object p1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {p1}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fgetmSettingsObserver(Lcom/android/server/trust/TrustManagerService;)Lcom/android/server/trust/TrustManagerService$SettingsObserver;
@@ -289,14 +261,12 @@
 
     invoke-virtual {p1}, Lcom/android/server/trust/TrustManagerService$SettingsObserver;->updateContentObserver()V
 
-    .line 2138
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {p0, v1}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$mrefreshDeviceLockedForUser(Lcom/android/server/trust/TrustManagerService;I)V
 
     goto :goto_2
 
-    .line 2128
     :pswitch_a
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -306,13 +276,11 @@
 
     goto :goto_2
 
-    .line 2122
     :pswitch_b
     iget-object p1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {p1}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$mdispatchTrustableDowngrade(Lcom/android/server/trust/TrustManagerService;)V
 
-    .line 2123
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {p0}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fgetmCurrentUser(Lcom/android/server/trust/TrustManagerService;)I
@@ -323,18 +291,15 @@
 
     goto :goto_2
 
-    .line 2116
     :pswitch_c
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-virtual {v0, v1}, Lcom/android/server/trust/TrustManagerService;->refreshAgentList(I)V
 
-    .line 2118
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v0, v1}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$mrefreshDeviceLockedForUser(Lcom/android/server/trust/TrustManagerService;I)V
 
-    .line 2119
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -343,7 +308,6 @@
 
     goto :goto_2
 
-    .line 2104
     :pswitch_d
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -360,7 +324,6 @@
 
     goto :goto_2
 
-    .line 2101
     :pswitch_e
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -372,7 +335,6 @@
 
     goto :goto_2
 
-    .line 2098
     :pswitch_f
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 

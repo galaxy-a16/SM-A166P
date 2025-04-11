@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/display/color/ColorDisplayService;Landroid/os/Handler;Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 254
     iput-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$1;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     iput-object p3, p0, Lcom/android/server/display/color/ColorDisplayService$1;->val$cr:Landroid/content/ContentResolver;
@@ -28,7 +27,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 257
     iget-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$1;->val$cr:Landroid/content/ContentResolver;
 
     iget-object p2, p0, Lcom/android/server/display/color/ColorDisplayService$1;->this$0:Lcom/android/server/display/color/ColorDisplayService;
@@ -43,19 +41,16 @@
 
     if-eqz p1, :cond_0
 
-    .line 258
     iget-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$1;->val$cr:Landroid/content/ContentResolver;
 
     invoke-virtual {p1, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 259
     iget-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$1;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/android/server/display/color/ColorDisplayService;->-$$Nest$fputmUserSetupObserver(Lcom/android/server/display/color/ColorDisplayService;Landroid/database/ContentObserver;)V
 
-    .line 261
     iget-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$1;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-static {p1}, Lcom/android/server/display/color/ColorDisplayService;->-$$Nest$fgetmBootCompleted(Lcom/android/server/display/color/ColorDisplayService;)Z
@@ -64,7 +59,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 262
     iget-object p0, p0, Lcom/android/server/display/color/ColorDisplayService$1;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-static {p0}, Lcom/android/server/display/color/ColorDisplayService;->-$$Nest$msetUp(Lcom/android/server/display/color/ColorDisplayService;)V

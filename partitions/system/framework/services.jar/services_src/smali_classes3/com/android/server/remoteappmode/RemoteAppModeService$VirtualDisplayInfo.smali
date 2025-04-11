@@ -22,21 +22,16 @@
 .method public constructor <init>(Lcom/android/server/remoteappmode/RemoteAppModeService;Landroid/hardware/display/VirtualDisplay;Landroid/os/IBinder;II)V
     .locals 0
 
-    .line 1081
     iput-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1082
     iput-object p2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
-    .line 1083
     iput-object p3, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->mBinder:Landroid/os/IBinder;
 
-    .line 1084
     iput p4, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->mPid:I
 
-    .line 1085
     iput p5, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->mUid:I
 
     return-void
@@ -47,7 +42,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 1090
     invoke-static {}, Lcom/android/server/remoteappmode/RemoteAppModeService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -56,19 +50,16 @@
 
     invoke-static {v0, v1}, Lcom/android/server/remoteappmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1092
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->mBinder:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 1094
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
     invoke-virtual {v0}, Landroid/hardware/display/VirtualDisplay;->release()V
 
-    .line 1096
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-static {v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->-$$Nest$fgetmLock(Lcom/android/server/remoteappmode/RemoteAppModeService;)Ljava/lang/Object;
@@ -77,7 +68,6 @@
 
     monitor-enter v0
 
-    .line 1097
     :try_start_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
@@ -101,12 +91,10 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1099
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-static {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->-$$Nest$mcheckRemoteAppModeEnabled(Lcom/android/server/remoteappmode/RemoteAppModeService;)V
 
-    .line 1100
     monitor-exit v0
 
     return-void
@@ -124,7 +112,6 @@
 .method public getVirtualDisplay()Landroid/hardware/display/VirtualDisplay;
     .locals 0
 
-    .line 1104
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->mVirtualDisplay:Landroid/hardware/display/VirtualDisplay;
 
     return-object p0

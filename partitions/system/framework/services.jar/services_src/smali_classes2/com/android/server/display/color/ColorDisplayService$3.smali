@@ -19,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/TintController;[FLcom/android/server/display/color/DisplayTransformManager;)V
     .locals 0
 
-    .line 684
     iput-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$3;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     iput-object p2, p0, Lcom/android/server/display/color/ColorDisplayService$3;->val$tintController:Lcom/android/server/display/color/TintController;
@@ -40,7 +39,6 @@
 
     const/4 p1, 0x1
 
-    .line 690
     iput-boolean p1, p0, Lcom/android/server/display/color/ColorDisplayService$3;->mIsCancelled:Z
 
     return-void
@@ -49,10 +47,8 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 695
     check-cast p1, Lcom/android/server/display/color/ColorDisplayService$TintValueAnimator;
 
-    .line 696
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +81,6 @@
 
     const/16 v2, 0x10
 
-    .line 698
     invoke-static {v1, v2}, Lcom/android/server/display/color/TintController;->matrixToString([FI)Ljava/lang/String;
 
     move-result-object v1
@@ -96,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 700
     invoke-virtual {p1}, Lcom/android/server/display/color/ColorDisplayService$TintValueAnimator;->getMin()[F
 
     move-result-object v1
@@ -111,7 +105,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 702
     invoke-virtual {p1}, Lcom/android/server/display/color/ColorDisplayService$TintValueAnimator;->getMax()[F
 
     move-result-object p1
@@ -128,15 +121,12 @@
 
     const-string v0, "ColorDisplayService"
 
-    .line 696
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 703
     iget-boolean p1, p0, Lcom/android/server/display/color/ColorDisplayService$3;->mIsCancelled:Z
 
     if-nez p1, :cond_0
 
-    .line 707
     iget-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$3;->val$dtm:Lcom/android/server/display/color/DisplayTransformManager;
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$3;->val$tintController:Lcom/android/server/display/color/TintController;
@@ -149,7 +139,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/display/color/DisplayTransformManager;->setColorMatrix(I[F)V
 
-    .line 709
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/color/ColorDisplayService$3;->val$tintController:Lcom/android/server/display/color/TintController;
 

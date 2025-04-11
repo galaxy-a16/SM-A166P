@@ -19,7 +19,6 @@
 .method public static synthetic $values()[Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
     .locals 4
 
-    .line 130
     sget-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->VERIFIED:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
     sget-object v1, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->SELF_SIGNED:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 131
     new-instance v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
     const-string v1, "VERIFIED"
@@ -49,7 +47,6 @@
 
     sput-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->VERIFIED:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
-    .line 132
     new-instance v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
     const-string v1, "SELF_SIGNED"
@@ -60,7 +57,6 @@
 
     sput-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->SELF_SIGNED:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
-    .line 133
     new-instance v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
     const-string v1, "UNVERIFIED"
@@ -71,7 +67,6 @@
 
     sput-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->UNVERIFIED:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
-    .line 134
     new-instance v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
     const-string v1, "FAILED"
@@ -82,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->FAILED:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
-    .line 130
     invoke-static {}, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->$values()[Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
     move-result-object v0
@@ -95,7 +89,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 130
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -104,7 +97,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
     .locals 1
 
-    .line 130
     const-class v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -119,7 +111,6 @@
 .method public static values()[Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
     .locals 1
 
-    .line 130
     sget-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->$VALUES:[Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;
 
     invoke-virtual {v0}, [Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$VerifiedBootState;->clone()Ljava/lang/Object;

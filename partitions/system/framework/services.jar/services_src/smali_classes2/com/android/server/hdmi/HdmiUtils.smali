@@ -15,7 +15,6 @@
 
     const/4 v0, 0x0
 
-    .line 62
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -34,12 +33,10 @@
 
     const/4 v1, 0x1
 
-    .line 63
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 64
     filled-new-array {v1}, [Ljava/lang/Integer;
 
     move-result-object v3
@@ -48,19 +45,16 @@
 
     move-result-object v3
 
-    .line 63
     invoke-static {v1, v3}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v3
 
     const/4 v4, 0x2
 
-    .line 65
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    .line 66
     filled-new-array {v1}, [Ljava/lang/Integer;
 
     move-result-object v5
@@ -69,14 +63,12 @@
 
     move-result-object v5
 
-    .line 65
     invoke-static {v4, v5}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v4
 
     const/4 v5, 0x3
 
-    .line 67
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -95,12 +87,10 @@
 
     const/4 v7, 0x4
 
-    .line 68
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
-    .line 69
     filled-new-array {v7}, [Ljava/lang/Integer;
 
     move-result-object v8
@@ -109,19 +99,16 @@
 
     move-result-object v8
 
-    .line 68
     invoke-static {v7, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v8
 
     const/4 v9, 0x5
 
-    .line 70
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
 
-    .line 71
     filled-new-array {v9}, [Ljava/lang/Integer;
 
     move-result-object v10
@@ -130,14 +117,12 @@
 
     move-result-object v10
 
-    .line 70
     invoke-static {v9, v10}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v9
 
     const/4 v10, 0x6
 
-    .line 72
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -156,7 +141,6 @@
 
     const/4 v11, 0x7
 
-    .line 73
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v11
@@ -175,12 +159,10 @@
 
     const/16 v13, 0x8
 
-    .line 74
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v13
 
-    .line 75
     filled-new-array {v7}, [Ljava/lang/Integer;
 
     move-result-object v14
@@ -189,19 +171,16 @@
 
     move-result-object v14
 
-    .line 74
     invoke-static {v13, v14}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v13
 
     const/16 v14, 0x9
 
-    .line 76
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v14
 
-    .line 77
     filled-new-array {v1}, [Ljava/lang/Integer;
 
     move-result-object v15
@@ -210,14 +189,12 @@
 
     move-result-object v15
 
-    .line 76
     invoke-static {v14, v15}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v14
 
     const/16 v15, 0xa
 
-    .line 78
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
@@ -238,12 +215,10 @@
 
     const/16 v15, 0xb
 
-    .line 79
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
 
-    .line 80
     filled-new-array {v7}, [Ljava/lang/Integer;
 
     move-result-object v16
@@ -254,26 +229,22 @@
 
     move-result-object v14
 
-    .line 79
     invoke-static {v15, v14}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v14
 
     const/16 v15, 0xc
 
-    .line 81
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
 
-    .line 83
     filled-new-array {v7, v1, v5, v11}, [Ljava/lang/Integer;
 
     move-result-object v16
 
     move-object/from16 v19, v14
 
-    .line 81
     invoke-static/range {v16 .. v16}, Lcom/google/android/collect/Lists;->newArrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object v14
@@ -284,17 +255,14 @@
 
     const/16 v15, 0xd
 
-    .line 84
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
 
-    .line 86
     filled-new-array {v7, v1, v5, v11}, [Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 84
     invoke-static {v1}, Lcom/google/android/collect/Lists;->newArrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -305,7 +273,6 @@
 
     const/16 v1, 0xe
 
-    .line 87
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -324,7 +291,6 @@
 
     const/16 v0, 0xf
 
-    .line 88
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -361,7 +327,6 @@
 
     move-result-object v0
 
-    .line 61
     invoke-static {v0}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v0
@@ -398,7 +363,6 @@
 
     const-string v15, "Secondary_TV"
 
-    .line 90
     filled-new-array/range {v1 .. v15}, [Ljava/lang/String;
 
     move-result-object v0
@@ -411,14 +375,12 @@
 .method public static checkCommandSource(Lcom/android/server/hdmi/HdmiCecMessage;ILjava/lang/String;)Z
     .locals 2
 
-    .line 197
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->getSource()I
 
     move-result p0
 
     if-eq p0, p1, :cond_0
 
-    .line 199
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -458,13 +420,10 @@
 .method public static dumpIterable(Lcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;Ljava/lang/Iterable;)V
     .locals 0
 
-    .line 452
     invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiUtils;->printWithTrailingColon(Lcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 453
     invoke-virtual {p0}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 454
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -480,12 +439,10 @@
 
     move-result-object p2
 
-    .line 455
     invoke-virtual {p0, p2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 457
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -495,13 +452,10 @@
 .method public static dumpMap(Lcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;Ljava/util/Map;)V
     .locals 1
 
-    .line 431
     invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiUtils;->printWithTrailingColon(Lcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 432
     invoke-virtual {p0}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 433
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -523,7 +477,6 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 434
     invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -538,12 +491,10 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 435
     invoke-virtual {p0}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     goto :goto_0
 
-    .line 437
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -553,7 +504,6 @@
 .method public static getAbortFeatureOpcode(Lcom/android/server/hdmi/HdmiCecMessage;)I
     .locals 1
 
-    .line 515
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object p0
@@ -570,7 +520,6 @@
 .method public static getAbortReason(Lcom/android/server/hdmi/HdmiCecMessage;)I
     .locals 1
 
-    .line 526
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object p0
@@ -585,14 +534,12 @@
 .method public static getAudioStatusVolume(Lcom/android/server/hdmi/HdmiCecMessage;)I
     .locals 1
 
-    .line 233
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 234
     aget-byte p0, p0, v0
 
     and-int/lit8 p0, p0, 0x7f
@@ -613,14 +560,12 @@
 .method public static getDefaultDeviceName(I)Ljava/lang/String;
     .locals 1
 
-    .line 166
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils;->isValidAddress(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 167
     sget-object v0, Lcom/android/server/hdmi/HdmiUtils;->DEFAULT_NAMES:[Ljava/lang/String;
 
     aget-object p0, v0, p0
@@ -642,7 +587,6 @@
 
     return v0
 
-    .line 568
     :cond_0
     :goto_0
     array-length v1, p0
@@ -663,7 +607,6 @@
 
     goto :goto_0
 
-    .line 571
     :cond_1
     array-length p0, p0
 
@@ -678,7 +621,6 @@
 .method public static getLocalPortFromPhysicalAddress(II)I
     .locals 3
 
-    .line 0
     if-ne p1, p0, :cond_0
 
     const/4 p0, 0x0
@@ -737,14 +679,12 @@
 .method public static getTypeFromAddress(I)Ljava/util/List;
     .locals 1
 
-    .line 151
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils;->isValidAddress(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 152
     sget-object v0, Lcom/android/server/hdmi/HdmiUtils;->ADDRESS_TO_TYPE:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -762,7 +702,6 @@
     :cond_0
     const/4 p0, -0x1
 
-    .line 154
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -815,7 +754,6 @@
 
     return p0
 
-    .line 340
     :cond_2
     invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiUtils;->isInActiveRoutingPath(II)Z
 
@@ -827,14 +765,12 @@
 .method public static isAudioStatusMute(Lcom/android/server/hdmi/HdmiCecMessage;)Z
     .locals 2
 
-    .line 222
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 223
     aget-byte p0, p0, v0
 
     const/16 v1, 0x80
@@ -852,7 +788,6 @@
 .method public static isEligibleAddressForCecVersion(II)Z
     .locals 3
 
-    .line 134
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiUtils;->isValidAddress(I)Z
 
     move-result v0
@@ -891,7 +826,6 @@
 .method public static isEligibleAddressForDevice(II)Z
     .locals 1
 
-    .line 129
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiUtils;->isValidAddress(I)Z
 
     move-result v0
@@ -900,7 +834,6 @@
 
     sget-object v0, Lcom/android/server/hdmi/HdmiUtils;->ADDRESS_TO_TYPE:Ljava/util/Map;
 
-    .line 130
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -935,7 +868,6 @@
 .method public static isInActiveRoutingPath(II)Z
     .locals 0
 
-    .line 351
     invoke-static {p1, p0}, Lcom/android/server/hdmi/HdmiUtils;->pathRelationship(II)I
 
     move-result p0
@@ -970,7 +902,6 @@
 .method public static isValidAddress(I)Z
     .locals 1
 
-    .line 0
     if-ltz p0, :cond_0
 
     const/16 v0, 0xe
@@ -991,7 +922,6 @@
 .method public static mergeToUnmodifiableList(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
     .locals 1
 
-    .line 297
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -1004,14 +934,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 300
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
@@ -1019,14 +947,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 301
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 303
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -1034,26 +960,21 @@
 
     if-eqz v0, :cond_2
 
-    .line 304
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 306
     :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 307
     invoke-interface {v0, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 308
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 309
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
@@ -1064,7 +985,6 @@
 .method public static parseCommandParamSystemAudioStatus(Lcom/android/server/hdmi/HdmiCecMessage;)Z
     .locals 2
 
-    .line 212
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object p0
@@ -1086,7 +1006,6 @@
 .method public static pathRelationship(II)I
     .locals 6
 
-    .line 0
     const/4 v0, 0x0
 
     const v1, 0xffff
@@ -1178,7 +1097,6 @@
 
     const-string v0, ":"
 
-    .line 416
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1201,14 +1119,12 @@
 .method public static sparseArrayToList(Landroid/util/SparseArray;)Ljava/util/List;
     .locals 3
 
-    .line 289
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 290
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -1216,7 +1132,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 291
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -1236,7 +1151,6 @@
 
     const/4 v0, 0x0
 
-    .line 285
     aget-byte v0, p0, v0
 
     and-int/lit16 v0, v0, 0xff
@@ -1269,7 +1183,6 @@
 
     const/4 v0, 0x0
 
-    .line 264
     aget-byte v0, p0, v0
 
     and-int/lit16 v0, v0, 0xff
@@ -1290,7 +1203,6 @@
 .method public static twoBytesToInt([BI)I
     .locals 1
 
-    .line 275
     aget-byte v0, p0, p1
 
     and-int/lit16 v0, v0, 0xff
@@ -1311,12 +1223,10 @@
 .method public static verifyAddressType(II)V
     .locals 3
 
-    .line 181
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils;->getTypeFromAddress(I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 182
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1329,7 +1239,6 @@
 
     return-void
 
-    .line 183
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

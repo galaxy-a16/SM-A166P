@@ -7,7 +7,6 @@
 .method public static deserialize(Ljava/io/InputStream;)Landroid/security/keystore/recovery/KeyChainSnapshot;
     .locals 2
 
-    .line 80
     :try_start_0
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->deserializeInternal(Ljava/io/InputStream;)Landroid/security/keystore/recovery/KeyChainSnapshot;
 
@@ -20,7 +19,6 @@
     :catch_0
     move-exception p0
 
-    .line 82
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     const-string v1, "Malformed KeyChainSnapshot XML"
@@ -33,15 +31,12 @@
 .method public static deserializeInternal(Ljava/io/InputStream;)Landroid/security/keystore/recovery/KeyChainSnapshot;
     .locals 13
 
-    .line 88
     invoke-static {p0}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object p0
 
-    .line 90
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->nextTag()I
 
-    .line 91
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -50,12 +45,10 @@
 
     invoke-interface {p0, v1, v0, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 93
     new-instance v0, Landroid/security/keystore/recovery/KeyChainSnapshot$Builder;
 
     invoke-direct {v0}, Landroid/security/keystore/recovery/KeyChainSnapshot$Builder;-><init>()V
 
-    .line 94
     :goto_0
     :pswitch_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -66,7 +59,6 @@
 
     if-eq v3, v4, :cond_a
 
-    .line 95
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v3
@@ -75,13 +67,11 @@
 
     goto :goto_0
 
-    .line 99
     :cond_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 101
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
@@ -238,7 +228,6 @@
     :goto_2
     packed-switch v4, :pswitch_data_0
 
-    .line 146
     new-instance p0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -257,7 +246,6 @@
 
     throw p0
 
-    .line 116
     :pswitch_1
     invoke-static {p0, v6}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readBlobTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)[B
 
@@ -267,7 +255,6 @@
 
     goto/16 :goto_0
 
-    .line 138
     :pswitch_2
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readKeyChainProtectionParamsList(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/util/List;
 
@@ -277,7 +264,6 @@
 
     goto/16 :goto_0
 
-    .line 112
     :pswitch_3
     invoke-static {p0, v7}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readLongTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)J
 
@@ -287,7 +273,6 @@
 
     goto/16 :goto_0
 
-    .line 142
     :pswitch_4
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readWrappedApplicationKeys(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/util/List;
 
@@ -297,7 +282,6 @@
 
     goto/16 :goto_0
 
-    .line 103
     :pswitch_5
     invoke-static {p0, v8}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readIntTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)I
 
@@ -307,14 +291,12 @@
 
     goto/16 :goto_0
 
-    .line 126
     :pswitch_6
     :try_start_0
     invoke-static {p0, v9}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readCertPathTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/security/cert/CertPath;
 
     move-result-object v3
 
-    .line 125
     invoke-virtual {v0, v3}, Landroid/security/keystore/recovery/KeyChainSnapshot$Builder;->setTrustedHardwareCertPath(Ljava/security/cert/CertPath;)Landroid/security/keystore/recovery/KeyChainSnapshot$Builder;
     :try_end_0
     .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -324,7 +306,6 @@
     :catch_0
     move-exception p0
 
-    .line 128
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     const-string v1, "Could not set trustedHardwareCertPath"
@@ -333,18 +314,15 @@
 
     throw v0
 
-    .line 108
     :pswitch_7
     invoke-static {p0, v10}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readBlobTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)[B
 
     move-result-object v3
 
-    .line 107
     invoke-virtual {v0, v3}, Landroid/security/keystore/recovery/KeyChainSnapshot$Builder;->setEncryptedRecoveryKeyBlob([B)Landroid/security/keystore/recovery/KeyChainSnapshot$Builder;
 
     goto/16 :goto_0
 
-    .line 120
     :pswitch_8
     invoke-static {p0, v11}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readIntTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)I
 
@@ -354,13 +332,11 @@
 
     goto/16 :goto_0
 
-    .line 151
     :cond_a
     sget-object v1, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     invoke-interface {p0, v4, v1, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     :try_start_1
     invoke-virtual {v0}, Landroid/security/keystore/recovery/KeyChainSnapshot$Builder;->build()Landroid/security/keystore/recovery/KeyChainSnapshot;
 
@@ -373,7 +349,6 @@
     :catch_1
     move-exception p0
 
-    .line 155
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     const-string v1, "Failed to build KeyChainSnapshot"
@@ -414,26 +389,22 @@
 .method public static readBlobTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)[B
     .locals 4
 
-    .line 372
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
 
     invoke-interface {p0, v1, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 373
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readText(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
-    .line 374
     invoke-interface {p0, v2, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
-    .line 377
     :try_start_0
     invoke-static {v1, p0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
@@ -446,7 +417,6 @@
     :catch_0
     move-exception p0
 
-    .line 379
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -457,7 +427,6 @@
 
     move-result-object p1
 
-    .line 380
     invoke-static {v2, v3, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -470,7 +439,6 @@
 .method public static readCertPathTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/security/cert/CertPath;
     .locals 3
 
-    .line 389
     invoke-static {p0, p1}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readBlobTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)[B
 
     move-result-object p0
@@ -478,7 +446,6 @@
     :try_start_0
     const-string v0, "X.509"
 
-    .line 391
     invoke-static {v0}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v0
@@ -487,7 +454,6 @@
 
     invoke-direct {v1, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 392
     invoke-virtual {v0, v1}, Ljava/security/cert/CertificateFactory;->generateCertPath(Ljava/io/InputStream;)Ljava/security/cert/CertPath;
 
     move-result-object p0
@@ -499,7 +465,6 @@
     :catch_0
     move-exception p0
 
-    .line 394
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -524,24 +489,20 @@
 .method public static readIntTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)I
     .locals 4
 
-    .line 336
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
 
     invoke-interface {p0, v1, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 337
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readText(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
-    .line 338
     invoke-interface {p0, v2, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 340
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -558,7 +519,6 @@
     :catch_0
     move-exception p0
 
-    .line 342
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -569,7 +529,6 @@
 
     move-result-object p1
 
-    .line 343
     invoke-static {v2, v3, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -582,7 +541,6 @@
 .method public static readKeyChainProtectionParams(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/security/keystore/recovery/KeyChainProtectionParams;
     .locals 8
 
-    .line 230
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -591,12 +549,10 @@
 
     invoke-interface {p0, v1, v0, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 232
     new-instance v0, Landroid/security/keystore/recovery/KeyChainProtectionParams$Builder;
 
     invoke-direct {v0}, Landroid/security/keystore/recovery/KeyChainProtectionParams$Builder;-><init>()V
 
-    .line 233
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
@@ -606,7 +562,6 @@
 
     if-eq v3, v4, :cond_4
 
-    .line 234
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v3
@@ -615,13 +570,11 @@
 
     goto :goto_0
 
-    .line 238
     :cond_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 240
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
@@ -683,7 +636,6 @@
     :goto_1
     packed-switch v7, :pswitch_data_0
 
-    .line 254
     new-instance p0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -702,7 +654,6 @@
 
     throw p0
 
-    .line 250
     :pswitch_0
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readKeyDerivationParams(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/security/keystore/recovery/KeyDerivationParams;
 
@@ -712,7 +663,6 @@
 
     goto :goto_0
 
-    .line 246
     :pswitch_1
     invoke-static {p0, v5}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readIntTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)I
 
@@ -722,7 +672,6 @@
 
     goto :goto_0
 
-    .line 242
     :pswitch_2
     invoke-static {p0, v6}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readIntTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)I
 
@@ -732,13 +681,11 @@
 
     goto :goto_0
 
-    .line 262
     :cond_4
     sget-object v1, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     invoke-interface {p0, v4, v1, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 265
     :try_start_0
     invoke-virtual {v0}, Landroid/security/keystore/recovery/KeyChainProtectionParams$Builder;->build()Landroid/security/keystore/recovery/KeyChainProtectionParams;
 
@@ -751,7 +698,6 @@
     :catch_0
     move-exception p0
 
-    .line 267
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     const-string v1, "Failed to build KeyChainProtectionParams"
@@ -778,7 +724,6 @@
 .method public static readKeyChainProtectionParamsList(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/util/List;
     .locals 5
 
-    .line 214
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -787,12 +732,10 @@
 
     invoke-interface {p0, v1, v0, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 216
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 217
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
@@ -802,7 +745,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 218
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v3
@@ -811,7 +753,6 @@
 
     goto :goto_0
 
-    .line 221
     :cond_0
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readKeyChainProtectionParams(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/security/keystore/recovery/KeyChainProtectionParams;
 
@@ -821,7 +762,6 @@
 
     goto :goto_0
 
-    .line 224
     :cond_1
     sget-object v1, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
@@ -833,7 +773,6 @@
 .method public static readKeyDerivationParams(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/security/keystore/recovery/KeyDerivationParams;
     .locals 12
 
-    .line 274
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -850,7 +789,6 @@
 
     move v5, v4
 
-    .line 280
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
@@ -862,7 +800,6 @@
 
     if-eq v6, v8, :cond_4
 
-    .line 281
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v6
@@ -871,13 +808,11 @@
 
     goto :goto_0
 
-    .line 285
     :cond_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 287
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
@@ -936,7 +871,6 @@
     :goto_2
     packed-switch v7, :pswitch_data_0
 
-    .line 301
     new-instance p0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -947,7 +881,6 @@
 
     move-result-object v2
 
-    .line 302
     invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -956,7 +889,6 @@
 
     throw p0
 
-    .line 293
     :pswitch_0
     invoke-static {p0, v9}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readIntTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)I
 
@@ -964,7 +896,6 @@
 
     goto :goto_0
 
-    .line 297
     :pswitch_1
     invoke-static {p0, v10}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readBlobTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)[B
 
@@ -972,7 +903,6 @@
 
     goto :goto_0
 
-    .line 289
     :pswitch_2
     invoke-static {p0, v11}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readIntTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)I
 
@@ -987,14 +917,12 @@
 
     if-ne v4, v1, :cond_5
 
-    .line 321
     invoke-static {v3, v5}, Landroid/security/keystore/recovery/KeyDerivationParams;->createScryptParams([BI)Landroid/security/keystore/recovery/KeyDerivationParams;
 
     move-result-object v0
 
     goto :goto_3
 
-    .line 326
     :cond_5
     new-instance p0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
@@ -1004,13 +932,11 @@
 
     throw p0
 
-    .line 317
     :cond_6
     invoke-static {v3}, Landroid/security/keystore/recovery/KeyDerivationParams;->createSha256Params([B)Landroid/security/keystore/recovery/KeyDerivationParams;
 
     move-result-object v0
 
-    .line 330
     :goto_3
     sget-object v1, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
@@ -1018,7 +944,6 @@
 
     return-object v0
 
-    .line 310
     :cond_7
     new-instance p0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
@@ -1048,24 +973,20 @@
 .method public static readLongTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)J
     .locals 4
 
-    .line 350
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
 
     invoke-interface {p0, v1, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 351
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readText(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
-    .line 352
     invoke-interface {p0, v2, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 354
     :try_start_0
     invoke-static {v1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -1082,7 +1003,6 @@
     :catch_0
     move-exception p0
 
-    .line 356
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -1093,7 +1013,6 @@
 
     move-result-object p1
 
-    .line 357
     invoke-static {v2, v3, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -1106,21 +1025,18 @@
 .method public static readStringTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 364
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
 
     invoke-interface {p0, v1, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 365
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readText(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
-    .line 366
     invoke-interface {p0, v2, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
     return-object v1
@@ -1129,7 +1045,6 @@
 .method public static readText(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/lang/String;
     .locals 2
 
-    .line 402
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
     move-result v0
@@ -1138,12 +1053,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 403
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 404
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->nextTag()I
 
     goto :goto_0
@@ -1158,7 +1071,6 @@
 .method public static readWrappedApplicationKey(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/security/keystore/recovery/WrappedApplicationKey;
     .locals 9
 
-    .line 175
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -1167,12 +1079,10 @@
 
     invoke-interface {p0, v1, v0, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 176
     new-instance v0, Landroid/security/keystore/recovery/WrappedApplicationKey$Builder;
 
     invoke-direct {v0}, Landroid/security/keystore/recovery/WrappedApplicationKey$Builder;-><init>()V
 
-    .line 177
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
@@ -1182,7 +1092,6 @@
 
     if-eq v3, v4, :cond_4
 
-    .line 178
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v3
@@ -1191,13 +1100,11 @@
 
     goto :goto_0
 
-    .line 182
     :cond_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 184
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
@@ -1259,7 +1166,6 @@
     :goto_1
     packed-switch v8, :pswitch_data_0
 
-    .line 198
     new-instance p0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -1278,7 +1184,6 @@
 
     throw p0
 
-    .line 186
     :pswitch_0
     invoke-static {p0, v5}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readStringTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
@@ -1288,7 +1193,6 @@
 
     goto :goto_0
 
-    .line 190
     :pswitch_1
     invoke-static {p0, v6}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readBlobTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)[B
 
@@ -1298,7 +1202,6 @@
 
     goto :goto_0
 
-    .line 194
     :pswitch_2
     invoke-static {p0, v7}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readBlobTag(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)[B
 
@@ -1308,13 +1211,11 @@
 
     goto :goto_0
 
-    .line 202
     :cond_4
     sget-object v1, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     invoke-interface {p0, v4, v1, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 205
     :try_start_0
     invoke-virtual {v0}, Landroid/security/keystore/recovery/WrappedApplicationKey$Builder;->build()Landroid/security/keystore/recovery/WrappedApplicationKey;
 
@@ -1327,7 +1228,6 @@
     :catch_0
     move-exception p0
 
-    .line 207
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotParserException;
 
     const-string v1, "Failed to build WrappedApplicationKey"
@@ -1356,7 +1256,6 @@
 .method public static readWrappedApplicationKeys(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/util/List;
     .locals 5
 
-    .line 161
     sget-object v0, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -1365,12 +1264,10 @@
 
     invoke-interface {p0, v1, v0, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 162
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 163
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
@@ -1380,7 +1277,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 164
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v3
@@ -1389,7 +1285,6 @@
 
     goto :goto_0
 
-    .line 167
     :cond_0
     invoke-static {p0}, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotDeserializer;->readWrappedApplicationKey(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/security/keystore/recovery/WrappedApplicationKey;
 
@@ -1399,7 +1294,6 @@
 
     goto :goto_0
 
-    .line 169
     :cond_1
     sget-object v1, Lcom/android/server/locksettings/recoverablekeystore/serialization/KeyChainSnapshotSchema;->NAMESPACE:Ljava/lang/String;
 

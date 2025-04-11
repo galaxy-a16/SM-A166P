@@ -71,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fputmFrameEndTime(Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameEndTime:J
 
     return-void
@@ -80,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$sfgetmFrameCheckCnt()I
     .locals 1
 
-    .line 0
     sget v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameCheckCnt:I
 
     return v0
@@ -89,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$sfgetmFramePrevTime()J
     .locals 2
 
-    .line 0
     sget-wide v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFramePrevTime:J
 
     return-wide v0
@@ -98,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$sfgetmHandler()Landroid/os/Handler;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -107,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$sfputmFrameCheckCnt(I)V
     .locals 0
 
-    .line 0
     sput p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameCheckCnt:I
 
     return-void
@@ -116,29 +111,24 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 2
 
-    .line 879
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1089
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler$1;-><init>(Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;)V
 
     iput-object v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameCheckerRunnable:Ljava/lang/Runnable;
 
-    .line 880
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->sInitialized:Z
 
     if-nez v0, :cond_0
 
-    .line 881
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "PmsFrameChecker"
@@ -147,10 +137,8 @@
 
     sput-object v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 882
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 883
     new-instance v0, Landroid/os/Handler;
 
     sget-object v1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mHandlerThread:Landroid/os/HandlerThread;
@@ -165,10 +153,8 @@
 
     const/4 v0, 0x1
 
-    .line 884
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->sInitialized:Z
 
-    .line 886
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->clearAll()V
 
@@ -178,117 +164,94 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;)V
     .locals 2
 
-    .line 889
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1089
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler$1;-><init>(Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;)V
 
     iput-object v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameCheckerRunnable:Ljava/lang/Runnable;
 
-    .line 890
     iget v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mOrder:I
 
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mOrder:I
 
-    .line 891
     iget v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpDiff:I
 
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpDiff:I
 
-    .line 892
     iget-object v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpTimeStr:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpTimeStr:Ljava/lang/String;
 
-    .line 894
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpStartTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpStartTime:J
 
-    .line 895
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpEndTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpEndTime:J
 
-    .line 896
     iget v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpDuration:I
 
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpDuration:I
 
-    .line 898
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsStartTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsStartTime:J
 
-    .line 899
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsEndTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsEndTime:J
 
-    .line 900
     iget v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDuration:I
 
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDuration:I
 
-    .line 901
     iget-boolean v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDone:Z
 
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDone:Z
 
-    .line 903
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayStartTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayStartTime:J
 
-    .line 904
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayEndTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayEndTime:J
 
-    .line 905
     iget v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayDuration:I
 
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayDuration:I
 
-    .line 907
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerStartTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerStartTime:J
 
-    .line 908
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerEndTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerEndTime:J
 
-    .line 909
     iget v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerDuration:I
 
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerDuration:I
 
-    .line 911
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameStartTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameStartTime:J
 
-    .line 912
     iget-wide v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameEndTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameEndTime:J
 
-    .line 913
     iget v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDuration:I
 
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDuration:I
 
-    .line 914
     iget-boolean v0, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDone:Z
 
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDone:Z
 
-    .line 916
     iget-boolean p1, p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mSaved:Z
 
     iput-boolean p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mSaved:Z
@@ -301,7 +264,6 @@
 .method public calcDisplayDuration()V
     .locals 4
 
-    .line 1010
     iget-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayStartTime:J
 
     const-wide/16 v2, 0x0
@@ -314,7 +276,6 @@
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayStartTime:J
 
-    .line 1011
     :cond_0
     iget-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayEndTime:J
 
@@ -332,7 +293,6 @@
 .method public calcListenerDuration()V
     .locals 4
 
-    .line 1025
     iget-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerEndTime:J
 
     iget-wide v2, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerStartTime:J
@@ -349,7 +309,6 @@
 .method public calcWakeupDuration()V
     .locals 4
 
-    .line 977
     iget-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpEndTime:J
 
     iget-wide v2, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpStartTime:J
@@ -366,7 +325,6 @@
 .method public calcWmsDuration()V
     .locals 4
 
-    .line 993
     iget-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsStartTime:J
 
     const-wide/16 v2, 0x0
@@ -379,7 +337,6 @@
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsStartTime:J
 
-    .line 994
     :cond_0
     iget-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsEndTime:J
 
@@ -399,74 +356,52 @@
 
     const/4 v0, 0x0
 
-    .line 920
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mOrder:I
 
-    .line 921
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpDiff:I
 
     const-string v1, ""
 
-    .line 922
     iput-object v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpTimeStr:Ljava/lang/String;
 
     const-wide/16 v1, 0x0
 
-    .line 924
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpStartTime:J
 
-    .line 925
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpEndTime:J
 
-    .line 926
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpDuration:I
 
-    .line 928
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsStartTime:J
 
-    .line 929
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsEndTime:J
 
-    .line 930
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDuration:I
 
-    .line 931
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDone:Z
 
-    .line 933
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayStartTime:J
 
-    .line 934
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayEndTime:J
 
-    .line 935
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayDuration:I
 
-    .line 937
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerStartTime:J
 
-    .line 938
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerEndTime:J
 
-    .line 939
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerDuration:I
 
-    .line 941
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameStartTime:J
 
-    .line 942
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameEndTime:J
 
-    .line 943
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDuration:I
 
-    .line 944
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFramePass:Z
 
-    .line 945
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDone:Z
 
-    .line 947
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mSaved:Z
 
     return-void
@@ -477,14 +412,12 @@
 
     const/4 p0, 0x0
 
-    .line 1085
     sput-boolean p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->CHECK_FRAME:Z
 
     const-string p0, "PowerManagerUtil"
 
     const-string v0, "disable FrameCheck"
 
-    .line 1086
     invoke-static {p0, v0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -493,7 +426,6 @@
 .method public getFrameTimeFromDriver()J
     .locals 3
 
-    .line 1058
     sget p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayType:I
 
     const/4 v0, 0x1
@@ -506,7 +438,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 1068
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -532,7 +463,6 @@
     :cond_0
     const-string p0, "/sys/class/lcd/panel1/display_on"
 
-    .line 1064
     invoke-static {p0}, Lcom/android/server/power/PowerManagerUtil;->readFromFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -542,7 +472,6 @@
     :cond_1
     const-string p0, "/sys/class/lcd/panel/display_on"
 
-    .line 1060
     invoke-static {p0}, Lcom/android/server/power/PowerManagerUtil;->readFromFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -552,12 +481,10 @@
 
     const-string/jumbo p0, "null : /sys/class/lcd/panel/display_on or /sys/class/lcd/panel1/display_on"
 
-    .line 1073
     invoke-static {v1, p0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 1076
     :cond_2
     :try_start_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -568,7 +495,6 @@
 
     goto :goto_2
 
-    .line 1078
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -596,7 +522,6 @@
 .method public isStarted()Z
     .locals 4
 
-    .line 951
     iget-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpStartTime:J
 
     const-wide/16 v2, 0x0
@@ -618,14 +543,12 @@
 .method public noteDisplayEnd()V
     .locals 2
 
-    .line 1005
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayEndTime:J
 
-    .line 1006
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->calcDisplayDuration()V
 
     return-void
@@ -634,14 +557,12 @@
 .method public noteDisplayStart(I)V
     .locals 2
 
-    .line 999
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayStartTime:J
 
-    .line 1000
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->CHECK_FRAME:Z
 
     if-eqz v0, :cond_0
@@ -657,7 +578,6 @@
 
     if-eq p1, p0, :cond_1
 
-    .line 1001
     sput-boolean p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFramePass:Z
 
     :cond_1
@@ -667,7 +587,6 @@
 .method public noteFrameEnd()V
     .locals 5
 
-    .line 1042
     sget-object v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameCheckerRunnable:Ljava/lang/Runnable;
@@ -676,15 +595,12 @@
 
     const/4 v0, 0x0
 
-    .line 1043
     sput v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameCheckCnt:I
 
     const/4 v0, 0x1
 
-    .line 1044
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDone:Z
 
-    .line 1045
     iget-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameEndTime:J
 
     iget-wide v2, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameStartTime:J
@@ -697,7 +613,6 @@
 
     long-to-int v0, v0
 
-    .line 1046
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDuration:I
 
     goto :goto_0
@@ -705,10 +620,8 @@
     :cond_0
     const/4 v0, -0x2
 
-    .line 1048
     iput v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDuration:I
 
-    .line 1050
     :goto_0
     iget-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDone:Z
 
@@ -732,7 +645,6 @@
 .method public noteFrameStart(I)V
     .locals 4
 
-    .line 1030
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->CHECK_FRAME:Z
 
     if-eqz v0, :cond_1
@@ -743,18 +655,15 @@
 
     goto :goto_0
 
-    .line 1036
     :cond_0
     sput p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mDisplayType:I
 
-    .line 1037
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameStartTime:J
 
-    .line 1038
     sget-object p1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameCheckerRunnable:Ljava/lang/Runnable;
@@ -769,15 +678,12 @@
     :goto_0
     const/4 p1, 0x1
 
-    .line 1031
     iput-boolean p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDone:Z
 
     const/4 p1, -0x1
 
-    .line 1032
     iput p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDuration:I
 
-    .line 1033
     iget-boolean p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDone:Z
 
     if-nez p1, :cond_2
@@ -800,14 +706,12 @@
 .method public noteListenerEnd()V
     .locals 2
 
-    .line 1020
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerEndTime:J
 
-    .line 1021
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->calcListenerDuration()V
 
     return-void
@@ -816,7 +720,6 @@
 .method public noteListenerStart()V
     .locals 2
 
-    .line 1016
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -829,7 +732,6 @@
 .method public noteWakeupDiff(I)V
     .locals 0
 
-    .line 957
     iput p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpDiff:I
 
     return-void
@@ -838,17 +740,14 @@
 .method public noteWakeupEnd()V
     .locals 2
 
-    .line 967
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpEndTime:J
 
-    .line 968
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->calcWakeupDuration()V
 
-    .line 969
     sget-object p0, Lcom/android/server/power/PowerManagerUtil;->sCurrentScreenOnProfiler:Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;
 
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->isStarted()Z
@@ -863,12 +762,10 @@
 
     const/4 v0, 0x1
 
-    .line 970
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mSaved:Z
 
     const/4 v0, 0x0
 
-    .line 971
     invoke-virtual {p0, v0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->toString(Z)Ljava/lang/String;
 
     move-result-object v0
@@ -877,7 +774,6 @@
 
     invoke-static {v1, v0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 972
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->sScreenOnProfilers:Lcom/android/internal/util/RingBuffer;
 
     new-instance v1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;
@@ -893,17 +789,14 @@
 .method public noteWakeupStart(I)V
     .locals 2
 
-    .line 961
     iput p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mOrder:I
 
-    .line 962
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWakeUpStartTime:J
 
-    .line 963
     invoke-static {}, Lcom/android/server/power/PowerManagerUtil;->getCurrentTimeAsString()Ljava/lang/String;
 
     move-result-object p1
@@ -916,7 +809,6 @@
 .method public noteWmsEnd()V
     .locals 2
 
-    .line 986
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -925,13 +817,10 @@
 
     const/4 v0, 0x1
 
-    .line 987
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mWmsDone:Z
 
-    .line 988
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->calcWmsDuration()V
 
-    .line 989
     iget-boolean v0, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mFrameDone:Z
 
     if-eqz v0, :cond_0
@@ -945,7 +834,6 @@
 .method public noteWmsStart()V
     .locals 2
 
-    .line 982
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -958,17 +846,14 @@
 .method public toString(Z)Ljava/lang/String;
     .locals 9
 
-    .line 1109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     if-eqz p1, :cond_0
 
-    .line 1111
     iget p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mOrder:I
 
-    .line 1112
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -995,7 +880,6 @@
 
     iget p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerDuration:I
 
-    .line 1113
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1018,7 +902,6 @@
 
     const-string p1, "[%3d][%s][T:%4d]  [Caller:%2d] [WMS:%3d] [DSL:%2d] [Panel:%3d] [Frame:%3d]"
 
-    .line 1111
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1027,11 +910,9 @@
 
     goto :goto_0
 
-    .line 1115
     :cond_0
     iget p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mOrder:I
 
-    .line 1116
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1056,7 +937,6 @@
 
     iget p1, p0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;->mListenerDuration:I
 
-    .line 1117
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -1079,14 +959,12 @@
 
     const-string p1, "[%3d][T:%4d]  [Caller:%2d] [WMS:%3d] [DSL:%2d] [Panel:%3d] [Frame:%3d]"
 
-    .line 1115
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1119
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/security/AttestationVerificationManagerService;)V
     .locals 0
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/security/AttestationVerificationManagerService$1;->this$0:Lcom/android/server/security/AttestationVerificationManagerService;
 
     invoke-direct {p0}, Landroid/security/attestationverification/IAttestationVerificationManagerService$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public final enforceUsePermission()V
     .locals 2
 
-    .line 84
     iget-object p0, p0, Lcom/android/server/security/AttestationVerificationManagerService$1;->this$0:Lcom/android/server/security/AttestationVerificationManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -45,16 +43,13 @@
 
     const-string v0, "AVF"
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/server/security/AttestationVerificationManagerService$1;->enforceUsePermission()V
 
     :try_start_0
     const-string/jumbo v1, "verifyAttestation"
 
-    .line 66
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iget-object v2, p0, Lcom/android/server/security/AttestationVerificationManagerService$1;->this$0:Lcom/android/server/security/AttestationVerificationManagerService;
 
     move-object v3, p1
@@ -78,10 +73,8 @@
 
     const-string p1, "failed to verify attestation"
 
-    .line 70
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 71
     const-class p1, Landroid/os/RemoteException;
 
     invoke-static {p0, p1}, Landroid/util/ExceptionUtils;->propagate(Ljava/lang/Throwable;Ljava/lang/Class;)Ljava/lang/RuntimeException;
@@ -94,12 +87,10 @@
 .method public verifyToken(Landroid/security/attestationverification/VerificationToken;Landroid/os/ParcelDuration;Lcom/android/internal/infra/AndroidFuture;)V
     .locals 0
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/security/AttestationVerificationManagerService$1;->enforceUsePermission()V
 
     const/4 p0, 0x0
 
-    .line 80
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0

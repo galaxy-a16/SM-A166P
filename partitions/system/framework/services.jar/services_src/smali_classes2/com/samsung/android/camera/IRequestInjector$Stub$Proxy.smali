@@ -14,7 +14,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 126
     iget-object p0, p0, Lcom/samsung/android/camera/IRequestInjector$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0

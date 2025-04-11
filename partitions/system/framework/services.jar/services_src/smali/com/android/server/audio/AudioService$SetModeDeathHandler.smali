@@ -34,7 +34,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMode(Lcom/android/server/audio/AudioService$SetModeDeathHandler;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mMode:I
 
     return p0
@@ -43,43 +42,32 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;Landroid/os/IBinder;IIZLjava/lang/String;I)V
     .locals 0
 
-    .line 6118
     iput-object p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 6114
     iput-boolean p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPlaybackActive:Z
 
-    .line 6115
     iput-boolean p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mRecordingActive:Z
 
     const-string p1, "NORMAL"
 
-    .line 6230
     iput-object p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPackageType:Ljava/lang/String;
 
-    .line 6119
     iput p7, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mMode:I
 
-    .line 6120
     iput-object p2, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mCb:Landroid/os/IBinder;
 
-    .line 6121
     iput p3, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPid:I
 
-    .line 6122
     iput p4, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mUid:I
 
-    .line 6123
     iput-object p6, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPackage:Ljava/lang/String;
 
-    .line 6124
     iput-boolean p5, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mIsPrivileged:Z
 
-    .line 6125
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -94,7 +82,6 @@
 .method public binderDied()V
     .locals 9
 
-    .line 6129
     iget-object v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {v0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmDeviceBroker(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/AudioDeviceBroker;
@@ -110,10 +97,8 @@
 
     const-string v2, "SetModeDeathHandler client died"
 
-    .line 6130
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6131
     iget-object v1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     iget-object v1, v1, Lcom/android/server/audio/AudioService;->mSetModeDeathHandlers:Ljava/util/ArrayList;
@@ -128,12 +113,10 @@
 
     const-string/jumbo v1, "unregistered SetModeDeathHandler client died"
 
-    .line 6133
     invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 6135
     :cond_0
     iget-object v2, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -145,14 +128,12 @@
 
     check-cast v2, Lcom/android/server/audio/AudioService$SetModeDeathHandler;
 
-    .line 6136
     iget-object v3, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     iget-object v3, v3, Lcom/android/server/audio/AudioService;->mSetModeDeathHandlers:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 6138
     iget-object v1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {v1}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmExt(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/AudioServiceExt;
@@ -169,7 +150,6 @@
 
     invoke-virtual {v1, v4, v2, v3}, Lcom/android/server/audio/AudioServiceExt;->updateCallGuardInfo(IIZ)V
 
-    .line 6140
     iget-object v1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {v1}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmAudioHandler(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/AudioService$AudioHandler;
@@ -182,7 +162,6 @@
 
     const/4 v5, -0x1
 
-    .line 6144
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v6
@@ -191,17 +170,14 @@
 
     iget-object p0, p0, Lcom/android/server/audio/AudioService;->mContext:Landroid/content/Context;
 
-    .line 6145
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v7
 
     const/4 v8, 0x0
 
-    .line 6140
     invoke-static/range {v2 .. v8}, Lcom/android/server/audio/AudioService;->-$$Nest$smsendMsg(Landroid/os/Handler;IIIILjava/lang/Object;I)V
 
-    .line 6148
     :goto_0
     monitor-exit v0
 
@@ -220,7 +196,6 @@
 .method public dump(Ljava/io/PrintWriter;I)V
     .locals 4
 
-    .line 6212
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM-dd HH:mm:ss:SSS"
@@ -229,7 +204,6 @@
 
     if-ltz p2, :cond_0
 
-    .line 6215
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -252,7 +226,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6217
     :cond_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -276,7 +249,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6218
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -295,7 +267,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6219
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -314,7 +285,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6220
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -333,7 +303,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6221
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -352,7 +321,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6222
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -371,7 +339,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6223
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -392,7 +359,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6224
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -411,7 +377,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6225
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,7 +395,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6226
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -463,7 +427,6 @@
 .method public getBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 6165
     iget-object p0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mCb:Landroid/os/IBinder;
 
     return-object p0
@@ -472,7 +435,6 @@
 .method public getMode()I
     .locals 0
 
-    .line 6161
     iget p0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mMode:I
 
     return p0
@@ -481,7 +443,6 @@
 .method public getPackage()Ljava/lang/String;
     .locals 0
 
-    .line 6173
     iget-object p0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPackage:Ljava/lang/String;
 
     return-object p0
@@ -490,7 +451,6 @@
 .method public getPid()I
     .locals 0
 
-    .line 6152
     iget p0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPid:I
 
     return p0
@@ -499,7 +459,6 @@
 .method public getUid()I
     .locals 0
 
-    .line 6169
     iget p0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mUid:I
 
     return p0
@@ -508,7 +467,6 @@
 .method public getUpdateTime()J
     .locals 2
 
-    .line 6181
     iget-wide v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mUpdateTime:J
 
     return-wide v0
@@ -517,7 +475,6 @@
 .method public isActive()Z
     .locals 3
 
-    .line 6204
     iget-boolean v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mIsPrivileged:Z
 
     const/4 v1, 0x1
@@ -558,7 +515,6 @@
 .method public isPrivileged()Z
     .locals 0
 
-    .line 6177
     iget-boolean p0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mIsPrivileged:Z
 
     return p0
@@ -567,10 +523,8 @@
 .method public setMode(I)V
     .locals 2
 
-    .line 6156
     iput p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mMode:I
 
-    .line 6157
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -583,7 +537,6 @@
 .method public setPlaybackActive(Z)V
     .locals 0
 
-    .line 6185
     iput-boolean p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPlaybackActive:Z
 
     return-void
@@ -592,7 +545,6 @@
 .method public setRecordingActive(Z)V
     .locals 0
 
-    .line 6189
     iput-boolean p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mRecordingActive:Z
 
     return-void

@@ -14,12 +14,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 23
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.att.iqi.IMetricSourcingCallback"
 
-    .line 24
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -37,24 +35,20 @@
     :cond_0
     const-string v0, "com.att.iqi.IMetricSourcingCallback"
 
-    .line 35
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 36
     instance-of v1, v0, Lcom/att/iqi/IMetricSourcingCallback;
 
     if-eqz v1, :cond_1
 
-    .line 37
     check-cast v0, Lcom/att/iqi/IMetricSourcingCallback;
 
     return-object v0
 
-    .line 39
     :cond_1
     new-instance v0, Lcom/att/iqi/IMetricSourcingCallback$Stub$Proxy;
 
@@ -68,7 +62,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
@@ -85,7 +78,6 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 49
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_0
@@ -95,14 +87,12 @@
 
     if-eq p1, v1, :cond_1
 
-    .line 72
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
-    .line 64
     :cond_1
     sget-object p1, Lcom/att/iqi/lib/Metric$ID;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -112,17 +102,14 @@
 
     check-cast p1, Lcom/att/iqi/lib/Metric$ID;
 
-    .line 66
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p2
 
-    .line 67
     invoke-interface {p0, p1, p2}, Lcom/att/iqi/IMetricSourcingCallback;->onMetricSourced(Lcom/att/iqi/lib/Metric$ID;[B)V
 
     return v1
 
-    .line 55
     :cond_2
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

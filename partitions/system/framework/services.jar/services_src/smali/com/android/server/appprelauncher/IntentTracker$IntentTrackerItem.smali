@@ -19,26 +19,20 @@
 .method public constructor <init>(Ljava/lang/String;ILandroid/content/Intent;I)V
     .locals 2
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/appprelauncher/IntentTracker$IntentTrackerItem;->mBeginTrackTimeNs:J
 
-    .line 60
     iput-object p3, p0, Lcom/android/server/appprelauncher/IntentTracker$IntentTrackerItem;->mIntent:Landroid/content/Intent;
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/appprelauncher/IntentTracker$IntentTrackerItem;->mPackageName:Ljava/lang/String;
 
-    .line 62
     iput p2, p0, Lcom/android/server/appprelauncher/IntentTracker$IntentTrackerItem;->mUserId:I
 
-    .line 63
     iput p4, p0, Lcom/android/server/appprelauncher/IntentTracker$IntentTrackerItem;->mTrackId:I
 
     return-void
@@ -49,7 +43,6 @@
 .method public getElapsedNs()J
     .locals 4
 
-    .line 67
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -64,7 +57,6 @@
 .method public isValid()Z
     .locals 4
 
-    .line 71
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/IntentTracker$IntentTrackerItem;->getElapsedNs()J
 
     move-result-wide v0
@@ -91,7 +83,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 76
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +125,6 @@
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/IntentTracker$IntentTrackerItem;->getElapsedNs()J
 
     move-result-wide v2

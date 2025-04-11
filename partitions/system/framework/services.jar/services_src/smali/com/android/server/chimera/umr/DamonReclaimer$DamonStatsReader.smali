@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fputmStartReason(Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mStartReason:Ljava/lang/String;
 
     return-void
@@ -40,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fputmStartTime(Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mStartTime:J
 
     return-void
@@ -49,50 +47,40 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/chimera/umr/DamonReclaimer;Ljava/lang/String;)V
     .locals 2
 
-    .line 391
     iput-object p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->this$0:Lcom/android/server/chimera/umr/DamonReclaimer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string p1, ""
 
-    .line 377
     iput-object p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mStartReason:Ljava/lang/String;
 
     const-wide/16 v0, 0x0
 
-    .line 380
     iput-wide v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mStartTime:J
 
-    .line 381
     iput-wide v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGSteal:J
 
-    .line 382
     iput-wide v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGScan:J
 
     const/4 p1, 0x0
 
-    .line 383
     iput-short p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGStealMaxReached:S
 
-    .line 384
     iput-short p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGScanMaxReached:S
 
-    .line 392
     new-instance p1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;
 
     invoke-direct {p1}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mStats:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;
 
-    .line 393
     iput-object p2, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mModulePath:Ljava/lang/String;
 
     return-void
@@ -109,7 +97,6 @@
 
     move-wide/from16 v4, p7
 
-    .line 512
     :try_start_0
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -117,7 +104,6 @@
 
     invoke-direct {v0, v6}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 513
     iget-object v6, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mStats:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -146,7 +132,6 @@
 
     new-instance v8, Ljava/util/Date;
 
-    .line 514
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v9
@@ -171,7 +156,6 @@
 
     invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 516
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->modeToString()Ljava/lang/String;
 
     move-result-object v0
@@ -232,7 +216,6 @@
 
     move-result-object v0
 
-    .line 513
     invoke-static {v6, v0}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;->-$$Nest$madd(Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
@@ -243,7 +226,6 @@
     :catch_0
     move-exception v0
 
-    .line 526
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -269,7 +251,6 @@
     :catch_1
     move-exception v0
 
-    .line 524
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -301,7 +282,6 @@
 
     if-lez v0, :cond_1
 
-    .line 530
     :try_start_1
     iget-wide v11, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGSteal:J
 
@@ -311,7 +291,6 @@
 
     if-lez v0, :cond_1
 
-    .line 531
     iget-short v0, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGStealMaxReached:S
 
     add-int/lit8 v0, v0, 0x1
@@ -320,15 +299,12 @@
 
     iput-short v0, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGStealMaxReached:S
 
-    .line 532
     sget-short v11, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->MAX_STEAL_COUNT:S
 
     if-le v0, v11, :cond_0
 
-    .line 533
     iput-short v8, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGStealMaxReached:S
 
-    .line 534
     :cond_0
     iput-wide v6, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGSteal:J
     :try_end_1
@@ -339,7 +315,6 @@
     :catch_2
     move-exception v0
 
-    .line 537
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -368,7 +343,6 @@
 
     if-lez v0, :cond_3
 
-    .line 541
     :try_start_2
     iget-wide v12, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGScan:J
 
@@ -378,7 +352,6 @@
 
     if-lez v0, :cond_3
 
-    .line 542
     iget-short v0, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGScanMaxReached:S
 
     add-int/lit8 v0, v0, 0x1
@@ -387,15 +360,12 @@
 
     iput-short v0, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGScanMaxReached:S
 
-    .line 543
     sget-short v9, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->MAX_STEAL_COUNT:S
 
     if-le v0, v9, :cond_2
 
-    .line 544
     iput-short v8, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGScanMaxReached:S
 
-    .line 545
     :cond_2
     iput-wide v6, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGScan:J
     :try_end_2
@@ -406,7 +376,6 @@
     :catch_3
     move-exception v0
 
-    .line 548
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -425,7 +394,6 @@
 
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 552
     :cond_3
     :goto_2
     :try_start_3
@@ -435,7 +403,6 @@
 
     iput-wide v6, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGSteal:J
 
-    .line 553
     iget-wide v2, v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mDamonPGScan:J
 
     add-long/2addr v2, v4
@@ -449,7 +416,6 @@
     :catch_4
     move-exception v0
 
-    .line 555
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -477,10 +443,8 @@
 
     const-string v0, "  Damon reclaim Stats "
 
-    .line 579
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 580
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,7 +471,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 581
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -534,7 +497,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 582
     iget-object p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mStats:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;
 
     invoke-static {p0, p1}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;->-$$Nest$mdumpOrdered(Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader$RotatingArrayList;Ljava/io/PrintWriter;)V
@@ -545,7 +507,6 @@
 .method public final fetchStats(Ljava/lang/String;)J
     .locals 3
 
-    .line 464
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->readStatsFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -554,7 +515,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 467
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
@@ -562,7 +522,6 @@
 
     if-nez p1, :cond_0
 
-    .line 468
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide p0
@@ -576,7 +535,6 @@
     :catch_0
     move-exception p0
 
-    .line 471
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -605,7 +563,6 @@
 .method public final modeToString()Ljava/lang/String;
     .locals 1
 
-    .line 482
     iget-object p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->this$0:Lcom/android/server/chimera/umr/DamonReclaimer;
 
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;->getMode()I
@@ -648,7 +605,6 @@
 
     const-string v0, ""
 
-    .line 449
     iget-object p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->mModulePath:Ljava/lang/String;
 
     filled-new-array {p1}, [Ljava/lang/String;
@@ -667,7 +623,6 @@
 
     move-result-object p0
 
-    .line 450
     :try_start_0
     new-instance p1, Ljava/io/BufferedReader;
 
@@ -681,7 +636,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 451
     :try_start_1
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -689,7 +643,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 452
     :try_start_2
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -700,7 +653,6 @@
     :catchall_0
     move-exception p0
 
-    .line 450
     :try_start_3
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -722,7 +674,6 @@
     :catch_0
     move-exception p0
 
-    .line 453
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -750,7 +701,6 @@
 .method public updateDamonStats()V
     .locals 15
 
-    .line 563
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -759,7 +709,6 @@
 
     sub-long v7, v0, v2
 
-    .line 564
     sget-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->bytes_reclaimed_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
@@ -770,7 +719,6 @@
 
     move-result-wide v5
 
-    .line 565
     sget-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->nr_reclaimed_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
@@ -781,7 +729,6 @@
 
     move-result-wide v13
 
-    .line 566
     sget-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->bytes_reclaim_tried_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
@@ -792,7 +739,6 @@
 
     move-result-wide v11
 
-    .line 567
     sget-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->nr_reclaim_tried_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
@@ -805,7 +751,6 @@
 
     move-object v4, p0
 
-    .line 569
     invoke-virtual/range {v4 .. v14}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStatsReader;->addValue(JJJJJ)V
 
     return-void

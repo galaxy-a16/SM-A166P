@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$mregister(Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;->register()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/HardwareManager;)V
     .locals 0
 
-    .line 689
     iput-object p1, p0, Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/HardwareManager;Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;-><init>(Lcom/android/server/desktopmode/HardwareManager;)V
 
     return-void
@@ -42,12 +39,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 706
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 707
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -75,14 +70,12 @@
     :cond_0
     const-string v0, "com.samsung.android.input.POGO_KEYBOARD_CHANGED"
 
-    .line 708
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 709
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     const-string/jumbo p1, "status"
@@ -102,17 +95,14 @@
 .method public final register()V
     .locals 7
 
-    .line 691
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v6, "com.samsung.android.input.POGO_KEYBOARD_CHANGED"
 
-    .line 692
     invoke-virtual {v3, v6}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 694
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/HardwareManager;)Landroid/content/Context;
@@ -133,12 +123,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 696
     invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 697
     sget-boolean v2, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -163,7 +151,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 698
     :cond_0
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -171,7 +158,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 699
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     const-string/jumbo v1, "status"

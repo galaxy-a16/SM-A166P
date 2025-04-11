@@ -21,15 +21,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 846
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 848
     iput v0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mBrightness:F
 
-    .line 854
     new-instance v0, Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;
 
     invoke-direct {v0}, Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;-><init>()V
@@ -42,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/PersistentDataStore$DisplayState-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore$DisplayState;-><init>()V
 
     return-void
@@ -53,7 +49,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 983
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,7 +69,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 984
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,7 +89,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 985
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,12 +105,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 986
     iget-object v0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mDisplayBrightnessConfigurations:Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 987
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +137,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 988
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -173,7 +163,6 @@
 .method public getBrightness()F
     .locals 0
 
-    .line 878
     iget p0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mBrightness:F
 
     return p0
@@ -182,7 +171,6 @@
 .method public getBrightnessConfiguration(I)Landroid/hardware/display/BrightnessConfiguration;
     .locals 0
 
-    .line 889
     iget-object p0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mDisplayBrightnessConfigurations:Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;
 
     invoke-static {p0}, Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;->-$$Nest$fgetmConfigurations(Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;)Landroid/util/SparseArray;
@@ -201,7 +189,6 @@
 .method public getColorMode()I
     .locals 0
 
-    .line 866
     iget p0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mColorMode:I
 
     return p0
@@ -210,7 +197,6 @@
 .method public getRefreshRate()F
     .locals 0
 
-    .line 914
     iget p0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mRefreshRate:F
 
     return p0
@@ -219,7 +205,6 @@
 .method public getResolution()Landroid/graphics/Point;
     .locals 2
 
-    .line 902
     new-instance v0, Landroid/graphics/Point;
 
     iget v1, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mWidth:I
@@ -234,12 +219,10 @@
 .method public loadFromXml(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 4
 
-    .line 919
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 921
     :goto_0
     invoke-static {p1, v0}, Lcom/android/internal/util/XmlUtils;->nextElementWithin(Lorg/xmlpull/v1/XmlPullParser;I)Z
 
@@ -247,7 +230,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 922
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -363,13 +345,11 @@
 
     goto :goto_0
 
-    .line 924
     :pswitch_0
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 925
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
@@ -378,13 +358,11 @@
 
     goto :goto_0
 
-    .line 947
     :pswitch_1
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 948
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v1
@@ -393,13 +371,11 @@
 
     goto :goto_0
 
-    .line 943
     :pswitch_2
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 944
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
@@ -408,13 +384,11 @@
 
     goto :goto_0
 
-    .line 928
     :pswitch_3
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 930
     :try_start_0
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -429,12 +403,10 @@
     :catch_0
     const/high16 v1, 0x7fc00000    # Float.NaN
 
-    .line 932
     iput v1, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mBrightness:F
 
     goto/16 :goto_0
 
-    .line 936
     :pswitch_4
     iget-object v1, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mDisplayBrightnessConfigurations:Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;
 
@@ -442,13 +414,11 @@
 
     goto/16 :goto_0
 
-    .line 939
     :pswitch_5
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 940
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
@@ -490,10 +460,8 @@
 
     const-string v1, "color-mode"
 
-    .line 955
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 956
     iget v2, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mColorMode:I
 
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -502,15 +470,12 @@
 
     invoke-interface {p1, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 957
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v1, "brightness-value"
 
-    .line 959
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 960
     iget v2, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mBrightness:F
 
     invoke-static {v2}, Ljava/lang/Float;->isNaN(F)Z
@@ -519,7 +484,6 @@
 
     if-nez v2, :cond_0
 
-    .line 961
     iget v2, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mBrightness:F
 
     invoke-static {v2}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
@@ -528,29 +492,23 @@
 
     invoke-interface {p1, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 963
     :cond_0
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v1, "brightness-configurations"
 
-    .line 965
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 966
     iget-object v2, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mDisplayBrightnessConfigurations:Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;
 
     invoke-virtual {v2, p1}, Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;->saveToXml(Lcom/android/modules/utils/TypedXmlSerializer;)V
 
-    .line 967
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v1, "resolution-width"
 
-    .line 969
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 970
     iget v2, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mWidth:I
 
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -559,15 +517,12 @@
 
     invoke-interface {p1, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 971
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v1, "resolution-height"
 
-    .line 973
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 974
     iget v2, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mHeight:I
 
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -576,15 +531,12 @@
 
     invoke-interface {p1, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 975
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v1, "refresh-rate"
 
-    .line 977
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 978
     iget p0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mRefreshRate:F
 
     invoke-static {p0}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
@@ -593,7 +545,6 @@
 
     invoke-interface {p1, p0}, Lcom/android/modules/utils/TypedXmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 979
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     return-void
@@ -602,7 +553,6 @@
 .method public setBrightness(F)Z
     .locals 1
 
-    .line 870
     iget v0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mBrightness:F
 
     cmpl-float v0, p1, v0
@@ -613,7 +563,6 @@
 
     return p0
 
-    .line 873
     :cond_0
     iput p1, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mBrightness:F
 
@@ -625,7 +574,6 @@
 .method public setBrightnessConfiguration(Landroid/hardware/display/BrightnessConfiguration;ILjava/lang/String;)Z
     .locals 0
 
-    .line 883
     iget-object p0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mDisplayBrightnessConfigurations:Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;->-$$Nest$msetBrightnessConfigurationForUser(Lcom/android/server/display/PersistentDataStore$BrightnessConfigurations;Landroid/hardware/display/BrightnessConfiguration;ILjava/lang/String;)Z
@@ -638,7 +586,6 @@
 .method public setColorMode(I)Z
     .locals 1
 
-    .line 858
     iget v0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mColorMode:I
 
     if-ne p1, v0, :cond_0
@@ -647,7 +594,6 @@
 
     return p0
 
-    .line 861
     :cond_0
     iput p1, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mColorMode:I
 
@@ -659,7 +605,6 @@
 .method public setRefreshRate(F)Z
     .locals 1
 
-    .line 906
     iget v0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mRefreshRate:F
 
     cmpl-float v0, p1, v0
@@ -670,7 +615,6 @@
 
     return p0
 
-    .line 909
     :cond_0
     iput p1, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mRefreshRate:F
 
@@ -682,7 +626,6 @@
 .method public setResolution(II)Z
     .locals 1
 
-    .line 893
     iget v0, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mWidth:I
 
     if-ne p1, v0, :cond_0
@@ -695,11 +638,9 @@
 
     return p0
 
-    .line 896
     :cond_0
     iput p1, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mWidth:I
 
-    .line 897
     iput p2, p0, Lcom/android/server/display/PersistentDataStore$DisplayState;->mHeight:I
 
     const/4 p0, 0x1

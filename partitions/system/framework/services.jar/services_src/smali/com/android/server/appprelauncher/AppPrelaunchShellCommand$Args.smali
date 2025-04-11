@@ -17,19 +17,16 @@
 .method public constructor <init>(Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;)V
     .locals 0
 
-    .line 71
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 p1, 0x28
 
-    .line 72
     iput p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->stage:I
 
     const/4 p1, -0x1
 
-    .line 73
     iput p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->uid:I
 
     return-void
@@ -38,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;-><init>(Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;)V
 
     return-void

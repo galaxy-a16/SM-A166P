@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/audio/AudioService$VolumeGroupState$$ExternalSyntheticLambda0;->f$0:Ljava/io/PrintWriter;
@@ -27,7 +26,6 @@
 .method public final accept(I)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$VolumeGroupState$$ExternalSyntheticLambda0;->f$0:Ljava/io/PrintWriter;
 
     invoke-static {p0, p1}, Lcom/android/server/audio/AudioService$VolumeGroupState;->$r8$lambda$HONzOqi8oZf-fhTfutM_lA1OQi4(Ljava/io/PrintWriter;I)V

@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$-QjM4kOeOCC7EhBDR7btOlr5ZLo(Lcom/android/server/inputmethod/ImeTrackerService;Landroid/view/inputmethod/ImeTracker$Token;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/inputmethod/ImeTrackerService;->lambda$onRequestHide$1(Landroid/view/inputmethod/ImeTracker$Token;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$gr30uiNH5TZEIxq-NxI17G07HoU(Lcom/android/server/inputmethod/ImeTrackerService;Landroid/view/inputmethod/ImeTracker$Token;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/inputmethod/ImeTrackerService;->lambda$onRequestShow$0(Landroid/view/inputmethod/ImeTracker$Token;)V
 
     return-void
@@ -31,10 +29,8 @@
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 3
 
-    .line 69
     invoke-direct {p0}, Lcom/android/internal/inputmethod/IImeTracker$Stub;-><init>()V
 
-    .line 66
     new-instance v0, Lcom/android/server/inputmethod/ImeTrackerService$History;
 
     const/4 v1, 0x0
@@ -43,7 +39,6 @@
 
     iput-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
-    .line 70
     new-instance v0, Landroid/os/Handler;
 
     const/4 v2, 0x1
@@ -58,10 +53,8 @@
 .method private synthetic lambda$onRequestHide$1(Landroid/view/inputmethod/ImeTracker$Token;)V
     .locals 3
 
-    .line 105
     monitor-enter p0
 
-    .line 106
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -71,7 +64,6 @@
 
     invoke-static {v0, p1, v1, v2}, Lcom/android/server/inputmethod/ImeTrackerService$History;->-$$Nest$msetFinished(Lcom/android/server/inputmethod/ImeTrackerService$History;Landroid/view/inputmethod/ImeTracker$Token;II)V
 
-    .line 107
     monitor-exit p0
 
     return-void
@@ -89,10 +81,8 @@
 .method private synthetic lambda$onRequestShow$0(Landroid/view/inputmethod/ImeTracker$Token;)V
     .locals 3
 
-    .line 85
     monitor-enter p0
 
-    .line 86
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -102,7 +92,6 @@
 
     invoke-static {v0, p1, v1, v2}, Lcom/android/server/inputmethod/ImeTrackerService$History;->-$$Nest$msetFinished(Lcom/android/server/inputmethod/ImeTrackerService$History;Landroid/view/inputmethod/ImeTracker$Token;II)V
 
-    .line 87
     monitor-exit p0
 
     return-void
@@ -124,7 +113,6 @@
 
     monitor-enter p0
 
-    .line 159
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -132,7 +120,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 160
     monitor-exit p0
 
     return-void
@@ -150,11 +137,9 @@
 
     monitor-enter p0
 
-    .line 165
     :try_start_0
     invoke-super {p0}, Lcom/android/internal/inputmethod/IImeTracker$Stub;->hasPendingImeVisibilityRequests_enforcePermission()V
 
-    .line 167
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/ImeTrackerService$History;->-$$Nest$fgetmLiveEntries(Lcom/android/server/inputmethod/ImeTrackerService$History;)Ljava/util/WeakHashMap;
@@ -186,7 +171,6 @@
 
     monitor-enter p0
 
-    .line 130
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -196,7 +180,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 131
     monitor-exit p0
 
     return-void
@@ -214,7 +197,6 @@
 
     monitor-enter p0
 
-    .line 124
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -224,7 +206,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 125
     monitor-exit p0
 
     return-void
@@ -242,7 +223,6 @@
 
     monitor-enter p0
 
-    .line 140
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -254,7 +234,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 141
     monitor-exit p0
 
     return-void
@@ -272,7 +251,6 @@
 
     monitor-enter p0
 
-    .line 151
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -288,19 +266,16 @@
 
     if-nez p1, :cond_0
 
-    .line 152
     monitor-exit p0
 
     return-void
 
-    .line 154
     :cond_0
     :try_start_1
     invoke-static {p1, p2}, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;->-$$Nest$fputmRequestWindowName(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 155
     monitor-exit p0
 
     return-void
@@ -318,7 +293,6 @@
 
     monitor-enter p0
 
-    .line 115
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -330,19 +304,16 @@
 
     if-nez p1, :cond_0
 
-    .line 116
     monitor-exit p0
 
     return-void
 
-    .line 118
     :cond_0
     :try_start_1
     invoke-static {p1, p2}, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;->-$$Nest$fputmPhase(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 119
     monitor-exit p0
 
     return-void
@@ -360,18 +331,15 @@
 
     monitor-enter p0
 
-    .line 97
     :try_start_0
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
-    .line 98
     new-instance v1, Landroid/view/inputmethod/ImeTracker$Token;
 
     invoke-direct {v1, v0, p1}, Landroid/view/inputmethod/ImeTracker$Token;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 99
     new-instance v10, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;
 
     const/4 v5, 0x2
@@ -392,12 +360,10 @@
 
     invoke-direct/range {v2 .. v9}, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;-><init>(Ljava/lang/String;IIIIILcom/android/server/inputmethod/ImeTrackerService$History$Entry-IA;)V
 
-    .line 101
     iget-object p1, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
     invoke-static {p1, v0, v10}, Lcom/android/server/inputmethod/ImeTrackerService$History;->-$$Nest$maddEntry(Lcom/android/server/inputmethod/ImeTrackerService$History;Landroid/os/IBinder;Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;)V
 
-    .line 104
     iget-object p1, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHandler:Landroid/os/Handler;
 
     new-instance p2, Lcom/android/server/inputmethod/ImeTrackerService$$ExternalSyntheticLambda1;
@@ -410,7 +376,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 110
     monitor-exit p0
 
     return-object v1
@@ -428,18 +393,15 @@
 
     monitor-enter p0
 
-    .line 77
     :try_start_0
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
-    .line 78
     new-instance v1, Landroid/view/inputmethod/ImeTracker$Token;
 
     invoke-direct {v1, v0, p1}, Landroid/view/inputmethod/ImeTracker$Token;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 79
     new-instance v10, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;
 
     const/4 v5, 0x1
@@ -460,12 +422,10 @@
 
     invoke-direct/range {v2 .. v9}, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;-><init>(Ljava/lang/String;IIIIILcom/android/server/inputmethod/ImeTrackerService$History$Entry-IA;)V
 
-    .line 81
     iget-object p1, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
     invoke-static {p1, v0, v10}, Lcom/android/server/inputmethod/ImeTrackerService$History;->-$$Nest$maddEntry(Lcom/android/server/inputmethod/ImeTrackerService$History;Landroid/os/IBinder;Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;)V
 
-    .line 84
     iget-object p1, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHandler:Landroid/os/Handler;
 
     new-instance p2, Lcom/android/server/inputmethod/ImeTrackerService$$ExternalSyntheticLambda0;
@@ -478,7 +438,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 90
     monitor-exit p0
 
     return-object v1
@@ -496,7 +455,6 @@
 
     monitor-enter p0
 
-    .line 135
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService;->mHistory:Lcom/android/server/inputmethod/ImeTrackerService$History;
 
@@ -508,7 +466,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 136
     monitor-exit p0
 
     return-void

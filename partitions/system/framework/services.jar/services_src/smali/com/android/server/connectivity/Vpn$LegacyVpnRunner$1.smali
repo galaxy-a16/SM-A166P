@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)V
     .locals 0
 
-    .line 4907
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 4910
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     iget-object p1, p1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -37,7 +35,6 @@
 
     return-void
 
-    .line 4912
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -55,7 +52,6 @@
 
     const/4 v0, -0x1
 
-    .line 4913
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -66,7 +62,6 @@
 
     move-result-object v0
 
-    .line 4914
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
@@ -75,7 +70,6 @@
 
     const-string/jumbo p1, "networkInfo"
 
-    .line 4915
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -84,14 +78,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 4917
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 4919
     :try_start_0
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 

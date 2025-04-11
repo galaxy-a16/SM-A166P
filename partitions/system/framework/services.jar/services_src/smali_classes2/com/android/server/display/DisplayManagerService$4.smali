@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService;)V
     .locals 0
 
-    .line 875
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$4;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,21 +28,18 @@
 
     const-string p0, "CustomFrequencyManagerService"
 
-    .line 878
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 880
     invoke-static {p0}, Landroid/os/ICustomFrequencyManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/ICustomFrequencyManager;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 883
     :try_start_0
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -68,7 +64,6 @@
     :catch_0
     move-exception p0
 
-    .line 886
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0

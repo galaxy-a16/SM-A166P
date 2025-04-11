@@ -17,14 +17,12 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 73
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 74
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -33,7 +31,6 @@
 
     const/4 v1, 0x2
 
-    .line 75
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -48,7 +45,6 @@
 
     const/4 v1, 0x5
 
-    .line 76
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -57,7 +53,6 @@
 
     const/16 v1, 0x20
 
-    .line 77
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -66,7 +61,6 @@
 
     const/16 v1, 0xd
 
-    .line 78
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -81,7 +75,6 @@
 
     const/16 v3, 0xe
 
-    .line 79
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -96,28 +89,24 @@
 
     const/16 v3, 0x8
 
-    .line 80
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-interface {v0, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/vcn/util/MtuUtils;->AUTH_ALGORITHM_OVERHEAD:Ljava/util/Map;
 
-    .line 89
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     const/4 v3, 0x3
 
-    .line 90
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -132,7 +121,6 @@
 
     const/16 v3, 0x1f
 
-    .line 91
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -141,28 +129,24 @@
 
     const/16 v2, 0xb
 
-    .line 92
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/vcn/util/MtuUtils;->CRYPT_ALGORITHM_OVERHEAD:Ljava/util/Map;
 
-    .line 101
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     const/16 v1, 0x12
 
-    .line 102
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -177,7 +161,6 @@
 
     const/16 v1, 0x17
 
-    .line 103
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -186,7 +169,6 @@
 
     const/16 v1, 0x14
 
-    .line 104
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -201,14 +183,12 @@
 
     const/16 v1, 0x1c
 
-    .line 105
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -227,7 +207,6 @@
 
     return v0
 
-    .line 134
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -252,7 +231,6 @@
 
     check-cast v4, Landroid/net/ipsec/ike/ChildSaProposal;
 
-    .line 135
     invoke-virtual {v4}, Landroid/net/ipsec/ike/ChildSaProposal;->getEncryptionAlgorithms()Ljava/util/List;
 
     move-result-object v5
@@ -274,7 +252,6 @@
 
     check-cast v6, Landroid/util/Pair;
 
-    .line 136
     iget-object v6, v6, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v6, Ljava/lang/Integer;
@@ -283,7 +260,6 @@
 
     move-result v6
 
-    .line 138
     sget-object v7, Lcom/android/server/vcn/util/MtuUtils;->AUTHCRYPT_ALGORITHM_OVERHEAD:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -296,7 +272,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 140
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -317,7 +292,6 @@
 
     goto :goto_0
 
-    .line 142
     :cond_2
     sget-object v7, Lcom/android/server/vcn/util/MtuUtils;->CRYPT_ALGORITHM_OVERHEAD:Ljava/util/Map;
 
@@ -331,7 +305,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 143
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -352,7 +325,6 @@
 
     goto :goto_0
 
-    .line 147
     :cond_3
     sget-object p0, Lcom/android/server/vcn/util/MtuUtils;->TAG:Ljava/lang/String;
 
@@ -374,7 +346,6 @@
 
     return v0
 
-    .line 151
     :cond_4
     invoke-virtual {v4}, Landroid/net/ipsec/ike/ChildSaProposal;->getIntegrityAlgorithms()Ljava/util/List;
 
@@ -401,7 +372,6 @@
 
     move-result v5
 
-    .line 152
     sget-object v6, Lcom/android/server/vcn/util/MtuUtils;->AUTH_ALGORITHM_OVERHEAD:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -414,7 +384,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 153
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -435,7 +404,6 @@
 
     goto :goto_1
 
-    .line 157
     :cond_5
     sget-object p0, Lcom/android/server/vcn/util/MtuUtils;->TAG:Ljava/lang/String;
 
@@ -478,7 +446,6 @@
 
     sub-int/2addr p2, p0
 
-    .line 169
     invoke-static {p1, p3}, Ljava/lang/Math;->min(II)I
 
     move-result p0

@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lcom/android/server/pm/Installer;Ljava/lang/Object;Lcom/android/server/pm/PackageManagerTracedLock;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda48;->f$0:Landroid/content/Context;
@@ -39,7 +38,6 @@
 .method public final produce(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Ljava/lang/Object;
     .locals 6
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda48;->f$0:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda48;->f$1:Lcom/android/server/pm/Installer;

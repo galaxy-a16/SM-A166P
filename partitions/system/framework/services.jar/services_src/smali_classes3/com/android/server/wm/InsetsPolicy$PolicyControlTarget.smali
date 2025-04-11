@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$9LMzm1Dz-svVRdIWvZOoZKfANPw(Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;[Landroid/view/InsetsSourceControl;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->lambda$notifyInsetsControlChanged$0([Landroid/view/InsetsSourceControl;I)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/wm/InsetsPolicy;)V
     .locals 0
 
-    .line 1085
     iput-object p1, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,7 +32,6 @@
 .method private synthetic lambda$notifyInsetsControlChanged$0([Landroid/view/InsetsSourceControl;I)V
     .locals 6
 
-    .line 1116
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayContent;
@@ -49,7 +46,6 @@
 
     monitor-enter v0
 
-    .line 1117
     :try_start_0
     array-length v1, p1
 
@@ -60,7 +56,6 @@
 
     aget-object v3, p1, v2
 
-    .line 1118
     invoke-virtual {v3}, Landroid/view/InsetsSourceControl;->getType()I
 
     move-result v4
@@ -69,24 +64,20 @@
 
     if-eqz v4, :cond_0
 
-    .line 1119
     iget-object v4, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {v4}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fgetmStateController(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/InsetsStateController;
 
     move-result-object v4
 
-    .line 1120
     invoke-virtual {v4}, Lcom/android/server/wm/InsetsStateController;->getSourceProviders()Landroid/util/SparseArray;
 
     move-result-object v4
 
-    .line 1121
     invoke-virtual {v3}, Landroid/view/InsetsSourceControl;->getId()I
 
     move-result v5
 
-    .line 1120
     invoke-virtual {v4, v5}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -95,7 +86,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1122
     invoke-virtual {v4}, Lcom/android/server/wm/InsetsSourceProvider;->getSource()Landroid/view/InsetsSource;
 
     move-result-object v4
@@ -106,31 +96,26 @@
 
     if-nez v4, :cond_0
 
-    .line 1123
     invoke-virtual {v3}, Landroid/view/InsetsSourceControl;->getLeash()Landroid/view/SurfaceControl;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    .line 1124
     invoke-virtual {v4}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 1125
     invoke-virtual {p0, v3}, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->getSurfaceTransaction(Landroid/view/InsetsSourceControl;)Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v3
 
     const/4 v5, 0x0
 
-    .line 1127
     invoke-virtual {v3, v4, v5}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 1128
     invoke-virtual {v3, v4}, Landroid/view/SurfaceControl$Transaction;->hide(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
     :cond_0
@@ -138,7 +123,6 @@
 
     goto :goto_0
 
-    .line 1133
     :cond_1
     monitor-exit v0
     :try_end_0
@@ -166,7 +150,6 @@
 .method public canShowTransient()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -175,12 +158,10 @@
 .method public final canStartHideAnimation(Landroid/view/InsetsSourceControl;)Z
     .locals 2
 
-    .line 1151
     invoke-virtual {p1}, Landroid/view/InsetsSourceControl;->getType()I
 
     move-result p1
 
-    .line 1152
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/InsetsPolicy;->hasHiddenSources(I)Z
@@ -193,7 +174,6 @@
 
     return v1
 
-    .line 1155
     :cond_0
     invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
 
@@ -201,7 +181,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1156
     iget-object p1, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {p1}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayContent;
@@ -224,7 +203,6 @@
 
     return p0
 
-    .line 1157
     :cond_1
     invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
 
@@ -232,7 +210,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 1158
     iget-object p1, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {p1}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayContent;
@@ -264,7 +241,6 @@
 .method public getRequestedVisibleTypes()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -273,7 +249,6 @@
 .method public final getSurfaceTransaction(Landroid/view/InsetsSourceControl;)Landroid/view/SurfaceControl$Transaction;
     .locals 1
 
-    .line 1143
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fgetmStateController(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/InsetsStateController;
@@ -284,12 +259,10 @@
 
     move-result-object v0
 
-    .line 1144
     invoke-virtual {p1}, Landroid/view/InsetsSourceControl;->getId()I
 
     move-result p1
 
-    .line 1143
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -298,19 +271,16 @@
 
     if-eqz p1, :cond_0
 
-    .line 1145
     iget-object p1, p1, Lcom/android/server/wm/InsetsSourceProvider;->mWindowContainer:Lcom/android/server/wm/WindowContainer;
 
     if-eqz p1, :cond_0
 
-    .line 1146
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getSyncTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 1147
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
@@ -329,7 +299,6 @@
 .method public isRequestedVisible(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -338,7 +307,6 @@
 .method public notifyInsetsControlChanged()V
     .locals 9
 
-    .line 1088
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fgetmStateController(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/InsetsStateController;
@@ -353,13 +321,11 @@
 
     return-void
 
-    .line 1094
     :cond_0
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    .line 1097
     array-length v2, v0
 
     const/4 v3, 0x0
@@ -373,14 +339,12 @@
 
     aget-object v6, v0, v4
 
-    .line 1098
     invoke-virtual {v6}, Landroid/view/InsetsSourceControl;->getLeash()Landroid/view/SurfaceControl;
 
     move-result-object v7
 
     if-eqz v7, :cond_3
 
-    .line 1099
     invoke-virtual {v7}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v8
@@ -389,7 +353,6 @@
 
     goto :goto_1
 
-    .line 1102
     :cond_1
     invoke-virtual {p0, v6}, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->canStartHideAnimation(Landroid/view/InsetsSourceControl;)Z
 
@@ -397,14 +360,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 1103
     invoke-virtual {v6}, Landroid/view/InsetsSourceControl;->getType()I
 
     move-result v7
 
     or-int/2addr v5, v7
 
-    .line 1104
     invoke-virtual {v6}, Landroid/view/InsetsSourceControl;->getType()I
 
     move-result v7
@@ -417,7 +378,6 @@
 
     goto :goto_1
 
-    .line 1107
     :cond_2
     invoke-virtual {p0, v6}, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->getSurfaceTransaction(Landroid/view/InsetsSourceControl;)Landroid/view/SurfaceControl$Transaction;
 
@@ -425,10 +385,8 @@
 
     const/4 v8, 0x0
 
-    .line 1108
     invoke-virtual {v6, v7, v8}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 1109
     invoke-virtual {v6, v7}, Landroid/view/SurfaceControl$Transaction;->hide(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
     :cond_3
@@ -440,7 +398,6 @@
     :cond_4
     if-eqz v5, :cond_5
 
-    .line 1113
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -459,7 +416,6 @@
 
     invoke-static {v4, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1115
     iget-object v2, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     new-instance v4, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget$$ExternalSyntheticLambda0;
@@ -468,7 +424,6 @@
 
     invoke-static {v2, v5, v1, v3, v4}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$mcontrolAnimationUnchecked(Lcom/android/server/wm/InsetsPolicy;ILandroid/util/SparseArray;ZLjava/lang/Runnable;)V
 
-    .line 1136
     :cond_5
     iget-object p0, p0, Lcom/android/server/wm/InsetsPolicy$PolicyControlTarget;->this$0:Lcom/android/server/wm/InsetsPolicy;
 

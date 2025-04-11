@@ -21,7 +21,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 84
     invoke-virtual {p2}, Landroid/os/BatteryUsageStatsQuery;->shouldForceUsePowerProfileModel()Z
 
     move-result p0
@@ -41,7 +40,6 @@
 .method public static uCtoMah(J)D
     .locals 2
 
-    .line 0
     long-to-double p0, p0
 
     const-wide v0, 0x3e92a42f961f79baL    # 2.777777777777778E-7
@@ -56,12 +54,10 @@
 .method public calculate(Landroid/os/BatteryUsageStats$Builder;Landroid/os/BatteryStats;JJLandroid/os/BatteryUsageStatsQuery;)V
     .locals 11
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/BatteryUsageStats$Builder;->getUidBatteryConsumerBuilders()Landroid/util/SparseArray;
 
     move-result-object v0
 
-    .line 57
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
     move-result v1
@@ -71,7 +67,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 58
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -80,7 +75,6 @@
 
     check-cast v4, Landroid/os/UidBatteryConsumer$Builder;
 
-    .line 59
     invoke-virtual {v4}, Landroid/os/UidBatteryConsumer$Builder;->getBatteryStatsUid()Landroid/os/BatteryStats$Uid;
 
     move-result-object v5
@@ -106,7 +100,6 @@
 .method public calculateApp(Landroid/os/UidBatteryConsumer$Builder;Landroid/os/BatteryStats$Uid;JJLandroid/os/BatteryUsageStatsQuery;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

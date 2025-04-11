@@ -51,7 +51,6 @@
 .method public static synthetic $r8$lambda$M27UbNGpU5VHIgdR6AvnBAIG3E8(Lcom/samsung/android/server/audio/MicModeManager;Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->lambda$isMicModeSupported$2(Ljava/lang/Integer;)Z
 
     move-result p0
@@ -62,7 +61,6 @@
 .method public static synthetic $r8$lambda$frhefA2rZZ3hnOUhOUxo5Lfq3v8(Landroid/content/Intent;Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->lambda$streamDevicesChanged$0(Landroid/content/Intent;Ljava/lang/Integer;)Z
 
     move-result p0
@@ -73,7 +71,6 @@
 .method public static synthetic $r8$lambda$uP0IOZdCsgyRs-B5H0P5dOv9TKg(Lcom/samsung/android/server/audio/MicModeManager;Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->lambda$isMicModeSupported$3(Ljava/lang/Integer;)Z
 
     move-result p0
@@ -84,7 +81,6 @@
 .method public static synthetic $r8$lambda$yE2bh1OZ1frNNqnP-ZR7XmF_Tbs(Lcom/samsung/android/server/audio/MicModeManager;Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->lambda$isMicModeSupported$1(Ljava/lang/Integer;)Z
 
     move-result p0
@@ -97,14 +93,12 @@
 
     const/4 v0, 0x0
 
-    .line 142
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    .line 143
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -113,7 +107,6 @@
 
     move-result-object v2
 
-    .line 141
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
@@ -122,24 +115,20 @@
 
     const/4 v2, 0x1
 
-    .line 146
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 147
     filled-new-array {v2, v1}, [Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 145
     invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
 
     sput-object v3, Lcom/samsung/android/server/audio/MicModeManager;->AVAILABLE_DEVICE_TYPES:Ljava/util/List;
 
-    .line 365
     new-instance v3, Landroid/util/ArrayMap;
 
     invoke-direct {v3}, Landroid/util/ArrayMap;-><init>()V
@@ -148,22 +137,18 @@
 
     const-string v4, "l_mic_input_control_mode=0"
 
-    .line 367
     invoke-virtual {v3, v0, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "l_mic_input_control_mode=1"
 
-    .line 371
     invoke-virtual {v3, v2, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "l_mic_input_control_mode=2"
 
-    .line 375
     invoke-virtual {v3, v1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x3
 
-    .line 379
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -174,7 +159,6 @@
 
     const/4 v0, 0x4
 
-    .line 383
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -189,57 +173,42 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 74
     iput v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mMicModeType:I
 
     const-string v1, ""
 
-    .line 149
     iput-object v1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mPackageName:Ljava/lang/String;
 
     const/4 v1, 0x2
 
-    .line 151
     iput v1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
-    .line 153
     iput v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
-    .line 155
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mWifiCallState:Z
 
-    .line 156
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mVideoCallState:Z
 
-    .line 157
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mDexState:Z
 
-    .line 158
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mSmartViewState:Z
 
-    .line 159
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCallTranslationState:Z
 
-    .line 160
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mGameChatState:Z
 
-    .line 456
     iput v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCallMicMode:I
 
-    .line 457
     iput v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mVoipCallMicMode:I
 
-    .line 39
     sput-object p1, Lcom/samsung/android/server/audio/MicModeManager;->mContext:Landroid/content/Context;
 
     const-string v0, "audio"
 
-    .line 40
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -248,7 +217,6 @@
 
     sput-object v0, Lcom/samsung/android/server/audio/MicModeManager;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 41
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/server/audio/DesktopModeHelper;->getInstance(Landroid/content/Context;)Lcom/samsung/android/server/audio/DesktopModeHelper;
@@ -257,14 +225,12 @@
 
     sput-object v0, Lcom/samsung/android/server/audio/MicModeManager;->mDesktopModeHelper:Lcom/samsung/android/server/audio/DesktopModeHelper;
 
-    .line 42
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     sput-object p1, Lcom/samsung/android/server/audio/MicModeManager;->mCr:Landroid/content/ContentResolver;
 
-    .line 43
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->initMicModeType()V
 
     return-void
@@ -277,20 +243,17 @@
 
     monitor-enter v0
 
-    .line 47
     :try_start_0
     sget-object v1, Lcom/samsung/android/server/audio/MicModeManager;->sInstance:Lcom/samsung/android/server/audio/MicModeManager;
 
     if-nez v1, :cond_0
 
-    .line 48
     new-instance v1, Lcom/samsung/android/server/audio/MicModeManager;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/server/audio/MicModeManager;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/samsung/android/server/audio/MicModeManager;->sInstance:Lcom/samsung/android/server/audio/MicModeManager;
 
-    .line 50
     :cond_0
     sget-object p0, Lcom/samsung/android/server/audio/MicModeManager;->sInstance:Lcom/samsung/android/server/audio/MicModeManager;
     :try_end_0
@@ -311,7 +274,6 @@
 .method private synthetic lambda$isMicModeSupported$1(Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 273
     iget p0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -334,7 +296,6 @@
 .method private synthetic lambda$isMicModeSupported$2(Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 296
     iget p0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -357,7 +318,6 @@
 .method private synthetic lambda$isMicModeSupported$3(Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 305
     iget p0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -380,7 +340,6 @@
 .method public static synthetic lambda$streamDevicesChanged$0(Landroid/content/Intent;Ljava/lang/Integer;)Z
     .locals 2
 
-    .line 194
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -415,7 +374,6 @@
 
     const-string v1, ""
 
-    .line 346
     invoke-virtual {p0, v0, v0, v1}, Lcom/samsung/android/server/audio/MicModeManager;->updateMicModeSettings(ZILjava/lang/String;)V
 
     return-void
@@ -424,7 +382,6 @@
 .method public final enableMicMode()V
     .locals 4
 
-    .line 337
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
     const/4 v1, 0x2
@@ -446,7 +403,6 @@
     :cond_0
     if-ne v0, v1, :cond_2
 
-    .line 341
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->getVoipCallMicMode()I
 
     move-result v0
@@ -457,7 +413,6 @@
 
     goto :goto_1
 
-    .line 339
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->getCallMicMode()I
@@ -476,7 +431,6 @@
 .method public final getCallMicMode()I
     .locals 2
 
-    .line 467
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -497,7 +451,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     iget p0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCallMicMode:I
 
     return p0
@@ -506,7 +459,6 @@
 .method public final getMicModeFeature()I
     .locals 10
 
-    .line 88
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -523,7 +475,6 @@
 
     return p0
 
-    .line 92
     :cond_0
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
@@ -535,7 +486,6 @@
 
     move-result-object v0
 
-    .line 93
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -556,7 +506,6 @@
 
     const-string v1, "DEFAULT"
 
-    .line 94
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -570,7 +519,6 @@
     :cond_1
     const-string v1, "3MIC"
 
-    .line 97
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -584,7 +532,6 @@
     :cond_2
     const-string v1, "2MIC"
 
-    .line 100
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -593,7 +540,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 101
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateParamTableFor2Mic()V
 
     return v4
@@ -601,7 +547,6 @@
     :cond_3
     const-string v3, "2MIC;VOICE"
 
-    .line 104
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -610,10 +555,8 @@
 
     if-eqz v5, :cond_4
 
-    .line 105
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateParamTableFor2Mic()V
 
-    .line 106
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateParamTableForVoice()V
 
     return v6
@@ -621,7 +564,6 @@
     :cond_4
     const-string v5, "VOICE"
 
-    .line 109
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -630,12 +572,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 110
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateParamTableForVoice()V
 
     return v7
 
-    .line 114
     :cond_5
     invoke-static {}, Lcom/samsung/android/feature/SemCscFeature;->getInstance()Lcom/samsung/android/feature/SemCscFeature;
 
@@ -647,7 +587,6 @@
 
     move-result-object v0
 
-    .line 115
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -664,19 +603,16 @@
 
     invoke-static {v2, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    .line 117
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateParamTableFor2Mic()V
 
     return v4
 
-    .line 120
     :cond_6
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -684,15 +620,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 121
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateParamTableFor2Mic()V
 
-    .line 122
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateParamTableForVoice()V
 
     return v6
 
-    .line 125
     :cond_7
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -700,7 +633,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 126
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateParamTableForVoice()V
 
     return v7
@@ -714,7 +646,6 @@
 .method public getMicModeType()I
     .locals 0
 
-    .line 134
     iget p0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mMicModeType:I
 
     return p0
@@ -723,7 +654,6 @@
 .method public final getVoipCallMicMode()I
     .locals 2
 
-    .line 479
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -744,7 +674,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     iget p0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mVoipCallMicMode:I
 
     return p0
@@ -755,7 +684,6 @@
 
     const-string v0, "MicModeManager"
 
-    .line 78
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->getMicModeFeature()I
 
@@ -763,7 +691,6 @@
 
     iput v1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mMicModeType:I
 
-    .line 79
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -790,7 +717,6 @@
     :catch_0
     const-string p0, "initMicModeType: RuntimeException"
 
-    .line 83
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -798,7 +724,6 @@
     :catch_1
     const-string p0, "initMicModeType: NullPointerException"
 
-    .line 81
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -808,7 +733,6 @@
 .method public final isMicModeSupported()Z
     .locals 6
 
-    .line 265
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -893,7 +817,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mMicModeType:I
 
     const/4 v2, 0x3
@@ -906,7 +829,6 @@
 
     return v4
 
-    .line 304
     :pswitch_0
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
@@ -923,7 +845,6 @@
     :cond_0
     return v4
 
-    .line 305
     :cond_1
     :goto_0
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->AVAILABLE_DEVICE_TYPES:Ljava/util/List;
@@ -949,7 +870,6 @@
     :cond_2
     return v4
 
-    .line 292
     :pswitch_1
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
@@ -964,7 +884,6 @@
 
     if-ne v0, v2, :cond_4
 
-    .line 295
     iget-boolean v5, p0, Lcom/samsung/android/server/audio/MicModeManager;->mWifiCallState:Z
 
     if-eqz v5, :cond_4
@@ -974,14 +893,12 @@
     :cond_4
     if-ne v0, v2, :cond_a
 
-    .line 299
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
     if-eq v0, v3, :cond_a
 
     return v4
 
-    .line 296
     :cond_5
     :goto_1
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->AVAILABLE_DEVICE_TYPES:Ljava/util/List;
@@ -1008,13 +925,11 @@
     :goto_2
     return v4
 
-    .line 283
     :pswitch_2
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
     if-ne v0, v2, :cond_7
 
-    .line 284
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
     if-ne v0, v3, :cond_7
@@ -1026,7 +941,6 @@
     :cond_7
     return v4
 
-    .line 272
     :pswitch_3
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
@@ -1039,7 +953,6 @@
     :cond_8
     return v4
 
-    .line 273
     :cond_9
     :goto_3
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->AVAILABLE_DEVICE_TYPES:Ljava/util/List;
@@ -1060,7 +973,6 @@
 
     return v4
 
-    .line 316
     :cond_a
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCallTranslationState:Z
 
@@ -1068,20 +980,17 @@
 
     return v4
 
-    .line 319
     :cond_b
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
     if-ne v0, v3, :cond_e
 
-    .line 320
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mDexState:Z
 
     if-eqz v0, :cond_c
 
     return v4
 
-    .line 323
     :cond_c
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
@@ -1105,7 +1014,6 @@
     :cond_e
     const-string p0, "isMicModeSupported() MicMode ON"
 
-    .line 328
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
@@ -1128,7 +1036,6 @@
 .method public restoreMicMode()V
     .locals 3
 
-    .line 484
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->mCr:Landroid/content/ContentResolver;
 
     const-string v1, "call_mic_mode"
@@ -1141,7 +1048,6 @@
 
     iput v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCallMicMode:I
 
-    .line 485
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->mCr:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "voip_call_mic_mode"
@@ -1152,7 +1058,6 @@
 
     iput v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mVoipCallMicMode:I
 
-    .line 486
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1181,7 +1086,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
     iget v0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mMicModeType:I
 
     const/4 v1, 0x6
@@ -1203,7 +1107,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 490
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->sMicModeParamTable:Landroid/util/ArrayMap;
 
     iget p0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCallMicMode:I
@@ -1224,7 +1127,6 @@
 
     goto :goto_1
 
-    .line 492
     :cond_1
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->sMicModeParamTable:Landroid/util/ArrayMap;
 
@@ -1244,7 +1146,6 @@
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 493
     iget p0, p0, Lcom/samsung/android/server/audio/MicModeManager;->mVoipCallMicMode:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1261,7 +1162,6 @@
 
     goto :goto_1
 
-    .line 488
     :cond_2
     :goto_0
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->sMicModeParamTable:Landroid/util/ArrayMap;
@@ -1287,7 +1187,6 @@
 .method public final setCallMicMode(I)V
     .locals 2
 
-    .line 460
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1306,17 +1205,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 461
     iput p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCallMicMode:I
 
     const-string/jumbo v0, "mic_mode_effect"
 
-    .line 462
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
     const-string v0, "call_mic_mode"
 
-    .line 463
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
     return-void
@@ -1325,10 +1221,8 @@
 .method public setCommunicationDevice(I)V
     .locals 2
 
-    .line 188
     iput p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
-    .line 189
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1347,7 +1241,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateAudioDevice()V
 
     return-void
@@ -1356,7 +1249,6 @@
 .method public setMicInputControlMode(I)V
     .locals 4
 
-    .line 418
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1375,7 +1267,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->sMicModeParamTable:Landroid/util/ArrayMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1390,12 +1281,10 @@
 
     const-string p0, "attempt to call setMicInputControlMode() invalid mode."
 
-    .line 420
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 423
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1407,7 +1296,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 424
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1424,15 +1312,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     invoke-static {p1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 427
     new-instance v0, Lcom/samsung/android/media/AudioParameter;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/media/AudioParameter;-><init>(Ljava/lang/String;)V
 
-    .line 429
     iget p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mMicModeType:I
 
     const/4 v1, 0x1
@@ -1456,14 +1341,12 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 436
     invoke-virtual {v0, v2}, Lcom/samsung/android/media/AudioParameter;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_7
 
-    .line 437
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -1479,14 +1362,12 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 440
     invoke-virtual {v0, v3}, Lcom/samsung/android/media/AudioParameter;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 441
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -1495,7 +1376,6 @@
 
     goto :goto_1
 
-    .line 442
     :cond_3
     invoke-virtual {v0, v2}, Lcom/samsung/android/media/AudioParameter;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1503,7 +1383,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 443
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -1517,14 +1396,12 @@
 
     if-ne p1, v1, :cond_7
 
-    .line 446
     invoke-virtual {v0, v3}, Lcom/samsung/android/media/AudioParameter;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_7
 
-    .line 447
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -1537,14 +1414,12 @@
     :goto_0
     const-string p1, "l_mic_input_control_mode_call"
 
-    .line 430
     invoke-virtual {v0, p1}, Lcom/samsung/android/media/AudioParameter;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    .line 431
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -1556,14 +1431,12 @@
     :cond_6
     const-string p1, "l_mic_input_control_mode"
 
-    .line 432
     invoke-virtual {v0, p1}, Lcom/samsung/android/media/AudioParameter;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_7
 
-    .line 433
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -1578,12 +1451,10 @@
 .method public final setSettingsInt(Ljava/lang/String;I)V
     .locals 2
 
-    .line 507
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 509
     :try_start_0
     sget-object p0, Lcom/samsung/android/server/audio/MicModeManager;->mCr:Landroid/content/ContentResolver;
 
@@ -1591,7 +1462,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 511
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1601,19 +1471,16 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 512
     throw p0
 .end method
 
 .method public final setSettingsStr(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 498
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 500
     :try_start_0
     sget-object p0, Lcom/samsung/android/server/audio/MicModeManager;->mCr:Landroid/content/ContentResolver;
 
@@ -1621,7 +1488,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 502
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1631,14 +1497,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 503
     throw p0
 .end method
 
 .method public final setVoipCallMicMode(I)V
     .locals 2
 
-    .line 472
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1657,17 +1521,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
     iput p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mVoipCallMicMode:I
 
     const-string/jumbo v0, "mic_mode_effect"
 
-    .line 474
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "voip_call_mic_mode"
 
-    .line 475
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
     return-void
@@ -1676,7 +1537,6 @@
 .method public streamDevicesChanged(Landroid/content/Intent;)V
     .locals 3
 
-    .line 194
     sget-object v0, Lcom/samsung/android/server/audio/MicModeManager;->AVAILABLE_STREAM_TYPES:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
@@ -1700,22 +1560,18 @@
 
     const/4 v1, 0x0
 
-    .line 197
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v2, "android.media.EXTRA_VOLUME_STREAM_DEVICES"
 
-    .line 198
     invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 199
     iput p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurCallDevice:I
 
-    .line 200
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1740,7 +1596,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->updateAudioDevice()V
 
     return-void
@@ -1749,7 +1604,6 @@
 .method public final updateAudioDevice()V
     .locals 2
 
-    .line 179
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1778,19 +1632,16 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->isMicModeSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 181
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->enableMicMode()V
 
     goto :goto_0
 
-    .line 183
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->disableMicMode()V
 
@@ -1801,13 +1652,10 @@
 .method public updateAudioMode(Ljava/lang/String;I)V
     .locals 1
 
-    .line 163
     iput-object p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mPackageName:Ljava/lang/String;
 
-    .line 164
     iput p2, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
-    .line 165
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1842,17 +1690,14 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     iget p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCurAudioMode:I
 
     if-nez p1, :cond_0
 
-    .line 167
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->disableMicMode()V
 
     goto :goto_0
 
-    .line 170
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->isMicModeSupported()Z
 
@@ -1860,12 +1705,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 171
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->enableMicMode()V
 
     goto :goto_0
 
-    .line 173
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->disableMicMode()V
 
@@ -1876,7 +1719,6 @@
 .method public updateCallTranslationState(Z)V
     .locals 2
 
-    .line 249
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1895,10 +1737,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mCallTranslationState:Z
 
-    .line 251
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->updateMicModeState(Z)V
 
     return-void
@@ -1907,7 +1747,6 @@
 .method public updateDexState(Z)V
     .locals 2
 
-    .line 231
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1926,10 +1765,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mDexState:Z
 
-    .line 233
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->updateMicModeState(Z)V
 
     return-void
@@ -1938,7 +1775,6 @@
 .method public updateGameChatState(Z)V
     .locals 2
 
-    .line 243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1957,10 +1793,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mGameChatState:Z
 
-    .line 245
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->updateMicModeState(Z)V
 
     return-void
@@ -1975,7 +1809,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 351
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2000,17 +1833,14 @@
 
     const/4 p1, 0x1
 
-    .line 352
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
     const-string/jumbo p1, "mic_mode_effect"
 
-    .line 353
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
     const-string/jumbo p1, "mic_mode_package"
 
-    .line 354
     invoke-virtual {p0, p1, p3}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsStr(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -2018,12 +1848,10 @@
     :cond_0
     const-string/jumbo p1, "updateMicModeSettings() disable"
 
-    .line 356
     invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
-    .line 357
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
     :goto_0
@@ -2033,14 +1861,12 @@
 .method public final updateMicModeState(Z)V
     .locals 1
 
-    .line 255
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->isMicModeSupported()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 256
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->disableMicMode()V
 
     return-void
@@ -2048,7 +1874,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 260
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->enableMicMode()V
 
     :cond_1
@@ -2058,7 +1883,6 @@
 .method public final updateParamTableFor2Mic()V
     .locals 2
 
-    .line 389
     sget-object p0, Lcom/samsung/android/server/audio/MicModeManager;->sMicModeParamTable:Landroid/util/ArrayMap;
 
     const/4 v0, 0x0
@@ -2073,7 +1897,6 @@
 
     const/4 v0, 0x1
 
-    .line 393
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -2084,7 +1907,6 @@
 
     const/4 v0, 0x2
 
-    .line 397
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -2099,7 +1921,6 @@
 .method public final updateParamTableForVoice()V
     .locals 2
 
-    .line 403
     sget-object p0, Lcom/samsung/android/server/audio/MicModeManager;->sMicModeParamTable:Landroid/util/ArrayMap;
 
     const/4 v0, 0x3
@@ -2114,7 +1935,6 @@
 
     const/4 v0, 0x4
 
-    .line 407
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -2129,7 +1949,6 @@
 .method public updateSmartViewState(Z)V
     .locals 2
 
-    .line 237
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2148,10 +1967,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mSmartViewState:Z
 
-    .line 239
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->updateMicModeState(Z)V
 
     return-void
@@ -2160,7 +1977,6 @@
 .method public updateVideoCallState(Z)V
     .locals 2
 
-    .line 224
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2179,10 +1995,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mVideoCallState:Z
 
-    .line 226
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->updateMicModeState(Z)V
 
     return-void
@@ -2191,7 +2005,6 @@
 .method public updateWifiCallState(Z)V
     .locals 2
 
-    .line 209
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2210,7 +2023,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/MicModeManager;->mWifiCallState:Z
 
     const-string/jumbo v0, "mic_mode_wificall"
@@ -2219,7 +2031,6 @@
 
     const/4 p1, 0x1
 
-    .line 212
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
     goto :goto_0
@@ -2227,10 +2038,8 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 214
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->setSettingsInt(Ljava/lang/String;I)V
 
-    .line 216
     :goto_0
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->isMicModeSupported()Z
 
@@ -2238,12 +2047,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 217
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->enableMicMode()V
 
     goto :goto_1
 
-    .line 219
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MicModeManager;->disableMicMode()V
 

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/display/VolumeController;I)V
     .locals 0
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/display/VolumeController$2;->this$0:Lcom/android/server/display/VolumeController;
 
     iput p2, p0, Lcom/android/server/display/VolumeController$2;->val$keyEvent:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 4
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/display/VolumeController$2;->this$0:Lcom/android/server/display/VolumeController;
 
     invoke-static {v0}, Lcom/android/server/display/VolumeController;->-$$Nest$fgetmHandler(Lcom/android/server/display/VolumeController;)Landroid/os/Handler;
@@ -48,7 +46,6 @@
 
     move-result-object v0
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/display/VolumeController$2;->this$0:Lcom/android/server/display/VolumeController;
 
     invoke-static {p0}, Lcom/android/server/display/VolumeController;->-$$Nest$fgetmHandler(Lcom/android/server/display/VolumeController;)Landroid/os/Handler;

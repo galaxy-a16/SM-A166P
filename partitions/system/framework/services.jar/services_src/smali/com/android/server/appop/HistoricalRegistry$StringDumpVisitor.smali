@@ -44,19 +44,16 @@
 .method public constructor <init>(Lcom/android/server/appop/HistoricalRegistry;Ljava/lang/String;Ljava/io/PrintWriter;ILjava/lang/String;Ljava/lang/String;II)V
     .locals 2
 
-    .line 1822
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->this$0:Lcom/android/server/appop/HistoricalRegistry;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1801
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mNow:J
 
-    .line 1803
     new-instance p1, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v0, "yyyy-MM-dd HH:mm:ss.SSS"
@@ -65,14 +62,12 @@
 
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mDateFormatter:Ljava/text/SimpleDateFormat;
 
-    .line 1805
     new-instance p1, Ljava/util/Date;
 
     invoke-direct {p1}, Ljava/util/Date;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mDate:Ljava/util/Date;
 
-    .line 1823
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +84,6 @@
 
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mOpsPrefix:Ljava/lang/String;
 
-    .line 1824
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,7 +98,6 @@
 
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mUidPrefix:Ljava/lang/String;
 
-    .line 1825
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,7 +112,6 @@
 
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mPackagePrefix:Ljava/lang/String;
 
-    .line 1826
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +126,6 @@
 
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mAttributionPrefix:Ljava/lang/String;
 
-    .line 1827
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +140,6 @@
 
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mEntryPrefix:Ljava/lang/String;
 
-    .line 1828
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,22 +154,16 @@
 
     iput-object p1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mUidStatePrefix:Ljava/lang/String;
 
-    .line 1829
     iput-object p3, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
-    .line 1830
     iput p4, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilterUid:I
 
-    .line 1831
     iput-object p5, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilterPackage:Ljava/lang/String;
 
-    .line 1832
     iput-object p6, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilterAttributionTag:Ljava/lang/String;
 
-    .line 1833
     iput p7, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilterOp:I
 
-    .line 1834
     iput p8, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilter:I
 
     return-void
@@ -190,7 +174,6 @@
 .method public visitHistoricalAttributionOps(Landroid/app/AppOpsManager$AttributedHistoricalOps;)V
     .locals 2
 
-    .line 1884
     iget v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilter:I
 
     and-int/lit8 v0, v0, 0x4
@@ -199,12 +182,10 @@
 
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilterPackage:Ljava/lang/String;
 
-    .line 1885
     invoke-virtual {p1}, Landroid/app/AppOpsManager$AttributedHistoricalOps;->getTag()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1884
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -213,7 +194,6 @@
 
     return-void
 
-    .line 1888
     :cond_0
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
@@ -221,14 +201,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1889
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "Attribution "
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1890
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {p1}, Landroid/app/AppOpsManager$AttributedHistoricalOps;->getTag()Ljava/lang/String;
@@ -237,7 +215,6 @@
 
     invoke-virtual {v0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1891
     iget-object p0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string p1, ":"
@@ -254,7 +231,6 @@
 
     move-object/from16 v1, p1
 
-    .line 1896
     iget v2, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilter:I
 
     and-int/lit8 v2, v2, 0x8
@@ -271,7 +247,6 @@
 
     return-void
 
-    .line 1899
     :cond_0
     iget-object v2, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
@@ -279,7 +254,6 @@
 
     invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1900
     iget-object v2, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual/range {p1 .. p1}, Landroid/app/AppOpsManager$HistoricalOp;->getOpCode()I
@@ -292,19 +266,16 @@
 
     invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1901
     iget-object v2, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v3, ":"
 
     invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1902
     invoke-virtual/range {p1 .. p1}, Landroid/app/AppOpsManager$HistoricalOp;->collectKeys()Landroid/util/LongSparseArray;
 
     move-result-object v2
 
-    .line 1903
     invoke-virtual {v2}, Landroid/util/LongSparseArray;->size()I
 
     move-result v3
@@ -314,22 +285,18 @@
     :goto_0
     if-ge v5, v3, :cond_7
 
-    .line 1905
     invoke-virtual {v2, v5}, Landroid/util/LongSparseArray;->keyAt(I)J
 
     move-result-wide v6
 
-    .line 1906
     invoke-static {v6, v7}, Landroid/app/AppOpsManager;->extractUidStateFromKey(J)I
 
     move-result v8
 
-    .line 1907
     invoke-static {v6, v7}, Landroid/app/AppOpsManager;->extractFlagsFromKey(J)I
 
     move-result v9
 
-    .line 1909
     invoke-virtual {v1, v8, v8, v9}, Landroid/app/AppOpsManager$HistoricalOp;->getAccessCount(III)J
 
     move-result-wide v10
@@ -344,14 +311,12 @@
 
     if-lez v14, :cond_1
 
-    .line 1912
     iget-object v14, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mUidStatePrefix:Ljava/lang/String;
 
     invoke-virtual {v14, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1913
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-static {v6, v7}, Landroid/app/AppOpsManager;->keyToString(J)Ljava/lang/String;
@@ -360,19 +325,16 @@
 
     invoke-virtual {v4, v14}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1914
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v4, v15}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1917
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v14, "access="
 
     invoke-virtual {v4, v14}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1918
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v4, v10, v11}, Ljava/io/PrintWriter;->print(J)V
@@ -384,7 +346,6 @@
     :cond_1
     const/4 v4, 0x0
 
-    .line 1920
     :goto_1
     invoke-virtual {v1, v8, v8, v9}, Landroid/app/AppOpsManager$HistoricalOp;->getRejectCount(III)J
 
@@ -398,14 +359,12 @@
 
     if-nez v4, :cond_2
 
-    .line 1923
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v13, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mUidStatePrefix:Ljava/lang/String;
 
     invoke-virtual {v4, v13}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1924
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-static {v6, v7}, Landroid/app/AppOpsManager;->keyToString(J)Ljava/lang/String;
@@ -414,7 +373,6 @@
 
     invoke-virtual {v4, v13}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1925
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v4, v15}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -423,13 +381,11 @@
 
     goto :goto_2
 
-    .line 1928
     :cond_2
     iget-object v13, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v13, v12}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1930
     :goto_2
     iget-object v13, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
@@ -437,12 +393,10 @@
 
     invoke-virtual {v13, v14}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1931
     iget-object v13, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v13, v10, v11}, Ljava/io/PrintWriter;->print(J)V
 
-    .line 1933
     :cond_3
     invoke-virtual {v1, v8, v8, v9}, Landroid/app/AppOpsManager$HistoricalOp;->getAccessDuration(III)J
 
@@ -456,14 +410,12 @@
 
     if-nez v4, :cond_4
 
-    .line 1936
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v10, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mUidStatePrefix:Ljava/lang/String;
 
     invoke-virtual {v4, v10}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1937
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-static {v6, v7}, Landroid/app/AppOpsManager;->keyToString(J)Ljava/lang/String;
@@ -472,14 +424,12 @@
 
     invoke-virtual {v4, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1938
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v4, v15}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 1941
     :cond_4
     iget-object v6, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
@@ -487,7 +437,6 @@
 
     move/from16 v16, v4
 
-    .line 1943
     :goto_3
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
@@ -495,7 +444,6 @@
 
     invoke-virtual {v4, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1944
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-static {v8, v9, v4}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
@@ -505,7 +453,6 @@
     :cond_5
     if-eqz v4, :cond_6
 
-    .line 1947
     iget-object v4, v0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v6, ""
@@ -524,40 +471,34 @@
 .method public visitHistoricalOps(Landroid/app/AppOpsManager$HistoricalOps;)V
     .locals 6
 
-    .line 1839
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v0}, Ljava/io/PrintWriter;->println()V
 
-    .line 1840
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mOpsPrefix:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1841
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string/jumbo v1, "snapshot:"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1842
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mUidPrefix:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1843
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "begin = "
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1844
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mDate:Ljava/util/Date;
 
     invoke-virtual {p1}, Landroid/app/AppOpsManager$HistoricalOps;->getBeginTimeMillis()J
@@ -566,7 +507,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Date;->setTime(J)V
 
-    .line 1845
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mDateFormatter:Ljava/text/SimpleDateFormat;
@@ -579,14 +519,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1846
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "  ("
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1847
     invoke-virtual {p1}, Landroid/app/AppOpsManager$HistoricalOps;->getBeginTimeMillis()J
 
     move-result-wide v2
@@ -599,28 +537,24 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 1848
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v2, ")"
 
     invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1849
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v3, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mUidPrefix:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1850
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v3, "end = "
 
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1851
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mDate:Ljava/util/Date;
 
     invoke-virtual {p1}, Landroid/app/AppOpsManager$HistoricalOps;->getEndTimeMillis()J
@@ -629,7 +563,6 @@
 
     invoke-virtual {v0, v3, v4}, Ljava/util/Date;->setTime(J)V
 
-    .line 1852
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v3, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mDateFormatter:Ljava/text/SimpleDateFormat;
@@ -642,12 +575,10 @@
 
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1853
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1854
     invoke-virtual {p1}, Landroid/app/AppOpsManager$HistoricalOps;->getEndTimeMillis()J
 
     move-result-wide v0
@@ -660,7 +591,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 1855
     iget-object p0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
@@ -671,7 +601,6 @@
 .method public visitHistoricalPackageOps(Landroid/app/AppOpsManager$HistoricalPackageOps;)V
     .locals 2
 
-    .line 1872
     iget v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilter:I
 
     and-int/lit8 v0, v0, 0x2
@@ -680,12 +609,10 @@
 
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilterPackage:Ljava/lang/String;
 
-    .line 1873
     invoke-virtual {p1}, Landroid/app/AppOpsManager$HistoricalPackageOps;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1872
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -694,7 +621,6 @@
 
     return-void
 
-    .line 1876
     :cond_0
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
@@ -702,14 +628,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1877
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "Package "
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1878
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {p1}, Landroid/app/AppOpsManager$HistoricalPackageOps;->getPackageName()Ljava/lang/String;
@@ -718,7 +642,6 @@
 
     invoke-virtual {v0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1879
     iget-object p0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string p1, ":"
@@ -731,7 +654,6 @@
 .method public visitHistoricalUidOps(Landroid/app/AppOpsManager$HistoricalUidOps;)V
     .locals 2
 
-    .line 1860
     iget v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mFilter:I
 
     and-int/lit8 v0, v0, 0x1
@@ -748,27 +670,23 @@
 
     return-void
 
-    .line 1863
     :cond_0
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v0}, Ljava/io/PrintWriter;->println()V
 
-    .line 1864
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     iget-object v1, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mUidPrefix:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1865
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "Uid "
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1866
     iget-object v0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {p1}, Landroid/app/AppOpsManager$HistoricalUidOps;->getUid()I
@@ -777,7 +695,6 @@
 
     invoke-static {v0, p1}, Landroid/os/UserHandle;->formatUid(Ljava/io/PrintWriter;I)V
 
-    .line 1867
     iget-object p0, p0, Lcom/android/server/appop/HistoricalRegistry$StringDumpVisitor;->mWriter:Ljava/io/PrintWriter;
 
     const-string p1, ":"

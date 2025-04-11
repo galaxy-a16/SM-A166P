@@ -13,10 +13,8 @@
 .method public constructor <init>(Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 649
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 650
     iput-object p1, p0, Lcom/android/server/slice/SliceManagerService$PackageMatchingCache;->mPkgSource:Ljava/util/function/Supplier;
 
     return-void
@@ -33,7 +31,6 @@
 
     return p0
 
-    .line 656
     :cond_0
     iget-object v0, p0, Lcom/android/server/slice/SliceManagerService$PackageMatchingCache;->mCurrentPkg:Ljava/lang/String;
 
@@ -47,7 +44,6 @@
 
     return p0
 
-    .line 660
     :cond_1
     iget-object v0, p0, Lcom/android/server/slice/SliceManagerService$PackageMatchingCache;->mPkgSource:Ljava/util/function/Supplier;
 
@@ -59,7 +55,6 @@
 
     iput-object v0, p0, Lcom/android/server/slice/SliceManagerService$PackageMatchingCache;->mCurrentPkg:Ljava/lang/String;
 
-    .line 661
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0

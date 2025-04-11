@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/attention/AttentionManagerService;)V
     .locals 0
 
-    .line 906
     iput-object p1, p0, Lcom/android/server/attention/AttentionManagerService$ScreenStateReceiver;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/attention/AttentionManagerService;Lcom/android/server/attention/AttentionManagerService$ScreenStateReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/attention/AttentionManagerService$ScreenStateReceiver;-><init>(Lcom/android/server/attention/AttentionManagerService;)V
 
     return-void
@@ -35,7 +33,6 @@
 
     const-string p1, "android.intent.action.SCREEN_OFF"
 
-    .line 909
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -46,7 +43,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 910
     iget-object p1, p0, Lcom/android/server/attention/AttentionManagerService$ScreenStateReceiver;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-static {p1}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$fgetmLock(Lcom/android/server/attention/AttentionManagerService;)Ljava/lang/Object;
@@ -55,13 +51,11 @@
 
     monitor-enter p1
 
-    .line 911
     :try_start_0
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$ScreenStateReceiver;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-static {p0}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$mcancelAndUnbindLocked(Lcom/android/server/attention/AttentionManagerService;)V
 
-    .line 912
     monitor-exit p1
 
     goto :goto_0

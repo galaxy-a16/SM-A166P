@@ -48,7 +48,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAreRulesReloaded(Lcom/android/server/enterprise/firewall/Firewall;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mAreRulesReloaded:Z
 
     return p0
@@ -57,7 +56,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFirewallRulesApplier(Lcom/android/server/enterprise/firewall/Firewall;)Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     return-object p0
@@ -66,7 +64,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInitializingIpTablesRulesLock(Lcom/android/server/enterprise/firewall/Firewall;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mInitializingIpTablesRulesLock:Ljava/lang/Object;
 
     return-object p0
@@ -75,7 +72,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsChainsCreated(Lcom/android/server/enterprise/firewall/Firewall;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mIsChainsCreated:Z
 
     return p0
@@ -84,7 +80,6 @@
 .method public static bridge synthetic -$$Nest$fputmAreRulesReloaded(Lcom/android/server/enterprise/firewall/Firewall;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mAreRulesReloaded:Z
 
     return-void
@@ -93,7 +88,6 @@
 .method public static bridge synthetic -$$Nest$mblockOrUnblockAll(Lcom/android/server/enterprise/firewall/Firewall;ZI)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/firewall/Firewall;->blockOrUnblockAll(ZI)V
 
     return-void
@@ -102,7 +96,6 @@
 .method public static bridge synthetic -$$Nest$mcreateChains(Lcom/android/server/enterprise/firewall/Firewall;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/enterprise/firewall/Firewall;->createChains()V
 
     return-void
@@ -111,7 +104,6 @@
 .method public static bridge synthetic -$$Nest$mhandleUserChains(Lcom/android/server/enterprise/firewall/Firewall;Ljava/lang/Integer;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/firewall/Firewall;->handleUserChains(Ljava/lang/Integer;Ljava/lang/String;)V
 
     return-void
@@ -120,7 +112,6 @@
 .method public static bridge synthetic -$$Nest$minitializeIpTables(Lcom/android/server/enterprise/firewall/Firewall;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/enterprise/firewall/Firewall;->initializeIpTables()V
 
     return-void
@@ -129,7 +120,6 @@
 .method public static bridge synthetic -$$Nest$monUserHandle(Lcom/android/server/enterprise/firewall/Firewall;Landroid/content/Intent;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->onUserHandle(Landroid/content/Intent;)V
 
     return-void
@@ -138,7 +128,6 @@
 .method public static bridge synthetic -$$Nest$mpackageAdded(Lcom/android/server/enterprise/firewall/Firewall;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/firewall/Firewall;->packageAdded(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -147,7 +136,6 @@
 .method public static bridge synthetic -$$Nest$mpackageRemoved(Lcom/android/server/enterprise/firewall/Firewall;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/firewall/Firewall;->packageRemoved(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -156,7 +144,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -165,14 +152,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 203
     new-instance v0, Lcom/android/server/enterprise/firewall/Firewall$Injector;
 
     invoke-direct {v0, p1}, Lcom/android/server/enterprise/firewall/Firewall$Injector;-><init>(Landroid/content/Context;)V
@@ -185,45 +170,36 @@
 .method public constructor <init>(Lcom/android/server/enterprise/firewall/Firewall$Injector;)V
     .locals 7
 
-    .line 206
     invoke-direct {p0}, Lcom/samsung/android/knox/net/firewall/IFirewall$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 100
     iput-boolean v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mIsChainsCreated:Z
 
-    .line 101
     iput-boolean v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mAreRulesReloaded:Z
 
-    .line 110
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mInitializingIpTablesRulesLock:Ljava/lang/Object;
 
-    .line 127
     new-instance v0, Lcom/android/server/enterprise/firewall/Firewall$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/firewall/Firewall$1;-><init>(Lcom/android/server/enterprise/firewall/Firewall;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mUserReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 141
     new-instance v2, Lcom/android/server/enterprise/firewall/Firewall$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/enterprise/firewall/Firewall$2;-><init>(Lcom/android/server/enterprise/firewall/Firewall;)V
 
     iput-object v2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mPackageFilterReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 207
     invoke-virtual {p1, p0}, Lcom/android/server/enterprise/firewall/Firewall$Injector;->initInjector(Lcom/android/server/enterprise/firewall/Firewall;)V
 
-    .line 208
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mInjector:Lcom/android/server/enterprise/firewall/Firewall$Injector;
 
-    .line 209
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/Firewall$Injector;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -236,35 +212,30 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mContext:Landroid/content/Context;
 
-    .line 210
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/Firewall$Injector;->getEDMStorageProvider()Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 211
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/Firewall$Injector;->getFirewallRulesApplier()Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
-    .line 212
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/Firewall$Injector;->getDomainFilter()Lcom/android/server/enterprise/firewall/DomainFilter;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
-    .line 216
     invoke-virtual {p1}, Lcom/android/server/enterprise/firewall/Firewall$Injector;->getEnterpriseDumpHelper()Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEnterpriseDumpHelper:Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;
 
-    .line 222
     iget-object p1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     sget-object v1, Lcom/android/server/enterprise/firewall/FirewallDefinitions$Table;->FILTER:Lcom/android/server/enterprise/firewall/FirewallDefinitions$Table;
@@ -275,7 +246,6 @@
 
     sput-boolean p1, Lcom/android/server/enterprise/firewall/Firewall;->mHasIpv6FilterSupport:Z
 
-    .line 227
     invoke-virtual {p0}, Lcom/android/server/enterprise/firewall/Firewall;->getConnectivityManager()Landroid/net/ConnectivityManager;
 
     move-result-object p1
@@ -288,47 +258,38 @@
 
     invoke-virtual {p1, v1}, Landroid/net/ConnectivityManager;->registerDefaultNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
 
-    .line 232
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.USER_REMOVED"
 
-    .line 233
     invoke-virtual {p1, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.USER_ADDED"
 
-    .line 234
     invoke-virtual {p1, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 235
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 237
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 238
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 239
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo p1, "package"
 
-    .line 240
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 241
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mContext:Landroid/content/Context;
 
     sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -339,7 +300,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 244
     invoke-virtual {p0}, Lcom/android/server/enterprise/firewall/Firewall;->initializeIpTables()V
 
     return-void
@@ -350,12 +310,10 @@
 .method public addDomainFilterRules(Lcom/samsung/android/knox/ContextInfo;I)[Lcom/samsung/android/knox/net/firewall/FirewallResponse;
     .locals 0
 
-    .line 1316
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1317
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->addDomainFilterRules(Lcom/samsung/android/knox/ContextInfo;I)[Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -370,16 +328,13 @@
 
     monitor-enter p0
 
-    .line 496
     :try_start_0
     iget v0, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 502
     invoke-static {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRuleValidator;->validateFirewallRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     move-result-object v1
 
-    .line 503
     invoke-virtual {v1}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getResult()Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     move-result-object v2
@@ -388,7 +343,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 504
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "addRule() - Invalid Firewall Rule"
@@ -397,12 +351,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 505
     monitor-exit p0
 
     return-object v1
 
-    .line 511
     :cond_0
     :try_start_1
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
@@ -419,12 +371,10 @@
 
     if-nez v1, :cond_1
 
-    .line 512
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 513
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mContext:Landroid/content/Context;
 
     const-string v3, "android"
@@ -435,14 +385,12 @@
 
     move-result-object v1
 
-    .line 517
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 520
     :try_start_2
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
@@ -460,27 +408,23 @@
 
     move-result-object v5
 
-    .line 519
     invoke-static {v1, v4, v5}, Lcom/android/server/enterprise/utils/Utils;->comparePackageSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 522
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-nez v1, :cond_1
 
-    .line 525
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "addRule() - Signature mismatch"
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -493,7 +437,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 529
     monitor-exit p0
 
     return-object p1
@@ -501,20 +444,16 @@
     :catchall_0
     move-exception p1
 
-    .line 522
     :try_start_4
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 523
     throw p1
 
-    .line 536
     :cond_1
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getAddressType()Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     move-result-object v1
 
-    .line 537
     sget-object v2, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV6:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     invoke-virtual {v2, v1}, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->equals(Ljava/lang/Object;)Z
@@ -523,12 +462,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 538
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getRuleType()Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     move-result-object v1
 
-    .line 539
     sget-object v2, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->ALLOW:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {v2, v1}, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->equals(Ljava/lang/Object;)Z
@@ -550,14 +487,12 @@
 
     if-nez v2, :cond_3
 
-    .line 541
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "addRule() - IPv6 not supported"
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -574,7 +509,6 @@
 
     return-object p1
 
-    .line 545
     :cond_3
     :try_start_5
     sget-object v2, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
@@ -598,14 +532,12 @@
 
     if-nez v1, :cond_5
 
-    .line 547
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "addRule() - IPv6 not supported"
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 548
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -622,7 +554,6 @@
 
     return-object p1
 
-    .line 556
     :cond_5
     :try_start_6
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -633,14 +564,12 @@
 
     if-eqz v1, :cond_6
 
-    .line 557
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "addRule() - This rule is already in the database"
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->NO_CHANGES:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -657,7 +586,6 @@
 
     return-object p1
 
-    .line 563
     :cond_6
     :try_start_7
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->isFirewallEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
@@ -666,18 +594,15 @@
 
     if-eqz p1, :cond_7
 
-    .line 564
     sget-object p1, Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;->PENDING:Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;
 
     invoke-virtual {p2, p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setStatus(Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;)V
 
-    .line 570
     :cond_7
     invoke-static {p2, v0}, Lcom/android/server/enterprise/firewall/FirewallUtils;->getContentValuesFromRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;I)Landroid/content/ContentValues;
 
     move-result-object p1
 
-    .line 575
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "FirewallRule"
@@ -692,14 +617,12 @@
 
     if-nez p1, :cond_8
 
-    .line 577
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "addRule() - Failed to add rule in the database"
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -719,11 +642,9 @@
     :cond_8
     long-to-int p1, v0
 
-    .line 581
     :try_start_8
     invoke-virtual {p2, p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setId(I)V
 
-    .line 583
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->SUCCESS:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -753,13 +674,11 @@
 
     monitor-enter p0
 
-    .line 589
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 590
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v1, "addRules()"
@@ -768,25 +687,21 @@
 
     if-eqz p2, :cond_10
 
-    .line 591
     array-length v0, p2
 
     if-nez v0, :cond_0
 
     goto/16 :goto_7
 
-    .line 595
     :cond_0
     new-instance v0, Lorg/json/JSONArray;
 
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
-    .line 600
     array-length v1, p2
 
     new-array v1, v1, [Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
-    .line 601
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -795,18 +710,15 @@
 
     move v4, v3
 
-    .line 602
     :goto_0
     array-length v5, p2
 
     if-ge v4, v5, :cond_2
 
-    .line 603
     aget-object v5, p2, v4
 
     invoke-virtual {p0, v5, v0}, Lcom/android/server/enterprise/firewall/Firewall;->setRulesProperties(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lorg/json/JSONArray;)V
 
-    .line 604
     aget-object v5, p2, v4
 
     invoke-virtual {p0, p1, v5}, Lcom/android/server/enterprise/firewall/Firewall;->addRule(Lcom/samsung/android/knox/ContextInfo;Lcom/samsung/android/knox/net/firewall/FirewallRule;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -815,7 +727,6 @@
 
     aput-object v5, v1, v4
 
-    .line 605
     sget-object v6, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->SUCCESS:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     invoke-virtual {v5}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getResult()Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -828,7 +739,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 606
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -840,7 +750,6 @@
 
     goto :goto_0
 
-    .line 609
     :cond_2
     new-instance v4, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;
 
@@ -852,14 +761,12 @@
 
     invoke-direct {v4, v5, v7, v6}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 613
     iget v5, p1, Lcom/samsung/android/knox/ContextInfo;->mContainerId:I
 
     invoke-virtual {v4, v5}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setUserTypeProperty(I)V
 
     const-string/jumbo v5, "rules"
 
-    .line 615
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -868,7 +775,6 @@
 
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 617
     invoke-virtual {v0}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -883,13 +789,10 @@
 
     move-result-object v0
 
-    .line 615
     invoke-virtual {v4, v5, v0}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 619
     invoke-static {v4}, Lcom/samsung/android/knox/analytics/KnoxAnalytics;->log(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 
-    .line 623
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
@@ -898,7 +801,6 @@
 
     move v5, v3
 
-    .line 628
     :goto_1
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -906,7 +808,6 @@
 
     if-ge v5, v6, :cond_3
 
-    .line 629
     invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -925,7 +826,6 @@
 
     goto :goto_1
 
-    .line 634
     :cond_3
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -933,19 +833,16 @@
 
     new-array v5, v5, [Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
-    .line 636
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->isFirewallEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
 
     move-result v6
 
     if-eqz v6, :cond_7
 
-    .line 638
     invoke-virtual {p0, p1, v4}, Lcom/android/server/enterprise/firewall/Firewall;->enableFirewallRules(Lcom/samsung/android/knox/ContextInfo;[Lcom/samsung/android/knox/net/firewall/FirewallRule;)[Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     move-result-object v5
 
-    .line 639
     iget v6, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
     invoke-static {v6}, Landroid/os/UserHandle;->getUserId(I)I
@@ -954,19 +851,16 @@
 
     if-nez v6, :cond_4
 
-    .line 640
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/firewall/Firewall;->shouldApplyExemptRules([Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
-    .line 641
     iget-object v6, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v6, v7, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveExemptRules(ZLcom/samsung/android/knox/ContextInfo;)V
 
-    .line 643
     :cond_4
     iget v6, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
@@ -976,14 +870,12 @@
 
     if-nez v6, :cond_5
 
-    .line 644
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/firewall/Firewall;->shouldApplyKGExemptRule([Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v6
 
     if-eqz v6, :cond_5
 
-    .line 645
     iget-object v6, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v6, v7, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveKGExemptRule(ZLcom/samsung/android/knox/ContextInfo;)V
@@ -994,17 +886,14 @@
     :goto_2
     if-ge p1, v0, :cond_8
 
-    .line 647
     aget-object v6, v4, p1
 
-    .line 648
     invoke-virtual {p0, v6}, Lcom/android/server/enterprise/firewall/Firewall;->shouldApplyIcmpAllowRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v6
 
     if-eqz v6, :cond_6
 
-    .line 649
     iget-object v6, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v6, v7}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveIcmpAllowRule(Z)V
@@ -1020,14 +909,12 @@
     :cond_8
     if-eqz v7, :cond_f
 
-    .line 654
     array-length p1, p2
 
     new-array p1, p1, [Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     move v0, v3
 
-    .line 656
     :goto_3
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -1035,7 +922,6 @@
 
     if-ge v0, v4, :cond_b
 
-    .line 657
     sget-object v4, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->SUCCESS:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     aget-object v6, v5, v0
@@ -1050,7 +936,6 @@
 
     if-eqz v4, :cond_a
 
-    .line 658
     sget-object v4, Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;->INPUT_CHAIN_NOT_SUPPORTED_ERROR:Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;
 
     aget-object v6, v5, v0
@@ -1065,7 +950,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 659
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -1092,7 +976,6 @@
 
     aget-object v10, v5, v0
 
-    .line 661
     invoke-virtual {v10}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getMessage()Ljava/lang/String;
 
     move-result-object v10
@@ -1109,7 +992,6 @@
 
     goto :goto_4
 
-    .line 663
     :cond_9
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1137,7 +1019,6 @@
 
     aget-object v10, v5, v0
 
-    .line 665
     invoke-virtual {v10}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getMessage()Ljava/lang/String;
 
     move-result-object v10
@@ -1154,7 +1035,6 @@
 
     goto :goto_4
 
-    .line 668
     :cond_a
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1182,7 +1062,6 @@
 
     aget-object v10, v5, v0
 
-    .line 671
     invoke-virtual {v10}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getMessage()Ljava/lang/String;
 
     move-result-object v10
@@ -1202,14 +1081,12 @@
 
     goto/16 :goto_3
 
-    .line 676
     :cond_b
     :goto_5
     array-length v0, p2
 
     if-ge v3, v0, :cond_e
 
-    .line 677
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->SUCCESS:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     aget-object v2, v1, v3
@@ -1226,7 +1103,6 @@
 
     goto :goto_6
 
-    .line 680
     :cond_c
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->NO_CHANGES:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
@@ -1242,14 +1118,12 @@
 
     if-eqz v0, :cond_d
 
-    .line 681
     aget-object v0, v1, v3
 
     aput-object v0, p1, v3
 
     goto :goto_6
 
-    .line 683
     :cond_d
     new-instance v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
@@ -1271,7 +1145,6 @@
 
     aget-object v6, v1, v3
 
-    .line 685
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getMessage()Ljava/lang/String;
 
     move-result-object v6
@@ -1293,19 +1166,16 @@
 
     goto :goto_5
 
-    .line 688
     :cond_e
     monitor-exit p0
 
     return-object p1
 
-    .line 690
     :cond_f
     monitor-exit p0
 
     return-object v1
 
-    .line 592
     :cond_10
     :goto_7
     monitor-exit p0
@@ -1329,31 +1199,26 @@
 
     const/4 v1, 0x0
 
-    .line 421
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/enterprise/firewall/Firewall;->getRules(Lcom/samsung/android/knox/ContextInfo;ILjava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object p0
 
     const-string/jumbo v0, "package"
 
-    .line 424
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 423
     invoke-static {v0}, Landroid/content/pm/IPackageManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 426
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
     const/4 v3, 0x0
 
-    .line 428
     :try_start_0
     array-length v4, p0
 
@@ -1364,7 +1229,6 @@
 
     aget-object v6, p0, v5
 
-    .line 429
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
     move-result-object v6
@@ -1375,24 +1239,20 @@
 
     iget v7, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 430
     invoke-static {v7}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v7
 
     const-wide/16 v8, 0x0
 
-    .line 429
     invoke-interface {v0, v6, v8, v9, v7}, Landroid/content/pm/IPackageManager;->getApplicationInfo(Ljava/lang/String;JI)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v6
 
     if-eqz v6, :cond_0
 
-    .line 431
     iget v6, v6, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 432
     invoke-static {v6}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v6
@@ -1404,7 +1264,6 @@
 
     if-ne v7, v6, :cond_0
 
-    .line 439
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x1
@@ -1430,7 +1289,6 @@
     :catch_0
     move-exception p0
 
-    .line 437
     :try_start_1
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -1445,18 +1303,15 @@
     :goto_2
     return v3
 
-    .line 439
     :goto_3
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 440
     throw p0
 .end method
 
 .method public final blockOrUnblockAll(ZI)V
     .locals 4
 
-    .line 313
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1479,7 +1334,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1506,7 +1360,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -1515,7 +1368,6 @@
 
     if-ne p2, v1, :cond_0
 
-    .line 321
     iget-object p2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->getAllAdmins()Ljava/util/ArrayList;
@@ -1524,7 +1376,6 @@
 
     goto :goto_0
 
-    .line 323
     :cond_0
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1532,7 +1383,6 @@
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 325
     :goto_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1560,19 +1410,16 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 330
     new-instance v1, Lcom/samsung/android/knox/ContextInfo;
 
     invoke-direct {v1, v0}, Lcom/samsung/android/knox/ContextInfo;-><init>(I)V
 
-    .line 334
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/firewall/Firewall;->isFirewallEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 339
     sget-object v2, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV4:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     const/4 v3, 0x0
@@ -1581,34 +1428,28 @@
 
     move-result-object v2
 
-    .line 340
     invoke-virtual {p0, v2, v1, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enableOrDisableRuleAsAdmin(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/ContextInfo;Z)V
 
-    .line 344
     sget-object v2, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV6:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     invoke-virtual {p0, v2, v3}, Lcom/android/server/enterprise/firewall/Firewall;->createDenyAllRule(Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;Z)Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object v2
 
-    .line 345
     invoke-virtual {p0, v2, v1, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enableOrDisableRuleAsAdmin(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/ContextInfo;Z)V
 
-    .line 350
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 351
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/firewall/Firewall;->adminHaveSystemRule(Lcom/samsung/android/knox/ContextInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 352
     sget-object v0, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV4:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     const/4 v2, 0x1
@@ -1617,17 +1458,14 @@
 
     move-result-object v0
 
-    .line 353
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enableOrDisableRuleAsAdmin(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/ContextInfo;Z)V
 
-    .line 357
     sget-object v0, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV6:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     invoke-virtual {p0, v0, v2}, Lcom/android/server/enterprise/firewall/Firewall;->createDenyAllRule(Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;Z)Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object v0
 
-    .line 358
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enableOrDisableRuleAsAdmin(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/ContextInfo;Z)V
 
     goto :goto_1
@@ -1639,12 +1477,10 @@
 .method public clearAllDomainFilterRules(Lcom/samsung/android/knox/ContextInfo;)[Lcom/samsung/android/knox/net/firewall/FirewallResponse;
     .locals 1
 
-    .line 1309
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1310
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/DomainFilterRule;->CLEAR_ALL:Ljava/util/List;
@@ -1661,7 +1497,6 @@
 
     monitor-enter p0
 
-    .line 771
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -1671,14 +1506,12 @@
 
     if-nez p1, :cond_0
 
-    .line 773
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "clearFirewallRulesFromDb() - Rule type is null"
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 774
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -1695,19 +1528,16 @@
 
     return-object p1
 
-    .line 777
     :cond_0
     :try_start_1
     iget p2, p2, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 783
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "adminUid"
 
-    .line 784
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -1716,14 +1546,12 @@
 
     const-string/jumbo p2, "ruleType"
 
-    .line 785
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v0, p2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 786
     iget-object p1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string p2, "FirewallRule"
@@ -1736,14 +1564,12 @@
 
     if-ne p1, p2, :cond_1
 
-    .line 788
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "clearFirewallRulesFromDb() - Failed to clear rules from database"
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 789
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -1763,7 +1589,6 @@
     :cond_1
     if-nez p1, :cond_2
 
-    .line 792
     :try_start_2
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -1771,7 +1596,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 793
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->NO_CHANGES:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -1788,7 +1612,6 @@
 
     return-object p1
 
-    .line 797
     :cond_2
     :try_start_3
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -1820,7 +1643,6 @@
 
     monitor-enter p0
 
-    .line 710
     :try_start_0
     iget v0, p3, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
@@ -1828,7 +1650,6 @@
 
     move-result v0
 
-    .line 712
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     const/4 v2, 0x1
@@ -1843,7 +1664,6 @@
 
     goto :goto_0
 
-    .line 714
     :cond_0
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->ALLOW:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -1853,7 +1673,6 @@
 
     goto :goto_0
 
-    .line 716
     :cond_1
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -1863,7 +1682,6 @@
 
     goto :goto_0
 
-    .line 718
     :cond_2
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT_EXCEPTION:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -1881,7 +1699,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 723
     invoke-virtual {p0, p3}, Lcom/android/server/enterprise/firewall/Firewall;->isFirewallEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
 
     move-result v5
@@ -1890,7 +1707,6 @@
 
     if-ne v1, v4, :cond_4
 
-    .line 725
     iget-object v5, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v5}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->clearIcmpAllowRule()V
@@ -1898,27 +1714,22 @@
     :cond_4
     if-ne v1, v4, :cond_5
 
-    .line 727
     iget v5, p3, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 728
     invoke-static {v5}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
     if-nez v5, :cond_5
 
-    .line 730
     iget-object v5, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v5, v3, p3}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveExemptRules(ZLcom/samsung/android/knox/ContextInfo;)V
 
-    .line 731
     iget-object v5, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v5, v3, p3}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveKGExemptRule(ZLcom/samsung/android/knox/ContextInfo;)V
 
-    .line 734
     :cond_5
     iget-object v3, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
@@ -1932,14 +1743,12 @@
 
     if-nez v0, :cond_6
 
-    .line 735
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p2, "clearRuleByType() - Failed to disable firewall rules"
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 736
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -1959,7 +1768,6 @@
     :cond_6
     if-ne v1, v2, :cond_7
 
-    .line 741
     :try_start_1
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
@@ -1969,7 +1777,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 742
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->reinsertIcmpAllowRule()V
@@ -1981,17 +1788,14 @@
 
     if-nez p2, :cond_9
 
-    .line 744
     iget p2, p3, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 746
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
     if-nez p2, :cond_9
 
-    .line 747
     iget-object p2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {p2}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->isExemptRulesApplied()Z
@@ -2000,12 +1804,10 @@
 
     if-eqz p2, :cond_8
 
-    .line 748
     iget-object p2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {p2, p3}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->reinsertExemptRules(Lcom/samsung/android/knox/ContextInfo;)V
 
-    .line 749
     :cond_8
     iget-object p2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
@@ -2015,12 +1817,10 @@
 
     if-eqz p2, :cond_9
 
-    .line 750
     iget-object p2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {p2, p3}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->reinsertKGExemptRule(Lcom/samsung/android/knox/ContextInfo;)V
 
-    .line 753
     :cond_9
     invoke-virtual {p0, p1, p3}, Lcom/android/server/enterprise/firewall/Firewall;->clearFirewallRulesFromDb(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
@@ -2032,7 +1832,6 @@
 
     return-object p1
 
-    .line 755
     :cond_a
     :try_start_2
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -2064,20 +1863,17 @@
 
     monitor-enter p0
 
-    .line 696
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 697
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v1, "clearRules()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 699
     invoke-static {}, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->values()[Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     move-result-object v0
@@ -2086,7 +1882,6 @@
 
     new-array v0, v0, [Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
-    .line 700
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->ALLOW:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p0, v1, p2, p1}, Lcom/android/server/enterprise/firewall/Firewall;->clearRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -2097,7 +1892,6 @@
 
     aput-object v1, v0, v2
 
-    .line 701
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p0, v1, p2, p1}, Lcom/android/server/enterprise/firewall/Firewall;->clearRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -2108,7 +1902,6 @@
 
     aput-object v1, v0, v2
 
-    .line 702
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p0, v1, p2, p1}, Lcom/android/server/enterprise/firewall/Firewall;->clearRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -2119,7 +1912,6 @@
 
     aput-object v1, v0, v2
 
-    .line 703
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT_EXCEPTION:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p0, v1, p2, p1}, Lcom/android/server/enterprise/firewall/Firewall;->clearRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -2132,7 +1924,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 704
     monitor-exit p0
 
     return-object v0
@@ -2156,7 +1947,6 @@
 
     move v3, v2
 
-    .line 2057
     :goto_0
     array-length v4, p3
 
@@ -2164,21 +1954,18 @@
 
     if-ge v1, v4, :cond_5
 
-    .line 2058
     aget-object v4, p1, v1
 
     invoke-virtual {p0, v4, p4}, Lcom/android/server/enterprise/firewall/Firewall;->convertIpSectionToInt(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;)I
 
     move-result v4
 
-    .line 2059
     aget-object v6, p2, v1
 
     invoke-virtual {p0, v6, p4}, Lcom/android/server/enterprise/firewall/Firewall;->convertIpSectionToInt(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;)I
 
     move-result v6
 
-    .line 2060
     aget-object v7, p3, v1
 
     invoke-virtual {p0, v7, p4}, Lcom/android/server/enterprise/firewall/Firewall;->convertIpSectionToInt(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;)I
@@ -2231,7 +2018,6 @@
 .method public final convertIpSectionToInt(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;)I
     .locals 0
 
-    .line 2070
     sget-object p0, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV4:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     if-ne p2, p0, :cond_0
@@ -2249,7 +2035,6 @@
     :cond_0
     const/16 p0, 0x10
 
-    .line 2071
     invoke-static {p1, p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -2263,7 +2048,6 @@
 
     const-string p0, "::"
 
-    .line 2000
     invoke-virtual {p1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2272,13 +2056,11 @@
 
     return-object p1
 
-    .line 2001
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2002
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2296,14 +2078,12 @@
     :goto_0
     if-ge v5, v3, :cond_2
 
-    .line 2004
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 p0, 0x7
 
     if-eq v5, p0, :cond_1
 
-    .line 2005
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
@@ -2311,7 +2091,6 @@
 
     goto :goto_0
 
-    .line 2007
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2319,7 +2098,6 @@
 
     return-object p0
 
-    .line 2009
     :cond_3
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -2327,7 +2105,6 @@
 
     const/4 v1, 0x0
 
-    .line 2010
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result p1
@@ -2338,14 +2115,12 @@
 
     if-ne p1, v6, :cond_7
 
-    .line 2011
     aget-object p0, p0, v5
 
     invoke-virtual {p0, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2012
     array-length p1, p0
 
     sub-int/2addr v3, p1
@@ -2355,26 +2130,22 @@
     :goto_1
     if-ge p1, v3, :cond_4
 
-    .line 2014
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_1
 
-    .line 2016
     :cond_4
     :goto_2
     array-length p1, p0
 
     if-ge v1, p1, :cond_6
 
-    .line 2017
     aget-object p1, p0, v1
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2018
     array-length p1, p0
 
     sub-int/2addr p1, v5
@@ -2388,7 +2159,6 @@
 
     goto :goto_2
 
-    .line 2020
     :cond_6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2396,7 +2166,6 @@
 
     return-object p0
 
-    .line 2022
     :cond_7
     array-length p1, p0
 
@@ -2404,21 +2173,18 @@
 
     if-ne p1, v6, :cond_c
 
-    .line 2023
     aget-object p1, p0, v1
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2024
     aget-object p0, p0, v5
 
     invoke-virtual {p0, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2025
     array-length v2, p1
 
     sub-int/2addr v3, v2
@@ -2429,18 +2195,15 @@
 
     move v2, v1
 
-    .line 2026
     :goto_3
     array-length v6, p1
 
     if-ge v2, v6, :cond_8
 
-    .line 2027
     aget-object v6, p1, v2
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2028
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
@@ -2453,26 +2216,22 @@
     :goto_4
     if-ge p1, v3, :cond_9
 
-    .line 2031
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_4
 
-    .line 2033
     :cond_9
     :goto_5
     array-length p1, p0
 
     if-ge v1, p1, :cond_b
 
-    .line 2034
     aget-object p1, p0, v1
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2035
     array-length p1, p0
 
     sub-int/2addr p1, v5
@@ -2486,7 +2245,6 @@
 
     goto :goto_5
 
-    .line 2037
     :cond_b
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2494,7 +2252,6 @@
 
     return-object p0
 
-    .line 2039
     :cond_c
     aget-object p0, p0, v1
 
@@ -2502,20 +2259,17 @@
 
     move-result-object p0
 
-    .line 2040
     array-length p1, p0
 
     sub-int/2addr v3, p1
 
     move p1, v1
 
-    .line 2041
     :goto_6
     array-length v5, p0
 
     if-ge p1, v5, :cond_d
 
-    .line 2042
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2540,14 +2294,12 @@
     :goto_7
     if-ge v1, v3, :cond_f
 
-    .line 2045
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 p0, v3, -0x1
 
     if-eq v1, p0, :cond_e
 
-    .line 2046
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_e
@@ -2555,7 +2307,6 @@
 
     goto :goto_7
 
-    .line 2048
     :cond_f
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2567,12 +2318,10 @@
 .method public final createChains()V
     .locals 3
 
-    .line 448
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mInitializingIpTablesRulesLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 449
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mIsChainsCreated:Z
     :try_end_0
@@ -2580,7 +2329,6 @@
 
     if-nez v1, :cond_0
 
-    .line 451
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
@@ -2603,7 +2351,6 @@
     :catch_0
     move-exception p0
 
-    .line 459
     :try_start_2
     sget-object v1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -2616,7 +2363,6 @@
     :catch_1
     move-exception p0
 
-    .line 457
     sget-object v1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v2, "createIptablesChains(): NullPointerException was thrown."
@@ -2628,7 +2374,6 @@
     :catch_2
     move-exception p0
 
-    .line 455
     sget-object v1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v2, "createIptablesChains(): IOException was thrown."
@@ -2640,14 +2385,12 @@
     :catch_3
     move-exception p0
 
-    .line 453
     sget-object v1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v2, "createIptablesChains(): SecurityException was thrown."
 
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 462
     :cond_0
     :goto_0
     monitor-exit v0
@@ -2667,7 +2410,6 @@
 .method public final createDenyAllRule(Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;Z)Lcom/samsung/android/knox/net/firewall/FirewallRule;
     .locals 1
 
-    .line 368
     new-instance p0, Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
@@ -2676,15 +2418,12 @@
 
     const-string p1, "*"
 
-    .line 369
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setIpAddress(Ljava/lang/String;)V
 
-    .line 370
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setPortNumber(Ljava/lang/String;)V
 
     if-eqz p2, :cond_0
 
-    .line 372
     new-instance p1, Lcom/samsung/android/knox/AppIdentity;
 
     const-string p2, "android"
@@ -2693,7 +2432,6 @@
 
     invoke-direct {p1, p2, v0}, Lcom/samsung/android/knox/AppIdentity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 373
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setApplication(Lcom/samsung/android/knox/AppIdentity;)V
 
     :cond_0
@@ -2705,17 +2443,14 @@
 
     const/4 v0, 0x1
 
-    .line 379
     invoke-virtual {p0, p1, v0}, Lcom/android/server/enterprise/firewall/Firewall;->createDenyAllRule(Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;Z)Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object p0
 
     const-string p1, "53"
 
-    .line 380
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setPortNumber(Ljava/lang/String;)V
 
-    .line 381
     invoke-virtual {p2}, Lcom/samsung/android/knox/AppIdentity;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -2734,11 +2469,9 @@
 
     invoke-direct {p2, v0, p1}, Lcom/samsung/android/knox/AppIdentity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 382
     :cond_0
     invoke-virtual {p0, p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setApplication(Lcom/samsung/android/knox/AppIdentity;)V
 
-    .line 383
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2773,7 +2506,6 @@
 
     monitor-enter p0
 
-    .line 810
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -2781,7 +2513,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 811
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "FirewallRule"
@@ -2794,14 +2525,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 813
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v0, "deleteFirewallRuleFromDb() - Failed to remove rule from database"
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -2821,7 +2550,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 817
     :try_start_1
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -2829,7 +2557,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 818
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -2846,7 +2573,6 @@
 
     return-object p1
 
-    .line 822
     :cond_1
     :try_start_2
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -2878,7 +2604,6 @@
 
     monitor-enter p0
 
-    .line 994
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -2886,29 +2611,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 995
     iget v0, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 996
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 997
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/firewall/Firewall;->getFirewallOwner(I)I
 
     move-result v2
 
     if-eq v2, v0, :cond_0
 
-    .line 1003
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v0, "disableFirewall() - FAILED! NOT_AUTHORIZED_ERROR ADMINUID_IS_NOT_THE_OWNER"
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1004
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -2925,7 +2645,6 @@
 
     return-object p1
 
-    .line 1011
     :cond_0
     :try_start_1
     new-instance v2, Landroid/content/ContentValues;
@@ -2934,7 +2653,6 @@
 
     const-string v3, "adminUid"
 
-    .line 1012
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -2943,14 +2661,12 @@
 
     const-string/jumbo v0, "userID"
 
-    .line 1013
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v2, v0, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1014
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "FirewallStatus"
@@ -2961,14 +2677,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1015
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v0, "disableFirewall() - FAILED! DATABASE_ERROR FAIL_TO_DISABLE_FIREWALL_IN_THE_DATABASE"
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1016
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -2990,7 +2704,6 @@
 
     const/4 v2, 0x0
 
-    .line 1020
     :try_start_2
     invoke-virtual {p0, p1, v0, v2}, Lcom/android/server/enterprise/firewall/Firewall;->getRules(Lcom/samsung/android/knox/ContextInfo;ILjava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
@@ -2998,22 +2711,18 @@
 
     if-eqz v0, :cond_7
 
-    .line 1021
     array-length v2, v0
 
     if-lez v2, :cond_7
 
-    .line 1022
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1023
     array-length v3, v0
 
     new-array v4, v3, [Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
-    .line 1025
     iget-object v4, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3033,10 +2742,8 @@
 
     const-string p1, "Rule with Id = "
 
-    .line 1027
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1028
     aget-object p1, v0, v4
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getId()I
@@ -3047,19 +2754,16 @@
 
     const-string p1, " failed to disable. Error: "
 
-    .line 1029
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, "Unexpected error"
 
-    .line 1030
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 1032
     :cond_2
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -3067,14 +2771,12 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1033
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;->UNEXPECTED_ERROR:Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;
 
-    .line 1034
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -3083,12 +2785,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1033
     monitor-exit p0
 
     return-object p1
 
-    .line 1037
     :cond_3
     :try_start_3
     array-length v1, v0
@@ -3100,7 +2800,6 @@
 
     aget-object v6, v0, v5
 
-    .line 1038
     iget-object v7, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     sget-object v8, Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;->DISABLED:Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;
@@ -3119,10 +2818,8 @@
 
     const-string v5, "Rule with Id = "
 
-    .line 1041
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1042
     aget-object v5, v0, v1
 
     invoke-virtual {v5}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getId()I
@@ -3133,14 +2830,12 @@
 
     const-string v5, " successfully disabled.\n"
 
-    .line 1043
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 1045
     :cond_5
     iget v0, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
@@ -3150,17 +2845,14 @@
 
     if-nez v0, :cond_6
 
-    .line 1046
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v0, v4, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveExemptRules(ZLcom/samsung/android/knox/ContextInfo;)V
 
-    .line 1047
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v0, v4, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveKGExemptRule(ZLcom/samsung/android/knox/ContextInfo;)V
 
-    .line 1049
     :cond_6
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
@@ -3168,7 +2860,6 @@
 
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;->NO_ERROR:Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;
 
-    .line 1050
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -3177,12 +2868,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1049
     monitor-exit p0
 
     return-object p1
 
-    .line 1052
     :cond_7
     :try_start_4
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
@@ -3191,7 +2880,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1053
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->SUCCESS:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -3223,7 +2911,6 @@
 
     move-object/from16 v1, p2
 
-    .line 1423
     iget-object v2, v0, Lcom/android/server/enterprise/firewall/Firewall;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.DUMP"
@@ -3236,12 +2923,10 @@
 
     const-string v0, "Permission Denial: can\'t dump Firewall"
 
-    .line 1425
     invoke-virtual {v1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
 
-    .line 1429
     :cond_0
     iget-object v2, v0, Lcom/android/server/enterprise/firewall/Firewall;->mEnterpriseDumpHelper:Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;
 
@@ -3281,7 +2966,6 @@
 
     invoke-virtual {v2, v1, v4, v3}, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->dumpTable(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1447
     iget-object v2, v0, Lcom/android/server/enterprise/firewall/Firewall;->mEnterpriseDumpHelper:Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;
 
     const-string v3, "adminUid"
@@ -3304,7 +2988,6 @@
 
     invoke-virtual {v2, v1, v4, v3}, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->dumpTable(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1456
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/Firewall;->mEnterpriseDumpHelper:Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;
 
     const-string/jumbo v2, "typeList"
@@ -3331,13 +3014,11 @@
 
     monitor-enter p0
 
-    .line 1353
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1354
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->enableDomainFilterOnIptables(Lcom/samsung/android/knox/ContextInfo;Z)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -3363,13 +3044,11 @@
 
     monitor-enter p0
 
-    .line 1338
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1339
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->enableDomainFilterReport(Lcom/samsung/android/knox/ContextInfo;Z)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -3395,7 +3074,6 @@
 
     monitor-enter p0
 
-    .line 906
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -3403,15 +3081,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 907
     iget v0, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 908
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 909
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/firewall/Firewall;->getFirewallOwner(I)I
 
     move-result v2
@@ -3422,14 +3097,12 @@
 
     if-eq v2, v0, :cond_0
 
-    .line 915
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v0, "enableFirewall() - Failed! NOT_AUTHORIZED_ERROR ADMINUID_IS_NOT_THE_OWNER"
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 916
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -3449,7 +3122,6 @@
     :cond_0
     if-ne v2, v3, :cond_1
 
-    .line 924
     :try_start_1
     new-instance v2, Landroid/content/ContentValues;
 
@@ -3457,7 +3129,6 @@
 
     const-string v3, "adminUid"
 
-    .line 925
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -3466,14 +3137,12 @@
 
     const-string/jumbo v0, "userID"
 
-    .line 926
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {v2, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 927
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "FirewallStatus"
@@ -3488,14 +3157,12 @@
 
     if-nez v0, :cond_1
 
-    .line 928
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v0, "enableFirewall() - Failed! DATABASE_ERROR FAILED_TO_ENABLE_FIREWALL_IN_THE_DATABASE"
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 929
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -3517,7 +3184,6 @@
 
     const/4 v1, 0x0
 
-    .line 934
     :try_start_2
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/enterprise/firewall/Firewall;->getRules(Lcom/samsung/android/knox/ContextInfo;ILjava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
@@ -3525,17 +3191,14 @@
 
     if-eqz v0, :cond_c
 
-    .line 935
     array-length v1, v0
 
     if-lez v1, :cond_c
 
-    .line 936
     invoke-virtual {p0, p1, v0}, Lcom/android/server/enterprise/firewall/Firewall;->enableFirewallRules(Lcom/samsung/android/knox/ContextInfo;[Lcom/samsung/android/knox/net/firewall/FirewallRule;)[Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     move-result-object v1
 
-    .line 941
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3548,7 +3211,6 @@
 
     move v6, v5
 
-    .line 943
     :goto_0
     array-length v7, v1
 
@@ -3556,7 +3218,6 @@
 
     if-ge v4, v7, :cond_5
 
-    .line 944
     aget-object v7, v1, v4
 
     invoke-virtual {v7}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getResult()Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -3571,7 +3232,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 946
     sget-object v7, Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;->INPUT_CHAIN_NOT_SUPPORTED_ERROR:Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;
 
     aget-object v9, v1, v4
@@ -3586,7 +3246,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 947
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3625,7 +3284,6 @@
 
     goto :goto_1
 
-    .line 950
     :cond_2
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -3663,7 +3321,6 @@
 
     goto :goto_1
 
-    .line 952
     :cond_3
     aget-object v7, v1, v4
 
@@ -3679,7 +3336,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 954
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3702,7 +3358,6 @@
 
     aget-object v7, v1, v4
 
-    .line 956
     invoke-virtual {v7}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getMessage()Ljava/lang/String;
 
     move-result-object v7
@@ -3717,7 +3372,6 @@
 
     move-result-object v5
 
-    .line 954
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move v5, v8
@@ -3731,14 +3385,12 @@
     :cond_5
     if-eqz v5, :cond_6
 
-    .line 961
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v0, "enableFirewall() - Failed to enable Firewall"
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 962
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -3757,7 +3409,6 @@
 
     return-object p1
 
-    .line 964
     :cond_6
     :try_start_3
     iget v1, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
@@ -3768,19 +3419,16 @@
 
     if-nez v1, :cond_7
 
-    .line 965
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/firewall/Firewall;->shouldApplyExemptRules([Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
-    .line 966
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v1, v8, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveExemptRules(ZLcom/samsung/android/knox/ContextInfo;)V
 
-    .line 968
     :cond_7
     iget v1, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
@@ -3790,19 +3438,16 @@
 
     if-nez v1, :cond_8
 
-    .line 969
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/firewall/Firewall;->shouldApplyKGExemptRule([Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    .line 970
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v1, v8, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveKGExemptRule(ZLcom/samsung/android/knox/ContextInfo;)V
 
-    .line 972
     :cond_8
     array-length p1, v0
 
@@ -3811,14 +3456,12 @@
 
     aget-object v1, v0, v3
 
-    .line 973
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/firewall/Firewall;->shouldApplyIcmpAllowRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 974
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v1, v8}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveIcmpAllowRule(Z)V
@@ -3828,7 +3471,6 @@
 
     goto :goto_2
 
-    .line 977
     :cond_a
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -3838,14 +3480,12 @@
 
     if-eqz v6, :cond_b
 
-    .line 979
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->SUCCESS:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;->INPUT_CHAIN_NOT_SUPPORTED_ERROR:Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;
 
-    .line 980
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -3854,12 +3494,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 979
     monitor-exit p0
 
     return-object p1
 
-    .line 982
     :cond_b
     :try_start_4
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -3868,7 +3506,6 @@
 
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;->NO_ERROR:Lcom/samsung/android/knox/net/firewall/FirewallResponse$ErrorCode;
 
-    .line 983
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -3877,12 +3514,10 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 982
     monitor-exit p0
 
     return-object p1
 
-    .line 987
     :cond_c
     :try_start_5
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
@@ -3891,7 +3526,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 988
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->SUCCESS:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -3921,7 +3555,6 @@
 
     monitor-enter p0
 
-    .line 884
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
@@ -3929,7 +3562,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 886
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enableFirewall(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     move-result-object p1
@@ -3940,7 +3572,6 @@
 
     return-object p1
 
-    .line 888
     :cond_0
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->disableFirewall(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -3966,13 +3597,11 @@
 
     monitor-enter p0
 
-    .line 852
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 853
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v1, "enableFirewallRules()"
@@ -3983,14 +3612,12 @@
 
     if-nez p2, :cond_0
 
-    .line 855
     monitor-exit p0
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 857
     :cond_0
     :try_start_1
     new-instance v0, Ljava/util/ArrayList;
@@ -4001,13 +3628,11 @@
 
     move v2, v1
 
-    .line 858
     :goto_0
     array-length v3, p2
 
     if-ge v2, v3, :cond_2
 
-    .line 859
     aget-object v3, p2, v2
 
     invoke-virtual {v3}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
@@ -4020,19 +3645,16 @@
 
     iget v4, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 860
     invoke-static {v4}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 859
     invoke-static {v3, v4}, Lcom/android/server/enterprise/firewall/FirewallUtils;->verifyPackageName(Ljava/lang/String;I)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 861
     iget-object v3, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     aget-object v4, p2, v2
@@ -4043,7 +3665,6 @@
 
     goto :goto_1
 
-    .line 863
     :cond_1
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4056,7 +3677,6 @@
 
     goto :goto_0
 
-    .line 866
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -4064,7 +3684,6 @@
 
     new-array v2, v2, [Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
-    .line 867
     :goto_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -4072,7 +3691,6 @@
 
     if-ge v1, v3, :cond_3
 
-    .line 868
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -4091,7 +3709,6 @@
 
     goto :goto_2
 
-    .line 870
     :cond_3
     sget-object p2, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -4099,7 +3716,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 872
     iget-object p2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     const/4 v0, 0x1
@@ -4125,7 +3741,6 @@
 .method public final enableOrDisableRuleAsAdmin(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/ContextInfo;Z)V
     .locals 4
 
-    .line 395
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v1, "enableOrDisableRuleAsAdmin()"
@@ -4143,14 +3758,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 399
     sget-object v2, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v3, "enableOrDisableRuleAsAdmin() - Block the traffic until applying rules process is finished"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     const/4 v3, 0x1
@@ -4161,7 +3774,6 @@
 
     goto :goto_1
 
-    .line 403
     :cond_0
     sget-object v2, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -4169,7 +3781,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 404
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v2, p1, p2, v0}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->disableIpTablesRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/ContextInfo;Z)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -4179,7 +3790,6 @@
     :goto_1
     if-eqz v2, :cond_1
 
-    .line 407
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getResult()Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     move-result-object v2
@@ -4188,7 +3798,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 408
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string p1, "enableOrDisableRuleAsAdmin() - success"
@@ -4210,7 +3819,6 @@
 .method public final enforceDownloadProvider()V
     .locals 3
 
-    .line 1958
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -4227,20 +3835,17 @@
 
     if-eqz p0, :cond_2
 
-    .line 1959
     array-length v0, p0
 
     if-lez v0, :cond_2
 
     const/4 v0, 0x0
 
-    .line 1960
     :goto_0
     array-length v1, p0
 
     if-ge v0, v1, :cond_2
 
-    .line 1961
     aget-object v1, p0, v0
 
     const-string v2, "com.android.providers.downloads.ui"
@@ -4255,7 +3860,6 @@
 
     const-string v2, "com.android.providers.downloads"
 
-    .line 1962
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -4273,7 +3877,6 @@
     :goto_1
     return-void
 
-    .line 1967
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -4287,7 +3890,6 @@
 .method public final enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
     .locals 2
 
-    .line 1080
     invoke-virtual {p0}, Lcom/android/server/enterprise/firewall/Firewall;->getEDM()Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     move-result-object p0
@@ -4300,14 +3902,12 @@
 
     move-result-object v1
 
-    .line 1082
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1080
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->enforceActiveAdminPermissionByContext(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p0
@@ -4324,7 +3924,6 @@
 
     return p0
 
-    .line 1539
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall$5;->$SwitchMap$com$samsung$android$knox$net$firewall$Firewall$AddressType:[I
 
@@ -4356,12 +3955,10 @@
 .method public final getConnectivityManager()Landroid/net/ConnectivityManager;
     .locals 2
 
-    .line 247
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     if-nez v0, :cond_0
 
-    .line 248
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/net/ConnectivityManager;
@@ -4374,7 +3971,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    .line 250
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
@@ -4384,7 +3980,6 @@
 .method public getDefaulCaptivePortalURL()Ljava/lang/String;
     .locals 0
 
-    .line 1469
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/firewall/DomainFilter;->getDefaulCaptivePortalURL()Ljava/lang/String;
@@ -4397,12 +3992,10 @@
 .method public getDomainFilterReport(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .line 1348
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1349
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->getDomainFilterReport(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;)Ljava/util/List;
@@ -4415,7 +4008,6 @@
 .method public getDomainFilterRules(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;I)Ljava/util/List;
     .locals 1
 
-    .line 1329
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
@@ -4424,7 +4016,6 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 1331
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->getDomainFilterRules(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;)Ljava/util/List;
@@ -4433,7 +4024,6 @@
 
     return-object p0
 
-    .line 1333
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
@@ -4447,12 +4037,10 @@
 .method public final getEDM()Lcom/samsung/android/knox/EnterpriseDeviceManager;
     .locals 1
 
-    .line 1180
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 1181
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mInjector:Lcom/android/server/enterprise/firewall/Firewall$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/firewall/Firewall$Injector;->getEDM()Lcom/samsung/android/knox/EnterpriseDeviceManager;
@@ -4461,7 +4049,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
-    .line 1183
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
@@ -4471,14 +4058,12 @@
 .method public final getEnabledFirewallRulesForPackage(ILjava/lang/String;)Ljava/util/List;
     .locals 2
 
-    .line 1867
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "adminUid"
 
-    .line 1868
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -4487,10 +4072,8 @@
 
     const-string/jumbo p1, "packageName"
 
-    .line 1869
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1870
     sget-object p1, Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;->ENABLED:Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;->toString()Ljava/lang/String;
@@ -4501,7 +4084,6 @@
 
     invoke-virtual {v0, p2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1871
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string p1, "FirewallRule"
@@ -4518,21 +4100,18 @@
 .method public getFirewallOwner(I)I
     .locals 2
 
-    .line 1064
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string/jumbo v1, "userID"
 
-    .line 1065
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1067
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string p1, "FirewallStatus"
@@ -4547,7 +4126,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1071
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -4559,7 +4137,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1074
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -4574,7 +4151,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1075
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -4593,7 +4169,6 @@
 
     return p0
 
-    .line 1551
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall$5;->$SwitchMap$com$samsung$android$knox$net$firewall$Firewall$NetworkInterface:[I
 
@@ -4638,7 +4213,6 @@
 
     return p0
 
-    .line 1565
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall$5;->$SwitchMap$com$samsung$android$knox$net$firewall$Firewall$PortLocation:[I
 
@@ -4683,7 +4257,6 @@
 
     return p0
 
-    .line 1579
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall$5;->$SwitchMap$com$samsung$android$knox$net$firewall$Firewall$Protocol:[I
 
@@ -4722,10 +4295,8 @@
 .method public final getRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;Ljava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
     .locals 3
 
-    .line 1139
     iget p3, p3, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 1142
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->ALLOW:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     if-ne p1, v0, :cond_0
@@ -4734,7 +4305,6 @@
 
     goto :goto_0
 
-    .line 1144
     :cond_0
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -4744,7 +4314,6 @@
 
     goto :goto_0
 
-    .line 1146
     :cond_1
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -4754,7 +4323,6 @@
 
     goto :goto_0
 
-    .line 1148
     :cond_2
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT_EXCEPTION:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -4767,7 +4335,6 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 1156
     :goto_0
     new-instance v1, Landroid/content/ContentValues;
 
@@ -4779,7 +4346,6 @@
 
     const-string v2, "adminUid"
 
-    .line 1158
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -4791,7 +4357,6 @@
 
     const-string/jumbo p3, "status"
 
-    .line 1164
     invoke-virtual {v1, p3, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
@@ -4799,7 +4364,6 @@
 
     if-eqz p2, :cond_6
 
-    .line 1168
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -4808,7 +4372,6 @@
 
     invoke-virtual {v1, p3, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1169
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string p2, "FirewallRule"
@@ -4819,7 +4382,6 @@
 
     move-result-object p0
 
-    .line 1172
     invoke-static {p0, p1}, Lcom/android/server/enterprise/firewall/FirewallUtils;->getRuleFromContentValues(Ljava/util/List;Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object p0
@@ -4842,7 +4404,6 @@
 
     return p0
 
-    .line 1593
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall$5;->$SwitchMap$com$samsung$android$knox$net$firewall$FirewallRule$RuleType:[I
 
@@ -4888,33 +4449,28 @@
 .method public getRules(Lcom/samsung/android/knox/ContextInfo;ILjava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
     .locals 6
 
-    .line 1088
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1090
     sget-object v0, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->ALLOW:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p0, v0, p2, p1, p3}, Lcom/android/server/enterprise/firewall/Firewall;->getRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;Ljava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object v0
 
-    .line 1091
     sget-object v1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p0, v1, p2, p1, p3}, Lcom/android/server/enterprise/firewall/Firewall;->getRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;Ljava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object v1
 
-    .line 1092
     sget-object v2, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p0, v2, p2, p1, p3}, Lcom/android/server/enterprise/firewall/Firewall;->getRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;Ljava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object v2
 
-    .line 1093
     sget-object v3, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT_EXCEPTION:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p0, v3, p2, p1, p3}, Lcom/android/server/enterprise/firewall/Firewall;->getRuleByType(Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;ILcom/samsung/android/knox/ContextInfo;Ljava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
@@ -4925,7 +4481,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1098
     array-length p2, v0
 
     add-int/2addr p2, p1
@@ -4938,7 +4493,6 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 1101
     array-length p3, v1
 
     add-int/2addr p2, p3
@@ -4946,7 +4500,6 @@
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 1104
     array-length p3, v2
 
     add-int/2addr p2, p3
@@ -4954,12 +4507,10 @@
     :cond_2
     if-eqz p0, :cond_3
 
-    .line 1107
     array-length p3, p0
 
     add-int/2addr p2, p3
 
-    .line 1110
     :cond_3
     new-array p2, p2, [Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
@@ -4969,7 +4520,6 @@
 
     move v3, p3
 
-    .line 1113
     :goto_1
     array-length v4, v0
 
@@ -4977,7 +4527,6 @@
 
     add-int/lit8 v4, v3, 0x1
 
-    .line 1114
     aget-object v5, v0, p3
 
     aput-object v5, p2, v3
@@ -4996,7 +4545,6 @@
 
     move p3, p1
 
-    .line 1118
     :goto_2
     array-length v0, v1
 
@@ -5004,7 +4552,6 @@
 
     add-int/lit8 v0, v3, 0x1
 
-    .line 1119
     aget-object v4, v1, p3
 
     aput-object v4, p2, v3
@@ -5020,7 +4567,6 @@
 
     move p3, p1
 
-    .line 1123
     :goto_3
     array-length v0, v2
 
@@ -5028,7 +4574,6 @@
 
     add-int/lit8 v0, v3, 0x1
 
-    .line 1124
     aget-object v1, v2, p3
 
     aput-object v1, p2, v3
@@ -5042,7 +4587,6 @@
     :cond_7
     if-eqz p0, :cond_8
 
-    .line 1128
     :goto_4
     array-length p3, p0
 
@@ -5050,7 +4594,6 @@
 
     add-int/lit8 p3, v3, 0x1
 
-    .line 1129
     aget-object v0, p0, p1
 
     aput-object v0, p2, v3
@@ -5068,26 +4611,22 @@
 .method public final getRulesByAdminUidAndPackage(ILjava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
     .locals 7
 
-    .line 1608
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string/jumbo v1, "packageName"
 
-    .line 1609
     invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "adminUid"
 
-    .line 1610
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v0, p2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1612
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string p1, "FirewallRule"
@@ -5098,27 +4637,22 @@
 
     move-result-object p0
 
-    .line 1616
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1617
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1618
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1619
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1621
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -5138,7 +4672,6 @@
 
     const-string/jumbo v4, "ruleType"
 
-    .line 1622
     invoke-virtual {v3, v4}, Landroid/content/ContentValues;->containsKey(Ljava/lang/String;)Z
 
     move-result v5
@@ -5147,7 +4680,6 @@
 
     goto :goto_0
 
-    .line 1623
     :cond_0
     invoke-virtual {v3, v4}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -5157,7 +4689,6 @@
 
     move-result-object v4
 
-    .line 1624
     sget-object v5, Lcom/android/server/enterprise/firewall/Firewall$5;->$SwitchMap$com$samsung$android$knox$net$firewall$FirewallRule$RuleType:[I
 
     invoke-virtual {v4}, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->ordinal()I
@@ -5184,31 +4715,26 @@
 
     goto :goto_0
 
-    .line 1635
     :cond_1
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1632
     :cond_2
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1629
     :cond_3
     invoke-interface {p2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1626
     :cond_4
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1642
     :cond_5
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -5216,7 +4742,6 @@
 
     new-array p0, p0, [Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
-    .line 1645
     sget-object v2, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->ALLOW:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-static {p1, v2}, Lcom/android/server/enterprise/firewall/FirewallUtils;->getRuleFromContentValues(Ljava/util/List;Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
@@ -5231,7 +4756,6 @@
 
     move v4, v3
 
-    .line 1649
     :goto_1
     array-length v5, p1
 
@@ -5239,7 +4763,6 @@
 
     add-int/lit8 v5, v4, 0x1
 
-    .line 1650
     aget-object v6, p1, v3
 
     aput-object v6, p0, v4
@@ -5253,7 +4776,6 @@
     :cond_6
     move v4, v2
 
-    .line 1654
     :cond_7
     sget-object p1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -5265,7 +4787,6 @@
 
     move p2, v2
 
-    .line 1657
     :goto_2
     array-length v3, p1
 
@@ -5273,7 +4794,6 @@
 
     add-int/lit8 v3, v4, 0x1
 
-    .line 1658
     aget-object v5, p1, p2
 
     aput-object v5, p0, v4
@@ -5284,7 +4804,6 @@
 
     goto :goto_2
 
-    .line 1662
     :cond_8
     sget-object p1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -5296,7 +4815,6 @@
 
     move p2, v2
 
-    .line 1666
     :goto_3
     array-length v0, p1
 
@@ -5304,7 +4822,6 @@
 
     add-int/lit8 v0, v4, 0x1
 
-    .line 1667
     aget-object v3, p1, p2
 
     aput-object v3, p0, v4
@@ -5315,7 +4832,6 @@
 
     goto :goto_3
 
-    .line 1671
     :cond_9
     sget-object p1, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->REDIRECT_EXCEPTION:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
@@ -5325,7 +4841,6 @@
 
     if-eqz p1, :cond_a
 
-    .line 1675
     :goto_4
     array-length p2, p1
 
@@ -5333,7 +4848,6 @@
 
     add-int/lit8 p2, v4, 0x1
 
-    .line 1676
     aget-object v0, p1, v2
 
     aput-object v0, p0, v4
@@ -5351,7 +4865,6 @@
 .method public final handleUserChains(Ljava/lang/Integer;Ljava/lang/String;)V
     .locals 2
 
-    .line 466
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mInitializingIpTablesRulesLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -5359,19 +4872,16 @@
     :try_start_0
     const-string v1, "android.intent.action.USER_REMOVED"
 
-    .line 468
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 469
     iget-object p2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {p2, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->removeIptablesChains(Ljava/lang/Integer;)Z
 
-    .line 470
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     const/4 p2, 0x1
@@ -5383,14 +4893,12 @@
     :cond_0
     const-string v1, "android.intent.action.USER_ADDED"
 
-    .line 471
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 472
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->createIptablesChains(Ljava/lang/Integer;)Z
@@ -5411,7 +4919,6 @@
     :catch_0
     move-exception p0
 
-    .line 483
     :try_start_1
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -5423,7 +4930,6 @@
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 484
     invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -5434,7 +4940,6 @@
 
     move-result-object p0
 
-    .line 483
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -5442,7 +4947,6 @@
     :catch_1
     move-exception p0
 
-    .line 480
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -5453,7 +4957,6 @@
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 481
     invoke-virtual {p0}, Ljava/lang/NullPointerException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -5464,7 +4967,6 @@
 
     move-result-object p0
 
-    .line 480
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -5472,7 +4974,6 @@
     :catch_2
     move-exception p0
 
-    .line 478
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -5500,7 +5001,6 @@
     :catch_3
     move-exception p0
 
-    .line 475
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -5511,7 +5011,6 @@
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 476
     invoke-virtual {p0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -5522,10 +5021,8 @@
 
     move-result-object p0
 
-    .line 475
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 486
     :cond_1
     :goto_0
     monitor-exit v0
@@ -5543,7 +5040,6 @@
 .method public final initializeIpTables()V
     .locals 2
 
-    .line 285
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/enterprise/firewall/Firewall$4;
@@ -5554,7 +5050,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mInitIpTablesThread:Ljava/lang/Thread;
 
-    .line 306
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -5563,12 +5058,10 @@
 .method public isDomainFilterOnIptablesEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
     .locals 0
 
-    .line 1358
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1359
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->isDomainFilterOnIptablesEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
@@ -5581,12 +5074,10 @@
 .method public isDomainFilterReportEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
     .locals 0
 
-    .line 1343
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1344
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->isDomainFilterReportEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
@@ -5599,24 +5090,20 @@
 .method public isFirewallEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
     .locals 3
 
-    .line 894
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 895
     invoke-static {p1}, Lcom/android/server/enterprise/utils/Utils;->getCallingOrUserUid(Lcom/samsung/android/knox/ContextInfo;)I
 
     move-result p1
 
-    .line 896
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
     const-string v2, "adminUid"
 
-    .line 897
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -5625,14 +5112,12 @@
 
     const-string/jumbo p1, "userID"
 
-    .line 898
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {v0, p1, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 899
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string p1, "FirewallStatus"
@@ -5645,7 +5130,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 902
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -5666,12 +5150,10 @@
 .method public listIptablesRules(Lcom/samsung/android/knox/ContextInfo;)[Ljava/lang/String;
     .locals 0
 
-    .line 1194
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1195
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->listIptablesRules(Lcom/samsung/android/knox/ContextInfo;)[Ljava/lang/String;
@@ -5688,12 +5170,10 @@
 
     const-string v0, ".*"
 
-    .line 1954
     invoke-virtual {p2, p0, v0}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1955
     invoke-static {p0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object p0
@@ -5714,7 +5194,6 @@
 
     const-string v0, ":"
 
-    .line 1979
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -5728,7 +5207,6 @@
     :cond_0
     sget-object v1, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV4:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
-    .line 1980
     :goto_0
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getIpAddress()Ljava/lang/String;
 
@@ -5750,7 +5228,6 @@
 
     if-ne v2, v1, :cond_2
 
-    .line 1981
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getIpAddress()Ljava/lang/String;
 
     move-result-object p2
@@ -5759,14 +5236,12 @@
 
     move-result-object p2
 
-    .line 1982
     sget-object v2, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV4:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     const/4 v3, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 1983
     aget-object v0, p2, v4
 
     const-string v2, "\\."
@@ -5775,26 +5250,22 @@
 
     move-result-object v0
 
-    .line 1984
     aget-object p2, p2, v3
 
     invoke-virtual {p2, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 1985
     invoke-virtual {p1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1986
     invoke-virtual {p0, v0, p2, p1, v1}, Lcom/android/server/enterprise/firewall/Firewall;->compareIpSubdivisions([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;)Z
 
     move-result p0
 
     return p0
 
-    .line 1988
     :cond_1
     aget-object v2, p2, v4
 
@@ -5804,7 +5275,6 @@
 
     aput-object v2, p2, v4
 
-    .line 1989
     aget-object v2, p2, v3
 
     invoke-virtual {p0, v2}, Lcom/android/server/enterprise/firewall/Firewall;->convertToIpv6CompleteForm(Ljava/lang/String;)Ljava/lang/String;
@@ -5813,31 +5283,26 @@
 
     aput-object v2, p2, v3
 
-    .line 1990
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->convertToIpv6CompleteForm(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1991
     aget-object v2, p2, v4
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1992
     aget-object p2, p2, v3
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 1993
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1994
     invoke-virtual {p0, v2, p2, p1, v1}, Lcom/android/server/enterprise/firewall/Firewall;->compareIpSubdivisions([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;)Z
 
     move-result p0
@@ -5851,7 +5316,6 @@
 .method public final matchPortIntoPortRangeRule(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
     .locals 2
 
-    .line 1970
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
     move-result-object p0
@@ -5866,7 +5330,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1971
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
     move-result-object p0
@@ -5875,7 +5338,6 @@
 
     move-result-object p0
 
-    .line 1972
     array-length p2, p0
 
     const/4 v0, 0x2
@@ -5884,7 +5346,6 @@
 
     return v1
 
-    .line 1973
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -5906,7 +5367,6 @@
 
     if-le p2, v0, :cond_1
 
-    .line 1974
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
@@ -5938,14 +5398,12 @@
 .method public notifyToAddSystemService(Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAdminAdded(I)V
     .locals 2
 
-    .line 1364
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -5974,7 +5432,6 @@
 .method public onAdminRemoved(I)V
     .locals 3
 
-    .line 1370
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5997,12 +5454,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1371
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     if-eqz p0, :cond_0
 
-    .line 1372
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->adminRemoved(I)V
 
     :cond_0
@@ -6012,7 +5467,6 @@
 .method public onPreAdminRemoval(I)V
     .locals 3
 
-    .line 1392
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6035,17 +5489,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1393
     new-instance v0, Lcom/samsung/android/knox/ContextInfo;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/knox/ContextInfo;-><init>(I)V
 
-    .line 1394
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 1395
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/firewall/Firewall;->getFirewallOwner(I)I
 
     move-result v1
@@ -6054,21 +5505,17 @@
 
     const/4 v1, 0x0
 
-    .line 1399
     invoke-virtual {p0, v1, p1}, Lcom/android/server/enterprise/firewall/Firewall;->blockOrUnblockAll(ZI)V
 
-    .line 1400
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v1, v0}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->deleteRulesFromAdmin(Lcom/samsung/android/knox/ContextInfo;)V
 
-    .line 1402
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     if-eqz p0, :cond_1
 
-    .line 1403
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->onPreAdminRemoval(I)V
 
     :cond_1
@@ -6078,7 +5525,6 @@
 .method public final onUserHandle(Landroid/content/Intent;)V
     .locals 2
 
-    .line 270
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/enterprise/firewall/Firewall$3;
@@ -6087,7 +5533,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 279
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -6096,7 +5541,6 @@
 .method public final packageAdded(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 12
 
-    .line 1683
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -6109,7 +5553,6 @@
 
     const/4 v2, -0x1
 
-    .line 1684
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -6123,34 +5566,28 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 1693
     invoke-static {v1, p2}, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->getAdminLUIDWhereIn(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1695
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
     const-string/jumbo v4, "packageName"
 
-    .line 1696
     invoke-virtual {v3, v4, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v4, "#SelectClause#"
 
-    .line 1697
     invoke-virtual {v3, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "adminUid"
 
-    .line 1699
     filled-new-array {v2}, [Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1701
     new-instance v5, Ljava/util/HashSet;
 
     iget-object v6, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -6163,7 +5600,6 @@
 
     invoke-direct {v5, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 1704
     invoke-interface {v5}, Ljava/util/Set;->isEmpty()Z
 
     move-result v3
@@ -6172,7 +5608,6 @@
 
     return-void
 
-    .line 1705
     :cond_1
     sget-object v3, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -6196,7 +5631,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1707
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -6215,7 +5649,6 @@
 
     check-cast v4, Landroid/content/ContentValues;
 
-    .line 1708
     invoke-virtual {v4, v2}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v4
@@ -6224,7 +5657,6 @@
 
     goto :goto_0
 
-    .line 1710
     :cond_3
     new-instance v5, Lcom/samsung/android/knox/ContextInfo;
 
@@ -6234,7 +5666,6 @@
 
     invoke-direct {v5, v6}, Lcom/samsung/android/knox/ContextInfo;-><init>(I)V
 
-    .line 1711
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
@@ -6245,12 +5676,10 @@
 
     const-string v6, "android"
 
-    .line 1712
     invoke-static {p1, v6, v1, p2}, Lcom/android/server/enterprise/utils/Utils;->createContextAsUser(Landroid/content/Context;Ljava/lang/String;II)Landroid/content/Context;
 
     move-result-object v6
 
-    .line 1713
     array-length v7, v4
 
     move v8, v1
@@ -6260,7 +5689,6 @@
 
     aget-object v9, v4, v8
 
-    .line 1715
     invoke-virtual {v9}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
     move-result-object v10
@@ -6269,14 +5697,12 @@
 
     move-result-object v10
 
-    .line 1717
     invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v11
 
     if-nez v11, :cond_4
 
-    .line 1719
     invoke-virtual {v9}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
     move-result-object v11
@@ -6285,7 +5711,6 @@
 
     move-result-object v11
 
-    .line 1718
     invoke-static {v6, v11, v10, p2}, Lcom/android/server/enterprise/utils/Utils;->comparePackageSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v10
@@ -6294,7 +5719,6 @@
 
     goto :goto_2
 
-    .line 1723
     :cond_4
     iget-object v10, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
@@ -6306,7 +5730,6 @@
 
     if-eqz v10, :cond_6
 
-    .line 1726
     invoke-virtual {v10}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getResult()Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     move-result-object v10
@@ -6317,7 +5740,6 @@
 
     goto :goto_2
 
-    .line 1728
     :cond_5
     iget-object v10, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
@@ -6325,7 +5747,6 @@
 
     invoke-virtual {v10, v9, v11, v5}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->updateStatusOnDB(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;Lcom/samsung/android/knox/ContextInfo;)V
 
-    .line 1729
     sget-object v9, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v10, "enableRuleAsAdmin() - success"
@@ -6341,7 +5762,6 @@
     :cond_7
     return-void
 
-    .line 1687
     :cond_8
     :goto_3
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
@@ -6356,7 +5776,6 @@
 .method public final packageRemoved(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 13
 
-    .line 1735
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -6369,14 +5788,12 @@
 
     const/4 v2, -0x1
 
-    .line 1736
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
     const-string v3, "android.intent.extra.UID"
 
-    .line 1737
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -6390,34 +5807,28 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 1745
     invoke-static {v2, v1}, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->getAdminLUIDWhereIn(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1748
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
     const-string/jumbo v5, "packageName"
 
-    .line 1749
     invoke-virtual {v4, v5, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v5, "#SelectClause#"
 
-    .line 1750
     invoke-virtual {v4, v3, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "adminUid"
 
-    .line 1752
     filled-new-array {v3}, [Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1754
     new-instance v6, Ljava/util/HashSet;
 
     iget-object v7, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -6430,7 +5841,6 @@
 
     invoke-direct {v6, v4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 1757
     invoke-interface {v6}, Ljava/util/Set;->isEmpty()Z
 
     move-result v4
@@ -6439,7 +5849,6 @@
 
     return-void
 
-    .line 1761
     :cond_1
     sget-object v4, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -6463,7 +5872,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1763
     invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -6482,7 +5890,6 @@
 
     check-cast v5, Landroid/content/ContentValues;
 
-    .line 1764
     invoke-virtual {v5, v3}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v5
@@ -6491,7 +5898,6 @@
 
     goto :goto_0
 
-    .line 1766
     :cond_3
     new-instance v6, Lcom/samsung/android/knox/ContextInfo;
 
@@ -6501,7 +5907,6 @@
 
     invoke-direct {v6, v7}, Lcom/samsung/android/knox/ContextInfo;-><init>(I)V
 
-    .line 1767
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
@@ -6512,12 +5917,10 @@
 
     const-string v7, "android"
 
-    .line 1768
     invoke-static {p1, v7, v2, v1}, Lcom/android/server/enterprise/utils/Utils;->createContextAsUser(Landroid/content/Context;Ljava/lang/String;II)Landroid/content/Context;
 
     move-result-object v7
 
-    .line 1770
     array-length v8, v5
 
     move v9, v2
@@ -6527,7 +5930,6 @@
 
     aget-object v10, v5, v9
 
-    .line 1772
     invoke-virtual {v10}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
     move-result-object v11
@@ -6536,14 +5938,12 @@
 
     move-result-object v11
 
-    .line 1774
     invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v12
 
     if-nez v12, :cond_4
 
-    .line 1776
     invoke-virtual {v10}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
     move-result-object v12
@@ -6552,7 +5952,6 @@
 
     move-result-object v12
 
-    .line 1775
     invoke-static {v7, v12, v11, v1}, Lcom/android/server/enterprise/utils/Utils;->comparePackageSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v11
@@ -6561,11 +5960,9 @@
 
     goto :goto_2
 
-    .line 1779
     :cond_4
     invoke-virtual {v10, p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setPackageUid(I)V
 
-    .line 1780
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v11, v10, v6, v2}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->disableIpTablesRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/ContextInfo;Z)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -6574,7 +5971,6 @@
 
     if-eqz v11, :cond_6
 
-    .line 1783
     invoke-virtual {v11}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getResult()Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     move-result-object v11
@@ -6585,7 +5981,6 @@
 
     goto :goto_2
 
-    .line 1785
     :cond_5
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
@@ -6593,7 +5988,6 @@
 
     invoke-virtual {v11, v10, v12, v6}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->updateStatusOnDB(Lcom/samsung/android/knox/net/firewall/FirewallRule;Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;Lcom/samsung/android/knox/ContextInfo;)V
 
-    .line 1786
     sget-object v10, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string v11, "disableIpTablesRule() - success"
@@ -6609,7 +6003,6 @@
     :cond_7
     return-void
 
-    .line 1740
     :cond_8
     :goto_3
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
@@ -6624,12 +6017,10 @@
 .method public populateDomainFilterBrokenRules(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;I)V
     .locals 0
 
-    .line 1303
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1304
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/enterprise/firewall/DomainFilter;->populateDomainFilterBrokenRules(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;I)V
@@ -6640,12 +6031,10 @@
 .method public removeDomainFilterRules(Lcom/samsung/android/knox/ContextInfo;I)[Lcom/samsung/android/knox/net/firewall/FirewallResponse;
     .locals 0
 
-    .line 1323
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1324
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->removeDomainFilterRules(Lcom/samsung/android/knox/ContextInfo;I)[Lcom/samsung/android/knox/net/firewall/FirewallResponse;
@@ -6660,7 +6049,6 @@
 
     monitor-enter p0
 
-    .line 1248
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -6668,15 +6056,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1249
     iget p1, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
-    .line 1254
     invoke-static {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRuleValidator;->validateFirewallRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;)Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     move-result-object v0
 
-    .line 1255
     invoke-virtual {v0}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getResult()Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     move-result-object v1
@@ -6685,7 +6070,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1256
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo p2, "removeRule() - Invalid Firewall Rule"
@@ -6694,12 +6078,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1257
     monitor-exit p0
 
     return-object v0
 
-    .line 1263
     :cond_0
     :try_start_1
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
@@ -6716,12 +6098,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1264
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 1265
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mContext:Landroid/content/Context;
 
     const-string v2, "android"
@@ -6732,14 +6112,12 @@
 
     move-result-object v0
 
-    .line 1269
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1272
     :try_start_2
     invoke-virtual {p2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
@@ -6757,27 +6135,23 @@
 
     move-result-object v4
 
-    .line 1271
     invoke-static {v0, v3, v4}, Lcom/android/server/enterprise/utils/Utils;->comparePackageSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1274
     :try_start_3
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-nez v0, :cond_1
 
-    .line 1278
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo p2, "removeRule() - Signature mismatch"
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1279
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -6790,7 +6164,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1282
     monitor-exit p0
 
     return-object p1
@@ -6798,14 +6171,11 @@
     :catchall_0
     move-exception p1
 
-    .line 1274
     :try_start_4
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1275
     throw p1
 
-    .line 1286
     :cond_1
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6815,14 +6185,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 1287
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo p2, "removeRule() - Failed to remove rule. The rule must be disabled."
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1288
     new-instance p1, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object p2, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -6839,7 +6207,6 @@
 
     return-object p1
 
-    .line 1297
     :cond_2
     :try_start_5
     invoke-static {p2, p1}, Lcom/android/server/enterprise/firewall/FirewallUtils;->getContentValuesFromRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;I)Landroid/content/ContentValues;
@@ -6869,13 +6236,11 @@
 
     monitor-enter p0
 
-    .line 1200
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/Firewall;->enforceFirewallPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p1
 
-    .line 1201
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "removeRules()"
@@ -6886,7 +6251,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1203
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo p2, "removeRules() - No rule specified"
@@ -6895,12 +6259,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1204
     monitor-exit p0
 
     return-object v0
 
-    .line 1206
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
@@ -6911,20 +6273,17 @@
 
     move-result-object v1
 
-    .line 1208
     array-length v3, p2
 
     new-array v3, v3, [Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     move v4, v2
 
-    .line 1209
     :goto_0
     array-length v5, p2
 
     if-ge v4, v5, :cond_4
 
-    .line 1210
     aget-object v5, v1, v4
 
     if-eqz v5, :cond_1
@@ -6941,14 +6300,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 1211
     aget-object v5, p2, v4
 
     sget-object v6, Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;->DISABLED:Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;
 
     invoke-virtual {v5, v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->setStatus(Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;)V
 
-    .line 1213
     :cond_1
     aget-object v5, p2, v4
 
@@ -6958,7 +6315,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 1214
     invoke-virtual {v5}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getResult()Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
 
     move-result-object v6
@@ -6971,7 +6327,6 @@
 
     if-nez v6, :cond_3
 
-    .line 1215
     new-instance v6, Lcom/samsung/android/knox/net/firewall/FirewallResponse;
 
     sget-object v7, Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;->FAILED:Lcom/samsung/android/knox/net/firewall/FirewallResponse$Result;
@@ -6984,7 +6339,6 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1216
     aget-object v10, v1, v4
 
     if-nez v10, :cond_2
@@ -7017,7 +6371,6 @@
     :goto_1
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1217
     invoke-virtual {v5}, Lcom/samsung/android/knox/net/firewall/FirewallResponse;->getMessage()Ljava/lang/String;
 
     move-result-object v5
@@ -7034,7 +6387,6 @@
 
     goto :goto_2
 
-    .line 1219
     :cond_3
     aput-object v5, v3, v4
 
@@ -7043,7 +6395,6 @@
 
     goto :goto_0
 
-    .line 1223
     :cond_4
     array-length v1, p2
 
@@ -7054,14 +6405,12 @@
 
     aget-object v5, p2, v4
 
-    .line 1224
     invoke-virtual {p0, v5}, Lcom/android/server/enterprise/firewall/Firewall;->shouldApplyIcmpAllowRule(Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
-    .line 1225
     iget-object v5, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v5, v2}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveIcmpAllowRule(Z)V
@@ -7074,12 +6423,10 @@
     :cond_6
     const/4 p2, 0x2
 
-    .line 1229
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/enterprise/firewall/Firewall;->getRules(Lcom/samsung/android/knox/ContextInfo;ILjava/lang/String;)[Lcom/samsung/android/knox/net/firewall/FirewallRule;
 
     move-result-object p2
 
-    .line 1230
     iget v0, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -7094,12 +6441,10 @@
 
     if-nez v0, :cond_7
 
-    .line 1232
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {v0, v2, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveExemptRules(ZLcom/samsung/android/knox/ContextInfo;)V
 
-    .line 1234
     :cond_7
     iget v0, p1, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
@@ -7115,14 +6460,12 @@
 
     if-nez p2, :cond_8
 
-    .line 1235
     iget-object p2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mFirewallRulesApplier:Lcom/android/server/enterprise/firewall/FirewallRulesApplier;
 
     invoke-virtual {p2, v2, p1}, Lcom/android/server/enterprise/firewall/FirewallRulesApplier;->addOrRemoveKGExemptRule(ZLcom/samsung/android/knox/ContextInfo;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1237
     :cond_8
     monitor-exit p0
 
@@ -7145,7 +6488,6 @@
 
     return-void
 
-    .line 1516
     :cond_0
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
@@ -7154,7 +6496,6 @@
 
     const-string/jumbo v2, "pN"
 
-    .line 1517
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
     move-result-object v3
@@ -7167,7 +6508,6 @@
 
     const-string v2, "adrTp"
 
-    .line 1518
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getAddressType()Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     move-result-object v3
@@ -7180,7 +6520,6 @@
 
     const-string/jumbo v2, "netIt"
 
-    .line 1519
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getNetworkInterface()Lcom/samsung/android/knox/net/firewall/Firewall$NetworkInterface;
 
     move-result-object v3
@@ -7196,7 +6535,6 @@
     :try_start_1
     const-string/jumbo v2, "ptLc"
 
-    .line 1521
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPortLocation()Lcom/samsung/android/knox/net/firewall/Firewall$PortLocation;
 
     move-result-object v3
@@ -7215,7 +6553,6 @@
     :catch_0
     move-exception v2
 
-    .line 1523
     :try_start_2
     sget-object v3, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -7240,7 +6577,6 @@
     :goto_0
     const-string/jumbo v2, "prt"
 
-    .line 1525
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getProtocol()Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
     move-result-object v3
@@ -7256,7 +6592,6 @@
     :try_start_3
     const-string/jumbo v2, "rlTp"
 
-    .line 1527
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getRuleType()Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     move-result-object p1
@@ -7275,7 +6610,6 @@
     :catch_1
     move-exception p0
 
-    .line 1529
     :try_start_4
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
@@ -7297,7 +6631,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1531
     :goto_1
     invoke-virtual {p2, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
     :try_end_4
@@ -7308,7 +6641,6 @@
     :catch_2
     move-exception p0
 
-    .line 1533
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -7344,7 +6676,6 @@
 
     return p0
 
-    .line 1475
     :cond_0
     array-length v0, p1
 
@@ -7355,7 +6686,6 @@
 
     aget-object v2, p1, v1
 
-    .line 1476
     sget-object v3, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getRuleType()Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
@@ -7370,7 +6700,6 @@
 
     const-string v3, "*"
 
-    .line 1477
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -7383,7 +6712,6 @@
 
     sget-object v3, Lcom/android/server/enterprise/firewall/FirewallDefinitions;->EXEMPT_PACKAGE_LIST:Ljava/util/Map;
 
-    .line 1478
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -7401,7 +6729,6 @@
     :cond_1
     sget-object v3, Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;->DISABLED:Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;
 
-    .line 1479
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getStatus()Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;
 
     move-result-object v4
@@ -7414,7 +6741,6 @@
 
     sget-object v3, Lcom/samsung/android/knox/net/firewall/Firewall$Direction;->FORWARD:Lcom/samsung/android/knox/net/firewall/Firewall$Direction;
 
-    .line 1480
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getDirection()Lcom/samsung/android/knox/net/firewall/Firewall$Direction;
 
     move-result-object v2
@@ -7444,7 +6770,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1506
     sget-object p0, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getRuleType()Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
@@ -7471,7 +6796,6 @@
 
     sget-object p0, Lcom/samsung/android/knox/net/firewall/Firewall$Direction;->ALL:Lcom/samsung/android/knox/net/firewall/Firewall$Direction;
 
-    .line 1507
     invoke-virtual {p1}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getDirection()Lcom/samsung/android/knox/net/firewall/Firewall$Direction;
 
     move-result-object v0
@@ -7514,7 +6838,6 @@
 
     return p0
 
-    .line 1491
     :cond_0
     array-length v0, p1
 
@@ -7525,7 +6848,6 @@
 
     aget-object v2, p1, v1
 
-    .line 1492
     sget-object v3, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->DENY:Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getRuleType()Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
@@ -7540,7 +6862,6 @@
 
     const-string v3, "*"
 
-    .line 1493
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -7553,7 +6874,6 @@
 
     const-string v3, "com.samsung.android.kgclient"
 
-    .line 1494
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -7564,7 +6884,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1495
     :cond_1
     invoke-static {}, Lcom/android/server/enterprise/firewall/FirewallUtils;->isKGExemptRuleRequired()Z
 
@@ -7574,7 +6893,6 @@
 
     sget-object v3, Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;->DISABLED:Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;
 
-    .line 1496
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getStatus()Lcom/samsung/android/knox/net/firewall/FirewallRule$Status;
 
     move-result-object v4
@@ -7587,7 +6905,6 @@
 
     sget-object v3, Lcom/samsung/android/knox/net/firewall/Firewall$Direction;->FORWARD:Lcom/samsung/android/knox/net/firewall/Firewall$Direction;
 
-    .line 1497
     invoke-virtual {v2}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getDirection()Lcom/samsung/android/knox/net/firewall/Firewall$Direction;
 
     move-result-object v2
@@ -7615,14 +6932,12 @@
 .method public shouldBlockDownload(Ljava/lang/String;Ljava/lang/String;I)Z
     .locals 10
 
-    .line 1792
     invoke-virtual {p0}, Lcom/android/server/enterprise/firewall/Firewall;->enforceDownloadProvider()V
 
     const/4 v0, 0x0
 
     if-nez p1, :cond_0
 
-    .line 1794
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo p1, "shouldBlockDownload() false - package is null"
@@ -7631,7 +6946,6 @@
 
     return v0
 
-    .line 1799
     :cond_0
     :try_start_0
     new-instance v1, Ljava/net/URL;
@@ -7640,7 +6954,6 @@
     :try_end_0
     .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1804
     invoke-virtual {v1}, Ljava/net/URL;->getPort()I
 
     move-result p2
@@ -7660,28 +6973,23 @@
 
     move-result p2
 
-    .line 1805
     :goto_0
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/Firewall;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 1806
     invoke-static {p3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p3
 
-    .line 1805
     invoke-virtual {v2, p3}, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->getAdminUidListAsUser(I)Ljava/util/ArrayList;
 
     move-result-object p3
 
     const-string v2, "*"
 
-    .line 1807
     filled-new-array {v2}, [Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1808
     invoke-virtual {p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -7710,18 +7018,15 @@
 
     goto :goto_1
 
-    .line 1814
     :cond_3
     invoke-virtual {v1}, Ljava/net/URL;->getHost()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1813
     invoke-virtual {p0, v4, p1, v5}, Lcom/android/server/enterprise/firewall/Firewall;->shouldBlockDownloadDomainFilter(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     move-result-object v5
 
-    .line 1817
     sget-object v6, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->BLOCKED_BY_BLACKLIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     invoke-virtual {v5, v6}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
@@ -7734,7 +7039,6 @@
 
     return v7
 
-    .line 1824
     :cond_4
     iget-object v6, p0, Lcom/android/server/enterprise/firewall/Firewall;->mDomainFilter:Lcom/android/server/enterprise/firewall/DomainFilter;
 
@@ -7748,10 +7052,8 @@
 
     if-eqz v6, :cond_5
 
-    .line 1826
     sget-object v6, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->PASSED_BY_WHITELIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
-    .line 1827
     invoke-virtual {v5, v6}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -7760,13 +7062,11 @@
 
     return v0
 
-    .line 1835
     :cond_5
     new-instance v5, Lcom/samsung/android/knox/ContextInfo;
 
     invoke-direct {v5, v4}, Lcom/samsung/android/knox/ContextInfo;-><init>(I)V
 
-    .line 1836
     invoke-virtual {p0, v5}, Lcom/android/server/enterprise/firewall/Firewall;->isFirewallEnabled(Lcom/samsung/android/knox/ContextInfo;)Z
 
     move-result v5
@@ -7775,13 +7075,11 @@
 
     goto :goto_1
 
-    .line 1839
     :cond_6
     invoke-virtual {p0, v4, p1}, Lcom/android/server/enterprise/firewall/Firewall;->getEnabledFirewallRulesForPackage(ILjava/lang/String;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 1840
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result v5
@@ -7790,7 +7088,6 @@
 
     goto :goto_1
 
-    .line 1843
     :cond_7
     array-length v5, v3
 
@@ -7804,12 +7101,10 @@
 
     if-eqz v5, :cond_9
 
-    .line 1844
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1846
     :try_start_1
     invoke-virtual {v1}, Ljava/net/URL;->getHost()Ljava/lang/String;
 
@@ -7819,7 +7114,6 @@
 
     move-result-object v5
 
-    .line 1847
     array-length v6, v5
 
     move v8, v0
@@ -7829,7 +7123,6 @@
 
     aget-object v9, v5, v8
 
-    .line 1848
     invoke-virtual {v9}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v9
@@ -7845,14 +7138,12 @@
     :catch_0
     move-exception v5
 
-    .line 1851
     sget-object v6, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo v8, "shouldBlockDownload() - UnknownHostException was thrown."
 
     invoke-static {v6, v8, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1853
     :cond_8
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -7866,18 +7157,15 @@
 
     check-cast v3, [Ljava/lang/String;
 
-    .line 1856
     :cond_9
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1855
     invoke-virtual {p0, v3, v5, v4}, Lcom/android/server/enterprise/firewall/Firewall;->shouldBlockDownloadFirewall([Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     move-result-object v4
 
-    .line 1857
     sget-object v5, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->BLOCKED_BY_BLACKLIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     invoke-virtual {v4, v5}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
@@ -7894,7 +7182,6 @@
     :catch_1
     move-exception p0
 
-    .line 1801
     sget-object p1, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo p2, "shouldBlockDownload() false - MalformedURLException was thrown."
@@ -7907,17 +7194,14 @@
 .method public final shouldBlockDownloadDomainFilter(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
     .locals 4
 
-    .line 1925
     new-instance v0, Lcom/samsung/android/knox/ContextInfo;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/knox/ContextInfo;-><init>(I)V
 
-    .line 1927
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 1929
     :try_start_0
     new-instance p1, Ljava/util/ArrayList;
 
@@ -7925,7 +7209,6 @@
 
     move-result-object v3
 
-    .line 1930
     invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -7934,24 +7217,20 @@
 
     const/4 v3, -0x1
 
-    .line 1929
     invoke-virtual {p0, v0, p1, v3}, Lcom/android/server/enterprise/firewall/Firewall;->getDomainFilterRules(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;I)Ljava/util/List;
 
     move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1932
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-nez p1, :cond_0
 
-    .line 1934
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->PASSED_NORULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     return-object p0
 
-    .line 1935
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -7970,7 +7249,6 @@
 
     check-cast v0, Lcom/samsung/android/knox/net/firewall/DomainFilterRule;
 
-    .line 1936
     invoke-virtual {v0}, Lcom/samsung/android/knox/net/firewall/DomainFilterRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
     move-result-object v1
@@ -7987,7 +7265,6 @@
 
     if-nez v1, :cond_2
 
-    .line 1937
     invoke-virtual {v0}, Lcom/samsung/android/knox/net/firewall/DomainFilterRule;->getApplication()Lcom/samsung/android/knox/AppIdentity;
 
     move-result-object v1
@@ -8002,7 +7279,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1939
     :cond_2
     invoke-virtual {v0}, Lcom/samsung/android/knox/net/firewall/DomainFilterRule;->getAllowDomains()Ljava/util/List;
 
@@ -8025,19 +7301,16 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1940
     invoke-virtual {p0, p3, v2}, Lcom/android/server/enterprise/firewall/Firewall;->matchDomains(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 1941
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->PASSED_BY_WHITELIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     return-object p0
 
-    .line 1944
     :cond_4
     invoke-virtual {v0}, Lcom/samsung/android/knox/net/firewall/DomainFilterRule;->getDenyDomains()Ljava/util/List;
 
@@ -8060,19 +7333,16 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1945
     invoke-virtual {p0, p3, v1}, Lcom/android/server/enterprise/firewall/Firewall;->matchDomains(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 1946
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->BLOCKED_BY_BLACKLIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     return-object p0
 
-    .line 1951
     :cond_6
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->PASSED_NORULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
@@ -8081,17 +7351,14 @@
     :catchall_0
     move-exception p0
 
-    .line 1932
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1933
     throw p0
 .end method
 
 .method public final shouldBlockDownloadFirewall([Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
     .locals 11
 
-    .line 1880
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -8105,7 +7372,6 @@
 
     const-string v4, ":"
 
-    .line 1881
     invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -8119,7 +7385,6 @@
     :cond_0
     sget-object v4, Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;->IPV4:Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
-    .line 1885
     :goto_1
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -8143,7 +7408,6 @@
 
     check-cast v6, Landroid/content/ContentValues;
 
-    .line 1886
     invoke-virtual {v6, v7}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -8160,7 +7424,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 1887
     filled-new-array {v6}, [Landroid/content/ContentValues;
 
     move-result-object v6
@@ -8177,7 +7440,6 @@
 
     aget-object v6, v6, v1
 
-    .line 1889
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getAddressType()Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     move-result-object v7
@@ -8186,7 +7448,6 @@
 
     goto :goto_2
 
-    .line 1890
     :cond_2
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getIpAddress()Ljava/lang/String;
 
@@ -8208,14 +7469,12 @@
 
     if-nez v7, :cond_3
 
-    .line 1891
     invoke-virtual {p0, v3, v6}, Lcom/android/server/enterprise/firewall/Firewall;->matchIpIntoIpRangeRule(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 1892
     :cond_3
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
@@ -8227,7 +7486,6 @@
 
     if-nez v7, :cond_4
 
-    .line 1893
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
     move-result-object v7
@@ -8238,7 +7496,6 @@
 
     if-nez v7, :cond_4
 
-    .line 1894
     invoke-virtual {p0, p2, v6}, Lcom/android/server/enterprise/firewall/Firewall;->matchPortIntoPortRangeRule(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v7
@@ -8248,7 +7505,6 @@
     :cond_4
     sget-object v7, Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;->ALL:Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
-    .line 1895
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getProtocol()Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
     move-result-object v8
@@ -8261,7 +7517,6 @@
 
     sget-object v7, Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;->TCP:Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
-    .line 1896
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getProtocol()Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
     move-result-object v6
@@ -8272,13 +7527,11 @@
 
     if-eqz v6, :cond_1
 
-    .line 1897
     :cond_5
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->PASSED_BY_WHITELIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     return-object p0
 
-    .line 1904
     :cond_6
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -8298,7 +7551,6 @@
 
     check-cast v6, Landroid/content/ContentValues;
 
-    .line 1905
     invoke-virtual {v6, v7}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
@@ -8315,7 +7567,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 1906
     filled-new-array {v6}, [Landroid/content/ContentValues;
 
     move-result-object v6
@@ -8332,7 +7583,6 @@
 
     aget-object v6, v6, v1
 
-    .line 1908
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getAddressType()Lcom/samsung/android/knox/net/firewall/Firewall$AddressType;
 
     move-result-object v9
@@ -8341,7 +7591,6 @@
 
     goto :goto_3
 
-    .line 1909
     :cond_8
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getIpAddress()Ljava/lang/String;
 
@@ -8363,14 +7612,12 @@
 
     if-nez v9, :cond_9
 
-    .line 1910
     invoke-virtual {p0, v3, v6}, Lcom/android/server/enterprise/firewall/Firewall;->matchIpIntoIpRangeRule(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v9
 
     if-eqz v9, :cond_7
 
-    .line 1911
     :cond_9
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
@@ -8382,7 +7629,6 @@
 
     if-nez v9, :cond_a
 
-    .line 1912
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
     move-result-object v9
@@ -8393,7 +7639,6 @@
 
     if-nez v9, :cond_a
 
-    .line 1913
     invoke-virtual {p0, p2, v6}, Lcom/android/server/enterprise/firewall/Firewall;->matchPortIntoPortRangeRule(Ljava/lang/String;Lcom/samsung/android/knox/net/firewall/FirewallRule;)Z
 
     move-result v9
@@ -8403,7 +7648,6 @@
     :cond_a
     sget-object v9, Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;->ALL:Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
-    .line 1914
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getProtocol()Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
     move-result-object v10
@@ -8416,7 +7660,6 @@
 
     sget-object v9, Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;->TCP:Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
-    .line 1915
     invoke-virtual {v6}, Lcom/samsung/android/knox/net/firewall/FirewallRule;->getProtocol()Lcom/samsung/android/knox/net/firewall/Firewall$Protocol;
 
     move-result-object v6
@@ -8427,7 +7670,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 1916
     :cond_b
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->BLOCKED_BY_BLACKLIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
@@ -8438,7 +7680,6 @@
 
     goto/16 :goto_0
 
-    .line 1921
     :cond_d
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->PASSED_NORULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
@@ -8448,7 +7689,6 @@
 .method public systemReady()V
     .locals 1
 
-    .line 1416
     sget-object p0, Lcom/android/server/enterprise/firewall/Firewall;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "systemReady()"

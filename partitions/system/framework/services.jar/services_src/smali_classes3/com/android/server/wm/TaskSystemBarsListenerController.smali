@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$0eiHwD9gWMW1p1JvymRanBSUxTg(Ljava/util/HashSet;IZZ)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/wm/TaskSystemBarsListenerController;->lambda$dispatchTransientSystemBarVisibilityChanged$0(Ljava/util/HashSet;IZZ)V
 
     return-void
@@ -22,17 +21,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskSystemBarsListenerController;->mListeners:Ljava/util/HashSet;
 
-    .line 36
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -45,7 +41,6 @@
 .method public static synthetic lambda$dispatchTransientSystemBarVisibilityChanged$0(Ljava/util/HashSet;IZZ)V
     .locals 1
 
-    .line 55
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -63,7 +58,6 @@
 
     check-cast v0, Lcom/android/server/wm/WindowManagerInternal$TaskSystemBarsListener;
 
-    .line 56
     invoke-interface {v0, p1, p2, p3}, Lcom/android/server/wm/WindowManagerInternal$TaskSystemBarsListener;->onTransientSystemBarsVisibilityChanged(IZZ)V
 
     goto :goto_0
@@ -77,14 +71,12 @@
 .method public dispatchTransientSystemBarVisibilityChanged(IZZ)V
     .locals 2
 
-    .line 52
     new-instance v0, Ljava/util/HashSet;
 
     iget-object v1, p0, Lcom/android/server/wm/TaskSystemBarsListenerController;->mListeners:Ljava/util/HashSet;
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/wm/TaskSystemBarsListenerController;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/android/server/wm/TaskSystemBarsListenerController$$ExternalSyntheticLambda0;
@@ -99,7 +91,6 @@
 .method public registerListener(Lcom/android/server/wm/WindowManagerInternal$TaskSystemBarsListener;)V
     .locals 0
 
-    .line 40
     iget-object p0, p0, Lcom/android/server/wm/TaskSystemBarsListenerController;->mListeners:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -110,7 +101,6 @@
 .method public unregisterListener(Lcom/android/server/wm/WindowManagerInternal$TaskSystemBarsListener;)V
     .locals 0
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/wm/TaskSystemBarsListenerController;->mListeners:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z

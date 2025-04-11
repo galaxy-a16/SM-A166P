@@ -23,7 +23,6 @@
 .method public static synthetic $r8$lambda$1yyUll0OSzpOolMWCZwhmWxAdU4(Ljava/util/function/Predicate;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Landroid/net/shared/InitialConfiguration;->lambda$not$4(Ljava/util/function/Predicate;Ljava/lang/Object;)Z
 
     move-result p0
@@ -34,7 +33,6 @@
 .method public static synthetic $r8$lambda$6Dm0xxQjabh3KRcUHYegTxqJe5c(Landroid/net/IpPrefix;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/shared/InitialConfiguration;->isIPv6DefaultRoute(Landroid/net/IpPrefix;)Z
 
     move-result p0
@@ -45,7 +43,6 @@
 .method public static synthetic $r8$lambda$abrrg5ZeD4L8gkzCRyl5PetilMg(Landroid/net/LinkAddress;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/shared/InitialConfiguration;->isIPv4(Landroid/net/LinkAddress;)Z
 
     move-result p0
@@ -56,7 +53,6 @@
 .method public static synthetic $r8$lambda$c9N2MqnbjMzPatv9DmSRL0HmMjM(Landroid/net/IpPrefix;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/shared/InitialConfiguration;->isPrefixLengthCompliant(Landroid/net/IpPrefix;)Z
 
     move-result p0
@@ -67,7 +63,6 @@
 .method public static synthetic $r8$lambda$ckHd5yDb09dNJCGIRIxcf8LJ6x0(Landroid/net/LinkAddress;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/shared/InitialConfiguration;->isPrefixLengthCompliant(Landroid/net/LinkAddress;)Z
 
     move-result p0
@@ -78,7 +73,6 @@
 .method public static synthetic $r8$lambda$dBpmJZYxHOn7g6saJbm0sJiMbQg(Landroid/net/LinkAddress;Landroid/net/IpPrefix;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Landroid/net/shared/InitialConfiguration;->lambda$isValid$0(Landroid/net/LinkAddress;Landroid/net/IpPrefix;)Z
 
     move-result p0
@@ -89,7 +83,6 @@
 .method public static synthetic $r8$lambda$f1pX3UaAEU7AJSafGVVYbThltbc(Landroid/net/LinkAddress;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/shared/InitialConfiguration;->isIPv6GUA(Landroid/net/LinkAddress;)Z
 
     move-result p0
@@ -100,7 +93,6 @@
 .method public static synthetic $r8$lambda$j6zNBSJodSTsS1cvbZoOHEWq3CY(Landroid/net/IpPrefix;Landroid/net/RouteInfo;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Landroid/net/shared/InitialConfiguration;->lambda$isProvisionedBy$3(Landroid/net/IpPrefix;Landroid/net/RouteInfo;)Z
 
     move-result p0
@@ -111,7 +103,6 @@
 .method public static synthetic $r8$lambda$mq_qD1VmGhzZrsdg9JoSWASotGw(Ljava/net/InetAddress;Landroid/net/IpPrefix;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Landroid/net/shared/InitialConfiguration;->lambda$isValid$1(Ljava/net/InetAddress;Landroid/net/IpPrefix;)Z
 
     move-result p0
@@ -122,7 +113,6 @@
 .method public static synthetic $r8$lambda$qX3MXtYCJYMXN7y08JcGTzwAn5g(Landroid/net/LinkAddress;Landroid/net/LinkAddress;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Landroid/net/shared/InitialConfiguration;->lambda$isProvisionedBy$2(Landroid/net/LinkAddress;Landroid/net/LinkAddress;)Z
 
     move-result p0
@@ -135,7 +125,6 @@
 
     const-string v0, "::"
 
-    .line 46
     invoke-static {v0}, Landroid/net/InetAddresses;->parseNumericAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v0
@@ -148,24 +137,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
-    .line 40
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
-    .line 41
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -178,7 +163,6 @@
 .method public static all(Ljava/lang/Iterable;Ljava/util/function/Predicate;)Z
     .locals 0
 
-    .line 233
     invoke-static {p1}, Landroid/net/shared/InitialConfiguration;->not(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
     move-result-object p1
@@ -195,7 +179,6 @@
 .method public static any(Ljava/lang/Iterable;Ljava/util/function/Predicate;)Z
     .locals 1
 
-    .line 221
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -211,7 +194,6 @@
 
     move-result-object v0
 
-    .line 222
     invoke-interface {p1, v0}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result v0
@@ -237,27 +219,23 @@
 
     return-object p0
 
-    .line 55
     :cond_0
     new-instance v0, Landroid/net/shared/InitialConfiguration;
 
     invoke-direct {v0}, Landroid/net/shared/InitialConfiguration;-><init>()V
 
-    .line 56
     iget-object v1, v0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
     iget-object v2, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
     invoke-interface {v1, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 57
     iget-object v1, v0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
     iget-object v2, p0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
     invoke-interface {v1, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 58
     iget-object v1, v0, Landroid/net/shared/InitialConfiguration;->dnsServers:Ljava/util/Set;
 
     iget-object p0, p0, Landroid/net/shared/InitialConfiguration;->dnsServers:Ljava/util/Set;
@@ -276,13 +254,11 @@
 
     return-object p0
 
-    .line 163
     :cond_0
     new-instance v0, Landroid/net/shared/InitialConfiguration;
 
     invoke-direct {v0}, Landroid/net/shared/InitialConfiguration;-><init>()V
 
-    .line 164
     iget-object v1, v0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
     iget-object v2, p0, Landroid/net/InitialConfigurationParcelable;->ipAddresses:[Landroid/net/LinkAddress;
@@ -293,7 +269,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 165
     iget-object v1, v0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
     iget-object v2, p0, Landroid/net/InitialConfigurationParcelable;->directlyConnectedRoutes:[Landroid/net/IpPrefix;
@@ -304,7 +279,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 166
     iget-object v1, v0, Landroid/net/shared/InitialConfiguration;->dnsServers:Ljava/util/Set;
 
     iget-object p0, p0, Landroid/net/InitialConfigurationParcelable;->dnsServers:[Ljava/lang/String;
@@ -313,12 +287,10 @@
 
     invoke-direct {v2}, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 167
     invoke-static {p0, v2}, Landroid/net/shared/ParcelableUtil;->fromParcelableArray([Ljava/lang/Object;Ljava/util/function/Function;)Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 166
     invoke-interface {v1, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     return-object v0
@@ -327,7 +299,6 @@
 .method private static isCompliantIPv6PrefixLength(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x30
 
     if-gt v0, p0, :cond_0
@@ -350,14 +321,12 @@
 .method private static isDirectlyConnectedRoute(Landroid/net/RouteInfo;Landroid/net/IpPrefix;)Z
     .locals 2
 
-    .line 181
     invoke-virtual {p0}, Landroid/net/RouteInfo;->hasGateway()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 182
     invoke-virtual {p0}, Landroid/net/RouteInfo;->getType()I
 
     move-result v0
@@ -366,7 +335,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 183
     invoke-virtual {p0}, Landroid/net/RouteInfo;->getDestination()Landroid/net/IpPrefix;
 
     move-result-object p0
@@ -389,7 +357,6 @@
 .method private static isIPv4(Landroid/net/IpPrefix;)Z
     .locals 0
 
-    .line 200
     invoke-virtual {p0}, Landroid/net/IpPrefix;->getAddress()Ljava/net/InetAddress;
 
     move-result-object p0
@@ -402,7 +369,6 @@
 .method private static isIPv4(Landroid/net/LinkAddress;)Z
     .locals 0
 
-    .line 204
     invoke-virtual {p0}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
 
     move-result-object p0
@@ -415,7 +381,6 @@
 .method private static isIPv6DefaultRoute(Landroid/net/IpPrefix;)Z
     .locals 1
 
-    .line 208
     invoke-virtual {p0}, Landroid/net/IpPrefix;->getAddress()Ljava/net/InetAddress;
 
     move-result-object p0
@@ -432,7 +397,6 @@
 .method private static isIPv6GUA(Landroid/net/LinkAddress;)Z
     .locals 1
 
-    .line 212
     invoke-virtual {p0}, Landroid/net/LinkAddress;->isIpv6()Z
 
     move-result v0
@@ -459,7 +423,6 @@
 .method private static isPrefixLengthCompliant(Landroid/net/IpPrefix;)Z
     .locals 1
 
-    .line 191
     invoke-static {p0}, Landroid/net/shared/InitialConfiguration;->isIPv4(Landroid/net/IpPrefix;)Z
 
     move-result v0
@@ -494,7 +457,6 @@
 .method private static isPrefixLengthCompliant(Landroid/net/LinkAddress;)Z
     .locals 1
 
-    .line 187
     invoke-static {p0}, Landroid/net/shared/InitialConfiguration;->isIPv4(Landroid/net/LinkAddress;)Z
 
     move-result v0
@@ -529,7 +491,6 @@
 .method private static synthetic lambda$isProvisionedBy$2(Landroid/net/LinkAddress;Landroid/net/LinkAddress;)Z
     .locals 0
 
-    .line 129
     invoke-virtual {p0, p1}, Landroid/net/LinkAddress;->isSameAddressAs(Landroid/net/LinkAddress;)Z
 
     move-result p0
@@ -540,7 +501,6 @@
 .method private static synthetic lambda$isProvisionedBy$3(Landroid/net/IpPrefix;Landroid/net/RouteInfo;)Z
     .locals 0
 
-    .line 136
     invoke-static {p1, p0}, Landroid/net/shared/InitialConfiguration;->isDirectlyConnectedRoute(Landroid/net/RouteInfo;Landroid/net/IpPrefix;)Z
 
     move-result p0
@@ -551,7 +511,6 @@
 .method private static synthetic lambda$isValid$0(Landroid/net/LinkAddress;Landroid/net/IpPrefix;)Z
     .locals 0
 
-    .line 80
     invoke-virtual {p0}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
 
     move-result-object p0
@@ -566,7 +525,6 @@
 .method private static synthetic lambda$isValid$1(Ljava/net/InetAddress;Landroid/net/IpPrefix;)Z
     .locals 0
 
-    .line 86
     invoke-virtual {p1, p0}, Landroid/net/IpPrefix;->contains(Ljava/net/InetAddress;)Z
 
     move-result p0
@@ -577,7 +535,6 @@
 .method private static synthetic lambda$not$4(Ljava/util/function/Predicate;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 240
     invoke-interface {p0, p1}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result p0
@@ -590,7 +547,6 @@
 .method public static not(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
     .locals 1
 
-    .line 240
     new-instance v0, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0}, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda2;-><init>(Ljava/util/function/Predicate;)V
@@ -603,7 +559,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 173
     instance-of v0, p1, Landroid/net/shared/InitialConfiguration;
 
     const/4 v1, 0x0
@@ -612,11 +567,9 @@
 
     return v1
 
-    .line 174
     :cond_0
     check-cast p1, Landroid/net/shared/InitialConfiguration;
 
-    .line 175
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
     iget-object v2, p1, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
@@ -631,7 +584,6 @@
 
     iget-object v2, p1, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
-    .line 176
     invoke-interface {v0, v2}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -642,7 +594,6 @@
 
     iget-object p1, p1, Landroid/net/shared/InitialConfiguration;->dnsServers:Ljava/util/Set;
 
-    .line 177
     invoke-interface {p0, p1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -658,7 +609,6 @@
 .method public isProvisionedBy(Ljava/util/List;Ljava/util/List;)Z
     .locals 4
 
-    .line 124
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -671,7 +621,6 @@
 
     return v1
 
-    .line 128
     :cond_0
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
@@ -692,7 +641,6 @@
 
     check-cast v2, Landroid/net/LinkAddress;
 
-    .line 129
     new-instance v3, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda10;
 
     invoke-direct {v3, v2}, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda10;-><init>(Landroid/net/LinkAddress;)V
@@ -708,7 +656,6 @@
     :cond_2
     if-eqz p2, :cond_4
 
-    .line 135
     iget-object p0, p0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -728,7 +675,6 @@
 
     check-cast p1, Landroid/net/IpPrefix;
 
-    .line 136
     new-instance v0, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda11;
 
     invoke-direct {v0, p1}, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda11;-><init>(Landroid/net/IpPrefix;)V
@@ -750,7 +696,6 @@
 .method public isValid()Z
     .locals 6
 
-    .line 74
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -763,7 +708,6 @@
 
     return v1
 
-    .line 79
     :cond_0
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
@@ -784,7 +728,6 @@
 
     check-cast v2, Landroid/net/LinkAddress;
 
-    .line 80
     iget-object v3, p0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
     new-instance v4, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda3;
@@ -799,7 +742,6 @@
 
     return v1
 
-    .line 85
     :cond_2
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->dnsServers:Ljava/util/Set;
 
@@ -820,7 +762,6 @@
 
     check-cast v2, Ljava/net/InetAddress;
 
-    .line 86
     iget-object v3, p0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
     new-instance v4, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda4;
@@ -835,7 +776,6 @@
 
     return v1
 
-    .line 92
     :cond_4
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
@@ -855,7 +795,6 @@
 
     return v1
 
-    .line 97
     :cond_5
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
@@ -875,7 +814,6 @@
 
     invoke-direct {v2}, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda7;-><init>()V
 
-    .line 98
     invoke-static {v2}, Landroid/net/shared/InitialConfiguration;->not(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 
     move-result-object v2
@@ -888,7 +826,6 @@
 
     return v1
 
-    .line 103
     :cond_6
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
@@ -908,7 +845,6 @@
 
     return v1
 
-    .line 107
     :cond_7
     iget-object p0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
@@ -945,12 +881,10 @@
 .method public toStableParcelable()Landroid/net/InitialConfigurationParcelable;
     .locals 4
 
-    .line 149
     new-instance v0, Landroid/net/InitialConfigurationParcelable;
 
     invoke-direct {v0}, Landroid/net/InitialConfigurationParcelable;-><init>()V
 
-    .line 150
     iget-object v1, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
     const/4 v2, 0x0
@@ -965,7 +899,6 @@
 
     iput-object v1, v0, Landroid/net/InitialConfigurationParcelable;->ipAddresses:[Landroid/net/LinkAddress;
 
-    .line 151
     iget-object v1, p0, Landroid/net/shared/InitialConfiguration;->directlyConnectedRoutes:Ljava/util/Set;
 
     new-array v2, v2, [Landroid/net/IpPrefix;
@@ -978,7 +911,6 @@
 
     iput-object v1, v0, Landroid/net/InitialConfigurationParcelable;->directlyConnectedRoutes:[Landroid/net/IpPrefix;
 
-    .line 152
     iget-object p0, p0, Landroid/net/shared/InitialConfiguration;->dnsServers:Ljava/util/Set;
 
     new-instance v1, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda1;
@@ -1001,12 +933,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 64
     iget-object v0, p0, Landroid/net/shared/InitialConfiguration;->ipAddresses:Ljava/util/Set;
 
     const-string v1, ", "
 
-    .line 66
     invoke-static {v1, v0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v0
@@ -1019,7 +949,6 @@
 
     iget-object p0, p0, Landroid/net/shared/InitialConfiguration;->dnsServers:Ljava/util/Set;
 
-    .line 67
     invoke-static {v1, p0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0
@@ -1030,7 +959,6 @@
 
     const-string v0, "InitialConfiguration(IPs: {%s}, prefixes: {%s}, DNS: {%s})"
 
-    .line 64
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -40,7 +39,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 19
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -55,12 +53,10 @@
 
     const/4 v0, -0x1
 
-    .line 27
     invoke-virtual {p2, p0, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 29
     sget-object p2, Lcom/samsung/android/knoxguard/service/receiver/AlarmReceiver;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -93,12 +89,10 @@
 
     if-nez p0, :cond_0
 
-    .line 33
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardSeService;->getClientHealth()I
 
     move-result p0
 
-    .line 34
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,7 +111,6 @@
 
     if-eq p0, v0, :cond_2
 
-    .line 36
     invoke-static {}, Lcom/samsung/android/knoxguard/service/utils/Utils;->needClientHealthCheck()Z
 
     move-result p0
@@ -126,12 +119,10 @@
 
     const/4 p0, 0x2
 
-    .line 37
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/KnoxGuardSeService;->setClientHealth(I)V
 
     const-string p0, "2001"
 
-    .line 38
     invoke-static {p1, p0}, Lcom/samsung/android/knoxguard/service/utils/Utils;->lockSeDevice(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
@@ -139,7 +130,6 @@
     :cond_0
     if-ne v0, p0, :cond_1
 
-    .line 42
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->setRetryLock(Landroid/content/Context;)Z
 
     move-result p0
@@ -148,17 +138,14 @@
 
     const-string p0, "System ui is not ready - power off "
 
-    .line 43
     invoke-static {p2, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x4
 
-    .line 44
     invoke-static {p1, p0}, Lcom/samsung/android/knoxguard/service/utils/Utils;->powerOff(Landroid/content/Context;I)V
 
     goto :goto_0
 
-    .line 47
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 

@@ -45,7 +45,6 @@
 
     const/16 v0, 0xff
 
-    .line 31
     invoke-static {v0}, Landroid/net/util/NetworkConstants;->asByte(I)B
 
     move-result v0
@@ -80,7 +79,6 @@
 
     aput-byte v0, v1, v2
 
-    .line 32
     sput-object v1, Landroid/net/util/NetworkConstants;->ETHER_ADDR_BROADCAST:[B
 
     return-void
@@ -89,7 +87,6 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance p0, Ljava/lang/RuntimeException;
@@ -104,7 +101,6 @@
 .method public static asByte(I)B
     .locals 0
 
-    .line 0
     int-to-byte p0, p0
 
     return p0

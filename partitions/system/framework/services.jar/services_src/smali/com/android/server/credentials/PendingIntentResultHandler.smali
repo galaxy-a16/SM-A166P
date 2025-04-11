@@ -16,7 +16,6 @@
     :cond_0
     const-string v0, "android.service.credentials.extra.CREATE_CREDENTIAL_EXCEPTION"
 
-    .line 85
     const-class v1, Landroid/credentials/CreateCredentialException;
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -40,7 +39,6 @@
     :cond_0
     const-string v0, "android.service.credentials.extra.CREATE_CREDENTIAL_RESPONSE"
 
-    .line 63
     const-class v1, Landroid/credentials/CreateCredentialResponse;
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -64,7 +62,6 @@
     :cond_0
     const-string v0, "android.service.credentials.extra.GET_CREDENTIAL_EXCEPTION"
 
-    .line 97
     const-class v1, Landroid/credentials/GetCredentialException;
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -88,7 +85,6 @@
     :cond_0
     const-string v0, "android.service.credentials.extra.GET_CREDENTIAL_RESPONSE"
 
-    .line 73
     const-class v1, Landroid/credentials/GetCredentialResponse;
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -112,7 +108,6 @@
     :cond_0
     const-string v0, "android.service.credentials.extra.BEGIN_GET_CREDENTIAL_RESPONSE"
 
-    .line 53
     const-class v1, Landroid/service/credentials/BeginGetCredentialResponse;
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -127,7 +122,6 @@
 .method public static isCancelledResponse(Landroid/credentials/ui/ProviderPendingIntentResponse;)Z
     .locals 0
 
-    .line 45
     invoke-virtual {p0}, Landroid/credentials/ui/ProviderPendingIntentResponse;->getResultCode()I
 
     move-result p0
@@ -148,7 +142,6 @@
 .method public static isValidResponse(Landroid/credentials/ui/ProviderPendingIntentResponse;)Z
     .locals 1
 
-    .line 39
     invoke-virtual {p0}, Landroid/credentials/ui/ProviderPendingIntentResponse;->getResultCode()I
 
     move-result p0

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;)V
     .locals 0
 
-    .line 1443
     iput-object p1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$3;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onTransientSystemBarsVisibilityChanged(IZZ)V
     .locals 0
 
-    .line 1447
     iget-object p0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$3;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
     invoke-static {p0}, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;->-$$Nest$fgetmSystemUiVisibilityPolicyController(Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;)Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;

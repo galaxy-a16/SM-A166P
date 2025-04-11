@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Void;
 
     invoke-static {p1}, Lcom/android/server/utils/quota/CountQuotaTracker;->$r8$lambda$cA8ysKjrcVI0Pae5GnWwGICxjyI(Ljava/lang/Void;)Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;

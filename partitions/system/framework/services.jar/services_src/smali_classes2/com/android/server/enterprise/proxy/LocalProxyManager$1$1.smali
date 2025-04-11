@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/proxy/LocalProxyManager$1;)V
     .locals 0
 
-    .line 176
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/LocalProxyManager$1$1;->this$1:Lcom/android/server/enterprise/proxy/LocalProxyManager$1;
 
     invoke-direct {p0}, Lcom/android/net/IProxyPortListener$Stub;-><init>()V
@@ -30,7 +29,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 180
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/LocalProxyManager$1$1;->this$1:Lcom/android/server/enterprise/proxy/LocalProxyManager$1;
 
     iget-object v0, v0, Lcom/android/server/enterprise/proxy/LocalProxyManager$1;->this$0:Lcom/android/server/enterprise/proxy/LocalProxyManager;
@@ -60,10 +58,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 181
     invoke-static {v0}, Lcom/android/server/enterprise/proxy/LocalProxyManager;->-$$Nest$sfputsIsLocalProxyServerRunning(Z)V
 
-    .line 182
     iget-object p0, p0, Lcom/android/server/enterprise/proxy/LocalProxyManager$1$1;->this$1:Lcom/android/server/enterprise/proxy/LocalProxyManager$1;
 
     iget-object p0, p0, Lcom/android/server/enterprise/proxy/LocalProxyManager$1;->this$0:Lcom/android/server/enterprise/proxy/LocalProxyManager;
@@ -75,7 +71,6 @@
     :cond_1
     const-string p0, "Received invalid port from Local Proxy, proxy will not be operational"
 
-    .line 184
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

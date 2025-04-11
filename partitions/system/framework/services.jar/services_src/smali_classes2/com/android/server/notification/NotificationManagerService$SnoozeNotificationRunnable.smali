@@ -20,18 +20,14 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;Ljava/lang/String;JLjava/lang/String;)V
     .locals 0
 
-    .line 10247
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10248
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->mKey:Ljava/lang/String;
 
-    .line 10249
     iput-wide p3, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->mDuration:J
 
-    .line 10250
     iput-object p5, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->mSnoozeCriterionId:Ljava/lang/String;
 
     return-void
@@ -42,7 +38,6 @@
 .method public final isSnoozable(Lcom/android/server/notification/NotificationRecord;)Z
     .locals 0
 
-    .line 10341
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object p0
@@ -53,7 +48,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 10342
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object p0
@@ -64,7 +58,6 @@
 
     const-string/jumbo p1, "ranker_group"
 
-    .line 10341
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -89,14 +82,12 @@
 .method public run()V
     .locals 3
 
-    .line 10255
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService;->mNotificationLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 10256
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -108,10 +99,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 10258
     invoke-virtual {p0, v1}, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->snoozeLocked(Lcom/android/server/notification/NotificationRecord;)V
 
-    .line 10260
     :cond_0
     monitor-exit v0
 
@@ -130,12 +119,10 @@
 .method public snoozeLocked(Lcom/android/server/notification/NotificationRecord;)V
     .locals 6
 
-    .line 10265
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 10266
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v1
@@ -148,10 +135,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 10267
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 10269
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v3
@@ -160,7 +145,6 @@
 
     move-result-object v3
 
-    .line 10270
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v4
@@ -177,12 +161,10 @@
 
     move-result v5
 
-    .line 10268
     invoke-virtual {v1, v3, v4, v5}, Lcom/android/server/notification/NotificationManagerService;->findCurrentAndSnoozedGroupNotificationsLocked(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 10271
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v3
@@ -195,7 +177,6 @@
 
     move v3, v2
 
-    .line 10273
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -203,7 +184,6 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 10274
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->mKey:Ljava/lang/String;
 
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -222,7 +202,6 @@
 
     if-nez v4, :cond_0
 
-    .line 10275
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -236,7 +215,6 @@
 
     goto :goto_0
 
-    .line 10281
     :cond_1
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -256,7 +234,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 10282
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -267,7 +244,6 @@
 
     move v3, v2
 
-    .line 10284
     :goto_1
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -275,7 +251,6 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 10285
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->mKey:Ljava/lang/String;
 
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -294,7 +269,6 @@
 
     if-nez v4, :cond_2
 
-    .line 10286
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -308,11 +282,9 @@
 
     goto :goto_1
 
-    .line 10294
     :cond_3
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 10296
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationManagerService;->mSnoozeHelper:Lcom/android/server/notification/SnoozeHelper;
@@ -327,7 +299,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 10297
     :goto_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -335,7 +306,6 @@
 
     if-ge v2, p1, :cond_5
 
-    .line 10298
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -348,7 +318,6 @@
 
     goto :goto_2
 
-    .line 10301
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -383,40 +352,34 @@
 .method public snoozeNotificationLocked(Lcom/android/server/notification/NotificationRecord;)V
     .locals 9
 
-    .line 10307
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getLogMaker()Landroid/metrics/LogMaker;
 
     move-result-object v0
 
     const/16 v1, 0x33f
 
-    .line 10308
     invoke-virtual {v0, v1}, Landroid/metrics/LogMaker;->setCategory(I)Landroid/metrics/LogMaker;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    .line 10309
     invoke-virtual {v0, v1}, Landroid/metrics/LogMaker;->setType(I)Landroid/metrics/LogMaker;
 
     move-result-object v0
 
     iget-wide v1, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->mDuration:J
 
-    .line 10311
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
     const/16 v2, 0x473
 
-    .line 10310
     invoke-virtual {v0, v2, v1}, Landroid/metrics/LogMaker;->addTaggedData(ILjava/lang/Object;)Landroid/metrics/LogMaker;
 
     move-result-object v0
 
-    .line 10313
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->mSnoozeCriterionId:Ljava/lang/String;
 
     if-nez v1, :cond_0
@@ -435,15 +398,12 @@
 
     const/16 v2, 0x340
 
-    .line 10312
     invoke-virtual {v0, v2, v1}, Landroid/metrics/LogMaker;->addTaggedData(ILjava/lang/Object;)Landroid/metrics/LogMaker;
 
     move-result-object v0
 
-    .line 10307
     invoke-static {v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/metrics/LogMaker;)V
 
-    .line 10314
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmNotificationRecordLogger(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationRecordLogger;
@@ -454,19 +414,16 @@
 
     invoke-interface {v0, v1, p1}, Lcom/android/server/notification/NotificationRecordLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;Lcom/android/server/notification/NotificationRecord;)V
 
-    .line 10316
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/notification/NotificationManagerService;->reportUserInteraction(Lcom/android/server/notification/NotificationRecord;)V
 
-    .line 10317
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0, p1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mremoveFromNotificationListsLocked(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;)Z
 
     move-result v5
 
-    .line 10318
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const/4 v3, 0x0
@@ -475,22 +432,18 @@
 
     const/4 v6, 0x0
 
-    .line 10319
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v7
 
     move-object v2, p1
 
-    .line 10318
     invoke-static/range {v1 .. v8}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mcancelNotificationLocked(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;ZIZLjava/lang/String;J)V
 
-    .line 10320
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationManagerService;->updateLightsLocked()V
 
-    .line 10322
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0
@@ -505,19 +458,16 @@
 
     iput v1, v0, Landroid/app/Notification;->semFlags:I
 
-    .line 10324
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->isSnoozable(Lcom/android/server/notification/NotificationRecord;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 10325
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->mSnoozeCriterionId:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 10326
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmAssistants(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$NotificationAssistants;
@@ -528,7 +478,6 @@
 
     invoke-static {v0, p1, v1}, Lcom/android/server/notification/NotificationManagerService$NotificationAssistants;->-$$Nest$mnotifyAssistantSnoozedLocked(Lcom/android/server/notification/NotificationManagerService$NotificationAssistants;Lcom/android/server/notification/NotificationRecord;Ljava/lang/String;)V
 
-    .line 10327
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService;->mSnoozeHelper:Lcom/android/server/notification/SnoozeHelper;
@@ -539,7 +488,6 @@
 
     goto :goto_1
 
-    .line 10329
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -549,11 +497,9 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/android/server/notification/SnoozeHelper;->snooze(Lcom/android/server/notification/NotificationRecord;J)V
 
-    .line 10331
     :goto_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->recordSnoozed()V
 
-    .line 10332
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$SnoozeNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService;->handleSavePolicyFile()V

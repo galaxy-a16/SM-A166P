@@ -15,12 +15,10 @@
 .method public static updateBlockedReasonsWithProcState(II)I
     .locals 0
 
-    .line 105
     invoke-static {p1}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->getAllowedReasonsForProcState(I)I
 
     move-result p1
 
-    .line 106
     invoke-static {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->getEffectiveBlockedReasons(II)I
 
     move-result p0

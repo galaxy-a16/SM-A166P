@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/nio/file/Path;
 
     invoke-static {p1}, Lcom/android/server/integrity/AppIntegrityManagerServiceImpl;->$r8$lambda$qKaCsO8ZZXT7D0UVcF8QpePqSxY(Ljava/nio/file/Path;)Ljava/lang/String;

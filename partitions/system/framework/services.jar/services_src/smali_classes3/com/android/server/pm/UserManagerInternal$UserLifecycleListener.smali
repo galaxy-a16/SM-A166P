@@ -7,13 +7,11 @@
 .method public onUserCreated(Landroid/content/pm/UserInfo;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserRemoved(Landroid/content/pm/UserInfo;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

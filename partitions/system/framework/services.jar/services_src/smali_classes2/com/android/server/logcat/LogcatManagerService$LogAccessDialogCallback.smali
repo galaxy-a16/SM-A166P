@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/logcat/LogcatManagerService;)V
     .locals 0
 
-    .line 216
     iput-object p1, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessDialogCallback;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/app/ILogAccessDialogCallback$Stub;-><init>()V
@@ -24,12 +23,10 @@
 .method public approveAccessForClient(ILjava/lang/String;)V
     .locals 2
 
-    .line 219
     new-instance v0, Lcom/android/server/logcat/LogcatManagerService$LogAccessClient;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/logcat/LogcatManagerService$LogAccessClient;-><init>(ILjava/lang/String;)V
 
-    .line 223
     iget-object p1, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessDialogCallback;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-static {p1}, Lcom/android/server/logcat/LogcatManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/logcat/LogcatManagerService;)Landroid/os/Handler;
@@ -42,7 +39,6 @@
 
     move-result-object p1
 
-    .line 224
     iget-object p2, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessDialogCallback;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-static {p2}, Lcom/android/server/logcat/LogcatManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/logcat/LogcatManagerService;)Landroid/os/Handler;
@@ -73,12 +69,10 @@
 .method public declineAccessForClient(ILjava/lang/String;)V
     .locals 2
 
-    .line 229
     new-instance v0, Lcom/android/server/logcat/LogcatManagerService$LogAccessClient;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/logcat/LogcatManagerService$LogAccessClient;-><init>(ILjava/lang/String;)V
 
-    .line 233
     iget-object p1, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessDialogCallback;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-static {p1}, Lcom/android/server/logcat/LogcatManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/logcat/LogcatManagerService;)Landroid/os/Handler;
@@ -91,7 +85,6 @@
 
     move-result-object p1
 
-    .line 234
     iget-object p2, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessDialogCallback;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-static {p2}, Lcom/android/server/logcat/LogcatManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/logcat/LogcatManagerService;)Landroid/os/Handler;

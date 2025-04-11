@@ -13,13 +13,10 @@
 .method public constructor <init>(ILjava/util/function/IntPredicate;)V
     .locals 0
 
-    .line 2042
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2043
     iput p1, p0, Lcom/android/server/pm/PackageInstallerService$BroadcastCookie;->callingUid:I
 
-    .line 2044
     iput-object p2, p0, Lcom/android/server/pm/PackageInstallerService$BroadcastCookie;->userCheck:Ljava/util/function/IntPredicate;
 
     return-void

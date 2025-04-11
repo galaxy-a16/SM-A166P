@@ -26,10 +26,8 @@
 .method public constructor <init>(ILcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -40,7 +38,6 @@
 
     iput-object p1, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mPid:Ljava/util/Optional;
 
-    .line 45
     iput-object p2, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-void
@@ -49,19 +46,14 @@
 .method public constructor <init>(Ljava/lang/String;ILcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mPackageName:Ljava/lang/String;
 
-    .line 51
     iput p2, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mUserId:I
 
-    .line 52
     iput-object p3, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 53
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
 
     move-result-object p1
@@ -76,10 +68,8 @@
 .method public commit()Z
     .locals 9
 
-    .line 84
     monitor-enter p0
 
-    .line 85
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -91,7 +81,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 86
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -99,7 +88,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 89
     :try_start_2
     iget-object v3, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mPid:Ljava/util/Optional;
 
@@ -111,7 +99,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 90
     iget-object v3, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/ActivityTaskManagerService;->mProcessMap:Lcom/android/server/wm/WindowProcessControllerMap;
@@ -136,7 +123,6 @@
 
     const-string v3, "PackageConfigurationUpdaterImpl"
 
-    .line 92
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -157,7 +143,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 113
     :try_start_3
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -174,17 +159,14 @@
 
     return v4
 
-    .line 96
     :cond_0
     :try_start_5
     iget v4, v3, Lcom/android/server/wm/WindowProcessController;->mUid:I
 
-    .line 97
     iget v5, v3, Lcom/android/server/wm/WindowProcessController;->mUserId:I
 
     iput v5, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mUserId:I
 
-    .line 98
     iget-object v3, v3, Lcom/android/server/wm/WindowProcessController;->mInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v3, v3, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -193,7 +175,6 @@
 
     goto :goto_0
 
-    .line 100
     :cond_1
     iget-object v3, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -215,7 +196,6 @@
 
     const-string v3, "PackageConfigurationUpdaterImpl"
 
-    .line 103
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -236,7 +216,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 113
     :try_start_6
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -256,14 +235,12 @@
     :cond_2
     move v4, v3
 
-    .line 108
     :goto_0
     :try_start_8
     iget-object v3, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p0, v4, v3}, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->updateConfig(ILjava/lang/String;)V
 
-    .line 109
     iget-object v3, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/ActivityTaskManagerService;->mPackageConfigPersister:Lcom/android/server/wm/PackageConfigPersister;
@@ -272,14 +249,12 @@
 
     iget v5, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mUserId:I
 
-    .line 110
     invoke-virtual {v3, v4, v5, p0}, Lcom/android/server/wm/PackageConfigPersister;->updateFromImpl(Ljava/lang/String;ILcom/android/server/wm/PackageConfigurationUpdaterImpl;)Z
 
     move-result v3
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 113
     :try_start_9
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -302,13 +277,11 @@
     :try_start_b
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 114
     throw v3
 
     :catchall_1
     move-exception v1
 
-    .line 115
     monitor-exit v0
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
@@ -321,7 +294,6 @@
     :catchall_2
     move-exception v0
 
-    .line 116
     monitor-exit p0
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_2
@@ -332,7 +304,6 @@
 .method public getGrammaticalGender()Ljava/lang/Integer;
     .locals 0
 
-    .line 146
     iget p0, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mGrammaticalGender:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -345,7 +316,6 @@
 .method public getLocales()Landroid/os/LocaleList;
     .locals 0
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mLocales:Landroid/os/LocaleList;
 
     return-object p0
@@ -354,7 +324,6 @@
 .method public getNightMode()Ljava/lang/Integer;
     .locals 0
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mNightMode:Ljava/lang/Integer;
 
     return-object p0
@@ -363,14 +332,11 @@
 .method public setGrammaticalGender(I)Lcom/android/server/wm/ActivityTaskManagerInternal$PackageConfigurationUpdater;
     .locals 0
 
-    .line 76
     monitor-enter p0
 
-    .line 77
     :try_start_0
     iput p1, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mGrammaticalGender:I
 
-    .line 78
     monitor-exit p0
 
     return-object p0
@@ -388,14 +354,11 @@
 .method public setLocales(Landroid/os/LocaleList;)Lcom/android/server/wm/ActivityTaskManagerInternal$PackageConfigurationUpdater;
     .locals 0
 
-    .line 67
     monitor-enter p0
 
-    .line 68
     :try_start_0
     iput-object p1, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mLocales:Landroid/os/LocaleList;
 
-    .line 69
     monitor-exit p0
 
     return-object p0
@@ -413,10 +376,8 @@
 .method public setNightMode(I)Lcom/android/server/wm/ActivityTaskManagerInternal$PackageConfigurationUpdater;
     .locals 0
 
-    .line 58
     monitor-enter p0
 
-    .line 59
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -424,7 +385,6 @@
 
     iput-object p1, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mNightMode:Ljava/lang/Integer;
 
-    .line 60
     monitor-exit p0
 
     return-object p0
@@ -442,7 +402,6 @@
 .method public final updateConfig(ILjava/lang/String;)V
     .locals 5
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mProcessMap:Lcom/android/server/wm/WindowProcessControllerMap;
@@ -453,7 +412,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 121
     invoke-virtual {p1}, Landroid/util/ArraySet;->isEmpty()Z
 
     move-result v0
@@ -462,13 +420,11 @@
 
     goto :goto_1
 
-    .line 122
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mLocales:Landroid/os/LocaleList;
 
     iget-object v1, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 123
     invoke-virtual {v1}, Lcom/android/server/wm/ActivityTaskManagerService;->getGlobalConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
@@ -477,12 +433,10 @@
 
     move-result-object v1
 
-    .line 122
     invoke-static {v0, v1}, Lcom/android/server/wm/LocaleOverlayHelper;->combineLocalesIfOverlayExists(Landroid/os/LocaleList;Landroid/os/LocaleList;)Landroid/os/LocaleList;
 
     move-result-object v0
 
-    .line 124
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result v1
@@ -492,14 +446,12 @@
     :goto_0
     if-ltz v1, :cond_2
 
-    .line 125
     invoke-virtual {p1, v1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/wm/WindowProcessController;
 
-    .line 126
     iget-object v3, v2, Lcom/android/server/wm/WindowProcessController;->mInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v3, v3, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -510,7 +462,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 127
     iget-object v3, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mNightMode:Ljava/lang/Integer;
 
     iget v4, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mGrammaticalGender:I
@@ -521,7 +472,6 @@
 
     invoke-virtual {v2, v3, v0, v4}, Lcom/android/server/wm/ConfigurationContainer;->applyAppSpecificConfig(Ljava/lang/Integer;Landroid/os/LocaleList;Ljava/lang/Integer;)Z
 
-    .line 131
     :cond_1
     iget-object v3, p0, Lcom/android/server/wm/PackageConfigurationUpdaterImpl;->mNightMode:Ljava/lang/Integer;
 

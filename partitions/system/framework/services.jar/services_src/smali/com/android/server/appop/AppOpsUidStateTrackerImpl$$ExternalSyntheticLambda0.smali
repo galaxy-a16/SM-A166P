@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/appop/AppOpsUidStateTrackerImpl;
 
     check-cast p2, Ljava/lang/Integer;

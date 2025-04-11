@@ -18,10 +18,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -44,7 +42,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;->TAG:Ljava/lang/String;
 
-    .line 25
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -71,7 +68,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;-><init>()V
 
     return-void
@@ -80,7 +76,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;
     .locals 1
 
-    .line 35
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter$ActiveSensorFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;
 
     move-result-object v0
@@ -93,14 +88,12 @@
 .method public deInit()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 49
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p1
@@ -113,7 +106,6 @@
 
     if-nez p1, :cond_1
 
-    .line 50
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p1
@@ -126,7 +118,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;->mSensorList:Ljava/util/List;
 
@@ -156,21 +147,18 @@
 
     const-string/jumbo v0, "sdhms"
 
-    .line 60
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 62
     invoke-static {v0}, Lcom/sec/android/sdhms/ISamsungDeviceHealthManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/android/sdhms/ISamsungDeviceHealthManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 65
     :try_start_0
     invoke-interface {v0}, Lcom/sec/android/sdhms/ISamsungDeviceHealthManager;->getActiveSensorList()Ljava/lang/String;
 
@@ -189,7 +177,6 @@
     :catch_0
     move-exception v0
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -216,14 +203,12 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final isTarget(II)Z
     .locals 0
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;->mFilterTypeList:Ljava/util/List;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -259,7 +244,6 @@
 
     return-object p0
 
-    .line 78
     :cond_0
     new-instance v0, Ljava/util/HashSet;
 
@@ -267,12 +251,10 @@
 
     const-string v1, ":"
 
-    .line 79
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 80
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -286,40 +268,34 @@
 
     const-string v5, " "
 
-    .line 81
     invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 82
     array-length v5, v4
 
     const/4 v6, 0x1
 
     if-le v5, v6, :cond_1
 
-    .line 83
     aget-object v5, v4, v2
 
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 84
     aget-object v4, v4, v6
 
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 85
     invoke-virtual {p0, v4, v5}, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;->isTarget(II)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 86
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -331,7 +307,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_2
     new-instance p0, Ljava/util/ArrayList;
 

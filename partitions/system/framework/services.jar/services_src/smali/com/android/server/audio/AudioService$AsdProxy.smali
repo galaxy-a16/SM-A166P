@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;Landroid/media/IAudioServerStateDispatcher;)V
     .locals 0
 
-    .line 13967
     iput-object p1, p0, Lcom/android/server/audio/AudioService$AsdProxy;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13968
     iput-object p2, p0, Lcom/android/server/audio/AudioService$AsdProxy;->mAsd:Landroid/media/IAudioServerStateDispatcher;
 
     return-void
@@ -32,7 +30,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 13972
     iget-object v0, p0, Lcom/android/server/audio/AudioService$AsdProxy;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {v0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmAudioServerStateListeners(Lcom/android/server/audio/AudioService;)Ljava/util/HashMap;
@@ -41,7 +38,6 @@
 
     monitor-enter v0
 
-    .line 13973
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/AudioService$AsdProxy;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -57,7 +53,6 @@
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13974
     monitor-exit v0
 
     return-void
@@ -75,7 +70,6 @@
 .method public callback()Landroid/media/IAudioServerStateDispatcher;
     .locals 0
 
-    .line 13978
     iget-object p0, p0, Lcom/android/server/audio/AudioService$AsdProxy;->mAsd:Landroid/media/IAudioServerStateDispatcher;
 
     return-object p0

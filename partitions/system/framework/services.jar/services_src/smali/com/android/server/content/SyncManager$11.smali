@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/content/SyncManager;Landroid/os/Handler;Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 746
     iput-object p1, p0, Lcom/android/server/content/SyncManager$11;->this$0:Lcom/android/server/content/SyncManager;
 
     iput-object p3, p0, Lcom/android/server/content/SyncManager$11;->val$resolver:Landroid/content/ContentResolver;
@@ -28,7 +27,6 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 748
     iget-object p1, p0, Lcom/android/server/content/SyncManager$11;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {p1}, Lcom/android/server/content/SyncManager;->-$$Nest$fgetmProvisioned(Lcom/android/server/content/SyncManager;)Z
@@ -45,7 +43,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/content/SyncManager;->-$$Nest$fputmProvisioned(Lcom/android/server/content/SyncManager;Z)V
 
-    .line 749
     iget-object p1, p0, Lcom/android/server/content/SyncManager$11;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {p1}, Lcom/android/server/content/SyncManager;->-$$Nest$fgetmProvisioned(Lcom/android/server/content/SyncManager;)Z
@@ -54,7 +51,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 750
     iget-object p1, p0, Lcom/android/server/content/SyncManager$11;->val$resolver:Landroid/content/ContentResolver;
 
     invoke-virtual {p1, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V

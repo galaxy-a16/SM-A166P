@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;)V
     .locals 0
 
-    .line 692
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,19 +27,16 @@
 
     if-eqz p2, :cond_1
 
-    .line 698
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 699
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 700
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
@@ -59,7 +55,6 @@
     :cond_1
     move-object p2, p1
 
-    .line 703
     :goto_0
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -83,7 +78,6 @@
 
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 704
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -92,14 +86,12 @@
 
     const-string p1, "com.samsung.android.app.goodcatch"
 
-    .line 705
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 706
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -124,12 +116,10 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 707
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;
 
     invoke-virtual {p1}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->reset()V
 
-    .line 708
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;
 
     iget-object p1, p1, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
@@ -140,7 +130,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureEvent;->reset()V
 
-    .line 709
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;
 
     iget-object p1, p1, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
@@ -151,7 +140,6 @@
 
     monitor-enter p1
 
-    .line 710
     :try_start_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;
 
@@ -182,12 +170,10 @@
 
     check-cast p2, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;
 
-    .line 711
     invoke-virtual {p2}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->off()V
 
     goto :goto_1
 
-    .line 713
     :cond_2
     monitor-exit p1
 

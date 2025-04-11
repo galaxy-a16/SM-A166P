@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/chimera/GPUMemoryReclaimer;Lcom/android/server/chimera/GPUMemoryReclaimer;)V
     .locals 0
 
-    .line 554
     iput-object p1, p0, Lcom/android/server/chimera/GPUMemoryReclaimer$Utils;->this$0:Lcom/android/server/chimera/GPUMemoryReclaimer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/chimera/GPUMemoryReclaimer;Lcom/android/server/chimera/GPUMemoryReclaimer;Lcom/android/server/chimera/GPUMemoryReclaimer$Utils-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/chimera/GPUMemoryReclaimer$Utils;-><init>(Lcom/android/server/chimera/GPUMemoryReclaimer;Lcom/android/server/chimera/GPUMemoryReclaimer;)V
 
     return-void
@@ -37,7 +35,6 @@
 .method public getProcessName(I)Ljava/lang/String;
     .locals 2
 
-    .line 559
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -57,7 +54,6 @@
 
     move-result-object p1
 
-    .line 560
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/GPUMemoryReclaimer$Utils;->readFileToString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -75,15 +71,12 @@
 .method public final getSwapFreeKb()J
     .locals 2
 
-    .line 622
     new-instance p0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {p0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 623
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 624
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getSwapFreeSizeKb()J
 
     move-result-wide v0
@@ -94,20 +87,16 @@
 .method public getSwapFreePercentage()I
     .locals 8
 
-    .line 628
     new-instance p0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {p0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 629
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 630
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getSwapFreeSizeKb()J
 
     move-result-wide v0
 
-    .line 631
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getSwapTotalSizeKb()J
 
     move-result-wide v2
@@ -127,7 +116,6 @@
     :cond_0
     mul-long/2addr v0, v6
 
-    .line 632
     div-long/2addr v0, v2
 
     :goto_0
@@ -153,7 +141,6 @@
 .method public readFileToLong(Ljava/lang/String;)J
     .locals 0
 
-    .line 568
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/GPUMemoryReclaimer$Utils;->readFileToString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -168,27 +155,22 @@
 .method public readFileToString(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 582
     new-instance p0, Ljava/io/FileReader;
 
     invoke-direct {p0, p1}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
 
-    .line 583
     new-instance p1, Ljava/io/BufferedReader;
 
     const/16 v0, 0x800
 
     invoke-direct {p1, p0, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;I)V
 
-    .line 584
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 590
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
 
-    .line 591
     invoke-virtual {p0}, Ljava/io/FileReader;->close()V
 
     return-object v0
@@ -197,28 +179,22 @@
 .method public writeStringToFile(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 604
     new-instance p0, Ljava/io/FileWriter;
 
     invoke-direct {p0, p1}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
 
-    .line 605
     new-instance p1, Ljava/io/BufferedWriter;
 
     const/16 v0, 0x800
 
     invoke-direct {p1, p0, v0}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;I)V
 
-    .line 606
     invoke-virtual {p1, p2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 607
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 613
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->close()V
 
-    .line 614
     invoke-virtual {p0}, Ljava/io/FileWriter;->close()V
 
     return-void

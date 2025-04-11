@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fputcapability(Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;->capability:I
 
     return-void
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fputstate(Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;->state:I
 
     return-void
@@ -31,13 +29,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 107
     iput p1, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;->state:I
 
-    .line 108
     iput p2, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;->capability:I
 
     return-void
@@ -46,7 +41,6 @@
 .method public synthetic constructor <init>(IILcom/android/server/location/nsflp/NSPermissionHelper$UidState-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;-><init>(II)V
 
     return-void
@@ -57,7 +51,6 @@
 .method public getProcState()I
     .locals 0
 
-    .line 112
     iget p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;->state:I
 
     return p0
@@ -66,7 +59,6 @@
 .method public hasLocationCapability()Z
     .locals 1
 
-    .line 116
     iget p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;->capability:I
 
     const/4 v0, 0x1

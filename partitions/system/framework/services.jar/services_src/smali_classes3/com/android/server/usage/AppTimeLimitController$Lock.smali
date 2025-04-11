@@ -15,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usage/AppTimeLimitController$Lock-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/usage/AppTimeLimitController$Lock;-><init>()V
 
     return-void

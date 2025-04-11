@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/SKLogger;)V
     .locals 0
 
-    .line 164
     iput-object p1, p0, Lcom/android/server/SKLogger$SKFormatter;->this$0:Lcom/android/server/SKLogger;
 
     invoke-direct {p0}, Ljava/util/logging/Formatter;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/SKLogger;Lcom/android/server/SKLogger$SKFormatter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/SKLogger$SKFormatter;-><init>(Lcom/android/server/SKLogger;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public format(Ljava/util/logging/LogRecord;)Ljava/lang/String;
     .locals 0
 
-    .line 167
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

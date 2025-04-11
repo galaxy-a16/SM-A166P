@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/plm/impl/BindServiceImpl;)V
     .locals 0
 
-    .line 98
     iput-object p1, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl$1;->this$0:Lcom/android/server/enterprise/plm/impl/BindServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onConnect()V
     .locals 1
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl$1;->this$0:Lcom/android/server/enterprise/plm/impl/BindServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->-$$Nest$fgetmObserver(Lcom/android/server/enterprise/plm/impl/BindServiceImpl;)Landroid/os/Handler;
@@ -57,7 +55,6 @@
 .method public onDisconnect()V
     .locals 1
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl$1;->this$0:Lcom/android/server/enterprise/plm/impl/BindServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->-$$Nest$fgetmObserver(Lcom/android/server/enterprise/plm/impl/BindServiceImpl;)Landroid/os/Handler;

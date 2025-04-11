@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbHostManager;)V
     .locals 0
 
-    .line 744
     iput-object p1, p0, Lcom/android/server/usb/UsbHostManager$1;->this$0:Lcom/android/server/usb/UsbHostManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUEvent(Landroid/os/UEventObserver$UEvent;)V
     .locals 3
 
-    .line 747
     invoke-static {}, Lcom/android/server/usb/UsbHostManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -47,21 +45,18 @@
 
     const-string v0, "ACTION"
 
-    .line 749
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "STATE"
 
-    .line 750
     invoke-virtual {p1, v1}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "change"
 
-    .line 752
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -72,7 +67,6 @@
 
     const-string v0, "REMOVE"
 
-    .line 753
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -93,7 +87,6 @@
 
     goto :goto_0
 
-    .line 755
     :cond_0
     new-instance p1, Landroid/content/Intent;
 
@@ -101,10 +94,8 @@
 
     const-string v0, "On"
 
-    .line 756
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 757
     iget-object p0, p0, Lcom/android/server/usb/UsbHostManager$1;->this$0:Lcom/android/server/usb/UsbHostManager;
 
     sget-object v0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -113,7 +104,6 @@
 
     goto :goto_0
 
-    .line 761
     :cond_1
     new-instance p1, Landroid/content/Intent;
 
@@ -121,10 +111,8 @@
 
     const-string v0, "Off"
 
-    .line 762
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 763
     iget-object p0, p0, Lcom/android/server/usb/UsbHostManager$1;->this$0:Lcom/android/server/usb/UsbHostManager;
 
     sget-object v0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;

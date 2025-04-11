@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/attention/AttentionManagerService;)V
     .locals 0
 
-    .line 804
     iput-object p1, p0, Lcom/android/server/attention/AttentionManagerService$AttentionHandler;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
-    .line 805
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 810
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -42,7 +39,6 @@
 
     goto :goto_0
 
-    .line 821
     :cond_0
     iget-object p1, p0, Lcom/android/server/attention/AttentionManagerService$AttentionHandler;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
@@ -52,13 +48,11 @@
 
     monitor-enter p1
 
-    .line 822
     :try_start_0
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionHandler;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/attention/AttentionManagerService;->cancel()V
 
-    .line 823
     monitor-exit p1
 
     goto :goto_0
@@ -72,7 +66,6 @@
 
     throw p0
 
-    .line 813
     :cond_1
     iget-object p1, p0, Lcom/android/server/attention/AttentionManagerService$AttentionHandler;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
@@ -82,13 +75,11 @@
 
     monitor-enter p1
 
-    .line 814
     :try_start_1
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionHandler;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-static {p0}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$mcancelAndUnbindLocked(Lcom/android/server/attention/AttentionManagerService;)V
 
-    .line 815
     monitor-exit p1
 
     :goto_0

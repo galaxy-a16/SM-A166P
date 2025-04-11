@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/AppsFilterImpl;Lcom/android/server/pm/AppsFilterSnapshot;Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 230
     iput-object p1, p0, Lcom/android/server/pm/AppsFilterImpl$1;->this$0:Lcom/android/server/pm/AppsFilterImpl;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/utils/SnapshotCache;-><init>(Ljava/lang/Object;Lcom/android/server/utils/Watchable;)V
@@ -24,7 +23,6 @@
 .method public createSnapshot()Lcom/android/server/pm/AppsFilterSnapshot;
     .locals 1
 
-    .line 233
     new-instance v0, Lcom/android/server/pm/AppsFilterSnapshotImpl;
 
     iget-object p0, p0, Lcom/android/server/pm/AppsFilterImpl$1;->this$0:Lcom/android/server/pm/AppsFilterImpl;
@@ -37,7 +35,6 @@
 .method public bridge synthetic createSnapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 230
     invoke-virtual {p0}, Lcom/android/server/pm/AppsFilterImpl$1;->createSnapshot()Lcom/android/server/pm/AppsFilterSnapshot;
 
     move-result-object p0

@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Lcom/android/internal/logging/UiEventLoggerImpl;
 
     invoke-direct {v0}, Lcom/android/internal/logging/UiEventLoggerImpl;-><init>()V
@@ -32,7 +30,6 @@
 .method public log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/notification/NotificationRecordLoggerImpl;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
     invoke-interface {p0, p1}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
@@ -47,7 +44,6 @@
 
     return-void
 
-    .line 86
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationRecordLoggerImpl;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
@@ -63,7 +59,6 @@
 
     move-result-object v1
 
-    .line 87
     invoke-virtual {p2}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object p2
@@ -72,7 +67,6 @@
 
     move-result-object p2
 
-    .line 86
     invoke-interface {p0, p1, v0, v1, p2}, Lcom/android/internal/logging/UiEventLogger;->logWithInstanceId(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;ILjava/lang/String;Lcom/android/internal/logging/InstanceId;)V
 
     return-void
@@ -81,14 +75,12 @@
 .method public logNotificationAdjusted(Lcom/android/server/notification/NotificationRecord;IILcom/android/internal/logging/InstanceId;)V
     .locals 6
 
-    .line 43
     new-instance v1, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;
 
     const/4 v0, 0x0
 
     invoke-direct {v1, p1, v0}, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;-><init>(Lcom/android/server/notification/NotificationRecord;Lcom/android/server/notification/NotificationRecord;)V
 
-    .line 44
     new-instance p1, Lcom/android/server/notification/NotificationRecordLogger$NotificationReported;
 
     sget-object v2, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->NOTIFICATION_ADJUSTED:Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
@@ -111,7 +103,6 @@
 .method public logNotificationPosted(Lcom/android/server/notification/NotificationRecordLogger$NotificationReported;)V
     .locals 0
 
-    .line 36
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationRecordLoggerImpl;->writeNotificationReportedAtom(Lcom/android/server/notification/NotificationRecordLogger$NotificationReported;)V
 
     return-void
@@ -124,7 +115,6 @@
 
     const/16 v1, 0xf4
 
-    .line 51
     iget v2, v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReported;->event_id:I
 
     iget v3, v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReported;->uid:I

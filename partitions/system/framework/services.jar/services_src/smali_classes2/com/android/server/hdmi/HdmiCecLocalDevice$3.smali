@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
     .locals 0
 
-    .line 1058
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$3;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiControlCallback$Stub;-><init>()V
@@ -26,7 +25,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1062
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$3;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->getService()Lcom/android/server/hdmi/HdmiControlService;

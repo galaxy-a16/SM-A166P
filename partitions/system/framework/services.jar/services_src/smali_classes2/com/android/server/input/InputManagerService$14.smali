@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$HoWr-q4q8OdmuaHk6ZQPz3rQrpw(Lcom/android/server/input/InputManagerService$14;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/input/InputManagerService$14;->lambda$onReceive$1()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;)V
     .locals 0
 
-    .line 5994
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onReceive$1()V
     .locals 0
 
-    .line 6022
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/input/InputManagerService;->showingTouchSensitivityNotificationIfNeeded()V
@@ -44,33 +41,28 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 5997
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.intent.action.BOOT_COMPLETED"
 
-    .line 5998
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 5999
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/input/InputManagerService;->-$$Nest$fputmBootCompleted(Lcom/android/server/input/InputManagerService;Z)V
 
-    .line 6000
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->IFW_KEY_COUNTER:Z
 
     if-eqz p1, :cond_0
 
-    .line 6001
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p1}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmInputKeyCounter(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/InputKeyCounter;
@@ -85,7 +77,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/input/InputKeyCounter;->kickOldies(Landroid/content/Context;)V
 
-    .line 6014
     :cond_0
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -97,17 +88,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 6015
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p1}, Lcom/android/server/input/InputManagerService;->-$$Nest$mnotifyPogoKeyboardNotMatch(Lcom/android/server/input/InputManagerService;)V
 
-    .line 6016
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p1, p2}, Lcom/android/server/input/InputManagerService;->-$$Nest$fputmNotifyPogoKeyboardNotMatchPending(Lcom/android/server/input/InputManagerService;Z)V
 
-    .line 6018
     :cond_1
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -117,12 +105,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 6020
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p1, p2}, Lcom/android/server/input/InputManagerService;->-$$Nest$fputmPaperCoverNotificationPending(Lcom/android/server/input/InputManagerService;Z)V
 
-    .line 6021
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$14;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p1}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/InputManagerService$InputManagerHandler;

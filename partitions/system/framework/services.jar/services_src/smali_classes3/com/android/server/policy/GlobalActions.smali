@@ -30,7 +30,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceProvisioned(Lcom/android/server/policy/GlobalActions;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/policy/GlobalActions;->mDeviceProvisioned:Z
 
     return p0
@@ -39,7 +38,6 @@
 .method public static bridge synthetic -$$Nest$fgetmKeyguardShowing(Lcom/android/server/policy/GlobalActions;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/policy/GlobalActions;->mKeyguardShowing:Z
 
     return p0
@@ -48,7 +46,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLegacyGlobalActions(Lcom/android/server/policy/GlobalActions;)Lcom/android/server/policy/LegacyGlobalActions;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 p0, 0x0
@@ -59,7 +56,6 @@
 .method public static bridge synthetic -$$Nest$mensureLegacyCreated(Lcom/android/server/policy/GlobalActions;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/GlobalActions;->ensureLegacyCreated()V
 
     return-void
@@ -68,23 +64,18 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;)V
     .locals 1
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
     new-instance v0, Lcom/android/server/policy/GlobalActions$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/GlobalActions$1;-><init>(Lcom/android/server/policy/GlobalActions;)V
 
     iput-object v0, p0, Lcom/android/server/policy/GlobalActions;->mShowTimeout:Ljava/lang/Runnable;
 
-    .line 55
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
 
-    .line 59
     iput-object p2, p0, Lcom/android/server/policy/GlobalActions;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;
 
-    .line 61
     const-class p1, Lcom/android/server/policy/GlobalActionsProvider;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -97,7 +88,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 63
     invoke-interface {p1, p0}, Lcom/android/server/policy/GlobalActionsProvider;->setGlobalActionsListener(Lcom/android/server/policy/GlobalActionsProvider$GlobalActionsListener;)V
 
     goto :goto_0
@@ -107,7 +97,6 @@
 
     const-string p1, "No GlobalActionsProvider found, defaulting to LegacyGlobalActions"
 
-    .line 65
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -119,14 +108,12 @@
 .method public final ensureLegacyCreated()V
     .locals 4
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions;->mSamsungGlobalActions:Lcom/android/server/policy/globalactions/presentation/view/SamsungGlobalActionsDialog;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 72
     :cond_0
     new-instance v0, Lcom/android/server/policy/globalactions/presentation/view/SamsungGlobalActionsDialog;
 
@@ -148,7 +135,6 @@
 .method public isDialogPowerOptionHidden()Z
     .locals 3
 
-    .line 161
     invoke-static {}, Lcom/samsung/android/knox/custom/ProKioskManager;->getInstance()Lcom/samsung/android/knox/custom/ProKioskManager;
 
     move-result-object p0
@@ -157,14 +143,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 162
     invoke-virtual {p0}, Lcom/samsung/android/knox/custom/ProKioskManager;->getProKioskState()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 163
     invoke-virtual {p0}, Lcom/samsung/android/knox/custom/ProKioskManager;->getPowerDialogOptionMode()I
 
     move-result p0
@@ -178,7 +162,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 165
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -211,7 +194,6 @@
 .method public isDialogShowing()Z
     .locals 0
 
-    .line 157
     iget-boolean p0, p0, Lcom/android/server/policy/GlobalActions;->mShowing:Z
 
     return p0
@@ -220,20 +202,16 @@
 .method public onGlobalActionsAvailableChanged(Z)V
     .locals 3
 
-    .line 131
     iput-boolean p1, p0, Lcom/android/server/policy/GlobalActions;->mGlobalActionsAvailable:Z
 
-    .line 132
     iget-boolean v0, p0, Lcom/android/server/policy/GlobalActions;->mShowing:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 136
     invoke-virtual {p0}, Lcom/android/server/policy/GlobalActions;->ensureLegacyCreated()V
 
-    .line 138
     iget-object p1, p0, Lcom/android/server/policy/GlobalActions;->mSamsungGlobalActions:Lcom/android/server/policy/globalactions/presentation/view/SamsungGlobalActionsDialog;
 
     iget-boolean v0, p0, Lcom/android/server/policy/GlobalActions;->mKeyguardShowing:Z
@@ -255,12 +233,10 @@
 
     const/4 v0, 0x0
 
-    .line 124
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions;->mShowing:Z
 
     const/4 v0, 0x0
 
-    .line 125
     iput-object v0, p0, Lcom/android/server/policy/GlobalActions;->mSamsungGlobalActions:Lcom/android/server/policy/globalactions/presentation/view/SamsungGlobalActionsDialog;
 
     return-void
@@ -269,14 +245,12 @@
 .method public onGlobalActionsShown()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public showDialog(ZZI)V
     .locals 1
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions;->mGlobalActionsProvider:Lcom/android/server/policy/GlobalActionsProvider;
 
     if-eqz v0, :cond_0
@@ -289,35 +263,28 @@
 
     return-void
 
-    .line 90
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/policy/GlobalActions;->mKeyguardShowing:Z
 
-    .line 91
     iput-boolean p2, p0, Lcom/android/server/policy/GlobalActions;->mDeviceProvisioned:Z
 
     const/4 p1, 0x1
 
-    .line 92
     iput-boolean p1, p0, Lcom/android/server/policy/GlobalActions;->mShowing:Z
 
-    .line 93
     iget-boolean p2, p0, Lcom/android/server/policy/GlobalActions;->mGlobalActionsAvailable:Z
 
     if-eqz p2, :cond_1
 
-    .line 98
     iget-object p0, p0, Lcom/android/server/policy/GlobalActions;->mGlobalActionsProvider:Lcom/android/server/policy/GlobalActionsProvider;
 
     invoke-interface {p0, p3}, Lcom/android/server/policy/GlobalActionsProvider;->showGlobalActions(I)V
 
     goto :goto_0
 
-    .line 102
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/policy/GlobalActions;->ensureLegacyCreated()V
 
-    .line 104
     iget-object p2, p0, Lcom/android/server/policy/GlobalActions;->mSamsungGlobalActions:Lcom/android/server/policy/globalactions/presentation/view/SamsungGlobalActionsDialog;
 
     iget-boolean v0, p0, Lcom/android/server/policy/GlobalActions;->mKeyguardShowing:Z

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;)V
     .locals 0
 
-    .line 240
     iput-object p1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$ScheduledRefreshBroadcastReceiver;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;Lcom/android/server/timedetector/NetworkTimeUpdateService$ScheduledRefreshBroadcastReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/timedetector/NetworkTimeUpdateService$ScheduledRefreshBroadcastReceiver;-><init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 248
     iget-object p1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$ScheduledRefreshBroadcastReceiver;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-static {p1}, Lcom/android/server/timedetector/NetworkTimeUpdateService;->-$$Nest$fgetmHandler(Lcom/android/server/timedetector/NetworkTimeUpdateService;)Landroid/os/Handler;
@@ -51,7 +48,6 @@
 .method public run()V
     .locals 1
 
-    .line 253
     iget-object p0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$ScheduledRefreshBroadcastReceiver;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     const-string/jumbo v0, "scheduled refresh"

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/display/mode/RefreshRateToken;
 
     invoke-static {p1}, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMaxLimitToken;->$r8$lambda$WgJKTCP0fZ3ApXrCC66f7PXPiKc(Lcom/android/server/display/mode/RefreshRateToken;)Ljava/lang/Integer;

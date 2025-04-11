@@ -19,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/display/color/ColorDisplayService;)V
     .locals 0
 
-    .line 1373
     iput-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-direct {p0}, Lcom/android/server/display/color/TintController;-><init>()V
@@ -28,14 +27,12 @@
 
     new-array p1, p1, [F
 
-    .line 1375
     iput-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mMatrix:[F
 
     const/16 p1, 0x9
 
     new-array p1, p1, [F
 
-    .line 1376
     iput-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mColorTempCoefficients:[F
 
     return-void
@@ -44,7 +41,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;-><init>(Lcom/android/server/display/color/ColorDisplayService;)V
 
     return-void
@@ -59,7 +55,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1525
     iget-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -76,11 +71,9 @@
 
     move-result p1
 
-    .line 1528
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    .line 1529
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -89,10 +82,8 @@
 
     move-result v0
 
-    .line 1530
     iget-object p0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    .line 1531
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -120,7 +111,6 @@
 .method public getColorTemperature()I
     .locals 1
 
-    .line 1488
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mColorTemp:Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
@@ -135,7 +125,6 @@
 
     goto :goto_0
 
-    .line 1489
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->getColorTemperatureSetting()I
 
@@ -148,7 +137,6 @@
 .method public getColorTemperatureSetting()I
     .locals 4
 
-    .line 1514
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->-$$Nest$fgetmCurrentUser(Lcom/android/server/display/color/ColorDisplayService;)I
@@ -163,11 +151,9 @@
 
     return v2
 
-    .line 1517
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    .line 1518
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -184,7 +170,6 @@
 
     const-string/jumbo v3, "night_display_color_temperature"
 
-    .line 1517
     invoke-static {v0, v3, v2, v1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
@@ -199,7 +184,6 @@
 .method public getLevel()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x64
 
     return p0
@@ -208,19 +192,16 @@
 .method public getMatrix()[F
     .locals 1
 
-    .line 1418
     invoke-virtual {p0}, Lcom/android/server/display/color/TintController;->isActivationLock()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1419
     sget-object p0, Lcom/android/server/display/color/ColorDisplayService;->MATRIX_IDENTITY:[F
 
     return-object p0
 
-    .line 1422
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/display/color/TintController;->isActivated()Z
 
@@ -242,7 +223,6 @@
 .method public isActivatedSetting()Z
     .locals 3
 
-    .line 1506
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->-$$Nest$fgetmCurrentUser(Lcom/android/server/display/color/ColorDisplayService;)I
@@ -257,7 +237,6 @@
 
     return v2
 
-    .line 1509
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
@@ -294,12 +273,10 @@
 .method public isAvailable(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1468
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mIsAvailable:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
 
-    .line 1469
     invoke-static {p1}, Landroid/hardware/display/ColorDisplayManager;->isNightDisplayAvailable(Landroid/content/Context;)Z
 
     move-result p1
@@ -310,7 +287,6 @@
 
     iput-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mIsAvailable:Ljava/lang/Boolean;
 
-    .line 1471
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mIsAvailable:Ljava/lang/Boolean;
 
@@ -336,10 +312,8 @@
     :goto_0
     const-string v1, "ColorDisplayService"
 
-    .line 1475
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1476
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->-$$Nest$fgetmNightDisplayAutoMode(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;
@@ -348,7 +322,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1477
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->-$$Nest$fgetmNightDisplayAutoMode(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;
@@ -357,7 +330,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;->onActivated(Z)V
 
-    .line 1480
     :cond_1
     iget-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
@@ -373,12 +345,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 1481
     iget-object p1, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-virtual {p1}, Lcom/android/server/display/color/ColorDisplayService;->updateDisplayWhiteBalanceStatus()V
 
-    .line 1484
     :cond_2
     iget-object p0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
@@ -394,10 +364,8 @@
 .method public onColorTemperatureChanged(I)V
     .locals 0
 
-    .line 1501
     invoke-virtual {p0, p1}, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->setMatrix(I)V
 
-    .line 1502
     iget-object p0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     iget-object p0, p0, Lcom/android/server/display/color/ColorDisplayService;->mHandler:Landroid/os/Handler;
@@ -412,7 +380,6 @@
 .method public setActivated(Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 1427
     invoke-static {}, Ljava/time/LocalDateTime;->now()Ljava/time/LocalDateTime;
 
     move-result-object v0
@@ -429,12 +396,10 @@
 
     const/4 p1, 0x0
 
-    .line 1436
     invoke-super {p0, p1}, Lcom/android/server/display/color/TintController;->setActivated(Ljava/lang/Boolean;)V
 
     return-void
 
-    .line 1440
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -453,7 +418,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 1442
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/display/color/TintController;->isActivatedStateNotSet()Z
 
@@ -463,7 +427,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1444
     iget-object v1, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-virtual {v1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -474,7 +437,6 @@
 
     move-result-object v1
 
-    .line 1446
     invoke-virtual {p2}, Ljava/time/LocalDateTime;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -487,10 +449,8 @@
 
     const-string/jumbo v3, "night_display_last_activated_time"
 
-    .line 1444
     invoke-static {v1, v3, p2, v2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1450
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/display/color/TintController;->isActivatedStateNotSet()Z
 
@@ -500,11 +460,9 @@
 
     if-eqz v0, :cond_5
 
-    .line 1451
     :cond_3
     invoke-super {p0, p1}, Lcom/android/server/display/color/TintController;->setActivated(Ljava/lang/Boolean;)V
 
-    .line 1452
     invoke-virtual {p0}, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->isActivatedSetting()Z
 
     move-result p2
@@ -515,7 +473,6 @@
 
     if-eq p2, v0, :cond_4
 
-    .line 1453
     iget-object p2, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-virtual {p2}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -526,7 +483,6 @@
 
     move-result-object p2
 
-    .line 1455
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
@@ -539,10 +495,8 @@
 
     const-string/jumbo v2, "night_display_activated"
 
-    .line 1453
     invoke-static {p2, v2, v0, v1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 1457
     :cond_4
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -557,14 +511,12 @@
 .method public setColorTemperature(I)Z
     .locals 3
 
-    .line 1493
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mColorTemp:Ljava/lang/Integer;
 
-    .line 1494
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -587,7 +539,6 @@
 
     move-result v0
 
-    .line 1496
     invoke-virtual {p0, p1}, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->onColorTemperatureChanged(I)V
 
     return v0
@@ -596,7 +547,6 @@
 .method public setMatrix(I)V
     .locals 7
 
-    .line 1396
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mMatrix:[F
 
     array-length v1, v0
@@ -609,7 +559,6 @@
 
     const-string p1, "The display transformation matrix must be 4x4"
 
-    .line 1397
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -617,14 +566,12 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 1401
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
     mul-int v0, p1, p1
 
     int-to-float v0, v0
 
-    .line 1404
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mColorTempCoefficients:[F
 
     aget v3, v2, v1
@@ -649,7 +596,6 @@
 
     const/4 v4, 0x3
 
-    .line 1406
     aget v4, v2, v4
 
     mul-float/2addr v4, v0
@@ -670,7 +616,6 @@
 
     const/4 v6, 0x6
 
-    .line 1408
     aget v6, v2, v6
 
     mul-float/2addr v0, v6
@@ -689,17 +634,14 @@
 
     add-float/2addr v0, p1
 
-    .line 1410
     iget-object p0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mMatrix:[F
 
     aput v3, p0, v1
 
-    .line 1411
     aput v4, p0, v5
 
     const/16 p1, 0xa
 
-    .line 1412
     aput v0, p0, p1
 
     return-void
@@ -708,7 +650,6 @@
 .method public setUp(Landroid/content/Context;Z)V
     .locals 2
 
-    .line 1386
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -734,12 +675,10 @@
 
     if-ge p2, v0, :cond_1
 
-    .line 1389
     array-length v0, p1
 
     if-ge p2, v0, :cond_1
 
-    .line 1390
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->mColorTempCoefficients:[F
 
     aget-object v1, p1, p2

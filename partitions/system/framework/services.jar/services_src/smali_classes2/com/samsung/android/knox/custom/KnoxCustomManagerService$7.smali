@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)V
     .locals 0
 
-    .line 10690
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$7;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onTetheringFailed(I)V
     .locals 4
 
-    .line 10702
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$7;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmTetherLock(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Ljava/lang/Object;
@@ -39,7 +37,6 @@
     :try_start_0
     const-string v1, "KnoxCustomManagerService"
 
-    .line 10703
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,12 +53,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10704
     iget-object v1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$7;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v1, p1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fputmTetheringResultCode(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;I)V
 
-    .line 10705
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$7;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmTetherLock(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Ljava/lang/Object;
@@ -70,7 +65,6 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
-    .line 10706
     monitor-exit v0
 
     return-void
@@ -88,7 +82,6 @@
 .method public onTetheringStarted()V
     .locals 3
 
-    .line 10693
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$7;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmTetherLock(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Ljava/lang/Object;
@@ -102,17 +95,14 @@
 
     const-string/jumbo v2, "onTetheringStarted"
 
-    .line 10694
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10695
     iget-object v1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$7;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fputmTetheringResultCode(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;I)V
 
-    .line 10696
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$7;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmTetherLock(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Ljava/lang/Object;
@@ -121,7 +111,6 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
-    .line 10697
     monitor-exit v0
 
     return-void

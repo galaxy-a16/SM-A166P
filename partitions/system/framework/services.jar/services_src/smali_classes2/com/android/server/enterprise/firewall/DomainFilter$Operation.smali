@@ -27,7 +27,6 @@
 .method public static synthetic $values()[Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
     .locals 8
 
-    .line 118
     sget-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->ADD:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     sget-object v1, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->REMOVE:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
@@ -54,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 119
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     const-string v1, "ADD"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->ADD:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
-    .line 120
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     const-string v1, "REMOVE"
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->REMOVE:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
-    .line 121
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     const-string v1, "CLEAR"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->CLEAR:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
-    .line 122
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     const-string v1, "REPLACE"
@@ -98,7 +93,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->REPLACE:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
-    .line 123
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     const-string v1, "EXCEPTION"
@@ -109,7 +103,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->EXCEPTION:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
-    .line 124
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     const-string v1, "CAP_PORTAL"
@@ -120,7 +113,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->CAP_PORTAL:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
-    .line 125
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     const-string v1, "NET_ID"
@@ -131,7 +123,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->NET_ID:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
-    .line 126
     new-instance v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     const-string v1, "FLUSHLIBC"
@@ -142,7 +133,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->FLUSHLIBC:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
-    .line 118
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->$values()[Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     move-result-object v0
@@ -155,7 +145,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 118
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -164,7 +153,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
     .locals 1
 
-    .line 118
     const-class v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -179,7 +167,6 @@
 .method public static values()[Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
     .locals 1
 
-    .line 118
     sget-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->$VALUES:[Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->clone()Ljava/lang/Object;

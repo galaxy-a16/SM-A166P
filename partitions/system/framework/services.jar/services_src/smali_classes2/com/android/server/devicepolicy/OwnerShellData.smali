@@ -23,7 +23,6 @@
 .method public constructor <init>(IILandroid/content/ComponentName;ZZZ)V
     .locals 5
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
@@ -44,18 +43,14 @@
     :goto_0
     const-string/jumbo v4, "userId cannot be USER_NULL"
 
-    .line 43
     invoke-static {v3, v4}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 44
     iput p1, p0, Lcom/android/server/devicepolicy/OwnerShellData;->userId:I
 
-    .line 45
     iput p2, p0, Lcom/android/server/devicepolicy/OwnerShellData;->parentUserId:I
 
     const-string v3, "admin must not be null"
 
-    .line 46
     invoke-static {p3, v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-object v3, p3
@@ -64,13 +59,10 @@
 
     iput-object p3, p0, Lcom/android/server/devicepolicy/OwnerShellData;->admin:Landroid/content/ComponentName;
 
-    .line 47
     iput-boolean p4, p0, Lcom/android/server/devicepolicy/OwnerShellData;->isDeviceOwner:Z
 
-    .line 48
     iput-boolean p5, p0, Lcom/android/server/devicepolicy/OwnerShellData;->isProfileOwner:Z
 
-    .line 49
     iput-boolean p6, p0, Lcom/android/server/devicepolicy/OwnerShellData;->isManagedProfileOwner:Z
 
     if-eqz p6, :cond_3
@@ -87,7 +79,6 @@
     :goto_1
     const-string/jumbo p3, "parentUserId cannot be USER_NULL for managed profile owner"
 
-    .line 51
     invoke-static {p0, p3}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     if-eq p2, p1, :cond_2
@@ -97,7 +88,6 @@
     :cond_2
     move v0, v1
 
-    .line 54
     :goto_2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -109,7 +99,6 @@
 
     const-string p1, "cannot be parent of itself (%d)"
 
-    .line 53
     invoke-static {v0, p1, p0}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/String;[Ljava/lang/Object;)V
 
     :cond_3
@@ -119,7 +108,6 @@
 .method public static forDeviceOwner(ILandroid/content/ComponentName;)Lcom/android/server/devicepolicy/OwnerShellData;
     .locals 8
 
-    .line 82
     new-instance v7, Lcom/android/server/devicepolicy/OwnerShellData;
 
     const/16 v2, -0x2710
@@ -144,7 +132,6 @@
 .method public static forManagedProfileOwner(IILandroid/content/ComponentName;)Lcom/android/server/devicepolicy/OwnerShellData;
     .locals 8
 
-    .line 95
     new-instance v7, Lcom/android/server/devicepolicy/OwnerShellData;
 
     const/4 v4, 0x0
@@ -169,7 +156,6 @@
 .method public static forUserProfileOwner(ILandroid/content/ComponentName;)Lcom/android/server/devicepolicy/OwnerShellData;
     .locals 8
 
-    .line 88
     new-instance v7, Lcom/android/server/devicepolicy/OwnerShellData;
 
     const/16 v2, -0x2710
@@ -196,7 +182,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-class v1, Lcom/android/server/devicepolicy/OwnerShellData;
@@ -209,7 +194,6 @@
 
     const-string v1, "[userId="
 
-    .line 61
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/devicepolicy/OwnerShellData;->userId:I
@@ -218,7 +202,6 @@
 
     const-string v1, ",admin="
 
-    .line 62
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/OwnerShellData;->admin:Landroid/content/ComponentName;
@@ -229,17 +212,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 63
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/OwnerShellData;->isDeviceOwner:Z
 
     if-eqz v1, :cond_0
 
     const-string v1, ",deviceOwner"
 
-    .line 64
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 66
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/OwnerShellData;->isProfileOwner:Z
 
@@ -247,10 +227,8 @@
 
     const-string v1, ",isProfileOwner"
 
-    .line 67
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 69
     :cond_1
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/OwnerShellData;->isManagedProfileOwner:Z
 
@@ -258,10 +236,8 @@
 
     const-string v1, ",isManagedProfileOwner"
 
-    .line 70
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 72
     :cond_2
     iget v1, p0, Lcom/android/server/devicepolicy/OwnerShellData;->parentUserId:I
 
@@ -271,14 +247,12 @@
 
     const-string v1, ",parentUserId="
 
-    .line 73
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/devicepolicy/OwnerShellData;->parentUserId:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 75
     :cond_3
     iget-boolean p0, p0, Lcom/android/server/devicepolicy/OwnerShellData;->isAffiliated:Z
 
@@ -286,13 +260,11 @@
 
     const-string p0, ",isAffiliated"
 
-    .line 76
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_4
     const/16 p0, 0x5d
 
-    .line 78
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

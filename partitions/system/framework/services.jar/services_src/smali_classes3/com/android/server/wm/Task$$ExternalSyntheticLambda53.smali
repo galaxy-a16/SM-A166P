@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/Task$$ExternalSyntheticLambda53;->f$0:Ljava/lang/String;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/Task$$ExternalSyntheticLambda53;->f$0:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/android/server/wm/Task;->$r8$lambda$B9QUr0gaX38gEzG3e_LYIK9YMRg(Ljava/lang/String;)V

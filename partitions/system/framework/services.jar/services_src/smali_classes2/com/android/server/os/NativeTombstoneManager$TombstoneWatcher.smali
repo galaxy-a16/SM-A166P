@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$tfJ_q07NaI9c6UYttszi4EdMJ7Y(Lcom/android/server/os/NativeTombstoneManager$TombstoneWatcher;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/os/NativeTombstoneManager$TombstoneWatcher;->lambda$onEvent$0(Ljava/lang/String;)V
 
     return-void
@@ -20,10 +19,8 @@
 .method public constructor <init>(Lcom/android/server/os/NativeTombstoneManager;)V
     .locals 1
 
-    .line 569
     iput-object p1, p0, Lcom/android/server/os/NativeTombstoneManager$TombstoneWatcher;->this$0:Lcom/android/server/os/NativeTombstoneManager;
 
-    .line 573
     invoke-static {}, Lcom/android/server/os/NativeTombstoneManager;->-$$Nest$sfgetTOMBSTONE_DIR()Ljava/io/File;
 
     move-result-object p1
@@ -40,7 +37,6 @@
 
     const-string v0, ".tmp"
 
-    .line 580
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -49,7 +45,6 @@
 
     return-void
 
-    .line 583
     :cond_0
     iget-object p0, p0, Lcom/android/server/os/NativeTombstoneManager$TombstoneWatcher;->this$0:Lcom/android/server/os/NativeTombstoneManager;
 
@@ -71,7 +66,6 @@
 .method public onEvent(ILjava/lang/String;)V
     .locals 1
 
-    .line 578
     iget-object p1, p0, Lcom/android/server/os/NativeTombstoneManager$TombstoneWatcher;->this$0:Lcom/android/server/os/NativeTombstoneManager;
 
     invoke-static {p1}, Lcom/android/server/os/NativeTombstoneManager;->-$$Nest$fgetmHandler(Lcom/android/server/os/NativeTombstoneManager;)Landroid/os/Handler;

@@ -22,40 +22,32 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService;Ljava/lang/String;[Ljava/lang/String;Lcom/samsung/android/sepunion/IGoodCatchDispatcher;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 202
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 200
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
-    .line 203
     iput-object p2, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mModule:Ljava/lang/String;
 
-    .line 204
     iput-object p5, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mCb:Landroid/os/IBinder;
 
-    .line 205
     iput-object p4, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mDispatcher:Lcom/samsung/android/sepunion/IGoodCatchDispatcher;
 
-    .line 207
     monitor-enter p1
 
     const/4 p2, 0x0
 
-    .line 208
     :goto_0
     :try_start_0
     array-length p4, p3
 
     if-ge p2, p4, :cond_0
 
-    .line 209
     iget-object p4, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
     aget-object p5, p3, p2
@@ -68,7 +60,6 @@
 
     goto :goto_0
 
-    .line 211
     :cond_0
     monitor-exit p1
 
@@ -89,7 +80,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 263
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$fgetmGoodCatchClients(Lcom/android/server/sepunion/SemGoodCatchService;)Ljava/util/HashMap;
@@ -98,7 +88,6 @@
 
     monitor-enter v0
 
-    .line 264
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -110,10 +99,8 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 265
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->release()V
 
-    .line 266
     monitor-exit v0
 
     return-void
@@ -131,7 +118,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 278
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,12 +136,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 279
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 280
     :try_start_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
@@ -163,7 +147,6 @@
 
     move-result-object p0
 
-    .line 281
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -181,7 +164,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 282
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +198,6 @@
 
     goto :goto_0
 
-    .line 284
     :cond_0
     monitor-exit v0
 
@@ -235,12 +216,10 @@
 .method public has(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 217
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mModule:Ljava/lang/String;
 
@@ -258,14 +237,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 218
     monitor-exit v0
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 219
     :cond_0
     monitor-exit v0
 
@@ -286,12 +263,10 @@
 .method public isOn(Ljava/lang/String;)Z
     .locals 1
 
-    .line 257
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 258
     :try_start_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
@@ -312,7 +287,6 @@
     :catchall_0
     move-exception p0
 
-    .line 259
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -323,12 +297,10 @@
 .method public off()V
     .locals 3
 
-    .line 226
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 227
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
@@ -336,7 +308,6 @@
 
     move-result-object v1
 
-    .line 228
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -354,7 +325,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 229
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -365,7 +335,6 @@
 
     goto :goto_0
 
-    .line 231
     :cond_0
     monitor-exit v0
 
@@ -384,12 +353,10 @@
 .method public off(Ljava/lang/String;)V
     .locals 3
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 247
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
@@ -397,12 +364,10 @@
 
     invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 250
     :try_start_1
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mDispatcher:Lcom/samsung/android/sepunion/IGoodCatchDispatcher;
 
@@ -415,7 +380,6 @@
     :catch_0
     move-exception p0
 
-    .line 252
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -442,7 +406,6 @@
     :catchall_0
     move-exception p0
 
-    .line 248
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -454,12 +417,10 @@
 .method public on(Ljava/lang/String;)V
     .locals 3
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 236
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mFunctions:Ljava/util/HashMap;
 
@@ -467,12 +428,10 @@
 
     invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 239
     :try_start_1
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mDispatcher:Lcom/samsung/android/sepunion/IGoodCatchDispatcher;
 
@@ -485,7 +444,6 @@
     :catch_0
     move-exception p0
 
-    .line 241
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -512,7 +470,6 @@
     :catchall_0
     move-exception p0
 
-    .line 237
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -524,22 +481,18 @@
 .method public release()V
     .locals 3
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mCb:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 271
     iput-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mDispatcher:Lcom/samsung/android/sepunion/IGoodCatchDispatcher;
 
     const/4 v2, 0x0
 
-    .line 272
     invoke-interface {v0, p0, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 273
     iput-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->mCb:Landroid/os/IBinder;
 
     :cond_0

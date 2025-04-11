@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiCecMessageValidator$TunerDeviceStatusValidator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator$TunerDeviceStatusValidator;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public isValid([B)I
     .locals 1
 
-    .line 1142
     array-length p0, p1
 
     const/4 v0, 0x1
@@ -40,7 +38,6 @@
 
     return p0
 
-    .line 1145
     :cond_0
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->-$$Nest$smisValidTunerDeviceInfo([B)Z
 

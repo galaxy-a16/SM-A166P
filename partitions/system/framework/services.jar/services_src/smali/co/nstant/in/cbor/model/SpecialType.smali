@@ -25,7 +25,6 @@
 .method public static synthetic $values()[Lco/nstant/in/cbor/model/SpecialType;
     .locals 7
 
-    .line 3
     sget-object v0, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE:Lco/nstant/in/cbor/model/SpecialType;
 
     sget-object v1, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE_NEXT_BYTE:Lco/nstant/in/cbor/model/SpecialType;
@@ -50,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 5
     new-instance v0, Lco/nstant/in/cbor/model/SpecialType;
 
     const-string v1, "SIMPLE_VALUE"
@@ -61,7 +59,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE:Lco/nstant/in/cbor/model/SpecialType;
 
-    .line 6
     new-instance v0, Lco/nstant/in/cbor/model/SpecialType;
 
     const-string v1, "SIMPLE_VALUE_NEXT_BYTE"
@@ -72,7 +69,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE_NEXT_BYTE:Lco/nstant/in/cbor/model/SpecialType;
 
-    .line 7
     new-instance v0, Lco/nstant/in/cbor/model/SpecialType;
 
     const-string v1, "IEEE_754_HALF_PRECISION_FLOAT"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SpecialType;->IEEE_754_HALF_PRECISION_FLOAT:Lco/nstant/in/cbor/model/SpecialType;
 
-    .line 8
     new-instance v0, Lco/nstant/in/cbor/model/SpecialType;
 
     const-string v1, "IEEE_754_SINGLE_PRECISION_FLOAT"
@@ -94,7 +89,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SpecialType;->IEEE_754_SINGLE_PRECISION_FLOAT:Lco/nstant/in/cbor/model/SpecialType;
 
-    .line 9
     new-instance v0, Lco/nstant/in/cbor/model/SpecialType;
 
     const-string v1, "IEEE_754_DOUBLE_PRECISION_FLOAT"
@@ -105,7 +99,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SpecialType;->IEEE_754_DOUBLE_PRECISION_FLOAT:Lco/nstant/in/cbor/model/SpecialType;
 
-    .line 10
     new-instance v0, Lco/nstant/in/cbor/model/SpecialType;
 
     const-string v1, "UNALLOCATED"
@@ -116,7 +109,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SpecialType;->UNALLOCATED:Lco/nstant/in/cbor/model/SpecialType;
 
-    .line 11
     new-instance v0, Lco/nstant/in/cbor/model/SpecialType;
 
     const-string v1, "BREAK"
@@ -127,7 +119,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SpecialType;->BREAK:Lco/nstant/in/cbor/model/SpecialType;
 
-    .line 3
     invoke-static {}, Lco/nstant/in/cbor/model/SpecialType;->$values()[Lco/nstant/in/cbor/model/SpecialType;
 
     move-result-object v0
@@ -140,7 +131,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -153,42 +143,35 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 30
     sget-object p0, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE:Lco/nstant/in/cbor/model/SpecialType;
 
     return-object p0
 
-    .line 28
     :pswitch_0
     sget-object p0, Lco/nstant/in/cbor/model/SpecialType;->BREAK:Lco/nstant/in/cbor/model/SpecialType;
 
     return-object p0
 
-    .line 26
     :pswitch_1
     sget-object p0, Lco/nstant/in/cbor/model/SpecialType;->UNALLOCATED:Lco/nstant/in/cbor/model/SpecialType;
 
     return-object p0
 
-    .line 22
     :pswitch_2
     sget-object p0, Lco/nstant/in/cbor/model/SpecialType;->IEEE_754_DOUBLE_PRECISION_FLOAT:Lco/nstant/in/cbor/model/SpecialType;
 
     return-object p0
 
-    .line 20
     :pswitch_3
     sget-object p0, Lco/nstant/in/cbor/model/SpecialType;->IEEE_754_SINGLE_PRECISION_FLOAT:Lco/nstant/in/cbor/model/SpecialType;
 
     return-object p0
 
-    .line 18
     :pswitch_4
     sget-object p0, Lco/nstant/in/cbor/model/SpecialType;->IEEE_754_HALF_PRECISION_FLOAT:Lco/nstant/in/cbor/model/SpecialType;
 
     return-object p0
 
-    .line 16
     :pswitch_5
     sget-object p0, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE_NEXT_BYTE:Lco/nstant/in/cbor/model/SpecialType;
 
@@ -210,7 +193,6 @@
 .method public static valueOf(Ljava/lang/String;)Lco/nstant/in/cbor/model/SpecialType;
     .locals 1
 
-    .line 3
     const-class v0, Lco/nstant/in/cbor/model/SpecialType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -225,7 +207,6 @@
 .method public static values()[Lco/nstant/in/cbor/model/SpecialType;
     .locals 1
 
-    .line 3
     sget-object v0, Lco/nstant/in/cbor/model/SpecialType;->$VALUES:[Lco/nstant/in/cbor/model/SpecialType;
 
     invoke-virtual {v0}, [Lco/nstant/in/cbor/model/SpecialType;->clone()Ljava/lang/Object;

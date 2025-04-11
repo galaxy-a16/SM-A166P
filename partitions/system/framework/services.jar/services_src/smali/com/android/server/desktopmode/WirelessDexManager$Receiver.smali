@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 126
     iput-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/WirelessDexManager;Lcom/android/server/desktopmode/WirelessDexManager$Receiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;-><init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
 
     return-void
@@ -33,12 +31,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 136
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 137
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -63,7 +59,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
@@ -77,7 +72,6 @@
 
     const-string v1, "android.intent.action.HDMI_PLUGGED"
 
-    .line 139
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -88,21 +82,18 @@
 
     const/4 p1, 0x0
 
-    .line 140
     invoke-virtual {p2, v2, p1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    .line 141
     invoke-interface {v0}, Lcom/android/server/desktopmode/State;->isDexOnPcOrWirelessDexConnected()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 142
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_1
@@ -115,7 +106,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     :cond_1
     iget-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
@@ -127,7 +117,6 @@
 
     invoke-interface {p1, p2}, Lcom/android/server/desktopmode/IStateManager;->notifyDisplayDisconnectionRequest(I)V
 
-    .line 145
     iget-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/WirelessDexManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/WirelessDexManager;)Lcom/android/server/desktopmode/IStateManager;
@@ -138,7 +127,6 @@
 
     invoke-interface {p1, p2}, Lcom/android/server/desktopmode/IStateManager;->notifyDisplayDisconnectionRequest(I)V
 
-    .line 148
     :cond_2
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
@@ -149,7 +137,6 @@
     :cond_3
     const-string v1, "com.samsung.intent.action.WIFI_DISPLAY_SOURCE_STATE"
 
-    .line 150
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -158,7 +145,6 @@
 
     const/4 p1, -0x1
 
-    .line 151
     invoke-virtual {p2, v2, p1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -167,12 +153,10 @@
 
     const/4 v2, 0x1
 
-    .line 152
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
 
-    .line 153
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v1, :cond_4
@@ -201,7 +185,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 155
     invoke-interface {v0}, Lcom/android/server/desktopmode/State;->isWirelessDexConnected()Z
 
     move-result v0
@@ -224,7 +207,6 @@
 
     move-result-object v0
 
-    .line 153
     invoke-static {v1, v0}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
@@ -232,7 +214,6 @@
 
     if-nez p2, :cond_5
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->-$$Nest$mshowToastToNotifyNetworkDisconnection(Lcom/android/server/desktopmode/WirelessDexManager;)V
@@ -245,22 +226,18 @@
 .method public register()V
     .locals 6
 
-    .line 128
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "android.intent.action.HDMI_PLUGGED"
 
-    .line 129
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "com.samsung.intent.action.WIFI_DISPLAY_SOURCE_STATE"
 
-    .line 130
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/WirelessDexManager;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/content/Context;

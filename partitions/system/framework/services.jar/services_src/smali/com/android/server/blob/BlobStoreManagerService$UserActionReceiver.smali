@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;)V
     .locals 0
 
-    .line 1427
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreManagerService$UserActionReceiver;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;Lcom/android/server/blob/BlobStoreManagerService$UserActionReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/blob/BlobStoreManagerService$UserActionReceiver;-><init>(Lcom/android/server/blob/BlobStoreManagerService;)V
 
     return-void
@@ -33,14 +31,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 1430
     sget-boolean p1, Lcom/android/server/blob/BlobStoreConfig;->LOGV:Z
 
     const-string v0, "BlobStore"
 
     if-eqz p1, :cond_0
 
-    .line 1431
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,7 +53,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1433
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -73,7 +68,6 @@
 
     if-nez p1, :cond_1
 
-    .line 1444
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,14 +91,12 @@
 
     const/16 v1, -0x2710
 
-    .line 1435
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     if-ne p1, v1, :cond_2
 
-    .line 1438
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,7 +115,6 @@
 
     return-void
 
-    .line 1441
     :cond_2
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreManagerService$UserActionReceiver;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 

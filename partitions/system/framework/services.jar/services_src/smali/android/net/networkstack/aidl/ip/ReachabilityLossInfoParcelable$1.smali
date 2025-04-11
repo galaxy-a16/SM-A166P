@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
     .locals 0
 
-    .line 28
     invoke-static {p1}, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;->-$$Nest$sminternalCreateFromParcel(Landroid/os/Parcel;)Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 25
     invoke-virtual {p0, p1}, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
     .locals 0
 
-    .line 32
     new-array p0, p1, [Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 25
     invoke-virtual {p0, p1}, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable$1;->newArray(I)[Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
 
     move-result-object p0

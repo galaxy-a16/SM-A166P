@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 14
     invoke-direct {p0, p1}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public bindService(Landroid/os/UserHandle;Landroid/content/Intent;Landroid/content/ServiceConnection;)Z
     .locals 1
 
-    .line 18
     iget-object p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mContext:Landroid/content/Context;
 
     const/4 v0, 0x1

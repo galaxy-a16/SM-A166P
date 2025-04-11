@@ -19,25 +19,20 @@
 .method public constructor <init>(Lcom/android/server/DeviceIdleController;ILcom/android/server/DeviceIdleController$BinderCaller;Lcom/android/server/DeviceIdleController$TargetPkg;)V
     .locals 2
 
-    .line 726
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 727
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->time:J
 
-    .line 728
     iput p2, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->type:I
 
-    .line 729
     iput-object p3, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->caller:Lcom/android/server/DeviceIdleController$BinderCaller;
 
-    .line 730
     iput-object p4, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->target:Lcom/android/server/DeviceIdleController$TargetPkg;
 
     return-void
@@ -48,26 +43,22 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 734
     new-instance v0, Ljava/util/Date;
 
     iget-wide v1, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->time:J
 
     invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
-    .line 735
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v2, "yyyy-MM-dd hh:mm:ss"
 
     invoke-direct {v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 737
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 738
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +83,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 739
     iget v0, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->type:I
 
     const/4 v1, 0x3
@@ -109,7 +99,6 @@
     :goto_0
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 740
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,7 +133,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 742
     iget v0, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->type:I
 
     if-eqz v0, :cond_4
@@ -171,7 +159,6 @@
 
     const-string v0, "Unknown type of user whitelist"
 
-    .line 760
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -179,7 +166,6 @@
     :cond_1
     const-string/jumbo p0, "package removed"
 
-    .line 757
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -187,7 +173,6 @@
     :cond_2
     const-string p0, "dumpsys"
 
-    .line 754
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -195,18 +180,15 @@
     :cond_3
     const-string p0, "deviceidle.xml"
 
-    .line 750
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 745
     :cond_4
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$UserWhitelistHistoryInfo;->caller:Lcom/android/server/DeviceIdleController$BinderCaller;
 
     if-eqz v0, :cond_5
 
-    .line 746
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -241,7 +223,6 @@
 
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 763
     :cond_5
     :goto_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

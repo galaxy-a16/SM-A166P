@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 23
     invoke-static {}, Lcom/samsung/android/feature/SemCscFeature;->getInstance()Lcom/samsung/android/feature/SemCscFeature;
 
     move-result-object v0
@@ -46,29 +45,22 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 24
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerYuva;->isMemorySaverBackupFail:Z
 
-    .line 25
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerYuva;->isMemorySaverRestoreFail:Z
 
-    .line 26
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerYuva;->isSupported:Z
 
     const/4 v0, 0x0
 
-    .line 37
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
-    .line 38
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerYuva;->mBackupPackageName:Ljava/lang/String;
 
-    .line 39
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerYuva;->mRestorePackageName:Ljava/lang/String;
 
     return-void
@@ -77,19 +69,16 @@
 .method public static getInstanceBackupYuva()Lcom/android/server/backup/BackupManagerYuva;
     .locals 1
 
-    .line 43
     sget-object v0, Lcom/android/server/backup/BackupManagerYuva;->backupManagerYuva:Lcom/android/server/backup/BackupManagerYuva;
 
     if-nez v0, :cond_0
 
-    .line 44
     new-instance v0, Lcom/android/server/backup/BackupManagerYuva;
 
     invoke-direct {v0}, Lcom/android/server/backup/BackupManagerYuva;-><init>()V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerYuva;->backupManagerYuva:Lcom/android/server/backup/BackupManagerYuva;
 
-    .line 45
     :cond_0
     sget-object v0, Lcom/android/server/backup/BackupManagerYuva;->backupManagerYuva:Lcom/android/server/backup/BackupManagerYuva;
 
@@ -103,18 +92,14 @@
 
     const/4 v0, 0x0
 
-    .line 54
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerYuva;->isMemorySaverRestoreFail:Z
 
-    .line 55
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerYuva;->isMemorySaverBackupFail:Z
 
     const/4 v0, 0x0
 
-    .line 56
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerYuva;->mBackupPackageName:Ljava/lang/String;
 
-    .line 57
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerYuva;->mRestorePackageName:Ljava/lang/String;
 
     return-void
@@ -125,14 +110,12 @@
 
     const-string v0, "BackupManagerYuva"
 
-    .line 73
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     if-eqz v1, :cond_1
 
     const/4 v1, 0x0
 
-    .line 75
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -152,7 +135,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     iget-object v2, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     iget-object v3, p0, Lcom/android/server/backup/BackupManagerYuva;->mBackupPackageName:Ljava/lang/String;
@@ -171,7 +153,6 @@
     :goto_0
     invoke-interface {v2, v3, v4}, Landroid/app/backup/IMemorySaverBackupRestoreObserver;->onBackupCompleted(Ljava/lang/String;Z)V
 
-    .line 77
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerYuva;->mBackupPackageName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -181,10 +162,8 @@
     :catch_0
     const-string v2, "full backup observer went away: EndBackup"
 
-    .line 79
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     :cond_1
@@ -197,14 +176,12 @@
 
     const-string v0, "BackupManagerYuva"
 
-    .line 99
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     if-eqz v1, :cond_1
 
     const/4 v1, 0x0
 
-    .line 101
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -224,7 +201,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     iget-object v2, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     iget-object v3, p0, Lcom/android/server/backup/BackupManagerYuva;->mRestorePackageName:Ljava/lang/String;
@@ -243,7 +219,6 @@
     :goto_0
     invoke-interface {v2, v3, v4}, Landroid/app/backup/IMemorySaverBackupRestoreObserver;->onRestoreCompleted(Ljava/lang/String;Z)V
 
-    .line 103
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerYuva;->mRestorePackageName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -253,10 +228,8 @@
     :catch_0
     const-string v2, "full restore observer went away: endRestore"
 
-    .line 105
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     iput-object v1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     :cond_1
@@ -269,15 +242,12 @@
 
     const-string v0, "BackupManagerYuva"
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mBackupPackageName:Ljava/lang/String;
 
-    .line 61
     iget-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     if-eqz p1, :cond_0
 
-    .line 63
     :try_start_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -297,7 +267,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     iget-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerYuva;->mBackupPackageName:Ljava/lang/String;
@@ -311,12 +280,10 @@
     :catch_0
     const-string p1, "full backup observer went away: startBackup"
 
-    .line 66
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     :cond_0
@@ -329,15 +296,12 @@
 
     const-string v0, "BackupManagerYuva"
 
-    .line 86
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mRestorePackageName:Ljava/lang/String;
 
-    .line 87
     iget-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     if-eqz p1, :cond_0
 
-    .line 89
     :try_start_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -357,7 +321,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     iget-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerYuva;->mRestorePackageName:Ljava/lang/String;
@@ -371,12 +334,10 @@
     :catch_0
     const-string p1, "full restore observer went away: startRestore"
 
-    .line 92
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
     :cond_0
@@ -389,7 +350,6 @@
 
     const/4 v0, 0x1
 
-    .line 112
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerYuva;->isMemorySaverBackupFail:Z
 
     return-void
@@ -398,10 +358,8 @@
 .method public setMemorySaverObserver(Landroid/app/backup/IMemorySaverBackupRestoreObserver;)V
     .locals 0
 
-    .line 49
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerYuva;->mMemorySaverObserver:Landroid/app/backup/IMemorySaverBackupRestoreObserver;
 
-    .line 50
     invoke-virtual {p0}, Lcom/android/server/backup/BackupManagerYuva;->resetBackupRestoreState()V
 
     return-void
@@ -412,7 +370,6 @@
 
     const/4 v0, 0x1
 
-    .line 116
     iput-boolean v0, p0, Lcom/android/server/backup/BackupManagerYuva;->isMemorySaverRestoreFail:Z
 
     return-void

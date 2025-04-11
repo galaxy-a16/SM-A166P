@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$IID6a3A3BsVN3Mcyw9gwJ0452l0(Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->lambda$onWakefulnessChangedLocked$0()V
 
     return-void
@@ -23,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;)V
     .locals 0
 
-    .line 868
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,7 +32,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/PowerManagerService;Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;-><init>(Lcom/android/server/power/PowerManagerService;)V
 
     return-void
@@ -43,7 +40,6 @@
 .method private synthetic lambda$onWakefulnessChangedLocked$0()V
     .locals 2
 
-    .line 896
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmContext(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
@@ -76,14 +72,12 @@
 
     move/from16 v10, p5
 
-    .line 874
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v2, 0x1
 
     invoke-static {v1, v2}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fputmWakefulnessChanging(Lcom/android/server/power/PowerManagerService;Z)V
 
-    .line 875
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmDirty(Lcom/android/server/power/PowerManagerService;)I
@@ -108,7 +102,6 @@
     :goto_0
     move/from16 v16, v2
 
-    .line 882
     iget-object v11, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v11}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmPowerGroups(Lcom/android/server/power/PowerManagerService;)Landroid/util/SparseArray;
@@ -131,7 +124,6 @@
 
     invoke-static/range {v11 .. v17}, Lcom/android/server/power/PowerManagerService;->-$$Nest$muserActivityNoUpdateLocked(Lcom/android/server/power/PowerManagerService;Lcom/android/server/power/PowerGroup;JIII)Z
 
-    .line 885
     :cond_1
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -147,22 +139,18 @@
 
     if-nez v7, :cond_3
 
-    .line 890
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmNotifier(Lcom/android/server/power/PowerManagerService;)Lcom/android/server/power/Notifier;
 
     move-result-object v1
 
-    .line 891
     invoke-static/range {p2 .. p2}, Landroid/os/PowerManagerInternal;->isInteractive(I)Z
 
     move-result v2
 
-    .line 890
     invoke-virtual {v1, v2}, Lcom/android/server/power/Notifier;->onInternalDisplayStateChange(Z)V
 
-    .line 893
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmIsDualViewMode(Lcom/android/server/power/PowerManagerService;)Z
@@ -181,7 +169,6 @@
 
     if-ne v10, v1, :cond_2
 
-    .line 895
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmHandlerPmsMisc(Lcom/android/server/power/PowerManagerService;)Landroid/os/Handler;
@@ -198,21 +185,17 @@
 
     move-result-object v3
 
-    .line 897
     invoke-interface {v3}, Lcom/android/server/power/PowerManagerService$Clock;->uptimeMillis()J
 
     move-result-wide v3
 
-    .line 895
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
 
-    .line 907
     :cond_2
     sget-boolean v1, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SCREEN_CURTAIN:Z
 
     if-eqz v1, :cond_3
 
-    .line 908
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmScreenCurtainController(Lcom/android/server/power/PowerManagerService;)Lcom/android/server/power/ScreenCurtainController;
@@ -221,7 +204,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 909
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmScreenCurtainController(Lcom/android/server/power/PowerManagerService;)Lcom/android/server/power/ScreenCurtainController;
@@ -230,7 +212,6 @@
 
     invoke-virtual {v1, v8}, Lcom/android/server/power/ScreenCurtainController;->onWakefulnessChangeStarted(I)V
 
-    .line 915
     :cond_3
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -248,7 +229,6 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/power/Notifier;->onGroupWakefulnessChangeStarted(IIIJ)V
 
-    .line 917
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     move-wide/from16 v4, p3
@@ -263,7 +243,6 @@
 
     invoke-static/range {v1 .. v9}, Lcom/android/server/power/PowerManagerService;->-$$Nest$mupdateRelatedPowerGroupWakefulnessLocked(Lcom/android/server/power/PowerManagerService;IIJIILjava/lang/String;Ljava/lang/String;)V
 
-    .line 920
     iget-object v1, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     move-wide/from16 v2, p3
@@ -280,7 +259,6 @@
 
     invoke-static/range {v1 .. v8}, Lcom/android/server/power/PowerManagerService;->-$$Nest$mupdateGlobalWakefulnessLocked(Lcom/android/server/power/PowerManagerService;JIIILjava/lang/String;Ljava/lang/String;)V
 
-    .line 921
     iget-object v0, v0, Lcom/android/server/power/PowerManagerService$PowerGroupWakefulnessChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$mupdatePowerStateLocked(Lcom/android/server/power/PowerManagerService;)V

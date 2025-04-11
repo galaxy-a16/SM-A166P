@@ -24,7 +24,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 90
     iget-boolean p0, p0, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Ref$BooleanRef;->element:Z
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;

@@ -7,7 +7,6 @@
 .method public static getRandomAccessFile(Ljava/io/File;)Ljava/io/RandomAccessFile;
     .locals 2
 
-    .line 31
     new-instance v0, Ljava/io/RandomAccessFile;
 
     const-string/jumbo v1, "rwd"
@@ -20,7 +19,6 @@
 .method public static writeBoolean(Ljava/io/File;Z)V
     .locals 2
 
-    .line 36
     :try_start_0
     invoke-static {p0}, Lcom/android/server/backup/utils/RandomAccessFileUtils;->getRandomAccessFile(Ljava/io/File;)Ljava/io/RandomAccessFile;
 
@@ -28,13 +26,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 37
     :try_start_1
     invoke-virtual {v0, p1}, Ljava/io/RandomAccessFile;->writeBoolean(Z)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 38
     :try_start_2
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_2
@@ -47,7 +43,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 36
     :try_start_3
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_3
@@ -70,7 +65,6 @@
     :catch_0
     move-exception p1
 
-    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

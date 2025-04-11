@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayPolicy;)V
     .locals 0
 
-    .line 4612
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy$6;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onTransientSystemBarsVisibilityChanged(IZZ)V
     .locals 1
 
-    .line 4617
     iget-object p3, p0, Lcom/android/server/wm/DisplayPolicy$6;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {p3}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmTransientWindowState(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
@@ -36,7 +34,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 4618
     iget-object p3, p0, Lcom/android/server/wm/DisplayPolicy$6;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {p3}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmTransientWindowState(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
@@ -49,19 +46,16 @@
 
     if-eqz p3, :cond_0
 
-    .line 4619
     iget v0, p3, Lcom/android/server/wm/Task;->mTaskId:I
 
     if-ne v0, p1, :cond_0
 
-    .line 4620
     iget-object p1, p0, Lcom/android/server/wm/DisplayPolicy$6;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fputmIsVisibleBySwipe(Lcom/android/server/wm/DisplayPolicy;Z)V
 
-    .line 4621
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$6;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {p0}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmService(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
@@ -74,7 +68,6 @@
 
     xor-int/lit8 p1, p2, 0x1
 
-    .line 4622
     invoke-virtual {p0, p3, p1}, Lcom/android/server/wm/TaskOrganizerController;->onNewDexImmersiveModeChanged(Lcom/android/server/wm/Task;Z)V
 
     :cond_0

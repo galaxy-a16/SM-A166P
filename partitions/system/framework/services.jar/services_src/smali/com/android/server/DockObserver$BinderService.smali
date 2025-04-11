@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/DockObserver;)V
     .locals 0
 
-    .line 555
     iput-object p1, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/DockObserver;Lcom/android/server/DockObserver$BinderService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/DockObserver$BinderService;-><init>(Lcom/android/server/DockObserver;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 6
 
-    .line 558
     iget-object p1, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -50,13 +47,11 @@
 
     return-void
 
-    .line 559
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 561
     :try_start_0
     iget-object p1, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
@@ -72,7 +67,6 @@
 
     if-eqz p3, :cond_5
 
-    .line 562
     :try_start_1
     array-length v3, p3
 
@@ -90,7 +84,6 @@
 
     goto/16 :goto_0
 
-    .line 595
     :cond_1
     array-length v3, p3
 
@@ -110,12 +103,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 596
     aget-object v2, p3, v5
 
     const/4 v3, 0x2
 
-    .line 597
     aget-object p3, p3, v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -123,19 +114,16 @@
     :try_start_2
     const-string/jumbo v3, "state"
 
-    .line 599
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 600
     iget-object v2, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
     invoke-static {v2, v5}, Lcom/android/server/DockObserver;->-$$Nest$fputmUpdatesStopped(Lcom/android/server/DockObserver;Z)V
 
-    .line 601
     iget-object p0, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
     invoke-static {p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -146,7 +134,6 @@
 
     goto/16 :goto_3
 
-    .line 603
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -169,7 +156,6 @@
 
     goto/16 :goto_3
 
-    .line 606
     :catch_0
     :try_start_3
     new-instance p0, Ljava/lang/StringBuilder;
@@ -190,7 +176,6 @@
 
     goto/16 :goto_3
 
-    .line 608
     :cond_3
     array-length v3, p3
 
@@ -206,12 +191,10 @@
 
     if-eqz p3, :cond_4
 
-    .line 609
     iget-object p2, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
     invoke-static {p2, v2}, Lcom/android/server/DockObserver;->-$$Nest$fputmUpdatesStopped(Lcom/android/server/DockObserver;Z)V
 
-    .line 610
     iget-object p0, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
     invoke-static {p0}, Lcom/android/server/DockObserver;->-$$Nest$fgetmActualDockState(Lcom/android/server/DockObserver;)I
@@ -225,17 +208,14 @@
     :cond_4
     const-string p0, "Dump current dock state, or:"
 
-    .line 612
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  set state <value>"
 
-    .line 613
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  reset"
 
-    .line 614
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto/16 :goto_3
@@ -244,10 +224,8 @@
     :goto_0
     const-string p3, "Current Dock Observer Service state:"
 
-    .line 563
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 564
     iget-object p3, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
     invoke-static {p3}, Lcom/android/server/DockObserver;->-$$Nest$fgetmUpdatesStopped(Lcom/android/server/DockObserver;)Z
@@ -258,10 +236,8 @@
 
     const-string p3, "  (UPDATES STOPPED -- use \'reset\' to restart)"
 
-    .line 565
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 567
     :cond_6
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -285,7 +261,6 @@
 
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 568
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,7 +283,6 @@
 
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 569
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -331,7 +305,6 @@
 
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 572
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -354,7 +327,6 @@
 
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 576
     iget-object p3, p0, Lcom/android/server/DockObserver$BinderService;->this$0:Lcom/android/server/DockObserver;
 
     invoke-static {p3}, Lcom/android/server/DockObserver;->-$$Nest$fgetmLogRecent(Lcom/android/server/DockObserver;)Lcom/android/server/DockObserver$LogRecent;
@@ -365,7 +337,6 @@
 
     const-string p3, " == Latest states from Driver =="
 
-    .line 577
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     move p3, v2
@@ -375,7 +346,6 @@
 
     if-ge p3, v3, :cond_7
 
-    .line 579
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -441,13 +411,11 @@
     :cond_7
     const-string p3, " == Latest states to Apps =="
 
-    .line 584
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_2
     if-ge v2, v3, :cond_9
 
-    .line 586
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -513,17 +481,14 @@
     :cond_8
     const-string p0, " Cannot log latest events!"
 
-    .line 591
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 616
     :cond_9
     :goto_3
     monitor-exit p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 618
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -531,7 +496,6 @@
     :catchall_0
     move-exception p0
 
-    .line 616
     :try_start_4
     monitor-exit p1
     :try_end_4
@@ -545,9 +509,7 @@
     :catchall_1
     move-exception p0
 
-    .line 618
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 619
     throw p0
 .end method

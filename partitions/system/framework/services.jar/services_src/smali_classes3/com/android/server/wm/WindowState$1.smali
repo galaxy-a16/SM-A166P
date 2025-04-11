@@ -20,10 +20,8 @@
 .method public compare(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;)I
     .locals 0
 
-    .line 800
     iget p0, p1, Lcom/android/server/wm/WindowState;->mSubLayer:I
 
-    .line 801
     iget p1, p2, Lcom/android/server/wm/WindowState;->mSubLayer:I
 
     if-lt p0, p1, :cond_1
@@ -49,7 +47,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 797
     check-cast p1, Lcom/android/server/wm/WindowState;
 
     check-cast p2, Lcom/android/server/wm/WindowState;

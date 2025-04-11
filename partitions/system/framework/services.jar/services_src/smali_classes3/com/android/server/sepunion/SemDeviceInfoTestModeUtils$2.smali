@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;Landroid/os/Handler;)V
     .locals 0
 
-    .line 49
     iput-object p1, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$2;->this$0:Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    .line 51
     iget-object p1, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$2;->this$0:Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;
 
     invoke-static {p1}, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;)Landroid/content/Context;
@@ -33,7 +31,6 @@
 
     invoke-static {p1}, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->-$$Nest$smupdateTestModeFromSetting(Landroid/content/Context;)V
 
-    .line 52
     invoke-static {}, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -58,7 +55,6 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$2;->this$0:Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;
 
     invoke-static {p0}, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->-$$Nest$fgetmTestModeChangeHandler(Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;)Landroid/os/Handler;

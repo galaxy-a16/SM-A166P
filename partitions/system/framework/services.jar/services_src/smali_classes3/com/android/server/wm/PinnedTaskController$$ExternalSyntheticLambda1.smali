@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-static {p1}, Lcom/android/server/wm/PinnedTaskController;->$r8$lambda$N8Bp4zRs9vHkt5Oa_QqtnZj1Ow0(Lcom/android/server/wm/ActivityRecord;)Z

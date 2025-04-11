@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/EventConditionProvider;)V
     .locals 0
 
-    .line 345
     iput-object p1, p0, Lcom/android/server/notification/EventConditionProvider$3;->this$0:Lcom/android/server/notification/EventConditionProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 348
     invoke-static {}, Lcom/android/server/notification/EventConditionProvider;->-$$Nest$sfgetDEBUG()Z
 
     move-result p1
@@ -53,7 +51,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 349
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/EventConditionProvider$3;->this$0:Lcom/android/server/notification/EventConditionProvider;
 

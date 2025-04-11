@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
     .locals 2
 
-    .line 26
     sget-object v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->Initiator:Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
     sget-object v1, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->Responder:Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 27
     new-instance v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
     const-string v1, "Initiator"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->Initiator:Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
-    .line 28
     new-instance v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
     const-string v1, "Responder"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->Responder:Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
-    .line 26
     invoke-static {}, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->$values()[Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 26
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
     .locals 1
 
-    .line 26
     const-class v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
     .locals 1
 
-    .line 26
     sget-object v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->$VALUES:[Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
     invoke-virtual {v0}, [Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->clone()Ljava/lang/Object;

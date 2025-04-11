@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-static {p1}, Lcom/android/server/wm/MultiTaskingController;->$r8$lambda$SYPEc4mLBWGH4qzN6S1Uaob_MRc(Lcom/android/server/wm/Task;)Z

@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/util/ArrayMap;)V
     .locals 0
 
-    .line 41
     invoke-direct {p0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lcom/android/server/pm/parsing/library/ApexSharedLibraryUpdater;->mSharedLibraries:Landroid/util/ArrayMap;
 
     return-void
@@ -23,7 +21,6 @@
 .method public static isCodename(Ljava/lang/String;)Z
     .locals 1
 
-    .line 81
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -32,7 +29,6 @@
 
     const/4 v0, 0x0
 
-    .line 85
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -43,7 +39,6 @@
 
     return p0
 
-    .line 82
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -55,7 +50,6 @@
 .method public static isTargetSdkAtMost(ILjava/lang/String;)Z
     .locals 3
 
-    .line 74
     invoke-static {p1}, Lcom/android/server/pm/parsing/library/ApexSharedLibraryUpdater;->isCodename(Ljava/lang/String;)Z
 
     move-result v0
@@ -78,7 +72,6 @@
     :goto_0
     return v1
 
-    .line 77
     :cond_1
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -100,7 +93,6 @@
 .method public updatePackage(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ZZ)V
     .locals 1
 
-    .line 48
     iget-object p2, p0, Lcom/android/server/pm/parsing/library/ApexSharedLibraryUpdater;->mSharedLibraries:Landroid/util/ArrayMap;
 
     invoke-virtual {p2}, Landroid/util/ArrayMap;->size()I
@@ -112,7 +104,6 @@
     :goto_0
     if-ge p3, p2, :cond_0
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/pm/parsing/library/ApexSharedLibraryUpdater;->mSharedLibraries:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p3}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -134,19 +125,16 @@
 .method public final updateSharedLibraryForPackage(Lcom/android/server/SystemConfig$SharedLibraryEntry;Lcom/android/server/pm/parsing/pkg/ParsedPackage;)V
     .locals 2
 
-    .line 56
     iget-object v0, p1, Lcom/android/server/SystemConfig$SharedLibraryEntry;->onBootclasspathBefore:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 58
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result v0
 
     iget-object v1, p1, Lcom/android/server/SystemConfig$SharedLibraryEntry;->onBootclasspathBefore:Ljava/lang/String;
 
-    .line 57
     invoke-static {v0, v1}, Lcom/android/server/pm/parsing/library/ApexSharedLibraryUpdater;->isTargetSdkAtMost(ILjava/lang/String;)Z
 
     move-result v0
@@ -155,25 +143,21 @@
 
     iget-object v0, p1, Lcom/android/server/SystemConfig$SharedLibraryEntry;->onBootclasspathBefore:Ljava/lang/String;
 
-    .line 60
     invoke-static {v0}, Lcom/android/modules/utils/build/UnboundedSdkLevel;->isAtLeast(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 63
     iget-object v0, p1, Lcom/android/server/SystemConfig$SharedLibraryEntry;->name:Ljava/lang/String;
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->prefixRequiredLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
 
-    .line 66
     :cond_0
     iget-boolean p0, p1, Lcom/android/server/SystemConfig$SharedLibraryEntry;->canBeSafelyIgnored:Z
 
     if-eqz p0, :cond_1
 
-    .line 69
     iget-object p0, p1, Lcom/android/server/SystemConfig$SharedLibraryEntry;->name:Ljava/lang/String;
 
     invoke-static {p2, p0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->removeLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V

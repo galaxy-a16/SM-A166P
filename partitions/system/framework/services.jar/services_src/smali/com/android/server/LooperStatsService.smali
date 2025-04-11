@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$-vv-7_4orr4hIT14hH-7VJPzENs(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/LooperStatsService;->lambda$dump$3(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
 
     move-result-object p0
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$5ecgqHRbWuuLW-n1YS6qkJxobSc(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/LooperStatsService;->lambda$dump$0(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -41,7 +39,6 @@
 .method public static synthetic $r8$lambda$BIQ1IAcOtLRqu0--gwFurF4_YTg(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/LooperStatsService;->lambda$dump$1(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
 
     move-result-object p0
@@ -52,7 +49,6 @@
 .method public static synthetic $r8$lambda$w9f1AljrdWnUOFp4OAId-GVGP7Q(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/LooperStatsService;->lambda$dump$2(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
 
     move-result-object p0
@@ -63,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStats(Lcom/android/server/LooperStatsService;)Lcom/android/internal/os/LooperStats;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     return-object p0
@@ -72,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$minitFromSettings(Lcom/android/server/LooperStatsService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/LooperStatsService;->initFromSettings()V
 
     return-void
@@ -81,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$msetEnabled(Lcom/android/server/LooperStatsService;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/LooperStatsService;->setEnabled(Z)V
 
     return-void
@@ -90,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$msetSamplingInterval(Lcom/android/server/LooperStatsService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/LooperStatsService;->setSamplingInterval(I)V
 
     return-void
@@ -99,24 +91,18 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/internal/os/LooperStats;)V
     .locals 1
 
-    .line 70
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 66
     iput-boolean v0, p0, Lcom/android/server/LooperStatsService;->mEnabled:Z
 
-    .line 67
     iput-boolean v0, p0, Lcom/android/server/LooperStatsService;->mTrackScreenInteractive:Z
 
-    .line 68
     iput-boolean v0, p0, Lcom/android/server/LooperStatsService;->mIgnoreBatteryStatus:Z
 
-    .line 71
     iput-object p1, p0, Lcom/android/server/LooperStatsService;->mContext:Landroid/content/Context;
 
-    .line 72
     iput-object p2, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     return-void
@@ -125,7 +111,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lcom/android/internal/os/LooperStats;Lcom/android/server/LooperStatsService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/LooperStatsService;-><init>(Landroid/content/Context;Lcom/android/internal/os/LooperStats;)V
 
     return-void
@@ -134,7 +119,6 @@
 .method public static synthetic lambda$dump$0(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/Integer;
     .locals 0
 
-    .line 115
     iget p0, p0, Lcom/android/internal/os/LooperStats$ExportedEntry;->workSourceUid:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -147,7 +131,6 @@
 .method public static synthetic lambda$dump$1(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
     .locals 0
 
-    .line 116
     iget-object p0, p0, Lcom/android/internal/os/LooperStats$ExportedEntry;->threadName:Ljava/lang/String;
 
     return-object p0
@@ -156,7 +139,6 @@
 .method public static synthetic lambda$dump$2(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
     .locals 0
 
-    .line 117
     iget-object p0, p0, Lcom/android/internal/os/LooperStats$ExportedEntry;->handlerClassName:Ljava/lang/String;
 
     return-object p0
@@ -165,7 +147,6 @@
 .method public static synthetic lambda$dump$3(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;
     .locals 0
 
-    .line 118
     iget-object p0, p0, Lcom/android/internal/os/LooperStats$ExportedEntry;->messageName:Ljava/lang/String;
 
     return-object p0
@@ -180,7 +161,6 @@
 
     move-object/from16 v1, p2
 
-    .line 107
     iget-object v2, v0, Lcom/android/server/LooperStatsService;->mContext:Landroid/content/Context;
 
     const-string v3, "LooperStatsService"
@@ -193,7 +173,6 @@
 
     return-void
 
-    .line 108
     :cond_0
     invoke-static {}, Lcom/android/internal/os/AppIdToPackageMap;->getSnapshot()Lcom/android/internal/os/AppIdToPackageMap;
 
@@ -201,10 +180,8 @@
 
     const-string v3, "Start time: "
 
-    .line 109
     invoke-virtual {v1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 110
     iget-object v3, v0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {v3}, Lcom/android/internal/os/LooperStats;->getStartTimeMillis()J
@@ -221,10 +198,8 @@
 
     const-string v3, "On battery time (ms): "
 
-    .line 111
     invoke-virtual {v1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 112
     iget-object v3, v0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {v3}, Lcom/android/internal/os/LooperStats;->getBatteryTimeMillis()J
@@ -233,19 +208,16 @@
 
     invoke-virtual {v1, v3, v4}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 113
     iget-object v0, v0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {v0}, Lcom/android/internal/os/LooperStats;->getEntries()Ljava/util/List;
 
     move-result-object v0
 
-    .line 114
     new-instance v3, Lcom/android/server/LooperStatsService$$ExternalSyntheticLambda0;
 
     invoke-direct {v3}, Lcom/android/server/LooperStatsService$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 115
     invoke-static {v3}, Ljava/util/Comparator;->comparing(Ljava/util/function/Function;)Ljava/util/Comparator;
 
     move-result-object v3
@@ -254,7 +226,6 @@
 
     invoke-direct {v4}, Lcom/android/server/LooperStatsService$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 116
     invoke-interface {v3, v4}, Ljava/util/Comparator;->thenComparing(Ljava/util/function/Function;)Ljava/util/Comparator;
 
     move-result-object v3
@@ -263,7 +234,6 @@
 
     invoke-direct {v4}, Lcom/android/server/LooperStatsService$$ExternalSyntheticLambda2;-><init>()V
 
-    .line 117
     invoke-interface {v3, v4}, Ljava/util/Comparator;->thenComparing(Ljava/util/function/Function;)Ljava/util/Comparator;
 
     move-result-object v3
@@ -272,12 +242,10 @@
 
     invoke-direct {v4}, Lcom/android/server/LooperStatsService$$ExternalSyntheticLambda3;-><init>()V
 
-    .line 118
     invoke-interface {v3, v4}, Ljava/util/Comparator;->thenComparing(Ljava/util/function/Function;)Ljava/util/Comparator;
 
     move-result-object v3
 
-    .line 114
     invoke-interface {v0, v3}, Ljava/util/List;->sort(Ljava/util/Comparator;)V
 
     const-string/jumbo v4, "work_source_uid"
@@ -310,7 +278,6 @@
 
     const-string v18, "exception_count"
 
-    .line 119
     filled-new-array/range {v4 .. v18}, [Ljava/lang/String;
 
     move-result-object v3
@@ -325,10 +292,8 @@
 
     move-result-object v3
 
-    .line 135
     invoke-virtual {v1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 136
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -346,7 +311,6 @@
 
     check-cast v3, Lcom/android/internal/os/LooperStats$ExportedEntry;
 
-    .line 137
     iget-object v4, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->messageName:Ljava/lang/String;
 
     const-string v5, "__DEBUG_"
@@ -359,11 +323,9 @@
 
     goto :goto_0
 
-    .line 141
     :cond_1
     iget v4, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->workSourceUid:I
 
-    .line 142
     invoke-virtual {v2, v4}, Lcom/android/internal/os/AppIdToPackageMap;->mapUid(I)Ljava/lang/String;
 
     move-result-object v5
@@ -376,42 +338,36 @@
 
     iget-boolean v4, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->isInteractive:Z
 
-    .line 146
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v9
 
     iget-wide v10, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->messageCount:J
 
-    .line 147
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v10
 
     iget-wide v11, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->recordedMessageCount:J
 
-    .line 148
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v11
 
     iget-wide v12, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->totalLatencyMicros:J
 
-    .line 149
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v12
 
     iget-wide v13, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->maxLatencyMicros:J
 
-    .line 150
     invoke-static {v13, v14}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v13
 
     iget-wide v14, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->cpuUsageMicros:J
 
-    .line 151
     invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v14
@@ -420,35 +376,30 @@
 
     iget-wide v0, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->maxCpuUsageMicros:J
 
-    .line 152
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v15
 
     iget-wide v0, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->recordedDelayMessageCount:J
 
-    .line 153
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v16
 
     iget-wide v0, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->delayMillis:J
 
-    .line 154
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v17
 
     iget-wide v0, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->maxDelayMillis:J
 
-    .line 155
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v18
 
     iget-wide v0, v3, Lcom/android/internal/os/LooperStats$ExportedEntry;->exceptionCount:J
 
-    .line 156
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v19
@@ -461,7 +412,6 @@
 
     move-object/from16 v3, p2
 
-    .line 141
     invoke-virtual {v3, v1, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     move-object/from16 v0, p0
@@ -477,14 +427,12 @@
 .method public final initFromSettings()V
     .locals 4
 
-    .line 76
     new-instance v0, Landroid/util/KeyValueListParser;
 
     const/16 v1, 0x2c
 
     invoke-direct {v0, v1}, Landroid/util/KeyValueListParser;-><init>(C)V
 
-    .line 79
     :try_start_0
     iget-object v1, p0, Lcom/android/server/LooperStatsService;->mContext:Landroid/content/Context;
 
@@ -511,7 +459,6 @@
 
     const-string v3, "Bad looper_stats settings"
 
-    .line 82
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -519,48 +466,40 @@
 
     const/16 v2, 0x3e8
 
-    .line 86
     invoke-virtual {v0, v1, v2}, Landroid/util/KeyValueListParser;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 85
     invoke-virtual {p0, v1}, Lcom/android/server/LooperStatsService;->setSamplingInterval(I)V
 
     const-string/jumbo v1, "track_screen_state"
 
     const/4 v2, 0x0
 
-    .line 88
     invoke-virtual {v0, v1, v2}, Landroid/util/KeyValueListParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 87
     invoke-virtual {p0, v1}, Lcom/android/server/LooperStatsService;->setTrackScreenInteractive(Z)V
 
     const-string v1, "ignore_battery_status"
 
-    .line 91
     invoke-virtual {v0, v1, v2}, Landroid/util/KeyValueListParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 90
     invoke-virtual {p0, v1}, Lcom/android/server/LooperStatsService;->setIgnoreBatteryStatus(Z)V
 
     const-string v1, "enabled"
 
     const/4 v2, 0x1
 
-    .line 96
     invoke-virtual {v0, v1, v2}, Landroid/util/KeyValueListParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     const-string v1, "debug.sys.looper_stats_enabled"
 
-    .line 94
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -573,7 +512,6 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 8
 
-    .line 102
     new-instance v0, Lcom/android/server/LooperStatsService$LooperShellCommand;
 
     const/4 v1, 0x0
@@ -602,27 +540,22 @@
 .method public final setEnabled(Z)V
     .locals 1
 
-    .line 161
     iget-boolean v0, p0, Lcom/android/server/LooperStatsService;->mEnabled:Z
 
     if-eq v0, p1, :cond_1
 
-    .line 162
     iput-boolean p1, p0, Lcom/android/server/LooperStatsService;->mEnabled:Z
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {v0}, Lcom/android/internal/os/LooperStats;->reset()V
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/LooperStats;->setAddDebugEntries(Z)V
 
     if-eqz p1, :cond_0
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     goto :goto_0
@@ -640,20 +573,16 @@
 .method public final setIgnoreBatteryStatus(Z)V
     .locals 1
 
-    .line 177
     iget-boolean v0, p0, Lcom/android/server/LooperStatsService;->mIgnoreBatteryStatus:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/LooperStats;->setIgnoreBatteryStatus(Z)V
 
-    .line 179
     iput-boolean p1, p0, Lcom/android/server/LooperStatsService;->mIgnoreBatteryStatus:Z
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {p0}, Lcom/android/internal/os/LooperStats;->reset()V
@@ -667,14 +596,12 @@
 
     if-lez p1, :cond_0
 
-    .line 186
     iget-object p0, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/os/LooperStats;->setSamplingInterval(I)V
 
     goto :goto_0
 
-    .line 188
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -701,15 +628,12 @@
 .method public final setTrackScreenInteractive(Z)V
     .locals 1
 
-    .line 170
     iget-boolean v0, p0, Lcom/android/server/LooperStatsService;->mTrackScreenInteractive:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 171
     iput-boolean p1, p0, Lcom/android/server/LooperStatsService;->mTrackScreenInteractive:Z
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/LooperStatsService;->mStats:Lcom/android/internal/os/LooperStats;
 
     invoke-virtual {p0}, Lcom/android/internal/os/LooperStats;->reset()V

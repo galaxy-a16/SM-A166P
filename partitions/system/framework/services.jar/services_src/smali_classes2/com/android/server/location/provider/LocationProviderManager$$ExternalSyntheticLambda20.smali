@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/location/provider/LocationProviderManager;->$r8$lambda$StREXwiVrBSGbK4aHVzKI4BVQCo(Ljava/lang/Object;)Z
 
     move-result p0

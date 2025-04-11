@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAtm(Lcom/android/server/wm/ActivityEmbeddedPackageRepository;)Lcom/android/server/wm/ActivityTaskManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-object p0
@@ -24,24 +23,20 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 1
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
 
-    .line 102
     new-instance v0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/ActivityEmbeddedPackageRepository$1;-><init>(Lcom/android/server/wm/ActivityEmbeddedPackageRepository;)V
 
     iput-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mPackageReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-void
@@ -54,7 +49,6 @@
 
     monitor-enter p0
 
-    .line 48
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
 
@@ -66,14 +60,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 49
     monitor-exit p0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 51
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
@@ -82,7 +74,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 52
     monitor-exit p0
 
     const/4 p0, 0x1
@@ -102,7 +93,6 @@
 
     const/4 v0, 0x0
 
-    .line 69
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -137,15 +127,12 @@
     :try_start_0
     const-string v0, "    "
 
-    .line 134
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "ActivityEmbeddedPackageRepository : "
 
-    .line 135
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -156,17 +143,14 @@
 
     const-string v0, "Empty"
 
-    .line 137
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 138
     monitor-exit p0
 
     return-void
 
-    .line 140
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
@@ -177,10 +161,8 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 141
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -202,25 +184,20 @@
 
     const-string v2, "    "
 
-    .line 143
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "    "
 
-    .line 144
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 145
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 146
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 148
     :cond_1
     monitor-exit p0
 
@@ -239,7 +216,6 @@
 
     monitor-enter p0
 
-    .line 64
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
     :try_end_0
@@ -260,7 +236,6 @@
 .method public loadActivityEmbeddedPackages()V
     .locals 7
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -275,12 +250,10 @@
 
     const-string v0, "PackageManager is not ready yet."
 
-    .line 79
     invoke-static {p0, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 82
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -292,12 +265,10 @@
 
     const/4 v1, 0x0
 
-    .line 83
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 84
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -316,7 +287,6 @@
 
     check-cast v2, Landroid/content/pm/ApplicationInfo;
 
-    .line 85
     iget-object v3, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {p0, v3}, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->allowSystemOverride(Ljava/lang/String;)Z
@@ -325,7 +295,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 86
     iget-object v3, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v4, v3, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiTaskingController:Lcom/android/server/wm/MultiTaskingController;
@@ -334,15 +303,12 @@
 
     const/4 v6, 0x1
 
-    .line 87
     invoke-virtual {v3}, Lcom/android/server/wm/ActivityTaskManagerService;->getCurrentUserId()I
 
     move-result v3
 
-    .line 86
     invoke-virtual {v4, v5, v6, v3, v1}, Lcom/android/server/wm/MultiTaskingController;->updateEmbedActivityPackageEnabled(Ljava/lang/String;IIZ)V
 
-    .line 88
     iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {p0, v2}, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->add(Ljava/lang/String;)Z
@@ -356,32 +322,26 @@
 .method public registerActivityEmbeddedPackageReceiver()V
     .locals 4
 
-    .line 94
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 95
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 96
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.PACKAGE_REPLACED"
 
-    .line 97
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo v1, "package"
 
-    .line 98
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 99
     iget-object v1, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v2, v1, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -402,7 +362,6 @@
 
     monitor-enter p0
 
-    .line 56
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
 
@@ -414,14 +373,12 @@
 
     if-nez v0, :cond_0
 
-    .line 57
     monitor-exit p0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 59
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedPackageRepository;->mRepository:Ljava/util/List;
@@ -430,7 +387,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 60
     monitor-exit p0
 
     const/4 p0, 0x1

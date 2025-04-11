@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/CacheOomRanker$CacheUseComparator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/CacheOomRanker$CacheUseComparator;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public compare(Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;)I
     .locals 2
 
-    .line 459
     iget-object p0, p1, Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
@@ -44,14 +42,12 @@
 
     iget-object p2, p2, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
 
-    .line 460
     invoke-virtual {p2}, Lcom/android/server/am/ProcessStateRecord;->getCacheOomRankerUseCount()I
 
     move-result p2
 
     int-to-long v0, p2
 
-    .line 459
     invoke-static {p0, p1, v0, v1}, Ljava/lang/Long;->compare(JJ)I
 
     move-result p0
@@ -62,7 +58,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 456
     check-cast p1, Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;
 
     check-cast p2, Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;

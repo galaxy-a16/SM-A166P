@@ -17,17 +17,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mLock:Ljava/lang/Object;
 
-    .line 258
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
     return-void
@@ -38,12 +35,10 @@
 .method public getCachedLocale()Ljava/util/Locale;
     .locals 1
 
-    .line 279
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 280
     :try_start_0
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mCachedLocale:Ljava/util/Locale;
 
@@ -54,7 +49,6 @@
     :catchall_0
     move-exception p0
 
-    .line 281
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -65,12 +59,10 @@
 .method public getNotificationInfos(Ljava/util/Locale;)Landroid/util/SparseArray;
     .locals 2
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 269
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mCachedLocale:Ljava/util/Locale;
 
@@ -80,10 +72,8 @@
 
     if-nez v1, :cond_0
 
-    .line 270
     invoke-virtual {p0, p1}, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->refreshNotificationInfos(Ljava/util/Locale;)V
 
-    .line 272
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mCachedNotificationInfos:Landroid/util/SparseArray;
 
@@ -94,7 +84,6 @@
     :catchall_0
     move-exception p0
 
-    .line 273
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -107,15 +96,12 @@
 
     move-object/from16 v0, p0
 
-    .line 294
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    .line 296
     iget-object v2, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 297
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -126,10 +112,8 @@
 
     move-result-object v2
 
-    .line 299
     iget-object v3, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 300
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -140,10 +124,8 @@
 
     move-result-object v3
 
-    .line 301
     iget-object v4, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 302
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -154,10 +136,8 @@
 
     move-result-object v4
 
-    .line 304
     iget-object v5, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 305
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -168,10 +148,8 @@
 
     move-result-object v5
 
-    .line 307
     iget-object v6, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 308
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -182,10 +160,8 @@
 
     move-result-object v6
 
-    .line 310
     iget-object v7, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 311
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
@@ -196,10 +172,8 @@
 
     move-result-object v7
 
-    .line 313
     iget-object v8, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 314
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -210,10 +184,8 @@
 
     move-result-object v8
 
-    .line 316
     iget-object v0, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 317
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -224,7 +196,6 @@
 
     move-result-object v0
 
-    .line 320
     array-length v9, v2
 
     array-length v10, v3
@@ -269,13 +240,11 @@
 
     const/4 v9, 0x0
 
-    .line 332
     :goto_0
     array-length v10, v2
 
     if-ge v9, v10, :cond_1
 
-    .line 333
     aget v10, v2, v9
 
     const/4 v11, -0x1
@@ -284,7 +253,6 @@
 
     goto :goto_1
 
-    .line 338
     :cond_0
     new-instance v11, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;
 
@@ -316,7 +284,6 @@
     :cond_1
     return-object v1
 
-    .line 328
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -330,23 +297,19 @@
 .method public refreshNotificationInfos(Ljava/util/Locale;)V
     .locals 1
 
-    .line 286
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 287
     :try_start_0
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mCachedLocale:Ljava/util/Locale;
 
-    .line 288
     invoke-virtual {p0}, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->loadNotificationInfos()Landroid/util/SparseArray;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->mCachedNotificationInfos:Landroid/util/SparseArray;
 
-    .line 289
     monitor-exit v0
 
     return-void

@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/NfcLedCoverController;Landroid/os/Looper;)V
     .locals 1
 
-    .line 178
     iput-object p1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 179
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    .line 184
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x5
@@ -42,7 +39,6 @@
 
     goto/16 :goto_1
 
-    .line 234
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -54,7 +50,6 @@
 
     goto/16 :goto_1
 
-    .line 231
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -66,7 +61,6 @@
 
     goto/16 :goto_1
 
-    .line 228
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -78,7 +72,6 @@
 
     goto/16 :goto_1
 
-    .line 222
     :pswitch_3
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -91,14 +84,12 @@
     :cond_0
     if-nez v3, :cond_2
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {p0}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$mhandleCoverDetachedLocked(Lcom/android/server/sepunion/cover/NfcLedCoverController;)V
 
     goto/16 :goto_1
 
-    .line 186
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -106,7 +97,6 @@
 
     goto/16 :goto_1
 
-    .line 214
     :pswitch_5
     iget-object v0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -114,7 +104,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$mhandleClearOngoingEvent(Lcom/android/server/sepunion/cover/NfcLedCoverController;I)V
 
-    .line 215
     iget-object p1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {p1}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$fgetmHandler(Lcom/android/server/sepunion/cover/NfcLedCoverController;)Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;
@@ -133,7 +122,6 @@
 
     move-result-object p1
 
-    .line 216
     invoke-virtual {p1, v2}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result p1
@@ -146,14 +134,12 @@
 
     move-result-object p1
 
-    .line 217
     invoke-virtual {p1, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 218
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {p0}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$fgetmSendLedDataWakeLock(Lcom/android/server/sepunion/cover/NfcLedCoverController;)Landroid/os/PowerManager$WakeLock;
@@ -164,7 +150,6 @@
 
     goto/16 :goto_1
 
-    .line 211
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -176,7 +161,6 @@
 
     goto :goto_1
 
-    .line 208
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -186,13 +170,11 @@
 
     goto :goto_1
 
-    .line 189
     :pswitch_8
     iget-object p1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {p1}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$mclearRetryCountDelayedMsg(Lcom/android/server/sepunion/cover/NfcLedCoverController;)V
 
-    .line 190
     iget-object p1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {p1}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$fgetmPrevCommand(Lcom/android/server/sepunion/cover/NfcLedCoverController;)I
@@ -203,14 +185,12 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 191
     iget-object p1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {p1}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$msendCurrentClockCommand(Lcom/android/server/sepunion/cover/NfcLedCoverController;)V
 
     goto :goto_0
 
-    .line 193
     :cond_1
     iget-object p1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -220,7 +200,6 @@
 
     invoke-static {p1, v0, v1}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$mhandleSendDataToNfcLedCover(Lcom/android/server/sepunion/cover/NfcLedCoverController;I[B)V
 
-    .line 195
     :goto_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -232,13 +211,11 @@
 
     goto :goto_1
 
-    .line 198
     :pswitch_9
     iget-object v0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$mclearRetryCountDelayedMsg(Lcom/android/server/sepunion/cover/NfcLedCoverController;)V
 
-    .line 200
     :pswitch_a
     iget-object v0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -250,7 +227,6 @@
 
     invoke-static {v0, v4, p1}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$mhandleSendDataToNfcLedCover(Lcom/android/server/sepunion/cover/NfcLedCoverController;I[B)V
 
-    .line 201
     iget-object p1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {p1}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$fgetmHandler(Lcom/android/server/sepunion/cover/NfcLedCoverController;)Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;
@@ -269,7 +245,6 @@
 
     move-result-object p1
 
-    .line 202
     invoke-virtual {p1, v2}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result p1
@@ -282,14 +257,12 @@
 
     move-result-object p1
 
-    .line 203
     invoke-virtual {p1, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 204
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {p0}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$fgetmSendLedDataWakeLock(Lcom/android/server/sepunion/cover/NfcLedCoverController;)Landroid/os/PowerManager$WakeLock;

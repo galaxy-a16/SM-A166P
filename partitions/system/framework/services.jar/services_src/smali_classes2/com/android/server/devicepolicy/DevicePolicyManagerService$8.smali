@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/os/Looper;Landroid/telephony/SubscriptionManager;I)V
     .locals 0
 
-    .line 27460
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$8;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput-object p3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$8;->val$subscriptionManager:Landroid/telephony/SubscriptionManager;
@@ -32,7 +31,6 @@
 .method public onSubscriptionsChanged()V
     .locals 8
 
-    .line 27463
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$8;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
@@ -41,7 +39,6 @@
 
     move-result-wide v0
 
-    .line 27465
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$8;->val$subscriptionManager:Landroid/telephony/SubscriptionManager;
 
@@ -51,7 +48,6 @@
 
     move-result-object v2
 
-    .line 27467
     array-length v4, v2
 
     :goto_0
@@ -59,17 +55,14 @@
 
     aget v5, v2, v3
 
-    .line 27468
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$8;->val$subscriptionManager:Landroid/telephony/SubscriptionManager;
 
-    .line 27469
     invoke-virtual {v6, v5}, Landroid/telephony/SubscriptionManager;->getSubscriptionUserHandle(I)Landroid/os/UserHandle;
 
     move-result-object v6
 
     if-eqz v6, :cond_0
 
-    .line 27471
     invoke-virtual {v6}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v6
@@ -78,18 +71,15 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 27472
     :cond_0
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$8;->val$subscriptionManager:Landroid/telephony/SubscriptionManager;
 
     iget v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$8;->val$userId:I
 
-    .line 27473
     invoke-static {v7}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v7
 
-    .line 27472
     invoke-virtual {v6, v5, v7}, Landroid/telephony/SubscriptionManager;->setSubscriptionUserHandle(ILandroid/os/UserHandle;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -99,7 +89,6 @@
 
     goto :goto_0
 
-    .line 27477
     :cond_2
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$8;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -118,6 +107,5 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;->binderRestoreCallingIdentity(J)V
 
-    .line 27478
     throw v2
 .end method

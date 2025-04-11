@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerBackupHelper;)V
     .locals 0
 
-    .line 271
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/accounts/AccountManagerBackupHelper;Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;-><init>(Lcom/android/server/accounts/AccountManagerBackupHelper;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 3
 
-    .line 274
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-static {v0}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fgetmLock(Lcom/android/server/accounts/AccountManagerBackupHelper;)Ljava/lang/Object;
@@ -42,7 +39,6 @@
 
     monitor-enter v0
 
-    .line 275
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
@@ -52,12 +48,10 @@
 
     if-nez v1, :cond_0
 
-    .line 276
     monitor-exit v0
 
     return-void
 
-    .line 278
     :cond_0
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -65,12 +59,10 @@
 
     if-eqz p2, :cond_1
 
-    .line 279
     monitor-exit v0
 
     return-void
 
-    .line 281
     :cond_1
     iget-object p2, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
@@ -87,21 +79,18 @@
     :goto_0
     if-ltz p2, :cond_4
 
-    .line 283
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-static {v1}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fgetmRestorePendingAppPermissions(Lcom/android/server/accounts/AccountManagerBackupHelper;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 284
     invoke-interface {v1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;
 
-    .line 285
     invoke-static {v1}, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->-$$Nest$fgetpackageName(Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;)Ljava/lang/String;
 
     move-result-object v2
@@ -114,7 +103,6 @@
 
     goto :goto_1
 
-    .line 288
     :cond_2
     iget-object v2, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
@@ -124,19 +112,16 @@
 
     iget-object v2, v2, Lcom/android/server/accounts/AccountManagerService;->mContext:Landroid/content/Context;
 
-    .line 289
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 288
     invoke-virtual {v1, v2}, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->apply(Landroid/content/pm/PackageManager;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 290
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-static {v1}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fgetmRestorePendingAppPermissions(Lcom/android/server/accounts/AccountManagerBackupHelper;)Ljava/util/List;
@@ -151,7 +136,6 @@
 
     goto :goto_0
 
-    .line 293
     :cond_4
     iget-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
@@ -173,7 +157,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 295
     iget-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-static {p1}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fgetmAccountManagerService(Lcom/android/server/accounts/AccountManagerBackupHelper;)Lcom/android/server/accounts/AccountManagerService;
@@ -190,7 +173,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 296
     iget-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-static {p1}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fgetmRestoreCancelCommand(Lcom/android/server/accounts/AccountManagerBackupHelper;)Ljava/lang/Runnable;
@@ -199,14 +181,12 @@
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 297
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     const/4 p1, 0x0
 
     invoke-static {p0, p1}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fputmRestoreCancelCommand(Lcom/android/server/accounts/AccountManagerBackupHelper;Ljava/lang/Runnable;)V
 
-    .line 299
     :cond_5
     monitor-exit v0
 

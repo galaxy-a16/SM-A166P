@@ -18,20 +18,16 @@
 .method public constructor <init>(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;Lcom/samsung/android/knox/sdp/core/SdpDomain;Ljava/util/List;)V
     .locals 0
 
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mAlias:Ljava/lang/String;
 
-    .line 26
     iput-object p2, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mOwner:Lcom/samsung/android/knox/sdp/core/SdpDomain;
 
-    .line 27
     iput-object p3, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mPrivilegedApps:Ljava/util/List;
 
     return-void
@@ -42,17 +38,14 @@
 .method public addPrivilegedApp(Lcom/samsung/android/knox/sdp/core/SdpDomain;)Z
     .locals 4
 
-    .line 55
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpDomain;->getAlias()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 56
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpDomain;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 58
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -69,7 +62,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 60
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mPrivilegedApps:Ljava/util/List;
 
@@ -90,12 +82,10 @@
 
     check-cast v2, Lcom/samsung/android/knox/sdp/core/SdpDomain;
 
-    .line 61
     invoke-virtual {v2}, Lcom/samsung/android/knox/sdp/core/SdpDomain;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 63
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -104,7 +94,6 @@
 
     return v3
 
-    .line 67
     :cond_1
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mPrivilegedApps:Ljava/util/List;
 
@@ -119,7 +108,6 @@
     :catch_0
     move-exception p0
 
-    .line 69
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
@@ -130,7 +118,6 @@
 .method public getOwner()Lcom/samsung/android/knox/sdp/core/SdpDomain;
     .locals 0
 
-    .line 46
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mOwner:Lcom/samsung/android/knox/sdp/core/SdpDomain;
 
     return-object p0
@@ -139,7 +126,6 @@
 .method public getPrivilegedApps()Ljava/util/List;
     .locals 0
 
-    .line 50
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mPrivilegedApps:Ljava/util/List;
 
     return-object p0
@@ -148,17 +134,14 @@
 .method public removePrivilegedApp(Lcom/samsung/android/knox/sdp/core/SdpDomain;)Z
     .locals 4
 
-    .line 77
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpDomain;->getAlias()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 78
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpDomain;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 80
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -175,7 +158,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 82
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mPrivilegedApps:Ljava/util/List;
 
@@ -196,19 +178,16 @@
 
     check-cast v1, Lcom/samsung/android/knox/sdp/core/SdpDomain;
 
-    .line 83
     invoke-virtual {v1}, Lcom/samsung/android/knox/sdp/core/SdpDomain;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 85
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mPrivilegedApps:Ljava/util/List;
 
     invoke-interface {p0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -224,7 +203,6 @@
     :catch_0
     move-exception p0
 
-    .line 91
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -235,17 +213,14 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 121
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "SdpPolicy {\n"
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 124
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -266,15 +241,12 @@
 
     const-string v1, "\n"
 
-    .line 125
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 126
     iget-object v2, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mOwner:Lcom/samsung/android/knox/sdp/core/SdpDomain;
 
     if-eqz v2, :cond_0
 
-    .line 127
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -297,10 +269,8 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 128
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 130
     :cond_0
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/engine/SdpPolicy;->mPrivilegedApps:Ljava/util/List;
 
@@ -321,7 +291,6 @@
 
     check-cast v2, Lcom/samsung/android/knox/sdp/core/SdpDomain;
 
-    .line 131
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -342,7 +311,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 132
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -350,10 +318,8 @@
     :cond_1
     const-string/jumbo p0, "}"
 
-    .line 134
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 136
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

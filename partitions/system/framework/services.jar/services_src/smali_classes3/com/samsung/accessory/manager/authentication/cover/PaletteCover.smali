@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,18 +49,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 29
     iput-byte v0, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mPackage:B
 
-    .line 30
     iput-boolean v0, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mCoverAttached:Z
 
-    .line 33
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mContext:Landroid/content/Context;
 
     return-void
@@ -70,7 +65,6 @@
 .method public static getSetURI(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 93
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -89,7 +83,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 86
     invoke-static {p1}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object p1
@@ -99,13 +92,11 @@
     :cond_0
     const-string p1, ""
 
-    .line 87
     :goto_0
     invoke-static {p0}, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->getSetURI(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 88
     sget-object v0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -130,7 +121,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -157,7 +147,6 @@
 .method public static isSettingEnabled(Landroid/content/Context;)Z
     .locals 0
 
-    .line 82
     invoke-static {p0}, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->getSetURI(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -176,7 +165,6 @@
 .method public disableSetting()V
     .locals 2
 
-    .line 97
     sget-object v0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->TAG:Ljava/lang/String;
 
     const-string v1, "disableSetting"
@@ -185,15 +173,12 @@
 
     const/4 v0, 0x3
 
-    .line 98
     iput-byte v0, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mPackage:B
 
     const/4 v0, 0x0
 
-    .line 99
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mUriData:[B
 
-    .line 100
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->onCoverStateChanged()V
 
     return-void
@@ -202,7 +187,6 @@
 .method public isCoverAttached()Z
     .locals 0
 
-    .line 37
     iget-boolean p0, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mCoverAttached:Z
 
     return p0
@@ -211,7 +195,6 @@
 .method public final onCoverStateChanged()V
     .locals 8
 
-    .line 48
     :try_start_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mUriData:[B
     :try_end_0
@@ -231,7 +214,6 @@
     :cond_0
     move-object v0, v1
 
-    .line 49
     :goto_0
     sget-object v2, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->TAG:Ljava/lang/String;
 
@@ -251,7 +233,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
@@ -260,10 +241,8 @@
 
     const/16 v5, 0x12
 
-    .line 51
     invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 52
     iget-object v4, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mUriData:[B
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -279,17 +258,14 @@
     :try_start_2
     const-string v1, "com.samsung.android.intent.action.ACCESSORY_COVER_ATTACH"
 
-    .line 53
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 54
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mUriData:[B
 
     aget-byte v1, v1, v7
 
     iput-byte v1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mPackage:B
 
-    .line 55
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,12 +284,10 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mUriData:[B
 
     invoke-virtual {v3, v6, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
 
-    .line 57
     iput-boolean v7, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mCoverAttached:Z
 
     goto :goto_1
@@ -321,21 +295,16 @@
     :cond_1
     const-string v4, "Palette cover detached"
 
-    .line 59
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     invoke-virtual {v3, v6, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.intent.action.ACCESSORY_COVER_DETACH"
 
-    .line 61
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 62
     iput-boolean v5, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mCoverAttached:Z
 
-    .line 64
     :goto_1
     iget-byte v1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mPackage:B
 
@@ -345,15 +314,12 @@
 
     const-string v1, "com.samsung.android.app.dressroom"
 
-    .line 65
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 66
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 68
     :cond_2
     iget-byte v1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mPackage:B
 
@@ -363,24 +329,19 @@
 
     const-string v1, "com.samsung.android.app.aodservice"
 
-    .line 69
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 70
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 72
     :cond_3
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mUriData:[B
 
     if-nez v1, :cond_4
 
-    .line 73
     iput-byte v5, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mPackage:B
 
-    .line 75
     :cond_4
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mContext:Landroid/content/Context;
 
@@ -396,7 +357,6 @@
 
     goto :goto_2
 
-    .line 77
     :catch_0
     sget-object p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->TAG:Ljava/lang/String;
 
@@ -411,7 +371,6 @@
 .method public setCoverVerified(ZLcom/samsung/accessory/manager/authentication/AuthenticationResult;)V
     .locals 3
 
-    .line 41
     sget-object v0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -432,7 +391,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 42
     invoke-virtual {p2}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->getByteArrayManagerURI()[B
 
     move-result-object p1
@@ -445,7 +403,6 @@
     :goto_0
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->mUriData:[B
 
-    .line 43
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;->onCoverStateChanged()V
 
     return-void

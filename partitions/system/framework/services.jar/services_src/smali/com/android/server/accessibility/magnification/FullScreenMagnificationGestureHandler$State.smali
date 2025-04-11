@@ -9,7 +9,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 391
     invoke-interface {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationGestureHandler$State;->name()Ljava/lang/String;
 
     move-result-object p0
@@ -28,7 +27,6 @@
 .method public name()Ljava/lang/String;
     .locals 0
 
-    .line 387
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0

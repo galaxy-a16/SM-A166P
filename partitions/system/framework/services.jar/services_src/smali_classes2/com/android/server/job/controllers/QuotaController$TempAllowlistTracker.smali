@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/QuotaController;)V
     .locals 0
 
-    .line 2556
     iput-object p1, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onAppAdded(I)V
     .locals 9
 
-    .line 2560
     iget-object v0, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object v0, v0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2561
     :try_start_0
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
@@ -42,7 +39,6 @@
 
     move-result-wide v1
 
-    .line 2562
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTempAllowlistCache(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseBooleanArray;
@@ -53,7 +49,6 @@
 
     invoke-virtual {v3, p1, v4}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 2563
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object v3, v3, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
@@ -64,12 +59,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 2565
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
-    .line 2566
     invoke-virtual {v3}, Landroid/util/ArraySet;->size()I
 
     move-result v6
@@ -79,7 +72,6 @@
     :goto_0
     if-ltz v6, :cond_1
 
-    .line 2567
     iget-object v7, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v7}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmEJPkgTimers(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseArrayMap;
@@ -100,7 +92,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 2569
     invoke-virtual {v7, v1, v2, v4}, Lcom/android/server/job/controllers/QuotaController$Timer;->onStateChangedLocked(JZ)V
 
     :cond_0
@@ -108,7 +99,6 @@
 
     goto :goto_0
 
-    .line 2572
     :cond_1
     iget-object v1, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -116,21 +106,18 @@
 
     move-result-object p1
 
-    .line 2573
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result v1
 
     if-lez v1, :cond_2
 
-    .line 2574
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {p0, p1}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
-    .line 2577
     :cond_2
     monitor-exit v0
 
@@ -149,14 +136,12 @@
 .method public onAppRemoved(I)V
     .locals 5
 
-    .line 2582
     iget-object v0, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object v0, v0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2583
     :try_start_0
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
@@ -164,7 +149,6 @@
 
     move-result-wide v1
 
-    .line 2584
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmEJGracePeriodTempAllowlistMs(Lcom/android/server/job/controllers/QuotaController;)J
@@ -173,7 +157,6 @@
 
     add-long/2addr v1, v3
 
-    .line 2585
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTempAllowlistCache(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseBooleanArray;
@@ -182,7 +165,6 @@
 
     invoke-virtual {v3, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 2586
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTempAllowlistGraceCache(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseLongArray;
@@ -191,7 +173,6 @@
 
     invoke-virtual {v3, p1, v1, v2}, Landroid/util/SparseLongArray;->put(IJ)V
 
-    .line 2587
     iget-object v1, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmHandler(Lcom/android/server/job/controllers/QuotaController;)Lcom/android/server/job/controllers/QuotaController$QcHandler;
@@ -206,7 +187,6 @@
 
     move-result-object p1
 
-    .line 2588
     iget-object v1, p0, Lcom/android/server/job/controllers/QuotaController$TempAllowlistTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmHandler(Lcom/android/server/job/controllers/QuotaController;)Lcom/android/server/job/controllers/QuotaController$QcHandler;
@@ -221,7 +201,6 @@
 
     invoke-virtual {v1, p1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 2589
     monitor-exit v0
 
     return-void

@@ -7,7 +7,6 @@
 .method public static writeServiceEvent(ILandroid/content/ComponentName;)V
     .locals 0
 
-    .line 45
     invoke-static {p1}, Landroid/content/ComponentName;->flattenToShortString(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object p1
@@ -32,7 +31,6 @@
 
     move-object v2, p1
 
-    .line 39
     invoke-static/range {v0 .. v5}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;Ljava/lang/String;II)V
 
     return-void
@@ -43,7 +41,6 @@
 
     const/16 v0, 0xd0
 
-    .line 66
     invoke-static {p3}, Landroid/content/ComponentName;->flattenToShortString(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v4
@@ -58,7 +55,6 @@
 
     move v6, p4
 
-    .line 65
     invoke-static/range {v0 .. v6}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIIILjava/lang/String;Ljava/lang/String;Z)V
 
     return-void
@@ -73,7 +69,6 @@
 
     const/16 v2, 0xd1
 
-    .line 76
     invoke-static {p1}, Landroid/content/ComponentName;->flattenToShortString(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v3
@@ -122,7 +117,6 @@
 
     move/from16 v12, p4
 
-    .line 75
     invoke-static/range {v0 .. v12}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;Ljava/lang/String;IIIIIIIII)V
 
     return-void
@@ -131,7 +125,6 @@
 .method public static writeSetWhitelistEvent(Landroid/content/ComponentName;Ljava/util/List;Ljava/util/List;)V
     .locals 6
 
-    .line 51
     invoke-static {p0}, Landroid/content/ComponentName;->flattenToShortString(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v2
@@ -140,7 +133,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 52
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -155,7 +147,6 @@
     :goto_0
     if-eqz p2, :cond_1
 
-    .line 53
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p0
@@ -169,7 +160,6 @@
 
     const/4 v3, 0x0
 
-    .line 56
     invoke-static/range {v0 .. v5}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;Ljava/lang/String;II)V
 
     return-void

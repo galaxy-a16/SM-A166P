@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$00B9qFKQUzR27rKbiE8Aodq5dt8(Ljava/util/function/Consumer;Landroid/util/ArrayMap;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/utils/quota/UptcMap;->lambda$forEach$0(Ljava/util/function/Consumer;Landroid/util/ArrayMap;)V
 
     return-void
@@ -20,10 +19,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     new-instance v0, Landroid/util/SparseArrayMap;
 
     invoke-direct {v0}, Landroid/util/SparseArrayMap;-><init>()V
@@ -36,7 +33,6 @@
 .method public static synthetic lambda$forEach$0(Ljava/util/function/Consumer;Landroid/util/ArrayMap;)V
     .locals 2
 
-    .line 159
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
 
     move-result v0
@@ -46,7 +42,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 160
     invoke-virtual {p1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -66,7 +61,6 @@
 .method public add(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 
-    .line 38
     iget-object v0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -77,17 +71,14 @@
 
     if-nez v0, :cond_0
 
-    .line 40
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 41
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     :cond_0
     invoke-virtual {v0, p3, p4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -97,7 +88,6 @@
 .method public clear()V
     .locals 0
 
-    .line 47
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0}, Landroid/util/SparseArrayMap;->clear()V
@@ -108,7 +98,6 @@
 .method public contains(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 57
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -119,7 +108,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 58
     invoke-virtual {p0, p3}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p0
@@ -140,7 +128,6 @@
 .method public delete(ILjava/lang/String;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArrayMap;->delete(ILjava/lang/Object;)Ljava/lang/Object;
@@ -155,7 +142,6 @@
 .method public delete(I)V
     .locals 0
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArrayMap;->delete(I)V
@@ -166,7 +152,6 @@
 .method public forEach(Lcom/android/server/utils/quota/UptcMap$UptcDataConsumer;)V
     .locals 11
 
-    .line 166
     invoke-virtual {p0}, Lcom/android/server/utils/quota/UptcMap;->userCount()I
 
     move-result v0
@@ -178,12 +163,10 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 168
     invoke-virtual {p0, v2}, Lcom/android/server/utils/quota/UptcMap;->getUserIdAtIndex(I)I
 
     move-result v3
 
-    .line 170
     invoke-virtual {p0, v3}, Lcom/android/server/utils/quota/UptcMap;->packageCountForUser(I)I
 
     move-result v4
@@ -193,12 +176,10 @@
     :goto_1
     if-ge v5, v4, :cond_1
 
-    .line 172
     invoke-virtual {p0, v2, v5}, Lcom/android/server/utils/quota/UptcMap;->getPackageNameAtIndex(II)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 174
     invoke-virtual {p0, v3, v6}, Lcom/android/server/utils/quota/UptcMap;->tagCountForUserAndPackage(ILjava/lang/String;)I
 
     move-result v7
@@ -208,12 +189,10 @@
     :goto_2
     if-ge v8, v7, :cond_0
 
-    .line 176
     invoke-virtual {p0, v2, v5, v8}, Lcom/android/server/utils/quota/UptcMap;->getTagAtIndex(III)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 177
     invoke-virtual {p0, v3, v6, v9}, Lcom/android/server/utils/quota/UptcMap;->get(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v10
@@ -241,7 +220,6 @@
 .method public forEach(Ljava/util/function/Consumer;)V
     .locals 1
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     new-instance v0, Lcom/android/server/utils/quota/UptcMap$$ExternalSyntheticLambda0;
@@ -256,7 +234,6 @@
 .method public get(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -267,7 +244,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 95
     invoke-virtual {p0, p3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -284,7 +260,6 @@
 .method public getOrCreate(ILjava/lang/String;Ljava/lang/String;Ljava/util/function/Function;)Ljava/lang/Object;
     .locals 2
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -295,7 +270,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 106
     invoke-virtual {v0, p3}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
@@ -304,7 +278,6 @@
 
     goto :goto_0
 
-    .line 112
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -316,12 +289,10 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 108
     invoke-interface {p4, v0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p4
 
-    .line 109
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/utils/quota/UptcMap;->add(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object p4
@@ -330,7 +301,6 @@
 .method public final getPackageNameAtIndex(II)Ljava/lang/String;
     .locals 0
 
-    .line 123
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArrayMap;->keyAt(II)Ljava/lang/Object;
@@ -345,7 +315,6 @@
 .method public final getTagAtIndex(III)Ljava/lang/String;
     .locals 0
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
@@ -366,7 +335,6 @@
 .method public final getUserIdAtIndex(I)I
     .locals 0
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArrayMap;->keyAt(I)I
@@ -379,7 +347,6 @@
 .method public packageCountForUser(I)I
     .locals 0
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArrayMap;->numElementsForKey(I)I
@@ -392,7 +359,6 @@
 .method public tagCountForUserAndPackage(ILjava/lang/String;)I
     .locals 0
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -403,7 +369,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 147
     invoke-virtual {p0}, Landroid/util/ArrayMap;->size()I
 
     move-result p0
@@ -420,7 +385,6 @@
 .method public userCount()I
     .locals 0
 
-    .line 136
     iget-object p0, p0, Lcom/android/server/utils/quota/UptcMap;->mData:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0}, Landroid/util/SparseArrayMap;->numMaps()I

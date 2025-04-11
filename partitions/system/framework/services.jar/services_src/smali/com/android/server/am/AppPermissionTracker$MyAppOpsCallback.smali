@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppPermissionTracker;)V
     .locals 0
 
-    .line 393
     iput-object p1, p0, Lcom/android/server/am/AppPermissionTracker$MyAppOpsCallback;->this$0:Lcom/android/server/am/AppPermissionTracker;
 
     invoke-direct {p0}, Lcom/android/internal/app/IAppOpsCallback$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/AppPermissionTracker;Lcom/android/server/am/AppPermissionTracker$MyAppOpsCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/AppPermissionTracker$MyAppOpsCallback;-><init>(Lcom/android/server/am/AppPermissionTracker;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public opChanged(IILjava/lang/String;)V
     .locals 1
 
-    .line 396
     iget-object p0, p0, Lcom/android/server/am/AppPermissionTracker$MyAppOpsCallback;->this$0:Lcom/android/server/am/AppPermissionTracker;
 
     invoke-static {p0}, Lcom/android/server/am/AppPermissionTracker;->-$$Nest$fgetmHandler(Lcom/android/server/am/AppPermissionTracker;)Lcom/android/server/am/AppPermissionTracker$MyHandler;
@@ -46,7 +43,6 @@
 
     move-result-object p0
 
-    .line 397
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

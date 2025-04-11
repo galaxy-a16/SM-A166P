@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/HermesBigdataFunction;)V
     .locals 0
 
-    .line 270
     iput-object p1, p0, Lcom/android/server/HermesBigdataFunction$4;->this$0:Lcom/android/server/HermesBigdataFunction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public accept(Ljava/io/File;)Z
     .locals 0
 
-    .line 273
     invoke-virtual {p1}, Ljava/io/File;->isFile()Z
 
     move-result p0

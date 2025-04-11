@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 4240
     invoke-direct {p0, p1}, Lcom/android/server/policy/SideKeyDoublePress$Behavior;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public doublePressLaunchPolicy(Z)Z
     .locals 0
 
-    .line 4257
     invoke-super {p0, p1}, Lcom/android/server/policy/SideKeyDoublePress$Behavior;->doublePressLaunchPolicy(Z)Z
 
     move-result p0
@@ -38,17 +36,14 @@
 .method public startTargetApp(Landroid/view/KeyEvent;ZZLandroid/content/Intent;Landroid/content/Intent;)V
     .locals 0
 
-    .line 4246
     iget-object p1, p0, Lcom/android/server/policy/SideKeyDoublePress$Behavior;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-static {p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->-$$Nest$mlaunchSecureFolder(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
-    .line 4249
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz p1, :cond_0
 
-    .line 4250
     iget-object p0, p0, Lcom/android/server/policy/SideKeyDoublePress$Behavior;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     const-string p1, "HWB1002"

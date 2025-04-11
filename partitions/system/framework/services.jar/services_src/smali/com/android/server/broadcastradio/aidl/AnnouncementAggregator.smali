@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$monListUpdated(Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->onListUpdated()V
 
     return-void
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->DEBUG:Z
 
     return v0
@@ -45,7 +43,6 @@
 
     const/4 v1, 0x3
 
-    .line 43
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -58,10 +55,8 @@
 .method public constructor <init>(Landroid/hardware/radio/IAnnouncementListener;Ljava/lang/Object;)V
     .locals 2
 
-    .line 58
     invoke-direct {p0}, Landroid/hardware/radio/ICloseHandle$Stub;-><init>()V
 
-    .line 47
     new-instance v0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$DeathRecipient;
 
     const/4 v1, 0x0
@@ -70,7 +65,6 @@
 
     iput-object v0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 49
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -79,7 +73,6 @@
 
     const-string/jumbo v1, "listener cannot be null"
 
-    .line 59
     invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-object v1, p1
@@ -90,12 +83,10 @@
 
     const-string/jumbo v1, "lock cannot be null"
 
-    .line 60
     invoke-static {p2, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     iput-object p2, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mLock:Ljava/lang/Object;
 
-    .line 62
     :try_start_0
     invoke-interface {p1}, Landroid/hardware/radio/IAnnouncementListener;->asBinder()Landroid/os/IBinder;
 
@@ -112,7 +103,6 @@
     :catch_0
     move-exception p0
 
-    .line 64
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
 
     :goto_0
@@ -124,7 +114,6 @@
 .method public close()V
     .locals 6
 
-    .line 167
     sget-boolean v0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -133,16 +122,13 @@
 
     const-string v1, "Close watchModule"
 
-    .line 168
     invoke-static {v0, v1}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :cond_0
     iget-object v0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 171
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mIsClosed:Z
 
@@ -152,15 +138,12 @@
 
     const-string v1, "Announcement aggregator has already been closed."
 
-    .line 172
     invoke-static {p0, v1}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     monitor-exit v0
 
     return-void
 
-    .line 176
     :cond_1
     iget-object v1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mListener:Landroid/hardware/radio/IAnnouncementListener;
 
@@ -174,7 +157,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 178
     :goto_0
     iget-object v1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
@@ -184,7 +166,6 @@
 
     if-ge v3, v1, :cond_2
 
-    .line 179
     iget-object v1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -195,7 +176,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 181
     :try_start_1
     invoke-virtual {v1}, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;->close()V
     :try_end_1
@@ -212,7 +192,6 @@
 
     const-string v5, "Failed to close module watcher %s: %s"
 
-    .line 183
     filled-new-array {v1, v2}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -224,7 +203,6 @@
 
     goto :goto_0
 
-    .line 187
     :cond_2
     iget-object v1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
@@ -232,10 +210,8 @@
 
     const/4 v1, 0x1
 
-    .line 189
     iput-boolean v1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mIsClosed:Z
 
-    .line 190
     monitor-exit v0
 
     return-void
@@ -253,7 +229,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 4
 
-    .line 195
     new-instance p1, Landroid/util/IndentingPrintWriter;
 
     invoke-direct {p1, p2}, Landroid/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;)V
@@ -264,13 +239,10 @@
 
     new-array v0, p3, [Ljava/lang/Object;
 
-    .line 196
     invoke-virtual {p1, p2, v0}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 198
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 199
     iget-object p2, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
@@ -282,7 +254,6 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
-    .line 200
     iget-boolean v3, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mIsClosed:Z
 
     if-eqz v3, :cond_0
@@ -303,7 +274,6 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 201
     iget-object v2, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -318,10 +288,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 203
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 204
     :goto_1
     iget-object v0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
@@ -331,7 +299,6 @@
 
     if-ge p3, v0, :cond_1
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
     invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -346,16 +313,13 @@
 
     goto :goto_1
 
-    .line 207
     :cond_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 209
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 210
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -363,7 +327,6 @@
     :catchall_0
     move-exception p0
 
-    .line 209
     :try_start_1
     monitor-exit p2
     :try_end_1
@@ -375,7 +338,6 @@
 .method public final onListUpdated()V
     .locals 5
 
-    .line 118
     sget-boolean v0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -384,16 +346,13 @@
 
     const-string/jumbo v1, "onListUpdated()"
 
-    .line 119
     invoke-static {v0, v1}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     :cond_0
     iget-object v0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 122
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mIsClosed:Z
 
@@ -403,15 +362,12 @@
 
     const-string v1, "Announcement aggregator is closed, it shouldn\'t receive callbacks"
 
-    .line 123
     invoke-static {p0, v1}, Lcom/android/server/utils/Slogf;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     monitor-exit v0
 
     return-void
 
-    .line 126
     :cond_1
     new-instance v1, Ljava/util/ArrayList;
 
@@ -427,7 +383,6 @@
 
     move v3, v2
 
-    .line 127
     :goto_0
     iget-object v4, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
@@ -437,7 +392,6 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 128
     iget-object v4, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -456,7 +410,6 @@
 
     goto :goto_0
 
-    .line 131
     :cond_2
     :try_start_1
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mListener:Landroid/hardware/radio/IAnnouncementListener;
@@ -478,10 +431,8 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 133
     invoke-static {v1, p0, v3, v2}, Lcom/android/server/utils/Slogf;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 135
     :goto_1
     monitor-exit v0
 
@@ -500,7 +451,6 @@
 .method public watchModule(Lcom/android/server/broadcastradio/aidl/RadioModule;[I)V
     .locals 3
 
-    .line 142
     sget-boolean v0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -509,7 +459,6 @@
 
     const-string v1, "Watch module for %s with enabled types %s"
 
-    .line 144
     invoke-static {p2}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v2
@@ -518,22 +467,18 @@
 
     move-result-object v2
 
-    .line 143
     invoke-static {v0, v1, v2}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 146
     :cond_0
     iget-object v0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 147
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mIsClosed:Z
 
     if-nez v1, :cond_1
 
-    .line 152
     new-instance v1, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;
 
     const/4 v2, 0x0
@@ -542,7 +487,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 155
     :try_start_1
     invoke-virtual {p1, v1, p2}, Lcom/android/server/broadcastradio/aidl/RadioModule;->addAnnouncementListener(Landroid/hardware/radio/IAnnouncementListener;[I)Landroid/hardware/radio/ICloseHandle;
 
@@ -551,16 +495,13 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 160
     :try_start_2
     invoke-virtual {v1, p1}, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;->setCloseHandle(Landroid/hardware/radio/ICloseHandle;)V
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->mModuleWatchers:Ljava/util/List;
 
     invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 162
     monitor-exit v0
 
     return-void
@@ -576,15 +517,12 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 157
     invoke-static {p1, p0, p2, v1}, Lcom/android/server/utils/Slogf;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 158
     monitor-exit v0
 
     return-void
 
-    .line 148
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -597,7 +535,6 @@
     :catchall_0
     move-exception p0
 
-    .line 162
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

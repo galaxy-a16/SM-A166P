@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/enterprise/adapterlayer/LockPatternUtilsAdapter;->mContext:Landroid/content/Context;
 
-    .line 47
     new-instance p1, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v0, p0, Lcom/android/server/enterprise/adapterlayer/LockPatternUtilsAdapter;->mContext:Landroid/content/Context;
@@ -36,7 +33,6 @@
 .method public getActivePasswordQuality(I)I
     .locals 0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/enterprise/adapterlayer/LockPatternUtilsAdapter;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternUtils;->getActivePasswordQuality(I)I

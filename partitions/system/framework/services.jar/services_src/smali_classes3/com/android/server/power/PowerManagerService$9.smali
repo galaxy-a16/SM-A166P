@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;)V
     .locals 0
 
-    .line 7929
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$CoverStateListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCoverAttachStateChanged(Z)V
     .locals 3
 
-    .line 7936
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmFeatureCoverSysfs(Lcom/android/server/power/PowerManagerService;)Z
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 7939
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -51,7 +48,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 7941
     iget-object v2, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-virtual {v1}, Lcom/samsung/android/cover/CoverState;->getType()I
@@ -62,7 +58,6 @@
 
     goto :goto_0
 
-    .line 7944
     :cond_0
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -70,7 +65,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fputmCoverType(Lcom/android/server/power/PowerManagerService;I)V
 
-    .line 7946
     :cond_1
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -108,21 +102,17 @@
     :catch_0
     const-string/jumbo p1, "onCoverAttachStateChanged: mCoverManager returns NULL."
 
-    .line 7948
     invoke-static {v0, p1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7951
     :goto_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 7952
     iget-object p1, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p1, v0, v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fputmlastSetCoverTypeTime(Lcom/android/server/power/PowerManagerService;J)V
 
-    .line 7953
     iget-object p1, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -154,6 +144,5 @@
 .method public onCoverSwitchStateChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method

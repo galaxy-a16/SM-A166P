@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/SystemServer;I)V
     .locals 0
 
-    .line 1343
     iput-object p1, p0, Lcom/android/server/SystemServer$1;->this$0:Lcom/android/server/SystemServer;
 
     iput p2, p0, Lcom/android/server/SystemServer$1;->val$myTid:I
@@ -28,7 +27,6 @@
 .method public run()V
     .locals 1
 
-    .line 1346
     iget p0, p0, Lcom/android/server/SystemServer$1;->val$myTid:I
 
     const/16 v0, 0xa

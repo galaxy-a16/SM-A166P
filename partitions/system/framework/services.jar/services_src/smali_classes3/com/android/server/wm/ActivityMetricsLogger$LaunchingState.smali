@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAssociatedTransitionInfo(Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;)Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mAssociatedTransitionInfo:Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     return-object p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fputmAssociatedTransitionInfo(Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mAssociatedTransitionInfo:Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     return-void
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsTraceSeqId()I
     .locals 1
 
-    .line 0
     sget v0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->sTraceSeqId:I
 
     return v0
@@ -48,17 +45,14 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 307
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 294
     invoke-static {}, Landroid/os/SystemClock;->uptimeNanos()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mStartUptimeNs:J
 
-    .line 299
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
@@ -67,7 +61,6 @@
 
     const-wide/16 v0, 0x40
 
-    .line 308
     invoke-static {v0, v1}, Landroid/os/Trace;->isTagEnabled(J)Z
 
     move-result v2
@@ -76,7 +69,6 @@
 
     return-void
 
-    .line 312
     :cond_0
     sget v2, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->sTraceSeqId:I
 
@@ -84,7 +76,6 @@
 
     sput v2, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->sTraceSeqId:I
 
-    .line 313
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +96,6 @@
 
     const/4 p0, 0x0
 
-    .line 314
     invoke-static {v0, v1, v2, p0}, Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V
 
     return-void
@@ -116,7 +106,6 @@
 .method public allDrawn()Z
     .locals 0
 
-    .line 353
     iget-object p0, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mAssociatedTransitionInfo:Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     if-eqz p0, :cond_0
@@ -139,7 +128,6 @@
 .method public contains(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 361
     iget-object p0, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mAssociatedTransitionInfo:Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     if-eqz p0, :cond_0
@@ -164,7 +152,6 @@
 .method public hasActiveTransitionInfo()Z
     .locals 0
 
-    .line 357
     iget-object p0, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mAssociatedTransitionInfo:Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     if-eqz p0, :cond_0
@@ -183,7 +170,6 @@
 .method public stopTrace(ZLcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;)V
     .locals 4
 
-    .line 318
     iget-object v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mTraceName:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -193,7 +179,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 319
     iget-object v1, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mAssociatedTransitionInfo:Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     if-eq p2, v1, :cond_1
@@ -205,10 +190,8 @@
 
     const-wide/16 v2, 0x40
 
-    .line 325
     invoke-static {v2, v3, v0, v1}, Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V
 
-    .line 327
     iget-object v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mAssociatedTransitionInfo:Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     if-nez v0, :cond_2
@@ -224,7 +207,6 @@
 
     goto :goto_0
 
-    .line 333
     :cond_3
     iget-boolean p1, v0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mProcessSwitch:Z
 
@@ -234,7 +216,6 @@
 
     goto :goto_0
 
-    .line 336
     :cond_4
     iget p1, p2, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mTransitionType:I
 
@@ -258,7 +239,6 @@
     :cond_6
     const-string p1, ":completed-cold:"
 
-    .line 344
     :goto_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -278,7 +258,6 @@
 
     move-result-object p1
 
-    .line 347
     :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -298,7 +277,6 @@
 
     const/4 p1, 0x0
 
-    .line 348
     iput-object p1, p0, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mTraceName:Ljava/lang/String;
 
     return-void

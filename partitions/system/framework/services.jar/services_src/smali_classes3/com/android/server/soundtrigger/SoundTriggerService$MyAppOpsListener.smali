@@ -18,12 +18,10 @@
 .method public constructor <init>(Lcom/android/server/soundtrigger/SoundTriggerService;Landroid/media/permission/Identity;Ljava/util/function/Consumer;)V
     .locals 2
 
-    .line 362
     iput-object p1, p0, Lcom/android/server/soundtrigger/SoundTriggerService$MyAppOpsListener;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 363
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p2
@@ -32,14 +30,12 @@
 
     iput-object p2, p0, Lcom/android/server/soundtrigger/SoundTriggerService$MyAppOpsListener;->mOriginatorIdentity:Landroid/media/permission/Identity;
 
-    .line 364
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p3, Ljava/util/function/Consumer;
 
     iput-object p3, p0, Lcom/android/server/soundtrigger/SoundTriggerService$MyAppOpsListener;->mOnOpModeChanged:Ljava/util/function/Consumer;
 
-    .line 367
     :try_start_0
     invoke-static {p1}, Lcom/android/server/soundtrigger/SoundTriggerService;->-$$Nest$fgetmPackageManager(Lcom/android/server/soundtrigger/SoundTriggerService;)Landroid/content/pm/PackageManager;
 
@@ -49,17 +45,14 @@
 
     const-wide/16 v0, 0x0
 
-    .line 368
     invoke-static {v0, v1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
 
     move-result-object v0
 
-    .line 367
     invoke-virtual {p1, p3, v0}, Landroid/content/pm/PackageManager;->getPackageUid(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)I
 
     move-result p1
 
-    .line 369
     iget p3, p2, Landroid/media/permission/Identity;->uid:I
 
     invoke-static {p1, p3}, Landroid/os/UserHandle;->isSameApp(II)Z
@@ -70,7 +63,6 @@
 
     return-void
 
-    .line 370
     :cond_0
     new-instance p3, Ljava/lang/SecurityException;
 
@@ -110,7 +102,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 375
     :catch_0
     new-instance p1, Ljava/lang/SecurityException;
 
@@ -142,7 +133,6 @@
 .method public forceOpChangeRefresh()V
     .locals 2
 
-    .line 392
     iget-object v0, p0, Lcom/android/server/soundtrigger/SoundTriggerService$MyAppOpsListener;->mOriginatorIdentity:Landroid/media/permission/Identity;
 
     iget-object v0, v0, Landroid/media/permission/Identity;->packageName:Ljava/lang/String;
@@ -159,7 +149,6 @@
 
     const-string p2, "android:record_audio"
 
-    .line 382
     invoke-static {p1, p2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
@@ -168,7 +157,6 @@
 
     return-void
 
-    .line 385
     :cond_0
     iget-object p1, p0, Lcom/android/server/soundtrigger/SoundTriggerService$MyAppOpsListener;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
@@ -186,7 +174,6 @@
 
     move-result p1
 
-    .line 388
     iget-object p0, p0, Lcom/android/server/soundtrigger/SoundTriggerService$MyAppOpsListener;->mOnOpModeChanged:Ljava/util/function/Consumer;
 
     if-nez p1, :cond_1

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/DeviceIdleController;)V
     .locals 0
 
-    .line 770
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$1;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 772
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -99,28 +97,24 @@
     :pswitch_0
     const-string p1, "android.intent.extra.REPLACING"
 
-    .line 784
     invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     if-nez p1, :cond_5
 
-    .line 785
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    .line 787
     invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    .line 788
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$1;->this$0:Lcom/android/server/DeviceIdleController;
 
     const/4 p2, 0x5
@@ -131,7 +125,6 @@
 
     goto :goto_3
 
-    .line 774
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$1;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -142,14 +135,12 @@
     :pswitch_2
     const-string/jumbo p1, "present"
 
-    .line 777
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     const-string/jumbo v0, "plugged"
 
-    .line 778
     invoke-virtual {p2, v0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -163,13 +154,11 @@
     :cond_3
     move p2, v2
 
-    .line 779
     :goto_1
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$1;->this$0:Lcom/android/server/DeviceIdleController;
 
     monitor-enter v0
 
-    .line 780
     :try_start_0
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$1;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -185,7 +174,6 @@
     :goto_2
     invoke-virtual {p0, v1}, Lcom/android/server/DeviceIdleController;->updateChargingLocked(Z)V
 
-    .line 781
     monitor-exit v0
 
     :cond_5

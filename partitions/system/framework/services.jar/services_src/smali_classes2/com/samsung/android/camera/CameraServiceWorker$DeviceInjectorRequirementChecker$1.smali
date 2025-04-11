@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$T7t4faSAitzfDykm9AIuhKCpS5Q(Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;->lambda$onSemCameraDeviceRawStatus$0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;)V
     .locals 0
 
-    .line 817
     iput-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;->this$1:Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
@@ -33,7 +31,6 @@
 .method private synthetic lambda$onSemCameraDeviceRawStatus$0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 826
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;->this$1:Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;
 
     invoke-static {p0, p1}, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;->-$$Nest$misExternalCamera(Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;Ljava/lang/String;)Z
@@ -52,7 +49,6 @@
 .method public onSemCameraDeviceRawStatus(Ljava/lang/String;I)V
     .locals 4
 
-    .line 821
     iget-object v0, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;->this$1:Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;
 
     monitor-enter v0
@@ -60,7 +56,6 @@
     :try_start_0
     const-string v1, "CameraService_worker"
 
-    .line 822
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +80,6 @@
 
     if-nez p2, :cond_0
 
-    .line 824
     iget-object p2, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;->this$1:Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;
 
     invoke-static {p2}, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;->-$$Nest$fgetmExternalDeviceMap(Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;)Landroid/util/ArrayMap;
@@ -101,7 +95,6 @@
 
     if-ne p2, v1, :cond_1
 
-    .line 826
     iget-object p2, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;->this$1:Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;
 
     invoke-static {p2}, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;->-$$Nest$fgetmExternalDeviceMap(Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;)Landroid/util/ArrayMap;
@@ -114,7 +107,6 @@
 
     invoke-virtual {p2, p1, v1}, Landroid/util/ArrayMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
 
-    .line 829
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;->this$1:Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;
@@ -131,7 +123,6 @@
 
     if-eq p1, p2, :cond_2
 
-    .line 830
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker$1;->this$1:Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;
 
     invoke-static {p0}, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;->-$$Nest$misExternalCameraPresent(Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;)Z
@@ -140,7 +131,6 @@
 
     invoke-static {p0, p1}, Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;->-$$Nest$mupdateExternalCameraPresentAndNotify(Lcom/samsung/android/camera/CameraServiceWorker$DeviceInjectorRequirementChecker;Z)V
 
-    .line 832
     :cond_2
     monitor-exit v0
 

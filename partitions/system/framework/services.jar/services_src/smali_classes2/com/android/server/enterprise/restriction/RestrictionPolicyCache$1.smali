@@ -7,12 +7,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 107
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     const-wide/16 v0, 0x1
 
-    .line 109
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -23,7 +21,6 @@
 
     const-wide/16 v0, 0x2
 
-    .line 110
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -34,7 +31,6 @@
 
     const-wide/16 v0, 0x4
 
-    .line 111
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -45,7 +41,6 @@
 
     const-wide/16 v0, 0x8
 
-    .line 112
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -56,7 +51,6 @@
 
     const-wide/16 v0, 0x10
 
-    .line 113
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -67,7 +61,6 @@
 
     const-wide/16 v0, 0x20
 
-    .line 114
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -78,7 +71,6 @@
 
     const-wide/16 v0, 0x40
 
-    .line 115
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -89,7 +81,6 @@
 
     const-wide/16 v0, 0x80
 
-    .line 116
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -100,7 +91,6 @@
 
     const-wide/16 v0, 0x100
 
-    .line 117
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -111,7 +101,6 @@
 
     const-wide/16 v0, 0x200
 
-    .line 118
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -122,7 +111,6 @@
 
     const-wide/16 v0, 0x400
 
-    .line 119
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -133,7 +121,6 @@
 
     const-wide/16 v0, 0x800
 
-    .line 120
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -144,7 +131,6 @@
 
     const-wide/16 v0, 0x1000
 
-    .line 121
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -155,7 +141,6 @@
 
     const-wide/16 v0, 0x2000
 
-    .line 122
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -166,7 +151,6 @@
 
     const-wide/16 v0, 0x4000
 
-    .line 123
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -177,7 +161,6 @@
 
     const-wide/32 v0, 0x8000
 
-    .line 124
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -188,7 +171,6 @@
 
     const-wide/32 v0, 0x10000
 
-    .line 125
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -199,7 +181,6 @@
 
     const-wide/32 v0, 0x20000
 
-    .line 126
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -210,7 +191,6 @@
 
     const-wide/32 v0, 0x40000
 
-    .line 127
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -221,7 +201,6 @@
 
     const-wide/32 v0, 0x80000
 
-    .line 128
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -232,7 +211,6 @@
 
     const-wide/32 v0, 0x100000
 
-    .line 129
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -243,7 +221,6 @@
 
     const-wide/32 v0, 0x200000
 
-    .line 130
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -254,7 +231,6 @@
 
     const-wide/32 v0, 0x400000
 
-    .line 131
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -265,7 +241,6 @@
 
     const-wide/32 v0, 0x800000
 
-    .line 132
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -276,7 +251,6 @@
 
     const-wide/32 v0, 0x1000000
 
-    .line 133
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -287,7 +261,6 @@
 
     const-wide/32 v0, 0x2000000
 
-    .line 134
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -298,7 +271,6 @@
 
     const-wide/32 v0, 0x4000000
 
-    .line 135
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -309,7 +281,6 @@
 
     const-wide/32 v0, 0x8000000
 
-    .line 136
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -320,7 +291,6 @@
 
     const-wide/32 v0, 0x10000000
 
-    .line 137
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -331,7 +301,6 @@
 
     const-wide/32 v0, 0x20000000
 
-    .line 138
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -342,7 +311,6 @@
 
     const-wide/32 v0, 0x40000000
 
-    .line 139
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -353,7 +321,6 @@
 
     const-wide v0, 0x80000000L
 
-    .line 140
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -364,7 +331,6 @@
 
     const-wide v0, 0x100000000L
 
-    .line 141
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -375,7 +341,6 @@
 
     const-wide v0, 0x200000000L
 
-    .line 142
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -386,7 +351,6 @@
 
     const-wide v0, 0x400000000L
 
-    .line 143
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -397,7 +361,6 @@
 
     const-wide v0, 0x800000000L
 
-    .line 144
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -408,7 +371,6 @@
 
     const-wide v0, 0x1000000000L
 
-    .line 145
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -419,7 +381,6 @@
 
     const-wide v0, 0x2000000000L
 
-    .line 146
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -430,7 +391,6 @@
 
     const-wide v0, 0x4000000000L
 
-    .line 147
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -441,7 +401,6 @@
 
     const-wide v0, 0x8000000000L
 
-    .line 148
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -452,7 +411,6 @@
 
     const-wide v0, 0x10000000000L
 
-    .line 149
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -463,7 +421,6 @@
 
     const-wide v0, 0x20000000000L
 
-    .line 150
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -474,7 +431,6 @@
 
     const-wide v0, 0x40000000000L
 
-    .line 151
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -485,7 +441,6 @@
 
     const-wide v0, 0x80000000000L
 
-    .line 152
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -496,7 +451,6 @@
 
     const-wide v0, 0x100000000000L
 
-    .line 153
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -507,7 +461,6 @@
 
     const-wide v0, 0x200000000000L
 
-    .line 154
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -518,7 +471,6 @@
 
     const-wide v0, 0x400000000000L
 
-    .line 155
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -529,7 +481,6 @@
 
     const-wide v0, 0x800000000000L
 
-    .line 156
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -540,7 +491,6 @@
 
     const-wide/high16 v0, 0x1000000000000L
 
-    .line 157
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -551,7 +501,6 @@
 
     const-wide/high16 v0, 0x2000000000000L
 
-    .line 158
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -562,7 +511,6 @@
 
     const-wide/high16 v0, 0x4000000000000L
 
-    .line 159
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -573,7 +521,6 @@
 
     const-wide/high16 v0, 0x8000000000000L
 
-    .line 160
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -584,7 +531,6 @@
 
     const-wide/high16 v0, 0x10000000000000L
 
-    .line 161
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -595,7 +541,6 @@
 
     const-wide/high16 v0, 0x20000000000000L
 
-    .line 162
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -606,7 +551,6 @@
 
     const-wide/high16 v0, 0x40000000000000L
 
-    .line 163
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -617,7 +561,6 @@
 
     const-wide/high16 v0, 0x80000000000000L
 
-    .line 164
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -628,7 +571,6 @@
 
     const-wide/high16 v0, 0x100000000000000L
 
-    .line 165
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -639,7 +581,6 @@
 
     const-wide/high16 v0, 0x200000000000000L
 
-    .line 166
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -650,7 +591,6 @@
 
     const-wide/high16 v0, 0x400000000000000L
 
-    .line 167
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -661,7 +601,6 @@
 
     const-wide/high16 v0, 0x800000000000000L
 
-    .line 168
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -672,7 +611,6 @@
 
     const-wide/high16 v0, 0x1000000000000000L
 
-    .line 169
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -683,7 +621,6 @@
 
     const-wide/high16 v0, 0x2000000000000000L
 
-    .line 170
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -694,7 +631,6 @@
 
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
-    .line 172
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -705,7 +641,6 @@
 
     const-wide/high16 v0, -0x8000000000000000L
 
-    .line 174
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0

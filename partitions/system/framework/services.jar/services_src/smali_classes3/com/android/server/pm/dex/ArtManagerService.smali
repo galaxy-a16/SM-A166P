@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$dmR_bGEH0KrwULZ-7hRCD3pHSTU(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/dex/ArtManagerService;->lambda$postError$0(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;ILjava/lang/String;)V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$rR3slZ2Zt0FPd_3voirSNF0VvCU(Landroid/os/ParcelFileDescriptor;Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/dex/ArtManagerService;->lambda$postSuccess$1(Landroid/os/ParcelFileDescriptor;Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;)V
 
     return-void
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/pm/dex/ArtManagerService;->DEBUG:Z
 
     return v0
@@ -48,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$smgetCompilationFilterTronValue(Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/pm/dex/ArtManagerService;->getCompilationFilterTronValue(Ljava/lang/String;)I
 
     move-result p0
@@ -59,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$smgetCompilationReasonTronValue(Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/pm/dex/ArtManagerService;->getCompilationReasonTronValue(Ljava/lang/String;)I
 
     move-result p0
@@ -74,14 +69,12 @@
 
     const/4 v1, 0x3
 
-    .line 93
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/pm/dex/ArtManagerService;->DEBUG:Z
 
-    .line 108
     invoke-static {}, Lcom/android/server/pm/dex/ArtManagerService;->verifyTronLoggingConstants()V
 
     return-void
@@ -90,16 +83,12 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/Installer;Ljava/lang/Object;)V
     .locals 0
 
-    .line 112
     invoke-direct {p0}, Landroid/content/pm/dex/IArtManager$Stub;-><init>()V
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/pm/dex/ArtManagerService;->mContext:Landroid/content/Context;
 
-    .line 114
     iput-object p2, p0, Lcom/android/server/pm/dex/ArtManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
-    .line 115
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
@@ -114,7 +103,6 @@
 
     iput-object p1, p0, Lcom/android/server/pm/dex/ArtManagerService;->mHandler:Landroid/os/Handler;
 
-    .line 117
     const-class p1, Landroid/content/pm/dex/ArtManagerInternal;
 
     new-instance p2, Lcom/android/server/pm/dex/ArtManagerService$ArtManagerInternalImpl;
@@ -133,7 +121,6 @@
 
     move-object/from16 v0, p0
 
-    .line 727
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->hashCode()I
@@ -788,7 +775,6 @@
 
     move-object/from16 v0, p0
 
-    .line 680
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->hashCode()I
@@ -1370,7 +1356,6 @@
 .method public static synthetic lambda$postError$0(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;ILjava/lang/String;)V
     .locals 1
 
-    .line 421
     :try_start_0
     invoke-interface {p0, p1}, Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;->onError(I)V
     :try_end_0
@@ -1382,7 +1367,6 @@
     :catch_0
     move-exception p0
 
-    .line 423
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1410,7 +1394,6 @@
 
     const-string v0, "ArtManagerService"
 
-    .line 438
     :try_start_0
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -1422,12 +1405,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 439
     invoke-interface {p1, p0}, Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;->onSuccess(Landroid/os/ParcelFileDescriptor;)V
 
     goto :goto_0
 
-    .line 441
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1447,14 +1428,12 @@
 
     const/4 v1, 0x2
 
-    .line 443
     invoke-interface {p1, v1}, Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;->onError(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 449
     :goto_0
     invoke-static {p0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -1468,7 +1447,6 @@
     :catch_0
     move-exception p1
 
-    .line 446
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1493,11 +1471,9 @@
     :goto_1
     return-void
 
-    .line 449
     :goto_2
     invoke-static {p0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 450
     throw p1
 .end method
 
@@ -1506,7 +1482,6 @@
 
     const/4 v0, 0x0
 
-    .line 766
     :goto_0
     sget-object v1, Lcom/android/server/pm/PackageManagerServiceCompilerMapping;->REASON_STRINGS:[Ljava/lang/String;
 
@@ -1514,10 +1489,8 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 767
     aget-object v1, v1, v0
 
-    .line 768
     invoke-static {v1}, Lcom/android/server/pm/dex/ArtManagerService;->getCompilationReasonTronValue(Ljava/lang/String;)I
 
     move-result v2
@@ -1532,7 +1505,6 @@
 
     goto :goto_0
 
-    .line 771
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1563,7 +1535,6 @@
 .method public final checkAndroidPermissions(ILjava/lang/String;)Z
     .locals 3
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.READ_RUNTIME_PROFILES"
@@ -1572,7 +1543,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/app/AppOpsManager;
@@ -1585,7 +1555,6 @@
 
     const/16 v1, 0x2b
 
-    .line 136
     invoke-virtual {v0, v1, p1, p2}, Landroid/app/AppOpsManager;->noteOp(IILjava/lang/String;)I
 
     move-result p1
@@ -1602,7 +1571,6 @@
 
     return p0
 
-    .line 140
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mContext:Landroid/content/Context;
 
@@ -1625,7 +1593,6 @@
 
     return v1
 
-    .line 163
     :cond_0
     sget-boolean p3, Lcom/android/internal/os/RoSystemProperties;->DEBUGGABLE:Z
 
@@ -1640,7 +1607,6 @@
 
     return v1
 
-    .line 172
     :cond_2
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/dex/ArtManagerService;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -1665,7 +1631,6 @@
 
     return v1
 
-    .line 181
     :cond_3
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1686,13 +1651,11 @@
 .method public clearAppProfiles(Lcom/android/server/pm/pkg/AndroidPackage;)V
     .locals 5
 
-    .line 513
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/dex/ArtManagerService;->getPackageProfileNames(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/util/ArrayMap;
 
     move-result-object v0
 
-    .line 514
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
 
     move-result v1
@@ -1702,14 +1665,12 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 515
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 516
     iget-object v3, p0, Lcom/android/server/pm/dex/ArtManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
@@ -1727,7 +1688,6 @@
     :catch_0
     move-exception p0
 
-    .line 519
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1747,13 +1707,11 @@
 
     const/4 v1, 0x0
 
-    .line 547
     :try_start_0
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 548
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplits()Ljava/util/List;
 
     move-result-object v3
@@ -1768,7 +1726,6 @@
 
     move-result-object v3
 
-    .line 550
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v4
@@ -1777,7 +1734,6 @@
 
     move-result-object v4
 
-    .line 551
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1796,7 +1752,6 @@
 
     move-result-object v4
 
-    .line 552
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->isPrivileged()Z
 
     move-result p1
@@ -1809,7 +1764,6 @@
 
     if-nez p1, :cond_1
 
-    .line 553
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->isDefaultToDeviceProtectedStorage()Z
 
     move-result p1
@@ -1818,7 +1772,6 @@
 
     goto :goto_0
 
-    .line 561
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1848,30 +1801,25 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 563
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 565
     :try_start_1
     iget-object p0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
-    .line 566
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
     move-result p1
 
-    .line 565
     invoke-virtual {p0, v3, v2, v4, p1}, Lcom/android/server/pm/Installer;->compileLayouts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 568
     :try_start_2
     invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1882,7 +1830,6 @@
 
     invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 569
     throw p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -1896,7 +1843,6 @@
 
     const-string p1, "Failed to compile layouts"
 
-    .line 572
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v1
@@ -1907,7 +1853,6 @@
 
     const/4 v0, 0x2
 
-    .line 308
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/dex/ArtManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -1917,14 +1862,12 @@
 
     if-nez p3, :cond_0
 
-    .line 309
     invoke-virtual {p0, p5, p1, v0}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
     :try_end_0
     .catch Lcom/android/server/pm/Installer$InstallerException; {:try_start_0 .. :try_end_0} :catch_1
 
     return-void
 
-    .line 318
     :cond_0
     invoke-static {p1, p2}, Landroid/content/pm/dex/ArtManager;->getProfileSnapshotFileForName(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
@@ -1932,7 +1875,6 @@
 
     const/high16 p3, 0x10000000
 
-    .line 322
     :try_start_1
     invoke-static {p2, p3}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
@@ -1940,7 +1882,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 323
     invoke-virtual {p3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p4
@@ -1953,13 +1894,11 @@
 
     goto :goto_0
 
-    .line 326
     :cond_1
     invoke-virtual {p0, p1, p3, p5}, Lcom/android/server/pm/dex/ArtManagerService;->postSuccess(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
 
     goto :goto_1
 
-    .line 324
     :cond_2
     :goto_0
     invoke-virtual {p0, p5, p1, v0}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
@@ -1971,7 +1910,6 @@
     :catch_0
     move-exception p3
 
-    .line 329
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1996,13 +1934,11 @@
 
     invoke-static {p4, p2, p3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 331
     invoke-virtual {p0, p5, p1, v0}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
 
     :goto_1
     return-void
 
-    .line 313
     :catch_1
     invoke-virtual {p0, p5, p1, v0}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
 
@@ -2012,7 +1948,6 @@
 .method public final destroyProfileSnapshot(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    .line 337
     sget-boolean v0, Lcom/android/server/pm/dex/ArtManagerService;->DEBUG:Z
 
     const-string v1, ":"
@@ -2021,7 +1956,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 338
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2042,7 +1976,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mInstaller:Lcom/android/server/pm/Installer;
@@ -2056,7 +1989,6 @@
     :catch_0
     move-exception p0
 
-    .line 344
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2084,7 +2016,6 @@
 .method public dumpProfiles(Lcom/android/server/pm/pkg/AndroidPackage;Z)V
     .locals 9
 
-    .line 528
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
     move-result v0
@@ -2093,13 +2024,11 @@
 
     move-result v0
 
-    .line 530
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/dex/ArtManagerService;->getPackageProfileNames(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/util/ArrayMap;
 
     move-result-object v7
 
-    .line 531
     invoke-virtual {v7}, Landroid/util/ArrayMap;->size()I
 
     move-result v1
@@ -2111,7 +2040,6 @@
     :goto_0
     if-ltz v8, :cond_0
 
-    .line 532
     invoke-virtual {v7, v8}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2120,7 +2048,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 533
     invoke-virtual {v7, v8}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2129,7 +2056,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 534
     iget-object v1, p0, Lcom/android/server/pm/dex/ArtManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
@@ -2155,7 +2081,6 @@
 
     const-string p2, "Failed to dump profiles"
 
-    .line 538
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -2165,26 +2090,22 @@
 .method public final getPackageManager()Landroid/content/pm/IPackageManager;
     .locals 1
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mPackageManager:Landroid/content/pm/IPackageManager;
 
     if-nez v0, :cond_0
 
     const-string/jumbo v0, "package"
 
-    .line 124
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 123
     invoke-static {v0}, Landroid/content/pm/IPackageManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mPackageManager:Landroid/content/pm/IPackageManager;
 
-    .line 126
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -2194,19 +2115,16 @@
 .method public final getPackageProfileNames(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/util/ArrayMap;
     .locals 5
 
-    .line 582
     new-instance p0, Landroid/util/ArrayMap;
 
     invoke-direct {p0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 583
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->isDeclaredHavingCode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 584
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getBaseApkPath()Ljava/lang/String;
 
     move-result-object v0
@@ -2219,23 +2137,19 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 587
     :cond_0
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplitCodePaths()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 588
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplitFlags()[I
 
     move-result-object v1
 
-    .line 589
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplitNames()[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 590
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
 
     move-result v2
@@ -2244,20 +2158,17 @@
 
     const/4 v2, 0x0
 
-    .line 591
     :goto_0
     array-length v3, v0
 
     if-ge v2, v3, :cond_2
 
-    .line 592
     aget v3, v1, v2
 
     and-int/lit8 v3, v3, 0x4
 
     if-eqz v3, :cond_1
 
-    .line 593
     aget-object v3, v0, v2
 
     aget-object v4, p1, v2
@@ -2280,7 +2191,6 @@
 .method public isRuntimeProfilingEnabled(ILjava/lang/String;)Z
     .locals 3
 
-    .line 351
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -2291,7 +2201,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 352
     invoke-virtual {p0, v0, p2}, Lcom/android/server/pm/dex/ArtManagerService;->checkAndroidPermissions(ILjava/lang/String;)Z
 
     move-result p0
@@ -2309,19 +2218,16 @@
 
     const-string p1, "dalvik.vm.profilebootclasspath"
 
-    .line 363
     invoke-static {p1, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
     const-string/jumbo p2, "persist.device_config.runtime_native_boot.profilebootclasspath"
 
-    .line 361
     invoke-static {p2, p1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 364
     sget-boolean p2, Landroid/os/Build;->IS_USERDEBUG:Z
 
     if-nez p2, :cond_1
@@ -2338,7 +2244,6 @@
     :cond_2
     return v2
 
-    .line 366
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2367,12 +2272,10 @@
 .method public final postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
     .locals 2
 
-    .line 415
     sget-boolean v0, Lcom/android/server/pm/dex/ArtManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 416
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2397,7 +2300,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mHandler:Landroid/os/Handler;
 
@@ -2413,12 +2315,10 @@
 .method public final postSuccess(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
     .locals 2
 
-    .line 430
     sget-boolean v0, Lcom/android/server/pm/dex/ArtManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 431
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2437,7 +2337,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/dex/ArtManagerService;->mHandler:Landroid/os/Handler;
 
@@ -2453,7 +2352,6 @@
 .method public prepareAppProfiles(Lcom/android/server/pm/pkg/AndroidPackage;IZ)V
     .locals 12
 
-    .line 462
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
     move-result v0
@@ -2466,7 +2364,6 @@
 
     const-string p0, "ArtManagerService"
 
-    .line 464
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2490,7 +2387,6 @@
 
     const-string p0, "ArtManagerService"
 
-    .line 468
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2509,14 +2405,12 @@
 
     return-void
 
-    .line 472
     :cond_1
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/dex/ArtManagerService;->getPackageProfileNames(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/util/ArrayMap;
 
     move-result-object v8
 
-    .line 473
     invoke-virtual {v8}, Landroid/util/ArrayMap;->size()I
 
     move-result v1
@@ -2528,7 +2422,6 @@
     :goto_0
     if-ltz v9, :cond_5
 
-    .line 474
     invoke-virtual {v8, v9}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2537,7 +2430,6 @@
 
     check-cast v10, Ljava/lang/String;
 
-    .line 475
     invoke-virtual {v8, v9}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2550,7 +2442,6 @@
 
     if-eqz p3, :cond_3
 
-    .line 481
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2563,7 +2454,6 @@
 
     goto :goto_1
 
-    .line 482
     :cond_2
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -2573,14 +2463,12 @@
     :goto_1
     move-object v7, v1
 
-    .line 484
     iget-object v11, p0, Lcom/android/server/pm/dex/ArtManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
     monitor-enter v11
     :try_end_0
     .catch Lcom/android/server/pm/Installer$InstallerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 485
     :try_start_1
     iget-object v1, p0, Lcom/android/server/pm/dex/ArtManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -2602,7 +2490,6 @@
 
     const-string v1, "ArtManagerService"
 
-    .line 488
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2611,7 +2498,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 489
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -2628,10 +2514,8 @@
 
     move-result-object v2
 
-    .line 488
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     :cond_4
     monitor-exit v11
 
@@ -2656,7 +2540,6 @@
 
     const-string p2, "ArtManagerService"
 
-    .line 494
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2686,13 +2569,11 @@
 
     const/4 v0, 0x0
 
-    .line 503
     :goto_0
     array-length v1, p2
 
     if-ge v0, v1, :cond_0
 
-    .line 504
     aget v1, p2, v0
 
     invoke-virtual {p0, p1, v1, p3}, Lcom/android/server/pm/dex/ArtManagerService;->prepareAppProfiles(Lcom/android/server/pm/pkg/AndroidPackage;IZ)V
@@ -2712,7 +2593,6 @@
 
     const/4 v1, 0x0
 
-    .line 235
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/dex/ArtManagerService;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -2734,12 +2614,10 @@
     :goto_0
     if-nez v2, :cond_0
 
-    .line 240
     invoke-virtual {p0, p3, p1, v0}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
 
     return-void
 
-    .line 244
     :cond_0
     iget-object v3, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -2751,7 +2629,6 @@
 
     move-result v3
 
-    .line 246
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v4}, Landroid/content/pm/ApplicationInfo;->getSplitCodePaths()[Ljava/lang/String;
@@ -2764,7 +2641,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 248
     array-length v6, v4
 
     sub-int/2addr v6, v5
@@ -2772,7 +2648,6 @@
     :goto_1
     if-ltz v6, :cond_2
 
-    .line 249
     aget-object v7, v4, v6
 
     invoke-virtual {v7, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2781,7 +2656,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 251
     iget-object v1, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->splitNames:[Ljava/lang/String;
@@ -2801,12 +2675,10 @@
     :goto_2
     if-nez v3, :cond_3
 
-    .line 257
     invoke-virtual {p0, p3, p1, v5}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
 
     return-void
 
-    .line 262
     :cond_3
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->useArtService()Z
 
@@ -2816,13 +2688,11 @@
 
     if-eqz v3, :cond_6
 
-    .line 266
     :try_start_1
     invoke-static {}, Lcom/android/server/pm/PackageManagerServiceUtils;->getPackageManagerLocal()Lcom/android/server/pm/PackageManagerLocal;
 
     move-result-object p2
 
-    .line 267
     invoke-interface {p2}, Lcom/android/server/pm/PackageManagerLocal;->withFilteredSnapshot()Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;
 
     move-result-object p2
@@ -2831,7 +2701,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Lcom/android/server/art/ArtManagerLocal$SnapshotProfileException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 268
     :try_start_2
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->getArtManagerLocal()Lcom/android/server/art/ArtManagerLocal;
 
@@ -2845,7 +2714,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 270
     :try_start_3
     invoke-interface {p2}, Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;->close()V
     :try_end_3
@@ -2853,7 +2721,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Lcom/android/server/art/ArtManagerLocal$SnapshotProfileException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 283
     :cond_4
     invoke-virtual {p0, p1, v1, p3}, Lcom/android/server/pm/dex/ArtManagerService;->postSuccess(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
 
@@ -2864,7 +2731,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 265
     :try_start_4
     invoke-interface {p2}, Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;->close()V
     :try_end_4
@@ -2886,19 +2752,16 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_5 .. :try_end_5} :catch_1
     .catch Lcom/android/server/art/ArtManagerLocal$SnapshotProfileException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 279
     :catch_1
     invoke-virtual {p0, p3, p1, v4}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
 
     return-void
 
-    .line 276
     :catch_2
     invoke-virtual {p0, p3, p1, v0}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
 
     return-void
 
-    .line 285
     :cond_6
     iget-object v0, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -2910,10 +2773,8 @@
 
     if-gez v9, :cond_7
 
-    .line 287
     invoke-virtual {p0, p3, p1, v4}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
 
-    .line 288
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2934,7 +2795,6 @@
 
     return-void
 
-    .line 293
     :cond_7
     :try_start_6
     invoke-static {v1}, Landroid/content/pm/dex/ArtManager;->getProfileName(Ljava/lang/String;)Ljava/lang/String;
@@ -2951,7 +2811,6 @@
 
     invoke-virtual/range {v5 .. v10}, Lcom/android/server/pm/dex/ArtManagerService;->createProfileSnapshot(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
 
-    .line 296
     invoke-static {v1}, Landroid/content/pm/dex/ArtManager;->getProfileName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -2966,7 +2825,6 @@
     :catch_3
     move-exception p0
 
-    .line 298
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -2977,7 +2835,6 @@
 .method public final snapshotBootImageProfile(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
     .locals 8
 
-    .line 371
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->useArtService()Z
 
     move-result v0
@@ -2986,13 +2843,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 375
     :try_start_0
     invoke-static {}, Lcom/android/server/pm/PackageManagerServiceUtils;->getPackageManagerLocal()Lcom/android/server/pm/PackageManagerLocal;
 
     move-result-object v0
 
-    .line 376
     invoke-interface {v0}, Lcom/android/server/pm/PackageManagerLocal;->withFilteredSnapshot()Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;
 
     move-result-object v0
@@ -3000,7 +2855,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lcom/android/server/art/ArtManagerLocal$SnapshotProfileException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 377
     :try_start_1
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->getArtManagerLocal()Lcom/android/server/art/ArtManagerLocal;
 
@@ -3014,14 +2868,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 378
     :try_start_2
     invoke-interface {v0}, Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;->close()V
     :try_end_2
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Lcom/android/server/art/ArtManagerLocal$SnapshotProfileException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 384
     :cond_0
     invoke-virtual {p0, v1, v2, p1}, Lcom/android/server/pm/dex/ArtManagerService;->postSuccess(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
 
@@ -3032,7 +2884,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 374
     :try_start_3
     invoke-interface {v0}, Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;->close()V
     :try_end_3
@@ -3056,7 +2907,6 @@
     :catch_0
     const/4 v0, 0x2
 
-    .line 379
     invoke-virtual {p0, p1, v1, v0}, Lcom/android/server/pm/dex/ArtManagerService;->postError(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;I)V
 
     return-void
@@ -3064,7 +2914,6 @@
     :cond_2
     const-string v0, "BOOTCLASSPATH"
 
-    .line 389
     invoke-static {v0}, Landroid/system/Os;->getenv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -3081,21 +2930,18 @@
 
     const-string v2, ":"
 
-    .line 388
     invoke-static {v2, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v3, "STANDALONE_SYSTEMSERVER_JARS"
 
-    .line 391
     invoke-static {v3}, Landroid/system/Os;->getenv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_3
 
-    .line 393
     filled-new-array {v0, v3}, [Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -3118,12 +2964,10 @@
 
     move-object v7, p1
 
-    .line 398
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/pm/dex/ArtManagerService;->createProfileSnapshot(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
 
     const-string p1, "android.prof"
 
-    .line 402
     invoke-virtual {p0, v1, p1}, Lcom/android/server/pm/dex/ArtManagerService;->destroyProfileSnapshot(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catch Lcom/android/server/pm/Installer$LegacyDexoptDisabledException; {:try_start_5 .. :try_end_5} :catch_1
@@ -3134,7 +2978,6 @@
     :catch_1
     move-exception p0
 
-    .line 404
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -3145,19 +2988,16 @@
 .method public snapshotRuntimeProfile(ILjava/lang/String;Ljava/lang/String;Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;Ljava/lang/String;)V
     .locals 2
 
-    .line 189
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 190
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/pm/dex/ArtManagerService;->checkShellPermissions(ILjava/lang/String;I)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 191
     invoke-virtual {p0, v0, p5}, Lcom/android/server/pm/dex/ArtManagerService;->checkAndroidPermissions(ILjava/lang/String;)Z
 
     move-result v0
@@ -3166,7 +3006,6 @@
 
     const/4 p0, 0x2
 
-    .line 193
     :try_start_0
     invoke-interface {p4, p0}, Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;->onError(I)V
     :try_end_0
@@ -3175,7 +3014,6 @@
     :catch_0
     return-void
 
-    .line 200
     :cond_0
     invoke-static {p4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3191,13 +3029,10 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 204
     invoke-static {p3}, Lcom/android/internal/util/Preconditions;->checkStringNotEmpty(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 205
     invoke-static {p2}, Lcom/android/internal/util/Preconditions;->checkStringNotEmpty(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 209
     :cond_2
     invoke-virtual {p0, p1, p5}, Lcom/android/server/pm/dex/ArtManagerService;->isRuntimeProfilingEnabled(ILjava/lang/String;)Z
 
@@ -3205,12 +3040,10 @@
 
     if-eqz p5, :cond_5
 
-    .line 213
     sget-boolean p1, Lcom/android/server/pm/dex/ArtManagerService;->DEBUG:Z
 
     if-eqz p1, :cond_3
 
-    .line 214
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3238,19 +3071,16 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 218
     invoke-virtual {p0, p4}, Lcom/android/server/pm/dex/ArtManagerService;->snapshotBootImageProfile(Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
 
     goto :goto_1
 
-    .line 220
     :cond_4
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/pm/dex/ArtManagerService;->snapshotAppProfile(Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/dex/ISnapshotRuntimeProfileCallback;)V
 
     :goto_1
     return-void
 
-    .line 210
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 

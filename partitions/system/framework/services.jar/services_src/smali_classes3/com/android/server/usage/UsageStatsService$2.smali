@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/usage/UsageStatsService;)V
     .locals 0
 
-    .line 322
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$2;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,7 +30,6 @@
 
     return-void
 
-    .line 327
     :cond_0
     new-instance p2, Landroid/content/Intent;
 
@@ -39,20 +37,16 @@
 
     const-string v0, "android.app.usage.extra.OBSERVER_ID"
 
-    .line 328
     invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string p1, "android.app.usage.extra.TIME_LIMIT"
 
-    .line 329
     invoke-virtual {p2, p1, p3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     const-string p1, "android.app.usage.extra.TIME_USED"
 
-    .line 330
     invoke-virtual {p2, p1, p5, p6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 332
     :try_start_0
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$2;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -68,7 +62,6 @@
 
     goto :goto_0
 
-    .line 334
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -99,7 +92,6 @@
 
     return-void
 
-    .line 343
     :cond_0
     new-instance p2, Landroid/content/Intent;
 
@@ -107,15 +99,12 @@
 
     const-string v0, "android.app.usage.extra.OBSERVER_ID"
 
-    .line 344
     invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string p1, "android.app.usage.extra.TIME_USED"
 
-    .line 345
     invoke-virtual {p2, p1, p3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 347
     :try_start_0
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$2;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -131,7 +120,6 @@
 
     goto :goto_0
 
-    .line 349
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 

@@ -20,7 +20,6 @@
 .method public accept(Ljava/io/File;)Z
     .locals 1
 
-    .line 814
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result p0
@@ -31,7 +30,6 @@
 
     return v0
 
-    .line 815
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 

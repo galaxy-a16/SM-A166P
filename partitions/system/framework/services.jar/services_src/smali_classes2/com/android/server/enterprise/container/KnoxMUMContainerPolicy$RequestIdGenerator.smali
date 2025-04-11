@@ -13,15 +13,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 790
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 791
     iput v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->fraction:I
 
-    .line 792
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -36,7 +33,6 @@
 .method public getNextContainerRequestId()I
     .locals 3
 
-    .line 796
     iget v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->fraction:I
 
     const/4 v1, 0x1
@@ -49,10 +45,8 @@
 
     if-le v0, v2, :cond_0
 
-    .line 797
     iput v1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->fraction:I
 
-    .line 799
     :cond_0
     iget v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->fraction:I
 

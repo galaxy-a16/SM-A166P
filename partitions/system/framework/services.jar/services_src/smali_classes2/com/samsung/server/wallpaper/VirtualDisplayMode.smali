@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/hardware/display/DisplayManager;)V
     .locals 0
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lcom/samsung/server/wallpaper/VirtualDisplayMode;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     return-void
@@ -25,7 +23,6 @@
 .method public isVirtualWallpaperDisplay(I)Z
     .locals 4
 
-    .line 38
     iget-object p0, p0, Lcom/samsung/server/wallpaper/VirtualDisplayMode;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     const-string v0, "com.samsung.android.hardware.display.category.VIEW_COVER_DISPLAY"
@@ -34,14 +31,12 @@
 
     move-result-object p0
 
-    .line 39
     array-length v0, p0
 
     const/4 v1, 0x0
 
     if-lez v0, :cond_1
 
-    .line 40
     array-length v0, p0
 
     move v2, v1
@@ -51,7 +46,6 @@
 
     aget-object v3, p0, v2
 
-    .line 41
     invoke-virtual {v3}, Landroid/view/Display;->getDisplayId()I
 
     move-result v3

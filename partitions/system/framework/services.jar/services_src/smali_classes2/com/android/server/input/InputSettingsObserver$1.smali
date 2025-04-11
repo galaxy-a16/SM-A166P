@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/input/InputSettingsObserver;)V
     .locals 0
 
-    .line 154
     iput-object p1, p0, Lcom/android/server/input/InputSettingsObserver$1;->this$0:Lcom/android/server/input/InputSettingsObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 157
     iget-object p0, p0, Lcom/android/server/input/InputSettingsObserver$1;->this$0:Lcom/android/server/input/InputSettingsObserver;
 
     invoke-static {p0}, Lcom/android/server/input/InputSettingsObserver;->-$$Nest$fgetmObservers(Lcom/android/server/input/InputSettingsObserver;)Ljava/util/Map;
@@ -54,7 +52,6 @@
 
     const-string/jumbo p2, "user switched"
 
-    .line 158
     invoke-interface {p1, p2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     goto :goto_0

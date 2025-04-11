@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAdapterStateChangedHandler(Lcom/samsung/accessory/manager/connectivity/BTConnectivity;)Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mAdapterStateChangedHandler:Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;
 
     return-object p0
@@ -34,14 +33,12 @@
 
     const-string v0, "0172c870-6e31-11e4-9803-0800200c9a66"
 
-    .line 27
     invoke-static {v0}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
     sput-object v0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->MY_UUID_INSECURE:Ljava/util/UUID;
 
-    .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,17 +67,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 63
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;-><init>(Landroid/content/Context;)V
 
-    .line 64
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
-    .line 65
     new-instance v0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;
 
     const/4 v1, 0x0
@@ -89,21 +83,18 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mAdapterStateChangedHandler:Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;
 
-    .line 66
     new-instance v0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;
 
     invoke-direct {v0, p0, v1}, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;-><init>(Lcom/samsung/accessory/manager/connectivity/BTConnectivity;Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver-IA;)V
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mBTStateReceiver:Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;
 
-    .line 67
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.bluetooth.adapter.action.STATE_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 68
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mBTStateReceiver:Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;
 
     invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
@@ -116,19 +107,16 @@
 .method public close()V
     .locals 2
 
-    .line 154
     iget-object v0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mBTStateReceiver:Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 155
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     const/4 v0, 0x0
 
-    .line 156
     iput-object v0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mBTStateReceiver:Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;
 
     :cond_0
@@ -138,14 +126,12 @@
 .method public connect(Ljava/lang/String;)Z
     .locals 2
 
-    .line 100
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->TAG:Ljava/lang/String;
 
     const-string v1, "connect"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     iget-object v0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothAdapter;->getRemoteDevice(Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
@@ -154,7 +140,6 @@
 
     const/4 v0, 0x1
 
-    .line 103
     :try_start_0
     sget-object v1, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->MY_UUID_INSECURE:Ljava/util/UUID;
 
@@ -164,15 +149,12 @@
 
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
-    .line 104
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothSocket;->connect()V
 
-    .line 105
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mStateChangedCallback:Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;
 
     if-eqz p0, :cond_0
 
-    .line 106
     invoke-interface {p0, v0}, Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;->onConnectionStateChanged(I)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -185,14 +167,12 @@
 .method public disable()Z
     .locals 2
 
-    .line 95
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->TAG:Ljava/lang/String;
 
     const-string v1, "disable"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothAdapter;->disable()Z
@@ -205,7 +185,6 @@
 .method public disconnect()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -216,7 +195,6 @@
 
     const-string p0, " Current BTConnectivity state:"
 
-    .line 162
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -225,14 +203,12 @@
 .method public enable()Z
     .locals 2
 
-    .line 86
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->TAG:Ljava/lang/String;
 
     const-string v1, "enable"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     iget-object v0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->enable()Z
@@ -243,7 +219,6 @@
 
     const/4 v0, 0x1
 
-    .line 88
     iput-boolean v0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mEnabledInternal:Z
 
     return v0
@@ -257,14 +232,12 @@
 .method public isEnabled()Z
     .locals 3
 
-    .line 120
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
 
     move-result p0
 
-    .line 121
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -289,7 +262,6 @@
 .method public openNode(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -298,7 +270,6 @@
 .method public sendStartAuth(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)[B
     .locals 0
 
-    .line 133
     sget-object p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->NOT_SUPPORT:[B
 
     return-object p0
@@ -307,7 +278,6 @@
 .method public sendStopAuth()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -316,14 +286,12 @@
 .method public sendStopUsbAuth()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public sendSynchronously([BLcom/samsung/accessory/manager/authentication/AuthenticationResult;)[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0

@@ -13,13 +13,10 @@
 .method public constructor <init>(ZI)V
     .locals 0
 
-    .line 293
     invoke-direct {p0}, Lcom/android/server/power/PowerHistorian$Record;-><init>()V
 
-    .line 294
     iput-boolean p1, p0, Lcom/android/server/power/PowerHistorian$DisplayGroupRecord;->mIsAdded:Z
 
-    .line 295
     iput p2, p0, Lcom/android/server/power/PowerHistorian$DisplayGroupRecord;->mGroupId:I
 
     return-void
@@ -40,7 +37,6 @@
 
     if-eq p1, p0, :cond_0
 
-    .line 317
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -66,7 +62,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 300
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +74,6 @@
 
     iget v1, p0, Lcom/android/server/power/PowerHistorian$DisplayGroupRecord;->mGroupId:I
 
-    .line 301
     invoke-virtual {p0, v1}, Lcom/android/server/power/PowerHistorian$DisplayGroupRecord;->getDisplayGroupName(I)Ljava/lang/String;
 
     move-result-object v1
@@ -100,7 +94,6 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 302
     iget-boolean p0, p0, Lcom/android/server/power/PowerHistorian$DisplayGroupRecord;->mIsAdded:Z
 
     if-eqz p0, :cond_0

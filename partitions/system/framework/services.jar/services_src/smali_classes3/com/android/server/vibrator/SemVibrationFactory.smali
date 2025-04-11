@@ -17,7 +17,6 @@
 .method public createSemVibration(Landroid/content/Context;Lcom/android/server/vibrator/SemVibrationBundle;Landroid/os/vibrator/SemHapticSegment;Lcom/android/server/vibrator/VibrationSettings;)Lcom/android/server/vibrator/SemVibration;
     .locals 0
 
-    .line 14
     sget-boolean p0, Lcom/samsung/android/vibrator/VibRune;->SUPPORT_CUSTOM_PATTERN:Z
 
     if-eqz p0, :cond_0
@@ -28,14 +27,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 15
     new-instance p0, Lcom/android/server/vibrator/SemCustomVibration;
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/vibrator/SemCustomVibration;-><init>(Landroid/content/Context;Lcom/android/server/vibrator/SemVibrationBundle;Landroid/os/vibrator/SemHapticSegment;Lcom/android/server/vibrator/VibrationSettings;)V
 
     return-object p0
 
-    .line 18
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/vibrator/SemVibrationBundle;->getIndex()I
 
@@ -49,22 +46,18 @@
 
     const/16 p0, 0x12
 
-    .line 19
     invoke-virtual {p4, p0}, Lcom/android/server/vibrator/VibrationSettings;->getCurrentMagnitude(I)I
 
     move-result p0
 
-    .line 20
     invoke-virtual {p2, p0}, Lcom/android/server/vibrator/SemVibrationBundle;->setMagnitude(I)V
 
-    .line 21
     new-instance p0, Lcom/android/server/vibrator/SemDcVibration;
 
     invoke-direct {p0, p2}, Lcom/android/server/vibrator/SemDcVibration;-><init>(Lcom/android/server/vibrator/SemVibrationBundle;)V
 
     return-object p0
 
-    .line 24
     :cond_1
     invoke-static {}, Lcom/samsung/android/vibrator/VibRune;->SUPPORT_CIRRUS_HAPTIC()Z
 
@@ -80,7 +73,6 @@
 
     goto :goto_0
 
-    .line 28
     :cond_2
     new-instance p0, Lcom/android/server/vibrator/SemPatternVibration;
 
@@ -88,7 +80,6 @@
 
     return-object p0
 
-    .line 25
     :cond_3
     :goto_0
     new-instance p0, Lcom/android/server/vibrator/SemIndexVibration;

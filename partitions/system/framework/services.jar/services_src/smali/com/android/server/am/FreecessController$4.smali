@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/am/FreecessController;Ljava/lang/String;J)V
     .locals 0
 
-    .line 3748
     iput-object p1, p0, Lcom/android/server/am/FreecessController$4;->this$0:Lcom/android/server/am/FreecessController;
 
     iput-wide p3, p0, Lcom/android/server/am/FreecessController$4;->val$startTime:J
@@ -28,7 +27,6 @@
 .method public run()V
     .locals 6
 
-    .line 3752
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/FreecessController$4;->this$0:Lcom/android/server/am/FreecessController;
 
@@ -42,7 +40,6 @@
 
     if-nez v0, :cond_2
 
-    .line 3753
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/android/server/am/FreecessController$4;->this$0:Lcom/android/server/am/FreecessController;
@@ -53,7 +50,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 3754
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -72,7 +68,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 3755
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -92,7 +87,6 @@
     :cond_1
     if-eqz v1, :cond_0
 
-    .line 3758
     iget-object v2, p0, Lcom/android/server/am/FreecessController$4;->this$0:Lcom/android/server/am/FreecessController;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -108,7 +102,6 @@
     :catch_0
     move-exception p0
 
-    .line 3762
     sget-object v0, Lcom/android/server/am/FreecessController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -127,7 +120,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3764
     :cond_2
     :goto_1
     sget-object p0, Lcom/android/server/am/FreecessController;->TAG:Ljava/lang/String;

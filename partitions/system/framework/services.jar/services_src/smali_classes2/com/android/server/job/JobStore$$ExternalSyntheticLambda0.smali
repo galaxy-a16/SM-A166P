@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(JLjava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/android/server/job/JobStore$$ExternalSyntheticLambda0;->f$0:J
@@ -35,7 +34,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 3
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/job/JobStore$$ExternalSyntheticLambda0;->f$0:J
 
     iget-object v2, p0, Lcom/android/server/job/JobStore$$ExternalSyntheticLambda0;->f$1:Ljava/util/ArrayList;

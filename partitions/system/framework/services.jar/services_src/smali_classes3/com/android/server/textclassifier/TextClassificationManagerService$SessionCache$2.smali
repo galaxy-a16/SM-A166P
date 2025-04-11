@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;I)V
     .locals 0
 
-    .line 696
     iput-object p1, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache$2;->this$0:Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;
 
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
@@ -26,7 +25,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 704
     iget-object p0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache$2;->this$0:Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;
 
     invoke-static {p0}, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->-$$Nest$fgetmDeathRecipient(Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;)Landroid/os/IBinder$DeathRecipient;
@@ -44,7 +42,6 @@
 .method public bridge synthetic entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 696
     check-cast p2, Landroid/os/IBinder;
 
     check-cast p3, Lcom/android/server/textclassifier/TextClassificationManagerService$StrippedTextClassificationContext;

@@ -15,14 +15,12 @@
 
     const-string v1, "Instance class was loaded from a different classloader: "
 
-    .line 50
     const-class v2, Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations;
 
     const-string/jumbo v3, "null cannot be cast to non-null type kotlin.internal.PlatformImplementations"
 
     const-string v4, "forName(\"kotlin.internal\u2026entations\").newInstance()"
 
-    .line 52
     :try_start_0
     const-class v5, Lcom/android/server/permission/jarjar/kotlin/internal/jdk8/JDK8PlatformImplementations;
 
@@ -107,7 +105,6 @@
     :try_start_3
     const-string v5, "com.android.server.permission.jarjar.kotlin.internal.JRE8PlatformImplementations"
 
-    .line 55
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
@@ -189,7 +186,6 @@
     :try_end_5
     .catch Ljava/lang/ClassNotFoundException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 58
     :catch_3
     :try_start_6
     const-class v5, Lcom/android/server/permission/jarjar/kotlin/internal/jdk7/JDK7PlatformImplementations;
@@ -275,7 +271,6 @@
     :try_start_9
     const-string v5, "com.android.server.permission.jarjar.kotlin.internal.JRE7PlatformImplementations"
 
-    .line 61
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
@@ -357,13 +352,11 @@
     :try_end_b
     .catch Ljava/lang/ClassNotFoundException; {:try_start_b .. :try_end_b} :catch_7
 
-    .line 64
     :catch_7
     new-instance v5, Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations;
 
     invoke-direct {v5}, Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations;-><init>()V
 
-    .line 50
     :goto_4
     sput-object v5, Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementationsKt;->IMPLEMENTATIONS:Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations;
 

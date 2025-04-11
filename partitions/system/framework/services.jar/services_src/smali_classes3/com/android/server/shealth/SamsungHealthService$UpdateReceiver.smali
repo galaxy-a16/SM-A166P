@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 45
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/shealth/SamsungHealthService$UpdateReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/shealth/SamsungHealthService$UpdateReceiver;-><init>()V
 
     return-void
@@ -31,7 +29,6 @@
 
     return-void
 
-    .line 54
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -44,7 +41,6 @@
     :cond_1
     const-string p2, "android.intent.action.PACKAGE_REPLACED"
 
-    .line 60
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -61,7 +57,6 @@
 
     goto :goto_0
 
-    .line 63
     :cond_2
     invoke-static {p1}, Lcom/android/server/shealth/SamsungHealthService;->-$$Nest$smbackgroundAllowlist(Landroid/content/Context;)V
 

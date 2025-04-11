@@ -31,7 +31,6 @@
 .method public static synthetic $r8$lambda$ZKgJZmdI-gW9SUIJQqdeCWHm13I(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->lambda$onError$1(I)V
 
     return-void
@@ -40,7 +39,6 @@
 .method public static synthetic $r8$lambda$r25XY3GtxyUpTM_QH66OeSnOp1A(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->lambda$binderDied$0()V
 
     return-void
@@ -53,7 +51,6 @@
 
     const/4 v1, 0x0
 
-    .line 41
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;-><init>(Landroid/os/IBinder;Ljava/lang/String;ZLjava/lang/String;)V
 
     return-void
@@ -62,12 +59,10 @@
 .method public constructor <init>(Landroid/os/IBinder;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 7
 
-    .line 47
     invoke-static {}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->get()Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     move-result-object v5
 
-    .line 48
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v0
@@ -86,7 +81,6 @@
 
     move-object v4, p4
 
-    .line 46
     invoke-direct/range {v0 .. v6}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;-><init>(Landroid/os/IBinder;Ljava/lang/String;ZLjava/lang/String;Lcom/android/server/biometrics/SemBiometricSysUiManager;Landroid/os/Handler;)V
 
     return-void
@@ -95,30 +89,22 @@
 .method public constructor <init>(Landroid/os/IBinder;Ljava/lang/String;ZLjava/lang/String;Lcom/android/server/biometrics/SemBiometricSysUiManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput-object p6, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mHandler:Landroid/os/Handler;
 
-    .line 57
     iput-object p5, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mToken:Landroid/os/IBinder;
 
-    .line 59
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mPackageName:Ljava/lang/String;
 
-    .line 60
     iput-boolean p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mIsCalibrationMode:Z
 
-    .line 61
     iput-object p4, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mCalibrationColor:Ljava/lang/String;
 
     const-string p3, "com.android.systemui"
 
-    .line 62
     invoke-virtual {p3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -127,13 +113,11 @@
 
     const/4 p2, 0x1
 
-    .line 63
     iput-boolean p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mIsKeyguard:Z
 
     :cond_0
     const/4 p2, 0x0
 
-    .line 66
     :try_start_0
     invoke-interface {p1, p0, p2}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -144,7 +128,6 @@
     :catch_0
     move-exception p0
 
-    .line 68
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,7 +150,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -177,12 +159,10 @@
 .method private synthetic lambda$binderDied$0()V
     .locals 1
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mCallback:Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 109
     invoke-interface {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$Callback;->onError(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;)V
 
     :cond_0
@@ -206,13 +186,11 @@
 
     goto :goto_0
 
-    .line 121
     :cond_0
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mCallback:Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$Callback;
 
     if-eqz p1, :cond_1
 
-    .line 122
     invoke-interface {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$Callback;->onError(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;)V
 
     :cond_1
@@ -225,7 +203,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 106
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,7 +223,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$$ExternalSyntheticLambda0;
@@ -261,7 +237,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 138
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -270,7 +245,6 @@
 .method public getToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 133
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mToken:Landroid/os/IBinder;
 
     return-object p0
@@ -279,7 +253,6 @@
 .method public onError(II)V
     .locals 1
 
-    .line 116
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$$ExternalSyntheticLambda1;
@@ -294,36 +267,30 @@
 .method public start(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$Callback;)V
     .locals 3
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mCallback:Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$Callback;
 
-    .line 76
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
     const-string v0, "KEY_PACKAGE_NAME"
 
-    .line 77
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "KEY_KEYGUARD"
 
-    .line 78
     iget-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mIsKeyguard:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 80
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mIsCalibrationMode:Z
 
     if-eqz v0, :cond_0
 
     const-string/jumbo v0, "nits"
 
-    .line 82
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mCalibrationColor:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -335,7 +302,6 @@
     :cond_0
     const/16 v0, 0x1f4
 
-    .line 85
     :goto_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
@@ -349,7 +315,6 @@
 
     iput v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mSessionId:I
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     const/4 v2, 0x1
@@ -364,7 +329,6 @@
 
     const/4 v0, 0x0
 
-    .line 93
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mToken:Landroid/os/IBinder;
 
@@ -377,7 +341,6 @@
     :catch_0
     move-exception v1
 
-    .line 95
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -400,7 +363,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mIsCalibrationMode:Z
 
@@ -413,7 +375,6 @@
     :cond_0
     const/16 v1, 0x1f4
 
-    .line 100
     :goto_1
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
@@ -423,7 +384,6 @@
 
     invoke-virtual {v2, v3, v1, v0, v4}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sendCommand(IIILandroid/os/Bundle;)V
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->mSessionId:I

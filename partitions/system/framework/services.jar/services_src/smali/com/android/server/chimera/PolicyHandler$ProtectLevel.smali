@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
     .locals 2
 
-    .line 141
     sget-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;->NORMAL:Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
 
     sget-object v1, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;->HEAVY:Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 142
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
 
     const-string v1, "NORMAL"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;->NORMAL:Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
 
-    .line 143
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
 
     const-string v1, "HEAVY"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;->HEAVY:Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
 
-    .line 141
     invoke-static {}, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;->$values()[Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 141
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
     .locals 1
 
-    .line 141
     const-class v0, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
     .locals 1
 
-    .line 141
     sget-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectLevel;->$VALUES:[Lcom/android/server/chimera/PolicyHandler$ProtectLevel;
 
     invoke-virtual {v0}, [Lcom/android/server/chimera/PolicyHandler$ProtectLevel;->clone()Ljava/lang/Object;

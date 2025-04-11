@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$mgetRxDurationCounter(Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;IZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getRxDurationCounter(IZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     move-result-object p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$mgetTxDurationCounter(Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;IIZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getTxDurationCounter(IIZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     move-result-object p0
@@ -43,31 +41,24 @@
 .method public constructor <init>(ILcom/android/internal/os/Clock;Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;)V
     .locals 12
 
-    .line 1242
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 1217
     iput-boolean v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mActive:Z
 
-    .line 1221
     iput v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mFrequencyRange:I
 
-    .line 1226
     iput v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mSignalStrength:I
 
     const/4 v1, 0x0
 
-    .line 1234
     iput-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerStateTxDurationMs:[[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 1239
     iput-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerFrequencyRxDurationMs:[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     const/4 v1, 0x5
 
-    .line 1243
     filled-new-array {p1, v1}, [I
 
     move-result-object v2
@@ -92,7 +83,6 @@
     :goto_1
     if-ge v3, v1, :cond_0
 
-    .line 1247
     iget-object v4, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v4, v4, v2
@@ -133,7 +123,6 @@
 .method public getFrequencyRangeCount()I
     .locals 0
 
-    .line 1325
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     array-length p0, p0
@@ -144,7 +133,6 @@
 .method public final getRxDurationCounter(IZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
     .locals 5
 
-    .line 1477
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerFrequencyRxDurationMs:[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     const/4 v1, 0x0
@@ -155,13 +143,11 @@
 
     return-object v1
 
-    .line 1480
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getFrequencyRangeCount()I
 
     move-result p2
 
-    .line 1481
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v2, 0x0
@@ -172,7 +158,6 @@
 
     iget-object v0, v0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
-    .line 1482
     new-array v3, p2, [Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     iput-object v3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerFrequencyRxDurationMs:[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
@@ -180,7 +165,6 @@
     :goto_0
     if-ge v2, p2, :cond_1
 
-    .line 1484
     iget-object v3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerFrequencyRxDurationMs:[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     new-instance v4, Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
@@ -196,7 +180,6 @@
     :cond_1
     if-ltz p1, :cond_3
 
-    .line 1487
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getFrequencyRangeCount()I
 
     move-result p2
@@ -205,7 +188,6 @@
 
     goto :goto_1
 
-    .line 1492
     :cond_2
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerFrequencyRxDurationMs:[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
@@ -213,7 +195,6 @@
 
     return-object p0
 
-    .line 1488
     :cond_3
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;
@@ -244,7 +225,6 @@
 .method public getTimeSinceMark(IIJ)J
     .locals 0
 
-    .line 1305
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object p0, p0, p1
@@ -267,7 +247,6 @@
 .method public final getTxDurationCounter(IIZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
     .locals 8
 
-    .line 1449
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerStateTxDurationMs:[[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     const/4 v1, 0x0
@@ -280,25 +259,21 @@
 
     return-object v1
 
-    .line 1452
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getFrequencyRangeCount()I
 
     move-result p3
 
-    .line 1453
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, v2
 
     array-length v3, v0
 
-    .line 1454
     aget-object v0, v0, v2
 
     iget-object v0, v0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
-    .line 1455
     filled-new-array {p3, v3}, [I
 
     move-result-object v4
@@ -323,7 +298,6 @@
     :goto_1
     if-ge v5, v3, :cond_1
 
-    .line 1458
     iget-object v6, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerStateTxDurationMs:[[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     aget-object v6, v6, v4
@@ -350,7 +324,6 @@
 
     if-ltz p1, :cond_6
 
-    .line 1462
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getFrequencyRangeCount()I
 
     move-result v3
@@ -362,7 +335,6 @@
     :cond_3
     if-ltz p2, :cond_5
 
-    .line 1467
     iget-object v3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v2, v3, v2
@@ -373,7 +345,6 @@
 
     goto :goto_2
 
-    .line 1472
     :cond_4
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerStateTxDurationMs:[[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
@@ -383,7 +354,6 @@
 
     return-object p0
 
-    .line 1468
     :cond_5
     :goto_2
     new-instance p0, Ljava/lang/StringBuilder;
@@ -406,7 +376,6 @@
 
     return-object v1
 
-    .line 1463
     :cond_6
     :goto_3
     new-instance p0, Ljava/lang/StringBuilder;
@@ -435,7 +404,6 @@
 
     const/4 v0, 0x1
 
-    .line 1341
     invoke-virtual {p0, p1, v0}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getRxDurationCounter(IZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     move-result-object p0
@@ -450,7 +418,6 @@
 
     const/4 v0, 0x1
 
-    .line 1333
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getTxDurationCounter(IIZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     move-result-object p0
@@ -463,20 +430,17 @@
 .method public noteActive(ZJ)V
     .locals 1
 
-    .line 1256
     iget-boolean v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mActive:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 1257
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mActive:Z
 
     if-eqz p1, :cond_1
 
-    .line 1259
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mFrequencyRange:I
@@ -491,7 +455,6 @@
 
     goto :goto_0
 
-    .line 1262
     :cond_1
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
@@ -512,25 +475,21 @@
 .method public noteFrequencyRange(IJ)V
     .locals 2
 
-    .line 1272
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mFrequencyRange:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 1274
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mActive:Z
 
     if-nez v1, :cond_1
 
-    .line 1276
     iput p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mFrequencyRange:I
 
     return-void
 
-    .line 1279
     :cond_1
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
@@ -542,7 +501,6 @@
 
     invoke-virtual {v0, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 1280
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -553,7 +511,6 @@
 
     invoke-virtual {v0, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 1281
     iput p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mFrequencyRange:I
 
     return-void
@@ -562,25 +519,21 @@
 .method public noteSignalStrength(IJ)V
     .locals 3
 
-    .line 1288
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mSignalStrength:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 1290
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mActive:Z
 
     if-nez v1, :cond_1
 
-    .line 1292
     iput p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mSignalStrength:I
 
     return-void
 
-    .line 1295
     :cond_1
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
@@ -592,7 +545,6 @@
 
     invoke-virtual {v0, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 1296
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     iget v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mFrequencyRange:I
@@ -603,7 +555,6 @@
 
     invoke-virtual {v0, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 1297
     iput p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mSignalStrength:I
 
     return-void
@@ -616,17 +567,14 @@
 
     move-object/from16 v1, p1
 
-    .line 1398
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 1399
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 1400
     iget-object v4, v0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     array-length v4, v4
@@ -649,7 +597,6 @@
 
     goto :goto_2
 
-    .line 1412
     :cond_0
     iget-object v9, v0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
@@ -661,7 +608,6 @@
 
     goto :goto_3
 
-    .line 1407
     :cond_1
     :goto_2
     new-instance v9, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
@@ -682,7 +628,6 @@
 
     invoke-direct/range {v10 .. v15}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;-><init>(Lcom/android/internal/os/Clock;Lcom/android/server/power/stats/BatteryStatsImpl$Uid;ILjava/util/ArrayList;Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;)V
 
-    .line 1410
     invoke-virtual {v9, v1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
     :goto_3
@@ -695,7 +640,6 @@
 
     goto :goto_0
 
-    .line 1417
     :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -719,7 +663,6 @@
 
     if-lt v9, v7, :cond_5
 
-    .line 1422
     :cond_4
     new-instance v15, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
@@ -743,10 +686,8 @@
 
     invoke-direct/range {v10 .. v15}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;-><init>(Lcom/android/internal/os/Clock;Lcom/android/server/power/stats/BatteryStatsImpl$Uid;ILjava/util/ArrayList;Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;)V
 
-    .line 1425
     invoke-virtual {v5, v1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 1427
     :cond_5
     invoke-virtual {v0, v6, v9, v8}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getTxDurationCounter(IIZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
@@ -763,7 +704,6 @@
 
     goto :goto_4
 
-    .line 1432
     :cond_7
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -778,7 +718,6 @@
 
     if-lt v5, v4, :cond_8
 
-    .line 1437
     new-instance v3, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v10, 0x0
@@ -797,12 +736,10 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;-><init>(Lcom/android/internal/os/Clock;Lcom/android/server/power/stats/BatteryStatsImpl$Uid;ILjava/util/ArrayList;Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;)V
 
-    .line 1439
     invoke-virtual {v3, v1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
     goto :goto_7
 
-    .line 1442
     :cond_8
     invoke-virtual {v0, v5, v8}, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->getRxDurationCounter(IZ)Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
@@ -822,7 +759,6 @@
 .method public reset(J)V
     .locals 5
 
-    .line 1348
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     array-length v0, v0
@@ -841,7 +777,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 1351
     iget-object v4, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v4, v4, v2
@@ -850,14 +785,12 @@
 
     invoke-virtual {v4, v1, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->reset(ZJ)Z
 
-    .line 1352
     iget-object v4, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerStateTxDurationMs:[[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     if-nez v4, :cond_0
 
     goto :goto_2
 
-    .line 1353
     :cond_0
     aget-object v4, v4, v2
 
@@ -870,7 +803,6 @@
 
     goto :goto_1
 
-    .line 1355
     :cond_1
     iget-object v3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerFrequencyRxDurationMs:[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
@@ -878,7 +810,6 @@
 
     goto :goto_3
 
-    .line 1356
     :cond_2
     aget-object v3, v3, v2
 
@@ -896,7 +827,6 @@
 .method public setMark(J)V
     .locals 5
 
-    .line 1313
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     array-length v0, v0
@@ -915,7 +845,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 1316
     iget-object v4, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v4, v4, v2
@@ -940,17 +869,14 @@
 .method public writeSummaryToParcel(Landroid/os/Parcel;J)V
     .locals 6
 
-    .line 1364
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     array-length v0, v0
 
-    .line 1365
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 v1, 0x5
 
-    .line 1366
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 v2, 0x0
@@ -965,7 +891,6 @@
     :goto_1
     if-ge v4, v1, :cond_0
 
-    .line 1369
     iget-object v5, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->perStateTimers:[[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v5, v5, v3
@@ -983,7 +908,6 @@
 
     goto :goto_0
 
-    .line 1373
     :cond_1
     iget-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerStateTxDurationMs:[[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
@@ -991,12 +915,10 @@
 
     if-nez p2, :cond_2
 
-    .line 1374
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_4
 
-    .line 1376
     :cond_2
     invoke-virtual {p1, p3}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -1010,7 +932,6 @@
     :goto_3
     if-ge v3, v1, :cond_3
 
-    .line 1379
     iget-object v4, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerStateTxDurationMs:[[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     aget-object v4, v4, p2
@@ -1028,26 +949,22 @@
 
     goto :goto_2
 
-    .line 1384
     :cond_4
     :goto_4
     iget-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerFrequencyRxDurationMs:[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     if-nez p2, :cond_5
 
-    .line 1385
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_6
 
-    .line 1387
     :cond_5
     invoke-virtual {p1, p3}, Landroid/os/Parcel;->writeInt(I)V
 
     :goto_5
     if-ge v2, v0, :cond_6
 
-    .line 1389
     iget-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$RadioAccessTechnologyBatteryStats;->mPerFrequencyRxDurationMs:[Lcom/android/server/power/stats/BatteryStatsImpl$LongSamplingCounter;
 
     aget-object p2, p2, v2

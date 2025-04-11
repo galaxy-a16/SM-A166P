@@ -41,27 +41,22 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 51
     iput-boolean v0, p0, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->DEBUG:Z
 
     const/4 v0, 0x0
 
-    .line 56
     iput-object v0, p0, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
-    .line 88
     iput-object p1, p0, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mContext:Landroid/content/Context;
 
     return-void
@@ -74,20 +69,17 @@
 
     monitor-enter v0
 
-    .line 78
     :try_start_0
     sget-object v1, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mInstance:Lcom/samsung/android/knox/custom/PrivateKnoxCustom;
 
     if-nez v1, :cond_0
 
-    .line 79
     new-instance v1, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mInstance:Lcom/samsung/android/knox/custom/PrivateKnoxCustom;
 
-    .line 81
     :cond_0
     sget-object p0, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mInstance:Lcom/samsung/android/knox/custom/PrivateKnoxCustom;
     :try_end_0
@@ -116,7 +108,6 @@
 .method public final enforceSystemPermission()I
     .locals 2
 
-    .line 104
     invoke-virtual {p0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->getEDM()Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     move-result-object p0
@@ -145,12 +136,10 @@
 .method public final getEDM()Lcom/samsung/android/knox/EnterpriseDeviceManager;
     .locals 1
 
-    .line 93
     iget-object v0, p0, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 94
     iget-object v0, p0, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/EnterpriseDeviceManager;
@@ -159,7 +148,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
-    .line 96
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
@@ -171,7 +159,6 @@
 
     const/16 v0, 0x8
 
-    .line 215
     invoke-virtual {p0, v0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->readBooleanDataValue(I)Z
 
     move-result p0
@@ -182,17 +169,14 @@
 .method public final readBooleanDataValue(I)Z
     .locals 5
 
-    .line 110
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 113
     invoke-direct {p0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->readParamData()[B
 
     move-result-object p0
 
-    .line 114
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 v0, 0x0
@@ -204,7 +188,6 @@
     :cond_0
     const/16 v1, 0x1f
 
-    .line 122
     aget-byte v1, p0, v1
 
     const/4 v2, 0x6
@@ -219,7 +202,6 @@
 
     if-ne p1, v3, :cond_1
 
-    .line 125
     aget-byte v4, p0, v3
 
     if-ne v4, v3, :cond_1
@@ -237,7 +219,6 @@
 
     if-ne p1, v4, :cond_2
 
-    .line 131
     aget-byte p1, p0, v4
 
     if-ne p1, v3, :cond_2
@@ -257,10 +238,8 @@
 .method public setKnoxCustomAutoStartUp(Z)Z
     .locals 3
 
-    .line 191
     invoke-virtual {p0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->enforceSystemPermission()I
 
-    .line 193
     invoke-virtual {p0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->isKnoxCustomAutoStartUpEnabled()Z
 
     move-result v0
@@ -275,7 +254,6 @@
 
     const/4 p1, 0x1
 
-    .line 197
     invoke-virtual {p0, v1, p1}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->writeBooleanDataValue(IZ)Z
 
     move-result v2
@@ -285,7 +263,6 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 201
     invoke-virtual {p0, v1, v2}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->writeBooleanDataValue(IZ)Z
 
     move-result v2
@@ -302,27 +279,22 @@
 
     new-array v0, v0, [B
 
-    .line 143
     new-instance v1, Ljava/security/SecureRandom;
 
     invoke-direct {v1}, Ljava/security/SecureRandom;-><init>()V
 
-    .line 144
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 146
     invoke-virtual {v1, v0}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 149
     invoke-direct {p0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->readParamData()[B
 
     move-result-object v1
 
     const/16 v4, 0x1f
 
-    .line 150
     aget-byte v5, v1, v4
 
     const/16 v6, 0x9
@@ -335,17 +307,14 @@
 
     if-ne v5, v9, :cond_0
 
-    .line 152
     aget-byte v5, v1, v8
 
     aput-byte v5, v0, v8
 
-    .line 153
     aget-byte v5, v1, v6
 
     aput-byte v5, v0, v6
 
-    .line 154
     aget-byte v1, v1, v7
 
     aput-byte v1, v0, v7
@@ -366,7 +335,6 @@
     :goto_0
     if-eqz p2, :cond_1
 
-    .line 163
     aput-byte v8, v0, p1
 
     goto :goto_1
@@ -374,7 +342,6 @@
     :cond_1
     const/4 p2, 0x7
 
-    .line 165
     aput-byte p2, v0, p1
 
     :goto_1
@@ -401,13 +368,11 @@
 
     aput-byte p1, v0, v7
 
-    .line 176
     :cond_3
     invoke-direct {p0, v0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->writeParamData([B)Z
 
     move-result p0
 
-    .line 177
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutService;)V
     .locals 0
 
-    .line 5768
     iput-object p1, p0, Lcom/android/server/pm/ShortcutService$8;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-direct {p0}, Lcom/android/internal/os/IParcelFileDescriptorFactory$Stub;-><init>()V
@@ -26,12 +25,10 @@
 
     const-string p2, ":"
 
-    .line 5771
     invoke-virtual {p1, p2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 5773
     array-length v0, p2
 
     const/4 v1, 0x2
@@ -42,7 +39,6 @@
 
     const/4 v0, 0x0
 
-    .line 5777
     aget-object v1, p2, v0
 
     invoke-static {v1}, Landroid/os/FileUtils;->isValidExtFilename(Ljava/lang/String;)Z
@@ -57,14 +53,12 @@
 
     aget-object v1, p2, v3
 
-    .line 5778
     invoke-static {v1}, Landroid/os/FileUtils;->isValidExtFilename(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 5783
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +85,6 @@
 
     invoke-static {v4, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5786
     :try_start_0
     new-instance p1, Ljava/io/File;
 
@@ -105,14 +98,12 @@
 
     invoke-direct {p1, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 5788
     new-instance p0, Ljava/io/File;
 
     aget-object p2, p2, v3
 
     invoke-direct {p0, p1, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 5790
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p1
@@ -125,7 +116,6 @@
 
     move-result-object p1
 
-    .line 5792
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +136,6 @@
 
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5793
     new-instance p0, Landroid/os/ParcelFileDescriptor;
 
     invoke-direct {p0, p1}, Landroid/os/ParcelFileDescriptor;-><init>(Ljava/io/FileDescriptor;)V
@@ -158,7 +147,6 @@
     :catch_0
     move-exception p0
 
-    .line 5795
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,7 +167,6 @@
 
     invoke-static {v4, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5796
     new-instance p1, Landroid/os/RemoteException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -202,7 +189,6 @@
 
     throw p1
 
-    .line 5779
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -228,7 +214,6 @@
 
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5780
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -247,7 +232,6 @@
 
     throw p0
 
-    .line 5774
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

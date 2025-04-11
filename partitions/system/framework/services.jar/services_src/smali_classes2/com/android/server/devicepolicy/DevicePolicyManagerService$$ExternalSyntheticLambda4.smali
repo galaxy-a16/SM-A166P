@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/UserInfo;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->$r8$lambda$nOfNH8pVMcVzD42CVxH-lvhpUtQ(Landroid/content/pm/UserInfo;)Z

@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/VaultKeeperService;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWakeLock(Lcom/android/server/VaultKeeperService;)Landroid/os/PowerManager$WakeLock;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object p0
@@ -39,7 +37,6 @@
 
     const-string/jumbo v0, "vkjni"
 
-    .line 130
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -48,10 +45,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 148
     invoke-direct {p0}, Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService$Stub;-><init>()V
 
-    .line 97
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     const/4 v1, 0x1
@@ -60,24 +55,20 @@
 
     iput-object v0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 160
     new-instance v0, Lcom/android/server/VaultKeeperService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/VaultKeeperService$1;-><init>(Lcom/android/server/VaultKeeperService;)V
 
     iput-object v0, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
-    .line 149
     iput-object p1, p0, Lcom/android/server/VaultKeeperService;->mContext:Landroid/content/Context;
 
-    .line 150
     invoke-direct {p0}, Lcom/android/server/VaultKeeperService;->nativeGetSystemSolution()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
-    .line 151
     iget-object p1, p0, Lcom/android/server/VaultKeeperService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "power"
@@ -90,7 +81,6 @@
 
     const-string v0, "VK_WakeLock"
 
-    .line 152
     invoke-virtual {p1, v1, v0}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
@@ -148,15 +138,12 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 682
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 684
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     if-nez v0, :cond_0
 
-    .line 685
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,7 +170,6 @@
 
     return p0
 
-    .line 689
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -195,7 +181,6 @@
 
     return p0
 
-    .line 694
     :cond_1
     iget-object v2, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -207,7 +192,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 697
     :try_start_0
     iget-object v2, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -223,7 +207,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 699
     :try_start_1
     invoke-direct {p0, v0, p1}, Lcom/android/server/VaultKeeperService;->nativeCheckDataWritable(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -231,7 +214,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 701
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -246,13 +228,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 702
     throw p1
 
     :cond_2
     const-string p0, "Unable to acquire lock"
 
-    .line 704
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -264,7 +244,6 @@
     :catch_0
     move-exception p0
 
-    .line 708
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     const/16 p0, -0x67
@@ -279,15 +258,12 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 376
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     if-nez v0, :cond_0
 
-    .line 379
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -314,7 +290,6 @@
 
     return p0
 
-    .line 383
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -331,14 +306,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 389
     array-length v3, p2
 
     const/16 v4, 0x20
 
     if-le v3, v4, :cond_2
 
-    .line 390
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -364,19 +337,16 @@
 
     if-eqz p4, :cond_4
 
-    .line 396
     array-length v3, p3
 
     if-nez v3, :cond_3
 
     const-string p0, "destroy : if cert is exist, it should contain value."
 
-    .line 397
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 401
     :cond_3
     array-length v3, p4
 
@@ -384,7 +354,6 @@
 
     const-string p0, "destroy : if signature is exist, it should contain value."
 
-    .line 402
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -398,12 +367,10 @@
 
     const-string p0, "destroy : Invalid arguments(too many arguments)"
 
-    .line 408
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 412
     :cond_5
     iget-object v0, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -415,7 +382,6 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 415
     :try_start_0
     iget-object v0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -443,7 +409,6 @@
 
     move-object v5, p4
 
-    .line 417
     :try_start_1
     invoke-direct/range {v0 .. v5}, Lcom/android/server/VaultKeeperService;->nativeDestroy(Ljava/lang/String;Ljava/lang/String;[B[B[B)I
 
@@ -451,7 +416,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 419
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -466,13 +430,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 420
     throw p1
 
     :cond_6
     const-string p0, "Unable to acquire lock"
 
-    .line 422
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -484,7 +446,6 @@
     :catch_0
     move-exception p0
 
-    .line 426
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     const/16 p0, -0x67
@@ -499,17 +460,14 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 568
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     const/4 v2, 0x0
 
     if-nez v0, :cond_0
 
-    .line 571
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -534,7 +492,6 @@
 
     return-object v2
 
-    .line 575
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -547,19 +504,16 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 580
     array-length v3, p2
 
     if-nez v3, :cond_2
 
     const-string p0, "encryptMessage : if msg is exist, it should contain value."
 
-    .line 581
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
 
-    .line 585
     :cond_2
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -571,7 +525,6 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 588
     :try_start_0
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -587,7 +540,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 590
     :try_start_1
     invoke-direct {p0, v0, p1, p2}, Lcom/android/server/VaultKeeperService;->nativeEncryptMessage(Ljava/lang/String;Ljava/lang/String;[B)[B
 
@@ -595,7 +547,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 592
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -610,13 +561,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 593
     throw p1
 
     :cond_3
     const-string p0, "Unable to acquire lock"
 
-    .line 595
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -626,7 +575,6 @@
     :catch_0
     move-exception p0
 
-    .line 599
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     return-object v2
@@ -639,15 +587,12 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 715
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 717
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     if-nez v0, :cond_0
 
-    .line 718
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -674,7 +619,6 @@
 
     return p0
 
-    .line 722
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -686,7 +630,6 @@
 
     return p0
 
-    .line 727
     :cond_1
     iget-object v2, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -698,7 +641,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 730
     :try_start_0
     iget-object v2, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -714,7 +656,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 732
     :try_start_1
     invoke-direct {p0, v0, p1}, Lcom/android/server/VaultKeeperService;->nativeGenerateHotpCode(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -722,7 +663,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 734
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -737,13 +677,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 735
     throw p1
 
     :cond_2
     const-string p0, "Unable to acquire lock"
 
-    .line 737
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -755,7 +693,6 @@
     :catch_0
     move-exception p0
 
-    .line 741
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     const/16 p0, -0x67
@@ -768,7 +705,6 @@
 
     const-string/jumbo v0, "system_server"
 
-    .line 191
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -805,7 +741,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     iget-object v1, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
     const/4 v4, 0x1
@@ -818,7 +753,6 @@
 
     const/4 v1, 0x0
 
-    .line 198
     :try_start_0
     iget-object v4, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -839,13 +773,11 @@
     :try_start_1
     const-string p1, "Vault name is null"
 
-    .line 202
     invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 263
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -855,7 +787,6 @@
 
     return-object v1
 
-    .line 206
     :cond_0
     :try_start_3
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -866,13 +797,11 @@
 
     const-string p1, "Vault name is wrong"
 
-    .line 207
     invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 263
     :try_start_4
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -882,7 +811,6 @@
 
     return-object v1
 
-    .line 211
     :cond_1
     :try_start_5
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -901,7 +829,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 212
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p1
@@ -914,7 +841,6 @@
 
     goto/16 :goto_1
 
-    .line 215
     :cond_2
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -926,7 +852,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 216
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -952,7 +877,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 263
     :try_start_6
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -962,7 +886,6 @@
 
     return-object v1
 
-    .line 220
     :cond_3
     :try_start_7
     iget-object p1, p0, Lcom/android/server/VaultKeeperService;->mContext:Landroid/content/Context;
@@ -973,7 +896,6 @@
 
     const-string/jumbo v0, "system"
 
-    .line 221
     invoke-static {v0}, Landroid/os/Process;->getUidForName(Ljava/lang/String;)I
 
     move-result v0
@@ -988,7 +910,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 222
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1016,7 +937,6 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 263
     :try_start_8
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1026,7 +946,6 @@
 
     return-object v1
 
-    .line 226
     :cond_4
     :try_start_9
     iget-object p1, p0, Lcom/android/server/VaultKeeperService;->mContext:Landroid/content/Context;
@@ -1043,13 +962,11 @@
 
     const-string p1, "ActivityManager is null, something wrong in framework"
 
-    .line 228
     invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 263
     :try_start_a
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1059,7 +976,6 @@
 
     return-object v1
 
-    .line 232
     :cond_5
     :try_start_b
     invoke-virtual {p1}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
@@ -1070,13 +986,11 @@
 
     const-string p1, "getRunningAppProcesses return null List. Cannot check permision"
 
-    .line 233
     invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_0
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 263
     :try_start_c
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1086,7 +1000,6 @@
 
     return-object v1
 
-    .line 237
     :cond_6
     :try_start_d
     invoke-virtual {p1}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
@@ -1110,7 +1023,6 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 238
     iget v2, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -1119,7 +1031,6 @@
 
     if-ne v2, v4, :cond_7
 
-    .line 239
     iget-object p1, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     move-object v0, p1
@@ -1134,13 +1045,11 @@
 
     const-string p1, "Invalid package name"
 
-    .line 245
     invoke-static {v3, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_0
     .catchall {:try_start_d .. :try_end_d} :catchall_0
 
-    .line 263
     :try_start_e
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1150,7 +1059,6 @@
 
     return-object v1
 
-    .line 249
     :cond_9
     :try_start_f
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -1161,13 +1069,11 @@
 
     const-string p1, "Invalid package length"
 
-    .line 250
     invoke-static {v3, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_0
     .catchall {:try_start_f .. :try_end_f} :catchall_0
 
-    .line 263
     :try_start_10
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1177,7 +1083,6 @@
 
     return-object v1
 
-    .line 256
     :cond_a
     :goto_1
     :try_start_11
@@ -1200,7 +1105,6 @@
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_0
     .catchall {:try_start_11 .. :try_end_11} :catchall_0
 
-    .line 263
     :try_start_12
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1221,15 +1125,12 @@
     :try_start_13
     const-string v0, "Fail to check permission(Exception)"
 
-    .line 259
     invoke-static {v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 260
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_0
 
-    .line 263
     :try_start_14
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1242,13 +1143,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 264
     throw p1
 
     :cond_b
     const-string p0, "Unable to acquire lock"
 
-    .line 266
     invoke-static {v3, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_14
     .catch Ljava/lang/InterruptedException; {:try_start_14 .. :try_end_14} :catch_1
@@ -1258,7 +1157,6 @@
     :catch_1
     move-exception p0
 
-    .line 270
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     return-object v1
@@ -1271,17 +1169,14 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 311
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     const-string v2, ")"
 
     if-nez v0, :cond_0
 
-    .line 314
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1306,7 +1201,6 @@
 
     return p0
 
-    .line 318
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1323,14 +1217,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 323
     array-length v4, p2
 
     const/16 v5, 0x20
 
     if-eq v4, v5, :cond_2
 
-    .line 324
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1356,14 +1248,12 @@
     :cond_2
     if-eqz p3, :cond_3
 
-    .line 328
     array-length v2, p3
 
     if-nez v2, :cond_3
 
     const-string p0, "initialize : if initUnsheltered is exist, it should contain value."
 
-    .line 329
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -1371,14 +1261,12 @@
     :cond_3
     if-eqz p4, :cond_4
 
-    .line 333
     array-length v2, p4
 
     if-nez v2, :cond_4
 
     const-string p0, "initialize : if cert is exist, it should contain value."
 
-    .line 334
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -1386,14 +1274,12 @@
     :cond_4
     if-eqz p5, :cond_5
 
-    .line 338
     array-length v2, p5
 
     if-nez v2, :cond_5
 
     const-string p0, "initialize :  if signature is exist, it should contain value."
 
-    .line 339
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -1403,7 +1289,6 @@
 
     if-eqz p5, :cond_6
 
-    .line 345
     array-length v2, p5
 
     array-length v4, p4
@@ -1412,14 +1297,12 @@
 
     new-array v2, v2, [B
 
-    .line 346
     array-length v4, p5
 
     const/4 v5, 0x0
 
     invoke-static {p5, v5, v2, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 347
     array-length v4, p5
 
     array-length v6, p4
@@ -1440,12 +1323,10 @@
 
     const-string p0, "initialize : All of input param is empty."
 
-    .line 351
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 355
     :cond_7
     iget-object p4, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -1457,7 +1338,6 @@
 
     invoke-virtual {p4, p5}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 358
     :try_start_0
     iget-object p4, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1483,7 +1363,6 @@
 
     move-object v4, p3
 
-    .line 360
     :try_start_1
     invoke-direct/range {v0 .. v5}, Lcom/android/server/VaultKeeperService;->nativeInitialize(Ljava/lang/String;Ljava/lang/String;[B[B[B)I
 
@@ -1491,7 +1370,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 362
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1506,13 +1384,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 363
     throw p1
 
     :cond_8
     const-string p0, "Unable to acquire lock"
 
-    .line 365
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1524,7 +1400,6 @@
     :catch_0
     move-exception p0
 
-    .line 369
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     const/16 p0, -0x67
@@ -1539,17 +1414,14 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 277
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     const/4 v2, 0x0
 
     if-nez v0, :cond_0
 
-    .line 280
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1574,7 +1446,6 @@
 
     return v2
 
-    .line 284
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1584,7 +1455,6 @@
 
     return v2
 
-    .line 289
     :cond_1
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -1596,7 +1466,6 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 292
     :try_start_0
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1612,7 +1481,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 294
     :try_start_1
     invoke-direct {p0, v0, p1}, Lcom/android/server/VaultKeeperService;->nativeIsInitialized(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1620,7 +1488,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 296
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1635,13 +1502,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 297
     throw p1
 
     :cond_2
     const-string p0, "Unable to acquire lock"
 
-    .line 299
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1651,7 +1516,6 @@
     :catch_0
     move-exception p0
 
-    .line 303
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     return v2
@@ -1664,17 +1528,14 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 606
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     const/4 v2, 0x0
 
     if-nez v0, :cond_0
 
-    .line 609
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1699,7 +1560,6 @@
 
     return v2
 
-    .line 613
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1709,7 +1569,6 @@
 
     return v2
 
-    .line 618
     :cond_1
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -1721,7 +1580,6 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 621
     :try_start_0
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1737,7 +1595,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 623
     :try_start_1
     invoke-direct {p0, v0, p1}, Lcom/android/server/VaultKeeperService;->nativeMigrationStorage(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1745,7 +1602,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 625
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1760,13 +1616,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 626
     throw p1
 
     :cond_2
     const-string p0, "Unable to acquire lock"
 
-    .line 628
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1776,7 +1630,6 @@
     :catch_0
     move-exception p0
 
-    .line 632
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     return v2
@@ -1789,17 +1642,14 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 433
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     const/4 v2, 0x0
 
     if-nez v0, :cond_0
 
-    .line 436
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1824,7 +1674,6 @@
 
     return-object v2
 
-    .line 440
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1850,7 +1699,6 @@
 
     return-object v2
 
-    .line 453
     :cond_3
     iget-object v4, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -1860,7 +1708,6 @@
 
     invoke-virtual {v4, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 456
     :try_start_0
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1876,7 +1723,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 458
     :try_start_1
     invoke-direct {p0, v0, p1, p2, p3}, Lcom/android/server/VaultKeeperService;->nativeRead(Ljava/lang/String;Ljava/lang/String;I[I)[B
 
@@ -1884,7 +1730,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 460
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1899,13 +1744,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 461
     throw p1
 
     :cond_4
     const-string p0, "Unable to acquire lock"
 
-    .line 463
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1915,7 +1758,6 @@
     :catch_0
     move-exception p0
 
-    .line 467
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     return-object v2
@@ -1924,7 +1766,6 @@
     :goto_0
     const-string/jumbo p0, "read : Invalid type value."
 
-    .line 446
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
@@ -1937,17 +1778,14 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 527
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 529
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     const/4 v2, 0x0
 
     if-nez v0, :cond_0
 
-    .line 530
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1972,7 +1810,6 @@
 
     return-object v2
 
-    .line 534
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1998,7 +1835,6 @@
 
     return-object v2
 
-    .line 547
     :cond_3
     iget-object v4, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -2008,7 +1844,6 @@
 
     invoke-virtual {v4, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 550
     :try_start_0
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -2024,7 +1859,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 552
     :try_start_1
     invoke-direct {p0, v0, p1, p2, p3}, Lcom/android/server/VaultKeeperService;->nativeSensitiveBox(Ljava/lang/String;Ljava/lang/String;I[I)[B
 
@@ -2032,7 +1866,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 554
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -2047,13 +1880,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 555
     throw p1
 
     :cond_4
     const-string p0, "Unable to acquire lock"
 
-    .line 557
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -2063,7 +1894,6 @@
     :catch_0
     move-exception p0
 
-    .line 561
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     return-object v2
@@ -2072,7 +1902,6 @@
     :goto_0
     const-string/jumbo p0, "sensitiveBox : Invalid type value."
 
-    .line 540
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
@@ -2085,7 +1914,6 @@
 
     const-string v0, "System is ready"
 
-    .line 157
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2098,17 +1926,14 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 639
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     const/4 v2, 0x0
 
     if-nez v0, :cond_0
 
-    .line 642
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2133,7 +1958,6 @@
 
     return v2
 
-    .line 646
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2148,12 +1972,10 @@
 
     const-string/jumbo p0, "verifyCertificate : cert is null."
 
-    .line 652
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 656
     :cond_2
     array-length v3, p2
 
@@ -2161,12 +1983,10 @@
 
     const-string/jumbo p0, "verifyCertificate : certificate length is zero"
 
-    .line 657
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 661
     :cond_3
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -2178,7 +1998,6 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 664
     :try_start_0
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -2194,7 +2013,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 666
     :try_start_1
     invoke-direct {p0, v0, p1, p2}, Lcom/android/server/VaultKeeperService;->nativeVerifyCertificate(Ljava/lang/String;Ljava/lang/String;[B)Z
 
@@ -2202,7 +2020,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 668
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -2217,13 +2034,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 669
     throw p1
 
     :cond_4
     const-string p0, "Unable to acquire lock"
 
-    .line 671
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -2233,7 +2048,6 @@
     :catch_0
     move-exception p0
 
-    .line 675
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     return v2
@@ -2246,15 +2060,12 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 474
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 476
     iget v0, p0, Lcom/android/server/VaultKeeperService;->mServiceSupport:I
 
     if-nez v0, :cond_0
 
-    .line 477
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2281,7 +2092,6 @@
 
     return p0
 
-    .line 481
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/VaultKeeperService;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2309,14 +2119,12 @@
     :cond_2
     if-eqz p3, :cond_3
 
-    .line 491
     array-length v4, p3
 
     if-nez v4, :cond_3
 
     const-string/jumbo p0, "write : if data is exist, it should contain value."
 
-    .line 492
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -2324,14 +2132,12 @@
     :cond_3
     if-eqz p4, :cond_4
 
-    .line 496
     array-length v4, p4
 
     if-nez v4, :cond_4
 
     const-string/jumbo p0, "write : if cert is exist, it should contain value."
 
-    .line 497
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -2339,19 +2145,16 @@
     :cond_4
     if-eqz p5, :cond_5
 
-    .line 501
     array-length v4, p5
 
     if-nez v4, :cond_5
 
     const-string/jumbo p0, "write : if sig is exist, it should contain value."
 
-    .line 502
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
 
-    .line 506
     :cond_5
     iget-object v3, p0, Lcom/android/server/VaultKeeperService;->mHandler:Landroid/os/Handler;
 
@@ -2361,7 +2164,6 @@
 
     invoke-virtual {v3, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 509
     :try_start_0
     iget-object v0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -2391,7 +2193,6 @@
 
     move-object v6, p5
 
-    .line 511
     :try_start_1
     invoke-direct/range {v0 .. v6}, Lcom/android/server/VaultKeeperService;->nativeWrite(Ljava/lang/String;Ljava/lang/String;I[B[B[B)I
 
@@ -2399,7 +2200,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 513
     :try_start_2
     iget-object p0, p0, Lcom/android/server/VaultKeeperService;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -2414,13 +2214,11 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 514
     throw p1
 
     :cond_6
     const-string p0, "Unable to acquire lock"
 
-    .line 516
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -2432,7 +2230,6 @@
     :catch_0
     move-exception p0
 
-    .line 520
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     const/16 p0, -0x67
@@ -2443,7 +2240,6 @@
     :goto_0
     const-string/jumbo p0, "write : Invalid type value."
 
-    .line 487
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3

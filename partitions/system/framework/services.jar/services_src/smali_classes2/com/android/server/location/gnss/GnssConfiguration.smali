@@ -23,7 +23,6 @@
 
     const/4 v1, 0x3
 
-    .line 60
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -36,18 +35,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 118
     iput v0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mEsExtensionSec:I
 
-    .line 123
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mContext:Landroid/content/Context;
 
-    .line 124
     new-instance p1, Ljava/util/Properties;
 
     invoke-direct {p1}, Ljava/util/Properties;-><init>()V
@@ -60,7 +55,6 @@
 .method public static isConfigEsExtensionSecSupported(Lcom/android/server/location/gnss/GnssConfiguration$HalInterfaceVersion;)Z
     .locals 1
 
-    .line 514
     iget p0, p0, Lcom/android/server/location/gnss/GnssConfiguration$HalInterfaceVersion;->mMajor:I
 
     const/4 v0, 0x2
@@ -83,14 +77,12 @@
 
     const-string/jumbo v0, "phone"
 
-    .line 530
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/telephony/TelephonyManager;
 
-    .line 532
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getSimState()I
 
     move-result p0
@@ -122,14 +114,12 @@
 .method public final getBooleanConfig(Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 504
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     invoke-virtual {p0, p1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 505
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -138,7 +128,6 @@
 
     return p2
 
-    .line 508
     :cond_0
     invoke-static {p0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
@@ -150,7 +139,6 @@
 .method public getEsExtensionSec()I
     .locals 0
 
-    .line 139
     iget p0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mEsExtensionSec:I
 
     return p0
@@ -168,7 +156,6 @@
 
     const-string v2, "0"
 
-    .line 444
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -184,12 +171,10 @@
     :catch_0
     const-string v1, "Sim slot property has wrong value, set 0"
 
-    .line 446
     invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move v1, v0
 
-    .line 449
     :goto_0
     invoke-static {}, Lcom/samsung/android/feature/SemCarrierFeature;->getInstance()Lcom/samsung/android/feature/SemCarrierFeature;
 
@@ -207,7 +192,6 @@
 
     if-le v1, v3, :cond_0
 
-    .line 452
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,7 +219,6 @@
     :cond_0
     if-gez v1, :cond_1
 
-    .line 456
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -266,7 +249,6 @@
 .method public getHalInterfaceVersion()Lcom/android/server/location/gnss/GnssConfiguration$HalInterfaceVersion;
     .locals 0
 
-    .line 256
     invoke-static {}, Lcom/android/server/location/gnss/GnssConfiguration;->native_get_gnss_configuration_version()Lcom/android/server/location/gnss/GnssConfiguration$HalInterfaceVersion;
 
     move-result-object p0
@@ -277,14 +259,12 @@
 .method public final getIntConfig(Ljava/lang/String;I)I
     .locals 2
 
-    .line 490
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     invoke-virtual {p0, p1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 491
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -293,7 +273,6 @@
 
     return p2
 
-    .line 495
     :cond_0
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->decode(Ljava/lang/String;)Ljava/lang/Integer;
@@ -308,7 +287,6 @@
 
     return p0
 
-    .line 497
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -346,7 +324,6 @@
 .method public getLppProfile()Ljava/lang/String;
     .locals 1
 
-    .line 195
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     const-string v0, "LPP_PROFILE"
@@ -361,7 +338,6 @@
 .method public getProperties()Ljava/util/Properties;
     .locals 0
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     return-object p0
@@ -370,7 +346,6 @@
 .method public getProxyApps()Ljava/util/List;
     .locals 1
 
-    .line 203
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     const-string v0, "NFW_PROXY_APPS"
@@ -379,21 +354,18 @@
 
     move-result-object p0
 
-    .line 204
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 205
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 208
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -405,19 +377,16 @@
 
     move-result-object p0
 
-    .line 209
     array-length v0, p0
 
     if-nez v0, :cond_1
 
-    .line 210
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 213
     :cond_1
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -433,7 +402,6 @@
 
     const/4 v1, 0x0
 
-    .line 422
     invoke-virtual {p0, v0, v1}, Lcom/android/server/location/gnss/GnssConfiguration;->getIntConfig(Ljava/lang/String;I)I
 
     move-result p0
@@ -446,7 +414,6 @@
 
     if-le p0, v3, :cond_0
 
-    .line 424
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -474,7 +441,6 @@
     :cond_0
     if-gez p0, :cond_1
 
-    .line 428
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,7 +473,6 @@
 
     const-string v0, "SUPL_ES"
 
-    .line 187
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/gnss/GnssConfiguration;->getIntConfig(Ljava/lang/String;I)I
 
     move-result p0
@@ -520,7 +485,6 @@
 
     const-string v0, "SUPL_MODE"
 
-    .line 179
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/gnss/GnssConfiguration;->getIntConfig(Ljava/lang/String;I)I
 
     move-result p0
@@ -535,7 +499,6 @@
 
     const/4 v1, 0x0
 
-    .line 228
     invoke-virtual {p0, v0, v1}, Lcom/android/server/location/gnss/GnssConfiguration;->getBooleanConfig(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -546,7 +509,6 @@
 .method public isLongTermPsdsServerConfigured()Z
     .locals 2
 
-    .line 243
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     const-string v1, "LONGTERM_PSDS_SERVER_1"
@@ -561,7 +523,6 @@
 
     const-string v1, "LONGTERM_PSDS_SERVER_2"
 
-    .line 244
     invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -572,7 +533,6 @@
 
     const-string v0, "LONGTERM_PSDS_SERVER_3"
 
-    .line 245
     invoke-virtual {p0, v0}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -601,7 +561,6 @@
 
     const/4 v1, 0x0
 
-    .line 220
     invoke-virtual {p0, v0, v1}, Lcom/android/server/location/gnss/GnssConfiguration;->getBooleanConfig(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -612,7 +571,6 @@
 .method public isWifiOnlyModel()Z
     .locals 1
 
-    .line 575
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "phone"
@@ -625,7 +583,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 578
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->isDataCapable()Z
 
     move-result p0
@@ -643,12 +600,10 @@
 .method public loadPropertiesFromCarrierConfig(ZI)V
     .locals 5
 
-    .line 373
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mContext:Landroid/content/Context;
 
     const-string v1, "carrier_config"
 
-    .line 374
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -659,7 +614,6 @@
 
     return-void
 
-    .line 379
     :cond_0
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionId()I
 
@@ -674,7 +628,6 @@
     :cond_1
     move p2, v1
 
-    .line 383
     :goto_0
     invoke-static {p2}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
 
@@ -682,7 +635,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 384
     invoke-virtual {v0, p2}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
 
     move-result-object p1
@@ -699,7 +651,6 @@
 
     if-nez p1, :cond_4
 
-    .line 386
     sget-boolean p1, Lcom/android/server/location/gnss/GnssConfiguration;->DEBUG:Z
 
     if-eqz p1, :cond_3
@@ -708,13 +659,11 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     :cond_3
     invoke-static {}, Landroid/telephony/CarrierConfigManager;->getDefaultConfig()Landroid/os/PersistableBundle;
 
     move-result-object p1
 
-    .line 389
     :cond_4
     invoke-virtual {p1}, Landroid/os/PersistableBundle;->keySet()Ljava/util/Set;
 
@@ -740,7 +689,6 @@
 
     const-string v2, "gps."
 
-    .line 390
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -749,22 +697,18 @@
 
     const/4 v2, 0x4
 
-    .line 392
     invoke-virtual {v1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 393
     invoke-virtual {v2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 394
     invoke-virtual {p1, v1}, Landroid/os/PersistableBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 395
     sget-boolean v3, Lcom/android/server/location/gnss/GnssConfiguration;->DEBUG:Z
 
     if-eqz v3, :cond_6
@@ -791,13 +735,11 @@
 
     invoke-static {p2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 396
     :cond_6
     instance-of v3, v1, Ljava/lang/String;
 
     if-eqz v3, :cond_7
 
-    .line 398
     iget-object v3, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     check-cast v1, Ljava/lang/String;
@@ -809,7 +751,6 @@
     :cond_7
     if-eqz v1, :cond_5
 
-    .line 400
     iget-object v3, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -827,7 +768,6 @@
 .method public final loadPropertiesFromGpsDebugConfig(Ljava/util/Properties;Ljava/lang/String;)V
     .locals 2
 
-    .line 408
     :try_start_0
     new-instance p0, Ljava/io/File;
 
@@ -837,7 +777,6 @@
 
     const/4 v0, 0x0
 
-    .line 411
     :try_start_1
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -845,13 +784,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 412
     :try_start_2
     invoke-virtual {p1, v1}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 414
     :try_start_3
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -870,12 +807,10 @@
     :goto_0
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 415
     throw p0
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 417
     :catch_0
     sget-boolean p0, Lcom/android/server/location/gnss/GnssConfiguration;->DEBUG:Z
 
@@ -911,7 +846,6 @@
 
     const/4 v1, -0x1
 
-    .line 268
     invoke-virtual {p0, v0, v1}, Lcom/android/server/location/gnss/GnssConfiguration;->reloadGpsProperties(ZI)V
 
     return-void
@@ -920,12 +854,10 @@
 .method public reloadGpsProperties(ZI)V
     .locals 2
 
-    .line 276
     sget-boolean v0, Lcom/android/server/location/gnss/GnssConfiguration;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 277
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -936,7 +868,6 @@
 
     iget-object v1, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
-    .line 278
     invoke-virtual {v1}, Ljava/util/Properties;->size()I
 
     move-result v1
@@ -961,14 +892,11 @@
 
     const-string v1, "GnssConfiguration"
 
-    .line 277
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/GnssConfiguration;->loadPropertiesFromCarrierConfig(ZI)V
 
-    .line 283
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/android/server/location/gnss/GnssConfiguration;->isSimAbsent(Landroid/content/Context;)Z
@@ -979,26 +907,22 @@
 
     const-string/jumbo p1, "persist.sys.gps.lpp"
 
-    .line 285
     invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 286
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-nez p2, :cond_1
 
-    .line 288
     iget-object p2, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     const-string v0, "LPP_PROFILE"
 
     invoke-virtual {p2, v0, p1}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 295
     :cond_1
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
@@ -1006,14 +930,12 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/GnssConfiguration;->loadPropertiesFromGpsDebugConfig(Ljava/util/Properties;Ljava/lang/String;)V
 
-    .line 296
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssConfiguration;->mProperties:Ljava/util/Properties;
 
     const-string p2, "/etc/gps_debug.conf"
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/GnssConfiguration;->loadPropertiesFromGpsDebugConfig(Ljava/util/Properties;Ljava/lang/String;)V
 
-    .line 297
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssConfiguration;->getRangeCheckedConfigEsExtensionSec()I
 
     move-result p1
@@ -1026,7 +948,6 @@
 .method public setEsExtensionSec()V
     .locals 3
 
-    .line 470
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssConfiguration;->getEsExtensionSecCSC()I
 
     move-result p0
@@ -1035,7 +956,6 @@
 
     return-void
 
-    .line 475
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1055,28 +975,24 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     invoke-static {}, Lcom/android/server/location/gnss/GnssConfiguration;->native_get_gnss_configuration_version()Lcom/android/server/location/gnss/GnssConfiguration$HalInterfaceVersion;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 480
     invoke-static {v0}, Lcom/android/server/location/gnss/GnssConfiguration;->isConfigEsExtensionSecSupported(Lcom/android/server/location/gnss/GnssConfiguration$HalInterfaceVersion;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 481
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssConfiguration;->native_set_es_extension_sec(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 482
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1100,7 +1016,6 @@
 .method public setSatelliteBlocklist([I[I)V
     .locals 0
 
-    .line 252
     invoke-static {p1, p2}, Lcom/android/server/location/gnss/GnssConfiguration;->native_set_satellite_blocklist([I[I)Z
 
     return-void

@@ -20,7 +20,6 @@
 .method public final get(Landroid/content/res/Resources;I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/autofill/FieldClassificationStrategy;->$r8$lambda$HsI6SEJ_0C7SHKGwX-GqOiDZB6I(Landroid/content/res/Resources;I)Ljava/lang/String;
 
     move-result-object p0

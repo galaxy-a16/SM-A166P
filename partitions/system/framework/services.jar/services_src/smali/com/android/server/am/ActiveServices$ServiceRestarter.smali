@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActiveServices;)V
     .locals 0
 
-    .line 4382
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$ServiceRestarter;->this$0:Lcom/android/server/am/ActiveServices;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ActiveServices;Lcom/android/server/am/ActiveServices$ServiceRestarter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/ActiveServices$ServiceRestarter;-><init>(Lcom/android/server/am/ActiveServices;)V
 
     return-void
@@ -38,7 +36,6 @@
 .method public run()V
     .locals 2
 
-    .line 4390
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceRestarter;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object v0, v0, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -47,7 +44,6 @@
 
     monitor-enter v0
 
-    .line 4391
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActiveServices$ServiceRestarter;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -55,7 +51,6 @@
 
     invoke-virtual {v1, p0}, Lcom/android/server/am/ActiveServices;->performServiceRestartLocked(Lcom/android/server/am/ServiceRecord;)V
 
-    .line 4392
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -80,7 +75,6 @@
 .method public setService(Lcom/android/server/am/ServiceRecord;)V
     .locals 0
 
-    .line 4386
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$ServiceRestarter;->mService:Lcom/android/server/am/ServiceRecord;
 
     return-void

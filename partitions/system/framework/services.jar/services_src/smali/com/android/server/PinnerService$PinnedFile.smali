@@ -20,19 +20,14 @@
 .method public constructor <init>(JILjava/lang/String;I)V
     .locals 0
 
-    .line 1150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1151
     iput-wide p1, p0, Lcom/android/server/PinnerService$PinnedFile;->mAddress:J
 
-    .line 1152
     iput p3, p0, Lcom/android/server/PinnerService$PinnedFile;->mapSize:I
 
-    .line 1153
     iput-object p4, p0, Lcom/android/server/PinnerService$PinnedFile;->fileName:Ljava/lang/String;
 
-    .line 1154
     iput p5, p0, Lcom/android/server/PinnerService$PinnedFile;->bytesPinned:I
 
     return-void
@@ -43,7 +38,6 @@
 .method public close()V
     .locals 4
 
-    .line 1159
     iget-wide v0, p0, Lcom/android/server/PinnerService$PinnedFile;->mAddress:J
 
     const-wide/16 v2, 0x0
@@ -52,7 +46,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 1160
     iget v2, p0, Lcom/android/server/PinnerService$PinnedFile;->mapSize:I
 
     int-to-long v2, v2
@@ -61,7 +54,6 @@
 
     const-wide/16 v0, -0x1
 
-    .line 1161
     iput-wide v0, p0, Lcom/android/server/PinnerService$PinnedFile;->mAddress:J
 
     :cond_0
@@ -71,7 +63,6 @@
 .method public finalize()V
     .locals 0
 
-    .line 1167
     invoke-virtual {p0}, Lcom/android/server/PinnerService$PinnedFile;->close()V
 
     return-void

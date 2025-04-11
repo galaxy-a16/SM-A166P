@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;)V
     .locals 0
 
-    .line 5912
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$13;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,14 +25,12 @@
 
     const-string p1, "InputManager"
 
-    .line 5915
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "com.samsung.android.intent.action.SET_INWATER_TOUCH"
 
-    .line 5916
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -45,21 +42,18 @@
 
     const/4 v2, 0x0
 
-    .line 5918
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
     const-string v3, "force"
 
-    .line 5919
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v2
 
     const-string/jumbo v3, "package"
 
-    .line 5920
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -68,12 +62,10 @@
 
     const/4 v5, 0x3
 
-    .line 5921
     invoke-virtual {p2, v4, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 5923
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,7 +89,6 @@
     :cond_0
     const-string/jumbo v0, "null"
 
-    .line 5924
     :goto_0
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,17 +96,14 @@
 
     move-result-object v0
 
-    .line 5923
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5926
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 5927
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$13;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {p0, v1, p2, v2, v3}, Lcom/android/server/input/InputManagerService;->setBlockDeviceMode(ZIZLjava/lang/String;)V
@@ -129,7 +117,6 @@
 
     const-string p2, "Could not set device block"
 
-    .line 5930
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1

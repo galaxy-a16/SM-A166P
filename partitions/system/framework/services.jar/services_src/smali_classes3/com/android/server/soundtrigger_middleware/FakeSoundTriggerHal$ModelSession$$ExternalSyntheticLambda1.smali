@@ -20,7 +20,6 @@
 .method public final acceptOrThrow(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/hardware/soundtrigger3/ISoundTriggerHwGlobalCallback;
 
     invoke-static {p1}, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$ModelSession;->$r8$lambda$A6SqYIXWEzvGH6XqZoMemVgxZ64(Landroid/hardware/soundtrigger3/ISoundTriggerHwGlobalCallback;)V

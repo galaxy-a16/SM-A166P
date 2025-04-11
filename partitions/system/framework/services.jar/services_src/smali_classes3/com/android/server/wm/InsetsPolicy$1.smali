@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/InsetsPolicy;)V
     .locals 0
 
-    .line 95
     iput-object p1, p0, Lcom/android/server/wm/InsetsPolicy$1;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public notifyInsetsControlChanged()V
     .locals 8
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy$1;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fgetmStateController(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/InsetsStateController;
 
     move-result-object v0
 
-    .line 101
     invoke-virtual {v0, p0}, Lcom/android/server/wm/InsetsStateController;->getControlsForDispatch(Lcom/android/server/wm/InsetsControlTarget;)[Landroid/view/InsetsSourceControl;
 
     move-result-object v0
@@ -43,7 +40,6 @@
 
     return-void
 
-    .line 105
     :cond_0
     array-length v1, v0
 
@@ -58,7 +54,6 @@
 
     aget-object v5, v0, v3
 
-    .line 106
     iget-object v6, p0, Lcom/android/server/wm/InsetsPolicy$1;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-virtual {v5}, Landroid/view/InsetsSourceControl;->getType()I
@@ -73,7 +68,6 @@
 
     goto :goto_3
 
-    .line 110
     :cond_1
     invoke-virtual {v5}, Landroid/view/InsetsSourceControl;->getLeash()Landroid/view/SurfaceControl;
 
@@ -81,7 +75,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 117
     invoke-virtual {v5}, Landroid/view/InsetsSourceControl;->getType()I
 
     move-result v4
@@ -103,7 +96,6 @@
     :cond_2
     move v4, v2
 
-    .line 118
     :goto_1
     iget-object v7, p0, Lcom/android/server/wm/InsetsPolicy$1;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
@@ -138,7 +130,6 @@
     :cond_5
     if-eqz v4, :cond_6
 
-    .line 122
     iget-object p0, p0, Lcom/android/server/wm/InsetsPolicy$1;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {p0}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayContent;

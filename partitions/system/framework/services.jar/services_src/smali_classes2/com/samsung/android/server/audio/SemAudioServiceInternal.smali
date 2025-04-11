@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;)V
     .locals 1
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -29,7 +27,6 @@
 .method public getAppDevice(I)I
     .locals 0
 
-    .line 94
     iget-object p0, p0, Lcom/samsung/android/server/audio/SemAudioServiceInternal;->mAudioService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -44,7 +41,6 @@
 
     return p0
 
-    .line 98
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/audio/AudioService;->getAppDevice(I)I
 
@@ -56,7 +52,6 @@
 .method public getUidListUsingAudio()Ljava/util/List;
     .locals 6
 
-    .line 48
     iget-object p0, p0, Lcom/samsung/android/server/audio/SemAudioServiceInternal;->mAudioService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,25 +62,21 @@
 
     if-nez p0, :cond_0
 
-    .line 50
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 53
     :cond_0
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 56
     invoke-virtual {p0}, Lcom/android/server/audio/AudioService;->getActivePlaybackConfigurationsInternal()Ljava/util/List;
 
     move-result-object v1
 
-    .line 58
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -108,14 +99,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 60
     invoke-virtual {v2}, Landroid/media/AudioPlaybackConfiguration;->getClientUid()I
 
     move-result v4
 
     if-le v4, v3, :cond_1
 
-    .line 62
     invoke-virtual {v2}, Landroid/media/AudioPlaybackConfiguration;->getPlayerType()I
 
     move-result v3
@@ -124,7 +113,6 @@
 
     if-eq v3, v5, :cond_2
 
-    .line 63
     invoke-virtual {v2}, Landroid/media/AudioPlaybackConfiguration;->getPlayerState()I
 
     move-result v2
@@ -133,7 +121,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 66
     :cond_2
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -143,13 +130,11 @@
 
     goto :goto_0
 
-    .line 72
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/audio/AudioService;->getActiveRecordingConfigurationsInternal()Ljava/util/List;
 
     move-result-object v1
 
-    .line 74
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -168,14 +153,12 @@
 
     check-cast v2, Landroid/media/AudioRecordingConfiguration;
 
-    .line 75
     invoke-virtual {v2}, Landroid/media/AudioRecordingConfiguration;->getClientUid()I
 
     move-result v2
 
     if-le v2, v3, :cond_4
 
-    .line 77
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -184,13 +167,11 @@
 
     goto :goto_1
 
-    .line 81
     :cond_5
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 82
     :cond_6
     :goto_2
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -199,7 +180,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 83
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -212,7 +192,6 @@
 
     const v3, 0x186a0
 
-    .line 84
     rem-int/2addr v2, v3
 
     invoke-virtual {p0, v2}, Lcom/android/server/audio/AudioService;->isUsingAudio(I)Z
@@ -221,12 +200,10 @@
 
     if-nez v2, :cond_6
 
-    .line 85
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_2
 
-    .line 89
     :cond_7
     new-instance p0, Ljava/util/ArrayList;
 

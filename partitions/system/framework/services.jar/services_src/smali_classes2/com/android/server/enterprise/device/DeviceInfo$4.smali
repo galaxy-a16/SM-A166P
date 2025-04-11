@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/device/DeviceInfo;)V
     .locals 0
 
-    .line 1012
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 3
 
-    .line 1014
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {v0}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fgetmDataUsageEventsHandler(Lcom/android/server/enterprise/device/DeviceInfo;)Landroid/os/Handler;
@@ -36,12 +34,10 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1015
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {v0}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$mupdateDataStatisticsUsage(Lcom/android/server/enterprise/device/DeviceInfo;)J
 
-    .line 1016
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {v0}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fgetmDataUsageTimerActivated(Lcom/android/server/enterprise/device/DeviceInfo;)Z
@@ -50,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1017
     iget-object v0, p0, Lcom/android/server/enterprise/device/DeviceInfo$4;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {v0}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fgetmDataUsageEventsHandler(Lcom/android/server/enterprise/device/DeviceInfo;)Landroid/os/Handler;

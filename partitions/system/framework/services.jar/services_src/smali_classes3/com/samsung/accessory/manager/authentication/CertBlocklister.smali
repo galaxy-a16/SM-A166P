@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$sfgetmCertBlocklistListener()Lcom/samsung/accessory/manager/authentication/CertBlocklister$CertBlocklistListener;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->mCertBlocklistListener:Lcom/samsung/accessory/manager/authentication/CertBlocklister$CertBlocklistListener;
 
     return-object v0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$sfputmIsBlocked(Z)V
     .locals 0
 
-    .line 0
     sput-boolean p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->mIsBlocked:Z
 
     return-void
@@ -39,14 +37,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 36
     invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->DBG:Z
 
-    .line 40
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +65,6 @@
 
     sput-object v0, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->BLOCKLIST_ROOT:Ljava/lang/String;
 
-    .line 42
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +83,6 @@
 
     const/4 v0, 0x0
 
-    .line 54
     sput-boolean v0, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->mIsBlocked:Z
 
     return-void
@@ -97,10 +91,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 210
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 211
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -115,7 +107,6 @@
 .method public final buildAuthenticationSettingObserver(Landroid/content/ContentResolver;)Lcom/samsung/accessory/manager/authentication/CertBlocklister$AuthenticationSettingObserver;
     .locals 1
 
-    .line 222
     new-instance p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$AuthenticationSettingObserver;
 
     const-string v0, "cover_authentication_blocked"
@@ -128,7 +119,6 @@
 .method public final buildPubkeyObserver(Landroid/content/ContentResolver;)Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;
     .locals 3
 
-    .line 215
     new-instance p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;
 
     const-string/jumbo v0, "pubkey"
@@ -145,7 +135,6 @@
 .method public isAuthenticationBlocked()Z
     .locals 0
 
-    .line 67
     sget-boolean p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->mIsBlocked:Z
 
     return p0
@@ -154,7 +143,6 @@
 .method public isThisKeyBlocklisted(Ljava/lang/String;)Z
     .locals 0
 
-    .line 71
     sget-object p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->mBlocklistObserver:Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;
 
     invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->isThisKeyBlocklisted(Ljava/lang/String;)Z
@@ -167,7 +155,6 @@
 .method public readFile()V
     .locals 0
 
-    .line 75
     sget-object p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->mBlocklistObserver:Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;
 
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->readFile()V
@@ -178,7 +165,6 @@
 .method public final registerObservers(Landroid/content/ContentResolver;)V
     .locals 3
 
-    .line 227
     invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->buildPubkeyObserver(Landroid/content/ContentResolver;)Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;
 
     move-result-object v0
@@ -187,7 +173,6 @@
 
     const-string v0, "cover_pubkey_blocklist"
 
-    .line 229
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -196,22 +181,18 @@
 
     const/4 v2, 0x1
 
-    .line 228
     invoke-virtual {p1, v0, v2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     const-string v0, "cover_authentication_blocked"
 
-    .line 235
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 237
     invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->buildAuthenticationSettingObserver(Landroid/content/ContentResolver;)Lcom/samsung/accessory/manager/authentication/CertBlocklister$AuthenticationSettingObserver;
 
     move-result-object p0
 
-    .line 234
     invoke-virtual {p1, v0, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     return-void
@@ -220,7 +201,6 @@
 .method public setCertBlocklistListener(Lcom/samsung/accessory/manager/authentication/CertBlocklister$CertBlocklistListener;)V
     .locals 0
 
-    .line 62
     sput-object p1, Lcom/samsung/accessory/manager/authentication/CertBlocklister;->mCertBlocklistListener:Lcom/samsung/accessory/manager/authentication/CertBlocklister$CertBlocklistListener;
 
     return-void

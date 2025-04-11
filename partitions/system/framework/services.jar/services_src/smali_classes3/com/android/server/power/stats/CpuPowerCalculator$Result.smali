@@ -29,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/CpuPowerCalculator$Result-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/power/stats/CpuPowerCalculator$Result;-><init>()V
 
     return-void

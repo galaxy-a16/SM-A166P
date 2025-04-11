@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 0
 
-    .line 312
     iput-object p1, p0, Lcom/android/server/tare/InternalResourceService$3;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onUsageEvent(ILandroid/app/usage/UsageEvents$Event;)V
     .locals 2
 
-    .line 318
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$3;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {p0}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fgetmHandler(Lcom/android/server/tare/InternalResourceService;)Landroid/os/Handler;
@@ -42,7 +40,6 @@
 
     move-result-object p0
 
-    .line 319
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     iput-object p1, p0, Lcom/android/server/am/DataConnectionStats$PhoneStateListenerExecutor;->mHandler:Landroid/os/Handler;
 
     return-void
@@ -28,7 +26,6 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/am/DataConnectionStats$PhoneStateListenerExecutor;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -39,7 +36,6 @@
 
     return-void
 
-    .line 159
     :cond_0
     new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
 

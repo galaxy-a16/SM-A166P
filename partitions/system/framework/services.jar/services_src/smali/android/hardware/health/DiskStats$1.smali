@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/health/DiskStats;
     .locals 0
 
-    .line 23
     new-instance p0, Landroid/hardware/health/DiskStats;
 
     invoke-direct {p0}, Landroid/hardware/health/DiskStats;-><init>()V
 
-    .line 24
     invoke-virtual {p0, p1}, Landroid/hardware/health/DiskStats;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 20
     invoke-virtual {p0, p1}, Landroid/hardware/health/DiskStats$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/health/DiskStats;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/health/DiskStats;
     .locals 0
 
-    .line 29
     new-array p0, p1, [Landroid/hardware/health/DiskStats;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 20
     invoke-virtual {p0, p1}, Landroid/hardware/health/DiskStats$1;->newArray(I)[Landroid/hardware/health/DiskStats;
 
     move-result-object p0

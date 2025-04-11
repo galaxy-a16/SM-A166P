@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;)V
     .locals 0
 
-    .line 310
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onSysUiDismissed()V
     .locals 0
 
-    .line 313
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AcquisitionClient;->onUserCanceled()V
@@ -56,7 +54,6 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 321
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;
 
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isKeyguard()Z
@@ -65,21 +62,18 @@
 
     if-eqz p1, :cond_1
 
-    .line 322
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;
 
     const/16 p2, 0x8
 
     invoke-static {p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->-$$Nest$fputmErrorEscrow(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;I)V
 
-    .line 323
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;
 
     const/16 p2, 0x1388
 
     invoke-static {p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->-$$Nest$fputmVendorErrorEscrow(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;I)V
 
-    .line 325
     :cond_1
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;
 
@@ -89,14 +83,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 326
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->cancel()V
 
     goto :goto_1
 
-    .line 328
     :cond_2
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;
 

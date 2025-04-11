@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/internal/os/ProcessCpuTracker$Stats;
 
     invoke-static {p1}, Lcom/android/server/am/AppProfiler;->$r8$lambda$Xzn48QLsLJH66nNdJ7JNrH-U6A8(Lcom/android/internal/os/ProcessCpuTracker$Stats;)Z

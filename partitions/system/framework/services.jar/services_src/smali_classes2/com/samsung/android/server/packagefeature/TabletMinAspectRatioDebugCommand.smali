@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 137
     invoke-direct {p0}, Lcom/samsung/android/server/packagefeature/MinAspectRatioDebugCommand;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public adjustExtra(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p2, :cond_0
 
     goto :goto_0

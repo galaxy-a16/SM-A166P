@@ -23,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/smartclip/SpenGestureManagerService$PenDetectionInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/smartclip/SpenGestureManagerService$PenDetectionInfo;-><init>()V
 
     return-void

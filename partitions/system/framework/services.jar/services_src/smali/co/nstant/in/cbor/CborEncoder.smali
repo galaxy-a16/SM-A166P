@@ -25,62 +25,52 @@
 .method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 1
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     new-instance v0, Lco/nstant/in/cbor/encoder/UnsignedIntegerEncoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/encoder/UnsignedIntegerEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborEncoder;->unsignedIntegerEncoder:Lco/nstant/in/cbor/encoder/UnsignedIntegerEncoder;
 
-    .line 47
     new-instance v0, Lco/nstant/in/cbor/encoder/NegativeIntegerEncoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/encoder/NegativeIntegerEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborEncoder;->negativeIntegerEncoder:Lco/nstant/in/cbor/encoder/NegativeIntegerEncoder;
 
-    .line 48
     new-instance v0, Lco/nstant/in/cbor/encoder/ByteStringEncoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/encoder/ByteStringEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborEncoder;->byteStringEncoder:Lco/nstant/in/cbor/encoder/ByteStringEncoder;
 
-    .line 49
     new-instance v0, Lco/nstant/in/cbor/encoder/UnicodeStringEncoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/encoder/UnicodeStringEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborEncoder;->unicodeStringEncoder:Lco/nstant/in/cbor/encoder/UnicodeStringEncoder;
 
-    .line 50
     new-instance v0, Lco/nstant/in/cbor/encoder/ArrayEncoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/encoder/ArrayEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborEncoder;->arrayEncoder:Lco/nstant/in/cbor/encoder/ArrayEncoder;
 
-    .line 51
     new-instance v0, Lco/nstant/in/cbor/encoder/MapEncoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/encoder/MapEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborEncoder;->mapEncoder:Lco/nstant/in/cbor/encoder/MapEncoder;
 
-    .line 52
     new-instance v0, Lco/nstant/in/cbor/encoder/TagEncoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/encoder/TagEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lco/nstant/in/cbor/CborEncoder;->tagEncoder:Lco/nstant/in/cbor/encoder/TagEncoder;
 
-    .line 53
     new-instance v0, Lco/nstant/in/cbor/encoder/SpecialEncoder;
 
     invoke-direct {v0, p0, p1}, Lco/nstant/in/cbor/encoder/SpecialEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
@@ -97,10 +87,8 @@
 
     if-nez p1, :cond_0
 
-    .line 83
     sget-object p1, Lco/nstant/in/cbor/model/SimpleValue;->NULL:Lco/nstant/in/cbor/model/SimpleValue;
 
-    .line 86
     :cond_0
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/DataItem;->hasTag()Z
 
@@ -108,17 +96,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 87
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/DataItem;->getTag()Lco/nstant/in/cbor/model/Tag;
 
     move-result-object v0
 
-    .line 88
     iget-object v1, p0, Lco/nstant/in/cbor/CborEncoder;->tagEncoder:Lco/nstant/in/cbor/encoder/TagEncoder;
 
     invoke-virtual {v1, v0}, Lco/nstant/in/cbor/encoder/TagEncoder;->encode(Lco/nstant/in/cbor/model/Tag;)V
 
-    .line 91
     :cond_1
     sget-object v0, Lco/nstant/in/cbor/CborEncoder$1;->$SwitchMap$co$nstant$in$cbor$model$MajorType:[I
 
@@ -134,7 +119,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 117
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
     const-string p1, "Unknown major type"
@@ -143,7 +127,6 @@
 
     throw p0
 
-    .line 114
     :pswitch_0
     iget-object p0, p0, Lco/nstant/in/cbor/CborEncoder;->tagEncoder:Lco/nstant/in/cbor/encoder/TagEncoder;
 
@@ -153,7 +136,6 @@
 
     goto :goto_0
 
-    .line 111
     :pswitch_1
     iget-object p0, p0, Lco/nstant/in/cbor/CborEncoder;->specialEncoder:Lco/nstant/in/cbor/encoder/SpecialEncoder;
 
@@ -163,7 +145,6 @@
 
     goto :goto_0
 
-    .line 108
     :pswitch_2
     iget-object p0, p0, Lco/nstant/in/cbor/CborEncoder;->mapEncoder:Lco/nstant/in/cbor/encoder/MapEncoder;
 
@@ -173,7 +154,6 @@
 
     goto :goto_0
 
-    .line 105
     :pswitch_3
     iget-object p0, p0, Lco/nstant/in/cbor/CborEncoder;->arrayEncoder:Lco/nstant/in/cbor/encoder/ArrayEncoder;
 
@@ -183,7 +163,6 @@
 
     goto :goto_0
 
-    .line 102
     :pswitch_4
     iget-object p0, p0, Lco/nstant/in/cbor/CborEncoder;->unicodeStringEncoder:Lco/nstant/in/cbor/encoder/UnicodeStringEncoder;
 
@@ -193,7 +172,6 @@
 
     goto :goto_0
 
-    .line 99
     :pswitch_5
     iget-object p0, p0, Lco/nstant/in/cbor/CborEncoder;->byteStringEncoder:Lco/nstant/in/cbor/encoder/ByteStringEncoder;
 
@@ -203,7 +181,6 @@
 
     goto :goto_0
 
-    .line 96
     :pswitch_6
     iget-object p0, p0, Lco/nstant/in/cbor/CborEncoder;->negativeIntegerEncoder:Lco/nstant/in/cbor/encoder/NegativeIntegerEncoder;
 
@@ -213,7 +190,6 @@
 
     goto :goto_0
 
-    .line 93
     :pswitch_7
     iget-object p0, p0, Lco/nstant/in/cbor/CborEncoder;->unsignedIntegerEncoder:Lco/nstant/in/cbor/encoder/UnsignedIntegerEncoder;
 

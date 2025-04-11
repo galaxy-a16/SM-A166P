@@ -30,7 +30,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCollector(Lcom/android/server/chimera/psitracker/PSITracker;)Lcom/android/server/chimera/psitracker/PSITrackerCollector;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mCollector:Lcom/android/server/chimera/psitracker/PSITrackerCollector;
 
     return-object p0
@@ -39,7 +38,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/chimera/psitracker/PSITracker;)Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mHandler:Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;
 
     return-object p0
@@ -48,7 +46,6 @@
 .method public static bridge synthetic -$$Nest$mrecord240MinutesAvailMem(Lcom/android/server/chimera/psitracker/PSITracker;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/chimera/psitracker/PSITracker;->record240MinutesAvailMem()V
 
     return-void
@@ -57,30 +54,24 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepository;Landroid/content/Context;Landroid/os/Looper;)V
     .locals 1
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     new-instance v0, Lcom/android/server/chimera/psitracker/PSITracker$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/chimera/psitracker/PSITracker$1;-><init>(Lcom/android/server/chimera/psitracker/PSITracker;)V
 
     iput-object v0, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mAvailMemRecord240AlarmListener:Landroid/app/AlarmManager$OnAlarmListener;
 
-    .line 55
     iput-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
-    .line 56
     iput-object p2, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mContext:Landroid/content/Context;
 
-    .line 58
     new-instance p1, Lcom/android/server/chimera/psitracker/PSITrackerCollector;
 
     iget-object p2, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mContext:Landroid/content/Context;
@@ -89,12 +80,10 @@
 
     iput-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mCollector:Lcom/android/server/chimera/psitracker/PSITrackerCollector;
 
-    .line 59
     iget-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/android/server/chimera/psitracker/PSIDBManager;->init(Landroid/content/Context;)V
 
-    .line 60
     new-instance p1, Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;
 
     invoke-direct {p1, p0, p3}, Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;-><init>(Lcom/android/server/chimera/psitracker/PSITracker;Landroid/os/Looper;)V
@@ -107,7 +96,6 @@
 .method public static isSystemApp(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x2710
 
     if-ge p0, v0, :cond_2
@@ -150,7 +138,6 @@
 
     move-object/from16 v0, p2
 
-    .line 328
     array-length v1, v0
 
     const/4 v2, 0x3
@@ -159,17 +146,14 @@
 
     const/4 v1, 0x1
 
-    .line 329
     aget-object v1, v0, v1
 
     const/4 v2, 0x2
 
-    .line 330
     aget-object v0, v0, v2
 
     const-string v2, "0"
 
-    .line 331
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -184,7 +168,6 @@
 
     goto :goto_0
 
-    .line 335
     :cond_0
     :try_start_0
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -214,7 +197,6 @@
 
     move-object/from16 v10, p1
 
-    .line 337
     invoke-virtual/range {v9 .. v14}, Lcom/android/server/chimera/psitracker/PSITracker;->getPSIValueListDump(Ljava/io/PrintWriter;JJ)V
 
     goto :goto_1
@@ -229,7 +211,6 @@
 
     move-object/from16 v1, p1
 
-    .line 332
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/chimera/psitracker/PSITracker;->getPSIValueListDump(Ljava/io/PrintWriter;JJ)V
 
     goto :goto_1
@@ -243,7 +224,6 @@
 
     move-object/from16 v7, p1
 
-    .line 341
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/chimera/psitracker/PSITracker;->getPSIValueListDump(Ljava/io/PrintWriter;JJ)V
 
     :goto_1
@@ -259,39 +239,32 @@
 
     move-wide/from16 v3, p3
 
-    .line 155
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 156
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 157
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 158
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 159
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 161
     invoke-static {}, Lcom/android/server/chimera/psitracker/PSIDBManager;->getInstance()Lcom/android/server/chimera/psitracker/PSIDBManager;
 
     move-result-object v10
 
     iput-object v10, v0, Lcom/android/server/chimera/psitracker/PSITracker;->db:Lcom/android/server/chimera/psitracker/PSIDBManager;
 
-    .line 164
     invoke-virtual {v10}, Lcom/android/server/chimera/psitracker/PSIDBManager;->isDBClosed()Z
 
     move-result v10
@@ -302,7 +275,6 @@
 
     const-string v11, "getAvailableMemInfo failed! db is closed!"
 
-    .line 165
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -322,7 +294,6 @@
 
     goto :goto_0
 
-    .line 181
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -344,7 +315,6 @@
 
     goto :goto_1
 
-    .line 170
     :cond_2
     :goto_0
     new-instance v10, Ljava/lang/StringBuilder;
@@ -380,7 +350,6 @@
     :goto_1
     const/4 v2, 0x0
 
-    .line 192
     :try_start_0
     iget-object v0, v0, Lcom/android/server/chimera/psitracker/PSITracker;->db:Lcom/android/server/chimera/psitracker/PSIDBManager;
 
@@ -392,40 +361,34 @@
 
     const-string v0, "id"
 
-    .line 195
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "availMem"
 
-    .line 196
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
     const-string/jumbo v3, "running"
 
-    .line 197
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
     const-string v4, "cached"
 
-    .line 198
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
     const-string v10, "checkTime"
 
-    .line 199
     invoke-interface {v2, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 201
     :goto_2
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -433,7 +396,6 @@
 
     if-eqz v11, :cond_3
 
-    .line 202
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v11
@@ -444,7 +406,6 @@
 
     invoke-interface {v5, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 203
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v11
@@ -455,7 +416,6 @@
 
     invoke-interface {v6, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 204
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v11
@@ -466,7 +426,6 @@
 
     invoke-interface {v7, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 205
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v11
@@ -477,7 +436,6 @@
 
     invoke-interface {v8, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 206
     invoke-interface {v2, v10}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v11
@@ -506,7 +464,6 @@
     :catch_0
     move-exception v0
 
-    .line 210
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
@@ -514,11 +471,9 @@
 
     if-eqz v2, :cond_4
 
-    .line 213
     :goto_3
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 217
     :cond_4
     new-instance v0, Ljava/util/ArrayList;
 
@@ -526,7 +481,6 @@
 
     const/4 v1, 0x0
 
-    .line 218
     :goto_4
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -534,7 +488,6 @@
 
     if-ge v1, v2, :cond_5
 
-    .line 219
     new-instance v2, Lcom/samsung/android/chimera/PSIAvailableMem;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -581,7 +534,6 @@
 
     invoke-direct/range {v10 .. v18}, Lcom/samsung/android/chimera/PSIAvailableMem;-><init>(JJJJ)V
 
-    .line 220
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v1, v1, 0x1
@@ -594,10 +546,8 @@
     :goto_5
     if-eqz v2, :cond_6
 
-    .line 213
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 215
     :cond_6
     throw v0
 .end method
@@ -605,39 +555,32 @@
 .method public getPSIValueListDump(Ljava/io/PrintWriter;JJ)V
     .locals 10
 
-    .line 261
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 262
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 263
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 264
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 265
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 267
     invoke-static {}, Lcom/android/server/chimera/psitracker/PSIDBManager;->getInstance()Lcom/android/server/chimera/psitracker/PSIDBManager;
 
     move-result-object v5
 
     iput-object v5, p0, Lcom/android/server/chimera/psitracker/PSITracker;->db:Lcom/android/server/chimera/psitracker/PSIDBManager;
 
-    .line 270
     invoke-virtual {v5}, Lcom/android/server/chimera/psitracker/PSIDBManager;->isDBClosed()Z
 
     move-result v5
@@ -648,7 +591,6 @@
 
     const-string p1, "getPSI failed! db is closed!"
 
-    .line 271
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -670,7 +612,6 @@
 
     goto :goto_0
 
-    .line 288
     :cond_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -692,7 +633,6 @@
 
     goto :goto_1
 
-    .line 277
     :cond_2
     :goto_0
     new-instance v5, Ljava/lang/StringBuilder;
@@ -728,7 +668,6 @@
     :goto_1
     const/4 p3, 0x0
 
-    .line 298
     :try_start_0
     iget-object p0, p0, Lcom/android/server/chimera/psitracker/PSITracker;->db:Lcom/android/server/chimera/psitracker/PSIDBManager;
 
@@ -740,40 +679,34 @@
 
     const-string p0, "id"
 
-    .line 301
     invoke-interface {p3, p0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p0
 
     const-string p2, "availMem"
 
-    .line 302
     invoke-interface {p3, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p2
 
     const-string/jumbo p4, "running"
 
-    .line 303
     invoke-interface {p3, p4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p4
 
     const-string p5, "cached"
 
-    .line 304
     invoke-interface {p3, p5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p5
 
     const-string v5, "checkTime"
 
-    .line 305
     invoke-interface {p3, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 307
     :goto_2
     invoke-interface {p3}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -781,7 +714,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 308
     invoke-interface {p3, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v6
@@ -792,7 +724,6 @@
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 309
     invoke-interface {p3, p2}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v6
@@ -803,7 +734,6 @@
 
     invoke-interface {v1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 310
     invoke-interface {p3, p4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v6
@@ -814,7 +744,6 @@
 
     invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 311
     invoke-interface {p3, p5}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v6
@@ -825,7 +754,6 @@
 
     invoke-interface {v3, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 312
     invoke-interface {p3, v5}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v6
@@ -854,7 +782,6 @@
     :catch_0
     move-exception p0
 
-    .line 316
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
@@ -862,14 +789,12 @@
 
     if-eqz p3, :cond_4
 
-    .line 319
     :goto_3
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
     :cond_4
     const/4 p0, 0x0
 
-    .line 322
     :goto_4
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -877,7 +802,6 @@
 
     if-ge p0, p2, :cond_5
 
-    .line 323
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -948,10 +872,8 @@
     :goto_5
     if-eqz p3, :cond_6
 
-    .line 319
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 321
     :cond_6
     throw p0
 .end method
@@ -959,12 +881,10 @@
 .method public onTimeOrTimeZoneChanged(Ljava/lang/String;)V
     .locals 3
 
-    .line 228
     sget-boolean v0, Lcom/android/server/chimera/psitracker/PSITracker;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 229
     iget-object v0, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -988,7 +908,6 @@
     :cond_0
     const-string p1, "TIME_CHANGED"
 
-    .line 231
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/psitracker/PSITracker;->scheduleAvailMem240PeriodRecord(Ljava/lang/String;)V
 
     return-void
@@ -997,7 +916,6 @@
 .method public final record240MinutesAvailMem()V
     .locals 13
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v0}, Lcom/android/server/chimera/SystemRepository;->getMemoryInfo()Landroid/app/ActivityManager$MemoryInfo;
@@ -1006,7 +924,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 115
     :try_start_0
     iget-object v3, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -1014,7 +931,6 @@
 
     move-result-object v3
 
-    .line 116
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1038,14 +954,12 @@
 
     check-cast v6, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;
 
-    .line 117
     iget v7, v6, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->importance:I
 
     const/16 v8, 0x190
 
     if-lt v7, v8, :cond_1
 
-    .line 118
     iget-object v7, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v6, v6, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
@@ -1058,7 +972,6 @@
 
     goto :goto_0
 
-    .line 121
     :cond_1
     iget v7, v6, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
 
@@ -1068,7 +981,6 @@
 
     if-nez v7, :cond_0
 
-    .line 122
     iget-object v7, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v6, v6, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
@@ -1093,7 +1005,6 @@
 
     move-wide v4, v1
 
-    .line 127
     :goto_1
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1102,19 +1013,16 @@
 
     move-wide v9, v4
 
-    .line 130
     iget-wide v1, v0, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
     const-wide/16 v3, 0x400
 
     div-long v7, v1, v3
 
-    .line 133
     sget-boolean v1, Lcom/android/server/chimera/psitracker/PSITracker;->DEBUG:Z
 
     if-eqz v1, :cond_3
 
-    .line 134
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1156,7 +1064,6 @@
     :cond_3
     move-object v6, p0
 
-    .line 141
     invoke-virtual/range {v6 .. v12}, Lcom/android/server/chimera/psitracker/PSITracker;->recordAvailableMemValue(JJJ)V
 
     return-void
@@ -1165,12 +1072,10 @@
 .method public final recordAvailableMemValue(JJJ)V
     .locals 9
 
-    .line 94
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mCollector:Lcom/android/server/chimera/psitracker/PSITrackerCollector;
 
     move-wide v1, p1
@@ -1185,12 +1090,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 98
     iget-object p2, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mCollector:Lcom/android/server/chimera/psitracker/PSITrackerCollector;
 
     invoke-virtual {p2, p1}, Lcom/android/server/chimera/psitracker/PSITrackerCollector;->saveAvailableMemRecord(Lcom/android/server/chimera/psitracker/PSIAvailableMemRecord;)V
 
-    .line 102
     :cond_0
     iget-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mCollector:Lcom/android/server/chimera/psitracker/PSITrackerCollector;
 
@@ -1200,7 +1103,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 103
     iget-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mHandler:Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;
 
     const/4 p2, 0x2
@@ -1209,7 +1111,6 @@
 
     move-result-object p1
 
-    .line 104
     iget-object p0, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mHandler:Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -1221,24 +1122,20 @@
 .method public scheduleAvailMem240PeriodRecord(Ljava/lang/String;)V
     .locals 8
 
-    .line 77
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 78
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 81
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    .line 84
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -1249,7 +1146,6 @@
 
     invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 85
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1268,7 +1164,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1295,7 +1190,6 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     iget-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mContext:Landroid/content/Context;
 
     const-string v1, "alarm"
@@ -1308,14 +1202,12 @@
 
     check-cast v1, Landroid/app/AlarmManager;
 
-    .line 89
     iget-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker;->mAvailMemRecord240AlarmListener:Landroid/app/AlarmManager$OnAlarmListener;
 
     invoke-virtual {v1, p1}, Landroid/app/AlarmManager;->cancel(Landroid/app/AlarmManager$OnAlarmListener;)V
 
     const/4 v2, 0x1
 
-    .line 90
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v3

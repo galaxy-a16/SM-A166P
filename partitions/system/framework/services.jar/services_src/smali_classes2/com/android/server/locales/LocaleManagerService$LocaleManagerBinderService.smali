@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/locales/LocaleManagerService;)V
     .locals 0
 
-    .line 187
     iput-object p1, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     invoke-direct {p0}, Landroid/app/ILocaleManager$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/locales/LocaleManagerService;Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService;-><init>(Lcom/android/server/locales/LocaleManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public getApplicationLocales(Ljava/lang/String;I)Landroid/os/LocaleList;
     .locals 0
 
-    .line 202
     iget-object p0, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/locales/LocaleManagerService;->getApplicationLocales(Ljava/lang/String;I)Landroid/os/LocaleList;
@@ -46,7 +43,6 @@
 .method public getOverrideLocaleConfig(Ljava/lang/String;I)Landroid/app/LocaleConfig;
     .locals 0
 
-    .line 221
     iget-object p0, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/locales/LocaleManagerService;->getOverrideLocaleConfig(Ljava/lang/String;I)Landroid/app/LocaleConfig;
@@ -59,7 +55,6 @@
 .method public getSystemLocales()Landroid/os/LocaleList;
     .locals 0
 
-    .line 208
     iget-object p0, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/locales/LocaleManagerService;->getSystemLocales()Landroid/os/LocaleList;
@@ -72,7 +67,6 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 8
 
-    .line 228
     new-instance v0, Lcom/android/server/locales/LocaleManagerShellCommand;
 
     iget-object v1, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService;->this$0:Lcom/android/server/locales/LocaleManagerService;
@@ -97,7 +91,6 @@
 
     move-object v7, p6
 
-    .line 229
     invoke-virtual/range {v0 .. v7}, Landroid/os/ShellCommand;->exec(Landroid/os/Binder;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)I
 
     return-void
@@ -118,7 +111,6 @@
     :goto_0
     move v6, v0
 
-    .line 194
     iget-object v1, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     move-object v2, p1
@@ -137,7 +129,6 @@
 .method public setOverrideLocaleConfig(Ljava/lang/String;ILandroid/app/LocaleConfig;)V
     .locals 0
 
-    .line 214
     iget-object p0, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerBinderService;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/locales/LocaleManagerService;->setOverrideLocaleConfig(Ljava/lang/String;ILandroid/app/LocaleConfig;)V

@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 611
     invoke-static {}, Landroid/sysprop/HdmiProperties$cec_device_types_values;->values()[Landroid/sysprop/HdmiProperties$cec_device_types_values;
 
     move-result-object v0

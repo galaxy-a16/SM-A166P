@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbUI;)V
     .locals 0
 
-    .line 280
     iput-object p1, p0, Lcom/android/server/usb/UsbUI$5;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 283
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,7 +49,6 @@
 
     const/4 v1, 0x0
 
-    .line 285
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -62,17 +59,14 @@
 
     const-string p1, "EmergencyMode enabled"
 
-    .line 287
     invoke-static {v0, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$5;->this$0:Lcom/android/server/usb/UsbUI;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/usb/UsbUI;->-$$Nest$fputmIsEmergencyMode(Lcom/android/server/usb/UsbUI;Z)V
 
-    .line 289
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$5;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmSourcePower(Lcom/android/server/usb/UsbUI;)Z
@@ -97,7 +91,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 290
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/UsbUI$5;->this$0:Lcom/android/server/usb/UsbUI;
 
@@ -112,15 +105,12 @@
 
     const-string p1, "EmergencyMode disabled"
 
-    .line 293
     invoke-static {v0, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$5;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p1, v1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fputmIsEmergencyMode(Lcom/android/server/usb/UsbUI;Z)V
 
-    .line 295
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$5;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmSourcePower(Lcom/android/server/usb/UsbUI;)Z
@@ -145,7 +135,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 296
     :cond_2
     iget-object p0, p0, Lcom/android/server/usb/UsbUI$5;->this$0:Lcom/android/server/usb/UsbUI;
 

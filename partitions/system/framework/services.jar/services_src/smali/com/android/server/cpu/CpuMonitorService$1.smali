@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/cpu/CpuMonitorService;)V
     .locals 0
 
-    .line 105
     iput-object p1, p0, Lcom/android/server/cpu/CpuMonitorService$1;->this$0:Lcom/android/server/cpu/CpuMonitorService;
 
     invoke-direct {p0}, Lcom/android/server/cpu/CpuMonitorInternal;-><init>()V

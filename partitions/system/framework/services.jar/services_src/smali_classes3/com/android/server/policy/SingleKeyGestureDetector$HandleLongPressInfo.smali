@@ -13,15 +13,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 973
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 970
     iput v0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mKeyCode:I
 
-    .line 971
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
@@ -38,7 +35,6 @@
 .method public addInfo(II)V
     .locals 2
 
-    .line 977
     invoke-virtual {p0}, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->isEmpty()Z
 
     move-result v0
@@ -59,11 +55,9 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 978
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->reset()V
 
-    .line 980
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -89,10 +83,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 981
     iput p1, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mKeyCode:I
 
-    .line 982
     iget-object p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mTypeList:Ljava/util/ArrayList;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -107,7 +99,6 @@
 .method public equals(I)Z
     .locals 0
 
-    .line 990
     iget p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mKeyCode:I
 
     if-ne p1, p0, :cond_0
@@ -126,7 +117,6 @@
 .method public final getTypeSize()I
     .locals 0
 
-    .line 998
     iget-object p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mTypeList:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -139,7 +129,6 @@
 .method public hasInfo(I)Z
     .locals 0
 
-    .line 986
     invoke-virtual {p0, p1}, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->equals(I)Z
 
     move-result p1
@@ -166,7 +155,6 @@
 .method public initIfNeeded(I)V
     .locals 1
 
-    .line 1008
     invoke-virtual {p0, p1}, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->equals(I)Z
 
     move-result p1
@@ -180,10 +168,8 @@
 
     const-string v0, "init HandleLongPressInfo"
 
-    .line 1011
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1012
     invoke-virtual {p0}, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->reset()V
 
     return-void
@@ -192,7 +178,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 994
     iget v0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mKeyCode:I
 
     if-nez v0, :cond_0
@@ -219,7 +204,6 @@
 .method public reset()V
     .locals 2
 
-    .line 1002
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,10 +230,8 @@
 
     const/4 v0, 0x0
 
-    .line 1003
     iput v0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mKeyCode:I
 
-    .line 1004
     iget-object p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mTypeList:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -260,7 +242,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1017
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -283,7 +264,6 @@
 
     iget-object p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$HandleLongPressInfo;->mTypeList:Ljava/util/ArrayList;
 
-    .line 1018
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p0

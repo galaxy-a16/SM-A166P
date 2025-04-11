@@ -11,10 +11,8 @@
 .method public constructor <init>([B)V
     .locals 0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/locksettings/SP800Derive;->mKeyBytes:[B
 
     return-void
@@ -25,7 +23,6 @@
 
     const/4 v0, 0x4
 
-    .line 54
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -51,12 +48,10 @@
     :try_start_0
     const-string v0, "HmacSHA256"
 
-    .line 45
     invoke-static {v0}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
 
     move-result-object v0
 
-    .line 46
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
     iget-object p0, p0, Lcom/android/server/locksettings/SP800Derive;->mKeyBytes:[B
@@ -77,7 +72,6 @@
     :catch_0
     move-exception p0
 
-    .line 49
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -88,28 +82,22 @@
 .method public withContext([B[B)[B
     .locals 1
 
-    .line 72
     invoke-virtual {p0}, Lcom/android/server/locksettings/SP800Derive;->getMac()Ljavax/crypto/Mac;
 
     move-result-object p0
 
     const/4 v0, 0x1
 
-    .line 74
     invoke-static {p0, v0}, Lcom/android/server/locksettings/SP800Derive;->update32(Ljavax/crypto/Mac;I)V
 
-    .line 75
     invoke-virtual {p0, p1}, Ljavax/crypto/Mac;->update([B)V
 
     const/4 p1, 0x0
 
-    .line 76
     invoke-virtual {p0, p1}, Ljavax/crypto/Mac;->update(B)V
 
-    .line 77
     invoke-virtual {p0, p2}, Ljavax/crypto/Mac;->update([B)V
 
-    .line 78
     array-length p1, p2
 
     mul-int/lit8 p1, p1, 0x8
@@ -118,10 +106,8 @@
 
     const/16 p1, 0x100
 
-    .line 79
     invoke-static {p0, p1}, Lcom/android/server/locksettings/SP800Derive;->update32(Ljavax/crypto/Mac;I)V
 
-    .line 80
     invoke-virtual {p0}, Ljavax/crypto/Mac;->doFinal()[B
 
     move-result-object p0

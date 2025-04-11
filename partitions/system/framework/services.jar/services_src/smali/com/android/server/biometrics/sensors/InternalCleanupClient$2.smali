@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/InternalCleanupClient;)V
     .locals 0
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/InternalCleanupClient$2;->this$0:Lcom/android/server/biometrics/sensors/InternalCleanupClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
     .locals 2
 
-    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +50,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/InternalCleanupClient$2;->this$0:Lcom/android/server/biometrics/sensors/InternalCleanupClient;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/InternalCleanupClient;->-$$Nest$fgetmUnknownHALTemplates(Lcom/android/server/biometrics/sensors/InternalCleanupClient;)Ljava/util/ArrayList;
@@ -65,7 +62,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 118
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/InternalCleanupClient$2;->this$0:Lcom/android/server/biometrics/sensors/InternalCleanupClient;
 
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
@@ -74,7 +70,6 @@
 
     goto :goto_0
 
-    .line 120
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/InternalCleanupClient$2;->this$0:Lcom/android/server/biometrics/sensors/InternalCleanupClient;
 

@@ -11,17 +11,14 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/ScreenSharingHelper;)V
     .locals 0
 
-    .line 122
     iput-object p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper$2;->this$0:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
     invoke-direct {p0}, Lcom/samsung/android/server/audio/FrequentWorker;-><init>()V
 
     const/16 p1, 0x3e8
 
-    .line 124
     iput p1, p0, Lcom/samsung/android/server/audio/FrequentWorker;->mPeriodMs:I
 
-    .line 125
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     iput-object p1, p0, Lcom/samsung/android/server/audio/FrequentWorker;->mCachedValue:Ljava/lang/Object;
@@ -34,12 +31,10 @@
 .method public func()Ljava/lang/Boolean;
     .locals 3
 
-    .line 130
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 132
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper$2;->this$0:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
@@ -53,7 +48,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 135
     invoke-virtual {v2}, Landroid/hardware/display/SemDlnaDevice;->getDlnaType()I
 
     move-result v2
@@ -63,7 +57,6 @@
     :cond_0
     const/4 v2, -0x1
 
-    .line 138
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper$2;->this$0:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
@@ -98,7 +91,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 142
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -108,14 +100,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 143
     throw p0
 .end method
 
 .method public bridge synthetic func()Ljava/lang/Object;
     .locals 0
 
-    .line 122
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/ScreenSharingHelper$2;->func()Ljava/lang/Boolean;
 
     move-result-object p0

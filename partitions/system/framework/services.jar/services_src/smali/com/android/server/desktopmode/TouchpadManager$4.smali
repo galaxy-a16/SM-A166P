@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/TouchpadManager;)V
     .locals 0
 
-    .line 91
     iput-object p1, p0, Lcom/android/server/desktopmode/TouchpadManager$4;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,21 +23,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 94
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "com.samsung.pen.INSERT"
 
-    .line 95
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 96
     iget-object p1, p0, Lcom/android/server/desktopmode/TouchpadManager$4;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     const-string/jumbo v0, "penInsert"
@@ -53,7 +49,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/TouchpadManager;->-$$Nest$fputmIsSPenDetached(Lcom/android/server/desktopmode/TouchpadManager;Z)V
 
-    .line 97
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_0
@@ -84,7 +79,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager$4;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 

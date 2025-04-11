@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput-object p1, p0, Lcom/android/server/backup/keyvalue/BackupRequest;->packageName:Ljava/lang/String;
 
     return-void
@@ -31,7 +29,6 @@
 
     return p0
 
-    .line 40
     :cond_0
     instance-of v0, p1, Lcom/android/server/backup/keyvalue/BackupRequest;
 
@@ -41,11 +38,9 @@
 
     return p0
 
-    .line 43
     :cond_1
     check-cast p1, Lcom/android/server/backup/keyvalue/BackupRequest;
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/backup/keyvalue/BackupRequest;->packageName:Ljava/lang/String;
 
     iget-object p1, p1, Lcom/android/server/backup/keyvalue/BackupRequest;->packageName:Ljava/lang/String;
@@ -60,7 +55,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 49
     iget-object p0, p0, Lcom/android/server/backup/keyvalue/BackupRequest;->packageName:Ljava/lang/String;
 
     filled-new-array {p0}, [Ljava/lang/Object;
@@ -77,7 +71,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

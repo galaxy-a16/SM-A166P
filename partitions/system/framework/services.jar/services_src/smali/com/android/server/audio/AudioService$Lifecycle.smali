@@ -11,23 +11,18 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 8
 
-    .line 1006
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 1007
     new-instance v7, Lcom/android/server/audio/AudioService;
 
-    .line 1008
     invoke-static {}, Lcom/android/server/audio/AudioSystemAdapter;->getDefaultAdapter()Lcom/android/server/audio/AudioSystemAdapter;
 
     move-result-object v2
 
-    .line 1009
     invoke-static {p1}, Lcom/android/server/audio/SystemServerAdapter;->getDefaultAdapter(Landroid/content/Context;)Lcom/android/server/audio/SystemServerAdapter;
 
     move-result-object v3
 
-    .line 1010
     invoke-static {}, Lcom/android/server/audio/SettingsAdapter;->getDefaultAdapter()Lcom/android/server/audio/SettingsAdapter;
 
     move-result-object v4
@@ -58,7 +53,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1024
     iget-object p0, p0, Lcom/android/server/audio/AudioService$Lifecycle;->mService:Lcom/android/server/audio/AudioService;
 
     invoke-virtual {p0}, Lcom/android/server/audio/AudioService;->systemReady()V
@@ -70,12 +64,10 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1026
     iget-object p1, p0, Lcom/android/server/audio/AudioService$Lifecycle;->mService:Lcom/android/server/audio/AudioService;
 
     invoke-static {p1}, Lcom/android/server/audio/AudioService;->-$$Nest$monBootCompleted(Lcom/android/server/audio/AudioService;)V
 
-    .line 1027
     iget-object p0, p0, Lcom/android/server/audio/AudioService$Lifecycle;->mService:Lcom/android/server/audio/AudioService;
 
     invoke-static {p0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmExt(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/AudioServiceExt;
@@ -94,7 +86,6 @@
 
     const-string v0, "audio"
 
-    .line 1018
     iget-object v1, p0, Lcom/android/server/audio/AudioService$Lifecycle;->mService:Lcom/android/server/audio/AudioService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V

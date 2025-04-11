@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$i0cVzxCBnXr8JMjYcYvXYlLo54Q(Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->lambda$onDisplayGroupAdded$0(I)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public static synthetic $r8$lambda$s6k5pYNX3sQBDn5wgIWfPLK7u0o(Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->lambda$onDisplayGroupRemoved$1(I)V
 
     return-void
@@ -32,7 +30,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;)V
     .locals 0
 
-    .line 1089
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +40,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/PowerManagerService;Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;-><init>(Lcom/android/server/power/PowerManagerService;)V
 
     return-void
@@ -52,7 +48,6 @@
 .method private synthetic lambda$onDisplayGroupAdded$0(I)V
     .locals 1
 
-    .line 1119
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmPowerHistorian(Lcom/android/server/power/PowerManagerService;)Lcom/android/server/power/PowerHistorian;
@@ -69,7 +64,6 @@
 .method private synthetic lambda$onDisplayGroupRemoved$1(I)V
     .locals 1
 
-    .line 1139
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmPowerHistorian(Lcom/android/server/power/PowerManagerService;)Lcom/android/server/power/PowerHistorian;
@@ -88,7 +82,6 @@
 .method public onDisplayGroupAdded(I)V
     .locals 13
 
-    .line 1098
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/PowerManagerService;)Ljava/lang/Object;
@@ -97,7 +90,6 @@
 
     monitor-enter v0
 
-    .line 1099
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -113,7 +105,6 @@
 
     const-string p0, "PowerManagerService"
 
-    .line 1100
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,7 +121,6 @@
 
     invoke-static {p0, p1}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1101
     monitor-exit v0
 
     return-void
@@ -138,7 +128,6 @@
     :cond_0
     const-string v1, "PowerManagerService"
 
-    .line 1103
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +157,6 @@
     :cond_1
     move v10, v1
 
-    .line 1106
     :goto_0
     new-instance v2, Lcom/android/server/power/PowerGroup;
 
@@ -200,7 +188,6 @@
 
     move-result-object v3
 
-    .line 1114
     invoke-interface {v3}, Lcom/android/server/power/PowerManagerService$Clock;->uptimeMillis()J
 
     move-result-wide v11
@@ -211,7 +198,6 @@
 
     invoke-direct/range {v3 .. v12}, Lcom/android/server/power/PowerGroup;-><init>(ILcom/android/server/power/PowerGroup$PowerGroupListener;Lcom/android/server/power/Notifier;Landroid/hardware/display/DisplayManagerInternal;IZZJ)V
 
-    .line 1115
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v3}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmPowerGroups(Lcom/android/server/power/PowerManagerService;)Landroid/util/SparseArray;
@@ -220,12 +206,10 @@
 
     invoke-virtual {v3, p1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1116
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-virtual {v3, v1, v2}, Lcom/android/server/power/PowerManagerService;->onPowerGroupEventLocked(ILcom/android/server/power/PowerGroup;)V
 
-    .line 1118
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmHandlerPmsMisc(Lcom/android/server/power/PowerManagerService;)Landroid/os/Handler;
@@ -238,7 +222,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1121
     monitor-exit v0
 
     return-void
@@ -256,7 +239,6 @@
 .method public onDisplayGroupChanged(I)V
     .locals 4
 
-    .line 1146
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/PowerManagerService;)Ljava/lang/Object;
@@ -265,7 +247,6 @@
 
     monitor-enter v0
 
-    .line 1147
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -281,7 +262,6 @@
 
     const-string p0, "PowerManagerService"
 
-    .line 1148
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -298,7 +278,6 @@
 
     invoke-static {p0, p1}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1149
     monitor-exit v0
 
     return-void
@@ -306,7 +285,6 @@
     :cond_0
     const-string v1, "PowerManagerService"
 
-    .line 1151
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -323,7 +301,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1152
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmPowerGroups(Lcom/android/server/power/PowerManagerService;)Landroid/util/SparseArray;
@@ -340,7 +317,6 @@
 
     invoke-virtual {p0, v1, p1}, Lcom/android/server/power/PowerManagerService;->onPowerGroupEventLocked(ILcom/android/server/power/PowerGroup;)V
 
-    .line 1153
     monitor-exit v0
 
     return-void
@@ -358,7 +334,6 @@
 .method public onDisplayGroupRemoved(I)V
     .locals 4
 
-    .line 1126
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/PowerManagerService;)Ljava/lang/Object;
@@ -372,7 +347,6 @@
     :try_start_0
     const-string p0, "PowerManagerService"
 
-    .line 1128
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -389,12 +363,10 @@
 
     invoke-static {p0, p1}, Lcom/android/server/power/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1129
     monitor-exit v0
 
     return-void
 
-    .line 1131
     :cond_0
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -410,7 +382,6 @@
 
     const-string p0, "PowerManagerService"
 
-    .line 1132
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -427,7 +398,6 @@
 
     invoke-static {p0, p1}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1133
     monitor-exit v0
 
     return-void
@@ -435,7 +405,6 @@
     :cond_1
     const-string v1, "PowerManagerService"
 
-    .line 1135
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -452,7 +421,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1136
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmPowerGroups(Lcom/android/server/power/PowerManagerService;)Landroid/util/SparseArray;
@@ -469,7 +437,6 @@
 
     invoke-virtual {v1, v3, v2}, Lcom/android/server/power/PowerManagerService;->onPowerGroupEventLocked(ILcom/android/server/power/PowerGroup;)V
 
-    .line 1138
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$DisplayGroupPowerChangeListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmHandlerPmsMisc(Lcom/android/server/power/PowerManagerService;)Landroid/os/Handler;
@@ -482,7 +449,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1141
     monitor-exit v0
 
     return-void

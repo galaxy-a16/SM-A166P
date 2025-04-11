@@ -15,12 +15,10 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRouterService;)V
     .locals 0
 
-    .line 1046
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$ClientGroup;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1048
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V

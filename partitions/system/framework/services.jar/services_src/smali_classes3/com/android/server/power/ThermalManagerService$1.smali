@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/ThermalManagerService;)V
     .locals 0
 
-    .line 341
     iput-object p1, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-direct {p0}, Landroid/os/IThermalService$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 522
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/power/ThermalManagerService;->dumpInternal(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -35,7 +33,6 @@
 .method public getCurrentCoolingDevices()[Landroid/os/CoolingDevice;
     .locals 4
 
-    .line 472
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -48,12 +45,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 474
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 476
     :try_start_0
     iget-object v2, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -73,12 +68,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 483
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
 
-    .line 479
     :cond_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
@@ -91,7 +84,6 @@
 
     move-result-object p0
 
-    .line 481
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -106,7 +98,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 483
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -116,14 +107,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 484
     throw p0
 .end method
 
 .method public getCurrentCoolingDevicesWithType(I)[Landroid/os/CoolingDevice;
     .locals 3
 
-    .line 489
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -136,12 +125,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 491
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 493
     :try_start_0
     iget-object v2, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -161,12 +148,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 500
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
 
-    .line 496
     :cond_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
@@ -181,7 +166,6 @@
 
     move-result-object p0
 
-    .line 498
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -196,7 +180,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 500
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -206,14 +189,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 501
     throw p0
 .end method
 
 .method public getCurrentTemperatures()[Landroid/os/Temperature;
     .locals 4
 
-    .line 397
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -226,12 +207,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 399
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 401
     :try_start_0
     iget-object v2, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -251,12 +230,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 408
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
 
-    .line 404
     :cond_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
@@ -269,7 +246,6 @@
 
     move-result-object p0
 
-    .line 406
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -284,7 +260,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 408
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -294,14 +269,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 409
     throw p0
 .end method
 
 .method public getCurrentTemperaturesWithType(I)[Landroid/os/Temperature;
     .locals 3
 
-    .line 414
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -314,12 +287,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 416
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 418
     :try_start_0
     iget-object v2, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -339,12 +310,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 424
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
 
-    .line 421
     :cond_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
@@ -359,7 +328,6 @@
 
     move-result-object p0
 
-    .line 422
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -374,7 +342,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 424
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -384,14 +351,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 425
     throw p0
 .end method
 
 .method public getCurrentThermalStatus()I
     .locals 3
 
-    .line 460
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/ThermalManagerService;)Ljava/lang/Object;
@@ -400,7 +365,6 @@
 
     monitor-enter v0
 
-    .line 461
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -408,7 +372,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 463
     :try_start_1
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -418,7 +381,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 465
     :try_start_2
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -431,13 +393,11 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 466
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 467
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -448,7 +408,6 @@
 .method public getThermalHeadroom(I)F
     .locals 2
 
-    .line 506
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$fgetmHalReady(Lcom/android/server/power/ThermalManagerService;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -474,7 +433,6 @@
 
     goto :goto_0
 
-    .line 517
     :cond_1
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -494,7 +452,6 @@
 .method public final isCallerShell()Z
     .locals 1
 
-    .line 526
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -523,14 +480,12 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 8
 
-    .line 534
     invoke-virtual {p0}, Lcom/android/server/power/ThermalManagerService$1;->isCallerShell()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 535
     invoke-static {}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -541,7 +496,6 @@
 
     return-void
 
-    .line 538
     :cond_0
     new-instance v0, Lcom/android/server/power/ThermalManagerService$ThermalShellCommand;
 
@@ -571,7 +525,6 @@
 .method public registerThermalEventListener(Landroid/os/IThermalEventListener;)Z
     .locals 5
 
-    .line 344
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -584,7 +537,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/ThermalManagerService;)Ljava/lang/Object;
@@ -593,7 +545,6 @@
 
     monitor-enter v0
 
-    .line 347
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -601,7 +552,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 349
     :try_start_1
     iget-object v1, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -617,7 +567,6 @@
 
     if-nez v1, :cond_0
 
-    .line 356
     :try_start_2
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -629,7 +578,6 @@
 
     return p0
 
-    .line 353
     :cond_0
     :try_start_3
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
@@ -638,7 +586,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 356
     :try_start_4
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -653,13 +600,11 @@
 
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 357
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 358
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -670,7 +615,6 @@
 .method public registerThermalEventListenerWithType(Landroid/os/IThermalEventListener;I)Z
     .locals 5
 
-    .line 364
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -683,7 +627,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/ThermalManagerService;)Ljava/lang/Object;
@@ -692,7 +635,6 @@
 
     monitor-enter v0
 
-    .line 367
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -700,7 +642,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 369
     :try_start_1
     iget-object v3, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -720,7 +661,6 @@
 
     if-nez v3, :cond_0
 
-    .line 376
     :try_start_2
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -732,7 +672,6 @@
 
     return p0
 
-    .line 373
     :cond_0
     :try_start_3
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
@@ -745,7 +684,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 376
     :try_start_4
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -760,13 +698,11 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 377
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 378
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -777,7 +713,6 @@
 .method public registerThermalStatusListener(Landroid/os/IThermalStatusListener;)Z
     .locals 4
 
-    .line 430
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/ThermalManagerService;)Ljava/lang/Object;
@@ -786,7 +721,6 @@
 
     monitor-enter v0
 
-    .line 432
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -794,7 +728,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 434
     :try_start_1
     iget-object v3, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -810,7 +743,6 @@
 
     if-nez v3, :cond_0
 
-    .line 441
     :try_start_2
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -822,7 +754,6 @@
 
     return p0
 
-    .line 438
     :cond_0
     :try_start_3
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
@@ -831,7 +762,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 441
     :try_start_4
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -846,13 +776,11 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 442
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 443
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -863,7 +791,6 @@
 .method public unregisterThermalEventListener(Landroid/os/IThermalEventListener;)Z
     .locals 3
 
-    .line 383
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -876,7 +803,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 385
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/ThermalManagerService;)Ljava/lang/Object;
@@ -885,7 +811,6 @@
 
     monitor-enter v0
 
-    .line 386
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -893,7 +818,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 388
     :try_start_1
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -907,7 +831,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 390
     :try_start_2
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -920,13 +843,11 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 391
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 392
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -937,7 +858,6 @@
 .method public unregisterThermalStatusListener(Landroid/os/IThermalStatusListener;)Z
     .locals 3
 
-    .line 448
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/ThermalManagerService;)Ljava/lang/Object;
@@ -946,7 +866,6 @@
 
     monitor-enter v0
 
-    .line 449
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -954,7 +873,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 451
     :try_start_1
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$1;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -968,7 +886,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 453
     :try_start_2
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -981,13 +898,11 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 454
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 455
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1

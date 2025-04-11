@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/gsi/GsiProgress;
     .locals 0
 
-    .line 19
     new-instance p0, Landroid/gsi/GsiProgress;
 
     invoke-direct {p0}, Landroid/gsi/GsiProgress;-><init>()V
 
-    .line 20
     invoke-virtual {p0, p1}, Landroid/gsi/GsiProgress;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 16
     invoke-virtual {p0, p1}, Landroid/gsi/GsiProgress$1;->createFromParcel(Landroid/os/Parcel;)Landroid/gsi/GsiProgress;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/gsi/GsiProgress;
     .locals 0
 
-    .line 25
     new-array p0, p1, [Landroid/gsi/GsiProgress;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 16
     invoke-virtual {p0, p1}, Landroid/gsi/GsiProgress$1;->newArray(I)[Landroid/gsi/GsiProgress;
 
     move-result-object p0

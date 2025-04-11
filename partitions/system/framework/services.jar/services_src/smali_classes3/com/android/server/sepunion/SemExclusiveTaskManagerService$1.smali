@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemExclusiveTaskManagerService;)V
     .locals 0
 
-    .line 129
     iput-object p1, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$1;->this$0:Lcom/android/server/sepunion/SemExclusiveTaskManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,12 +27,10 @@
 
     const/16 v0, -0x2710
 
-    .line 132
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 133
     invoke-static {}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -54,7 +51,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$1;->this$0:Lcom/android/server/sepunion/SemExclusiveTaskManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->-$$Nest$muserSwitch(Lcom/android/server/sepunion/SemExclusiveTaskManagerService;I)V

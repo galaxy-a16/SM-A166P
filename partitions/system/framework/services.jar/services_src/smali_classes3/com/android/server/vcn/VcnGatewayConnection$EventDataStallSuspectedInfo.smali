@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/net/Network;)V
     .locals 0
 
-    .line 574
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 575
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventDataStallSuspectedInfo;->network:Landroid/net/Network;
 
     return-void
@@ -28,7 +26,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 585
     instance-of v0, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventDataStallSuspectedInfo;
 
     if-nez v0, :cond_0
@@ -37,11 +34,9 @@
 
     return p0
 
-    .line 589
     :cond_0
     check-cast p1, Lcom/android/server/vcn/VcnGatewayConnection$EventDataStallSuspectedInfo;
 
-    .line 590
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventDataStallSuspectedInfo;->network:Landroid/net/Network;
 
     iget-object p1, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventDataStallSuspectedInfo;->network:Landroid/net/Network;
@@ -56,7 +51,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 580
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventDataStallSuspectedInfo;->network:Landroid/net/Network;
 
     filled-new-array {p0}, [Ljava/lang/Object;

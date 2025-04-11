@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 6006
     iput-object p1, p0, Lcom/android/server/StorageManagerService$17;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,10 +27,8 @@
 
     const-string/jumbo p2, "mPolicyReceiver :: "
 
-    .line 6008
     invoke-static {p1, p2}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6009
     iget-object p0, p0, Lcom/android/server/StorageManagerService$17;->this$0:Lcom/android/server/StorageManagerService;
 
     const/4 p1, 0x1

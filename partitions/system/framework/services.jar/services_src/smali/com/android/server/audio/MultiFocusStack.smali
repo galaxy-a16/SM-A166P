@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$9RAXDHiaEGyGO4KEf3pqqzPDgks(ILcom/android/server/audio/FocusRequester;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/audio/MultiFocusStack;->lambda$findFocusRequester$0(ILcom/android/server/audio/FocusRequester;)Z
 
     move-result p0
@@ -18,7 +17,6 @@
 .method public static synthetic $r8$lambda$IGIDQoZ6KsarzxSMJPESAWyVU74(ILjava/lang/String;Lcom/android/server/audio/FocusRequester;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/audio/MultiFocusStack;->lambda$findFocusRequester$1(ILjava/lang/String;Lcom/android/server/audio/FocusRequester;)Z
 
     move-result p0
@@ -29,10 +27,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 15
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 16
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
@@ -47,7 +43,6 @@
 .method public static synthetic lambda$findFocusRequester$0(ILcom/android/server/audio/FocusRequester;)Z
     .locals 0
 
-    .line 55
     invoke-virtual {p1}, Lcom/android/server/audio/FocusRequester;->getCallingUid()I
 
     move-result p1
@@ -68,7 +63,6 @@
 .method public static synthetic lambda$findFocusRequester$1(ILjava/lang/String;Lcom/android/server/audio/FocusRequester;)Z
     .locals 1
 
-    .line 72
     invoke-virtual {p2}, Lcom/android/server/audio/FocusRequester;->getCallingUid()I
 
     move-result v0
@@ -101,7 +95,6 @@
 .method public final findFocusRequester(Ljava/util/Stack;ILjava/lang/String;)Lcom/android/server/audio/FocusRequester;
     .locals 0
 
-    .line 71
     invoke-virtual {p1}, Ljava/util/Stack;->stream()Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -110,19 +103,16 @@
 
     invoke-direct {p1, p2, p3}, Lcom/android/server/audio/MultiFocusStack$$ExternalSyntheticLambda0;-><init>(ILjava/lang/String;)V
 
-    .line 72
     invoke-interface {p0, p1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 73
     invoke-interface {p0}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
-    .line 74
     invoke-virtual {p0, p1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -135,7 +125,6 @@
 .method public final findFocusRequester(Ljava/util/Stack;I)Ljava/util/ArrayList;
     .locals 0
 
-    .line 54
     invoke-virtual {p1}, Ljava/util/Stack;->stream()Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -144,7 +133,6 @@
 
     invoke-direct {p1, p2}, Lcom/android/server/audio/MultiFocusStack$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 55
     invoke-interface {p0, p1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -153,7 +141,6 @@
 
     invoke-direct {p1}, Lcom/android/server/audio/MultiFocusStack$$ExternalSyntheticLambda2;-><init>()V
 
-    .line 56
     invoke-static {p1}, Ljava/util/stream/Collectors;->toCollection(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
 
     move-result-object p1
@@ -170,7 +157,6 @@
 .method public getFocusList(I)Ljava/util/ArrayList;
     .locals 1
 
-    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Lcom/android/server/audio/MultiFocusStack;->getStackForDevice(I)Ljava/util/Stack;
@@ -187,7 +173,6 @@
 
     const/4 v0, 0x0
 
-    .line 60
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -195,14 +180,12 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 61
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Stack;
 
-    .line 62
     invoke-virtual {p0, v1, p1, p2}, Lcom/android/server/audio/MultiFocusStack;->findFocusRequester(Ljava/util/Stack;ILjava/lang/String;)Lcom/android/server/audio/FocusRequester;
 
     move-result-object v2
@@ -216,7 +199,6 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 64
     invoke-virtual {v1, v2}, Ljava/util/Stack;->remove(Ljava/lang/Object;)Z
 
     :cond_1
@@ -231,14 +213,12 @@
 .method public getFocusRequester(IZ)Ljava/util/ArrayList;
     .locals 4
 
-    .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 44
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -246,24 +226,20 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 45
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Stack;
 
-    .line 46
     invoke-virtual {p0, v2, p1}, Lcom/android/server/audio/MultiFocusStack;->findFocusRequester(Ljava/util/Stack;I)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 47
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     if-eqz p2, :cond_0
 
-    .line 48
     invoke-virtual {v2, v3}, Ljava/util/Stack;->removeAll(Ljava/util/Collection;)Z
 
     :cond_0
@@ -278,7 +254,6 @@
 .method public getFocusStack(I)Ljava/util/Stack;
     .locals 0
 
-    .line 30
     invoke-virtual {p0, p1}, Lcom/android/server/audio/MultiFocusStack;->getStackForDevice(I)Ljava/util/Stack;
 
     move-result-object p0
@@ -289,7 +264,6 @@
 .method public final getStackForDevice(I)Ljava/util/Stack;
     .locals 1
 
-    .line 21
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -298,12 +272,10 @@
 
     if-nez v0, :cond_0
 
-    .line 23
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
 
-    .line 24
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
     :cond_0
@@ -313,7 +285,6 @@
 .method public pushFocusRequester(ILcom/android/server/audio/FocusRequester;)V
     .locals 0
 
-    .line 34
     invoke-virtual {p0, p1}, Lcom/android/server/audio/MultiFocusStack;->getStackForDevice(I)Ljava/util/Stack;
 
     move-result-object p0

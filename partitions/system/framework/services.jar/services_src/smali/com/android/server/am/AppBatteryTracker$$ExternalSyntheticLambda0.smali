@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppBatteryTracker$$ExternalSyntheticLambda0;->f$0:Ljava/util/concurrent/CountDownLatch;
@@ -27,7 +26,6 @@
 .method public final queueIdle()Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$$ExternalSyntheticLambda0;->f$0:Ljava/util/concurrent/CountDownLatch;
 
     invoke-static {p0}, Lcom/android/server/am/AppBatteryTracker;->$r8$lambda$0oY16ipVWMUn5C5jVk9cJIFvkPo(Ljava/util/concurrent/CountDownLatch;)Z

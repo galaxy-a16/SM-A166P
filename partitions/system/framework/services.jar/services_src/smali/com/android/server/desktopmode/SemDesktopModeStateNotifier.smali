@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInnerLock(Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mInnerLock:Ljava/lang/Object;
 
     return-object p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmListeners(Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mListeners:Ljava/util/Map;
 
     return-object p0
@@ -41,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -50,7 +47,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 29
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,27 +75,22 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/desktopmode/Injector;)V
     .locals 1
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mInnerLock:Ljava/lang/Object;
 
-    .line 37
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mListeners:Ljava/util/Map;
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mContext:Landroid/content/Context;
 
-    .line 45
     iput-object p2, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mInjector:Lcom/android/server/desktopmode/Injector;
 
     return-void
@@ -108,7 +99,6 @@
 .method public static trimName(Ljava/lang/String;I)Ljava/lang/String;
     .locals 1
 
-    .line 67
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -130,7 +120,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 3
 
-    .line 146
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -157,15 +146,12 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 147
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 148
     iget-object v0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mInnerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 149
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -193,10 +179,8 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 150
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 151
     iget-object p0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mListeners:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -220,21 +204,17 @@
 
     check-cast v1, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;
 
-    .line 152
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 154
     :cond_0
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 155
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 156
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -242,7 +222,6 @@
     :catchall_0
     move-exception p0
 
-    .line 155
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -256,7 +235,6 @@
 
     if-lez p3, :cond_4
 
-    .line 129
     iget p0, p1, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->uid:I
 
     const/16 v0, 0x3e8
@@ -265,7 +243,6 @@
 
     return-void
 
-    .line 133
     :cond_0
     invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -290,7 +267,6 @@
 
     check-cast v0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;
 
-    .line 134
     iget v1, v0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->pid:I
 
     iget v2, p1, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->pid:I
@@ -307,7 +283,6 @@
 
     if-ne p2, p3, :cond_1
 
-    .line 137
     new-instance p0, Ljava/lang/SecurityException;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -335,7 +310,6 @@
     :cond_2
     const-string/jumbo p2, "s"
 
-    .line 138
     :goto_0
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -354,7 +328,6 @@
     :cond_3
     return-void
 
-    .line 127
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -368,12 +341,10 @@
 .method public final getListenersCopy()Ljava/util/List;
     .locals 2
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mInnerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 102
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -385,7 +356,6 @@
 
     invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 103
     monitor-exit v0
 
     return-object v1
@@ -403,12 +373,10 @@
 .method public notifyDesktopModeStateChanged(Lcom/samsung/android/desktopmode/SemDesktopModeState;)V
     .locals 4
 
-    .line 82
     invoke-virtual {p0}, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->getListenersCopy()Ljava/util/List;
 
     move-result-object v0
 
-    .line 85
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -426,7 +394,6 @@
 
     check-cast v1, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;
 
-    .line 87
     :try_start_0
     iget-object v1, v1, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->listener:Lcom/samsung/android/desktopmode/IDesktopModeListener;
 
@@ -439,7 +406,6 @@
     :catch_0
     move-exception v1
 
-    .line 89
     sget-object v2, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->TAG:Ljava/lang/String;
 
     const-string v3, "Failed to notify DesktopModeListener"
@@ -448,7 +414,6 @@
 
     goto :goto_0
 
-    .line 94
     :cond_0
     iget v0, p1, Lcom/samsung/android/desktopmode/SemDesktopModeState;->state:I
 
@@ -456,7 +421,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 95
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->sendBroadcast(Lcom/samsung/android/desktopmode/SemDesktopModeState;)V
 
     :cond_1
@@ -466,12 +430,10 @@
 .method public registerDesktopModeListener(Lcom/samsung/android/desktopmode/IDesktopModeListener;Ljava/lang/String;)Z
     .locals 10
 
-    .line 49
     iget-object v0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mInnerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 50
     :try_start_0
     invoke-interface {p1}, Lcom/samsung/android/desktopmode/IDesktopModeListener;->asBinder()Landroid/os/IBinder;
 
@@ -481,13 +443,11 @@
 
     const/4 v2, 0x0
 
-    .line 52
     :try_start_1
     new-instance v9, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;
 
     const/16 v3, 0x64
 
-    .line 53
     invoke-static {p2, v3}, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->trimName(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
@@ -500,7 +460,6 @@
 
     iget-object p2, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mInjector:Lcom/android/server/desktopmode/Injector;
 
-    .line 54
     invoke-virtual {p2}, Lcom/android/server/desktopmode/Injector;->binderGetCallingUid()I
 
     move-result v8
@@ -513,17 +472,14 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;-><init>(Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;Lcom/samsung/android/desktopmode/IDesktopModeListener;Ljava/lang/String;II)V
 
-    .line 55
     iget-object p1, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mListeners:Ljava/util/Map;
 
     const/16 p2, 0x14
 
     invoke-virtual {p0, v9, p1, p2}, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->enforceRegisterLimitLocked(Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;Ljava/util/Map;I)V
 
-    .line 56
     invoke-interface {v1, v9, v2}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 57
     iget-object p0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mListeners:Ljava/util/Map;
 
     invoke-interface {p0, v1, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -531,7 +487,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 58
     :try_start_2
     monitor-exit v0
 
@@ -542,14 +497,12 @@
     :catch_0
     move-exception p0
 
-    .line 60
     sget-object p1, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->TAG:Ljava/lang/String;
 
     const-string p2, "Failed to register DesktopModeListener"
 
     invoke-static {p1, p2, p0}, Lcom/android/server/desktopmode/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 61
     monitor-exit v0
 
     return v2
@@ -557,7 +510,6 @@
     :catchall_0
     move-exception p0
 
-    .line 63
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -568,7 +520,6 @@
 .method public final sendBroadcast(Lcom/samsung/android/desktopmode/SemDesktopModeState;)V
     .locals 6
 
-    .line 108
     iget v0, p1, Lcom/samsung/android/desktopmode/SemDesktopModeState;->enabled:I
 
     const/4 v1, 0x4
@@ -582,7 +533,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 109
     :goto_0
     iget-object v1, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mContext:Landroid/content/Context;
 
@@ -590,19 +540,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 110
     sget-object v3, Landroid/app/UiModeManager;->SEM_ACTION_ENTER_DESKTOP_MODE:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 111
     :cond_1
     sget-object v3, Landroid/app/UiModeManager;->SEM_ACTION_EXIT_DESKTOP_MODE:Ljava/lang/String;
 
     :goto_1
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 112
     invoke-virtual {p1}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->getDisplayType()I
 
     move-result v3
@@ -615,17 +562,14 @@
 
     const/high16 v3, 0x1000000
 
-    .line 113
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-result-object v2
 
     sget-object v5, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    .line 109
     invoke-virtual {v1, v2, v5}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
@@ -639,11 +583,9 @@
     :cond_2
     const-string v0, "android.app.action.EXIT_KNOX_DESKTOP_MODE"
 
-    .line 118
     :goto_2
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 119
     invoke-virtual {p1}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->getDisplayType()I
 
     move-result p1
@@ -652,14 +594,12 @@
 
     move-result-object p1
 
-    .line 120
     invoke-virtual {p1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-result-object p1
 
     sget-object v0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    .line 116
     invoke-virtual {p0, p1, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     return-void
@@ -668,12 +608,10 @@
 .method public unregisterDesktopModeListener(Lcom/samsung/android/desktopmode/IDesktopModeListener;)Z
     .locals 2
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mInnerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 72
     :try_start_0
     iget-object p0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;->mListeners:Ljava/util/Map;
 
@@ -691,7 +629,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 74
     iget-object v1, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->listener:Lcom/samsung/android/desktopmode/IDesktopModeListener;
 
     invoke-interface {v1}, Lcom/samsung/android/desktopmode/IDesktopModeListener;->asBinder()Landroid/os/IBinder;
@@ -700,14 +637,12 @@
 
     invoke-interface {v1, p0, p1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 75
     monitor-exit v0
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 77
     :cond_0
     monitor-exit v0
 
@@ -716,7 +651,6 @@
     :catchall_0
     move-exception p0
 
-    .line 78
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

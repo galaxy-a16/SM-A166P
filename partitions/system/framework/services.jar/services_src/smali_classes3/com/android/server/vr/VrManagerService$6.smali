@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/vr/VrManagerService;Landroid/content/ComponentName;ZI)V
     .locals 0
 
-    .line 1002
     iput-object p1, p0, Lcom/android/server/vr/VrManagerService$6;->this$0:Lcom/android/server/vr/VrManagerService;
 
     iput-object p2, p0, Lcom/android/server/vr/VrManagerService$6;->val$c:Landroid/content/ComponentName;
@@ -39,10 +38,8 @@
 .method public runEvent(Landroid/os/IInterface;)V
     .locals 2
 
-    .line 1009
     check-cast p1, Landroid/service/vr/IVrListener;
 
-    .line 1010
     iget-object v0, p0, Lcom/android/server/vr/VrManagerService$6;->val$c:Landroid/content/ComponentName;
 
     iget-boolean v1, p0, Lcom/android/server/vr/VrManagerService$6;->val$b:Z

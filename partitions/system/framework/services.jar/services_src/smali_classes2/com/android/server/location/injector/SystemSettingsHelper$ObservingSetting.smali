@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    .line 430
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 431
     new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -31,7 +29,6 @@
 .method public addListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
     .locals 0
 
-    .line 449
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -44,7 +41,6 @@
 
     monitor-enter p0
 
-    .line 435
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->mRegistered:Z
     :try_end_0
@@ -65,7 +61,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 1
 
-    .line 459
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,7 +85,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -110,7 +104,6 @@
 
     check-cast p1, Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;
 
-    .line 463
     invoke-interface {p1, p3}, Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;->onSettingChanged(I)V
 
     goto :goto_0
@@ -126,10 +119,8 @@
 
     const-string v1, "location setting is changed by nsflp"
 
-    .line 469
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -151,7 +142,6 @@
 
     const/4 v1, -0x1
 
-    .line 472
     invoke-interface {v0, v1}, Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;->onSettingChanged(I)V
 
     goto :goto_0
@@ -165,7 +155,6 @@
 
     monitor-enter p0
 
-    .line 439
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->mRegistered:Z
     :try_end_0
@@ -173,12 +162,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 440
     monitor-exit p0
 
     return-void
 
-    .line 443
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -193,12 +180,10 @@
 
     const/4 p1, 0x1
 
-    .line 445
     iput-boolean p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->mRegistered:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 446
     monitor-exit p0
 
     return-void
@@ -214,7 +199,6 @@
 .method public removeListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
     .locals 0
 
-    .line 453
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z

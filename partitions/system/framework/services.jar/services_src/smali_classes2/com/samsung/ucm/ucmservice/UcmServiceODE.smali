@@ -11,24 +11,20 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static getOdeStatus()I
     .locals 2
 
-    .line 28
     sget v0, Lcom/samsung/ucm/ucmservice/UcmServiceODE;->sOdeStatus:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 29
     invoke-static {}, Lcom/samsung/ucm/ucmservice/UcmServiceODE;->updateOdeStatus()V
 
-    .line 31
     :cond_0
     sget v0, Lcom/samsung/ucm/ucmservice/UcmServiceODE;->sOdeStatus:I
 
@@ -38,7 +34,6 @@
 .method public static isUCMODEEnabledWithPropFile()Z
     .locals 3
 
-    .line 39
     invoke-static {}, Lcom/samsung/ucm/ucmservice/UcmServiceODE;->getOdeStatus()I
 
     move-result v0
@@ -49,21 +44,18 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 40
     invoke-static {}, Lcom/samsung/ucm/ucmservice/EFSProperties;->loadODEConfig()Lcom/samsung/ucm/ucmservice/EFSProperties$ODEProperties;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 41
     iget v0, v0, Lcom/samsung/ucm/ucmservice/EFSProperties$ODEProperties;->enabledUCSInODE:I
 
     if-eqz v0, :cond_0
 
     const-string v0, "UCM ODE is enabled."
 
-    .line 42
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
@@ -73,7 +65,6 @@
     :cond_0
     const-string v0, "UCM ODE is not enabled"
 
-    .line 47
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -84,7 +75,6 @@
 .method public static isUcmOdeEnabled()Z
     .locals 2
 
-    .line 35
     invoke-static {}, Lcom/samsung/ucm/ucmservice/UcmServiceODE;->getOdeStatus()I
 
     move-result v0
@@ -109,14 +99,12 @@
 
     const-string v0, "/efs/sec_efs/ucm_ode_mode"
 
-    .line 22
     invoke-static {v0}, Lcom/samsung/ucm/ucmservice/UcmServiceUtil;->readIntFromFile(Ljava/lang/String;)I
 
     move-result v0
 
     sput v0, Lcom/samsung/ucm/ucmservice/UcmServiceODE;->sOdeStatus:I
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,7 +129,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     sget v0, Lcom/samsung/ucm/ucmservice/UcmServiceODE;->sOdeStatus:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

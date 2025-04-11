@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/net/netd/aidl/NativeUidRangeConfig;
     .locals 0
 
-    .line 35
     invoke-static {p1}, Landroid/net/netd/aidl/NativeUidRangeConfig;->-$$Nest$sminternalCreateFromParcel(Landroid/os/Parcel;)Landroid/net/netd/aidl/NativeUidRangeConfig;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 32
     invoke-virtual {p0, p1}, Landroid/net/netd/aidl/NativeUidRangeConfig$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/netd/aidl/NativeUidRangeConfig;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Landroid/net/netd/aidl/NativeUidRangeConfig;
     .locals 0
 
-    .line 39
     new-array p0, p1, [Landroid/net/netd/aidl/NativeUidRangeConfig;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 32
     invoke-virtual {p0, p1}, Landroid/net/netd/aidl/NativeUidRangeConfig$1;->newArray(I)[Landroid/net/netd/aidl/NativeUidRangeConfig;
 
     move-result-object p0

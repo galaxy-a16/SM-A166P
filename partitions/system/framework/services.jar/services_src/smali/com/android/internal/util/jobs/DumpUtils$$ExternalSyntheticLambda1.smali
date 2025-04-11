@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/ComponentName$WithComponentName;
 
     invoke-static {p1}, Ljava/util/Objects;->nonNull(Ljava/lang/Object;)Z

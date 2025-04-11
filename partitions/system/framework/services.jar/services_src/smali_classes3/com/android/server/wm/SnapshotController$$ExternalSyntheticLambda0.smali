@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/SnapshotController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/SnapshotController$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/wm/SnapshotController;
@@ -27,7 +26,6 @@
 .method public final onCheckResult(ILcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/SnapshotController$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/wm/SnapshotController;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/wm/SnapshotController;->$r8$lambda$JdRODO9m314H5aaGaQ-gyrXWuI8(Lcom/android/server/wm/SnapshotController;ILcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V

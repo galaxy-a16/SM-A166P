@@ -15,16 +15,12 @@
 .method public constructor <init>(ILjava/lang/String;Z)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 28
     iput p1, p0, Lcom/samsung/android/server/audio/AudioEvents$RingerModeEvent;->mRingerMode:I
 
-    .line 29
     iput-object p2, p0, Lcom/samsung/android/server/audio/AudioEvents$RingerModeEvent;->mCaller:Ljava/lang/String;
 
-    .line 30
     iput-boolean p3, p0, Lcom/samsung/android/server/audio/AudioEvents$RingerModeEvent;->mExternal:Z
 
     return-void
@@ -35,7 +31,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "setRingerMode(mode:"
@@ -48,7 +43,6 @@
 
     const-string v1, " external:"
 
-    .line 36
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v1, p0, Lcom/samsung/android/server/audio/AudioEvents$RingerModeEvent;->mExternal:Z

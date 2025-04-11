@@ -20,7 +20,6 @@
 .method public final needed(Lcom/android/internal/os/ProcessCpuTracker$Stats;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/am/AppProfiler;->$r8$lambda$ZMxvBCdmKztKY09XkWvwH3CpFsk(Lcom/android/internal/os/ProcessCpuTracker$Stats;)Z
 
     move-result p0

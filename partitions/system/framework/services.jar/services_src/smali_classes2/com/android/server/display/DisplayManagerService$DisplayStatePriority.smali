@@ -27,7 +27,6 @@
 .method public static synthetic $values()[Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
     .locals 6
 
-    .line 737
     sget-object v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->ON:Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     sget-object v1, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->ON_SUSPEND:Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
@@ -50,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 738
     new-instance v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     const-string v1, "ON"
@@ -63,7 +61,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->ON:Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
-    .line 739
     new-instance v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     const/4 v1, 0x6
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->ON_SUSPEND:Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
-    .line 740
     new-instance v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     const-string v1, "VR"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->VR:Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
-    .line 741
     new-instance v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     const-string v1, "DOZE"
@@ -98,7 +93,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->DOZE:Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
-    .line 742
     new-instance v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     const-string v1, "DOZE_SUSPEND"
@@ -109,7 +103,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->DOZE_SUSPEND:Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
-    .line 743
     new-instance v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     const-string v1, "OFF"
@@ -118,7 +111,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->OFF:Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
-    .line 737
     invoke-static {}, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->$values()[Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     move-result-object v0
@@ -131,10 +123,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 747
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 748
     iput p3, p0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->displayState:I
 
     return-void
@@ -143,7 +133,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
     .locals 1
 
-    .line 737
     const-class v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,7 +147,6 @@
 .method public static values()[Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
     .locals 1
 
-    .line 737
     sget-object v0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->$VALUES:[Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;
 
     invoke-virtual {v0}, [Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->clone()Ljava/lang/Object;
@@ -175,7 +163,6 @@
 .method public getDisplayState()I
     .locals 0
 
-    .line 752
     iget p0, p0, Lcom/android/server/display/DisplayManagerService$DisplayStatePriority;->displayState:I
 
     return p0

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/vibrator/VibrationStepConductor;JLcom/android/server/vibrator/VibratorController;Landroid/os/VibrationEffect$Composed;IJ)V
     .locals 0
 
-    .line 39
     invoke-direct/range {p0 .. p8}, Lcom/android/server/vibrator/AbstractVibratorStep;-><init>(Lcom/android/server/vibrator/VibrationStepConductor;JLcom/android/server/vibrator/VibratorController;Landroid/os/VibrationEffect$Composed;IJ)V
 
-    .line 40
     iput-wide p7, p0, Lcom/android/server/vibrator/SemHapticStep;->mNextOffTime:J
 
     return-void
@@ -25,7 +23,6 @@
 .method public acceptVibratorCompleteCallback(I)Z
     .locals 6
 
-    .line 45
     iget-object v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
     invoke-virtual {v0}, Lcom/android/server/vibrator/VibratorController;->getVibratorInfo()Landroid/os/VibratorInfo;
@@ -40,17 +37,14 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 46
     iput-boolean v1, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mVibratorCompleteCallbackReceived:Z
 
-    .line 47
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/server/vibrator/SemHapticStep;->mNextOffTime:J
 
-    .line 52
     :cond_0
     iget-wide v2, p0, Lcom/android/server/vibrator/SemHapticStep;->mNextOffTime:J
 
@@ -88,10 +82,8 @@
 
     const-string v2, "SemHapticStep"
 
-    .line 57
     invoke-static {v0, v1, v2}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 59
     :try_start_0
     iget-object v3, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
@@ -107,14 +99,12 @@
 
     check-cast v3, Landroid/os/vibrator/VibrationEffectSegment;
 
-    .line 60
     instance-of v4, v3, Landroid/os/vibrator/SemHapticSegment;
 
     const/4 v5, 0x1
 
     if-nez v4, :cond_0
 
-    .line 61
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -131,46 +121,38 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     invoke-virtual {p0, v5}, Lcom/android/server/vibrator/AbstractVibratorStep;->nextSteps(I)Ljava/util/List;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 86
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
 
-    .line 65
     :cond_0
     :try_start_1
     check-cast v3, Landroid/os/vibrator/SemHapticSegment;
 
-    .line 67
     iget-object v4, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
 
     invoke-virtual {v4}, Lcom/android/server/vibrator/VibrationStepConductor;->getVibration()Lcom/android/server/vibrator/HalVibration;
 
     move-result-object v4
 
-    .line 68
     invoke-virtual {v4}, Lcom/android/server/vibrator/HalVibration;->getMagnitude()I
 
     move-result v8
 
-    .line 69
     invoke-virtual {v3}, Landroid/os/vibrator/SemHapticSegment;->getSepIndex()I
 
     move-result v7
 
-    .line 70
     invoke-virtual {v4}, Lcom/android/server/vibrator/HalVibration;->getTimeOut()J
 
     move-result-wide v12
 
-    .line 71
     iget-object v3, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
     invoke-virtual {v3}, Landroid/os/VibrationEffect$Composed;->getRepeatIndex()I
@@ -188,7 +170,6 @@
     :cond_1
     const/4 v3, 0x0
 
-    .line 72
     :goto_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -230,12 +211,10 @@
 
     move-wide v10, v12
 
-    .line 77
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/vibrator/SemHapticStep;->startVibrating(IIZJ)V
 
     if-eqz v3, :cond_2
 
-    .line 78
     invoke-virtual {v4}, Lcom/android/server/vibrator/HalVibration;->getEngineData()[I
 
     move-result-object v2
@@ -244,14 +223,12 @@
 
     const-wide v2, 0x7fffffffffffec77L
 
-    .line 79
     iput-wide v2, p0, Lcom/android/server/vibrator/SemHapticStep;->mNextOffTime:J
 
     move v5, v14
 
     goto :goto_1
 
-    .line 82
     :cond_2
     iget-wide v2, p0, Lcom/android/server/vibrator/Step;->startTime:J
 
@@ -259,7 +236,6 @@
 
     iput-wide v2, p0, Lcom/android/server/vibrator/SemHapticStep;->mNextOffTime:J
 
-    .line 84
     :goto_1
     iget-wide v2, p0, Lcom/android/server/vibrator/SemHapticStep;->mNextOffTime:J
 
@@ -269,7 +245,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 86
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
@@ -279,14 +254,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 87
     throw p0
 .end method
 
 .method public final startVibrating(IIZJ)V
     .locals 6
 
-    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -325,14 +298,12 @@
 
     invoke-static {p5, p4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     iget-object p4, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
 
     invoke-virtual {p4}, Lcom/android/server/vibrator/VibrationStepConductor;->getVibration()Lcom/android/server/vibrator/HalVibration;
 
     move-result-object p4
 
-    .line 95
     invoke-static {}, Lcom/samsung/android/vibrator/VibRune;->SUPPORT_HYBRID_HAPTIC()Z
 
     move-result p5
@@ -345,7 +316,6 @@
 
     if-eqz p5, :cond_1
 
-    .line 96
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
     move-result-object p1
@@ -360,7 +330,6 @@
 
     new-array p1, p1, [I
 
-    .line 97
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
     move-result-object v0
@@ -371,7 +340,6 @@
 
     aput v0, p1, v1
 
-    .line 100
     :goto_0
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
@@ -383,7 +351,6 @@
 
     add-int/lit8 v0, p5, 0x1
 
-    .line 101
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
     move-result-object v2
@@ -396,7 +363,6 @@
 
     add-int/lit8 p5, v0, 0x1
 
-    .line 102
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
     move-result-object v2
@@ -409,7 +375,6 @@
 
     add-int/lit8 v0, p5, 0x1
 
-    .line 103
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
     move-result-object v2
@@ -422,7 +387,6 @@
 
     add-int/lit8 p5, v0, 0x1
 
-    .line 104
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
     move-result-object v2
@@ -435,7 +399,6 @@
 
     add-int/lit8 v0, p5, 0x1
 
-    .line 105
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
     move-result-object v2
@@ -452,7 +415,6 @@
 
     goto :goto_0
 
-    .line 107
     :cond_0
     iget-object p0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
@@ -460,7 +422,6 @@
 
     goto :goto_1
 
-    .line 108
     :cond_1
     invoke-virtual {p4}, Lcom/android/server/vibrator/HalVibration;->getEngineData()[I
 
@@ -468,7 +429,6 @@
 
     if-nez p5, :cond_2
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
     int-to-long v1, p1
@@ -481,7 +441,6 @@
 
     goto :goto_1
 
-    .line 111
     :cond_2
     iget-object p0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 

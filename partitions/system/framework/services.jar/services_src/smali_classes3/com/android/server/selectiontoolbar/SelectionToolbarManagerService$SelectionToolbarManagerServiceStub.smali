@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)V
     .locals 0
 
-    .line 57
     iput-object p1, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
     invoke-direct {p0}, Landroid/view/selectiontoolbar/ISelectionToolbarManager$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public dismissToolbar(JI)V
     .locals 1
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
     invoke-static {v0}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;->access$400(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)Ljava/lang/Object;
@@ -33,7 +31,6 @@
 
     monitor-enter v0
 
-    .line 86
     :try_start_0
     iget-object p0, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
@@ -45,7 +42,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 88
     invoke-virtual {p0, p1, p2}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerServiceImpl;->dismissToolbar(J)V
 
     goto :goto_0
@@ -53,7 +49,6 @@
     :cond_0
     const-string p0, "SelectionToolbarManagerService"
 
-    .line 90
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,7 +65,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     :goto_0
     monitor-exit v0
 
@@ -89,7 +83,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 97
     iget-object p1, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -106,7 +99,6 @@
 
     return-void
 
-    .line 99
     :cond_0
     iget-object p1, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
@@ -116,7 +108,6 @@
 
     monitor-enter p1
 
-    .line 100
     :try_start_0
     iget-object p0, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
@@ -124,7 +115,6 @@
 
     invoke-static {p0, p3, p2}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;->access$700(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 101
     monitor-exit p1
 
     return-void
@@ -142,7 +132,6 @@
 .method public hideToolbar(JI)V
     .locals 1
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
     invoke-static {v0}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;->access$200(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)Ljava/lang/Object;
@@ -151,7 +140,6 @@
 
     monitor-enter v0
 
-    .line 74
     :try_start_0
     iget-object p0, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
@@ -163,7 +151,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 76
     invoke-virtual {p0, p1, p2}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerServiceImpl;->hideToolbar(J)V
 
     goto :goto_0
@@ -171,7 +158,6 @@
     :cond_0
     const-string p0, "SelectionToolbarManagerService"
 
-    .line 78
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -188,7 +174,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     :goto_0
     monitor-exit v0
 
@@ -207,7 +192,6 @@
 .method public showToolbar(Landroid/view/selectiontoolbar/ShowInfo;Landroid/view/selectiontoolbar/ISelectionToolbarCallback;I)V
     .locals 1
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
     invoke-static {v0}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;->access$000(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)Ljava/lang/Object;
@@ -216,7 +200,6 @@
 
     monitor-enter v0
 
-    .line 62
     :try_start_0
     iget-object p0, p0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;->this$0:Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;
 
@@ -228,7 +211,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 64
     invoke-virtual {p0, p1, p2}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerServiceImpl;->showToolbar(Landroid/view/selectiontoolbar/ShowInfo;Landroid/view/selectiontoolbar/ISelectionToolbarCallback;)V
 
     goto :goto_0
@@ -236,7 +218,6 @@
     :cond_0
     const-string p0, "SelectionToolbarManagerService"
 
-    .line 66
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -253,7 +234,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     :goto_0
     monitor-exit v0
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/ShortcutHelper;)V
     .locals 0
 
-    .line 79
     iput-object p1, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
 
     invoke-direct {p0}, Landroid/content/pm/LauncherApps$Callback;-><init>()V
@@ -24,42 +23,36 @@
 .method public onPackageAdded(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackageChanged(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackageRemoved(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackagesAvailable([Ljava/lang/String;Landroid/os/UserHandle;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackagesUnavailable([Ljava/lang/String;Landroid/os/UserHandle;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onShortcutsChanged(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
     .locals 6
 
-    .line 105
     iget-object p3, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
 
     invoke-static {p3}, Lcom/android/server/notification/ShortcutHelper;->-$$Nest$fgetmActiveShortcutBubbles(Lcom/android/server/notification/ShortcutHelper;)Ljava/util/HashMap;
@@ -72,7 +65,6 @@
 
     check-cast p3, Ljava/util/HashMap;
 
-    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -81,7 +73,6 @@
 
     if-eqz p3, :cond_3
 
-    .line 110
     new-instance v2, Ljava/util/HashSet;
 
     invoke-virtual {p3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -90,7 +81,6 @@
 
     invoke-direct {v2, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 114
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -111,7 +101,6 @@
 
     move v4, v1
 
-    .line 116
     :goto_1
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -119,7 +108,6 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 117
     invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -151,7 +139,6 @@
     :goto_2
     if-nez v4, :cond_0
 
-    .line 123
     invoke-virtual {p3, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -160,17 +147,14 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 124
     invoke-virtual {p3, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 125
     invoke-virtual {p3}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 126
     iget-object v3, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
 
     invoke-static {v3}, Lcom/android/server/notification/ShortcutHelper;->-$$Nest$fgetmActiveShortcutBubbles(Lcom/android/server/notification/ShortcutHelper;)Ljava/util/HashMap;
@@ -179,7 +163,6 @@
 
     invoke-virtual {v3, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
     iget-object v3, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
 
     invoke-static {v3}, Lcom/android/server/notification/ShortcutHelper;->-$$Nest$fgetmLauncherAppsCallbackRegistered(Lcom/android/server/notification/ShortcutHelper;)Z
@@ -194,14 +177,12 @@
 
     move-result-object v3
 
-    .line 128
     invoke-virtual {v3}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 129
     iget-object v3, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
 
     invoke-static {v3}, Lcom/android/server/notification/ShortcutHelper;->-$$Nest$fgetmLauncherAppsService(Lcom/android/server/notification/ShortcutHelper;)Landroid/content/pm/LauncherApps;
@@ -216,14 +197,12 @@
 
     invoke-virtual {v3, v4}, Landroid/content/pm/LauncherApps;->unregisterCallback(Landroid/content/pm/LauncherApps$Callback;)V
 
-    .line 130
     iget-object v3, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
 
     invoke-static {v3, v1}, Lcom/android/server/notification/ShortcutHelper;->-$$Nest$fputmLauncherAppsCallbackRegistered(Lcom/android/server/notification/ShortcutHelper;Z)V
 
     goto :goto_0
 
-    .line 138
     :cond_3
     :goto_3
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -232,14 +211,12 @@
 
     if-ge v1, p1, :cond_5
 
-    .line 140
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/String;
 
-    .line 141
     iget-object p2, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
 
     invoke-static {p2}, Lcom/android/server/notification/ShortcutHelper;->-$$Nest$fgetmShortcutListener(Lcom/android/server/notification/ShortcutHelper;)Lcom/android/server/notification/ShortcutHelper$ShortcutListener;
@@ -248,7 +225,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 142
     iget-object p2, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
 
     invoke-static {p2}, Lcom/android/server/notification/ShortcutHelper;->-$$Nest$fgetmShortcutListener(Lcom/android/server/notification/ShortcutHelper;)Lcom/android/server/notification/ShortcutHelper$ShortcutListener;

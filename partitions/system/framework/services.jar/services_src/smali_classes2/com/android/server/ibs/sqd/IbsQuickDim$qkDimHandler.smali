@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/ibs/sqd/IbsQuickDim;Landroid/os/Looper;)V
     .locals 0
 
-    .line 465
     iput-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
-    .line 466
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 471
     iget-object v0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {v0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmQuickdimEnable(Lcom/android/server/ibs/sqd/IbsQuickDim;)Z
@@ -60,7 +57,6 @@
 
     goto/16 :goto_0
 
-    .line 472
     :cond_0
     iget p1, p1, Landroid/os/Message;->what:I
 
@@ -84,26 +80,22 @@
 
     goto/16 :goto_0
 
-    .line 500
     :cond_1
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1, v2}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmLastFPS(Lcom/android/server/ibs/sqd/IbsQuickDim;I)V
 
-    .line 501
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$mremoveAllmessage(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
 
     goto :goto_0
 
-    .line 496
     :cond_2
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$mremoveAllmessage(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
 
-    .line 497
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmQkDimHandler(Lcom/android/server/ibs/sqd/IbsQuickDim;)Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;
@@ -114,7 +106,6 @@
 
     goto :goto_0
 
-    .line 478
     :cond_3
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -126,7 +117,6 @@
 
     return-void
 
-    .line 479
     :cond_4
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -140,7 +130,6 @@
 
     return-void
 
-    .line 483
     :cond_5
     iget-object v0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -150,12 +139,10 @@
 
     if-eq p1, v0, :cond_6
 
-    .line 484
     iget-object v0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {v0, p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmLastFPS(Lcom/android/server/ibs/sqd/IbsQuickDim;I)V
 
-    .line 485
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmQkDimHandler(Lcom/android/server/ibs/sqd/IbsQuickDim;)Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;
@@ -173,20 +160,16 @@
 
     const-string/jumbo v0, "setScreenBright!!!"
 
-    .line 488
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1, v1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmQuickDimMode(Lcom/android/server/ibs/sqd/IbsQuickDim;I)V
 
-    .line 490
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1, v2}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmLastFPS(Lcom/android/server/ibs/sqd/IbsQuickDim;I)V
 
-    .line 491
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmPowerManagerInternal(Lcom/android/server/ibs/sqd/IbsQuickDim;)Landroid/os/PowerManagerInternal;
@@ -195,7 +178,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/PowerManagerInternal;->setScreenDimDurationOverrideFromSqd(Z)V
 
-    .line 492
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -204,14 +186,12 @@
 
     invoke-static {p1, v0, v1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmDimStartTime(Lcom/android/server/ibs/sqd/IbsQuickDim;J)V
 
-    .line 493
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$mremoveAllmessage(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
 
     goto :goto_0
 
-    .line 474
     :cond_7
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -221,7 +201,6 @@
 
     if-ne p1, v0, :cond_8
 
-    .line 475
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$mcheckQuickDimStatus(Lcom/android/server/ibs/sqd/IbsQuickDim;)V

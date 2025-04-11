@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/textservices/TextServicesManagerService$Lifecycle;)V
     .locals 0
 
-    .line 281
     iput-object p1, p0, Lcom/android/server/textservices/TextServicesManagerService$Lifecycle$1;->this$0:Lcom/android/server/textservices/TextServicesManagerService$Lifecycle;
 
     invoke-direct {p0}, Lcom/android/server/textservices/TextServicesManagerInternal;-><init>()V
@@ -24,7 +23,6 @@
 .method public getCurrentSpellCheckerForUser(I)Landroid/view/textservice/SpellCheckerInfo;
     .locals 0
 
-    .line 285
     iget-object p0, p0, Lcom/android/server/textservices/TextServicesManagerService$Lifecycle$1;->this$0:Lcom/android/server/textservices/TextServicesManagerService$Lifecycle;
 
     invoke-static {p0}, Lcom/android/server/textservices/TextServicesManagerService$Lifecycle;->-$$Nest$fgetmService(Lcom/android/server/textservices/TextServicesManagerService$Lifecycle;)Lcom/android/server/textservices/TextServicesManagerService;

@@ -41,7 +41,6 @@
 .method public static synthetic $r8$lambda$G6-vgZ3bNjdWQQMfcO1wPKDwZd4(Ljava/util/Set;Landroid/media/AudioPlaybackConfiguration;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->lambda$tvVolumeShouldBeAdjusted$1(Ljava/util/Set;Landroid/media/AudioPlaybackConfiguration;)Z
 
     move-result p0
@@ -52,7 +51,6 @@
 .method public static synthetic $r8$lambda$S4WUwcR9oLGOM5Zig_WvVCUCn_A(Ljava/util/Set;Landroid/media/AudioPlaybackConfiguration;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->lambda$tvVolumeShouldBeAdjusted$0(Ljava/util/Set;Landroid/media/AudioPlaybackConfiguration;)Z
 
     move-result p0
@@ -63,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayManager(Lcom/samsung/android/server/audio/ScreenSharingHelper;)Landroid/hardware/display/DisplayManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     return-object p0
@@ -72,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsDLNAEnabled(Lcom/samsung/android/server/audio/ScreenSharingHelper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsDLNAEnabled:Z
 
     return p0
@@ -81,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsSupportDisplayVolumeControl(Lcom/samsung/android/server/audio/ScreenSharingHelper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsSupportDisplayVolumeControl:Z
 
     return p0
@@ -90,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMediaFocusControl(Lcom/samsung/android/server/audio/ScreenSharingHelper;)Lcom/android/server/audio/MediaFocusControl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mMediaFocusControl:Lcom/android/server/audio/MediaFocusControl;
 
     return-object p0
@@ -99,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$fgetmScreenSharingStateResumed(Lcom/samsung/android/server/audio/ScreenSharingHelper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mScreenSharingStateResumed:Z
 
     return p0
@@ -108,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsPresentationMode(Lcom/samsung/android/server/audio/ScreenSharingHelper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsPresentationMode:Z
 
     return-void
@@ -117,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$fputmScreenSharingStateResumed(Lcom/samsung/android/server/audio/ScreenSharingHelper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mScreenSharingStateResumed:Z
 
     return-void
@@ -126,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$msetMirroringPolicyParameter(Lcom/samsung/android/server/audio/ScreenSharingHelper;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->setMirroringPolicyParameter(Z)V
 
     return-void
@@ -135,60 +125,48 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/audio/MediaFocusControl;)V
     .locals 2
 
-    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 69
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsSupportDisplayVolumeControl:Z
 
-    .line 70
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsAppCasting:Z
 
-    .line 71
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mScreenSharingStateResumed:Z
 
-    .line 72
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsDLNAEnabled:Z
 
-    .line 84
     new-instance v1, Lcom/samsung/android/server/audio/ScreenSharingHelper$1;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/server/audio/ScreenSharingHelper$1;-><init>(Lcom/samsung/android/server/audio/ScreenSharingHelper;)V
 
     iput-object v1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mSemDeviceStatusListener:Landroid/hardware/display/SemDeviceStatusListener;
 
-    .line 122
     new-instance v1, Lcom/samsung/android/server/audio/ScreenSharingHelper$2;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/server/audio/ScreenSharingHelper$2;-><init>(Lcom/samsung/android/server/audio/ScreenSharingHelper;)V
 
     iput-object v1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mDisplayVolumeControlChecker:Lcom/samsung/android/server/audio/FrequentWorker;
 
-    .line 373
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsPresentationMode:Z
 
-    .line 374
     new-instance v0, Lcom/samsung/android/server/audio/ScreenSharingHelper$3;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/audio/ScreenSharingHelper$3;-><init>(Lcom/samsung/android/server/audio/ScreenSharingHelper;)V
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mPresentationModeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 148
     iput-object p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mContext:Landroid/content/Context;
 
     const-string v0, "display"
 
-    .line 149
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -199,7 +177,6 @@
 
     const-string v0, "audio"
 
-    .line 150
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -208,7 +185,6 @@
 
     iput-object p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 152
     iput-object p2, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mMediaFocusControl:Lcom/android/server/audio/MediaFocusControl;
 
     return-void
@@ -217,19 +193,16 @@
 .method public static getInstance(Landroid/content/Context;Lcom/android/server/audio/MediaFocusControl;)Lcom/samsung/android/server/audio/ScreenSharingHelper;
     .locals 1
 
-    .line 157
     sget-object v0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->sInstance:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
     if-nez v0, :cond_0
 
-    .line 158
     new-instance v0, Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
     invoke-direct {v0, p0, p1}, Lcom/samsung/android/server/audio/ScreenSharingHelper;-><init>(Landroid/content/Context;Lcom/android/server/audio/MediaFocusControl;)V
 
     sput-object v0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->sInstance:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
-    .line 160
     :cond_0
     sget-object p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->sInstance:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
@@ -239,7 +212,6 @@
 .method public static isAllowed(Landroid/media/AudioAttributes;)Z
     .locals 1
 
-    .line 164
     invoke-virtual {p0}, Landroid/media/AudioAttributes;->getUsage()I
 
     move-result p0
@@ -269,7 +241,6 @@
 .method public static isSplitSoundEnabled()Z
     .locals 1
 
-    .line 176
     sget-boolean v0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->sSplitSoundEnabled:Z
 
     return v0
@@ -278,7 +249,6 @@
 .method public static isWifiDisplayConnected()Z
     .locals 1
 
-    .line 184
     sget-boolean v0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->sIsWifiDisplayConnected:Z
 
     return v0
@@ -287,7 +257,6 @@
 .method public static synthetic lambda$tvVolumeShouldBeAdjusted$0(Ljava/util/Set;Landroid/media/AudioPlaybackConfiguration;)Z
     .locals 1
 
-    .line 262
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getClientUid()I
 
     move-result v0
@@ -302,7 +271,6 @@
 
     if-nez p0, :cond_0
 
-    .line 263
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getPlayerState()I
 
     move-result p0
@@ -325,7 +293,6 @@
 .method public static synthetic lambda$tvVolumeShouldBeAdjusted$1(Ljava/util/Set;Landroid/media/AudioPlaybackConfiguration;)Z
     .locals 1
 
-    .line 267
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getClientUid()I
 
     move-result v0
@@ -340,7 +307,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 268
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getPlayerState()I
 
     move-result p0
@@ -363,7 +329,6 @@
 .method public static setSplitSoundEnabled(Z)V
     .locals 0
 
-    .line 180
     sput-boolean p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->sSplitSoundEnabled:Z
 
     return-void
@@ -372,7 +337,6 @@
 .method public static setWifiDisplayConnected(Z)V
     .locals 0
 
-    .line 188
     sput-boolean p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->sIsWifiDisplayConnected:Z
 
     return-void
@@ -385,7 +349,6 @@
 
     const-string p0, "com.android.server.telecom"
 
-    .line 237
     invoke-virtual {p0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -398,7 +361,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 238
     :cond_0
     sget-boolean p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->sIsWifiDisplayConnected:Z
 
@@ -410,7 +372,6 @@
 
     const/4 p0, 0x3
 
-    .line 239
     invoke-static {p0, p2}, Landroid/media/AudioSystem;->isStreamActiveRemotely(II)Z
 
     move-result p0
@@ -419,16 +380,13 @@
 
     const/4 p0, 0x1
 
-    .line 241
     invoke-static {p0}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->setSplitSoundEnabled(Z)V
 
     goto :goto_0
 
-    .line 243
     :cond_1
     invoke-static {p2}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->setSplitSoundEnabled(Z)V
 
-    .line 245
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -438,7 +396,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 246
     invoke-static {}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->isSplitSoundEnabled()Z
 
     move-result p1
@@ -449,7 +406,6 @@
 
     move-result-object p0
 
-    .line 245
     invoke-static {p0}, Lcom/samsung/android/media/SemAudioSystem;->setPolicyParameters(Ljava/lang/String;)I
 
     :cond_2
@@ -459,7 +415,6 @@
 .method public getLiveCaptionEnabled(Landroid/content/Context;)Z
     .locals 1
 
-    .line 355
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -485,7 +440,6 @@
 .method public isDLNAEnabled()Z
     .locals 0
 
-    .line 227
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsDLNAEnabled:Z
 
     return p0
@@ -494,7 +448,6 @@
 .method public isSupportDisplayVolumeControl()Z
     .locals 0
 
-    .line 192
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsSupportDisplayVolumeControl:Z
 
     return p0
@@ -503,14 +456,12 @@
 .method public registerDeviceStatusListener(Landroid/content/Context;)V
     .locals 4
 
-    .line 319
     sget-boolean v0, Lcom/samsung/android/audio/Rune;->SEC_AUDIO_VOIP_VIA_SMART_VIEW:Z
 
     const-string v1, "l_smart_view_enable=true"
 
     if-eqz v0, :cond_2
 
-    .line 320
     iget-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
@@ -523,7 +474,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 322
     iget-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
@@ -545,7 +495,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 323
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -566,7 +515,6 @@
     :cond_1
     const-string v1, "false"
 
-    .line 325
     :goto_1
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -574,14 +522,12 @@
 
     move-result-object v1
 
-    .line 327
     sget-boolean v3, Lcom/samsung/android/audio/Rune;->SEC_AUDIO_MIC_MODE_FOR_QUICK_PANEL_UI:Z
 
     if-eqz v3, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 328
     iget-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/server/audio/MicModeManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/server/audio/MicModeManager;
@@ -590,11 +536,9 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/server/audio/MicModeManager;->updateSmartViewState(Z)V
 
-    .line 332
     :cond_2
     invoke-static {v1}, Lcom/samsung/android/media/SemAudioSystem;->setPolicyParameters(Ljava/lang/String;)I
 
-    .line 333
     iget-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     iget-object v1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mSemDeviceStatusListener:Landroid/hardware/display/SemDeviceStatusListener;
@@ -603,7 +547,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/display/DisplayManager;->semRegisterDeviceStatusListener(Landroid/hardware/display/SemDeviceStatusListener;Landroid/os/Handler;)V
 
-    .line 335
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "com.samsung.intent.action.SEC_PRESENTATION_START_SMARTVIEW"
@@ -612,10 +555,8 @@
 
     const-string v1, "com.samsung.intent.action.SEC_PRESENTATION_STOP_SMARTVIEW"
 
-    .line 336
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 337
     iget-object p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mPresentationModeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
@@ -626,12 +567,10 @@
 .method public setDLNAEnabled(Z)V
     .locals 0
 
-    .line 231
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsDLNAEnabled:Z
 
     xor-int/lit8 p1, p1, 0x1
 
-    .line 232
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->setMirroringPolicyParameter(Z)V
 
     return-void
@@ -640,12 +579,10 @@
 .method public final setMirroringPolicyParameter(Z)V
     .locals 2
 
-    .line 360
     sget-boolean v0, Lcom/samsung/android/audio/Rune;->SEC_AUDIO_VOIP_VIA_SMART_VIEW:Z
 
     if-eqz v0, :cond_4
 
-    .line 361
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsPresentationMode:Z
 
     if-nez v0, :cond_0
@@ -657,13 +594,11 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 364
     :cond_1
     sget-boolean v0, Lcom/samsung/android/audio/Rune;->SEC_AUDIO_MIC_MODE_FOR_QUICK_PANEL_UI:Z
 
     if-eqz v0, :cond_2
 
-    .line 365
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -682,7 +617,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     iget-object p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/server/audio/MicModeManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/server/audio/MicModeManager;
@@ -691,7 +625,6 @@
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MicModeManager;->updateSmartViewState(Z)V
 
-    .line 368
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -710,7 +643,6 @@
     :cond_3
     const-string p1, "false"
 
-    .line 369
     :goto_0
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -718,7 +650,6 @@
 
     move-result-object p0
 
-    .line 368
     invoke-static {p0}, Lcom/samsung/android/media/SemAudioSystem;->setPolicyParameters(Ljava/lang/String;)I
 
     :cond_4
@@ -728,7 +659,6 @@
 .method public setScreenSharingStateResumed(Z)V
     .locals 0
 
-    .line 223
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mScreenSharingStateResumed:Z
 
     return-void
@@ -737,10 +667,8 @@
 .method public setSupportDisplayVolumeControl(Z)V
     .locals 1
 
-    .line 196
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsSupportDisplayVolumeControl:Z
 
-    .line 197
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -767,7 +695,6 @@
 .method public tvVolumeShouldBeAdjusted(IIILjava/util/Set;I)Z
     .locals 8
 
-    .line 254
     iget-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mDisplayVolumeControlChecker:Lcom/samsung/android/server/audio/FrequentWorker;
 
     invoke-virtual {v0}, Lcom/samsung/android/server/audio/FrequentWorker;->runOrSkip()Ljava/lang/Object;
@@ -786,7 +713,6 @@
 
     return v1
 
-    .line 259
     :cond_0
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsSupportDisplayVolumeControl:Z
 
@@ -794,14 +720,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 260
     iget-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getActivePlaybackConfigurations()Ljava/util/List;
 
     move-result-object v0
 
-    .line 261
     invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object v3
@@ -814,7 +738,6 @@
 
     move-result v3
 
-    .line 266
     invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
@@ -827,7 +750,6 @@
 
     move-result-object p4
 
-    .line 269
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v0
@@ -838,14 +760,12 @@
 
     check-cast p4, Ljava/util/List;
 
-    .line 271
     invoke-interface {p4}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     xor-int/2addr v0, v1
 
-    .line 272
     invoke-interface {p4}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object p4
@@ -858,7 +778,6 @@
 
     invoke-direct {v4}, Lcom/samsung/android/server/audio/ScreenSharingHelper$$ExternalSyntheticLambda2;-><init>()V
 
-    .line 273
     invoke-virtual {p4, v4}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p4
@@ -892,7 +811,6 @@
     :cond_1
     move v4, v2
 
-    .line 277
     :goto_0
     iget-object v5, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mAudioManager:Landroid/media/AudioManager;
 
@@ -900,7 +818,6 @@
 
     move-result v5
 
-    .line 278
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -917,7 +834,6 @@
 
     iget-object v7, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mDisplayVolumeControlChecker:Lcom/samsung/android/server/audio/FrequentWorker;
 
-    .line 279
     invoke-virtual {v7}, Lcom/samsung/android/server/audio/FrequentWorker;->runOrSkip()Ljava/lang/Object;
 
     move-result-object v7
@@ -982,10 +898,8 @@
 
     const-string p5, "AS.ScreenSharingHelper"
 
-    .line 278
     invoke-static {p5, p4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     iget-boolean p4, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsAppCasting:Z
 
     if-nez p4, :cond_2
@@ -1004,7 +918,6 @@
     :cond_3
     return v2
 
-    .line 301
     :cond_4
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mScreenSharingStateResumed:Z
 
@@ -1022,7 +935,6 @@
     :cond_6
     const/4 p0, 0x3
 
-    .line 309
     invoke-static {p0, v2}, Landroid/media/AudioSystem;->isStreamActiveRemotely(II)Z
 
     move-result p2
@@ -1054,10 +966,8 @@
 
     const-string v0, "l_smart_view_enable=false"
 
-    .line 341
     invoke-static {v0}, Lcom/samsung/android/media/SemAudioSystem;->setPolicyParameters(Ljava/lang/String;)I
 
-    .line 343
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1066,7 +976,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 345
     invoke-static {}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->isSplitSoundEnabled()Z
 
     move-result v1
@@ -1077,27 +986,22 @@
 
     move-result-object v0
 
-    .line 343
     invoke-static {v0}, Lcom/samsung/android/media/SemAudioSystem;->setPolicyParameters(Ljava/lang/String;)I
 
-    .line 346
     iget-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     iget-object v1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mSemDeviceStatusListener:Landroid/hardware/display/SemDeviceStatusListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManager;->semUnregisterDeviceStatusListener(Landroid/hardware/display/SemDeviceStatusListener;)V
 
-    .line 347
     iget-object v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mPresentationModeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 349
     sget-boolean p1, Lcom/samsung/android/audio/Rune;->SEC_AUDIO_MIC_MODE_FOR_QUICK_PANEL_UI:Z
 
     if-eqz p1, :cond_0
 
-    .line 350
     iget-object p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/server/audio/MicModeManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/server/audio/MicModeManager;
@@ -1122,7 +1026,6 @@
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 204
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsAppCasting:Z
 
     goto :goto_0
@@ -1130,10 +1033,8 @@
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 208
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper;->mIsAppCasting:Z
 
-    .line 211
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 

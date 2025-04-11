@@ -41,7 +41,6 @@
 .method public static synthetic $r8$lambda$JBz_Hgp088_viLXL5MOybSF02tg(Lcom/android/server/NetworkScoreService;I)[Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/NetworkScoreService;->lambda$new$0(I)[Ljava/lang/String;
 
     move-result-object p0
@@ -52,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/NetworkScoreService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -61,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetmNetworkScorerAppManager(Lcom/android/server/NetworkScoreService;)Lcom/android/server/NetworkScorerAppManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
     return-object p0
@@ -70,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$mbindToScoringServiceIfNeeded(Lcom/android/server/NetworkScoreService;Landroid/net/NetworkScorerAppData;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/NetworkScoreService;->bindToScoringServiceIfNeeded(Landroid/net/NetworkScorerAppData;)V
 
     return-void
@@ -79,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$mrefreshBinding(Lcom/android/server/NetworkScoreService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->refreshBinding()V
 
     return-void
@@ -88,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$munbindFromScoringServiceIfNeeded(Lcom/android/server/NetworkScoreService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->unbindFromScoringServiceIfNeeded()V
 
     return-void
@@ -97,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDBG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     return v0
@@ -106,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$sfgetVERBOSE()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->VERBOSE:Z
 
     return v0
@@ -115,7 +107,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 83
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     const/4 v1, 0x1
@@ -144,7 +135,6 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
-    .line 84
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_1
@@ -171,7 +161,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 262
     new-instance v0, Lcom/android/server/NetworkScorerAppManager;
 
     invoke-direct {v0, p1}, Lcom/android/server/NetworkScorerAppManager;-><init>(Landroid/content/Context;)V
@@ -180,12 +169,10 @@
 
     invoke-direct {v1}, Lcom/android/server/NetworkScoreService$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 263
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    .line 262
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/server/NetworkScoreService;-><init>(Landroid/content/Context;Lcom/android/server/NetworkScorerAppManager;Ljava/util/function/Function;Landroid/os/Looper;)V
 
     return-void
@@ -194,58 +181,48 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/NetworkScorerAppManager;Ljava/util/function/Function;Landroid/os/Looper;)V
     .locals 7
 
-    .line 269
     invoke-direct {p0}, Landroid/net/INetworkScoreService$Stub;-><init>()V
 
-    .line 91
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkScoreService;->mPackageMonitorLock:Ljava/lang/Object;
 
-    .line 92
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkScoreService;->mServiceConnectionLock:Ljava/lang/Object;
 
-    .line 103
     new-instance v0, Lcom/android/server/NetworkScoreService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/NetworkScoreService$1;-><init>(Lcom/android/server/NetworkScoreService;)V
 
     iput-object v0, p0, Lcom/android/server/NetworkScoreService;->mUserIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 117
     new-instance v0, Lcom/android/server/NetworkScoreService$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/NetworkScoreService$2;-><init>(Lcom/android/server/NetworkScoreService;)V
 
     iput-object v0, p0, Lcom/android/server/NetworkScoreService;->mLocationModeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 270
     iput-object p1, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
-    .line 271
     iput-object p2, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
-    .line 272
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
-    .line 273
     new-instance v3, Landroid/content/IntentFilter;
 
     const-string v0, "android.intent.action.USER_UNLOCKED"
 
     invoke-direct {v3, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 275
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mUserIntentReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v2, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
@@ -258,21 +235,18 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 278
     new-instance v6, Lcom/android/server/NetworkScoreService$ServiceHandler;
 
     invoke-direct {v6, p0, p4}, Lcom/android/server/NetworkScoreService$ServiceHandler;-><init>(Lcom/android/server/NetworkScoreService;Landroid/os/Looper;)V
 
     iput-object v6, p0, Lcom/android/server/NetworkScoreService;->mHandler:Landroid/os/Handler;
 
-    .line 279
     new-instance v3, Landroid/content/IntentFilter;
 
     const-string v0, "android.location.MODE_CHANGED"
 
     invoke-direct {v3, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 280
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mLocationModeReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v2, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
@@ -283,41 +257,34 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 283
     new-instance v0, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;
 
     invoke-direct {v0, p1, v6}, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/android/server/NetworkScoreService;->mRecommendationSettingsObserver:Lcom/android/server/NetworkScoreService$DispatchingContentObserver;
 
-    .line 284
     iput-object p3, p0, Lcom/android/server/NetworkScoreService;->mServiceConnProducer:Ljava/util/function/Function;
 
-    .line 285
     new-instance v0, Lcom/android/server/NetworkScoreService$3;
 
     invoke-direct {v0, p0, v6}, Lcom/android/server/NetworkScoreService$3;-><init>(Lcom/android/server/NetworkScoreService;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/android/server/NetworkScoreService;->mUseOpenWifiPackageObserver:Landroid/database/ContentObserver;
 
-    .line 300
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
     const-string/jumbo v2, "use_open_wifi_package"
 
-    .line 301
     invoke-static {v2}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    .line 300
     invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 305
     const-class v0, Lcom/android/server/pm/permission/LegacyPermissionManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -330,7 +297,6 @@
 
     invoke-direct {v1, p0}, Lcom/android/server/NetworkScoreService$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/NetworkScoreService;)V
 
-    .line 306
     invoke-interface {v0, v1}, Lcom/android/server/pm/permission/LegacyPermissionManagerInternal;->setUseOpenWifiAppPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$PackagesProvider;)V
 
     return-void
@@ -339,7 +305,6 @@
 .method private synthetic lambda$new$0(I)[Ljava/lang/String;
     .locals 0
 
-    .line 307
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -352,14 +317,12 @@
 
     move-result-object p0
 
-    .line 309
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 310
     filled-new-array {p0}, [Ljava/lang/String;
 
     move-result-object p0
@@ -377,7 +340,6 @@
 .method public final bindToScoringServiceIfNeeded()V
     .locals 2
 
-    .line 391
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -388,7 +350,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     :cond_0
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
@@ -396,7 +357,6 @@
 
     move-result-object v0
 
-    .line 393
     invoke-virtual {p0, v0}, Lcom/android/server/NetworkScoreService;->bindToScoringServiceIfNeeded(Landroid/net/NetworkScorerAppData;)V
 
     return-void
@@ -405,7 +365,6 @@
 .method public final bindToScoringServiceIfNeeded(Landroid/net/NetworkScorerAppData;)V
     .locals 3
 
-    .line 404
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -435,18 +394,15 @@
     :cond_0
     if-eqz p1, :cond_3
 
-    .line 406
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mServiceConnectionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 408
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
     if-eqz v1, :cond_1
 
-    .line 409
     invoke-virtual {v1}, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->getAppData()Landroid/net/NetworkScorerAppData;
 
     move-result-object v1
@@ -457,16 +413,13 @@
 
     if-nez v1, :cond_1
 
-    .line 410
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->unbindFromScoringServiceIfNeeded()V
 
-    .line 414
     :cond_1
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
     if-nez v1, :cond_2
 
-    .line 415
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mServiceConnProducer:Ljava/util/function/Function;
 
     invoke-interface {v1, p1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -477,7 +430,6 @@
 
     iput-object p1, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
-    .line 419
     :cond_2
     iget-object p1, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
@@ -485,7 +437,6 @@
 
     invoke-virtual {p1, p0}, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->bind(Landroid/content/Context;)V
 
-    .line 420
     monitor-exit v0
 
     goto :goto_0
@@ -499,7 +450,6 @@
 
     throw p0
 
-    .line 422
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->unbindFromScoringServiceIfNeeded()V
 
@@ -510,17 +460,14 @@
 .method public final clearInternal()V
     .locals 2
 
-    .line 800
     new-instance v0, Lcom/android/server/NetworkScoreService$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/NetworkScoreService$4;-><init>(Lcom/android/server/NetworkScoreService;)V
 
-    .line 811
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->getScoreCacheLists()Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 800
     invoke-virtual {p0, v0, v1}, Lcom/android/server/NetworkScoreService;->sendCacheUpdateCallback(Ljava/util/function/BiConsumer;Ljava/util/Collection;)V
 
     return-void
@@ -529,25 +476,21 @@
 .method public clearScores()Z
     .locals 2
 
-    .line 699
     invoke-static {}, Landroid/net/INetworkScoreService$Stub;->getCallingUid()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/NetworkScoreService;->enforceSystemOrIsActiveScorer(I)V
 
-    .line 700
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 702
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->clearInternal()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 705
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x1
@@ -559,14 +502,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 706
     throw p0
 .end method
 
 .method public disableScoring()V
     .locals 1
 
-    .line 794
     invoke-static {}, Landroid/net/INetworkScoreService$Stub;->getCallingUid()I
 
     move-result v0
@@ -579,7 +520,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 5
 
-    .line 887
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
     const-string v1, "NetworkScoreService"
@@ -592,13 +532,11 @@
 
     return-void
 
-    .line 888
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 890
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
@@ -610,17 +548,14 @@
 
     const-string p0, "Scoring is disabled."
 
-    .line 892
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 906
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
 
-    .line 895
     :cond_1
     :try_start_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -639,20 +574,17 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 897
     iget-object v2, p0, Lcom/android/server/NetworkScoreService;->mServiceConnectionLock:Ljava/lang/Object;
 
     monitor-enter v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 898
     :try_start_2
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
     if-eqz p0, :cond_2
 
-    .line 899
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_0
@@ -660,22 +592,18 @@
     :cond_2
     const-string p0, "ScoringServiceConnection: null"
 
-    .line 901
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 903
     :goto_0
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 904
     :try_start_3
     invoke-virtual {p2}, Ljava/io/PrintWriter;->flush()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 906
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -683,7 +611,6 @@
     :catchall_0
     move-exception p0
 
-    .line 903
     :try_start_4
     monitor-exit v2
     :try_end_4
@@ -697,17 +624,14 @@
     :catchall_1
     move-exception p0
 
-    .line 906
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 907
     throw p0
 .end method
 
 .method public final enforceSystemOnly()V
     .locals 2
 
-    .line 731
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
     const-string v0, "android.permission.REQUEST_NETWORK_SCORES"
@@ -722,7 +646,6 @@
 .method public final enforceSystemOrHasScoreNetworks()V
     .locals 2
 
-    .line 736
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.REQUEST_NETWORK_SCORES"
@@ -737,7 +660,6 @@
 
     const-string v0, "android.permission.SCORE_NETWORKS"
 
-    .line 738
     invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -746,7 +668,6 @@
 
     goto :goto_0
 
-    .line 740
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -764,7 +685,6 @@
 .method public final enforceSystemOrIsActiveScorer(I)V
     .locals 2
 
-    .line 746
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.REQUEST_NETWORK_SCORES"
@@ -775,7 +695,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 748
     invoke-virtual {p0, p1}, Lcom/android/server/NetworkScoreService;->isCallerActiveScorer(I)Z
 
     move-result p0
@@ -784,7 +703,6 @@
 
     goto :goto_0
 
-    .line 749
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -802,10 +720,8 @@
 .method public getActiveScorer()Landroid/net/NetworkScorerAppData;
     .locals 0
 
-    .line 776
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->enforceSystemOnly()V
 
-    .line 777
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
     invoke-virtual {p0}, Lcom/android/server/NetworkScorerAppManager;->getActiveScorer()Landroid/net/NetworkScorerAppData;
@@ -818,10 +734,8 @@
 .method public getActiveScorerPackage()Ljava/lang/String;
     .locals 0
 
-    .line 762
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->enforceSystemOrHasScoreNetworks()V
 
-    .line 763
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
     invoke-virtual {p0}, Lcom/android/server/NetworkScorerAppManager;->getActiveScorer()Landroid/net/NetworkScorerAppData;
@@ -834,7 +748,6 @@
 
     return-object p0
 
-    .line 767
     :cond_0
     invoke-virtual {p0}, Landroid/net/NetworkScorerAppData;->getRecommendationServicePackageName()Ljava/lang/String;
 
@@ -846,10 +759,8 @@
 .method public getAllValidScorers()Ljava/util/List;
     .locals 0
 
-    .line 787
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->enforceSystemOnly()V
 
-    .line 788
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
     invoke-virtual {p0}, Lcom/android/server/NetworkScorerAppManager;->getAllValidScorers()Ljava/util/List;
@@ -862,18 +773,15 @@
 .method public final getRecommendationProvider()Landroid/net/INetworkRecommendationProvider;
     .locals 1
 
-    .line 941
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mServiceConnectionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 942
     :try_start_0
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
     if-eqz p0, :cond_0
 
-    .line 943
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->getRecommendationProvider()Landroid/net/INetworkRecommendationProvider;
 
     move-result-object p0
@@ -882,7 +790,6 @@
 
     return-object p0
 
-    .line 945
     :cond_0
     monitor-exit v0
 
@@ -903,12 +810,10 @@
 .method public final getScoreCacheLists()Ljava/util/Collection;
     .locals 2
 
-    .line 917
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 918
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -927,7 +832,6 @@
     :catchall_0
     move-exception p0
 
-    .line 919
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -938,18 +842,15 @@
 .method public isCallerActiveScorer(I)Z
     .locals 1
 
-    .line 723
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mServiceConnectionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 724
     :try_start_0
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
     if-eqz p0, :cond_0
 
-    .line 725
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->getAppData()Landroid/net/NetworkScorerAppData;
 
     move-result-object p0
@@ -973,7 +874,6 @@
     :catchall_0
     move-exception p0
 
-    .line 726
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -984,7 +884,6 @@
 .method public onUserUnlocked(I)V
     .locals 2
 
-    .line 329
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1011,7 +910,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->refreshBinding()V
 
@@ -1021,7 +919,6 @@
 .method public final refreshBinding()V
     .locals 2
 
-    .line 334
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1032,21 +929,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 336
     :cond_0
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
     invoke-virtual {v0}, Lcom/android/server/NetworkScorerAppManager;->updateState()V
 
-    .line 337
     iget-object v0, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
     invoke-virtual {v0}, Lcom/android/server/NetworkScorerAppManager;->migrateNetworkScorerAppSettingIfNeeded()V
 
-    .line 338
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->registerPackageMonitorIfNeeded()V
 
-    .line 339
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->bindToScoringServiceIfNeeded()V
 
     return-void
@@ -1055,15 +948,12 @@
 .method public registerNetworkScoreCache(ILandroid/net/INetworkScoreCache;I)V
     .locals 6
 
-    .line 818
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->enforceSystemOnly()V
 
-    .line 819
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 821
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
@@ -1071,7 +961,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 822
     :try_start_1
     iget-object v3, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
@@ -1087,12 +976,10 @@
 
     if-nez v3, :cond_0
 
-    .line 824
     new-instance v3, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v3}, Landroid/os/RemoteCallbackList;-><init>()V
 
-    .line 825
     iget-object v4, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1101,7 +988,6 @@
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 827
     :cond_0
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1113,14 +999,12 @@
 
     if-nez p2, :cond_2
 
-    .line 828
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->getRegisteredCallbackCount()I
 
     move-result p2
 
     if-nez p2, :cond_1
 
-    .line 829
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1134,7 +1018,6 @@
 
     const/4 p2, 0x2
 
-    .line 831
     invoke-static {p0, p2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
@@ -1143,7 +1026,6 @@
 
     const-string p0, "NetworkScoreService"
 
-    .line 832
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1160,13 +1042,11 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 835
     :cond_2
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 837
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1174,7 +1054,6 @@
     :catchall_0
     move-exception p0
 
-    .line 835
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -1188,17 +1067,14 @@
     :catchall_1
     move-exception p0
 
-    .line 837
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 838
     throw p0
 .end method
 
 .method public final registerPackageMonitorIfNeeded()V
     .locals 7
 
-    .line 360
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1209,7 +1085,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     :cond_0
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
@@ -1217,12 +1092,10 @@
 
     move-result-object v1
 
-    .line 362
     iget-object v2, p0, Lcom/android/server/NetworkScoreService;->mPackageMonitorLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 364
     :try_start_0
     iget-object v3, p0, Lcom/android/server/NetworkScoreService;->mPackageMonitor:Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;
 
@@ -1232,7 +1105,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 365
     invoke-virtual {v1}, Landroid/net/NetworkScorerAppData;->getRecommendationServicePackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -1252,7 +1124,6 @@
 
     const-string v3, "NetworkScoreService"
 
-    .line 368
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1273,27 +1144,22 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 371
     :cond_2
     iget-object v3, p0, Lcom/android/server/NetworkScoreService;->mPackageMonitor:Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;
 
     invoke-virtual {v3}, Lcom/android/internal/content/PackageMonitor;->unregister()V
 
-    .line 372
     iput-object v4, p0, Lcom/android/server/NetworkScoreService;->mPackageMonitor:Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;
 
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 376
     iget-object v3, p0, Lcom/android/server/NetworkScoreService;->mPackageMonitor:Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;
 
     if-nez v3, :cond_4
 
-    .line 377
     new-instance v3, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;
 
-    .line 378
     invoke-virtual {v1}, Landroid/net/NetworkScorerAppData;->getRecommendationServicePackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -1302,7 +1168,6 @@
 
     iput-object v3, p0, Lcom/android/server/NetworkScoreService;->mPackageMonitor:Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;
 
-    .line 380
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
     sget-object v5, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
@@ -1315,7 +1180,6 @@
 
     const-string v0, "NetworkScoreService"
 
-    .line 383
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1336,7 +1200,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     :cond_4
     monitor-exit v2
 
@@ -1357,12 +1220,10 @@
 
     const-string/jumbo v0, "network_recommendations_package"
 
-    .line 343
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 344
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mRecommendationSettingsObserver:Lcom/android/server/NetworkScoreService$DispatchingContentObserver;
 
     const/4 v2, 0x1
@@ -1371,12 +1232,10 @@
 
     const-string/jumbo v0, "network_recommendations_enabled"
 
-    .line 347
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 348
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mRecommendationSettingsObserver:Lcom/android/server/NetworkScoreService$DispatchingContentObserver;
 
     const/4 v1, 0x2
@@ -1389,15 +1248,12 @@
 .method public requestScores([Landroid/net/NetworkKey;)Z
     .locals 3
 
-    .line 864
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->enforceSystemOnly()V
 
-    .line 865
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 867
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->getRecommendationProvider()Landroid/net/INetworkRecommendationProvider;
 
@@ -1407,14 +1263,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 870
     :try_start_1
     invoke-interface {p0, p1}, Landroid/net/INetworkRecommendationProvider;->requestScores([Landroid/net/NetworkKey;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 881
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x1
@@ -1429,12 +1283,10 @@
 
     const-string v2, "Failed to request scores."
 
-    .line 875
     invoke-static {p1, v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 881
     :cond_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1447,14 +1299,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 882
     throw p0
 .end method
 
 .method public final sendCacheUpdateCallback(Ljava/util/function/BiConsumer;Ljava/util/Collection;)V
     .locals 4
 
-    .line 924
     invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1472,10 +1322,8 @@
 
     check-cast p2, Landroid/os/RemoteCallbackList;
 
-    .line 925
     monitor-enter p2
 
-    .line 926
     :try_start_0
     invoke-virtual {p2}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
@@ -1488,7 +1336,6 @@
     :goto_1
     if-ge v1, v0, :cond_0
 
-    .line 929
     :try_start_1
     invoke-virtual {p2, v1}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
 
@@ -1496,12 +1343,10 @@
 
     check-cast v2, Landroid/net/INetworkScoreCache;
 
-    .line 930
     invoke-virtual {p2, v1}, Landroid/os/RemoteCallbackList;->getBroadcastCookie(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 929
     invoke-interface {p1, v2, v3}, Ljava/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1513,18 +1358,14 @@
     :catchall_0
     move-exception p0
 
-    .line 933
     :try_start_2
     invoke-virtual {p2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 934
     throw p0
 
-    .line 933
     :cond_0
     invoke-virtual {p2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 935
     monitor-exit p2
 
     goto :goto_0
@@ -1545,10 +1386,8 @@
 .method public setActiveScorer(Ljava/lang/String;)Z
     .locals 0
 
-    .line 711
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->enforceSystemOrHasScoreNetworks()V
 
-    .line 712
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mNetworkScorerAppManager:Lcom/android/server/NetworkScorerAppManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/NetworkScorerAppManager;->setActiveScorer(Ljava/lang/String;)Z
@@ -1561,7 +1400,6 @@
 .method public systemReady()V
     .locals 2
 
-    .line 318
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1572,7 +1410,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->registerRecommendationSettingsObserver()V
 
@@ -1582,7 +1419,6 @@
 .method public systemRunning()V
     .locals 1
 
-    .line 324
     sget-boolean p0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     if-eqz p0, :cond_0
@@ -1600,7 +1436,6 @@
 .method public final unbindFromScoringServiceIfNeeded()V
     .locals 4
 
-    .line 427
     sget-boolean v0, Lcom/android/server/NetworkScoreService;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1611,19 +1446,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
     :cond_0
     iget-object v1, p0, Lcom/android/server/NetworkScoreService;->mServiceConnectionLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 429
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
     if-eqz v2, :cond_1
 
-    .line 430
     iget-object v3, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v3}, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->unbind(Landroid/content/Context;)V
@@ -1632,7 +1464,6 @@
 
     const-string v0, "NetworkScoreService"
 
-    .line 431
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1643,7 +1474,6 @@
 
     iget-object v3, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
-    .line 432
     invoke-virtual {v3}, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->getAppData()Landroid/net/NetworkScorerAppData;
 
     move-result-object v3
@@ -1658,21 +1488,17 @@
 
     move-result-object v2
 
-    .line 431
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     const/4 v0, 0x0
 
-    .line 434
     iput-object v0, p0, Lcom/android/server/NetworkScoreService;->mServiceConnection:Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
-    .line 435
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 436
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->clearInternal()V
 
     return-void
@@ -1680,7 +1506,6 @@
     :catchall_0
     move-exception p0
 
-    .line 435
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -1692,15 +1517,12 @@
 .method public unregisterNetworkScoreCache(ILandroid/net/INetworkScoreCache;)V
     .locals 5
 
-    .line 843
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->enforceSystemOnly()V
 
-    .line 844
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 846
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
@@ -1708,7 +1530,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 847
     :try_start_1
     iget-object v3, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
@@ -1724,7 +1545,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 848
     invoke-virtual {v3, p2}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
     move-result p2
@@ -1733,7 +1553,6 @@
 
     goto :goto_0
 
-    .line 853
     :cond_0
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->getRegisteredCallbackCount()I
 
@@ -1741,7 +1560,6 @@
 
     if-nez p2, :cond_2
 
-    .line 854
     iget-object p0, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1758,7 +1576,6 @@
 
     const/4 p2, 0x2
 
-    .line 849
     invoke-static {p0, p2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
@@ -1767,7 +1584,6 @@
 
     const-string p0, "NetworkScoreService"
 
-    .line 850
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1784,14 +1600,12 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 856
     :cond_2
     :goto_1
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 858
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1799,7 +1613,6 @@
     :catchall_0
     move-exception p0
 
-    .line 856
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -1813,17 +1626,14 @@
     :catchall_1
     move-exception p0
 
-    .line 858
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 859
     throw p0
 .end method
 
 .method public updateScores([Landroid/net/ScoredNetwork;)Z
     .locals 9
 
-    .line 441
     invoke-static {}, Landroid/net/INetworkScoreService$Stub;->getCallingUid()I
 
     move-result v0
@@ -1834,18 +1644,15 @@
 
     if-eqz v0, :cond_7
 
-    .line 446
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 449
     :try_start_0
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 450
     array-length v3, p1
 
     const/4 v4, 0x0
@@ -1857,7 +1664,6 @@
 
     aget-object v6, p1, v5
 
-    .line 451
     iget-object v7, v6, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
     iget v7, v7, Landroid/net/NetworkKey;->type:I
@@ -1874,12 +1680,10 @@
 
     if-nez v7, :cond_0
 
-    .line 453
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 454
     iget-object v8, v6, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
     iget v8, v8, Landroid/net/NetworkKey;->type:I
@@ -1890,7 +1694,6 @@
 
     invoke-interface {v2, v8, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 456
     :cond_0
     invoke-interface {v7, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1898,7 +1701,6 @@
 
     goto :goto_0
 
-    .line 460
     :cond_1
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -1924,14 +1726,12 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 463
     iget-object v5, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
     monitor-enter v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 464
     :try_start_1
     iget-object v6, p0, Lcom/android/server/NetworkScoreService;->mScoreCaches:Ljava/util/Map;
 
@@ -1947,7 +1747,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 466
     invoke-virtual {v6}, Landroid/os/RemoteCallbackList;->getRegisteredCallbackCount()I
 
     move-result v7
@@ -1959,7 +1758,6 @@
     :cond_3
     move v3, v4
 
-    .line 467
     :cond_4
     :goto_2
     monitor-exit v5
@@ -1973,7 +1771,6 @@
 
     const/4 v5, 0x2
 
-    .line 470
     invoke-static {v3, v5}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v3
@@ -1982,7 +1779,6 @@
 
     const-string v3, "NetworkScoreService"
 
-    .line 471
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2009,18 +1805,15 @@
 
     goto :goto_1
 
-    .line 477
     :cond_5
     iget-object v3, p0, Lcom/android/server/NetworkScoreService;->mContext:Landroid/content/Context;
 
-    .line 478
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/util/List;
 
-    .line 479
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -2031,12 +1824,10 @@
 
     move-result v2
 
-    .line 478
     invoke-static {v3, v5, v2}, Lcom/android/server/NetworkScoreService$FilteringCacheUpdatingConsumer;->create(Landroid/content/Context;Ljava/util/List;I)Lcom/android/server/NetworkScoreService$FilteringCacheUpdatingConsumer;
 
     move-result-object v2
 
-    .line 480
     invoke-static {v6}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v3
@@ -2050,7 +1841,6 @@
     :catchall_0
     move-exception p0
 
-    .line 467
     :try_start_3
     monitor-exit v5
     :try_end_3
@@ -2061,7 +1851,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 485
     :cond_6
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -2072,10 +1861,8 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 486
     throw p0
 
-    .line 442
     :cond_7
     new-instance p0, Ljava/lang/SecurityException;
 

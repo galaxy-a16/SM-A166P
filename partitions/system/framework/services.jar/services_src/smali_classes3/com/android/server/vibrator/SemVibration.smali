@@ -31,80 +31,68 @@
 .method public constructor <init>(Lcom/android/server/vibrator/SemVibrationBundle;)V
     .locals 1
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getToken()Landroid/os/IBinder;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/vibrator/SemVibration;->mToken:Landroid/os/IBinder;
 
-    .line 30
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getAttrs()Landroid/os/VibrationAttributes;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/vibrator/SemVibration;->mAttrs:Landroid/os/VibrationAttributes;
 
-    .line 31
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getUid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/vibrator/SemVibration;->mUid:I
 
-    .line 32
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getDisplayId()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/vibrator/SemVibration;->mDisplayId:I
 
-    .line 33
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getOpPkg()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/vibrator/SemVibration;->mOpPkg:Ljava/lang/String;
 
-    .line 34
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getReason()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/vibrator/SemVibration;->mReason:Ljava/lang/String;
 
-    .line 35
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getEffect()Landroid/os/CombinedVibration;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/vibrator/SemVibration;->mEffect:Landroid/os/CombinedVibration;
 
-    .line 36
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getIndex()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
 
-    .line 37
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getRepeat()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/vibrator/SemVibration;->mRepeat:I
 
-    .line 38
     invoke-virtual {p1}, Lcom/android/server/vibrator/SemVibrationBundle;->getMagnitude()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/vibrator/SemVibration;->mMagnitude:I
 
-    .line 40
     invoke-static {}, Lcom/samsung/android/server/vibrator/VibratorHelper;->getInstance()Lcom/samsung/android/server/vibrator/VibratorHelper;
 
     move-result-object p1
@@ -119,7 +107,6 @@
 .method public commonValidation()Z
     .locals 3
 
-    .line 44
     iget v0, p0, Lcom/android/server/vibrator/SemVibration;->mMagnitude:I
 
     const/4 v1, 0x0
@@ -130,12 +117,10 @@
 
     const-string/jumbo p0, "magnitude value is under 0"
 
-    .line 45
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 48
     :cond_0
     iget v0, p0, Lcom/android/server/vibrator/SemVibration;->mRepeat:I
 
@@ -143,12 +128,10 @@
 
     const-string/jumbo p0, "repeat value is wrong."
 
-    .line 49
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 52
     :cond_1
     iget-object p0, p0, Lcom/android/server/vibrator/SemVibration;->mToken:Landroid/os/IBinder;
 
@@ -156,7 +139,6 @@
 
     const-string/jumbo p0, "token is null"
 
-    .line 53
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -170,7 +152,6 @@
 .method public getCallerInfo()Lcom/android/server/vibrator/Vibration$CallerInfo;
     .locals 7
 
-    .line 60
     new-instance v6, Lcom/android/server/vibrator/Vibration$CallerInfo;
 
     iget-object v1, p0, Lcom/android/server/vibrator/SemVibration;->mAttrs:Landroid/os/VibrationAttributes;
@@ -193,7 +174,6 @@
 .method public getCommonLog()Ljava/lang/String;
     .locals 4
 
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -232,7 +212,6 @@
 
     iget-object v2, p0, Lcom/android/server/vibrator/SemVibration;->mAttrs:Landroid/os/VibrationAttributes;
 
-    .line 67
     invoke-virtual {v2}, Landroid/os/VibrationAttributes;->getUsage()I
 
     move-result v2
@@ -247,7 +226,6 @@
 
     iget-object v1, p0, Lcom/android/server/vibrator/SemVibration;->mAttrs:Landroid/os/VibrationAttributes;
 
-    .line 68
     invoke-virtual {v1}, Landroid/os/VibrationAttributes;->getUsage()I
 
     move-result v1

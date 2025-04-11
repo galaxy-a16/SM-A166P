@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/input/KeyboardLayoutManager;)V
     .locals 0
 
-    .line 1574
     iput-object p1, p0, Lcom/android/server/input/KeyboardLayoutManager$4;->this$0:Lcom/android/server/input/KeyboardLayoutManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,6 +23,5 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

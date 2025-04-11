@@ -17,18 +17,14 @@
 .method public constructor <init>(Lcom/android/server/pm/KeySetManagerService;JILjava/security/PublicKey;)V
     .locals 0
 
-    .line 92
     iput-object p1, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->this$0:Lcom/android/server/pm/KeySetManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     iput-wide p2, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mId:J
 
-    .line 94
     iput p4, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mRefCount:I
 
-    .line 95
     iput-object p5, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mKey:Ljava/security/PublicKey;
 
     return-void
@@ -37,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/KeySetManagerService;JILjava/security/PublicKey;Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;-><init>(Lcom/android/server/pm/KeySetManagerService;JILjava/security/PublicKey;)V
 
     return-void
@@ -46,20 +41,16 @@
 .method public constructor <init>(Lcom/android/server/pm/KeySetManagerService;JLjava/security/PublicKey;)V
     .locals 0
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->this$0:Lcom/android/server/pm/KeySetManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     iput-wide p2, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mId:J
 
     const/4 p1, 0x1
 
-    .line 85
     iput p1, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mRefCount:I
 
-    .line 86
     iput-object p4, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mKey:Ljava/security/PublicKey;
 
     return-void
@@ -70,7 +61,6 @@
 .method public decrRefCountLPw()J
     .locals 2
 
-    .line 116
     iget v0, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mRefCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -85,7 +75,6 @@
 .method public getKey()Ljava/security/PublicKey;
     .locals 0
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mKey:Ljava/security/PublicKey;
 
     return-object p0
@@ -94,7 +83,6 @@
 .method public incrRefCountLPw()V
     .locals 1
 
-    .line 111
     iget v0, p0, Lcom/android/server/pm/KeySetManagerService$PublicKeyHandle;->mRefCount:I
 
     add-int/lit8 v0, v0, 0x1

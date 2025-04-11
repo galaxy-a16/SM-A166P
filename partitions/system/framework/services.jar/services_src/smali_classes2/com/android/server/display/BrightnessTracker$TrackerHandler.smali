@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/display/BrightnessTracker;Landroid/os/Looper;)V
     .locals 1
 
-    .line 987
     iput-object p1, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 988
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 13
 
-    .line 991
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_7
@@ -56,7 +53,6 @@
 
     goto/16 :goto_1
 
-    .line 1020
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
@@ -68,7 +64,6 @@
 
     goto/16 :goto_1
 
-    .line 1012
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
@@ -82,7 +77,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/display/BrightnessTracker;->-$$Nest$fputmShouldCollectColorSample(Lcom/android/server/display/BrightnessTracker;Z)V
 
-    .line 1013
     iget-object p1, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     invoke-static {p1}, Lcom/android/server/display/BrightnessTracker;->-$$Nest$fgetmShouldCollectColorSample(Lcom/android/server/display/BrightnessTracker;)Z
@@ -99,14 +93,12 @@
 
     if-nez p1, :cond_2
 
-    .line 1014
     iget-object p0, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     invoke-static {p0}, Lcom/android/server/display/BrightnessTracker;->-$$Nest$menableColorSampling(Lcom/android/server/display/BrightnessTracker;)V
 
     goto :goto_1
 
-    .line 1015
     :cond_2
     iget-object p1, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
@@ -124,46 +116,39 @@
 
     if-eqz p1, :cond_8
 
-    .line 1016
     iget-object p0, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     invoke-static {p0}, Lcom/android/server/display/BrightnessTracker;->-$$Nest$mdisableColorSampling(Lcom/android/server/display/BrightnessTracker;)V
 
     goto :goto_1
 
-    .line 1004
     :cond_3
     iget-object p1, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     invoke-static {p1}, Lcom/android/server/display/BrightnessTracker;->-$$Nest$mstartSensorListener(Lcom/android/server/display/BrightnessTracker;)V
 
-    .line 1005
     iget-object p0, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     invoke-static {p0}, Lcom/android/server/display/BrightnessTracker;->-$$Nest$menableColorSampling(Lcom/android/server/display/BrightnessTracker;)V
 
     goto :goto_1
 
-    .line 1008
     :cond_4
     iget-object p1, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     invoke-static {p1}, Lcom/android/server/display/BrightnessTracker;->-$$Nest$mstopSensorListener(Lcom/android/server/display/BrightnessTracker;)V
 
-    .line 1009
     iget-object p0, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     invoke-static {p0}, Lcom/android/server/display/BrightnessTracker;->-$$Nest$mdisableColorSampling(Lcom/android/server/display/BrightnessTracker;)V
 
     goto :goto_1
 
-    .line 996
     :cond_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/display/BrightnessTracker$BrightnessChangeValues;
 
-    .line 997
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     if-ne p1, v1, :cond_6
@@ -176,7 +161,6 @@
     :goto_0
     move v4, v1
 
-    .line 998
     iget-object v2, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 
     iget v3, v0, Lcom/android/server/display/BrightnessTracker$BrightnessChangeValues;->brightness:F
@@ -199,7 +183,6 @@
 
     goto :goto_1
 
-    .line 993
     :cond_7
     iget-object p0, p0, Lcom/android/server/display/BrightnessTracker$TrackerHandler;->this$0:Lcom/android/server/display/BrightnessTracker;
 

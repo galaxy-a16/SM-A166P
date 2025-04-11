@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodBindingController;)V
     .locals 0
 
-    .line 287
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,15 +30,12 @@
 
     const-wide/16 v1, 0x20
 
-    .line 290
     invoke-static {v1, v2, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 291
     const-class v0, Lcom/android/server/inputmethod/ImfLock;
 
     monitor-enter v0
 
-    .line 292
     :try_start_0
     iget-object v3, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
@@ -65,7 +61,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 293
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p2}, Lcom/android/internal/inputmethod/IInputMethod$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/inputmethod/IInputMethod;
@@ -78,10 +73,8 @@
 
     invoke-static {p1, p2}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fputmCurMethod(Lcom/android/server/inputmethod/InputMethodBindingController;Lcom/android/server/inputmethod/IInputMethodInvoker;)V
 
-    .line 294
     invoke-virtual {p0}, Lcom/android/server/inputmethod/InputMethodBindingController$2;->updateCurrentMethodUid()V
 
-    .line 296
     invoke-static {}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -90,7 +83,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmCurToken(Lcom/android/server/inputmethod/InputMethodBindingController;)Landroid/os/IBinder;
@@ -99,7 +91,6 @@
 
     if-nez p1, :cond_0
 
-    .line 299
     invoke-static {}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -108,20 +99,16 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-virtual {p0}, Lcom/android/server/inputmethod/InputMethodBindingController;->unbindCurrentMethod()V
 
-    .line 301
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 302
     monitor-exit v0
 
     return-void
 
-    .line 306
     :cond_0
     invoke-static {}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -149,7 +136,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmMethodMap(Lcom/android/server/inputmethod/InputMethodBindingController;)Landroid/util/ArrayMap;
@@ -168,14 +154,12 @@
 
     check-cast p1, Landroid/view/inputmethod/InputMethodInfo;
 
-    .line 309
     iget-object p2, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p2}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmSupportsStylusHw(Lcom/android/server/inputmethod/InputMethodBindingController;)Z
 
     move-result p2
 
-    .line 310
     invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodInfo;->supportsStylusHandwriting()Z
 
     move-result v3
@@ -189,7 +173,6 @@
     :cond_1
     const/4 p2, 0x0
 
-    .line 311
     :goto_0
     iget-object v3, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
@@ -201,10 +184,8 @@
 
     if-eqz p2, :cond_2
 
-    .line 313
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->invalidateLocalStylusHandwritingAvailabilityCaches()V
 
-    .line 315
     :cond_2
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
@@ -226,7 +207,6 @@
 
     invoke-virtual {p1, p2, v3}, Lcom/android/server/inputmethod/InputMethodManagerService;->initializeImeLocked(Lcom/android/server/inputmethod/IInputMethodInvoker;Landroid/os/IBinder;)V
 
-    .line 316
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmService(Lcom/android/server/inputmethod/InputMethodBindingController;)Lcom/android/server/inputmethod/InputMethodManagerService;
@@ -241,7 +221,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/inputmethod/InputMethodManagerService;->scheduleNotifyImeUidToAudioService(I)V
 
-    .line 317
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmService(Lcom/android/server/inputmethod/InputMethodBindingController;)Lcom/android/server/inputmethod/InputMethodManagerService;
@@ -250,7 +229,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/inputmethod/InputMethodManagerService;->reRequestCurrentClientSessionLocked()V
 
-    .line 318
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmService(Lcom/android/server/inputmethod/InputMethodBindingController;)Lcom/android/server/inputmethod/InputMethodManagerService;
@@ -259,7 +237,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/inputmethod/InputMethodManagerService;->performOnCreateInlineSuggestionsRequestLocked()V
 
-    .line 324
     :cond_3
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
@@ -269,15 +246,12 @@
 
     invoke-virtual {p1}, Lcom/android/server/inputmethod/InputMethodManagerService;->scheduleResetStylusHandwriting()V
 
-    .line 325
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 326
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 328
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmLatchForTesting(Lcom/android/server/inputmethod/InputMethodBindingController;)Ljava/util/concurrent/CountDownLatch;
@@ -286,7 +260,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 329
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p0}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmLatchForTesting(Lcom/android/server/inputmethod/InputMethodBindingController;)Ljava/util/concurrent/CountDownLatch;
@@ -301,7 +274,6 @@
     :catchall_0
     move-exception p0
 
-    .line 325
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -313,12 +285,10 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 4
 
-    .line 359
     const-class v0, Lcom/android/server/inputmethod/ImfLock;
 
     monitor-enter v0
 
-    .line 364
     :try_start_0
     invoke-static {}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -352,7 +322,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     iget-object v1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {v1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmCurMethod(Lcom/android/server/inputmethod/InputMethodBindingController;)Lcom/android/server/inputmethod/IInputMethodInvoker;
@@ -375,7 +344,6 @@
 
     move-result-object v1
 
-    .line 367
     invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -386,7 +354,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 370
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -395,7 +362,6 @@
 
     invoke-static {p1, v1, v2}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fputmLastBindTime(Lcom/android/server/inputmethod/InputMethodBindingController;J)V
 
-    .line 372
     invoke-static {}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -422,12 +388,10 @@
 
     invoke-static {p1, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 374
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$mclearCurMethodAndSessions(Lcom/android/server/inputmethod/InputMethodBindingController;)V
 
-    .line 375
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmService(Lcom/android/server/inputmethod/InputMethodBindingController;)Lcom/android/server/inputmethod/InputMethodManagerService;
@@ -436,7 +400,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/inputmethod/InputMethodManagerService;->clearInputShownLocked()V
 
-    .line 376
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {p0}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmService(Lcom/android/server/inputmethod/InputMethodBindingController;)Lcom/android/server/inputmethod/InputMethodManagerService;
@@ -447,7 +410,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/inputmethod/InputMethodManagerService;->unbindCurrentClientLocked(I)V
 
-    .line 378
     :cond_0
     monitor-exit v0
 
@@ -466,7 +428,6 @@
 .method public final updateCurrentMethodUid()V
     .locals 5
 
-    .line 335
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmCurIntent(Lcom/android/server/inputmethod/InputMethodBindingController;)Landroid/content/Intent;
@@ -481,7 +442,6 @@
 
     move-result-object v0
 
-    .line 336
     iget-object v1, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     invoke-static {v1}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$fgetmPackageManagerInternal(Lcom/android/server/inputmethod/InputMethodBindingController;)Landroid/content/pm/PackageManagerInternal;
@@ -494,21 +454,18 @@
 
     move-result-object v2
 
-    .line 337
     invoke-virtual {v2}, Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;->getCurrentUserId()I
 
     move-result v2
 
     const-wide/16 v3, 0x0
 
-    .line 336
     invoke-virtual {v1, v0, v3, v4, v2}, Landroid/content/pm/PackageManagerInternal;->getPackageUid(Ljava/lang/String;JI)I
 
     move-result v1
 
     if-gez v1, :cond_0
 
-    .line 339
     invoke-static {}, Lcom/android/server/inputmethod/InputMethodBindingController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -529,7 +486,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 
     const/4 v0, -0x1
@@ -538,7 +494,6 @@
 
     goto :goto_0
 
-    .line 342
     :cond_0
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodBindingController$2;->this$0:Lcom/android/server/inputmethod/InputMethodBindingController;
 

@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Landroid/net/NetworkStackClient$DependenciesImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Landroid/net/NetworkStackClient$DependenciesImpl;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
 
     const-string/jumbo v1, "network_stack"
 
-    .line 88
     invoke-static {v1, p1, p0, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;ZI)V
 
     return-void
@@ -44,7 +42,6 @@
 .method public checkCallerUid()V
     .locals 1
 
-    .line 94
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -57,7 +54,6 @@
 
     if-eq p0, v0, :cond_1
 
-    .line 102
     invoke-static {p0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result p0
@@ -68,7 +64,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -86,7 +81,6 @@
 .method public getConnectivityModuleConnector()Landroid/net/ConnectivityModuleConnector;
     .locals 0
 
-    .line 110
     invoke-static {}, Landroid/net/ConnectivityModuleConnector;->getInstance()Landroid/net/ConnectivityModuleConnector;
 
     move-result-object p0

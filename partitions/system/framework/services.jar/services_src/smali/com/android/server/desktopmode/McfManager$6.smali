@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/McfManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 234
     iput-object p1, p0, Lcom/android/server/desktopmode/McfManager$6;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-direct {p0, p2}, Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;-><init>(Ljava/lang/String;)V
@@ -24,7 +23,6 @@
 .method public onSettingChanged(Ljava/lang/String;I)V
     .locals 2
 
-    .line 237
     sget-boolean p2, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p2, :cond_0
@@ -49,7 +47,6 @@
 
     invoke-static {p2, v0}, Lcom/android/server/desktopmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     :cond_0
     iget-object p2, p0, Lcom/android/server/desktopmode/McfManager$6;->this$0:Lcom/android/server/desktopmode/McfManager;
 
@@ -61,7 +58,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 240
     iget-object p2, p0, Lcom/android/server/desktopmode/McfManager$6;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/desktopmode/McfManager;)Lcom/android/server/desktopmode/McfManager$McfHandler;
@@ -74,12 +70,10 @@
 
     move-result-object p0
 
-    .line 241
     invoke-virtual {p0, v0, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 240
     invoke-virtual {p2, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void

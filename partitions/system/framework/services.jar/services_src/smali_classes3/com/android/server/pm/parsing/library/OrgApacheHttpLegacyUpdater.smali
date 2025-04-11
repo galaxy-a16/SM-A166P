@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 33
     invoke-direct {p0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static apkTargetsApiLevelLessThanOrEqualToOMR1(Lcom/android/server/pm/pkg/AndroidPackage;)Z
     .locals 1
 
-    .line 36
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result p0
@@ -41,7 +39,6 @@
 .method public updatePackage(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ZZ)V
     .locals 0
 
-    .line 45
     invoke-static {p1}, Lcom/android/server/pm/parsing/library/OrgApacheHttpLegacyUpdater;->apkTargetsApiLevelLessThanOrEqualToOMR1(Lcom/android/server/pm/pkg/AndroidPackage;)Z
 
     move-result p2
@@ -50,7 +47,6 @@
 
     const-string/jumbo p2, "org.apache.http.legacy"
 
-    .line 46
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->prefixRequiredLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
 
     :cond_0

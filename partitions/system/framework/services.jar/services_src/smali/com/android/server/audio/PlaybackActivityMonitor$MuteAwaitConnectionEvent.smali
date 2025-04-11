@@ -11,10 +11,8 @@
 .method public constructor <init>([I)V
     .locals 0
 
-    .line 1447
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 1448
     iput-object p1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$MuteAwaitConnectionEvent;->mUsagesToMute:[I
 
     return-void
@@ -25,7 +23,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 1453
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

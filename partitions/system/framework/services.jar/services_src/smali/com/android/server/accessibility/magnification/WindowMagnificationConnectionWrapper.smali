@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/view/accessibility/IWindowMagnificationConnection;Lcom/android/server/accessibility/AccessibilityTraceManager;)V
     .locals 0
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
 
-    .line 49
     iput-object p2, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     return-void
@@ -34,7 +31,6 @@
 
     return-object p0
 
-    .line 230
     :cond_0
     new-instance v0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper$RemoteAnimationCallback;
 
@@ -48,7 +44,6 @@
 .method public disableWindowMagnification(ILandroid/view/accessibility/MagnificationAnimationCallback;)Z
     .locals 5
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v1, 0x80
@@ -59,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -86,19 +80,16 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 109
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
 
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
-    .line 110
     invoke-static {p2, p0}, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->transformToRemoteCallback(Landroid/view/accessibility/MagnificationAnimationCallback;Lcom/android/server/accessibility/AccessibilityTraceManager;)Landroid/view/accessibility/IRemoteMagnificationAnimationCallback;
 
     move-result-object p0
 
-    .line 109
     invoke-interface {v0, p1, p0}, Landroid/view/accessibility/IWindowMagnificationConnection;->disableWindowMagnification(ILandroid/view/accessibility/IRemoteMagnificationAnimationCallback;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -120,7 +111,6 @@
 
     move-object/from16 v1, p7
 
-    .line 64
     iget-object v2, v0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v3, 0x80
@@ -131,7 +121,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 65
     iget-object v2, v0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -215,14 +204,12 @@
 
     move/from16 v13, p6
 
-    .line 73
     :goto_0
     :try_start_0
     iget-object v7, v0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
 
     iget-object v0, v0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
-    .line 75
     invoke-static {v1, v0}, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->transformToRemoteCallback(Landroid/view/accessibility/MagnificationAnimationCallback;Lcom/android/server/accessibility/AccessibilityTraceManager;)Landroid/view/accessibility/IRemoteMagnificationAnimationCallback;
 
     move-result-object v14
@@ -239,7 +226,6 @@
 
     move/from16 v13, p6
 
-    .line 73
     invoke-interface/range {v7 .. v14}, Landroid/view/accessibility/IWindowMagnificationConnection;->enableWindowMagnification(IFFFFFLandroid/view/accessibility/IRemoteMagnificationAnimationCallback;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -257,7 +243,6 @@
 .method public linkToDeath(Landroid/os/IBinder$DeathRecipient;)V
     .locals 1
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
 
     invoke-interface {p0}, Landroid/view/accessibility/IWindowMagnificationConnection;->asBinder()Landroid/os/IBinder;
@@ -274,7 +259,6 @@
 .method public moveWindowMagnifier(IFF)Z
     .locals 5
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v1, 0x80
@@ -285,7 +269,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -318,7 +301,6 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 126
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
@@ -340,7 +322,6 @@
 .method public moveWindowMagnifierToPosition(IFFLandroid/view/accessibility/MagnificationAnimationCallback;)Z
     .locals 5
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v1, 0x80
@@ -351,7 +332,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 139
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -384,19 +364,16 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 144
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
 
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
-    .line 145
     invoke-static {p4, p0}, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->transformToRemoteCallback(Landroid/view/accessibility/MagnificationAnimationCallback;Lcom/android/server/accessibility/AccessibilityTraceManager;)Landroid/view/accessibility/IRemoteMagnificationAnimationCallback;
 
     move-result-object p0
 
-    .line 144
     invoke-interface {v0, p1, p2, p3, p0}, Landroid/view/accessibility/IWindowMagnificationConnection;->moveWindowMagnifierToPosition(IFFLandroid/view/accessibility/IRemoteMagnificationAnimationCallback;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -414,7 +391,6 @@
 .method public removeMagnificationButton(I)Z
     .locals 5
 
-    .line 173
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v1, 0x80
@@ -425,7 +401,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 174
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -446,7 +421,6 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 178
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
@@ -468,7 +442,6 @@
 .method public removeMagnificationSettingsPanel(I)Z
     .locals 5
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v1, 0x80
@@ -479,7 +452,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -500,7 +472,6 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 194
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
@@ -522,7 +493,6 @@
 .method public setConnectionCallback(Landroid/view/accessibility/IWindowMagnificationConnectionCallback;)Z
     .locals 5
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v1, 0x180
@@ -533,7 +503,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 208
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -554,7 +523,6 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 214
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
@@ -576,7 +544,6 @@
 .method public setScale(IF)Z
     .locals 5
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v1, 0x80
@@ -587,7 +554,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -614,7 +580,6 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 91
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
@@ -636,7 +601,6 @@
 .method public showMagnificationButton(II)Z
     .locals 5
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     const-wide/16 v1, 0x80
@@ -647,7 +611,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mTrace:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -674,7 +637,6 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 162
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
@@ -696,7 +658,6 @@
 .method public unlinkToDeath(Landroid/os/IBinder$DeathRecipient;)V
     .locals 1
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationConnectionWrapper;->mConnection:Landroid/view/accessibility/IWindowMagnificationConnection;
 
     invoke-interface {p0}, Landroid/view/accessibility/IWindowMagnificationConnection;->asBinder()Landroid/os/IBinder;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;)V
     .locals 0
 
-    .line 758
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/policy/PhoneWindowManager;Lcom/android/server/policy/PhoneWindowManager$PolicyHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
 
-    .line 761
     iget v0, p1, Landroid/os/Message;->what:I
 
     const-string v1, "WindowManager"
@@ -45,7 +42,6 @@
     :pswitch_0
     goto/16 :goto_2
 
-    .line 845
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -57,7 +53,6 @@
 
     goto/16 :goto_2
 
-    .line 839
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -65,16 +60,13 @@
 
     goto/16 :goto_2
 
-    .line 807
     :pswitch_3
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 808
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Long;
 
-    .line 809
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     const/4 v1, 0x0
@@ -89,7 +81,6 @@
 
     goto/16 :goto_2
 
-    .line 836
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -97,7 +88,6 @@
 
     goto/16 :goto_2
 
-    .line 833
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -109,7 +99,6 @@
 
     goto/16 :goto_2
 
-    .line 830
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -119,7 +108,6 @@
 
     goto/16 :goto_2
 
-    .line 825
     :pswitch_7
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -133,14 +121,12 @@
 
     if-eqz p1, :cond_5
 
-    .line 826
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$maccessibilityShortcutActivated(Lcom/android/server/policy/PhoneWindowManager;)V
 
     goto/16 :goto_2
 
-    .line 822
     :pswitch_8
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -148,7 +134,6 @@
 
     goto/16 :goto_2
 
-    .line 819
     :pswitch_9
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -156,7 +141,6 @@
 
     goto/16 :goto_2
 
-    .line 842
     :pswitch_a
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -166,7 +150,6 @@
 
     goto/16 :goto_2
 
-    .line 816
     :pswitch_b
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -174,7 +157,6 @@
 
     goto/16 :goto_2
 
-    .line 813
     :pswitch_c
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -182,7 +164,6 @@
 
     goto/16 :goto_2
 
-    .line 804
     :pswitch_d
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -190,13 +171,11 @@
 
     goto/16 :goto_2
 
-    .line 773
     :pswitch_e
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_GLOBAL_ACTION_BY_SIDE_KEY_COMBINATION:Z
 
     if-eqz v0, :cond_2
 
-    .line 775
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     const/4 v0, 0x1
@@ -213,7 +192,6 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 777
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, p1, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
@@ -222,7 +200,6 @@
 
     const-string v1, "Power - Long Press - Show Global Actions"
 
-    .line 778
     invoke-virtual {p1, v2, v2, v1}, Lcom/android/server/policy/PhoneWindowManager;->performHapticFeedback(IZLjava/lang/String;)Z
 
     goto :goto_1
@@ -230,7 +207,6 @@
     :cond_1
     const/4 v0, -0x1
 
-    .line 782
     :goto_1
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -238,7 +214,6 @@
 
     goto :goto_2
 
-    .line 785
     :cond_2
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -246,7 +221,6 @@
 
     goto :goto_2
 
-    .line 769
     :pswitch_f
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -254,11 +228,9 @@
 
     goto :goto_2
 
-    .line 797
     :pswitch_10
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 798
     sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_WAKEUP:Z
 
     if-eqz v0, :cond_3
@@ -284,10 +256,8 @@
 
     const-string/jumbo v2, "waitForAllWindowsDrawn"
 
-    .line 799
     invoke-static {v0, v1, v2, p1}, Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V
 
-    .line 801
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p0, p1}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$mfinishWindowsDrawn(Lcom/android/server/policy/PhoneWindowManager;I)V
@@ -297,17 +267,14 @@
     :pswitch_11
     const-string p1, "Keyguard drawn timeout. Setting mKeyguardDrawComplete"
 
-    .line 793
     invoke-static {v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 794
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$mfinishKeyguardDrawn(Lcom/android/server/policy/PhoneWindowManager;)V
 
     goto :goto_2
 
-    .line 789
     :pswitch_12
     sget-boolean p1, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_WAKEUP:Z
 
@@ -317,7 +284,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 790
     :cond_4
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -325,7 +291,6 @@
 
     goto :goto_2
 
-    .line 766
     :pswitch_13
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -337,7 +302,6 @@
 
     goto :goto_2
 
-    .line 763
     :pswitch_14
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 

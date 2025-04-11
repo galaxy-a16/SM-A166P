@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$CqcErp99UTfVH_lne8hbsWkc0vs(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->lambda$getInfosLocked$1(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
 
     move-result p0
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$je1rirOXtchdmoslIyyOxi6GFNY(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->lambda$dumpLocked$2(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
 
     move-result p0
@@ -41,7 +39,6 @@
 .method public static synthetic $r8$lambda$saDJThMBKercfk_HsTIecO3Gm9c(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->lambda$getInfosLocked$0(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
 
     move-result p0
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fputmUid(Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mUid:I
 
     return-void
@@ -61,26 +57,22 @@
 .method public constructor <init>(Lcom/android/server/am/AppExitInfoTracker;I)V
     .locals 0
 
-    .line 1363
     iput-object p1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1364
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
-    .line 1365
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
-    .line 1366
     iput p2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mMaxCapacity:I
 
     return-void
@@ -89,7 +81,6 @@
 .method public static synthetic lambda$dumpLocked$2(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
     .locals 2
 
-    .line 1540
     invoke-virtual {p1}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
 
     move-result-wide v0
@@ -108,7 +99,6 @@
 .method public static synthetic lambda$getInfosLocked$0(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
     .locals 2
 
-    .line 1385
     invoke-virtual {p1}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
 
     move-result-wide v0
@@ -127,7 +117,6 @@
 .method public static synthetic lambda$getInfosLocked$1(Landroid/app/ApplicationExitInfo;Landroid/app/ApplicationExitInfo;)I
     .locals 2
 
-    .line 1405
     invoke-virtual {p1}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
 
     move-result-wide v0
@@ -148,7 +137,6 @@
 .method public addExitInfoLocked(Landroid/app/ApplicationExitInfo;)V
     .locals 1
 
-    .line 1463
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->addInfoLocked(Landroid/util/SparseArray;Landroid/app/ApplicationExitInfo;)V
@@ -159,7 +147,6 @@
 .method public addInfoLocked(Landroid/util/SparseArray;Landroid/app/ApplicationExitInfo;)V
     .locals 8
 
-    .line 1424
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
     move-result v0
@@ -177,14 +164,12 @@
     :goto_0
     if-ge v4, v0, :cond_1
 
-    .line 1428
     invoke-virtual {p1, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/app/ApplicationExitInfo;
 
-    .line 1429
     invoke-virtual {v5}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
 
     move-result-wide v6
@@ -193,7 +178,6 @@
 
     if-gez v6, :cond_0
 
-    .line 1430
     invoke-virtual {v5}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
 
     move-result-wide v1
@@ -210,7 +194,6 @@
     :cond_1
     if-ltz v1, :cond_3
 
-    .line 1435
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -223,20 +206,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 1437
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 1439
     :cond_2
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->removeAt(I)V
 
-    .line 1443
     :cond_3
     invoke-virtual {p2}, Landroid/app/ApplicationExitInfo;->getPackageUid()I
 
     move-result v0
 
-    .line 1445
     invoke-virtual {p2}, Landroid/app/ApplicationExitInfo;->getRealUid()I
 
     move-result v1
@@ -247,25 +226,21 @@
 
     if-eqz v1, :cond_4
 
-    .line 1446
     invoke-virtual {p2}, Landroid/app/ApplicationExitInfo;->getRealUid()I
 
     move-result v0
 
-    .line 1448
     :cond_4
     invoke-virtual {p2}, Landroid/app/ApplicationExitInfo;->getPid()I
 
     move-result v1
 
-    .line 1449
     invoke-virtual {p2}, Landroid/app/ApplicationExitInfo;->getProcessStateSummary()[B
 
     move-result-object v2
 
     if-nez v2, :cond_5
 
-    .line 1450
     iget-object v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     iget-object v2, v2, Lcom/android/server/am/AppExitInfoTracker;->mActiveAppStateSummary:Landroid/util/SparseArray;
@@ -278,7 +253,6 @@
 
     invoke-virtual {p2, v2}, Landroid/app/ApplicationExitInfo;->setProcessStateSummary([B)V
 
-    .line 1453
     :cond_5
     invoke-virtual {p2}, Landroid/app/ApplicationExitInfo;->getTraceFile()Ljava/io/File;
 
@@ -286,7 +260,6 @@
 
     if-nez v2, :cond_6
 
-    .line 1454
     iget-object v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     iget-object v2, v2, Lcom/android/server/am/AppExitInfoTracker;->mActiveAppTraces:Landroid/util/SparseArray;
@@ -299,7 +272,6 @@
 
     invoke-virtual {p2, v0}, Landroid/app/ApplicationExitInfo;->setTraceFile(Ljava/io/File;)V
 
-    .line 1457
     :cond_6
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
@@ -307,7 +279,6 @@
 
     invoke-virtual {p2, p0}, Landroid/app/ApplicationExitInfo;->setAppTraceRetriever(Landroid/app/IAppTraceRetriever;)V
 
-    .line 1458
     invoke-virtual {p1, v1, p2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
     return-void
@@ -316,7 +287,6 @@
 .method public addRecoverableCrashLocked(Landroid/app/ApplicationExitInfo;)V
     .locals 1
 
-    .line 1468
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->addInfoLocked(Landroid/util/SparseArray;Landroid/app/ApplicationExitInfo;)V
@@ -327,7 +297,6 @@
 .method public appendTraceIfNecessaryLocked(ILjava/io/File;)Z
     .locals 1
 
-    .line 1473
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -338,10 +307,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1475
     invoke-virtual {p1, p2}, Landroid/app/ApplicationExitInfo;->setTraceFile(Ljava/io/File;)V
 
-    .line 1476
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker;->mAppTraceRetriever:Lcom/android/server/am/AppExitInfoTracker$AppTraceRetriever;
@@ -361,12 +328,10 @@
 .method public destroyLocked()V
     .locals 1
 
-    .line 1497
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->destroyLocked(Landroid/util/SparseArray;)V
 
-    .line 1498
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->destroyLocked(Landroid/util/SparseArray;)V
@@ -377,7 +342,6 @@
 .method public destroyLocked(Landroid/util/SparseArray;)V
     .locals 2
 
-    .line 1484
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
     move-result p0
@@ -387,30 +351,25 @@
     :goto_0
     if-ltz p0, :cond_1
 
-    .line 1485
     invoke-virtual {p1, p0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ApplicationExitInfo;
 
-    .line 1486
     invoke-virtual {v0}, Landroid/app/ApplicationExitInfo;->getTraceFile()Ljava/io/File;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 1488
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     :cond_0
     const/4 v1, 0x0
 
-    .line 1490
     invoke-virtual {v0, v1}, Landroid/app/ApplicationExitInfo;->setTraceFile(Ljava/io/File;)V
 
-    .line 1491
     invoke-virtual {v0, v1}, Landroid/app/ApplicationExitInfo;->setAppTraceRetriever(Landroid/app/IAppTraceRetriever;)V
 
     add-int/lit8 p0, p0, -0x1
@@ -424,12 +383,10 @@
 .method public dumpLocked(Ljava/io/PrintWriter;Ljava/lang/String;Landroid/icu/text/SimpleDateFormat;)V
     .locals 6
 
-    .line 1533
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1534
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
@@ -441,7 +398,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 1535
     iget-object v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -456,7 +412,6 @@
 
     goto :goto_0
 
-    .line 1537
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
@@ -469,7 +424,6 @@
     :goto_1
     if-ltz v1, :cond_1
 
-    .line 1538
     iget-object v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -484,7 +438,6 @@
 
     goto :goto_1
 
-    .line 1540
     :cond_1
     new-instance p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer$$ExternalSyntheticLambda2;
 
@@ -492,7 +445,6 @@
 
     invoke-static {v0, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1541
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -502,7 +454,6 @@
     :goto_2
     if-ge v1, p0, :cond_2
 
-    .line 1543
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -554,7 +505,6 @@
 
     return-void
 
-    .line 1504
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
@@ -571,7 +521,6 @@
 
     if-ltz v0, :cond_4
 
-    .line 1505
     iget-object v3, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->keyAt(I)I
@@ -609,7 +558,6 @@
     :cond_1
     return-void
 
-    .line 1508
     :cond_2
     iget-object v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
@@ -625,10 +573,8 @@
 
     if-eqz v2, :cond_3
 
-    .line 1510
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 1512
     :cond_3
     iget-object v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
@@ -639,7 +585,6 @@
 
     goto :goto_0
 
-    .line 1516
     :cond_4
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
@@ -652,10 +597,8 @@
     :goto_2
     if-ltz v0, :cond_8
 
-    .line 1517
     iget-object v3, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
-    .line 1518
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
@@ -672,7 +615,6 @@
 
     check-cast v4, Landroid/app/ApplicationExitInfo;
 
-    .line 1517
     invoke-interface {p1, v3, v4}, Ljava/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -692,7 +634,6 @@
     :cond_5
     return-void
 
-    .line 1521
     :cond_6
     iget-object v3, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
@@ -708,10 +649,8 @@
 
     if-eqz v3, :cond_7
 
-    .line 1523
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 1525
     :cond_7
     iget-object v3, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
@@ -729,7 +668,6 @@
 .method public getExitInfoLocked(IILjava/util/ArrayList;)V
     .locals 1
 
-    .line 1418
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->getInfosLocked(Landroid/util/SparseArray;IILjava/util/ArrayList;)V
@@ -742,7 +680,6 @@
 
     if-lez p2, :cond_0
 
-    .line 1373
     invoke-virtual {p1, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -751,12 +688,10 @@
 
     if-eqz p0, :cond_9
 
-    .line 1375
     invoke-virtual {p4, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_4
 
-    .line 1378
     :cond_0
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -775,7 +710,6 @@
 
     if-ne p3, v1, :cond_4
 
-    .line 1389
     invoke-virtual {p1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -785,14 +719,12 @@
     :goto_0
     if-ge v1, p2, :cond_3
 
-    .line 1391
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Landroid/app/ApplicationExitInfo;
 
-    .line 1392
     invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
 
     move-result-wide v2
@@ -812,19 +744,16 @@
 
     goto :goto_0
 
-    .line 1396
     :cond_3
     invoke-virtual {p4, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_4
 
-    .line 1399
     :cond_4
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker;->mTmpInfoList2:Ljava/util/ArrayList;
 
-    .line 1400
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     move v1, v0
@@ -832,7 +761,6 @@
     :goto_1
     if-ge v1, p2, :cond_5
 
-    .line 1402
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -845,7 +773,6 @@
 
     goto :goto_1
 
-    .line 1404
     :cond_5
     new-instance p1, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer$$ExternalSyntheticLambda1;
 
@@ -856,7 +783,6 @@
     :goto_2
     if-ge v0, p3, :cond_6
 
-    .line 1407
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -869,7 +795,6 @@
 
     goto :goto_2
 
-    .line 1409
     :cond_6
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
@@ -879,7 +804,6 @@
     :goto_3
     if-ge v0, p2, :cond_8
 
-    .line 1382
     invoke-virtual {p1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -892,7 +816,6 @@
 
     goto :goto_3
 
-    .line 1384
     :cond_8
     new-instance p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer$$ExternalSyntheticLambda0;
 
@@ -908,12 +831,10 @@
 .method public readFromProto(Landroid/util/proto/ProtoInputStream;J)I
     .locals 3
 
-    .line 1563
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoInputStream;->start(J)J
 
     move-result-wide p2
 
-    .line 1564
     invoke-virtual {p1}, Landroid/util/proto/ProtoInputStream;->nextField()I
 
     move-result v0
@@ -937,7 +858,6 @@
 
     goto :goto_1
 
-    .line 1579
     :cond_0
     new-instance v0, Landroid/app/ApplicationExitInfo;
 
@@ -945,10 +865,8 @@
 
     const-wide v1, 0x20b00000003L
 
-    .line 1580
     invoke-virtual {v0, p1, v1, v2}, Landroid/app/ApplicationExitInfo;->readFromProto(Landroid/util/proto/ProtoInputStream;J)V
 
-    .line 1582
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/app/ApplicationExitInfo;->getPid()I
@@ -959,7 +877,6 @@
 
     goto :goto_1
 
-    .line 1573
     :cond_1
     new-instance v0, Landroid/app/ApplicationExitInfo;
 
@@ -967,10 +884,8 @@
 
     const-wide v1, 0x20b00000002L
 
-    .line 1574
     invoke-virtual {v0, p1, v1, v2}, Landroid/app/ApplicationExitInfo;->readFromProto(Landroid/util/proto/ProtoInputStream;J)V
 
-    .line 1575
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/app/ApplicationExitInfo;->getPid()I
@@ -984,14 +899,12 @@
     :cond_2
     const-wide v0, 0x10500000001L
 
-    .line 1569
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mUid:I
 
-    .line 1566
     :goto_1
     invoke-virtual {p1}, Landroid/util/proto/ProtoInputStream;->nextField()I
 
@@ -999,11 +912,9 @@
 
     goto :goto_0
 
-    .line 1587
     :cond_3
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoInputStream;->end(J)V
 
-    .line 1588
     iget p0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mUid:I
 
     return p0
@@ -1014,12 +925,10 @@
 
     if-nez p1, :cond_0
 
-    .line 1594
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1596
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
@@ -1034,7 +943,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 1597
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
@@ -1043,7 +951,6 @@
 
     if-ne p2, v1, :cond_2
 
-    .line 1598
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
@@ -1060,7 +967,6 @@
 
     goto :goto_0
 
-    .line 1601
     :cond_3
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
@@ -1075,7 +981,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 1602
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
@@ -1084,7 +989,6 @@
 
     if-ne p2, v1, :cond_5
 
-    .line 1603
     :cond_4
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
@@ -1108,14 +1012,12 @@
 .method public writeToProto(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 5
 
-    .line 1549
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10500000001L
 
-    .line 1550
     iget v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mUid:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
@@ -1124,7 +1026,6 @@
 
     move v1, v0
 
-    .line 1551
     :goto_0
     iget-object v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
@@ -1134,7 +1035,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1552
     iget-object v2, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mInfos:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1151,7 +1051,6 @@
 
     goto :goto_0
 
-    .line 1554
     :cond_0
     :goto_1
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
@@ -1162,7 +1061,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1555
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$AppExitInfoContainer;->mRecoverableCrashes:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1179,7 +1077,6 @@
 
     goto :goto_1
 
-    .line 1558
     :cond_1
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 

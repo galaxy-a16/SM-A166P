@@ -25,25 +25,18 @@
 .method public constructor <init>(ILjava/lang/String;JJJI)V
     .locals 0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput p1, p0, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
 
-    .line 48
     iput-object p2, p0, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->processName:Ljava/lang/String;
 
-    .line 49
     iput-wide p3, p0, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pss:J
 
-    .line 50
     iput-wide p5, p0, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->initialIdlePss:J
 
-    .line 51
     iput-wide p7, p0, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->avgPss:J
 
-    .line 52
     iput p9, p0, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->importance:I
 
     return-void
@@ -54,7 +47,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

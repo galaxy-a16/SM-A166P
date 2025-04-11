@@ -7,17 +7,14 @@
 .method public static executePanel(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
 
-    .line 82
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const/high16 v1, 0x10000000
 
-    .line 83
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 84
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.android.settings"
@@ -30,7 +27,6 @@
 
     const-string/jumbo v1, "mediapanel"
 
-    .line 87
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -39,7 +35,6 @@
 
     const-string p1, "com.android.settings.panel.action.MEDIA_OUTPUT"
 
-    .line 88
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_0
@@ -47,7 +42,6 @@
     :cond_0
     const-string/jumbo v1, "volumepanel"
 
-    .line 90
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -56,10 +50,8 @@
 
     const-string p1, "android.settings.panel.action.VOLUME"
 
-    .line 91
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 95
     :cond_1
     :goto_0
     :try_start_0
@@ -72,7 +64,6 @@
     :catch_0
     move-exception p0
 
-    .line 97
     invoke-virtual {p0}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 
     :goto_1
@@ -84,7 +75,6 @@
 
     const/4 v0, 0x0
 
-    .line 17
     :try_start_0
     aget-object v1, p1, v0
 
@@ -186,20 +176,17 @@
 
     goto/16 :goto_7
 
-    .line 68
     :cond_1
     :try_start_2
     invoke-static {p2, v4}, Lcom/samsung/android/server/audio/utils/CommandUtils;->executePanel(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_3
 
-    .line 65
     :cond_2
     invoke-static {p2, v3}, Lcom/samsung/android/server/audio/utils/CommandUtils;->executePanel(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_3
 
-    .line 45
     :cond_3
     aget-object p2, p1, v8
 
@@ -241,13 +228,11 @@
 
     goto/16 :goto_7
 
-    .line 56
     :cond_7
     aget-object p2, p1, v7
 
     invoke-static {p2}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 57
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -272,7 +257,6 @@
 
     goto :goto_3
 
-    .line 47
     :cond_8
     aget-object p2, p1, v7
 
@@ -282,14 +266,12 @@
 
     const-string p3, ""
 
-    .line 48
     invoke-virtual {p3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
 
     if-eqz p3, :cond_9
 
-    .line 49
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -314,7 +296,6 @@
 
     goto :goto_3
 
-    .line 51
     :cond_9
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -345,7 +326,6 @@
 
     goto/16 :goto_7
 
-    .line 19
     :cond_a
     aget-object p2, p1, v8
 
@@ -392,7 +372,6 @@
 
     goto/16 :goto_7
 
-    .line 24
     :cond_e
     aget-object p2, p1, v7
 
@@ -466,12 +445,10 @@
 
     const-string p1, "  Warning : Only numbers between 0 and 3 are allowed."
 
-    .line 33
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 29
     :cond_10
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -483,7 +460,6 @@
 
     aget-object p1, p1, v7
 
-    .line 30
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -492,7 +468,6 @@
 
     move-result-object p1
 
-    .line 29
     invoke-interface {p3, p1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -509,7 +484,6 @@
 
     goto/16 :goto_3
 
-    .line 21
     :cond_11
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -545,7 +519,6 @@
     :catch_0
     const-string p1, "  Warning : command requires the next arguments"
 
-    .line 75
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_7

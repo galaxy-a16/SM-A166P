@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPMInternal(Lcom/android/server/pm/FrozenPackageInterceptor;)Landroid/content/pm/PackageManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/FrozenPackageInterceptor;->mPMInternal:Landroid/content/pm/PackageManagerInternal;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$misPackageBeingInstalled(Lcom/android/server/pm/FrozenPackageInterceptor;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/FrozenPackageInterceptor;->isPackageBeingInstalled(Ljava/lang/String;)Z
 
     move-result p0
@@ -35,20 +33,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Lcom/android/server/pm/FrozenPackageInterceptor$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/FrozenPackageInterceptor$1;-><init>(Lcom/android/server/pm/FrozenPackageInterceptor;)V
 
     iput-object v0, p0, Lcom/android/server/pm/FrozenPackageInterceptor;->mActivityInterceptorCallback:Lcom/android/server/wm/ActivityInterceptorCallback;
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/pm/FrozenPackageInterceptor;->mContext:Landroid/content/Context;
 
-    .line 44
     const-class p1, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -67,14 +61,12 @@
 .method public final isPackageBeingInstalled(Ljava/lang/String;)Z
     .locals 2
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/pm/FrozenPackageInterceptor;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 76
     invoke-virtual {p0}, Landroid/content/pm/PackageManager;->getPackageInstaller()Landroid/content/pm/PackageInstaller;
 
     move-result-object p0
@@ -83,7 +75,6 @@
 
     move-result-object p0
 
-    .line 77
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -101,7 +92,6 @@
 
     check-cast v0, Landroid/content/pm/PackageInstaller$SessionInfo;
 
-    .line 78
     invoke-virtual {v0}, Landroid/content/pm/PackageInstaller$SessionInfo;->getAppPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -112,7 +102,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 79
     invoke-virtual {v0}, Landroid/content/pm/PackageInstaller$SessionInfo;->isCommitted()Z
 
     move-result v0
@@ -132,7 +121,6 @@
 .method public registerListeners()V
     .locals 2
 
-    .line 69
     const-class v0, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -145,7 +133,6 @@
 
     iget-object p0, p0, Lcom/android/server/pm/FrozenPackageInterceptor;->mActivityInterceptorCallback:Lcom/android/server/wm/ActivityInterceptorCallback;
 
-    .line 70
     invoke-virtual {v0, v1, p0}, Lcom/android/server/wm/ActivityTaskManagerInternal;->registerActivityStartInterceptor(ILcom/android/server/wm/ActivityInterceptorCallback;)V
 
     return-void

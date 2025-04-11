@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/CertBlacklister$BlacklistObserver;Ljava/lang/String;)V
     .locals 0
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/CertBlacklister$BlacklistObserver$1;->this$0:Lcom/android/server/CertBlacklister$BlacklistObserver;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -24,7 +23,6 @@
 .method public run()V
     .locals 6
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/CertBlacklister$BlacklistObserver$1;->this$0:Lcom/android/server/CertBlacklister$BlacklistObserver;
 
     invoke-static {v0}, Lcom/android/server/CertBlacklister$BlacklistObserver;->-$$Nest$fgetmTmpDir(Lcom/android/server/CertBlacklister$BlacklistObserver;)Ljava/io/File;
@@ -33,7 +31,6 @@
 
     monitor-enter v0
 
-    .line 80
     :try_start_0
     iget-object v1, p0, Lcom/android/server/CertBlacklister$BlacklistObserver$1;->this$0:Lcom/android/server/CertBlacklister$BlacklistObserver;
 
@@ -47,7 +44,6 @@
 
     const-string v3, "Certificate blacklist changed, updating..."
 
-    .line 82
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
@@ -59,7 +55,6 @@
 
     const-string v4, ""
 
-    .line 86
     iget-object v5, p0, Lcom/android/server/CertBlacklister$BlacklistObserver$1;->this$0:Lcom/android/server/CertBlacklister$BlacklistObserver;
 
     invoke-static {v5}, Lcom/android/server/CertBlacklister$BlacklistObserver;->-$$Nest$fgetmTmpDir(Lcom/android/server/CertBlacklister$BlacklistObserver;)Ljava/io/File;
@@ -74,10 +69,8 @@
 
     const/4 v5, 0x0
 
-    .line 88
     invoke-virtual {v3, v4, v5}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 90
     new-instance v4, Ljava/io/FileOutputStream;
 
     invoke-direct {v4, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -85,7 +78,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 91
     :try_start_2
     invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
 
@@ -93,10 +85,8 @@
 
     invoke-virtual {v4, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 93
     invoke-static {v4}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
 
-    .line 95
     new-instance v1, Ljava/io/File;
 
     iget-object p0, p0, Lcom/android/server/CertBlacklister$BlacklistObserver$1;->this$0:Lcom/android/server/CertBlacklister$BlacklistObserver;
@@ -113,13 +103,11 @@
 
     const-string v1, "Certificate blacklist updated"
 
-    .line 96
     invoke-static {p0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 100
     :try_start_3
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
     :try_end_3
@@ -155,12 +143,10 @@
 
     const-string v3, "Failed to write blacklist"
 
-    .line 98
     invoke-static {v1, v3, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 100
     :try_start_5
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -169,10 +155,8 @@
     :goto_1
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 101
     throw p0
 
-    .line 103
     :cond_0
     :goto_2
     monitor-exit v0

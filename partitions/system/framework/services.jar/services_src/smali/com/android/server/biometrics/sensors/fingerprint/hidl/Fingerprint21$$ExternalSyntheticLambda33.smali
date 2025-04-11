@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$$ExternalSyntheticLambda33;->f$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$$ExternalSyntheticLambda33;->f$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;->$r8$lambda$ROauhwfqx9sS8NMS0noxxa5iZsU(Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;)V

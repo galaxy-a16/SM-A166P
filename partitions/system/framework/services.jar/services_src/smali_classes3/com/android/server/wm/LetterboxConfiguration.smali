@@ -77,7 +77,6 @@
 .method public static synthetic $r8$lambda$-qq9AiciHNT8y7974fWl50bBdrM(ZLjava/lang/Integer;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/LetterboxConfiguration;->lambda$movePositionForVerticalReachabilityToNextBottomStop$6(ZLjava/lang/Integer;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -88,7 +87,6 @@
 .method public static synthetic $r8$lambda$1j_u2BZqZY6nVH-MbdPeBa8ZfpU(ZLjava/lang/Integer;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/LetterboxConfiguration;->lambda$movePositionForHorizontalReachabilityToNextLeftStop$5(ZLjava/lang/Integer;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -99,7 +97,6 @@
 .method public static synthetic $r8$lambda$DtFsR0XfjpMiBChTgTfSAt6NKGs(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/LetterboxConfiguration;->lambda$new$3(Landroid/content/Context;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -110,7 +107,6 @@
 .method public static synthetic $r8$lambda$EDCzaUqEe3oOBp2lR3nGMFH9VFA(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/LetterboxConfiguration;->lambda$new$0(Landroid/content/Context;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -121,7 +117,6 @@
 .method public static synthetic $r8$lambda$MlAIbu8wDVBQdFkWt50zPM3Jtgg(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/LetterboxConfiguration;->lambda$new$2(Landroid/content/Context;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -132,7 +127,6 @@
 .method public static synthetic $r8$lambda$Q-VDjuS4jI6OrvoGc4Xr-j65rys(ZLjava/lang/Integer;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/LetterboxConfiguration;->lambda$movePositionForVerticalReachabilityToNextTopStop$7(ZLjava/lang/Integer;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -143,7 +137,6 @@
 .method public static synthetic $r8$lambda$R0UAlsHBTv6bE_1Uqnn1CGyinfk(Landroid/content/Context;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/LetterboxConfiguration;->lambda$new$1(Landroid/content/Context;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -154,7 +147,6 @@
 .method public static synthetic $r8$lambda$zNHh7It6GacjslU_Dt9C6-4kszw(ZLjava/lang/Integer;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/LetterboxConfiguration;->lambda$movePositionForHorizontalReachabilityToNextRightStop$4(ZLjava/lang/Integer;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -165,7 +157,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 7
 
-    .line 273
     new-instance v6, Lcom/android/server/wm/LetterboxConfigurationPersister;
 
     new-instance v2, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda0;
@@ -198,21 +189,16 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/wm/LetterboxConfigurationPersister;)V
     .locals 5
 
-    .line 297
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 244
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatTreatmentRefreshEnabled:Z
 
-    .line 250
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatRefreshCycleThroughStopEnabled:Z
 
-    .line 298
     iput-object p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
-    .line 299
     new-instance v1, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
@@ -223,7 +209,6 @@
 
     iput-object v1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDeviceConfig:Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;
 
-    .line 301
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -236,7 +221,6 @@
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mFixedOrientationLetterboxAspectRatio:F
 
-    .line 303
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -249,14 +233,12 @@
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxActivityCornersRadius:I
 
-    .line 305
     invoke-static {p1}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxBackgroundTypeFromConfig(Landroid/content/Context;)I
 
     move-result v2
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundType:I
 
-    .line 306
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -269,7 +251,6 @@
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundWallpaperBlurRadius:I
 
-    .line 308
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -282,7 +263,6 @@
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundWallpaperDarkScrimAlpha:F
 
-    .line 310
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -295,7 +275,6 @@
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxHorizontalPositionMultiplier:F
 
-    .line 312
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -308,7 +287,6 @@
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxVerticalPositionMultiplier:F
 
-    .line 314
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -321,7 +299,6 @@
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBookModePositionMultiplier:F
 
-    .line 316
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -334,7 +311,6 @@
 
     iput v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxTabletopModePositionMultiplier:F
 
-    .line 318
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -347,7 +323,6 @@
 
     iput-boolean v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsHorizontalReachabilityEnabled:Z
 
-    .line 320
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -360,7 +335,6 @@
 
     iput-boolean v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsVerticalReachabilityEnabled:Z
 
-    .line 322
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -375,21 +349,18 @@
 
     const/4 v2, 0x0
 
-    .line 325
     invoke-static {p1, v2}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxHorizontalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
 
     move-result v3
 
     iput v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDefaultPositionForHorizontalReachability:I
 
-    .line 327
     invoke-static {p1, v2}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxVerticalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
 
     move-result v3
 
     iput v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDefaultPositionForVerticalReachability:I
 
-    .line 328
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -402,7 +373,6 @@
 
     iput-boolean v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsEducationEnabled:Z
 
-    .line 330
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -415,7 +385,6 @@
 
     invoke-virtual {p0, v3}, Lcom/android/server/wm/LetterboxConfiguration;->setDefaultMinAspectRatioForUnresizableApps(F)V
 
-    .line 332
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -428,21 +397,18 @@
 
     iput-boolean v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsSplitScreenAspectRatioForUnresizableAppsEnabled:Z
 
-    .line 334
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
     const v4, 0x11101a0
 
-    .line 335
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v3
 
     iput-boolean v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsDisplayAspectRatioEnabledForFixedOrientationLetterbox:Z
 
-    .line 337
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -455,12 +421,10 @@
 
     iput-boolean v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mTranslucentLetterboxingEnabled:Z
 
-    .line 339
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_CAMERA_COMPAT:Z
 
     if-nez v3, :cond_0
 
-    .line 341
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -479,7 +443,6 @@
     :cond_1
     iput-boolean v2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatTreatmentEnabled:Z
 
-    .line 343
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -492,7 +455,6 @@
 
     iput-boolean v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatSplitScreenAspectRatioEnabled:Z
 
-    .line 345
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -505,7 +467,6 @@
 
     iput-boolean v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCompatFakeFocusEnabled:Z
 
-    .line 347
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -518,7 +479,6 @@
 
     iput-boolean v3, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsPolicyForIgnoringRequestedOrientationEnabled:Z
 
-    .line 349
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -533,37 +493,30 @@
 
     const-string v3, "enable_compat_camera_treatment"
 
-    .line 351
     invoke-virtual {v1, v2, v3}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->updateFlagActiveStatus(ZLjava/lang/String;)V
 
     const-string v2, "enable_display_rotation_immersive_app_compat_policy"
 
-    .line 354
     invoke-virtual {v1, p1, v2}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->updateFlagActiveStatus(ZLjava/lang/String;)V
 
     const-string p1, "allow_ignore_orientation_request"
 
-    .line 357
     invoke-virtual {v1, v0, p1}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->updateFlagActiveStatus(ZLjava/lang/String;)V
 
-    .line 360
     iget-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCompatFakeFocusEnabled:Z
 
     const-string v0, "enable_compat_fake_focus"
 
     invoke-virtual {v1, p1, v0}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->updateFlagActiveStatus(ZLjava/lang/String;)V
 
-    .line 363
     iget-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mTranslucentLetterboxingEnabled:Z
 
     const-string v0, "enable_letterbox_translucent_activity"
 
     invoke-virtual {v1, p1, v0}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->updateFlagActiveStatus(ZLjava/lang/String;)V
 
-    .line 367
     iput-object p2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
-    .line 368
     invoke-virtual {p2}, Lcom/android/server/wm/LetterboxConfigurationPersister;->start()V
 
     return-void
@@ -572,17 +525,14 @@
 .method public constructor <init>(Lcom/android/server/wm/LetterboxConfiguration;Lcom/android/server/wm/ActivityRecord;)V
     .locals 2
 
-    .line 288
     iget-object v0, p1, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     iget-object v1, p1, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/wm/LetterboxConfiguration;-><init>(Landroid/content/Context;Lcom/android/server/wm/LetterboxConfigurationPersister;)V
 
-    .line 290
     iput-object p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mGlobalLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
-    .line 291
     iput-object p2, p0, Lcom/android/server/wm/LetterboxConfiguration;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     return-void
@@ -591,7 +541,6 @@
 .method public static synthetic lambda$movePositionForHorizontalReachabilityToNextLeftStop$5(ZLjava/lang/Integer;)Ljava/lang/Integer;
     .locals 0
 
-    .line 1032
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -610,7 +559,6 @@
 
     const/4 p0, 0x0
 
-    .line 1031
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
@@ -625,7 +573,6 @@
 .method public static synthetic lambda$movePositionForHorizontalReachabilityToNextRightStop$4(ZLjava/lang/Integer;)Ljava/lang/Integer;
     .locals 1
 
-    .line 1022
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -644,7 +591,6 @@
     :goto_0
     add-int/2addr p1, p0
 
-    .line 1021
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -659,7 +605,6 @@
 .method public static synthetic lambda$movePositionForVerticalReachabilityToNextBottomStop$6(ZLjava/lang/Integer;)Ljava/lang/Integer;
     .locals 1
 
-    .line 1042
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -678,7 +623,6 @@
     :goto_0
     add-int/2addr p1, p0
 
-    .line 1041
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -693,7 +637,6 @@
 .method public static synthetic lambda$movePositionForVerticalReachabilityToNextTopStop$7(ZLjava/lang/Integer;)Ljava/lang/Integer;
     .locals 0
 
-    .line 1053
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -712,7 +655,6 @@
 
     const/4 p0, 0x0
 
-    .line 1052
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
@@ -729,7 +671,6 @@
 
     const/4 v0, 0x0
 
-    .line 275
     invoke-static {p0, v0}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxHorizontalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
 
     move-result p0
@@ -746,7 +687,6 @@
 
     const/4 v0, 0x0
 
-    .line 277
     invoke-static {p0, v0}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxVerticalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
 
     move-result p0
@@ -763,7 +703,6 @@
 
     const/4 v0, 0x1
 
-    .line 279
     invoke-static {p0, v0}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxHorizontalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
 
     move-result p0
@@ -780,7 +719,6 @@
 
     const/4 v0, 0x1
 
-    .line 281
     invoke-static {p0, v0}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxVerticalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
 
     move-result p0
@@ -809,7 +747,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 568
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -864,7 +801,6 @@
 
     return-object p0
 
-    .line 995
     :cond_0
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -914,7 +850,6 @@
 
     return-object p0
 
-    .line 1011
     :cond_0
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -950,7 +885,6 @@
 .method public static readLetterboxBackgroundTypeFromConfig(Landroid/content/Context;)I
     .locals 1
 
-    .line 574
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -988,7 +922,6 @@
 .method public static readLetterboxHorizontalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
     .locals 1
 
-    .line 893
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -1030,7 +963,6 @@
 .method public static readLetterboxVerticalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
     .locals 1
 
-    .line 906
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -1074,7 +1006,6 @@
 .method public getDefaultMinAspectRatioForUnresizableApps()F
     .locals 0
 
-    .line 417
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDefaultMinAspectRatioForUnresizableApps:F
 
     return p0
@@ -1083,7 +1014,6 @@
 .method public getDefaultPositionForHorizontalReachability()I
     .locals 0
 
-    .line 837
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDefaultPositionForHorizontalReachability:I
 
     return p0
@@ -1092,7 +1022,6 @@
 .method public getDefaultPositionForVerticalReachability()I
     .locals 0
 
-    .line 849
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDefaultPositionForVerticalReachability:I
 
     return p0
@@ -1101,7 +1030,6 @@
 .method public getFixedOrientationLetterboxAspectRatio()F
     .locals 0
 
-    .line 402
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mFixedOrientationLetterboxAspectRatio:F
 
     return p0
@@ -1110,10 +1038,8 @@
 .method public getHorizontalMultiplierForReachability(Z)F
     .locals 2
 
-    .line 923
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
-    .line 924
     invoke-virtual {p0, p1}, Lcom/android/server/wm/LetterboxConfigurationPersister;->getLetterboxPositionForHorizontalReachability(Z)I
 
     move-result p0
@@ -1132,7 +1058,6 @@
 
     return p0
 
-    .line 934
     :cond_0
     new-instance p1, Ljava/lang/AssertionError;
 
@@ -1168,7 +1093,6 @@
 .method public getIsAutomaticReachabilityInBookModeEnabled()Z
     .locals 0
 
-    .line 771
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsAutomaticReachabilityInBookModeEnabled:Z
 
     return p0
@@ -1177,7 +1101,6 @@
 .method public getIsDisplayAspectRatioEnabledForFixedOrientationLetterbox()Z
     .locals 0
 
-    .line 1091
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsDisplayAspectRatioEnabledForFixedOrientationLetterbox:Z
 
     return p0
@@ -1186,7 +1109,6 @@
 .method public getIsEducationEnabled()Z
     .locals 0
 
-    .line 1061
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsEducationEnabled:Z
 
     return p0
@@ -1195,7 +1117,6 @@
 .method public getIsHorizontalReachabilityEnabled()Z
     .locals 0
 
-    .line 755
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsHorizontalReachabilityEnabled:Z
 
     return p0
@@ -1204,7 +1125,6 @@
 .method public getIsSplitScreenAspectRatioForUnresizableAppsEnabled()Z
     .locals 0
 
-    .line 1084
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsSplitScreenAspectRatioForUnresizableAppsEnabled:Z
 
     return p0
@@ -1213,7 +1133,6 @@
 .method public getIsVerticalReachabilityEnabled()Z
     .locals 0
 
-    .line 763
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsVerticalReachabilityEnabled:Z
 
     return p0
@@ -1222,7 +1141,6 @@
 .method public getLetterboxActivityCornersRadius()I
     .locals 2
 
-    .line 458
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_LETTERBOX:Z
 
     if-eqz v0, :cond_1
@@ -1231,7 +1149,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 459
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxConfiguration;->getCustomLetterboxActivityCornersRadius(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result v0
@@ -1242,7 +1159,6 @@
 
     return v0
 
-    .line 463
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mGlobalLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
@@ -1252,7 +1168,6 @@
 
     return p0
 
-    .line 466
     :cond_1
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxActivityCornersRadius:I
 
@@ -1262,7 +1177,6 @@
 .method public getLetterboxBackgroundColor()Landroid/graphics/Color;
     .locals 1
 
-    .line 477
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_LETTERBOX:Z
 
     if-eqz v0, :cond_1
@@ -1271,7 +1185,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 478
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxConfiguration;->getCustomLetterboxBackgroundColor(Lcom/android/server/wm/ActivityRecord;)Landroid/graphics/Color;
 
     move-result-object v0
@@ -1280,7 +1193,6 @@
 
     return-object v0
 
-    .line 482
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mGlobalLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
@@ -1290,7 +1202,6 @@
 
     return-object p0
 
-    .line 485
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundColorOverride:Landroid/graphics/Color;
 
@@ -1298,13 +1209,11 @@
 
     return-object v0
 
-    .line 488
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundColorResourceIdOverride:Ljava/lang/Integer;
 
     if-eqz v0, :cond_3
 
-    .line 489
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -1314,7 +1223,6 @@
     :cond_3
     const v0, 0x1060200
 
-    .line 493
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
@@ -1336,7 +1244,6 @@
 .method public getLetterboxBackgroundType()I
     .locals 2
 
-    .line 531
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_LETTERBOX:Z
 
     if-eqz v0, :cond_1
@@ -1345,7 +1252,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 532
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxConfiguration;->getCustomLetterboxBackgroundType(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result v0
@@ -1356,7 +1262,6 @@
 
     return v0
 
-    .line 536
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
@@ -1370,7 +1275,6 @@
 
     return p0
 
-    .line 539
     :cond_1
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundType:I
 
@@ -1380,7 +1284,6 @@
 .method public getLetterboxBackgroundWallpaperBlurRadius()I
     .locals 2
 
-    .line 649
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_LETTERBOX:Z
 
     if-eqz v0, :cond_1
@@ -1389,7 +1292,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 650
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxConfiguration;->getCustomLetterboxBackgroundWallpaperBlurRadius(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result v0
@@ -1400,7 +1302,6 @@
 
     return v0
 
-    .line 654
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mGlobalLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
@@ -1410,7 +1311,6 @@
 
     return p0
 
-    .line 657
     :cond_1
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundWallpaperBlurRadius:I
 
@@ -1420,7 +1320,6 @@
 .method public getLetterboxBackgroundWallpaperDarkScrimAlpha()F
     .locals 2
 
-    .line 609
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_LETTERBOX:Z
 
     if-eqz v0, :cond_1
@@ -1429,7 +1328,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 611
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxConfiguration;->getCustomLetterboxBackgroundWallpaperDarkScrimAlpha(Lcom/android/server/wm/ActivityRecord;)F
 
     move-result v0
@@ -1442,7 +1340,6 @@
 
     return v0
 
-    .line 615
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mGlobalLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
@@ -1452,7 +1349,6 @@
 
     return p0
 
-    .line 618
     :cond_1
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundWallpaperDarkScrimAlpha:F
 
@@ -1470,7 +1366,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 668
     iget p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBookModePositionMultiplier:F
 
     cmpg-float v3, p1, v2
@@ -1486,7 +1381,6 @@
     :cond_0
     return p1
 
-    .line 670
     :cond_1
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1509,7 +1403,6 @@
 
     return v2
 
-    .line 679
     :cond_2
     iget p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxHorizontalPositionMultiplier:F
 
@@ -1526,7 +1419,6 @@
     :cond_3
     return p1
 
-    .line 681
     :cond_4
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1555,7 +1447,6 @@
 .method public getLetterboxPositionForHorizontalReachability(Z)I
     .locals 0
 
-    .line 970
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/LetterboxConfigurationPersister;->getLetterboxPositionForHorizontalReachability(Z)I
@@ -1568,7 +1459,6 @@
 .method public getLetterboxPositionForVerticalReachability(Z)I
     .locals 0
 
-    .line 980
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/LetterboxConfigurationPersister;->getLetterboxPositionForVerticalReachability(Z)I
@@ -1587,7 +1477,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 700
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxTabletopModePositionMultiplier:F
 
     cmpg-float p1, p0, v1
@@ -1607,7 +1496,6 @@
     :goto_0
     return v1
 
-    .line 705
     :cond_2
     iget p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxVerticalPositionMultiplier:F
 
@@ -1629,7 +1517,6 @@
 .method public getMultiWindowLetterboxBackgroundColor()I
     .locals 0
 
-    .line 1274
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowUtils;->getRoundedCornerColorForMultiWindow(Landroid/content/Context;)I
@@ -1642,10 +1529,8 @@
 .method public getVerticalMultiplierForReachability(Z)F
     .locals 2
 
-    .line 947
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
-    .line 948
     invoke-virtual {p0, p1}, Lcom/android/server/wm/LetterboxConfigurationPersister;->getLetterboxPositionForVerticalReachability(Z)I
 
     move-result p0
@@ -1664,7 +1549,6 @@
 
     return p0
 
-    .line 958
     :cond_0
     new-instance p1, Ljava/lang/AssertionError;
 
@@ -1700,7 +1584,6 @@
 .method public isCameraCompatRefreshCycleThroughStopEnabled()Z
     .locals 0
 
-    .line 1237
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatRefreshCycleThroughStopEnabled:Z
 
     return p0
@@ -1709,7 +1592,6 @@
 .method public isCameraCompatRefreshEnabled()Z
     .locals 0
 
-    .line 1217
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatTreatmentRefreshEnabled:Z
 
     return p0
@@ -1718,7 +1600,6 @@
 .method public isCameraCompatSplitScreenAspectRatioEnabled()Z
     .locals 0
 
-    .line 1206
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatSplitScreenAspectRatioEnabled:Z
 
     return p0
@@ -1727,7 +1608,6 @@
 .method public isCameraCompatTreatmentEnabled(Z)Z
     .locals 1
 
-    .line 1211
     iget-boolean v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatTreatmentEnabled:Z
 
     if-eqz v0, :cond_1
@@ -1738,7 +1618,6 @@
 
     const-string p1, "enable_compat_camera_treatment"
 
-    .line 1212
     invoke-virtual {p0, p1}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->getFlag(Ljava/lang/String;)Z
 
     move-result p0
@@ -1760,7 +1639,6 @@
 .method public isCompatFakeFocusEnabled()Z
     .locals 1
 
-    .line 1181
     iget-boolean v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCompatFakeFocusEnabled:Z
 
     if-eqz v0, :cond_0
@@ -1789,7 +1667,6 @@
 .method public isDisplayRotationImmersiveAppCompatPolicyEnabled(Z)Z
     .locals 1
 
-    .line 1268
     iget-boolean v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsDisplayRotationImmersiveAppCompatPolicyEnabled:Z
 
     if-eqz v0, :cond_1
@@ -1800,7 +1677,6 @@
 
     const-string p1, "enable_display_rotation_immersive_app_compat_policy"
 
-    .line 1269
     invoke-virtual {p0, p1}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->getFlag(Ljava/lang/String;)Z
 
     move-result p0
@@ -1822,7 +1698,6 @@
 .method public isIgnoreOrientationRequestAllowed()Z
     .locals 1
 
-    .line 376
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDeviceConfig:Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;
 
     const-string v0, "allow_ignore_orientation_request"
@@ -1837,7 +1712,6 @@
 .method public isLetterboxActivityCornersRounded()Z
     .locals 0
 
-    .line 450
     invoke-virtual {p0}, Lcom/android/server/wm/LetterboxConfiguration;->getLetterboxActivityCornersRadius()I
 
     move-result p0
@@ -1858,7 +1732,6 @@
 .method public isPolicyForIgnoringRequestedOrientationEnabled()Z
     .locals 0
 
-    .line 1198
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsPolicyForIgnoringRequestedOrientationEnabled:Z
 
     return p0
@@ -1867,7 +1740,6 @@
 .method public isTranslucentLetterboxingEnabled()Z
     .locals 1
 
-    .line 1130
     iget-boolean v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mTranslucentLetterboxingOverrideEnabled:Z
 
     if-nez v0, :cond_1
@@ -1880,7 +1752,6 @@
 
     const-string v0, "enable_letterbox_translucent_activity"
 
-    .line 1131
     invoke-virtual {p0, v0}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->getFlag(Ljava/lang/String;)Z
 
     move-result p0
@@ -1905,7 +1776,6 @@
 .method public movePositionForHorizontalReachabilityToNextLeftStop(Z)V
     .locals 1
 
-    .line 1031
     new-instance v0, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda4;
 
     invoke-direct {v0, p1}, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda4;-><init>(Z)V
@@ -1918,7 +1788,6 @@
 .method public movePositionForHorizontalReachabilityToNextRightStop(Z)V
     .locals 1
 
-    .line 1021
     new-instance v0, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda6;
 
     invoke-direct {v0, p1}, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda6;-><init>(Z)V
@@ -1931,7 +1800,6 @@
 .method public movePositionForVerticalReachabilityToNextBottomStop(Z)V
     .locals 1
 
-    .line 1041
     new-instance v0, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda7;
 
     invoke-direct {v0, p1}, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda7;-><init>(Z)V
@@ -1944,7 +1812,6 @@
 .method public movePositionForVerticalReachabilityToNextTopStop(Z)V
     .locals 1
 
-    .line 1052
     new-instance v0, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda5;
 
     invoke-direct {v0, p1}, Lcom/android/server/wm/LetterboxConfiguration$$ExternalSyntheticLambda5;-><init>(Z)V
@@ -1959,7 +1826,6 @@
 
     const/4 v0, 0x1
 
-    .line 1253
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatRefreshCycleThroughStopEnabled:Z
 
     return-void
@@ -1970,7 +1836,6 @@
 
     const/4 v0, 0x1
 
-    .line 1229
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatTreatmentRefreshEnabled:Z
 
     return-void
@@ -1979,7 +1844,6 @@
 .method public resetDefaultMinAspectRatioForUnresizableApps()V
     .locals 2
 
-    .line 409
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2000,12 +1864,10 @@
 .method public resetDefaultPositionForHorizontalReachability()V
     .locals 2
 
-    .line 875
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
-    .line 876
     invoke-static {v0, v1}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxHorizontalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
 
     move-result v0
@@ -2018,12 +1880,10 @@
 .method public resetDefaultPositionForVerticalReachability()V
     .locals 2
 
-    .line 885
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
-    .line 886
     invoke-static {v0, v1}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxVerticalReachabilityPositionFromConfig(Landroid/content/Context;Z)I
 
     move-result v0
@@ -2036,7 +1896,6 @@
 .method public resetEnabledAutomaticReachabilityInBookMode()V
     .locals 2
 
-    .line 824
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2057,7 +1916,6 @@
 .method public resetFixedOrientationLetterboxAspectRatio()V
     .locals 2
 
-    .line 394
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2078,7 +1936,6 @@
 .method public resetIsDisplayAspectRatioEnabledForFixedOrientationLetterbox()V
     .locals 2
 
-    .line 1124
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2087,7 +1944,6 @@
 
     const v1, 0x11101a0
 
-    .line 1125
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
@@ -2100,7 +1956,6 @@
 .method public resetIsEducationEnabled()V
     .locals 2
 
-    .line 1076
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2121,7 +1976,6 @@
 .method public resetIsHorizontalReachabilityEnabled()V
     .locals 2
 
-    .line 804
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2142,7 +1996,6 @@
 .method public resetIsSplitScreenAspectRatioForUnresizableAppsEnabled()V
     .locals 2
 
-    .line 1115
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2163,7 +2016,6 @@
 .method public resetIsVerticalReachabilityEnabled()V
     .locals 2
 
-    .line 814
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2184,7 +2036,6 @@
 .method public resetLetterboxActivityCornersRadius()V
     .locals 2
 
-    .line 442
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2207,10 +2058,8 @@
 
     const/4 v0, 0x0
 
-    .line 520
     iput-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundColorOverride:Landroid/graphics/Color;
 
-    .line 521
     iput-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundColorResourceIdOverride:Ljava/lang/Integer;
 
     return-void
@@ -2219,7 +2068,6 @@
 .method public resetLetterboxBackgroundType()V
     .locals 1
 
-    .line 552
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/wm/LetterboxConfiguration;->readLetterboxBackgroundTypeFromConfig(Landroid/content/Context;)I
@@ -2234,7 +2082,6 @@
 .method public resetLetterboxBackgroundWallpaperBlurRadius()V
     .locals 2
 
-    .line 639
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2255,7 +2102,6 @@
 .method public resetLetterboxBackgroundWallpaperDarkScrimAlpha()V
     .locals 2
 
-    .line 600
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2276,7 +2122,6 @@
 .method public resetLetterboxHorizontalPositionMultiplier()V
     .locals 2
 
-    .line 737
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2297,7 +2142,6 @@
 .method public resetLetterboxVerticalPositionMultiplier()V
     .locals 2
 
-    .line 746
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2318,7 +2162,6 @@
 .method public resetTranslucentLetterboxingEnabled()V
     .locals 2
 
-    .line 1149
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2331,12 +2174,10 @@
 
     move-result v0
 
-    .line 1151
     invoke-virtual {p0, v0}, Lcom/android/server/wm/LetterboxConfiguration;->setTranslucentLetterboxingEnabled(Z)V
 
     const/4 v0, 0x0
 
-    .line 1152
     invoke-virtual {p0, v0}, Lcom/android/server/wm/LetterboxConfiguration;->setTranslucentLetterboxingOverrideEnabled(Z)V
 
     return-void
@@ -2345,7 +2186,6 @@
 .method public setCameraCompatRefreshCycleThroughStopEnabled(Z)V
     .locals 0
 
-    .line 1245
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatRefreshCycleThroughStopEnabled:Z
 
     return-void
@@ -2354,7 +2194,6 @@
 .method public setCameraCompatRefreshEnabled(Z)V
     .locals 0
 
-    .line 1222
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCameraCompatTreatmentRefreshEnabled:Z
 
     return-void
@@ -2363,7 +2202,6 @@
 .method public setDefaultMinAspectRatioForUnresizableApps(F)V
     .locals 0
 
-    .line 424
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDefaultMinAspectRatioForUnresizableApps:F
 
     return-void
@@ -2372,7 +2210,6 @@
 .method public setDefaultPositionForHorizontalReachability(I)V
     .locals 0
 
-    .line 858
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDefaultPositionForHorizontalReachability:I
 
     return-void
@@ -2381,7 +2218,6 @@
 .method public setDefaultPositionForVerticalReachability(I)V
     .locals 0
 
-    .line 867
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mDefaultPositionForVerticalReachability:I
 
     return-void
@@ -2390,7 +2226,6 @@
 .method public setFixedOrientationLetterboxAspectRatio(F)V
     .locals 0
 
-    .line 386
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mFixedOrientationLetterboxAspectRatio:F
 
     return-void
@@ -2399,7 +2234,6 @@
 .method public setIsAutomaticReachabilityInBookModeEnabled(Z)V
     .locals 0
 
-    .line 795
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsAutomaticReachabilityInBookModeEnabled:Z
 
     return-void
@@ -2408,7 +2242,6 @@
 .method public setIsCompatFakeFocusEnabled(Z)V
     .locals 0
 
-    .line 1189
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsCompatFakeFocusEnabled:Z
 
     return-void
@@ -2417,7 +2250,6 @@
 .method public setIsDisplayAspectRatioEnabledForFixedOrientationLetterbox(Z)V
     .locals 0
 
-    .line 1107
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsDisplayAspectRatioEnabledForFixedOrientationLetterbox:Z
 
     return-void
@@ -2426,7 +2258,6 @@
 .method public setIsEducationEnabled(Z)V
     .locals 0
 
-    .line 1068
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsEducationEnabled:Z
 
     return-void
@@ -2435,7 +2266,6 @@
 .method public setIsHorizontalReachabilityEnabled(Z)V
     .locals 0
 
-    .line 779
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsHorizontalReachabilityEnabled:Z
 
     return-void
@@ -2444,7 +2274,6 @@
 .method public setIsSplitScreenAspectRatioForUnresizableAppsEnabled(Z)V
     .locals 0
 
-    .line 1099
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsSplitScreenAspectRatioForUnresizableAppsEnabled:Z
 
     return-void
@@ -2453,7 +2282,6 @@
 .method public setIsVerticalReachabilityEnabled(Z)V
     .locals 0
 
-    .line 787
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mIsVerticalReachabilityEnabled:Z
 
     return-void
@@ -2462,7 +2290,6 @@
 .method public setLetterboxActivityCornersRadius(I)V
     .locals 0
 
-    .line 434
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxActivityCornersRadius:I
 
     return-void
@@ -2471,7 +2298,6 @@
 .method public setLetterboxBackgroundColor(Landroid/graphics/Color;)V
     .locals 0
 
-    .line 503
     iput-object p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundColorOverride:Landroid/graphics/Color;
 
     return-void
@@ -2480,7 +2306,6 @@
 .method public setLetterboxBackgroundColorResourceId(I)V
     .locals 0
 
-    .line 512
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -2493,7 +2318,6 @@
 .method public setLetterboxBackgroundType(I)V
     .locals 0
 
-    .line 544
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundType:I
 
     return-void
@@ -2502,7 +2326,6 @@
 .method public setLetterboxBackgroundWallpaperBlurRadius(I)V
     .locals 0
 
-    .line 630
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundWallpaperBlurRadius:I
 
     return-void
@@ -2511,7 +2334,6 @@
 .method public setLetterboxBackgroundWallpaperDarkScrimAlpha(F)V
     .locals 0
 
-    .line 592
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxBackgroundWallpaperDarkScrimAlpha:F
 
     return-void
@@ -2520,7 +2342,6 @@
 .method public setLetterboxHorizontalPositionMultiplier(F)V
     .locals 0
 
-    .line 719
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxHorizontalPositionMultiplier:F
 
     return-void
@@ -2529,7 +2350,6 @@
 .method public setLetterboxVerticalPositionMultiplier(F)V
     .locals 0
 
-    .line 729
     iput p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxVerticalPositionMultiplier:F
 
     return-void
@@ -2538,7 +2358,6 @@
 .method public setTranslucentLetterboxingEnabled(Z)V
     .locals 0
 
-    .line 1135
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mTranslucentLetterboxingEnabled:Z
 
     return-void
@@ -2547,10 +2366,8 @@
 .method public setTranslucentLetterboxingOverrideEnabled(Z)V
     .locals 0
 
-    .line 1140
     iput-boolean p1, p0, Lcom/android/server/wm/LetterboxConfiguration;->mTranslucentLetterboxingOverrideEnabled:Z
 
-    .line 1141
     invoke-virtual {p0, p1}, Lcom/android/server/wm/LetterboxConfiguration;->setTranslucentLetterboxingEnabled(Z)V
 
     return-void
@@ -2559,20 +2376,16 @@
 .method public final updatePositionForHorizontalReachability(ZLjava/util/function/Function;)V
     .locals 1
 
-    .line 1158
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
-    .line 1159
     invoke-virtual {v0, p1}, Lcom/android/server/wm/LetterboxConfigurationPersister;->getLetterboxPositionForHorizontalReachability(Z)I
 
     move-result v0
 
-    .line 1162
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 1161
     invoke-interface {p2, v0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -2583,7 +2396,6 @@
 
     move-result p2
 
-    .line 1163
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/LetterboxConfigurationPersister;->setLetterboxPositionForHorizontalReachability(ZI)V
@@ -2594,20 +2406,16 @@
 .method public final updatePositionForVerticalReachability(ZLjava/util/function/Function;)V
     .locals 1
 
-    .line 1170
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
-    .line 1171
     invoke-virtual {v0, p1}, Lcom/android/server/wm/LetterboxConfigurationPersister;->getLetterboxPositionForVerticalReachability(Z)I
 
     move-result v0
 
-    .line 1174
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 1173
     invoke-interface {p2, v0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -2618,7 +2426,6 @@
 
     move-result p2
 
-    .line 1175
     iget-object p0, p0, Lcom/android/server/wm/LetterboxConfiguration;->mLetterboxConfigurationPersister:Lcom/android/server/wm/LetterboxConfigurationPersister;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/LetterboxConfigurationPersister;->setLetterboxPositionForVerticalReachability(ZI)V

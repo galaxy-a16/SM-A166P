@@ -18,10 +18,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 1
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p2
@@ -30,7 +28,6 @@
 
     iput-object p2, p0, Lcom/android/server/timedetector/EnvironmentImpl;->mHandler:Landroid/os/Handler;
 
-    .line 51
     const-class p2, Landroid/os/PowerManager;
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -43,12 +40,10 @@
 
     const-string/jumbo v0, "time_detector"
 
-    .line 53
     invoke-virtual {p1, p2, v0}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
 
-    .line 52
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p2, p1
@@ -57,17 +52,14 @@
 
     iput-object p1, p0, Lcom/android/server/timedetector/EnvironmentImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 55
     const-class p1, Lcom/android/server/AlarmManagerInternal;
 
-    .line 56
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/server/AlarmManagerInternal;
 
-    .line 55
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/AlarmManagerInternal;
@@ -82,7 +74,6 @@
 .method public acquireWakeLock()V
     .locals 2
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/timedetector/EnvironmentImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -91,7 +82,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 62
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +106,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     :cond_0
     iget-object p0, p0, Lcom/android/server/timedetector/EnvironmentImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -128,7 +117,6 @@
 .method public addDebugLogEntry(Ljava/lang/String;)V
     .locals 0
 
-    .line 110
     invoke-static {p1}, Lcom/android/server/SystemClockTime;->addDebugLogEntry(Ljava/lang/String;)V
 
     return-void
@@ -137,7 +125,6 @@
 .method public final checkWakeLockHeld()V
     .locals 2
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/timedetector/EnvironmentImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -146,7 +133,6 @@
 
     if-nez v0, :cond_0
 
-    .line 104
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -178,12 +164,10 @@
 .method public dumpDebugLog(Landroid/util/IndentingPrintWriter;)V
     .locals 3
 
-    .line 115
     invoke-virtual {p0}, Lcom/android/server/timedetector/EnvironmentImpl;->elapsedRealtimeMillis()J
 
     move-result-wide v0
 
-    .line 117
     invoke-static {v0, v1}, Ljava/time/Duration;->ofMillis(J)Ljava/time/Duration;
 
     move-result-object v2
@@ -198,15 +182,12 @@
 
     const-string v1, "elapsedRealtimeMillis()=%s (%s)\n"
 
-    .line 116
     invoke-virtual {p1, v1, v0}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 118
     invoke-virtual {p0}, Lcom/android/server/timedetector/EnvironmentImpl;->systemClockMillis()J
 
     move-result-wide v0
 
-    .line 120
     invoke-static {v0, v1}, Ljava/time/Instant;->ofEpochMilli(J)Ljava/time/Instant;
 
     move-result-object v2
@@ -221,10 +202,8 @@
 
     const-string/jumbo v1, "systemClockMillis()=%s (%s)\n"
 
-    .line 119
     invoke-virtual {p1, v1, v0}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 121
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -247,16 +226,12 @@
 
     const-string p0, "SystemClockTime debug log:"
 
-    .line 123
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 124
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 125
     invoke-static {p1}, Lcom/android/server/SystemClockTime;->dump(Ljava/io/PrintWriter;)V
 
-    .line 126
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -265,7 +240,6 @@
 .method public elapsedRealtimeMillis()J
     .locals 2
 
-    .line 69
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -276,10 +250,8 @@
 .method public releaseWakeLock()V
     .locals 0
 
-    .line 98
     invoke-virtual {p0}, Lcom/android/server/timedetector/EnvironmentImpl;->checkWakeLockHeld()V
 
-    .line 99
     iget-object p0, p0, Lcom/android/server/timedetector/EnvironmentImpl;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -290,7 +262,6 @@
 .method public runAsync(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 132
     iget-object p0, p0, Lcom/android/server/timedetector/EnvironmentImpl;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -301,10 +272,8 @@
 .method public setSystemClock(JILjava/lang/String;)V
     .locals 0
 
-    .line 86
     invoke-virtual {p0}, Lcom/android/server/timedetector/EnvironmentImpl;->checkWakeLockHeld()V
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/timedetector/EnvironmentImpl;->mAlarmManagerInternal:Lcom/android/server/AlarmManagerInternal;
 
     invoke-interface {p0, p1, p2, p3, p4}, Lcom/android/server/AlarmManagerInternal;->setTime(JILjava/lang/String;)V
@@ -315,10 +284,8 @@
 .method public setSystemClockConfidence(ILjava/lang/String;)V
     .locals 0
 
-    .line 92
     invoke-virtual {p0}, Lcom/android/server/timedetector/EnvironmentImpl;->checkWakeLockHeld()V
 
-    .line 93
     invoke-static {p1, p2}, Lcom/android/server/SystemClockTime;->setConfidence(ILjava/lang/String;)V
 
     return-void
@@ -327,7 +294,6 @@
 .method public systemClockConfidence()I
     .locals 0
 
-    .line 79
     invoke-static {}, Lcom/android/server/SystemClockTime;->getTimeConfidence()I
 
     move-result p0
@@ -338,7 +304,6 @@
 .method public systemClockMillis()J
     .locals 2
 
-    .line 74
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

@@ -20,7 +20,6 @@
 .method public final accept(Lcom/samsung/android/multiwindow/IRemoteAppTransitionListener;Landroid/os/Message;)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/wm/MultiTaskingController;->$r8$lambda$A_vFL63bq9kgVcuFNkv2jg-xIjM(Lcom/samsung/android/multiwindow/IRemoteAppTransitionListener;Landroid/os/Message;)V
 
     return-void

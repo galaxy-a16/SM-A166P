@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda31;->f$0:Landroid/content/Context;
@@ -27,7 +26,6 @@
 .method public final produce(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda31;->f$0:Landroid/content/Context;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/PackageManagerService;->$r8$lambda$4L15KVoRULL8JCrWB2_8RA_pd4E(Landroid/content/Context;Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Lcom/android/server/pm/DefaultAppProvider;

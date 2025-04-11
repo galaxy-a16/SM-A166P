@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/vr/VrManagerService;)V
     .locals 0
 
-    .line 810
     iput-object p1, p0, Lcom/android/server/vr/VrManagerService$5;->this$0:Lcom/android/server/vr/VrManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.action.USER_UNLOCKED"
 
-    .line 813
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 814
     iget-object p0, p0, Lcom/android/server/vr/VrManagerService$5;->this$0:Lcom/android/server/vr/VrManagerService;
 
     invoke-static {p0}, Lcom/android/server/vr/VrManagerService;->-$$Nest$msetUserUnlocked(Lcom/android/server/vr/VrManagerService;)V

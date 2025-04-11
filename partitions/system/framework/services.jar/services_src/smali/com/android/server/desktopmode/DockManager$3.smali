@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/DockManager;)V
     .locals 0
 
-    .line 204
     iput-object p1, p0, Lcom/android/server/desktopmode/DockManager$3;->this$0:Lcom/android/server/desktopmode/DockManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

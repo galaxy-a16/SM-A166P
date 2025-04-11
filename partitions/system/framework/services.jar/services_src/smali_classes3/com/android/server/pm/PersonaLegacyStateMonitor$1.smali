@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersonaLegacyStateMonitor;)V
     .locals 0
 
-    .line 285
     iput-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     invoke-direct {p0}, Landroid/os/ContainerStateReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onContainerCreated(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 287
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     sget-object p1, Lcom/samsung/android/knox/SemPersonaState;->CREATING:Lcom/samsung/android/knox/SemPersonaState;
@@ -37,7 +35,6 @@
 .method public onContainerLocked(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 321
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     sget-object p1, Lcom/samsung/android/knox/SemPersonaState;->LOCKED:Lcom/samsung/android/knox/SemPersonaState;
@@ -50,21 +47,18 @@
 .method public onContainerRemoved(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 7
 
-    .line 329
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     sget-object p3, Lcom/samsung/android/knox/SemPersonaState;->DELETING:Lcom/samsung/android/knox/SemPersonaState;
 
     invoke-static {p1, p2, p3}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->-$$Nest$mnotifyStateChange(Lcom/android/server/pm/PersonaLegacyStateMonitor;ILcom/samsung/android/knox/SemPersonaState;)V
 
-    .line 330
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     sget-object p3, Lcom/samsung/android/knox/SemPersonaState;->INVALID:Lcom/samsung/android/knox/SemPersonaState;
 
     invoke-static {p1, p2, p3}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->-$$Nest$mnotifyStateChange(Lcom/android/server/pm/PersonaLegacyStateMonitor;ILcom/samsung/android/knox/SemPersonaState;)V
 
-    .line 331
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     invoke-static {p1}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->-$$Nest$fgetmEdmStorageProvider(Lcom/android/server/pm/PersonaLegacyStateMonitor;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -75,12 +69,10 @@
 
     move-result p1
 
-    .line 332
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p3
 
-    .line 333
     iget-object v0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     invoke-static {v0}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->-$$Nest$fgetmContext(Lcom/android/server/pm/PersonaLegacyStateMonitor;)Landroid/content/Context;
@@ -101,7 +93,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 335
     array-length v2, p1
 
     const/4 v3, 0x0
@@ -111,12 +102,10 @@
 
     aget-object v4, p1, v3
 
-    .line 336
     iget-object v5, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     invoke-static {v5, v4, p2, p3}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->-$$Nest$msendIntentForRemoveContainer(Lcom/android/server/pm/PersonaLegacyStateMonitor;Ljava/lang/String;II)V
 
-    .line 337
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,7 +130,6 @@
 
     goto :goto_0
 
-    .line 340
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
@@ -149,7 +137,6 @@
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->-$$Nest$msendIntentForRemoveContainer(Lcom/android/server/pm/PersonaLegacyStateMonitor;Ljava/lang/String;II)V
 
-    .line 341
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,7 +158,6 @@
 .method public onContainerRunning(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 291
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     invoke-static {p1}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->-$$Nest$fgetmUserManager(Lcom/android/server/pm/PersonaLegacyStateMonitor;)Landroid/os/UserManager;
@@ -184,7 +170,6 @@
 
     if-nez p1, :cond_0
 
-    .line 293
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     sget-object p1, Lcom/samsung/android/knox/SemPersonaState;->INVALID:Lcom/samsung/android/knox/SemPersonaState;
@@ -193,7 +178,6 @@
 
     goto :goto_0
 
-    .line 295
     :cond_0
     invoke-virtual {p1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
@@ -203,7 +187,6 @@
 
     if-lez p3, :cond_1
 
-    .line 296
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I
@@ -214,7 +197,6 @@
 
     goto :goto_0
 
-    .line 297
     :cond_1
     invoke-virtual {p1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
@@ -224,7 +206,6 @@
 
     if-lez p3, :cond_2
 
-    .line 298
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I
@@ -235,7 +216,6 @@
 
     goto :goto_0
 
-    .line 299
     :cond_2
     invoke-virtual {p1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
@@ -245,7 +225,6 @@
 
     if-lez p3, :cond_3
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I
@@ -256,7 +235,6 @@
 
     goto :goto_0
 
-    .line 302
     :cond_3
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
@@ -271,7 +249,6 @@
 .method public onContainerShutdown(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 307
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     invoke-static {p1}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->-$$Nest$fgetmUserManager(Lcom/android/server/pm/PersonaLegacyStateMonitor;)Landroid/os/UserManager;
@@ -284,7 +261,6 @@
 
     if-nez p1, :cond_0
 
-    .line 309
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     sget-object p1, Lcom/samsung/android/knox/SemPersonaState;->INVALID:Lcom/samsung/android/knox/SemPersonaState;
@@ -293,7 +269,6 @@
 
     goto :goto_0
 
-    .line 311
     :cond_0
     invoke-virtual {p1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
@@ -303,7 +278,6 @@
 
     if-lez p2, :cond_1
 
-    .line 312
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I
@@ -314,7 +288,6 @@
 
     goto :goto_0
 
-    .line 313
     :cond_1
     invoke-virtual {p1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
@@ -324,7 +297,6 @@
 
     if-lez p2, :cond_2
 
-    .line 314
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I
@@ -335,7 +307,6 @@
 
     goto :goto_0
 
-    .line 315
     :cond_2
     invoke-virtual {p1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
@@ -345,7 +316,6 @@
 
     if-lez p2, :cond_3
 
-    .line 316
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I
@@ -362,7 +332,6 @@
 .method public onContainerUnlocked(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 325
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;->this$0:Lcom/android/server/pm/PersonaLegacyStateMonitor;
 
     sget-object p1, Lcom/samsung/android/knox/SemPersonaState;->ACTIVE:Lcom/samsung/android/knox/SemPersonaState;

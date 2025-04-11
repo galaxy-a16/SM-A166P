@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepositoryDefault;)V
     .locals 0
 
-    .line 653
     iput-object p1, p0, Lcom/android/server/chimera/SystemRepositoryDefault$3;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$SemCameraDeviceStateCallback;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.system"
 
-    .line 657
     invoke-virtual {p1, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -35,7 +33,6 @@
 
     const-string p1, "com.sec.android.app.tinym"
 
-    .line 658
     invoke-virtual {p1, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -44,7 +41,6 @@
 
     goto/16 :goto_1
 
-    .line 663
     :cond_0
     iget-object p1, p0, Lcom/android/server/chimera/SystemRepositoryDefault$3;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
@@ -68,7 +64,6 @@
 
     if-ne p3, p2, :cond_1
 
-    .line 666
     iget-object p1, p0, Lcom/android/server/chimera/SystemRepositoryDefault$3;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     invoke-static {p1}, Lcom/android/server/chimera/SystemRepositoryDefault;->-$$Nest$fgetmSystemEventListenerHandler(Lcom/android/server/chimera/SystemRepositoryDefault;)Landroid/os/Handler;
@@ -86,7 +81,6 @@
 
     if-ne p3, p1, :cond_2
 
-    .line 670
     iget-object p0, p0, Lcom/android/server/chimera/SystemRepositoryDefault$3;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     invoke-static {p0}, Lcom/android/server/chimera/SystemRepositoryDefault;->-$$Nest$fgetmSystemEventListenerHandler(Lcom/android/server/chimera/SystemRepositoryDefault;)Landroid/os/Handler;
@@ -103,7 +97,6 @@
     :goto_0
     if-ne p3, p2, :cond_4
 
-    .line 676
     iget-object p1, p0, Lcom/android/server/chimera/SystemRepositoryDefault$3;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     invoke-static {p1}, Lcom/android/server/chimera/SystemRepositoryDefault;->-$$Nest$fgetmLastForegroundApp(Lcom/android/server/chimera/SystemRepositoryDefault;)Landroid/util/Pair;
@@ -116,7 +109,6 @@
 
     iget-object p1, p1, Lcom/android/server/chimera/SystemRepositoryDefault;->mCameraApps:Lcom/android/server/chimera/ICollectionCache$CameraAppsCache;
 
-    .line 677
     invoke-virtual {p1, p4}, Lcom/android/server/chimera/ICollectionCache$AbstractSharedCollectionCache;->contains(Ljava/lang/String;)Z
 
     move-result p1
@@ -125,7 +117,6 @@
 
     goto :goto_1
 
-    .line 682
     :cond_3
     iget-object p1, p0, Lcom/android/server/chimera/SystemRepositoryDefault$3;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
@@ -169,7 +160,6 @@
 
     if-gez p1, :cond_4
 
-    .line 683
     iget-object p0, p0, Lcom/android/server/chimera/SystemRepositoryDefault$3;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     iget-object p0, p0, Lcom/android/server/chimera/SystemRepositoryDefault;->mCameraApps:Lcom/android/server/chimera/ICollectionCache$CameraAppsCache;

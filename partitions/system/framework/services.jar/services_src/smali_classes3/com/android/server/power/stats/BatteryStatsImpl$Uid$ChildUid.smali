@@ -15,12 +15,10 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl$Uid;)V
     .locals 9
 
-    .line 12016
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$ChildUid;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl$Uid;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12017
     iget-object v0, p1, Lcom/android/server/power/stats/BatteryStatsImpl$Uid;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget-object v0, v0, Lcom/android/server/power/stats/BatteryStatsImpl;->mClock:Lcom/android/internal/os/Clock;
@@ -29,7 +27,6 @@
 
     move-result-wide v7
 
-    .line 12018
     new-instance v0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;
 
     iget-object v1, p1, Lcom/android/server/power/stats/BatteryStatsImpl$Uid;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
@@ -50,10 +47,8 @@
 
     const/4 v1, 0x0
 
-    .line 12020
     invoke-static {v0, v1, v7, v8}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->-$$Nest$msetState(Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;IJ)V
 
-    .line 12022
     iget-object v0, p1, Lcom/android/server/power/stats/BatteryStatsImpl$Uid;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-static {v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$mtrackPerProcStateCpuTimes(Lcom/android/server/power/stats/BatteryStatsImpl;)Z
@@ -62,14 +57,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 12023
     iget-object p1, p1, Lcom/android/server/power/stats/BatteryStatsImpl$Uid;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-virtual {p1}, Lcom/android/server/power/stats/BatteryStatsImpl;->getCpuFreqCount()I
 
     move-result p1
 
-    .line 12025
     new-instance v0, Lcom/android/internal/os/LongArrayMultiStateCounter;
 
     const/4 v1, 0x1
@@ -78,7 +71,6 @@
 
     iput-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$ChildUid;->cpuTimeInFreqCounter:Lcom/android/internal/os/LongArrayMultiStateCounter;
 
-    .line 12029
     new-instance p0, Lcom/android/internal/os/LongArrayMultiStateCounter$LongArrayContainer;
 
     invoke-direct {p0, p1}, Lcom/android/internal/os/LongArrayMultiStateCounter$LongArrayContainer;-><init>(I)V
@@ -90,7 +82,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 12033
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$ChildUid;->cpuTimeInFreqCounter:Lcom/android/internal/os/LongArrayMultiStateCounter;
 
     :goto_0

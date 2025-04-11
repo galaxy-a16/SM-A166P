@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 95
     invoke-static {}, Lcom/android/server/credentials/ProviderSession$CredentialsSource;->values()[Lcom/android/server/credentials/ProviderSession$CredentialsSource;
 
     move-result-object v0

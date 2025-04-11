@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$67yCc0pQTStX0vk40FNH599nabk(Lcom/android/server/power/InattentiveSleepWarningController;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/power/InattentiveSleepWarningController;->showInternal()V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static synthetic $r8$lambda$KNVWgsTq0bFg36nwiIVFi0sD6qM(Lcom/android/server/power/InattentiveSleepWarningController;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/InattentiveSleepWarningController;->lambda$dismiss$0(Z)V
 
     return-void
@@ -33,10 +31,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -49,7 +45,6 @@
 .method private synthetic lambda$dismiss$0(Z)V
     .locals 0
 
-    .line 83
     invoke-virtual {p0, p1}, Lcom/android/server/power/InattentiveSleepWarningController;->dismissInternal(Z)V
 
     return-void
@@ -60,7 +55,6 @@
 .method public dismiss(Z)V
     .locals 2
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/server/power/InattentiveSleepWarningController;->isShown()Z
 
     move-result v0
@@ -69,7 +63,6 @@
 
     return-void
 
-    .line 83
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mHandler:Landroid/os/Handler;
 
@@ -81,7 +74,6 @@
 
     const/4 p1, 0x0
 
-    .line 84
     iput-boolean p1, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mIsShown:Z
 
     return-void
@@ -90,7 +82,6 @@
 .method public final dismissInternal(Z)V
     .locals 1
 
-    .line 89
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/power/InattentiveSleepWarningController;->getStatusBar()Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -109,7 +100,6 @@
 
     const-string v0, "Failed to dismiss inattentive sleep warning"
 
-    .line 91
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -119,26 +109,22 @@
 .method public final getStatusBar()Lcom/android/internal/statusbar/IStatusBarService;
     .locals 1
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
     if-nez v0, :cond_0
 
     const-string/jumbo v0, "statusbar"
 
-    .line 98
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 97
     invoke-static {v0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/statusbar/IStatusBarService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
-    .line 101
     :cond_0
     iget-object p0, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -148,7 +134,6 @@
 .method public isShown()Z
     .locals 0
 
-    .line 49
     iget-boolean p0, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mIsShown:Z
 
     return p0
@@ -157,7 +142,6 @@
 .method public show()V
     .locals 2
 
-    .line 57
     invoke-virtual {p0}, Lcom/android/server/power/InattentiveSleepWarningController;->isShown()Z
 
     move-result v0
@@ -166,7 +150,6 @@
 
     return-void
 
-    .line 61
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mHandler:Landroid/os/Handler;
 
@@ -178,7 +161,6 @@
 
     const/4 v0, 0x1
 
-    .line 62
     iput-boolean v0, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mIsShown:Z
 
     return-void
@@ -187,7 +169,6 @@
 .method public final showInternal()V
     .locals 3
 
-    .line 67
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/power/InattentiveSleepWarningController;->getStatusBar()Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -206,12 +187,10 @@
 
     const-string v2, "Failed to show inattentive sleep warning"
 
-    .line 69
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
 
-    .line 70
     iput-boolean v0, p0, Lcom/android/server/power/InattentiveSleepWarningController;->mIsShown:Z
 
     :goto_0

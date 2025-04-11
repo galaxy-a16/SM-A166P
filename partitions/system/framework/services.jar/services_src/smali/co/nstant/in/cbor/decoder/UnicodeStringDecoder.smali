@@ -7,7 +7,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
     .locals 0
 
-    .line 17
     invoke-direct {p0, p1, p2}, Lco/nstant/in/cbor/decoder/AbstractDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public decode(I)Lco/nstant/in/cbor/model/UnicodeString;
     .locals 4
 
-    .line 22
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/decoder/AbstractDecoder;->getLength(I)J
 
     move-result-wide v0
@@ -29,7 +27,6 @@
 
     if-nez p1, :cond_1
 
-    .line 24
     iget-object p1, p0, Lco/nstant/in/cbor/decoder/AbstractDecoder;->decoder:Lco/nstant/in/cbor/CborDecoder;
 
     invoke-virtual {p1}, Lco/nstant/in/cbor/CborDecoder;->isAutoDecodeInfinitiveUnicodeStrings()Z
@@ -38,14 +35,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 25
     invoke-virtual {p0}, Lco/nstant/in/cbor/decoder/UnicodeStringDecoder;->decodeInfinitiveLength()Lco/nstant/in/cbor/model/UnicodeString;
 
     move-result-object p0
 
     return-object p0
 
-    .line 27
     :cond_0
     new-instance p0, Lco/nstant/in/cbor/model/UnicodeString;
 
@@ -55,12 +50,10 @@
 
     const/4 p1, 0x1
 
-    .line 28
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/model/UnicodeString;->setChunked(Z)Lco/nstant/in/cbor/model/ChunkableDataItem;
 
     return-object p0
 
-    .line 32
     :cond_1
     invoke-virtual {p0, v0, v1}, Lco/nstant/in/cbor/decoder/UnicodeStringDecoder;->decodeFixedLength(J)Lco/nstant/in/cbor/model/UnicodeString;
 
@@ -72,7 +65,6 @@
 .method public final decodeFixedLength(J)Lco/nstant/in/cbor/model/UnicodeString;
     .locals 5
 
-    .line 58
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     long-to-int v1, p1
@@ -86,7 +78,6 @@
 
     if-gez v3, :cond_0
 
-    .line 60
     invoke-virtual {p0}, Lco/nstant/in/cbor/decoder/AbstractDecoder;->nextSymbol()I
 
     move-result v3
@@ -99,7 +90,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_0
     new-instance p0, Lco/nstant/in/cbor/model/UnicodeString;
 
@@ -121,12 +111,10 @@
 .method public final decodeInfinitiveLength()Lco/nstant/in/cbor/model/UnicodeString;
     .locals 4
 
-    .line 37
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 39
     :goto_0
     iget-object v1, p0, Lco/nstant/in/cbor/decoder/AbstractDecoder;->decoder:Lco/nstant/in/cbor/CborDecoder;
 
@@ -136,12 +124,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 43
     invoke-virtual {v1}, Lco/nstant/in/cbor/model/DataItem;->getMajorType()Lco/nstant/in/cbor/model/MajorType;
 
     move-result-object v2
 
-    .line 44
     sget-object v3, Lco/nstant/in/cbor/model/Special;->BREAK:Lco/nstant/in/cbor/model/Special;
 
     invoke-virtual {v3, v1}, Lco/nstant/in/cbor/model/Special;->equals(Ljava/lang/Object;)Z
@@ -150,7 +136,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 54
     new-instance p0, Lco/nstant/in/cbor/model/UnicodeString;
 
     new-instance v1, Ljava/lang/String;
@@ -167,16 +152,13 @@
 
     return-object p0
 
-    .line 46
     :cond_0
     sget-object v3, Lco/nstant/in/cbor/model/MajorType;->UNICODE_STRING:Lco/nstant/in/cbor/model/MajorType;
 
     if-ne v2, v3, :cond_1
 
-    .line 47
     check-cast v1, Lco/nstant/in/cbor/model/UnicodeString;
 
-    .line 48
     invoke-virtual {v1}, Lco/nstant/in/cbor/model/UnicodeString;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -187,7 +169,6 @@
 
     move-result-object v1
 
-    .line 49
     array-length v2, v1
 
     const/4 v3, 0x0
@@ -196,7 +177,6 @@
 
     goto :goto_0
 
-    .line 51
     :cond_1
     new-instance p0, Lco/nstant/in/cbor/CborException;
 
@@ -218,7 +198,6 @@
 
     throw p0
 
-    .line 41
     :cond_2
     new-instance p0, Lco/nstant/in/cbor/CborException;
 

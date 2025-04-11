@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/timedetector/TimeDetectorShellCommand;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/timedetector/TimeDetectorShellCommand$$ExternalSyntheticLambda4;->f$0:Lcom/android/server/timedetector/TimeDetectorShellCommand;
@@ -27,7 +26,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorShellCommand$$ExternalSyntheticLambda4;->f$0:Lcom/android/server/timedetector/TimeDetectorShellCommand;
 
     invoke-static {p0}, Lcom/android/server/timedetector/TimeDetectorShellCommand;->$r8$lambda$jHJyDU6ZFRbxRGGNOhsFXc87EMM(Lcom/android/server/timedetector/TimeDetectorShellCommand;)Lcom/android/server/timedetector/GnssTimeSuggestion;

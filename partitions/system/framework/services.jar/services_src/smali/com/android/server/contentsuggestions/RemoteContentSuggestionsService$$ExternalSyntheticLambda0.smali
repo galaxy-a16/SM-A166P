@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Landroid/app/contentsuggestions/ClassificationsRequest;Landroid/app/contentsuggestions/IClassificationsCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService$$ExternalSyntheticLambda0;->f$0:Landroid/app/contentsuggestions/ClassificationsRequest;
@@ -31,7 +30,6 @@
 .method public final run(Landroid/os/IInterface;)V
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService$$ExternalSyntheticLambda0;->f$0:Landroid/app/contentsuggestions/ClassificationsRequest;
 
     iget-object p0, p0, Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService$$ExternalSyntheticLambda0;->f$1:Landroid/app/contentsuggestions/IClassificationsCallback;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutService;)V
     .locals 0
 
-    .line 4030
     iput-object p1, p0, Lcom/android/server/pm/ShortcutService$7;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 4039
     iget-object p1, p0, Lcom/android/server/pm/ShortcutService$7;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {p1}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -33,7 +31,6 @@
 
     monitor-enter p1
 
-    .line 4040
     :try_start_0
     iget-object p2, p0, Lcom/android/server/pm/ShortcutService$7;->this$0:Lcom/android/server/pm/ShortcutService;
 
@@ -53,7 +50,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 4041
     iget-object p2, p0, Lcom/android/server/pm/ShortcutService$7;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {p2}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmHandler(Lcom/android/server/pm/ShortcutService;)Landroid/os/Handler;
@@ -68,7 +64,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 4042
     iget-object p2, p0, Lcom/android/server/pm/ShortcutService$7;->this$0:Lcom/android/server/pm/ShortcutService;
 
     new-instance v0, Lcom/android/server/pm/ShortcutService$7$$ExternalSyntheticLambda0;
@@ -77,12 +72,10 @@
 
     invoke-virtual {p2, v0}, Lcom/android/server/pm/ShortcutService;->forEachLoadedUserLocked(Ljava/util/function/Consumer;)V
 
-    .line 4043
     iget-object p2, p0, Lcom/android/server/pm/ShortcutService$7;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p2}, Lcom/android/server/pm/ShortcutService;->saveDirtyInfo()V
 
-    .line 4045
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$7;->this$0:Lcom/android/server/pm/ShortcutService;
 
@@ -94,7 +87,6 @@
 
     invoke-virtual {p0, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 4046
     monitor-exit p1
 
     return-void

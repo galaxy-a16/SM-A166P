@@ -16,20 +16,16 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;)V
     .locals 1
 
-    .line 2241
     invoke-direct {p0}, Landroid/os/BatteryStats$Counter;-><init>()V
 
-    .line 2232
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 2242
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
-    .line 2243
     invoke-virtual {p1, p0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->add(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
     return-void
@@ -40,7 +36,6 @@
 .method public addAtomic(I)V
     .locals 1
 
-    .line 2275
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->isRunning()Z
@@ -49,7 +44,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2276
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
@@ -61,7 +55,6 @@
 .method public detach()V
     .locals 1
 
-    .line 2294
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->remove(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
@@ -72,7 +65,6 @@
 .method public getCountLocked(I)I
     .locals 0
 
-    .line 2260
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -85,7 +77,6 @@
 .method public logState(Landroid/util/Printer;Ljava/lang/String;)V
     .locals 1
 
-    .line 2264
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,21 +107,18 @@
 .method public onTimeStarted(JJJ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onTimeStopped(JJJ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public readSummaryFromParcelLocked(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 2304
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -145,7 +133,6 @@
 .method public reset(ZJ)Z
     .locals 0
 
-    .line 2285
     iget-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 p3, 0x0
@@ -154,7 +141,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2287
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->detach()V
 
     :cond_0
@@ -166,7 +152,6 @@
 .method public stepAtomic()V
     .locals 1
 
-    .line 2269
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->isRunning()Z
@@ -175,7 +160,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2270
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
@@ -187,7 +171,6 @@
 .method public writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 2299
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Counter;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I

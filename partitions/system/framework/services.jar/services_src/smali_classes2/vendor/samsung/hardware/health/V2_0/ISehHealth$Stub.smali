@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 802
     invoke-direct {p0}, Landroid/os/HwBinder;-><init>()V
 
     return-void
@@ -21,26 +20,22 @@
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
     .locals 2
 
-    .line 859
     new-instance p0, Landroid/hidl/base/V1_0/DebugInfo;
 
     invoke-direct {p0}, Landroid/hidl/base/V1_0/DebugInfo;-><init>()V
 
-    .line 860
     invoke-static {}, Landroid/os/HidlSupport;->getPidIfSharable()I
 
     move-result v0
@@ -49,12 +44,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 861
     iput-wide v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->ptr:J
 
     const/4 v0, 0x0
 
-    .line 862
     iput v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->arch:I
 
     return-object p0
@@ -63,7 +56,6 @@
 .method public final getHashChain()Ljava/util/ArrayList;
     .locals 4
 
-    .line 832
     new-instance p0, Ljava/util/ArrayList;
 
     const/16 v0, 0x20
@@ -244,7 +236,6 @@
 .method public final interfaceChain()Ljava/util/ArrayList;
     .locals 4
 
-    .line 810
     new-instance p0, Ljava/util/ArrayList;
 
     const-string v0, "android.hardware.health@2.0::IHealth"
@@ -271,7 +262,6 @@
 .method public final interfaceDescriptor()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string/jumbo p0, "vendor.samsung.hardware.health@2.0::ISehHealth"
 
     return-object p0
@@ -280,7 +270,6 @@
 .method public final linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -289,7 +278,6 @@
 .method public final notifySyspropsChanged()V
     .locals 0
 
-    .line 869
     invoke-static {}, Landroid/os/HwBinder;->enableInstrumentation()V
 
     return-void
@@ -314,94 +302,73 @@
 
     goto/16 :goto_1
 
-    .line 1247
     :sswitch_0
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1249
     invoke-virtual {p0}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;->notifySyspropsChanged()V
 
     goto/16 :goto_1
 
-    .line 1236
     :sswitch_1
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1238
     invoke-virtual {p0}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
 
     move-result-object p0
 
-    .line 1239
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1240
     invoke-virtual {p0, p3}, Landroid/hidl/base/V1_0/DebugInfo;->writeToParcel(Landroid/os/HwParcel;)V
 
-    .line 1241
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1226
     :sswitch_2
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1228
     invoke-virtual {p0}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;->ping()V
 
-    .line 1229
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1230
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1213
     :sswitch_3
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1215
     invoke-virtual {p0}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;->setHALInstrumentation()V
 
     goto/16 :goto_1
 
-    .line 1179
     :sswitch_4
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1181
     invoke-virtual {p0}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;->getHashChain()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 1182
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1184
     new-instance p1, Landroid/os/HwBlob;
 
     const/16 p2, 0x10
 
     invoke-direct {p1, p2}, Landroid/os/HwBlob;-><init>(I)V
 
-    .line 1186
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p2
 
     const-wide/16 v2, 0x8
 
-    .line 1187
     invoke-virtual {p1, v2, v3, p2}, Landroid/os/HwBlob;->putInt32(JI)V
 
     const-wide/16 v2, 0xc
 
-    .line 1188
     invoke-virtual {p1, v2, v3, v1}, Landroid/os/HwBlob;->putBool(JZ)V
 
-    .line 1189
     new-instance p4, Landroid/os/HwBlob;
 
     mul-int/lit8 v0, p2, 0x20
@@ -415,7 +382,6 @@
 
     int-to-long v2, v0
 
-    .line 1193
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -424,21 +390,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 1195
     array-length v4, v0
 
     const/16 v5, 0x20
 
     if-ne v4, v5, :cond_0
 
-    .line 1199
     invoke-virtual {p4, v2, v3, v0}, Landroid/os/HwBlob;->putInt8Array(J[B)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1196
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -451,117 +414,89 @@
     :cond_1
     const-wide/16 v0, 0x0
 
-    .line 1203
     invoke-virtual {p1, v0, v1, p4}, Landroid/os/HwBlob;->putBlob(JLandroid/os/HwBlob;)V
 
-    .line 1205
     invoke-virtual {p3, p1}, Landroid/os/HwParcel;->writeBuffer(Landroid/os/HwBlob;)V
 
-    .line 1207
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1168
     :sswitch_5
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1170
     invoke-virtual {p0}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;->interfaceDescriptor()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1171
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1172
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 1173
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1156
     :sswitch_6
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1158
     invoke-virtual {p2}, Landroid/os/HwParcel;->readNativeHandle()Landroid/os/NativeHandle;
 
     move-result-object p1
 
-    .line 1159
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 1160
     invoke-virtual {p0, p1, p2}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;->debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
 
-    .line 1161
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1162
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1145
     :sswitch_7
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1147
     invoke-virtual {p0}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;->interfaceChain()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 1148
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1149
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeStringVector(Ljava/util/ArrayList;)V
 
-    .line 1150
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1132
     :pswitch_0
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1134
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p1
 
-    .line 1135
     invoke-virtual {p2}, Landroid/os/HwParcel;->readBool()Z
 
     move-result p2
 
-    .line 1136
     invoke-interface {p0, p1, p2}, Lvendor/samsung/hardware/health/V2_0/ISehHealth;->sehWriteEnableToParam(IZ)I
 
     move-result p0
 
-    .line 1137
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1138
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 1139
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1117
     :pswitch_1
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1119
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$13;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$13;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -570,11 +505,9 @@
 
     goto/16 :goto_1
 
-    .line 1102
     :pswitch_2
     invoke-virtual {p2, v0}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1104
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$12;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$12;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -583,11 +516,9 @@
 
     goto/16 :goto_1
 
-    .line 1087
     :pswitch_3
     invoke-virtual {p2, v0}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1089
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$11;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$11;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -596,11 +527,9 @@
 
     goto/16 :goto_1
 
-    .line 1072
     :pswitch_4
     invoke-virtual {p2, v0}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1074
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$10;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$10;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -609,11 +538,9 @@
 
     goto/16 :goto_1
 
-    .line 1057
     :pswitch_5
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1059
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$9;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$9;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -622,11 +549,9 @@
 
     goto/16 :goto_1
 
-    .line 1042
     :pswitch_6
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1044
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$8;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$8;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -635,11 +560,9 @@
 
     goto/16 :goto_1
 
-    .line 1027
     :pswitch_7
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1029
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$7;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$7;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -648,11 +571,9 @@
 
     goto/16 :goto_1
 
-    .line 1012
     :pswitch_8
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1014
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$6;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$6;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -661,11 +582,9 @@
 
     goto/16 :goto_1
 
-    .line 997
     :pswitch_9
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 999
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$5;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$5;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -674,11 +593,9 @@
 
     goto/16 :goto_1
 
-    .line 982
     :pswitch_a
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 984
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$4;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$4;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -687,11 +604,9 @@
 
     goto :goto_1
 
-    .line 967
     :pswitch_b
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 969
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$3;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$3;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -700,11 +615,9 @@
 
     goto :goto_1
 
-    .line 952
     :pswitch_c
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 954
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$2;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$2;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -713,11 +626,9 @@
 
     goto :goto_1
 
-    .line 937
     :pswitch_d
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 939
     new-instance p1, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$1;
 
     invoke-direct {p1, p0, p3}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub$1;-><init>(Lvendor/samsung/hardware/health/V2_0/ISehHealth$Stub;Landroid/os/HwParcel;)V
@@ -726,31 +637,24 @@
 
     goto :goto_1
 
-    .line 926
     :pswitch_e
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 928
     invoke-interface {p0}, Landroid/hardware/health/V2_0/IHealth;->update()I
 
     move-result p0
 
-    .line 929
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 930
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 931
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 914
     :pswitch_f
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 916
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStrongBinder()Landroid/os/IHwBinder;
 
     move-result-object p1
@@ -759,27 +663,21 @@
 
     move-result-object p1
 
-    .line 917
     invoke-interface {p0, p1}, Landroid/hardware/health/V2_0/IHealth;->unregisterCallback(Landroid/hardware/health/V2_0/IHealthInfoCallback;)I
 
     move-result p0
 
-    .line 918
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 919
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 920
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 902
     :pswitch_10
     invoke-virtual {p2, v2}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 904
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStrongBinder()Landroid/os/IHwBinder;
 
     move-result-object p1
@@ -788,18 +686,14 @@
 
     move-result-object p1
 
-    .line 905
     invoke-interface {p0, p1}, Landroid/hardware/health/V2_0/IHealth;->registerCallback(Landroid/hardware/health/V2_0/IHealthInfoCallback;)I
 
     move-result p0
 
-    .line 906
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 907
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 908
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     :goto_1
@@ -844,7 +738,6 @@
 .method public final ping()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -853,7 +746,6 @@
 
     const-string/jumbo v0, "vendor.samsung.hardware.health@2.0::ISehHealth"
 
-    .line 881
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -871,14 +763,12 @@
 .method public final setHALInstrumentation()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 893
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -903,7 +793,6 @@
 .method public final unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

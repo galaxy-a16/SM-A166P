@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wallpaper/WallpaperManagerService;)V
     .locals 0
 
-    .line 33
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->mService:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     return-void
@@ -25,14 +23,12 @@
 .method public final getWallpaperDimAmount()I
     .locals 3
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->mService:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wallpaper/WallpaperManagerService;->getWallpaperDimAmount()F
 
     move-result v0
 
-    .line 98
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -65,12 +61,10 @@
 
     if-nez p1, :cond_0
 
-    .line 40
     invoke-virtual {p0}, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->onHelp()V
 
     return v0
 
-    .line 43
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -164,14 +158,12 @@
     :goto_1
     packed-switch v0, :pswitch_data_0
 
-    .line 55
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 49
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->getWallpaperDimAmount()I
 
@@ -179,13 +171,11 @@
 
     return p0
 
-    .line 52
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->onHelp()V
 
     return v2
 
-    .line 47
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->setDimmingWithUid()I
 
@@ -193,7 +183,6 @@
 
     return p0
 
-    .line 45
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->setWallpaperDimAmount()I
 
@@ -223,63 +212,50 @@
 .method public onHelp()V
     .locals 1
 
-    .line 61
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Wallpaper manager commands:"
 
-    .line 62
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 63
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 64
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 65
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  set-dim-amount DIMMING"
 
-    .line 66
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Sets the current dimming value to DIMMING (a number between 0 and 1)."
 
-    .line 67
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  dim-with-uid UID DIMMING"
 
-    .line 69
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Sets the wallpaper dim amount to DIMMING as if an app with uid, UID, called it."
 
-    .line 70
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 72
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  get-dim-amount"
 
-    .line 73
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Get the current wallpaper dim amount."
 
-    .line 74
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -288,7 +264,6 @@
 .method public final setDimmingWithUid()I
     .locals 4
 
-    .line 107
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -297,7 +272,6 @@
 
     move-result v0
 
-    .line 108
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -306,12 +280,10 @@
 
     move-result v1
 
-    .line 109
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->mService:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-virtual {v2, v0, v1}, Lcom/android/server/wallpaper/WallpaperManagerService;->setWallpaperDimAmountForUid(IF)V
 
-    .line 110
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -346,7 +318,6 @@
 .method public final setWallpaperDimAmount()I
     .locals 3
 
-    .line 82
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -355,7 +326,6 @@
 
     move-result v0
 
-    .line 84
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerShellCommand;->mService:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -370,10 +340,8 @@
 
     const-string v2, "Can\'t set wallpaper dim amount"
 
-    .line 86
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 

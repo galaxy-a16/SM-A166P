@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/bgslotmanager/CustomEFKManager;JJ)V
     .locals 0
 
-    .line 125
     iput-object p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$3;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -24,7 +23,6 @@
 .method public onFinish()V
     .locals 0
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$3;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     invoke-static {p0}, Lcom/android/server/bgslotmanager/CustomEFKManager;->-$$Nest$mrestoreEFKAfterBoot(Lcom/android/server/bgslotmanager/CustomEFKManager;)V
@@ -35,6 +33,5 @@
 .method public onTick(J)V
     .locals 0
 
-    .line 0
     return-void
 .end method

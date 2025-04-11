@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 27
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss"
@@ -44,25 +43,20 @@
 .method public constructor <init>(Lcom/android/server/apphibernation/UserLevelState;)V
     .locals 2
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iget-object v0, p1, Lcom/android/server/apphibernation/UserLevelState;->packageName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/apphibernation/UserLevelState;->packageName:Ljava/lang/String;
 
-    .line 40
     iget-boolean v0, p1, Lcom/android/server/apphibernation/UserLevelState;->hibernated:Z
 
     iput-boolean v0, p0, Lcom/android/server/apphibernation/UserLevelState;->hibernated:Z
 
-    .line 41
     iget-wide v0, p1, Lcom/android/server/apphibernation/UserLevelState;->savedByte:J
 
     iput-wide v0, p0, Lcom/android/server/apphibernation/UserLevelState;->savedByte:J
 
-    .line 42
     iget-wide v0, p1, Lcom/android/server/apphibernation/UserLevelState;->lastUnhibernatedMs:J
 
     iput-wide v0, p0, Lcom/android/server/apphibernation/UserLevelState;->lastUnhibernatedMs:J
@@ -75,7 +69,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,7 +113,6 @@
 
     iget-wide v2, p0, Lcom/android/server/apphibernation/UserLevelState;->lastUnhibernatedMs:J
 
-    .line 51
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0

@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/net/IpPrefix;
 
     invoke-static {p1}, Landroid/net/shared/InitialConfiguration;->$r8$lambda$c9N2MqnbjMzPatv9DmSRL0HmMjM(Landroid/net/IpPrefix;)Z

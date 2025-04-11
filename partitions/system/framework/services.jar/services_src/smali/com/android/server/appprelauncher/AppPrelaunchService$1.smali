@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/appprelauncher/AppPrelaunchService;)V
     .locals 0
 
-    .line 273
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 12
 
-    .line 277
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -44,10 +42,8 @@
 
     const-string v1, "Global watchDog started"
 
-    .line 280
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$sfgetAPP_MAX_IDLE_TIME_MIN()J
@@ -58,7 +54,6 @@
 
     move-result-wide v1
 
-    .line 282
     iget-object v3, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-static {v3}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$fgetHISTORY_TIME_MIN(Lcom/android/server/appprelauncher/AppPrelaunchService;)J
@@ -69,7 +64,6 @@
 
     move-result-wide v3
 
-    .line 286
     :cond_0
     :try_start_1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
@@ -95,21 +89,17 @@
 
     const-string v6, "Global watchDog interrupted"
 
-    .line 288
     invoke-static {v5, v6, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 290
     :goto_0
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 291
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v5
 
-    .line 292
     iget-object v7, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-static {v7}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$fgetmLock(Lcom/android/server/appprelauncher/AppPrelaunchService;)Ljava/lang/Object;
@@ -118,7 +108,6 @@
 
     monitor-enter v7
 
-    .line 295
     :try_start_2
     iget-object v8, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
@@ -148,7 +137,6 @@
 
     check-cast v9, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;
 
-    .line 296
     invoke-virtual {v9}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getPrelaunchedTimeNs()J
 
     move-result-wide v10
@@ -159,12 +147,10 @@
 
     if-lez v10, :cond_1
 
-    .line 297
     invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 301
     :cond_2
     :goto_2
     iget-object v8, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
@@ -179,7 +165,6 @@
 
     if-nez v8, :cond_3
 
-    .line 302
     iget-object v8, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-static {v8}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$fgetmPrelaunchedAppHistory(Lcom/android/server/appprelauncher/AppPrelaunchService;)Ljava/util/Queue;
@@ -192,7 +177,6 @@
 
     check-cast v8, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;
 
-    .line 303
     invoke-virtual {v8}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getPrelaunchedTimeNs()J
 
     move-result-wide v8
@@ -203,7 +187,6 @@
 
     if-lez v8, :cond_3
 
-    .line 304
     iget-object v8, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-static {v8}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$fgetmPrelaunchedAppHistory(Lcom/android/server/appprelauncher/AppPrelaunchService;)Ljava/util/Queue;
@@ -214,13 +197,11 @@
 
     goto :goto_2
 
-    .line 309
     :cond_3
     monitor-exit v7
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 310
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -240,7 +221,6 @@
 
     const-string v6, "PRELService"
 
-    .line 311
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -265,14 +245,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
     invoke-virtual {v5}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getLock()Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;
 
     move-result-object v6
 
     monitor-enter v6
 
-    .line 315
     :try_start_3
     invoke-virtual {v5}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getPrelaunched()Z
 
@@ -280,7 +258,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 316
     iget-object v7, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     const-string v8, "Global watchDog"
@@ -289,16 +266,13 @@
 
     const/16 v7, 0x3c
 
-    .line 317
     invoke-virtual {v5, v7}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->setStage(I)V
 
-    .line 319
     :cond_4
     monitor-exit v6
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 320
     iget-object v6, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$1;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-static {v6, v5}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$mremovePrelaunchedApp(Lcom/android/server/appprelauncher/AppPrelaunchService;Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;)V
@@ -308,7 +282,6 @@
     :catchall_0
     move-exception p0
 
-    .line 319
     :try_start_4
     monitor-exit v6
     :try_end_4
@@ -319,7 +292,6 @@
     :catchall_1
     move-exception p0
 
-    .line 309
     :try_start_5
     monitor-exit v7
     :try_end_5

@@ -17,12 +17,10 @@
 .method public constructor <init>(Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;)V
     .locals 4
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 27
     iput v0, p0, Lcom/android/server/knox/dar/AuthResult;->mCallerAuthResult:I
 
     const/4 v1, 0x1
@@ -33,33 +31,26 @@
 
     aput-byte v3, v2, v3
 
-    .line 28
     iput-object v2, p0, Lcom/android/server/knox/dar/AuthResult;->mCallingPackage:[B
 
     new-array v2, v1, [B
 
     aput-byte v3, v2, v3
 
-    .line 29
     iput-object v2, p0, Lcom/android/server/knox/dar/AuthResult;->mCallingPackageSigs:[B
 
-    .line 30
     iput v0, p0, Lcom/android/server/knox/dar/AuthResult;->mCallingPackageAuthResult:I
 
-    .line 33
     instance-of v0, p1, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;
 
     if-eqz v0, :cond_5
 
-    .line 37
     check-cast p1, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;
 
-    .line 38
     invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object p1
 
-    .line 40
     :goto_0
     invoke-interface {p1}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -67,14 +58,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 41
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;
 
-    .line 42
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getTagNo()I
 
     move-result v2
@@ -91,7 +80,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 56
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +104,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_0
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -136,7 +123,6 @@
 
     goto :goto_0
 
-    .line 50
     :cond_1
     invoke-static {v0}, Lcom/android/server/knox/dar/Asn1Utils;->getByteArrayFromAsn1(Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)[B
 
@@ -146,7 +132,6 @@
 
     goto :goto_0
 
-    .line 47
     :cond_2
     invoke-static {v0}, Lcom/android/server/knox/dar/Asn1Utils;->getByteArrayFromAsn1(Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)[B
 
@@ -156,7 +141,6 @@
 
     goto :goto_0
 
-    .line 44
     :cond_3
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -179,7 +163,6 @@
     :cond_4
     return-void
 
-    .line 34
     :cond_5
     new-instance p0, Ljava/security/cert/CertificateParsingException;
 
@@ -191,7 +174,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 35
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -232,7 +214,6 @@
 
     return-object v0
 
-    .line 90
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -257,7 +238,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 97
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "        Caller Auth Result : "
@@ -268,7 +248,6 @@
 
     const/4 v2, 0x0
 
-    .line 98
     invoke-virtual {p0, v1, v2}, Lcom/android/server/knox/dar/AuthResult;->statusToString(IZ)Ljava/lang/String;
 
     move-result-object v1
@@ -277,7 +256,6 @@
 
     const-string v1, "\n        Calling Package : "
 
-    .line 99
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     new-instance v1, Ljava/lang/String;
@@ -286,12 +264,10 @@
 
     invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
 
-    .line 100
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "\n        Calling Package Signatures : "
 
-    .line 101
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     new-instance v1, Ljava/lang/String;
@@ -300,26 +276,22 @@
 
     invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
 
-    .line 102
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "\n        Calling Package Auth Result : "
 
-    .line 103
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/knox/dar/AuthResult;->mCallingPackageAuthResult:I
 
     const/4 v2, 0x1
 
-    .line 104
     invoke-virtual {p0, v1, v2}, Lcom/android/server/knox/dar/AuthResult;->statusToString(IZ)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

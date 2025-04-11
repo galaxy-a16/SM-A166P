@@ -15,7 +15,6 @@
 
     const-string v0, "app_gender"
 
-    .line 37
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -24,10 +23,8 @@
 
     invoke-direct {p0, v1, v0}, Landroid/app/backup/BlobBackupHelper;-><init>(I[Ljava/lang/String;)V
 
-    .line 38
     iput p1, p0, Lcom/android/server/backup/AppGrammaticalGenderBackupHelper;->mUserId:I
 
-    .line 39
     const-class p1, Lcom/android/server/grammaticalinflection/GrammaticalInflectionManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -48,7 +45,6 @@
 
     const-string v0, "app_gender"
 
-    .line 62
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -59,7 +55,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 63
     iget p0, p0, Lcom/android/server/backup/AppGrammaticalGenderBackupHelper;->mUserId:I
 
     invoke-virtual {p1, p2, p0}, Lcom/android/server/grammaticalinflection/GrammaticalInflectionManagerInternal;->stageAndApplyRestoredPayload([BI)V
@@ -73,7 +68,6 @@
 
     const-string v0, "app_gender"
 
-    .line 56
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -84,7 +78,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 57
     iget p0, p0, Lcom/android/server/backup/AppGrammaticalGenderBackupHelper;->mUserId:I
 
     invoke-virtual {p1, p0}, Lcom/android/server/grammaticalinflection/GrammaticalInflectionManagerInternal;->getBackupPayload(I)[B
@@ -103,7 +96,6 @@
 .method public performBackup(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/os/ParcelFileDescriptor;)V
     .locals 1
 
-    .line 47
     invoke-virtual {p2}, Landroid/app/backup/BackupDataOutput;->getTransportFlags()I
 
     move-result v0
@@ -114,7 +106,6 @@
 
     return-void
 
-    .line 51
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/app/backup/BlobBackupHelper;->performBackup(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/os/ParcelFileDescriptor;)V
 

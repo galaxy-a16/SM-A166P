@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 319
     invoke-static {}, Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;->values()[Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
 
     move-result-object v0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 779
     iput-object p1, p0, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 781
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 782
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 
     move-result-object p2
@@ -50,7 +47,6 @@
 
     invoke-static {p2, p1}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
     iget-object p1, p0, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmSleepChargingManager(Lcom/android/server/BatteryService;)Lcom/android/server/battery/sleepcharging/SleepChargingManager;
@@ -59,7 +55,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 784
     iget-object p0, p0, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmSleepChargingManager(Lcom/android/server/BatteryService;)Lcom/android/server/battery/sleepcharging/SleepChargingManager;

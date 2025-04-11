@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/PersonaActivityHelper;)V
     .locals 0
 
-    .line 139
     iput-object p1, p0, Lcom/android/server/wm/PersonaActivityHelper$2;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-direct {p0}, Lcom/android/server/wm/WindowManagerInternal$AppTransitionListener;-><init>()V
@@ -24,19 +23,16 @@
 .method public onAppTransitionFinishedLocked(Landroid/os/IBinder;)V
     .locals 4
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper$2;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     iget-object v0, v0, Lcom/android/server/wm/PersonaActivityHelper;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
     if-eqz v0, :cond_1
 
-    .line 144
     invoke-virtual {v0, p1}, Lcom/android/server/wm/RootWindowContainer;->getActivityRecord(Landroid/os/IBinder;)Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
 
-    .line 146
     iget-object v1, p0, Lcom/android/server/wm/PersonaActivityHelper$2;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-static {v1}, Lcom/android/server/wm/PersonaActivityHelper;->-$$Nest$fgetmLastResumedSFActivity(Lcom/android/server/wm/PersonaActivityHelper;)Lcom/android/server/wm/ActivityRecord;
@@ -55,7 +51,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 147
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,7 +73,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,7 +105,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +139,6 @@
 
     if-nez v0, :cond_0
 
-    .line 151
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -173,7 +165,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 152
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -200,7 +191,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper$2;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-static {p0}, Lcom/android/server/wm/PersonaActivityHelper;->-$$Nest$fgetmLastReceivedResumedActivity(Lcom/android/server/wm/PersonaActivityHelper;)Lcom/android/server/wm/ActivityRecord;
@@ -214,12 +204,10 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 156
     iget-object p1, v0, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     if-eqz p1, :cond_1
 
-    .line 157
     iget-object p1, p0, Lcom/android/server/wm/PersonaActivityHelper$2;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-static {p1}, Lcom/android/server/wm/PersonaActivityHelper;->-$$Nest$fgetmLastResumedSFActivity(Lcom/android/server/wm/PersonaActivityHelper;)Lcom/android/server/wm/ActivityRecord;
@@ -250,7 +238,6 @@
 
     if-nez p1, :cond_1
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper$2;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-static {p0}, Lcom/android/server/wm/PersonaActivityHelper;->-$$Nest$fgetmLastReceivedResumedActivity(Lcom/android/server/wm/PersonaActivityHelper;)Lcom/android/server/wm/ActivityRecord;

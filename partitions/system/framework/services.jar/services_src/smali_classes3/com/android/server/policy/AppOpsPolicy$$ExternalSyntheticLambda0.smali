@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/policy/AppOpsPolicy;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/policy/AppOpsPolicy$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/policy/AppOpsPolicy;
@@ -27,7 +26,6 @@
 .method public final onLocationPackageTagsChanged(ILandroid/os/PackageTagsList;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/policy/AppOpsPolicy;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/policy/AppOpsPolicy;->$r8$lambda$O7j7aIaRn2G_bfFN1SctJ5eRrkI(Lcom/android/server/policy/AppOpsPolicy;ILandroid/os/PackageTagsList;)V

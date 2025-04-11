@@ -11,12 +11,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 89
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 86
     iput-object p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService$Lifecycle;->mService:Lcom/android/server/multicontrol/MultiControlManagerService;
 
     return-void
@@ -27,12 +25,10 @@
 .method public onBootPhase(I)V
     .locals 0
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService$Lifecycle;->mService:Lcom/android/server/multicontrol/MultiControlManagerService;
 
     if-eqz p0, :cond_0
 
-    .line 101
     invoke-static {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->-$$Nest$monBootPhase(Lcom/android/server/multicontrol/MultiControlManagerService;I)V
 
     :cond_0
@@ -42,7 +38,6 @@
 .method public onStart()V
     .locals 3
 
-    .line 94
     new-instance v0, Lcom/android/server/multicontrol/MultiControlManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -57,7 +52,6 @@
 
     const-string/jumbo v1, "multicontrol"
 
-    .line 95
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -66,7 +60,6 @@
 .method public onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService$Lifecycle;->mService:Lcom/android/server/multicontrol/MultiControlManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -81,7 +74,6 @@
 .method public onUserStopped(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService$Lifecycle;->mService:Lcom/android/server/multicontrol/MultiControlManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -96,7 +88,6 @@
 .method public onUserStopping(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 122
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService$Lifecycle;->mService:Lcom/android/server/multicontrol/MultiControlManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -111,7 +102,6 @@
 .method public onUserSwitching(Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService$Lifecycle;->mService:Lcom/android/server/multicontrol/MultiControlManagerService;
 
     invoke-virtual {p2}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -126,7 +116,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 112
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService$Lifecycle;->mService:Lcom/android/server/multicontrol/MultiControlManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I

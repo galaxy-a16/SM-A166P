@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubTransactionManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 98
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$TransactionRecord;->this$0:Lcom/android/server/location/contexthub/ContextHubTransactionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     iput-object p2, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$TransactionRecord;->mTransaction:Ljava/lang/String;
 
-    .line 100
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -38,7 +35,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

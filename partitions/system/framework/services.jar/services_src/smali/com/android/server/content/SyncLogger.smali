@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
 
     monitor-enter v0
 
-    .line 75
     :try_start_0
     sget-object v1, Lcom/android/server/content/SyncLogger;->sInstance:Lcom/android/server/content/SyncLogger;
 
@@ -32,19 +30,16 @@
 
     const-string v1, "debug.synclog"
 
-    .line 76
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 77
     sget-boolean v2, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-nez v2, :cond_0
 
     const-string v2, "1"
 
-    .line 79
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -55,7 +50,6 @@
 
     const/4 v3, 0x2
 
-    .line 80
     invoke-static {v2, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v2
@@ -81,7 +75,6 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 82
     new-instance v1, Lcom/android/server/content/SyncLogger$RotatingFileLogger;
 
     invoke-direct {v1}, Lcom/android/server/content/SyncLogger$RotatingFileLogger;-><init>()V
@@ -90,7 +83,6 @@
 
     goto :goto_1
 
-    .line 84
     :cond_2
     new-instance v1, Lcom/android/server/content/SyncLogger;
 
@@ -98,7 +90,6 @@
 
     sput-object v1, Lcom/android/server/content/SyncLogger;->sInstance:Lcom/android/server/content/SyncLogger;
 
-    .line 87
     :cond_3
     :goto_1
     sget-object v1, Lcom/android/server/content/SyncLogger;->sInstance:Lcom/android/server/content/SyncLogger;
@@ -126,7 +117,6 @@
 
     goto :goto_0
 
-    .line 317
     :cond_0
     invoke-virtual {p0}, Landroid/accounts/Account;->toSafeString()Ljava/lang/String;
 
@@ -145,7 +135,6 @@
 
     goto :goto_0
 
-    .line 329
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/content/SyncManager$ActiveSyncContext;->toSafeString()Ljava/lang/String;
 
@@ -164,7 +153,6 @@
 
     goto :goto_0
 
-    .line 325
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/content/SyncOperation;->toSafeString()Ljava/lang/String;
 
@@ -183,7 +171,6 @@
 
     goto :goto_0
 
-    .line 321
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/content/SyncStorageEngine$EndPoint;->toSafeString()Ljava/lang/String;
 
@@ -198,14 +185,12 @@
 .method public dumpAll(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public enabled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -214,7 +199,6 @@
 .method public jobParametersToString(Landroid/app/job/JobParameters;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, ""
 
     return-object p0
@@ -223,13 +207,11 @@
 .method public varargs log([Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public purgeOldLogs()V
     .locals 0
 
-    .line 0
     return-void
 .end method

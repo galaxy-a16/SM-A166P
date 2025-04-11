@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/OverlayDisplayWindow;)V
     .locals 0
 
-    .line 378
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 0
 
-    .line 382
     iget-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {p1}, Lcom/android/server/display/OverlayDisplayWindow;->-$$Nest$fgetmLiveTranslationX(Lcom/android/server/display/OverlayDisplayWindow;)F
@@ -35,7 +33,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/display/OverlayDisplayWindow;->-$$Nest$fputmLiveTranslationX(Lcom/android/server/display/OverlayDisplayWindow;F)V
 
-    .line 383
     iget-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {p1}, Lcom/android/server/display/OverlayDisplayWindow;->-$$Nest$fgetmLiveTranslationY(Lcom/android/server/display/OverlayDisplayWindow;)F
@@ -46,7 +43,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/display/OverlayDisplayWindow;->-$$Nest$fputmLiveTranslationY(Lcom/android/server/display/OverlayDisplayWindow;F)V
 
-    .line 384
     iget-object p0, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-virtual {p0}, Lcom/android/server/display/OverlayDisplayWindow;->relayout()V

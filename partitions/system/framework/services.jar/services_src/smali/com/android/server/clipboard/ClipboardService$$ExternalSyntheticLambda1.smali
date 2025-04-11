@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/ClipData;
 
     invoke-static {p1}, Lcom/android/server/clipboard/ClipboardService;->$r8$lambda$cqkyeKcqYxJqwno8VV9dGrqdo08(Landroid/content/ClipData;)V

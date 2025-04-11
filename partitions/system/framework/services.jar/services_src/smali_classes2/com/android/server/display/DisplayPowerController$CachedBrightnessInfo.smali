@@ -23,10 +23,8 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 4975
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4976
     new-instance v0, Landroid/util/MutableFloat;
 
     const/high16 v1, 0x7fc00000    # Float.NaN
@@ -35,28 +33,24 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$CachedBrightnessInfo;->brightness:Landroid/util/MutableFloat;
 
-    .line 4977
     new-instance v0, Landroid/util/MutableFloat;
 
     invoke-direct {v0, v1}, Landroid/util/MutableFloat;-><init>(F)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$CachedBrightnessInfo;->adjustedBrightness:Landroid/util/MutableFloat;
 
-    .line 4979
     new-instance v0, Landroid/util/MutableFloat;
 
     invoke-direct {v0, v1}, Landroid/util/MutableFloat;-><init>(F)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$CachedBrightnessInfo;->brightnessMin:Landroid/util/MutableFloat;
 
-    .line 4981
     new-instance v0, Landroid/util/MutableFloat;
 
     invoke-direct {v0, v1}, Landroid/util/MutableFloat;-><init>(F)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$CachedBrightnessInfo;->brightnessMax:Landroid/util/MutableFloat;
 
-    .line 4983
     new-instance v0, Landroid/util/MutableInt;
 
     const/4 v1, 0x0
@@ -65,7 +59,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$CachedBrightnessInfo;->hbmMode:Landroid/util/MutableInt;
 
-    .line 4984
     new-instance v0, Landroid/util/MutableFloat;
 
     const/high16 v2, 0x7f800000    # Float.POSITIVE_INFINITY
@@ -74,7 +67,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController$CachedBrightnessInfo;->hbmTransitionPoint:Landroid/util/MutableFloat;
 
-    .line 4986
     new-instance v0, Landroid/util/MutableInt;
 
     invoke-direct {v0, v1}, Landroid/util/MutableInt;-><init>(I)V
@@ -89,14 +81,12 @@
 .method public checkAndSetFloat(Landroid/util/MutableFloat;F)Z
     .locals 0
 
-    .line 4990
     iget p0, p1, Landroid/util/MutableFloat;->value:F
 
     cmpl-float p0, p0, p2
 
     if-eqz p0, :cond_0
 
-    .line 4991
     iput p2, p1, Landroid/util/MutableFloat;->value:F
 
     const/4 p0, 0x1
@@ -112,12 +102,10 @@
 .method public checkAndSetInt(Landroid/util/MutableInt;I)Z
     .locals 0
 
-    .line 4998
     iget p0, p1, Landroid/util/MutableInt;->value:I
 
     if-eq p0, p2, :cond_0
 
-    .line 4999
     iput p2, p1, Landroid/util/MutableInt;->value:I
 
     const/4 p0, 0x1

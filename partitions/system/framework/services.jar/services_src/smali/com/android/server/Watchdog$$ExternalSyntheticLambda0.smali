@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/Watchdog;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/Watchdog$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/Watchdog;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/Watchdog$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/Watchdog;
 
     invoke-static {p0}, Lcom/android/server/Watchdog;->$r8$lambda$ebqYimzN4BRUARz1m88JBS6pZ8I(Lcom/android/server/Watchdog;)V

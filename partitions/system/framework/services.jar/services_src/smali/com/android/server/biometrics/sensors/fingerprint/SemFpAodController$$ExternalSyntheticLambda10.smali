@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController$$ExternalSyntheticLambda10;->f$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController$$ExternalSyntheticLambda10;->f$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;->$r8$lambda$7S1sJi5fGlVNJG6hY1Ac1087QuI(Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;)V

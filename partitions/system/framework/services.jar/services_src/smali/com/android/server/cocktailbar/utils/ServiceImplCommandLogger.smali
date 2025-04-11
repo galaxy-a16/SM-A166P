@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     new-instance v0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$1;
 
     const/16 v1, 0xa
@@ -31,12 +29,10 @@
 .method public recordHostCommand(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 4
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
     monitor-enter v0
 
-    .line 52
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
@@ -48,19 +44,16 @@
 
     if-nez v1, :cond_0
 
-    .line 54
     new-instance v1, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v2}, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;-><init>(Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo-IA;)V
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
     invoke-virtual {p0, p1, v1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     :cond_0
     new-instance p0, Ljava/lang/StringBuffer;
 
@@ -68,7 +61,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 59
     :try_start_1
     new-instance p1, Landroid/icu/text/SimpleDateFormat;
 
@@ -76,7 +68,6 @@
 
     invoke-direct {p1, v2}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 60
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
@@ -95,11 +86,9 @@
     :catch_0
     move-exception p1
 
-    .line 62
     :try_start_2
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 63
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -109,14 +98,12 @@
     :goto_0
     const-string p1, ": "
 
-    .line 65
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {p0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {p0, p3}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 66
     iget-object p1, v1, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;->mCommandHistory:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -125,7 +112,6 @@
 
     invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 67
     :goto_1
     iget-object p0, v1, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;->mCommandHistory:Ljava/util/ArrayList;
 
@@ -137,7 +123,6 @@
 
     if-le p0, p1, :cond_1
 
-    .line 68
     iget-object p0, v1, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;->mCommandHistory:Ljava/util/ArrayList;
 
     const/4 p1, 0x0
@@ -146,7 +131,6 @@
 
     goto :goto_1
 
-    .line 70
     :cond_1
     monitor-exit v0
 
@@ -165,7 +149,6 @@
 .method public recordHostEnd(Ljava/lang/String;)V
     .locals 2
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
     invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -176,19 +159,16 @@
 
     if-nez v0, :cond_0
 
-    .line 76
     new-instance v0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;-><init>(Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo-IA;)V
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 80
     :cond_0
     :try_start_0
     new-instance p0, Landroid/icu/text/SimpleDateFormat;
@@ -197,7 +177,6 @@
 
     invoke-direct {p0, p1}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 81
     new-instance p1, Ljava/util/Date;
 
     invoke-direct {p1}, Ljava/util/Date;-><init>()V
@@ -215,10 +194,8 @@
     :catch_0
     move-exception p0
 
-    .line 83
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 84
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
@@ -236,14 +213,12 @@
 .method public recordHostStart(Ljava/lang/String;)V
     .locals 3
 
-    .line 37
     new-instance v0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;-><init>(Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo-IA;)V
 
-    .line 39
     :try_start_0
     new-instance v1, Landroid/icu/text/SimpleDateFormat;
 
@@ -251,7 +226,6 @@
 
     invoke-direct {v1, v2}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 40
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
@@ -269,10 +243,8 @@
     :catch_0
     move-exception v1
 
-    .line 42
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 43
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -283,19 +255,16 @@
 
     iput-object v1, v0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;->mStratTime:Ljava/lang/String;
 
-    .line 45
     :goto_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
     monitor-enter v1
 
-    .line 46
     :try_start_1
     iget-object p0, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     monitor-exit v1
 
     return-void
@@ -313,28 +282,23 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
     if-eqz v0, :cond_2
 
-    .line 92
     monitor-enter v0
 
-    .line 93
     :try_start_0
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger;->mHostDumpInfoCache:Landroid/util/LruCache;
 
     invoke-virtual {p0}, Landroid/util/LruCache;->snapshot()Ljava/util/Map;
 
     move-result-object p0
 
-    .line 95
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -356,7 +320,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 96
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -365,7 +328,6 @@
 
     const-string v4, "HostDump: "
 
-    .line 97
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -382,7 +344,6 @@
 
     iget-object v2, v3, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;->mStratTime:Ljava/lang/String;
 
-    .line 98
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     const-string v2, " e="
@@ -395,10 +356,8 @@
 
     const-string v2, "\ncmd="
 
-    .line 99
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 100
     iget-object v2, v3, Lcom/android/server/cocktailbar/utils/ServiceImplCommandLogger$HostDumpInfo;->mCommandHistory:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -420,7 +379,6 @@
 
     const-string v4, "    "
 
-    .line 101
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -431,7 +389,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -444,7 +401,6 @@
     :catchall_0
     move-exception p0
 
-    .line 105
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

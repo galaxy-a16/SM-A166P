@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/MARsTrigger;)V
     .locals 0
 
-    .line 725
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$13;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 728
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -35,7 +33,6 @@
 
     goto :goto_0
 
-    .line 731
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -43,7 +40,6 @@
 
     const-string v0, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
-    .line 733
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -54,7 +50,6 @@
 
     const/4 v0, 0x0
 
-    .line 734
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -67,22 +62,18 @@
 
     const-string p2, "disable ultra power saving mode"
 
-    .line 737
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 738
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     sget-boolean p1, Lcom/android/server/am/MARsPolicyManager;->MARs_ENABLE:Z
 
     if-nez p1, :cond_1
 
-    .line 739
     iget-object p0, p0, Lcom/android/server/am/MARsTrigger$13;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-virtual {p0}, Lcom/android/server/am/MARsTrigger;->unregisterEmStateReceiver()V
 
-    .line 744
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -93,7 +84,6 @@
 
     goto :goto_0
 
-    .line 747
     :cond_1
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 

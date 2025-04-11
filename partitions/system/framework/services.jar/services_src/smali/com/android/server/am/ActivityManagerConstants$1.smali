@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerConstants;)V
     .locals 0
 
-    .line 1082
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 3
 
-    .line 1085
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
     move-result-object p1
@@ -53,7 +51,6 @@
 
     return-void
 
-    .line 1089
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -1042,14 +1039,12 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
-    .line 1260
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
     invoke-static {v1, v0}, Lcom/android/server/am/ActivityManagerConstants;->-$$Nest$mupdateFGSPermissionEnforcementFlagsIfNecessary(Lcom/android/server/am/ActivityManagerConstants;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 1211
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1057,7 +1052,6 @@
 
     goto/16 :goto_0
 
-    .line 1124
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1065,7 +1059,6 @@
 
     goto/16 :goto_0
 
-    .line 1169
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1073,7 +1066,6 @@
 
     goto/16 :goto_0
 
-    .line 1247
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1081,7 +1073,6 @@
 
     goto/16 :goto_0
 
-    .line 1112
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1089,7 +1080,6 @@
 
     goto/16 :goto_0
 
-    .line 1190
     :pswitch_5
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1097,7 +1087,6 @@
 
     goto/16 :goto_0
 
-    .line 1232
     :pswitch_6
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1105,7 +1094,6 @@
 
     goto/16 :goto_0
 
-    .line 1181
     :pswitch_7
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1113,7 +1101,6 @@
 
     goto/16 :goto_0
 
-    .line 1160
     :pswitch_8
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1121,7 +1108,6 @@
 
     goto/16 :goto_0
 
-    .line 1241
     :pswitch_9
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1129,7 +1115,6 @@
 
     goto/16 :goto_0
 
-    .line 1094
     :pswitch_a
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1137,7 +1122,6 @@
 
     goto/16 :goto_0
 
-    .line 1163
     :pswitch_b
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1145,7 +1129,6 @@
 
     goto/16 :goto_0
 
-    .line 1214
     :pswitch_c
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1153,7 +1136,6 @@
 
     goto/16 :goto_0
 
-    .line 1109
     :pswitch_d
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1161,7 +1143,6 @@
 
     goto/16 :goto_0
 
-    .line 1121
     :pswitch_e
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1169,7 +1150,6 @@
 
     goto/16 :goto_0
 
-    .line 1193
     :pswitch_f
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1177,7 +1157,6 @@
 
     goto/16 :goto_0
 
-    .line 1130
     :pswitch_10
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1185,7 +1164,6 @@
 
     goto/16 :goto_0
 
-    .line 1238
     :pswitch_11
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1193,7 +1171,6 @@
 
     goto/16 :goto_0
 
-    .line 1254
     :pswitch_12
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1201,7 +1178,6 @@
 
     goto/16 :goto_0
 
-    .line 1257
     :pswitch_13
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1209,7 +1185,6 @@
 
     goto/16 :goto_0
 
-    .line 1202
     :pswitch_14
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1217,7 +1192,6 @@
 
     goto/16 :goto_0
 
-    .line 1244
     :pswitch_15
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1225,7 +1199,6 @@
 
     goto/16 :goto_0
 
-    .line 1115
     :pswitch_16
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1233,7 +1206,6 @@
 
     goto/16 :goto_0
 
-    .line 1217
     :pswitch_17
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1241,7 +1213,6 @@
 
     goto/16 :goto_0
 
-    .line 1133
     :pswitch_18
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1249,7 +1220,6 @@
 
     goto/16 :goto_0
 
-    .line 1106
     :pswitch_19
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1257,7 +1227,6 @@
 
     goto/16 :goto_0
 
-    .line 1175
     :pswitch_1a
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1265,7 +1234,6 @@
 
     goto/16 :goto_0
 
-    .line 1205
     :pswitch_1b
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1273,7 +1241,6 @@
 
     goto/16 :goto_0
 
-    .line 1172
     :pswitch_1c
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1281,7 +1248,6 @@
 
     goto/16 :goto_0
 
-    .line 1199
     :pswitch_1d
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1289,7 +1255,6 @@
 
     goto/16 :goto_0
 
-    .line 1196
     :pswitch_1e
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1297,7 +1262,6 @@
 
     goto/16 :goto_0
 
-    .line 1146
     :pswitch_1f
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1305,7 +1269,6 @@
 
     goto/16 :goto_0
 
-    .line 1223
     :pswitch_20
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1313,7 +1276,6 @@
 
     goto/16 :goto_0
 
-    .line 1220
     :pswitch_21
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1321,7 +1283,6 @@
 
     goto/16 :goto_0
 
-    .line 1091
     :pswitch_22
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1329,7 +1290,6 @@
 
     goto/16 :goto_0
 
-    .line 1143
     :pswitch_23
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1337,7 +1297,6 @@
 
     goto/16 :goto_0
 
-    .line 1100
     :pswitch_24
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1345,7 +1304,6 @@
 
     goto/16 :goto_0
 
-    .line 1229
     :pswitch_25
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1353,7 +1311,6 @@
 
     goto/16 :goto_0
 
-    .line 1157
     :pswitch_26
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1361,7 +1318,6 @@
 
     goto/16 :goto_0
 
-    .line 1118
     :pswitch_27
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1369,7 +1325,6 @@
 
     goto/16 :goto_0
 
-    .line 1250
     :pswitch_28
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1377,7 +1332,6 @@
 
     goto/16 :goto_0
 
-    .line 1136
     :pswitch_29
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1385,7 +1339,6 @@
 
     goto/16 :goto_0
 
-    .line 1166
     :pswitch_2a
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1393,7 +1346,6 @@
 
     goto/16 :goto_0
 
-    .line 1226
     :pswitch_2b
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1401,7 +1353,6 @@
 
     goto/16 :goto_0
 
-    .line 1127
     :pswitch_2c
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1409,7 +1360,6 @@
 
     goto/16 :goto_0
 
-    .line 1178
     :pswitch_2d
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1417,7 +1367,6 @@
 
     goto/16 :goto_0
 
-    .line 1187
     :pswitch_2e
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1425,7 +1374,6 @@
 
     goto/16 :goto_0
 
-    .line 1097
     :pswitch_2f
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1433,7 +1381,6 @@
 
     goto/16 :goto_0
 
-    .line 1154
     :pswitch_30
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1441,7 +1388,6 @@
 
     goto/16 :goto_0
 
-    .line 1208
     :pswitch_31
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1449,7 +1395,6 @@
 
     goto/16 :goto_0
 
-    .line 1103
     :pswitch_32
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1457,7 +1402,6 @@
 
     goto/16 :goto_0
 
-    .line 1184
     :pswitch_33
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1465,7 +1409,6 @@
 
     goto/16 :goto_0
 
-    .line 1235
     :pswitch_34
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 
@@ -1473,7 +1416,6 @@
 
     goto/16 :goto_0
 
-    .line 1140
     :pswitch_35
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerConstants$1;->this$0:Lcom/android/server/am/ActivityManagerConstants;
 

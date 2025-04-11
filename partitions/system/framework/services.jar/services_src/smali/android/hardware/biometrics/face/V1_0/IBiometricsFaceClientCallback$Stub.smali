@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 636
     invoke-direct {p0}, Landroid/os/HwBinder;-><init>()V
 
     return-void
@@ -21,26 +20,22 @@
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
     .locals 2
 
-    .line 689
     new-instance p0, Landroid/hidl/base/V1_0/DebugInfo;
 
     invoke-direct {p0}, Landroid/hidl/base/V1_0/DebugInfo;-><init>()V
 
-    .line 690
     invoke-static {}, Landroid/os/HidlSupport;->getPidIfSharable()I
 
     move-result v0
@@ -49,12 +44,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 691
     iput-wide v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->ptr:J
 
     const/4 v0, 0x0
 
-    .line 692
     iput v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->arch:I
 
     return-object p0
@@ -63,7 +56,6 @@
 .method public final getHashChain()Ljava/util/ArrayList;
     .locals 2
 
-    .line 664
     new-instance p0, Ljava/util/ArrayList;
 
     const/16 v0, 0x20
@@ -164,7 +156,6 @@
 .method public final interfaceChain()Ljava/util/ArrayList;
     .locals 2
 
-    .line 644
     new-instance p0, Ljava/util/ArrayList;
 
     const-string v0, "android.hardware.biometrics.face@1.0::IBiometricsFaceClientCallback"
@@ -187,7 +178,6 @@
 .method public final interfaceDescriptor()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "android.hardware.biometrics.face@1.0::IBiometricsFaceClientCallback"
 
     return-object p0
@@ -196,7 +186,6 @@
 .method public final linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -205,7 +194,6 @@
 .method public final notifySyspropsChanged()V
     .locals 0
 
-    .line 699
     invoke-static {}, Landroid/os/HwBinder;->enableInstrumentation()V
 
     return-void
@@ -226,94 +214,73 @@
 
     goto/16 :goto_1
 
-    .line 913
     :sswitch_0
     invoke-virtual {p2, v4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 915
     invoke-virtual {p0}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback$Stub;->notifySyspropsChanged()V
 
     goto/16 :goto_1
 
-    .line 902
     :sswitch_1
     invoke-virtual {p2, v4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 904
     invoke-virtual {p0}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
 
     move-result-object v0
 
-    .line 905
     invoke-virtual {p3, v3}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 906
     invoke-virtual {v0, p3}, Landroid/hidl/base/V1_0/DebugInfo;->writeToParcel(Landroid/os/HwParcel;)V
 
-    .line 907
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 892
     :sswitch_2
     invoke-virtual {p2, v4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 894
     invoke-virtual {p0}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback$Stub;->ping()V
 
-    .line 895
     invoke-virtual {p3, v3}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 896
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 879
     :sswitch_3
     invoke-virtual {p2, v4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 881
     invoke-virtual {p0}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback$Stub;->setHALInstrumentation()V
 
     goto/16 :goto_1
 
-    .line 845
     :sswitch_4
     invoke-virtual {p2, v4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 847
     invoke-virtual {p0}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback$Stub;->getHashChain()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 848
     invoke-virtual {p3, v3}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 850
     new-instance v1, Landroid/os/HwBlob;
 
     const/16 v4, 0x10
 
     invoke-direct {v1, v4}, Landroid/os/HwBlob;-><init>(I)V
 
-    .line 852
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
     const-wide/16 v5, 0x8
 
-    .line 853
     invoke-virtual {v1, v5, v6, v4}, Landroid/os/HwBlob;->putInt32(JI)V
 
     const-wide/16 v5, 0xc
 
-    .line 854
     invoke-virtual {v1, v5, v6, v3}, Landroid/os/HwBlob;->putBool(JZ)V
 
-    .line 855
     new-instance v5, Landroid/os/HwBlob;
 
     mul-int/lit8 v6, v4, 0x20
@@ -327,7 +294,6 @@
 
     int-to-long v6, v6
 
-    .line 859
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -336,21 +302,18 @@
 
     if-eqz v8, :cond_0
 
-    .line 861
     array-length v9, v8
 
     const/16 v10, 0x20
 
     if-ne v9, v10, :cond_0
 
-    .line 865
     invoke-virtual {v5, v6, v7, v8}, Landroid/os/HwBlob;->putInt8Array(J[B)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 862
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -363,164 +326,127 @@
     :cond_1
     const-wide/16 v3, 0x0
 
-    .line 869
     invoke-virtual {v1, v3, v4, v5}, Landroid/os/HwBlob;->putBlob(JLandroid/os/HwBlob;)V
 
-    .line 871
     invoke-virtual {p3, v1}, Landroid/os/HwParcel;->writeBuffer(Landroid/os/HwBlob;)V
 
-    .line 873
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 834
     :sswitch_5
     invoke-virtual {p2, v4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 836
     invoke-virtual {p0}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback$Stub;->interfaceDescriptor()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 837
     invoke-virtual {p3, v3}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 838
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 839
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 822
     :sswitch_6
     invoke-virtual {p2, v4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 824
     invoke-virtual {p2}, Landroid/os/HwParcel;->readNativeHandle()Landroid/os/NativeHandle;
 
     move-result-object v4
 
-    .line 825
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 826
     invoke-virtual {p0, v4, v1}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback$Stub;->debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
 
-    .line 827
     invoke-virtual {p3, v3}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 828
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 811
     :sswitch_7
     invoke-virtual {p2, v4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 813
     invoke-virtual {p0}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback$Stub;->interfaceChain()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 814
     invoke-virtual {p3, v3}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 815
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStringVector(Ljava/util/ArrayList;)V
 
-    .line 816
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 802
     :pswitch_0
     invoke-virtual {p2, v3}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 804
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt64()J
 
     move-result-wide v1
 
-    .line 805
     invoke-interface {p0, v1, v2}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback;->onLockoutChanged(J)V
 
     goto/16 :goto_1
 
-    .line 791
     :pswitch_1
     invoke-virtual {p2, v3}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 793
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt64()J
 
     move-result-wide v2
 
-    .line 794
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32Vector()Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 795
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v1
 
-    .line 796
     invoke-interface {p0, v2, v3, v4, v1}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback;->onEnumerate(JLjava/util/ArrayList;I)V
 
     goto/16 :goto_1
 
-    .line 780
     :pswitch_2
     invoke-virtual {p2, v3}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 782
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt64()J
 
     move-result-wide v2
 
-    .line 783
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32Vector()Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 784
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v1
 
-    .line 785
     invoke-interface {p0, v2, v3, v4, v1}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback;->onRemoved(JLjava/util/ArrayList;I)V
 
     goto/16 :goto_1
 
-    .line 768
     :pswitch_3
     invoke-virtual {p2, v3}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 770
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt64()J
 
     move-result-wide v2
 
-    .line 771
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v4
 
-    .line 772
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v5
 
-    .line 773
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v6
@@ -535,31 +461,25 @@
 
     move v5, v6
 
-    .line 774
     invoke-interface/range {v0 .. v5}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback;->onError(JIII)V
 
     goto :goto_1
 
-    .line 756
     :pswitch_4
     invoke-virtual {p2, v3}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 758
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt64()J
 
     move-result-wide v2
 
-    .line 759
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v4
 
-    .line 760
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v5
 
-    .line 761
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v6
@@ -574,31 +494,25 @@
 
     move v5, v6
 
-    .line 762
     invoke-interface/range {v0 .. v5}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback;->onAcquired(JIII)V
 
     goto :goto_1
 
-    .line 744
     :pswitch_5
     invoke-virtual {p2, v3}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 746
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt64()J
 
     move-result-wide v2
 
-    .line 747
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v4
 
-    .line 748
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v5
 
-    .line 749
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
 
     move-result-object v6
@@ -613,31 +527,25 @@
 
     move-object v5, v6
 
-    .line 750
     invoke-interface/range {v0 .. v5}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback;->onAuthenticated(JIILjava/util/ArrayList;)V
 
     goto :goto_1
 
-    .line 732
     :pswitch_6
     invoke-virtual {p2, v3}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 734
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt64()J
 
     move-result-wide v2
 
-    .line 735
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v4
 
-    .line 736
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v5
 
-    .line 737
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result v6
@@ -652,7 +560,6 @@
 
     move v5, v6
 
-    .line 738
     invoke-interface/range {v0 .. v5}, Landroid/hardware/biometrics/face/V1_0/IBiometricsFaceClientCallback;->onEnrollResult(JIII)V
 
     :goto_1
@@ -685,7 +592,6 @@
 .method public final ping()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -694,7 +600,6 @@
 
     const-string v0, "android.hardware.biometrics.face@1.0::IBiometricsFaceClientCallback"
 
-    .line 711
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -712,14 +617,12 @@
 .method public final setHALInstrumentation()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 723
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -744,7 +647,6 @@
 .method public final unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

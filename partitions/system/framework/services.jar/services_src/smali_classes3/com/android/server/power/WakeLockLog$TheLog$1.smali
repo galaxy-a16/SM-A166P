@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/WakeLockLog$TheLog;)V
     .locals 0
 
-    .line 756
     iput-object p1, p0, Lcom/android/server/power/WakeLockLog$TheLog$1;->this$0:Lcom/android/server/power/WakeLockLog$TheLog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onIndexRemoved(I)V
     .locals 0
 
-    .line 758
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$TheLog$1;->this$0:Lcom/android/server/power/WakeLockLog$TheLog;
 
     invoke-static {p0, p1}, Lcom/android/server/power/WakeLockLog$TheLog;->-$$Nest$mremoveTagIndex(Lcom/android/server/power/WakeLockLog$TheLog;I)V

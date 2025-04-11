@@ -13,17 +13,14 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/view/MotionEvent;)V
     .locals 1
 
-    .line 37
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 34
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     const-string v0, "input"
 
-    .line 38
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -32,7 +29,6 @@
 
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->mInputManager:Landroid/hardware/input/InputManager;
 
-    .line 39
     invoke-static {p2}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p1
@@ -45,7 +41,6 @@
 .method public static createAction(Landroid/content/Context;Landroid/view/MotionEvent;)Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;
     .locals 1
 
-    .line 43
     new-instance v0, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;-><init>(Landroid/content/Context;Landroid/view/MotionEvent;)V
@@ -56,7 +51,6 @@
 .method public static getStringResId()I
     .locals 1
 
-    .line 0
     const v0, 0x1040115
 
     return v0
@@ -69,14 +63,12 @@
 
     move-object v0, p0
 
-    .line 60
     iget-object v1, v0, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v1
 
-    .line 63
     new-instance v2, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v2}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
@@ -85,7 +77,6 @@
 
     move-result-object v2
 
-    .line 64
     iget-object v3, v0, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     const/4 v4, 0x0
@@ -96,7 +87,6 @@
 
     const/4 v10, 0x0
 
-    .line 66
     aget-object v1, v2, v4
 
     iget v11, v1, Landroid/view/MotionEvent$PointerCoords;->x:F
@@ -115,45 +105,36 @@
 
     const/16 v2, 0x1002
 
-    .line 68
     invoke-virtual {v1, v2}, Landroid/view/MotionEvent;->setSource(I)V
 
     const/high16 v2, 0x800000
 
-    .line 69
     invoke-virtual {v1, v2}, Landroid/view/MotionEvent;->setFlags(I)V
 
     move/from16 v2, p5
 
-    .line 70
     invoke-virtual {v1, v2}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
-    .line 72
     iget-object v2, v0, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->mInputManager:Landroid/hardware/input/InputManager;
 
     const/4 v3, 0x2
 
     invoke-virtual {v2, v1, v3}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 73
     invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 75
     invoke-static {v1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    .line 76
     invoke-virtual {v1, v2}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 78
     iget-object v0, v0, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v0, v1, v3}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 79
     invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
 
     return-void
@@ -162,12 +143,10 @@
 .method public performCornerAction(I)V
     .locals 8
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->mInputManager:Landroid/hardware/input/InputManager;
 
     if-eqz v0, :cond_0
 
-    .line 53
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
@@ -180,7 +159,6 @@
 
     move v5, p1
 
-    .line 54
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->click(JJI)V
 
     const-wide/16 v0, 0x32
@@ -191,7 +169,6 @@
 
     move-wide v1, v3
 
-    .line 55
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->click(JJI)V
 
     :cond_0

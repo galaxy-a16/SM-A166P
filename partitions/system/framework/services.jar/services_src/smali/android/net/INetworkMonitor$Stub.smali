@@ -40,10 +40,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 73
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 74
     sget-object v0, Landroid/net/INetworkMonitor;->DESCRIPTOR:Ljava/lang/String;
 
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
@@ -60,7 +58,6 @@
 
     return-object p0
 
-    .line 85
     :cond_0
     sget-object v0, Landroid/net/INetworkMonitor;->DESCRIPTOR:Ljava/lang/String;
 
@@ -70,17 +67,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 86
     instance-of v1, v0, Landroid/net/INetworkMonitor;
 
     if-eqz v1, :cond_1
 
-    .line 87
     check-cast v0, Landroid/net/INetworkMonitor;
 
     return-object v0
 
-    .line 89
     :cond_1
     new-instance v0, Landroid/net/INetworkMonitor$Stub$Proxy;
 
@@ -94,14 +88,12 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 3
 
-    .line 97
     sget-object v0, Landroid/net/INetworkMonitor;->DESCRIPTOR:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -112,7 +104,6 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 99
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_0
@@ -120,24 +111,20 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 203
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
-    .line 105
     :sswitch_0
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
-    .line 110
     :sswitch_1
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 111
     invoke-interface {p0}, Landroid/net/INetworkMonitor;->getInterfaceVersion()I
 
     move-result p0
@@ -146,11 +133,9 @@
 
     return v1
 
-    .line 116
     :sswitch_2
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 117
     invoke-interface {p0}, Landroid/net/INetworkMonitor;->getInterfaceHash()Ljava/lang/String;
 
     move-result-object p0
@@ -159,7 +144,6 @@
 
     return v1
 
-    .line 197
     :pswitch_0
     sget-object p1, Landroid/net/networkstack/aidl/NetworkMonitorParameters;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -169,12 +153,10 @@
 
     check-cast p1, Landroid/net/networkstack/aidl/NetworkMonitorParameters;
 
-    .line 198
     invoke-interface {p0, p1}, Landroid/net/INetworkMonitor;->notifyNetworkConnectedParcel(Landroid/net/networkstack/aidl/NetworkMonitorParameters;)V
 
     goto :goto_0
 
-    .line 190
     :pswitch_1
     sget-object p1, Landroid/net/NetworkCapabilities;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -184,12 +166,10 @@
 
     check-cast p1, Landroid/net/NetworkCapabilities;
 
-    .line 191
     invoke-interface {p0, p1}, Landroid/net/INetworkMonitor;->notifyNetworkCapabilitiesChanged(Landroid/net/NetworkCapabilities;)V
 
     goto :goto_0
 
-    .line 183
     :pswitch_2
     sget-object p1, Landroid/net/LinkProperties;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -199,18 +179,15 @@
 
     check-cast p1, Landroid/net/LinkProperties;
 
-    .line 184
     invoke-interface {p0, p1}, Landroid/net/INetworkMonitor;->notifyLinkPropertiesChanged(Landroid/net/LinkProperties;)V
 
     goto :goto_0
 
-    .line 177
     :pswitch_3
     invoke-interface {p0}, Landroid/net/INetworkMonitor;->notifyNetworkDisconnected()V
 
     goto :goto_0
 
-    .line 169
     :pswitch_4
     sget-object p1, Landroid/net/LinkProperties;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -220,7 +197,6 @@
 
     check-cast p1, Landroid/net/LinkProperties;
 
-    .line 171
     sget-object p3, Landroid/net/NetworkCapabilities;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p2, p3}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
@@ -229,23 +205,19 @@
 
     check-cast p2, Landroid/net/NetworkCapabilities;
 
-    .line 172
     invoke-interface {p0, p1, p2}, Landroid/net/INetworkMonitor;->notifyNetworkConnected(Landroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     goto :goto_0
 
-    .line 162
     :pswitch_5
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 163
     invoke-interface {p0, p1}, Landroid/net/INetworkMonitor;->notifyDnsResponse(I)V
 
     goto :goto_0
 
-    .line 155
     :pswitch_6
     sget-object p1, Landroid/net/PrivateDnsConfigParcel;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -255,46 +227,38 @@
 
     check-cast p1, Landroid/net/PrivateDnsConfigParcel;
 
-    .line 156
     invoke-interface {p0, p1}, Landroid/net/INetworkMonitor;->notifyPrivateDnsChanged(Landroid/net/PrivateDnsConfigParcel;)V
 
     goto :goto_0
 
-    .line 148
     :pswitch_7
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 149
     invoke-interface {p0, p1}, Landroid/net/INetworkMonitor;->forceReevaluation(I)V
 
     goto :goto_0
 
-    .line 142
     :pswitch_8
     invoke-interface {p0}, Landroid/net/INetworkMonitor;->setAcceptPartialConnectivity()V
 
     goto :goto_0
 
-    .line 136
     :pswitch_9
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 137
     invoke-interface {p0, p1}, Landroid/net/INetworkMonitor;->notifyCaptivePortalAppFinished(I)V
 
     goto :goto_0
 
-    .line 130
     :pswitch_a
     invoke-interface {p0}, Landroid/net/INetworkMonitor;->launchCaptivePortalApp()V
 
     goto :goto_0
 
-    .line 125
     :pswitch_b
     invoke-interface {p0}, Landroid/net/INetworkMonitor;->start()V
 

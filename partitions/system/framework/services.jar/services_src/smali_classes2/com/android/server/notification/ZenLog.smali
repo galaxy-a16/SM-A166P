@@ -25,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 43
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     sput-boolean v0, Lcom/android/server/notification/ZenLog;->DEBUG:Z
@@ -39,26 +38,21 @@
     :cond_0
     const/16 v0, 0x64
 
-    .line 45
     :goto_0
     sput v0, Lcom/android/server/notification/ZenLog;->SIZE:I
 
-    .line 47
     new-array v1, v0, [J
 
     sput-object v1, Lcom/android/server/notification/ZenLog;->TIMES:[J
 
-    .line 48
     new-array v1, v0, [I
 
     sput-object v1, Lcom/android/server/notification/ZenLog;->TYPES:[I
 
-    .line 49
     new-array v0, v0, [Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
-    .line 51
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM-dd HH:mm:ss.SSS"
@@ -73,12 +67,10 @@
 .method public static append(ILjava/lang/String;)V
     .locals 5
 
-    .line 294
     sget-object v0, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
     monitor-enter v0
 
-    .line 295
     :try_start_0
     sget-object v1, Lcom/android/server/notification/ZenLog;->TIMES:[J
 
@@ -90,42 +82,35 @@
 
     aput-wide v3, v1, v2
 
-    .line 296
     sget-object v1, Lcom/android/server/notification/ZenLog;->TYPES:[I
 
     sget v2, Lcom/android/server/notification/ZenLog;->sNext:I
 
     aput p0, v1, v2
 
-    .line 297
     aput-object p1, v0, v2
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 298
     sget v1, Lcom/android/server/notification/ZenLog;->SIZE:I
 
     rem-int/2addr v2, v1
 
     sput v2, Lcom/android/server/notification/ZenLog;->sNext:I
 
-    .line 299
     sget v2, Lcom/android/server/notification/ZenLog;->sSize:I
 
     if-ge v2, v1, :cond_0
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 300
     sput v2, Lcom/android/server/notification/ZenLog;->sSize:I
 
-    .line 302
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 303
     sget-boolean v0, Lcom/android/server/notification/ZenLog;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -160,7 +145,6 @@
     :catchall_0
     move-exception p0
 
-    .line 302
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -172,14 +156,12 @@
 .method public static componentListToString(Ljava/util/List;)Ljava/lang/String;
     .locals 3
 
-    .line 281
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 283
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -191,10 +173,8 @@
 
     const-string v2, ", "
 
-    .line 285
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 287
     :cond_0
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -212,7 +192,6 @@
 
     goto :goto_0
 
-    .line 290
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -226,7 +205,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 277
     invoke-virtual {p0}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p0
@@ -243,12 +221,10 @@
 .method public static dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 8
 
-    .line 307
     sget-object v0, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
     monitor-enter v0
 
-    .line 308
     :try_start_0
     sget v1, Lcom/android/server/notification/ZenLog;->sNext:I
 
@@ -264,7 +240,6 @@
 
     const/4 v2, 0x0
 
-    .line 309
     :goto_0
     sget v3, Lcom/android/server/notification/ZenLog;->sSize:I
 
@@ -272,15 +247,12 @@
 
     add-int v3, v1, v2
 
-    .line 310
     sget v4, Lcom/android/server/notification/ZenLog;->SIZE:I
 
     rem-int/2addr v3, v4
 
-    .line 311
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 312
     sget-object v4, Lcom/android/server/notification/ZenLog;->FORMAT:Ljava/text/SimpleDateFormat;
 
     new-instance v5, Ljava/util/Date;
@@ -299,10 +271,8 @@
 
     const/16 v4, 0x20
 
-    .line 313
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 314
     sget-object v4, Lcom/android/server/notification/ZenLog;->TYPES:[I
 
     aget v4, v4, v3
@@ -315,10 +285,8 @@
 
     const-string v4, ": "
 
-    .line 315
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 316
     sget-object v4, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
     aget-object v3, v4, v3
@@ -329,7 +297,6 @@
 
     goto :goto_0
 
-    .line 318
     :cond_0
     monitor-exit v0
 
@@ -362,7 +329,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 272
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -393,7 +359,6 @@
 .method public static ringerModeToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_2
 
     const/4 v0, 0x1
@@ -436,7 +401,6 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 203
     invoke-virtual {p1}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -455,7 +419,6 @@
 
     const/16 v0, 0x15
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getKey()Ljava/lang/String;
 
     move-result-object p0
@@ -468,7 +431,6 @@
 .method public static traceCheckRepeatCaller(ZZZ)V
     .locals 2
 
-    .line 198
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -505,12 +467,10 @@
 .method public static traceConfig(Ljava/lang/String;Landroid/service/notification/ZenModeConfig;Landroid/service/notification/ZenModeConfig;)V
     .locals 2
 
-    .line 152
     new-instance v0, Landroid/service/notification/ZenModeDiff$ConfigDiff;
 
     invoke-direct {v0, p1, p2}, Landroid/service/notification/ZenModeDiff$ConfigDiff;-><init>(Landroid/service/notification/ZenModeConfig;Landroid/service/notification/ZenModeConfig;)V
 
-    .line 153
     invoke-virtual {v0}, Landroid/service/notification/ZenModeDiff$ConfigDiff;->hasDiff()Z
 
     move-result p1
@@ -519,7 +479,6 @@
 
     if-nez p1, :cond_0
 
-    .line 154
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -538,7 +497,6 @@
 
     goto :goto_1
 
-    .line 156
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -552,7 +510,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 157
     invoke-virtual {p2}, Landroid/service/notification/ZenModeConfig;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -573,7 +530,6 @@
 
     move-result-object p0
 
-    .line 156
     invoke-static {v1, p0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
     :goto_1
@@ -583,7 +539,6 @@
 .method public static traceDisableEffects(Lcom/android/server/notification/NotificationRecord;Ljava/lang/String;)V
     .locals 1
 
-    .line 163
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -614,7 +569,6 @@
 .method public static traceEffectsSuppressorChanged(Ljava/util/List;Ljava/util/List;J)V
     .locals 2
 
-    .line 168
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -629,7 +583,6 @@
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 169
     invoke-static {p0}, Lcom/android/server/notification/ZenLog;->componentListToString(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object p0
@@ -640,7 +593,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 170
     invoke-static {p1}, Lcom/android/server/notification/ZenLog;->componentListToString(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object p0
@@ -653,7 +605,6 @@
 
     const/16 p1, 0xe
 
-    .line 168
     invoke-static {p1, p0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
     return-void
@@ -662,7 +613,6 @@
 .method public static traceIntercepted(Lcom/android/server/notification/NotificationRecord;Ljava/lang/String;)V
     .locals 1
 
-    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -693,7 +643,6 @@
 .method public static traceListenerHintsChanged(III)V
     .locals 1
 
-    .line 174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -708,7 +657,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 175
     invoke-static {p1}, Lcom/android/server/notification/ZenLog;->hintsToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -727,7 +675,6 @@
 
     const/16 p1, 0xf
 
-    .line 174
     invoke-static {p1, p0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
     return-void
@@ -742,12 +689,10 @@
 
     const-string p0, "extra is null"
 
-    .line 209
     invoke-static {v0, p0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 211
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -778,7 +723,6 @@
 .method public static traceMatchesCallFilter(ZLjava/lang/String;I)V
     .locals 2
 
-    .line 182
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -815,7 +759,6 @@
 .method public static traceNotIntercepted(Lcom/android/server/notification/NotificationRecord;Ljava/lang/String;)V
     .locals 1
 
-    .line 84
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -846,7 +789,6 @@
 .method public static traceRecordCaller(ZZ)V
     .locals 2
 
-    .line 190
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -877,7 +819,6 @@
 .method public static traceSetConsolidatedZenPolicy(Landroid/app/NotificationManager$Policy;Ljava/lang/String;)V
     .locals 1
 
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -908,7 +849,6 @@
 .method public static traceSetNotificationPolicy(Ljava/lang/String;ILandroid/app/NotificationManager$Policy;)V
     .locals 2
 
-    .line 135
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -929,7 +869,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 136
     invoke-virtual {p2}, Landroid/app/NotificationManager$Policy;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -942,10 +881,8 @@
 
     const/16 p1, 0x10
 
-    .line 137
     invoke-static {p1, p0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 139
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -970,7 +907,6 @@
 .method public static traceSetRingerModeExternal(IILjava/lang/String;II)V
     .locals 1
 
-    .line 93
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -981,7 +917,6 @@
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 94
     invoke-static {p0}, Lcom/android/server/notification/ZenLog;->ringerModeToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -992,7 +927,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
     invoke-static {p1}, Lcom/android/server/notification/ZenLog;->ringerModeToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1003,7 +937,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 96
     invoke-static {p3}, Lcom/android/server/notification/ZenLog;->ringerModeToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1012,7 +945,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 97
     invoke-static {p4}, Lcom/android/server/notification/ZenLog;->ringerModeToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1025,7 +957,6 @@
 
     const/4 p1, 0x3
 
-    .line 93
     invoke-static {p1, p0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
     return-void
@@ -1034,7 +965,6 @@
 .method public static traceSetRingerModeInternal(IILjava/lang/String;II)V
     .locals 1
 
-    .line 102
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1045,7 +975,6 @@
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 103
     invoke-static {p0}, Lcom/android/server/notification/ZenLog;->ringerModeToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1056,7 +985,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 104
     invoke-static {p1}, Lcom/android/server/notification/ZenLog;->ringerModeToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1067,7 +995,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
     invoke-static {p3}, Lcom/android/server/notification/ZenLog;->ringerModeToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1076,7 +1003,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     invoke-static {p4}, Lcom/android/server/notification/ZenLog;->ringerModeToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1089,7 +1015,6 @@
 
     const/4 p1, 0x4
 
-    .line 102
     invoke-static {p1, p0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
     return-void
@@ -1098,7 +1023,6 @@
 .method public static traceSetZenMode(ILjava/lang/String;)V
     .locals 1
 
-    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1129,7 +1053,6 @@
 .method public static traceSubscribe(Landroid/net/Uri;Landroid/service/notification/IConditionProvider;Landroid/os/RemoteException;)V
     .locals 1
 
-    .line 143
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1160,7 +1083,6 @@
 .method public static traceUnsubscribe(Landroid/net/Uri;Landroid/service/notification/IConditionProvider;Landroid/os/RemoteException;)V
     .locals 1
 
-    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1191,7 +1113,6 @@
 .method public static typeToString(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const-string/jumbo p0, "unknown"
@@ -1338,7 +1259,6 @@
 .method public static zenModeToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_3
 
     const/4 v0, 0x1

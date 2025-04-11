@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;)V
     .locals 0
 
-    .line 896
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnConnectivityDiagnosticsCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-direct {p0}, Landroid/net/ConnectivityDiagnosticsManager$ConnectivityDiagnosticsCallback;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;Lcom/android/server/vcn/VcnGatewayConnection$VcnConnectivityDiagnosticsCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/vcn/VcnGatewayConnection$VcnConnectivityDiagnosticsCallback;-><init>(Lcom/android/server/vcn/VcnGatewayConnection;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onDataStallSuspected(Landroid/net/ConnectivityDiagnosticsManager$DataStallReport;)V
     .locals 3
 
-    .line 899
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnConnectivityDiagnosticsCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-static {v0}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$fgetmVcnContext(Lcom/android/server/vcn/VcnGatewayConnection;)Lcom/android/server/vcn/VcnContext;
@@ -42,12 +39,10 @@
 
     invoke-virtual {v0}, Lcom/android/server/vcn/VcnContext;->ensureRunningOnLooperThread()V
 
-    .line 901
     invoke-virtual {p1}, Landroid/net/ConnectivityDiagnosticsManager$DataStallReport;->getNetwork()Landroid/net/Network;
 
     move-result-object p1
 
-    .line 902
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnConnectivityDiagnosticsCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -66,7 +61,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogInfo(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 903
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnConnectivityDiagnosticsCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v0, Lcom/android/server/vcn/VcnGatewayConnection$EventDataStallSuspectedInfo;

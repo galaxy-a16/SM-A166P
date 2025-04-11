@@ -11,17 +11,14 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService;)V
     .locals 4
 
-    .line 521
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchObserver;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
-    .line 522
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 524
     invoke-static {p1}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$fgetmContentResolver(Lcom/android/server/sepunion/SemGoodCatchService;)Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -40,7 +37,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 525
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -69,7 +65,6 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchObserver;->update()V
 
     return-void
@@ -80,10 +75,8 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 531
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 532
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +101,6 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 533
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchObserver;->update()V
 
     return-void
@@ -117,7 +109,6 @@
 .method public final update()V
     .locals 6
 
-    .line 537
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchObserver;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$fgetmGoodCatchHandler(Lcom/android/server/sepunion/SemGoodCatchService;)Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;

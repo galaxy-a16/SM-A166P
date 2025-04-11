@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/mars/filter/filter/AppCastFilter;Landroid/os/Handler;)V
     .locals 0
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter$2;->this$0:Lcom/android/server/am/mars/filter/filter/AppCastFilter;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter$2;->this$0:Lcom/android/server/am/mars/filter/filter/AppCastFilter;
 
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->-$$Nest$sfgetURI_APP_CAST_PACKAGE()Landroid/net/Uri;

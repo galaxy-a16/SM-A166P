@@ -22,7 +22,6 @@
 .method public synthetic constructor <init>(JJLandroid/util/ArraySet;Landroid/util/ArraySet;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/android/server/usage/UserUsageStatsService$$ExternalSyntheticLambda2;->f$0:J
@@ -43,7 +42,6 @@
 .method public final combine(Lcom/android/server/usage/IntervalStats;ZLjava/util/List;)Z
     .locals 10
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/usage/UserUsageStatsService$$ExternalSyntheticLambda2;->f$0:J
 
     iget-wide v2, p0, Lcom/android/server/usage/UserUsageStatsService$$ExternalSyntheticLambda2;->f$1:J

@@ -13,14 +13,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverState;-><init>()V
 
     return-void
@@ -31,15 +29,12 @@
 
     const/4 v0, 0x1
 
-    .line 47
     sput-boolean v0, Lcom/android/server/wm/WmCoverState;->sIsEnabled:Z
 
-    .line 49
     sget-object v0, Lcom/android/server/wm/WmCoverState;->sWmCoverState:Lcom/android/server/wm/WmCoverState;
 
     if-nez v0, :cond_0
 
-    .line 50
     new-instance v0, Lcom/android/server/wm/WmCoverState;
 
     invoke-direct {v0}, Lcom/android/server/wm/WmCoverState;-><init>()V
@@ -53,7 +48,6 @@
 .method public static getInstance()Lcom/android/server/wm/WmCoverState;
     .locals 1
 
-    .line 40
     sget-boolean v0, Lcom/android/server/wm/WmCoverState;->sIsEnabled:Z
 
     if-nez v0, :cond_0
@@ -62,7 +56,6 @@
 
     return-object v0
 
-    .line 43
     :cond_0
     sget-object v0, Lcom/android/server/wm/WmCoverState;->sWmCoverState:Lcom/android/server/wm/WmCoverState;
 
@@ -72,7 +65,6 @@
 .method public static isEnabled()Z
     .locals 1
 
-    .line 55
     sget-boolean v0, Lcom/android/server/wm/WmCoverState;->sIsEnabled:Z
 
     return v0
@@ -93,7 +85,6 @@
 
     goto :goto_0
 
-    .line 126
     :cond_0
     iget v1, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
@@ -112,7 +103,6 @@
     :cond_1
     if-eq p1, v0, :cond_3
 
-    .line 129
     invoke-virtual {p0}, Lcom/android/server/wm/WmCoverState;->isCoverClosed()Z
 
     move-result p0
@@ -137,7 +127,6 @@
 .method public isClearTypeCover()Z
     .locals 0
 
-    .line 97
     iget p0, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
     packed-switch p0, :pswitch_data_0
@@ -164,7 +153,6 @@
 .method public isClearTypeCoverClosed()Z
     .locals 1
 
-    .line 107
     invoke-virtual {p0}, Lcom/android/server/wm/WmCoverState;->isCoverClosed()Z
 
     move-result v0
@@ -191,7 +179,6 @@
 .method public isCoverAppSupported()Z
     .locals 0
 
-    .line 63
     iget p0, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
     packed-switch p0, :pswitch_data_0
@@ -218,7 +205,6 @@
 .method public isCoverClosed()Z
     .locals 0
 
-    .line 59
     iget-boolean p0, p0, Lcom/samsung/android/cover/CoverState;->switchState:Z
 
     xor-int/lit8 p0, p0, 0x1
@@ -229,14 +215,12 @@
 .method public isFlipTypeCoverClosed()Z
     .locals 1
 
-    .line 85
     invoke-virtual {p0}, Lcom/android/server/wm/WmCoverState;->isCoverClosed()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 86
     iget p0, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
     if-eqz p0, :cond_0
@@ -266,14 +250,12 @@
 .method public isViewCoverClosed()Z
     .locals 1
 
-    .line 73
     invoke-virtual {p0}, Lcom/android/server/wm/WmCoverState;->isCoverClosed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 74
     iget p0, p0, Lcom/samsung/android/cover/CoverState;->type:I
 
     packed-switch p0, :pswitch_data_0
@@ -302,7 +284,6 @@
 .method public shouldHideStatusBarForCover()Z
     .locals 0
 
-    .line 111
     invoke-virtual {p0}, Lcom/android/server/wm/WmCoverState;->isClearTypeCover()Z
 
     move-result p0
@@ -313,7 +294,6 @@
 .method public updateCoverState(Lcom/samsung/android/cover/CoverState;)Z
     .locals 2
 
-    .line 115
     iget v0, p1, Lcom/samsung/android/cover/CoverState;->type:I
 
     const/4 v1, 0x2
@@ -333,7 +313,6 @@
 
     return p0
 
-    .line 116
     :cond_1
     :goto_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/cover/CoverState;->copyFrom(Lcom/samsung/android/cover/CoverState;)V
@@ -346,7 +325,6 @@
 .method public windowAttrsHasShowWallpaperOrShowWhenLocked(Landroid/view/WindowManager$LayoutParams;)Z
     .locals 0
 
-    .line 140
     iget p0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/high16 p1, 0x100000

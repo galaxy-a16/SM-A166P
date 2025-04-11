@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/om/PackageManagerHelper;)V
     .locals 0
 
-    .line 687
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 688
     iput-object p1, p0, Lcom/android/server/om/OverlayManagerServiceExt$PMSHelperImpl;->packageManagerHelper:Lcom/android/server/om/PackageManagerHelper;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getPackageForUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/AndroidPackage;
     .locals 0
 
-    .line 692
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt$PMSHelperImpl;->packageManagerHelper:Lcom/android/server/om/PackageManagerHelper;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/om/PackageManagerHelper;->getPackageStateForUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
@@ -38,7 +35,6 @@
 
     goto :goto_0
 
-    .line 693
     :cond_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageState;->getAndroidPackage()Lcom/android/server/pm/pkg/AndroidPackage;
 

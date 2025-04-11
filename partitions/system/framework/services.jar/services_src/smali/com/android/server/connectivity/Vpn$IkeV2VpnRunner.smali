@@ -56,7 +56,6 @@
 .method public static synthetic $r8$lambda$0qOTYjZ0z9pcwAyTwQYTjVj7WPc(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->lambda$new$0(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
 
     return-void
@@ -65,7 +64,6 @@
 .method public static synthetic $r8$lambda$2Oz94OWKeqnt0TxukEK9-zX9rsk(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->lambda$scheduleStartIkeSession$1()V
 
     return-void
@@ -74,7 +72,6 @@
 .method public static synthetic $r8$lambda$3vlUvBWeTd8suktrAeNiI8oFHTk(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->lambda$onValidationStatus$2()V
 
     return-void
@@ -83,7 +80,6 @@
 .method public static synthetic $r8$lambda$57o-U4vlVaILnU7qnM37FOBGWkM(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->lambda$exitVpnRunner$5()V
 
     return-void
@@ -92,7 +88,6 @@
 .method public static synthetic $r8$lambda$6xOGckOazgf9p_DZQqKb9nI5frk(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;ILandroid/net/Network;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->lambda$onDefaultNetworkLost$4(ILandroid/net/Network;)V
 
     return-void
@@ -101,7 +96,6 @@
 .method public static synthetic $r8$lambda$ancR8VCKlODN2cDQcBlccnwSw_4(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->lambda$onValidationStatus$3()V
 
     return-void
@@ -110,7 +104,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActiveNetwork(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)Landroid/net/Network;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mActiveNetwork:Landroid/net/Network;
 
     return-object p0
@@ -119,7 +112,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCurrentToken(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mCurrentToken:I
 
     return p0
@@ -128,7 +120,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMobikeEnabled(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mMobikeEnabled:Z
 
     return p0
@@ -137,7 +128,6 @@
 .method public static bridge synthetic -$$Nest$fgetmProfile(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)Landroid/net/Ikev2VpnProfile;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
     return-object p0
@@ -146,7 +136,6 @@
 .method public static bridge synthetic -$$Nest$fgetmScheduledHandleDataStallFuture(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)Ljava/util/concurrent/ScheduledFuture;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleDataStallFuture:Ljava/util/concurrent/ScheduledFuture;
 
     return-object p0
@@ -155,7 +144,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSession(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mSession:Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
 
     return-object p0
@@ -164,7 +152,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSessionKey(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mSessionKey:Ljava/lang/String;
 
     return-object p0
@@ -173,7 +160,6 @@
 .method public static bridge synthetic -$$Nest$mgetOrGuessKeepaliveDelaySeconds(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->getOrGuessKeepaliveDelaySeconds()I
 
     move-result p0
@@ -184,49 +170,38 @@
 .method public constructor <init>(Lcom/android/server/connectivity/Vpn;Landroid/net/Ikev2VpnProfile;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
     .locals 5
 
-    .line 3714
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const-string v0, "IkeV2VpnRunner"
 
-    .line 3715
     invoke-direct {p0, p1, v0}, Lcom/android/server/connectivity/Vpn$VpnRunner;-><init>(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
-    .line 3654
     iput-boolean v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIsRunning:Z
 
     const/4 v2, -0x1
 
-    .line 3663
     iput v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mCurrentToken:I
 
     const/4 v2, 0x0
 
-    .line 3676
     iput-boolean v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mMobikeEnabled:Z
 
-    .line 3684
     iput v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mDataStallRetryCount:I
 
-    .line 3692
     iput v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mRetryCount:I
 
-    .line 3694
     new-instance v3, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$1;
 
     invoke-direct {v3, p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$1;-><init>(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)V
 
     iput-object v3, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mCarrierConfigChangeListener:Landroid/telephony/CarrierConfigManager$CarrierConfigChangeListener;
 
-    .line 3716
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
-    .line 3717
     iput-object p3, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    .line 3718
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmContext(Lcom/android/server/connectivity/Vpn;)Landroid/content/Context;
 
     move-result-object p2
@@ -241,14 +216,12 @@
 
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIpSecManager:Landroid/net/IpSecManager;
 
-    .line 3719
     new-instance p2, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;
 
     invoke-direct {p2, v0, p0, p3}, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;-><init>(Ljava/lang/String;Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;Ljava/util/concurrent/Executor;)V
 
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mNetworkCallback:Landroid/net/ConnectivityManager$NetworkCallback;
 
-    .line 3720
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object p2
@@ -259,7 +232,6 @@
 
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mSessionKey:Ljava/lang/String;
 
-    .line 3722
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,20 +248,16 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3725
     invoke-virtual {p3, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setRemoveOnCancelPolicy(Z)V
 
-    .line 3728
     invoke-virtual {p3, v2}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setExecuteExistingDelayedTasksAfterShutdownPolicy(Z)V
 
-    .line 3731
     new-instance v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$$ExternalSyntheticLambda0;-><init>()V
 
     invoke-virtual {p3, v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
 
-    .line 3735
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmUserId(Lcom/android/server/connectivity/Vpn;)I
 
     move-result v0
@@ -300,15 +268,12 @@
 
     iget-object v1, v1, Lcom/android/internal/net/VpnConfig;->disallowedApplications:Ljava/util/List;
 
-    .line 3736
     invoke-virtual {p1, v0, v2, v1}, Lcom/android/server/connectivity/Vpn;->createUserAndRestrictedProfilesRanges(ILjava/util/List;Ljava/util/List;)Ljava/util/Set;
 
     move-result-object v0
 
-    .line 3735
     invoke-static {p1, p2, v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$msetVpnNetworkPreference(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 3739
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmCarrierConfigManager(Lcom/android/server/connectivity/Vpn;)Landroid/telephony/CarrierConfigManager;
 
     move-result-object p1
@@ -323,7 +288,6 @@
 .method private synthetic lambda$exitVpnRunner$5()V
     .locals 0
 
-    .line 4871
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->disconnectVpnRunner()V
 
     return-void
@@ -332,7 +296,6 @@
 .method public static synthetic lambda$new$0(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
     .locals 1
 
-    .line 3733
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,26 +324,22 @@
 .method private synthetic lambda$onDefaultNetworkLost$4(ILandroid/net/Network;)V
     .locals 2
 
-    .line 4617
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->isActiveToken(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 4618
     new-instance p1, Landroid/net/ipsec/ike/exceptions/IkeNetworkLostException;
 
     invoke-direct {p1, p2}, Landroid/net/ipsec/ike/exceptions/IkeNetworkLostException;-><init>(Landroid/net/Network;)V
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->handleSessionLost(Ljava/lang/Exception;Landroid/net/Network;)V
 
-    .line 4621
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter p2
 
-    .line 4623
     :try_start_0
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -392,7 +351,6 @@
 
     return-void
 
-    .line 4625
     :cond_0
     sget-object v0, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
@@ -400,7 +358,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/connectivity/Vpn;->updateState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;)V
 
-    .line 4627
     monitor-exit p2
 
     goto :goto_0
@@ -417,7 +374,6 @@
     :cond_1
     const-string p2, "IkeV2VpnRunner"
 
-    .line 4629
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -437,7 +393,6 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 4638
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleNetworkLostFuture:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
@@ -446,17 +401,14 @@
 .method private synthetic lambda$onValidationStatus$2()V
     .locals 3
 
-    .line 4535
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/android/server/connectivity/Vpn;->mDataStallSuspected:Z
 
-    .line 4536
     iput v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mDataStallRetryCount:I
 
-    .line 4537
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleDataStallFuture:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_0
@@ -465,17 +417,14 @@
 
     const-string v2, "Recovered from stall. Cancel pending reset action."
 
-    .line 4538
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4539
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleDataStallFuture:Ljava/util/concurrent/ScheduledFuture;
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
     const/4 v0, 0x0
 
-    .line 4540
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleDataStallFuture:Ljava/util/concurrent/ScheduledFuture;
 
     :cond_0
@@ -485,7 +434,6 @@
 .method private synthetic lambda$onValidationStatus$3()V
     .locals 2
 
-    .line 4548
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-boolean v0, v0, Lcom/android/server/connectivity/Vpn;->mDataStallSuspected:Z
@@ -496,10 +444,8 @@
 
     const-string v1, "Reset session to recover stalled network"
 
-    .line 4549
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4551
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mActiveNetwork:Landroid/net/Network;
 
     invoke-virtual {p0, v0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->startIkeSession(Landroid/net/Network;)V
@@ -507,7 +453,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4556
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleDataStallFuture:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
@@ -516,14 +461,12 @@
 .method private synthetic lambda$scheduleStartIkeSession$1()V
     .locals 1
 
-    .line 4451
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mActiveNetwork:Landroid/net/Network;
 
     invoke-virtual {p0, v0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->startOrMigrateIkeSession(Landroid/net/Network;)V
 
     const/4 v0, 0x0
 
-    .line 4455
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleRetryIkeSessionFuture:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
@@ -569,7 +512,6 @@
 
     move v1, v0
 
-    .line 4315
     :cond_3
     :goto_0
     new-instance p0, Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;
@@ -582,14 +524,12 @@
 .method public final calculateVpnMtu()I
     .locals 4
 
-    .line 4140
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIkeConnectionInfo:Landroid/net/ipsec/ike/IkeSessionConnectionInfo;
 
     invoke-virtual {v0}, Landroid/net/ipsec/ike/IkeSessionConnectionInfo;->getNetwork()Landroid/net/Network;
 
     move-result-object v0
 
-    .line 4141
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmConnectivityManager(Lcom/android/server/connectivity/Vpn;)Landroid/net/ConnectivityManager;
@@ -606,7 +546,6 @@
 
     goto :goto_1
 
-    .line 4148
     :cond_0
     invoke-virtual {v1}, Landroid/net/LinkProperties;->getMtu()I
 
@@ -614,7 +553,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4153
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -626,12 +564,10 @@
 
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
-    .line 4154
     invoke-virtual {v2}, Landroid/net/Ikev2VpnProfile;->getMaxMtu()I
 
     move-result v2
 
-    .line 4153
     invoke-virtual {v0, v1, v2}, Lcom/android/server/connectivity/Vpn$Dependencies;->getJavaNetworkInterfaceMtu(Ljava/lang/String;I)I
 
     move-result v0
@@ -643,7 +579,6 @@
     :catch_0
     move-exception v0
 
-    .line 4156
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -662,7 +597,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4157
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
     invoke-virtual {p0}, Landroid/net/Ikev2VpnProfile;->getMaxMtu()I
@@ -671,14 +605,12 @@
 
     return p0
 
-    .line 4161
     :cond_1
     :goto_0
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v1, v1, Lcom/android/server/connectivity/Vpn;->mDeps:Lcom/android/server/connectivity/Vpn$Dependencies;
 
-    .line 4162
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->getChildSessionParams()Landroid/net/ipsec/ike/ChildSessionParams;
 
     move-result-object v2
@@ -689,28 +621,24 @@
 
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
-    .line 4163
     invoke-virtual {v3}, Landroid/net/Ikev2VpnProfile;->getMaxMtu()I
 
     move-result v3
 
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIkeConnectionInfo:Landroid/net/ipsec/ike/IkeSessionConnectionInfo;
 
-    .line 4165
     invoke-virtual {p0}, Landroid/net/ipsec/ike/IkeSessionConnectionInfo;->getLocalAddress()Ljava/net/InetAddress;
 
     move-result-object p0
 
     instance-of p0, p0, Ljava/net/Inet4Address;
 
-    .line 4161
     invoke-virtual {v1, v2, v3, v0, p0}, Lcom/android/server/connectivity/Vpn$Dependencies;->calculateVpnMtu(Ljava/util/List;IIZ)I
 
     move-result p0
 
     return p0
 
-    .line 4145
     :cond_2
     :goto_1
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
@@ -725,7 +653,6 @@
 .method public final cancelHandleNetworkLostTimeout()V
     .locals 2
 
-    .line 4646
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleNetworkLostFuture:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_0
@@ -734,10 +661,8 @@
 
     const-string v1, "Cancel the task for handling network lost timeout"
 
-    .line 4651
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4652
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleNetworkLostFuture:Ljava/util/concurrent/ScheduledFuture;
 
     const/4 v1, 0x0
@@ -746,7 +671,6 @@
 
     const/4 v0, 0x0
 
-    .line 4653
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleNetworkLostFuture:Ljava/util/concurrent/ScheduledFuture;
 
     :cond_0
@@ -756,7 +680,6 @@
 .method public final cancelRetryNewIkeSessionFuture()V
     .locals 2
 
-    .line 4658
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleRetryIkeSessionFuture:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_0
@@ -765,10 +688,8 @@
 
     const-string v1, "Cancel the task for handling new ike session timeout"
 
-    .line 4663
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4664
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleRetryIkeSessionFuture:Ljava/util/concurrent/ScheduledFuture;
 
     const/4 v1, 0x0
@@ -777,7 +698,6 @@
 
     const/4 v0, 0x0
 
-    .line 4665
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleRetryIkeSessionFuture:Ljava/util/concurrent/ScheduledFuture;
 
     :cond_0
@@ -787,7 +707,6 @@
 .method public final disconnectVpnRunner()V
     .locals 3
 
-    .line 4849
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -814,24 +733,18 @@
 
     const/4 v0, 0x0
 
-    .line 4850
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mActiveNetwork:Landroid/net/Network;
 
-    .line 4851
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 4852
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingLinkProperties:Landroid/net/LinkProperties;
 
     const/4 v0, 0x0
 
-    .line 4853
     iput-boolean v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIsRunning:Z
 
-    .line 4855
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->resetIkeState()V
 
-    .line 4857
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmCarrierConfigManager(Lcom/android/server/connectivity/Vpn;)Landroid/telephony/CarrierConfigManager;
@@ -842,7 +755,6 @@
 
     invoke-virtual {v0, v1}, Landroid/telephony/CarrierConfigManager;->unregisterCarrierConfigChangeListener(Landroid/telephony/CarrierConfigManager$CarrierConfigChangeListener;)V
 
-    .line 4859
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmConnectivityManager(Lcom/android/server/connectivity/Vpn;)Landroid/net/ConnectivityManager;
@@ -853,7 +765,6 @@
 
     invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
 
-    .line 4860
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmConnectivityDiagnosticsManager(Lcom/android/server/connectivity/Vpn;)Landroid/net/ConnectivityDiagnosticsManager;
@@ -864,14 +775,12 @@
 
     invoke-virtual {v0, v1}, Landroid/net/ConnectivityDiagnosticsManager;->unregisterConnectivityDiagnosticsCallback(Landroid/net/ConnectivityDiagnosticsManager$ConnectivityDiagnosticsCallback;)V
 
-    .line 4862
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mSessionKey:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mclearVpnNetworkPreference(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)V
 
-    .line 4864
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
@@ -882,7 +791,6 @@
 .method public exitVpnRunner()V
     .locals 2
 
-    .line 4870
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
@@ -901,7 +809,6 @@
 .method public final getCarrierConfigForUnderlyingNetwork()Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;
     .locals 6
 
-    .line 4247
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$smgetCellSubIdForNetworkCapabilities(Landroid/net/NetworkCapabilities;)I
@@ -918,18 +825,15 @@
 
     const-string v0, "Underlying network is not a cellular network"
 
-    .line 4249
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 4253
     :cond_0
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v3
 
-    .line 4254
     :try_start_0
     iget-object v4, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -947,10 +851,8 @@
 
     const-string v2, "Get cached config"
 
-    .line 4255
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4256
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmCachedCarrierConfigInfoPerSubId(Lcom/android/server/connectivity/Vpn;)Landroid/util/SparseArray;
@@ -967,13 +869,11 @@
 
     return-object p0
 
-    .line 4258
     :cond_1
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 4260
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v3}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmTelephonyManager(Lcom/android/server/connectivity/Vpn;)Landroid/telephony/TelephonyManager;
@@ -984,7 +884,6 @@
 
     move-result-object v3
 
-    .line 4261
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getSimApplicationState()I
 
     move-result v4
@@ -995,7 +894,6 @@
 
     const-string p0, "IkeV2VpnRunner"
 
-    .line 4262
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1014,7 +912,6 @@
 
     return-object v1
 
-    .line 4266
     :cond_2
     iget-object v4, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1022,12 +919,10 @@
 
     move-result-object v4
 
-    .line 4267
     invoke-virtual {v4, v0}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
 
     move-result-object v4
 
-    .line 4268
     invoke-static {v4}, Landroid/telephony/CarrierConfigManager;->isConfigForIdentifiedCarrier(Landroid/os/PersistableBundle;)Z
 
     move-result v5
@@ -1039,34 +934,28 @@
     :cond_3
     const-string/jumbo v1, "min_udp_port_4500_nat_timeout_sec_int"
 
-    .line 4273
     invoke-virtual {v4, v1}, Landroid/os/PersistableBundle;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
     const-string/jumbo v5, "preferred_ike_protocol_int"
 
-    .line 4274
     invoke-virtual {v4, v5, v2}, Landroid/os/PersistableBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 4276
     invoke-virtual {v3, v0}, Landroid/telephony/TelephonyManager;->getSimOperator(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 4278
     invoke-virtual {p0, v3, v1, v2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->buildCarrierConfigInfo(Ljava/lang/String;II)Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;
 
     move-result-object v1
 
-    .line 4279
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v2
 
-    .line 4280
     :try_start_1
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1076,7 +965,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 4281
     monitor-exit v2
 
     return-object v1
@@ -1093,7 +981,6 @@
     :catchall_1
     move-exception p0
 
-    .line 4258
     :try_start_2
     monitor-exit v3
     :try_end_2
@@ -1105,24 +992,20 @@
 .method public final getChildSessionParams()Landroid/net/ipsec/ike/ChildSessionParams;
     .locals 1
 
-    .line 4130
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
-    .line 4131
     invoke-virtual {v0}, Landroid/net/Ikev2VpnProfile;->getIkeTunnelConnectionParams()Landroid/net/ipsec/ike/IkeTunnelConnectionParams;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 4133
     invoke-virtual {v0}, Landroid/net/ipsec/ike/IkeTunnelConnectionParams;->getTunnelModeChildSessionParams()Landroid/net/ipsec/ike/TunnelModeChildSessionParams;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4135
     :cond_0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
@@ -1140,17 +1023,14 @@
 .method public final getIkeSessionParams(Landroid/net/Network;)Landroid/net/ipsec/ike/IkeSessionParams;
     .locals 2
 
-    .line 4108
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
-    .line 4109
     invoke-virtual {v0}, Landroid/net/Ikev2VpnProfile;->getIkeTunnelConnectionParams()Landroid/net/ipsec/ike/IkeTunnelConnectionParams;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 4112
     new-instance v1, Landroid/net/ipsec/ike/IkeSessionParams$Builder;
 
     invoke-virtual {v0}, Landroid/net/ipsec/ike/IkeTunnelConnectionParams;->getIkeSessionParams()Landroid/net/ipsec/ike/IkeSessionParams;
@@ -1159,14 +1039,12 @@
 
     invoke-direct {v1, v0}, Landroid/net/ipsec/ike/IkeSessionParams$Builder;-><init>(Landroid/net/ipsec/ike/IkeSessionParams;)V
 
-    .line 4113
     invoke-virtual {v1, p1}, Landroid/net/ipsec/ike/IkeSessionParams$Builder;->setNetwork(Landroid/net/Network;)Landroid/net/ipsec/ike/IkeSessionParams$Builder;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 4115
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1180,7 +1058,6 @@
 
     move-result-object p1
 
-    .line 4118
     :goto_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
@@ -1190,14 +1067,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 4119
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->guessNattKeepaliveTimerForNetwork()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/net/ipsec/ike/IkeSessionParams$Builder;->setNattKeepAliveDelaySeconds(I)Landroid/net/ipsec/ike/IkeSessionParams$Builder;
 
-    .line 4121
     :cond_1
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
@@ -1207,21 +1082,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 4122
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->guessEspIpVersionForNetwork()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/net/ipsec/ike/IkeSessionParams$Builder;->setIpVersion(I)Landroid/net/ipsec/ike/IkeSessionParams$Builder;
 
-    .line 4123
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->guessEspEncapTypeForNetwork()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Landroid/net/ipsec/ike/IkeSessionParams$Builder;->setEncapType(I)Landroid/net/ipsec/ike/IkeSessionParams$Builder;
 
-    .line 4125
     :cond_2
     invoke-virtual {p1}, Landroid/net/ipsec/ike/IkeSessionParams$Builder;->build()Landroid/net/ipsec/ike/IkeSessionParams;
 
@@ -1233,7 +1105,6 @@
 .method public final getOrGuessKeepaliveDelaySeconds()I
     .locals 1
 
-    .line 4319
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
     invoke-virtual {v0}, Landroid/net/Ikev2VpnProfile;->isAutomaticNattKeepaliveTimerEnabled()Z
@@ -1242,14 +1113,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 4320
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->guessNattKeepaliveTimerForNetwork()I
 
     move-result p0
 
     return p0
 
-    .line 4321
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
@@ -1259,14 +1128,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 4322
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
     invoke-virtual {p0}, Landroid/net/Ikev2VpnProfile;->getIkeTunnelConnectionParams()Landroid/net/ipsec/ike/IkeTunnelConnectionParams;
 
     move-result-object p0
 
-    .line 4323
     invoke-virtual {p0}, Landroid/net/ipsec/ike/IkeTunnelConnectionParams;->getIkeSessionParams()Landroid/net/ipsec/ike/IkeSessionParams;
 
     move-result-object p0
@@ -1286,7 +1153,6 @@
 .method public final guessEspEncapTypeForNetwork()I
     .locals 4
 
-    .line 4205
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {v0}, Landroid/net/NetworkCapabilities;->getTransportInfo()Landroid/net/TransportInfo;
@@ -1303,12 +1169,10 @@
 
     const-string p0, "Running over VCN, encap type is auto"
 
-    .line 4206
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 4209
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->getCarrierConfigForUnderlyingNetwork()Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;
 
@@ -1316,13 +1180,11 @@
 
     if-eqz p0, :cond_1
 
-    .line 4211
     iget v1, p0, Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;->encapType:I
 
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 4213
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1358,7 +1220,6 @@
 .method public final guessEspIpVersionForNetwork()I
     .locals 4
 
-    .line 4190
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {v0}, Landroid/net/NetworkCapabilities;->getTransportInfo()Landroid/net/TransportInfo;
@@ -1375,12 +1236,10 @@
 
     const-string p0, "Running over VCN, esp IP version is auto"
 
-    .line 4191
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 4194
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->getCarrierConfigForUnderlyingNetwork()Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;
 
@@ -1388,13 +1247,11 @@
 
     if-eqz p0, :cond_1
 
-    .line 4196
     iget v1, p0, Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;->ipVersion:I
 
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 4198
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1430,29 +1287,24 @@
 .method public final guessNattKeepaliveTimerForNetwork()I
     .locals 4
 
-    .line 4221
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {v0}, Landroid/net/NetworkCapabilities;->getTransportInfo()Landroid/net/TransportInfo;
 
     move-result-object v0
 
-    .line 4222
     instance-of v1, v0, Landroid/net/vcn/VcnTransportInfo;
 
     const-string v2, "IkeV2VpnRunner"
 
     if-eqz v1, :cond_0
 
-    .line 4223
     check-cast v0, Landroid/net/vcn/VcnTransportInfo;
 
-    .line 4224
     invoke-virtual {v0}, Landroid/net/vcn/VcnTransportInfo;->getMinUdpPort4500NatTimeoutSeconds()I
 
     move-result v0
 
-    .line 4225
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1479,7 +1331,6 @@
 
     return v0
 
-    .line 4232
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->getCarrierConfigForUnderlyingNetwork()Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;
 
@@ -1487,7 +1338,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 4234
     iget v0, p0, Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;->keepaliveDelaySec:I
 
     goto :goto_0
@@ -1498,7 +1348,6 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 4236
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1538,20 +1387,16 @@
 
     move-object/from16 v1, p1
 
-    .line 4712
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->cancelHandleNetworkLostTimeout()V
 
-    .line 4717
     instance-of v2, v1, Ljava/lang/IllegalArgumentException;
 
     if-eqz v2, :cond_0
 
-    .line 4719
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->markFailedAndDisconnect(Ljava/lang/Exception;)V
 
     return-void
 
-    .line 4723
     :cond_0
     instance-of v2, v1, Landroid/net/ipsec/ike/exceptions/IkeProtocolException;
 
@@ -1563,19 +1408,16 @@
 
     if-eqz v2, :cond_2
 
-    .line 4724
     move-object v2, v1
 
     check-cast v2, Landroid/net/ipsec/ike/exceptions/IkeProtocolException;
 
     const-string v6, "android.net.category.EVENT_IKE_ERROR"
 
-    .line 4726
     invoke-virtual {v2}, Landroid/net/ipsec/ike/exceptions/IkeProtocolException;->getErrorType()I
 
     move-result v7
 
-    .line 4728
     invoke-virtual {v2}, Landroid/net/ipsec/ike/exceptions/IkeProtocolException;->getErrorType()I
 
     move-result v2
@@ -1616,7 +1458,6 @@
 
     goto :goto_2
 
-    .line 4742
     :cond_2
     instance-of v2, v1, Landroid/net/ipsec/ike/exceptions/IkeNetworkLostException;
 
@@ -1630,7 +1471,6 @@
 
     goto :goto_2
 
-    .line 4746
     :cond_3
     instance-of v2, v1, Landroid/net/ipsec/ike/exceptions/IkeNonProtocolException;
 
@@ -1640,7 +1480,6 @@
 
     const-string v2, "android.net.category.EVENT_NETWORK_ERROR"
 
-    .line 4749
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object v7
@@ -1659,7 +1498,6 @@
 
     goto :goto_2
 
-    .line 4751
     :cond_5
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
@@ -1675,7 +1513,6 @@
 
     goto :goto_2
 
-    .line 4753
     :cond_6
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
@@ -1694,7 +1531,6 @@
 
     const-string v2, "IkeV2VpnRunner"
 
-    .line 4757
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1718,13 +1554,11 @@
 
     move v10, v4
 
-    .line 4760
     :goto_2
     iget-object v2, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v2
 
-    .line 4762
     :try_start_0
     iget-object v6, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1736,7 +1570,6 @@
 
     return-void
 
-    .line 4766
     :cond_9
     invoke-static {}, Lcom/android/modules/utils/build/SdkLevel;->isAtLeastT()Z
 
@@ -1756,10 +1589,8 @@
 
     if-eqz v6, :cond_a
 
-    .line 4767
     iget-object v7, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
-    .line 4768
     invoke-virtual {v7}, Lcom/android/server/connectivity/Vpn;->getPackage()Ljava/lang/String;
 
     move-result-object v11
@@ -1778,7 +1609,6 @@
 
     iget-object v9, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 4770
     invoke-static {v6, v9}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mgetRedactedNetworkCapabilities(Lcom/android/server/connectivity/Vpn;Landroid/net/NetworkCapabilities;)Landroid/net/NetworkCapabilities;
 
     move-result-object v15
@@ -1787,17 +1617,14 @@
 
     iget-object v9, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingLinkProperties:Landroid/net/LinkProperties;
 
-    .line 4771
     invoke-static {v6, v9}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mgetRedactedLinkProperties(Lcom/android/server/connectivity/Vpn;Landroid/net/LinkProperties;)Landroid/net/LinkProperties;
 
     move-result-object v16
 
     move v9, v4
 
-    .line 4767
     invoke-static/range {v7 .. v16}, Lcom/android/server/connectivity/Vpn;->-$$Nest$msendEventToVpnManagerApp(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Landroid/net/VpnProfileState;Landroid/net/Network;Landroid/net/NetworkCapabilities;Landroid/net/LinkProperties;)Z
 
-    .line 4773
     :cond_a
     monitor-exit v2
     :try_end_0
@@ -1805,7 +1632,6 @@
 
     if-ne v4, v3, :cond_b
 
-    .line 4776
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->markFailedAndDisconnect(Ljava/lang/Exception;)V
 
     return-void
@@ -1813,12 +1639,10 @@
     :cond_b
     const-wide/16 v1, -0x1
 
-    .line 4779
     invoke-virtual {v0, v1, v2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->scheduleStartIkeSession(J)V
 
     const-string v1, "IkeV2VpnRunner"
 
-    .line 4784
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1837,12 +1661,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4786
     iget-object v1, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v1
 
-    .line 4788
     :try_start_1
     iget-object v2, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1854,24 +1676,19 @@
 
     return-void
 
-    .line 4793
     :cond_c
     iput-object v5, v2, Lcom/android/server/connectivity/Vpn;->mInterface:Ljava/lang/String;
 
-    .line 4794
     iget-object v2, v2, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     if-eqz v2, :cond_e
 
-    .line 4795
     iput-object v5, v2, Lcom/android/internal/net/VpnConfig;->interfaze:Ljava/lang/String;
 
-    .line 4798
     iget-object v2, v2, Lcom/android/internal/net/VpnConfig;->routes:Ljava/util/List;
 
     if-eqz v2, :cond_e
 
-    .line 4799
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -1882,7 +1699,6 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 4801
     iget-object v3, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v3, v3, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -1891,7 +1707,6 @@
 
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
-    .line 4802
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1909,7 +1724,6 @@
 
     check-cast v3, Landroid/net/RouteInfo;
 
-    .line 4803
     iget-object v4, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v4, v4, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -1930,7 +1744,6 @@
 
     goto :goto_3
 
-    .line 4806
     :cond_d
     iget-object v2, v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1938,20 +1751,17 @@
 
     if-eqz v3, :cond_e
 
-    .line 4807
     invoke-static {v2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mmakeLinkProperties(Lcom/android/server/connectivity/Vpn;)Landroid/net/LinkProperties;
 
     move-result-object v2
 
     invoke-static {v3, v2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$smdoSendLinkProperties(Landroid/net/NetworkAgent;Landroid/net/LinkProperties;)V
 
-    .line 4811
     :cond_e
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4813
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->resetIkeState()V
 
     return-void
@@ -1959,7 +1769,6 @@
     :catchall_0
     move-exception v0
 
-    .line 4811
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -1970,7 +1779,6 @@
     :catchall_1
     move-exception v0
 
-    .line 4773
     :try_start_3
     monitor-exit v2
     :try_end_3
@@ -1982,7 +1790,6 @@
 .method public final isActiveNetwork(Landroid/net/Network;)Z
     .locals 1
 
-    .line 3777
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mActiveNetwork:Landroid/net/Network;
 
     invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -2009,7 +1816,6 @@
 .method public final isActiveToken(I)Z
     .locals 1
 
-    .line 3781
     iget v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mCurrentToken:I
 
     if-ne v0, p1, :cond_0
@@ -2032,12 +1838,10 @@
 .method public final markFailedAndDisconnect(Ljava/lang/Exception;)V
     .locals 3
 
-    .line 4671
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v0
 
-    .line 4673
     :try_start_0
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2049,7 +1853,6 @@
 
     return-void
 
-    .line 4675
     :cond_0
     sget-object v2, Landroid/net/NetworkInfo$DetailedState;->FAILED:Landroid/net/NetworkInfo$DetailedState;
 
@@ -2059,12 +1862,10 @@
 
     invoke-virtual {v1, v2, p1}, Lcom/android/server/connectivity/Vpn;->updateState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;)V
 
-    .line 4676
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4678
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->disconnectVpnRunner()V
 
     return-void
@@ -2072,7 +1873,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4676
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2084,7 +1884,6 @@
 .method public final maybeMigrateIkeSession(Landroid/net/Network;I)Z
     .locals 3
 
-    .line 4356
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mSession:Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
 
     const/4 v1, 0x0
@@ -2097,7 +1896,6 @@
 
     goto :goto_1
 
-    .line 4360
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2125,7 +1923,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4367
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
     invoke-virtual {v0}, Landroid/net/Ikev2VpnProfile;->isAutomaticIpVersionSelectionEnabled()Z
@@ -2134,19 +1931,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 4368
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->guessEspIpVersionForNetwork()I
 
     move-result v1
 
-    .line 4369
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->guessEspEncapTypeForNetwork()I
 
     move-result v0
 
     goto :goto_0
 
-    .line 4370
     :cond_1
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
@@ -2156,14 +1950,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 4371
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
     invoke-virtual {v0}, Landroid/net/Ikev2VpnProfile;->getIkeTunnelConnectionParams()Landroid/net/ipsec/ike/IkeTunnelConnectionParams;
 
     move-result-object v0
 
-    .line 4372
     invoke-virtual {v0}, Landroid/net/ipsec/ike/IkeTunnelConnectionParams;->getIkeSessionParams()Landroid/net/ipsec/ike/IkeSessionParams;
 
     move-result-object v0
@@ -2172,14 +1964,12 @@
 
     move-result v1
 
-    .line 4373
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
     invoke-virtual {v0}, Landroid/net/Ikev2VpnProfile;->getIkeTunnelConnectionParams()Landroid/net/ipsec/ike/IkeTunnelConnectionParams;
 
     move-result-object v0
 
-    .line 4374
     invoke-virtual {v0}, Landroid/net/ipsec/ike/IkeTunnelConnectionParams;->getIkeSessionParams()Landroid/net/ipsec/ike/IkeSessionParams;
 
     move-result-object v0
@@ -2193,7 +1983,6 @@
     :cond_2
     move v0, v1
 
-    .line 4380
     :goto_0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mSession:Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
 
@@ -2211,19 +2000,16 @@
 .method public maybeMigrateIkeSessionAndUpdateVpnTransportInfo(Landroid/net/Network;)Z
     .locals 1
 
-    .line 4330
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->getOrGuessKeepaliveDelaySeconds()I
 
     move-result v0
 
-    .line 4331
     invoke-virtual {p0, p1, v0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->maybeMigrateIkeSession(Landroid/net/Network;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 4333
     invoke-virtual {p0, v0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->updateVpnTransportInfoAndNetCap(I)V
 
     :cond_0
@@ -2233,14 +2019,12 @@
 .method public onChildMigrated(ILandroid/net/IpSecTransform;Landroid/net/IpSecTransform;)V
     .locals 9
 
-    .line 3989
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->isActiveToken(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3990
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -2273,7 +2057,6 @@
 
     const-string p0, "IkeV2VpnRunner"
 
-    .line 3992
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2292,7 +2075,6 @@
 
     return-void
 
-    .line 3995
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2336,14 +2118,12 @@
 
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 4001
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIkeConnectionInfo:Landroid/net/ipsec/ike/IkeSessionConnectionInfo;
 
     invoke-virtual {v0}, Landroid/net/ipsec/ike/IkeSessionConnectionInfo;->getNetwork()Landroid/net/Network;
 
     move-result-object v0
 
-    .line 4004
     :try_start_0
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2351,7 +2131,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4006
     :try_start_1
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2363,13 +2142,11 @@
 
     return-void
 
-    .line 4008
     :cond_1
     invoke-static {v2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mmakeLinkProperties(Lcom/android/server/connectivity/Vpn;)Landroid/net/LinkProperties;
 
     move-result-object v2
 
-    .line 4010
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v3, v3, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -2380,7 +2157,6 @@
 
     move-result-object v4
 
-    .line 4011
     invoke-static {v3, v4}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
     move-result v3
@@ -2398,7 +2174,6 @@
     :cond_2
     move v3, v5
 
-    .line 4012
     :goto_0
     iget-object v6, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2410,21 +2185,18 @@
 
     iput-object v7, v6, Lcom/android/internal/net/VpnConfig;->underlyingNetworks:[Landroid/net/Network;
 
-    .line 4013
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->calculateVpnMtu()I
 
     move-result v7
 
     iput v7, v6, Lcom/android/internal/net/VpnConfig;->mtu:I
 
-    .line 4015
     iget-object v6, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v6}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mmakeLinkProperties(Lcom/android/server/connectivity/Vpn;)Landroid/net/LinkProperties;
 
     move-result-object v6
 
-    .line 4019
     invoke-virtual {v6}, Landroid/net/LinkProperties;->getLinkAddresses()Ljava/util/List;
 
     move-result-object v7
@@ -2435,7 +2207,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 4020
     new-instance p2, Landroid/net/ipsec/ike/exceptions/IkeIOException;
 
     new-instance p3, Ljava/io/IOException;
@@ -2448,12 +2219,10 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->onSessionLost(ILjava/lang/Exception;)V
 
-    .line 4024
     monitor-exit v1
 
     return-void
 
-    .line 4027
     :cond_3
     new-instance v7, Ljava/util/HashSet;
 
@@ -2463,21 +2232,18 @@
 
     invoke-direct {v7, v8}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 4028
     invoke-virtual {v6}, Landroid/net/LinkProperties;->getLinkAddresses()Ljava/util/List;
 
     move-result-object v8
 
     invoke-interface {v7, v8}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
-    .line 4034
     invoke-interface {v7}, Ljava/util/Set;->isEmpty()Z
 
     move-result v8
 
     if-nez v8, :cond_4
 
-    .line 4035
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v3, v2, Lcom/android/server/connectivity/Vpn;->mNetworkAgent:Landroid/net/NetworkAgent;
@@ -2486,7 +2252,6 @@
 
     invoke-static {v2, v3, v6}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mstartNewNetworkAgent(Lcom/android/server/connectivity/Vpn;Landroid/net/NetworkAgent;Ljava/lang/String;)V
 
-    .line 4038
     invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -2504,10 +2269,8 @@
 
     check-cast v3, Landroid/net/LinkAddress;
 
-    .line 4039
     iget-object v6, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
-    .line 4040
     invoke-virtual {v3}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
 
     move-result-object v7
@@ -2516,12 +2279,10 @@
 
     move-result v3
 
-    .line 4039
     invoke-virtual {v6, v7, v3}, Landroid/net/IpSecManager$IpSecTunnelInterface;->removeAddress(Ljava/net/InetAddress;I)V
 
     goto :goto_1
 
-    .line 4045
     :cond_4
     invoke-virtual {v6, v2}, Landroid/net/LinkProperties;->equals(Ljava/lang/Object;)Z
 
@@ -2538,7 +2299,6 @@
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 4047
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     new-instance v3, Landroid/net/NetworkCapabilities$Builder;
@@ -2549,56 +2309,46 @@
 
     invoke-direct {v3, v6}, Landroid/net/NetworkCapabilities$Builder;-><init>(Landroid/net/NetworkCapabilities;)V
 
-    .line 4050
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v6
 
-    .line 4049
     invoke-virtual {v3, v6}, Landroid/net/NetworkCapabilities$Builder;->setUnderlyingNetworks(Ljava/util/List;)Landroid/net/NetworkCapabilities$Builder;
 
     move-result-object v3
 
-    .line 4051
     invoke-virtual {v3}, Landroid/net/NetworkCapabilities$Builder;->build()Landroid/net/NetworkCapabilities;
 
     move-result-object v3
 
     iput-object v3, v2, Lcom/android/server/connectivity/Vpn;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 4052
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v3, v2, Lcom/android/server/connectivity/Vpn;->mNetworkAgent:Landroid/net/NetworkAgent;
 
-    .line 4053
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v6
 
-    .line 4052
     invoke-static {v2, v3, v6}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mdoSetUnderlyingNetworks(Lcom/android/server/connectivity/Vpn;Landroid/net/NetworkAgent;Ljava/util/List;)V
 
-    .line 4056
     :cond_6
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4058
     :try_start_2
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
     invoke-virtual {v1, v0}, Landroid/net/IpSecManager$IpSecTunnelInterface;->setUnderlyingNetwork(Landroid/net/Network;)V
 
-    .line 4062
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIpSecManager:Landroid/net/IpSecManager;
 
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
     invoke-virtual {v0, v1, v5, p2}, Landroid/net/IpSecManager;->applyTunnelModeTransform(Landroid/net/IpSecManager$IpSecTunnelInterface;ILandroid/net/IpSecTransform;)V
 
-    .line 4064
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIpSecManager:Landroid/net/IpSecManager;
 
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
@@ -2612,7 +2362,6 @@
     :catchall_0
     move-exception p2
 
-    .line 4056
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -2628,7 +2377,6 @@
 
     const-string p3, "IkeV2VpnRunner"
 
-    .line 4067
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2645,7 +2393,6 @@
 
     invoke-static {p3, v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4068
     invoke-virtual {p0, p1, p2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->onSessionLost(ILjava/lang/Exception;)V
 
     :goto_2
@@ -2655,14 +2402,12 @@
 .method public onChildOpened(ILandroid/net/ipsec/ike/ChildSessionConfiguration;)V
     .locals 9
 
-    .line 3842
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->isActiveToken(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3843
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -2695,7 +2440,6 @@
 
     const-string p0, "IkeV2VpnRunner"
 
-    .line 3845
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2714,7 +2458,6 @@
 
     return-void
 
-    .line 3854
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2746,7 +2489,6 @@
 
     const-string v2, ", "
 
-    .line 3855
     invoke-virtual {p2}, Landroid/net/ipsec/ike/ChildSessionConfiguration;->getInternalAddresses()Ljava/util/List;
 
     move-result-object v3
@@ -2763,7 +2505,6 @@
 
     const-string v2, ", "
 
-    .line 3856
     invoke-virtual {p2}, Landroid/net/ipsec/ike/ChildSessionConfiguration;->getInternalDnsServers()Ljava/util/List;
 
     move-result-object v3
@@ -2778,10 +2519,8 @@
 
     move-result-object v1
 
-    .line 3854
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3858
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
@@ -2789,22 +2528,18 @@
 
     move-result-object v0
 
-    .line 3859
     invoke-virtual {p2}, Landroid/net/ipsec/ike/ChildSessionConfiguration;->getInternalAddresses()Ljava/util/List;
 
     move-result-object v1
 
-    .line 3860
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3862
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->calculateVpnMtu()I
 
     move-result v3
 
-    .line 3866
     invoke-static {v1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$smisIPv6Only(Ljava/util/List;)Z
 
     move-result v4
@@ -2815,7 +2550,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 3867
     new-instance p2, Landroid/net/ipsec/ike/exceptions/IkeIOException;
 
     new-instance v0, Ljava/io/IOException;
@@ -2830,18 +2564,15 @@
 
     return-void
 
-    .line 3875
     :cond_1
     invoke-virtual {p2}, Landroid/net/ipsec/ike/ChildSessionConfiguration;->getOutboundTrafficSelectors()Ljava/util/List;
 
     move-result-object v4
 
-    .line 3874
     invoke-static {v4}, Lcom/android/server/connectivity/VpnIkev2Utils;->getRoutesFromTrafficSelectors(Ljava/util/List;)Ljava/util/Collection;
 
     move-result-object v4
 
-    .line 3876
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -2859,7 +2590,6 @@
 
     check-cast v6, Landroid/net/LinkAddress;
 
-    .line 3877
     iget-object v7, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
     invoke-virtual {v6}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
@@ -2874,7 +2604,6 @@
 
     goto :goto_0
 
-    .line 3880
     :cond_2
     invoke-virtual {p2}, Landroid/net/ipsec/ike/ChildSessionConfiguration;->getInternalDnsServers()Ljava/util/List;
 
@@ -2897,7 +2626,6 @@
 
     check-cast v5, Ljava/net/InetAddress;
 
-    .line 3881
     invoke-virtual {v5}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v5
@@ -2906,7 +2634,6 @@
 
     goto :goto_1
 
-    .line 3887
     :cond_3
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIkeConnectionInfo:Landroid/net/ipsec/ike/IkeSessionConnectionInfo;
 
@@ -2914,14 +2641,12 @@
 
     move-result-object p2
 
-    .line 3892
     iget-object v5, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v5
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3894
     :try_start_1
     iget-object v6, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2933,24 +2658,19 @@
 
     return-void
 
-    .line 3896
     :cond_4
     iput-object v0, v6, Lcom/android/server/connectivity/Vpn;->mInterface:Ljava/lang/String;
 
-    .line 3897
     iget-object v6, v6, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iput v3, v6, Lcom/android/internal/net/VpnConfig;->mtu:I
 
-    .line 3898
     iput-object v0, v6, Lcom/android/internal/net/VpnConfig;->interfaze:Ljava/lang/String;
 
-    .line 3900
     iget-object v0, v6, Lcom/android/internal/net/VpnConfig;->addresses:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 3901
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -2959,7 +2679,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 3903
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -2968,7 +2687,6 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 3904
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -2977,7 +2695,6 @@
 
     invoke-interface {v0, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 3906
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -2992,7 +2709,6 @@
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->dnsServers:Ljava/util/List;
 
-    .line 3907
     :cond_5
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -3002,7 +2718,6 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 3908
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -3011,7 +2726,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 3910
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v1, v0, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -3022,24 +2736,20 @@
 
     iput-object v2, v1, Lcom/android/internal/net/VpnConfig;->underlyingNetworks:[Landroid/net/Network;
 
-    .line 3912
     iget-object v1, v0, Lcom/android/server/connectivity/Vpn;->mNetworkAgent:Landroid/net/NetworkAgent;
 
     if-nez v1, :cond_7
 
-    .line 3917
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$misSettingsVpnLocked(Lcom/android/server/connectivity/Vpn;)Z
 
     move-result p2
 
     if-eqz p2, :cond_6
 
-    .line 3918
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mprepareStatusIntent(Lcom/android/server/connectivity/Vpn;)V
 
-    .line 3920
     :cond_6
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -3049,12 +2759,10 @@
 
     invoke-static {p2, v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$magentConnect(Lcom/android/server/connectivity/Vpn;Lcom/android/server/connectivity/Vpn$ValidationStatusCallback;)V
 
-    .line 3921
     monitor-exit v5
 
     return-void
 
-    .line 3924
     :cond_7
     invoke-static {p2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -3062,7 +2770,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mdoSetUnderlyingNetworks(Lcom/android/server/connectivity/Vpn;Landroid/net/NetworkAgent;Ljava/util/List;)V
 
-    .line 3925
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     new-instance v2, Landroid/net/NetworkCapabilities$Builder;
@@ -3073,7 +2780,6 @@
 
     invoke-direct {v2, v3}, Landroid/net/NetworkCapabilities$Builder;-><init>(Landroid/net/NetworkCapabilities;)V
 
-    .line 3927
     invoke-static {p2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
@@ -3082,32 +2788,27 @@
 
     move-result-object p2
 
-    .line 3928
     invoke-virtual {p2}, Landroid/net/NetworkCapabilities$Builder;->build()Landroid/net/NetworkCapabilities;
 
     move-result-object p2
 
     iput-object p2, v0, Lcom/android/server/connectivity/Vpn;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 3931
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mmakeLinkProperties(Lcom/android/server/connectivity/Vpn;)Landroid/net/LinkProperties;
 
     move-result-object p2
 
-    .line 3932
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3934
     :try_start_2
     invoke-static {v1, p2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$smdoSendLinkProperties(Landroid/net/NetworkAgent;Landroid/net/LinkProperties;)V
 
     const/4 p2, 0x0
 
-    .line 3935
     iput p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mRetryCount:I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -3117,7 +2818,6 @@
     :catchall_0
     move-exception p2
 
-    .line 3932
     :try_start_3
     monitor-exit v5
     :try_end_3
@@ -3133,7 +2833,6 @@
 
     const-string v0, "IkeV2VpnRunner"
 
-    .line 3937
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3150,7 +2849,6 @@
 
     invoke-static {v0, v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3938
     invoke-virtual {p0, p1, p2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->onSessionLost(ILjava/lang/Exception;)V
 
     :goto_2
@@ -3160,7 +2858,6 @@
 .method public onChildTransformCreated(ILandroid/net/IpSecTransform;I)V
     .locals 4
 
-    .line 3951
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->isActiveToken(I)Z
 
     move-result v0
@@ -3171,7 +2868,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3952
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3200,7 +2896,6 @@
 
     invoke-virtual {p2, p0}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3954
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3219,7 +2914,6 @@
 
     return-void
 
-    .line 3963
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -3261,7 +2955,6 @@
 
     invoke-virtual {v0, v2}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3967
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
@@ -3273,7 +2966,6 @@
 
     invoke-virtual {v0, v2}, Landroid/net/IpSecManager$IpSecTunnelInterface;->setUnderlyingNetwork(Landroid/net/Network;)V
 
-    .line 3971
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIpSecManager:Landroid/net/IpSecManager;
 
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
@@ -3287,7 +2979,6 @@
     :catch_0
     move-exception p2
 
-    .line 3973
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3304,7 +2995,6 @@
 
     invoke-static {v1, p3, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3974
     invoke-virtual {p0, p1, p2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->onSessionLost(ILjava/lang/Exception;)V
 
     :goto_0
@@ -3314,7 +3004,6 @@
 .method public onDefaultNetworkCapabilitiesChanged(Landroid/net/NetworkCapabilities;)V
     .locals 3
 
-    .line 4475
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->significantCapsChange(Landroid/net/NetworkCapabilities;Landroid/net/NetworkCapabilities;)Z
@@ -3323,7 +3012,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4477
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3354,16 +3042,13 @@
 
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 4480
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 4481
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     if-eqz v0, :cond_1
 
-    .line 4482
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getSubscriptionIds()Ljava/util/Set;
 
     move-result-object p1
@@ -3381,7 +3066,6 @@
     :cond_1
     const-wide/16 v0, 0x12c
 
-    .line 4485
     invoke-virtual {p0, v0, v1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->scheduleStartIkeSession(J)V
 
     :cond_2
@@ -3391,7 +3075,6 @@
 .method public onDefaultNetworkChanged(Landroid/net/Network;)V
     .locals 3
 
-    .line 4084
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3414,7 +3097,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 4085
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3433,39 +3115,31 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4089
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->cancelRetryNewIkeSessionFuture()V
 
-    .line 4093
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->cancelHandleNetworkLostTimeout()V
 
-    .line 4095
     iget-boolean v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIsRunning:Z
 
     if-nez v0, :cond_0
 
     const-string/jumbo p0, "onDefaultNetworkChanged after exit"
 
-    .line 4096
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 4100
     :cond_0
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mActiveNetwork:Landroid/net/Network;
 
     const/4 p1, 0x0
 
-    .line 4101
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingLinkProperties:Landroid/net/LinkProperties;
 
-    .line 4102
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/4 p1, 0x0
 
-    .line 4103
     iput p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mRetryCount:I
 
     return-void
@@ -3474,10 +3148,8 @@
 .method public onDefaultNetworkLinkPropertiesChanged(Landroid/net/LinkProperties;)V
     .locals 4
 
-    .line 4491
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingLinkProperties:Landroid/net/LinkProperties;
 
-    .line 4492
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3506,12 +3178,10 @@
 
     invoke-virtual {v1, v2}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 4493
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingLinkProperties:Landroid/net/LinkProperties;
 
     if-eqz v0, :cond_0
 
-    .line 4494
     invoke-static {v0, p1}, Lcom/android/net/module/util/LinkPropertiesUtils;->isIdenticalAllLinkAddresses(Landroid/net/LinkProperties;Landroid/net/LinkProperties;)Z
 
     move-result p1
@@ -3521,7 +3191,6 @@
     :cond_0
     const-wide/16 v0, 0x12c
 
-    .line 4500
     invoke-virtual {p0, v0, v1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->scheduleStartIkeSession(J)V
 
     :cond_1
@@ -3531,7 +3200,6 @@
 .method public onDefaultNetworkLost(Landroid/net/Network;)V
     .locals 5
 
-    .line 4572
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3554,10 +3222,8 @@
 
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 4576
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->cancelRetryNewIkeSessionFuture()V
 
-    .line 4578
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->isActiveNetwork(Landroid/net/Network;)Z
 
     move-result v0
@@ -3566,7 +3232,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4579
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3588,21 +3253,16 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4588
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mActiveNetwork:Landroid/net/Network;
 
-    .line 4589
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 4590
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mUnderlyingLinkProperties:Landroid/net/LinkProperties;
 
-    .line 4593
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleNetworkLostFuture:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_1
 
-    .line 4594
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "Found a pending mScheduledHandleNetworkLostFuture"
@@ -3611,15 +3271,12 @@
 
     const-string v2, "Unexpected error in onDefaultNetworkLost. Tear down session"
 
-    .line 4597
     invoke-static {v1, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4601
     invoke-virtual {p0, v0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->handleSessionLost(Ljava/lang/Exception;Landroid/net/Network;)V
 
     return-void
 
-    .line 4605
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3645,10 +3302,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4610
     iget v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mCurrentToken:I
 
-    .line 4614
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     new-instance v2, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$$ExternalSyntheticLambda2;
@@ -3659,7 +3314,6 @@
 
     sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 4615
     invoke-virtual {v1, v2, v3, v4, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object p1
@@ -3672,7 +3326,6 @@
 .method public onIkeConnectionInfoChanged(ILandroid/net/ipsec/ike/IkeSessionConnectionInfo;)V
     .locals 3
 
-    .line 3820
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->isActiveToken(I)Z
 
     move-result v0
@@ -3681,7 +3334,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3821
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3710,7 +3362,6 @@
 
     invoke-virtual {p2, p0}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3823
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3731,7 +3382,6 @@
 
     return-void
 
-    .line 3826
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -3759,7 +3409,6 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3828
     invoke-virtual {p2}, Landroid/net/ipsec/ike/IkeSessionConnectionInfo;->getLocalAddress()Ljava/net/InetAddress;
 
     move-result-object p1
@@ -3770,7 +3419,6 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3829
     invoke-virtual {p2}, Landroid/net/ipsec/ike/IkeSessionConnectionInfo;->getNetwork()Landroid/net/Network;
 
     move-result-object p1
@@ -3781,10 +3429,8 @@
 
     move-result-object p1
 
-    .line 3826
     invoke-virtual {v0, p1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3832
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIkeConnectionInfo:Landroid/net/ipsec/ike/IkeSessionConnectionInfo;
 
     return-void
@@ -3793,7 +3439,6 @@
 .method public onIkeOpened(ILandroid/net/ipsec/ike/IkeSessionConfiguration;)V
     .locals 3
 
-    .line 3791
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->isActiveToken(I)Z
 
     move-result v0
@@ -3802,7 +3447,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3792
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3831,7 +3475,6 @@
 
     invoke-virtual {p2, p0}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3794
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3855,19 +3498,16 @@
     :cond_0
     const/4 v0, 0x2
 
-    .line 3799
     invoke-virtual {p2, v0}, Landroid/net/ipsec/ike/IkeSessionConfiguration;->isIkeExtensionEnabled(I)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mMobikeEnabled:Z
 
-    .line 3801
     invoke-virtual {p2}, Landroid/net/ipsec/ike/IkeSessionConfiguration;->getIkeSessionConnectionInfo()Landroid/net/ipsec/ike/IkeSessionConnectionInfo;
 
     move-result-object p2
 
-    .line 3802
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3894,7 +3534,6 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3803
     invoke-virtual {p2}, Landroid/net/ipsec/ike/IkeSessionConnectionInfo;->getLocalAddress()Ljava/net/InetAddress;
 
     move-result-object v1
@@ -3905,7 +3544,6 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3804
     invoke-virtual {p2}, Landroid/net/ipsec/ike/IkeSessionConnectionInfo;->getNetwork()Landroid/net/Network;
 
     move-result-object v1
@@ -3924,10 +3562,8 @@
 
     move-result-object v1
 
-    .line 3802
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3806
     invoke-virtual {p0, p1, p2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->onIkeConnectionInfoChanged(ILandroid/net/ipsec/ike/IkeSessionConnectionInfo;)V
 
     return-void
@@ -3936,7 +3572,6 @@
 .method public onSessionLost(ILjava/lang/Exception;)V
     .locals 4
 
-    .line 4691
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -3961,7 +3596,6 @@
 
     goto :goto_0
 
-    .line 4692
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3988,10 +3622,8 @@
 
     move-result-object v1
 
-    .line 4691
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 4693
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4010,14 +3642,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4695
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->isActiveToken(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 4696
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4036,7 +3666,6 @@
 
     return-void
 
-    .line 4706
     :cond_1
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mActiveNetwork:Landroid/net/Network;
 
@@ -4048,7 +3677,6 @@
 .method public onValidationStatus(I)V
     .locals 4
 
-    .line 4531
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -4075,7 +3703,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 4534
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     new-instance v0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$$ExternalSyntheticLambda5;
@@ -4086,7 +3713,6 @@
 
     goto :goto_0
 
-    .line 4545
     :cond_0
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleDataStallFuture:Ljava/util/concurrent/ScheduledFuture;
 
@@ -4094,7 +3720,6 @@
 
     return-void
 
-    .line 4547
     :cond_1
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
@@ -4112,14 +3737,12 @@
 
     iput v3, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mDataStallRetryCount:I
 
-    .line 4557
     invoke-virtual {v1, v2}, Lcom/android/server/connectivity/Vpn$Dependencies;->getDataStallResetSessionSeconds(I)J
 
     move-result-wide v1
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 4547
     invoke-virtual {p1, v0, v1, v2, v3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object p1
@@ -4133,38 +3756,30 @@
 .method public final resetIkeState()V
     .locals 2
 
-    .line 4823
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 4825
     invoke-virtual {v0}, Landroid/net/IpSecManager$IpSecTunnelInterface;->close()V
 
-    .line 4826
     iput-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
-    .line 4828
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mSession:Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
 
     if-eqz v0, :cond_1
 
-    .line 4829
     invoke-virtual {v0}, Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;->kill()V
 
-    .line 4830
     iput-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mSession:Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
 
-    .line 4832
     :cond_1
     iput-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIkeConnectionInfo:Landroid/net/ipsec/ike/IkeSessionConnectionInfo;
 
     const/4 v0, 0x0
 
-    .line 4833
     iput-boolean v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mMobikeEnabled:Z
 
     return-void
@@ -4173,7 +3788,6 @@
 .method public run()V
     .locals 5
 
-    .line 3754
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mProfile:Landroid/net/Ikev2VpnProfile;
 
     invoke-virtual {v0}, Landroid/net/Ikev2VpnProfile;->isRestrictedToTestNetworks()Z
@@ -4184,34 +3798,28 @@
 
     if-eqz v0, :cond_0
 
-    .line 3755
     new-instance v0, Landroid/net/NetworkRequest$Builder;
 
     invoke-direct {v0}, Landroid/net/NetworkRequest$Builder;-><init>()V
 
-    .line 3756
     invoke-virtual {v0}, Landroid/net/NetworkRequest$Builder;->clearCapabilities()Landroid/net/NetworkRequest$Builder;
 
     move-result-object v0
 
     const/4 v2, 0x7
 
-    .line 3757
     invoke-virtual {v0, v2}, Landroid/net/NetworkRequest$Builder;->addTransportType(I)Landroid/net/NetworkRequest$Builder;
 
     move-result-object v0
 
-    .line 3758
     invoke-virtual {v0, v1}, Landroid/net/NetworkRequest$Builder;->addCapability(I)Landroid/net/NetworkRequest$Builder;
 
     move-result-object v0
 
-    .line 3759
     invoke-virtual {v0}, Landroid/net/NetworkRequest$Builder;->build()Landroid/net/NetworkRequest;
 
     move-result-object v0
 
-    .line 3760
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmConnectivityManager(Lcom/android/server/connectivity/Vpn;)Landroid/net/ConnectivityManager;
@@ -4224,7 +3832,6 @@
 
     goto :goto_0
 
-    .line 3762
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -4246,7 +3853,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/net/ConnectivityManager;->registerSystemDefaultNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;Landroid/os/Handler;)V
 
-    .line 3768
     :goto_0
     new-instance v0, Landroid/net/NetworkRequest$Builder;
 
@@ -4254,12 +3860,10 @@
 
     const/4 v2, 0x4
 
-    .line 3769
     invoke-virtual {v0, v2}, Landroid/net/NetworkRequest$Builder;->addTransportType(I)Landroid/net/NetworkRequest$Builder;
 
     move-result-object v0
 
-    .line 3770
     invoke-virtual {v0, v1}, Landroid/net/NetworkRequest$Builder;->removeCapability(I)Landroid/net/NetworkRequest$Builder;
 
     move-result-object v0
@@ -4268,14 +3872,12 @@
 
     move-result-object v0
 
-    .line 3771
     new-instance v1, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$VpnConnectivityDiagnosticsCallback;
 
     invoke-direct {v1, p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$VpnConnectivityDiagnosticsCallback;-><init>(Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;)V
 
     iput-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mDiagnosticsCallback:Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$VpnConnectivityDiagnosticsCallback;
 
-    .line 3772
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmConnectivityDiagnosticsManager(Lcom/android/server/connectivity/Vpn;)Landroid/net/ConnectivityDiagnosticsManager;
@@ -4294,7 +3896,6 @@
 .method public final scheduleStartIkeSession(J)V
     .locals 4
 
-    .line 4438
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mScheduledHandleRetryIkeSessionFuture:Ljava/util/concurrent/ScheduledFuture;
 
     const-string v1, "IkeV2VpnRunner"
@@ -4303,7 +3904,6 @@
 
     const-string p0, "There is a pending retrying task, skip the new retrying task"
 
-    .line 4439
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -4317,7 +3917,6 @@
 
     goto :goto_0
 
-    .line 4444
     :cond_1
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -4333,7 +3932,6 @@
 
     move-result-wide p1
 
-    .line 4445
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4355,7 +3953,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4449
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     new-instance v1, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner$$ExternalSyntheticLambda3;
@@ -4364,7 +3961,6 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 4450
     invoke-virtual {v0, v1, p1, p2, v2}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object p1
@@ -4388,7 +3984,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 4464
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getTransportTypes()[I
 
     move-result-object v0
@@ -4403,7 +3998,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4465
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getCapabilities()[I
 
     move-result-object v0
@@ -4418,7 +4012,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4466
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getEnterpriseIds()[I
 
     move-result-object v0
@@ -4433,7 +4026,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4467
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getTransportInfo()Landroid/net/TransportInfo;
 
     move-result-object v0
@@ -4448,7 +4040,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4468
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getAllowedUids()Ljava/util/Set;
 
     move-result-object v0
@@ -4463,7 +4054,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4469
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getUnderlyingNetworks()Ljava/util/List;
 
     move-result-object v0
@@ -4478,7 +4068,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4470
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getNetworkSpecifier()Landroid/net/NetworkSpecifier;
 
     move-result-object p1
@@ -4505,7 +4094,6 @@
 
     const-string v0, "IkeV2VpnRunner"
 
-    .line 4385
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4522,7 +4110,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4386
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -4545,7 +4132,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 4391
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -4553,7 +4139,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4393
     :try_start_1
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -4568,34 +4153,27 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 4395
     iput-object v2, v1, Lcom/android/server/connectivity/Vpn;->mInterface:Ljava/lang/String;
 
-    .line 4396
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4399
     :try_start_2
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->resetIkeState()V
 
-    .line 4403
     invoke-static {}, Ljava/net/InetAddress;->getLocalHost()Ljava/net/InetAddress;
 
     move-result-object v0
 
-    .line 4409
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mIpSecManager:Landroid/net/IpSecManager;
 
-    .line 4410
     invoke-virtual {v1, v0, v0, p1}, Landroid/net/IpSecManager;->createIpSecTunnelInterface(Ljava/net/InetAddress;Ljava/net/InetAddress;Landroid/net/Network;)Landroid/net/IpSecManager$IpSecTunnelInterface;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mTunnelIface:Landroid/net/IpSecManager$IpSecTunnelInterface;
 
-    .line 4412
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmNetd(Lcom/android/server/connectivity/Vpn;)Landroid/net/INetd;
@@ -4610,14 +4188,12 @@
 
     invoke-static {v0, v1}, Lcom/android/net/module/util/NetdUtils;->setInterfaceUp(Landroid/net/INetd;Ljava/lang/String;)V
 
-    .line 4414
     iget v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mCurrentToken:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mCurrentToken:I
 
-    .line 4415
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmIkev2SessionCreator(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/Vpn$Ikev2SessionCreator;
@@ -4630,12 +4206,10 @@
 
     move-result-object v3
 
-    .line 4418
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->getIkeSessionParams(Landroid/net/Network;)Landroid/net/ipsec/ike/IkeSessionParams;
 
     move-result-object v4
 
-    .line 4419
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->getChildSessionParams()Landroid/net/ipsec/ike/ChildSessionParams;
 
     move-result-object v5
@@ -4654,7 +4228,6 @@
 
     invoke-direct {v8, p1, p0, v0}, Lcom/android/server/connectivity/VpnIkev2Utils$ChildSessionCallbackImpl;-><init>(Ljava/lang/String;Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;I)V
 
-    .line 4416
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/connectivity/Vpn$Ikev2SessionCreator;->createIkeSession(Landroid/content/Context;Landroid/net/ipsec/ike/IkeSessionParams;Landroid/net/ipsec/ike/ChildSessionParams;Ljava/util/concurrent/Executor;Landroid/net/ipsec/ike/IkeSessionCallback;Landroid/net/ipsec/ike/ChildSessionCallback;)Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
 
     move-result-object p1
@@ -4663,7 +4236,6 @@
 
     const-string p1, "IkeV2VpnRunner"
 
-    .line 4425
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4687,7 +4259,6 @@
     :catchall_0
     move-exception p1
 
-    .line 4396
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -4703,7 +4274,6 @@
 
     const-string v0, "IkeV2VpnRunner"
 
-    .line 4427
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4726,7 +4296,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4428
     iget v0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->mCurrentToken:I
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->onSessionLost(ILjava/lang/Exception;)V
@@ -4744,12 +4313,10 @@
 
     const-string p1, "There is no active network for starting an IKE session"
 
-    .line 4180
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 4184
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->maybeMigrateIkeSessionAndUpdateVpnTransportInfo(Landroid/net/Network;)Z
 
@@ -4759,7 +4326,6 @@
 
     return-void
 
-    .line 4186
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->startIkeSession(Landroid/net/Network;)V
 
@@ -4769,12 +4335,10 @@
 .method public updateVpnTransportInfoAndNetCap(I)V
     .locals 6
 
-    .line 4339
     new-instance v0, Landroid/net/VpnTransportInfo;
 
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
-    .line 4340
     invoke-virtual {v1}, Lcom/android/server/connectivity/Vpn;->getActiveVpnType()I
 
     move-result v1
@@ -4802,7 +4366,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 4343
     :goto_0
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$smareLongLivedTcpConnectionsExpensive(I)Z
 
@@ -4810,7 +4373,6 @@
 
     invoke-direct {v0, v1, v4, v2, p1}, Landroid/net/VpnTransportInfo;-><init>(ILjava/lang/String;ZZ)V
 
-    .line 4344
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object p1, p1, Lcom/android/server/connectivity/Vpn;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
@@ -4827,7 +4389,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4346
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     new-instance v1, Landroid/net/NetworkCapabilities$Builder;
@@ -4838,19 +4399,16 @@
 
     invoke-direct {v1, v2}, Landroid/net/NetworkCapabilities$Builder;-><init>(Landroid/net/NetworkCapabilities;)V
 
-    .line 4347
     invoke-virtual {v1, v0}, Landroid/net/NetworkCapabilities$Builder;->setTransportInfo(Landroid/net/TransportInfo;)Landroid/net/NetworkCapabilities$Builder;
 
     move-result-object v0
 
-    .line 4348
     invoke-virtual {v0}, Landroid/net/NetworkCapabilities$Builder;->build()Landroid/net/NetworkCapabilities;
 
     move-result-object v0
 
     iput-object v0, p1, Lcom/android/server/connectivity/Vpn;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 4349
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmEventChanges(Lcom/android/server/connectivity/Vpn;)Landroid/util/LocalLog;
@@ -4877,7 +4435,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 4350
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn;->mNetworkAgent:Landroid/net/NetworkAgent;

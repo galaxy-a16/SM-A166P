@@ -15,25 +15,20 @@
 .method public constructor <init>(Lcom/android/server/am/CrashDexOpt;Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/CrashDexOpt$CrashKind;)V
     .locals 0
 
-    .line 79
     iput-object p1, p0, Lcom/android/server/am/CrashDexOpt$CrashDexOptThread;->this$0:Lcom/android/server/am/CrashDexOpt;
 
     const-string p1, "CrashDexOpt"
 
-    .line 80
     invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 81
     iput-object p2, p0, Lcom/android/server/am/CrashDexOpt$CrashDexOptThread;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 83
     sget-object p1, Lcom/android/server/am/CrashDexOpt$CrashKind;->JAVA:Lcom/android/server/am/CrashDexOpt$CrashKind;
 
     if-ne p3, p1, :cond_0
 
     const/4 p1, 0x2
 
-    .line 84
     iput p1, p0, Lcom/android/server/am/CrashDexOpt$CrashDexOptThread;->maxOccurredCount:I
 
     goto :goto_0
@@ -41,7 +36,6 @@
     :cond_0
     const/4 p1, 0x4
 
-    .line 86
     iput p1, p0, Lcom/android/server/am/CrashDexOpt$CrashDexOptThread;->maxOccurredCount:I
 
     :goto_0
@@ -53,7 +47,6 @@
 .method public final doForceDexOpt(Ljava/lang/String;)V
     .locals 10
 
-    .line 96
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->useArtService()Z
 
     move-result p0
@@ -66,17 +59,14 @@
 
     if-eqz p0, :cond_2
 
-    .line 97
     const-class p0, Lcom/android/server/pm/PackageManagerLocal;
 
-    .line 98
     invoke-static {p0}, Lcom/android/server/LocalManagerRegistry;->getManager(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/android/server/pm/PackageManagerLocal;
 
-    .line 104
     new-instance v9, Lcom/android/server/pm/dex/DexoptOptions;
 
     const/16 v5, 0x18
@@ -93,12 +83,10 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/android/server/pm/dex/DexoptOptions;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 109
     invoke-interface {p0}, Lcom/android/server/pm/PackageManagerLocal;->withFilteredSnapshot()Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;
 
     move-result-object p0
 
-    .line 110
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -116,12 +104,10 @@
 
     const/4 v1, 0x0
 
-    .line 112
     invoke-virtual {v9, v1}, Lcom/android/server/pm/dex/DexoptOptions;->convertToDexoptParams(I)Lcom/android/server/art/model/DexoptParams;
 
     move-result-object v1
 
-    .line 113
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->getArtManagerLocal()Lcom/android/server/art/ArtManagerLocal;
 
     move-result-object v3
@@ -130,7 +116,6 @@
 
     move-result-object v1
 
-    .line 115
     invoke-virtual {v1}, Lcom/android/server/art/model/DexoptResult;->getFinalStatus()I
 
     move-result v1
@@ -139,7 +124,6 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 116
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -159,7 +143,6 @@
     :cond_0
     if-eqz p0, :cond_3
 
-    .line 118
     invoke-interface {p0}, Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;->close()V
 
     goto :goto_1
@@ -169,7 +152,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 108
     :try_start_1
     invoke-interface {p0}, Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;->close()V
     :try_end_1
@@ -186,7 +168,6 @@
     :goto_0
     throw p1
 
-    .line 120
     :cond_2
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -194,7 +175,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 124
     :try_start_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -222,14 +202,12 @@
 
     move-object v4, p1
 
-    .line 125
     invoke-interface/range {v3 .. v9}, Landroid/content/pm/IPackageManager;->performDexOptMode(Ljava/lang/String;ZLjava/lang/String;ZZLjava/lang/String;)Z
 
     move-result p0
 
     if-nez p0, :cond_3
 
-    .line 129
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,7 +229,6 @@
     :catch_0
     move-exception p0
 
-    .line 132
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_3
@@ -262,14 +239,12 @@
 .method public final makeCrashPackageList()V
     .locals 14
 
-    .line 139
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetlock()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 141
     :try_start_0
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmCrashPackage()Ljava/util/ArrayList;
 
@@ -279,7 +254,6 @@
 
     move-result v1
 
-    .line 142
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmDexOptedPackage()Ljava/util/ArrayList;
 
     move-result-object v2
@@ -288,7 +262,6 @@
 
     move-result v2
 
-    .line 154
     iget-object v3, p0, Lcom/android/server/am/CrashDexOpt$CrashDexOptThread;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v3, v3, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -301,12 +274,10 @@
 
     if-lez v1, :cond_a
 
-    .line 157
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 158
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmCrashPackage()Ljava/util/ArrayList;
 
     move-result-object v8
@@ -330,12 +301,10 @@
 
     check-cast v10, Lcom/android/server/am/CrashDexOpt$CrashPackage;
 
-    .line 159
     iget-object v11, v10, Lcom/android/server/am/CrashDexOpt$CrashPackage;->pkg:Ljava/lang/String;
 
     if-eqz v11, :cond_7
 
-    .line 160
     invoke-virtual {v11, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
@@ -344,7 +313,6 @@
 
     goto :goto_2
 
-    .line 166
     :cond_0
     iget-wide v12, v10, Lcom/android/server/am/CrashDexOpt$CrashPackage;->mTimeStamp:J
 
@@ -366,7 +334,6 @@
 
     if-gez v6, :cond_6
 
-    .line 169
     invoke-virtual {v10}, Lcom/android/server/am/CrashDexOpt$CrashPackage;->increaseCount()I
 
     move-result v6
@@ -377,7 +344,6 @@
 
     goto :goto_3
 
-    .line 174
     :cond_1
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmDexOptedPackage()Ljava/util/ArrayList;
 
@@ -400,7 +366,6 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 175
     invoke-virtual {v8, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v8
@@ -417,21 +382,18 @@
     :goto_1
     if-nez v6, :cond_5
 
-    .line 182
     invoke-virtual {p0, v11}, Lcom/android/server/am/CrashDexOpt$CrashDexOptThread;->doForceDexOpt(Ljava/lang/String;)V
 
     const/4 p0, 0x4
 
     if-lt v2, p0, :cond_4
 
-    .line 184
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmDexOptedPackage()Ljava/util/ArrayList;
 
     move-result-object p0
 
     invoke-virtual {p0, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 186
     :cond_4
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmDexOptedPackage()Ljava/util/ArrayList;
 
@@ -439,7 +401,6 @@
 
     invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 188
     :cond_5
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmCrashPackage()Ljava/util/ArrayList;
 
@@ -449,7 +410,6 @@
 
     goto :goto_3
 
-    .line 192
     :cond_6
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmCrashPackage()Ljava/util/ArrayList;
 
@@ -473,7 +433,6 @@
 
     if-ne v1, v4, :cond_9
 
-    .line 199
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmCrashPackage()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -486,7 +445,6 @@
     :cond_a
     if-nez v5, :cond_b
 
-    .line 203
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmCrashPackage()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -497,22 +455,18 @@
 
     if-ge p0, v4, :cond_b
 
-    .line 204
     new-instance p0, Lcom/android/server/am/CrashDexOpt$CrashPackage;
 
     invoke-direct {p0}, Lcom/android/server/am/CrashDexOpt$CrashPackage;-><init>()V
 
-    .line 205
     invoke-virtual {p0, v3}, Lcom/android/server/am/CrashDexOpt$CrashPackage;->setCrashPackageData(Ljava/lang/String;)V
 
-    .line 206
     invoke-static {}, Lcom/android/server/am/CrashDexOpt;->-$$Nest$sfgetmCrashPackage()Ljava/util/ArrayList;
 
     move-result-object v1
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 219
     :cond_b
     monitor-exit v0
 
@@ -531,7 +485,6 @@
 .method public run()V
     .locals 0
 
-    .line 92
     invoke-virtual {p0}, Lcom/android/server/am/CrashDexOpt$CrashDexOptThread;->makeCrashPackageList()V
 
     return-void

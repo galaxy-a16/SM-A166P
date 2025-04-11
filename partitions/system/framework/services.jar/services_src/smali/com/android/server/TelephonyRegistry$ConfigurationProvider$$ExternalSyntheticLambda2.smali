@@ -20,7 +20,6 @@
 .method public final getOrThrow()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider;->$r8$lambda$ytnzkDR6ZanEA30bbFEyzzXw2eM()Ljava/lang/Integer;
 
     move-result-object p0

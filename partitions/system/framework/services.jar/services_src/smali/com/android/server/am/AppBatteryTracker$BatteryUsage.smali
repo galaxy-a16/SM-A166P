@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 911
     new-instance v0, Landroid/os/BatteryConsumer$Dimensions;
 
     const/4 v1, 0x0
@@ -74,7 +73,6 @@
 
     move-object v0, p0
 
-    .line 928
     invoke-direct/range {v0 .. v10}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;-><init>(DDDDD)V
 
     return-void
@@ -83,7 +81,6 @@
 .method public constructor <init>(DDDDD)V
     .locals 2
 
-    .line 932
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x5
@@ -110,7 +107,6 @@
 
     aput-wide p9, v0, p1
 
-    .line 933
     iput-object v0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
     return-void
@@ -119,10 +115,8 @@
 .method public constructor <init>(Landroid/os/UidBatteryConsumer;Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;)V
     .locals 4
 
-    .line 950
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 951
     iget-object p2, p2, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBatteryDimensions:[Landroid/os/BatteryConsumer$Dimensions;
 
     const/4 v0, 0x5
@@ -131,10 +125,8 @@
 
     const/4 v1, 0x0
 
-    .line 952
     aget-object v2, p2, v1
 
-    .line 953
     invoke-static {p1, v2}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->getConsumedPowerNoThrow(Landroid/os/UidBatteryConsumer;Landroid/os/BatteryConsumer$Dimensions;)D
 
     move-result-wide v2
@@ -145,7 +137,6 @@
 
     aget-object v2, p2, v1
 
-    .line 954
     invoke-static {p1, v2}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->getConsumedPowerNoThrow(Landroid/os/UidBatteryConsumer;Landroid/os/BatteryConsumer$Dimensions;)D
 
     move-result-wide v2
@@ -156,7 +147,6 @@
 
     aget-object v2, p2, v1
 
-    .line 955
     invoke-static {p1, v2}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->getConsumedPowerNoThrow(Landroid/os/UidBatteryConsumer;Landroid/os/BatteryConsumer$Dimensions;)D
 
     move-result-wide v2
@@ -167,7 +157,6 @@
 
     aget-object v2, p2, v1
 
-    .line 956
     invoke-static {p1, v2}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->getConsumedPowerNoThrow(Landroid/os/UidBatteryConsumer;Landroid/os/BatteryConsumer$Dimensions;)D
 
     move-result-wide v2
@@ -178,7 +167,6 @@
 
     aget-object p2, p2, v1
 
-    .line 957
     invoke-static {p1, p2}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->getConsumedPowerNoThrow(Landroid/os/UidBatteryConsumer;Landroid/os/BatteryConsumer$Dimensions;)D
 
     move-result-wide p1
@@ -193,10 +181,8 @@
 .method public constructor <init>(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)V
     .locals 1
 
-    .line 945
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 946
     iget-object v0, p1, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
     array-length v0, v0
@@ -205,7 +191,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
-    .line 947
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->setToInternal(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     return-void
@@ -214,10 +199,8 @@
 .method public constructor <init>(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;D)V
     .locals 0
 
-    .line 941
     invoke-direct {p0, p1}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;-><init>(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)V
 
-    .line 942
     invoke-virtual {p0, p2, p3}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->scaleInternal(D)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     return-void
@@ -228,10 +211,8 @@
 
     const/4 v0, 0x0
 
-    .line 1087
     aget-wide v0, p0, v0
 
-    .line 1088
     invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v0
@@ -240,7 +221,6 @@
 
     aget-wide v1, p0, v1
 
-    .line 1089
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
@@ -249,7 +229,6 @@
 
     aget-wide v2, p0, v2
 
-    .line 1090
     invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2
@@ -258,7 +237,6 @@
 
     aget-wide v3, p0, v3
 
-    .line 1091
     invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v3
@@ -267,7 +245,6 @@
 
     aget-wide v4, p0, v4
 
-    .line 1092
     invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p0
@@ -278,7 +255,6 @@
 
     const-string v0, "%.3f %.3f %.3f %.3f %.3f mAh"
 
-    .line 1087
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -291,10 +267,8 @@
 
     const/4 v0, 0x0
 
-    .line 1096
     aget-wide v0, p0, v0
 
-    .line 1097
     invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v0
@@ -303,7 +277,6 @@
 
     aget-wide v1, p0, v1
 
-    .line 1098
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
@@ -312,7 +285,6 @@
 
     aget-wide v2, p0, v2
 
-    .line 1099
     invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2
@@ -321,7 +293,6 @@
 
     aget-wide v3, p0, v3
 
-    .line 1100
     invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v3
@@ -330,7 +301,6 @@
 
     aget-wide v4, p0, v4
 
-    .line 1101
     invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p0
@@ -341,7 +311,6 @@
 
     const-string v0, "%4.2f%% %4.2f%% %4.2f%% %4.2f%% %4.2f%%"
 
-    .line 1096
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -352,7 +321,6 @@
 .method public static getConsumedPowerNoThrow(Landroid/os/UidBatteryConsumer;Landroid/os/BatteryConsumer$Dimensions;)D
     .locals 0
 
-    .line 1107
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/os/UidBatteryConsumer;->getConsumedPower(Landroid/os/BatteryConsumer$Dimensions;)D
 
@@ -375,7 +343,6 @@
 
     const/4 v0, 0x0
 
-    .line 977
     :goto_0
     iget-object v1, p1, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -383,7 +350,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 978
     iget-object v2, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
     aget-wide v3, v2, v0
@@ -405,7 +371,6 @@
 .method public calcPercentage(ILcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
     .locals 2
 
-    .line 1006
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
     if-eqz v0, :cond_0
@@ -418,7 +383,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 1007
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -428,7 +392,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
-    .line 1009
     :cond_1
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -448,13 +411,11 @@
 
     return v0
 
-    .line 1068
     :cond_0
     check-cast p1, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move v1, v0
 
-    .line 1069
     :goto_0
     iget-object v2, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -462,7 +423,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 1070
     aget-wide v2, v2, v1
 
     iget-object v4, p1, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
@@ -491,7 +451,6 @@
 .method public getPercentage()[D
     .locals 0
 
-    .line 1019
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
     return-object p0
@@ -520,7 +479,6 @@
 
     return-wide p0
 
-    .line 1040
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -528,7 +486,6 @@
 
     return-wide p0
 
-    .line 1038
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -536,7 +493,6 @@
 
     return-wide p0
 
-    .line 1036
     :cond_2
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -544,7 +500,6 @@
 
     return-wide p0
 
-    .line 1034
     :cond_3
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -560,7 +515,6 @@
 
     move v1, v0
 
-    .line 1080
     :goto_0
     iget-object v2, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -568,7 +522,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 1081
     aget-wide v2, v2, v0
 
     invoke-static {v2, v3}, Ljava/lang/Double;->hashCode(D)I
@@ -594,7 +547,6 @@
 
     move v1, v0
 
-    .line 1055
     :goto_0
     iget-object v2, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -602,7 +554,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 1056
     aget-wide v2, v2, v1
 
     const-wide/16 v4, 0x0
@@ -627,7 +578,6 @@
 .method public percentageToString()Ljava/lang/String;
     .locals 0
 
-    .line 1023
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
     invoke-static {p0}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->formatBatteryUsagePercentage([D)Ljava/lang/String;
@@ -640,7 +590,6 @@
 .method public scale(D)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
     .locals 0
 
-    .line 991
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->scaleInternal(D)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move-result-object p0
@@ -653,7 +602,6 @@
 
     const/4 v0, 0x0
 
-    .line 995
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -661,7 +609,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 996
     aget-wide v2, v1, v0
 
     mul-double/2addr v2, p1
@@ -679,7 +626,6 @@
 .method public setPercentage([D)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
     .locals 0
 
-    .line 1014
     iput-object p1, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
     return-object p0
@@ -688,7 +634,6 @@
 .method public setTo(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
     .locals 0
 
-    .line 962
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->setToInternal(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move-result-object p0
@@ -699,7 +644,6 @@
 .method public final setToInternal(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
     .locals 4
 
-    .line 966
     iget-object v0, p1, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
@@ -710,19 +654,16 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 967
     iget-object v0, p1, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
     if-eqz v0, :cond_0
 
-    .line 968
     array-length v0, v0
 
     new-array v0, v0, [D
 
     iput-object v0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
-    .line 969
     iget-object p1, p1, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
     array-length v1, p1
@@ -734,7 +675,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 971
     iput-object p1, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mPercentage:[D
 
     :goto_0
@@ -746,7 +686,6 @@
 
     const/4 v0, 0x0
 
-    .line 984
     :goto_0
     iget-object v1, p1, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
@@ -754,7 +693,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 985
     iget-object v2, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
     aget-wide v3, v2, v0
@@ -782,7 +720,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 1028
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->mUsage:[D
 
     invoke-static {p0}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->formatBatteryUsage([D)Ljava/lang/String;
@@ -795,7 +732,6 @@
 .method public unmutate()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
     .locals 1
 
-    .line 1002
     new-instance v0, Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;-><init>(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)V

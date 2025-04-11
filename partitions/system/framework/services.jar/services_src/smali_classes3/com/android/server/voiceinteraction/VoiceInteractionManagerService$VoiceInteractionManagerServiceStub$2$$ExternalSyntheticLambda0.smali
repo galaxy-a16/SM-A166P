@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-static {p1}, Lcom/android/server/voiceinteraction/VoiceInteractionManagerService$VoiceInteractionManagerServiceStub$2;->$r8$lambda$sOIX3GoB0lDBl9Iq9vdWz_L0YNE(Ljava/lang/Boolean;)V

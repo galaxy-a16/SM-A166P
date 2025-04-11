@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,22 +45,18 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "com.android.server.BatteryService"
 
-    .line 24
     iput-object v0, p0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->KEY_CALLER_PACKAGE_NAME:Ljava/lang/String;
 
-    .line 27
     sget-object v0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
 
     const-string v1, "PersonalPatternManager Created"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     iput-object p1, p0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->mContext:Landroid/content/Context;
 
     return-void
@@ -74,7 +69,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 95
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -105,7 +99,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_0
     new-instance p0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager$SleepPattern;
 
@@ -125,7 +118,6 @@
 
     return-object p0
 
-    .line 96
     :cond_1
     :goto_0
     sget-object p0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
@@ -134,7 +126,6 @@
 
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,12 +174,10 @@
 .method public getSleepPatterns()Ljava/util/Map;
     .locals 12
 
-    .line 57
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 59
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
@@ -197,17 +186,14 @@
 
     const-string v3, "com.android.server.BatteryService"
 
-    .line 60
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "android:query-arg-sql-sort-order"
 
     const-string/jumbo v3, "week_type"
 
-    .line 61
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 62
     :try_start_0
     iget-object p0, p0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->mContext:Landroid/content/Context;
 
@@ -227,7 +213,6 @@
 
     if-nez p0, :cond_0
 
-    .line 65
     :try_start_1
     sget-object v1, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
 
@@ -237,7 +222,6 @@
 
     goto/16 :goto_3
 
-    .line 66
     :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
 
@@ -245,7 +229,6 @@
 
     if-nez v1, :cond_1
 
-    .line 67
     sget-object v1, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
 
     const-string v2, "[getSleepPatterns]Fail - cursor empty"
@@ -254,7 +237,6 @@
 
     goto/16 :goto_3
 
-    .line 69
     :cond_1
     sget-object v1, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
 
@@ -278,10 +260,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 72
     :cond_2
     invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -293,7 +273,6 @@
 
     const-string v2, "bedtime"
 
-    .line 73
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -304,7 +283,6 @@
 
     const-string/jumbo v2, "wakeup_time"
 
-    .line 74
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -315,7 +293,6 @@
 
     const-string v2, "confidence"
 
-    .line 75
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -326,7 +303,6 @@
 
     const-string/jumbo v2, "is_confident"
 
-    .line 76
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -349,7 +325,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 77
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -380,7 +355,6 @@
 
     goto :goto_1
 
-    .line 83
     :cond_4
     new-instance v2, Lcom/android/server/battery/sleepcharging/PersonalPatternManager$SleepPattern;
 
@@ -394,7 +368,6 @@
 
     goto :goto_2
 
-    .line 78
     :cond_5
     :goto_1
     sget-object v2, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
@@ -403,7 +376,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -444,7 +416,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :goto_2
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -457,7 +428,6 @@
     :goto_3
     if-eqz p0, :cond_7
 
-    .line 86
     :try_start_2
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_2
@@ -470,7 +440,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 62
     :try_start_3
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_3
@@ -493,17 +462,14 @@
     :catch_0
     move-exception p0
 
-    .line 87
     sget-object v1, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
 
     const-string v2, "[getSleepPatterns]Exception"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 90
     :cond_7
     :goto_5
     sget-object p0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
@@ -534,7 +500,6 @@
 .method public queryRunestoneStatus()Ljava/lang/String;
     .locals 5
 
-    .line 34
     :try_start_0
     iget-object p0, p0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->mContext:Landroid/content/Context;
 
@@ -558,33 +523,28 @@
 
     const-string v0, "isDeviceRubinSupported"
 
-    .line 37
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
     const-string v1, "isDeviceRubinWorkable"
 
-    .line 38
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v1
 
     const-string v2, "isEnabledInSupportedApps"
 
-    .line 39
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
     const-string v3, "currentRubinState"
 
-    .line 40
     invoke-virtual {p0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 42
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -629,22 +589,18 @@
     :catch_0
     move-exception p0
 
-    .line 48
     sget-object v0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
 
     const-string v1, "[queryRunestoneStatus]Exception"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 50
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 52
     :goto_0
     sget-object v0, Lcom/android/server/battery/sleepcharging/PersonalPatternManager;->TAG:Ljava/lang/String;
 

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/appwidget/AppWidgetServiceImpl;Landroid/content/Intent;)V
     .locals 0
 
-    .line 2721
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$3;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     iput-object p2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$3;->val$intent:Landroid/content/Intent;
@@ -31,7 +30,6 @@
 .method public onNullBinding(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 2735
     iget-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$3;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$fgetmContext(Lcom/android/server/appwidget/AppWidgetServiceImpl;)Landroid/content/Context;
@@ -46,12 +44,10 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 2724
     invoke-static {p2}, Lcom/android/internal/widget/IRemoteViewsFactory$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/widget/IRemoteViewsFactory;
 
     move-result-object p1
 
-    .line 2726
     :try_start_0
     iget-object p2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$3;->val$intent:Landroid/content/Intent;
 
@@ -68,10 +64,8 @@
 
     const-string v0, "Error calling remove view factory"
 
-    .line 2728
     invoke-static {p2, v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2730
     :goto_0
     iget-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$3;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
@@ -87,6 +81,5 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

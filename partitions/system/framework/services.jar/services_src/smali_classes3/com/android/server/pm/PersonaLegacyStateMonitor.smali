@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/pm/PersonaLegacyStateMonitor;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEdmStorageProvider(Lcom/android/server/pm/PersonaLegacyStateMonitor;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     return-object p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserManager(Lcom/android/server/pm/PersonaLegacyStateMonitor;)Landroid/os/UserManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mUserManager:Landroid/os/UserManager;
 
     return-object p0
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyStateChange(Lcom/android/server/pm/PersonaLegacyStateMonitor;ILcom/samsung/android/knox/SemPersonaState;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->notifyStateChange(ILcom/samsung/android/knox/SemPersonaState;)V
 
     return-void
@@ -61,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$msendIntentForRemoveContainer(Lcom/android/server/pm/PersonaLegacyStateMonitor;Ljava/lang/String;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->sendIntentForRemoveContainer(Ljava/lang/String;II)V
 
     return-void
@@ -70,10 +65,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -82,25 +75,20 @@
 
     const/4 v0, 0x0
 
-    .line 52
     iput-object v0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 53
     iput-object v0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdm:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
-    .line 285
     new-instance v0, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/PersonaLegacyStateMonitor$1;-><init>(Lcom/android/server/pm/PersonaLegacyStateMonitor;)V
 
     iput-object v0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->receiver:Landroid/os/ContainerStateReceiver;
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "user"
 
-    .line 61
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -109,7 +97,6 @@
 
     iput-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mUserManager:Landroid/os/UserManager;
 
-    .line 62
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     const-string v0, "keyguard"
@@ -122,14 +109,12 @@
 
     iput-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 63
     new-instance p1, Landroid/os/RemoteCallbackList;
 
     invoke-direct {p1}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mObserverList:Landroid/os/RemoteCallbackList;
 
-    .line 64
     new-instance p1, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
@@ -138,7 +123,6 @@
 
     iput-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 65
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/EnterpriseDeviceManager;
@@ -147,7 +131,6 @@
 
     iput-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdm:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
-    .line 66
     invoke-virtual {p0}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->init()V
 
     return-void
@@ -162,7 +145,6 @@
 
     return v0
 
-    .line 169
     :cond_0
     sget-object v1, Lcom/android/server/pm/PersonaLegacyStateMonitor$2;->$SwitchMap$com$samsung$android$knox$SemPersonaState:[I
 
@@ -218,10 +200,8 @@
 
     const-string v1, "initialized"
 
-    .line 70
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "user"
@@ -232,12 +212,10 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    .line 73
     invoke-virtual {v0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v0
 
-    .line 74
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -256,14 +234,12 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 76
     iget v2, v1, Landroid/content/pm/UserInfo;->id:I
 
     if-nez v2, :cond_1
 
     goto :goto_0
 
-    .line 77
     :cond_1
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
@@ -271,7 +247,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 78
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
     move-result v2
@@ -280,7 +255,6 @@
 
     if-lez v2, :cond_2
 
-    .line 79
     iget-object v2, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mStateMap:Ljava/util/HashMap;
 
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
@@ -295,7 +269,6 @@
 
     goto :goto_0
 
-    .line 80
     :cond_2
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
@@ -305,7 +278,6 @@
 
     if-lez v2, :cond_3
 
-    .line 81
     iget-object v2, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mStateMap:Ljava/util/HashMap;
 
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
@@ -320,7 +292,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_3
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->getAttributes()I
 
@@ -330,7 +301,6 @@
 
     if-lez v2, :cond_4
 
-    .line 83
     iget-object v2, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mStateMap:Ljava/util/HashMap;
 
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
@@ -345,7 +315,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_4
     iget-object v2, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mKeyguardManager:Landroid/app/KeyguardManager;
 
@@ -357,7 +326,6 @@
 
     if-nez v2, :cond_5
 
-    .line 85
     iget-object v2, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mStateMap:Ljava/util/HashMap;
 
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
@@ -372,7 +340,6 @@
 
     goto :goto_0
 
-    .line 86
     :cond_5
     iget-object v2, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mKeyguardManager:Landroid/app/KeyguardManager;
 
@@ -384,7 +351,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 87
     iget-object v2, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mStateMap:Ljava/util/HashMap;
 
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
@@ -399,7 +365,6 @@
 
     goto/16 :goto_0
 
-    .line 91
     :cond_6
     iget-object v0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
@@ -419,7 +384,6 @@
 
     move-object/from16 v9, p2
 
-    .line 101
     iget-object v0, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mStateMap:Ljava/util/HashMap;
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -434,7 +398,6 @@
 
     if-nez v0, :cond_0
 
-    .line 103
     sget-object v0, Lcom/samsung/android/knox/SemPersonaState;->INVALID:Lcom/samsung/android/knox/SemPersonaState;
 
     :cond_0
@@ -444,7 +407,6 @@
 
     return-void
 
-    .line 108
     :cond_1
     iget-object v0, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mObserverList:Landroid/os/RemoteCallbackList;
 
@@ -452,7 +414,6 @@
 
     move-result v0
 
-    .line 109
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -494,7 +455,6 @@
 
     add-int/lit8 v1, v0, -0x1
 
-    .line 113
     :try_start_0
     iget-object v0, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mObserverList:Landroid/os/RemoteCallbackList;
 
@@ -513,7 +473,6 @@
     :catch_0
     move-exception v0
 
-    .line 115
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_1
@@ -521,20 +480,17 @@
 
     goto :goto_0
 
-    .line 118
     :cond_2
     iget-object v0, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mObserverList:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 121
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sec.knox.container.action.observer"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 122
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -553,10 +509,8 @@
 
     const-string v1, "com.sec.knox.container.category.observer.onstatechange"
 
-    .line 123
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 125
     invoke-virtual/range {p2 .. p2}, Lcom/samsung/android/knox/SemPersonaState;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -565,7 +519,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 126
     invoke-virtual {v10}, Lcom/samsung/android/knox/SemPersonaState;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -574,7 +527,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 129
     iget-object v1, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -585,27 +537,22 @@
 
     const-string/jumbo v0, "propagateNewStateChange() sendBroadcast()"
 
-    .line 130
     invoke-static {v11, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     iget-object v0, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v0, v8}, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->getMUMContainerOwnerUid(I)I
 
     move-result v0
 
-    .line 134
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v12
 
-    .line 136
     invoke-static {v10}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->translateStatus(Lcom/samsung/android/knox/SemPersonaState;)I
 
     move-result v13
 
-    .line 137
     invoke-static/range {p2 .. p2}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->translateStatus(Lcom/samsung/android/knox/SemPersonaState;)I
 
     move-result v14
@@ -616,7 +563,6 @@
 
     if-eq v13, v14, :cond_4
 
-    .line 140
     iget-object v1, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -631,7 +577,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 142
     array-length v4, v6
 
     move/from16 v3, v16
@@ -663,10 +608,8 @@
 
     move v6, v14
 
-    .line 143
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->sendContainerStateChangeIntent(Ljava/lang/String;IIII)V
 
-    .line 144
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -714,10 +657,8 @@
 
     move v6, v14
 
-    .line 147
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->sendContainerStateChangeIntent(Ljava/lang/String;IIII)V
 
-    .line 148
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -737,7 +678,6 @@
     :cond_4
     move/from16 v20, v0
 
-    .line 153
     :goto_3
     sget-object v0, Lcom/samsung/android/knox/SemPersonaState;->ADMIN_LOCKED:Lcom/samsung/android/knox/SemPersonaState;
 
@@ -745,7 +685,6 @@
 
     if-eq v10, v0, :cond_6
 
-    .line 154
     iget-object v0, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -760,7 +699,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 156
     array-length v1, v0
 
     move/from16 v2, v16
@@ -770,10 +708,8 @@
 
     aget-object v3, v0, v2
 
-    .line 157
     invoke-virtual {v7, v3, v8, v12}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->sendIntentForAdminLock(Ljava/lang/String;II)V
 
-    .line 158
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -801,10 +737,8 @@
     :cond_5
     const/4 v0, 0x0
 
-    .line 161
     invoke-virtual {v7, v0, v8, v12}, Lcom/android/server/pm/PersonaLegacyStateMonitor;->sendIntentForAdminLock(Ljava/lang/String;II)V
 
-    .line 164
     :cond_6
     iget-object v0, v7, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mStateMap:Ljava/util/HashMap;
 
@@ -820,12 +754,10 @@
 .method public register(Landroid/content/pm/ISystemPersonaObserver;)Z
     .locals 0
 
-    .line 95
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mObserverList:Landroid/os/RemoteCallbackList;
 
     if-eqz p0, :cond_0
 
-    .line 96
     invoke-virtual {p0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
     move-result p0
@@ -841,7 +773,6 @@
 .method public final sendContainerStateChangeIntent(Ljava/lang/String;IIII)V
     .locals 3
 
-    .line 208
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.knox.intent.action.CONTAINER_STATE_CHANGED"
@@ -850,17 +781,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 209
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 210
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 212
     :cond_0
     new-instance v1, Landroid/os/Bundle;
 
@@ -868,25 +796,20 @@
 
     const-string v2, "containerid"
 
-    .line 213
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p2, "container_old_state"
 
-    .line 215
     invoke-virtual {v1, p2, p4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p2, "container_new_state"
 
-    .line 216
     invoke-virtual {v1, p2, p5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p2, "intent"
 
-    .line 218
     invoke-virtual {v0, p2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 219
     iget-object p2, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     new-instance p4, Landroid/os/UserHandle;
@@ -899,29 +822,24 @@
 
     if-eqz p1, :cond_1
 
-    .line 223
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 224
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdm:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getKPUPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 225
     new-instance p2, Landroid/content/Intent;
 
     invoke-direct {p2, v0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 226
     invoke-virtual {p2, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 227
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     new-instance p1, Landroid/os/UserHandle;
@@ -937,7 +855,6 @@
 .method public final sendIntentForAdminLock(Ljava/lang/String;II)V
     .locals 4
 
-    .line 234
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.knox.intent.action.CONTAINER_ADMIN_LOCK"
@@ -946,17 +863,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 235
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 236
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 238
     :cond_0
     new-instance v1, Landroid/os/Bundle;
 
@@ -964,19 +878,16 @@
 
     const-string v2, "containerid"
 
-    .line 239
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p2, "intent"
 
-    .line 240
     invoke-virtual {v0, p2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
     const-string p2, "com.samsung.android.knox.permission.KNOX_CONTAINER"
 
     if-eqz p1, :cond_1
 
-    .line 242
     iget-object v1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -991,7 +902,6 @@
 
     goto :goto_0
 
-    .line 245
     :cond_1
     iget-object v1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
@@ -1002,22 +912,18 @@
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 250
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdm:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getKPUPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 251
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 252
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 253
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     new-instance p1, Landroid/os/UserHandle;
@@ -1037,7 +943,6 @@
 .method public final sendIntentForRemoveContainer(Ljava/lang/String;II)V
     .locals 4
 
-    .line 260
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.knox.intent.action.CONTAINER_REMOVED"
@@ -1046,17 +951,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 261
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 262
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 264
     :cond_0
     new-instance v1, Landroid/os/Bundle;
 
@@ -1064,19 +966,16 @@
 
     const-string v2, "containerid"
 
-    .line 265
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p2, "intent"
 
-    .line 266
     invoke-virtual {v0, p2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
     const-string p2, "com.samsung.android.knox.permission.KNOX_CONTAINER"
 
     if-eqz p1, :cond_1
 
-    .line 268
     iget-object v1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -1091,7 +990,6 @@
 
     goto :goto_0
 
-    .line 271
     :cond_1
     iget-object v1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
@@ -1102,22 +1000,18 @@
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 276
     iget-object p1, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mEdm:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getKPUPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 277
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 278
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 279
     iget-object p0, p0, Lcom/android/server/pm/PersonaLegacyStateMonitor;->mContext:Landroid/content/Context;
 
     new-instance p1, Landroid/os/UserHandle;

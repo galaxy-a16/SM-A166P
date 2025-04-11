@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Lcom/android/server/location/injector/DeviceStationaryHelper;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public addListener(Lcom/android/server/DeviceIdleInternal$StationaryListener;)V
     .locals 2
 
-    .line 42
     iget-object v0, p0, Lcom/android/server/location/injector/SystemDeviceStationaryHelper;->mDeviceIdle:Lcom/android/server/DeviceIdleInternal;
 
     if-eqz v0, :cond_0
@@ -37,12 +35,10 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 44
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 46
     :try_start_0
     iget-object p0, p0, Lcom/android/server/location/injector/SystemDeviceStationaryHelper;->mDeviceIdle:Lcom/android/server/DeviceIdleInternal;
 
@@ -50,7 +46,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 48
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -60,14 +55,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 49
     throw p0
 .end method
 
 .method public onSystemReady()V
     .locals 1
 
-    .line 37
     const-class v0, Lcom/android/server/DeviceIdleInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -88,7 +81,6 @@
 .method public removeListener(Lcom/android/server/DeviceIdleInternal$StationaryListener;)V
     .locals 2
 
-    .line 54
     iget-object v0, p0, Lcom/android/server/location/injector/SystemDeviceStationaryHelper;->mDeviceIdle:Lcom/android/server/DeviceIdleInternal;
 
     if-eqz v0, :cond_0
@@ -103,12 +95,10 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 56
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 58
     :try_start_0
     iget-object p0, p0, Lcom/android/server/location/injector/SystemDeviceStationaryHelper;->mDeviceIdle:Lcom/android/server/DeviceIdleInternal;
 
@@ -116,7 +106,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 60
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -126,6 +115,5 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 61
     throw p0
 .end method

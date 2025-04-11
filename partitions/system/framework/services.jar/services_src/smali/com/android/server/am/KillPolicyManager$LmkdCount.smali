@@ -49,7 +49,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/KillPolicyManager$LmkdCount;
     .locals 17
 
-    .line 1915
     sget-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->CACHED_APP_MAX_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     sget-object v1, Lcom/android/server/am/KillPolicyManager$LmkdCount;->CACHED_APP_MIN_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
@@ -94,7 +93,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 1916
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0x3e7
@@ -107,7 +105,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->CACHED_APP_MAX_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1917
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/4 v1, 0x1
@@ -120,7 +117,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->CACHED_APP_MIN_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1918
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/4 v1, 0x2
@@ -133,7 +129,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->SEEDBED_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1919
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/4 v1, 0x3
@@ -146,7 +141,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->PICKED_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1920
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/4 v1, 0x4
@@ -159,7 +153,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->ARCHIVED_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1921
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/4 v1, 0x5
@@ -172,7 +165,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->SERVICE_B_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1922
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/4 v1, 0x6
@@ -185,7 +177,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->PREVIOUS_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1923
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/4 v1, 0x7
@@ -198,7 +189,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->HOME_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1924
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0x8
@@ -211,7 +201,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->SERVICE_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1925
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0x9
@@ -224,7 +213,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->HEAVY_WEIGHT_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1926
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0xa
@@ -237,7 +225,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->BORA_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1927
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0xb
@@ -250,7 +237,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->BACKUP_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1928
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0xc
@@ -263,7 +249,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->PERCEPTIBLE_LOW_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1929
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0xd
@@ -276,7 +261,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->PERCEPTIBLE_MEDIUM_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1930
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0xe
@@ -289,7 +273,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->PERCEPTIBLE_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1931
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const/16 v1, 0xf
@@ -302,7 +285,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->VISIBLE_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1932
     new-instance v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     const-string v1, "FOREGROUND_APP_ADJ"
@@ -313,7 +295,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->FOREGROUND_APP_ADJ:Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
-    .line 1915
     invoke-static {}, Lcom/android/server/am/KillPolicyManager$LmkdCount;->$values()[Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     move-result-object v0
@@ -326,10 +307,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 1936
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1937
     iput p3, p0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->mADJ:I
 
     return-void
@@ -338,7 +317,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/KillPolicyManager$LmkdCount;
     .locals 1
 
-    .line 1915
     const-class v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -353,7 +331,6 @@
 .method public static values()[Lcom/android/server/am/KillPolicyManager$LmkdCount;
     .locals 1
 
-    .line 1915
     sget-object v0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->$VALUES:[Lcom/android/server/am/KillPolicyManager$LmkdCount;
 
     invoke-virtual {v0}, [Lcom/android/server/am/KillPolicyManager$LmkdCount;->clone()Ljava/lang/Object;
@@ -370,7 +347,6 @@
 .method public getADJ()I
     .locals 0
 
-    .line 1941
     iget p0, p0, Lcom/android/server/am/KillPolicyManager$LmkdCount;->mADJ:I
 
     return p0

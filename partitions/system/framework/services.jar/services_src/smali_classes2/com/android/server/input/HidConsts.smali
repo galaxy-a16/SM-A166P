@@ -15,7 +15,6 @@
 
     new-array v0, v0, [B
 
-    .line 25
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/input/HidConsts;->DESCRIPTOR:[B

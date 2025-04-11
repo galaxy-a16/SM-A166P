@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$iOR7YTmPe6qb-H0s8Z-0RjW50g8(Ljava/lang/Runnable;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/ThreadingDomain;->lambda$postAndWait$0(Ljava/lang/Runnable;)Ljava/lang/Object;
 
     move-result-object p0
@@ -22,10 +21,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +35,6 @@
 .method public static synthetic lambda$postAndWait$0(Ljava/lang/Runnable;)Ljava/lang/Object;
     .locals 0
 
-    .line 90
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     const/4 p0, 0x0
@@ -51,7 +47,6 @@
 .method public assertCurrentThread()V
     .locals 1
 
-    .line 63
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -78,7 +73,6 @@
 .method public assertNotCurrentThread()V
     .locals 1
 
-    .line 71
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -105,7 +99,6 @@
 .method public createSingleRunnableQueue()Lcom/android/server/timezonedetector/location/ThreadingDomain$SingleRunnableQueue;
     .locals 1
 
-    .line 124
     new-instance v0, Lcom/android/server/timezonedetector/location/ThreadingDomain$SingleRunnableQueue;
 
     invoke-direct {v0, p0}, Lcom/android/server/timezonedetector/location/ThreadingDomain$SingleRunnableQueue;-><init>(Lcom/android/server/timezonedetector/location/ThreadingDomain;)V
@@ -116,7 +109,6 @@
 .method public getLockObject()Ljava/lang/Object;
     .locals 0
 
-    .line 48
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/ThreadingDomain;->mLockObject:Ljava/lang/Object;
 
     return-object p0
@@ -134,7 +126,6 @@
 .method public final postAndWait(Ljava/lang/Runnable;J)V
     .locals 1
 
-    .line 89
     :try_start_0
     new-instance v0, Lcom/android/server/timezonedetector/location/ThreadingDomain$$ExternalSyntheticLambda0;
 
@@ -149,7 +140,6 @@
     :catch_0
     move-exception p0
 
-    .line 94
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

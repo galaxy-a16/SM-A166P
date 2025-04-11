@@ -17,17 +17,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 67
     invoke-direct {p0}, Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgentService;-><init>()V
 
-    .line 68
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/DDCache;->context:Landroid/content/Context;
 
     return-void
@@ -40,20 +37,17 @@
 
     monitor-enter v0
 
-    .line 61
     :try_start_0
     sget-object v1, Lcom/android/server/knox/dar/ddar/DDCache;->_instance:Lcom/android/server/knox/dar/ddar/DDCache;
 
     if-nez v1, :cond_0
 
-    .line 62
     new-instance v1, Lcom/android/server/knox/dar/ddar/DDCache;
 
     invoke-direct {v1, p0}, Lcom/android/server/knox/dar/ddar/DDCache;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/android/server/knox/dar/ddar/DDCache;->_instance:Lcom/android/server/knox/dar/ddar/DDCache;
 
-    .line 64
     :cond_0
     sget-object p0, Lcom/android/server/knox/dar/ddar/DDCache;->_instance:Lcom/android/server/knox/dar/ddar/DDCache;
     :try_end_0
@@ -76,7 +70,6 @@
 .method public final constructuctCacheKey(ILjava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 103
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,7 +96,6 @@
 .method public final enforceCallingUser(I)V
     .locals 2
 
-    .line 151
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result p0
@@ -122,7 +114,6 @@
 
     goto :goto_0
 
-    .line 155
     :cond_0
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -136,7 +127,6 @@
 
     return-void
 
-    .line 156
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -166,7 +156,6 @@
 .method public get(ILjava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 94
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/DDCache;->getPersonaService()Lcom/samsung/android/knox/ISemPersonaManager;
 
@@ -187,7 +176,6 @@
     :catch_0
     move-exception p0
 
-    .line 96
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -198,7 +186,6 @@
 
     const-string p2, "get value failed"
 
-    .line 97
     invoke-static {p1, p2, p0}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     const/4 p0, 0x0
@@ -210,7 +197,6 @@
 .method public final getPersonaService()Lcom/samsung/android/knox/ISemPersonaManager;
     .locals 1
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/DDCache;->semPersonaManager:Lcom/samsung/android/knox/ISemPersonaManager;
 
     if-nez v0, :cond_0
@@ -218,7 +204,6 @@
     :try_start_0
     const-string/jumbo v0, "persona"
 
-    .line 74
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -236,10 +221,8 @@
     :catch_0
     move-exception v0
 
-    .line 76
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 79
     :cond_0
     :goto_0
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/DDCache;->semPersonaManager:Lcom/samsung/android/knox/ISemPersonaManager;
@@ -255,7 +238,6 @@
     :try_start_0
     const-string v1, "DDCache"
 
-    .line 113
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,12 +258,10 @@
 
     invoke-static {v1, v2, v4}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 114
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 115
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -364,76 +344,60 @@
 
     goto :goto_2
 
-    .line 134
     :cond_4
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/DDCache;->enforceCallingUser(I)V
 
-    .line 135
     invoke-virtual {p3, v7}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 136
     invoke-virtual {p3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 137
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/knox/dar/ddar/DDCache;->set(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 139
     invoke-virtual {v1, v2, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 126
     :cond_5
     invoke-virtual {p3, v7}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 127
     invoke-virtual {p3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 128
     invoke-virtual {p0, p1, p3}, Lcom/android/server/knox/dar/ddar/DDCache;->get(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 130
     invoke-virtual {v1, p2, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 131
     invoke-virtual {v1, v2, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 117
     :cond_6
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/DDCache;->enforceCallingUser(I)V
 
-    .line 118
     invoke-virtual {p3, v7}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 119
     invoke-virtual {p3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 120
     invoke-virtual {p3, p2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 121
     invoke-virtual {p0, p1, v3, p2}, Lcom/android/server/knox/dar/ddar/DDCache;->set(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 123
     invoke-virtual {v1, v2, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -444,7 +408,6 @@
     :catch_0
     move-exception p0
 
-    .line 145
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object v0
@@ -453,7 +416,6 @@
 .method public set(ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 84
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/DDCache;->getPersonaService()Lcom/samsung/android/knox/ISemPersonaManager;
 
@@ -472,7 +434,6 @@
     :catch_0
     move-exception p0
 
-    .line 86
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -483,7 +444,6 @@
 
     const-string/jumbo p2, "set value failed"
 
-    .line 87
     invoke-static {p1, p2, p0}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     :goto_0

@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$eLsUjZnqGhAPqs0Vxt9exeEjOYo(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->lambda$removeNonSystemPackageSuspensions$0(Ljava/lang/String;)Z
 
     move-result p0
@@ -22,10 +21,8 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;)V
     .locals 0
 
-    .line 74
     invoke-direct {p0}, Landroid/content/pm/PackageManagerInternal;-><init>()V
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     return-void
@@ -36,7 +33,6 @@
 
     const-string v0, "android"
 
-    .line 243
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -51,7 +47,6 @@
 .method public final canAccessComponent(ILandroid/content/ComponentName;I)Z
     .locals 0
 
-    .line 522
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -66,7 +61,6 @@
 .method public final canAccessInstantApps(II)Z
     .locals 0
 
-    .line 515
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -81,7 +75,6 @@
 .method public final canQueryPackage(ILjava/lang/String;)Z
     .locals 0
 
-    .line 144
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -96,7 +89,6 @@
 .method public checkUidSignaturesForAllUsers(II)I
     .locals 0
 
-    .line 739
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -111,7 +103,6 @@
 .method public final commitPackageStateMutation(Lcom/android/server/pm/pkg/mutate/PackageStateMutator$InitialState;Ljava/util/function/Consumer;)Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
     .locals 0
 
-    .line 761
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageManagerService;->commitPackageStateMutation(Lcom/android/server/pm/pkg/mutate/PackageStateMutator$InitialState;Ljava/util/function/Consumer;)Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
@@ -124,7 +115,6 @@
 .method public final deleteOatArtifactsOfPackage(Ljava/lang/String;)J
     .locals 1
 
-    .line 710
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -141,7 +131,6 @@
 .method public final filterAppAccess(II)Z
     .locals 0
 
-    .line 131
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -156,7 +145,6 @@
 .method public final filterAppAccess(Lcom/android/server/pm/pkg/AndroidPackage;II)Z
     .locals 0
 
-    .line 118
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -171,7 +159,6 @@
 .method public final filterAppAccess(Ljava/lang/String;IIZ)Z
     .locals 0
 
-    .line 125
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -186,7 +173,6 @@
 .method public final finishPackageInstall(IZ)V
     .locals 0
 
-    .line 642
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageManagerService;->finishPackageInstall(IZ)V
@@ -197,7 +183,6 @@
 .method public final forEachInstalledPackage(Ljava/util/function/Consumer;I)V
     .locals 1
 
-    .line 591
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -212,7 +197,6 @@
 .method public final forEachPackage(Ljava/util/function/Consumer;)V
     .locals 1
 
-    .line 584
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -227,7 +211,6 @@
 .method public final forEachPackageSetting(Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 572
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerService;->forEachPackageSetting(Ljava/util/function/Consumer;)V
@@ -238,7 +221,6 @@
 .method public final forEachPackageState(Ljava/util/function/Consumer;)V
     .locals 1
 
-    .line 578
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -253,7 +235,6 @@
 .method public final freeAllAppCacheAboveQuota(Ljava/lang/String;)V
     .locals 0
 
-    .line 566
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerService;->freeAllAppCacheAboveQuota(Ljava/lang/String;)V
@@ -264,7 +245,6 @@
 .method public final freeStorage(Ljava/lang/String;JI)V
     .locals 0
 
-    .line 560
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/pm/PackageManagerService;->freeStorage(Ljava/lang/String;JI)V
@@ -275,7 +255,6 @@
 .method public final getActivityInfo(Landroid/content/ComponentName;JII)Landroid/content/pm/ActivityInfo;
     .locals 6
 
-    .line 302
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object v0
@@ -298,7 +277,6 @@
 .method public final getAndroidPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/AndroidPackage;
     .locals 0
 
-    .line 157
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -316,7 +294,6 @@
 .method public final getApksInApex(Ljava/lang/String;)Ljava/util/List;
     .locals 0
 
-    .line 654
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getApexManager()Lcom/android/server/pm/ApexManager;
 
     move-result-object p0
@@ -334,7 +311,6 @@
 .method public final getApplicationEnabledState(Ljava/lang/String;I)I
     .locals 0
 
-    .line 618
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerInternalBase;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
@@ -345,7 +321,6 @@
 
     return p0
 
-    .line 622
     :cond_0
     invoke-interface {p0, p2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
@@ -361,7 +336,6 @@
 .method public final getApplicationInfo(Ljava/lang/String;JII)Landroid/content/pm/ApplicationInfo;
     .locals 6
 
-    .line 295
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object v0
@@ -384,7 +358,6 @@
 .method public final getComponentEnabledSetting(Landroid/content/ComponentName;II)I
     .locals 0
 
-    .line 629
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -402,7 +375,6 @@
 .method public final getDefaultHomeActivity(I)Landroid/content/ComponentName;
     .locals 0
 
-    .line 343
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -417,21 +389,18 @@
 .method public final getDisabledComponents(Ljava/lang/String;I)Landroid/util/ArraySet;
     .locals 0
 
-    .line 607
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerInternalBase;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 609
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
 
     return-object p0
 
-    .line 611
     :cond_0
     invoke-interface {p0, p2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
@@ -447,7 +416,6 @@
 .method public final getDisabledSystemPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
     .locals 0
 
-    .line 195
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -465,7 +433,6 @@
 .method public final getDistractingPackageRestrictions(Ljava/lang/String;I)I
     .locals 0
 
-    .line 279
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerInternalBase;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
@@ -476,7 +443,6 @@
 
     goto :goto_0
 
-    .line 281
     :cond_0
     invoke-interface {p0, p2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
@@ -493,21 +459,18 @@
 .method public final getEnabledComponents(Ljava/lang/String;I)Landroid/util/ArraySet;
     .locals 0
 
-    .line 597
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerInternalBase;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 599
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
 
     return-object p0
 
-    .line 601
     :cond_0
     invoke-interface {p0, p2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
@@ -523,7 +486,6 @@
 .method public final getHomeActivitiesAsUser(Ljava/util/List;I)Landroid/content/ComponentName;
     .locals 0
 
-    .line 337
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -538,7 +500,6 @@
 .method public final getInstalledApplications(JII)Ljava/util/List;
     .locals 0
 
-    .line 100
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -553,7 +514,6 @@
 .method public final getInstantAppPackageName(I)Ljava/lang/String;
     .locals 0
 
-    .line 112
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -571,7 +531,6 @@
 .method public final getKnownPackageNames(II)[Ljava/lang/String;
     .locals 1
 
-    .line 201
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -588,7 +547,6 @@
 .method public final getNameForUid(I)Ljava/lang/String;
     .locals 0
 
-    .line 406
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -603,7 +561,6 @@
 .method public final getPackage(I)Lcom/android/server/pm/pkg/AndroidPackage;
     .locals 0
 
-    .line 163
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -618,7 +575,6 @@
 .method public final getPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/AndroidPackage;
     .locals 0
 
-    .line 150
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -633,7 +589,6 @@
 .method public final getPackageInfo(Ljava/lang/String;JII)Landroid/content/pm/PackageInfo;
     .locals 8
 
-    .line 220
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object v0
@@ -661,7 +616,6 @@
 .method public final getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
     .locals 0
 
-    .line 176
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -676,7 +630,6 @@
 .method public final getPackageStates()Landroid/util/ArrayMap;
     .locals 0
 
-    .line 183
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -691,21 +644,18 @@
 .method public final getPackageTargetSdkVersion(Ljava/lang/String;)I
     .locals 0
 
-    .line 505
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerInternalBase;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 506
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 507
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object p0
@@ -725,7 +675,6 @@
 .method public final getPackageUid(Ljava/lang/String;JI)I
     .locals 6
 
-    .line 288
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object v0
@@ -748,7 +697,6 @@
 .method public final getPackagesForAppId(I)Ljava/util/List;
     .locals 0
 
-    .line 169
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -763,7 +711,6 @@
 .method public final getPermissionGids(Ljava/lang/String;I)[I
     .locals 0
 
-    .line 553
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getPermissionManager()Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
     move-result-object p0
@@ -781,7 +728,6 @@
 .method public final getProcessesForUid(I)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 547
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -802,7 +748,6 @@
 .method public final getSetupWizardPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 453
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mSetupWizardPackage:Ljava/lang/String;
@@ -813,7 +758,6 @@
 .method public getSharedUserApi(I)Lcom/android/server/pm/pkg/SharedUserApi;
     .locals 0
 
-    .line 729
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -828,7 +772,6 @@
 .method public getSharedUserPackages(I)Landroid/util/ArraySet;
     .locals 0
 
-    .line 723
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -843,7 +786,6 @@
 .method public final getSharedUserPackagesForPackage(Ljava/lang/String;I)[Ljava/lang/String;
     .locals 0
 
-    .line 541
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -861,7 +803,6 @@
 .method public final getSuspendedDialogInfo(Ljava/lang/String;Ljava/lang/String;I)Landroid/content/pm/SuspendDialogInfo;
     .locals 6
 
-    .line 272
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getSuspendPackageHelper()Lcom/android/server/pm/SuspendPackageHelper;
 
     move-result-object v0
@@ -870,7 +811,6 @@
 
     move-result-object v1
 
-    .line 273
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
@@ -881,7 +821,6 @@
 
     move v4, p3
 
-    .line 272
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/pm/SuspendPackageHelper;->getSuspendedDialogInfo(Lcom/android/server/pm/Computer;Ljava/lang/String;Ljava/lang/String;II)Landroid/content/pm/SuspendDialogInfo;
 
     move-result-object p0
@@ -892,7 +831,6 @@
 .method public final getSuspendedPackageLauncherExtras(Ljava/lang/String;I)Landroid/os/Bundle;
     .locals 2
 
-    .line 227
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getSuspendPackageHelper()Lcom/android/server/pm/SuspendPackageHelper;
 
     move-result-object v0
@@ -901,12 +839,10 @@
 
     move-result-object p0
 
-    .line 228
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 227
     invoke-virtual {v0, p0, p1, p2, v1}, Lcom/android/server/pm/SuspendPackageHelper;->getSuspendedPackageLauncherExtras(Lcom/android/server/pm/Computer;Ljava/lang/String;II)Landroid/os/Bundle;
 
     move-result-object p0
@@ -917,7 +853,6 @@
 .method public final getSuspendingPackage(Ljava/lang/String;I)Ljava/lang/String;
     .locals 2
 
-    .line 264
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getSuspendPackageHelper()Lcom/android/server/pm/SuspendPackageHelper;
 
     move-result-object v0
@@ -926,12 +861,10 @@
 
     move-result-object p0
 
-    .line 265
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 264
     invoke-virtual {v0, p0, p1, p2, v1}, Lcom/android/server/pm/SuspendPackageHelper;->getSuspendingPackage(Lcom/android/server/pm/Computer;Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object p0
@@ -942,7 +875,6 @@
 .method public final getSystemUiServiceComponent()Landroid/content/ComponentName;
     .locals 1
 
-    .line 349
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -967,7 +899,6 @@
 .method public final getUidTargetSdkVersion(I)I
     .locals 0
 
-    .line 499
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -982,7 +913,6 @@
 .method public final getVisibilityAllowList(Ljava/lang/String;I)[I
     .locals 0
 
-    .line 138
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -1011,7 +941,6 @@
 
     move v5, p5
 
-    .line 424
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerInternalBase;->grantImplicitAccess(ILandroid/content/Intent;IIZZ)V
 
     return-void
@@ -1020,7 +949,6 @@
 .method public final grantImplicitAccess(ILandroid/content/Intent;IIZZ)V
     .locals 8
 
-    .line 432
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -1047,7 +975,6 @@
 .method public final hasInstantApplicationMetadata(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 528
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getInstantAppRegistry()Lcom/android/server/pm/InstantAppRegistry;
 
     move-result-object p0
@@ -1062,7 +989,6 @@
 .method public final isApexPackage(Ljava/lang/String;)Z
     .locals 0
 
-    .line 648
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -1077,7 +1003,6 @@
 .method public final isCallerInstallerOfRecord(Lcom/android/server/pm/pkg/AndroidPackage;I)Z
     .locals 0
 
-    .line 660
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -1092,7 +1017,6 @@
 .method public final isInstantApp(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 106
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -1107,14 +1031,12 @@
 .method public final isInstantAppInstallerComponent(Landroid/content/ComponentName;)Z
     .locals 0
 
-    .line 439
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mInstantAppInstallerActivity:Landroid/content/pm/ActivityInfo;
 
     if-eqz p0, :cond_0
 
-    .line 441
     invoke-virtual {p0}, Landroid/content/pm/ActivityInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p0
@@ -1139,7 +1061,6 @@
 .method public final isPackageDataProtected(ILjava/lang/String;)Z
     .locals 0
 
-    .line 363
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getProtectedPackages()Lcom/android/server/pm/ProtectedPackages;
 
     move-result-object p0
@@ -1154,14 +1075,12 @@
 .method public final isPackageEphemeral(ILjava/lang/String;)Z
     .locals 0
 
-    .line 375
     invoke-virtual {p0, p2}, Lcom/android/server/pm/PackageManagerInternalBase;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 377
     invoke-interface {p0, p1}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
@@ -1186,7 +1105,6 @@
 .method public final isPackageFrozen(Ljava/lang/String;II)Z
     .locals 1
 
-    .line 703
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object v0
@@ -1219,7 +1137,6 @@
 .method public final isPackageStateProtected(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 369
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getProtectedPackages()Lcom/android/server/pm/ProtectedPackages;
 
     move-result-object p0
@@ -1234,7 +1151,6 @@
 .method public final isPackageSuspended(Ljava/lang/String;I)Z
     .locals 2
 
-    .line 234
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getSuspendPackageHelper()Lcom/android/server/pm/SuspendPackageHelper;
 
     move-result-object v0
@@ -1243,12 +1159,10 @@
 
     move-result-object p0
 
-    .line 235
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 234
     invoke-virtual {v0, p0, p1, p2, v1}, Lcom/android/server/pm/SuspendPackageHelper;->isPackageSuspended(Lcom/android/server/pm/Computer;Ljava/lang/String;II)Z
 
     move-result p0
@@ -1259,7 +1173,6 @@
 .method public final isPermissionsReviewRequired(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 213
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getPermissionManager()Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
     move-result-object p0
@@ -1274,7 +1187,6 @@
 .method public final isSuspendingAnyPackages(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 684
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -1289,7 +1201,6 @@
 .method public final isSystemPackage(Ljava/lang/String;)Z
     .locals 1
 
-    .line 672
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -1310,7 +1221,6 @@
 .method public isUidPrivileged(I)Z
     .locals 0
 
-    .line 734
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -1325,7 +1235,6 @@
 .method public final pruneInstantApps()V
     .locals 1
 
-    .line 447
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getInstantAppRegistry()Lcom/android/server/pm/InstantAppRegistry;
 
     move-result-object v0
@@ -1342,7 +1251,6 @@
 .method public final queryIntentActivities(Landroid/content/Intent;Ljava/lang/String;JII)Ljava/util/List;
     .locals 7
 
-    .line 310
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object v0
@@ -1367,7 +1275,6 @@
 .method public final queryIntentReceivers(Landroid/content/Intent;Ljava/lang/String;JIIZ)Ljava/util/List;
     .locals 9
 
-    .line 319
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getResolveIntentHelper()Lcom/android/server/pm/ResolveIntentHelper;
 
     move-result-object v0
@@ -1398,7 +1305,6 @@
 .method public final queryIntentServices(Landroid/content/Intent;JII)Ljava/util/List;
     .locals 9
 
-    .line 328
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1411,7 +1317,6 @@
 
     move-result-object v3
 
-    .line 329
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object v1
@@ -1436,7 +1341,6 @@
 .method public final reconcileAppsData(IIZ)V
     .locals 0
 
-    .line 717
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getAppDataHelper()Lcom/android/server/pm/AppDataHelper;
 
     move-result-object p0
@@ -1449,7 +1353,6 @@
 .method public final removeAllDistractingPackageRestrictions(I)V
     .locals 1
 
-    .line 258
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -1464,7 +1367,6 @@
 .method public final removeDistractingPackageRestrictions(Ljava/lang/String;I)V
     .locals 1
 
-    .line 251
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getDistractingPackageHelper()Lcom/android/server/pm/DistractingPackageHelper;
 
     move-result-object v0
@@ -1485,7 +1387,6 @@
 .method public final removeNonSystemPackageSuspensions(Ljava/lang/String;I)V
     .locals 2
 
-    .line 241
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getSuspendPackageHelper()Lcom/android/server/pm/SuspendPackageHelper;
 
     move-result-object v0
@@ -1510,7 +1411,6 @@
 .method public final removePackageListObserver(Landroid/content/pm/PackageManagerInternal$PackageListObserver;)V
     .locals 0
 
-    .line 189
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getPackageObserverHelper()Lcom/android/server/pm/PackageObserverHelper;
 
     move-result-object p0
@@ -1525,7 +1425,6 @@
 
     move-object v0, p0
 
-    .line 694
     iget-object v1, v0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -1564,7 +1463,6 @@
 
     move-object v0, p0
 
-    .line 415
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     move-object v1, p1
@@ -1591,7 +1489,6 @@
 .method public final resolveContentProvider(Ljava/lang/String;JII)Landroid/content/pm/ProviderInfo;
     .locals 6
 
-    .line 493
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object v0
@@ -1614,7 +1511,6 @@
 .method public final resolveIntentExported(Landroid/content/Intent;Ljava/lang/String;JJIZII)Landroid/content/pm/ResolveInfo;
     .locals 13
 
-    .line 476
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getResolveIntentHelper()Lcom/android/server/pm/ResolveIntentHelper;
 
     move-result-object v0
@@ -1651,7 +1547,6 @@
 .method public final resolveService(Landroid/content/Intent;Ljava/lang/String;JII)Landroid/content/pm/ResolveInfo;
     .locals 8
 
-    .line 485
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getResolveIntentHelper()Lcom/android/server/pm/ResolveIntentHelper;
 
     move-result-object v0
@@ -1680,7 +1575,6 @@
 .method public final setEnableRollbackCode(II)V
     .locals 0
 
-    .line 636
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageManagerService;->setEnableRollbackCode(II)V
@@ -1691,7 +1585,6 @@
 .method public final setKeepUninstalledPackages(Ljava/util/List;)V
     .locals 1
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -1706,7 +1599,6 @@
 .method public final setOwnerProtectedPackages(ILjava/util/List;)V
     .locals 0
 
-    .line 357
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->getProtectedPackages()Lcom/android/server/pm/ProtectedPackages;
 
     move-result-object p0
@@ -1719,7 +1611,6 @@
 .method public setPackageStoppedState(Ljava/lang/String;ZI)V
     .locals 1
 
-    .line 745
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -1734,7 +1625,6 @@
 .method public final shutdown()V
     .locals 0
 
-    .line 767
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->shutdown()V
@@ -1745,7 +1635,6 @@
 .method public final snapshot()Lcom/android/server/pm/Computer;
     .locals 0
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
@@ -1758,7 +1647,6 @@
 .method public bridge synthetic snapshot()Lcom/android/server/pm/snapshot/PackageDataSnapshot;
     .locals 0
 
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -1769,7 +1657,6 @@
 .method public final unsuspendForSuspendingPackage(Ljava/lang/String;I)V
     .locals 1
 
-    .line 678
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerInternalBase;->mService:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerInternalBase;->snapshot()Lcom/android/server/pm/Computer;
@@ -1784,14 +1671,12 @@
 .method public final wasPackageEverLaunched(Ljava/lang/String;I)Z
     .locals 1
 
-    .line 383
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageManagerInternalBase;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 387
     invoke-interface {p0, p2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
@@ -1804,7 +1689,6 @@
 
     return p0
 
-    .line 385
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

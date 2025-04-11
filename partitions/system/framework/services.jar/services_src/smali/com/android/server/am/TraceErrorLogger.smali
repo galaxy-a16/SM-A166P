@@ -17,7 +17,6 @@
 .method public addProcessInfoAndErrorIdToTrace(Ljava/lang/String;ILjava/util/UUID;)V
     .locals 1
 
-    .line 53
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -38,7 +37,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 54
     invoke-virtual {p3}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -53,7 +51,6 @@
 
     const-wide/16 p2, 0x40
 
-    .line 53
     invoke-static {p2, p3, p0, p1}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
 
     return-void
@@ -62,7 +59,6 @@
 .method public addSubjectToTrace(Ljava/lang/String;Ljava/util/UUID;)V
     .locals 2
 
-    .line 67
     invoke-virtual {p2}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -81,7 +77,6 @@
 
     const-wide/16 v0, 0x40
 
-    .line 66
     invoke-static {v0, v1, p0, p1}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
 
     return-void
@@ -90,7 +85,6 @@
 .method public generateErrorId()Ljava/util/UUID;
     .locals 0
 
-    .line 40
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object p0
@@ -101,7 +95,6 @@
 .method public isAddErrorIdEnabled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

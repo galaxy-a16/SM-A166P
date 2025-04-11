@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/ApplicationInfo;
 
     invoke-static {p1}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->$r8$lambda$AyfYAGQPv-LHShAusQsYvY9lj6c(Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;

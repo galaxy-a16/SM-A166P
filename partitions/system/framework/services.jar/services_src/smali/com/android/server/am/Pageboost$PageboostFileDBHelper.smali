@@ -13,7 +13,6 @@
 
     const/4 v4, 0x3
 
-    .line 3024
     new-instance v5, Lcom/android/server/am/Pageboost$PageboostFileDBHelper$FileDBErrorHandler;
 
     invoke-direct {v5}, Lcom/android/server/am/Pageboost$PageboostFileDBHelper$FileDBErrorHandler;-><init>()V
@@ -42,7 +41,6 @@
 
     return-object v3
 
-    .line 3091
     :cond_0
     :try_start_0
     new-instance v4, Ljava/io/File;
@@ -51,7 +49,6 @@
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3092
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v5
@@ -70,7 +67,6 @@
 
     goto :goto_0
 
-    .line 3097
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -132,7 +128,6 @@
 
     move-result-object v0
 
-    .line 3104
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -153,12 +148,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3105
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 3093
     :cond_2
     :goto_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -202,7 +195,6 @@
     :catch_0
     move-exception p0
 
-    .line 3107
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -223,7 +215,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3108
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -233,7 +224,6 @@
 .method public static dropTable(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V
     .locals 3
 
-    .line 3076
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,7 +238,6 @@
 
     move-result-object v0
 
-    .line 3078
     :try_start_0
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_0
@@ -259,7 +248,6 @@
     :catch_0
     move-exception p0
 
-    .line 3080
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -280,7 +268,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3081
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -290,7 +277,6 @@
 .method public static initFileDB(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 2
 
-    .line 3067
     :try_start_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -302,7 +288,6 @@
 
     const-string v0, "PRAGMA synchronous = NORMAL;"
 
-    .line 3068
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -312,7 +297,6 @@
     :catch_0
     move-exception p0
 
-    .line 3070
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -321,7 +305,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3071
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -335,7 +318,6 @@
 
     return-void
 
-    .line 3118
     :cond_0
     new-instance v0, Landroid/content/ContentValues;
 
@@ -343,12 +325,10 @@
 
     const-string v1, "FILENAME"
 
-    .line 3119
     invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "OFFSET"
 
-    .line 3120
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -357,7 +337,6 @@
 
     const-string p2, "SIZE"
 
-    .line 3121
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -366,7 +345,6 @@
 
     const-string p2, "FORVRAMDISK"
 
-    .line 3122
     invoke-static {p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -375,14 +353,12 @@
 
     const-string p2, "BITMAP"
 
-    .line 3123
     invoke-virtual {v0, p2, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
     const/4 p2, 0x0
 
     const/4 p3, 0x4
 
-    .line 3124
     invoke-virtual {p0, p1, p2, v0, p3}, Landroid/database/sqlite/SQLiteDatabase;->insertWithOnConflict(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;I)J
 
     return-void
@@ -393,14 +369,12 @@
 .method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 0
 
-    .line 3062
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/Pageboost$PageboostFileDBHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
     return-void
@@ -413,19 +387,16 @@
 
     const/4 p2, 0x0
 
-    .line 3047
     invoke-virtual {p1, p0, p2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
 
-    .line 3048
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz p0, :cond_2
 
-    .line 3050
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -435,7 +406,6 @@
 
     const/4 p3, 0x0
 
-    .line 3051
     invoke-interface {p0, p3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p3
@@ -444,7 +414,6 @@
 
     goto :goto_0
 
-    .line 3053
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -463,12 +432,10 @@
 
     check-cast p3, Ljava/lang/String;
 
-    .line 3054
     invoke-static {p1, p3}, Lcom/android/server/am/Pageboost$PageboostFileDBHelper;->dropTable(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 3056
     :cond_1
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 

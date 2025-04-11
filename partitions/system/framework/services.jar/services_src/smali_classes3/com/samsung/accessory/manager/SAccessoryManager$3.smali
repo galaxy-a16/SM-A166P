@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/accessory/manager/SAccessoryManager;)V
     .locals 0
 
-    .line 238
     iput-object p1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$3;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -30,7 +29,6 @@
 
     const-string v2, "SWITCH_STATE"
 
-    .line 242
     :try_start_0
     invoke-static {}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -50,7 +48,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     iget-object v3, p0, Lcom/samsung/accessory/manager/SAccessoryManager$3;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-static {v3}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$fgetmIsFactory(Lcom/samsung/accessory/manager/SAccessoryManager;)Z
@@ -83,7 +80,6 @@
 
     goto/16 :goto_1
 
-    .line 246
     :cond_0
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -95,7 +91,6 @@
 
     if-nez v3, :cond_1
 
-    .line 247
     iget-object p0, p0, Lcom/samsung/accessory/manager/SAccessoryManager$3;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -110,7 +105,6 @@
 
     return-void
 
-    .line 252
     :cond_1
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -118,7 +112,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 253
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -137,12 +130,10 @@
     :goto_0
     const-string v3, "b001b7ff"
 
-    .line 255
     invoke-static {v3}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$smstringToByte(Ljava/lang/String;)[B
 
     move-result-object v3
 
-    .line 256
     iget-object v4, p0, Lcom/samsung/accessory/manager/SAccessoryManager$3;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-static {v4}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$fgetisUsbReady(Lcom/samsung/accessory/manager/SAccessoryManager;)Z
@@ -173,14 +164,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 257
     aget-object v0, v0, v5
 
     invoke-static {v0}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$smstringToByte(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 258
     array-length v6, v0
 
     const/4 v7, 0x4
@@ -205,7 +194,6 @@
 
     if-gt v0, v3, :cond_3
 
-    .line 259
     iget-object p0, p0, Lcom/samsung/accessory/manager/SAccessoryManager$3;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -220,7 +208,6 @@
 
     goto :goto_2
 
-    .line 261
     :cond_3
     invoke-static {}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -230,7 +217,6 @@
 
     goto :goto_2
 
-    .line 244
     :cond_4
     :goto_1
     invoke-static {}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -245,7 +231,6 @@
 
     return-void
 
-    .line 264
     :catch_0
     invoke-static {}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

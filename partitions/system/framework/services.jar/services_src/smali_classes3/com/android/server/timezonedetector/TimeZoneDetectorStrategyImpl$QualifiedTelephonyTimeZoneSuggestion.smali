@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;I)V
     .locals 0
 
-    .line 1138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1139
     iput-object p1, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorStrategyImpl$QualifiedTelephonyTimeZoneSuggestion;->suggestion:Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;
 
-    .line 1140
     iput p2, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorStrategyImpl$QualifiedTelephonyTimeZoneSuggestion;->score:I
 
     return-void
@@ -41,7 +38,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1148
     const-class v2, Lcom/android/server/timezonedetector/TimeZoneDetectorStrategyImpl$QualifiedTelephonyTimeZoneSuggestion;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -52,11 +48,9 @@
 
     goto :goto_1
 
-    .line 1151
     :cond_1
     check-cast p1, Lcom/android/server/timezonedetector/TimeZoneDetectorStrategyImpl$QualifiedTelephonyTimeZoneSuggestion;
 
-    .line 1152
     iget v2, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorStrategyImpl$QualifiedTelephonyTimeZoneSuggestion;->score:I
 
     iget v3, p1, Lcom/android/server/timezonedetector/TimeZoneDetectorStrategyImpl$QualifiedTelephonyTimeZoneSuggestion;->score:I
@@ -67,7 +61,6 @@
 
     iget-object p1, p1, Lcom/android/server/timezonedetector/TimeZoneDetectorStrategyImpl$QualifiedTelephonyTimeZoneSuggestion;->suggestion:Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;
 
-    .line 1153
     invoke-virtual {p0, p1}, Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -90,7 +83,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 1158
     iget v0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorStrategyImpl$QualifiedTelephonyTimeZoneSuggestion;->score:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -113,7 +105,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1163
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

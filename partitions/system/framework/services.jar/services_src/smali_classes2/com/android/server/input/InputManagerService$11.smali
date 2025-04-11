@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;)V
     .locals 0
 
-    .line 5788
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$11;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,21 +26,18 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 4
 
-    .line 5792
     iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     const/4 v0, 0x0
 
     aget p1, p1, v0
 
-    .line 5794
     :goto_0
     iget-object v1, p0, Lcom/android/server/input/InputManagerService$11;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -69,7 +65,6 @@
 
     if-gez v1, :cond_0
 
-    .line 5796
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$11;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {v0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmFoldingState(Lcom/android/server/input/InputManagerService;)I
@@ -84,7 +79,6 @@
 
     goto :goto_0
 
-    .line 5799
     :cond_0
     :goto_1
     iget-object v1, p0, Lcom/android/server/input/InputManagerService$11;->this$0:Lcom/android/server/input/InputManagerService;
@@ -113,7 +107,6 @@
 
     if-lez v1, :cond_1
 
-    .line 5801
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$11;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {v0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmFoldingState(Lcom/android/server/input/InputManagerService;)I
@@ -131,7 +124,6 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 5805
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,7 +154,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5807
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$11;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p1}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;

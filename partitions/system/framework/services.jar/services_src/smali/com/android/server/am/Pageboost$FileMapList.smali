@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFiles(Lcom/android/server/am/Pageboost$FileMapList;)Ljava/util/Hashtable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$FileMapList;->mFiles:Ljava/util/Hashtable;
 
     return-object p0
@@ -24,10 +23,8 @@
 .method public constructor <init>(I)V
     .locals 6
 
-    .line 1563
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1559
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
@@ -36,26 +33,21 @@
 
     const/4 v0, 0x0
 
-    .line 1560
     iput v0, p0, Lcom/android/server/am/Pageboost$FileMapList;->mPid:I
 
-    .line 1561
     iput-boolean v0, p0, Lcom/android/server/am/Pageboost$FileMapList;->mCorrectness:Z
 
     if-gtz p1, :cond_0
 
     return-void
 
-    .line 1567
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1569
     iput p1, p0, Lcom/android/server/am/Pageboost$FileMapList;->mPid:I
 
-    .line 1570
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -76,7 +68,6 @@
 
     invoke-static {p1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1571
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,7 +90,6 @@
 
     move-result-object p1
 
-    .line 1572
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -113,11 +103,9 @@
 
     const/4 p1, 0x1
 
-    .line 1573
     :try_start_1
     iput-boolean p1, p0, Lcom/android/server/am/Pageboost$FileMapList;->mCorrectness:Z
 
-    .line 1575
     :goto_0
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -125,12 +113,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 1576
     invoke-virtual {p0, p1}, Lcom/android/server/am/Pageboost$FileMapList;->add(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1578
     :cond_1
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -156,7 +142,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1579
     :try_start_2
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -167,7 +152,6 @@
     :catchall_0
     move-exception p1
 
-    .line 1572
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -186,7 +170,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 1580
     :catch_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -210,7 +193,6 @@
 
     invoke-static {p1, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1581
     iput-boolean v0, p0, Lcom/android/server/am/Pageboost$FileMapList;->mCorrectness:Z
 
     :goto_2
@@ -222,7 +204,6 @@
 .method public final add(Ljava/lang/String;)V
     .locals 1
 
-    .line 1586
     iget-boolean v0, p0, Lcom/android/server/am/Pageboost$FileMapList;->mCorrectness:Z
 
     if-eqz v0, :cond_0
@@ -233,7 +214,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1587
     iget-object p0, p0, Lcom/android/server/am/Pageboost$FileMapList;->mFiles:Ljava/util/Hashtable;
 
     const/4 v0, 0x1
@@ -251,7 +231,6 @@
 .method public contain(Ljava/lang/String;)Z
     .locals 1
 
-    .line 1592
     iget-boolean v0, p0, Lcom/android/server/am/Pageboost$FileMapList;->mCorrectness:Z
 
     if-eqz v0, :cond_0
@@ -278,7 +257,6 @@
 .method public isCorrect()Z
     .locals 0
 
-    .line 1596
     iget-boolean p0, p0, Lcom/android/server/am/Pageboost$FileMapList;->mCorrectness:Z
 
     return p0

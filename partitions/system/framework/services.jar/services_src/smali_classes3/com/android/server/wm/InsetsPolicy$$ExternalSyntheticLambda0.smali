@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/InsetsPolicy;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/InsetsPolicy$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/wm/InsetsPolicy;
@@ -27,7 +26,6 @@
 .method public final doFrame(J)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/InsetsPolicy$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/wm/InsetsPolicy;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/wm/InsetsPolicy;->$r8$lambda$rOGB0Xuq6zYAUIb9EpBIHvU3Xd0(Lcom/android/server/wm/InsetsPolicy;J)V

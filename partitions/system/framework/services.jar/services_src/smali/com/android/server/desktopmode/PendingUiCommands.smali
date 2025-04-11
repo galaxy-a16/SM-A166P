@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$9cwVqhRSDSymVhe_DWqX779HCZI(Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/PendingUiCommands;->lambda$queue$1(Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$v7YPMbIIYPgjpuJmnR3sCuWtCwA(ILcom/android/server/desktopmode/PendingUiCommands$UiCommand;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/PendingUiCommands;->lambda$queue$0(ILcom/android/server/desktopmode/PendingUiCommands$UiCommand;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -37,7 +35,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -66,10 +63,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -82,7 +77,6 @@
 .method public static synthetic lambda$queue$0(ILcom/android/server/desktopmode/PendingUiCommands$UiCommand;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 108
     iget p1, p1, Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;->mType:I
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;->-$$Nest$smhasSameNotificationId(II)Z
@@ -99,7 +93,6 @@
 .method public static synthetic lambda$queue$1(Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 116
     invoke-virtual {p1, p0}, Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;->isRemovableWith(Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;)Z
 
     move-result p0
@@ -116,7 +109,6 @@
 .method public clear()V
     .locals 0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/desktopmode/PendingUiCommands;->mUiCommands:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
@@ -127,7 +119,6 @@
 .method public flushCommands()V
     .locals 5
 
-    .line 137
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/android/server/desktopmode/PendingUiCommands;->mUiCommands:Ljava/util/List;
@@ -151,7 +142,6 @@
 
     check-cast v1, Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;
 
-    .line 138
     sget-boolean v2, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -174,7 +164,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     :cond_0
     iget-object v1, v1, Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;->mRunnable:Ljava/lang/Runnable;
 
@@ -182,7 +171,6 @@
 
     goto :goto_0
 
-    .line 141
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/desktopmode/PendingUiCommands;->clear()V
 
@@ -192,7 +180,6 @@
 .method public isEmpty()Z
     .locals 0
 
-    .line 149
     iget-object p0, p0, Lcom/android/server/desktopmode/PendingUiCommands;->mUiCommands:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
@@ -205,7 +192,6 @@
 .method public queue(IIILjava/lang/Runnable;)V
     .locals 1
 
-    .line 105
     new-instance v0, Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;-><init>(IIILjava/lang/Runnable;)V
@@ -214,14 +200,12 @@
 
     if-ne p1, p3, :cond_1
 
-    .line 107
     invoke-static {p2}, Lcom/samsung/android/desktopmode/DesktopModeUiConstants;->isNotificationType(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 108
     new-instance p1, Lcom/android/server/desktopmode/PendingUiCommands$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p2}, Lcom/android/server/desktopmode/PendingUiCommands$$ExternalSyntheticLambda0;-><init>(I)V
@@ -230,14 +214,12 @@
 
     if-eqz p4, :cond_2
 
-    .line 110
     iget-object p0, p0, Lcom/android/server/desktopmode/PendingUiCommands;->mUiCommands:Ljava/util/List;
 
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 112
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/PendingUiCommands;->mUiCommands:Ljava/util/List;
 
@@ -249,7 +231,6 @@
 
     if-eqz p4, :cond_2
 
-    .line 113
     iget-object p0, p0, Lcom/android/server/desktopmode/PendingUiCommands;->mUiCommands:Ljava/util/List;
 
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -261,14 +242,12 @@
 
     if-ne p1, p3, :cond_2
 
-    .line 116
     new-instance p1, Lcom/android/server/desktopmode/PendingUiCommands$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, v0}, Lcom/android/server/desktopmode/PendingUiCommands$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;)V
 
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/PendingUiCommands;->removeCommandsIf(Ljava/util/function/Function;)V
 
-    .line 120
     invoke-static {p2}, Lcom/samsung/android/desktopmode/DesktopModeUiConstants;->isNotificationType(I)Z
 
     move-result p1
@@ -277,7 +256,6 @@
 
     if-eqz p4, :cond_2
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/desktopmode/PendingUiCommands;->mUiCommands:Ljava/util/List;
 
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -290,7 +268,6 @@
 .method public final removeCommandsIf(Ljava/util/function/Function;)V
     .locals 1
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/desktopmode/PendingUiCommands;->mUiCommands:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -305,14 +282,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 128
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/desktopmode/PendingUiCommands$UiCommand;
 
-    .line 129
     invoke-interface {p1, v0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -325,7 +300,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 130
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0

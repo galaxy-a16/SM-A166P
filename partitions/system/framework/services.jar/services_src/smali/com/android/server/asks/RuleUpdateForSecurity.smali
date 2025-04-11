@@ -23,34 +23,26 @@
 .method public constructor <init>(Lcom/android/server/asks/RUFSContainer;)V
     .locals 2
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "AASA_RuleUpdateForSecurity_RUFS"
 
-    .line 38
     iput-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     const-string v0, ""
 
-    .line 39
     iput-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mVersionFromDevice:Ljava/lang/String;
 
     const-string v1, "/data/system/.aasa"
 
-    .line 41
     iput-object v1, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_basePath:Ljava/lang/String;
 
-    .line 42
     iput-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyCopyPath:Ljava/lang/String;
 
-    .line 43
     iput-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyUnzipPath:Ljava/lang/String;
 
-    .line 45
     iput-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mVersionFromToken:Ljava/lang/String;
 
-    .line 47
     iput-object p1, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     return-void
@@ -59,12 +51,10 @@
 .method public static writeFile([BLjava/lang/String;)V
     .locals 2
 
-    .line 373
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 375
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v1
@@ -81,23 +71,19 @@
 
     if-nez v1, :cond_0
 
-    .line 376
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 378
     :cond_0
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 379
     invoke-virtual {v0, p0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 380
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
     return-void
@@ -108,12 +94,10 @@
 .method public final applyPolicies(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 9
 
-    .line 274
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     if-eqz v0, :cond_0
 
-    .line 275
     invoke-virtual {v0}, Lcom/android/server/asks/RUFSContainer;->getADPModels()Ljava/lang/String;
 
     move-result-object v0
@@ -128,7 +112,6 @@
 
     invoke-virtual {p0, p2, v2, v0, v1}, Lcom/android/server/asks/RuleUpdateForSecurity;->checkTargetAndRemoveIfNot(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     invoke-virtual {v0}, Lcom/android/server/asks/RUFSContainer;->getASKSRNEWModels()Ljava/lang/String;
@@ -145,7 +128,6 @@
 
     invoke-virtual {p0, p2, v2, v0, v1}, Lcom/android/server/asks/RuleUpdateForSecurity;->checkTargetAndRemoveIfNot(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 283
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -171,7 +153,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 284
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
@@ -184,13 +165,11 @@
 
     move v5, v4
 
-    .line 286
     :goto_0
     array-length v6, v1
 
     if-ge v5, v6, :cond_2
 
-    .line 287
     new-instance v6, Ljava/io/File;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -217,14 +196,12 @@
 
     invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 288
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
     move-result v7
 
     if-nez v7, :cond_1
 
-    .line 290
     aget-object v7, v1, v5
 
     invoke-virtual {p0, v7, v6}, Lcom/android/server/asks/RuleUpdateForSecurity;->copyFileUsingStream(Ljava/io/File;Ljava/io/File;)Z
@@ -252,7 +229,6 @@
 
     if-eq v1, v3, :cond_5
 
-    .line 298
     new-instance v7, Ljava/io/File;
 
     invoke-direct {v7, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -263,7 +239,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 300
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -284,12 +259,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 303
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -308,7 +281,6 @@
 
     invoke-virtual {v1, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 304
     new-instance v1, Ljava/io/File;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -337,7 +309,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 305
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     const-string v1, " new policy folder is changed into AASApolicy"
@@ -348,7 +319,6 @@
 
     goto :goto_2
 
-    .line 309
     :cond_3
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -360,7 +330,6 @@
 
     goto :goto_2
 
-    .line 313
     :cond_4
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
@@ -390,13 +359,11 @@
 
     goto :goto_3
 
-    .line 323
     :cond_6
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 325
     new-instance v1, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -424,7 +391,6 @@
     :goto_3
     move v3, v4
 
-    .line 332
     :cond_7
     new-instance v0, Ljava/io/File;
 
@@ -432,14 +398,12 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/asks/RuleUpdateForSecurity;->deleteDir(Ljava/io/File;)V
 
-    .line 333
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Lcom/android/server/asks/RuleUpdateForSecurity;->deleteDir(Ljava/io/File;)V
 
-    .line 334
     new-instance p1, Ljava/io/File;
 
     iget-object p2, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyCopyPath:Ljava/lang/String;
@@ -460,12 +424,10 @@
 
     const-string v0, ","
 
-    .line 234
     invoke-virtual {p3, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p3
 
-    .line 235
     invoke-virtual {p4, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p4
@@ -476,20 +438,17 @@
 
     if-eqz p3, :cond_0
 
-    .line 241
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     move v3, v0
 
-    .line 242
     :goto_0
     array-length v4, p3
 
     if-ge v3, v4, :cond_1
 
-    .line 243
     aget-object v4, p3, v3
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -504,18 +463,15 @@
     :cond_1
     if-eqz p4, :cond_2
 
-    .line 248
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 249
     :goto_1
     array-length p3, p4
 
     if-ge v0, p3, :cond_2
 
-    .line 250
     aget-object p3, p4, v0
 
     invoke-virtual {v1, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -524,7 +480,6 @@
 
     goto :goto_1
 
-    .line 254
     :cond_2
     invoke-virtual {p0, v2, v1}, Lcom/android/server/asks/RuleUpdateForSecurity;->checkTargetModelAndCarrier(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
 
@@ -532,7 +487,6 @@
 
     if-nez p3, :cond_3
 
-    .line 256
     new-instance p3, Ljava/io/File;
 
     new-instance p4, Ljava/lang/StringBuilder;
@@ -553,14 +507,12 @@
 
     invoke-direct {p3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 257
     invoke-virtual {p3}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 258
     iget-object p0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -579,7 +531,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     invoke-virtual {p3}, Ljava/io/File;->delete()Z
 
     :cond_3
@@ -591,21 +542,18 @@
 
     const-string/jumbo v0, "ro.product.model"
 
-    .line 208
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v1, "ro.csc.sales_code"
 
-    .line 209
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "ALL"
 
-    .line 213
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -620,7 +568,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 214
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p1
@@ -633,7 +580,6 @@
 
     if-eq p1, v4, :cond_4
 
-    .line 215
     :cond_0
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -643,7 +589,6 @@
 
     goto :goto_0
 
-    .line 218
     :cond_1
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -651,7 +596,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 219
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p1
@@ -664,7 +608,6 @@
 
     if-eq p1, v4, :cond_4
 
-    .line 220
     :cond_2
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -677,7 +620,6 @@
     :cond_3
     const/4 v4, 0x0
 
-    .line 225
     :cond_4
     :goto_0
     iget-object p0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
@@ -704,25 +646,21 @@
 .method public final compSizeofUncompressFiles(Ljava/lang/String;)Z
     .locals 6
 
-    .line 545
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 548
     :try_start_0
     invoke-virtual {v0}, Lcom/android/server/asks/RUFSContainer;->getSizeofFiles()J
 
     move-result-wide v2
 
-    .line 549
     invoke-virtual {p0, p1}, Lcom/android/server/asks/RuleUpdateForSecurity;->getSizeofFiles(Ljava/lang/String;)J
 
     move-result-wide v4
 
-    .line 550
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Long;->compare(JJ)I
 
     move-result p1
@@ -735,7 +673,6 @@
 
     goto :goto_0
 
-    .line 555
     :cond_0
     iget-object p0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
@@ -772,12 +709,10 @@
 .method public final convertToHex([B)Ljava/lang/String;
     .locals 8
 
-    .line 526
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 527
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -814,7 +749,6 @@
     :goto_2
     int-to-char v4, v4
 
-    .line 533
     invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     and-int/lit8 v4, v3, 0xf
@@ -834,7 +768,6 @@
 
     goto :goto_1
 
-    .line 538
     :cond_2
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -852,7 +785,6 @@
 
     const/4 v1, 0x0
 
-    .line 175
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
@@ -861,7 +793,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 176
     :try_start_1
     new-instance p1, Ljava/io/FileOutputStream;
 
@@ -875,7 +806,6 @@
     :try_start_2
     new-array p2, p2, [B
 
-    .line 179
     :goto_0
     invoke-virtual {v2, p2}, Ljava/io/InputStream;->read([B)I
 
@@ -883,7 +813,6 @@
 
     if-lez v1, :cond_0
 
-    .line 180
     invoke-virtual {p1, p2, v0, v1}, Ljava/io/OutputStream;->write([BII)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
@@ -891,12 +820,10 @@
 
     goto :goto_0
 
-    .line 190
     :cond_0
     :try_start_3
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
-    .line 194
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
@@ -906,7 +833,6 @@
     :catch_0
     move-exception p1
 
-    .line 199
     sget-object p2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -923,7 +849,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 200
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_1
@@ -962,7 +887,6 @@
     :goto_3
     if-eqz v1, :cond_1
 
-    .line 190
     :try_start_4
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
 
@@ -977,14 +901,12 @@
     :goto_4
     if-eqz p1, :cond_2
 
-    .line 194
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
     goto :goto_6
 
-    .line 199
     :goto_5
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -1002,10 +924,8 @@
 
     invoke-virtual {v0, p0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 200
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 202
     :cond_2
     :goto_6
     throw p2
@@ -1016,7 +936,6 @@
     :goto_7
     if-eqz v1, :cond_3
 
-    .line 190
     :try_start_5
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
 
@@ -1031,14 +950,12 @@
     :goto_8
     if-eqz p1, :cond_4
 
-    .line 194
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 
     goto :goto_a
 
-    .line 199
     :goto_9
     sget-object p2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -1056,7 +973,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 200
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_4
@@ -1069,14 +985,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 343
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 345
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -1086,14 +1000,12 @@
 
     aget-object v3, v0, v2
 
-    .line 346
     invoke-virtual {p0, v3}, Lcom/android/server/asks/RuleUpdateForSecurity;->deleteDir(Ljava/io/File;)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 349
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
@@ -1101,7 +1013,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 350
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     :cond_1
@@ -1111,20 +1022,17 @@
 .method public final descramble([BLjava/lang/String;)[B
     .locals 4
 
-    .line 355
     array-length v0, p1
 
     new-array v0, v0, [B
 
     const/4 v1, 0x0
 
-    .line 357
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 358
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1135,12 +1043,10 @@
 
     move-result v2
 
-    .line 359
     rem-int/lit8 v2, v2, 0x2
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 360
     aget-byte v3, p1, v1
 
     invoke-virtual {p0, v3, v2}, Lcom/android/server/asks/RuleUpdateForSecurity;->inverseEachBit(BI)B
@@ -1165,7 +1071,6 @@
     :try_start_0
     const-string v1, "SHA-1"
 
-    .line 425
     invoke-static {v1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v1
@@ -1177,7 +1082,6 @@
     :catch_0
     move-exception v1
 
-    .line 427
     invoke-virtual {v1}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     move-object v1, v0
@@ -1187,7 +1091,6 @@
 
     return-object v0
 
-    .line 434
     :cond_0
     :try_start_1
     invoke-virtual {p1, p2}, Landroid/util/jar/StrictJarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
@@ -1203,7 +1106,6 @@
     :goto_1
     const/4 v2, 0x0
 
-    .line 438
     invoke-virtual {v0, p2, v2, p1}, Ljava/io/InputStream;->read([BII)I
 
     move-result v3
@@ -1212,12 +1114,10 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 439
     invoke-virtual {v1, p2, v2, v3}, Ljava/security/MessageDigest;->update([BII)V
 
     goto :goto_1
 
-    .line 441
     :cond_1
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -1229,7 +1129,6 @@
     :catch_1
     move-exception p1
 
-    .line 453
     sget-object p2, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1254,7 +1153,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 456
     :try_start_2
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -1265,7 +1163,6 @@
     :catch_2
     move-exception p1
 
-    .line 444
     sget-object p2, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1290,13 +1187,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 447
     :try_start_3
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 462
     :catch_3
     :cond_2
     :goto_2
@@ -1314,7 +1209,6 @@
 .method public final enforcePermissionCheckForASKS()Z
     .locals 1
 
-    .line 588
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -1339,20 +1233,17 @@
 
     const-wide/16 v0, 0x0
 
-    .line 568
     :try_start_0
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 569
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 571
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
@@ -1361,13 +1252,11 @@
 
     move-wide v2, v0
 
-    .line 572
     :goto_0
     array-length v4, p0
 
     if-ge p1, v4, :cond_0
 
-    .line 575
     aget-object v4, p0, p1
 
     invoke-virtual {v4}, Ljava/io/File;->length()J
@@ -1390,7 +1279,6 @@
     :catch_0
     move-exception p0
 
-    .line 580
     sget-object p1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1417,7 +1305,6 @@
 .method public final inverseEachBit(BI)B
     .locals 1
 
-    .line 0
     shr-int p0, p1, p2
 
     const/4 v0, 0x1
@@ -1450,21 +1337,18 @@
 .method public isUpdatePolicy(Ljava/lang/String;)Z
     .locals 5
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 56
     invoke-virtual {v0}, Lcom/android/server/asks/RUFSContainer;->getIsDelta()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     invoke-virtual {v0}, Lcom/android/server/asks/RUFSContainer;->getDeltaPolicyVersion()Ljava/lang/String;
@@ -1473,7 +1357,6 @@
 
     goto :goto_0
 
-    .line 59
     :cond_0
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
@@ -1484,14 +1367,12 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 62
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-lez v2, :cond_1
 
-    .line 64
     :try_start_0
     iget-object v2, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
@@ -1517,7 +1398,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
@@ -1530,13 +1410,10 @@
 
     const/4 v1, 0x1
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mVersionFromDevice:Ljava/lang/String;
 
-    .line 68
     iput-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mVersionFromToken:Ljava/lang/String;
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     const-string p1, " Now try to update"
@@ -1553,7 +1430,6 @@
 .method public final readFile(Landroid/util/jar/StrictJarFile;Ljava/util/zip/ZipEntry;)[B
     .locals 3
 
-    .line 387
     new-instance p0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -1564,7 +1440,6 @@
 
     const/4 v1, 0x0
 
-    .line 391
     :try_start_0
     invoke-virtual {p1, p2}, Landroid/util/jar/StrictJarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
@@ -1573,7 +1448,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_7
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 392
     :try_start_1
     new-instance p2, Ljava/io/BufferedInputStream;
 
@@ -1582,7 +1456,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 394
     :goto_0
     :try_start_2
     invoke-virtual {p2, v0}, Ljava/io/BufferedInputStream;->read([B)I
@@ -1593,7 +1466,6 @@
 
     const/4 v2, 0x0
 
-    .line 395
     invoke-virtual {p0, v0, v2, v1}, Ljava/io/ByteArrayOutputStream;->write([BII)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
@@ -1604,7 +1476,6 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 402
     :try_start_3
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -1616,13 +1487,11 @@
     :catch_0
     move-exception p1
 
-    .line 404
     :try_start_4
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_9
 
-    .line 409
     :cond_1
     :goto_1
     :try_start_5
@@ -1636,7 +1505,6 @@
     :catch_1
     move-exception p1
 
-    .line 411
     :try_start_6
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_6
@@ -1675,7 +1543,6 @@
     :goto_3
     if-eqz v1, :cond_2
 
-    .line 402
     :try_start_7
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_7
@@ -1687,7 +1554,6 @@
     :catch_4
     move-exception p1
 
-    .line 404
     :try_start_8
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_8
@@ -1697,7 +1563,6 @@
     :goto_4
     if-eqz p2, :cond_3
 
-    .line 409
     :try_start_9
     invoke-virtual {p2}, Ljava/io/BufferedInputStream;->close()V
     :try_end_9
@@ -1709,13 +1574,11 @@
     :catch_5
     move-exception p1
 
-    .line 411
     :try_start_a
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_6
 
-    .line 416
     :catch_6
     :cond_3
     :goto_5
@@ -1727,7 +1590,6 @@
     :goto_6
     if-eqz v1, :cond_4
 
-    .line 402
     :try_start_b
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_b
@@ -1739,7 +1601,6 @@
     :catch_8
     move-exception p1
 
-    .line 404
     :try_start_c
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_c
@@ -1749,14 +1610,12 @@
     :goto_7
     if-eqz p2, :cond_5
 
-    .line 409
     :try_start_d
     invoke-virtual {p2}, Ljava/io/BufferedInputStream;->close()V
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_1
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_9
 
-    .line 417
     :catch_9
     :cond_5
     :goto_8
@@ -1770,12 +1629,10 @@
 .method public final unzip(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 7
 
-    .line 469
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 471
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -1793,7 +1650,6 @@
 
     const/4 v1, 0x0
 
-    .line 480
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
@@ -1802,7 +1658,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 481
     :try_start_1
     new-instance p1, Ljava/util/zip/ZipInputStream;
 
@@ -1811,7 +1666,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 482
     :try_start_2
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
 
@@ -1820,12 +1674,10 @@
     :goto_0
     if-eqz v3, :cond_2
 
-    .line 484
     invoke-virtual {v3}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 485
     new-instance v4, Ljava/io/File;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1846,7 +1698,6 @@
 
     invoke-direct {v4, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 488
     new-instance v3, Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->getParent()Ljava/lang/String;
@@ -1857,7 +1708,6 @@
 
     invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
 
-    .line 489
     new-instance v3, Ljava/io/FileOutputStream;
 
     invoke-direct {v3, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -1865,7 +1715,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 491
     :goto_1
     :try_start_3
     invoke-virtual {p1, p0}, Ljava/util/zip/ZipInputStream;->read([B)I
@@ -1874,21 +1723,17 @@
 
     if-lez v4, :cond_1
 
-    .line 492
     invoke-virtual {v3, p0, v0, v4}, Ljava/io/FileOutputStream;->write([BII)V
 
     goto :goto_1
 
-    .line 495
     :cond_1
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
-    .line 496
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
 
     move-result-object v4
 
-    .line 497
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
@@ -1912,17 +1757,14 @@
 
     goto :goto_2
 
-    .line 512
     :cond_2
     :try_start_4
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
-    .line 513
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 519
     :catch_1
     :try_start_5
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
@@ -1969,7 +1811,6 @@
 
     move-object v2, p1
 
-    .line 502
     :goto_2
     :try_start_6
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
@@ -1978,7 +1819,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 507
     :try_start_7
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
@@ -1988,11 +1828,9 @@
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 512
     :try_start_8
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
-    .line 513
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_7
@@ -2001,7 +1839,6 @@
     :cond_4
     if-eqz v2, :cond_5
 
-    .line 519
     :try_start_9
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_9
@@ -2018,7 +1855,6 @@
     :goto_4
     if-eqz v1, :cond_6
 
-    .line 507
     :try_start_a
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_a
@@ -2028,11 +1864,9 @@
     :cond_6
     if-eqz p1, :cond_7
 
-    .line 512
     :try_start_b
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
-    .line 513
     invoke-virtual {p1}, Ljava/util/zip/ZipInputStream;->close()V
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_a
@@ -2041,13 +1875,11 @@
     :cond_7
     if-eqz v2, :cond_8
 
-    .line 519
     :try_start_c
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_b
 
-    .line 521
     :catch_b
     :cond_8
     throw p0
@@ -2056,7 +1888,6 @@
 .method public updatePolicy(Ljava/lang/String;Z)Z
     .locals 8
 
-    .line 87
     invoke-virtual {p0}, Lcom/android/server/asks/RuleUpdateForSecurity;->enforcePermissionCheckForASKS()Z
 
     move-result v0
@@ -2065,7 +1896,6 @@
 
     if-nez v0, :cond_0
 
-    .line 88
     iget-object p0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     const-string/jumbo p1, "updatePolicy: enforced fail"
@@ -2074,13 +1904,11 @@
 
     return v1
 
-    .line 95
     :cond_0
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     if-eqz v0, :cond_b
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2101,7 +1929,6 @@
 
     const/4 v0, 0x0
 
-    .line 102
     :try_start_0
     new-instance v2, Landroid/util/jar/StrictJarFile;
 
@@ -2118,7 +1945,6 @@
     :try_start_1
     const-string p1, "SEC-INF/targetinfo"
 
-    .line 106
     invoke-virtual {v2, p1}, Landroid/util/jar/StrictJarFile;->findEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
 
     move-result-object p1
@@ -2127,7 +1953,6 @@
 
     const-string p1, "META-INF/SEC-INF/targetinfo"
 
-    .line 108
     invoke-virtual {v2, p1}, Landroid/util/jar/StrictJarFile;->findEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
 
     move-result-object p1
@@ -2137,7 +1962,6 @@
     :cond_1
     const-string/jumbo p1, "targetinfo"
 
-    .line 111
     invoke-virtual {v2, p1}, Landroid/util/jar/StrictJarFile;->findEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
 
     move-result-object p1
@@ -2146,7 +1970,6 @@
     :goto_0
     if-eqz p1, :cond_8
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     const-string v4, "Target Info exists"
@@ -2157,7 +1980,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     invoke-virtual {v0}, Lcom/android/server/asks/RUFSContainer;->getSizeofzip()J
@@ -2176,7 +1998,6 @@
 
     goto :goto_1
 
-    .line 143
     :cond_3
     iget-object p2, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
@@ -2184,7 +2005,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     iget-object p2, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2209,7 +2029,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2234,14 +2053,12 @@
 
     goto/16 :goto_2
 
-    .line 118
     :cond_4
     :goto_1
     invoke-virtual {p0, v2, p1}, Lcom/android/server/asks/RuleUpdateForSecurity;->digest(Landroid/util/jar/StrictJarFile;Ljava/util/zip/ZipEntry;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 119
     iget-object v4, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2260,7 +2077,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     iget-object v4, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2289,7 +2105,6 @@
 
     if-eqz p2, :cond_9
 
-    .line 121
     iget-object v4, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->mContainer:Lcom/android/server/asks/RUFSContainer;
 
     invoke-virtual {v4}, Lcom/android/server/asks/RUFSContainer;->getDigest()Ljava/lang/String;
@@ -2302,7 +2117,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 122
     :cond_5
     invoke-virtual {p0, v2, p1}, Lcom/android/server/asks/RuleUpdateForSecurity;->readFile(Landroid/util/jar/StrictJarFile;Ljava/util/zip/ZipEntry;)[B
 
@@ -2312,14 +2126,12 @@
 
     const-string v4, "ASKSRUFS!!"
 
-    .line 124
     invoke-virtual {p0, p1, v4}, Lcom/android/server/asks/RuleUpdateForSecurity;->descramble([BLjava/lang/String;)[B
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    .line 127
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2344,7 +2156,6 @@
 
     iput-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyCopyPath:Ljava/lang/String;
 
-    .line 128
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2365,12 +2176,10 @@
 
     iput-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyUnzipPath:Ljava/lang/String;
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyCopyPath:Ljava/lang/String;
 
     invoke-static {p1, v0}, Lcom/android/server/asks/RuleUpdateForSecurity;->writeFile([BLjava/lang/String;)V
 
-    .line 131
     iget-object p1, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyCopyPath:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyUnzipPath:Ljava/lang/String;
@@ -2380,7 +2189,6 @@
     :cond_6
     if-eqz p2, :cond_7
 
-    .line 133
     iget-object p1, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->device_policyUnzipPath:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/server/asks/RuleUpdateForSecurity;->compSizeofUncompressFiles(Ljava/lang/String;)Z
@@ -2389,7 +2197,6 @@
 
     if-ne p1, v3, :cond_9
 
-    .line 134
     :cond_7
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -2435,7 +2242,6 @@
 
     if-eqz p1, :cond_9
 
-    .line 136
     iget-object p0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
     const-string/jumbo p1, "policy applied!"
@@ -2446,7 +2252,6 @@
 
     goto :goto_2
 
-    .line 149
     :cond_8
     iget-object p0, p0, Lcom/android/server/asks/RuleUpdateForSecurity;->TAG:Ljava/lang/String;
 
@@ -2458,7 +2263,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 163
     :cond_9
     :goto_2
     :try_start_2
@@ -2496,7 +2300,6 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 165
     :catch_2
     :cond_a
     throw p0
@@ -2505,7 +2308,6 @@
     :goto_4
     if-eqz v0, :cond_b
 
-    .line 163
     :goto_5
     :try_start_4
     invoke-virtual {v0}, Landroid/util/jar/StrictJarFile;->close()V

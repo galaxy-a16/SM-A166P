@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$$ExternalSyntheticLambda3;->f$0:I
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$$ExternalSyntheticLambda3;->f$0:I
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->$r8$lambda$JOPPr_WavDkztN6Dq0b9OgMD9QM(I)V

@@ -17,23 +17,18 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/dex/DexManager;Lcom/android/server/pm/PackageManagerService;)V
     .locals 1
 
-    .line 1097
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1095
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mDataDir:Ljava/io/File;
 
-    .line 1098
     iput-object p1, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mContext:Landroid/content/Context;
 
-    .line 1099
     iput-object p2, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mDexManager:Lcom/android/server/pm/dex/DexManager;
 
-    .line 1100
     iput-object p3, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
     return-void
@@ -44,12 +39,10 @@
 .method public createAndStartThread(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 1
 
-    .line 1186
     new-instance p0, Ljava/lang/Thread;
 
     invoke-direct {p0, p2, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 1187
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +61,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1188
     invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     return-object p0
@@ -77,7 +69,6 @@
 .method public getCallingUid()I
     .locals 0
 
-    .line 1104
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -88,7 +79,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 1108
     iget-object p0, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -99,17 +89,14 @@
 
     const-string/jumbo p0, "thermalservice"
 
-    .line 1172
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 1171
     invoke-static {p0}, Landroid/os/IThermalService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IThermalService;
 
     move-result-object p0
 
-    .line 1174
     :try_start_0
     invoke-interface {p0}, Landroid/os/IThermalService;->getCurrentThermalStatus()I
 
@@ -128,7 +115,6 @@
 .method public getDataDirStorageLowBytes()J
     .locals 2
 
-    .line 1167
     iget-object v0, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/os/storage/StorageManager;
@@ -151,7 +137,6 @@
 .method public getDataDirUsableSpace()J
     .locals 2
 
-    .line 1163
     iget-object p0, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mDataDir:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->getUsableSpace()J
@@ -164,7 +149,6 @@
 .method public getDexManager()Lcom/android/server/pm/dex/DexManager;
     .locals 0
 
-    .line 1124
     iget-object p0, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mDexManager:Lcom/android/server/pm/dex/DexManager;
 
     return-object p0
@@ -173,7 +157,6 @@
 .method public getDexOptHelper()Lcom/android/server/pm/DexOptHelper;
     .locals 1
 
-    .line 1116
     new-instance v0, Lcom/android/server/pm/DexOptHelper;
 
     invoke-virtual {p0}, Lcom/android/server/pm/BackgroundDexOptService$Injector;->getPackageManagerService()Lcom/android/server/pm/PackageManagerService;
@@ -192,7 +175,6 @@
 
     const/4 v0, 0x2
 
-    .line 1181
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -205,14 +187,12 @@
 
     const-string/jumbo p0, "pm.dexopt.downgrade_after_inactive_days"
 
-    .line 1150
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1151
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -221,7 +201,6 @@
 
     goto :goto_0
 
-    .line 1155
     :cond_0
     sget-object p0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
@@ -235,7 +214,6 @@
 
     return-wide v0
 
-    .line 1152
     :cond_1
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -268,7 +246,6 @@
 .method public getJobScheduler()Landroid/app/job/JobScheduler;
     .locals 1
 
-    .line 1120
     iget-object p0, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/job/JobScheduler;
@@ -285,7 +262,6 @@
 .method public getPackageManagerService()Lcom/android/server/pm/PackageManagerService;
     .locals 0
 
-    .line 1112
     iget-object p0, p0, Lcom/android/server/pm/BackgroundDexOptService$Injector;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
     return-object p0
@@ -294,7 +270,6 @@
 .method public getPinnerService()Lcom/android/server/PinnerService;
     .locals 0
 
-    .line 1128
     const-class p0, Lcom/android/server/PinnerService;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -313,7 +288,6 @@
 
     const/4 v0, 0x0
 
-    .line 1132
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -324,7 +298,6 @@
 .method public isBatteryLevelLow()Z
     .locals 0
 
-    .line 1137
     const-class p0, Landroid/os/BatteryManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -343,7 +316,6 @@
 .method public isCharging()Z
     .locals 0
 
-    .line 1143
     const-class p0, Landroid/os/BatteryManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -376,7 +348,6 @@
 
     const/4 v0, 0x0
 
-    .line 1159
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0

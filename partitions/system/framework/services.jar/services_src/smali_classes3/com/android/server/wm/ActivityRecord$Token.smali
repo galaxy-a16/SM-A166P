@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 2384
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 2389
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +45,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord$Token;->mActivityRef:Ljava/lang/ref/WeakReference;
 
-    .line 2390
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0

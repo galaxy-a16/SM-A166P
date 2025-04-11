@@ -10,20 +10,17 @@
 .method public onDisplayChanged(Lcom/android/server/wm/DisplayContent;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onRemoved()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onVisibleRequestedChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method

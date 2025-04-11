@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -42,7 +40,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 83
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -55,11 +52,9 @@
 
     goto :goto_0
 
-    .line 85
     :cond_1
     check-cast p1, Lcom/android/server/wm/NewDexPersistBoundsParams;
 
-    .line 87
     iget v2, p0, Lcom/android/server/wm/NewDexPersistBoundsParams;->mNewDexWindowingMode:I
 
     iget v3, p1, Lcom/android/server/wm/NewDexPersistBoundsParams;->mNewDexWindowingMode:I
@@ -70,7 +65,6 @@
 
     iget-object p1, p1, Lcom/android/server/wm/NewDexPersistBoundsParams;->mNewDexNextGenBounds:Landroid/graphics/Rect;
 
-    .line 88
     invoke-virtual {p0, p1}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -90,7 +84,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/wm/NewDexPersistBoundsParams;->mNewDexNextGenBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->hashCode()I
@@ -99,7 +92,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 97
     iget p0, p0, Lcom/android/server/wm/NewDexPersistBoundsParams;->mNewDexWindowingMode:I
 
     add-int/2addr v0, p0
@@ -110,12 +102,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 75
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +124,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -153,7 +142,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 77
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

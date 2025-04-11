@@ -20,7 +20,6 @@
 .method public matches(Lcom/android/server/firewall/IntentFirewall;Landroid/content/ComponentName;Landroid/content/Intent;IILjava/lang/String;I)Z
     .locals 0
 
-    .line 87
     invoke-virtual {p1}, Lcom/android/server/firewall/IntentFirewall;->getPackageManager()Landroid/content/pm/PackageManagerInternal;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 
     if-nez p0, :cond_1
 
-    .line 88
     invoke-virtual {p1, p4, p7}, Lcom/android/server/firewall/IntentFirewall;->signaturesMatch(II)Z
 
     move-result p0

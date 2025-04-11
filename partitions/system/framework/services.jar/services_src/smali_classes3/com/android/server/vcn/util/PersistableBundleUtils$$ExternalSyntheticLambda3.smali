@@ -20,7 +20,6 @@
 .method public final fromPersistableBundle(Landroid/os/PersistableBundle;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/vcn/util/PersistableBundleUtils;->$r8$lambda$uGu9W9AJLY_ZgnBy7_B3heKgE_g(Landroid/os/PersistableBundle;)Ljava/lang/String;
 
     move-result-object p0

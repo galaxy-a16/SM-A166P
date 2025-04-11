@@ -20,7 +20,6 @@
 .method public final run(I)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/audio/AudioService$AudioHandler;->$r8$lambda$PmC4AEB1d3UXhO9J_akmq-4_nac(I)V
 
     return-void

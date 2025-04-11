@@ -21,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/VideoPowerCalculator$PowerAndDuration-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/power/stats/VideoPowerCalculator$PowerAndDuration;-><init>()V
 
     return-void

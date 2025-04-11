@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$EKsGrOFqZW84i33JA_-3dSn2o6o(Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;->lambda$registerAll$0(Ljava/util/function/Supplier;)V
 
     return-void
@@ -20,10 +19,8 @@
 .method public constructor <init>(Landroid/hardware/fingerprint/IFingerprintService;Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 50
     invoke-direct {p0, p2}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;-><init>(Ljava/util/function/Supplier;)V
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;->mService:Landroid/hardware/fingerprint/IFingerprintService;
 
     return-void
@@ -32,7 +29,6 @@
 .method private synthetic lambda$registerAll$0(Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->registerAllInBackground(Ljava/util/function/Supplier;)V
 
     return-void
@@ -43,7 +39,6 @@
 .method public invokeRegisteredCallback(Landroid/hardware/fingerprint/IFingerprintAuthenticatorsRegisteredCallback;Ljava/util/List;)V
     .locals 0
 
-    .line 71
     invoke-interface {p1, p2}, Landroid/hardware/fingerprint/IFingerprintAuthenticatorsRegisteredCallback;->onAllAuthenticatorsRegistered(Ljava/util/List;)V
 
     return-void
@@ -52,7 +47,6 @@
 .method public bridge synthetic invokeRegisteredCallback(Landroid/os/IInterface;Ljava/util/List;)V
     .locals 0
 
-    .line 39
     check-cast p1, Landroid/hardware/fingerprint/IFingerprintAuthenticatorsRegisteredCallback;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;->invokeRegisteredCallback(Landroid/hardware/fingerprint/IFingerprintAuthenticatorsRegisteredCallback;Ljava/util/List;)V
@@ -63,7 +57,6 @@
 .method public registerAll(Ljava/util/function/Supplier;)V
     .locals 2
 
-    .line 77
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v0
@@ -80,7 +73,6 @@
 .method public bridge synthetic registerService(Landroid/hardware/biometrics/IBiometricService;Landroid/hardware/biometrics/SensorPropertiesInternal;)V
     .locals 0
 
-    .line 39
     check-cast p2, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;->registerService(Landroid/hardware/biometrics/IBiometricService;Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;)V
@@ -91,15 +83,12 @@
 .method public registerService(Landroid/hardware/biometrics/IBiometricService;Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;)V
     .locals 4
 
-    .line 57
     iget v0, p2, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorStrength:I
 
-    .line 58
     invoke-static {v0}, Lcom/android/server/biometrics/Utils;->propertyStrengthToAuthenticatorStrength(I)I
 
     move-result v0
 
-    .line 60
     :try_start_0
     iget v1, p2, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
 
@@ -119,7 +108,6 @@
 
     goto :goto_0
 
-    .line 63
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 

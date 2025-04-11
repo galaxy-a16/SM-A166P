@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/compat/PlatformCompat;)V
     .locals 0
 
-    .line 29
     invoke-direct {p0}, Lcom/android/internal/compat/IPlatformCompatNative$Stub;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/android/server/compat/PlatformCompatNative;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
     return-void
@@ -25,7 +23,6 @@
 .method public isChangeEnabledByPackageName(JLjava/lang/String;I)Z
     .locals 0
 
-    .line 46
     iget-object p0, p0, Lcom/android/server/compat/PlatformCompatNative;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/compat/PlatformCompat;->isChangeEnabledByPackageName(JLjava/lang/String;I)Z
@@ -38,7 +35,6 @@
 .method public isChangeEnabledByUid(JI)Z
     .locals 0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/compat/PlatformCompatNative;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/compat/PlatformCompat;->isChangeEnabledByUid(JI)Z
@@ -51,7 +47,6 @@
 .method public reportChangeByPackageName(JLjava/lang/String;I)V
     .locals 0
 
-    .line 35
     iget-object p0, p0, Lcom/android/server/compat/PlatformCompatNative;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/compat/PlatformCompat;->reportChangeByPackageName(JLjava/lang/String;I)V
@@ -62,7 +57,6 @@
 .method public reportChangeByUid(JI)V
     .locals 0
 
-    .line 40
     iget-object p0, p0, Lcom/android/server/compat/PlatformCompatNative;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/compat/PlatformCompat;->reportChangeByUid(JI)V

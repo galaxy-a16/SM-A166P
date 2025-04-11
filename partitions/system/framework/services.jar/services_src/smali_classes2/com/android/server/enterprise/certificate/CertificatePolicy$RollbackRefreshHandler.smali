@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/enterprise/certificate/CertificatePolicy;Landroid/os/Looper;)V
     .locals 0
 
-    .line 966
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$RollbackRefreshHandler;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
-    .line 967
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 972
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_2
@@ -48,7 +45,6 @@
 
     goto :goto_0
 
-    .line 992
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$RollbackRefreshHandler;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -62,7 +58,6 @@
 
     goto :goto_0
 
-    .line 984
     :cond_1
     iget-object p0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$RollbackRefreshHandler;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -74,7 +69,6 @@
 
     goto :goto_0
 
-    .line 976
     :cond_2
     iget-object p0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$RollbackRefreshHandler;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 

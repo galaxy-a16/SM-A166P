@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration;)V
     .locals 0
 
-    .line 943
     iput-object p1, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->this$1:Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 944
     invoke-virtual {p1}, Lcom/android/server/location/provider/LocationProviderManager$Registration;->getLastDeliveredLocation()Landroid/location/Location;
 
     move-result-object p1
@@ -36,29 +34,24 @@
 .method public test(Landroid/location/Location;)Z
     .locals 6
 
-    .line 948
     iget-object v0, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->mPreviousLocation:Landroid/location/Location;
 
     if-eqz v0, :cond_1
 
-    .line 950
     invoke-virtual {p1}, Landroid/location/Location;->getElapsedRealtimeMillis()J
 
     move-result-wide v0
 
     iget-object v2, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->mPreviousLocation:Landroid/location/Location;
 
-    .line 951
     invoke-virtual {v2}, Landroid/location/Location;->getElapsedRealtimeMillis()J
 
     move-result-wide v2
 
     sub-long/2addr v0, v2
 
-    .line 952
     iget-object v2, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->this$1:Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration;
 
-    .line 953
     invoke-virtual {v2}, Lcom/android/server/location/provider/LocationProviderManager$Registration;->getRequest()Landroid/location/LocationRequest;
 
     move-result-object v2
@@ -77,15 +70,12 @@
 
     const-wide/16 v4, 0x7530
 
-    .line 952
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v2
 
-    .line 955
     iget-object v4, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->this$1:Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration;
 
-    .line 956
     invoke-virtual {v4}, Lcom/android/server/location/provider/LocationProviderManager$Registration;->getRequest()Landroid/location/LocationRequest;
 
     move-result-object v4
@@ -104,11 +94,9 @@
 
     return v1
 
-    .line 966
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->this$1:Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration;
 
-    .line 967
     invoke-virtual {v0}, Lcom/android/server/location/provider/LocationProviderManager$Registration;->getRequest()Landroid/location/LocationRequest;
 
     move-result-object v0
@@ -125,7 +113,6 @@
 
     if-lez v0, :cond_1
 
-    .line 968
     iget-object v0, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->mPreviousLocation:Landroid/location/Location;
 
     invoke-virtual {p1, v0}, Landroid/location/Location;->distanceTo(Landroid/location/Location;)F
@@ -140,7 +127,6 @@
 
     return v1
 
-    .line 980
     :cond_1
     iput-object p1, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->mPreviousLocation:Landroid/location/Location;
 
@@ -152,7 +138,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 943
     check-cast p1, Landroid/location/Location;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration$1;->test(Landroid/location/Location;)Z

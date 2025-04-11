@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/location/provider/LocationProviderManager;Landroid/app/PendingIntent;Lcom/android/server/location/provider/LocationProviderManager$LocationPendingIntentRegistration;)V
     .locals 0
 
-    .line 2050
     iput-object p1, p0, Lcom/android/server/location/provider/LocationProviderManager$4;->this$0:Lcom/android/server/location/provider/LocationProviderManager;
 
     iput-object p2, p0, Lcom/android/server/location/provider/LocationProviderManager$4;->val$pendingIntent:Landroid/app/PendingIntent;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 2
 
-    .line 2052
     iget-object v0, p0, Lcom/android/server/location/provider/LocationProviderManager$4;->this$0:Lcom/android/server/location/provider/LocationProviderManager;
 
     iget-object v1, p0, Lcom/android/server/location/provider/LocationProviderManager$4;->val$pendingIntent:Landroid/app/PendingIntent;

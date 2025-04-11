@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 229
     invoke-static {}, Landroid/security/KeyStore$State;->values()[Landroid/security/KeyStore$State;
 
     move-result-object v0

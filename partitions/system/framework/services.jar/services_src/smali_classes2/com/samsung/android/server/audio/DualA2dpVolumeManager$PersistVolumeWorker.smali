@@ -18,15 +18,12 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/DualA2dpVolumeManager;Ljava/lang/String;I)V
     .locals 0
 
-    .line 449
     iput-object p1, p0, Lcom/samsung/android/server/audio/DualA2dpVolumeManager$PersistVolumeWorker;->this$0:Lcom/samsung/android/server/audio/DualA2dpVolumeManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 450
     iput-object p2, p0, Lcom/samsung/android/server/audio/DualA2dpVolumeManager$PersistVolumeWorker;->mAddress:Ljava/lang/String;
 
-    .line 451
     iput p3, p0, Lcom/samsung/android/server/audio/DualA2dpVolumeManager$PersistVolumeWorker;->mVolume:I
 
     return-void
@@ -37,7 +34,6 @@
 .method public run()V
     .locals 2
 
-    .line 456
     iget-object v0, p0, Lcom/samsung/android/server/audio/DualA2dpVolumeManager$PersistVolumeWorker;->this$0:Lcom/samsung/android/server/audio/DualA2dpVolumeManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/audio/DualA2dpVolumeManager;->-$$Nest$fgetmSettingHelper(Lcom/samsung/android/server/audio/DualA2dpVolumeManager;)Lcom/samsung/android/server/audio/AudioSettingsHelper;

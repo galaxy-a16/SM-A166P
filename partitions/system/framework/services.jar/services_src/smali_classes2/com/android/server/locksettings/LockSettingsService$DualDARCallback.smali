@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$-h_fLOUTgQRjaBG258Sy6ucAWAw(Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->lambda$new$0(Landroid/os/IBinder;)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public static synthetic $r8$lambda$AUvJRDmRWvTVKjcxHKsR163Dh-M(Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->lambda$binderDied$1(Landroid/os/IBinder;)V
 
     return-void
@@ -34,15 +32,12 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsService;Lcom/samsung/android/knox/dar/ddar/IDualDarAuthProgressCallback;)V
     .locals 0
 
-    .line 6675
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6676
     iput-object p2, p0, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->mCallback:Lcom/samsung/android/knox/dar/ddar/IDualDarAuthProgressCallback;
 
-    .line 6678
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object p1
@@ -65,7 +60,6 @@
 
     const/4 v0, 0x0
 
-    .line 6704
     :try_start_0
     invoke-interface {p1, p0, v0}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
     :try_end_0
@@ -80,16 +74,13 @@
 
     const-string v1, "Failed to unlink death listener"
 
-    .line 6706
     invoke-static {v0, v1, p1}, Lcom/android/server/knox/dar/sdp/SDPLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
 
-    .line 6707
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
     const/4 p1, 0x0
 
-    .line 6709
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->mCallback:Lcom/samsung/android/knox/dar/ddar/IDualDarAuthProgressCallback;
 
     return-void
@@ -100,7 +91,6 @@
 
     const/4 v0, 0x0
 
-    .line 6680
     :try_start_0
     invoke-interface {p1, p0, v0}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -115,7 +105,6 @@
 
     const-string v0, "Failed to link death listener..."
 
-    .line 6682
     invoke-static {p1, v0, p0}, Lcom/android/server/knox/dar/sdp/SDPLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
 
     :goto_0
@@ -127,7 +116,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 6693
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->mCallback:Lcom/samsung/android/knox/dar/ddar/IDualDarAuthProgressCallback;
 
     if-nez p0, :cond_0
@@ -148,7 +136,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 6702
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -171,7 +158,6 @@
 
     const/4 v0, 0x0
 
-    .line 6697
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->mCallback:Lcom/samsung/android/knox/dar/ddar/IDualDarAuthProgressCallback;
 
     return-void
@@ -180,7 +166,6 @@
 .method public get()Lcom/samsung/android/knox/dar/ddar/IDualDarAuthProgressCallback;
     .locals 0
 
-    .line 6689
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$DualDARCallback;->mCallback:Lcom/samsung/android/knox/dar/ddar/IDualDarAuthProgressCallback;
 
     return-object p0

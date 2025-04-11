@@ -48,10 +48,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 85
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 86
     sget-object v0, Landroid/net/ip/IIpClientCallbacks;->DESCRIPTOR:Ljava/lang/String;
 
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
@@ -68,7 +66,6 @@
 
     return-object p0
 
-    .line 97
     :cond_0
     sget-object v0, Landroid/net/ip/IIpClientCallbacks;->DESCRIPTOR:Ljava/lang/String;
 
@@ -78,17 +75,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 98
     instance-of v1, v0, Landroid/net/ip/IIpClientCallbacks;
 
     if-eqz v1, :cond_1
 
-    .line 99
     check-cast v0, Landroid/net/ip/IIpClientCallbacks;
 
     return-object v0
 
-    .line 101
     :cond_1
     new-instance v0, Landroid/net/ip/IIpClientCallbacks$Stub$Proxy;
 
@@ -102,14 +96,12 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 3
 
-    .line 109
     sget-object v0, Landroid/net/ip/IIpClientCallbacks;->DESCRIPTOR:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -120,7 +112,6 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 111
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_0
@@ -128,24 +119,20 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 241
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
-    .line 117
     :sswitch_0
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
-    .line 122
     :sswitch_1
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 123
     invoke-interface {p0}, Landroid/net/ip/IIpClientCallbacks;->getInterfaceVersion()I
 
     move-result p0
@@ -154,11 +141,9 @@
 
     return v1
 
-    .line 128
     :sswitch_2
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 129
     invoke-interface {p0}, Landroid/net/ip/IIpClientCallbacks;->getInterfaceHash()Ljava/lang/String;
 
     move-result-object p0
@@ -167,18 +152,15 @@
 
     return v1
 
-    .line 235
     :pswitch_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 236
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->setMaxDtimMultiplier(I)V
 
     goto/16 :goto_0
 
-    .line 228
     :pswitch_1
     sget-object p1, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -188,12 +170,10 @@
 
     check-cast p1, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
 
-    .line 229
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->onReachabilityFailure(Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;)V
 
     goto/16 :goto_0
 
-    .line 221
     :pswitch_2
     sget-object p1, Landroid/net/Layer2PacketParcelable;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -201,68 +181,56 @@
 
     move-result-object p1
 
-    .line 222
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->onPreconnectionStart(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 214
     :pswitch_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result p1
 
-    .line 215
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->setNeighborDiscoveryOffload(Z)V
 
     goto :goto_0
 
-    .line 207
     :pswitch_4
     invoke-virtual {p2}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result p1
 
-    .line 208
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->setFallbackMulticastFilter(Z)V
 
     goto :goto_0
 
-    .line 201
     :pswitch_5
     invoke-interface {p0}, Landroid/net/ip/IIpClientCallbacks;->startReadPacketFilter()V
 
     goto :goto_0
 
-    .line 195
     :pswitch_6
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
-    .line 196
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->installPacketFilter([B)V
 
     goto :goto_0
 
-    .line 189
     :pswitch_7
     invoke-interface {p0}, Landroid/net/ip/IIpClientCallbacks;->onQuit()V
 
     goto :goto_0
 
-    .line 183
     :pswitch_8
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 184
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->onReachabilityLost(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 176
     :pswitch_9
     sget-object p1, Landroid/net/LinkProperties;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -272,12 +240,10 @@
 
     check-cast p1, Landroid/net/LinkProperties;
 
-    .line 177
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->onLinkPropertiesChange(Landroid/net/LinkProperties;)V
 
     goto :goto_0
 
-    .line 169
     :pswitch_a
     sget-object p1, Landroid/net/LinkProperties;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -287,12 +253,10 @@
 
     check-cast p1, Landroid/net/LinkProperties;
 
-    .line 170
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->onProvisioningFailure(Landroid/net/LinkProperties;)V
 
     goto :goto_0
 
-    .line 162
     :pswitch_b
     sget-object p1, Landroid/net/LinkProperties;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -302,12 +266,10 @@
 
     check-cast p1, Landroid/net/LinkProperties;
 
-    .line 163
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->onProvisioningSuccess(Landroid/net/LinkProperties;)V
 
     goto :goto_0
 
-    .line 155
     :pswitch_c
     sget-object p1, Landroid/net/DhcpResultsParcelable;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -317,24 +279,20 @@
 
     check-cast p1, Landroid/net/DhcpResultsParcelable;
 
-    .line 156
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->onNewDhcpResults(Landroid/net/DhcpResultsParcelable;)V
 
     goto :goto_0
 
-    .line 149
     :pswitch_d
     invoke-interface {p0}, Landroid/net/ip/IIpClientCallbacks;->onPostDhcpAction()V
 
     goto :goto_0
 
-    .line 144
     :pswitch_e
     invoke-interface {p0}, Landroid/net/ip/IIpClientCallbacks;->onPreDhcpAction()V
 
     goto :goto_0
 
-    .line 138
     :pswitch_f
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -344,7 +302,6 @@
 
     move-result-object p1
 
-    .line 139
     invoke-interface {p0, p1}, Landroid/net/ip/IIpClientCallbacks;->onIpClientCreated(Landroid/net/ip/IIpClient;)V
 
     :goto_0

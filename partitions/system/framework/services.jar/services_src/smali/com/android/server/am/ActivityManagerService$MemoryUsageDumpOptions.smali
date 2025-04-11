@@ -41,7 +41,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ActivityManagerService$MemoryUsageDumpOptions-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/ActivityManagerService$MemoryUsageDumpOptions;-><init>()V
 
     return-void

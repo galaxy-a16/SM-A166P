@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$2orNZJAFQBvep0j3q9V6-LVopMg(Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;Landroid/net/LinkProperties;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->lambda$onLinkPropertiesChanged$2(Landroid/net/LinkProperties;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static synthetic $r8$lambda$5DzqB9CX_xFs51SAeSwXL2twMFQ(Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;Landroid/net/Network;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->lambda$onLost$3(Landroid/net/Network;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static synthetic $r8$lambda$TK0k_vzABy37nYcacsbDmqQyApg(Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;Landroid/net/Network;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->lambda$onAvailable$0(Landroid/net/Network;)V
 
     return-void
@@ -42,7 +39,6 @@
 .method public static synthetic $r8$lambda$a9MyHI9Ts_iO4cd17J-LH8zUqvY(Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;Landroid/net/NetworkCapabilities;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->lambda$onCapabilitiesChanged$1(Landroid/net/NetworkCapabilities;)V
 
     return-void
@@ -51,16 +47,12 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .line 401
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
 
-    .line 402
     iput-object p1, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mTag:Ljava/lang/String;
 
-    .line 403
     iput-object p2, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mCallback:Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;
 
-    .line 404
     iput-object p3, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -69,7 +61,6 @@
 .method private synthetic lambda$onAvailable$0(Landroid/net/Network;)V
     .locals 0
 
-    .line 410
     iget-object p0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mCallback:Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;
 
     invoke-interface {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;->onDefaultNetworkChanged(Landroid/net/Network;)V
@@ -80,7 +71,6 @@
 .method private synthetic lambda$onCapabilitiesChanged$1(Landroid/net/NetworkCapabilities;)V
     .locals 0
 
-    .line 418
     iget-object p0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mCallback:Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;
 
     invoke-interface {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;->onDefaultNetworkCapabilitiesChanged(Landroid/net/NetworkCapabilities;)V
@@ -91,7 +81,6 @@
 .method private synthetic lambda$onLinkPropertiesChanged$2(Landroid/net/LinkProperties;)V
     .locals 0
 
-    .line 426
     iget-object p0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mCallback:Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;
 
     invoke-interface {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;->onDefaultNetworkLinkPropertiesChanged(Landroid/net/LinkProperties;)V
@@ -102,7 +91,6 @@
 .method private synthetic lambda$onLost$3(Landroid/net/Network;)V
     .locals 0
 
-    .line 432
     iget-object p0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mCallback:Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;
 
     invoke-interface {p0, p1}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunnerCallback;->onDefaultNetworkLost(Landroid/net/Network;)V
@@ -115,7 +103,6 @@
 .method public onAvailable(Landroid/net/Network;)V
     .locals 3
 
-    .line 409
     iget-object v0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -134,7 +121,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 410
     iget-object v0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback$$ExternalSyntheticLambda1;
@@ -149,7 +135,6 @@
 .method public onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
     .locals 3
 
-    .line 416
     iget-object v0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -174,7 +159,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 417
     iget-object p1, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback$$ExternalSyntheticLambda0;
@@ -189,7 +173,6 @@
 .method public onLinkPropertiesChanged(Landroid/net/Network;Landroid/net/LinkProperties;)V
     .locals 3
 
-    .line 424
     iget-object v0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -214,7 +197,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     iget-object p1, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback$$ExternalSyntheticLambda3;
@@ -229,7 +211,6 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 3
 
-    .line 431
     iget-object v0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -248,7 +229,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 432
     iget-object v0, p0, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback;->mExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/android/server/connectivity/VpnIkev2Utils$Ikev2VpnNetworkCallback$$ExternalSyntheticLambda2;

@@ -25,10 +25,8 @@
 .method public constructor <init>([F[IFJ)V
     .locals 5
 
-    .line 1090
     invoke-direct {p0}, Lcom/android/server/display/BrightnessMappingStrategy;-><init>()V
 
-    .line 1091
     array-length v0, p1
 
     const/4 v1, 0x1
@@ -53,7 +51,6 @@
 
     invoke-static {v0, v3}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 1093
     array-length v0, p1
 
     array-length v3, p2
@@ -76,25 +73,20 @@
 
     const/4 v3, 0x0
 
-    .line 1095
     invoke-static {p1, v3, v0, v1}, Lcom/android/internal/util/Preconditions;->checkArrayElementsInRange([FFFLjava/lang/String;)[F
 
     const v0, 0x7fffffff
 
     const-string v1, "brightness"
 
-    .line 1096
     invoke-static {p2, v2, v0, v1}, Lcom/android/internal/util/Preconditions;->checkArrayElementsInRange([IIILjava/lang/String;)[I
 
-    .line 1099
     array-length v0, p2
 
-    .line 1100
     new-array v1, v0, [F
 
     iput-object v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mLux:[F
 
-    .line 1101
     new-array v1, v0, [F
 
     iput-object v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mBrightness:[F
@@ -102,14 +94,12 @@
     :goto_2
     if-ge v2, v0, :cond_2
 
-    .line 1103
     iget-object v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mLux:[F
 
     aget v4, p1, v2
 
     aput v4, v1, v2
 
-    .line 1104
     iget-object v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mBrightness:[F
 
     aget v4, p2, v2
@@ -124,19 +114,15 @@
 
     goto :goto_2
 
-    .line 1107
     :cond_2
     iput p3, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mMaxGamma:F
 
-    .line 1108
     iput v3, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mAutoBrightnessAdjustment:F
 
-    .line 1117
     iget-boolean p1, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mLoggingEnabled:Z
 
     if-eqz p1, :cond_3
 
-    .line 1118
     invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->-$$Nest$sfgetPLOG()Lcom/android/server/display/utils/Plog;
 
     move-result-object p1
@@ -145,11 +131,9 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/display/utils/Plog;->start(Ljava/lang/String;)Lcom/android/server/display/utils/Plog;
 
-    .line 1120
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->computeSpline()V
 
-    .line 1121
     iput-wide p4, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mShortTermModelTimeout:J
 
     return-void
@@ -158,7 +142,6 @@
 .method public synthetic constructor <init>([F[IFJLcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;-><init>([F[IFJ)V
 
     return-void
@@ -169,7 +152,6 @@
 .method public addUserDataPoint(FF)V
     .locals 5
 
-    .line 1214
     invoke-static {p1}, Lcom/android/server/display/BrightnessMappingStrategy;->-$$Nest$smisValidUserLux(F)Z
 
     move-result v0
@@ -178,7 +160,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1215
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,18 +178,15 @@
 
     return-void
 
-    .line 1220
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->getUnadjustedBrightness(F)F
 
     move-result v0
 
-    .line 1221
     iget-boolean v2, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mLoggingEnabled:Z
 
     if-eqz v2, :cond_1
 
-    .line 1222
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,7 +213,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1223
     invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->-$$Nest$sfgetPLOG()Lcom/android/server/display/utils/Plog;
 
     move-result-object v2
@@ -248,17 +225,14 @@
 
     const-string/jumbo v3, "user data point"
 
-    .line 1224
     invoke-virtual {v2, v3, p1, p2}, Lcom/android/server/display/utils/Plog;->logPoint(Ljava/lang/String;FF)Lcom/android/server/display/utils/Plog;
 
     move-result-object v2
 
     const-string v3, "current brightness"
 
-    .line 1225
     invoke-virtual {v2, v3, p1, v0}, Lcom/android/server/display/utils/Plog;->logPoint(Ljava/lang/String;FF)Lcom/android/server/display/utils/Plog;
 
-    .line 1227
     :cond_1
     iget v2, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mMaxGamma:F
 
@@ -266,12 +240,10 @@
 
     move-result v2
 
-    .line 1230
     iget-boolean v3, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mLoggingEnabled:Z
 
     if-eqz v3, :cond_2
 
-    .line 1231
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -296,16 +268,13 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1234
     :cond_2
     iput v2, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mAutoBrightnessAdjustment:F
 
-    .line 1241
     iget-object v1, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mUserOffsetManager:Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;
 
     invoke-virtual {v1, p1, p2, v0}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->addPoint(FFF)V
 
-    .line 1244
     invoke-virtual {p0}, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->computeSpline()V
 
     return-void
@@ -314,19 +283,16 @@
 .method public clearUserDataPoints()V
     .locals 2
 
-    .line 1251
     invoke-virtual {p0}, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->hasUserDataPoints()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1253
     iget-boolean v0, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mLoggingEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 1254
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,7 +317,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1255
     invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->-$$Nest$sfgetPLOG()Lcom/android/server/display/utils/Plog;
 
     move-result-object v0
@@ -363,15 +328,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1258
     iput v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mAutoBrightnessAdjustment:F
 
-    .line 1265
     iget-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mUserOffsetManager:Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;
 
     invoke-virtual {v0}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->clear()V
 
-    .line 1268
     invoke-virtual {p0}, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->computeSpline()V
 
     :cond_1
@@ -381,7 +343,6 @@
 .method public final computeSpline()V
     .locals 2
 
-    .line 1338
     iget-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mLux:[F
 
     iget-object v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mBrightness:[F
@@ -390,7 +351,6 @@
 
     move-result-object v0
 
-    .line 1340
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, [F
@@ -411,7 +371,6 @@
 .method public convertToAdjustedNits(F)F
     .locals 0
 
-    .line 0
     const/high16 p0, -0x40800000    # -1.0f
 
     return p0
@@ -420,7 +379,6 @@
 .method public convertToBrightness(F)I
     .locals 0
 
-    .line 0
     const/4 p0, -0x1
 
     return p0
@@ -429,7 +387,6 @@
 .method public convertToFloatScale(F)F
     .locals 0
 
-    .line 0
     const/high16 p0, 0x7fc00000    # Float.NaN
 
     return p0
@@ -438,7 +395,6 @@
 .method public convertToNits(F)F
     .locals 0
 
-    .line 0
     const/high16 p0, -0x40800000    # -1.0f
 
     return p0
@@ -449,10 +405,8 @@
 
     const-string p2, "SimpleMappingStrategy"
 
-    .line 1304
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1305
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -471,7 +425,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1306
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -490,7 +443,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1307
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -509,7 +461,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1313
     iget-object p0, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mUserOffsetManager:Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->dump(Ljava/io/PrintWriter;)V
@@ -520,7 +471,6 @@
 .method public getAppliedBackupConfig(Landroid/hardware/display/BrightnessConfiguration;)Landroid/hardware/display/BrightnessConfiguration;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -529,7 +479,6 @@
 .method public getAutoBrightnessAdjustment()F
     .locals 0
 
-    .line 1170
     iget p0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mAutoBrightnessAdjustment:F
 
     return p0
@@ -538,21 +487,18 @@
 .method public getBrightness(FLjava/lang/String;I)F
     .locals 0
 
-    .line 1145
     iget-object p0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mSpline:Landroid/util/Spline;
 
     invoke-virtual {p0, p1}, Landroid/util/Spline;->interpolate(F)F
 
     move-result p0
 
-    .line 1146
     sget-boolean p2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SUPPORT_HBM:Z
 
     if-eqz p2, :cond_0
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 1147
     invoke-static {p0, p2}, Ljava/lang/Float;->compare(FF)I
 
     move-result p3
@@ -563,7 +509,6 @@
 
     int-to-float p3, p3
 
-    .line 1148
     invoke-static {p1, p3}, Ljava/lang/Float;->compare(FF)I
 
     move-result p1
@@ -579,7 +524,6 @@
 .method public getBrightnessConfiguration()Landroid/hardware/display/BrightnessConfiguration;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -588,7 +532,6 @@
 .method public getBrightnessForSpline(FLandroid/util/Spline;)F
     .locals 0
 
-    .line 0
     const/high16 p0, -0x40800000    # -1.0f
 
     return p0
@@ -597,7 +540,6 @@
 .method public getBrightnessSpline()Landroid/util/Spline;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -606,7 +548,6 @@
 .method public getDefaultConfig()Landroid/hardware/display/BrightnessConfiguration;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -615,7 +556,6 @@
 .method public getShortTermModelTimeout()J
     .locals 2
 
-    .line 1126
     iget-wide v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mShortTermModelTimeout:J
 
     return-wide v0
@@ -624,7 +564,6 @@
 .method public final getUnadjustedBrightness(F)F
     .locals 1
 
-    .line 1344
     iget-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mLux:[F
 
     iget-object p0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mBrightness:[F
@@ -633,7 +572,6 @@
 
     move-result-object p0
 
-    .line 1345
     invoke-virtual {p0, p1}, Landroid/util/Spline;->interpolate(F)F
 
     move-result p0
@@ -644,7 +582,6 @@
 .method public getUserBrightness()F
     .locals 0
 
-    .line 1329
     iget p0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mUserBrightness:F
 
     return p0
@@ -653,7 +590,6 @@
 .method public getUserLux()F
     .locals 0
 
-    .line 1324
     iget p0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mUserLux:F
 
     return p0
@@ -662,7 +598,6 @@
 .method public hasUserDataPoints()Z
     .locals 0
 
-    .line 1276
     iget-object p0, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mUserOffsetManager:Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;
 
     invoke-virtual {p0}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->hasUserDataPoints()Z
@@ -675,7 +610,6 @@
 .method public isDefaultConfig()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -684,7 +618,6 @@
 .method public isForIdleMode()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -693,7 +626,6 @@
 .method public recalculateSplines(Z[F)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -704,12 +636,10 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 1175
     invoke-static {p1, v0, v1}, Landroid/util/MathUtils;->constrain(FFF)F
 
     move-result p1
 
-    .line 1176
     iget v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mAutoBrightnessAdjustment:F
 
     cmpl-float v0, p1, v0
@@ -720,13 +650,11 @@
 
     return p0
 
-    .line 1179
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/display/BrightnessMappingStrategy;->mLoggingEnabled:Z
 
     if-eqz v0, :cond_1
 
-    .line 1180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -753,7 +681,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1182
     invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->-$$Nest$sfgetPLOG()Lcom/android/server/display/utils/Plog;
 
     move-result-object v0
@@ -762,11 +689,9 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/utils/Plog;->start(Ljava/lang/String;)Lcom/android/server/display/utils/Plog;
 
-    .line 1184
     :cond_1
     iput p1, p0, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->mAutoBrightnessAdjustment:F
 
-    .line 1185
     invoke-virtual {p0}, Lcom/android/server/display/BrightnessMappingStrategy$SimpleMappingStrategy;->computeSpline()V
 
     const/4 p0, 0x1
@@ -777,7 +702,6 @@
 .method public setBrightnessConfiguration(Landroid/hardware/display/BrightnessConfiguration;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

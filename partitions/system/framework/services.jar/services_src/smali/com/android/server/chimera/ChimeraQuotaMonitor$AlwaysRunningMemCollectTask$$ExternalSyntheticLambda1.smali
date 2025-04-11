@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;
 
     invoke-static {p1}, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->$r8$lambda$xxnbkwru_jyApE7X8BGJ4U63IVM(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)I

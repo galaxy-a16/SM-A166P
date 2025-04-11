@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 131
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$1;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 134
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$1;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;
 
     invoke-static {p1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;->-$$Nest$fgetmDisableNotificationAlerts(Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;)Z
@@ -35,7 +33,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;->-$$Nest$fputmUseHeadsUp(Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;Z)V
 
-    .line 136
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

@@ -22,16 +22,12 @@
 .method public constructor <init>(Lcom/android/server/accessibility/AccessibilityManagerService;Lcom/android/server/policy/WindowManagerPolicy;)V
     .locals 0
 
-    .line 48
     invoke-direct {p0}, Lcom/android/server/accessibility/BaseEventStreamTransformation;-><init>()V
 
-    .line 49
     iput-object p1, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mAms:Lcom/android/server/accessibility/AccessibilityManagerService;
 
-    .line 50
     iput-object p2, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
 
-    .line 51
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1, p0}, Landroid/os/Handler;-><init>(Landroid/os/Handler$Callback;)V
@@ -46,19 +42,16 @@
 .method public final addEventToQueue(Landroid/view/KeyEvent;IJ)V
     .locals 2
 
-    .line 103
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     add-long/2addr v0, p3
 
-    .line 104
     iget-object p3, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueStart:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     if-nez p3, :cond_0
 
-    .line 106
     invoke-static {p1, p2, v0, v1}, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->obtain(Landroid/view/KeyEvent;IJ)Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     move-result-object p1
@@ -67,26 +60,21 @@
 
     iput-object p1, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueEnd:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
-    .line 107
     invoke-virtual {p0}, Lcom/android/server/accessibility/KeyboardInterceptor;->scheduleProcessQueuedEvents()V
 
     return-void
 
-    .line 110
     :cond_0
     invoke-static {p1, p2, v0, v1}, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->obtain(Landroid/view/KeyEvent;IJ)Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     move-result-object p1
 
-    .line 111
     iget-object p2, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueStart:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     iput-object p2, p1, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->next:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
-    .line 112
     iput-object p1, p2, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->previous:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueStart:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     return-void
@@ -95,7 +83,6 @@
 .method public final getEventDelay(Landroid/view/KeyEvent;I)J
     .locals 2
 
-    .line 149
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -115,7 +102,6 @@
 
     return-wide p0
 
-    .line 151
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
@@ -132,7 +118,6 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 1
 
-    .line 91
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -143,23 +128,19 @@
 
     const-string p1, "Unexpected message type"
 
-    .line 92
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 95
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/KeyboardInterceptor;->processQueuedEvents()V
 
-    .line 96
     iget-object p1, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueStart:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     if-eqz p1, :cond_1
 
-    .line 97
     invoke-virtual {p0}, Lcom/android/server/accessibility/KeyboardInterceptor;->scheduleProcessQueuedEvents()V
 
     :cond_1
@@ -169,7 +150,6 @@
 .method public onKeyEvent(Landroid/view/KeyEvent;I)V
     .locals 5
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mAms:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->getTraceManager()Lcom/android/server/accessibility/AccessibilityTraceManager;
@@ -184,7 +164,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mAms:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->getTraceManager()Lcom/android/server/accessibility/AccessibilityTraceManager;
@@ -215,7 +194,6 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 77
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/accessibility/KeyboardInterceptor;->getEventDelay(Landroid/view/KeyEvent;I)J
 
@@ -232,14 +210,12 @@
     :cond_1
     if-gtz v2, :cond_3
 
-    .line 81
     iget-object v2, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueStart:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     if-eqz v2, :cond_2
 
     goto :goto_0
 
-    .line 86
     :cond_2
     iget-object p0, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mAms:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -247,7 +223,6 @@
 
     return-void
 
-    .line 82
     :cond_3
     :goto_0
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/android/server/accessibility/KeyboardInterceptor;->addEventToQueue(Landroid/view/KeyEvent;IJ)V
@@ -258,12 +233,10 @@
 .method public final processQueuedEvents()V
     .locals 6
 
-    .line 124
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 125
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueEnd:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
@@ -276,7 +249,6 @@
 
     if-gtz v3, :cond_4
 
-    .line 126
     iget-object v3, v2, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->event:Landroid/view/KeyEvent;
 
     iget v2, v2, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->policyFlags:I
@@ -291,7 +263,6 @@
 
     if-lez v4, :cond_1
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueEnd:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     add-long/2addr v0, v2
@@ -303,7 +274,6 @@
     :cond_1
     if-nez v4, :cond_2
 
-    .line 134
     iget-object v2, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mAms:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     iget-object v3, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueEnd:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
@@ -314,11 +284,9 @@
 
     invoke-virtual {v2, v4, v3}, Lcom/android/server/accessibility/AccessibilityManagerService;->notifyKeyEvent(Landroid/view/KeyEvent;I)Z
 
-    .line 136
     :cond_2
     iget-object v2, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueEnd:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
-    .line 137
     iget-object v3, v2, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->previous:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     iput-object v3, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueEnd:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
@@ -327,19 +295,15 @@
 
     if-eqz v3, :cond_3
 
-    .line 139
     iput-object v4, v3, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->next:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
-    .line 141
     :cond_3
     invoke-virtual {v2}, Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;->recycle()V
 
-    .line 142
     iget-object v2, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueEnd:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     if-nez v2, :cond_0
 
-    .line 143
     iput-object v4, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueStart:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
 
     goto :goto_0
@@ -351,7 +315,6 @@
 .method public final scheduleProcessQueuedEvents()V
     .locals 3
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/accessibility/KeyboardInterceptor;->mEventQueueEnd:Lcom/android/server/accessibility/KeyboardInterceptor$KeyEventHolder;
@@ -370,7 +333,6 @@
 
     const-string v0, "Failed to schedule key event"
 
-    .line 119
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0

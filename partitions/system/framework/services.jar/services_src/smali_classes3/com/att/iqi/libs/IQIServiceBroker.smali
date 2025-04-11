@@ -100,7 +100,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -109,7 +108,6 @@
 .method public static bridge synthetic -$$Nest$fgetmImplementingBinderInterface(Lcom/att/iqi/libs/IQIServiceBroker;)Lcom/att/iqi/IIQIService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mImplementingBinderInterface:Lcom/att/iqi/IIQIService;
 
     return-object p0
@@ -118,7 +116,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMessageDispatcher(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMessageDispatcher:Landroid/os/Handler;
 
     return-object p0
@@ -127,7 +124,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMetricQueryCallbackList(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricQueryCallbackList:Landroid/util/SparseArray;
 
     return-object p0
@@ -136,7 +132,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMetricSourcingCallbackList(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricSourcingCallbackList:Landroid/util/SparseArray;
 
     return-object p0
@@ -145,7 +140,6 @@
 .method public static bridge synthetic -$$Nest$fgetmProfileChangeCallbackList(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/os/RemoteCallbackList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mProfileChangeCallbackList:Landroid/os/RemoteCallbackList;
 
     return-object p0
@@ -154,7 +148,6 @@
 .method public static bridge synthetic -$$Nest$fgetmServiceStateChangeList(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/util/ArraySet;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceStateChangeList:Landroid/util/ArraySet;
 
     return-object p0
@@ -163,7 +156,6 @@
 .method public static bridge synthetic -$$Nest$fputmImplementingBinderInterface(Lcom/att/iqi/libs/IQIServiceBroker;Lcom/att/iqi/IIQIService;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mImplementingBinderInterface:Lcom/att/iqi/IIQIService;
 
     return-void
@@ -172,7 +164,6 @@
 .method public static bridge synthetic -$$Nest$fputmRetryCount(Lcom/att/iqi/libs/IQIServiceBroker;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mRetryCount:I
 
     return-void
@@ -181,7 +172,6 @@
 .method public static bridge synthetic -$$Nest$mappEnabled(Lcom/att/iqi/libs/IQIServiceBroker;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->appEnabled()Z
 
     move-result p0
@@ -192,7 +182,6 @@
 .method public static bridge synthetic -$$Nest$mdisablePackage(Lcom/att/iqi/libs/IQIServiceBroker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->disablePackage()V
 
     return-void
@@ -201,7 +190,6 @@
 .method public static bridge synthetic -$$Nest$mgetIBinderAsIInterface(Lcom/att/iqi/libs/IQIServiceBroker;Landroid/os/IBinder;)Lcom/att/iqi/IIQIService;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/att/iqi/libs/IQIServiceBroker;->getIBinderAsIInterface(Landroid/os/IBinder;)Lcom/att/iqi/IIQIService;
 
     move-result-object p0
@@ -212,7 +200,6 @@
 .method public static bridge synthetic -$$Nest$mmaybeIsValidKeyCode(Lcom/att/iqi/libs/IQIServiceBroker;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/att/iqi/libs/IQIServiceBroker;->maybeIsValidKeyCode(Ljava/lang/String;)Z
 
     move-result p0
@@ -223,7 +210,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyServiceState(Lcom/att/iqi/libs/IQIServiceBroker;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/att/iqi/libs/IQIServiceBroker;->notifyServiceState(Z)V
 
     return-void
@@ -232,7 +218,6 @@
 .method public static bridge synthetic -$$Nest$mregisterReceivers(Lcom/att/iqi/libs/IQIServiceBroker;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/att/iqi/libs/IQIServiceBroker;->registerReceivers(Z)V
 
     return-void
@@ -241,7 +226,6 @@
 .method public static bridge synthetic -$$Nest$mtryConnecting(Lcom/att/iqi/libs/IQIServiceBroker;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/att/iqi/libs/IQIServiceBroker;->tryConnecting(Landroid/os/Bundle;)V
 
     return-void
@@ -250,7 +234,6 @@
 .method public static bridge synthetic -$$Nest$munregisterReceivers(Lcom/att/iqi/libs/IQIServiceBroker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->unregisterReceivers()V
 
     return-void
@@ -259,7 +242,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTARGET_IMPLEMENTATION_COMPONENT()Landroid/content/ComponentName;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/att/iqi/libs/IQIServiceBroker;->TARGET_IMPLEMENTATION_COMPONENT:Landroid/content/ComponentName;
 
     return-object v0
@@ -268,7 +250,6 @@
 .method public static bridge synthetic -$$Nest$smdumpHelp(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->dumpHelp(Ljava/io/PrintWriter;)V
 
     return-void
@@ -277,7 +258,6 @@
 .method public static bridge synthetic -$$Nest$smprintAARVersion(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->printAARVersion(Ljava/io/PrintWriter;)V
 
     return-void
@@ -286,7 +266,6 @@
 .method public static bridge synthetic -$$Nest$smprintArtifactsVersion(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->printArtifactsVersion(Ljava/io/PrintWriter;)V
 
     return-void
@@ -295,7 +274,6 @@
 .method public static bridge synthetic -$$Nest$smprintConciergeVersion(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->printConciergeVersion(Ljava/io/PrintWriter;)V
 
     return-void
@@ -304,7 +282,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 115
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "com.att.iqi"
@@ -315,7 +292,6 @@
 
     sput-object v0, Lcom/att/iqi/libs/IQIServiceBroker;->TARGET_IMPLEMENTATION_COMPONENT:Landroid/content/ComponentName;
 
-    .line 145
     new-instance v0, Lcom/att/iqi/libs/IQIServiceBroker$1;
 
     invoke-direct {v0}, Lcom/att/iqi/libs/IQIServiceBroker$1;-><init>()V
@@ -328,79 +304,66 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 218
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 125
     iput v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mRetryCount:I
 
     const/4 v1, 0x1
 
-    .line 126
     iput v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceState:I
 
-    .line 130
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricQueryCallbackList:Landroid/util/SparseArray;
 
-    .line 132
     new-instance v2, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v2}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mProfileChangeCallbackList:Landroid/os/RemoteCallbackList;
 
-    .line 134
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricSourcingCallbackList:Landroid/util/SparseArray;
 
-    .line 137
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceStateChangeList:Landroid/util/ArraySet;
 
-    .line 141
     iput-boolean v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mPackageSuspended:Z
 
-    .line 152
     new-instance v2, Lcom/att/iqi/libs/IQIServiceBroker$2;
 
     invoke-direct {v2, p0}, Lcom/att/iqi/libs/IQIServiceBroker$2;-><init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mStateChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 173
     new-instance v2, Lcom/att/iqi/libs/IQIServiceBroker$3;
 
     invoke-direct {v2, p0}, Lcom/att/iqi/libs/IQIServiceBroker$3;-><init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mKeyCodeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 192
     new-instance v2, Lcom/att/iqi/libs/IQIServiceBroker$4;
 
     invoke-direct {v2, p0}, Lcom/att/iqi/libs/IQIServiceBroker$4;-><init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mUserUnlockedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 205
     new-instance v2, Lcom/att/iqi/libs/IQIServiceBroker$5;
 
     invoke-direct {v2, p0}, Lcom/att/iqi/libs/IQIServiceBroker$5;-><init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mDebugReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 229
     new-instance v2, Lcom/att/iqi/libs/IQIServiceBroker$6;
 
     invoke-static {}, Lcom/att/iqi/libs/WorkerThread;->getHandler()Landroid/os/Handler;
@@ -415,41 +378,34 @@
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMessageDispatcher:Landroid/os/Handler;
 
-    .line 278
     new-instance v2, Lcom/att/iqi/IIQIService$Default;
 
     invoke-direct {v2}, Lcom/att/iqi/IIQIService$Default;-><init>()V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceStubForFailure:Lcom/att/iqi/IIQIService;
 
-    .line 776
     new-instance v2, Lcom/att/iqi/libs/IQIServiceBroker$7;
 
     invoke-direct {v2, p0}, Lcom/att/iqi/libs/IQIServiceBroker$7;-><init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 877
     new-instance v2, Lcom/att/iqi/libs/IQIServiceBroker$9;
 
     invoke-direct {v2, p0}, Lcom/att/iqi/libs/IQIServiceBroker$9;-><init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
 
     iput-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mSubListener:Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
 
-    .line 219
     sput-object p0, Lcom/att/iqi/libs/IQIServiceBroker;->sInstance:Lcom/att/iqi/libs/IQIServiceBroker;
 
-    .line 220
     iput-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
-    .line 221
     invoke-static {}, Lcom/att/iqi/libs/PreferenceStore;->getInstance()Lcom/att/iqi/libs/PreferenceStore;
 
     move-result-object v2
 
     const-string v3, "log_enabled"
 
-    .line 222
     invoke-virtual {v2, v3, v0}, Lcom/att/iqi/libs/PreferenceStore;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -458,14 +414,12 @@
 
     const-string/jumbo v0, "service_state"
 
-    .line 223
     invoke-virtual {v2, v0, v1}, Lcom/att/iqi/libs/PreferenceStore;->getInteger(Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceState:I
 
-    .line 224
     new-instance v0, Lcom/att/iqi/libs/CellBroadcastObserver;
 
     invoke-static {}, Lcom/att/iqi/libs/WorkerThread;->getHandler()Landroid/os/Handler;
@@ -476,10 +430,8 @@
 
     iput-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mCBObserver:Lcom/att/iqi/libs/CellBroadcastObserver;
 
-    .line 225
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->registerPackageMonitor()V
 
-    .line 226
     invoke-direct {p0, v1}, Lcom/att/iqi/libs/IQIServiceBroker;->registerReceivers(Z)V
 
     return-void
@@ -488,7 +440,6 @@
 .method private appEnabled()Z
     .locals 4
 
-    .line 701
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->getServiceComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -497,10 +448,8 @@
 
     move-result-object v0
 
-    .line 703
     monitor-enter p0
 
-    .line 704
     :try_start_0
     iget-boolean v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mPackageSuspended:Z
 
@@ -514,7 +463,6 @@
 
     return v2
 
-    .line 707
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
@@ -525,19 +473,16 @@
 
     if-eqz v1, :cond_2
 
-    .line 709
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 711
     iget-boolean v1, v1, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
     iput-boolean v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mApplicationEnabled:Z
 
-    .line 712
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -546,7 +491,6 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 713
     iget-boolean v3, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mApplicationEnabled:Z
 
     if-eqz v3, :cond_1
@@ -565,7 +509,6 @@
 
     move-result-object v1
 
-    .line 712
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -576,11 +519,9 @@
     :catch_0
     move-exception v1
 
-    .line 717
     :try_start_2
     iput-boolean v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mApplicationEnabled:Z
 
-    .line 718
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -595,7 +536,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 719
     invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -606,17 +546,14 @@
 
     move-result-object v0
 
-    .line 718
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 721
     :cond_2
     :goto_1
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 722
     iget-boolean p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mApplicationEnabled:Z
 
     return p0
@@ -624,7 +561,6 @@
     :catchall_0
     move-exception v0
 
-    .line 721
     :try_start_3
     monitor-exit p0
     :try_end_3
@@ -636,7 +572,6 @@
 .method private checkRetryAttemptsLocked(ILjava/lang/String;)V
     .locals 2
 
-    .line 938
     iget v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mRetryCount:I
 
     const/16 v1, 0xa
@@ -645,10 +580,8 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 939
     iput v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mRetryCount:I
 
-    .line 940
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -669,17 +602,14 @@
 
     invoke-static {p2}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 941
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMessageDispatcher:Landroid/os/Handler;
 
-    .line 942
     invoke-virtual {p0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
     const-wide/16 v0, 0xbb8
 
-    .line 941
     invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_0
@@ -687,7 +617,6 @@
     :cond_0
     const-string p0, "Retried several times already, give up"
 
-    .line 945
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
     :goto_0
@@ -697,7 +626,6 @@
 .method private disablePackage()V
     .locals 3
 
-    .line 581
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -710,12 +638,10 @@
 
     const-string v2, "com.att.iqi"
 
-    .line 582
     invoke-virtual {p0, v2, v0, v1}, Landroid/content/pm/PackageManager;->setApplicationEnabledSetting(Ljava/lang/String;II)V
 
     const-string/jumbo p0, "package has been disabled"
 
-    .line 584
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
     return-void
@@ -726,27 +652,22 @@
 
     const-string v0, "IQIServiceBroker dump options:"
 
-    .line 917
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    -h: print this help"
 
-    .line 918
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    --concierge: print IQIConcierge version"
 
-    .line 919
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    --aar: print AAR version"
 
-    .line 920
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    -v: print the version of all artifacts"
 
-    .line 921
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -755,7 +676,6 @@
 .method private getIBinderAsIInterface(Landroid/os/IBinder;)Lcom/att/iqi/IIQIService;
     .locals 0
 
-    .line 856
     invoke-static {p1}, Lcom/att/iqi/IIQIService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/att/iqi/IIQIService;
 
     move-result-object p0
@@ -766,7 +686,6 @@
 .method public static getPublicInterface()Lcom/att/iqi/libs/IIQIServiceBrokerPub;
     .locals 1
 
-    .line 266
     sget-object v0, Lcom/att/iqi/libs/IQIServiceBroker;->sInstance:Lcom/att/iqi/libs/IQIServiceBroker;
 
     if-nez v0, :cond_0
@@ -780,7 +699,6 @@
 .method private getServiceComponent()Landroid/content/ComponentName;
     .locals 0
 
-    .line 663
     sget-object p0, Lcom/att/iqi/libs/IQIServiceBroker;->TARGET_IMPLEMENTATION_COMPONENT:Landroid/content/ComponentName;
 
     return-object p0
@@ -789,7 +707,6 @@
 .method private maybeIsValidKeyCode(Ljava/lang/String;)Z
     .locals 0
 
-    .line 202
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -818,7 +735,6 @@
 .method private notifyServiceState(Z)V
     .locals 3
 
-    .line 604
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -835,19 +751,16 @@
 
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 607
     iget-boolean v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mLastServiceEnabled:Z
 
     if-eq p1, v0, :cond_2
 
     if-eqz p1, :cond_0
 
-    .line 608
     iget-boolean v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mInitialServiceConnect:Z
 
     if-eqz v0, :cond_0
 
-    .line 609
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->restoreCallbacks()V
 
     :cond_0
@@ -855,20 +768,16 @@
 
     const/4 v0, 0x1
 
-    .line 612
     iput-boolean v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mInitialServiceConnect:Z
 
-    .line 614
     :cond_1
     iput-boolean p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mLastServiceEnabled:Z
 
-    .line 617
     :cond_2
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceStateChangeList:Landroid/util/ArraySet;
 
     monitor-enter v0
 
-    .line 618
     :try_start_0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceStateChangeList:Landroid/util/ArraySet;
 
@@ -891,7 +800,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 620
     :try_start_1
     invoke-interface {v1, p1}, Lcom/att/iqi/IServiceStateChangeCallback;->onServiceChange(Z)V
     :try_end_1
@@ -906,12 +814,10 @@
     :try_start_2
     const-string/jumbo v2, "notifyServiceState failed"
 
-    .line 622
     invoke-static {v2, v1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 625
     :cond_3
     monitor-exit v0
 
@@ -930,7 +836,6 @@
 .method private static printAARVersion(Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 929
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -957,10 +862,8 @@
 .method private static printArtifactsVersion(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 933
     invoke-static {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->printConciergeVersion(Ljava/io/PrintWriter;)V
 
-    .line 934
     invoke-static {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->printAARVersion(Ljava/io/PrintWriter;)V
 
     return-void
@@ -969,7 +872,6 @@
 .method private static printConciergeVersion(Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 925
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -996,12 +898,10 @@
 .method private registerPackageMonitor()V
     .locals 3
 
-    .line 860
     new-instance v0, Lcom/att/iqi/libs/IQIServiceBroker$8;
 
     invoke-direct {v0, p0}, Lcom/att/iqi/libs/IQIServiceBroker$8;-><init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
 
-    .line 874
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
@@ -1024,7 +924,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 893
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mStateChangeReceiver:Landroid/content/BroadcastReceiver;
@@ -1043,7 +942,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
-    .line 897
     :cond_0
     new-instance p1, Landroid/content/IntentFilter;
 
@@ -1051,21 +949,18 @@
 
     invoke-direct {p1, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 898
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mKeyCodeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 900
     new-instance v4, Landroid/content/IntentFilter;
 
     const-string p1, "com.att.iqi.action.ENABLE_IQI_DEBUG_LOG"
 
     invoke-direct {v4, p1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 901
     iget-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mDebugReceiver:Landroid/content/BroadcastReceiver;
@@ -1078,21 +973,18 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
-    .line 904
     new-instance p1, Landroid/content/IntentFilter;
 
     const-string v0, "android.intent.action.USER_UNLOCKED"
 
     invoke-direct {p1, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 905
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mUserUnlockedReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 906
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mCBObserver:Lcom/att/iqi/libs/CellBroadcastObserver;
 
     invoke-virtual {p0}, Lcom/att/iqi/libs/CellBroadcastObserver;->register()V
@@ -1103,7 +995,6 @@
 .method private restoreCallbacks()V
     .locals 9
 
-    .line 816
     :try_start_0
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricQueryCallbackList:Landroid/util/SparseArray;
 
@@ -1111,7 +1002,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 817
     :try_start_1
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricQueryCallbackList:Landroid/util/SparseArray;
 
@@ -1126,7 +1016,6 @@
     :goto_0
     if-ge v3, v1, :cond_1
 
-    .line 819
     iget-object v4, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricQueryCallbackList:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1144,7 +1033,6 @@
     :goto_1
     if-ge v5, v4, :cond_0
 
-    .line 821
     invoke-virtual {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->getBrokeredService()Lcom/att/iqi/IIQIService;
 
     move-result-object v6
@@ -1153,7 +1041,6 @@
 
     iget-object v8, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricQueryCallbackList:Landroid/util/SparseArray;
 
-    .line 822
     invoke-virtual {v8, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v8
@@ -1162,7 +1049,6 @@
 
     iget-object v8, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricQueryCallbackList:Landroid/util/SparseArray;
 
-    .line 823
     invoke-virtual {v8, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -1175,14 +1061,12 @@
 
     check-cast v8, Lcom/att/iqi/IMetricQueryCallback;
 
-    .line 821
     invoke-interface {v6, v7, v8}, Lcom/att/iqi/IIQIService;->registerMetricQueryCallback(Lcom/att/iqi/lib/Metric$ID;Lcom/att/iqi/IMetricQueryCallback;)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 825
     :cond_0
     iget-object v4, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricQueryCallbackList:Landroid/util/SparseArray;
 
@@ -1198,13 +1082,11 @@
 
     goto :goto_0
 
-    .line 827
     :cond_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 829
     :try_start_2
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mProfileChangeCallbackList:Landroid/os/RemoteCallbackList;
 
@@ -1212,7 +1094,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 830
     :try_start_3
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mProfileChangeCallbackList:Landroid/os/RemoteCallbackList;
 
@@ -1225,39 +1106,33 @@
     :goto_2
     if-ge v3, v1, :cond_2
 
-    .line 832
     invoke-virtual {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->getBrokeredService()Lcom/att/iqi/IIQIService;
 
     move-result-object v4
 
     iget-object v5, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mProfileChangeCallbackList:Landroid/os/RemoteCallbackList;
 
-    .line 833
     invoke-virtual {v5, v3}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
 
     move-result-object v5
 
     check-cast v5, Lcom/att/iqi/IProfileChangedCallback;
 
-    .line 832
     invoke-interface {v4, v5}, Lcom/att/iqi/IIQIService;->registerProfileChangedCallback(Lcom/att/iqi/IProfileChangedCallback;)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 835
     :cond_2
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mProfileChangeCallbackList:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v1}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 836
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 838
     :try_start_4
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricSourcingCallbackList:Landroid/util/SparseArray;
 
@@ -1265,7 +1140,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 839
     :try_start_5
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricSourcingCallbackList:Landroid/util/SparseArray;
 
@@ -1278,7 +1152,6 @@
     :goto_3
     if-ge v3, v1, :cond_4
 
-    .line 841
     iget-object v4, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricSourcingCallbackList:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1296,7 +1169,6 @@
     :goto_4
     if-ge v5, v4, :cond_3
 
-    .line 843
     invoke-virtual {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->getBrokeredService()Lcom/att/iqi/IIQIService;
 
     move-result-object v6
@@ -1305,7 +1177,6 @@
 
     iget-object v8, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricSourcingCallbackList:Landroid/util/SparseArray;
 
-    .line 844
     invoke-virtual {v8, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v8
@@ -1314,7 +1185,6 @@
 
     iget-object v8, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricSourcingCallbackList:Landroid/util/SparseArray;
 
-    .line 845
     invoke-virtual {v8, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -1327,14 +1197,12 @@
 
     check-cast v8, Lcom/att/iqi/IMetricSourcingCallback;
 
-    .line 843
     invoke-interface {v6, v7, v8}, Lcom/att/iqi/IIQIService;->registerMetricSourcingCallback(Lcom/att/iqi/lib/Metric$ID;Lcom/att/iqi/IMetricSourcingCallback;)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4
 
-    .line 847
     :cond_3
     iget-object v4, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMetricSourcingCallbackList:Landroid/util/SparseArray;
 
@@ -1350,7 +1218,6 @@
 
     goto :goto_3
 
-    .line 849
     :cond_4
     monitor-exit v0
 
@@ -1371,7 +1238,6 @@
     :catchall_1
     move-exception p0
 
-    .line 836
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -1385,7 +1251,6 @@
     :catchall_2
     move-exception p0
 
-    .line 827
     :try_start_9
     monitor-exit v0
     :try_end_9
@@ -1401,7 +1266,6 @@
 
     const-string v0, "Remote exception in restoreCallbacks"
 
-    .line 851
     invoke-static {v0, p0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_5
@@ -1413,13 +1277,10 @@
 
     const-string v0, "Connecting to implementation"
 
-    .line 734
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->logw(Ljava/lang/String;)V
 
-    .line 735
     monitor-enter p0
 
-    .line 736
     :try_start_0
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mImplementingBinderInterface:Lcom/att/iqi/IIQIService;
 
@@ -1427,21 +1288,17 @@
 
     const-string p1, "Already connected"
 
-    .line 737
     invoke-static {p1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 738
     monitor-exit p0
 
     return-void
 
-    .line 740
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 741
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->getServiceComponent()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -1450,22 +1307,17 @@
 
     const-string p1, "No implementation service found"
 
-    .line 743
     invoke-static {p1}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 744
     monitor-exit p0
 
     return-void
 
-    .line 746
     :cond_1
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 747
     invoke-virtual {v0, p1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 750
     iget-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1476,7 +1328,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 752
     :try_start_1
     iget-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
@@ -1492,7 +1343,6 @@
 
     if-nez p1, :cond_2
 
-    .line 754
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1511,7 +1361,6 @@
 
     const-string p1, "Retry reconnecting"
 
-    .line 755
     invoke-direct {p0, v4, p1}, Lcom/att/iqi/libs/IQIServiceBroker;->checkRetryAttemptsLocked(ILjava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
@@ -1522,7 +1371,6 @@
     :catch_0
     move-exception p1
 
-    .line 758
     :try_start_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1540,7 +1388,6 @@
 
     invoke-static {v0, p1}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 760
     :cond_2
     :goto_0
     monitor-exit p0
@@ -1560,28 +1407,24 @@
 .method private unregisterReceivers()V
     .locals 2
 
-    .line 910
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mKeyCodeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 911
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mDebugReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 912
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mUserUnlockedReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 913
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mCBObserver:Lcom/att/iqi/libs/CellBroadcastObserver;
 
     invoke-virtual {p0}, Lcom/att/iqi/libs/CellBroadcastObserver;->unregister()V
@@ -1594,7 +1437,6 @@
 .method public checkPkgValidity()Z
     .locals 7
 
-    .line 668
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->getServiceComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -1603,12 +1445,10 @@
 
     move-result-object v0
 
-    .line 671
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 673
     :try_start_0
     iget-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
@@ -1620,17 +1460,14 @@
 
     const/high16 v3, 0x8000000
 
-    .line 675
     invoke-virtual {v2, v0, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v2
 
-    .line 677
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     if-eqz v2, :cond_2
 
-    .line 679
     invoke-virtual {v2}, Landroid/content/pm/SigningInfo;->getSigningCertificateHistory()[Landroid/content/pm/Signature;
 
     move-result-object v2
@@ -1646,7 +1483,6 @@
 
     aget-object v5, v2, v4
 
-    .line 680
     invoke-virtual {v5}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v5
@@ -1661,7 +1497,6 @@
 
     const-string v5, "Valid signature"
 
-    .line 681
     invoke-static {v5}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
     add-int/lit8 v4, v4, 0x1
@@ -1673,19 +1508,16 @@
     :cond_0
     const-string v2, "Bad signature"
 
-    .line 684
     invoke-static {v2}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 685
     :try_start_1
     monitor-exit p0
 
     return v1
 
-    .line 688
     :cond_1
     monitor-exit p0
 
@@ -1699,7 +1531,6 @@
     :catch_0
     move-exception v2
 
-    .line 692
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1714,7 +1545,6 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 693
     invoke-virtual {v2}, Landroid/content/pm/PackageManager$NameNotFoundException;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1725,17 +1555,14 @@
 
     move-result-object v0
 
-    .line 692
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
     const-string v0, "Retry check package"
 
     const/4 v2, 0x2
 
-    .line 694
     invoke-direct {p0, v2, v0}, Lcom/att/iqi/libs/IQIServiceBroker;->checkRetryAttemptsLocked(ILjava/lang/String;)V
 
-    .line 696
     :cond_2
     monitor-exit p0
 
@@ -1752,21 +1579,17 @@
 .method public getBrokeredService()Lcom/att/iqi/IIQIService;
     .locals 6
 
-    .line 630
     monitor-enter p0
 
-    .line 631
     :try_start_0
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mImplementingBinderInterface:Lcom/att/iqi/IIQIService;
 
     if-eqz v0, :cond_0
 
-    .line 632
     monitor-exit p0
 
     return-object v0
 
-    .line 636
     :cond_0
     invoke-virtual {p0}, Lcom/att/iqi/libs/IQIServiceBroker;->shouldConnect()Z
 
@@ -1780,21 +1603,17 @@
 
     return-object v0
 
-    .line 639
     :cond_1
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMessageDispatcher:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
-    .line 640
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 639
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 642
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -1812,7 +1631,6 @@
 
     if-lez v4, :cond_3
 
-    .line 646
     :try_start_1
     invoke-virtual {p0, v2, v3}, Ljava/lang/Object;->wait(J)V
     :try_end_1
@@ -1827,21 +1645,17 @@
     :try_start_2
     const-string v3, "Connection wait interrupted"
 
-    .line 648
     invoke-static {v3, v2}, Lcom/att/iqi/libs/LogUtil;->logw(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 650
     :goto_1
     iget-object v2, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mImplementingBinderInterface:Lcom/att/iqi/IIQIService;
 
     if-eqz v2, :cond_2
 
-    .line 652
     monitor-exit p0
 
     return-object v2
 
-    .line 655
     :cond_2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1854,10 +1668,8 @@
     :cond_3
     const-string v0, "Timed out waiting for service connection, returning stub"
 
-    .line 657
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->logw(Ljava/lang/String;)V
 
-    .line 658
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceStubForFailure:Lcom/att/iqi/IIQIService;
 
     monitor-exit p0
@@ -1867,7 +1679,6 @@
     :catchall_0
     move-exception v0
 
-    .line 659
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -1878,7 +1689,6 @@
 .method public onBootPhase(I)V
     .locals 1
 
-    .line 589
     invoke-super {p0, p1}, Lcom/android/server/SystemService;->onBootPhase(I)V
 
     const/16 v0, 0x258
@@ -1887,28 +1697,22 @@
 
     const-string p1, "Third party apps ready"
 
-    .line 591
     invoke-static {p1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 593
     iget-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMessageDispatcher:Landroid/os/Handler;
 
     const/4 v0, 0x2
 
-    .line 594
     invoke-virtual {p1, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 593
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 596
     iget-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/att/iqi/libs/IQIConcierge;->init(Landroid/content/Context;)V
 
-    .line 598
     iget-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/telephony/SubscriptionManager;
@@ -1921,7 +1725,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 599
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mSubListener:Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
 
     invoke-virtual {p1, p0}, Landroid/telephony/SubscriptionManager;->addOnSubscriptionsChangedListener(Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;)V
@@ -1933,7 +1736,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 271
     new-instance v0, Lcom/att/iqi/libs/IQIServiceBroker$BinderService;
 
     invoke-direct {v0, p0}, Lcom/att/iqi/libs/IQIServiceBroker$BinderService;-><init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
@@ -1944,7 +1746,6 @@
 
     const/4 v0, 0x1
 
-    .line 272
     iput-boolean v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServicePublished:Z
 
     return-void
@@ -1955,14 +1756,12 @@
 
     if-nez p2, :cond_0
 
-    .line 285
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMessageDispatcher:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto :goto_0
 
-    .line 287
     :cond_0
     iget-object p0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mMessageDispatcher:Landroid/os/Handler;
 
@@ -1979,10 +1778,8 @@
 .method public shouldConnect()Z
     .locals 2
 
-    .line 727
     monitor-enter p0
 
-    .line 728
     :try_start_0
     iget v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mServiceState:I
 
@@ -1998,7 +1795,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 729
     invoke-static {}, Lcom/att/iqi/libs/IQIConcierge;->isServiceBindingAllowed()Z
 
     move-result v0
@@ -2018,7 +1814,6 @@
     :catchall_0
     move-exception v0
 
-    .line 730
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2031,13 +1826,10 @@
 
     const-string v0, "Disconnecting from implementation"
 
-    .line 764
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->logw(Ljava/lang/String;)V
 
-    .line 765
     monitor-enter p0
 
-    .line 766
     :try_start_0
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mImplementingBinderInterface:Lcom/att/iqi/IIQIService;
 
@@ -2045,15 +1837,12 @@
 
     const-string v0, "Already disconnected"
 
-    .line 767
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 768
     monitor-exit p0
 
     return-void
 
-    .line 770
     :cond_0
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mContext:Landroid/content/Context;
 
@@ -2063,15 +1852,12 @@
 
     const/4 v0, 0x0
 
-    .line 771
     invoke-direct {p0, v0}, Lcom/att/iqi/libs/IQIServiceBroker;->notifyServiceState(Z)V
 
     const/4 v0, 0x0
 
-    .line 772
     iput-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker;->mImplementingBinderInterface:Lcom/att/iqi/IIQIService;
 
-    .line 773
     monitor-exit p0
 
     return-void

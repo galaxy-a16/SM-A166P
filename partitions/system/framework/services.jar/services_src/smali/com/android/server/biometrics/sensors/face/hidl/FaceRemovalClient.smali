@@ -35,12 +35,10 @@
 
     move-object/from16 v11, p12
 
-    .line 54
     invoke-direct/range {v0 .. v11}, Lcom/android/server/biometrics/sensors/RemovalClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;Lcom/android/server/biometrics/sensors/BiometricUtils;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;Ljava/util/Map;)V
 
     move/from16 v1, p5
 
-    .line 56
     iput v1, v0, Lcom/android/server/biometrics/sensors/face/hidl/FaceRemovalClient;->mBiometricId:I
 
     return-void
@@ -53,13 +51,11 @@
 
     const-string v0, "FaceRemovalClient"
 
-    .line 64
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    .line 65
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getFreshDaemon()Ljava/lang/Object;
 
     move-result-object v3
@@ -72,7 +68,6 @@
 
     move-result v3
 
-    .line 66
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,10 +105,8 @@
 
     const-string v2, "Remote exception when requesting remove"
 
-    .line 72
     invoke-static {v0, v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0

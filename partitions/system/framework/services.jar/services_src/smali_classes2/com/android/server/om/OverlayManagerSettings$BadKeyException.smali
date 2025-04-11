@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/om/OverlayIdentifier;I)V
     .locals 2
 
-    .line 778
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

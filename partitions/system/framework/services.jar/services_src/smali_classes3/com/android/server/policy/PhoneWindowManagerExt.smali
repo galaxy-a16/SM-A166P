@@ -266,7 +266,6 @@
 .method public static synthetic $r8$lambda$0FfmBawUlDhQUraxFQgi9Ycq0Og(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$checkPolicyBeforeDispatching$7(I)V
 
     return-void
@@ -275,7 +274,6 @@
 .method public static synthetic $r8$lambda$0sMkfbd_zblsiWBq614DSJmaN68(III)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$injectionKeyEvent$15(III)V
 
     return-void
@@ -284,7 +282,6 @@
 .method public static synthetic $r8$lambda$6UA_Gpou-Qd1gIZNR3hHrECCAcQ(ILcom/samsung/android/telecom/SemTelecomManager;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$silenceRinger$25(ILcom/samsung/android/telecom/SemTelecomManager;)V
 
     return-void
@@ -293,7 +290,6 @@
 .method public static synthetic $r8$lambda$6xcGXNZZB1rcyW70OS2Evt1cl_w(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$init$1()V
 
     return-void
@@ -302,7 +298,6 @@
 .method public static synthetic $r8$lambda$7qFDqs3OMKBLnNH3WEJT9h8_Z_8(ILcom/samsung/android/telecom/SemTelecomManager;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$endCall$26(ILcom/samsung/android/telecom/SemTelecomManager;)V
 
     return-void
@@ -311,7 +306,6 @@
 .method public static synthetic $r8$lambda$8yJrUQiUgLBR_yK2Un2T5Pdv3iE(Lcom/android/server/policy/PhoneWindowManagerExt;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$16(Ljava/lang/Boolean;)V
 
     return-void
@@ -320,7 +314,6 @@
 .method public static synthetic $r8$lambda$BPpb103l4tW75pQnaZutDshO-ow()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$requestCustomFullBugreport$23()V
 
     return-void
@@ -329,7 +322,6 @@
 .method public static synthetic $r8$lambda$BTXHpfUkN1Rwtfhvf983JfmmCQE(Lcom/android/server/policy/PhoneWindowManagerExt;Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$showToast$8(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
@@ -338,7 +330,6 @@
 .method public static synthetic $r8$lambda$HG-JvrygkX_WEKfB2kBJHoEvOKo(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$showBootDialog$28(I)V
 
     return-void
@@ -347,7 +338,6 @@
 .method public static synthetic $r8$lambda$IxPAIrjuVu8jbKZZGn9V4oZfpF8(Lcom/android/server/policy/PhoneWindowManagerExt;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$13(Ljava/lang/Boolean;)V
 
     return-void
@@ -356,7 +346,6 @@
 .method public static synthetic $r8$lambda$T8or4XiUMA3Ti-ZHy71pzzhdtaw()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$22()V
 
     return-void
@@ -365,7 +354,6 @@
 .method public static synthetic $r8$lambda$VwViCU47z34z-X9-X4uHLH6XiTY(Lcom/android/server/policy/PhoneWindowManagerExt;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$12(Ljava/lang/Boolean;)V
 
     return-void
@@ -374,7 +362,6 @@
 .method public static synthetic $r8$lambda$W4D9fIm3nk61E6zPESsBu8uIS1k(Landroid/view/inputmethod/InputMethodManager;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$isSamsungKeyboardShown$9(Landroid/view/inputmethod/InputMethodManager;)Z
 
     move-result p0
@@ -385,7 +372,6 @@
 .method public static synthetic $r8$lambda$ehDgohsVzTWO33ks8cVPElYp1OU(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$21()V
 
     return-void
@@ -394,7 +380,6 @@
 .method public static synthetic $r8$lambda$g7OBVOjhcZFGgdQuHFYdy-KsrXE(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$interceptKeyBeforeDispatching$6(I)V
 
     return-void
@@ -403,7 +388,6 @@
 .method public static synthetic $r8$lambda$gGmAaQkcNrJk_-9LmhPU6o0FlFk(Lcom/android/server/policy/PhoneWindowManagerExt;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$10(Ljava/lang/Boolean;)V
 
     return-void
@@ -412,7 +396,6 @@
 .method public static synthetic $r8$lambda$hiYdhFWgEzL0SDpLQVh9c15gHqU(Lcom/android/server/policy/PhoneWindowManagerExt;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$11(Ljava/lang/Boolean;)V
 
     return-void
@@ -421,7 +404,6 @@
 .method public static synthetic $r8$lambda$hudfjWbur6NJtz9IcCrz8tjKyfQ(Lcom/android/server/policy/PhoneWindowManagerExt;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$14(Ljava/lang/Boolean;)V
 
     return-void
@@ -430,7 +412,6 @@
 .method public static synthetic $r8$lambda$j4DQJkofquQ8jo99D7KWgqkWBqA(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$new$20()V
 
     return-void
@@ -439,7 +420,6 @@
 .method public static synthetic $r8$lambda$jLWiSu_yFSl3OgeTj6trzxlznP0(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$onUserSwitch$2(I)V
 
     return-void
@@ -448,7 +428,6 @@
 .method public static synthetic $r8$lambda$mS004V4GmZ_GFoVncj-Jz2P0Bzs(Lcom/android/server/policy/PhoneWindowManagerExt;ZLandroid/app/AlarmManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$sendFoldSaLogging$29(ZLandroid/app/AlarmManager;)V
 
     return-void
@@ -457,7 +436,6 @@
 .method public static synthetic $r8$lambda$qIhdDRojQi7A2p305STkO9ms3ic(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$performHomeBroadcast$17()V
 
     return-void
@@ -466,7 +444,6 @@
 .method public static synthetic $r8$lambda$tmUTGS5AW9a-tnhGVlDL0H2A7NE(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$init$0()V
 
     return-void
@@ -475,7 +452,6 @@
 .method public static synthetic $r8$lambda$yNfd9PJVUuHSW8XrqfWx1ibIWI0(ILcom/samsung/android/telecom/SemTelecomManager;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->lambda$acceptRingingCall$24(ILcom/samsung/android/telecom/SemTelecomManager;)V
 
     return-void
@@ -484,7 +460,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBoldFontEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBoldFontEnabled:I
 
     return p0
@@ -493,7 +468,6 @@
 .method public static bridge synthetic -$$Nest$fgetmButtonShapeEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mButtonShapeEnabled:I
 
     return p0
@@ -502,7 +476,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCursorThicknessScale(Lcom/android/server/policy/PhoneWindowManagerExt;)F
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mCursorThicknessScale:F
 
     return p0
@@ -511,7 +484,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDoublePressLaunchComponentConsumer(Lcom/android/server/policy/PhoneWindowManagerExt;)Ljava/util/function/Consumer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mDoublePressLaunchComponentConsumer:Ljava/util/function/Consumer;
 
     return-object p0
@@ -520,7 +492,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEmergencySosConsumer(Lcom/android/server/policy/PhoneWindowManagerExt;)Ljava/util/function/Consumer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mEmergencySosConsumer:Ljava/util/function/Consumer;
 
     return-object p0
@@ -529,7 +500,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFoldOpenCount(Lcom/android/server/policy/PhoneWindowManagerExt;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldOpenCount:I
 
     return p0
@@ -538,7 +508,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsPalmTouchDownToSleep(Lcom/android/server/policy/PhoneWindowManagerExt;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPalmTouchDownToSleep:Z
 
     return p0
@@ -547,7 +516,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/policy/PhoneWindowManagerExt;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -556,7 +524,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPenDetachNotiConsumer(Lcom/android/server/policy/PhoneWindowManagerExt;)Ljava/util/function/Consumer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenDetachNotiConsumer:Ljava/util/function/Consumer;
 
     return-object p0
@@ -565,7 +532,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPenState(Lcom/android/server/policy/PhoneWindowManagerExt;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenState:I
 
     return p0
@@ -574,7 +540,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPenType(Lcom/android/server/policy/PhoneWindowManagerExt;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenType:I
 
     return p0
@@ -583,7 +548,6 @@
 .method public static bridge synthetic -$$Nest$fgetmQuickLaunchCameraConsumer(Lcom/android/server/policy/PhoneWindowManagerExt;)Ljava/util/function/Consumer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuickLaunchCameraConsumer:Ljava/util/function/Consumer;
 
     return-object p0
@@ -592,7 +556,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTopActivity(Lcom/android/server/policy/PhoneWindowManagerExt;)Landroid/content/ComponentName;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTopActivity:Landroid/content/ComponentName;
 
     return-object p0
@@ -601,7 +564,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTvModeStateConsumer(Lcom/android/server/policy/PhoneWindowManagerExt;)Ljava/util/function/Consumer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeStateConsumer:Ljava/util/function/Consumer;
 
     return-object p0
@@ -610,7 +572,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTvModeStateDoublePressConsumer(Lcom/android/server/policy/PhoneWindowManagerExt;)Ljava/util/function/Consumer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeStateDoublePressConsumer:Ljava/util/function/Consumer;
 
     return-object p0
@@ -619,7 +580,6 @@
 .method public static bridge synthetic -$$Nest$fputmAssistantAppName(Lcom/android/server/policy/PhoneWindowManagerExt;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAssistantAppName:Ljava/lang/String;
 
     return-void
@@ -628,7 +588,6 @@
 .method public static bridge synthetic -$$Nest$fputmBoldFontEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBoldFontEnabled:I
 
     return-void
@@ -637,7 +596,6 @@
 .method public static bridge synthetic -$$Nest$fputmButtonShapeEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mButtonShapeEnabled:I
 
     return-void
@@ -646,7 +604,6 @@
 .method public static bridge synthetic -$$Nest$fputmCursorThicknessScale(Lcom/android/server/policy/PhoneWindowManagerExt;F)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mCursorThicknessScale:F
 
     return-void
@@ -655,7 +612,6 @@
 .method public static bridge synthetic -$$Nest$fputmEnableReserveBatteryMode(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mEnableReserveBatteryMode:Z
 
     return-void
@@ -664,7 +620,6 @@
 .method public static bridge synthetic -$$Nest$fputmFoldOpenCount(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldOpenCount:I
 
     return-void
@@ -673,7 +628,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsAnyKeyMode(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAnyKeyMode:Z
 
     return-void
@@ -682,7 +636,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsAssistHapticEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAssistHapticEnabled:Z
 
     return-void
@@ -691,7 +644,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsCustomBugreportWriterEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsCustomBugreportWriterEnabled:Z
 
     return-void
@@ -700,7 +652,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsDoubleTapPremiumWatchOn(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapPremiumWatchOn:Z
 
     return-void
@@ -709,7 +660,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsDoubleTapToWakeUp(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapToWakeUp:Z
 
     return-void
@@ -718,7 +668,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsHapticsEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsEnabled:Z
 
     return-void
@@ -727,7 +676,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsInteractionControlEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsInteractionControlEnabled:Z
 
     return-void
@@ -736,7 +684,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsPowerKeyBlocked(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPowerKeyBlocked:Z
 
     return-void
@@ -745,7 +692,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsPremiumWatchOn(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPremiumWatchOn:Z
 
     return-void
@@ -754,7 +700,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsSktPhoneRelaxMode(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsSktPhoneRelaxMode:Z
 
     return-void
@@ -763,7 +708,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsVolumeKeyBlocked(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsVolumeKeyBlocked:Z
 
     return-void
@@ -772,7 +716,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsVolumeUpKeyMode(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsVolumeUpKeyMode:Z
 
     return-void
@@ -781,7 +724,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsVolumeUpKeyPressed(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsVolumeUpKeyPressed:Z
 
     return-void
@@ -790,7 +732,6 @@
 .method public static bridge synthetic -$$Nest$fputmIssueTrackerLoggedIn(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIssueTrackerLoggedIn:Z
 
     return-void
@@ -799,7 +740,6 @@
 .method public static bridge synthetic -$$Nest$fputmNavBarImeBtnEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mNavBarImeBtnEnabled:Z
 
     return-void
@@ -808,7 +748,6 @@
 .method public static bridge synthetic -$$Nest$fputmNavGetureHintEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mNavGetureHintEnabled:Z
 
     return-void
@@ -817,7 +756,6 @@
 .method public static bridge synthetic -$$Nest$fputmPenSoundEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundEnabled:Z
 
     return-void
@@ -826,7 +764,6 @@
 .method public static bridge synthetic -$$Nest$fputmPenVibrationEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenVibrationEnabled:Z
 
     return-void
@@ -835,7 +772,6 @@
 .method public static bridge synthetic -$$Nest$fputmReserveBatteryMode(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mReserveBatteryMode:Z
 
     return-void
@@ -844,7 +780,6 @@
 .method public static bridge synthetic -$$Nest$fputmScreenOffMemoEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenOffMemoEnabled:Z
 
     return-void
@@ -853,7 +788,6 @@
 .method public static bridge synthetic -$$Nest$fputmShowKeyboardBtnEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mShowKeyboardBtnEnabled:Z
 
     return-void
@@ -862,7 +796,6 @@
 .method public static bridge synthetic -$$Nest$mbindKeyguardOnPkgChanged(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->bindKeyguardOnPkgChanged()V
 
     return-void
@@ -871,7 +804,6 @@
 .method public static bridge synthetic -$$Nest$mcheckAccessibilityShortcutVolupPowerTriggered(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->checkAccessibilityShortcutVolupPowerTriggered()V
 
     return-void
@@ -880,7 +812,6 @@
 .method public static bridge synthetic -$$Nest$mhandleDoublePressLaunchCamera(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->handleDoublePressLaunchCamera(I)V
 
     return-void
@@ -889,7 +820,6 @@
 .method public static bridge synthetic -$$Nest$mhandleLongPressOnRecent(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->handleLongPressOnRecent(I)V
 
     return-void
@@ -898,7 +828,6 @@
 .method public static bridge synthetic -$$Nest$mhandleMultiFingerTap(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->handleMultiFingerTap(I)V
 
     return-void
@@ -907,7 +836,6 @@
 .method public static bridge synthetic -$$Nest$mhandleStartTransitionForKeyguardLw(Lcom/android/server/policy/PhoneWindowManagerExt;ZZI)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/PhoneWindowManagerExt;->handleStartTransitionForKeyguardLw(ZZI)I
 
     move-result p0
@@ -918,7 +846,6 @@
 .method public static bridge synthetic -$$Nest$minterceptAccessibilityShortcutVolupPowerChord(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->interceptAccessibilityShortcutVolupPowerChord()V
 
     return-void
@@ -927,7 +854,6 @@
 .method public static bridge synthetic -$$Nest$misActivitiesAvailable(Lcom/android/server/policy/PhoneWindowManagerExt;Landroid/content/Intent;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->isActivitiesAvailable(Landroid/content/Intent;)Z
 
     move-result p0
@@ -938,7 +864,6 @@
 .method public static bridge synthetic -$$Nest$misQuickLaunchCameraEnabled(Lcom/android/server/policy/PhoneWindowManagerExt;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->isQuickLaunchCameraEnabled(I)Z
 
     move-result p0
@@ -949,7 +874,6 @@
 .method public static bridge synthetic -$$Nest$mlaunchDoublePressPowerTvMode(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->launchDoublePressPowerTvMode()V
 
     return-void
@@ -958,7 +882,6 @@
 .method public static bridge synthetic -$$Nest$mlaunchPowerDoublePressCamera(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->launchPowerDoublePressCamera()V
 
     return-void
@@ -967,7 +890,6 @@
 .method public static bridge synthetic -$$Nest$mlaunchSecureFolder(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->launchSecureFolder()V
 
     return-void
@@ -976,7 +898,6 @@
 .method public static bridge synthetic -$$Nest$msendBroadcastDoubleClick(Lcom/android/server/policy/PhoneWindowManagerExt;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendBroadcastDoubleClick(I)V
 
     return-void
@@ -985,7 +906,6 @@
 .method public static constructor <clinit>()V
     .locals 8
 
-    .line 1863
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -994,7 +914,6 @@
 
     const/16 v1, 0x1a
 
-    .line 1866
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1003,7 +922,6 @@
 
     const/4 v2, 0x3
 
-    .line 1867
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1012,7 +930,6 @@
 
     const/16 v3, 0xbb
 
-    .line 1868
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1021,7 +938,6 @@
 
     const/4 v4, 0x4
 
-    .line 1869
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1030,7 +946,6 @@
 
     const/16 v5, 0x18
 
-    .line 1870
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -1039,7 +954,6 @@
 
     const/16 v6, 0x19
 
-    .line 1871
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1048,7 +962,6 @@
 
     const/16 v7, 0x3f7
 
-    .line 1872
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -1057,7 +970,6 @@
 
     const/16 v7, 0x437
 
-    .line 1873
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -1066,7 +978,6 @@
 
     const/16 v7, 0x436
 
-    .line 1874
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -1075,7 +986,6 @@
 
     const/16 v7, 0x55
 
-    .line 1875
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -1084,7 +994,6 @@
 
     const/16 v7, 0x4f
 
-    .line 1876
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -1093,7 +1002,6 @@
 
     const/16 v7, 0x78
 
-    .line 1877
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -1102,37 +1010,28 @@
 
     const/4 v0, 0x0
 
-    .line 3107
     sput-object v0, Lcom/android/server/policy/PhoneWindowManagerExt;->sdhmsBinder:Landroid/os/IBinder;
 
-    .line 3213
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/policy/PhoneWindowManagerExt;->KEYCODE_KEY_COMBINATION_ALLOWLIST:Ljava/util/Set;
 
-    .line 3216
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3217
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3218
     invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3219
     invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3220
     invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3221
     invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const/16 v1, 0x14
 
-    .line 3222
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1141,7 +1040,6 @@
 
     const/16 v1, 0x17
 
-    .line 3223
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1154,10 +1052,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/policy/WindowManagerPolicy;Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;)V
     .locals 6
 
-    .line 373
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 243
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -1166,22 +1062,16 @@
 
     const/4 v0, 0x0
 
-    .line 337
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLastDexMode:I
 
-    .line 347
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakingUpReason:I
 
-    .line 360
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIssueTrackerLoggedIn:Z
 
-    .line 364
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsLastGesture3FingerBottom:Z
 
-    .line 2093
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBootCompleted:Z
 
-    .line 2094
     new-instance v1, Lcom/android/server/policy/PhoneWindowManagerExt$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$1;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
@@ -1190,87 +1080,68 @@
 
     const/4 v1, 0x0
 
-    .line 2269
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mToast:Landroid/widget/Toast;
 
-    .line 2798
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$2;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPackageChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 3104
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSemRotationBooster:Lcom/samsung/android/os/SemDvfsManager;
 
-    .line 3105
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSemFoldingBooster:Lcom/samsung/android/os/SemDvfsManager;
 
-    .line 3106
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSemWakeUpBooster:Lcom/samsung/android/os/SemDvfsManager;
 
-    .line 3109
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBoosterLock:Ljava/lang/Object;
 
-    .line 3297
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$5;
 
     invoke-direct {v2, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$5;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSetupWizardGlobalActionReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 3312
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsCallOpenDictation:Z
 
-    .line 3313
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsSamsungKeyboard:Z
 
-    .line 3346
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuintuplePressOnPowerBehavior:I
 
-    .line 3347
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuadruplePressOnPowerBehavior:I
 
     const/4 v2, 0x2
 
-    .line 3525
     iput v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuickLaunchCameraBehavior:I
 
-    .line 3532
     new-instance v3, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda0;
 
     invoke-direct {v3, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuickLaunchCameraConsumer:Ljava/util/function/Consumer;
 
-    .line 3841
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeEnabled:Z
 
-    .line 3842
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeDoublePressEnabled:Z
 
-    .line 3843
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mDoublePressLaunchComponentName:Landroid/content/ComponentName;
 
-    .line 3881
     new-instance v3, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda1;
 
     invoke-direct {v3, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeStateConsumer:Ljava/util/function/Consumer;
 
-    .line 3892
     new-instance v3, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda2;
 
     invoke-direct {v3, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeStateDoublePressConsumer:Ljava/util/function/Consumer;
 
-    .line 3905
     new-instance v3, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda3;
 
     invoke-direct {v3, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
@@ -1279,76 +1150,60 @@
 
     new-array v3, v2, [J
 
-    .line 3955
     iput-object v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyUpTime:[J
 
-    .line 3956
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsScreenshotTriggered:Z
 
     const-wide/16 v3, 0x0
 
-    .line 3957
     iput-wide v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenshotTriggeredTime:J
 
     const/4 v3, 0x1
 
-    .line 3958
     iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenshotEnabled:Z
 
-    .line 4109
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mEmergencySosEnabled:Z
 
-    .line 4111
     new-instance v4, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda4;
 
     invoke-direct {v4, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda4;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mEmergencySosConsumer:Ljava/util/function/Consumer;
 
-    .line 4203
     new-instance v4, Lcom/android/server/policy/PhoneWindowManagerExt$6;
 
     invoke-direct {v4, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$6;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mDrmEventObserver:Landroid/os/UEventObserver;
 
-    .line 4220
     new-instance v4, Lcom/android/server/policy/PhoneWindowManagerExt$7;
 
     invoke-direct {v4, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$7;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mExtEventObserver:Landroid/os/UEventObserver;
 
-    .line 4296
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAppSwitchKeyConsumed:Z
 
-    .line 4328
     iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsEnabled:Z
 
-    .line 4329
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAssistHapticEnabled:Z
 
-    .line 4330
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsSupported:Z
 
-    .line 4537
     new-instance v4, Ljava/lang/Object;
 
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mServiceAcquireLock:Ljava/lang/Object;
 
-    .line 4605
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyEventInjectionThread:Ljava/lang/Thread;
 
-    .line 4688
     sget-boolean v4, Lcom/samsung/android/rune/CoreRune;->FW_SPEN:Z
 
     const/4 v5, -0x1
 
     if-eqz v4, :cond_0
 
-    .line 4689
     sget v4, Lcom/samsung/android/rune/CoreRune;->FW_SPEN_USP_LEVEL:I
 
     rem-int/lit8 v4, v4, 0xa
@@ -1361,203 +1216,154 @@
     :goto_0
     iput v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenType:I
 
-    .line 4690
     iput v5, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenState:I
 
-    .line 4692
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundEnabled:Z
 
-    .line 4695
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundFilePath:Ljava/lang/String;
 
-    .line 4969
     new-instance v4, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda5;
 
     invoke-direct {v4, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda5;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenDetachNotiConsumer:Ljava/util/function/Consumer;
 
-    .line 5068
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAccessibilityShortcutVolupPower:Z
 
-    .line 5069
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAccessibilityDirectAccessController:Lcom/android/internal/accessibility/AccessibilityDirectAccessController;
 
-    .line 5114
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsInteractionControlEnabled:Z
 
-    .line 5115
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPowerKeyBlocked:Z
 
-    .line 5116
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsVolumeKeyBlocked:Z
 
-    .line 5159
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsVolumeUpKeyMode:Z
 
-    .line 5173
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAnyKeyMode:Z
 
-    .line 5174
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAcceptCallHomeConsumed:Z
 
-    .line 5177
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsSktPhoneRelaxMode:Z
 
-    .line 5216
     new-instance v4, Lcom/android/server/policy/PhoneWindowManagerExt$8;
 
     invoke-direct {v4, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$8;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mProximityChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 5254
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapToWakeUp:Z
 
-    .line 5255
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapToWakeUpSupported:Z
 
-    .line 5488
     iput v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->STARTED_WAKE:I
 
-    .line 5489
     iput v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->FINISHED_WAKE:I
 
     const/4 v2, 0x4
 
-    .line 5490
     iput v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->STARTED_SLEEP:I
 
     const/16 v2, 0x8
 
-    .line 5491
     iput v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->FINISHED_SLEEP:I
 
-    .line 5526
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mReserveBatteryMode:Z
 
-    .line 5527
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mEnableReserveBatteryMode:Z
 
-    .line 5542
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnlockTriggered:Z
 
-    .line 5563
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda6;
 
     invoke-direct {v2, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda6;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnlockRunning:Ljava/lang/Runnable;
 
-    .line 5575
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnfoldedTriggered:Z
 
-    .line 5584
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda7;
 
     invoke-direct {v2, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda7;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnfoldedRunning:Ljava/lang/Runnable;
 
-    .line 5612
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$9;
 
     invoke-direct {v2, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$9;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mMultiFingerGestureListener:Landroid/hardware/input/InputManager$SemOnMultiFingerGestureListener;
 
-    .line 5696
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPogoKeyboardConnected:Z
 
-    .line 5720
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPalmTouchDownToSleep:Z
 
-    .line 5722
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$10;
 
     invoke-direct {v2, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$10;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPalmTouchReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 5869
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda8;
 
     invoke-direct {v2}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda8;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mStopLockTaskModePinnedChordLongPress:Ljava/lang/Runnable;
 
-    .line 6046
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskModeState:I
 
-    .line 6047
     new-instance v2, Landroid/util/SparseIntArray;
 
     invoke-direct {v2}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskFeatures:Landroid/util/SparseIntArray;
 
-    .line 6167
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mVolumeKeyLongPress:Z
 
-    .line 6244
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPremiumWatchOn:Z
 
-    .line 6245
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapPremiumWatchOn:Z
 
-    .line 6319
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$13;
 
     invoke-direct {v2, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$13;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mMultiuserReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 6333
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldOpenCount:I
 
-    .line 6458
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSubBootMsgDialog:Landroid/app/ProgressDialog;
 
-    .line 6474
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldSaLock:Ljava/lang/Object;
 
-    .line 6528
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerExt$15;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$15;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldSaLoggingReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 6711
     iput v5, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mButtonShapeEnabled:I
 
-    .line 6714
     iput v5, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBoldFontEnabled:I
 
     const/4 v0, 0x0
 
-    .line 6717
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mCursorThicknessScale:F
 
-    .line 6824
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mProKioskManager:Lcom/samsung/android/knox/custom/ProKioskManager;
 
-    .line 374
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
-    .line 375
     check-cast p2, Lcom/android/server/policy/PhoneWindowManager;
 
     iput-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 376
     iput-object p3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
-    .line 378
     invoke-virtual {p2, p0}, Lcom/android/server/policy/PhoneWindowManager;->setSamsungPolicy(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     return-void
@@ -1566,7 +1372,6 @@
 .method public static synthetic lambda$acceptRingingCall$24(ILcom/samsung/android/telecom/SemTelecomManager;)V
     .locals 0
 
-    .line 6126
     invoke-virtual {p1, p0}, Lcom/samsung/android/telecom/SemTelecomManager;->acceptRingingCall(I)V
 
     return-void
@@ -1575,7 +1380,6 @@
 .method private synthetic lambda$checkPolicyBeforeDispatching$7(I)V
     .locals 0
 
-    .line 1987
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManager;->handleShortPressOnHome(I)V
@@ -1586,7 +1390,6 @@
 .method public static synthetic lambda$endCall$26(ILcom/samsung/android/telecom/SemTelecomManager;)V
     .locals 0
 
-    .line 6134
     invoke-virtual {p1, p0}, Lcom/samsung/android/telecom/SemTelecomManager;->endCall(I)V
 
     return-void
@@ -1595,7 +1398,6 @@
 .method private synthetic lambda$init$0()V
     .locals 0
 
-    .line 392
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/KeyCustomizationManager;->init()V
@@ -1606,7 +1408,6 @@
 .method private synthetic lambda$init$1()V
     .locals 0
 
-    .line 420
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/KeyboardShortcutManager;->init()V
@@ -1619,18 +1420,15 @@
 
     move/from16 v0, p2
 
-    .line 4612
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v14
 
-    .line 4614
     :try_start_0
     new-instance v13, Landroid/app/Instrumentation;
 
     invoke-direct {v13}, Landroid/app/Instrumentation;-><init>()V
 
-    .line 4615
     new-instance v12, Landroid/view/KeyEvent;
 
     const/4 v6, 0x0
@@ -1667,13 +1465,10 @@
 
     move-object/from16 v1, v17
 
-    .line 4617
     invoke-virtual {v1, v0}, Landroid/view/KeyEvent;->semSetDisplayId(I)V
 
-    .line 4618
     invoke-virtual {v14, v1}, Landroid/app/Instrumentation;->sendKeySync(Landroid/view/KeyEvent;)V
 
-    .line 4620
     new-instance v15, Landroid/view/KeyEvent;
 
     const/4 v6, 0x1
@@ -1700,10 +1495,8 @@
 
     invoke-direct/range {v1 .. v13}, Landroid/view/KeyEvent;-><init>(JJIIIIIIII)V
 
-    .line 4622
     invoke-virtual {v15, v0}, Landroid/view/KeyEvent;->semSetDisplayId(I)V
 
-    .line 4623
     invoke-virtual {v14, v15}, Landroid/app/Instrumentation;->sendKeySync(Landroid/view/KeyEvent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1713,7 +1506,6 @@
     :catch_0
     move-exception v0
 
-    .line 4625
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -1723,7 +1515,6 @@
 .method private synthetic lambda$interceptKeyBeforeDispatching$6(I)V
     .locals 0
 
-    .line 1577
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManager;->handleShortPressOnHome(I)V
@@ -1734,7 +1525,6 @@
 .method public static synthetic lambda$isSamsungKeyboardShown$9(Landroid/view/inputmethod/InputMethodManager;)Z
     .locals 0
 
-    .line 3341
     invoke-virtual {p0}, Landroid/view/inputmethod/InputMethodManager;->isInputMethodShown()Z
 
     move-result p0
@@ -1745,7 +1535,6 @@
 .method private synthetic lambda$new$10(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 3533
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1762,7 +1551,6 @@
 
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuickLaunchCameraBehavior:I
 
-    .line 3535
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1783,7 +1571,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3536
     iget p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuickLaunchCameraBehavior:I
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateKeyCustomizationInfoQuickLaunchCamera(I)V
@@ -1794,7 +1581,6 @@
 .method private synthetic lambda$new$11(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 3882
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1815,7 +1601,6 @@
 
     move v1, v0
 
-    .line 3884
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1843,18 +1628,15 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3885
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeEnabled:Z
 
     if-ne v1, p1, :cond_1
 
     return-void
 
-    .line 3888
     :cond_1
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeEnabled:Z
 
-    .line 3889
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateKeyCustomizationInfoTvMode()V
 
     return-void
@@ -1863,10 +1645,8 @@
 .method private synthetic lambda$new$12(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 3893
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
-    .line 3894
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -1875,7 +1655,6 @@
 
     const/4 v1, 0x0
 
-    .line 3893
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
@@ -1886,7 +1665,6 @@
 
     move v1, v0
 
-    .line 3896
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1914,18 +1692,15 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3898
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeDoublePressEnabled:Z
 
     if-ne v1, p1, :cond_1
 
     return-void
 
-    .line 3901
     :cond_1
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeDoublePressEnabled:Z
 
-    .line 3902
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateKeyCustomizationInfoTvMode()V
 
     return-void
@@ -1934,22 +1709,18 @@
 .method private synthetic lambda$new$13(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 3906
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
-    .line 3907
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     const-string v0, "double_tab_launch_component"
 
-    .line 3906
     invoke-static {p1, v0}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3908
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1968,24 +1739,20 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3909
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateDoublePressLaunchInfo(Ljava/lang/String;)V
 
-    .line 3911
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_POWER_ATT_TV_MODE:Z
 
     if-eqz p1, :cond_0
 
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mDoublePressLaunchComponentName:Landroid/content/ComponentName;
 
-    .line 3912
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->isTvModeComponentName(Landroid/content/ComponentName;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 3913
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateKeyCustomizationInfoTvMode()V
 
     :cond_0
@@ -1995,7 +1762,6 @@
 .method private synthetic lambda$new$14(Ljava/lang/Boolean;)V
     .locals 3
 
-    .line 4113
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2022,7 +1788,6 @@
     :goto_0
     iput-boolean v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mEmergencySosEnabled:Z
 
-    .line 4115
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2043,7 +1808,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4116
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateQuintuplePressPowerBehavior()V
 
     return-void
@@ -2052,7 +1816,6 @@
 .method private synthetic lambda$new$16(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 4970
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2069,7 +1832,6 @@
 
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundFilePath:Ljava/lang/String;
 
-    .line 4972
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -2082,7 +1844,6 @@
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundFilePath:Ljava/lang/String;
 
-    .line 4973
     invoke-virtual {p1}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->getPenSoundPath()Ljava/lang/String;
 
     move-result-object p1
@@ -2095,7 +1856,6 @@
 
     goto :goto_0
 
-    .line 4976
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
 
@@ -2111,7 +1871,6 @@
 .method private synthetic lambda$new$20()V
     .locals 2
 
-    .line 5564
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnlockTriggered:Z
 
     if-eqz v0, :cond_0
@@ -2120,12 +1879,10 @@
 
     const-string v1, "WakeAndUnlock not triggered"
 
-    .line 5565
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 5566
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnlockTriggered:Z
 
     :cond_0
@@ -2135,7 +1892,6 @@
 .method private synthetic lambda$new$21()V
     .locals 2
 
-    .line 5585
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnfoldedTriggered:Z
 
     if-eqz v0, :cond_0
@@ -2144,12 +1900,10 @@
 
     const-string v1, "WakeAndUnfolded not triggered"
 
-    .line 5586
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 5587
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnfoldedTriggered:Z
 
     :cond_0
@@ -2163,10 +1917,8 @@
 
     const-string v1, "PhoneWindowManagerExt"
 
-    .line 5870
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5872
     :try_start_0
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
@@ -2181,7 +1933,6 @@
     :catch_0
     move-exception v0
 
-    .line 5874
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2198,7 +1949,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5877
     :goto_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
@@ -2206,7 +1956,6 @@
 
     const-string v0, "NAVIB1009"
 
-    .line 5878
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_0
@@ -2216,7 +1965,6 @@
 .method private synthetic lambda$onUserSwitch$2(I)V
     .locals 0
 
-    .line 832
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/KeyCustomizationManager;->onUserSwitch(I)V
@@ -2227,7 +1975,6 @@
 .method private synthetic lambda$performHomeBroadcast$17()V
     .locals 3
 
-    .line 5209
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
@@ -2248,7 +1995,6 @@
 .method public static synthetic lambda$requestCustomFullBugreport$23()V
     .locals 1
 
-    .line 6114
     const-class v0, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2257,7 +2003,6 @@
 
     check-cast v0, Landroid/app/ActivityManagerInternal;
 
-    .line 6115
     invoke-virtual {v0}, Landroid/app/ActivityManagerInternal;->requestCustomFullBugreport()V
 
     return-void
@@ -2268,18 +2013,15 @@
 
     if-eqz p1, :cond_1
 
-    .line 6513
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAlarmPendingIntent:Landroid/app/PendingIntent;
 
     if-eqz p0, :cond_0
 
-    .line 6514
     invoke-virtual {p2, p0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     :cond_0
     return-void
 
-    .line 6518
     :cond_1
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAlarmPendingIntent:Landroid/app/PendingIntent;
 
@@ -2287,7 +2029,6 @@
 
     if-nez p1, :cond_2
 
-    .line 6519
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
@@ -2304,7 +2045,6 @@
 
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAlarmPendingIntent:Landroid/app/PendingIntent;
 
-    .line 6523
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -2316,7 +2056,6 @@
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAlarmPendingIntent:Landroid/app/PendingIntent;
 
-    .line 6522
     invoke-virtual {p2, v0, v1, v2, p0}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
 
     return-void
@@ -2325,14 +2064,12 @@
 .method private synthetic lambda$showBootDialog$28(I)V
     .locals 3
 
-    .line 6373
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
     if-nez v1, :cond_0
 
-    .line 6374
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -2343,7 +2080,6 @@
 
     iput-object v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
-    .line 6381
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -2365,7 +2101,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 6382
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
@@ -2378,25 +2113,21 @@
 .method private synthetic lambda$showToast$8(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .line 2273
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mToast:Landroid/widget/Toast;
 
     if-eqz v0, :cond_0
 
-    .line 2274
     invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 2276
     invoke-static {p1, p2, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mToast:Landroid/widget/Toast;
 
-    .line 2277
     invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
     return-void
@@ -2405,7 +2136,6 @@
 .method public static synthetic lambda$silenceRinger$25(ILcom/samsung/android/telecom/SemTelecomManager;)V
     .locals 0
 
-    .line 6130
     invoke-virtual {p1, p0}, Lcom/samsung/android/telecom/SemTelecomManager;->silenceRinger(I)V
 
     return-void
@@ -2424,7 +2154,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 3293
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -2452,7 +2181,6 @@
 .method public acceptRingingCall(I)V
     .locals 1
 
-    .line 6126
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda15;
 
     invoke-direct {v0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda15;-><init>(I)V
@@ -2465,7 +2193,6 @@
 .method public addSingleKeyGestureRule(I)V
     .locals 3
 
-    .line 2392
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mSingleKeyGestureDetector:Lcom/android/server/policy/SingleKeyGestureDetector;
@@ -2478,7 +2205,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2393
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2530,7 +2256,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 2424
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2551,7 +2276,6 @@
 
     goto :goto_0
 
-    .line 2421
     :cond_1
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$UserTopKeyRule;
 
@@ -2559,7 +2283,6 @@
 
     goto :goto_0
 
-    .line 2418
     :cond_2
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;
 
@@ -2567,7 +2290,6 @@
 
     goto :goto_0
 
-    .line 2403
     :cond_3
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$RecentKeyRule;
 
@@ -2575,7 +2297,6 @@
 
     goto :goto_0
 
-    .line 2415
     :cond_4
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$HeadsetHookKeyRule;
 
@@ -2583,7 +2304,6 @@
 
     goto :goto_0
 
-    .line 2409
     :cond_5
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$VolumeDownKeyRule;
 
@@ -2591,7 +2311,6 @@
 
     goto :goto_0
 
-    .line 2412
     :cond_6
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$VolumeUpKeyRule;
 
@@ -2599,7 +2318,6 @@
 
     goto :goto_0
 
-    .line 2406
     :cond_7
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$BackKeyRule;
 
@@ -2607,7 +2325,6 @@
 
     goto :goto_0
 
-    .line 2400
     :cond_8
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$HomeKeyRule;
 
@@ -2616,7 +2333,6 @@
     :goto_0
     if-eqz p1, :cond_9
 
-    .line 2428
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSingleKeyGestureDetector:Lcom/android/server/policy/SingleKeyGestureDetector;
@@ -2630,17 +2346,14 @@
 .method public adjustConfigurationLw(Landroid/content/res/Configuration;)V
     .locals 2
 
-    .line 6721
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mButtonShapeEnabled:I
 
     iget v1, p1, Landroid/content/res/Configuration;->semButtonShapeEnabled:I
 
     if-eq v0, v1, :cond_0
 
-    .line 6722
     iput v0, p1, Landroid/content/res/Configuration;->semButtonShapeEnabled:I
 
-    .line 6724
     :cond_0
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBoldFontEnabled:I
 
@@ -2648,10 +2361,8 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 6725
     iput v0, p1, Landroid/content/res/Configuration;->boldFont:I
 
-    .line 6727
     :cond_1
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mCursorThicknessScale:F
 
@@ -2661,7 +2372,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 6728
     iput p0, p1, Landroid/content/res/Configuration;->semCursorThicknessScale:F
 
     :cond_2
@@ -2671,7 +2381,6 @@
 .method public final answerCallByHomeKey(Z)Z
     .locals 3
 
-    .line 5181
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAnyKeyMode:Z
 
     const/4 v1, 0x0
@@ -2687,10 +2396,8 @@
 
     if-eqz p1, :cond_2
 
-    .line 5186
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAcceptCallHomeConsumed:Z
 
-    .line 5187
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p1}, Lcom/android/server/policy/PhoneWindowManager;->getTelecommService()Landroid/telecom/TelecomManager;
@@ -2699,7 +2406,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 5188
     invoke-virtual {p1}, Landroid/telecom/TelecomManager;->isRinging()Z
 
     move-result p1
@@ -2717,25 +2423,20 @@
     :cond_1
     const-string/jumbo p1, "ringing: Accept the call!"
 
-    .line 5190
     invoke-static {v2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x3
 
-    .line 5191
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->acceptRingingCall(I)V
 
-    .line 5192
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAcceptCallHomeConsumed:Z
 
     const-string p0, "Ignoring HOME; there\'s a ringing incoming call and set anykey mode"
 
-    .line 5193
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 5197
     :cond_2
     iget-boolean p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAcceptCallHomeConsumed:Z
 
@@ -2743,7 +2444,6 @@
 
     const-string p0, "Ignoring HOME; consumed by accept call."
 
-    .line 5198
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -2755,7 +2455,6 @@
 .method public final assistantAppNameToString()Ljava/lang/String;
     .locals 3
 
-    .line 6150
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAssistantAppName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2768,7 +2467,6 @@
 
     return-object p0
 
-    .line 6153
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAssistantAppName:Ljava/lang/String;
 
@@ -2849,7 +2547,6 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 6163
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAssistantAppName:Ljava/lang/String;
 
     return-object p0
@@ -2894,7 +2591,6 @@
 .method public final bindKeyguardOnPkgChanged()V
     .locals 2
 
-    .line 6768
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
@@ -2908,10 +2604,8 @@
 
     const-string v1, "bind KeyguardService due to updating SystemUI pkg"
 
-    .line 6771
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6772
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
@@ -2920,7 +2614,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->bindService(Landroid/content/Context;)V
 
-    .line 6773
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
@@ -2933,18 +2626,15 @@
 .method public boostWakeUp()V
     .locals 3
 
-    .line 3143
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBoosterLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3144
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSemWakeUpBooster:Lcom/samsung/android/os/SemDvfsManager;
 
     if-nez v1, :cond_0
 
-    .line 3145
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     const-string v2, "DEVICE_WAKEUP"
@@ -2959,10 +2649,8 @@
 
     const/16 v2, 0x13
 
-    .line 3148
     invoke-virtual {v1, v2}, Lcom/samsung/android/os/SemDvfsManager;->setHint(I)V
 
-    .line 3152
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSemWakeUpBooster:Lcom/samsung/android/os/SemDvfsManager;
 
@@ -2970,10 +2658,8 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/policy/PhoneWindowManagerExt;->boosterAcquireLocked(Lcom/samsung/android/os/SemDvfsManager;Ljava/lang/String;)V
 
-    .line 3153
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendCommandToSamsungDeviceHealth()V
 
-    .line 3154
     monitor-exit v0
 
     return-void
@@ -2997,7 +2683,6 @@
 
     return-void
 
-    .line 3163
     :cond_0
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3016,14 +2701,12 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3164
     invoke-virtual {p1}, Lcom/samsung/android/os/SemDvfsManager;->acquire()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 3166
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3048,7 +2731,6 @@
 .method public final callDictation(Ljava/lang/String;I)V
     .locals 2
 
-    .line 3324
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3073,17 +2755,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3325
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "keyCode"
 
-    .line 3326
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 3327
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3102,7 +2781,6 @@
 .method public canDispatchingSystemKeyEvent(I)Z
     .locals 0
 
-    .line 3070
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/SystemKeyManager;->canDispatchingKeyEvent(I)Z
@@ -3115,7 +2793,6 @@
 .method public final canOpenTvModeByPowerDoublePress()Z
     .locals 1
 
-    .line 3940
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTvModeEnabled:Z
 
     if-eqz v0, :cond_0
@@ -3126,7 +2803,6 @@
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mDoublePressLaunchComponentName:Landroid/content/ComponentName;
 
-    .line 3941
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isTvModeComponentName(Landroid/content/ComponentName;)Z
 
     move-result p0
@@ -3147,7 +2823,6 @@
 .method public canRequestBugReport()Z
     .locals 1
 
-    .line 6119
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->IS_DEBUG_LEVEL_MID:Z
 
     if-nez v0, :cond_0
@@ -3183,7 +2858,6 @@
 .method public final canStartScreenOffMemo(I)Z
     .locals 6
 
-    .line 4784
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenOffMemoEnabled:Z
 
     const/4 v1, 0x0
@@ -3194,12 +2868,10 @@
 
     const-string p0, "can not start ScreenOffMemo, the option is disabled"
 
-    .line 4785
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 4795
     :cond_0
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenType:I
 
@@ -3213,7 +2885,6 @@
 
     const-string p0, "can start ScreenOffMemo, pen attached."
 
-    .line 4796
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
@@ -3221,7 +2892,6 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 4800
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3242,7 +2912,6 @@
 
     return v1
 
-    .line 4803
     :cond_2
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenState:I
 
@@ -3250,7 +2919,6 @@
 
     if-ne v0, v5, :cond_3
 
-    .line 4804
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3271,7 +2939,6 @@
 
     return v1
 
-    .line 4807
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getDexMode()I
 
@@ -3281,12 +2948,10 @@
 
     const-string p0, "can not start ScreenOffMemo in dual dex mode"
 
-    .line 4808
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 4813
     :cond_4
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -3304,7 +2969,6 @@
 
     goto :goto_0
 
-    .line 4818
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3338,7 +3002,6 @@
 .method public cancelPendingLockTaskModePinnedChordAction()V
     .locals 1
 
-    .line 5883
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mStopLockTaskModePinnedChordLongPress:Ljava/lang/Runnable;
@@ -3351,7 +3014,6 @@
 .method public final cancelWakeAndUnlockPendingAction()V
     .locals 1
 
-    .line 5571
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnlockRunning:Ljava/lang/Runnable;
@@ -3364,7 +3026,6 @@
 .method public final checkAccessibilityShortcutVolupPowerTriggered()V
     .locals 1
 
-    .line 5085
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAccessibilityShortcutVolupPower:Z
 
     if-nez v0, :cond_0
@@ -3374,25 +3035,20 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 5089
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAccessibilityShortcutVolupPower:Z
 
     const/16 v0, 0x17
 
-    .line 5090
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->setAppOpsPermissionIfNeeded(I)V
 
-    .line 5091
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->startAccessibilityShortcutVolupPower()V
 
-    .line 5094
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz p0, :cond_1
 
     const-string p0, "HWB1008"
 
-    .line 5095
     invoke-static {p0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_1
@@ -3406,14 +3062,12 @@
 
     move-object/from16 v1, p1
 
-    .line 3972
     sget-boolean v2, Lcom/samsung/android/rune/CoreRune;->FW_SCREENSHOT_BY_SIDE_KEY_COMBINATION:Z
 
     if-nez v2, :cond_0
 
     return-void
 
-    .line 3975
     :cond_0
     iget-boolean v2, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsScreenshotTriggered:Z
 
@@ -3434,7 +3088,6 @@
 
     if-eqz p2, :cond_a
 
-    .line 3984
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v7
@@ -3443,7 +3096,6 @@
 
     if-ne v7, v8, :cond_2
 
-    .line 3986
     iget-object v7, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyUpTime:[J
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getEventTime()J
@@ -3459,7 +3111,6 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 3988
     iget-object v7, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyUpTime:[J
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getEventTime()J
@@ -3468,14 +3119,12 @@
 
     aput-wide v8, v7, v2
 
-    .line 3990
     :cond_3
     :goto_0
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyUpTime:[J
 
     aget-wide v7, v1, v6
 
-    .line 3991
     aget-wide v9, v1, v2
 
     cmp-long v1, v7, v4
@@ -3488,7 +3137,6 @@
 
     goto/16 :goto_1
 
-    .line 4000
     :cond_4
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
@@ -3496,7 +3144,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 4001
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3527,13 +3174,11 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4006
     :cond_5
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v11
 
-    .line 4007
     iget-wide v13, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenshotTriggeredTime:J
 
     sub-long v13, v11, v13
@@ -3560,33 +3205,26 @@
 
     const-string/jumbo v1, "take a screenshot, this is triggered by keyCombination"
 
-    .line 4011
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4012
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
-    .line 4013
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getDisplayId()I
 
     move-result v7
 
-    .line 4012
     invoke-interface {v1, v2, v7}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->sendTakeScreenshotRunnable(II)V
 
-    .line 4016
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v1, :cond_a
 
     const-string v1, "HWB1007"
 
-    .line 4017
     invoke-static {v1}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 4020
     :cond_6
     iget-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mGlobalActionsByKeyCombnation:Z
 
@@ -3594,12 +3232,10 @@
 
     sub-long/2addr v7, v9
 
-    .line 4021
     invoke-static {v7, v8}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v7
 
-    .line 4022
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3618,14 +3254,12 @@
 
     goto :goto_3
 
-    .line 3993
     :cond_7
     :goto_1
     iget-boolean v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mGlobalActionsByKeyCombnation:Z
 
     if-nez v0, :cond_9
 
-    .line 3994
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3659,7 +3293,6 @@
     :cond_9
     return-void
 
-    .line 4028
     :cond_a
     :goto_3
     iget-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mGlobalActionsByKeyCombnation:Z
@@ -3668,30 +3301,23 @@
 
     const-string v1, "The key combination long press event was consumed by global action"
 
-    .line 4029
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4032
     :cond_b
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyUpTime:[J
 
     aput-wide v4, v1, v6
 
-    .line 4033
     aput-wide v4, v1, v2
 
-    .line 4034
     iput-boolean v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsScreenshotTriggered:Z
 
-    .line 4035
     iput-wide v4, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenshotTriggeredTime:J
 
-    .line 4036
     iput-boolean v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mGlobalActionsByKeyCombnation:Z
 
     return-void
 
-    .line 3976
     :cond_c
     :goto_4
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
@@ -3700,7 +3326,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 3977
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3732,7 +3357,6 @@
 .method public final checkPolicyBeforeDispatching(Landroid/view/KeyEvent;I)J
     .locals 4
 
-    .line 1977
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -3743,7 +3367,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2001
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isLongPress()Z
 
     move-result p2
@@ -3758,7 +3381,6 @@
 
     goto :goto_0
 
-    .line 1993
     :pswitch_0
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsLastGesture3FingerBottom:Z
 
@@ -3767,10 +3389,8 @@
     :pswitch_1
     const/4 v1, 0x0
 
-    .line 1984
     invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendThreeFingerGestureKeyEvent(Landroid/view/KeyEvent;IZ)V
 
-    .line 1985
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsLastGesture3FingerBottom:Z
 
     if-eqz p1, :cond_0
@@ -3779,7 +3399,6 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1987
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda21;
@@ -3788,32 +3407,27 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1989
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsLastGesture3FingerBottom:Z
 
     return-wide v2
 
-    .line 2002
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     const/4 p1, 0x4
 
-    .line 2003
     invoke-virtual {p0, p1, v0}, Lcom/android/server/policy/KeyCustomizationManager;->getLastKeyCustomizationInfo(II)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    .line 2004
     iget p0, p0, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->action:I
 
     if-ne p0, p1, :cond_3
 
-    .line 2005
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isDebugInput()Z
 
     move-result p0
@@ -3824,7 +3438,6 @@
 
     const-string p1, "dispatchKeyEvent:long press, NO_DISPATCHING"
 
-    .line 2006
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -3850,12 +3463,10 @@
 .method public checkPolicyBeforeInterceptKey(Landroid/view/KeyEvent;ZZ)I
     .locals 5
 
-    .line 1926
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
-    .line 1927
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -3873,7 +3484,6 @@
     :cond_0
     move v1, v2
 
-    .line 1928
     :goto_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
@@ -3881,12 +3491,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1931
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iput-boolean v2, v4, Lcom/android/server/policy/PhoneWindowManager;->mSystemKeyRequested:Z
 
-    .line 1934
     :cond_1
     invoke-virtual {p0, v0, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->isInteractionControlEnabled(IZ)Z
 
@@ -3900,7 +3508,6 @@
 
     const-string p0, "interceptKeyTq : Key was blocked by interaction control"
 
-    .line 1935
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -3910,7 +3517,6 @@
 
     return v3
 
-    .line 1942
     :cond_3
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfoWithKeyPressOld(I)Z
 
@@ -3926,7 +3532,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 1945
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mSystemKeyRequested:Z
@@ -3937,7 +3542,6 @@
     :cond_5
     return v3
 
-    .line 1953
     :cond_6
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -3955,7 +3559,6 @@
 
     if-gt v0, p2, :cond_7
 
-    .line 1955
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3992,7 +3595,6 @@
 
     if-nez v1, :cond_b
 
-    .line 1964
     :cond_9
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mProKioskManager:Lcom/samsung/android/knox/custom/ProKioskManager;
 
@@ -4006,14 +3608,12 @@
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mProKioskManager:Lcom/samsung/android/knox/custom/ProKioskManager;
 
-    .line 1965
     invoke-virtual {p0}, Lcom/samsung/android/knox/custom/ProKioskManager;->getVolumeKeyAppState()Z
 
     move-result p0
 
     if-eqz p0, :cond_b
 
-    .line 1967
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result p0
@@ -4034,7 +3634,6 @@
 .method public final checkSystemKeyBeforeDispatching(ILandroid/os/IBinder;)I
     .locals 2
 
-    .line 3074
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4053,19 +3652,16 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3075
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
-    .line 3076
     invoke-virtual {v0, p2}, Lcom/android/server/wm/WindowManagerInternal;->getKeyInterceptionInfoFromToken(Landroid/os/IBinder;)Lcom/android/internal/policy/KeyInterceptionInfo;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 3077
     iget p2, p2, Lcom/android/internal/policy/KeyInterceptionInfo;->layoutParamsType:I
 
     const/16 v0, 0x7f8
@@ -4074,21 +3670,18 @@
 
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 3078
     invoke-virtual {p2}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardShowingAndNotOccluded()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 3079
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     const-string/jumbo p2, "reason"
 
     invoke-virtual {p0, p2}, Lcom/android/server/policy/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
 
-    .line 3080
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4109,7 +3702,6 @@
 
     return p0
 
-    .line 3084
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -4135,7 +3727,6 @@
 .method public clearAppLockedUnLockedApp()V
     .locals 2
 
-    .line 6236
     :try_start_0
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
@@ -4154,7 +3745,6 @@
 
     const-string v1, " ClearAppLockedUnLockedApp failed , Remote exception "
 
-    .line 6238
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -4164,7 +3754,6 @@
 .method public clearKeyCustomizationInfoByAction(III)V
     .locals 0
 
-    .line 2795
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/KeyCustomizationManager;->clearKeyCustomizationInfoByAction(III)V
@@ -4175,7 +3764,6 @@
 .method public clearKeyCustomizationInfoByKeyCode(II)V
     .locals 0
 
-    .line 2791
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/KeyCustomizationManager;->clearKeyCustomizationInfoByKeyCode(II)V
@@ -4188,7 +3776,6 @@
 
     const-string v0, "close_dictation"
 
-    .line 3320
     invoke-virtual {p0, v0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->callDictation(Ljava/lang/String;I)V
 
     return-void
@@ -4197,10 +3784,8 @@
 .method public final consumeIfSemTelecomManagerNonNull(Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 6138
     const-class p0, Lcom/samsung/android/telecom/SemTelecomManager;
 
-    .line 6139
     invoke-static {p0}, Lcom/samsung/android/server/util/SafetySystemService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -4211,7 +3796,6 @@
 
     return-void
 
-    .line 6143
     :cond_0
     invoke-interface {p1, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
@@ -4221,20 +3805,16 @@
 .method public final createBootProgressDialog(Landroid/content/Context;Z)Landroid/app/BootProgressDialog;
     .locals 3
 
-    .line 6391
     new-instance p2, Lcom/android/server/policy/PhoneWindowManagerExt$14;
 
     invoke-direct {p2, p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$14;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;Landroid/content/Context;)V
 
     const/4 p0, 0x0
 
-    .line 6425
     invoke-virtual {p2, p0}, Landroid/app/BootProgressDialog;->setProgressStyle(I)V
 
-    .line 6426
     invoke-virtual {p2, p0}, Landroid/app/BootProgressDialog;->setIndeterminate(Z)V
 
-    .line 6427
     invoke-virtual {p2}, Landroid/app/BootProgressDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -4243,7 +3823,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
-    .line 6429
     invoke-virtual {p2}, Landroid/app/BootProgressDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -4252,7 +3831,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    .line 6432
     invoke-virtual {p2}, Landroid/app/BootProgressDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -4261,7 +3839,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setDimAmount(F)V
 
-    .line 6433
     invoke-virtual {p2}, Landroid/app/BootProgressDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -4272,10 +3849,8 @@
 
     const/4 v1, 0x5
 
-    .line 6437
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
 
-    .line 6439
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4298,25 +3873,20 @@
 
     const/4 p1, 0x1
 
-    .line 6449
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
     const/16 p1, 0x64
 
-    .line 6450
     invoke-virtual {p2, p1}, Landroid/app/BootProgressDialog;->setMax(I)V
 
-    .line 6451
     invoke-virtual {p2}, Landroid/app/BootProgressDialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 6452
     invoke-virtual {p2, p0}, Landroid/app/BootProgressDialog;->setCancelable(Z)V
 
-    .line 6453
     invoke-virtual {p2}, Landroid/app/BootProgressDialog;->show()V
 
     return-object p2
@@ -4325,7 +3895,6 @@
 .method public doublePressLaunchPolicy(I)Z
     .locals 3
 
-    .line 3709
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->isUserSetupComplete()Z
@@ -4340,12 +3909,10 @@
 
     const-string p0, "double press was blocked because UserSetup isn\'t completed"
 
-    .line 3710
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 3715
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isDomesticOtaStart()Z
 
@@ -4355,12 +3922,10 @@
 
     const-string p0, "double press was blocked by OTA status"
 
-    .line 3716
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 3719
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -4374,12 +3939,10 @@
 
     const-string p0, "double press was blocked by SimLock"
 
-    .line 3720
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 3723
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isCarrierLocked()Z
 
@@ -4389,12 +3952,10 @@
 
     const-string p0, "double press was blocked by CarrierLock"
 
-    .line 3724
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 3729
     :cond_3
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->isEnabled()Z
 
@@ -4402,7 +3963,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 3730
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->getInstance()Lcom/android/server/wm/WmCoverState;
 
     move-result-object v0
@@ -4415,7 +3975,6 @@
 
     const-string p0, "double press was blocked because cover was closed"
 
-    .line 3731
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -4423,14 +3982,12 @@
     :cond_4
     const/16 v0, 0x8
 
-    .line 3736
     invoke-virtual {p0, p1, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfo(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 3737
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4456,7 +4013,6 @@
     :cond_5
     const/4 p1, 0x3
 
-    .line 3741
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->isInteractionControlEnabled(I)Z
 
     move-result p0
@@ -4465,7 +4021,6 @@
 
     const-string p0, "double press was blocked by interaction control"
 
-    .line 3742
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -4479,14 +4034,12 @@
 .method public doubleTapLaunchPremiumWatch()V
     .locals 1
 
-    .line 6284
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapPremiumWatchOn:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 6288
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -4500,7 +4053,6 @@
 
     const-string v0, "Can not launch premium watch. UserSetup is not completed."
 
-    .line 6290
     invoke-static {p0, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -4508,7 +4060,6 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 6294
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->startActivityPremiumWatch(Z)V
 
     return-void
@@ -4519,30 +4070,24 @@
 
     const-string v0, ""
 
-    .line 6590
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6591
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "--- PhoneWindowManagerExt ---"
 
-    .line 6592
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6595
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/policy/KeyCustomizationManager;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 6596
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "maxMultiPressPowerCount="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6597
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->getMaxMultiPressPowerCount()I
@@ -4551,29 +4096,24 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 6598
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mQuadruplePressOnPowerBehavior="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6599
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuadruplePressOnPowerBehavior:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 6602
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/policy/SystemKeyManager;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 6604
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_DICTATION_SAMSUNG_KEYBOARD:Z
 
     if-eqz v0, :cond_0
 
-    .line 6605
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mIsCallOpenDictation="
@@ -4584,36 +4124,30 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6607
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_QUICK_LAUNCH_CAMERA:Z
 
     if-eqz v0, :cond_1
 
-    .line 6608
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mQuickLaunchCameraBehavior="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6609
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuickLaunchCameraBehavior:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 6611
     :cond_1
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SCREENSHOT_BY_SIDE_KEY_COMBINATION:Z
 
     if-eqz v0, :cond_2
 
-    .line 6612
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mIsScreenshotTriggered="
 
-    .line 6613
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsScreenshotTriggered:Z
@@ -4622,33 +4156,27 @@
 
     const-string v0, " mGlobalActionsByKeyCombnation="
 
-    .line 6614
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mGlobalActionsByKeyCombnation:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6620
     :cond_2
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_QUINTUPLE_PRESS_POWER_EMERGENCY_SOS:Z
 
     if-eqz v0, :cond_3
 
-    .line 6621
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mQuintuplePressOnPowerBehavior="
 
-    .line 6622
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6623
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuintuplePressOnPowerBehavior:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 6626
     :cond_3
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -4662,7 +4190,6 @@
 
     const-string v0, " mIsAssistHapticEnabled="
 
-    .line 6627
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAssistHapticEnabled:Z
@@ -4671,7 +4198,6 @@
 
     const-string v0, " mIsHapticsSupported="
 
-    .line 6628
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsSupported:Z
@@ -4680,46 +4206,38 @@
 
     const-string v0, " mNavBarVirtualKeyHapticFeedbackEnabled="
 
-    .line 6629
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6630
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-boolean v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mNavBarVirtualKeyHapticFeedbackEnabled:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6633
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "cameraSensorToggleSupported="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6634
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsCameraSensorToggleSupported:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 6635
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "micSensorToggleSupported="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6636
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsMicSensorToggleSupported:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6638
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SPEN:Z
 
     if-eqz v0, :cond_5
 
-    .line 6639
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "SPen state="
@@ -4732,7 +4250,6 @@
 
     const-string v0, " type="
 
-    .line 6640
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenType:I
@@ -4741,7 +4258,6 @@
 
     const-string v0, " vibrationEnabled="
 
-    .line 6641
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenVibrationEnabled:Z
@@ -4750,19 +4266,16 @@
 
     const-string v0, " soundEnabled="
 
-    .line 6642
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundEnabled:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6643
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
 
     if-nez v0, :cond_4
 
-    .line 6644
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "SoundInfo is null"
@@ -4771,7 +4284,6 @@
 
     goto :goto_0
 
-    .line 6646
     :cond_4
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -4779,7 +4291,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6647
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
 
     invoke-static {v0}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->-$$Nest$fgetmAttachPenSoundPath(Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;)Ljava/lang/String;
@@ -4790,7 +4301,6 @@
 
     const-string v0, " detachSoundPath="
 
-    .line 6648
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
@@ -4803,7 +4313,6 @@
 
     const-string v0, " attachSoundId="
 
-    .line 6649
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
@@ -4816,7 +4325,6 @@
 
     const-string v0, " detachSoundId="
 
-    .line 6650
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
@@ -4827,32 +4335,27 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 6653
     :cond_5
     :goto_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SPEN_SCREEN_OFF_MEMO:Z
 
     if-eqz v0, :cond_6
 
-    .line 6654
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mScreenOffMemoEnabled="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6655
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenOffMemoEnabled:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6658
     :cond_6
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mIsInteractionControlEnabled="
 
-    .line 6659
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsInteractionControlEnabled:Z
@@ -4861,7 +4364,6 @@
 
     const-string v0, " mIsPowerKeyBlocked="
 
-    .line 6660
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPowerKeyBlocked:Z
@@ -4870,19 +4372,16 @@
 
     const-string v0, " mIsVolumeKeyBlocked="
 
-    .line 6661
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsVolumeKeyBlocked:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6664
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mIsDoubleTapToWakeUpSupported="
 
-    .line 6665
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapToWakeUpSupported:Z
@@ -4891,19 +4390,16 @@
 
     const-string v0, " mIsDoubleTapToWakeUp="
 
-    .line 6666
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapToWakeUp:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6668
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_RESERVE_BATTERY_MODE:Z
 
     if-eqz v0, :cond_7
 
-    .line 6669
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mReserveBatteryMode="
@@ -4916,25 +4412,21 @@
 
     const-string v0, " mEnableReserveBatteryMode="
 
-    .line 6670
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mEnableReserveBatteryMode:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6672
     :cond_7
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_FINGERPRINT_SIDE_TOUCH:Z
 
     if-eqz v0, :cond_8
 
-    .line 6673
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mWakeAndUnlockTriggered="
 
-    .line 6674
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnlockTriggered:Z
@@ -4943,14 +4435,12 @@
 
     const-string v0, " mWakeAndUnfoldedTriggered="
 
-    .line 6675
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnfoldedTriggered:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6678
     :cond_8
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -4958,12 +4448,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6679
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPogoKeyboardConnected:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 6686
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mLockTaskModeState="
@@ -4974,14 +4462,12 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 6694
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mWakingUpReason="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6695
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakingUpReason:I
 
     invoke-static {v0}, Landroid/os/PowerManager;->wakeReasonToString(I)Ljava/lang/String;
@@ -4990,19 +4476,16 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6697
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_XCOVER_AND_TOP_KEY:Z
 
     if-eqz v0, :cond_9
 
-    .line 6698
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p1, "mIsCalledOpenDictationXCoverTop="
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 6699
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     iget-boolean p0, p0, Lcom/android/server/policy/KeyCustomizationManager;->mIsCalledOpenDictationXCoverTop:Z
@@ -5016,7 +4499,6 @@
 .method public endCall(I)V
     .locals 1
 
-    .line 6134
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda23;
 
     invoke-direct {v0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda23;-><init>(I)V
@@ -5029,7 +4511,6 @@
 .method public externalKeyboardPolicy()Z
     .locals 3
 
-    .line 4554
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBootCompleted:Z
 
     const-string v1, "PhoneWindowManagerExt"
@@ -5040,12 +4521,10 @@
 
     const-string/jumbo p0, "preCondition : Boot is not completed"
 
-    .line 4555
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 4558
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -5057,12 +4536,10 @@
 
     const-string/jumbo p0, "preCondition : User setup is not completed"
 
-    .line 4559
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 4562
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -5074,12 +4551,10 @@
 
     const-string/jumbo p0, "preCondition : Keyguard is shown"
 
-    .line 4563
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 4566
     :cond_2
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->IS_FACTORY_BINARY:Z
 
@@ -5087,12 +4562,10 @@
 
     const-string/jumbo p0, "preCondition : Factory binary"
 
-    .line 4567
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 4570
     :cond_3
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -5104,12 +4577,10 @@
 
     const-string/jumbo p0, "preCondition : Automatic test mode"
 
-    .line 4571
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 4574
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasMetaKeyPass()Z
 
@@ -5119,7 +4590,6 @@
 
     return v2
 
-    .line 4577
     :cond_5
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->isEnabled()Z
 
@@ -5127,7 +4597,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 4578
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->getInstance()Lcom/android/server/wm/WmCoverState;
 
     move-result-object p0
@@ -5149,7 +4618,6 @@
 .method public final getApplicationInfo(Landroid/content/Intent;)Landroid/content/pm/ApplicationInfo;
     .locals 5
 
-    .line 2311
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -5158,7 +4626,6 @@
 
     const/4 v0, 0x0
 
-    .line 2312
     invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v0
@@ -5167,7 +4634,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2313
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v0, :cond_0
@@ -5179,29 +4645,24 @@
 
     const-string v2, "PhoneWindowManagerExt"
 
-    .line 2317
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2318
     invoke-virtual {p1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2319
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 2320
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 2322
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p1
@@ -5213,13 +4674,11 @@
     :cond_1
     const-wide/16 v3, 0x0
 
-    .line 2328
     :try_start_0
     invoke-static {v3, v4}, Landroid/content/pm/PackageManager$ApplicationInfoFlags;->of(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
 
     move-result-object p1
 
-    .line 2327
     invoke-virtual {p0, v0, p1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
@@ -5231,7 +4690,6 @@
     :catch_0
     move-exception p0
 
-    .line 2330
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5254,7 +4712,6 @@
 .method public final getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
     .locals 0
 
-    .line 2306
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -5275,18 +4732,15 @@
 .method public final getAudioManager()Landroid/media/AudioManager;
     .locals 3
 
-    .line 4540
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mServiceAcquireLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4541
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v1, :cond_0
 
-    .line 4542
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     const-string v2, "audio"
@@ -5299,7 +4753,6 @@
 
     iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 4544
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAudioManager:Landroid/media/AudioManager;
 
@@ -5310,7 +4763,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4545
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -5321,7 +4773,6 @@
 .method public getBackupKeyCustomizationInfoList()Ljava/util/List;
     .locals 0
 
-    .line 6310
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/KeyCustomizationManager;->getBackupKeyCustomizationInfoList()Ljava/util/List;
@@ -5334,7 +4785,6 @@
 .method public getCoverPolicy()Lcom/android/server/wm/CoverPolicy;
     .locals 0
 
-    .line 5154
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
@@ -5351,7 +4801,6 @@
 .method public getDexMode()I
     .locals 0
 
-    .line 5479
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLastDexMode:I
 
     return p0
@@ -5360,7 +4809,6 @@
 .method public final getDisplayId()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -5369,14 +4817,12 @@
 .method public final getEmergencySosIntent()Landroid/content/Intent;
     .locals 3
 
-    .line 4156
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.systemui.action.LAUNCH_EMERGENCY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4157
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -5385,12 +4831,10 @@
 
     const/high16 v2, 0x100000
 
-    .line 4158
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 4160
     invoke-virtual {p0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->getTopEmergencySosResolveInfo(Ljava/util/List;)Landroid/content/pm/ResolveInfo;
 
     move-result-object p0
@@ -5403,12 +4847,10 @@
 
     const-string p0, "Couldn\'t find an app to process the emergency intent."
 
-    .line 4162
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 4165
     :cond_0
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -5416,12 +4858,10 @@
 
     const-string p0, "activityInfo is null, Can not update the emergency intent."
 
-    .line 4167
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 4171
     :cond_1
     new-instance v1, Landroid/content/ComponentName;
 
@@ -5435,7 +4875,6 @@
 
     const/high16 p0, 0x10000000
 
-    .line 4172
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     return-object v0
@@ -5444,7 +4883,6 @@
 .method public final getEndCallPowerPolicy(ZZ)Z
     .locals 1
 
-    .line 4982
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mIncallPowerBehavior:I
@@ -5466,7 +4904,6 @@
 
     return p0
 
-    .line 4993
     :cond_1
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->isEnabled()Z
 
@@ -5474,7 +4911,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 4994
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->getInstance()Lcom/android/server/wm/WmCoverState;
 
     move-result-object p1
@@ -5494,7 +4930,6 @@
 .method public getFillInIntent()Landroid/content/Intent;
     .locals 2
 
-    .line 3784
     new-instance p0, Landroid/content/Intent;
 
     invoke-direct {p0}, Landroid/content/Intent;-><init>()V
@@ -5503,17 +4938,14 @@
 
     const/4 v1, 0x1
 
-    .line 3785
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const-string v0, "ignoreKeyguardState"
 
-    .line 3786
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const-string v0, "dismissIfInsecure"
 
-    .line 3787
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     return-object p0
@@ -5534,7 +4966,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 4438
     invoke-static {p1}, Lcom/samsung/android/vibrator/SemHapticFeedbackConstants;->isValidatedVibeIndex(I)Z
 
     move-result p0
@@ -5551,7 +4982,6 @@
     :pswitch_0
     const/4 p0, 0x5
 
-    .line 4424
     invoke-static {p0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p0
@@ -5561,7 +4991,6 @@
     :pswitch_1
     const/16 p0, 0x29
 
-    .line 4436
     invoke-static {p0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p0
@@ -5572,14 +5001,12 @@
     :pswitch_2
     const/16 p0, 0xe
 
-    .line 4427
     invoke-static {p0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p0
 
     return p0
 
-    .line 4422
     :cond_2
     :pswitch_3
     invoke-static {p0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
@@ -5611,7 +5038,6 @@
 .method public getKeyCustomizationInfo(III)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
     .locals 0
 
-    .line 2769
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/KeyCustomizationManager;->getKeyCustomizationInfo(III)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
@@ -5624,7 +5050,6 @@
 .method public getKeyCustomizationInfoByPackage(Ljava/lang/String;II)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
     .locals 0
 
-    .line 2774
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/KeyCustomizationManager;->getKeyCustomizationInfoByPackage(Ljava/lang/String;II)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
@@ -5637,7 +5062,6 @@
 .method public getLastKeyCustomizationInfo(II)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
     .locals 0
 
-    .line 2779
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/KeyCustomizationManager;->getLastKeyCustomizationInfo(II)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
@@ -5650,7 +5074,6 @@
 .method public final getLockTaskFeaturesForUser(I)I
     .locals 1
 
-    .line 6071
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskFeatures:Landroid/util/SparseIntArray;
 
     const/4 v0, 0x0
@@ -5665,7 +5088,6 @@
 .method public getPendingIntentActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/app/PendingIntent;
     .locals 6
 
-    .line 3514
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x0
@@ -5688,19 +5110,16 @@
 .method public final getPersonaManagerService()Lcom/android/server/pm/PersonaManagerService;
     .locals 1
 
-    .line 4270
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPersonaManagerService:Lcom/android/server/pm/PersonaManagerService;
 
     if-nez v0, :cond_0
 
     const-string/jumbo v0, "persona"
 
-    .line 4271
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 4273
     invoke-static {v0}, Lcom/samsung/android/knox/ISemPersonaManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/knox/ISemPersonaManager;
 
     move-result-object v0
@@ -5709,7 +5128,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPersonaManagerService:Lcom/android/server/pm/PersonaManagerService;
 
-    .line 4275
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPersonaManagerService:Lcom/android/server/pm/PersonaManagerService;
 
@@ -5719,7 +5137,6 @@
 .method public final getReserveBatteryModeToast(Landroid/content/Intent;)Ljava/lang/String;
     .locals 1
 
-    .line 5535
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->getApplicationInfo(Landroid/content/Intent;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p1
@@ -5742,7 +5159,6 @@
 
     return-object p0
 
-    .line 2302
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -5768,7 +5184,6 @@
 .method public getTopActivity()Landroid/content/ComponentName;
     .locals 0
 
-    .line 2125
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTopActivity:Landroid/content/ComponentName;
 
     return-object p0
@@ -5779,7 +5194,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 4182
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -5788,7 +5202,6 @@
 
     goto :goto_1
 
-    .line 4186
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -5810,7 +5223,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4187
     iget-object v1, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-nez v1, :cond_2
@@ -5820,7 +5232,6 @@
     :cond_2
     const-string v2, "com.samsung.android.emergency"
 
-    .line 4192
     iget-object v1, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5834,7 +5245,6 @@
     :cond_3
     const/4 p0, 0x0
 
-    .line 4197
     invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -5853,7 +5263,6 @@
 .method public getWakingUpReason()I
     .locals 0
 
-    .line 989
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakingUpReason:I
 
     return p0
@@ -5862,17 +5271,14 @@
 .method public final handleDoublePressLaunchCamera(I)V
     .locals 1
 
-    .line 3567
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->doublePressLaunchPolicy(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3568
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->launchPowerDoublePressCamera()V
 
-    .line 3570
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendBroadcastDoubleClick(I)V
 
@@ -5882,7 +5288,6 @@
 .method public handleLongPressOnHomeWithPolicy(IJ)Z
     .locals 10
 
-    .line 5772
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->longPressOnHomePolicy()Z
 
     move-result v0
@@ -5893,7 +5298,6 @@
 
     return v1
 
-    .line 5775
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -5903,7 +5307,6 @@
 
     return v1
 
-    .line 5781
     :cond_1
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_SEARCLE_HOME_LONG:Z
 
@@ -5913,20 +5316,17 @@
 
     if-eqz v0, :cond_2
 
-    .line 5782
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isLongPressHomeSearcle()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 5783
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAssistHapticEnabled:Z
 
     if-eqz v0, :cond_3
 
-    .line 5784
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     const-string v4, "Home - Long Press"
@@ -5938,10 +5338,8 @@
     :cond_3
     const-string v0, "home long press haptic disabled"
 
-    .line 5787
     invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5790
     :cond_4
     :goto_0
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -5962,7 +5360,6 @@
 
     if-eq v0, p1, :cond_5
 
-    .line 5812
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5985,18 +5382,15 @@
 
     goto :goto_1
 
-    .line 5807
     :cond_5
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_SEARCLE_HOME_LONG:Z
 
     if-eqz p1, :cond_9
 
-    .line 5808
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->startSearcleHomeLongPress()V
 
     goto :goto_1
 
-    .line 5804
     :cond_6
     invoke-virtual {v4}, Lcom/android/server/policy/PhoneWindowManager;->toggleNotificationPanel()V
 
@@ -6011,27 +5405,22 @@
 
     move-wide v7, p2
 
-    .line 5795
     invoke-virtual/range {v4 .. v9}, Lcom/android/server/policy/PhoneWindowManager;->launchAssistAction(Ljava/lang/String;IJI)V
 
-    .line 5798
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz p1, :cond_9
 
     const-string p1, "NAVIB1003"
 
-    .line 5800
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->assistantAppNameToString()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 5799
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendCoreSaLoggingDimension(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 5792
     :cond_8
     invoke-virtual {v4}, Lcom/android/server/policy/PhoneWindowManager;->launchAllAppsAction()V
 
@@ -6045,7 +5434,6 @@
 
     const-string p1, "PhoneWindowManagerExt"
 
-    .line 4300
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     const/16 v1, 0xbb
@@ -6060,7 +5448,6 @@
 
     return-void
 
-    .line 4307
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isLockTaskModeEnabled()Z
 
@@ -6068,14 +5455,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 4308
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isTouchExplorationEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 4310
     :try_start_0
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
@@ -6087,7 +5472,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4311
     :cond_1
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
@@ -6104,13 +5488,11 @@
 
     const-string v0, "Unable to reach activity manager"
 
-    .line 4313
     invoke-static {p1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void
 
-    .line 4321
     :cond_2
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -6122,7 +5504,6 @@
 .method public final handleMultiFingerTap(I)V
     .locals 2
 
-    .line 5635
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6155,12 +5536,10 @@
 
     const-string p0, "The MultiFingerTap type was wrong."
 
-    .line 5668
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 5657
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -6175,7 +5554,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 5662
     :try_start_0
     invoke-interface {p0, p1}, Lcom/android/internal/statusbar/IStatusBarService;->expandSettingsPanel(Ljava/lang/String;)V
     :try_end_0
@@ -6183,7 +5561,6 @@
 
     goto :goto_0
 
-    .line 5646
     :cond_2
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -6195,7 +5572,6 @@
 
     goto :goto_0
 
-    .line 5651
     :cond_3
     :try_start_1
     invoke-interface {p0}, Lcom/android/internal/statusbar/IStatusBarService;->expandNotificationsPanel()V
@@ -6204,7 +5580,6 @@
 
     goto :goto_0
 
-    .line 5641
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->startActivityAppsScreen()V
 
@@ -6216,7 +5591,6 @@
 .method public handleNotifyPogoKeyboardStatus(Z)V
     .locals 2
 
-    .line 5700
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6235,18 +5609,15 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5701
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPogoKeyboardConnected:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 5704
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPogoKeyboardConnected:Z
 
-    .line 5706
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object p1
@@ -6255,7 +5626,6 @@
 
     return-void
 
-    .line 5710
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsPogoKeyboardConnected:Z
 
@@ -6267,7 +5637,6 @@
 
     if-nez v0, :cond_2
 
-    .line 5711
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mMultiFingerGestureListener:Landroid/hardware/input/InputManager$SemOnMultiFingerGestureListener;
 
     const/4 v0, 0x0
@@ -6276,7 +5645,6 @@
 
     goto :goto_0
 
-    .line 5714
     :cond_2
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mMultiFingerGestureListener:Landroid/hardware/input/InputManager$SemOnMultiFingerGestureListener;
 
@@ -6289,7 +5657,6 @@
 .method public final handleStartTransitionForKeyguardLw(ZZI)I
     .locals 0
 
-    .line 6012
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/PhoneWindowManager;->handleTransitionForKeyguardLw(ZZ)I
@@ -6302,7 +5669,6 @@
 .method public handleTorchForXCoverKey(ZI)Z
     .locals 1
 
-    .line 6225
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardLocked()Z
@@ -6320,7 +5686,6 @@
 
     return p0
 
-    .line 6226
     :cond_1
     :goto_0
     invoke-virtual {p0, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->onFlashlightKeyPressed(I)V
@@ -6333,7 +5698,6 @@
 .method public hasMetaKeyPass()Z
     .locals 0
 
-    .line 3099
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/SystemKeyManager;->hasMetaKeyPass()Z
@@ -6346,7 +5710,6 @@
 .method public hasRequestedActionBlockKeyEvent(IZI)I
     .locals 4
 
-    .line 2347
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     const/4 v1, 0x3
@@ -6361,7 +5724,6 @@
 
     return v1
 
-    .line 2353
     :cond_0
     iget v2, v0, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->action:I
 
@@ -6369,7 +5731,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 2354
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6392,14 +5753,12 @@
 
     if-nez p3, :cond_1
 
-    .line 2355
     iget p1, v0, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->id:I
 
     const/16 p2, 0xa
 
     if-ne p1, p2, :cond_1
 
-    .line 2356
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -6460,7 +5819,6 @@
 
     goto :goto_0
 
-    .line 2756
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -6486,7 +5844,6 @@
 .method public hasSystemKeyInfo(II)Z
     .locals 0
 
-    .line 3062
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/SystemKeyManager;->hasSystemKeyInfo(II)Z
@@ -6499,7 +5856,6 @@
 .method public hasSystemKeyInfoWithKeyPressOld(I)Z
     .locals 0
 
-    .line 3066
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/SystemKeyManager;->hasSystemKeyInfoWithKeyPressOld(I)Z
@@ -6512,7 +5868,6 @@
 .method public init()V
     .locals 5
 
-    .line 383
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler;
 
     const/4 v1, 0x0
@@ -6521,7 +5876,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
-    .line 384
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerExt$SettingsObserver;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
@@ -6530,19 +5884,14 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSettingsObserver:Lcom/android/server/policy/PhoneWindowManagerExt$SettingsObserver;
 
-    .line 385
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManagerExt$SettingsObserver;->observe()V
 
-    .line 387
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->initSettingsValue()V
 
-    .line 388
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->registerReceiver()V
 
-    .line 389
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->initIntent()V
 
-    .line 392
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda16;
@@ -6551,7 +5900,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 396
     new-instance v0, Lcom/android/server/policy/SystemKeyManager;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -6560,19 +5908,16 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
-    .line 403
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TRIPLE_PRESS_POWER_LAUNCH_PANIC_CALL:Z
 
     if-eqz v0, :cond_0
 
-    .line 404
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     const/16 v1, 0x66
 
     iput v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mTriplePressOnPowerBehavior:I
 
-    .line 408
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -6584,14 +5929,12 @@
 
     check-cast v0, Landroid/os/VibratorManager;
 
-    .line 409
     invoke-virtual {v0}, Landroid/os/VibratorManager;->getDefaultVibrator()Landroid/os/Vibrator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mVibrator:Landroid/os/Vibrator;
 
-    .line 410
     invoke-virtual {v0}, Landroid/os/Vibrator;->semGetSupportedVibrationType()I
 
     move-result v0
@@ -6612,10 +5955,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsSupported:Z
 
-    .line 415
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->registerDisplayListener()V
 
-    .line 419
     new-instance v0, Lcom/android/server/policy/KeyboardShortcutManager;
 
     iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
@@ -6624,7 +5965,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
-    .line 420
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance v3, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda17;
@@ -6633,7 +5973,6 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 422
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/hardware/SensorPrivacyManager;->getInstance(Landroid/content/Context;)Landroid/hardware/SensorPrivacyManager;
@@ -6642,7 +5981,6 @@
 
     const/4 v3, 0x2
 
-    .line 423
     invoke-virtual {v0, v3}, Landroid/hardware/SensorPrivacyManager;->supportsSensorToggle(I)Z
 
     move-result v3
@@ -6653,7 +5991,6 @@
 
     const-string v3, "camera_toggle_enabled"
 
-    .line 424
     invoke-static {v4, v3, v2}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v3
@@ -6670,7 +6007,6 @@
     :goto_1
     iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsCameraSensorToggleSupported:Z
 
-    .line 426
     invoke-virtual {v0, v2}, Landroid/hardware/SensorPrivacyManager;->supportsSensorToggle(I)Z
 
     move-result v0
@@ -6679,7 +6015,6 @@
 
     const-string/jumbo v0, "mic_toggle_enabled"
 
-    .line 427
     invoke-static {v4, v0, v2}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -6691,7 +6026,6 @@
     :cond_3
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsMicSensorToggleSupported:Z
 
-    .line 432
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
@@ -6700,7 +6034,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 451
     invoke-static {}, Lcom/samsung/android/knox/custom/ProKioskManager;->getInstance()Lcom/samsung/android/knox/custom/ProKioskManager;
 
     move-result-object v0
@@ -6713,7 +6046,6 @@
 .method public final initIntent()V
     .locals 2
 
-    .line 902
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TRIPLE_PRESS_POWER_LAUNCH_PANIC_CALL:Z
 
     if-nez v0, :cond_0
@@ -6722,7 +6054,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 904
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getEmergencySosIntent()Landroid/content/Intent;
 
@@ -6730,13 +6061,11 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIntentEmergencySos:Landroid/content/Intent;
 
-    .line 907
     :cond_1
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SPEN:Z
 
     if-eqz v0, :cond_2
 
-    .line 908
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.pen.INSERT"
@@ -6747,15 +6076,12 @@
 
     const/high16 v1, 0x1000000
 
-    .line 909
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 911
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SPEN_SCREEN_OFF_MEMO:Z
 
     if-eqz v0, :cond_2
 
-    .line 912
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -6764,7 +6090,6 @@
 
     const-string p0, "com.samsung.android.app.notes/com.samsung.android.app.notes.screenoffmemo.ScreenOffMemoService"
 
-    .line 913
     invoke-static {p0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object p0
@@ -6778,7 +6103,6 @@
 .method public initKeyCombinationRules()V
     .locals 4
 
-    .line 3228
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyCombinationManager:Lcom/android/server/policy/KeyCombinationManager;
@@ -6793,7 +6117,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/KeyCombinationManager;->addRule(Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;)V
 
-    .line 3252
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyCombinationManager:Lcom/android/server/policy/KeyCombinationManager;
@@ -6814,14 +6137,12 @@
 .method public final initSettingsValue()V
     .locals 4
 
-    .line 837
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 839
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_POWER_ATT_TV_MODE:Z
 
     if-eqz v1, :cond_2
@@ -6830,7 +6151,6 @@
 
     const/4 v2, 0x0
 
-    .line 840
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
@@ -6851,7 +6171,6 @@
 
     const-string/jumbo v1, "pwrkey_owner_status"
 
-    .line 842
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
@@ -6865,12 +6184,10 @@
 
     const-string v1, "double_tab_launch_component"
 
-    .line 844
     invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 846
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateDoublePressLaunchInfo(Ljava/lang/String;)V
 
     :cond_2
@@ -6880,7 +6197,6 @@
 .method public injectionKeyEvent(III)V
     .locals 2
 
-    .line 4608
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyEventInjectionThread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
@@ -6891,12 +6207,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 4609
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyEventInjectionThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 4611
     :cond_0
     new-instance v0, Ljava/lang/Thread;
 
@@ -6908,7 +6222,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyEventInjectionThread:Ljava/lang/Thread;
 
-    .line 4628
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -6919,7 +6232,6 @@
 
     const/4 v0, 0x1
 
-    .line 5081
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsAccessibilityShortcutVolupPower:Z
 
     return-void
@@ -6934,17 +6246,14 @@
 
     move-object/from16 v2, p2
 
-    .line 1233
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v3
 
-    .line 1234
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v4
 
-    .line 1235
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v5
@@ -6958,7 +6267,6 @@
     :cond_0
     const/4 v5, 0x0
 
-    .line 1236
     :goto_0
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->isLongPress()Z
 
@@ -6977,7 +6285,6 @@
     :cond_1
     const/4 v9, 0x0
 
-    .line 1244
     :goto_1
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->getDisplayId()I
 
@@ -6997,14 +6304,12 @@
     :goto_2
     if-eqz v11, :cond_3
 
-    .line 1247
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->isMetaPressed()Z
 
     move-result v12
 
     if-eqz v12, :cond_3
 
-    .line 1248
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasMetaKeyPass()Z
 
     move-result v12
@@ -7018,7 +6323,6 @@
     :cond_3
     const/4 v12, 0x0
 
-    .line 1249
     :goto_3
     iget-object v13, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -7026,12 +6330,10 @@
 
     move-result v13
 
-    .line 1250
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->isShiftPressed()Z
 
     move-result v14
 
-    .line 1252
     sget-boolean v15, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_INPUT:Z
 
     const-string v6, "PhoneWindowManagerExt"
@@ -7044,7 +6346,6 @@
 
     sget-object v15, Lcom/android/server/policy/PhoneWindowManagerExt;->KEYCODE_DEBUG_LOG_ALLOWLIST:Ljava/util/Set;
 
-    .line 1253
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -7055,7 +6356,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 1254
     :cond_4
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -7097,7 +6397,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1264
     :cond_5
     invoke-virtual {v0, v10}, Lcom/android/server/policy/PhoneWindowManagerExt;->isDisplayForShellShortcut(I)Z
 
@@ -7107,7 +6406,6 @@
 
     if-eqz v7, :cond_6
 
-    .line 1265
     invoke-virtual {v0, v2}, Lcom/android/server/policy/PhoneWindowManagerExt;->interceptKeyBeforeDispatchingForMT(Landroid/view/KeyEvent;)Z
 
     move-result v7
@@ -7116,11 +6414,9 @@
 
     return-wide v17
 
-    .line 1269
     :cond_6
     iget-object v7, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
-    .line 1270
     invoke-virtual {v7, v2, v12, v10}, Lcom/android/server/policy/KeyboardShortcutManager;->interceptKeyBeforeDispatching(Landroid/view/KeyEvent;ZI)Z
 
     move-result v7
@@ -7132,7 +6428,6 @@
     :cond_7
     move/from16 p3, v14
 
-    .line 1274
     invoke-virtual {v0, v2, v10}, Lcom/android/server/policy/PhoneWindowManagerExt;->checkPolicyBeforeDispatching(Landroid/view/KeyEvent;I)J
 
     move-result-wide v14
@@ -7143,7 +6438,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 1276
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -7220,10 +6514,8 @@
 
     const-string v1, "launch view notification"
 
-    .line 1810
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1811
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/server/policy/PhoneWindowManager;->getStatusBarService()Lcom/android/internal/statusbar/IStatusBarService;
@@ -7232,16 +6524,13 @@
 
     if-eqz v1, :cond_9
 
-    .line 1814
     :try_start_0
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
-    .line 1815
     invoke-static {v0, v10}, Landroid/app/StatusBarManager;->getNaturalBarTypeByDisplayId(Landroid/content/Context;I)I
 
     move-result v0
 
-    .line 1814
     invoke-interface {v1, v0}, Lcom/android/internal/statusbar/IStatusBarService;->expandNotificationsPanelToType(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -7251,14 +6540,12 @@
     :catch_0
     const-string v0, "Failed to launch view notification"
 
-    .line 1817
     invoke-static {v6, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_9
     :goto_4
     return-wide v17
 
-    .line 1803
     :pswitch_1
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
@@ -7266,20 +6553,17 @@
 
     return-wide v17
 
-    .line 1779
     :pswitch_2
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHotKey:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     if-nez v1, :cond_a
 
-    .line 1780
     new-instance v1, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     invoke-direct {v1, v0}, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     iput-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHotKey:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
-    .line 1782
     :cond_a
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->isEnabled()Z
 
@@ -7287,7 +6571,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 1783
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->getInstance()Lcom/android/server/wm/WmCoverState;
 
     move-result-object v1
@@ -7303,7 +6586,6 @@
     :cond_b
     if-eqz v11, :cond_c
 
-    .line 1788
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHotKey:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->registerAppInfo(I)V
@@ -7313,7 +6595,6 @@
     :cond_c
     if-nez v5, :cond_d
 
-    .line 1790
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHotKey:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     invoke-virtual {v0, v3, v10}, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->launchApp(II)V
@@ -7322,13 +6603,11 @@
     :goto_5
     return-wide v17
 
-    .line 1370
     :sswitch_0
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->IS_FACTORY_BINARY:Z
 
     if-nez v1, :cond_10
 
-    .line 1371
     invoke-static {}, Landroid/os/FactoryTest;->isRunningFactoryApp()Z
 
     move-result v1
@@ -7337,7 +6616,6 @@
 
     goto :goto_6
 
-    .line 1376
     :cond_e
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
@@ -7345,14 +6623,12 @@
 
     if-nez v1, :cond_50
 
-    .line 1377
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_ACTIVE_OR_XCOVER_KEY:Z
 
     if-eqz v1, :cond_f
 
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 1378
     invoke-virtual {v1, v3}, Lcom/android/server/policy/KeyCustomizationManager;->canDispatchXCoverTopKeyEvent(I)Z
 
     move-result v1
@@ -7361,11 +6637,9 @@
 
     return-wide v17
 
-    .line 1382
     :cond_f
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 1383
     invoke-virtual {v0, v2}, Lcom/android/server/policy/KeyCustomizationManager;->dispatchKeyCustomizationKeyEvent(Landroid/view/KeyEvent;)I
 
     move-result v0
@@ -7380,12 +6654,10 @@
     :goto_6
     const-string v0, "Block Dispatching TopKey because of Factory mode or test."
 
-    .line 1372
     invoke-static {v6, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_14
 
-    .line 1474
     :sswitch_1
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfoWithKeyPressOld(I)Z
 
@@ -7393,7 +6665,6 @@
 
     if-eqz v2, :cond_11
 
-    .line 1475
     invoke-virtual {v0, v3, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->checkSystemKeyBeforeDispatching(ILandroid/os/IBinder;)I
 
     move-result v0
@@ -7406,17 +6677,14 @@
     :cond_11
     if-nez v5, :cond_12
 
-    .line 1478
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
     const/4 v1, 0x1
 
-    .line 1479
     invoke-virtual {v0, v10, v1}, Lcom/android/server/policy/KeyboardShortcutManager;->launch(II)Z
 
     move-result v0
 
-    .line 1480
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v1, :cond_12
@@ -7425,7 +6693,6 @@
 
     const-string v0, "PKBD0033"
 
-    .line 1481
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_12
@@ -7436,10 +6703,8 @@
 
     if-nez v13, :cond_13
 
-    .line 1449
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 1450
     invoke-virtual {v1}, Lcom/android/server/policy/PhoneWindowManager;->isUserSetupComplete()Z
 
     move-result v1
@@ -7448,10 +6713,8 @@
 
     const-string v1, "KEYCODE_MULTI_WINDOW key input"
 
-    .line 1451
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1452
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
@@ -7460,19 +6723,16 @@
 
     if-eqz v0, :cond_13
 
-    .line 1454
     invoke-interface {v0}, Lcom/android/server/statusbar/StatusBarManagerInternal;->toggleSplitScreen()V
 
     :cond_13
     return-wide v17
 
-    .line 1349
     :sswitch_3
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->IS_FACTORY_BINARY:Z
 
     if-nez v1, :cond_16
 
-    .line 1350
     invoke-static {}, Landroid/os/FactoryTest;->isRunningFactoryApp()Z
 
     move-result v1
@@ -7481,7 +6741,6 @@
 
     goto :goto_8
 
-    .line 1355
     :cond_14
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
@@ -7489,14 +6748,12 @@
 
     if-nez v1, :cond_50
 
-    .line 1356
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_ACTIVE_OR_XCOVER_KEY:Z
 
     if-eqz v1, :cond_15
 
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 1357
     invoke-virtual {v1, v3}, Lcom/android/server/policy/KeyCustomizationManager;->canDispatchXCoverTopKeyEvent(I)Z
 
     move-result v1
@@ -7505,11 +6762,9 @@
 
     return-wide v17
 
-    .line 1361
     :cond_15
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 1362
     invoke-virtual {v0, v2}, Lcom/android/server/policy/KeyCustomizationManager;->dispatchKeyCustomizationKeyEvent(Landroid/view/KeyEvent;)I
 
     move-result v0
@@ -7524,12 +6779,10 @@
     :goto_8
     const-string v0, "Block Dispatching XCoverKey because of Factory mode or test."
 
-    .line 1351
     invoke-static {v6, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_14
 
-    .line 1308
     :sswitch_4
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfoWithKeyPressOld(I)Z
 
@@ -7537,7 +6790,6 @@
 
     if-eqz v7, :cond_17
 
-    .line 1309
     invoke-virtual {v0, v3, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->checkSystemKeyBeforeDispatching(ILandroid/os/IBinder;)I
 
     move-result v0
@@ -7547,17 +6799,14 @@
     :cond_17
     const/16 v1, 0xbb
 
-    .line 1312
     invoke-virtual {v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
     move-result v1
 
     if-nez v1, :cond_18
 
-    .line 1313
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 1314
     invoke-virtual {v1, v2}, Lcom/android/server/policy/KeyCustomizationManager;->dispatchKeyCustomizationKeyEvent(Landroid/view/KeyEvent;)I
 
     move-result v1
@@ -7571,7 +6820,6 @@
     :cond_18
     if-eqz v11, :cond_19
 
-    .line 1321
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/server/policy/PhoneWindowManager;->hasNavigationBar()Z
@@ -7582,7 +6830,6 @@
 
     const/4 v1, 0x0
 
-    .line 1322
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAppSwitchKeyConsumed:Z
 
     :cond_19
@@ -7592,7 +6839,6 @@
 
     if-eqz v8, :cond_50
 
-    .line 1327
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/server/policy/PhoneWindowManager;->hasNavigationBar()Z
@@ -7603,14 +6849,11 @@
 
     const/4 v1, 0x1
 
-    .line 1328
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAppSwitchKeyConsumed:Z
 
-    .line 1330
     :cond_1a
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
-    .line 1331
     invoke-virtual {v1, v3, v15}, Lcom/android/server/policy/SystemKeyManager;->hasSystemKeyInfo(II)Z
 
     move-result v1
@@ -7619,12 +6862,10 @@
 
     const-string/jumbo v0, "skip long press recent, requestedSystemKey"
 
-    .line 1332
     invoke-static {v6, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_14
 
-    .line 1335
     :cond_1b
     invoke-virtual {v0, v10}, Lcom/android/server/policy/PhoneWindowManagerExt;->handleLongPressOnRecent(I)V
 
@@ -7637,22 +6878,18 @@
 
     if-eqz v11, :cond_50
 
-    .line 1716
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
-    .line 1718
     invoke-virtual {v0, v10, v15}, Lcom/android/server/policy/KeyboardShortcutManager;->launch(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_50
 
-    .line 1719
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_1c
 
-    .line 1720
     invoke-static {v7}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_1c
@@ -7661,7 +6898,6 @@
     :sswitch_6
     if-eqz v11, :cond_50
 
-    .line 1502
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object v0
@@ -7673,22 +6909,18 @@
     :cond_1d
     const/4 v1, 0x2
 
-    .line 1506
     invoke-virtual {v0, v1}, Landroid/hardware/input/InputManager;->forceFadeIcon(I)V
 
-    .line 1508
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_50
 
     const-string v0, "PKBD0002"
 
-    .line 1509
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     goto/16 :goto_14
 
-    .line 1516
     :sswitch_7
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->isAltPressed()Z
 
@@ -7720,10 +6952,8 @@
     :goto_9
     if-eq v10, v1, :cond_1f
 
-    .line 1520
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
-    .line 1521
     invoke-interface {v1}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->getFocusedTaskIdWithoutHomeOrRecents()I
 
     move-result v1
@@ -7737,20 +6967,17 @@
     :cond_1f
     const/4 v7, 0x1
 
-    .line 1523
     :goto_a
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
     invoke-interface {v0, v7, v6}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->sendTakeScreenshotRunnable(II)V
 
-    .line 1526
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_20
 
     const-string v0, "PKBD0004"
 
-    .line 1527
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_20
@@ -7759,7 +6986,6 @@
     :sswitch_8
     if-eqz v5, :cond_50
 
-    .line 1536
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->isCtrlPressed()Z
 
     move-result v1
@@ -7776,10 +7002,8 @@
 
     const-string v1, "Open Task Manager"
 
-    .line 1539
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1540
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
@@ -7788,29 +7012,24 @@
 
     const-string v2, "android.intent.category.HOME"
 
-    .line 1541
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v2, 0x10000000
 
-    .line 1542
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1543
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1545
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_22
 
     const-string v0, "PKBD0006"
 
-    .line 1546
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     goto :goto_b
@@ -7820,17 +7039,14 @@
 
     const/4 v2, 0x0
 
-    .line 1551
     invoke-virtual {v0, v1, v2, v10}, Lcom/android/server/policy/PhoneWindowManagerExt;->injectionKeyEvent(III)V
 
-    .line 1553
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_22
 
     const-string v0, "PKBD0005"
 
-    .line 1554
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_22
@@ -7865,10 +7081,8 @@
     :cond_25
     const-string v1, "launch quick setting"
 
-    .line 1831
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1832
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->getStatusBarService()Lcom/android/internal/statusbar/IStatusBarService;
@@ -7877,11 +7091,9 @@
 
     if-eqz v0, :cond_27
 
-    .line 1840
     :try_start_1
     invoke-interface {v0, v9}, Lcom/android/internal/statusbar/IStatusBarService;->expandSettingsPanel(Ljava/lang/String;)V
 
-    .line 1843
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_27
@@ -7890,12 +7102,10 @@
 
     const-string v0, "PKBD0014"
 
-    .line 1845
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     goto :goto_d
 
-    .line 1847
     :cond_26
     invoke-static {v7}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
     :try_end_1
@@ -7906,7 +7116,6 @@
     :catch_1
     move-exception v0
 
-    .line 1851
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -7934,22 +7143,18 @@
 
     const-string/jumbo v1, "window locked by metaShift with L"
 
-    .line 1600
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1607
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0, v9}, Lcom/android/server/policy/PhoneWindowManager;->lockNow(Landroid/os/Bundle;)V
 
-    .line 1608
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_28
 
     const-string v0, "PKBD0035"
 
-    .line 1609
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_28
@@ -7958,10 +7163,8 @@
     :cond_29
     const-string/jumbo v1, "screen is off by meta with L"
 
-    .line 1614
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1615
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mPowerManager:Landroid/os/PowerManager;
@@ -7976,14 +7179,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/os/PowerManager;->goToSleep(JII)V
 
-    .line 1621
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_2a
 
     const-string v0, "PKBD0013"
 
-    .line 1622
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_2a
@@ -7992,26 +7193,22 @@
     :sswitch_b
     if-eqz v12, :cond_50
 
-    .line 1588
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
     const/4 v1, 0x2
 
-    .line 1589
     invoke-virtual {v0, v10, v1}, Lcom/android/server/policy/KeyboardShortcutManager;->launch(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_50
 
-    .line 1590
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_2b
 
     const-string v0, "PKBD0010"
 
-    .line 1591
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_2b
@@ -8024,10 +7221,8 @@
 
     const-string v1, "go to home by meta key"
 
-    .line 1576
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1577
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda12;
@@ -8036,22 +7231,18 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1579
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v1, :cond_2c
 
-    .line 1580
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
-    .line 1581
     invoke-virtual {v1, v3}, Lcom/android/server/policy/KeyboardShortcutManager;->getShortcutSettingsValue(I)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "PKBD0008"
 
-    .line 1580
     invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendCoreSaLoggingDimension(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2c
@@ -8064,7 +7255,6 @@
 
     const/4 v1, 0x1
 
-    .line 1563
     invoke-virtual {v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->sensorToggleBehavior(I)Z
 
     move-result v0
@@ -8073,7 +7263,6 @@
 
     goto/16 :goto_14
 
-    .line 1567
     :cond_2d
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
@@ -8081,13 +7270,11 @@
 
     const-string v0, "PKBD0023"
 
-    .line 1568
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_2e
     return-wide v17
 
-    .line 1766
     :sswitch_e
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isCarrierLocked()Z
 
@@ -8105,7 +7292,6 @@
 
     if-eqz v0, :cond_50
 
-    .line 1767
     :cond_2f
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
@@ -8115,13 +7301,11 @@
 
     const-string v0, "Camera key was blocked by sim or carrier status"
 
-    .line 1768
     invoke-static {v6, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_30
     return-wide v17
 
-    .line 1343
     :sswitch_f
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfoWithKeyPressOld(I)Z
 
@@ -8129,7 +7313,6 @@
 
     if-eqz v2, :cond_50
 
-    .line 1344
     invoke-virtual {v0, v3, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->checkSystemKeyBeforeDispatching(ILandroid/os/IBinder;)I
 
     move-result v0
@@ -8139,10 +7322,8 @@
     :cond_31
     if-nez v5, :cond_33
 
-    .line 1487
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 1488
     invoke-virtual {v1}, Lcom/android/server/policy/PhoneWindowManager;->isUserSetupComplete()Z
 
     move-result v1
@@ -8160,7 +7341,6 @@
     :cond_32
     move v6, v10
 
-    .line 1491
     :goto_e
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
@@ -8168,14 +7348,12 @@
 
     invoke-interface {v0, v1, v6}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->sendTakeScreenshotRunnable(II)V
 
-    .line 1494
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_33
 
     const-string v0, "PKBD0032"
 
-    .line 1495
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_33
@@ -8186,7 +7364,6 @@
 
     if-nez v13, :cond_35
 
-    .line 1461
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->getStatusBarService()Lcom/android/internal/statusbar/IStatusBarService;
@@ -8195,7 +7372,6 @@
 
     if-eqz v0, :cond_35
 
-    .line 1464
     :try_start_2
     invoke-interface {v0}, Lcom/android/internal/statusbar/IStatusBarService;->togglePanel()V
     :try_end_2
@@ -8206,7 +7382,6 @@
     :catch_2
     const-string v0, "Failed to toggle Quick Panel"
 
-    .line 1466
     invoke-static {v6, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_35
@@ -8216,26 +7391,22 @@
     :cond_36
     if-eqz v12, :cond_50
 
-    .line 1705
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
     const-string v1, "com.samsung.android.smartmirroring/com.samsung.android.smartmirroring.CastingActivity"
 
-    .line 1706
     invoke-virtual {v0, v10, v1}, Lcom/android/server/policy/KeyboardShortcutManager;->launch(ILjava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_50
 
-    .line 1708
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_37
 
     const-string v0, "PKBD0020"
 
-    .line 1709
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_37
@@ -8249,7 +7420,6 @@
 
     if-eqz v5, :cond_39
 
-    .line 1675
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->isAltPressed()Z
 
     move-result v1
@@ -8266,7 +7436,6 @@
     :goto_10
     if-eqz v16, :cond_3a
 
-    .line 1677
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasMetaKeyPass()Z
 
     move-result v1
@@ -8280,7 +7449,6 @@
 
     if-eqz v12, :cond_50
 
-    .line 1679
     :cond_3b
     iget v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskModeState:I
 
@@ -8297,10 +7465,8 @@
     :cond_3c
     const-string v1, "finish focused window"
 
-    .line 1687
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1688
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
     invoke-interface {v1}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->getFocusedTaskIdWithoutHomeOrRecents()I
@@ -8309,12 +7475,10 @@
 
     if-eq v1, v14, :cond_3e
 
-    .line 1690
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
     invoke-interface {v0, v1}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->removeTask(I)V
 
-    .line 1692
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_3e
@@ -8323,7 +7487,6 @@
 
     const-string v0, "PKBD0003"
 
-    .line 1694
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     goto :goto_11
@@ -8331,14 +7494,12 @@
     :cond_3d
     const-string v0, "PKBD0019"
 
-    .line 1696
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_3e
     :goto_11
     return-wide v17
 
-    .line 1682
     :cond_3f
     :goto_12
     new-instance v1, Ljava/lang/StringBuilder;
@@ -8368,7 +7529,6 @@
 
     const/4 v1, 0x2
 
-    .line 1641
     invoke-virtual {v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->sensorToggleBehavior(I)Z
 
     move-result v0
@@ -8377,7 +7537,6 @@
 
     goto/16 :goto_14
 
-    .line 1644
     :cond_41
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
@@ -8385,7 +7544,6 @@
 
     const-string v0, "PKBD0022"
 
-    .line 1645
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     goto :goto_13
@@ -8393,15 +7551,12 @@
     :cond_42
     const-string v1, "launch volume panel"
 
-    .line 1648
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1649
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getAudioManager()Landroid/media/AudioManager;
 
     move-result-object v0
 
-    .line 1650
     invoke-static {}, Landroid/media/AudioManager;->semGetActiveStreamType()I
 
     move-result v1
@@ -8410,17 +7565,14 @@
 
     const/4 v3, 0x1
 
-    .line 1649
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
-    .line 1653
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_43
 
     const-string v0, "PKBD0017"
 
-    .line 1654
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_43
@@ -8430,32 +7582,27 @@
     :cond_44
     if-eqz v12, :cond_50
 
-    .line 1629
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyboardShortcutPolicy:Lcom/android/server/policy/KeyboardShortcutManager;
 
     const/4 v1, 0x3
 
-    .line 1630
     invoke-virtual {v0, v10, v1}, Lcom/android/server/policy/KeyboardShortcutManager;->launch(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_50
 
-    .line 1631
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v0, :cond_45
 
     const-string v0, "PKBD0016"
 
-    .line 1632
     invoke-static {v0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_45
     return-wide v17
 
-    .line 1394
     :cond_46
     :sswitch_11
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->getFlags()I
@@ -8470,7 +7617,6 @@
 
     goto/16 :goto_14
 
-    .line 1397
     :cond_47
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
@@ -8478,7 +7624,6 @@
 
     if-eqz v1, :cond_4a
 
-    .line 1398
     iget-object v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {v1, v15, v3}, Lcom/android/server/policy/KeyCustomizationManager;->hasLastInfo(II)Z
@@ -8489,19 +7634,16 @@
 
     if-eqz v8, :cond_48
 
-    .line 1410
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/media/session/MediaSessionLegacyHelper;->getHelper(Landroid/content/Context;)Landroid/media/session/MediaSessionLegacyHelper;
 
     move-result-object v0
 
-    .line 1411
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->getEventTime()J
 
     move-result-wide v5
 
-    .line 1412
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->getFlags()I
 
     move-result v1
@@ -8512,14 +7654,12 @@
 
     const/4 v3, 0x0
 
-    .line 1411
     invoke-static {v2, v5, v6, v3, v1}, Landroid/view/KeyEvent;->changeTimeRepeat(Landroid/view/KeyEvent;JII)Landroid/view/KeyEvent;
 
     move-result-object v1
 
     const/high16 v2, -0x80000000
 
-    .line 1410
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/session/MediaSessionLegacyHelper;->sendVolumeKeyEvent(Landroid/view/KeyEvent;IZ)V
 
     :cond_48
@@ -8537,10 +7677,8 @@
     :cond_4a
     const/4 v1, 0x1
 
-    .line 1422
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 1423
     invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/KeyCustomizationManager;->dispatchKeyCustomizationKeyEvent(Landroid/view/KeyEvent;Z)I
 
     move-result v0
@@ -8552,7 +7690,6 @@
     :cond_4b
     const/4 v1, 0x1
 
-    .line 1434
     invoke-virtual/range {p2 .. p2}, Landroid/view/KeyEvent;->getFlags()I
 
     move-result v4
@@ -8565,7 +7702,6 @@
 
     goto :goto_14
 
-    .line 1437
     :cond_4c
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
@@ -8573,10 +7709,8 @@
 
     if-nez v3, :cond_50
 
-    .line 1438
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 1439
     invoke-virtual {v0, v2}, Lcom/android/server/policy/KeyCustomizationManager;->dispatchKeyCustomizationKeyEvent(Landroid/view/KeyEvent;)I
 
     move-result v0
@@ -8585,7 +7719,6 @@
 
     return-wide v17
 
-    .line 1282
     :cond_4d
     invoke-virtual {v0, v5}, Lcom/android/server/policy/PhoneWindowManagerExt;->answerCallByHomeKey(Z)Z
 
@@ -8595,7 +7728,6 @@
 
     return-wide v17
 
-    .line 1287
     :cond_4e
     invoke-virtual {v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfoWithKeyPressOld(I)Z
 
@@ -8603,7 +7735,6 @@
 
     if-eqz v4, :cond_4f
 
-    .line 1288
     invoke-virtual {v0, v3, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->checkSystemKeyBeforeDispatching(ILandroid/os/IBinder;)I
 
     move-result v0
@@ -8613,17 +7744,14 @@
     :cond_4f
     const/4 v1, 0x3
 
-    .line 1291
     invoke-virtual {v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
     move-result v1
 
     if-nez v1, :cond_50
 
-    .line 1292
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 1293
     invoke-virtual {v0, v2}, Lcom/android/server/policy/KeyCustomizationManager;->dispatchKeyCustomizationKeyEvent(Landroid/view/KeyEvent;)I
 
     move-result v0
@@ -8682,17 +7810,14 @@
 .method public final interceptKeyBeforeDispatchingForMT(Landroid/view/KeyEvent;)Z
     .locals 5
 
-    .line 5323
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
-    .line 5324
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v1
 
-    .line 5325
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v2
@@ -8718,7 +7843,6 @@
     :pswitch_0
     if-eqz v2, :cond_1
 
-    .line 5330
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isMetaPressed()Z
 
     move-result v0
@@ -8733,7 +7857,6 @@
 
     if-nez v1, :cond_1
 
-    .line 5331
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
     invoke-interface {p0, p1}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->sendShortcutKey(Landroid/view/KeyEvent;)V
@@ -8761,22 +7884,18 @@
 .method public interceptKeyBeforeQueueing(Landroid/view/KeyEvent;I)I
     .locals 13
 
-    .line 1025
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
-    .line 1026
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v1
 
-    .line 1027
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDisplayId()I
 
     move-result v2
 
-    .line 1028
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v3
@@ -8808,7 +7927,6 @@
     :cond_1
     move p2, v4
 
-    .line 1034
     :goto_1
     sget-boolean v6, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_INPUT:Z
 
@@ -8822,7 +7940,6 @@
 
     sget-object v6, Lcom/android/server/policy/PhoneWindowManagerExt;->KEYCODE_DEBUG_LOG_ALLOWLIST:Ljava/util/Set;
 
-    .line 1035
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -8833,7 +7950,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 1036
     :cond_2
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -8875,13 +7991,11 @@
 
     invoke-static {v7, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1041
     :cond_3
     sget-boolean v2, Lcom/samsung/android/rune/CoreRune;->FW_WAKE_UP_BIXBY_SIDE_KEY:Z
 
     if-eqz v2, :cond_4
 
-    .line 1042
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mKeyCombinationManager:Lcom/android/server/policy/KeyCombinationManager;
@@ -8898,7 +8012,6 @@
 
     const/16 v6, 0x1a
 
-    .line 1043
     invoke-virtual {v2, v6}, Lcom/android/server/policy/KeyCombinationManager;->isKeyPressed(I)Z
 
     move-result v2
@@ -8975,7 +8088,6 @@
 
     goto/16 :goto_9
 
-    .line 1068
     :pswitch_0
     sget-boolean v5, Lcom/samsung/android/rune/CoreRune;->FW_WAKE_UP_BIXBY_SIDE_KEY:Z
 
@@ -8991,15 +8103,12 @@
 
     if-nez v3, :cond_5
 
-    .line 1070
     iget-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsCallOpenDictation:Z
 
     if-eqz v1, :cond_5
 
-    .line 1071
     iput-boolean v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsCallOpenDictation:Z
 
-    .line 1072
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->closeDictation(I)V
 
     goto :goto_3
@@ -9007,7 +8116,6 @@
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 1073
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isSamsungKeyboardShown()Z
 
     move-result v1
@@ -9016,23 +8124,19 @@
 
     goto :goto_3
 
-    .line 1074
     :cond_6
     new-instance p0, Lcom/android/server/policy/BixbyService$Params$Builder;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/BixbyService$Params$Builder;-><init>(Landroid/view/KeyEvent;Z)V
 
-    .line 1076
     invoke-virtual {p0, v2}, Lcom/android/server/policy/BixbyService$Params$Builder;->setPowerCombination(Z)Lcom/android/server/policy/BixbyService$Params$Builder;
 
     move-result-object p0
 
     invoke-virtual {p0}, Lcom/android/server/policy/BixbyService$Params$Builder;->build()Lcom/android/server/policy/BixbyService$Params;
 
-    .line 1077
     throw v6
 
-    .line 1081
     :cond_7
     :goto_3
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->canDispatchingSystemKeyEvent(I)Z
@@ -9041,7 +8145,6 @@
 
     if-eqz p0, :cond_8
 
-    .line 1082
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v10
@@ -9049,12 +8152,10 @@
     :cond_8
     const-string/jumbo p0, "systemKeyEventRequested REMOVE_PASS"
 
-    .line 1085
     invoke-static {v7, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v9
 
-    .line 1089
     :pswitch_1
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_WAKE_UP_BIXBY_SIDE_KEY:Z
 
@@ -9074,27 +8175,23 @@
 
     goto :goto_4
 
-    .line 1092
     :cond_9
     new-instance p0, Lcom/android/server/policy/BixbyService$Params$Builder;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/BixbyService$Params$Builder;-><init>(Landroid/view/KeyEvent;Z)V
 
-    .line 1094
     invoke-virtual {p0, v2}, Lcom/android/server/policy/BixbyService$Params$Builder;->setPowerCombination(Z)Lcom/android/server/policy/BixbyService$Params$Builder;
 
     move-result-object p0
 
     invoke-virtual {p0}, Lcom/android/server/policy/BixbyService$Params$Builder;->build()Lcom/android/server/policy/BixbyService$Params;
 
-    .line 1095
     throw v6
 
     :cond_a
     :goto_4
     if-eqz v3, :cond_24
 
-    .line 1100
     invoke-virtual {p0, v4}, Lcom/android/server/policy/PhoneWindowManagerExt;->knoxCustomVolumeKeyAppSwitching(Z)Z
 
     move-result p0
@@ -9106,17 +8203,14 @@
     :pswitch_2
     if-nez v1, :cond_b
 
-    .line 1108
     iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsVolumeUpKeyPressed:Z
 
-    .line 1110
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v5}, Landroid/os/Handler;->removeMessages(I)V
 
     if-eqz v3, :cond_b
 
-    .line 1112
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v5}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -9127,7 +8221,6 @@
 
     invoke-virtual {v0, v4, v7, v8}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1118
     :cond_b
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_WAKE_UP_BIXBY_SIDE_KEY:Z
 
@@ -9147,27 +8240,23 @@
 
     goto :goto_5
 
-    .line 1121
     :cond_c
     new-instance p0, Lcom/android/server/policy/BixbyService$Params$Builder;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/BixbyService$Params$Builder;-><init>(Landroid/view/KeyEvent;Z)V
 
-    .line 1123
     invoke-virtual {p0, v2}, Lcom/android/server/policy/BixbyService$Params$Builder;->setPowerCombination(Z)Lcom/android/server/policy/BixbyService$Params$Builder;
 
     move-result-object p0
 
     invoke-virtual {p0}, Lcom/android/server/policy/BixbyService$Params$Builder;->build()Lcom/android/server/policy/BixbyService$Params;
 
-    .line 1124
     throw v6
 
     :cond_d
     :goto_5
     if-eqz v3, :cond_24
 
-    .line 1129
     invoke-virtual {p0, v5}, Lcom/android/server/policy/PhoneWindowManagerExt;->knoxCustomVolumeKeyAppSwitching(Z)Z
 
     move-result p0
@@ -9179,7 +8268,6 @@
     :cond_e
     if-eqz v3, :cond_10
 
-    .line 1203
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -9190,7 +8278,6 @@
 
     const p2, 0x1040571
 
-    .line 1205
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -9200,12 +8287,10 @@
     :cond_f
     const p2, 0x1040572
 
-    .line 1206
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1207
     :goto_6
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -9214,13 +8299,11 @@
     :cond_10
     return v11
 
-    .line 1158
     :cond_11
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_SPEN:Z
 
     if-eqz p1, :cond_14
 
-    .line 1159
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isInDexMode()Z
 
     move-result p1
@@ -9234,10 +8317,8 @@
 
     const-string p1, "Press KEYCODE_DOUBLE_TAP"
 
-    .line 1164
     invoke-static {v7, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1165
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_SPEN_SCREEN_OFF_MEMO:Z
 
     if-eqz p1, :cond_13
@@ -9246,7 +8327,6 @@
 
     if-eqz p1, :cond_13
 
-    .line 1166
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenOffMemoIntent:Landroid/content/Intent;
 
     const-string/jumbo p2, "pen_intent_com"
@@ -9255,7 +8335,6 @@
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1168
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenOffMemoIntent:Landroid/content/Intent;
@@ -9264,7 +8343,6 @@
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1170
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_SPEN_SMART_CLIP:Z
 
     if-eqz p1, :cond_13
@@ -9273,7 +8351,6 @@
 
     if-eqz p0, :cond_13
 
-    .line 1171
     invoke-virtual {p0}, Lcom/samsung/android/content/smartclip/SpenGestureManager;->setScreenOffDoubleTabTime()V
 
     :cond_13
@@ -9285,7 +8362,6 @@
     :cond_15
     if-eqz v3, :cond_17
 
-    .line 1189
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -9296,7 +8372,6 @@
 
     const p2, 0x1040e40
 
-    .line 1191
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -9306,12 +8381,10 @@
     :cond_16
     const p2, 0x1040e3f
 
-    .line 1192
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1193
     :goto_7
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -9320,7 +8393,6 @@
     :cond_17
     return v11
 
-    .line 1180
     :cond_18
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_CHN_PREMIUM_WATCH:Z
 
@@ -9328,13 +8400,11 @@
 
     if-eqz v3, :cond_19
 
-    .line 1181
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->doubleTapLaunchPremiumWatch()V
 
     :cond_19
     return v11
 
-    .line 1145
     :cond_1a
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
@@ -9347,7 +8417,6 @@
     :cond_1b
     return v10
 
-    .line 1151
     :cond_1c
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->canDispatchingSystemKeyEvent(I)Z
 
@@ -9355,7 +8424,6 @@
 
     if-eqz p0, :cond_1d
 
-    .line 1152
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v10
@@ -9363,7 +8431,6 @@
     :cond_1d
     return v9
 
-    .line 1137
     :cond_1e
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -9375,7 +8442,6 @@
 
     if-nez p1, :cond_1f
 
-    .line 1138
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
     move-result p0
@@ -9387,7 +8453,6 @@
     :cond_1f
     return v10
 
-    .line 1048
     :cond_20
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_SEARCLE_HOME_LONG:Z
 
@@ -9397,7 +8462,6 @@
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mSingleKeyGestureDetector:Lcom/android/server/policy/SingleKeyGestureDetector;
 
-    .line 1049
     invoke-virtual {p1, v0}, Lcom/android/server/policy/SingleKeyGestureDetector;->hasRule(I)Z
 
     move-result p1
@@ -9408,7 +8472,6 @@
 
     if-nez v1, :cond_21
 
-    .line 1051
     invoke-virtual {p0, v5}, Lcom/android/server/policy/PhoneWindowManagerExt;->startSearcleHomeKeyPress(Z)V
 
     goto :goto_8
@@ -9416,10 +8479,8 @@
     :cond_21
     if-nez v3, :cond_22
 
-    .line 1053
     invoke-virtual {p0, v4}, Lcom/android/server/policy/PhoneWindowManagerExt;->startSearcleHomeKeyPress(Z)V
 
-    .line 1057
     :cond_22
     :goto_8
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->canDispatchingSystemKeyEvent(I)Z
@@ -9428,12 +8489,10 @@
 
     if-eqz p1, :cond_23
 
-    .line 1058
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v10
 
-    .line 1062
     :cond_23
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSingleKeyRule(I)Z
 
@@ -9458,17 +8517,14 @@
 .method public interceptKeyCombinationScreenshotChord()V
     .locals 2
 
-    .line 3961
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SCREENSHOT_BY_SIDE_KEY_COMBINATION:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 3962
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsScreenshotTriggered:Z
 
-    .line 3963
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -9479,21 +8535,17 @@
 
     const-string v0, "interceptKeyCombinationScreenshotChord triggered"
 
-    .line 3964
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 3966
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
-    .line 3967
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getDisplayId()I
 
     move-result p0
 
-    .line 3966
     invoke-interface {v0, v1, p0}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->sendTakeScreenshotRunnable(II)V
 
     :goto_0
@@ -9540,17 +8592,14 @@
     :pswitch_0
     const-string v0, "interceptQuickAccess, CHANGE_AOD_MODE"
 
-    .line 2046
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2047
     new-instance v0, Landroid/content/Intent;
 
     const-string v8, "com.samsung.android.app.aodservice.intent.action.CHANGE_AOD_MODE"
 
     invoke-direct {v0, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2048
     invoke-virtual {v0, v7, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     new-array v5, v5, [F
@@ -9559,13 +8608,10 @@
 
     aput p3, v5, v4
 
-    .line 2049
     invoke-virtual {v0, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[F)Landroid/content/Intent;
 
-    .line 2050
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2051
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     sget-object v4, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -9574,7 +8620,6 @@
 
     invoke-virtual {v1, v0, v4, v5}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 2052
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_FOLD_SA_LOGGING:Z
 
     if-eqz v1, :cond_2
@@ -9585,7 +8630,6 @@
 
     const-string v1, "Double Tab"
 
-    .line 2054
     invoke-virtual {p0, v1, v2}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendFoldSaLoggingCanceledIfNeeded(Ljava/lang/String;Z)V
 
     goto :goto_0
@@ -9594,17 +8638,14 @@
     :pswitch_1
     const-string v0, "interceptQuickAccess, FINGERPRINT_ON_DISPLAY"
 
-    .line 2069
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2070
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.fingerprint.action.FINGER_ON_DISPLAY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2071
     invoke-virtual {v0, v7, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     new-array v1, v5, [F
@@ -9613,15 +8654,12 @@
 
     aput p3, v1, v4
 
-    .line 2072
     invoke-virtual {v0, v6, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[F)Landroid/content/Intent;
 
     const v1, 0x10000020
 
-    .line 2073
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2075
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     sget-object v1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -9635,29 +8673,24 @@
     :cond_1
     const-string v0, "interceptQuickAccess, quickpay"
 
-    .line 2029
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2030
     new-instance v0, Landroid/content/Intent;
 
     const-string v4, "com.samsung.android.spay.quickpay"
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2031
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string v1, "displayId"
 
-    .line 2032
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getDisplayId()I
 
     move-result v4
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2033
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     sget-object v1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -9670,7 +8703,6 @@
     :goto_0
     move-object p0, v0
 
-    .line 2085
     :goto_1
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
@@ -9678,7 +8710,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2086
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -9735,17 +8766,14 @@
 .method public interceptStopLockTaskModePinnedChord()V
     .locals 4
 
-    .line 5854
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isLockTaskModeEnabled()Z
 
     move-result v0
 
-    .line 5855
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isTouchExplorationEnabled()Z
 
     move-result v1
 
-    .line 5856
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isInteractionControlEnabled()Z
 
     move-result v2
@@ -9758,7 +8786,6 @@
 
     goto :goto_0
 
-    .line 5865
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
@@ -9766,7 +8793,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 5866
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mStopLockTaskModePinnedChordLongPress:Ljava/lang/Runnable;
@@ -9777,7 +8803,6 @@
 
     return-void
 
-    .line 5858
     :cond_1
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -9816,12 +8841,10 @@
 .method public interceptUnhandledKey(Landroid/view/KeyEvent;)Z
     .locals 5
 
-    .line 2238
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
-    .line 2239
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -9849,7 +8872,6 @@
     :cond_1
     if-nez v1, :cond_3
 
-    .line 2244
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDevice()Landroid/view/InputDevice;
 
     move-result-object p1
@@ -9858,18 +8880,15 @@
 
     goto :goto_1
 
-    .line 2248
     :cond_2
     invoke-virtual {p1}, Landroid/view/InputDevice;->getVendorId()I
 
     move-result v0
 
-    .line 2249
     invoke-virtual {p1}, Landroid/view/InputDevice;->getProductId()I
 
     move-result p1
 
-    .line 2248
     invoke-virtual {p0, v0, p1, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->startGameToolsService(IIZ)Z
 
     move-result p0
@@ -9886,7 +8905,6 @@
 .method public final isActivitiesAvailable(Landroid/content/Intent;)Z
     .locals 2
 
-    .line 2822
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -9902,13 +8920,11 @@
     :cond_0
     const/high16 v1, 0x50000
 
-    .line 2827
     :try_start_0
     invoke-virtual {p0, p1, v1}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 2829
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -9924,7 +8940,6 @@
     :catch_0
     move-exception p0
 
-    .line 2833
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -9950,7 +8965,6 @@
 .method public isBlockedPowerKey()Z
     .locals 2
 
-    .line 3196
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     const/4 v1, 0x0
@@ -9959,7 +8973,6 @@
 
     return v1
 
-    .line 3200
     :cond_0
     invoke-static {}, Landroid/os/FactoryTest;->needBlockingPowerKey()Z
 
@@ -9973,7 +8986,6 @@
 
     const-string v0, "com.sec.facuifunction.app.ui.UIHardKey"
 
-    .line 3202
     invoke-virtual {p0}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p0
@@ -9989,7 +9001,6 @@
     :cond_1
     return v1
 
-    .line 3203
     :cond_2
     :goto_0
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
@@ -10002,7 +9013,6 @@
 
     const-string v0, "Skip power key behavior by FactoryTest application"
 
-    .line 3204
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -10018,7 +9028,6 @@
 
     const-string v0, ""
 
-    .line 3777
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -10029,7 +9038,6 @@
 
     move-result p0
 
-    .line 3779
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -10058,7 +9066,6 @@
 
     const-string v0, "0"
 
-    .line 3771
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -10069,7 +9076,6 @@
 
     move-result p0
 
-    .line 3772
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -10094,12 +9100,10 @@
 .method public isCarrierLocked()Z
     .locals 2
 
-    .line 5242
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
 
-    .line 5243
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/widget/LockPatternUtils;->isCarrierLockEnabled(I)Z
@@ -10110,7 +9114,6 @@
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 5244
     invoke-virtual {v1, v0}, Lcom/android/internal/widget/LockPatternUtils;->isFMMLockEnabled(I)Z
 
     move-result v1
@@ -10119,7 +9122,6 @@
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 5245
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/LockPatternUtils;->isRMMLockEnabled(I)Z
 
     move-result p0
@@ -10144,7 +9146,6 @@
 .method public isDisplayForShellShortcut(I)Z
     .locals 1
 
-    .line 5344
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getDexMode()I
 
     move-result v0
@@ -10155,7 +9156,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 5345
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getDexMode()I
 
@@ -10184,7 +9184,6 @@
 
     const-string/jumbo p0, "ril.domesticOtaStart"
 
-    .line 5249
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -10201,7 +9200,6 @@
 .method public isDoublePressPower()Z
     .locals 3
 
-    .line 3447
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_SIDE_KEY:Z
 
     const/4 v1, 0x1
@@ -10228,7 +9226,6 @@
     :cond_1
     return v1
 
-    .line 3453
     :cond_2
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_QUICK_LAUNCH_CAMERA:Z
 
@@ -10244,7 +9241,6 @@
 
     return v1
 
-    .line 3456
     :cond_3
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_POWER_ATT_TV_MODE:Z
 
@@ -10277,7 +9273,6 @@
 
     return v1
 
-    .line 5261
     :cond_0
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsDoubleTapToWakeUpSupported:Z
 
@@ -10296,7 +9291,6 @@
 .method public isFolded()Z
     .locals 0
 
-    .line 949
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;
@@ -10311,14 +9305,12 @@
 .method public isGlobalActionsDialogPowerOptionHidden()Z
     .locals 0
 
-    .line 6831
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/GlobalActions;
 
     if-eqz p0, :cond_0
 
-    .line 6832
     invoke-virtual {p0}, Lcom/android/server/policy/GlobalActions;->isDialogPowerOptionHidden()Z
 
     move-result p0
@@ -10339,7 +9331,6 @@
 .method public isGlobalActionsDialogShowing()Z
     .locals 0
 
-    .line 6827
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/GlobalActions;
@@ -10366,7 +9357,6 @@
 .method public final isHomeAllowed(I)Z
     .locals 1
 
-    .line 6089
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->hasNavigationBar()Z
@@ -10401,7 +9391,6 @@
 .method public isImeBtnOnGestureEnabled()Z
     .locals 1
 
-    .line 5512
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mNavBarImeBtnEnabled:Z
 
     if-nez v0, :cond_1
@@ -10428,7 +9417,6 @@
 .method public isInDexMode()Z
     .locals 0
 
-    .line 5483
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getDexMode()I
 
     move-result p0
@@ -10449,7 +9437,6 @@
 .method public isInteractionControlEnabled()Z
     .locals 0
 
-    .line 5888
     iget-boolean p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsInteractionControlEnabled:Z
 
     return p0
@@ -10460,7 +9447,6 @@
 
     const/4 v0, 0x0
 
-    .line 5125
     invoke-virtual {p0, p1, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isInteractionControlEnabled(IZ)Z
 
     move-result p0
@@ -10488,12 +9474,10 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 5140
     iget-boolean p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsInteractionControlEnabled:Z
 
     return p0
 
-    .line 5135
     :pswitch_0
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsInteractionControlEnabled:Z
 
@@ -10510,7 +9494,6 @@
     :cond_1
     return v1
 
-    .line 5138
     :pswitch_1
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsInteractionControlEnabled:Z
 
@@ -10537,7 +9520,6 @@
 .method public isKeyguardOccluded(I)Z
     .locals 0
 
-    .line 5941
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
@@ -10548,7 +9530,6 @@
 
     return p0
 
-    .line 5945
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardOccluded()Z
 
@@ -10560,7 +9541,6 @@
 .method public isKeyguardShowingAndNotOccluded(I)Z
     .locals 0
 
-    .line 5965
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
@@ -10571,7 +9551,6 @@
 
     return p0
 
-    .line 5969
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardShowingAndNotOccluded()Z
 
@@ -10583,7 +9562,6 @@
 .method public final isLockTaskModeEnabled()Z
     .locals 0
 
-    .line 6067
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskModeState:I
 
     if-eqz p0, :cond_0
@@ -10602,7 +9580,6 @@
 .method public isLockTaskModePinned()Z
     .locals 1
 
-    .line 6062
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskModeState:I
 
     const/4 v0, 0x2
@@ -10623,7 +9600,6 @@
 .method public isLongPressHomeSearcle()Z
     .locals 1
 
-    .line 6571
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mLongPressOnHomeBehavior:I
@@ -10646,7 +9622,6 @@
 .method public isMetaKeyEventRequested(Landroid/content/ComponentName;)Z
     .locals 0
 
-    .line 3095
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/SystemKeyManager;->isMetaKeyEventRequested(Landroid/content/ComponentName;)Z
@@ -10659,7 +9634,6 @@
 .method public isNavGetureHintEnabled()Z
     .locals 0
 
-    .line 5521
     iget-boolean p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mNavGetureHintEnabled:Z
 
     return p0
@@ -10668,7 +9642,6 @@
 .method public final isPowerKeyConsumedInCall(Z)Z
     .locals 5
 
-    .line 5002
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->getTelecommService()Landroid/telecom/TelecomManager;
@@ -10681,7 +9654,6 @@
 
     return v1
 
-    .line 5007
     :cond_0
     invoke-virtual {v0}, Landroid/telecom/TelecomManager;->isRinging()Z
 
@@ -10695,10 +9667,8 @@
 
     const-string/jumbo p1, "silenceRinger"
 
-    .line 5010
     invoke-static {v4, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5011
     invoke-virtual {p0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->silenceRinger(I)V
 
     return v1
@@ -10706,7 +9676,6 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 5015
     invoke-virtual {v0}, Landroid/telecom/TelecomManager;->isInCall()Z
 
     move-result p1
@@ -10715,10 +9684,8 @@
 
     const-string p1, "endCall"
 
-    .line 5018
     invoke-static {v4, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5019
     invoke-virtual {p0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->endCall(I)V
 
     const/4 p0, 0x1
@@ -10732,7 +9699,6 @@
 .method public isQuadruplePressPower()Z
     .locals 1
 
-    .line 3469
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuadruplePressOnPowerBehavior:I
 
     const/16 v0, 0x6a
@@ -10753,7 +9719,6 @@
 .method public final isQuickLaunchCameraEnabled(I)Z
     .locals 1
 
-    .line 3528
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/KeyCustomizationManager;->hasDoubleCameraId(I)Z
@@ -10762,7 +9727,6 @@
 
     if-nez p1, :cond_1
 
-    .line 3529
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isCameraRunning()Z
 
     move-result p1
@@ -10793,7 +9757,6 @@
 .method public isQuintuplePressPower()Z
     .locals 1
 
-    .line 3474
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_QUINTUPLE_PRESS_POWER_EMERGENCY_SOS:Z
 
     if-eqz v0, :cond_0
@@ -10818,7 +9781,6 @@
 .method public final isRecentsAllowed(I)Z
     .locals 0
 
-    .line 6080
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->getLockTaskFeaturesForUser(I)I
 
     move-result p0
@@ -10841,7 +9803,6 @@
 .method public isReserveBatteryMode()Z
     .locals 1
 
-    .line 5530
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mReserveBatteryMode:Z
 
     if-eqz v0, :cond_0
@@ -10864,7 +9825,6 @@
 .method public isSamsungKeyboardShown()Z
     .locals 1
 
-    .line 3340
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsSamsungKeyboard:Z
 
     if-eqz v0, :cond_0
@@ -10893,7 +9853,6 @@
 .method public isScreenTurnedOn()Z
     .locals 0
 
-    .line 956
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
@@ -10912,7 +9871,6 @@
 
     const/4 v1, 0x0
 
-    .line 5051
     :try_start_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -10930,7 +9888,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 5057
     iget-boolean p0, p0, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
     if-eqz p0, :cond_0
@@ -10942,7 +9899,6 @@
     :cond_0
     const-string p0, "GameBooster is disabled"
 
-    .line 5060
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -10950,7 +9906,6 @@
     :catch_0
     move-exception p0
 
-    .line 5054
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -10973,7 +9928,6 @@
 .method public isSystemKeyEventRequested(ILandroid/content/ComponentName;)Z
     .locals 0
 
-    .line 3050
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/SystemKeyManager;->isSystemKeyEventRequested(ILandroid/content/ComponentName;)Z
@@ -10986,7 +9940,6 @@
 .method public final isTouchExplorationEnabled()Z
     .locals 1
 
-    .line 5892
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
@@ -11001,7 +9954,6 @@
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 5893
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
 
     move-result p0
@@ -11022,7 +9974,6 @@
 .method public isTriplePressPower()Z
     .locals 1
 
-    .line 3464
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TRIPLE_PRESS_POWER_LAUNCH_PANIC_CALL:Z
 
     if-eqz v0, :cond_0
@@ -11058,7 +10009,6 @@
     :cond_0
     const-string p0, "com.samsung.tvmode/com.samsung.tvmode.activity.MainActivity"
 
-    .line 3948
     invoke-virtual {p1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object p1
@@ -11081,7 +10031,6 @@
 
     return v1
 
-    .line 5165
     :cond_0
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsVolumeUpKeyMode:Z
 
@@ -11106,12 +10055,10 @@
 .method public isWakeKey(Landroid/view/KeyEvent;Z)I
     .locals 6
 
-    .line 1881
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
-    .line 1882
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -11127,7 +10074,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 1883
     :goto_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
@@ -11151,13 +10097,11 @@
 
     goto :goto_1
 
-    .line 1910
     :cond_1
     iget p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskModeState:I
 
     if-ne p1, v2, :cond_5
 
-    .line 1912
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result p1
@@ -11170,12 +10114,10 @@
 
     const-string p0, "Recent Key was blocked by LOCK_TASK_MODE_LOCKED"
 
-    .line 1913
     invoke-static {v5, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
 
-    .line 1888
     :cond_2
     invoke-virtual {p0, p2, v1, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasRequestedActionBlockKeyEvent(IZI)I
 
@@ -11187,13 +10129,11 @@
 
     return p0
 
-    .line 1897
     :cond_3
     iget p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskModeState:I
 
     if-ne p1, v2, :cond_4
 
-    .line 1899
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result p1
@@ -11206,7 +10146,6 @@
 
     const-string p0, "Home Key was blocked by LOCK_TASK_MODE_LOCKED"
 
-    .line 1900
     invoke-static {v5, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
@@ -11216,12 +10155,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 1903
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
-    .line 1904
     invoke-virtual {p0}, Landroid/os/PowerManagerInternal;->isProximityPositive()Z
 
     move-result p0
@@ -11240,7 +10177,6 @@
 .method public keyguardGoingAwayWithFingerprintUnlock(Z)V
     .locals 3
 
-    .line 5545
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -11261,15 +10197,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 5547
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->cancelWakeAndUnlockPendingAction()V
 
     const/4 p1, 0x1
 
-    .line 5548
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnlockTriggered:Z
 
-    .line 5549
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakeAndUnlockRunning:Ljava/lang/Runnable;
@@ -11278,7 +10211,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 5558
     :cond_0
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_FOLD_SA_LOGGING:Z
 
@@ -11288,7 +10220,6 @@
 
     const/4 v0, 0x0
 
-    .line 5559
     invoke-virtual {p0, p1, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendFoldSaLoggingCanceledIfNeeded(Ljava/lang/String;Z)V
 
     :cond_1
@@ -11298,7 +10229,6 @@
 .method public final knoxCustomVolumeKeyAppSwitching(Z)Z
     .locals 11
 
-    .line 6836
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mProKioskManager:Lcom/samsung/android/knox/custom/ProKioskManager;
 
     const/4 v1, 0x0
@@ -11307,7 +10237,6 @@
 
     return v1
 
-    .line 6839
     :cond_0
     invoke-virtual {v0}, Lcom/samsung/android/knox/custom/ProKioskManager;->getProKioskState()Z
 
@@ -11325,7 +10254,6 @@
 
     goto/16 :goto_5
 
-    .line 6844
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isGlobalActionsDialogShowing()Z
 
@@ -11339,12 +10267,10 @@
 
     const-string v0, "Knox Custom: GlobalActions dialog showing; not doing Volume Key app switching"
 
-    .line 6845
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_2
 
-    .line 6847
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isGlobalActionsDialogPowerOptionHidden()Z
 
     move-result p0
@@ -11353,7 +10279,6 @@
 
     const-string p0, "Knox Custom: GlobalActions dialog showing; forward the key for Power option display"
 
-    .line 6848
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -11364,10 +10289,8 @@
     :cond_3
     const-string v0, "Knox Custom: Volume Key app switching starting"
 
-    .line 6854
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6855
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mProKioskManager:Lcom/samsung/android/knox/custom/ProKioskManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/knox/custom/ProKioskManager;->getVolumeKeyAppsList()Ljava/util/List;
@@ -11376,7 +10299,6 @@
 
     if-eqz v0, :cond_f
 
-    .line 6856
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v4
@@ -11385,7 +10307,6 @@
 
     goto/16 :goto_4
 
-    .line 6861
     :cond_4
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -11411,31 +10332,26 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6862
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     const-string v6, "activity"
 
-    .line 6863
     invoke-virtual {v4, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/app/ActivityManager;
 
-    .line 6864
     iget-object v6, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
-    .line 6866
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6867
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -11453,14 +10369,12 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 6868
     invoke-virtual {v6, v8}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v9
 
     if-eqz v9, :cond_5
 
-    .line 6870
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -11479,12 +10393,10 @@
 
     invoke-static {v3, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6871
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 6873
     :cond_5
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -11506,7 +10418,6 @@
 
     goto :goto_0
 
-    .line 6876
     :cond_6
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -11516,7 +10427,6 @@
 
     const-string p0, "Knox Custom: no available apps"
 
-    .line 6877
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_3
@@ -11524,12 +10434,10 @@
     :cond_7
     const v0, 0x7fffffff
 
-    .line 6881
     invoke-virtual {v4, v0}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 6882
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -11546,7 +10454,6 @@
 
     move-result-object v0
 
-    .line 6883
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -11569,7 +10476,6 @@
 
     move v8, v4
 
-    .line 6886
     :goto_1
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -11577,7 +10483,6 @@
 
     if-ge v1, v9, :cond_9
 
-    .line 6887
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -11590,7 +10495,6 @@
 
     if-eqz v9, :cond_8
 
-    .line 6888
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -11621,7 +10525,6 @@
     :cond_9
     if-ne v8, v4, :cond_a
 
-    .line 6893
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11643,7 +10546,6 @@
     :cond_a
     if-eqz p1, :cond_b
 
-    .line 6898
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result p1
@@ -11663,7 +10565,6 @@
 
     goto :goto_2
 
-    .line 6904
     :cond_c
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -11671,7 +10572,6 @@
 
     add-int/lit8 v8, p1, -0x1
 
-    .line 6907
     :goto_2
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -11679,14 +10579,12 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 6909
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_d
 
-    .line 6910
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -11707,13 +10605,11 @@
 
     goto :goto_3
 
-    .line 6912
     :cond_d
     invoke-virtual {v6, p1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 6913
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11734,10 +10630,8 @@
 
     const/high16 p1, 0x10400000
 
-    .line 6915
     invoke-virtual {v0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 6918
     :try_start_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -11754,14 +10648,12 @@
 
     const-string p1, "No activity to launch Knox Custom switching."
 
-    .line 6920
     invoke-static {v3, p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_e
     :goto_3
     const-string p0, "Knox Custom: Volume Key app switching done"
 
-    .line 6927
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -11770,7 +10662,6 @@
     :goto_4
     const-string p0, "Knox Custom: no apps in list"
 
-    .line 6857
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -11787,10 +10678,8 @@
 
     const-string v1, "launch double press tv mode"
 
-    .line 3846
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3847
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isCameraRunning()Z
 
     move-result v0
@@ -11799,7 +10688,6 @@
 
     return-void
 
-    .line 3851
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
@@ -11813,7 +10701,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 3853
     iget v1, v0, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->id:I
 
     const/16 v2, 0x7d2
@@ -11822,7 +10709,6 @@
 
     goto :goto_0
 
-    .line 3857
     :cond_1
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -11834,7 +10720,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 3858
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
@@ -11843,10 +10728,8 @@
 
     const/4 v3, 0x1
 
-    .line 3859
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3860
     iget-object v0, v0, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->intent:Landroid/content/Intent;
 
     sget-object v2, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -11859,7 +10742,6 @@
 
     goto :goto_0
 
-    .line 3863
     :cond_2
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -11877,7 +10759,6 @@
 .method public final launchEmergencySos(I)V
     .locals 3
 
-    .line 4132
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIntentEmergencySos:Landroid/content/Intent;
 
     const-string v1, "PhoneWindowManagerExt"
@@ -11886,12 +10767,10 @@
 
     const-string p0, "Can not launch emergency SOS, the intent is null"
 
-    .line 4133
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 4136
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -11903,7 +10782,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4138
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -11922,7 +10800,6 @@
 
     return-void
 
-    .line 4142
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -11932,7 +10809,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4143
     invoke-static {p1}, Lcom/android/server/policy/PhoneWindowManager;->multiPressOnPowerBehaviorToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -11943,10 +10819,8 @@
 
     move-result-object v0
 
-    .line 4142
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4144
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIntentEmergencySos:Landroid/content/Intent;
@@ -11955,7 +10829,6 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 4147
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz p0, :cond_3
@@ -11971,7 +10844,6 @@
     :cond_2
     const-string p0, "HWB1005"
 
-    .line 4148
     :goto_0
     invoke-static {p0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
@@ -11982,7 +10854,6 @@
 .method public launchHomeForDesktopMode(I)V
     .locals 2
 
-    .line 6780
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     const/4 v0, 0x1
@@ -11997,10 +10868,8 @@
 .method public final launchPowerDoublePressCamera()V
     .locals 2
 
-    .line 3749
     const-class p0, Lcom/android/server/GestureLauncherService;
 
-    .line 3750
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -12016,12 +10885,10 @@
 
     const-string v1, "launch double press camera"
 
-    .line 3754
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 3755
     invoke-virtual {p0, v0}, Lcom/android/server/GestureLauncherService;->handleCameraGesture(I)Z
 
     return-void
@@ -12030,7 +10897,6 @@
 .method public final launchSecureFolder()V
     .locals 2
 
-    .line 4279
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getPersonaManagerService()Lcom/android/server/pm/PersonaManagerService;
 
     move-result-object v0
@@ -12039,7 +10905,6 @@
 
     return-void
 
-    .line 4283
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_RESERVE_BATTERY_MODE:Z
 
@@ -12054,7 +10919,6 @@
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
-    .line 4284
     invoke-static {v0}, Lcom/samsung/android/emergencymode/SemEmergencyManager;->isMinimalBatteryUseMode(Landroid/content/Context;)Z
 
     move-result v0
@@ -12063,7 +10927,6 @@
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
-    .line 4285
     invoke-static {v0}, Lcom/samsung/android/knox/SemPersonaManager;->getSecureFolderId(Landroid/content/Context;)I
 
     move-result v0
@@ -12072,7 +10935,6 @@
 
     goto :goto_0
 
-    .line 4288
     :cond_2
     new-instance v0, Landroid/content/Intent;
 
@@ -12082,10 +10944,8 @@
 
     const/high16 v1, 0x10000000
 
-    .line 4289
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 4290
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     sget-object v1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -12094,7 +10954,6 @@
 
     goto :goto_1
 
-    .line 4286
     :cond_3
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getPersonaManagerService()Lcom/android/server/pm/PersonaManagerService;
@@ -12110,7 +10969,6 @@
 .method public final longPressOnHomePolicy()Z
     .locals 4
 
-    .line 5820
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->isUserSetupComplete()Z
@@ -12125,12 +10983,10 @@
 
     const-string p0, "Home long press is blocked because UserSetup isn\'t completed"
 
-    .line 5821
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 5824
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -12138,14 +10994,12 @@
 
     move-result-object v0
 
-    .line 5825
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_SEARCLE_HOME_LONG:Z
 
     if-nez v3, :cond_1
 
     if-eqz v0, :cond_1
 
-    .line 5826
     invoke-virtual {v0}, Landroid/telecom/TelecomManager;->isRinging()Z
 
     move-result v0
@@ -12154,7 +11008,6 @@
 
     const-string p0, "Home long press is blocked by Ringing"
 
-    .line 5827
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -12162,7 +11015,6 @@
     :cond_1
     const/4 v0, 0x3
 
-    .line 5831
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isInteractionControlEnabled(I)Z
 
     move-result p0
@@ -12171,7 +11023,6 @@
 
     const-string p0, "Home long press is blocked by Interaction control"
 
-    .line 5832
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -12189,10 +11040,8 @@
 
     const-string/jumbo v1, "startService, screenOffMemo"
 
-    .line 4823
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4824
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenOffMemoIntent:Landroid/content/Intent;
 
     if-eqz p1, :cond_0
@@ -12209,7 +11058,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4826
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenOffMemoIntent:Landroid/content/Intent;
@@ -12230,7 +11078,6 @@
 
     move/from16 v2, p4
 
-    .line 4706
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->FW_SPEN:Z
 
     const-string v4, "PhoneWindowManagerExt"
@@ -12249,7 +11096,6 @@
 
     goto/16 :goto_3
 
-    .line 4711
     :cond_0
     iget-object v3, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -12257,7 +11103,6 @@
 
     move-result v3
 
-    .line 4712
     invoke-virtual {v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->canStartScreenOffMemo(I)Z
 
     move-result v5
@@ -12268,29 +11113,24 @@
 
     if-nez v1, :cond_3
 
-    .line 4715
     iget v8, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenState:I
 
     if-eq v8, v7, :cond_3
 
     if-eqz v3, :cond_1
 
-    .line 4718
     iget-object v8, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v8, v8, Lcom/android/server/policy/PhoneWindowManager;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 4719
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v9
 
-    .line 4718
     invoke-virtual {v8, v9, v10, v6, v6}, Landroid/os/PowerManager;->userActivity(JII)V
 
     goto :goto_0
 
-    .line 4721
     :cond_1
     sget-boolean v8, Lcom/samsung/android/rune/CoreRune;->FW_SPEN_SCREEN_OFF_MEMO:Z
 
@@ -12298,7 +11138,6 @@
 
     if-nez v5, :cond_3
 
-    .line 4722
     :cond_2
     iget-object v8, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -12314,7 +11153,6 @@
 
     invoke-virtual {v8, v9, v10, v11, v12}, Landroid/os/PowerManager;->wakeUp(JILjava/lang/String;)V
 
-    .line 4729
     :cond_3
     :goto_0
     iget-boolean v8, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundEnabled:Z
@@ -12327,7 +11165,6 @@
 
     if-eq v8, v7, :cond_6
 
-    .line 4730
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getAudioManager()Landroid/media/AudioManager;
 
     move-result-object v8
@@ -12338,7 +11175,6 @@
 
     if-nez v8, :cond_6
 
-    .line 4731
     iget-object v8, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
 
     if-nez v8, :cond_4
@@ -12347,20 +11183,17 @@
 
     if-eqz v8, :cond_4
 
-    .line 4732
     new-instance v10, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
 
     invoke-direct {v10, v8}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;-><init>(Ljava/lang/String;)V
 
     iput-object v10, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
 
-    .line 4734
     :cond_4
     iget-object v8, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenSoundInfo:Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;
 
     if-eqz v8, :cond_5
 
-    .line 4735
     invoke-virtual {v8, v1}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->playPenSound(Z)V
 
     goto :goto_1
@@ -12368,10 +11201,8 @@
     :cond_5
     const-string v8, "mPenSoundInfo is null"
 
-    .line 4737
     invoke-static {v4, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4742
     :cond_6
     :goto_1
     iget-boolean v8, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenVibrationEnabled:Z
@@ -12382,14 +11213,12 @@
 
     if-eq v8, v7, :cond_8
 
-    .line 4743
     new-instance v7, Landroid/os/VibrationAttributes$Builder;
 
     new-instance v8, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v8}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    .line 4744
     invoke-virtual {v8}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
     move-result-object v8
@@ -12400,7 +11229,6 @@
 
     move-result-object v15
 
-    .line 4745
     iget-object v10, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mVibrator:Landroid/os/Vibrator;
 
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -12413,7 +11241,6 @@
 
     move-result-object v12
 
-    .line 4746
     invoke-virtual {v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->vibrationEffect(Z)Landroid/os/VibrationEffect;
 
     move-result-object v13
@@ -12430,10 +11257,8 @@
     :goto_2
     move-object v14, v7
 
-    .line 4745
     invoke-virtual/range {v10 .. v15}, Landroid/os/Vibrator;->vibrate(ILjava/lang/String;Landroid/os/VibrationEffect;Ljava/lang/String;Landroid/os/VibrationAttributes;)V
 
-    .line 4751
     :cond_8
     iget-object v7, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenInsertIntent:Landroid/content/Intent;
 
@@ -12441,14 +11266,12 @@
 
     invoke-virtual {v7, v8, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4752
     iget-object v7, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenInsertIntent:Landroid/content/Intent;
 
     const-string v8, "isScreenOn"
 
     invoke-virtual {v7, v8, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4753
     iget-object v7, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenInsertIntent:Landroid/content/Intent;
 
     iget-object v8, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -12461,7 +11284,6 @@
 
     invoke-virtual {v7, v10, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4754
     iget-object v7, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenInsertIntent:Landroid/content/Intent;
 
     const-wide/16 v10, 0x0
@@ -12477,21 +11299,18 @@
 
     invoke-virtual {v7, v8, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4755
     iget-object v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenInsertIntent:Landroid/content/Intent;
 
     const-string v7, "isServiceOn"
 
     invoke-virtual {v6, v7, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4756
     iget-object v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenInsertIntent:Landroid/content/Intent;
 
     const-string v7, "isReversed"
 
     invoke-virtual {v6, v7, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4757
     iget-object v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object v7, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenInsertIntent:Landroid/content/Intent;
@@ -12500,22 +11319,18 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 4759
     sget-boolean v6, Lcom/samsung/android/rune/CoreRune;->FW_SPEN_SMART_CLIP:Z
 
     if-eqz v6, :cond_b
 
-    .line 4760
     iget-object v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSpenGestureManager:Lcom/samsung/android/content/smartclip/SpenGestureManager;
 
     if-nez v6, :cond_a
 
-    .line 4761
     iget-object v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     const-string/jumbo v7, "spengestureservice"
 
-    .line 4762
     invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
@@ -12524,16 +11339,13 @@
 
     iput-object v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSpenGestureManager:Lcom/samsung/android/content/smartclip/SpenGestureManager;
 
-    .line 4764
     :cond_a
     iget-object v6, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSpenGestureManager:Lcom/samsung/android/content/smartclip/SpenGestureManager;
 
     if-eqz v6, :cond_b
 
-    .line 4765
     invoke-virtual {v6, v1}, Lcom/samsung/android/content/smartclip/SpenGestureManager;->setSpenInsertionState(Z)V
 
-    .line 4770
     :cond_b
     sget-boolean v6, Lcom/samsung/android/rune/CoreRune;->FW_SPEN_SCREEN_OFF_MEMO:Z
 
@@ -12541,10 +11353,8 @@
 
     if-eqz v5, :cond_c
 
-    .line 4771
     invoke-virtual {v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->notifyPenStateToScreenOffMemo(Z)V
 
-    .line 4775
     :cond_c
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -12596,12 +11406,10 @@
 
     invoke-static {v4, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4780
     iput v1, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPenState:I
 
     return-void
 
-    .line 4707
     :cond_d
     :goto_3
     new-instance v2, Ljava/lang/StringBuilder;
@@ -12642,7 +11450,6 @@
 .method public notifyRequestedGameToolsWin(Z)V
     .locals 0
 
-    .line 5841
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
@@ -12653,7 +11460,6 @@
 
     return-void
 
-    .line 5845
     :cond_0
     invoke-interface {p0, p1}, Lcom/android/server/statusbar/StatusBarManagerInternal;->notifyRequestedGameToolsWin(Z)V
 
@@ -12663,7 +11469,6 @@
 .method public onFlashlightKeyPressed(I)V
     .locals 2
 
-    .line 5761
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -12682,7 +11487,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5762
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
@@ -12693,7 +11497,6 @@
 
     return-void
 
-    .line 5766
     :cond_0
     invoke-interface {p0, p1}, Lcom/android/server/statusbar/StatusBarManagerInternal;->onFlashlightKeyPressed(I)V
 
@@ -12705,7 +11508,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3037
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowStateExt;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
@@ -12718,7 +11520,6 @@
 
     move-result-object v0
 
-    .line 3038
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowStateExt;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object p1
@@ -12734,7 +11535,6 @@
 
     move p1, p2
 
-    .line 3041
     :goto_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
@@ -12746,14 +11546,12 @@
 .method public onHomeChangedBooster()V
     .locals 0
 
-    .line 6735
     invoke-static {}, Lcom/android/server/wm/ActivityManagerPerformance;->getBooster()Lcom/android/server/wm/ActivityManagerPerformance;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 6737
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityManagerPerformance;->isHomeKeyPressed()V
 
     :cond_0
@@ -12763,7 +11561,6 @@
 .method public onKeyguardOccludedChangedLw(ZIZ)V
     .locals 0
 
-    .line 5960
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManager;->onKeyguardOccludedChangedLw(Z)V
@@ -12774,7 +11571,6 @@
 .method public onLockTaskFeaturesChanged(Landroid/util/SparseIntArray;)V
     .locals 0
 
-    .line 6051
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskFeatures:Landroid/util/SparseIntArray;
 
     return-void
@@ -12783,7 +11579,6 @@
 .method public onLockTaskStateChanged(I)V
     .locals 0
 
-    .line 6056
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mLockTaskModeState:I
 
     return-void
@@ -12792,12 +11587,10 @@
 .method public onUserSwitch(I)V
     .locals 2
 
-    .line 828
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
     invoke-interface {v0}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->resetScreenshotConnections()V
 
-    .line 832
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda19;
@@ -12814,7 +11607,6 @@
 
     const-string/jumbo v0, "open_dictation"
 
-    .line 3316
     invoke-virtual {p0, v0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->callDictation(Ljava/lang/String;I)V
 
     return-void
@@ -12823,7 +11615,6 @@
 .method public final performHapticFeedbackLw(IZLjava/lang/String;)V
     .locals 6
 
-    .line 4334
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
@@ -12856,7 +11647,6 @@
 
     move/from16 v1, p4
 
-    .line 4340
     iget-object v0, v7, Lcom/android/server/policy/PhoneWindowManagerExt;->mVibrator:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->hasVibrator()Z
@@ -12869,7 +11659,6 @@
 
     return v9
 
-    .line 4344
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -12901,7 +11690,6 @@
 
     iget-object v2, v7, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 4345
     invoke-virtual {v2}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardShowingAndNotOccluded()Z
 
     move-result v2
@@ -12938,7 +11726,6 @@
 
     const/4 v2, 0x5
 
-    .line 4347
     invoke-static {v2}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object v2
@@ -12951,12 +11738,10 @@
 
     const-string v13, "PhoneWindowManagerExt"
 
-    .line 4344
     invoke-static {v13, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-nez v1, :cond_2
 
-    .line 4349
     iget-boolean v0, v7, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsEnabled:Z
 
     if-eqz v0, :cond_1
@@ -12971,7 +11756,6 @@
 
     iget-object v0, v7, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 4350
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardShowingAndNotOccluded()Z
 
     move-result v0
@@ -12981,12 +11765,10 @@
     :cond_1
     const-string v0, "haptic disabled by policy"
 
-    .line 4351
     invoke-static {v13, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v9
 
-    .line 4355
     :cond_2
     iget-object v0, v7, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -12998,17 +11780,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 4357
     new-instance v2, Landroid/os/VibrationAttributes$Builder;
 
     invoke-direct {v2, v0}, Landroid/os/VibrationAttributes$Builder;-><init>(Landroid/os/VibrationAttributes;)V
 
-    .line 4358
     invoke-virtual {v2, v14, v14}, Landroid/os/VibrationAttributes$Builder;->setFlags(II)Landroid/os/VibrationAttributes$Builder;
 
     move-result-object v0
 
-    .line 4360
     invoke-virtual {v0}, Landroid/os/VibrationAttributes$Builder;->build()Landroid/os/VibrationAttributes;
 
     move-result-object v0
@@ -13016,7 +11795,6 @@
     :cond_3
     move-object v15, v0
 
-    .line 4364
     iget-boolean v0, v7, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsSupported:Z
 
     const/4 v6, 0x1
@@ -13025,7 +11803,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 4365
     invoke-virtual {v7, v8}, Lcom/android/server/policy/PhoneWindowManagerExt;->getHapticVibrationIndex(I)I
 
     move-result v0
@@ -13034,7 +11811,6 @@
 
     return v9
 
-    .line 4369
     :cond_4
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
@@ -13058,7 +11834,6 @@
 
     invoke-static {v13, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4370
     :cond_5
     sget-object v1, Landroid/os/VibrationEffect$SemMagnitudeType;->TYPE_TOUCH:Landroid/os/VibrationEffect$SemMagnitudeType;
 
@@ -13074,7 +11849,6 @@
 
     goto/16 :goto_3
 
-    .line 4373
     :cond_7
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_HAPTIC_FEEDBACK_ON_DC_MOTOR:Z
 
@@ -13124,14 +11898,12 @@
 
     if-eq v8, v1, :cond_11
 
-    .line 4384
     invoke-static {v9}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result v2
 
     if-eq v8, v2, :cond_11
 
-    .line 4385
     invoke-static {v14}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result v2
@@ -13140,7 +11912,6 @@
 
     goto :goto_1
 
-    .line 4387
     :cond_a
     invoke-static {v1}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
@@ -13155,7 +11926,6 @@
     :cond_b
     const/16 v1, 0x9
 
-    .line 4389
     invoke-static {v1}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result v1
@@ -13169,7 +11939,6 @@
     :cond_c
     const/16 v1, 0x8
 
-    .line 4391
     invoke-static {v1}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result v1
@@ -13183,7 +11952,6 @@
     :cond_d
     const/16 v1, 0xb
 
-    .line 4393
     invoke-static {v1}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result v1
@@ -13197,14 +11965,12 @@
     :cond_e
     const/16 v0, 0xa
 
-    .line 4395
     invoke-static {v0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result v0
 
     if-ne v8, v0, :cond_10
 
-    .line 4396
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result v0
@@ -13220,12 +11986,10 @@
 
     new-array v0, v0, [J
 
-    .line 4397
     fill-array-data v0, :array_0
 
     const/4 v1, -0x1
 
-    .line 4398
     invoke-static {v0, v1}, Landroid/os/VibrationEffect;->createWaveform([JI)Landroid/os/VibrationEffect;
 
     move-result-object v0
@@ -13246,7 +12010,6 @@
     :goto_2
     if-nez v0, :cond_6
 
-    .line 4404
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result v0
@@ -13274,14 +12037,12 @@
 
     const/4 v2, -0x1
 
-    .line 4405
     invoke-static {v0, v1, v2}, Landroid/os/VibrationEffect;->createOneShot(JI)Landroid/os/VibrationEffect;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 4409
     :goto_3
     iget-object v3, v7, Lcom/android/server/policy/PhoneWindowManagerExt;->mVibrator:Landroid/os/Vibrator;
 
@@ -13313,7 +12074,6 @@
 
     if-nez p1, :cond_3
 
-    .line 4450
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mVibrator:Landroid/os/Vibrator;
 
     invoke-virtual {p1}, Landroid/os/Vibrator;->semGetSupportedVibrationType()I
@@ -13340,7 +12100,6 @@
 
     const-string p1, "haptic generated by application"
 
-    .line 4467
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -13349,7 +12108,6 @@
     :goto_0
     const/16 p1, 0x64
 
-    .line 4460
     invoke-static {p1}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p1
@@ -13358,12 +12116,10 @@
 
     sget-object v1, Landroid/os/VibrationEffect$SemMagnitudeType;->TYPE_TOUCH:Landroid/os/VibrationEffect$SemMagnitudeType;
 
-    .line 4459
     invoke-static {p1, p2, v1}, Landroid/os/VibrationEffect;->semCreateWaveform(IILandroid/os/VibrationEffect$SemMagnitudeType;)Landroid/os/VibrationEffect;
 
     move-result-object v5
 
-    .line 4462
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mVibrator:Landroid/os/Vibrator;
 
     move v3, p3
@@ -13389,7 +12145,6 @@
 .method public final performHomeBroadcast()V
     .locals 2
 
-    .line 5209
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda10;
@@ -13404,12 +12159,10 @@
 .method public performSystemKeyFeedback(Landroid/view/KeyEvent;)V
     .locals 4
 
-    .line 4477
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDevice()Landroid/view/InputDevice;
 
     move-result-object v0
 
-    .line 4478
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDeviceId()I
 
     move-result v1
@@ -13422,7 +12175,6 @@
 
     const-string v1, "SPC_Remote_Controller"
 
-    .line 4480
     invoke-virtual {v0}, Landroid/view/InputDevice;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -13435,7 +12187,6 @@
 
     goto :goto_0
 
-    .line 4485
     :cond_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -13471,13 +12222,11 @@
 
     goto :goto_0
 
-    .line 4503
     :cond_1
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsSupported:Z
 
     if-eqz p1, :cond_2
 
-    .line 4504
     invoke-static {v3}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p1
@@ -13486,13 +12235,11 @@
 
     invoke-virtual {p0, p1, v2, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->performHapticFeedbackLw(IZLjava/lang/String;)V
 
-    .line 4507
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->playSoundEffect()V
 
     goto :goto_0
 
-    .line 4512
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->playSoundEffect()V
 
@@ -13501,14 +12248,12 @@
     :cond_4
     if-eqz v0, :cond_6
 
-    .line 4490
     invoke-virtual {v0}, Landroid/view/InputDevice;->getName()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_6
 
-    .line 4493
     invoke-virtual {v0}, Landroid/view/InputDevice;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -13521,12 +12266,10 @@
 
     if-nez v0, :cond_6
 
-    .line 4494
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsHapticsSupported:Z
 
     if-eqz v0, :cond_5
 
-    .line 4495
     invoke-static {v3}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result v0
@@ -13551,7 +12294,6 @@
 
     invoke-virtual {p0, v0, v2, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->performHapticFeedbackLw(IZLjava/lang/String;)V
 
-    .line 4498
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->playSoundEffect()V
 
@@ -13563,7 +12305,6 @@
 .method public final playSoundEffect()V
     .locals 3
 
-    .line 4521
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getAudioManager()Landroid/media/AudioManager;
 
     move-result-object v0
@@ -13574,12 +12315,10 @@
 
     const-string p0, "Couldn\'t get audio manager"
 
-    .line 4523
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 4527
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -13593,7 +12332,6 @@
 
     sget-object v2, Lcom/android/server/policy/KeyCustomizationConstants;->VOLD_DECRYPT:Ljava/lang/String;
 
-    .line 4528
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -13602,12 +12340,10 @@
 
     const/16 p0, 0x66
 
-    .line 4530
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
 
-    .line 4529
     invoke-virtual {v0, p0, v1}, Landroid/media/AudioManager;->playSoundEffect(II)V
 
     goto :goto_0
@@ -13615,7 +12351,6 @@
     :cond_1
     const-string p0, "keyguard - disable key sound"
 
-    .line 4532
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -13625,7 +12360,6 @@
 .method public powerLongPress(ILandroid/view/KeyEvent;I)Z
     .locals 6
 
-    .line 2129
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_WAKE_UP_BIXBY_SIDE_KEY:Z
 
     const/4 v1, 0x1
@@ -13642,7 +12376,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2130
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     new-instance p1, Landroid/content/Intent;
@@ -13657,7 +12390,6 @@
 
     const-string/jumbo p0, "startActivity, power off guide"
 
-    .line 2132
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -13667,7 +12399,6 @@
 
     const/4 v3, 0x4
 
-    .line 2136
     invoke-virtual {p0, v0, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfo(II)Z
 
     move-result v4
@@ -13676,7 +12407,6 @@
 
     const-string/jumbo p0, "skip long press power, requestedSystemKey"
 
-    .line 2137
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -13710,16 +12440,13 @@
 
     const-string p0, "Invalid side key long press info"
 
-    .line 2189
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
 
-    .line 2177
     :cond_3
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 2178
     invoke-virtual {p1, v3, v0}, Lcom/android/server/policy/KeyCustomizationManager;->getLastKeyCustomizationInfo(II)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
 
     move-result-object p1
@@ -13728,12 +12455,10 @@
 
     const-string/jumbo p0, "powerLongPress, info is null"
 
-    .line 2180
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
 
-    .line 2183
     :cond_4
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
@@ -13743,39 +12468,32 @@
 
     goto :goto_1
 
-    .line 2144
     :cond_5
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_WAKE_UP_BIXBY_SIDE_KEY:Z
 
     if-eqz p1, :cond_7
 
-    .line 2145
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isSamsungKeyboardShown()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 2146
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsCallOpenDictation:Z
 
-    .line 2147
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->openDictation(I)V
 
     goto :goto_1
 
-    .line 2151
     :cond_6
     new-instance p0, Lcom/android/server/policy/BixbyService$Params$Builder;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/BixbyService$Params$Builder;-><init>(Landroid/view/KeyEvent;Z)V
 
-    .line 2152
     invoke-virtual {p0}, Lcom/android/server/policy/BixbyService$Params$Builder;->setLongPress()Lcom/android/server/policy/BixbyService$Params$Builder;
 
     move-result-object p0
 
-    .line 2153
     invoke-virtual {p0}, Lcom/android/server/policy/BixbyService$Params$Builder;->showToast()Lcom/android/server/policy/BixbyService$Params$Builder;
 
     move-result-object p0
@@ -13784,10 +12502,8 @@
 
     const/4 p0, 0x0
 
-    .line 2154
     throw p0
 
-    .line 2162
     :cond_7
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
@@ -13797,7 +12513,6 @@
 
     const-string p0, "Bixby feature is not supported."
 
-    .line 2163
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -13807,7 +12522,6 @@
 
     const-string p0, "Side key long press global action"
 
-    .line 2170
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
@@ -13816,7 +12530,6 @@
     :goto_1
     const-string p0, "consume powerLongPress"
 
-    .line 2193
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -13831,14 +12544,12 @@
 
     const-string/jumbo p0, "powerMultiPress behavior was wrong."
 
-    .line 3439
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 3408
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
@@ -13846,7 +12557,6 @@
 
     goto :goto_0
 
-    .line 3431
     :pswitch_1
     sget-boolean p2, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_POWER_ATT_TV_MODE:Z
 
@@ -13854,7 +12564,6 @@
 
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 3432
     invoke-virtual {p2}, Lcom/android/server/policy/KeyCustomizationManager;->hasDoublePowerTvModeId()Z
 
     move-result p2
@@ -13863,15 +12572,12 @@
 
     const-string p2, "Launch TvMode by power key double press"
 
-    .line 3433
     invoke-static {v0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3434
     invoke-static {p0, p3, p1}, Lcom/android/server/policy/SideKeyDoublePress;->launch(Lcom/android/server/policy/PhoneWindowManagerExt;Landroid/view/KeyEvent;Z)V
 
     goto :goto_0
 
-    .line 3400
     :pswitch_2
     sget-boolean p2, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_SIDE_KEY:Z
 
@@ -13879,15 +12585,12 @@
 
     const-string p2, "Launch target app by side key double press"
 
-    .line 3401
     invoke-static {v0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3402
     invoke-static {p0, p3, p1}, Lcom/android/server/policy/SideKeyDoublePress;->launch(Lcom/android/server/policy/PhoneWindowManagerExt;Landroid/view/KeyEvent;Z)V
 
     goto :goto_0
 
-    .line 3414
     :pswitch_3
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_TRIPLE_PRESS_POWER_LAUNCH_PANIC_CALL:Z
 
@@ -13897,13 +12600,11 @@
 
     if-eqz p1, :cond_2
 
-    .line 3416
     :cond_0
     invoke-virtual {p0, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->launchEmergencySos(I)V
 
     goto :goto_0
 
-    .line 3421
     :pswitch_4
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_QUICK_LAUNCH_CAMERA:Z
 
@@ -13919,15 +12620,12 @@
 
     const-string p2, "Launch camera by power key double press"
 
-    .line 3422
     invoke-static {v0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3423
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->handleDoublePressLaunchCamera(I)V
 
     goto :goto_0
 
-    .line 3425
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -13971,24 +12669,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 3381
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mKeyCombinationManager:Lcom/android/server/policy/KeyCombinationManager;
 
-    .line 3382
     invoke-virtual {v1, p1}, Lcom/android/server/policy/KeyCombinationManager;->isKeyConsumed(Landroid/view/KeyEvent;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 3384
     invoke-virtual {p0, p2, p3}, Lcom/android/server/policy/PhoneWindowManagerExt;->getEndCallPowerPolicy(ZZ)Z
 
     move-result p1
 
-    .line 3385
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->isPowerKeyConsumedInCall(Z)Z
 
     move-result p1
@@ -13997,7 +12691,6 @@
 
     return v0
 
-    .line 3390
     :cond_0
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_FINGERPRINT_SIDE_TOUCH:Z
 
@@ -14023,10 +12716,8 @@
 .method public final predicateIfInputMethodManagerNonNull(Ljava/util/function/Predicate;)Z
     .locals 0
 
-    .line 3331
     const-class p0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 3332
     invoke-static {p0}, Lcom/samsung/android/server/util/SafetySystemService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -14035,7 +12726,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 3334
     invoke-interface {p1, p0}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result p0
@@ -14051,7 +12741,6 @@
 .method public putKeyCustomizationInfo(Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;)V
     .locals 0
 
-    .line 2765
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/KeyCustomizationManager;->putKeyCustomizationInfo(Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;)V
@@ -14062,12 +12751,10 @@
 .method public final registerDisplayListener()V
     .locals 3
 
-    .line 5901
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerExt$11;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/PhoneWindowManagerExt$11;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
-    .line 5916
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
@@ -14086,7 +12773,6 @@
 .method public final registerReceiver()V
     .locals 13
 
-    .line 852
     new-instance v3, Landroid/content/IntentFilter;
 
     const-string v0, "android.intent.action.BOOT_COMPLETED"
@@ -14095,10 +12781,8 @@
 
     const/16 v0, 0x3e8
 
-    .line 853
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 854
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
@@ -14111,22 +12795,18 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 857
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_WAKE_UP_BIXBY_SIDE_KEY:Z
 
     if-eqz v0, :cond_0
 
-    .line 858
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "com.sec.android.app.secsetupwizard.GLOBAL_ACTION"
 
-    .line 859
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 860
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSetupWizardGlobalActionReceiver:Landroid/content/BroadcastReceiver;
@@ -14139,16 +12819,13 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 864
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SYSUI_GRADLE_BUILD:Z
 
     if-eqz v0, :cond_1
 
-    .line 865
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->registerSystemUIReceiver()V
 
-    .line 869
     :cond_1
     new-instance v4, Landroid/content/IntentFilter;
 
@@ -14156,15 +12833,12 @@
 
     const-string v0, "android.intent.action.ACTION_SCREEN_ON_BY_PROXIMITY"
 
-    .line 870
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.ACTION_SCREEN_OFF_BY_PROXIMITY"
 
-    .line 871
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 872
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mProximityChangeReceiver:Landroid/content/BroadcastReceiver;
@@ -14177,22 +12851,18 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 883
     new-instance v10, Landroid/content/IntentFilter;
 
     invoke-direct {v10}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 884
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo v0, "package"
 
-    .line 885
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 886
     iget-object v7, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPackageChangeReceiver:Landroid/content/BroadcastReceiver;
@@ -14205,33 +12875,28 @@
 
     invoke-virtual/range {v7 .. v12}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 891
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.USER_REMOVED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 892
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mMultiuserReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 895
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_FOLD_SA_LOGGING:Z
 
     if-eqz v0, :cond_2
 
-    .line 896
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "com.samsung.android.intent.action.WINNER_LOGGING"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 897
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldSaLoggingReceiver:Landroid/content/BroadcastReceiver;
@@ -14245,7 +12910,6 @@
 .method public registerSystemKeyEvent(ILandroid/content/ComponentName;I)V
     .locals 0
 
-    .line 3054
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/SystemKeyManager;->registerSystemKeyEvent(ILandroid/content/ComponentName;I)V
@@ -14256,7 +12920,6 @@
 .method public final registerSystemUIReceiver()V
     .locals 3
 
-    .line 6744
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.PACKAGE_REPLACED"
@@ -14265,10 +12928,8 @@
 
     const-string/jumbo v1, "package"
 
-    .line 6745
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 6746
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcom/android/server/policy/PhoneWindowManagerExt$16;
@@ -14283,7 +12944,6 @@
 .method public removeKeyCustomizationInfo(III)V
     .locals 0
 
-    .line 2783
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/KeyCustomizationManager;->removeKeyCustomizationInfo(III)V
@@ -14294,7 +12954,6 @@
 .method public removeKeyCustomizationInfoByPackage(Ljava/lang/String;II)V
     .locals 0
 
-    .line 2787
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/KeyCustomizationManager;->removeKeyCustomizationInfoByPackage(Ljava/lang/String;II)V
@@ -14311,7 +12970,6 @@
 
     return-void
 
-    .line 2437
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -14323,7 +12981,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2438
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSingleKeyGestureDetector:Lcom/android/server/policy/SingleKeyGestureDetector;
@@ -14337,14 +12994,12 @@
 .method public requestCustomFullBugreport(Ljava/lang/String;)V
     .locals 4
 
-    .line 6096
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIssueTrackerLoggedIn:Z
 
     const-string v1, "PhoneWindowManagerExt"
 
     if-eqz v0, :cond_0
 
-    .line 6097
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "com.sec.android.ISSUE_TRACKER_ACTION"
@@ -14355,29 +13010,24 @@
 
     const-string v2, "User pressed h/w key for logging"
 
-    .line 6098
     invoke-virtual {p1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "ERRCODE"
 
     const/16 v3, -0x83
 
-    .line 6099
     invoke-virtual {p1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v0, "ERRMSG"
 
-    .line 6100
     invoke-virtual {p1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "lockScreen"
 
     const/4 v2, 0x1
 
-    .line 6101
     invoke-virtual {p1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 6103
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     sget-object v0, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -14386,7 +13036,6 @@
 
     const-string/jumbo p0, "sendBroadcast to issuetracker."
 
-    .line 6104
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -14396,14 +13045,12 @@
 
     const-string v2, "0"
 
-    .line 6107
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "1"
 
-    .line 6108
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -14412,12 +13059,10 @@
 
     const-string p0, "Running dump due to requestCustomFullBugreport."
 
-    .line 6109
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 6113
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -14435,7 +13080,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6114
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance p1, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda22;
@@ -14450,7 +13094,6 @@
 .method public requestMetaKeyEvent(Landroid/content/ComponentName;Z)V
     .locals 0
 
-    .line 3091
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/SystemKeyManager;->requestMetaKeyEvent(Landroid/content/ComponentName;Z)V
@@ -14461,7 +13104,6 @@
 .method public requestSystemKeyEvent(ILandroid/content/ComponentName;Z)Z
     .locals 0
 
-    .line 3046
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/SystemKeyManager;->requestSystemKeyEvent(ILandroid/content/ComponentName;Z)Z
@@ -14474,7 +13116,6 @@
 .method public restoreKeyCustomizationInfo(Ljava/util/List;)V
     .locals 0
 
-    .line 6314
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/KeyCustomizationManager;->restoreKeyCustomizationInfo(Ljava/util/List;)V
@@ -14485,7 +13126,6 @@
 .method public final sendBroadcastDoubleClick(I)V
     .locals 3
 
-    .line 3759
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;
 
     invoke-interface {v0}, Lcom/android/server/policy/WindowManagerPolicyExt$WindowManagerFuncs;->isRunningRecentAnimation()Z
@@ -14498,12 +13138,10 @@
 
     const-string p0, "Can not sendBroadcast double click intent. RecentAnimation is running"
 
-    .line 3760
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3764
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -14521,7 +13159,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3765
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.action.DOUBLE_CLICK"
@@ -14530,10 +13167,8 @@
 
     const-string v1, "KEYCODE"
 
-    .line 3766
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 3767
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     sget-object p1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -14548,27 +13183,23 @@
 .method public final sendCommandToSamsungDeviceHealth()V
     .locals 2
 
-    .line 3171
     sget-object p0, Lcom/android/server/policy/PhoneWindowManagerExt;->sdhmsBinder:Landroid/os/IBinder;
 
     if-nez p0, :cond_0
 
     const-string/jumbo p0, "sdhms"
 
-    .line 3172
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
     sput-object p0, Lcom/android/server/policy/PhoneWindowManagerExt;->sdhmsBinder:Landroid/os/IBinder;
 
-    .line 3175
     :cond_0
     sget-object p0, Lcom/android/server/policy/PhoneWindowManagerExt;->sdhmsBinder:Landroid/os/IBinder;
 
     if-eqz p0, :cond_2
 
-    .line 3177
     invoke-static {p0}, Lcom/sec/android/sdhms/ISamsungDeviceHealthManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/android/sdhms/ISamsungDeviceHealthManager;
 
     move-result-object p0
@@ -14583,7 +13214,6 @@
 
     const-string/jumbo v1, "start"
 
-    .line 3183
     invoke-interface {p0, v0, v1}, Lcom/sec/android/sdhms/ISamsungDeviceHealthManager;->sendCommand(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -14593,7 +13223,6 @@
     :catch_0
     move-exception p0
 
-    .line 3185
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_2
@@ -14604,17 +13233,14 @@
 .method public sendCoreSaLoggingDimension(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 6217
     new-instance p0, Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     const-string v0, "det"
 
-    .line 6218
     invoke-virtual {p0, v0, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6219
     invoke-static {p1, p0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;Ljava/util/HashMap;)V
 
     return-void
@@ -14623,7 +13249,6 @@
 .method public final sendFoldSaLogging(Z)V
     .locals 3
 
-    .line 6507
     const-class v0, Landroid/app/AlarmManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/util/SafetySystemService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -14636,7 +13261,6 @@
 
     return-void
 
-    .line 6511
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
@@ -14652,7 +13276,6 @@
 .method public sendFoldSaLoggingCanceledIfNeeded(Ljava/lang/String;Z)V
     .locals 4
 
-    .line 6491
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mSystemBooted:Z
@@ -14663,7 +13286,6 @@
 
     iget-object p2, v0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
-    .line 6492
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayPolicy;->getLidState()I
 
     move-result p2
@@ -14672,13 +13294,11 @@
 
     goto :goto_1
 
-    .line 6495
     :cond_0
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldSaLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 6496
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldSaLoggingCanceled:Z
 
@@ -14692,7 +13312,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 6497
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -14712,25 +13331,20 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 6500
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mFoldSaLoggingCanceled:Z
 
-    .line 6501
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const-string p2, "W003"
 
-    .line 6502
     invoke-static {p2, p1}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6503
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendFoldSaLogging(Z)V
 
     return-void
 
-    .line 6498
     :cond_2
     :goto_0
     :try_start_1
@@ -14741,7 +13355,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6501
     monitor-exit p2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -14756,14 +13369,12 @@
 .method public sendPowerKeyToCover()V
     .locals 0
 
-    .line 5147
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getCoverPolicy()Lcom/android/server/wm/CoverPolicy;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 5149
     invoke-virtual {p0}, Lcom/android/server/wm/CoverPolicy;->sendPowerKeyToCover()V
 
     :cond_0
@@ -14773,12 +13384,10 @@
 .method public sendSALoggingForDispatchingKey(Landroid/view/KeyEvent;I)V
     .locals 6
 
-    .line 6170
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
-    .line 6171
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDevice()Landroid/view/InputDevice;
 
     move-result-object v1
@@ -14787,7 +13396,6 @@
 
     return-void
 
-    .line 6175
     :cond_0
     invoke-virtual {v1}, Landroid/view/InputDevice;->isExternal()Z
 
@@ -14797,7 +13405,6 @@
 
     return-void
 
-    .line 6179
     :cond_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -14825,7 +13432,6 @@
 
     const-string p0, "NAVIB1004"
 
-    .line 6182
     invoke-static {p0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
     :cond_3
@@ -14860,13 +13466,11 @@
     :cond_7
     return-void
 
-    .line 6192
     :cond_8
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result p2
 
-    .line 6193
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isLongPress()Z
 
     move-result p1
@@ -14875,13 +13479,11 @@
 
     if-nez p2, :cond_9
 
-    .line 6197
     iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mVolumeKeyLongPress:Z
 
     :cond_9
     if-eqz p1, :cond_d
 
-    .line 6200
     iput-boolean v2, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mVolumeKeyLongPress:Z
 
     if-ne v0, v4, :cond_a
@@ -14895,7 +13497,6 @@
 
     goto :goto_2
 
-    .line 6205
     :cond_b
     iget-boolean p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mVolumeKeyLongPress:Z
 
@@ -14915,7 +13516,6 @@
     :cond_d
     const/4 p0, 0x0
 
-    .line 6210
     :goto_2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -14925,7 +13525,6 @@
 
     return-void
 
-    .line 6213
     :cond_e
     invoke-static {p0}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;)V
 
@@ -14935,7 +13534,6 @@
 .method public final sendThreeFingerGestureKeyEvent(Landroid/view/KeyEvent;IZ)V
     .locals 0
 
-    .line 5598
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
@@ -14946,7 +13544,6 @@
 
     return-void
 
-    .line 5603
     :cond_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -14970,7 +13567,6 @@
 
     invoke-static {p3, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5608
     invoke-interface {p0, p1}, Lcom/android/server/statusbar/StatusBarManagerInternal;->sendThreeFingerGestureKeyEvent(Landroid/view/KeyEvent;)V
 
     return-void
@@ -14987,7 +13583,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 4635
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsCameraSensorToggleSupported:Z
 
     const v3, 0x104063e
@@ -14997,7 +13592,6 @@
     :cond_0
     if-ne p1, v1, :cond_1
 
-    .line 4638
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mIsMicSensorToggleSupported:Z
 
     const v3, 0x104063f
@@ -15009,7 +13603,6 @@
 
     move v3, v0
 
-    .line 4641
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->externalKeyboardPolicy()Z
 
@@ -15021,7 +13614,6 @@
 
     goto :goto_1
 
-    .line 4645
     :cond_2
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -15029,7 +13621,6 @@
 
     move-result-object v0
 
-    .line 4646
     invoke-virtual {v0, p1}, Landroid/hardware/SensorPrivacyManager;->isSensorPrivacyEnabled(I)Z
 
     move-result v2
@@ -15038,12 +13629,10 @@
 
     const/4 v5, 0x5
 
-    .line 4647
     invoke-virtual {v0, v5, p1, v4}, Landroid/hardware/SensorPrivacyManager;->setSensorPrivacyForProfileGroupWithConfirmPopup(IIZ)V
 
     if-eqz v2, :cond_3
 
-    .line 4649
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -15067,12 +13656,10 @@
 .method public final setAppOpsPermissionIfNeeded(I)V
     .locals 5
 
-    .line 5100
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     if-nez v0, :cond_0
 
-    .line 5101
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/app/AppOpsManager;
@@ -15085,7 +13672,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAppOpsManager:Landroid/app/AppOpsManager;
 
-    .line 5103
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -15093,7 +13679,6 @@
 
     move-result-object v0
 
-    .line 5104
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     const/16 v2, 0x3e8
@@ -15102,7 +13687,6 @@
 
     move-result v1
 
-    .line 5105
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -15135,7 +13719,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5108
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     const/4 v1, 0x0
@@ -15149,14 +13732,12 @@
 .method public setCarLifeDisplay(Lcom/android/server/policy/WindowManagerPolicy$DisplayContentInfo;)V
     .locals 1
 
-    .line 6807
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$DisplayContentInfo;->getDisplay()Landroid/view/Display;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mCarLifeDisplay:Landroid/view/Display;
 
-    .line 6808
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$DisplayContentInfo;->getDisplayRotation()Lcom/android/server/wm/DisplayRotation;
 
     move-result-object p1
@@ -15173,7 +13754,6 @@
 .method public setPendingIntentAfterUnlock(Landroid/app/PendingIntent;Landroid/content/Intent;)V
     .locals 0
 
-    .line 3507
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
@@ -15182,7 +13762,6 @@
 
     return-void
 
-    .line 3510
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->setPendingIntentAfterUnlock(Landroid/app/PendingIntent;Landroid/content/Intent;)V
 
@@ -15194,7 +13773,6 @@
 
     const-string v0, "PhoneWindowManagerExt"
 
-    .line 3112
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -15211,18 +13789,15 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3113
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mBoosterLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 3114
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSemRotationBooster:Lcom/samsung/android/os/SemDvfsManager;
 
     if-nez v0, :cond_0
 
-    .line 3115
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     const-string v1, "PWM_ROTATION"
@@ -15237,10 +13812,8 @@
 
     const/16 v1, 0xf
 
-    .line 3118
     invoke-virtual {v0, v1}, Lcom/samsung/android/os/SemDvfsManager;->setHint(I)V
 
-    .line 3122
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSemRotationBooster:Lcom/samsung/android/os/SemDvfsManager;
 
@@ -15248,7 +13821,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->boosterAcquireLocked(Lcom/samsung/android/os/SemDvfsManager;Ljava/lang/String;)V
 
-    .line 3123
     monitor-exit p1
 
     return-void
@@ -15266,7 +13838,6 @@
 .method public setScreenshotEnabled()V
     .locals 3
 
-    .line 4040
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
@@ -15275,7 +13846,6 @@
 
     move-result v0
 
-    .line 4041
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -15296,7 +13866,6 @@
 
     const/4 v0, 0x1
 
-    .line 4045
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mScreenshotEnabled:Z
 
     return-void
@@ -15305,7 +13874,6 @@
 .method public setTspStateController(Lcom/android/server/wm/TspStateController;)V
     .locals 0
 
-    .line 3797
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTspStateController:Lcom/android/server/wm/TspStateController;
 
     return-void
@@ -15314,14 +13882,12 @@
 .method public shouldDispatchMetaCombos(I)Z
     .locals 2
 
-    .line 4585
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4586
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -15340,7 +13906,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4588
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasMetaKeyPass()Z
 
@@ -15363,7 +13928,6 @@
 
     goto :goto_0
 
-    .line 4595
     :cond_2
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_TOOLBAR_SHORTCUT:Z
 
@@ -15381,7 +13945,6 @@
 .method public showBootDialog(I)V
     .locals 2
 
-    .line 6372
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda11;
@@ -15396,7 +13959,6 @@
 .method public showToast(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
-    .line 2272
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda9;
@@ -15417,7 +13979,6 @@
 
     return v0
 
-    .line 2287
     :cond_0
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_RESERVE_BATTERY_MODE:Z
 
@@ -15429,7 +13990,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2288
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->getReserveBatteryModeToast(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
@@ -15439,7 +13999,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 2290
     :goto_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -15449,7 +14008,6 @@
 
     return v0
 
-    .line 2293
     :cond_2
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -15463,7 +14021,6 @@
 .method public showingSearcleToastIfNeeded()V
     .locals 3
 
-    .line 6575
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isLongPressHomeSearcle()Z
 
     move-result v0
@@ -15476,7 +14033,6 @@
 
     if-nez v0, :cond_1
 
-    .line 6576
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -15485,17 +14041,14 @@
 
     const v1, 0x1040262
 
-    .line 6577
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6579
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_CIRCLE_TO_SEARCH_CHN:Z
 
     if-eqz v1, :cond_0
 
-    .line 6580
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -15504,14 +14057,12 @@
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
-    .line 6581
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     const v2, 0x1040e3e
 
-    .line 6582
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -15522,12 +14073,10 @@
 
     const v2, 0x1040ba1
 
-    .line 6581
     invoke-virtual {v0, v2, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6584
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -15540,7 +14089,6 @@
 .method public silenceRinger(I)V
     .locals 1
 
-    .line 6130
     new-instance v0, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda14;
 
     invoke-direct {v0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$$ExternalSyntheticLambda14;-><init>(I)V
@@ -15569,7 +14117,6 @@
 
     goto :goto_0
 
-    .line 3368
     :cond_0
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_QUINTUPLE_PRESS_POWER_EMERGENCY_SOS:Z
 
@@ -15583,7 +14130,6 @@
 
     return v1
 
-    .line 3361
     :cond_1
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_TRIPLE_PRESS_POWER_LAUNCH_PANIC_CALL:Z
 
@@ -15599,7 +14145,6 @@
 
     return v1
 
-    .line 3352
     :cond_2
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_SIDE_KEY:Z
 
@@ -15643,15 +14188,12 @@
 
     const-string/jumbo v1, "start Accessibility Shortcut Volup + Power"
 
-    .line 5072
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5073
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAccessibilityDirectAccessController:Lcom/android/internal/accessibility/AccessibilityDirectAccessController;
 
     if-nez v0, :cond_0
 
-    .line 5074
     new-instance v0, Lcom/android/internal/accessibility/AccessibilityDirectAccessController;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
@@ -15660,7 +14202,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAccessibilityDirectAccessController:Lcom/android/internal/accessibility/AccessibilityDirectAccessController;
 
-    .line 5077
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mAccessibilityDirectAccessController:Lcom/android/internal/accessibility/AccessibilityDirectAccessController;
 
@@ -15672,7 +14213,6 @@
 .method public final startActivityAppsScreen()V
     .locals 3
 
-    .line 5675
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -15681,22 +14221,18 @@
 
     const-string v1, "android.intent.category.HOME"
 
-    .line 5676
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v1, 0x10000000
 
-    .line 5677
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     const-string/jumbo v1, "sec.android.intent.extra.LAUNCHER_ACTION"
 
     const-string v2, "com.android.launcher2.ALL_APPS"
 
-    .line 5678
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5680
     :try_start_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
@@ -15713,7 +14249,6 @@
 
     const-string v1, "No activity to launch launcher app list. "
 
-    .line 5682
     invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -15723,7 +14258,6 @@
 .method public final startActivityPremiumWatch(Z)V
     .locals 3
 
-    .line 6248
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -15732,12 +14266,10 @@
 
     const/high16 v1, 0x10000000
 
-    .line 6249
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     const-string v1, "com.sec.android.app.premiumwatch/com.sec.android.app.premiumwatch.activity.PremiumWatch"
 
-    .line 6250
     invoke-static {v1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v1
@@ -15750,10 +14282,8 @@
 
     const/4 v2, 0x1
 
-    .line 6252
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 6254
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -15779,7 +14309,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6257
     :try_start_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -15796,7 +14325,6 @@
 
     const-string p1, "No activity to launch Premium watch. "
 
-    .line 6259
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -15806,7 +14334,6 @@
 .method public startDockOrHome()V
     .locals 2
 
-    .line 2263
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -15831,7 +14358,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2265
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->performHomeBroadcast()V
 
     return-void
@@ -15840,7 +14366,6 @@
 .method public startGameToolsService(IIZ)Z
     .locals 2
 
-    .line 5032
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->isSupportedGameBooster()Z
 
     move-result v0
@@ -15851,7 +14376,6 @@
 
     return p0
 
-    .line 5036
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -15877,7 +14401,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5038
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.game.gametools.GAMEPAD_INTENTSERVICE"
@@ -15886,17 +14409,14 @@
 
     const-string v1, "com.samsung.android.game.gametools"
 
-    .line 5039
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "DEVICE_VID"
 
-    .line 5040
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string p1, "DEVICE_PID"
 
-    .line 5041
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     if-eqz p3, :cond_1
@@ -15911,10 +14431,8 @@
     :goto_0
     const-string p2, "DEVICE_ACTION"
 
-    .line 5042
     invoke-virtual {v0, p2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5044
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     sget-object p1, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
@@ -15929,14 +14447,12 @@
 .method public startLockscreenFingerprintAuth()V
     .locals 0
 
-    .line 6786
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     if-eqz p0, :cond_0
 
-    .line 6787
     invoke-virtual {p0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->startFingerprintAuthentication()V
 
     :cond_0
@@ -15946,7 +14462,6 @@
 .method public final startSearcleByHomeKey(ZZ)V
     .locals 4
 
-    .line 6547
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->keyguardOn()Z
@@ -15959,12 +14474,10 @@
 
     const-string p0, "keyguardOn, can not start Searcle by Home"
 
-    .line 6548
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 6551
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
@@ -15972,7 +14485,6 @@
 
     const/4 v3, 0x3
 
-    .line 6552
     invoke-virtual {v0, v2, v3}, Lcom/android/server/policy/KeyCustomizationManager;->hasLastInfo(II)Z
 
     move-result v0
@@ -15981,16 +14493,13 @@
 
     const-string p0, "hasLastInfo, can not start Searcle by Home"
 
-    .line 6553
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 6556
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
-    .line 6557
     invoke-virtual {v0, v3, v2}, Lcom/android/server/policy/SystemKeyManager;->hasSystemKeyInfo(II)Z
 
     move-result v0
@@ -15999,12 +14508,10 @@
 
     const-string p0, "hasSystemKeyInfo, can not start Searcle by Home"
 
-    .line 6558
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 6561
     :cond_2
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -16016,7 +14523,6 @@
 
     return-void
 
-    .line 6566
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -16040,7 +14546,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6567
     invoke-interface {p0, p1, p2}, Lcom/android/server/statusbar/StatusBarManagerInternal;->startSearcleByHomeKey(ZZ)V
 
     return-void
@@ -16051,7 +14556,6 @@
 
     const/4 v0, 0x0
 
-    .line 6539
     invoke-virtual {p0, p1, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->startSearcleByHomeKey(ZZ)V
 
     return-void
@@ -16064,7 +14568,6 @@
 
     const/4 v1, 0x1
 
-    .line 6543
     invoke-virtual {p0, v0, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->startSearcleByHomeKey(ZZ)V
 
     return-void
@@ -16073,14 +14576,12 @@
 .method public startedEarlyWakingUp(I)V
     .locals 0
 
-    .line 6794
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     if-eqz p0, :cond_0
 
-    .line 6795
     invoke-virtual {p0, p1}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->startedEarlyWakingUp(I)V
 
     :cond_0
@@ -16090,7 +14591,6 @@
 .method public startedGoingToSleep()V
     .locals 1
 
-    .line 3801
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TSP_STATE_CONTROLLER:Z
 
     if-eqz v0, :cond_0
@@ -16099,7 +14599,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 3802
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->startedGoingToSleep()V
 
     :cond_0
@@ -16109,10 +14608,8 @@
 .method public startedWakingUp(I)V
     .locals 2
 
-    .line 972
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mWakingUpReason:I
 
-    .line 974
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_FOLD_SA_LOGGING:Z
 
     if-eqz v0, :cond_1
@@ -16125,7 +14622,6 @@
 
     const-string p1, "Fingerprint Sensor"
 
-    .line 976
     invoke-virtual {p0, p1, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendFoldSaLoggingCanceledIfNeeded(Ljava/lang/String;Z)V
 
     goto :goto_0
@@ -16137,10 +14633,8 @@
 
     const-string p1, "Lift To Wake"
 
-    .line 978
     invoke-virtual {p0, p1, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->sendFoldSaLoggingCanceledIfNeeded(Ljava/lang/String;Z)V
 
-    .line 981
     :cond_1
     :goto_0
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_TSP_STATE_CONTROLLER:Z
@@ -16151,7 +14645,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 982
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->startedWakingUp()V
 
     :cond_2
@@ -16161,14 +14654,12 @@
 .method public systemBooted()V
     .locals 2
 
-    .line 962
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 964
     invoke-virtual {v0}, Landroid/hardware/input/InputManager;->semCheckInputFeature()I
 
     move-result v0
@@ -16194,7 +14685,6 @@
 .method public unregisterSystemKeyEvent(ILandroid/content/ComponentName;)V
     .locals 0
 
-    .line 3058
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mSystemKeyPolicy:Lcom/android/server/policy/SystemKeyManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/SystemKeyManager;->unregisterSystemKeyEvent(ILandroid/content/ComponentName;)V
@@ -16205,7 +14695,6 @@
 .method public final updateDoublePressLaunchInfo(Ljava/lang/String;)V
     .locals 3
 
-    .line 3868
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -16217,19 +14706,16 @@
     :cond_0
     const-string v0, "/"
 
-    .line 3872
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3873
     array-length v0, p1
 
     const/4 v1, 0x2
 
     if-lt v0, v1, :cond_1
 
-    .line 3874
     new-instance v0, Landroid/content/ComponentName;
 
     const/4 v1, 0x0
@@ -16242,7 +14728,6 @@
 
     invoke-direct {v0, v1, p1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3875
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mDoublePressLaunchComponentName:Landroid/content/ComponentName;
 
     invoke-virtual {v0, p1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
@@ -16251,7 +14736,6 @@
 
     if-nez p1, :cond_1
 
-    .line 3876
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mDoublePressLaunchComponentName:Landroid/content/ComponentName;
 
     :cond_1
@@ -16261,7 +14745,6 @@
 .method public updateDoublePressPowerBehavior()V
     .locals 4
 
-    .line 3479
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     const/16 v1, 0x8
@@ -16272,21 +14755,18 @@
 
     move-result v0
 
-    .line 3481
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_SIDE_KEY:Z
 
     if-eqz v1, :cond_0
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 3482
     invoke-virtual {v1}, Lcom/android/server/policy/KeyCustomizationManager;->hasSideKeyDoublePressId()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3483
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     const/16 v1, 0x68
@@ -16302,14 +14782,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 3485
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iput v3, v0, Lcom/android/server/policy/PhoneWindowManager;->mDoublePressOnPowerBehavior:I
 
     goto :goto_1
 
-    .line 3486
     :cond_1
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_QUICK_LAUNCH_CAMERA:Z
 
@@ -16317,14 +14795,12 @@
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 3487
     invoke-virtual {v1, v2}, Lcom/android/server/policy/KeyCustomizationManager;->hasDoubleCameraId(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 3488
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     const/16 v1, 0x65
@@ -16333,7 +14809,6 @@
 
     goto :goto_1
 
-    .line 3489
     :cond_2
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_POWER_ATT_TV_MODE:Z
 
@@ -16341,14 +14816,12 @@
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
-    .line 3490
     invoke-virtual {v1}, Lcom/android/server/policy/KeyCustomizationManager;->hasDoublePowerTvModeId()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 3491
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     const/16 v1, 0x69
@@ -16372,20 +14845,17 @@
 
     goto :goto_0
 
-    .line 3496
     :cond_4
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_DOUBLE_PRESS_SIDE_KEY:Z
 
     if-eqz v0, :cond_6
 
-    .line 3497
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     iput v3, v0, Lcom/android/server/policy/PhoneWindowManager;->mDoublePressOnPowerBehavior:I
 
     goto :goto_1
 
-    .line 3494
     :cond_5
     :goto_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -16394,7 +14864,6 @@
 
     iput v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mDoublePressOnPowerBehavior:I
 
-    .line 3500
     :cond_6
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -16446,7 +14915,6 @@
     :goto_0
     move v3, v0
 
-    .line 3547
     :goto_1
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
@@ -16474,7 +14942,6 @@
     :cond_3
     if-eqz v4, :cond_5
 
-    .line 3557
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {p1, v5, v6, v3}, Lcom/android/server/policy/KeyCustomizationManager;->removeKeyCustomizationInfo(III)V
@@ -16485,7 +14952,6 @@
     :goto_2
     if-nez v4, :cond_5
 
-    .line 3551
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     new-instance v0, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
@@ -16498,7 +14964,6 @@
     :goto_3
     if-ne v3, v1, :cond_6
 
-    .line 3562
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateDoublePressPowerBehavior()V
 
     :cond_6
@@ -16508,7 +14973,6 @@
 .method public final updateKeyCustomizationInfoTvMode()V
     .locals 11
 
-    .line 3921
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     const/16 v1, 0x7d2
@@ -16517,7 +14981,6 @@
 
     const/16 v3, 0x1a
 
-    .line 3922
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/policy/KeyCustomizationManager;->getKeyCustomizationInfo(III)Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
 
     move-result-object v0
@@ -16531,7 +14994,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 3923
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->canOpenTvModeByPowerDoublePress()Z
 
@@ -16541,7 +15003,6 @@
 
     if-nez v0, :cond_2
 
-    .line 3925
     new-instance v10, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MAIN"
@@ -16550,15 +15011,12 @@
 
     const-string v0, "android.intent.category.LAUNCHER"
 
-    .line 3926
     invoke-virtual {v10, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3927
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mDoublePressLaunchComponentName:Landroid/content/ComponentName;
 
     invoke-virtual {v10, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 3928
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     new-instance v1, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
@@ -16582,12 +15040,10 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 3933
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/policy/KeyCustomizationManager;->removeKeyCustomizationInfo(III)V
 
-    .line 3936
     :cond_2
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->updateDoublePressPowerBehavior()V
@@ -16598,7 +15054,6 @@
 .method public updateLongPressPowerBehavior()V
     .locals 6
 
-    .line 2198
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     const/4 v1, 0x4
@@ -16617,7 +15072,6 @@
 
     if-nez v0, :cond_1
 
-    .line 2201
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/KeyCustomizationManager;->hasB2BDedicatedPower()Z
@@ -16628,10 +15082,8 @@
 
     const-string/jumbo v0, "updated long press power behavior by b2b dedicated app"
 
-    .line 2202
     invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2203
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -16647,10 +15099,8 @@
     :cond_0
     const-string v0, "Side key long press info was wrong."
 
-    .line 2207
     invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2208
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -16661,7 +15111,6 @@
 
     return-void
 
-    .line 2212
     :cond_1
     iget-object v0, v0, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->intent:Landroid/content/Intent;
 
@@ -16671,10 +15120,8 @@
 
     const-string v0, "Side key long press intent info was wrong."
 
-    .line 2213
     invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2214
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -16685,7 +15132,6 @@
 
     return-void
 
-    .line 2219
     :cond_2
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -16693,7 +15139,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2221
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v0
@@ -16706,7 +15151,6 @@
     :goto_0
     const-string/jumbo v5, "wakeBixby/wakeBixby"
 
-    .line 2222
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -16715,10 +15159,8 @@
 
     const-string/jumbo v0, "updated long press power behavior as wake bixby"
 
-    .line 2223
     invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2224
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -16734,7 +15176,6 @@
     :cond_4
     const-string v5, "globalAction/globalAction"
 
-    .line 2226
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -16743,10 +15184,8 @@
 
     const-string/jumbo v0, "updated long press power behavior as global action"
 
-    .line 2227
     invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2228
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -16760,10 +15199,8 @@
     :cond_5
     const-string/jumbo v0, "updated long press power behavior as keyCustomizationInfo"
 
-    .line 2231
     invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2232
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -16779,7 +15216,6 @@
 .method public updateQuadruplePressPowerBehavior()V
     .locals 3
 
-    .line 2338
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     const/16 v1, 0x20
@@ -16805,7 +15241,6 @@
     :cond_0
     const/16 v0, 0x6a
 
-    .line 2342
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuadruplePressOnPowerBehavior:I
 
     :cond_1
@@ -16815,7 +15250,6 @@
 .method public updateQuintuplePressPowerBehavior()V
     .locals 1
 
-    .line 4120
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_QUINTUPLE_PRESS_POWER_EMERGENCY_SOS:Z
 
     if-eqz v0, :cond_0
@@ -16826,7 +15260,6 @@
 
     const/16 v0, 0x67
 
-    .line 4121
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuintuplePressOnPowerBehavior:I
 
     goto :goto_0
@@ -16834,7 +15267,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4123
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mQuintuplePressOnPowerBehavior:I
 
     :goto_0
@@ -16844,7 +15276,6 @@
 .method public updateSingleKeyGestureRule(I)V
     .locals 8
 
-    .line 2366
     sget-object v0, Lcom/android/server/policy/KeyCustomizationConstants;->NEEDED_UPDATE_BEHAVIOR_MULTI_PRESS_TYPE:[I
 
     array-length v1, v0
@@ -16858,7 +15289,6 @@
 
     aget v4, v0, v2
 
-    .line 2367
     iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {v5, v4, p1}, Lcom/android/server/policy/KeyCustomizationManager;->hasLastInfo(II)Z
@@ -16869,7 +15299,6 @@
 
     goto :goto_1
 
-    .line 2370
     :cond_0
     iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
@@ -16888,7 +15317,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 2375
     iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
     invoke-virtual {v5, v4, p1}, Lcom/android/server/policy/KeyCustomizationManager;->getLastLongPressTimeout(II)J
@@ -16914,12 +15342,10 @@
     :cond_3
     if-lez v3, :cond_4
 
-    .line 2385
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->addSingleKeyGestureRule(I)V
 
     goto :goto_2
 
-    .line 2387
     :cond_4
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->removeSingleKeyGestureRule(I)V
 
@@ -16930,7 +15356,6 @@
 .method public updateTopActivity(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 2121
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mTopActivity:Landroid/content/ComponentName;
 
     return-void
@@ -16939,12 +15364,10 @@
 .method public updateTriplePressPowerBehavior()V
     .locals 3
 
-    .line 4095
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TRIPLE_PRESS_POWER_LAUNCH_PANIC_CALL:Z
 
     if-eqz v0, :cond_0
 
-    .line 4096
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     const/16 v0, 0x66
@@ -16953,7 +15376,6 @@
 
     goto :goto_0
 
-    .line 4098
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
 
@@ -16977,7 +15399,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 4102
     :cond_1
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -16993,7 +15414,6 @@
 .method public final vibrationEffect(Z)Landroid/os/VibrationEffect;
     .locals 1
 
-    .line 4950
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->FW_OMC_SPEN_VIBRATION:Z
 
     if-eqz p0, :cond_1
@@ -17002,7 +15422,6 @@
 
     const/16 p0, 0x3f
 
-    .line 4952
     invoke-static {p0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p0
@@ -17012,7 +15431,6 @@
     :cond_0
     const/16 p0, 0x3e
 
-    .line 4955
     invoke-static {p0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p0
@@ -17024,7 +15442,6 @@
 
     const/4 p0, 0x5
 
-    .line 4960
     invoke-static {p0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p0
@@ -17034,7 +15451,6 @@
     :cond_2
     const/4 p0, 0x1
 
-    .line 4962
     invoke-static {p0}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p0
@@ -17042,7 +15458,6 @@
     :goto_0
     const/4 p1, -0x1
 
-    .line 4965
     sget-object v0, Landroid/os/VibrationEffect$SemMagnitudeType;->TYPE_MAX:Landroid/os/VibrationEffect$SemMagnitudeType;
 
     invoke-static {p0, p1, v0}, Landroid/os/VibrationEffect;->semCreateHaptic(IILandroid/os/VibrationEffect$SemMagnitudeType;)Landroid/os/VibrationEffect;

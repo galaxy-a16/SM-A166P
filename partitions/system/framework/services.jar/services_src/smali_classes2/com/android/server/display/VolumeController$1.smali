@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/display/VolumeController;)V
     .locals 1
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/display/VolumeController$1;->this$0:Lcom/android/server/display/VolumeController;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 55
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 
     const/4 p1, 0x1
 
-    .line 56
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -48,7 +45,6 @@
 
     const/4 p1, 0x2
 
-    .line 57
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -63,7 +59,6 @@
 
     const/4 p1, 0x3
 
-    .line 58
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1

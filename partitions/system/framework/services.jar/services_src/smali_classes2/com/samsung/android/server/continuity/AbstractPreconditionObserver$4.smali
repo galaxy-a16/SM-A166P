@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;)V
     .locals 0
 
-    .line 535
     iput-object p1, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$4;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.accounts.LOGIN_ACCOUNTS_CHANGED"
 
-    .line 538
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -41,10 +39,8 @@
 
     const-string p2, "mAccountChangeReceiver.onReceive - LOGIN_ACCOUNTS_CHANGED_ACTION"
 
-    .line 539
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
     iget-object p0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$4;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-static {p0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->-$$Nest$mcheckAccountUpdated(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;)V

@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$8KLaLXwOexIK4eQRkkmy7l14GUA(Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;Landroid/os/ParcelFileDescriptor;Landroid/media/AudioFormat;Landroid/media/musicrecognition/IMusicRecognitionService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;->lambda$onAudioStreamStarted$0(Landroid/os/ParcelFileDescriptor;Landroid/media/AudioFormat;Landroid/media/musicrecognition/IMusicRecognitionService;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$jhPtH30S2BOcwtetn3lZVq5Dy48(Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;Ljava/util/concurrent/CompletableFuture;Landroid/media/musicrecognition/IMusicRecognitionService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;->lambda$getAttributionTag$1(Ljava/util/concurrent/CompletableFuture;Landroid/media/musicrecognition/IMusicRecognitionService;)V
 
     return-void
@@ -31,7 +29,6 @@
 
     const-string v2, "android.service.musicrecognition.MUSIC_RECOGNITION"
 
-    .line 56
     invoke-virtual {p1}, Landroid/content/Context;->getMainThreadHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -62,12 +59,10 @@
 
     move/from16 v8, p7
 
-    .line 54
     invoke-direct/range {v0 .. v9}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;ILcom/android/internal/infra/AbstractRemoteService$VultureCallback;Landroid/os/Handler;IZI)V
 
     move-object v1, p5
 
-    .line 61
     iput-object v1, v0, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;->mServerCallback:Lcom/android/server/musicrecognition/MusicRecognitionManagerPerUserService$MusicRecognitionServiceCallback;
 
     return-void
@@ -76,7 +71,6 @@
 .method private synthetic lambda$getAttributionTag$1(Ljava/util/concurrent/CompletableFuture;Landroid/media/musicrecognition/IMusicRecognitionService;)V
     .locals 1
 
-    .line 102
     new-instance v0, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$1;-><init>(Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;Ljava/util/concurrent/CompletableFuture;)V
@@ -89,7 +83,6 @@
 .method private synthetic lambda$onAudioStreamStarted$0(Landroid/os/ParcelFileDescriptor;Landroid/media/AudioFormat;Landroid/media/musicrecognition/IMusicRecognitionService;)V
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;->mServerCallback:Lcom/android/server/musicrecognition/MusicRecognitionManagerPerUserService$MusicRecognitionServiceCallback;
 
     invoke-interface {p3, p1, p2, p0}, Landroid/media/musicrecognition/IMusicRecognitionService;->onAudioStreamStarted(Landroid/os/ParcelFileDescriptor;Landroid/media/AudioFormat;Landroid/media/musicrecognition/IMusicRecognitionServiceCallback;)V
@@ -102,12 +95,10 @@
 .method public getAttributionTag()Ljava/util/concurrent/CompletableFuture;
     .locals 2
 
-    .line 100
     new-instance v0, Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {v0}, Ljava/util/concurrent/CompletableFuture;-><init>()V
 
-    .line 101
     new-instance v1, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0, v0}, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;Ljava/util/concurrent/CompletableFuture;)V
@@ -120,7 +111,6 @@
 .method public getServerCallback()Lcom/android/server/musicrecognition/MusicRecognitionManagerPerUserService$MusicRecognitionServiceCallback;
     .locals 0
 
-    .line 76
     iget-object p0, p0, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;->mServerCallback:Lcom/android/server/musicrecognition/MusicRecognitionManagerPerUserService$MusicRecognitionServiceCallback;
 
     return-object p0
@@ -129,7 +119,6 @@
 .method public getServiceInterface(Landroid/os/IBinder;)Landroid/media/musicrecognition/IMusicRecognitionService;
     .locals 0
 
-    .line 67
     invoke-static {p1}, Landroid/media/musicrecognition/IMusicRecognitionService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/musicrecognition/IMusicRecognitionService;
 
     move-result-object p0
@@ -140,7 +129,6 @@
 .method public bridge synthetic getServiceInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 0
 
-    .line 38
     invoke-virtual {p0, p1}, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;->getServiceInterface(Landroid/os/IBinder;)Landroid/media/musicrecognition/IMusicRecognitionService;
 
     move-result-object p0
@@ -151,7 +139,6 @@
 .method public getTimeoutIdleBindMillis()J
     .locals 2
 
-    .line 0
     const-wide/32 v0, 0x9c40
 
     return-wide v0
@@ -160,7 +147,6 @@
 .method public onAudioStreamStarted(Landroid/os/ParcelFileDescriptor;Landroid/media/AudioFormat;)V
     .locals 1
 
-    .line 91
     new-instance v0, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;Landroid/os/ParcelFileDescriptor;Landroid/media/AudioFormat;)V

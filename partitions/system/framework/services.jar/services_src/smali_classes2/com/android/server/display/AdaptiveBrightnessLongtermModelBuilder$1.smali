@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/AdaptiveBrightnessLongtermModelBuilder;)V
     .locals 0
 
-    .line 229
     iput-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessLongtermModelBuilder$1;->this$0:Lcom/android/server/display/AdaptiveBrightnessLongtermModelBuilder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public compare(Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;)I
     .locals 6
 
-    .line 232
     invoke-virtual {p2}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->getWeight()F
 
     move-result p0
@@ -44,7 +42,6 @@
 
     return v0
 
-    .line 233
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->getWeight()F
 
@@ -62,7 +59,6 @@
 
     return v1
 
-    .line 236
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->getLastUserBrightnessTime()J
 
@@ -78,7 +74,6 @@
 
     return v0
 
-    .line 237
     :cond_2
     invoke-virtual {p2}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->getLastUserBrightnessTime()J
 
@@ -103,7 +98,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 229
     check-cast p1, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
     check-cast p2, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;

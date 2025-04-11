@@ -46,7 +46,6 @@
 .method public synthetic constructor <init>(Landroid/util/SparseArray;[Landroid/os/Debug$MemoryInfo;ZLcom/android/server/am/ActivityManagerService$MemoryUsageDumpOptions;[J[JLjava/util/ArrayList;[J[J[J[J[J[J[J[J[Ljava/util/ArrayList;[J)V
     .locals 2
 
-    .line 0
     move-object v0, p0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -127,7 +126,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 20
 
-    .line 0
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$$ExternalSyntheticLambda36;->f$0:Landroid/util/SparseArray;

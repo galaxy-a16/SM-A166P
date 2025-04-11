@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallbacks(Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;)Lcom/android/server/print/RemotePrintServiceRecommendationService$RemotePrintServiceRecommendationServiceCallbacks;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;->mCallbacks:Lcom/android/server/print/RemotePrintServiceRecommendationService$RemotePrintServiceRecommendationServiceCallbacks;
 
     return-object p0
@@ -25,12 +24,10 @@
 .method public constructor <init>(Lcom/android/server/print/RemotePrintServiceRecommendationService;Lcom/android/server/print/RemotePrintServiceRecommendationService$RemotePrintServiceRecommendationServiceCallbacks;)V
     .locals 0
 
-    .line 193
     iput-object p1, p0, Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;->this$0:Lcom/android/server/print/RemotePrintServiceRecommendationService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 194
     iput-object p2, p0, Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;->mCallbacks:Lcom/android/server/print/RemotePrintServiceRecommendationService$RemotePrintServiceRecommendationServiceCallbacks;
 
     return-void
@@ -41,7 +38,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 199
     iget-object p1, p0, Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;->this$0:Lcom/android/server/print/RemotePrintServiceRecommendationService;
 
     invoke-static {p1}, Lcom/android/server/print/RemotePrintServiceRecommendationService;->-$$Nest$fgetmLock(Lcom/android/server/print/RemotePrintServiceRecommendationService;)Ljava/lang/Object;
@@ -50,7 +46,6 @@
 
     monitor-enter p1
 
-    .line 200
     :try_start_0
     iget-object v0, p0, Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;->this$0:Lcom/android/server/print/RemotePrintServiceRecommendationService;
 
@@ -62,7 +57,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 203
     :try_start_1
     iget-object p2, p0, Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;->this$0:Lcom/android/server/print/RemotePrintServiceRecommendationService;
 
@@ -89,10 +83,8 @@
 
     const-string v0, "Could not register callbacks"
 
-    .line 221
     invoke-static {p2, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 223
     :goto_0
     monitor-exit p1
 
@@ -115,10 +107,8 @@
 
     const-string v0, "Unexpected termination of connection"
 
-    .line 228
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     iget-object p1, p0, Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;->this$0:Lcom/android/server/print/RemotePrintServiceRecommendationService;
 
     invoke-static {p1}, Lcom/android/server/print/RemotePrintServiceRecommendationService;->-$$Nest$fgetmLock(Lcom/android/server/print/RemotePrintServiceRecommendationService;)Ljava/lang/Object;
@@ -127,7 +117,6 @@
 
     monitor-enter p1
 
-    .line 231
     :try_start_0
     iget-object p0, p0, Lcom/android/server/print/RemotePrintServiceRecommendationService$Connection;->this$0:Lcom/android/server/print/RemotePrintServiceRecommendationService;
 
@@ -135,7 +124,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/print/RemotePrintServiceRecommendationService;->-$$Nest$fputmService(Lcom/android/server/print/RemotePrintServiceRecommendationService;Landroid/printservice/recommendation/IRecommendationService;)V
 
-    .line 232
     monitor-exit p1
 
     return-void

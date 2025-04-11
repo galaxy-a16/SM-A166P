@@ -33,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 39
     new-instance v0, Lcom/att/iqi/lib/Metric$ID;
 
     const-string v1, "MM07"
@@ -42,7 +41,6 @@
 
     sput-object v0, Lcom/att/iqi/lib/metrics/mm/MM07;->ID:Lcom/att/iqi/lib/Metric$ID;
 
-    .line 264
     new-instance v0, Lcom/att/iqi/lib/metrics/mm/MM07$1;
 
     invoke-direct {v0}, Lcom/att/iqi/lib/metrics/mm/MM07$1;-><init>()V
@@ -55,17 +53,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 53
     invoke-direct {p0}, Lcom/att/iqi/lib/Metric;-><init>()V
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
-    .line 54
     invoke-virtual {p0}, Lcom/att/iqi/lib/metrics/mm/MM07;->reset()V
 
     return-void
@@ -74,17 +69,14 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 7
 
-    .line 66
     invoke-direct {p0, p1}, Lcom/att/iqi/lib/Metric;-><init>(Landroid/os/Parcel;)V
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
-    .line 67
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -93,7 +85,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -103,14 +94,12 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     int-to-short v2, v2
 
-    .line 73
     new-instance v3, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
@@ -125,35 +114,30 @@
 
     invoke-direct {v3, v4, v5, v6}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;-><init>(BBLcom/att/iqi/lib/metrics/mm/MM07$RtpStats-IA;)V
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     invoke-static {v3, v4}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fputm_dwDuration(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;I)V
 
-    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     invoke-static {v3, v4}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fputm_dwPacketsRcvd(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;I)V
 
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     invoke-static {v3, v4}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fputm_dwPacketsDrop(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;I)V
 
-    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     invoke-static {v3, v4}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fputm_dwPacketsLate(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;I)V
 
-    .line 78
     iget-object v4, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -175,7 +159,6 @@
 .method public getDrop(S)I
     .locals 0
 
-    .line 173
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -190,7 +173,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 175
     invoke-static {p0}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_dwPacketsDrop(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)I
 
     move-result p0
@@ -206,7 +188,6 @@
 .method public getDuration(S)I
     .locals 0
 
-    .line 145
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -221,7 +202,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 147
     invoke-static {p0}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_dwDuration(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)I
 
     move-result p0
@@ -237,7 +217,6 @@
 .method public getFormat(S)B
     .locals 0
 
-    .line 131
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -252,7 +231,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 133
     invoke-static {p0}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_ucFormat(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)B
 
     move-result p0
@@ -268,7 +246,6 @@
 .method public getLate(S)I
     .locals 0
 
-    .line 187
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -283,7 +260,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 189
     invoke-static {p0}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_dwPacketsLate(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)I
 
     move-result p0
@@ -299,7 +275,6 @@
 .method public getMediaType(S)B
     .locals 0
 
-    .line 117
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -314,7 +289,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 119
     invoke-static {p0}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_ucMediaType(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)B
 
     move-result p0
@@ -330,7 +304,6 @@
 .method public getRcvd(S)I
     .locals 0
 
-    .line 159
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -345,7 +318,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 161
     invoke-static {p0}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_dwPacketsRcvd(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)I
 
     move-result p0
@@ -361,7 +333,6 @@
 .method public reset()V
     .locals 0
 
-    .line 61
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
@@ -372,7 +343,6 @@
 .method public serialize(Ljava/nio/ByteBuffer;)I
     .locals 2
 
-    .line 196
     iget-object v0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -381,10 +351,8 @@
 
     int-to-short v0, v0
 
-    .line 197
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 198
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -408,7 +376,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 200
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -421,7 +388,6 @@
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 201
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -432,7 +398,6 @@
 
     goto :goto_0
 
-    .line 203
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
@@ -444,7 +409,6 @@
 .method public setRtpStats(SBBIIII)V
     .locals 2
 
-    .line 102
     iget-object v0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -459,14 +423,12 @@
 
     if-nez v0, :cond_0
 
-    .line 104
     new-instance v0, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p2, p3, v1}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;-><init>(BBLcom/att/iqi/lib/metrics/mm/MM07$RtpStats-IA;)V
 
-    .line 105
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -475,7 +437,6 @@
 
     invoke-virtual {p0, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     :cond_0
     invoke-virtual {v0, p4, p5, p6, p7}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->set(IIII)V
 
@@ -485,22 +446,18 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 245
     invoke-super {p0, p1, p2}, Lcom/att/iqi/lib/Metric;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 248
     iget-object p2, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-virtual {p2}, Ljava/util/HashMap;->size()I
 
     move-result p2
 
-    .line 249
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     if-lez p2, :cond_0
 
-    .line 251
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM07;->mMediaStats:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -524,7 +481,6 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 252
     invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -537,49 +493,42 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 253
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;
 
-    .line 254
     invoke-static {p2}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_ucMediaType(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)B
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 255
     invoke-static {p2}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_ucFormat(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)B
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 256
     invoke-static {p2}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_dwDuration(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 257
     invoke-static {p2}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_dwPacketsRcvd(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 258
     invoke-static {p2}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_dwPacketsDrop(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 259
     invoke-static {p2}, Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;->-$$Nest$fgetm_dwPacketsLate(Lcom/att/iqi/lib/metrics/mm/MM07$RtpStats;)I
 
     move-result p2

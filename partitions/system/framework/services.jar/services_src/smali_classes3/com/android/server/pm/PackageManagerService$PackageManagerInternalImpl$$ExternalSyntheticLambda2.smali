@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/pm/PackageManagerService$PackageManagerInternalImpl;->$r8$lambda$Dftq-VBEFvfSL7aPF0XKsxZ2YkQ(Ljava/lang/String;)Z

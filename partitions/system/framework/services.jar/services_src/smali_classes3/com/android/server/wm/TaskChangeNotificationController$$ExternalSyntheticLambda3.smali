@@ -20,7 +20,6 @@
 .method public final accept(Landroid/app/ITaskStackListener;Landroid/os/Message;)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/wm/TaskChangeNotificationController;->$r8$lambda$FdUJ8liR-JlGEijEsibnixLPOLU(Landroid/app/ITaskStackListener;Landroid/os/Message;)V
 
     return-void

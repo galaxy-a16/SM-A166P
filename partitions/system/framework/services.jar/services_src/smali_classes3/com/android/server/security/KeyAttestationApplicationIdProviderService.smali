@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 41
     invoke-direct {p0}, Landroid/security/keymaster/IKeyAttestationApplicationIdProvider$Stub;-><init>()V
 
-    .line 42
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
@@ -29,7 +27,6 @@
 .method public getKeyAttestationApplicationId(I)Landroid/security/keymaster/KeyAttestationApplicationId;
     .locals 10
 
-    .line 49
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -44,7 +41,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -54,14 +50,12 @@
 
     throw p0
 
-    .line 55
     :cond_1
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 57
     :try_start_0
     iget-object v2, p0, Lcom/android/server/security/KeyAttestationApplicationIdProviderService;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -71,25 +65,21 @@
 
     if-eqz v2, :cond_3
 
-    .line 61
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
 
-    .line 62
     array-length v3, v2
 
     new-array v3, v3, [Landroid/security/keymaster/KeyAttestationPackageInfo;
 
     const/4 v4, 0x0
 
-    .line 64
     :goto_1
     array-length v5, v2
 
     if-ge v4, v5, :cond_2
 
-    .line 65
     iget-object v5, p0, Lcom/android/server/security/KeyAttestationApplicationIdProviderService;->mPackageManager:Landroid/content/pm/PackageManager;
 
     aget-object v6, v2, v4
@@ -100,12 +90,10 @@
 
     move-result-object v5
 
-    .line 67
     new-instance v6, Landroid/security/keymaster/KeyAttestationPackageInfo;
 
     aget-object v7, v2, v4
 
-    .line 68
     invoke-virtual {v5}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
 
     move-result-wide v8
@@ -123,18 +111,15 @@
 
     goto :goto_1
 
-    .line 73
     :cond_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 75
     new-instance p0, Landroid/security/keymaster/KeyAttestationApplicationId;
 
     invoke-direct {p0, v3}, Landroid/security/keymaster/KeyAttestationApplicationId;-><init>([Landroid/security/keymaster/KeyAttestationPackageInfo;)V
 
     return-object p0
 
-    .line 59
     :cond_3
     :try_start_1
     new-instance p0, Landroid/os/RemoteException;
@@ -156,7 +141,6 @@
     :catch_0
     move-exception p0
 
-    .line 71
     :try_start_2
     new-instance p1, Landroid/os/RemoteException;
 
@@ -170,10 +154,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 73
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 74
     throw p0
 .end method

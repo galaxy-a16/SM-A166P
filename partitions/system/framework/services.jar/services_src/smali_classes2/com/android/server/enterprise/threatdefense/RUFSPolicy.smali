@@ -17,28 +17,22 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 3
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->mPackageName:Ljava/lang/String;
 
-    .line 34
     invoke-virtual {p0}, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->getLatestPolicy()I
 
     move-result p1
 
-    .line 35
     iput p1, p0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->mPolicyVersion:I
 
-    .line 36
     sget-object v0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -77,18 +71,15 @@
 
     const-string v1, "/system/etc/mtdlist.output.txt"
 
-    .line 46
     :try_start_0
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 47
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -97,7 +88,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 54
     invoke-virtual {p0, v1}, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->readData(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -108,7 +98,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 56
     new-instance v2, Lcom/android/server/enterprise/threatdefense/RUFSParser;
 
     invoke-direct {v2, v1}, Lcom/android/server/enterprise/threatdefense/RUFSParser;-><init>(Ljava/lang/String;)V
@@ -118,7 +107,6 @@
     :cond_0
     move-object v2, v4
 
-    .line 59
     :goto_0
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -126,7 +114,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 60
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->readData(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -137,7 +124,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 62
     new-instance v4, Lcom/android/server/enterprise/threatdefense/RUFSParser;
 
     invoke-direct {v4, v0}, Lcom/android/server/enterprise/threatdefense/RUFSParser;-><init>(Ljava/lang/String;)V
@@ -149,7 +135,6 @@
 
     if-nez v4, :cond_2
 
-    .line 67
     sget-object p0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
     const-string v1, "Default : No RUFS policy files"
@@ -165,7 +150,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 72
     invoke-virtual {v2}, Lcom/android/server/enterprise/threatdefense/RUFSParser;->getPolicyVersion()I
 
     move-result v3
@@ -176,7 +160,6 @@
 
     if-lt v3, v5, :cond_3
 
-    .line 73
     sget-object v0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
     const-string v3, "Using System parser"
@@ -185,7 +168,6 @@
 
     move v0, v1
 
-    .line 76
     :cond_3
     sget-object v1, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
@@ -195,7 +177,6 @@
 
     goto :goto_1
 
-    .line 79
     :cond_4
     sget-object v0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
@@ -205,7 +186,6 @@
 
     move v0, v1
 
-    .line 82
     :cond_5
     :goto_1
     sget-object v1, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
@@ -233,7 +213,6 @@
     :cond_6
     move-object v2, v4
 
-    .line 84
     :goto_2
     invoke-virtual {p0, v2}, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->readPolicyVersion(Lcom/android/server/enterprise/threatdefense/RUFSParser;)I
 
@@ -248,7 +227,6 @@
     :catch_0
     move-exception p0
 
-    .line 92
     invoke-virtual {p0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     const/16 p0, -0x68
@@ -258,7 +236,6 @@
     :catch_1
     move-exception p0
 
-    .line 89
     invoke-virtual {p0}, Lorg/json/JSONException;->printStackTrace()V
 
     const/16 p0, -0x6b
@@ -268,7 +245,6 @@
     :catch_2
     move-exception p0
 
-    .line 86
     invoke-virtual {p0}, Ljava/lang/SecurityException;->printStackTrace()V
 
     const/16 p0, -0x6d
@@ -280,7 +256,6 @@
 .method public getPolicyVersion()I
     .locals 0
 
-    .line 40
     iget p0, p0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->mPolicyVersion:I
 
     return p0
@@ -297,7 +272,6 @@
 
     return-object v0
 
-    .line 155
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
@@ -308,7 +282,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 156
     :try_start_1
     new-instance p1, Ljava/io/BufferedReader;
 
@@ -324,7 +297,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 157
     :try_start_2
     invoke-virtual {p1}, Ljava/io/BufferedReader;->lines()Ljava/util/stream/Stream;
 
@@ -348,11 +320,9 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 165
     :try_start_3
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
 
-    .line 167
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
@@ -362,7 +332,6 @@
     :catch_0
     move-exception p1
 
-    .line 169
     sget-object v0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -425,7 +394,6 @@
 
     move-object v1, p1
 
-    .line 161
     :goto_1
     :try_start_4
     sget-object v3, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
@@ -454,14 +422,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 165
     :try_start_5
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
 
     :cond_1
     if-eqz v1, :cond_3
 
-    .line 167
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_7
@@ -475,7 +441,6 @@
 
     move-object v1, p1
 
-    .line 159
     :goto_2
     :try_start_6
     sget-object v3, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
@@ -488,7 +453,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 165
     :try_start_7
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
 
@@ -503,14 +467,12 @@
     :goto_3
     if-eqz v1, :cond_3
 
-    .line 167
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_7
 
     goto :goto_5
 
-    .line 169
     :goto_4
     sget-object v1, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
@@ -526,7 +488,6 @@
     :goto_6
     if-eqz p1, :cond_4
 
-    .line 165
     :try_start_8
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
 
@@ -541,20 +502,17 @@
     :goto_7
     if-eqz v1, :cond_5
 
-    .line 167
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_8
 
     goto :goto_9
 
-    .line 169
     :goto_8
     sget-object v1, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
     invoke-static {v1, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 171
     :cond_5
     :goto_9
     throw v0
@@ -563,19 +521,16 @@
 .method public final readDecodedData(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 139
     new-instance p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;
 
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/threatdefense/MTDSignature;-><init>(Ljava/lang/String;)V
 
-    .line 140
     invoke-virtual {p0}, Lcom/android/server/enterprise/threatdefense/MTDSignature;->getVerifiedData()Ljava/lang/String;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 142
     sget-object p1, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
     const-string v0, "Signature verification failed"
@@ -595,7 +550,6 @@
 
     return p0
 
-    .line 105
     :cond_0
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
@@ -620,17 +574,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     invoke-virtual {p1}, Lcom/android/server/enterprise/threatdefense/RUFSParser;->getExceptionList()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 107
     invoke-virtual {p1}, Lcom/android/server/enterprise/threatdefense/RUFSParser;->getVersion()I
 
     move-result p1
 
-    .line 108
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -649,7 +600,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 110
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -667,7 +617,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 111
     sget-object v2, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -688,12 +637,10 @@
 
     const-string v3, ":"
 
-    .line 112
     invoke-virtual {v1, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 113
     array-length v3, v1
 
     const/4 v4, 0x1
@@ -714,14 +661,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 114
     aget-object p0, v1, v4
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 115
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -762,7 +707,6 @@
     :catch_0
     move-exception p0
 
-    .line 126
     invoke-virtual {p0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     const/16 p1, -0x68
@@ -772,12 +716,10 @@
     :catch_1
     move-exception p0
 
-    .line 123
     invoke-virtual {p0}, Ljava/lang/SecurityException;->printStackTrace()V
 
     const/16 p1, -0x6d
 
-    .line 129
     :cond_2
     :goto_0
     sget-object p0, Lcom/android/server/enterprise/threatdefense/RUFSPolicy;->TAG:Ljava/lang/String;

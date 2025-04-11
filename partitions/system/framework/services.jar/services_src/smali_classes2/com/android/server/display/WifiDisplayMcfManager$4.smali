@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayMcfManager;)V
     .locals 0
 
-    .line 407
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$4;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-direct {p0}, Lcom/samsung/android/mcf/ble/BleScanCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onScanFailed(I)V
     .locals 2
 
-    .line 421
     invoke-static {}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -51,7 +49,6 @@
 .method public onScanResult(Landroid/bluetooth/le/ScanResult;)V
     .locals 3
 
-    .line 410
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayMcfManager$4;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmIsBounded(Lcom/android/server/display/WifiDisplayMcfManager;)Z
@@ -60,7 +57,6 @@
 
     if-nez v0, :cond_0
 
-    .line 411
     invoke-static {}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -85,7 +81,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     :cond_0
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$4;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -97,7 +92,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 415
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$4;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p1}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/display/WifiDisplayMcfManager;)Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;
@@ -110,12 +104,10 @@
 
     move-result-object p0
 
-    .line 416
     invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 415
     invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void

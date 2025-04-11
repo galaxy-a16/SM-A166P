@@ -26,7 +26,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTotalCopiedBytes(Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mTotalCopiedBytes:I
 
     return p0
@@ -35,30 +34,22 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;III)V
     .locals 1
 
-    .line 292
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 289
     iput v0, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mTotalCopiedBytes:I
 
-    .line 293
     iput-object p1, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mStreamTaskId:Ljava/lang/String;
 
-    .line 294
     iput-object p2, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mAudioSource:Landroid/os/ParcelFileDescriptor;
 
-    .line 295
     iput-object p3, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mAudioSink:Landroid/os/ParcelFileDescriptor;
 
-    .line 296
     iput p4, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mCopyBufferLength:I
 
-    .line 297
     iput p5, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mDetectorType:I
 
-    .line 298
     iput p6, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mUid:I
 
     return-void
@@ -69,7 +60,6 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
-    .line 280
     invoke-virtual {p0}, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->call()Ljava/lang/Void;
 
     move-result-object p0
@@ -82,7 +72,6 @@
 
     const-string v0, "HotwordAudioStreamCopier"
 
-    .line 303
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -107,7 +96,6 @@
 
     const/4 v1, 0x0
 
-    .line 312
     :try_start_0
     new-instance v2, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
@@ -118,7 +106,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 313
     :try_start_1
     new-instance v3, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
@@ -129,13 +116,11 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 314
     :try_start_2
     iget v4, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mCopyBufferLength:I
 
     new-array v4, v4, [B
 
-    .line 316
     :cond_0
     :goto_0
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
@@ -144,7 +129,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 317
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,7 +149,6 @@
 
     goto :goto_1
 
-    .line 322
     :cond_1
     invoke-virtual {v2, v4}, Ljava/io/InputStream;->read([B)I
 
@@ -173,7 +156,6 @@
 
     if-gez v5, :cond_2
 
-    .line 324
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -195,7 +177,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 353
     :goto_1
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
@@ -206,11 +187,9 @@
 
     const/4 v6, 0x0
 
-    .line 334
     :try_start_3
     invoke-virtual {v3, v4, v6, v5}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 335
     iget v6, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mTotalCopiedBytes:I
 
     add-int/2addr v6, v5
@@ -255,7 +234,6 @@
 
     move-object v3, v2
 
-    .line 340
     :goto_2
     :try_start_4
     iget-object v5, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mAudioSource:Landroid/os/ParcelFileDescriptor;
@@ -266,7 +244,6 @@
 
     invoke-virtual {v5, v6}, Landroid/os/ParcelFileDescriptor;->closeWithError(Ljava/lang/String;)V
 
-    .line 341
     iget-object v5, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mAudioSink:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v4}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
@@ -275,7 +252,6 @@
 
     invoke-virtual {v5, v6}, Landroid/os/ParcelFileDescriptor;->closeWithError(Ljava/lang/String;)V
 
-    .line 346
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -294,7 +270,6 @@
 
     invoke-static {v0, v5, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 347
     iget v6, p0, Lcom/android/server/voiceinteraction/HotwordAudioStreamCopier$SingleAudioStreamCopyTask;->mDetectorType:I
 
     const/16 v7, 0xa
@@ -313,13 +288,11 @@
 
     if-eqz v2, :cond_3
 
-    .line 353
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
     :cond_3
     if-eqz v3, :cond_4
 
-    .line 356
     :goto_3
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
@@ -335,16 +308,13 @@
     :goto_5
     if-eqz v1, :cond_5
 
-    .line 353
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
 
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 356
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
-    .line 358
     :cond_6
     throw p0
 .end method

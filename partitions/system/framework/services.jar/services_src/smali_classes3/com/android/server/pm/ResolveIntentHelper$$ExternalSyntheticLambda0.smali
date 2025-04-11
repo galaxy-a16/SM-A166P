@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(Landroid/app/IUnsafeIntentStrictModeCallback;Landroid/content/Intent;Landroid/app/ActivityManagerInternal;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/ResolveIntentHelper$$ExternalSyntheticLambda0;->f$0:Landroid/app/IUnsafeIntentStrictModeCallback;
@@ -39,7 +38,6 @@
 .method public final run()V
     .locals 3
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/pm/ResolveIntentHelper$$ExternalSyntheticLambda0;->f$0:Landroid/app/IUnsafeIntentStrictModeCallback;
 
     iget-object v1, p0, Lcom/android/server/pm/ResolveIntentHelper$$ExternalSyntheticLambda0;->f$1:Landroid/content/Intent;

@@ -15,10 +15,8 @@
 
     const-string v1, "DualDAR:DDLog:Logger"
 
-    .line 338
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     :goto_0
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/DDLog$Logger$2;->this$0:Lcom/android/server/knox/dar/ddar/DDLog$Logger;
 
@@ -28,7 +26,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 343
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/DDLog$Logger$2;->this$0:Lcom/android/server/knox/dar/ddar/DDLog$Logger;
 
@@ -58,7 +55,6 @@
 
     invoke-virtual {v0}, Ljava/io/OutputStreamWriter;->flush()V
 
-    .line 345
     :cond_0
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/DDLog$Logger$2;->this$0:Lcom/android/server/knox/dar/ddar/DDLog$Logger;
 
@@ -72,7 +68,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 348
     iget-object v2, p0, Lcom/android/server/knox/dar/ddar/DDLog$Logger$2;->this$0:Lcom/android/server/knox/dar/ddar/DDLog$Logger;
 
     invoke-static {v2, v0}, Lcom/android/server/knox/dar/ddar/DDLog$Logger;->-$$Nest$mrealStore(Lcom/android/server/knox/dar/ddar/DDLog$Logger;Ljava/lang/String;)V
@@ -84,7 +79,6 @@
     :catch_0
     move-exception v0
 
-    .line 351
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,7 +95,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

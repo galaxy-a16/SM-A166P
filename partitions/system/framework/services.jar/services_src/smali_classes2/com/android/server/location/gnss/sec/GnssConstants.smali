@@ -49,7 +49,6 @@
 
     const-string v17, "com.gnssdemo"
 
-    .line 48
     filled-new-array/range {v0 .. v17}, [Ljava/lang/String;
 
     move-result-object v0
@@ -64,7 +63,6 @@
 
     const-string v3, "Y29tLmJhaWR1LkJhaWR1TWFw"
 
-    .line 121
     filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0

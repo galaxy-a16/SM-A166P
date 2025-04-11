@@ -15,24 +15,20 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
-    .line 35
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mBgExecutor:Ljava/util/concurrent/Executor;
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mAtms:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-void
@@ -43,7 +39,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 3
 
-    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,12 +55,10 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 106
     iget-object p2, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
     monitor-enter p2
 
-    .line 107
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
@@ -78,7 +71,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 108
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +97,6 @@
 
     goto :goto_0
 
-    .line 110
     :cond_0
     monitor-exit p2
     :try_end_0
@@ -113,7 +104,6 @@
 
     const-string p0, "]"
 
-    .line 111
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -121,7 +111,6 @@
     :catchall_0
     move-exception p0
 
-    .line 110
     :try_start_1
     monitor-exit p2
     :try_end_1
@@ -133,7 +122,6 @@
 .method public hasResumedActivity(I)Z
     .locals 1
 
-    .line 75
     new-instance v0, Lcom/android/server/wm/VisibleActivityProcessTracker$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/wm/VisibleActivityProcessTracker$$ExternalSyntheticLambda0;-><init>()V
@@ -150,7 +138,6 @@
 
     const/4 v0, 0x0
 
-    .line 83
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/VisibleActivityProcessTracker;->match(ILjava/util/function/Predicate;)Z
 
     move-result p0
@@ -161,12 +148,10 @@
 .method public final match(ILjava/util/function/Predicate;)Z
     .locals 5
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 88
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
@@ -181,7 +166,6 @@
     :goto_0
     if-ltz v1, :cond_2
 
-    .line 89
     iget-object v3, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -190,7 +174,6 @@
 
     check-cast v3, Lcom/android/server/wm/WindowProcessController;
 
-    .line 90
     iget v4, v3, Lcom/android/server/wm/WindowProcessController;->mUid:I
 
     if-ne v4, p1, :cond_1
@@ -203,7 +186,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 91
     :cond_0
     monitor-exit v0
 
@@ -214,7 +196,6 @@
 
     goto :goto_0
 
-    .line 94
     :cond_2
     monitor-exit v0
 
@@ -235,12 +216,10 @@
 .method public onActivityResumedWhileVisible(Lcom/android/server/wm/WindowProcessController;)V
     .locals 2
 
-    .line 65
     iget-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 66
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
@@ -250,24 +229,20 @@
 
     check-cast p1, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;
 
-    .line 67
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p1, :cond_0
 
-    .line 68
     iget-boolean v0, p1, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mShouldGetCpuTime:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 69
     iput-boolean v0, p1, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mShouldGetCpuTime:Z
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mBgExecutor:Ljava/util/concurrent/Executor;
 
     invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -278,7 +253,6 @@
     :catchall_0
     move-exception p0
 
-    .line 67
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -290,19 +264,16 @@
 .method public onAllActivitiesInvisible(Lcom/android/server/wm/WindowProcessController;)V
     .locals 1
 
-    .line 56
     invoke-virtual {p0, p1}, Lcom/android/server/wm/VisibleActivityProcessTracker;->removeProcess(Lcom/android/server/wm/WindowProcessController;)Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 57
     iget-boolean v0, p1, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mShouldGetCpuTime:Z
 
     if-eqz v0, :cond_0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mBgExecutor:Ljava/util/concurrent/Executor;
 
     invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -314,28 +285,23 @@
 .method public onAnyActivityVisible(Lcom/android/server/wm/WindowProcessController;)V
     .locals 3
 
-    .line 44
     new-instance v0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;-><init>(Lcom/android/server/wm/VisibleActivityProcessTracker;Lcom/android/server/wm/WindowProcessController;)V
 
-    .line 45
     iget-object v1, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
     monitor-enter v1
 
-    .line 46
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 48
     invoke-virtual {p1}, Lcom/android/server/wm/WindowProcessController;->hasResumedActivity()Z
 
     move-result p1
@@ -344,10 +310,8 @@
 
     const/4 p1, 0x1
 
-    .line 49
     iput-boolean p1, v0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mShouldGetCpuTime:Z
 
-    .line 50
     iget-object p0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mBgExecutor:Ljava/util/concurrent/Executor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -358,7 +322,6 @@
     :catchall_0
     move-exception p0
 
-    .line 47
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -370,12 +333,10 @@
 .method public removeProcess(Lcom/android/server/wm/WindowProcessController;)Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;
     .locals 1
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 100
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker;->mProcMap:Landroid/util/ArrayMap;
 
@@ -392,7 +353,6 @@
     :catchall_0
     move-exception p0
 
-    .line 101
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

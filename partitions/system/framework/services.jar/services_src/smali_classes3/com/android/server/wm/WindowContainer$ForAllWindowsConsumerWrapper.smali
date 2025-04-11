@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowContainer;)V
     .locals 0
 
-    .line 2859
     iput-object p1, p0, Lcom/android/server/wm/WindowContainer$ForAllWindowsConsumerWrapper;->this$0:Lcom/android/server/wm/WindowContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer$ForAllWindowsConsumerWrapper-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowContainer$ForAllWindowsConsumerWrapper;-><init>(Lcom/android/server/wm/WindowContainer;)V
 
     return-void
@@ -38,7 +36,6 @@
 .method public apply(Lcom/android/server/wm/WindowState;)Z
     .locals 0
 
-    .line 2869
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer$ForAllWindowsConsumerWrapper;->mConsumer:Ljava/util/function/Consumer;
 
     invoke-interface {p0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
@@ -51,7 +48,6 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 2859
     check-cast p1, Lcom/android/server/wm/WindowState;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowContainer$ForAllWindowsConsumerWrapper;->apply(Lcom/android/server/wm/WindowState;)Z
@@ -66,10 +62,8 @@
 
     const/4 v0, 0x0
 
-    .line 2874
     iput-object v0, p0, Lcom/android/server/wm/WindowContainer$ForAllWindowsConsumerWrapper;->mConsumer:Ljava/util/function/Consumer;
 
-    .line 2875
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer$ForAllWindowsConsumerWrapper;->this$0:Lcom/android/server/wm/WindowContainer;
 
     invoke-static {v0}, Lcom/android/server/wm/WindowContainer;->-$$Nest$fgetmConsumerWrapperPool(Lcom/android/server/wm/WindowContainer;)Landroid/util/Pools$SynchronizedPool;
@@ -84,7 +78,6 @@
 .method public setConsumer(Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 2864
     iput-object p1, p0, Lcom/android/server/wm/WindowContainer$ForAllWindowsConsumerWrapper;->mConsumer:Ljava/util/function/Consumer;
 
     return-void

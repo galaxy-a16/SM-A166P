@@ -35,7 +35,6 @@
 .method public static synthetic $r8$lambda$EeY725MhwLKGvtjAi90sin6c7PU(Lcom/att/iqi/libs/PreferenceStore;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/att/iqi/libs/PreferenceStore;->lambda$setBoolean$0(Ljava/lang/String;Z)V
 
     return-void
@@ -44,7 +43,6 @@
 .method public static synthetic $r8$lambda$EqHfNgmVn56qIiMS2NuCMiwssas(Lcom/att/iqi/libs/PreferenceStore;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/att/iqi/libs/PreferenceStore;->lambda$setString$2(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -53,7 +51,6 @@
 .method public static synthetic $r8$lambda$OZyePCV8QhByFNTiMO7lQcVHWUY(Lcom/att/iqi/libs/PreferenceStore$PreferenceChangeListener;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/att/iqi/libs/PreferenceStore;->lambda$broadcastPreferenceChange$3(Lcom/att/iqi/libs/PreferenceStore$PreferenceChangeListener;Ljava/lang/String;)V
 
     return-void
@@ -62,7 +59,6 @@
 .method public static synthetic $r8$lambda$T6M67lf39aHSPucixrdUmRiy02Q(Lorg/w3c/dom/NodeList;)Ljava/util/Iterator;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/att/iqi/libs/PreferenceStore;->lambda$iterable$4(Lorg/w3c/dom/NodeList;)Ljava/util/Iterator;
 
     move-result-object p0
@@ -73,7 +69,6 @@
 .method public static synthetic $r8$lambda$pmiyeDi-cDIxCDs9keFtC84JytM(Lcom/att/iqi/libs/PreferenceStore;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/att/iqi/libs/PreferenceStore;->lambda$setInteger$1(Ljava/lang/String;I)V
 
     return-void
@@ -82,21 +77,18 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 82
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
-    .line 86
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
-    .line 91
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     const-string v2, "disable_mcc_mnc_validation"
@@ -105,12 +97,10 @@
 
     const-string v2, "log_enabled"
 
-    .line 92
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v1, 0x1
 
-    .line 93
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -123,7 +113,6 @@
 
     const-string v2, ""
 
-    .line 94
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -132,17 +121,14 @@
 .method private constructor <init>()V
     .locals 4
 
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceChangeListeners:Ljava/util/List;
 
-    .line 100
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/io/File;
@@ -161,7 +147,6 @@
 
     iput-object v0, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceFile:Ljava/io/File;
 
-    .line 102
     invoke-direct {p0}, Lcom/att/iqi/libs/PreferenceStore;->loadPrefsFromFileLocked()V
 
     return-void
@@ -170,7 +155,6 @@
 .method private broadcastPreferenceChange(Ljava/lang/String;)V
     .locals 3
 
-    .line 374
     iget-object p0, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceChangeListeners:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -190,7 +174,6 @@
 
     check-cast v0, Lcom/att/iqi/libs/PreferenceStore$PreferenceChangeListener;
 
-    .line 375
     invoke-static {}, Lcom/att/iqi/libs/WorkerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -228,7 +211,6 @@
 
     const/4 v8, 0x0
 
-    .line 117
     :try_start_0
     iget-object v9, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceFile:Ljava/io/File;
 
@@ -240,12 +222,10 @@
 
     const-string p0, "Failed to create prefs file!"
 
-    .line 118
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
     return v8
 
-    .line 121
     :cond_0
     new-instance v9, Ljava/io/FileOutputStream;
 
@@ -255,7 +235,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 128
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newSerializer()Lorg/xmlpull/v1/XmlSerializer;
 
@@ -263,10 +242,8 @@
 
     const-string v10, "UTF-8"
 
-    .line 129
     invoke-interface {p0, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 130
     sget-object v10, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v11, 0x0
@@ -277,89 +254,66 @@
 
     const/4 v12, 0x1
 
-    .line 131
     invoke-interface {p0, v10, v12}, Lorg/xmlpull/v1/XmlSerializer;->setFeature(Ljava/lang/String;Z)V
 
-    .line 132
     invoke-interface {p0, v11, v3}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v10, "prefs"
 
-    .line 133
     invoke-interface {p0, v11, v7, v10}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 135
     invoke-interface {p0, v11, v6}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v10, "disable_mcc_mnc_validation"
 
-    .line 136
     invoke-interface {p0, v11, v7, v10}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 137
     invoke-interface {p0, v11, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 138
     invoke-interface {p0, v11, v6}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 140
     invoke-interface {p0, v11, v6}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v10, "log_enabled"
 
-    .line 141
     invoke-interface {p0, v11, v7, v10}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 142
     invoke-interface {p0, v11, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 143
     invoke-interface {p0, v11, v6}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 145
     invoke-interface {p0, v11, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v2, "service_state"
 
-    .line 146
     invoke-interface {p0, v11, v7, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v2, "1"
 
-    .line 147
     invoke-interface {p0, v11, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 148
     invoke-interface {p0, v11, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 150
     invoke-interface {p0, v11, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v1, "bridge_path"
 
-    .line 151
     invoke-interface {p0, v11, v7, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v1, ""
 
-    .line 152
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 153
     invoke-interface {p0, v11, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 155
     invoke-interface {p0, v11, v3}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 157
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 158
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlSerializer;->flush()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 166
     :try_start_2
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -370,7 +324,6 @@
     :catch_0
     move-exception p0
 
-    .line 168
     invoke-static {v5, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -382,12 +335,10 @@
     :try_start_3
     const-string v0, "Exception thrown while creating pref file"
 
-    .line 161
     invoke-static {v0, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 166
     :try_start_4
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -398,7 +349,6 @@
     :catch_1
     move-exception p0
 
-    .line 168
     invoke-static {v5, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
@@ -407,7 +357,6 @@
     :catchall_1
     move-exception p0
 
-    .line 166
     :try_start_5
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -418,10 +367,8 @@
     :catch_2
     move-exception v0
 
-    .line 168
     invoke-static {v5, v0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 170
     :goto_2
     throw p0
 
@@ -430,7 +377,6 @@
 
     const-string v0, "Unable to open stream to write prefs"
 
-    .line 123
     invoke-static {v0, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v8
@@ -439,25 +385,21 @@
 .method public static getInstance()Lcom/att/iqi/libs/PreferenceStore;
     .locals 2
 
-    .line 106
     sget-object v0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 107
     :try_start_0
     sget-object v1, Lcom/att/iqi/libs/PreferenceStore;->sInstance:Lcom/att/iqi/libs/PreferenceStore;
 
     if-nez v1, :cond_0
 
-    .line 108
     new-instance v1, Lcom/att/iqi/libs/PreferenceStore;
 
     invoke-direct {v1}, Lcom/att/iqi/libs/PreferenceStore;-><init>()V
 
     sput-object v1, Lcom/att/iqi/libs/PreferenceStore;->sInstance:Lcom/att/iqi/libs/PreferenceStore;
 
-    .line 110
     :cond_0
     sget-object v1, Lcom/att/iqi/libs/PreferenceStore;->sInstance:Lcom/att/iqi/libs/PreferenceStore;
 
@@ -468,7 +410,6 @@
     :catchall_0
     move-exception v1
 
-    .line 111
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -479,7 +420,6 @@
 .method private static iterable(Lorg/w3c/dom/NodeList;)Ljava/lang/Iterable;
     .locals 1
 
-    .line 381
     new-instance v0, Lcom/att/iqi/libs/PreferenceStore$$ExternalSyntheticLambda5;
 
     invoke-direct {v0, p0}, Lcom/att/iqi/libs/PreferenceStore$$ExternalSyntheticLambda5;-><init>(Lorg/w3c/dom/NodeList;)V
@@ -490,7 +430,6 @@
 .method private static synthetic lambda$broadcastPreferenceChange$3(Lcom/att/iqi/libs/PreferenceStore$PreferenceChangeListener;Ljava/lang/String;)V
     .locals 0
 
-    .line 375
     invoke-interface {p0, p1}, Lcom/att/iqi/libs/PreferenceStore$PreferenceChangeListener;->onPreferenceChanged(Ljava/lang/String;)V
 
     return-void
@@ -499,7 +438,6 @@
 .method private static synthetic lambda$iterable$4(Lorg/w3c/dom/NodeList;)Ljava/util/Iterator;
     .locals 2
 
-    .line 381
     invoke-interface {p0}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v0
@@ -528,7 +466,6 @@
 .method private synthetic lambda$setBoolean$0(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 279
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
@@ -541,7 +478,6 @@
 .method private synthetic lambda$setInteger$1(Ljava/lang/String;I)V
     .locals 0
 
-    .line 292
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -554,7 +490,6 @@
 .method private synthetic lambda$setString$2(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 305
     invoke-direct {p0, p1, p2}, Lcom/att/iqi/libs/PreferenceStore;->updatePreference(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
@@ -565,7 +500,6 @@
 
     const-string v0, "Error while closing input stream"
 
-    .line 174
     iget-object v1, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceFile:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -574,7 +508,6 @@
 
     if-nez v1, :cond_0
 
-    .line 175
     invoke-direct {p0}, Lcom/att/iqi/libs/PreferenceStore;->createPrefStoreLocked()Z
 
     move-result v1
@@ -583,12 +516,10 @@
 
     const-string p0, "Unable to load prefs from file, using defaults from memory"
 
-    .line 176
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
     return-void
 
-    .line 183
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
@@ -599,23 +530,19 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 192
     :try_start_1
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object p0
 
-    .line 193
     invoke-virtual {p0}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object p0
 
     const/4 v2, 0x0
 
-    .line 194
     invoke-interface {p0, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 196
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v3
@@ -652,7 +579,6 @@
 
     goto :goto_2
 
-    .line 211
     :cond_1
     :try_start_2
     invoke-static {v4, v9}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -661,12 +587,10 @@
 
     if-eqz v3, :cond_6
 
-    .line 212
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 215
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -685,7 +609,6 @@
 
     goto :goto_2
 
-    .line 221
     :cond_2
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -693,14 +616,12 @@
 
     if-eqz v3, :cond_6
 
-    .line 223
     invoke-interface {p0, v2, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v8, "int"
 
-    .line 224
     invoke-static {v3, v8}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v8
@@ -709,7 +630,6 @@
 
     const-string v8, "boolean"
 
-    .line 225
     invoke-static {v3, v8}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -718,7 +638,6 @@
 
     goto :goto_1
 
-    .line 228
     :cond_3
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -736,7 +655,6 @@
 
     invoke-static {v3}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 229
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v3
@@ -747,14 +665,12 @@
     :goto_1
     const-string/jumbo v3, "value"
 
-    .line 226
     invoke-interface {p0, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     goto :goto_2
 
-    .line 203
     :cond_5
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -762,19 +678,16 @@
 
     const-string/jumbo v12, "string"
 
-    .line 204
     invoke-static {v3, v12}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 205
     invoke-interface {p0, v2, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 206
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v3
@@ -787,7 +700,6 @@
 
     if-eqz v5, :cond_c
 
-    .line 236
     invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -861,7 +773,6 @@
 
     if-eq v7, v10, :cond_8
 
-    .line 251
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -880,7 +791,6 @@
 
     goto :goto_5
 
-    .line 248
     :cond_8
     sget-object v3, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -888,7 +798,6 @@
 
     goto :goto_5
 
-    .line 245
     :cond_9
     sget-object v3, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -904,11 +813,9 @@
 
     goto :goto_5
 
-    .line 241
     :cond_a
     sget-object v3, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
-    .line 242
     invoke-static {v5}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v4
@@ -917,12 +824,10 @@
 
     move-result-object v4
 
-    .line 241
     invoke-interface {v3, v8, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_5
 
-    .line 238
     :cond_b
     sget-object v3, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -941,7 +846,6 @@
 
     move-object v5, v4
 
-    .line 257
     :cond_c
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -952,7 +856,6 @@
 
     goto/16 :goto_0
 
-    .line 263
     :cond_d
     :try_start_4
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
@@ -972,12 +875,10 @@
     :try_start_5
     const-string v2, "Failed to load prefs values"
 
-    .line 260
     invoke-static {v2, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 263
     :try_start_6
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_6
@@ -988,13 +889,11 @@
     :catch_1
     move-exception p0
 
-    .line 266
     invoke-static {v0, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_6
     return-void
 
-    .line 263
     :goto_7
     :try_start_7
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
@@ -1006,10 +905,8 @@
     :catch_2
     move-exception v1
 
-    .line 266
     invoke-static {v0, v1}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 268
     :goto_8
     throw p0
 
@@ -1018,7 +915,6 @@
 
     const-string v0, "Unable to open stream to load prefs"
 
-    .line 185
     invoke-static {v0, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -1037,7 +933,6 @@
 .method private updatePreference(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 7
 
-    .line 312
     :try_start_0
     sget-object v0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
@@ -1045,7 +940,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 316
     :try_start_1
     instance-of v1, p2, Ljava/lang/Boolean;
 
@@ -1053,7 +947,6 @@
 
     const-string v1, "boolean"
 
-    .line 318
     move-object v2, p2
 
     check-cast v2, Ljava/lang/Boolean;
@@ -1073,7 +966,6 @@
 
     goto :goto_0
 
-    .line 319
     :cond_1
     instance-of v1, p2, Ljava/lang/Integer;
 
@@ -1081,14 +973,12 @@
 
     const-string v1, "int"
 
-    .line 321
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 322
     :cond_2
     instance-of v1, p2, Ljava/lang/String;
 
@@ -1096,12 +986,10 @@
 
     const-string/jumbo v1, "string"
 
-    .line 324
     move-object v2, p2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 331
     :goto_0
     iget-object v3, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceFile:Ljava/io/File;
 
@@ -1117,7 +1005,6 @@
 
     if-nez v3, :cond_3
 
-    .line 332
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1138,33 +1025,27 @@
 
     invoke-static {p2}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 333
     invoke-direct {p0, p1}, Lcom/att/iqi/libs/PreferenceStore;->broadcastPreferenceChange(Ljava/lang/String;)V
 
-    .line 334
     monitor-exit v0
 
     return-void
 
-    .line 337
     :cond_3
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v3
 
-    .line 338
     invoke-virtual {v3}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v3
 
-    .line 339
     iget-object v4, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceFile:Ljava/io/File;
 
     invoke-virtual {v3, v4}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/File;)Lorg/w3c/dom/Document;
 
     move-result-object v3
 
-    .line 342
     invoke-interface {v3, v1}, Lorg/w3c/dom/Document;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object v1
@@ -1190,14 +1071,12 @@
 
     check-cast v4, Lorg/w3c/dom/Node;
 
-    .line 343
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v5
 
     const-string/jumbo v6, "name"
 
-    .line 344
     invoke-interface {v5, v6}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v5
@@ -1206,14 +1085,12 @@
 
     move-result-object v5
 
-    .line 343
     invoke-static {v5, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v5
 
     if-eqz v5, :cond_4
 
-    .line 345
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1230,7 +1107,6 @@
 
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 346
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v1
@@ -1243,42 +1119,34 @@
 
     if-eqz v1, :cond_5
 
-    .line 348
     invoke-interface {v1, v2}, Lorg/w3c/dom/Node;->setNodeValue(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 351
     :cond_5
     invoke-interface {v4, v2}, Lorg/w3c/dom/Node;->setTextContent(Ljava/lang/String;)V
 
-    .line 354
     :goto_1
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v1
 
-    .line 355
     invoke-virtual {v1}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v1
 
-    .line 356
     new-instance v2, Ljavax/xml/transform/stream/StreamResult;
 
     iget-object v4, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceFile:Ljava/io/File;
 
     invoke-direct {v2, v4}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 357
     new-instance v4, Ljavax/xml/transform/dom/DOMSource;
 
     invoke-direct {v4, v3}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 358
     invoke-virtual {v1, v4, v2}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 359
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1301,7 +1169,6 @@
 
     invoke-static {p2}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 361
     invoke-direct {p0, p1}, Lcom/att/iqi/libs/PreferenceStore;->broadcastPreferenceChange(Ljava/lang/String;)V
 
     const/4 p0, 0x1
@@ -1314,7 +1181,6 @@
     :goto_2
     if-nez p0, :cond_7
 
-    .line 366
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1335,13 +1201,11 @@
 
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 367
     :cond_7
     monitor-exit v0
 
     goto :goto_3
 
-    .line 327
     :cond_8
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1363,7 +1227,6 @@
 
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 328
     monitor-exit v0
 
     return-void
@@ -1371,7 +1234,6 @@
     :catchall_0
     move-exception p0
 
-    .line 367
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1386,7 +1248,6 @@
 
     const-string p1, "An exception was thrown while trying to update preference"
 
-    .line 369
     invoke-static {p1, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_3
@@ -1398,12 +1259,10 @@
 .method public getBoolean(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 385
     sget-object p0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 386
     :try_start_0
     sget-object v0, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -1417,7 +1276,6 @@
 
     goto :goto_0
 
-    .line 387
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1431,7 +1289,6 @@
     :catchall_0
     move-exception p1
 
-    .line 388
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1442,12 +1299,10 @@
 .method public getInteger(Ljava/lang/String;I)I
     .locals 1
 
-    .line 392
     sget-object p0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 393
     :try_start_0
     sget-object v0, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -1461,7 +1316,6 @@
 
     goto :goto_0
 
-    .line 394
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -1475,7 +1329,6 @@
     :catchall_0
     move-exception p1
 
-    .line 395
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1486,12 +1339,10 @@
 .method public getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 399
     sget-object p0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 400
     :try_start_0
     sget-object v0, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -1508,7 +1359,6 @@
     :cond_0
     move-object p2, p1
 
-    .line 401
     :goto_0
     monitor-exit p0
 
@@ -1517,7 +1367,6 @@
     :catchall_0
     move-exception p1
 
-    .line 402
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1528,7 +1377,6 @@
 .method public registerPreferenceChangeListener(Lcom/att/iqi/libs/PreferenceStore$PreferenceChangeListener;)V
     .locals 0
 
-    .line 406
     iget-object p0, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceChangeListeners:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1539,12 +1387,10 @@
 .method public setBoolean(Ljava/lang/String;Z)V
     .locals 3
 
-    .line 275
     sget-object v0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 276
     :try_start_0
     sget-object v1, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -1554,14 +1400,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 278
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 279
     invoke-static {}, Lcom/att/iqi/libs/WorkerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -1572,7 +1416,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 281
     :cond_0
     monitor-exit v0
 
@@ -1591,12 +1434,10 @@
 .method public setInteger(Ljava/lang/String;I)V
     .locals 3
 
-    .line 288
     sget-object v0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 289
     :try_start_0
     sget-object v1, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -1606,14 +1447,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 291
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 292
     invoke-static {}, Lcom/att/iqi/libs/WorkerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -1624,7 +1463,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 294
     :cond_0
     monitor-exit v0
 
@@ -1643,12 +1481,10 @@
 .method public setString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 301
     sget-object v0, Lcom/att/iqi/libs/PreferenceStore;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 302
     :try_start_0
     sget-object v1, Lcom/att/iqi/libs/PreferenceStore;->sPreferences:Ljava/util/Map;
 
@@ -1658,10 +1494,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 304
     invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 305
     invoke-static {}, Lcom/att/iqi/libs/WorkerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -1672,7 +1506,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 307
     :cond_0
     monitor-exit v0
 
@@ -1691,7 +1524,6 @@
 .method public unregisterPreferenceChangeListener(Lcom/att/iqi/libs/PreferenceStore$PreferenceChangeListener;)V
     .locals 0
 
-    .line 410
     iget-object p0, p0, Lcom/att/iqi/libs/PreferenceStore;->mPreferenceChangeListeners:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z

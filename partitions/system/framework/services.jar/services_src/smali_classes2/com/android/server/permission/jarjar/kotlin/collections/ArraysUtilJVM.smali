@@ -7,7 +7,6 @@
 .method public static asList([Ljava/lang/Object;)Ljava/util/List;
     .locals 0
 
-    .line 13
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0

@@ -22,7 +22,6 @@
 
     const/4 v1, 0x3
 
-    .line 28
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -45,7 +44,6 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 33
     sget-boolean p1, Lcom/android/server/notification/ZenModeExtractor;->DBG:Z
 
     if-eqz p1, :cond_0
@@ -93,7 +91,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 37
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v2
@@ -102,13 +99,11 @@
 
     goto :goto_1
 
-    .line 42
     :cond_0
     iget-object v2, p0, Lcom/android/server/notification/ZenModeExtractor;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     if-nez v2, :cond_2
 
-    .line 43
     sget-boolean p0, Lcom/android/server/notification/ZenModeExtractor;->DBG:Z
 
     if-eqz p0, :cond_1
@@ -120,7 +115,6 @@
     :cond_1
     return-object v1
 
-    .line 47
     :cond_2
     invoke-virtual {v2, p1}, Lcom/android/server/notification/ZenModeHelper;->shouldIntercept(Lcom/android/server/notification/NotificationRecord;)Z
 
@@ -128,24 +122,20 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/notification/NotificationRecord;->setIntercepted(Z)Z
 
-    .line 48
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->isIntercepted()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 49
     iget-object p0, p0, Lcom/android/server/notification/ZenModeExtractor;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
-    .line 50
     invoke-virtual {p0}, Lcom/android/server/notification/ZenModeHelper;->getConsolidatedNotificationPolicy()Landroid/app/NotificationManager$Policy;
 
     move-result-object p0
 
     iget p0, p0, Landroid/app/NotificationManager$Policy;->suppressedVisualEffects:I
 
-    .line 49
     invoke-virtual {p1, p0}, Lcom/android/server/notification/NotificationRecord;->setSuppressedVisualEffects(I)V
 
     goto :goto_0
@@ -153,13 +143,11 @@
     :cond_3
     const/4 p0, 0x0
 
-    .line 52
     invoke-virtual {p1, p0}, Lcom/android/server/notification/NotificationRecord;->setSuppressedVisualEffects(I)V
 
     :goto_0
     return-object v1
 
-    .line 38
     :cond_4
     :goto_1
     sget-boolean p0, Lcom/android/server/notification/ZenModeExtractor;->DBG:Z
@@ -177,14 +165,12 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/notification/ZenModeExtractor;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/ContainerServiceWrapper;)V
     .locals 0
 
-    .line 99
     iput-object p1, p0, Lcom/android/server/ContainerServiceWrapper$2;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 102
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -33,7 +31,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_0
     iget-object p0, p0, Lcom/android/server/ContainerServiceWrapper$2;->this$0:Lcom/android/server/ContainerServiceWrapper;
 

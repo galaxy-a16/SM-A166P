@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 40
     new-instance v0, Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     const/4 v1, 0x0
@@ -24,7 +23,6 @@
 
     const/4 v0, 0x0
 
-    .line 41
     sput-boolean v0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeManagerLazyHolder;->isinitClass:Z
 
     return-void

@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$6t51gqWZGQgPty54-4MUYhhbVcs(Lcom/android/server/pm/PackageSessionVerifier;Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->lambda$verify$0(Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$UiOk88axc5G33NgxpKoYvclSx2k(Lcom/android/server/pm/PackageSessionVerifier;Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->lambda$dispatchEndVerification$3(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
 
     return-void
@@ -39,7 +37,6 @@
 .method public static synthetic $r8$lambda$XSgfytvOOmWPzQhKp7GtQtFUQsA(Ljava/lang/String;Lcom/android/server/pm/StagingManager$StagedSession;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->lambda$checkOverlaps$5(Ljava/lang/String;Lcom/android/server/pm/StagingManager$StagedSession;)Z
 
     move-result p0
@@ -50,7 +47,6 @@
 .method public static synthetic $r8$lambda$hRa_DFsddYJ-UBtGLbzW5-Bf3iM(Lcom/android/server/pm/PackageSessionVerifier;Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->lambda$verifyStaged$1(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
 
     return-void
@@ -59,7 +55,6 @@
 .method public static synthetic $r8$lambda$vU9ppJUgRlBmwu0sOj5TKgBNLSs(Lcom/android/server/pm/PackageSessionVerifier;Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->lambda$dispatchVerifyApex$2(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
 
     return-void
@@ -68,7 +63,6 @@
 .method public static synthetic $r8$lambda$wUGMbieDFOv-psuHqKWe8rFanmQ(Ljava/lang/String;Lcom/android/server/pm/StagingManager$StagedSession;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->lambda$checkRebootlessApex$4(Ljava/lang/String;Lcom/android/server/pm/StagingManager$StagedSession;)Z
 
     move-result p0
@@ -79,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$mverifyStaged(Lcom/android/server/pm/PackageSessionVerifier;Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->verifyStaged(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
 
     return-void
@@ -88,10 +81,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -100,19 +91,14 @@
 
     const/4 v0, 0x0
 
-    .line 90
     iput-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mContext:Landroid/content/Context;
 
-    .line 91
     iput-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 92
     iput-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mApexManager:Lcom/android/server/pm/ApexManager;
 
-    .line 93
     iput-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mPackageParserSupplier:Ljava/util/function/Supplier;
 
-    .line 94
     iput-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mHandler:Landroid/os/Handler;
 
     return-void
@@ -121,29 +107,22 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/ApexManager;Ljava/util/function/Supplier;Landroid/os/Looper;)V
     .locals 1
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mStagedSessions:Ljava/util/List;
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/pm/PackageSessionVerifier;->mContext:Landroid/content/Context;
 
-    .line 82
     iput-object p2, p0, Lcom/android/server/pm/PackageSessionVerifier;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 83
     iput-object p3, p0, Lcom/android/server/pm/PackageSessionVerifier;->mApexManager:Lcom/android/server/pm/ApexManager;
 
-    .line 84
     iput-object p4, p0, Lcom/android/server/pm/PackageSessionVerifier;->mPackageParserSupplier:Ljava/util/function/Supplier;
 
-    .line 85
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1, p5}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -156,7 +135,6 @@
 .method public static isApexSessionFinalized(Landroid/apex/ApexSessionInfo;)Z
     .locals 1
 
-    .line 480
     iget-boolean v0, p0, Landroid/apex/ApexSessionInfo;->isUnknown:Z
 
     if-nez v0, :cond_1
@@ -191,7 +169,6 @@
 .method public static isRollback(Lcom/android/server/pm/StagingManager$StagedSession;)Z
     .locals 1
 
-    .line 475
     invoke-interface {p0}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionParams()Landroid/content/pm/PackageInstaller$SessionParams;
 
     move-result-object p0
@@ -216,7 +193,6 @@
 .method public static synthetic lambda$checkOverlaps$5(Ljava/lang/String;Lcom/android/server/pm/StagingManager$StagedSession;)Z
     .locals 0
 
-    .line 669
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -231,7 +207,6 @@
 .method public static synthetic lambda$checkRebootlessApex$4(Ljava/lang/String;Lcom/android/server/pm/StagingManager$StagedSession;)Z
     .locals 0
 
-    .line 567
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -246,11 +221,9 @@
 .method private synthetic lambda$dispatchEndVerification$3(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 2
 
-    .line 294
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->endVerification(Lcom/android/server/pm/StagingManager$StagedSession;)V
 
-    .line 295
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->onVerificationSuccess(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     :try_end_0
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -260,7 +233,6 @@
     :catch_0
     move-exception v0
 
-    .line 297
     iget v1, v0, Lcom/android/server/pm/PackageManagerException;->error:I
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -276,11 +248,9 @@
 .method private synthetic lambda$dispatchVerifyApex$2(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 2
 
-    .line 283
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->verifyApex(Lcom/android/server/pm/StagingManager$StagedSession;)V
 
-    .line 284
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->dispatchEndVerification(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     :try_end_0
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -290,7 +260,6 @@
     :catch_0
     move-exception v0
 
-    .line 286
     iget v1, v0, Lcom/android/server/pm/PackageManagerException;->error:I
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -306,20 +275,17 @@
 .method private synthetic lambda$verify$0(Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 2
 
-    .line 103
     :try_start_0
     iget-object v0, p1, Lcom/android/server/pm/PackageInstallerSession;->mStagedSession:Lcom/android/server/pm/PackageInstallerSession$StagedSession;
 
     invoke-virtual {p0, v0}, Lcom/android/server/pm/PackageSessionVerifier;->storeSession(Lcom/android/server/pm/StagingManager$StagedSession;)V
 
-    .line 104
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->isMultiPackage()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 105
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->getChildSessions()Ljava/util/List;
 
     move-result-object v0
@@ -341,28 +307,21 @@
 
     check-cast v1, Lcom/android/server/pm/PackageInstallerSession;
 
-    .line 106
     invoke-virtual {p0, v1}, Lcom/android/server/pm/PackageSessionVerifier;->checkApexUpdateAllowed(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    .line 107
     invoke-virtual {p0, v1}, Lcom/android/server/pm/PackageSessionVerifier;->checkRebootlessApex(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    .line 108
     invoke-virtual {p0, v1}, Lcom/android/server/pm/PackageSessionVerifier;->checkApexSignature(Lcom/android/server/pm/PackageInstallerSession;)V
 
     goto :goto_0
 
-    .line 111
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->checkApexUpdateAllowed(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    .line 112
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->checkRebootlessApex(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    .line 113
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->checkApexSignature(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    .line 115
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->verifyAPK(Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     :try_end_0
@@ -373,7 +332,6 @@
     :catch_0
     move-exception p0
 
-    .line 117
     iget v0, p0, Lcom/android/server/pm/PackageManagerException;->error:I
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -384,12 +342,10 @@
 
     move-result-object v0
 
-    .line 118
     iget v1, p0, Lcom/android/server/pm/PackageManagerException;->error:I
 
     invoke-virtual {p1, v1, v0}, Lcom/android/server/pm/PackageInstallerSession;->setSessionFailed(ILjava/lang/String;)V
 
-    .line 119
     iget p1, p0, Lcom/android/server/pm/PackageManagerException;->error:I
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -405,21 +361,17 @@
 .method private synthetic lambda$verifyStaged$1(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 2
 
-    .line 239
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/PackageSessionVerifier;->checkActiveSessions()V
 
-    .line 240
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->checkRollbacks(Lcom/android/server/pm/StagingManager$StagedSession;)V
 
-    .line 241
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->isMultiPackage()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 242
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->getChildSessions()Ljava/util/List;
 
     move-result-object v0
@@ -441,16 +393,13 @@
 
     check-cast v1, Lcom/android/server/pm/StagingManager$StagedSession;
 
-    .line 243
     invoke-virtual {p0, p1, v1}, Lcom/android/server/pm/PackageSessionVerifier;->checkOverlaps(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/StagingManager$StagedSession;)V
 
     goto :goto_0
 
-    .line 246
     :cond_0
     invoke-virtual {p0, p1, p1}, Lcom/android/server/pm/PackageSessionVerifier;->checkOverlaps(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/StagingManager$StagedSession;)V
 
-    .line 248
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier;->dispatchVerifyApex(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     :try_end_0
@@ -461,7 +410,6 @@
     :catch_0
     move-exception v0
 
-    .line 250
     iget v1, v0, Lcom/android/server/pm/PackageManagerException;->error:I
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -479,7 +427,6 @@
 .method public final checkActiveSessions()V
     .locals 3
 
-    .line 583
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/InstallLocationUtils;->getStorageManager()Landroid/os/storage/IStorageManager;
 
@@ -498,7 +445,6 @@
     :catch_0
     move-exception p0
 
-    .line 585
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -525,7 +471,6 @@
 .method public checkActiveSessions(Z)V
     .locals 3
 
-    .line 593
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mStagedSessions:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -548,7 +493,6 @@
 
     check-cast v1, Lcom/android/server/pm/StagingManager$StagedSession;
 
-    .line 594
     invoke-interface {v1}, Lcom/android/server/pm/StagingManager$StagedSession;->isDestroyed()Z
 
     move-result v2
@@ -577,7 +521,6 @@
 
     goto :goto_1
 
-    .line 600
     :cond_3
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -597,7 +540,6 @@
 .method public final checkApexSignature(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 6
 
-    .line 142
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->isApexSession()Z
 
     move-result v0
@@ -606,20 +548,17 @@
 
     return-void
 
-    .line 145
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 146
     iget-object v1, p0, Lcom/android/server/pm/PackageSessionVerifier;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
 
     move-result-object v1
 
-    .line 147
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -628,26 +567,22 @@
 
     const/4 v5, 0x0
 
-    .line 146
     invoke-interface {v1, v2, v3, v4, v5}, Lcom/android/server/pm/Computer;->getPackageInfo(Ljava/lang/String;JI)Landroid/content/pm/PackageInfo;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    .line 152
     invoke-virtual {p0, v1}, Lcom/android/server/pm/PackageSessionVerifier;->getSigningDetails(Landroid/content/pm/PackageInfo;)Landroid/content/pm/SigningDetails;
 
     move-result-object p0
 
-    .line 153
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object p1
 
     const/4 v1, 0x1
 
-    .line 154
     invoke-virtual {p1, p0, v1}, Landroid/content/pm/SigningDetails;->checkCapability(Landroid/content/pm/SigningDetails;I)Z
 
     move-result v1
@@ -656,7 +591,6 @@
 
     const/16 v1, 0x8
 
-    .line 156
     invoke-virtual {p0, p1, v1}, Landroid/content/pm/SigningDetails;->checkCapability(Landroid/content/pm/SigningDetails;I)Z
 
     move-result p0
@@ -665,7 +599,6 @@
 
     goto :goto_0
 
-    .line 160
     :cond_1
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -697,7 +630,6 @@
     :goto_0
     return-void
 
-    .line 149
     :cond_3
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -725,7 +657,6 @@
 .method public final checkApexUpdateAllowed(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 3
 
-    .line 531
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->isApexSession()Z
 
     move-result v0
@@ -734,7 +665,6 @@
 
     return-void
 
-    .line 534
     :cond_0
     iget-object v0, p1, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
 
@@ -748,20 +678,17 @@
 
     return-void
 
-    .line 538
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 539
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->getInstallSource()Lcom/android/server/pm/InstallSource;
 
     move-result-object p1
 
     iget-object p1, p1, Lcom/android/server/pm/InstallSource;->mInstallerPackageName:Ljava/lang/String;
 
-    .line 540
     invoke-virtual {p0, v0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->isApexUpdateAllowed(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -770,7 +697,6 @@
 
     return-void
 
-    .line 541
     :cond_2
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -804,7 +730,6 @@
 .method public checkOverlaps(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/StagingManager$StagedSession;)V
     .locals 7
 
-    .line 655
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->isDestroyed()Z
 
     move-result v0
@@ -819,7 +744,6 @@
 
     goto/16 :goto_1
 
-    .line 658
     :cond_0
     invoke-interface {p2}, Lcom/android/server/pm/StagingManager$StagedSession;->getPackageName()Ljava/lang/String;
 
@@ -827,7 +751,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 664
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mStagedSessions:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -848,7 +771,6 @@
 
     check-cast v1, Lcom/android/server/pm/StagingManager$StagedSession;
 
-    .line 665
     invoke-interface {v1}, Lcom/android/server/pm/StagingManager$StagedSession;->isDestroyed()Z
 
     move-result v2
@@ -861,7 +783,6 @@
 
     if-nez v2, :cond_1
 
-    .line 666
     invoke-interface {v1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v2
@@ -874,7 +795,6 @@
 
     goto :goto_0
 
-    .line 669
     :cond_2
     new-instance v2, Lcom/android/server/pm/PackageSessionVerifier$$ExternalSyntheticLambda2;
 
@@ -886,7 +806,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 670
     invoke-interface {v1}, Lcom/android/server/pm/StagingManager$StagedSession;->getCommittedMillis()J
 
     move-result-wide v2
@@ -907,7 +826,6 @@
 
     if-ltz v2, :cond_3
 
-    .line 679
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -918,7 +836,6 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 682
     invoke-interface {v1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v4
@@ -927,7 +844,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 684
     invoke-interface {p2}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v3
@@ -938,12 +854,10 @@
 
     move-result-object v2
 
-    .line 679
     invoke-interface {v1, v6, v2}, Lcom/android/server/pm/StagingManager$StagedSession;->setSessionFailed(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 672
     :cond_3
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -957,7 +871,6 @@
 
     invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 675
     invoke-interface {p2}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result p2
@@ -966,7 +879,6 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 677
     invoke-interface {v1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result p2
@@ -984,7 +896,6 @@
     :cond_4
     return-void
 
-    .line 660
     :cond_5
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -996,7 +907,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 662
     invoke-interface {p2}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result p2
@@ -1025,7 +935,6 @@
 .method public checkRebootlessApex(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 4
 
-    .line 554
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->isStaged()Z
 
     move-result v0
@@ -1040,7 +949,6 @@
 
     goto/16 :goto_1
 
-    .line 557
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->getPackageName()Ljava/lang/String;
 
@@ -1050,7 +958,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 563
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mStagedSessions:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1071,7 +978,6 @@
 
     check-cast p1, Lcom/android/server/pm/StagingManager$StagedSession;
 
-    .line 564
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->isDestroyed()Z
 
     move-result v2
@@ -1086,7 +992,6 @@
 
     goto :goto_0
 
-    .line 567
     :cond_2
     new-instance v2, Lcom/android/server/pm/PackageSessionVerifier$$ExternalSyntheticLambda0;
 
@@ -1100,7 +1005,6 @@
 
     goto :goto_0
 
-    .line 569
     :cond_3
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1112,7 +1016,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 571
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result p1
@@ -1136,7 +1039,6 @@
     :cond_4
     return-void
 
-    .line 559
     :cond_5
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1172,7 +1074,6 @@
 .method public checkRollbacks(Lcom/android/server/pm/StagingManager$StagedSession;)V
     .locals 7
 
-    .line 614
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->isDestroyed()Z
 
     move-result v0
@@ -1187,7 +1088,6 @@
 
     goto/16 :goto_1
 
-    .line 617
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mStagedSessions:Ljava/util/List;
 
@@ -1209,7 +1109,6 @@
 
     check-cast v1, Lcom/android/server/pm/StagingManager$StagedSession;
 
-    .line 618
     invoke-interface {v1}, Lcom/android/server/pm/StagingManager$StagedSession;->isDestroyed()Z
 
     move-result v2
@@ -1224,7 +1123,6 @@
 
     goto :goto_0
 
-    .line 621
     :cond_2
     invoke-static {p1}, Lcom/android/server/pm/PackageSessionVerifier;->isRollback(Lcom/android/server/pm/StagingManager$StagedSession;)Z
 
@@ -1242,7 +1140,6 @@
 
     if-nez v2, :cond_4
 
-    .line 625
     invoke-virtual {p0, v1}, Lcom/android/server/pm/PackageSessionVerifier;->ensureActiveApexSessionIsAborted(Lcom/android/server/pm/StagingManager$StagedSession;)Z
 
     move-result v2
@@ -1251,7 +1148,6 @@
 
     if-nez v2, :cond_3
 
-    .line 626
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1272,7 +1168,6 @@
 
     invoke-static {v5, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 631
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1280,7 +1175,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 633
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v3
@@ -1291,10 +1185,8 @@
 
     move-result-object v2
 
-    .line 631
     invoke-interface {v1, v4, v2}, Lcom/android/server/pm/StagingManager$StagedSession;->setSessionFailed(ILjava/lang/String;)V
 
-    .line 634
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1313,7 +1205,6 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 635
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v1
@@ -1324,12 +1215,10 @@
 
     move-result-object v1
 
-    .line 634
     invoke-static {v5, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 636
     :cond_4
     invoke-static {p1}, Lcom/android/server/pm/PackageSessionVerifier;->isRollback(Lcom/android/server/pm/StagingManager$StagedSession;)Z
 
@@ -1345,7 +1234,6 @@
 
     goto/16 :goto_0
 
-    .line 637
     :cond_5
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1355,7 +1243,6 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 639
     invoke-interface {v1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v0
@@ -1380,7 +1267,6 @@
 
     move-object/from16 v0, p1
 
-    .line 210
     iget-object v1, v0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
 
     iget v1, v1, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
@@ -1389,12 +1275,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 211
     sget-object v1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     goto :goto_0
 
-    .line 213
     :cond_0
     new-instance v1, Landroid/os/UserHandle;
 
@@ -1405,7 +1289,6 @@
     :goto_0
     move-object v4, v1
 
-    .line 215
     new-instance v1, Lcom/android/server/pm/VerifyingSession;
 
     iget-object v5, v0, Lcom/android/server/pm/PackageInstallerSession;->stageDir:Ljava/io/File;
@@ -1414,7 +1297,6 @@
 
     iget-object v8, v0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
 
-    .line 216
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/pm/PackageInstallerSession;->getInstallSource()Lcom/android/server/pm/InstallSource;
 
     move-result-object v9
@@ -1423,7 +1305,6 @@
 
     move-result v10
 
-    .line 217
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/pm/PackageInstallerSession;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object v11
@@ -1434,7 +1315,6 @@
 
     move-result-object v13
 
-    .line 218
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/pm/PackageInstallerSession;->getUserActionRequired()Z
 
     move-result v14
@@ -1455,7 +1335,6 @@
 .method public final dispatchEndVerification(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 2
 
-    .line 292
     iget-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/pm/PackageSessionVerifier$$ExternalSyntheticLambda5;
@@ -1470,7 +1349,6 @@
 .method public final dispatchVerifyApex(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 2
 
-    .line 281
     iget-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/pm/PackageSessionVerifier$$ExternalSyntheticLambda3;
@@ -1487,7 +1365,6 @@
 
     const-string v0, "PackageSessionVerifier"
 
-    .line 349
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/InstallLocationUtils;->getStorageManager()Landroid/os/storage/IStorageManager;
 
@@ -1499,7 +1376,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 350
     invoke-static {}, Lcom/android/internal/content/InstallLocationUtils;->getStorageManager()Landroid/os/storage/IStorageManager;
 
     move-result-object v1
@@ -1510,7 +1386,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 368
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1536,17 +1411,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->setSessionReady()V
 
-    .line 370
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->isSessionReady()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 371
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->containsApexSession()Z
 
     move-result v0
@@ -1557,10 +1429,8 @@
 
     const-string/jumbo v1, "staged"
 
-    .line 374
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 375
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mApexManager:Lcom/android/server/pm/ApexManager;
 
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
@@ -1577,10 +1447,8 @@
 
     const-string p1, "Failed to get hold of StorageManager"
 
-    .line 354
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 355
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
     const/16 v0, -0x6e
@@ -1593,7 +1461,6 @@
 .method public final ensureActiveApexSessionIsAborted(Lcom/android/server/pm/StagingManager$StagedSession;)Z
     .locals 2
 
-    .line 485
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->containsApexSession()Z
 
     move-result v0
@@ -1604,13 +1471,11 @@
 
     return v1
 
-    .line 488
     :cond_0
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result p1
 
-    .line 489
     iget-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mApexManager:Lcom/android/server/pm/ApexManager;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/ApexManager;->getStagedSessionInfo(I)Landroid/apex/ApexSessionInfo;
@@ -1619,7 +1484,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 490
     invoke-static {v0}, Lcom/android/server/pm/PackageSessionVerifier;->isApexSessionFinalized(Landroid/apex/ApexSessionInfo;)Z
 
     move-result v0
@@ -1628,7 +1492,6 @@
 
     goto :goto_0
 
-    .line 493
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mApexManager:Lcom/android/server/pm/ApexManager;
 
@@ -1646,37 +1509,30 @@
 .method public final getSigningDetails(Landroid/content/pm/PackageInfo;)Landroid/content/pm/SigningDetails;
     .locals 3
 
-    .line 125
     iget-object p0, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object p1, p0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
-    .line 126
     iget p0, p0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 127
     invoke-static {p0}, Landroid/util/apk/ApkSignatureVerifier;->getMinimumSignatureSchemeVersionForTargetSdk(I)I
 
     move-result p0
 
-    .line 129
     invoke-static {}, Landroid/content/pm/parsing/result/ParseTypeImpl;->forDefaultParsing()Landroid/content/pm/parsing/result/ParseTypeImpl;
 
     move-result-object v0
 
-    .line 130
     invoke-static {v0, p1, p0}, Landroid/util/apk/ApkSignatureVerifier;->verify(Landroid/content/pm/parsing/result/ParseInput;Ljava/lang/String;I)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object p0
 
-    .line 132
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->isError()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 137
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->getResult()Ljava/lang/Object;
 
     move-result-object p0
@@ -1685,7 +1541,6 @@
 
     return-object p0
 
-    .line 133
     :cond_0
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1703,7 +1558,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->getException()Ljava/lang/Exception;
 
     move-result-object p1
@@ -1728,7 +1582,6 @@
 .method public final isApexUpdateAllowed(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
 
-    .line 497
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     const/4 v0, 0x0
@@ -1741,7 +1594,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 499
     invoke-static {}, Lcom/android/server/SystemConfig;->getInstance()Lcom/android/server/SystemConfig;
 
     move-result-object p0
@@ -1754,12 +1606,10 @@
 
     const-string p0, "No modules installer defined"
 
-    .line 501
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 504
     :cond_0
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1767,7 +1617,6 @@
 
     return p0
 
-    .line 507
     :cond_1
     invoke-static {}, Lcom/android/server/SystemConfig;->getInstance()Lcom/android/server/SystemConfig;
 
@@ -1787,7 +1636,6 @@
 
     const-string p0, "com.sec.android.app.samsungapps"
 
-    .line 511
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1798,7 +1646,6 @@
 
     return p0
 
-    .line 516
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1818,7 +1665,6 @@
 
     return v0
 
-    .line 519
     :cond_3
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1830,14 +1676,12 @@
 .method public final onVerificationFailure(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;ILjava/lang/String;)V
     .locals 1
 
-    .line 271
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PackageSessionVerifier;->ensureActiveApexSessionIsAborted(Lcom/android/server/pm/StagingManager$StagedSession;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 272
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1860,13 +1704,11 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     :cond_0
     invoke-interface {p1, p3, p4}, Lcom/android/server/pm/StagingManager$StagedSession;->setSessionFailed(ILjava/lang/String;)V
 
     const/16 p0, -0x16
 
-    .line 277
     invoke-interface {p2, p0, p4}, Lcom/android/server/pm/PackageSessionVerifier$Callback;->onResult(ILjava/lang/String;)V
 
     return-void
@@ -1879,7 +1721,6 @@
 
     const/4 p1, 0x0
 
-    .line 266
     invoke-interface {p2, p0, p1}, Lcom/android/server/pm/PackageSessionVerifier$Callback;->onResult(ILjava/lang/String;)V
 
     return-void
@@ -1888,7 +1729,6 @@
 .method public final retrieveRollbackIdForCommitSession(I)I
     .locals 4
 
-    .line 460
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/content/rollback/RollbackManager;
@@ -1899,12 +1739,10 @@
 
     check-cast p0, Landroid/content/rollback/RollbackManager;
 
-    .line 462
     invoke-virtual {p0}, Landroid/content/rollback/RollbackManager;->getRecentlyCommittedRollbacks()Ljava/util/List;
 
     move-result-object p0
 
-    .line 463
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1914,21 +1752,18 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 464
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/rollback/RollbackInfo;
 
-    .line 465
     invoke-virtual {v2}, Landroid/content/rollback/RollbackInfo;->getCommittedSessionId()I
 
     move-result v3
 
     if-ne v3, p1, :cond_0
 
-    .line 466
     invoke-virtual {v2}, Landroid/content/rollback/RollbackInfo;->getRollbackId()I
 
     move-result p0
@@ -1940,7 +1775,6 @@
 
     goto :goto_0
 
-    .line 469
     :cond_1
     new-instance p0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1970,7 +1804,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 261
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mStagedSessions:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1986,19 +1819,16 @@
 
     move/from16 v1, p2
 
-    .line 382
     new-instance v2, Landroid/util/IntArray;
 
     invoke-direct {v2}, Landroid/util/IntArray;-><init>()V
 
-    .line 383
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/StagingManager$StagedSession;->isMultiPackage()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 384
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/StagingManager$StagedSession;->getChildSessions()Ljava/util/List;
 
     move-result-object v3
@@ -2021,14 +1851,12 @@
 
     check-cast v4, Lcom/android/server/pm/StagingManager$StagedSession;
 
-    .line 385
     invoke-interface {v4}, Lcom/android/server/pm/StagingManager$StagedSession;->isApexSession()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 386
     invoke-interface {v4}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v4
@@ -2037,27 +1865,23 @@
 
     goto :goto_0
 
-    .line 390
     :cond_1
     new-instance v3, Landroid/apex/ApexSessionParams;
 
     invoke-direct {v3}, Landroid/apex/ApexSessionParams;-><init>()V
 
-    .line 391
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v4
 
     iput v4, v3, Landroid/apex/ApexSessionParams;->sessionId:I
 
-    .line 392
     invoke-virtual {v2}, Landroid/util/IntArray;->toArray()[I
 
     move-result-object v2
 
     iput-object v2, v3, Landroid/apex/ApexSessionParams;->childSessionIds:[I
 
-    .line 393
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionParams()Landroid/content/pm/PackageInstaller$SessionParams;
 
     move-result-object v2
@@ -2070,10 +1894,8 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 394
     iput-boolean v5, v3, Landroid/apex/ApexSessionParams;->isRollback:Z
 
-    .line 395
     iput v1, v3, Landroid/apex/ApexSessionParams;->rollbackId:I
 
     goto :goto_1
@@ -2083,13 +1905,10 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 398
     iput-boolean v5, v3, Landroid/apex/ApexSessionParams;->hasRollbackEnabled:Z
 
-    .line 399
     iput v1, v3, Landroid/apex/ApexSessionParams;->rollbackId:I
 
-    .line 405
     :cond_3
     :goto_1
     iget-object v1, v0, Lcom/android/server/pm/PackageSessionVerifier;->mContext:Landroid/content/Context;
@@ -2104,16 +1923,13 @@
 
     const-string v2, "PackageSessionVerifier"
 
-    .line 406
     invoke-virtual {v1, v5, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v1
 
-    .line 412
     :try_start_0
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 413
     iget-object v4, v0, Lcom/android/server/pm/PackageSessionVerifier;->mApexManager:Lcom/android/server/pm/ApexManager;
 
     invoke-virtual {v4, v3}, Lcom/android/server/pm/ApexManager;->submitStagedSession(Landroid/apex/ApexSessionParams;)Landroid/apex/ApexInfoList;
@@ -2122,15 +1938,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 415
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 417
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 418
     iget-object v3, v3, Landroid/apex/ApexInfoList;->apexInfos:[Landroid/apex/ApexInfo;
 
     array-length v4, v3
@@ -2146,7 +1959,6 @@
 
     const/16 v9, -0x16
 
-    .line 420
     :try_start_1
     iget-object v10, v0, Lcom/android/server/pm/PackageSessionVerifier;->mPackageParserSupplier:Ljava/util/function/Supplier;
 
@@ -2158,7 +1970,6 @@
     :try_end_1
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 421
     :try_start_2
     new-instance v11, Ljava/io/File;
 
@@ -2166,20 +1977,17 @@
 
     invoke-direct {v11, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 422
     invoke-virtual {v10, v11, v6, v6}, Lcom/android/server/pm/parsing/PackageParser2;->parsePackage(Ljava/io/File;IZ)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v11
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 423
     :try_start_3
     invoke-virtual {v10}, Lcom/android/server/pm/parsing/PackageParser2;->close()V
     :try_end_3
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 430
     invoke-interface {v11}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v8
@@ -2188,7 +1996,6 @@
 
     const-string v10, "com.samsung.android.support.targets"
 
-    .line 432
     invoke-virtual {v8, v10}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
@@ -2199,19 +2006,16 @@
 
     const-string v12, ""
 
-    .line 434
     invoke-static {v10, v12}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     const-string v12, ","
 
-    .line 435
     invoke-virtual {v8, v12}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v12
 
-    .line 437
     array-length v13, v12
 
     move v14, v6
@@ -2221,7 +2025,6 @@
 
     aget-object v15, v12, v14
 
-    .line 438
     invoke-virtual {v10, v15}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v15
@@ -2245,7 +2048,6 @@
 
     goto :goto_5
 
-    .line 444
     :cond_6
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -2273,7 +2075,6 @@
 
     throw v0
 
-    .line 453
     :cond_7
     :goto_5
     invoke-interface {v11}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
@@ -2293,7 +2094,6 @@
 
     if-eqz v10, :cond_8
 
-    .line 420
     :try_start_4
     invoke-virtual {v10}, Lcom/android/server/pm/parsing/PackageParser2;->close()V
     :try_end_4
@@ -2318,7 +2118,6 @@
     :catch_0
     move-exception v0
 
-    .line 424
     new-instance v1, Lcom/android/server/pm/PackageManagerException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2347,7 +2146,6 @@
 
     throw v1
 
-    .line 455
     :cond_9
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2380,17 +2178,14 @@
     :catchall_2
     move-exception v0
 
-    .line 415
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 416
     throw v0
 .end method
 
 .method public verify(Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 2
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/pm/PackageSessionVerifier$$ExternalSyntheticLambda4;
@@ -2405,29 +2200,24 @@
 .method public final verifyAPK(Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 3
 
-    .line 171
     new-instance v0, Lcom/android/server/pm/PackageSessionVerifier$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/pm/PackageSessionVerifier$1;-><init>(Lcom/android/server/pm/PackageSessionVerifier;Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
 
-    .line 194
     invoke-virtual {p0, p1, v0}, Lcom/android/server/pm/PackageSessionVerifier;->createVerifyingSession(Lcom/android/server/pm/PackageInstallerSession;Landroid/content/pm/IPackageInstallObserver2;)Lcom/android/server/pm/VerifyingSession;
 
     move-result-object p2
 
-    .line 195
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->isMultiPackage()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 196
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->getChildSessions()Ljava/util/List;
 
     move-result-object p1
 
-    .line 197
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -2436,7 +2226,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 198
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -2456,7 +2245,6 @@
 
     const/4 v2, 0x0
 
-    .line 199
     invoke-virtual {p0, v1, v2}, Lcom/android/server/pm/PackageSessionVerifier;->createVerifyingSession(Lcom/android/server/pm/PackageInstallerSession;Landroid/content/pm/IPackageInstallObserver2;)Lcom/android/server/pm/VerifyingSession;
 
     move-result-object v1
@@ -2465,13 +2253,11 @@
 
     goto :goto_0
 
-    .line 201
     :cond_0
     invoke-virtual {p2, v0}, Lcom/android/server/pm/VerifyingSession;->verifyStage(Ljava/util/List;)V
 
     goto :goto_1
 
-    .line 203
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/pm/VerifyingSession;->verifyStage()V
 
@@ -2482,7 +2268,6 @@
 .method public final verifyApex(Lcom/android/server/pm/StagingManager$StagedSession;)V
     .locals 4
 
-    .line 312
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionParams()Landroid/content/pm/PackageInstaller$SessionParams;
 
     move-result-object v0
@@ -2497,17 +2282,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 316
     const-class v0, Lcom/android/server/rollback/RollbackManagerInternal;
 
-    .line 317
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/rollback/RollbackManagerInternal;
 
-    .line 321
     :try_start_0
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
@@ -2524,7 +2306,6 @@
     :catch_0
     move-exception v0
 
-    .line 323
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2533,7 +2314,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 324
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v3
@@ -2546,12 +2326,10 @@
 
     const-string v3, "PackageSessionVerifier"
 
-    .line 323
     invoke-static {v3, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 326
     :cond_0
     invoke-static {p1}, Lcom/android/server/pm/PackageSessionVerifier;->isRollback(Lcom/android/server/pm/StagingManager$StagedSession;)Z
 
@@ -2559,7 +2337,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 327
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->sessionId()I
 
     move-result v0
@@ -2568,7 +2345,6 @@
 
     move-result v1
 
-    .line 330
     :cond_1
     :goto_0
     invoke-interface {p1}, Lcom/android/server/pm/StagingManager$StagedSession;->containsApexSession()Z
@@ -2577,7 +2353,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 334
     invoke-virtual {p0, p1, v1}, Lcom/android/server/pm/PackageSessionVerifier;->submitSessionToApexService(Lcom/android/server/pm/StagingManager$StagedSession;I)V
 
     :cond_2
@@ -2587,7 +2362,6 @@
 .method public final verifyStaged(Lcom/android/server/pm/StagingManager$StagedSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 2
 
-    .line 236
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2610,7 +2384,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     iget-object v0, p0, Lcom/android/server/pm/PackageSessionVerifier;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/pm/PackageSessionVerifier$$ExternalSyntheticLambda1;

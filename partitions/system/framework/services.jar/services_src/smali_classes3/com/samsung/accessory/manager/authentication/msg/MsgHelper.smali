@@ -9,7 +9,6 @@
 
     const-string v0, "accauthentication_jni"
 
-    .line 5
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void

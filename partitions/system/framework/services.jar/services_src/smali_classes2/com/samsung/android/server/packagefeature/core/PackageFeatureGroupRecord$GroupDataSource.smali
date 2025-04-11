@@ -25,7 +25,6 @@
 .method public static synthetic $values()[Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
     .locals 7
 
-    .line 60
     sget-object v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;->NULL:Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
 
     sget-object v1, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;->INITIALIZE:Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
@@ -50,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 61
     new-instance v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
 
     const-string v1, "NULL"
@@ -121,7 +119,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;->DEBUG_MODE:Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
 
-    .line 60
     invoke-static {}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;->$values()[Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
 
     move-result-object v0
@@ -134,7 +131,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 60
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -143,7 +139,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
     .locals 1
 
-    .line 60
     const-class v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,7 +153,6 @@
 .method public static values()[Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
     .locals 1
 
-    .line 60
     sget-object v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;->$VALUES:[Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;
 
     invoke-virtual {v0}, [Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord$GroupDataSource;->clone()Ljava/lang/Object;

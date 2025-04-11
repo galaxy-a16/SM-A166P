@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/DropboxRateLimiter$DefaultClock-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/DropboxRateLimiter$DefaultClock;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public uptimeMillis()J
     .locals 2
 
-    .line 237
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0

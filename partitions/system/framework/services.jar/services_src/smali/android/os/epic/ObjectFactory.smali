@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -34,21 +33,18 @@
 .method public static create(I)Landroid/os/epic/IEpicObject;
     .locals 1
 
-    .line 51
     invoke-static {}, Landroid/os/epic/ObjectFactory;->loadAIDL()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 52
     new-instance v0, Landroid/os/epic/EpicAIDLObject;
 
     invoke-direct {v0, p0}, Landroid/os/epic/EpicAIDLObject;-><init>(I)V
 
     return-object v0
 
-    .line 53
     :cond_0
     invoke-static {}, Landroid/os/epic/ObjectFactory;->loadHIDL()Z
 
@@ -56,7 +52,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 54
     new-instance v0, Landroid/os/epic/EpicHIDLObject;
 
     invoke-direct {v0, p0}, Landroid/os/epic/EpicHIDLObject;-><init>(I)V
@@ -72,21 +67,18 @@
 .method public static create([I)Landroid/os/epic/IEpicObject;
     .locals 1
 
-    .line 59
     invoke-static {}, Landroid/os/epic/ObjectFactory;->loadAIDL()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 60
     new-instance v0, Landroid/os/epic/EpicAIDLObject;
 
     invoke-direct {v0, p0}, Landroid/os/epic/EpicAIDLObject;-><init>([I)V
 
     return-object v0
 
-    .line 61
     :cond_0
     invoke-static {}, Landroid/os/epic/ObjectFactory;->loadHIDL()Z
 
@@ -94,7 +86,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 62
     new-instance v0, Landroid/os/epic/EpicHIDLObject;
 
     invoke-direct {v0, p0}, Landroid/os/epic/EpicHIDLObject;-><init>([I)V
@@ -112,7 +103,6 @@
 
     const-string/jumbo v0, "vendor.samsung_slsi.hardware.epic.IEpicRequest/default"
 
-    .line 23
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -133,7 +123,6 @@
 .method public static loadHIDL()Z
     .locals 6
 
-    .line 27
     const-class v0, Landroid/os/epic/ObjectFactory;
 
     monitor-enter v0
@@ -142,7 +131,6 @@
 
     const/4 v2, 0x0
 
-    .line 29
     :try_start_0
     sget-object v3, Landroid/os/epic/ObjectFactory;->m_hidl_epic_request_cls:Ljava/lang/Class;
 
@@ -152,14 +140,12 @@
 
     if-nez v3, :cond_0
 
-    .line 30
     sput-boolean v1, Landroid/os/epic/ObjectFactory;->m_has_load:Z
 
     new-array v3, v2, [Ljava/lang/Class;
 
     const-string/jumbo v4, "vendor.samsung_slsi.hardware.epic.V1_0.IEpicRequest"
 
-    .line 32
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
@@ -168,7 +154,6 @@
 
     const-string v5, "getService"
 
-    .line 33
     invoke-virtual {v4, v5, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
@@ -185,7 +170,6 @@
 
     goto :goto_3
 
-    .line 36
     :catch_0
     :cond_0
     :goto_0
@@ -194,7 +178,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 39
     :try_start_2
     sget-object v0, Landroid/os/epic/ObjectFactory;->m_hidl_epic_getService_func:Ljava/lang/reflect/Method;
 
@@ -207,7 +190,6 @@
 
     const/4 v4, 0x0
 
-    .line 42
     invoke-virtual {v0, v4, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -231,13 +213,11 @@
 
     const-string v1, "failed to get HIDL request"
 
-    .line 44
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
     return v2
 
-    .line 36
     :goto_3
     :try_start_3
     monitor-exit v0

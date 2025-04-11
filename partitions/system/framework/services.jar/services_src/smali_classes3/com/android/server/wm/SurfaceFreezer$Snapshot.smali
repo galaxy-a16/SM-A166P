@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$V6nuYzcC-CCueHi3OcKeQGN9c-g(ILcom/android/server/wm/AnimationAdapter;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->lambda$startAnimation$0(ILcom/android/server/wm/AnimationAdapter;)V
 
     return-void
@@ -24,17 +23,14 @@
 .method public constructor <init>(Lcom/android/server/wm/SurfaceFreezer;Landroid/view/SurfaceControl$Transaction;Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;Landroid/view/SurfaceControl;)V
     .locals 4
 
-    .line 227
     iput-object p1, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->this$0:Lcom/android/server/wm/SurfaceFreezer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 228
     invoke-virtual {p1, p3}, Lcom/android/server/wm/SurfaceFreezer;->createFromHardwareBufferInner(Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;)Landroid/graphics/GraphicBuffer;
 
     move-result-object v0
 
-    .line 230
     invoke-static {p1}, Lcom/android/server/wm/SurfaceFreezer;->-$$Nest$fgetmAnimatable(Lcom/android/server/wm/SurfaceFreezer;)Lcom/android/server/wm/SurfaceFreezer$Freezable;
 
     move-result-object v1
@@ -55,7 +51,6 @@
 
     move-result-object p1
 
-    .line 231
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -72,17 +67,14 @@
 
     const/4 v1, -0x3
 
-    .line 232
     invoke-virtual {p1, v1}, Landroid/view/SurfaceControl$Builder;->setFormat(I)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p1
 
-    .line 233
     invoke-virtual {p1, p4}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p1
 
-    .line 234
     invoke-virtual {p3}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->containsSecureLayers()Z
 
     move-result p4
@@ -93,24 +85,20 @@
 
     const-string p4, "SurfaceFreezer.Snapshot"
 
-    .line 235
     invoke-virtual {p1, p4}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p1
 
-    .line 236
     invoke-virtual {p1}, Landroid/view/SurfaceControl$Builder;->setBLASTLayer()Landroid/view/SurfaceControl$Builder;
 
     move-result-object p1
 
-    .line 237
     invoke-virtual {p1}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    .line 239
     sget-boolean p4, Lcom/android/server/wm/ProtoLogCache;->WM_SHOW_TRANSACTIONS_enabled:Z
 
     if-eqz p4, :cond_0
@@ -133,13 +121,11 @@
 
     invoke-static {p4, v2, v3, v1, p1}, Lcom/android/internal/protolog/ProtoLogImpl;->i(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 241
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {p2, p1, v0}, Landroid/view/SurfaceControl$Transaction;->setBuffer(Landroid/view/SurfaceControl;Landroid/graphics/GraphicBuffer;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 242
     iget-object p1, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {p3}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->getColorSpace()Landroid/graphics/ColorSpace;
@@ -148,12 +134,10 @@
 
     invoke-virtual {p2, p1, p3}, Landroid/view/SurfaceControl$Transaction;->setColorSpace(Landroid/view/SurfaceControl;Landroid/graphics/ColorSpace;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 243
     iget-object p1, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {p2, p1}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 247
     iget-object p0, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     const p1, 0x7fffffff
@@ -166,7 +150,6 @@
 .method public static synthetic lambda$startAnimation$0(ILcom/android/server/wm/AnimationAdapter;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -175,26 +158,21 @@
 .method public cancelAnimation(Landroid/view/SurfaceControl$Transaction;Z)V
     .locals 3
 
-    .line 283
     iget-object v0, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    .line 284
     iget-object v1, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mAnimation:Lcom/android/server/wm/AnimationAdapter;
 
     const/4 v2, 0x0
 
-    .line 285
     iput-object v2, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mAnimation:Lcom/android/server/wm/AnimationAdapter;
 
     if-eqz v1, :cond_0
 
-    .line 287
     invoke-interface {v1, v0}, Lcom/android/server/wm/AnimationAdapter;->onAnimationCancelled(Landroid/view/SurfaceControl;)V
 
     :cond_0
     if-nez p2, :cond_1
 
-    .line 290
     invoke-virtual {p0, p1}, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->destroy(Landroid/view/SurfaceControl$Transaction;)V
 
     :cond_1
@@ -204,20 +182,17 @@
 .method public destroy(Landroid/view/SurfaceControl$Transaction;)V
     .locals 1
 
-    .line 251
     iget-object v0, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 254
     :cond_0
     invoke-virtual {p1, v0}, Landroid/view/SurfaceControl$Transaction;->remove(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
     const/4 p1, 0x0
 
-    .line 255
     iput-object p1, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     return-void
@@ -228,25 +203,20 @@
 
     const/4 v0, 0x1
 
-    .line 267
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->cancelAnimation(Landroid/view/SurfaceControl$Transaction;Z)V
 
-    .line 268
     iput-object p2, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mAnimation:Lcom/android/server/wm/AnimationAdapter;
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-nez v0, :cond_0
 
     const/4 p2, 0x0
 
-    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->cancelAnimation(Landroid/view/SurfaceControl$Transaction;Z)V
 
     return-void
 
-    .line 273
     :cond_0
     new-instance p0, Lcom/android/server/wm/SurfaceFreezer$Snapshot$$ExternalSyntheticLambda0;
 

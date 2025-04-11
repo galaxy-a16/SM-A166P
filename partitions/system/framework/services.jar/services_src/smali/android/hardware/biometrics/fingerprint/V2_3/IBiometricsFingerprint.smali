@@ -19,30 +19,25 @@
     :cond_0
     const-string v1, "android.hardware.biometrics.fingerprint@2.3::IBiometricsFingerprint"
 
-    .line 25
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 27
     instance-of v3, v2, Landroid/hardware/biometrics/fingerprint/V2_3/IBiometricsFingerprint;
 
     if-eqz v3, :cond_1
 
-    .line 28
     check-cast v2, Landroid/hardware/biometrics/fingerprint/V2_3/IBiometricsFingerprint;
 
     return-object v2
 
-    .line 31
     :cond_1
     new-instance v2, Landroid/hardware/biometrics/fingerprint/V2_3/IBiometricsFingerprint$Proxy;
 
     invoke-direct {v2, p0}, Landroid/hardware/biometrics/fingerprint/V2_3/IBiometricsFingerprint$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 34
     :try_start_0
     invoke-interface {v2}, Landroid/hardware/biometrics/fingerprint/V2_3/IBiometricsFingerprint;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 35
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -90,7 +84,6 @@
 
     goto :goto_0
 
-    .line 49
     :cond_0
     invoke-interface {p0}, Landroid/os/IHwInterface;->asBinder()Landroid/os/IHwBinder;
 

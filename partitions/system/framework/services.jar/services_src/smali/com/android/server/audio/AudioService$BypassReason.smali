@@ -35,7 +35,6 @@
 .method public static synthetic $values()[Lcom/android/server/audio/AudioService$BypassReason;
     .locals 12
 
-    .line 15791
     sget-object v0, Lcom/android/server/audio/AudioService$BypassReason;->NO_BYPASS:Lcom/android/server/audio/AudioService$BypassReason;
 
     sget-object v1, Lcom/android/server/audio/AudioService$BypassReason;->DISPLAY_VOLUME_CONTROL:Lcom/android/server/audio/AudioService$BypassReason;
@@ -70,7 +69,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 15792
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "NO_BYPASS"
@@ -81,7 +79,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->NO_BYPASS:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15793
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "DISPLAY_VOLUME_CONTROL"
@@ -92,7 +89,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->DISPLAY_VOLUME_CONTROL:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15794
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "CANNOT_UNMUTE_SILENT_VIBRATE"
@@ -103,7 +99,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->CANNOT_UNMUTE_SILENT_VIBRATE:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15795
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "ALL_SOUND_MUTE"
@@ -114,7 +109,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->ALL_SOUND_MUTE:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15796
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "TMS_CONNECT"
@@ -125,7 +119,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->TMS_CONNECT:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15797
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "CONSUME_ADJUST_SAME"
@@ -136,7 +129,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->CONSUME_ADJUST_SAME:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15798
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "MULTISOUND"
@@ -147,7 +139,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->MULTISOUND:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15799
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "MEDIA_VOLUME_STEP_ON"
@@ -158,7 +149,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->MEDIA_VOLUME_STEP_ON:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15800
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "SKIP_WARNING_POPUP_VISIBLE"
@@ -169,7 +159,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->SKIP_WARNING_POPUP_VISIBLE:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15801
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "SKIP_VOLUME_PANEL_NOT_VISIBLE"
@@ -180,7 +169,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->SKIP_VOLUME_PANEL_NOT_VISIBLE:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15802
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "VOLUME_LIMITER"
@@ -191,7 +179,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->VOLUME_LIMITER:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15803
     new-instance v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     const-string v1, "LE_BROADCAST"
@@ -202,7 +189,6 @@
 
     sput-object v0, Lcom/android/server/audio/AudioService$BypassReason;->LE_BROADCAST:Lcom/android/server/audio/AudioService$BypassReason;
 
-    .line 15791
     invoke-static {}, Lcom/android/server/audio/AudioService$BypassReason;->$values()[Lcom/android/server/audio/AudioService$BypassReason;
 
     move-result-object v0
@@ -215,7 +201,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 15791
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -224,7 +209,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/audio/AudioService$BypassReason;
     .locals 1
 
-    .line 15791
     const-class v0, Lcom/android/server/audio/AudioService$BypassReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -239,7 +223,6 @@
 .method public static values()[Lcom/android/server/audio/AudioService$BypassReason;
     .locals 1
 
-    .line 15791
     sget-object v0, Lcom/android/server/audio/AudioService$BypassReason;->$VALUES:[Lcom/android/server/audio/AudioService$BypassReason;
 
     invoke-virtual {v0}, [Lcom/android/server/audio/AudioService$BypassReason;->clone()Ljava/lang/Object;

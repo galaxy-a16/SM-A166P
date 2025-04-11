@@ -11,17 +11,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 17
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     const-string v0, "[HWRS_SYS]Service"
 
     const-string v1, "create SemHwrsService"
 
-    .line 18
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     invoke-static {p1}, Lcom/samsung/android/server/hwrs/SemHwrsServiceImpl;->createInstance(Landroid/content/Context;)Lcom/samsung/android/server/hwrs/SemHwrsServiceImpl;
 
     move-result-object p1
@@ -36,7 +33,6 @@
 .method public onBootPhase(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -47,12 +43,10 @@
 
     const-string/jumbo v1, "onStart entered"
 
-    .line 24
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "SemHwrsService"
 
-    .line 25
     iget-object v1, p0, Lcom/samsung/android/server/hwrs/SemHwrsService;->mSvcImpl:Lcom/samsung/android/server/hwrs/SemHwrsServiceImpl;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
@@ -63,7 +57,6 @@
 .method public onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
     .locals 1
 
-    .line 48
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +89,6 @@
 .method public onUserStopping(Lcom/android/server/SystemService$TargetUser;)V
     .locals 1
 
-    .line 53
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -131,7 +123,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 35
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object p1
@@ -145,7 +136,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 36
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -179,7 +169,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     iget-object p0, p0, Lcom/samsung/android/server/hwrs/SemHwrsService;->mSvcImpl:Lcom/samsung/android/server/hwrs/SemHwrsServiceImpl;
 
     invoke-virtual {p2}, Lcom/android/server/SystemService$TargetUser;->getUserHandle()Landroid/os/UserHandle;
@@ -194,7 +183,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 2
 
-    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,7 +209,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     iget-object p0, p0, Lcom/samsung/android/server/hwrs/SemHwrsService;->mSvcImpl:Lcom/samsung/android/server/hwrs/SemHwrsServiceImpl;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserHandle()Landroid/os/UserHandle;

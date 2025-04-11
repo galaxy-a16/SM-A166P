@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayRotationReversionController;->$r8$lambda$xretljz4CtnpsFDWn6U8IbZGuaQ(Lcom/android/server/wm/Task;)Z

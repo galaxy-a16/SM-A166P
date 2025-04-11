@@ -33,7 +33,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/BGProtectManager$exceptFlag;
     .locals 9
 
-    .line 1032
     sget-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->NORMALANDKNOXPWHL:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     sget-object v1, Lcom/android/server/am/BGProtectManager$exceptFlag;->NORMALONLY:Lcom/android/server/am/BGProtectManager$exceptFlag;
@@ -62,7 +61,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1033
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "NORMALANDKNOXPWHL"
@@ -73,7 +71,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->NORMALANDKNOXPWHL:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1034
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "NORMALONLY"
@@ -84,7 +81,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->NORMALONLY:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1035
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "NORMALANDKNOX"
@@ -95,7 +91,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->NORMALANDKNOX:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1036
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "KNOXONLY"
@@ -106,7 +101,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->KNOXONLY:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1037
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "SANDBOX"
@@ -117,7 +111,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->SANDBOX:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1038
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "CAMERAGUARD"
@@ -128,7 +121,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->CAMERAGUARD:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1039
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "BROWSERMAIN"
@@ -139,7 +131,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->BROWSERMAIN:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1040
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "HOMEHUB"
@@ -150,7 +141,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->HOMEHUB:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1041
     new-instance v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     const-string v1, "CAMERAMEDIA"
@@ -161,7 +151,6 @@
 
     sput-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->CAMERAMEDIA:Lcom/android/server/am/BGProtectManager$exceptFlag;
 
-    .line 1032
     invoke-static {}, Lcom/android/server/am/BGProtectManager$exceptFlag;->$values()[Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     move-result-object v0
@@ -174,10 +163,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 1044
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1045
     iput p3, p0, Lcom/android/server/am/BGProtectManager$exceptFlag;->value:I
 
     return-void
@@ -186,7 +173,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/BGProtectManager$exceptFlag;
     .locals 1
 
-    .line 1032
     const-class v0, Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -201,7 +187,6 @@
 .method public static values()[Lcom/android/server/am/BGProtectManager$exceptFlag;
     .locals 1
 
-    .line 1032
     sget-object v0, Lcom/android/server/am/BGProtectManager$exceptFlag;->$VALUES:[Lcom/android/server/am/BGProtectManager$exceptFlag;
 
     invoke-virtual {v0}, [Lcom/android/server/am/BGProtectManager$exceptFlag;->clone()Ljava/lang/Object;
@@ -218,7 +203,6 @@
 .method public getString()Ljava/lang/String;
     .locals 0
 
-    .line 1053
     iget p0, p0, Lcom/android/server/am/BGProtectManager$exceptFlag;->value:I
 
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -231,7 +215,6 @@
 .method public getValue()I
     .locals 0
 
-    .line 1049
     iget p0, p0, Lcom/android/server/am/BGProtectManager$exceptFlag;->value:I
 
     return p0

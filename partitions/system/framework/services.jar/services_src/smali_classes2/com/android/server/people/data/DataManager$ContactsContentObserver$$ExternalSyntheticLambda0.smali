@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Landroid/net/Uri;Lcom/android/server/people/data/DataManager$ContactsContentObserver$ConversationSelector;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/people/data/DataManager$ContactsContentObserver$$ExternalSyntheticLambda0;->f$0:Landroid/net/Uri;
@@ -31,7 +30,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/people/data/DataManager$ContactsContentObserver$$ExternalSyntheticLambda0;->f$0:Landroid/net/Uri;
 
     iget-object p0, p0, Lcom/android/server/people/data/DataManager$ContactsContentObserver$$ExternalSyntheticLambda0;->f$1:Lcom/android/server/people/data/DataManager$ContactsContentObserver$ConversationSelector;

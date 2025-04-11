@@ -10,7 +10,6 @@
 .method public executeBootLoopMitigation(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -28,7 +27,6 @@
 .method public onBootLoop(I)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

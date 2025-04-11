@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFinishCallback(Lcom/android/server/MountServiceIdler;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     return-object p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmJobParams(Lcom/android/server/MountServiceIdler;)Landroid/app/job/JobParameters;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/MountServiceIdler;->mJobParams:Landroid/app/job/JobParameters;
 
     return-object p0
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStarted(Lcom/android/server/MountServiceIdler;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/MountServiceIdler;->mStarted:Z
 
     return p0
@@ -48,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fputmStarted(Lcom/android/server/MountServiceIdler;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/MountServiceIdler;->mStarted:Z
 
     return-void
@@ -57,12 +53,10 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 35
     new-instance v0, Landroid/content/ComponentName;
 
     const-class v1, Lcom/android/server/MountServiceIdler;
 
-    .line 36
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -75,7 +69,6 @@
 
     const/16 v0, 0x328
 
-    .line 38
     sput v0, Lcom/android/server/MountServiceIdler;->MOUNT_JOB_ID:I
 
     return-void
@@ -84,10 +77,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 32
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
-    .line 42
     new-instance v0, Lcom/android/server/MountServiceIdler$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/MountServiceIdler$1;-><init>(Lcom/android/server/MountServiceIdler;)V
@@ -100,12 +91,10 @@
 .method public static offsetFromTodayMidnight(II)Ljava/util/Calendar;
     .locals 3
 
-    .line 122
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 123
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -114,29 +103,24 @@
 
     const/16 v1, 0xb
 
-    .line 124
     invoke-virtual {v0, v1, p1}, Ljava/util/Calendar;->set(II)V
 
     const/16 p1, 0xc
 
     const/4 v1, 0x0
 
-    .line 125
     invoke-virtual {v0, p1, v1}, Ljava/util/Calendar;->set(II)V
 
     const/16 p1, 0xd
 
-    .line 126
     invoke-virtual {v0, p1, v1}, Ljava/util/Calendar;->set(II)V
 
     const/16 p1, 0xe
 
-    .line 127
     invoke-virtual {v0, p1, v1}, Ljava/util/Calendar;->set(II)V
 
     const/4 p1, 0x5
 
-    .line 128
     invoke-virtual {v0, p1, p0}, Ljava/util/Calendar;->add(II)V
 
     return-object v0
@@ -147,7 +131,6 @@
 
     const-string/jumbo v0, "jobscheduler"
 
-    .line 100
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -158,7 +141,6 @@
 
     const/4 v1, 0x3
 
-    .line 102
     invoke-static {v0, v1}, Lcom/android/server/MountServiceIdler;->offsetFromTodayMidnight(II)Ljava/util/Calendar;
 
     move-result-object v2
@@ -169,7 +151,6 @@
 
     const/4 v4, 0x4
 
-    .line 103
     invoke-static {v0, v4}, Lcom/android/server/MountServiceIdler;->offsetFromTodayMidnight(II)Ljava/util/Calendar;
 
     move-result-object v0
@@ -180,7 +161,6 @@
 
     const/4 v0, 0x1
 
-    .line 104
     invoke-static {v0, v1}, Lcom/android/server/MountServiceIdler;->offsetFromTodayMidnight(II)Ljava/util/Calendar;
 
     move-result-object v1
@@ -189,7 +169,6 @@
 
     move-result-wide v6
 
-    .line 107
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
@@ -206,7 +185,6 @@
 
     if-gez v1, :cond_0
 
-    .line 108
     sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0xa
@@ -217,7 +195,6 @@
 
     goto :goto_0
 
-    .line 110
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -225,7 +202,6 @@
 
     sub-long v1, v6, v1
 
-    .line 113
     :goto_0
     new-instance v3, Landroid/app/job/JobInfo$Builder;
 
@@ -235,19 +211,14 @@
 
     invoke-direct {v3, v4, v5}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
-    .line 114
     invoke-virtual {v3, v0}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
 
-    .line 115
     invoke-virtual {v3, v0}, Landroid/app/job/JobInfo$Builder;->setRequiresBatteryNotLow(Z)Landroid/app/job/JobInfo$Builder;
 
-    .line 116
     invoke-virtual {v3, v0}, Landroid/app/job/JobInfo$Builder;->setRequiresCharging(Z)Landroid/app/job/JobInfo$Builder;
 
-    .line 117
     invoke-virtual {v3, v1, v2}, Landroid/app/job/JobInfo$Builder;->setMinimumLatency(J)Landroid/app/job/JobInfo$Builder;
 
-    .line 118
     invoke-virtual {v3}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
     move-result-object v0
@@ -262,7 +233,6 @@
 .method public onStartJob(Landroid/app/job/JobParameters;)Z
     .locals 2
 
-    .line 63
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -272,32 +242,26 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     :catch_0
     iput-object p1, p0, Lcom/android/server/MountServiceIdler;->mJobParams:Landroid/app/job/JobParameters;
 
-    .line 71
     sget-object p1, Lcom/android/server/StorageManagerService;->sSelf:Lcom/android/server/StorageManagerService;
 
     const/4 v0, 0x1
 
     if-eqz p1, :cond_0
 
-    .line 73
     iget-object v1, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     monitor-enter v1
 
-    .line 74
     :try_start_1
     iput-boolean v0, p0, Lcom/android/server/MountServiceIdler;->mStarted:Z
 
-    .line 75
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 76
     iget-object p0, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     invoke-virtual {p1, p0}, Lcom/android/server/StorageManagerService;->runIdleMaint(Ljava/lang/Runnable;)V
@@ -307,7 +271,6 @@
     :catchall_0
     move-exception p0
 
-    .line 75
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -331,28 +294,23 @@
 .method public onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 2
 
-    .line 86
     sget-object p1, Lcom/android/server/StorageManagerService;->sSelf:Lcom/android/server/StorageManagerService;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 88
     iget-object v1, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v1}, Lcom/android/server/StorageManagerService;->abortIdleMaint(Ljava/lang/Runnable;)V
 
-    .line 89
     iget-object p1, p0, Lcom/android/server/MountServiceIdler;->mFinishCallback:Ljava/lang/Runnable;
 
     monitor-enter p1
 
-    .line 90
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/MountServiceIdler;->mStarted:Z
 
-    .line 91
     monitor-exit p1
 
     goto :goto_0

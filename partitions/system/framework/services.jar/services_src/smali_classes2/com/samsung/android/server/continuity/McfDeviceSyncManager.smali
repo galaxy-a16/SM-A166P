@@ -33,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -42,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mIsValidState:Z
 
     return p0
@@ -51,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPreconditionObserver(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Lcom/samsung/android/server/continuity/PreconditionObserver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mPreconditionObserver:Lcom/samsung/android/server/continuity/PreconditionObserver;
 
     return-object p0
@@ -60,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsValidState(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mIsValidState:Z
 
     return-void
@@ -69,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$mhandleMessageWhat(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->handleMessageWhat(II)V
 
     return-void
@@ -78,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$minitMcfDeviceSyncMainController(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->initMcfDeviceSyncMainController(I)V
 
     return-void
@@ -87,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$mremoveMessage(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeMessage(I)V
 
     return-void
@@ -96,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$msendMessageDelayed(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;IIJ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->sendMessageDelayed(IIJ)V
 
     return-void
@@ -105,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$munbindMcf(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->unbindMcf()V
 
     return-void
@@ -114,16 +105,12 @@
 .method public constructor <init>(Lcom/samsung/android/server/continuity/PreconditionObserver;Lcom/samsung/android/mcfds/lib/DeviceSyncManager;)V
     .locals 0
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mPreconditionObserver:Lcom/samsung/android/server/continuity/PreconditionObserver;
 
-    .line 50
     iput-object p2, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mDsManager:Lcom/samsung/android/mcfds/lib/DeviceSyncManager;
 
-    .line 51
     new-instance p1, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -142,7 +129,6 @@
 .method public final bindMcf(I)V
     .locals 4
 
-    .line 173
     iget-boolean v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mIsValidState:Z
 
     const-string v1, "[MCF_DS_SYS]_McfDsManager"
@@ -151,12 +137,10 @@
 
     const-string p0, "bindMcf - invalid state"
 
-    .line 174
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 178
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mDsManager:Lcom/samsung/android/mcfds/lib/DeviceSyncManager;
 
@@ -174,7 +158,6 @@
 
     if-eq p1, v2, :cond_3
 
-    .line 181
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -202,13 +185,11 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 183
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->initMcfDeviceSyncMainController(I)V
 
     :cond_2
     return-void
 
-    .line 188
     :cond_3
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mCurrentUserHandle:Landroid/os/UserHandle;
 
@@ -216,12 +197,10 @@
 
     const-string p0, "bindMcf - null current user handle"
 
-    .line 189
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 193
     :cond_4
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mDsManager:Lcom/samsung/android/mcfds/lib/DeviceSyncManager;
 
@@ -237,7 +216,6 @@
 
     if-nez v0, :cond_5
 
-    .line 225
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,12 +236,10 @@
 
     const-wide/16 v1, 0xbb8
 
-    .line 226
     invoke-virtual {p0, v0, p1, v1, v2}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeAndSendMessageDelayed(IIJ)V
 
     goto :goto_0
 
-    .line 228
     :cond_5
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -288,7 +264,6 @@
 .method public getCurrentUserId()I
     .locals 0
 
-    .line 60
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mCurrentUserHandle:Landroid/os/UserHandle;
 
     if-nez p0, :cond_0
@@ -297,7 +272,6 @@
 
     return p0
 
-    .line 63
     :cond_0
     invoke-virtual {p0}, Landroid/os/UserHandle;->semGetIdentifier()I
 
@@ -309,7 +283,6 @@
 .method public getHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 339
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -322,7 +295,6 @@
 
     const-string v1, "getNearbyDeviceCount"
 
-    .line 156
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -338,7 +310,6 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 165
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mDsManager:Lcom/samsung/android/mcfds/lib/DeviceSyncManager;
 
@@ -346,7 +317,6 @@
 
     move-result p0
 
-    .line 166
     invoke-static {p0, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
@@ -380,31 +350,26 @@
 
     goto :goto_0
 
-    .line 322
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->replacedPackage()V
 
     goto :goto_0
 
-    .line 318
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->unbindMcf()V
 
     goto :goto_0
 
-    .line 314
     :cond_2
     invoke-virtual {p0, p2}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->bindMcf(I)V
 
     goto :goto_0
 
-    .line 310
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->stopUser()V
 
     goto :goto_0
 
-    .line 306
     :cond_4
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->start()V
 
@@ -419,7 +384,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 235
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mPreconditionObserver:Lcom/samsung/android/server/continuity/PreconditionObserver;
 
     invoke-virtual {v0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->getAutoSwitchDeviceAddress()Ljava/lang/String;
@@ -431,7 +395,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 237
     :goto_0
     iget-object v1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mDsManager:Lcom/samsung/android/mcfds/lib/DeviceSyncManager;
 
@@ -443,7 +406,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 239
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mPreconditionObserver:Lcom/samsung/android/server/continuity/PreconditionObserver;
 
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->setAutoSwitchOff()V
@@ -455,10 +417,8 @@
 .method public removeAndSendMessageDelayed(IIJ)V
     .locals 0
 
-    .line 293
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeMessage(I)V
 
-    .line 294
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->sendMessageDelayed(IIJ)V
 
     return-void
@@ -467,10 +427,8 @@
 .method public removeAndSendMessageDelayed(IJ)V
     .locals 0
 
-    .line 299
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeMessage(I)V
 
-    .line 300
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
@@ -481,7 +439,6 @@
 .method public final removeMessage(I)V
     .locals 1
 
-    .line 279
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->hasMessages(I)Z
@@ -490,7 +447,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 280
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->removeMessages(I)V
@@ -502,7 +458,6 @@
 .method public final replacedPackage()V
     .locals 4
 
-    .line 260
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
@@ -517,13 +472,10 @@
 
     const-string/jumbo v0, "replacedPackage - remove unbind message"
 
-    .line 261
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeMessage(I)V
 
-    .line 265
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
@@ -537,7 +489,6 @@
 
     const-string/jumbo p0, "replacedPackage - has bind message"
 
-    .line 266
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -545,14 +496,12 @@
     :cond_1
     const-string/jumbo v0, "replacedPackage"
 
-    .line 270
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x5
 
     const-wide/16 v2, 0x0
 
-    .line 271
     invoke-virtual {p0, v1, v0, v2, v3}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeAndSendMessageDelayed(IIJ)V
 
     return-void
@@ -561,18 +510,14 @@
 .method public final sendMessageDelayed(IIJ)V
     .locals 1
 
-    .line 285
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 286
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 287
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 288
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, v0, p3, p4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
@@ -583,7 +528,6 @@
 .method public final start()V
     .locals 4
 
-    .line 84
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->getCurrentUserId()I
 
     move-result v0
@@ -596,12 +540,10 @@
 
     const-string/jumbo v0, "start : userId is USER_NULL"
 
-    .line 86
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 89
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mPreconditionObserver:Lcom/samsung/android/server/continuity/PreconditionObserver;
 
@@ -611,7 +553,6 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->start(ILcom/samsung/android/server/continuity/AbstractPreconditionObserver$StateChangedListener;)V
 
-    .line 145
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mPreconditionObserver:Lcom/samsung/android/server/continuity/PreconditionObserver;
 
     invoke-virtual {v0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->meetConditions()Z
@@ -628,7 +569,6 @@
 
     const/4 v3, 0x2
 
-    .line 148
     invoke-virtual {p0, v3, v0, v1, v2}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeAndSendMessageDelayed(IIJ)V
 
     :cond_1
@@ -638,7 +578,6 @@
 .method public startUser(Landroid/os/UserHandle;)V
     .locals 3
 
-    .line 67
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->getCurrentUserId()I
 
     move-result v0
@@ -651,12 +590,10 @@
 
     const-string/jumbo p0, "startUser - invalid request!"
 
-    .line 68
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 72
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -678,14 +615,12 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     iput-object p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mCurrentUserHandle:Landroid/os/UserHandle;
 
     const/4 p1, 0x0
 
     const-wide/16 v0, 0x0
 
-    .line 74
     invoke-virtual {p0, p1, v0, v1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeAndSendMessageDelayed(IJ)V
 
     return-void
@@ -696,15 +631,12 @@
 
     const/4 v0, 0x0
 
-    .line 78
     iput-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mCurrentUserHandle:Landroid/os/UserHandle;
 
-    .line 79
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mPreconditionObserver:Lcom/samsung/android/server/continuity/PreconditionObserver;
 
     invoke-virtual {v0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->stop()V
 
-    .line 80
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->unbindMcf()V
 
     return-void
@@ -713,7 +645,6 @@
 .method public final unbindMcf()V
     .locals 3
 
-    .line 244
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
@@ -728,13 +659,10 @@
 
     const-string/jumbo v0, "unbindMcf - remove bind message"
 
-    .line 245
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->removeMessage(I)V
 
-    .line 249
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mDsManager:Lcom/samsung/android/mcfds/lib/DeviceSyncManager;
 
@@ -744,7 +672,6 @@
 
     if-nez v0, :cond_1
 
-    .line 251
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -766,10 +693,8 @@
     :cond_1
     const-string/jumbo v0, "unbindMcf"
 
-    .line 255
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     iget-object p0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->mDsManager:Lcom/samsung/android/mcfds/lib/DeviceSyncManager;
 
     invoke-virtual {p0}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->disconnectService()V

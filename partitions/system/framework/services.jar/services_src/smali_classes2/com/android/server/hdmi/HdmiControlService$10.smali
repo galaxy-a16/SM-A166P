@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;)V
     .locals 0
 
-    .line 877
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$10;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 3
 
-    .line 880
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$10;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     const-string v1, "enable_soundbar_mode"
@@ -40,7 +38,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fputmSoundbarModeFeatureFlagEnabled(Lcom/android/server/hdmi/HdmiControlService;Z)V
 
-    .line 883
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$10;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmHdmiCecConfig(Lcom/android/server/hdmi/HdmiControlService;)Lcom/android/server/hdmi/HdmiCecConfig;
@@ -64,7 +61,6 @@
     :cond_0
     move p1, v2
 
-    .line 886
     :goto_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$10;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 

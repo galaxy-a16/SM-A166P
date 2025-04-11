@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/internal/util/jobs/ConcurrentUtils$DirectExecutor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/internal/util/jobs/ConcurrentUtils$DirectExecutor;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 141
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void
@@ -38,7 +36,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "DIRECT_EXECUTOR"
 
     return-object p0

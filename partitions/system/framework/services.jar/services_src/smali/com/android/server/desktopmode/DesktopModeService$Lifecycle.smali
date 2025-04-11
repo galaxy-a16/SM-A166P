@@ -13,17 +13,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 403
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 404
     new-instance v0, Lcom/android/server/desktopmode/Injector;
 
     invoke-direct {v0, p1}, Lcom/android/server/desktopmode/Injector;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mInjector:Lcom/android/server/desktopmode/Injector;
 
-    .line 405
     const-class p1, Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -50,14 +47,12 @@
 
     if-ne v2, v1, :cond_4
 
-    .line 416
     iget-object v2, v0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mService:Lcom/android/server/desktopmode/DesktopModeService;
 
     iget-object v1, v0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mInjector:Lcom/android/server/desktopmode/Injector;
 
     const-class v3, Lcom/android/server/am/ActivityManagerService;
 
-    .line 417
     invoke-virtual {v1, v3}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -70,7 +65,6 @@
 
     const-class v4, Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 418
     invoke-virtual {v1, v4}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -83,7 +77,6 @@
 
     const-class v5, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 419
     invoke-virtual {v1, v5}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -96,7 +89,6 @@
 
     const-class v6, Lcom/android/server/desktopmode/BlockerManager;
 
-    .line 420
     invoke-virtual {v1, v6}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -109,7 +101,6 @@
 
     const-class v7, Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
-    .line 421
     invoke-virtual {v1, v7}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -122,7 +113,6 @@
 
     const-class v8, Lcom/android/server/desktopmode/UiManager;
 
-    .line 422
     invoke-virtual {v1, v8}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -135,7 +125,6 @@
 
     const-class v9, Lcom/android/server/desktopmode/SettingsHelper;
 
-    .line 423
     invoke-virtual {v1, v9}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -148,7 +137,6 @@
 
     const-class v10, Lcom/android/server/desktopmode/HardwareManager;
 
-    .line 424
     invoke-virtual {v1, v10}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -161,7 +149,6 @@
 
     const-class v11, Lcom/android/server/desktopmode/TouchpadManager;
 
-    .line 425
     invoke-virtual {v1, v11}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -174,7 +161,6 @@
 
     const-class v12, Lcom/android/server/desktopmode/CoverStateManager;
 
-    .line 426
     invoke-virtual {v1, v12}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -187,7 +173,6 @@
 
     const-class v13, Lcom/android/server/desktopmode/MultiResolutionManager;
 
-    .line 427
     invoke-virtual {v1, v13}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -200,7 +185,6 @@
 
     const-class v14, Lcom/android/server/desktopmode/DockManager;
 
-    .line 428
     invoke-virtual {v1, v14}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -213,7 +197,6 @@
 
     const-class v15, Lcom/android/server/desktopmode/PackageStateManager;
 
-    .line 429
     invoke-virtual {v1, v15}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -228,7 +211,6 @@
 
     const-class v15, Landroid/app/StatusBarManager;
 
-    .line 430
     invoke-virtual {v1, v15}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -237,7 +219,6 @@
 
     check-cast v16, Landroid/app/StatusBarManager;
 
-    .line 431
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_STANDALONE:Z
 
     if-eqz v1, :cond_0
@@ -264,14 +245,12 @@
 
     const-class v1, Lcom/android/server/desktopmode/DisplayPortStateManager;
 
-    .line 432
     invoke-virtual {v15, v1}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/desktopmode/DisplayPortStateManager;
 
-    .line 433
     sget-boolean v15, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_WIRELESS_DEX:Z
 
     if-nez v15, :cond_2
@@ -303,13 +282,11 @@
 
     check-cast v1, Lcom/android/server/desktopmode/WirelessDexManager;
 
-    .line 435
     :goto_2
     sget-boolean v15, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_WIRELESS_DEX:Z
 
     if-eqz v15, :cond_3
 
-    .line 436
     iget-object v15, v0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mInjector:Lcom/android/server/desktopmode/Injector;
 
     move-object/from16 v20, v1
@@ -329,7 +306,6 @@
 
     const/4 v1, 0x0
 
-    .line 437
     :goto_3
     iget-object v15, v0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mInjector:Lcom/android/server/desktopmode/Injector;
 
@@ -337,7 +313,6 @@
 
     const-class v1, Lcom/android/server/desktopmode/DualModeChanger;
 
-    .line 438
     invoke-virtual {v15, v1}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -350,7 +325,6 @@
 
     const-class v15, Lcom/android/server/desktopmode/StandaloneModeChanger;
 
-    .line 439
     invoke-virtual {v1, v15}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -363,7 +337,6 @@
 
     const-class v15, Lcom/android/server/desktopmode/McfManager;
 
-    .line 440
     invoke-virtual {v1, v15}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -376,7 +349,6 @@
 
     const-class v1, Lcom/samsung/android/knox/dex/DexManager;
 
-    .line 441
     invoke-virtual {v0, v1}, Lcom/android/server/desktopmode/Injector;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -395,7 +367,6 @@
 
     move-object/from16 v20, v25
 
-    .line 416
     invoke-virtual/range {v2 .. v24}, Lcom/android/server/desktopmode/DesktopModeService;->injectServices(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/wm/ActivityTaskManagerService;Lcom/android/server/wm/ActivityTaskManagerInternal;Lcom/android/server/desktopmode/BlockerManager;Lcom/android/server/desktopmode/EmergencyModeBlocker;Lcom/android/server/desktopmode/UiManager;Lcom/android/server/desktopmode/SettingsHelper;Lcom/android/server/desktopmode/HardwareManager;Lcom/android/server/desktopmode/TouchpadManager;Lcom/android/server/desktopmode/CoverStateManager;Lcom/android/server/desktopmode/MultiResolutionManager;Lcom/android/server/desktopmode/DockManager;Lcom/android/server/desktopmode/PackageStateManager;Landroid/app/StatusBarManager;Lcom/android/server/desktopmode/BootInitBlocker;Lcom/android/server/desktopmode/DisplayPortStateManager;Lcom/android/server/desktopmode/WirelessDexManager;Lcom/android/server/desktopmode/BleAdvertiserServiceManager;Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/StandaloneModeChanger;Lcom/android/server/desktopmode/McfManager;Lcom/samsung/android/knox/dex/DexManager;)V
 
     :cond_4
@@ -407,7 +378,6 @@
 
     const-string v0, "desktopmode"
 
-    .line 410
     iget-object v1, p0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mService:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
@@ -418,7 +388,6 @@
 .method public onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 447
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mService:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -433,7 +402,6 @@
 .method public onUserStopped(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 467
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mService:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -448,7 +416,6 @@
 .method public onUserStopping(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 462
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mService:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -463,7 +430,6 @@
 .method public onUserSwitching(Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 457
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mService:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p2}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -478,7 +444,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 452
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$Lifecycle;->mService:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I

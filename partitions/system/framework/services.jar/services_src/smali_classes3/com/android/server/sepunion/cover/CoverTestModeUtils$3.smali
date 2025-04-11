@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverTestModeUtils;Landroid/os/Handler;)V
     .locals 0
 
-    .line 69
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils$3;->this$0:Lcom/android/server/sepunion/cover/CoverTestModeUtils;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils$3;->this$0:Lcom/android/server/sepunion/cover/CoverTestModeUtils;
 
     invoke-static {p0}, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->-$$Nest$mgetTestVisibleRectFromSetting(Lcom/android/server/sepunion/cover/CoverTestModeUtils;)Landroid/graphics/Rect;

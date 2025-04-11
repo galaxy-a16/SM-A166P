@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/compat/OverrideValidatorImpl;)V
     .locals 0
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/compat/OverrideValidatorImpl$SettingsObserver;->this$0:Lcom/android/server/compat/OverrideValidatorImpl;
 
-    .line 57
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,14 +27,12 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 61
     iget-object p0, p0, Lcom/android/server/compat/OverrideValidatorImpl$SettingsObserver;->this$0:Lcom/android/server/compat/OverrideValidatorImpl;
 
     invoke-static {p0}, Lcom/android/server/compat/OverrideValidatorImpl;->-$$Nest$fgetmContext(Lcom/android/server/compat/OverrideValidatorImpl;)Landroid/content/Context;
 
     move-result-object p1
 
-    .line 62
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -45,7 +41,6 @@
 
     const/4 v1, 0x0
 
-    .line 61
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1

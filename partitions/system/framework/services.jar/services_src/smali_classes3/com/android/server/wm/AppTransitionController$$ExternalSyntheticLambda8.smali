@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-static {p1}, Lcom/android/server/wm/AppTransitionController;->$r8$lambda$f7NxQa4sKOBv9Kgqft-3cCfTftA(Lcom/android/server/wm/ActivityRecord;)V

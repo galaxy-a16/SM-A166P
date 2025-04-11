@@ -31,7 +31,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 46
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     sput-boolean v0, Lcom/android/server/companion/transport/Transport;->DEBUG:Z
@@ -42,47 +41,38 @@
 .method public constructor <init>(ILandroid/os/ParcelFileDescriptor;Landroid/content/Context;)V
     .locals 1
 
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/companion/transport/Transport;->mPendingRequests:Landroid/util/SparseArray;
 
-    .line 85
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/companion/transport/Transport;->mNextSequence:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 88
     iput p1, p0, Lcom/android/server/companion/transport/Transport;->mAssociationId:I
 
-    .line 89
     iput-object p2, p0, Lcom/android/server/companion/transport/Transport;->mFd:Landroid/os/ParcelFileDescriptor;
 
-    .line 90
     new-instance p1, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
     invoke-direct {p1, p2}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
     iput-object p1, p0, Lcom/android/server/companion/transport/Transport;->mRemoteIn:Ljava/io/InputStream;
 
-    .line 91
     new-instance p1, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     invoke-direct {p1, p2}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
     iput-object p1, p0, Lcom/android/server/companion/transport/Transport;->mRemoteOut:Ljava/io/OutputStream;
 
-    .line 92
     iput-object p3, p0, Lcom/android/server/companion/transport/Transport;->mContext:Landroid/content/Context;
 
-    .line 93
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -95,7 +85,6 @@
 .method public static isRequest(I)Z
     .locals 1
 
-    .line 0
     const/high16 v0, -0x1000000
 
     and-int/2addr p0, v0
@@ -118,7 +107,6 @@
 .method public static isResponse(I)Z
     .locals 1
 
-    .line 0
     const/high16 v0, -0x1000000
 
     and-int/2addr p0, v0
@@ -143,7 +131,6 @@
 .method public addListener(ILandroid/companion/IOnMessageReceivedListener;)V
     .locals 0
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/companion/transport/Transport;->mListeners:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -158,7 +145,6 @@
 .method public final callback(I[B)V
     .locals 3
 
-    .line 208
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mListeners:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -171,7 +157,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 210
     :try_start_0
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mListeners:Ljava/util/Map;
 
@@ -193,7 +178,6 @@
 
     const-string v0, "CDM_CompanionTransport"
 
-    .line 211
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -244,12 +228,10 @@
 .method public close()V
     .locals 1
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mOnTransportClosed:Lcom/android/server/companion/transport/Transport$OnTransportClosedListener;
 
     if-eqz v0, :cond_0
 
-    .line 129
     invoke-interface {v0, p0}, Lcom/android/server/companion/transport/Transport$OnTransportClosedListener;->onClosed(Lcom/android/server/companion/transport/Transport;)V
 
     :cond_0
@@ -259,7 +241,6 @@
 .method public getAssociationId()I
     .locals 0
 
-    .line 106
     iget p0, p0, Lcom/android/server/companion/transport/Transport;->mAssociationId:I
 
     return p0
@@ -268,14 +249,12 @@
 .method public final handleMessage(II[B)V
     .locals 3
 
-    .line 158
     sget-boolean v0, Lcom/android/server/companion/transport/Transport;->DEBUG:Z
 
     const-string v1, "CDM_CompanionTransport"
 
     if-eqz v0, :cond_0
 
-    .line 159
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -318,7 +297,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     :cond_0
     invoke-static {p1}, Lcom/android/server/companion/transport/Transport;->isRequest(I)Z
 
@@ -326,7 +304,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 166
     :try_start_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/companion/transport/Transport;->processRequest(II[B)V
     :try_end_0
@@ -337,7 +314,6 @@
     :catch_0
     move-exception p0
 
-    .line 168
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -360,7 +336,6 @@
 
     goto :goto_0
 
-    .line 170
     :cond_1
     invoke-static {p1}, Lcom/android/server/companion/transport/Transport;->isResponse(I)Z
 
@@ -368,12 +343,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 171
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/companion/transport/Transport;->processResponse(II[B)V
 
     goto :goto_0
 
-    .line 173
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -420,7 +393,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 200
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -441,19 +413,16 @@
 
     invoke-static {v3, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     sget-object p1, Llibcore/util/EmptyArray;->BYTE:[B
 
     invoke-virtual {p0, v2, p2, p1}, Lcom/android/server/companion/transport/Transport;->sendMessage(II[B)V
 
     goto :goto_0
 
-    .line 191
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1, p3}, Lcom/android/server/companion/transport/Transport;->callback(I[B)V
 
-    .line 192
     sget-object p1, Llibcore/util/EmptyArray;->BYTE:[B
 
     invoke-virtual {p0, v1, p2, p1}, Lcom/android/server/companion/transport/Transport;->sendMessage(II[B)V
@@ -465,27 +434,22 @@
     :catch_0
     const-string p1, "Failed to restore permissions"
 
-    .line 194
     invoke-static {v3, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     sget-object p1, Llibcore/util/EmptyArray;->BYTE:[B
 
     invoke-virtual {p0, v2, p2, p1}, Lcom/android/server/companion/transport/Transport;->sendMessage(II[B)V
 
     goto :goto_0
 
-    .line 181
     :cond_1
     invoke-virtual {p0, v1, p2, p3}, Lcom/android/server/companion/transport/Transport;->sendMessage(II[B)V
 
     goto :goto_0
 
-    .line 185
     :cond_2
     invoke-virtual {p0, p1, p3}, Lcom/android/server/companion/transport/Transport;->callback(I[B)V
 
-    .line 186
     sget-object p1, Llibcore/util/EmptyArray;->BYTE:[B
 
     invoke-virtual {p0, v1, p2, p1}, Lcom/android/server/companion/transport/Transport;->sendMessage(II[B)V
@@ -497,12 +461,10 @@
 .method public final processResponse(II[B)V
     .locals 1
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mPendingRequests:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 222
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/transport/Transport;->mPendingRequests:Landroid/util/SparseArray;
 
@@ -512,7 +474,6 @@
 
     check-cast p0, Ljava/util/concurrent/CompletableFuture;
 
-    .line 223
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -521,7 +482,6 @@
 
     const-string p0, "CDM_CompanionTransport"
 
-    .line 225
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -551,7 +511,6 @@
 
     const-string p0, "CDM_CompanionTransport"
 
-    .line 239
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -574,13 +533,11 @@
 
     goto :goto_0
 
-    .line 231
     :cond_1
     invoke-virtual {p0, p3}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 235
     :cond_2
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -596,7 +553,6 @@
     :catchall_0
     move-exception p0
 
-    .line 223
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -608,7 +564,6 @@
 .method public requestForResponse(I[B)Ljava/util/concurrent/Future;
     .locals 4
 
-    .line 137
     sget-boolean v0, Lcom/android/server/companion/transport/Transport;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -619,7 +574,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     :cond_0
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mNextSequence:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -627,28 +581,23 @@
 
     move-result v0
 
-    .line 139
     new-instance v1, Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {v1}, Ljava/util/concurrent/CompletableFuture;-><init>()V
 
-    .line 140
     iget-object v2, p0, Lcom/android/server/companion/transport/Transport;->mPendingRequests:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 141
     :try_start_0
     iget-object v3, p0, Lcom/android/server/companion/transport/Transport;->mPendingRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 142
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 145
     :try_start_1
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/companion/transport/Transport;->sendMessage(II[B)V
     :try_end_1
@@ -659,23 +608,19 @@
     :catch_0
     move-exception p1
 
-    .line 147
     iget-object p2, p0, Lcom/android/server/companion/transport/Transport;->mPendingRequests:Landroid/util/SparseArray;
 
     monitor-enter p2
 
-    .line 148
     :try_start_2
     iget-object p0, p0, Lcom/android/server/companion/transport/Transport;->mPendingRequests:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 149
     monitor-exit p2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 150
     invoke-virtual {v1, p1}, Ljava/util/concurrent/CompletableFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -684,7 +629,6 @@
     :catchall_0
     move-exception p0
 
-    .line 149
     :try_start_3
     monitor-exit p2
     :try_end_3
@@ -695,7 +639,6 @@
     :catchall_1
     move-exception p0
 
-    .line 142
     :try_start_4
     monitor-exit v2
     :try_end_4
@@ -710,7 +653,6 @@
 .method public setOnTransportClosedListener(Lcom/android/server/companion/transport/Transport$OnTransportClosedListener;)V
     .locals 0
 
-    .line 245
     iput-object p1, p0, Lcom/android/server/companion/transport/Transport;->mOnTransportClosed:Lcom/android/server/companion/transport/Transport$OnTransportClosedListener;
 
     return-void

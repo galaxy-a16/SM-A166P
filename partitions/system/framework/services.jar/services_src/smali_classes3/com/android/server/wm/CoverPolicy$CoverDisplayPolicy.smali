@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/CoverPolicy;)V
     .locals 0
 
-    .line 432
     iput-object p1, p0, Lcom/android/server/wm/CoverPolicy$CoverDisplayPolicy;->this$0:Lcom/android/server/wm/CoverPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public getOtherDisplayId(I)I
     .locals 1
 
-    .line 455
     invoke-virtual {p0}, Lcom/android/server/wm/CoverPolicy$CoverDisplayPolicy;->isCoverClosed()Z
 
     move-result p0
@@ -56,7 +54,6 @@
 .method public hasCoverHome(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x4
 
     if-ne p1, p0, :cond_0
@@ -75,7 +72,6 @@
 .method public final isCoverClosed()Z
     .locals 0
 
-    .line 434
     iget-object p0, p0, Lcom/android/server/wm/CoverPolicy$CoverDisplayPolicy;->this$0:Lcom/android/server/wm/CoverPolicy;
 
     iget-object p0, p0, Lcom/android/server/wm/CoverPolicy;->mViewCoverDisplay:Lcom/android/server/wm/DisplayContent;
@@ -106,7 +102,6 @@
 .method public isDisplayControlledByPolicy(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x4
 
     if-ne p1, p0, :cond_0
@@ -125,7 +120,6 @@
 .method public shouldChooseDefaultTaskDisplayArea(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x4
 
     if-ne p1, p0, :cond_0
@@ -144,7 +138,6 @@
 .method public shouldNotHandleForcedResizableTaskIfNeeded(II)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x4
 
     if-ne p1, p0, :cond_0
@@ -167,7 +160,6 @@
 .method public shouldNotTopDisplay(I)Z
     .locals 2
 
-    .line 450
     invoke-virtual {p0}, Lcom/android/server/wm/CoverPolicy$CoverDisplayPolicy;->isCoverClosed()Z
 
     move-result p0
@@ -203,7 +195,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 469
     invoke-virtual {p0}, Lcom/android/server/wm/CoverPolicy$CoverDisplayPolicy;->isCoverClosed()Z
 
     move-result p0

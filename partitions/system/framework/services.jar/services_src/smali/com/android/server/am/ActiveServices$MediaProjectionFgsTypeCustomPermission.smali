@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/am/ActiveServices;)V
     .locals 0
 
-    .line 2907
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$MediaProjectionFgsTypeCustomPermission;->this$0:Lcom/android/server/am/ActiveServices;
 
     const-string p1, "Media projection screen capture permission"
 
-    .line 2908
     invoke-direct {p0, p1}, Landroid/app/ForegroundServiceTypePolicy$ForegroundServiceTypePermission;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public checkPermission(Landroid/content/Context;IILjava/lang/String;Z)I
     .locals 0
 
-    .line 2914
     iget-object p0, p0, Lcom/android/server/am/ActiveServices$MediaProjectionFgsTypeCustomPermission;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object p0, p0, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;

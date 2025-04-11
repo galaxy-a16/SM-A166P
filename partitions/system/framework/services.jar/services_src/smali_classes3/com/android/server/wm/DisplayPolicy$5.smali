@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayPolicy;)V
     .locals 0
 
-    .line 4231
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy$5;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-direct {p0}, Lcom/samsung/cmfa/AuthTouch/IAuthTouchEnableListener$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public notifyTouchEventEnabled(ZZ)V
     .locals 4
 
-    .line 4234
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,7 +57,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4235
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
@@ -68,7 +65,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 4237
     iget-object p1, p0, Lcom/android/server/wm/DisplayPolicy$5;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmIsCmfaStarted(Lcom/android/server/wm/DisplayPolicy;)Z
@@ -81,17 +77,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 4238
     iput v1, v0, Landroid/os/Message;->what:I
 
     if-eqz p2, :cond_0
 
-    .line 4240
     iput v2, v0, Landroid/os/Message;->arg1:I
 
     goto :goto_0
 
-    .line 4242
     :cond_0
     iput v3, v0, Landroid/os/Message;->arg1:I
 
@@ -100,27 +93,22 @@
     :cond_1
     const/4 p1, 0x7
 
-    .line 4245
     iput p1, v0, Landroid/os/Message;->what:I
 
     if-eqz p2, :cond_2
 
-    .line 4247
     iput v2, v0, Landroid/os/Message;->arg1:I
 
     goto :goto_0
 
-    .line 4249
     :cond_2
     iput v3, v0, Landroid/os/Message;->arg1:I
 
     goto :goto_0
 
-    .line 4253
     :cond_3
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 4255
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$5;->this$0:Lcom/android/server/wm/DisplayPolicy;
 

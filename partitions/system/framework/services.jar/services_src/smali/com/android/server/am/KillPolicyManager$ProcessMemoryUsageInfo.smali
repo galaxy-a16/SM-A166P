@@ -25,7 +25,6 @@
 .method public static synthetic $r8$lambda$KuSGRX5RvpyZiWhVjROtGYitUrY(Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;Landroid/util/SparseArray;Lcom/android/internal/os/ProcessCpuTracker$Stats;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->lambda$getProcDumpMemInfo$0(Landroid/util/SparseArray;Lcom/android/internal/os/ProcessCpuTracker$Stats;)V
 
     return-void
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$mclearAdjPss(Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->clearAdjPss()V
 
     return-void
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$mgetProcDumpMemInfo(Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->getProcDumpMemInfo()V
 
     return-void
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$mshowDebugAdjPss(Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->showDebugAdjPss()V
 
     return-void
@@ -61,39 +57,32 @@
 .method public constructor <init>(Lcom/android/server/am/KillPolicyManager;)V
     .locals 0
 
-    .line 3474
     iput-object p1, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 3476
     iput p1, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->PROCS_STATS_PSS:I
 
     const/4 p1, 0x1
 
-    .line 3477
     iput p1, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->PROCS_STATS_SWAP_PSS:I
 
     const/4 p1, 0x2
 
-    .line 3478
     iput p1, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->PROCS_STATS_WRITEBACK:I
 
     const/4 p1, 0x3
 
-    .line 3479
     iput p1, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->PROCS_STATS_COUNT:I
 
-    .line 3481
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->procMemDumpInfoList:Ljava/util/List;
 
-    .line 3482
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -106,7 +95,6 @@
 .method private synthetic lambda$getProcDumpMemInfo$0(Landroid/util/SparseArray;Lcom/android/internal/os/ProcessCpuTracker$Stats;)V
     .locals 4
 
-    .line 3597
     iget-wide v0, p2, Lcom/android/internal/os/ProcessCpuTracker$Stats;->vsize:J
 
     const-wide/16 v2, 0x0
@@ -123,7 +111,6 @@
 
     if-gez p1, :cond_0
 
-    .line 3598
     iget p1, p2, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
 
     const-string/jumbo p2, "native"
@@ -139,7 +126,6 @@
 .method public final clearAdjPss()V
     .locals 1
 
-    .line 3659
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -152,17 +138,14 @@
 .method public final getProcDumpMemInfo()V
     .locals 9
 
-    .line 3584
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 3587
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
-    .line 3588
     iget-object v3, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-static {v3}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fgetmAm(Lcom/android/server/am/KillPolicyManager;)Lcom/android/server/am/ActivityManagerService;
@@ -173,7 +156,6 @@
 
     monitor-enter v3
 
-    .line 3589
     :try_start_0
     new-instance v4, Ljava/util/ArrayList;
 
@@ -191,7 +173,6 @@
 
     invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 3590
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -209,7 +190,6 @@
 
     check-cast v6, Lcom/android/server/am/ProcessRecord;
 
-    .line 3591
     invoke-virtual {v6}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
     move-result v7
@@ -218,7 +198,6 @@
 
     goto :goto_0
 
-    .line 3593
     :cond_0
     monitor-exit v3
     :try_end_0
@@ -226,7 +205,6 @@
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 3596
     iget-object v3, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-static {v3}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fgetmAm(Lcom/android/server/am/KillPolicyManager;)Lcom/android/server/am/ActivityManagerService;
@@ -241,7 +219,6 @@
 
     invoke-virtual {v3, v5}, Lcom/android/server/am/AppProfiler;->forAllCpuStats(Ljava/util/function/Consumer;)V
 
-    .line 3603
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -251,14 +228,12 @@
     :goto_1
     if-ltz v2, :cond_4
 
-    .line 3604
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/am/ProcessRecord;
 
-    .line 3605
     iget-object v5, v3, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
 
     invoke-virtual {v5}, Lcom/android/server/am/ProcessStateRecord;->getSetAdjWithServices()I
@@ -267,7 +242,6 @@
 
     const/4 v6, 0x0
 
-    .line 3609
     :goto_2
     sget-object v7, Lcom/android/server/am/ActivityManagerService;->DUMP_MEM_OOM_ADJ:[I
 
@@ -275,7 +249,6 @@
 
     if-ge v6, v8, :cond_3
 
-    .line 3610
     array-length v8, v7
 
     add-int/lit8 v8, v8, -0x1
@@ -299,7 +272,6 @@
 
     goto :goto_2
 
-    .line 3613
     :cond_2
     :goto_3
     sget-object v5, Lcom/android/server/am/ActivityManagerService;->DUMP_MEM_OOM_COMPACT_LABEL:[Ljava/lang/String;
@@ -311,7 +283,6 @@
     :cond_3
     const/4 v5, 0x0
 
-    .line 3618
     :goto_4
     invoke-virtual {v3}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
@@ -323,7 +294,6 @@
 
     goto :goto_1
 
-    .line 3620
     :cond_4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -331,14 +301,12 @@
 
     sub-long/2addr v2, v0
 
-    .line 3621
     sget-boolean p0, Lcom/android/server/am/KillPolicyManager;->KPM_DEBUG:Z
 
     if-eqz p0, :cond_5
 
     const-string p0, "ActivityManager_kpm"
 
-    .line 3622
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,7 +333,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3593
     :try_start_1
     monitor-exit v3
     :try_end_1
@@ -379,7 +346,6 @@
 .method public final getProcDumpMemInfoInternal(ILjava/lang/String;)V
     .locals 12
 
-    .line 3548
     invoke-virtual {p0, p1}, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->smapsRollupPid(I)[J
 
     move-result-object v0
@@ -388,7 +354,6 @@
 
     return-void
 
-    .line 3551
     :cond_0
     invoke-static {p1}, Lcom/android/server/chimera/heimdall/Heimdall;->readMemtrackMemory(I)[J
 
@@ -406,7 +371,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3552
     array-length v6, p1
 
     if-lt v6, v1, :cond_1
@@ -419,7 +383,6 @@
 
     if-nez v6, :cond_1
 
-    .line 3553
     aget-wide v6, v0, v5
 
     aget-wide v8, p1, v5
@@ -436,7 +399,6 @@
 
     aput-wide v6, v0, v5
 
-    .line 3556
     :cond_1
     iget-object p1, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->procsMemoryPssKbByADJ:Ljava/util/HashMap;
 
@@ -448,7 +410,6 @@
 
     if-nez p1, :cond_2
 
-    .line 3557
     iget-object p0, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->procsMemoryPssKbByADJ:Ljava/util/HashMap;
 
     new-array p1, v1, [J
@@ -471,7 +432,6 @@
 
     goto :goto_0
 
-    .line 3561
     :cond_2
     iget-object p0, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->procsMemoryPssKbByADJ:Ljava/util/HashMap;
 
@@ -481,7 +441,6 @@
 
     check-cast p0, [J
 
-    .line 3562
     aget-wide v8, p0, v5
 
     aget-wide v10, v0, v5
@@ -490,7 +449,6 @@
 
     aput-wide v8, p0, v5
 
-    .line 3563
     aget-wide v8, p0, v4
 
     aget-wide v10, v0, v4
@@ -499,7 +457,6 @@
 
     aput-wide v8, p0, v4
 
-    .line 3564
     aget-wide v8, p0, v3
 
     aget-wide v10, v0, v3
@@ -508,20 +465,17 @@
 
     aput-wide v8, p0, v3
 
-    .line 3565
     aget-wide v8, p0, v2
 
     add-long/2addr v8, v6
 
     aput-wide v8, p0, v2
 
-    .line 3567
     :goto_0
     sget-boolean p0, Lcom/android/server/am/KillPolicyManager;->KPM_DEBUG:Z
 
     if-eqz p0, :cond_3
 
-    .line 3568
     new-instance p0, Ljava/lang/StringBuilder;
 
     const/16 p1, 0x80
@@ -530,23 +484,18 @@
 
     const-string p1, "getProcDumpMemInfo() "
 
-    .line 3569
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, "adj: "
 
-    .line 3570
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3571
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, ", pss: "
 
-    .line 3572
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3573
     aget-wide p1, v0, v5
 
     long-to-double p1, p1
@@ -565,10 +514,8 @@
 
     const-string p1, " mb, swappss: "
 
-    .line 3574
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3575
     aget-wide p1, v0, v4
 
     long-to-double p1, p1
@@ -583,10 +530,8 @@
 
     const-string p1, " mb, writeback:"
 
-    .line 3576
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3577
     aget-wide p1, v0, v3
 
     long-to-double p1, p1
@@ -601,12 +546,10 @@
 
     const-string p1, " mb"
 
-    .line 3578
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, "ActivityManager_kpm"
 
-    .line 3579
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -620,7 +563,6 @@
 .method public getProcDumpMemInfoThread(Lcom/android/server/am/KillPolicyManager$KpmRaw;)V
     .locals 2
 
-    .line 3487
     new-instance v0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo$1;
 
     const-string v1, "KPMProcessMemoryDumpThread"
@@ -629,7 +571,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->mProcDumpMemThread:Ljava/lang/Thread;
 
-    .line 3509
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -640,7 +581,6 @@
 
     move-object/from16 v0, p0
 
-    .line 3627
     sget-object v1, Lcom/android/server/am/ActivityManagerService;->DUMP_MEM_OOM_COMPACT_LABEL:[Ljava/lang/String;
 
     array-length v2, v1
@@ -654,7 +594,6 @@
 
     aget-object v5, v1, v4
 
-    .line 3628
     iget-object v6, v0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->procsMemoryPssKbByADJ:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -667,7 +606,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 3629
     iget-object v6, v0, Lcom/android/server/am/KillPolicyManager$ProcessMemoryUsageInfo;->procsMemoryPssKbByADJ:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -676,7 +614,6 @@
 
     check-cast v6, [J
 
-    .line 3630
     aget-wide v9, v6, v3
 
     const/4 v11, 0x1
@@ -693,7 +630,6 @@
 
     move-wide v9, v12
 
-    .line 3634
     :cond_0
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -701,15 +637,12 @@
 
     invoke-direct {v12, v13}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 3635
     invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3636
     invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v5, " - total: "
 
-    .line 3637
     invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     long-to-double v9, v9
@@ -724,15 +657,12 @@
 
     double-to-int v5, v9
 
-    .line 3638
     invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v5, " mb, pss: "
 
-    .line 3639
     invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3640
     aget-wide v9, v6, v3
 
     long-to-double v9, v9
@@ -747,10 +677,8 @@
 
     const-string v5, " mb, swappss: "
 
-    .line 3641
     invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3642
     aget-wide v9, v6, v11
 
     long-to-double v9, v9
@@ -765,12 +693,10 @@
 
     const-string v5, " mb, writeback: "
 
-    .line 3643
     invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v5, 0x2
 
-    .line 3644
     aget-wide v9, v6, v5
 
     long-to-double v9, v9
@@ -785,17 +711,14 @@
 
     const-string v5, " mb, count: "
 
-    .line 3645
     invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v5, 0x3
 
-    .line 3646
     aget-wide v5, v6, v5
 
     invoke-virtual {v12, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 3647
     invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -804,7 +727,6 @@
 
     goto :goto_1
 
-    .line 3649
     :cond_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -853,12 +775,10 @@
 
     const-string v3, "Pss:"
 
-    .line 3515
     filled-new-array {v3, v1, v2}, [Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3518
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -881,7 +801,6 @@
 
     new-array v3, v2, [J
 
-    .line 3522
     :try_start_0
     new-instance v4, Ljava/io/BufferedReader;
 
@@ -896,7 +815,6 @@
 
     const/4 v5, 0x0
 
-    .line 3524
     :cond_1
     :goto_0
     :try_start_1
@@ -906,7 +824,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 3525
     aget-object v7, v1, v5
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -920,19 +837,16 @@
     :cond_2
     const-string v7, "\\s+"
 
-    .line 3527
     invoke-virtual {v6, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 3528
     array-length v7, v6
 
     if-ne v7, v2, :cond_3
 
     const/4 v7, 0x1
 
-    .line 3529
     aget-object v6, v6, v7
 
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -950,7 +864,6 @@
 
     if-ne v5, v2, :cond_1
 
-    .line 3536
     :cond_4
     :try_start_2
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
@@ -963,7 +876,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3522
     :try_start_3
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -983,7 +895,6 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 3539
     :catch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1001,7 +912,6 @@
 
     goto :goto_2
 
-    .line 3537
     :catch_1
     new-instance v1, Ljava/lang/StringBuilder;
 

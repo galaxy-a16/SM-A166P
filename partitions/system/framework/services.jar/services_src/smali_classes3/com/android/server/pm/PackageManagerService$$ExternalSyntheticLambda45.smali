@@ -20,7 +20,6 @@
 .method public final produce(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/pm/PackageManagerService;->$r8$lambda$A9jIin0f1zoD9Pcc_Y-dAgMMVzE(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Lcom/android/server/pm/BackgroundDexOptService;
 
     move-result-object p0

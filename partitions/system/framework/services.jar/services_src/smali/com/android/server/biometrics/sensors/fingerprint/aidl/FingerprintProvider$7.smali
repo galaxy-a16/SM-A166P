@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;)V
     .locals 0
 
-    .line 1214
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider$7;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1218
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider$7;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;->-$$Nest$fgetmProviderEx(Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;)Lcom/android/server/biometrics/sensors/fingerprint/SemFpProviderEx;

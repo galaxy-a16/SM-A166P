@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/voiceinteraction/DetectorSession;
 
     invoke-static {p1}, Lcom/android/server/voiceinteraction/HotwordDetectionConnection;->$r8$lambda$eav_0OLl2Btxmo9pvmfUFIEv68s(Lcom/android/server/voiceinteraction/DetectorSession;)V

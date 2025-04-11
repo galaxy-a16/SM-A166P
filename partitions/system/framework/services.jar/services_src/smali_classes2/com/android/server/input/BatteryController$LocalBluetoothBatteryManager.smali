@@ -20,7 +20,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBroadcastReceiver(Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;)Landroid/content/BroadcastReceiver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRegisteredListener(Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;)Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mRegisteredListener:Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;
 
     return-object p0
@@ -38,20 +36,16 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;)V
     .locals 1
 
-    .line 988
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 964
     new-instance v0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager$1;-><init>(Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;)V
 
     iput-object v0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 989
     iput-object p1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
-    .line 990
     new-instance p1, Landroid/os/HandlerExecutor;
 
     new-instance v0, Landroid/os/Handler;
@@ -70,21 +64,17 @@
 .method public addBatteryListener(Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;)V
     .locals 3
 
-    .line 995
     iget-object v0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     monitor-enter v0
 
-    .line 996
     :try_start_0
     iget-object v1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mRegisteredListener:Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;
 
     if-nez v1, :cond_0
 
-    .line 1000
     iput-object p1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mRegisteredListener:Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;
 
-    .line 1001
     iget-object p1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
@@ -97,12 +87,10 @@
 
     invoke-virtual {p1, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1003
     monitor-exit v0
 
     return-void
 
-    .line 997
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -115,7 +103,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1003
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -126,7 +113,6 @@
 .method public addMetadataListener(Ljava/lang/String;Landroid/bluetooth/BluetoothAdapter$OnMetadataChangedListener;)V
     .locals 2
 
-    .line 1025
     iget-object v0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/bluetooth/BluetoothManager;
@@ -143,21 +129,18 @@
 
     check-cast v1, Landroid/bluetooth/BluetoothManager;
 
-    .line 1026
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothManager;->getAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
-    .line 1027
     invoke-static {v1, p1}, Lcom/android/server/input/BatteryController;->-$$Nest$smgetBluetoothDevice(Landroid/content/Context;Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
 
     move-result-object p1
 
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 1026
     invoke-virtual {v0, p1, p0, p2}, Landroid/bluetooth/BluetoothAdapter;->addOnMetadataChangedListener(Landroid/bluetooth/BluetoothDevice;Ljava/util/concurrent/Executor;Landroid/bluetooth/BluetoothAdapter$OnMetadataChangedListener;)Z
 
     return-void
@@ -166,7 +149,6 @@
 .method public getBatteryLevel(Ljava/lang/String;)I
     .locals 0
 
-    .line 1019
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p1}, Lcom/android/server/input/BatteryController;->-$$Nest$smgetBluetoothDevice(Landroid/content/Context;Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
@@ -183,7 +165,6 @@
 .method public getMetadata(Ljava/lang/String;I)[B
     .locals 0
 
-    .line 1041
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p1}, Lcom/android/server/input/BatteryController;->-$$Nest$smgetBluetoothDevice(Landroid/content/Context;Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
@@ -200,12 +181,10 @@
 .method public removeBatteryListener(Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;)V
     .locals 2
 
-    .line 1008
     iget-object v0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     monitor-enter v0
 
-    .line 1009
     :try_start_0
     iget-object v1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mRegisteredListener:Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;
 
@@ -217,22 +196,18 @@
 
     const/4 p1, 0x0
 
-    .line 1012
     iput-object p1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mRegisteredListener:Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;
 
-    .line 1013
     iget-object p1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 1014
     monitor-exit v0
 
     return-void
 
-    .line 1010
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -245,7 +220,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1014
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -256,7 +230,6 @@
 .method public removeMetadataListener(Ljava/lang/String;Landroid/bluetooth/BluetoothAdapter$OnMetadataChangedListener;)V
     .locals 2
 
-    .line 1034
     iget-object v0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/bluetooth/BluetoothManager;
@@ -273,19 +246,16 @@
 
     check-cast v1, Landroid/bluetooth/BluetoothManager;
 
-    .line 1035
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothManager;->getAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->mContext:Landroid/content/Context;
 
-    .line 1036
     invoke-static {p0, p1}, Lcom/android/server/input/BatteryController;->-$$Nest$smgetBluetoothDevice(Landroid/content/Context;Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
 
     move-result-object p0
 
-    .line 1035
     invoke-virtual {v0, p0, p2}, Landroid/bluetooth/BluetoothAdapter;->removeOnMetadataChangedListener(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothAdapter$OnMetadataChangedListener;)Z
 
     return-void

@@ -22,7 +22,6 @@
 .method public static synthetic $values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
     .locals 2
 
-    .line 348
     sget-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->NOTIFICATION_PANEL_OPEN:Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
 
     sget-object v1, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->NOTIFICATION_PANEL_CLOSE:Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
@@ -37,7 +36,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 349
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
 
     const/4 v1, 0x0
@@ -50,7 +48,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->NOTIFICATION_PANEL_OPEN:Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
 
-    .line 351
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
 
     const/4 v1, 0x1
@@ -63,7 +60,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->NOTIFICATION_PANEL_CLOSE:Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
 
-    .line 348
     invoke-static {}, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->$values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
 
     move-result-object v0
@@ -76,10 +72,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 355
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 356
     iput p3, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->mId:I
 
     return-void
@@ -88,7 +82,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
     .locals 1
 
-    .line 348
     const-class v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -103,7 +96,6 @@
 .method public static values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
     .locals 1
 
-    .line 348
     sget-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->$VALUES:[Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;
 
     invoke-virtual {v0}, [Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->clone()Ljava/lang/Object;
@@ -120,7 +112,6 @@
 .method public getId()I
     .locals 0
 
-    .line 359
     iget p0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationPanelEvent;->mId:I
 
     return p0

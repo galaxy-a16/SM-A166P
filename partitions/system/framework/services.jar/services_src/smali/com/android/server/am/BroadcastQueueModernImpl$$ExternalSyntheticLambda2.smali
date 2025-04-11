@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/am/BroadcastProcessQueue;
 
     invoke-static {p1}, Lcom/android/server/am/BroadcastQueueModernImpl;->$r8$lambda$cwKen-Lkri8E8lDrv04XkORyCyQ(Lcom/android/server/am/BroadcastProcessQueue;)V

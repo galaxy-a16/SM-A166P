@@ -20,7 +20,6 @@
 .method public compare(Lcom/android/server/uri/UriPermission;Lcom/android/server/uri/UriPermission;)I
     .locals 2
 
-    .line 359
     iget-wide p0, p1, Lcom/android/server/uri/UriPermission;->persistedCreateTime:J
 
     iget-wide v0, p2, Lcom/android/server/uri/UriPermission;->persistedCreateTime:J
@@ -35,7 +34,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 356
     check-cast p1, Lcom/android/server/uri/UriPermission;
 
     check-cast p2, Lcom/android/server/uri/UriPermission;

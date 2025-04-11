@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/VDCObserverService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 247
     iput-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$4;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -28,7 +27,6 @@
 
     return-void
 
-    .line 253
     :cond_0
     iget-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$4;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
@@ -40,7 +38,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 254
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$4;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/VDCObserverService;->-$$Nest$fgetmHandler(Lcom/android/server/sepunion/VDCObserverService;)Landroid/os/Handler;

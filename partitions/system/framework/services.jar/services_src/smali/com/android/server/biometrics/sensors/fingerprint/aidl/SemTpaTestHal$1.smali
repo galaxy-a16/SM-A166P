@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$014GDoZvRHurqAyvxd9NOJOXW2g(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;Landroid/os/CancellationSignal;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$enroll$4(Landroid/os/CancellationSignal;I)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$8kEiff-GS8-T3iWznwuTG9HfUwQ(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;JLandroid/os/CancellationSignal;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$authenticate$7(JLandroid/os/CancellationSignal;)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static synthetic $r8$lambda$H3DOr-olaG8PxMSDdPNs99Haz-U(Landroid/hardware/biometrics/fingerprint/ISessionCallback;J)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$revokeChallenge$1(Landroid/hardware/biometrics/fingerprint/ISessionCallback;J)V
 
     return-void
@@ -44,7 +41,6 @@
 .method public static synthetic $r8$lambda$O7rkIh4sEnBZMyKZWtYsQmGU0TE(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$detectInteraction$10(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
 
     return-void
@@ -53,7 +49,6 @@
 .method public static synthetic $r8$lambda$bQvutjIiiq0n1wuYEn-_1fjYAOs(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$authenticate$6(Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
 
     return-void
@@ -62,7 +57,6 @@
 .method public static synthetic $r8$lambda$eisR3VIEWOVERuV_aSOHMonUvl4(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$enroll$2(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
 
     return-void
@@ -71,7 +65,6 @@
 .method public static synthetic $r8$lambda$ficVdoF6Q7jBYV4cl-ZFDvapTSk(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$authenticate$5(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
 
     return-void
@@ -80,7 +73,6 @@
 .method public static synthetic $r8$lambda$k6DnQxZ1c5puZwoWeUKu1a8m-R0(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$generateChallenge$0(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
 
     return-void
@@ -89,7 +81,6 @@
 .method public static synthetic $r8$lambda$mgIfGLAMJF4WVPRyfw1GSvzSmDY(Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$detectInteraction$9(Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
 
     return-void
@@ -98,7 +89,6 @@
 .method public static synthetic $r8$lambda$qEaov4qzkF4DsPdR7hGVbgWmBFM(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$enroll$3(Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
 
     return-void
@@ -107,7 +97,6 @@
 .method public static synthetic $r8$lambda$qUSzaGd3vJYJRbfNwS2M5NnWqLc(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->lambda$detectInteraction$8(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
 
     return-void
@@ -116,7 +105,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;I)V
     .locals 0
 
-    .line 157
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
@@ -137,7 +125,6 @@
 
     const/4 v1, 0x0
 
-    .line 256
     :try_start_0
     invoke-interface {p0, v0, v1}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onError(BI)V
     :try_end_0
@@ -148,7 +135,6 @@
     :catch_0
     move-exception p0
 
-    .line 258
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -158,7 +144,6 @@
 .method private synthetic lambda$authenticate$6(Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 1
 
-    .line 248
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmActionDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Ljava/util/concurrent/CountDownLatch;
@@ -167,7 +152,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmActionDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Ljava/util/concurrent/CountDownLatch;
@@ -176,7 +160,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 251
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -186,7 +169,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 252
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmTspDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Ljava/util/concurrent/CountDownLatch;
@@ -195,7 +177,6 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 254
     :cond_1
     new-instance p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1$$ExternalSyntheticLambda10;
 
@@ -209,7 +190,6 @@
 .method private synthetic lambda$authenticate$7(JLandroid/os/CancellationSignal;)V
     .locals 5
 
-    .line 265
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     iget-object v0, v0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->mEnrolledIds:Ljava/util/Set;
@@ -220,7 +200,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 266
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     const/16 p1, 0x8
@@ -231,7 +210,6 @@
 
     return-void
 
-    .line 270
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -243,7 +221,6 @@
 
     move-result-object v0
 
-    .line 271
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,7 +235,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 272
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -271,10 +247,8 @@
 
     const-string p2, "fingerprint.aidl.SemTpaTestHal"
 
-    .line 271
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -293,7 +267,6 @@
 
     check-cast p2, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
-    .line 274
     invoke-virtual {p3}, Landroid/os/CancellationSignal;->isCanceled()Z
 
     move-result v0
@@ -302,7 +275,6 @@
 
     goto :goto_2
 
-    .line 277
     :cond_2
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -314,7 +286,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fputmActionDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;Ljava/util/concurrent/CountDownLatch;)V
 
-    .line 279
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -337,19 +308,15 @@
     :catch_0
     move-exception v0
 
-    .line 281
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 283
     :goto_1
     invoke-virtual {p2}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->run()V
 
-    .line 284
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_1
 
-    .line 285
     invoke-virtual {p2}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->getCallbackType()Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     move-result-object v0
@@ -358,7 +325,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 286
     invoke-virtual {p2}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->getValue()I
 
     move-result p2
@@ -367,7 +333,6 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 287
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
@@ -376,7 +341,6 @@
 
     invoke-static {p2, v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fputmTspDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;Ljava/util/concurrent/CountDownLatch;)V
 
-    .line 290
     :try_start_1
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -397,7 +361,6 @@
     :catch_1
     move-exception p2
 
-    .line 292
     invoke-virtual {p2}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_0
@@ -410,7 +373,6 @@
 .method private synthetic lambda$detectInteraction$10(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 1
 
-    .line 315
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     iget-object v0, v0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->mEnrolledIds:Ljava/util/Set;
@@ -421,7 +383,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 316
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     const/16 p1, 0xb
@@ -432,7 +393,6 @@
 
     return-void
 
-    .line 321
     :cond_0
     :try_start_0
     invoke-interface {p1}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onInteractionDetected()V
@@ -445,7 +405,6 @@
     :catch_0
     move-exception p0
 
-    .line 323
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -459,7 +418,6 @@
 
     const/4 v1, 0x0
 
-    .line 308
     :try_start_0
     invoke-interface {p0, v0, v1}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onError(BI)V
     :try_end_0
@@ -470,7 +428,6 @@
     :catch_0
     move-exception p0
 
-    .line 310
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -480,7 +437,6 @@
 .method public static synthetic lambda$detectInteraction$9(Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 1
 
-    .line 306
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1$$ExternalSyntheticLambda8;
 
     invoke-direct {v0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1$$ExternalSyntheticLambda8;-><init>(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
@@ -497,7 +453,6 @@
 
     const/4 v1, 0x0
 
-    .line 206
     :try_start_0
     invoke-interface {p0, v0, v1}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onError(BI)V
     :try_end_0
@@ -508,7 +463,6 @@
     :catch_0
     move-exception p0
 
-    .line 208
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -518,7 +472,6 @@
 .method private synthetic lambda$enroll$3(Landroid/os/Handler;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 1
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmActionDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Ljava/util/concurrent/CountDownLatch;
@@ -527,7 +480,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 199
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmActionDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Ljava/util/concurrent/CountDownLatch;
@@ -536,7 +488,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 201
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -546,7 +497,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 202
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmTspDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Ljava/util/concurrent/CountDownLatch;
@@ -555,7 +505,6 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 204
     :cond_1
     new-instance p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1$$ExternalSyntheticLambda9;
 
@@ -569,17 +518,14 @@
 .method private synthetic lambda$enroll$4(Landroid/os/CancellationSignal;I)V
     .locals 7
 
-    .line 213
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
-    .line 214
     invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
 
     move-result v1
 
-    .line 215
     :goto_0
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -595,20 +541,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 216
     invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
 
     move-result v1
 
     goto :goto_0
 
-    .line 218
     :cond_0
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v2, v1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fputmCurrentEnrollmentId(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;I)V
 
-    .line 219
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmTestHalHelper(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Lcom/android/server/biometrics/sensors/SemTestHalHelper;
@@ -619,7 +562,6 @@
 
     move-result-object v1
 
-    .line 220
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -640,7 +582,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 221
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -653,10 +594,8 @@
 
     const-string v3, "fingerprint.aidl.SemTpaTestHal"
 
-    .line 220
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -675,7 +614,6 @@
 
     check-cast v2, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
-    .line 223
     invoke-virtual {p1}, Landroid/os/CancellationSignal;->isCanceled()Z
 
     move-result v3
@@ -684,7 +622,6 @@
 
     goto :goto_3
 
-    .line 226
     :cond_2
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -696,7 +633,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fputmActionDelayLatch(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;Ljava/util/concurrent/CountDownLatch;)V
 
-    .line 228
     :try_start_0
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -719,21 +655,17 @@
     :catch_0
     move-exception v3
 
-    .line 230
     invoke-virtual {v3}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 232
     :goto_2
     invoke-virtual {v2}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->run()V
 
-    .line 233
     invoke-virtual {v2}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->isFinishEnroll()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 234
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     iget-object v3, v2, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->mEnrolledIds:Ljava/util/Set;
@@ -748,14 +680,12 @@
 
     invoke-interface {v3, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 235
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     const/4 v3, 0x0
 
     invoke-static {v2, v3}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fputmCurrentEnrollmentId(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;I)V
 
-    .line 236
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmAuthenticatorID(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Landroid/util/SparseLongArray;
@@ -778,7 +708,6 @@
 .method private synthetic lambda$generateChallenge$0(Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
     .locals 2
 
-    .line 174
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
@@ -795,7 +724,6 @@
     :catch_0
     move-exception p0
 
-    .line 176
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -805,7 +733,6 @@
 .method public static synthetic lambda$revokeChallenge$1(Landroid/hardware/biometrics/fingerprint/ISessionCallback;J)V
     .locals 0
 
-    .line 186
     :try_start_0
     invoke-interface {p0, p1, p2}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onChallengeRevoked(J)V
     :try_end_0
@@ -816,7 +743,6 @@
     :catch_0
     move-exception p0
 
-    .line 188
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -828,7 +754,6 @@
 .method public authenticate(J)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 5
 
-    .line 245
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -847,12 +772,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     new-instance v0, Landroid/os/CancellationSignal;
 
     invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
 
-    .line 247
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
@@ -863,7 +786,6 @@
 
     invoke-virtual {v0, v3}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 262
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmTestHalHelper(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Lcom/android/server/biometrics/sensors/SemTestHalHelper;
@@ -874,7 +796,6 @@
 
     move-result-wide v1
 
-    .line 264
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
 
     new-instance v4, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1$$ExternalSyntheticLambda6;
@@ -892,7 +813,6 @@
     :cond_0
     invoke-virtual {v3, v4, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 298
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$mcreateICancellationSignal(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;Landroid/os/CancellationSignal;)Landroid/hardware/biometrics/common/ICancellationSignal;
@@ -905,7 +825,6 @@
 .method public authenticateWithContext(JLandroid/hardware/biometrics/common/OperationContext;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 391
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->authenticate(J)Landroid/hardware/biometrics/common/ICancellationSignal;
 
     move-result-object p0
@@ -920,10 +839,8 @@
 
     const-string v1, "close"
 
-    .line 368
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
 
     invoke-interface {p0}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onSessionClosed()V
@@ -938,15 +855,12 @@
 
     const-string v1, "detectInteraction"
 
-    .line 303
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     new-instance v0, Landroid/os/CancellationSignal;
 
     invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
 
-    .line 305
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
@@ -957,7 +871,6 @@
 
     invoke-virtual {v0, v3}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 314
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
@@ -970,7 +883,6 @@
 
     invoke-virtual {v1, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 326
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$mcreateICancellationSignal(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;Landroid/os/CancellationSignal;)Landroid/hardware/biometrics/common/ICancellationSignal;
@@ -983,7 +895,6 @@
 .method public detectInteractionWithContext(Landroid/hardware/biometrics/common/OperationContext;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 402
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->detectInteraction()Landroid/hardware/biometrics/common/ICancellationSignal;
 
     move-result-object p0
@@ -994,7 +905,6 @@
 .method public enroll(Landroid/hardware/keymaster/HardwareAuthToken;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 5
 
-    .line 195
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1013,12 +923,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     new-instance p1, Landroid/os/CancellationSignal;
 
     invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
 
-    .line 197
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
@@ -1029,7 +937,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 212
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
 
     iget v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$userId:I
@@ -1042,7 +949,6 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 240
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$mcreateICancellationSignal(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;Landroid/os/CancellationSignal;)Landroid/hardware/biometrics/common/ICancellationSignal;
@@ -1055,7 +961,6 @@
 .method public enrollWithContext(Landroid/hardware/keymaster/HardwareAuthToken;Landroid/hardware/biometrics/common/OperationContext;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 397
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->enroll(Landroid/hardware/keymaster/HardwareAuthToken;)Landroid/hardware/biometrics/common/ICancellationSignal;
 
     move-result-object p0
@@ -1066,7 +971,6 @@
 .method public enumerateEnrollments()V
     .locals 2
 
-    .line 331
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1093,7 +997,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
@@ -1108,7 +1011,6 @@
 
     invoke-direct {v1}, Lcom/android/server/audio/AudioService$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 333
     invoke-interface {p0, v1}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
 
     move-result-object p0
@@ -1117,7 +1019,6 @@
 
     move-result-object p0
 
-    .line 332
     invoke-interface {v0, p0}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onEnrollmentsEnumerated([I)V
 
     return-void
@@ -1130,10 +1031,8 @@
 
     const-string v1, "generateChallenge"
 
-    .line 170
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     new-instance v1, Ljava/util/Random;
@@ -1146,7 +1045,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fputmChallenge(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;J)V
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
@@ -1167,10 +1065,8 @@
 
     const-string v1, "getAuthenticatorId"
 
-    .line 347
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
@@ -1183,12 +1079,10 @@
 
     const-wide/16 v2, 0x0
 
-    .line 349
     invoke-virtual {v1, p0, v2, v3}, Landroid/util/SparseLongArray;->get(IJ)J
 
     move-result-wide v1
 
-    .line 348
     invoke-interface {v0, v1, v2}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onAuthenticatorIdRetrieved(J)V
 
     return-void
@@ -1197,7 +1091,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "637371b53fb7faf9bd43aa51b72c23852d6e6d96"
 
     return-object p0
@@ -1206,7 +1099,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x3
 
     return p0
@@ -1219,10 +1111,8 @@
 
     const-string v1, "invalidateAuthenticatorId"
 
-    .line 354
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmAuthenticatorID(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Landroid/util/SparseLongArray;
@@ -1241,7 +1131,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/util/SparseLongArray;->put(IJ)V
 
-    .line 356
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
@@ -1254,12 +1143,10 @@
 
     const-wide/16 v2, 0x0
 
-    .line 357
     invoke-virtual {v1, p0, v2, v3}, Landroid/util/SparseLongArray;->get(IJ)J
 
     move-result-wide v1
 
-    .line 356
     invoke-interface {v0, v1, v2}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onAuthenticatorIdInvalidated(J)V
 
     return-void
@@ -1272,7 +1159,6 @@
 
     const-string/jumbo p1, "onContextChanged"
 
-    .line 418
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1285,7 +1171,6 @@
 
     const-string/jumbo p1, "onPointerCancelWithContext"
 
-    .line 423
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1298,7 +1183,6 @@
 
     const-string/jumbo p1, "onPointerDown"
 
-    .line 375
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1307,7 +1191,6 @@
 .method public onPointerDownWithContext(Landroid/hardware/biometrics/fingerprint/PointerContext;)V
     .locals 6
 
-    .line 407
     iget v1, p1, Landroid/hardware/biometrics/fingerprint/PointerContext;->pointerId:I
 
     iget v0, p1, Landroid/hardware/biometrics/fingerprint/PointerContext;->x:F
@@ -1336,7 +1219,6 @@
 
     const-string/jumbo p1, "onPointerUp"
 
-    .line 380
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1345,7 +1227,6 @@
 .method public onPointerUpWithContext(Landroid/hardware/biometrics/fingerprint/PointerContext;)V
     .locals 0
 
-    .line 413
     iget p1, p1, Landroid/hardware/biometrics/fingerprint/PointerContext;->pointerId:I
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->onPointerUp(I)V
@@ -1360,7 +1241,6 @@
 
     const-string/jumbo v0, "onUiReady"
 
-    .line 385
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1373,10 +1253,8 @@
 
     const-string/jumbo v1, "removeEnrollments"
 
-    .line 338
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1386,7 +1264,6 @@
 
     aget v2, p1, v1
 
-    .line 340
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     iget-object v3, v3, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->mEnrolledIds:Ljava/util/Set;
@@ -1401,7 +1278,6 @@
 
     goto :goto_0
 
-    .line 342
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
 
@@ -1417,10 +1293,8 @@
 
     const-string/jumbo v0, "resetLockout"
 
-    .line 362
     invoke-static {p1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
 
     invoke-interface {p0}, Landroid/hardware/biometrics/fingerprint/ISessionCallback;->onLockoutCleared()V
@@ -1431,7 +1305,6 @@
 .method public revokeChallenge(J)V
     .locals 2
 
-    .line 183
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1450,7 +1323,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$handler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$1;->val$sessionCallback:Landroid/hardware/biometrics/fingerprint/ISessionCallback;
@@ -1471,7 +1343,6 @@
 
     const-string/jumbo p1, "setIgnoreDisplayTouches"
 
-    .line 428
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

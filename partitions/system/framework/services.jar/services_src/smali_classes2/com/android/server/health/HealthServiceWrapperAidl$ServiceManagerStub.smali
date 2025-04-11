@@ -7,7 +7,6 @@
 .method public registerForNotifications(Ljava/lang/String;Landroid/os/IServiceCallback;)V
     .locals 0
 
-    .line 71
     invoke-static {p1, p2}, Landroid/os/ServiceManager;->registerForNotifications(Ljava/lang/String;Landroid/os/IServiceCallback;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public waitForDeclaredService(Ljava/lang/String;)Landroid/hardware/health/IHealth;
     .locals 0
 
-    .line 66
     invoke-static {p1}, Landroid/os/ServiceManager;->waitForDeclaredService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0

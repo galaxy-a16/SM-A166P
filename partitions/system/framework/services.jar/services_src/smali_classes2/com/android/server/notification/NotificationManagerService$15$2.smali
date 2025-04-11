@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService$15;Ljava/lang/String;Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;[Landroid/service/notification/Condition;)V
     .locals 0
 
-    .line 7029
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$15$2;->this$1:Lcom/android/server/notification/NotificationManagerService$15;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$15$2;->val$pkg:Ljava/lang/String;
@@ -39,7 +38,6 @@
 .method public run()V
     .locals 3
 
-    .line 7032
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$15$2;->this$1:Lcom/android/server/notification/NotificationManagerService$15;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$15;->this$0:Lcom/android/server/notification/NotificationManagerService;

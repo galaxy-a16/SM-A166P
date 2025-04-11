@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/telephony/SubscriptionInfo;
 
     invoke-static {p1}, Lcom/android/server/soundtrigger/PhoneCallStateHandler;->$r8$lambda$JnaQwiNVj1wDFUplXyez-nz37So(Landroid/telephony/SubscriptionInfo;)Z

@@ -20,7 +20,6 @@
 .method public final read(Landroid/util/proto/ProtoInputStream;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/people/data/ConversationStore$ConversationInfosProtoDiskReadWriter;->$r8$lambda$TqdwZbBmjHKbgTlS-HsEOIeIR9g(Landroid/util/proto/ProtoInputStream;)Ljava/util/List;
 
     move-result-object p0

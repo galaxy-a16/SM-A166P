@@ -17,23 +17,18 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsServiceLog;ILjava/lang/String;)V
     .locals 1
 
-    .line 424
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 420
     iput-boolean v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->mIsSaveLssLogDone:Z
 
-    .line 425
     iput p2, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->mType:I
 
-    .line 426
     iput-object p3, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->mContents:Ljava/lang/String;
 
-    .line 427
     invoke-static {p1}, Lcom/android/server/locksettings/LockSettingsServiceLog;->-$$Nest$fgetmLogFile(Lcom/android/server/locksettings/LockSettingsServiceLog;)[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     move-result-object p0
@@ -50,7 +45,6 @@
 
     const-string p0, "LockSettingsLog"
 
-    .line 428
     invoke-static {p0, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -62,12 +56,10 @@
 .method public run()V
     .locals 1
 
-    .line 490
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->writeLockSettingsLog()V
 
     const/4 v0, 0x1
 
-    .line 492
     iput-boolean v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->mIsSaveLssLogDone:Z
 
     return-void
@@ -76,7 +68,6 @@
 .method public final writeLockSettingsLog()V
     .locals 5
 
-    .line 434
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
@@ -110,14 +101,12 @@
 
     const-string/jumbo v0, "maybe dump is in progress!! Cannot written log"
 
-    .line 435
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
     return-void
 
-    .line 442
     :cond_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
@@ -127,7 +116,6 @@
 
     monitor-enter v0
 
-    .line 444
     :try_start_1
     new-instance v1, Ljava/io/BufferedWriter;
 
@@ -153,7 +141,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 445
     iget-object v2, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
     invoke-static {v2}, Lcom/android/server/locksettings/LockSettingsServiceLog;->-$$Nest$mmakeLogTime(Lcom/android/server/locksettings/LockSettingsServiceLog;)Ljava/lang/String;
@@ -162,7 +149,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/BufferedWriter;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
 
-    .line 446
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,7 +167,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/BufferedWriter;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
 
-    .line 447
     invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -200,7 +185,6 @@
     :try_start_2
     const-string v2, "LockSettingsLog"
 
-    .line 449
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,13 +201,11 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 451
     :goto_0
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 452
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsServiceLog;->-$$Nest$fgetF_LOCK(Lcom/android/server/locksettings/LockSettingsServiceLog;)Ljava/util/concurrent/locks/Lock;
@@ -234,7 +216,6 @@
 
     return-void
 
-    .line 451
     :goto_1
     :try_start_3
     monitor-exit v0
@@ -246,7 +227,6 @@
     :catch_1
     move-exception p0
 
-    .line 439
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     return-void

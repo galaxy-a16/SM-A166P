@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetactiveScanDeviceId(Lcom/android/server/KnoxCaptureInputFilter;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/KnoxCaptureInputFilter;->activeScanDeviceId:I
 
     return p0
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fputactiveScanDeviceId(Lcom/android/server/KnoxCaptureInputFilter;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/KnoxCaptureInputFilter;->activeScanDeviceId:I
 
     return-void
@@ -45,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$mupdateBarcodeDataFromhw(Lcom/android/server/KnoxCaptureInputFilter;I[B)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/KnoxCaptureInputFilter;->updateBarcodeDataFromhw(I[B)V
 
     return-void
@@ -54,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/KnoxCaptureInputFilter;->DEBUG:Z
 
     return v0
@@ -63,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/KnoxCaptureInputFilter;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -72,7 +67,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 46
     const-class v0, Lcom/android/server/KnoxCaptureInputFilter;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -83,7 +77,6 @@
 
     const-string/jumbo v0, "ro.build.type"
 
-    .line 51
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -104,7 +97,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 68
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -113,23 +105,18 @@
 
     const/4 v0, -0x1
 
-    .line 65
     iput v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->activeScanDeviceId:I
 
-    .line 69
     iput-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter;->context:Landroid/content/Context;
 
-    .line 70
     new-instance p1, Landroid/os/HandlerThread;
 
     const-string v0, "ScanEventThread"
 
     invoke-direct {p1, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
-    .line 72
     new-instance v0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;
 
     invoke-virtual {p1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -142,14 +129,12 @@
 
     iput-object v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->scanEventHandler:Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;
 
-    .line 73
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter;->scannerDevices:Ljava/util/Set;
 
-    .line 74
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,12 +149,10 @@
 .method public markInputDeviceAsScanner(I)V
     .locals 3
 
-    .line 79
     sget-boolean v0, Lcom/android/server/KnoxCaptureInputFilter;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 80
     sget-object v0, Lcom/android/server/KnoxCaptureInputFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -188,7 +171,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     :cond_0
     iget-object v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->scannerDevices:Ljava/util/Set;
 
@@ -202,7 +184,6 @@
 
     if-nez v0, :cond_1
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/KnoxCaptureInputFilter;->scannerDevices:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -218,12 +199,10 @@
 .method public onInputEvent(Landroid/view/InputEvent;I)V
     .locals 3
 
-    .line 116
     sget-boolean v0, Lcom/android/server/KnoxCaptureInputFilter;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 117
     sget-object v0, Lcom/android/server/KnoxCaptureInputFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -240,7 +219,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 118
     invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -251,27 +229,22 @@
 
     move-result-object v1
 
-    .line 117
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     :cond_0
     instance-of v0, p1, Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_1
 
-    .line 122
     invoke-super {p0, p1, p2}, Landroid/view/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
     goto :goto_0
 
-    .line 123
     :cond_1
     instance-of v0, p1, Landroid/view/KeyEvent;
 
     if-eqz v0, :cond_3
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->scannerDevices:Ljava/util/Set;
 
     invoke-virtual {p1}, Landroid/view/InputEvent;->getDeviceId()I
@@ -288,14 +261,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 125
     check-cast p1, Landroid/view/KeyEvent;
 
     invoke-virtual {p0, p1}, Lcom/android/server/KnoxCaptureInputFilter;->sendKeyEvent(Landroid/view/KeyEvent;)V
 
     goto :goto_0
 
-    .line 127
     :cond_2
     invoke-super {p0, p1, p2}, Landroid/view/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
@@ -307,12 +278,10 @@
 .method public onInstalled()V
     .locals 2
 
-    .line 97
     sget-boolean v0, Lcom/android/server/KnoxCaptureInputFilter;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 98
     sget-object v0, Lcom/android/server/KnoxCaptureInputFilter;->TAG:Ljava/lang/String;
 
     const-string v1, "KnoxCapture input filter installed"
@@ -322,10 +291,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 100
     iput-boolean v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->installed:Z
 
-    .line 101
     invoke-super {p0}, Landroid/view/InputFilter;->onInstalled()V
 
     return-void
@@ -334,12 +301,10 @@
 .method public onUninstalled()V
     .locals 2
 
-    .line 106
     sget-boolean v0, Lcom/android/server/KnoxCaptureInputFilter;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 107
     sget-object v0, Lcom/android/server/KnoxCaptureInputFilter;->TAG:Ljava/lang/String;
 
     const-string v1, "KnoxCapture input filter uninstalled"
@@ -349,10 +314,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 109
     iput-boolean v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->installed:Z
 
-    .line 110
     invoke-super {p0}, Landroid/view/InputFilter;->onUninstalled()V
 
     return-void
@@ -361,21 +324,18 @@
 .method public final sendKeyEvent(Landroid/view/KeyEvent;)V
     .locals 4
 
-    .line 133
     iget v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->activeScanDeviceId:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 135
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDeviceId()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->activeScanDeviceId:I
 
-    .line 140
     :cond_0
     iget-object v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->scanEventHandler:Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;
 
@@ -383,7 +343,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 141
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
@@ -398,7 +357,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/KnoxCaptureInputFilter;->scanEventHandler:Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;
 
     new-instance v2, Landroid/view/KeyEvent;
@@ -413,7 +371,6 @@
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 147
     :cond_1
     iget-object p0, p0, Lcom/android/server/KnoxCaptureInputFilter;->scanEventHandler:Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;
 
@@ -427,12 +384,10 @@
 .method public unmarkInputDeviceAsScanner(I)V
     .locals 3
 
-    .line 89
     sget-boolean v0, Lcom/android/server/KnoxCaptureInputFilter;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 90
     sget-object v0, Lcom/android/server/KnoxCaptureInputFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -451,7 +406,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     :cond_0
     iget-object p0, p0, Lcom/android/server/KnoxCaptureInputFilter;->scannerDevices:Ljava/util/Set;
 
@@ -469,19 +423,16 @@
 
     const-string v0, "content://com.samsung.android.bbc.bbcagent/knoxCapture/updateBarcodeDataFromhw"
 
-    .line 151
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 153
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     const-string v2, "deviceId"
 
-    .line 154
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -490,10 +441,8 @@
 
     const-string/jumbo p1, "scanInput"
 
-    .line 155
     invoke-virtual {v1, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 156
     iget-object p0, p0, Lcom/android/server/KnoxCaptureInputFilter;->context:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;

@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 59
     invoke-static {}, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->values()[Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     move-result-object v0

@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$BaKW0csrCl2VfnMJAWABprVLrvA()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory;->lambda$create$0()V
 
     return-void
@@ -23,7 +22,6 @@
 .method public static synthetic $r8$lambda$FvdBrmi_SUNanPtS2wSqxuGPAuI(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory;->lambda$create$3(Ljava/lang/String;)V
 
     return-void
@@ -32,7 +30,6 @@
 .method public static synthetic $r8$lambda$vEBCobwOvfGAQy_NvwT5NWJFJ64()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory;->lambda$create$1()V
 
     return-void
@@ -41,7 +38,6 @@
 .method public static synthetic $r8$lambda$v_R6BnaUVOKoBATmLce1e86X9wU(Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory;->lambda$create$2(Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;)V
 
     return-void
@@ -50,7 +46,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 45
     new-instance v0, Lcom/android/server/soundtrigger_middleware/ExternalCaptureStateTracker;
 
     invoke-direct {v0}, Lcom/android/server/soundtrigger_middleware/ExternalCaptureStateTracker;-><init>()V
@@ -75,7 +70,6 @@
 
     const-string v1, "1"
 
-    .line 70
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -88,7 +82,6 @@
 
     const-string v1, "1"
 
-    .line 80
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -97,7 +90,6 @@
 .method public static synthetic lambda$create$2(Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;)V
     .locals 4
 
-    .line 90
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -132,7 +124,6 @@
 
     const-string v1, "Failed to reboot mock HAL"
 
-    .line 92
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -142,7 +133,6 @@
 .method public static synthetic lambda$create$3(Ljava/lang/String;)V
     .locals 7
 
-    .line 107
     :try_start_0
     invoke-static {p0}, Landroid/os/ServiceManager;->waitForService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -181,7 +171,6 @@
 
     const-string v1, "Failed to reboot mock HAL"
 
-    .line 110
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -198,7 +187,6 @@
 
     const/4 v0, 0x0
 
-    .line 55
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -211,7 +199,6 @@
 
     if-nez p0, :cond_1
 
-    .line 61
     :try_start_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -219,7 +206,6 @@
 
     const-class v0, Landroid/hardware/soundtrigger3/ISoundTriggerHw;
 
-    .line 62
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v0
@@ -234,7 +220,6 @@
 
     move-result-object p0
 
-    .line 64
     invoke-static {p0}, Landroid/os/ServiceManager;->isDeclared(Ljava/lang/String;)Z
 
     move-result v0
@@ -243,10 +228,8 @@
 
     const-string v0, "Connecting to default soundtrigger3.ISoundTriggerHw"
 
-    .line 65
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     new-instance v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHw3Compat;
 
     invoke-static {p0}, Landroid/os/ServiceManager;->waitForService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -264,15 +247,12 @@
     :cond_0
     const-string p0, "Connecting to default soundtrigger-V2.x.ISoundTriggerHw"
 
-    .line 75
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     invoke-static {v1}, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;->getService(Z)Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;
 
     move-result-object p0
 
-    .line 77
     new-instance v0, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory$$ExternalSyntheticLambda1;
 
     invoke-direct {v0}, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory$$ExternalSyntheticLambda1;-><init>()V
@@ -292,10 +272,8 @@
 
     const-string p0, "Connecting to mock soundtrigger-V2.x.ISoundTriggerHw"
 
-    .line 84
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     invoke-static {v1}, Landroid/os/HwBinder;->setTrebleTestingOverride(Z)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -303,12 +281,10 @@
     :try_start_2
     const-string/jumbo p0, "mock"
 
-    .line 87
     invoke-static {p0, v1}, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;->getService(Ljava/lang/String;Z)Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;
 
     move-result-object p0
 
-    .line 88
     new-instance v1, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, p0}, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory$$ExternalSyntheticLambda2;-><init>(Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;)V
@@ -321,7 +297,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 96
     :try_start_3
     invoke-static {v0}, Landroid/os/HwBinder;->setTrebleTestingOverride(Z)V
 
@@ -332,7 +307,6 @@
 
     invoke-static {v0}, Landroid/os/HwBinder;->setTrebleTestingOverride(Z)V
 
-    .line 97
     throw p0
 
     :cond_2
@@ -340,14 +314,12 @@
 
     if-ne p0, v0, :cond_3
 
-    .line 100
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-class v0, Landroid/hardware/soundtrigger3/ISoundTriggerHw;
 
-    .line 101
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v0
@@ -364,10 +336,8 @@
 
     const-string v0, "Connecting to mock soundtrigger3.ISoundTriggerHw"
 
-    .line 103
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     new-instance v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHw3Compat;
 
     invoke-static {p0}, Landroid/os/ServiceManager;->waitForService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -382,7 +352,6 @@
 
     return-object v0
 
-    .line 114
     :cond_3
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -409,7 +378,6 @@
     :catch_0
     move-exception p0
 
-    .line 117
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
     move-result-object p0

@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;IFZ)V
     .locals 0
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache$1;->this$0:Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;
 
     invoke-direct {p0, p2, p3, p4}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
@@ -28,7 +27,6 @@
 .method public removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 0
 
-    .line 42
     invoke-virtual {p0}, Ljava/util/LinkedHashMap;->size()I
 
     move-result p0

@@ -51,7 +51,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
     .locals 20
 
-    .line 143
     sget-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_LOW_ADJ:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     sget-object v1, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_MEDIUM_ADJ:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
@@ -102,7 +101,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 144
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_LOW_ADJ"
@@ -113,7 +111,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_LOW_ADJ:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 145
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_MEDIUM_ADJ"
@@ -124,7 +121,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_MEDIUM_ADJ:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 146
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_CRITICAL_ADJ"
@@ -135,7 +131,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_CRITICAL_ADJ:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 147
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_DEBUG"
@@ -146,7 +141,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_DEBUG:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 148
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_CRITICAL_UPGRADE"
@@ -157,7 +151,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_CRITICAL_UPGRADE:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 149
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_UPGRADE_PRESSURE"
@@ -168,7 +161,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_UPGRADE_PRESSURE:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 150
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_DOWNGRADE_PRESSURE"
@@ -179,7 +171,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_DOWNGRADE_PRESSURE:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 151
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_KILL_HEAVIEST_TASK"
@@ -190,7 +181,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_KILL_HEAVIEST_TASK:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 152
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_KILL_TIMEOUT_MS"
@@ -201,7 +191,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_KILL_TIMEOUT_MS:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 153
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_USE_MINFREE_LEVELS"
@@ -212,7 +201,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_USE_MINFREE_LEVELS:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 154
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_ENABLE_USERSPACE_LMK"
@@ -223,7 +211,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_ENABLE_USERSPACE_LMK:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 155
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_ENABLE_CMARBINFREE_SUB"
@@ -234,7 +221,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_ENABLE_CMARBINFREE_SUB:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 156
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_ENABLE_UPGRADE_CRIADJ"
@@ -245,7 +231,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_ENABLE_UPGRADE_CRIADJ:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 157
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_FREELIMIT_ENABLE"
@@ -256,7 +241,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_FREELIMIT_ENABLE:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 158
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_FREELIMIT_VAL"
@@ -267,7 +251,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_FREELIMIT_VAL:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 159
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_PSI_LOW_TH"
@@ -278,7 +261,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_PSI_LOW_TH:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 160
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_PSI_MEDIUM_TH"
@@ -289,7 +271,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_PSI_MEDIUM_TH:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 161
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_PSI_CRITICAL_TH"
@@ -300,7 +281,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_PSI_CRITICAL_TH:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 162
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_SET_SWAPTOTAL"
@@ -311,7 +291,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_SET_SWAPTOTAL:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 163
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     const-string v1, "LMK_SET_BG_KEEPING"
@@ -322,7 +301,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->LMK_SET_BG_KEEPING:Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
-    .line 143
     invoke-static {}, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->$values()[Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     move-result-object v0
@@ -335,7 +313,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 143
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -344,7 +321,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
     .locals 1
 
-    .line 143
     const-class v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -359,7 +335,6 @@
 .method public static values()[Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
     .locals 1
 
-    .line 143
     sget-object v0, Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->$VALUES:[Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;
 
     invoke-virtual {v0}, [Lcom/android/server/am/DynamicHiddenApp$LmkdParameter;->clone()Ljava/lang/Object;

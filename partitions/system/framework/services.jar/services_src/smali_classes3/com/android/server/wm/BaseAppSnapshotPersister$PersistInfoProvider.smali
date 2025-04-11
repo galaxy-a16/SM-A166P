@@ -19,22 +19,16 @@
 .method public constructor <init>(Lcom/android/server/wm/BaseAppSnapshotPersister$DirectoryResolver;Ljava/lang/String;ZFZ)V
     .locals 0
 
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     iput-object p1, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mDirectoryResolver:Lcom/android/server/wm/BaseAppSnapshotPersister$DirectoryResolver;
 
-    .line 105
     iput-object p2, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mDirName:Ljava/lang/String;
 
-    .line 106
     iput-boolean p3, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mEnableLowResSnapshots:Z
 
-    .line 107
     iput p4, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mLowResScaleFactor:F
 
-    .line 108
     iput-boolean p5, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mUse16BitFormat:Z
 
     return-void
@@ -45,12 +39,10 @@
 .method public createDirectory(I)Z
     .locals 0
 
-    .line 126
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->getDirectory(I)Ljava/io/File;
 
     move-result-object p0
 
-    .line 127
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -81,7 +73,6 @@
 .method public enableLowResSnapshots()Z
     .locals 0
 
-    .line 143
     iget-boolean p0, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mEnableLowResSnapshots:Z
 
     return p0
@@ -90,7 +81,6 @@
 .method public getDirectory(I)Ljava/io/File;
     .locals 2
 
-    .line 113
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mDirectoryResolver:Lcom/android/server/wm/BaseAppSnapshotPersister$DirectoryResolver;
@@ -109,7 +99,6 @@
 .method public getHighResolutionBitmapFile(II)Ljava/io/File;
     .locals 1
 
-    .line 139
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p2}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->getDirectory(I)Ljava/io/File;
@@ -138,7 +127,6 @@
 .method public getLowResolutionBitmapFile(II)Ljava/io/File;
     .locals 1
 
-    .line 135
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p2}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->getDirectory(I)Ljava/io/File;
@@ -171,7 +159,6 @@
 .method public getProtoFile(II)Ljava/io/File;
     .locals 1
 
-    .line 131
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p2}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->getDirectory(I)Ljava/io/File;
@@ -200,7 +187,6 @@
 .method public lowResScaleFactor()F
     .locals 0
 
-    .line 147
     iget p0, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mLowResScaleFactor:F
 
     return p0
@@ -209,7 +195,6 @@
 .method public use16BitFormat()Z
     .locals 0
 
-    .line 122
     iget-boolean p0, p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->mUse16BitFormat:Z
 
     return p0

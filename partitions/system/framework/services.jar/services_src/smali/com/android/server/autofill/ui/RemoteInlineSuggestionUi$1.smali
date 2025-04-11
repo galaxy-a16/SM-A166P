@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$F-1DLRzmTOTVbD2QOzlNDkCQnzU(Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi$1;Landroid/view/SurfaceControlViewHost$SurfacePackage;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi$1;->lambda$onResult$0(Landroid/view/SurfaceControlViewHost$SurfacePackage;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi;)V
     .locals 0
 
-    .line 154
     iput-object p1, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi$1;->this$0:Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi;
 
     invoke-direct {p0}, Landroid/service/autofill/ISurfacePackageResultCallback$Stub;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onResult$0(Landroid/view/SurfaceControlViewHost$SurfacePackage;)V
     .locals 3
 
-    .line 158
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sVerbose:Z
 
     if-eqz v0, :cond_0
@@ -44,7 +41,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi$1;->this$0:Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi;
@@ -67,7 +63,6 @@
 
     invoke-interface {v0, p1, v1, v2}, Lcom/android/internal/view/inline/IInlineContentCallback;->onContent(Landroid/view/SurfaceControlViewHost$SurfacePackage;II)V
 
-    .line 162
     iget-object p0, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi$1;->this$0:Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi;
 
     const/4 p1, 0x1
@@ -78,7 +73,6 @@
 
     goto :goto_0
 
-    .line 164
     :catch_0
     invoke-static {}, Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -97,7 +91,6 @@
 .method public onResult(Landroid/view/SurfaceControlViewHost$SurfacePackage;)V
     .locals 2
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi$1;->this$0:Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi;->-$$Nest$fgetmHandler(Lcom/android/server/autofill/ui/RemoteInlineSuggestionUi;)Landroid/os/Handler;

@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$XvYEIKfwZJoJC-jfH0ImpFZKUHI(ILjava/util/concurrent/atomic/AtomicBoolean;Landroid/net/Uri;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/autofill/Helper;->lambda$checkRemoteViewUriPermissions$0(ILjava/util/concurrent/atomic/AtomicBoolean;Landroid/net/Uri;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static synthetic $r8$lambda$jk9R_ROf_2GsqSSvD5F2OzJIWEI(Landroid/view/autofill/AutofillId;Landroid/app/assist/AssistStructure$ViewNode;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/Helper;->lambda$findViewNodeByAutofillId$1(Landroid/view/autofill/AutofillId;Landroid/app/assist/AssistStructure$ViewNode;)Z
 
     move-result p0
@@ -35,7 +33,6 @@
 .method public static synthetic $r8$lambda$qwXEb6Fey3qM9LI2zG_d1QVKNVw([Ljava/lang/String;Landroid/app/assist/AssistStructure$ViewNode;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/Helper;->lambda$sanitizeUrlBar$2([Ljava/lang/String;Landroid/app/assist/AssistStructure$ViewNode;)Z
 
     move-result p0
@@ -46,7 +43,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -55,14 +51,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 329
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure$ViewNode;->getAutofillType()I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 330
     :cond_0
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure$ViewNode;->getAutofillId()Landroid/view/autofill/AutofillId;
 
@@ -70,7 +64,6 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 332
     :cond_1
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure$ViewNode;->getChildCount()I
 
@@ -81,12 +74,10 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 334
     invoke-virtual {p0, v1}, Landroid/app/assist/AssistStructure$ViewNode;->getChildAt(I)Landroid/app/assist/AssistStructure$ViewNode;
 
     move-result-object v2
 
-    .line 335
     invoke-static {v2, p1, p2}, Lcom/android/server/autofill/Helper;->addAutofillableIds(Landroid/app/assist/AssistStructure$ViewNode;Ljava/util/ArrayList;Z)V
 
     add-int/lit8 v1, v1, 0x1
@@ -100,21 +91,18 @@
 .method public static checkRemoteViewUriPermissions(ILandroid/widget/RemoteViews;)Z
     .locals 2
 
-    .line 95
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    .line 97
     new-instance v1, Lcom/android/server/autofill/Helper$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, p0, v0}, Lcom/android/server/autofill/Helper$$ExternalSyntheticLambda2;-><init>(ILjava/util/concurrent/atomic/AtomicBoolean;)V
 
     invoke-virtual {p1, v1}, Landroid/widget/RemoteViews;->visitUris(Ljava/util/function/Consumer;)V
 
-    .line 103
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result p0
@@ -125,7 +113,6 @@
 .method public static containsCharsInOrder(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 7
 
-    .line 369
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p1
@@ -149,7 +136,6 @@
 
     add-int/2addr v4, v5
 
-    .line 370
     invoke-static {p0, v6, v4}, Landroid/text/TextUtils;->indexOf(Ljava/lang/CharSequence;CI)I
 
     move-result v4
@@ -176,7 +162,6 @@
 
     return-object v0
 
-    .line 343
     :cond_0
     invoke-virtual {p0}, Landroid/service/autofill/SaveInfo;->getSanitizerKeys()[Landroid/service/autofill/InternalSanitizer;
 
@@ -186,16 +171,13 @@
 
     return-object v0
 
-    .line 346
     :cond_1
     array-length v0, v1
 
-    .line 347
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2, v0}, Landroid/util/ArrayMap;-><init>(I)V
 
-    .line 348
     sget-boolean v3, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     const-string v4, "AutofillHelper"
@@ -222,7 +204,6 @@
 
     invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 349
     :cond_2
     invoke-virtual {p0}, Landroid/service/autofill/SaveInfo;->getSanitizerValues()[[Landroid/view/autofill/AutofillId;
 
@@ -235,18 +216,14 @@
     :goto_0
     if-ge v5, v0, :cond_5
 
-    .line 351
     aget-object v6, v1, v5
 
-    .line 352
     aget-object v7, p0, v5
 
-    .line 353
     sget-boolean v8, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v8, :cond_3
 
-    .line 354
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -267,7 +244,6 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 355
     invoke-static {v7}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
@@ -278,10 +254,8 @@
 
     move-result-object v8
 
-    .line 354
     invoke-static {v4, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     :cond_3
     array-length v8, v7
 
@@ -292,7 +266,6 @@
 
     aget-object v10, v7, v9
 
-    .line 358
     invoke-virtual {v2, v10, v6}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v9, v9, 0x1
@@ -311,12 +284,10 @@
 .method public static findViewNode(Landroid/app/assist/AssistStructure;Lcom/android/server/autofill/Helper$ViewNodeFilter;)Landroid/app/assist/AssistStructure$ViewNode;
     .locals 5
 
-    .line 253
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    .line 254
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure;->getWindowNodeCount()I
 
     move-result v1
@@ -328,7 +299,6 @@
     :goto_0
     if-ge v3, v1, :cond_0
 
-    .line 256
     invoke-virtual {p0, v3}, Landroid/app/assist/AssistStructure;->getWindowNodeAt(I)Landroid/app/assist/AssistStructure$WindowNode;
 
     move-result-object v4
@@ -343,7 +313,6 @@
 
     goto :goto_0
 
-    .line 258
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
@@ -351,14 +320,12 @@
 
     if-nez p0, :cond_2
 
-    .line 259
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/assist/AssistStructure$ViewNode;
 
-    .line 260
     invoke-interface {p1, p0}, Lcom/android/server/autofill/Helper$ViewNodeFilter;->matches(Landroid/app/assist/AssistStructure$ViewNode;)Z
 
     move-result v1
@@ -370,7 +337,6 @@
     :cond_1
     move v1, v2
 
-    .line 263
     :goto_1
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure$ViewNode;->getChildCount()I
 
@@ -378,7 +344,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 264
     invoke-virtual {p0, v1}, Landroid/app/assist/AssistStructure$ViewNode;->getChildAt(I)Landroid/app/assist/AssistStructure$ViewNode;
 
     move-result-object v3
@@ -398,7 +363,6 @@
 .method public static findViewNodeByAutofillId(Landroid/app/assist/AssistStructure;Landroid/view/autofill/AutofillId;)Landroid/app/assist/AssistStructure$ViewNode;
     .locals 1
 
-    .line 246
     new-instance v0, Lcom/android/server/autofill/Helper$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p1}, Lcom/android/server/autofill/Helper$$ExternalSyntheticLambda1;-><init>(Landroid/view/autofill/AutofillId;)V
@@ -413,12 +377,10 @@
 .method public static getAutofillIds(Landroid/app/assist/AssistStructure;Z)Ljava/util/ArrayList;
     .locals 4
 
-    .line 318
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 319
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure;->getWindowNodeCount()I
 
     move-result v1
@@ -428,12 +390,10 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 321
     invoke-virtual {p0, v2}, Landroid/app/assist/AssistStructure;->getWindowNodeAt(I)Landroid/app/assist/AssistStructure$WindowNode;
 
     move-result-object v3
 
-    .line 322
     invoke-virtual {v3}, Landroid/app/assist/AssistStructure$WindowNode;->getRootViewNode()Landroid/app/assist/AssistStructure$ViewNode;
 
     move-result-object v3
@@ -451,7 +411,6 @@
 .method public static getDisplayContext(Landroid/content/Context;I)Landroid/content/Context;
     .locals 3
 
-    .line 387
     invoke-static {}, Landroid/os/UserManager;->isVisibleBackgroundUsersEnabled()Z
 
     move-result v0
@@ -460,7 +419,6 @@
 
     return-object p0
 
-    .line 390
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getDisplayId()I
 
@@ -470,12 +428,10 @@
 
     if-ne v0, p1, :cond_2
 
-    .line 391
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_1
 
-    .line 393
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -486,19 +442,16 @@
 
     const-string v0, "getDisplayContext(): context %s already has displayId %d"
 
-    .line 392
     invoke-static {v1, v0, p1}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_1
     return-object p0
 
-    .line 397
     :cond_2
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_3
 
-    .line 398
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -511,7 +464,6 @@
 
     invoke-static {v1, v2, v0}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 400
     :cond_3
     const-class v0, Landroid/hardware/display/DisplayManager;
 
@@ -527,7 +479,6 @@
 
     if-nez v0, :cond_4
 
-    .line 403
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -538,12 +489,10 @@
 
     const-string v0, "Could not get context with displayId %d, Autofill operations will probably fail)"
 
-    .line 402
     invoke-static {v1, v0, p1}, Lcom/android/server/utils/Slogf;->wtf(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object p0
 
-    .line 407
     :cond_4
     invoke-virtual {p0, v0}, Landroid/content/Context;->createDisplayContext(Landroid/view/Display;)Landroid/content/Context;
 
@@ -555,12 +504,10 @@
 .method public static getFields(Landroid/service/autofill/Dataset;)Landroid/util/ArrayMap;
     .locals 6
 
-    .line 193
     invoke-virtual {p0}, Landroid/service/autofill/Dataset;->getFieldIds()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 194
     invoke-virtual {p0}, Landroid/service/autofill/Dataset;->getFieldValues()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -573,13 +520,11 @@
 
     goto :goto_0
 
-    .line 195
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 196
     :goto_0
     new-instance v3, Landroid/util/ArrayMap;
 
@@ -588,7 +533,6 @@
     :goto_1
     if-ge v1, v2, :cond_1
 
-    .line 198
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -614,12 +558,10 @@
 .method public static getNumericValue(Landroid/metrics/LogMaker;I)I
     .locals 0
 
-    .line 304
     invoke-virtual {p0, p1}, Landroid/metrics/LogMaker;->getTaggedData(I)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 305
     instance-of p1, p0, Ljava/lang/Number;
 
     if-nez p1, :cond_0
@@ -628,7 +570,6 @@
 
     return p0
 
-    .line 308
     :cond_0
     check-cast p0, Ljava/lang/Number;
 
@@ -642,7 +583,6 @@
 .method public static synthetic lambda$checkRemoteViewUriPermissions$0(ILjava/util/concurrent/atomic/AtomicBoolean;Landroid/net/Uri;)V
     .locals 2
 
-    .line 98
     invoke-static {p2, p0}, Landroid/content/ContentProvider;->getUserIdFromUri(Landroid/net/Uri;I)I
 
     move-result p2
@@ -663,7 +603,6 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 100
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result p0
@@ -684,7 +623,6 @@
 .method public static synthetic lambda$findViewNodeByAutofillId$1(Landroid/view/autofill/AutofillId;Landroid/app/assist/AssistStructure$ViewNode;)Z
     .locals 0
 
-    .line 247
     invoke-virtual {p1}, Landroid/app/assist/AssistStructure$ViewNode;->getAutofillId()Landroid/view/autofill/AutofillId;
 
     move-result-object p1
@@ -699,7 +637,6 @@
 .method public static synthetic lambda$sanitizeUrlBar$2([Ljava/lang/String;Landroid/app/assist/AssistStructure$ViewNode;)Z
     .locals 0
 
-    .line 283
     invoke-virtual {p1}, Landroid/app/assist/AssistStructure$ViewNode;->getIdEntry()Ljava/lang/String;
 
     move-result-object p1
@@ -714,10 +651,8 @@
 .method public static newLogMaker(ILandroid/content/ComponentName;Ljava/lang/String;IZ)Landroid/metrics/LogMaker;
     .locals 2
 
-    .line 226
     new-instance v0, Landroid/content/ComponentName;
 
-    .line 227
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -726,12 +661,10 @@
 
     invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 228
     invoke-static {p0, p2, p3, p4}, Lcom/android/server/autofill/Helper;->newLogMaker(ILjava/lang/String;IZ)Landroid/metrics/LogMaker;
 
     move-result-object p0
 
-    .line 229
     invoke-virtual {p0, v0}, Landroid/metrics/LogMaker;->setComponentName(Landroid/content/ComponentName;)Landroid/metrics/LogMaker;
 
     move-result-object p0
@@ -742,21 +675,18 @@
 .method public static newLogMaker(ILjava/lang/String;IZ)Landroid/metrics/LogMaker;
     .locals 1
 
-    .line 206
     new-instance v0, Landroid/metrics/LogMaker;
 
     invoke-direct {v0, p0}, Landroid/metrics/LogMaker;-><init>(I)V
 
     const/16 p0, 0x38c
 
-    .line 207
     invoke-virtual {v0, p0, p1}, Landroid/metrics/LogMaker;->addTaggedData(ILjava/lang/Object;)Landroid/metrics/LogMaker;
 
     move-result-object p0
 
     const/16 p1, 0x5b0
 
-    .line 208
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -769,7 +699,6 @@
 
     const/4 p1, 0x1
 
-    .line 210
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -785,12 +714,10 @@
 .method public static newLogMaker(ILjava/lang/String;Ljava/lang/String;IZ)Landroid/metrics/LogMaker;
     .locals 0
 
-    .line 218
     invoke-static {p0, p2, p3, p4}, Lcom/android/server/autofill/Helper;->newLogMaker(ILjava/lang/String;IZ)Landroid/metrics/LogMaker;
 
     move-result-object p0
 
-    .line 219
     invoke-virtual {p0, p1}, Landroid/metrics/LogMaker;->setPackageName(Ljava/lang/String;)Landroid/metrics/LogMaker;
 
     move-result-object p0
@@ -801,17 +728,14 @@
 .method public static paramsToString(Landroid/view/WindowManager$LayoutParams;)Ljava/lang/String;
     .locals 2
 
-    .line 186
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x19
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 187
     invoke-virtual {p0, v0}, Landroid/view/WindowManager$LayoutParams;->dumpDimensions(Ljava/lang/StringBuilder;)V
 
-    .line 188
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -826,12 +750,10 @@
 
     const-string/jumbo p1, "null"
 
-    .line 234
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 236
     :cond_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -856,20 +778,17 @@
 
     return-object v0
 
-    .line 119
     :cond_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
 
-    .line 121
     invoke-static {v1, p0}, Lcom/android/server/autofill/Helper;->checkRemoteViewUriPermissions(ILandroid/widget/RemoteViews;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 123
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -913,13 +832,11 @@
 
     return-object v0
 
-    .line 145
     :cond_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
 
-    .line 148
     invoke-virtual {p0}, Landroid/app/slice/Slice;->getItems()Ljava/util/List;
 
     move-result-object v2
@@ -942,7 +859,6 @@
 
     check-cast v3, Landroid/app/slice/SliceItem;
 
-    .line 149
     invoke-virtual {v3}, Landroid/app/slice/SliceItem;->getFormat()Ljava/lang/String;
 
     move-result-object v4
@@ -957,13 +873,11 @@
 
     goto :goto_0
 
-    .line 154
     :cond_2
     invoke-virtual {v3}, Landroid/app/slice/SliceItem;->getIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object v3
 
-    .line 155
     invoke-virtual {v3}, Landroid/graphics/drawable/Icon;->getType()I
 
     move-result v4
@@ -972,7 +886,6 @@
 
     if-eq v4, v5, :cond_3
 
-    .line 156
     invoke-virtual {v3}, Landroid/graphics/drawable/Icon;->getType()I
 
     move-result v4
@@ -983,7 +896,6 @@
 
     goto :goto_0
 
-    .line 161
     :cond_3
     invoke-virtual {v3}, Landroid/graphics/drawable/Icon;->getUri()Landroid/net/Uri;
 
@@ -995,7 +907,6 @@
 
     if-eq v3, v1, :cond_1
 
-    .line 164
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1027,7 +938,6 @@
 .method public static sanitizeUrlBar(Landroid/app/assist/AssistStructure;[Ljava/lang/String;)Landroid/app/assist/AssistStructure$ViewNode;
     .locals 2
 
-    .line 282
     new-instance v0, Lcom/android/server/autofill/Helper$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p1}, Lcom/android/server/autofill/Helper$$ExternalSyntheticLambda0;-><init>([Ljava/lang/String;)V
@@ -1038,7 +948,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 286
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure$ViewNode;->getText()Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -1047,7 +956,6 @@
 
     move-result-object p1
 
-    .line 287
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -1056,7 +964,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 288
     sget-boolean p1, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz p1, :cond_0
@@ -1086,16 +993,13 @@
 
     return-object p0
 
-    .line 291
     :cond_1
     invoke-virtual {p0, p1}, Landroid/app/assist/AssistStructure$ViewNode;->setWebDomain(Ljava/lang/String;)V
 
-    .line 292
     sget-boolean p1, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz p1, :cond_2
 
-    .line 293
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1114,7 +1018,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 294
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure$ViewNode;->getWebDomain()Ljava/lang/String;
 
     move-result-object v0
@@ -1125,7 +1028,6 @@
 
     move-result-object p1
 
-    .line 293
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -1141,7 +1043,6 @@
 
     return-object p0
 
-    .line 177
     :cond_0
     invoke-virtual {p0}, Landroid/util/ArraySet;->size()I
 
@@ -1151,7 +1052,6 @@
 
     const/4 v1, 0x0
 
-    .line 178
     :goto_0
     invoke-virtual {p0}, Landroid/util/ArraySet;->size()I
 
@@ -1159,7 +1059,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 179
     invoke-virtual {p0, v1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -1179,14 +1078,12 @@
 .method public static weakDeref(Ljava/lang/ref/WeakReference;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .line 411
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 413
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

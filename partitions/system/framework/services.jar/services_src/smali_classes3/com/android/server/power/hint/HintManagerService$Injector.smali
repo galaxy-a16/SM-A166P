@@ -17,7 +17,6 @@
 .method public createNativeWrapper()Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
     .locals 0
 
-    .line 106
     new-instance p0, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
 
     invoke-direct {p0}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;-><init>()V

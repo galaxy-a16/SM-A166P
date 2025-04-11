@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)V
     .locals 0
 
-    .line 99
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$2;->this$0:Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 0
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$2;->this$0:Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;
 
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->-$$Nest$fgetmPopup(Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)Landroid/widget/PopupMenu;

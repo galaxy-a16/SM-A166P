@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingManager;)V
     .locals 0
 
-    .line 105
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$1;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -33,7 +32,6 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 108
     :goto_0
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$1;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
@@ -45,13 +43,11 @@
 
     return-void
 
-    .line 111
     :cond_1
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$1;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
     invoke-static {p1, p2}, Lcom/android/server/notification/edgelighting/EdgeLightingManager;->-$$Nest$fputmRinging(Lcom/android/server/notification/edgelighting/EdgeLightingManager;Z)V
 
-    .line 116
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$1;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
     invoke-static {p1}, Lcom/android/server/notification/edgelighting/EdgeLightingManager;->-$$Nest$fgetmEdgeLightingPolicyManager(Lcom/android/server/notification/edgelighting/EdgeLightingManager;)Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;

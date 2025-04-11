@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 5593
     iput-object p1, p0, Lcom/android/server/StorageManagerService$DirEncryptListner;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/security/IDirEncryptServiceListener$Stub;-><init>()V
@@ -24,14 +23,12 @@
 .method public onEncryptionStatusChanged(Ljava/lang/String;ILjava/lang/String;II)V
     .locals 1
 
-    .line 5599
     iget-object p2, p0, Lcom/android/server/StorageManagerService$DirEncryptListner;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p2, p1}, Lcom/android/server/StorageManagerService;->-$$Nest$mfindVolumeByIdOrThrow(Lcom/android/server/StorageManagerService;Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
     move-result-object p1
 
-    .line 5600
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getType()I
 
     move-result p2
@@ -54,7 +51,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 5602
     :try_start_0
     iget-object p2, p0, Lcom/android/server/StorageManagerService$DirEncryptListner;->this$0:Lcom/android/server/StorageManagerService;
 
@@ -64,7 +60,6 @@
 
     invoke-virtual {p2, p1}, Lcom/android/server/storage/StorageSessionController;->onVolumeUnmount(Landroid/os/storage/VolumeInfo;)V
 
-    .line 5603
     iget-object p2, p0, Lcom/android/server/StorageManagerService$DirEncryptListner;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p2}, Lcom/android/server/StorageManagerService;->-$$Nest$fgetmVold(Lcom/android/server/StorageManagerService;)Landroid/os/IVold;
@@ -92,7 +87,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 5632
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0

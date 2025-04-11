@@ -7,7 +7,6 @@
 .method public static create(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Lcom/android/server/servicewatcher/ServiceWatcher$ServiceSupplier;Lcom/android/server/servicewatcher/ServiceWatcher$ServiceListener;)Lcom/android/server/servicewatcher/ServiceWatcher;
     .locals 8
 
-    .line 225
     new-instance v7, Lcom/android/server/servicewatcher/ServiceWatcherImpl;
 
     const/4 v6, 0x0
@@ -32,7 +31,6 @@
 .method public static create(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Lcom/android/server/servicewatcher/ServiceWatcher$ServiceSupplier;Lcom/android/server/servicewatcher/ServiceWatcher$ServiceListener;Lcom/android/server/location/injector/Injector;)Lcom/android/server/servicewatcher/ServiceWatcher;
     .locals 8
 
-    .line 245
     new-instance v7, Lcom/android/server/servicewatcher/ServiceWatcherImpl;
 
     move-object v0, v7
@@ -57,7 +55,6 @@
 .method public static create(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/servicewatcher/ServiceWatcher$ServiceSupplier;Lcom/android/server/servicewatcher/ServiceWatcher$ServiceListener;Lcom/android/server/location/injector/Injector;)Lcom/android/server/servicewatcher/ServiceWatcher;
     .locals 6
 
-    .line 235
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1

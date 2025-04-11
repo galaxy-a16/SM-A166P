@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/soundtrigger/SoundTriggerService;Landroid/content/Context;)V
     .locals 0
 
-    .line 1681
     iput-object p1, p0, Lcom/android/server/soundtrigger/SoundTriggerService$LocalSoundTriggerService;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1682
     iput-object p2, p0, Lcom/android/server/soundtrigger/SoundTriggerService$LocalSoundTriggerService;->mContext:Landroid/content/Context;
 
     return-void
@@ -32,12 +30,10 @@
 .method public attach(Landroid/os/IBinder;Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;Z)Lcom/android/server/SoundTriggerInternal$Session;
     .locals 8
 
-    .line 1798
     invoke-static {}, Landroid/media/permission/IdentityContext;->getNonNull()Landroid/media/permission/Identity;
 
     move-result-object v5
 
-    .line 1799
     iget-object v0, p0, Lcom/android/server/soundtrigger/SoundTriggerService$LocalSoundTriggerService;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
     invoke-static {v0}, Lcom/android/server/soundtrigger/SoundTriggerService;->-$$Nest$fgetmSessionIdCounter(Lcom/android/server/soundtrigger/SoundTriggerService;)Ljava/util/concurrent/atomic/AtomicInteger;
@@ -48,7 +44,6 @@
 
     move-result v0
 
-    .line 1800
     iget-object v1, p0, Lcom/android/server/soundtrigger/SoundTriggerService$LocalSoundTriggerService;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
     invoke-static {v1}, Lcom/android/server/soundtrigger/SoundTriggerService;->-$$Nest$fgetmServiceEventLogger(Lcom/android/server/soundtrigger/SoundTriggerService;)Lcom/android/server/utils/EventLogger;
@@ -81,7 +76,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 1802
     new-instance v4, Lcom/android/server/utils/EventLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -108,7 +102,6 @@
 
     invoke-direct {v4, v1, v0}, Lcom/android/server/utils/EventLogger;-><init>(ILjava/lang/String;)V
 
-    .line 1806
     new-instance v7, Lcom/android/server/soundtrigger/SoundTriggerService$LocalSoundTriggerService$SessionImpl;
 
     iget-object v0, p0, Lcom/android/server/soundtrigger/SoundTriggerService$LocalSoundTriggerService;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
@@ -133,7 +126,6 @@
 .method public listModuleProperties(Landroid/media/permission/Identity;)Ljava/util/List;
     .locals 4
 
-    .line 1812
     iget-object v0, p0, Lcom/android/server/soundtrigger/SoundTriggerService$LocalSoundTriggerService;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
     invoke-static {v0}, Lcom/android/server/soundtrigger/SoundTriggerService;->-$$Nest$fgetmServiceEventLogger(Lcom/android/server/soundtrigger/SoundTriggerService;)Lcom/android/server/utils/EventLogger;
@@ -150,12 +142,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 1814
     invoke-static {p1}, Landroid/media/permission/PermissionUtil;->establishIdentityDirect(Landroid/media/permission/Identity;)Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 1816
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger/SoundTriggerService$LocalSoundTriggerService;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
@@ -167,7 +157,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1817
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -178,7 +167,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1814
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1

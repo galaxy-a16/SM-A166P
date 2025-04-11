@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/io/File;
 
     invoke-static {p1}, Lcom/android/server/pm/ShortcutDumpFiles;->$r8$lambda$pGG0rowFI37DIvF9-khNJsT-nLM(Ljava/io/File;)Ljava/lang/String;

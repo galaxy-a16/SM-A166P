@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl$UsageComparator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$UsageComparator;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public compare(Landroid/os/SemSimpleNetworkStats;Landroid/os/SemSimpleNetworkStats;)I
     .locals 4
 
-    .line 15054
     invoke-virtual {p1}, Landroid/os/SemSimpleNetworkStats;->getTxRxBytes()J
 
     move-result-wide v0
@@ -46,7 +44,6 @@
 
     return p0
 
-    .line 15056
     :cond_0
     invoke-virtual {p1}, Landroid/os/SemSimpleNetworkStats;->getTxRxBytes()J
 
@@ -73,7 +70,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 15050
     check-cast p1, Landroid/os/SemSimpleNetworkStats;
 
     check-cast p2, Landroid/os/SemSimpleNetworkStats;

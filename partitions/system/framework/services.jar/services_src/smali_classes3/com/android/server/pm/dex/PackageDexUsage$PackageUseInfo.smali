@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mDexUseInfoMap:Ljava/util/Map;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPrimaryCodePaths(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$mmergePrimaryCodePaths(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mergePrimaryCodePaths(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -44,22 +41,18 @@
 .method public constructor <init>(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)V
     .locals 5
 
-    .line 708
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 709
     iget-object v0, p1, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPackageName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPackageName:Ljava/lang/String;
 
-    .line 710
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
-    .line 711
     iget-object v0, p1, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -83,7 +76,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 712
     iget-object v2, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -106,7 +98,6 @@
 
     goto :goto_0
 
-    .line 715
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
@@ -114,7 +105,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mDexUseInfoMap:Ljava/util/Map;
 
-    .line 716
     iget-object p1, p1, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mDexUseInfoMap:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -138,7 +128,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 717
     iget-object v1, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mDexUseInfoMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -170,7 +159,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;-><init>(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)V
 
     return-void
@@ -179,24 +167,20 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 701
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 702
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
-    .line 703
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mDexUseInfoMap:Ljava/util/Map;
 
-    .line 704
     iput-object p1, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPackageName:Ljava/lang/String;
 
     return-void
@@ -207,19 +191,16 @@
 .method public clearCodePathUsedByOtherApps()Z
     .locals 4
 
-    .line 764
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 765
     iget-object v2, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPackageName:Ljava/lang/String;
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 766
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -246,7 +227,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 768
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -270,7 +250,6 @@
 .method public getDexUseInfoMap()Ljava/util/Map;
     .locals 0
 
-    .line 747
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mDexUseInfoMap:Ljava/util/Map;
 
     return-object p0
@@ -279,7 +258,6 @@
 .method public getLoadingPackages(Ljava/lang/String;)Ljava/util/Set;
     .locals 1
 
-    .line 751
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     const/4 v0, 0x0
@@ -296,7 +274,6 @@
 .method public isAnyCodePathUsedByOtherApps()Z
     .locals 0
 
-    .line 755
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
@@ -311,7 +288,6 @@
 .method public isUsedByOtherApps(Ljava/lang/String;)Z
     .locals 2
 
-    .line 731
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -322,7 +298,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 732
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -331,7 +306,6 @@
 
     check-cast p1, Ljava/util/Set;
 
-    .line 733
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPackageName:Ljava/lang/String;
 
     invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -342,7 +316,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 736
     invoke-interface {p1}, Ljava/util/Set;->size()I
 
     move-result p0
@@ -354,7 +327,6 @@
     :cond_0
     return v1
 
-    .line 740
     :cond_1
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
@@ -371,7 +343,6 @@
 .method public final mergePrimaryCodePaths(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    .line 722
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -382,17 +353,14 @@
 
     if-nez v0, :cond_0
 
-    .line 724
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 725
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->mPrimaryCodePaths:Ljava/util/Map;
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 727
     :cond_0
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;)V
     .locals 0
 
-    .line 660
     iput-object p1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 663
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "android.net.wifi.WIFI_STATE_CHANGED"
 
-    .line 666
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -44,14 +41,12 @@
 
     const-string/jumbo p1, "wifi_state"
 
-    .line 667
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     if-ne p1, v1, :cond_7
 
-    .line 670
     invoke-static {}, Lcom/android/server/adb/AdbDebuggingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -60,7 +55,6 @@
 
     invoke-static {p1, p2}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 671
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
@@ -78,7 +72,6 @@
     :cond_0
     const-string v0, "android.net.wifi.STATE_CHANGE"
 
-    .line 674
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -87,7 +80,6 @@
 
     const-string/jumbo p1, "networkInfo"
 
-    .line 676
     const-class v0, Landroid/net/NetworkInfo;
 
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -96,21 +88,18 @@
 
     check-cast p1, Landroid/net/NetworkInfo;
 
-    .line 678
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
 
     move-result p2
 
     if-ne p2, v1, :cond_7
 
-    .line 680
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 681
     invoke-static {}, Lcom/android/server/adb/AdbDebuggingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -119,7 +108,6 @@
 
     invoke-static {p1, p2}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 682
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
@@ -134,7 +122,6 @@
 
     return-void
 
-    .line 687
     :cond_1
     iget-object p1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
@@ -146,21 +133,18 @@
 
     const-string/jumbo p2, "wifi"
 
-    .line 688
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/net/wifi/WifiManager;
 
-    .line 689
     invoke-virtual {p1}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    .line 690
     invoke-virtual {p1}, Landroid/net/wifi/WifiInfo;->getNetworkId()I
 
     move-result p2
@@ -171,7 +155,6 @@
 
     goto :goto_1
 
-    .line 699
     :cond_2
     invoke-virtual {p1}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
 
@@ -179,7 +162,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 700
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result p2
@@ -188,7 +170,6 @@
 
     goto :goto_0
 
-    .line 706
     :cond_3
     iget-object p2, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
@@ -200,7 +181,6 @@
 
     monitor-enter p2
 
-    .line 707
     :try_start_0
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
@@ -220,7 +200,6 @@
 
     if-nez p1, :cond_4
 
-    .line 708
     invoke-static {}, Lcom/android/server/adb/AdbDebuggingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -229,7 +208,6 @@
 
     invoke-static {p1, v0}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 709
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
@@ -242,7 +220,6 @@
 
     invoke-static {p0, p1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 712
     :cond_4
     monitor-exit p2
 
@@ -257,7 +234,6 @@
 
     throw p0
 
-    .line 701
     :cond_5
     :goto_0
     invoke-static {}, Lcom/android/server/adb/AdbDebuggingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -268,7 +244,6 @@
 
     invoke-static {p1, p2}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 702
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
@@ -283,7 +258,6 @@
 
     return-void
 
-    .line 691
     :cond_6
     :goto_1
     invoke-static {}, Lcom/android/server/adb/AdbDebuggingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -294,7 +268,6 @@
 
     invoke-static {p1, p2}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 693
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler$1;->this$1:Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;
 
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;

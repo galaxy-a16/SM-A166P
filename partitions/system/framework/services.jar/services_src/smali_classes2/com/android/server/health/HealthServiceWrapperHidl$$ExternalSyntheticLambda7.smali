@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/health/HealthServiceWrapperHidl$Mutable;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/health/HealthServiceWrapperHidl$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/health/HealthServiceWrapperHidl$Mutable;
@@ -27,7 +26,6 @@
 .method public final onValues(ILandroid/hardware/health/V2_0/HealthInfo;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperHidl$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/health/HealthServiceWrapperHidl$Mutable;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/health/HealthServiceWrapperHidl;->$r8$lambda$vIRfsHqaEOqEXnSr3gw6JYKeE7c(Lcom/android/server/health/HealthServiceWrapperHidl$Mutable;ILandroid/hardware/health/V2_0/HealthInfo;)V

@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 32
     invoke-direct {p0}, Landroid/hardware/ISerialManager$Stub;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/SerialService;->mContext:Landroid/content/Context;
 
-    .line 34
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -43,17 +40,14 @@
 .method public getSerialPorts()[Ljava/lang/String;
     .locals 4
 
-    .line 40
     invoke-super {p0}, Landroid/hardware/ISerialManager$Stub;->getSerialPorts_enforcePermission()V
 
-    .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 43
     :goto_0
     iget-object v2, p0, Lcom/android/server/SerialService;->mSerialPorts:[Ljava/lang/String;
 
@@ -61,10 +55,8 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 44
     aget-object v2, v2, v1
 
-    .line 45
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -75,7 +67,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 46
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -83,7 +74,6 @@
 
     goto :goto_0
 
-    .line 49
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -91,7 +81,6 @@
 
     new-array p0, p0, [Ljava/lang/String;
 
-    .line 50
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     return-object p0
@@ -100,12 +89,10 @@
 .method public openSerialPort(Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
     .locals 3
 
-    .line 56
     invoke-super {p0}, Landroid/hardware/ISerialManager$Stub;->openSerialPort_enforcePermission()V
 
     const/4 v0, 0x0
 
-    .line 58
     :goto_0
     iget-object v1, p0, Lcom/android/server/SerialService;->mSerialPorts:[Ljava/lang/String;
 
@@ -113,7 +100,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 59
     aget-object v1, v1, v0
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -122,7 +108,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 60
     invoke-direct {p0, p1}, Lcom/android/server/SerialService;->native_open(Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
@@ -134,7 +119,6 @@
 
     goto :goto_0
 
-    .line 63
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

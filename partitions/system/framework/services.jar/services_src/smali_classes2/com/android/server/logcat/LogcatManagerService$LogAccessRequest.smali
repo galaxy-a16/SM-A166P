@@ -17,19 +17,14 @@
 .method public constructor <init>(IIII)V
     .locals 0
 
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     iput p1, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;->mUid:I
 
-    .line 156
     iput p2, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;->mGid:I
 
-    .line 157
     iput p3, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;->mPid:I
 
-    .line 158
     iput p4, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;->mFd:I
 
     return-void
@@ -38,7 +33,6 @@
 .method public synthetic constructor <init>(IIIILcom/android/server/logcat/LogcatManagerService$LogAccessRequest-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;-><init>(IIII)V
 
     return-void
@@ -55,7 +49,6 @@
 
     return v0
 
-    .line 164
     :cond_0
     instance-of v1, p1, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;
 
@@ -65,11 +58,9 @@
 
     return v2
 
-    .line 165
     :cond_1
     check-cast p1, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;
 
-    .line 166
     iget v1, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;->mUid:I
 
     iget v3, p1, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;->mUid:I
@@ -106,7 +97,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 171
     iget v0, p0, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;->mUid:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -145,7 +135,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 176
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

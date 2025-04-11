@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
     .locals 0
 
-    .line 192
     iput-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker$4;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,10 +25,8 @@
 
     const-string p1, "User unlocked."
 
-    .line 195
     invoke-static {p1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 196
     iget-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker$4;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
 
     invoke-static {p1}, Lcom/att/iqi/libs/IQIServiceBroker;->-$$Nest$fgetmMessageDispatcher(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/os/Handler;

@@ -20,7 +20,6 @@
 .method public final produce(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/pm/PackageManagerService;->$r8$lambda$Uy1oWfa9qTiU3Xjn0eCKIWqRJUU(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Lcom/android/server/pm/AppsFilterImpl;
 
     move-result-object p0

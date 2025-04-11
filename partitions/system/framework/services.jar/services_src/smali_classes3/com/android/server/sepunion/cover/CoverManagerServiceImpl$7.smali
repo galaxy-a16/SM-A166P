@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)V
     .locals 0
 
-    .line 300
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$7;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 4
 
-    .line 303
     iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     const/4 v0, 0x0
@@ -43,7 +40,6 @@
 
     float-to-int p1, p1
 
-    .line 304
     invoke-static {}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -66,7 +62,6 @@
 
     if-nez p1, :cond_0
 
-    .line 306
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$7;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -82,7 +77,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 308
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$7;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J

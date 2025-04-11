@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/injector/SystemSettingsHelper;->$r8$lambda$I803zMVfB5OQFl7sZosPNo4j_hM()Landroid/util/ArraySet;
 
     move-result-object p0

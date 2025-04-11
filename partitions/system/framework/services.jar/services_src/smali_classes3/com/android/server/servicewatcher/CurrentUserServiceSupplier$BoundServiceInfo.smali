@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;ILandroid/content/ComponentName;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 127
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;-><init>(Ljava/lang/String;ILandroid/content/ComponentName;)V
 
-    .line 129
     iput p4, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;->mVersion:I
 
-    .line 130
     iput-object p5, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;->mMetadata:Landroid/os/Bundle;
 
     return-void
@@ -28,7 +25,6 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/content/pm/ResolveInfo;)V
     .locals 6
 
-    .line 121
     invoke-static {p2}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;->parseUid(Landroid/content/pm/ResolveInfo;)I
 
     move-result v2
@@ -39,7 +35,6 @@
 
     move-result-object v3
 
-    .line 122
     invoke-static {p2}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;->parseVersion(Landroid/content/pm/ResolveInfo;)I
 
     move-result v4
@@ -52,7 +47,6 @@
 
     move-object v1, p1
 
-    .line 121
     invoke-direct/range {v0 .. v5}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;-><init>(Ljava/lang/String;ILandroid/content/ComponentName;ILandroid/os/Bundle;)V
 
     return-void
@@ -61,14 +55,12 @@
 .method public static parseUid(Landroid/content/pm/ResolveInfo;)I
     .locals 3
 
-    .line 100
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object v0, p0, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 101
     iget-object p0, p0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz p0, :cond_0
@@ -77,14 +69,12 @@
 
     const/4 v2, 0x0
 
-    .line 102
     invoke-virtual {p0, v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 104
     invoke-static {v0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result p0
@@ -100,7 +90,6 @@
 .method public static parseVersion(Landroid/content/pm/ResolveInfo;)I
     .locals 2
 
-    .line 111
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object p0, p0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
@@ -111,7 +100,6 @@
 
     const-string/jumbo v1, "serviceVersion"
 
-    .line 112
     invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -125,7 +113,6 @@
 .method public getMetadata()Landroid/os/Bundle;
     .locals 0
 
-    .line 138
     iget-object p0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;->mMetadata:Landroid/os/Bundle;
 
     return-object p0
@@ -134,7 +121,6 @@
 .method public getVersion()I
     .locals 0
 
-    .line 134
     iget p0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;->mVersion:I
 
     return p0
@@ -143,7 +129,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 143
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

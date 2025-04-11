@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/ExtendedEthernetServiceImpl;)V
     .locals 0
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/ExtendedEthernetServiceImpl$1;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAvailable(Ljava/lang/String;)V
     .locals 3
 
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,7 +44,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     iget-object p1, p0, Lcom/android/server/ExtendedEthernetServiceImpl$1;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/ExtendedEthernetServiceImpl;->-$$Nest$fgetmContext(Lcom/android/server/ExtendedEthernetServiceImpl;)Landroid/content/Context;
@@ -59,7 +56,6 @@
 
     const-string v0, "ETHERNET_TETHERING_MODE"
 
-    .line 90
     invoke-static {p1, v0}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -74,13 +70,11 @@
 
     return-void
 
-    .line 94
     :cond_0
     new-instance p1, Lcom/android/server/ExtendedEthernetServiceImpl$1$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/ExtendedEthernetServiceImpl$1$1;-><init>(Lcom/android/server/ExtendedEthernetServiceImpl$1;)V
 
-    .line 101
     new-instance v0, Landroid/net/TetheringManager$TetheringRequest$Builder;
 
     const/4 v1, 0x5
@@ -91,7 +85,6 @@
 
     move-result-object v0
 
-    .line 102
     iget-object v1, p0, Lcom/android/server/ExtendedEthernetServiceImpl$1;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     invoke-static {v1}, Lcom/android/server/ExtendedEthernetServiceImpl;->-$$Nest$fgetmTetheringManager(Lcom/android/server/ExtendedEthernetServiceImpl;)Landroid/net/TetheringManager;
@@ -122,7 +115,6 @@
 
     const-string v0, "TetheredInterfaceCallback onUnavailable"
 
-    .line 107
     invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

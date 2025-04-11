@@ -13,15 +13,12 @@
 .method public constructor <init>(Lco/nstant/in/cbor/model/MajorType;)V
     .locals 0
 
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     iput-object p1, p0, Lco/nstant/in/cbor/model/DataItem;->majorType:Lco/nstant/in/cbor/model/MajorType;
 
     const-string/jumbo p0, "majorType is null"
 
-    .line 12
     invoke-static {p1, p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     return-void
@@ -36,7 +33,6 @@
 
     return-void
 
-    .line 65
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -48,24 +44,20 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 46
     instance-of v0, p1, Lco/nstant/in/cbor/model/DataItem;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    .line 47
     check-cast p1, Lco/nstant/in/cbor/model/DataItem;
 
-    .line 48
     iget-object v0, p0, Lco/nstant/in/cbor/model/DataItem;->tag:Lco/nstant/in/cbor/model/Tag;
 
     const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    .line 49
     iget-object v3, p1, Lco/nstant/in/cbor/model/DataItem;->tag:Lco/nstant/in/cbor/model/Tag;
 
     invoke-virtual {v0, v3}, Lco/nstant/in/cbor/model/Tag;->equals(Ljava/lang/Object;)Z
@@ -85,7 +77,6 @@
     :cond_0
     return v1
 
-    .line 51
     :cond_1
     iget-object v0, p1, Lco/nstant/in/cbor/model/DataItem;->tag:Lco/nstant/in/cbor/model/Tag;
 
@@ -106,7 +97,6 @@
 .method public getMajorType()Lco/nstant/in/cbor/model/MajorType;
     .locals 0
 
-    .line 16
     iget-object p0, p0, Lco/nstant/in/cbor/model/DataItem;->majorType:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
@@ -115,7 +105,6 @@
 .method public getTag()Lco/nstant/in/cbor/model/Tag;
     .locals 0
 
-    .line 37
     iget-object p0, p0, Lco/nstant/in/cbor/model/DataItem;->tag:Lco/nstant/in/cbor/model/Tag;
 
     return-object p0
@@ -124,7 +113,6 @@
 .method public hasTag()Z
     .locals 0
 
-    .line 41
     iget-object p0, p0, Lco/nstant/in/cbor/model/DataItem;->tag:Lco/nstant/in/cbor/model/Tag;
 
     if-eqz p0, :cond_0
@@ -143,7 +131,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 60
     iget-object v0, p0, Lco/nstant/in/cbor/model/DataItem;->majorType:Lco/nstant/in/cbor/model/MajorType;
 
     iget-object p0, p0, Lco/nstant/in/cbor/model/DataItem;->tag:Lco/nstant/in/cbor/model/Tag;
@@ -164,7 +151,6 @@
 
     if-ltz p1, :cond_0
 
-    .line 24
     new-instance v0, Lco/nstant/in/cbor/model/Tag;
 
     int-to-long v1, p1
@@ -175,7 +161,6 @@
 
     return-void
 
-    .line 21
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -191,10 +176,8 @@
 
     const-string/jumbo v0, "tag is null"
 
-    .line 28
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 29
     iput-object p1, p0, Lco/nstant/in/cbor/model/DataItem;->tag:Lco/nstant/in/cbor/model/Tag;
 
     return-void

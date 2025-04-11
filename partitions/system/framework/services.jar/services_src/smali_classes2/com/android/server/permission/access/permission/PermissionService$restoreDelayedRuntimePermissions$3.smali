@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/permission/access/permission/PermissionService;I)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/permission/access/permission/PermissionService$restoreDelayedRuntimePermissions$3;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
     iput p2, p0, Lcom/android/server/permission/access/permission/PermissionService$restoreDelayedRuntimePermissions$3;->$userId:I
@@ -31,7 +30,6 @@
 .method public final accept(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 1760
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -40,7 +38,6 @@
 
     return-void
 
-    .line 1763
     :cond_0
     iget-object p1, p0, Lcom/android/server/permission/access/permission/PermissionService$restoreDelayedRuntimePermissions$3;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
@@ -54,7 +51,6 @@
 
     monitor-enter p1
 
-    .line 1764
     :try_start_0
     invoke-static {v0}, Lcom/android/server/permission/access/permission/PermissionService;->access$isDelayedPermissionBackupFinished$p(Lcom/android/server/permission/access/permission/PermissionService;)Landroid/util/SparseBooleanArray;
 
@@ -64,12 +60,10 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 1765
     sget-object p0, Lcom/android/server/permission/jarjar/kotlin/Unit;->INSTANCE:Lcom/android/server/permission/jarjar/kotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1763
     monitor-exit p1
 
     return-void
@@ -85,7 +79,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1757
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/android/server/permission/access/permission/PermissionService$restoreDelayedRuntimePermissions$3;->accept(Ljava/lang/Boolean;)V

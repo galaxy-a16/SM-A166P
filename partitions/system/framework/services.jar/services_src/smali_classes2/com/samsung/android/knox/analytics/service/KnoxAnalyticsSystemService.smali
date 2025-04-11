@@ -67,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBootCompletedLock(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mBootCompletedLock:Ljava/lang/Object;
 
     return-object p0
@@ -76,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBootPhase(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mBootPhase:I
 
     return p0
@@ -85,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -94,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEventQueue(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)Lcom/samsung/android/knox/analytics/service/EventQueue;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
     return-object p0
@@ -103,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsSystemServiceRunning(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
     return p0
@@ -112,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSystemServiceRunningLock(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mSystemServiceRunningLock:Ljava/lang/Object;
 
     return-object p0
@@ -121,7 +115,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserManager(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)Landroid/os/UserManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mUserManager:Landroid/os/UserManager;
 
     return-object p0
@@ -130,7 +123,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserUnlockStatusLock(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mUserUnlockStatusLock:Ljava/lang/Object;
 
     return-object p0
@@ -139,7 +131,6 @@
 .method public static bridge synthetic -$$Nest$mbroadcastAnalyticsStatus(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;ZZ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->broadcastAnalyticsStatus(ZZ)V
 
     return-void
@@ -148,7 +139,6 @@
 .method public static bridge synthetic -$$Nest$mlogActivationEventAfterStart(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logActivationEventAfterStart()V
 
     return-void
@@ -157,7 +147,6 @@
 .method public static bridge synthetic -$$Nest$mlogActivationUpdateEvent(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logActivationUpdateEvent(Z)V
 
     return-void
@@ -166,7 +155,6 @@
 .method public static bridge synthetic -$$Nest$mlogStatusChangedEvent(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;IZLjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logStatusChangedEvent(IZLjava/lang/String;)V
 
     return-void
@@ -175,7 +163,6 @@
 .method public static bridge synthetic -$$Nest$mlogStatusChangedEventAfterStart(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;IZLjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logStatusChangedEventAfterStart(IZLjava/lang/String;)V
 
     return-void
@@ -184,7 +171,6 @@
 .method public static bridge synthetic -$$Nest$mlogTriggerEvent(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;IZLjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logTriggerEvent(IZLjava/lang/String;)V
 
     return-void
@@ -193,7 +179,6 @@
 .method public static bridge synthetic -$$Nest$mlogTriggerEventAfterStart(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;IZLjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logTriggerEventAfterStart(IZLjava/lang/String;)V
 
     return-void
@@ -202,7 +187,6 @@
 .method public static bridge synthetic -$$Nest$mstartSystemService(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->startSystemService()V
 
     return-void
@@ -211,7 +195,6 @@
 .method public static bridge synthetic -$$Nest$mstopSystemService(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->stopSystemService()V
 
     return-void
@@ -220,7 +203,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -229,7 +211,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -240,7 +221,6 @@
 
     const-class v1, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;
 
-    .line 29
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
@@ -259,60 +239,50 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 93
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 52
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
     const/16 v0, 0x3e8
 
-    .line 53
     iput v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mBootPhase:I
 
-    .line 58
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mBootCompletedLock:Ljava/lang/Object;
 
-    .line 59
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mSystemServiceRunningLock:Ljava/lang/Object;
 
-    .line 60
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mUserUnlockStatusLock:Ljava/lang/Object;
 
-    .line 62
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$1;-><init>(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)V
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mActivationObserver:Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;
 
-    .line 94
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "Constructor()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 95
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "user"
 
-    .line 96
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -327,7 +297,6 @@
 .method public static runAsync(Ljava/lang/Runnable;)Landroid/os/AsyncTask;
     .locals 2
 
-    .line 398
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$7;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$7;-><init>(Ljava/lang/Runnable;)V
@@ -338,7 +307,6 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 404
     invoke-virtual {v0, p0, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     move-result-object p0
@@ -351,14 +319,12 @@
 .method public final broadcastAnalyticsStatus(ZZ)V
     .locals 2
 
-    .line 197
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "broadcastAnalyticsStatus()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 198
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mUserManager:Landroid/os/UserManager;
 
     const/4 v1, 0x0
@@ -369,14 +335,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 200
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p1, p2}, Lcom/samsung/android/knox/analytics/util/UploaderBroadcaster;->broadcastAnalyticsStatus(Landroid/content/Context;ZZ)V
 
     return-void
 
-    .line 205
     :cond_0
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$3;
 
@@ -390,14 +354,12 @@
 .method public final checkVersioningBlobWhenBootCompleted()V
     .locals 2
 
-    .line 170
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "checkVersioningBlobWhenBootCompleted()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 171
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$2;-><init>(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)V
@@ -410,24 +372,20 @@
 .method public final deinitializeDatabaseSizeObserver()V
     .locals 2
 
-    .line 235
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "deinitializeDatabaseSizeObserver()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mDatabaseSizeObserver:Lcom/samsung/android/knox/analytics/service/DatabaseSizeObserver;
 
     if-eqz v0, :cond_0
 
-    .line 237
     invoke-virtual {v0}, Lcom/samsung/android/knox/analytics/service/DatabaseSizeObserver;->stop()V
 
     const/4 v0, 0x0
 
-    .line 238
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mDatabaseSizeObserver:Lcom/samsung/android/knox/analytics/service/DatabaseSizeObserver;
 
     :cond_0
@@ -437,19 +395,16 @@
 .method public final initializeDatabaseSizeObserver()V
     .locals 3
 
-    .line 227
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "initializeDatabaseSizeObserver()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 228
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mDatabaseSizeObserver:Lcom/samsung/android/knox/analytics/service/DatabaseSizeObserver;
 
     if-nez v0, :cond_0
 
-    .line 229
     new-instance v0, Lcom/samsung/android/knox/analytics/service/DatabaseSizeObserver;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
@@ -460,7 +415,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mDatabaseSizeObserver:Lcom/samsung/android/knox/analytics/service/DatabaseSizeObserver;
 
-    .line 231
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mDatabaseSizeObserver:Lcom/samsung/android/knox/analytics/service/DatabaseSizeObserver;
 
@@ -472,19 +426,16 @@
 .method public final initializeEventQueue()V
     .locals 2
 
-    .line 243
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "initializeEventQueue()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 244
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
     if-nez v0, :cond_0
 
-    .line 245
     new-instance v0, Lcom/samsung/android/knox/analytics/service/EventQueue;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
@@ -493,7 +444,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
-    .line 247
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
@@ -505,14 +455,12 @@
 .method public final logActivationEventAfterStart()V
     .locals 2
 
-    .line 350
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "logActivationEventAfterStart()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 352
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$6;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$6;-><init>(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;)V
@@ -525,7 +473,6 @@
 .method public final logActivationUpdateEvent(Z)V
     .locals 4
 
-    .line 382
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -552,7 +499,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 383
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
     if-eqz v1, :cond_2
@@ -565,7 +511,6 @@
 
     goto :goto_1
 
-    .line 388
     :cond_0
     new-instance v0, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;
 
@@ -579,10 +524,8 @@
 
     const-string/jumbo v1, "st"
 
-    .line 391
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Z)V
 
-    .line 393
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
     if-eqz p1, :cond_1
@@ -601,7 +544,6 @@
     :goto_1
     const-string p0, "logActivationUpdateEvent(): EventQueue not started!"
 
-    .line 384
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -610,12 +552,10 @@
 .method public final logDeactivationEvent()V
     .locals 1
 
-    .line 373
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 375
     sget-object p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v0, "Won\'t log deactivation because it is already off!"
@@ -627,7 +567,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 378
     invoke-virtual {p0, v0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logActivationUpdateEvent(Z)V
 
     return-void
@@ -636,7 +575,6 @@
 .method public final logStatusChangedEvent(IZLjava/lang/String;)V
     .locals 9
 
-    .line 319
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -669,7 +607,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
     new-instance v0, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;
 
     const-string/jumbo v1, "statusChanged"
@@ -682,17 +619,14 @@
 
     const-string/jumbo v1, "srv"
 
-    .line 322
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;I)V
 
     const-string/jumbo v1, "st"
 
-    .line 323
     invoke-virtual {v0, v1, p2}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Z)V
 
     if-eqz p3, :cond_0
 
-    .line 324
     invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
 
     move-result p2
@@ -701,10 +635,8 @@
 
     const-string/jumbo p2, "pN"
 
-    .line 325
     invoke-virtual {v0, p2, p3}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 326
     iget-object p2, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
 
     invoke-static {p2, p3}, Lcom/android/server/enterprise/utils/Utils;->getPermissionType(Landroid/content/Context;Ljava/lang/String;)I
@@ -717,7 +649,6 @@
 
     const/4 p2, 0x0
 
-    .line 332
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
 
@@ -729,7 +660,6 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 333
     :try_start_1
     iget-object v4, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
 
@@ -753,7 +683,6 @@
 
     move-object v1, p2
 
-    .line 336
     :goto_0
     sget-object v6, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
@@ -780,7 +709,6 @@
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 339
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -795,7 +723,6 @@
 
     if-lez v4, :cond_0
 
-    .line 340
     sget-object v4, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -830,7 +757,6 @@
 
     const-string/jumbo p1, "pkMD5"
 
-    .line 341
     invoke-virtual {v1}, Ljava/util/ArrayList;->toString()Ljava/lang/String;
 
     move-result-object p3
@@ -839,14 +765,12 @@
 
     const-string/jumbo p1, "pkSHA256"
 
-    .line 342
     invoke-virtual {p2}, Ljava/util/ArrayList;->toString()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
@@ -858,24 +782,20 @@
 .method public final logStatusChangedEventAfterStart(IZLjava/lang/String;)V
     .locals 2
 
-    .line 278
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "logStatusChangedEventAfterStart()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 279
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
     if-eqz v0, :cond_0
 
-    .line 281
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logStatusChangedEvent(IZLjava/lang/String;)V
 
     return-void
 
-    .line 284
     :cond_0
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$5;
 
@@ -889,7 +809,6 @@
 .method public final logTriggerEvent(IZLjava/lang/String;)V
     .locals 4
 
-    .line 305
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -922,7 +841,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 306
     new-instance v0, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;
 
     const-string/jumbo v1, "serviceChanged"
@@ -935,17 +853,14 @@
 
     const-string/jumbo v1, "srv"
 
-    .line 309
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;I)V
 
     const-string/jumbo v1, "st"
 
-    .line 310
     invoke-virtual {v0, v1, p2}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Z)V
 
     if-eqz p3, :cond_0
 
-    .line 311
     invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
 
     move-result p2
@@ -956,10 +871,8 @@
 
     const-string/jumbo p1, "pN"
 
-    .line 312
     invoke-virtual {v0, p1, p3}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 315
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
@@ -971,24 +884,20 @@
 .method public final logTriggerEventAfterStart(IZLjava/lang/String;)V
     .locals 2
 
-    .line 251
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v1, "logTriggerEventAfterStart()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 252
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
     if-eqz v0, :cond_0
 
-    .line 254
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logTriggerEvent(IZLjava/lang/String;)V
 
     return-void
 
-    .line 257
     :cond_0
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$4;
 
@@ -1002,7 +911,6 @@
 .method public onBootPhase(I)V
     .locals 2
 
-    .line 110
     iput p1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mBootPhase:I
 
     const/16 v0, 0x1f4
@@ -1015,7 +923,6 @@
 
     goto :goto_0
 
-    .line 116
     :cond_0
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
@@ -1023,18 +930,15 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 117
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mBootCompletedLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 118
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mBootCompletedLock:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 119
     monitor-exit v0
 
     goto :goto_0
@@ -1048,7 +952,6 @@
 
     throw p0
 
-    .line 113
     :cond_1
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
@@ -1056,7 +959,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 124
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mActivationMonitor:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;
 
@@ -1068,14 +970,12 @@
 .method public onStart()V
     .locals 2
 
-    .line 102
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onStart() knox_analytics"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
     new-instance v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mContext:Landroid/content/Context;
@@ -1084,7 +984,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mActivationMonitor:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;
 
-    .line 104
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mActivationObserver:Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->registerObserver(Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;)V
@@ -1095,25 +994,21 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 1
 
-    .line 129
     sget-object p1, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string v0, " onUserUnlocking()"
 
     invoke-static {p1, v0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
     iget-object p1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mUserUnlockStatusLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 131
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mUserUnlockStatusLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 132
     monitor-exit p1
 
     return-void
@@ -1131,40 +1026,33 @@
 .method public final startSystemService()V
     .locals 4
 
-    .line 136
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "startSystemService()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 137
     iget-boolean v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
     if-eqz v1, :cond_0
 
     const-string/jumbo p0, "startSystemService(): can\'t start, already running!"
 
-    .line 138
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 141
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->initializeEventQueue()V
 
-    .line 142
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mImpl:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl;
 
     if-nez v1, :cond_1
 
     const-string/jumbo v1, "startSystemService(): new Impl"
 
-    .line 143
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -1181,10 +1069,8 @@
 
     const-string v1, "knox_analytics"
 
-    .line 146
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 147
     new-instance v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsProxyService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -1197,12 +1083,10 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 149
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->checkVersioningBlobWhenBootCompleted()V
 
     goto :goto_0
 
-    .line 152
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mEventQueue:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
@@ -1211,10 +1095,8 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 154
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
-    .line 155
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->initializeDatabaseSizeObserver()V
 
     return-void
@@ -1223,35 +1105,29 @@
 .method public final stopSystemService()V
     .locals 2
 
-    .line 159
     sget-object v0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "stopSystemService()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 160
     iget-boolean v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
     if-nez v1, :cond_0
 
     const-string/jumbo p0, "stopSystemService(): can\'t stop, already stopped!"
 
-    .line 161
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 164
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->deinitializeDatabaseSizeObserver()V
 
-    .line 165
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->logDeactivationEvent()V
 
     const/4 v0, 0x0
 
-    .line 166
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->mIsSystemServiceRunning:Z
 
     return-void

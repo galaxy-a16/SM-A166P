@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/AutomaticBrightnessController;)V
     .locals 0
 
-    .line 355
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    .line 358
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 359
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -38,12 +35,10 @@
 
     const/high16 v3, -0x40800000    # -1.0f
 
-    .line 360
     invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->getFloatExtra(Ljava/lang/String;F)F
 
     move-result v2
 
-    .line 361
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     const-string v4, "adaptive_brightness_service_start_extra"
@@ -66,7 +61,6 @@
 
     if-gez p2, :cond_0
 
-    .line 363
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +83,6 @@
 
     goto :goto_0
 
-    .line 365
     :cond_0
     sget-boolean p2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
@@ -120,7 +113,6 @@
 
     invoke-static {v4, p1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     :cond_2
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$1;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 

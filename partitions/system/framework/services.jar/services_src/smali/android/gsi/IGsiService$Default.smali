@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public cancelGsiInstall()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -38,7 +36,6 @@
 .method public closeInstall()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -47,7 +44,6 @@
 .method public closePartition()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -56,7 +52,6 @@
 .method public commitGsiChunkFromAshmem(J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -65,7 +60,6 @@
 .method public createPartition(Ljava/lang/String;JZ)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -74,7 +68,6 @@
 .method public disableGsi()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -83,14 +76,12 @@
 .method public enableGsiAsync(ZLjava/lang/String;Landroid/gsi/IGsiServiceCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getActiveDsuSlot()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -99,7 +90,6 @@
 .method public getAvbPublicKey(Landroid/gsi/AvbPublicKey;)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -108,7 +98,6 @@
 .method public getInstallProgress()Landroid/gsi/GsiProgress;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -117,7 +106,6 @@
 .method public isGsiEnabled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -126,7 +114,6 @@
 .method public openInstall(Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -135,14 +122,12 @@
 .method public removeGsiAsync(Landroid/gsi/IGsiServiceCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setGsiAshmem(Landroid/os/ParcelFileDescriptor;J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -151,7 +136,6 @@
 .method public suggestScratchSize()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0

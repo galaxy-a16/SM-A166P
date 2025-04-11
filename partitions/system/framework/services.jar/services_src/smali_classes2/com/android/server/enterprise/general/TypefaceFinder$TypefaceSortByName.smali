@@ -20,7 +20,6 @@
 .method public compare(Lcom/android/server/enterprise/general/Typeface;Lcom/android/server/enterprise/general/Typeface;)I
     .locals 0
 
-    .line 214
     invoke-virtual {p1}, Lcom/android/server/enterprise/general/Typeface;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -39,7 +38,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 208
     check-cast p1, Lcom/android/server/enterprise/general/Typeface;
 
     check-cast p2, Lcom/android/server/enterprise/general/Typeface;

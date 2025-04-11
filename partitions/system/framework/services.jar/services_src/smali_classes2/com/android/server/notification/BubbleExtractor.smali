@@ -40,12 +40,10 @@
 
     const-string p1, "Unable to create bubble -- no intent"
 
-    .line 195
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 199
     :cond_0
     invoke-virtual {p2}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
 
@@ -53,7 +51,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 201
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
@@ -74,10 +71,8 @@
 
     if-nez p1, :cond_2
 
-    .line 204
     invoke-static {v2, p3, v1}, Lcom/android/internal/util/FrameworkStatsLog;->write(ILjava/lang/String;I)V
 
-    .line 207
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +91,6 @@
 
     return v0
 
-    .line 211
     :cond_2
     iget p1, p1, Landroid/content/pm/ActivityInfo;->resizeMode:I
 
@@ -108,10 +102,8 @@
 
     const/4 p1, 0x2
 
-    .line 212
     invoke-static {v2, p3, p1}, Lcom/android/internal/util/FrameworkStatsLog;->write(ILjava/lang/String;I)V
 
-    .line 215
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +129,6 @@
 .method public canPresentAsBubble(Lcom/android/server/notification/NotificationRecord;)Z
     .locals 7
 
-    .line 146
     iget-boolean v0, p0, Lcom/android/server/notification/BubbleExtractor;->mSupportsBubble:Z
 
     const/4 v1, 0x0
@@ -146,18 +137,15 @@
 
     return v1
 
-    .line 150
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
 
-    .line 151
     invoke-virtual {v0}, Landroid/app/Notification;->getBubbleMetadata()Landroid/app/Notification$BubbleMetadata;
 
     move-result-object v0
 
-    .line 152
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v2
@@ -170,20 +158,17 @@
 
     return v1
 
-    .line 157
     :cond_1
     invoke-virtual {v0}, Landroid/app/Notification$BubbleMetadata;->getShortcutId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 158
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
 
     move-result-object v4
 
     if-eqz v4, :cond_2
 
-    .line 159
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
 
     move-result-object v4
@@ -204,7 +189,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 164
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -214,10 +198,8 @@
     :cond_3
     if-eqz v3, :cond_4
 
-    .line 166
     iget-object v4, p0, Lcom/android/server/notification/BubbleExtractor;->mShortcutHelper:Lcom/android/server/notification/ShortcutHelper;
 
-    .line 167
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getUser()Landroid/os/UserHandle;
 
     move-result-object v6
@@ -235,7 +217,6 @@
     :cond_4
     move v4, v1
 
-    .line 169
     :goto_1
     invoke-virtual {v0}, Landroid/app/Notification$BubbleMetadata;->getIntent()Landroid/app/PendingIntent;
 
@@ -245,7 +226,6 @@
 
     if-nez v4, :cond_5
 
-    .line 171
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -273,7 +253,6 @@
 
     return v5
 
-    .line 179
     :cond_6
     iget-object p1, p0, Lcom/android/server/notification/BubbleExtractor;->mContext:Landroid/content/Context;
 
@@ -291,12 +270,10 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/notification/BubbleExtractor;->mContext:Landroid/content/Context;
 
     const-string p2, "activity"
 
-    .line 57
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -305,7 +282,6 @@
 
     iput-object p1, p0, Lcom/android/server/notification/BubbleExtractor;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 59
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -324,7 +300,6 @@
 .method public final logBubbleError(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -335,7 +310,6 @@
 
     if-eqz p1, :cond_c
 
-    .line 64
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
@@ -344,7 +318,6 @@
 
     goto/16 :goto_4
 
-    .line 69
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/BubbleExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
@@ -352,7 +325,6 @@
 
     return-object v0
 
-    .line 74
     :cond_1
     iget-object v1, p0, Lcom/android/server/notification/BubbleExtractor;->mShortcutHelper:Lcom/android/server/notification/ShortcutHelper;
 
@@ -360,7 +332,6 @@
 
     return-object v0
 
-    .line 79
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/notification/BubbleExtractor;->canPresentAsBubble(Lcom/android/server/notification/NotificationRecord;)Z
 
@@ -374,28 +345,24 @@
 
     iget-object v1, p0, Lcom/android/server/notification/BubbleExtractor;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 80
     invoke-virtual {v1}, Landroid/app/ActivityManager;->isLowRamDevice()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 81
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->isConversation()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 82
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    .line 83
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
@@ -413,7 +380,6 @@
     :cond_3
     move v1, v2
 
-    .line 85
     :goto_0
     iget-object v4, p0, Lcom/android/server/notification/BubbleExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
@@ -425,10 +391,8 @@
 
     move-result v4
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/notification/BubbleExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
-    .line 88
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v5
@@ -445,12 +409,10 @@
 
     move-result v6
 
-    .line 87
     invoke-interface {p0, v5, v6}, Lcom/android/server/notification/RankingConfig;->getBubblePreference(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 89
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getChannel()Landroid/app/NotificationChannel;
 
     move-result-object v5
@@ -466,7 +428,6 @@
     :cond_4
     if-nez v5, :cond_5
 
-    .line 100
     invoke-virtual {p1, v3}, Lcom/android/server/notification/NotificationRecord;->setAllowBubble(Z)V
 
     goto :goto_3
@@ -474,7 +435,6 @@
     :cond_5
     if-ne p0, v3, :cond_7
 
-    .line 102
     invoke-virtual {v5}, Landroid/app/NotificationChannel;->getAllowBubbles()I
 
     move-result p0
@@ -498,7 +458,6 @@
 
     if-ne p0, v1, :cond_9
 
-    .line 104
     invoke-virtual {v5}, Landroid/app/NotificationChannel;->canBubble()Z
 
     move-result p0
@@ -507,21 +466,18 @@
 
     goto :goto_3
 
-    .line 93
     :cond_8
     :goto_2
     invoke-virtual {p1, v2}, Lcom/android/server/notification/NotificationRecord;->setAllowBubble(Z)V
 
     if-nez v1, :cond_9
 
-    .line 96
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Landroid/app/Notification;->setBubbleMetadata(Landroid/app/Notification$BubbleMetadata;)V
 
-    .line 114
     :cond_9
     :goto_3
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->canBubble()Z
@@ -541,7 +497,6 @@
     :cond_a
     if-eqz v2, :cond_b
 
-    .line 116
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object p0
@@ -554,7 +509,6 @@
 
     goto :goto_4
 
-    .line 118
     :cond_b
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -574,7 +528,6 @@
 .method public setActivityManager(Landroid/app/ActivityManager;)V
     .locals 0
 
-    .line 138
     iput-object p1, p0, Lcom/android/server/notification/BubbleExtractor;->mActivityManager:Landroid/app/ActivityManager;
 
     return-void
@@ -583,7 +536,6 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 125
     iput-object p1, p0, Lcom/android/server/notification/BubbleExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
     return-void
@@ -592,7 +544,6 @@
 .method public setShortcutHelper(Lcom/android/server/notification/ShortcutHelper;)V
     .locals 0
 
-    .line 133
     iput-object p1, p0, Lcom/android/server/notification/BubbleExtractor;->mShortcutHelper:Lcom/android/server/notification/ShortcutHelper;
 
     return-void
@@ -601,6 +552,5 @@
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

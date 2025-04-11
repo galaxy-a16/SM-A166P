@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;)V
     .locals 0
 
-    .line 1849
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker$1;->this$1:Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -27,7 +26,6 @@
     :try_start_0
     const-string/jumbo p1, "networkInfo"
 
-    .line 1855
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -36,7 +34,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1857
     iget-object p2, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker$1;->this$1:Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
@@ -49,14 +46,12 @@
 
     const-string v0, "Disconnected"
 
-    .line 1859
     invoke-virtual {p2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1860
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker$1;->this$1:Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
@@ -65,12 +60,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;->-$$Nest$fputpreviousNetwork(Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;Ljava/lang/String;)V
 
-    .line 1861
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 1862
     iget-object v1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker$1;->this$1:Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;
 
     invoke-static {v1}, Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;->-$$Nest$fgetpreviousNetwork(Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;)Ljava/lang/String;
@@ -85,7 +78,6 @@
 
     const/4 v1, 0x1
 
-    .line 1863
     iput v1, v0, Landroid/os/Message;->arg1:I
 
     goto :goto_0
@@ -93,10 +85,8 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 1865
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1867
     :goto_0
     iget-object v1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker$1;->this$1:Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;
 
@@ -107,14 +97,12 @@
     :cond_1
     const-string v0, "Connected"
 
-    .line 1869
     invoke-virtual {p2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 1870
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker$1;->this$1:Lcom/android/server/enterprise/application/ApplicationPolicy$ApplicationNetworkStatsTracker;
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
@@ -130,7 +118,6 @@
     :catch_0
     move-exception p0
 
-    .line 1875
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2

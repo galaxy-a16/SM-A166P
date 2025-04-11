@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/pm/PackageManagerServiceUtils;->$r8$lambda$9WJD0Y0DTqLfw13ns7vTVx4QAcQ()Ljava/lang/Boolean;
 
     move-result-object p0

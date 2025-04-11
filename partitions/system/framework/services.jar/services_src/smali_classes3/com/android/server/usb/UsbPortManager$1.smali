@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbPortManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1439
     iput-object p1, p0, Lcom/android/server/usb/UsbPortManager$1;->this$0:Lcom/android/server/usb/UsbPortManager;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1442
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -37,7 +35,6 @@
 
     goto :goto_0
 
-    .line 1452
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/UsbPortManager$1;->this$0:Lcom/android/server/usb/UsbPortManager;
 
@@ -47,7 +44,6 @@
 
     const-string/jumbo v0, "notification"
 
-    .line 1453
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -58,7 +54,6 @@
 
     goto :goto_0
 
-    .line 1444
     :cond_1
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -66,14 +61,12 @@
 
     const-string/jumbo v0, "port_info"
 
-    .line 1445
     const-class v1, Lcom/android/server/usb/hal/port/RawPortInfo;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object p1
 
-    .line 1446
     iget-object v0, p0, Lcom/android/server/usb/UsbPortManager$1;->this$0:Lcom/android/server/usb/UsbPortManager;
 
     invoke-static {v0}, Lcom/android/server/usb/UsbPortManager;->-$$Nest$fgetmLock(Lcom/android/server/usb/UsbPortManager;)Ljava/lang/Object;
@@ -82,7 +75,6 @@
 
     monitor-enter v0
 
-    .line 1447
     :try_start_0
     iget-object p0, p0, Lcom/android/server/usb/UsbPortManager$1;->this$0:Lcom/android/server/usb/UsbPortManager;
 
@@ -90,7 +82,6 @@
 
     invoke-static {p0, v1, p1}, Lcom/android/server/usb/UsbPortManager;->-$$Nest$mupdatePortsLocked(Lcom/android/server/usb/UsbPortManager;Lcom/android/internal/util/IndentingPrintWriter;Ljava/util/ArrayList;)V
 
-    .line 1448
     monitor-exit v0
 
     :goto_0

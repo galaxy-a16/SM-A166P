@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayAdapter;)V
     .locals 0
 
-    .line 743
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,21 +23,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    .line 746
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "android.server.display.wfd.DISCONNECT"
 
-    .line 747
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 748
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {p1}, Lcom/android/server/display/DisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -47,13 +43,11 @@
 
     monitor-enter v0
 
-    .line 749
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->requestDisconnectLocked()V
 
-    .line 750
     monitor-exit v0
 
     goto/16 :goto_0
@@ -70,7 +64,6 @@
     :cond_0
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_START"
 
-    .line 752
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -84,21 +77,18 @@
     :try_start_1
     const-string/jumbo p1, "ownerPackageName"
 
-    .line 754
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "displayID"
 
-    .line 755
     invoke-virtual {p2, v0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
     const-string v0, "WifiDisplayAdapter"
 
-    .line 756
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +115,6 @@
 
     if-eq p2, v1, :cond_4
 
-    .line 758
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-static {p0, v1, p2, p1}, Lcom/android/server/display/WifiDisplayAdapter;->-$$Nest$msendPresentationDisplayInfo(Lcom/android/server/display/WifiDisplayAdapter;ZILjava/lang/String;)V
@@ -139,7 +128,6 @@
 
     const-string p1, "WifiDisplayAdapter"
 
-    .line 761
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,7 +153,6 @@
     :cond_1
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
 
-    .line 763
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -177,21 +164,18 @@
     :try_start_2
     const-string/jumbo p1, "ownerPackageName"
 
-    .line 765
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "displayID"
 
-    .line 766
     invoke-virtual {p2, v0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
     const-string v0, "WifiDisplayAdapter"
 
-    .line 767
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,7 +202,6 @@
 
     if-eq p2, v1, :cond_4
 
-    .line 769
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-static {p0, v3, p2, p1}, Lcom/android/server/display/WifiDisplayAdapter;->-$$Nest$msendPresentationDisplayInfo(Lcom/android/server/display/WifiDisplayAdapter;ZILjava/lang/String;)V
@@ -232,7 +215,6 @@
 
     const-string p1, "WifiDisplayAdapter"
 
-    .line 772
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,14 +240,12 @@
     :cond_2
     const-string v0, "com.samsung.intent.action.ROTATION_CHANGED"
 
-    .line 774
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 775
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {p1}, Lcom/android/server/display/DisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -277,17 +257,14 @@
     :try_start_3
     const-string/jumbo p1, "rotation"
 
-    .line 776
     invoke-virtual {p2, p1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 777
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-static {p0, p1}, Lcom/android/server/display/WifiDisplayAdapter;->-$$Nest$mrotationDisplayDeviceLocked(Lcom/android/server/display/WifiDisplayAdapter;I)V
 
-    .line 778
     monitor-exit v0
 
     goto :goto_0
@@ -304,7 +281,6 @@
     :cond_3
     const-string p0, "android.intent.action.USER_SWITCHED"
 
-    .line 779
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     :cond_4

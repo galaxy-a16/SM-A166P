@@ -7,7 +7,6 @@
 .method public get()Landroid/hidl/manager/V1_0/IServiceManager;
     .locals 0
 
-    .line 284
     invoke-static {}, Landroid/hidl/manager/V1_0/IServiceManager;->getService()Landroid/hidl/manager/V1_0/IServiceManager;
 
     move-result-object p0

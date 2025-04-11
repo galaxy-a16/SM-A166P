@@ -21,25 +21,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 139
     iput v0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;->mUserId:I
 
-    .line 140
     iput-boolean v0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;->mIsA11yReset:Z
 
-    .line 145
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;->mExclusiveTaskMap:Ljava/util/HashMap;
 
-    .line 147
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V

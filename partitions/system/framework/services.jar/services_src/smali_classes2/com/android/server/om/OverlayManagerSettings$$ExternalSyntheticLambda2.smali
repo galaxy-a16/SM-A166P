@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/om/OverlayManagerSettings$SettingsItem;
 
     invoke-static {p1}, Lcom/android/server/om/OverlayManagerSettings;->$r8$lambda$LExrXrX6i0-o0F8hiihbH6IXAvY(Lcom/android/server/om/OverlayManagerSettings$SettingsItem;)I

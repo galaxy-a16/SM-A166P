@@ -16,7 +16,6 @@
 .method public constructor <init>(Lvendor/samsung/hardware/biometrics/face/V3_0/ISehBiometricsFace$Stub;Landroid/os/HwParcel;)V
     .locals 0
 
-    .line 1673
     iput-object p1, p0, Lvendor/samsung/hardware/biometrics/face/V3_0/ISehBiometricsFace$Stub$3;->this$0:Lvendor/samsung/hardware/biometrics/face/V3_0/ISehBiometricsFace$Stub;
 
     iput-object p2, p0, Lvendor/samsung/hardware/biometrics/face/V3_0/ISehBiometricsFace$Stub$3;->val$_hidl_reply:Landroid/os/HwParcel;

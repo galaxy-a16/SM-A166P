@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/device/DeviceInfo;)V
     .locals 0
 
-    .line 996
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 998
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -46,12 +43,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1000
     iget-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {p1}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$mdataUsageValuesInit(Lcom/android/server/enterprise/device/DeviceInfo;)V
 
-    .line 1001
     iget-object p0, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     const/4 p1, 0x0
@@ -60,7 +55,6 @@
 
     goto :goto_0
 
-    .line 1002
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -74,14 +68,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 1003
     iget-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     const/16 p2, 0xa
 
     invoke-static {p1, p2}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fputmDataStatsCounter(Lcom/android/server/enterprise/device/DeviceInfo;I)V
 
-    .line 1004
     iget-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {p1}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fgetmDataUsageEventsHandler(Lcom/android/server/enterprise/device/DeviceInfo;)Landroid/os/Handler;
@@ -96,7 +88,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1005
     iget-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {p1}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fgetmDataUsageTimerActivated(Lcom/android/server/enterprise/device/DeviceInfo;)Z
@@ -105,7 +96,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1006
     iget-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$3;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {p1}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fgetmDataUsageEventsHandler(Lcom/android/server/enterprise/device/DeviceInfo;)Landroid/os/Handler;

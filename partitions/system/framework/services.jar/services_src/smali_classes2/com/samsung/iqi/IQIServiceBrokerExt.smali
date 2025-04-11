@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetDEBUG(Lcom/samsung/iqi/IQIServiceBrokerExt;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->DEBUG:Z
 
     return p0
@@ -40,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/samsung/iqi/IQIServiceBrokerExt;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -49,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/samsung/iqi/IQIServiceBrokerExt;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -58,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsOptOutTriggered(Lcom/samsung/iqi/IQIServiceBrokerExt;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mIsOptOutTriggered:Z
 
     return p0
@@ -67,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/samsung/iqi/IQIServiceBrokerExt;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -76,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmServiceRunning(Lcom/samsung/iqi/IQIServiceBrokerExt;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mServiceRunning:Z
 
     return p0
@@ -85,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetrbIqiState(Lcom/samsung/iqi/IQIServiceBrokerExt;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->rbIqiState:Ljava/lang/Runnable;
 
     return-object p0
@@ -94,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsOptOutTriggered(Lcom/samsung/iqi/IQIServiceBrokerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mIsOptOutTriggered:Z
 
     return-void
@@ -103,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$fputmServiceRunning(Lcom/samsung/iqi/IQIServiceBrokerExt;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mServiceRunning:Z
 
     return-void
@@ -112,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$mchangeIqiState(Lcom/samsung/iqi/IQIServiceBrokerExt;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/iqi/IQIServiceBrokerExt;->changeIqiState(Z)V
 
     return-void
@@ -121,7 +111,6 @@
 .method public static bridge synthetic -$$Nest$mgetOpt(Lcom/samsung/iqi/IQIServiceBrokerExt;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/iqi/IQIServiceBrokerExt;->getOpt()I
 
     move-result p0
@@ -132,7 +121,6 @@
 .method public static bridge synthetic -$$Nest$smsubmitSS2S(Z)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/samsung/iqi/IQIServiceBrokerExt;->submitSS2S(Z)V
 
     return-void
@@ -141,17 +129,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 31
     iput-boolean v0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mServiceRunning:Z
 
     const-string v1, "eng"
 
-    .line 32
     sget-object v2, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -160,24 +145,20 @@
 
     iput-boolean v1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->DEBUG:Z
 
-    .line 34
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mHandler:Landroid/os/Handler;
 
-    .line 35
     iput-boolean v0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mIsOptOutTriggered:Z
 
-    .line 51
     new-instance v0, Lcom/samsung/iqi/IQIServiceBrokerExt$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/iqi/IQIServiceBrokerExt$1;-><init>(Lcom/samsung/iqi/IQIServiceBrokerExt;)V
 
     iput-object v0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->rbIqiState:Ljava/lang/Runnable;
 
-    .line 64
     new-instance v0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;
 
     new-instance v1, Landroid/os/Handler;
@@ -188,17 +169,14 @@
 
     iput-object v0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mObserver:Landroid/database/ContentObserver;
 
-    .line 89
     new-instance v0, Lcom/samsung/iqi/IQIServiceBrokerExt$3;
 
     invoke-direct {v0, p0}, Lcom/samsung/iqi/IQIServiceBrokerExt$3;-><init>(Lcom/samsung/iqi/IQIServiceBrokerExt;)V
 
     iput-object v0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mUploadStateReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 173
     iput-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mContext:Landroid/content/Context;
 
-    .line 174
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -207,10 +185,8 @@
 
     const/4 p1, 0x0
 
-    .line 175
     iput-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mServiceStateListnerForIQI:Lcom/samsung/iqi/IQIServiceBrokerExt$serviceStateListnerForIQI;
 
-    .line 176
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -223,14 +199,12 @@
 .method public static submitSS2S(Z)V
     .locals 3
 
-    .line 148
     invoke-static {}, Lcom/att/iqi/lib/IQIManager;->getInstance()Lcom/att/iqi/lib/IQIManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 150
     sget-object v1, Lcom/att/iqi/lib/metrics/ss/SS2S;->ID:Lcom/att/iqi/lib/Metric$ID;
 
     invoke-virtual {v0, v1}, Lcom/att/iqi/lib/IQIManager;->shouldSubmitMetric(Lcom/att/iqi/lib/Metric$ID;)Z
@@ -239,7 +213,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 152
     new-instance v1, Lcom/att/iqi/lib/metrics/ss/SS2S;
 
     invoke-direct {v1}, Lcom/att/iqi/lib/metrics/ss/SS2S;-><init>()V
@@ -248,10 +221,8 @@
 
     const/4 v2, 0x0
 
-    .line 153
     invoke-virtual {v1, v2, p0}, Lcom/att/iqi/lib/metrics/ss/SS2S;->setSetting(IB)Lcom/att/iqi/lib/metrics/ss/SS2S;
 
-    .line 154
     invoke-virtual {v0, v1}, Lcom/att/iqi/lib/IQIManager;->submitMetric(Lcom/att/iqi/lib/Metric;)V
 
     :cond_0
@@ -269,7 +240,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 107
     iget-boolean v2, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -295,17 +265,14 @@
     :cond_0
     const-string v2, "iqi"
 
-    .line 108
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    .line 111
     const-class v2, Lcom/android/server/SystemServiceManager;
 
-    .line 112
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
@@ -320,22 +287,17 @@
 
     const/16 v3, 0x258
 
-    .line 113
     invoke-virtual {v2, v3}, Lcom/android/server/SystemService;->onBootPhase(I)V
 
-    .line 114
     invoke-virtual {p0}, Lcom/samsung/iqi/IQIServiceBrokerExt;->registerIQIServiceStateListener()V
 
-    .line 116
     :cond_1
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 117
     invoke-virtual {v2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 118
     iget-object p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mContext:Landroid/content/Context;
 
     sget-object p1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -344,16 +306,13 @@
 
     goto :goto_0
 
-    .line 121
     :cond_2
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 122
     invoke-virtual {v2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 123
     iget-object p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mContext:Landroid/content/Context;
 
     sget-object p1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -367,7 +326,6 @@
 .method public final getOpt()I
     .locals 3
 
-    .line 160
     iget-object v0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v1, "att_iqi_report_diagnostic"
@@ -382,7 +340,6 @@
 
     const/4 v0, 0x1
 
-    .line 163
     invoke-virtual {p0, v0}, Lcom/samsung/iqi/IQIServiceBrokerExt;->setOpt(I)V
 
     :cond_0
@@ -392,19 +349,16 @@
 .method public final registerIQIServiceStateListener()V
     .locals 3
 
-    .line 128
     invoke-static {}, Lcom/att/iqi/lib/IQIManager;->getInstance()Lcom/att/iqi/lib/IQIManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 130
     iget-object v1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mServiceStateListnerForIQI:Lcom/samsung/iqi/IQIServiceBrokerExt$serviceStateListnerForIQI;
 
     if-nez v1, :cond_1
 
-    .line 131
     iget-boolean v1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -415,7 +369,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     :cond_0
     new-instance v1, Lcom/samsung/iqi/IQIServiceBrokerExt$serviceStateListnerForIQI;
 
@@ -423,7 +376,6 @@
 
     iput-object v1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mServiceStateListnerForIQI:Lcom/samsung/iqi/IQIServiceBrokerExt$serviceStateListnerForIQI;
 
-    .line 133
     invoke-virtual {v0, v1}, Lcom/att/iqi/lib/IQIManager;->registerServiceStateChangeListener(Lcom/att/iqi/lib/IQIManager$ServiceStateChangeListener;)V
 
     :cond_1
@@ -433,7 +385,6 @@
 .method public final setOpt(I)V
     .locals 1
 
-    .line 169
     iget-object p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v0, "att_iqi_report_diagnostic"
@@ -446,12 +397,10 @@
 .method public startIqi()V
     .locals 4
 
-    .line 180
     invoke-virtual {p0}, Lcom/samsung/iqi/IQIServiceBrokerExt;->getOpt()I
 
     move-result v0
 
-    .line 181
     iget-boolean v1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -481,7 +430,6 @@
 
     return-void
 
-    .line 186
     :cond_1
     iget-object v0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -497,7 +445,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 187
     const-class v0, Lcom/android/server/SystemServiceManager;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -510,7 +457,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/String;)Lcom/android/server/SystemService;
 
-    .line 188
     invoke-virtual {p0}, Lcom/samsung/iqi/IQIServiceBrokerExt;->registerIQIServiceStateListener()V
 
     return-void

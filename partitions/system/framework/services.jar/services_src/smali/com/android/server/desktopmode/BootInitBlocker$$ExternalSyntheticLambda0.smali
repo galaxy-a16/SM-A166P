@@ -20,7 +20,6 @@
 .method public final onBlocked()Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/desktopmode/BootInitBlocker;->$r8$lambda$VOPvp_m4BjMAnRub22dArgMTZFQ()Ljava/lang/String;
 
     move-result-object p0

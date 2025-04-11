@@ -31,7 +31,6 @@
 .method public static synthetic $r8$lambda$uOaeSybXHpzgZRsp1Tq_bIclx-Y(Lcom/android/server/webkit/WebViewUpdateServiceImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->startZygoteWhenReady()V
 
     return-void
@@ -40,51 +39,40 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/webkit/SystemInterface;)V
     .locals 2
 
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
-    .line 94
     iput-wide v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mMinimumVersionCode:J
 
     const/4 v0, 0x0
 
-    .line 97
     iput v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsStarted:I
 
-    .line 98
     iput v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsFinished:I
 
-    .line 100
     iput-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mWebViewPackageDirty:Z
 
-    .line 101
     iput-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mAnyWebViewInstalled:Z
 
     const/4 v0, 0x0
 
-    .line 106
     iput-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
-    .line 108
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
-    .line 111
     iput-object p1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
 
-    .line 112
     iput-object p2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     return-void
@@ -93,7 +81,6 @@
 .method public static getFallbackProvider([Landroid/webkit/WebViewProviderInfo;)Landroid/webkit/WebViewProviderInfo;
     .locals 4
 
-    .line 615
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -103,7 +90,6 @@
 
     aget-object v2, p0, v1
 
-    .line 616
     iget-boolean v3, v2, Landroid/webkit/WebViewProviderInfo;->isFallback:Z
 
     if-eqz v3, :cond_0
@@ -124,7 +110,6 @@
 .method public static getInvalidityReason(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_3
@@ -169,7 +154,6 @@
 .method public static isInstalledAndEnabledForAllUsers(Ljava/util/List;)Z
     .locals 2
 
-    .line 459
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -187,7 +171,6 @@
 
     check-cast v0, Landroid/webkit/UserPackage;
 
-    .line 460
     invoke-virtual {v0}, Landroid/webkit/UserPackage;->isInstalledPackage()Z
 
     move-result v1
@@ -214,7 +197,6 @@
 .method public static providerHasValidSignature(Landroid/webkit/WebViewProviderInfo;Landroid/content/pm/PackageInfo;Lcom/android/server/webkit/SystemInterface;)Z
     .locals 5
 
-    .line 595
     invoke-interface {p2}, Lcom/android/server/webkit/SystemInterface;->systemIsDebuggable()Z
 
     move-result p2
@@ -225,7 +207,6 @@
 
     return v0
 
-    .line 598
     :cond_0
     iget-object p2, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -237,7 +218,6 @@
 
     return v0
 
-    .line 601
     :cond_1
     iget-object p2, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -249,7 +229,6 @@
 
     return v1
 
-    .line 604
     :cond_2
     iget-object p0, p0, Landroid/webkit/WebViewProviderInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -262,7 +241,6 @@
 
     aget-object v3, p0, v2
 
-    .line 605
     iget-object v4, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     aget-object v4, v4, v1
@@ -289,10 +267,8 @@
 
     const-wide/32 v0, 0x186a0
 
-    .line 552
     div-long/2addr p0, v0
 
-    .line 553
     div-long/2addr p2, v0
 
     cmp-long p0, p0, p2
@@ -315,7 +291,6 @@
 .method public changeProviderAndSetting(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 288
     invoke-virtual {p0, p1}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->updateCurrentWebViewPackage(Ljava/lang/String;)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
@@ -326,7 +301,6 @@
 
     return-object p0
 
-    .line 290
     :cond_0
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -336,30 +310,25 @@
 .method public final checkIfRelrosDoneLocked()V
     .locals 2
 
-    .line 491
     iget v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsStarted:I
 
     iget v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsFinished:I
 
     if-ne v0, v1, :cond_1
 
-    .line 492
     iget-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mWebViewPackageDirty:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 493
     iput-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mWebViewPackageDirty:Z
 
-    .line 497
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->findPreferredWebViewPackage()Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
-    .line 498
     invoke-virtual {p0, v0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->onWebViewProviderChanged(Landroid/content/pm/PackageInfo;)V
     :try_end_0
     .catch Lcom/android/server/webkit/WebViewUpdateServiceImpl$WebViewPackageMissingException; {:try_start_0 .. :try_end_0} :catch_0
@@ -369,12 +338,10 @@
     :catch_0
     const/4 v0, 0x0
 
-    .line 500
     iput-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
     goto :goto_0
 
-    .line 507
     :cond_0
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
@@ -388,7 +355,6 @@
 .method public final dumpAllPackageInformationLocked(Ljava/io/PrintWriter;)V
     .locals 10
 
-    .line 685
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {v0}, Lcom/android/server/webkit/SystemInterface;->getWebViewPackages()[Landroid/webkit/WebViewProviderInfo;
@@ -397,10 +363,8 @@
 
     const-string v1, "  WebView packages:"
 
-    .line 686
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 687
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -412,17 +376,14 @@
 
     aget-object v4, v0, v3
 
-    .line 688
     iget-object v5, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
 
-    .line 689
     invoke-interface {v5, v6, v4}, Lcom/android/server/webkit/SystemInterface;->getPackageInfoForProviderAllUsers(Landroid/content/Context;Landroid/webkit/WebViewProviderInfo;)Ljava/util/List;
 
     move-result-object v5
 
-    .line 691
     invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -435,7 +396,6 @@
 
     if-nez v5, :cond_0
 
-    .line 693
     iget-object v4, v4, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
 
     filled-new-array {v4}, [Ljava/lang/Object;
@@ -452,16 +412,13 @@
 
     goto :goto_2
 
-    .line 697
     :cond_0
     invoke-virtual {p0, v4, v5}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->validityResult(Landroid/webkit/WebViewProviderInfo;Landroid/content/pm/PackageInfo;)I
 
     move-result v6
 
-    .line 698
     iget-object v7, v5, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    .line 701
     invoke-virtual {v5}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
 
     move-result-wide v8
@@ -474,7 +431,6 @@
 
     iget v9, v9, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 702
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -485,24 +441,20 @@
 
     const-string/jumbo v8, "versionName: %s, versionCode: %d, targetSdkVersion: %d"
 
-    .line 698
     invoke-static {v8, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
     if-nez v6, :cond_2
 
-    .line 704
     iget-object v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v8, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
 
-    .line 705
     invoke-interface {v6, v8, v4}, Lcom/android/server/webkit/SystemInterface;->getPackageInfoForProviderAllUsers(Landroid/content/Context;Landroid/webkit/WebViewProviderInfo;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 704
     invoke-static {v4}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->isInstalledAndEnabledForAllUsers(Ljava/util/List;)Z
 
     move-result v4
@@ -511,7 +463,6 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    .line 706
     iget-object v5, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     aput-object v5, v6, v2
@@ -544,11 +495,9 @@
 
     goto :goto_2
 
-    .line 712
     :cond_2
     iget-object v4, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 715
     invoke-static {v6}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->getInvalidityReason(I)Ljava/lang/String;
 
     move-result-object v5
@@ -559,7 +508,6 @@
 
     const-string v5, "    Invalid package %s (%s), reason: %s"
 
-    .line 712
     invoke-static {v5, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -580,12 +528,10 @@
 
     const-string v0, "Current WebView Update Service state"
 
-    .line 648
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  Multiprocess enabled: %b"
 
-    .line 649
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->isMultiProcessEnabled()Z
 
     move-result v1
@@ -604,12 +550,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 650
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 651
     :try_start_0
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
@@ -623,7 +567,6 @@
 
     const-string v1, "  Current WebView package is null"
 
-    .line 652
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
@@ -633,7 +576,6 @@
 
     new-array v6, v2, [Ljava/lang/Object;
 
-    .line 654
     iget-object v7, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     aput-object v7, v6, v4
@@ -655,14 +597,12 @@
 
     const/16 v6, 0x21
 
-    .line 659
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     aput-object v6, v5, v4
 
-    .line 658
     invoke-static {v1, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -673,17 +613,14 @@
 
     new-array v5, v3, [Ljava/lang/Object;
 
-    .line 660
     iget-wide v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mMinimumVersionCode:J
 
-    .line 661
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
     aput-object v6, v5, v4
 
-    .line 660
     invoke-static {v1, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -694,17 +631,14 @@
 
     new-array v5, v3, [Ljava/lang/Object;
 
-    .line 662
     iget v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsStarted:I
 
-    .line 663
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     aput-object v6, v5, v4
 
-    .line 662
     invoke-static {v1, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -715,17 +649,14 @@
 
     new-array v5, v3, [Ljava/lang/Object;
 
-    .line 664
     iget v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsFinished:I
 
-    .line 665
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     aput-object v6, v5, v4
 
-    .line 664
     invoke-static {v1, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -736,7 +667,6 @@
 
     new-array v5, v3, [Ljava/lang/Object;
 
-    .line 666
     iget-boolean v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mWebViewPackageDirty:Z
 
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -755,17 +685,14 @@
 
     new-array v5, v3, [Ljava/lang/Object;
 
-    .line 667
     iget-boolean v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mAnyWebViewInstalled:Z
 
-    .line 668
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
 
     aput-object v6, v5, v4
 
-    .line 667
     invoke-static {v1, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -774,7 +701,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 671
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->findPreferredWebViewPackage()Landroid/content/pm/PackageInfo;
 
@@ -784,7 +710,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 672
     iget-object v6, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     aput-object v6, v2, v4
@@ -810,18 +735,15 @@
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    .line 677
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 680
     :goto_1
     invoke-virtual {p0, p1}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->dumpAllPackageInformationLocked(Ljava/io/PrintWriter;)V
 
-    .line 681
     monitor-exit v0
 
     return-void
@@ -839,12 +761,10 @@
 .method public enableMultiProcess(Z)V
     .locals 4
 
-    .line 635
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->getCurrentWebViewPackage()Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
-    .line 636
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
@@ -861,14 +781,12 @@
     :goto_0
     invoke-interface {v1, v2, v3}, Lcom/android/server/webkit/SystemInterface;->setMultiProcessSetting(Landroid/content/Context;I)V
 
-    .line 638
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {v1, p1}, Lcom/android/server/webkit/SystemInterface;->notifyZygote(Z)V
 
     if-eqz v0, :cond_1
 
-    .line 640
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object p1, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
@@ -882,12 +800,10 @@
 .method public final findPreferredWebViewPackage()Landroid/content/pm/PackageInfo;
     .locals 9
 
-    .line 414
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->getValidWebViewPackagesAndInfos()[Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;
 
     move-result-object v0
 
-    .line 416
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
@@ -896,7 +812,6 @@
 
     move-result-object v1
 
-    .line 420
     array-length v2, v0
 
     const/4 v3, 0x0
@@ -908,7 +823,6 @@
 
     aget-object v5, v0, v4
 
-    .line 421
     iget-object v6, v5, Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;->provider:Landroid/webkit/WebViewProviderInfo;
 
     iget-object v6, v6, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
@@ -919,26 +833,22 @@
 
     if-eqz v6, :cond_0
 
-    .line 423
     iget-object v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v7, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
 
     iget-object v8, v5, Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;->provider:Landroid/webkit/WebViewProviderInfo;
 
-    .line 424
     invoke-interface {v6, v7, v8}, Lcom/android/server/webkit/SystemInterface;->getPackageInfoForProviderAllUsers(Landroid/content/Context;Landroid/webkit/WebViewProviderInfo;)Ljava/util/List;
 
     move-result-object v6
 
-    .line 426
     invoke-static {v6}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->isInstalledAndEnabledForAllUsers(Ljava/util/List;)Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 427
     iget-object p0, v5, Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;->packageInfo:Landroid/content/pm/PackageInfo;
 
     return-object p0
@@ -948,7 +858,6 @@
 
     goto :goto_0
 
-    .line 435
     :cond_1
     array-length v1, v0
 
@@ -959,31 +868,26 @@
 
     aget-object v4, v0, v2
 
-    .line 436
     iget-object v5, v4, Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;->provider:Landroid/webkit/WebViewProviderInfo;
 
     iget-boolean v6, v5, Landroid/webkit/WebViewProviderInfo;->availableByDefault:Z
 
     if-eqz v6, :cond_2
 
-    .line 438
     iget-object v6, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v7, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
 
-    .line 439
     invoke-interface {v6, v7, v5}, Lcom/android/server/webkit/SystemInterface;->getPackageInfoForProviderAllUsers(Landroid/content/Context;Landroid/webkit/WebViewProviderInfo;)Ljava/util/List;
 
     move-result-object v5
 
-    .line 441
     invoke-static {v5}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->isInstalledAndEnabledForAllUsers(Ljava/util/List;)Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 442
     iget-object p0, v4, Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;->packageInfo:Landroid/content/pm/PackageInfo;
 
     return-object p0
@@ -993,11 +897,9 @@
 
     goto :goto_1
 
-    .line 448
     :cond_3
     iput-boolean v3, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mAnyWebViewInstalled:Z
 
-    .line 449
     new-instance p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl$WebViewPackageMissingException;
 
     const-string v0, "Could not find a loadable WebView package"
@@ -1010,12 +912,10 @@
 .method public getCurrentWebViewPackage()Landroid/content/pm/PackageInfo;
     .locals 1
 
-    .line 472
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 473
     :try_start_0
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
@@ -1026,7 +926,6 @@
     :catchall_0
     move-exception p0
 
-    .line 474
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1037,7 +936,6 @@
 .method public final getMinimumVersionCode()J
     .locals 10
 
-    .line 569
     iget-wide v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mMinimumVersionCode:J
 
     const-wide/16 v2, 0x0
@@ -1048,7 +946,6 @@
 
     return-wide v0
 
-    .line 574
     :cond_0
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
@@ -1067,18 +964,15 @@
 
     aget-object v7, v0, v6
 
-    .line 575
     iget-boolean v8, v7, Landroid/webkit/WebViewProviderInfo;->availableByDefault:Z
 
     if-eqz v8, :cond_2
 
-    .line 577
     :try_start_0
     iget-object v8, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v7, v7, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
 
-    .line 578
     invoke-interface {v8, v7}, Lcom/android/server/webkit/SystemInterface;->getFactoryPackageVersion(Ljava/lang/String;)J
 
     move-result-wide v7
@@ -1102,7 +996,6 @@
 
     goto :goto_0
 
-    .line 588
     :cond_3
     iput-wide v4, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mMinimumVersionCode:J
 
@@ -1112,25 +1005,21 @@
 .method public getValidWebViewPackages()[Landroid/webkit/WebViewProviderInfo;
     .locals 3
 
-    .line 371
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->getValidWebViewPackagesAndInfos()[Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;
 
     move-result-object p0
 
-    .line 372
     array-length v0, p0
 
     new-array v0, v0, [Landroid/webkit/WebViewProviderInfo;
 
     const/4 v1, 0x0
 
-    .line 374
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 375
     aget-object v2, p0, v1
 
     iget-object v2, v2, Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;->provider:Landroid/webkit/WebViewProviderInfo;
@@ -1148,38 +1037,32 @@
 .method public final getValidWebViewPackagesAndInfos()[Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;
     .locals 6
 
-    .line 391
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {v0}, Lcom/android/server/webkit/SystemInterface;->getWebViewPackages()[Landroid/webkit/WebViewProviderInfo;
 
     move-result-object v0
 
-    .line 392
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v2, 0x0
 
-    .line 393
     :goto_0
     array-length v3, v0
 
     if-ge v2, v3, :cond_1
 
-    .line 395
     :try_start_0
     iget-object v3, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     aget-object v4, v0, v2
 
-    .line 396
     invoke-interface {v3, v4}, Lcom/android/server/webkit/SystemInterface;->getPackageInfoForProvider(Landroid/webkit/WebViewProviderInfo;)Landroid/content/pm/PackageInfo;
 
     move-result-object v3
 
-    .line 397
     aget-object v4, v0, v2
 
     invoke-virtual {p0, v4, v3}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->validityResult(Landroid/webkit/WebViewProviderInfo;Landroid/content/pm/PackageInfo;)I
@@ -1188,7 +1071,6 @@
 
     if-nez v4, :cond_0
 
-    .line 398
     new-instance v4, Lcom/android/server/webkit/WebViewUpdateServiceImpl$ProviderAndPackageInfo;
 
     aget-object v5, v0, v2
@@ -1205,7 +1087,6 @@
 
     goto :goto_0
 
-    .line 404
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1225,7 +1106,6 @@
 .method public getWebViewPackages()[Landroid/webkit/WebViewProviderInfo;
     .locals 0
 
-    .line 468
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {p0}, Lcom/android/server/webkit/SystemInterface;->getWebViewPackages()[Landroid/webkit/WebViewProviderInfo;
@@ -1242,7 +1122,6 @@
 
     return-void
 
-    .line 218
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->handleUserChange()V
 
@@ -1254,7 +1133,6 @@
 
     const/4 v0, 0x0
 
-    .line 232
     invoke-virtual {p0, v0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->updateCurrentWebViewPackage(Ljava/lang/String;)Landroid/content/pm/PackageInfo;
 
     return-void
@@ -1263,7 +1141,6 @@
 .method public handleUserRemoved(I)V
     .locals 0
 
-    .line 222
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->handleUserChange()V
 
     return-void
@@ -1272,7 +1149,6 @@
 .method public isMultiProcessEnabled()Z
     .locals 3
 
-    .line 624
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
@@ -1281,7 +1157,6 @@
 
     move-result v0
 
-    .line 625
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {p0}, Lcom/android/server/webkit/SystemInterface;->isMultiProcessDefaultEnabled()Z
@@ -1323,12 +1198,10 @@
 .method public notifyRelroCreationCompleted()V
     .locals 2
 
-    .line 236
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 237
     :try_start_0
     iget v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsFinished:I
 
@@ -1336,10 +1209,8 @@
 
     iput v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsFinished:I
 
-    .line 238
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->checkIfRelrosDoneLocked()V
 
-    .line 239
     monitor-exit v0
 
     return-void
@@ -1357,70 +1228,57 @@
 .method public final onWebViewProviderChanged(Landroid/content/pm/PackageInfo;)V
     .locals 4
 
-    .line 340
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
-    .line 341
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mAnyWebViewInstalled:Z
 
-    .line 342
     iget v2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsStarted:I
 
     iget v3, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsFinished:I
 
     if-ne v2, v3, :cond_0
 
-    .line 343
     iput-object p1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
     const v1, 0x7fffffff
 
-    .line 348
     iput v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsStarted:I
 
     const/4 v1, 0x0
 
-    .line 349
     iput v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsFinished:I
 
-    .line 350
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
-    .line 351
     invoke-interface {v1, p1}, Lcom/android/server/webkit/SystemInterface;->onWebViewProviderChanged(Landroid/content/pm/PackageInfo;)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mNumRelroCreationsStarted:I
 
-    .line 354
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->checkIfRelrosDoneLocked()V
 
     goto :goto_0
 
-    .line 356
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mWebViewPackageDirty:Z
 
-    .line 358
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 362
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->isMultiProcessEnabled()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 363
     sget-object p1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     new-instance v0, Lcom/android/server/webkit/WebViewUpdateServiceImpl$$ExternalSyntheticLambda0;
@@ -1435,7 +1293,6 @@
     :catchall_0
     move-exception p0
 
-    .line 358
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1447,7 +1304,6 @@
 .method public packageStateChanged(Ljava/lang/String;II)V
     .locals 6
 
-    .line 119
     iget-object p2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {p2}, Lcom/android/server/webkit/SystemInterface;->getWebViewPackages()[Landroid/webkit/WebViewProviderInfo;
@@ -1465,35 +1321,29 @@
 
     aget-object v2, p2, v1
 
-    .line 120
     iget-object v3, v2, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
 
-    .line 122
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
-    .line 127
     iget-object v3, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
     const/4 p1, 0x0
 
-    .line 129
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->findPreferredWebViewPackage()Landroid/content/pm/PackageInfo;
 
     move-result-object p2
 
-    .line 130
     iget-object p3, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
     if-eqz p3, :cond_0
 
-    .line 131
     iget-object p3, p3, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
     :try_end_0
     .catch Lcom/android/server/webkit/WebViewUpdateServiceImpl$WebViewPackageMissingException; {:try_start_0 .. :try_end_0} :catch_2
@@ -1504,14 +1354,12 @@
     :cond_0
     move-object p3, p1
 
-    .line 136
     :goto_1
     :try_start_1
     iget-object v1, v2, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
 
     iget-object v4, p2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 137
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1520,7 +1368,6 @@
 
     iget-object v1, v2, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
 
-    .line 138
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1545,19 +1392,16 @@
     :goto_2
     const/4 v1, 0x1
 
-    .line 142
     :goto_3
     :try_start_2
     iget-object v2, v2, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
 
-    .line 143
     invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v1, :cond_3
 
-    .line 145
     invoke-virtual {p0, p2}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->onWebViewProviderChanged(Landroid/content/pm/PackageInfo;)V
     :try_end_2
     .catch Lcom/android/server/webkit/WebViewUpdateServiceImpl$WebViewPackageMissingException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1594,12 +1438,10 @@
     :goto_4
     move v1, v0
 
-    .line 148
     :goto_5
     :try_start_3
     iput-object p1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
-    .line 149
     sget-object p1, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1624,7 +1466,6 @@
 
     move v0, v5
 
-    .line 152
     :cond_3
     :goto_6
     monitor-exit v3
@@ -1637,7 +1478,6 @@
 
     if-eqz p3, :cond_4
 
-    .line 159
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {p0, p3}, Lcom/android/server/webkit/SystemInterface;->killPackageDependents(Ljava/lang/String;)V
@@ -1645,7 +1485,6 @@
     :cond_4
     return-void
 
-    .line 152
     :goto_7
     :try_start_4
     monitor-exit v3
@@ -1666,7 +1505,6 @@
 .method public prepareWebViewInSystemServer()V
     .locals 4
 
-    .line 167
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->isMultiProcessEnabled()Z
@@ -1675,7 +1513,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/webkit/SystemInterface;->notifyZygote(Z)V
 
-    .line 169
     :try_start_0
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
@@ -1683,7 +1520,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 170
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->findPreferredWebViewPackage()Landroid/content/pm/PackageInfo;
 
@@ -1691,7 +1527,6 @@
 
     iput-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
-    .line 171
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
@@ -1702,19 +1537,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 172
     iget-object v2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 173
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 179
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
@@ -1725,13 +1557,11 @@
 
     invoke-interface {v1, v2, v3}, Lcom/android/server/webkit/SystemInterface;->updateUserSetting(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 182
     :cond_0
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
     invoke-virtual {p0, v1}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->onWebViewProviderChanged(Landroid/content/pm/PackageInfo;)V
 
-    .line 183
     monitor-exit v0
 
     goto :goto_0
@@ -1751,14 +1581,12 @@
     :catchall_1
     move-exception v0
 
-    .line 186
     sget-object v1, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->TAG:Ljava/lang/String;
 
     const-string v2, "error preparing webview provider from system server"
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 189
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->getCurrentWebViewPackage()Landroid/content/pm/PackageInfo;
 
@@ -1766,21 +1594,18 @@
 
     if-nez v0, :cond_2
 
-    .line 194
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {v0}, Lcom/android/server/webkit/SystemInterface;->getWebViewPackages()[Landroid/webkit/WebViewProviderInfo;
 
     move-result-object v0
 
-    .line 195
     invoke-static {v0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->getFallbackProvider([Landroid/webkit/WebViewProviderInfo;)Landroid/webkit/WebViewProviderInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 197
     sget-object v1, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1801,7 +1626,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
@@ -1814,7 +1638,6 @@
 
     goto :goto_1
 
-    .line 201
     :cond_1
     sget-object p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->TAG:Ljava/lang/String;
 
@@ -1830,10 +1653,8 @@
 .method public final startZygoteWhenReady()V
     .locals 0
 
-    .line 209
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->waitForAndGetProvider()Landroid/webkit/WebViewProviderResponse;
 
-    .line 210
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {p0}, Lcom/android/server/webkit/SystemInterface;->ensureZygoteStarted()V
@@ -1844,18 +1665,15 @@
 .method public final updateCurrentWebViewPackage(Ljava/lang/String;)Landroid/content/pm/PackageInfo;
     .locals 4
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 303
     :try_start_0
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
     if-eqz p1, :cond_0
 
-    .line 306
     iget-object v2, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v3, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mContext:Landroid/content/Context;
@@ -1864,7 +1682,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 310
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->findPreferredWebViewPackage()Landroid/content/pm/PackageInfo;
@@ -1873,12 +1690,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 311
     iget-object v2, p1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 312
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1902,11 +1717,9 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 322
     :try_start_2
     invoke-virtual {p0, p1}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->onWebViewProviderChanged(Landroid/content/pm/PackageInfo;)V
 
-    .line 324
     :cond_3
     monitor-exit v0
     :try_end_2
@@ -1916,7 +1729,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 327
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     iget-object v0, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
@@ -1931,11 +1743,9 @@
 
     const/4 v1, 0x0
 
-    .line 316
     :try_start_3
     iput-object v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
-    .line 317
     sget-object p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1954,7 +1764,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     monitor-exit v0
 
     return-object v1
@@ -1962,7 +1771,6 @@
     :catchall_0
     move-exception p0
 
-    .line 324
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -1973,7 +1781,6 @@
 .method public final validityResult(Landroid/webkit/WebViewProviderInfo;Landroid/content/pm/PackageInfo;)I
     .locals 4
 
-    .line 514
     invoke-static {p2}, Landroid/webkit/UserPackage;->hasCorrectTargetSdkVersion(Landroid/content/pm/PackageInfo;)Z
 
     move-result v0
@@ -1984,7 +1791,6 @@
 
     return p0
 
-    .line 517
     :cond_0
     invoke-virtual {p2}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
 
@@ -2002,7 +1808,6 @@
 
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
-    .line 518
     invoke-interface {v0}, Lcom/android/server/webkit/SystemInterface;->systemIsDebuggable()Z
 
     move-result v0
@@ -2013,7 +1818,6 @@
 
     return p0
 
-    .line 523
     :cond_1
     iget-object p0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
@@ -2027,7 +1831,6 @@
 
     return p0
 
-    .line 526
     :cond_2
     iget-object p0, p2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -2050,7 +1853,6 @@
 .method public waitForAndGetProvider()Landroid/webkit/WebViewProviderResponse;
     .locals 9
 
-    .line 244
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -2063,12 +1865,10 @@
 
     add-long/2addr v0, v4
 
-    .line 247
     iget-object v4, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 248
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->webViewIsReadyLocked()Z
 
@@ -2077,7 +1877,6 @@
     :goto_0
     if-nez v5, :cond_1
 
-    .line 250
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v6
@@ -2092,7 +1891,6 @@
 
     goto :goto_1
 
-    .line 253
     :cond_0
     :try_start_1
     iget-object v5, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mLock:Ljava/lang/Object;
@@ -2104,7 +1902,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 257
     :catch_0
     :try_start_2
     invoke-virtual {p0}, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->webViewIsReadyLocked()Z
@@ -2113,7 +1910,6 @@
 
     goto :goto_0
 
-    .line 260
     :cond_1
     :goto_1
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
@@ -2124,7 +1920,6 @@
 
     goto :goto_2
 
-    .line 263
     :cond_2
     iget-boolean v1, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mAnyWebViewInstalled:Z
 
@@ -2134,7 +1929,6 @@
 
     goto :goto_2
 
-    .line 269
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2168,19 +1962,16 @@
 
     move-result-object p0
 
-    .line 273
     sget-object v1, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->TAG:Ljava/lang/String;
 
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-wide/16 v1, 0x40
 
-    .line 274
     invoke-static {v1, v2, p0}, Landroid/os/Trace;->instant(JLjava/lang/String;)V
 
     const/4 p0, 0x3
 
-    .line 276
     :goto_2
     monitor-exit v4
     :try_end_2
@@ -2188,14 +1979,12 @@
 
     if-nez v5, :cond_4
 
-    .line 277
     sget-object v1, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->TAG:Ljava/lang/String;
 
     const-string v2, "creating relro file timed out"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     :cond_4
     new-instance v1, Landroid/webkit/WebViewProviderResponse;
 
@@ -2206,7 +1995,6 @@
     :catchall_0
     move-exception p0
 
-    .line 276
     :try_start_3
     monitor-exit v4
     :try_end_3
@@ -2218,7 +2006,6 @@
 .method public final webViewIsReadyLocked()Z
     .locals 2
 
-    .line 482
     iget-boolean v0, p0, Lcom/android/server/webkit/WebViewUpdateServiceImpl;->mWebViewPackageDirty:Z
 
     if-nez v0, :cond_0

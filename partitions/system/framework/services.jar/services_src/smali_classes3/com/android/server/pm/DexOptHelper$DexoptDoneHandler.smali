@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/pm/DexOptHelper;)V
     .locals 0
 
-    .line 1021
     iput-object p1, p0, Lcom/android/server/pm/DexOptHelper$DexoptDoneHandler;->this$0:Lcom/android/server/pm/DexOptHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/DexOptHelper;Lcom/android/server/pm/DexOptHelper$DexoptDoneHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/DexOptHelper$DexoptDoneHandler;-><init>(Lcom/android/server/pm/DexOptHelper;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onDexoptDone(Lcom/android/server/art/model/DexoptResult;)V
     .locals 14
 
-    .line 1028
     invoke-virtual {p1}, Lcom/android/server/art/model/DexoptResult;->getReason()Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +105,6 @@
 
     goto :goto_2
 
-    .line 1036
     :pswitch_0
     invoke-virtual {p1}, Lcom/android/server/art/model/DexoptResult;->getPackageDexoptResults()Ljava/util/List;
 
@@ -137,7 +133,6 @@
 
     check-cast v3, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;
 
-    .line 1037
     invoke-virtual {v3}, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;->getStatus()I
 
     move-result v3
@@ -169,7 +164,6 @@
 
     goto :goto_1
 
-    .line 1050
     :cond_6
     iget-object v3, p0, Lcom/android/server/pm/DexOptHelper$DexoptDoneHandler;->this$0:Lcom/android/server/pm/DexOptHelper;
 
@@ -179,7 +173,6 @@
 
     invoke-static/range {v3 .. v8}, Lcom/android/server/pm/DexOptHelper;->-$$Nest$mreportBootDexopt(Lcom/android/server/pm/DexOptHelper;JIII)V
 
-    .line 1054
     :goto_2
     invoke-virtual {p1}, Lcom/android/server/art/model/DexoptResult;->getPackageDexoptResults()Ljava/util/List;
 
@@ -202,14 +195,12 @@
 
     check-cast v3, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;
 
-    .line 1055
     iget-object v4, p0, Lcom/android/server/pm/DexOptHelper$DexoptDoneHandler;->this$0:Lcom/android/server/pm/DexOptHelper;
 
     invoke-static {v4}, Lcom/android/server/pm/DexOptHelper;->-$$Nest$fgetmPm(Lcom/android/server/pm/DexOptHelper;)Lcom/android/server/pm/PackageManagerService;
 
     move-result-object v4
 
-    .line 1056
     invoke-virtual {v3}, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -218,7 +209,6 @@
 
     move-result-object v4
 
-    .line 1058
     invoke-virtual {v3}, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;->getDexContainerFileDexoptResults()Ljava/util/List;
 
     move-result-object v3
@@ -240,7 +230,6 @@
 
     check-cast v5, Lcom/android/server/art/model/DexoptResult$DexContainerFileDexoptResult;
 
-    .line 1060
     invoke-virtual {v5}, Lcom/android/server/art/model/DexoptResult$DexContainerFileDexoptResult;->getDexContainerFile()Ljava/lang/String;
 
     move-result-object v6
@@ -249,12 +238,10 @@
 
     move-result-wide v7
 
-    .line 1059
     invoke-virtual {v4, v6, v7, v8}, Lcom/android/server/pm/CompilerStats$PackageStats;->setCompileTime(Ljava/lang/String;J)V
 
     goto :goto_3
 
-    .line 1064
     :cond_8
     iget-object v1, p0, Lcom/android/server/pm/DexOptHelper$DexoptDoneHandler;->this$0:Lcom/android/server/pm/DexOptHelper;
 
@@ -266,7 +253,6 @@
 
     monitor-enter v1
 
-    .line 1065
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/DexOptHelper$DexoptDoneHandler;->this$0:Lcom/android/server/pm/DexOptHelper;
 
@@ -292,7 +278,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/pm/AbstractStatsBase;->maybeWriteAsync(Ljava/lang/Object;)Z
 
-    .line 1066
     iget-object p0, p0, Lcom/android/server/pm/DexOptHelper$DexoptDoneHandler;->this$0:Lcom/android/server/pm/DexOptHelper;
 
     invoke-static {p0}, Lcom/android/server/pm/DexOptHelper;->-$$Nest$fgetmPm(Lcom/android/server/pm/DexOptHelper;)Lcom/android/server/pm/PackageManagerService;
@@ -303,12 +288,10 @@
 
     invoke-virtual {p0}, Lcom/android/server/pm/CompilerStats;->maybeWriteAsync()Z
 
-    .line 1067
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1069
     invoke-virtual {p1}, Lcom/android/server/art/model/DexoptResult;->getReason()Ljava/lang/String;
 
     move-result-object p0
@@ -321,7 +304,6 @@
 
     if-eqz p0, :cond_b
 
-    .line 1070
     invoke-virtual {p1}, Lcom/android/server/art/model/DexoptResult;->getPackageDexoptResults()Ljava/util/List;
 
     move-result-object p0
@@ -344,14 +326,12 @@
 
     check-cast v1, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;
 
-    .line 1071
     invoke-virtual {v1}, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;->getStatus()I
 
     move-result v3
 
     if-ne v3, v0, :cond_9
 
-    .line 1075
     invoke-virtual {v1}, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;->getDexContainerFileDexoptResults()Ljava/util/List;
 
     move-result-object v3
@@ -379,7 +359,6 @@
 
     check-cast v4, Lcom/android/server/art/model/DexoptResult$DexContainerFileDexoptResult;
 
-    .line 1076
     new-instance v5, Ljava/io/File;
 
     invoke-virtual {v4}, Lcom/android/server/art/model/DexoptResult$DexContainerFileDexoptResult;->getDexContainerFile()Ljava/lang/String;
@@ -392,7 +371,6 @@
 
     move-result-wide v5
 
-    .line 1077
     invoke-virtual {v4}, Lcom/android/server/art/model/DexoptResult$DexContainerFileDexoptResult;->getSizeBytes()J
 
     move-result-wide v12
@@ -401,7 +379,6 @@
 
     add-long/2addr v10, v12
 
-    .line 1078
     invoke-virtual {v4}, Lcom/android/server/art/model/DexoptResult$DexContainerFileDexoptResult;->getSizeBeforeBytes()J
 
     move-result-wide v12
@@ -415,25 +392,21 @@
     :cond_a
     const/16 v6, 0x80
 
-    .line 1081
     invoke-virtual {v1}, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;->getPackageName()Ljava/lang/String;
 
     move-result-object v7
 
     const/4 v12, 0x0
 
-    .line 1080
     invoke-static/range {v6 .. v12}, Lcom/android/internal/util/FrameworkStatsLog;->write(ILjava/lang/String;JJZ)V
 
     goto :goto_4
 
-    .line 1087
     :cond_b
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 1088
     invoke-virtual {p1}, Lcom/android/server/art/model/DexoptResult;->getPackageDexoptResults()Ljava/util/List;
 
     move-result-object p1
@@ -456,14 +429,12 @@
 
     check-cast v0, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;
 
-    .line 1089
     invoke-virtual {v0}, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;->hasUpdatedArtifacts()Z
 
     move-result v1
 
     if-eqz v1, :cond_c
 
-    .line 1090
     invoke-virtual {v0}, Lcom/android/server/art/model/DexoptResult$PackageDexoptResult;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -472,7 +443,6 @@
 
     goto :goto_6
 
-    .line 1093
     :cond_d
     invoke-virtual {p0}, Landroid/util/ArraySet;->isEmpty()Z
 
@@ -480,7 +450,6 @@
 
     if-nez p1, :cond_e
 
-    .line 1094
     const-class p1, Lcom/android/server/PinnerService;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -489,7 +458,6 @@
 
     check-cast p1, Lcom/android/server/PinnerService;
 
-    .line 1095
     invoke-virtual {p1, p0, v2}, Lcom/android/server/PinnerService;->update(Landroid/util/ArraySet;Z)V
 
     :cond_e
@@ -498,7 +466,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1067
     :try_start_1
     monitor-exit v1
     :try_end_1

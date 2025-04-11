@@ -11,12 +11,10 @@
 .method public constructor <init>(J)V
     .locals 1
 
-    .line 10
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->TAG:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-direct {p0, v0}, Lco/nstant/in/cbor/model/DataItem;-><init>(Lco/nstant/in/cbor/model/MajorType;)V
 
-    .line 11
     iput-wide p1, p0, Lco/nstant/in/cbor/model/Tag;->value:J
 
     return-void
@@ -27,19 +25,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 20
     instance-of v0, p1, Lco/nstant/in/cbor/model/Tag;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 21
     move-object v0, p1
 
     check-cast v0, Lco/nstant/in/cbor/model/Tag;
 
-    .line 22
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/DataItem;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -63,7 +58,6 @@
 .method public getValue()J
     .locals 2
 
-    .line 15
     iget-wide v0, p0, Lco/nstant/in/cbor/model/Tag;->value:J
 
     return-wide v0
@@ -72,7 +66,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 29
     invoke-super {p0}, Lco/nstant/in/cbor/model/DataItem;->hashCode()I
 
     move-result v0
@@ -95,7 +88,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

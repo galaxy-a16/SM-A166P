@@ -11,7 +11,6 @@
 
     new-array v0, v0, [Ljava/lang/Class;
 
-    .line 32
     invoke-direct {p0, v0}, Lorg/apache/commons/compress/archivers/sevenz/CoderBase;-><init>([Ljava/lang/Class;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public decode(Ljava/lang/String;Ljava/io/InputStream;JLorg/apache/commons/compress/archivers/sevenz/Coder;[B)Ljava/io/InputStream;
     .locals 6
 
-    .line 36
     new-instance p3, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;
 
     move-object v0, p3

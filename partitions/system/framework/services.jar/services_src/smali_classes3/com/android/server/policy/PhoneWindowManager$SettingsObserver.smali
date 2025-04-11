@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 859
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 860
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public observe()V
     .locals 4
 
-    .line 865
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -36,7 +33,6 @@
 
     const-string v1, "end_button_behavior"
 
-    .line 866
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -49,7 +45,6 @@
 
     const-string v1, "incall_power_button_behavior"
 
-    .line 869
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -58,7 +53,6 @@
 
     const-string v1, "incall_back_button_behavior"
 
-    .line 872
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -67,7 +61,6 @@
 
     const-string/jumbo v1, "wake_gesture_enabled"
 
-    .line 875
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -76,7 +69,6 @@
 
     const-string/jumbo v1, "screen_off_timeout"
 
-    .line 878
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -85,7 +77,6 @@
 
     const-string v1, "default_input_method"
 
-    .line 881
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -94,7 +85,6 @@
 
     const-string/jumbo v1, "volume_hush_gesture"
 
-    .line 884
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -103,7 +93,6 @@
 
     const-string/jumbo v1, "system_navigation_keys_enabled"
 
-    .line 887
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -112,7 +101,6 @@
 
     const-string/jumbo v1, "power_button_long_press"
 
-    .line 890
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -121,7 +109,6 @@
 
     const-string/jumbo v1, "power_button_long_press_duration_ms"
 
-    .line 893
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -130,7 +117,6 @@
 
     const-string/jumbo v1, "power_button_very_long_press"
 
-    .line 896
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -139,7 +125,6 @@
 
     const-string v1, "key_chord_power_volume_up"
 
-    .line 899
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -148,7 +133,6 @@
 
     const-string/jumbo v1, "power_button_suppression_delay_after_gesture_wake"
 
-    .line 902
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -157,14 +141,12 @@
 
     const-string/jumbo v1, "stylus_buttons_enabled"
 
-    .line 906
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 909
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->updateSettings()V
@@ -175,12 +157,10 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 913
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p1}, Lcom/android/server/policy/PhoneWindowManager;->updateSettings()V
 
-    .line 914
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     const/4 p1, 0x0

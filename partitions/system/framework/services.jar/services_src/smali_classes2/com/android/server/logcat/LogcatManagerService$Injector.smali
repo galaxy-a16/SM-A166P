@@ -17,7 +17,6 @@
 .method public createClock()Ljava/util/function/Supplier;
     .locals 0
 
-    .line 292
     new-instance p0, Lcom/android/server/logcat/LogcatManagerService$Injector$$ExternalSyntheticLambda0;
 
     invoke-direct {p0}, Lcom/android/server/logcat/LogcatManagerService$Injector$$ExternalSyntheticLambda0;-><init>()V
@@ -30,7 +29,6 @@
 
     const-string p0, "logd"
 
-    .line 300
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -45,7 +43,6 @@
 .method public getLooper()Landroid/os/Looper;
     .locals 0
 
-    .line 296
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p0

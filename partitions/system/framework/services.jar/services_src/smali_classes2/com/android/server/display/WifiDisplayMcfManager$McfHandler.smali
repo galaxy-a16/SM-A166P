@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayMcfManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 456
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
-    .line 457
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,14 +23,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 462
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 485
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -50,7 +46,6 @@
 
     goto :goto_0
 
-    .line 482
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -58,7 +53,6 @@
 
     goto :goto_0
 
-    .line 479
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -66,7 +60,6 @@
 
     goto :goto_0
 
-    .line 476
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -74,7 +67,6 @@
 
     goto :goto_0
 
-    .line 473
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -82,7 +74,6 @@
 
     goto :goto_0
 
-    .line 470
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -90,7 +81,6 @@
 
     goto :goto_0
 
-    .line 467
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -108,7 +98,6 @@
 
     goto :goto_0
 
-    .line 464
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 

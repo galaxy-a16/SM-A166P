@@ -29,7 +29,6 @@
 
     const-string/jumbo v0, "ro.build.type"
 
-    .line 16
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -44,22 +43,18 @@
 
     const/4 v0, 0x0
 
-    .line 23
     sput v0, Lcom/android/server/knox/BasicContainerAnalytics;->CONTAINER_PO:I
 
     const/4 v0, 0x2
 
-    .line 24
     sput v0, Lcom/android/server/knox/BasicContainerAnalytics;->CONTAINER_CL:I
 
     const/4 v0, 0x4
 
-    .line 25
     sput v0, Lcom/android/server/knox/BasicContainerAnalytics;->CONTAINER_DO:I
 
     const/16 v0, 0x8
 
-    .line 26
     sput v0, Lcom/android/server/knox/BasicContainerAnalytics;->CONTAINER_WPCOD:I
 
     return-void
@@ -68,18 +63,14 @@
 .method public constructor <init>(Lcom/android/server/knox/IKnoxAnalyticsContainer;Landroid/content/Context;)V
     .locals 1
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "BasicContainerAnalytics"
 
-    .line 15
     iput-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->TAG:Ljava/lang/String;
 
-    .line 29
     iput-object p1, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
-    .line 30
     iput-object p2, p0, Lcom/android/server/knox/BasicContainerAnalytics;->context:Landroid/content/Context;
 
     return-void
@@ -90,7 +81,6 @@
 .method public getContainerType(I)I
     .locals 5
 
-    .line 35
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -101,7 +91,6 @@
 
     if-nez v0, :cond_0
 
-    .line 36
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,7 +115,6 @@
 
     return v1
 
-    .line 40
     :cond_0
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
@@ -136,10 +124,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 41
     sget v1, Lcom/android/server/knox/BasicContainerAnalytics;->CONTAINER_PO:I
 
-    .line 43
     :cond_1
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
@@ -149,10 +135,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 44
     sget v1, Lcom/android/server/knox/BasicContainerAnalytics;->CONTAINER_CL:I
 
-    .line 46
     :cond_2
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
@@ -164,10 +148,8 @@
 
     if-eqz v0, :cond_3
 
-    .line 47
     sget v1, Lcom/android/server/knox/BasicContainerAnalytics;->CONTAINER_DO:I
 
-    .line 51
     :cond_3
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->context:Landroid/content/Context;
@@ -176,7 +158,6 @@
 
     move-result v0
 
-    .line 52
     iget-object v3, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v3}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isOrganizationOwned()Z
@@ -200,7 +181,6 @@
     :cond_4
     if-nez v2, :cond_5
 
-    .line 55
     iget-object v3, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v3, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isKnoxId(I)Z
@@ -219,7 +199,6 @@
     :goto_0
     if-eqz v4, :cond_6
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {p0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isKnoxId(I)Z
@@ -228,7 +207,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 60
     sget p0, Lcom/android/server/knox/BasicContainerAnalytics;->CONTAINER_WPCOD:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -240,7 +218,6 @@
     :catch_0
     move-exception p0
 
-    .line 63
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_6
@@ -251,7 +228,6 @@
 .method public final isUserSetupCompleted(Landroid/content/Context;)Z
     .locals 1
 
-    .line 233
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -275,7 +251,6 @@
 .method public logActivityChange(IILjava/lang/String;)V
     .locals 3
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -284,14 +259,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 105
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "cTp"
 
-    .line 106
     invoke-virtual {p0, p2}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result v2
@@ -300,7 +273,6 @@
 
     const-string/jumbo v1, "pN"
 
-    .line 107
     invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_0
@@ -315,10 +287,8 @@
     :goto_0
     const-string v1, "OToE"
 
-    .line 108
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 109
     iget-object p1, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {p1, p3, p2}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
@@ -331,7 +301,6 @@
 
     invoke-virtual {v0, p3, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 110
     iget-object p1, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {p1, p2}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isPremiumLicenseActivated(I)Z
@@ -344,7 +313,6 @@
 
     const-string p1, "ACTIVITY_STAMP"
 
-    .line 111
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :cond_1
@@ -354,7 +322,6 @@
 .method public logDeviceOwnerChanged(Ljava/lang/String;)V
     .locals 3
 
-    .line 197
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     const/4 v1, 0x0
@@ -367,12 +334,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 198
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 199
     invoke-virtual {p0, v1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result v1
@@ -381,23 +346,19 @@
 
     const-string/jumbo v1, "pN"
 
-    .line 200
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "WORK_PROFILE_CREATED"
 
-    .line 201
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 203
     :cond_0
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
-    .line 204
     invoke-virtual {p0, v1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result v0
@@ -406,7 +367,6 @@
 
     const-string v0, "WORK_PROFILE_REMOVED"
 
-    .line 205
     invoke-virtual {p0, p1, v0}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :goto_0
@@ -418,7 +378,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 210
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->getSeparatedAppsUserId()I
@@ -429,7 +388,6 @@
 
     return-void
 
-    .line 214
     :cond_0
     new-instance v0, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;
 
@@ -441,7 +399,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 216
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -464,69 +421,58 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 217
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 218
     instance-of v4, v3, Ljava/lang/Integer;
 
     if-eqz v4, :cond_2
 
-    .line 219
     check-cast v3, Ljava/lang/Integer;
 
     invoke-virtual {v0, v2, v3}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/io/Serializable;)V
 
     goto :goto_0
 
-    .line 220
     :cond_2
     instance-of v4, v3, Ljava/lang/String;
 
     if-eqz v4, :cond_3
 
-    .line 221
     check-cast v3, Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 222
     :cond_3
     instance-of v4, v3, Ljava/lang/Long;
 
     if-eqz v4, :cond_4
 
-    .line 223
     check-cast v3, Ljava/lang/Long;
 
     invoke-virtual {v0, v2, v3}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/io/Serializable;)V
 
     goto :goto_0
 
-    .line 224
     :cond_4
     instance-of v4, v3, [Ljava/lang/String;
 
     if-eqz v4, :cond_1
 
-    .line 225
     check-cast v3, [Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/io/Serializable;)V
 
     goto :goto_0
 
-    .line 228
     :cond_5
     iget-object p0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {p0, v0}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->sendAnalyticsLog(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 
-    .line 229
     sget-boolean p0, Lcom/android/server/knox/BasicContainerAnalytics;->DEBUG:Z
 
     if-eqz p0, :cond_6
@@ -564,7 +510,6 @@
 
     const-string v0, "LOGIN_ACCOUNTS_CHANGED"
 
-    .line 70
     :try_start_0
     iget-object v1, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
@@ -574,14 +519,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 71
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "cTp"
 
-    .line 72
     invoke-virtual {p0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result p1
@@ -590,20 +533,16 @@
 
     const-string p1, "e"
 
-    .line 73
     invoke-virtual {v1, p1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "accTy"
 
-    .line 74
     invoke-virtual {v1, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "add"
 
-    .line 75
     invoke-virtual {v1, p1, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 76
     invoke-virtual {p0, v1, v0}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -613,7 +552,6 @@
     :catch_0
     move-exception p0
 
-    .line 79
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -624,7 +562,6 @@
 .method public logMoveToKnox(IZ)V
     .locals 2
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -633,14 +570,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "cTp"
 
-    .line 163
     invoke-virtual {p0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result p1
@@ -649,12 +584,10 @@
 
     const-string/jumbo p1, "move"
 
-    .line 164
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "MOVE_TO_KNOX_FILE"
 
-    .line 165
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :cond_0
@@ -664,7 +597,6 @@
 .method public logPackageChanged(ILjava/lang/String;I)V
     .locals 3
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -673,7 +605,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->context:Landroid/content/Context;
 
     invoke-static {v0, p2}, Lcom/samsung/android/knox/SemPersonaManager;->isSystemApp(Landroid/content/Context;Ljava/lang/String;)Z
@@ -684,7 +615,6 @@
 
     return-void
 
-    .line 123
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
@@ -700,12 +630,10 @@
     :catch_0
     move-exception v0
 
-    .line 125
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     const/4 v0, 0x0
 
-    .line 127
     :goto_0
     new-instance v1, Landroid/os/Bundle;
 
@@ -713,7 +641,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 129
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v2
@@ -722,7 +649,6 @@
 
     const-string v2, "instN"
 
-    .line 130
     invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
@@ -730,7 +656,6 @@
 
     if-ne p3, v0, :cond_2
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p2, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isIMPackage(Ljava/lang/String;I)I
@@ -745,7 +670,6 @@
     :goto_1
     const-string v2, "cTp"
 
-    .line 135
     invoke-virtual {p0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result p1
@@ -754,22 +678,18 @@
 
     const-string/jumbo p1, "pN"
 
-    .line 136
     invoke-virtual {v1, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "add"
 
-    .line 137
     invoke-virtual {v1, p1, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "ime"
 
-    .line 138
     invoke-virtual {v1, p1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "PACKAGE_CHANGED"
 
-    .line 139
     invoke-virtual {p0, v1, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :cond_3
@@ -779,7 +699,6 @@
 .method public logProfilePolicyRestriction(Ljava/lang/String;II)V
     .locals 3
 
-    .line 237
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p3}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -788,12 +707,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 239
     invoke-virtual {p0, p3}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result v0
 
-    .line 240
     iget-object v1, p0, Lcom/android/server/knox/BasicContainerAnalytics;->context:Landroid/content/Context;
 
     const-string v2, "device_policy"
@@ -804,7 +721,6 @@
 
     check-cast v1, Landroid/app/admin/DevicePolicyManager;
 
-    .line 242
     :try_start_0
     new-instance v2, Landroid/os/UserHandle;
 
@@ -825,12 +741,10 @@
     :catch_0
     move-exception p3
 
-    .line 244
     invoke-virtual {p3}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p3, 0x0
 
-    .line 246
     :goto_0
     new-instance v1, Landroid/os/Bundle;
 
@@ -838,27 +752,22 @@
 
     const-string/jumbo v2, "rN"
 
-    .line 247
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "bV"
 
-    .line 248
     invoke-virtual {v1, p1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "cTp"
 
-    .line 249
     invoke-virtual {v1, p1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo p1, "pN"
 
-    .line 250
     invoke-virtual {v1, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "PROFILE_POLICY_RESTRICTION"
 
-    .line 251
     invoke-virtual {p0, v1, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :cond_0
@@ -868,7 +777,6 @@
 .method public logWorkAppUsgae(ILjava/lang/String;JI)V
     .locals 2
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -877,14 +785,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 94
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "cTp"
 
-    .line 95
     invoke-virtual {p0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result p1
@@ -893,24 +799,20 @@
 
     const-string/jumbo p1, "pN"
 
-    .line 96
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p1, "usgT"
 
-    .line 97
     invoke-virtual {v0, p1, p3, p4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string p1, "cnt"
 
     int-to-long p2, p5
 
-    .line 98
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string p1, "WORKAPP_USAGE"
 
-    .line 99
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :cond_0
@@ -920,7 +822,6 @@
 .method public logWorkModeOff(I)V
     .locals 2
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -929,14 +830,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 153
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "cTp"
 
-    .line 154
     invoke-virtual {p0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result p1
@@ -945,7 +844,6 @@
 
     const-string p1, "WORK_MODE_OFF"
 
-    .line 155
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :cond_0
@@ -955,7 +853,6 @@
 .method public logWorkModeOn(I)V
     .locals 2
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -964,14 +861,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 145
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "cTp"
 
-    .line 146
     invoke-virtual {p0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result p1
@@ -980,7 +875,6 @@
 
     const-string p1, "WORK_MODE_ON"
 
-    .line 147
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :cond_0
@@ -990,7 +884,6 @@
 .method public logWorkProfileAdded(ILjava/lang/String;)V
     .locals 3
 
-    .line 171
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
@@ -1000,14 +893,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 172
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "cTp"
 
-    .line 173
     invoke-virtual {p0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result v2
@@ -1016,7 +907,6 @@
 
     if-nez p2, :cond_0
 
-    .line 175
     iget-object p2, p0, Lcom/android/server/knox/BasicContainerAnalytics;->context:Landroid/content/Context;
 
     const-string v1, "device_policy"
@@ -1027,7 +917,6 @@
 
     check-cast p2, Landroid/app/admin/DevicePolicyManager;
 
-    .line 176
     new-instance v1, Landroid/os/UserHandle;
 
     invoke-direct {v1, p1}, Landroid/os/UserHandle;-><init>(I)V
@@ -1043,12 +932,10 @@
     :cond_0
     const-string/jumbo v1, "pN"
 
-    .line 179
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "pV"
 
-    .line 180
     iget-object v2, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v2, p2, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
@@ -1061,7 +948,6 @@
 
     const-string p1, "WORK_PROFILE_CREATED"
 
-    .line 181
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1071,7 +957,6 @@
     :catch_0
     move-exception p0
 
-    .line 184
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1098,7 +983,6 @@
 .method public logWorkProfileRemoved(I)V
     .locals 2
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/knox/BasicContainerAnalytics;->ifKnoxAnalyticsContainer:Lcom/android/server/knox/IKnoxAnalyticsContainer;
 
     invoke-interface {v0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainer;->isLoggingAllowedForUser(I)Z
@@ -1107,14 +991,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 190
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "cTp"
 
-    .line 191
     invoke-virtual {p0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->getContainerType(I)I
 
     move-result p1
@@ -1123,7 +1005,6 @@
 
     const-string p1, "WORK_PROFILE_REMOVED"
 
-    .line 192
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/BasicContainerAnalytics;->logEvent(Landroid/os/Bundle;Ljava/lang/String;)V
 
     :cond_0

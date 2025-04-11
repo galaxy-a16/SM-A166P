@@ -32,7 +32,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService;ILandroid/os/Bundle;Landroid/view/autofill/IAutoFillManagerClient;Ljava/util/function/Function;Landroid/view/autofill/AutofillId;Landroid/content/ComponentName;Landroid/os/IBinder;ILjava/lang/Runnable;)V
     .locals 0
 
-    .line 281
     iput-object p1, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->this$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;
 
     iput p2, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$sessionId:I
@@ -63,7 +62,6 @@
 .method public authenticate(II)V
     .locals 0
 
-    .line 343
     invoke-static {}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -78,7 +76,6 @@
 .method public autofill(Landroid/service/autofill/Dataset;I)V
     .locals 11
 
-    .line 284
     invoke-virtual {p1}, Landroid/service/autofill/Dataset;->getAuthentication()Landroid/content/IntentSender;
 
     move-result-object v0
@@ -87,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 285
     iget-object v0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->this$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;
 
     invoke-static {v0}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->-$$Nest$fgetmCallbacks(Lcom/android/server/autofill/RemoteAugmentedAutofillService;)Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;
@@ -96,39 +92,32 @@
 
     iget v2, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$sessionId:I
 
-    .line 286
     invoke-virtual {p1}, Landroid/service/autofill/Dataset;->getId()Ljava/lang/String;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$clientState:Landroid/os/Bundle;
 
-    .line 285
     invoke-interface {v0, v2, v3, v4}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;->logAugmentedAutofillAuthenticationSelected(ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 287
     invoke-virtual {p1}, Landroid/service/autofill/Dataset;->getAuthentication()Landroid/content/IntentSender;
 
     move-result-object v8
 
-    .line 289
     invoke-static {v1, p2}, Landroid/view/autofill/AutofillManager;->makeAuthenticationId(II)I
 
     move-result v7
 
-    .line 292
     new-instance v9, Landroid/content/Intent;
 
     invoke-direct {v9}, Landroid/content/Intent;-><init>()V
 
     const-string p1, "android.view.autofill.extra.CLIENT_STATE"
 
-    .line 293
     iget-object p2, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$clientState:Landroid/os/Bundle;
 
     invoke-virtual {v9, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 296
     :try_start_0
     iget-object v5, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$client:Landroid/view/autofill/IAutoFillManagerClient;
 
@@ -142,7 +131,6 @@
 
     goto :goto_0
 
-    .line 299
     :catch_0
     invoke-static {}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -152,23 +140,19 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     iget-object p1, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$inlineSuggestionsCallback:Ljava/util/function/Function;
 
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$focusedId:Landroid/view/autofill/AutofillId;
 
-    .line 301
     invoke-static {p0}, Lcom/android/server/autofill/ui/InlineFillUi;->emptyUi(Landroid/view/autofill/AutofillId;)Lcom/android/server/autofill/ui/InlineFillUi;
 
     move-result-object p0
 
-    .line 300
     invoke-interface {p1, p0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_0
     return-void
 
-    .line 305
     :cond_0
     iget-object p2, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->this$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;
 
@@ -178,23 +162,19 @@
 
     iget v0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$sessionId:I
 
-    .line 306
     invoke-virtual {p1}, Landroid/service/autofill/Dataset;->getId()Ljava/lang/String;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$clientState:Landroid/os/Bundle;
 
-    .line 305
     invoke-interface {p2, v0, v2, v3}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;->logAugmentedAutofillSelected(ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 308
     :try_start_1
     invoke-virtual {p1}, Landroid/service/autofill/Dataset;->getFieldIds()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 309
     invoke-virtual {p1}, Landroid/service/autofill/Dataset;->getFieldContent()Landroid/content/ClipData;
 
     move-result-object v0
@@ -203,7 +183,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 311
     iget-object p1, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->this$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;
 
     invoke-static {p1}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->-$$Nest$fgetmUriGrantsManager(Lcom/android/server/autofill/RemoteAugmentedAutofillService;)Lcom/android/server/autofill/AutofillUriGrantsManager;
@@ -218,19 +197,16 @@
 
     invoke-virtual {p1, v1, v3, v4, v0}, Lcom/android/server/autofill/AutofillUriGrantsManager;->grantUriPermissions(Landroid/content/ComponentName;Landroid/os/IBinder;ILandroid/content/ClipData;)V
 
-    .line 313
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/autofill/AutofillId;
 
-    .line 314
     sget-boolean p2, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz p2, :cond_1
 
-    .line 315
     invoke-static {}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -257,7 +233,6 @@
 
     invoke-static {p2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     :cond_1
     iget-object p2, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$client:Landroid/view/autofill/IAutoFillManagerClient;
 
@@ -267,7 +242,6 @@
 
     goto :goto_2
 
-    .line 320
     :cond_2
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
@@ -275,7 +249,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 322
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -295,13 +268,11 @@
     :cond_3
     move v1, v2
 
-    .line 323
     :goto_1
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_4
 
-    .line 324
     invoke-static {}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -320,7 +291,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 326
     invoke-virtual {p1}, Landroid/service/autofill/Dataset;->getFieldValues()Ljava/util/ArrayList;
 
     move-result-object v3
@@ -331,42 +301,34 @@
 
     move-result-object v2
 
-    .line 324
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
     :cond_4
     iget-object v0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$client:Landroid/view/autofill/IAutoFillManagerClient;
 
     iget v2, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$sessionId:I
 
-    .line 331
     invoke-virtual {p1}, Landroid/service/autofill/Dataset;->getFieldValues()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    .line 328
     invoke-interface {v0, v2, p2, p1, v1}, Landroid/view/autofill/IAutoFillManagerClient;->autofill(ILjava/util/List;Ljava/util/List;Z)V
 
-    .line 334
     :goto_2
     iget-object p1, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$inlineSuggestionsCallback:Ljava/util/function/Function;
 
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$focusedId:Landroid/view/autofill/AutofillId;
 
-    .line 335
     invoke-static {p0}, Lcom/android/server/autofill/ui/InlineFillUi;->emptyUi(Landroid/view/autofill/AutofillId;)Lcom/android/server/autofill/ui/InlineFillUi;
 
     move-result-object p0
 
-    .line 334
     invoke-interface {p1, p0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_3
 
-    .line 337
     :catch_1
     invoke-static {}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -383,7 +345,6 @@
 .method public onError()V
     .locals 0
 
-    .line 357
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$onErrorCallback:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
@@ -394,14 +355,12 @@
 .method public onInflate()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public startIntentSender(Landroid/content/IntentSender;)V
     .locals 1
 
-    .line 349
     :try_start_0
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;->val$client:Landroid/view/autofill/IAutoFillManagerClient;
 
@@ -415,7 +374,6 @@
 
     goto :goto_0
 
-    .line 351
     :catch_0
     invoke-static {}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

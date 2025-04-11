@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 8833
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->val$result:Landroid/os/RemoteCallback;
@@ -28,7 +27,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 8836
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->val$result:Landroid/os/RemoteCallback;
 
     const/4 p2, 0x0

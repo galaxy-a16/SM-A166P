@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;)V
     .locals 1
 
-    .line 1513
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     const/4 v0, 0x0
@@ -24,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;-><init>(Lcom/android/server/vcn/VcnGatewayConnection;)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public enterState()V
     .locals 2
 
-    .line 1516
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-static {v0}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$fgetmIsQuitting(Lcom/android/server/vcn/VcnGatewayConnection;)Lcom/android/server/vcn/util/OneWayBoolean;
@@ -48,12 +45,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1517
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-virtual {v0}, Lcom/android/internal/util/StateMachine;->quitNow()V
 
-    .line 1520
     :cond_0
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
@@ -71,7 +66,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1521
     :cond_1
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
@@ -79,7 +73,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogWtf(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 1524
     :cond_2
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
@@ -91,7 +84,6 @@
 .method public exitState()V
     .locals 0
 
-    .line 1554
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-virtual {p0}, Lcom/android/server/vcn/VcnGatewayConnection;->setSafeModeAlarm()V
@@ -102,7 +94,6 @@
 .method public processStateMsg(Landroid/os/Message;)V
     .locals 2
 
-    .line 1529
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -113,12 +104,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1546
     invoke-virtual {p0, p1}, Lcom/android/server/vcn/VcnGatewayConnection$BaseState;->logUnhandledMessage(Landroid/os/Message;)V
 
     goto :goto_0
 
-    .line 1539
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -128,7 +117,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1540
     iget-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-static {p1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$fgetmIsQuitting(Lcom/android/server/vcn/VcnGatewayConnection;)Lcom/android/server/vcn/util/OneWayBoolean;
@@ -137,14 +125,12 @@
 
     invoke-virtual {p1}, Lcom/android/server/vcn/util/OneWayBoolean;->setTrue()V
 
-    .line 1542
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-virtual {p0}, Lcom/android/internal/util/StateMachine;->quitNow()V
 
     goto :goto_0
 
-    .line 1532
     :cond_1
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
@@ -156,7 +142,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$fputmUnderlying(Lcom/android/server/vcn/VcnGatewayConnection;Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;)V
 
-    .line 1534
     iget-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-static {p1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$fgetmUnderlying(Lcom/android/server/vcn/VcnGatewayConnection;)Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;
@@ -165,7 +150,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1535
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$DisconnectedState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     iget-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection;->mConnectingState:Lcom/android/server/vcn/VcnGatewayConnection$ConnectingState;

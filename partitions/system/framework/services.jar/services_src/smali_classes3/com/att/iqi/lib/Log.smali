@@ -19,7 +19,6 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     const/4 p0, -0x1
 
     return p0
@@ -28,7 +27,6 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 0
 
-    .line 0
     const/4 p0, -0x1
 
     return p0

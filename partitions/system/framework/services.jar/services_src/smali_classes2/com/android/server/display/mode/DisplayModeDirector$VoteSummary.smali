@@ -25,10 +25,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 293
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 294
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->reset()V
 
     return-void
@@ -41,34 +39,26 @@
 
     const/4 v0, 0x0
 
-    .line 298
     iput v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minPhysicalRefreshRate:F
 
     const/high16 v1, 0x7f800000    # Float.POSITIVE_INFINITY
 
-    .line 299
     iput v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxPhysicalRefreshRate:F
 
-    .line 300
     iput v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
-    .line 301
     iput v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
     const/4 v1, -0x1
 
-    .line 302
     iput v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->width:I
 
-    .line 303
     iput v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->height:I
 
     const/4 v1, 0x0
 
-    .line 304
     iput-boolean v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->disableRefreshRateSwitching:Z
 
-    .line 305
     iput v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->appRequestBaseModeRefreshRate:F
 
     return-void
@@ -77,7 +67,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 310
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

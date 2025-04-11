@@ -20,7 +20,6 @@
 .method public final produce(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector;->$r8$lambda$d4GyxIJiqOe985ByuHGEqfIsbEg(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Lcom/samsung/android/server/pm/install/PackageInstallTimeLogger;
 
     move-result-object p0

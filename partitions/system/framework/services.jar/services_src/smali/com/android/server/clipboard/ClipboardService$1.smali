@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/clipboard/ClipboardService;)V
     .locals 0
 
-    .line 263
     iput-object p1, p0, Lcom/android/server/clipboard/ClipboardService$1;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 266
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -44,12 +42,10 @@
 
     const/4 v0, -0x1
 
-    .line 270
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 271
     iget-object p2, p0, Lcom/android/server/clipboard/ClipboardService$1;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
     invoke-static {p2}, Lcom/android/server/clipboard/ClipboardService;->-$$Nest$fgetmLock(Lcom/android/server/clipboard/ClipboardService;)Ljava/lang/Object;
@@ -58,7 +54,6 @@
 
     monitor-enter p2
 
-    .line 272
     :try_start_0
     iget-object v0, p0, Lcom/android/server/clipboard/ClipboardService$1;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
@@ -75,7 +70,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 273
     iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$1;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
     invoke-static {v1}, Lcom/android/server/clipboard/ClipboardService;->-$$Nest$fgetmClipboards(Lcom/android/server/clipboard/ClipboardService;)Landroid/util/SparseArrayMap;
@@ -102,7 +96,6 @@
 
     goto :goto_0
 
-    .line 275
     :cond_1
     monitor-exit p2
 

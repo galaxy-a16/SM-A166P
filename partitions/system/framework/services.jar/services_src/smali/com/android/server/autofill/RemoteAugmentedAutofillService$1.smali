@@ -47,7 +47,6 @@
 
     move-object v1, p1
 
-    .line 167
     iput-object v1, v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->this$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;
 
     move-object v1, p2
@@ -126,12 +125,10 @@
 
     const-string p1, "android.view.autofill.extra.AUGMENTED_AUTOFILL_CLIENT"
 
-    .line 171
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->val$service:Landroid/service/autofill/augmented/IAugmentedAutofillService;
 
     iget v1, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->val$sessionId:I

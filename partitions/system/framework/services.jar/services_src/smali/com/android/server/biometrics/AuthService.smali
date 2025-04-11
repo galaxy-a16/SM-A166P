@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBiometricService(Lcom/android/server/biometrics/AuthService;)Landroid/hardware/biometrics/IBiometricService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/AuthService;->mBiometricService:Landroid/hardware/biometrics/IBiometricService;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInjector(Lcom/android/server/biometrics/AuthService;)Lcom/android/server/biometrics/AuthService$Injector;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$mcheckAppOps(Lcom/android/server/biometrics/AuthService;ILjava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/biometrics/AuthService;->checkAppOps(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$mcheckInternalPermission(Lcom/android/server/biometrics/AuthService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthService;->checkInternalPermission()V
 
     return-void
@@ -53,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$mcheckPermission(Lcom/android/server/biometrics/AuthService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthService;->checkPermission()V
 
     return-void
@@ -62,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$mcheckPrivilegedPermission(Lcom/android/server/biometrics/AuthService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthService;->checkPrivilegedPermission()V
 
     return-void
@@ -71,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$smgetCredentialBackupModality(I)I
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/biometrics/AuthService;->getCredentialBackupModality(I)I
 
     move-result p0
@@ -82,7 +75,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 642
     new-instance v0, Lcom/android/server/biometrics/AuthService$Injector;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/AuthService$Injector;-><init>()V
@@ -95,13 +87,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/AuthService$Injector;)V
     .locals 0
 
-    .line 646
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 648
     iput-object p2, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
 
-    .line 649
     new-instance p1, Lcom/android/server/biometrics/AuthService$AuthServiceImpl;
 
     const/4 p2, 0x0
@@ -116,7 +105,6 @@
 .method public static synthetic access$000(Lcom/android/server/biometrics/AuthService;Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 86
     invoke-virtual {p0, p1, p2}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -125,7 +113,6 @@
 .method public static synthetic access$100(Lcom/android/server/biometrics/AuthService;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 0
 
-    .line 86
     invoke-virtual {p0, p1}, Lcom/android/server/SystemService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -136,7 +123,6 @@
 .method public static getCredentialBackupModality(I)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-ne p0, v0, :cond_0
@@ -155,7 +141,6 @@
 .method public final checkAppOps(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 7
 
-    .line 815
     iget-object v0, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -196,7 +181,6 @@
 .method public final checkInternalPermission()V
     .locals 2
 
-    .line 802
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -213,7 +197,6 @@
 .method public final checkPermission()V
     .locals 2
 
-    .line 807
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -226,7 +209,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 809
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -244,7 +226,6 @@
 .method public final checkPrivilegedPermission()V
     .locals 2
 
-    .line 911
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -261,7 +242,6 @@
 .method public final generateRSdkCompatibleConfiguration()[Ljava/lang/String;
     .locals 6
 
-    .line 710
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -270,14 +250,12 @@
 
     move-result-object p0
 
-    .line 711
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "android.hardware.fingerprint"
 
-    .line 712
     invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result v1
@@ -286,7 +264,6 @@
 
     const/4 v1, 0x2
 
-    .line 713
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
@@ -296,7 +273,6 @@
     :cond_0
     const-string v1, "android.hardware.biometrics.face"
 
-    .line 715
     invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result p0
@@ -305,7 +281,6 @@
 
     const/16 p0, 0x8
 
-    .line 716
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -315,12 +290,10 @@
     :cond_1
     const/16 p0, 0xfff
 
-    .line 718
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 719
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -329,7 +302,6 @@
 
     const/4 v2, 0x0
 
-    .line 720
     :goto_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -337,12 +309,10 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 721
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 722
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -351,7 +321,6 @@
 
     const-string v5, ":"
 
-    .line 723
     filled-new-array {v3, v4, p0}, [Ljava/lang/CharSequence;
 
     move-result-object v3
@@ -366,7 +335,6 @@
 
     goto :goto_0
 
-    .line 725
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -396,7 +364,6 @@
 .method public final getHidlFaceSensorProps(II)Landroid/hardware/face/FaceSensorPropertiesInternal;
     .locals 11
 
-    .line 881
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -411,7 +378,6 @@
 
     move-result v9
 
-    .line 883
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -426,15 +392,12 @@
 
     move-result v5
 
-    .line 885
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 888
     new-instance p0, Landroid/hardware/face/FaceSensorPropertiesInternal;
 
-    .line 889
     invoke-static {p2}, Lcom/android/server/biometrics/Utils;->authenticatorStrengthToPropertyStrength(I)I
 
     move-result v4
@@ -457,15 +420,12 @@
 .method public final getHidlFingerprintSensorProps(II)Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
     .locals 7
 
-    .line 830
     new-instance p0, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
-    .line 831
     invoke-static {p2}, Lcom/android/server/biometrics/Utils;->authenticatorStrengthToPropertyStrength(I)I
 
     move-result v2
 
-    .line 832
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semGetMaxTemplateNumberFromSPF()I
 
     move-result v3
@@ -474,7 +434,6 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 834
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semGetSensorType()I
 
     move-result v5
@@ -493,15 +452,12 @@
 .method public final getHidlIrisSensorProps(II)Landroid/hardware/biometrics/SensorPropertiesInternal;
     .locals 7
 
-    .line 897
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 900
     new-instance p0, Landroid/hardware/biometrics/SensorPropertiesInternal;
 
-    .line 901
     invoke-static {p2}, Lcom/android/server/biometrics/Utils;->authenticatorStrengthToPropertyStrength(I)I
 
     move-result v2
@@ -524,7 +480,6 @@
 .method public onStart()V
     .locals 5
 
-    .line 676
     iget-object v0, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/AuthService$Injector;->getBiometricService()Landroid/hardware/biometrics/IBiometricService;
@@ -533,7 +488,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/AuthService;->mBiometricService:Landroid/hardware/biometrics/IBiometricService;
 
-    .line 679
     iget-object v0, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -550,19 +504,16 @@
 
     const/4 v1, 0x0
 
-    .line 680
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string/jumbo v2, "ro.board.api_level"
 
-    .line 681
     invoke-static {v2, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 682
     iget-object v2, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -573,7 +524,6 @@
 
     move-result-object v2
 
-    .line 683
     array-length v3, v2
 
     if-nez v3, :cond_0
@@ -586,27 +536,22 @@
 
     const-string v2, "Found R vendor partition without config_biometric_sensors"
 
-    .line 687
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 688
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthService;->generateRSdkCompatibleConfiguration()[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 690
     :cond_0
     array-length v0, v2
 
     new-array v0, v0, [Lcom/android/server/biometrics/SensorConfig;
 
-    .line 691
     :goto_0
     array-length v3, v2
 
     if-ge v1, v3, :cond_2
 
-    .line 692
     new-instance v3, Lcom/android/server/biometrics/SensorConfig;
 
     aget-object v4, v2, v1
@@ -622,11 +567,9 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 699
     :cond_2
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/AuthService;->registerAuthenticators([Lcom/android/server/biometrics/SensorConfig;)V
 
-    .line 701
     iget-object v0, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
 
     iget-object v1, p0, Lcom/android/server/biometrics/AuthService;->mImpl:Landroid/hardware/biometrics/IAuthService$Stub;
@@ -639,17 +582,14 @@
 .method public final registerAuthenticators([Lcom/android/server/biometrics/SensorConfig;)V
     .locals 9
 
-    .line 738
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 739
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 741
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -658,7 +598,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 744
     array-length v4, p1
 
     const/4 v5, 0x0
@@ -668,7 +607,6 @@
 
     aget-object v6, p1, v5
 
-    .line 745
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -703,7 +641,6 @@
 
     invoke-static {v3, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 747
     iget v7, v6, Lcom/android/server/biometrics/SensorConfig;->modality:I
 
     const/4 v8, 0x2
@@ -718,7 +655,6 @@
 
     if-eq v7, v8, :cond_0
 
-    .line 762
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -739,7 +675,6 @@
 
     goto :goto_1
 
-    .line 754
     :cond_0
     iget v7, v6, Lcom/android/server/biometrics/SensorConfig;->id:I
 
@@ -753,7 +688,6 @@
 
     goto :goto_1
 
-    .line 758
     :cond_1
     iget v7, v6, Lcom/android/server/biometrics/SensorConfig;->id:I
 
@@ -767,18 +701,15 @@
 
     goto :goto_1
 
-    .line 749
     :cond_2
     iget v7, v6, Lcom/android/server/biometrics/SensorConfig;->id:I
 
     iget v6, v6, Lcom/android/server/biometrics/SensorConfig;->strength:I
 
-    .line 750
     invoke-virtual {p0, v7, v6}, Lcom/android/server/biometrics/AuthService;->getHidlFingerprintSensorProps(II)Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
     move-result-object v6
 
-    .line 749
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_1
@@ -786,7 +717,6 @@
 
     goto :goto_0
 
-    .line 767
     :cond_3
     iget-object p1, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
 
@@ -796,7 +726,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 770
     :try_start_0
     invoke-interface {p1, v0}, Landroid/hardware/fingerprint/IFingerprintService;->registerAuthenticators(Ljava/util/List;)V
     :try_end_0
@@ -809,12 +738,10 @@
 
     const-string v0, "RemoteException when registering fingerprint authenticators"
 
-    .line 772
     invoke-static {v3, v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_2
 
-    .line 774
     :cond_4
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -824,10 +751,8 @@
 
     const-string p1, "HIDL fingerprint configuration exists, but FingerprintService is null."
 
-    .line 775
     invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
     :cond_5
     :goto_2
     iget-object p1, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
@@ -838,7 +763,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 781
     :try_start_1
     invoke-interface {p1, v1}, Landroid/hardware/face/IFaceService;->registerAuthenticators(Ljava/util/List;)V
     :try_end_1
@@ -851,12 +775,10 @@
 
     const-string v0, "RemoteException when registering face authenticators"
 
-    .line 783
     invoke-static {v3, v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_3
 
-    .line 785
     :cond_6
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -866,10 +788,8 @@
 
     const-string p1, "HIDL face configuration exists, but FaceService is null."
 
-    .line 786
     invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 789
     :cond_7
     :goto_3
     iget-object p0, p0, Lcom/android/server/biometrics/AuthService;->mInjector:Lcom/android/server/biometrics/AuthService$Injector;
@@ -880,7 +800,6 @@
 
     if-eqz p0, :cond_8
 
-    .line 792
     :try_start_2
     invoke-interface {p0, v2}, Landroid/hardware/iris/IIrisService;->registerAuthenticators(Ljava/util/List;)V
     :try_end_2
@@ -893,12 +812,10 @@
 
     const-string p1, "RemoteException when registering iris authenticators"
 
-    .line 794
     invoke-static {v3, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_4
 
-    .line 796
     :cond_8
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -908,7 +825,6 @@
 
     const-string p0, "HIDL iris configuration exists, but IrisService is null."
 
-    .line 797
     invoke-static {v3, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_9

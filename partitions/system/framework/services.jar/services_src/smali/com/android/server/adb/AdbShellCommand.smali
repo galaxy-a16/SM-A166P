@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/adb/AdbService;)V
     .locals 1
 
-    .line 31
     invoke-direct {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;-><init>()V
 
-    .line 32
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -35,14 +33,12 @@
 
     const/4 p1, 0x0
 
-    .line 38
     invoke-virtual {p0, p1}, Lcom/android/modules/utils/BasicShellCommandHandler;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 41
     :cond_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -50,7 +46,6 @@
 
     const-string v1, "is-wifi-qr-supported"
 
-    .line 42
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -67,14 +62,12 @@
 
     if-nez v1, :cond_1
 
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/modules/utils/BasicShellCommandHandler;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 44
     :cond_1
     iget-object p0, p0, Lcom/android/server/adb/AdbShellCommand;->mService:Lcom/android/server/adb/AdbService;
 
@@ -90,7 +83,6 @@
 
     return v2
 
-    .line 48
     :cond_2
     iget-object p0, p0, Lcom/android/server/adb/AdbShellCommand;->mService:Lcom/android/server/adb/AdbService;
 
@@ -110,47 +102,38 @@
 .method public onHelp()V
     .locals 1
 
-    .line 58
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Adb service commands:"
 
-    .line 59
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help or -h"
 
-    .line 60
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 61
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  is-wifi-supported"
 
-    .line 62
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Returns \"true\" if adb over wifi is supported."
 
-    .line 63
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  is-wifi-qr-supported"
 
-    .line 64
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Returns \"true\" if adb over wifi + QR pairing is supported."
 
-    .line 65
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void

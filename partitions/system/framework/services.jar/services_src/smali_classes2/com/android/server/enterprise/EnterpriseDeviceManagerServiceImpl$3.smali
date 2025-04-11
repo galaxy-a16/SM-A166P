@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;)V
     .locals 0
 
-    .line 2169
     iput-object p1, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$3;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -31,10 +30,8 @@
     :try_start_0
     const-string v2, "Start the handling for mateagent"
 
-    .line 2173
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2175
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$3;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;
 
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;->mContext:Landroid/content/Context;
@@ -49,7 +46,6 @@
 
     invoke-static {p0, v2, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2177
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;->-$$Nest$sfgetmPackageManagerAdapter()Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     move-result-object p0
@@ -62,10 +58,8 @@
 
     const-string p0, "Start the deleting for mateagent"
 
-    .line 2178
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2179
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;->-$$Nest$sfgetmPackageManagerAdapter()Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     move-result-object p0
@@ -81,7 +75,6 @@
 
     const-string v0, "Failed to delete mateagent package"
 
-    .line 2182
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0

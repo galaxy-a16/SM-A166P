@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$43Fm1w88azFYVcLmkv8CjXbZsvE(I)[Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/pm/SuspendPackageHelper;->lambda$getUnsuspendablePackages$5(I)[Ljava/lang/String;
 
     move-result-object p0
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$56lMTTmdwpGLgie--3DUwPSUIRI(Landroid/util/ArrayMap;ILcom/android/server/pm/pkg/mutate/PackageStateMutator;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/SuspendPackageHelper;->lambda$removeSuspensionsBySuspendingPackage$1(Landroid/util/ArrayMap;ILcom/android/server/pm/pkg/mutate/PackageStateMutator;)V
 
     return-void
@@ -39,7 +37,6 @@
 .method public static synthetic $r8$lambda$5Kxd-gW5jekFOZ4D96-ZUPhmY6k(Lcom/android/server/pm/SuspendPackageHelper;ZI[Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/pm/SuspendPackageHelper;->lambda$sendMyPackageSuspendedOrUnsuspended$6(ZI[Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -48,7 +45,6 @@
 .method public static synthetic $r8$lambda$MeRzSYumIRSeE5t27JoC2o33WL0(Lcom/android/server/pm/SuspendPackageHelper;Ljava/lang/Integer;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/SuspendPackageHelper;->lambda$sendPackagesSuspendedForUser$2(Ljava/lang/Integer;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -59,7 +55,6 @@
 .method public static synthetic $r8$lambda$RhuT44KN1uB2kUzyFk_wMzIf39I(I)[Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/pm/SuspendPackageHelper;->lambda$setPackagesSuspendedByAdmin$4(I)[Ljava/lang/String;
 
     move-result-object p0
@@ -70,7 +65,6 @@
 .method public static synthetic $r8$lambda$T5cvpD5mEWJK08R6EajVRBrFICM(Lcom/android/server/pm/SuspendPackageHelper;Ljava/lang/String;Landroid/os/Bundle;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/pm/SuspendPackageHelper;->lambda$sendPackagesSuspendedForUser$3(Ljava/lang/String;Landroid/os/Bundle;ILandroid/os/Bundle;)V
 
     return-void
@@ -79,7 +73,6 @@
 .method public static synthetic $r8$lambda$q8yyKm6etC93i5lkgJcTbAozJFk(Landroid/util/ArraySet;IZLjava/lang/String;Lcom/android/server/pm/pkg/SuspendParams;Lcom/android/server/pm/pkg/mutate/PackageStateMutator;)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/pm/SuspendPackageHelper;->lambda$setPackagesSuspended$0(Landroid/util/ArraySet;IZLjava/lang/String;Lcom/android/server/pm/pkg/SuspendParams;Lcom/android/server/pm/pkg/mutate/PackageStateMutator;)V
 
     return-void
@@ -88,22 +81,16 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/UserManagerService;Lcom/android/server/pm/BroadcastHelper;Lcom/android/server/pm/ProtectedPackages;)V
     .locals 0
 
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     iput-object p1, p0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 89
     iput-object p3, p0, Lcom/android/server/pm/SuspendPackageHelper;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
-    .line 90
     iput-object p2, p0, Lcom/android/server/pm/SuspendPackageHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
-    .line 91
     iput-object p4, p0, Lcom/android/server/pm/SuspendPackageHelper;->mBroadcastHelper:Lcom/android/server/pm/BroadcastHelper;
 
-    .line 92
     iput-object p5, p0, Lcom/android/server/pm/SuspendPackageHelper;->mProtectedPackages:Lcom/android/server/pm/ProtectedPackages;
 
     return-void
@@ -112,7 +99,6 @@
 .method public static synthetic lambda$getUnsuspendablePackages$5(I)[Ljava/lang/String;
     .locals 0
 
-    .line 688
     new-array p0, p0, [Ljava/lang/String;
 
     return-object p0
@@ -125,7 +111,6 @@
 
     move v1, v0
 
-    .line 343
     :goto_0
     invoke-virtual {p0}, Landroid/util/ArrayMap;->size()I
 
@@ -133,21 +118,18 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 344
     invoke-virtual {p0, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 345
     invoke-virtual {p0, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/util/ArraySet;
 
-    .line 346
     invoke-virtual {p2, v2}, Lcom/android/server/pm/pkg/mutate/PackageStateMutator;->forPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/mutate/PackageStateWrite;
 
     move-result-object v2
@@ -158,7 +140,6 @@
 
     move v4, v0
 
-    .line 347
     :goto_1
     invoke-virtual {v3}, Landroid/util/ArraySet;->size()I
 
@@ -166,7 +147,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 348
     invoke-virtual {v3, v4}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -195,14 +175,12 @@
 
     move-object/from16 v1, p3
 
-    .line 769
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    .line 771
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -220,7 +198,6 @@
     :cond_0
     const-string v1, "UN"
 
-    .line 772
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -234,25 +211,21 @@
 
     const-string v1, "PackageManager"
 
-    .line 771
     invoke-static {v1, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 775
     :cond_1
     filled-new-array/range {p2 .. p2}, [I
 
     move-result-object v14
 
-    .line 776
     iget-object v2, v0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
 
     move-result-object v15
 
-    .line 777
     array-length v13, v1
 
     const/4 v2, 0x0
@@ -272,7 +245,6 @@
 
     move/from16 v11, p2
 
-    .line 779
     invoke-virtual {v0, v15, v7, v11, v3}, Lcom/android/server/pm/SuspendPackageHelper;->getSuspendedPackageAppExtras(Lcom/android/server/pm/Computer;Ljava/lang/String;II)Landroid/os/Bundle;
 
     move-result-object v3
@@ -287,7 +259,6 @@
     :goto_2
     if-eqz v3, :cond_3
 
-    .line 783
     new-instance v2, Landroid/os/Bundle;
 
     const/4 v4, 0x1
@@ -296,13 +267,11 @@
 
     const-string v4, "android.intent.extra.SUSPENDED_PACKAGE_EXTRAS"
 
-    .line 784
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_3
     move-object v5, v2
 
-    .line 788
     iget-object v2, v0, Lcom/android/server/pm/SuspendPackageHelper;->mBroadcastHelper:Lcom/android/server/pm/BroadcastHelper;
 
     const/4 v4, 0x0
@@ -348,10 +317,8 @@
 .method private synthetic lambda$sendPackagesSuspendedForUser$2(Ljava/lang/Integer;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 0
 
-    .line 641
     iget-object p0, p0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 642
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
 
     move-result-object p0
@@ -360,7 +327,6 @@
 
     move-result p1
 
-    .line 641
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/BroadcastHelper;->filterExtrasChangedPackageList(Lcom/android/server/pm/Computer;ILandroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -373,7 +339,6 @@
 
     move-object v0, p0
 
-    .line 638
     iget-object v1, v0, Lcom/android/server/pm/SuspendPackageHelper;->mBroadcastHelper:Lcom/android/server/pm/BroadcastHelper;
 
     const/4 v2, 0x0
@@ -412,7 +377,6 @@
 .method public static synthetic lambda$setPackagesSuspended$0(Landroid/util/ArraySet;IZLjava/lang/String;Lcom/android/server/pm/pkg/SuspendParams;Lcom/android/server/pm/pkg/mutate/PackageStateMutator;)V
     .locals 3
 
-    .line 199
     invoke-virtual {p0}, Landroid/util/ArraySet;->size()I
 
     move-result v0
@@ -422,31 +386,26 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 201
     invoke-virtual {p0, v1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 202
     invoke-virtual {p5, v2}, Lcom/android/server/pm/pkg/mutate/PackageStateMutator;->forPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/mutate/PackageStateWrite;
 
     move-result-object v2
 
-    .line 203
     invoke-interface {v2, p1}, Lcom/android/server/pm/pkg/mutate/PackageStateWrite;->userState(I)Lcom/android/server/pm/pkg/mutate/PackageUserStateWrite;
 
     move-result-object v2
 
     if-eqz p2, :cond_0
 
-    .line 205
     invoke-interface {v2, p3, p4}, Lcom/android/server/pm/pkg/mutate/PackageUserStateWrite;->putSuspendParams(Ljava/lang/String;Lcom/android/server/pm/pkg/SuspendParams;)Lcom/android/server/pm/pkg/mutate/PackageUserStateWrite;
 
     goto :goto_1
 
-    .line 207
     :cond_0
     invoke-interface {v2, p3}, Lcom/android/server/pm/pkg/mutate/PackageUserStateWrite;->removeSuspension(Ljava/lang/String;)Lcom/android/server/pm/pkg/mutate/PackageUserStateWrite;
 
@@ -462,7 +421,6 @@
 .method public static synthetic lambda$setPackagesSuspendedByAdmin$4(I)[Ljava/lang/String;
     .locals 0
 
-    .line 683
     new-array p0, p0, [Ljava/lang/String;
 
     return-object p0
@@ -481,24 +439,20 @@
 
     move/from16 v3, p3
 
-    .line 500
     array-length v4, v2
 
     new-array v4, v4, [Z
 
     move/from16 v5, p4
 
-    .line 501
     invoke-virtual {v0, v1, v3, v5}, Lcom/android/server/pm/SuspendPackageHelper;->isCallerDeviceOrProfileOwner(Lcom/android/server/pm/Computer;II)Z
 
     move-result v5
 
-    .line 502
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 504
     :try_start_0
     iget-object v8, v0, Lcom/android/server/pm/SuspendPackageHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
@@ -506,45 +460,38 @@
 
     move-result-object v8
 
-    .line 505
     invoke-virtual {v8, v3}, Lcom/android/server/pm/DefaultAppProvider;->getDefaultHome(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 506
     invoke-virtual {v8, v3}, Lcom/android/server/pm/DefaultAppProvider;->getDefaultDialer(I)Ljava/lang/String;
 
     move-result-object v8
 
     const/4 v10, 0x2
 
-    .line 508
     invoke-virtual {v0, v1, v10, v3}, Lcom/android/server/pm/SuspendPackageHelper;->getKnownPackageName(Lcom/android/server/pm/Computer;II)Ljava/lang/String;
 
     move-result-object v10
 
     const/4 v11, 0x3
 
-    .line 510
     invoke-virtual {v0, v1, v11, v3}, Lcom/android/server/pm/SuspendPackageHelper;->getKnownPackageName(Lcom/android/server/pm/Computer;II)Ljava/lang/String;
 
     move-result-object v11
 
     const/4 v12, 0x4
 
-    .line 512
     invoke-virtual {v0, v1, v12, v3}, Lcom/android/server/pm/SuspendPackageHelper;->getKnownPackageName(Lcom/android/server/pm/Computer;II)Ljava/lang/String;
 
     move-result-object v12
 
     const/4 v13, 0x7
 
-    .line 514
     invoke-virtual {v0, v1, v13, v3}, Lcom/android/server/pm/SuspendPackageHelper;->getKnownPackageName(Lcom/android/server/pm/Computer;II)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 516
     iget-object v14, v0, Lcom/android/server/pm/SuspendPackageHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     const-class v15, Landroid/app/AppOpsManager;
@@ -566,14 +513,12 @@
 
     const/4 v7, 0x1
 
-    .line 517
     invoke-static {v15, v6, v7}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v6
 
     const/4 v7, 0x0
 
-    .line 520
     :goto_0
     array-length v15, v2
 
@@ -581,13 +526,10 @@
 
     const/4 v15, 0x0
 
-    .line 521
     aput-boolean v15, v4, v7
 
-    .line 522
     aget-object v15, v2, v7
 
-    .line 524
     iget-object v2, v0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v2, v15, v3}, Lcom/android/server/pm/PackageManagerService;->isPackageDeviceAdmin(Ljava/lang/String;I)Z
@@ -606,7 +548,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 525
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -631,7 +572,6 @@
 
     goto/16 :goto_3
 
-    .line 529
     :cond_0
     invoke-virtual {v15, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -639,7 +579,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 530
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -660,7 +599,6 @@
 
     goto :goto_1
 
-    .line 534
     :cond_1
     invoke-virtual {v15, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -668,7 +606,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 535
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -689,7 +626,6 @@
 
     goto :goto_1
 
-    .line 539
     :cond_2
     invoke-virtual {v15, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -697,7 +633,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 540
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -718,7 +653,6 @@
 
     goto :goto_1
 
-    .line 544
     :cond_3
     invoke-virtual {v15, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -726,7 +660,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 545
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -747,7 +680,6 @@
 
     goto :goto_1
 
-    .line 549
     :cond_4
     invoke-virtual {v15, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -755,7 +687,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 550
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -776,7 +707,6 @@
 
     goto/16 :goto_1
 
-    .line 554
     :cond_5
     invoke-virtual {v15, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -784,7 +714,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 555
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -805,7 +734,6 @@
 
     goto/16 :goto_1
 
-    .line 559
     :cond_6
     iget-object v2, v0, Lcom/android/server/pm/SuspendPackageHelper;->mProtectedPackages:Lcom/android/server/pm/ProtectedPackages;
 
@@ -815,7 +743,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 560
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -839,14 +766,12 @@
     :cond_7
     if-nez v5, :cond_8
 
-    .line 564
     invoke-interface {v1, v3, v15}, Lcom/android/server/pm/Computer;->getBlockUninstall(ILjava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 565
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -867,18 +792,15 @@
 
     goto/16 :goto_1
 
-    .line 569
     :cond_8
     iget-object v2, v0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 570
     invoke-virtual {v2, v1, v15, v3}, Lcom/android/server/pm/PackageManagerService;->isRequiredSystemPackage(Lcom/android/server/pm/Computer;Ljava/lang/String;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 571
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -899,7 +821,6 @@
 
     goto/16 :goto_1
 
-    .line 579
     :cond_9
     invoke-interface {v1, v15}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
@@ -911,7 +832,6 @@
 
     goto :goto_2
 
-    .line 580
     :cond_a
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
@@ -920,7 +840,6 @@
     :goto_2
     if-eqz v20, :cond_d
 
-    .line 582
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result v2
@@ -929,7 +848,6 @@
 
     move-result v2
 
-    .line 584
     invoke-interface/range {v20 .. v20}, Lcom/android/server/pm/pkg/AndroidPackage;->isSdkLibrary()Z
 
     move-result v21
@@ -940,7 +858,6 @@
 
     if-eqz v21, :cond_b
 
-    .line 585
     :try_start_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -954,7 +871,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 587
     invoke-interface/range {v20 .. v20}, Lcom/android/server/pm/pkg/AndroidPackage;->getSdkLibraryName()Ljava/lang/String;
 
     move-result-object v0
@@ -965,12 +881,10 @@
 
     move-result-object v0
 
-    .line 585
     invoke-static {v7, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_1
 
-    .line 593
     :cond_b
     invoke-interface/range {v20 .. v20}, Lcom/android/server/pm/pkg/AndroidPackage;->isStaticSharedLibrary()Z
 
@@ -978,7 +892,6 @@
 
     if-eqz v21, :cond_c
 
-    .line 594
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -991,7 +904,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 596
     invoke-interface/range {v20 .. v20}, Lcom/android/server/pm/pkg/AndroidPackage;->getStaticSharedLibraryName()Ljava/lang/String;
 
     move-result-object v0
@@ -1002,7 +914,6 @@
 
     move-result-object v0
 
-    .line 594
     invoke-static {v7, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_1
@@ -1012,14 +923,12 @@
 
     const/16 v0, 0x7c
 
-    .line 599
     invoke-virtual {v14, v0, v2, v15}, Landroid/app/AppOpsManager;->checkOpNoThrow(IILjava/lang/String;)I
 
     move-result v0
 
     if-nez v0, :cond_d
 
-    .line 602
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1043,14 +952,12 @@
     :cond_d
     const-string v0, "android"
 
-    .line 607
     invoke-virtual {v0, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_e
 
-    .line 608
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1072,7 +979,6 @@
     :cond_e
     const/4 v0, 0x1
 
-    .line 611
     aput-boolean v0, v18, v19
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -1091,7 +997,6 @@
     :cond_f
     move-object/from16 v18, v4
 
-    .line 614
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v18
@@ -1109,22 +1014,18 @@
     :goto_4
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 615
     throw v0
 .end method
 
 .method public final getKnownPackageName(Lcom/android/server/pm/Computer;II)Ljava/lang/String;
     .locals 0
 
-    .line 744
     iget-object p0, p0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 745
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService;->getKnownPackageNamesInternal(Lcom/android/server/pm/Computer;II)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 746
     array-length p1, p0
 
     if-lez p1, :cond_0
@@ -1145,7 +1046,6 @@
 .method public getSuspendedDialogInfo(Lcom/android/server/pm/Computer;Ljava/lang/String;Ljava/lang/String;II)Landroid/content/pm/SuspendDialogInfo;
     .locals 0
 
-    .line 453
     invoke-interface {p1, p2, p5}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
@@ -1156,13 +1056,11 @@
 
     return-object p1
 
-    .line 459
     :cond_0
     invoke-interface {p0, p4}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
 
-    .line 460
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->isSuspended()Z
 
     move-result p2
@@ -1171,7 +1069,6 @@
 
     return-object p1
 
-    .line 465
     :cond_1
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserStateInternal;->getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
 
@@ -1181,7 +1078,6 @@
 
     return-object p1
 
-    .line 470
     :cond_2
     invoke-virtual {p0, p3}, Lcom/android/server/utils/WatchedArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1191,7 +1087,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 471
     invoke-virtual {p0}, Lcom/android/server/pm/pkg/SuspendParams;->getDialogInfo()Landroid/content/pm/SuspendDialogInfo;
 
     move-result-object p1
@@ -1203,7 +1098,6 @@
 .method public getSuspendedPackageAppExtras(Lcom/android/server/pm/Computer;Ljava/lang/String;II)Landroid/os/Bundle;
     .locals 1
 
-    .line 275
     invoke-interface {p1, p2, p4}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
@@ -1214,18 +1108,15 @@
 
     return-object p1
 
-    .line 279
     :cond_0
     invoke-interface {p0, p3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
 
-    .line 280
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    .line 281
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->isSuspended()Z
 
     move-result p3
@@ -1234,7 +1125,6 @@
 
     const/4 p3, 0x0
 
-    .line 282
     :goto_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserStateInternal;->getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
 
@@ -1246,7 +1136,6 @@
 
     if-ge p3, p4, :cond_2
 
-    .line 283
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserStateInternal;->getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
 
     move-result-object p4
@@ -1259,14 +1148,12 @@
 
     if-eqz p4, :cond_1
 
-    .line 284
     invoke-virtual {p4}, Lcom/android/server/pm/pkg/SuspendParams;->getAppExtras()Landroid/os/PersistableBundle;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 285
     invoke-virtual {p4}, Lcom/android/server/pm/pkg/SuspendParams;->getAppExtras()Landroid/os/PersistableBundle;
 
     move-result-object p4
@@ -1278,7 +1165,6 @@
 
     goto :goto_0
 
-    .line 289
     :cond_2
     invoke-virtual {p2}, Landroid/os/Bundle;->size()I
 
@@ -1295,7 +1181,6 @@
 .method public getSuspendedPackageLauncherExtras(Lcom/android/server/pm/Computer;Ljava/lang/String;II)Landroid/os/Bundle;
     .locals 1
 
-    .line 375
     invoke-interface {p1, p2, p4}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
@@ -1306,18 +1191,15 @@
 
     return-object p1
 
-    .line 379
     :cond_0
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    .line 380
     invoke-interface {p0, p3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
 
-    .line 381
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->isSuspended()Z
 
     move-result p3
@@ -1326,7 +1208,6 @@
 
     const/4 p3, 0x0
 
-    .line 382
     :goto_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserStateInternal;->getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
 
@@ -1338,7 +1219,6 @@
 
     if-ge p3, p4, :cond_2
 
-    .line 383
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserStateInternal;->getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
 
     move-result-object p4
@@ -1351,14 +1231,12 @@
 
     if-eqz p4, :cond_1
 
-    .line 384
     invoke-virtual {p4}, Lcom/android/server/pm/pkg/SuspendParams;->getLauncherExtras()Landroid/os/PersistableBundle;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 385
     invoke-virtual {p4}, Lcom/android/server/pm/pkg/SuspendParams;->getLauncherExtras()Landroid/os/PersistableBundle;
 
     move-result-object p4
@@ -1370,7 +1248,6 @@
 
     goto :goto_0
 
-    .line 389
     :cond_2
     invoke-virtual {p2}, Landroid/os/Bundle;->size()I
 
@@ -1387,7 +1264,6 @@
 .method public getSuspendingPackage(Lcom/android/server/pm/Computer;Ljava/lang/String;II)Ljava/lang/String;
     .locals 0
 
-    .line 419
     invoke-interface {p1, p2, p4}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
@@ -1398,13 +1274,11 @@
 
     return-object p1
 
-    .line 425
     :cond_0
     invoke-interface {p0, p3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
 
-    .line 426
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->isSuspended()Z
 
     move-result p2
@@ -1416,7 +1290,6 @@
     :cond_1
     const/4 p2, 0x0
 
-    .line 431
     :goto_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserStateInternal;->getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
 
@@ -1428,7 +1301,6 @@
 
     if-ge p2, p3, :cond_3
 
-    .line 432
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserStateInternal;->getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
 
     move-result-object p1
@@ -1441,7 +1313,6 @@
 
     const-string p3, "android"
 
-    .line 433
     invoke-virtual {p3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
@@ -1462,7 +1333,6 @@
 .method public final getUnsuspendablePackages(Lcom/android/server/pm/Computer;ILjava/util/Set;)Ljava/util/List;
     .locals 1
 
-    .line 688
     new-instance v0, Lcom/android/server/pm/SuspendPackageHelper$$ExternalSyntheticLambda6;
 
     invoke-direct {v0}, Lcom/android/server/pm/SuspendPackageHelper$$ExternalSyntheticLambda6;-><init>()V
@@ -1475,30 +1345,25 @@
 
     const/16 v0, 0x3e8
 
-    .line 690
     invoke-virtual {p0, p1, p3, p2, v0}, Lcom/android/server/pm/SuspendPackageHelper;->canSuspendPackageForUser(Lcom/android/server/pm/Computer;[Ljava/lang/String;II)[Z
 
     move-result-object p0
 
-    .line 691
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     const/4 p2, 0x0
 
-    .line 692
     :goto_0
     array-length v0, p0
 
     if-ge p2, v0, :cond_1
 
-    .line 693
     aget-boolean v0, p0, p2
 
     if-nez v0, :cond_0
 
-    .line 694
     aget-object v0, p3, p2
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1515,7 +1380,6 @@
 .method public getUnsuspendablePackagesForUser(Lcom/android/server/pm/Computer;[Ljava/lang/String;II)[Ljava/lang/String;
     .locals 5
 
-    .line 241
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/pm/SuspendPackageHelper;->isSuspendAllowedForUser(Lcom/android/server/pm/Computer;II)Z
 
     move-result v0
@@ -1524,7 +1388,6 @@
 
     if-nez v0, :cond_0
 
-    .line 242
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1543,49 +1406,41 @@
 
     return-object p2
 
-    .line 245
     :cond_0
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 246
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/pm/SuspendPackageHelper;->canSuspendPackageForUser(Lcom/android/server/pm/Computer;[Ljava/lang/String;II)[Z
 
     move-result-object p0
 
     const/4 v2, 0x0
 
-    .line 248
     :goto_0
     array-length v3, p2
 
     if-ge v2, v3, :cond_3
 
-    .line 249
     aget-boolean v3, p0, v2
 
     if-nez v3, :cond_1
 
-    .line 250
     aget-object v3, p2, v2
 
     invoke-virtual {v0, v3}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 253
     :cond_1
     aget-object v3, p2, v2
 
-    .line 254
     invoke-interface {p1, v3, p4, p3}, Lcom/android/server/pm/Computer;->getPackageStateForInstalledAndFiltered(Ljava/lang/String;II)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object v3
 
     if-nez v3, :cond_2
 
-    .line 257
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1604,7 +1459,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     aget-object v3, p2, v2
 
     invoke-virtual {v0, v3}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
@@ -1615,7 +1469,6 @@
 
     goto :goto_0
 
-    .line 261
     :cond_3
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
 
@@ -1643,7 +1496,6 @@
 
     return v1
 
-    .line 754
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/SuspendPackageHelper;->mProtectedPackages:Lcom/android/server/pm/ProtectedPackages;
 
@@ -1663,7 +1515,6 @@
 
     move v7, p3
 
-    .line 756
     invoke-interface/range {v2 .. v7}, Lcom/android/server/pm/Computer;->getPackageUidInternal(Ljava/lang/String;JII)I
 
     move-result p1
@@ -1685,19 +1536,16 @@
 .method public isPackageSuspended(Lcom/android/server/pm/Computer;Ljava/lang/String;II)Z
     .locals 0
 
-    .line 403
     invoke-interface {p1, p2, p4}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 404
     invoke-interface {p0, p3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
 
-    .line 405
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->isSuspended()Z
 
     move-result p0
@@ -1718,14 +1566,12 @@
 .method public isSuspendAllowedForUser(Lcom/android/server/pm/Computer;II)Z
     .locals 1
 
-    .line 482
     iget-object v0, p0, Lcom/android/server/pm/SuspendPackageHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerServiceInjector;->getUserManagerService()Lcom/android/server/pm/UserManagerService;
 
     move-result-object v0
 
-    .line 483
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/SuspendPackageHelper;->isCallerDeviceOrProfileOwner(Lcom/android/server/pm/Computer;II)Z
 
     move-result p0
@@ -1734,7 +1580,6 @@
 
     const-string/jumbo p0, "no_control_apps"
 
-    .line 484
     invoke-virtual {v0, p0, p2}, Lcom/android/server/pm/UserManagerService;->hasUserRestriction(Ljava/lang/String;I)Z
 
     move-result p0
@@ -1743,7 +1588,6 @@
 
     const-string/jumbo p0, "no_uninstall_apps"
 
-    .line 485
     invoke-virtual {v0, p0, p2}, Lcom/android/server/pm/UserManagerService;->hasUserRestriction(Ljava/lang/String;I)Z
 
     move-result p0
@@ -1770,22 +1614,18 @@
 
     const-wide/32 v0, 0xc0000
 
-    .line 729
     invoke-interface {p1, v0, v1, p2}, Lcom/android/server/pm/Computer;->getInstalledPackages(JI)Landroid/content/pm/ParceledListSlice;
 
     move-result-object p1
 
-    .line 730
     invoke-virtual {p1}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object p1
 
-    .line 731
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 732
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1803,14 +1643,12 @@
 
     check-cast v1, Landroid/content/pm/PackageInfo;
 
-    .line 733
     iget-object v1, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 737
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -1832,22 +1670,18 @@
 
     move/from16 v2, p4
 
-    .line 306
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 307
     new-instance v4, Landroid/util/IntArray;
 
     invoke-direct {v4}, Landroid/util/IntArray;-><init>()V
 
-    .line 308
     new-instance v5, Landroid/util/ArrayMap;
 
     invoke-direct {v5}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 309
     array-length v6, v1
 
     const/4 v8, 0x0
@@ -1861,7 +1695,6 @@
 
     move-object/from16 v11, p1
 
-    .line 311
     invoke-interface {v11, v10}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object v12
@@ -1870,7 +1703,6 @@
 
     goto :goto_1
 
-    .line 313
     :cond_0
     invoke-interface {v12, v2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
@@ -1879,7 +1711,6 @@
     :goto_1
     if-eqz v9, :cond_5
 
-    .line 314
     invoke-interface {v9}, Lcom/android/server/pm/pkg/PackageUserState;->isSuspended()Z
 
     move-result v13
@@ -1888,7 +1719,6 @@
 
     goto :goto_4
 
-    .line 319
     :cond_1
     invoke-interface {v9}, Lcom/android/server/pm/pkg/PackageUserStateInternal;->getSuspendParams()Lcom/android/server/utils/WatchedArrayMap;
 
@@ -1898,7 +1728,6 @@
 
     const/4 v14, 0x0
 
-    .line 321
     :goto_2
     invoke-virtual {v9}, Lcom/android/server/utils/WatchedArrayMap;->size()I
 
@@ -1906,7 +1735,6 @@
 
     if-ge v13, v15, :cond_4
 
-    .line 322
     invoke-virtual {v9, v13}, Lcom/android/server/utils/WatchedArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v15
@@ -1915,14 +1743,12 @@
 
     move-object/from16 v7, p3
 
-    .line 323
     invoke-interface {v7, v15}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result v16
 
     if-eqz v16, :cond_3
 
-    .line 325
     invoke-virtual {v5, v10}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v16
@@ -1931,12 +1757,10 @@
 
     if-nez v16, :cond_2
 
-    .line 327
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 328
     invoke-virtual {v5, v10, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_3
@@ -1944,7 +1768,6 @@
     :cond_2
     move-object/from16 v1, v16
 
-    .line 330
     :goto_3
     invoke-virtual {v1, v15}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
@@ -1960,21 +1783,18 @@
     :cond_4
     move-object/from16 v7, p3
 
-    .line 336
     invoke-virtual {v9}, Lcom/android/server/utils/WatchedArrayMap;->size()I
 
     move-result v1
 
     if-ne v14, v1, :cond_6
 
-    .line 337
     invoke-interface {v12}, Lcom/android/server/pm/pkg/PackageState;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 338
     invoke-interface {v12}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result v1
@@ -1999,7 +1819,6 @@
 
     goto :goto_0
 
-    .line 342
     :cond_7
     iget-object v1, v0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -2009,26 +1828,22 @@
 
     invoke-virtual {v1, v9, v6}, Lcom/android/server/pm/PackageManagerService;->commitPackageStateMutation(Lcom/android/server/pm/pkg/mutate/PackageStateMutator$InitialState;Ljava/util/function/Consumer;)Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
-    .line 353
     iget-object v1, v0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1, v2}, Lcom/android/server/pm/PackageManagerService;->scheduleWritePackageRestrictions(I)V
 
-    .line 354
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_8
 
-    .line 356
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v1
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 355
     invoke-interface {v3, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -2037,17 +1852,14 @@
 
     const/4 v3, 0x0
 
-    .line 357
     invoke-virtual {v0, v1, v3, v2}, Lcom/android/server/pm/SuspendPackageHelper;->sendMyPackageSuspendedOrUnsuspended([Ljava/lang/String;ZI)V
 
     const-string v3, "android.intent.action.PACKAGES_UNSUSPENDED"
 
-    .line 359
     invoke-virtual {v4}, Landroid/util/IntArray;->toArray()[I
 
     move-result-object v4
 
-    .line 358
     invoke-virtual {v0, v3, v1, v4, v2}, Lcom/android/server/pm/SuspendPackageHelper;->sendPackagesSuspendedForUser(Ljava/lang/String;[Ljava/lang/String;[II)V
 
     :cond_8
@@ -2057,7 +1869,6 @@
 .method public final sendMyPackageSuspendedOrUnsuspended([Ljava/lang/String;ZI)V
     .locals 8
 
-    .line 764
     iget-object v0, p0, Lcom/android/server/pm/SuspendPackageHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerServiceInjector;->getHandler()Landroid/os/Handler;
@@ -2076,7 +1887,6 @@
     :goto_0
     move-object v7, v1
 
-    .line 768
     new-instance v1, Lcom/android/server/pm/SuspendPackageHelper$$ExternalSyntheticLambda4;
 
     move-object v2, v1
@@ -2099,14 +1909,12 @@
 .method public sendPackagesSuspendedForUser(Ljava/lang/String;[Ljava/lang/String;[II)V
     .locals 7
 
-    .line 630
     iget-object v0, p0, Lcom/android/server/pm/SuspendPackageHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerServiceInjector;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 631
     new-instance v4, Landroid/os/Bundle;
 
     const/4 v1, 0x3
@@ -2115,32 +1923,26 @@
 
     const-string v1, "android.intent.extra.changed_package_list"
 
-    .line 632
     invoke-virtual {v4, v1, p2}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
     const-string p2, "android.intent.extra.changed_uid_list"
 
-    .line 633
     invoke-virtual {v4, p2, p3}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
-    .line 635
     new-instance p2, Landroid/app/BroadcastOptions;
 
     invoke-direct {p2}, Landroid/app/BroadcastOptions;-><init>()V
 
     const/4 p3, 0x2
 
-    .line 636
     invoke-virtual {p2, p3}, Landroid/app/BroadcastOptions;->setDeferralPolicy(I)Landroid/app/BroadcastOptions;
 
     move-result-object p2
 
-    .line 637
     invoke-virtual {p2}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 638
     new-instance p2, Lcom/android/server/pm/SuspendPackageHelper$$ExternalSyntheticLambda2;
 
     move-object v1, p2
@@ -2175,7 +1977,6 @@
 
     move/from16 v3, p9
 
-    .line 121
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
 
     move-result v4
@@ -2191,14 +1992,12 @@
 
     if-nez p10, :cond_1
 
-    .line 124
     invoke-virtual {v0, v1, v8, v3}, Lcom/android/server/pm/SuspendPackageHelper;->isSuspendAllowedForUser(Lcom/android/server/pm/Computer;II)Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 125
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2217,7 +2016,6 @@
 
     return-object v2
 
-    .line 129
     :cond_1
     new-instance v6, Lcom/android/server/pm/pkg/SuspendParams;
 
@@ -2229,35 +2027,30 @@
 
     invoke-direct {v6, v11, v9, v10}, Lcom/android/server/pm/pkg/SuspendParams;-><init>(Landroid/content/pm/SuspendDialogInfo;Landroid/os/PersistableBundle;Landroid/os/PersistableBundle;)V
 
-    .line 132
     new-instance v9, Ljava/util/ArrayList;
 
     array-length v10, v2
 
     invoke-direct {v9, v10}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 134
     new-instance v10, Ljava/util/ArrayList;
 
     array-length v11, v2
 
     invoke-direct {v10, v11}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 135
     new-instance v11, Landroid/util/IntArray;
 
     array-length v12, v2
 
     invoke-direct {v11, v12}, Landroid/util/IntArray;-><init>(I)V
 
-    .line 136
     new-instance v12, Landroid/util/ArraySet;
 
     array-length v13, v2
 
     invoke-direct {v12, v13}, Landroid/util/ArraySet;-><init>(I)V
 
-    .line 137
     new-instance v13, Landroid/util/IntArray;
 
     array-length v14, v2
@@ -2268,7 +2061,6 @@
 
     if-nez p10, :cond_2
 
-    .line 140
     invoke-virtual {v0, v1, v2, v8, v3}, Lcom/android/server/pm/SuspendPackageHelper;->canSuspendPackageForUser(Lcom/android/server/pm/Computer;[Ljava/lang/String;II)[Z
 
     move-result-object v15
@@ -2281,23 +2073,19 @@
     :goto_0
     const/4 v14, 0x0
 
-    .line 142
     :goto_1
     array-length v0, v2
 
     if-ge v14, v0, :cond_e
 
-    .line 143
     aget-object v0, v2, v14
 
-    .line 144
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v16
 
     if-eqz v16, :cond_4
 
-    .line 145
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2323,7 +2111,6 @@
     :cond_3
     const-string/jumbo v13, "un"
 
-    .line 146
     :goto_2
     invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2335,10 +2122,8 @@
 
     move-result-object v2
 
-    .line 145
     invoke-static {v4, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_3
@@ -2353,7 +2138,6 @@
     :cond_4
     move-object/from16 p6, v13
 
-    .line 150
     invoke-interface {v1, v0}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object v2
@@ -2362,7 +2146,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 151
     invoke-interface {v2, v8}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v16
@@ -2373,7 +2156,6 @@
 
     if-eqz v16, :cond_d
 
-    .line 152
     invoke-interface {v1, v2, v3, v8}, Lcom/android/server/pm/Computer;->shouldFilterApplication(Lcom/android/server/pm/pkg/PackageStateInternal;II)Z
 
     move-result v16
@@ -2385,17 +2167,14 @@
     :cond_5
     if-eqz v15, :cond_6
 
-    .line 158
     aget-boolean v16, v15, v14
 
     if-nez v16, :cond_6
 
-    .line 159
     invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 164
     :cond_6
     invoke-interface {v2, v8}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
@@ -2411,7 +2190,6 @@
 
     goto :goto_4
 
-    .line 167
     :cond_7
     invoke-virtual {v1, v0}, Lcom/android/server/utils/WatchedArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2421,7 +2199,6 @@
 
     move-object/from16 v3, v16
 
-    .line 168
     :goto_4
     invoke-static {v3, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -2437,10 +2214,8 @@
 
     if-nez v3, :cond_8
 
-    .line 172
     invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 174
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result v0
@@ -2449,7 +2224,6 @@
 
     move-result v0
 
-    .line 173
     invoke-virtual {v11, v0}, Landroid/util/IntArray;->add(I)V
 
     move-object/from16 v15, p6
@@ -2463,14 +2237,12 @@
 
     if-nez v7, :cond_9
 
-    .line 181
     invoke-static {v1}, Lcom/android/internal/util/CollectionUtils;->size(Ljava/util/Map;)I
 
     move-result v6
 
     if-ne v6, v15, :cond_9
 
-    .line 182
     invoke-virtual {v1, v5}, Lcom/android/server/utils/WatchedArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2487,11 +2259,9 @@
 
     if-eqz v15, :cond_b
 
-    .line 185
     :cond_a
     invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 186
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result v1
@@ -2505,10 +2275,8 @@
     :cond_b
     if-eqz v3, :cond_c
 
-    .line 190
     invoke-virtual {v12, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 191
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result v0
@@ -2526,7 +2294,6 @@
     :cond_c
     move-object/from16 v15, p6
 
-    .line 193
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2555,7 +2322,6 @@
 
     move-object/from16 v15, p6
 
-    .line 153
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2574,7 +2340,6 @@
 
     invoke-static {v4, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_7
@@ -2601,7 +2366,6 @@
 
     move-object v15, v13
 
-    .line 198
     iget-object v13, v0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     new-instance v14, Lcom/android/server/pm/SuspendPackageHelper$$ExternalSyntheticLambda1;
@@ -2622,7 +2386,6 @@
 
     invoke-virtual {v13, v1, v14}, Lcom/android/server/pm/PackageManagerService;->commitPackageStateMutation(Lcom/android/server/pm/pkg/mutate/PackageStateMutator$InitialState;Ljava/util/function/Consumer;)Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
-    .line 212
     invoke-interface {v10}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -2633,7 +2396,6 @@
 
     new-array v2, v1, [Ljava/lang/String;
 
-    .line 214
     invoke-interface {v10, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -2649,24 +2411,19 @@
     :cond_f
     const-string v2, "android.intent.action.PACKAGES_UNSUSPENDED"
 
-    .line 218
     :goto_8
     invoke-virtual {v11}, Landroid/util/IntArray;->toArray()[I
 
     move-result-object v3
 
-    .line 215
     invoke-virtual {v0, v2, v1, v3, v8}, Lcom/android/server/pm/SuspendPackageHelper;->sendPackagesSuspendedForUser(Ljava/lang/String;[Ljava/lang/String;[II)V
 
-    .line 219
     invoke-virtual {v0, v1, v7, v8}, Lcom/android/server/pm/SuspendPackageHelper;->sendMyPackageSuspendedOrUnsuspended([Ljava/lang/String;ZI)V
 
-    .line 220
     iget-object v1, v0, Lcom/android/server/pm/SuspendPackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1, v8}, Lcom/android/server/pm/PackageManagerService;->scheduleWritePackageRestrictions(I)V
 
-    .line 223
     :cond_10
     invoke-virtual {v12}, Landroid/util/ArraySet;->isEmpty()Z
 
@@ -2678,7 +2435,6 @@
 
     new-array v2, v1, [Ljava/lang/String;
 
-    .line 225
     invoke-virtual {v12, v2}, Landroid/util/ArraySet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
@@ -2691,7 +2447,6 @@
 
     const-string v4, "android.intent.action.PACKAGES_SUSPENSION_CHANGED"
 
-    .line 224
     invoke-virtual {v0, v4, v2, v3, v8}, Lcom/android/server/pm/SuspendPackageHelper;->sendPackagesSuspendedForUser(Ljava/lang/String;[Ljava/lang/String;[II)V
 
     goto :goto_9
@@ -2702,7 +2457,6 @@
     :goto_9
     new-array v0, v1, [Ljava/lang/String;
 
-    .line 227
     invoke-interface {v9, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -2719,19 +2473,16 @@
 
     move v8, p2
 
-    .line 654
     new-instance v1, Landroid/util/ArraySet;
 
     move-object/from16 v2, p3
 
     invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>([Ljava/lang/Object;)V
 
-    .line 655
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 657
     iget-object v3, v0, Lcom/android/server/pm/SuspendPackageHelper;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {v3, p2}, Lcom/android/server/pm/UserManagerService;->isQuietModeEnabled(I)Z
@@ -2740,22 +2491,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 660
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/SuspendPackageHelper;->packagesToSuspendInQuietMode(Lcom/android/server/pm/Computer;I)Ljava/util/Set;
 
     move-result-object v3
 
-    .line 661
     invoke-interface {v3, v1}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
 
-    .line 662
     invoke-interface {v3}, Ljava/util/Set;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 663
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2780,7 +2527,6 @@
 
     invoke-static {v5, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 664
     invoke-interface {v1, v3}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
     :cond_0
@@ -2788,7 +2534,6 @@
 
     move-object v4, p1
 
-    .line 672
     invoke-virtual {p0, p1, p2, v3}, Lcom/android/server/pm/SuspendPackageHelper;->getUnsuspendablePackages(Lcom/android/server/pm/Computer;ILjava/util/Set;)Ljava/util/List;
 
     move-result-object v2
@@ -2801,7 +2546,6 @@
     :goto_0
     move-object v11, v2
 
-    .line 675
     invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
 
     move-result v2
@@ -2812,7 +2556,6 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 678
     invoke-interface {v1, v2}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -2853,19 +2596,16 @@
 
     move v10, v12
 
-    .line 677
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/pm/SuspendPackageHelper;->setPackagesSuspended(Lcom/android/server/pm/Computer;[Ljava/lang/String;ZLandroid/os/PersistableBundle;Landroid/os/PersistableBundle;Landroid/content/pm/SuspendDialogInfo;Ljava/lang/String;IIZ)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 676
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v11, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 683
     :cond_2
     new-instance v0, Lcom/android/server/pm/SuspendPackageHelper$$ExternalSyntheticLambda5;
 
@@ -2883,17 +2623,14 @@
 .method public setPackagesSuspendedForQuietMode(Lcom/android/server/pm/Computer;IZ)V
     .locals 12
 
-    .line 706
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/SuspendPackageHelper;->packagesToSuspendInQuietMode(Lcom/android/server/pm/Computer;I)Ljava/util/Set;
 
     move-result-object v0
 
     if-nez p3, :cond_1
 
-    .line 708
     const-class v1, Landroid/app/admin/DevicePolicyManagerInternal;
 
-    .line 709
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -2902,7 +2639,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 711
     invoke-virtual {v1, p2}, Landroid/app/admin/DevicePolicyManagerInternal;->getPackagesSuspendedByAdmin(I)Ljava/util/Set;
 
     move-result-object v1
@@ -2916,10 +2652,8 @@
 
     const-string v2, "DevicePolicyManager unavailable while suspending apps for quiet mode"
 
-    .line 713
     invoke-static {v1, v2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 718
     :cond_1
     :goto_0
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -2935,7 +2669,6 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 722
     invoke-interface {v0, v1}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0

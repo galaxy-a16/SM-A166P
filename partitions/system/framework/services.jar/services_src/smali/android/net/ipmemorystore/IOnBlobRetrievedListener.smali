@@ -24,7 +24,6 @@
 
     const-string v2, "android$net$ipmemorystore$IOnBlobRetrievedListener"
 
-    .line 184
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v0

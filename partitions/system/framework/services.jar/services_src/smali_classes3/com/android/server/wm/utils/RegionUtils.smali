@@ -7,17 +7,14 @@
 .method public static forEachRect(Landroid/graphics/Region;Ljava/util/function/Consumer;)V
     .locals 2
 
-    .line 57
     new-instance v0, Landroid/graphics/RegionIterator;
 
     invoke-direct {v0, p0}, Landroid/graphics/RegionIterator;-><init>(Landroid/graphics/Region;)V
 
-    .line 58
     new-instance p0, Landroid/graphics/Rect;
 
     invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 59
     :goto_0
     invoke-virtual {v0, p0}, Landroid/graphics/RegionIterator;->next(Landroid/graphics/Rect;)Z
 
@@ -25,7 +22,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 60
     invoke-interface {p1, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -37,22 +33,18 @@
 .method public static forEachRectReverse(Landroid/graphics/Region;Ljava/util/function/Consumer;)V
     .locals 3
 
-    .line 73
     new-instance v0, Landroid/graphics/RegionIterator;
 
     invoke-direct {v0, p0}, Landroid/graphics/RegionIterator;-><init>(Landroid/graphics/Region;)V
 
-    .line 74
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 75
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 76
     :goto_0
     invoke-virtual {v0, v1}, Landroid/graphics/RegionIterator;->next(Landroid/graphics/Rect;)Z
 
@@ -60,7 +52,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 77
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
@@ -69,11 +60,9 @@
 
     goto :goto_0
 
-    .line 81
     :cond_0
     invoke-static {p0}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
-    .line 82
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
     return-void
@@ -82,10 +71,8 @@
 .method public static rectListToRegion(Ljava/util/List;Landroid/graphics/Region;)V
     .locals 3
 
-    .line 43
     invoke-virtual {p1}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 44
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -95,7 +82,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 46
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2

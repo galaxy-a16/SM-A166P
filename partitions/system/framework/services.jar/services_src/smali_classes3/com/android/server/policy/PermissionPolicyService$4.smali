@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PermissionPolicyService;)V
     .locals 0
 
-    .line 530
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$4;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.telephony.action.MULTI_SIM_CONFIG_CHANGED"
 
-    .line 533
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -39,13 +37,11 @@
 
     return-void
 
-    .line 536
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$4;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {p1}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$munregisterCarrierPrivilegesCallback(Lcom/android/server/policy/PermissionPolicyService;)V
 
-    .line 537
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$4;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {p0}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$mregisterCarrierPrivilegesCallbacks(Lcom/android/server/policy/PermissionPolicyService;)V

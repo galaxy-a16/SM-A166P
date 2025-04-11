@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubTransactionManager;IILjava/lang/String;IJLandroid/hardware/location/IContextHubTransactionCallback;)V
     .locals 0
 
-    .line 250
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$3;->this$0:Lcom/android/server/location/contexthub/ContextHubTransactionManager;
 
     iput p5, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$3;->val$contextHubId:I
@@ -36,7 +35,6 @@
 .method public onTransact()I
     .locals 5
 
-    .line 254
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$3;->this$0:Lcom/android/server/location/contexthub/ContextHubTransactionManager;
 
@@ -48,12 +46,10 @@
 
     iget-wide v2, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$3;->val$nanoAppId:J
 
-    .line 255
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->getTransactionId()I
 
     move-result v4
 
-    .line 254
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/location/contexthub/IContextHubWrapper;->enableNanoapp(IJI)I
 
     move-result p0
@@ -65,7 +61,6 @@
     :catch_0
     move-exception v0
 
-    .line 257
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,7 +71,6 @@
 
     iget-wide v2, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$3;->val$nanoAppId:J
 
-    .line 258
     invoke-static {v2, v3}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
 
     move-result-object p0
@@ -89,7 +83,6 @@
 
     const-string v1, "ContextHubTransactionManager"
 
-    .line 257
     invoke-static {v1, p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x1
@@ -100,7 +93,6 @@
 .method public onTransactionComplete(I)V
     .locals 1
 
-    .line 266
     :try_start_0
     iget-object p0, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$3;->val$onCompleteCallback:Landroid/hardware/location/IContextHubTransactionCallback;
 
@@ -117,7 +109,6 @@
 
     const-string v0, "RemoteException while calling client onTransactionComplete"
 
-    .line 268
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory;->$r8$lambda$BaKW0csrCl2VfnMJAWABprVLrvA()V
 
     return-void

@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersonaManagerService$3;Landroid/os/UserHandle;Landroid/content/Intent;)V
     .locals 0
 
-    .line 2487
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$3$1;->this$1:Lcom/android/server/pm/PersonaManagerService$3;
 
     iput-object p2, p0, Lcom/android/server/pm/PersonaManagerService$3$1;->val$managedProfileUserHandle:Landroid/os/UserHandle;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 2490
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$3$1;->this$1:Lcom/android/server/pm/PersonaManagerService$3;
 
     iget-object v0, v0, Lcom/android/server/pm/PersonaManagerService$3;->this$0:Lcom/android/server/pm/PersonaManagerService;

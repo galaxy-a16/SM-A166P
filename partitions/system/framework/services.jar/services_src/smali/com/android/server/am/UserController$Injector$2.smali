@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/am/UserController$Injector;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 4127
     iput-object p1, p0, Lcom/android/server/am/UserController$Injector$2;->this$0:Lcom/android/server/am/UserController$Injector;
 
     iput-object p2, p0, Lcom/android/server/am/UserController$Injector$2;->val$runOnce:Ljava/lang/Runnable;
@@ -28,7 +27,6 @@
 .method public onDismissCancelled()V
     .locals 1
 
-    .line 4140
     iget-object v0, p0, Lcom/android/server/am/UserController$Injector$2;->this$0:Lcom/android/server/am/UserController$Injector;
 
     invoke-static {v0}, Lcom/android/server/am/UserController$Injector;->-$$Nest$fgetmHandler(Lcom/android/server/am/UserController$Injector;)Landroid/os/Handler;
@@ -45,7 +43,6 @@
 .method public onDismissError()V
     .locals 1
 
-    .line 4130
     iget-object v0, p0, Lcom/android/server/am/UserController$Injector$2;->this$0:Lcom/android/server/am/UserController$Injector;
 
     invoke-static {v0}, Lcom/android/server/am/UserController$Injector;->-$$Nest$fgetmHandler(Lcom/android/server/am/UserController$Injector;)Landroid/os/Handler;
@@ -62,7 +59,6 @@
 .method public onDismissSucceeded()V
     .locals 1
 
-    .line 4135
     iget-object v0, p0, Lcom/android/server/am/UserController$Injector$2;->this$0:Lcom/android/server/am/UserController$Injector;
 
     invoke-static {v0}, Lcom/android/server/am/UserController$Injector;->-$$Nest$fgetmHandler(Lcom/android/server/am/UserController$Injector;)Landroid/os/Handler;

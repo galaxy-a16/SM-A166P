@@ -24,12 +24,10 @@
 .method public getHandler(Landroid/os/Handler$Callback;)Landroid/os/Handler;
     .locals 2
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/enterprise/impl/KeyCodeMediatorImpl$1;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 54
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -40,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/impl/KeyCodeMediatorImpl$1;->mHandler:Landroid/os/Handler;
 
-    .line 56
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/impl/KeyCodeMediatorImpl$1;->mHandler:Landroid/os/Handler;
 
@@ -50,7 +47,6 @@
 .method public knoxSdkFileLogD(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 61
     invoke-static {p1, p2}, Lcom/samsung/android/knox/custom/utils/KnoxsdkFileLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -59,7 +55,6 @@
 .method public knoxSdkFileLogW(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 66
     invoke-static {p1, p2}, Lcom/samsung/android/knox/custom/utils/KnoxsdkFileLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

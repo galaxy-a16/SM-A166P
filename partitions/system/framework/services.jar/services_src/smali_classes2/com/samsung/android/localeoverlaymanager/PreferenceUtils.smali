@@ -11,14 +11,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static getLocaleFileUriForUser(I)Ljava/net/URI;
     .locals 7
 
-    .line 121
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -41,19 +39,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     new-instance v1, Ljava/io/File;
 
     const-string v2, "/data/overlays/current_locale_apks/locale_preferences_%s/"
 
-    .line 123
     invoke-static {v2, p0}, Lcom/samsung/android/localeoverlaymanager/Utils;->getPathForUser(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 125
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -66,14 +61,12 @@
 
     if-nez v2, :cond_1
 
-    .line 126
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 128
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,11 +85,9 @@
 
     goto :goto_0
 
-    .line 130
     :cond_0
     invoke-static {v1, v5, v4, v3}, Landroid/os/FileUtils;->setPermissions(Ljava/io/File;III)I
 
-    .line 135
     :cond_1
     :goto_0
     new-instance v0, Ljava/io/File;
@@ -105,7 +96,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 136
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -118,7 +108,6 @@
 
     if-ne p0, v1, :cond_3
 
-    .line 139
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
 
@@ -131,7 +120,6 @@
     :catch_0
     move-exception p0
 
-    .line 141
     sget-object v1, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -165,7 +153,6 @@
     :goto_1
     if-nez p0, :cond_2
 
-    .line 144
     sget-object p0, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -186,7 +173,6 @@
 
     goto :goto_2
 
-    .line 146
     :cond_2
     sget-object p0, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
@@ -206,10 +192,8 @@
 
     invoke-static {p0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     invoke-static {v0, v5, v4, v3}, Landroid/os/FileUtils;->setPermissions(Ljava/io/File;III)I
 
-    .line 151
     :cond_3
     :goto_2
     invoke-virtual {v0}, Ljava/io/File;->toURI()Ljava/net/URI;
@@ -224,24 +208,20 @@
 
     const-string/jumbo v0, "user"
 
-    .line 162
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/os/UserManager;
 
-    .line 163
     invoke-virtual {p0}, Landroid/os/UserManager;->semGetUsers()Ljava/util/List;
 
     move-result-object p0
 
-    .line 164
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 165
     sget-object v1, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -260,7 +240,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -278,7 +257,6 @@
 
     check-cast v1, Landroid/content/pm/SemUserInfo;
 
-    .line 169
     invoke-virtual {v1}, Landroid/content/pm/SemUserInfo;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v2
@@ -291,7 +269,6 @@
 
     move-result-object v2
 
-    .line 170
     sget-object v3, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -324,7 +301,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     invoke-interface {v0, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
@@ -338,7 +314,6 @@
 
     const/4 v0, 0x0
 
-    .line 88
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->getLocaleFileUriForUser(I)Ljava/net/URI;
 
@@ -352,7 +327,6 @@
 
     move-result-object v0
 
-    .line 89
     sget-object v1, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -388,7 +362,6 @@
     :catch_0
     move-exception v1
 
-    .line 91
     sget-object v2, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -420,14 +393,12 @@
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 94
     new-instance p0, Ljava/util/HashSet;
 
     invoke-direct {p0, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
     return-object p0
 
-    .line 96
     :cond_0
     new-instance p0, Ljava/util/HashSet;
 
@@ -439,7 +410,6 @@
 .method public static getPreferences(ILandroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 8
 
-    .line 51
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -464,7 +434,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     new-instance v1, Ljava/io/File;
 
     const-string v2, "/data/overlays/current_locale_apks/locale_preferences_%s/"
@@ -475,7 +444,6 @@
 
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -488,14 +456,12 @@
 
     if-nez p0, :cond_1
 
-    .line 54
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 56
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -514,11 +480,9 @@
 
     goto :goto_0
 
-    .line 58
     :cond_0
     invoke-static {v1, v4, v3, v2}, Landroid/os/FileUtils;->setPermissions(Ljava/io/File;III)I
 
-    .line 62
     :cond_1
     :goto_0
     new-instance p0, Ljava/io/File;
@@ -527,7 +491,6 @@
 
     invoke-direct {p0, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 63
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -536,7 +499,6 @@
 
     if-nez v0, :cond_3
 
-    .line 66
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->createNewFile()Z
 
@@ -549,7 +511,6 @@
     :catch_0
     move-exception v0
 
-    .line 68
     sget-object v5, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -583,7 +544,6 @@
     :goto_1
     if-nez v0, :cond_2
 
-    .line 71
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -604,11 +564,9 @@
 
     goto :goto_2
 
-    .line 73
     :cond_2
     invoke-static {p0, v4, v3, v2}, Landroid/os/FileUtils;->setPermissions(Ljava/io/File;III)I
 
-    .line 76
     :cond_3
     :goto_2
     invoke-virtual {p1}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
@@ -625,7 +583,6 @@
 .method public static getPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 1
 
-    .line 39
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/Utils;->getCurrentUserId()I
 
     move-result v0
@@ -640,7 +597,6 @@
 .method public static setLocalesForUser(ILjava/util/Set;)V
     .locals 3
 
-    .line 108
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->getLocaleFileUriForUser(I)Ljava/net/URI;
 
@@ -663,7 +619,6 @@
     :catch_0
     move-exception p1
 
-    .line 110
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

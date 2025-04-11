@@ -21,7 +21,6 @@
 .method public static synthetic $values()[Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
     .locals 5
 
-    .line 25
     sget-object v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->UNKNOWN:Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     sget-object v1, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->FM:Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
@@ -42,7 +41,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 26
     new-instance v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     const-string v1, "UNKNOWN"
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->UNKNOWN:Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
-    .line 27
     new-instance v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     const-string v1, "FM"
@@ -64,7 +61,6 @@
 
     sput-object v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->FM:Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
-    .line 28
     new-instance v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     const-string v1, "AM_LW"
@@ -75,7 +71,6 @@
 
     sput-object v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->AM_LW:Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
-    .line 29
     new-instance v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     const-string v1, "AM_MW"
@@ -86,7 +81,6 @@
 
     sput-object v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->AM_MW:Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
-    .line 30
     new-instance v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     const-string v1, "AM_SW"
@@ -97,7 +91,6 @@
 
     sput-object v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->AM_SW:Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
-    .line 25
     invoke-static {}, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->$values()[Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     move-result-object v0
@@ -110,7 +103,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 25
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,7 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
     .locals 1
 
-    .line 25
     const-class v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -134,7 +125,6 @@
 .method public static values()[Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
     .locals 1
 
-    .line 25
     sget-object v0, Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->$VALUES:[Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;
 
     invoke-virtual {v0}, [Lcom/android/server/broadcastradio/aidl/Utils$FrequencyBand;->clone()Ljava/lang/Object;

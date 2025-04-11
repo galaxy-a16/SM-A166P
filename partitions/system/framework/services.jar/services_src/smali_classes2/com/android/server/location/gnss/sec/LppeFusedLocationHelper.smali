@@ -54,7 +54,6 @@
 .method public static synthetic $r8$lambda$2OaJGOR9osVtyhGxar1DxWO4v8g(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->lambda$onRequestWifiScan$2()V
 
     return-void
@@ -63,7 +62,6 @@
 .method public static synthetic $r8$lambda$LQtpjfN5PRRjcrpTD7piPhT2LnA(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->lambda$onRequestUbpInfo$1()V
 
     return-void
@@ -72,7 +70,6 @@
 .method public static synthetic $r8$lambda$_waYYMFvFw_9HfqB_N9CiJ7aljI(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->lambda$onRequestFlpLocation$0()V
 
     return-void
@@ -81,7 +78,6 @@
 .method public static synthetic $r8$lambda$pEyWU4nyU1Ua4tczJW8UPgv8XyI(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;DDD)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->lambda$onRequestCivicAddress$3(DDD)V
 
     return-void
@@ -90,7 +86,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFlpTimeout(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mFlpTimeout:Ljava/lang/Runnable;
 
     return-object p0
@@ -99,7 +94,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -108,7 +102,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsFlpRequested(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsFlpRequested:Z
 
     return p0
@@ -117,7 +110,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsRetryWifiScan(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsRetryWifiScan:Z
 
     return p0
@@ -126,7 +118,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsUbpRequested(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsUbpRequested:Z
 
     return p0
@@ -135,7 +126,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsWifiScanRequested(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsWifiScanRequested:Z
 
     return p0
@@ -144,7 +134,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUbpTimeout(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mUbpTimeout:Ljava/lang/Runnable;
 
     return-object p0
@@ -153,7 +142,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWlanTimeout(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mWlanTimeout:Ljava/lang/Runnable;
 
     return-object p0
@@ -162,7 +150,6 @@
 .method public static bridge synthetic -$$Nest$fputmFlpTimeout(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mFlpTimeout:Ljava/lang/Runnable;
 
     return-void
@@ -171,7 +158,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsRetryWifiScan(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsRetryWifiScan:Z
 
     return-void
@@ -180,7 +166,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsWifiScanRequested(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsWifiScanRequested:Z
 
     return-void
@@ -189,7 +174,6 @@
 .method public static bridge synthetic -$$Nest$fputmUbpTimeout(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mUbpTimeout:Ljava/lang/Runnable;
 
     return-void
@@ -198,7 +182,6 @@
 .method public static bridge synthetic -$$Nest$fputmWlanTimeout(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mWlanTimeout:Ljava/lang/Runnable;
 
     return-void
@@ -207,7 +190,6 @@
 .method public static bridge synthetic -$$Nest$mhandleUpdateLPPeFLPLocation(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;Landroid/location/Location;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateLPPeFLPLocation(Landroid/location/Location;)V
 
     return-void
@@ -216,7 +198,6 @@
 .method public static bridge synthetic -$$Nest$mhandleUpdateUBPInfo(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateUBPInfo(I)V
 
     return-void
@@ -225,7 +206,6 @@
 .method public static bridge synthetic -$$Nest$mhandleUpdateWLANScanInfo(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateWLANScanInfo(Ljava/util/List;)V
 
     return-void
@@ -234,7 +214,6 @@
 .method public static bridge synthetic -$$Nest$mhandleUpdateWlanError(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateWlanError(I)V
 
     return-void
@@ -243,7 +222,6 @@
 .method public static bridge synthetic -$$Nest$mstartWifiScan(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->startWifiScan()V
 
     return-void
@@ -252,44 +230,32 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/location/gnss/hal/GnssNative;Landroid/os/Looper;)V
     .locals 2
 
-    .line 571
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 59
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsWifiScanRequested:Z
 
     const/4 v1, 0x0
 
-    .line 60
     iput-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mWlanTimeout:Ljava/lang/Runnable;
 
-    .line 61
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsRetryWifiScan:Z
 
-    .line 62
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsUbpRequested:Z
 
-    .line 63
     iput-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mUbpTimeout:Ljava/lang/Runnable;
 
-    .line 64
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsFlpRequested:Z
 
-    .line 65
     iput-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mFlpTimeout:Ljava/lang/Runnable;
 
-    .line 66
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsCivicAddressRequested:Z
 
-    .line 67
     iput-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mCivicAddressTimeout:Ljava/lang/Runnable;
 
-    .line 85
     iput-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mLocationManager:Landroid/location/LocationManager;
 
-    .line 86
     new-instance v0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$1;-><init>(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V
@@ -300,33 +266,26 @@
 
     const-string v1, "Constructor"
 
-    .line 572
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 573
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mContext:Landroid/content/Context;
 
-    .line 574
     iput-object p2, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
-    .line 575
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mHandler:Landroid/os/Handler;
 
-    .line 576
     invoke-static {}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->getInstance()Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssVendorConfig:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
-    .line 577
     invoke-virtual {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->initializeLppeLocationHelper()V
 
-    .line 578
     invoke-virtual {p2, p0}, Lcom/android/server/location/gnss/hal/GnssNative;->setLppeHelperCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;)V
 
     return-void
@@ -340,14 +299,12 @@
 
     const-string v1, ""
 
-    .line 359
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
 
     const/16 v0, 0x10
 
-    .line 360
     invoke-static {p0, v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
     move-result-wide v0
@@ -361,7 +318,6 @@
 
     const-string v0, "convertStringToHexLong : NumberFormatException"
 
-    .line 362
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const-wide/16 v0, -0x1
@@ -373,17 +329,14 @@
 .method private synthetic lambda$onRequestCivicAddress$3(DDD)V
     .locals 1
 
-    .line 515
     iget-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsCivicAddressRequested:Z
 
     if-eqz v0, :cond_0
 
-    .line 516
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->requestAddress(DDD)V
 
     const/4 p1, 0x0
 
-    .line 517
     iput-boolean p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsCivicAddressRequested:Z
 
     :cond_0
@@ -393,7 +346,6 @@
 .method private synthetic lambda$onRequestFlpLocation$0()V
     .locals 2
 
-    .line 166
     iget-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsFlpRequested:Z
 
     if-eqz v0, :cond_0
@@ -402,17 +354,14 @@
 
     const-string v1, "FLP measurement is timeout"
 
-    .line 167
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x2
 
-    .line 168
     invoke-virtual {p0, v0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateFLPError(I)V
 
     const/4 v0, 0x0
 
-    .line 169
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsFlpRequested:Z
 
     :cond_0
@@ -422,7 +371,6 @@
 .method private synthetic lambda$onRequestUbpInfo$1()V
     .locals 2
 
-    .line 292
     iget-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsUbpRequested:Z
 
     if-eqz v0, :cond_0
@@ -431,15 +379,12 @@
 
     const-string v1, "UBP measurement is timeout"
 
-    .line 293
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x4
 
-    .line 294
     invoke-virtual {p0, v0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateUBPError(I)V
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorEventListener:Landroid/hardware/SensorEventListener;
@@ -448,7 +393,6 @@
 
     const/4 v0, 0x0
 
-    .line 296
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsUbpRequested:Z
 
     :cond_0
@@ -458,7 +402,6 @@
 .method private synthetic lambda$onRequestWifiScan$2()V
     .locals 2
 
-    .line 433
     iget-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsWifiScanRequested:Z
 
     if-eqz v0, :cond_0
@@ -467,17 +410,14 @@
 
     const-string/jumbo v1, "wlan measurement is timeout"
 
-    .line 434
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x3
 
-    .line 435
     invoke-virtual {p0, v0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateWlanError(I)V
 
     const/4 v0, 0x0
 
-    .line 436
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsWifiScanRequested:Z
 
     :cond_0
@@ -489,7 +429,6 @@
 .method public final getResponseTime(II)J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x3e8
 
     if-ge p1, p2, :cond_0
@@ -534,10 +473,8 @@
 
     const-string v11, "handleUpdateCommonIesCapability : highAccCapa Supported "
 
-    .line 127
     invoke-static {v0, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/location/gnss/hal/GnssNative;->injectLppeComIeCapability(IZZZIZZZZZ)V
@@ -548,7 +485,6 @@
 .method public final handleUpdateFLPError(I)V
     .locals 2
 
-    .line 220
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -567,7 +503,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->injectFlpError(I)V
@@ -584,10 +519,8 @@
 
     const-string v2, "LocationX"
 
-    .line 181
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasAltitude()Z
 
     move-result v1
@@ -606,7 +539,6 @@
     :goto_0
     or-int/lit8 v1, v1, 0x1
 
-    .line 185
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasSpeed()Z
 
     move-result v4
@@ -623,7 +555,6 @@
     :goto_1
     or-int/2addr v1, v4
 
-    .line 186
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasBearing()Z
 
     move-result v4
@@ -640,7 +571,6 @@
     :goto_2
     or-int/2addr v1, v4
 
-    .line 187
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasAccuracy()Z
 
     move-result v4
@@ -657,7 +587,6 @@
     :goto_3
     or-int/2addr v1, v4
 
-    .line 188
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasVerticalAccuracy()Z
 
     move-result v4
@@ -676,7 +605,6 @@
     :goto_4
     or-int/2addr v1, v4
 
-    .line 189
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasSpeedAccuracy()Z
 
     move-result v4
@@ -693,7 +621,6 @@
     :goto_5
     or-int/2addr v1, v4
 
-    .line 190
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasBearingAccuracy()Z
 
     move-result v4
@@ -710,7 +637,6 @@
     :goto_6
     or-int/2addr v1, v4
 
-    .line 192
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -727,21 +653,18 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     new-instance v4, Landroid/location/Location;
 
     move-object/from16 v6, p1
 
     invoke-direct {v4, v6}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
 
-    .line 196
     invoke-virtual {v4}, Landroid/location/Location;->hasVerticalAccuracy()Z
 
     move-result v7
 
     if-nez v7, :cond_8
 
-    .line 198
     invoke-virtual {v4}, Landroid/location/Location;->hasAltitude()Z
 
     move-result v7
@@ -750,7 +673,6 @@
 
     const/high16 v7, 0x42c80000    # 100.0f
 
-    .line 199
     invoke-virtual {v4, v7}, Landroid/location/Location;->setVerticalAccuracyMeters(F)V
 
     goto :goto_7
@@ -758,20 +680,17 @@
     :cond_7
     const-wide v7, 0x4133880000000000L    # 1280000.0
 
-    .line 202
     invoke-virtual {v4, v7, v8}, Landroid/location/Location;->setAltitude(D)V
 
     or-int/lit8 v1, v1, 0x2
 
     const/high16 v7, 0x437f0000    # 255.0f
 
-    .line 204
     invoke-virtual {v4, v7}, Landroid/location/Location;->setVerticalAccuracyMeters(F)V
 
     :goto_7
     or-int/2addr v1, v5
 
-    .line 208
     :cond_8
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -791,7 +710,6 @@
 
     invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 209
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v6
@@ -802,10 +720,8 @@
 
     move-result-object v5
 
-    .line 208
     invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     iget-object v5, v0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     invoke-virtual {v4}, Landroid/location/Location;->getLatitude()D
@@ -816,7 +732,6 @@
 
     move-result-wide v9
 
-    .line 212
     invoke-virtual {v4}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v11
@@ -833,7 +748,6 @@
 
     move-result v15
 
-    .line 213
     invoke-virtual {v4}, Landroid/location/Location;->getVerticalAccuracyMeters()F
 
     move-result v16
@@ -842,7 +756,6 @@
 
     move-result v17
 
-    .line 214
     invoke-virtual {v4}, Landroid/location/Location;->getBearingAccuracyDegrees()F
 
     move-result v18
@@ -853,10 +766,8 @@
 
     move v6, v1
 
-    .line 211
     invoke-virtual/range {v5 .. v20}, Lcom/android/server/location/gnss/hal/GnssNative;->injectFlpLocation(IDDDFFFFFFJ)V
 
-    .line 216
     iput-boolean v3, v0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsFlpRequested:Z
 
     return-void
@@ -865,7 +776,6 @@
 .method public final handleUpdateUBPCapability()V
     .locals 4
 
-    .line 233
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x6
@@ -887,7 +797,6 @@
     :cond_0
     move v0, v1
 
-    .line 237
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -907,7 +816,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     invoke-virtual {p0, v1, v1, v1, v0}, Lcom/android/server/location/gnss/hal/GnssNative;->injectUbpCapability(ZZZZ)V
@@ -918,7 +826,6 @@
 .method public final handleUpdateUBPError(I)V
     .locals 2
 
-    .line 323
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -937,7 +844,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->injectUbpError(I)V
@@ -948,7 +854,6 @@
 .method public final handleUpdateUBPInfo(I)V
     .locals 3
 
-    .line 306
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -979,7 +884,6 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 313
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -998,14 +902,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     invoke-virtual {v0, v2, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->injectUbpInfo(II)V
 
     goto :goto_0
 
-    .line 316
     :cond_0
     iget-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
@@ -1016,10 +918,8 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 318
     iput-boolean p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsUbpRequested:Z
 
-    .line 319
     iget-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorEventListener:Landroid/hardware/SensorEventListener;
@@ -1040,7 +940,6 @@
 
     const/4 v7, 0x0
 
-    .line 349
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1069,7 +968,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     const v1, 0x8c20
@@ -1084,7 +982,6 @@
 .method public final handleUpdateWLANScanInfo(Ljava/util/List;)V
     .locals 13
 
-    .line 445
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1097,7 +994,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 447
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1126,12 +1022,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateWlanError(I)V
 
     goto/16 :goto_3
 
-    .line 452
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1149,7 +1043,6 @@
 
     new-array v4, v4, [I
 
-    .line 459
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1176,7 +1069,6 @@
 
     invoke-static {v1, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 465
     iget-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v1, v3}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
@@ -1185,7 +1077,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 468
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v7
@@ -1198,7 +1089,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 469
     iget-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
@@ -1207,7 +1097,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 471
     invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
 
     move-result-object v7
@@ -1218,7 +1107,6 @@
 
     aput-wide v7, v5, v2
 
-    .line 472
     invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getFrequency()I
 
     move-result v9
@@ -1229,7 +1117,6 @@
 
     aput v9, v4, v2
 
-    .line 473
     invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getRssi()I
 
     move-result v1
@@ -1251,7 +1138,6 @@
 
     if-ge v1, v9, :cond_3
 
-    .line 479
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -1260,7 +1146,6 @@
 
     add-int v10, v1, v3
 
-    .line 480
     iget-object v11, v9, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
     invoke-static {v11}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->convertStringToHexLong(Ljava/lang/String;)J
@@ -1279,13 +1164,11 @@
 
     goto :goto_2
 
-    .line 485
     :cond_2
     iget v11, v9, Landroid/net/wifi/ScanResult;->level:I
 
     aput v11, v6, v10
 
-    .line 486
     iget v9, v9, Landroid/net/wifi/ScanResult;->frequency:I
 
     invoke-static {v9}, Landroid/net/wifi/ScanResult;->convertFrequencyMhzToChannelIfSupported(I)I
@@ -1299,13 +1182,11 @@
 
     goto :goto_1
 
-    .line 499
     :cond_3
     iget-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     invoke-virtual {p1, v5, v6, v4, v0}, Lcom/android/server/location/gnss/hal/GnssNative;->injectWlanScanInfo([J[I[II)V
 
-    .line 501
     :goto_3
     iput-boolean v2, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsWifiScanRequested:Z
 
@@ -1315,7 +1196,6 @@
 .method public final handleUpdateWlanError(I)V
     .locals 2
 
-    .line 505
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1334,7 +1214,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 506
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->injectWlanError(I)V
@@ -1349,10 +1228,8 @@
 
     const-string v1, "initializeLppeLocationHelper"
 
-    .line 582
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 583
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "wifi"
@@ -1365,7 +1242,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 584
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "sensor"
@@ -1378,7 +1254,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 585
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mContext:Landroid/content/Context;
 
     const-string v1, "location"
@@ -1391,7 +1266,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mLocationManager:Landroid/location/LocationManager;
 
-    .line 586
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mContext:Landroid/content/Context;
 
     const-string v1, "connectivity"
@@ -1404,7 +1278,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    .line 587
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "wifiscanner"
@@ -1429,15 +1302,12 @@
 
     const-string v9, "LocationX"
 
-    .line 512
     invoke-static {v9, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 513
     iput-boolean v0, v8, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsCivicAddressRequested:Z
 
-    .line 514
     new-instance v10, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$$ExternalSyntheticLambda3;
 
     move-object v0, v10
@@ -1456,7 +1326,6 @@
 
     const-wide/16 v0, 0x7d0
 
-    .line 521
     iget-object v2, v8, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v10, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
@@ -1467,7 +1336,6 @@
 
     const-string v0, "failed to add CivicAddress timeout to message queue."
 
-    .line 522
     invoke-static {v9, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -1477,7 +1345,6 @@
 .method public onRequestFlpLocation(I)V
     .locals 7
 
-    .line 144
     iget-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsFlpRequested:Z
 
     const-string v1, "LocationX"
@@ -1486,7 +1353,6 @@
 
     const-string p0, "already requested FlpLocation"
 
-    .line 145
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1494,10 +1360,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 148
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsFlpRequested:Z
 
-    .line 149
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1522,19 +1386,16 @@
 
     const/16 v2, 0x14
 
-    .line 152
     invoke-virtual {p0, p1, v2}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->getResponseTime(II)J
 
     move-result-wide v2
 
-    .line 155
     new-instance p1, Landroid/location/LocationRequest$Builder;
 
     const-wide/16 v4, 0x3e8
 
     invoke-direct {p1, v4, v5}, Landroid/location/LocationRequest$Builder;-><init>(J)V
 
-    .line 157
     invoke-virtual {p1, v0}, Landroid/location/LocationRequest$Builder;->setMaxUpdates(I)Landroid/location/LocationRequest$Builder;
 
     move-result-object p1
@@ -1545,17 +1406,14 @@
 
     const/16 v4, 0x66
 
-    .line 158
     invoke-virtual {p1, v4}, Landroid/location/LocationRequest$Builder;->setQuality(I)Landroid/location/LocationRequest$Builder;
 
     move-result-object p1
 
-    .line 159
     invoke-virtual {p1, v0}, Landroid/location/LocationRequest$Builder;->setLocationSettingsIgnored(Z)Landroid/location/LocationRequest$Builder;
 
     move-result-object p1
 
-    .line 161
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mLocationManager:Landroid/location/LocationManager;
 
     const-string v4, "fused"
@@ -1568,10 +1426,8 @@
 
     const-string v0, "Start LocationManager.FUSED_PROVIDER"
 
-    .line 162
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mLocationManager:Landroid/location/LocationManager;
 
     invoke-virtual {p1}, Landroid/location/LocationRequest$Builder;->build()Landroid/location/LocationRequest;
@@ -1584,14 +1440,12 @@
 
     invoke-virtual {v0, v4, p1, v5, v6}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;Landroid/location/LocationRequest;Ljava/util/concurrent/Executor;Landroid/location/LocationListener;)V
 
-    .line 165
     new-instance p1, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$$ExternalSyntheticLambda2;
 
     invoke-direct {p1, p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V
 
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mFlpTimeout:Ljava/lang/Runnable;
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
@@ -1602,7 +1456,6 @@
 
     const-string p0, "failed to add FLP timeout to message queue."
 
-    .line 173
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -1610,7 +1463,6 @@
     :cond_1
     const-string p0, "Unable to request location."
 
-    .line 176
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -1625,10 +1477,8 @@
 
     const-string/jumbo v1, "requestLppeCommonIesCapability"
 
-    .line 138
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     invoke-virtual {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateCommonIesCapability()V
 
     return-void
@@ -1641,10 +1491,8 @@
 
     const-string/jumbo v1, "requestUbpCapability"
 
-    .line 227
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     invoke-virtual {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateUBPCapability()V
 
     return-void
@@ -1653,7 +1501,6 @@
 .method public onRequestUbpInfo(I)V
     .locals 6
 
-    .line 268
     iget-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsUbpRequested:Z
 
     const-string v1, "LocationX"
@@ -1662,7 +1509,6 @@
 
     const-string p0, "already requested UbpInfo"
 
-    .line 269
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1670,10 +1516,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 272
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsUbpRequested:Z
 
-    .line 273
     new-instance v2, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$UBPSensorEventListener;
 
     const/4 v3, 0x0
@@ -1682,7 +1526,6 @@
 
     iput-object v2, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorEventListener:Landroid/hardware/SensorEventListener;
 
-    .line 274
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1703,17 +1546,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     iget-object v2, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mPressureSensor:Landroid/hardware/Sensor;
 
     if-nez v2, :cond_1
 
     const-string/jumbo v2, "requestUBPInfo : Caution (PressureSensor is null) "
 
-    .line 277
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     iget-object v2, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v3, 0x6
@@ -1724,7 +1564,6 @@
 
     iput-object v2, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mPressureSensor:Landroid/hardware/Sensor;
 
-    .line 281
     :cond_1
     iget-object v2, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -1736,7 +1575,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 285
     iget-object v2, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssVendorConfig:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
     invoke-virtual {v2}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->isMtkGnss()Z
@@ -1747,7 +1585,6 @@
 
     const/16 v0, 0xf
 
-    .line 286
     invoke-virtual {p0, p1, v0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->getResponseTime(II)J
 
     move-result-wide v2
@@ -1759,12 +1596,10 @@
 
     const/16 v0, 0xe
 
-    .line 288
     invoke-virtual {p0, p1, v0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->getResponseTime(II)J
 
     move-result-wide v2
 
-    .line 291
     :goto_0
     new-instance p1, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$$ExternalSyntheticLambda0;
 
@@ -1772,7 +1607,6 @@
 
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mUbpTimeout:Ljava/lang/Runnable;
 
-    .line 299
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
@@ -1783,7 +1617,6 @@
 
     const-string p0, "failed to add UBP timeout to message queue."
 
-    .line 300
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -1797,10 +1630,8 @@
 
     const-string/jumbo v1, "requestWlanCapability"
 
-    .line 329
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     invoke-virtual {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->handleUpdateWLANCapbility()V
 
     return-void
@@ -1809,7 +1640,6 @@
 .method public onRequestWifiScan(I)V
     .locals 4
 
-    .line 421
     iget-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsWifiScanRequested:Z
 
     const-string v1, "LocationX"
@@ -1818,7 +1648,6 @@
 
     const-string p0, "already requested WlanScanInfo."
 
-    .line 422
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1826,15 +1655,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 425
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsRetryWifiScan:Z
 
     const/4 v0, 0x1
 
-    .line 426
     iput-boolean v0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mIsWifiScanRequested:Z
 
-    .line 427
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1855,26 +1681,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
     invoke-virtual {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->startWifiScan()V
 
     sub-int/2addr p1, v0
 
     const/16 v0, 0xb
 
-    .line 430
     invoke-virtual {p0, p1, v0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->getResponseTime(II)J
 
     move-result-wide v2
 
-    .line 432
     new-instance p1, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V
 
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mWlanTimeout:Ljava/lang/Runnable;
 
-    .line 439
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
@@ -1885,7 +1707,6 @@
 
     const-string p0, "failed to add WLAN timeout to message queue."
 
-    .line 440
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -1901,10 +1722,8 @@
 
     const-string v2, "LocationX"
 
-    .line 527
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 529
     new-instance v3, Landroid/location/Geocoder;
 
     iget-object v0, v1, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mContext:Landroid/content/Context;
@@ -1917,7 +1736,6 @@
 
     move-wide/from16 v6, p3
 
-    .line 532
     :try_start_0
     invoke-virtual/range {v3 .. v8}, Landroid/location/Geocoder;->getFromLocation(DDI)Ljava/util/List;
 
@@ -1935,10 +1753,8 @@
 
     const-string v0, "Latitude/Longitude are invalid."
 
-    .line 537
     invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
     invoke-virtual {v3}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_0
@@ -1950,10 +1766,8 @@
 
     const-string v0, "Couldn\'t get Address from location."
 
-    .line 534
     invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 535
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
@@ -1962,7 +1776,6 @@
     :goto_1
     if-eqz v0, :cond_e
 
-    .line 540
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1971,7 +1784,6 @@
 
     goto/16 :goto_f
 
-    .line 542
     :cond_0
     iget-object v2, v1, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mHandler:Landroid/os/Handler;
 
@@ -1981,17 +1793,14 @@
 
     const/4 v2, 0x0
 
-    .line 544
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/location/Address;
 
-    .line 546
     iget-object v1, v1, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
 
-    .line 547
     invoke-virtual {v0}, Landroid/location/Address;->getCountryCode()Ljava/lang/String;
 
     move-result-object v2
@@ -2009,7 +1818,6 @@
     :cond_1
     move-object v2, v3
 
-    .line 548
     :goto_2
     invoke-virtual {v0}, Landroid/location/Address;->getAdminArea()Ljava/lang/String;
 
@@ -2026,7 +1834,6 @@
     :cond_2
     move-object v4, v3
 
-    .line 549
     :goto_3
     invoke-virtual {v0}, Landroid/location/Address;->getSubAdminArea()Ljava/lang/String;
 
@@ -2043,7 +1850,6 @@
     :cond_3
     move-object v5, v3
 
-    .line 550
     :goto_4
     invoke-virtual {v0}, Landroid/location/Address;->getLocality()Ljava/lang/String;
 
@@ -2060,7 +1866,6 @@
     :cond_4
     move-object v6, v3
 
-    .line 551
     :goto_5
     invoke-virtual {v0}, Landroid/location/Address;->getSubLocality()Ljava/lang/String;
 
@@ -2077,7 +1882,6 @@
     :cond_5
     move-object v7, v3
 
-    .line 552
     :goto_6
     invoke-virtual {v0}, Landroid/location/Address;->getThoroughfare()Ljava/lang/String;
 
@@ -2094,7 +1898,6 @@
     :cond_6
     move-object v8, v3
 
-    .line 553
     :goto_7
     invoke-virtual {v0}, Landroid/location/Address;->getSubThoroughfare()Ljava/lang/String;
 
@@ -2111,7 +1914,6 @@
     :cond_7
     move-object v9, v3
 
-    .line 554
     :goto_8
     invoke-virtual {v0}, Landroid/location/Address;->getPostalCode()Ljava/lang/String;
 
@@ -2128,7 +1930,6 @@
     :cond_8
     move-object v10, v3
 
-    .line 555
     :goto_9
     invoke-virtual {v0}, Landroid/location/Address;->getFeatureName()Ljava/lang/String;
 
@@ -2145,7 +1946,6 @@
     :cond_9
     move-object v11, v3
 
-    .line 556
     :goto_a
     invoke-virtual {v0}, Landroid/location/Address;->getLocale()Ljava/util/Locale;
 
@@ -2170,7 +1970,6 @@
     :cond_a
     move-object v12, v3
 
-    .line 557
     :goto_b
     invoke-virtual {v0}, Landroid/location/Address;->getPremises()Ljava/lang/String;
 
@@ -2187,7 +1986,6 @@
     :cond_b
     move-object v13, v3
 
-    .line 558
     :goto_c
     invoke-virtual {v0}, Landroid/location/Address;->hasLatitude()Z
 
@@ -2208,7 +2006,6 @@
     :cond_c
     move-object v14, v3
 
-    .line 559
     :goto_d
     invoke-virtual {v0}, Landroid/location/Address;->hasLongitude()Z
 
@@ -2254,7 +2051,6 @@
 
     move-object v14, v0
 
-    .line 546
     invoke-virtual/range {v1 .. v14}, Lcom/android/server/location/gnss/hal/GnssNative;->injectCivicAddress(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_e
@@ -2265,27 +2061,22 @@
 .method public final startWifiScan()V
     .locals 4
 
-    .line 412
     new-instance v0, Landroid/net/wifi/WifiScanner$ScanSettings;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiScanner$ScanSettings;-><init>()V
 
     const/16 v1, 0xf
 
-    .line 413
     iput v1, v0, Landroid/net/wifi/WifiScanner$ScanSettings;->band:I
 
     const/4 v1, 0x0
 
-    .line 414
     iput v1, v0, Landroid/net/wifi/WifiScanner$ScanSettings;->type:I
 
     const/4 v1, 0x1
 
-    .line 415
     iput-boolean v1, v0, Landroid/net/wifi/WifiScanner$ScanSettings;->ignoreLocationSettings:Z
 
-    .line 416
     iget-object v1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->mWifiScanner:Landroid/net/wifi/WifiScanner;
 
     new-instance v2, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$LppeWlanScanListener;

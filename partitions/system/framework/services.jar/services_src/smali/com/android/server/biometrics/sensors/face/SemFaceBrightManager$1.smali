@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 74
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager$1;->this$0:Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 77
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x2
@@ -37,7 +35,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 90
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,10 +58,8 @@
     :cond_0
     const-string p1, "handleMessage: MSG_BRIGHTNESS_READY_TO_SET_MAX"
 
-    .line 85
     invoke-static {v3, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager$1;->this$0:Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;
 
     const/4 p1, 0x1
@@ -73,7 +68,6 @@
 
     goto :goto_0
 
-    .line 79
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -97,7 +91,6 @@
 
     invoke-static {v3, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager$1;->this$0:Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;->-$$Nest$fgetmScreenFlashBrightnessLevelUpCorrected(Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;)I
@@ -106,7 +99,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;->-$$Nest$msetBrightness(Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;I)V
 
-    .line 81
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager$1;->this$0:Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/SemFaceBrightManager;->mHandlerBg:Landroid/os/Handler;

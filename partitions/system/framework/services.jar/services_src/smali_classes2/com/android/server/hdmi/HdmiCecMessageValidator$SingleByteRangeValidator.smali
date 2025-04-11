@@ -16,13 +16,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 970
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 971
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$SingleByteRangeValidator;->mMinValue:I
 
-    .line 972
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$SingleByteRangeValidator;->mMaxValue:I
 
     return-void
@@ -33,7 +30,6 @@
 .method public isValid([B)I
     .locals 2
 
-    .line 977
     array-length v0, p1
 
     const/4 v1, 0x1
@@ -44,7 +40,6 @@
 
     return p0
 
-    .line 979
     :cond_0
     array-length v0, p1
 
@@ -57,7 +52,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 982
     aget-byte p1, p1, v0
 
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$SingleByteRangeValidator;->mMinValue:I

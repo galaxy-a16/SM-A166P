@@ -21,24 +21,18 @@
 .method public constructor <init>(Lcom/android/server/pm/MovePackageHelper;Ljava/lang/String;Ljava/lang/String;ILandroid/os/UserHandle;I)V
     .locals 0
 
-    .line 604
     iput-object p1, p0, Lcom/android/server/pm/MovePackageHelper$SdcardParams;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 605
     iput-object p2, p0, Lcom/android/server/pm/MovePackageHelper$SdcardParams;->packageName:Ljava/lang/String;
 
-    .line 606
     iput-object p3, p0, Lcom/android/server/pm/MovePackageHelper$SdcardParams;->volumeUuid:Ljava/lang/String;
 
-    .line 607
     iput p4, p0, Lcom/android/server/pm/MovePackageHelper$SdcardParams;->callingUid:I
 
-    .line 608
     iput-object p5, p0, Lcom/android/server/pm/MovePackageHelper$SdcardParams;->user:Landroid/os/UserHandle;
 
-    .line 609
     iput p6, p0, Lcom/android/server/pm/MovePackageHelper$SdcardParams;->moveId:I
 
     return-void
@@ -49,7 +43,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 614
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

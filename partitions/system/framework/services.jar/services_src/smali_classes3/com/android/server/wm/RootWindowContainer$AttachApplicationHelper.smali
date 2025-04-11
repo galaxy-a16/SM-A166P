@@ -23,7 +23,6 @@
 .method public constructor <init>(Lcom/android/server/wm/RootWindowContainer;)V
     .locals 0
 
-    .line 4288
     iput-object p1, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->this$0:Lcom/android/server/wm/RootWindowContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/RootWindowContainer;Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;-><init>(Lcom/android/server/wm/RootWindowContainer;)V
 
     return-void
@@ -45,41 +43,34 @@
 .method public accept(Lcom/android/server/wm/Task;)V
     .locals 2
 
-    .line 4318
     iget-object v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mRemoteException:Landroid/os/RemoteException;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 4323
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SYSFW_APP_PREL:Z
 
     if-eqz v0, :cond_1
 
-    .line 4324
     invoke-virtual {p1}, Lcom/android/server/wm/TaskFragment;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 4325
     iget-boolean v1, v0, Lcom/android/server/wm/ActivityRecord;->mIsPrelMode:Z
 
     if-eqz v1, :cond_1
 
-    .line 4326
     iput-object v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mTop:Lcom/android/server/wm/ActivityRecord;
 
-    .line 4327
     invoke-virtual {p1, p0}, Lcom/android/server/wm/WindowContainer;->forAllActivities(Ljava/util/function/Predicate;)Z
 
     :cond_1
     const/4 v0, 0x0
 
-    .line 4332
     invoke-virtual {p1, v0}, Lcom/android/server/wm/TaskFragment;->getVisibility(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result v0
@@ -90,7 +81,6 @@
 
     return-void
 
-    .line 4336
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/TaskFragment;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
 
@@ -98,7 +88,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mTop:Lcom/android/server/wm/ActivityRecord;
 
-    .line 4337
     invoke-virtual {p1, p0}, Lcom/android/server/wm/WindowContainer;->forAllActivities(Ljava/util/function/Predicate;)Z
 
     return-void
@@ -107,7 +96,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 4288
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->accept(Lcom/android/server/wm/Task;)V
@@ -118,10 +106,8 @@
 .method public process(Lcom/android/server/wm/WindowProcessController;)Z
     .locals 2
 
-    .line 4302
     iput-object p1, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mApp:Lcom/android/server/wm/WindowProcessController;
 
-    .line 4303
     iget-object p1, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->this$0:Lcom/android/server/wm/RootWindowContainer;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
@@ -133,7 +119,6 @@
     :goto_0
     if-ltz p1, :cond_1
 
-    .line 4304
     iget-object v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->this$0:Lcom/android/server/wm/RootWindowContainer;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
@@ -144,7 +129,6 @@
 
     invoke-virtual {v0, p0}, Lcom/android/server/wm/WindowContainer;->forAllRootTasks(Ljava/util/function/Consumer;)V
 
-    .line 4305
     iget-object v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mRemoteException:Landroid/os/RemoteException;
 
     if-nez v0, :cond_0
@@ -153,17 +137,14 @@
 
     goto :goto_0
 
-    .line 4306
     :cond_0
     throw v0
 
-    .line 4309
     :cond_1
     iget-boolean p1, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mHasActivityStarted:Z
 
     if-nez p1, :cond_2
 
-    .line 4310
     iget-object p1, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->this$0:Lcom/android/server/wm/RootWindowContainer;
 
     const/4 v0, 0x0
@@ -172,7 +153,6 @@
 
     invoke-virtual {p1, v0, v1, v1}, Lcom/android/server/wm/RootWindowContainer;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZ)V
 
-    .line 4313
     :cond_2
     iget-boolean p0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mHasActivityStarted:Z
 
@@ -184,18 +164,14 @@
 
     const/4 v0, 0x0
 
-    .line 4295
     iput-boolean v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mHasActivityStarted:Z
 
     const/4 v0, 0x0
 
-    .line 4296
     iput-object v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mRemoteException:Landroid/os/RemoteException;
 
-    .line 4297
     iput-object v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mApp:Lcom/android/server/wm/WindowProcessController;
 
-    .line 4298
     iput-object v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mTop:Lcom/android/server/wm/ActivityRecord;
 
     return-void
@@ -204,7 +180,6 @@
 .method public test(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 5
 
-    .line 4342
     iget-boolean v0, p1, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
     const/4 v1, 0x0
@@ -250,7 +225,6 @@
 
     iget-object v2, p1, Lcom/android/server/wm/ActivityRecord;->processName:Ljava/lang/String;
 
-    .line 4347
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -262,7 +236,6 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 4352
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->this$0:Lcom/android/server/wm/RootWindowContainer;
 
@@ -274,7 +247,6 @@
 
     if-ne v4, p1, :cond_2
 
-    .line 4353
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v4
@@ -292,7 +264,6 @@
     :cond_2
     move v4, v1
 
-    .line 4352
     :goto_0
     invoke-virtual {v2, p1, v3, v4, v0}, Lcom/android/server/wm/ActivityTaskSupervisor;->realStartActivityLocked(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/WindowProcessController;ZZ)Z
 
@@ -300,7 +271,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 4355
     iput-boolean v0, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mHasActivityStarted:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -311,7 +281,6 @@
     :catch_0
     move-exception p1
 
-    .line 4358
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,7 +301,6 @@
 
     invoke-static {v2, v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4359
     iput-object p1, p0, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->mRemoteException:Landroid/os/RemoteException;
 
     return v0
@@ -345,7 +313,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 4288
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/RootWindowContainer$AttachApplicationHelper;->test(Lcom/android/server/wm/ActivityRecord;)Z

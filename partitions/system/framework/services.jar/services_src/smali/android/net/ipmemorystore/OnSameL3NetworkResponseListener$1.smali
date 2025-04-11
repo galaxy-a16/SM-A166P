@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
     .locals 0
 
-    .line 35
     iput-object p1, p0, Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener$1;->val$listener:Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;
 
     invoke-direct {p0}, Landroid/net/ipmemorystore/IOnSameL3NetworkResponseListener$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "d5ea5eb3ddbdaa9a986ce6ba70b0804ca3e39b0c"
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xa
 
     return p0
@@ -42,12 +39,10 @@
 .method public onSameL3NetworkResponse(Landroid/net/ipmemorystore/StatusParcelable;Landroid/net/ipmemorystore/SameL3NetworkResponseParcelable;)V
     .locals 1
 
-    .line 40
     iget-object p0, p0, Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener$1;->val$listener:Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;
 
     if-eqz p0, :cond_0
 
-    .line 41
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     invoke-direct {v0, p1}, Landroid/net/ipmemorystore/Status;-><init>(Landroid/net/ipmemorystore/StatusParcelable;)V

@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$KKZ6NqoKKP6JGQyvZkif5CO3hXY(Lcom/android/server/search/SearchManagerService$Lifecycle;Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/search/SearchManagerService$Lifecycle;->lambda$onUserUnlocking$0(Lcom/android/server/SystemService$TargetUser;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$msendBroadcastReadyIntent(Lcom/android/server/search/SearchManagerService$Lifecycle;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/search/SearchManagerService$Lifecycle;->sendBroadcastReadyIntent()V
 
     return-void
@@ -31,10 +29,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 73
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 98
     new-instance p1, Lcom/android/server/search/SearchManagerService$Lifecycle$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/search/SearchManagerService$Lifecycle$1;-><init>(Lcom/android/server/search/SearchManagerService$Lifecycle;)V
@@ -47,7 +43,6 @@
 .method private synthetic lambda$onUserUnlocking$0(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/search/SearchManagerService$Lifecycle;->mService:Lcom/android/server/search/SearchManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -68,7 +63,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 87
     :try_start_0
     new-instance v4, Landroid/content/IntentFilter;
 
@@ -76,13 +70,10 @@
 
     const-string p1, "android.intent.action.BOOT_COMPLETED"
 
-    .line 88
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 89
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -106,7 +97,6 @@
 
     const-string p1, "Lifecycle: fail boot register"
 
-    .line 93
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -117,7 +107,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 78
     new-instance v0, Lcom/android/server/search/SearchManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -130,7 +119,6 @@
 
     const-string/jumbo v1, "search"
 
-    .line 79
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -139,7 +127,6 @@
 .method public onUserStopped(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 133
     iget-object p0, p0, Lcom/android/server/search/SearchManagerService$Lifecycle;->mService:Lcom/android/server/search/SearchManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -154,7 +141,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 2
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/search/SearchManagerService$Lifecycle;->mService:Lcom/android/server/search/SearchManagerService;
 
     iget-object v0, v0, Lcom/android/server/search/SearchManagerService;->mHandler:Landroid/os/Handler;
@@ -171,7 +157,6 @@
 .method public final sendBroadcastReadyIntent()V
     .locals 2
 
-    .line 118
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.intent.action.SEARCH_MANAGER_READY"
@@ -180,10 +165,8 @@
 
     const/high16 v1, -0x77000000
 
-    .line 119
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 122
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0

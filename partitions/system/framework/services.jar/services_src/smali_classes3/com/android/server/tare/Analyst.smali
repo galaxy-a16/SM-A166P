@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 45
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,14 +45,12 @@
 
     sput-object v0, Lcom/android/server/tare/Analyst;->TAG:Ljava/lang/String;
 
-    .line 46
     sget-boolean v1, Lcom/android/server/tare/InternalResourceService;->DEBUG:Z
 
     if-nez v1, :cond_1
 
     const/4 v1, 0x3
 
-    .line 47
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -80,7 +77,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 130
     invoke-static {}, Lcom/android/server/am/BatteryStatsService;->getService()Lcom/android/internal/app/IBatteryStats;
 
     move-result-object v0
@@ -93,22 +89,18 @@
 .method public constructor <init>(Lcom/android/internal/app/IBatteryStats;)V
     .locals 1
 
-    .line 133
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 125
     iput v0, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
 
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/server/tare/Analyst$Report;
 
-    .line 127
     iput-object v0, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
-    .line 134
     iput-object p1, p0, Lcom/android/server/tare/Analyst;->mIBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
     return-void
@@ -119,7 +111,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 13
 
-    .line 321
     const-class v0, Landroid/os/BatteryManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -128,7 +119,6 @@
 
     check-cast v0, Landroid/os/BatteryManagerInternal;
 
-    .line 322
     invoke-virtual {v0}, Landroid/os/BatteryManagerInternal;->getBatteryFullCharge()I
 
     move-result v0
@@ -139,22 +129,18 @@
 
     const-string v2, "Reports:"
 
-    .line 323
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 324
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string v2, "      Total Discharge"
 
-    .line 325
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "Profit (avg/action : avg/discharge)"
 
     const/16 v3, 0x2f
 
-    .line 327
     invoke-virtual {p0, v2, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -163,7 +149,6 @@
 
     const-string v2, "Loss (avg/action : avg/discharge)"
 
-    .line 328
     invoke-virtual {p0, v2, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -172,7 +157,6 @@
 
     const-string v2, "Rewards (avg/reward : avg/discharge)"
 
-    .line 329
     invoke-virtual {p0, v2, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -181,7 +165,6 @@
 
     const-string v2, "+Regs (avg/reg : avg/discharge)"
 
-    .line 330
     invoke-virtual {p0, v2, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -190,7 +173,6 @@
 
     const-string v2, "-Regs (avg/reg : avg/discharge)"
 
-    .line 331
     invoke-virtual {p0, v2, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -199,14 +181,12 @@
 
     const-string v2, "Bg drain estimate"
 
-    .line 332
     invoke-virtual {p0, v2, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 333
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
     const/4 v2, 0x0
@@ -216,7 +196,6 @@
 
     if-ge v2, v4, :cond_c
 
-    .line 335
     iget v5, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
 
     sub-int/2addr v5, v2
@@ -225,7 +204,6 @@
 
     rem-int/2addr v5, v4
 
-    .line 336
     iget-object v4, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
     aget-object v4, v4, v5
@@ -237,18 +215,14 @@
     :cond_0
     const-string/jumbo v5, "t-"
 
-    .line 340
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 341
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->print(I)V
 
     const-string v5, ":  "
 
-    .line 342
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 343
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeBatteryDischarge:I
 
     invoke-static {v5}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -263,7 +237,6 @@
 
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 344
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->numProfitableActions:I
 
     const-string v6, "%s (%s : %s)"
@@ -272,12 +245,10 @@
 
     if-lez v5, :cond_2
 
-    .line 345
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeBatteryDischarge:I
 
     if-lez v5, :cond_1
 
-    .line 346
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeProfit:J
 
     int-to-long v10, v5
@@ -293,11 +264,9 @@
     :cond_1
     move-object v5, v7
 
-    .line 348
     :goto_1
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeProfit:J
 
-    .line 349
     invoke-static {v8, v9}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v8
@@ -310,7 +279,6 @@
 
     div-long/2addr v9, v11
 
-    .line 350
     invoke-static {v9, v10}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v9
@@ -319,7 +287,6 @@
 
     move-result-object v5
 
-    .line 348
     invoke-static {v6, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -332,7 +299,6 @@
 
     goto :goto_2
 
-    .line 354
     :cond_2
     invoke-virtual {p0, v7, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -340,18 +306,15 @@
 
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 356
     :goto_2
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->numUnprofitableActions:I
 
     if-lez v5, :cond_4
 
-    .line 357
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeBatteryDischarge:I
 
     if-lez v5, :cond_3
 
-    .line 358
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeLoss:J
 
     int-to-long v10, v5
@@ -367,11 +330,9 @@
     :cond_3
     move-object v5, v7
 
-    .line 360
     :goto_3
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeLoss:J
 
-    .line 361
     invoke-static {v8, v9}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v8
@@ -384,7 +345,6 @@
 
     div-long/2addr v9, v11
 
-    .line 362
     invoke-static {v9, v10}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v9
@@ -393,7 +353,6 @@
 
     move-result-object v5
 
-    .line 360
     invoke-static {v6, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -406,7 +365,6 @@
 
     goto :goto_4
 
-    .line 366
     :cond_4
     invoke-virtual {p0, v7, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -414,18 +372,15 @@
 
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 368
     :goto_4
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->numRewards:I
 
     if-lez v5, :cond_6
 
-    .line 369
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeBatteryDischarge:I
 
     if-lez v5, :cond_5
 
-    .line 370
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeRewards:J
 
     int-to-long v10, v5
@@ -441,11 +396,9 @@
     :cond_5
     move-object v5, v7
 
-    .line 372
     :goto_5
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeRewards:J
 
-    .line 373
     invoke-static {v8, v9}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v8
@@ -458,7 +411,6 @@
 
     div-long/2addr v9, v11
 
-    .line 374
     invoke-static {v9, v10}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v9
@@ -467,7 +419,6 @@
 
     move-result-object v5
 
-    .line 372
     invoke-static {v6, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -480,7 +431,6 @@
 
     goto :goto_6
 
-    .line 378
     :cond_6
     invoke-virtual {p0, v7, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -488,18 +438,15 @@
 
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 380
     :goto_6
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->numPositiveRegulations:I
 
     if-lez v5, :cond_8
 
-    .line 381
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeBatteryDischarge:I
 
     if-lez v5, :cond_7
 
-    .line 382
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativePositiveRegulations:J
 
     int-to-long v10, v5
@@ -515,11 +462,9 @@
     :cond_7
     move-object v5, v7
 
-    .line 385
     :goto_7
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativePositiveRegulations:J
 
-    .line 386
     invoke-static {v8, v9}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v8
@@ -532,7 +477,6 @@
 
     div-long/2addr v9, v11
 
-    .line 387
     invoke-static {v9, v10}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v9
@@ -541,7 +485,6 @@
 
     move-result-object v5
 
-    .line 385
     invoke-static {v6, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -554,7 +497,6 @@
 
     goto :goto_8
 
-    .line 392
     :cond_8
     invoke-virtual {p0, v7, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -562,18 +504,15 @@
 
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 394
     :goto_8
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->numNegativeRegulations:I
 
     if-lez v5, :cond_a
 
-    .line 395
     iget v5, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeBatteryDischarge:I
 
     if-lez v5, :cond_9
 
-    .line 396
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeNegativeRegulations:J
 
     int-to-long v10, v5
@@ -589,11 +528,9 @@
     :cond_9
     move-object v5, v7
 
-    .line 399
     :goto_9
     iget-wide v8, v4, Lcom/android/server/tare/Analyst$Report;->cumulativeNegativeRegulations:J
 
-    .line 400
     invoke-static {v8, v9}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v8
@@ -606,7 +543,6 @@
 
     div-long/2addr v9, v11
 
-    .line 401
     invoke-static {v9, v10}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
 
     move-result-object v9
@@ -615,7 +551,6 @@
 
     move-result-object v5
 
-    .line 399
     invoke-static {v6, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -628,7 +563,6 @@
 
     goto :goto_a
 
-    .line 406
     :cond_a
     invoke-virtual {p0, v7, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -636,7 +570,6 @@
 
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 408
     :goto_a
     iget-wide v5, v4, Lcom/android/server/tare/Analyst$Report;->screenOffDurationMs:J
 
@@ -646,10 +579,8 @@
 
     if-lez v5, :cond_b
 
-    .line 409
     iget-wide v5, v4, Lcom/android/server/tare/Analyst$Report;->screenOffDischargeMah:J
 
-    .line 410
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
@@ -674,7 +605,6 @@
 
     div-double/2addr v6, v8
 
-    .line 411
     invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v4
@@ -685,7 +615,6 @@
 
     const-string v5, "%d mAh (%.2f%%/hr)"
 
-    .line 409
     invoke-static {v5, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -698,7 +627,6 @@
 
     goto :goto_b
 
-    .line 415
     :cond_b
     invoke-virtual {p0, v7, v3}, Lcom/android/server/tare/Analyst;->padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -706,7 +634,6 @@
 
     invoke-virtual {p1, v4}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 417
     :goto_b
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
@@ -715,7 +642,6 @@
 
     goto/16 :goto_0
 
-    .line 419
     :cond_c
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -725,7 +651,6 @@
 .method public getBatteryScreenOffDischargeMah()J
     .locals 6
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
     array-length v0, p0
@@ -743,7 +668,6 @@
 
     goto :goto_1
 
-    .line 157
     :cond_0
     iget-wide v4, v4, Lcom/android/server/tare/Analyst$Report;->screenOffDischargeMah:J
 
@@ -761,7 +685,6 @@
 .method public getBatteryScreenOffDurationMs()J
     .locals 6
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
     array-length v0, p0
@@ -779,7 +702,6 @@
 
     goto :goto_1
 
-    .line 168
     :cond_0
     iget-wide v4, v4, Lcom/android/server/tare/Analyst$Report;->screenOffDurationMs:J
 
@@ -797,7 +719,6 @@
 .method public final getLatestBatteryScreenOffRealtimeMs()J
     .locals 2
 
-    .line 289
     :try_start_0
     iget-object p0, p0, Lcom/android/server/tare/Analyst;->mIBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
@@ -818,7 +739,6 @@
 .method public final getLatestScreenOffDischargeMah()J
     .locals 2
 
-    .line 298
     :try_start_0
     iget-object p0, p0, Lcom/android/server/tare/Analyst;->mIBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
@@ -839,7 +759,6 @@
 .method public getReports()Ljava/util/List;
     .locals 5
 
-    .line 140
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x8
@@ -851,21 +770,18 @@
     :goto_0
     if-gt v2, v1, :cond_1
 
-    .line 142
     iget v3, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
 
     add-int/2addr v3, v2
 
     rem-int/2addr v3, v1
 
-    .line 143
     iget-object v4, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
     aget-object v3, v4, v3
 
     if-eqz v3, :cond_0
 
-    .line 145
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -880,19 +796,16 @@
 .method public final initializeReport()Lcom/android/server/tare/Analyst$Report;
     .locals 3
 
-    .line 307
     new-instance v0, Lcom/android/server/tare/Analyst$Report;
 
     invoke-direct {v0}, Lcom/android/server/tare/Analyst$Report;-><init>()V
 
-    .line 308
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->getLatestBatteryScreenOffRealtimeMs()J
 
     move-result-wide v1
 
     invoke-static {v0, v1, v2}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fputbsScreenOffRealtimeBase(Lcom/android/server/tare/Analyst$Report;J)V
 
-    .line 309
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->getLatestScreenOffDischargeMah()J
 
     move-result-wide v1
@@ -905,14 +818,12 @@
 .method public loadReports(Ljava/util/List;)V
     .locals 5
 
-    .line 178
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     const/16 v1, 0x8
 
-    .line 179
     invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -932,7 +843,6 @@
 
     if-ge v3, v0, :cond_0
 
-    .line 182
     iget-object v2, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -945,7 +855,6 @@
 
     goto :goto_1
 
-    .line 184
     :cond_0
     iget-object v2, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
@@ -958,7 +867,6 @@
 
     goto :goto_0
 
-    .line 187
     :cond_1
     iget-object p1, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
@@ -968,14 +876,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 189
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->getLatestBatteryScreenOffRealtimeMs()J
 
     move-result-wide v0
 
     invoke-static {p1, v0, v1}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fputbsScreenOffRealtimeBase(Lcom/android/server/tare/Analyst$Report;J)V
 
-    .line 190
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->getLatestScreenOffDischargeMah()J
 
     move-result-wide v0
@@ -989,7 +895,6 @@
 .method public noteBatteryLevelChange(I)V
     .locals 10
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
     iget v1, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
@@ -1026,7 +931,6 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 200
     iget v6, v2, Lcom/android/server/tare/Analyst$Report;->currentBatteryLevel:I
 
     if-ge v6, p1, :cond_1
@@ -1059,30 +963,24 @@
 
     add-int/2addr v1, v4
 
-    .line 206
     rem-int/lit8 v1, v1, 0x8
 
     iput v1, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
 
-    .line 207
     aget-object v1, v0, v1
 
     if-eqz v1, :cond_4
 
-    .line 209
     invoke-static {v1}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$mclear(Lcom/android/server/tare/Analyst$Report;)V
 
-    .line 210
     iput p1, v1, Lcom/android/server/tare/Analyst$Report;->currentBatteryLevel:I
 
-    .line 211
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->getLatestBatteryScreenOffRealtimeMs()J
 
     move-result-wide v2
 
     invoke-static {v1, v2, v3}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fputbsScreenOffRealtimeBase(Lcom/android/server/tare/Analyst$Report;J)V
 
-    .line 212
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->getLatestScreenOffDischargeMah()J
 
     move-result-wide p0
@@ -1091,7 +989,6 @@
 
     return-void
 
-    .line 217
     :cond_4
     iget v1, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
 
@@ -1099,30 +996,25 @@
 
     if-nez v0, :cond_5
 
-    .line 218
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->initializeReport()Lcom/android/server/tare/Analyst$Report;
 
     move-result-object v0
 
-    .line 219
     iget-object v1, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
     iget p0, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
 
     aput-object v0, v1, p0
 
-    .line 220
     iput p1, v0, Lcom/android/server/tare/Analyst$Report;->currentBatteryLevel:I
 
     return-void
 
-    .line 225
     :cond_5
     iget v1, v0, Lcom/android/server/tare/Analyst$Report;->currentBatteryLevel:I
 
     if-ge p1, v1, :cond_7
 
-    .line 226
     iget v2, v0, Lcom/android/server/tare/Analyst$Report;->cumulativeBatteryDischarge:I
 
     sub-int/2addr v1, p1
@@ -1131,17 +1023,14 @@
 
     iput v2, v0, Lcom/android/server/tare/Analyst$Report;->cumulativeBatteryDischarge:I
 
-    .line 228
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->getLatestBatteryScreenOffRealtimeMs()J
 
     move-result-wide v1
 
-    .line 229
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->getLatestScreenOffDischargeMah()J
 
     move-result-wide v3
 
-    .line 230
     invoke-static {v0}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fgetbsScreenOffRealtimeBase(Lcom/android/server/tare/Analyst$Report;)J
 
     move-result-wide v5
@@ -1152,13 +1041,10 @@
 
     const-wide/16 v5, 0x0
 
-    .line 232
     invoke-static {v0, v5, v6}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fputbsScreenOffRealtimeBase(Lcom/android/server/tare/Analyst$Report;J)V
 
-    .line 233
     invoke-static {v0, v5, v6}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fputbsScreenOffDischargeMahBase(Lcom/android/server/tare/Analyst$Report;J)V
 
-    .line 235
     :cond_6
     iget-wide v5, v0, Lcom/android/server/tare/Analyst$Report;->screenOffDurationMs:J
 
@@ -1172,7 +1058,6 @@
 
     iput-wide v5, v0, Lcom/android/server/tare/Analyst$Report;->screenOffDurationMs:J
 
-    .line 237
     iget-wide v5, v0, Lcom/android/server/tare/Analyst$Report;->screenOffDischargeMah:J
 
     invoke-static {v0}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fgetbsScreenOffDischargeMahBase(Lcom/android/server/tare/Analyst$Report;)J
@@ -1185,13 +1070,10 @@
 
     iput-wide v5, v0, Lcom/android/server/tare/Analyst$Report;->screenOffDischargeMah:J
 
-    .line 239
     invoke-static {v0, v1, v2}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fputbsScreenOffRealtimeBase(Lcom/android/server/tare/Analyst$Report;J)V
 
-    .line 240
     invoke-static {v0, v3, v4}, Lcom/android/server/tare/Analyst$Report;->-$$Nest$fputbsScreenOffDischargeMahBase(Lcom/android/server/tare/Analyst$Report;J)V
 
-    .line 242
     :cond_7
     iput p1, v0, Lcom/android/server/tare/Analyst$Report;->currentBatteryLevel:I
 
@@ -1201,7 +1083,6 @@
 .method public noteTransaction(Lcom/android/server/tare/Ledger$Transaction;)V
     .locals 6
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
     iget v1, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
@@ -1210,14 +1091,12 @@
 
     if-nez v2, :cond_0
 
-    .line 247
     invoke-virtual {p0}, Lcom/android/server/tare/Analyst;->initializeReport()Lcom/android/server/tare/Analyst$Report;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
-    .line 249
     :cond_0
     iget-object v0, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
@@ -1225,7 +1104,6 @@
 
     aget-object p0, v0, p0
 
-    .line 250
     iget v0, p1, Lcom/android/server/tare/Ledger$Transaction;->eventId:I
 
     invoke-static {v0}, Lcom/android/server/tare/EconomicPolicy;->getEventType(I)I
@@ -1246,7 +1124,6 @@
 
     goto :goto_0
 
-    .line 254
     :cond_1
     iget-wide v0, p1, Lcom/android/server/tare/Ledger$Transaction;->delta:J
 
@@ -1258,7 +1135,6 @@
 
     if-lez p1, :cond_2
 
-    .line 255
     iget-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativeProfit:J
 
     neg-long v0, v0
@@ -1269,7 +1145,6 @@
 
     iput-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativeProfit:J
 
-    .line 256
     iget p1, p0, Lcom/android/server/tare/Analyst$Report;->numProfitableActions:I
 
     add-int/lit8 p1, p1, 0x1
@@ -1285,7 +1160,6 @@
 
     if-gez p1, :cond_6
 
-    .line 258
     iget-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativeLoss:J
 
     add-long/2addr v4, v0
@@ -1294,7 +1168,6 @@
 
     iput-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativeLoss:J
 
-    .line 259
     iget p1, p0, Lcom/android/server/tare/Analyst$Report;->numUnprofitableActions:I
 
     add-int/lit8 p1, p1, 0x1
@@ -1303,7 +1176,6 @@
 
     goto :goto_0
 
-    .line 263
     :cond_3
     iget-wide v0, p1, Lcom/android/server/tare/Ledger$Transaction;->delta:J
 
@@ -1311,14 +1183,12 @@
 
     if-lez p1, :cond_4
 
-    .line 264
     iget-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativePositiveRegulations:J
 
     add-long/2addr v2, v0
 
     iput-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativePositiveRegulations:J
 
-    .line 265
     iget p1, p0, Lcom/android/server/tare/Analyst$Report;->numPositiveRegulations:I
 
     add-int/lit8 p1, p1, 0x1
@@ -1332,14 +1202,12 @@
 
     if-gez p1, :cond_6
 
-    .line 267
     iget-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativeNegativeRegulations:J
 
     sub-long/2addr v2, v0
 
     iput-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativeNegativeRegulations:J
 
-    .line 268
     iget p1, p0, Lcom/android/server/tare/Analyst$Report;->numNegativeRegulations:I
 
     add-int/lit8 p1, p1, 0x1
@@ -1348,7 +1216,6 @@
 
     goto :goto_0
 
-    .line 272
     :cond_5
     iget-wide v0, p1, Lcom/android/server/tare/Ledger$Transaction;->delta:J
 
@@ -1356,14 +1223,12 @@
 
     if-eqz p1, :cond_6
 
-    .line 273
     iget-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativeRewards:J
 
     add-long/2addr v2, v0
 
     iput-wide v2, p0, Lcom/android/server/tare/Analyst$Report;->cumulativeRewards:J
 
-    .line 274
     iget p1, p0, Lcom/android/server/tare/Analyst$Report;->numRewards:I
 
     add-int/lit8 p1, p1, 0x1
@@ -1378,7 +1243,6 @@
 .method public final padStringWithSpaces(Ljava/lang/String;I)Ljava/lang/String;
     .locals 2
 
-    .line 316
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -1393,7 +1257,6 @@
 
     ushr-int/lit8 p0, p0, 0x1
 
-    .line 317
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1428,7 +1291,6 @@
 
     move v1, v0
 
-    .line 281
     :goto_0
     iget-object v2, p0, Lcom/android/server/tare/Analyst;->mReports:[Lcom/android/server/tare/Analyst$Report;
 
@@ -1438,14 +1300,12 @@
 
     const/4 v3, 0x0
 
-    .line 282
     aput-object v3, v2, v1
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 284
     :cond_0
     iput v0, p0, Lcom/android/server/tare/Analyst;->mPeriodIndex:I
 

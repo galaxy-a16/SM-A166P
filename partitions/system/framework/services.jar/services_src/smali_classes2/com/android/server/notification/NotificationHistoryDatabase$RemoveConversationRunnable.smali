@@ -20,15 +20,12 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationHistoryDatabase;Ljava/lang/String;Ljava/util/Set;)V
     .locals 0
 
-    .line 597
     iput-object p1, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->this$0:Lcom/android/server/notification/NotificationHistoryDatabase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 598
     iput-object p2, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->mPkg:Ljava/lang/String;
 
-    .line 599
     iput-object p3, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->mConversationIds:Ljava/util/Set;
 
     return-void
@@ -39,7 +36,6 @@
 .method public run()V
     .locals 7
 
-    .line 609
     invoke-static {}, Lcom/android/server/notification/NotificationHistoryDatabase;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -74,7 +70,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 610
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->this$0:Lcom/android/server/notification/NotificationHistoryDatabase;
 
@@ -84,7 +79,6 @@
 
     monitor-enter v0
 
-    .line 612
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->this$0:Lcom/android/server/notification/NotificationHistoryDatabase;
 
@@ -96,7 +90,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/app/NotificationHistory;->removeConversationsFromWrite(Ljava/lang/String;Ljava/util/Set;)Z
 
-    .line 614
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->this$0:Lcom/android/server/notification/NotificationHistoryDatabase;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationHistoryDatabase;->mHistoryFiles:Ljava/util/List;
@@ -105,7 +98,6 @@
 
     move-result-object v1
 
-    .line 615
     :cond_1
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -114,7 +106,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 616
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -123,7 +114,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 618
     :try_start_1
     iget-object v3, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->mNotificationHistory:Landroid/app/NotificationHistory;
 
@@ -131,27 +121,22 @@
 
     goto :goto_1
 
-    .line 620
     :cond_2
     new-instance v3, Landroid/app/NotificationHistory;
 
     invoke-direct {v3}, Landroid/app/NotificationHistory;-><init>()V
 
-    .line 621
     :goto_1
     new-instance v4, Lcom/android/server/notification/NotificationHistoryFilter$Builder;
 
     invoke-direct {v4}, Lcom/android/server/notification/NotificationHistoryFilter$Builder;-><init>()V
 
-    .line 622
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationHistoryFilter$Builder;->build()Lcom/android/server/notification/NotificationHistoryFilter;
 
     move-result-object v4
 
-    .line 621
     invoke-static {v2, v3, v4}, Lcom/android/server/notification/NotificationHistoryDatabase;->-$$Nest$smreadLocked(Landroid/util/AtomicFile;Landroid/app/NotificationHistory;Lcom/android/server/notification/NotificationHistoryFilter;)V
 
-    .line 623
     iget-object v4, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->mPkg:Ljava/lang/String;
 
     iget-object v5, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->mConversationIds:Ljava/util/Set;
@@ -162,7 +147,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 625
     iget-object v4, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->this$0:Lcom/android/server/notification/NotificationHistoryDatabase;
 
     invoke-static {v4, v2, v3}, Lcom/android/server/notification/NotificationHistoryDatabase;->-$$Nest$mwriteLocked(Lcom/android/server/notification/NotificationHistoryDatabase;Landroid/util/AtomicFile;Landroid/app/NotificationHistory;)V
@@ -178,7 +162,6 @@
     :try_start_2
     const-string v4, "NotiHistoryDatabase"
 
-    .line 628
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,7 +170,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 629
     invoke-virtual {v2}, Landroid/util/AtomicFile;->getBaseFile()Ljava/io/File;
 
     move-result-object v2
@@ -202,12 +184,10 @@
 
     move-result-object v2
 
-    .line 628
     invoke-static {v4, v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 632
     :cond_3
     monitor-exit v0
 
@@ -226,7 +206,6 @@
 .method public setNotificationHistory(Landroid/app/NotificationHistory;)V
     .locals 0
 
-    .line 604
     iput-object p1, p0, Lcom/android/server/notification/NotificationHistoryDatabase$RemoveConversationRunnable;->mNotificationHistory:Landroid/app/NotificationHistory;
 
     return-void

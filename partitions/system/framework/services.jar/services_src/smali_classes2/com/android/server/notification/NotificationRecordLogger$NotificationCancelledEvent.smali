@@ -74,7 +74,6 @@
 .method public static synthetic $values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
     .locals 28
 
-    .line 155
     sget-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->INVALID:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     sget-object v1, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_CLICK:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
@@ -141,7 +140,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 156
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const-string v1, "INVALID"
@@ -152,7 +150,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->INVALID:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 157
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/4 v1, 0x1
@@ -165,7 +162,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_CLICK:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 159
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/4 v1, 0x2
@@ -178,7 +174,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_OTHER:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 161
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/4 v1, 0x3
@@ -191,7 +186,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_CANCEL_ALL:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 164
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/4 v1, 0x4
@@ -204,7 +198,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_ERROR:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 166
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/4 v1, 0x5
@@ -217,7 +210,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_PACKAGE_CHANGED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 168
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/4 v1, 0x6
@@ -230,7 +222,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_STOPPED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 170
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/4 v1, 0x7
@@ -243,7 +234,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_PACKAGE_BANNED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 172
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x8
@@ -256,7 +246,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_APP_CANCEL:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 174
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x9
@@ -269,7 +258,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_APP_CANCEL_ALL:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 176
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0xa
@@ -282,7 +270,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_LISTENER_CANCEL:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 178
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0xb
@@ -295,7 +282,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_LISTENER_CANCEL_ALL:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 180
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0xc
@@ -308,7 +294,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_GROUP_SUMMARY_CANCELED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 182
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0xd
@@ -321,7 +306,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_GROUP_OPTIMIZATION:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 184
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0xe
@@ -334,7 +318,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_PACKAGE_SUSPENDED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 187
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0xf
@@ -347,7 +330,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_PROFILE_TURNED_OFF:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 189
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x10
@@ -360,7 +342,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_UNAUTOBUNDLED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 192
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x11
@@ -373,7 +354,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_CHANNEL_BANNED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 194
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x12
@@ -386,7 +366,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_SNOOZED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 196
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x13
@@ -399,7 +378,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_TIMEOUT:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 198
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x14
@@ -412,7 +390,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_CHANNEL_REMOVED:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 200
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x15
@@ -425,7 +402,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_CLEAR_DATA:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 204
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x16
@@ -438,7 +414,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_PEEK:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 206
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x17
@@ -451,7 +426,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_AOD:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 208
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x18
@@ -464,7 +438,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_BUBBLE:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 210
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x19
@@ -477,7 +450,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_LOCKSCREEN:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 212
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x1a
@@ -490,7 +462,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_SHADE:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 215
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     const/16 v1, 0x1b
@@ -503,7 +474,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_ASSISTANT:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
-    .line 155
     invoke-static {}, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->$values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     move-result-object v0
@@ -516,10 +486,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 219
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 220
     iput p3, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->mId:I
 
     return-void
@@ -538,7 +506,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 231
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -557,7 +524,6 @@
 
     invoke-static {v3, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->INVALID:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
@@ -587,7 +553,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 252
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -606,42 +571,35 @@
 
     invoke-static {v3, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->INVALID:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
 
-    .line 248
     :cond_1
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_LOCKSCREEN:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
 
-    .line 246
     :cond_2
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_BUBBLE:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
 
-    .line 244
     :cond_3
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_SHADE:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
 
-    .line 242
     :cond_4
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_AOD:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
 
-    .line 240
     :cond_5
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_PEEK:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
 
-    .line 250
     :cond_6
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_USER_OTHER:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
@@ -654,7 +612,6 @@
 
     if-gt p0, v0, :cond_8
 
-    .line 257
     invoke-static {}, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     move-result-object p1
@@ -668,12 +625,10 @@
 
     if-ne p0, v0, :cond_9
 
-    .line 260
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->NOTIFICATION_CANCEL_ASSISTANT:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
 
-    .line 262
     :cond_9
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -697,7 +652,6 @@
 
     invoke-static {v3, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->INVALID:Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     return-object p0
@@ -706,7 +660,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
     .locals 1
 
-    .line 155
     const-class v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -721,7 +674,6 @@
 .method public static values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
     .locals 1
 
-    .line 155
     sget-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->$VALUES:[Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     invoke-virtual {v0}, [Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->clone()Ljava/lang/Object;
@@ -738,7 +690,6 @@
 .method public getId()I
     .locals 0
 
-    .line 223
     iget p0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->mId:I
 
     return p0

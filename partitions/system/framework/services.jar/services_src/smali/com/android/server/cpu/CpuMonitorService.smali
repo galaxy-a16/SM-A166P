@@ -51,7 +51,6 @@
 .method public static synthetic $r8$lambda$9OJyJO0nKbrTBGCL-88jERdwHOU(Landroid/util/IndentingPrintWriter;Lcom/android/server/cpu/CpuMonitorService$CpuAvailabilityCallbackInfo;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/cpu/CpuMonitorService;->lambda$doDump$0(Landroid/util/IndentingPrintWriter;Lcom/android/server/cpu/CpuMonitorService$CpuAvailabilityCallbackInfo;)V
 
     return-void
@@ -60,7 +59,6 @@
 .method public static synthetic $r8$lambda$GE9Nok8uzvo_CDo9ZSe_OV9FQUo(Lcom/android/server/cpu/CpuMonitorService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/cpu/CpuMonitorService;->monitorCpuStats()V
 
     return-void
@@ -69,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/cpu/CpuMonitorService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/cpu/CpuMonitorService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -78,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$mdoDump(Lcom/android/server/cpu/CpuMonitorService;Landroid/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/cpu/CpuMonitorService;->doDump(Landroid/util/IndentingPrintWriter;)V
 
     return-void
@@ -87,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$sfgetCACHE_DURATION_MILLISECONDS()J
     .locals 2
 
-    .line 0
     sget-wide v0, Lcom/android/server/cpu/CpuMonitorService;->CACHE_DURATION_MILLISECONDS:J
 
     return-wide v0
@@ -96,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$smcontainsCpuset(II)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/cpu/CpuMonitorService;->containsCpuset(II)Z
 
     move-result p0
@@ -107,7 +101,6 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 59
     const-class v0, Lcom/android/server/cpu/CpuMonitorService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -116,26 +109,22 @@
 
     const/4 v1, 0x3
 
-    .line 60
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/cpu/CpuMonitorService;->DEBUG:Z
 
-    .line 65
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x5
 
-    .line 66
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v1
 
     sput-wide v1, Lcom/android/server/cpu/CpuMonitorService;->NORMAL_MONITORING_INTERVAL_MILLISECONDS:J
 
-    .line 71
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0x1
@@ -146,7 +135,6 @@
 
     sput-wide v2, Lcom/android/server/cpu/CpuMonitorService;->DEBUG_MONITORING_INTERVAL_MILLISECONDS:J
 
-    .line 78
     sget-boolean v2, Landroid/os/Build;->IS_USERDEBUG:Z
 
     const-wide/16 v3, 0x1e
@@ -162,7 +150,6 @@
     :cond_0
     const-wide/16 v5, 0xa
 
-    .line 79
     invoke-virtual {v1, v5, v6}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v1
@@ -178,7 +165,6 @@
     :goto_1
     sput-wide v1, Lcom/android/server/cpu/CpuMonitorService;->CACHE_DURATION_MILLISECONDS:J
 
-    .line 84
     invoke-virtual {v0, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v0
@@ -191,7 +177,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 11
 
-    .line 153
     new-instance v2, Lcom/android/server/cpu/CpuInfoReader;
 
     invoke-direct {v2}, Lcom/android/server/cpu/CpuInfoReader;-><init>()V
@@ -241,17 +226,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/cpu/CpuInfoReader;Landroid/os/HandlerThread;ZJJJ)V
     .locals 2
 
-    .line 163
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 93
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mLock:Ljava/lang/Object;
 
-    .line 99
     new-instance v0, Lcom/android/server/cpu/CpuMonitorService$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/cpu/CpuMonitorService$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/cpu/CpuMonitorService;)V
@@ -260,38 +242,28 @@
 
     const-wide/16 v0, -0x1
 
-    .line 101
     iput-wide v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mCurrentMonitoringIntervalMillis:J
 
-    .line 105
     new-instance v0, Lcom/android/server/cpu/CpuMonitorService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/cpu/CpuMonitorService$1;-><init>(Lcom/android/server/cpu/CpuMonitorService;)V
 
     iput-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mLocalService:Lcom/android/server/cpu/CpuMonitorInternal;
 
-    .line 164
     iput-object p1, p0, Lcom/android/server/cpu/CpuMonitorService;->mContext:Landroid/content/Context;
 
-    .line 165
     iput-object p3, p0, Lcom/android/server/cpu/CpuMonitorService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 166
     iput-boolean p4, p0, Lcom/android/server/cpu/CpuMonitorService;->mShouldDebugMonitor:Z
 
-    .line 167
     iput-wide p5, p0, Lcom/android/server/cpu/CpuMonitorService;->mNormalMonitoringIntervalMillis:J
 
-    .line 168
     iput-wide p7, p0, Lcom/android/server/cpu/CpuMonitorService;->mDebugMonitoringIntervalMillis:J
 
-    .line 169
     iput-wide p9, p0, Lcom/android/server/cpu/CpuMonitorService;->mLatestAvailabilityDurationMillis:J
 
-    .line 170
     iput-object p2, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpuInfoReader:Lcom/android/server/cpu/CpuInfoReader;
 
-    .line 171
     new-instance p1, Landroid/util/SparseArray;
 
     const/4 p2, 0x2
@@ -300,7 +272,6 @@
 
     iput-object p1, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
-    .line 172
     new-instance p3, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;
 
     const/4 p4, 0x1
@@ -309,14 +280,12 @@
 
     invoke-virtual {p1, p4, p3}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 173
     new-instance p3, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;
 
     invoke-direct {p3, p2}, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;-><init>(I)V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 174
     new-instance p1, Landroid/util/SparseArrayMap;
 
     invoke-direct {p1}, Landroid/util/SparseArrayMap;-><init>()V
@@ -339,7 +308,6 @@
 
     if-eq p1, v2, :cond_0
 
-    .line 418
     sget-object p0, Lcom/android/server/cpu/CpuMonitorService;->TAG:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -382,7 +350,6 @@
 
     const-string v0, "%s\n"
 
-    .line 226
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
@@ -397,12 +364,10 @@
 .method public final checkClientThresholdsAndNotifyLocked(Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;)V
     .locals 2
 
-    .line 296
     invoke-virtual {p1}, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->getPrevCpuAvailabilityPercent()I
 
     move-result v0
 
-    .line 297
     invoke-virtual {p1}, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->getLatestCpuAvailabilityInfo()Lcom/android/server/cpu/CpuAvailabilityInfo;
 
     move-result-object v1
@@ -411,12 +376,10 @@
 
     if-ltz v0, :cond_2
 
-    .line 298
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mAvailabilityCallbackInfosByCallbacksByCpuset:Landroid/util/SparseArrayMap;
 
     iget p1, p1, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->cpuset:I
 
-    .line 299
     invoke-virtual {v0, p1}, Landroid/util/SparseArrayMap;->numElementsForKey(I)I
 
     move-result p1
@@ -430,7 +393,6 @@
 
     move v0, p1
 
-    .line 306
     :goto_0
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mAvailabilityCallbackInfosByCallbacksByCpuset:Landroid/util/SparseArrayMap;
 
@@ -440,7 +402,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 307
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mAvailabilityCallbackInfosByCallbacksByCpuset:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArrayMap;->numElementsForKeyAt(I)I
@@ -453,11 +414,9 @@
 
     goto :goto_0
 
-    .line 309
     :cond_1
     iget-object p0, p0, Lcom/android/server/cpu/CpuMonitorService;->mAvailabilityCallbackInfosByCallbacksByCpuset:Landroid/util/SparseArrayMap;
 
-    .line 310
     invoke-virtual {p0, v0, p1}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
 
     move-result-object p0
@@ -466,7 +425,6 @@
 
     const/4 p0, 0x0
 
-    .line 311
     throw p0
 
     :cond_2
@@ -479,7 +437,6 @@
 
     const-string v0, "*%s*\n"
 
-    .line 211
     const-class v1, Lcom/android/server/cpu/CpuMonitorService;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -492,10 +449,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 212
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 213
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpuInfoReader:Lcom/android/server/cpu/CpuInfoReader;
 
     invoke-virtual {v0, p1}, Lcom/android/server/cpu/CpuInfoReader;->dump(Landroid/util/IndentingPrintWriter;)V
@@ -506,7 +461,6 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
-    .line 214
     iget-boolean v3, p0, Lcom/android/server/cpu/CpuMonitorService;->mShouldDebugMonitor:Z
 
     if-eqz v3, :cond_0
@@ -527,7 +481,6 @@
 
     const-string/jumbo v0, "mNormalMonitoringIntervalMillis = %d\n"
 
-    .line 215
     iget-wide v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mNormalMonitoringIntervalMillis:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -542,7 +495,6 @@
 
     const-string/jumbo v0, "mDebugMonitoringIntervalMillis = %d\n"
 
-    .line 216
     iget-wide v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mDebugMonitoringIntervalMillis:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -557,10 +509,8 @@
 
     const-string/jumbo v0, "mLatestAvailabilityDurationMillis = %d\n"
 
-    .line 217
     iget-wide v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mLatestAvailabilityDurationMillis:J
 
-    .line 218
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -569,10 +519,8 @@
 
     move-result-object v2
 
-    .line 217
     invoke-virtual {p1, v0, v2}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 219
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -582,20 +530,16 @@
 
     new-array v3, v1, [Ljava/lang/Object;
 
-    .line 220
     iget-wide v5, p0, Lcom/android/server/cpu/CpuMonitorService;->mCurrentMonitoringIntervalMillis:J
 
-    .line 221
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
     aput-object v5, v3, v4
 
-    .line 220
     invoke-virtual {p1, v2, v3}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 222
     invoke-virtual {p0}, Lcom/android/server/cpu/CpuMonitorService;->hasClientCallbacksLocked()Z
 
     move-result v2
@@ -604,13 +548,10 @@
 
     const-string v2, "CPU availability change callbacks:"
 
-    .line 223
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 224
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 225
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mAvailabilityCallbackInfosByCallbacksByCpuset:Landroid/util/SparseArrayMap;
 
     new-instance v3, Lcom/android/server/cpu/CpuMonitorService$$ExternalSyntheticLambda1;
@@ -619,10 +560,8 @@
 
     invoke-virtual {v2, v3}, Landroid/util/SparseArrayMap;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 227
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 229
     :cond_1
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
@@ -634,15 +573,12 @@
 
     const-string v2, "Cpuset infos:"
 
-    .line 230
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 231
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     move v2, v4
 
-    .line 232
     :goto_1
     iget-object v3, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
@@ -656,7 +592,6 @@
 
     new-array v5, v1, [Ljava/lang/Object;
 
-    .line 233
     iget-object v6, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -671,17 +606,14 @@
 
     goto :goto_1
 
-    .line 235
     :cond_2
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 237
     :cond_3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 238
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -689,7 +621,6 @@
     :catchall_0
     move-exception p0
 
-    .line 237
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -701,12 +632,10 @@
 .method public getCurrentMonitoringIntervalMillis()J
     .locals 3
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 206
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mCurrentMonitoringIntervalMillis:J
 
@@ -717,7 +646,6 @@
     :catchall_0
     move-exception p0
 
-    .line 207
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -732,7 +660,6 @@
 
     move v1, v0
 
-    .line 391
     :goto_0
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mAvailabilityCallbackInfosByCallbacksByCpuset:Landroid/util/SparseArrayMap;
 
@@ -742,7 +669,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 392
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mAvailabilityCallbackInfosByCallbacksByCpuset:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArrayMap;->numElementsForKeyAt(I)I
@@ -767,19 +693,16 @@
 .method public final monitorCpuStats()V
     .locals 9
 
-    .line 242
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 247
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/cpu/CpuMonitorService;->mMonitorCpuStats:Ljava/lang/Runnable;
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 248
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpuInfoReader:Lcom/android/server/cpu/CpuInfoReader;
 
     invoke-virtual {v2}, Lcom/android/server/cpu/CpuInfoReader;->readCpuInfos()Landroid/util/SparseArray;
@@ -788,23 +711,19 @@
 
     if-nez v2, :cond_0
 
-    .line 252
     sget-object v0, Lcom/android/server/cpu/CpuMonitorService;->TAG:Ljava/lang/String;
 
     const-string v1, "Failed to read CPU info from device"
 
     invoke-static {v0, v1}, Lcom/android/server/utils/Slogf;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     iget-object v3, p0, Lcom/android/server/cpu/CpuMonitorService;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 254
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/cpu/CpuMonitorService;->stopMonitoringCpuStatsLocked()V
 
-    .line 255
     monitor-exit v3
 
     return-void
@@ -818,7 +737,6 @@
 
     throw p0
 
-    .line 261
     :cond_0
     iget-object v3, p0, Lcom/android/server/cpu/CpuMonitorService;->mLock:Ljava/lang/Object;
 
@@ -828,7 +746,6 @@
 
     move v5, v4
 
-    .line 263
     :goto_0
     :try_start_1
     invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
@@ -837,7 +754,6 @@
 
     if-ge v5, v6, :cond_2
 
-    .line 264
     invoke-virtual {v2, v5}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -846,7 +762,6 @@
 
     move v7, v4
 
-    .line 265
     :goto_1
     iget-object v8, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
@@ -856,7 +771,6 @@
 
     if-ge v7, v8, :cond_1
 
-    .line 266
     iget-object v8, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v7}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -876,7 +790,6 @@
 
     goto :goto_0
 
-    .line 272
     :cond_2
     :goto_2
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
@@ -887,7 +800,6 @@
 
     if-ge v4, v2, :cond_3
 
-    .line 273
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -896,19 +808,16 @@
 
     check-cast v2, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;
 
-    .line 274
     iget-wide v5, p0, Lcom/android/server/cpu/CpuMonitorService;->mLatestAvailabilityDurationMillis:J
 
     invoke-virtual {v2, v0, v1, v5, v6}, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->populateLatestCpuAvailabilityInfo(JJ)V
 
-    .line 276
     invoke-virtual {p0, v2}, Lcom/android/server/cpu/CpuMonitorService;->checkClientThresholdsAndNotifyLocked(Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;)V
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 284
     :cond_3
     iget-wide v4, p0, Lcom/android/server/cpu/CpuMonitorService;->mCurrentMonitoringIntervalMillis:J
 
@@ -918,7 +827,6 @@
 
     if-lez v2, :cond_5
 
-    .line 285
     invoke-virtual {p0}, Lcom/android/server/cpu/CpuMonitorService;->hasClientCallbacksLocked()Z
 
     move-result v2
@@ -929,7 +837,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 286
     :cond_4
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService;->mHandler:Landroid/os/Handler;
 
@@ -943,11 +850,9 @@
 
     goto :goto_3
 
-    .line 289
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/cpu/CpuMonitorService;->stopMonitoringCpuStatsLocked()V
 
-    .line 291
     :goto_3
     monitor-exit v3
 
@@ -966,7 +871,6 @@
 .method public onStart()V
     .locals 4
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpuInfoReader:Lcom/android/server/cpu/CpuInfoReader;
 
     invoke-virtual {v0}, Lcom/android/server/cpu/CpuInfoReader;->init()Z
@@ -985,13 +889,11 @@
 
     goto :goto_0
 
-    .line 188
     :cond_0
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 189
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -1004,7 +906,6 @@
 
     iput-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mHandler:Landroid/os/Handler;
 
-    .line 190
     const-class v0, Lcom/android/server/cpu/CpuMonitorInternal;
 
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mLocalService:Lcom/android/server/cpu/CpuMonitorInternal;
@@ -1013,7 +914,6 @@
 
     const-string v0, "cpu_monitor"
 
-    .line 191
     new-instance v1, Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder;
 
     const/4 v2, 0x0
@@ -1026,7 +926,6 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;ZI)V
 
-    .line 193
     invoke-static {}, Lcom/android/server/Watchdog;->getInstance()Lcom/android/server/Watchdog;
 
     move-result-object v0
@@ -1035,12 +934,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/Watchdog;->addThread(Landroid/os/Handler;)V
 
-    .line 194
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 195
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mShouldDebugMonitor:Z
 
@@ -1056,26 +953,22 @@
 
     if-nez v1, :cond_1
 
-    .line 196
     iget-wide v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mDebugMonitoringIntervalMillis:J
 
     iput-wide v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mCurrentMonitoringIntervalMillis:J
 
-    .line 197
     sget-object v1, Lcom/android/server/cpu/CpuMonitorService;->TAG:Ljava/lang/String;
 
     const-string v2, "Starting debug monitoring"
 
     invoke-static {v1, v2}, Lcom/android/server/utils/Slogf;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/cpu/CpuMonitorService;->mMonitorCpuStats:Ljava/lang/Runnable;
 
     invoke-virtual {v1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 200
     :cond_1
     monitor-exit v0
 
@@ -1090,7 +983,6 @@
 
     throw p0
 
-    .line 182
     :cond_2
     :goto_0
     sget-object p0, Lcom/android/server/cpu/CpuMonitorService;->TAG:Ljava/lang/String;
@@ -1105,7 +997,6 @@
 .method public final stopMonitoringCpuStatsLocked()V
     .locals 2
 
-    .line 401
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mMonitorCpuStats:Ljava/lang/Runnable;
@@ -1114,12 +1005,10 @@
 
     const-wide/16 v0, -0x1
 
-    .line 402
     iput-wide v0, p0, Lcom/android/server/cpu/CpuMonitorService;->mCurrentMonitoringIntervalMillis:J
 
     const/4 v0, 0x0
 
-    .line 405
     :goto_0
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
@@ -1129,7 +1018,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 406
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService;->mCpusetInfosByCpuset:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;

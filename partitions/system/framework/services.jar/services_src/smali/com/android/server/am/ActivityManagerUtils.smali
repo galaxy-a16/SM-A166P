@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$42dU56Bq_ZW6ViAnaLcddTSJYwk(I)[Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/ActivityManagerUtils;->lambda$logUnsafeIntentEvent$0(I)[Ljava/lang/String;
 
     move-result-object p0
@@ -26,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 41
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -39,7 +37,6 @@
 .method public static extractByte([BI)I
     .locals 0
 
-    .line 112
     aget-byte p0, p0, p1
 
     and-int/lit16 p0, p0, 0xff
@@ -54,41 +51,34 @@
 .method public static getAndroidIdHash()I
     .locals 3
 
-    .line 58
     sget-object v0, Lcom/android/server/am/ActivityManagerUtils;->sAndroidIdHash:Ljava/lang/Integer;
 
     if-nez v0, :cond_1
 
-    .line 59
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    .line 60
     invoke-virtual {v0}, Landroid/app/Application;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 64
     invoke-virtual {v0}, Landroid/content/ContentResolver;->getUserId()I
 
     move-result v1
 
     const-string v2, "android_id"
 
-    .line 61
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 66
     sget-object v1, Lcom/android/server/am/ActivityManagerUtils;->sInjectedAndroidId:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
     move-object v0, v1
 
-    .line 65
     :cond_0
     invoke-static {v0}, Lcom/android/server/am/ActivityManagerUtils;->getUnsignedHashUnCached(Ljava/lang/String;)I
 
@@ -100,7 +90,6 @@
 
     sput-object v0, Lcom/android/server/am/ActivityManagerUtils;->sAndroidIdHash:Ljava/lang/Integer;
 
-    .line 68
     :cond_1
     sget-object v0, Lcom/android/server/am/ActivityManagerUtils;->sAndroidIdHash:Ljava/lang/Integer;
 
@@ -114,12 +103,10 @@
 .method public static getUnsignedHashCached(Ljava/lang/String;)I
     .locals 3
 
-    .line 78
     sget-object v0, Lcom/android/server/am/ActivityManagerUtils;->sHashCache:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 79
     :try_start_0
     invoke-virtual {v0, p0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -129,7 +116,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 81
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -138,13 +124,11 @@
 
     return p0
 
-    .line 83
     :cond_0
     invoke-static {p0}, Lcom/android/server/am/ActivityManagerUtils;->getUnsignedHashUnCached(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 84
     invoke-virtual {p0}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object p0
@@ -155,7 +139,6 @@
 
     invoke-virtual {v0, p0, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     monitor-exit v0
 
     return v1
@@ -163,7 +146,6 @@
     :catchall_0
     move-exception p0
 
-    .line 86
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -177,19 +159,16 @@
     :try_start_0
     const-string v0, "SHA-1"
 
-    .line 94
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    .line 95
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 96
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -205,7 +184,6 @@
     :catch_0
     move-exception p0
 
-    .line 98
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -216,7 +194,6 @@
 .method public static hashComponentNameForAtom(Ljava/lang/String;)I
     .locals 1
 
-    .line 136
     invoke-static {p0}, Lcom/android/server/am/ActivityManagerUtils;->getUnsignedHashUnCached(Ljava/lang/String;)I
 
     move-result p0
@@ -233,12 +210,10 @@
 .method public static injectAndroidIdForTest(Ljava/lang/String;)V
     .locals 0
 
-    .line 48
     sput-object p0, Lcom/android/server/am/ActivityManagerUtils;->sInjectedAndroidId:Ljava/lang/String;
 
     const/4 p0, 0x0
 
-    .line 49
     sput-object p0, Lcom/android/server/am/ActivityManagerUtils;->sAndroidIdHash:Ljava/lang/Integer;
 
     return-void
@@ -247,7 +222,6 @@
 .method public static synthetic lambda$logUnsafeIntentEvent$0(I)[Ljava/lang/String;
     .locals 0
 
-    .line 145
     new-array p0, p0, [Ljava/lang/String;
 
     return-object p0
@@ -256,7 +230,6 @@
 .method public static logUnsafeIntentEvent(IILandroid/content/Intent;Ljava/lang/String;Z)V
     .locals 11
 
-    .line 144
     invoke-virtual {p2}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v0
@@ -269,7 +242,6 @@
 
     goto :goto_0
 
-    .line 145
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
@@ -288,7 +260,6 @@
     :goto_0
     move-object v7, v0
 
-    .line 146
     invoke-virtual {p2}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -299,7 +270,6 @@
 
     goto :goto_1
 
-    .line 147
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -314,17 +284,14 @@
 
     const/16 v1, 0x23d
 
-    .line 152
     invoke-virtual {p2}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 153
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 156
     invoke-virtual {p2}, Landroid/content/Intent;->getScheme()Ljava/lang/String;
 
     move-result-object v9
@@ -337,7 +304,6 @@
 
     move v10, p4
 
-    .line 148
     invoke-static/range {v1 .. v10}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
@@ -367,7 +333,6 @@
 
     return v2
 
-    .line 126
     :cond_1
     invoke-static {p0}, Lcom/android/server/am/ActivityManagerUtils;->getUnsignedHashCached(Ljava/lang/String;)I
 
@@ -402,14 +367,12 @@
 
     const/4 v0, 0x0
 
-    .line 104
     invoke-static {p0, v0}, Lcom/android/server/am/ActivityManagerUtils;->extractByte([BI)I
 
     move-result v0
 
     const/4 v1, 0x1
 
-    .line 105
     invoke-static {p0, v1}, Lcom/android/server/am/ActivityManagerUtils;->extractByte([BI)I
 
     move-result v1
@@ -418,7 +381,6 @@
 
     const/4 v1, 0x2
 
-    .line 106
     invoke-static {p0, v1}, Lcom/android/server/am/ActivityManagerUtils;->extractByte([BI)I
 
     move-result v1
@@ -427,7 +389,6 @@
 
     const/4 v1, 0x3
 
-    .line 107
     invoke-static {p0, v1}, Lcom/android/server/am/ActivityManagerUtils;->extractByte([BI)I
 
     move-result p0

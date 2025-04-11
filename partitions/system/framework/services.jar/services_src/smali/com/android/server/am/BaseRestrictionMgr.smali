@@ -17,22 +17,18 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 1
 
-    .line 208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 32
     iput-object v0, p0, Lcom/android/server/am/BaseRestrictionMgr;->mContext:Landroid/content/Context;
 
-    .line 180
     new-instance v0, Lcom/android/server/am/BaseRestrictionMgr$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/BaseRestrictionMgr$1;-><init>(Lcom/android/server/am/BaseRestrictionMgr;)V
@@ -45,7 +41,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/BaseRestrictionMgr-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/BaseRestrictionMgr;-><init>()V
 
     return-void
@@ -54,7 +49,6 @@
 .method public static getInstance()Lcom/android/server/am/BaseRestrictionMgr;
     .locals 1
 
-    .line 215
     invoke-static {}, Lcom/android/server/am/BaseRestrictionMgr$BaseRestrictionMgrHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/BaseRestrictionMgr;
 
     move-result-object v0
@@ -67,14 +61,12 @@
 .method public getLaunchIntentForPackage(Ljava/lang/String;I)Landroid/content/Intent;
     .locals 5
 
-    .line 698
     iget-object p0, p0, Lcom/android/server/am/BaseRestrictionMgr;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 703
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -83,41 +75,33 @@
 
     const-string v1, "android.intent.category.INFO"
 
-    .line 704
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 705
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v2, 0x0
 
-    .line 706
     invoke-virtual {p0, v0, v2, p2}, Landroid/content/pm/PackageManager;->queryIntentActivitiesAsUser(Landroid/content/Intent;II)Ljava/util/List;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 709
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 711
     :cond_0
     invoke-virtual {v0, v1}, Landroid/content/Intent;->removeCategory(Ljava/lang/String;)V
 
     const-string v1, "android.intent.category.LAUNCHER"
 
-    .line 712
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 713
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 714
     invoke-virtual {p0, v0, v2, p2}, Landroid/content/pm/PackageManager;->queryIntentActivitiesAsUser(Landroid/content/Intent;II)Ljava/util/List;
 
     move-result-object v3
@@ -125,7 +109,6 @@
     :cond_1
     if-eqz v3, :cond_3
 
-    .line 716
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -134,7 +117,6 @@
 
     goto :goto_0
 
-    .line 719
     :cond_2
     new-instance p0, Landroid/content/Intent;
 
@@ -142,10 +124,8 @@
 
     const/high16 p1, 0x10000000
 
-    .line 720
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 721
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -156,7 +136,6 @@
 
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 722
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -167,7 +146,6 @@
 
     iget-object p2, p2, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 721
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-object p0
@@ -211,7 +189,6 @@
 
     return p0
 
-    .line 255
     :pswitch_5
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -232,7 +209,6 @@
 
     return p0
 
-    .line 249
     :pswitch_6
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -251,7 +227,6 @@
     :cond_1
     return v0
 
-    .line 234
     :pswitch_7
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -265,7 +240,6 @@
 
     return p0
 
-    .line 237
     :cond_2
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -304,7 +278,6 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 223
     invoke-virtual {p0, p1}, Lcom/android/server/am/BaseRestrictionMgr;->setContext(Landroid/content/Context;)V
 
     return-void
@@ -319,7 +292,6 @@
 
     return p0
 
-    .line 997
     :cond_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -329,7 +301,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1000
     :try_start_0
     invoke-interface {v0, p2, v1, v2, p3}, Landroid/content/pm/IPackageManager;->getServiceInfo(Landroid/content/ComponentName;JI)Landroid/content/pm/ServiceInfo;
 
@@ -339,7 +310,6 @@
 
     const-string v0, "android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
 
-    .line 1002
     iget-object p3, p3, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -350,7 +320,6 @@
 
     const-string p3, "android"
 
-    .line 1003
     invoke-virtual {p3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -359,7 +328,6 @@
 
     const/4 p0, 0x1
 
-    .line 1005
     sget-object p1, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -389,7 +357,6 @@
     :catch_0
     move-exception p1
 
-    .line 1009
     sget-object p2, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -416,7 +383,6 @@
 .method public final isBlockAssociatedActivity(Landroid/content/pm/ActivityInfo;)Z
     .locals 5
 
-    .line 185
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v0
@@ -431,7 +397,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 186
     iget-object v0, p1, Landroid/content/pm/ActivityInfo;->taskAffinity:Ljava/lang/String;
 
     if-eqz v0, :cond_2
@@ -450,7 +415,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 188
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object p0
@@ -471,7 +435,6 @@
 
     return v0
 
-    .line 193
     :cond_0
     iget-object p0, p1, Landroid/content/pm/ActivityInfo;->taskAffinity:Ljava/lang/String;
 
@@ -481,12 +444,10 @@
 
     move-result-object p0
 
-    .line 194
     array-length v4, p0
 
     if-gt v4, v0, :cond_1
 
-    .line 195
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -513,11 +474,9 @@
 
     return v1
 
-    .line 198
     :cond_1
     aget-object p0, p0, v0
 
-    .line 199
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object p1
@@ -539,7 +498,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 830
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getInstance()Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
     move-result-object p0
@@ -554,7 +512,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 831
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -586,7 +543,6 @@
 .method public final isEssentialIntent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    .line 814
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object p0
@@ -609,7 +565,6 @@
 
     return p0
 
-    .line 952
     :cond_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -619,7 +574,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 955
     :try_start_0
     invoke-interface {v0, p2, v1, v2, p3}, Landroid/content/pm/IPackageManager;->getServiceInfo(Landroid/content/ComponentName;JI)Landroid/content/pm/ServiceInfo;
 
@@ -629,7 +583,6 @@
 
     const-string v0, "android.permission.BIND_JOB_SERVICE"
 
-    .line 957
     iget-object p3, p3, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -640,7 +593,6 @@
 
     const-string p3, "android"
 
-    .line 958
     invoke-virtual {p3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -649,7 +601,6 @@
 
     const/4 p0, 0x1
 
-    .line 960
     sget-object p1, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -679,7 +630,6 @@
     :catch_0
     move-exception p1
 
-    .line 964
     sget-object p2, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -708,7 +658,6 @@
 
     const-string v0, "com.baidu.searchbox_samsung"
 
-    .line 899
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -727,7 +676,6 @@
 
     goto :goto_0
 
-    .line 903
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/BaseRestrictionMgr;->getLaunchIntentForPackage(Ljava/lang/String;I)Landroid/content/Intent;
@@ -736,7 +684,6 @@
 
     if-nez p0, :cond_4
 
-    .line 905
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -747,12 +694,10 @@
 
     if-eqz p0, :cond_2
 
-    .line 906
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_1
 
-    .line 907
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -774,13 +719,11 @@
     :cond_1
     return v1
 
-    .line 910
     :cond_2
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_3
 
-    .line 911
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -809,7 +752,6 @@
     :catch_0
     move-exception p0
 
-    .line 916
     sget-object p1, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -836,12 +778,10 @@
 .method public final isPolicyBlockedPackage(Ljava/lang/String;ILandroid/content/ComponentName;Ljava/lang/String;Landroid/content/Intent;II)I
     .locals 7
 
-    .line 731
     invoke-virtual {p3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 732
     invoke-static {p6}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
@@ -852,12 +792,10 @@
 
     if-nez p1, :cond_1
 
-    .line 736
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_0
 
-    .line 737
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -881,7 +819,6 @@
     :cond_0
     return v3
 
-    .line 742
     :cond_1
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -891,7 +828,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 743
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v4
@@ -909,7 +845,6 @@
 
     if-eq p7, v4, :cond_4
 
-    .line 749
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v6
@@ -920,7 +855,6 @@
 
     if-nez v6, :cond_4
 
-    .line 750
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v6
@@ -943,7 +877,6 @@
 
     return v5
 
-    .line 752
     :cond_3
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -970,7 +903,6 @@
     :cond_4
     const-string/jumbo p6, "startService"
 
-    .line 758
     invoke-virtual {p6, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p6
@@ -985,7 +917,6 @@
 
     if-eqz p6, :cond_6
 
-    .line 759
     :cond_5
     invoke-virtual {p0, p1, p2, v0, p5}, Lcom/android/server/am/BaseRestrictionMgr;->isShouldSkipCaseForPolicy(Ljava/lang/String;ILjava/lang/String;Landroid/content/Intent;)Z
 
@@ -998,7 +929,6 @@
     :cond_6
     const-string p6, "com.sec.android.app.samsungapps"
 
-    .line 763
     invoke-virtual {p6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p6
@@ -1007,7 +937,6 @@
 
     return v5
 
-    .line 768
     :cond_7
     invoke-virtual {p0, v0, v1}, Lcom/android/server/am/BaseRestrictionMgr;->isLauncherableApp(Ljava/lang/String;I)Z
 
@@ -1021,7 +950,6 @@
 
     if-eqz p6, :cond_b
 
-    .line 769
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/BaseRestrictionMgr;->isSamsungService(Ljava/lang/String;I)Z
 
     move-result p2
@@ -1030,12 +958,10 @@
 
     if-nez p2, :cond_9
 
-    .line 770
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_8
 
-    .line 771
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1059,7 +985,6 @@
     :cond_8
     return v3
 
-    .line 774
     :cond_9
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
@@ -1071,12 +996,10 @@
 
     if-eqz p2, :cond_b
 
-    .line 775
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_a
 
-    .line 776
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1100,7 +1023,6 @@
     :cond_a
     return v3
 
-    .line 783
     :cond_b
     invoke-virtual {p0, p1, v0, p5, v1}, Lcom/android/server/am/BaseRestrictionMgr;->isShouldBlockCase(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)Z
 
@@ -1108,12 +1030,10 @@
 
     if-eqz p2, :cond_d
 
-    .line 784
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_c
 
-    .line 785
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1137,7 +1057,6 @@
     :cond_c
     return v3
 
-    .line 790
     :cond_d
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -1157,19 +1076,16 @@
 
     if-eq p7, v4, :cond_f
 
-    .line 791
     invoke-virtual {p0, p1, p3, v1}, Lcom/android/server/am/BaseRestrictionMgr;->isJobSchedulerPackage(Ljava/lang/String;Landroid/content/ComponentName;I)Z
 
     move-result p2
 
     if-eqz p2, :cond_f
 
-    .line 792
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_e
 
-    .line 793
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1193,7 +1109,6 @@
     :cond_e
     return v3
 
-    .line 797
     :cond_f
     invoke-virtual {p0, p1, p3, p5}, Lcom/android/server/am/BaseRestrictionMgr;->isSyncManagerPackage(Ljava/lang/String;Landroid/content/ComponentName;Landroid/content/Intent;)Z
 
@@ -1201,12 +1116,10 @@
 
     if-eqz p2, :cond_11
 
-    .line 798
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_10
 
-    .line 799
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1230,7 +1143,6 @@
     :cond_10
     return v3
 
-    .line 802
     :cond_11
     invoke-virtual {p0, p1, p3, v1}, Lcom/android/server/am/BaseRestrictionMgr;->isBindNotificationListenerPackage(Ljava/lang/String;Landroid/content/ComponentName;I)Z
 
@@ -1238,12 +1150,10 @@
 
     if-eqz p0, :cond_13
 
-    .line 803
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_12
 
-    .line 804
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1304,7 +1214,6 @@
 
     move/from16 v13, p10
 
-    .line 279
     invoke-virtual/range {v0 .. v13}, Lcom/android/server/am/BaseRestrictionMgr;->isRestrictedPackage(Landroid/content/ComponentName;Ljava/lang/String;ILjava/lang/String;Landroid/content/Intent;Ljava/lang/String;IZZLandroid/content/pm/ActivityInfo;Ljava/lang/String;II)Z
 
     move-result v0
@@ -1343,7 +1252,6 @@
 
     move/from16 v13, p9
 
-    .line 274
     invoke-virtual/range {v0 .. v13}, Lcom/android/server/am/BaseRestrictionMgr;->isRestrictedPackage(Landroid/content/ComponentName;Ljava/lang/String;ILjava/lang/String;Landroid/content/Intent;Ljava/lang/String;IZZLandroid/content/pm/ActivityInfo;Ljava/lang/String;II)Z
 
     move-result v0
@@ -1366,12 +1274,10 @@
 
     move/from16 v1, p7
 
-    .line 297
     invoke-virtual/range {p1 .. p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 310
     invoke-static {v12, v9}, Lcom/android/server/am/MARsPolicyManager;->isIntentProhibited(Landroid/content/Intent;Ljava/lang/String;)Z
 
     move-result v2
@@ -1385,7 +1291,6 @@
     :cond_0
     const-string v2, "com.google.android.projection.gearhead"
 
-    .line 315
     invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1400,7 +1305,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 316
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v2
@@ -1412,7 +1316,6 @@
 
     const-string v2, "android.intent.action.MEDIA_BUTTON"
 
-    .line 318
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -1423,20 +1326,17 @@
 
     if-eqz v2, :cond_2
 
-    .line 319
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v2
 
     invoke-virtual {v2, v13, v1}, Lcom/android/server/am/MARsPolicyManager;->onAppUsedForSpecificCase(Ljava/lang/String;I)V
 
-    .line 322
     :cond_2
     sget-object v15, Lcom/android/server/am/MARsPolicyManager;->MARsLock:Lcom/android/server/am/MARsPolicyManager$Lock;
 
     monitor-enter v15
 
-    .line 323
     :try_start_0
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
@@ -1468,7 +1368,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 324
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v2
@@ -1490,7 +1389,6 @@
     :cond_3
     const/16 v16, 0x0
 
-    .line 327
     :goto_0
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
@@ -1506,7 +1404,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 328
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v2
@@ -1529,7 +1426,6 @@
 
     const/4 v5, 0x0
 
-    .line 330
     :goto_1
     invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
 
@@ -1537,19 +1433,16 @@
 
     if-ge v4, v6, :cond_7
 
-    .line 331
     invoke-virtual {v2, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/am/FreecessPkgStatus;
 
-    .line 333
     iget-object v6, v5, Lcom/android/server/am/FreecessPkgStatus;->name:Ljava/lang/String;
 
     if-nez v6, :cond_4
 
-    .line 334
     sget-object v6, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     const-string v7, "Abnomal case in isRestrictedPackage package name is null"
@@ -1558,7 +1451,6 @@
 
     goto :goto_2
 
-    .line 347
     :cond_4
     iget v6, v5, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
@@ -1574,7 +1466,6 @@
 
     goto :goto_1
 
-    .line 351
     :cond_6
     :goto_3
     iget v2, v5, Lcom/android/server/am/FreecessPkgStatus;->uid:I
@@ -1609,7 +1500,6 @@
     :goto_5
     if-nez v4, :cond_c
 
-    .line 364
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v7
@@ -1630,7 +1520,6 @@
 
     if-eqz v7, :cond_c
 
-    .line 366
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v7
@@ -1651,7 +1540,6 @@
 
     move/from16 v3, v17
 
-    .line 368
     :goto_6
     invoke-virtual {v7}, Landroid/util/SparseArray;->size()I
 
@@ -1659,21 +1547,18 @@
 
     if-ge v3, v14, :cond_c
 
-    .line 369
     invoke-virtual {v7, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Lcom/android/server/am/MARsPackageInfo;
 
-    .line 371
     invoke-virtual {v14}, Lcom/android/server/am/MARsPackageInfo;->getName()Ljava/lang/String;
 
     move-result-object v20
 
     if-nez v20, :cond_9
 
-    .line 372
     sget-object v14, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     const-string v8, "Abnomal case in isRestrictedPackage package name is null"
@@ -1684,7 +1569,6 @@
 
     goto :goto_7
 
-    .line 376
     :cond_9
     invoke-virtual {v14}, Lcom/android/server/am/MARsPackageInfo;->getUserId()I
 
@@ -1707,18 +1591,15 @@
     :cond_b
     const/4 v8, -0x1
 
-    .line 379
     :goto_8
     invoke-virtual {v14}, Lcom/android/server/am/MARsPackageInfo;->getUserId()I
 
     move-result v1
 
-    .line 380
     invoke-virtual {v14}, Lcom/android/server/am/MARsPackageInfo;->getUid()I
 
     move-result v2
 
-    .line 381
     invoke-virtual {v14}, Lcom/android/server/am/MARsPackageInfo;->getFASEnabled()Z
 
     move-result v3
@@ -1749,7 +1630,6 @@
     :goto_9
     if-nez v4, :cond_11
 
-    .line 389
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -1762,7 +1642,6 @@
 
     if-eqz v12, :cond_d
 
-    .line 390
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -1775,7 +1654,6 @@
     :goto_a
     move-object v7, v0
 
-    .line 392
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -1791,7 +1669,6 @@
     :cond_e
     move v1, v8
 
-    .line 393
     :goto_b
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1811,20 +1688,17 @@
 
     move-object/from16 v10, p11
 
-    .line 392
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
 
     :cond_f
     const-string/jumbo v0, "provider"
 
-    .line 395
     invoke-virtual {v0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_10
 
-    .line 398
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v0
@@ -1843,7 +1717,6 @@
 
     invoke-virtual/range {p5 .. p10}, Lcom/android/server/am/FreecessController;->protectFreezePackage(Ljava/lang/String;ILjava/lang/String;J)Z
 
-    .line 400
     :cond_10
     monitor-exit v15
 
@@ -1856,7 +1729,6 @@
 
     if-nez v18, :cond_15
 
-    .line 414
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -1869,7 +1741,6 @@
 
     if-eqz v12, :cond_12
 
-    .line 415
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -1882,7 +1753,6 @@
     :goto_c
     move-object v7, v0
 
-    .line 417
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -1898,7 +1768,6 @@
     :cond_13
     move v1, v8
 
-    .line 418
     :goto_d
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1918,10 +1787,8 @@
 
     move-object/from16 v10, p11
 
-    .line 417
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 420
     :cond_14
     monitor-exit v15
 
@@ -1930,7 +1797,6 @@
     :cond_15
     if-eqz v7, :cond_19
 
-    .line 425
     invoke-virtual {v7}, Lcom/android/server/am/MARsPackageInfo;->getAppliedPolicy()Lcom/android/server/am/MARsPolicyManager$Policy;
 
     move-result-object v1
@@ -1939,7 +1805,6 @@
 
     if-nez v5, :cond_19
 
-    .line 426
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -1952,7 +1817,6 @@
 
     if-eqz v12, :cond_16
 
-    .line 427
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -1965,7 +1829,6 @@
     :goto_e
     move-object v7, v0
 
-    .line 429
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -1981,7 +1844,6 @@
     :cond_17
     move v1, v8
 
-    .line 430
     :goto_f
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -2001,10 +1863,8 @@
 
     move-object/from16 v10, p11
 
-    .line 429
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 432
     :cond_18
     monitor-exit v15
 
@@ -2013,7 +1873,6 @@
     :cond_19
     if-eqz v18, :cond_1a
 
-    .line 438
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -2034,7 +1893,6 @@
 
     if-eqz v7, :cond_1b
 
-    .line 442
     invoke-virtual {v7}, Lcom/android/server/am/MARsPackageInfo;->getAppliedPolicy()Lcom/android/server/am/MARsPolicyManager$Policy;
 
     move-result-object v2
@@ -2064,7 +1922,6 @@
     :goto_11
     if-eqz v7, :cond_1d
 
-    .line 443
     invoke-virtual {v7}, Lcom/android/server/am/MARsPackageInfo;->getCurLevel()I
 
     move-result v2
@@ -2088,7 +1945,6 @@
 
     if-eqz v5, :cond_1f
 
-    .line 446
     iget-boolean v8, v5, Lcom/android/server/am/FreecessPkgStatus;->isFreezedByCalm:Z
 
     if-eqz v8, :cond_1f
@@ -2100,7 +1956,6 @@
 
     if-eqz v5, :cond_20
 
-    .line 450
     iget-object v5, v5, Lcom/android/server/am/FreecessPkgStatus;->freezedRecord:Lcom/android/server/am/mars/MARsFreezeStateRecord;
 
     iget-boolean v5, v5, Lcom/android/server/am/mars/MARsFreezeStateRecord;->isLcdOnFreezed:Z
@@ -2134,7 +1989,6 @@
 
     if-eqz v1, :cond_22
 
-    .line 458
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -2154,7 +2008,6 @@
 
     if-eqz v1, :cond_23
 
-    .line 464
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -2174,7 +2027,6 @@
 
     if-eqz v1, :cond_24
 
-    .line 470
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -2194,7 +2046,6 @@
 
     if-eqz v1, :cond_25
 
-    .line 476
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -2212,7 +2063,6 @@
 
     const-string v1, "activity"
 
-    .line 485
     invoke-virtual {v1, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2246,7 +2096,6 @@
 
     if-eqz v1, :cond_28
 
-    .line 493
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -2279,7 +2128,6 @@
 
     if-eqz v4, :cond_2a
 
-    .line 499
     invoke-virtual {v0, v9, v10}, Lcom/android/server/am/BaseRestrictionMgr;->isSystemPackage(Ljava/lang/String;I)Z
 
     move-result v2
@@ -2296,7 +2144,6 @@
 
     if-eqz v4, :cond_2c
 
-    .line 504
     invoke-virtual {v0, v13, v9}, Lcom/android/server/am/BaseRestrictionMgr;->isSelfIntent(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v4
@@ -2311,26 +2158,22 @@
 
     if-nez v5, :cond_2b
 
-    .line 505
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object v5
 
-    .line 506
     invoke-virtual/range {p1 .. p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v8
 
     const/4 v10, 0x0
 
-    .line 505
     invoke-virtual {v5, v3, v8, v10, v10}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2c
 
-    .line 507
     :cond_2b
     sget-object v2, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
@@ -2386,7 +2229,6 @@
     :cond_2d
     const-string/jumbo v1, "startService"
 
-    .line 512
     invoke-virtual {v1, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2406,7 +2248,6 @@
     :cond_2e
     const-string/jumbo v1, "provider"
 
-    .line 540
     invoke-virtual {v1, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2443,7 +2284,6 @@
 
     move/from16 v8, p7
 
-    .line 542
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/am/BaseRestrictionMgr;->isPolicyBlockedPackage(Ljava/lang/String;ILandroid/content/ComponentName;Ljava/lang/String;Landroid/content/Intent;II)I
 
     move-result v1
@@ -2473,7 +2313,6 @@
 
     if-eqz v2, :cond_32
 
-    .line 550
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v2
@@ -2499,7 +2338,6 @@
 
     if-eqz v3, :cond_34
 
-    .line 556
     invoke-virtual {v0, v9, v10}, Lcom/android/server/am/BaseRestrictionMgr;->isSystemPackage(Ljava/lang/String;I)Z
 
     move-result v2
@@ -2543,7 +2381,6 @@
 
     move/from16 v8, p7
 
-    .line 562
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/am/BaseRestrictionMgr;->isPolicyBlockedPackage(Ljava/lang/String;ILandroid/content/ComponentName;Ljava/lang/String;Landroid/content/Intent;II)I
 
     move-result v1
@@ -2565,7 +2402,6 @@
 
     const-string v1, "broadcast"
 
-    .line 568
     invoke-virtual {v1, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2585,7 +2421,6 @@
 
     if-eqz v1, :cond_38
 
-    .line 576
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -2618,7 +2453,6 @@
 
     if-eqz v3, :cond_3a
 
-    .line 582
     invoke-virtual {v0, v9, v10}, Lcom/android/server/am/BaseRestrictionMgr;->isSystemPackage(Ljava/lang/String;I)Z
 
     move-result v2
@@ -2639,7 +2473,6 @@
 
     const-string v2, "com.google.android.c2dm.intent.RECEIVE"
 
-    .line 589
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -2688,7 +2521,6 @@
 
     const-string v3, "com.google.android.c2dm.intent.RECEIVE"
 
-    .line 600
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -2703,7 +2535,6 @@
 
     move-object/from16 v4, p6
 
-    .line 601
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -2722,7 +2553,6 @@
 
     if-eqz v4, :cond_40
 
-    .line 609
     invoke-virtual {v0, v13, v9}, Lcom/android/server/am/BaseRestrictionMgr;->isSelfIntent(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
@@ -2741,7 +2571,6 @@
 
     if-eqz v4, :cond_42
 
-    .line 616
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -2764,7 +2593,6 @@
 
     if-eqz v4, :cond_44
 
-    .line 623
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v3
@@ -2793,7 +2621,6 @@
 
     if-eqz v4, :cond_46
 
-    .line 629
     invoke-virtual {v0, v9}, Lcom/android/server/am/BaseRestrictionMgr;->isSpageApp(Ljava/lang/String;)Z
 
     move-result v3
@@ -2842,7 +2669,6 @@
 
     const-string v1, "backup"
 
-    .line 633
     invoke-virtual {v1, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2900,7 +2726,6 @@
 
     move/from16 p7, v8
 
-    .line 515
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/am/BaseRestrictionMgr;->isPolicyBlockedPackage(Ljava/lang/String;ILandroid/content/ComponentName;Ljava/lang/String;Landroid/content/Intent;II)I
 
     move-result v1
@@ -2931,7 +2756,6 @@
 
     if-eqz v3, :cond_4e
 
-    .line 523
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v2
@@ -2952,7 +2776,6 @@
 
     if-eqz v3, :cond_50
 
-    .line 529
     invoke-virtual {v0, v9, v10}, Lcom/android/server/am/BaseRestrictionMgr;->isSystemPackage(Ljava/lang/String;I)Z
 
     move-result v2
@@ -2996,7 +2819,6 @@
 
     move/from16 v8, p7
 
-    .line 535
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/am/BaseRestrictionMgr;->isPolicyBlockedPackage(Ljava/lang/String;ILandroid/content/ComponentName;Ljava/lang/String;Landroid/content/Intent;II)I
 
     move-result v1
@@ -3049,7 +2871,6 @@
 
     if-eqz v1, :cond_55
 
-    .line 648
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -3065,7 +2886,6 @@
     :cond_55
     move/from16 v6, p9
 
-    .line 652
     :goto_29
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
@@ -3091,14 +2911,12 @@
 
     const-string/jumbo v0, "provider"
 
-    .line 655
     invoke-virtual {v0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_56
 
-    .line 657
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v0
@@ -3115,7 +2933,6 @@
 
     goto :goto_2a
 
-    .line 659
     :cond_56
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
@@ -3123,7 +2940,6 @@
 
     invoke-virtual {v0, v13, v6, v11}, Lcom/android/server/am/FreecessController;->unFreezePackage(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 661
     :goto_2a
     sget-object v0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
@@ -3161,7 +2977,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 664
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -3174,7 +2989,6 @@
 
     if-eqz v12, :cond_57
 
-    .line 665
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -3187,7 +3001,6 @@
     :goto_2b
     move-object v7, v0
 
-    .line 666
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -3203,7 +3016,6 @@
     :cond_58
     move/from16 v1, v22
 
-    .line 667
     :goto_2c
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -3223,10 +3035,8 @@
 
     move-object/from16 v10, p11
 
-    .line 666
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 669
     :cond_59
     monitor-exit v15
 
@@ -3239,14 +3049,12 @@
 
     if-eqz v1, :cond_5b
 
-    .line 672
     invoke-virtual {v1}, Lcom/android/server/am/MARsPackageInfo;->isSCPMTarget()Z
 
     move-result v2
 
     if-nez v2, :cond_5b
 
-    .line 673
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v2
@@ -3255,7 +3063,6 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
 
-    .line 676
     :cond_5b
     sget-boolean v1, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
@@ -3263,7 +3070,6 @@
 
     if-eqz v14, :cond_5c
 
-    .line 677
     sget-object v1, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3308,13 +3114,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
     :cond_5c
     monitor-exit v15
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 682
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v1
@@ -3329,7 +3133,6 @@
 
     if-eqz v1, :cond_5d
 
-    .line 683
     iget-object v0, v0, Lcom/android/server/am/BaseRestrictionMgr;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getUserId()I
@@ -3338,7 +3141,6 @@
 
     if-ne v0, v6, :cond_5d
 
-    .line 684
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -3359,7 +3161,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/am/mars/database/MARsComponentTracker;->trackComponent(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZ)V
 
-    .line 688
     :cond_5d
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
@@ -3375,7 +3176,6 @@
 
     if-eqz v12, :cond_5e
 
-    .line 689
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -3388,7 +3188,6 @@
     :goto_2d
     move-object v7, v0
 
-    .line 690
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker;->getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -3404,7 +3203,6 @@
     :cond_5f
     move/from16 v1, v22
 
-    .line 691
     :goto_2e
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -3424,7 +3222,6 @@
 
     move-object/from16 v10, p11
 
-    .line 690
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
 
     :cond_60
@@ -3433,7 +3230,6 @@
     :catchall_0
     move-exception v0
 
-    .line 680
     :try_start_1
     monitor-exit v15
     :try_end_1
@@ -3473,7 +3269,6 @@
 
     move/from16 v13, p12
 
-    .line 290
     invoke-virtual/range {v0 .. v13}, Lcom/android/server/am/BaseRestrictionMgr;->isRestrictedPackage(Landroid/content/ComponentName;Ljava/lang/String;ILjava/lang/String;Landroid/content/Intent;Ljava/lang/String;IZZLandroid/content/pm/ActivityInfo;Ljava/lang/String;II)Z
 
     move-result v0
@@ -3486,7 +3281,6 @@
 
     const-string/jumbo v0, "system"
 
-    .line 879
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3516,7 +3310,6 @@
     :cond_0
     const-string v0, "com.baidu.BaiduMap"
 
-    .line 885
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3535,7 +3328,6 @@
 
     const-string v0, "com.baidu.netdisk_ss"
 
-    .line 886
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3544,7 +3336,6 @@
 
     goto :goto_0
 
-    .line 890
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/BaseRestrictionMgr;->isSystemPackage(Ljava/lang/String;I)Z
 
@@ -3552,12 +3343,10 @@
 
     if-eqz p0, :cond_3
 
-    .line 891
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_2
 
-    .line 892
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -3583,14 +3372,12 @@
     :goto_0
     return v2
 
-    .line 880
     :cond_4
     :goto_1
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_5
 
-    .line 881
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -3618,19 +3405,16 @@
 
     if-eqz p1, :cond_1
 
-    .line 820
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 821
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
     if-eqz p0, :cond_0
 
-    .line 822
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -3665,14 +3449,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 923
     invoke-virtual {p3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 924
     invoke-virtual {p3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -3685,7 +3467,6 @@
     :goto_0
     const-string v0, "android"
 
-    .line 927
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3715,14 +3496,12 @@
 
     const/16 v2, 0x3e8
 
-    .line 928
     invoke-virtual {p3, v0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p3
 
     if-ne p3, v2, :cond_3
 
-    .line 929
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p3
@@ -3745,7 +3524,6 @@
 
     goto :goto_1
 
-    .line 933
     :cond_2
     sget-object p3, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
@@ -3755,7 +3533,6 @@
 
     goto :goto_2
 
-    .line 930
     :cond_3
     :goto_1
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
@@ -3766,7 +3543,6 @@
 
     return v1
 
-    .line 936
     :cond_4
     :goto_2
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
@@ -3779,7 +3555,6 @@
 
     if-eqz p3, :cond_5
 
-    .line 937
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object p3
@@ -3805,14 +3580,12 @@
 
     if-eqz p4, :cond_0
 
-    .line 848
     invoke-virtual {p4}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 849
     invoke-virtual {p4}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -3825,7 +3598,6 @@
     :goto_0
     const-string p4, "android"
 
-    .line 852
     invoke-virtual {p4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p4
@@ -3836,7 +3608,6 @@
 
     if-nez p0, :cond_1
 
-    .line 853
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->getInstance()Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;
 
     move-result-object p4
@@ -3847,7 +3618,6 @@
 
     if-eqz p4, :cond_1
 
-    .line 854
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -3868,7 +3638,6 @@
 
     return v0
 
-    .line 858
     :cond_1
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -3880,7 +3649,6 @@
 
     if-eqz p4, :cond_2
 
-    .line 859
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object p4
@@ -3893,7 +3661,6 @@
 
     return v0
 
-    .line 865
     :cond_2
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -3905,7 +3672,6 @@
 
     if-eqz p4, :cond_3
 
-    .line 866
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object p4
@@ -3918,7 +3684,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 868
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -3929,7 +3694,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 869
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -3963,14 +3727,12 @@
 
     const-string p0, "com.samsung.android.app.spage"
 
-    .line 839
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 840
     sget-object p0, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -4008,7 +3770,6 @@
 
     return p0
 
-    .line 978
     :cond_0
     :try_start_0
     invoke-virtual {p3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -4027,7 +3788,6 @@
 
     const-string p1, "android.content.SyncAdapter"
 
-    .line 979
     invoke-virtual {p3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p3
@@ -4040,7 +3800,6 @@
 
     const/4 p0, 0x1
 
-    .line 981
     sget-object p1, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -4070,7 +3829,6 @@
     :catch_0
     move-exception p1
 
-    .line 984
     sget-object p2, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -4099,7 +3857,6 @@
 
     const/4 v0, 0x0
 
-    .line 1018
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseRestrictionMgr;->mContext:Landroid/content/Context;
 
@@ -4107,7 +3864,6 @@
 
     move-result-object v1
 
-    .line 1019
     invoke-virtual {v1, p1, v0, p2}, Landroid/content/pm/PackageManager;->getApplicationInfoAsUser(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p2
@@ -4116,7 +3872,6 @@
 
     return v0
 
-    .line 1025
     :cond_0
     iget p2, p2, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -4128,7 +3883,6 @@
 
     return v0
 
-    .line 1029
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/BaseRestrictionMgr;->mContext:Landroid/content/Context;
 
@@ -4154,7 +3908,6 @@
     :catch_0
     move-exception p0
 
-    .line 1034
     sget-object p1, Lcom/android/server/am/BaseRestrictionMgr;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -4179,7 +3932,6 @@
 .method public final setContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 219
     iput-object p1, p0, Lcom/android/server/am/BaseRestrictionMgr;->mContext:Landroid/content/Context;
 
     return-void

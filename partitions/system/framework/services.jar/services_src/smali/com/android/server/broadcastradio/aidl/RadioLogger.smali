@@ -15,22 +15,18 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/broadcastradio/aidl/RadioLogger;->mTag:Ljava/lang/String;
 
     const/4 v0, 0x3
 
-    .line 37
     invoke-static {p1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/server/broadcastradio/aidl/RadioLogger;->mDebug:Z
 
-    .line 38
     new-instance p1, Landroid/util/LocalLog;
 
     invoke-direct {p1, p2}, Landroid/util/LocalLog;-><init>(I)V
@@ -45,7 +41,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 50
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/RadioLogger;->mEventLogger:Landroid/util/LocalLog;
 
     invoke-virtual {p0, p1}, Landroid/util/LocalLog;->dump(Ljava/io/PrintWriter;)V
@@ -56,22 +51,18 @@
 .method public varargs logRadioEvent(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
-    .line 42
     invoke-static {p1, p2}, Landroid/text/TextUtils;->formatSimple(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 43
     iget-object v1, p0, Lcom/android/server/broadcastradio/aidl/RadioLogger;->mEventLogger:Landroid/util/LocalLog;
 
     invoke-virtual {v1, v0}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 44
     iget-boolean v0, p0, Lcom/android/server/broadcastradio/aidl/RadioLogger;->mDebug:Z
 
     if-eqz v0, :cond_0
 
-    .line 45
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/RadioLogger;->mTag:Ljava/lang/String;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V

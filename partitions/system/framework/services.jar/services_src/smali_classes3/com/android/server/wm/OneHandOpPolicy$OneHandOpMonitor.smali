@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/wm/OneHandOpPolicy;)V
     .locals 0
 
-    .line 287
     iput-object p1, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->this$0:Lcom/android/server/wm/OneHandOpPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/OneHandOpPolicy;Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;-><init>(Lcom/android/server/wm/OneHandOpPolicy;)V
 
     return-void
@@ -38,7 +36,6 @@
 .method public binderDied()V
     .locals 6
 
-    .line 321
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->this$0:Lcom/android/server/wm/OneHandOpPolicy;
 
@@ -54,7 +51,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 322
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->mWatcher:Lcom/samsung/android/onehandop/IOneHandOpWatcher;
 
@@ -62,7 +58,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 323
     invoke-interface {v1}, Lcom/samsung/android/onehandop/IOneHandOpWatcher;->asBinder()Landroid/os/IBinder;
 
     move-result-object v1
@@ -71,17 +66,14 @@
 
     const/4 v1, 0x0
 
-    .line 324
     iput-object v1, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->mWatcher:Lcom/samsung/android/onehandop/IOneHandOpWatcher;
 
     const-string v3, "OneHandOpController"
 
     const-string v4, "OneHandOp service has died unexpectedly"
 
-    .line 326
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     new-instance v3, Landroid/view/MagnificationSpec;
 
     invoke-direct {v3}, Landroid/view/MagnificationSpec;-><init>()V
@@ -90,10 +82,8 @@
 
     const/4 v5, 0x0
 
-    .line 328
     invoke-virtual {v3, v4, v5, v5}, Landroid/view/MagnificationSpec;->initialize(FFF)V
 
-    .line 329
     iget-object v4, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->this$0:Lcom/android/server/wm/OneHandOpPolicy;
 
     const/4 v5, 0x1
@@ -105,7 +95,6 @@
     :cond_0
     move v5, v2
 
-    .line 332
     :goto_0
     monitor-exit v0
     :try_end_1
@@ -116,7 +105,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 336
     iget-object v0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->this$0:Lcom/android/server/wm/OneHandOpPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/OneHandOpPolicy;->-$$Nest$fgetmContext(Lcom/android/server/wm/OneHandOpPolicy;)Landroid/content/Context;
@@ -131,7 +119,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 339
     iget-object v0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->this$0:Lcom/android/server/wm/OneHandOpPolicy;
 
     invoke-virtual {v0}, Lcom/android/server/wm/OneHandOpPolicy;->isOneHandOpEnabled()Z
@@ -140,14 +127,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 340
     iget-object v0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->this$0:Lcom/android/server/wm/OneHandOpPolicy;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/OneHandOpPolicy;->startService(I)V
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->this$0:Lcom/android/server/wm/OneHandOpPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/OneHandOpPolicy;->-$$Nest$fgetmHandler(Lcom/android/server/wm/OneHandOpPolicy;)Landroid/os/Handler;
@@ -171,7 +156,6 @@
     :catchall_0
     move-exception p0
 
-    .line 332
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -193,7 +177,6 @@
 .method public isRegistered()Z
     .locals 0
 
-    .line 291
     iget-object p0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->mWatcher:Lcom/samsung/android/onehandop/IOneHandOpWatcher;
 
     if-eqz p0, :cond_0
@@ -212,13 +195,11 @@
 .method public registerWatcher(Lcom/samsung/android/onehandop/IOneHandOpWatcher;)V
     .locals 2
 
-    .line 296
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->mWatcher:Lcom/samsung/android/onehandop/IOneHandOpWatcher;
 
     if-nez v0, :cond_0
 
-    .line 297
     invoke-interface {p1}, Lcom/samsung/android/onehandop/IOneHandOpWatcher;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -227,7 +208,6 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 298
     iput-object p1, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->mWatcher:Lcom/samsung/android/onehandop/IOneHandOpWatcher;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -240,7 +220,6 @@
 .method public unregisterWatcher(Lcom/samsung/android/onehandop/IOneHandOpWatcher;)V
     .locals 2
 
-    .line 306
     iget-object v0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->mWatcher:Lcom/samsung/android/onehandop/IOneHandOpWatcher;
 
     if-eqz v0, :cond_0
@@ -257,11 +236,9 @@
 
     const/4 v0, 0x0
 
-    .line 308
     :try_start_0
     iput-object v0, p0, Lcom/android/server/wm/OneHandOpPolicy$OneHandOpMonitor;->mWatcher:Lcom/samsung/android/onehandop/IOneHandOpWatcher;
 
-    .line 309
     invoke-interface {p1}, Lcom/samsung/android/onehandop/IOneHandOpWatcher;->asBinder()Landroid/os/IBinder;
 
     move-result-object p1

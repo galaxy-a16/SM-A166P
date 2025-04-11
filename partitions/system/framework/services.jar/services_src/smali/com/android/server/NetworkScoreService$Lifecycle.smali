@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 131
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 132
     new-instance v0, Lcom/android/server/NetworkScoreService;
 
     invoke-direct {v0, p1}, Lcom/android/server/NetworkScoreService;-><init>(Landroid/content/Context;)V
@@ -33,7 +31,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 144
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$Lifecycle;->mService:Lcom/android/server/NetworkScoreService;
 
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->systemReady()V
@@ -45,7 +42,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$Lifecycle;->mService:Lcom/android/server/NetworkScoreService;
 
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService;->systemRunning()V
@@ -62,12 +58,10 @@
 
     const-string v1, "Registering network_score"
 
-    .line 137
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo v0, "network_score"
 
-    .line 138
     iget-object v1, p0, Lcom/android/server/NetworkScoreService$Lifecycle;->mService:Lcom/android/server/NetworkScoreService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V

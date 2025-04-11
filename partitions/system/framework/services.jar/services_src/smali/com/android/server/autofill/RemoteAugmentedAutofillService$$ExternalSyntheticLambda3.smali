@@ -42,7 +42,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService;Landroid/view/autofill/IAutoFillManagerClient;IILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;JLandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;ILandroid/os/IBinder;Ljava/util/concurrent/atomic/AtomicReference;)V
     .locals 3
 
-    .line 0
     move-object v0, p0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -115,7 +114,6 @@
 .method public final run(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 18
 
-    .line 0
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;

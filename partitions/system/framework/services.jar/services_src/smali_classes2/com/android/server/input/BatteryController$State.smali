@@ -7,10 +7,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1048
     invoke-direct {p0}, Landroid/hardware/input/IInputDeviceBatteryState;-><init>()V
 
-    .line 1049
     invoke-virtual {p0, p1}, Lcom/android/server/input/BatteryController$State;->reset(I)V
 
     return-void
@@ -19,10 +17,8 @@
 .method public constructor <init>(IJZIF)V
     .locals 0
 
-    .line 1056
     invoke-direct {p0}, Landroid/hardware/input/IInputDeviceBatteryState;-><init>()V
 
-    .line 1057
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/input/BatteryController$State;->initialize(IJZIF)V
 
     return-void
@@ -31,10 +27,8 @@
 .method public constructor <init>(Landroid/hardware/input/IInputDeviceBatteryState;)V
     .locals 0
 
-    .line 1052
     invoke-direct {p0}, Landroid/hardware/input/IInputDeviceBatteryState;-><init>()V
 
-    .line 1053
     invoke-virtual {p0, p1}, Lcom/android/server/input/BatteryController$State;->copyFrom(Landroid/hardware/input/IInputDeviceBatteryState;)V
 
     return-void
@@ -45,7 +39,6 @@
 .method public final copyFrom(Landroid/hardware/input/IInputDeviceBatteryState;)V
     .locals 7
 
-    .line 1073
     iget v1, p1, Landroid/hardware/input/IInputDeviceBatteryState;->deviceId:I
 
     iget-wide v2, p1, Landroid/hardware/input/IInputDeviceBatteryState;->updateTime:J
@@ -66,20 +59,16 @@
 .method public equalsIgnoringUpdateTime(Landroid/hardware/input/IInputDeviceBatteryState;)Z
     .locals 4
 
-    .line 1086
     iget-wide v0, p0, Landroid/hardware/input/IInputDeviceBatteryState;->updateTime:J
 
-    .line 1087
     iget-wide v2, p1, Landroid/hardware/input/IInputDeviceBatteryState;->updateTime:J
 
     iput-wide v2, p0, Landroid/hardware/input/IInputDeviceBatteryState;->updateTime:J
 
-    .line 1088
     invoke-virtual {p0, p1}, Landroid/hardware/input/IInputDeviceBatteryState;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    .line 1089
     iput-wide v0, p0, Landroid/hardware/input/IInputDeviceBatteryState;->updateTime:J
 
     return p1
@@ -88,19 +77,14 @@
 .method public final initialize(IJZIF)V
     .locals 0
 
-    .line 1078
     iput p1, p0, Landroid/hardware/input/IInputDeviceBatteryState;->deviceId:I
 
-    .line 1079
     iput-wide p2, p0, Landroid/hardware/input/IInputDeviceBatteryState;->updateTime:J
 
-    .line 1080
     iput-boolean p4, p0, Landroid/hardware/input/IInputDeviceBatteryState;->isPresent:Z
 
-    .line 1081
     iput p5, p0, Landroid/hardware/input/IInputDeviceBatteryState;->status:I
 
-    .line 1082
     iput p6, p0, Landroid/hardware/input/IInputDeviceBatteryState;->capacity:F
 
     return-void
@@ -121,7 +105,6 @@
 
     move v1, p1
 
-    .line 1068
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/input/BatteryController$State;->initialize(IJZIF)V
 
     return-void
@@ -130,7 +113,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1095
     iget-boolean v0, p0, Landroid/hardware/input/IInputDeviceBatteryState;->isPresent:Z
 
     if-nez v0, :cond_0
@@ -139,7 +121,6 @@
 
     return-object p0
 
-    .line 1098
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -191,14 +172,12 @@
 .method public updateIfChanged(Landroid/hardware/input/IInputDeviceBatteryState;)V
     .locals 1
 
-    .line 1062
     invoke-virtual {p0, p1}, Lcom/android/server/input/BatteryController$State;->equalsIgnoringUpdateTime(Landroid/hardware/input/IInputDeviceBatteryState;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1063
     invoke-virtual {p0, p1}, Lcom/android/server/input/BatteryController$State;->copyFrom(Landroid/hardware/input/IInputDeviceBatteryState;)V
 
     :cond_0

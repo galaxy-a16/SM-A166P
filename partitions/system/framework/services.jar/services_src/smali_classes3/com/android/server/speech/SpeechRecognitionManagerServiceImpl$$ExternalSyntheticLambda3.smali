@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/speech/SpeechRecognitionManagerServiceImpl;->$r8$lambda$TJpo48M5TbxxVXHKxHluiiiTMXs(Ljava/lang/Integer;)Ljava/util/Set;

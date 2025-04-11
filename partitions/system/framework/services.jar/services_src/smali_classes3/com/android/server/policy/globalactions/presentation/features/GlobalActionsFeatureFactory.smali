@@ -24,25 +24,18 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/globalactions/presentation/view/ExtendableGlobalActionsView;Lcom/samsung/android/globalactions/util/UtilFactory;Lcom/samsung/android/globalactions/presentation/viewmodel/DefaultActionViewModelFactory;Lcom/samsung/android/globalactions/presentation/features/Features;Lcom/samsung/android/globalactions/util/ConditionChecker;)V
     .locals 0
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput-object p1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mContext:Landroid/content/Context;
 
-    .line 56
     iput-object p2, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mView:Lcom/samsung/android/globalactions/presentation/view/ExtendableGlobalActionsView;
 
-    .line 57
     iput-object p3, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mUtilFactory:Lcom/samsung/android/globalactions/util/UtilFactory;
 
-    .line 58
     iput-object p4, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mViewModelFactory:Lcom/samsung/android/globalactions/presentation/viewmodel/DefaultActionViewModelFactory;
 
-    .line 59
     iput-object p5, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
-    .line 60
     iput-object p6, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mConditionChecker:Lcom/samsung/android/globalactions/util/ConditionChecker;
 
     return-void
@@ -53,12 +46,10 @@
 .method public createActionInteractionStrategies(Ljava/lang/String;)Ljava/util/List;
     .locals 5
 
-    .line 123
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 125
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -122,7 +113,6 @@
 
     goto :goto_1
 
-    .line 129
     :pswitch_0
     new-instance p1, Lcom/samsung/android/globalactions/features/SktStrategy;
 
@@ -132,7 +122,6 @@
 
     const-class v3, Lcom/samsung/android/globalactions/util/ToastController;
 
-    .line 130
     invoke-interface {v2, v3}, Lcom/samsung/android/globalactions/util/UtilFactory;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
@@ -143,7 +132,6 @@
 
     const-class v4, Lcom/samsung/android/globalactions/util/ResourcesWrapper;
 
-    .line 131
     invoke-interface {v3, v4}, Lcom/samsung/android/globalactions/util/UtilFactory;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v3
@@ -154,7 +142,6 @@
 
     const-class v4, Lcom/samsung/android/globalactions/util/LogWrapper;
 
-    .line 132
     invoke-interface {p0, v4}, Lcom/samsung/android/globalactions/util/UtilFactory;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -163,7 +150,6 @@
 
     invoke-direct {p1, v1, v2, v3, p0}, Lcom/samsung/android/globalactions/features/SktStrategy;-><init>(Lcom/samsung/android/globalactions/util/ConditionChecker;Lcom/samsung/android/globalactions/util/ToastController;Lcom/samsung/android/globalactions/util/ResourcesWrapper;Lcom/samsung/android/globalactions/util/LogWrapper;)V
 
-    .line 129
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_1
@@ -187,12 +173,10 @@
 .method public createActionsCreationStrategies(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;)Ljava/util/List;
     .locals 3
 
-    .line 85
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
     const-string v1, "DATA_MODE"
@@ -203,7 +187,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 88
     new-instance v0, Lcom/samsung/android/globalactions/features/DataModeStrategy;
 
     iget-object v1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mViewModelFactory:Lcom/samsung/android/globalactions/presentation/viewmodel/DefaultActionViewModelFactory;
@@ -214,7 +197,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 91
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
@@ -226,7 +208,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 92
     new-instance v0, Lcom/samsung/android/globalactions/features/LockdownModeStrategy;
 
     iget-object v1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mViewModelFactory:Lcom/samsung/android/globalactions/presentation/viewmodel/DefaultActionViewModelFactory;
@@ -244,21 +225,18 @@
 .method public createDefaultActionsCreationStrategy(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;Ljava/lang/String;)Ljava/util/List;
     .locals 4
 
-    .line 143
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "emergency"
 
-    .line 145
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 146
     iget-object p2, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
     const-string v1, "SAFETY_CARE"
@@ -269,7 +247,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 147
     new-instance p2, Lcom/samsung/android/globalactions/features/SafetyCareStrategy;
 
     iget-object v1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mConditionChecker:Lcom/samsung/android/globalactions/util/ConditionChecker;
@@ -288,7 +265,6 @@
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 150
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
@@ -300,7 +276,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 151
     new-instance p1, Lcom/samsung/android/globalactions/features/DesktopModeStrategy;
 
     iget-object p2, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mContext:Landroid/content/Context;
@@ -323,7 +298,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 155
     :cond_1
     iget-object p1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
@@ -335,7 +309,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 156
     new-instance p1, Lcom/samsung/android/globalactions/features/ReserveBatteryModeStrategy;
 
     iget-object p0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mConditionChecker:Lcom/samsung/android/globalactions/util/ConditionChecker;
@@ -351,12 +324,10 @@
 .method public createDisposingStrategies(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;)Ljava/util/List;
     .locals 5
 
-    .line 111
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
     const-string v1, "DESKTOP_MODE"
@@ -367,7 +338,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
     new-instance v0, Lcom/samsung/android/globalactions/features/DesktopModeStrategy;
 
     iget-object v1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mContext:Landroid/content/Context;
@@ -397,12 +367,10 @@
 .method public createInitializationStrategies(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;)Ljava/util/List;
     .locals 6
 
-    .line 65
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 67
     iget-object v1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
     const-string v2, "DESKTOP_MODE"
@@ -413,7 +381,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 68
     new-instance v1, Lcom/samsung/android/globalactions/features/DesktopModeStrategy;
 
     iget-object v2, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mContext:Landroid/content/Context;
@@ -436,7 +403,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 72
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
@@ -448,7 +414,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 73
     new-instance v1, Lcom/samsung/android/globalactions/features/SafetyCareStrategy;
 
     iget-object v2, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mConditionChecker:Lcom/samsung/android/globalactions/util/ConditionChecker;
@@ -467,7 +432,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 76
     :cond_1
     iget-object v1, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
@@ -479,7 +443,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 77
     new-instance v1, Lcom/samsung/android/globalactions/features/KnoxContainerStrategy;
 
     iget-object p0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mConditionChecker:Lcom/samsung/android/globalactions/util/ConditionChecker;
@@ -495,7 +458,6 @@
 .method public createOnKeyListenerStrategy(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;)Ljava/util/List;
     .locals 0
 
-    .line 184
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -506,7 +468,6 @@
 .method public createSecureConfirmStrategy(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;Ljava/lang/String;)Ljava/util/List;
     .locals 0
 
-    .line 165
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -517,21 +478,18 @@
 .method public createSoftwareUpdateStrategy(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;Ljava/lang/String;)Ljava/util/List;
     .locals 3
 
-    .line 172
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     const-string/jumbo v0, "restart"
 
-    .line 174
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 175
     new-instance p2, Lcom/samsung/android/globalactions/features/FOTAForceUpdateStrategy;
 
     iget-object v0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mConditionChecker:Lcom/samsung/android/globalactions/util/ConditionChecker;
@@ -550,7 +508,6 @@
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 176
     new-instance p2, Lcom/samsung/android/globalactions/features/SecFOTAForceUpdateStrategy;
 
     iget-object v0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mConditionChecker:Lcom/samsung/android/globalactions/util/ConditionChecker;
@@ -576,7 +533,6 @@
 .method public createViewInflateStrategy()Ljava/util/List;
     .locals 0
 
-    .line 198
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -587,12 +543,10 @@
 .method public createWindowDecorationStrategies(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;)Ljava/util/List;
     .locals 2
 
-    .line 100
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mFeatures:Lcom/samsung/android/globalactions/presentation/features/Features;
 
     const-string v1, "NAV_BAR"
@@ -603,7 +557,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 103
     new-instance v0, Lcom/samsung/android/globalactions/features/NavigationBarStrategy;
 
     iget-object p0, p0, Lcom/android/server/policy/globalactions/presentation/features/GlobalActionsFeatureFactory;->mConditionChecker:Lcom/samsung/android/globalactions/util/ConditionChecker;
@@ -619,7 +572,6 @@
 .method public createWindowManagerFunctionStrategy(Lcom/samsung/android/globalactions/presentation/SamsungGlobalActions;Ljava/lang/String;)Ljava/util/List;
     .locals 0
 
-    .line 191
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V

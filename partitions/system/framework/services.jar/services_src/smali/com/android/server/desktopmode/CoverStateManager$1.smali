@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/CoverStateManager;)V
     .locals 0
 
-    .line 71
     iput-object p1, p0, Lcom/android/server/desktopmode/CoverStateManager$1;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCoverStateChanged(Lcom/samsung/android/cover/CoverState;)V
     .locals 3
 
-    .line 74
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -49,7 +47,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$1;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
@@ -59,7 +56,6 @@
 
     monitor-enter v0
 
-    .line 76
     :try_start_0
     iget-object v1, p0, Lcom/android/server/desktopmode/CoverStateManager$1;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
@@ -81,7 +77,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 78
     sget-boolean p0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p0, :cond_1
@@ -94,24 +89,20 @@
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     :cond_1
     monitor-exit v0
 
     return-void
 
-    .line 81
     :cond_2
     iget-object v1, p0, Lcom/android/server/desktopmode/CoverStateManager$1;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v1, p1}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fputmCoverState(Lcom/android/server/desktopmode/CoverStateManager;Lcom/samsung/android/cover/CoverState;)V
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/desktopmode/CoverStateManager$1;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$mupdateCoverSupportStateLocked(Lcom/android/server/desktopmode/CoverStateManager;)Z
 
-    .line 84
     monitor-exit v0
 
     return-void

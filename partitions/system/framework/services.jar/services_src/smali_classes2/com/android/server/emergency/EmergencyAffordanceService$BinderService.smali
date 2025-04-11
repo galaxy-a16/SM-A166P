@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/emergency/EmergencyAffordanceService;)V
     .locals 0
 
-    .line 295
     iput-object p1, p0, Lcom/android/server/emergency/EmergencyAffordanceService$BinderService;->this$0:Lcom/android/server/emergency/EmergencyAffordanceService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/emergency/EmergencyAffordanceService;Lcom/android/server/emergency/EmergencyAffordanceService$BinderService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/emergency/EmergencyAffordanceService$BinderService;-><init>(Lcom/android/server/emergency/EmergencyAffordanceService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 298
     iget-object p1, p0, Lcom/android/server/emergency/EmergencyAffordanceService$BinderService;->this$0:Lcom/android/server/emergency/EmergencyAffordanceService;
 
     invoke-static {p1}, Lcom/android/server/emergency/EmergencyAffordanceService;->-$$Nest$fgetmContext(Lcom/android/server/emergency/EmergencyAffordanceService;)Landroid/content/Context;
@@ -50,7 +47,6 @@
 
     return-void
 
-    .line 302
     :cond_0
     iget-object p0, p0, Lcom/android/server/emergency/EmergencyAffordanceService$BinderService;->this$0:Lcom/android/server/emergency/EmergencyAffordanceService;
 

@@ -19,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;)V
     .locals 0
 
-    .line 184
     iput-object p1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;
 
     invoke-direct {p0}, Landroid/hardware/usb/gadget/IUsbGadgetCallback$Stub;-><init>()V
@@ -30,21 +29,16 @@
 .method public constructor <init>(Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;Lcom/android/internal/util/IndentingPrintWriter;IJZ)V
     .locals 0
 
-    .line 188
     iput-object p1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;
 
     invoke-direct {p0}, Landroid/hardware/usb/gadget/IUsbGadgetCallback$Stub;-><init>()V
 
-    .line 189
     iput-object p2, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 190
     iput p3, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mRequest:I
 
-    .line 191
     iput-wide p4, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mFunctions:J
 
-    .line 192
     iput-boolean p6, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mChargingFunctions:Z
 
     return-void
@@ -61,7 +55,6 @@
 
     if-nez p3, :cond_0
 
-    .line 215
     iget-object v2, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -92,7 +85,6 @@
 
     goto :goto_0
 
-    .line 219
     :cond_0
     iget-object v2, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -122,7 +114,6 @@
 
     invoke-static {p5, v2, p4}, Lcom/android/server/usb/UsbDeviceManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 223
     :goto_0
     iget-object p0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;
 
@@ -138,7 +129,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "cb628c69682659911bca5c1d04042adba7f0de4b"
 
     return-object p0
@@ -147,7 +137,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -156,7 +145,6 @@
 .method public getUsbSpeedCb(IJ)V
     .locals 3
 
-    .line 228
     iget-object v0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -183,7 +171,6 @@
 
     invoke-static {p3, v0, p2}, Lcom/android/server/usb/UsbDeviceManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 230
     iget-object p0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;
 
     invoke-static {p0}, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;->-$$Nest$fgetmDeviceManager(Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;)Lcom/android/server/usb/UsbDeviceManager;
@@ -202,7 +189,6 @@
 
     if-nez p1, :cond_0
 
-    .line 236
     iget-object v1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -229,7 +215,6 @@
 
     goto :goto_0
 
-    .line 239
     :cond_0
     iget-object v1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -255,7 +240,6 @@
 
     invoke-static {p3, v1, p2}, Lcom/android/server/usb/UsbDeviceManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 242
     :goto_0
     iget-object p0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;
 
@@ -277,7 +261,6 @@
 
     if-nez p3, :cond_0
 
-    .line 199
     iget-object v2, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -308,7 +291,6 @@
 
     goto :goto_0
 
-    .line 203
     :cond_0
     iget-object v2, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -338,7 +320,6 @@
 
     invoke-static {p5, v2, p4}, Lcom/android/server/usb/UsbDeviceManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 207
     :goto_0
     iget-object p4, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetAidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetAidl;
 

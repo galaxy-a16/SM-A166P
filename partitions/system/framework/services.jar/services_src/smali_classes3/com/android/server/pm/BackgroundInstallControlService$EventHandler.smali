@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/os/Looper;Lcom/android/server/pm/BackgroundInstallControlService;)V
     .locals 0
 
-    .line 188
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 189
     iput-object p2, p0, Lcom/android/server/pm/BackgroundInstallControlService$EventHandler;->mService:Lcom/android/server/pm/BackgroundInstallControlService;
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 194
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_2
@@ -38,7 +35,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 208
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,7 +57,6 @@
 
     goto :goto_0
 
-    .line 204
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/BackgroundInstallControlService$EventHandler;->mService:Lcom/android/server/pm/BackgroundInstallControlService;
 
@@ -75,7 +70,6 @@
 
     goto :goto_0
 
-    .line 200
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/BackgroundInstallControlService$EventHandler;->mService:Lcom/android/server/pm/BackgroundInstallControlService;
 
@@ -89,7 +83,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/BackgroundInstallControlService$EventHandler;->mService:Lcom/android/server/pm/BackgroundInstallControlService;
 

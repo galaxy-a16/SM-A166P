@@ -19,10 +19,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 108
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -67,7 +65,6 @@
 
     move-object v8, v2
 
-    .line 151
     :try_start_0
     invoke-virtual/range {v3 .. v10}, Landroid/hardware/usb/UsbDeviceConnection;->controlTransfer(IIII[BII)I
 
@@ -81,7 +78,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 162
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,7 +105,6 @@
 
     if-eq v4, v14, :cond_1
 
-    .line 166
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +144,6 @@
 
     if-gtz v12, :cond_2
 
-    .line 172
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +162,6 @@
 
     return v14
 
-    .line 175
     :cond_2
     new-array v2, v12, [B
 
@@ -186,22 +179,18 @@
 
     move-object v11, v2
 
-    .line 176
     invoke-virtual/range {v6 .. v13}, Landroid/hardware/usb/UsbDeviceConnection;->controlTransfer(IIII[BII)I
 
     move-result v3
 
     if-lez v3, :cond_4
 
-    .line 186
     new-instance v3, Lcom/android/server/usb/descriptors/ByteStream;
 
     invoke-direct {v3, v2}, Lcom/android/server/usb/descriptors/ByteStream;-><init>([B)V
 
-    .line 187
     invoke-virtual {p0, v3}, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
 
-    .line 188
     iget-object v2, v0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mGroupTerminalBlocks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -212,12 +201,10 @@
 
     const-string v0, "Group Terminal Blocks failed parsing: 1"
 
-    .line 189
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v14
 
-    .line 192
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -247,7 +234,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     iget-object v0, v0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mGroupTerminalBlocks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -260,7 +246,6 @@
 
     return v0
 
-    .line 196
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -280,7 +265,6 @@
 
     goto :goto_0
 
-    .line 199
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -307,7 +291,6 @@
 
     const-string v2, "Can not communicate with USB device"
 
-    .line 202
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -317,14 +300,12 @@
 .method public dump(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/lang/String;J)V
     .locals 3
 
-    .line 211
     invoke-virtual {p1, p2, p3, p4}, Lcom/android/internal/util/dump/DualDumpOutputStream;->start(Ljava/lang/String;J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10500000001L
 
-    .line 213
     iget p4, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mHeaderLength:I
 
     const-string v2, "length"
@@ -333,7 +314,6 @@
 
     const-wide v0, 0x10500000002L
 
-    .line 214
     iget p4, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mHeaderDescriptorType:I
 
     const-string v2, "descriptor_type"
@@ -342,7 +322,6 @@
 
     const-wide v0, 0x10500000003L
 
-    .line 216
     iget p4, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mHeaderDescriptorSubtype:I
 
     const-string v2, "descriptor_subtype"
@@ -351,14 +330,12 @@
 
     const-wide v0, 0x10500000004L
 
-    .line 218
     iget p4, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mTotalLength:I
 
     const-string/jumbo v2, "total_length"
 
     invoke-virtual {p1, v2, v0, v1, p4}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JI)V
 
-    .line 219
     iget-object p0, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mGroupTerminalBlocks:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -382,12 +359,10 @@
 
     const-wide v1, 0x20b00000005L
 
-    .line 220
     invoke-virtual {p4, p1, v0, v1, v2}, Lcom/android/server/usb/descriptors/UsbMidiBlockParser$GroupTerminalBlock;->dump(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/lang/String;J)V
 
     goto :goto_0
 
-    .line 223
     :cond_0
     invoke-virtual {p1, p2, p3}, Lcom/android/internal/util/dump/DualDumpOutputStream;->end(J)V
 
@@ -397,35 +372,30 @@
 .method public parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
     .locals 2
 
-    .line 121
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getUnsignedByte()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mHeaderLength:I
 
-    .line 122
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getUnsignedByte()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mHeaderDescriptorType:I
 
-    .line 123
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getUnsignedByte()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mHeaderDescriptorSubtype:I
 
-    .line 124
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->unpackUsbShort()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mTotalLength:I
 
-    .line 126
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->available()I
 
@@ -435,22 +405,18 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 127
     new-instance v0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser$GroupTerminalBlock;
 
     invoke-direct {v0}, Lcom/android/server/usb/descriptors/UsbMidiBlockParser$GroupTerminalBlock;-><init>()V
 
-    .line 128
     invoke-virtual {v0, p1}, Lcom/android/server/usb/descriptors/UsbMidiBlockParser$GroupTerminalBlock;->parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
 
-    .line 129
     iget-object v1, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mGroupTerminalBlocks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 132
     :cond_0
     iget p0, p0, Lcom/android/server/usb/descriptors/UsbMidiBlockParser;->mTotalLength:I
 

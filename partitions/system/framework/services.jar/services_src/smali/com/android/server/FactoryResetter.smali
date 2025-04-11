@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 31
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -26,7 +25,6 @@
 .method public static isFactoryResetting()Z
     .locals 1
 
-    .line 37
     sget-object v0, Lcom/android/server/FactoryResetter;->sFactoryResetting:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -41,7 +39,6 @@
 
     const-string v0, "android.permission.MASTER_CLEAR"
 
-    .line 46
     invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -60,7 +57,6 @@
     :goto_0
     invoke-static {p0}, Lcom/android/internal/util/Preconditions;->checkCallAuthorization(Z)V
 
-    .line 48
     sget-object p0, Lcom/android/server/FactoryResetter;->sFactoryResetting:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V

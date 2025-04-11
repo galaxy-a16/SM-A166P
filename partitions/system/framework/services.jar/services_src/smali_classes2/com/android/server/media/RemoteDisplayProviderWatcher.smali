@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$mscanPackages(Lcom/android/server/media/RemoteDisplayProviderWatcher;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/media/RemoteDisplayProviderWatcher;->scanPackages()V
 
     return-void
@@ -40,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->DEBUG:Z
 
     return v0
@@ -53,7 +51,6 @@
 
     const/4 v1, 0x3
 
-    .line 46
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -66,43 +63,34 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/media/RemoteDisplayProviderWatcher$Callback;Landroid/os/Handler;I)V
     .locals 1
 
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
-    .line 187
     new-instance v0, Lcom/android/server/media/RemoteDisplayProviderWatcher$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/media/RemoteDisplayProviderWatcher$1;-><init>(Lcom/android/server/media/RemoteDisplayProviderWatcher;)V
 
     iput-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mScanPackagesReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 197
     new-instance v0, Lcom/android/server/media/RemoteDisplayProviderWatcher$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/media/RemoteDisplayProviderWatcher$2;-><init>(Lcom/android/server/media/RemoteDisplayProviderWatcher;)V
 
     iput-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mScanPackagesRunnable:Ljava/lang/Runnable;
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mContext:Landroid/content/Context;
 
-    .line 61
     iput-object p2, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mCallback:Lcom/android/server/media/RemoteDisplayProviderWatcher$Callback;
 
-    .line 62
     iput-object p3, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mHandler:Landroid/os/Handler;
 
-    .line 63
     iput p4, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mUserId:I
 
-    .line 64
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
@@ -117,7 +105,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 68
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +121,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,7 +141,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 70
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,7 +161,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +191,6 @@
 .method public final findProvider(Ljava/lang/String;Ljava/lang/String;)I
     .locals 3
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -219,7 +202,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 179
     iget-object v2, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -228,7 +210,6 @@
 
     check-cast v2, Lcom/android/server/media/RemoteDisplayProviderProxy;
 
-    .line 180
     invoke-virtual {v2, p1, p2}, Lcom/android/server/media/RemoteDisplayProviderProxy;->hasComponentName(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v2
@@ -251,14 +232,12 @@
 .method public final scanPackages()V
     .locals 7
 
-    .line 109
     iget-boolean v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mRunning:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 116
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -266,7 +245,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 117
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mPackageManager:Landroid/content/pm/PackageManager;
 
     iget v2, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mUserId:I
@@ -295,19 +273,16 @@
 
     check-cast v1, Landroid/content/pm/ResolveInfo;
 
-    .line 119
     iget-object v1, v1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     if-eqz v1, :cond_1
 
-    .line 120
     invoke-virtual {p0, v1}, Lcom/android/server/media/RemoteDisplayProviderWatcher;->verifyServiceTrusted(Landroid/content/pm/ServiceInfo;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 121
     iget-object v2, v1, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
 
     iget-object v4, v1, Landroid/content/pm/ServiceInfo;->name:Ljava/lang/String;
@@ -318,7 +293,6 @@
 
     if-gez v2, :cond_2
 
-    .line 123
     new-instance v2, Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     iget-object v4, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mContext:Landroid/content/Context;
@@ -335,17 +309,14 @@
 
     invoke-direct {v2, v4, v5, v1}, Lcom/android/server/media/RemoteDisplayProviderProxy;-><init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
 
-    .line 127
     invoke-virtual {v2}, Lcom/android/server/media/RemoteDisplayProviderProxy;->start()V
 
-    .line 128
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     add-int/lit8 v4, v3, 0x1
 
     invoke-virtual {v1, v3, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 129
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mCallback:Lcom/android/server/media/RemoteDisplayProviderWatcher$Callback;
 
     invoke-interface {v1, v2}, Lcom/android/server/media/RemoteDisplayProviderWatcher$Callback;->addProvider(Lcom/android/server/media/RemoteDisplayProviderProxy;)V
@@ -358,7 +329,6 @@
     :cond_2
     if-lt v2, v3, :cond_1
 
-    .line 131
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -367,13 +337,10 @@
 
     check-cast v1, Lcom/android/server/media/RemoteDisplayProviderProxy;
 
-    .line 132
     invoke-virtual {v1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->start()V
 
-    .line 133
     invoke-virtual {v1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->rebindIfDisconnected()V
 
-    .line 134
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     add-int/lit8 v4, v3, 0x1
@@ -382,7 +349,6 @@
 
     goto :goto_1
 
-    .line 140
     :cond_3
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
@@ -392,7 +358,6 @@
 
     if-ge v3, v0, :cond_4
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -404,7 +369,6 @@
     :goto_2
     if-lt v0, v3, :cond_4
 
-    .line 142
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -413,17 +377,14 @@
 
     check-cast v1, Lcom/android/server/media/RemoteDisplayProviderProxy;
 
-    .line 143
     iget-object v2, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mCallback:Lcom/android/server/media/RemoteDisplayProviderWatcher$Callback;
 
     invoke-interface {v2, v1}, Lcom/android/server/media/RemoteDisplayProviderWatcher$Callback;->removeProvider(Lcom/android/server/media/RemoteDisplayProviderProxy;)V
 
-    .line 144
     iget-object v2, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 145
     invoke-virtual {v1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->stop()V
 
     add-int/lit8 v0, v0, -0x1
@@ -437,52 +398,42 @@
 .method public start()V
     .locals 7
 
-    .line 75
     iget-boolean v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mRunning:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 76
     iput-boolean v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mRunning:Z
 
-    .line 78
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
-    .line 79
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 80
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 81
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.PACKAGE_REPLACED"
 
-    .line 82
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.PACKAGE_RESTARTED"
 
-    .line 83
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo v0, "package"
 
-    .line 84
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 85
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mScanPackagesReceiver:Landroid/content/BroadcastReceiver;
@@ -499,7 +450,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mScanPackagesRunnable:Ljava/lang/Runnable;
@@ -513,31 +463,26 @@
 .method public stop()V
     .locals 2
 
-    .line 95
     iget-boolean v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mRunning:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 96
     iput-boolean v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mRunning:Z
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mScanPackagesReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mScanPackagesRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -549,7 +494,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 103
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -571,7 +515,6 @@
 .method public final verifyServiceTrusted(Landroid/content/pm/ServiceInfo;)Z
     .locals 5
 
-    .line 151
     iget-object v0, p1, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -592,7 +535,6 @@
 
     goto :goto_0
 
-    .line 162
     :cond_0
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderWatcher;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -606,7 +548,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 167
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -638,7 +579,6 @@
 
     return p0
 
-    .line 157
     :cond_2
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;

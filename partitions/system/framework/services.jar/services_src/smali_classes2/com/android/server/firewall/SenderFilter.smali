@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$sfgetSIGNATURE()Lcom/android/server/firewall/Filter;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/firewall/SenderFilter;->SIGNATURE:Lcom/android/server/firewall/Filter;
 
     return-object v0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$sfgetSYSTEM()Lcom/android/server/firewall/Filter;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM:Lcom/android/server/firewall/Filter;
 
     return-object v0
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$sfgetSYSTEM_OR_SIGNATURE()Lcom/android/server/firewall/Filter;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM_OR_SIGNATURE:Lcom/android/server/firewall/Filter;
 
     return-object v0
@@ -46,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$sfgetUSER_ID()Lcom/android/server/firewall/Filter;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/firewall/SenderFilter;->USER_ID:Lcom/android/server/firewall/Filter;
 
     return-object v0
@@ -55,7 +51,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 45
     new-instance v0, Lcom/android/server/firewall/SenderFilter$1;
 
     const-string/jumbo v1, "sender"
@@ -64,28 +59,24 @@
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->FACTORY:Lcom/android/server/firewall/FilterFactory;
 
-    .line 67
     new-instance v0, Lcom/android/server/firewall/SenderFilter$2;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$2;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SIGNATURE:Lcom/android/server/firewall/Filter;
 
-    .line 75
     new-instance v0, Lcom/android/server/firewall/SenderFilter$3;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$3;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM:Lcom/android/server/firewall/Filter;
 
-    .line 83
     new-instance v0, Lcom/android/server/firewall/SenderFilter$4;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$4;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM_OR_SIGNATURE:Lcom/android/server/firewall/Filter;
 
-    .line 92
     new-instance v0, Lcom/android/server/firewall/SenderFilter$5;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$5;-><init>()V
@@ -104,7 +95,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 39
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 42
     :cond_0
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManagerInternal;->isUidPrivileged(I)Z
 

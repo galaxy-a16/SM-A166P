@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageSessionVerifier;Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageSessionVerifier$Callback;)V
     .locals 0
 
-    .line 171
     iput-object p1, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->this$0:Lcom/android/server/pm/PackageSessionVerifier;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->val$session:Lcom/android/server/pm/PackageInstallerSession;
@@ -32,7 +31,6 @@
 .method public onPackageInstalled(Ljava/lang/String;ILjava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 179
     iget-object p1, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->val$session:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->isStaged()Z
@@ -45,7 +43,6 @@
 
     if-ne p2, p4, :cond_0
 
-    .line 181
     iget-object p1, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->this$0:Lcom/android/server/pm/PackageSessionVerifier;
 
     iget-object p2, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->val$session:Lcom/android/server/pm/PackageInstallerSession;
@@ -61,30 +58,25 @@
     :cond_0
     if-eq p2, p4, :cond_1
 
-    .line 185
     invoke-static {p2, p3}, Landroid/content/pm/PackageManager;->installStatusToString(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 186
     iget-object p4, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->val$session:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p4, p2, p1}, Lcom/android/server/pm/PackageInstallerSession;->setSessionFailed(ILjava/lang/String;)V
 
-    .line 187
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->val$callback:Lcom/android/server/pm/PackageSessionVerifier$Callback;
 
     invoke-interface {p0, p2, p3}, Lcom/android/server/pm/PackageSessionVerifier$Callback;->onResult(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 189
     :cond_1
     iget-object p1, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->val$session:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->setSessionReady()V
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/pm/PackageSessionVerifier$1;->val$callback:Lcom/android/server/pm/PackageSessionVerifier$Callback;
 
     const/4 p1, 0x0
@@ -98,7 +90,6 @@
 .method public onUserActionRequired(Landroid/content/Intent;)V
     .locals 0
 
-    .line 174
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V

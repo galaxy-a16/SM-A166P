@@ -43,34 +43,28 @@
 .method public constructor <init>(Lcom/android/server/appprelauncher/AppPrelaunchService;Lcom/android/server/pm/pkg/AndroidPackage;II)V
     .locals 3
 
-    .line 1211
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1190
     sget-boolean p1, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     iput-boolean p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->DEBUG:Z
 
     const/4 p1, -0x1
 
-    .line 1194
     iput p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mPid:I
 
     const/4 p1, 0x0
 
-    .line 1201
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->deathReason:Ljava/lang/String;
 
-    .line 1203
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->prelaunchedTimeNs:J
 
-    .line 1207
     invoke-static {}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$sfgetPREL_APP_START_WATCHDOG_TIMEOUT_MS()I
 
     move-result p1
@@ -79,28 +73,24 @@
 
     iput-wide v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mAppWatchdogTimeMs:J
 
-    .line 1212
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->packageName:Ljava/lang/String;
 
-    .line 1213
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getProcessName()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->processName:Ljava/lang/String;
 
-    .line 1214
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->uid:I
 
-    .line 1215
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -121,7 +111,6 @@
 
     iput-object v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->spegMarkerFileMisc:Ljava/io/File;
 
-    .line 1216
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -152,18 +141,14 @@
 
     iput-object v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->spegMarkerFilePkg:Ljava/io/File;
 
-    .line 1217
     iput p3, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->finalStage:I
 
-    .line 1218
     iput p4, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->currentStage:I
 
     const/4 p1, 0x1
 
-    .line 1219
     iput-boolean p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->isBeingPrelaunched:Z
 
-    .line 1220
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getRequestedPermissions()Ljava/util/List;
 
     move-result-object p1
@@ -184,12 +169,10 @@
 .method public createOrDeleteMarkerFiles(Z)Z
     .locals 9
 
-    .line 1226
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
-    .line 1227
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
@@ -198,7 +181,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1232
     :try_start_0
     iget-object v5, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
@@ -212,14 +194,12 @@
 
     move-result-object v6
 
-    .line 1233
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getUid()I
 
     move-result v7
 
     const/4 v8, 0x1
 
-    .line 1232
     invoke-virtual {v5, v6, v8, v7}, Lcom/android/server/SpegService;->createOrDeleteMarkerFiles(Ljava/lang/String;ZI)Z
 
     move-result v5
@@ -231,7 +211,6 @@
     :cond_0
     const/4 v5, 0x0
 
-    .line 1237
     :try_start_1
     iget-object v6, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->spegMarkerFilePkg:Ljava/io/File;
 
@@ -239,7 +218,6 @@
 
     move-result v5
 
-    .line 1238
     iget-object v6, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->spegMarkerFileMisc:Ljava/io/File;
 
     invoke-virtual {v6}, Ljava/io/File;->delete()Z
@@ -258,7 +236,6 @@
 
     goto :goto_2
 
-    .line 1240
     :catch_0
     :try_start_2
     new-instance v6, Ljava/lang/StringBuilder;
@@ -283,21 +260,17 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1244
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1246
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v2
 
-    .line 1247
     iget-boolean p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->DEBUG:Z
 
     if-eqz p0, :cond_2
 
-    .line 1248
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -322,7 +295,6 @@
 
     sub-long/2addr v2, v0
 
-    .line 1249
     invoke-virtual {p1, v2, v3}, Ljava/util/concurrent/TimeUnit;->toMicros(J)J
 
     move-result-wide v0
@@ -339,24 +311,20 @@
 
     move-result-object p0
 
-    .line 1248
     invoke-static {v4, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return v5
 
-    .line 1244
     :goto_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1245
     throw p0
 .end method
 
 .method public getAppWatchdogRemainingTimeMs()J
     .locals 5
 
-    .line 1348
     sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -371,7 +339,6 @@
 
     move-result-wide v0
 
-    .line 1349
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getAppWatchogTimeoutMs()J
 
     move-result-wide v2
@@ -390,7 +357,6 @@
 .method public getAppWatchogTimeoutMs()J
     .locals 2
 
-    .line 1344
     iget-wide v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mAppWatchdogTimeMs:J
 
     return-wide v0
@@ -399,7 +365,6 @@
 .method public getDeathReason()Ljava/lang/String;
     .locals 0
 
-    .line 1376
     iget-object p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->deathReason:Ljava/lang/String;
 
     if-eqz p0, :cond_0
@@ -415,7 +380,6 @@
 .method public getKilled()Z
     .locals 0
 
-    .line 1340
     iget-boolean p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->isKilled:Z
 
     return p0
@@ -424,7 +388,6 @@
 .method public getLock()Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;
     .locals 3
 
-    .line 1285
     iget-boolean v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -435,7 +398,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1286
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -475,7 +437,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 1304
     iget-object p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->packageName:Ljava/lang/String;
 
     return-object p0
@@ -486,7 +447,6 @@
 
     monitor-enter p0
 
-    .line 1316
     :try_start_0
     iget v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mPid:I
     :try_end_0
@@ -507,7 +467,6 @@
 .method public getPrelaunched()Z
     .locals 0
 
-    .line 1296
     iget-boolean p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->isBeingPrelaunched:Z
 
     return p0
@@ -516,7 +475,6 @@
 .method public getPrelaunchedTimeNs()J
     .locals 2
 
-    .line 1383
     iget-wide v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->prelaunchedTimeNs:J
 
     return-wide v0
@@ -525,7 +483,6 @@
 .method public getProcessName()Ljava/lang/String;
     .locals 0
 
-    .line 1312
     iget-object p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->processName:Ljava/lang/String;
 
     return-object p0
@@ -536,7 +493,6 @@
 
     monitor-enter p0
 
-    .line 1292
     :try_start_0
     iget v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->currentStage:I
     :try_end_0
@@ -557,7 +513,6 @@
 .method public getUid()I
     .locals 0
 
-    .line 1308
     iget p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->uid:I
 
     return p0
@@ -566,7 +521,6 @@
 .method public getUserId()I
     .locals 0
 
-    .line 1332
     iget p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->uid:I
 
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -579,7 +533,6 @@
 .method public isProcessAlive()Z
     .locals 3
 
-    .line 1327
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getKilled()Z
 
     move-result v0
@@ -594,7 +547,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1328
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getPid()I
 
     move-result v0
@@ -633,14 +585,12 @@
 .method public revokeOrGrantWakeLockPermissionIfNeeded(Z)V
     .locals 3
 
-    .line 1353
     iget-boolean v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mHasWakeLockPermission:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1354
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -678,7 +628,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1357
     :try_start_0
     iget-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
@@ -692,18 +641,15 @@
 
     const/4 p1, 0x1
 
-    .line 1358
     iput-boolean p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mWakeLockRevoked:Z
 
     goto :goto_1
 
-    .line 1359
     :cond_2
     iget-boolean p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mWakeLockRevoked:Z
 
     if-eqz p1, :cond_3
 
-    .line 1360
     iget-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-static {p1}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$fgetmPermissionManager(Lcom/android/server/appprelauncher/AppPrelaunchService;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
@@ -716,7 +662,6 @@
 
     const/4 p1, 0x0
 
-    .line 1361
     iput-boolean p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mWakeLockRevoked:Z
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -726,7 +671,6 @@
     :catch_0
     move-exception p1
 
-    .line 1364
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -763,12 +707,10 @@
 .method public setDeathReason(Ljava/lang/String;)V
     .locals 1
 
-    .line 1370
     iget-object v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->deathReason:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 1371
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->deathReason:Ljava/lang/String;
 
     :cond_0
@@ -780,7 +722,6 @@
 
     const/4 v0, 0x1
 
-    .line 1336
     iput-boolean v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->isKilled:Z
 
     return-void
@@ -791,7 +732,6 @@
 
     monitor-enter p0
 
-    .line 1320
     :try_start_0
     iget v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mPid:I
     :try_end_0
@@ -801,19 +741,16 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1321
     monitor-exit p0
 
     return-void
 
-    .line 1323
     :cond_0
     :try_start_1
     iput p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->mPid:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1324
     monitor-exit p0
 
     return-void
@@ -829,7 +766,6 @@
 .method public setPrelaunched(Z)V
     .locals 0
 
-    .line 1300
     iput-boolean p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->isBeingPrelaunched:Z
 
     return-void
@@ -840,20 +776,17 @@
 
     monitor-enter p0
 
-    .line 1256
     :try_start_0
     iget v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->currentStage:I
 
     if-gt p1, v0, :cond_1
 
-    .line 1257
     iget-boolean v0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "PRELService"
 
-    .line 1258
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -884,7 +817,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1261
     :cond_0
     monitor-exit p0
 
@@ -895,7 +827,6 @@
 
     if-lt p1, v0, :cond_2
 
-    .line 1266
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -905,7 +836,6 @@
 
     const/4 v2, 0x0
 
-    .line 1269
     :try_start_2
     iget-object v3, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
@@ -929,7 +859,6 @@
     :try_start_3
     const-string v4, "PRELService"
 
-    .line 1271
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -948,39 +877,31 @@
 
     invoke-static {v4, v5, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1273
     :goto_0
     invoke-virtual {p0, v2}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->createOrDeleteMarkerFiles(Z)Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1275
     :try_start_4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1277
     invoke-virtual {p0, v2}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->setPrelaunched(Z)V
 
     goto :goto_2
 
-    .line 1275
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1276
     throw p1
 
-    .line 1279
     :cond_2
     :goto_2
     iput p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->currentStage:I
 
-    .line 1281
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 1282
     monitor-exit p0
 
     return-void
@@ -996,7 +917,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 1388
     sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -1011,7 +931,6 @@
 
     move-result-wide v0
 
-    .line 1389
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1068,7 +987,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1394
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchService$PrelaunchedApp;->getStage()I
 
     move-result v0
@@ -1077,7 +995,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 1395
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

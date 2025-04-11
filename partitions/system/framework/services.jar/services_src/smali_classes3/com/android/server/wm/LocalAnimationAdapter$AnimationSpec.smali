@@ -10,7 +10,6 @@
 .method public asWindowAnimationSpec()Lcom/android/server/wm/WindowAnimationSpec;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -19,7 +18,6 @@
 .method public calculateStatusBarTransitionStartTime()J
     .locals 2
 
-    .line 127
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -30,7 +28,6 @@
 .method public canSkipFirstFrame()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -42,15 +39,12 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 0
 
-    .line 171
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
-    .line 172
     invoke-interface {p0, p1}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->dumpDebugInner(Landroid/util/proto/ProtoOutputStream;)V
 
-    .line 173
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -62,7 +56,6 @@
 .method public getBackgroundColor()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -74,7 +67,6 @@
 .method public getFraction(F)F
     .locals 2
 
-    .line 164
     invoke-interface {p0}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->getDuration()J
 
     move-result-wide v0
@@ -101,7 +93,6 @@
 .method public getShowBackground()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -110,7 +101,6 @@
 .method public getShowWallpaper()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

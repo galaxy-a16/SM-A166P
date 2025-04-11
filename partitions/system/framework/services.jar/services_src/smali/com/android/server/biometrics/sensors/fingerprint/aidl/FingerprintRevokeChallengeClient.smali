@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$gybiddTpS1qEt_kkB8jxXX_wV0o(Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient;->lambda$new$0()V
 
     return-void
@@ -22,13 +21,10 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;ILjava/lang/String;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;J)V
     .locals 0
 
-    .line 55
     invoke-direct/range {p0 .. p8}, Lcom/android/server/biometrics/sensors/RevokeChallengeClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;ILjava/lang/String;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
-    .line 56
     iput-wide p9, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient;->mChallenge:J
 
-    .line 59
     new-instance p1, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient;)V
@@ -41,7 +37,6 @@
 .method private synthetic lambda$new$0()V
     .locals 4
 
-    .line 59
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result v0
@@ -62,7 +57,6 @@
 .method public getHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 91
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object p0
@@ -77,7 +71,6 @@
 .method public onChallengeRevoked(IIJ)V
     .locals 0
 
-    .line 78
     iget-wide p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient;->mChallenge:J
 
     cmp-long p1, p3, p1
@@ -91,13 +84,11 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 79
     :goto_0
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     invoke-interface {p2, p0, p1}, Lcom/android/server/biometrics/sensors/ClientMonitorCallback;->onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
 
-    .line 82
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -112,7 +103,6 @@
 .method public startHalOperation()V
     .locals 4
 
-    .line 66
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getFreshDaemon()Ljava/lang/Object;
 
@@ -128,7 +118,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/hardware/biometrics/fingerprint/ISession;->revokeChallenge(J)V
 
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintRevokeChallengeClient;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -150,10 +139,8 @@
 
     const-string v2, "Unable to revokeChallenge"
 
-    .line 72
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0

@@ -26,7 +26,6 @@
 .method public static bridge synthetic -$$Nest$fgetcomponent(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;)Landroid/content/ComponentName;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->component:Landroid/content/ComponentName;
 
     return-object p0
@@ -35,7 +34,6 @@
 .method public static bridge synthetic -$$Nest$fgetisEdgeLighting(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->isEdgeLighting:Z
 
     return p0
@@ -44,7 +42,6 @@
 .method public static bridge synthetic -$$Nest$fgettoken(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;)Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->token:Landroid/os/IBinder;
 
     return-object p0
@@ -53,7 +50,6 @@
 .method public static bridge synthetic -$$Nest$fputisEdgeLighting(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->isEdgeLighting:Z
 
     return-void
@@ -62,7 +58,6 @@
 .method public static bridge synthetic -$$Nest$m_onEdgeLightingStarted(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->_onEdgeLightingStarted()V
 
     return-void
@@ -71,7 +66,6 @@
 .method public static bridge synthetic -$$Nest$m_onEdgeLightingStopped(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->_onEdgeLightingStopped()V
 
     return-void
@@ -80,12 +74,10 @@
 .method public constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;Landroid/os/IBinder;Landroid/content/ComponentName;II)V
     .locals 1
 
-    .line 171
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 152
     new-instance v0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener$1;
 
     invoke-static {p1}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$fgetmLooper(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;)Landroid/os/Looper;
@@ -96,23 +88,18 @@
 
     iput-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->mHandler:Landroid/os/Handler;
 
-    .line 172
     iput-object p2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->token:Landroid/os/IBinder;
 
-    .line 173
     iput-object p3, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->component:Landroid/content/ComponentName;
 
-    .line 174
     iput p4, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->pid:I
 
-    .line 175
     iput p5, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->uid:I
 
     if-eqz p2, :cond_0
 
     const/4 p1, 0x0
 
-    .line 178
     :try_start_0
     invoke-interface {p2, p0, p1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -120,7 +107,6 @@
 
     goto :goto_0
 
-    .line 181
     :catch_0
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -140,7 +126,6 @@
 .method public final _onEdgeLightingStarted()V
     .locals 2
 
-    .line 220
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->token:Landroid/os/IBinder;
 
@@ -150,7 +135,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 222
     invoke-interface {p0}, Lcom/samsung/android/edge/IEdgeLightingCallback;->onEdgeLightingStarted()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -160,7 +144,6 @@
     :catch_0
     move-exception p0
 
-    .line 225
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -177,7 +160,6 @@
 .method public final _onEdgeLightingStopped()V
     .locals 2
 
-    .line 231
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->token:Landroid/os/IBinder;
 
@@ -187,7 +169,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 233
     invoke-interface {p0}, Lcom/samsung/android/edge/IEdgeLightingCallback;->onEdgeLightingStopped()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -197,7 +178,6 @@
     :catch_0
     move-exception p0
 
-    .line 236
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -214,7 +194,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 187
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -241,7 +220,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingHistory;->getInstance()Lcom/android/server/notification/edgelighting/EdgeLightingHistory;
 
     move-result-object v0
@@ -256,14 +234,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/notification/edgelighting/EdgeLightingHistory;->updateListenerHistory(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;
 
     invoke-static {v0}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$fgetmListeners(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;)Ljava/util/ArrayList;
@@ -272,7 +248,6 @@
 
     monitor-enter v0
 
-    .line 191
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;
 
@@ -282,12 +257,10 @@
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 192
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
@@ -299,7 +272,6 @@
     :catchall_0
     move-exception p0
 
-    .line 192
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -311,7 +283,6 @@
 .method public onEdgeLightingStarted()V
     .locals 2
 
-    .line 197
     sget-boolean v0, Lcom/android/server/notification/edgelighting/EdgeLightingHistory;->IS_DEV_DEBUG:Z
 
     if-nez v0, :cond_0
@@ -322,7 +293,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 198
     :cond_0
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -332,13 +302,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->token:Landroid/os/IBinder;
 
     if-nez v0, :cond_2
 
-    .line 201
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -349,7 +317,6 @@
 
     return-void
 
-    .line 204
     :cond_2
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->mHandler:Landroid/os/Handler;
 
@@ -363,7 +330,6 @@
 .method public onEdgeLightingStopped()V
     .locals 2
 
-    .line 208
     sget-boolean v0, Lcom/android/server/notification/edgelighting/EdgeLightingHistory;->IS_DEV_DEBUG:Z
 
     if-nez v0, :cond_0
@@ -374,7 +340,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 209
     :cond_0
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -384,13 +349,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->token:Landroid/os/IBinder;
 
     if-nez v0, :cond_2
 
-    .line 212
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -401,7 +364,6 @@
 
     return-void
 
-    .line 215
     :cond_2
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;->mHandler:Landroid/os/Handler;
 
@@ -415,7 +377,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

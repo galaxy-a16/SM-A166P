@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;ILjava/lang/String;)V
     .locals 0
 
-    .line 50
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/BiometricUserState;-><init>(Landroid/content/Context;ILjava/lang/String;)V
 
     return-void
@@ -18,10 +17,8 @@
 .method public doWriteState(Lcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 7
 
-    .line 76
     monitor-enter p0
 
-    .line 77
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricUserState;->mBiometrics:Ljava/util/ArrayList;
 
@@ -29,7 +26,6 @@
 
     move-result-object v0
 
-    .line 78
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -38,10 +34,8 @@
 
     const/4 v1, 0x0
 
-    .line 80
     invoke-interface {p1, v1, p0}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 82
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -51,7 +45,6 @@
     :goto_0
     if-ge v2, p0, :cond_0
 
-    .line 84
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -60,12 +53,10 @@
 
     const-string v4, "face"
 
-    .line 85
     invoke-interface {p1, v1, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v4, "faceId"
 
-    .line 86
     invoke-virtual {v3}, Landroid/hardware/face/Face;->getBiometricId()I
 
     move-result v5
@@ -74,7 +65,6 @@
 
     const-string/jumbo v4, "name"
 
-    .line 87
     invoke-virtual {v3}, Landroid/hardware/face/Face;->getName()Ljava/lang/CharSequence;
 
     move-result-object v5
@@ -87,7 +77,6 @@
 
     const-string v4, "deviceId"
 
-    .line 88
     invoke-virtual {v3}, Landroid/hardware/face/Face;->getDeviceId()J
 
     move-result-wide v5
@@ -96,7 +85,6 @@
 
     const-string v3, "face"
 
-    .line 89
     invoke-interface {p1, v1, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     add-int/lit8 v2, v2, 0x1
@@ -106,7 +94,6 @@
     :cond_0
     const-string p0, "faces"
 
-    .line 92
     invoke-interface {p1, v1, p0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     return-void
@@ -114,7 +101,6 @@
     :catchall_0
     move-exception p1
 
-    .line 78
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -126,7 +112,6 @@
 .method public getBiometricsTag()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "faces"
 
     return-object p0
@@ -135,12 +120,10 @@
 .method public getCopy(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .locals 6
 
-    .line 65
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 66
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -158,7 +141,6 @@
 
     check-cast v0, Landroid/hardware/face/Face;
 
-    .line 67
     new-instance v1, Landroid/hardware/face/Face;
 
     invoke-virtual {v0}, Landroid/hardware/face/Face;->getName()Ljava/lang/CharSequence;
@@ -186,7 +168,6 @@
 .method public getNameTemplateResource()I
     .locals 0
 
-    .line 0
     const p0, 0x1040509
 
     return p0
@@ -195,12 +176,10 @@
 .method public parseBiometricsLocked(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 7
 
-    .line 99
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 101
     :cond_0
     :goto_0
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -215,7 +194,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 102
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v3
@@ -231,7 +209,6 @@
 
     goto :goto_0
 
-    .line 107
     :cond_2
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
@@ -239,7 +216,6 @@
 
     const-string v2, "face"
 
-    .line 108
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -250,26 +226,22 @@
 
     const/4 v2, 0x0
 
-    .line 109
     invoke-interface {p1, v2, v1}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v3, "faceId"
 
-    .line 110
     invoke-interface {p1, v2, v3}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
     const-string v4, "deviceId"
 
-    .line 111
     invoke-interface {p1, v2, v4}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeLong(Ljava/lang/String;Ljava/lang/String;)J
 
     move-result-wide v4
 
-    .line 112
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/BiometricUserState;->mBiometrics:Ljava/util/ArrayList;
 
     new-instance v6, Landroid/hardware/face/Face;

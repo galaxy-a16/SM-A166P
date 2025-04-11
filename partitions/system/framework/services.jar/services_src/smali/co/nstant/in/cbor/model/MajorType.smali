@@ -33,7 +33,6 @@
 .method public static synthetic $values()[Lco/nstant/in/cbor/model/MajorType;
     .locals 9
 
-    .line 3
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->INVALID:Lco/nstant/in/cbor/model/MajorType;
 
     sget-object v1, Lco/nstant/in/cbor/model/MajorType;->UNSIGNED_INTEGER:Lco/nstant/in/cbor/model/MajorType;
@@ -62,7 +61,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 5
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const/4 v1, -0x1
@@ -75,7 +73,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->INVALID:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 18
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const-string v1, "UNSIGNED_INTEGER"
@@ -86,7 +83,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->UNSIGNED_INTEGER:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 27
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const-string v1, "NEGATIVE_INTEGER"
@@ -97,7 +93,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->NEGATIVE_INTEGER:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 39
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const-string v1, "BYTE_STRING"
@@ -108,7 +103,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->BYTE_STRING:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 52
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const-string v1, "UNICODE_STRING"
@@ -119,7 +113,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->UNICODE_STRING:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 64
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const-string v1, "ARRAY"
@@ -130,7 +123,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->ARRAY:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 79
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const-string v1, "MAP"
@@ -141,7 +133,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->MAP:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 85
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const-string v1, "TAG"
@@ -152,7 +143,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->TAG:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 91
     new-instance v0, Lco/nstant/in/cbor/model/MajorType;
 
     const-string v1, "SPECIAL"
@@ -163,7 +153,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/MajorType;->SPECIAL:Lco/nstant/in/cbor/model/MajorType;
 
-    .line 3
     invoke-static {}, Lco/nstant/in/cbor/model/MajorType;->$values()[Lco/nstant/in/cbor/model/MajorType;
 
     move-result-object v0
@@ -176,10 +165,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 95
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 96
     iput p3, p0, Lco/nstant/in/cbor/model/MajorType;->value:I
 
     return-void
@@ -192,54 +179,45 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 122
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->INVALID:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
 
-    .line 120
     :pswitch_0
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->SPECIAL:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
 
-    .line 118
     :pswitch_1
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->TAG:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
 
-    .line 116
     :pswitch_2
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->MAP:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
 
-    .line 114
     :pswitch_3
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->ARRAY:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
 
-    .line 112
     :pswitch_4
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->UNICODE_STRING:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
 
-    .line 110
     :pswitch_5
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->BYTE_STRING:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
 
-    .line 108
     :pswitch_6
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->NEGATIVE_INTEGER:Lco/nstant/in/cbor/model/MajorType;
 
     return-object p0
 
-    .line 106
     :pswitch_7
     sget-object p0, Lco/nstant/in/cbor/model/MajorType;->UNSIGNED_INTEGER:Lco/nstant/in/cbor/model/MajorType;
 
@@ -261,7 +239,6 @@
 .method public static valueOf(Ljava/lang/String;)Lco/nstant/in/cbor/model/MajorType;
     .locals 1
 
-    .line 3
     const-class v0, Lco/nstant/in/cbor/model/MajorType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -276,7 +253,6 @@
 .method public static values()[Lco/nstant/in/cbor/model/MajorType;
     .locals 1
 
-    .line 3
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->$VALUES:[Lco/nstant/in/cbor/model/MajorType;
 
     invoke-virtual {v0}, [Lco/nstant/in/cbor/model/MajorType;->clone()Ljava/lang/Object;
@@ -293,7 +269,6 @@
 .method public getValue()I
     .locals 0
 
-    .line 100
     iget p0, p0, Lco/nstant/in/cbor/model/MajorType;->value:I
 
     return p0

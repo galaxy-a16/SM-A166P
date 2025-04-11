@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/app/GameServiceProviderInstanceFactoryImpl;->mContext:Landroid/content/Context;
 
     return-void
@@ -32,20 +30,16 @@
 
     move-object/from16 v1, p1
 
-    .line 53
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v2
 
-    .line 54
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
     move-result-object v7
 
-    .line 55
     new-instance v14, Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
-    .line 57
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v3
@@ -56,7 +50,6 @@
 
     new-instance v6, Lcom/android/server/app/GameClassifierImpl;
 
-    .line 60
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
@@ -65,14 +58,12 @@
 
     invoke-direct {v5, v2, v7, v6}, Lcom/android/server/app/GameTaskInfoProvider;-><init>(Landroid/os/UserHandle;Landroid/app/IActivityTaskManager;Lcom/android/server/app/GameClassifier;)V
 
-    .line 61
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object v6
 
     const-class v8, Landroid/app/ActivityManagerInternal;
 
-    .line 62
     invoke-static {v8}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v8
@@ -81,7 +72,6 @@
 
     const-string/jumbo v9, "window"
 
-    .line 64
     invoke-static {v9}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v9
@@ -90,7 +80,6 @@
 
     const-class v10, Lcom/android/server/wm/WindowManagerInternal;
 
-    .line 65
     invoke-static {v10}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v10
@@ -99,7 +88,6 @@
 
     const-class v11, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 66
     invoke-static {v11}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v11

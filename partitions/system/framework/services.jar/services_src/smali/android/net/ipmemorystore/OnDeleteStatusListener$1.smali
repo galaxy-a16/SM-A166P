@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 0
 
-    .line 38
     iput-object p1, p0, Landroid/net/ipmemorystore/OnDeleteStatusListener$1;->val$listener:Landroid/net/ipmemorystore/OnDeleteStatusListener;
 
     invoke-direct {p0}, Landroid/net/ipmemorystore/IOnStatusAndCountListener$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "d5ea5eb3ddbdaa9a986ce6ba70b0804ca3e39b0c"
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xa
 
     return p0
@@ -42,12 +39,10 @@
 .method public onComplete(Landroid/net/ipmemorystore/StatusParcelable;I)V
     .locals 1
 
-    .line 41
     iget-object p0, p0, Landroid/net/ipmemorystore/OnDeleteStatusListener$1;->val$listener:Landroid/net/ipmemorystore/OnDeleteStatusListener;
 
     if-eqz p0, :cond_0
 
-    .line 42
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     invoke-direct {v0, p1}, Landroid/net/ipmemorystore/Status;-><init>(Landroid/net/ipmemorystore/StatusParcelable;)V

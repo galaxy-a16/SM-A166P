@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService$$ExternalSyntheticLambda2;->f$0:Landroid/os/RemoteCallback;
@@ -27,7 +26,6 @@
 .method public final run(Landroid/os/IInterface;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService$$ExternalSyntheticLambda2;->f$0:Landroid/os/RemoteCallback;
 
     check-cast p1, Landroid/service/autofill/IInlineSuggestionRenderService;

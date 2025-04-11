@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/accessibility/AccessibilityManagerService;)V
     .locals 0
 
-    .line 6937
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$DaltonizerStateContentObserver;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
-    .line 6938
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,10 +27,8 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 6943
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 6944
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$DaltonizerStateContentObserver;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {p0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$mapplyDaltonizerSettings(Lcom/android/server/accessibility/AccessibilityManagerService;)V

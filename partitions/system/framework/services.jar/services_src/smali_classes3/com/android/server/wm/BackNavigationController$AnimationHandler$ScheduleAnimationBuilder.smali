@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$4H1f99p2PKHNvlr3bdS6i-PdDdI(Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;[Landroid/view/RemoteAnimationTarget;Landroid/window/IBackAnimationFinishedCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->lambda$build$0([Landroid/view/RemoteAnimationTarget;Landroid/window/IBackAnimationFinishedCallback;)V
 
     return-void
@@ -30,15 +29,12 @@
 .method public constructor <init>(Lcom/android/server/wm/BackNavigationController$AnimationHandler;ILandroid/window/BackAnimationAdapter;)V
     .locals 0
 
-    .line 1077
     iput-object p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->this$0:Lcom/android/server/wm/BackNavigationController$AnimationHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1078
     iput p2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mType:I
 
-    .line 1079
     iput-object p3, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mBackAnimationAdapter:Landroid/window/BackAnimationAdapter;
 
     return-void
@@ -47,7 +43,6 @@
 .method private synthetic lambda$build$0([Landroid/view/RemoteAnimationTarget;Landroid/window/IBackAnimationFinishedCallback;)V
     .locals 1
 
-    .line 1137
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mBackAnimationAdapter:Landroid/window/BackAnimationAdapter;
 
@@ -66,7 +61,6 @@
     :catch_0
     move-exception p0
 
-    .line 1140
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -78,7 +72,6 @@
 .method public final applyPreviewStrategy(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/ActivityRecord;)V
     .locals 1
 
-    .line 1107
     iget-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->this$0:Lcom/android/server/wm/BackNavigationController$AnimationHandler;
 
     invoke-virtual {v0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->isSupportWindowlessSurface()Z
@@ -99,7 +92,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1108
     iget-object p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->this$0:Lcom/android/server/wm/BackNavigationController$AnimationHandler;
 
     invoke-static {p1}, Lcom/android/server/wm/BackNavigationController;->getSnapshot(Lcom/android/server/wm/WindowContainer;)Landroid/window/TaskSnapshot;
@@ -110,7 +102,6 @@
 
     return-void
 
-    .line 1111
     :cond_0
     invoke-static {p2}, Lcom/android/server/wm/BackNavigationController;->-$$Nest$smsetLaunchBehind(Lcom/android/server/wm/ActivityRecord;)V
 
@@ -120,7 +111,6 @@
 .method public build()Ljava/lang/Runnable;
     .locals 5
 
-    .line 1115
     iget-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mOpenTarget:Lcom/android/server/wm/WindowContainer;
 
     const/4 v1, 0x0
@@ -133,7 +123,6 @@
 
     goto :goto_1
 
-    .line 1118
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
 
@@ -141,7 +130,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1119
     iget-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mOpenTarget:Lcom/android/server/wm/WindowContainer;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
@@ -154,7 +142,6 @@
 
     goto :goto_0
 
-    .line 1120
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mOpenTarget:Lcom/android/server/wm/WindowContainer;
 
@@ -164,7 +151,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1121
     iget-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mOpenTarget:Lcom/android/server/wm/WindowContainer;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
@@ -183,12 +169,10 @@
 
     const-string v0, "No opening activity"
 
-    .line 1123
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 1127
     :cond_3
     iget-object v2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->this$0:Lcom/android/server/wm/BackNavigationController$AnimationHandler;
 
@@ -204,25 +188,21 @@
 
     return-object v1
 
-    .line 1130
     :cond_4
     iget-object v1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mOpenTarget:Lcom/android/server/wm/WindowContainer;
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->applyPreviewStrategy(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/ActivityRecord;)V
 
-    .line 1132
     invoke-virtual {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->makeAnimationFinishedCallback()Landroid/window/IBackAnimationFinishedCallback;
 
     move-result-object v0
 
-    .line 1133
     iget-object v1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->this$0:Lcom/android/server/wm/BackNavigationController$AnimationHandler;
 
     invoke-virtual {v1}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->getAnimationTargets()[Landroid/view/RemoteAnimationTarget;
 
     move-result-object v1
 
-    .line 1135
     new-instance v2, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder$$ExternalSyntheticLambda0;
 
     invoke-direct {v2, p0, v1, v0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;[Landroid/view/RemoteAnimationTarget;Landroid/window/IBackAnimationFinishedCallback;)V
@@ -237,7 +217,6 @@
 .method public containTarget(Lcom/android/server/wm/WindowContainer;)Z
     .locals 2
 
-    .line 1094
     iget-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mOpenTarget:Lcom/android/server/wm/WindowContainer;
 
     if-eq p1, v0, :cond_1
@@ -246,7 +225,6 @@
 
     if-eq p1, v1, :cond_1
 
-    .line 1095
     invoke-virtual {v0, p1}, Lcom/android/server/wm/WindowContainer;->hasChild(Lcom/android/server/wm/WindowContainer;)Z
 
     move-result v0
@@ -279,7 +257,6 @@
 .method public final makeAnimationFinishedCallback()Landroid/window/IBackAnimationFinishedCallback;
     .locals 1
 
-    .line 1146
     new-instance v0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder$1;-><init>(Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;)V
@@ -290,10 +267,8 @@
 .method public setComposeTarget(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
     .locals 0
 
-    .line 1083
     iput-object p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mCloseTarget:Lcom/android/server/wm/WindowContainer;
 
-    .line 1084
     iput-object p2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mOpenTarget:Lcom/android/server/wm/WindowContainer;
 
     return-object p0
@@ -302,7 +277,6 @@
 .method public setIsLaunchBehind(Z)Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
     .locals 0
 
-    .line 1089
     iput-boolean p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->mIsLaunchBehind:Z
 
     return-object p0

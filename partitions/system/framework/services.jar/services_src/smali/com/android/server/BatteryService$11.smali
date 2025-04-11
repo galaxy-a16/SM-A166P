@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 1132
     iput-object p1, p0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 1134
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "android.samsung.media.action.AUDIO_MODE"
 
-    .line 1135
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -42,12 +39,10 @@
 
     const/4 v0, 0x0
 
-    .line 1136
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 1137
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -68,7 +63,6 @@
 
     invoke-static {p2, v0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1138
     iget-object p2, p0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p2}, Lcom/android/server/BatteryService;->-$$Nest$fgetmHandler(Lcom/android/server/BatteryService;)Landroid/os/Handler;

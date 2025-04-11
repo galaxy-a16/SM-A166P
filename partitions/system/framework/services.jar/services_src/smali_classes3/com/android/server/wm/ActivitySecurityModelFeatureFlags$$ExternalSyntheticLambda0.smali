@@ -20,7 +20,6 @@
 .method public final onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/wm/ActivitySecurityModelFeatureFlags;->$r8$lambda$C19FVKBY_gQiSxGQKKEeFVFLW4Q(Landroid/provider/DeviceConfig$Properties;)V
 
     return-void

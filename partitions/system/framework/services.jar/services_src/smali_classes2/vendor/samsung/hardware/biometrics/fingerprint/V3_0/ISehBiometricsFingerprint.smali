@@ -19,30 +19,25 @@
     :cond_0
     const-string/jumbo v1, "vendor.samsung.hardware.biometrics.fingerprint@3.0::ISehBiometricsFingerprint"
 
-    .line 22
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 24
     instance-of v3, v2, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;
 
     if-eqz v3, :cond_1
 
-    .line 25
     check-cast v2, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;
 
     return-object v2
 
-    .line 28
     :cond_1
     new-instance v2, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Proxy;
 
     invoke-direct {v2, p0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 31
     :try_start_0
     invoke-interface {v2}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 32
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -86,7 +80,6 @@
 
     const-string v0, "default"
 
-    .line 88
     invoke-static {v0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;->getService(Ljava/lang/String;)Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;
 
     move-result-object v0
@@ -99,7 +92,6 @@
 
     const-string/jumbo v0, "vendor.samsung.hardware.biometrics.fingerprint@3.0::ISehBiometricsFingerprint"
 
-    .line 78
     invoke-static {v0, p0}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;)Landroid/os/IHwBinder;
 
     move-result-object p0

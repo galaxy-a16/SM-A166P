@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/aidl/TestHal;Landroid/hardware/biometrics/face/ISessionCallback;)V
     .locals 0
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/TestHal;
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
@@ -32,10 +31,8 @@
 
     const-string p2, "authenticate"
 
-    .line 108
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     new-instance p1, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1$2;
 
     invoke-direct {p1, p0}, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1$2;-><init>(Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;)V
@@ -46,7 +43,6 @@
 .method public authenticateWithContext(JLandroid/hardware/biometrics/common/OperationContext;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 196
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->authenticate(J)Landroid/hardware/biometrics/common/ICancellationSignal;
 
     move-result-object p0
@@ -61,10 +57,8 @@
 
     const-string v1, "close"
 
-    .line 189
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     invoke-interface {p0}, Landroid/hardware/biometrics/face/ISessionCallback;->onSessionClosed()V
@@ -79,10 +73,8 @@
 
     const-string v1, "detectInteraction"
 
-    .line 127
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     new-instance v0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1$3;-><init>(Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;)V
@@ -93,7 +85,6 @@
 .method public detectInteractionWithContext(Landroid/hardware/biometrics/common/OperationContext;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 208
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->detectInteraction()Landroid/hardware/biometrics/common/ICancellationSignal;
 
     move-result-object p0
@@ -108,10 +99,8 @@
 
     const-string p2, "enroll"
 
-    .line 89
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     new-instance p1, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1$1;-><init>(Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;)V
@@ -122,7 +111,6 @@
 .method public enrollWithContext(Landroid/hardware/keymaster/HardwareAuthToken;B[BLandroid/hardware/common/NativeHandle;Landroid/hardware/biometrics/common/OperationContext;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 203
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->enroll(Landroid/hardware/keymaster/HardwareAuthToken;B[BLandroid/hardware/common/NativeHandle;)Landroid/hardware/biometrics/common/ICancellationSignal;
 
     move-result-object p0
@@ -137,10 +125,8 @@
 
     const-string v1, "enumerateEnrollments"
 
-    .line 146
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     const/4 v0, 0x0
@@ -159,10 +145,8 @@
 
     const-string v1, "generateChallenge"
 
-    .line 71
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     const-wide/16 v0, 0x0
@@ -179,10 +163,8 @@
 
     const-string v1, "getAuthenticatorId"
 
-    .line 171
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     const-wide/16 v0, 0x0
@@ -195,7 +177,6 @@
 .method public getEnrollmentConfig(B)[Landroid/hardware/biometrics/face/EnrollmentStageConfig;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     new-array p0, p0, [Landroid/hardware/biometrics/face/EnrollmentStageConfig;
@@ -210,10 +191,8 @@
 
     const-string v1, "getFeatures"
 
-    .line 158
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     const/4 v0, 0x0
@@ -228,7 +207,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "74b0b7cb149ee205b12cd2254d216725c6e5429c"
 
     return-object p0
@@ -237,7 +215,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x2
 
     return p0
@@ -250,10 +227,8 @@
 
     const-string v1, "invalidateAuthenticatorId"
 
-    .line 177
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     const-wide/16 v0, 0x0
@@ -270,7 +245,6 @@
 
     const-string/jumbo p1, "onContextChanged"
 
-    .line 213
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -283,10 +257,8 @@
 
     const-string/jumbo v1, "removeEnrollments"
 
-    .line 152
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     invoke-interface {p0, p1}, Landroid/hardware/biometrics/face/ISessionCallback;->onEnrollmentsRemoved([I)V
@@ -301,10 +273,8 @@
 
     const-string/jumbo v0, "resetLockout"
 
-    .line 183
     invoke-static {p1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     invoke-interface {p0}, Landroid/hardware/biometrics/face/ISessionCallback;->onLockoutCleared()V
@@ -315,7 +285,6 @@
 .method public revokeChallenge(J)V
     .locals 2
 
-    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -334,7 +303,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     invoke-interface {p0, p1, p2}, Landroid/hardware/biometrics/face/ISessionCallback;->onChallengeRevoked(J)V
@@ -349,10 +317,8 @@
 
     const-string/jumbo p3, "setFeature"
 
-    .line 165
     invoke-static {p1, p3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/TestHal$1;->val$cb:Landroid/hardware/biometrics/face/ISessionCallback;
 
     invoke-interface {p0, p2}, Landroid/hardware/biometrics/face/ISessionCallback;->onFeatureSet(B)V

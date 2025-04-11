@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;)V
     .locals 1
 
-    .line 427
     invoke-direct {p0, p1}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;-><init>(Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;)V
 
-    .line 428
     iget-boolean v0, p1, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
 
     iput-boolean v0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
 
-    .line 429
     iget-object p1, p1, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     iput-object p1, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
@@ -34,21 +31,16 @@
 .method public constructor <init>(ZJLcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;)V
     .locals 0
 
-    .line 417
     invoke-direct {p0, p2, p3}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;-><init>(J)V
 
-    .line 418
     iput-boolean p1, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
 
-    .line 419
     iput-object p4, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 420
     iput-object p5, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mPeer:Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
     if-eqz p5, :cond_0
 
-    .line 422
     iput-object p0, p5, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mPeer:Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
     :cond_0
@@ -60,7 +52,6 @@
 .method public clone()Ljava/lang/Object;
     .locals 1
 
-    .line 481
     new-instance v0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;-><init>(Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;)V
@@ -77,7 +68,6 @@
 
     return v0
 
-    .line 489
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -89,11 +79,9 @@
 
     return v0
 
-    .line 492
     :cond_1
     check-cast p1, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
-    .line 493
     iget-boolean v1, p1, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
 
     iget-boolean v2, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
@@ -112,7 +100,6 @@
 
     iget-object p1, p1, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 495
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -128,7 +115,6 @@
 .method public getBatteryUsage()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
     .locals 0
 
-    .line 476
     iget-object p0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     return-object p0
@@ -137,7 +123,6 @@
 .method public getBatteryUsage(JJ)Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
     .locals 4
 
-    .line 464
     iget-boolean v0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
 
     if-nez v0, :cond_3
@@ -154,7 +139,6 @@
 
     goto :goto_1
 
-    .line 467
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mPeer:Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
@@ -164,14 +148,12 @@
 
     move-result-wide p1
 
-    .line 468
     iget-wide v0, p0, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->mTimestamp:J
 
     invoke-static {p3, p4, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p3
 
-    .line 469
     iget-wide v0, p0, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->mTimestamp:J
 
     iget-object v2, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mPeer:Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
@@ -192,16 +174,13 @@
 
     if-nez p1, :cond_1
 
-    .line 471
     iget-object p0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     goto :goto_0
 
-    .line 472
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 471
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;->mutate()Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move-result-object p0
@@ -216,7 +195,6 @@
 
     div-double/2addr p3, p1
 
-    .line 472
     invoke-virtual {p0, p3, p4}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->scale(D)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move-result-object p0
@@ -233,7 +211,6 @@
     :goto_0
     return-object p0
 
-    .line 465
     :cond_3
     :goto_1
     sget-object p0, Lcom/android/server/am/AppBatteryTracker;->BATTERY_USAGE_NONE:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
@@ -244,7 +221,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 506
     iget-boolean v0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
@@ -255,7 +231,6 @@
 
     iget-wide v1, p0, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->mTimestamp:J
 
-    .line 507
     invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v1
@@ -266,7 +241,6 @@
 
     iget-object p0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 508
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->hashCode()I
 
     move-result p0
@@ -279,7 +253,6 @@
 .method public isStart()Z
     .locals 0
 
-    .line 460
     iget-boolean p0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
 
     return p0
@@ -288,7 +261,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 500
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -329,7 +301,6 @@
 .method public trimTo(J)V
     .locals 4
 
-    .line 436
     iget-boolean v0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mIsStart:Z
 
     if-eqz v0, :cond_2
@@ -342,18 +313,15 @@
 
     goto :goto_0
 
-    .line 439
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mPeer:Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
     if-eqz v0, :cond_1
 
-    .line 441
     invoke-virtual {v0}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->getBatteryUsage()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     move-result-object v0
 
-    .line 442
     iget-object v1, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mPeer:Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
     iget-wide v2, v1, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->mTimestamp:J
@@ -364,14 +332,12 @@
 
     iput-object v2, v1, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 444
     iget-object v1, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     invoke-virtual {v1}, Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;->mutate()Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move-result-object v1
 
-    .line 445
     invoke-virtual {v1, v0}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->add(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move-result-object v0
@@ -380,19 +346,16 @@
 
     iget-object v1, v1, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 446
     invoke-virtual {v0, v1}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->subtract(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move-result-object v0
 
-    .line 447
     invoke-virtual {v0}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->unmutate()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 449
     :cond_1
     iput-wide p1, p0, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->mTimestamp:J
 
@@ -404,13 +367,10 @@
 .method public update(Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;)V
     .locals 0
 
-    .line 454
     iput-object p1, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mPeer:Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
-    .line 455
     iput-object p0, p1, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mPeer:Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
-    .line 456
     iput-object p2, p0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->mBatteryUsage:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     return-void

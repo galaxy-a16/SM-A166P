@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/DeviceIdleController;)V
     .locals 0
 
-    .line 873
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$5;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,18 +23,15 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 876
     iget-object p1, p0, Lcom/android/server/DeviceIdleController$5;->this$0:Lcom/android/server/DeviceIdleController;
 
     monitor-enter p1
 
-    .line 877
     :try_start_0
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$5;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-virtual {p0}, Lcom/android/server/DeviceIdleController;->updateInteractivityLocked()V
 
-    .line 878
     monitor-exit p1
 
     return-void

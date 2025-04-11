@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/devicestate/DeviceStateManagerService;)V
     .locals 0
 
-    .line 1443
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/devicestate/DeviceStateManagerService;Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver;-><init>(Lcom/android/server/devicestate/DeviceStateManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onAwakeStateChanged(Z)V
     .locals 1
 
-    .line 1454
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {v0}, Lcom/android/server/devicestate/DeviceStateManagerService;->-$$Nest$fgetmLock(Lcom/android/server/devicestate/DeviceStateManagerService;)Ljava/lang/Object;
@@ -47,7 +44,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1466
     :try_start_0
     iget-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
@@ -57,7 +53,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1467
     iget-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {p1}, Lcom/android/server/devicestate/DeviceStateManagerService;->-$$Nest$fgetmOverrideRequestController(Lcom/android/server/devicestate/DeviceStateManagerService;)Lcom/android/server/devicestate/OverrideRequestController;
@@ -78,7 +73,6 @@
 
     invoke-virtual {p1, p0}, Lcom/android/server/devicestate/OverrideRequestController;->cancelRequest(Lcom/android/server/devicestate/OverrideRequest;)V
 
-    .line 1469
     :cond_0
     monitor-exit v0
 
@@ -97,7 +91,6 @@
 .method public onKeyguardStateChanged(Z)V
     .locals 1
 
-    .line 1474
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {v0}, Lcom/android/server/devicestate/DeviceStateManagerService;->-$$Nest$fgetmLock(Lcom/android/server/devicestate/DeviceStateManagerService;)Ljava/lang/Object;
@@ -108,7 +101,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1475
     :try_start_0
     iget-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
@@ -118,7 +110,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1476
     iget-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestScreenObserver;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {p1}, Lcom/android/server/devicestate/DeviceStateManagerService;->-$$Nest$fgetmOverrideRequestController(Lcom/android/server/devicestate/DeviceStateManagerService;)Lcom/android/server/devicestate/OverrideRequestController;
@@ -139,7 +130,6 @@
 
     invoke-virtual {p1, p0}, Lcom/android/server/devicestate/OverrideRequestController;->cancelRequest(Lcom/android/server/devicestate/OverrideRequest;)V
 
-    .line 1478
     :cond_0
     monitor-exit v0
 

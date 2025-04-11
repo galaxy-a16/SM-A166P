@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/util/Map;
 
     invoke-static {p1}, Lcom/android/server/graphics/fonts/UpdatableFontDir;->$r8$lambda$iYVxOYBBE_Bpnm1W_1x0Bsd0uVU(Ljava/util/Map;)Landroid/text/FontConfig;

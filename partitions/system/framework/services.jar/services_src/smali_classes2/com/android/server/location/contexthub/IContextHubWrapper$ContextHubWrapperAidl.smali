@@ -22,7 +22,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -31,10 +30,8 @@
 .method public constructor <init>(Landroid/hardware/contexthub/IContextHub;)V
     .locals 3
 
-    .line 477
     invoke-direct {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper;-><init>()V
 
-    .line 409
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -43,10 +40,8 @@
 
     const/4 v0, 0x0
 
-    .line 412
     iput-object v0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHandleServiceRestartCallback:Ljava/lang/Runnable;
 
-    .line 416
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "Context Hub AIDL callback"
@@ -57,15 +52,12 @@
 
     iput-object v0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 478
     invoke-virtual {p0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->setHub(Landroid/hardware/contexthub/IContextHub;)V
 
-    .line 479
     iget-object p1, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
-    .line 480
     new-instance p1, Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHandlerThread:Landroid/os/HandlerThread;
@@ -78,7 +70,6 @@
 
     iput-object p1, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHandler:Landroid/os/Handler;
 
-    .line 481
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->linkWrapperToHubDeath()V
 
     return-void
@@ -93,17 +84,14 @@
 
     const-string v1, "IContextHubWrapper"
 
-    .line 494
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     invoke-static {}, Lcom/android/server/location/contexthub/IContextHubWrapper;->maybeConnectToAidlGetProxy()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->setHub(Landroid/hardware/contexthub/IContextHub;)V
 
-    .line 497
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object v0
@@ -112,21 +100,17 @@
 
     const-string p0, "Could not reconnect to Context Hub AIDL HAL"
 
-    .line 499
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 502
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->linkWrapperToHubDeath()V
 
-    .line 504
     iget-object p0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHandleServiceRestartCallback:Ljava/lang/Runnable;
 
     if-eqz p0, :cond_1
 
-    .line 505
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
@@ -134,7 +118,6 @@
     :cond_1
     const-string/jumbo p0, "mHandleServiceRestartCallback is not set"
 
-    .line 507
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -144,7 +127,6 @@
 .method public disableNanoapp(IJI)I
     .locals 1
 
-    .line 687
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -155,7 +137,6 @@
 
     return v0
 
-    .line 693
     :cond_0
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/hardware/contexthub/IContextHub;->disableNanoapp(IJI)V
@@ -181,7 +162,6 @@
 .method public enableNanoapp(IJI)I
     .locals 1
 
-    .line 669
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -192,7 +172,6 @@
 
     return v0
 
-    .line 675
     :cond_0
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/hardware/contexthub/IContextHub;->enableNanoapp(IJI)V
@@ -220,7 +199,6 @@
 
     monitor-enter p0
 
-    .line 485
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHub:Landroid/hardware/contexthub/IContextHub;
     :try_end_0
@@ -241,14 +219,12 @@
 .method public getHubs()Landroid/util/Pair;
     .locals 6
 
-    .line 512
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 514
     new-instance p0, Landroid/util/Pair;
 
     new-instance v0, Ljava/util/ArrayList;
@@ -263,18 +239,15 @@
 
     return-object p0
 
-    .line 518
     :cond_0
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 519
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 520
     invoke-interface {p0}, Landroid/hardware/contexthub/IContextHub;->getContextHubs()Ljava/util/List;
 
     move-result-object p0
@@ -296,14 +269,12 @@
 
     check-cast v2, Landroid/hardware/contexthub/ContextHubInfo;
 
-    .line 521
     new-instance v3, Landroid/hardware/location/ContextHubInfo;
 
     invoke-direct {v3, v2}, Landroid/hardware/location/ContextHubInfo;-><init>(Landroid/hardware/contexthub/ContextHubInfo;)V
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 522
     iget-object v2, v2, Landroid/hardware/contexthub/ContextHubInfo;->supportedPermissions:[Ljava/lang/String;
 
     array-length v3, v2
@@ -315,14 +286,12 @@
 
     aget-object v5, v2, v4
 
-    .line 523
     invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 526
     :cond_2
     new-instance p0, Landroid/util/Pair;
 
@@ -338,7 +307,6 @@
 .method public getPreloadedNanoappIds(I)[J
     .locals 2
 
-    .line 720
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -349,7 +317,6 @@
 
     return-object v0
 
-    .line 726
     :cond_0
     :try_start_0
     invoke-interface {p0, p1}, Landroid/hardware/contexthub/IContextHub;->getPreloadedNanoappIds(I)[J
@@ -363,7 +330,6 @@
     :catch_0
     move-exception p0
 
-    .line 728
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -392,7 +358,6 @@
 .method public final linkWrapperToHubDeath()V
     .locals 2
 
-    .line 797
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object v0
@@ -401,7 +366,6 @@
 
     return-void
 
-    .line 803
     :cond_0
     :try_start_0
     invoke-interface {v0}, Landroid/hardware/contexthub/IContextHub;->asBinder()Landroid/os/IBinder;
@@ -421,7 +385,6 @@
 
     const-string v0, "Context Hub AIDL service death receipt could not be linked"
 
-    .line 805
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -431,7 +394,6 @@
 .method public loadNanoapp(ILandroid/hardware/location/NanoAppBinary;I)I
     .locals 1
 
-    .line 631
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -442,13 +404,11 @@
 
     return v0
 
-    .line 637
     :cond_0
     invoke-static {p2}, Lcom/android/server/location/contexthub/ContextHubServiceUtil;->createAidlNanoAppBinary(Landroid/hardware/location/NanoAppBinary;)Landroid/hardware/contexthub/NanoappBinary;
 
     move-result-object p2
 
-    .line 639
     :try_start_0
     invoke-interface {p0, p1, p2, p3}, Landroid/hardware/contexthub/IContextHub;->loadNanoapp(ILandroid/hardware/contexthub/NanoappBinary;I)V
     :try_end_0
@@ -475,7 +435,6 @@
 
     const/4 v0, 0x4
 
-    .line 557
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->onSettingChanged(BZ)V
 
     return-void
@@ -486,7 +445,6 @@
 
     const/4 v0, 0x6
 
-    .line 573
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->onSettingChanged(BZ)V
 
     return-void
@@ -497,7 +455,6 @@
 
     const/4 v0, 0x7
 
-    .line 577
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->onSettingChanged(BZ)V
 
     return-void
@@ -506,7 +463,6 @@
 .method public onHostEndpointConnected(Landroid/hardware/contexthub/HostEndpointInfo;)V
     .locals 1
 
-    .line 582
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -515,7 +471,6 @@
 
     return-void
 
-    .line 588
     :cond_0
     :try_start_0
     invoke-interface {p0, p1}, Landroid/hardware/contexthub/IContextHub;->onHostEndpointConnected(Landroid/hardware/contexthub/HostEndpointInfo;)V
@@ -528,7 +483,6 @@
     :catch_0
     move-exception p0
 
-    .line 590
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -558,7 +512,6 @@
 .method public onHostEndpointDisconnected(S)V
     .locals 1
 
-    .line 596
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -570,7 +523,6 @@
     :cond_0
     int-to-char p1, p1
 
-    .line 602
     :try_start_0
     invoke-interface {p0, p1}, Landroid/hardware/contexthub/IContextHub;->onHostEndpointDisconnected(C)V
     :try_end_0
@@ -582,7 +534,6 @@
     :catch_0
     move-exception p0
 
-    .line 604
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -614,7 +565,6 @@
 
     const/4 v0, 0x1
 
-    .line 550
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->onSettingChanged(BZ)V
 
     return-void
@@ -625,7 +575,6 @@
 
     const/4 v0, 0x5
 
-    .line 561
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->onSettingChanged(BZ)V
 
     return-void
@@ -634,7 +583,6 @@
 .method public final onSettingChanged(BZ)V
     .locals 0
 
-    .line 781
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -643,7 +591,6 @@
 
     return-void
 
-    .line 787
     :cond_0
     :try_start_0
     invoke-interface {p0, p1, p2}, Landroid/hardware/contexthub/IContextHub;->onSettingChanged(BZ)V
@@ -656,7 +603,6 @@
     :catch_0
     move-exception p0
 
-    .line 789
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -688,7 +634,6 @@
 
     const/4 v0, 0x2
 
-    .line 565
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->onSettingChanged(BZ)V
 
     return-void
@@ -699,7 +644,6 @@
 
     const/4 v0, 0x3
 
-    .line 569
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->onSettingChanged(BZ)V
 
     return-void
@@ -708,14 +652,12 @@
 .method public onWifiSettingChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public queryNanoapps(I)I
     .locals 1
 
-    .line 704
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -726,7 +668,6 @@
 
     return v0
 
-    .line 710
     :cond_0
     :try_start_0
     invoke-interface {p0, p1}, Landroid/hardware/contexthub/IContextHub;->queryNanoapps(I)V
@@ -752,7 +693,6 @@
 .method public registerCallback(ILcom/android/server/location/contexthub/IContextHubWrapper$ICallback;)V
     .locals 3
 
-    .line 754
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object v0
@@ -761,7 +701,6 @@
 
     return-void
 
-    .line 759
     :cond_0
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -771,7 +710,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHandleServiceRestartCallback:Ljava/lang/Runnable;
 
-    .line 760
     iget-object v0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mAidlCallbackMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -784,7 +722,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 761
     invoke-virtual {p0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->registerExistingCallback(I)V
 
     return-void
@@ -793,7 +730,6 @@
 .method public registerExistingCallback(I)V
     .locals 2
 
-    .line 734
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object v0
@@ -802,7 +738,6 @@
 
     return-void
 
-    .line 739
     :cond_0
     iget-object p0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mAidlCallbackMap:Ljava/util/Map;
 
@@ -820,7 +755,6 @@
 
     if-nez p0, :cond_1
 
-    .line 741
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -839,7 +773,6 @@
 
     return-void
 
-    .line 747
     :cond_1
     :try_start_0
     invoke-interface {v0, p1, p0}, Landroid/hardware/contexthub/IContextHub;->registerCallback(ILandroid/hardware/contexthub/IContextHubCallback;)V
@@ -853,7 +786,6 @@
     :catch_0
     move-exception p0
 
-    .line 749
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -881,7 +813,6 @@
 .method public sendMessageToContextHub(SILandroid/hardware/location/NanoAppMessage;)I
     .locals 1
 
-    .line 612
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -892,14 +823,12 @@
 
     return v0
 
-    .line 619
     :cond_0
     :try_start_0
     invoke-static {p1, p3}, Lcom/android/server/location/contexthub/ContextHubServiceUtil;->createAidlContextHubMessage(SLandroid/hardware/location/NanoAppMessage;)Landroid/hardware/contexthub/ContextHubMessage;
 
     move-result-object p1
 
-    .line 618
     invoke-interface {p0, p2, p1}, Landroid/hardware/contexthub/IContextHub;->sendMessageToHub(ILandroid/hardware/contexthub/ContextHubMessage;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
@@ -924,13 +853,11 @@
 
     monitor-enter p0
 
-    .line 489
     :try_start_0
     iput-object p1, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->mHub:Landroid/hardware/contexthub/IContextHub;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 490
     monitor-exit p0
 
     return-void
@@ -946,7 +873,6 @@
 .method public setTestMode(Z)Z
     .locals 3
 
-    .line 765
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -957,7 +883,6 @@
 
     return v0
 
-    .line 771
     :cond_0
     :try_start_0
     invoke-interface {p0, p1}, Landroid/hardware/contexthub/IContextHub;->setTestMode(Z)V
@@ -972,7 +897,6 @@
     :catch_0
     move-exception p0
 
-    .line 774
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -990,7 +914,6 @@
     :cond_1
     const-string p1, "false"
 
-    .line 775
     :goto_0
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1010,7 +933,6 @@
 
     const-string p1, "IContextHubWrapper"
 
-    .line 774
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -1019,7 +941,6 @@
 .method public supportsAirplaneModeSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -1028,7 +949,6 @@
 .method public supportsBtSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -1037,7 +957,6 @@
 .method public supportsLocationSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -1046,7 +965,6 @@
 .method public supportsMicrophoneSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -1055,7 +973,6 @@
 .method public supportsWifiSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -1064,7 +981,6 @@
 .method public unloadNanoapp(IJI)I
     .locals 1
 
-    .line 651
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;->getHub()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object p0
@@ -1075,7 +991,6 @@
 
     return v0
 
-    .line 657
     :cond_0
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/hardware/contexthub/IContextHub;->unloadNanoapp(IJI)V

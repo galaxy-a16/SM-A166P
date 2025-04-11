@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCb(Lcom/android/server/media/MediaSessionRecord$SessionCb;)Landroid/media/session/ISessionCallback;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     return-object p0
@@ -22,12 +21,10 @@
 .method public constructor <init>(Lcom/android/server/media/MediaSessionRecord;Landroid/media/session/ISessionCallback;)V
     .locals 0
 
-    .line 1306
     iput-object p1, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1307
     iput-object p2, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     return-void
@@ -38,7 +35,6 @@
 .method public adjustVolume(Ljava/lang/String;IIZI)V
     .locals 8
 
-    .line 1586
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -70,7 +66,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 1589
     iget-object p1, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
@@ -93,7 +88,6 @@
 
     goto :goto_0
 
-    .line 1592
     :cond_0
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
@@ -110,7 +104,6 @@
 
     const-string p2, "Remote failure in adjustVolume."
 
-    .line 1595
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -120,7 +113,6 @@
 .method public final createMediaButtonIntent(Landroid/view/KeyEvent;)Landroid/content/Intent;
     .locals 1
 
-    .line 1611
     new-instance p0, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MEDIA_BUTTON"
@@ -129,7 +121,6 @@
 
     const-string v0, "android.intent.extra.KEY_EVENT"
 
-    .line 1612
     invoke-virtual {p0, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     return-object p0
@@ -138,7 +129,6 @@
 .method public fastForward(Ljava/lang/String;II)V
     .locals 8
 
-    .line 1530
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -168,7 +158,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1532
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/media/session/ISessionCallback;->onFastForward(Ljava/lang/String;II)V
@@ -184,7 +173,6 @@
 
     const-string p2, "Remote failure in fastForward."
 
-    .line 1534
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -194,7 +182,6 @@
 .method public next(Ljava/lang/String;II)V
     .locals 8
 
-    .line 1508
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -224,7 +211,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1510
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/media/session/ISessionCallback;->onNext(Ljava/lang/String;II)V
@@ -240,7 +226,6 @@
 
     const-string p2, "Remote failure in next."
 
-    .line 1512
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -250,7 +235,6 @@
 .method public pause(Ljava/lang/String;II)V
     .locals 8
 
-    .line 1486
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -280,7 +264,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1488
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/media/session/ISessionCallback;->onPause(Ljava/lang/String;II)V
@@ -296,7 +279,6 @@
 
     const-string p2, "Remote failure in pause."
 
-    .line 1490
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -306,7 +288,6 @@
 .method public play(Ljava/lang/String;II)V
     .locals 8
 
-    .line 1429
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -336,7 +317,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1431
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/media/session/ISessionCallback;->onPlay(Ljava/lang/String;II)V
@@ -352,7 +332,6 @@
 
     const-string p2, "Remote failure in play."
 
-    .line 1433
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -364,7 +343,6 @@
 
     move-object v0, p0
 
-    .line 1441
     :try_start_0
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -394,7 +372,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1443
     iget-object v9, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object/from16 v10, p1
@@ -420,7 +397,6 @@
 
     const-string v2, "Remote failure in playFromMediaId."
 
-    .line 1445
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -432,7 +408,6 @@
 
     move-object v0, p0
 
-    .line 1453
     :try_start_0
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -462,7 +437,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1455
     iget-object v9, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object/from16 v10, p1
@@ -488,7 +462,6 @@
 
     const-string v2, "Remote failure in playFromSearch."
 
-    .line 1457
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -500,7 +473,6 @@
 
     move-object v0, p0
 
-    .line 1464
     :try_start_0
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -530,7 +502,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1466
     iget-object v9, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object/from16 v10, p1
@@ -556,7 +527,6 @@
 
     const-string v2, "Remote failure in playFromUri."
 
-    .line 1468
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -566,7 +536,6 @@
 .method public prepare(Ljava/lang/String;II)V
     .locals 8
 
-    .line 1383
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -596,7 +565,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1385
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/media/session/ISessionCallback;->onPrepare(Ljava/lang/String;II)V
@@ -612,7 +580,6 @@
 
     const-string p2, "Remote failure in prepare."
 
-    .line 1387
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -624,7 +591,6 @@
 
     move-object v0, p0
 
-    .line 1395
     :try_start_0
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -654,7 +620,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1397
     iget-object v9, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object/from16 v10, p1
@@ -680,7 +645,6 @@
 
     const-string v2, "Remote failure in prepareFromMediaId."
 
-    .line 1399
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -692,7 +656,6 @@
 
     move-object v0, p0
 
-    .line 1407
     :try_start_0
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -722,7 +685,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1409
     iget-object v9, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object/from16 v10, p1
@@ -748,7 +710,6 @@
 
     const-string v2, "Remote failure in prepareFromSearch."
 
-    .line 1411
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -760,7 +721,6 @@
 
     move-object v0, p0
 
-    .line 1418
     :try_start_0
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -790,7 +750,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1420
     iget-object v9, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object/from16 v10, p1
@@ -816,7 +775,6 @@
 
     const-string v2, "Remote failure in prepareFromUri."
 
-    .line 1422
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -826,7 +784,6 @@
 .method public previous(Ljava/lang/String;II)V
     .locals 8
 
-    .line 1519
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -856,7 +813,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1521
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/media/session/ISessionCallback;->onPrevious(Ljava/lang/String;II)V
@@ -872,7 +828,6 @@
 
     const-string p2, "Remote failure in previous."
 
-    .line 1523
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -882,7 +837,6 @@
 .method public rate(Ljava/lang/String;IILandroid/media/Rating;)V
     .locals 8
 
-    .line 1563
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -912,7 +866,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1565
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/media/session/ISessionCallback;->onRate(Ljava/lang/String;IILandroid/media/Rating;)V
@@ -928,7 +881,6 @@
 
     const-string p2, "Remote failure in rate."
 
-    .line 1567
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -938,7 +890,6 @@
 .method public rewind(Ljava/lang/String;II)V
     .locals 8
 
-    .line 1541
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -968,7 +919,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1543
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/media/session/ISessionCallback;->onRewind(Ljava/lang/String;II)V
@@ -984,7 +934,6 @@
 
     const-string p2, "Remote failure in rewind."
 
-    .line 1545
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -996,7 +945,6 @@
 
     move-object v0, p0
 
-    .line 1552
     :try_start_0
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -1026,7 +974,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1554
     iget-object v9, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object/from16 v10, p1
@@ -1050,7 +997,6 @@
 
     const-string v2, "Remote failure in seekTo."
 
-    .line 1556
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1062,7 +1008,6 @@
 
     move-object v0, p0
 
-    .line 1359
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1080,7 +1025,6 @@
 
     move-result-object v9
 
-    .line 1360
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     invoke-static {v1}, Lcom/android/server/media/MediaSessionRecord;->-$$Nest$fgetmService(Lcom/android/server/media/MediaSessionRecord;)Lcom/android/server/media/MediaSessionService;
@@ -1107,7 +1051,6 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1362
     iget-object v3, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object v4, p1
@@ -1135,7 +1078,6 @@
 
     const-string v2, "Remote failure in sendCommand."
 
-    .line 1364
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1145,7 +1087,6 @@
 .method public sendCustomAction(Ljava/lang/String;IILjava/lang/String;Landroid/os/Bundle;)V
     .locals 10
 
-    .line 1371
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1161,7 +1102,6 @@
 
     move-result-object v9
 
-    .line 1372
     iget-object v1, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     invoke-static {v1}, Lcom/android/server/media/MediaSessionRecord;->-$$Nest$fgetmService(Lcom/android/server/media/MediaSessionRecord;)Lcom/android/server/media/MediaSessionService;
@@ -1188,7 +1128,6 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1374
     iget-object v3, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object v4, p1
@@ -1214,7 +1153,6 @@
 
     const-string v2, "Remote failure in sendCustomAction."
 
-    .line 1376
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1224,7 +1162,6 @@
 .method public sendMediaButton(Ljava/lang/String;IIZLandroid/view/KeyEvent;)Z
     .locals 9
 
-    .line 1336
     :try_start_0
     invoke-virtual {p5}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -1236,7 +1173,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1337
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1259,7 +1195,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1338
     invoke-virtual {p5}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
@@ -1274,7 +1209,6 @@
 
     move-result-object v8
 
-    .line 1339
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     invoke-static {v0}, Lcom/android/server/media/MediaSessionRecord;->-$$Nest$fgetmService(Lcom/android/server/media/MediaSessionRecord;)Lcom/android/server/media/MediaSessionService;
@@ -1304,7 +1238,6 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 1343
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     iget-object p1, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
@@ -1323,7 +1256,6 @@
 
     const/16 v3, 0x3e8
 
-    .line 1344
     invoke-virtual {p0, p5}, Lcom/android/server/media/MediaSessionRecord$SessionCb;->createMediaButtonIntent(Landroid/view/KeyEvent;)Landroid/content/Intent;
 
     move-result-object v4
@@ -1332,21 +1264,17 @@
 
     const/4 v6, 0x0
 
-    .line 1343
     invoke-interface/range {v0 .. v6}, Landroid/media/session/ISessionCallback;->onMediaButton(Ljava/lang/String;IILandroid/content/Intent;ILandroid/os/ResultReceiver;)V
 
     goto :goto_0
 
-    .line 1346
     :cond_1
     iget-object p4, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
-    .line 1347
     invoke-virtual {p0, p5}, Lcom/android/server/media/MediaSessionRecord$SessionCb;->createMediaButtonIntent(Landroid/view/KeyEvent;)Landroid/content/Intent;
 
     move-result-object p0
 
-    .line 1346
     invoke-interface {p4, p1, p2, p3, p0}, Landroid/media/session/ISessionCallback;->onMediaButtonFromController(Ljava/lang/String;IILandroid/content/Intent;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1363,7 +1291,6 @@
 
     const-string p2, "Remote failure in sendMediaRequest."
 
-    .line 1351
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -1378,7 +1305,6 @@
 
     move-object/from16 v1, p5
 
-    .line 1313
     :try_start_0
     invoke-virtual/range {p5 .. p5}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -1390,7 +1316,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1314
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1413,7 +1338,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1315
     invoke-virtual/range {p5 .. p5}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v3
@@ -1428,7 +1352,6 @@
 
     move-result-object v10
 
-    .line 1316
     iget-object v2, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     invoke-static {v2}, Lcom/android/server/media/MediaSessionRecord;->-$$Nest$fgetmService(Lcom/android/server/media/MediaSessionRecord;)Lcom/android/server/media/MediaSessionService;
@@ -1458,7 +1381,6 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 1320
     iget-object v2, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     iget-object v3, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
@@ -1477,7 +1399,6 @@
 
     const/16 v5, 0x3e8
 
-    .line 1321
     invoke-virtual {p0, v1}, Lcom/android/server/media/MediaSessionRecord$SessionCb;->createMediaButtonIntent(Landroid/view/KeyEvent;)Landroid/content/Intent;
 
     move-result-object v6
@@ -1496,16 +1417,13 @@
 
     move-object/from16 v6, p7
 
-    .line 1320
     invoke-interface/range {v0 .. v6}, Landroid/media/session/ISessionCallback;->onMediaButton(Ljava/lang/String;IILandroid/content/Intent;ILandroid/os/ResultReceiver;)V
 
     goto :goto_0
 
-    .line 1323
     :cond_1
     iget-object v7, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
-    .line 1324
     invoke-virtual {p0, v1}, Lcom/android/server/media/MediaSessionRecord$SessionCb;->createMediaButtonIntent(Landroid/view/KeyEvent;)Landroid/content/Intent;
 
     move-result-object v11
@@ -1520,7 +1438,6 @@
 
     move-object/from16 v13, p7
 
-    .line 1323
     invoke-interface/range {v7 .. v13}, Landroid/media/session/ISessionCallback;->onMediaButton(Ljava/lang/String;IILandroid/content/Intent;ILandroid/os/ResultReceiver;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1537,7 +1454,6 @@
 
     const-string v2, "Remote failure in sendMediaRequest."
 
-    .line 1328
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -1548,7 +1464,6 @@
 .method public setPlaybackSpeed(Ljava/lang/String;IIF)V
     .locals 8
 
-    .line 1574
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -1578,7 +1493,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1576
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/media/session/ISessionCallback;->onSetPlaybackSpeed(Ljava/lang/String;IIF)V
@@ -1594,7 +1508,6 @@
 
     const-string p2, "Remote failure in setPlaybackSpeed."
 
-    .line 1578
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1604,7 +1517,6 @@
 .method public setVolumeTo(Ljava/lang/String;III)V
     .locals 8
 
-    .line 1602
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -1634,7 +1546,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1604
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/media/session/ISessionCallback;->onSetVolumeTo(Ljava/lang/String;III)V
@@ -1650,7 +1561,6 @@
 
     const-string p2, "Remote failure in setVolumeTo."
 
-    .line 1606
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1662,7 +1572,6 @@
 
     move-object v0, p0
 
-    .line 1475
     :try_start_0
     iget-object v1, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -1692,7 +1601,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1477
     iget-object v9, v0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     move-object/from16 v10, p1
@@ -1716,7 +1624,6 @@
 
     const-string v2, "Remote failure in skipToTrack"
 
-    .line 1479
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1726,7 +1633,6 @@
 .method public stop(Ljava/lang/String;II)V
     .locals 8
 
-    .line 1497
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -1756,7 +1662,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService;->tempAllowlistTargetPkgIfPossible(ILjava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1499
     iget-object p0, p0, Lcom/android/server/media/MediaSessionRecord$SessionCb;->mCb:Landroid/media/session/ISessionCallback;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/media/session/ISessionCallback;->onStop(Ljava/lang/String;II)V
@@ -1772,7 +1677,6 @@
 
     const-string p2, "Remote failure in stop."
 
-    .line 1501
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

@@ -25,31 +25,22 @@
 .method public constructor <init>(IIZJJJJLcom/android/server/cpu/CpuInfoReader$CpuUsageStats;)V
     .locals 0
 
-    .line 718
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 719
     iput p1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->cpuCore:I
 
-    .line 720
     iput p2, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->cpusetCategories:I
 
-    .line 721
     iput-boolean p3, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->isOnline:Z
 
-    .line 722
     iput-wide p4, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->curCpuFreqKHz:J
 
-    .line 723
     iput-wide p6, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->maxCpuFreqKHz:J
 
-    .line 724
     iput-wide p8, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->avgTimeInStateCpuFreqKHz:J
 
-    .line 725
     iput-object p12, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->latestCpuUsageStats:Lcom/android/server/cpu/CpuInfoReader$CpuUsageStats;
 
-    .line 726
     iput-wide p10, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->mNormalizedAvailableCpuFreqKHz:J
 
     return-void
@@ -76,10 +67,8 @@
 
     move-object/from16 v12, p10
 
-    .line 708
     invoke-direct/range {v0 .. v12}, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;-><init>(IIZJJJJLcom/android/server/cpu/CpuInfoReader$CpuUsageStats;)V
 
-    .line 711
     invoke-virtual {p0}, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->computeNormalizedAvailableCpuFreqKHz()J
 
     move-result-wide v0
@@ -96,7 +85,6 @@
 .method public final computeNormalizedAvailableCpuFreqKHz()J
     .locals 9
 
-    .line 776
     iget-boolean v0, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->isOnline:Z
 
     const-wide/16 v1, 0x0
@@ -105,7 +93,6 @@
 
     return-wide v1
 
-    .line 779
     :cond_0
     iget-object v0, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->latestCpuUsageStats:Lcom/android/server/cpu/CpuInfoReader$CpuUsageStats;
 
@@ -117,7 +104,6 @@
 
     if-nez v0, :cond_1
 
-    .line 781
     sget-object p0, Lcom/android/server/cpu/CpuMonitorService;->TAG:Ljava/lang/String;
 
     const-string v0, "Total CPU time millis is 0. This shouldn\'t happen unless stats are polled too frequently"
@@ -129,7 +115,6 @@
     :cond_1
     long-to-double v3, v3
 
-    .line 785
     iget-object v0, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->latestCpuUsageStats:Lcom/android/server/cpu/CpuInfoReader$CpuUsageStats;
 
     iget-wide v5, v0, Lcom/android/server/cpu/CpuInfoReader$CpuUsageStats;->idleTimeMillis:J
@@ -144,14 +129,12 @@
 
     div-double/2addr v5, v3
 
-    .line 787
     iget-wide v3, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->avgTimeInStateCpuFreqKHz:J
 
     cmp-long v0, v3, v1
 
     if-nez v0, :cond_2
 
-    .line 788
     iget-wide v3, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->curCpuFreqKHz:J
 
     :cond_2
@@ -159,7 +142,6 @@
 
     mul-double/2addr v5, v0
 
-    .line 789
     iget-wide v0, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->maxCpuFreqKHz:J
 
     long-to-double v2, v0
@@ -188,7 +170,6 @@
 
     return v0
 
-    .line 757
     :cond_0
     instance-of v1, p1, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;
 
@@ -198,11 +179,9 @@
 
     return v2
 
-    .line 760
     :cond_1
     check-cast p1, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;
 
-    .line 761
     iget v1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->cpuCore:I
 
     iget v3, p1, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->cpuCore:I
@@ -249,7 +228,6 @@
 
     iget-object v3, p1, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->latestCpuUsageStats:Lcom/android/server/cpu/CpuInfoReader$CpuUsageStats;
 
-    .line 765
     invoke-virtual {v1, v3}, Lcom/android/server/cpu/CpuInfoReader$CpuUsageStats;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -276,7 +254,6 @@
 .method public getNormalizedAvailableCpuFreqKHz()J
     .locals 2
 
-    .line 730
     iget-wide v0, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->mNormalizedAvailableCpuFreqKHz:J
 
     return-wide v0
@@ -285,7 +262,6 @@
 .method public hashCode()I
     .locals 10
 
-    .line 771
     iget v0, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->cpuCore:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -318,7 +294,6 @@
 
     iget-wide v6, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->avgTimeInStateCpuFreqKHz:J
 
-    .line 772
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
@@ -335,7 +310,6 @@
 
     move-result-object p0
 
-    .line 771
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -346,7 +320,6 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
-    .line 735
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "CpuInfo{ cpuCore = "
@@ -359,12 +332,10 @@
 
     const-string v1, ", cpusetCategories = ["
 
-    .line 736
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->cpusetCategories:I
 
-    .line 737
     invoke-static {v1}, Lcom/android/server/cpu/CpuInfoReader;->-$$Nest$smtoCpusetCategoriesStr(I)Ljava/lang/String;
 
     move-result-object v1
@@ -373,7 +344,6 @@
 
     const-string v1, "], isOnline = "
 
-    .line 738
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->isOnline:Z
@@ -392,10 +362,8 @@
 
     const-string v1, ", curCpuFreqKHz = "
 
-    .line 739
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 740
     iget-wide v1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->curCpuFreqKHz:J
 
     const-wide/16 v3, 0x0
@@ -420,10 +388,8 @@
 
     const-string v1, ", maxCpuFreqKHz = "
 
-    .line 741
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 742
     iget-wide v1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->maxCpuFreqKHz:J
 
     cmp-long v5, v1, v3
@@ -444,10 +410,8 @@
 
     const-string v1, ", avgTimeInStateCpuFreqKHz = "
 
-    .line 743
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 744
     iget-wide v1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->avgTimeInStateCpuFreqKHz:J
 
     cmp-long v3, v1, v3
@@ -456,19 +420,16 @@
 
     goto :goto_3
 
-    .line 745
     :cond_3
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
-    .line 744
     :goto_3
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ", latestCpuUsageStats = "
 
-    .line 746
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->latestCpuUsageStats:Lcom/android/server/cpu/CpuInfoReader$CpuUsageStats;
@@ -477,17 +438,14 @@
 
     const-string v1, ", mNormalizedAvailableCpuFreqKHz = "
 
-    .line 747
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->mNormalizedAvailableCpuFreqKHz:J
 
-    .line 748
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string p0, " }"
 
-    .line 749
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

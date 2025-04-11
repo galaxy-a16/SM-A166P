@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/remoteappmode/RemoteAppModeService;I)V
     .locals 0
 
-    .line 500
     iput-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$3;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     iput p2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$3;->val$displayId:I
@@ -31,12 +30,10 @@
 .method public run()V
     .locals 5
 
-    .line 503
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 505
     :try_start_0
     iget-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$3;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
@@ -52,7 +49,6 @@
 
     check-cast v2, Landroid/view/WindowManager;
 
-    .line 507
     iget-object v3, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$3;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-static {v3}, Lcom/android/server/remoteappmode/RemoteAppModeService;->-$$Nest$fgetmVirtualDisplayMap(Lcom/android/server/remoteappmode/RemoteAppModeService;)Ljava/util/HashMap;
@@ -79,7 +75,6 @@
 
     iget v4, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$3;->val$displayId:I
 
-    .line 508
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -104,7 +99,6 @@
 
     if-nez v3, :cond_1
 
-    .line 509
     :cond_0
     invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -118,7 +112,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 510
     :cond_1
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
@@ -143,13 +136,11 @@
     :catch_0
     move-exception p0
 
-    .line 513
     :try_start_1
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 515
     :cond_2
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -159,6 +150,5 @@
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 516
     throw p0
 .end method

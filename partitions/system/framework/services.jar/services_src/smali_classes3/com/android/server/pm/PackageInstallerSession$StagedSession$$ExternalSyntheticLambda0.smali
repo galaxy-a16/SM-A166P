@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/StagingManager$StagedSession;
 
     invoke-static {p1}, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->$r8$lambda$5h0bcfuuxMorNYh7YTuDhyD4duE(Lcom/android/server/pm/StagingManager$StagedSession;)Z

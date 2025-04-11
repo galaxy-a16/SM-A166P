@@ -15,10 +15,8 @@
 .method public constructor <init>(Lcom/android/server/wm/Letterbox;Landroid/view/InputChannel;Landroid/content/Context;)V
     .locals 1
 
-    .line 304
     iput-object p1, p0, Lcom/android/server/wm/Letterbox$TapEventReceiver;->this$0:Lcom/android/server/wm/Letterbox;
 
-    .line 305
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -29,7 +27,6 @@
 
     invoke-direct {p0, p2, v0}, Landroid/view/InputEventReceiver;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 306
     new-instance p2, Lcom/android/server/wm/Letterbox$DoubleTapListener;
 
     const/4 v0, 0x0
@@ -38,10 +35,8 @@
 
     iput-object p2, p0, Lcom/android/server/wm/Letterbox$TapEventReceiver;->mDoubleTapListener:Lcom/android/server/wm/Letterbox$DoubleTapListener;
 
-    .line 307
     new-instance p1, Landroid/view/GestureDetector;
 
-    .line 308
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -58,12 +53,10 @@
 .method public onInputEvent(Landroid/view/InputEvent;)V
     .locals 2
 
-    .line 313
     move-object v0, p1
 
     check-cast v0, Landroid/view/MotionEvent;
 
-    .line 314
     iget-object v1, p0, Lcom/android/server/wm/Letterbox$TapEventReceiver;->mDoubleTapDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v1, v0}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z

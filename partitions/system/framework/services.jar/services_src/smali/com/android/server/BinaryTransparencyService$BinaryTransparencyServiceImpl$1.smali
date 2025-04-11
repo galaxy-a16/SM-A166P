@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;)V
     .locals 0
 
-    .line 514
     iput-object p1, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
@@ -26,14 +25,12 @@
 
     if-nez p1, :cond_0
 
-    .line 1026
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 1029
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -41,21 +38,18 @@
 
     const-string v1, "get"
 
-    .line 1030
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1054
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 1032
     :cond_1
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
@@ -65,12 +59,10 @@
 
     if-nez p1, :cond_2
 
-    .line 1034
     invoke-virtual {p0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHelpMenu()V
 
     return v1
 
-    .line 1038
     :cond_2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -149,7 +141,6 @@
 
     const-string p0, "ERROR: Unknown info type \'%s\'"
 
-    .line 1048
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
@@ -162,7 +153,6 @@
 
     return v3
 
-    .line 1042
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printAllApexs()I
 
@@ -170,7 +160,6 @@
 
     return p0
 
-    .line 1046
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printAllMbas()I
 
@@ -178,7 +167,6 @@
 
     return p0
 
-    .line 1044
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printAllModules()I
 
@@ -186,7 +174,6 @@
 
     return p0
 
-    .line 1040
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printSignedImageInfo()I
 
@@ -214,7 +201,6 @@
 .method public onHelp()V
     .locals 0
 
-    .line 1101
     invoke-virtual {p0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHelpMenu()V
 
     return-void
@@ -223,7 +209,6 @@
 .method public final printAllApexs()I
     .locals 13
 
-    .line 803
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -238,7 +223,6 @@
 
     move v4, v2
 
-    .line 808
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -248,7 +232,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 809
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
 
     move-result v8
@@ -338,7 +321,6 @@
     :goto_1
     packed-switch v7, :pswitch_data_0
 
-    .line 822
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -372,7 +354,6 @@
 
     goto :goto_0
 
-    .line 827
     :cond_5
     iget-object v2, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
@@ -390,7 +371,6 @@
 
     const-string p0, "ERROR: Failed to obtain an instance of package manager."
 
-    .line 829
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v7
@@ -402,10 +382,8 @@
 
     if-eqz v4, :cond_7
 
-    .line 834
     invoke-virtual {p0, v6, v5, v0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
 
-    .line 836
     :cond_7
     iget-object v7, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
@@ -437,14 +415,11 @@
 
     if-eqz v4, :cond_9
 
-    .line 838
     invoke-virtual {p0, v6, v5, v0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
 
-    .line 840
     :cond_9
     iget-object v9, v8, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 841
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -455,7 +430,6 @@
 
     invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 842
     invoke-virtual {v8}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
 
     move-result-wide v11
@@ -468,15 +442,12 @@
 
     move-result-object v9
 
-    .line 841
     invoke-virtual {v0, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 843
     invoke-virtual {p0, v8, v5, v0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageMeasurements(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
     if-eqz v3, :cond_8
 
-    .line 848
     :try_start_0
     iget-object v9, v8, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -486,10 +457,8 @@
 
     const-string v10, "Is a module: true"
 
-    .line 849
     invoke-virtual {v0, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 850
     invoke-virtual {p0, v9, v0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printModuleDetails(Landroid/content/pm/ModuleInfo;Ljava/io/PrintWriter;)V
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -499,21 +468,17 @@
     :catch_0
     const-string v9, "Is a module: false"
 
-    .line 852
     invoke-virtual {v0, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 855
     :goto_3
     invoke-virtual {p0, v8, v5, v0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageInstallationInfo(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
-    .line 856
     iget-object v8, v8, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     invoke-virtual {p0, v8, v0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageSignerDetails(Landroid/content/pm/SigningInfo;Ljava/io/PrintWriter;)V
 
     const-string v8, ""
 
-    .line 857
     invoke-virtual {v0, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_2
@@ -545,7 +510,6 @@
 
     move-object/from16 v0, p0
 
-    .line 930
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v1
@@ -562,7 +526,6 @@
 
     const/4 v8, 0x0
 
-    .line 937
     :goto_0
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -570,7 +533,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 938
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
     move-result v10
@@ -694,7 +656,6 @@
     :goto_1
     packed-switch v11, :pswitch_data_0
 
-    .line 957
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -749,16 +710,13 @@
 
     if-eqz v6, :cond_8
 
-    .line 964
     invoke-virtual {v0, v3, v7, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
 
     goto :goto_2
 
-    .line 966
     :cond_8
     invoke-virtual {v0, v9, v7, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
 
-    .line 970
     :cond_9
     :goto_2
     iget-object v10, v0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
@@ -775,12 +733,10 @@
 
     const-wide/32 v11, 0x8200000
 
-    .line 972
     invoke-static {v11, v12}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
 
     move-result-object v11
 
-    .line 971
     invoke-virtual {v10, v11}, Landroid/content/pm/PackageManager;->getInstalledPackages(Landroid/content/pm/PackageManager$PackageInfoFlags;)Ljava/util/List;
 
     move-result-object v11
@@ -806,30 +762,25 @@
 
     check-cast v12, Landroid/content/pm/PackageInfo;
 
-    .line 974
     iget-object v15, v12, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     if-nez v15, :cond_a
 
-    .line 977
     :try_start_0
     iget-object v15, v12, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     const-wide/32 v16, 0x8020000
 
-    .line 978
     invoke-static/range {v16 .. v17}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
 
     move-result-object v2
 
-    .line 977
     invoke-virtual {v10, v15, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_4
 
-    .line 981
     :catch_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -857,10 +808,8 @@
 
     if-eqz v5, :cond_b
 
-    .line 988
     invoke-virtual {v0, v3, v7, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
 
-    .line 990
     :cond_b
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -878,7 +827,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 991
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -901,23 +849,18 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 992
     invoke-virtual {v0, v12, v7, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageMeasurements(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
     if-eqz v4, :cond_c
 
-    .line 995
     invoke-virtual {v0, v12, v8, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printAppDetails(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
-    .line 996
     invoke-virtual {v0, v12, v7, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageInstallationInfo(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
-    .line 997
     iget-object v2, v12, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     invoke-virtual {v0, v2, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageSignerDetails(Landroid/content/pm/SigningInfo;Ljava/io/PrintWriter;)V
 
-    .line 998
     invoke-virtual {v1, v13}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_c
@@ -934,7 +877,6 @@
 
     return v2
 
-    .line 1005
     :cond_e
     iget-object v2, v0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
@@ -966,10 +908,8 @@
 
     if-eqz v5, :cond_10
 
-    .line 1007
     invoke-virtual {v0, v9, v7, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
 
-    .line 1009
     :cond_10
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -987,7 +927,6 @@
 
     invoke-virtual {v1, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1010
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1006,23 +945,18 @@
 
     invoke-virtual {v1, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1011
     invoke-virtual {v0, v3, v7, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageMeasurements(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
     if-eqz v4, :cond_f
 
-    .line 1014
     invoke-virtual {v0, v3, v8, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printAppDetails(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
-    .line 1015
     invoke-virtual {v0, v3, v7, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageInstallationInfo(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
-    .line 1016
     iget-object v3, v3, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     invoke-virtual {v0, v3, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageSignerDetails(Landroid/content/pm/SigningInfo;Ljava/io/PrintWriter;)V
 
-    .line 1017
     invoke-virtual {v1, v13}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_5
@@ -1066,7 +1000,6 @@
 
     const-string v2, ""
 
-    .line 864
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v3
@@ -1079,7 +1012,6 @@
 
     const/4 v8, 0x0
 
-    .line 869
     :goto_0
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -1089,7 +1021,6 @@
 
     if-eqz v9, :cond_5
 
-    .line 870
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
     move-result v11
@@ -1179,7 +1110,6 @@
     :goto_1
     packed-switch v10, :pswitch_data_0
 
-    .line 883
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1213,7 +1143,6 @@
 
     goto :goto_0
 
-    .line 888
     :cond_5
     iget-object v5, v0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
@@ -1231,7 +1160,6 @@
 
     const-string v0, "ERROR: Failed to obtain an instance of package manager."
 
-    .line 890
     invoke-virtual {v3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v10
@@ -1243,13 +1171,11 @@
 
     if-eqz v7, :cond_7
 
-    .line 895
     invoke-virtual {v0, v9, v8, v3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
 
     :cond_7
     const/high16 v10, 0x20000
 
-    .line 897
     invoke-virtual {v5, v10}, Landroid/content/pm/PackageManager;->getInstalledModules(I)Ljava/util/List;
 
     move-result-object v10
@@ -1271,7 +1197,6 @@
 
     check-cast v11, Landroid/content/pm/ModuleInfo;
 
-    .line 898
     invoke-virtual {v11}, Landroid/content/pm/ModuleInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v12
@@ -1280,19 +1205,16 @@
 
     if-eqz v7, :cond_8
 
-    .line 900
     invoke-virtual {v0, v9, v8, v3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
 
     :cond_8
     const/high16 v13, 0x48000000    # 131072.0f
 
-    .line 903
     :try_start_0
     invoke-virtual {v5, v12, v13}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v13
 
-    .line 906
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1309,7 +1231,6 @@
 
     invoke-virtual {v3, v14}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 907
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1333,23 +1254,18 @@
 
     invoke-virtual {v3, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 908
     invoke-virtual {v0, v13, v8, v3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageMeasurements(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
     if-eqz v6, :cond_9
 
-    .line 911
     invoke-virtual {v0, v11, v3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printModuleDetails(Landroid/content/pm/ModuleInfo;Ljava/io/PrintWriter;)V
 
-    .line 912
     invoke-virtual {v0, v13, v8, v3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageInstallationInfo(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
 
-    .line 913
     iget-object v4, v13, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     invoke-virtual {v0, v4, v3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printPackageSignerDetails(Landroid/content/pm/SigningInfo;Ljava/io/PrintWriter;)V
 
-    .line 914
     invoke-virtual {v3, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
@@ -1359,7 +1275,6 @@
     :catch_0
     move-object/from16 v16, v5
 
-    .line 917
     :catch_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1379,10 +1294,8 @@
 
     if-eqz v6, :cond_9
 
-    .line 920
     invoke-virtual {v0, v11, v3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->printModuleDetails(Landroid/content/pm/ModuleInfo;Ljava/io/PrintWriter;)V
 
-    .line 921
     invoke-virtual {v3, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_9
@@ -1420,10 +1333,8 @@
 
     const-string v0, "--- App Details ---"
 
-    .line 715
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 716
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1444,7 +1355,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 717
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1479,7 +1389,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 719
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1498,12 +1407,10 @@
 
     move-result-object p0
 
-    .line 720
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 719
     invoke-virtual {v1, p0}, Landroid/content/pm/ApplicationInfo;->loadDescription(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -1516,7 +1423,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 721
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1539,7 +1445,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 722
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1560,7 +1465,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 723
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1599,7 +1503,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 726
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1618,7 +1521,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 727
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1639,7 +1541,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 730
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1650,7 +1551,6 @@
 
     iget-object v0, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 731
     invoke-virtual {v0}, Landroid/content/pm/ApplicationInfo;->isPrivilegedApp()Z
 
     move-result v0
@@ -1661,10 +1561,8 @@
 
     move-result-object p0
 
-    .line 730
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 732
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1683,7 +1581,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 733
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1702,7 +1599,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 734
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1723,7 +1619,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 735
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1744,7 +1639,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 737
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1765,7 +1659,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 738
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1786,7 +1679,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 739
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1807,7 +1699,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 740
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1830,20 +1721,16 @@
 
     const-string p0, "== App\'s Shared Libraries =="
 
-    .line 743
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 744
     iget-object p0, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 745
     invoke-virtual {p0}, Landroid/content/pm/ApplicationInfo;->getSharedLibraryInfos()Ljava/util/List;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 746
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
@@ -1853,10 +1740,8 @@
     :cond_1
     const-string p1, "<none>"
 
-    .line 747
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 750
     :cond_2
     :goto_1
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -1865,14 +1750,12 @@
 
     if-ge v1, p1, :cond_8
 
-    .line 751
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/content/pm/SharedLibraryInfo;
 
-    .line 752
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1895,7 +1778,6 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 753
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1916,14 +1798,12 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 754
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getLongVersion()J
 
     move-result-wide v3
 
     const-string p2, "  Lib version: "
 
-    .line 755
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-wide/16 v5, -0x1
@@ -1934,22 +1814,18 @@
 
     if-nez p2, :cond_3
 
-    .line 757
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 759
     :cond_3
     invoke-virtual {p3, v3, v4}, Ljava/io/PrintWriter;->print(J)V
 
     :goto_2
     const-string p2, "\n"
 
-    .line 761
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 763
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1958,7 +1834,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 764
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -1969,10 +1844,8 @@
 
     move-result-object v3
 
-    .line 763
     invoke-virtual {p3, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 765
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1995,10 +1868,8 @@
 
     const-string v3, "  Lib type: "
 
-    .line 766
     invoke-virtual {p3, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 767
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getType()I
 
     move-result v3
@@ -2015,7 +1886,6 @@
 
     if-eq v3, v4, :cond_4
 
-    .line 782
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_3
@@ -2023,7 +1893,6 @@
     :cond_4
     const-string v0, "SDK"
 
-    .line 778
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_3
@@ -2031,7 +1900,6 @@
     :cond_5
     const-string/jumbo v0, "static"
 
-    .line 775
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_3
@@ -2039,7 +1907,6 @@
     :cond_6
     const-string v0, "dynamic"
 
-    .line 772
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_3
@@ -2047,14 +1914,11 @@
     :cond_7
     const-string v0, "built-in"
 
-    .line 769
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 785
     :goto_3
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 786
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2084,7 +1948,6 @@
 .method public final printHeadersHelper(Ljava/lang/String;ZLjava/io/PrintWriter;)V
     .locals 0
 
-    .line 795
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2105,13 +1968,11 @@
 
     const-string/jumbo p0, "package_sha256_digest,"
 
-    .line 797
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     :cond_0
     const-string p0, "content_digest_algorithm:content_digest]:\n"
 
-    .line 799
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     return-void
@@ -2120,137 +1981,108 @@
 .method public final printHelpMenu()V
     .locals 3
 
-    .line 1059
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Transparency manager (transparency) commands:"
 
-    .line 1060
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 1061
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 1062
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, ""
 
-    .line 1063
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "  get image_info [-a]"
 
-    .line 1064
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    Print information about loaded image (firmware). Options:"
 
-    .line 1065
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "        -a: lists all other identifiable partitions."
 
-    .line 1066
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1067
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "  get apex_info [-o] [-v] [--no-headers]"
 
-    .line 1068
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    Print information about installed APEXs on device."
 
-    .line 1069
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "      -o: also uses the old digest scheme (SHA256) to compute APEX hashes. WARNING: This can be a very slow and CPU-intensive computation."
 
-    .line 1070
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "      -v: lists more verbose information about each APEX."
 
-    .line 1073
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "      --no-headers: does not print the header if specified."
 
-    .line 1074
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1075
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "  get module_info [-o] [-v] [--no-headers]"
 
-    .line 1076
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "    Print information about installed modules on device."
 
-    .line 1077
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "      -o: also uses the old digest scheme (SHA256) to compute module hashes. WARNING: This can be a very slow and CPU-intensive computation."
 
-    .line 1078
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "      -v: lists more verbose information about each module."
 
-    .line 1081
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1082
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1083
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "  get mba_info [-o] [-v] [-l] [--no-headers] [--preloads-only]"
 
-    .line 1084
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "    Print information about installed mobile bundle apps (MBAs on device)."
 
-    .line 1085
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "      -o: also uses the old digest scheme (SHA256) to compute MBA hashes. WARNING: This can be a very slow and CPU-intensive computation."
 
-    .line 1087
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "      -v: lists more verbose information about each app."
 
-    .line 1090
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "      -l: lists shared library info. (This option only works when -v option is also specified)"
 
-    .line 1091
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1093
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "      --preloads-only: lists only preloaded apps. This options can also be combined with others."
 
-    .line 1094
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1096
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -2261,10 +2093,8 @@
 
     const-string p0, "--- Module Details ---"
 
-    .line 706
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 707
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2285,7 +2115,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 708
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2294,7 +2123,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 709
     invoke-virtual {p1}, Landroid/content/pm/ModuleInfo;->isHidden()Z
 
     move-result p1
@@ -2315,7 +2143,6 @@
 
     move-result-object p0
 
-    .line 708
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -2326,10 +2153,8 @@
 
     const-string v0, "--- Package Installation Info ---"
 
-    .line 589
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 590
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2350,7 +2175,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 592
     iget-object v0, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
@@ -2365,7 +2189,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 593
     iget-object v0, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
     iget-object v0, v0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
@@ -2376,7 +2199,6 @@
 
     move-result-object v0
 
-    .line 595
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2395,7 +2217,6 @@
 
     const-string v2, "could-not-be-determined"
 
-    .line 598
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2404,17 +2225,14 @@
 
     if-eqz p2, :cond_0
 
-    .line 601
     invoke-static {}, Landroid/util/PackageUtils;->createLargeFileBuffer()[B
 
     move-result-object p2
 
-    .line 600
     invoke-static {v0, p2}, Landroid/util/PackageUtils;->computeSha256DigestForLargeFile(Ljava/lang/String;[B)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 602
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2431,7 +2249,6 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 606
     :cond_0
     iget-object p2, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
@@ -2441,7 +2258,6 @@
 
     if-nez p2, :cond_1
 
-    .line 609
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2460,7 +2276,6 @@
 
     goto :goto_1
 
-    .line 612
     :cond_1
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -2483,21 +2298,18 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 613
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 614
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [B
 
-    .line 615
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2506,7 +2318,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 616
     invoke-static {v0, v1}, Llibcore/util/HexEncoding;->encodeToString([BZ)Ljava/lang/String;
 
     move-result-object v0
@@ -2517,10 +2328,8 @@
 
     move-result-object v0
 
-    .line 615
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 617
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2533,12 +2342,10 @@
 
     iget-object v3, v3, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
-    .line 620
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
-    .line 619
     invoke-static {v3, v2}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$mtranslateContentDigestAlgorithmIdToString(Lcom/android/server/BinaryTransparencyService;I)Ljava/lang/String;
 
     move-result-object v2
@@ -2549,12 +2356,10 @@
 
     move-result-object v0
 
-    .line 617
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 625
     :cond_2
     :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2575,7 +2380,6 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 626
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2594,7 +2398,6 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 629
     iget-wide v2, p1, Landroid/content/pm/PackageInfo;->firstInstallTime:J
 
     iget-wide v4, p1, Landroid/content/pm/PackageInfo;->lastUpdateTime:J
@@ -2605,7 +2408,6 @@
 
     const/4 v1, 0x1
 
-    .line 631
     :cond_3
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -2623,7 +2425,6 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 633
     iget-object p0, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
     iget-object p0, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
@@ -2636,7 +2437,6 @@
 
     if-nez p0, :cond_4
 
-    .line 636
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2657,7 +2457,6 @@
 
     goto :goto_2
 
-    .line 639
     :cond_4
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -2667,7 +2466,6 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 640
     invoke-virtual {p0}, Landroid/content/pm/InstallSourceInfo;->getInitiatingPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -2678,10 +2476,8 @@
 
     move-result-object p2
 
-    .line 639
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 641
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2690,7 +2486,6 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 642
     invoke-virtual {p0}, Landroid/content/pm/InstallSourceInfo;->getInstallingPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -2701,10 +2496,8 @@
 
     move-result-object p2
 
-    .line 641
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 643
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2713,7 +2506,6 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 644
     invoke-virtual {p0}, Landroid/content/pm/InstallSourceInfo;->getOriginatingPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -2724,16 +2516,13 @@
 
     move-result-object p0
 
-    .line 643
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 647
     :goto_2
     iget-boolean p0, p1, Landroid/content/pm/PackageInfo;->isApex:Z
 
     if-eqz p0, :cond_5
 
-    .line 648
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2759,7 +2548,6 @@
 .method public final printPackageMeasurements(Landroid/content/pm/PackageInfo;ZLjava/io/PrintWriter;)V
     .locals 2
 
-    .line 559
     iget-object v0, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2772,7 +2560,6 @@
 
     if-nez v0, :cond_0
 
-    .line 562
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2798,22 +2585,18 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 568
     invoke-static {}, Landroid/util/PackageUtils;->createLargeFileBuffer()[B
 
     move-result-object p2
 
-    .line 569
     iget-object p1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
-    .line 570
     invoke-static {p1, p2}, Landroid/util/PackageUtils;->computeSha256DigestForLargeFile(Ljava/lang/String;[B)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 572
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2830,7 +2613,6 @@
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 575
     :cond_1
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -2853,21 +2635,18 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 576
     invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 577
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, [B
 
-    .line 579
     iget-object v1, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
     iget-object v1, v1, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
@@ -2884,12 +2663,10 @@
 
     const-string v0, ":"
 
-    .line 580
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    .line 581
     invoke-static {p2, v0}, Llibcore/util/HexEncoding;->encodeToString([BZ)Ljava/lang/String;
 
     move-result-object p2
@@ -2898,7 +2675,6 @@
 
     const-string p2, "\n"
 
-    .line 582
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_0
@@ -2914,7 +2690,6 @@
 
     const-string p0, "ERROR: Package\'s signingInfo is null."
 
-    .line 655
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -2922,10 +2697,8 @@
     :cond_0
     const-string p0, "--- Package Signer Info ---"
 
-    .line 658
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 659
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2946,7 +2719,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 660
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2955,7 +2727,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 661
     invoke-virtual {p1}, Landroid/content/pm/SigningInfo;->hasPastSigningCertificates()Z
 
     move-result v0
@@ -2966,15 +2737,12 @@
 
     move-result-object p0
 
-    .line 660
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 662
     invoke-virtual {p1}, Landroid/content/pm/SigningInfo;->getApkContentsSigners()[Landroid/content/pm/Signature;
 
     move-result-object p0
 
-    .line 663
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -2990,7 +2758,6 @@
 
     aget-object v5, p0, v2
 
-    .line 665
     invoke-virtual {v5}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object v6
@@ -2999,12 +2766,10 @@
 
     move-result-object v6
 
-    .line 667
     invoke-static {v6, v1}, Llibcore/util/HexEncoding;->encodeToString([BZ)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 668
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3021,13 +2786,11 @@
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 670
     :try_start_0
     invoke-virtual {v5}, Landroid/content/pm/Signature;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v5
 
-    .line 671
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3055,7 +2818,6 @@
     :catch_0
     move-exception v5
 
-    .line 673
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3075,7 +2837,6 @@
 
     goto :goto_0
 
-    .line 679
     :cond_1
     invoke-virtual {p1}, Landroid/content/pm/SigningInfo;->hasMultipleSigners()Z
 
@@ -3083,7 +2844,6 @@
 
     if-nez p0, :cond_2
 
-    .line 680
     invoke-virtual {p1}, Landroid/content/pm/SigningInfo;->hasPastSigningCertificates()Z
 
     move-result p0
@@ -3092,22 +2852,18 @@
 
     const-string p0, "== Signing Cert Lineage (Excluding The Most Recent) =="
 
-    .line 681
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "(Certs are sorted in the order of rotation, beginning with the original signing cert)"
 
-    .line 682
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 684
     invoke-virtual {p1}, Landroid/content/pm/SigningInfo;->getSigningCertificateHistory()[Landroid/content/pm/Signature;
 
     move-result-object p0
 
     move p1, v1
 
-    .line 685
     :goto_2
     array-length v0, p0
 
@@ -3115,25 +2871,20 @@
 
     if-ge p1, v0, :cond_2
 
-    .line 686
     aget-object v0, p0, p1
 
-    .line 688
     invoke-virtual {v0}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object v2
 
-    .line 687
     invoke-static {v2}, Landroid/util/PackageUtils;->computeSha256DigestBytes([B)[B
 
     move-result-object v2
 
-    .line 689
     invoke-static {v2, v1}, Llibcore/util/HexEncoding;->encodeToString([BZ)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 691
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3156,7 +2907,6 @@
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 692
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3173,13 +2923,11 @@
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 694
     :try_start_1
     invoke-virtual {v0}, Landroid/content/pm/Signature;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v0
 
-    .line 695
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3207,7 +2955,6 @@
     :catch_1
     move-exception v0
 
-    .line 697
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3231,7 +2978,6 @@
 .method public final printSignedImageInfo()I
     .locals 6
 
-    .line 517
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -3240,7 +2986,6 @@
 
     move v2, v1
 
-    .line 521
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -3250,7 +2995,6 @@
 
     const-string v2, "-a"
 
-    .line 522
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -3259,7 +3003,6 @@
 
     if-nez v2, :cond_0
 
-    .line 527
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3283,7 +3026,6 @@
 
     goto :goto_0
 
-    .line 532
     :cond_1
     iget-object v3, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
@@ -3293,25 +3035,20 @@
 
     const-string v4, "Image Info:"
 
-    .line 533
     invoke-virtual {v0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 534
     sget-object v4, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
     invoke-virtual {v0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 535
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v3, ""
 
-    .line 536
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     if-eqz v2, :cond_3
 
-    .line 539
     iget-object p0, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;->this$1:Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;
 
     iget-object p0, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
@@ -3328,7 +3065,6 @@
 
     const-string p0, "ERROR: Failed to obtain an instance of package manager."
 
-    .line 541
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, -0x1
@@ -3338,15 +3074,12 @@
     :cond_2
     const-string p0, "Other partitions:"
 
-    .line 545
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 546
     invoke-static {}, Landroid/os/Build;->getFingerprintedPartitions()Ljava/util/List;
 
     move-result-object p0
 
-    .line 547
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -3364,7 +3097,6 @@
 
     check-cast v2, Landroid/os/Build$Partition;
 
-    .line 548
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3385,7 +3117,6 @@
 
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 549
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3406,7 +3137,6 @@
 
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 550
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

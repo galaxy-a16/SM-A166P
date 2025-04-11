@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/sec_platform_library/FactoryPhone;)V
     .locals 0
 
-    .line 46
     iput-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone$2;->this$0:Lcom/samsung/android/sec_platform_library/FactoryPhone;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 48
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone$2;->this$0:Lcom/samsung/android/sec_platform_library/FactoryPhone;
 
     invoke-static {v0}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->-$$Nest$fgetLOG_TAG(Lcom/samsung/android/sec_platform_library/FactoryPhone;)Ljava/lang/String;
@@ -53,14 +51,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x3e8
 
     if-eq v0, v1, :cond_0
 
-    .line 55
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone$2;->this$0:Lcom/samsung/android/sec_platform_library/FactoryPhone;
 
     invoke-static {v0}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->-$$Nest$fgetLOG_TAG(Lcom/samsung/android/sec_platform_library/FactoryPhone;)Ljava/lang/String;
@@ -95,7 +91,6 @@
 
     goto :goto_0
 
-    .line 51
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone$2;->this$0:Lcom/samsung/android/sec_platform_library/FactoryPhone;
 

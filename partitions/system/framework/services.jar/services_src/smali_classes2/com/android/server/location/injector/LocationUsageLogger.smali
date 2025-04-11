@@ -13,17 +13,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 43
     iput-wide v0, p0, Lcom/android/server/location/injector/LocationUsageLogger;->mLastApiUsageLogHour:J
 
     const/4 v0, 0x0
 
-    .line 45
     iput v0, p0, Lcom/android/server/location/injector/LocationUsageLogger;->mApiUsageLogHourlyCount:I
 
     return-void
@@ -32,7 +29,6 @@
 .method public static bucketizeDistance(F)I
     .locals 2
 
-    .line 0
     const/4 v0, 0x0
 
     cmpg-float v1, p0, v0
@@ -67,7 +63,6 @@
 .method public static bucketizeExpireIn(J)I
     .locals 2
 
-    .line 0
     const-wide v0, 0x7fffffffffffffffL
 
     cmp-long v0, p0, v0
@@ -131,7 +126,6 @@
 .method public static bucketizeInterval(J)I
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x3e8
 
     cmp-long v0, p0, v0
@@ -197,7 +191,6 @@
 
     const-string/jumbo v0, "network"
 
-    .line 133
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -211,7 +204,6 @@
     :cond_0
     const-string v0, "gps"
 
-    .line 135
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -225,7 +217,6 @@
     :cond_1
     const-string/jumbo v0, "passive"
 
-    .line 137
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -239,7 +230,6 @@
     :cond_2
     const-string v0, "fused"
 
-    .line 139
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -259,7 +249,6 @@
 .method public static bucketizeRadius(F)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x0
 
     cmpg-float v0, p0, v0
@@ -334,7 +323,6 @@
 .method public static categorizeActivityImportance(Z)I
     .locals 0
 
-    .line 0
     if-eqz p0, :cond_0
 
     const/4 p0, 0x1
@@ -350,7 +338,6 @@
 .method public static getCallbackType(IZZ)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x5
 
     if-ne p0, v0, :cond_0
@@ -386,7 +373,6 @@
 
     monitor-enter p0
 
-    .line 234
     :try_start_0
     invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
 
@@ -400,7 +386,6 @@
 
     div-long/2addr v0, v2
 
-    .line 235
     iget-wide v2, p0, Lcom/android/server/location/injector/LocationUsageLogger;->mLastApiUsageLogHour:J
 
     cmp-long v2, v0, v2
@@ -409,20 +394,16 @@
 
     if-lez v2, :cond_0
 
-    .line 236
     iput-wide v0, p0, Lcom/android/server/location/injector/LocationUsageLogger;->mLastApiUsageLogHour:J
 
-    .line 237
     iput v3, p0, Lcom/android/server/location/injector/LocationUsageLogger;->mApiUsageLogHourlyCount:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 238
     monitor-exit p0
 
     return v3
 
-    .line 240
     :cond_0
     :try_start_1
     iget v0, p0, Lcom/android/server/location/injector/LocationUsageLogger;->mApiUsageLogHourlyCount:I
@@ -445,7 +426,6 @@
 
     move v3, v1
 
-    .line 242
     :cond_1
     monitor-exit p0
 
@@ -462,7 +442,6 @@
 .method public logLocationApiUsage(IILjava/lang/String;)V
     .locals 16
 
-    .line 100
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/location/injector/LocationUsageLogger;->hitApiUsageLogCap()Z
 
@@ -477,7 +456,6 @@
 
     const/4 v4, 0x0
 
-    .line 107
     invoke-static/range {p3 .. p3}, Lcom/android/server/location/injector/LocationUsageLogger;->bucketizeProvider(Ljava/lang/String;)I
 
     move-result v5
@@ -496,7 +474,6 @@
 
     move/from16 v3, p2
 
-    .line 113
     invoke-static {v3, v0, v0}, Lcom/android/server/location/injector/LocationUsageLogger;->getCallbackType(IZZ)I
 
     move-result v12
@@ -511,7 +488,6 @@
 
     move/from16 v3, p2
 
-    .line 104
     invoke-static/range {v1 .. v15}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIILjava/lang/String;IIIIJIIIILjava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -525,7 +501,6 @@
 
     const-string v2, "Failed to log API usage to statsd."
 
-    .line 121
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -535,7 +510,6 @@
 .method public logLocationApiUsage(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/location/LocationRequest;ZZLandroid/location/Geofence;Z)V
     .locals 19
 
-    .line 56
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/location/injector/LocationUsageLogger;->hitApiUsageLogCap()Z
 
@@ -578,7 +552,6 @@
 
     goto :goto_2
 
-    .line 67
     :cond_3
     invoke-static/range {p5 .. p5}, Lcom/android/server/location/injector/LocationUsageLogger;->bucketizeProvider(Ljava/lang/String;)I
 
@@ -593,7 +566,6 @@
 
     goto :goto_3
 
-    .line 70
     :cond_4
     invoke-virtual/range {p6 .. p6}, Landroid/location/LocationRequest;->getQuality()I
 
@@ -608,7 +580,6 @@
 
     goto :goto_4
 
-    .line 73
     :cond_5
     invoke-virtual/range {p6 .. p6}, Landroid/location/LocationRequest;->getIntervalMillis()J
 
@@ -627,13 +598,11 @@
 
     goto :goto_5
 
-    .line 77
     :cond_6
     invoke-virtual/range {p6 .. p6}, Landroid/location/LocationRequest;->getMinUpdateDistanceMeters()F
 
     move-result v5
 
-    .line 76
     invoke-static {v5}, Lcom/android/server/location/injector/LocationUsageLogger;->bucketizeDistance(F)I
 
     move-result v5
@@ -650,7 +619,6 @@
 
     goto :goto_7
 
-    .line 78
     :cond_7
     invoke-virtual/range {p6 .. p6}, Landroid/location/LocationRequest;->getMaxUpdates()I
 
@@ -669,7 +637,6 @@
 
     goto :goto_8
 
-    .line 82
     :cond_8
     invoke-virtual/range {p6 .. p6}, Landroid/location/LocationRequest;->getDurationMillis()J
 
@@ -701,7 +668,6 @@
 
     move v14, v1
 
-    .line 83
     :goto_9
     invoke-static {v0, v5, v6}, Lcom/android/server/location/injector/LocationUsageLogger;->getCallbackType(IZZ)I
 
@@ -714,7 +680,6 @@
 
     goto :goto_b
 
-    .line 86
     :cond_a
     invoke-virtual/range {p9 .. p9}, Landroid/location/Geofence;->getRadius()F
 
@@ -726,7 +691,6 @@
 
     goto :goto_a
 
-    .line 87
     :goto_b
     invoke-static/range {p10 .. p10}, Lcom/android/server/location/injector/LocationUsageLogger;->categorizeActivityImportance(Z)I
 
@@ -740,7 +704,6 @@
 
     move-object/from16 v18, p4
 
-    .line 63
     invoke-static/range {v4 .. v18}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIILjava/lang/String;IIIIJIIIILjava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -754,7 +717,6 @@
 
     const-string v2, "Failed to log API usage to statsd."
 
-    .line 91
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_c
@@ -768,13 +730,11 @@
 
     const/16 v0, 0x244
 
-    .line 129
     :try_start_0
     invoke-static {v0, p1}, Lcom/android/internal/util/FrameworkStatsLog;->write(IZ)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 130
     monitor-exit p0
 
     return-void

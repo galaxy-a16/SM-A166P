@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/battery/FitBatteryManager;I)V
     .locals 0
 
-    .line 172
     iput-object p1, p0, Lcom/samsung/android/server/battery/FitBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/FitBatteryManager;
 
     iput p2, p0, Lcom/samsung/android/server/battery/FitBatteryManager$1;->val$syncData:I
@@ -35,7 +34,6 @@
 
     const-string v1, "FitBatteryManager"
 
-    .line 176
     :try_start_0
     new-instance v2, Landroid/os/Bundle;
 
@@ -43,12 +41,10 @@
 
     const-string/jumbo v3, "sync_battery_data"
 
-    .line 177
     iget v4, p0, Lcom/samsung/android/server/battery/FitBatteryManager$1;->val$syncData:I
 
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 178
     iget-object v3, p0, Lcom/samsung/android/server/battery/FitBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/FitBatteryManager;
 
     iget-object v3, v3, Lcom/samsung/android/server/battery/FitBatteryManager;->mProviderUriMap:Ljava/util/HashMap;
@@ -74,14 +70,12 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 179
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/net/Uri;
 
-    .line 180
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,7 +94,6 @@
 
     invoke-static {v1, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     iget-object v5, p0, Lcom/samsung/android/server/battery/FitBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/FitBatteryManager;
 
     invoke-static {v5}, Lcom/samsung/android/server/battery/FitBatteryManager;->-$$Nest$fgetmContext(Lcom/samsung/android/server/battery/FitBatteryManager;)Landroid/content/Context;
@@ -121,12 +114,10 @@
 
     const-string/jumbo v5, "result"
 
-    .line 184
     invoke-virtual {v4, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 185
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +140,6 @@
     :catch_0
     move-exception p0
 
-    .line 190
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,7 +161,6 @@
     :catch_1
     move-exception p0
 
-    .line 188
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

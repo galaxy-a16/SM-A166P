@@ -15,7 +15,6 @@
 
     const-string/jumbo v3, "pins"
 
-    .line 22
     invoke-direct {p0, v2, v3, v0, v1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

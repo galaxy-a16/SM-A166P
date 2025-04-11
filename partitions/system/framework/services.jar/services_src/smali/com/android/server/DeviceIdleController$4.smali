@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/DeviceIdleController;)V
     .locals 0
 
-    .line 856
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$4;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p2, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
-    .line 863
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -39,7 +37,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 864
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$4;->this$0:Lcom/android/server/DeviceIdleController;
 
     iget-object p1, p0, Lcom/android/server/DeviceIdleController;->mHandler:Lcom/android/server/DeviceIdleController$MyHandler;
@@ -54,7 +51,6 @@
 
     goto :goto_0
 
-    .line 867
     :cond_0
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$4;->this$0:Lcom/android/server/DeviceIdleController;
 

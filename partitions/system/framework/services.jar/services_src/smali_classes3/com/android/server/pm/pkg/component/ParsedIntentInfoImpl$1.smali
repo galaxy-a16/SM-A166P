@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl;
     .locals 0
 
-    .line 167
     new-instance p0, Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl;
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl;-><init>(Landroid/os/Parcel;)V
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 159
     invoke-virtual {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl;
     .locals 0
 
-    .line 162
     new-array p0, p1, [Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 159
     invoke-virtual {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl$1;->newArray(I)[Lcom/android/server/pm/pkg/component/ParsedIntentInfoImpl;
 
     move-result-object p0

@@ -13,15 +13,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 38
     iput-object v0, p0, Lcom/android/server/wm/ContentRecordingController;->mSession:Landroid/view/ContentRecordingSession;
 
-    .line 41
     iput-object v0, p0, Lcom/android/server/wm/ContentRecordingController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     return-void
@@ -32,7 +29,6 @@
 .method public getContentRecordingSessionLocked()Landroid/view/ContentRecordingSession;
     .locals 0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/wm/ContentRecordingController;->mSession:Landroid/view/ContentRecordingSession;
 
     return-object p0
@@ -41,7 +37,6 @@
 .method public isValid(Lcom/android/server/wm/DisplayContent;)Z
     .locals 0
 
-    .line 140
     iget-object p0, p0, Lcom/android/server/wm/ContentRecordingController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     if-ne p1, p0, :cond_0
@@ -62,7 +57,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 80
     invoke-static {p1}, Landroid/view/ContentRecordingSession;->isValid(Landroid/view/ContentRecordingSession;)Z
 
     move-result v0
@@ -71,7 +65,6 @@
 
     return-void
 
-    .line 83
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ContentRecordingController;->mSession:Landroid/view/ContentRecordingSession;
 
@@ -83,14 +76,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 84
     invoke-virtual {v0}, Landroid/view/ContentRecordingSession;->isWaitingForConsent()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 85
     invoke-virtual {p1}, Landroid/view/ContentRecordingSession;->isWaitingForConsent()Z
 
     move-result v0
@@ -104,7 +95,6 @@
     :cond_1
     move v0, v1
 
-    .line 86
     :goto_0
     iget-object v3, p0, Lcom/android/server/wm/ContentRecordingController;->mSession:Landroid/view/ContentRecordingSession;
 
@@ -116,7 +106,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 89
     sget-boolean v3, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_CONTENT_RECORDING_enabled:Z
 
     if-eqz v3, :cond_4
@@ -155,7 +144,6 @@
 
     goto :goto_1
 
-    .line 95
     :cond_2
     sget-boolean p2, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_CONTENT_RECORDING_enabled:Z
 
@@ -202,7 +190,6 @@
 
     if-eqz p1, :cond_9
 
-    .line 105
     sget-boolean v4, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_CONTENT_RECORDING_enabled:Z
 
     if-eqz v4, :cond_6
@@ -251,23 +238,19 @@
 
     invoke-static {v7, v5, v2, v6, v4}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 109
     :cond_6
     iget-object p2, p2, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 110
     invoke-virtual {p1}, Landroid/view/ContentRecordingSession;->getVirtualDisplayId()I
 
     move-result v4
 
-    .line 109
     invoke-virtual {p2, v4}, Lcom/android/server/wm/RootWindowContainer;->getDisplayContentOrCreate(I)Lcom/android/server/wm/DisplayContent;
 
     move-result-object p2
 
     if-nez p2, :cond_8
 
-    .line 112
     sget-boolean p0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_CONTENT_RECORDING_enabled:Z
 
     if-eqz p0, :cond_7
@@ -297,13 +280,11 @@
     :cond_7
     return-void
 
-    .line 118
     :cond_8
     invoke-virtual {p2, p1}, Lcom/android/server/wm/DisplayContent;->setContentRecordingSession(Landroid/view/ContentRecordingSession;)V
 
     if-eqz v0, :cond_a
 
-    .line 122
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->updateRecording()V
 
     goto :goto_3
@@ -311,7 +292,6 @@
     :cond_9
     move-object p2, v3
 
-    .line 126
     :cond_a
     :goto_3
     iget-object v2, p0, Lcom/android/server/wm/ContentRecordingController;->mSession:Landroid/view/ContentRecordingSession;
@@ -320,7 +300,6 @@
 
     if-nez v0, :cond_c
 
-    .line 127
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_CONTENT_RECORDING_enabled:Z
 
     if-eqz v0, :cond_b
@@ -347,22 +326,18 @@
 
     invoke-static {v2, v5, v1, v4, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 130
     :cond_b
     iget-object v0, p0, Lcom/android/server/wm/ContentRecordingController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->pauseRecording()V
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/wm/ContentRecordingController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0, v3}, Lcom/android/server/wm/DisplayContent;->setContentRecordingSession(Landroid/view/ContentRecordingSession;)V
 
-    .line 134
     :cond_c
     iput-object p2, p0, Lcom/android/server/wm/ContentRecordingController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 135
     iput-object p1, p0, Lcom/android/server/wm/ContentRecordingController;->mSession:Landroid/view/ContentRecordingSession;
 
     return-void

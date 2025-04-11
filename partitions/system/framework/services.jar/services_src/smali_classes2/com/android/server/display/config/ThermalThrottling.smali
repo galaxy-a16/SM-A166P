@@ -21,15 +21,12 @@
 .method public static read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/display/config/ThermalThrottling;
     .locals 4
 
-    .line 22
     new-instance v0, Lcom/android/server/display/config/ThermalThrottling;
 
     invoke-direct {v0}, Lcom/android/server/display/config/ThermalThrottling;-><init>()V
 
-    .line 24
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    .line 26
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -43,7 +40,6 @@
 
     if-eq v1, v3, :cond_3
 
-    .line 28
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -54,7 +50,6 @@
 
     goto :goto_0
 
-    .line 29
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -62,19 +57,16 @@
 
     const-string v2, "brightnessThrottlingMap"
 
-    .line 30
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 31
     invoke-static {p0}, Lcom/android/server/display/config/BrightnessThrottlingMap;->read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/display/config/BrightnessThrottlingMap;
 
     move-result-object v1
 
-    .line 32
     invoke-virtual {v0}, Lcom/android/server/display/config/ThermalThrottling;->getBrightnessThrottlingMap()Ljava/util/List;
 
     move-result-object v2
@@ -86,19 +78,16 @@
     :cond_1
     const-string/jumbo v2, "refreshRateThrottlingMap"
 
-    .line 33
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 34
     invoke-static {p0}, Lcom/android/server/display/config/RefreshRateThrottlingMap;->read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/display/config/RefreshRateThrottlingMap;
 
     move-result-object v1
 
-    .line 35
     invoke-virtual {v0}, Lcom/android/server/display/config/ThermalThrottling;->getRefreshRateThrottlingMap()Ljava/util/List;
 
     move-result-object v2
@@ -107,7 +96,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_2
     invoke-static {p0}, Lcom/android/server/display/config/XmlParser;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
@@ -118,7 +106,6 @@
 
     return-object v0
 
-    .line 41
     :cond_4
     new-instance p0, Ljavax/xml/datatype/DatatypeConfigurationException;
 
@@ -134,19 +121,16 @@
 .method public final getBrightnessThrottlingMap()Ljava/util/List;
     .locals 1
 
-    .line 8
     iget-object v0, p0, Lcom/android/server/display/config/ThermalThrottling;->brightnessThrottlingMap:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 9
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/config/ThermalThrottling;->brightnessThrottlingMap:Ljava/util/List;
 
-    .line 11
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/config/ThermalThrottling;->brightnessThrottlingMap:Ljava/util/List;
 
@@ -156,19 +140,16 @@
 .method public final getRefreshRateThrottlingMap()Ljava/util/List;
     .locals 1
 
-    .line 15
     iget-object v0, p0, Lcom/android/server/display/config/ThermalThrottling;->refreshRateThrottlingMap:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/config/ThermalThrottling;->refreshRateThrottlingMap:Ljava/util/List;
 
-    .line 18
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/config/ThermalThrottling;->refreshRateThrottlingMap:Ljava/util/List;
 

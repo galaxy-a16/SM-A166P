@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$GyD5zMjS0iTiqPsiR-N4SNqe3ek(Lcom/android/server/pm/ShortcutService$3;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/ShortcutService$3;->lambda$onRoleHoldersChanged$0(Landroid/os/UserHandle;)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutService;)V
     .locals 0
 
-    .line 649
     iput-object p1, p0, Lcom/android/server/pm/ShortcutService$3;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,7 +32,6 @@
 .method private synthetic lambda$onRoleHoldersChanged$0(Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 653
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$3;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
@@ -53,14 +50,12 @@
 
     const-string v0, "android.app.role.HOME"
 
-    .line 652
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 653
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$3;->this$0:Lcom/android/server/pm/ShortcutService;
 
     new-instance v1, Lcom/android/server/pm/ShortcutService$3$$ExternalSyntheticLambda0;
@@ -69,7 +64,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/pm/ShortcutService;->injectPostToHandler(Ljava/lang/Runnable;)V
 
-    .line 656
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$3;->this$0:Lcom/android/server/pm/ShortcutService;
 
@@ -81,15 +75,12 @@
 
     move-result-object v0
 
-    .line 657
     invoke-static {p1, v0, p2}, Lcom/samsung/android/server/pm/PmLog;->logRoleHoldersChanged(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
 
-    .line 659
     sget-boolean p2, Lcom/samsung/android/rune/PMRune;->PM_BADGE_ON_MONETIZED_APP_SUPPORTED:Z
 
     if-eqz p2, :cond_1
 
-    .line 661
     :try_start_0
     iget-object p2, p0, Lcom/android/server/pm/ShortcutService$3;->this$0:Lcom/android/server/pm/ShortcutService;
 
@@ -111,7 +102,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 662
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$3;->this$0:Lcom/android/server/pm/ShortcutService;
 
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;

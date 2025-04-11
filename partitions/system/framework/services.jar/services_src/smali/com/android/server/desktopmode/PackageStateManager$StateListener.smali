@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/PackageStateManager;)V
     .locals 0
 
-    .line 244
     iput-object p1, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     invoke-direct {p0}, Lcom/android/server/desktopmode/StateManager$StateListener;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/PackageStateManager;Lcom/android/server/desktopmode/PackageStateManager$StateListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/PackageStateManager$StateListener;-><init>(Lcom/android/server/desktopmode/PackageStateManager;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onDualModeSetDesktopModeInternal(Z)V
     .locals 2
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/PackageStateManager;)Lcom/android/server/desktopmode/IStateManager;
@@ -46,7 +43,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$msetSettingsComponent(Lcom/android/server/desktopmode/PackageStateManager;Lcom/android/server/desktopmode/State;)V
 
-    .line 268
     iget-object p0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     const-string v0, "com.sec.android.desktopmode.uiservice.activity.touchpad.TouchpadActivity"
@@ -59,7 +55,6 @@
 .method public onEmergencyModeChanged(Lcom/android/server/desktopmode/State;)V
     .locals 0
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$mupdatePackageState(Lcom/android/server/desktopmode/PackageStateManager;)V
@@ -70,7 +65,6 @@
 .method public onSetDesktopModeInternal(Z)V
     .locals 0
 
-    .line 262
     iget-object p0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/PackageStateManager;)Lcom/android/server/desktopmode/IStateManager;
@@ -89,12 +83,10 @@
 .method public onUserChanged(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$mupdatePackageState(Lcom/android/server/desktopmode/PackageStateManager;)V
 
-    .line 254
     iget-object v0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     const-string v1, "com.sec.android.desktopmode.uiservice.DesktopModeTile"
@@ -103,14 +95,12 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$msetComponent(Lcom/android/server/desktopmode/PackageStateManager;Ljava/lang/String;Z)V
 
-    .line 255
     iget-object v0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     const-string v1, "com.sec.android.desktopmode.uiservice.DesktopDisplayDesktopModeTile"
 
     invoke-static {v0, v1, v2}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$msetComponent(Lcom/android/server/desktopmode/PackageStateManager;Ljava/lang/String;Z)V
 
-    .line 256
     iget-object v0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     const-string v1, "com.sec.android.desktopmode.uiservice.activity.touchpad.TouchpadActivity"
@@ -119,7 +109,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$msetComponent(Lcom/android/server/desktopmode/PackageStateManager;Ljava/lang/String;Z)V
 
-    .line 257
     iget-object p0, p0, Lcom/android/server/desktopmode/PackageStateManager$StateListener;->this$0:Lcom/android/server/desktopmode/PackageStateManager;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/PackageStateManager;->-$$Nest$msetSettingsComponent(Lcom/android/server/desktopmode/PackageStateManager;Lcom/android/server/desktopmode/State;)V

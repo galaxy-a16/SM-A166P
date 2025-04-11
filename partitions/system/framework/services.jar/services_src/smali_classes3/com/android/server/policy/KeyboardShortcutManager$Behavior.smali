@@ -15,13 +15,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 207
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 208
     iput-object p1, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mContext:Landroid/content/Context;
 
-    .line 209
     iput-object p2, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     return-void
@@ -32,7 +29,6 @@
 .method public getIntent()Landroid/content/Intent;
     .locals 0
 
-    .line 213
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mIntent:Landroid/content/Intent;
 
     return-object p0
@@ -41,7 +37,6 @@
 .method public launch(I)Z
     .locals 1
 
-    .line 217
     invoke-virtual {p0}, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->preCondition()Z
 
     move-result v0
@@ -52,7 +47,6 @@
 
     return p0
 
-    .line 220
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->startTargetApp(I)V
 
@@ -64,7 +58,6 @@
 .method public preCondition()Z
     .locals 0
 
-    .line 225
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->externalKeyboardPolicy()Z
@@ -77,7 +70,6 @@
 .method public startTargetApp(I)V
     .locals 3
 
-    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,15 +88,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object v0
 
-    .line 231
     invoke-virtual {v0, p1}, Landroid/app/ActivityOptions;->setLaunchDisplayId(I)Landroid/app/ActivityOptions;
 
-    .line 232
     iget-object p1, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mIntent:Landroid/content/Intent;
@@ -117,14 +106,12 @@
 
     invoke-virtual {p1, v1, v0, v2}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
-    .line 233
     iget-object p1, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p1}, Lcom/android/server/policy/PhoneWindowManager;->sendCloseSystemWindows()V
 
-    .line 234
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -137,7 +124,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 238
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

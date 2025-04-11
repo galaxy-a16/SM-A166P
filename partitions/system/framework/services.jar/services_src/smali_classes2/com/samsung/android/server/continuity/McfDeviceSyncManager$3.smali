@@ -18,14 +18,12 @@
 .method public constructor <init>(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;I)V
     .locals 0
 
-    .line 193
     iput-object p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$3;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     iput p2, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$3;->val$bindReason:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 194
     iput p2, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$3;->mBindReason:I
 
     return-void
@@ -59,19 +57,16 @@
     :cond_0
     const-string p1, "bindMcf : SERVICE_STATE_AVAILABLE"
 
-    .line 213
     invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 p1, 0x8
 
-    .line 214
     invoke-static {p1}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->isSupported(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 215
     iget-object p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$3;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-static {p1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->-$$Nest$fgetmHandler(Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)Landroid/os/Handler;
@@ -85,12 +80,10 @@
     :cond_1
     const-string p1, "bindMcf : SERVICE_STATE_UNAVAILABLE"
 
-    .line 209
     invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 200
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -114,7 +107,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     iget-object p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$3;->this$0:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     iget v0, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$3;->mBindReason:I
@@ -126,14 +118,12 @@
     :cond_3
     const-string p1, "bindMcf : SERVICE_STATE_DISCONNECTED"
 
-    .line 205
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
     :goto_0
     const/4 p1, 0x0
 
-    .line 220
     iput p1, p0, Lcom/samsung/android/server/continuity/McfDeviceSyncManager$3;->mBindReason:I
 
     return-void

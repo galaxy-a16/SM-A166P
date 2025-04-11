@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/util/function/Supplier;ILjava/lang/String;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;Lcom/android/server/biometrics/sensors/BiometricUtils;Ljava/util/Map;)V
     .locals 0
 
-    .line 52
     invoke-direct/range {p0 .. p9}, Lcom/android/server/biometrics/sensors/InternalCleanupClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;ILjava/lang/String;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;Lcom/android/server/biometrics/sensors/BiometricUtils;Ljava/util/Map;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getEnumerateClient(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;ILjava/lang/String;Ljava/util/List;Lcom/android/server/biometrics/sensors/BiometricUtils;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)Lcom/android/server/biometrics/sensors/InternalEnumerateClient;
     .locals 12
 
-    .line 62
     new-instance v11, Lcom/android/server/biometrics/sensors/fingerprint/hidl/FingerprintInternalEnumerateClient;
 
     move-object v0, v11
@@ -51,7 +49,6 @@
 .method public getRemovalClient(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;IILjava/lang/String;Lcom/android/server/biometrics/sensors/BiometricUtils;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;Ljava/util/Map;)Lcom/android/server/biometrics/sensors/RemovalClient;
     .locals 14
 
-    .line 74
     new-instance v13, Lcom/android/server/biometrics/sensors/fingerprint/hidl/FingerprintRemovalClient;
 
     const/4 v4, 0x0
@@ -88,7 +85,6 @@
 .method public onAddUnknownTemplate(ILandroid/hardware/biometrics/BiometricAuthenticator$Identifier;)V
     .locals 1
 
-    .line 84
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result p1
@@ -97,7 +93,6 @@
 
     move-result-object p1
 
-    .line 85
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -108,7 +103,6 @@
 
     check-cast p2, Landroid/hardware/fingerprint/Fingerprint;
 
-    .line 84
     invoke-virtual {p1, v0, p0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->addBiometricForUser(Landroid/content/Context;ILandroid/hardware/fingerprint/Fingerprint;)V
 
     return-void

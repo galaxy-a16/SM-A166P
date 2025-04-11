@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/HardwareManager;)V
     .locals 0
 
-    .line 170
     iput-object p1, p0, Lcom/android/server/desktopmode/HardwareManager$3;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUEvent(Landroid/os/UEventObserver$UEvent;)V
     .locals 3
 
-    .line 173
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$3;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmLock(Lcom/android/server/desktopmode/HardwareManager;)Ljava/lang/Object;
@@ -33,7 +31,6 @@
 
     monitor-enter v0
 
-    .line 175
     :try_start_0
     iget-object v1, p0, Lcom/android/server/desktopmode/HardwareManager$3;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
@@ -49,7 +46,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$msetRawDockStateLocked(Lcom/android/server/desktopmode/HardwareManager;I)V
 
-    .line 176
     iget-object v1, p0, Lcom/android/server/desktopmode/HardwareManager$3;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     const-string v2, "USBPD_IDS"
@@ -60,7 +56,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$msetRawDockUsbpdIdsLocked(Lcom/android/server/desktopmode/HardwareManager;Ljava/lang/String;)V
 
-    .line 177
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$3;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$mupdateDockStatusLocked(Lcom/android/server/desktopmode/HardwareManager;)Z
@@ -75,7 +70,6 @@
 
     goto :goto_1
 
-    .line 179
     :catch_0
     :try_start_1
     invoke-static {}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -98,7 +92,6 @@
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     :goto_0
     monitor-exit v0
 

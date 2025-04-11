@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/appop/AttributedOp$OpEventProxyInfoPool;I)V
     .locals 0
 
-    .line 827
     invoke-direct {p0, p2}, Landroid/util/Pools$SimplePool;-><init>(I)V
 
-    .line 828
     iput-object p1, p0, Lcom/android/server/appop/AttributedOp$InProgressStartOpEventPool;->mOpEventProxyInfoPool:Lcom/android/server/appop/AttributedOp$OpEventProxyInfoPool;
 
     return-void
@@ -29,7 +27,6 @@
 
     move/from16 v1, p8
 
-    .line 838
     invoke-virtual/range {p0 .. p0}, Landroid/util/Pools$SimplePool;->acquire()Ljava/lang/Object;
 
     move-result-object v2
@@ -40,7 +37,6 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 842
     iget-object v3, v0, Lcom/android/server/appop/AttributedOp$InProgressStartOpEventPool;->mOpEventProxyInfoPool:Lcom/android/server/appop/AttributedOp$OpEventProxyInfoPool;
 
     move-object/from16 v4, p9
@@ -59,7 +55,6 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 847
     iget-object v0, v0, Lcom/android/server/appop/AttributedOp$InProgressStartOpEventPool;->mOpEventProxyInfoPool:Lcom/android/server/appop/AttributedOp$OpEventProxyInfoPool;
 
     move-object v3, v2
@@ -90,7 +85,6 @@
 
     return-object v2
 
-    .line 853
     :cond_1
     new-instance v0, Lcom/android/server/appop/AttributedOp$InProgressStartOpEvent;
 

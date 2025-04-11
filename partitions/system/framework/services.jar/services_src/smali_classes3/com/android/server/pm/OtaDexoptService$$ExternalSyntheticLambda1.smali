@@ -20,7 +20,6 @@
 .method public final applyAsLong(Ljava/lang/Object;)J
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/pkg/PackageStateInternal;
 
     invoke-static {p1}, Lcom/android/server/pm/OtaDexoptService;->$r8$lambda$kVT16uUu7PUfM5w_HVAMYw4Y-sY(Lcom/android/server/pm/pkg/PackageStateInternal;)J

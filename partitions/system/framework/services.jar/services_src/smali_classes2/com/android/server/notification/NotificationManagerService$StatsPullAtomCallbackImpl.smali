@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;)V
     .locals 0
 
-    .line 3848
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$StatsPullAtomCallbackImpl;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationManagerService$StatsPullAtomCallbackImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationManagerService$StatsPullAtomCallbackImpl;-><init>(Lcom/android/server/notification/NotificationManagerService;)V
 
     return-void
@@ -42,7 +40,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 3858
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -63,7 +60,6 @@
 
     throw p0
 
-    .line 3856
     :cond_0
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$StatsPullAtomCallbackImpl;->this$0:Lcom/android/server/notification/NotificationManagerService;

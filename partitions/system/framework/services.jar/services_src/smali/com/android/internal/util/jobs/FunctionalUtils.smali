@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$gXIRCSzw5Y9U2VbyWH1YKKdariA(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingRunnable;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/internal/util/jobs/FunctionalUtils;->lambda$handleExceptions$0(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingRunnable;Ljava/util/function/Consumer;)V
 
     return-void
@@ -24,14 +23,12 @@
 .method public static getLambdaName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 6
 
-    .line 317
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "-$$"
 
-    .line 319
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
@@ -47,7 +44,6 @@
 
     const/16 v3, 0x24
 
-    .line 323
     invoke-virtual {p0, v3, v2}, Ljava/lang/String;->indexOf(II)I
 
     move-result v2
@@ -59,7 +55,6 @@
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
-    .line 326
     invoke-virtual {p0, v3, v2}, Ljava/lang/String;->indexOf(II)I
 
     move-result v3
@@ -70,7 +65,6 @@
 
     if-ne v3, v1, :cond_2
 
-    .line 329
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +85,6 @@
 
     return-object p0
 
-    .line 333
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -103,7 +96,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 334
     invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -122,7 +114,6 @@
 .method public static handleExceptions(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingRunnable;Ljava/util/function/Consumer;)Ljava/lang/Runnable;
     .locals 1
 
-    .line 83
     new-instance v0, Lcom/android/internal/util/jobs/FunctionalUtils$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/util/jobs/FunctionalUtils$$ExternalSyntheticLambda0;-><init>(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingRunnable;Ljava/util/function/Consumer;)V
@@ -133,14 +124,12 @@
 .method public static ignoreRemoteException(Lcom/android/internal/util/jobs/FunctionalUtils$RemoteExceptionIgnoringConsumer;)Ljava/util/function/Consumer;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public static synthetic lambda$handleExceptions$0(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingRunnable;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 85
     :try_start_0
     invoke-interface {p0}, Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingRunnable;->run()V
     :try_end_0
@@ -151,7 +140,6 @@
     :catchall_0
     move-exception p0
 
-    .line 87
     invoke-interface {p1, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     :goto_0
@@ -161,34 +149,29 @@
 .method public static uncheckExceptions(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingRunnable;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public static uncheckExceptions(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingBiConsumer;)Ljava/util/function/BiConsumer;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public static uncheckExceptions(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingConsumer;)Ljava/util/function/Consumer;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public static uncheckExceptions(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingFunction;)Ljava/util/function/Function;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public static uncheckExceptions(Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingSupplier;)Ljava/util/function/Supplier;
     .locals 0
 
-    .line 0
     return-object p0
 .end method

@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;Ljava/lang/Integer;)V
     .locals 0
 
-    .line 332
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$SubIdPhoneStateListener;->this$0:Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
-    .line 333
     iput-object p2, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$SubIdPhoneStateListener;->mSubId:Ljava/lang/Integer;
 
     return-void
@@ -29,7 +27,6 @@
 .method public onPreciseCallStateChanged(Landroid/telephony/PreciseCallState;)V
     .locals 2
 
-    .line 338
     invoke-virtual {p1}, Landroid/telephony/PreciseCallState;->getForegroundCallState()I
 
     move-result v0
@@ -40,14 +37,12 @@
 
     const/4 v0, 0x3
 
-    .line 340
     invoke-virtual {p1}, Landroid/telephony/PreciseCallState;->getForegroundCallState()I
 
     move-result p1
 
     if-ne v0, p1, :cond_1
 
-    .line 341
     :cond_0
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$SubIdPhoneStateListener;->this$0:Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;
 
@@ -59,7 +54,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;->-$$Nest$fputmActiveSubId(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;I)V
 
-    .line 342
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

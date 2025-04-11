@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetpackageName(Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->packageName:Ljava/lang/String;
 
     return-object p0
@@ -28,21 +27,16 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerBackupHelper;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 90
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     iput-object p2, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->accountDigest:Ljava/lang/String;
 
-    .line 92
     iput-object p3, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->packageName:Ljava/lang/String;
 
-    .line 93
     iput-object p4, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->certDigest:Ljava/lang/String;
 
-    .line 94
     iput p5, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->userId:I
 
     return-void
@@ -53,7 +47,6 @@
 .method public apply(Landroid/content/pm/PackageManager;)Z
     .locals 11
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-static {v0}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fgetmAccountManagerService(Lcom/android/server/accounts/AccountManagerBackupHelper;)Lcom/android/server/accounts/AccountManagerService;
@@ -62,17 +55,14 @@
 
     iget v1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->userId:I
 
-    .line 100
     invoke-virtual {v0, v1}, Lcom/android/server/accounts/AccountManagerService;->getUserAccounts(I)Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     move-result-object v0
 
-    .line 101
     iget-object v1, v0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->dbLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 102
     :try_start_0
     iget-object v2, v0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->cacheLock:Ljava/lang/Object;
 
@@ -80,7 +70,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 103
     :try_start_1
     iget-object v0, v0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->accountCache:Ljava/util/HashMap;
 
@@ -109,7 +98,6 @@
 
     check-cast v4, [Landroid/accounts/Account;
 
-    .line 104
     array-length v6, v4
 
     move v7, v5
@@ -119,17 +107,14 @@
 
     aget-object v8, v4, v7
 
-    .line 105
     iget-object v9, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->accountDigest:Ljava/lang/String;
 
     iget-object v10, v8, Landroid/accounts/Account;->name:Ljava/lang/String;
 
-    .line 106
     invoke-virtual {v10}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v10
 
-    .line 105
     invoke-static {v10}, Landroid/util/PackageUtils;->computeSha256Digest([B)Ljava/lang/String;
 
     move-result-object v10
@@ -153,13 +138,11 @@
     :goto_1
     if-eqz v3, :cond_0
 
-    .line 115
     :cond_3
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 116
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -169,7 +152,6 @@
 
     return v5
 
-    .line 122
     :cond_4
     :try_start_3
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->packageName:Ljava/lang/String;
@@ -184,19 +166,16 @@
     :try_end_3
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 133
     iget-object v0, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     invoke-static {v0}, Landroid/util/PackageUtils;->computeSignaturesSha256Digests([Landroid/content/pm/Signature;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 135
     invoke-static {v0}, Landroid/util/PackageUtils;->computeSignaturesSha256Digest([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 137
     iget-object v2, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->certDigest:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -217,7 +196,6 @@
 
     aget-object v0, v0, v5
 
-    .line 138
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -227,13 +205,11 @@
     :cond_5
     return v5
 
-    .line 141
     :cond_6
     iget-object p1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget p1, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-static {v0}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fgetmAccountManagerInternal(Lcom/android/server/accounts/AccountManagerBackupHelper;)Landroid/accounts/AccountManagerInternal;
@@ -246,7 +222,6 @@
 
     if-nez v0, :cond_7
 
-    .line 143
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->this$0:Lcom/android/server/accounts/AccountManagerBackupHelper;
 
     invoke-static {p0}, Lcom/android/server/accounts/AccountManagerBackupHelper;->-$$Nest$fgetmAccountManagerService(Lcom/android/server/accounts/AccountManagerBackupHelper;)Lcom/android/server/accounts/AccountManagerService;
@@ -266,7 +241,6 @@
     :catchall_0
     move-exception p0
 
-    .line 115
     :try_start_4
     monitor-exit v2
     :try_end_4
@@ -278,7 +252,6 @@
     :catchall_1
     move-exception p0
 
-    .line 116
     monitor-exit v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1

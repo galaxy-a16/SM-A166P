@@ -16,13 +16,10 @@
 .method public constructor <init>(Landroid/media/projection/MediaProjectionInfo;Landroid/media/projection/IMediaProjectionWatcherCallback;)V
     .locals 0
 
-    .line 1443
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1444
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$WatcherStopCallback;->mInfo:Landroid/media/projection/MediaProjectionInfo;
 
-    .line 1445
     iput-object p2, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$WatcherStopCallback;->mCallback:Landroid/media/projection/IMediaProjectionWatcherCallback;
 
     return-void
@@ -33,7 +30,6 @@
 .method public run()V
     .locals 2
 
-    .line 1451
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$WatcherStopCallback;->mCallback:Landroid/media/projection/IMediaProjectionWatcherCallback;
 
@@ -52,7 +48,6 @@
 
     const-string v1, "Failed to notify media projection has stopped"
 
-    .line 1453
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

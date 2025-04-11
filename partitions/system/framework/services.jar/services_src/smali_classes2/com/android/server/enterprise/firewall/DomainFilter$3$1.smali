@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/firewall/DomainFilter$3;)V
     .locals 0
 
-    .line 226
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$3$1;->this$1:Lcom/android/server/enterprise/firewall/DomainFilter$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 0
 
-    .line 228
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$3$1;->this$1:Lcom/android/server/enterprise/firewall/DomainFilter$3;
 
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$3;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;

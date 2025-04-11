@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;)V
     .locals 0
 
-    .line 337
     iput-object p1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$MDMReceiver;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;Lcom/android/server/timedetector/NetworkTimeUpdateService$MDMReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/timedetector/NetworkTimeUpdateService$MDMReceiver;-><init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;)V
 
     return-void
@@ -36,12 +34,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 340
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 341
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -66,14 +62,12 @@
 
     const-string p2, "com.samsung.android.knox.intent.action.UPDATE_NTP_PARAMETERS_INTERNAL"
 
-    .line 342
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 343
     iget-object p1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$MDMReceiver;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-static {p1}, Lcom/android/server/timedetector/NetworkTimeUpdateService;->-$$Nest$fgetmEngine(Lcom/android/server/timedetector/NetworkTimeUpdateService;)Lcom/android/server/timedetector/NetworkTimeUpdateService$Engine;
@@ -88,7 +82,6 @@
 
     invoke-interface {p1, p2}, Lcom/android/server/timedetector/NetworkTimeUpdateService$Engine;->updateNTPParametersMDM(Landroid/content/Context;)V
 
-    .line 344
     iget-object p1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$MDMReceiver;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-static {p1}, Lcom/android/server/timedetector/NetworkTimeUpdateService;->-$$Nest$fgetmHandler(Lcom/android/server/timedetector/NetworkTimeUpdateService;)Landroid/os/Handler;
@@ -102,7 +95,6 @@
     :cond_0
     const-string p0, "android.intent.action.BOOT_COMPLETED"
 
-    .line 345
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -111,7 +103,6 @@
 
     const/4 p0, 0x1
 
-    .line 346
     invoke-static {p0}, Lcom/android/server/timedetector/NetworkTimeUpdateService;->-$$Nest$sfputmBootCompleted(Z)V
 
     :cond_1
@@ -122,7 +113,6 @@
 .method public run()V
     .locals 1
 
-    .line 352
     iget-object p0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$MDMReceiver;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     const-string v0, "NTP_PARAMETERS_UPDATED"

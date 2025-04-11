@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/provider/LocationProviderManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/location/provider/LocationProviderManager$$ExternalSyntheticLambda13;->f$0:Lcom/android/server/location/provider/LocationProviderManager;
@@ -27,7 +26,6 @@
 .method public final onSettingChanged(I)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/provider/LocationProviderManager$$ExternalSyntheticLambda13;->f$0:Lcom/android/server/location/provider/LocationProviderManager;
 
     invoke-static {p0, p1}, Lcom/android/server/location/provider/LocationProviderManager;->$r8$lambda$FNHz6d_gakCHrqekQnXUL7_zAyU(Lcom/android/server/location/provider/LocationProviderManager;I)V

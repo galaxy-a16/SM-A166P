@@ -18,7 +18,6 @@
 .method public static synthetic $r8$lambda$eNmq1d8waUDbzTfVZe7Oag1BasM(Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->lambda$controlAnimationUnchecked$0(I)V
 
     return-void
@@ -27,7 +26,6 @@
 .method public static bridge synthetic -$$Nest$mcontrolAnimationUnchecked(Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;ILandroid/util/SparseArray;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->controlAnimationUnchecked(ILandroid/util/SparseArray;Z)V
 
     return-void
@@ -36,17 +34,14 @@
 .method public constructor <init>(Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;)V
     .locals 0
 
-    .line 983
     iput-object p1, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->this$1:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 980
     iput-object p1, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->mAnimationControl:Landroid/view/InsetsAnimationControlImpl;
 
-    .line 984
     iput-object p2, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->mListener:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;
 
     return-void
@@ -55,7 +50,6 @@
 .method private synthetic lambda$controlAnimationUnchecked$0(I)V
     .locals 1
 
-    .line 1007
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->mListener:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;
 
     iget-object p0, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->mAnimationControl:Landroid/view/InsetsAnimationControlImpl;
@@ -70,12 +64,10 @@
 .method public varargs applySurfaceParams([Landroid/view/SyncRtSurfaceTransactionApplier$SurfaceParams;)V
     .locals 4
 
-    .line 1028
     new-instance v0, Landroid/view/SurfaceControl$Transaction;
 
     invoke-direct {v0}, Landroid/view/SurfaceControl$Transaction;-><init>()V
 
-    .line 1029
     array-length v1, p1
 
     add-int/lit8 v1, v1, -0x1
@@ -83,10 +75,8 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 1030
     aget-object v2, p1, v1
 
-    .line 1031
     iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->this$1:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;
 
     iget-object v3, v3, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;->this$0:Lcom/android/server/wm/InsetsPolicy;
@@ -101,11 +91,9 @@
 
     goto :goto_0
 
-    .line 1033
     :cond_0
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->apply()V
 
-    .line 1034
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->close()V
 
     return-void
@@ -124,7 +112,6 @@
 
     return-void
 
-    .line 993
     :cond_0
     iget-object v1, v14, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->this$1:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;
 
@@ -132,7 +119,6 @@
 
     invoke-static {v1, v0}, Lcom/android/server/wm/InsetsPolicy;->-$$Nest$fputmAnimatingShown(Lcom/android/server/wm/InsetsPolicy;Z)V
 
-    .line 995
     iget-object v1, v14, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->this$1:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;
 
     iget-object v1, v1, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;->this$0:Lcom/android/server/wm/InsetsPolicy;
@@ -145,14 +131,12 @@
 
     move-result-object v3
 
-    .line 999
     new-instance v13, Landroid/view/InsetsAnimationControlImpl;
 
     const/4 v2, 0x0
 
     iget-object v4, v14, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->mListener:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;
 
-    .line 1001
     invoke-virtual {v4}, Landroid/view/InsetsController$InternalAnimationControlListener;->getDurationMs()J
 
     move-result-wide v7
@@ -183,12 +167,10 @@
 
     move-object/from16 v13, v16
 
-    .line 1004
     invoke-direct/range {v0 .. v13}, Landroid/view/InsetsAnimationControlImpl;-><init>(Landroid/util/SparseArray;Landroid/graphics/Rect;Landroid/view/InsetsState;Landroid/view/WindowInsetsAnimationControlListener;ILandroid/view/InsetsAnimationControlCallbacks;JLandroid/view/animation/Interpolator;IILandroid/content/res/CompatibilityInfo$Translator;Landroid/view/inputmethod/ImeTracker$Token;)V
 
     iput-object v15, v14, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->mAnimationControl:Landroid/view/InsetsAnimationControlImpl;
 
-    .line 1006
     invoke-static {}, Lcom/android/server/wm/SurfaceAnimationThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -207,14 +189,12 @@
 .method public notifyFinished(Landroid/view/InsetsAnimationControlRunner;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public releaseSurfaceControlFromRt(Landroid/view/SurfaceControl;)V
     .locals 0
 
-    .line 1041
     invoke-virtual {p1}, Landroid/view/SurfaceControl;->release()V
 
     return-void
@@ -223,14 +203,12 @@
 .method public reportPerceptible(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public scheduleApplyChangeInsets(Landroid/view/InsetsAnimationControlRunner;)V
     .locals 1
 
-    .line 1013
     iget-object p1, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->mAnimationControl:Landroid/view/InsetsAnimationControlImpl;
 
     const/4 v0, 0x0
@@ -241,7 +219,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1014
     iget-object p1, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->mAnimationControl:Landroid/view/InsetsAnimationControlImpl;
 
     iget-object p0, p0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->this$1:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;
@@ -261,6 +238,5 @@
 .method public startAnimation(Landroid/view/InsetsAnimationControlRunner;Landroid/view/WindowInsetsAnimationControlListener;ILandroid/view/WindowInsetsAnimation;Landroid/view/WindowInsetsAnimation$Bounds;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

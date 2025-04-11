@@ -7,7 +7,6 @@
 .method public static isCompatSignatureUpdateNeeded(Lcom/android/server/pm/Settings$VersionInfo;)Z
     .locals 1
 
-    .line 305
     iget p0, p0, Lcom/android/server/pm/Settings$VersionInfo;->databaseVersion:I
 
     const/4 v0, 0x2
@@ -28,7 +27,6 @@
 .method public static isRecoverSignatureUpdateNeeded(Lcom/android/server/pm/Settings$VersionInfo;)Z
     .locals 1
 
-    .line 309
     iget p0, p0, Lcom/android/server/pm/Settings$VersionInfo;->databaseVersion:I
 
     const/4 v0, 0x3
@@ -53,7 +51,6 @@
 
     move-object/from16 v2, p4
 
-    .line 59
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-interface/range {p0 .. p0}, Ljava/util/List;->size()I
@@ -62,10 +59,8 @@
 
     invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 62
     new-instance v4, Landroid/util/ArrayMap;
 
-    .line 63
     invoke-interface/range {p1 .. p1}, Ljava/util/Map;->size()I
 
     move-result v0
@@ -80,15 +75,12 @@
 
     move-object/from16 v14, p1
 
-    .line 65
     invoke-virtual {v4, v14}, Landroid/util/ArrayMap;->putAll(Ljava/util/Map;)V
 
-    .line 67
     new-instance v15, Landroid/util/ArrayMap;
 
     invoke-direct {v15}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 70
     invoke-interface/range {p0 .. p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -106,10 +98,8 @@
 
     check-cast v5, Lcom/android/server/pm/InstallRequest;
 
-    .line 71
     invoke-virtual {v5}, Lcom/android/server/pm/InstallRequest;->onReconcileStarted()V
 
-    .line 74
     invoke-virtual {v5}, Lcom/android/server/pm/InstallRequest;->getScannedPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v6
@@ -118,22 +108,18 @@
 
     move-result-object v6
 
-    .line 75
     invoke-virtual {v5}, Lcom/android/server/pm/InstallRequest;->getParsedPackage()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v7
 
-    .line 74
     invoke-virtual {v4, v6, v7}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
     invoke-virtual {v1, v5}, Lcom/android/server/pm/SharedLibrariesImpl;->getAllowedSharedLibInfos(Lcom/android/server/pm/InstallRequest;)Ljava/util/List;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 81
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -151,7 +137,6 @@
 
     check-cast v6, Landroid/content/pm/SharedLibraryInfo;
 
-    .line 82
     invoke-static {v15, v6}, Lcom/android/server/pm/SharedLibraryUtils;->addSharedLibraryToPackageVersionMap(Ljava/util/Map;Landroid/content/pm/SharedLibraryInfo;)Z
 
     move-result v7
@@ -160,7 +145,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -170,7 +154,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 85
     invoke-virtual {v6}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -187,14 +170,12 @@
 
     const/4 v1, -0x6
 
-    .line 84
     invoke-static {v0, v1}, Lcom/android/server/pm/ReconcileFailure;->ofInternalError(Ljava/lang/String;I)Lcom/android/server/pm/ReconcileFailure;
 
     move-result-object v0
 
     throw v0
 
-    .line 93
     :cond_2
     invoke-interface/range {p0 .. p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -215,7 +196,6 @@
 
     check-cast v13, Lcom/android/server/pm/InstallRequest;
 
-    .line 94
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getParsedPackage()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v0
@@ -224,12 +204,10 @@
 
     move-result-object v0
 
-    .line 96
     invoke-virtual {v1, v13}, Lcom/android/server/pm/SharedLibrariesImpl;->getAllowedSharedLibInfos(Lcom/android/server/pm/InstallRequest;)Ljava/util/List;
 
     move-result-object v10
 
-    .line 100
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->isInstallReplace()Z
 
     move-result v5
@@ -246,7 +224,6 @@
 
     if-nez v5, :cond_6
 
-    .line 101
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getScanFlags()I
 
     move-result v5
@@ -275,22 +252,18 @@
     :goto_3
     or-int/2addr v5, v6
 
-    .line 105
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getRemovedInfo()Lcom/android/server/pm/PackageRemovedInfo;
 
     move-result-object v9
 
-    .line 106
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getOriginalPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v11
 
-    .line 107
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getDisabledPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v12
 
-    .line 104
     invoke-static {v9, v11, v12, v5, v7}, Lcom/android/server/pm/DeletePackageHelper;->mayDeletePackageLocked(Lcom/android/server/pm/PackageRemovedInfo;Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/PackageSetting;ILandroid/os/UserHandle;)Lcom/android/server/pm/DeletePackageAction;
 
     move-result-object v5
@@ -301,7 +274,6 @@
 
     goto :goto_4
 
-    .line 110
     :cond_5
     new-instance v1, Lcom/android/server/pm/ReconcileFailure;
 
@@ -332,28 +304,23 @@
     :cond_6
     move-object v9, v7
 
-    .line 118
     :goto_4
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getScanFlags()I
 
     move-result v5
 
-    .line 119
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getParseFlags()I
 
     move-result v11
 
-    .line 120
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getParsedPackage()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v12
 
-    .line 121
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getDisabledPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v19
 
-    .line 123
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getStaticSharedLibraryInfo()Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object v17
@@ -364,7 +331,6 @@
 
     goto :goto_5
 
-    .line 124
     :cond_7
     invoke-virtual {v1, v13}, Lcom/android/server/pm/SharedLibrariesImpl;->getStaticSharedLibLatestVersionSetting(Lcom/android/server/pm/InstallRequest;)Lcom/android/server/pm/PackageSetting;
 
@@ -375,7 +341,6 @@
 
     goto :goto_6
 
-    .line 129
     :cond_8
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->getScannedPackageSetting()Lcom/android/server/pm/PackageSetting;
 
@@ -386,7 +351,6 @@
 
     if-eqz v12, :cond_9
 
-    .line 134
     invoke-interface {v12}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object v7
@@ -394,12 +358,10 @@
     :cond_9
     move-object/from16 v8, p5
 
-    .line 136
     invoke-virtual {v8, v6}, Lcom/android/server/pm/Settings;->getSharedUserSettingLPr(Lcom/android/server/pm/PackageSetting;)Lcom/android/server/pm/SharedUserSetting;
 
     move-result-object v14
 
-    .line 138
     invoke-virtual {v2, v6, v14, v5}, Lcom/android/server/pm/KeySetManagerService;->shouldCheckUpgradeKeySetLocked(Lcom/android/server/pm/pkg/PackageStateInternal;Lcom/android/server/pm/pkg/SharedUserApi;I)Z
 
     move-result v5
@@ -412,7 +374,6 @@
 
     if-eqz v5, :cond_c
 
-    .line 140
     invoke-virtual {v2, v6, v12}, Lcom/android/server/pm/KeySetManagerService;->checkUpgradeKeySetLocked(Lcom/android/server/pm/pkg/PackageStateInternal;Lcom/android/server/pm/pkg/AndroidPackage;)Z
 
     move-result v0
@@ -426,7 +387,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 150
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -447,7 +407,6 @@
 
     const/4 v3, 0x5
 
-    .line 152
     invoke-static {v3, v0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
     :goto_7
@@ -459,7 +418,6 @@
 
     goto/16 :goto_d
 
-    .line 145
     :cond_b
     new-instance v0, Lcom/android/server/pm/ReconcileFailure;
 
@@ -471,7 +429,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 146
     invoke-interface {v12}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -495,7 +452,6 @@
     :cond_c
     move-object/from16 v5, p2
 
-    .line 157
     :try_start_0
     invoke-interface {v5, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -503,17 +459,14 @@
 
     check-cast v0, Lcom/android/server/pm/Settings$VersionInfo;
 
-    .line 158
     invoke-static {v0}, Lcom/android/server/pm/ReconcilePackageUtils;->isCompatSignatureUpdateNeeded(Lcom/android/server/pm/Settings$VersionInfo;)Z
 
     move-result v21
 
-    .line 159
     invoke-static {v0}, Lcom/android/server/pm/ReconcilePackageUtils;->isRecoverSignatureUpdateNeeded(Lcom/android/server/pm/Settings$VersionInfo;)Z
 
     move-result v22
 
-    .line 160
     invoke-virtual {v13}, Lcom/android/server/pm/InstallRequest;->isRollback()Z
 
     move-result v23
@@ -524,7 +477,6 @@
 
     move-object/from16 v20, v7
 
-    .line 162
     invoke-static/range {v17 .. v23}, Lcom/android/server/pm/PackageManagerServiceUtils;->verifySignatures(Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/SharedUserSetting;Lcom/android/server/pm/PackageSetting;Landroid/content/pm/SigningDetails;ZZZ)Z
 
     move-result v6
@@ -534,20 +486,17 @@
 
     if-eqz v14, :cond_11
 
-    .line 180
     :try_start_1
     iget-object v0, v14, Lcom/android/server/pm/SharedUserSetting;->signatures:Lcom/android/server/pm/PackageSignatures;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageSignatures;->mSigningDetails:Landroid/content/pm/SigningDetails;
 
-    .line 182
     invoke-virtual {v0, v7}, Landroid/content/pm/SigningDetails;->mergeLineageWith(Landroid/content/pm/SigningDetails;)Landroid/content/pm/SigningDetails;
 
     move-result-object v2
 
     if-eq v2, v0, :cond_10
 
-    .line 189
     invoke-virtual {v14}, Lcom/android/server/pm/SharedUserSetting;->getPackages()Ljava/util/List;
 
     move-result-object v0
@@ -569,7 +518,6 @@
 
     check-cast v17, Lcom/android/server/pm/pkg/AndroidPackage;
 
-    .line 190
     invoke-interface/range {v17 .. v17}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v18
@@ -578,31 +526,26 @@
 
     move-object/from16 v18, v0
 
-    .line 191
     invoke-interface/range {v17 .. v17}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 192
     invoke-interface {v12}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 191
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_e
 
-    .line 194
     invoke-interface/range {v17 .. v17}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object v0
 
     const/4 v5, 0x2
 
-    .line 193
     invoke-virtual {v2, v0, v5}, Landroid/content/pm/SigningDetails;->mergeLineageWith(Landroid/content/pm/SigningDetails;I)Landroid/content/pm/SigningDetails;
 
     move-result-object v0
@@ -622,19 +565,16 @@
 
     goto :goto_8
 
-    .line 198
     :cond_f
     iget-object v0, v14, Lcom/android/server/pm/SharedUserSetting;->signatures:Lcom/android/server/pm/PackageSignatures;
 
     iput-object v2, v0, Lcom/android/server/pm/PackageSignatures;->mSigningDetails:Landroid/content/pm/SigningDetails;
 
-    .line 201
     :cond_10
     iget-object v0, v14, Lcom/android/server/pm/SharedUserSetting;->signaturesChanged:Ljava/lang/Boolean;
 
     if-nez v0, :cond_11
 
-    .line 202
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     iput-object v0, v14, Lcom/android/server/pm/SharedUserSetting;->signaturesChanged:Ljava/lang/Boolean;
@@ -662,7 +602,6 @@
     :catch_1
     move-exception v0
 
-    .line 261
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Signing certificates comparison made on incomparable signing details but somehow passed verifySignatures!"
@@ -681,19 +620,16 @@
 
     if-eqz v2, :cond_16
 
-    .line 209
     invoke-interface {v12}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object v0
 
     if-eqz v14, :cond_14
 
-    .line 220
     iget-object v2, v14, Lcom/android/server/pm/SharedUserSetting;->signaturesChanged:Ljava/lang/Boolean;
 
     if-eqz v2, :cond_13
 
-    .line 222
     invoke-interface {v12}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -704,7 +640,6 @@
 
     const/4 v7, 0x2
 
-    .line 221
     invoke-static {v2, v5, v14, v7}, Lcom/android/server/pm/PackageManagerServiceUtils;->canJoinSharedUserId(Ljava/lang/String;Landroid/content/pm/SigningDetails;Lcom/android/server/pm/SharedUserSetting;I)Z
 
     move-result v2
@@ -715,7 +650,6 @@
 
     const/4 v2, 0x0
 
-    .line 225
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -724,7 +658,6 @@
 
     if-gt v0, v1, :cond_12
 
-    .line 232
     new-instance v0, Lcom/android/server/pm/ReconcileFailure;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -747,7 +680,6 @@
 
     throw v0
 
-    .line 241
     :cond_12
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -759,7 +691,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 243
     invoke-interface {v12}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -780,18 +711,15 @@
 
     throw v0
 
-    .line 250
     :cond_13
     iget-object v2, v14, Lcom/android/server/pm/SharedUserSetting;->signatures:Lcom/android/server/pm/PackageSignatures;
 
-    .line 251
     invoke-interface {v12}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object v5
 
     iput-object v5, v2, Lcom/android/server/pm/PackageSignatures;->mSigningDetails:Landroid/content/pm/SigningDetails;
 
-    .line 252
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     iput-object v2, v14, Lcom/android/server/pm/SharedUserSetting;->signaturesChanged:Ljava/lang/Boolean;
@@ -803,7 +731,6 @@
     :cond_14
     const/4 v2, 0x0
 
-    .line 255
     :goto_c
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -825,7 +752,6 @@
 
     const/4 v5, 0x5
 
-    .line 257
     invoke-static {v5, v3}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
     move-object v11, v0
@@ -834,7 +760,6 @@
 
     move/from16 v24, v6
 
-    .line 267
     :goto_d
     new-instance v0, Lcom/android/server/pm/ReconciledPackage;
 
@@ -852,7 +777,6 @@
 
     invoke-direct/range {v5 .. v13}, Lcom/android/server/pm/ReconciledPackage;-><init>(Ljava/util/List;Ljava/util/Map;Lcom/android/server/pm/InstallRequest;Lcom/android/server/pm/DeletePackageAction;Ljava/util/List;Landroid/content/pm/SigningDetails;ZZ)V
 
-    .line 279
     invoke-virtual {v2}, Lcom/android/server/pm/InstallRequest;->getScanFlags()I
 
     move-result v3
@@ -861,7 +785,6 @@
 
     if-nez v3, :cond_15
 
-    .line 280
     invoke-virtual {v2}, Lcom/android/server/pm/InstallRequest;->getParseFlags()I
 
     move-result v3
@@ -870,13 +793,11 @@
 
     if-nez v3, :cond_15
 
-    .line 285
     :try_start_2
     invoke-virtual {v2}, Lcom/android/server/pm/InstallRequest;->getParsedPackage()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v3
 
-    .line 284
     invoke-virtual {v1, v3, v4, v15}, Lcom/android/server/pm/SharedLibrariesImpl;->collectSharedLibraryInfos(Lcom/android/server/pm/pkg/AndroidPackage;Ljava/util/Map;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object v3
@@ -890,7 +811,6 @@
     :catch_3
     move-exception v0
 
-    .line 288
     new-instance v1, Lcom/android/server/pm/ReconcileFailure;
 
     iget v2, v0, Lcom/android/server/pm/PackageManagerException;->error:I
@@ -903,14 +823,12 @@
 
     throw v1
 
-    .line 292
     :cond_15
     :goto_e
     invoke-virtual {v2}, Lcom/android/server/pm/InstallRequest;->onReconcileFinished()V
 
     move-object/from16 v2, v25
 
-    .line 293
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v14, p1
@@ -921,7 +839,6 @@
 
     goto/16 :goto_1
 
-    .line 207
     :cond_16
     new-instance v1, Lcom/android/server/pm/ReconcileFailure;
 

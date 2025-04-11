@@ -7,7 +7,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
     .locals 0
 
-    .line 14
     invoke-direct {p0, p1, p2}, Lco/nstant/in/cbor/decoder/AbstractDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     return-void
@@ -50,7 +49,6 @@
 
     const-wide/high16 v4, -0x3fd4000000000000L    # -14.0
 
-    .line 32
     invoke-static {v6, v7, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v4
@@ -59,7 +57,6 @@
 
     int-to-double v4, p0
 
-    .line 33
     invoke-static {v6, v7, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
@@ -116,7 +113,6 @@
 
     int-to-double v0, v1
 
-    .line 39
     invoke-static {v6, v7, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -125,7 +121,6 @@
 
     int-to-double v0, p0
 
-    .line 40
     invoke-static {v6, v7, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
@@ -148,7 +143,6 @@
 .method public decode(I)Lco/nstant/in/cbor/model/HalfPrecisionFloat;
     .locals 0
 
-    .line 19
     invoke-virtual {p0}, Lco/nstant/in/cbor/decoder/AbstractDecoder;->nextSymbol()I
 
     move-result p1
@@ -161,7 +155,6 @@
 
     or-int/2addr p0, p1
 
-    .line 20
     new-instance p1, Lco/nstant/in/cbor/model/HalfPrecisionFloat;
 
     invoke-static {p0}, Lco/nstant/in/cbor/decoder/HalfPrecisionFloatDecoder;->toFloat(I)F

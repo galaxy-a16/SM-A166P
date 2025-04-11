@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;)V
     .locals 0
 
-    .line 6013
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$15;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 6016
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 6021
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$15;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mSettingsObserver:Lcom/android/server/policy/PhoneWindowManager$SettingsObserver;
@@ -46,7 +43,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/policy/PhoneWindowManager$SettingsObserver;->onChange(Z)V
 
-    .line 6024
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$15;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
@@ -55,7 +51,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/policy/PhoneWindowManagerExt$SettingsObserver;->updateSettings()V
 
-    .line 6025
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$15;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
@@ -68,14 +63,12 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->onUserSwitch(I)V
 
-    .line 6028
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$15;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayRotation:Lcom/android/server/wm/DisplayRotation;
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayRotation;->onUserSwitch()V
 
-    .line 6029
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$15;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;

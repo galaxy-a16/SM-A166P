@@ -15,12 +15,10 @@
 
     move-object v1, p0
 
-    .line 59
     iput-object v0, v1, Lcom/android/server/devicepolicy/DeviceAdminServiceController$DevicePolicyServiceConnection;->this$0:Lcom/android/server/devicepolicy/DeviceAdminServiceController;
 
     const-string v2, "DevicePolicyManager"
 
-    .line 60
     iget-object v3, v0, Lcom/android/server/devicepolicy/DeviceAdminServiceController;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DeviceAdminServiceController;->-$$Nest$fgetmHandler(Lcom/android/server/devicepolicy/DeviceAdminServiceController;)Landroid/os/Handler;
@@ -73,7 +71,6 @@
 .method public asInterface(Landroid/os/IBinder;)Landroid/app/admin/IDeviceAdminService;
     .locals 0
 
-    .line 74
     invoke-static {p1}, Landroid/app/admin/IDeviceAdminService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/admin/IDeviceAdminService;
 
     move-result-object p0
@@ -84,7 +81,6 @@
 .method public bridge synthetic asInterface(Landroid/os/IBinder;)Ljava/lang/Object;
     .locals 0
 
-    .line 57
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DeviceAdminServiceController$DevicePolicyServiceConnection;->asInterface(Landroid/os/IBinder;)Landroid/app/admin/IDeviceAdminService;
 
     move-result-object p0
@@ -95,7 +91,6 @@
 .method public getBindFlags()I
     .locals 0
 
-    .line 0
     const/high16 p0, 0x4000000
 
     return p0

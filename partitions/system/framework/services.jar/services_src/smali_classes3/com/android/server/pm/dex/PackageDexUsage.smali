@@ -21,10 +21,8 @@
 
     const-string/jumbo v2, "package-dex-usage.list"
 
-    .line 100
     invoke-direct {p0, v2, v0, v1}, Lcom/android/server/pm/AbstractStatsBase;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 101
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -39,18 +37,15 @@
 .method public clear()V
     .locals 1
 
-    .line 657
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 658
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
 
-    .line 659
     monitor-exit v0
 
     return-void
@@ -68,12 +63,10 @@
 .method public clearUsedByOtherApps(Ljava/lang/String;)Z
     .locals 1
 
-    .line 548
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 549
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
@@ -85,14 +78,12 @@
 
     if-nez p0, :cond_0
 
-    .line 551
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 553
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->clearCodePathUsedByOtherApps()Z
 
@@ -105,7 +96,6 @@
     :catchall_0
     move-exception p0
 
-    .line 554
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -116,17 +106,14 @@
 .method public final clonePackageUseInfoMap()Ljava/util/Map;
     .locals 6
 
-    .line 664
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 665
     iget-object v1, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v1
 
-    .line 666
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
@@ -151,7 +138,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 667
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -174,7 +160,6 @@
 
     goto :goto_0
 
-    .line 669
     :cond_0
     monitor-exit v1
 
@@ -193,17 +178,14 @@
 .method public getAllPackagesWithSecondaryDexFiles()Ljava/util/Set;
     .locals 4
 
-    .line 645
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 646
     iget-object v1, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v1
 
-    .line 647
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
@@ -229,7 +211,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 648
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -246,7 +227,6 @@
 
     if-nez v3, :cond_0
 
-    .line 649
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -257,7 +237,6 @@
 
     goto :goto_0
 
-    .line 652
     :cond_1
     monitor-exit v1
 
@@ -276,12 +255,10 @@
 .method public getPackageUseInfo(Ljava/lang/String;)Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;
     .locals 2
 
-    .line 630
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 631
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
@@ -297,7 +274,6 @@
 
     goto :goto_0
 
-    .line 637
     :cond_0
     new-instance v1, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;
 
@@ -313,7 +289,6 @@
     :catchall_0
     move-exception p0
 
-    .line 638
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -324,7 +299,6 @@
 .method public final isSupportedVersion(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x2
 
     if-ne p1, p0, :cond_0
@@ -343,7 +317,6 @@
 .method public final maybeAddLoadingPackage(Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)Z
     .locals 0
 
-    .line 464
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -372,7 +345,6 @@
 
     const/4 v0, 0x0
 
-    .line 217
     invoke-virtual {p0, v0}, Lcom/android/server/pm/AbstractStatsBase;->maybeWriteAsync(Ljava/lang/Object;)Z
 
     return-void
@@ -383,7 +355,6 @@
 
     const/4 v0, 0x0
 
-    .line 209
     invoke-virtual {p0, v0}, Lcom/android/server/pm/AbstractStatsBase;->read(Ljava/lang/Object;)V
 
     return-void
@@ -394,19 +365,16 @@
 
     move-object/from16 v0, p0
 
-    .line 323
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 324
     new-instance v2, Ljava/io/BufferedReader;
 
     move-object/from16 v3, p1
 
     invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 326
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v3
@@ -415,7 +383,6 @@
 
     const-string v4, "PACKAGE_MANAGER__PACKAGE_DEX_USAGE__"
 
-    .line 331
     invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -424,17 +391,14 @@
 
     const/16 v4, 0x24
 
-    .line 336
     invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 335
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 337
     invoke-virtual {v0, v3}, Lcom/android/server/pm/dex/PackageDexUsage;->isSupportedVersion(I)Z
 
     move-result v4
@@ -443,7 +407,6 @@
 
     const-string v0, "PackageDexUsage"
 
-    .line 338
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,13 +429,11 @@
 
     return-void
 
-    .line 348
     :cond_0
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 349
     sget-object v5, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
 
     array-length v6, v5
@@ -486,7 +447,6 @@
 
     aget-object v9, v5, v8
 
-    .line 350
     invoke-static {v9}, Ldalvik/system/VMRuntime;->getInstructionSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
@@ -504,7 +464,6 @@
 
     move-object v8, v6
 
-    .line 352
     :goto_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -514,7 +473,6 @@
 
     const-string v10, "#"
 
-    .line 353
     invoke-virtual {v9, v10}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v10
@@ -525,12 +483,10 @@
 
     if-eqz v6, :cond_8
 
-    .line 366
     invoke-virtual {v9, v11}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 369
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v10
@@ -539,31 +495,26 @@
 
     const-string v12, ","
 
-    .line 373
     invoke-virtual {v10, v12}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v12
 
-    .line 374
     array-length v13, v12
 
     const/4 v14, 0x3
 
     if-lt v13, v14, :cond_6
 
-    .line 378
     invoke-virtual {v0, v2, v3}, Lcom/android/server/pm/dex/PackageDexUsage;->readLoadingPackages(Ljava/io/BufferedReader;I)Ljava/util/Set;
 
     move-result-object v10
 
-    .line 379
     invoke-virtual {v0, v2, v3}, Lcom/android/server/pm/dex/PackageDexUsage;->readClassLoaderContext(Ljava/io/BufferedReader;I)Ljava/lang/String;
 
     move-result-object v13
 
     const-string v14, "=UnsupportedClassLoaderContext="
 
-    .line 381
     invoke-virtual {v14, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v14
@@ -572,7 +523,6 @@
 
     goto/16 :goto_4
 
-    .line 387
     :cond_2
     aget-object v14, v12, v7
 
@@ -580,19 +530,16 @@
 
     move-result v14
 
-    .line 388
     aget-object v11, v12, v11
 
     invoke-virtual {v0, v11}, Lcom/android/server/pm/dex/PackageDexUsage;->readBoolean(Ljava/lang/String;)Z
 
     move-result v11
 
-    .line 389
     new-instance v15, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;
 
     invoke-direct {v15, v11, v14, v13, v5}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;-><init>(ZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 391
     invoke-static {v15}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmLoadingPackages(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)Ljava/util/Set;
 
     move-result-object v11
@@ -601,23 +548,19 @@
 
     const/4 v10, 0x2
 
-    .line 392
     :goto_2
     array-length v11, v12
 
     if-ge v10, v11, :cond_4
 
-    .line 393
     aget-object v11, v12, v10
 
-    .line 394
     invoke-interface {v4, v11}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v13
 
     if-eqz v13, :cond_3
 
-    .line 395
     invoke-static {v15}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmLoaderIsas(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)Ljava/util/Set;
 
     move-result-object v11
@@ -631,7 +574,6 @@
     :cond_3
     const-string v13, "PackageDexUsage"
 
-    .line 400
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -655,7 +597,6 @@
 
     goto :goto_2
 
-    .line 403
     :cond_4
     invoke-interface {v4}, Ljava/util/Set;->isEmpty()Z
 
@@ -665,7 +606,6 @@
 
     const-string v5, "PackageDexUsage"
 
-    .line 404
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -684,7 +624,6 @@
 
     goto :goto_4
 
-    .line 408
     :cond_5
     invoke-static {v8}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
@@ -694,7 +633,6 @@
 
     goto :goto_4
 
-    .line 375
     :cond_6
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -716,7 +654,6 @@
 
     throw v0
 
-    .line 371
     :cond_7
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -726,7 +663,6 @@
 
     throw v0
 
-    .line 361
     :cond_8
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -739,24 +675,20 @@
     :cond_9
     const-string v5, "+"
 
-    .line 409
     invoke-virtual {v9, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_a
 
-    .line 413
     invoke-virtual {v9, v11}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 414
     invoke-virtual {v0, v2, v3}, Lcom/android/server/pm/dex/PackageDexUsage;->readLoadingPackages(Ljava/io/BufferedReader;I)Ljava/util/Set;
 
     move-result-object v9
 
-    .line 415
     invoke-static {v8}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmPrimaryCodePaths(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object v10
@@ -765,13 +697,11 @@
 
     goto :goto_4
 
-    .line 419
     :cond_a
     new-instance v8, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;
 
     invoke-direct {v8, v9}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;-><init>(Ljava/lang/String;)V
 
-    .line 420
     invoke-interface {v1, v9, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v6, v9
@@ -781,24 +711,20 @@
 
     goto/16 :goto_1
 
-    .line 424
     :cond_b
     iget-object v2, v0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v2
 
-    .line 425
     :try_start_0
     iget-object v3, v0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->clear()V
 
-    .line 426
     iget-object v0, v0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 427
     monitor-exit v2
 
     return-void
@@ -812,7 +738,6 @@
 
     throw v0
 
-    .line 333
     :cond_c
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -834,7 +759,6 @@
 
     throw v0
 
-    .line 329
     :cond_d
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -850,7 +774,6 @@
 
     const-string p0, "0"
 
-    .line 678
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -864,7 +787,6 @@
     :cond_0
     const-string p0, "1"
 
-    .line 679
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -875,7 +797,6 @@
 
     return p0
 
-    .line 680
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -901,7 +822,6 @@
 .method public final readClassLoaderContext(Ljava/io/BufferedReader;I)Ljava/lang/String;
     .locals 0
 
-    .line 434
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object p0
@@ -910,7 +830,6 @@
 
     return-object p0
 
-    .line 436
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -924,7 +843,6 @@
 .method public bridge synthetic readInternal(Ljava/lang/Object;)V
     .locals 0
 
-    .line 55
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/dex/PackageDexUsage;->readInternal(Ljava/lang/Void;)V
@@ -935,14 +853,12 @@
 .method public readInternal(Ljava/lang/Void;)V
     .locals 3
 
-    .line 308
     invoke-virtual {p0}, Lcom/android/server/pm/AbstractStatsBase;->getFile()Landroid/util/AtomicFile;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 311
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -960,7 +876,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 312
     :try_start_1
     invoke-virtual {p0, v1}, Lcom/android/server/pm/dex/PackageDexUsage;->read(Ljava/io/Reader;)V
     :try_end_1
@@ -968,7 +883,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 318
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_3
@@ -1006,21 +920,17 @@
 
     const-string v1, "Failed to parse package dex usage."
 
-    .line 316
     invoke-static {p1, v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     goto :goto_2
 
-    .line 318
     :goto_1
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 319
     throw p0
 
-    .line 318
     :catch_3
     :goto_2
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
@@ -1032,19 +942,16 @@
 .method public final readLoadingPackages(Ljava/io/BufferedReader;I)Ljava/util/Set;
     .locals 1
 
-    .line 446
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 450
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    .line 451
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p2
@@ -1053,7 +960,6 @@
 
     if-eq p2, v0, :cond_0
 
-    .line 453
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1064,13 +970,11 @@
 
     move-result-object p0
 
-    .line 452
     invoke-static {p1, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
     :cond_0
     return-object p1
 
-    .line 448
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1084,7 +988,6 @@
 .method public record(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZLjava/lang/String;Ljava/lang/String;Z)Z
     .locals 5
 
-    .line 126
     invoke-static {p4}, Lcom/android/server/pm/PackageManagerServiceUtils;->checkISA(Ljava/lang/String;)Z
 
     move-result v0
@@ -1095,7 +998,6 @@
 
     const-string v0, "=UnsupportedClassLoaderContext="
 
-    .line 132
     invoke-virtual {p7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1108,12 +1010,10 @@
 
     const-string p1, "Unsupported context?"
 
-    .line 133
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 137
     :cond_0
     invoke-virtual {p1, p6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1123,12 +1023,10 @@
 
     xor-int/2addr v0, v2
 
-    .line 139
     iget-object v3, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v3
 
-    .line 140
     :try_start_0
     iget-object v4, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
@@ -1140,45 +1038,38 @@
 
     if-nez v4, :cond_2
 
-    .line 143
     new-instance p8, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;
 
     invoke-direct {p8, p1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;-><init>(Ljava/lang/String;)V
 
     if-eqz p5, :cond_1
 
-    .line 148
     invoke-static {p8, p2, p6}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$mmergePrimaryCodePaths(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;Ljava/lang/String;Ljava/lang/String;)Z
 
     goto :goto_0
 
-    .line 152
     :cond_1
     new-instance p5, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;
 
     invoke-direct {p5, v0, p3, p7, p4}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;-><init>(ZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 154
     invoke-static {p8}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object p3
 
     invoke-interface {p3, p2, p5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 155
     invoke-static {p5}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmLoadingPackages(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)Ljava/util/Set;
 
     move-result-object p2
 
     invoke-virtual {p0, p1, p6, p2}, Lcom/android/server/pm/dex/PackageDexUsage;->maybeAddLoadingPackage(Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)Z
 
-    .line 158
     :goto_0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     invoke-interface {p0, p1, p8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     monitor-exit v3
 
     return v2
@@ -1186,7 +1077,6 @@
     :cond_2
     if-eqz p5, :cond_3
 
-    .line 165
     invoke-static {v4, p2, p6}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$mmergePrimaryCodePaths(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -1195,13 +1085,11 @@
 
     return p0
 
-    .line 167
     :cond_3
     new-instance p5, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;
 
     invoke-direct {p5, v0, p3, p7, p4}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;-><init>(ZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 169
     invoke-static {p5}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmLoadingPackages(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)Ljava/util/Set;
 
     move-result-object p4
@@ -1210,7 +1098,6 @@
 
     move-result p0
 
-    .line 172
     invoke-static {v4}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object p1
@@ -1223,7 +1110,6 @@
 
     if-nez p1, :cond_5
 
-    .line 175
     invoke-static {v4}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object p1
@@ -1236,25 +1122,21 @@
 
     if-ge p1, p3, :cond_4
 
-    .line 176
     invoke-static {v4}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object p0
 
     invoke-interface {p0, p2, p5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     monitor-exit v3
 
     return v2
 
-    .line 179
     :cond_4
     monitor-exit v3
 
     return p0
 
-    .line 182
     :cond_5
     invoke-static {p1}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmOwnerUserId(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)I
 
@@ -1262,7 +1144,6 @@
 
     if-ne p3, p4, :cond_8
 
-    .line 197
     invoke-static {p1, p5, p8}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$mmerge(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;Z)Z
 
     move-result p1
@@ -1279,7 +1160,6 @@
 
     return v1
 
-    .line 191
     :cond_8
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1320,14 +1200,12 @@
     :catchall_0
     move-exception p0
 
-    .line 201
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
-    .line 130
     :cond_9
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1337,7 +1215,6 @@
 
     throw p0
 
-    .line 127
     :cond_a
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1367,7 +1244,6 @@
 .method public final removeDexFile(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;Ljava/lang/String;I)Z
     .locals 1
 
-    .line 618
     invoke-static {p1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object p0
@@ -1384,7 +1260,6 @@
 
     return v0
 
-    .line 622
     :cond_0
     invoke-static {p0}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmOwnerUserId(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)I
 
@@ -1392,7 +1267,6 @@
 
     if-ne p0, p3, :cond_1
 
-    .line 623
     invoke-static {p1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object p0
@@ -1410,12 +1284,10 @@
 .method public removeDexFile(Ljava/lang/String;Ljava/lang/String;I)Z
     .locals 2
 
-    .line 608
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 609
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
@@ -1427,14 +1299,12 @@
 
     if-nez p1, :cond_0
 
-    .line 611
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 613
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/dex/PackageDexUsage;->removeDexFile(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;Ljava/lang/String;I)Z
 
@@ -1447,7 +1317,6 @@
     :catchall_0
     move-exception p0
 
-    .line 614
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1458,12 +1327,10 @@
 .method public removePackage(Ljava/lang/String;)Z
     .locals 1
 
-    .line 562
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 563
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
@@ -1488,7 +1355,6 @@
     :catchall_0
     move-exception p0
 
-    .line 564
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1499,12 +1365,10 @@
 .method public removeUserPackage(Ljava/lang/String;I)Z
     .locals 6
 
-    .line 575
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 576
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
@@ -1518,18 +1382,15 @@
 
     if-nez v1, :cond_0
 
-    .line 578
     monitor-exit v0
 
     return v2
 
-    .line 581
     :cond_0
     invoke-static {v1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object v3
 
-    .line 582
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v3
@@ -1538,7 +1399,6 @@
 
     move-result-object v3
 
-    .line 583
     :cond_1
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -1549,7 +1409,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 584
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -1562,21 +1421,18 @@
 
     check-cast v4, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;
 
-    .line 585
     invoke-static {v4}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmOwnerUserId(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)I
 
     move-result v4
 
     if-ne v4, p2, :cond_1
 
-    .line 586
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
     move v2, v5
 
     goto :goto_0
 
-    .line 592
     :cond_2
     invoke-static {v1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
@@ -1588,21 +1444,18 @@
 
     if-eqz p2, :cond_3
 
-    .line 593
     invoke-virtual {v1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->isAnyCodePathUsedByOtherApps()Z
 
     move-result p2
 
     if-nez p2, :cond_3
 
-    .line 594
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move v2, v5
 
-    .line 597
     :cond_3
     monitor-exit v0
 
@@ -1611,7 +1464,6 @@
     :catchall_0
     move-exception p0
 
-    .line 598
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1622,16 +1474,13 @@
 .method public syncData(Ljava/util/Map;Ljava/util/Map;Ljava/util/List;)V
     .locals 7
 
-    .line 477
     iget-object v0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 478
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/dex/PackageDexUsage;->mPackageUseInfoMap:Ljava/util/Map;
 
-    .line 479
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -1640,7 +1489,6 @@
 
     move-result-object p0
 
-    .line 480
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -1649,21 +1497,18 @@
 
     if-eqz v1, :cond_9
 
-    .line 481
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 482
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 483
     invoke-interface {p3, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -1672,7 +1517,6 @@
 
     goto :goto_0
 
-    .line 488
     :cond_1
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -1680,7 +1524,6 @@
 
     check-cast v1, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;
 
-    .line 489
     invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -1689,18 +1532,15 @@
 
     if-nez v3, :cond_2
 
-    .line 492
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 496
     :cond_2
     invoke-static {v1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object v4
 
-    .line 497
     invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v4
@@ -1709,7 +1549,6 @@
 
     move-result-object v4
 
-    .line 498
     :cond_3
     :goto_1
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -1718,7 +1557,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 499
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
@@ -1731,7 +1569,6 @@
 
     check-cast v5, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;
 
-    .line 500
     invoke-static {v5}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmOwnerUserId(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)I
 
     move-result v5
@@ -1746,12 +1583,10 @@
 
     if-nez v5, :cond_3
 
-    .line 502
     invoke-interface {v4}, Ljava/util/Iterator;->remove()V
 
     goto :goto_1
 
-    .line 507
     :cond_4
     invoke-interface {p2, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1759,12 +1594,10 @@
 
     check-cast v2, Ljava/util/Set;
 
-    .line 509
     invoke-static {v1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmPrimaryCodePaths(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object v3
 
-    .line 510
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v3
@@ -1773,7 +1606,6 @@
 
     move-result-object v3
 
-    .line 511
     :cond_5
     :goto_2
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -1782,33 +1614,28 @@
 
     if-eqz v4, :cond_8
 
-    .line 512
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 513
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 514
     invoke-interface {v2, v5}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-nez v5, :cond_6
 
-    .line 516
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
     goto :goto_2
 
-    .line 519
     :cond_6
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -1816,12 +1643,10 @@
 
     check-cast v4, Ljava/util/Set;
 
-    .line 521
     invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .line 522
     :cond_7
     :goto_3
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -1830,33 +1655,28 @@
 
     if-eqz v5, :cond_5
 
-    .line 523
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 524
     invoke-interface {p3, v5}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-nez v6, :cond_7
 
-    .line 525
     invoke-interface {p1, v5}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-nez v5, :cond_7
 
-    .line 526
     invoke-interface {v4}, Ljava/util/Iterator;->remove()V
 
     goto :goto_3
 
-    .line 532
     :cond_8
     invoke-virtual {v1}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->isAnyCodePathUsedByOtherApps()Z
 
@@ -1868,19 +1688,16 @@
 
     move-result-object v1
 
-    .line 533
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 536
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto/16 :goto_0
 
-    .line 540
     :cond_9
     monitor-exit v0
 
@@ -1899,27 +1716,22 @@
 .method public write(Ljava/io/Writer;)V
     .locals 9
 
-    .line 264
     invoke-virtual {p0}, Lcom/android/server/pm/dex/PackageDexUsage;->clonePackageUseInfoMap()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 266
     new-instance v1, Lcom/android/internal/util/FastPrintWriter;
 
     invoke-direct {v1, p1}, Lcom/android/internal/util/FastPrintWriter;-><init>(Ljava/io/Writer;)V
 
     const-string p1, "PACKAGE_MANAGER__PACKAGE_DEX_USAGE__"
 
-    .line 269
     invoke-virtual {v1, p1}, Lcom/android/internal/util/FastPrintWriter;->print(Ljava/lang/String;)V
 
     const/4 p1, 0x2
 
-    .line 270
     invoke-virtual {v1, p1}, Lcom/android/internal/util/FastPrintWriter;->println(I)V
 
-    .line 272
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -1941,24 +1753,20 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 274
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 275
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;
 
-    .line 276
     invoke-virtual {v1, v2}, Lcom/android/internal/util/FastPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 280
     invoke-static {v0}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmPrimaryCodePaths(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
     move-result-object v2
@@ -1988,21 +1796,18 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 281
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/lang/String;
 
-    .line 282
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/Set;
 
-    .line 283
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2019,7 +1824,6 @@
 
     invoke-virtual {v1, v6}, Lcom/android/internal/util/FastPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 284
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2040,7 +1844,6 @@
 
     goto :goto_0
 
-    .line 288
     :cond_1
     invoke-static {v0}, Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;->-$$Nest$fgetmDexUseInfoMap(Lcom/android/server/pm/dex/PackageDexUsage$PackageUseInfo;)Ljava/util/Map;
 
@@ -2067,21 +1870,18 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 289
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 290
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;
 
-    .line 291
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2098,7 +1898,6 @@
 
     invoke-virtual {v1, v3}, Lcom/android/internal/util/FastPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 292
     invoke-static {v2}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmOwnerUserId(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)I
 
     move-result v3
@@ -2111,7 +1910,6 @@
 
     move-result v6
 
-    .line 293
     invoke-virtual {p0, v6}, Lcom/android/server/pm/dex/PackageDexUsage;->writeBoolean(Z)Ljava/lang/String;
 
     move-result-object v6
@@ -2120,14 +1918,12 @@
 
     move-result-object v3
 
-    .line 292
     invoke-static {v5, v3}, Ljava/lang/String;->join(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lcom/android/internal/util/FastPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 294
     invoke-static {v2}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->-$$Nest$fgetmLoaderIsas(Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;)Ljava/util/Set;
 
     move-result-object v3
@@ -2149,7 +1945,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 295
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2166,11 +1961,9 @@
 
     goto :goto_2
 
-    .line 297
     :cond_2
     invoke-virtual {v1}, Lcom/android/internal/util/FastPrintWriter;->println()V
 
-    .line 298
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2181,7 +1974,6 @@
 
     move-result-object v6
 
-    .line 299
     invoke-static {v5, v6}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v6
@@ -2192,10 +1984,8 @@
 
     move-result-object v3
 
-    .line 298
     invoke-virtual {v1, v3}, Lcom/android/internal/util/FastPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 300
     invoke-virtual {v2}, Lcom/android/server/pm/dex/PackageDexUsage$DexUseInfo;->getClassLoaderContext()Ljava/lang/String;
 
     move-result-object v2
@@ -2204,7 +1994,6 @@
 
     goto/16 :goto_1
 
-    .line 303
     :cond_3
     invoke-virtual {v1}, Lcom/android/internal/util/FastPrintWriter;->flush()V
 
@@ -2214,7 +2003,6 @@
 .method public final writeBoolean(Z)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p1, :cond_0
 
     const-string p0, "1"
@@ -2231,7 +2019,6 @@
 .method public bridge synthetic writeInternal(Ljava/lang/Object;)V
     .locals 0
 
-    .line 55
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/dex/PackageDexUsage;->writeInternal(Ljava/lang/Void;)V
@@ -2242,12 +2029,10 @@
 .method public writeInternal(Ljava/lang/Void;)V
     .locals 2
 
-    .line 226
     invoke-virtual {p0}, Lcom/android/server/pm/AbstractStatsBase;->getFile()Landroid/util/AtomicFile;
 
     move-result-object p1
 
-    .line 230
     :try_start_0
     invoke-virtual {p1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
@@ -2255,19 +2040,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 231
     :try_start_1
     new-instance v1, Ljava/io/OutputStreamWriter;
 
     invoke-direct {v1, v0}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
-    .line 232
     invoke-virtual {p0, v1}, Lcom/android/server/pm/dex/PackageDexUsage;->write(Ljava/io/Writer;)V
 
-    .line 233
     invoke-virtual {v1}, Ljava/io/OutputStreamWriter;->flush()V
 
-    .line 234
     invoke-virtual {p1, v0}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -2287,7 +2068,6 @@
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 237
     invoke-virtual {p1, v0}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
     :cond_0
@@ -2295,7 +2075,6 @@
 
     const-string v0, "Failed to write usage for dex files"
 
-    .line 239
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -2307,7 +2086,6 @@
 
     const/4 v0, 0x0
 
-    .line 221
     invoke-virtual {p0, v0}, Lcom/android/server/pm/dex/PackageDexUsage;->writeInternal(Ljava/lang/Void;)V
 
     return-void

@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetsecureMode(Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->secureMode:I
 
     return p0
@@ -42,35 +41,28 @@
 .method public static create(II)Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;
     .locals 2
 
-    .line 788
     new-instance v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;
 
     invoke-direct {v0}, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;-><init>()V
 
     const/16 v1, 0xb
 
-    .line 789
     iput-byte v1, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogN:B
 
     const/4 v1, 0x3
 
-    .line 790
     iput-byte v1, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogR:B
 
     const/4 v1, 0x1
 
-    .line 791
     iput-byte v1, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogP:B
 
-    .line 792
     iput p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->credentialType:I
 
-    .line 793
     iput p1, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->pinLength:I
 
     const/16 p0, 0x10
 
-    .line 794
     invoke-static {p0}, Lcom/android/server/locksettings/SecureRandomUtils;->randomBytes(I)[B
 
     move-result-object p0
@@ -79,7 +71,6 @@
 
     const/4 p0, 0x0
 
-    .line 795
     iput p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->secureMode:I
 
     return-object v0
@@ -88,29 +79,24 @@
 .method public static fromBytes([B)Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;
     .locals 4
 
-    .line 809
     new-instance v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;
 
     invoke-direct {v0}, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;-><init>()V
 
-    .line 810
     array-length v1, p0
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 811
     array-length v2, p0
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, p0, v3, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 812
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 825
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p0
@@ -119,53 +105,44 @@
 
     iput p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->credentialType:I
 
-    .line 826
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result p0
 
     iput-byte p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogN:B
 
-    .line 827
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result p0
 
     iput-byte p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogR:B
 
-    .line 828
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result p0
 
     iput-byte p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogP:B
 
-    .line 829
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p0
 
-    .line 830
     new-array p0, p0, [B
 
     iput-object p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->salt:[B
 
-    .line 831
     invoke-virtual {v1, p0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 832
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p0
 
     if-lez p0, :cond_0
 
-    .line 834
     new-array p0, p0, [B
 
     iput-object p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->passwordHandle:[B
 
-    .line 835
     invoke-virtual {v1, p0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     goto :goto_0
@@ -173,10 +150,8 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 837
     iput-object p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->passwordHandle:[B
 
-    .line 842
     :goto_0
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
@@ -184,7 +159,6 @@
 
     iput p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->pinLength:I
 
-    .line 843
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,10 +179,8 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 849
     iput v3, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->secureMode:I
 
-    .line 850
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,29 +205,24 @@
 .method public static fromBytesForMigration([B)Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;
     .locals 4
 
-    .line 866
     new-instance v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;
 
     invoke-direct {v0}, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;-><init>()V
 
-    .line 867
     array-length v1, p0
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 868
     array-length v2, p0
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, p0, v3, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 869
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 871
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p0
@@ -264,53 +231,44 @@
 
     iput p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->credentialType:I
 
-    .line 872
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result p0
 
     iput-byte p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogN:B
 
-    .line 873
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result p0
 
     iput-byte p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogR:B
 
-    .line 874
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result p0
 
     iput-byte p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogP:B
 
-    .line 875
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p0
 
-    .line 876
     new-array p0, p0, [B
 
     iput-object p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->salt:[B
 
-    .line 877
     invoke-virtual {v1, p0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 878
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p0
 
     if-lez p0, :cond_0
 
-    .line 880
     new-array p0, p0, [B
 
     iput-object p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->passwordHandle:[B
 
-    .line 881
     invoke-virtual {v1, p0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     goto :goto_0
@@ -318,16 +276,13 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 883
     iput-object p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->passwordHandle:[B
 
-    .line 894
     :goto_0
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p0
 
-    .line 895
     invoke-static {p0}, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->isNormalSecureMode(I)Z
 
     move-result v1
@@ -338,13 +293,10 @@
 
     const/4 v1, -0x1
 
-    .line 896
     iput v1, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->pinLength:I
 
-    .line 897
     iput p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->secureMode:I
 
-    .line 898
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,14 +317,11 @@
 
     goto :goto_1
 
-    .line 900
     :cond_1
     iput p0, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->pinLength:I
 
-    .line 905
     iput v3, v0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->secureMode:I
 
-    .line 907
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -410,7 +359,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 805
     array-length v1, p0
 
     const/4 v2, 0x2
@@ -436,7 +384,6 @@
 .method public static isNormalSecureMode(I)Z
     .locals 1
 
-    .line 0
     if-ltz p0, :cond_0
 
     const/4 v0, 0x2
@@ -459,7 +406,6 @@
 .method public toBytes()[B
     .locals 4
 
-    .line 933
     iget-object v0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->salt:[B
 
     array-length v0, v0
@@ -468,7 +414,6 @@
 
     add-int/lit8 v0, v0, 0x4
 
-    .line 935
     iget-object v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->passwordHandle:[B
 
     const/4 v2, 0x0
@@ -487,12 +432,10 @@
 
     add-int/lit8 v0, v0, 0x4
 
-    .line 933
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 938
     iget v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->credentialType:I
 
     const/16 v3, -0x8000
@@ -503,37 +446,30 @@
 
     if-gt v1, v3, :cond_2
 
-    .line 941
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 942
     iget-byte v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogN:B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 943
     iget-byte v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogR:B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 944
     iget-byte v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->scryptLogP:B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 945
     iget-object v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->salt:[B
 
     array-length v1, v1
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 946
     iget-object v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->salt:[B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 947
     iget-object v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->passwordHandle:[B
 
     if-eqz v1, :cond_1
@@ -542,36 +478,30 @@
 
     if-lez v3, :cond_1
 
-    .line 948
     array-length v1, v1
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 949
     iget-object v1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->passwordHandle:[B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     goto :goto_1
 
-    .line 951
     :cond_1
     invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 953
     :goto_1
     iget p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$PasswordData;->pinLength:I
 
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 959
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
 
     return-object p0
 
-    .line 939
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

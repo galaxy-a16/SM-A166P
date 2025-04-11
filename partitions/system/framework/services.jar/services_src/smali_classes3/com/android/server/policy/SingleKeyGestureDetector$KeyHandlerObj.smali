@@ -17,19 +17,14 @@
 .method public constructor <init>(Landroid/view/KeyEvent;Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;II)V
     .locals 0
 
-    .line 936
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 937
     iput-object p1, p0, Lcom/android/server/policy/SingleKeyGestureDetector$KeyHandlerObj;->event:Landroid/view/KeyEvent;
 
-    .line 938
     iput-object p2, p0, Lcom/android/server/policy/SingleKeyGestureDetector$KeyHandlerObj;->rule:Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;
 
-    .line 939
     iput p3, p0, Lcom/android/server/policy/SingleKeyGestureDetector$KeyHandlerObj;->policyFlags:I
 
-    .line 940
     iput p4, p0, Lcom/android/server/policy/SingleKeyGestureDetector$KeyHandlerObj;->longPressType:I
 
     return-void
@@ -40,7 +35,6 @@
 .method public getKeyEvent()Landroid/view/KeyEvent;
     .locals 0
 
-    .line 944
     iget-object p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$KeyHandlerObj;->event:Landroid/view/KeyEvent;
 
     return-object p0
@@ -49,7 +43,6 @@
 .method public getLongPressType()I
     .locals 0
 
-    .line 956
     iget p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$KeyHandlerObj;->longPressType:I
 
     return p0
@@ -58,7 +51,6 @@
 .method public getPolicyFlags()I
     .locals 0
 
-    .line 952
     iget p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$KeyHandlerObj;->policyFlags:I
 
     return p0
@@ -67,7 +59,6 @@
 .method public getSingleKeyRule()Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;
     .locals 0
 
-    .line 948
     iget-object p0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$KeyHandlerObj;->rule:Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;
 
     return-object p0

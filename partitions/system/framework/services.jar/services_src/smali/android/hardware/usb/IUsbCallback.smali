@@ -20,7 +20,6 @@
 
     const-string v2, "android$hardware$usb$IUsbCallback"
 
-    .line 422
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v0

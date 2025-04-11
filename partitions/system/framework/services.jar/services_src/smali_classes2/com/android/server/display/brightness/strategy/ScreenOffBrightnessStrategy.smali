@@ -20,7 +20,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "ScreenOffBrightnessStrategy"
 
     return-object p0
@@ -31,14 +30,12 @@
 
     const/4 p1, 0x0
 
-    .line 37
     invoke-virtual {p0}, Lcom/android/server/display/brightness/strategy/ScreenOffBrightnessStrategy;->getName()Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x5
 
-    .line 35
     invoke-static {v0, p1, p1, p0}, Lcom/android/server/display/brightness/BrightnessUtils;->constructDisplayBrightnessState(IFFLjava/lang/String;)Lcom/android/server/display/DisplayBrightnessState;
 
     move-result-object p0

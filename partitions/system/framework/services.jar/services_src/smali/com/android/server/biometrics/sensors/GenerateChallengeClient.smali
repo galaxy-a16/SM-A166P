@@ -29,7 +29,6 @@
 
     move-object/from16 v10, p9
 
-    .line 39
     invoke-direct/range {v0 .. v10}, Lcom/android/server/biometrics/sensors/HalClientMonitor;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;IILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
     return-void
@@ -40,7 +39,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xa
 
     return p0
@@ -49,10 +47,8 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 0
 
-    .line 54
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 56
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->startHalOperation()V
 
     return-void
@@ -61,7 +57,6 @@
 .method public unableToStart()V
     .locals 4
 
-    .line 46
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
@@ -90,7 +85,6 @@
 
     const-string v1, "Unable to send error"
 
-    .line 48
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

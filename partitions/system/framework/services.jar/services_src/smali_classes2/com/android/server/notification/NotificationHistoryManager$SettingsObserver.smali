@@ -13,15 +13,12 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationHistoryManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 467
     iput-object p1, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationHistoryManager;
 
-    .line 468
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const-string/jumbo p1, "notification_history_enabled"
 
-    .line 465
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -36,7 +33,6 @@
 .method public observe()V
     .locals 4
 
-    .line 472
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationHistoryManager;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationHistoryManager;->-$$Nest$fgetmContext(Lcom/android/server/notification/NotificationHistoryManager;)Landroid/content/Context;
@@ -47,7 +43,6 @@
 
     move-result-object v0
 
-    .line 473
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->NOTIFICATION_HISTORY_URI:Landroid/net/Uri;
 
     const/4 v2, 0x0
@@ -56,7 +51,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 475
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationHistoryManager;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationHistoryManager;->-$$Nest$fgetmLock(Lcom/android/server/notification/NotificationHistoryManager;)Ljava/lang/Object;
@@ -65,7 +59,6 @@
 
     monitor-enter v0
 
-    .line 476
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationHistoryManager;
 
@@ -95,14 +88,12 @@
 
     check-cast v2, Landroid/content/pm/UserInfo;
 
-    .line 477
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->isProfile()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 478
     iget v2, v2, Landroid/content/pm/UserInfo;->id:I
 
     const/4 v3, 0x0
@@ -111,7 +102,6 @@
 
     goto :goto_0
 
-    .line 481
     :cond_1
     monitor-exit v0
 
@@ -130,7 +120,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 0
 
-    .line 491
     invoke-virtual {p0, p2, p3}, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->update(Landroid/net/Uri;I)V
 
     return-void
@@ -139,7 +128,6 @@
 .method public stopObserving()V
     .locals 1
 
-    .line 485
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationHistoryManager;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationHistoryManager;->-$$Nest$fgetmContext(Lcom/android/server/notification/NotificationHistoryManager;)Landroid/content/Context;
@@ -150,7 +138,6 @@
 
     move-result-object v0
 
-    .line 486
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     return-void
@@ -159,7 +146,6 @@
 .method public update(Landroid/net/Uri;I)V
     .locals 4
 
-    .line 495
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationHistoryManager;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationHistoryManager;->-$$Nest$fgetmContext(Lcom/android/server/notification/NotificationHistoryManager;)Landroid/content/Context;
@@ -172,7 +158,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 496
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->NOTIFICATION_HISTORY_URI:Landroid/net/Uri;
 
     invoke-virtual {v1, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -186,7 +171,6 @@
 
     const/4 v1, 0x1
 
-    .line 497
     invoke-static {v0, p1, v1, p2}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p1
@@ -202,7 +186,6 @@
     :cond_1
     move p1, v0
 
-    .line 500
     :goto_0
     iget-object v2, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationHistoryManager;
 
@@ -214,7 +197,6 @@
 
     move-result-object p2
 
-    .line 501
     array-length v1, p2
 
     :goto_1
@@ -222,7 +204,6 @@
 
     aget v2, p2, v0
 
-    .line 502
     iget-object v3, p0, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationHistoryManager;
 
     invoke-virtual {v3, v2, p1}, Lcom/android/server/notification/NotificationHistoryManager;->onHistoryEnabledChanged(IZ)V

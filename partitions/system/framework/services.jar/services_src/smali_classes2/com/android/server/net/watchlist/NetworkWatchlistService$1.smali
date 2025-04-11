@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/net/watchlist/NetworkWatchlistService;)V
     .locals 0
 
-    .line 143
     iput-object p1, p0, Lcom/android/server/net/watchlist/NetworkWatchlistService$1;->this$0:Lcom/android/server/net/watchlist/NetworkWatchlistService;
 
     invoke-direct {p0}, Lcom/android/server/net/BaseNetdEventCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onConnectEvent(Ljava/lang/String;IJI)V
     .locals 0
 
-    .line 155
     iget-object p2, p0, Lcom/android/server/net/watchlist/NetworkWatchlistService$1;->this$0:Lcom/android/server/net/watchlist/NetworkWatchlistService;
 
     invoke-static {p2}, Lcom/android/server/net/watchlist/NetworkWatchlistService;->-$$Nest$fgetmIsLoggingEnabled(Lcom/android/server/net/watchlist/NetworkWatchlistService;)Z
@@ -35,7 +33,6 @@
 
     return-void
 
-    .line 158
     :cond_0
     iget-object p0, p0, Lcom/android/server/net/watchlist/NetworkWatchlistService$1;->this$0:Lcom/android/server/net/watchlist/NetworkWatchlistService;
 
@@ -55,7 +52,6 @@
 .method public onDnsEvent(IIILjava/lang/String;[Ljava/lang/String;IJI)V
     .locals 0
 
-    .line 147
     iget-object p1, p0, Lcom/android/server/net/watchlist/NetworkWatchlistService$1;->this$0:Lcom/android/server/net/watchlist/NetworkWatchlistService;
 
     invoke-static {p1}, Lcom/android/server/net/watchlist/NetworkWatchlistService;->-$$Nest$fgetmIsLoggingEnabled(Lcom/android/server/net/watchlist/NetworkWatchlistService;)Z
@@ -66,7 +62,6 @@
 
     return-void
 
-    .line 150
     :cond_0
     iget-object p0, p0, Lcom/android/server/net/watchlist/NetworkWatchlistService$1;->this$0:Lcom/android/server/net/watchlist/NetworkWatchlistService;
 

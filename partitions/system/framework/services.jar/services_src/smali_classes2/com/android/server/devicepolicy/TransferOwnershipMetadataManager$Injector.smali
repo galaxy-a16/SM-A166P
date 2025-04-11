@@ -17,7 +17,6 @@
 .method public getOwnerTransferMetadataDir()Ljava/io/File;
     .locals 0
 
-    .line 231
     invoke-static {}, Landroid/os/Environment;->getDataSystemDirectory()Ljava/io/File;
 
     move-result-object p0

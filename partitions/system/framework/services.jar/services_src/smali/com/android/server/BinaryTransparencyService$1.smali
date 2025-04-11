@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BinaryTransparencyService;)V
     .locals 0
 
-    .line 1416
     iput-object p1, p0, Lcom/android/server/BinaryTransparencyService$1;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-direct {p0}, Landroid/hardware/fingerprint/IFingerprintAuthenticatorsRegisteredCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onAllAuthenticatorsRegistered(Ljava/util/List;)V
     .locals 4
 
-    .line 1425
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -42,15 +40,12 @@
 
     check-cast v0, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
-    .line 1427
     invoke-static {v0}, Landroid/hardware/fingerprint/FingerprintSensorProperties;->from(Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;)Landroid/hardware/fingerprint/FingerprintSensorProperties;
 
     move-result-object v0
 
-    .line 1428
     iget-object v1, p0, Lcom/android/server/BinaryTransparencyService$1;->this$0:Lcom/android/server/BinaryTransparencyService;
 
-    .line 1430
     invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintSensorProperties;->getSensorType()I
 
     move-result v2
@@ -61,7 +56,6 @@
 
     const/4 v3, 0x1
 
-    .line 1428
     invoke-static {v1, v0, v3, v2}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$mlogBiometricProperties(Lcom/android/server/BinaryTransparencyService;Landroid/hardware/biometrics/SensorProperties;II)V
 
     goto :goto_0

@@ -26,7 +26,6 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -37,7 +36,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 39
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
@@ -46,7 +44,6 @@
 
     goto :goto_0
 
-    .line 44
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/ImportanceExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
@@ -54,14 +51,11 @@
 
     return-object v0
 
-    .line 48
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->calculateImportance()V
 
-    .line 50
     iget-object v1, p0, Lcom/android/server/notification/ImportanceExtractor;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
 
-    .line 51
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v2
@@ -74,14 +68,12 @@
 
     move-result v3
 
-    .line 50
     invoke-virtual {v1, v2, v3}, Lcom/android/server/notification/PreferencesHelper;->getNotificationAlertsEnabledForPackage(Ljava/lang/String;I)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 52
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getImportance()I
 
     move-result v1
@@ -90,14 +82,11 @@
 
     if-le v1, v2, :cond_2
 
-    .line 53
     invoke-virtual {p1, v2}, Lcom/android/server/notification/NotificationRecord;->setImportance(I)V
 
-    .line 59
     :cond_2
     iget-object p0, p0, Lcom/android/server/notification/ImportanceExtractor;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
 
-    .line 60
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v1
@@ -110,14 +99,12 @@
 
     move-result v2
 
-    .line 59
     invoke-virtual {p0, v1, v2}, Lcom/android/server/notification/PreferencesHelper;->isAllowNotificationPopUpForPackage(Ljava/lang/String;I)Z
 
     move-result p0
 
     if-nez p0, :cond_3
 
-    .line 61
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getImportance()I
 
     move-result p0
@@ -126,7 +113,6 @@
 
     if-le p0, v1, :cond_3
 
-    .line 62
     invoke-virtual {p1, v1}, Lcom/android/server/notification/NotificationRecord;->setImportance(I)V
 
     :cond_3
@@ -137,7 +123,6 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/notification/ImportanceExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
     return-void
@@ -146,7 +131,6 @@
 .method public setPreferenceHelper(Lcom/android/server/notification/PreferencesHelper;)V
     .locals 0
 
-    .line 72
     iput-object p1, p0, Lcom/android/server/notification/ImportanceExtractor;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
 
     return-void
@@ -155,6 +139,5 @@
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

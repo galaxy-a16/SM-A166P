@@ -34,7 +34,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/String;Landroid/content/IIntentReceiver;[I[ILandroid/util/SparseArray;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda11;->f$0:Lcom/android/server/pm/PackageManagerService;
@@ -67,7 +66,6 @@
 .method public final run()V
     .locals 11
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda11;->f$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda11;->f$1:Ljava/lang/String;

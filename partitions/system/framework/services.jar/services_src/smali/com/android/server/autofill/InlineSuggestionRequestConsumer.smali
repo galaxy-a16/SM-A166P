@@ -16,13 +16,10 @@
 .method public constructor <init>(Ljava/lang/ref/WeakReference;Ljava/lang/ref/WeakReference;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/autofill/InlineSuggestionRequestConsumer;->mAssistDataReceiverWeakReference:Ljava/lang/ref/WeakReference;
 
-    .line 36
     iput-object p2, p0, Lcom/android/server/autofill/InlineSuggestionRequestConsumer;->mViewStateWeakReference:Ljava/lang/ref/WeakReference;
 
     return-void
@@ -33,7 +30,6 @@
 .method public accept(Landroid/view/inputmethod/InlineSuggestionsRequest;)V
     .locals 2
 
-    .line 41
     iget-object v0, p0, Lcom/android/server/autofill/InlineSuggestionRequestConsumer;->mAssistDataReceiverWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -42,7 +38,6 @@
 
     check-cast v0, Lcom/android/server/autofill/Session$AssistDataReceiverImpl;
 
-    .line 42
     iget-object p0, p0, Lcom/android/server/autofill/InlineSuggestionRequestConsumer;->mViewStateWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -57,7 +52,6 @@
 
     const-string p0, "assistDataReceiver is null when accepting new inline suggestionrequests"
 
-    .line 44
     invoke-static {v1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -67,12 +61,10 @@
 
     const-string/jumbo p0, "view state is null when accepting new inline suggestion requests"
 
-    .line 50
     invoke-static {v1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 53
     :cond_1
     invoke-virtual {v0, p1, p0}, Lcom/android/server/autofill/Session$AssistDataReceiverImpl;->handleInlineSuggestionRequest(Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/server/autofill/ViewState;)V
 
@@ -82,7 +74,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 25
     check-cast p1, Landroid/view/inputmethod/InlineSuggestionsRequest;
 
     invoke-virtual {p0, p1}, Lcom/android/server/autofill/InlineSuggestionRequestConsumer;->accept(Landroid/view/inputmethod/InlineSuggestionsRequest;)V

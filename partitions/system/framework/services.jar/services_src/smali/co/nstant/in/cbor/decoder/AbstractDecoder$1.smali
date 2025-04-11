@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 38
     invoke-static {}, Lco/nstant/in/cbor/model/AdditionalInformation;->values()[Lco/nstant/in/cbor/model/AdditionalInformation;
 
     move-result-object v0

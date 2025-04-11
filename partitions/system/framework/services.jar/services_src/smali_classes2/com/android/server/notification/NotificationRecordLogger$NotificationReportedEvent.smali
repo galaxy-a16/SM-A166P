@@ -24,7 +24,6 @@
 .method public static synthetic $values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
     .locals 3
 
-    .line 133
     sget-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->NOTIFICATION_POSTED:Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
     sget-object v1, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->NOTIFICATION_UPDATED:Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
@@ -41,7 +40,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 134
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
     const/4 v1, 0x0
@@ -54,7 +52,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->NOTIFICATION_POSTED:Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
-    .line 136
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
     const/4 v1, 0x1
@@ -67,7 +64,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->NOTIFICATION_UPDATED:Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
-    .line 138
     new-instance v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
     const/4 v1, 0x2
@@ -80,7 +76,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->NOTIFICATION_ADJUSTED:Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
-    .line 133
     invoke-static {}, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->$values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
     move-result-object v0
@@ -93,10 +88,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 142
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 143
     iput p3, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->mId:I
 
     return-void
@@ -105,7 +98,6 @@
 .method public static fromRecordPair(Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;)Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
     .locals 0
 
-    .line 150
     iget-object p0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->old:Lcom/android/server/notification/NotificationRecord;
 
     if-eqz p0, :cond_0
@@ -114,7 +106,6 @@
 
     goto :goto_0
 
-    .line 151
     :cond_0
     sget-object p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->NOTIFICATION_POSTED:Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
@@ -125,7 +116,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
     .locals 1
 
-    .line 133
     const-class v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,7 +130,6 @@
 .method public static values()[Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
     .locals 1
 
-    .line 133
     sget-object v0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->$VALUES:[Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;
 
     invoke-virtual {v0}, [Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->clone()Ljava/lang/Object;
@@ -157,7 +146,6 @@
 .method public getId()I
     .locals 0
 
-    .line 146
     iget p0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReportedEvent;->mId:I
 
     return p0

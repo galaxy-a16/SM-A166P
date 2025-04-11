@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$CjGhIHFO6D3SdudPIETIrbH6zzc(Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;F)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->lambda$putScale$0(F)V
 
     return-void
@@ -30,10 +29,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -42,17 +39,14 @@
 
     const/4 v0, 0x0
 
-    .line 47
     iput v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mCurrentUserId:I
 
-    .line 48
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mLock:Ljava/lang/Object;
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mContext:Landroid/content/Context;
 
     return-void
@@ -65,7 +59,6 @@
 
     const/high16 v1, 0x41000000    # 8.0f
 
-    .line 137
     invoke-static {p0, v0, v1}, Landroid/util/MathUtils;->constrain(FFF)F
 
     move-result p0
@@ -76,7 +69,6 @@
 .method private synthetic lambda$putScale$0(F)V
     .locals 2
 
-    .line 64
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -101,7 +93,6 @@
 
     if-nez p1, :cond_0
 
-    .line 82
     iget-object p1, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -118,13 +109,11 @@
 
     return p0
 
-    .line 86
     :cond_0
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 87
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->getScalesWithCurrentUser()Landroid/util/SparseArray;
 
@@ -151,7 +140,6 @@
     :catchall_0
     move-exception p0
 
-    .line 88
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -162,7 +150,6 @@
 .method public final getScalesWithCurrentUser()Landroid/util/SparseArray;
     .locals 2
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mUsersScales:Landroid/util/SparseArray;
 
     iget v1, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mCurrentUserId:I
@@ -175,12 +162,10 @@
 
     if-nez v0, :cond_0
 
-    .line 97
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 98
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mUsersScales:Landroid/util/SparseArray;
 
     iget p0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mCurrentUserId:I
@@ -194,12 +179,10 @@
 .method public onDisplayRemoved(I)V
     .locals 3
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 118
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mUsersScales:Landroid/util/SparseArray;
 
@@ -212,7 +195,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 120
     iget-object v2, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mUsersScales:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -227,7 +209,6 @@
 
     goto :goto_0
 
-    .line 122
     :cond_0
     monitor-exit v0
 
@@ -246,16 +227,13 @@
 .method public onUserChanged(I)V
     .locals 1
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 106
     :try_start_0
     iput p1, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mCurrentUserId:I
 
-    .line 107
     monitor-exit v0
 
     return-void
@@ -273,18 +251,15 @@
 .method public onUserRemoved(I)V
     .locals 1
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 112
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mUsersScales:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 113
     monitor-exit v0
 
     return-void
@@ -304,7 +279,6 @@
 
     if-nez p2, :cond_0
 
-    .line 63
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p2
@@ -317,13 +291,11 @@
 
     goto :goto_0
 
-    .line 68
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 69
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->getScalesWithCurrentUser()Landroid/util/SparseArray;
 
@@ -335,7 +307,6 @@
 
     invoke-virtual {p0, p2, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 70
     monitor-exit v0
 
     :goto_0
@@ -354,12 +325,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 128
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -379,7 +348,6 @@
 
     const/4 v2, 0x0
 
-    .line 130
     invoke-virtual {p0, v2}, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->getScale(I)F
 
     move-result v2
@@ -390,7 +358,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 131
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->getScalesWithCurrentUser()Landroid/util/SparseArray;
 
     move-result-object p0
@@ -412,7 +379,6 @@
     :catchall_0
     move-exception p0
 
-    .line 133
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

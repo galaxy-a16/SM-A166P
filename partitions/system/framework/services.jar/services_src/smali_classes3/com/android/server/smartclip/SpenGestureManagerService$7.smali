@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenGestureManagerService;)V
     .locals 0
 
-    .line 1232
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$7;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 3
 
-    .line 1236
     sget-object v0, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -52,7 +50,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1238
     iget-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$7;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     new-instance v0, Landroid/os/Messenger;
@@ -61,14 +58,12 @@
 
     invoke-static {p1, v0}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fputmAcService(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/os/Messenger;)V
 
-    .line 1239
     iget-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$7;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fputmAcIsBound(Lcom/android/server/smartclip/SpenGestureManagerService;Z)V
 
-    .line 1241
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$7;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {p0}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$msendDefferedPenDetectionInfo(Lcom/android/server/smartclip/SpenGestureManagerService;)V
@@ -79,7 +74,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 1246
     sget-object v0, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -98,7 +92,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1248
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object p1
@@ -111,14 +104,12 @@
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1249
     iget-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$7;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fputmAcService(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/os/Messenger;)V
 
-    .line 1250
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$7;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     const/4 p1, 0x0

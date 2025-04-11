@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/Face10;Lcom/android/server/biometrics/sensors/face/hidl/FaceEnrollClient;)V
     .locals 0
 
-    .line 1035
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$6;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$6;->val$client:Lcom/android/server/biometrics/sensors/face/hidl/FaceEnrollClient;
@@ -31,7 +30,6 @@
 .method public onBiometricAction(I)V
     .locals 0
 
-    .line 1043
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$6;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$fgetmBiometricStateCallback(Lcom/android/server/biometrics/sensors/face/hidl/Face10;)Lcom/android/server/biometrics/sensors/BiometricStateCallback;
@@ -46,7 +44,6 @@
 .method public onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
     .locals 1
 
-    .line 1049
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$6;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$fgetmBiometricStateCallback(Lcom/android/server/biometrics/sensors/face/hidl/Face10;)Lcom/android/server/biometrics/sensors/BiometricStateCallback;
@@ -57,7 +54,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1052
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$6;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$6;->val$client:Lcom/android/server/biometrics/sensors/face/hidl/FaceEnrollClient;
@@ -75,7 +71,6 @@
 .method public onClientStarted(Lcom/android/server/biometrics/sensors/BaseClientMonitor;)V
     .locals 0
 
-    .line 1038
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$6;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$fgetmBiometricStateCallback(Lcom/android/server/biometrics/sensors/face/hidl/Face10;)Lcom/android/server/biometrics/sensors/BiometricStateCallback;

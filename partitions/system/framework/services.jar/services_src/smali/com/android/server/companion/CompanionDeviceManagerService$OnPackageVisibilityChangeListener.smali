@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$0vRl6-lSkH0V5UPuU56Xz5meChg(Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->lambda$stopListening$1()V
 
     return-void
@@ -25,7 +24,6 @@
 .method public static synthetic $r8$lambda$qQkLm_Xm6Ap4rkaW-SbXf0Jiqu8(Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->lambda$startListening$0()V
 
     return-void
@@ -34,12 +32,10 @@
 .method public constructor <init>(Lcom/android/server/companion/CompanionDeviceManagerService;Landroid/app/ActivityManager;)V
     .locals 0
 
-    .line 1586
     iput-object p1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1587
     iput-object p2, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->mAm:Landroid/app/ActivityManager;
 
     return-void
@@ -48,7 +44,6 @@
 .method private synthetic lambda$startListening$0()V
     .locals 2
 
-    .line 1592
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->mAm:Landroid/app/ActivityManager;
 
     const/16 v1, 0xc8
@@ -61,7 +56,6 @@
 .method private synthetic lambda$stopListening$1()V
     .locals 1
 
-    .line 1599
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->mAm:Landroid/app/ActivityManager;
 
     invoke-virtual {v0, p0}, Landroid/app/ActivityManager;->removeOnUidImportanceListener(Landroid/app/ActivityManager$OnUidImportanceListener;)V
@@ -80,7 +74,6 @@
 
     return-void
 
-    .line 1611
     :cond_0
     iget-object p2, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -92,13 +85,11 @@
 
     return-void
 
-    .line 1617
     :cond_1
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
 
-    .line 1622
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {v0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$mgetPendingRoleHolderRemovalAssociationsForUser(Lcom/android/server/companion/CompanionDeviceManagerService;I)Ljava/util/Set;
@@ -124,7 +115,6 @@
 
     check-cast v2, Landroid/companion/AssociationInfo;
 
-    .line 1623
     invoke-virtual {v2}, Landroid/companion/AssociationInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -137,7 +127,6 @@
 
     goto :goto_0
 
-    .line 1625
     :cond_2
     iget-object v3, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -149,7 +138,6 @@
 
     goto :goto_0
 
-    .line 1630
     :cond_3
     iget-object v1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -162,7 +150,6 @@
     :cond_4
     if-eqz v1, :cond_5
 
-    .line 1635
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmUserPersistenceHandler(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/CompanionDeviceManagerService$PersistUserStateHandler;
@@ -178,7 +165,6 @@
 .method public startListening()V
     .locals 1
 
-    .line 1591
     new-instance v0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;)V
@@ -191,7 +177,6 @@
 .method public stopListening()V
     .locals 1
 
-    .line 1598
     new-instance v0, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0}, Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/companion/CompanionDeviceManagerService$OnPackageVisibilityChangeListener;)V

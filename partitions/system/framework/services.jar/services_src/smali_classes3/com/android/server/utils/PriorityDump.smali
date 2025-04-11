@@ -11,12 +11,10 @@
 
     if-nez p3, :cond_0
 
-    .line 145
     invoke-interface {p0, p1, p2, p3, v0}, Lcom/android/server/utils/PriorityDump$PriorityDumper;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;Z)V
 
     return-void
 
-    .line 149
     :cond_0
     array-length v1, p3
 
@@ -28,7 +26,6 @@
 
     move v4, v3
 
-    .line 151
     :goto_0
     array-length v5, p3
 
@@ -36,7 +33,6 @@
 
     if-ge v0, v5, :cond_4
 
-    .line 152
     aget-object v5, p3, v0
 
     const-string v7, "--proto"
@@ -51,7 +47,6 @@
 
     goto :goto_1
 
-    .line 154
     :cond_1
     aget-object v5, p3, v0
 
@@ -65,12 +60,10 @@
 
     add-int/lit8 v5, v0, 0x1
 
-    .line 155
     array-length v7, p3
 
     if-ge v5, v7, :cond_3
 
-    .line 157
     aget-object v0, p3, v5
 
     invoke-static {v0}, Lcom/android/server/utils/PriorityDump;->getPriorityType(Ljava/lang/String;)I
@@ -86,7 +79,6 @@
     :cond_2
     add-int/lit8 v5, v2, 0x1
 
-    .line 160
     aget-object v7, p3, v0
 
     aput-object v7, v1, v2
@@ -99,13 +91,11 @@
 
     goto :goto_0
 
-    .line 164
     :cond_4
     array-length p3, p3
 
     if-ge v2, p3, :cond_5
 
-    .line 165
     invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p3
@@ -125,24 +115,20 @@
 
     if-eq v3, p3, :cond_6
 
-    .line 182
     invoke-interface {p0, p1, p2, v1, v4}, Lcom/android/server/utils/PriorityDump$PriorityDumper;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;Z)V
 
     return-void
 
-    .line 178
     :cond_6
     invoke-interface {p0, p1, p2, v1, v4}, Lcom/android/server/utils/PriorityDump$PriorityDumper;->dumpNormal(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;Z)V
 
     return-void
 
-    .line 174
     :cond_7
     invoke-interface {p0, p1, p2, v1, v4}, Lcom/android/server/utils/PriorityDump$PriorityDumper;->dumpHigh(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;Z)V
 
     return-void
 
-    .line 170
     :cond_8
     invoke-interface {p0, p1, p2, v1, v4}, Lcom/android/server/utils/PriorityDump$PriorityDumper;->dumpCritical(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;Z)V
 
@@ -152,7 +138,6 @@
 .method public static getPriorityType(Ljava/lang/String;)I
     .locals 5
 
-    .line 192
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I

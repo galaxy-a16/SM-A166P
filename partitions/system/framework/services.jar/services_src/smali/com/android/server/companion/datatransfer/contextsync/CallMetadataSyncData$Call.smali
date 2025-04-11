@@ -23,10 +23,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 173
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 197
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -39,7 +37,6 @@
 .method public static fromBundle(Landroid/os/Bundle;)Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;
     .locals 5
 
-    .line 200
     new-instance v0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;
 
     invoke-direct {v0}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;-><init>()V
@@ -48,7 +45,6 @@
 
     const-string v1, "com.android.companion.datatransfer.contextsync.extra.CALL_ID"
 
-    .line 202
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -57,7 +53,6 @@
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.CALLER_ID"
 
-    .line 203
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -66,7 +61,6 @@
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.APP_ICON"
 
-    .line 204
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
 
     move-result-object v1
@@ -75,26 +69,22 @@
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.FACILITATOR_NAME"
 
-    .line 205
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "com.android.server.companion.datatransfer.contextsync.extra.FACILITATOR_ID"
 
-    .line 206
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "com.android.server.companion.datatransfer.contextsync.extra.FACILITATOR_EXT_ID"
 
-    .line 208
     invoke-virtual {p0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 209
     new-instance v4, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     invoke-direct {v4, v1, v2, v3}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -103,7 +93,6 @@
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.STATUS"
 
-    .line 211
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v1
@@ -112,14 +101,12 @@
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.DIRECTION"
 
-    .line 212
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->setDirection(I)V
 
-    .line 213
     new-instance v1, Ljava/util/HashSet;
 
     const-string v2, "com.android.server.companion.datatransfer.contextsync.extra.CONTROLS"
@@ -141,7 +128,6 @@
 .method public addControl(I)V
     .locals 0
 
-    .line 257
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mControls:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -156,14 +142,12 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 299
     instance-of v0, p1, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mId:Ljava/lang/String;
 
     if-eqz p0, :cond_0
@@ -189,7 +173,6 @@
 .method public getAppIcon()[B
     .locals 0
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mAppIcon:[B
 
     return-object p0
@@ -198,7 +181,6 @@
 .method public getCallerId()Ljava/lang/String;
     .locals 0
 
-    .line 270
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mCallerId:Ljava/lang/String;
 
     return-object p0
@@ -207,7 +189,6 @@
 .method public getControls()Ljava/util/Set;
     .locals 0
 
-    .line 290
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mControls:Ljava/util/Set;
 
     return-object p0
@@ -216,7 +197,6 @@
 .method public getDirection()I
     .locals 0
 
-    .line 286
     iget p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mDirection:I
 
     return p0
@@ -225,7 +205,6 @@
 .method public getFacilitator()Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
     .locals 0
 
-    .line 278
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mFacilitator:Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     return-object p0
@@ -234,7 +213,6 @@
 .method public getId()Ljava/lang/String;
     .locals 0
 
-    .line 266
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mId:Ljava/lang/String;
 
     return-object p0
@@ -243,7 +221,6 @@
 .method public getStatus()I
     .locals 0
 
-    .line 282
     iget p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mStatus:I
 
     return p0
@@ -252,7 +229,6 @@
 .method public hasControl(I)Z
     .locals 0
 
-    .line 294
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mControls:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -269,7 +245,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 307
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mId:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -282,7 +257,6 @@
 .method public setAppIcon([B)V
     .locals 0
 
-    .line 241
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mAppIcon:[B
 
     return-void
@@ -291,7 +265,6 @@
 .method public setCallerId(Ljava/lang/String;)V
     .locals 0
 
-    .line 237
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mCallerId:Ljava/lang/String;
 
     return-void
@@ -300,12 +273,10 @@
 .method public setControls(Ljava/util/Set;)V
     .locals 1
 
-    .line 261
     iget-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mControls:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 262
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mControls:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
@@ -316,7 +287,6 @@
 .method public setDirection(I)V
     .locals 0
 
-    .line 253
     iput p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mDirection:I
 
     return-void
@@ -325,7 +295,6 @@
 .method public setFacilitator(Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;)V
     .locals 0
 
-    .line 245
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mFacilitator:Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     return-void
@@ -334,7 +303,6 @@
 .method public setId(Ljava/lang/String;)V
     .locals 0
 
-    .line 233
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mId:Ljava/lang/String;
 
     return-void
@@ -343,7 +311,6 @@
 .method public setStatus(I)V
     .locals 0
 
-    .line 249
     iput p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mStatus:I
 
     return-void
@@ -352,33 +319,28 @@
 .method public writeToBundle()Landroid/os/Bundle;
     .locals 3
 
-    .line 219
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "com.android.companion.datatransfer.contextsync.extra.CALL_ID"
 
-    .line 220
     iget-object v2, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.CALLER_ID"
 
-    .line 221
     iget-object v2, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mCallerId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.APP_ICON"
 
-    .line 222
     iget-object v2, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mAppIcon:[B
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 223
     iget-object v1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mFacilitator:Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     invoke-virtual {v1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;->getName()Ljava/lang/String;
@@ -389,7 +351,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
     iget-object v1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mFacilitator:Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     invoke-virtual {v1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;->getIdentifier()Ljava/lang/String;
@@ -400,7 +361,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 225
     iget-object v1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mFacilitator:Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     invoke-virtual {v1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;->getExtendedIdentifier()Ljava/lang/String;
@@ -413,19 +373,16 @@
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.STATUS"
 
-    .line 226
     iget v2, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mStatus:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v1, "com.android.server.companion.datatransfer.contextsync.extra.DIRECTION"
 
-    .line 227
     iget v2, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mDirection:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 228
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->mControls:Ljava/util/Set;

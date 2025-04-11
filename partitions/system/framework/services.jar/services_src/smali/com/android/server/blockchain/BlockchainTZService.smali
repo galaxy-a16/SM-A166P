@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRegisteredFWKClientMap(Lcom/android/server/blockchain/BlockchainTZService;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/blockchain/BlockchainTZService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
     return-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$sfgetmContext()Landroid/content/Context;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/blockchain/BlockchainTZService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -39,7 +37,6 @@
 
     const/4 v1, 0x1
 
-    .line 35
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -54,7 +51,6 @@
 .method public static checkCallerPermissionFor(Ljava/lang/String;)I
     .locals 4
 
-    .line 47
     sget-object v0, Lcom/android/server/blockchain/BlockchainTZService;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -75,14 +71,12 @@
 
     const-string p0, "BlockchainTZService() - Valid Caller"
 
-    .line 53
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 48
     :cond_0
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -134,10 +128,8 @@
 
     const-string p0, "BlockchainTZService() - Invalid Caller"
 
-    .line 50
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     throw v0
 .end method
 
@@ -146,7 +138,6 @@
 .method public getCredential(I)[B
     .locals 2
 
-    .line 189
     sget-boolean v0, Lcom/android/server/blockchain/BlockchainTZService;->DEBUG:Z
 
     const-string v1, "getCredential"
@@ -157,11 +148,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     :cond_0
     invoke-static {v1}, Lcom/android/server/blockchain/BlockchainTZService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 191
     invoke-virtual {p0, p1}, Lcom/android/server/blockchain/BlockchainTZService;->nativeGetCredential(I)[B
 
     move-result-object p0
@@ -174,12 +163,10 @@
 
     const-string p0, "getMeasurementFile"
 
-    .line 183
     invoke-static {p0}, Lcom/android/server/blockchain/BlockchainTZService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
     const-string p0, "/system/tima_measurement_info"
 
-    .line 184
     invoke-static {p0}, Lcom/android/server/blockchain/Utils;->readFile(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -190,7 +177,6 @@
 .method public final getPackageNameFromPid(II)Ljava/lang/String;
     .locals 4
 
-    .line 223
     sget-object p0, Lcom/android/server/blockchain/BlockchainTZService;->mContext:Landroid/content/Context;
 
     const-string v0, "activity"
@@ -201,7 +187,6 @@
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 224
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v0
@@ -212,7 +197,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 225
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object p0
@@ -234,12 +218,10 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 226
     iget v3, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v3, p2, :cond_0
 
-    .line 227
     iget-object p0, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     move-object v2, p0
@@ -249,7 +231,6 @@
     :cond_1
     const-string p0, "Error: am.getRunningAppProcesses() is null"
 
-    .line 232
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -258,10 +239,8 @@
 
     const-string p0, "Error: can\'t find processname for PID"
 
-    .line 236
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -285,7 +264,6 @@
 .method public putCredential(I[B)Z
     .locals 2
 
-    .line 196
     sget-boolean v0, Lcom/android/server/blockchain/BlockchainTZService;->DEBUG:Z
 
     const-string/jumbo v1, "putCredential"
@@ -296,11 +274,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     :cond_0
     invoke-static {v1}, Lcom/android/server/blockchain/BlockchainTZService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 198
     invoke-virtual {p0, p1, p2}, Lcom/android/server/blockchain/BlockchainTZService;->nativePutCredential(I[B)Z
 
     move-result p0
@@ -311,22 +287,18 @@
 .method public registerBlockchainFW(Landroid/blockchain/BlockchainTZServiceConfig;)Landroid/blockchain/BlockchainTZServiceCommnInfo;
     .locals 11
 
-    .line 139
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v4
 
-    .line 140
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v5
 
-    .line 141
     invoke-virtual {p0, v4, v5}, Lcom/android/server/blockchain/BlockchainTZService;->getPackageNameFromPid(II)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -357,7 +329,6 @@
 
     invoke-static {v8, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/blockchain/BlockchainTZService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
     invoke-interface {v0, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -366,7 +337,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/blockchain/BlockchainTZService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
     invoke-interface {v0, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -375,17 +345,14 @@
 
     check-cast v0, Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient;
 
-    .line 145
     iget v1, v0, Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient;->mPid:I
 
     if-eq v5, v1, :cond_0
 
     const-string v1, "Registered Client Died. Need to Rebind"
 
-    .line 147
     invoke-static {v8, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     iget-object v0, v0, Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient;->mBinderDeathReceiver:Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient$ClientBinderDeathReceiver;
 
     invoke-static {v0}, Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient$ClientBinderDeathReceiver;->-$$Nest$mdeleteClient(Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient$ClientBinderDeathReceiver;)V
@@ -395,7 +362,6 @@
     :cond_0
     const-string p0, "Error: Framework App is already registered. Re-Registration not allowed"
 
-    .line 150
     invoke-static {v8, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -406,20 +372,16 @@
     :goto_0
     const-string/jumbo v0, "registerBlockchainFW"
 
-    .line 155
     invoke-static {v0}, Lcom/android/server/blockchain/BlockchainTZService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 156
     new-instance v9, Landroid/blockchain/BlockchainTZServiceCommnInfo;
 
     invoke-direct {v9}, Landroid/blockchain/BlockchainTZServiceCommnInfo;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 157
     iput v0, v9, Landroid/blockchain/BlockchainTZServiceCommnInfo;->mServiceVersion:I
 
-    .line 159
     iget-object v0, p1, Landroid/blockchain/BlockchainTZServiceConfig;->mTAConfigs:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -443,7 +405,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 160
     new-instance v2, Lcom/android/server/blockchain/TAController;
 
     sget-object v3, Lcom/android/server/blockchain/BlockchainTZService;->mContext:Landroid/content/Context;
@@ -466,7 +427,6 @@
 
     invoke-direct {v2, v3, v6, v10}, Lcom/android/server/blockchain/TAController;-><init>(Landroid/content/Context;ILandroid/blockchain/BlockchainTZServiceConfig$TAConfig;)V
 
-    .line 161
     iget-object v3, v9, Landroid/blockchain/BlockchainTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -479,7 +439,6 @@
 
     goto :goto_1
 
-    .line 164
     :cond_2
     new-instance v10, Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient;
 
@@ -495,12 +454,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient;-><init>(Lcom/android/server/blockchain/BlockchainTZService;Landroid/blockchain/BlockchainTZServiceConfig;Landroid/blockchain/BlockchainTZServiceCommnInfo;IILjava/lang/String;)V
 
-    .line 165
     iget-object p1, p0, Lcom/android/server/blockchain/BlockchainTZService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
     invoke-interface {p1, v7, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -535,7 +492,6 @@
 .method public sspExit()I
     .locals 2
 
-    .line 210
     sget-boolean v0, Lcom/android/server/blockchain/BlockchainTZService;->DEBUG:Z
 
     const-string/jumbo v1, "sspExit"
@@ -546,11 +502,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     :cond_0
     invoke-static {v1}, Lcom/android/server/blockchain/BlockchainTZService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 212
     invoke-virtual {p0}, Lcom/android/server/blockchain/BlockchainTZService;->nativeSspExit()I
 
     move-result p0
@@ -561,7 +515,6 @@
 .method public sspInit()I
     .locals 2
 
-    .line 203
     sget-boolean v0, Lcom/android/server/blockchain/BlockchainTZService;->DEBUG:Z
 
     const-string/jumbo v1, "sspInit"
@@ -572,11 +525,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :cond_0
     invoke-static {v1}, Lcom/android/server/blockchain/BlockchainTZService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 205
     invoke-virtual {p0}, Lcom/android/server/blockchain/BlockchainTZService;->nativeSspInit()I
 
     move-result p0

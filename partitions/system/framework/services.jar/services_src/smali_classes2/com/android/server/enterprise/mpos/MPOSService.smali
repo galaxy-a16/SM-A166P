@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 50
     const-class v0, Lcom/android/server/enterprise/mpos/MPOSService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -43,7 +42,6 @@
 
     const/4 v1, 0x0
 
-    .line 135
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -51,7 +49,6 @@
 
     const/16 v3, 0x3e8
 
-    .line 136
     invoke-static {v2, v3}, Landroid/os/UserHandle;->isSameApp(II)Z
 
     move-result v3
@@ -62,7 +59,6 @@
 
     return v4
 
-    .line 139
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/mpos/MPOSService;->context:Landroid/content/Context;
 
@@ -74,7 +70,6 @@
 
     move-result-object v3
 
-    .line 140
     sget-object v5, Lcom/android/server/enterprise/mpos/MPOSService;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -97,7 +92,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/enterprise/mpos/MPOSService;->context:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -110,7 +104,6 @@
 
     const-string v6, "com.samsung.android.knox.mpos"
 
-    .line 142
     invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -125,7 +118,6 @@
 
     return v4
 
-    .line 145
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -154,7 +146,6 @@
     :catch_0
     move-exception p0
 
-    .line 147
     sget-object v0, Lcom/android/server/enterprise/mpos/MPOSService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -190,7 +181,6 @@
 
     monitor-enter p0
 
-    .line 66
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/mpos/MPOSService;->checkPermission()Z
 
@@ -200,7 +190,6 @@
 
     if-nez v2, :cond_0
 
-    .line 67
     monitor-exit p0
 
     const/4 v0, 0x0
@@ -214,7 +203,6 @@
 
     goto :goto_0
 
-    .line 70
     :cond_1
     :try_start_1
     invoke-virtual/range {p2 .. p2}, Landroid/os/ParcelFileDescriptor;->getFd()I
@@ -224,7 +212,6 @@
     :goto_0
     move v5, v2
 
-    .line 71
     sget-object v2, Lcom/android/server/enterprise/mpos/MPOSService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -269,7 +256,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 73
     :try_start_2
     iget-object v2, v1, Lcom/android/server/enterprise/mpos/MPOSService;->mRegisteredTzNativeMap:Ljava/util/Map;
 
@@ -285,7 +271,6 @@
 
     if-nez v2, :cond_2
 
-    .line 75
     new-instance v2, Lcom/android/server/enterprise/mpos/MposTZNative;
 
     iget-object v8, v0, Lcom/samsung/android/knox/mpos/MposTZServiceConfig;->taTechnology:Ljava/lang/String;
@@ -308,7 +293,6 @@
 
     invoke-direct/range {v6 .. v12}, Lcom/android/server/enterprise/mpos/MposTZNative;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 76
     iget-object v0, v1, Lcom/android/server/enterprise/mpos/MPOSService;->mRegisteredTzNativeMap:Ljava/util/Map;
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -320,7 +304,6 @@
     :cond_2
     move-object v3, v2
 
-    .line 79
     iget-object v4, v1, Lcom/android/server/enterprise/mpos/MPOSService;->context:Landroid/content/Context;
 
     move-wide/from16 v6, p3
@@ -335,7 +318,6 @@
 
     const/4 v0, 0x1
 
-    .line 81
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/mpos/MPOSService;->updateServiceHolder(Z)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -343,7 +325,6 @@
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 87
     :try_start_3
     invoke-virtual/range {p2 .. p2}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_3
@@ -357,13 +338,11 @@
 
     move-object v3, v0
 
-    .line 89
     :try_start_4
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 83
     :cond_4
     :goto_1
     monitor-exit p0
@@ -377,7 +356,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 87
     :try_start_5
     invoke-virtual/range {p2 .. p2}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_5
@@ -391,11 +369,9 @@
 
     move-object v3, v0
 
-    .line 89
     :try_start_6
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 92
     :cond_5
     :goto_2
     throw v2
@@ -413,28 +389,24 @@
 .method public notifyToAddSystemService(Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAdminAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAdminRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPreAdminRemoval(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -443,7 +415,6 @@
 
     monitor-enter p0
 
-    .line 119
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/mpos/MPOSService;->TAG:Ljava/lang/String;
 
@@ -463,7 +434,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     invoke-virtual {p0}, Lcom/android/server/enterprise/mpos/MPOSService;->checkPermission()Z
 
     move-result v1
@@ -474,17 +444,14 @@
 
     const-string/jumbo p1, "processTACommand: permission error"
 
-    .line 121
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
     monitor-exit p0
 
     return-object v2
 
-    .line 125
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/mpos/MPOSService;->mRegisteredTzNativeMap:Ljava/util/Map;
@@ -501,7 +468,6 @@
 
     if-nez v1, :cond_1
 
-    .line 127
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -520,12 +486,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 128
     monitor-exit p0
 
     return-object v2
 
-    .line 130
     :cond_1
     :try_start_2
     invoke-virtual {v1, p2}, Lcom/android/server/enterprise/mpos/MposTZNative;->processTACommand(Lcom/samsung/android/knox/mpos/TACommandRequest;)Lcom/samsung/android/knox/mpos/TACommandResponse;
@@ -549,7 +513,6 @@
 .method public systemReady()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -558,7 +521,6 @@
 
     monitor-enter p0
 
-    .line 97
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/mpos/MPOSService;->TAG:Ljava/lang/String;
 
@@ -578,7 +540,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     invoke-virtual {p0}, Lcom/android/server/enterprise/mpos/MPOSService;->checkPermission()Z
 
     move-result v1
@@ -589,12 +550,10 @@
 
     if-nez v1, :cond_0
 
-    .line 99
     monitor-exit p0
 
     return v2
 
-    .line 102
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/mpos/MPOSService;->mRegisteredTzNativeMap:Ljava/util/Map;
@@ -611,7 +570,6 @@
 
     if-nez v1, :cond_1
 
-    .line 104
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -630,17 +588,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 105
     monitor-exit p0
 
     return v2
 
-    .line 107
     :cond_1
     :try_start_2
     invoke-virtual {v1}, Lcom/android/server/enterprise/mpos/MposTZNative;->unloadTA()V
 
-    .line 108
     iget-object v1, p0, Lcom/android/server/enterprise/mpos/MPOSService;->mRegisteredTzNativeMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -649,7 +604,6 @@
 
     invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -672,7 +626,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     iget-object p1, p0, Lcom/android/server/enterprise/mpos/MPOSService;->mRegisteredTzNativeMap:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->size()I
@@ -681,12 +634,10 @@
 
     if-gtz p1, :cond_2
 
-    .line 112
     invoke-virtual {p0, v2}, Lcom/android/server/enterprise/mpos/MPOSService;->updateServiceHolder(Z)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 114
     :cond_2
     monitor-exit p0
 
@@ -709,13 +660,11 @@
 
     const-string/jumbo v1, "vendor.samsung.hardware.mpos.ISehMpos/default"
 
-    .line 174
     :try_start_0
     invoke-static {v1}, Landroid/os/ServiceManager;->isDeclared(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 175
     sget-object v3, Lcom/android/server/enterprise/mpos/MPOSService;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -751,7 +700,6 @@
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 181
     iget-object p1, p0, Lcom/android/server/enterprise/mpos/MPOSService;->iSehMpos:Lvendor/samsung/hardware/mpos/ISehMpos;
 
     if-eqz p1, :cond_1
@@ -775,7 +723,6 @@
     :cond_2
     const/4 p1, 0x0
 
-    .line 183
     iput-object p1, p0, Lcom/android/server/enterprise/mpos/MPOSService;->iSehMpos:Lvendor/samsung/hardware/mpos/ISehMpos;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -785,7 +732,6 @@
     :catch_0
     move-exception p0
 
-    .line 186
     sget-object p1, Lcom/android/server/enterprise/mpos/MPOSService;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;

@@ -20,7 +20,6 @@
 .method public final fromPersistableBundle(Landroid/os/PersistableBundle;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/vcn/util/PersistableBundleUtils;->toParcelUuid(Landroid/os/PersistableBundle;)Landroid/os/ParcelUuid;
 
     move-result-object p0

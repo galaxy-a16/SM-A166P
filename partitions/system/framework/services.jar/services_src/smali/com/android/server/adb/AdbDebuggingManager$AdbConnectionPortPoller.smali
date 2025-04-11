@@ -17,20 +17,16 @@
 .method public constructor <init>(Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortListener;)V
     .locals 2
 
-    .line 347
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     const-string/jumbo v0, "service.adb.tls.port"
 
-    .line 342
     iput-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortPoller;->mAdbPortProp:Ljava/lang/String;
 
     const/16 v0, 0xa
 
-    .line 344
     iput v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortPoller;->mDurationSecs:I
 
-    .line 345
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -39,7 +35,6 @@
 
     iput-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortPoller;->mCanceled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 348
     iput-object p1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortPoller;->mListener:Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortListener;
 
     return-void
@@ -50,21 +45,18 @@
 .method public cancelAndWait()V
     .locals 2
 
-    .line 377
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortPoller;->mCanceled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 378
     invoke-virtual {p0}, Ljava/lang/Thread;->isAlive()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 380
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Thread;->join()V
     :try_end_0
@@ -78,7 +70,6 @@
 .method public run()V
     .locals 4
 
-    .line 353
     invoke-static {}, Lcom/android/server/adb/AdbDebuggingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -96,7 +87,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 359
     iget-object v1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortPoller;->mCanceled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -112,7 +102,6 @@
 
     const v3, 0x7fffffff
 
-    .line 365
     invoke-static {v1, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v1
@@ -130,14 +119,12 @@
     :cond_1
     const-wide/16 v1, 0x3e8
 
-    .line 370
     invoke-static {v1, v2}, Landroid/os/SystemClock;->sleep(J)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 367
     :cond_2
     :goto_1
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortPoller;->mListener:Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortListener;
@@ -146,7 +133,6 @@
 
     return-void
 
-    .line 372
     :cond_3
     invoke-static {}, Lcom/android/server/adb/AdbDebuggingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -156,7 +142,6 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 373
     iget-object p0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortPoller;->mListener:Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortListener;
 
     invoke-interface {p0, v2}, Lcom/android/server/adb/AdbDebuggingManager$AdbConnectionPortListener;->onPortReceived(I)V

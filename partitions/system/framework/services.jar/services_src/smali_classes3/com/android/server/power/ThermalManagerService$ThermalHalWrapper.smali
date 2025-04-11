@@ -17,17 +17,14 @@
 .method static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 1
 
-    .line 667
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 671
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -57,20 +54,17 @@
 .method public resendCurrentTemperatures()V
     .locals 6
 
-    .line 704
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper;->mHalLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 705
     :try_start_0
     invoke-virtual {p0, v1, v1}, Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper;->getCurrentTemperatures(ZI)Ljava/util/List;
 
     move-result-object v2
 
-    .line 706
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
@@ -78,7 +72,6 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 708
     iget-object v4, p0, Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper;->mCallback:Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper$TemperatureChangedCallback;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -93,7 +86,6 @@
 
     goto :goto_0
 
-    .line 710
     :cond_0
     monitor-exit v0
 
@@ -112,7 +104,6 @@
 .method public setCallback(Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper$TemperatureChangedCallback;)V
     .locals 0
 
-    .line 686
     iput-object p1, p0, Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper;->mCallback:Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper$TemperatureChangedCallback;
 
     return-void

@@ -23,7 +23,6 @@
 .method public static synthetic $r8$lambda$XiNRhwKv07Uk-3WIdh3iCluvk8g(Lcom/android/server/companion/AssociationRequestsProcessor;Landroid/companion/AssociationInfo;Ljava/lang/String;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;ILjava/lang/String;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p7}, Lcom/android/server/companion/AssociationRequestsProcessor;->lambda$createAssociation$0(Landroid/companion/AssociationInfo;Ljava/lang/String;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;ILjava/lang/String;Ljava/lang/Boolean;)V
 
     return-void
@@ -32,7 +31,6 @@
 .method public static synthetic $r8$lambda$tKgaqFb_N7_a_c8dgQHVDQXYGXs(Lcom/android/server/companion/AssociationRequestsProcessor;ILjava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/companion/AssociationRequestsProcessor;->lambda$willAddRoleHolder$1(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$mprocessAssociationRequestApproval(Lcom/android/server/companion/AssociationRequestsProcessor;Landroid/companion/AssociationRequest;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;Landroid/net/MacAddress;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/companion/AssociationRequestsProcessor;->processAssociationRequestApproval(Landroid/companion/AssociationRequest;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;Landroid/net/MacAddress;)V
 
     return-void
@@ -56,7 +53,6 @@
 
     const-string v1, ".CompanionDeviceActivity"
 
-    .line 120
     invoke-static {v0, v1}, Landroid/content/ComponentName;->createRelative(Ljava/lang/String;Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
@@ -69,13 +65,10 @@
 .method public constructor <init>(Lcom/android/server/companion/CompanionDeviceManagerService;Lcom/android/server/companion/AssociationStoreImpl;)V
     .locals 2
 
-    .line 145
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 443
     new-instance v0, Lcom/android/server/companion/AssociationRequestsProcessor$1;
 
-    .line 444
     invoke-static {}, Landroid/os/Handler;->getMain()Landroid/os/Handler;
 
     move-result-object v1
@@ -84,22 +77,18 @@
 
     iput-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mOnRequestConfirmationReceiver:Landroid/os/ResultReceiver;
 
-    .line 146
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
-    .line 147
     iput-object p1, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mService:Lcom/android/server/companion/CompanionDeviceManagerService;
 
-    .line 148
     iget-object p1, p1, Lcom/android/server/companion/CompanionDeviceManagerService;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
     iput-object p1, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mPackageManager:Landroid/content/pm/PackageManagerInternal;
 
-    .line 149
     iput-object p2, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mAssociationStore:Lcom/android/server/companion/AssociationStoreImpl;
 
     return-void
@@ -108,22 +97,18 @@
 .method private synthetic lambda$createAssociation$0(Landroid/companion/AssociationInfo;Ljava/lang/String;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;ILjava/lang/String;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 326
     invoke-virtual {p7}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p7
 
     if-eqz p7, :cond_0
 
-    .line 327
     invoke-virtual {p0, p1, p2}, Lcom/android/server/companion/AssociationRequestsProcessor;->addAssociationToStore(Landroid/companion/AssociationInfo;Ljava/lang/String;)V
 
-    .line 329
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/companion/AssociationRequestsProcessor;->sendCallbackAndFinish(Landroid/companion/AssociationInfo;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;)V
 
     goto :goto_0
 
-    .line 331
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -161,7 +146,6 @@
 
     const/4 p1, 0x0
 
-    .line 334
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/companion/AssociationRequestsProcessor;->sendCallbackAndFinish(Landroid/companion/AssociationInfo;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;)V
 
     :goto_0
@@ -171,7 +155,6 @@
 .method private synthetic lambda$willAddRoleHolder$1(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 416
     iget-object p0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/companion/RolesUtils;->isRoleHolder(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)Z
@@ -190,7 +173,6 @@
 .method public final addAssociationToStore(Landroid/companion/AssociationInfo;Ljava/lang/String;)V
     .locals 2
 
-    .line 364
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,17 +191,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     iget-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mAssociationStore:Lcom/android/server/companion/AssociationStoreImpl;
 
     invoke-virtual {v0, p1}, Lcom/android/server/companion/AssociationStoreImpl;->addAssociation(Landroid/companion/AssociationInfo;)V
 
-    .line 368
     iget-object p0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mService:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->updateSpecialAccessPermissionForAssociatedPackage(Landroid/companion/AssociationInfo;)Landroid/content/pm/PackageInfo;
 
-    .line 370
     invoke-static {p2}, Lcom/android/server/companion/MetricUtils;->logCreateAssociation(Ljava/lang/String;)V
 
     return-void
@@ -230,15 +209,12 @@
 
     const-string v0, "Package name MUST NOT be null"
 
-    .line 246
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 248
     iget-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p2, p1}, Lcom/android/server/companion/PackageUtils;->enforceUsesCompanionDeviceFeature(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 250
     iget-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mPackageManager:Landroid/content/pm/PackageManagerInternal;
 
     const-wide/16 v1, 0x0
@@ -247,7 +223,6 @@
 
     move-result p1
 
-    .line 252
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
@@ -256,23 +231,18 @@
 
     const/4 v1, 0x1
 
-    .line 253
     invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 255
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 256
     sget-object v1, Lcom/android/server/companion/AssociationRequestsProcessor;->ASSOCIATION_REQUEST_APPROVAL_ACTIVITY:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 257
     invoke-virtual {v0, p2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 259
     invoke-virtual {p0, p1, v0}, Lcom/android/server/companion/AssociationRequestsProcessor;->createPendingIntent(ILandroid/content/Intent;)Landroid/app/PendingIntent;
 
     move-result-object p0
@@ -285,7 +255,6 @@
 
     move-object/from16 v1, p0
 
-    .line 314
     iget-object v0, v1, Lcom/android/server/companion/AssociationRequestsProcessor;->mService:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     move/from16 v15, p1
@@ -296,12 +265,10 @@
 
     move-result v3
 
-    .line 315
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v16
 
-    .line 317
     new-instance v0, Landroid/companion/AssociationInfo;
 
     const/4 v11, 0x0
@@ -338,7 +305,6 @@
 
     if-eqz p5, :cond_0
 
-    .line 325
     iget-object v2, v1, Lcom/android/server/companion/AssociationRequestsProcessor;->mService:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -376,14 +342,12 @@
 
     const/4 v0, 0x0
 
-    .line 338
     invoke-virtual {v1, v10, v0}, Lcom/android/server/companion/AssociationRequestsProcessor;->addAssociationToStore(Landroid/companion/AssociationInfo;Ljava/lang/String;)V
 
     move-object/from16 v0, p8
 
     move-object/from16 v2, p9
 
-    .line 340
     invoke-virtual {v1, v10, v0, v2}, Lcom/android/server/companion/AssociationRequestsProcessor;->sendCallbackAndFinish(Landroid/companion/AssociationInfo;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;)V
 
     :goto_0
@@ -393,18 +357,15 @@
 .method public final createAssociationAndNotifyApplication(Landroid/companion/AssociationRequest;Ljava/lang/String;ILandroid/net/MacAddress;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;)V
     .locals 13
 
-    .line 298
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 300
     :try_start_0
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->getDisplayName()Ljava/lang/CharSequence;
 
     move-result-object v7
 
-    .line 301
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->getDeviceProfile()Ljava/lang/String;
 
     move-result-object v8
@@ -413,7 +374,6 @@
 
     move-result-object v9
 
-    .line 302
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->isSelfManaged()Z
 
     move-result v10
@@ -430,12 +390,10 @@
 
     move-object/from16 v12, p6
 
-    .line 300
     invoke-virtual/range {v3 .. v12}, Lcom/android/server/companion/AssociationRequestsProcessor;->createAssociation(ILjava/lang/String;Landroid/net/MacAddress;Ljava/lang/CharSequence;Ljava/lang/String;Landroid/companion/AssociatedDevice;ZLandroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 305
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -445,19 +403,16 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 306
     throw v0
 .end method
 
 .method public final createPendingIntent(ILandroid/content/Intent;)Landroid/app/PendingIntent;
     .locals 8
 
-    .line 424
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 432
     :try_start_0
     iget-object v2, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
@@ -477,7 +432,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 437
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -487,26 +441,22 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 438
     throw p0
 .end method
 
 .method public disableSystemDataSync(II)V
     .locals 1
 
-    .line 356
     iget-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mAssociationStore:Lcom/android/server/companion/AssociationStoreImpl;
 
     invoke-virtual {v0, p1}, Lcom/android/server/companion/AssociationStoreImpl;->getAssociationById(I)Landroid/companion/AssociationInfo;
 
     move-result-object p1
 
-    .line 357
     invoke-static {p1}, Landroid/companion/AssociationInfo;->builder(Landroid/companion/AssociationInfo;)Landroid/companion/AssociationInfo$NonActionableBuilder;
 
     move-result-object v0
 
-    .line 358
     invoke-virtual {p1}, Landroid/companion/AssociationInfo;->getSystemDataSyncFlags()I
 
     move-result p1
@@ -523,7 +473,6 @@
 
     move-result-object p1
 
-    .line 359
     iget-object p0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mAssociationStore:Lcom/android/server/companion/AssociationStoreImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/companion/AssociationStoreImpl;->updateAssociation(Landroid/companion/AssociationInfo;)V
@@ -534,19 +483,16 @@
 .method public enableSystemDataSync(II)V
     .locals 1
 
-    .line 349
     iget-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mAssociationStore:Lcom/android/server/companion/AssociationStoreImpl;
 
     invoke-virtual {v0, p1}, Lcom/android/server/companion/AssociationStoreImpl;->getAssociationById(I)Landroid/companion/AssociationInfo;
 
     move-result-object p1
 
-    .line 350
     invoke-static {p1}, Landroid/companion/AssociationInfo;->builder(Landroid/companion/AssociationInfo;)Landroid/companion/AssociationInfo$NonActionableBuilder;
 
     move-result-object v0
 
-    .line 351
     invoke-virtual {p1}, Landroid/companion/AssociationInfo;->getSystemDataSyncFlags()I
 
     move-result p1
@@ -561,7 +507,6 @@
 
     move-result-object p1
 
-    .line 352
     iget-object p0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mAssociationStore:Lcom/android/server/companion/AssociationStoreImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/companion/AssociationStoreImpl;->updateAssociation(Landroid/companion/AssociationInfo;)V
@@ -578,11 +523,9 @@
 
     const/4 v2, 0x0
 
-    .line 224
     :try_start_0
     iget-object v3, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
-    .line 225
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
@@ -591,7 +534,6 @@
 
     move-result v3
 
-    .line 226
     iget-object p0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -606,7 +548,6 @@
 
     if-ne v3, p0, :cond_0
 
-    .line 228
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->getDeviceProfile()Ljava/lang/String;
 
     move-result-object p1
@@ -615,7 +556,6 @@
 
     const/4 v2, 0x1
 
-    .line 231
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -649,7 +589,6 @@
 
     goto :goto_0
 
-    .line 234
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -680,7 +619,6 @@
 .method public final mayAssociateWithoutPrompt(Ljava/lang/String;I)Z
     .locals 12
 
-    .line 493
     iget-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -689,12 +627,10 @@
 
     const v1, 0x10700ae
 
-    .line 494
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 495
     invoke-static {v0, p1}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -705,21 +641,17 @@
 
     return v2
 
-    .line 505
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 506
     iget-object v1, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mAssociationStore:Lcom/android/server/companion/AssociationStoreImpl;
 
-    .line 507
     invoke-virtual {v1, p2, p1}, Lcom/android/server/companion/AssociationStoreImpl;->getAssociationsForPackage(ILjava/lang/String;)Ljava/util/List;
 
     move-result-object p2
 
-    .line 510
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -743,7 +675,6 @@
 
     check-cast v5, Landroid/companion/AssociationInfo;
 
-    .line 512
     invoke-virtual {v5}, Landroid/companion/AssociationInfo;->getTimeApprovedMs()J
 
     move-result-wide v8
@@ -770,7 +701,6 @@
 
     if-lt v1, v5, :cond_1
 
-    .line 515
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -805,7 +735,6 @@
 
     return v2
 
-    .line 523
     :cond_3
     iget-object p2, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
@@ -815,25 +744,21 @@
 
     const v1, 0x10700ad
 
-    .line 524
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 525
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     move v3, v2
 
-    .line 526
     :goto_1
     array-length v4, v0
 
     if-ge v3, v4, :cond_5
 
-    .line 527
     aget-object v4, v0, v3
 
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -842,7 +767,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 528
     aget-object v4, p2, v3
 
     const-string v5, ":"
@@ -853,7 +777,6 @@
 
     move-result-object v4
 
-    .line 529
     invoke-interface {v1, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     :cond_4
@@ -861,7 +784,6 @@
 
     goto :goto_1
 
-    .line 533
     :cond_5
     iget-object p0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mPackageManager:Landroid/content/pm/PackageManagerInternal;
 
@@ -869,7 +791,6 @@
 
     move-result-object p0
 
-    .line 534
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object p0
@@ -878,12 +799,10 @@
 
     move-result-object p0
 
-    .line 536
     invoke-static {p0}, Landroid/util/PackageUtils;->computeSignaturesSha256Digests([Landroid/content/pm/Signature;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 539
     array-length p2, p0
 
     move v0, v2
@@ -893,7 +812,6 @@
 
     aget-object v3, p0, v0
 
-    .line 540
     invoke-interface {v1, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -913,7 +831,6 @@
     :goto_3
     if-nez v2, :cond_8
 
-    .line 547
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -937,17 +854,14 @@
 .method public final processAssociationRequestApproval(Landroid/companion/AssociationRequest;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;Landroid/net/MacAddress;)V
     .locals 7
 
-    .line 265
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 266
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->getUserId()I
 
     move-result v3
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mPackageManager:Landroid/content/pm/PackageManagerInternal;
 
     const-wide/16 v4, 0x0
@@ -956,7 +870,6 @@
 
     move-result v0
 
-    .line 279
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
@@ -974,7 +887,6 @@
 
     move-object v6, p3
 
-    .line 290
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/companion/AssociationRequestsProcessor;->createAssociationAndNotifyApplication(Landroid/companion/AssociationRequest;Ljava/lang/String;ILandroid/net/MacAddress;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;)V
 
     return-void
@@ -982,7 +894,6 @@
     :catch_0
     move-exception p0
 
-    .line 284
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
@@ -1001,17 +912,14 @@
 
     const-string v0, "Request MUST NOT be null"
 
-    .line 159
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 160
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->isSelfManaged()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 161
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->getDisplayName()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -1023,15 +931,12 @@
     :cond_0
     const-string v0, "Package name MUST NOT be null"
 
-    .line 164
     invoke-static {p2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "Callback MUST NOT be null"
 
-    .line 165
     invoke-static {p4, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 167
     iget-object v0, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mPackageManager:Landroid/content/pm/PackageManagerInternal;
 
     const-wide/16 v1, 0x0
@@ -1040,17 +945,14 @@
 
     move-result v0
 
-    .line 175
     iget-object v1, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
     invoke-static {v1, p1, v0}, Lcom/android/server/companion/PermissionsUtils;->enforcePermissionsForAssociation(Landroid/content/Context;Landroid/companion/AssociationRequest;I)V
 
-    .line 176
     iget-object v1, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mContext:Landroid/content/Context;
 
     invoke-static {v1, p3, p2}, Lcom/android/server/companion/PackageUtils;->enforceUsesCompanionDeviceFeature(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 180
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->isSelfManaged()Z
 
     move-result v1
@@ -1063,7 +965,6 @@
 
     if-nez v1, :cond_1
 
-    .line 181
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/companion/AssociationRequestsProcessor;->willAddRoleHolder(Landroid/companion/AssociationRequest;Ljava/lang/String;I)Z
 
     move-result v1
@@ -1084,26 +985,21 @@
 
     move-object v7, p4
 
-    .line 183
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/companion/AssociationRequestsProcessor;->createAssociationAndNotifyApplication(Landroid/companion/AssociationRequest;Ljava/lang/String;ILandroid/net/MacAddress;Landroid/companion/IAssociationRequestCallback;Landroid/os/ResultReceiver;)V
 
     return-void
 
-    .line 191
     :cond_1
     invoke-virtual {p1, p2}, Landroid/companion/AssociationRequest;->setPackageName(Ljava/lang/String;)V
 
-    .line 192
     invoke-virtual {p1, p3}, Landroid/companion/AssociationRequest;->setUserId(I)V
 
-    .line 194
     invoke-virtual {p0, p2, p3}, Lcom/android/server/companion/AssociationRequestsProcessor;->mayAssociateWithoutPrompt(Ljava/lang/String;I)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 195
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/companion/AssociationRequestsProcessor;->isPreConfirmedSharedUid(Landroid/companion/AssociationRequest;Ljava/lang/String;I)Z
 
     move-result p2
@@ -1121,30 +1017,25 @@
     :goto_0
     const/4 p2, 0x1
 
-    .line 194
     :goto_1
     invoke-virtual {p1, p2}, Landroid/companion/AssociationRequest;->setSkipPrompt(Z)V
 
-    .line 200
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
     const-string p3, "association_request"
 
-    .line 201
     invoke-virtual {p2, p3, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     const-string p1, "application_callback"
 
-    .line 202
     invoke-interface {p4}, Landroid/companion/IAssociationRequestCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object p3
 
     invoke-virtual {p2, p1, p3}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 203
     iget-object p1, p0, Lcom/android/server/companion/AssociationRequestsProcessor;->mOnRequestConfirmationReceiver:Landroid/os/ResultReceiver;
 
     invoke-static {p1}, Lcom/android/server/companion/Utils;->prepareForIpc(Landroid/os/ResultReceiver;)Landroid/os/ResultReceiver;
@@ -1155,25 +1046,20 @@
 
     invoke-virtual {p2, p3, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 205
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    .line 206
     sget-object p3, Lcom/android/server/companion/AssociationRequestsProcessor;->ASSOCIATION_REQUEST_APPROVAL_ACTIVITY:Landroid/content/ComponentName;
 
     invoke-virtual {p1, p3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 207
     invoke-virtual {p1, p2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 210
     invoke-virtual {p0, v0, p1}, Lcom/android/server/companion/AssociationRequestsProcessor;->createPendingIntent(ILandroid/content/Intent;)Landroid/app/PendingIntent;
 
     move-result-object p0
 
-    .line 214
     :try_start_0
     invoke-interface {p4, p0}, Landroid/companion/IAssociationRequestCallback;->onAssociationPending(Landroid/app/PendingIntent;)V
     :try_end_0
@@ -1190,7 +1076,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 380
     :try_start_0
     invoke-interface {p2, p1}, Landroid/companion/IAssociationRequestCallback;->onAssociationCreated(Landroid/companion/AssociationInfo;)V
     :try_end_0
@@ -1200,19 +1085,16 @@
     :cond_0
     if-eqz p3, :cond_3
 
-    .line 388
     new-instance p0, Landroid/os/Bundle;
 
     invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
 
     const-string p2, "association"
 
-    .line 389
     invoke-virtual {p0, p2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     const/4 p1, 0x0
 
-    .line 390
     invoke-virtual {p3, p1, p0}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
     goto :goto_0
@@ -1223,7 +1105,6 @@
     :try_start_1
     const-string p0, "internal_error"
 
-    .line 396
     invoke-interface {p2, p0}, Landroid/companion/IAssociationRequestCallback;->onFailure(Ljava/lang/CharSequence;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -1232,14 +1113,12 @@
     :cond_2
     if-eqz p3, :cond_3
 
-    .line 404
     new-instance p0, Landroid/os/Bundle;
 
     invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
 
     const/4 p1, 0x3
 
-    .line 405
     invoke-virtual {p3, p1, p0}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
     :cond_3
@@ -1250,7 +1129,6 @@
 .method public final willAddRoleHolder(Landroid/companion/AssociationRequest;Ljava/lang/String;I)Z
     .locals 1
 
-    .line 412
     invoke-virtual {p1}, Landroid/companion/AssociationRequest;->getDeviceProfile()Ljava/lang/String;
 
     move-result-object p1
@@ -1261,7 +1139,6 @@
 
     return p0
 
-    .line 415
     :cond_0
     new-instance v0, Lcom/android/server/companion/AssociationRequestsProcessor$$ExternalSyntheticLambda1;
 

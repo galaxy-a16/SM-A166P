@@ -20,22 +20,18 @@
 .method public compare(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)I
     .locals 3
 
-    .line 5261
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getUid()I
 
     move-result p0
 
-    .line 5262
     invoke-virtual {p2}, Lcom/android/server/job/controllers/JobStatus;->getUid()I
 
     move-result v0
 
-    .line 5263
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJobId()I
 
     move-result p1
 
-    .line 5264
     invoke-virtual {p2}, Lcom/android/server/job/controllers/JobStatus;->getJobId()I
 
     move-result p2
@@ -75,7 +71,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 5258
     check-cast p1, Lcom/android/server/job/controllers/JobStatus;
 
     check-cast p2, Lcom/android/server/job/controllers/JobStatus;

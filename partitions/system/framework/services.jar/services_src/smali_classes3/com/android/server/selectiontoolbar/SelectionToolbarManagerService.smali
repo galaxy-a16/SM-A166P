@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 47
     new-instance v0, Lcom/android/server/selectiontoolbar/SelectionToolbarServiceNameResolver;
 
     invoke-direct {v0}, Lcom/android/server/selectiontoolbar/SelectionToolbarServiceNameResolver;-><init>()V
@@ -24,7 +23,6 @@
 .method public static synthetic access$000(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 34
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public static synthetic access$100(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 34
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -44,7 +41,6 @@
 .method public static synthetic access$200(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 34
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -53,7 +49,6 @@
 .method public static synthetic access$300(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 34
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -64,7 +59,6 @@
 .method public static synthetic access$400(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 34
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -73,7 +67,6 @@
 .method public static synthetic access$500(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 34
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -84,7 +77,6 @@
 .method public static synthetic access$600(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 34
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -93,7 +85,6 @@
 .method public static synthetic access$700(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 34
     invoke-virtual {p0, p1, p2}, Lcom/android/server/infra/AbstractMasterSystemService;->dumpLocked(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
     return-void
@@ -104,7 +95,6 @@
 .method public bridge synthetic newServiceLocked(IZ)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 34
     invoke-virtual {p0, p1, p2}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;->newServiceLocked(IZ)Lcom/android/server/selectiontoolbar/SelectionToolbarManagerServiceImpl;
 
     move-result-object p0
@@ -115,7 +105,6 @@
 .method public newServiceLocked(IZ)Lcom/android/server/selectiontoolbar/SelectionToolbarManagerServiceImpl;
     .locals 1
 
-    .line 54
     new-instance p2, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerServiceImpl;
 
     iget-object v0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
@@ -128,7 +117,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 42
     new-instance v0, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;
 
     invoke-direct {v0, p0}, Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService$SelectionToolbarManagerServiceStub;-><init>(Lcom/android/server/selectiontoolbar/SelectionToolbarManagerService;)V

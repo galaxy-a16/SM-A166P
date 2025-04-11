@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;I)V
     .locals 0
 
-    .line 47
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$Aborter;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$Aborter;->mReason:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public handle(Lcom/android/server/hdmi/HdmiCecMessage;)Z
     .locals 1
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$Aborter;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;->-$$Nest$fgetmService(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;)Lcom/android/server/hdmi/HdmiControlService;

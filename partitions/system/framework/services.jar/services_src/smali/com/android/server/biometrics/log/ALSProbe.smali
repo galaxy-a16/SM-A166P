@@ -34,7 +34,6 @@
 .method public static synthetic $r8$lambda$mRscHmOdq5WcohA0o0IDIrT-t40(Lcom/android/server/biometrics/log/ALSProbe;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/ALSProbe;->onTimeout()V
 
     return-void
@@ -43,7 +42,6 @@
 .method public static bridge synthetic -$$Nest$monNext(Lcom/android/server/biometrics/log/ALSProbe;F)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/log/ALSProbe;->onNext(F)V
 
     return-void
@@ -52,7 +50,6 @@
 .method public constructor <init>(Landroid/hardware/SensorManager;)V
     .locals 4
 
-    .line 76
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -65,12 +62,10 @@
 
     const-wide/16 v2, 0x1
 
-    .line 77
     invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v1
 
-    .line 76
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/server/biometrics/log/ALSProbe;-><init>(Landroid/hardware/SensorManager;Landroid/os/Handler;J)V
 
     return-void
@@ -79,53 +74,42 @@
 .method public constructor <init>(Landroid/hardware/SensorManager;Landroid/os/Handler;J)V
     .locals 2
 
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
-    .line 48
     iput-wide v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mMaxSubscriptionTime:J
 
     const/4 v0, 0x0
 
-    .line 51
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mEnabled:Z
 
-    .line 52
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyed:Z
 
-    .line 53
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyRequested:Z
 
-    .line 54
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDisableRequested:Z
 
     const/4 v0, 0x0
 
-    .line 55
     iput-object v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mNextConsumer:Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;
 
     const/high16 v1, -0x40800000    # -1.0f
 
-    .line 56
     iput v1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLastAmbientLux:F
 
-    .line 58
     new-instance v1, Lcom/android/server/biometrics/log/ALSProbe$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/biometrics/log/ALSProbe$1;-><init>(Lcom/android/server/biometrics/log/ALSProbe;)V
 
     iput-object v1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLightSensorListener:Landroid/hardware/SensorEventListener;
 
-    .line 97
     iput-object p1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x5
 
-    .line 99
     invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v0
@@ -133,10 +117,8 @@
     :cond_0
     iput-object v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLightSensor:Landroid/hardware/Sensor;
 
-    .line 100
     iput-object p2, p0, Lcom/android/server/biometrics/log/ALSProbe;->mTimer:Landroid/os/Handler;
 
-    .line 101
     iput-wide p3, p0, Lcom/android/server/biometrics/log/ALSProbe;->mMaxSubscriptionTime:J
 
     if-eqz p1, :cond_1
@@ -148,12 +130,10 @@
 
     const-string p2, "No sensor - probe disabled"
 
-    .line 104
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x1
 
-    .line 105
     iput-boolean p1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyed:Z
 
     :cond_2
@@ -167,7 +147,6 @@
 
     monitor-enter p0
 
-    .line 176
     :try_start_0
     new-instance v0, Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;
 
@@ -175,7 +154,6 @@
 
     invoke-direct {v0, p1, p2, v1}, Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;-><init>(Ljava/util/function/Consumer;Landroid/os/Handler;Lcom/android/server/biometrics/log/ALSProbe$NextConsumer-IA;)V
 
-    .line 177
     iget p1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLastAmbientLux:F
 
     const/high16 p2, -0x40800000    # -1.0f
@@ -184,18 +162,15 @@
 
     if-lez p2, :cond_0
 
-    .line 179
     invoke-virtual {v0, p1}, Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;->consume(F)V
 
     goto :goto_0
 
-    .line 180
     :cond_0
     iget-object p2, p0, Lcom/android/server/biometrics/log/ALSProbe;->mNextConsumer:Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;
 
     if-eqz p2, :cond_1
 
-    .line 181
     invoke-virtual {p2, v0}, Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;->add(Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;)V
 
     goto :goto_0
@@ -203,13 +178,10 @@
     :cond_1
     const/4 p2, 0x0
 
-    .line 183
     iput-boolean p2, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyed:Z
 
-    .line 184
     iput-object v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mNextConsumer:Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;
 
-    .line 186
     iget-object p2, p0, Lcom/android/server/biometrics/log/ALSProbe;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz p2, :cond_3
@@ -220,19 +192,16 @@
 
     goto :goto_1
 
-    .line 191
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/ALSProbe;->enableLightSensorLoggingLocked()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 193
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 187
     :cond_3
     :goto_1
     :try_start_1
@@ -240,7 +209,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 188
     monitor-exit p0
 
     return-void
@@ -260,11 +228,9 @@
 
     const/4 v0, 0x1
 
-    .line 129
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyRequested:Z
 
-    .line 132
     iget-boolean v1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyed:Z
 
     if-nez v1, :cond_0
@@ -273,15 +239,12 @@
 
     if-nez v1, :cond_0
 
-    .line 133
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/log/ALSProbe;->disableLightSensorLoggingLocked(Z)V
 
-    .line 134
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyed:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 136
     :cond_0
     monitor-exit p0
 
@@ -302,11 +265,9 @@
 
     const/4 v0, 0x1
 
-    .line 119
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDisableRequested:Z
 
-    .line 122
     iget-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyed:Z
 
     if-nez v0, :cond_0
@@ -317,12 +278,10 @@
 
     const/4 v0, 0x0
 
-    .line 123
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/log/ALSProbe;->disableLightSensorLoggingLocked(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 125
     :cond_0
     monitor-exit p0
 
@@ -341,25 +300,20 @@
 
     const/4 v0, 0x0
 
-    .line 208
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/log/ALSProbe;->resetTimerLocked(Z)V
 
-    .line 210
     iget-boolean v1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mEnabled:Z
 
     if-eqz v1, :cond_1
 
-    .line 211
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mEnabled:Z
 
     if-nez p1, :cond_0
 
     const/high16 p1, -0x40800000    # -1.0f
 
-    .line 213
     iput p1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLastAmbientLux:F
 
-    .line 215
     :cond_0
     iget-object p1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -367,7 +321,6 @@
 
     invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 216
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -401,7 +354,6 @@
 
     monitor-enter p0
 
-    .line 111
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyed:Z
 
@@ -413,15 +365,12 @@
 
     const/4 v0, 0x0
 
-    .line 112
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDisableRequested:Z
 
-    .line 113
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/ALSProbe;->enableLightSensorLoggingLocked()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 115
     :cond_0
     monitor-exit p0
 
@@ -438,22 +387,18 @@
 .method public final enableLightSensorLoggingLocked()V
     .locals 5
 
-    .line 196
     iget-boolean v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mEnabled:Z
 
     const/4 v1, 0x1
 
     if-nez v0, :cond_0
 
-    .line 197
     iput-boolean v1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mEnabled:Z
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 198
     iput v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLastAmbientLux:F
 
-    .line 199
     iget-object v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v2, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLightSensorListener:Landroid/hardware/SensorEventListener;
@@ -464,7 +409,6 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 201
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -489,7 +433,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :cond_0
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/log/ALSProbe;->resetTimerLocked(Z)V
 
@@ -499,7 +442,6 @@
 .method public getMostRecentLux()F
     .locals 0
 
-    .line 158
     iget p0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLastAmbientLux:F
 
     return p0
@@ -510,16 +452,13 @@
 
     monitor-enter p0
 
-    .line 139
     :try_start_0
     iput p1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLastAmbientLux:F
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mNextConsumer:Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;
 
     const/4 v1, 0x0
 
-    .line 142
     iput-object v1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mNextConsumer:Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;
 
     if-eqz v0, :cond_2
@@ -528,36 +467,29 @@
 
     const-string v2, "Finishing next consumer"
 
-    .line 144
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     iget-boolean v1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDestroyRequested:Z
 
     if-eqz v1, :cond_0
 
-    .line 147
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/ALSProbe;->destroy()V
 
     goto :goto_0
 
-    .line 148
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mDisableRequested:Z
 
     if-eqz v1, :cond_1
 
-    .line 149
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/ALSProbe;->disable()V
 
-    .line 152
     :cond_1
     :goto_0
     invoke-virtual {v0, p1}, Lcom/android/server/biometrics/log/ALSProbe$NextConsumer;->consume(F)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 154
     :cond_2
     monitor-exit p0
 
@@ -579,7 +511,6 @@
     :try_start_0
     const-string v0, "ALSProbe"
 
-    .line 228
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -590,7 +521,6 @@
 
     iget-object v2, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLightSensorListener:Landroid/hardware/SensorEventListener;
 
-    .line 229
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
@@ -601,20 +531,16 @@
 
     move-result-object v1
 
-    .line 228
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
     iget v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mLastAmbientLux:F
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/log/ALSProbe;->onNext(F)V
 
-    .line 234
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/ALSProbe;->disable()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 235
     monitor-exit p0
 
     return-void
@@ -630,14 +556,12 @@
 .method public final resetTimerLocked(Z)V
     .locals 4
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mTimer:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     if-eqz p1, :cond_0
 
-    .line 222
     iget-wide v0, p0, Lcom/android/server/biometrics/log/ALSProbe;->mMaxSubscriptionTime:J
 
     const-wide/16 v2, 0x0
@@ -646,7 +570,6 @@
 
     if-lez p1, :cond_0
 
-    .line 223
     iget-object p1, p0, Lcom/android/server/biometrics/log/ALSProbe;->mTimer:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/server/biometrics/log/ALSProbe$$ExternalSyntheticLambda0;

@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(Lcom/android/internal/widget/LockscreenCredential;J[BI)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/knox/dar/VirtualLockImpl$$ExternalSyntheticLambda0;->f$0:Lcom/android/internal/widget/LockscreenCredential;
@@ -39,7 +38,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/knox/dar/VirtualLockImpl$$ExternalSyntheticLambda0;->f$0:Lcom/android/internal/widget/LockscreenCredential;
 
     iget-wide v1, p0, Lcom/android/server/knox/dar/VirtualLockImpl$$ExternalSyntheticLambda0;->f$1:J

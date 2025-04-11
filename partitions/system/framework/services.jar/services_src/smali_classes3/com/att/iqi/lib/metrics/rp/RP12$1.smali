@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/att/iqi/lib/metrics/rp/RP12;
     .locals 0
 
-    .line 427
     new-instance p0, Lcom/att/iqi/lib/metrics/rp/RP12;
 
     invoke-direct {p0, p1}, Lcom/att/iqi/lib/metrics/rp/RP12;-><init>(Landroid/os/Parcel;)V
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 424
     invoke-virtual {p0, p1}, Lcom/att/iqi/lib/metrics/rp/RP12$1;->createFromParcel(Landroid/os/Parcel;)Lcom/att/iqi/lib/metrics/rp/RP12;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Lcom/att/iqi/lib/metrics/rp/RP12;
     .locals 0
 
-    .line 432
     new-array p0, p1, [Lcom/att/iqi/lib/metrics/rp/RP12;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 424
     invoke-virtual {p0, p1}, Lcom/att/iqi/lib/metrics/rp/RP12$1;->newArray(I)[Lcom/att/iqi/lib/metrics/rp/RP12;
 
     move-result-object p0

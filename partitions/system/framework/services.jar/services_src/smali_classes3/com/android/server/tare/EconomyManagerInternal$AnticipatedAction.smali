@@ -17,16 +17,12 @@
 .method public constructor <init>(IIJ)V
     .locals 1
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput p1, p0, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;->actionId:I
 
-    .line 51
     iput p2, p0, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;->numInstantaneousCalls:I
 
-    .line 52
     iput-wide p3, p0, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;->ongoingDurationMs:J
 
     const/4 v0, 0x0
@@ -49,7 +45,6 @@
 
     add-int/2addr v0, p1
 
-    .line 58
     iput v0, p0, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;->mHashCode:I
 
     return-void
@@ -71,7 +66,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 64
     const-class v2, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -82,11 +76,9 @@
 
     goto :goto_1
 
-    .line 65
     :cond_1
     check-cast p1, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
 
-    .line 66
     iget v2, p0, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;->actionId:I
 
     iget v3, p1, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;->actionId:I
@@ -123,7 +115,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 73
     iget p0, p0, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;->mHashCode:I
 
     return p0

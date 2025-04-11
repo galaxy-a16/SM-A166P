@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/UserInfo;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/Owners;->$r8$lambda$aOEpA4tsmqYK03_hbG-6GnDswWA(Landroid/content/pm/UserInfo;)I

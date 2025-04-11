@@ -13,7 +13,6 @@
 
     return-object v0
 
-    .line 40
     :cond_0
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -21,7 +20,6 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    .line 41
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -35,12 +33,10 @@
     :cond_1
     const/4 v3, -0x1
 
-    .line 43
     invoke-virtual {p0, v3}, Landroid/hardware/SensorManager;->getSensorList(I)Ljava/util/List;
 
     move-result-object v3
 
-    .line 44
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -60,7 +56,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 45
     invoke-virtual {v4}, Landroid/hardware/Sensor;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -74,7 +69,6 @@
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 46
     invoke-virtual {v4}, Landroid/hardware/Sensor;->getStringType()Ljava/lang/String;
 
     move-result-object v5
@@ -91,7 +85,6 @@
     :cond_5
     if-eqz p3, :cond_6
 
-    .line 52
     invoke-virtual {p0, p3}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object p0

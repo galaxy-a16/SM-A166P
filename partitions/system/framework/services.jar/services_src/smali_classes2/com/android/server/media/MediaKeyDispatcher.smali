@@ -7,7 +7,6 @@
 .method public static isDoubleTapOverridden(I)Z
     .locals 0
 
-    .line 0
     and-int/lit8 p0, p0, 0x2
 
     if-eqz p0, :cond_0
@@ -26,7 +25,6 @@
 .method public static isSingleTapOverridden(I)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     and-int/2addr p0, v0
@@ -45,7 +43,6 @@
 .method public static isTripleTapOverridden(I)Z
     .locals 0
 
-    .line 0
     and-int/lit8 p0, p0, 0x4
 
     if-eqz p0, :cond_0

@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 122
     invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
 
     move-result v0
@@ -24,7 +23,6 @@
 .method public static authenticatorStatusToBiometricConstant(I)I
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     :pswitch_0
@@ -108,7 +106,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 626
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,7 +161,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 785
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -249,7 +245,6 @@
 
     if-eq p0, v0, :cond_2
 
-    .line 371
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,12 +284,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 1166
     array-length v0, p0
 
     if-lt v0, p1, :cond_0
 
-    .line 1167
     new-instance v0, Ljava/lang/String;
 
     invoke-static {p0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -316,7 +309,6 @@
 .method public static checkPermission(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
-    .line 472
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -343,7 +335,6 @@
 .method public static checkPermissionOrShell(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
-    .line 464
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -354,7 +345,6 @@
 
     return-void
 
-    .line 467
     :cond_0
     invoke-static {p0, p1}, Lcom/android/server/biometrics/Utils;->checkPermission(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -364,24 +354,20 @@
 .method public static combineAuthenticatorBundles(Landroid/hardware/biometrics/PromptInfo;)V
     .locals 2
 
-    .line 181
     invoke-virtual {p0}, Landroid/hardware/biometrics/PromptInfo;->isDeviceCredentialAllowed()Z
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 182
     invoke-virtual {p0, v1}, Landroid/hardware/biometrics/PromptInfo;->setDeviceCredentialAllowed(Z)V
 
-    .line 185
     invoke-virtual {p0}, Landroid/hardware/biometrics/PromptInfo;->getAuthenticators()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 187
     invoke-virtual {p0}, Landroid/hardware/biometrics/PromptInfo;->getAuthenticators()I
 
     move-result v0
@@ -398,7 +384,6 @@
     :cond_1
     const/16 v0, 0xff
 
-    .line 195
     :goto_0
     invoke-virtual {p0, v0}, Landroid/hardware/biometrics/PromptInfo;->setAuthenticators(I)V
 
@@ -408,7 +393,6 @@
 .method public static containsFlag(II)Z
     .locals 0
 
-    .line 0
     and-int/2addr p0, p1
 
     if-eqz p0, :cond_0
@@ -427,7 +411,6 @@
 .method public static filterAvailableHalInstances(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
     .locals 2
 
-    .line 159
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -441,12 +424,10 @@
     :cond_0
     const-string/jumbo v0, "virtual"
 
-    .line 163
     invoke-interface {p1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 164
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->isVirtualEnabled(Landroid/content/Context;)Z
 
     move-result p0
@@ -457,7 +438,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 165
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -470,7 +450,6 @@
 
     return-object p0
 
-    .line 168
     :cond_1
     new-instance p0, Ljava/util/ArrayList;
 
@@ -478,7 +457,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 170
     invoke-interface {p0, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_2
@@ -502,7 +480,6 @@
 
     return v0
 
-    .line 400
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -535,7 +512,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 572
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -558,17 +534,14 @@
 
     const-string v0, "biometric"
 
-    .line 518
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 517
     invoke-static {v0}, Landroid/hardware/biometrics/IBiometricService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/biometrics/IBiometricService;
 
     move-result-object v0
 
-    .line 520
     :try_start_0
     invoke-interface {v0, p0}, Landroid/hardware/biometrics/IBiometricService;->getCurrentStrength(I)I
 
@@ -585,7 +558,6 @@
 
     const-string v1, "RemoteException"
 
-    .line 522
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -596,12 +568,10 @@
 .method public static getHidlSensorConfiguration()[Ljava/lang/String;
     .locals 6
 
-    .line 1116
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1117
     sget-boolean v1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SUPPORT_FINGERPRINT:Z
 
     const/4 v2, 0x0
@@ -610,12 +580,10 @@
 
     const-string/jumbo v1, "ro.board.first_api_level"
 
-    .line 1118
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 1120
     sget v3, Landroid/os/Build$VERSION;->DEVICE_INITIAL_SDK_INT:I
 
     const/16 v4, 0x21
@@ -633,7 +601,6 @@
 
     goto :goto_0
 
-    .line 1126
     :cond_1
     sget-boolean v1, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_FINGERPRINT_JDM_HAL:Z
 
@@ -649,10 +616,8 @@
 
     const-string v1, "0:2:15"
 
-    .line 1130
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1134
     :cond_3
     sget-boolean v1, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_JDM_HAL:Z
 
@@ -665,7 +630,6 @@
     :cond_4
     const/16 v1, 0xff
 
-    .line 1136
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -685,7 +649,6 @@
 
     new-array v1, v2, [Ljava/lang/String;
 
-    .line 1139
     invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -700,7 +663,6 @@
 
     const/4 v0, -0x2
 
-    .line 973
     invoke-static {p0, p1, p2, p3, v0}, Lcom/android/server/biometrics/Utils;->getIntDb(Landroid/content/Context;Ljava/lang/String;ZII)I
 
     move-result p0
@@ -711,14 +673,12 @@
 .method public static getIntDb(Landroid/content/Context;Ljava/lang/String;ZII)I
     .locals 0
 
-    .line 979
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     if-eqz p2, :cond_0
 
-    .line 982
     :try_start_0
     invoke-static {p0, p1, p3, p4}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
@@ -726,7 +686,6 @@
 
     goto :goto_0
 
-    .line 984
     :cond_0
     invoke-static {p0, p1, p3, p4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
@@ -742,7 +701,6 @@
     :catch_0
     move-exception p0
 
-    .line 987
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -772,12 +730,10 @@
 .method public static getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 4
 
-    .line 1244
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1245
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -786,7 +742,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1246
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -807,13 +762,11 @@
 
     return-object v2
 
-    .line 1249
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1253
     :try_start_0
     new-instance v1, Ljava/io/FileReader;
 
@@ -822,7 +775,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1254
     :try_start_1
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -831,7 +783,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1255
     :try_start_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -840,10 +791,8 @@
     :goto_0
     if-eqz v3, :cond_1
 
-    .line 1256
     invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1257
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v3
@@ -853,7 +802,6 @@
 
     goto :goto_0
 
-    .line 1264
     :cond_1
     :try_start_3
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
@@ -865,10 +813,8 @@
     :catch_0
     move-exception v0
 
-    .line 1266
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1271
     :goto_1
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
@@ -908,7 +854,6 @@
 
     move-object v1, v0
 
-    .line 1260
     :goto_2
     :try_start_5
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
@@ -917,7 +862,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1264
     :try_start_6
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_6
@@ -928,14 +872,12 @@
     :catch_4
     move-exception v0
 
-    .line 1266
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_2
     :goto_3
     if-eqz v1, :cond_3
 
-    .line 1271
     :try_start_7
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
     :try_end_7
@@ -946,10 +888,8 @@
     :catch_5
     move-exception v0
 
-    .line 1273
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1278
     :cond_3
     :goto_4
     :try_start_8
@@ -970,7 +910,6 @@
     :catch_6
     move-exception p0
 
-    .line 1280
     invoke-virtual {p0}, Lorg/json/JSONException;->printStackTrace()V
 
     :goto_5
@@ -984,7 +923,6 @@
     :goto_6
     if-eqz v2, :cond_4
 
-    .line 1264
     :try_start_9
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_9
@@ -995,14 +933,12 @@
     :catch_7
     move-exception v0
 
-    .line 1266
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_4
     :goto_7
     if-eqz v1, :cond_5
 
-    .line 1271
     :try_start_a
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
     :try_end_a
@@ -1013,10 +949,8 @@
     :catch_8
     move-exception v0
 
-    .line 1273
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1276
     :cond_5
     :goto_8
     throw p0
@@ -1025,14 +959,12 @@
 .method public static getLongDb(Landroid/content/Context;Ljava/lang/String;ZJI)J
     .locals 0
 
-    .line 995
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     if-eqz p2, :cond_0
 
-    .line 998
     :try_start_0
     invoke-static {p0, p1, p3, p4, p5}, Landroid/provider/Settings$Secure;->getLongForUser(Landroid/content/ContentResolver;Ljava/lang/String;JI)J
 
@@ -1040,7 +972,6 @@
 
     goto :goto_0
 
-    .line 1000
     :cond_0
     invoke-static {p0, p1, p3, p4, p5}, Landroid/provider/Settings$System;->getLongForUser(Landroid/content/ContentResolver;Ljava/lang/String;JI)J
 
@@ -1056,7 +987,6 @@
     :catch_0
     move-exception p0
 
-    .line 1003
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1086,7 +1016,6 @@
 .method public static getPublicBiometricStrength(I)I
     .locals 0
 
-    .line 0
     and-int/lit16 p0, p0, 0xff
 
     return p0
@@ -1095,7 +1024,6 @@
 .method public static getPublicBiometricStrength(Landroid/hardware/biometrics/PromptInfo;)I
     .locals 0
 
-    .line 234
     invoke-virtual {p0}, Landroid/hardware/biometrics/PromptInfo;->getAuthenticators()I
 
     move-result p0
@@ -1110,12 +1038,10 @@
 .method public static getUserOrWorkProfileId(Landroid/content/Context;I)I
     .locals 8
 
-    .line 1054
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1056
     :try_start_0
     invoke-static {p0, p1}, Lcom/android/server/biometrics/Utils;->isWorkProfile(Landroid/content/Context;I)Z
 
@@ -1125,12 +1051,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 1095
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p1
 
-    .line 1059
     :cond_0
     :try_start_1
     invoke-static {p0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
@@ -1146,17 +1070,14 @@
     :try_start_2
     const-string p0, "Unable to acquire UserManager"
 
-    .line 1061
     invoke-static {v3, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1095
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p1
 
-    .line 1064
     :cond_1
     :try_start_3
     invoke-virtual {v2, p1}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
@@ -1165,7 +1086,6 @@
 
     if-nez v4, :cond_2
 
-    .line 1066
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1184,12 +1104,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1095
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p1
 
-    .line 1071
     :cond_2
     :try_start_4
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
@@ -1198,10 +1116,8 @@
 
     if-eqz v5, :cond_3
 
-    .line 1072
     iget v5, v4, Landroid/content/pm/UserInfo;->profileGroupId:I
 
-    .line 1073
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1223,7 +1139,6 @@
     :cond_3
     move v5, p1
 
-    .line 1077
     :goto_0
     invoke-static {p0, v5}, Lcom/samsung/android/knox/SemPersonaManager;->isAppSeparationUserId(Landroid/content/Context;I)Z
 
@@ -1231,10 +1146,8 @@
 
     if-eqz p0, :cond_4
 
-    .line 1078
     iget v5, v4, Landroid/content/pm/UserInfo;->profileGroupId:I
 
-    .line 1079
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1251,7 +1164,6 @@
 
     invoke-static {v3, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1082
     :cond_4
     invoke-static {v5}, Lcom/samsung/android/app/SemDualAppManager;->isDualAppId(I)Z
 
@@ -1259,7 +1171,6 @@
 
     if-eqz p0, :cond_5
 
-    .line 1083
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1276,17 +1187,14 @@
 
     invoke-static {v3, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1084
     invoke-virtual {v2, v5}, Landroid/os/UserManager;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_5
 
-    .line 1086
     iget v5, p0, Landroid/content/pm/UserInfo;->id:I
 
-    .line 1089
     :cond_5
     invoke-virtual {v2, v5}, Landroid/os/UserManager;->getCredentialOwnerProfile(I)I
 
@@ -1294,7 +1202,6 @@
 
     if-eq p1, p0, :cond_6
 
-    .line 1091
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1319,7 +1226,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1095
     :cond_6
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1330,7 +1236,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1096
     throw p0
 .end method
 
@@ -1339,7 +1244,6 @@
 
     const-string v0, "android.permission.USE_BIOMETRIC_INTERNAL"
 
-    .line 567
     invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -1360,7 +1264,6 @@
 .method public static hasPermission(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 1026
     invoke-virtual {p0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -1387,7 +1290,6 @@
 
     return v0
 
-    .line 1221
     :cond_0
     invoke-static {}, Landroid/app/ActivityTaskManager;->getInstance()Landroid/app/ActivityTaskManager;
 
@@ -1403,7 +1305,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 1222
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -1412,7 +1313,6 @@
 
     goto :goto_1
 
-    .line 1227
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1434,20 +1334,17 @@
 
     if-eqz v3, :cond_2
 
-    .line 1228
     iget-object v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     if-nez v4, :cond_3
 
     goto :goto_0
 
-    .line 1231
     :cond_3
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1232
     invoke-virtual {p0, v4}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -1458,7 +1355,6 @@
 
     iget-object v3, v3, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    .line 1233
     invoke-virtual {v3}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
     move-result v3
@@ -1469,7 +1365,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1234
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1497,7 +1392,6 @@
     :goto_1
     const-string p0, "inMultiWindowMode: No running tasks reported"
 
-    .line 1223
     invoke-static {v2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -1537,7 +1431,6 @@
 
     goto :goto_0
 
-    .line 280
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1569,7 +1462,6 @@
 .method public static isAutoTime(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1160
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1593,7 +1485,6 @@
 .method public static isBackground(Ljava/lang/String;)Z
     .locals 7
 
-    .line 659
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1612,7 +1503,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 662
     invoke-static {}, Landroid/app/ActivityTaskManager;->getInstance()Landroid/app/ActivityTaskManager;
 
     move-result-object v0
@@ -1627,7 +1517,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 664
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -1636,7 +1525,6 @@
 
     goto :goto_1
 
-    .line 669
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1656,17 +1544,14 @@
 
     check-cast v3, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 670
     iget-object v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     if-eqz v4, :cond_1
 
-    .line 672
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 673
     invoke-virtual {v4, p0}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -1683,7 +1568,6 @@
 
     return p0
 
-    .line 676
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1699,7 +1583,6 @@
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 677
     invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->isVisible()Z
 
     move-result v3
@@ -1710,7 +1593,6 @@
 
     move-result-object v3
 
-    .line 676
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -1722,7 +1604,6 @@
     :goto_1
     const-string p0, "No running tasks reported"
 
-    .line 665
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -1731,7 +1612,6 @@
 .method public static isBiometricRequested(I)Z
     .locals 0
 
-    .line 244
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->getPublicBiometricStrength(I)I
 
     move-result p0
@@ -1752,7 +1632,6 @@
 .method public static isBiometricRequested(Landroid/hardware/biometrics/PromptInfo;)Z
     .locals 0
 
-    .line 255
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->getPublicBiometricStrength(Landroid/hardware/biometrics/PromptInfo;)I
 
     move-result p0
@@ -1773,7 +1652,6 @@
 .method public static isConfirmationSupported(I)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x4
 
     if-eq p0, v0, :cond_0
@@ -1795,7 +1673,6 @@
 .method public static isCredentialRequested(I)Z
     .locals 1
 
-    .line 0
     const v0, 0x8000
 
     and-int/2addr p0, v0
@@ -1816,7 +1693,6 @@
 .method public static isCredentialRequested(Landroid/hardware/biometrics/PromptInfo;)Z
     .locals 0
 
-    .line 212
     invoke-virtual {p0}, Landroid/hardware/biometrics/PromptInfo;->getAuthenticators()I
 
     move-result p0
@@ -1831,7 +1707,6 @@
 .method public static isCurrentUserOrProfile(Landroid/content/Context;I)Z
     .locals 6
 
-    .line 477
     invoke-static {p0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
     move-result-object p0
@@ -1844,18 +1719,15 @@
 
     const-string p1, "Unable to get UserManager"
 
-    .line 479
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 483
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 486
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -1878,7 +1750,6 @@
 
     if-ne v5, p1, :cond_1
 
-    .line 492
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x1
@@ -1900,14 +1771,12 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 493
     throw p0
 .end method
 
 .method public static isCutoutNotchHidden(Landroid/content/Context;)Z
     .locals 2
 
-    .line 899
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1939,7 +1808,6 @@
 
     return v1
 
-    .line 129
     :cond_0
     sget-boolean v0, Landroid/os/Build;->IS_ENG:Z
 
@@ -1951,7 +1819,6 @@
 
     return v1
 
-    .line 133
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1976,14 +1843,12 @@
 .method public static isDexMode(Landroid/content/Context;)Z
     .locals 2
 
-    .line 794
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_SUPPORT_DESKTOP_MODE:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 795
     const-class v0, Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1994,14 +1859,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 797
     invoke-virtual {p0}, Lcom/samsung/android/desktopmode/SemDesktopModeManager;->getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 799
     invoke-virtual {p0}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->getEnabled()I
 
     move-result p0
@@ -2023,14 +1886,12 @@
 
     const-string v1, ""
 
-    .line 857
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "factory"
 
-    .line 858
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -2041,7 +1902,6 @@
 .method public static isFirstApiLevel31orGreater()Z
     .locals 2
 
-    .line 1340
     sget v0, Landroid/os/Build$VERSION;->DEVICE_INITIAL_SDK_INT:I
 
     const/16 v1, 0x1e
@@ -2062,7 +1922,6 @@
 .method public static isFlipFolded(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1190
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_SUPPORT_FOLDABLE_TYPE_FLIP:Z
 
     const/4 v1, 0x0
@@ -2074,7 +1933,6 @@
     :cond_0
     const-string v0, "input"
 
-    .line 1193
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2083,7 +1941,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1194
     invoke-virtual {p0}, Landroid/hardware/input/InputManager;->semGetLidState()I
 
     move-result p0
@@ -2101,7 +1958,6 @@
 .method public static isFlipOpened(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1179
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_SUPPORT_FOLDABLE_TYPE_FLIP:Z
 
     const/4 v1, 0x0
@@ -2113,7 +1969,6 @@
     :cond_0
     const-string v0, "input"
 
-    .line 1182
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2122,7 +1977,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1183
     invoke-virtual {p0}, Landroid/hardware/input/InputManager;->semGetLidState()I
 
     move-result p0
@@ -2140,7 +1994,6 @@
 .method public static isFolderFolded(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1208
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_SUPPORT_FOLDABLE_TYPE_FOLD:Z
 
     const/4 v1, 0x0
@@ -2152,7 +2005,6 @@
     :cond_0
     const-string v0, "input"
 
-    .line 1211
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2161,7 +2013,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1212
     invoke-virtual {p0}, Landroid/hardware/input/InputManager;->semGetLidState()I
 
     move-result p0
@@ -2179,7 +2030,6 @@
 .method public static isFolderOpened(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1199
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_SUPPORT_FOLDABLE_TYPE_FOLD:Z
 
     const/4 v1, 0x0
@@ -2191,7 +2041,6 @@
     :cond_0
     const-string v0, "input"
 
-    .line 1202
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2200,7 +2049,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1203
     invoke-virtual {p0}, Landroid/hardware/input/InputManager;->semGetLidState()I
 
     move-result p0
@@ -2222,7 +2070,6 @@
 
     const/4 v1, 0x0
 
-    .line 591
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -2238,7 +2085,6 @@
 
     const-string p0, "No running app processes found, defaulting to true"
 
-    .line 593
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -2246,7 +2092,6 @@
     :cond_0
     move v4, v1
 
-    .line 597
     :goto_0
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -2254,14 +2099,12 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 598
     invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 599
     iget v6, v5, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v6, p1, :cond_1
@@ -2288,7 +2131,6 @@
     :catch_0
     const-string p0, "am.getRunningAppProcesses() failed"
 
-    .line 605
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -2298,12 +2140,10 @@
 .method public static isKeyguard(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
-    .line 535
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->hasInternalPermission(Landroid/content/Context;)Z
 
     move-result v0
 
-    .line 537
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -2314,14 +2154,12 @@
 
     move-result-object p0
 
-    .line 536
     invoke-static {p0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 539
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -2336,7 +2174,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 540
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2357,7 +2194,6 @@
 .method public static isKnoxInternal(I)Z
     .locals 0
 
-    .line 0
     and-int/lit8 p0, p0, 0x20
 
     if-eqz p0, :cond_0
@@ -2376,7 +2212,6 @@
 .method public static isKnoxOnlyConfirmBiometric(I)Z
     .locals 0
 
-    .line 0
     and-int/lit16 p0, p0, 0x80
 
     if-eqz p0, :cond_0
@@ -2401,7 +2236,6 @@
 
     const/4 v2, 0x0
 
-    .line 1350
     invoke-static {p0, v0, v1, v2, p1}, Lcom/android/server/biometrics/Utils;->getIntDb(Landroid/content/Context;Ljava/lang/String;ZII)I
 
     move-result p0
@@ -2426,7 +2260,6 @@
 
     const/4 v2, 0x0
 
-    .line 905
     invoke-static {p0, v1, v2, v2, v0}, Lcom/android/server/biometrics/Utils;->getIntDb(Landroid/content/Context;Ljava/lang/String;ZII)I
 
     move-result p0
@@ -2444,7 +2277,6 @@
 .method public static isRuneStoneApp(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
-    .line 1312
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->hasInternalPermission(Landroid/content/Context;)Z
 
     move-result p0
@@ -2458,7 +2290,6 @@
     :cond_0
     const-string p0, "com.android.vending"
 
-    .line 1316
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2472,7 +2303,6 @@
     :cond_1
     const-string p0, "com.samsung.android.spay"
 
-    .line 1318
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2484,7 +2314,6 @@
     :cond_2
     const-string p0, "com.paypal.android.p2pmobile"
 
-    .line 1320
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2496,7 +2325,6 @@
     :cond_3
     const-string p0, "com.squareup.cash"
 
-    .line 1322
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2508,7 +2336,6 @@
     :cond_4
     const-string p0, "com.venmo"
 
-    .line 1324
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2520,7 +2347,6 @@
     :cond_5
     const-string p0, "com.zellepay.zell"
 
-    .line 1326
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2536,7 +2362,6 @@
 .method public static isSettings(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 563
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->hasInternalPermission(Landroid/content/Context;)Z
 
     move-result p0
@@ -2567,14 +2392,12 @@
 
     const-string v0, "display"
 
-    .line 912
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    .line 913
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->semGetWifiDisplayStatus()Landroid/hardware/display/SemWifiDisplayStatus;
 
     move-result-object v1
@@ -2585,7 +2408,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 916
     invoke-virtual {v1}, Landroid/hardware/display/SemWifiDisplayStatus;->getActiveDisplayState()I
 
     move-result v1
@@ -2604,7 +2426,6 @@
     :goto_0
     const-string/jumbo v4, "media_router"
 
-    .line 919
     invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -2613,12 +2434,10 @@
 
     const/4 v5, 0x4
 
-    .line 920
     invoke-virtual {v4, v5}, Landroid/media/MediaRouter;->getSelectedRoute(I)Landroid/media/MediaRouter$RouteInfo;
 
     move-result-object v4
 
-    .line 922
     invoke-virtual {v4}, Landroid/media/MediaRouter$RouteInfo;->getSupportedTypes()I
 
     move-result v6
@@ -2627,14 +2446,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 923
     invoke-virtual {v4}, Landroid/media/MediaRouter$RouteInfo;->semGetDeviceAddress()Ljava/lang/String;
 
     move-result-object v5
 
     if-nez v5, :cond_2
 
-    .line 924
     invoke-virtual {v4}, Landroid/media/MediaRouter$RouteInfo;->semGetStatusCode()I
 
     move-result v5
@@ -2643,14 +2460,12 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 925
     invoke-virtual {v4}, Landroid/media/MediaRouter$RouteInfo;->getPresentationDisplay()Landroid/view/Display;
 
     move-result-object v5
 
     if-nez v5, :cond_1
 
-    .line 926
     invoke-virtual {v4}, Landroid/media/MediaRouter$RouteInfo;->getDescription()Ljava/lang/CharSequence;
 
     move-result-object v5
@@ -2681,7 +2496,6 @@
     :cond_2
     move v4, v3
 
-    .line 929
     :goto_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2709,7 +2523,6 @@
 
     if-eqz p0, :cond_5
 
-    .line 932
     :cond_4
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->semIsFitToActiveDisplay()Z
 
@@ -2728,17 +2541,14 @@
 
     const-string v0, "biometric"
 
-    .line 500
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 499
     invoke-static {v0}, Landroid/hardware/biometrics/IBiometricService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/biometrics/IBiometricService;
 
     move-result-object v0
 
-    .line 502
     :try_start_0
     invoke-interface {v0, p0}, Landroid/hardware/biometrics/IBiometricService;->getCurrentStrength(I)I
 
@@ -2761,7 +2571,6 @@
 
     const-string v1, "RemoteException"
 
-    .line 505
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -2772,7 +2581,6 @@
 .method public static isSystem(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 552
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->hasInternalPermission(Landroid/content/Context;)Z
 
     move-result p0
@@ -2805,7 +2613,6 @@
 
     const-string v1, ""
 
-    .line 1174
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2824,7 +2631,6 @@
 
     const-string v0, "accessibility"
 
-    .line 893
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2833,7 +2639,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 894
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityManager;->semIsScreenReaderEnabled()Z
 
     move-result p0
@@ -2854,21 +2659,18 @@
 .method public static isUserEncryptedOrLockdown(Lcom/android/internal/widget/LockPatternUtils;I)Z
     .locals 4
 
-    .line 580
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternUtils;->getStrongAuthForUser(I)I
 
     move-result p0
 
     const/4 p1, 0x1
 
-    .line 581
     invoke-static {p0, p1}, Lcom/android/server/biometrics/Utils;->containsFlag(II)Z
 
     move-result v0
 
     const/4 v1, 0x2
 
-    .line 582
     invoke-static {p0, v1}, Lcom/android/server/biometrics/Utils;->containsFlag(II)Z
 
     move-result v1
@@ -2879,7 +2681,6 @@
 
     const/16 v1, 0x20
 
-    .line 583
     invoke-static {p0, v1}, Lcom/android/server/biometrics/Utils;->containsFlag(II)Z
 
     move-result p0
@@ -2897,7 +2698,6 @@
     :goto_0
     move p0, p1
 
-    .line 584
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2957,7 +2757,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 311
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2981,7 +2780,6 @@
 
     if-nez v1, :cond_2
 
-    .line 320
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->isCredentialRequested(I)Z
 
     move-result v4
@@ -3004,7 +2802,6 @@
 
     return v0
 
-    .line 328
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3028,12 +2825,10 @@
 .method public static isValidAuthenticatorConfig(Landroid/hardware/biometrics/PromptInfo;)Z
     .locals 0
 
-    .line 291
     invoke-virtual {p0}, Landroid/hardware/biometrics/PromptInfo;->getAuthenticators()I
 
     move-result p0
 
-    .line 292
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->isValidAuthenticatorConfig(I)Z
 
     move-result p0
@@ -3044,7 +2839,6 @@
 .method public static isVirtualEnabled(Landroid/content/Context;)Z
     .locals 3
 
-    .line 143
     invoke-static {}, Landroid/os/Build;->isDebuggable()Z
 
     move-result v0
@@ -3053,7 +2847,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 144
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -3079,7 +2872,6 @@
 .method public static isWorkProfile(Landroid/content/Context;I)Z
     .locals 2
 
-    .line 1101
     invoke-static {p0, p1}, Lcom/android/server/biometrics/Utils;->useOwnerBiometrics(Landroid/content/Context;I)Z
 
     move-result v0
@@ -3090,7 +2882,6 @@
 
     return v1
 
-    .line 1104
     :cond_0
     invoke-static {p0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
@@ -3098,14 +2889,12 @@
 
     if-eqz p0, :cond_2
 
-    .line 1106
     invoke-virtual {p0, p1}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 1107
     invoke-virtual {p0}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
     move-result p0
@@ -3122,7 +2911,6 @@
 
     const-string/jumbo p1, "isWorkProfile: Unable to acquire UserManager"
 
-    .line 1109
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -3135,13 +2923,11 @@
 
     move v1, v0
 
-    .line 454
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
-    .line 455
     aget v2, p0, v1
 
     if-ne v2, p1, :cond_0
@@ -3176,7 +2962,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 702
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3217,7 +3002,6 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 645
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3267,7 +3051,6 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 721
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3303,7 +3086,6 @@
 
     const/4 v0, -0x2
 
-    .line 940
     invoke-static {p0, p1, p2, p3, v0}, Lcom/android/server/biometrics/Utils;->putIntDb(Landroid/content/Context;Ljava/lang/String;ZII)V
 
     return-void
@@ -3312,20 +3094,17 @@
 .method public static putIntDb(Landroid/content/Context;Ljava/lang/String;ZII)V
     .locals 0
 
-    .line 945
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     if-eqz p2, :cond_0
 
-    .line 948
     :try_start_0
     invoke-static {p0, p1, p3, p4}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     goto :goto_0
 
-    .line 950
     :cond_0
     invoke-static {p0, p1, p3, p4}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
     :try_end_0
@@ -3336,7 +3115,6 @@
     :catch_0
     move-exception p0
 
-    .line 953
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3366,20 +3144,17 @@
 .method public static putLongDb(Landroid/content/Context;Ljava/lang/String;ZJI)V
     .locals 0
 
-    .line 959
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     if-eqz p2, :cond_0
 
-    .line 962
     :try_start_0
     invoke-static {p0, p1, p3, p4, p5}, Landroid/provider/Settings$Secure;->putLongForUser(Landroid/content/ContentResolver;Ljava/lang/String;JI)Z
 
     goto :goto_0
 
-    .line 964
     :cond_0
     invoke-static {p0, p1, p3, p4, p5}, Landroid/provider/Settings$System;->putLongForUser(Landroid/content/ContentResolver;Ljava/lang/String;JI)Z
     :try_end_0
@@ -3390,7 +3165,6 @@
     :catch_0
     move-exception p0
 
-    .line 967
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3428,7 +3202,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 808
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -3437,7 +3210,6 @@
 
     goto/16 :goto_6
 
-    .line 815
     :cond_0
     :try_start_0
     new-instance v3, Ljava/io/FileInputStream;
@@ -3447,7 +3219,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 816
     :try_start_1
     invoke-virtual {p0}, Ljava/io/File;->length()J
 
@@ -3457,7 +3228,6 @@
 
     new-array v1, p0, [B
 
-    .line 817
     invoke-virtual {v3, v1}, Ljava/io/FileInputStream;->read([B)I
 
     move-result p0
@@ -3467,7 +3237,6 @@
 
     if-lez p0, :cond_1
 
-    .line 825
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -3478,13 +3247,11 @@
     :catch_0
     move-exception p0
 
-    .line 828
     invoke-static {v2, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-object v1
 
-    .line 825
     :cond_1
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
@@ -3496,7 +3263,6 @@
     :catch_1
     move-exception p0
 
-    .line 828
     invoke-static {v2, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_3
@@ -3529,7 +3295,6 @@
 
     move-object v3, v1
 
-    .line 821
     :goto_1
     :try_start_4
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3556,7 +3321,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 825
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -3567,7 +3331,6 @@
     :catch_4
     move-exception p0
 
-    .line 828
     invoke-static {v2, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -3580,7 +3343,6 @@
     :goto_4
     if-eqz v1, :cond_3
 
-    .line 825
     :try_start_6
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_6
@@ -3591,15 +3353,12 @@
     :catch_5
     move-exception v1
 
-    .line 828
     invoke-static {v2, v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 830
     :cond_3
     :goto_5
     throw p0
 
-    .line 809
     :cond_4
     :goto_6
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3636,7 +3395,6 @@
 
     move-object v5, p4
 
-    .line 865
     :try_start_0
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
     :try_end_0
@@ -3651,7 +3409,6 @@
 
     const-string/jumbo p2, "registerBroadcast: failed to set receiver"
 
-    .line 867
     invoke-static {p1, p2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -3673,7 +3430,6 @@
 
     move-object v5, p5
 
-    .line 875
     :try_start_0
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
     :try_end_0
@@ -3688,7 +3444,6 @@
 
     const-string/jumbo p2, "registerBroadcast: failed to set receiver"
 
-    .line 877
     invoke-static {p1, p2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -3698,7 +3453,6 @@
 .method public static removeBiometricBits(I)I
     .locals 0
 
-    .line 0
     and-int/lit16 p0, p0, -0x8000
 
     return p0
@@ -3707,7 +3461,6 @@
 .method public static semVibrate(Landroid/content/Context;I)V
     .locals 3
 
-    .line 1287
     const-class v0, Landroid/os/Vibrator;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3722,12 +3475,10 @@
 
     const-string/jumbo p0, "semVibrate: No vibrator service"
 
-    .line 1289
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1292
     :cond_0
     sget-boolean v1, Lcom/samsung/android/vibrator/VibRune;->SUPPORT_HAPTIC_FEEDBACK_ON_DC_MOTOR:Z
 
@@ -3735,7 +3486,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1293
     invoke-virtual {p0}, Landroid/os/Vibrator;->semGetSupportedVibrationType()I
 
     move-result v1
@@ -3753,7 +3503,6 @@
     :cond_1
     const/16 p1, 0x64
 
-    .line 1298
     :cond_2
     invoke-virtual {p0}, Landroid/os/Vibrator;->semGetSupportedVibrationType()I
 
@@ -3761,7 +3510,6 @@
 
     if-lt v1, v2, :cond_3
 
-    .line 1299
     invoke-static {p1}, Landroid/view/HapticFeedbackConstants;->semGetVibrationIndex(I)I
 
     move-result p1
@@ -3774,18 +3522,15 @@
 
     move-result-object p1
 
-    .line 1301
     invoke-virtual {p0, p1}, Landroid/os/Vibrator;->vibrate(Landroid/os/VibrationEffect;)V
 
     goto :goto_0
 
-    .line 1303
     :cond_3
     sget-boolean p1, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz p1, :cond_4
 
-    .line 1304
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3794,7 +3539,6 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1305
     invoke-virtual {p0}, Landroid/os/Vibrator;->semGetSupportedVibrationType()I
 
     move-result p0
@@ -3805,7 +3549,6 @@
 
     move-result-object p0
 
-    .line 1304
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
@@ -3816,7 +3559,6 @@
 .method public static sepBiometricPromptTypeToBiometricAuthenticatorModality(I)I
     .locals 2
 
-    .line 0
     and-int/lit8 v0, p0, 0x1
 
     if-eqz v0, :cond_0
@@ -3856,7 +3598,6 @@
 .method public static unregisterBroadcast(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
     .locals 1
 
-    .line 884
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
@@ -3867,7 +3608,6 @@
     :catch_0
     move-exception p0
 
-    .line 886
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3897,7 +3637,6 @@
 .method public static useOwnerBiometrics(Landroid/content/Context;I)Z
     .locals 3
 
-    .line 1034
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
 
     move-result v0
@@ -3910,12 +3649,10 @@
 
     const-string/jumbo p0, "useOwnerBiometrics: SecureFolder profile!"
 
-    .line 1035
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 1040
     :cond_0
     invoke-static {p0, p1}, Lcom/samsung/android/knox/SemPersonaManager;->isAppSeparationUserId(Landroid/content/Context;I)Z
 
@@ -3925,12 +3662,10 @@
 
     const-string/jumbo p0, "useOwnerBiometrics: AppSeparation profile!"
 
-    .line 1041
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 1045
     :cond_1
     invoke-static {p1}, Lcom/samsung/android/app/SemDualAppManager;->isDualAppId(I)Z
 
@@ -3940,7 +3675,6 @@
 
     const-string/jumbo p0, "useOwnerBiometrics: DualApp profile!"
 
-    .line 1046
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -3956,7 +3690,6 @@
 
     const/4 v0, 0x0
 
-    .line 838
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -3965,14 +3698,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 839
     :try_start_1
     invoke-virtual {v1, p1}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 846
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -4011,14 +3742,12 @@
 
     const-string v1, "failed to write file"
 
-    .line 842
     invoke-static {p1, v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     if-eqz v0, :cond_0
 
-    .line 846
     :try_start_4
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -4038,7 +3767,6 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 851
     :catch_4
     :cond_1
     throw p0

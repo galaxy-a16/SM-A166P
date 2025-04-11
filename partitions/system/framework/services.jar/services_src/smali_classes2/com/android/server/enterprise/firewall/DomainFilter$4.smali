@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/firewall/DomainFilter;)V
     .locals 0
 
-    .line 349
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$4;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public run()V
     .locals 15
 
-    .line 351
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$4;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$minitDaemonCache(Lcom/android/server/enterprise/firewall/DomainFilter;)V
 
-    .line 354
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$4;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     sget-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->CAP_PORTAL:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;
@@ -57,7 +54,6 @@
 
     invoke-static/range {v1 .. v7}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$msendToCache(Lcom/android/server/enterprise/firewall/DomainFilter;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 
-    .line 357
     iget-object v8, p0, Lcom/android/server/enterprise/firewall/DomainFilter$4;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     sget-object v0, Lcom/android/server/enterprise/firewall/DomainFilter$Operation;->EXCEPTION:Lcom/android/server/enterprise/firewall/DomainFilter$Operation;

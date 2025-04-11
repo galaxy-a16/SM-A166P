@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/IAccountManagerResponse;Ljava/lang/String;ZZLjava/lang/String;ZLandroid/accounts/Account;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 1927
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$6;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p9, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$account:Landroid/accounts/Account;
@@ -36,7 +35,6 @@
 .method public onError(ILjava/lang/String;)V
     .locals 0
 
-    .line 1961
     invoke-super {p0, p1, p2}, Lcom/android/server/accounts/AccountManagerService$Session;->onError(ILjava/lang/String;)V
 
     return-void
@@ -47,10 +45,8 @@
 
     const/4 v0, 0x1
 
-    .line 1950
     invoke-static {p1, v0}, Landroid/os/Bundle;->setDefusable(Landroid/os/Bundle;Z)Landroid/os/Bundle;
 
-    .line 1956
     invoke-super {p0, p1}, Lcom/android/server/accounts/AccountManagerService$Session;->onResult(Landroid/os/Bundle;)V
 
     return-void
@@ -59,12 +55,10 @@
 .method public run()V
     .locals 5
 
-    .line 1937
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$Session;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     if-eqz v0, :cond_1
 
-    .line 1938
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget v1, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$parentUserId:I
@@ -88,7 +82,6 @@
 
     aget-object v3, v0, v2
 
-    .line 1939
     iget-object v4, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$account:Landroid/accounts/Account;
 
     invoke-virtual {v3, v4}, Landroid/accounts/Account;->equals(Ljava/lang/Object;)Z
@@ -97,7 +90,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1940
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$Session;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$account:Landroid/accounts/Account;
@@ -121,7 +113,6 @@
 .method public toDebugString(J)Ljava/lang/String;
     .locals 1
 
-    .line 1930
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

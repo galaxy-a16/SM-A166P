@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbAlsaManager;Ljava/io/File;I)V
     .locals 0
 
-    .line 146
     iput-object p1, p0, Lcom/android/server/usb/UsbAlsaManager$1;->this$0:Lcom/android/server/usb/UsbAlsaManager;
 
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/io/File;I)V
@@ -34,7 +33,6 @@
 
     goto :goto_0
 
-    .line 153
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/UsbAlsaManager$1;->this$0:Lcom/android/server/usb/UsbAlsaManager;
 
@@ -42,7 +40,6 @@
 
     goto :goto_0
 
-    .line 150
     :cond_1
     iget-object p0, p0, Lcom/android/server/usb/UsbAlsaManager$1;->this$0:Lcom/android/server/usb/UsbAlsaManager;
 

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/LegibilityColor;)V
     .locals 0
 
-    .line 574
     iput-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$SettingsObserver;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
-    .line 575
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,7 +27,6 @@
 .method public init()V
     .locals 3
 
-    .line 579
     iget-object v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor$SettingsObserver;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     invoke-static {v0}, Lcom/samsung/server/wallpaper/LegibilityColor;->-$$Nest$fgetmContentResolver(Lcom/samsung/server/wallpaper/LegibilityColor;)Landroid/content/ContentResolver;
@@ -52,10 +49,8 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 590
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 592
     iget-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$SettingsObserver;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     const/4 v0, 0x1
@@ -66,7 +61,6 @@
 
     invoke-virtual {p1, v0}, Lcom/samsung/server/wallpaper/LegibilityColor;->setAllowScreenRotateSystem(Z)V
 
-    .line 593
     iget-object p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor$SettingsObserver;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     const/4 p1, 0x2

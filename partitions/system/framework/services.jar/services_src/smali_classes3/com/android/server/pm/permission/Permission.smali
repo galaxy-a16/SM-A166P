@@ -23,18 +23,14 @@
 .method public constructor <init>(Landroid/content/pm/PermissionInfo;I)V
     .locals 1
 
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     sget-object v0, Llibcore/util/EmptyArray;->INT:[I
 
     iput-object v0, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
-    .line 104
     iput-object p1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 105
     iput p2, p0, Lcom/android/server/pm/permission/Permission;->mType:I
 
     return-void
@@ -43,19 +39,14 @@
 .method public constructor <init>(Landroid/content/pm/PermissionInfo;IZI[IZ)V
     .locals 0
 
-    .line 110
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/Permission;-><init>(Landroid/content/pm/PermissionInfo;I)V
 
-    .line 111
     iput-boolean p3, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
-    .line 112
     iput p4, p0, Lcom/android/server/pm/permission/Permission;->mUid:I
 
-    .line 113
     iput-object p5, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
-    .line 114
     iput-boolean p6, p0, Lcom/android/server/pm/permission/Permission;->mGidsPerUser:Z
 
     return-void
@@ -64,33 +55,26 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
 
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     sget-object v0, Llibcore/util/EmptyArray;->INT:[I
 
     iput-object v0, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
-    .line 95
     new-instance v0, Landroid/content/pm/PermissionInfo;
 
     invoke-direct {v0}, Landroid/content/pm/PermissionInfo;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 96
     iput-object p1, v0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 97
     iput-object p2, v0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
     const/4 p1, 0x2
 
-    .line 99
     iput p1, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
-    .line 100
     iput p3, p0, Lcom/android/server/pm/permission/Permission;->mType:I
 
     return-void
@@ -99,7 +83,6 @@
 .method public static comparePermissionInfos(Landroid/content/pm/PermissionInfo;Landroid/content/pm/PermissionInfo;)Z
     .locals 3
 
-    .line 585
     iget v0, p0, Landroid/content/pm/PermissionInfo;->icon:I
 
     iget v1, p1, Landroid/content/pm/PermissionInfo;->icon:I
@@ -110,7 +93,6 @@
 
     return v2
 
-    .line 586
     :cond_0
     iget v0, p0, Landroid/content/pm/PermissionInfo;->logo:I
 
@@ -120,7 +102,6 @@
 
     return v2
 
-    .line 587
     :cond_1
     iget v0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
@@ -130,7 +111,6 @@
 
     return v2
 
-    .line 588
     :cond_2
     iget-object v0, p0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
@@ -144,7 +124,6 @@
 
     return v2
 
-    .line 589
     :cond_3
     iget-object v0, p0, Landroid/content/pm/PermissionInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
@@ -158,7 +137,6 @@
 
     return v2
 
-    .line 591
     :cond_4
     iget-object p0, p0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
@@ -189,7 +167,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 425
     iget-object v3, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v3, v3, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
@@ -202,14 +179,12 @@
 
     if-nez v3, :cond_1
 
-    .line 427
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 428
     iget v3, p0, Lcom/android/server/pm/permission/Permission;->mType:I
 
     if-ne v3, v1, :cond_0
@@ -218,13 +193,10 @@
 
     if-nez v3, :cond_0
 
-    .line 430
     iput-object p1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 431
     iput-boolean v1, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
-    .line 432
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result p4
@@ -236,7 +208,6 @@
     :cond_0
     if-nez p4, :cond_1
 
-    .line 434
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -284,12 +255,10 @@
     :goto_1
     if-eqz p0, :cond_2
 
-    .line 442
     iget v3, p0, Lcom/android/server/pm/permission/Permission;->mType:I
 
     if-eq v3, v1, :cond_2
 
-    .line 443
     invoke-virtual {p0}, Lcom/android/server/pm/permission/Permission;->isInternal()Z
 
     move-result v3
@@ -306,12 +275,10 @@
     :goto_2
     if-eqz p0, :cond_3
 
-    .line 444
     iget v4, p0, Lcom/android/server/pm/permission/Permission;->mType:I
 
     if-eq v4, v1, :cond_3
 
-    .line 445
     invoke-virtual {p0}, Lcom/android/server/pm/permission/Permission;->isRuntime()Z
 
     move-result v4
@@ -328,7 +295,6 @@
     :goto_3
     if-nez p0, :cond_4
 
-    .line 447
     new-instance p0, Lcom/android/server/pm/permission/Permission;
 
     iget-object v5, p1, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -337,13 +303,11 @@
 
     invoke-direct {p0, v5, v6, v2}, Lcom/android/server/pm/permission/Permission;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 451
     :cond_4
     iget-boolean v2, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
     if-nez v2, :cond_9
 
-    .line 452
     iget-object v2, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v2, v2, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
@@ -356,7 +320,6 @@
 
     iget-object v7, p1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
-    .line 453
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -365,7 +328,6 @@
 
     goto :goto_4
 
-    .line 475
     :cond_5
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -401,7 +363,6 @@
 
     goto :goto_6
 
-    .line 454
     :cond_6
     :goto_4
     iget-object v2, p1, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -412,14 +373,12 @@
 
     if-eqz p3, :cond_8
 
-    .line 455
     iget-object v2, p3, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v2, v2, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
     iget-object v7, p1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
-    .line 456
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -428,7 +387,6 @@
 
     goto :goto_5
 
-    .line 469
     :cond_7
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -474,22 +432,18 @@
 
     goto :goto_6
 
-    .line 457
     :cond_8
     :goto_5
     iput-object p1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 458
     iput-boolean v1, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
-    .line 459
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/pm/permission/Permission;->mUid:I
 
-    .line 488
     :cond_9
     :goto_6
     invoke-virtual {p0}, Lcom/android/server/pm/permission/Permission;->isInternal()Z
@@ -502,7 +456,6 @@
 
     if-nez v3, :cond_b
 
-    .line 489
     :cond_a
     invoke-virtual {p0}, Lcom/android/server/pm/permission/Permission;->isRuntime()Z
 
@@ -514,7 +467,6 @@
 
     if-eqz v4, :cond_c
 
-    .line 492
     :cond_b
     iput-boolean v1, p0, Lcom/android/server/pm/permission/Permission;->mDefinitionChanged:Z
 
@@ -527,14 +479,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 504
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/Permission;->findPermissionTree(Ljava/util/Collection;Ljava/lang/String;)Lcom/android/server/pm/permission/Permission;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 507
     invoke-virtual {p0}, Lcom/android/server/pm/permission/Permission;->getUid()I
 
     move-result p1
@@ -547,7 +497,6 @@
 
     return-object p0
 
-    .line 512
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -577,7 +526,6 @@
 .method public static findPermissionTree(Ljava/util/Collection;Ljava/lang/String;)Lcom/android/server/pm/permission/Permission;
     .locals 4
 
-    .line 519
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -595,19 +543,16 @@
 
     check-cast v0, Lcom/android/server/pm/permission/Permission;
 
-    .line 520
     invoke-virtual {v0}, Lcom/android/server/pm/permission/Permission;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 521
     invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 522
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -618,7 +563,6 @@
 
     if-le v2, v3, :cond_0
 
-    .line 523
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -646,7 +590,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 404
     iget-object v1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v1, v1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
@@ -661,7 +604,6 @@
 
     goto :goto_0
 
-    .line 408
     :cond_0
     iget-boolean p1, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
@@ -669,7 +611,6 @@
 
     return v0
 
-    .line 411
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
@@ -683,7 +624,6 @@
 
     return v0
 
-    .line 416
     :cond_2
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
@@ -701,7 +641,6 @@
 .method public addToTree(ILandroid/content/pm/PermissionInfo;Lcom/android/server/pm/permission/Permission;)Z
     .locals 4
 
-    .line 371
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget v1, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -726,7 +665,6 @@
 
     iget-object v1, v1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
-    .line 375
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -735,7 +673,6 @@
 
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 377
     invoke-static {v0, p2}, Lcom/android/server/pm/permission/Permission;->comparePermissionInfos(Landroid/content/pm/PermissionInfo;Landroid/content/pm/PermissionInfo;)Z
 
     move-result v0
@@ -753,7 +690,6 @@
     :goto_0
     move v0, v2
 
-    .line 378
     :goto_1
     new-instance v1, Landroid/content/pm/PermissionInfo;
 
@@ -761,20 +697,16 @@
 
     iput-object v1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 379
     iget-object p2, p3, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object p2, p2, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
     iput-object p2, v1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
-    .line 380
     iput p1, v1, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
-    .line 381
     iput-boolean v2, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
-    .line 382
     iget p1, p3, Lcom/android/server/pm/permission/Permission;->mUid:I
 
     iput p1, p0, Lcom/android/server/pm/permission/Permission;->mUid:I
@@ -785,7 +717,6 @@
 .method public areGidsPerUser()Z
     .locals 0
 
-    .line 167
     iget-boolean p0, p0, Lcom/android/server/pm/permission/Permission;->mGidsPerUser:Z
 
     return p0
@@ -794,14 +725,12 @@
 .method public calculateFootprint(Lcom/android/server/pm/permission/Permission;)I
     .locals 1
 
-    .line 198
     iget p0, p0, Lcom/android/server/pm/permission/Permission;->mUid:I
 
     iget v0, p1, Lcom/android/server/pm/permission/Permission;->mUid:I
 
     if-ne p0, v0, :cond_0
 
-    .line 199
     iget-object p0, p1, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object p0, p0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -812,7 +741,6 @@
 
     iget-object p1, p1, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 200
     invoke-virtual {p1}, Landroid/content/pm/PermissionInfo;->calculateFootprint()I
 
     move-result p1
@@ -830,12 +758,10 @@
 .method public computeGids(I)[I
     .locals 4
 
-    .line 177
     iget-boolean v0, p0, Lcom/android/server/pm/permission/Permission;->mGidsPerUser:Z
 
     if-eqz v0, :cond_1
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
     array-length v0, v0
@@ -844,7 +770,6 @@
 
     const/4 v1, 0x0
 
-    .line 179
     :goto_0
     iget-object v2, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
@@ -852,10 +777,8 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 180
     aget v2, v2, v1
 
-    .line 181
     invoke-static {p1, v2}, Landroid/os/UserHandle;->getUid(II)I
 
     move-result v2
@@ -869,7 +792,6 @@
     :cond_0
     return-object v0
 
-    .line 185
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
@@ -892,7 +814,6 @@
 
     const/16 v0, 0x2710
 
-    .line 550
     invoke-virtual {p0, p1, v0}, Lcom/android/server/pm/permission/Permission;->generatePermissionInfo(II)Landroid/content/pm/PermissionInfo;
 
     move-result-object p0
@@ -903,12 +824,10 @@
 .method public generatePermissionInfo(II)Landroid/content/pm/PermissionInfo;
     .locals 2
 
-    .line 556
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     if-eqz v0, :cond_0
 
-    .line 557
     new-instance v0, Landroid/content/pm/PermissionInfo;
 
     iget-object v1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
@@ -923,35 +842,29 @@
 
     const/4 p1, 0x0
 
-    .line 559
     iput-object p1, v0, Landroid/content/pm/PermissionInfo;->metaData:Landroid/os/Bundle;
 
     goto :goto_0
 
-    .line 562
     :cond_0
     new-instance v0, Landroid/content/pm/PermissionInfo;
 
     invoke-direct {v0}, Landroid/content/pm/PermissionInfo;-><init>()V
 
-    .line 563
     iget-object p1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v1, p1, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 564
     iget-object v1, p1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
-    .line 565
     iget-object p1, p1, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
     iput-object p1, v0, Landroid/content/pm/PermissionInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 568
     :cond_1
     :goto_0
     iget p1, v0, Landroid/content/pm/PermissionInfo;->flags:I
@@ -966,7 +879,6 @@
 
     if-lt p2, p1, :cond_2
 
-    .line 570
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -975,7 +887,6 @@
 
     goto :goto_1
 
-    .line 572
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
@@ -987,12 +898,10 @@
 
     if-ne p1, p2, :cond_3
 
-    .line 576
     iput p0, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
     goto :goto_1
 
-    .line 578
     :cond_3
     iput p1, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
@@ -1003,7 +912,6 @@
 .method public getGroup()Ljava/lang/String;
     .locals 0
 
-    .line 537
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object p0, p0, Landroid/content/pm/PermissionInfo;->group:Ljava/lang/String;
@@ -1014,7 +922,6 @@
 .method public getKnownCerts()Ljava/util/Set;
     .locals 0
 
-    .line 351
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object p0, p0, Landroid/content/pm/PermissionInfo;->knownCerts:Ljava/util/Set;
@@ -1025,7 +932,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object p0, p0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -1036,7 +942,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object p0, p0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
@@ -1047,7 +952,6 @@
 .method public getPermissionInfo()Landroid/content/pm/PermissionInfo;
     .locals 0
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     return-object p0
@@ -1056,7 +960,6 @@
 .method public getProtection()I
     .locals 0
 
-    .line 541
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1069,7 +972,6 @@
 .method public getProtectionFlags()I
     .locals 1
 
-    .line 545
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1084,7 +986,6 @@
 .method public getProtectionLevel()I
     .locals 0
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1095,7 +996,6 @@
 .method public getRawGids()[I
     .locals 0
 
-    .line 163
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
     return-object p0
@@ -1104,7 +1004,6 @@
 .method public getType()I
     .locals 0
 
-    .line 150
     iget p0, p0, Lcom/android/server/pm/permission/Permission;->mType:I
 
     return p0
@@ -1113,7 +1012,6 @@
 .method public getUid()I
     .locals 0
 
-    .line 154
     iget p0, p0, Lcom/android/server/pm/permission/Permission;->mUid:I
 
     return p0
@@ -1122,7 +1020,6 @@
 .method public hasGids()Z
     .locals 0
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
     array-length p0, p0
@@ -1143,7 +1040,6 @@
 .method public isAppOp()Z
     .locals 0
 
-    .line 258
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1166,7 +1062,6 @@
 .method public isAppPredictor()Z
     .locals 1
 
-    .line 322
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1191,7 +1086,6 @@
 .method public isCompanion()Z
     .locals 1
 
-    .line 327
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1216,7 +1110,6 @@
 .method public isConfigurator()Z
     .locals 1
 
-    .line 313
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1241,7 +1134,6 @@
 .method public isDefinitionChanged()Z
     .locals 0
 
-    .line 190
     iget-boolean p0, p0, Lcom/android/server/pm/permission/Permission;->mDefinitionChanged:Z
 
     return p0
@@ -1250,7 +1142,6 @@
 .method public isDevelopment()Z
     .locals 1
 
-    .line 262
     invoke-virtual {p0}, Lcom/android/server/pm/permission/Permission;->isSignature()Z
 
     move-result v0
@@ -1279,7 +1170,6 @@
 .method public isDynamic()Z
     .locals 1
 
-    .line 214
     iget p0, p0, Lcom/android/server/pm/permission/Permission;->mType:I
 
     const/4 v0, 0x2
@@ -1300,7 +1190,6 @@
 .method public isHardOrSoftRestricted()Z
     .locals 0
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->flags:I
@@ -1323,7 +1212,6 @@
 .method public isHardRestricted()Z
     .locals 0
 
-    .line 235
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->flags:I
@@ -1346,7 +1234,6 @@
 .method public isImmutablyRestricted()Z
     .locals 0
 
-    .line 244
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->flags:I
@@ -1369,7 +1256,6 @@
 .method public isIncidentReportApprover()Z
     .locals 1
 
-    .line 317
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1394,7 +1280,6 @@
 .method public isInstaller()Z
     .locals 0
 
-    .line 267
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1417,7 +1302,6 @@
 .method public isInstant()Z
     .locals 0
 
-    .line 271
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1440,7 +1324,6 @@
 .method public isInternal()Z
     .locals 1
 
-    .line 253
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1465,7 +1348,6 @@
 .method public isKnownSigner()Z
     .locals 1
 
-    .line 347
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1490,7 +1372,6 @@
 .method public isModule()Z
     .locals 1
 
-    .line 331
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1515,7 +1396,6 @@
 .method public isNormal()Z
     .locals 0
 
-    .line 218
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1538,7 +1418,6 @@
 .method public isOem()Z
     .locals 0
 
-    .line 275
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1561,7 +1440,6 @@
 .method public isPermission(Lcom/android/server/pm/pkg/component/ParsedPermission;)Z
     .locals 3
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     const/4 v1, 0x0
@@ -1570,7 +1448,6 @@
 
     return v1
 
-    .line 209
     :cond_0
     iget-object v0, v0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
@@ -1588,7 +1465,6 @@
 
     iget-object p0, p0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 210
     invoke-interface {p1}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -1608,7 +1484,6 @@
 .method public isPre23()Z
     .locals 0
 
-    .line 279
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1631,7 +1506,6 @@
 .method public isPreInstalled()Z
     .locals 0
 
-    .line 283
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1654,7 +1528,6 @@
 .method public isPrivileged()Z
     .locals 0
 
-    .line 287
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1677,7 +1550,6 @@
 .method public isRecents()Z
     .locals 1
 
-    .line 339
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1702,7 +1574,6 @@
 .method public isRemoved()Z
     .locals 0
 
-    .line 227
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->flags:I
@@ -1725,7 +1596,6 @@
 .method public isRetailDemo()Z
     .locals 1
 
-    .line 335
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1750,7 +1620,6 @@
 .method public isRole()Z
     .locals 1
 
-    .line 343
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1775,7 +1644,6 @@
 .method public isRuntime()Z
     .locals 1
 
-    .line 222
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1798,7 +1666,6 @@
 .method public isRuntimeOnly()Z
     .locals 0
 
-    .line 291
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1821,7 +1688,6 @@
 .method public isSetup()Z
     .locals 0
 
-    .line 295
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1844,7 +1710,6 @@
 .method public isSignature()Z
     .locals 1
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1869,7 +1734,6 @@
 .method public isSoftRestricted()Z
     .locals 0
 
-    .line 231
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->flags:I
@@ -1892,7 +1756,6 @@
 .method public isSystemTextClassifier()Z
     .locals 1
 
-    .line 308
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1917,7 +1780,6 @@
 .method public isVendorPrivileged()Z
     .locals 1
 
-    .line 303
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1942,7 +1804,6 @@
 .method public isVerifier()Z
     .locals 0
 
-    .line 299
     iget-object p0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -1965,7 +1826,6 @@
 .method public setDefinitionChanged(Z)V
     .locals 0
 
-    .line 194
     iput-boolean p1, p0, Lcom/android/server/pm/permission/Permission;->mDefinitionChanged:Z
 
     return-void
@@ -1974,10 +1834,8 @@
 .method public setGids([IZ)V
     .locals 0
 
-    .line 171
     iput-object p1, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
-    .line 172
     iput-boolean p2, p0, Lcom/android/server/pm/permission/Permission;->mGidsPerUser:Z
 
     return-void
@@ -1988,35 +1846,29 @@
 
     if-eqz p1, :cond_0
 
-    .line 124
     iput-object p1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     goto :goto_0
 
-    .line 126
     :cond_0
     new-instance v0, Landroid/content/pm/PermissionInfo;
 
     invoke-direct {v0}, Landroid/content/pm/PermissionInfo;-><init>()V
 
-    .line 127
     iget-object v1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v2, v1, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
     iput-object v2, v0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 128
     iget-object v2, v1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
     iput-object v2, v0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
-    .line 129
     iget v1, v1, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
     iput v1, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
-    .line 130
     iput-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     :goto_0
@@ -2029,7 +1881,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 132
     :goto_1
     iput-boolean p1, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
@@ -2039,7 +1890,6 @@
 .method public transfer(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 355
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v0, v0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
@@ -2052,44 +1902,35 @@
 
     return-void
 
-    .line 358
     :cond_0
     new-instance p1, Landroid/content/pm/PermissionInfo;
 
     invoke-direct {p1}, Landroid/content/pm/PermissionInfo;-><init>()V
 
-    .line 359
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v1, v0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
     iput-object v1, p1, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 360
     iput-object p2, p1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
-    .line 361
     iget p2, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
     iput p2, p1, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
-    .line 362
     iput-object p1, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     const/4 p1, 0x0
 
-    .line 363
     iput-boolean p1, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
-    .line 364
     iput p1, p0, Lcom/android/server/pm/permission/Permission;->mUid:I
 
-    .line 365
     sget-object p2, Llibcore/util/EmptyArray;->INT:[I
 
     iput-object p2, p0, Lcom/android/server/pm/permission/Permission;->mGids:[I
 
-    .line 366
     iput-boolean p1, p0, Lcom/android/server/pm/permission/Permission;->mGidsPerUser:Z
 
     return-void
@@ -2098,14 +1939,12 @@
 .method public updateDynamicPermission(Ljava/util/Collection;)V
     .locals 2
 
-    .line 391
     iget v0, p0, Lcom/android/server/pm/permission/Permission;->mType:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 392
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v0, v0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -2116,7 +1955,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 394
     iget-object v0, p0, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v1, p1, Lcom/android/server/pm/permission/Permission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
@@ -2127,10 +1965,8 @@
 
     const/4 v0, 0x1
 
-    .line 395
     iput-boolean v0, p0, Lcom/android/server/pm/permission/Permission;->mReconciled:Z
 
-    .line 396
     iget p1, p1, Lcom/android/server/pm/permission/Permission;->mUid:I
 
     iput p1, p0, Lcom/android/server/pm/permission/Permission;->mUid:I

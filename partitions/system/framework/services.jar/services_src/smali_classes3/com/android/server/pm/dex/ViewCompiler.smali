@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/Object;Lcom/android/server/pm/Installer;)V
     .locals 0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/pm/dex/ViewCompiler;->mInstallLock:Ljava/lang/Object;
 
-    .line 37
     iput-object p2, p0, Lcom/android/server/pm/dex/ViewCompiler;->mInstaller:Lcom/android/server/pm/Installer;
 
     return-void
@@ -30,18 +27,15 @@
 .method public compileLayouts(Lcom/android/server/pm/pkg/AndroidPackage;)Z
     .locals 6
 
-    .line 42
     :try_start_0
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 43
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getBaseApkPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 45
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v2
@@ -50,7 +44,6 @@
 
     move-result-object v2
 
-    .line 46
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +64,6 @@
 
     const-string v3, "PackageManager"
 
-    .line 47
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,14 +92,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 51
     :try_start_1
     iget-object v5, p0, Lcom/android/server/pm/dex/ViewCompiler;->mInstallLock:Ljava/lang/Object;
 
@@ -115,16 +105,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 52
     :try_start_2
     iget-object p0, p0, Lcom/android/server/pm/dex/ViewCompiler;->mInstaller:Lcom/android/server/pm/Installer;
 
-    .line 53
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
     move-result p1
 
-    .line 52
     invoke-virtual {p0, v1, v0, v2, p1}, Lcom/android/server/pm/Installer;->compileLayouts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result p0
@@ -133,7 +120,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 56
     :try_start_3
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_3
@@ -144,7 +130,6 @@
     :catchall_0
     move-exception p0
 
-    .line 54
     :try_start_4
     monitor-exit v5
     :try_end_4
@@ -158,11 +143,9 @@
     :catchall_1
     move-exception p0
 
-    .line 56
     :try_start_6
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 57
     throw p0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
@@ -174,7 +157,6 @@
 
     const-string v0, "Failed to compile layouts"
 
-    .line 59
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0

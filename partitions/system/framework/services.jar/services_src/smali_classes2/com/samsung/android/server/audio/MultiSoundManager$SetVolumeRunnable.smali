@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUid(Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;->mUid:I
 
     return p0
@@ -25,12 +24,10 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/MultiSoundManager;I)V
     .locals 0
 
-    .line 1188
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1189
     iput p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;->mUid:I
 
     return-void
@@ -41,14 +38,12 @@
 .method public run()V
     .locals 3
 
-    .line 1194
     new-instance v0, Lcom/samsung/android/media/AudioParameter$Builder;
 
     invoke-direct {v0}, Lcom/samsung/android/media/AudioParameter$Builder;-><init>()V
 
     const-string v1, "l_multi_sound_key"
 
-    .line 1195
     invoke-virtual {v0, v1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
@@ -57,7 +52,6 @@
 
     iget v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;->mUid:I
 
-    .line 1196
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
@@ -66,7 +60,6 @@
 
     iget v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;->mUid:I
 
-    .line 1197
     invoke-virtual {v1, v2}, Lcom/samsung/android/server/audio/MultiSoundManager;->getAppVolumeFloat(I)F
 
     move-result v1
@@ -77,12 +70,10 @@
 
     move-result-object v0
 
-    .line 1198
     invoke-virtual {v0}, Lcom/samsung/android/media/AudioParameter$Builder;->build()Lcom/samsung/android/media/AudioParameter;
 
     move-result-object v0
 
-    .line 1199
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-static {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->-$$Nest$fgetmAudioSystem(Lcom/samsung/android/server/audio/MultiSoundManager;)Lcom/android/server/audio/AudioSystemAdapter;

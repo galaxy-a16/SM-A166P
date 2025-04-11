@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/policy/DeviceStateProviderImpl;Landroid/os/PowerManager;)V
     .locals 0
 
-    .line 270
     iput-object p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl$1;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
     iput-object p2, p0, Lcom/android/server/policy/DeviceStateProviderImpl$1;->val$powerManager:Landroid/os/PowerManager;
@@ -30,19 +29,16 @@
 
     const-string p1, "android.os.action.POWER_SAVE_MODE_CHANGED_INTERNAL"
 
-    .line 274
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 273
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 275
     iget-object p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl$1;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
     iget-object p0, p0, Lcom/android/server/policy/DeviceStateProviderImpl$1;->val$powerManager:Landroid/os/PowerManager;

@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/CacheOomRanker$ProcessDependenciesImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/CacheOomRanker$ProcessDependenciesImpl;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public getRss(I)[J
     .locals 0
 
-    .line 497
     invoke-static {p1}, Landroid/os/Process;->getRss(I)[J
 
     move-result-object p0

@@ -28,7 +28,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyScreenStatus(Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->notifyScreenStatus()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 1
 
-    .line 47
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier$Injector;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier$Injector;-><init>()V
@@ -50,21 +48,16 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier$Injector;)V
     .locals 0
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mContext:Landroid/content/Context;
 
-    .line 55
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
-    .line 56
     iput-object p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier$Injector;
 
     const/4 p1, 0x0
 
-    .line 57
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mScreenStatus:I
 
     return-void
@@ -75,7 +68,6 @@
 .method public final notifyScreenStatus()V
     .locals 8
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier$Injector;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mContext:Landroid/content/Context;
@@ -93,7 +85,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 105
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -121,18 +112,15 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     iget v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mScreenStatus:I
 
     if-ne v1, v0, :cond_1
 
     return-void
 
-    .line 109
     :cond_1
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mScreenStatus:I
 
-    .line 110
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-interface {v2}, Lcom/android/server/biometrics/sensors/BiometricServiceProvider;->getSensorProperties()Ljava/util/List;
@@ -165,14 +153,12 @@
 .method public onAuthenticationFinished(II)V
     .locals 0
 
-    .line 68
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mScreenOnOffReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez p1, :cond_0
 
     return-void
 
-    .line 71
     :cond_0
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mContext:Landroid/content/Context;
 
@@ -180,7 +166,6 @@
 
     const/4 p1, 0x0
 
-    .line 72
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mScreenOnOffReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
@@ -189,10 +174,8 @@
 .method public onAuthenticationStarted(II)V
     .locals 0
 
-    .line 62
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->registerBroadcastReceiver()V
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->notifyScreenStatus()V
 
     return-void
@@ -201,14 +184,12 @@
 .method public final registerBroadcastReceiver()V
     .locals 4
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mScreenOnOffReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 89
     :cond_0
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier$1;
 
@@ -216,29 +197,24 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mScreenOnOffReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 95
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.SCREEN_ON"
 
-    .line 96
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.SCREEN_OFF"
 
-    .line 97
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 98
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mScreenOnOffReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v2, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    .line 100
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
     move-result-object v3
@@ -247,7 +223,6 @@
 
     move-result-object v3
 
-    .line 98
     invoke-static {v1, p0, v0, v2, v3}, Lcom/android/server/biometrics/Utils;->registerBroadcastAsUser(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/UserHandle;Landroid/os/Handler;)V
 
     return-void
@@ -256,7 +231,6 @@
 .method public start()V
     .locals 6
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-interface {v0}, Lcom/android/server/biometrics/sensors/BiometricServiceProvider;->getSensorProperties()Ljava/util/List;
@@ -285,7 +259,6 @@
 
     move-result v0
 
-    .line 78
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,7 +283,6 @@
 
     return-void
 
-    .line 82
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 

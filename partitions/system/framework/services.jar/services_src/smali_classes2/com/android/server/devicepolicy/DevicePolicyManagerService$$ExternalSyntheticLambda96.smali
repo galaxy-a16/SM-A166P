@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$$ExternalSyntheticLambda96;->f$0:I
@@ -27,7 +26,6 @@
 .method public final getOrThrow()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$$ExternalSyntheticLambda96;->f$0:I
 
     invoke-static {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->$r8$lambda$mgX5BwKbJgV8TOJ-25LvMhEgdh8(I)Ljava/util/List;

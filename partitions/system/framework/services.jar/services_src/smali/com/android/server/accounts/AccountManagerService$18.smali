@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/IAccountManagerResponse;Ljava/lang/String;)V
     .locals 0
 
-    .line 5023
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$18;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p2, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$response:Landroid/accounts/IAccountManagerResponse;
@@ -32,7 +31,6 @@
 .method public onError(ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -41,25 +39,21 @@
 
     const-string v0, "accounts"
 
-    .line 5026
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
 
     move-result-object p1
 
-    .line 5028
     array-length v0, p1
 
     new-array v0, v0, [Landroid/accounts/Account;
 
     const/4 v1, 0x0
 
-    .line 5029
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 5030
     aget-object v2, p1, v1
 
     check-cast v2, Landroid/accounts/Account;
@@ -70,7 +64,6 @@
 
     goto :goto_0
 
-    .line 5032
     :cond_0
     iget-object p1, p0, Lcom/android/server/accounts/AccountManagerService$18;->this$0:Lcom/android/server/accounts/AccountManagerService;
 

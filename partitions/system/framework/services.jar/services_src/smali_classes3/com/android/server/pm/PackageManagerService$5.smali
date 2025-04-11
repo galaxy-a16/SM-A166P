@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;Landroid/os/Handler;Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 4783
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$5;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$5;->val$resolver:Landroid/content/ContentResolver;
@@ -28,14 +27,12 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 4789
     iget-object p1, p0, Lcom/android/server/pm/PackageManagerService$5;->val$resolver:Landroid/content/ContentResolver;
 
     const-string v0, "device_provisioned"
 
     const/4 v1, 0x0
 
-    .line 4790
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
@@ -48,7 +45,6 @@
 
     const-string/jumbo v2, "user_setup_complete"
 
-    .line 4791
     invoke-static {p1, v2, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
@@ -58,7 +54,6 @@
     :cond_0
     move v1, v0
 
-    .line 4792
     :cond_1
     iget-object p1, p0, Lcom/android/server/pm/PackageManagerService$5;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -76,16 +71,13 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/SpegService;->setSetupWizardState(Z)V
 
-    .line 4795
     :cond_2
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->SYSFW_APP_PREL:Z
 
     if-eqz p0, :cond_3
 
-    .line 4796
     const-class p0, Lcom/android/server/appprelauncher/AppPrelaunchManagerService;
 
-    .line 4797
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -94,10 +86,8 @@
 
     if-eqz p0, :cond_3
 
-    .line 4798
     invoke-virtual {p0, v1}, Lcom/android/server/appprelauncher/AppPrelaunchManagerService;->setSetupWizardFinished(Z)V
 
-    .line 4802
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 

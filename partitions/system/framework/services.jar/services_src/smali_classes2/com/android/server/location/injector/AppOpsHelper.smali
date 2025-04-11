@@ -13,17 +13,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/location/injector/AppOpsHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 59
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -38,7 +35,6 @@
 .method public final addListener(Lcom/android/server/location/injector/AppOpsHelper$LocationAppOpListener;)V
     .locals 0
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/location/injector/AppOpsHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -49,7 +45,6 @@
 .method public addMockLocationListener(Lcom/android/server/location/injector/AppOpsHelper$MockLocationAppOpListener;)V
     .locals 0
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/location/injector/AppOpsHelper;->mMockLocationListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -75,7 +70,6 @@
 .method public final notifyAppOpChanged(Ljava/lang/String;)V
     .locals 1
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/location/injector/AppOpsHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -95,7 +89,6 @@
 
     check-cast v0, Lcom/android/server/location/injector/AppOpsHelper$LocationAppOpListener;
 
-    .line 66
     invoke-interface {v0, p1}, Lcom/android/server/location/injector/AppOpsHelper$LocationAppOpListener;->onAppOpsChanged(Ljava/lang/String;)V
 
     goto :goto_0
@@ -107,7 +100,6 @@
 .method public final notifyMockLocationAppOpChanged(Ljava/lang/String;)V
     .locals 0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/location/injector/AppOpsHelper;->mMockLocationListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -127,7 +119,6 @@
 
     check-cast p1, Lcom/android/server/location/injector/AppOpsHelper$MockLocationAppOpListener;
 
-    .line 88
     invoke-interface {p1}, Lcom/android/server/location/injector/AppOpsHelper$MockLocationAppOpListener;->onMockLocationAppOpsChanged()V
 
     goto :goto_0

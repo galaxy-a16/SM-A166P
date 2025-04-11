@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/InputMonitor;)V
     .locals 0
 
-    .line 131
     iput-object p1, p0, Lcom/android/server/wm/InputMonitor$UpdateInputWindows;->this$0:Lcom/android/server/wm/InputMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/InputMonitor;Lcom/android/server/wm/InputMonitor$UpdateInputWindows-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/InputMonitor$UpdateInputWindows;-><init>(Lcom/android/server/wm/InputMonitor;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/wm/InputMonitor$UpdateInputWindows;->this$0:Lcom/android/server/wm/InputMonitor;
 
     invoke-static {v0}, Lcom/android/server/wm/InputMonitor;->-$$Nest$fgetmService(Lcom/android/server/wm/InputMonitor;)Lcom/android/server/wm/WindowManagerService;
@@ -49,7 +46,6 @@
 
     monitor-enter v0
 
-    .line 135
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/InputMonitor$UpdateInputWindows;->this$0:Lcom/android/server/wm/InputMonitor;
 
@@ -57,12 +53,10 @@
 
     invoke-static {v1, v2}, Lcom/android/server/wm/InputMonitor;->-$$Nest$fputmUpdateInputWindowsPending(Lcom/android/server/wm/InputMonitor;Z)V
 
-    .line 136
     iget-object v1, p0, Lcom/android/server/wm/InputMonitor$UpdateInputWindows;->this$0:Lcom/android/server/wm/InputMonitor;
 
     invoke-static {v1, v2}, Lcom/android/server/wm/InputMonitor;->-$$Nest$fputmUpdateInputWindowsNeeded(Lcom/android/server/wm/InputMonitor;Z)V
 
-    .line 138
     iget-object v1, p0, Lcom/android/server/wm/InputMonitor$UpdateInputWindows;->this$0:Lcom/android/server/wm/InputMonitor;
 
     invoke-static {v1}, Lcom/android/server/wm/InputMonitor;->-$$Nest$fgetmDisplayRemoved(Lcom/android/server/wm/InputMonitor;)Z
@@ -71,7 +65,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 139
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -80,7 +73,6 @@
 
     return-void
 
-    .line 149
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/InputMonitor$UpdateInputWindows;->this$0:Lcom/android/server/wm/InputMonitor;
@@ -95,7 +87,6 @@
 
     move-result v1
 
-    .line 152
     iget-object p0, p0, Lcom/android/server/wm/InputMonitor$UpdateInputWindows;->this$0:Lcom/android/server/wm/InputMonitor;
 
     invoke-static {p0}, Lcom/android/server/wm/InputMonitor;->-$$Nest$fgetmUpdateInputForAllWindowsConsumer(Lcom/android/server/wm/InputMonitor;)Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;
@@ -104,7 +95,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;->-$$Nest$mupdateInputWindows(Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;Z)V
 
-    .line 153
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

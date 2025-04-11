@@ -33,10 +33,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 5590
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5594
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -45,12 +43,10 @@
 
     const/4 v0, 0x0
 
-    .line 5607
     iput-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->mInfoParsed:Z
 
     const/4 v0, -0x1
 
-    .line 5609
     iput v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->tag:I
 
     return-void
@@ -59,7 +55,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;-><init>()V
 
     return-void
@@ -70,17 +65,14 @@
 .method public getInfoLocked(Landroid/content/Context;)Landroid/appwidget/AppWidgetProviderInfo;
     .locals 3
 
-    .line 5635
     iget-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->mInfoParsed:Z
 
     if-nez v0, :cond_3
 
-    .line 5637
     iget-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->zombie:Z
 
     if-nez v0, :cond_2
 
-    .line 5639
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->infoTag:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -89,7 +81,6 @@
 
     if-nez v0, :cond_0
 
-    .line 5640
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->id:Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;
 
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->info:Landroid/appwidget/AppWidgetProviderInfo;
@@ -110,7 +101,6 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 5644
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->id:Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;
 
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->info:Landroid/appwidget/AppWidgetProviderInfo;
@@ -126,16 +116,13 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 5648
     iput-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->info:Landroid/appwidget/AppWidgetProviderInfo;
 
     :cond_2
     const/4 p1, 0x1
 
-    .line 5651
     iput-boolean p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->mInfoParsed:Z
 
-    .line 5653
     :cond_3
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->info:Landroid/appwidget/AppWidgetProviderInfo;
 
@@ -145,7 +132,6 @@
 .method public getPartialInfoLocked()Landroid/appwidget/AppWidgetProviderInfo;
     .locals 0
 
-    .line 5663
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->info:Landroid/appwidget/AppWidgetProviderInfo;
 
     return-object p0
@@ -154,7 +140,6 @@
 .method public getUserId()I
     .locals 0
 
-    .line 5612
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->id:Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;
 
     iget p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
@@ -169,7 +154,6 @@
 .method public hostedByPackageForUser(Ljava/lang/String;I)Z
     .locals 5
 
-    .line 5622
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->widgets:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -183,7 +167,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 5624
     iget-object v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->widgets:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -192,7 +175,6 @@
 
     check-cast v3, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;
 
-    .line 5625
     iget-object v4, v3, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->host:Lcom/android/server/appwidget/AppWidgetServiceImpl$Host;
 
     iget-object v4, v4, Lcom/android/server/appwidget/AppWidgetServiceImpl$Host;->id:Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;
@@ -207,7 +189,6 @@
 
     iget-object v3, v3, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->host:Lcom/android/server/appwidget/AppWidgetServiceImpl$Host;
 
-    .line 5626
     invoke-virtual {v3}, Lcom/android/server/appwidget/AppWidgetServiceImpl$Host;->getUserId()I
 
     move-result v3
@@ -230,7 +211,6 @@
 .method public isInPackageForUser(Ljava/lang/String;I)Z
     .locals 1
 
-    .line 5616
     invoke-virtual {p0}, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->getUserId()I
 
     move-result v0
@@ -241,7 +221,6 @@
 
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
-    .line 5617
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -266,7 +245,6 @@
 .method public isMaskedLocked()Z
     .locals 1
 
-    .line 5714
     iget-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedByQuietProfile:Z
 
     if-nez v0, :cond_1
@@ -301,12 +279,10 @@
 .method public setInfoLocked(Landroid/appwidget/AppWidgetProviderInfo;)V
     .locals 0
 
-    .line 5674
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->info:Landroid/appwidget/AppWidgetProviderInfo;
 
     const/4 p1, 0x1
 
-    .line 5675
     iput-boolean p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->mInfoParsed:Z
 
     return-void
@@ -315,10 +291,8 @@
 .method public setMaskedByLockedProfileLocked(Z)Z
     .locals 1
 
-    .line 5692
     iget-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedByLockedProfile:Z
 
-    .line 5693
     iput-boolean p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedByLockedProfile:Z
 
     if-eq p1, v0, :cond_0
@@ -337,10 +311,8 @@
 .method public setMaskedByQuietProfileLocked(Z)Z
     .locals 1
 
-    .line 5685
     iget-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedByQuietProfile:Z
 
-    .line 5686
     iput-boolean p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedByQuietProfile:Z
 
     if-eq p1, v0, :cond_0
@@ -359,10 +331,8 @@
 .method public setMaskedBySuperProfileLocked(Z)Z
     .locals 1
 
-    .line 5707
     iget-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedBySuperLocked:Z
 
-    .line 5708
     iput-boolean p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedBySuperLocked:Z
 
     if-eq p1, v0, :cond_0
@@ -381,10 +351,8 @@
 .method public setMaskedBySuspendedPackageLocked(Z)Z
     .locals 1
 
-    .line 5699
     iget-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedBySuspendedPackage:Z
 
-    .line 5700
     iput-boolean p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->maskedBySuspendedPackage:Z
 
     if-eq p1, v0, :cond_0
@@ -403,12 +371,10 @@
 .method public setPartialInfoLocked(Landroid/appwidget/AppWidgetProviderInfo;)V
     .locals 0
 
-    .line 5668
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->info:Landroid/appwidget/AppWidgetProviderInfo;
 
     const/4 p1, 0x0
 
-    .line 5669
     iput-boolean p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->mInfoParsed:Z
 
     return-void
@@ -417,7 +383,6 @@
 .method public shouldBePersisted()Z
     .locals 1
 
-    .line 5718
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->widgets:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -452,7 +417,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 5680
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

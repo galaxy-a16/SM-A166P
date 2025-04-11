@@ -17,7 +17,6 @@
 .method public createIkeSession(Landroid/content/Context;Landroid/net/ipsec/ike/IkeSessionParams;Landroid/net/ipsec/ike/ChildSessionParams;Ljava/util/concurrent/Executor;Landroid/net/ipsec/ike/IkeSessionCallback;Landroid/net/ipsec/ike/ChildSessionCallback;)Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
     .locals 8
 
-    .line 6645
     new-instance p0, Lcom/android/server/connectivity/Vpn$IkeSessionWrapper;
 
     new-instance v7, Landroid/net/ipsec/ike/IkeSession;

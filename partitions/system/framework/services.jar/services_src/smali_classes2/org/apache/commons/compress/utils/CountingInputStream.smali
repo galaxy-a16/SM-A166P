@@ -11,7 +11,6 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
     return-void
@@ -28,7 +27,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 65
     iget-wide v0, p0, Lorg/apache/commons/compress/utils/CountingInputStream;->bytesRead:J
 
     add-long/2addr v0, p1
@@ -42,7 +40,6 @@
 .method public getBytesRead()J
     .locals 2
 
-    .line 74
     iget-wide v0, p0, Lorg/apache/commons/compress/utils/CountingInputStream;->bytesRead:J
 
     return-wide v0
@@ -51,7 +48,6 @@
 .method public read()I
     .locals 3
 
-    .line 39
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -62,7 +58,6 @@
 
     const-wide/16 v1, 0x1
 
-    .line 41
     invoke-virtual {p0, v1, v2}, Lorg/apache/commons/compress/utils/CountingInputStream;->count(J)V
 
     :cond_0
@@ -72,7 +67,6 @@
 .method public read([B)I
     .locals 2
 
-    .line 47
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -87,7 +81,6 @@
 .method public read([BII)I
     .locals 1
 
-    .line 51
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
@@ -98,7 +91,6 @@
 
     int-to-long p2, p1
 
-    .line 53
     invoke-virtual {p0, p2, p3}, Lorg/apache/commons/compress/utils/CountingInputStream;->count(J)V
 
     :cond_0

@@ -17,7 +17,6 @@
 .method public createUdfpsSysUiImpl(Landroid/content/Context;Landroid/os/IBinder;Ljava/lang/String;I)Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
     .locals 6
 
-    .line 72
     new-instance p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     const/4 v5, 0x1
@@ -40,12 +39,10 @@
 .method public sendBigDataForEnrollSuccess(I)V
     .locals 3
 
-    .line 53
     invoke-static {}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->get()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p0
 
-    .line 54
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -56,7 +53,6 @@
 
     const-string v2, "FPEN"
 
-    .line 53
     invoke-virtual {p0, v2, p1, v0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     return-void
@@ -65,7 +61,6 @@
 .method public startLogging(ILjava/lang/String;)V
     .locals 1
 
-    .line 60
     invoke-static {}, Lcom/android/server/biometrics/SemBioLoggingManager;->get()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object p0
@@ -80,7 +75,6 @@
 .method public stopLogging(ILjava/lang/String;III)V
     .locals 7
 
-    .line 66
     invoke-static {}, Lcom/android/server/biometrics/SemBioLoggingManager;->get()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object v0

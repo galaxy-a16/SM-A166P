@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$aBvmCmZNSjM-oaRArFNC1yN46u8()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/AnimationThread;->lambda$dispose$0()V
 
     return-void
@@ -28,7 +27,6 @@
 
     const-string v2, "android.anim"
 
-    .line 35
     invoke-direct {p0, v2, v0, v1}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
     return-void
@@ -37,23 +35,19 @@
 .method public static dispose()V
     .locals 5
 
-    .line 67
     const-class v0, Lcom/android/server/AnimationThread;
 
     monitor-enter v0
 
-    .line 68
     :try_start_0
     sget-object v1, Lcom/android/server/AnimationThread;->sInstance:Lcom/android/server/AnimationThread;
 
     if-nez v1, :cond_0
 
-    .line 69
     monitor-exit v0
 
     return-void
 
-    .line 72
     :cond_0
     invoke-static {}, Lcom/android/server/AnimationThread;->getHandler()Landroid/os/Handler;
 
@@ -69,10 +63,8 @@
 
     const/4 v1, 0x0
 
-    .line 73
     sput-object v1, Lcom/android/server/AnimationThread;->sInstance:Lcom/android/server/AnimationThread;
 
-    .line 74
     monitor-exit v0
 
     return-void
@@ -90,22 +82,18 @@
 .method public static ensureThreadLocked()V
     .locals 3
 
-    .line 39
     sget-object v0, Lcom/android/server/AnimationThread;->sInstance:Lcom/android/server/AnimationThread;
 
     if-nez v0, :cond_0
 
-    .line 40
     new-instance v0, Lcom/android/server/AnimationThread;
 
     invoke-direct {v0}, Lcom/android/server/AnimationThread;-><init>()V
 
     sput-object v0, Lcom/android/server/AnimationThread;->sInstance:Lcom/android/server/AnimationThread;
 
-    .line 41
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 42
     sget-object v0, Lcom/android/server/AnimationThread;->sInstance:Lcom/android/server/AnimationThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -116,7 +104,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Looper;->setTraceTag(J)V
 
-    .line 43
     sget-object v0, Lcom/android/server/AnimationThread;->sInstance:Lcom/android/server/AnimationThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -136,16 +123,13 @@
 .method public static get()Lcom/android/server/AnimationThread;
     .locals 2
 
-    .line 48
     const-class v0, Lcom/android/server/AnimationThread;
 
     monitor-enter v0
 
-    .line 49
     :try_start_0
     invoke-static {}, Lcom/android/server/AnimationThread;->ensureThreadLocked()V
 
-    .line 50
     sget-object v1, Lcom/android/server/AnimationThread;->sInstance:Lcom/android/server/AnimationThread;
 
     monitor-exit v0
@@ -155,7 +139,6 @@
     :catchall_0
     move-exception v1
 
-    .line 51
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -166,16 +149,13 @@
 .method public static getHandler()Landroid/os/Handler;
     .locals 2
 
-    .line 55
     const-class v0, Lcom/android/server/AnimationThread;
 
     monitor-enter v0
 
-    .line 56
     :try_start_0
     invoke-static {}, Lcom/android/server/AnimationThread;->ensureThreadLocked()V
 
-    .line 57
     sget-object v1, Lcom/android/server/AnimationThread;->sHandler:Landroid/os/Handler;
 
     monitor-exit v0
@@ -185,7 +165,6 @@
     :catchall_0
     move-exception v1
 
-    .line 58
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -196,7 +175,6 @@
 .method public static synthetic lambda$dispose$0()V
     .locals 1
 
-    .line 72
     sget-object v0, Lcom/android/server/AnimationThread;->sInstance:Lcom/android/server/AnimationThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z

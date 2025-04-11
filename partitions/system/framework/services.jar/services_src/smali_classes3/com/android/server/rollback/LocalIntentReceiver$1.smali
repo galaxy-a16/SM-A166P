@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/rollback/LocalIntentReceiver;)V
     .locals 0
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/rollback/LocalIntentReceiver$1;->this$0:Lcom/android/server/rollback/LocalIntentReceiver;
 
     invoke-direct {p0}, Landroid/content/IIntentSender$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public send(ILandroid/content/Intent;Ljava/lang/String;Landroid/os/IBinder;Landroid/content/IIntentReceiver;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 40
     iget-object p0, p0, Lcom/android/server/rollback/LocalIntentReceiver$1;->this$0:Lcom/android/server/rollback/LocalIntentReceiver;
 
     iget-object p0, p0, Lcom/android/server/rollback/LocalIntentReceiver;->mConsumer:Ljava/util/function/Consumer;

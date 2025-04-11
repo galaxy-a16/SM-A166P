@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -34,7 +32,6 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 41
     iget-object v0, p0, Lcom/android/server/media/HandlerExecutor;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -45,7 +42,6 @@
 
     return-void
 
-    .line 42
     :cond_0
     new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
 

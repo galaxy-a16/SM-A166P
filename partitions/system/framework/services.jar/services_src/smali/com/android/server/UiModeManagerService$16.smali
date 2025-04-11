@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
-    .line 2431
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$16;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 1
 
-    .line 2434
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$16;->this$0:Lcom/android/server/UiModeManagerService;
 
     const/4 v0, 0x0

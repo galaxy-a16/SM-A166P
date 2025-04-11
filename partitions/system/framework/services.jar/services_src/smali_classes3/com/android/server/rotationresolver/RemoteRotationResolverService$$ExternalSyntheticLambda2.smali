@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/os/IBinder;
 
     invoke-static {p1}, Landroid/service/rotationresolver/IRotationResolverService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/rotationresolver/IRotationResolverService;

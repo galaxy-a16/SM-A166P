@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmResult(Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;)Ljava/util/concurrent/LinkedBlockingQueue;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;->mResult:Ljava/util/concurrent/LinkedBlockingQueue;
 
     return-object p0
@@ -22,17 +21,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 4658
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4659
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;->mResult:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    .line 4661
     new-instance v0, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver$1;-><init>(Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;)V
@@ -45,7 +41,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;-><init>()V
 
     return-void
@@ -56,7 +51,6 @@
 .method public getIntentSender()Landroid/content/IntentSender;
     .locals 1
 
-    .line 4674
     new-instance v0, Landroid/content/IntentSender;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;->mLocalSender:Landroid/content/IIntentSender$Stub;
@@ -69,7 +63,6 @@
 .method public getResult()Landroid/content/Intent;
     .locals 1
 
-    .line 4679
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;->mResult:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -86,7 +79,6 @@
     :catch_0
     move-exception p0
 
-    .line 4681
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

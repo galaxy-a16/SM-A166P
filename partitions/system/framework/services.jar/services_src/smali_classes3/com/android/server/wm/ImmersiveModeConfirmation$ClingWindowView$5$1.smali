@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$5;)V
     .locals 0
 
-    .line 466
     iput-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$5$1;->this$2:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    .line 469
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -38,7 +36,6 @@
 
     move-result p1
 
-    .line 470
     iget-object p0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$5$1;->this$2:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$5;
 
     iget-object p0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$5;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;

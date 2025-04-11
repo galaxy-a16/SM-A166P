@@ -25,21 +25,16 @@
 .method public static create(Landroid/content/Intent;ZII)Lcom/android/server/am/ActivityManagerService$StickyBroadcast;
     .locals 1
 
-    .line 1469
     new-instance v0, Lcom/android/server/am/ActivityManagerService$StickyBroadcast;
 
     invoke-direct {v0}, Lcom/android/server/am/ActivityManagerService$StickyBroadcast;-><init>()V
 
-    .line 1470
     iput-object p0, v0, Lcom/android/server/am/ActivityManagerService$StickyBroadcast;->intent:Landroid/content/Intent;
 
-    .line 1471
     iput-boolean p1, v0, Lcom/android/server/am/ActivityManagerService$StickyBroadcast;->deferUntilActive:Z
 
-    .line 1472
     iput p2, v0, Lcom/android/server/am/ActivityManagerService$StickyBroadcast;->originalCallingUid:I
 
-    .line 1473
     iput p3, v0, Lcom/android/server/am/ActivityManagerService$StickyBroadcast;->originalCallingAppProcessState:I
 
     return-object v0
@@ -50,7 +45,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1479
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

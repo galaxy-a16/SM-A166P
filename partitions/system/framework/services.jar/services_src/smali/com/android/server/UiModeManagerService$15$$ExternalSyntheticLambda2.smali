@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$15$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/UiModeManagerService;
@@ -27,7 +26,6 @@
 .method public final release(ILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$15$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/UiModeManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/UiModeManagerService$15;->$r8$lambda$M7pkZTFPnh-vsGv44SBhqbFNiUo(Lcom/android/server/UiModeManagerService;ILjava/lang/String;)Z

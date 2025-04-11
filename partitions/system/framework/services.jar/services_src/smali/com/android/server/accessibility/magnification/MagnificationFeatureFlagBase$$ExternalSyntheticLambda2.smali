@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/accessibility/magnification/MagnificationFeatureFlagBase;->$r8$lambda$HNgZk9KSZ---19zo76WkXpNayug()V
 
     return-void

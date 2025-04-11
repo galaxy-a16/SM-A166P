@@ -21,30 +21,24 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
     .locals 1
 
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mStateListeners:Ljava/util/ArrayList;
 
-    .line 90
     iput-object p1, p0, Lcom/android/server/am/BaseAppStateTracker;->mContext:Landroid/content/Context;
 
-    .line 91
     iput-object p2, p0, Lcom/android/server/am/BaseAppStateTracker;->mAppRestrictionController:Lcom/android/server/am/AppRestrictionController;
 
-    .line 92
     invoke-virtual {p2}, Lcom/android/server/am/AppRestrictionController;->getBackgroundHandler()Landroid/os/Handler;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/am/BaseAppStateTracker;->mBgHandler:Landroid/os/Handler;
 
-    .line 93
     invoke-virtual {p2}, Lcom/android/server/am/AppRestrictionController;->getLock()Ljava/lang/Object;
 
     move-result-object p1
@@ -53,7 +47,6 @@
 
     if-nez p3, :cond_0
 
-    .line 95
     new-instance p1, Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-direct {p1}, Lcom/android/server/am/BaseAppStateTracker$Injector;-><init>()V
@@ -62,7 +55,6 @@
 
     goto :goto_1
 
-    .line 99
     :cond_0
     :try_start_0
     filled-new-array {p4}, [Ljava/lang/Object;
@@ -82,7 +74,6 @@
     :catch_0
     move-exception p1
 
-    .line 101
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -106,7 +97,6 @@
     :goto_0
     if-nez p1, :cond_1
 
-    .line 103
     new-instance p1, Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-direct {p1}, Lcom/android/server/am/BaseAppStateTracker$Injector;-><init>()V
@@ -121,7 +111,6 @@
 .method public static stateIndexToType(I)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     shl-int p0, v0, p0
@@ -132,7 +121,6 @@
 .method public static stateTypeToIndex(I)I
     .locals 0
 
-    .line 108
     invoke-static {p0}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
 
     move-result p0
@@ -143,14 +131,12 @@
 .method public static stateTypesToString(I)Ljava/lang/String;
     .locals 4
 
-    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "["
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 118
     invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result v1
@@ -164,7 +150,6 @@
 
     const/16 v2, 0x7c
 
-    .line 121
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -188,7 +173,6 @@
 
     if-eq v1, v3, :cond_1
 
-    .line 141
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +200,6 @@
     :cond_1
     const-string v3, "PERMISSION"
 
-    .line 138
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -224,7 +207,6 @@
     :cond_2
     const-string v3, "FGS_NOTIFICATION"
 
-    .line 135
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -232,7 +214,6 @@
     :cond_3
     const-string v3, "FGS_LOCATION"
 
-    .line 132
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -240,7 +221,6 @@
     :cond_4
     const-string v3, "FGS_MEDIA_PLAYBACK"
 
-    .line 129
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -248,7 +228,6 @@
     :cond_5
     const-string v3, "MEDIA_SESSION"
 
-    .line 126
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_1
@@ -256,7 +235,6 @@
 
     and-int/2addr p0, v1
 
-    .line 119
     invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result v1
@@ -266,10 +244,8 @@
     :cond_6
     const-string p0, "]"
 
-    .line 145
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 146
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -282,7 +258,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 272
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
@@ -311,14 +286,12 @@
 .method public dumpAsProto(Landroid/util/proto/ProtoOutputStream;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
     .locals 0
 
-    .line 182
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
@@ -331,7 +304,6 @@
 .method public getTrackerInfoForStatsd(I)[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -345,12 +317,10 @@
 
     move-object v0, p0
 
-    .line 157
     iget-object v1, v0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 158
     :try_start_0
     iget-object v2, v0, Lcom/android/server/am/BaseAppStateTracker;->mStateListeners:Ljava/util/ArrayList;
 
@@ -363,7 +333,6 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 159
     iget-object v4, v0, Lcom/android/server/am/BaseAppStateTracker;->mStateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -390,7 +359,6 @@
 
     goto :goto_0
 
-    .line 161
     :cond_0
     monitor-exit v1
 
@@ -409,21 +377,18 @@
 .method public onBackgroundRestrictionChanged(ILjava/lang/String;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onLockedBootCompleted()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPropertiesChanged(Ljava/lang/String;)V
     .locals 0
 
-    .line 239
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTracker;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
 
     move-result-object p0
@@ -436,7 +401,6 @@
 .method public onSystemReady()V
     .locals 0
 
-    .line 189
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->onSystemReady()V
@@ -447,81 +411,69 @@
 .method public onUidAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidGone(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidProcStateChanged(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserInteractionStarted(Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserStarted(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserStopped(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public registerStateListener(Lcom/android/server/am/BaseAppStateTracker$StateListener;)V
     .locals 1
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 151
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker;->mStateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 152
     monitor-exit v0
 
     return-void

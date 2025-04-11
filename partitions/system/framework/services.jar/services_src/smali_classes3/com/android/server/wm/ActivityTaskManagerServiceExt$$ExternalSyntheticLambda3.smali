@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/wm/ActivityTaskManagerServiceExt;->$r8$lambda$xB51GP6Le8234h_sYwdx8LN6z7o(I)[Ljava/lang/Integer;
 
     move-result-object p0

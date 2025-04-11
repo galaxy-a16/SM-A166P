@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;)V
     .locals 0
 
-    .line 104
     iput-object p1, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     iput-object p2, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
@@ -32,17 +31,14 @@
 
     const-string v1, "VisualQueryDetectorSession"
 
-    .line 108
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     const/4 v2, 0x1
 
     invoke-static {v0, v2}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->-$$Nest$fputmEgressingData(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;Z)V
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     invoke-static {v0}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->-$$Nest$fgetmAttentionListener(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;)Lcom/android/internal/app/IVisualQueryDetectionAttentionListener;
@@ -53,7 +49,6 @@
 
     return-void
 
-    .line 114
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
@@ -73,10 +68,8 @@
 
     const-string v2, "Error delivering attention gained event."
 
-    .line 116
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 118
     :try_start_1
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
 
@@ -97,7 +90,6 @@
     :catch_1
     const-string p0, "Fail to call onVisualQueryDetectionServiceFailure"
 
-    .line 123
     invoke-static {v1, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -111,17 +103,14 @@
 
     const-string v1, "VisualQueryDetectorSession"
 
-    .line 131
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->-$$Nest$fputmEgressingData(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;Z)V
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     invoke-static {v0}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->-$$Nest$fgetmAttentionListener(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;)Lcom/android/internal/app/IVisualQueryDetectionAttentionListener;
@@ -132,7 +121,6 @@
 
     return-void
 
-    .line 137
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
@@ -152,10 +140,8 @@
 
     const-string v2, "Error delivering attention lost event."
 
-    .line 139
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 141
     :try_start_1
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
 
@@ -176,7 +162,6 @@
     :catch_1
     const-string p0, "Fail to call onVisualQueryDetectionServiceFailure"
 
-    .line 146
     invoke-static {v1, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -186,17 +171,14 @@
 .method public onQueryDetected(Ljava/lang/String;)V
     .locals 3
 
-    .line 154
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "BinderCallback#onQueryDetected"
 
     const-string v1, "VisualQueryDetectorSession"
 
-    .line 155
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     invoke-static {v0}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->-$$Nest$fgetmEgressingData(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;)Z
@@ -207,10 +189,8 @@
 
     const-string p1, "Query should not be egressed within the unattention state."
 
-    .line 157
     invoke-static {v1, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
 
     new-instance p1, Landroid/service/voice/VisualQueryDetectionServiceFailure;
@@ -225,7 +205,6 @@
 
     return-void
 
-    .line 164
     :cond_0
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
@@ -233,14 +212,12 @@
 
     invoke-static {v0, v2}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->-$$Nest$fputmQueryStreaming(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;Z)V
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
 
     invoke-interface {p0, p1}, Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;->onQueryDetected(Ljava/lang/String;)V
 
     const-string p0, "Egressed from visual query detection process."
 
-    .line 166
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -253,10 +230,8 @@
 
     const-string v1, "VisualQueryDetectorSession"
 
-    .line 171
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     invoke-static {v0}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->-$$Nest$fgetmQueryStreaming(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;)Z
@@ -267,10 +242,8 @@
 
     const-string v0, "Query streaming state signal FINISHED is block since there is no active query being streamed."
 
-    .line 173
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
 
     new-instance v0, Landroid/service/voice/VisualQueryDetectionServiceFailure;
@@ -285,13 +258,11 @@
 
     return-void
 
-    .line 181
     :cond_0
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
 
     invoke-interface {v0}, Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;->onQueryFinished()V
 
-    .line 182
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     const/4 v0, 0x0
@@ -308,10 +279,8 @@
 
     const-string v1, "VisualQueryDetectorSession"
 
-    .line 187
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     invoke-static {v0}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->-$$Nest$fgetmQueryStreaming(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;)Z
@@ -322,10 +291,8 @@
 
     const-string v0, "Query streaming state signal REJECTED is block since there is no active query being streamed."
 
-    .line 189
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
 
     new-instance v0, Landroid/service/voice/VisualQueryDetectionServiceFailure;
@@ -340,13 +307,11 @@
 
     return-void
 
-    .line 197
     :cond_0
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->val$callback:Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;
 
     invoke-interface {v0}, Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;->onQueryRejected()V
 
-    .line 198
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;->this$0:Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;
 
     const/4 v0, 0x0

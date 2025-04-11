@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$4REPDOfFVip_ZP2K_TiWtAApwJ4(Lcom/android/server/location/provider/AbstractLocationProvider$Controller;IILjava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->lambda$sendExtraCommand$3(IILjava/lang/String;Landroid/os/Bundle;)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public static synthetic $r8$lambda$95N_DeaHgb2RsUaNIOnly07WLvM(Lcom/android/server/location/provider/AbstractLocationProvider$Listener;Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;)Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->lambda$setListener$0(Lcom/android/server/location/provider/AbstractLocationProvider$Listener;Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;)Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;
 
     move-result-object p0
@@ -36,7 +34,6 @@
 .method public static synthetic $r8$lambda$Dkb68RBQJQLiI5z_2MSxyqrloC4(Lcom/android/server/location/provider/AbstractLocationProvider$Controller;Landroid/location/provider/ProviderRequest;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->lambda$setRequest$1(Landroid/location/provider/ProviderRequest;)V
 
     return-void
@@ -45,7 +42,6 @@
 .method public static synthetic $r8$lambda$b3sOPqI__WIaJYSo-COFhsyMGVc(Lcom/android/server/location/provider/AbstractLocationProvider$Controller;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->lambda$flush$2(Ljava/lang/Runnable;)V
 
     return-void
@@ -54,14 +50,12 @@
 .method public constructor <init>(Lcom/android/server/location/provider/AbstractLocationProvider;)V
     .locals 0
 
-    .line 371
     iput-object p1, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 369
     iput-boolean p1, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
     return-void
@@ -70,7 +64,6 @@
 .method private synthetic lambda$flush$2(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 409
     iget-object p0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/provider/AbstractLocationProvider;->onFlush(Ljava/lang/Runnable;)V
@@ -81,7 +74,6 @@
 .method private synthetic lambda$sendExtraCommand$3(IILjava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 415
     iget-object p0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/location/provider/AbstractLocationProvider;->onExtraCommand(IILjava/lang/String;Landroid/os/Bundle;)V
@@ -92,7 +84,6 @@
 .method public static synthetic lambda$setListener$0(Lcom/android/server/location/provider/AbstractLocationProvider$Listener;Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;)Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;
     .locals 0
 
-    .line 376
     invoke-virtual {p1, p0}, Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;->withListener(Lcom/android/server/location/provider/AbstractLocationProvider$Listener;)Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;
 
     move-result-object p0
@@ -103,7 +94,6 @@
 .method private synthetic lambda$setRequest$1(Landroid/location/provider/ProviderRequest;)V
     .locals 0
 
-    .line 403
     iget-object p0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/provider/AbstractLocationProvider;->onSetRequest(Landroid/location/provider/ProviderRequest;)V
@@ -116,12 +106,10 @@
 .method public flush(Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 408
     iget-boolean v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 409
     iget-object v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     iget-object v0, v0, Lcom/android/server/location/provider/AbstractLocationProvider;->mExecutor:Ljava/util/concurrent/Executor;
@@ -138,7 +126,6 @@
 .method public isStarted()Z
     .locals 0
 
-    .line 383
     iget-boolean p0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
     return p0
@@ -147,12 +134,10 @@
 .method public sendExtraCommand(IILjava/lang/String;Landroid/os/Bundle;)V
     .locals 8
 
-    .line 414
     iget-boolean v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 415
     iget-object v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     iget-object v0, v0, Lcom/android/server/location/provider/AbstractLocationProvider;->mExecutor:Ljava/util/concurrent/Executor;
@@ -181,7 +166,6 @@
 .method public setListener(Lcom/android/server/location/provider/AbstractLocationProvider$Listener;)Lcom/android/server/location/provider/AbstractLocationProvider$State;
     .locals 1
 
-    .line 375
     iget-object p0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     invoke-static {p0}, Lcom/android/server/location/provider/AbstractLocationProvider;->-$$Nest$fgetmInternalState(Lcom/android/server/location/provider/AbstractLocationProvider;)Ljava/util/concurrent/atomic/AtomicReference;
@@ -200,7 +184,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 377
     iget-object p1, p0, Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;->listener:Lcom/android/server/location/provider/AbstractLocationProvider$Listener;
 
     if-nez p1, :cond_0
@@ -219,7 +202,6 @@
     :goto_1
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 378
     iget-object p0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$InternalState;->state:Lcom/android/server/location/provider/AbstractLocationProvider$State;
 
     return-object p0
@@ -228,12 +210,10 @@
 .method public setRequest(Landroid/location/provider/ProviderRequest;)V
     .locals 2
 
-    .line 402
     iget-boolean v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 403
     iget-object v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     iget-object v0, v0, Lcom/android/server/location/provider/AbstractLocationProvider;->mExecutor:Ljava/util/concurrent/Executor;
@@ -250,7 +230,6 @@
 .method public start()V
     .locals 2
 
-    .line 388
     iget-boolean v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
     const/4 v1, 0x1
@@ -259,10 +238,8 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 389
     iput-boolean v1, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
-    .line 390
     iget-object p0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     iget-object v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider;->mExecutor:Ljava/util/concurrent/Executor;
@@ -279,17 +256,14 @@
 .method public stop()V
     .locals 2
 
-    .line 395
     iget-boolean v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
     const/4 v0, 0x0
 
-    .line 396
     iput-boolean v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->mStarted:Z
 
-    .line 397
     iget-object p0, p0, Lcom/android/server/location/provider/AbstractLocationProvider$Controller;->this$0:Lcom/android/server/location/provider/AbstractLocationProvider;
 
     iget-object v0, p0, Lcom/android/server/location/provider/AbstractLocationProvider;->mExecutor:Ljava/util/concurrent/Executor;

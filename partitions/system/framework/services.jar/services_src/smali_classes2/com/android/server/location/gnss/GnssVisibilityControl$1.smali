@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssVisibilityControl;)V
     .locals 0
 
-    .line 174
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssVisibilityControl$1;->this$0:Lcom/android/server/location/gnss/GnssVisibilityControl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 177
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 
     return-void
 
-    .line 182
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -112,7 +109,6 @@
 
     goto :goto_1
 
-    .line 187
     :pswitch_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -122,7 +118,6 @@
 
     move-result-object p2
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssVisibilityControl$1;->this$0:Lcom/android/server/location/gnss/GnssVisibilityControl;
 
     invoke-static {p0, p2, p1}, Lcom/android/server/location/gnss/GnssVisibilityControl;->-$$Nest$mhandleProxyAppPackageUpdate(Lcom/android/server/location/gnss/GnssVisibilityControl;Ljava/lang/String;Ljava/lang/String;)V

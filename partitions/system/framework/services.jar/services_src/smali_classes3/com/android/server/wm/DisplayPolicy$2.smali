@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$KgCPRO3DX9FQ8CoR4f4oGabtYgg(Lcom/android/server/wm/DisplayPolicy$2;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy$2;->lambda$$0(I)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static synthetic $r8$lambda$RTKdz-ktltKaVHSOcO5s_wTRWM8(Lcom/android/server/wm/DisplayPolicy$2;JJ)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/wm/DisplayPolicy$2;->lambda$onAppTransitionStartingLocked$3(JJ)V
 
     return-void
@@ -37,7 +35,6 @@
 .method public static synthetic $r8$lambda$nOC0bSWF-Ir8xysf-Br4_EzB_q4(Lcom/android/server/wm/DisplayPolicy$2;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy$2;->lambda$$2(I)V
 
     return-void
@@ -46,7 +43,6 @@
 .method public static synthetic $r8$lambda$osq0eRoMBxI8_IWP3z8_PNyXlM8(Lcom/android/server/wm/DisplayPolicy$2;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy$2;->lambda$$1(I)V
 
     return-void
@@ -55,28 +51,24 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayPolicy;I)V
     .locals 0
 
-    .line 797
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     iput p2, p0, Lcom/android/server/wm/DisplayPolicy$2;->val$displayId:I
 
     invoke-direct {p0}, Lcom/android/server/wm/WindowManagerInternal$AppTransitionListener;-><init>()V
 
-    .line 799
     new-instance p1, Lcom/android/server/wm/DisplayPolicy$2$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0, p2}, Lcom/android/server/wm/DisplayPolicy$2$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/DisplayPolicy$2;I)V
 
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy$2;->mAppTransitionPending:Ljava/lang/Runnable;
 
-    .line 806
     new-instance p1, Lcom/android/server/wm/DisplayPolicy$2$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0, p2}, Lcom/android/server/wm/DisplayPolicy$2$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/wm/DisplayPolicy$2;I)V
 
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy$2;->mAppTransitionCancelled:Ljava/lang/Runnable;
 
-    .line 813
     new-instance p1, Lcom/android/server/wm/DisplayPolicy$2$$ExternalSyntheticLambda2;
 
     invoke-direct {p1, p0, p2}, Lcom/android/server/wm/DisplayPolicy$2$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/wm/DisplayPolicy$2;I)V
@@ -89,7 +81,6 @@
 .method private synthetic lambda$$0(I)V
     .locals 0
 
-    .line 800
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
@@ -98,7 +89,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 802
     invoke-interface {p0, p1}, Lcom/android/server/statusbar/StatusBarManagerInternal;->appTransitionPending(I)V
 
     :cond_0
@@ -108,7 +98,6 @@
 .method private synthetic lambda$$1(I)V
     .locals 0
 
-    .line 807
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
@@ -117,7 +106,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 809
     invoke-interface {p0, p1}, Lcom/android/server/statusbar/StatusBarManagerInternal;->appTransitionCancelled(I)V
 
     :cond_0
@@ -127,7 +115,6 @@
 .method private synthetic lambda$$2(I)V
     .locals 0
 
-    .line 814
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
@@ -136,7 +123,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 816
     invoke-interface {p0, p1}, Lcom/android/server/statusbar/StatusBarManagerInternal;->appTransitionFinished(I)V
 
     :cond_0
@@ -146,7 +132,6 @@
 .method private synthetic lambda$onAppTransitionStartingLocked$3(JJ)V
     .locals 7
 
-    .line 829
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
@@ -155,7 +140,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 831
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {p0}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmContext(Lcom/android/server/wm/DisplayPolicy;)Landroid/content/Context;
@@ -181,7 +165,6 @@
 .method public onAppTransitionCancelledLocked(Z)V
     .locals 0
 
-    .line 840
     iget-object p1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmHandler(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
@@ -198,7 +181,6 @@
 .method public onAppTransitionFinishedLocked(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 845
     iget-object p1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmHandler(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
@@ -215,7 +197,6 @@
 .method public onAppTransitionPendingLocked()V
     .locals 1
 
-    .line 822
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmHandler(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
@@ -232,7 +213,6 @@
 .method public onAppTransitionStartingLocked(JJ)I
     .locals 8
 
-    .line 828
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmHandler(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;

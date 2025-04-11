@@ -20,7 +20,6 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -31,7 +30,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 34
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -40,7 +38,6 @@
 
     goto :goto_0
 
-    .line 38
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->applyAdjustments()V
 
@@ -52,13 +49,11 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

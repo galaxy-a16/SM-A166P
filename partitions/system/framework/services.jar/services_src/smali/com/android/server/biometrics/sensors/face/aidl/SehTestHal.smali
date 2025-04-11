@@ -39,7 +39,6 @@
 .method public static synthetic $r8$lambda$5kQi1KWhqJTSgAmlNcDvbJwJk4Y(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->initActions()V
 
     return-void
@@ -48,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetisEnrollSessionOpen(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->isEnrollSessionOpen:Z
 
     return p0
@@ -57,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallback(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)Landroid/hardware/biometrics/face/ISessionCallback;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mCallback:Landroid/hardware/biometrics/face/ISessionCallback;
 
     return-object p0
@@ -66,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -75,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFaceId(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mFaceId:I
 
     return p0
@@ -84,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetmH(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mH:Landroid/os/Handler;
 
     return-object p0
@@ -93,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSensorId(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mSensorId:I
 
     return p0
@@ -102,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTestHalHelper(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)Lcom/android/server/biometrics/sensors/SemTestHalHelper;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mTestHalHelper:Lcom/android/server/biometrics/sensors/SemTestHalHelper;
 
     return-object p0
@@ -111,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserId(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mUserId:I
 
     return p0
@@ -120,7 +111,6 @@
 .method public static bridge synthetic -$$Nest$fputisEnrollSessionOpen(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->isEnrollSessionOpen:Z
 
     return-void
@@ -129,7 +119,6 @@
 .method public static bridge synthetic -$$Nest$fputmFaceId(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mFaceId:I
 
     return-void
@@ -138,7 +127,6 @@
 .method public static bridge synthetic -$$Nest$fputmGlassesOn(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mGlassesOn:Z
 
     return-void
@@ -147,7 +135,6 @@
 .method public static bridge synthetic -$$Nest$mdoAction(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->doAction()V
 
     return-void
@@ -156,21 +143,16 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 3
 
-    .line 89
     invoke-direct {p0}, Landroid/hardware/biometrics/face/IFace$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 74
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mGlassesOn:Z
 
-    .line 90
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mContext:Landroid/content/Context;
 
-    .line 91
     iput p2, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mSensorId:I
 
-    .line 93
     new-instance p1, Lcom/android/server/ServiceThread;
 
     const/4 v0, -0x2
@@ -183,10 +165,8 @@
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mThread:Lcom/android/server/ServiceThread;
 
-    .line 95
     invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
-    .line 96
     new-instance p1, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$1;
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mThread:Lcom/android/server/ServiceThread;
@@ -199,7 +179,6 @@
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mH:Landroid/os/Handler;
 
-    .line 109
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->InitTPA(I)V
 
     return-void
@@ -212,20 +191,17 @@
 
     monitor-enter v0
 
-    .line 83
     :try_start_0
     sget-object v1, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mSehTestHal:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
     if-nez v1, :cond_0
 
-    .line 84
     new-instance v1, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
     invoke-direct {v1, p0, p1}, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;-><init>(Landroid/content/Context;I)V
 
     sput-object v1, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mSehTestHal:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
-    .line 86
     :cond_0
     sget-object p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mSehTestHal:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
     :try_end_0
@@ -248,12 +224,10 @@
 .method public final InitTPA(I)V
     .locals 3
 
-    .line 359
     new-instance v0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$3;-><init>(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;)V
 
-    .line 411
     new-instance v1, Lcom/android/server/biometrics/sensors/SemTestHalHelper;
 
     const/16 v2, 0x8
@@ -262,7 +236,6 @@
 
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mTestHalHelper:Lcom/android/server/biometrics/sensors/SemTestHalHelper;
 
-    .line 412
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mH:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$$ExternalSyntheticLambda0;
@@ -271,12 +244,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 414
     sget-boolean p0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz p0, :cond_0
 
-    .line 415
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -302,7 +273,6 @@
 .method public createSession(IILandroid/hardware/biometrics/face/ISessionCallback;)Landroid/hardware/biometrics/face/ISession;
     .locals 2
 
-    .line 130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,10 +297,8 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     iput-object p3, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mCallback:Landroid/hardware/biometrics/face/ISessionCallback;
 
-    .line 133
     new-instance p1, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$2;
 
     invoke-direct {p1, p0, p3}, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$2;-><init>(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;Landroid/hardware/biometrics/face/ISessionCallback;)V
@@ -341,7 +309,6 @@
 .method public final doAction()V
     .locals 4
 
-    .line 421
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentAction:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
     if-nez v0, :cond_0
@@ -350,16 +317,13 @@
 
     const-string v0, "doAction : currentAction is null"
 
-    .line 422
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 426
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->run()V
 
-    .line 428
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentAction:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->getCallbackType()Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
@@ -374,7 +338,6 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentAction:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
-    .line 429
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->getCode()I
 
     move-result v0
@@ -385,7 +348,6 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentAction:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
-    .line 430
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->getVendorCode()I
 
     move-result v0
@@ -394,12 +356,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 431
     iput-boolean v2, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mGlassesOn:Z
 
     goto :goto_0
 
-    .line 432
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mGlassesOn:Z
 
@@ -407,7 +367,6 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentAction:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
-    .line 433
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->getCallbackType()Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     move-result-object v0
@@ -418,7 +377,6 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentAction:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
-    .line 434
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->getValue()I
 
     move-result v0
@@ -427,7 +385,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 435
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentActionList:Ljava/util/List;
 
     iget v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentActionListPos:I
@@ -446,7 +403,6 @@
 
     return-void
 
-    .line 439
     :cond_2
     :goto_0
     iget v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentActionListPos:I
@@ -461,7 +417,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 440
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentActionList:Ljava/util/List;
 
     iget v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentActionListPos:I
@@ -478,7 +433,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->currentAction:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
 
-    .line 441
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mH:Landroid/os/Handler;
 
     const/16 v1, 0x64
@@ -496,7 +450,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "74b0b7cb149ee205b12cd2254d216725c6e5429c"
 
     return-object p0
@@ -505,7 +458,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x2
 
     return p0
@@ -518,7 +470,6 @@
 
     const-string v0, "getSensorProps"
 
-    .line 124
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -531,12 +482,10 @@
 .method public final initActions()V
     .locals 0
 
-    .line 353
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mTestHalHelper:Lcom/android/server/biometrics/sensors/SemTestHalHelper;
 
     if-eqz p0, :cond_0
 
-    .line 354
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/SemTestHalHelper;->initActions()V
 
     :cond_0
@@ -546,7 +495,6 @@
 .method public postUpdateAction()V
     .locals 2
 
-    .line 349
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;->mH:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$$ExternalSyntheticLambda0;

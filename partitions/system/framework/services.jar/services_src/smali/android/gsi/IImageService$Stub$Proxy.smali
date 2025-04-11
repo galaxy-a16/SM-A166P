@@ -14,7 +14,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 340
     iget-object p0, p0, Landroid/gsi/IImageService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0

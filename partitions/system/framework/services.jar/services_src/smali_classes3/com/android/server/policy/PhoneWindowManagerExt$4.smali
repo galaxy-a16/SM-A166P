@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;II)V
     .locals 0
 
-    .line 3254
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$4;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;-><init>(II)V
@@ -24,7 +23,6 @@
 .method public cancel()V
     .locals 0
 
-    .line 3267
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$4;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->cancelPendingLockTaskModePinnedChordAction()V
@@ -35,7 +33,6 @@
 .method public execute()V
     .locals 0
 
-    .line 3262
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$4;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->interceptStopLockTaskModePinnedChord()V
@@ -46,7 +43,6 @@
 .method public preCondition()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

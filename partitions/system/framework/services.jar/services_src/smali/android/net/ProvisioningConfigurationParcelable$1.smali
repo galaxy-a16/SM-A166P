@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/net/ProvisioningConfigurationParcelable;
     .locals 0
 
-    .line 33
     new-instance p0, Landroid/net/ProvisioningConfigurationParcelable;
 
     invoke-direct {p0}, Landroid/net/ProvisioningConfigurationParcelable;-><init>()V
 
-    .line 34
     invoke-virtual {p0, p1}, Landroid/net/ProvisioningConfigurationParcelable;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 30
     invoke-virtual {p0, p1}, Landroid/net/ProvisioningConfigurationParcelable$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/ProvisioningConfigurationParcelable;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/net/ProvisioningConfigurationParcelable;
     .locals 0
 
-    .line 39
     new-array p0, p1, [Landroid/net/ProvisioningConfigurationParcelable;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 30
     invoke-virtual {p0, p1}, Landroid/net/ProvisioningConfigurationParcelable$1;->newArray(I)[Landroid/net/ProvisioningConfigurationParcelable;
 
     move-result-object p0

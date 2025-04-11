@@ -22,7 +22,6 @@
 .method public static synthetic $r8$lambda$xaovfQH9yaX-FbCifpovOzC94OQ(Ljava/lang/String;Lcom/android/server/people/data/Event;Lcom/android/server/people/data/UserData;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->lambda$accept$0(Ljava/lang/String;Lcom/android/server/people/data/Event;Lcom/android/server/people/data/UserData;)V
 
     return-void
@@ -31,13 +30,10 @@
 .method public constructor <init>(Lcom/android/server/people/data/DataManager;Landroid/os/Handler;)V
     .locals 2
 
-    .line 1074
     iput-object p1, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->this$0:Lcom/android/server/people/data/DataManager;
 
-    .line 1075
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1076
     invoke-static {p1}, Lcom/android/server/people/data/DataManager;->-$$Nest$fgetmInjector(Lcom/android/server/people/data/DataManager;)Lcom/android/server/people/data/DataManager$Injector;
 
     move-result-object p2
@@ -52,7 +48,6 @@
 
     iput-object p2, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->mMmsQueryHelper:Lcom/android/server/people/data/MmsQueryHelper;
 
-    .line 1077
     invoke-static {p1}, Lcom/android/server/people/data/DataManager;->-$$Nest$fgetmInjector(Lcom/android/server/people/data/DataManager;)Lcom/android/server/people/data/DataManager$Injector;
 
     move-result-object p2
@@ -67,7 +62,6 @@
 
     iput-object p1, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->mSmsQueryHelper:Lcom/android/server/people/data/SmsQueryHelper;
 
-    .line 1079
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -86,7 +80,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/people/data/DataManager;Landroid/os/Handler;Lcom/android/server/people/data/DataManager$MmsSmsContentObserver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;-><init>(Lcom/android/server/people/data/DataManager;Landroid/os/Handler;)V
 
     return-void
@@ -95,7 +88,6 @@
 .method public static synthetic lambda$accept$0(Ljava/lang/String;Lcom/android/server/people/data/Event;Lcom/android/server/people/data/UserData;)V
     .locals 1
 
-    .line 1095
     invoke-virtual {p2}, Lcom/android/server/people/data/UserData;->getDefaultSmsApp()Lcom/android/server/people/data/PackageData;
 
     move-result-object p2
@@ -104,13 +96,11 @@
 
     return-void
 
-    .line 1099
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/people/data/PackageData;->getConversationStore()Lcom/android/server/people/data/ConversationStore;
 
     move-result-object v0
 
-    .line 1100
     invoke-virtual {v0, p0}, Lcom/android/server/people/data/ConversationStore;->getConversationByPhoneNumber(Ljava/lang/String;)Lcom/android/server/people/data/ConversationInfo;
 
     move-result-object v0
@@ -119,7 +109,6 @@
 
     return-void
 
-    .line 1103
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/people/data/PackageData;->getEventStore()Lcom/android/server/people/data/EventStore;
 
@@ -127,12 +116,10 @@
 
     const/4 v0, 0x3
 
-    .line 1104
     invoke-virtual {p2, v0, p0}, Lcom/android/server/people/data/EventStore;->getOrCreateEventHistory(ILjava/lang/String;)Lcom/android/server/people/data/EventHistoryImpl;
 
     move-result-object p0
 
-    .line 1105
     invoke-virtual {p0, p1}, Lcom/android/server/people/data/EventHistoryImpl;->addEvent(Lcom/android/server/people/data/Event;)V
 
     return-void
@@ -143,7 +130,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1065
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Lcom/android/server/people/data/Event;
@@ -156,7 +142,6 @@
 .method public accept(Ljava/lang/String;Lcom/android/server/people/data/Event;)V
     .locals 1
 
-    .line 1094
     iget-object p0, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->this$0:Lcom/android/server/people/data/DataManager;
 
     new-instance v0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver$$ExternalSyntheticLambda0;
@@ -171,7 +156,6 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 1084
     iget-object p1, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->mMmsQueryHelper:Lcom/android/server/people/data/MmsQueryHelper;
 
     iget-wide v0, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->mLastMmsTimestamp:J
@@ -182,7 +166,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1085
     iget-object p1, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->mMmsQueryHelper:Lcom/android/server/people/data/MmsQueryHelper;
 
     invoke-virtual {p1}, Lcom/android/server/people/data/MmsQueryHelper;->getLastMessageTimestamp()J
@@ -191,7 +174,6 @@
 
     iput-wide v0, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->mLastMmsTimestamp:J
 
-    .line 1087
     :cond_0
     iget-object p1, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->mSmsQueryHelper:Lcom/android/server/people/data/SmsQueryHelper;
 
@@ -203,7 +185,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1088
     iget-object p1, p0, Lcom/android/server/people/data/DataManager$MmsSmsContentObserver;->mSmsQueryHelper:Lcom/android/server/people/data/SmsQueryHelper;
 
     invoke-virtual {p1}, Lcom/android/server/people/data/SmsQueryHelper;->getLastMessageTimestamp()J

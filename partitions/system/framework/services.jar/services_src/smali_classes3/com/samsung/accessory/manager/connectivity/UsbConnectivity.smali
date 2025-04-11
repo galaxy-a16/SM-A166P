@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,17 +45,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 24
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;-><init>(Landroid/content/Context;)V
 
-    .line 25
     new-instance p1, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-direct {p1}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
-    .line 26
     new-instance p1, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity$AdapterStateChangedHandler;
 
     const/4 v0, 0x0
@@ -75,20 +71,17 @@
 
     add-int/lit8 p0, p2, 0x1
 
-    .line 159
     new-array p0, p0, [B
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 160
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 161
     aget-byte v2, p1, v1
 
     aput-byte v2, p0, v1
@@ -97,7 +90,6 @@
 
     goto :goto_0
 
-    .line 163
     :cond_0
     aput-byte v0, p0, p2
 
@@ -109,20 +101,17 @@
 
     if-eqz p1, :cond_1
 
-    .line 170
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 171
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_0
 
-    .line 172
     aget-byte v1, p1, v0
 
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -145,7 +134,6 @@
 
     goto :goto_0
 
-    .line 174
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -162,21 +150,18 @@
 .method public close()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public connect(Ljava/lang/String;)Z
     .locals 0
 
-    .line 201
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mStateChangedCallback:Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;
 
     const/4 p1, 0x1
 
     if-eqz p0, :cond_0
 
-    .line 202
     invoke-interface {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;->onConnectionStateChanged(I)V
 
     :cond_0
@@ -186,7 +171,6 @@
 .method public disable()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -195,7 +179,6 @@
 .method public disconnect()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -204,14 +187,12 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public enable()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -224,7 +205,6 @@
 
     new-array p0, p0, [B
 
-    .line 121
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -240,7 +220,6 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 124
     aget-byte v1, p1, v1
 
     aput-byte v1, p0, v0
@@ -261,7 +240,6 @@
 .method public isEnabled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -270,7 +248,6 @@
 .method public isEnabledInternally()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -279,7 +256,6 @@
 .method public openNode(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -298,14 +274,12 @@
 
     aput-byte v1, p1, v0
 
-    .line 78
     iget-object v0, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->ccic_open()I
 
     move-result v0
 
-    .line 79
     sget-object v1, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -328,7 +302,6 @@
 
     const-string/jumbo p0, "open fail"
 
-    .line 81
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p1
@@ -338,10 +311,8 @@
 
     new-array v2, v0, [B
 
-    .line 84
     fill-array-data v2, :array_0
 
-    .line 85
     iget-object v3, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {v3, v2}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->ioctl_longDataWrite([B)I
@@ -350,7 +321,6 @@
 
     if-eq v2, v0, :cond_1
 
-    .line 87
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -369,7 +339,6 @@
 
     return-object p1
 
-    .line 91
     :cond_1
     iget-object p1, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
@@ -377,7 +346,6 @@
 
     move-result-object p1
 
-    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,7 +366,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->includeHeader([B)[B
 
     move-result-object p0
@@ -420,14 +387,12 @@
 .method public sendStopAuth()Z
     .locals 2
 
-    .line 68
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->TAG:Ljava/lang/String;
 
     const-string v1, "close ccic_misc"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->ccic_close()I
@@ -451,14 +416,12 @@
 
     if-nez v1, :cond_2
 
-    .line 101
     iget-object v3, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {v3}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->ccic_open()I
 
     move-result v3
 
-    .line 102
     sget-object v4, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -481,7 +444,6 @@
 
     const-string/jumbo v3, "open fail for end comd"
 
-    .line 104
     invoke-static {v4, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -489,10 +451,8 @@
     :cond_0
     new-array v3, v0, [B
 
-    .line 107
     fill-array-data v3, :array_0
 
-    .line 108
     iget-object v5, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {v5, v3}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->ioctl_longDataWrite([B)I
@@ -501,7 +461,6 @@
 
     if-eq v3, v0, :cond_1
 
-    .line 110
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -523,10 +482,8 @@
     :cond_1
     const-string v1, "close ccic_misc"
 
-    .line 114
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {v1}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->ccic_close()I
@@ -556,13 +513,11 @@
 
     const-wide/16 v0, 0xf
 
-    .line 138
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 141
     :catch_0
     iget-object v0, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
@@ -586,12 +541,10 @@
 
     aput-byte v3, v1, v4
 
-    .line 145
     array-length p1, p1
 
     if-eq v0, p1, :cond_0
 
-    .line 146
     sget-object p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->TAG:Ljava/lang/String;
 
     const-string p1, "command write fail"
@@ -600,7 +553,6 @@
 
     return-object v1
 
-    .line 150
     :cond_0
     invoke-virtual {p2}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->getApiState()I
 
@@ -612,7 +564,6 @@
 
     return-object v2
 
-    .line 152
     :cond_1
     iget-object p1, p0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
@@ -620,7 +571,6 @@
 
     move-result-object p1
 
-    .line 153
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -653,7 +603,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     array-length p2, p1
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;->addOneByte([BI)[B
@@ -666,7 +615,6 @@
 .method public setStateChangedCallback(Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;)V
     .locals 0
 
-    .line 48
     invoke-super {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->setStateChangedCallback(Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;)V
 
     return-void

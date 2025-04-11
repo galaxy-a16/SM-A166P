@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1115
     new-instance v0, Lcom/android/server/BinaryTransparencyService$BiometricLogger;
 
     invoke-direct {v0}, Lcom/android/server/BinaryTransparencyService$BiometricLogger;-><init>()V
@@ -32,7 +31,6 @@
 .method public static getInstance()Lcom/android/server/BinaryTransparencyService$BiometricLogger;
     .locals 1
 
-    .line 1120
     sget-object v0, Lcom/android/server/BinaryTransparencyService$BiometricLogger;->sInstance:Lcom/android/server/BinaryTransparencyService$BiometricLogger;
 
     return-object v0
@@ -63,7 +61,6 @@
 
     move-object/from16 v9, p9
 
-    .line 1139
     invoke-static/range {v0 .. v9}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

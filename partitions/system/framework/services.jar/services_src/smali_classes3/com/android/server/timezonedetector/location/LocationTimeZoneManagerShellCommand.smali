@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;)V
     .locals 0
 
-    .line 88
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 89
     iput-object p1, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->mService:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
     return-void
@@ -23,7 +21,6 @@
 .method public static convertControllerStateToProtoEnum(Ljava/lang/String;)I
     .locals 9
 
-    .line 309
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -225,7 +222,6 @@
 
     return v0
 
-    .line 375
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -261,7 +257,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 358
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -334,7 +329,6 @@
 
     const-string v0, "@null"
 
-    .line 387
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -350,7 +344,6 @@
 .method public static writeControllerStates(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/util/List;)V
     .locals 4
 
-    .line 301
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -370,14 +363,12 @@
 
     const-wide v1, 0x20e00000004L
 
-    .line 304
     invoke-static {v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->convertControllerStateToProtoEnum(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v3, "controller_states"
 
-    .line 302
     invoke-virtual {p0, v3, v1, v2, v0}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JI)V
 
     goto :goto_0
@@ -389,7 +380,6 @@
 .method public static writeProviderStates(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/util/List;Ljava/lang/String;J)V
     .locals 6
 
-    .line 333
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -407,15 +397,12 @@
 
     check-cast v0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;
 
-    .line 334
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/internal/util/dump/DualDumpOutputStream;->start(Ljava/lang/String;J)J
 
     move-result-wide v1
 
-    .line 335
     iget v0, v0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
-    .line 336
     invoke-static {v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->convertProviderStateEnumToProtoEnum(I)I
 
     move-result v0
@@ -424,10 +411,8 @@
 
     const-wide v4, 0x10e00000001L
 
-    .line 335
     invoke-virtual {p0, v3, v4, v5, v0}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JI)V
 
-    .line 337
     invoke-virtual {p0, v1, v2}, Lcom/android/internal/util/dump/DualDumpOutputStream;->end(J)V
 
     goto :goto_0
@@ -443,14 +428,12 @@
 
     if-nez p1, :cond_0
 
-    .line 95
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 98
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -543,14 +526,12 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 115
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 112
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->runDumpControllerState()I
 
@@ -558,7 +539,6 @@
 
     return p0
 
-    .line 109
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->runClearRecordedProviderStates()I
 
@@ -566,7 +546,6 @@
 
     return p0
 
-    .line 100
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->runStart()I
 
@@ -574,7 +553,6 @@
 
     return p0
 
-    .line 106
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->runStop()I
 
@@ -582,7 +560,6 @@
 
     return p0
 
-    .line 103
     :pswitch_4
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->runStartWithTestProviders()I
 
@@ -612,14 +589,12 @@
 .method public onHelp()V
     .locals 9
 
-    .line 122
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "location_time_zone_manager"
 
-    .line 123
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -634,19 +609,16 @@
 
     const-string v2, "  help\n"
 
-    .line 124
     invoke-virtual {p0, v2, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v1, "    Print this help text.\n"
 
     new-array v2, v0, [Ljava/lang/Object;
 
-    .line 125
     invoke-virtual {p0, v1, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v1, "start"
 
-    .line 126
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -659,14 +631,12 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 127
     invoke-virtual {p0, v2, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v2, "@null"
 
     const-string/jumbo v4, "start_with_test_providers"
 
-    .line 128
     filled-new-array {v4, v2}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -679,21 +649,18 @@
 
     new-array v5, v0, [Ljava/lang/Object;
 
-    .line 131
     invoke-virtual {p0, v2, v5}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v2, "    <record states> - true|false, determines whether state recording is enabled.\n"
 
     new-array v5, v0, [Ljava/lang/Object;
 
-    .line 133
     invoke-virtual {p0, v2, v5}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v2, "dump_state"
 
     const-string v5, "clear_recorded_provider_states"
 
-    .line 135
     filled-new-array {v2, v5}, [Ljava/lang/Object;
 
     move-result-object v6
@@ -704,7 +671,6 @@
 
     const-string/jumbo v6, "stop"
 
-    .line 137
     filled-new-array {v6}, [Ljava/lang/Object;
 
     move-result-object v7
@@ -715,10 +681,8 @@
 
     new-array v8, v0, [Ljava/lang/Object;
 
-    .line 138
     invoke-virtual {p0, v7, v8}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 139
     filled-new-array {v5}, [Ljava/lang/Object;
 
     move-result-object v5
@@ -727,7 +691,6 @@
 
     const-string v5, "    Clears recorded provider state. See also %s and %s.\n"
 
-    .line 140
     filled-new-array {v4, v2}, [Ljava/lang/Object;
 
     move-result-object v4
@@ -738,12 +701,10 @@
 
     new-array v5, v0, [Ljava/lang/Object;
 
-    .line 142
     invoke-virtual {p0, v4, v5}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v4, "--proto"
 
-    .line 143
     filled-new-array {v2, v4}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -756,22 +717,18 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 144
     invoke-virtual {p0, v2, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v2, "    See the LocationTimeZoneManagerServiceStateProto definition for details.\n"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 145
     invoke-virtual {p0, v2, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 146
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string/jumbo v2, "system_time"
 
-    .line 147
     filled-new-array {v2}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -782,7 +739,6 @@
 
     const-string/jumbo v2, "primary_location_time_zone_provider_mode_override"
 
-    .line 149
     filled-new-array {v2}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -793,7 +749,6 @@
 
     const-string v4, "enabled"
 
-    .line 150
     filled-new-array {v2, v4}, [Ljava/lang/Object;
 
     move-result-object v5
@@ -804,7 +759,6 @@
 
     const-string/jumbo v5, "secondary_location_time_zone_provider_mode_override"
 
-    .line 152
     filled-new-array {v5}, [Ljava/lang/Object;
 
     move-result-object v5
@@ -813,7 +767,6 @@
 
     const-string v5, "    Overrides the mode of the secondary provider. Values=%s|%s\n"
 
-    .line 153
     filled-new-array {v2, v4}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -822,7 +775,6 @@
 
     const-string v2, "location_time_zone_detection_uncertainty_delay_millis"
 
-    .line 155
     filled-new-array {v2}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -833,12 +785,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 156
     invoke-virtual {p0, v2, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v2, "ltzp_init_timeout_millis"
 
-    .line 158
     filled-new-array {v2}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -849,12 +799,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 159
     invoke-virtual {p0, v2, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v2, "ltzp_init_timeout_fuzz_millis"
 
-    .line 160
     filled-new-array {v2}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -865,12 +813,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 161
     invoke-virtual {p0, v2, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v2, "ltzp_event_filtering_age_threshold_millis"
 
-    .line 163
     filled-new-array {v2}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -881,37 +827,30 @@
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 164
     invoke-virtual {p0, v2, v3}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 166
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v2, "Typically, use \'%s\' to stop the service before setting individual flags and \'%s\' after to restart it.\n"
 
-    .line 167
     filled-new-array {v6, v1}, [Ljava/lang/Object;
 
     move-result-object v1
 
     invoke-virtual {p0, v2, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 170
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v1, "See \"adb shell cmd device_config\" for more information on setting flags.\n"
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 171
     invoke-virtual {p0, v1, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 172
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string/jumbo v0, "time_zone_detector"
 
-    .line 173
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -920,7 +859,6 @@
 
     invoke-virtual {p0, v1, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 175
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -929,17 +867,14 @@
 .method public final reportError(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 380
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Error: "
 
-    .line 381
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 382
     invoke-virtual {p1, p0}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
 
     return-void
@@ -948,7 +883,6 @@
 .method public final runClearRecordedProviderStates()I
     .locals 1
 
-    .line 221
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->mService:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
@@ -963,7 +897,6 @@
     :catch_0
     move-exception v0
 
-    .line 223
     invoke-virtual {p0, v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->reportError(Ljava/lang/Throwable;)V
 
     const/4 p0, 0x2
@@ -974,7 +907,6 @@
 .method public final runDumpControllerState()I
     .locals 13
 
-    .line 232
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->mService:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
@@ -993,7 +925,6 @@
     :cond_0
     const-string v2, "--proto"
 
-    .line 244
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
     move-result-object v3
@@ -1004,12 +935,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 246
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p0
 
-    .line 247
     new-instance v2, Lcom/android/internal/util/dump/DualDumpOutputStream;
 
     new-instance v3, Landroid/util/proto/ProtoOutputStream;
@@ -1020,13 +949,11 @@
 
     goto :goto_0
 
-    .line 249
     :cond_1
     new-instance v2, Lcom/android/internal/util/dump/DualDumpOutputStream;
 
     new-instance v3, Landroid/util/IndentingPrintWriter;
 
-    .line 250
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -1037,7 +964,6 @@
 
     invoke-direct {v2, v3}, Lcom/android/internal/util/dump/DualDumpOutputStream;-><init>(Landroid/util/IndentingPrintWriter;)V
 
-    .line 253
     :goto_0
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerServiceState;->getLastEvent()Lcom/android/server/timezonedetector/LocationAlgorithmEvent;
 
@@ -1045,7 +971,6 @@
 
     if-eqz p0, :cond_5
 
-    .line 254
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerServiceState;->getLastEvent()Lcom/android/server/timezonedetector/LocationAlgorithmEvent;
 
     move-result-object p0
@@ -1054,12 +979,10 @@
 
     const-wide v4, 0x10b00000001L
 
-    .line 255
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/internal/util/dump/DualDumpOutputStream;->start(Ljava/lang/String;J)J
 
     move-result-wide v6
 
-    .line 259
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/LocationAlgorithmEvent;->getAlgorithmStatus()Landroid/app/time/LocationTimeZoneAlgorithmStatus;
 
     move-result-object v3
@@ -1068,12 +991,10 @@
 
     const-wide v9, 0x10b00000003L
 
-    .line 260
     invoke-virtual {v2, v8, v9, v10}, Lcom/android/internal/util/dump/DualDumpOutputStream;->start(Ljava/lang/String;J)J
 
     move-result-wide v8
 
-    .line 263
     invoke-virtual {v3}, Landroid/app/time/LocationTimeZoneAlgorithmStatus;->getStatus()I
 
     move-result v3
@@ -1086,13 +1007,10 @@
 
     const-wide v11, 0x10e00000001L
 
-    .line 262
     invoke-virtual {v2, v10, v11, v12, v3}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JI)V
 
-    .line 264
     invoke-virtual {v2, v8, v9}, Lcom/android/internal/util/dump/DualDumpOutputStream;->end(J)V
 
-    .line 267
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/LocationAlgorithmEvent;->getSuggestion()Lcom/android/server/timezonedetector/GeolocationTimeZoneSuggestion;
 
     move-result-object v3
@@ -1101,17 +1019,14 @@
 
     const-string/jumbo v3, "suggestion"
 
-    .line 268
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/internal/util/dump/DualDumpOutputStream;->start(Ljava/lang/String;J)J
 
     move-result-wide v3
 
-    .line 270
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/LocationAlgorithmEvent;->getSuggestion()Lcom/android/server/timezonedetector/GeolocationTimeZoneSuggestion;
 
     move-result-object v5
 
-    .line 271
     invoke-virtual {v5}, Lcom/android/server/timezonedetector/GeolocationTimeZoneSuggestion;->getZoneIds()Ljava/util/List;
 
     move-result-object v5
@@ -1137,16 +1052,13 @@
 
     const-wide v10, 0x20900000001L
 
-    .line 272
     invoke-virtual {v2, v9, v10, v11, v8}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JLjava/lang/String;)V
 
     goto :goto_1
 
-    .line 275
     :cond_2
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/util/dump/DualDumpOutputStream;->end(J)V
 
-    .line 279
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/LocationAlgorithmEvent;->getDebugInfo()Ljava/util/List;
 
@@ -1173,16 +1085,13 @@
 
     const-wide v8, 0x20900000002L
 
-    .line 280
     invoke-virtual {v2, v4, v8, v9, v3}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JLjava/lang/String;)V
 
     goto :goto_2
 
-    .line 284
     :cond_4
     invoke-virtual {v2, v6, v7}, Lcom/android/internal/util/dump/DualDumpOutputStream;->end(J)V
 
-    .line 287
     :cond_5
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerServiceState;->getControllerStates()Ljava/util/List;
 
@@ -1190,7 +1099,6 @@
 
     invoke-static {v2, p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->writeControllerStates(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/util/List;)V
 
-    .line 288
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerServiceState;->getPrimaryProviderStates()Ljava/util/List;
 
     move-result-object p0
@@ -1201,7 +1109,6 @@
 
     invoke-static {v2, p0, v3, v4, v5}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->writeProviderStates(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/util/List;Ljava/lang/String;J)V
 
-    .line 291
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerServiceState;->getSecondaryProviderStates()Ljava/util/List;
 
     move-result-object p0
@@ -1212,7 +1119,6 @@
 
     invoke-static {v2, p0, v0, v3, v4}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->writeProviderStates(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/util/List;Ljava/lang/String;J)V
 
-    .line 294
     invoke-virtual {v2}, Lcom/android/internal/util/dump/DualDumpOutputStream;->flush()V
 
     return v1
@@ -1220,7 +1126,6 @@
     :catch_0
     move-exception v0
 
-    .line 234
     invoke-virtual {p0, v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->reportError(Ljava/lang/Throwable;)V
 
     const/4 p0, 0x1
@@ -1231,7 +1136,6 @@
 .method public final runStart()I
     .locals 1
 
-    .line 180
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->mService:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
@@ -1239,14 +1143,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 185
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Service started"
 
-    .line 186
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -1256,7 +1158,6 @@
     :catch_0
     move-exception v0
 
-    .line 182
     invoke-virtual {p0, v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->reportError(Ljava/lang/Throwable;)V
 
     const/4 p0, 0x1
@@ -1267,7 +1168,6 @@
 .method public final runStartWithTestProviders()I
     .locals 4
 
-    .line 191
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1276,7 +1176,6 @@
 
     move-result-object v0
 
-    .line 192
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -1285,7 +1184,6 @@
 
     move-result-object v1
 
-    .line 193
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v2
@@ -1294,7 +1192,6 @@
 
     move-result v2
 
-    .line 196
     :try_start_0
     iget-object v3, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->mService:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
@@ -1302,14 +1199,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Service started (test mode)"
 
-    .line 203
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -1319,7 +1214,6 @@
     :catch_0
     move-exception v0
 
-    .line 199
     invoke-virtual {p0, v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->reportError(Ljava/lang/Throwable;)V
 
     const/4 p0, 0x1
@@ -1330,7 +1224,6 @@
 .method public final runStop()I
     .locals 1
 
-    .line 209
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->mService:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
@@ -1338,14 +1231,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 214
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Service stopped"
 
-    .line 215
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -1355,7 +1246,6 @@
     :catch_0
     move-exception v0
 
-    .line 211
     invoke-virtual {p0, v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerShellCommand;->reportError(Ljava/lang/Throwable;)V
 
     const/4 p0, 0x1

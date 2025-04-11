@@ -15,19 +15,16 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
     if-lt p1, v0, :cond_0
 
-    .line 73
     iput p1, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mMaxHistorySize:I
 
     return-void
 
-    .line 71
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -55,19 +52,16 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 5
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
     if-nez v0, :cond_0
 
     const-string/jumbo p0, "{Empty}"
 
-    .line 114
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 116
     :cond_0
     iget v1, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mSetCount:I
 
@@ -77,14 +71,12 @@
 
     sub-int/2addr v1, v0
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->descendingIterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    .line 118
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -92,7 +84,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 119
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -101,15 +92,12 @@
 
     add-int/lit8 v2, v1, 0x1
 
-    .line 120
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(I)V
 
     const-string v1, "@"
 
-    .line 121
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 122
     invoke-virtual {v0}, Landroid/os/TimestampedValue;->getReferenceTimeMillis()J
 
     move-result-wide v3
@@ -126,10 +114,8 @@
 
     const-string v1, ": "
 
-    .line 123
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 124
     invoke-virtual {v0}, Landroid/os/TimestampedValue;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -140,7 +126,6 @@
 
     goto :goto_0
 
-    .line 127
     :cond_1
     :goto_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->flush()V
@@ -151,7 +136,6 @@
 .method public get()Ljava/lang/Object;
     .locals 1
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
     if-eqz v0, :cond_1
@@ -164,7 +148,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_0
     iget-object p0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
@@ -174,7 +157,6 @@
 
     check-cast p0, Landroid/os/TimestampedValue;
 
-    .line 83
     invoke-virtual {p0}, Landroid/os/TimestampedValue;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -191,7 +173,6 @@
 .method public getHistoryCount()I
     .locals 0
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
     if-nez p0, :cond_0
@@ -212,12 +193,10 @@
 .method public set(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
     if-nez v0, :cond_0
 
-    .line 93
     new-instance v0, Ljava/util/ArrayDeque;
 
     iget v1, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mMaxHistorySize:I
@@ -226,7 +205,6 @@
 
     iput-object v0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
-    .line 96
     :cond_0
     iget-object v0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
@@ -238,33 +216,27 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeLast()Ljava/lang/Object;
 
-    .line 100
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 102
     new-instance v1, Landroid/os/TimestampedValue;
 
-    .line 103
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     invoke-direct {v1, v2, v3, p1}, Landroid/os/TimestampedValue;-><init>(JLjava/lang/Object;)V
 
-    .line 104
     iget-object p1, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mValues:Ljava/util/ArrayDeque;
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
 
-    .line 105
     iget p1, p0, Lcom/android/server/timezonedetector/ReferenceWithHistory;->mSetCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -277,7 +249,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 139
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->get()Ljava/lang/Object;
 
     move-result-object p0

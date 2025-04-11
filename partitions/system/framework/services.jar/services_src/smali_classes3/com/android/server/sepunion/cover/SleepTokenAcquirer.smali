@@ -31,7 +31,6 @@
 .method public static synthetic $r8$lambda$0mHXhW7fOMiKWyPVYmhZM7ojIZQ(Lcom/android/server/sepunion/cover/SleepTokenAcquirer;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->doSleepToken()V
 
     return-void
@@ -40,7 +39,6 @@
 .method public static synthetic $r8$lambda$vkwKFYf0Y1mO4pnNbIirfIHGQZ8(Lcom/android/server/sepunion/cover/SleepTokenAcquirer;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->doDefaultSleepToken()V
 
     return-void
@@ -49,7 +47,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,34 +75,28 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;)V
     .locals 1
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     new-instance v0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/cover/SleepTokenAcquirer$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/sepunion/cover/SleepTokenAcquirer;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mSleepTokenTask:Ljava/lang/Runnable;
 
-    .line 25
     new-instance v0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/cover/SleepTokenAcquirer$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/sepunion/cover/SleepTokenAcquirer;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mDefaultSleepToken:Ljava/lang/Runnable;
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mContext:Landroid/content/Context;
 
-    .line 36
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     iput-object p1, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mHandler:Landroid/os/Handler;
 
-    .line 37
     const-class p1, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -124,14 +115,12 @@
 .method public final acquire(I)V
     .locals 3
 
-    .line 49
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->getSleepTokenAcquirer(I)Lcom/android/server/wm/ActivityTaskManagerInternal$SleepTokenAcquirer;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 51
     sget-object v0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,7 +139,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     invoke-interface {p0, p1}, Lcom/android/server/wm/ActivityTaskManagerInternal$SleepTokenAcquirer;->acquire(I)V
 
     :cond_0
@@ -160,7 +148,6 @@
 .method public final doDefaultSleepToken()V
     .locals 1
 
-    .line 93
     iget-boolean v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mSwitchState:Z
 
     if-nez v0, :cond_0
@@ -171,7 +158,6 @@
 
     const/4 v0, 0x0
 
-    .line 94
     invoke-virtual {p0, v0}, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->acquire(I)V
 
     :cond_0
@@ -181,7 +167,6 @@
 .method public final doSleepToken()V
     .locals 3
 
-    .line 80
     iget-boolean v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mSwitchState:Z
 
     if-nez v0, :cond_0
@@ -190,14 +175,12 @@
 
     if-nez v0, :cond_0
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mDefaultSleepToken:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mDefaultSleepToken:Ljava/lang/Runnable;
@@ -208,7 +191,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_0
     iget-object v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mHandler:Landroid/os/Handler;
 
@@ -220,7 +202,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mDefaultSleepToken:Ljava/lang/Runnable;
@@ -232,7 +213,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 87
     invoke-virtual {p0, v0}, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->release(I)V
 
     :goto_0
@@ -246,12 +226,10 @@
 
     if-nez p1, :cond_0
 
-    .line 66
     iget-object v1, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mDefaultAcquirer:Lcom/android/server/wm/ActivityTaskManagerInternal$SleepTokenAcquirer;
 
     if-nez v1, :cond_1
 
-    .line 67
     sget-object v1, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -268,7 +246,6 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mActivityTaskManagerInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     const-string v1, "cover"
@@ -281,13 +258,11 @@
 
     goto :goto_0
 
-    .line 71
     :cond_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mVirtualAcquirer:Lcom/android/server/wm/ActivityTaskManagerInternal$SleepTokenAcquirer;
 
     if-nez v1, :cond_1
 
-    .line 72
     sget-object v1, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -304,7 +279,6 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mActivityTaskManagerInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     const-string v1, "cover-virtual"
@@ -319,7 +293,6 @@
     :goto_0
     if-nez p1, :cond_2
 
-    .line 76
     iget-object p0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mDefaultAcquirer:Lcom/android/server/wm/ActivityTaskManagerInternal$SleepTokenAcquirer;
 
     goto :goto_1
@@ -334,14 +307,12 @@
 .method public final release(I)V
     .locals 3
 
-    .line 57
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->getSleepTokenAcquirer(I)Lcom/android/server/wm/ActivityTaskManagerInternal$SleepTokenAcquirer;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 59
     sget-object v0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -360,7 +331,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     invoke-interface {p0, p1}, Lcom/android/server/wm/ActivityTaskManagerInternal$SleepTokenAcquirer;->release(I)V
 
     :cond_0
@@ -370,20 +340,16 @@
 .method public update(ZZ)V
     .locals 0
 
-    .line 41
     iput-boolean p1, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mSwitchState:Z
 
-    .line 42
     iput-boolean p2, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mIsCoverAppCovered:Z
 
-    .line 44
     iget-object p1, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mSleepTokenTask:Ljava/lang/Runnable;
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 45
     iget-object p1, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/sepunion/cover/SleepTokenAcquirer;->mSleepTokenTask:Ljava/lang/Runnable;

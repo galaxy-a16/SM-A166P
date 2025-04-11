@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageInstallerSession;Z)V
     .locals 0
 
-    .line 4784
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$7;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iput-boolean p2, p0, Lcom/android/server/pm/PackageInstallerSession$7;->val$systemDataLoader:Z
@@ -28,7 +27,6 @@
 .method public onHealthStatus(II)V
     .locals 1
 
-    .line 4787
     iget-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$7;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {p1}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$fgetmDestroyed(Lcom/android/server/pm/PackageInstallerSession;)Z
@@ -62,7 +60,6 @@
 
     goto :goto_0
 
-    .line 4796
     :cond_1
     iget-boolean p2, p0, Lcom/android/server/pm/PackageInstallerSession$7;->val$systemDataLoader:Z
 
@@ -70,13 +67,11 @@
 
     goto :goto_0
 
-    .line 4803
     :cond_2
     iget-object p2, p0, Lcom/android/server/pm/PackageInstallerSession$7;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {p2, p1}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$fputmDataLoaderFinished(Lcom/android/server/pm/PackageInstallerSession;Z)V
 
-    .line 4804
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$7;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     const/16 p1, -0x14

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller;)V
     .locals 0
 
-    .line 831
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller;
 
     const/4 p1, 0x0
@@ -26,7 +25,6 @@
 .method public customPrinterIconCacheCleared(I)V
     .locals 1
 
-    .line 834
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller;
 
     const/4 v0, 0x0

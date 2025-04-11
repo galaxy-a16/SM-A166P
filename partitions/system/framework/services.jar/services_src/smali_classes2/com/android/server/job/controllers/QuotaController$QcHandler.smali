@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/QuotaController;Landroid/os/Looper;)V
     .locals 0
 
-    .line 2650
     iput-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
-    .line 2651
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,14 +23,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 12
 
-    .line 2656
     iget-object v0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object v0, v0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2657
     :try_start_0
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -48,11 +44,9 @@
 
     goto/16 :goto_8
 
-    .line 2841
     :pswitch_0
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2842
     iget-object v1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object v1, v1, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
@@ -61,7 +55,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    .line 2843
     :try_start_1
     iget-object v2, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -89,7 +82,6 @@
 
     goto/16 :goto_2
 
-    .line 2851
     :cond_0
     sget-object v2, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
@@ -97,7 +89,6 @@
 
     move-result-wide v2
 
-    .line 2852
     iget-object v6, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v6}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTempAllowlistGraceCache(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseLongArray;
@@ -118,7 +109,6 @@
 
     move-result-object v6
 
-    .line 2853
     invoke-virtual {v6, p1}, Landroid/util/SparseLongArray;->get(I)J
 
     move-result-wide v6
@@ -129,7 +119,6 @@
 
     goto :goto_1
 
-    .line 2860
     :cond_1
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
@@ -139,7 +128,6 @@
 
     const-string v6, "JobScheduler.Quota"
 
-    .line 2861
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,7 +144,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2863
     :cond_2
     iget-object v6, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -166,7 +153,6 @@
 
     invoke-virtual {v6, p1}, Landroid/util/SparseLongArray;->delete(I)V
 
-    .line 2864
     iget-object v6, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v6}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTopAppGraceCache(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseLongArray;
@@ -175,7 +161,6 @@
 
     invoke-virtual {v6, p1}, Landroid/util/SparseLongArray;->delete(I)V
 
-    .line 2865
     iget-object v6, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object v6, v6, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
@@ -186,12 +171,10 @@
 
     if-eqz v6, :cond_5
 
-    .line 2867
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v7
 
-    .line 2868
     invoke-virtual {v6}, Landroid/util/ArraySet;->size()I
 
     move-result v8
@@ -201,7 +184,6 @@
     :goto_0
     if-ltz v8, :cond_4
 
-    .line 2869
     iget-object v5, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v5}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmEJPkgTimers(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseArrayMap;
@@ -222,7 +204,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 2871
     invoke-virtual {v5, v2, v3, v4}, Lcom/android/server/job/controllers/QuotaController$Timer;->onStateChangedLocked(JZ)V
 
     :cond_3
@@ -230,36 +211,30 @@
 
     goto :goto_0
 
-    .line 2874
     :cond_4
     iget-object v2, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
-    .line 2875
     invoke-static {v2, p1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$mmaybeUpdateConstraintForUidLocked(Lcom/android/server/job/controllers/QuotaController;I)Landroid/util/ArraySet;
 
     move-result-object p1
 
-    .line 2876
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result v2
 
     if-lez v2, :cond_5
 
-    .line 2877
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {p0, p1}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
-    .line 2880
     :cond_5
     monitor-exit v1
 
     goto/16 :goto_8
 
-    .line 2855
     :cond_6
     :goto_1
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
@@ -270,7 +245,6 @@
 
     const-string p0, "JobScheduler.Quota"
 
-    .line 2856
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,13 +261,11 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2858
     :cond_7
     monitor-exit v1
 
     goto/16 :goto_8
 
-    .line 2846
     :cond_8
     :goto_2
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
@@ -304,7 +276,6 @@
 
     const-string p0, "JobScheduler.Quota"
 
-    .line 2847
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,7 +292,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2849
     :cond_9
     monitor-exit v1
 
@@ -330,7 +300,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2880
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -338,21 +307,17 @@
     :try_start_2
     throw p0
 
-    .line 2801
     :pswitch_1
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2802
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/app/usage/UsageEvents$Event;
 
-    .line 2803
     invoke-virtual {p1}, Landroid/app/usage/UsageEvents$Event;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2804
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v4
@@ -361,7 +326,6 @@
 
     const-string v4, "JobScheduler.Quota"
 
-    .line 2805
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,7 +344,6 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2806
     invoke-static {v1, v2}, Lcom/android/server/job/controllers/StateController;->packageToString(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -391,10 +354,8 @@
 
     move-result-object v6
 
-    .line 2805
     invoke-static {v4, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2808
     :cond_a
     invoke-virtual {p1}, Landroid/app/usage/UsageEvents$Event;->getEventType()I
 
@@ -430,7 +391,6 @@
 
     goto/16 :goto_8
 
-    .line 2833
     :cond_b
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -442,7 +402,6 @@
 
     goto/16 :goto_8
 
-    .line 2827
     :cond_c
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -454,7 +413,6 @@
 
     goto/16 :goto_8
 
-    .line 2813
     :cond_d
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -464,7 +422,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 2814
     :try_start_3
     iget-object v4, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -480,14 +437,12 @@
 
     if-nez v4, :cond_e
 
-    .line 2816
     new-instance v4, Lcom/android/server/job/controllers/QuotaController$TopAppTimer;
 
     iget-object v5, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-direct {v4, v5, v1, v2}, Lcom/android/server/job/controllers/QuotaController$TopAppTimer;-><init>(Lcom/android/server/job/controllers/QuotaController;ILjava/lang/String;)V
 
-    .line 2817
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {p0}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTopAppTrackers(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseArrayMap;
@@ -496,11 +451,9 @@
 
     invoke-virtual {p0, v1, v2, v4}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2819
     :cond_e
     invoke-virtual {v4, p1}, Lcom/android/server/job/controllers/QuotaController$TopAppTimer;->processEventLocked(Landroid/app/usage/UsageEvents$Event;)V
 
-    .line 2820
     monitor-exit v3
 
     goto/16 :goto_8
@@ -515,13 +468,11 @@
     :try_start_4
     throw p0
 
-    .line 2688
     :pswitch_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/content/pm/UserPackage;
 
-    .line 2689
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v1
@@ -530,7 +481,6 @@
 
     const-string v1, "JobScheduler.Quota"
 
-    .line 2690
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -551,7 +501,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2693
     :cond_f
     iget-object v1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -569,7 +518,6 @@
 
     if-gtz v1, :cond_11
 
-    .line 2696
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v1
@@ -594,7 +542,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2697
     :cond_10
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -602,7 +549,6 @@
 
     sget-object v2, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
-    .line 2699
     invoke-virtual {v2}, Ljava/time/Clock;->millis()J
 
     move-result-wide v2
@@ -611,23 +557,19 @@
 
     iget-object p1, p1, Landroid/content/pm/UserPackage;->packageName:Ljava/lang/String;
 
-    .line 2698
     invoke-static {p0, v2, v3, v4, p1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$mmaybeUpdateConstraintForPkgLocked(Lcom/android/server/job/controllers/QuotaController;JILjava/lang/String;)Landroid/util/ArraySet;
 
     move-result-object p0
 
-    .line 2697
     invoke-interface {v1, p0}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
     goto/16 :goto_8
 
-    .line 2705
     :cond_11
     invoke-virtual {p0, v2, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 2706
     iget-object v2, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget v3, p1, Landroid/content/pm/UserPackage;->userId:I
@@ -638,7 +580,6 @@
 
     move-result-wide v2
 
-    .line 2708
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v4
@@ -647,7 +588,6 @@
 
     const-string v4, "JobScheduler.Quota"
 
-    .line 2709
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -670,32 +610,26 @@
 
     invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2711
     :cond_12
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto/16 :goto_8
 
-    .line 2735
     :pswitch_3
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2736
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    .line 2737
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v6
 
-    .line 2738
     sget-object v7, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {v7}, Ljava/time/Clock;->millis()J
 
     move-result-wide v7
 
-    .line 2740
     iget-object v9, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object v9, v9, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
@@ -706,7 +640,6 @@
 
     if-gt p1, v3, :cond_14
 
-    .line 2743
     :try_start_5
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -716,7 +649,6 @@
 
     invoke-virtual {p1, v1, v5}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 2744
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {p1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTopAppGraceCache(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseLongArray;
@@ -725,7 +657,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/SparseLongArray;->delete(I)V
 
-    .line 2745
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {p1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmForegroundUids(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseBooleanArray;
@@ -738,12 +669,10 @@
 
     if-eqz p1, :cond_13
 
-    .line 2748
     monitor-exit v9
 
     goto/16 :goto_8
 
-    .line 2750
     :cond_13
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -765,7 +694,6 @@
     :cond_14
     if-gt p1, v2, :cond_16
 
-    .line 2755
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {p1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmForegroundUids(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseBooleanArray;
@@ -785,7 +713,6 @@
     :cond_15
     move p1, v4
 
-    .line 2756
     :goto_3
     iget-object v2, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -799,7 +726,6 @@
 
     goto :goto_4
 
-    .line 2760
     :cond_16
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -813,7 +739,6 @@
 
     move p1, v5
 
-    .line 2763
     :goto_4
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -827,7 +752,6 @@
 
     if-eqz v3, :cond_17
 
-    .line 2764
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmEJGracePeriodTopAppMs(Lcom/android/server/job/controllers/QuotaController;)J
@@ -836,7 +760,6 @@
 
     add-long/2addr v10, v7
 
-    .line 2765
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTopAppCache(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseBooleanArray;
@@ -845,7 +768,6 @@
 
     invoke-virtual {v3, v1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 2766
     iget-object v3, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmTopAppGraceCache(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseLongArray;
@@ -856,7 +778,6 @@
 
     const/4 v3, 0x6
 
-    .line 2767
     invoke-virtual {p0, v3, v1, v4}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v3
@@ -872,12 +793,10 @@
     :cond_17
     if-nez p1, :cond_18
 
-    .line 2771
     monitor-exit v9
 
     goto/16 :goto_8
 
-    .line 2775
     :cond_18
     :goto_5
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
@@ -898,27 +817,23 @@
 
     move-result-object p1
 
-    .line 2776
     invoke-virtual {p1, v6}, Landroid/util/SparseArrayMap;->indexOfKey(I)I
 
     move-result p1
 
     if-ltz p1, :cond_1c
 
-    .line 2777
     :cond_19
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object p1, p1, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 2778
     invoke-virtual {p1, v1}, Lcom/android/server/job/JobSchedulerService;->getPackagesForUidLocked(I)Landroid/util/ArraySet;
 
     move-result-object p1
 
     if-eqz p1, :cond_1c
 
-    .line 2780
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result v3
@@ -928,7 +843,6 @@
     :goto_6
     if-ltz v3, :cond_1c
 
-    .line 2781
     iget-object v4, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {v4}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmEJPkgTimers(Lcom/android/server/job/controllers/QuotaController;)Landroid/util/SparseArrayMap;
@@ -949,10 +863,8 @@
 
     if-eqz v4, :cond_1a
 
-    .line 2783
     invoke-virtual {v4, v7, v8, v2}, Lcom/android/server/job/controllers/QuotaController$Timer;->onStateChangedLocked(JZ)V
 
-    .line 2785
     :cond_1a
     iget-object v4, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -974,7 +886,6 @@
 
     if-eqz v4, :cond_1b
 
-    .line 2787
     invoke-virtual {v4, v7, v8, v2}, Lcom/android/server/job/controllers/QuotaController$Timer;->onStateChangedLocked(JZ)V
 
     :cond_1b
@@ -982,30 +893,25 @@
 
     goto :goto_6
 
-    .line 2792
     :cond_1c
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
-    .line 2793
     invoke-static {p1, v1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$mmaybeUpdateConstraintForUidLocked(Lcom/android/server/job/controllers/QuotaController;I)Landroid/util/ArraySet;
 
     move-result-object p1
 
-    .line 2794
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result v1
 
     if-lez v1, :cond_1d
 
-    .line 2795
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {p0, p1}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
-    .line 2797
     :cond_1d
     monitor-exit v9
 
@@ -1019,16 +925,13 @@
     :try_start_6
     throw p0
 
-    .line 2724
     :pswitch_4
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 2725
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2726
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v2
@@ -1037,7 +940,6 @@
 
     const-string v2, "JobScheduler.Quota"
 
-    .line 2727
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1058,7 +960,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2729
     :cond_1e
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -1066,7 +967,6 @@
 
     sget-object v3, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
-    .line 2730
     invoke-virtual {v3}, Ljava/time/Clock;->millis()J
 
     move-result-wide v3
@@ -1075,12 +975,10 @@
 
     move-result-object p0
 
-    .line 2729
     invoke-interface {v2, p0}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
     goto/16 :goto_8
 
-    .line 2716
     :pswitch_5
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
@@ -1092,29 +990,24 @@
 
     const-string v1, "Cleaning up timing sessions."
 
-    .line 2717
     invoke-static {p1, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2719
     :cond_1f
     iget-object p1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/QuotaController;->deleteObsoleteSessionsLocked()V
 
-    .line 2720
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-virtual {p0}, Lcom/android/server/job/controllers/QuotaController;->maybeScheduleCleanupAlarmLocked()V
 
     goto/16 :goto_8
 
-    .line 2659
     :pswitch_6
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/content/pm/UserPackage;
 
-    .line 2660
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v1
@@ -1123,7 +1016,6 @@
 
     const-string v1, "JobScheduler.Quota"
 
-    .line 2661
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1144,7 +1036,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2664
     :cond_20
     iget-object v1, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -1162,7 +1053,6 @@
 
     if-gtz v1, :cond_22
 
-    .line 2668
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v1
@@ -1187,7 +1077,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2669
     :cond_21
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -1195,7 +1084,6 @@
 
     sget-object v2, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
-    .line 2671
     invoke-virtual {v2}, Ljava/time/Clock;->millis()J
 
     move-result-wide v2
@@ -1204,23 +1092,19 @@
 
     iget-object p1, p1, Landroid/content/pm/UserPackage;->packageName:Ljava/lang/String;
 
-    .line 2670
     invoke-static {p0, v2, v3, v4, p1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$mmaybeUpdateConstraintForPkgLocked(Lcom/android/server/job/controllers/QuotaController;JILjava/lang/String;)Landroid/util/ArraySet;
 
     move-result-object p0
 
-    .line 2669
     invoke-interface {v1, p0}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
     goto :goto_8
 
-    .line 2677
     :cond_22
     invoke-virtual {p0, v4, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 2678
     iget-object v2, p0, Lcom/android/server/job/controllers/QuotaController$QcHandler;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget v3, p1, Landroid/content/pm/UserPackage;->userId:I
@@ -1231,7 +1115,6 @@
 
     move-result-wide v2
 
-    .line 2680
     invoke-static {}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v4
@@ -1240,7 +1123,6 @@
 
     const-string v4, "JobScheduler.Quota"
 
-    .line 2681
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1263,11 +1145,9 @@
 
     invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2683
     :cond_23
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 2885
     :goto_8
     monitor-exit v0
 

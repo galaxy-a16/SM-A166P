@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$ovWj1GU-Dyl-6GvlYAUAdjIFGUA(Landroid/os/IRemoteCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/AppTransition;->-$$Nest$smdoAnimationCallback(Landroid/os/IRemoteCallback;)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public constructor <init>(Lcom/android/server/wm/AppTransition;Landroid/os/IRemoteCallback;)V
     .locals 0
 
-    .line 1751
     iput-object p1, p0, Lcom/android/server/wm/AppTransition$1;->this$0:Lcom/android/server/wm/AppTransition;
 
     iput-object p2, p0, Lcom/android/server/wm/AppTransition$1;->val$callback:Landroid/os/IRemoteCallback;
@@ -40,7 +38,6 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 1757
     iget-object p1, p0, Lcom/android/server/wm/AppTransition$1;->this$0:Lcom/android/server/wm/AppTransition;
 
     iget-object p1, p1, Lcom/android/server/wm/AppTransition;->mHandler:Landroid/os/Handler;
@@ -63,13 +60,11 @@
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

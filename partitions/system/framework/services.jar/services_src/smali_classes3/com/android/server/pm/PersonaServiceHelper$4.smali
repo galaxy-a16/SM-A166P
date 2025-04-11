@@ -28,7 +28,6 @@
 .method public constructor <init>(Landroid/os/Handler;IILjava/lang/String;Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/Settings;Landroid/content/pm/IPackageDeleteObserver;Landroid/content/Context;)V
     .locals 0
 
-    .line 794
     iput-object p1, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$handler:Landroid/os/Handler;
 
     iput p2, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$userId:I
@@ -57,7 +56,6 @@
 
     const-string v0, "PersonaServiceHelper"
 
-    .line 796
     iget-object v1, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$handler:Landroid/os/Handler;
 
     invoke-virtual {v1, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -66,7 +64,6 @@
 
     const/4 v2, 0x1
 
-    .line 804
     :try_start_0
     invoke-static {}, Lcom/android/server/pm/PersonaServiceHelper;->-$$Nest$smgetApplicationPolicyService()Lcom/samsung/android/knox/application/IApplicationPolicy;
 
@@ -80,7 +77,6 @@
 
     new-instance v4, Lcom/samsung/android/knox/ContextInfo;
 
-    .line 805
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
@@ -97,14 +93,12 @@
 
     const-string v3, "This app uninstallation is not allowed"
 
-    .line 806
     invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v3, -0x1
 
     goto :goto_0
 
-    .line 809
     :cond_0
     iget-object v3, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$pms:Lcom/android/server/pm/PackageManagerService;
 
@@ -120,7 +114,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 810
     :try_start_1
     iget-object v4, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$packageName:Ljava/lang/String;
 
@@ -132,7 +125,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 811
     iget-object v4, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$settings:Lcom/android/server/pm/Settings;
 
     const-string v5, "android.uid.mmbi"
@@ -148,7 +140,6 @@
     :catch_0
     move v3, v2
 
-    .line 817
     :catch_1
     :cond_1
     :goto_0
@@ -163,12 +154,10 @@
 
     invoke-static {v4, v1, v5}, Lcom/android/server/pm/PmHook;->uninstallLog(Ljava/lang/String;ZI)V
 
-    .line 820
     iget-object v1, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$observer:Landroid/content/pm/IPackageDeleteObserver;
 
     if-eqz v1, :cond_3
 
-    .line 822
     :try_start_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -192,7 +181,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 823
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +197,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 824
     iget-object v1, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$observer:Landroid/content/pm/IPackageDeleteObserver;
 
     iget-object v4, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$packageName:Ljava/lang/String;
@@ -223,10 +210,8 @@
     :catch_2
     const-string v1, "Observer no longer exists."
 
-    .line 826
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 829
     :cond_3
     :goto_1
     iget-object p0, p0, Lcom/android/server/pm/PersonaServiceHelper$4;->val$context:Landroid/content/Context;

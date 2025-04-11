@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbUI;)V
     .locals 0
 
-    .line 245
     iput-object p1, p0, Lcom/android/server/usb/UsbUI$3;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 248
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +45,6 @@
 
     invoke-static {v0, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$3;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmSourcePower(Lcom/android/server/usb/UsbUI;)Z
@@ -56,7 +53,6 @@
 
     const-string/jumbo v1, "portStatus"
 
-    .line 250
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p2
@@ -69,17 +65,14 @@
 
     const-string p2, "UsbPortStatus is null"
 
-    .line 252
     invoke-static {v0, p2}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     iget-object p2, p0, Lcom/android/server/usb/UsbUI$3;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p2, v1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fputmSourcePower(Lcom/android/server/usb/UsbUI;Z)V
 
     goto :goto_0
 
-    .line 255
     :cond_0
     iget-object v2, p0, Lcom/android/server/usb/UsbUI$3;->this$0:Lcom/android/server/usb/UsbUI;
 
@@ -96,7 +89,6 @@
     :cond_1
     invoke-static {v2, v1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fputmSourcePower(Lcom/android/server/usb/UsbUI;Z)V
 
-    .line 257
     :goto_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -126,7 +118,6 @@
 
     invoke-static {v0, p2}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     iget-object p2, p0, Lcom/android/server/usb/UsbUI$3;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p2}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmSourcePower(Lcom/android/server/usb/UsbUI;)Z
@@ -135,7 +126,6 @@
 
     if-eq p1, p2, :cond_2
 
-    .line 259
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$3;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmIsEmergencyMode(Lcom/android/server/usb/UsbUI;)Z
@@ -144,7 +134,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 260
     iget-object p0, p0, Lcom/android/server/usb/UsbUI$3;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p0}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmSourcePower(Lcom/android/server/usb/UsbUI;)Z

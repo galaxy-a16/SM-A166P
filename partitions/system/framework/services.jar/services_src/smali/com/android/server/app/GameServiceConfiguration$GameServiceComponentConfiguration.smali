@@ -15,25 +15,18 @@
 .method public constructor <init>(Landroid/os/UserHandle;Landroid/content/ComponentName;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 95
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 97
     iput-object p1, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mUserHandle:Landroid/os/UserHandle;
 
-    .line 98
     iput-object p2, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mGameServiceComponentName:Landroid/content/ComponentName;
 
-    .line 99
     iput-object p3, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mGameSessionServiceComponentName:Landroid/content/ComponentName;
 
     return-void
@@ -50,7 +43,6 @@
 
     return v0
 
-    .line 123
     :cond_0
     instance-of v1, p1, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;
 
@@ -60,11 +52,9 @@
 
     return v2
 
-    .line 127
     :cond_1
     check-cast p1, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;
 
-    .line 129
     iget-object v1, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mUserHandle:Landroid/os/UserHandle;
 
     iget-object v3, p1, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mUserHandle:Landroid/os/UserHandle;
@@ -89,7 +79,6 @@
 
     iget-object p1, p1, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mGameSessionServiceComponentName:Landroid/content/ComponentName;
 
-    .line 131
     invoke-virtual {p0, p1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -108,7 +97,6 @@
 .method public getGameServiceComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 109
     iget-object p0, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mGameServiceComponentName:Landroid/content/ComponentName;
 
     return-object p0
@@ -117,7 +105,6 @@
 .method public getGameSessionServiceComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 114
     iget-object p0, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mGameSessionServiceComponentName:Landroid/content/ComponentName;
 
     return-object p0
@@ -126,7 +113,6 @@
 .method public getUserHandle()Landroid/os/UserHandle;
     .locals 0
 
-    .line 104
     iget-object p0, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mUserHandle:Landroid/os/UserHandle;
 
     return-object p0
@@ -135,7 +121,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mUserHandle:Landroid/os/UserHandle;
 
     iget-object v1, p0, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->mGameServiceComponentName:Landroid/content/ComponentName;
@@ -156,7 +141,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 144
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

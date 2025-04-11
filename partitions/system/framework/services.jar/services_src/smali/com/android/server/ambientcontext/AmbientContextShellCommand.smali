@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 40
     const-class v0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -32,81 +31,68 @@
 
     sput-object v0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->TAG:Ljava/lang/String;
 
-    .line 42
     new-instance v0, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     invoke-direct {v0}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 44
     invoke-virtual {v0, v1}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->addEventType(I)Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     move-result-object v0
 
     const/4 v2, 0x2
 
-    .line 45
     invoke-virtual {v0, v2}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->addEventType(I)Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     move-result-object v0
 
     const/4 v2, 0x3
 
-    .line 46
     invoke-virtual {v0, v2}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->addEventType(I)Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     move-result-object v0
 
-    .line 47
     invoke-virtual {v0}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->build()Landroid/app/ambientcontext/AmbientContextEventRequest;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->REQUEST:Landroid/app/ambientcontext/AmbientContextEventRequest;
 
-    .line 52
     new-instance v0, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     invoke-direct {v0}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;-><init>()V
 
     const v2, 0x186a1
 
-    .line 54
     invoke-virtual {v0, v2}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->addEventType(I)Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     move-result-object v0
 
-    .line 55
     invoke-virtual {v0}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->build()Landroid/app/ambientcontext/AmbientContextEventRequest;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->WEARABLE_REQUEST:Landroid/app/ambientcontext/AmbientContextEventRequest;
 
-    .line 57
     new-instance v0, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     invoke-direct {v0}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;-><init>()V
 
-    .line 59
     invoke-virtual {v0, v1}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->addEventType(I)Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     move-result-object v0
 
-    .line 60
     invoke-virtual {v0, v2}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->addEventType(I)Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;
 
     move-result-object v0
 
-    .line 61
     invoke-virtual {v0}, Landroid/app/ambientcontext/AmbientContextEventRequest$Builder;->build()Landroid/app/ambientcontext/AmbientContextEventRequest;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->MIXED_REQUEST:Landroid/app/ambientcontext/AmbientContextEventRequest;
 
-    .line 113
     new-instance v0, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;
 
     invoke-direct {v0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;-><init>()V
@@ -119,10 +105,8 @@
 .method public constructor <init>(Lcom/android/server/ambientcontext/AmbientContextManagerService;)V
     .locals 0
 
-    .line 66
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     return-void
@@ -133,12 +117,10 @@
 .method public final getBoundPackageName()I
     .locals 3
 
-    .line 259
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 260
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -147,7 +129,6 @@
 
     move-result v1
 
-    .line 261
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     sget-object v2, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->DEFAULT:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
@@ -162,7 +143,6 @@
 
     goto :goto_0
 
-    .line 263
     :cond_0
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -179,19 +159,16 @@
 .method public final getLastStatusCode()I
     .locals 1
 
-    .line 222
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
-    .line 223
     sget-object v0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->sTestableCallbackInternal:Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;
 
     invoke-virtual {v0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->getLastStatus()I
 
     move-result v0
 
-    .line 224
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(I)V
 
     const/4 p0, 0x0
@@ -204,14 +181,12 @@
 
     if-nez p1, :cond_0
 
-    .line 119
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 122
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -400,14 +375,12 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 146
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 124
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->runStartDetection()I
 
@@ -415,7 +388,6 @@
 
     return p0
 
-    .line 132
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->getLastStatusCode()I
 
@@ -423,7 +395,6 @@
 
     return p0
 
-    .line 134
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->runQueryServiceStatus()I
 
@@ -431,7 +402,6 @@
 
     return p0
 
-    .line 142
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->setTemporaryService()I
 
@@ -439,7 +409,6 @@
 
     return p0
 
-    .line 136
     :pswitch_4
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->runQueryWearableServiceStatus()I
 
@@ -447,7 +416,6 @@
 
     return p0
 
-    .line 144
     :pswitch_5
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->setTemporaryServices()I
 
@@ -455,7 +423,6 @@
 
     return p0
 
-    .line 128
     :pswitch_6
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->runMixedStartDetection()I
 
@@ -463,7 +430,6 @@
 
     return p0
 
-    .line 126
     :pswitch_7
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->runWearableStartDetection()I
 
@@ -471,7 +437,6 @@
 
     return p0
 
-    .line 138
     :pswitch_8
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->runQueryMixedServiceStatus()I
 
@@ -479,7 +444,6 @@
 
     return p0
 
-    .line 130
     :pswitch_9
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->runStopDetection()I
 
@@ -487,7 +451,6 @@
 
     return p0
 
-    .line 140
     :pswitch_a
     invoke-virtual {p0}, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->getBoundPackageName()I
 
@@ -529,98 +492,78 @@
 .method public onHelp()V
     .locals 3
 
-    .line 230
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "AmbientContextEvent commands: "
 
-    .line 231
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 232
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 233
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 234
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  start-detection USER_ID PACKAGE_NAME: Starts AmbientContextEvent detection."
 
-    .line 235
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  start-detection-wearable USER_ID PACKAGE_NAME: Starts AmbientContextEvent detection for wearable."
 
-    .line 236
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  start-detection-mixed USER_ID PACKAGE_NAME:  Starts AmbientContextEvent detection for mixed events."
 
-    .line 238
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  stop-detection USER_ID PACKAGE_NAME: Stops AmbientContextEvent detection."
 
-    .line 240
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  get-last-status-code: Prints the latest request status code."
 
-    .line 241
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  query-service-status USER_ID PACKAGE_NAME: Prints the service status code."
 
-    .line 242
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  query-wearable-service-status USER_ID PACKAGE_NAME: Prints the service status code for wearable."
 
-    .line 243
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  query-mixed-service-status USER_ID PACKAGE_NAME: Prints the service status code for mixed events."
 
-    .line 245
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  get-bound-package USER_ID:     Print the bound package that implements the service."
 
-    .line 247
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  set-temporary-service USER_ID [PACKAGE_NAME] [COMPONENT_NAME DURATION]"
 
-    .line 249
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Temporarily (for DURATION ms) changes the service implementation."
 
-    .line 250
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    To reset, call with just the USER_ID argument."
 
-    .line 251
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "  set-temporary-services USER_ID [FIRST_PACKAGE_NAME] [SECOND_PACKAGE_NAME] [COMPONENT_NAME DURATION]"
 
-    .line 252
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 254
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 255
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -629,7 +572,6 @@
 .method public final runMixedStartDetection()I
     .locals 6
 
-    .line 173
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -638,35 +580,28 @@
 
     move-result v0
 
-    .line 174
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 175
     iget-object v2, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     sget-object v3, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->MIXED_REQUEST:Landroid/app/ambientcontext/AmbientContextEventRequest;
 
     sget-object v4, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->sTestableCallbackInternal:Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;
 
-    .line 177
     invoke-static {v4}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateAmbientContextObserver(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/app/ambientcontext/IAmbientContextObserver;
 
     move-result-object v5
 
-    .line 175
     invoke-virtual {v2, v0, v3, v1, v5}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->startDetection(ILandroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
 
-    .line 178
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
-    .line 179
     invoke-static {v4}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateAmbientContextObserver(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/app/ambientcontext/IAmbientContextObserver;
 
     move-result-object v2
 
-    .line 178
     invoke-virtual {p0, v0, v3, v1, v2}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->newClientAdded(ILandroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
 
     const/4 p0, 0x0
@@ -677,7 +612,6 @@
 .method public final runQueryMixedServiceStatus()I
     .locals 4
 
-    .line 211
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -686,7 +620,6 @@
 
     move-result v0
 
-    .line 212
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -695,22 +628,18 @@
 
     const v3, 0x186a1
 
-    .line 213
     filled-new-array {v2, v3}, [I
 
     move-result-object v2
 
-    .line 216
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     sget-object v3, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->sTestableCallbackInternal:Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;
 
-    .line 217
     invoke-static {v3}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateRemoteStatusCallback(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/os/RemoteCallback;
 
     move-result-object v3
 
-    .line 216
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->queryServiceStatus(ILjava/lang/String;[ILandroid/os/RemoteCallback;)V
 
     const/4 p0, 0x0
@@ -721,7 +650,6 @@
 .method public final runQueryServiceStatus()I
     .locals 4
 
-    .line 191
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -730,7 +658,6 @@
 
     move-result v0
 
-    .line 192
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -739,22 +666,18 @@
 
     const/4 v3, 0x2
 
-    .line 193
     filled-new-array {v2, v3}, [I
 
     move-result-object v2
 
-    .line 196
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     sget-object v3, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->sTestableCallbackInternal:Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;
 
-    .line 197
     invoke-static {v3}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateRemoteStatusCallback(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/os/RemoteCallback;
 
     move-result-object v3
 
-    .line 196
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->queryServiceStatus(ILjava/lang/String;[ILandroid/os/RemoteCallback;)V
 
     const/4 p0, 0x0
@@ -765,7 +688,6 @@
 .method public final runQueryWearableServiceStatus()I
     .locals 4
 
-    .line 202
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -774,29 +696,24 @@
 
     move-result v0
 
-    .line 203
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
     const v2, 0x186a1
 
-    .line 204
     filled-new-array {v2}, [I
 
     move-result-object v2
 
-    .line 205
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     sget-object v3, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->sTestableCallbackInternal:Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;
 
-    .line 206
     invoke-static {v3}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateRemoteStatusCallback(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/os/RemoteCallback;
 
     move-result-object v3
 
-    .line 205
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->queryServiceStatus(ILjava/lang/String;[ILandroid/os/RemoteCallback;)V
 
     const/4 p0, 0x0
@@ -807,7 +724,6 @@
 .method public final runStartDetection()I
     .locals 6
 
-    .line 151
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -816,35 +732,28 @@
 
     move-result v0
 
-    .line 152
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 153
     iget-object v2, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     sget-object v3, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->REQUEST:Landroid/app/ambientcontext/AmbientContextEventRequest;
 
     sget-object v4, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->sTestableCallbackInternal:Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;
 
-    .line 155
     invoke-static {v4}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateAmbientContextObserver(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/app/ambientcontext/IAmbientContextObserver;
 
     move-result-object v5
 
-    .line 153
     invoke-virtual {v2, v0, v3, v1, v5}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->startDetection(ILandroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
 
-    .line 156
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
-    .line 157
     invoke-static {v4}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateAmbientContextObserver(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/app/ambientcontext/IAmbientContextObserver;
 
     move-result-object v2
 
-    .line 156
     invoke-virtual {p0, v0, v3, v1, v2}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->newClientAdded(ILandroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
 
     const/4 p0, 0x0
@@ -855,7 +764,6 @@
 .method public final runStopDetection()I
     .locals 2
 
-    .line 184
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -864,12 +772,10 @@
 
     move-result v0
 
-    .line 185
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 186
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->stopAmbientContextEvent(ILjava/lang/String;)V
@@ -882,7 +788,6 @@
 .method public final runWearableStartDetection()I
     .locals 6
 
-    .line 162
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -891,35 +796,28 @@
 
     move-result v0
 
-    .line 163
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 164
     iget-object v2, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     sget-object v3, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->WEARABLE_REQUEST:Landroid/app/ambientcontext/AmbientContextEventRequest;
 
     sget-object v4, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->sTestableCallbackInternal:Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;
 
-    .line 166
     invoke-static {v4}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateAmbientContextObserver(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/app/ambientcontext/IAmbientContextObserver;
 
     move-result-object v5
 
-    .line 164
     invoke-virtual {v2, v0, v3, v1, v5}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->startDetection(ILandroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
-    .line 168
     invoke-static {v4}, Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;->-$$Nest$mcreateAmbientContextObserver(Lcom/android/server/ambientcontext/AmbientContextShellCommand$TestableCallbackInternal;)Landroid/app/ambientcontext/IAmbientContextObserver;
 
     move-result-object v2
 
-    .line 167
     invoke-virtual {p0, v0, v3, v1, v2}, Lcom/android/server/ambientcontext/AmbientContextManagerService;->newClientAdded(ILandroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
 
     const/4 p0, 0x0
@@ -930,12 +828,10 @@
 .method public final setTemporaryService()I
     .locals 5
 
-    .line 268
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 269
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -944,7 +840,6 @@
 
     move-result v1
 
-    .line 270
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v2
@@ -953,17 +848,14 @@
 
     if-nez v2, :cond_0
 
-    .line 272
     iget-object v2, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     invoke-virtual {v2, v1}, Lcom/android/server/infra/AbstractMasterSystemService;->resetTemporaryService(I)V
 
     const-string v2, "AmbientContextDetectionService temporary reset. "
 
-    .line 273
     invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     const/4 v0, 0x1
@@ -972,7 +864,6 @@
 
     return v3
 
-    .line 278
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -982,12 +873,10 @@
 
     move-result v4
 
-    .line 279
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     invoke-virtual {p0, v1, v2, v4}, Lcom/android/server/infra/AbstractMasterSystemService;->setTemporaryService(ILjava/lang/String;I)V
 
-    .line 280
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1024,12 +913,10 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 287
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v1
 
-    .line 288
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v2
@@ -1038,19 +925,16 @@
 
     move-result v2
 
-    .line 289
     iget-object v3, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v2, v4}, Lcom/android/server/infra/AbstractMasterSystemService;->setDefaultServiceEnabled(IZ)Z
 
-    .line 290
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 291
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v5
@@ -1068,7 +952,6 @@
 
     aput-object v5, v0, v6
 
-    .line 300
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v3
@@ -1077,12 +960,10 @@
 
     move-result v3
 
-    .line 301
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     invoke-virtual {p0, v2, v0, v3}, Lcom/android/server/infra/AbstractMasterSystemService;->setTemporaryServices(I[Ljava/lang/String;I)V
 
-    .line 302
     sget-object p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1121,7 +1002,6 @@
 
     invoke-static {p0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1152,21 +1032,18 @@
 
     return v4
 
-    .line 293
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     invoke-virtual {v0, v2}, Lcom/android/server/infra/AbstractMasterSystemService;->resetTemporaryService(I)V
 
-    .line 294
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextShellCommand;->mService:Lcom/android/server/ambientcontext/AmbientContextManagerService;
 
     invoke-virtual {p0, v2, v6}, Lcom/android/server/infra/AbstractMasterSystemService;->setDefaultServiceEnabled(IZ)Z
 
     const-string p0, "AmbientContextDetectionService temporary reset."
 
-    .line 295
     invoke-virtual {v1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v4

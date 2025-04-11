@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/LegibilityColor;IZ)V
     .locals 0
 
-    .line 166
     iput-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     iput p2, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->val$which:I
@@ -32,7 +31,6 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 166
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/LegibilityColor$2;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -45,7 +43,6 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 5
 
-    .line 169
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,14 +71,12 @@
 
     invoke-static {v0, p1}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     iget-boolean p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->val$landscape:Z
 
     const/4 v1, 0x0
 
     if-eqz p1, :cond_2
 
-    .line 174
     sget-boolean p1, Lcom/samsung/android/wallpaper/Rune;->WPAPER_SUPPORT_ROTATABLE_WALLPAPER:Z
 
     const/16 v2, 0x5a
@@ -98,7 +93,6 @@
 
     goto :goto_0
 
-    .line 182
     :cond_0
     iget-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
@@ -118,7 +112,6 @@
 
     goto :goto_1
 
-    .line 177
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
@@ -133,7 +126,6 @@
 
     move-result-object p1
 
-    .line 178
     iget-object v2, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     invoke-static {v2}, Lcom/samsung/server/wallpaper/LegibilityColor;->-$$Nest$fgetmCallback(Lcom/samsung/server/wallpaper/LegibilityColor;)Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
@@ -154,7 +146,6 @@
 
     goto :goto_1
 
-    .line 186
     :cond_2
     iget-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
@@ -172,7 +163,6 @@
 
     move-result-object p1
 
-    .line 189
     :goto_1
     invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
@@ -182,7 +172,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 190
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,7 +192,6 @@
 
     return-object v3
 
-    .line 194
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -223,19 +211,16 @@
 
     invoke-static {v0, v2}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     aget-object v1, p1, v1
 
     if-nez v1, :cond_4
 
     const-string p0, "colors == null, return"
 
-    .line 197
     invoke-static {v0, p0}, Lcom/samsung/server/wallpaper/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v3
 
-    .line 201
     :cond_4
     iget-object v1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
@@ -249,7 +234,6 @@
 
     invoke-virtual {v1, v2, v4, p1}, Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;->saveSemWallpaperColors(IZ[Landroid/app/SemWallpaperColors;)V
 
-    .line 202
     iget-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$2;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     invoke-static {p1}, Lcom/samsung/server/wallpaper/LegibilityColor;->-$$Nest$fgetmCallback(Lcom/samsung/server/wallpaper/LegibilityColor;)Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
@@ -260,7 +244,6 @@
 
     invoke-virtual {p1, v1}, Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;->notifySemWallpaperColors(I)V
 
-    .line 204
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -285,7 +268,6 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 166
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/LegibilityColor$2;->onPostExecute(Ljava/lang/Void;)V
@@ -296,6 +278,5 @@
 .method public onPostExecute(Ljava/lang/Void;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

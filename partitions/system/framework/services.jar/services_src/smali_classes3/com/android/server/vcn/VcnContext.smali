@@ -17,12 +17,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcom/android/server/vcn/VcnNetworkProvider;Z)V
     .locals 1
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Missing context"
 
-    .line 41
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -33,7 +31,6 @@
 
     const-string p1, "Missing looper"
 
-    .line 42
     invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -44,7 +41,6 @@
 
     const-string p1, "Missing networkProvider"
 
-    .line 43
     invoke-static {p3, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-object p1, p3
@@ -53,7 +49,6 @@
 
     iput-object p3, p0, Lcom/android/server/vcn/VcnContext;->mVcnNetworkProvider:Lcom/android/server/vcn/VcnNetworkProvider;
 
-    .line 44
     iput-boolean p4, p0, Lcom/android/server/vcn/VcnContext;->mIsInTestMode:Z
 
     return-void
@@ -64,7 +59,6 @@
 .method public ensureRunningOnLooperThread()V
     .locals 1
 
-    .line 72
     invoke-virtual {p0}, Lcom/android/server/vcn/VcnContext;->getLooper()Landroid/os/Looper;
 
     move-result-object p0
@@ -81,7 +75,6 @@
 
     return-void
 
-    .line 73
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -95,7 +88,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 49
     iget-object p0, p0, Lcom/android/server/vcn/VcnContext;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -104,7 +96,6 @@
 .method public getLooper()Landroid/os/Looper;
     .locals 0
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/vcn/VcnContext;->mLooper:Landroid/os/Looper;
 
     return-object p0
@@ -113,7 +104,6 @@
 .method public getVcnNetworkProvider()Lcom/android/server/vcn/VcnNetworkProvider;
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/vcn/VcnContext;->mVcnNetworkProvider:Lcom/android/server/vcn/VcnNetworkProvider;
 
     return-object p0
@@ -122,7 +112,6 @@
 .method public isInTestMode()Z
     .locals 0
 
-    .line 63
     iget-boolean p0, p0, Lcom/android/server/vcn/VcnContext;->mIsInTestMode:Z
 
     return p0

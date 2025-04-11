@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 2518
     iput-object p1, p0, Lcom/android/server/StorageManagerService$6;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -24,7 +23,6 @@
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 1
 
-    .line 2521
     iget-object p0, p0, Lcom/android/server/StorageManagerService$6;->this$0:Lcom/android/server/StorageManagerService;
 
     const/4 v0, 0x0

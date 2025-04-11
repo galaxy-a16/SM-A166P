@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/RealTimeTokenService;)V
     .locals 0
 
-    .line 190
     iput-object p1, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,15 +27,12 @@
 
     const-string v0, "Boot Completed Receiver"
 
-    .line 193
     invoke-static {p2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     iget-object p2, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-static {p2}, Lcom/android/server/RealTimeTokenService;->-$$Nest$mgetSystemTime(Lcom/android/server/RealTimeTokenService;)V
 
-    .line 195
     iget-object p2, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-static {p2}, Lcom/android/server/RealTimeTokenService;->-$$Nest$fgetcurrentTime(Lcom/android/server/RealTimeTokenService;)J
@@ -53,12 +49,10 @@
 
     invoke-static {p2, v0, v1}, Lcom/android/server/RealTimeTokenService;->-$$Nest$fputbootingTime(Lcom/android/server/RealTimeTokenService;J)V
 
-    .line 196
     iget-object p2, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-virtual {p2}, Lcom/android/server/RealTimeTokenService;->initTokenStorage()I
 
-    .line 197
     iget-object p2, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-static {p2, p1}, Lcom/android/server/RealTimeTokenService;->-$$Nest$misNetworkAvailable(Lcom/android/server/RealTimeTokenService;Landroid/content/Context;)Z
@@ -75,7 +69,6 @@
 
     if-lez p1, :cond_1
 
-    .line 199
     :try_start_0
     iget-object p1, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
@@ -85,7 +78,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 200
     iget-object p1, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-static {p1}, Lcom/android/server/RealTimeTokenService;->-$$Nest$fgetmTimerObserve(Lcom/android/server/RealTimeTokenService;)Ljava/util/Timer;
@@ -94,20 +86,17 @@
 
     invoke-virtual {p1}, Ljava/util/Timer;->cancel()V
 
-    .line 201
     iget-object p1, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/android/server/RealTimeTokenService;->-$$Nest$fputmTimerObserve(Lcom/android/server/RealTimeTokenService;Ljava/util/Timer;)V
 
-    .line 203
     :cond_0
     iget-object p1, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-virtual {p1}, Lcom/android/server/RealTimeTokenService;->makeTimerTask()V
 
-    .line 204
     iget-object p1, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     new-instance p2, Ljava/util/Timer;
@@ -116,7 +105,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/RealTimeTokenService;->-$$Nest$fputmTimerObserve(Lcom/android/server/RealTimeTokenService;Ljava/util/Timer;)V
 
-    .line 205
     iget-object p1, p0, Lcom/android/server/RealTimeTokenService$4;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-static {p1}, Lcom/android/server/RealTimeTokenService;->-$$Nest$fgetmTimerObserve(Lcom/android/server/RealTimeTokenService;)Ljava/util/Timer;
@@ -142,7 +130,6 @@
     :catch_0
     move-exception p0
 
-    .line 207
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1

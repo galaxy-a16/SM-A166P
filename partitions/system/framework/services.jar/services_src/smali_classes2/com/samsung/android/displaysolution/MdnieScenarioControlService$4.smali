@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)V
     .locals 0
 
-    .line 2343
     iput-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$4;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -36,7 +34,6 @@
 
     if-nez p1, :cond_1
 
-    .line 2354
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$4;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {v0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmDisplayManager(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Landroid/hardware/display/DisplayManager;
@@ -53,14 +50,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 2356
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$4;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     iget-boolean p1, p1, Landroid/hardware/display/BrightnessInfo;->isAnimating:Z
 
     invoke-static {v0, p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmIsBrightnessAnimating(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 2357
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$4;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmIsBrightnessAnimating(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Z
@@ -87,7 +82,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 2358
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +110,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2359
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$4;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmSemDisplaySolutionManager(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/SemDisplaySolutionManager;
@@ -127,7 +120,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2360
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$4;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmSemDisplaySolutionManager(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/SemDisplaySolutionManager;
@@ -136,7 +128,6 @@
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/displaysolution/SemDisplaySolutionManager;->onAutoCurrentLimitStateChangedInt(I)V
 
-    .line 2361
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$4;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -149,6 +140,5 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

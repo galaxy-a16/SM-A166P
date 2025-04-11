@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$Ka9eCcIf2LJg1QLyEP2TMBWJE94(Lcom/android/server/am/SameProcessApplicationThread;Landroid/content/IIntentReceiver;Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZZIIILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p12}, Lcom/android/server/am/SameProcessApplicationThread;->lambda$scheduleRegisteredReceiver$1(Landroid/content/IIntentReceiver;Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZZIIILjava/lang/String;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$kjEGcLc7ZbkescnOjmZNX3gKyTY(Lcom/android/server/am/SameProcessApplicationThread;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/SameProcessApplicationThread;->lambda$scheduleReceiverList$2(Ljava/util/List;)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static synthetic $r8$lambda$lecB6zzqPsQtQaMq8sf-x89orFw(Lcom/android/server/am/SameProcessApplicationThread;Landroid/content/Intent;Landroid/content/pm/ActivityInfo;Landroid/content/res/CompatibilityInfo;ILjava/lang/String;Landroid/os/Bundle;ZZIIILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p12}, Lcom/android/server/am/SameProcessApplicationThread;->lambda$scheduleReceiver$0(Landroid/content/Intent;Landroid/content/pm/ActivityInfo;Landroid/content/res/CompatibilityInfo;ILjava/lang/String;Landroid/os/Bundle;ZZIIILjava/lang/String;)V
 
     return-void
@@ -40,7 +37,6 @@
 .method public static synthetic $r8$lambda$sl08OroIO_GkeASUPkigp7ekEBM(Lcom/android/server/am/SameProcessApplicationThread;Landroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/SameProcessApplicationThread;->lambda$schedulePing$3(Landroid/os/RemoteCallback;)V
 
     return-void
@@ -49,17 +45,14 @@
 .method public constructor <init>(Landroid/app/IApplicationThread;Landroid/os/Handler;)V
     .locals 0
 
-    .line 44
     invoke-direct {p0}, Landroid/app/IApplicationThread$Default;-><init>()V
 
-    .line 45
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Landroid/app/IApplicationThread;
 
     iput-object p1, p0, Lcom/android/server/am/SameProcessApplicationThread;->mWrapped:Landroid/app/IApplicationThread;
 
-    .line 46
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -74,7 +67,6 @@
 .method private synthetic lambda$schedulePing$3(Landroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 94
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/SameProcessApplicationThread;->mWrapped:Landroid/app/IApplicationThread;
 
@@ -87,7 +79,6 @@
     :catch_0
     move-exception p0
 
-    .line 96
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -100,7 +91,6 @@
 
     move-object v0, p0
 
-    .line 55
     :try_start_0
     iget-object v0, v0, Lcom/android/server/am/SameProcessApplicationThread;->mWrapped:Landroid/app/IApplicationThread;
 
@@ -137,7 +127,6 @@
     :catch_0
     move-exception v0
 
-    .line 59
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -148,7 +137,6 @@
 .method private synthetic lambda$scheduleReceiverList$2(Ljava/util/List;)V
     .locals 0
 
-    .line 83
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/SameProcessApplicationThread;->mWrapped:Landroid/app/IApplicationThread;
 
@@ -161,7 +149,6 @@
     :catch_0
     move-exception p0
 
-    .line 85
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -174,7 +161,6 @@
 
     move-object v0, p0
 
-    .line 70
     :try_start_0
     iget-object v0, v0, Lcom/android/server/am/SameProcessApplicationThread;->mWrapped:Landroid/app/IApplicationThread;
 
@@ -211,7 +197,6 @@
     :catch_0
     move-exception v0
 
-    .line 74
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -224,7 +209,6 @@
 .method public schedulePing(Landroid/os/RemoteCallback;)V
     .locals 2
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/am/SameProcessApplicationThread;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/am/SameProcessApplicationThread$$ExternalSyntheticLambda3;
@@ -241,7 +225,6 @@
 
     move-object/from16 v1, p0
 
-    .line 53
     iget-object v14, v1, Lcom/android/server/am/SameProcessApplicationThread;->mHandler:Landroid/os/Handler;
 
     new-instance v15, Lcom/android/server/am/SameProcessApplicationThread$$ExternalSyntheticLambda0;
@@ -282,7 +265,6 @@
 .method public scheduleReceiverList(Ljava/util/List;)V
     .locals 2
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/am/SameProcessApplicationThread;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/am/SameProcessApplicationThread$$ExternalSyntheticLambda2;
@@ -299,7 +281,6 @@
 
     move-object/from16 v1, p0
 
-    .line 68
     iget-object v14, v1, Lcom/android/server/am/SameProcessApplicationThread;->mHandler:Landroid/os/Handler;
 
     new-instance v15, Lcom/android/server/am/SameProcessApplicationThread$$ExternalSyntheticLambda1;

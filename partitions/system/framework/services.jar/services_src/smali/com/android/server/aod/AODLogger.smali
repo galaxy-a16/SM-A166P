@@ -25,14 +25,12 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 14
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/aod/AODLogger;->sLock:Ljava/lang/Object;
 
-    .line 15
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "[MM-dd HH:mm:ss.SSS]"
@@ -51,28 +49,22 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 17
     iput v0, p0, Lcom/android/server/aod/AODLogger;->mIndex:I
 
-    .line 18
     iput-boolean v0, p0, Lcom/android/server/aod/AODLogger;->mIsFull:Z
 
-    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/aod/AODLogger;->mLogs:Ljava/util/ArrayList;
 
-    .line 22
     iput-object p1, p0, Lcom/android/server/aod/AODLogger;->mName:Ljava/lang/String;
 
-    .line 23
     iput p2, p0, Lcom/android/server/aod/AODLogger;->mCapacity:I
 
     return-void
@@ -81,12 +73,10 @@
 .method public static getCurDateTime()Ljava/lang/String;
     .locals 2
 
-    .line 60
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 61
     sget-object v1, Lcom/android/server/aod/AODLogger;->mDateFormat:Ljava/text/SimpleDateFormat;
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
@@ -105,14 +95,12 @@
 .method public add(Ljava/lang/String;Z)V
     .locals 3
 
-    .line 27
     sget-object v0, Lcom/android/server/aod/AODLogger;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     if-eqz p2, :cond_0
 
-    .line 29
     :try_start_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -134,7 +122,6 @@
 
     move-result-object p1
 
-    .line 31
     :cond_0
     iget-boolean p2, p0, Lcom/android/server/aod/AODLogger;->mIsFull:Z
 
@@ -150,7 +137,6 @@
 
     if-ge p2, v1, :cond_1
 
-    .line 32
     iget-object p0, p0, Lcom/android/server/aod/AODLogger;->mLogs:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -160,34 +146,28 @@
     :cond_1
     const/4 p2, 0x1
 
-    .line 34
     iput-boolean p2, p0, Lcom/android/server/aod/AODLogger;->mIsFull:Z
 
-    .line 36
     iget-object v1, p0, Lcom/android/server/aod/AODLogger;->mLogs:Ljava/util/ArrayList;
 
     iget v2, p0, Lcom/android/server/aod/AODLogger;->mIndex:I
 
     invoke-virtual {v1, v2, p1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
     iget p1, p0, Lcom/android/server/aod/AODLogger;->mIndex:I
 
     add-int/2addr p1, p2
 
     iput p1, p0, Lcom/android/server/aod/AODLogger;->mIndex:I
 
-    .line 39
     iget p2, p0, Lcom/android/server/aod/AODLogger;->mCapacity:I
 
     if-lt p1, p2, :cond_2
 
     const/4 p1, 0x0
 
-    .line 40
     iput p1, p0, Lcom/android/server/aod/AODLogger;->mIndex:I
 
-    .line 43
     :cond_2
     :goto_0
     monitor-exit v0
@@ -207,12 +187,10 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 47
     sget-object v0, Lcom/android/server/aod/AODLogger;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 48
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -236,7 +214,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 49
     iget-object p0, p0, Lcom/android/server/aod/AODLogger;->mLogs:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -245,7 +222,6 @@
 
     const/4 v1, 0x1
 
-    .line 51
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -253,7 +229,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 52
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -284,18 +259,15 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     move v1, v3
 
     goto :goto_0
 
-    .line 55
     :cond_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 56
     monitor-exit v0
 
     return-void

@@ -20,7 +20,6 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 2
 
-    .line 1721
     iget p0, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0xe
@@ -37,24 +36,20 @@
 
     return p0
 
-    .line 1728
     :cond_0
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Runnable;
 
-    .line 1729
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     return v1
 
-    .line 1723
     :cond_1
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Lcom/android/server/pm/PackageManagerService;
 
-    .line 1724
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->writePendingRestrictions()V
 
     return v1

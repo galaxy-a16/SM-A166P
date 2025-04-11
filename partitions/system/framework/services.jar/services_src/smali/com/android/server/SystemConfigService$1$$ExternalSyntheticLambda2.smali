@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/os/CarrierAssociatedAppEntry;
 
     invoke-static {p1}, Lcom/android/server/SystemConfigService$1;->$r8$lambda$_Qae-FmJJofks6U8k-ivdhANRFo(Landroid/os/CarrierAssociatedAppEntry;)Ljava/lang/String;

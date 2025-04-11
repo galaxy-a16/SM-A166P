@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$UuPY92wCLZnRKKWm36wY6Nfmpc8(Ljava/io/File;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/nsflp/NSUtLogger;->lambda$deleteOldFiles$0(Ljava/io/File;)Z
 
     move-result p0
@@ -28,7 +27,6 @@
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
-    .line 39
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -37,7 +35,6 @@
 .method public static deleteFile(Ljava/io/File;)Z
     .locals 3
 
-    .line 78
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -46,12 +43,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 79
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result p0
 
-    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,7 +65,6 @@
 
     return p0
 
-    .line 83
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -96,7 +90,6 @@
 .method public static synthetic lambda$deleteOldFiles$0(Ljava/io/File;)Z
     .locals 1
 
-    .line 189
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -117,7 +110,6 @@
 
     const-string v0, "isSuccess = "
 
-    .line 226
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -128,7 +120,6 @@
 
     if-nez v1, :cond_0
 
-    .line 228
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->createNewFile()Z
 
@@ -137,7 +128,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 233
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,13 +152,11 @@
     :catch_0
     move-exception p0
 
-    .line 230
     :try_start_1
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 233
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,10 +188,8 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     throw p0
 
-    .line 236
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -232,7 +218,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 65
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -241,7 +226,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 66
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -249,13 +233,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
     :try_start_1
     invoke-virtual {v1, p1}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 68
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -268,7 +250,6 @@
     :catchall_0
     move-exception p0
 
-    .line 66
     :try_start_3
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -290,7 +271,6 @@
     :catch_0
     move-exception p0
 
-    .line 69
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -324,7 +304,6 @@
 
     const-string v0, "/data/log/gps/issuetracker/"
 
-    .line 89
     invoke-virtual {p0, v0}, Lcom/android/server/location/nsflp/NSUtLogger;->makeDirectory(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
@@ -337,12 +316,10 @@
 
     const-string p0, "createFile, directory is null"
 
-    .line 91
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 95
     :cond_0
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSUtLogger;->makeFile(Ljava/io/File;)Z
 
@@ -352,7 +329,6 @@
 
     const-string p0, "createFile, failed to make file"
 
-    .line 96
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -366,7 +342,6 @@
 .method public final createFileSizeMap(Ljava/io/File;)J
     .locals 8
 
-    .line 169
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p1
@@ -375,14 +350,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 170
     array-length v2, p1
 
     if-nez v2, :cond_0
 
     goto :goto_1
 
-    .line 174
     :cond_0
     array-length v2, p1
 
@@ -393,14 +366,12 @@
 
     aget-object v4, p1, v3
 
-    .line 175
     invoke-virtual {v4}, Ljava/io/File;->length()J
 
     move-result-wide v5
 
     add-long/2addr v0, v5
 
-    .line 177
     iget-object v7, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileSizeMap:Ljava/util/Map;
 
     invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -413,7 +384,6 @@
 
     invoke-interface {v7, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
     iget v4, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileCount:I
 
     add-int/lit8 v4, v4, 0x1
@@ -434,14 +404,12 @@
 
     const-string v0, "NSUtLogger"
 
-    .line 188
     new-instance v1, Ljava/io/File;
 
     const-string v2, "/data/log/gps/issuetracker/"
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 189
     new-instance v2, Lcom/android/server/location/nsflp/NSUtLogger$$ExternalSyntheticLambda0;
 
     invoke-direct {v2}, Lcom/android/server/location/nsflp/NSUtLogger$$ExternalSyntheticLambda0;-><init>()V
@@ -454,7 +422,6 @@
 
     return-void
 
-    .line 196
     :cond_0
     :try_start_0
     new-instance v2, Lcom/android/server/am/StackTracesDumpHelper$$ExternalSyntheticLambda1;
@@ -469,7 +436,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 203
     array-length v2, v1
 
     const/4 v3, 0x0
@@ -481,43 +447,36 @@
 
     aget-object v5, v1, v4
 
-    .line 205
     invoke-virtual {v5}, Ljava/io/File;->length()J
 
     move-result-wide v6
 
-    .line 206
     invoke-virtual {v5}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 208
     invoke-static {v5}, Lcom/android/server/location/nsflp/NSUtLogger;->deleteFile(Ljava/io/File;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 209
     iget-wide v9, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mDirectorySize:J
 
     sub-long/2addr v9, v6
 
     iput-wide v9, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mDirectorySize:J
 
-    .line 210
     iget-object v5, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileSizeMap:Ljava/util/Map;
 
     invoke-interface {v5, v8}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
     iget v5, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileCount:I
 
     add-int/lit8 v5, v5, -0x1
 
     iput v5, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileCount:I
 
-    .line 214
     :cond_1
     iget v5, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileCount:I
 
@@ -533,7 +492,6 @@
 
     if-gez v5, :cond_2
 
-    .line 215
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -573,7 +531,6 @@
 
     goto :goto_0
 
-    .line 220
     :cond_3
     :goto_1
     iput v3, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mOccurredExceptionCount:I
@@ -583,14 +540,12 @@
     :catch_0
     move-exception p1
 
-    .line 198
     iget p2, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mOccurredExceptionCount:I
 
     add-int/lit8 p2, p2, 0x1
 
     iput p2, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mOccurredExceptionCount:I
 
-    .line 199
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -627,27 +582,23 @@
 
     const-string v0, "NSUtLogger"
 
-    .line 44
     iget v1, p1, Landroid/os/Message;->what:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 46
     :try_start_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/location/nsflp/NSUtLogger$LogInfo;
 
-    .line 48
     new-instance v1, Ljava/io/File;
 
     iget-object v2, p1, Lcom/android/server/location/nsflp/NSUtLogger$LogInfo;->path:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -662,12 +613,10 @@
 
     const-string/jumbo p0, "writeFile, cannot create file"
 
-    .line 51
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 55
     :cond_0
     iget v2, p1, Lcom/android/server/location/nsflp/NSUtLogger$LogInfo;->type:I
 
@@ -683,7 +632,6 @@
     :catch_0
     move-exception p0
 
-    .line 59
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -709,7 +657,6 @@
     :catch_1
     move-exception p0
 
-    .line 57
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -738,12 +685,10 @@
 .method public final makeDirectory(Ljava/lang/String;)Ljava/io/File;
     .locals 3
 
-    .line 103
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 105
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -752,7 +697,6 @@
 
     if-nez v0, :cond_1
 
-    .line 106
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
     move-result p1
@@ -761,7 +705,6 @@
 
     const-string p1, "Success to create the directory"
 
-    .line 109
     invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -769,14 +712,12 @@
     :cond_0
     const-string p0, "Failed to create the directory"
 
-    .line 111
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 115
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -805,17 +746,14 @@
 .method public final updateFileSizeMap(Ljava/io/File;)V
     .locals 7
 
-    .line 242
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 243
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v1
 
-    .line 246
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileSizeMap:Ljava/util/Map;
 
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -824,7 +762,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 247
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileSizeMap:Ljava/util/Map;
 
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -839,7 +776,6 @@
 
     sub-long v3, v1, v3
 
-    .line 249
     iget-wide v5, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mDirectorySize:J
 
     add-long/2addr v5, v3
@@ -848,7 +784,6 @@
 
     goto :goto_0
 
-    .line 251
     :cond_0
     iget-wide v3, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mDirectorySize:J
 
@@ -856,14 +791,12 @@
 
     iput-wide v3, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mDirectorySize:J
 
-    .line 252
     iget p1, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileCount:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileCount:I
 
-    .line 254
     :goto_0
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileSizeMap:Ljava/util/Map;
 
@@ -879,7 +812,6 @@
 .method public writeData(ILjava/io/File;Ljava/lang/String;)V
     .locals 8
 
-    .line 121
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -892,12 +824,10 @@
 
     const-string/jumbo p0, "writeData, file is null"
 
-    .line 124
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 127
     :cond_0
     new-instance v3, Ljava/io/File;
 
@@ -905,26 +835,22 @@
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 130
     iget-object v4, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileSizeMap:Ljava/util/Map;
 
     if-nez v4, :cond_1
 
-    .line 131
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileSizeMap:Ljava/util/Map;
 
-    .line 132
     invoke-virtual {p0, v3}, Lcom/android/server/location/nsflp/NSUtLogger;->createFileSizeMap(Ljava/io/File;)J
 
     move-result-wide v3
 
     iput-wide v3, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mDirectorySize:J
 
-    .line 136
     :cond_1
     iget v3, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mFileCount:I
 
@@ -942,7 +868,6 @@
 
     if-ltz v3, :cond_4
 
-    .line 137
     :cond_2
     iget v3, p0, Lcom/android/server/location/nsflp/NSUtLogger;->mOccurredExceptionCount:I
 
@@ -950,16 +875,13 @@
 
     const-string/jumbo p0, "writeData, occurred exception count is over so return"
 
-    .line 138
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 141
     :cond_3
     invoke-virtual {p0, v0, v1}, Lcom/android/server/location/nsflp/NSUtLogger;->deleteOldFiles(J)V
 
-    .line 144
     :cond_4
     sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -975,7 +897,6 @@
 
     if-eqz p3, :cond_6
 
-    .line 147
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -992,14 +913,12 @@
 
     invoke-static {v2, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
     invoke-virtual {p0, p2}, Lcom/android/server/location/nsflp/NSUtLogger;->updateFileSizeMap(Ljava/io/File;)V
 
     if-ne p1, v5, :cond_5
 
     return-void
 
-    .line 153
     :cond_5
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/nsflp/NSUtLogger;->writeKmzFile(ILjava/io/File;)Z
 
@@ -1007,7 +926,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 154
     invoke-virtual {p2}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1020,12 +938,10 @@
 
     move-result-object p1
 
-    .line 155
     new-instance p2, Ljava/io/File;
 
     invoke-direct {p2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 156
     invoke-virtual {p0, p2}, Lcom/android/server/location/nsflp/NSUtLogger;->updateFileSizeMap(Ljava/io/File;)V
 
     goto :goto_0
@@ -1033,7 +949,6 @@
     :cond_6
     const-string/jumbo p0, "writeData, failed write data"
 
-    .line 159
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_7
@@ -1044,12 +959,10 @@
 .method public final writeKmzFile(ILjava/io/File;)Z
     .locals 0
 
-    .line 261
     new-instance p0, Lcom/android/server/location/nsflp/NSKmlWriter;
 
     invoke-direct {p0}, Lcom/android/server/location/nsflp/NSKmlWriter;-><init>()V
 
-    .line 262
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/nsflp/NSKmlWriter;->createKmzFile(ILjava/io/File;)Z
 
     move-result p0

@@ -9,14 +9,12 @@
 
     const-string v0, "android.permission.DUMP"
 
-    .line 92
     invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 94
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -31,7 +29,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p1
@@ -56,7 +53,6 @@
 
     move-result-object p0
 
-    .line 94
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -80,7 +76,6 @@
 
     goto :goto_0
 
-    .line 70
     :cond_0
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -88,10 +83,8 @@
 
     if-nez v0, :cond_2
 
-    .line 73
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
-    .line 74
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -100,17 +93,14 @@
 
     const-wide/16 v1, 0x0
 
-    .line 77
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 76
     invoke-virtual {v0, p0, v1, v2, v3}, Landroid/content/pm/PackageManagerInternal;->getPackageUid(Ljava/lang/String;JI)I
 
     move-result v0
 
-    .line 78
     invoke-static {p1, v0}, Landroid/os/UserHandle;->isSameApp(II)Z
 
     move-result v0
@@ -119,7 +109,6 @@
 
     return-void
 
-    .line 79
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -147,7 +136,6 @@
 
     throw v0
 
-    .line 71
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -165,27 +153,22 @@
 .method public static isValidActivityComponentName(Landroid/content/Context;Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 1
 
-    .line 48
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 51
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
-    .line 52
     invoke-virtual {p0, v0, p1, p3}, Landroid/content/pm/PackageManager;->queryIntentActivitiesAsUser(Landroid/content/Intent;ILandroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 53
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p0

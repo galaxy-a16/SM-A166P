@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/auditlog/AuditLogService;)V
     .locals 0
 
-    .line 193
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService$1;->this$0:Lcom/android/server/enterprise/auditlog/AuditLogService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public final logRemovableMediaEvents(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
     .locals 10
 
-    .line 204
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
@@ -36,7 +34,6 @@
     :cond_0
     const-string p2, "android.os.storage.extra.STORAGE_VOLUME"
 
-    .line 208
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -45,7 +42,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 209
     invoke-virtual {p1}, Landroid/os/storage/StorageVolume;->getUuid()Ljava/lang/String;
 
     move-result-object p2
@@ -54,7 +50,6 @@
 
     goto/16 :goto_1
 
-    .line 212
     :cond_1
     iget-object p2, p0, Lcom/android/server/enterprise/auditlog/AuditLogService$1;->this$0:Lcom/android/server/enterprise/auditlog/AuditLogService;
 
@@ -64,7 +59,6 @@
 
     move-result-object p2
 
-    .line 213
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -83,7 +77,6 @@
 
     check-cast v0, Landroid/os/storage/VolumeInfo;
 
-    .line 214
     invoke-virtual {v0}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
     move-result-object v1
@@ -112,7 +105,6 @@
 
     goto :goto_0
 
-    .line 217
     :cond_3
     invoke-virtual {v0}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
@@ -124,7 +116,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 218
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/AuditLogService$1;->this$0:Lcom/android/server/enterprise/auditlog/AuditLogService;
 
     const/4 v3, 0x0
@@ -135,7 +126,6 @@
 
     const/4 v6, 0x1
 
-    .line 219
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v7
@@ -148,15 +138,12 @@
 
     move-result-object v9
 
-    .line 220
     invoke-static {v1, v9}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 218
     invoke-virtual/range {v2 .. v9}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLogger(Lcom/samsung/android/knox/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 222
     :cond_4
     invoke-virtual {v0}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
@@ -168,7 +155,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 223
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/AuditLogService$1;->this$0:Lcom/android/server/enterprise/auditlog/AuditLogService;
 
     const/4 v2, 0x0
@@ -179,7 +165,6 @@
 
     const/4 v5, 0x1
 
-    .line 224
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v6
@@ -192,12 +177,10 @@
 
     move-result-object v8
 
-    .line 225
     invoke-static {v0, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 223
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/enterprise/auditlog/AuditLogService;->AuditLogger(Lcom/samsung/android/knox/ContextInfo;IIZILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -210,7 +193,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 196
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -225,12 +207,10 @@
 
     const-string v0, "Mounted"
 
-    .line 197
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/enterprise/auditlog/AuditLogService$1;->logRemovableMediaEvents(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 198
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -246,7 +226,6 @@
 
     const-string v0, "Unmounted"
 
-    .line 199
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/enterprise/auditlog/AuditLogService$1;->logRemovableMediaEvents(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
     :cond_1

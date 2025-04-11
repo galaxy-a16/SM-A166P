@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/job/restrictions/ThermalStatusRestriction;)V
     .locals 0
 
-    .line 163
     iput-object p1, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$2;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,12 +27,10 @@
 
     const/4 v0, 0x0
 
-    .line 166
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 167
     iget-object p2, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$2;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
     invoke-static {p2}, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->-$$Nest$fgetmForceRestricted(Lcom/android/server/job/restrictions/ThermalStatusRestriction;)Z
@@ -42,12 +39,10 @@
 
     if-eq p2, p1, :cond_2
 
-    .line 168
     iget-object p2, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$2;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
     invoke-static {p2, p1}, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->-$$Nest$fputmForceRestricted(Lcom/android/server/job/restrictions/ThermalStatusRestriction;Z)V
 
-    .line 169
     iget-object p1, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$2;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
     iget-object p2, p1, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;

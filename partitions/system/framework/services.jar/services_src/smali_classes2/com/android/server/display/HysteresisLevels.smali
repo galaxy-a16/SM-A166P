@@ -13,10 +13,8 @@
 .method public constructor <init>([I[I[I[I)V
     .locals 2
 
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     array-length v0, p1
 
     array-length v1, p2
@@ -29,34 +27,28 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 79
     invoke-virtual {p0, p1}, Lcom/android/server/display/HysteresisLevels;->convertArrayFromIntToFloat([I)[F
 
     move-result-object p1
 
-    .line 80
     invoke-virtual {p0, p2}, Lcom/android/server/display/HysteresisLevels;->convertArrayFromIntToFloat([I)[F
 
     move-result-object p2
 
-    .line 81
     invoke-virtual {p0, p3}, Lcom/android/server/display/HysteresisLevels;->convertArrayFromIntToFloat([I)[F
 
     move-result-object p3
 
-    .line 82
     invoke-virtual {p0, p4}, Lcom/android/server/display/HysteresisLevels;->convertArrayFromIntToFloat([I)[F
 
     move-result-object p4
 
-    .line 84
     invoke-static {p1, p2}, Landroid/util/Spline;->createSpline([F[F)Landroid/util/Spline;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/display/HysteresisLevels;->mHysteresisBrightSpline:Landroid/util/Spline;
 
-    .line 85
     invoke-static {p3, p4}, Landroid/util/Spline;->createSpline([F[F)Landroid/util/Spline;
 
     move-result-object p1
@@ -65,7 +57,6 @@
 
     return-void
 
-    .line 76
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -81,20 +72,17 @@
 .method public final convertArrayFromIntToFloat([I)[F
     .locals 2
 
-    .line 89
     array-length p0, p1
 
     new-array p0, p0, [F
 
     const/4 v0, 0x0
 
-    .line 91
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_0
 
-    .line 92
     aget v1, p1, v0
 
     int-to-float v1, v1
@@ -114,10 +102,8 @@
 
     const-string v0, "HysteresisLevels"
 
-    .line 167
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,7 +122,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 175
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,7 +146,6 @@
 .method public getBrighteningThreshold(F)F
     .locals 0
 
-    .line 114
     iget-object p0, p0, Lcom/android/server/display/HysteresisLevels;->mHysteresisBrightSpline:Landroid/util/Spline;
 
     invoke-virtual {p0, p1}, Landroid/util/Spline;->interpolate(F)F
@@ -180,7 +164,6 @@
 .method public getDarkeningThreshold(F)F
     .locals 0
 
-    .line 133
     iget-object p0, p0, Lcom/android/server/display/HysteresisLevels;->mHysteresisDarkSpline:Landroid/util/Spline;
 
     invoke-virtual {p0, p1}, Landroid/util/Spline;->interpolate(F)F
@@ -193,7 +176,6 @@
 
     if-ltz p1, :cond_0
 
-    .line 134
     invoke-static {p0}, Ljava/lang/Math;->round(F)I
 
     move-result p0

@@ -18,7 +18,6 @@
 .method public static bridge synthetic -$$Nest$mrunCommandLocked(Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;Lcom/android/server/wm/DisplayHashController$Command;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->runCommandLocked(Lcom/android/server/wm/DisplayHashController$Command;)V
 
     return-void
@@ -27,7 +26,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayHashController;)V
     .locals 0
 
-    .line 463
     iput-object p1, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->this$0:Lcom/android/server/wm/DisplayHashController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +36,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/DisplayHashController;Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;-><init>(Lcom/android/server/wm/DisplayHashController;)V
 
     return-void
@@ -49,7 +46,6 @@
 .method public onBindingDied(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 505
     iget-object p1, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->this$0:Lcom/android/server/wm/DisplayHashController;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayHashController;->-$$Nest$fgetmServiceConnectionLock(Lcom/android/server/wm/DisplayHashController;)Ljava/lang/Object;
@@ -60,11 +56,9 @@
 
     const/4 v0, 0x0
 
-    .line 506
     :try_start_0
     iput-object v0, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mRemoteService:Landroid/service/displayhash/IDisplayHashingService;
 
-    .line 507
     monitor-exit p1
 
     return-void
@@ -82,7 +76,6 @@
 .method public onNullBinding(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 513
     iget-object p1, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->this$0:Lcom/android/server/wm/DisplayHashController;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayHashController;->-$$Nest$fgetmServiceConnectionLock(Lcom/android/server/wm/DisplayHashController;)Ljava/lang/Object;
@@ -93,11 +86,9 @@
 
     const/4 v0, 0x0
 
-    .line 514
     :try_start_0
     iput-object v0, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mRemoteService:Landroid/service/displayhash/IDisplayHashingService;
 
-    .line 515
     monitor-exit p1
 
     return-void
@@ -115,7 +106,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 6
 
-    .line 473
     iget-object v0, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->this$0:Lcom/android/server/wm/DisplayHashController;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayHashController;->-$$Nest$fgetmServiceConnectionLock(Lcom/android/server/wm/DisplayHashController;)Ljava/lang/Object;
@@ -124,7 +114,6 @@
 
     monitor-enter v0
 
-    .line 474
     :try_start_0
     invoke-static {p2}, Landroid/service/displayhash/IDisplayHashingService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/displayhash/IDisplayHashingService;
 
@@ -132,12 +121,10 @@
 
     iput-object p2, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mRemoteService:Landroid/service/displayhash/IDisplayHashingService;
 
-    .line 475
     iget-object p2, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mQueuedCommands:Ljava/util/ArrayList;
 
     if-eqz p2, :cond_1
 
-    .line 476
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
     move-result p2
@@ -147,7 +134,6 @@
     :goto_0
     if-ge v1, p2, :cond_0
 
-    .line 479
     iget-object v2, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mQueuedCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -158,7 +144,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 482
     :try_start_1
     iget-object v3, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mRemoteService:Landroid/service/displayhash/IDisplayHashingService;
 
@@ -175,7 +160,6 @@
     :try_start_2
     const-string v3, "WindowManager"
 
-    .line 484
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,10 +190,8 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 487
     iput-object p1, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mQueuedCommands:Ljava/util/ArrayList;
 
-    .line 491
     :cond_1
     monitor-exit v0
 
@@ -228,7 +210,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 497
     iget-object p1, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->this$0:Lcom/android/server/wm/DisplayHashController;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayHashController;->-$$Nest$fgetmServiceConnectionLock(Lcom/android/server/wm/DisplayHashController;)Ljava/lang/Object;
@@ -239,11 +220,9 @@
 
     const/4 v0, 0x0
 
-    .line 498
     :try_start_0
     iput-object v0, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mRemoteService:Landroid/service/displayhash/IDisplayHashingService;
 
-    .line 499
     monitor-exit p1
 
     return-void
@@ -261,17 +240,14 @@
 .method public final runCommandLocked(Lcom/android/server/wm/DisplayHashController$Command;)V
     .locals 2
 
-    .line 522
     iget-object v0, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mRemoteService:Landroid/service/displayhash/IDisplayHashingService;
 
     if-nez v0, :cond_1
 
-    .line 524
     iget-object v0, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mQueuedCommands:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 525
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -280,7 +256,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mQueuedCommands:Ljava/util/ArrayList;
 
-    .line 527
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayHashController$DisplayHashingServiceConnection;->mQueuedCommands:Ljava/util/ArrayList;
 
@@ -288,7 +263,6 @@
 
     goto :goto_0
 
-    .line 531
     :cond_1
     :try_start_0
     invoke-interface {p1, v0}, Lcom/android/server/wm/DisplayHashController$Command;->run(Landroid/service/displayhash/IDisplayHashingService;)V
@@ -300,7 +274,6 @@
     :catch_0
     move-exception p0
 
-    .line 533
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

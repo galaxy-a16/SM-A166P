@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;)V
     .locals 0
 
-    .line 200
     iput-object p1, p0, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector$2;->this$0:Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -24,17 +23,14 @@
 .method public run()V
     .locals 2
 
-    .line 203
     iget-object v0, p0, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector$2;->this$0:Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;->mTimer:Ljava/util/Timer;
 
-    .line 204
     invoke-virtual {v0}, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;->stop()V
 
-    .line 207
     iget-object p0, p0, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector$2;->this$0:Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;
 
     invoke-virtual {p0}, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;->getLastKnownLocation()Landroid/location/Location;

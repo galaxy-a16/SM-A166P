@@ -17,7 +17,6 @@
 .method public getClock()Ljava/time/Clock;
     .locals 3
 
-    .line 126
     new-instance p0, Landroid/os/BestClock;
 
     sget-object v0, Ljava/time/ZoneOffset;->UTC:Ljava/time/ZoneOffset;
@@ -26,7 +25,6 @@
 
     move-result-object v1
 
-    .line 127
     invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
 
     move-result-object v2

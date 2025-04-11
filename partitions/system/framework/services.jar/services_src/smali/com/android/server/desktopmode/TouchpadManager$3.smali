@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/TouchpadManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 80
     iput-object p1, p0, Lcom/android/server/desktopmode/TouchpadManager$3;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     invoke-direct {p0, p2}, Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;-><init>(Ljava/lang/String;)V
@@ -26,14 +25,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 83
     invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 84
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager$3;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/TouchpadManager;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/TouchpadManager;)Landroid/content/Context;

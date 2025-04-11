@@ -31,10 +31,8 @@
 
     move-object v0, p0
 
-    .line 1496
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1497
     new-instance v10, Landroid/hardware/usb/UsbPort;
 
     move-object v1, v10
@@ -61,10 +59,8 @@
 
     const/4 v1, 0x0
 
-    .line 1503
     iput v1, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mComplianceWarningChange:I
 
-    .line 1504
     iput v1, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mDisplayPortAltModeChange:I
 
     return-void
@@ -75,7 +71,6 @@
 .method public complianceWarningsChanged([I)Z
     .locals 1
 
-    .line 1508
     iget-object v0, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     invoke-virtual {v0}, Landroid/hardware/usb/UsbPortStatus;->getComplianceWarnings()[I
@@ -90,7 +85,6 @@
 
     const/4 p1, 0x0
 
-    .line 1509
     iput p1, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mComplianceWarningChange:I
 
     return p1
@@ -98,7 +92,6 @@
     :cond_0
     const/4 p1, 0x1
 
-    .line 1512
     iput p1, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mComplianceWarningChange:I
 
     return p1
@@ -107,17 +100,14 @@
 .method public displayPortAltModeChanged(Landroid/hardware/usb/DisplayPortAltModeInfo;)Z
     .locals 3
 
-    .line 1518
     iget-object v0, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1519
     invoke-virtual {v0}, Landroid/hardware/usb/UsbPortStatus;->getDisplayPortAltModeInfo()Landroid/hardware/usb/DisplayPortAltModeInfo;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 1521
     iput v1, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mDisplayPortAltModeChange:I
 
     const/4 v2, 0x1
@@ -126,7 +116,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1525
     iput v2, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mDisplayPortAltModeChange:I
 
     return v2
@@ -136,7 +125,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1531
     iput v2, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mDisplayPortAltModeChange:I
 
     return v2
@@ -144,7 +132,6 @@
     :cond_1
     return v1
 
-    .line 1537
     :cond_2
     invoke-virtual {v0, p1}, Landroid/hardware/usb/DisplayPortAltModeInfo;->equals(Ljava/lang/Object;)Z
 
@@ -152,7 +139,6 @@
 
     if-nez p1, :cond_3
 
-    .line 1538
     iput v2, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mDisplayPortAltModeChange:I
 
     return v2
@@ -164,14 +150,12 @@
 .method public dump(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/lang/String;J)V
     .locals 9
 
-    .line 1695
     invoke-virtual {p1, p2, p3, p4}, Lcom/android/internal/util/dump/DualDumpOutputStream;->start(Ljava/lang/String;J)J
 
     move-result-wide v7
 
     const-wide v1, 0x10b00000001L
 
-    .line 1697
     iget-object v3, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPort:Landroid/hardware/usb/UsbPort;
 
     const-string/jumbo v4, "port"
@@ -180,7 +164,6 @@
 
     const-wide v1, 0x10b00000002L
 
-    .line 1698
     iget-object v3, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     const-string/jumbo v4, "status"
@@ -189,7 +172,6 @@
 
     const-wide v1, 0x10800000003L
 
-    .line 1699
     iget-boolean v3, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangeMode:Z
 
     const-string v4, "can_change_mode"
@@ -198,7 +180,6 @@
 
     const-wide v1, 0x10800000004L
 
-    .line 1700
     iget-boolean v3, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangePowerRole:Z
 
     const-string v4, "can_change_power_role"
@@ -207,7 +188,6 @@
 
     const-wide v1, 0x10800000005L
 
-    .line 1702
     iget-boolean v3, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangeDataRole:Z
 
     const-string v4, "can_change_data_role"
@@ -218,7 +198,6 @@
 
     const-wide v3, 0x10300000006L
 
-    .line 1704
     iget-wide v5, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mConnectedAtMillis:J
 
     move-object v1, p1
@@ -229,14 +208,12 @@
 
     const-wide v2, 0x10300000007L
 
-    .line 1706
     iget-wide v4, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mLastConnectDurationMillis:J
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JJ)V
 
-    .line 1708
     invoke-virtual {p1, v7, v8}, Lcom/android/internal/util/dump/DualDumpOutputStream;->end(J)V
 
     return-void
@@ -249,19 +226,16 @@
 
     move-object/from16 v11, p13
 
-    .line 1637
     iget-object v1, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     if-eqz v1, :cond_0
 
-    .line 1638
     invoke-virtual {v0, v11}, Lcom/android/server/usb/UsbPortManager$PortInfo;->complianceWarningsChanged([I)Z
 
     move-result v1
 
     move-object/from16 v13, p15
 
-    .line 1639
     invoke-virtual {v0, v13}, Lcom/android/server/usb/UsbPortManager$PortInfo;->displayPortAltModeChanged(Landroid/hardware/usb/DisplayPortAltModeInfo;)Z
 
     move-result v2
@@ -279,26 +253,21 @@
 
     const/4 v2, 0x0
 
-    .line 1642
     :goto_0
     iput-boolean v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangeMode:Z
 
     move/from16 v3, p4
 
-    .line 1643
     iput-boolean v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangePowerRole:Z
 
     move/from16 v3, p6
 
-    .line 1644
     iput-boolean v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangeDataRole:Z
 
-    .line 1645
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     if-eqz v3, :cond_4
 
-    .line 1646
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getCurrentMode()I
 
     move-result v3
@@ -309,7 +278,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1647
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getCurrentPowerRole()I
 
     move-result v3
@@ -320,7 +288,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1648
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getCurrentDataRole()I
 
     move-result v3
@@ -331,7 +298,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1649
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getSupportedRoleCombinations()I
 
     move-result v3
@@ -342,7 +308,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1651
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getContaminantProtectionStatus()I
 
     move-result v3
@@ -353,7 +318,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1653
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getContaminantDetectionStatus()I
 
     move-result v3
@@ -364,7 +328,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1655
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getUsbDataStatus()I
 
     move-result v3
@@ -375,7 +338,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1657
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->isPowerTransferLimited()Z
 
     move-result v3
@@ -386,7 +348,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1659
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getPowerBrickConnectionStatus()I
 
     move-result v3
@@ -397,7 +358,6 @@
 
     iget-object v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1661
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->getPlugState()I
 
     move-result v3
@@ -413,7 +373,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1676
     :cond_2
     new-instance v3, Landroid/hardware/usb/UsbPortStatus;
 
@@ -500,7 +459,6 @@
     :cond_d
     move/from16 v14, p14
 
-    .line 1663
     :goto_1
     iget-object v1, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
@@ -512,10 +470,8 @@
 
     if-lez v1, :cond_e
 
-    .line 1664
     iput v3, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mComplianceWarningChange:I
 
-    .line 1666
     :cond_e
     new-instance v2, Landroid/hardware/usb/UsbPortStatus;
 
@@ -555,7 +511,6 @@
 
     move/from16 v14, v16
 
-    .line 1683
     :goto_2
     iget-object v1, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
@@ -573,19 +528,16 @@
 
     if-nez v1, :cond_f
 
-    .line 1684
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
     iput-wide v4, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mConnectedAtMillis:J
 
-    .line 1685
     iput-wide v2, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mLastConnectDurationMillis:J
 
     goto :goto_3
 
-    .line 1686
     :cond_f
     iget-object v1, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
@@ -601,7 +553,6 @@
 
     if-eqz v1, :cond_10
 
-    .line 1687
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
@@ -612,7 +563,6 @@
 
     iput-wide v4, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mLastConnectDurationMillis:J
 
-    .line 1688
     iput-wide v2, v0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mConnectedAtMillis:J
 
     :cond_10
@@ -623,7 +573,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1713
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

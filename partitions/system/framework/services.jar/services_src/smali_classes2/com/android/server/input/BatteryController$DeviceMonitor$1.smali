@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/input/BatteryController$DeviceMonitor;I)V
     .locals 0
 
-    .line 633
     iput-object p1, p0, Lcom/android/server/input/BatteryController$DeviceMonitor$1;->this$1:Lcom/android/server/input/BatteryController$DeviceMonitor;
 
     iput p2, p0, Lcom/android/server/input/BatteryController$DeviceMonitor$1;->val$deviceId:I
@@ -28,7 +27,6 @@
 .method public onBatteryUEvent(J)V
     .locals 1
 
-    .line 636
     iget-object v0, p0, Lcom/android/server/input/BatteryController$DeviceMonitor$1;->this$1:Lcom/android/server/input/BatteryController$DeviceMonitor;
 
     iget-object v0, v0, Lcom/android/server/input/BatteryController$DeviceMonitor;->this$0:Lcom/android/server/input/BatteryController;

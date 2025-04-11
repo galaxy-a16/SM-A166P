@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 731
     iput-object p1, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
 
-    .line 733
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 
     move-result-object v0
@@ -47,7 +45,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 735
     iget-object v0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmProtectBatteryMode(Lcom/android/server/BatteryService;)I
@@ -58,7 +55,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 736
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 
     move-result-object p0
@@ -69,7 +65,6 @@
 
     return-void
 
-    .line 744
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -93,7 +88,6 @@
 
     goto :goto_1
 
-    .line 758
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -105,13 +99,11 @@
 
     goto :goto_0
 
-    .line 751
     :cond_2
     iget-object v0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0, v1}, Lcom/android/server/BatteryService;->-$$Nest$msetSleepCharging(Lcom/android/server/BatteryService;Z)V
 
-    .line 752
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     if-ne p1, v2, :cond_3
@@ -123,13 +115,11 @@
 
     goto :goto_0
 
-    .line 746
     :cond_4
     iget-object v0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0, v2}, Lcom/android/server/BatteryService;->-$$Nest$msetSleepCharging(Lcom/android/server/BatteryService;Z)V
 
-    .line 748
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     move-object v4, p1
@@ -145,7 +135,6 @@
 
     move-object p1, v6
 
-    .line 762
     :goto_1
     new-instance v0, Landroid/content/Intent;
 
@@ -155,25 +144,20 @@
 
     const/high16 v2, 0x1000000
 
-    .line 763
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     const-string/jumbo v2, "sleep_charging_event"
 
-    .line 764
     invoke-virtual {v0, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo v2, "sleep_charging_finish_time"
 
-    .line 766
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo v2, "is_sleep_charging_complete_success"
 
-    .line 767
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 768
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 
     move-result-object v2
@@ -206,7 +190,6 @@
 
     invoke-static {v2, p1}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 770
     iget-object p1, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmContext(Lcom/android/server/BatteryService;)Landroid/content/Context;
@@ -217,7 +200,6 @@
 
     invoke-static {p1, v0, v1}, Lcom/android/server/BatteryService;->-$$Nest$smsendBroadcastToExplicitPackage(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 771
     iget-object p0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmContext(Lcom/android/server/BatteryService;)Landroid/content/Context;

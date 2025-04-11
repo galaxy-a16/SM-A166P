@@ -23,10 +23,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -35,7 +33,6 @@
 
     iput-object v0, p0, Lcom/android/server/backup/params/AdbParams;->latch:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 42
     iput-boolean v1, p0, Lcom/android/server/backup/params/AdbParams;->privilegeApp:Z
 
     return-void

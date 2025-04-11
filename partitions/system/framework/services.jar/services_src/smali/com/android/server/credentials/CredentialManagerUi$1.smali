@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/credentials/CredentialManagerUi;Landroid/os/Handler;)V
     .locals 0
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/credentials/CredentialManagerUi$1;->this$0:Lcom/android/server/credentials/CredentialManagerUi;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onReceiveResult(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/credentials/CredentialManagerUi$1;->this$0:Lcom/android/server/credentials/CredentialManagerUi;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/credentials/CredentialManagerUi;->-$$Nest$mhandleUiResult(Lcom/android/server/credentials/CredentialManagerUi;ILandroid/os/Bundle;)V

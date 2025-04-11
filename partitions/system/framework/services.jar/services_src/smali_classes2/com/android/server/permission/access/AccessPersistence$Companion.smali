@@ -15,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/permission/jarjar/kotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/permission/access/AccessPersistence$Companion;-><init>()V
 
     return-void

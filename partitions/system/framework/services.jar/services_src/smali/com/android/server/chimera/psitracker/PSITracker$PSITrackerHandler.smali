@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/chimera/psitracker/PSITracker;Landroid/os/Looper;)V
     .locals 0
 
-    .line 237
     iput-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;->this$0:Lcom/android/server/chimera/psitracker/PSITracker;
 
-    .line 238
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 245
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -38,7 +35,6 @@
 
     goto :goto_0
 
-    .line 250
     :cond_0
     iget-object p1, p0, Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;->this$0:Lcom/android/server/chimera/psitracker/PSITracker;
 
@@ -48,7 +44,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 251
     iget-object p0, p0, Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;->this$0:Lcom/android/server/chimera/psitracker/PSITracker;
 
     invoke-static {p0}, Lcom/android/server/chimera/psitracker/PSITracker;->-$$Nest$fgetmCollector(Lcom/android/server/chimera/psitracker/PSITracker;)Lcom/android/server/chimera/psitracker/PSITrackerCollector;
@@ -59,7 +54,6 @@
 
     goto :goto_0
 
-    .line 247
     :cond_1
     iget-object p0, p0, Lcom/android/server/chimera/psitracker/PSITracker$PSITrackerHandler;->this$0:Lcom/android/server/chimera/psitracker/PSITracker;
 

@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/nio/file/Path;
 
     invoke-static {p1}, Lcom/android/server/pm/PackageMetrics;->$r8$lambda$ylH36OW6yBIftKwj-3Sl13obM5k(Ljava/nio/file/Path;)Z

@@ -20,7 +20,6 @@
 .method public final onAnimationFinished(ILcom/android/server/wm/AnimationAdapter;)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/wm/SurfaceFreezer$Snapshot;->$r8$lambda$V6nuYzcC-CCueHi3OcKeQGN9c-g(ILcom/android/server/wm/AnimationAdapter;)V
 
     return-void

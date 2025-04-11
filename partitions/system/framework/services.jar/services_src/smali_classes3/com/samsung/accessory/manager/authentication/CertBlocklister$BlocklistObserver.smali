@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBlocklist(Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mBlocklist:Ljava/lang/String;
 
     return-object p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPath(Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mPath:Ljava/lang/String;
 
     return-object p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTmpDir(Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;)Ljava/io/File;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mTmpDir:Ljava/io/File;
 
     return-object p0
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fputmBlocklist(Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mBlocklist:Ljava/lang/String;
 
     return-void
@@ -61,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDBG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->DBG:Z
 
     return v0
@@ -70,7 +65,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 80
     invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
 
     move-result v0
@@ -85,19 +79,14 @@
 
     const/4 v0, 0x0
 
-    .line 91
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 92
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mKey:Ljava/lang/String;
 
-    .line 93
     iput-object p2, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mName:Ljava/lang/String;
 
-    .line 94
     iput-object p3, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mPath:Ljava/lang/String;
 
-    .line 95
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -108,7 +97,6 @@
 
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mTmpDir:Ljava/io/File;
 
-    .line 96
     iput-object p4, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     return-void
@@ -119,7 +107,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .line 135
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mKey:Ljava/lang/String;
@@ -134,14 +121,12 @@
 .method public isThisKeyBlocklisted(Ljava/lang/String;)Z
     .locals 3
 
-    .line 100
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mTmpDir:Ljava/io/File;
 
     monitor-enter v0
 
     if-eqz p1, :cond_0
 
-    .line 101
     :try_start_0
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mBlocklist:Ljava/lang/String;
 
@@ -151,10 +136,8 @@
 
     const-string v2, "This key is in blocklist"
 
-    .line 102
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->mBlocklist:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -179,7 +162,6 @@
 
     return p0
 
-    .line 105
     :cond_0
     monitor-exit v0
 
@@ -200,10 +182,8 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 130
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 131
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;->writeBlocklist()V
 
     return-void
@@ -212,14 +192,12 @@
 .method public readFile()V
     .locals 2
 
-    .line 110
     new-instance v0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver$1;
 
     const-string v1, "BlocklistReader"
 
     invoke-direct {v0, p0, v1}, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver$1;-><init>(Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;Ljava/lang/String;)V
 
-    .line 125
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -228,14 +206,12 @@
 .method public final writeBlocklist()V
     .locals 2
 
-    .line 139
     new-instance v0, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver$2;
 
     const-string v1, "BlocklistUpdater"
 
     invoke-direct {v0, p0, v1}, Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver$2;-><init>(Lcom/samsung/accessory/manager/authentication/CertBlocklister$BlocklistObserver;Ljava/lang/String;)V
 
-    .line 177
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void

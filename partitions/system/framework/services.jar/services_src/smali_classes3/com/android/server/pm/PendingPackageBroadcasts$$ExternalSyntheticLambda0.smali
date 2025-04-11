@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/pm/PendingPackageBroadcasts;->$r8$lambda$ZF3PgbY60LDKwKcT3Tqd6J1Z3AI(Ljava/lang/String;)Ljava/util/ArrayList;

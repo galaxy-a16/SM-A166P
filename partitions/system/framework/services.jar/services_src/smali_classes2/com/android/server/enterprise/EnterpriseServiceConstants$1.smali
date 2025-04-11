@@ -7,12 +7,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 32
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     const/16 v0, 0x3f7
 
-    .line 34
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -21,7 +19,6 @@
 
     const/16 v0, 0x437
 
-    .line 35
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -30,7 +27,6 @@
 
     const/16 v0, 0xbb
 
-    .line 36
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -39,7 +35,6 @@
 
     const/4 v0, 0x3
 
-    .line 37
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -48,7 +43,6 @@
 
     const/4 v0, 0x4
 
-    .line 38
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -57,7 +51,6 @@
 
     const/16 v0, 0x1a
 
-    .line 39
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -66,7 +59,6 @@
 
     const/16 v0, 0x18
 
-    .line 40
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -75,7 +67,6 @@
 
     const/16 v0, 0x19
 
-    .line 41
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -84,7 +75,6 @@
 
     const/16 v0, 0x4f
 
-    .line 42
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0

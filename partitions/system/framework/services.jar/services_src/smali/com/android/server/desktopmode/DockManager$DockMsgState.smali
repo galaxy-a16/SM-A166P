@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMsgState(Lcom/android/server/desktopmode/DockManager$DockMsgState;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager$DockMsgState;->mMsgState:Landroid/util/ArrayMap;
 
     return-object p0
@@ -20,10 +19,8 @@
 .method public constructor <init>(IIIII)V
     .locals 2
 
-    .line 471
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 469
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -34,7 +31,6 @@
 
     const/16 v1, 0x64
 
-    .line 473
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -48,7 +44,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 475
     iget-object p1, p0, Lcom/android/server/desktopmode/DockManager$DockMsgState;->mMsgState:Landroid/util/ArrayMap;
 
     const/16 v0, 0x65
@@ -66,7 +61,6 @@
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 477
     iget-object p1, p0, Lcom/android/server/desktopmode/DockManager$DockMsgState;->mMsgState:Landroid/util/ArrayMap;
 
     const/16 p2, 0x66
@@ -84,7 +78,6 @@
     :cond_2
     if-eqz p4, :cond_3
 
-    .line 479
     iget-object p1, p0, Lcom/android/server/desktopmode/DockManager$DockMsgState;->mMsgState:Landroid/util/ArrayMap;
 
     const/16 p2, 0x67
@@ -102,7 +95,6 @@
     :cond_3
     if-eqz p5, :cond_4
 
-    .line 481
     iget-object p1, p0, Lcom/android/server/desktopmode/DockManager$DockMsgState;->mMsgState:Landroid/util/ArrayMap;
 
     const/16 p2, 0x68
@@ -160,7 +152,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 540
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -253,7 +244,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 505
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,7 +298,6 @@
 .method public setLast(IILjava/lang/String;)V
     .locals 2
 
-    .line 485
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager$DockMsgState;->mMsgState:Landroid/util/ArrayMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -343,7 +332,6 @@
 .method public toString(I)Ljava/lang/String;
     .locals 2
 
-    .line 489
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/power/ShutdownThread;Landroid/os/RecoverySystem$ProgressListener;[Z)V
     .locals 0
 
-    .line 1192
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$7;->this$0:Lcom/android/server/power/ShutdownThread;
 
     iput-object p2, p0, Lcom/android/server/power/ShutdownThread$7;->val$progressListener:Landroid/os/RecoverySystem$ProgressListener;
@@ -34,7 +33,6 @@
 
     const-string v0, "ShutdownThread"
 
-    .line 1195
     iget-object v1, p0, Lcom/android/server/power/ShutdownThread$7;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-static {v1}, Lcom/android/server/power/ShutdownThread;->-$$Nest$fgetmContext(Lcom/android/server/power/ShutdownThread;)Landroid/content/Context;
@@ -56,7 +54,6 @@
 
     if-lez v1, :cond_0
 
-    .line 1201
     :try_start_0
     sget-object v3, Landroid/os/RecoverySystem;->UNCRYPT_PACKAGE_FILE:Ljava/io/File;
 
@@ -66,7 +63,6 @@
 
     move-result-object v3
 
-    .line 1202
     iget-object v4, p0, Lcom/android/server/power/ShutdownThread$7;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-static {v4}, Lcom/android/server/power/ShutdownThread;->-$$Nest$fgetmContext(Lcom/android/server/power/ShutdownThread;)Landroid/content/Context;
@@ -83,7 +79,6 @@
 
     const-string v3, "!@uncrypt finished. No need to retry uncrypt"
 
-    .line 1203
     invoke-static {v0, v3}, Lcom/android/server/power/ShutdownThread$MYLOG;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -95,7 +90,6 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 1207
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,7 +112,6 @@
 
     goto :goto_0
 
-    .line 1210
     :cond_0
     :goto_1
     iget-object p0, p0, Lcom/android/server/power/ShutdownThread$7;->val$done:[Z

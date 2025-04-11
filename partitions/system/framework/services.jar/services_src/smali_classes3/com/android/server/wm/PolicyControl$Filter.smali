@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/util/ArraySet;Landroid/util/ArraySet;)V
     .locals 0
 
-    .line 225
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 226
     iput-object p1, p0, Lcom/android/server/wm/PolicyControl$Filter;->mAllowList:Landroid/util/ArraySet;
 
-    .line 227
     iput-object p2, p0, Lcom/android/server/wm/PolicyControl$Filter;->mBlockList:Landroid/util/ArraySet;
 
     return-void
@@ -34,20 +31,17 @@
 
     return-object p0
 
-    .line 290
     :cond_0
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 291
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
     const-string v2, ","
 
-    .line 292
     invoke-virtual {p0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -61,14 +55,12 @@
 
     aget-object v4, p0, v3
 
-    .line 293
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "-"
 
-    .line 294
     invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -83,17 +75,14 @@
 
     if-le v5, v6, :cond_1
 
-    .line 295
     invoke-virtual {v4, v6}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 296
     invoke-virtual {v1, v4}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 298
     :cond_1
     invoke-virtual {v0, v4}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
@@ -102,7 +91,6 @@
 
     goto :goto_0
 
-    .line 301
     :cond_2
     new-instance p0, Lcom/android/server/wm/PolicyControl$Filter;
 
@@ -118,31 +106,26 @@
 
     const-string v0, "Filter["
 
-    .line 261
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "allowList"
 
-    .line 262
     iget-object v1, p0, Lcom/android/server/wm/PolicyControl$Filter;->mAllowList:Landroid/util/ArraySet;
 
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/wm/PolicyControl$Filter;->dump(Ljava/lang/String;Landroid/util/ArraySet;Ljava/io/PrintWriter;)V
 
     const/16 v0, 0x2c
 
-    .line 263
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(C)V
 
     const-string v0, "blockList"
 
-    .line 264
     iget-object v1, p0, Lcom/android/server/wm/PolicyControl$Filter;->mBlockList:Landroid/util/ArraySet;
 
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/wm/PolicyControl$Filter;->dump(Ljava/lang/String;Landroid/util/ArraySet;Ljava/io/PrintWriter;)V
 
     const/16 p0, 0x5d
 
-    .line 265
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(C)V
 
     return-void
@@ -151,15 +134,12 @@
 .method public final dump(Ljava/lang/String;Landroid/util/ArraySet;Ljava/io/PrintWriter;)V
     .locals 1
 
-    .line 269
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, "=("
 
-    .line 270
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 271
     invoke-virtual {p2}, Landroid/util/ArraySet;->size()I
 
     move-result p0
@@ -173,10 +153,8 @@
 
     const/16 v0, 0x2c
 
-    .line 273
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 274
     :cond_0
     invoke-virtual {p2, p1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
@@ -193,7 +171,6 @@
     :cond_1
     const/16 p0, 0x29
 
-    .line 276
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->print(C)V
 
     return-void
@@ -208,7 +185,6 @@
 
     return v0
 
-    .line 235
     :cond_0
     iget v1, p1, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -232,7 +208,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 239
     iget-object v4, p0, Lcom/android/server/wm/PolicyControl$Filter;->mBlockList:Landroid/util/ArraySet;
 
     invoke-virtual {v4, v3}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -243,7 +218,6 @@
 
     return v0
 
-    .line 242
     :cond_2
     iget-object v4, p1, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
@@ -258,7 +232,6 @@
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/wm/PolicyControl$Filter;->mAllowList:Landroid/util/ArraySet;
 
     invoke-virtual {v0, v3}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -269,7 +242,6 @@
 
     return v2
 
-    .line 249
     :cond_4
     iget-object p1, p1, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
@@ -283,7 +255,6 @@
 .method public final onAllowList(Ljava/lang/String;)Z
     .locals 2
 
-    .line 257
     iget-object v0, p0, Lcom/android/server/wm/PolicyControl$Filter;->mAllowList:Landroid/util/ArraySet;
 
     const-string v1, "*"
@@ -320,7 +291,6 @@
 .method public final onBlockList(Ljava/lang/String;)Z
     .locals 2
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/wm/PolicyControl$Filter;->mBlockList:Landroid/util/ArraySet;
 
     const-string v1, "*"
@@ -357,12 +327,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 281
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 282
     new-instance v1, Ljava/io/PrintWriter;
 
     const/4 v2, 0x1
@@ -371,7 +339,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/PolicyControl$Filter;->dump(Ljava/io/PrintWriter;)V
 
-    .line 283
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p0

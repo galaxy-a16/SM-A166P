@@ -13,10 +13,8 @@
 .method public constructor <init>(Lcom/android/server/chimera/GPUMemoryReclaimer;Lcom/android/server/chimera/GPUMemoryReclaimer;)V
     .locals 0
 
-    .line 258
     iput-object p1, p0, Lcom/android/server/chimera/GPUMemoryReclaimer$SwapOutHandler;->this$0:Lcom/android/server/chimera/GPUMemoryReclaimer;
 
-    .line 259
     invoke-static {p1}, Lcom/android/server/chimera/GPUMemoryReclaimer;->-$$Nest$fgetmSwapOutThread(Lcom/android/server/chimera/GPUMemoryReclaimer;)Lcom/android/server/ServiceThread;
 
     move-result-object p1
@@ -27,7 +25,6 @@
 
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 260
     iput-object p2, p0, Lcom/android/server/chimera/GPUMemoryReclaimer$SwapOutHandler;->self:Lcom/android/server/chimera/GPUMemoryReclaimer;
 
     return-void
@@ -36,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/chimera/GPUMemoryReclaimer;Lcom/android/server/chimera/GPUMemoryReclaimer;Lcom/android/server/chimera/GPUMemoryReclaimer$SwapOutHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/chimera/GPUMemoryReclaimer$SwapOutHandler;-><init>(Lcom/android/server/chimera/GPUMemoryReclaimer;Lcom/android/server/chimera/GPUMemoryReclaimer;)V
 
     return-void
@@ -49,7 +45,6 @@
 
     const-string v0, "GMR"
 
-    .line 270
     :try_start_0
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -57,15 +52,12 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 271
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 272
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
 
-    .line 273
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +80,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/chimera/GPUMemoryReclaimer$SwapOutHandler;->self:Lcom/android/server/chimera/GPUMemoryReclaimer;
 
     invoke-static {p0}, Lcom/android/server/chimera/GPUMemoryReclaimer;->-$$Nest$fgetmVendorPlugin(Lcom/android/server/chimera/GPUMemoryReclaimer;)Lcom/android/server/chimera/GPUMemoryReclaimer$VendorPlugin;
@@ -101,7 +92,6 @@
 
     goto :goto_0
 
-    .line 277
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -129,7 +119,6 @@
 .method public swapOutAsync(ILjava/lang/String;)V
     .locals 3
 
-    .line 264
     iget-object v0, p0, Lcom/android/server/chimera/GPUMemoryReclaimer$SwapOutHandler;->this$0:Lcom/android/server/chimera/GPUMemoryReclaimer;
 
     invoke-static {v0}, Lcom/android/server/chimera/GPUMemoryReclaimer;->-$$Nest$fgetmSwapOutHandler(Lcom/android/server/chimera/GPUMemoryReclaimer;)Lcom/android/server/chimera/GPUMemoryReclaimer$SwapOutHandler;

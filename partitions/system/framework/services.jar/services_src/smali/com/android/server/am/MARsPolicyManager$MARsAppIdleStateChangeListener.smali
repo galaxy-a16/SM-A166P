@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/MARsPolicyManager;)V
     .locals 0
 
-    .line 1472
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$MARsAppIdleStateChangeListener;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-direct {p0}, Lcom/android/server/usage/AppStandbyInternal$AppIdleStateChangeListener;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/MARsPolicyManager;Lcom/android/server/am/MARsPolicyManager$MARsAppIdleStateChangeListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/MARsPolicyManager$MARsAppIdleStateChangeListener;-><init>(Lcom/android/server/am/MARsPolicyManager;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onAppIdleStateChanged(Ljava/lang/String;IZII)V
     .locals 2
 
-    .line 1476
     sget-boolean p3, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ENG:Z
 
     if-eqz p3, :cond_0
@@ -68,13 +65,11 @@
 
     invoke-static {p3, p5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1477
     :cond_0
     sget-object p3, Lcom/android/server/am/MARsPolicyManager;->MARsLock:Lcom/android/server/am/MARsPolicyManager$Lock;
 
     monitor-enter p3
 
-    .line 1478
     :try_start_0
     iget-object p5, p0, Lcom/android/server/am/MARsPolicyManager$MARsAppIdleStateChangeListener;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
@@ -86,7 +81,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 1480
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getFasType()I
 
     move-result p5
@@ -95,7 +89,6 @@
 
     if-eq p5, v0, :cond_4
 
-    .line 1481
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getFasType()I
 
     move-result p5
@@ -111,14 +104,12 @@
 
     if-lt p4, p5, :cond_2
 
-    .line 1483
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p4
 
     invoke-virtual {p2, p4, p5}, Lcom/android/server/am/MARsPackageInfo;->setResetTime(J)V
 
-    .line 1484
     new-instance p4, Lcom/android/server/am/mars/database/FASEntityBuilder;
 
     invoke-direct {p4}, Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>()V
@@ -131,7 +122,6 @@
 
     move-result-object p4
 
-    .line 1485
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getUid()I
 
     move-result p5
@@ -144,7 +134,6 @@
 
     move-result-object p4
 
-    .line 1486
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getMaxLevel()I
 
     move-result p5
@@ -157,7 +146,6 @@
 
     move-result-object p4
 
-    .line 1487
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getResetTime()J
 
     move-result-wide v0
@@ -170,12 +158,10 @@
 
     move-result-object p4
 
-    .line 1488
     invoke-virtual {p4}, Lcom/android/server/am/mars/database/FASEntityBuilder;->build()Lcom/android/server/am/mars/database/FASEntity;
 
     move-result-object p4
 
-    .line 1489
     sget-boolean p5, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ENG:Z
 
     if-eqz p5, :cond_6
@@ -225,7 +211,6 @@
 
     if-gt p4, p1, :cond_5
 
-    .line 1491
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getDisabled()Z
 
     move-result p1
@@ -242,7 +227,6 @@
 
     if-eqz p0, :cond_5
 
-    .line 1492
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getFasType()I
 
     move-result p0
@@ -251,7 +235,6 @@
 
     if-ne p0, p1, :cond_5
 
-    .line 1493
     new-instance p0, Lcom/android/server/am/mars/database/FASEntityBuilder;
 
     invoke-direct {p0}, Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>()V
@@ -264,7 +247,6 @@
 
     move-result-object p0
 
-    .line 1494
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getUid()I
 
     move-result p1
@@ -277,7 +259,6 @@
 
     move-result-object p0
 
-    .line 1495
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getFASEnabled()Z
 
     move-result p1
@@ -296,7 +277,6 @@
 
     move-result-object p0
 
-    .line 1496
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getFasType()I
 
     move-result p1
@@ -309,7 +289,6 @@
 
     move-result-object p0
 
-    .line 1497
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getDisableReason()I
 
     move-result p1
@@ -322,7 +301,6 @@
 
     move-result-object p0
 
-    .line 1498
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getState()I
 
     move-result p1
@@ -335,7 +313,6 @@
 
     move-result-object p0
 
-    .line 1499
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getMaxLevel()I
 
     move-result p1
@@ -348,7 +325,6 @@
 
     move-result-object p0
 
-    .line 1500
     invoke-virtual {p2}, Lcom/android/server/am/MARsPackageInfo;->getResetTime()J
 
     move-result-wide p1
@@ -361,14 +337,12 @@
 
     move-result-object p0
 
-    .line 1501
     invoke-virtual {p0}, Lcom/android/server/am/mars/database/FASEntityBuilder;->build()Lcom/android/server/am/mars/database/FASEntity;
 
     move-result-object p4
 
     goto :goto_2
 
-    .line 1481
     :cond_4
     :goto_1
     monitor-exit p3
@@ -378,7 +352,6 @@
     :cond_5
     const/4 p4, 0x0
 
-    .line 1506
     :cond_6
     :goto_2
     monitor-exit p3
@@ -387,7 +360,6 @@
 
     if-eqz p4, :cond_7
 
-    .line 1507
     invoke-static {}, Lcom/android/server/am/mars/database/MARsDBManager;->getInstance()Lcom/android/server/am/mars/database/MARsDBManager;
 
     move-result-object p0
@@ -400,7 +372,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1506
     :try_start_1
     monitor-exit p3
     :try_end_1

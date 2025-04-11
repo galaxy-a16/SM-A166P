@@ -7,7 +7,6 @@
 .method public hasDeferredBroadcastReceiverToRegister()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -22,14 +21,12 @@
 .method public onAdminRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAdminRemoved(IZ)V
     .locals 0
 
-    .line 77
     invoke-interface {p0, p1}, Lcom/android/server/enterprise/EnterpriseServiceCallback;->onAdminRemoved(I)V
 
     return-void
@@ -41,7 +38,6 @@
 .method public registerDeferredBoradcastReceiver()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

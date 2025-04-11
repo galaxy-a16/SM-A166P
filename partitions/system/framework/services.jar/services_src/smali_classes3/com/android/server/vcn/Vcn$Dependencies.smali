@@ -17,7 +17,6 @@
 .method public newVcnContentResolver(Lcom/android/server/vcn/VcnContext;)Lcom/android/server/vcn/Vcn$VcnContentResolver;
     .locals 0
 
-    .line 758
     new-instance p0, Lcom/android/server/vcn/Vcn$VcnContentResolver;
 
     invoke-direct {p0, p1}, Lcom/android/server/vcn/Vcn$VcnContentResolver;-><init>(Lcom/android/server/vcn/VcnContext;)V
@@ -28,7 +27,6 @@
 .method public newVcnGatewayConnection(Lcom/android/server/vcn/VcnContext;Landroid/os/ParcelUuid;Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;Landroid/net/vcn/VcnGatewayConnectionConfig;Lcom/android/server/vcn/Vcn$VcnGatewayStatusCallback;Z)Lcom/android/server/vcn/VcnGatewayConnection;
     .locals 7
 
-    .line 747
     new-instance p0, Lcom/android/server/vcn/VcnGatewayConnection;
 
     move-object v0, p0

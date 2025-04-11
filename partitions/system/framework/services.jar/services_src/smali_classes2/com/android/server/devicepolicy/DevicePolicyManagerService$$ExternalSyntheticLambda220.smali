@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/app/admin/DevicePolicyDrawableResource;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->$r8$lambda$PL5jmOiw1Xklv14X-rzjZMS6MHo(Landroid/app/admin/DevicePolicyDrawableResource;)Ljava/lang/String;

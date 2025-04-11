@@ -53,7 +53,6 @@
 .method public static synthetic $r8$lambda$A16ZKPv-Fx8RrEtOT9zv2yeIQmA(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->lambda$onBootThirdPartyAppsCanStart$0()V
 
     return-void
@@ -62,7 +61,6 @@
 .method public static synthetic $r8$lambda$H0LdCbNzsRMWO0aJOtfUatK1_Vo(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->lambda$writeMaxBrightnessInfo$1()V
 
     return-void
@@ -71,7 +69,6 @@
 .method public static synthetic $r8$lambda$NseSdaW1irYGwxpJRfgrh94CrYM(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->restoreDisplayAdjustFunc()V
 
     return-void
@@ -80,7 +77,6 @@
 .method public static synthetic $r8$lambda$QKHuiSY9ehn9FVi8ZFWJ1nuBhE0(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->disableDisplayAdjustFunc()V
 
     return-void
@@ -89,7 +85,6 @@
 .method public static synthetic $r8$lambda$stk2NYxjYfMF5sheWw4_pOJjP4Y(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->lambda$addMaskView$3(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;)V
 
     return-void
@@ -98,7 +93,6 @@
 .method public static synthetic $r8$lambda$wUNcp3Zft01CFT_LnWsJYSEbBHE(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->lambda$getDisplaySolutionManager$2(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V
 
     return-void
@@ -107,25 +101,20 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/SemBioSysFsProvider;)V
     .locals 2
 
-    .line 149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 63
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaxBrightness:F
 
     const/4 v0, 0x0
 
-    .line 64
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mNits:I
 
     const-string v0, ""
 
-    .line 73
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mLatestHwLightMode:Ljava/lang/String;
 
-    .line 76
     new-instance v0, Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -134,22 +123,18 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
-    .line 150
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mSysFsProvider:Lcom/android/server/biometrics/sensors/SemBioSysFsProvider;
 
-    .line 151
     sget-boolean p1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_HW_LIGHT_SOURCE:Z
 
     if-nez p1, :cond_0
 
-    .line 152
     new-instance p1, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mRunnableDisableFunctionForLightSource:Ljava/lang/Runnable;
 
-    .line 153
     new-instance p1, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda2;
 
     invoke-direct {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V
@@ -163,7 +148,6 @@
 .method private synthetic lambda$addMaskView$3(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;)V
     .locals 0
 
-    .line 341
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->getToken()Landroid/os/IBinder;
 
     move-result-object p1
@@ -178,7 +162,6 @@
 
     const-string v0, "DisplaySolution"
 
-    .line 245
     invoke-static {v0}, Landroid/os/ServiceManager;->waitForService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -187,10 +170,8 @@
 
     move-result-object v0
 
-    .line 244
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 246
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
@@ -199,7 +180,6 @@
 .method private synthetic lambda$onBootThirdPartyAppsCanStart$0()V
     .locals 3
 
-    .line 168
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mSysFsProvider:Lcom/android/server/biometrics/sensors/SemBioSysFsProvider;
 
@@ -211,12 +191,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 169
     array-length v1, v0
 
     if-eqz v1, :cond_0
 
-    .line 170
     new-instance v1, Ljava/lang/String;
 
     sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
@@ -246,7 +224,6 @@
 
     const-string v1, "getDisplayPanelType : "
 
-    .line 172
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -256,7 +233,6 @@
 .method private synthetic lambda$writeMaxBrightnessInfo$1()V
     .locals 4
 
-    .line 215
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->getDisplaySolutionManager()Lcom/samsung/android/displaysolution/ISemDisplaySolutionManager;
 
     move-result-object v0
@@ -265,7 +241,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 218
     :try_start_0
     iget v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mNits:I
 
@@ -282,7 +257,6 @@
     :catch_0
     move-exception v0
 
-    .line 220
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,7 +277,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     :cond_0
     :goto_0
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaxBrightness:F
@@ -314,7 +287,6 @@
 
     if-gtz v0, :cond_1
 
-    .line 224
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -335,10 +307,8 @@
 
     const v0, 0x439f8000    # 319.0f
 
-    .line 225
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaxBrightness:F
 
-    .line 227
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mSysFsProvider:Lcom/android/server/biometrics/sensors/SemBioSysFsProvider;
 
@@ -346,7 +316,6 @@
 
     float-to-int p0, p0
 
-    .line 228
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -359,7 +328,6 @@
 
     const-string v1, "/sys/class/lcd/panel/mask_brightness"
 
-    .line 227
     invoke-interface {v0, v1, p0}, Lcom/android/server/biometrics/sensors/SemBioSysFsProvider;->writeSysFs(Ljava/lang/String;[B)V
 
     return-void
@@ -370,12 +338,10 @@
 .method public addMaskView(Landroid/os/IBinder;Ljava/lang/String;)V
     .locals 3
 
-    .line 335
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 336
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
@@ -387,7 +353,6 @@
 
     const-string p0, "FingerprintService"
 
-    .line 337
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -416,25 +381,21 @@
 
     goto :goto_0
 
-    .line 339
     :cond_0
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;
 
     invoke-direct {v1, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 340
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
     invoke-interface {p2, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 341
     new-instance p1, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda4;
 
     invoke-direct {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda4;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V
 
     invoke-virtual {v1, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->start(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$Callback;)V
 
-    .line 343
     :goto_0
     monitor-exit v0
 
@@ -453,12 +414,10 @@
 .method public canChangeDeviceColorMode()Z
     .locals 0
 
-    .line 308
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayAdjManager:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
     if-eqz p0, :cond_0
 
-    .line 309
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->canChangeDeviceColorMode()Z
 
     move-result p0
@@ -474,19 +433,16 @@
 .method public final disableDisplayAdjustFunc()V
     .locals 1
 
-    .line 294
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayAdjManager:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
     if-nez v0, :cond_0
 
-    .line 295
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayAdjManager:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
-    .line 297
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayAdjManager:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
@@ -498,14 +454,12 @@
 .method public disableFunctionForLightSource()V
     .locals 2
 
-    .line 278
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_HW_LIGHT_SOURCE:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 281
     :cond_0
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
@@ -519,7 +473,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 282
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
     move-result-object v0
@@ -538,7 +491,6 @@
 .method public dump(Ljava/io/PrintWriter;Landroid/util/Pair;)V
     .locals 5
 
-    .line 390
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -557,7 +509,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 391
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -576,7 +527,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 392
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -595,7 +545,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 393
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -614,7 +563,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 394
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -633,12 +581,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 395
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 396
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
@@ -663,7 +609,6 @@
 
     check-cast v2, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;
 
-    .line 397
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -686,7 +631,6 @@
 
     goto :goto_0
 
-    .line 399
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -694,7 +638,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 401
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -721,7 +664,6 @@
     :catchall_0
     move-exception p0
 
-    .line 399
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -733,12 +675,10 @@
 .method public getDisplaySolutionManager()Lcom/samsung/android/displaysolution/ISemDisplaySolutionManager;
     .locals 6
 
-    .line 235
     new-instance p0, Ljava/util/concurrent/atomic/AtomicReference;
 
     const-string v0, "DisplaySolution"
 
-    .line 237
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -749,14 +689,12 @@
 
     invoke-direct {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    .line 238
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 239
     new-instance v0, Lcom/android/server/ServiceThread;
 
     const/16 v1, 0xa
@@ -767,15 +705,12 @@
 
     invoke-direct {v0, v2, v1, v3}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
-    .line 241
     new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {v1, v3}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 242
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 243
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -786,7 +721,6 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 249
     :try_start_0
     sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -796,7 +730,6 @@
 
     move-result v1
 
-    .line 250
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -820,14 +753,11 @@
     :catch_0
     move-exception v1
 
-    .line 252
     invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 254
     :goto_0
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
-    .line 256
     :cond_0
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
@@ -843,12 +773,10 @@
 
     const-string v0, "brightness"
 
-    .line 359
     iget v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaxBrightness:F
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    .line 361
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mNits:I
 
     int-to-float v0, v0
@@ -859,7 +787,6 @@
 
     const-string/jumbo v0, "nits"
 
-    .line 363
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mBrightnessColor:Ljava/lang/String;
 
     invoke-virtual {p1, v0, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -876,7 +803,6 @@
 
     new-array p0, p0, [B
 
-    .line 409
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -903,7 +829,6 @@
 
     if-lez p1, :cond_0
 
-    .line 413
     new-instance v0, Ljava/lang/String;
 
     invoke-static {p0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -914,7 +839,6 @@
 
     invoke-direct {v0, p0, p1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 414
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
@@ -924,7 +848,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 417
     :goto_0
     invoke-static {p0}, Landroid/text/TextUtils;->emptyIfNull(Ljava/lang/String;)Ljava/lang/String;
 
@@ -936,13 +859,10 @@
 .method public onBootThirdPartyAppsCanStart(Landroid/content/Context;[Ljava/lang/String;)V
     .locals 0
 
-    .line 164
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->setBrightnessConfigs(Landroid/content/Context;[Ljava/lang/String;)V
 
-    .line 165
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->writeMaxBrightnessInfo()V
 
-    .line 166
     new-instance p1, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda3;
 
     invoke-direct {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V
@@ -955,12 +875,10 @@
 .method public removeMaskView(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 347
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 348
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
@@ -974,7 +892,6 @@
 
     const-string p0, "FingerprintService"
 
-    .line 350
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -993,16 +910,13 @@
 
     goto :goto_0
 
-    .line 352
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mMaskClientList:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 353
     invoke-virtual {v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->stop()V
 
-    .line 355
     :goto_0
     monitor-exit v0
 
@@ -1021,17 +935,14 @@
 .method public final restoreDisplayAdjustFunc()V
     .locals 1
 
-    .line 301
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayAdjManager:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
     if-eqz v0, :cond_0
 
-    .line 302
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->restore()V
 
     const/4 v0, 0x0
 
-    .line 303
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayAdjManager:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
     :cond_0
@@ -1041,14 +952,12 @@
 .method public restoreFunctionForLightSource(J)V
     .locals 2
 
-    .line 286
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_HW_LIGHT_SOURCE:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 289
     :cond_0
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
@@ -1062,7 +971,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 290
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
     move-result-object v0
@@ -1081,7 +989,6 @@
 .method public runOnBgThread(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 159
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
     move-result-object p0
@@ -1096,14 +1003,12 @@
 
     const/16 v0, 0x20d
 
-    .line 178
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mNits:I
 
     const-string v1, "FingerprintService"
 
     if-eqz p2, :cond_3
 
-    .line 181
     :try_start_0
     array-length p1, p2
 
@@ -1111,7 +1016,6 @@
 
     if-lez p1, :cond_0
 
-    .line 182
     aget-object p1, p2, v0
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1120,7 +1024,6 @@
 
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mNits:I
 
-    .line 184
     :cond_0
     array-length p1, p2
 
@@ -1128,12 +1031,10 @@
 
     if-le p1, v2, :cond_1
 
-    .line 185
     aget-object p1, p2, v2
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mBrightnessColor:Ljava/lang/String;
 
-    .line 187
     :cond_1
     array-length p1, p2
 
@@ -1141,12 +1042,10 @@
 
     if-le p1, v2, :cond_2
 
-    .line 188
     aget-object p1, p2, v2
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mBrightnessColorForLowBrightness:Ljava/lang/String;
 
-    .line 190
     :cond_2
     array-length p1, p2
 
@@ -1155,7 +1054,6 @@
 
     aget-object v2, p2, v0
 
-    .line 191
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1184,10 +1082,8 @@
     :cond_3
     const-string/jumbo p2, "setBrightnessConfigs: failed to read from HAL"
 
-    .line 194
     invoke-static {v1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -1198,7 +1094,6 @@
 
     move-result-object p1
 
-    .line 198
     array-length p2, p1
 
     add-int/lit8 p2, p2, -0x1
@@ -1211,10 +1106,8 @@
 
     if-ge p1, v0, :cond_4
 
-    .line 200
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mNits:I
 
-    .line 202
     :cond_4
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
@@ -1226,7 +1119,6 @@
 
     goto :goto_2
 
-    .line 205
     :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -1248,14 +1140,12 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     :cond_5
     :goto_2
     sget-boolean p1, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz p1, :cond_6
 
-    .line 208
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1285,13 +1175,11 @@
 .method public setDisplayStateLimit(Z)V
     .locals 1
 
-    .line 316
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     if-nez v0, :cond_0
 
-    .line 317
     const-class v0, Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1302,7 +1190,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 318
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
@@ -1312,7 +1199,6 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 322
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mBinderForDisplayStateLimit:Landroid/os/IBinder;
@@ -1323,7 +1209,6 @@
 
     goto :goto_0
 
-    .line 326
     :cond_1
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
@@ -1344,7 +1229,6 @@
 
     const-string/jumbo v0, "setDisplayStateLimit: "
 
-    .line 330
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1354,7 +1238,6 @@
 .method public final setHwLightMode(Ljava/lang/String;)V
     .locals 3
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mLatestHwLightMode:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1363,7 +1246,6 @@
 
     if-nez v0, :cond_1
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mSysFsProvider:Lcom/android/server/biometrics/sensors/SemBioSysFsProvider;
 
     sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
@@ -1376,12 +1258,10 @@
 
     invoke-interface {v0, v2, v1}, Lcom/android/server/biometrics/sensors/SemBioSysFsProvider;->writeSysFs(Ljava/lang/String;[B)V
 
-    .line 270
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 271
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1404,7 +1284,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     :cond_0
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mLatestHwLightMode:Ljava/lang/String;
 
@@ -1421,15 +1300,12 @@
 
     if-lt p3, v1, :cond_2
 
-    .line 370
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mCalibrationClient:Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;
 
     if-eqz v2, :cond_0
 
-    .line 371
     invoke-virtual {v2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->stop()V
 
-    .line 372
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mCalibrationClient:Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;
 
     :cond_0
@@ -1437,7 +1313,6 @@
 
     if-ne p3, v2, :cond_1
 
-    .line 375
     iget-object p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mBrightnessColorForLowBrightness:Ljava/lang/String;
 
     goto :goto_0
@@ -1445,7 +1320,6 @@
     :cond_1
     iget-object p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mBrightnessColor:Ljava/lang/String;
 
-    .line 376
     :goto_0
     new-instance v2, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;
 
@@ -1453,12 +1327,10 @@
 
     iput-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mCalibrationClient:Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;
 
-    .line 378
     invoke-virtual {v2, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->start(Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient$Callback;)V
 
     goto :goto_1
 
-    .line 380
     :cond_2
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mCalibrationClient:Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;
 
@@ -1468,16 +1340,13 @@
 
     const-string p1, "handleCalibrationMode: No Calibration Client"
 
-    .line 381
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 383
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;->stop()V
 
-    .line 384
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->mCalibrationClient:Lcom/android/server/biometrics/sensors/fingerprint/SemFpOpticalClient;
 
     :goto_1
@@ -1489,7 +1358,6 @@
 
     const-string v0, "0"
 
-    .line 264
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->setHwLightMode(Ljava/lang/String;)V
 
     return-void
@@ -1500,7 +1368,6 @@
 
     const-string v0, "1"
 
-    .line 260
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->setHwLightMode(Ljava/lang/String;)V
 
     return-void
@@ -1509,7 +1376,6 @@
 .method public final writeMaxBrightnessInfo()V
     .locals 1
 
-    .line 213
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda5;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$$ExternalSyntheticLambda5;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;)V

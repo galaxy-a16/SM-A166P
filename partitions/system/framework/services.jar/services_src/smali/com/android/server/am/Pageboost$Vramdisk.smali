@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetENABLED()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/am/Pageboost$Vramdisk;->ENABLED:Z
 
     return v0
@@ -20,14 +19,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static getDalvikcacheFileList(Ljava/lang/String;)Ljava/util/LinkedList;
     .locals 10
 
-    .line 794
     :try_start_0
     new-instance v0, Ljava/util/LinkedList;
 
@@ -35,7 +32,6 @@
 
     const-string v1, "/system/"
 
-    .line 795
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -83,7 +79,6 @@
 
     aput-object v6, v5, v0
 
-    .line 800
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,7 +105,6 @@
 
     move-result-object p0
 
-    .line 801
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
@@ -125,7 +119,6 @@
     :goto_1
     if-ge v7, v2, :cond_2
 
-    .line 805
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,19 +137,16 @@
 
     move-result-object v8
 
-    .line 806
     new-instance v9, Ljava/io/File;
 
     invoke-direct {v9, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 807
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 808
     invoke-virtual {v4, v9}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -179,7 +169,6 @@
     :catch_0
     move-exception p0
 
-    .line 815
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 v0, 0x0
@@ -192,7 +181,6 @@
 .method public static setConfiguration(J)V
     .locals 3
 
-    .line 787
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -213,7 +201,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetPAGEBOOST_IGNORE_DRAM_SPECIFICATION()Z
 
     move-result v0

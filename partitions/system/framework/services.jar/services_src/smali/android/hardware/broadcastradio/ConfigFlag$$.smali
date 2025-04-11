@@ -87,7 +87,6 @@
 
     return-object p0
 
-    .line 26
     :cond_8
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 

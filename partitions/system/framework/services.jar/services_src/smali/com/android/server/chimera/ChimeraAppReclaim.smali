@@ -25,22 +25,18 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepository;Lcom/android/server/chimera/ChimeraAppManager;)V
     .locals 1
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "ChimeraAppReclaim"
 
-    .line 11
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
 
-    .line 17
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgCacheReclaimable:Ljava/util/List;
 
-    .line 20
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -49,19 +45,14 @@
 
     const/4 v0, 0x0
 
-    .line 22
     iput v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mActionReclaimCnt:I
 
-    .line 23
     iput v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSkipReclaimCnt:I
 
-    .line 24
     iput v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mActionGcCnt:I
 
-    .line 30
     iput-object p1, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
-    .line 31
     iput-object p2, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mAppManager:Lcom/android/server/chimera/ChimeraAppManager;
 
     return-void
@@ -72,7 +63,6 @@
 .method public final performCompaction(Ljava/lang/String;I)Z
     .locals 3
 
-    .line 35
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -98,7 +88,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 36
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
@@ -108,7 +97,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 37
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -121,7 +109,6 @@
     :catchall_0
     move-exception p1
 
-    .line 35
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -143,7 +130,6 @@
     :catch_0
     move-exception p1
 
-    .line 38
     iget-object p2, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -172,7 +158,6 @@
 .method public performGc(Ljava/util/List;)V
     .locals 10
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -181,7 +166,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 114
     :try_start_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -203,7 +187,6 @@
 
     check-cast v1, Lcom/android/server/chimera/ChimeraAppInfo;
 
-    .line 115
     iget-object v2, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgGcList:Ljava/util/List;
 
     iget-object v3, v1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
@@ -216,7 +199,6 @@
 
     goto :goto_0
 
-    .line 119
     :cond_1
     iget-object v2, v1, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
 
@@ -237,7 +219,6 @@
 
     check-cast v3, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 120
     iget-object v4, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v5, v3, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
@@ -252,7 +233,6 @@
 
     if-gez v6, :cond_2
 
-    .line 123
     iget-object v3, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v6, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -275,7 +255,6 @@
 
     goto :goto_1
 
-    .line 126
     :cond_2
     iget-object v6, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -313,7 +292,6 @@
 
     invoke-interface {v6, v7, v4}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     iget-object v4, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v3, v3, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
@@ -322,7 +300,6 @@
 
     goto :goto_1
 
-    .line 129
     :cond_3
     iget-object v2, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgGcList:Ljava/util/List;
 
@@ -330,7 +307,6 @@
 
     invoke-interface {v2, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 131
     iget v1, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mActionGcCnt:I
 
     add-int/lit8 v1, v1, 0x1
@@ -350,7 +326,6 @@
     :catch_0
     move-exception p1
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -381,7 +356,6 @@
 
     move-object/from16 v1, p0
 
-    .line 45
     iget-object v0, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v2, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -390,13 +364,11 @@
 
     invoke-interface {v0, v2, v3}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
     :try_start_0
     invoke-static {}, Lcom/android/server/chimera/ChimeraCommonUtil;->getTotalMemFree()J
 
     move-result-wide v2
 
-    .line 51
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -418,7 +390,6 @@
 
     check-cast v7, Lcom/android/server/chimera/ChimeraAppInfo;
 
-    .line 52
     iget-object v8, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgCacheReclaimable:Ljava/util/List;
 
     iget-object v9, v7, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
@@ -431,7 +402,6 @@
 
     goto :goto_0
 
-    .line 58
     :cond_0
     iget-object v8, v7, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
 
@@ -452,7 +422,6 @@
 
     check-cast v9, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 59
     iget-object v12, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v13, v9, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
@@ -467,7 +436,6 @@
 
     if-gez v14, :cond_1
 
-    .line 62
     iget-object v9, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v10, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -493,7 +461,6 @@
     :cond_1
     const-string v14, "file"
 
-    .line 65
     iget v15, v9, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
 
     invoke-virtual {v1, v14, v15}, Lcom/android/server/chimera/ChimeraAppReclaim;->performCompaction(Ljava/lang/String;I)Z
@@ -507,14 +474,12 @@
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
-    .line 69
     iget v14, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mActionReclaimCnt:I
 
     add-int/lit8 v14, v14, 0x1
 
     iput v14, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mActionReclaimCnt:I
 
-    .line 70
     iget-object v14, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v15, v9, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
@@ -523,7 +488,6 @@
 
     move-result-wide v14
 
-    .line 71
     iget-object v10, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v11, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -599,7 +563,6 @@
     :cond_5
     move-object/from16 p1, v0
 
-    .line 79
     :goto_2
     iget-object v0, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgCacheReclaimable:Ljava/util/List;
 
@@ -624,7 +587,6 @@
     :goto_3
     if-nez v4, :cond_8
 
-    .line 86
     iget v0, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mSkipReclaimCnt:I
 
     add-int/lit8 v0, v0, 0x1
@@ -633,13 +595,11 @@
 
     goto :goto_4
 
-    .line 88
     :cond_8
     invoke-static {}, Lcom/android/server/chimera/ChimeraCommonUtil;->getTotalMemFree()J
 
     move-result-wide v4
 
-    .line 89
     iget-object v0, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v6, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -681,7 +641,6 @@
     :catch_0
     move-exception v0
 
-    .line 92
     iget-object v2, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v1, v1, Lcom/android/server/chimera/ChimeraAppReclaim;->TAG:Ljava/lang/String;
@@ -709,7 +668,6 @@
 .method public updateGcPackage(Ljava/lang/String;)V
     .locals 2
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgGcList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -720,14 +678,12 @@
 
     if-le v0, v1, :cond_0
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgGcList:Ljava/util/List;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 107
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgGcList:Ljava/util/List;
 
@@ -739,7 +695,6 @@
 .method public updatePackageCacheReclaimable(Ljava/lang/String;)V
     .locals 2
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgCacheReclaimable:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -750,14 +705,12 @@
 
     if-le v0, v1, :cond_0
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgCacheReclaimable:Ljava/util/List;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 100
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppReclaim;->mPkgCacheReclaimable:Ljava/util/List;
 

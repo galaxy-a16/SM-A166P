@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService$BinderService;Landroid/hardware/hdmi/IHdmiControlCallback;Z)V
     .locals 0
 
-    .line 2376
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$8;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$8;->val$callback:Landroid/hardware/hdmi/IHdmiControlCallback;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 2
 
-    .line 2379
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$8;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -50,10 +48,8 @@
 
     const-string v1, "Local tv device not available"
 
-    .line 2381
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2382
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$8;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -66,7 +62,6 @@
 
     return-void
 
-    .line 2385
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$8;->val$enabled:Z
 

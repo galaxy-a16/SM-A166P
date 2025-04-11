@@ -13,21 +13,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 12789
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
-    .line 12790
     iput-object v0, p0, Lcom/android/server/wm/ActivityRecord$AppSaturationInfo;->mMatrix:[F
 
     const/4 v0, 0x3
 
     new-array v0, v0, [F
 
-    .line 12791
     iput-object v0, p0, Lcom/android/server/wm/ActivityRecord$AppSaturationInfo;->mTranslation:[F
 
     return-void
@@ -36,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/ActivityRecord$AppSaturationInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/ActivityRecord$AppSaturationInfo;-><init>()V
 
     return-void
@@ -47,7 +43,6 @@
 .method public setSaturation([F[F)V
     .locals 3
 
-    .line 12794
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord$AppSaturationInfo;->mMatrix:[F
 
     array-length v1, v0
@@ -56,7 +51,6 @@
 
     invoke-static {p1, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 12795
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord$AppSaturationInfo;->mTranslation:[F
 
     array-length p1, p0

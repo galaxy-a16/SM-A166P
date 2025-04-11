@@ -29,37 +29,26 @@
 .method public constructor <init>(Lcom/android/server/backup/transport/TransportConnection;Landroid/app/backup/IRestoreObserver;Landroid/app/backup/IBackupManagerMonitor;JLandroid/content/pm/PackageInfo;IZ[Ljava/lang/String;Lcom/android/server/backup/internal/OnTaskFinishedListener;Lcom/android/server/backup/utils/BackupEligibilityRules;)V
     .locals 0
 
-    .line 148
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
     iput-object p1, p0, Lcom/android/server/backup/params/RestoreParams;->mTransportConnection:Lcom/android/server/backup/transport/TransportConnection;
 
-    .line 150
     iput-object p2, p0, Lcom/android/server/backup/params/RestoreParams;->observer:Landroid/app/backup/IRestoreObserver;
 
-    .line 151
     iput-object p3, p0, Lcom/android/server/backup/params/RestoreParams;->monitor:Landroid/app/backup/IBackupManagerMonitor;
 
-    .line 152
     iput-wide p4, p0, Lcom/android/server/backup/params/RestoreParams;->token:J
 
-    .line 153
     iput-object p6, p0, Lcom/android/server/backup/params/RestoreParams;->packageInfo:Landroid/content/pm/PackageInfo;
 
-    .line 154
     iput p7, p0, Lcom/android/server/backup/params/RestoreParams;->pmToken:I
 
-    .line 155
     iput-boolean p8, p0, Lcom/android/server/backup/params/RestoreParams;->isSystemRestore:Z
 
-    .line 156
     iput-object p9, p0, Lcom/android/server/backup/params/RestoreParams;->filterSet:[Ljava/lang/String;
 
-    .line 157
     iput-object p10, p0, Lcom/android/server/backup/params/RestoreParams;->listener:Lcom/android/server/backup/internal/OnTaskFinishedListener;
 
-    .line 158
     iput-object p11, p0, Lcom/android/server/backup/params/RestoreParams;->backupEligibilityRules:Lcom/android/server/backup/utils/BackupEligibilityRules;
 
     return-void
@@ -68,7 +57,6 @@
 .method public static createForRestoreAll(Lcom/android/server/backup/transport/TransportConnection;Landroid/app/backup/IRestoreObserver;Landroid/app/backup/IBackupManagerMonitor;JLcom/android/server/backup/internal/OnTaskFinishedListener;Lcom/android/server/backup/utils/BackupEligibilityRules;)Lcom/android/server/backup/params/RestoreParams;
     .locals 13
 
-    .line 100
     new-instance v12, Lcom/android/server/backup/params/RestoreParams;
 
     const/4 v6, 0x0
@@ -101,12 +89,10 @@
 .method public static createForRestoreAtInstall(Lcom/android/server/backup/transport/TransportConnection;Landroid/app/backup/IRestoreObserver;Landroid/app/backup/IBackupManagerMonitor;JLjava/lang/String;ILcom/android/server/backup/internal/OnTaskFinishedListener;Lcom/android/server/backup/utils/BackupEligibilityRules;)Lcom/android/server/backup/params/RestoreParams;
     .locals 13
 
-    .line 76
     filled-new-array/range {p5 .. p5}, [Ljava/lang/String;
 
     move-result-object v9
 
-    .line 77
     new-instance v12, Lcom/android/server/backup/params/RestoreParams;
 
     const/4 v6, 0x0
@@ -137,7 +123,6 @@
 .method public static createForRestorePackages(Lcom/android/server/backup/transport/TransportConnection;Landroid/app/backup/IRestoreObserver;Landroid/app/backup/IBackupManagerMonitor;J[Ljava/lang/String;ZLcom/android/server/backup/internal/OnTaskFinishedListener;Lcom/android/server/backup/utils/BackupEligibilityRules;)Lcom/android/server/backup/params/RestoreParams;
     .locals 13
 
-    .line 125
     new-instance v12, Lcom/android/server/backup/params/RestoreParams;
 
     const/4 v6, 0x0
@@ -170,7 +155,6 @@
 .method public static createForSinglePackage(Lcom/android/server/backup/transport/TransportConnection;Landroid/app/backup/IRestoreObserver;Landroid/app/backup/IBackupManagerMonitor;JLandroid/content/pm/PackageInfo;Lcom/android/server/backup/internal/OnTaskFinishedListener;Lcom/android/server/backup/utils/BackupEligibilityRules;)Lcom/android/server/backup/params/RestoreParams;
     .locals 13
 
-    .line 51
     new-instance v12, Lcom/android/server/backup/params/RestoreParams;
 
     const/4 v7, 0x0

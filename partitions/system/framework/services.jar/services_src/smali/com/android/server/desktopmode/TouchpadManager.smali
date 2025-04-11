@@ -47,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/desktopmode/TouchpadManager;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -56,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDesktopDisplayId(Lcom/android/server/desktopmode/TouchpadManager;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mDesktopDisplayId:I
 
     return p0
@@ -65,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/desktopmode/TouchpadManager;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -74,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsSPenDetached(Lcom/android/server/desktopmode/TouchpadManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsSPenDetached:Z
 
     return p0
@@ -83,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetmNavBarModeObserver(Lcom/android/server/desktopmode/TouchpadManager;)Landroid/database/ContentObserver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mNavBarModeObserver:Landroid/database/ContentObserver;
 
     return-object p0
@@ -92,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPointerEventListener(Lcom/android/server/desktopmode/TouchpadManager;)Landroid/view/WindowManagerPolicyConstants$PointerEventListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mPointerEventListener:Landroid/view/WindowManagerPolicyConstants$PointerEventListener;
 
     return-object p0
@@ -101,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSPenDetachedReceiver(Lcom/android/server/desktopmode/TouchpadManager;)Landroid/content/BroadcastReceiver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mSPenDetachedReceiver:Landroid/content/BroadcastReceiver;
 
     return-object p0
@@ -110,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSPenSettingChangedListener(Lcom/android/server/desktopmode/TouchpadManager;)Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mSPenSettingChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
     return-object p0
@@ -119,7 +111,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSettingsHelper(Lcom/android/server/desktopmode/TouchpadManager;)Lcom/android/server/desktopmode/SettingsHelper;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mSettingsHelper:Lcom/android/server/desktopmode/SettingsHelper;
 
     return-object p0
@@ -128,7 +119,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/TouchpadManager;)Lcom/android/server/desktopmode/IStateManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     return-object p0
@@ -137,7 +127,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTouchpadRequested(Lcom/android/server/desktopmode/TouchpadManager;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mTouchpadRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object p0
@@ -146,7 +135,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWindowManager(Lcom/android/server/desktopmode/TouchpadManager;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -155,7 +143,6 @@
 .method public static bridge synthetic -$$Nest$fputmDesktopDisplayId(Lcom/android/server/desktopmode/TouchpadManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mDesktopDisplayId:I
 
     return-void
@@ -164,7 +151,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsSPenDetached(Lcom/android/server/desktopmode/TouchpadManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsSPenDetached:Z
 
     return-void
@@ -173,7 +159,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsSPenEnabled(Lcom/android/server/desktopmode/TouchpadManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsSPenEnabled:Z
 
     return-void
@@ -182,7 +167,6 @@
 .method public static bridge synthetic -$$Nest$misNavBarGestureEnabled(Lcom/android/server/desktopmode/TouchpadManager;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/TouchpadManager;->isNavBarGestureEnabled()Z
 
     move-result p0
@@ -193,7 +177,6 @@
 .method public static bridge synthetic -$$Nest$mupdateSPenState(Lcom/android/server/desktopmode/TouchpadManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/TouchpadManager;->updateSPenState()V
 
     return-void
@@ -202,7 +185,6 @@
 .method public static bridge synthetic -$$Nest$mupdateTouchpad(Lcom/android/server/desktopmode/TouchpadManager;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/TouchpadManager;->updateTouchpad(Z)V
 
     return-void
@@ -211,7 +193,6 @@
 .method public static bridge synthetic -$$Nest$mupdateTouchpadAvailability(Lcom/android/server/desktopmode/TouchpadManager;Lcom/android/server/desktopmode/State;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/TouchpadManager;->updateTouchpadAvailability(Lcom/android/server/desktopmode/State;)V
 
     return-void
@@ -220,7 +201,6 @@
 .method public static bridge synthetic -$$Nest$mupdateTouchpadOnDismiss(Lcom/android/server/desktopmode/TouchpadManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/TouchpadManager;->updateTouchpadOnDismiss()V
 
     return-void
@@ -229,7 +209,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/desktopmode/TouchpadManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -238,7 +217,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -267,45 +245,36 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/desktopmode/IStateManager;Lcom/android/server/ServiceThread;Lcom/android/server/desktopmode/SettingsHelper;Lcom/android/server/wm/WindowManagerService;)V
     .locals 3
 
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 43
     iput-boolean v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsTouchpadEnabled:Z
 
-    .line 44
     iput-boolean v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsSPenDetached:Z
 
-    .line 45
     iput-boolean v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsSPenEnabled:Z
 
     const/4 v0, -0x1
 
-    .line 46
     iput v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mDesktopDisplayId:I
 
     const/4 v0, 0x3
 
-    .line 48
     iput v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->AUTO_RUN_GUIDE_SHOWING_COUNT:I
 
-    .line 54
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mTouchpadRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 55
     new-instance v0, Lcom/android/server/desktopmode/TouchpadManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/TouchpadManager$1;-><init>(Lcom/android/server/desktopmode/TouchpadManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mInternalUiCallback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
 
-    .line 68
     new-instance v0, Lcom/android/server/desktopmode/TouchpadManager$2;
 
     const-string/jumbo v1, "spen_enabled"
@@ -314,7 +283,6 @@
 
     iput-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mSPenSettingChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
-    .line 79
     new-instance v0, Lcom/android/server/desktopmode/TouchpadManager$3;
 
     const-string/jumbo v1, "touchpad_auto_run"
@@ -323,14 +291,12 @@
 
     iput-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mAutoRunSettingChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
-    .line 91
     new-instance v1, Lcom/android/server/desktopmode/TouchpadManager$4;
 
     invoke-direct {v1, p0}, Lcom/android/server/desktopmode/TouchpadManager$4;-><init>(Lcom/android/server/desktopmode/TouchpadManager;)V
 
     iput-object v1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mSPenDetachedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 104
     new-instance v1, Lcom/android/server/desktopmode/TouchpadManager$5;
 
     const/4 v2, 0x0
@@ -339,17 +305,14 @@
 
     iput-object v1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mNavBarModeObserver:Landroid/database/ContentObserver;
 
-    .line 111
     new-instance v1, Lcom/android/server/desktopmode/TouchpadManager$6;
 
     invoke-direct {v1, p0}, Lcom/android/server/desktopmode/TouchpadManager$6;-><init>(Lcom/android/server/desktopmode/TouchpadManager;)V
 
     iput-object v1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mPointerEventListener:Landroid/view/WindowManagerPolicyConstants$PointerEventListener;
 
-    .line 131
     iput-object p1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mContext:Landroid/content/Context;
 
-    .line 132
     new-instance p1, Landroid/os/Handler;
 
     invoke-virtual {p3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -360,23 +323,18 @@
 
     iput-object p1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mHandler:Landroid/os/Handler;
 
-    .line 133
     iput-object p2, p0, Lcom/android/server/desktopmode/TouchpadManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
-    .line 134
     new-instance p1, Lcom/android/server/desktopmode/TouchpadManager$StateListener;
 
     invoke-direct {p1, p0, v2}, Lcom/android/server/desktopmode/TouchpadManager$StateListener;-><init>(Lcom/android/server/desktopmode/TouchpadManager;Lcom/android/server/desktopmode/TouchpadManager$StateListener-IA;)V
 
     invoke-interface {p2, p1}, Lcom/android/server/desktopmode/IStateManager;->registerListener(Lcom/android/server/desktopmode/StateManager$StateListener;)V
 
-    .line 135
     iput-object p4, p0, Lcom/android/server/desktopmode/TouchpadManager;->mSettingsHelper:Lcom/android/server/desktopmode/SettingsHelper;
 
-    .line 136
     iput-object p5, p0, Lcom/android/server/desktopmode/TouchpadManager;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 137
     invoke-virtual {p4, v0}, Lcom/android/server/desktopmode/SettingsHelper;->registerListener(Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;)V
 
     return-void
@@ -387,7 +345,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 2
 
-    .line 264
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -414,10 +371,8 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 265
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 266
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -436,7 +391,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 267
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -455,7 +409,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 268
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -474,7 +427,6 @@
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 269
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -483,7 +435,6 @@
 .method public getInternalUiCallback()Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
     .locals 0
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mInternalUiCallback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
 
     return-object p0
@@ -492,7 +443,6 @@
 .method public final isNavBarGestureEnabled()Z
     .locals 3
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -522,7 +472,6 @@
 .method public isSPenFeatureAvailable(Lcom/android/server/desktopmode/State;)Z
     .locals 0
 
-    .line 150
     sget-boolean p0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_SPEN:Z
 
     if-eqz p0, :cond_0
@@ -551,7 +500,6 @@
 .method public final isTouchpadAvailable(Lcom/android/server/desktopmode/State;)Z
     .locals 2
 
-    .line 185
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/TouchpadManager;->isTouchpadFeatureAvailable(Lcom/android/server/desktopmode/State;)Z
 
     move-result p0
@@ -560,7 +508,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 186
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
 
     move-result-object p0
@@ -584,7 +531,6 @@
 .method public isTouchpadFeatureAvailable(Lcom/android/server/desktopmode/State;)Z
     .locals 0
 
-    .line 146
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->isDexOnPcConnected()Z
 
     move-result p0
@@ -597,7 +543,6 @@
 .method public notifyStartedByNotification()V
     .locals 4
 
-    .line 154
     iget-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mTouchpadRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -606,7 +551,6 @@
 
     if-nez v0, :cond_1
 
-    .line 155
     iget-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -627,7 +571,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 158
     iget-object v1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -638,7 +581,6 @@
 
     invoke-static {v1, v2, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettings(Landroid/content/ContentResolver;Ljava/lang/String;I)V
 
-    .line 161
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mTouchpadRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -651,7 +593,6 @@
 .method public final updateSPenState()V
     .locals 4
 
-    .line 166
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -662,7 +603,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
@@ -670,7 +610,6 @@
 
     move-result-object v0
 
-    .line 168
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/TouchpadManager;->isSPenFeatureAvailable(Lcom/android/server/desktopmode/State;)Z
 
     move-result v1
@@ -681,7 +620,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 169
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/TouchpadManager;->isTouchpadAvailable(Lcom/android/server/desktopmode/State;)Z
 
     move-result v0
@@ -695,16 +633,13 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 170
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsSPenEnabled:Z
 
     if-eq v1, v0, :cond_3
 
-    .line 171
     iput-boolean v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsSPenEnabled:Z
 
-    .line 172
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v1, :cond_2
@@ -729,7 +664,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     :cond_2
     iget-object v1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mContext:Landroid/content/Context;
 
@@ -741,7 +675,6 @@
 
     invoke-static {v1, v2, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettings(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 175
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p0, v0}, Lcom/android/server/desktopmode/IStateManager;->setSpenEnabled(Z)V
@@ -753,10 +686,8 @@
 .method public final updateTouchpad(Z)V
     .locals 0
 
-    .line 195
     iput-boolean p1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsTouchpadEnabled:Z
 
-    .line 196
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p0, p1}, Lcom/android/server/desktopmode/IStateManager;->setTouchpadEnabled(Z)V
@@ -767,7 +698,6 @@
 .method public final updateTouchpadAvailability(Lcom/android/server/desktopmode/State;)V
     .locals 1
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/TouchpadManager;->isTouchpadAvailable(Lcom/android/server/desktopmode/State;)Z
@@ -782,14 +712,12 @@
 .method public final updateTouchpadOnDismiss()V
     .locals 3
 
-    .line 200
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SPEN_INBOX_MODEL:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 203
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -800,18 +728,14 @@
 
     invoke-static {v0, v2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/desktopmode/TouchpadManager;->mIsSPenDetached:Z
 
-    .line 205
     invoke-virtual {p0}, Lcom/android/server/desktopmode/TouchpadManager;->updateSPenState()V
 
-    .line 207
     :cond_1
     invoke-virtual {p0, v1}, Lcom/android/server/desktopmode/TouchpadManager;->updateTouchpad(Z)V
 
-    .line 208
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager;->mTouchpadRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V

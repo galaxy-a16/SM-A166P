@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/attention/AttentionManagerService;)V
     .locals 2
 
-    .line 1125
     iput-object p1, p0, Lcom/android/server/attention/AttentionManagerService$BinderService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 1126
     new-instance v0, Lcom/android/server/attention/AttentionManagerService$AttentionManagerServiceShellCommand;
 
     const/4 v1, 0x0
@@ -33,7 +31,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/attention/AttentionManagerService;Lcom/android/server/attention/AttentionManagerService$BinderService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/attention/AttentionManagerService$BinderService;-><init>(Lcom/android/server/attention/AttentionManagerService;)V
 
     return-void
@@ -44,7 +41,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 1140
     iget-object p1, p0, Lcom/android/server/attention/AttentionManagerService$BinderService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-static {p1}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$fgetmContext(Lcom/android/server/attention/AttentionManagerService;)Landroid/content/Context;
@@ -61,7 +57,6 @@
 
     return-void
 
-    .line 1144
     :cond_0
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$BinderService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
@@ -79,7 +74,6 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 8
 
-    .line 1134
     iget-object v0, p0, Lcom/android/server/attention/AttentionManagerService$BinderService;->mAttentionManagerServiceShellCommand:Lcom/android/server/attention/AttentionManagerService$AttentionManagerServiceShellCommand;
 
     move-object v1, p0

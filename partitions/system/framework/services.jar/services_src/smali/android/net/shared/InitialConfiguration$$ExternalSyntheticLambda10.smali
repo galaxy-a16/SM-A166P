@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/net/LinkAddress;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda10;->f$0:Landroid/net/LinkAddress;
@@ -27,7 +26,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Landroid/net/shared/InitialConfiguration$$ExternalSyntheticLambda10;->f$0:Landroid/net/LinkAddress;
 
     check-cast p1, Landroid/net/LinkAddress;

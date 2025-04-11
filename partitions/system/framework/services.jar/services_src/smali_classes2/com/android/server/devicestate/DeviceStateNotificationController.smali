@@ -31,12 +31,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 7
 
-    .line 73
     new-instance v4, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;
 
     invoke-direct {v4, p1}, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;-><init>(Landroid/content/Context;)V
 
-    .line 74
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
@@ -59,7 +57,6 @@
 
     move-object v3, p3
 
-    .line 73
     invoke-direct/range {v0 .. v6}, Lcom/android/server/devicestate/DeviceStateNotificationController;-><init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/Runnable;Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;Landroid/content/pm/PackageManager;Landroid/app/NotificationManager;)V
 
     return-void
@@ -68,28 +65,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/Runnable;Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;Landroid/content/pm/PackageManager;Landroid/app/NotificationManager;)V
     .locals 6
 
-    .line 83
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 84
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mContext:Landroid/content/Context;
 
-    .line 85
     iput-object p2, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mHandler:Landroid/os/Handler;
 
-    .line 86
     iput-object p3, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mCancelStateRunnable:Ljava/lang/Runnable;
 
-    .line 87
     iput-object p4, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mNotificationInfoProvider:Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;
 
-    .line 88
     iput-object p5, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 89
     iput-object p6, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 90
     new-instance v2, Landroid/content/IntentFilter;
 
     const-string p3, "com.android.server.devicestate.INTENT_ACTION_CANCEL_STATE"
@@ -116,7 +105,6 @@
 .method public cancelNotification(I)V
     .locals 1
 
-    .line 179
     invoke-virtual {p0}, Lcom/android/server/devicestate/DeviceStateNotificationController;->getNotificationInfos()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -129,7 +117,6 @@
 
     return-void
 
-    .line 188
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mNotificationManager:Landroid/app/NotificationManager;
 
@@ -145,30 +132,25 @@
 .method public final getApplicationLabel(I)Ljava/lang/String;
     .locals 3
 
-    .line 362
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v0, p1}, Landroid/content/pm/PackageManager;->getNameForUid(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 364
     :try_start_0
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const-wide/16 v1, 0x0
 
-    .line 365
     invoke-static {v1, v2}, Landroid/content/pm/PackageManager$ApplicationInfoFlags;->of(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
 
     move-result-object v1
 
-    .line 364
     invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p1
 
-    .line 366
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1, p0}, Landroid/content/pm/ApplicationInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
@@ -192,7 +174,6 @@
 .method public final getNotificationInfos()Landroid/util/SparseArray;
     .locals 2
 
-    .line 238
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -213,7 +194,6 @@
 
     move-result-object v0
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mNotificationInfoProvider:Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfoProvider;->getNotificationInfos(Ljava/util/Locale;)Landroid/util/SparseArray;
@@ -230,7 +210,6 @@
 
     const-string p1, "com.android.server.devicestate.INTENT_ACTION_CANCEL_STATE"
 
-    .line 195
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -241,7 +220,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 196
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mCancelStateRunnable:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
@@ -253,7 +231,6 @@
 .method public final showNotification(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILandroid/app/PendingIntent;Ljava/lang/String;)V
     .locals 4
 
-    .line 213
     new-instance v0, Landroid/app/NotificationChannel;
 
     const/4 v1, 0x4
@@ -262,48 +239,40 @@
 
     invoke-direct {v0, v2, p1, v1}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    .line 215
     new-instance v1, Landroid/app/Notification$Builder;
 
     iget-object v3, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v3, v2}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 216
     invoke-virtual {v1, p5}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     move-result-object p5
 
-    .line 217
     invoke-virtual {p5, p2}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object p2
 
-    .line 218
     invoke-virtual {p2, p3}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object p2
 
-    .line 219
     invoke-virtual {p2, p1}, Landroid/app/Notification$Builder;->setSubText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object p1
 
     const/4 p2, 0x1
 
-    .line 220
     invoke-virtual {p1, p2}, Landroid/app/Notification$Builder;->setLocalOnly(Z)Landroid/app/Notification$Builder;
 
     move-result-object p1
 
-    .line 221
     invoke-virtual {p1, p4}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
     move-result-object p1
 
     const-string/jumbo p3, "sys"
 
-    .line 222
     invoke-virtual {p1, p3}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
     move-result-object p1
@@ -312,28 +281,23 @@
 
     if-eqz p7, :cond_0
 
-    .line 225
     new-instance p3, Landroid/app/Notification$Action$Builder;
 
     const/4 p4, 0x0
 
     invoke-direct {p3, p4, p7, p6}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 229
     invoke-virtual {p3}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
 
     move-result-object p3
 
-    .line 230
     invoke-virtual {p1, p3}, Landroid/app/Notification$Builder;->addAction(Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;
 
-    .line 233
     :cond_0
     iget-object p3, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mNotificationManager:Landroid/app/NotificationManager;
 
     invoke-virtual {p3, v0}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
 
-    .line 234
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mNotificationManager:Landroid/app/NotificationManager;
 
     invoke-virtual {p1}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
@@ -348,7 +312,6 @@
 .method public showPowerSaveNotificationIfNeeded(I)V
     .locals 12
 
-    .line 157
     invoke-virtual {p0}, Lcom/android/server/devicestate/DeviceStateNotificationController;->getNotificationInfos()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -361,7 +324,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 158
     invoke-virtual {p1}, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;->hasPowerSaveModeNotification()Z
 
     move-result v0
@@ -370,7 +332,6 @@
 
     goto :goto_0
 
-    .line 161
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -378,7 +339,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 162
     iget-object v1, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -389,7 +349,6 @@
 
     move-result-object v10
 
-    .line 164
     iget-object v5, p1, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;->name:Ljava/lang/String;
 
     iget-object v6, p1, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;->powerSaveModeNotificationTitle:Ljava/lang/String;
@@ -404,14 +363,12 @@
 
     const v0, 0x104041f
 
-    .line 169
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
     move-object v4, p0
 
-    .line 164
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/devicestate/DeviceStateNotificationController;->showNotification(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILandroid/app/PendingIntent;Ljava/lang/String;)V
 
     :cond_1
@@ -422,7 +379,6 @@
 .method public showStateActiveNotificationIfNeeded(II)V
     .locals 12
 
-    .line 106
     invoke-virtual {p0}, Lcom/android/server/devicestate/DeviceStateNotificationController;->getNotificationInfos()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -435,7 +391,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 107
     invoke-virtual {v0}, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;->hasActiveNotification()Z
 
     move-result v1
@@ -444,7 +399,6 @@
 
     goto :goto_0
 
-    .line 110
     :cond_0
     invoke-virtual {p0, p2}, Lcom/android/server/devicestate/DeviceStateNotificationController;->getApplicationLabel(I)Ljava/lang/String;
 
@@ -452,7 +406,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 112
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "com.android.server.devicestate.INTENT_ACTION_CANCEL_STATE"
@@ -461,7 +414,6 @@
 
     iget-object p2, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mContext:Landroid/content/Context;
 
-    .line 113
     invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
@@ -470,7 +422,6 @@
 
     move-result-object p1
 
-    .line 114
     iget-object p2, p0, Lcom/android/server/devicestate/DeviceStateNotificationController;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -481,7 +432,6 @@
 
     move-result-object v10
 
-    .line 116
     iget-object v5, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;->name:Ljava/lang/String;
 
     iget-object v6, v0, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;->activeNotificationTitle:Ljava/lang/String;
@@ -492,7 +442,6 @@
 
     move-result-object p2
 
-    .line 118
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
@@ -505,19 +454,16 @@
 
     const p2, 0x1040420
 
-    .line 121
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
     move-object v4, p0
 
-    .line 116
     invoke-virtual/range {v4 .. v11}, Lcom/android/server/devicestate/DeviceStateNotificationController;->showNotification(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILandroid/app/PendingIntent;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 124
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -551,7 +497,6 @@
 .method public showThermalCriticalNotificationIfNeeded(I)V
     .locals 9
 
-    .line 136
     invoke-virtual {p0}, Lcom/android/server/devicestate/DeviceStateNotificationController;->getNotificationInfos()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -564,7 +509,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 137
     invoke-virtual {p1}, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;->hasThermalCriticalNotification()Z
 
     move-result v0
@@ -573,7 +517,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_0
     iget-object v2, p1, Lcom/android/server/devicestate/DeviceStateNotificationController$NotificationInfo;->name:Ljava/lang/String;
 

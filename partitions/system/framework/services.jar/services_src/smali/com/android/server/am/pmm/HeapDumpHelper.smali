@@ -13,10 +13,8 @@
 
     const-string/jumbo v0, "yyyyMMdd-HHmmss"
 
-    .line 23
     sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    .line 24
     invoke-static {v0, v1}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;Ljava/util/Locale;)Ljava/time/format/DateTimeFormatter;
 
     move-result-object v0
@@ -29,7 +27,6 @@
 .method public static cleanUpPath()V
     .locals 6
 
-    .line 30
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -37,7 +34,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 31
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
@@ -51,7 +47,6 @@
 
     aget-object v3, v0, v2
 
-    .line 32
     invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -64,7 +59,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 33
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -79,7 +73,6 @@
 
     const-string/jumbo v1, "pmm.HeapDumpHelper"
 
-    .line 37
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0

@@ -25,40 +25,32 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 746
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 734
     iput v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->dailyQuota:I
 
-    .line 735
     iput v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->dailyQuotaLimit:I
 
     const/4 v1, -0x1
 
-    .line 736
     iput v1, p0, Lcom/android/server/NandswapManager$NandswapClient;->state:I
 
-    .line 738
     iput-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
-    .line 740
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->bdStatMap:Ljava/util/HashMap;
 
-    .line 741
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->bigdataPersistPropMap:Ljava/util/HashMap;
 
-    .line 743
     new-instance v0, Lcom/android/server/NandswapManager$ProcessingManager;
 
     const/4 v1, 0x0
@@ -67,20 +59,16 @@
 
     iput-object v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->normalStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
-    .line 744
     new-instance v0, Lcom/android/server/NandswapManager$ProcessingManager;
 
     invoke-direct {v0, v1}, Lcom/android/server/NandswapManager$ProcessingManager;-><init>(Lcom/android/server/NandswapManager$ProcessingManager-IA;)V
 
     iput-object v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->pprStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
-    .line 747
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$NandswapClient;->initNandswapState()V
 
-    .line 748
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$NandswapClient;->initBigdataState()V
 
-    .line 749
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$NandswapClient;->setPreviousInfo()V
 
     return-void
@@ -91,17 +79,14 @@
 .method public clearAverageList()V
     .locals 1
 
-    .line 1000
     iget-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v0, :cond_0
 
-    .line 1001
     iget-object v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->normalStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     invoke-static {v0}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$mclearAllList(Lcom/android/server/NandswapManager$ProcessingManager;)V
 
-    .line 1002
     iget-object p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->pprStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     invoke-static {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$mclearAllList(Lcom/android/server/NandswapManager$ProcessingManager;)V
@@ -149,17 +134,14 @@
 
     const-string/jumbo v17, "objwrites"
 
-    .line 821
     filled-new-array/range {v1 .. v17}, [Ljava/lang/String;
 
     move-result-object v1
 
-    .line 829
     iget-object v2, v0, Lcom/android/server/NandswapManager$NandswapClient;->bdStatMap:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 832
     :try_start_0
     new-instance v2, Ljava/io/File;
 
@@ -187,13 +169,11 @@
 
     const/4 v3, 0x0
 
-    .line 834
     :goto_0
     array-length v4, v2
 
     if-ge v3, v4, :cond_0
 
-    .line 835
     iget-object v4, v0, Lcom/android/server/NandswapManager$NandswapClient;->bdStatMap:Ljava/util/HashMap;
 
     aget-object v5, v1, v3
@@ -221,10 +201,8 @@
 
     const-string v2, "Failed to read stats from /sys/block/zram0/bd_stat"
 
-    .line 838
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 840
     :cond_0
     iget-object v0, v0, Lcom/android/server/NandswapManager$NandswapClient;->bdStatMap:Ljava/util/HashMap;
 
@@ -254,17 +232,14 @@
 
     const-string/jumbo v9, "objwrites"
 
-    .line 907
     filled-new-array/range {v0 .. v9}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 912
     iget-object v1, p0, Lcom/android/server/NandswapManager$NandswapClient;->bigdataPersistPropMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 914
     iget-boolean v1, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v1, :cond_0
@@ -273,12 +248,10 @@
 
     const-string v2, "None"
 
-    .line 915
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 916
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -287,7 +260,6 @@
 
     const-string v2, ","
 
-    .line 917
     invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
@@ -301,7 +273,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 921
     :try_start_0
     iget-object v5, p0, Lcom/android/server/NandswapManager$NandswapClient;->bigdataPersistPropMap:Ljava/util/HashMap;
 
@@ -328,7 +299,6 @@
     :catch_0
     move-exception v1
 
-    .line 924
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,7 +321,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 925
     iget-object v1, p0, Lcom/android/server/NandswapManager$NandswapClient;->bigdataPersistPropMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
@@ -361,7 +330,6 @@
     :goto_1
     if-ge v1, v4, :cond_0
 
-    .line 927
     iget-object v3, p0, Lcom/android/server/NandswapManager$NandswapClient;->bigdataPersistPropMap:Ljava/util/HashMap;
 
     aget-object v5, v0, v1
@@ -376,7 +344,6 @@
 
     goto :goto_1
 
-    .line 932
     :cond_0
     iget-object p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->bigdataPersistPropMap:Ljava/util/HashMap;
 
@@ -386,12 +353,10 @@
 .method public getCountAverage()D
     .locals 2
 
-    .line 872
     iget-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v0, :cond_0
 
-    .line 873
     iget-object p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->normalStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     invoke-static {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$mcalcCountAverage(Lcom/android/server/NandswapManager$ProcessingManager;)D
@@ -409,12 +374,10 @@
 .method public getPprCountAverage()D
     .locals 2
 
-    .line 884
     iget-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v0, :cond_0
 
-    .line 885
     iget-object p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->pprStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     invoke-static {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$mcalcCountAverage(Lcom/android/server/NandswapManager$ProcessingManager;)D
@@ -432,12 +395,10 @@
 .method public getPprSizeAverage()D
     .locals 2
 
-    .line 890
     iget-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v0, :cond_0
 
-    .line 891
     iget-object p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->pprStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     invoke-static {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$mcalcSizeAverage(Lcom/android/server/NandswapManager$ProcessingManager;)D
@@ -457,7 +418,6 @@
 
     const-string/jumbo p0, "persist.sys.zram.daily_quota_remain"
 
-    .line 806
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -468,7 +428,6 @@
 .method public getQuotaSysNode()I
     .locals 2
 
-    .line 811
     :try_start_0
     new-instance p0, Ljava/io/File;
 
@@ -488,7 +447,6 @@
 
     move-result-object p0
 
-    .line 812
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
@@ -502,7 +460,6 @@
 
     const-string v0, "Failed to read quota from /sys/block/zram0/writeback_limit"
 
-    .line 814
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -513,12 +470,10 @@
 .method public getSizeAverage()D
     .locals 2
 
-    .line 878
     iget-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v0, :cond_0
 
-    .line 879
     iget-object p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->normalStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     invoke-static {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$mcalcSizeAverage(Lcom/android/server/NandswapManager$ProcessingManager;)D
@@ -536,7 +491,6 @@
 .method public initBigdataInfoProp()V
     .locals 1
 
-    .line 936
     iget-boolean p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz p0, :cond_0
@@ -546,7 +500,6 @@
     :try_start_0
     const-string/jumbo v0, "persist.sys.zram0.bigdata_info"
 
-    .line 940
     invoke-static {v0, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -558,7 +511,6 @@
 
     const-string v0, "Failed to init Bigdata Info..."
 
-    .line 942
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -569,7 +521,6 @@
 .method public initBigdataState()V
     .locals 3
 
-    .line 786
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -595,7 +546,6 @@
 
     move-result-object v0
 
-    .line 791
     array-length v0, v0
 
     const/16 v1, 0xa
@@ -604,7 +554,6 @@
 
     const/4 v0, 0x1
 
-    .line 792
     iput-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     goto :goto_0
@@ -612,7 +561,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 794
     iput-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -624,7 +572,6 @@
 
     const-string v0, "Failed to read stats from /sys/block/zram0/bd_stat"
 
-    .line 797
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -634,7 +581,6 @@
 .method public initNandswapState()V
     .locals 1
 
-    .line 769
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$NandswapClient;->isWritebackEnabled()Z
 
     move-result v0
@@ -643,7 +589,6 @@
 
     const/4 v0, 0x1
 
-    .line 770
     iput v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->state:I
 
     goto :goto_0
@@ -651,7 +596,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 772
     iput v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->state:I
 
     :goto_0
@@ -661,7 +605,6 @@
 .method public isExistBigdataInfoProp()Z
     .locals 1
 
-    .line 897
     iget-boolean p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz p0, :cond_0
@@ -670,12 +613,10 @@
 
     const-string v0, "None"
 
-    .line 898
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 899
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -695,7 +636,6 @@
 .method public isNandswapEnabled()Z
     .locals 1
 
-    .line 777
     iget p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->state:I
 
     const/4 v0, 0x1
@@ -713,7 +653,6 @@
 .method public isSupportBigdata()Z
     .locals 0
 
-    .line 802
     iget-boolean p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     return p0
@@ -724,7 +663,6 @@
 
     const-string p0, "NandswapManager"
 
-    .line 754
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -736,14 +674,12 @@
 
     const/16 v2, 0x80
 
-    .line 755
     invoke-static {v0, v2, v1}, Landroid/os/FileUtils;->readTextFile(Ljava/io/File;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v2, "none"
 
-    .line 757
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
@@ -765,7 +701,6 @@
     :cond_0
     const-string v0, "Writeback device is not set"
 
-    .line 760
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -781,7 +716,6 @@
     :catch_0
     const-string v0, "Writeback is not enabled on /sys/block/zram0/backing_dev"
 
-    .line 763
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
@@ -793,7 +727,6 @@
 .method public resetBdStatSysNode()V
     .locals 1
 
-    .line 845
     :try_start_0
     new-instance p0, Ljava/io/File;
 
@@ -818,7 +751,6 @@
 
     const-string v0, "Failed to reset stats from /sys/block/zram0/bd_stat"
 
-    .line 847
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -828,17 +760,14 @@
 .method public saveStorageUsage()V
     .locals 3
 
-    .line 860
     iget-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v0, :cond_0
 
-    .line 861
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$NandswapClient;->getBdStat()Ljava/util/HashMap;
 
     move-result-object v0
 
-    .line 863
     iget-object v1, p0, Lcom/android/server/NandswapManager$NandswapClient;->normalStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     const-string v2, "count"
@@ -855,7 +784,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$msetCount(Lcom/android/server/NandswapManager$ProcessingManager;I)V
 
-    .line 864
     iget-object v1, p0, Lcom/android/server/NandswapManager$NandswapClient;->normalStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     const-string/jumbo v2, "size"
@@ -872,7 +800,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$msetSize(Lcom/android/server/NandswapManager$ProcessingManager;I)V
 
-    .line 865
     iget-object v1, p0, Lcom/android/server/NandswapManager$NandswapClient;->pprStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     const-string/jumbo v2, "ppr_count"
@@ -889,7 +816,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$msetCount(Lcom/android/server/NandswapManager$ProcessingManager;I)V
 
-    .line 866
     iget-object p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->pprStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     const-string/jumbo v1, "ppr_size"
@@ -910,7 +836,6 @@
 
     const-string v0, "Saved storage usage successfully!!"
 
-    .line 867
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -920,22 +845,18 @@
 .method public setBigdataInfoProp()V
     .locals 10
 
-    .line 955
     iget-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v0, :cond_2
 
-    .line 956
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$NandswapClient;->getBigdataInfoProp()Ljava/util/HashMap;
 
     move-result-object v0
 
-    .line 957
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$NandswapClient;->getBdStat()Ljava/util/HashMap;
 
     move-result-object v1
 
-    .line 959
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v2
@@ -954,7 +875,6 @@
 
     goto/16 :goto_0
 
-    .line 966
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1018,7 +938,6 @@
 
     move-result-object v2
 
-    .line 967
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1075,7 +994,6 @@
 
     move-result-object v2
 
-    .line 969
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1126,7 +1044,6 @@
 
     move-result-object v2
 
-    .line 970
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1177,7 +1094,6 @@
 
     move-result-object v2
 
-    .line 972
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1234,7 +1150,6 @@
 
     move-result-object v2
 
-    .line 973
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1291,7 +1206,6 @@
 
     move-result-object v2
 
-    .line 975
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1342,7 +1256,6 @@
 
     move-result-object v2
 
-    .line 976
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1393,7 +1306,6 @@
 
     move-result-object v2
 
-    .line 978
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1450,7 +1362,6 @@
 
     move-result-object v2
 
-    .line 979
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1509,7 +1420,6 @@
 
     move-result-object p0
 
-    .line 981
     :try_start_0
     invoke-static {v3, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
@@ -1517,7 +1427,6 @@
 
     const-string p0, "Saved Bigdata Info successfully!!"
 
-    .line 986
     invoke-static {v4, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -1525,12 +1434,10 @@
     :catch_0
     const-string p0, "Failed to saved Bigdata Info..."
 
-    .line 983
     invoke-static {v4, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 960
     :cond_1
     :goto_0
     sget-object p0, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -1571,17 +1478,14 @@
 .method public setPreviousInfo()V
     .locals 8
 
-    .line 991
     iget-boolean v0, p0, Lcom/android/server/NandswapManager$NandswapClient;->supportBigdataState:Z
 
     if-eqz v0, :cond_0
 
-    .line 992
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$NandswapClient;->getBdStat()Ljava/util/HashMap;
 
     move-result-object v0
 
-    .line 994
     iget-object v1, p0, Lcom/android/server/NandswapManager$NandswapClient;->normalStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     const-string/jumbo v2, "reads"
@@ -1634,7 +1538,6 @@
 
     invoke-static {v1, v2, v3, v5, v7}, Lcom/android/server/NandswapManager$ProcessingManager;->-$$Nest$msetPreviousValue(Lcom/android/server/NandswapManager$ProcessingManager;IIII)V
 
-    .line 995
     iget-object p0, p0, Lcom/android/server/NandswapManager$NandswapClient;->pprStat:Lcom/android/server/NandswapManager$ProcessingManager;
 
     const-string/jumbo v1, "ppr_reads"
@@ -1690,7 +1593,6 @@
 .method public setQuotaSysNode(I)V
     .locals 1
 
-    .line 853
     :try_start_0
     new-instance p0, Ljava/io/File;
 
@@ -1713,7 +1615,6 @@
 
     const-string p1, "Failed to write new quota to /sys/block/zram0/writeback_limit"
 
-    .line 855
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

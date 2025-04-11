@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/pm/dex/OdsignStatsLogger;->$r8$lambda$5IgqqBRRaURrVhBA9xD6mm8mpzY()V
 
     return-void

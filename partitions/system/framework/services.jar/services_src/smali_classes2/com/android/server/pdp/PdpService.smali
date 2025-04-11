@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSvcPdpThread(Lcom/android/server/pdp/PdpService;)Landroid/os/HandlerThread;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pdp/PdpService;->mSvcPdpThread:Landroid/os/HandlerThread;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fputmSvcPdpHandler(Lcom/android/server/pdp/PdpService;Lcom/android/server/pdp/PdpService$SvcPdpHandler;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/pdp/PdpService;->mSvcPdpHandler:Lcom/android/server/pdp/PdpService$SvcPdpHandler;
 
     return-void
@@ -33,13 +31,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 186
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 187
     iput-object p1, p0, Lcom/android/server/pdp/PdpService;->mContext:Landroid/content/Context;
 
-    .line 188
     new-instance p1, Lcom/android/server/pdp/PdpService$1;
 
     const-string/jumbo v0, "mSvcPdpThread"
@@ -48,7 +43,6 @@
 
     iput-object p1, p0, Lcom/android/server/pdp/PdpService;->mSvcPdpThread:Landroid/os/HandlerThread;
 
-    .line 194
     invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
     return-void
@@ -63,7 +57,6 @@
 
     const-string v1, "PdpService"
 
-    .line 45
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
@@ -73,7 +66,6 @@
     :goto_0
     if-gt v2, p2, :cond_0
 
-    .line 48
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pdp/PdpService;->mContext:Landroid/content/Context;
 
@@ -85,10 +77,8 @@
 
     const/4 v5, 0x0
 
-    .line 49
     invoke-virtual {v3, v4, v5, v5}, Landroid/widget/Toast;->setGravity(III)V
 
-    .line 50
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -102,13 +92,11 @@
 
     const-string p1, "[PDP] Toast exception"
 
-    .line 53
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
     const-string p0, "[PDP] displayPDPToast end"
 
-    .line 55
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -125,10 +113,8 @@
 
     const-string v0, "[PDP] PHASE_BOOT_COMPLETED"
 
-    .line 180
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     invoke-virtual {p0}, Lcom/android/server/pdp/PdpService;->pdpServiceReady()V
 
     :cond_0
@@ -142,7 +128,6 @@
 
     const-string v0, "[PDP] onStart"
 
-    .line 174
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -155,24 +140,20 @@
 
     const-string v1, "PdpService"
 
-    .line 164
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/pdp/PdpService;->mSvcPdpHandler:Lcom/android/server/pdp/PdpService$SvcPdpHandler;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 166
     iget-object v0, p0, Lcom/android/server/pdp/PdpService;->mSvcPdpHandler:Lcom/android/server/pdp/PdpService$SvcPdpHandler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 168
     iget-object p0, p0, Lcom/android/server/pdp/PdpService;->mSvcPdpHandler:Lcom/android/server/pdp/PdpService$SvcPdpHandler;
 
     const-wide/16 v2, 0x1770
@@ -181,7 +162,6 @@
 
     const-string p0, "[PDP] pdpServiceReady <"
 
-    .line 169
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

@@ -23,7 +23,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Landroid/content/pm/ApplicationInfo;IZIILandroid/content/pm/IPackageDataObserver;)V
     .locals 0
 
-    .line 4311
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$8;->val$appInfo:Landroid/content/pm/ApplicationInfo;
@@ -54,19 +53,16 @@
 
     move/from16 v2, p2
 
-    .line 4315
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$8;->val$appInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v3, :cond_0
 
-    .line 4316
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v3
 
-    .line 4317
     :try_start_0
     iget-object v4, v0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -76,7 +72,6 @@
 
     invoke-static {v4, v1, v5}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$mfinishForceStopPackageLocked(Lcom/android/server/am/ActivityManagerService;Ljava/lang/String;I)V
 
-    .line 4318
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -101,7 +96,6 @@
     :goto_0
     if-eqz v2, :cond_4
 
-    .line 4322
     new-instance v10, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.PACKAGE_DATA_CLEARED"
@@ -110,7 +104,6 @@
 
     const/4 v5, 0x0
 
-    .line 4323
     invoke-static {v4, v1, v5}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
@@ -119,12 +112,10 @@
 
     const/high16 v3, 0x5000000
 
-    .line 4324
     invoke-virtual {v10, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string v3, "android.intent.extra.UID"
 
-    .line 4327
     iget-object v4, v0, Lcom/android/server/am/ActivityManagerService$8;->val$appInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v4, :cond_1
@@ -136,28 +127,23 @@
     :cond_1
     const/4 v4, -0x1
 
-    .line 4326
     :goto_1
     invoke-virtual {v10, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v3, "android.intent.extra.user_handle"
 
-    .line 4328
     iget v4, v0, Lcom/android/server/am/ActivityManagerService$8;->val$resolvedUserId:I
 
     invoke-virtual {v10, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 4329
     iget-boolean v3, v0, Lcom/android/server/am/ActivityManagerService$8;->val$isInstantApp:Z
 
     if-eqz v3, :cond_2
 
     const-string v3, "android.intent.extra.PACKAGE_NAME"
 
-    .line 4330
     invoke-virtual {v10, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4332
     :cond_2
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -169,7 +155,6 @@
 
     move-result-object v23
 
-    .line 4335
     iget-object v4, v0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     const-string v3, "android"
@@ -194,7 +179,6 @@
 
     const/16 v16, 0x0
 
-    .line 4339
     iget-boolean v5, v0, Lcom/android/server/am/ActivityManagerService$8;->val$isInstantApp:Z
 
     if-eqz v5, :cond_3
@@ -223,16 +207,13 @@
 
     move-object v5, v3
 
-    .line 4335
     invoke-virtual/range {v4 .. v23}, Lcom/android/server/am/ActivityManagerService;->broadcastIntentInPackage(Ljava/lang/String;Ljava/lang/String;IIILandroid/content/Intent;Ljava/lang/String;Lcom/android/server/am/ProcessRecord;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/os/Bundle;ZZILandroid/app/BackgroundStartPrivileges;[I)I
 
-    .line 4345
     :cond_4
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService$8;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
     if-eqz v0, :cond_5
 
-    .line 4346
     invoke-interface {v0, v1, v2}, Landroid/content/pm/IPackageDataObserver;->onRemoveCompleted(Ljava/lang/String;Z)V
 
     :cond_5

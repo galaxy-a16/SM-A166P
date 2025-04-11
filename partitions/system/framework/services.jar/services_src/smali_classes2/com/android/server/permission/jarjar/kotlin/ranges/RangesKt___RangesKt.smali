@@ -7,7 +7,6 @@
 .method public static final coerceAtMost(II)I
     .locals 0
 
-    .line 0
     if-le p0, p1, :cond_0
 
     move p0, p1
@@ -19,7 +18,6 @@
 .method public static final coerceAtMost(JJ)J
     .locals 1
 
-    .line 0
     cmp-long v0, p0, p2
 
     if-lez v0, :cond_0

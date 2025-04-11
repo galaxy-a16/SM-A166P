@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenGestureManagerService;)V
     .locals 0
 
-    .line 486
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$4;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -26,14 +25,12 @@
 
     const-string p0, "com.samsung.android.service.aircommand"
 
-    .line 489
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 490
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object p0

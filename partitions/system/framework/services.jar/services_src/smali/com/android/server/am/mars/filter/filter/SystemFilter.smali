@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/SystemFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/SystemFilter;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/SystemFilter;
     .locals 1
 
-    .line 19
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/SystemFilter$SystemFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/SystemFilter;
 
     move-result-object v0
@@ -40,7 +38,6 @@
 .method public deInit()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -51,7 +48,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_0
     invoke-static {p3}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -88,6 +84,5 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/io/File;Lcom/android/server/backup/utils/DataStreamCodec;)V
     .locals 0
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/backup/utils/DataStreamFileCodec;->mFile:Ljava/io/File;
 
-    .line 44
     iput-object p2, p0, Lcom/android/server/backup/utils/DataStreamFileCodec;->mCodec:Lcom/android/server/backup/utils/DataStreamCodec;
 
     return-void
@@ -30,14 +27,12 @@
 .method public deserialize()Ljava/lang/Object;
     .locals 2
 
-    .line 55
     new-instance v0, Ljava/io/FileInputStream;
 
     iget-object v1, p0, Lcom/android/server/backup/utils/DataStreamFileCodec;->mFile:Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 56
     :try_start_0
     new-instance v1, Ljava/io/DataInputStream;
 
@@ -45,7 +40,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 58
     :try_start_1
     iget-object p0, p0, Lcom/android/server/backup/utils/DataStreamFileCodec;->mCodec:Lcom/android/server/backup/utils/DataStreamCodec;
 
@@ -55,7 +49,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 59
     :try_start_2
     invoke-virtual {v1}, Ljava/io/DataInputStream;->close()V
     :try_end_2
@@ -68,7 +61,6 @@
     :catchall_0
     move-exception p0
 
-    .line 54
     :try_start_3
     invoke-virtual {v1}, Ljava/io/DataInputStream;->close()V
     :try_end_3
@@ -109,14 +101,12 @@
 .method public serialize(Ljava/lang/Object;)V
     .locals 3
 
-    .line 70
     new-instance v0, Ljava/io/FileOutputStream;
 
     iget-object v1, p0, Lcom/android/server/backup/utils/DataStreamFileCodec;->mFile:Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 71
     :try_start_0
     new-instance v1, Ljava/io/BufferedOutputStream;
 
@@ -124,7 +114,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
-    .line 72
     :try_start_1
     new-instance v2, Ljava/io/DataOutputStream;
 
@@ -132,18 +121,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 74
     :try_start_2
     iget-object p0, p0, Lcom/android/server/backup/utils/DataStreamFileCodec;->mCodec:Lcom/android/server/backup/utils/DataStreamCodec;
 
     invoke-interface {p0, p1, v2}, Lcom/android/server/backup/utils/DataStreamCodec;->serialize(Ljava/lang/Object;Ljava/io/DataOutputStream;)V
 
-    .line 75
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->flush()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 76
     :try_start_3
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
     :try_end_3
@@ -161,7 +147,6 @@
     :catchall_0
     move-exception p0
 
-    .line 69
     :try_start_5
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
     :try_end_5

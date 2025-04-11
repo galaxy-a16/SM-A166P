@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$bnCVDssCicaspWN719739bl2x5A(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/samsung/android/server/hwrs/common/HwrsUtils;->lambda$start$0(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
     move-result-object p0
@@ -24,7 +23,6 @@
 .method public static executeOnMain(Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 58
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -39,12 +37,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 59
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 61
     :cond_0
     sget-object v0, Lcom/samsung/android/server/hwrs/common/HwrsUtils;->sHandler:Landroid/os/Handler;
 
@@ -57,22 +53,18 @@
 .method public static synthetic lambda$start$0(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
-    .line 30
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     const/4 p0, 0x4
 
-    .line 31
     invoke-virtual {v0, p0}, Ljava/lang/Thread;->setPriority(I)V
 
     const/4 p0, 0x1
 
-    .line 32
     invoke-virtual {v0, p0}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 33
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,7 +91,6 @@
 .method public static start()V
     .locals 9
 
-    .line 28
     new-instance v8, Ljava/util/concurrent/ThreadPoolExecutor;
 
     const/16 v1, 0x40
@@ -126,10 +117,8 @@
 
     const/4 v0, 0x1
 
-    .line 36
     invoke-virtual {v8, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
-    .line 38
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;

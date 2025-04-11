@@ -11,13 +11,10 @@
 .method public constructor <init>(Lcom/android/server/vcn/VcnContext;Landroid/net/ipsec/ike/IkeSessionParams;Landroid/net/ipsec/ike/ChildSessionParams;Landroid/net/ipsec/ike/IkeSessionCallback;Landroid/net/ipsec/ike/ChildSessionCallback;)V
     .locals 8
 
-    .line 2836
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2837
     new-instance v7, Landroid/net/ipsec/ike/IkeSession;
 
-    .line 2839
     invoke-virtual {p1}, Lcom/android/server/vcn/VcnContext;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -26,7 +23,6 @@
 
     new-instance v0, Landroid/os/Handler;
 
-    .line 2842
     invoke-virtual {p1}, Lcom/android/server/vcn/VcnContext;->getLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -57,7 +53,6 @@
 .method public close()V
     .locals 0
 
-    .line 2861
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnIkeSession;->mImpl:Landroid/net/ipsec/ike/IkeSession;
 
     invoke-virtual {p0}, Landroid/net/ipsec/ike/IkeSession;->close()V
@@ -68,7 +63,6 @@
 .method public kill()V
     .locals 0
 
-    .line 2866
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnIkeSession;->mImpl:Landroid/net/ipsec/ike/IkeSession;
 
     invoke-virtual {p0}, Landroid/net/ipsec/ike/IkeSession;->kill()V
@@ -79,7 +73,6 @@
 .method public openChildSession(Landroid/net/ipsec/ike/ChildSessionParams;Landroid/net/ipsec/ike/ChildSessionCallback;)V
     .locals 0
 
-    .line 2851
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnIkeSession;->mImpl:Landroid/net/ipsec/ike/IkeSession;
 
     invoke-virtual {p0, p1, p2}, Landroid/net/ipsec/ike/IkeSession;->openChildSession(Landroid/net/ipsec/ike/ChildSessionParams;Landroid/net/ipsec/ike/ChildSessionCallback;)V
@@ -90,7 +83,6 @@
 .method public setNetwork(Landroid/net/Network;)V
     .locals 0
 
-    .line 2871
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnIkeSession;->mImpl:Landroid/net/ipsec/ike/IkeSession;
 
     invoke-virtual {p0, p1}, Landroid/net/ipsec/ike/IkeSession;->setNetwork(Landroid/net/Network;)V

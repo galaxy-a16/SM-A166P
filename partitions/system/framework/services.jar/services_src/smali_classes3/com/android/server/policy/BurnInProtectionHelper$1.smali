@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/BurnInProtectionHelper;)V
     .locals 0
 
-    .line 86
     iput-object p1, p0, Lcom/android/server/policy/BurnInProtectionHelper$1;->this$0:Lcom/android/server/policy/BurnInProtectionHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/policy/BurnInProtectionHelper$1;->this$0:Lcom/android/server/policy/BurnInProtectionHelper;
 
     invoke-static {p0}, Lcom/android/server/policy/BurnInProtectionHelper;->-$$Nest$mupdateBurnInProtection(Lcom/android/server/policy/BurnInProtectionHelper;)V

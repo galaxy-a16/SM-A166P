@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 24
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
@@ -24,10 +23,8 @@
 .method public constructor <init>(Landroid/util/SparseBooleanArray;)V
     .locals 0
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput-object p1, p0, Lcom/android/server/permission/access/collection/IntSet;->array:Landroid/util/SparseBooleanArray;
 
     return-void
@@ -38,7 +35,6 @@
 .method public final add(I)V
     .locals 1
 
-    .line 36
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IntSet;->array:Landroid/util/SparseBooleanArray;
 
     const/4 v0, 0x1
@@ -51,7 +47,6 @@
 .method public final clear()V
     .locals 0
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IntSet;->array:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->clear()V
@@ -62,7 +57,6 @@
 .method public final copy()Lcom/android/server/permission/access/collection/IntSet;
     .locals 1
 
-    .line 51
     new-instance v0, Lcom/android/server/permission/access/collection/IntSet;
 
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IntSet;->array:Landroid/util/SparseBooleanArray;
@@ -79,7 +73,6 @@
 .method public final elementAt(I)I
     .locals 0
 
-    .line 31
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IntSet;->array:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
@@ -92,7 +85,6 @@
 .method public final getSize()I
     .locals 0
 
-    .line 27
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IntSet;->array:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
@@ -105,7 +97,6 @@
 .method public final remove(I)V
     .locals 0
 
-    .line 40
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IntSet;->array:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseBooleanArray;->delete(I)V

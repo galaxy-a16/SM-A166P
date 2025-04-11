@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/weaver/WeaverConfig;
     .locals 0
 
-    .line 15
     new-instance p0, Landroid/hardware/weaver/WeaverConfig;
 
     invoke-direct {p0}, Landroid/hardware/weaver/WeaverConfig;-><init>()V
 
-    .line 16
     invoke-virtual {p0, p1}, Landroid/hardware/weaver/WeaverConfig;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 12
     invoke-virtual {p0, p1}, Landroid/hardware/weaver/WeaverConfig$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/weaver/WeaverConfig;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/weaver/WeaverConfig;
     .locals 0
 
-    .line 21
     new-array p0, p1, [Landroid/hardware/weaver/WeaverConfig;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 12
     invoke-virtual {p0, p1}, Landroid/hardware/weaver/WeaverConfig$1;->newArray(I)[Landroid/hardware/weaver/WeaverConfig;
 
     move-result-object p0

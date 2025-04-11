@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/slice/SlicePermissionManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 374
     iput-object p1, p0, Lcom/android/server/slice/SlicePermissionManager$H;->this$0:Lcom/android/server/slice/SlicePermissionManager;
 
-    .line 375
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 380
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -50,7 +47,6 @@
 
     goto :goto_0
 
-    .line 396
     :cond_0
     iget-object v0, p0, Lcom/android/server/slice/SlicePermissionManager$H;->this$0:Lcom/android/server/slice/SlicePermissionManager;
 
@@ -60,7 +56,6 @@
 
     monitor-enter v0
 
-    .line 397
     :try_start_0
     iget-object p0, p0, Lcom/android/server/slice/SlicePermissionManager$H;->this$0:Lcom/android/server/slice/SlicePermissionManager;
 
@@ -72,7 +67,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 398
     monitor-exit v0
 
     goto :goto_0
@@ -86,7 +80,6 @@
 
     throw p0
 
-    .line 391
     :cond_1
     iget-object v0, p0, Lcom/android/server/slice/SlicePermissionManager$H;->this$0:Lcom/android/server/slice/SlicePermissionManager;
 
@@ -96,7 +89,6 @@
 
     monitor-enter v0
 
-    .line 392
     :try_start_1
     iget-object p0, p0, Lcom/android/server/slice/SlicePermissionManager$H;->this$0:Lcom/android/server/slice/SlicePermissionManager;
 
@@ -108,7 +100,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 393
     monitor-exit v0
 
     goto :goto_0
@@ -122,7 +113,6 @@
 
     throw p0
 
-    .line 388
     :cond_2
     iget-object p0, p0, Lcom/android/server/slice/SlicePermissionManager$H;->this$0:Lcom/android/server/slice/SlicePermissionManager;
 
@@ -134,7 +124,6 @@
 
     goto :goto_0
 
-    .line 385
     :cond_3
     iget-object p0, p0, Lcom/android/server/slice/SlicePermissionManager$H;->this$0:Lcom/android/server/slice/SlicePermissionManager;
 
@@ -142,7 +131,6 @@
 
     goto :goto_0
 
-    .line 382
     :cond_4
     iget-object p0, p0, Lcom/android/server/slice/SlicePermissionManager$H;->this$0:Lcom/android/server/slice/SlicePermissionManager;
 

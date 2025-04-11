@@ -9,12 +9,10 @@
 
     const-string/jumbo v0, "ro.surface_flinger.enable_frame_rate_override"
 
-    .line 360
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 361
     invoke-static {v0}, Landroid/sysprop/SurfaceFlingerProperties;->tryParseBoolean(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -31,12 +29,10 @@
 
     const-string/jumbo v0, "ro.surface_flinger.has_HDR_display"
 
-    .line 204
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 205
     invoke-static {v0}, Landroid/sysprop/SurfaceFlingerProperties;->tryParseBoolean(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -53,12 +49,10 @@
 
     const-string/jumbo v0, "ro.surface_flinger.has_wide_color_display"
 
-    .line 194
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 195
     invoke-static {v0}, Landroid/sysprop/SurfaceFlingerProperties;->tryParseBoolean(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -79,7 +73,6 @@
 
     return-object v0
 
-    .line 22
     :cond_0
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -166,13 +159,11 @@
 
     return-object v0
 
-    .line 25
     :pswitch_0
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
 
-    .line 28
     :pswitch_1
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 

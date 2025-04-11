@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$9RGqUHcb_Zs83d0MBix7hYtLCvk(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/chimera/ConservativePolicyHandler;->lambda$executePolicyInternal$1(I)Z
 
     move-result p0
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$bq4zT3IMZg6d0rom6xtTk8bZOOY(Lcom/android/server/chimera/ChimeraAppInfo;Lcom/android/server/chimera/ChimeraAppInfo;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/chimera/ConservativePolicyHandler;->lambda$killTopProfit$2(Lcom/android/server/chimera/ChimeraAppInfo;Lcom/android/server/chimera/ChimeraAppInfo;)I
 
     move-result p0
@@ -37,7 +35,6 @@
 .method public static synthetic $r8$lambda$vADFqOHLXWRialeQ5drbLMoRqIs(Lcom/android/server/chimera/ConservativePolicyHandler;Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/chimera/ConservativePolicyHandler;->lambda$executePolicyInternal$0(Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;)Z
 
     move-result p0
@@ -48,18 +45,14 @@
 .method public constructor <init>(Lcom/android/server/chimera/ChimeraAppManager;Lcom/android/server/chimera/ChimeraStrategy;Lcom/android/server/chimera/SystemRepository;Lcom/android/server/chimera/SettingRepository;Lcom/android/server/chimera/AbnormalFgsDetector;Landroid/os/Looper;)V
     .locals 0
 
-    .line 28
     invoke-direct/range {p0 .. p6}, Lcom/android/server/chimera/PolicyHandler;-><init>(Lcom/android/server/chimera/ChimeraAppManager;Lcom/android/server/chimera/ChimeraStrategy;Lcom/android/server/chimera/SystemRepository;Lcom/android/server/chimera/SettingRepository;Lcom/android/server/chimera/AbnormalFgsDetector;Landroid/os/Looper;)V
 
     const/4 p1, 0x0
 
-    .line 21
     iput-boolean p1, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mKillAllOnHomeTrigger:Z
 
-    .line 22
     iput-boolean p1, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mReclaimOnHomeTrigger:Z
 
-    .line 23
     sget-object p1, Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;->TRIGGER_SOURCE_LMKD:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
     iput-object p1, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mTriggerSource:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
@@ -70,7 +63,6 @@
 .method private synthetic lambda$executePolicyInternal$0(Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;)Z
     .locals 3
 
-    .line 160
     iget-object p0, p0, Lcom/android/server/chimera/PolicyHandler;->mAbnormalFgsDetector:Lcom/android/server/chimera/AbnormalFgsDetector;
 
     iget v0, p1, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
@@ -89,7 +81,6 @@
 .method public static synthetic lambda$executePolicyInternal$1(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x64
 
     if-lt p0, v0, :cond_0
@@ -112,7 +103,6 @@
 .method public static synthetic lambda$killTopProfit$2(Lcom/android/server/chimera/ChimeraAppInfo;Lcom/android/server/chimera/ChimeraAppInfo;)I
     .locals 0
 
-    .line 238
     iget p1, p1, Lcom/android/server/chimera/ChimeraAppInfo;->finalScore:F
 
     iget p0, p0, Lcom/android/server/chimera/ChimeraAppInfo;->finalScore:F
@@ -129,12 +119,10 @@
 .method public calculateKillGain(Lcom/android/server/chimera/ChimeraAppInfo;)V
     .locals 4
 
-    .line 227
     iget-wide v0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->pss:J
 
     iput-wide v0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->reclaimGain:J
 
-    .line 228
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -155,7 +143,6 @@
 
     iget-object p0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
-    .line 229
     invoke-virtual {p1, p0}, Lcom/android/server/chimera/ChimeraAppInfo;->hasRestartService(Lcom/android/server/chimera/SystemRepository;)Z
 
     move-result p0
@@ -174,7 +161,6 @@
 
     const-string p1, "ConservativePolicyHandler"
 
-    .line 228
     invoke-interface {v0, p1, p0}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -185,7 +171,6 @@
 
     const/4 v0, 0x0
 
-    .line 33
     aget-object v1, p2, v0
 
     const-string v2, "-a"
@@ -196,63 +181,49 @@
 
     if-eqz v1, :cond_0
 
-    .line 34
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->dumpCommonInfo(Ljava/io/PrintWriter;)V
 
-    .line 35
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     const-string p2, "************** adjinfo ****************"
 
-    .line 36
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 37
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->dumpAdjInfo(Ljava/io/PrintWriter;)V
 
-    .line 38
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     const-string p2, "************** appinfo ****************"
 
-    .line 39
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 40
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->dumpAppInfo(Ljava/io/PrintWriter;)V
 
-    .line 41
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     const-string p2, "************** kill history ****************"
 
-    .line 42
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 43
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->dumpHistoryBuffer(Ljava/io/PrintWriter;)V
 
     goto :goto_0
 
-    .line 44
     :cond_0
     array-length v1, p2
 
     if-lez v1, :cond_4
 
-    .line 45
     aget-object p2, p2, v0
 
     const-string v0, "info"
 
-    .line 46
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 47
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->dumpCommonInfo(Ljava/io/PrintWriter;)V
 
     goto :goto_0
@@ -260,14 +231,12 @@
     :cond_1
     const-string v0, "appinfo"
 
-    .line 48
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 49
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->dumpAppInfo(Ljava/io/PrintWriter;)V
 
     goto :goto_0
@@ -275,14 +244,12 @@
     :cond_2
     const-string v0, "adjinfo"
 
-    .line 50
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 51
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->dumpAdjInfo(Ljava/io/PrintWriter;)V
 
     goto :goto_0
@@ -290,7 +257,6 @@
     :cond_3
     const-string v0, "history"
 
-    .line 52
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -299,10 +265,8 @@
 
     const-string p2, "Chimera Kill History:"
 
-    .line 53
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->dumpHistoryBuffer(Ljava/io/PrintWriter;)V
 
     :cond_4
@@ -313,7 +277,6 @@
 .method public executePolicy(Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;I)I
     .locals 3
 
-    .line 61
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->prepareForTrigger(Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;)Z
 
     move-result v0
@@ -322,7 +285,6 @@
 
     if-nez v0, :cond_0
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string p1, "ConservativePolicyHandler"
@@ -333,11 +295,9 @@
 
     return v1
 
-    .line 66
     :cond_0
     iput-object p1, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mTriggerSource:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
-    .line 68
     sget-object v0, Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;->TRIGGER_SOURCE_LMKD:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
     const/4 v2, 0x1
@@ -346,35 +306,28 @@
 
     if-le p2, v2, :cond_1
 
-    .line 70
     iput-boolean v2, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mKillAllOnHomeTrigger:Z
 
-    .line 73
     :cond_1
     invoke-virtual {p0, v1, p1}, Lcom/android/server/chimera/ConservativePolicyHandler;->executePolicyInternal(ZLcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;)V
 
     goto :goto_0
 
-    .line 74
     :cond_2
     sget-object p2, Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;->TRIGGER_SOURCE_HOME_IDLE:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
     if-ne p1, p2, :cond_4
 
-    .line 75
     iget-boolean p2, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mKillAllOnHomeTrigger:Z
 
     if-eqz p2, :cond_3
 
-    .line 76
     invoke-virtual {p0, v2, p1}, Lcom/android/server/chimera/ConservativePolicyHandler;->executePolicyInternal(ZLcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;)V
 
-    .line 77
     iput-boolean v1, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mKillAllOnHomeTrigger:Z
 
     goto :goto_0
 
-    .line 78
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/chimera/PolicyHandler;->isGcReclaimEnabled()Z
 
@@ -386,10 +339,8 @@
 
     if-eqz p1, :cond_4
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/server/chimera/PolicyHandler;->performGcAndReclaim()V
 
-    .line 80
     iput-boolean v1, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mReclaimOnHomeTrigger:Z
 
     :cond_4
@@ -400,7 +351,6 @@
 .method public executePolicyInternal(ZLcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;)V
     .locals 8
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -429,31 +379,26 @@
 
     invoke-interface {v0, v2, v1}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 89
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSkipReasonLogger:Lcom/android/server/chimera/SkipReasonLogger;
 
     invoke-virtual {v0}, Lcom/android/server/chimera/SkipReasonLogger;->clear()V
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mAppManager:Lcom/android/server/chimera/ChimeraAppManager;
 
     iget-object v1, p0, Lcom/android/server/chimera/PolicyHandler;->mSkipReasonLogger:Lcom/android/server/chimera/SkipReasonLogger;
 
     iget-object v3, p0, Lcom/android/server/chimera/PolicyHandler;->mChimeraStrategy:Lcom/android/server/chimera/ChimeraStrategy;
 
-    .line 92
     invoke-virtual {v3}, Lcom/android/server/chimera/ChimeraStrategy;->getProtectedCountOnHomeTrigger()I
 
     move-result v3
 
-    .line 91
     invoke-virtual {v0, v1, v3, p2}, Lcom/android/server/chimera/ChimeraAppManager;->getAppsToKill(Lcom/android/server/chimera/SkipReasonLogger;ILcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;)Ljava/util/List;
 
     move-result-object p2
 
     if-nez p2, :cond_0
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string p1, "executePolicy() - getAppsToKill return null"
@@ -462,13 +407,11 @@
 
     return-void
 
-    .line 100
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 102
     iget v1, p0, Lcom/android/server/chimera/PolicyHandler;->mTriggerCnt:I
 
     const/4 v3, 0x1
@@ -477,7 +420,6 @@
 
     iput v1, p0, Lcom/android/server/chimera/PolicyHandler;->mTriggerCnt:I
 
-    .line 103
     iget-object v1, p0, Lcom/android/server/chimera/PolicyHandler;->mTriggerCntSrc:[I
 
     iget-object v4, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mTriggerSource:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
@@ -492,7 +434,6 @@
 
     aput v5, v1, v4
 
-    .line 105
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -513,12 +454,10 @@
 
     check-cast v1, Lcom/android/server/chimera/ChimeraAppInfo;
 
-    .line 106
     iget v5, v1, Lcom/android/server/chimera/ChimeraAppInfo;->group:I
 
     if-ge v5, v3, :cond_2
 
-    .line 107
     iget-object v1, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string v4, "Invalid app group id"
@@ -532,7 +471,6 @@
 
     if-lt v5, v6, :cond_3
 
-    .line 112
     iget-object p2, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string/jumbo v1, "killing stopped to group 4"
@@ -541,7 +479,6 @@
 
     goto/16 :goto_2
 
-    .line 116
     :cond_3
     iget-object v5, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -553,7 +490,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 118
     invoke-virtual {v5}, Lcom/android/server/chimera/ProcessStatsAndOomScores;->hasCachedProcess()Z
 
     move-result v5
@@ -562,7 +498,6 @@
 
     goto :goto_0
 
-    .line 122
     :cond_4
     iget-object v5, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -574,14 +509,12 @@
 
     if-eqz v5, :cond_5
 
-    .line 123
     sget-object v4, Lcom/android/server/chimera/SkipReasonLogger$Reason;->VISIBLE_SCREEN:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     invoke-virtual {p0, v1, v4}, Lcom/android/server/chimera/PolicyHandler;->markSkipReason(Lcom/android/server/chimera/ChimeraAppInfo;Lcom/android/server/chimera/SkipReasonLogger$Reason;)V
 
     goto :goto_0
 
-    .line 127
     :cond_5
     iget-object v5, p0, Lcom/android/server/chimera/PolicyHandler;->mWakeLockManager:Lcom/android/server/chimera/WakeLockManager;
 
@@ -593,14 +526,12 @@
 
     if-eqz v5, :cond_6
 
-    .line 128
     sget-object v4, Lcom/android/server/chimera/SkipReasonLogger$Reason;->WAKELOCK:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     invoke-virtual {p0, v1, v4}, Lcom/android/server/chimera/PolicyHandler;->markSkipReason(Lcom/android/server/chimera/ChimeraAppInfo;Lcom/android/server/chimera/SkipReasonLogger$Reason;)V
 
     goto :goto_0
 
-    .line 132
     :cond_6
     iget v5, v1, Lcom/android/server/chimera/ChimeraAppInfo;->appType:I
 
@@ -610,19 +541,16 @@
 
     if-eqz v5, :cond_7
 
-    .line 133
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/ConservativePolicyHandler;->hasProtectedServices(Lcom/android/server/chimera/ChimeraAppInfo;)I
 
     move-result v5
 
-    .line 134
     invoke-static {}, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->values()[Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     move-result-object v6
 
     aget-object v5, v6, v5
 
-    .line 135
     sget-object v6, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->NONE:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     if-eq v5, v6, :cond_7
@@ -631,7 +559,6 @@
 
     if-eq v5, v6, :cond_7
 
-    .line 136
     sget-object v4, Lcom/android/server/chimera/SkipReasonLogger$Reason;->SERVICE:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -652,7 +579,6 @@
 
     goto/16 :goto_0
 
-    .line 141
     :cond_7
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/PolicyHandler;->hasImportantAdjWithSystemUid(Lcom/android/server/chimera/ChimeraAppInfo;)Z
 
@@ -660,14 +586,12 @@
 
     if-eqz v5, :cond_8
 
-    .line 142
     sget-object v4, Lcom/android/server/chimera/SkipReasonLogger$Reason;->UID:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     invoke-virtual {p0, v1, v4}, Lcom/android/server/chimera/PolicyHandler;->markSkipReason(Lcom/android/server/chimera/ChimeraAppInfo;Lcom/android/server/chimera/SkipReasonLogger$Reason;)V
 
     goto/16 :goto_0
 
-    .line 146
     :cond_8
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/PolicyHandler;->isReusedPid(Lcom/android/server/chimera/ChimeraAppInfo;)Z
 
@@ -675,7 +599,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 147
     iget-object v4, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -698,7 +621,6 @@
 
     goto/16 :goto_0
 
-    .line 151
     :cond_9
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/PolicyHandler;->isSystemPid(Lcom/android/server/chimera/ChimeraAppInfo;)Z
 
@@ -706,7 +628,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string v4, "Skipped by system server process id"
@@ -715,7 +636,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     :cond_a
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/ConservativePolicyHandler;->hasProtectedAdjOrProcState(Lcom/android/server/chimera/ChimeraAppInfo;)Z
 
@@ -725,7 +645,6 @@
 
     goto/16 :goto_0
 
-    .line 160
     :cond_b
     iget-object v5, v1, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
 
@@ -741,7 +660,6 @@
 
     move-result v5
 
-    .line 162
     iget-object v6, v1, Lcom/android/server/chimera/ChimeraAppInfo;->statsAndOomScores:Lcom/android/server/chimera/ProcessStatsAndOomScores;
 
     iget-object v6, v6, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mScores:[I
@@ -768,7 +686,6 @@
     :goto_1
     if-nez v4, :cond_d
 
-    .line 166
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/PolicyHandler;->isExpiredKillInterval(Lcom/android/server/chimera/ChimeraAppInfo;)Z
 
     move-result v4
@@ -777,7 +694,6 @@
 
     goto/16 :goto_0
 
-    .line 171
     :cond_d
     iget-object v4, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -791,11 +707,9 @@
 
     goto/16 :goto_0
 
-    .line 175
     :cond_e
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/ConservativePolicyHandler;->calculateKillGain(Lcom/android/server/chimera/ChimeraAppInfo;)V
 
-    .line 176
     iget-wide v4, v1, Lcom/android/server/chimera/ChimeraAppInfo;->reclaimGain:J
 
     const-wide/16 v6, 0x0
@@ -804,19 +718,16 @@
 
     if-lez v4, :cond_1
 
-    .line 177
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 181
     :cond_f
     :goto_2
     iget-object p2, p0, Lcom/android/server/chimera/PolicyHandler;->mSkipReasonLogger:Lcom/android/server/chimera/SkipReasonLogger;
 
     invoke-virtual {p2, v2}, Lcom/android/server/chimera/SkipReasonLogger;->printLog(Ljava/lang/String;)V
 
-    .line 183
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result p2
@@ -825,16 +736,13 @@
 
     if-eqz p1, :cond_10
 
-    .line 185
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/ConservativePolicyHandler;->killAll(Ljava/util/List;)V
 
     goto :goto_3
 
-    .line 187
     :cond_10
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/ConservativePolicyHandler;->killTopProfit(Ljava/util/List;)V
 
-    .line 189
     :goto_3
     iget-object p1, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mTriggerSource:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
@@ -842,7 +750,6 @@
 
     goto :goto_4
 
-    .line 191
     :cond_11
     iget p1, p0, Lcom/android/server/chimera/PolicyHandler;->mNoActionCnt:I
 
@@ -850,37 +757,31 @@
 
     iput p1, p0, Lcom/android/server/chimera/PolicyHandler;->mNoActionCnt:I
 
-    .line 192
     iget-object p1, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string/jumbo p2, "killTargetList is empty"
 
     invoke-interface {p1, v2, p2}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 194
     invoke-virtual {p0}, Lcom/android/server/chimera/PolicyHandler;->isGcReclaimEnabled()Z
 
     move-result p1
 
     if-eqz p1, :cond_13
 
-    .line 195
     iget-object p1, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mTriggerSource:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
     sget-object p2, Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;->TRIGGER_SOURCE_LMKD:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
     if-ne p1, p2, :cond_12
 
-    .line 196
     iput-boolean v3, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mReclaimOnHomeTrigger:Z
 
     goto :goto_4
 
-    .line 198
     :cond_12
     invoke-virtual {p0}, Lcom/android/server/chimera/PolicyHandler;->performGcAndReclaim()V
 
-    .line 199
     iput-boolean v4, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mReclaimOnHomeTrigger:Z
 
     :cond_13
@@ -891,7 +792,6 @@
 .method public getQuickReclaimReleaseTarget(J)J
     .locals 2
 
-    .line 208
     iget-object p0, p0, Lcom/android/server/chimera/PolicyHandler;->mChimeraStrategy:Lcom/android/server/chimera/ChimeraStrategy;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/chimera/ChimeraStrategy;->getFreeMemTarget(J)J
@@ -908,7 +808,6 @@
 .method public hasProtectedAdjOrProcState(Lcom/android/server/chimera/ChimeraAppInfo;)Z
     .locals 11
 
-    .line 301
     iget-object v0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->statsAndOomScores:Lcom/android/server/chimera/ProcessStatsAndOomScores;
 
     iget-object v0, v0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mScores:[I
@@ -941,7 +840,6 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 306
     iget-object v9, p1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
 
     const-string v10, "com.samsung.android.bixby.ondevice"
@@ -968,7 +866,6 @@
     :cond_2
     if-ne v6, v7, :cond_3
 
-    .line 310
     iget v7, p1, Lcom/android/server/chimera/ChimeraAppInfo;->curStandbyBucket:I
 
     const/16 v9, 0xa
@@ -977,7 +874,6 @@
 
     return v5
 
-    .line 315
     :cond_3
     iget v7, p1, Lcom/android/server/chimera/ChimeraAppInfo;->curStandbyBucket:I
 
@@ -985,7 +881,6 @@
 
     return v5
 
-    .line 319
     :cond_4
     iget-object v4, p1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
 
@@ -1021,7 +916,6 @@
 
     goto :goto_0
 
-    .line 337
     :cond_9
     iget-object p0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->statsAndOomScores:Lcom/android/server/chimera/ProcessStatsAndOomScores;
 
@@ -1064,14 +958,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 212
     iget-object v1, p1, Lcom/android/server/chimera/ChimeraAppInfo;->statsAndOomScores:Lcom/android/server/chimera/ProcessStatsAndOomScores;
 
     if-eqz v1, :cond_1
 
     move v1, v0
 
-    .line 213
     :goto_0
     iget-object v2, p1, Lcom/android/server/chimera/ChimeraAppInfo;->statsAndOomScores:Lcom/android/server/chimera/ProcessStatsAndOomScores;
 
@@ -1081,7 +973,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 214
     iget-object v2, v2, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mScores:[I
 
     aget v2, v2, v1
@@ -1094,7 +985,6 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 216
     iget-object v2, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v3, p1, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
@@ -1129,7 +1019,6 @@
 .method public killAll(Ljava/util/List;)V
     .locals 3
 
-    .line 251
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string v1, "ConservativePolicyHandler"
@@ -1138,7 +1027,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 252
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v0}, Lcom/android/server/chimera/SystemRepository;->isUserShipBuild()Z
@@ -1147,10 +1035,8 @@
 
     if-nez v0, :cond_0
 
-    .line 253
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->printAllAppInfo(Ljava/util/List;)V
 
-    .line 256
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1171,7 +1057,6 @@
 
     const-string v1, "LMKD CRI"
 
-    .line 257
     invoke-virtual {p0, v0, v1}, Lcom/android/server/chimera/ConservativePolicyHandler;->killApp(Lcom/android/server/chimera/ChimeraAppInfo;Ljava/lang/String;)V
 
     goto :goto_0
@@ -1183,7 +1068,6 @@
 .method public killApp(Lcom/android/server/chimera/ChimeraAppInfo;Ljava/lang/String;)V
     .locals 7
 
-    .line 263
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-static {p1, v0}, Lcom/android/server/chimera/ProcessStatsAndOomScores;->create(Lcom/android/server/chimera/ChimeraAppInfo;Lcom/android/server/chimera/SystemRepository;)Lcom/android/server/chimera/ProcessStatsAndOomScores;
@@ -1194,7 +1078,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 264
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ConservativePolicyHandler;->hasProtectedAdjOrProcState(Lcom/android/server/chimera/ChimeraAppInfo;)Z
 
     move-result v0
@@ -1203,7 +1086,6 @@
 
     goto/16 :goto_2
 
-    .line 269
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->isService(Lcom/android/server/chimera/ChimeraAppInfo;)Z
 
@@ -1219,7 +1101,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 271
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v0
@@ -1240,7 +1121,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 272
     iget-object v0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/PolicyHandler;->addRescheduleExceptionPackage(Ljava/lang/String;)V
@@ -1249,7 +1129,6 @@
 
     goto :goto_0
 
-    .line 276
     :cond_1
     iget v0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->uid:I
 
@@ -1257,7 +1136,6 @@
 
     if-le v0, v1, :cond_2
 
-    .line 277
     iget-object v0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/PolicyHandler;->addRescheduleExceptionPackage(Ljava/lang/String;)V
@@ -1266,7 +1144,6 @@
 
     goto :goto_0
 
-    .line 282
     :cond_2
     invoke-static {}, Lcom/android/server/chimera/RestartImmediatePackages;->getInstance()Lcom/android/server/chimera/RestartImmediatePackages;
 
@@ -1285,7 +1162,6 @@
     :cond_3
     const-string v0, "Kill : "
 
-    .line 286
     :goto_0
     iget-object v1, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -1315,12 +1191,10 @@
 
     invoke-interface {v1, v2, v0}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 287
     iget-object v0, p0, Lcom/android/server/chimera/ConservativePolicyHandler;->mTriggerSource:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/chimera/PolicyHandler;->updateKillStatistics(Lcom/android/server/chimera/ChimeraAppInfo;Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;)V
 
-    .line 288
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mLastKilledTimeMap:Ljava/util/Map;
 
     iget-object v1, p1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
@@ -1337,7 +1211,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 290
     iget-object v0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1357,7 +1230,6 @@
 
     check-cast v1, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 291
     iget-object v2, p0, Lcom/android/server/chimera/PolicyHandler;->mAbnormalFgsDetector:Lcom/android/server/chimera/AbnormalFgsDetector;
 
     iget v3, v1, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
@@ -1372,7 +1244,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 293
     iget-object v2, p0, Lcom/android/server/chimera/PolicyHandler;->mAbnormalFgsDetector:Lcom/android/server/chimera/AbnormalFgsDetector;
 
     iget-object v3, v1, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->processName:Ljava/lang/String;
@@ -1383,7 +1254,6 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Lcom/android/server/chimera/AbnormalFgsDetector;->putKillableHeavyApp(Ljava/lang/String;IJ)V
 
-    .line 296
     :cond_4
     iget-object v2, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -1417,7 +1287,6 @@
 .method public killTopProfit(Ljava/util/List;)V
     .locals 3
 
-    .line 233
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string/jumbo v1, "killTopProfit"
@@ -1426,17 +1295,14 @@
 
     invoke-interface {v0, v2, v1}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->calcAppScores(Ljava/util/List;)V
 
-    .line 238
     new-instance v0, Lcom/android/server/chimera/ConservativePolicyHandler$$ExternalSyntheticLambda2;
 
     invoke-direct {v0}, Lcom/android/server/chimera/ConservativePolicyHandler$$ExternalSyntheticLambda2;-><init>()V
 
     invoke-interface {p1, v0}, Ljava/util/List;->sort(Ljava/util/Comparator;)V
 
-    .line 240
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v0}, Lcom/android/server/chimera/SystemRepository;->isUserShipBuild()Z
@@ -1445,17 +1311,14 @@
 
     if-nez v0, :cond_0
 
-    .line 241
     iget-object v0, p0, Lcom/android/server/chimera/PolicyHandler;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string v1, "after sorting:"
 
     invoke-interface {v0, v2, v1}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 242
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PolicyHandler;->printAllAppInfo(Ljava/util/List;)V
 
-    .line 245
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1465,7 +1328,6 @@
 
     const/4 v0, 0x0
 
-    .line 246
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1

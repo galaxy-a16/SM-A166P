@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;ILandroid/content/Intent;)V
     .locals 0
 
-    .line 3541
     iput-object p1, p0, Lcom/android/server/BatteryService$35;->this$0:Lcom/android/server/BatteryService;
 
     iput p2, p0, Lcom/android/server/BatteryService$35;->val$wirelessPowerSharingTxEvent:I
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 3544
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -62,14 +60,12 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3545
     iget-object v0, p0, Lcom/android/server/BatteryService$35;->val$intent:Landroid/content/Intent;
 
     const/4 v1, -0x1
 
     invoke-static {v0, v1}, Landroid/app/ActivityManager;->broadcastStickyIntent(Landroid/content/Intent;I)V
 
-    .line 3547
     iget-object p0, p0, Lcom/android/server/BatteryService$35;->val$intent:Landroid/content/Intent;
 
     invoke-virtual {p0}, Landroid/content/Intent;->clone()Ljava/lang/Object;
@@ -78,14 +74,12 @@
 
     check-cast p0, Landroid/content/Intent;
 
-    .line 3548
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetPACKAGE_DEVICE_CARE()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3549
     invoke-static {p0, v1}, Landroid/app/ActivityManager;->broadcastStickyIntent(Landroid/content/Intent;I)V
 
     return-void

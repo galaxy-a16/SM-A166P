@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$Foe7-rwGsSWCpYsNgGYM2NVszYw(Lcom/android/server/CustomizedBinderCallsStatsInternal;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/CustomizedBinderCallsStatsInternal;->lambda$reportCpuUsage$0()V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$V7I051F2i9ASH1LlxdjS02b9l-k(Lcom/android/server/CustomizedBinderCallsStatsInternal;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/CustomizedBinderCallsStatsInternal;->lambda$reportCpuUsage$1(I)V
 
     return-void
@@ -39,24 +37,18 @@
 .method public constructor <init>(Lcom/android/internal/os/BinderCallsStats;Landroid/content/Context;)V
     .locals 2
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 48
     iput-wide v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mLastWriteTime:J
 
-    .line 49
     iput-wide v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mLastStoreTime:J
 
-    .line 50
     iput-wide v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mLastNotifyTime:J
 
-    .line 64
     iput-object p1, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
-    .line 65
     iput-object p2, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mContext:Landroid/content/Context;
 
     return-void
@@ -65,7 +57,6 @@
 .method private synthetic lambda$reportCpuUsage$0()V
     .locals 0
 
-    .line 109
     iget-object p0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     invoke-virtual {p0}, Lcom/android/internal/os/BinderCallsStats;->writeToFile()V
@@ -76,21 +67,18 @@
 .method private synthetic lambda$reportCpuUsage$1(I)V
     .locals 8
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1, p1}, Lcom/android/internal/os/BinderCallsStats;->store(II)V
 
-    .line 104
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mLastStoreTime:J
 
-    .line 105
     iget-wide v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mLastWriteTime:J
 
     const-wide/16 v2, 0x0
@@ -101,7 +89,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 106
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -119,10 +106,8 @@
     :cond_0
     const-string/jumbo v0, "should write the current data!!"
 
-    .line 107
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     invoke-static {}, Lcom/android/server/IoThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -133,7 +118,6 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 111
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -145,19 +129,16 @@
 
     if-lt p1, v0, :cond_3
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     const/16 v4, 0x5a
 
-    .line 116
     invoke-virtual {v0, v4}, Lcom/android/internal/os/BinderCallsStats;->getHeaviestApplicationUid(I)Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 118
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -188,14 +169,12 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     iget-wide v4, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mLastNotifyTime:J
 
     cmp-long v2, v4, v2
 
     if-eqz v2, :cond_2
 
-    .line 120
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -210,21 +189,17 @@
 
     if-ltz v2, :cond_3
 
-    .line 121
     :cond_2
     invoke-virtual {p0, v0}, Lcom/android/server/CustomizedBinderCallsStatsInternal;->notifyAnomalyApp(Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;)V
 
-    .line 122
     invoke-virtual {p0, v0, p1}, Lcom/android/server/CustomizedBinderCallsStatsInternal;->sendAnomalyAppToHWParam(Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;I)V
 
-    .line 123
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mLastNotifyTime:J
 
-    .line 127
     :cond_3
     iget-object p1, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
@@ -236,10 +211,8 @@
 
     const-string p1, "Clear all data"
 
-    .line 128
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     const/4 p1, 0x1
@@ -261,12 +234,10 @@
 .method public getActivityManager()Landroid/app/ActivityManagerInternal;
     .locals 1
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mAm:Landroid/app/ActivityManagerInternal;
 
     if-nez v0, :cond_0
 
-    .line 70
     const-class v0, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -277,7 +248,6 @@
 
     iput-object v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mAm:Landroid/app/ActivityManagerInternal;
 
-    .line 72
     :cond_0
     iget-object p0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mAm:Landroid/app/ActivityManagerInternal;
 
@@ -287,19 +257,16 @@
 .method public final notifyAnomalyApp(Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;)V
     .locals 9
 
-    .line 178
     invoke-virtual {p0}, Lcom/android/server/CustomizedBinderCallsStatsInternal;->getActivityManager()Landroid/app/ActivityManagerInternal;
 
     move-result-object v0
 
-    .line 180
     new-instance v1, Landroid/content/Intent;
 
     const-string p0, "com.sec.android.sdhms.action.APP_ERROR"
 
     invoke-direct {v1, p0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 181
     iget-object p0, p1, Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;->mPackageName:Ljava/lang/String;
 
     const-string/jumbo v2, "pkgName"
@@ -310,12 +277,10 @@
 
     const/4 v2, 0x0
 
-    .line 182
     invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo p0, "uid"
 
-    .line 183
     iget p1, p1, Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;->mUid:I
 
     invoke-virtual {v1, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
@@ -324,12 +289,10 @@
 
     const-string p1, "excessive_binder"
 
-    .line 184
     invoke-virtual {v1, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p0, "com.sec.android.sdhms"
 
-    .line 185
     invoke-virtual {v1, p0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v2, 0x0
@@ -346,7 +309,6 @@
 
     const/4 v8, 0x0
 
-    .line 186
     invoke-virtual/range {v0 .. v8}, Landroid/app/ActivityManagerInternal;->broadcastIntent(Landroid/content/Intent;Landroid/content/IIntentReceiver;[Ljava/lang/String;ZI[ILjava/util/function/BiFunction;Landroid/os/Bundle;)I
 
     return-void
@@ -355,7 +317,6 @@
 .method public reportCpuUsage(I)V
     .locals 6
 
-    .line 91
     iget-wide v0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mLastStoreTime:J
 
     const-wide/16 v2, 0x0
@@ -366,7 +327,6 @@
 
     if-lez v0, :cond_0
 
-    .line 92
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -383,12 +343,10 @@
 
     const-string p0, "1 minute has NOT pass since last binder stats."
 
-    .line 96
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 100
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -410,7 +368,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -427,7 +384,6 @@
 .method public reportProcessDied(IILjava/lang/String;)V
     .locals 0
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/os/BinderCallsStats;->reportProcessDied(IILjava/lang/String;)V
@@ -438,7 +394,6 @@
 .method public final sendAnomalyAppToHWParam(Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;I)V
     .locals 10
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mContext:Landroid/content/Context;
 
     const-string v0, "HqmManagerService"
@@ -455,12 +410,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 147
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 148
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -483,7 +436,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 149
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -502,7 +454,6 @@
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 150
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -537,12 +488,10 @@
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 156
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result p2
 
-    .line 157
     iget-object v2, p1, Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;->mExtraInfo:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -563,14 +512,12 @@
 
     sub-int/2addr p2, v4
 
-    .line 161
     iget-object v4, p1, Lcom/android/internal/os/BinderCallsStats$HeavyBinderCallerInfo;->mExtraInfo:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 162
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -599,7 +546,6 @@
 
     goto :goto_0
 
-    .line 164
     :cond_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -619,7 +565,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 167
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -655,7 +600,6 @@
 
     const-string v7, ""
 
-    .line 169
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -664,7 +608,6 @@
 
     move v1, p1
 
-    .line 168
     invoke-virtual/range {v0 .. v9}, Landroid/os/SemHqmManager;->sendHWParamToHQM(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
@@ -673,7 +616,6 @@
 
     const-string p1, "Failed to send anomaly application info. to HWParam"
 
-    .line 170
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -681,7 +623,6 @@
     :cond_1
     const-string p1, "Cannot get HqmManagerService !!!"
 
-    .line 173
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -692,7 +633,6 @@
 .method public shutdown()V
     .locals 0
 
-    .line 140
     iget-object p0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     invoke-virtual {p0}, Lcom/android/internal/os/BinderCallsStats;->writeToFile()V

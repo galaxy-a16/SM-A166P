@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;Landroid/content/Context;)V
     .locals 1
 
-    .line 303
     iput-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
-    .line 304
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
 
-    .line 306
     invoke-static {p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmContext(Lcom/samsung/android/camera/CameraServiceWorker;)Landroid/content/Context;
 
     move-result-object p1
@@ -36,19 +33,16 @@
 
     const/4 p2, 0x0
 
-    .line 308
     invoke-virtual {p1, p2}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
-    .line 310
     iput p2, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->mLatestOrientation:I
 
     goto :goto_0
 
-    .line 312
     :cond_0
     invoke-virtual {p1}, Landroid/view/Display;->getRotation()I
 
@@ -66,7 +60,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 315
     iput p2, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->mLatestOrientation:I
 
     goto :goto_0
@@ -74,7 +67,6 @@
     :cond_1
     const/16 p1, 0x5a
 
-    .line 324
     iput p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->mLatestOrientation:I
 
     goto :goto_0
@@ -82,7 +74,6 @@
     :cond_2
     const/16 p1, 0xb4
 
-    .line 321
     iput p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->mLatestOrientation:I
 
     goto :goto_0
@@ -90,7 +81,6 @@
     :cond_3
     const/16 p1, 0x10e
 
-    .line 318
     iput p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->mLatestOrientation:I
 
     :cond_4
@@ -103,7 +93,6 @@
 .method public getLatestOrientation()I
     .locals 0
 
-    .line 332
     iget p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->mLatestOrientation:I
 
     return p0
@@ -118,21 +107,17 @@
 
     return-void
 
-    .line 342
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->roundOrientation(I)I
 
     move-result p1
 
-    .line 344
     iget v0, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->mLatestOrientation:I
 
     if-eq v0, p1, :cond_2
 
-    .line 345
     iput p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->mLatestOrientation:I
 
-    .line 347
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-virtual {p0}, Lcom/samsung/android/camera/CameraServiceWorker;->getCameraService()Landroid/hardware/ICameraService;
@@ -143,7 +128,6 @@
 
     return-void
 
-    .line 351
     :cond_1
     :try_start_0
     invoke-interface {p0}, Landroid/hardware/ICameraService;->notifyDeviceInjectorOrientationChange()V
@@ -155,7 +139,6 @@
     :catch_0
     move-exception p0
 
-    .line 353
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -184,7 +167,6 @@
 
     add-int/lit8 p1, p1, 0x2d
 
-    .line 364
     div-int/lit8 p1, p1, 0x5a
 
     mul-int/lit8 p1, p1, 0x5a

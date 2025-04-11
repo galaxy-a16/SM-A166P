@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->$r8$lambda$nlricd5srFFDgB8O_VnMW3Cxp2g(Ljava/lang/Integer;)I

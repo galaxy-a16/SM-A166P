@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsServiceLog;I)V
     .locals 0
 
-    .line 115
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
     iput p2, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;->val$type:I
@@ -30,7 +29,6 @@
 
     const-wide/16 v0, 0x7d0
 
-    .line 120
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -41,7 +39,6 @@
     :catch_0
     move-exception v0
 
-    .line 122
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +57,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     :goto_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
@@ -74,7 +70,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;->prepareUpload()V
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
     iget v1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;->val$type:I
@@ -85,7 +80,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/locksettings/LockSettingsServiceLog;->-$$Nest$fputLOG_FILE(Lcom/android/server/locksettings/LockSettingsServiceLog;Ljava/lang/String;)V
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
     invoke-static {v0}, Lcom/android/server/locksettings/LockSettingsServiceLog;->-$$Nest$fgetmLogFile(Lcom/android/server/locksettings/LockSettingsServiceLog;)[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
@@ -98,7 +92,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;->deleteUploadFile()V
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
     iget p0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;->val$type:I

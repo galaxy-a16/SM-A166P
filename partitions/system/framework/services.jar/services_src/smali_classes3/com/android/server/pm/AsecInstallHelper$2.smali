@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/pm/AsecInstallHelper;ZZ)V
     .locals 0
 
-    .line 272
     iput-object p1, p0, Lcom/android/server/pm/AsecInstallHelper$2;->this$0:Lcom/android/server/pm/AsecInstallHelper;
 
     iput-boolean p2, p0, Lcom/android/server/pm/AsecInstallHelper$2;->val$mediaStatus:Z
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 275
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/AsecInstallHelper$2;->this$0:Lcom/android/server/pm/AsecInstallHelper;
 
@@ -58,14 +56,12 @@
 
     const-string/jumbo v1, "updateExternalMediaStatus RuntimeException"
 
-    .line 277
     invoke-static {v0, v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x5
 
     const-string/jumbo v0, "updateExternalMediaStatus runtime exception: is asec cmd timeout?"
 
-    .line 278
     invoke-static {p0, v0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
     :goto_0

@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Ljava/util/List;Landroid/view/autofill/AutofillId;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda2;->f$0:Ljava/util/List;
@@ -31,7 +30,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda2;->f$0:Ljava/util/List;
 
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda2;->f$1:Landroid/view/autofill/AutofillId;

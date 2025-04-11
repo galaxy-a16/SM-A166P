@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutService;Ljava/lang/Object;)V
     .locals 0
 
-    .line 223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 224
     iput-object p1, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
-    .line 225
     iput-object p2, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mLock:Ljava/lang/Object;
 
     return-void
@@ -30,14 +27,12 @@
 .method public createShortcutResultIntent(Landroid/content/pm/ShortcutInfo;I)Landroid/content/Intent;
     .locals 3
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v0, p2}, Lcom/android/server/pm/ShortcutService;->getParentOrSelfUserId(I)I
 
     move-result p2
 
-    .line 296
     iget-object v0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v0, p2}, Lcom/android/server/pm/ShortcutService;->getDefaultLauncher(I)Ljava/lang/String;
@@ -52,23 +47,19 @@
 
     const-string p1, "Default launcher not found."
 
-    .line 298
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 304
     :cond_0
     iget-object v2, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v2, p2}, Lcom/android/server/pm/ShortcutService;->throwIfUserLockedL(I)V
 
-    .line 307
     invoke-virtual {p0, p1, v1, v0, p2}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->requestPinShortcutLocked(Landroid/content/pm/ShortcutInfo;Landroid/content/IntentSender;Ljava/lang/String;I)Landroid/content/pm/LauncherApps$PinItemRequest;
 
     move-result-object p0
 
-    .line 309
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
@@ -85,36 +76,28 @@
 .method public directPinShortcut(Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;)Z
     .locals 10
 
-    .line 480
     iget-object v0, p1, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->shortcutOriginal:Landroid/content/pm/ShortcutInfo;
 
-    .line 481
     invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getUserId()I
 
     move-result v1
 
-    .line 482
     invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getPackage()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 483
     iget v3, p1, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->launcherUserId:I
 
-    .line 484
     iget-object v4, p1, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->launcherPackage:Ljava/lang/String;
 
-    .line 485
     invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 490
     iget-object v6, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 491
     :try_start_0
     iget-object v7, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
@@ -130,7 +113,6 @@
 
     iget p1, p1, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->launcherUserId:I
 
-    .line 492
     invoke-virtual {v7, p1}, Lcom/android/server/pm/ShortcutService;->isUserUnlockedL(I)Z
 
     move-result p1
@@ -139,7 +121,6 @@
 
     goto/16 :goto_1
 
-    .line 497
     :cond_0
     iget-object p1, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
@@ -147,10 +128,8 @@
 
     move-result-object p1
 
-    .line 499
     invoke-virtual {p1}, Lcom/android/server/pm/ShortcutPackageItem;->attemptToRestoreIfNeededAndSave()V
 
-    .line 500
     invoke-virtual {p1, v0}, Lcom/android/server/pm/ShortcutLauncher;->hasPinned(Landroid/content/pm/ShortcutInfo;)Z
 
     move-result v3
@@ -159,21 +138,18 @@
 
     if-eqz v3, :cond_2
 
-    .line 510
     iget-object v3, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v3, v2, v1}, Lcom/android/server/pm/ShortcutService;->getPackageShortcutsForPublisherLocked(Ljava/lang/String;I)Lcom/android/server/pm/ShortcutPackage;
 
     move-result-object v3
 
-    .line 512
     invoke-virtual {v3, v5}, Lcom/android/server/pm/ShortcutPackage;->findShortcutById(Ljava/lang/String;)Landroid/content/pm/ShortcutInfo;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 515
     monitor-exit v6
 
     return v4
@@ -181,7 +157,6 @@
     :cond_1
     const-string v3, "ShortcutService"
 
-    .line 518
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,7 +179,6 @@
 
     invoke-static {v3, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
     :cond_2
     iget-object v3, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
@@ -212,7 +186,6 @@
 
     move-result-object v3
 
-    .line 527
     invoke-virtual {v3, v5}, Lcom/android/server/pm/ShortcutPackage;->findShortcutById(Ljava/lang/String;)Landroid/content/pm/ShortcutInfo;
 
     move-result-object v7
@@ -221,7 +194,6 @@
 
     if-nez v7, :cond_3
 
-    .line 533
     :try_start_1
     iget-object v9, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
@@ -229,7 +201,6 @@
 
     goto :goto_0
 
-    .line 535
     :cond_3
     invoke-virtual {p0, v7}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->validateExistingShortcut(Landroid/content/pm/ShortcutInfo;)V
     :try_end_1
@@ -239,7 +210,6 @@
     :goto_0
     if-nez v7, :cond_5
 
-    .line 551
     :try_start_2
     invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getActivity()Landroid/content/ComponentName;
 
@@ -247,7 +217,6 @@
 
     if-nez v9, :cond_4
 
-    .line 552
     iget-object v9, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v9, v2}, Lcom/android/server/pm/ShortcutService;->getDummyMainActivity(Ljava/lang/String;)Landroid/content/ComponentName;
@@ -256,24 +225,19 @@
 
     invoke-virtual {v0, v9}, Landroid/content/pm/ShortcutInfo;->setActivity(Landroid/content/ComponentName;)V
 
-    .line 554
     :cond_4
     invoke-virtual {v3, v0}, Lcom/android/server/pm/ShortcutPackage;->addOrReplaceDynamicShortcut(Landroid/content/pm/ShortcutInfo;)Z
 
-    .line 563
     :cond_5
     invoke-virtual {p1, v2, v1, v5, v4}, Lcom/android/server/pm/ShortcutLauncher;->addPinnedShortcut(Ljava/lang/String;ILjava/lang/String;Z)V
 
     if-nez v7, :cond_6
 
-    .line 570
     invoke-virtual {v3, v5, v8, v8}, Lcom/android/server/pm/ShortcutPackage;->deleteDynamicWithId(Ljava/lang/String;ZZ)Landroid/content/pm/ShortcutInfo;
 
-    .line 574
     :cond_6
     invoke-virtual {v3}, Lcom/android/server/pm/ShortcutPackage;->adjustRanks()V
 
-    .line 576
     invoke-virtual {v3, v5}, Lcom/android/server/pm/ShortcutPackage;->findShortcutById(Ljava/lang/String;)Landroid/content/pm/ShortcutInfo;
 
     move-result-object p1
@@ -282,17 +246,14 @@
 
     move-result-object p1
 
-    .line 577
     monitor-exit v6
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 579
     iget-object v0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v0}, Lcom/android/server/pm/ShortcutService;->verifyStates()V
 
-    .line 580
     iget-object p0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     const/4 v0, 0x0
@@ -307,7 +268,6 @@
     :try_start_3
     const-string p1, "ShortcutService"
 
-    .line 538
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -328,7 +288,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 539
     monitor-exit v6
 
     return v8
@@ -339,10 +298,8 @@
 
     const-string p1, "User is locked now."
 
-    .line 493
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     monitor-exit v6
 
     return v8
@@ -350,7 +307,6 @@
     :catchall_0
     move-exception p0
 
-    .line 577
     monitor-exit v6
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -361,14 +317,12 @@
 .method public getRequestPinConfirmationActivity(II)Landroid/util/Pair;
     .locals 2
 
-    .line 451
     iget-object v0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/ShortcutService;->getParentOrSelfUserId(I)I
 
     move-result p1
 
-    .line 452
     iget-object v0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/ShortcutService;->getDefaultLauncher(I)Ljava/lang/String;
@@ -383,12 +337,10 @@
 
     const-string p1, "Default launcher not found."
 
-    .line 455
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 458
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
@@ -400,7 +352,6 @@
 
     goto :goto_0
 
-    .line 460
     :cond_1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -417,7 +368,6 @@
 .method public isCallerUid(I)Z
     .locals 0
 
-    .line 471
     iget-object p0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService;->injectBinderCallingUid()I
@@ -440,7 +390,6 @@
 .method public isRequestPinItemSupported(II)Z
     .locals 0
 
-    .line 229
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->getRequestPinConfirmationActivity(II)Landroid/util/Pair;
 
     move-result-object p0
@@ -480,11 +429,9 @@
     :cond_0
     move v9, v8
 
-    .line 248
     :goto_0
     invoke-virtual {p0, v1, v9}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->getRequestPinConfirmationActivity(II)Landroid/util/Pair;
 
-    .line 256
     invoke-virtual {p0, v1, v9}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->getRequestPinConfirmationActivity(II)Landroid/util/Pair;
 
     move-result-object v10
@@ -495,14 +442,12 @@
 
     const-string v1, "Launcher doesn\'t support requestPinnedShortcut(). Shortcut not created."
 
-    .line 261
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
     return v0
 
-    .line 265
     :cond_1
     iget-object v1, v10, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -512,19 +457,16 @@
 
     move-result v11
 
-    .line 269
     iget-object v1, v7, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v1, v11}, Lcom/android/server/pm/ShortcutService;->throwIfUserLockedL(I)V
 
     if-eqz v0, :cond_2
 
-    .line 274
     iget-object v1, v10, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Landroid/content/ComponentName;
 
-    .line 275
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -539,7 +481,6 @@
 
     move-object/from16 v3, p5
 
-    .line 274
     invoke-virtual {p0, p1, v3, v1, v2}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->requestPinShortcutLocked(Landroid/content/pm/ShortcutInfo;Landroid/content/IntentSender;Ljava/lang/String;I)Landroid/content/pm/LauncherApps$PinItemRequest;
 
     move-result-object v0
@@ -551,24 +492,20 @@
     :cond_2
     move-object/from16 v3, p5
 
-    .line 277
     iget-object v0, v7, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     iget-object v1, v10, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Landroid/content/ComponentName;
 
-    .line 278
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 277
     invoke-virtual {v0, v1, v11}, Lcom/android/server/pm/ShortcutService;->injectGetPackageUid(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 279
     new-instance v12, Landroid/content/pm/LauncherApps$PinItemRequest;
 
     new-instance v13, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinAppWidgetRequestInner;
@@ -591,7 +528,6 @@
 
     invoke-direct {v12, v13, v8}, Landroid/content/pm/LauncherApps$PinItemRequest;-><init>(Landroid/content/pm/IPinItemRequest;I)V
 
-    .line 284
     :goto_1
     iget-object v0, v10, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -625,10 +561,8 @@
 
     move/from16 v6, p4
 
-    .line 318
     iget-object v0, v1, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
-    .line 319
     invoke-virtual {p1}, Landroid/content/pm/ShortcutInfo;->getPackage()Ljava/lang/String;
 
     move-result-object v3
@@ -637,12 +571,10 @@
 
     move-result v4
 
-    .line 318
     invoke-virtual {v0, v3, v4}, Lcom/android/server/pm/ShortcutService;->getPackageShortcutsForPublisherLocked(Ljava/lang/String;I)Lcom/android/server/pm/ShortcutPackage;
 
     move-result-object v0
 
-    .line 321
     invoke-virtual {p1}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v3
@@ -667,7 +599,6 @@
     :goto_0
     if-eqz v8, :cond_1
 
-    .line 323
     invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->isVisibleToPublisher()Z
 
     move-result v3
@@ -675,23 +606,18 @@
     :cond_1
     if-eqz v8, :cond_4
 
-    .line 338
     invoke-virtual {p0, v0}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->validateExistingShortcut(Landroid/content/pm/ShortcutInfo;)V
 
-    .line 340
     iget-object v3, v1, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
-    .line 341
     invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getUserId()I
 
     move-result v4
 
-    .line 340
     invoke-virtual {v3, p3, v4, v6}, Lcom/android/server/pm/ShortcutService;->getLauncherShortcutsLocked(Ljava/lang/String;II)Lcom/android/server/pm/ShortcutLauncher;
 
     move-result-object v3
 
-    .line 341
     invoke-virtual {v3, v0}, Lcom/android/server/pm/ShortcutLauncher;->hasPinned(Landroid/content/pm/ShortcutInfo;)Z
 
     move-result v3
@@ -702,7 +628,6 @@
 
     move-object v7, p2
 
-    .line 345
     invoke-virtual {p0, p2, v4}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->sendResultIntent(Landroid/content/IntentSender;Landroid/content/Intent;)V
 
     goto :goto_1
@@ -715,7 +640,6 @@
     :goto_1
     const/16 v7, 0x1b
 
-    .line 353
     invoke-virtual {v0, v7}, Landroid/content/pm/ShortcutInfo;->clone(I)Landroid/content/pm/ShortcutInfo;
 
     move-result-object v0
@@ -724,7 +648,6 @@
 
     const/4 v3, 0x2
 
-    .line 357
     invoke-virtual {v0, v3}, Landroid/content/pm/ShortcutInfo;->clearFlags(I)V
 
     :cond_3
@@ -735,17 +658,14 @@
     :cond_4
     move-object v7, p2
 
-    .line 363
     invoke-virtual {p1}, Landroid/content/pm/ShortcutInfo;->getActivity()Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-nez v0, :cond_5
 
-    .line 364
     iget-object v0, v1, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
-    .line 365
     invoke-virtual {p1}, Landroid/content/pm/ShortcutInfo;->getPackage()Ljava/lang/String;
 
     move-result-object v3
@@ -754,23 +674,19 @@
 
     move-result v4
 
-    .line 364
     invoke-virtual {v0, v3, v4}, Lcom/android/server/pm/ShortcutService;->injectGetDefaultMainActivity(Ljava/lang/String;I)Landroid/content/ComponentName;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/content/pm/ShortcutInfo;->setActivity(Landroid/content/ComponentName;)V
 
-    .line 369
     :cond_5
     iget-object v0, v1, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/ShortcutService;->validateShortcutForPinRequest(Landroid/content/pm/ShortcutInfo;)V
 
-    .line 372
     iget-object v0, v1, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
-    .line 373
     invoke-virtual {p1}, Landroid/content/pm/ShortcutInfo;->getPackage()Ljava/lang/String;
 
     move-result-object v3
@@ -779,7 +695,6 @@
 
     move-result v4
 
-    .line 372
     invoke-virtual {v0, v3, v4}, Lcom/android/server/pm/ShortcutService;->injectGetResourcesForApplicationAsUser(Ljava/lang/String;I)Landroid/content/res/Resources;
 
     move-result-object v0
@@ -788,7 +703,6 @@
 
     const/16 v0, 0x1a
 
-    .line 378
     invoke-virtual {p1, v0}, Landroid/content/pm/ShortcutInfo;->clone(I)Landroid/content/pm/ShortcutInfo;
 
     move-result-object v0
@@ -797,13 +711,11 @@
 
     move-object v4, v7
 
-    .line 386
     :goto_2
     new-instance v11, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;
 
     iget-object v0, v1, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
-    .line 389
     invoke-virtual {v0, p3, v6}, Lcom/android/server/pm/ShortcutService;->injectGetPackageUid(Ljava/lang/String;I)I
 
     move-result v7
@@ -822,7 +734,6 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;-><init>(Lcom/android/server/pm/ShortcutRequestPinProcessor;Landroid/content/pm/ShortcutInfo;Landroid/content/pm/ShortcutInfo;Landroid/content/IntentSender;Ljava/lang/String;IIZLcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner-IA;)V
 
-    .line 392
     new-instance v0, Landroid/content/pm/LauncherApps$PinItemRequest;
 
     invoke-direct {v0, v11, v10}, Landroid/content/pm/LauncherApps$PinItemRequest;-><init>(Landroid/content/pm/IPinItemRequest;I)V
@@ -833,7 +744,6 @@
 .method public sendResultIntent(Landroid/content/IntentSender;Landroid/content/Intent;)V
     .locals 0
 
-    .line 467
     iget-object p0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/ShortcutService;->injectSendIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;)V
@@ -855,50 +765,41 @@
     :cond_0
     const-string p4, "android.content.pm.action.CONFIRM_PIN_APPWIDGET"
 
-    .line 410
     :goto_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 411
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     const-string p4, "android.content.pm.extra.PIN_ITEM_REQUEST"
 
-    .line 412
     invoke-virtual {v0, p4, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     const p3, 0x10008000
 
-    .line 413
     invoke-virtual {v0, p3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 415
     iget-object p3, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p3}, Lcom/android/server/pm/ShortcutService;->injectClearCallingIdentity()J
 
     move-result-wide p3
 
-    .line 430
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     iget-object v1, v1, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;
 
-    .line 431
     invoke-static {p2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object p2
 
-    .line 430
     invoke-virtual {v1, v0, p2}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 436
     iget-object p0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p0, p3, p4}, Lcom/android/server/pm/ShortcutService;->injectRestoreCallingIdentity(J)V
@@ -916,7 +817,6 @@
     :try_start_1
     const-string p5, "ShortcutService"
 
-    .line 433
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -935,7 +835,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 436
     iget-object p0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor;->mService:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p0, p3, p4}, Lcom/android/server/pm/ShortcutService;->injectRestoreCallingIdentity(J)V
@@ -949,14 +848,12 @@
 
     invoke-virtual {p0, p3, p4}, Lcom/android/server/pm/ShortcutService;->injectRestoreCallingIdentity(J)V
 
-    .line 437
     throw p1
 .end method
 
 .method public final validateExistingShortcut(Landroid/content/pm/ShortcutInfo;)V
     .locals 2
 
-    .line 399
     invoke-virtual {p1}, Landroid/content/pm/ShortcutInfo;->isEnabled()Z
 
     move-result p0

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssLocationProviderSec;)V
     .locals 0
 
-    .line 2707
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$InputLidStateChangedListener;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public onLidStateChanged(JI)V
     .locals 0
 
-    .line 2711
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$InputLidStateChangedListener;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 
     invoke-static {p1, p3}, Lcom/android/server/location/gnss/GnssLocationProviderSec;->-$$Nest$fputmLidState(Lcom/android/server/location/gnss/GnssLocationProviderSec;I)V
 
-    .line 2712
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$InputLidStateChangedListener;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 
     invoke-static {p1}, Lcom/android/server/location/gnss/GnssLocationProviderSec;->-$$Nest$fgetmLidState(Lcom/android/server/location/gnss/GnssLocationProviderSec;)I
@@ -41,7 +38,6 @@
 
     if-ltz p1, :cond_0
 
-    .line 2713
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -66,7 +62,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2714
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$InputLidStateChangedListener;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssLocationProviderSec;->-$$Nest$fgetmLidState(Lcom/android/server/location/gnss/GnssLocationProviderSec;)I

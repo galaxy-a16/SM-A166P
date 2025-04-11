@@ -27,7 +27,6 @@
 
     const/4 p1, 0x0
 
-    .line 130
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/permission/access/WritableState;->requestWrite(Z)V
 
@@ -48,7 +47,6 @@
 .method public final getWriteMode()I
     .locals 0
 
-    .line 127
     iget p0, p0, Lcom/android/server/permission/access/WritableState;->writeMode:I
 
     return p0
@@ -61,12 +59,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 132
     iput v0, p0, Lcom/android/server/permission/access/WritableState;->writeMode:I
 
     goto :goto_0
 
-    .line 134
     :cond_0
     iget p1, p0, Lcom/android/server/permission/access/WritableState;->writeMode:I
 
@@ -74,7 +70,6 @@
 
     const/4 p1, 0x2
 
-    .line 135
     iput p1, p0, Lcom/android/server/permission/access/WritableState;->writeMode:I
 
     :cond_1

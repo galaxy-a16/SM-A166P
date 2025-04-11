@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersonaServiceProxy;)V
     .locals 0
 
-    .line 188
     iput-object p1, p0, Lcom/android/server/pm/PersonaServiceProxy$3;->this$0:Lcom/android/server/pm/PersonaServiceProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 191
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,12 +31,10 @@
 
     const/16 v1, -0x2710
 
-    .line 192
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
-    .line 194
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -47,14 +43,12 @@
 
     const-string v0, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 195
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 196
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -64,7 +58,6 @@
 
     move-result-object p1
 
-    .line 197
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,14 +80,12 @@
 
     const-string p2, "com.samsung.android.knox.containercore"
 
-    .line 198
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 199
     iget-object p0, p0, Lcom/android/server/pm/PersonaServiceProxy$3;->this$0:Lcom/android/server/pm/PersonaServiceProxy;
 
     const/4 p1, 0x0

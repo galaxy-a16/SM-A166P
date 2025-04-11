@@ -25,13 +25,10 @@
 .method public constructor <init>(Landroid/util/SparseArray;)V
     .locals 2
 
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     iput-object p1, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
-    .line 96
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
@@ -42,7 +39,6 @@
 
     iput-object v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumerSnapshots:Landroid/util/SparseLongArray;
 
-    .line 97
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
@@ -55,7 +51,6 @@
 
     const/4 v0, 0x2
 
-    .line 99
     invoke-static {v0, p1}, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->calculateNumOrdinals(ILandroid/util/SparseArray;)I
 
     move-result v0
@@ -64,7 +59,6 @@
 
     const/4 v0, 0x3
 
-    .line 101
     invoke-static {v0, p1}, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->calculateNumOrdinals(ILandroid/util/SparseArray;)I
 
     move-result v0
@@ -73,14 +67,12 @@
 
     const/4 v0, 0x0
 
-    .line 102
     invoke-static {v0, p1}, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->calculateNumOrdinals(ILandroid/util/SparseArray;)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mNumOtherOrdinals:I
 
-    .line 103
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0, p1}, Landroid/util/SparseArray;-><init>(I)V
@@ -99,7 +91,6 @@
 
     return v0
 
-    .line 412
     :cond_0
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -110,14 +101,12 @@
     :goto_0
     if-ge v0, v1, :cond_2
 
-    .line 414
     invoke-virtual {p1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/hardware/power/stats/EnergyConsumer;
 
-    .line 415
     iget-byte v3, v3, Landroid/hardware/power/stats/EnergyConsumer;->type:B
 
     if-ne v3, p0, :cond_1
@@ -142,7 +131,6 @@
 
     mul-long/2addr p1, v0
 
-    .line 424
     div-int/lit8 p0, p3, 0x2
 
     int-to-long v0, p0
@@ -159,15 +147,12 @@
 .method public final createEnergyConsumerDetails()Landroid/os/BatteryStats$EnergyConsumerDetails;
     .locals 11
 
-    .line 487
     new-instance v0, Landroid/os/BatteryStats$EnergyConsumerDetails;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$EnergyConsumerDetails;-><init>()V
 
-    .line 488
     iget-object v1, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
-    .line 489
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
     move-result v1
@@ -180,7 +165,6 @@
 
     move v2, v1
 
-    .line 490
     :goto_0
     iget-object v3, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
@@ -190,7 +174,6 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 491
     iget-object v3, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -199,17 +182,14 @@
 
     check-cast v3, Landroid/hardware/power/stats/EnergyConsumer;
 
-    .line 492
     new-instance v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;
 
     invoke-direct {v4}, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;-><init>()V
 
-    .line 494
     iget-byte v5, v3, Landroid/hardware/power/stats/EnergyConsumer;->type:B
 
     iput v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->type:I
 
-    .line 495
     iget v6, v3, Landroid/hardware/power/stats/EnergyConsumer;->ordinal:I
 
     iput v6, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->ordinal:I
@@ -218,7 +198,6 @@
 
     const-string v5, "UNKNOWN"
 
-    .line 519
     iput-object v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
     goto :goto_1
@@ -226,7 +205,6 @@
     :pswitch_0
     const-string v5, "WIFI"
 
-    .line 513
     iput-object v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
     goto :goto_1
@@ -234,7 +212,6 @@
     :pswitch_1
     const-string v5, "MOBILE_RADIO"
 
-    .line 510
     iput-object v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
     goto :goto_1
@@ -242,7 +219,6 @@
     :pswitch_2
     const-string v5, "GNSS"
 
-    .line 507
     iput-object v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
     goto :goto_1
@@ -250,7 +226,6 @@
     :pswitch_3
     const-string v5, "DISPLAY"
 
-    .line 504
     iput-object v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
     goto :goto_1
@@ -258,7 +233,6 @@
     :pswitch_4
     const-string v5, "CPU"
 
-    .line 501
     iput-object v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
     goto :goto_1
@@ -266,12 +240,10 @@
     :pswitch_5
     const-string v5, "BLUETOOTH"
 
-    .line 498
     iput-object v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 516
     :pswitch_6
     iget-object v5, v3, Landroid/hardware/power/stats/EnergyConsumer;->name:Ljava/lang/String;
 
@@ -281,13 +253,11 @@
 
     iput-object v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
-    .line 522
     :goto_1
     iget v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->type:I
 
     if-eqz v5, :cond_3
 
-    .line 523
     iget v5, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->ordinal:I
 
     const/4 v6, 0x1
@@ -306,7 +276,6 @@
 
     move v7, v1
 
-    .line 526
     :goto_3
     iget-object v8, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
@@ -316,7 +285,6 @@
 
     if-ge v7, v8, :cond_2
 
-    .line 527
     iget-object v8, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v7}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -325,7 +293,6 @@
 
     check-cast v8, Landroid/hardware/power/stats/EnergyConsumer;
 
-    .line 528
     iget-byte v9, v8, Landroid/hardware/power/stats/EnergyConsumer;->type:B
 
     iget v10, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->type:I
@@ -349,7 +316,6 @@
     :goto_4
     if-eqz v6, :cond_3
 
-    .line 535
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -372,7 +338,6 @@
 
     iput-object v3, v4, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->name:Ljava/lang/String;
 
-    .line 538
     :cond_3
     iget-object v3, v0, Landroid/os/BatteryStats$EnergyConsumerDetails;->consumers:[Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;
 
@@ -382,7 +347,6 @@
 
     goto/16 :goto_0
 
-    .line 541
     :cond_4
     iget-object p0, v0, Landroid/os/BatteryStats$EnergyConsumerDetails;->consumers:[Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;
 
@@ -409,19 +373,16 @@
 .method public getEnergyConsumerDetails(Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;)Landroid/os/BatteryStats$EnergyConsumerDetails;
     .locals 6
 
-    .line 433
     iget-object v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumerDetails:Landroid/os/BatteryStats$EnergyConsumerDetails;
 
     if-nez v0, :cond_0
 
-    .line 434
     invoke-virtual {p0}, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->createEnergyConsumerDetails()Landroid/os/BatteryStats$EnergyConsumerDetails;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumerDetails:Landroid/os/BatteryStats$EnergyConsumerDetails;
 
-    .line 437
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumerDetails:Landroid/os/BatteryStats$EnergyConsumerDetails;
 
@@ -429,7 +390,6 @@
 
     const/4 v1, 0x0
 
-    .line 438
     :goto_0
     iget-object v2, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumerDetails:Landroid/os/BatteryStats$EnergyConsumerDetails;
 
@@ -439,22 +399,18 @@
 
     if-ge v1, v4, :cond_4
 
-    .line 439
     aget-object v2, v3, v1
 
-    .line 441
     iget v3, v2, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->type:I
 
     const-wide/16 v4, -0x1
 
     packed-switch v3, :pswitch_data_0
 
-    .line 479
     aput-wide v4, v0, v1
 
     goto :goto_1
 
-    .line 469
     :pswitch_0
     iget-wide v2, p1, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cameraChargeUC:J
 
@@ -462,7 +418,6 @@
 
     goto :goto_1
 
-    .line 466
     :pswitch_1
     iget-wide v2, p1, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->wifiChargeUC:J
 
@@ -470,7 +425,6 @@
 
     goto :goto_1
 
-    .line 463
     :pswitch_2
     iget-wide v2, p1, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->mobileRadioChargeUC:J
 
@@ -478,7 +432,6 @@
 
     goto :goto_1
 
-    .line 460
     :pswitch_3
     iget-wide v2, p1, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->gnssChargeUC:J
 
@@ -486,13 +439,11 @@
 
     goto :goto_1
 
-    .line 453
     :pswitch_4
     iget-object v3, p1, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->displayChargeUC:[J
 
     if-eqz v3, :cond_1
 
-    .line 454
     iget v2, v2, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->ordinal:I
 
     aget-wide v2, v3, v2
@@ -501,19 +452,16 @@
 
     goto :goto_1
 
-    .line 456
     :cond_1
     aput-wide v4, v0, v1
 
     goto :goto_1
 
-    .line 446
     :pswitch_5
     iget-object v3, p1, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cpuClusterChargeUC:[J
 
     if-eqz v3, :cond_2
 
-    .line 447
     iget v2, v2, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->ordinal:I
 
     aget-wide v2, v3, v2
@@ -522,13 +470,11 @@
 
     goto :goto_1
 
-    .line 449
     :cond_2
     aput-wide v4, v0, v1
 
     goto :goto_1
 
-    .line 443
     :pswitch_6
     iget-wide v2, p1, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->bluetoothChargeUC:J
 
@@ -536,13 +482,11 @@
 
     goto :goto_1
 
-    .line 472
     :pswitch_7
     iget-object v3, p1, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherTotalChargeUC:[J
 
     if-eqz v3, :cond_3
 
-    .line 473
     iget v2, v2, Landroid/os/BatteryStats$EnergyConsumerDetails$EnergyConsumer;->ordinal:I
 
     aget-wide v2, v3, v2
@@ -551,7 +495,6 @@
 
     goto :goto_1
 
-    .line 475
     :cond_3
     aput-wide v4, v0, v1
 
@@ -579,12 +522,10 @@
 .method public getOtherOrdinalNames()[Ljava/lang/String;
     .locals 6
 
-    .line 378
     iget v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mNumOtherOrdinals:I
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 380
     iget-object v1, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
@@ -598,7 +539,6 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 382
     iget-object v4, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -607,14 +547,12 @@
 
     check-cast v4, Landroid/hardware/power/stats/EnergyConsumer;
 
-    .line 383
     iget-byte v5, v4, Landroid/hardware/power/stats/EnergyConsumer;->type:B
 
     if-nez v5, :cond_0
 
     add-int/lit8 v5, v3, 0x1
 
-    .line 384
     iget-object v4, v4, Landroid/hardware/power/stats/EnergyConsumer;->name:Ljava/lang/String;
 
     invoke-virtual {p0, v4}, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->sanitizeCustomBucketName(Ljava/lang/String;)Ljava/lang/String;
@@ -643,7 +581,6 @@
 
     return-object p0
 
-    .line 394
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -653,7 +590,6 @@
 
     invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 395
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p1
@@ -667,7 +603,6 @@
 
     aget-char v2, p1, v1
 
-    .line 396
     invoke-static {v2}, Ljava/lang/Character;->isWhitespace(C)Z
 
     move-result v3
@@ -676,12 +611,10 @@
 
     const/16 v2, 0x20
 
-    .line 397
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 398
     :cond_1
     invoke-static {v2}, Ljava/lang/Character;->isISOControl(C)Z
 
@@ -691,12 +624,10 @@
 
     const/16 v2, 0x5f
 
-    .line 399
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 401
     :cond_2
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -705,7 +636,6 @@
 
     goto :goto_0
 
-    .line 404
     :cond_3
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -727,7 +657,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 176
     array-length v4, v1
 
     if-nez v4, :cond_0
@@ -739,7 +668,6 @@
 
     if-gtz v2, :cond_1
 
-    .line 180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -762,13 +690,11 @@
 
     return-object v3
 
-    .line 186
     :cond_1
     new-instance v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;
 
     invoke-direct {v5}, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;-><init>()V
 
-    .line 188
     array-length v6, v1
 
     const/4 v7, 0x0
@@ -778,16 +704,12 @@
 
     aget-object v8, v1, v7
 
-    .line 190
     iget v9, v8, Landroid/hardware/power/stats/EnergyConsumerResult;->id:I
 
-    .line 191
     iget-wide v10, v8, Landroid/hardware/power/stats/EnergyConsumerResult;->energyUWs:J
 
-    .line 192
     iget-object v8, v8, Landroid/hardware/power/stats/EnergyConsumerResult;->attribution:[Landroid/hardware/power/stats/EnergyConsumerAttribution;
 
-    .line 195
     iget-object v12, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumers:Landroid/util/SparseArray;
 
     invoke-virtual {v12, v9, v3}, Landroid/util/SparseArray;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -798,7 +720,6 @@
 
     if-nez v12, :cond_2
 
-    .line 197
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -823,14 +744,11 @@
 
     goto/16 :goto_4
 
-    .line 200
     :cond_2
     iget-byte v13, v12, Landroid/hardware/power/stats/EnergyConsumer;->type:B
 
-    .line 201
     iget v14, v12, Landroid/hardware/power/stats/EnergyConsumer;->ordinal:I
 
-    .line 204
     iget-object v15, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumerSnapshots:Landroid/util/SparseLongArray;
 
     move-object/from16 v16, v4
@@ -841,19 +759,16 @@
 
     move-result-wide v3
 
-    .line 205
     iget-object v15, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mVoltageSnapshots:Landroid/util/SparseIntArray;
 
     invoke-virtual {v15, v9}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v15
 
-    .line 206
     iget-object v1, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mEnergyConsumerSnapshots:Landroid/util/SparseLongArray;
 
     invoke-virtual {v1, v9, v10, v11}, Landroid/util/SparseLongArray;->put(IJ)V
 
-    .line 207
     iget-object v1, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mVoltageSnapshots:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, v9, v2}, Landroid/util/SparseIntArray;->put(II)V
@@ -862,10 +777,8 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 209
     div-int/lit8 v1, v1, 0x2
 
-    .line 211
     invoke-virtual {v0, v12, v8, v1}, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->updateAndGetDeltaForTypeOther(Landroid/hardware/power/stats/EnergyConsumer;[Landroid/hardware/power/stats/EnergyConsumerAttribution;I)Landroid/util/SparseLongArray;
 
     move-result-object v8
@@ -908,7 +821,6 @@
 
     goto/16 :goto_3
 
-    .line 230
     :cond_5
     invoke-virtual {v0, v6, v7, v1}, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->calculateChargeConsumedUC(JI)J
 
@@ -916,7 +828,6 @@
 
     packed-switch v13, :pswitch_data_0
 
-    .line 276
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -945,44 +856,37 @@
 
     goto/16 :goto_4
 
-    .line 263
     :pswitch_0
     iput-wide v3, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cameraChargeUC:J
 
     goto :goto_2
 
-    .line 259
     :pswitch_1
     iput-wide v3, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->wifiChargeUC:J
 
     goto :goto_2
 
-    .line 255
     :pswitch_2
     iput-wide v3, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->mobileRadioChargeUC:J
 
     goto :goto_2
 
-    .line 251
     :pswitch_3
     iput-wide v3, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->gnssChargeUC:J
 
     goto :goto_2
 
-    .line 244
     :pswitch_4
     iget-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->displayChargeUC:[J
 
     if-nez v1, :cond_6
 
-    .line 245
     iget v1, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mNumDisplayOrdinals:I
 
     new-array v1, v1, [J
 
     iput-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->displayChargeUC:[J
 
-    .line 247
     :cond_6
     iget-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->displayChargeUC:[J
 
@@ -990,20 +894,17 @@
 
     goto :goto_2
 
-    .line 237
     :pswitch_5
     iget-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cpuClusterChargeUC:[J
 
     if-nez v1, :cond_7
 
-    .line 238
     iget v1, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mNumCpuClusterOrdinals:I
 
     new-array v1, v1, [J
 
     iput-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cpuClusterChargeUC:[J
 
-    .line 240
     :cond_7
     iget-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cpuClusterChargeUC:[J
 
@@ -1011,37 +912,31 @@
 
     goto :goto_2
 
-    .line 233
     :pswitch_6
     iput-wide v3, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->bluetoothChargeUC:J
 
     goto :goto_2
 
-    .line 267
     :pswitch_7
     iget-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherTotalChargeUC:[J
 
     if-nez v1, :cond_8
 
-    .line 268
     iget v1, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mNumOtherOrdinals:I
 
     new-array v6, v1, [J
 
     iput-object v6, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherTotalChargeUC:[J
 
-    .line 269
     new-array v1, v1, [Landroid/util/SparseLongArray;
 
     iput-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherUidChargesUC:[Landroid/util/SparseLongArray;
 
-    .line 271
     :cond_8
     iget-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherTotalChargeUC:[J
 
     aput-wide v3, v1, v14
 
-    .line 272
     iget-object v1, v5, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherUidChargesUC:[Landroid/util/SparseLongArray;
 
     aput-object v8, v1, v14
@@ -1052,7 +947,6 @@
     :goto_3
     move-object/from16 v6, v16
 
-    .line 223
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1143,7 +1037,6 @@
 
     move/from16 v2, p3
 
-    .line 302
     iget-byte v3, v1, Landroid/hardware/power/stats/EnergyConsumer;->type:B
 
     const/4 v4, 0x0
@@ -1164,7 +1057,6 @@
     :cond_1
     move-object/from16 v5, p2
 
-    .line 311
     :goto_0
     iget-object v6, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mAttributionSnapshots:Landroid/util/SparseArray;
 
@@ -1178,21 +1070,18 @@
 
     if-nez v6, :cond_3
 
-    .line 315
     new-instance v2, Landroid/util/SparseLongArray;
 
     array-length v6, v5
 
     invoke-direct {v2, v6}, Landroid/util/SparseLongArray;-><init>(I)V
 
-    .line 316
     iget-object v0, v0, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->mAttributionSnapshots:Landroid/util/SparseArray;
 
     iget v1, v1, Landroid/hardware/power/stats/EnergyConsumer;->id:I
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 317
     array-length v0, v5
 
     :goto_1
@@ -1200,7 +1089,6 @@
 
     aget-object v1, v5, v3
 
-    .line 318
     iget v6, v1, Landroid/hardware/power/stats/EnergyConsumerAttribution;->uid:I
 
     iget-wide v7, v1, Landroid/hardware/power/stats/EnergyConsumerAttribution;->energyUWs:J
@@ -1214,13 +1102,11 @@
     :cond_2
     return-object v4
 
-    .line 324
     :cond_3
     new-instance v4, Landroid/util/SparseLongArray;
 
     invoke-direct {v4}, Landroid/util/SparseLongArray;-><init>()V
 
-    .line 326
     array-length v7, v5
 
     :goto_2
@@ -1228,20 +1114,16 @@
 
     aget-object v8, v5, v3
 
-    .line 327
     iget v9, v8, Landroid/hardware/power/stats/EnergyConsumerAttribution;->uid:I
 
-    .line 328
     iget-wide v10, v8, Landroid/hardware/power/stats/EnergyConsumerAttribution;->energyUWs:J
 
     const-wide/16 v12, 0x0
 
-    .line 330
     invoke-virtual {v6, v9, v12, v13}, Landroid/util/SparseLongArray;->get(IJ)J
 
     move-result-wide v14
 
-    .line 331
     invoke-virtual {v6, v9, v10, v11}, Landroid/util/SparseLongArray;->put(IJ)V
 
     cmp-long v8, v14, v12
@@ -1277,18 +1159,15 @@
 
     goto :goto_4
 
-    .line 344
     :cond_6
     invoke-virtual {v0, v5, v6, v2}, Lcom/android/server/power/stats/EnergyConsumerSnapshot;->calculateChargeConsumedUC(JI)J
 
     move-result-wide v5
 
-    .line 345
     invoke-virtual {v4, v9, v5, v6}, Landroid/util/SparseLongArray;->put(IJ)V
 
     goto :goto_5
 
-    .line 338
     :cond_7
     :goto_4
     new-instance v5, Ljava/lang/StringBuilder;

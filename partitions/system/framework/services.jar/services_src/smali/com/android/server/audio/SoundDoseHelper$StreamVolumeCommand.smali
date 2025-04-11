@@ -17,19 +17,14 @@
 .method public constructor <init>(IIII)V
     .locals 0
 
-    .line 1253
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1254
     iput p1, p0, Lcom/android/server/audio/SoundDoseHelper$StreamVolumeCommand;->mStreamType:I
 
-    .line 1255
     iput p2, p0, Lcom/android/server/audio/SoundDoseHelper$StreamVolumeCommand;->mIndex:I
 
-    .line 1256
     iput p3, p0, Lcom/android/server/audio/SoundDoseHelper$StreamVolumeCommand;->mFlags:I
 
-    .line 1257
     iput p4, p0, Lcom/android/server/audio/SoundDoseHelper$StreamVolumeCommand;->mDevice:I
 
     return-void
@@ -40,7 +35,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1262
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,7 +53,6 @@
 
     iget v1, p0, Lcom/android/server/audio/SoundDoseHelper$StreamVolumeCommand;->mIndex:I
 
-    .line 1263
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ",flags="
@@ -76,7 +69,6 @@
 
     iget p0, p0, Lcom/android/server/audio/SoundDoseHelper$StreamVolumeCommand;->mDevice:I
 
-    .line 1264
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const/16 p0, 0x7d

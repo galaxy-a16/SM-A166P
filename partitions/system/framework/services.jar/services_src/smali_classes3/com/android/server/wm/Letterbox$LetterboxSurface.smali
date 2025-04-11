@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInputInterceptor(Lcom/android/server/wm/Letterbox$LetterboxSurface;)Lcom/android/server/wm/Letterbox$InputInterceptor;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mInputInterceptor:Lcom/android/server/wm/Letterbox$InputInterceptor;
 
     return-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLayoutFrameGlobal(Lcom/android/server/wm/Letterbox$LetterboxSurface;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameGlobal:Landroid/graphics/Rect;
 
     return-object p0
@@ -47,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSurface(Lcom/android/server/wm/Letterbox$LetterboxSurface;)Landroid/view/SurfaceControl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -56,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSurfaceFrameRelative(Lcom/android/server/wm/Letterbox$LetterboxSurface;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
 
     return-object p0
@@ -65,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fputmSurface(Lcom/android/server/wm/Letterbox$LetterboxSurface;Landroid/view/SurfaceControl;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     return-void
@@ -74,33 +69,28 @@
 .method public constructor <init>(Lcom/android/server/wm/Letterbox;Ljava/lang/String;)V
     .locals 0
 
-    .line 404
     iput-object p1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 398
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
 
-    .line 399
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameGlobal:Landroid/graphics/Rect;
 
-    .line 400
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameRelative:Landroid/graphics/Rect;
 
-    .line 405
     iput-object p2, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mType:Ljava/lang/String;
 
     return-void
@@ -111,7 +101,6 @@
 .method public applySurfaceChanges(Landroid/view/SurfaceControl$Transaction;)V
     .locals 3
 
-    .line 457
     invoke-virtual {p0}, Lcom/android/server/wm/Letterbox$LetterboxSurface;->needsApplySurfaceChanges()Z
 
     move-result v0
@@ -120,7 +109,6 @@
 
     return-void
 
-    .line 461
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
 
@@ -128,7 +116,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 462
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
@@ -147,23 +134,19 @@
 
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
-    .line 465
     invoke-static {v0}, Lcom/android/server/wm/Letterbox;->-$$Nest$mcanHaveLetterboxSurface(Lcom/android/server/wm/Letterbox;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 467
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     if-nez v0, :cond_2
 
-    .line 468
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Letterbox$LetterboxSurface;->createSurface(Landroid/view/SurfaceControl$Transaction;)V
 
-    .line 471
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
@@ -179,7 +162,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mColor:Landroid/graphics/Color;
 
-    .line 472
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
     invoke-static {v0}, Lcom/android/server/wm/Letterbox;->-$$Nest$fgetmParentSurfaceSupplier(Lcom/android/server/wm/Letterbox;)Ljava/util/function/Supplier;
@@ -194,7 +176,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mParentSurface:Landroid/view/SurfaceControl;
 
-    .line 473
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p0}, Lcom/android/server/wm/Letterbox$LetterboxSurface;->getRgbColorArray()[F
@@ -203,7 +184,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/view/SurfaceControl$Transaction;->setColor(Landroid/view/SurfaceControl;[F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 474
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     iget-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
@@ -218,7 +198,6 @@
 
     invoke-virtual {p1, v0, v2, v1}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 475
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     iget-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
@@ -229,22 +208,18 @@
 
     iget-object v2, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
 
-    .line 476
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v2
 
-    .line 475
     invoke-virtual {p1, v0, v1, v2}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
-    .line 477
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     iget-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mParentSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, v0, v1}, Landroid/view/SurfaceControl$Transaction;->reparent(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 479
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
     invoke-static {v0}, Lcom/android/server/wm/Letterbox;->-$$Nest$fgetmHasWallpaperBackgroundSupplier(Lcom/android/server/wm/Letterbox;)Ljava/util/function/Supplier;
@@ -263,26 +238,21 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mHasWallpaperBackground:Z
 
-    .line 480
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Letterbox$LetterboxSurface;->updateAlphaAndBlur(Landroid/view/SurfaceControl$Transaction;)V
 
-    .line 482
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, v0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
     goto :goto_0
 
-    .line 483
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_4
 
-    .line 484
     invoke-virtual {p1, v0}, Landroid/view/SurfaceControl$Transaction;->hide(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 486
     :cond_4
     :goto_0
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
@@ -293,12 +263,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 487
     iget-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/Letterbox$InputInterceptor;->updateTouchableRegion(Landroid/graphics/Rect;)V
 
-    .line 488
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mInputInterceptor:Lcom/android/server/wm/Letterbox$InputInterceptor;
@@ -316,15 +284,12 @@
 .method public attachInput(Lcom/android/server/wm/WindowState;)V
     .locals 4
 
-    .line 427
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mInputInterceptor:Lcom/android/server/wm/Letterbox$InputInterceptor;
 
     if-eqz v0, :cond_0
 
-    .line 428
     invoke-virtual {v0}, Lcom/android/server/wm/Letterbox$InputInterceptor;->dispose()V
 
-    .line 430
     :cond_0
     new-instance v0, Lcom/android/server/wm/Letterbox$InputInterceptor;
 
@@ -360,7 +325,6 @@
 .method public final createSurface(Landroid/view/SurfaceControl$Transaction;)V
     .locals 3
 
-    .line 415
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
     invoke-static {v0}, Lcom/android/server/wm/Letterbox;->-$$Nest$fgetmSurfaceControlFactory(Lcom/android/server/wm/Letterbox;)Ljava/util/function/Supplier;
@@ -389,31 +353,26 @@
 
     move-result-object v1
 
-    .line 416
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x4
 
-    .line 417
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl$Builder;->setFlags(I)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
-    .line 418
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Builder;->setColorLayer()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
     const-string v1, "LetterboxSurface.createSurface"
 
-    .line 419
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
-    .line 420
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v0
@@ -422,7 +381,6 @@
 
     const/16 v1, -0x4e20
 
-    .line 422
     invoke-virtual {p1, v0, v1}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
     move-result-object p1
@@ -431,7 +389,6 @@
 
     const/4 v0, 0x1
 
-    .line 423
     invoke-virtual {p1, p0, v0}, Landroid/view/SurfaceControl$Transaction;->setColorSpaceAgnostic(Landroid/view/SurfaceControl;Z)Landroid/view/SurfaceControl$Transaction;
 
     return-void
@@ -440,7 +397,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 453
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameGlobal:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
@@ -463,7 +419,6 @@
 
     new-array v0, v0, [F
 
-    .line 525
     iget-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mColor:Landroid/graphics/Color;
 
     invoke-virtual {v1}, Landroid/graphics/Color;->red()F
@@ -474,7 +429,6 @@
 
     aput v1, v0, v2
 
-    .line 526
     iget-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mColor:Landroid/graphics/Color;
 
     invoke-virtual {v1}, Landroid/graphics/Color;->green()F
@@ -485,7 +439,6 @@
 
     aput v1, v0, v2
 
-    .line 527
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mColor:Landroid/graphics/Color;
 
     invoke-virtual {p0}, Landroid/graphics/Color;->blue()F
@@ -502,7 +455,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 449
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameGlobal:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
@@ -521,19 +473,16 @@
 .method public layout(IIIILandroid/graphics/Point;)V
     .locals 1
 
-    .line 409
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameGlobal:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 410
     iget-object p1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameRelative:Landroid/graphics/Rect;
 
     iget-object p2, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameGlobal:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 411
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameRelative:Landroid/graphics/Rect;
 
     iget p1, p5, Landroid/graphics/Point;->x:I
@@ -552,7 +501,6 @@
 .method public needsApplySurfaceChanges()Z
     .locals 2
 
-    .line 532
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mLayoutFrameRelative:Landroid/graphics/Rect;
@@ -565,7 +513,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurfaceFrameRelative:Landroid/graphics/Rect;
 
-    .line 536
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v0
@@ -578,7 +525,6 @@
 
     move-result-object v0
 
-    .line 537
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -599,7 +545,6 @@
 
     move-result-object v0
 
-    .line 538
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -620,7 +565,6 @@
 
     move-result-object v0
 
-    .line 539
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -647,14 +591,12 @@
 .method public remove()V
     .locals 3
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 439
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
     invoke-static {v0}, Lcom/android/server/wm/Letterbox;->-$$Nest$fgetmTransactionFactory(Lcom/android/server/wm/Letterbox;)Ljava/util/function/Supplier;
@@ -675,19 +617,15 @@
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->apply()V
 
-    .line 440
     iput-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
-    .line 442
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mInputInterceptor:Lcom/android/server/wm/Letterbox$InputInterceptor;
 
     if-eqz v0, :cond_1
 
-    .line 443
     invoke-virtual {v0}, Lcom/android/server/wm/Letterbox$InputInterceptor;->dispose()V
 
-    .line 444
     iput-object v1, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mInputInterceptor:Lcom/android/server/wm/Letterbox$InputInterceptor;
 
     :cond_1
@@ -697,7 +635,6 @@
 .method public final updateAlphaAndBlur(Landroid/view/SurfaceControl$Transaction;)V
     .locals 3
 
-    .line 494
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_LETTERBOX_ENHANCED_FOR_BOUNDS_COMPAT_UI_EXPERIENCE:Z
 
     const/4 v1, 0x0
@@ -706,48 +643,41 @@
 
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
-    .line 495
     invoke-static {v0}, Lcom/android/server/wm/Letterbox;->-$$Nest$mcanHaveLetterboxSurface(Lcom/android/server/wm/Letterbox;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 497
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 499
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, p0, v1}, Landroid/view/SurfaceControl$Transaction;->setBackgroundBlurRadius(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
     return-void
 
-    .line 503
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mHasWallpaperBackground:Z
 
     if-nez v0, :cond_1
 
-    .line 505
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     const/high16 v2, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v0, v2}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 507
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, p0, v1}, Landroid/view/SurfaceControl$Transaction;->setBackgroundBlurRadius(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
     return-void
 
-    .line 510
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
@@ -765,12 +695,10 @@
 
     move-result v0
 
-    .line 511
     iget-object v2, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, v2, v0}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 514
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->this$0:Lcom/android/server/wm/Letterbox;
 
     invoke-static {v0}, Lcom/android/server/wm/Letterbox;->-$$Nest$fgetmBlurRadiusSupplier(Lcom/android/server/wm/Letterbox;)Ljava/util/function/Supplier;
@@ -789,14 +717,12 @@
 
     if-gtz v0, :cond_2
 
-    .line 516
     iget-object p0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, p0, v1}, Landroid/view/SurfaceControl$Transaction;->setBackgroundBlurRadius(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
     return-void
 
-    .line 520
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/Letterbox$LetterboxSurface;->mSurface:Landroid/view/SurfaceControl;
 

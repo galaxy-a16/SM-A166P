@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/power/Notifier;Z)V
     .locals 0
 
-    .line 494
     iput-object p1, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     iput-boolean p2, p0, Lcom/android/server/power/Notifier$1;->val$proximity:Z
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 2
 
-    .line 497
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +50,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-static {v0}, Lcom/android/server/power/Notifier;->-$$Nest$fgetmContext(Lcom/android/server/power/Notifier;)Landroid/content/Context;
@@ -63,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 499
     iget-object p0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-static {p0}, Lcom/android/server/power/Notifier;->-$$Nest$fgetmScreenOffByProximityIntent(Lcom/android/server/power/Notifier;)Landroid/content/Intent;
@@ -82,7 +78,6 @@
     :goto_0
     sget-object v1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    .line 498
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     return-void

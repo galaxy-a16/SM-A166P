@@ -17,25 +17,20 @@
 .method public constructor <init>(Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;)V
     .locals 1
 
-    .line 279
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 280
     iget-object v0, p1, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mName:Ljava/lang/String;
 
-    .line 281
     iget-boolean v0, p1, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mRuntime:Z
 
     iput-boolean v0, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mRuntime:Z
 
-    .line 282
     iget-boolean v0, p1, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mGranted:Z
 
     iput-boolean v0, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mGranted:Z
 
-    .line 283
     iget p1, p1, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mFlags:I
 
     iput p1, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mFlags:I
@@ -46,7 +41,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;-><init>(Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;)V
 
     return-void
@@ -55,19 +49,14 @@
 .method public constructor <init>(Ljava/lang/String;ZZI)V
     .locals 0
 
-    .line 272
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 273
     iput-object p1, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mName:Ljava/lang/String;
 
-    .line 274
     iput-boolean p2, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mRuntime:Z
 
-    .line 275
     iput-boolean p3, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mGranted:Z
 
-    .line 276
     iput p4, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mFlags:I
 
     return-void
@@ -89,7 +78,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 330
     const-class v2, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -100,11 +88,9 @@
 
     goto :goto_1
 
-    .line 333
     :cond_1
     check-cast p1, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;
 
-    .line 334
     iget-boolean v2, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mRuntime:Z
 
     iget-boolean v3, p1, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mRuntime:Z
@@ -127,7 +113,6 @@
 
     iget-object p1, p1, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mName:Ljava/lang/String;
 
-    .line 337
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -150,7 +135,6 @@
 .method public getFlags()I
     .locals 0
 
-    .line 322
     iget p0, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mFlags:I
 
     return p0
@@ -159,7 +143,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 293
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mName:Ljava/lang/String;
 
     return-object p0
@@ -168,7 +151,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 342
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mName:Ljava/lang/String;
 
     iget-boolean v1, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mRuntime:Z
@@ -203,7 +185,6 @@
 .method public isGranted()Z
     .locals 0
 
-    .line 312
     iget-boolean p0, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mGranted:Z
 
     return p0
@@ -212,7 +193,6 @@
 .method public isRuntime()Z
     .locals 0
 
-    .line 302
     iget-boolean p0, p0, Lcom/android/server/pm/permission/LegacyPermissionState$PermissionState;->mRuntime:Z
 
     return p0

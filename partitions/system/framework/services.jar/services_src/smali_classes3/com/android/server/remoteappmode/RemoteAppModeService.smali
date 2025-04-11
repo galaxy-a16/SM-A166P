@@ -65,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/remoteappmode/RemoteAppModeService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -74,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/remoteappmode/RemoteAppModeService;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -83,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/remoteappmode/RemoteAppModeService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -92,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$fgetmResolver(Lcom/android/server/remoteappmode/RemoteAppModeService;)Landroid/content/ContentResolver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mResolver:Landroid/content/ContentResolver;
 
     return-object p0
@@ -101,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$fgetmVirtualDisplayMap(Lcom/android/server/remoteappmode/RemoteAppModeService;)Ljava/util/HashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
     return-object p0
@@ -110,7 +105,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsBootComplete(Lcom/android/server/remoteappmode/RemoteAppModeService;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsBootComplete:Z
 
     return-void
@@ -119,7 +113,6 @@
 .method public static bridge synthetic -$$Nest$fputmUserSetupCompleteObserver(Lcom/android/server/remoteappmode/RemoteAppModeService;Landroid/database/ContentObserver;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mUserSetupCompleteObserver:Landroid/database/ContentObserver;
 
     return-void
@@ -128,7 +121,6 @@
 .method public static bridge synthetic -$$Nest$mcheckRemoteAppModeEnabled(Lcom/android/server/remoteappmode/RemoteAppModeService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkRemoteAppModeEnabled()V
 
     return-void
@@ -137,7 +129,6 @@
 .method public static bridge synthetic -$$Nest$minitializeStates(Lcom/android/server/remoteappmode/RemoteAppModeService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->initializeStates()V
 
     return-void
@@ -146,7 +137,6 @@
 .method public static bridge synthetic -$$Nest$monBootPhase(Lcom/android/server/remoteappmode/RemoteAppModeService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onBootPhase(I)V
 
     return-void
@@ -155,7 +145,6 @@
 .method public static bridge synthetic -$$Nest$monSecuredAppLaunched(Lcom/android/server/remoteappmode/RemoteAppModeService;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onSecuredAppLaunched(ILjava/lang/String;)V
 
     return-void
@@ -164,7 +153,6 @@
 .method public static bridge synthetic -$$Nest$monSecuredAppRemoved(Lcom/android/server/remoteappmode/RemoteAppModeService;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onSecuredAppRemoved(ILjava/lang/String;)V
 
     return-void
@@ -173,7 +161,6 @@
 .method public static bridge synthetic -$$Nest$monUserStarting(Lcom/android/server/remoteappmode/RemoteAppModeService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onUserStarting(I)V
 
     return-void
@@ -182,7 +169,6 @@
 .method public static bridge synthetic -$$Nest$monUserStopped(Lcom/android/server/remoteappmode/RemoteAppModeService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onUserStopped(I)V
 
     return-void
@@ -191,7 +177,6 @@
 .method public static bridge synthetic -$$Nest$monUserStopping(Lcom/android/server/remoteappmode/RemoteAppModeService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onUserStopping(I)V
 
     return-void
@@ -200,7 +185,6 @@
 .method public static bridge synthetic -$$Nest$monUserSwitching(Lcom/android/server/remoteappmode/RemoteAppModeService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onUserSwitching(I)V
 
     return-void
@@ -209,7 +193,6 @@
 .method public static bridge synthetic -$$Nest$monUserUnlocking(Lcom/android/server/remoteappmode/RemoteAppModeService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onUserUnlocking(I)V
 
     return-void
@@ -218,7 +201,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -227,7 +209,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,7 +231,6 @@
 
     sput-object v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
-    .line 73
     invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
 
     move-result v0
@@ -287,10 +267,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 275
     invoke-direct {p0}, Lcom/samsung/android/remoteappmode/IRemoteAppMode$Stub;-><init>()V
 
-    .line 85
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -299,47 +277,38 @@
 
     const/4 v0, 0x0
 
-    .line 86
     iput-boolean v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsStartActivityListenerRegistered:Z
 
-    .line 88
     iput-boolean v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsBootComplete:Z
 
-    .line 89
     iput-boolean v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsRemoteAppModeEnabled:Z
 
     const/16 v1, -0x2710
 
-    .line 90
     iput v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mCurrentUserId:I
 
     const/4 v1, 0x3
 
-    .line 118
     iput v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLTWProtocolVersion:I
 
-    .line 120
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
-    .line 122
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mTransferTaskMap:Ljava/util/HashMap;
 
-    .line 136
     new-instance v1, Lcom/android/server/remoteappmode/RemoteAppModeService$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/remoteappmode/RemoteAppModeService$1;-><init>(Lcom/android/server/remoteappmode/RemoteAppModeService;)V
 
     iput-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRemoteAppControllerCallbacks:Lcom/android/server/wm/RemoteAppControllerCallbacks;
 
-    .line 278
     new-instance v1, Lcom/android/server/ServiceThread;
 
     const-string/jumbo v2, "remoteappmode"
@@ -350,10 +319,8 @@
 
     iput-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mThread:Lcom/android/server/ServiceThread;
 
-    .line 279
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 280
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -366,88 +333,74 @@
 
     const/4 v1, 0x0
 
-    .line 282
     iput-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLocalService:Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;
 
-    .line 284
     iput-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const v2, 0x103012b
 
-    .line 285
     invoke-virtual {p1, v2}, Landroid/content/Context;->setTheme(I)V
 
-    .line 286
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mResolver:Landroid/content/ContentResolver;
 
-    .line 288
     new-instance v2, Lcom/android/server/remoteappmode/RemoteAppModeNotifier;
 
     invoke-direct {v2, p1}, Lcom/android/server/remoteappmode/RemoteAppModeNotifier;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRemoteAppModeNotifier:Lcom/android/server/remoteappmode/RemoteAppModeNotifier;
 
-    .line 289
     new-instance v2, Lcom/android/server/remoteappmode/TaskChangeNotifier;
 
     invoke-direct {v2, p1}, Lcom/android/server/remoteappmode/TaskChangeNotifier;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mTaskChangeNotifier:Lcom/android/server/remoteappmode/TaskChangeNotifier;
 
-    .line 290
     new-instance v2, Lcom/android/server/remoteappmode/SecureAppNotifier;
 
     invoke-direct {v2, p1}, Lcom/android/server/remoteappmode/SecureAppNotifier;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mSecureAppNotifier:Lcom/android/server/remoteappmode/SecureAppNotifier;
 
-    .line 291
     new-instance v2, Lcom/android/server/remoteappmode/RotationChangeNotifier;
 
     invoke-direct {v2, p1}, Lcom/android/server/remoteappmode/RotationChangeNotifier;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRotationChangeNotifier:Lcom/android/server/remoteappmode/RotationChangeNotifier;
 
-    .line 292
     new-instance v2, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;
 
     invoke-direct {v2, p1}, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mStartActivityInterceptNotifier:Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;
 
-    .line 293
     new-instance v2, Lcom/android/server/remoteappmode/InterceptedActivityRepo;
 
     invoke-direct {v2}, Lcom/android/server/remoteappmode/InterceptedActivityRepo;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mInterceptedActivityRepo:Lcom/android/server/remoteappmode/InterceptedActivityRepo;
 
-    .line 294
     new-instance v2, Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
     invoke-direct {v2, p1}, Lcom/android/server/remoteappmode/RFCommServiceLauncher;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRFCommServiceLauncher:Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
-    .line 295
     new-instance v2, Lcom/android/server/remoteappmode/AnrCollector;
 
     invoke-direct {v2, p1}, Lcom/android/server/remoteappmode/AnrCollector;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mAnrCollector:Lcom/android/server/remoteappmode/AnrCollector;
 
-    .line 296
     new-instance v2, Lcom/android/server/remoteappmode/ProximityManager;
 
     invoke-direct {v2, p1, v0}, Lcom/android/server/remoteappmode/ProximityManager;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
     iput-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mProximityManager:Lcom/android/server/remoteappmode/ProximityManager;
 
-    .line 298
     new-instance p1, Lcom/android/server/remoteappmode/RemoteAppModeService$Receiver;
 
     invoke-direct {p1, p0, v1}, Lcom/android/server/remoteappmode/RemoteAppModeService$Receiver;-><init>(Lcom/android/server/remoteappmode/RemoteAppModeService;Lcom/android/server/remoteappmode/RemoteAppModeService$Receiver-IA;)V
@@ -460,7 +413,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lcom/android/server/remoteappmode/RemoteAppModeService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -469,7 +421,6 @@
 .method public static getTaskInfo(Landroid/content/Context;I)Landroid/app/TaskInfo;
     .locals 3
 
-    .line 643
     invoke-static {}, Landroid/app/ActivityTaskManager;->getInstance()Landroid/app/ActivityTaskManager;
 
     move-result-object p0
@@ -486,7 +437,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 646
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -504,7 +454,6 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 647
     iget v1, v0, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     if-ne v1, p1, :cond_0
@@ -522,14 +471,12 @@
 .method public final checkPermissionAndAAoWFeature(Ljava/lang/String;)V
     .locals 1
 
-    .line 440
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 442
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object p0
@@ -544,7 +491,6 @@
 
     return-void
 
-    .line 445
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -558,7 +504,6 @@
 .method public final checkRemoteAppModeEnabled()V
     .locals 4
 
-    .line 831
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
@@ -567,7 +512,6 @@
 
     if-nez v0, :cond_1
 
-    .line 832
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -591,7 +535,6 @@
 
     check-cast v1, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;
 
-    .line 833
     invoke-virtual {v1}, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->getVirtualDisplay()Landroid/hardware/display/VirtualDisplay;
 
     move-result-object v1
@@ -613,13 +556,11 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 840
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsRemoteAppModeEnabled:Z
 
     if-eq v1, v0, :cond_3
 
-    .line 841
     sget-boolean v1, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz v1, :cond_2
@@ -642,11 +583,9 @@
 
     invoke-static {v1, v2}, Lcom/android/server/remoteappmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 843
     :cond_2
     iput-boolean v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsRemoteAppModeEnabled:Z
 
-    .line 844
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRemoteAppModeNotifier:Lcom/android/server/remoteappmode/RemoteAppModeNotifier;
 
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeNotifier;->notifyRemoteAppModeStateChanged(Z)V
@@ -660,16 +599,12 @@
 
     const-string v0, "Permission required to clear all resources"
 
-    .line 850
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 852
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->releaseAllVirtualDisplays()V
 
-    .line 853
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->releaseSecureAppNotifier()V
 
-    .line 854
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->releaseTaskChangeNotifier()V
 
     return-void
@@ -678,7 +613,6 @@
 .method public final closeAllTask(I)V
     .locals 3
 
-    .line 471
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v0, "activity"
@@ -691,14 +625,12 @@
 
     const v0, 0x7fffffff
 
-    .line 472
     invoke-virtual {p0, v0}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 474
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -717,12 +649,10 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 475
     iget v2, v1, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
     if-ne v2, p1, :cond_0
 
-    .line 476
     iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     const/4 v2, 0x0
@@ -742,15 +672,12 @@
 
     const-string v0, "createVirtualDisplay"
 
-    .line 405
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 407
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 410
     :try_start_0
     iget-object v8, v7, Lcom/android/server/remoteappmode/RemoteAppModeService;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
@@ -772,10 +699,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 414
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 417
     new-instance v9, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;
 
     invoke-interface/range {p6 .. p6}, Lcom/samsung/android/remoteappmode/IVirtualDisplayAliveChecker;->asBinder()Landroid/os/IBinder;
@@ -798,7 +723,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;-><init>(Lcom/android/server/remoteappmode/RemoteAppModeService;Landroid/hardware/display/VirtualDisplay;Landroid/os/IBinder;II)V
 
-    .line 419
     :try_start_1
     invoke-interface/range {p6 .. p6}, Lcom/samsung/android/remoteappmode/IVirtualDisplayAliveChecker;->asBinder()Landroid/os/IBinder;
 
@@ -815,10 +739,8 @@
     :catch_0
     move-exception v0
 
-    .line 421
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 424
     :goto_0
     iget-object v3, v7, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
@@ -826,7 +748,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 426
     :try_start_2
     iget-object v0, v7, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
@@ -844,18 +765,15 @@
 
     invoke-virtual {v0, v1, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 429
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkRemoteAppModeEnabled()V
 
-    .line 430
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     if-eqz v8, :cond_1
 
-    .line 433
     invoke-virtual {v8}, Landroid/hardware/display/VirtualDisplay;->getDisplay()Landroid/view/Display;
 
     move-result-object v0
@@ -874,7 +792,6 @@
     :catchall_0
     move-exception v0
 
-    .line 430
     :try_start_3
     monitor-exit v3
     :try_end_3
@@ -885,17 +802,14 @@
     :catchall_1
     move-exception v0
 
-    .line 414
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 415
     throw v0
 .end method
 
 .method public disableSendingUserPresentIntent()V
     .locals 5
 
-    .line 986
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -904,12 +818,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 988
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 991
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mProximityManager:Lcom/android/server/remoteappmode/ProximityManager;
 
@@ -918,7 +830,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 995
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -932,7 +843,6 @@
     :catch_0
     move-exception p0
 
-    .line 993
     :try_start_1
     sget-object v2, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -963,18 +873,15 @@
     :goto_1
     return-void
 
-    .line 995
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 996
     throw p0
 .end method
 
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 2
 
-    .line 1110
     iget-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     sget-object v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
@@ -990,7 +897,6 @@
     :cond_0
     if-eqz p3, :cond_2
 
-    .line 1112
     array-length p1, p3
 
     if-eqz p1, :cond_2
@@ -1009,18 +915,15 @@
 
     goto :goto_0
 
-    .line 1121
     :cond_1
     sget-boolean p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz p0, :cond_3
 
-    .line 1122
     aget-object p0, p3, v0
 
     goto :goto_1
 
-    .line 1113
     :cond_2
     :goto_0
     new-instance p1, Lcom/android/internal/util/IndentingPrintWriter;
@@ -1031,25 +934,18 @@
 
     const-string p2, "RemoteAppModeService (dumpsys remoteappmode):"
 
-    .line 1114
     invoke-virtual {p1, p2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1115
     invoke-static {p1}, Lcom/android/server/remoteappmode/Log;->dump(Ljava/io/PrintWriter;)V
 
-    .line 1116
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 1117
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 1118
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->dumpImpl(Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 1119
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 1120
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
     :cond_3
@@ -1060,7 +956,6 @@
 .method public final dumpImpl(Lcom/android/internal/util/IndentingPrintWriter;)V
     .locals 3
 
-    .line 1129
     iget v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mCurrentUserId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1071,10 +966,8 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 1130
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 1131
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1089,85 +982,68 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 1132
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 1133
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "display_size_forced"
 
-    .line 1134
     invoke-static {v0, v1}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "DISPLAY_SIZE_FORCED"
 
-    .line 1133
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 1135
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 1136
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "display_density_forced"
 
     const/4 v2, 0x0
 
-    .line 1137
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "DISPLAY_DENSITY_FORCED"
 
-    .line 1136
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 1139
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 1140
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "screen_off_timeout"
 
     iget v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mCurrentUserId:I
 
-    .line 1141
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "SCREEN_OFF_TIMEOUT"
 
-    .line 1140
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 1143
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 1144
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "show_ime_with_hard_keyboard"
 
     iget p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mCurrentUserId:I
 
-    .line 1145
     invoke-static {v0, v1, p0}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "SHOW_IME_WITH_HARD_KEYBOARD"
 
-    .line 1144
     invoke-virtual {p1, v0, p0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 1147
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     return-void
@@ -1176,7 +1052,6 @@
 .method public enableSendingUserPresentIntent(Ljava/lang/String;)V
     .locals 4
 
-    .line 971
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -1185,12 +1060,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 973
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 976
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mProximityManager:Lcom/android/server/remoteappmode/ProximityManager;
 
@@ -1199,7 +1072,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 980
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1213,7 +1085,6 @@
     :catch_0
     move-exception p0
 
-    .line 978
     :try_start_1
     sget-object p1, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -1244,11 +1115,9 @@
     :goto_1
     return-void
 
-    .line 980
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 981
     throw p0
 .end method
 
@@ -1257,15 +1126,12 @@
 
     const-string v0, "Permission Denied"
 
-    .line 939
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 941
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 944
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -1279,7 +1145,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 950
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1293,7 +1158,6 @@
     :catch_0
     move-exception p0
 
-    .line 948
     :try_start_1
     sget-object p1, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -1322,7 +1186,6 @@
     :catch_1
     move-exception p0
 
-    .line 946
     sget-object p1, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1352,18 +1215,15 @@
     :goto_1
     return-void
 
-    .line 950
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 951
     throw p0
 .end method
 
 .method public getLastAnr(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;)V
     .locals 3
 
-    .line 956
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -1372,12 +1232,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 958
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 961
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mAnrCollector:Lcom/android/server/remoteappmode/AnrCollector;
 
@@ -1386,7 +1244,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 965
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1400,7 +1257,6 @@
     :catch_0
     move-exception p0
 
-    .line 963
     :try_start_1
     sget-object p1, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -1431,18 +1287,15 @@
     :goto_1
     return-void
 
-    .line 965
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 966
     throw p0
 .end method
 
 .method public getProtocolVersion()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x9
 
     return p0
@@ -1451,7 +1304,6 @@
 .method public getSendingUserPresentExpiredTime()J
     .locals 5
 
-    .line 1035
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -1460,12 +1312,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1037
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1040
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mProximityManager:Lcom/android/server/remoteappmode/ProximityManager;
 
@@ -1476,7 +1326,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1044
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-wide v2
@@ -1489,7 +1338,6 @@
     :catch_0
     move-exception p0
 
-    .line 1042
     :try_start_1
     sget-object v2, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -1515,7 +1363,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1044
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const-wide/16 v0, 0x0
@@ -1525,14 +1372,12 @@
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1045
     throw p0
 .end method
 
 .method public final hasExtraProfile(Landroid/content/Intent;)Z
     .locals 2
 
-    .line 591
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->clone()Ljava/lang/Object;
 
@@ -1542,7 +1387,6 @@
 
     const-string/jumbo p1, "profile"
 
-    .line 592
     invoke-virtual {p0, p1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result p0
@@ -1554,7 +1398,6 @@
     :catch_0
     move-exception p0
 
-    .line 594
     sget-object p1, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1577,7 +1420,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/remoteappmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 595
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -1588,19 +1430,16 @@
 .method public final initializeStates()V
     .locals 4
 
-    .line 308
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->isUserSetupComplete()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 309
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mUserSetupCompleteObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_0
 
-    .line 310
     new-instance v0, Lcom/android/server/remoteappmode/RemoteAppModeService$2;
 
     const/4 v1, 0x0
@@ -1609,7 +1448,6 @@
 
     iput-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mUserSetupCompleteObserver:Landroid/database/ContentObserver;
 
-    .line 320
     :cond_0
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mResolver:Landroid/content/ContentResolver;
 
@@ -1634,7 +1472,6 @@
 .method public isAllowed()Z
     .locals 3
 
-    .line 688
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -1643,12 +1480,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 690
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->isSystemReady()Z
 
     move-result p0
 
-    .line 691
     sget-object v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1673,7 +1508,6 @@
 .method public isSendingUserPresentEnabled()Z
     .locals 5
 
-    .line 1001
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -1682,12 +1516,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1003
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1008
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mProximityManager:Lcom/android/server/remoteappmode/ProximityManager;
 
@@ -1698,7 +1530,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1012
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -1711,7 +1542,6 @@
     :catch_0
     move-exception p0
 
-    .line 1010
     :try_start_1
     sget-object v2, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -1737,7 +1567,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1012
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x0
@@ -1748,14 +1577,12 @@
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1013
     throw p0
 .end method
 
 .method public final isSystemReady()Z
     .locals 3
 
-    .line 392
     iget-boolean v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsBootComplete:Z
 
     if-eqz v0, :cond_0
@@ -1782,7 +1609,6 @@
 
     return p0
 
-    .line 396
     :cond_0
     sget-object v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -1802,7 +1628,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 397
     invoke-static {}, Landroid/os/FactoryTest;->isFactoryBinary()Z
 
     move-result v2
@@ -1821,7 +1646,6 @@
 
     move-result-object p0
 
-    .line 396
     invoke-static {v0, p0}, Lcom/android/server/remoteappmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -1832,7 +1656,6 @@
 .method public final isUserSetupComplete()Z
     .locals 3
 
-    .line 381
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mResolver:Landroid/content/ContentResolver;
 
     iget p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mCurrentUserId:I
@@ -1852,7 +1675,6 @@
     :cond_0
     if-nez v2, :cond_1
 
-    .line 385
     sget-boolean p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz p0, :cond_1
@@ -1872,14 +1694,12 @@
 
     const-string p2, "launchApplication"
 
-    .line 524
     invoke-virtual {p0, p2}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
     if-eqz p4, :cond_0
 
-    .line 528
     new-instance v0, Landroid/app/ActivityOptions;
 
     invoke-direct {v0, p4}, Landroid/app/ActivityOptions;-><init>(Landroid/os/Bundle;)V
@@ -1891,7 +1711,6 @@
     :cond_0
     move-object v4, p2
 
-    .line 531
     :goto_0
     sget-object p4, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -1911,12 +1730,10 @@
 
     invoke-static {p4, v0}, Lcom/android/server/remoteappmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mInterceptedActivityRepo:Lcom/android/server/remoteappmode/InterceptedActivityRepo;
 
     invoke-virtual {v0, p3}, Lcom/android/server/remoteappmode/InterceptedActivityRepo;->get(Landroid/content/Intent;)Lcom/android/server/remoteappmode/InterceptedActivityInfo;
 
-    .line 534
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1933,7 +1750,6 @@
 
     invoke-static {p4, p2}, Lcom/android/server/remoteappmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 537
     iget v7, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mCurrentUserId:I
 
     const/4 v6, 0x0
@@ -1946,7 +1762,6 @@
 
     move-object v3, p3
 
-    .line 545
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/remoteappmode/RemoteAppModeService;->startActivity(ILandroid/content/Intent;Landroid/app/ActivityOptions;Lcom/android/server/remoteappmode/InterceptedActivityInfo;Lcom/android/server/wm/RemoteAppController$CallerInfo;I)V
 
     return-void
@@ -1957,15 +1772,12 @@
 
     const-string/jumbo v0, "moveDisplayToTop"
 
-    .line 497
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 499
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 500
     :try_start_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mHandler:Landroid/os/Handler;
 
@@ -1975,7 +1787,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 519
     monitor-exit v0
 
     return-void
@@ -1997,7 +1808,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 303
     iget-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v0, "display"
@@ -2019,7 +1829,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 373
     new-instance p0, Landroid/content/res/Configuration;
 
     invoke-direct {p0, p1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
@@ -2031,7 +1840,6 @@
 .method public final onSecuredAppLaunched(ILjava/lang/String;)V
     .locals 3
 
-    .line 696
     sget-boolean v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -2060,7 +1868,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/remoteappmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 698
     :cond_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mSecureAppNotifier:Lcom/android/server/remoteappmode/SecureAppNotifier;
 
@@ -2072,7 +1879,6 @@
 .method public final onSecuredAppRemoved(ILjava/lang/String;)V
     .locals 3
 
-    .line 702
     sget-boolean v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -2101,7 +1907,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/remoteappmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 704
     :cond_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mSecureAppNotifier:Lcom/android/server/remoteappmode/SecureAppNotifier;
 
@@ -2113,14 +1918,12 @@
 .method public final onUserChanged(I)V
     .locals 3
 
-    .line 361
     iget v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mCurrentUserId:I
 
     if-ne p1, v0, :cond_0
 
     return-void
 
-    .line 364
     :cond_0
     sget-boolean v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
@@ -2144,11 +1947,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/remoteappmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->setCurrentUserId(I)V
 
-    .line 367
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->initializeStates()V
 
     return-void
@@ -2157,7 +1958,6 @@
 .method public final onUserStarting(I)V
     .locals 2
 
-    .line 328
     sget-boolean p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -2187,7 +1987,6 @@
 .method public final onUserStopped(I)V
     .locals 2
 
-    .line 352
     sget-boolean p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -2217,7 +2016,6 @@
 .method public final onUserStopping(I)V
     .locals 2
 
-    .line 348
     sget-boolean p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -2257,7 +2055,6 @@
 .method public final onUserSwitching(I)V
     .locals 3
 
-    .line 342
     sget-boolean v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -2280,7 +2077,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/remoteappmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onUserChanged(I)V
 
@@ -2290,7 +2086,6 @@
 .method public final onUserUnlocking(I)V
     .locals 3
 
-    .line 332
     sget-boolean v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -2326,20 +2121,16 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 333
     iput-boolean v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsBootComplete:Z
 
-    .line 334
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
 
     if-ne p1, v0, :cond_1
 
-    .line 335
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onUserChanged(I)V
 
-    .line 338
     :cond_1
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mProximityManager:Lcom/android/server/remoteappmode/ProximityManager;
 
@@ -2351,7 +2142,6 @@
 .method public registerRemoteAppModeListener(Lcom/samsung/android/remoteappmode/IRemoteAppModeListener;Ljava/lang/String;)Z
     .locals 3
 
-    .line 816
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -2360,7 +2150,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 818
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRemoteAppModeNotifier:Lcom/android/server/remoteappmode/RemoteAppModeNotifier;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/remoteappmode/RemoteAppModeNotifier;->registerRemoteAppModeListener(Lcom/samsung/android/remoteappmode/IRemoteAppModeListener;Ljava/lang/String;)Z
@@ -2375,10 +2164,8 @@
 
     const-string/jumbo v0, "registerRotationChangeListener"
 
-    .line 765
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 767
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRotationChangeNotifier:Lcom/android/server/remoteappmode/RotationChangeNotifier;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/remoteappmode/RotationChangeNotifier;->registerRotationChangeListener(Lcom/samsung/android/remoteappmode/IRotationChangeListener;Ljava/lang/String;I)Z
@@ -2393,15 +2180,12 @@
 
     const-string/jumbo v0, "registerSecureAppChangedListener"
 
-    .line 746
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 748
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLocalService:Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;
 
     if-nez v0, :cond_0
 
-    .line 749
     new-instance v0, Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;
 
     const/4 v1, 0x0
@@ -2410,12 +2194,10 @@
 
     iput-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLocalService:Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;
 
-    .line 750
     const-class v1, Lcom/samsung/android/remoteappmode/RemoteAppModeManagerInternal;
 
     invoke-static {v1, v0}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
 
-    .line 753
     :cond_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mSecureAppNotifier:Lcom/android/server/remoteappmode/SecureAppNotifier;
 
@@ -2431,47 +2213,38 @@
 
     const-string v0, "Permission required to register StartActivityInterceptListener"
 
-    .line 778
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 780
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 781
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsStartActivityListenerRegistered:Z
 
     if-nez v1, :cond_0
 
-    .line 782
     const-class v1, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 783
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 785
     iget-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRemoteAppControllerCallbacks:Lcom/android/server/wm/RemoteAppControllerCallbacks;
 
     invoke-virtual {v1, v2}, Lcom/android/server/wm/ActivityTaskManagerInternal;->registerRemoteAppControllerCallbacks(Lcom/android/server/wm/RemoteAppControllerCallbacks;)V
 
     const/4 v1, 0x1
 
-    .line 787
     iput-boolean v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsStartActivityListenerRegistered:Z
 
-    .line 789
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 791
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mStartActivityInterceptNotifier:Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->registerStartActivityInterceptListener(Lcom/samsung/android/remoteappmode/IStartActivityInterceptListener;Ljava/lang/String;)Z
@@ -2483,7 +2256,6 @@
     :catchall_0
     move-exception p0
 
-    .line 789
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2497,15 +2269,12 @@
 
     const-string/jumbo v0, "registerTaskChangeListener"
 
-    .line 709
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 712
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 716
     :try_start_0
     iget v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLTWProtocolVersion:I
 
@@ -2520,7 +2289,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 720
     :goto_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mTaskChangeNotifier:Lcom/android/server/remoteappmode/TaskChangeNotifier;
 
@@ -2530,7 +2298,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 722
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -2540,19 +2307,16 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 723
     throw p0
 .end method
 
 .method public final releaseAllVirtualDisplays()V
     .locals 3
 
-    .line 1052
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1053
     :try_start_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
@@ -2577,7 +2341,6 @@
 
     check-cast v2, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;
 
-    .line 1054
     invoke-virtual {v2}, Lcom/android/server/remoteappmode/RemoteAppModeService$VirtualDisplayInfo;->getVirtualDisplay()Landroid/hardware/display/VirtualDisplay;
 
     move-result-object v2
@@ -2586,16 +2349,13 @@
 
     goto :goto_0
 
-    .line 1057
     :cond_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 1059
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkRemoteAppModeEnabled()V
 
-    .line 1060
     monitor-exit v0
 
     return-void
@@ -2613,12 +2373,10 @@
 .method public final releaseSecureAppNotifier()V
     .locals 0
 
-    .line 1064
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mSecureAppNotifier:Lcom/android/server/remoteappmode/SecureAppNotifier;
 
     if-eqz p0, :cond_0
 
-    .line 1065
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/SecureAppNotifier;->releaseAllListeners()V
 
     :cond_0
@@ -2628,12 +2386,10 @@
 .method public final releaseTaskChangeNotifier()V
     .locals 0
 
-    .line 1070
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mTaskChangeNotifier:Lcom/android/server/remoteappmode/TaskChangeNotifier;
 
     if-eqz p0, :cond_0
 
-    .line 1071
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/TaskChangeNotifier;->releaseAllListeners()V
 
     :cond_0
@@ -2645,15 +2401,12 @@
 
     const-string/jumbo v0, "releaseVirtualDisplay"
 
-    .line 451
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 453
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 454
     :try_start_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
@@ -2669,7 +2422,6 @@
 
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
-    .line 455
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -2694,17 +2446,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 456
     iget v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLTWProtocolVersion:I
 
     const/4 v2, 0x5
 
     if-ge v1, v2, :cond_0
 
-    .line 458
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->closeAllTask(I)V
 
-    .line 461
     :cond_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
@@ -2724,7 +2473,6 @@
 
     invoke-virtual {v1}, Landroid/hardware/display/VirtualDisplay;->release()V
 
-    .line 463
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2733,10 +2481,8 @@
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 465
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkRemoteAppModeEnabled()V
 
-    .line 467
     :cond_1
     monitor-exit v0
 
@@ -2757,15 +2503,12 @@
 
     const-string/jumbo v0, "resizeVirtualDisplay"
 
-    .line 484
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 486
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 487
     :try_start_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
@@ -2781,7 +2524,6 @@
 
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
-    .line 488
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -2806,7 +2548,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 489
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2825,7 +2566,6 @@
 
     invoke-virtual {v1, p2, p3, p4}, Landroid/hardware/display/VirtualDisplay;->resize(III)V
 
-    .line 490
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mVirtualDisplayMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2844,7 +2584,6 @@
 
     invoke-virtual {p0, p5}, Landroid/hardware/display/VirtualDisplay;->setSurface(Landroid/view/Surface;)V
 
-    .line 492
     :cond_0
     monitor-exit v0
 
@@ -2865,10 +2604,8 @@
 
     const-string/jumbo v0, "sendNotificationAction"
 
-    .line 904
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 908
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -2877,7 +2614,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 909
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -2886,7 +2622,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 910
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -2899,7 +2634,6 @@
 
     goto :goto_2
 
-    .line 914
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -2907,7 +2641,6 @@
 
     if-nez p3, :cond_1
 
-    .line 918
     :try_start_0
     new-instance p3, Landroid/content/Intent;
 
@@ -2916,10 +2649,8 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 921
     invoke-virtual {p3, v0}, Landroid/content/Intent;->setRemoteAppLaunch(Z)V
 
-    .line 923
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object p1
@@ -2930,7 +2661,6 @@
 
     iget-object p1, p1, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
 
-    .line 925
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1, p0, v1, p3}, Landroid/app/PendingIntent;->send(Landroid/content/Context;ILandroid/content/Intent;)V
@@ -2939,7 +2669,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 931
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v1, v0
@@ -2954,13 +2683,11 @@
     :catch_0
     move-exception p0
 
-    .line 929
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 931
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :goto_0
@@ -2969,7 +2696,6 @@
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 932
     throw p0
 
     :cond_2
@@ -2982,17 +2708,14 @@
 
     const-string/jumbo v0, "sendNotificationContent"
 
-    .line 878
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 881
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
     const/4 v2, 0x0
 
-    .line 884
     :try_start_0
     new-instance v3, Landroid/content/Intent;
 
@@ -3000,10 +2723,8 @@
 
     const/4 v4, 0x1
 
-    .line 885
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setRemoteAppLaunch(Z)V
 
-    .line 887
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v5
@@ -3012,7 +2733,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 888
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object p1
@@ -3021,7 +2741,6 @@
 
     goto :goto_0
 
-    .line 889
     :cond_0
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
@@ -3029,7 +2748,6 @@
 
     iget-object p1, p1, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
 
-    .line 891
     :goto_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
@@ -3039,7 +2757,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 896
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v2, v4
@@ -3054,13 +2771,11 @@
     :catch_0
     move-exception p0
 
-    .line 894
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 896
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :goto_1
@@ -3069,7 +2784,6 @@
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 897
     throw p0
 .end method
 
@@ -3078,20 +2792,16 @@
 
     const-string/jumbo v0, "sendPendingIntent"
 
-    .line 859
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 861
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 862
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setRemoteAppLaunch(Z)V
 
-    .line 865
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
@@ -3106,7 +2816,6 @@
     :catch_0
     move-exception p0
 
-    .line 867
     invoke-virtual {p0}, Landroid/app/PendingIntent$CanceledException;->printStackTrace()V
 
     :goto_0
@@ -3116,7 +2825,6 @@
 .method public setCurrentUserId(I)V
     .locals 3
 
-    .line 356
     sget-boolean v0, Lcom/android/server/remoteappmode/RemoteAppModeService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -3139,7 +2847,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/remoteappmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     :cond_0
     iput p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mCurrentUserId:I
 
@@ -3149,7 +2856,6 @@
 .method public setLTWProtocolVersion(I)V
     .locals 3
 
-    .line 657
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -3158,7 +2864,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 659
     iput p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLTWProtocolVersion:I
 
     return-void
@@ -3167,7 +2872,6 @@
 .method public setSendingUserPresentExpiredTime(J)V
     .locals 3
 
-    .line 1020
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -3176,12 +2880,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1022
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1025
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mProximityManager:Lcom/android/server/remoteappmode/ProximityManager;
 
@@ -3190,7 +2892,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1029
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -3204,7 +2905,6 @@
     :catch_0
     move-exception p0
 
-    .line 1027
     :try_start_1
     sget-object p1, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -3235,35 +2935,29 @@
     :goto_1
     return-void
 
-    .line 1029
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1030
     throw p0
 .end method
 
 .method public final startActivity(ILandroid/content/Intent;Landroid/app/ActivityOptions;Lcom/android/server/remoteappmode/InterceptedActivityInfo;Lcom/android/server/wm/RemoteAppController$CallerInfo;I)V
     .locals 0
 
-    .line 549
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p4
 
     if-nez p3, :cond_0
 
-    .line 552
     :try_start_0
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object p3
 
-    .line 554
     :cond_0
     invoke-virtual {p3, p1}, Landroid/app/ActivityOptions;->setLaunchDisplayId(I)Landroid/app/ActivityOptions;
 
-    .line 566
     invoke-virtual {p3}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p1
@@ -3273,7 +2967,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 572
     :goto_0
     invoke-static {p4, p5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -3287,7 +2980,6 @@
     :catch_0
     move-exception p0
 
-    .line 569
     :try_start_1
     sget-object p1, Lcom/android/server/remoteappmode/RemoteAppModeService;->TAG:Ljava/lang/String;
 
@@ -3311,7 +3003,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/remoteappmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -3321,18 +3012,15 @@
     :goto_1
     return-void
 
-    .line 572
     :goto_2
     invoke-static {p4, p5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 573
     throw p0
 .end method
 
 .method public final startActivityAsUser(Landroid/content/Intent;Landroid/os/Bundle;I)V
     .locals 3
 
-    .line 578
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->hasExtraProfile(Landroid/content/Intent;)Z
 
     move-result v0
@@ -3343,12 +3031,10 @@
 
     const-wide/16 v0, -0x1
 
-    .line 579
     invoke-virtual {p1, p3, v0, v1}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    .line 580
     iget-object p3, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v2, "user"
@@ -3359,19 +3045,16 @@
 
     check-cast p3, Landroid/os/UserManager;
 
-    .line 581
     invoke-virtual {p3, v0, v1}, Landroid/os/UserManager;->getUserForSerialNumber(J)Landroid/os/UserHandle;
 
     move-result-object p3
 
-    .line 583
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
-    .line 585
     :cond_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
@@ -3388,7 +3071,6 @@
 .method public startRFCommService()V
     .locals 3
 
-    .line 664
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -3397,12 +3079,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 666
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 668
     :try_start_0
     iget-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRFCommServiceLauncher:Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
@@ -3412,7 +3092,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 670
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -3422,14 +3101,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 671
     throw p0
 .end method
 
 .method public stopRFCommService()V
     .locals 3
 
-    .line 676
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -3438,12 +3115,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 678
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 680
     :try_start_0
     iget-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRFCommServiceLauncher:Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
@@ -3453,7 +3128,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 682
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -3463,7 +3137,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 683
     throw p0
 .end method
 
@@ -3472,10 +3145,8 @@
 
     const-string/jumbo v0, "transferTaskUsingIntent"
 
-    .line 612
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 614
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p2}, Lcom/android/server/remoteappmode/RemoteAppModeService;->getTaskInfo(Landroid/content/Context;I)Landroid/app/TaskInfo;
@@ -3492,7 +3163,6 @@
 
     move-object v5, p4
 
-    .line 616
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/remoteappmode/RemoteAppModeService;->transferTaskWithoutInterceptInternal(Landroid/content/Intent;IILandroid/os/Bundle;Landroid/app/TaskInfo;)V
 
     return-void
@@ -3503,17 +3173,14 @@
 
     const-string/jumbo v0, "transferTaskWithoutIntercept"
 
-    .line 603
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 605
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->getTaskInfo(Landroid/content/Context;I)Landroid/app/TaskInfo;
 
     move-result-object v6
 
-    .line 607
     iget-object v2, v6, Landroid/app/TaskInfo;->baseIntent:Landroid/content/Intent;
 
     move-object v1, p0
@@ -3534,12 +3201,10 @@
 
     if-eqz p5, :cond_2
 
-    .line 621
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 622
     :try_start_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mTransferTaskMap:Ljava/util/HashMap;
 
@@ -3549,14 +3214,12 @@
 
     invoke-virtual {v1, p2, p5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 623
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     if-eqz p4, :cond_0
 
-    .line 627
     new-instance p2, Landroid/app/ActivityOptions;
 
     invoke-direct {p2, p4}, Landroid/app/ActivityOptions;-><init>(Landroid/os/Bundle;)V
@@ -3566,7 +3229,6 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 629
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -3574,17 +3236,14 @@
 
     if-nez p2, :cond_1
 
-    .line 632
     :try_start_1
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object p2
 
-    .line 634
     :cond_1
     invoke-virtual {p2, p3}, Landroid/app/ActivityOptions;->setLaunchDisplayId(I)Landroid/app/ActivityOptions;
 
-    .line 635
     invoke-virtual {p2}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p2
@@ -3595,7 +3254,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 637
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -3605,13 +3263,11 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 638
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 623
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -3627,7 +3283,6 @@
 .method public unregisterRemoteAppModeListener(Lcom/samsung/android/remoteappmode/IRemoteAppModeListener;)Z
     .locals 3
 
-    .line 823
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_LINK_TO_WINDOWS_REMOTE_APP_MODE"
@@ -3636,7 +3291,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 825
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRemoteAppModeNotifier:Lcom/android/server/remoteappmode/RemoteAppModeNotifier;
 
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeNotifier;->unregisterRemoteAppModeListener(Lcom/samsung/android/remoteappmode/IRemoteAppModeListener;)Z
@@ -3651,10 +3305,8 @@
 
     const-string/jumbo v0, "unregisterRotationChangeListener"
 
-    .line 772
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 774
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRotationChangeNotifier:Lcom/android/server/remoteappmode/RotationChangeNotifier;
 
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/RotationChangeNotifier;->unregisterRotationChangeListener(Lcom/samsung/android/remoteappmode/IRotationChangeListener;)Z
@@ -3669,10 +3321,8 @@
 
     const-string/jumbo v0, "unregisterSecureAppChangedListener"
 
-    .line 758
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 760
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mSecureAppNotifier:Lcom/android/server/remoteappmode/SecureAppNotifier;
 
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/SecureAppNotifier;->unregisterSecureAppChangedListener(Lcom/samsung/android/remoteappmode/ISecureAppChangedListener;)Z
@@ -3687,51 +3337,41 @@
 
     const-string v0, "Permission required to unregister StartActivityInterceptListener"
 
-    .line 796
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 798
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 799
     :try_start_0
     const-class v1, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 800
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 802
     iget-object v2, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mRemoteAppControllerCallbacks:Lcom/android/server/wm/RemoteAppControllerCallbacks;
 
     invoke-virtual {v1, v2}, Lcom/android/server/wm/ActivityTaskManagerInternal;->unregisterRemoteAppControllerCallbacks(Lcom/android/server/wm/RemoteAppControllerCallbacks;)V
 
     const/4 v1, 0x0
 
-    .line 804
     iput-boolean v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mIsStartActivityListenerRegistered:Z
 
-    .line 806
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mTransferTaskMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 807
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 809
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mInterceptedActivityRepo:Lcom/android/server/remoteappmode/InterceptedActivityRepo;
 
     invoke-virtual {v0}, Lcom/android/server/remoteappmode/InterceptedActivityRepo;->clear()V
 
-    .line 811
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mStartActivityInterceptNotifier:Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;
 
     invoke-virtual {p0, p1}, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->unregisterStartActivityInterceptListener(Lcom/samsung/android/remoteappmode/IStartActivityInterceptListener;)Z
@@ -3743,7 +3383,6 @@
     :catchall_0
     move-exception p0
 
-    .line 807
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -3757,15 +3396,12 @@
 
     const-string/jumbo v0, "unregisterTaskChangeListener"
 
-    .line 730
     invoke-virtual {p0, v0}, Lcom/android/server/remoteappmode/RemoteAppModeService;->checkPermissionAndAAoWFeature(Ljava/lang/String;)V
 
-    .line 733
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 736
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService;->mTaskChangeNotifier:Lcom/android/server/remoteappmode/TaskChangeNotifier;
 
@@ -3775,7 +3411,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 738
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -3785,6 +3420,5 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 739
     throw p0
 .end method

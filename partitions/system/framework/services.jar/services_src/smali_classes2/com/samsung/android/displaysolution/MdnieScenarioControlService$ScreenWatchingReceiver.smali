@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)V
     .locals 0
 
-    .line 426
     iput-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;-><init>(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)V
 
     return-void
@@ -33,12 +31,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    .line 429
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 431
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,7 +55,6 @@
 
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
-    .line 433
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -68,7 +63,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 434
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +115,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmActivityManager(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Landroid/app/ActivityManager;
@@ -146,13 +139,11 @@
 
     if-nez p1, :cond_1
 
-    .line 445
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
 
-    .line 446
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {v0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/MdnieScenarioControlService$MSCSControlHandler;
@@ -163,7 +154,6 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 447
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {v0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/MdnieScenarioControlService$MSCSControlHandler;
@@ -184,10 +174,8 @@
 
     const-string p1, "Failure to register all of the services system."
 
-    .line 448
     invoke-static {v1, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 452
     :cond_1
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -197,12 +185,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 453
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$msetting_is_changed(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)V
 
-    .line 455
     :cond_2
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
@@ -216,7 +202,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 456
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$mset_wcg_property(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)V
@@ -227,7 +212,6 @@
     :cond_4
     const-string v0, "android.intent.action.SCREEN_ON"
 
-    .line 459
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -236,7 +220,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 460
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmKeyGuardManager(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Landroid/app/KeyguardManager;
@@ -245,7 +228,6 @@
 
     if-nez p1, :cond_5
 
-    .line 461
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmContext(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Landroid/content/Context;
@@ -262,7 +244,6 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmKeyGuardManager(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Landroid/app/KeyguardManager;)V
 
-    .line 462
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -285,7 +266,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 464
     :cond_5
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -307,12 +287,10 @@
 
     if-eqz p1, :cond_6
 
-    .line 465
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v3}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputisLockScreenOn(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 466
     :cond_6
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -336,15 +314,12 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    .line 469
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v3}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmScreenStateOn(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 470
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetisLockScreenOn(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Z
@@ -353,7 +328,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 471
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$mreceive_screen_on_intent(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)V
@@ -364,14 +338,12 @@
     :cond_8
     const-string v0, "android.intent.action.SCREEN_OFF"
 
-    .line 475
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    .line 476
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$mreceive_screen_off_intent(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)V
@@ -381,24 +353,20 @@
     :cond_9
     const-string v0, "android.intent.action.USER_PRESENT"
 
-    .line 479
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 480
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v2}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputisLockScreenOn(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 481
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v3}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmScreenStateOn(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 483
     :try_start_0
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -408,7 +376,6 @@
 
     if-eqz p1, :cond_a
 
-    .line 484
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->mProcessObserver:Landroid/app/IProcessObserver;
@@ -424,7 +391,6 @@
     :catch_0
     const-string p0, "failed to onForegroundActivitiesChanged"
 
-    .line 487
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_a
@@ -434,34 +400,28 @@
     :cond_b
     const-string v0, "ACTION_MOVIE_PLAYER_STATE_IN"
 
-    .line 491
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    .line 492
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v3}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmVideoModeCheck(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 493
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v2}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmGalleryAppState(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 494
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v2}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmCameraAppState(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 495
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
 
-    .line 497
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {v0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/MdnieScenarioControlService$MSCSControlHandler;
@@ -472,7 +432,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 498
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {v0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/MdnieScenarioControlService$MSCSControlHandler;
@@ -496,29 +455,24 @@
     :cond_c
     const-string v0, "ACTION_MOVIE_PLAYER_STATE_OUT"
 
-    .line 500
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_d
 
-    .line 501
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v2}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmVideoModeCheck(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 502
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v3}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmVideoEnd(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)V
 
-    .line 503
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
 
-    .line 505
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {v0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/MdnieScenarioControlService$MSCSControlHandler;
@@ -529,7 +483,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 506
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {v0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/MdnieScenarioControlService$MSCSControlHandler;
@@ -553,14 +506,12 @@
     :cond_d
     const-string v0, "com.samsung.server.PowerManagerService.action.USER_ACTIVITY"
 
-    .line 508
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_e
 
-    .line 509
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     const-string/jumbo p1, "status"
@@ -576,14 +527,12 @@
     :cond_e
     const-string p2, "com.samsung.systemui.statusbar.EXPANDED"
 
-    .line 511
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_f
 
-    .line 512
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p0, v3}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmQuickPanelState(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;I)V
@@ -593,19 +542,16 @@
     :cond_f
     const-string p2, "com.samsung.systemui.statusbar.COLLAPSED"
 
-    .line 514
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_10
 
-    .line 515
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1, v2}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fputmQuickPanelState(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;I)V
 
-    .line 516
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmAutoBrightnessMode(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Z
@@ -614,7 +560,6 @@
 
     if-eqz p1, :cond_10
 
-    .line 517
     iget-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/MdnieScenarioControlService$MSCSControlHandler;
@@ -625,7 +570,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 518
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-static {p0}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)Lcom/samsung/android/displaysolution/MdnieScenarioControlService$MSCSControlHandler;

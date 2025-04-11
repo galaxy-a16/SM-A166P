@@ -23,15 +23,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 65
     iput-object v0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mWindowManager:Landroid/view/IWindowManager;
 
-    .line 72
     new-instance v0, Lcom/samsung/android/server/packagefeature/util/PackageSpecialManagementList;
 
     sget-object v1, Lcom/samsung/android/server/packagefeature/PackageFeature;->FULL_SCREEN:Lcom/samsung/android/server/packagefeature/PackageFeature;
@@ -46,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/server/util/FullScreenAppsSupportUtils-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;-><init>()V
 
     return-void
@@ -55,7 +51,6 @@
 .method public static get()Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;
     .locals 1
 
-    .line 55
     sget-object v0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils$LazyHolder;->sUtils:Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;
 
     return-object v0
@@ -66,7 +61,6 @@
 .method public containsInDefaultFullScreenList(Ljava/lang/String;)Z
     .locals 1
 
-    .line 77
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -77,7 +71,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 78
     invoke-interface {p0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -100,12 +93,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 146
     iget p0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCachedDisplayMaxAspectRatioWithCutout:F
 
     return p0
 
-    .line 148
     :cond_0
     iget p0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCachedDisplayMaxAspectRatio:F
 
@@ -115,16 +106,13 @@
 .method public getDisplayMaxAspectRatio(Z)F
     .locals 1
 
-    .line 133
     monitor-enter p0
 
-    .line 134
     :try_start_0
     iget-boolean v0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCached:Z
 
     if-eqz v0, :cond_0
 
-    .line 135
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->getCachedDisplayMaxAspectRatio(Z)F
 
     move-result p1
@@ -133,19 +121,15 @@
 
     return p1
 
-    .line 137
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 138
     invoke-virtual {p0}, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->updateCachedInfo()V
 
-    .line 139
     monitor-enter p0
 
-    .line 140
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->getCachedDisplayMaxAspectRatio(Z)F
 
@@ -158,7 +142,6 @@
     :catchall_0
     move-exception p1
 
-    .line 141
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -168,7 +151,6 @@
     :catchall_1
     move-exception p1
 
-    .line 137
     :try_start_2
     monitor-exit p0
     :try_end_2
@@ -180,35 +162,28 @@
 .method public getFullScreenAppsSupportMode()I
     .locals 1
 
-    .line 116
     monitor-enter p0
 
-    .line 117
     :try_start_0
     iget-boolean v0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCached:Z
 
     if-eqz v0, :cond_0
 
-    .line 118
     iget v0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCachedFullScreenAppsSupportMode:I
 
     monitor-exit p0
 
     return v0
 
-    .line 120
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 121
     invoke-virtual {p0}, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->updateCachedInfo()V
 
-    .line 122
     monitor-enter p0
 
-    .line 123
     :try_start_1
     iget v0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCachedFullScreenAppsSupportMode:I
 
@@ -219,7 +194,6 @@
     :catchall_0
     move-exception v0
 
-    .line 124
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -229,7 +203,6 @@
     :catchall_1
     move-exception v0
 
-    .line 120
     :try_start_2
     monitor-exit p0
     :try_end_2
@@ -241,16 +214,13 @@
 .method public invalidateCache()V
     .locals 1
 
-    .line 82
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 83
     :try_start_0
     iput-boolean v0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCached:Z
 
-    .line 84
     monitor-exit p0
 
     return-void
@@ -268,7 +238,6 @@
 .method public supportsDisplayCutout()Z
     .locals 0
 
-    .line 152
     invoke-virtual {p0}, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->getFullScreenAppsSupportMode()I
 
     move-result p0
@@ -291,7 +260,6 @@
 .method public supportsMaxAspectRatio()Z
     .locals 1
 
-    .line 156
     invoke-virtual {p0}, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->getFullScreenAppsSupportMode()I
 
     move-result p0
@@ -314,12 +282,10 @@
 .method public final updateCachedInfo()V
     .locals 12
 
-    .line 160
     iget-object v0, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     if-nez v0, :cond_0
 
-    .line 161
     const-class v0, Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -336,18 +302,15 @@
 
     const-string v0, "DisplayManagerInternal is null."
 
-    .line 163
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 168
     :cond_0
     new-instance v0, Landroid/view/DisplayInfo;
 
     invoke-direct {v0}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 172
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
     move-result-object v1
@@ -375,26 +338,21 @@
 
     aget v8, v1, v6
 
-    .line 173
     iget-object v9, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-virtual {v9, v8, v0}, Landroid/hardware/display/DisplayManagerInternal;->getNonOverrideDisplayInfo(ILandroid/view/DisplayInfo;)V
 
-    .line 175
     iget v8, v0, Landroid/view/DisplayInfo;->type:I
 
     if-eq v8, v2, :cond_1
 
     goto :goto_1
 
-    .line 179
     :cond_1
     iget v8, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    .line 180
     iget v9, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
-    .line 181
     invoke-static {v8, v9}, Ljava/lang/Math;->max(II)I
 
     move-result v10
@@ -415,7 +373,6 @@
 
     move v4, v10
 
-    .line 185
     :cond_2
     iget-object v11, v0, Landroid/view/DisplayInfo;->displayCutout:Landroid/view/DisplayCutout;
 
@@ -429,7 +386,6 @@
 
     or-int/lit8 v7, v7, 0x2
 
-    .line 188
     iget-object v10, v0, Landroid/view/DisplayInfo;->displayCutout:Landroid/view/DisplayCutout;
 
     invoke-virtual {v10}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
@@ -438,7 +394,6 @@
 
     iget-object v11, v0, Landroid/view/DisplayInfo;->displayCutout:Landroid/view/DisplayCutout;
 
-    .line 189
     invoke-virtual {v11}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
 
     move-result v11
@@ -447,7 +402,6 @@
 
     sub-int/2addr v8, v10
 
-    .line 190
     iget-object v10, v0, Landroid/view/DisplayInfo;->displayCutout:Landroid/view/DisplayCutout;
 
     invoke-virtual {v10}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
@@ -456,7 +410,6 @@
 
     iget-object v11, v0, Landroid/view/DisplayInfo;->displayCutout:Landroid/view/DisplayCutout;
 
-    .line 191
     invoke-virtual {v11}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
 
     move-result v11
@@ -465,7 +418,6 @@
 
     sub-int/2addr v9, v10
 
-    .line 192
     invoke-static {v8, v9}, Ljava/lang/Math;->max(II)I
 
     move-result v10
@@ -502,31 +454,24 @@
 
     goto :goto_0
 
-    .line 203
     :cond_6
     monitor-enter p0
 
-    .line 204
     :try_start_0
     iput v7, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCachedFullScreenAppsSupportMode:I
 
-    .line 205
     iput v5, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCachedDisplayMaxAspectRatio:F
 
-    .line 206
     iput v4, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCachedDisplayMaxAspectRatioWithCutout:F
 
-    .line 207
     iput-boolean v2, p0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;->mCached:Z
 
-    .line 208
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const-string p0, "FullScreenAppsSupportUtils"
 
-    .line 209
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -564,7 +509,6 @@
     :catchall_0
     move-exception v0
 
-    .line 208
     :try_start_1
     monitor-exit p0
     :try_end_1

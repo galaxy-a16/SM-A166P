@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDurationMs(Lcom/android/server/PackageWatchdog$MonitoredPackage;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
     return-wide v0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFailureHistory(Lcom/android/server/PackageWatchdog$MonitoredPackage;)Landroid/util/LongArrayQueue;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mFailureHistory:Landroid/util/LongArrayQueue;
 
     return-object p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHealthCheckDurationMs(Lcom/android/server/PackageWatchdog$MonitoredPackage;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckDurationMs:J
 
     return-wide v0
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHealthCheckState(Lcom/android/server/PackageWatchdog$MonitoredPackage;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     return p0
@@ -61,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$mgetName(Lcom/android/server/PackageWatchdog$MonitoredPackage;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -72,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$mtoString(Lcom/android/server/PackageWatchdog$MonitoredPackage;I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -83,12 +77,10 @@
 .method public constructor <init>(Lcom/android/server/PackageWatchdog;Ljava/lang/String;JJZLandroid/util/LongArrayQueue;)V
     .locals 0
 
-    .line 1428
     iput-object p1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->this$0:Lcom/android/server/PackageWatchdog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1400
     new-instance p1, Landroid/util/LongArrayQueue;
 
     invoke-direct {p1}, Landroid/util/LongArrayQueue;-><init>()V
@@ -97,25 +89,18 @@
 
     const/4 p1, 0x1
 
-    .line 1409
     iput p1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
-    .line 1429
     iput-object p2, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mPackageName:Ljava/lang/String;
 
-    .line 1430
     iput-wide p3, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
-    .line 1431
     iput-wide p5, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckDurationMs:J
 
-    .line 1432
     iput-boolean p7, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHasPassedHealthCheck:Z
 
-    .line 1433
     iput-object p8, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mMitigationCalls:Landroid/util/LongArrayQueue;
 
-    .line 1434
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->updateHealthCheckStateLocked()I
 
     return-void
@@ -126,7 +111,6 @@
 .method public getHealthCheckStateLocked()I
     .locals 0
 
-    .line 1592
     iget p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     return p0
@@ -135,7 +119,6 @@
 .method public getMitigationCountLocked()I
     .locals 6
 
-    .line 1489
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->this$0:Lcom/android/server/PackageWatchdog;
 
@@ -147,7 +130,6 @@
 
     move-result-wide v0
 
-    .line 1490
     :goto_0
     iget-object v2, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mMitigationCalls:Landroid/util/LongArrayQueue;
 
@@ -163,7 +145,6 @@
 
     if-lez v2, :cond_0
 
-    .line 1491
     iget-object v2, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mMitigationCalls:Landroid/util/LongArrayQueue;
 
     invoke-virtual {v2}, Landroid/util/LongArrayQueue;->removeFirst()J
@@ -172,7 +153,6 @@
 
     goto :goto_0
 
-    .line 1496
     :catch_0
     :cond_0
     iget-object p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mMitigationCalls:Landroid/util/LongArrayQueue;
@@ -187,7 +167,6 @@
 .method public final getName()Ljava/lang/String;
     .locals 0
 
-    .line 1583
     iget-object p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -196,21 +175,18 @@
 .method public getShortestScheduleDurationMsLocked()J
     .locals 4
 
-    .line 1603
     iget-wide v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->toPositive(J)J
 
     move-result-wide v0
 
-    .line 1604
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->isPendingHealthChecksLocked()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1605
     iget-wide v2, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckDurationMs:J
 
     invoke-virtual {p0, v2, v3}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->toPositive(J)J
@@ -222,7 +198,6 @@
     :cond_0
     const-wide v2, 0x7fffffffffffffffL
 
-    .line 1603
     :goto_0
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
@@ -240,7 +215,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 1544
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,12 +237,10 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1545
     iget p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     return p0
 
-    .line 1548
     :cond_0
     iget-wide v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
@@ -276,19 +248,16 @@
 
     iput-wide v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
-    .line 1549
     iget v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     if-nez v0, :cond_1
 
-    .line 1553
     iget-wide v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckDurationMs:J
 
     sub-long/2addr v0, p1
 
     iput-wide v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckDurationMs:J
 
-    .line 1555
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->updateHealthCheckStateLocked()I
 
@@ -300,7 +269,6 @@
 .method public isEqualTo(Lcom/android/server/PackageWatchdog$MonitoredPackage;)Z
     .locals 4
 
-    .line 1680
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -339,7 +307,6 @@
 
     iget-object p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mMitigationCalls:Landroid/util/LongArrayQueue;
 
-    .line 1684
     invoke-virtual {p0}, Landroid/util/LongArrayQueue;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -370,7 +337,6 @@
 .method public isExpiredLocked()Z
     .locals 4
 
-    .line 1614
     iget-wide v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
     const-wide/16 v2, 0x0
@@ -393,7 +359,6 @@
 .method public isPendingHealthChecksLocked()Z
     .locals 1
 
-    .line 1623
     iget p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     const/4 v0, 0x1
@@ -415,12 +380,10 @@
 .method public normalizeMitigationCalls()Landroid/util/LongArrayQueue;
     .locals 6
 
-    .line 1508
     new-instance v0, Landroid/util/LongArrayQueue;
 
     invoke-direct {v0}, Landroid/util/LongArrayQueue;-><init>()V
 
-    .line 1509
     iget-object v1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->this$0:Lcom/android/server/PackageWatchdog;
 
     invoke-static {v1}, Lcom/android/server/PackageWatchdog;->-$$Nest$fgetmSystemClock(Lcom/android/server/PackageWatchdog;)Lcom/android/server/PackageWatchdog$SystemClock;
@@ -433,7 +396,6 @@
 
     const/4 v3, 0x0
 
-    .line 1510
     :goto_0
     iget-object v4, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mMitigationCalls:Landroid/util/LongArrayQueue;
 
@@ -443,7 +405,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 1511
     iget-object v4, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mMitigationCalls:Landroid/util/LongArrayQueue;
 
     invoke-virtual {v4, v3}, Landroid/util/LongArrayQueue;->get(I)J
@@ -465,7 +426,6 @@
 .method public noteMitigationCallLocked()V
     .locals 3
 
-    .line 1477
     iget-object v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mMitigationCalls:Landroid/util/LongArrayQueue;
 
     iget-object p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->this$0:Lcom/android/server/PackageWatchdog;
@@ -486,7 +446,6 @@
 .method public onFailureLocked()Z
     .locals 6
 
-    .line 1459
     iget-object v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->this$0:Lcom/android/server/PackageWatchdog;
 
     invoke-static {v0}, Lcom/android/server/PackageWatchdog;->-$$Nest$fgetmSystemClock(Lcom/android/server/PackageWatchdog;)Lcom/android/server/PackageWatchdog$SystemClock;
@@ -497,12 +456,10 @@
 
     move-result-wide v0
 
-    .line 1460
     iget-object v2, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mFailureHistory:Landroid/util/LongArrayQueue;
 
     invoke-virtual {v2, v0, v1}, Landroid/util/LongArrayQueue;->addLast(J)V
 
-    .line 1461
     :goto_0
     iget-object v2, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mFailureHistory:Landroid/util/LongArrayQueue;
 
@@ -524,14 +481,12 @@
 
     if-lez v2, :cond_0
 
-    .line 1463
     iget-object v2, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mFailureHistory:Landroid/util/LongArrayQueue;
 
     invoke-virtual {v2}, Landroid/util/LongArrayQueue;->removeFirst()J
 
     goto :goto_0
 
-    .line 1465
     :cond_0
     iget-object v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mFailureHistory:Landroid/util/LongArrayQueue;
 
@@ -557,7 +512,6 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 1467
     iget-object p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mFailureHistory:Landroid/util/LongArrayQueue;
 
     invoke-virtual {p0}, Landroid/util/LongArrayQueue;->clear()V
@@ -575,7 +529,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 1524
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -590,7 +543,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1525
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -615,13 +567,10 @@
 
     const-string p2, "PackageWatchdog"
 
-    .line 1524
     invoke-static {p2, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1527
     iget-wide p1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
-    .line 1529
     :cond_0
     iget v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
@@ -629,10 +578,8 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1531
     iput-wide p1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckDurationMs:J
 
-    .line 1533
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->updateHealthCheckStateLocked()I
 
@@ -644,7 +591,6 @@
 .method public final toPositive(J)J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     cmp-long p0, p1, v0
@@ -663,7 +609,6 @@
 .method public final toString(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p1, :cond_3
 
     const/4 p0, 0x1
@@ -706,7 +651,6 @@
 .method public tryPassHealthCheckLocked()I
     .locals 2
 
-    .line 1573
     iget v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     const/4 v1, 0x3
@@ -715,10 +659,8 @@
 
     const/4 v0, 0x1
 
-    .line 1576
     iput-boolean v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHasPassedHealthCheck:Z
 
-    .line 1578
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->updateHealthCheckStateLocked()I
 
@@ -730,7 +672,6 @@
 .method public updateHealthCheckDuration(J)V
     .locals 0
 
-    .line 1561
     iput-wide p1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
     return-void
@@ -739,22 +680,18 @@
 .method public final updateHealthCheckStateLocked()I
     .locals 7
 
-    .line 1636
     iget v0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
-    .line 1637
     iget-boolean v1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHasPassedHealthCheck:Z
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x2
 
-    .line 1639
     iput v1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     goto :goto_1
 
-    .line 1640
     :cond_0
     iget-wide v1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckDurationMs:J
 
@@ -781,7 +718,6 @@
 
     const/4 v1, 0x1
 
-    .line 1644
     iput v1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     goto :goto_1
@@ -789,7 +725,6 @@
     :cond_2
     const/4 v1, 0x0
 
-    .line 1646
     iput v1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     goto :goto_1
@@ -798,16 +733,13 @@
     :goto_0
     const/4 v1, 0x3
 
-    .line 1642
     iput v1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
-    .line 1649
     :goto_1
     iget v1, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
     if-eq v0, v1, :cond_4
 
-    .line 1650
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -826,7 +758,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1651
     invoke-virtual {p0, v0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -851,10 +782,8 @@
 
     const-string v1, "PackageWatchdog"
 
-    .line 1650
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1653
     :cond_4
     iget p0, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckState:I
 
@@ -868,12 +797,10 @@
 
     const-string/jumbo v1, "package"
 
-    .line 1440
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v2, "name"
 
-    .line 1441
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -882,40 +809,34 @@
 
     const-string v2, "duration"
 
-    .line 1442
     iget-wide v3, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mDurationMs:J
 
     invoke-interface {p1, v0, v2, v3, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeLong(Ljava/lang/String;Ljava/lang/String;J)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v2, "health-check-duration"
 
-    .line 1443
     iget-wide v3, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHealthCheckDurationMs:J
 
     invoke-interface {p1, v0, v2, v3, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeLong(Ljava/lang/String;Ljava/lang/String;J)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v2, "passed-health-check"
 
-    .line 1444
     iget-boolean v3, p0, Lcom/android/server/PackageWatchdog$MonitoredPackage;->mHasPassedHealthCheck:Z
 
     invoke-interface {p1, v0, v2, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeBoolean(Ljava/lang/String;Ljava/lang/String;Z)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1445
     invoke-virtual {p0}, Lcom/android/server/PackageWatchdog$MonitoredPackage;->normalizeMitigationCalls()Landroid/util/LongArrayQueue;
 
     move-result-object p0
 
     const-string/jumbo v2, "mitigation-calls"
 
-    .line 1446
     invoke-static {p0}, Lcom/android/server/PackageWatchdog;->longArrayQueueToString(Landroid/util/LongArrayQueue;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-interface {p1, v0, v2, p0}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1447
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     return-void

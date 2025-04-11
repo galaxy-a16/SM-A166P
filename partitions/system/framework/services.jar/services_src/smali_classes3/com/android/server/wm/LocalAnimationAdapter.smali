@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$Gr51MJLXCc7uFjimQ_tCQWA-ksk(Lcom/android/server/wm/LocalAnimationAdapter;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/LocalAnimationAdapter;->lambda$startAnimation$0(Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;I)V
 
     return-void
@@ -25,13 +24,10 @@
 .method public constructor <init>(Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimationRunner;)V
     .locals 0
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;
 
-    .line 45
     iput-object p2, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mAnimator:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     return-void
@@ -40,7 +36,6 @@
 .method private synthetic lambda$startAnimation$0(Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;I)V
     .locals 0
 
-    .line 67
     invoke-interface {p1, p2, p0}, Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;->onAnimationFinished(ILcom/android/server/wm/AnimationAdapter;)V
 
     return-void
@@ -51,7 +46,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
@@ -64,17 +58,14 @@
 
     const-wide v0, 0x10b00000001L
 
-    .line 92
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v2
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;
 
     invoke-interface {p0, p1, v0, v1}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
 
-    .line 94
     invoke-virtual {p1, v2, v3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -83,7 +74,6 @@
 .method public getBackgroundColor()I
     .locals 0
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;
 
     invoke-interface {p0}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->getBackgroundColor()I
@@ -96,7 +86,6 @@
 .method public getDurationHint()J
     .locals 2
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;
 
     invoke-interface {p0}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->getDuration()J
@@ -109,7 +98,6 @@
 .method public getShowBackground()Z
     .locals 0
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;
 
     invoke-interface {p0}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->getShowBackground()Z
@@ -122,7 +110,6 @@
 .method public getShowWallpaper()Z
     .locals 0
 
-    .line 50
     iget-object p0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;
 
     invoke-interface {p0}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->getShowWallpaper()Z
@@ -135,7 +122,6 @@
 .method public getStatusBarTransitionsStartTime()J
     .locals 2
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;
 
     invoke-interface {p0}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->calculateStatusBarTransitionStartTime()J
@@ -148,7 +134,6 @@
 .method public onAnimationCancelled(Landroid/view/SurfaceControl;)V
     .locals 0
 
-    .line 72
     iget-object p0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mAnimator:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/SurfaceAnimationRunner;->onAnimationCancelled(Landroid/view/SurfaceControl;)V
@@ -159,7 +144,6 @@
 .method public startAnimation(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;ILcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)V
     .locals 3
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mAnimator:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     iget-object v1, p0, Lcom/android/server/wm/LocalAnimationAdapter;->mSpec:Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;

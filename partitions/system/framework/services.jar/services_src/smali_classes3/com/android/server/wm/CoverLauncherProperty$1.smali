@@ -9,6 +9,5 @@
 
     const/4 p0, 0x0
 
-    .line 469
     throw p0
 .end method

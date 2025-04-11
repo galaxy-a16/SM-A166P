@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;ILcom/android/server/am/ProcessRecord;)V
     .locals 0
 
-    .line 4084
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$6;->val$pid:I
@@ -35,14 +34,12 @@
 .method public run()V
     .locals 3
 
-    .line 4088
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/am/ActivityManagerService;->getBinderStatsServiceInternal()Lcom/android/server/BinderCallsStatsService$Internal;
 
     move-result-object v0
 
-    .line 4089
     iget v1, p0, Lcom/android/server/am/ActivityManagerService$6;->val$pid:I
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$6;->val$app:Lcom/android/server/am/ProcessRecord;

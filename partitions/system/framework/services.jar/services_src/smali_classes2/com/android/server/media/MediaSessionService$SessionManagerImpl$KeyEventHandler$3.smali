@@ -36,7 +36,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;ZLandroid/view/KeyEvent;ZLjava/lang/String;IIZZLjava/lang/String;IZ)V
     .locals 0
 
-    .line 3111
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
     iput-boolean p2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->val$doubleTapOverridden:Z
@@ -73,24 +72,20 @@
 
     move-object/from16 v0, p0
 
-    .line 3114
     iget-object v1, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
     invoke-static {v1}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->-$$Nest$mresetMultiTapTrackingLocked(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
 
-    .line 3115
     iget-boolean v1, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->val$doubleTapOverridden:Z
 
     const/4 v2, 0x0
 
     if-nez v1, :cond_1
 
-    .line 3117
     iget-boolean v1, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->val$singleTapOverridden:Z
 
     if-nez v1, :cond_0
 
-    .line 3121
     iget-object v3, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
     iget-object v4, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->val$packageName:Ljava/lang/String;
@@ -113,7 +108,6 @@
 
     invoke-static/range {v3 .. v12}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->-$$Nest$mdispatchDownAndUpKeyEventsLocked(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
 
-    .line 3123
     iget-object v13, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
     iget-object v14, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->val$packageName:Ljava/lang/String;
@@ -152,7 +146,6 @@
 
     return-void
 
-    .line 3118
     :cond_0
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
@@ -164,7 +157,6 @@
 
     throw v2
 
-    .line 3116
     :cond_1
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 5216
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$8;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 5218
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.intent.action.ACTION_SCREEN_ON_BY_PROXIMITY"
 
-    .line 5219
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -42,10 +39,8 @@
 
     const-string p1, "Enabling listeners by proximity"
 
-    .line 5220
     invoke-static {v0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5221
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$8;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -65,7 +60,6 @@
     :cond_0
     const-string p2, "android.intent.action.ACTION_SCREEN_OFF_BY_PROXIMITY"
 
-    .line 5226
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -74,10 +68,8 @@
 
     const-string p1, "Disabling listeners by proximity"
 
-    .line 5227
     invoke-static {v0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5228
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$8;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;

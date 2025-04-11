@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 1271
     iput-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$4;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 1274
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 1277
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
@@ -51,14 +48,12 @@
 
     const/4 v0, -0x1
 
-    .line 1281
     invoke-virtual {p1, p2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p2
 
     if-eq p2, v0, :cond_1
 
-    .line 1283
     iget-object v1, p0, Lcom/android/server/wm/ActivityTaskManagerService$4;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iput p2, v1, Lcom/android/server/wm/ActivityTaskManagerService;->mSIOPLevel:I
@@ -66,19 +61,16 @@
     :cond_1
     const-string p2, "batt_temp_level"
 
-    .line 1285
     invoke-virtual {p1, p2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p2
 
     if-eq p2, v0, :cond_2
 
-    .line 1287
     iget-object v1, p0, Lcom/android/server/wm/ActivityTaskManagerService$4;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iput p2, v1, Lcom/android/server/wm/ActivityTaskManagerService;->mBatteryOverheatLevel:I
 
-    .line 1289
     :cond_2
     iget-object p2, p0, Lcom/android/server/wm/ActivityTaskManagerService$4;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -92,7 +84,6 @@
 
     invoke-static {p2, v1}, Lcom/android/server/wm/ActivityTaskManagerService;->-$$Nest$fputmOverheatTextId(Lcom/android/server/wm/ActivityTaskManagerService;I)V
 
-    .line 1291
     iget-object p2, p0, Lcom/android/server/wm/ActivityTaskManagerService$4;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget v1, p2, Lcom/android/server/wm/ActivityTaskManagerService;->mSIOPLevel:I
@@ -106,14 +97,12 @@
     :cond_3
     const-string p2, "check_cooldown_list"
 
-    .line 1292
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 1293
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskManagerService$4;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-static {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->-$$Nest$fgetmCheckSIOPLevelList(Lcom/android/server/wm/ActivityTaskManagerService;)Ljava/util/HashMap;
@@ -122,10 +111,8 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 1294
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskManagerService$4;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 1295
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
     move-result-object p1
@@ -134,7 +121,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/wm/ActivityTaskManagerService;->-$$Nest$fputmCheckSIOPLevelList(Lcom/android/server/wm/ActivityTaskManagerService;Ljava/util/HashMap;)V
 
-    .line 1298
     :cond_4
     new-instance p1, Ljava/lang/StringBuilder;
 

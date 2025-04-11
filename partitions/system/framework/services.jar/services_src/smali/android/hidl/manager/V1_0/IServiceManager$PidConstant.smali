@@ -19,7 +19,6 @@
 .method public static final dumpBitfield(I)Ljava/lang/String;
     .locals 4
 
-    .line 153
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -32,7 +31,6 @@
 
     const-string v1, "NO_PID"
 
-    .line 156
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -43,7 +41,6 @@
     :goto_0
     if-eq p0, v2, :cond_1
 
-    .line 160
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +68,6 @@
     :cond_1
     const-string p0, " | "
 
-    .line 162
     invoke-static {p0, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0
@@ -90,7 +86,6 @@
 
     return-object p0
 
-    .line 149
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

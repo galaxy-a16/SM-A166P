@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Ljava/util/function/Function;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/pm/install/UnknownSourceAppManager$$ExternalSyntheticLambda3;->f$0:Ljava/util/function/Function;
@@ -27,7 +26,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/UnknownSourceAppManager$$ExternalSyntheticLambda3;->f$0:Ljava/util/function/Function;
 
     check-cast p1, Ljava/lang/String;

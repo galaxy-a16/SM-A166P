@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 534
     new-instance v0, Lcom/android/server/usage/AppStandbyController$Pool;
 
     const/16 v1, 0xa
@@ -48,7 +47,6 @@
 .method public static obtain(Ljava/lang/String;IIIZ)Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;
     .locals 1
 
-    .line 552
     sget-object v0, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->sPool:Lcom/android/server/usage/AppStandbyController$Pool;
 
     invoke-virtual {v0}, Lcom/android/server/usage/AppStandbyController$Pool;->obtain()Ljava/lang/Object;
@@ -59,25 +57,19 @@
 
     if-nez v0, :cond_0
 
-    .line 554
     new-instance v0, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;
 
     invoke-direct {v0}, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;-><init>()V
 
-    .line 556
     :cond_0
     iput-object p0, v0, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->packageName:Ljava/lang/String;
 
-    .line 557
     iput p1, v0, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->userId:I
 
-    .line 558
     iput p2, v0, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->bucket:I
 
-    .line 559
     iput p3, v0, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->reason:I
 
-    .line 560
     iput-boolean p4, v0, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->isUserInteraction:Z
 
     return-object v0
@@ -88,7 +80,6 @@
 .method public recycle()V
     .locals 1
 
-    .line 566
     sget-object v0, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->sPool:Lcom/android/server/usage/AppStandbyController$Pool;
 
     invoke-virtual {v0, p0}, Lcom/android/server/usage/AppStandbyController$Pool;->recycle(Ljava/lang/Object;)V

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     invoke-static {p1}, Lcom/android/server/wm/BLASTSyncEngine;->$r8$lambda$7HyLcOVlVtLTkuzuKsxPrcu8n-w(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)Ljava/lang/Integer;

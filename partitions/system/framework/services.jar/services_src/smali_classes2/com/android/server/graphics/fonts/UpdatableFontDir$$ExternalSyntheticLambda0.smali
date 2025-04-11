@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 2
 
-    .line 0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

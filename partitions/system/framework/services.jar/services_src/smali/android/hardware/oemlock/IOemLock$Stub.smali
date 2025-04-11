@@ -10,13 +10,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 55
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 56
     invoke-virtual {p0}, Landroid/os/Binder;->markVintfStability()V
 
-    .line 57
     sget-object v0, Landroid/hardware/oemlock/IOemLock;->DESCRIPTOR:Ljava/lang/String;
 
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
@@ -33,7 +30,6 @@
 
     return-object p0
 
-    .line 68
     :cond_0
     sget-object v0, Landroid/hardware/oemlock/IOemLock;->DESCRIPTOR:Ljava/lang/String;
 
@@ -43,17 +39,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 69
     instance-of v1, v0, Landroid/hardware/oemlock/IOemLock;
 
     if-eqz v1, :cond_1
 
-    .line 70
     check-cast v0, Landroid/hardware/oemlock/IOemLock;
 
     return-object v0
 
-    .line 72
     :cond_1
     new-instance v0, Landroid/hardware/oemlock/IOemLock$Stub$Proxy;
 
@@ -65,7 +58,6 @@
 .method public static getDefaultTransactionName(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_4
@@ -141,14 +133,12 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public getMaxTransactionId()I
     .locals 0
 
-    .line 0
     const p0, 0xfffffe
 
     return p0
@@ -157,7 +147,6 @@
 .method public getTransactionName(I)Ljava/lang/String;
     .locals 0
 
-    .line 120
     invoke-static {p1}, Landroid/hardware/oemlock/IOemLock$Stub;->getDefaultTransactionName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -168,7 +157,6 @@
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 3
 
-    .line 124
     sget-object v0, Landroid/hardware/oemlock/IOemLock;->DESCRIPTOR:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -179,7 +167,6 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 126
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_0
@@ -187,17 +174,14 @@
 
     goto :goto_0
 
-    .line 132
     :sswitch_0
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
-    .line 137
     :sswitch_1
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 138
     invoke-interface {p0}, Landroid/hardware/oemlock/IOemLock;->getInterfaceVersion()I
 
     move-result p0
@@ -206,11 +190,9 @@
 
     return v1
 
-    .line 143
     :sswitch_2
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 144
     invoke-interface {p0}, Landroid/hardware/oemlock/IOemLock;->getInterfaceHash()Ljava/lang/String;
 
     move-result-object p0
@@ -238,95 +220,75 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 194
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
-    .line 186
     :cond_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result p1
 
-    .line 187
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 188
     invoke-interface {p0, p1}, Landroid/hardware/oemlock/IOemLock;->setOemUnlockAllowedByDevice(Z)V
 
-    .line 189
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_1
 
-    .line 174
     :cond_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result p1
 
-    .line 176
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p4
 
-    .line 177
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 178
     invoke-interface {p0, p1, p4}, Landroid/hardware/oemlock/IOemLock;->setOemUnlockAllowedByCarrier(Z[B)I
 
     move-result p0
 
-    .line 179
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 180
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_1
 
-    .line 166
     :cond_3
     invoke-interface {p0}, Landroid/hardware/oemlock/IOemLock;->isOemUnlockAllowedByDevice()Z
 
     move-result p0
 
-    .line 167
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 168
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
 
     goto :goto_1
 
-    .line 159
     :cond_4
     invoke-interface {p0}, Landroid/hardware/oemlock/IOemLock;->isOemUnlockAllowedByCarrier()Z
 
     move-result p0
 
-    .line 160
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 161
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
 
     goto :goto_1
 
-    .line 152
     :cond_5
     invoke-interface {p0}, Landroid/hardware/oemlock/IOemLock;->getName()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 153
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 154
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     :goto_1

@@ -7,7 +7,6 @@
 .method public static readBackupEnableState(I)Z
     .locals 3
 
-    .line 35
     invoke-static {p0}, Lcom/android/server/backup/UserBackupManagerFiles;->getBaseStateDir(I)Ljava/io/File;
 
     move-result-object v0
@@ -16,7 +15,6 @@
 
     move-result v0
 
-    .line 36
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,14 +45,12 @@
 .method public static readBackupEnableState(Ljava/io/File;)Z
     .locals 6
 
-    .line 46
     new-instance v0, Ljava/io/File;
 
     const-string v1, "backup_enabled"
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 47
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -65,7 +61,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 48
     :try_start_0
     new-instance p0, Ljava/io/FileInputStream;
 
@@ -73,7 +68,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 49
     :try_start_1
     invoke-virtual {p0}, Ljava/io/FileInputStream;->read()I
 
@@ -85,7 +79,6 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 52
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,7 +105,6 @@
     :cond_1
     move v3, v1
 
-    .line 55
     :goto_0
     :try_start_2
     invoke-virtual {p0}, Ljava/io/FileInputStream;->close()V
@@ -124,7 +116,6 @@
     :catchall_0
     move-exception v0
 
-    .line 48
     :try_start_3
     invoke-virtual {p0}, Ljava/io/FileInputStream;->close()V
     :try_end_3
@@ -146,7 +137,6 @@
     :catch_0
     const-string p0, "Cannot read enable state; assuming disabled"
 
-    .line 57
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
@@ -154,7 +144,6 @@
     :cond_2
     const-string p0, "isBackupEnabled() => false due to absent settings file"
 
-    .line 60
     invoke-static {v2, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
@@ -164,7 +153,6 @@
 .method public static writeBackupEnableState(IZ)V
     .locals 2
 
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,7 +177,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     invoke-static {p0}, Lcom/android/server/backup/UserBackupManagerFiles;->getBaseStateDir(I)Ljava/io/File;
 
     move-result-object p0
@@ -204,21 +191,18 @@
 
     const-string v0, "BackupManagerService"
 
-    .line 66
     new-instance v1, Ljava/io/File;
 
     const-string v2, "backup_enabled"
 
     invoke-direct {v1, p0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 67
     new-instance v2, Ljava/io/File;
 
     const-string v3, "backup_enabled-stage"
 
     invoke-direct {v2, p0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 68
     :try_start_0
     new-instance p0, Ljava/io/FileOutputStream;
 
@@ -236,15 +220,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 69
     :goto_0
     :try_start_1
     invoke-virtual {p0, p1}, Ljava/io/FileOutputStream;->write(I)V
 
-    .line 70
     invoke-virtual {p0}, Ljava/io/FileOutputStream;->close()V
 
-    .line 71
     invoke-virtual {v2, v1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result p1
@@ -253,12 +234,10 @@
 
     const-string p1, "Write enable failed as could not rename staging file to actual"
 
-    .line 74
     invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 77
     :cond_1
     :try_start_2
     invoke-virtual {p0}, Ljava/io/FileOutputStream;->close()V
@@ -271,7 +250,6 @@
     :catchall_0
     move-exception p1
 
-    .line 68
     :try_start_3
     invoke-virtual {p0}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -294,7 +272,6 @@
     :catch_0
     move-exception p0
 
-    .line 78
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,7 +280,6 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 81
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -314,13 +290,10 @@
 
     move-result-object p0
 
-    .line 78
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 83
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     :goto_2

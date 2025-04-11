@@ -27,7 +27,6 @@
 .method public static synthetic $r8$lambda$T7TS-d4TtCp3EtVXkeGSHUFDdy0(Lcom/android/server/pm/utils/RequestThrottle;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/pm/utils/RequestThrottle;->runInternal()Z
 
     move-result p0
@@ -38,10 +37,8 @@
 .method public constructor <init>(Landroid/os/Handler;IIILjava/util/function/Supplier;)V
     .locals 3
 
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -50,7 +47,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mLastRequest:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 60
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v2, -0x1
@@ -59,29 +55,22 @@
 
     iput-object v0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mLastCommitted:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 66
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mCurrentRetry:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 100
     iput-object p1, p0, Lcom/android/server/pm/utils/RequestThrottle;->mHandler:Landroid/os/Handler;
 
-    .line 101
     iput-object p5, p0, Lcom/android/server/pm/utils/RequestThrottle;->mBlock:Ljava/util/function/Supplier;
 
-    .line 102
     iput p2, p0, Lcom/android/server/pm/utils/RequestThrottle;->mMaxAttempts:I
 
-    .line 103
     iput p3, p0, Lcom/android/server/pm/utils/RequestThrottle;->mFirstDelay:I
 
-    .line 104
     iput p4, p0, Lcom/android/server/pm/utils/RequestThrottle;->mBackoffBase:I
 
-    .line 105
     new-instance p1, Lcom/android/server/pm/utils/RequestThrottle$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/pm/utils/RequestThrottle$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/pm/utils/RequestThrottle;)V
@@ -106,7 +95,6 @@
 
     move-object v5, p2
 
-    .line 81
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/utils/RequestThrottle;-><init>(Landroid/os/Handler;IIILjava/util/function/Supplier;)V
 
     return-void
@@ -117,14 +105,12 @@
 .method public final runInternal()Z
     .locals 8
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mLastRequest:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
 
-    .line 132
     iget-object v1, p0, Lcom/android/server/pm/utils/RequestThrottle;->mLastCommitted:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -137,7 +123,6 @@
 
     return v2
 
-    .line 137
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/utils/RequestThrottle;->mBlock:Ljava/util/function/Supplier;
 
@@ -155,19 +140,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 138
     iget-object v1, p0, Lcom/android/server/pm/utils/RequestThrottle;->mCurrentRetry:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mLastCommitted:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
     return v2
 
-    .line 142
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mCurrentRetry:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -175,12 +157,10 @@
 
     move-result v0
 
-    .line 143
     iget v1, p0, Lcom/android/server/pm/utils/RequestThrottle;->mMaxAttempts:I
 
     if-ge v0, v1, :cond_2
 
-    .line 144
     iget v1, p0, Lcom/android/server/pm/utils/RequestThrottle;->mFirstDelay:I
 
     int-to-double v1, v1
@@ -191,7 +171,6 @@
 
     int-to-double v6, v0
 
-    .line 145
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v4
@@ -200,7 +179,6 @@
 
     double-to-long v0, v1
 
-    .line 146
     iget-object v2, p0, Lcom/android/server/pm/utils/RequestThrottle;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mRunnable:Ljava/lang/Runnable;
@@ -209,7 +187,6 @@
 
     goto :goto_0
 
-    .line 148
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mCurrentRetry:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -222,12 +199,10 @@
 .method public runNow()Z
     .locals 1
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mLastRequest:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    .line 127
     invoke-virtual {p0}, Lcom/android/server/pm/utils/RequestThrottle;->runInternal()Z
 
     move-result p0
@@ -238,12 +213,10 @@
 .method public schedule()V
     .locals 1
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mLastRequest:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/pm/utils/RequestThrottle;->mRunnable:Ljava/lang/Runnable;

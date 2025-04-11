@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$msetUpFillInIntent(Lcom/android/server/credentials/ProviderCreateSession;)Landroid/content/Intent;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderCreateSession;->setUpFillInIntent()Landroid/content/Intent;
 
     move-result-object p0
@@ -26,7 +25,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/credentials/CredentialProviderInfo;Lcom/android/server/credentials/ProviderSession$ProviderInternalCallback;ILcom/android/server/credentials/RemoteCredentialService;Landroid/service/credentials/BeginCreateCredentialRequest;Landroid/service/credentials/CreateCredentialRequest;Ljava/lang/String;)V
     .locals 7
 
-    .line 145
     invoke-virtual {p2}, Landroid/credentials/CredentialProviderInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v4
@@ -45,18 +43,14 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/credentials/ProviderSession;-><init>(Landroid/content/Context;Ljava/lang/Object;Lcom/android/server/credentials/ProviderSession$ProviderInternalCallback;Landroid/content/ComponentName;ILcom/android/server/credentials/RemoteCredentialService;)V
 
-    .line 147
     iput-object p7, p0, Lcom/android/server/credentials/ProviderCreateSession;->mCompleteRequest:Landroid/service/credentials/CreateCredentialRequest;
 
-    .line 148
     sget-object p1, Lcom/android/server/credentials/ProviderSession$Status;->PENDING:Lcom/android/server/credentials/ProviderSession$Status;
 
     invoke-virtual {p0, p1}, Lcom/android/server/credentials/ProviderSession;->setStatus(Lcom/android/server/credentials/ProviderSession$Status;)V
 
-    .line 149
     new-instance p1, Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;
 
-    .line 150
     invoke-static {p8}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object p2
@@ -73,14 +67,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 105
     new-instance p3, Landroid/service/credentials/BeginCreateCredentialRequest;
 
     invoke-direct {p3, p0, p1, p2}, Landroid/service/credentials/BeginCreateCredentialRequest;-><init>(Ljava/lang/String;Landroid/os/Bundle;Landroid/service/credentials/CallingAppInfo;)V
 
     return-object p3
 
-    .line 111
     :cond_0
     new-instance p2, Landroid/service/credentials/BeginCreateCredentialRequest;
 
@@ -92,7 +84,6 @@
 .method public static createNewSession(Landroid/content/Context;ILandroid/credentials/CredentialProviderInfo;Lcom/android/server/credentials/CreateRequestSession;Lcom/android/server/credentials/RemoteCredentialService;)Lcom/android/server/credentials/ProviderCreateSession;
     .locals 10
 
-    .line 76
     invoke-virtual {p2}, Landroid/credentials/CredentialProviderInfo;->getCapabilities()Ljava/util/List;
 
     move-result-object v0
@@ -103,26 +94,22 @@
 
     iget-object v2, p3, Lcom/android/server/credentials/RequestSession;->mClientAppInfo:Landroid/service/credentials/CallingAppInfo;
 
-    .line 79
     invoke-virtual {p2}, Landroid/credentials/CredentialProviderInfo;->isSystemProvider()Z
 
     move-result v4
 
-    .line 76
     invoke-static {v0, v1, v2, v4}, Lcom/android/server/credentials/ProviderCreateSession;->createProviderRequest(Ljava/util/List;Landroid/credentials/CreateCredentialRequest;Landroid/service/credentials/CallingAppInfo;Z)Landroid/service/credentials/CreateCredentialRequest;
 
     move-result-object v7
 
     if-eqz v7, :cond_0
 
-    .line 81
     new-instance v9, Lcom/android/server/credentials/ProviderCreateSession;
 
     iget-object v0, p3, Lcom/android/server/credentials/RequestSession;->mClientRequest:Ljava/lang/Object;
 
     check-cast v0, Landroid/credentials/CreateCredentialRequest;
 
-    .line 87
     invoke-virtual {v0}, Landroid/credentials/CreateCredentialRequest;->getType()Ljava/lang/String;
 
     move-result-object v0
@@ -131,7 +118,6 @@
 
     check-cast v1, Landroid/credentials/CreateCredentialRequest;
 
-    .line 88
     invoke-virtual {v1}, Landroid/credentials/CreateCredentialRequest;->getCandidateQueryData()Landroid/os/Bundle;
 
     move-result-object v1
@@ -142,12 +128,10 @@
 
     check-cast v4, Landroid/credentials/CreateCredentialRequest;
 
-    .line 91
     invoke-virtual {v4}, Landroid/credentials/CreateCredentialRequest;->alwaysSendAppInfoToProvider()Z
 
     move-result v4
 
-    .line 87
     invoke-static {v0, v1, v2, v4}, Lcom/android/server/credentials/ProviderCreateSession;->constructQueryPhaseRequest(Ljava/lang/String;Landroid/os/Bundle;Landroid/service/credentials/CallingAppInfo;Z)Landroid/service/credentials/BeginCreateCredentialRequest;
 
     move-result-object v6
@@ -170,7 +154,6 @@
 
     return-object v9
 
-    .line 96
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -180,7 +163,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 97
     invoke-virtual {p2}, Landroid/credentials/CredentialProviderInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -193,7 +175,6 @@
 
     const-string v1, "ProviderCreateSession"
 
-    .line 96
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -204,7 +185,6 @@
 .method public static createProviderRequest(Ljava/util/List;Landroid/credentials/CreateCredentialRequest;Landroid/service/credentials/CallingAppInfo;Z)Landroid/service/credentials/CreateCredentialRequest;
     .locals 2
 
-    .line 123
     invoke-virtual {p1}, Landroid/credentials/CreateCredentialRequest;->isSystemProviderRequired()Z
 
     move-result v0
@@ -217,23 +197,19 @@
 
     return-object v1
 
-    .line 128
     :cond_0
     invoke-virtual {p1}, Landroid/credentials/CreateCredentialRequest;->getType()Ljava/lang/String;
 
     move-result-object p3
 
-    .line 129
     invoke-interface {p0, p3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 130
     new-instance p0, Landroid/service/credentials/CreateCredentialRequest;
 
-    .line 131
     invoke-virtual {p1}, Landroid/credentials/CreateCredentialRequest;->getCredentialData()Landroid/os/Bundle;
 
     move-result-object p1
@@ -251,7 +227,6 @@
 .method public final invokeCallbackOnInternalInvalidState()V
     .locals 3
 
-    .line 319
     iget-object v0, p0, Lcom/android/server/credentials/ProviderSession;->mCallbacks:Lcom/android/server/credentials/ProviderSession$ProviderInternalCallback;
 
     iget-object p0, p0, Lcom/android/server/credentials/ProviderSession;->mComponentName:Landroid/content/ComponentName;
@@ -268,20 +243,16 @@
 .method public invokeSession()V
     .locals 1
 
-    .line 251
     iget-object v0, p0, Lcom/android/server/credentials/ProviderSession;->mRemoteCredentialService:Lcom/android/server/credentials/RemoteCredentialService;
 
     if-eqz v0, :cond_0
 
-    .line 252
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderSession;->startCandidateMetrics()V
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/credentials/ProviderSession;->mRemoteCredentialService:Lcom/android/server/credentials/RemoteCredentialService;
 
     invoke-virtual {v0, p0}, Lcom/android/server/credentials/RemoteCredentialService;->setCallback(Lcom/android/server/credentials/RemoteCredentialService$ProviderCallbacks;)V
 
-    .line 254
     iget-object v0, p0, Lcom/android/server/credentials/ProviderSession;->mRemoteCredentialService:Lcom/android/server/credentials/RemoteCredentialService;
 
     iget-object p0, p0, Lcom/android/server/credentials/ProviderSession;->mProviderRequest:Ljava/lang/Object;
@@ -305,17 +276,14 @@
 
     const-string/jumbo p1, "pendingIntentResponse is null"
 
-    .line 296
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
     new-instance p1, Landroid/credentials/CreateCredentialException;
 
     invoke-direct {p1, p0}, Landroid/credentials/CreateCredentialException;-><init>(Ljava/lang/String;)V
 
     return-object p1
 
-    .line 299
     :cond_0
     invoke-static {p1}, Lcom/android/server/credentials/PendingIntentResultHandler;->isValidResponse(Landroid/credentials/ui/ProviderPendingIntentResponse;)Z
 
@@ -323,7 +291,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 301
     invoke-virtual {p1}, Landroid/credentials/ui/ProviderPendingIntentResponse;->getResultData()Landroid/content/Intent;
 
     move-result-object p0
@@ -336,7 +303,6 @@
 
     const-string p1, "Pending intent contains provider exception"
 
-    .line 303
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
@@ -346,7 +312,6 @@
 
     return-object p0
 
-    .line 306
     :cond_2
     invoke-static {p1}, Lcom/android/server/credentials/PendingIntentResultHandler;->isCancelledResponse(Landroid/credentials/ui/ProviderPendingIntentResponse;)Z
 
@@ -354,7 +319,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 307
     new-instance p0, Landroid/credentials/CreateCredentialException;
 
     const-string p1, "android.credentials.CreateCredentialException.TYPE_USER_CANCELED"
@@ -363,7 +327,6 @@
 
     return-object p0
 
-    .line 309
     :cond_3
     new-instance p1, Landroid/credentials/CreateCredentialException;
 
@@ -375,42 +338,35 @@
 .method public final onCreateEntrySelected(Landroid/credentials/ui/ProviderPendingIntentResponse;)V
     .locals 1
 
-    .line 266
     invoke-virtual {p0, p1}, Lcom/android/server/credentials/ProviderCreateSession;->maybeGetPendingIntentException(Landroid/credentials/ui/ProviderPendingIntentResponse;)Landroid/credentials/CreateCredentialException;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 270
     invoke-virtual {v0}, Landroid/credentials/CreateCredentialException;->getType()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 271
     invoke-virtual {v0}, Landroid/credentials/CreateCredentialException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 269
     invoke-virtual {p0, p1, v0}, Lcom/android/server/credentials/ProviderSession;->invokeCallbackWithError(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 276
     :cond_0
     invoke-virtual {p1}, Landroid/credentials/ui/ProviderPendingIntentResponse;->getResultData()Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 275
     invoke-static {p1}, Lcom/android/server/credentials/PendingIntentResultHandler;->extractCreateCredentialResponse(Landroid/content/Intent;)Landroid/credentials/CreateCredentialResponse;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 278
     iget-object v0, p0, Lcom/android/server/credentials/ProviderSession;->mCallbacks:Lcom/android/server/credentials/ProviderSession$ProviderInternalCallback;
 
     iget-object p0, p0, Lcom/android/server/credentials/ProviderSession;->mComponentName:Landroid/content/ComponentName;
@@ -424,10 +380,8 @@
 
     const-string/jumbo v0, "onSaveEntrySelected - no response or error found in pending intent response"
 
-    .line 280
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderCreateSession;->invokeCallbackOnInternalInvalidState()V
 
     :goto_0
@@ -437,7 +391,6 @@
 .method public onProviderCancellable(Landroid/os/ICancellationSignal;)V
     .locals 0
 
-    .line 188
     iput-object p1, p0, Lcom/android/server/credentials/ProviderSession;->mProviderCancellationSignal:Landroid/os/ICancellationSignal;
 
     return-void
@@ -446,17 +399,14 @@
 .method public onProviderResponseFailure(ILjava/lang/Exception;)V
     .locals 0
 
-    .line 163
     instance-of p1, p2, Landroid/credentials/CreateCredentialException;
 
     if-eqz p1, :cond_0
 
-    .line 165
     check-cast p2, Landroid/credentials/CreateCredentialException;
 
     iput-object p2, p0, Lcom/android/server/credentials/ProviderCreateSession;->mProviderException:Landroid/credentials/CreateCredentialException;
 
-    .line 167
     iget-object p1, p0, Lcom/android/server/credentials/ProviderSession;->mProviderSessionMetric:Lcom/android/server/credentials/metrics/ProviderSessionMetric;
 
     invoke-virtual {p2}, Landroid/credentials/CreateCredentialException;->getType()Ljava/lang/String;
@@ -465,7 +415,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/credentials/metrics/ProviderSessionMetric;->collectCandidateFrameworkException(Ljava/lang/String;)V
 
-    .line 169
     :cond_0
     iget-object p1, p0, Lcom/android/server/credentials/ProviderSession;->mProviderSessionMetric:Lcom/android/server/credentials/metrics/ProviderSessionMetric;
 
@@ -473,7 +422,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/credentials/metrics/ProviderSessionMetric;->collectCandidateExceptionStatus(Z)V
 
-    .line 170
     sget-object p1, Lcom/android/server/credentials/ProviderSession$Status;->CANCELED:Lcom/android/server/credentials/ProviderSession$Status;
 
     sget-object p2, Lcom/android/server/credentials/ProviderSession$CredentialsSource;->REMOTE_PROVIDER:Lcom/android/server/credentials/ProviderSession$CredentialsSource;
@@ -486,7 +434,6 @@
 .method public onProviderResponseSuccess(Landroid/service/credentials/BeginCreateCredentialResponse;)V
     .locals 2
 
-    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,7 +454,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     invoke-virtual {p0, p1}, Lcom/android/server/credentials/ProviderCreateSession;->onSetInitialRemoteResponse(Landroid/service/credentials/BeginCreateCredentialResponse;)V
 
     return-void
@@ -516,7 +462,6 @@
 .method public bridge synthetic onProviderResponseSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    .line 52
     check-cast p1, Landroid/service/credentials/BeginCreateCredentialResponse;
 
     invoke-virtual {p0, p1}, Lcom/android/server/credentials/ProviderCreateSession;->onProviderResponseSuccess(Landroid/service/credentials/BeginCreateCredentialResponse;)V
@@ -527,7 +472,6 @@
 .method public onProviderServiceDied(Lcom/android/server/credentials/RemoteCredentialService;)V
     .locals 1
 
-    .line 177
     invoke-virtual {p1}, Lcom/android/server/credentials/RemoteCredentialService;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p1
@@ -540,7 +484,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 178
     sget-object p1, Lcom/android/server/credentials/ProviderSession$Status;->SERVICE_DEAD:Lcom/android/server/credentials/ProviderSession$Status;
 
     sget-object v0, Lcom/android/server/credentials/ProviderSession$CredentialsSource;->REMOTE_PROVIDER:Lcom/android/server/credentials/ProviderSession$CredentialsSource;
@@ -554,7 +497,6 @@
 
     const-string p1, "Component names different in onProviderServiceDied - this should not happen"
 
-    .line 181
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -564,7 +506,6 @@
 .method public final onRemoteEntrySelected(Landroid/credentials/ui/ProviderPendingIntentResponse;)V
     .locals 0
 
-    .line 289
     invoke-virtual {p0, p1}, Lcom/android/server/credentials/ProviderCreateSession;->onCreateEntrySelected(Landroid/credentials/ui/ProviderPendingIntentResponse;)V
 
     return-void
@@ -573,25 +514,20 @@
 .method public final onSetInitialRemoteResponse(Landroid/service/credentials/BeginCreateCredentialResponse;)V
     .locals 3
 
-    .line 192
     iput-object p1, p0, Lcom/android/server/credentials/ProviderSession;->mProviderResponse:Ljava/lang/Object;
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/credentials/ProviderCreateSession;->mProviderResponseDataHandler:Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;
 
     invoke-virtual {p1}, Landroid/service/credentials/BeginCreateCredentialResponse;->getCreateEntries()Ljava/util/List;
 
     move-result-object v1
 
-    .line 194
     invoke-virtual {p1}, Landroid/service/credentials/BeginCreateCredentialResponse;->getRemoteCreateEntry()Landroid/service/credentials/RemoteEntry;
 
     move-result-object v2
 
-    .line 193
     invoke-virtual {v0, v1, v2}, Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;->addResponseContent(Ljava/util/List;Landroid/service/credentials/RemoteEntry;)V
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/credentials/ProviderCreateSession;->mProviderResponseDataHandler:Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;
 
     invoke-virtual {v0, p1}, Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;->isEmptyResponse(Landroid/service/credentials/BeginCreateCredentialResponse;)Z
@@ -602,7 +538,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/credentials/ProviderSession;->mProviderSessionMetric:Lcom/android/server/credentials/metrics/ProviderSessionMetric;
 
     iget-object v2, p0, Lcom/android/server/credentials/ProviderSession;->mCallbacks:Lcom/android/server/credentials/ProviderSession$ProviderInternalCallback;
@@ -611,15 +546,12 @@
 
     iget-object v2, v2, Lcom/android/server/credentials/RequestSession;->mRequestSessionMetric:Lcom/android/server/credentials/metrics/RequestSessionMetric;
 
-    .line 197
     invoke-virtual {v2}, Lcom/android/server/credentials/metrics/RequestSessionMetric;->getInitialPhaseMetric()Lcom/android/server/credentials/metrics/InitialPhaseMetric;
 
     move-result-object v2
 
-    .line 196
     invoke-virtual {v0, p1, v1, v2}, Lcom/android/server/credentials/metrics/ProviderSessionMetric;->collectCandidateEntryMetrics(Ljava/lang/Object;ZLcom/android/server/credentials/metrics/InitialPhaseMetric;)V
 
-    .line 198
     sget-object p1, Lcom/android/server/credentials/ProviderSession$Status;->EMPTY_RESPONSE:Lcom/android/server/credentials/ProviderSession$Status;
 
     sget-object v0, Lcom/android/server/credentials/ProviderSession$CredentialsSource;->REMOTE_PROVIDER:Lcom/android/server/credentials/ProviderSession$CredentialsSource;
@@ -628,7 +560,6 @@
 
     goto :goto_0
 
-    .line 201
     :cond_0
     iget-object v0, p0, Lcom/android/server/credentials/ProviderSession;->mProviderSessionMetric:Lcom/android/server/credentials/metrics/ProviderSessionMetric;
 
@@ -638,15 +569,12 @@
 
     iget-object v2, v2, Lcom/android/server/credentials/RequestSession;->mRequestSessionMetric:Lcom/android/server/credentials/metrics/RequestSessionMetric;
 
-    .line 202
     invoke-virtual {v2}, Lcom/android/server/credentials/metrics/RequestSessionMetric;->getInitialPhaseMetric()Lcom/android/server/credentials/metrics/InitialPhaseMetric;
 
     move-result-object v2
 
-    .line 201
     invoke-virtual {v0, p1, v1, v2}, Lcom/android/server/credentials/metrics/ProviderSessionMetric;->collectCandidateEntryMetrics(Ljava/lang/Object;ZLcom/android/server/credentials/metrics/InitialPhaseMetric;)V
 
-    .line 203
     sget-object p1, Lcom/android/server/credentials/ProviderSession$Status;->SAVE_ENTRIES_RECEIVED:Lcom/android/server/credentials/ProviderSession$Status;
 
     sget-object v0, Lcom/android/server/credentials/ProviderSession$CredentialsSource;->REMOTE_PROVIDER:Lcom/android/server/credentials/ProviderSession$CredentialsSource;
@@ -660,7 +588,6 @@
 .method public onUiEntrySelected(Ljava/lang/String;Ljava/lang/String;Landroid/credentials/ui/ProviderPendingIntentResponse;)V
     .locals 2
 
-    .line 226
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     const-string/jumbo v0, "save_entry_key"
@@ -683,15 +610,12 @@
 
     const-string p1, "Unsupported entry type selected"
 
-    .line 244
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderCreateSession;->invokeCallbackOnInternalInvalidState()V
 
     goto :goto_0
 
-    .line 236
     :cond_0
     iget-object p1, p0, Lcom/android/server/credentials/ProviderCreateSession;->mProviderResponseDataHandler:Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;
 
@@ -703,21 +627,17 @@
 
     const-string p1, "Unexpected remote entry key"
 
-    .line 237
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderCreateSession;->invokeCallbackOnInternalInvalidState()V
 
     return-void
 
-    .line 241
     :cond_1
     invoke-virtual {p0, p3}, Lcom/android/server/credentials/ProviderCreateSession;->onRemoteEntrySelected(Landroid/credentials/ui/ProviderPendingIntentResponse;)V
 
     goto :goto_0
 
-    .line 228
     :cond_2
     iget-object p1, p0, Lcom/android/server/credentials/ProviderCreateSession;->mProviderResponseDataHandler:Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;
 
@@ -729,15 +649,12 @@
 
     const-string p1, "Unexpected save entry key"
 
-    .line 229
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderCreateSession;->invokeCallbackOnInternalInvalidState()V
 
     return-void
 
-    .line 233
     :cond_3
     invoke-virtual {p0, p3}, Lcom/android/server/credentials/ProviderCreateSession;->onCreateEntrySelected(Landroid/credentials/ui/ProviderPendingIntentResponse;)V
 
@@ -748,7 +665,6 @@
 .method public prepareUiData()Landroid/credentials/ui/CreateCredentialProviderData;
     .locals 3
 
-    .line 212
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderSession;->getStatus()Lcom/android/server/credentials/ProviderSession$Status;
 
     move-result-object v0
@@ -761,7 +677,6 @@
 
     if-nez v0, :cond_0
 
-    .line 213
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -788,7 +703,6 @@
 
     return-object v1
 
-    .line 217
     :cond_0
     iget-object v0, p0, Lcom/android/server/credentials/ProviderSession;->mProviderResponse:Ljava/lang/Object;
 
@@ -802,7 +716,6 @@
 
     if-nez v0, :cond_1
 
-    .line 218
     iget-object p0, p0, Lcom/android/server/credentials/ProviderCreateSession;->mProviderResponseDataHandler:Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;
 
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderCreateSession$ProviderResponseDataHandler;->toCreateCredentialProviderData()Landroid/credentials/ui/CreateCredentialProviderData;
@@ -818,7 +731,6 @@
 .method public bridge synthetic prepareUiData()Landroid/credentials/ui/ProviderData;
     .locals 0
 
-    .line 52
     invoke-virtual {p0}, Lcom/android/server/credentials/ProviderCreateSession;->prepareUiData()Landroid/credentials/ui/CreateCredentialProviderData;
 
     move-result-object p0
@@ -829,14 +741,12 @@
 .method public final setUpFillInIntent()Landroid/content/Intent;
     .locals 2
 
-    .line 259
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string v1, "android.service.credentials.extra.CREATE_CREDENTIAL_REQUEST"
 
-    .line 260
     iget-object p0, p0, Lcom/android/server/credentials/ProviderCreateSession;->mCompleteRequest:Landroid/service/credentials/CreateCredentialRequest;
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;

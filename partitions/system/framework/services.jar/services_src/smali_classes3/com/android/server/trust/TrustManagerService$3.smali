@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/trust/TrustManagerService;)V
     .locals 0
 
-    .line 2183
     iput-object p1, p0, Lcom/android/server/trust/TrustManagerService$3;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -24,7 +23,6 @@
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 0
 
-    .line 2191
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$3;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
@@ -39,7 +37,6 @@
 .method public onPackageChanged(Ljava/lang/String;I[Ljava/lang/String;)Z
     .locals 0
 
-    .line 2196
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$3;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
@@ -56,7 +53,6 @@
 .method public onPackageDisappeared(Ljava/lang/String;I)V
     .locals 0
 
-    .line 2203
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$3;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$mremoveAgentsOfPackage(Lcom/android/server/trust/TrustManagerService;Ljava/lang/String;)V
@@ -67,7 +63,6 @@
 .method public onSomePackagesChanged()V
     .locals 1
 
-    .line 2186
     iget-object p0, p0, Lcom/android/server/trust/TrustManagerService$3;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     const/4 v0, -0x1

@@ -20,7 +20,6 @@
 .method public final valueToString(ILjava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     check-cast p3, Ljava/lang/Integer;
 
     invoke-static {p1, p2, p3}, Lcom/android/server/wm/OrientationController;->$r8$lambda$kVkXDQ0JOezTYXwRn0BSm_fqvaY(ILjava/lang/String;Ljava/lang/Integer;)Ljava/lang/String;

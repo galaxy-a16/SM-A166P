@@ -155,124 +155,90 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessRecord;)V
     .locals 3
 
-    .line 467
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x3e9
 
-    .line 62
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mMaxAdj:I
 
     const/16 v0, -0x2710
 
-    .line 68
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawAdj:I
 
-    .line 74
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetRawAdj:I
 
-    .line 80
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurAdj:I
 
-    .line 86
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetAdj:I
 
-    .line 92
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mVerifiedAdj:I
 
     const/4 v1, 0x0
 
-    .line 99
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurCapability:I
 
-    .line 105
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetCapability:I
 
-    .line 111
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurSchedGroup:I
 
-    .line 117
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetSchedGroup:I
 
     const/16 v2, 0x14
 
-    .line 123
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCurProcState:I
 
-    .line 129
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mRepProcState:I
 
-    .line 135
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawProcState:I
 
-    .line 141
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mSetProcState:I
 
-    .line 311
     iput-boolean v1, p0, Lcom/android/server/am/ProcessStateRecord;->mBackgroundRestricted:Z
 
-    .line 317
     iput-boolean v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurBoundByNonBgRestrictedApp:Z
 
-    .line 323
     iput-boolean v1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetBoundByNonBgRestrictedApp:Z
 
     const/4 v2, -0x1
 
-    .line 428
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasActivities:I
 
-    .line 430
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHeavyWeight:I
 
-    .line 432
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasVisibleActivities:I
 
-    .line 434
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHomeProcess:I
 
-    .line 436
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsPreviousProcess:I
 
-    .line 438
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasRecentTasks:I
 
-    .line 440
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsReceivingBroadcast:I
 
-    .line 446
     filled-new-array {v2, v2, v2}, [I
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedCompatChanges:[I
 
-    .line 453
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedAdj:I
 
-    .line 455
     iput-boolean v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedForegroundActivities:Z
 
     const/16 v0, 0x13
 
-    .line 457
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedProcState:I
 
-    .line 459
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedSchedGroup:I
 
-    .line 750
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
-    .line 468
     iput-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 469
     iget-object p1, p1, Lcom/android/server/am/ProcessRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 470
     iget-object p1, p1, Lcom/android/server/am/ActivityManagerService;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
 
     iput-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
@@ -289,7 +255,6 @@
 
     move-object v11, p1
 
-    .line 1137
     iget v1, v0, Lcom/android/server/am/ProcessStateRecord;->mCachedAdj:I
 
     const/16 v2, -0x2710
@@ -298,7 +263,6 @@
 
     return-void
 
-    .line 1140
     :cond_0
     iget-object v2, v0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -322,10 +286,8 @@
 
     invoke-virtual/range {v1 .. v10}, Lcom/android/server/am/OomAdjuster$ComputeOomAdjWindowCallback;->initialize(Lcom/android/server/am/ProcessRecord;IZZIIIII)V
 
-    .line 1142
     iget-object v1, v0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 1143
     invoke-virtual {v1}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
 
     move-result-object v1
@@ -336,32 +298,26 @@
 
     const/16 v2, 0x63
 
-    .line 1142
     invoke-static {v2, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
-    .line 1145
     iget v2, v11, Lcom/android/server/am/OomAdjuster$ComputeOomAdjWindowCallback;->adj:I
 
     iput v2, v0, Lcom/android/server/am/ProcessStateRecord;->mCachedAdj:I
 
-    .line 1146
     iget-boolean v3, v11, Lcom/android/server/am/OomAdjuster$ComputeOomAdjWindowCallback;->foregroundActivities:Z
 
     iput-boolean v3, v0, Lcom/android/server/am/ProcessStateRecord;->mCachedForegroundActivities:Z
 
-    .line 1147
     iget-boolean v3, v11, Lcom/android/server/am/OomAdjuster$ComputeOomAdjWindowCallback;->mHasVisibleActivities:Z
 
     iput v3, v0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasVisibleActivities:I
 
-    .line 1148
     iget v3, v11, Lcom/android/server/am/OomAdjuster$ComputeOomAdjWindowCallback;->procState:I
 
     iput v3, v0, Lcom/android/server/am/ProcessStateRecord;->mCachedProcState:I
 
-    .line 1149
     iget v3, v11, Lcom/android/server/am/OomAdjuster$ComputeOomAdjWindowCallback;->schedGroup:I
 
     iput v3, v0, Lcom/android/server/am/ProcessStateRecord;->mCachedSchedGroup:I
@@ -372,7 +328,6 @@
 
     add-int/2addr v2, v1
 
-    .line 1152
     iput v2, v0, Lcom/android/server/am/ProcessStateRecord;->mCachedAdj:I
 
     :cond_1
@@ -382,7 +337,6 @@
 .method public containsCycle()Z
     .locals 0
 
-    .line 891
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mContainsCycle:Z
 
     return p0
@@ -391,7 +345,6 @@
 .method public decAdjSeq()V
     .locals 1
 
-    .line 861
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSeq:I
 
     add-int/lit8 v0, v0, -0x1
@@ -404,7 +357,6 @@
 .method public decCompletedAdjSeq()V
     .locals 1
 
-    .line 876
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCompletedAdjSeq:I
 
     add-int/lit8 v0, v0, -0x1
@@ -417,7 +369,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;J)V
     .locals 7
 
-    .line 1324
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mReportedInteraction:Z
 
     const-wide/16 v1, 0x0
@@ -430,7 +381,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1325
     :cond_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -438,12 +388,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1326
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mReportedInteraction:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 1327
     iget-wide v3, p0, Lcom/android/server/am/ProcessStateRecord;->mInteractionEventTime:J
 
     cmp-long v0, v3, v1
@@ -452,10 +400,8 @@
 
     const-string v0, " time="
 
-    .line 1328
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1329
     iget-wide v3, p0, Lcom/android/server/am/ProcessStateRecord;->mInteractionEventTime:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -464,7 +410,6 @@
 
     invoke-static {v3, v4, v5, v6, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 1331
     :cond_1
     iget-wide v3, p0, Lcom/android/server/am/ProcessStateRecord;->mFgInteractionTime:J
 
@@ -474,10 +419,8 @@
 
     const-string v0, " fgInteractionTime="
 
-    .line 1332
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1333
     iget-wide v3, p0, Lcom/android/server/am/ProcessStateRecord;->mFgInteractionTime:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -486,11 +429,9 @@
 
     invoke-static {v3, v4, v5, v6, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 1335
     :cond_2
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1337
     :cond_3
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -504,7 +445,6 @@
 
     const-string v0, " lruSeq="
 
-    .line 1338
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -515,7 +455,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 1339
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "oom adj: max="
@@ -528,7 +467,6 @@
 
     const-string v0, " curRaw="
 
-    .line 1340
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawAdj:I
@@ -537,7 +475,6 @@
 
     const-string v0, " setRaw="
 
-    .line 1341
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetRawAdj:I
@@ -546,7 +483,6 @@
 
     const-string v0, " cur="
 
-    .line 1342
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurAdj:I
@@ -555,14 +491,12 @@
 
     const-string v0, " set="
 
-    .line 1343
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetAdj:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 1344
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mCurSchedGroup="
@@ -575,7 +509,6 @@
 
     const-string v0, " setSchedGroup="
 
-    .line 1345
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetSchedGroup:I
@@ -584,14 +517,12 @@
 
     const-string v0, " systemNoUi="
 
-    .line 1346
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSystemNoUi:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 1347
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "curProcState="
@@ -606,7 +537,6 @@
 
     const-string v0, " mRepProcState="
 
-    .line 1348
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mRepProcState:I
@@ -615,7 +545,6 @@
 
     const-string v0, " setProcState="
 
-    .line 1349
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetProcState:I
@@ -624,74 +553,59 @@
 
     const-string v0, " lastStateTime="
 
-    .line 1350
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1351
     invoke-virtual {p0}, Lcom/android/server/am/ProcessStateRecord;->getLastStateTime()J
 
     move-result-wide v3
 
     invoke-static {v3, v4, p3, p4, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 1352
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1353
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "curCapability="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1354
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurCapability:I
 
     invoke-static {p1, v0}, Landroid/app/ActivityManager;->printCapabilitiesFull(Ljava/io/PrintWriter;I)V
 
     const-string v0, " setCapability="
 
-    .line 1355
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1356
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetCapability:I
 
     invoke-static {p1, v0}, Landroid/app/ActivityManager;->printCapabilitiesFull(Ljava/io/PrintWriter;I)V
 
-    .line 1357
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1358
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mBackgroundRestricted:Z
 
     if-eqz v0, :cond_4
 
     const-string v0, " backgroundRestricted="
 
-    .line 1359
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1360
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mBackgroundRestricted:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
     const-string v0, " boundByNonBgRestrictedApp="
 
-    .line 1361
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1362
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetBoundByNonBgRestrictedApp:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 1364
     :cond_4
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1365
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasShownUi:Z
 
     if-nez v0, :cond_5
@@ -706,7 +620,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 1366
     :cond_5
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -720,7 +633,6 @@
 
     const-string v0, " pendingUiClean="
 
-    .line 1367
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -733,7 +645,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 1369
     :cond_6
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -747,19 +658,16 @@
 
     const-string v0, " empty="
 
-    .line 1370
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mEmpty:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 1371
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mServiceB:Z
 
     if-eqz v0, :cond_7
 
-    .line 1372
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "serviceb="
@@ -772,20 +680,17 @@
 
     const-string v0, " serviceHighRam="
 
-    .line 1373
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mServiceHighRam:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 1375
     :cond_7
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mNotCachedSinceIdle:Z
 
     if-eqz v0, :cond_8
 
-    .line 1376
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "notCachedSinceIdle="
@@ -798,7 +703,6 @@
 
     const-string v0, " initialIdlePss="
 
-    .line 1377
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -811,7 +715,6 @@
 
     invoke-virtual {p1, v3, v4}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 1379
     :cond_8
     invoke-virtual {p0}, Lcom/android/server/am/ProcessStateRecord;->hasTopUi()Z
 
@@ -829,7 +732,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 1380
     :cond_9
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -845,7 +747,6 @@
 
     const-string v0, " hasOverlayUi="
 
-    .line 1381
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessStateRecord;->hasOverlayUi()Z
@@ -856,28 +757,24 @@
 
     const-string v0, " runningRemoteAnimation="
 
-    .line 1382
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mRunningRemoteAnimation:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 1384
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
     if-lez v0, :cond_a
 
     const-string v0, " mHasTopUiRequester="
 
-    .line 1385
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 1389
     :cond_a
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasForegroundActivities:Z
 
@@ -887,13 +784,11 @@
 
     if-eqz v0, :cond_c
 
-    .line 1390
     :cond_b
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "foregroundActivities="
 
-    .line 1391
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasForegroundActivities:Z
@@ -902,7 +797,6 @@
 
     const-string v0, " (rep="
 
-    .line 1392
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mRepForegroundActivities:Z
@@ -913,7 +807,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1394
     :cond_c
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetProcState:I
 
@@ -921,25 +814,20 @@
 
     if-le v0, v3, :cond_d
 
-    .line 1395
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "whenUnimportant="
 
-    .line 1396
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1397
     iget-wide v3, p0, Lcom/android/server/am/ProcessStateRecord;->mWhenUnimportant:J
 
     sub-long/2addr v3, p3
 
     invoke-static {v3, v4, p1}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 1398
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1400
     :cond_d
     iget-wide v3, p0, Lcom/android/server/am/ProcessStateRecord;->mLastTopTime:J
 
@@ -947,22 +835,18 @@
 
     if-lez v0, :cond_e
 
-    .line 1401
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "lastTopTime="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1402
     iget-wide v3, p0, Lcom/android/server/am/ProcessStateRecord;->mLastTopTime:J
 
     invoke-static {v3, v4, p3, p4, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 1403
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1405
     :cond_e
     iget-wide p3, p0, Lcom/android/server/am/ProcessStateRecord;->mLastInvisibleTime:J
 
@@ -976,43 +860,35 @@
 
     if-gez p3, :cond_f
 
-    .line 1406
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo p3, "lastInvisibleTime="
 
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1407
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p3
 
-    .line 1408
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     sub-long p3, v0, p3
 
-    .line 1409
     iget-wide v2, p0, Lcom/android/server/am/ProcessStateRecord;->mLastInvisibleTime:J
 
     add-long/2addr p3, v2
 
-    .line 1411
     invoke-static {p1, p3, p4, v0, v1}, Landroid/util/TimeUtils;->dumpTimeWithDelta(Ljava/io/PrintWriter;JJ)V
 
-    .line 1412
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 1414
     :cond_f
     iget-boolean p3, p0, Lcom/android/server/am/ProcessStateRecord;->mHasStartedServices:Z
 
     if-eqz p3, :cond_10
 
-    .line 1415
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p2, "hasStartedServices="
@@ -1030,29 +906,23 @@
 .method public forceProcessStateUpTo(I)V
     .locals 1
 
-    .line 625
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mRepProcState:I
 
     if-le v0, p1, :cond_0
 
-    .line 626
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForProcLockedSection()V
 
     monitor-enter v0
 
-    .line 627
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/am/ProcessStateRecord;->setReportedProcState(I)V
 
-    .line 628
     invoke-virtual {p0, p1}, Lcom/android/server/am/ProcessStateRecord;->setCurProcState(I)V
 
-    .line 629
     invoke-virtual {p0, p1}, Lcom/android/server/am/ProcessStateRecord;->setCurRawProcState(I)V
 
-    .line 630
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1081,7 +951,6 @@
 .method public getAdjSeq()I
     .locals 0
 
-    .line 866
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSeq:I
 
     return p0
@@ -1090,7 +959,6 @@
 .method public getAdjSource()Ljava/lang/Object;
     .locals 0
 
-    .line 983
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSource:Ljava/lang/Object;
 
     return-object p0
@@ -1099,7 +967,6 @@
 .method public getAdjSourceProcState()I
     .locals 0
 
-    .line 993
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSourceProcState:I
 
     return p0
@@ -1108,7 +975,6 @@
 .method public getAdjTarget()Ljava/lang/Object;
     .locals 0
 
-    .line 1003
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjTarget:Ljava/lang/Object;
 
     return-object p0
@@ -1117,7 +983,6 @@
 .method public getAdjType()Ljava/lang/String;
     .locals 0
 
-    .line 963
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjType:Ljava/lang/String;
 
     return-object p0
@@ -1126,7 +991,6 @@
 .method public getAdjTypeCode()I
     .locals 0
 
-    .line 973
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjTypeCode:I
 
     return p0
@@ -1135,7 +999,6 @@
 .method public getCacheOomRankerRss()J
     .locals 2
 
-    .line 1314
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCacheOomRankerRss:J
 
     return-wide v0
@@ -1144,7 +1007,6 @@
 .method public getCacheOomRankerRssTimeMs()J
     .locals 2
 
-    .line 1319
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCacheOomRankerRssTimeMs:J
 
     return-wide v0
@@ -1153,7 +1015,6 @@
 .method public getCacheOomRankerUseCount()I
     .locals 0
 
-    .line 937
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCacheOomRankerUseCount:I
 
     return p0
@@ -1162,7 +1023,6 @@
 .method public getCachedAdj()I
     .locals 0
 
-    .line 1158
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedAdj:I
 
     return p0
@@ -1171,7 +1031,6 @@
 .method public getCachedCompatChange(I)Z
     .locals 4
 
-    .line 1125
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedCompatChanges:[I
 
     aget v1, v0, p1
@@ -1182,7 +1041,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1127
     iget-object v1, p0, Lcom/android/server/am/ProcessStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mOomAdjuster:Lcom/android/server/am/OomAdjuster;
@@ -1195,10 +1053,8 @@
 
     move-result v1
 
-    .line 1128
     aput v1, v0, p1
 
-    .line 1130
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedCompatChanges:[I
 
@@ -1217,7 +1073,6 @@
 .method public getCachedForegroundActivities()Z
     .locals 0
 
-    .line 1163
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedForegroundActivities:Z
 
     return p0
@@ -1226,7 +1081,6 @@
 .method public getCachedHasActivities()Z
     .locals 3
 
-    .line 1043
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasActivities:I
 
     const/4 v1, -0x1
@@ -1235,7 +1089,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1044
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -1246,14 +1099,12 @@
 
     move-result v0
 
-    .line 1045
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasActivities:I
 
     const/16 v1, 0x10
 
     if-ne v0, v2, :cond_0
 
-    .line 1047
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessRecord;->mProfile:Lcom/android/server/am/ProcessProfileRecord;
@@ -1262,7 +1113,6 @@
 
     goto :goto_0
 
-    .line 1049
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -1270,7 +1120,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/ProcessProfileRecord;->clearHostingComponentType(I)V
 
-    .line 1052
     :cond_1
     :goto_0
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasActivities:I
@@ -1289,14 +1138,12 @@
 .method public getCachedHasRecentTasks()Z
     .locals 2
 
-    .line 1101
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasRecentTasks:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1102
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -1307,10 +1154,8 @@
 
     move-result v0
 
-    .line 1103
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasRecentTasks:I
 
-    .line 1105
     :cond_0
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasRecentTasks:I
 
@@ -1330,14 +1175,12 @@
 .method public getCachedHasVisibleActivities()Z
     .locals 2
 
-    .line 1066
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasVisibleActivities:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1067
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -1348,10 +1191,8 @@
 
     move-result v0
 
-    .line 1068
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasVisibleActivities:I
 
-    .line 1070
     :cond_0
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasVisibleActivities:I
 
@@ -1371,14 +1212,12 @@
 .method public getCachedIsHeavyWeight()Z
     .locals 2
 
-    .line 1057
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHeavyWeight:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1058
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -1389,10 +1228,8 @@
 
     move-result v0
 
-    .line 1059
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHeavyWeight:I
 
-    .line 1061
     :cond_0
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHeavyWeight:I
 
@@ -1412,7 +1249,6 @@
 .method public getCachedIsHomeProcess()Z
     .locals 4
 
-    .line 1075
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHomeProcess:I
 
     const/4 v1, -0x1
@@ -1423,7 +1259,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1076
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -1436,10 +1271,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1077
     iput v3, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHomeProcess:I
 
-    .line 1078
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mAppProfiler:Lcom/android/server/am/AppProfiler;
@@ -1448,11 +1281,9 @@
 
     goto :goto_0
 
-    .line 1080
     :cond_0
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHomeProcess:I
 
-    .line 1083
     :cond_1
     :goto_0
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHomeProcess:I
@@ -1468,7 +1299,6 @@
 .method public getCachedIsPreviousProcess()Z
     .locals 4
 
-    .line 1088
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsPreviousProcess:I
 
     const/4 v1, -0x1
@@ -1479,7 +1309,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1089
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -1492,10 +1321,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1090
     iput v3, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsPreviousProcess:I
 
-    .line 1091
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mAppProfiler:Lcom/android/server/am/AppProfiler;
@@ -1504,11 +1331,9 @@
 
     goto :goto_0
 
-    .line 1093
     :cond_0
     iput v2, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsPreviousProcess:I
 
-    .line 1096
     :cond_1
     :goto_0
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsPreviousProcess:I
@@ -1524,7 +1349,6 @@
 .method public getCachedIsReceivingBroadcast([I)Z
     .locals 4
 
-    .line 1110
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsReceivingBroadcast:I
 
     const/4 v1, -0x1
@@ -1535,7 +1359,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1111
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -1544,19 +1367,16 @@
 
     move-result v0
 
-    .line 1112
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsReceivingBroadcast:I
 
     const/16 v1, 0x20
 
     if-ne v0, v3, :cond_0
 
-    .line 1114
     aget p1, p1, v2
 
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedSchedGroup:I
 
-    .line 1115
     iget-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object p1, p1, Lcom/android/server/am/ProcessRecord;->mProfile:Lcom/android/server/am/ProcessProfileRecord;
@@ -1565,7 +1385,6 @@
 
     goto :goto_0
 
-    .line 1117
     :cond_0
     iget-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -1573,7 +1392,6 @@
 
     invoke-virtual {p1, v1}, Lcom/android/server/am/ProcessProfileRecord;->clearHostingComponentType(I)V
 
-    .line 1120
     :cond_1
     :goto_0
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsReceivingBroadcast:I
@@ -1589,7 +1407,6 @@
 .method public getCachedProcState()I
     .locals 0
 
-    .line 1168
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedProcState:I
 
     return p0
@@ -1598,7 +1415,6 @@
 .method public getCachedSchedGroup()I
     .locals 0
 
-    .line 1173
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedSchedGroup:I
 
     return p0
@@ -1607,7 +1423,6 @@
 .method public getCompletedAdjSeq()I
     .locals 0
 
-    .line 881
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCompletedAdjSeq:I
 
     return p0
@@ -1616,7 +1431,6 @@
 .method public getCurAdj()I
     .locals 0
 
-    .line 517
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurAdj:I
 
     return p0
@@ -1625,7 +1439,6 @@
 .method public getCurCapability()I
     .locals 0
 
-    .line 557
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurCapability:I
 
     return p0
@@ -1634,7 +1447,6 @@
 .method public getCurProcState()I
     .locals 0
 
-    .line 599
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurProcState:I
 
     return p0
@@ -1643,7 +1455,6 @@
 .method public getCurRawAdj()I
     .locals 0
 
-    .line 496
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawAdj:I
 
     return p0
@@ -1652,7 +1463,6 @@
 .method public getCurRawProcState()I
     .locals 0
 
-    .line 609
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawProcState:I
 
     return p0
@@ -1661,7 +1471,6 @@
 .method public getCurrentSchedulingGroup()I
     .locals 0
 
-    .line 578
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurSchedGroup:I
 
     return p0
@@ -1670,7 +1479,6 @@
 .method public getFgInteractionTime()J
     .locals 2
 
-    .line 841
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mFgInteractionTime:J
 
     return-wide v0
@@ -1679,7 +1487,6 @@
 .method public getForcingToImportant()Ljava/lang/Object;
     .locals 0
 
-    .line 851
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mForcingToImportant:Ljava/lang/Object;
 
     return-object p0
@@ -1688,7 +1495,6 @@
 .method public getInteractionEventTime()J
     .locals 2
 
-    .line 830
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mInteractionEventTime:J
 
     return-wide v0
@@ -1697,7 +1503,6 @@
 .method public getLastCanKillOnBgRestrictedAndIdleTime()J
     .locals 2
 
-    .line 1304
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mLastCanKillOnBgRestrictedAndIdleTime:J
 
     return-wide v0
@@ -1706,7 +1511,6 @@
 .method public getLastInvisibleTime()J
     .locals 2
 
-    .line 1263
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mLastInvisibleTime:J
 
     return-wide v0
@@ -1715,7 +1519,6 @@
 .method public getLastStateTime()J
     .locals 2
 
-    .line 655
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mLastStateTime:J
 
     return-wide v0
@@ -1724,7 +1527,6 @@
 .method public getLastTopTime()J
     .locals 2
 
-    .line 912
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mLastTopTime:J
 
     return-wide v0
@@ -1733,7 +1535,6 @@
 .method public getMaxAdj()I
     .locals 0
 
-    .line 484
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mMaxAdj:I
 
     return p0
@@ -1742,7 +1543,6 @@
 .method public getReportedProcState()I
     .locals 0
 
-    .line 620
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mRepProcState:I
 
     return p0
@@ -1751,7 +1551,6 @@
 .method public getSavedPriority()I
     .locals 0
 
-    .line 665
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSavedPriority:I
 
     return p0
@@ -1760,7 +1559,6 @@
 .method public getSetAdj()I
     .locals 0
 
-    .line 527
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetAdj:I
 
     return p0
@@ -1769,14 +1567,12 @@
 .method public getSetAdjWithServices()I
     .locals 2
 
-    .line 532
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetAdj:I
 
     const/16 v1, 0x384
 
     if-lt v0, v1, :cond_0
 
-    .line 533
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasStartedServices:Z
 
     if-eqz p0, :cond_0
@@ -1792,7 +1588,6 @@
 .method public getSetCapability()I
     .locals 0
 
-    .line 567
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetCapability:I
 
     return p0
@@ -1801,7 +1596,6 @@
 .method public getSetProcState()I
     .locals 0
 
-    .line 645
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetProcState:I
 
     return p0
@@ -1810,7 +1604,6 @@
 .method public getSetRawAdj()I
     .locals 0
 
-    .line 506
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetRawAdj:I
 
     return p0
@@ -1819,7 +1612,6 @@
 .method public getSetSchedGroup()I
     .locals 0
 
-    .line 588
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetSchedGroup:I
 
     return p0
@@ -1828,7 +1620,6 @@
 .method public getVerifiedAdj()I
     .locals 0
 
-    .line 547
     iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mVerifiedAdj:I
 
     return p0
@@ -1837,7 +1628,6 @@
 .method public getWhenUnimportant()J
     .locals 2
 
-    .line 902
     iget-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mWhenUnimportant:J
 
     return-wide v0
@@ -1846,7 +1636,6 @@
 .method public hasForegroundActivities()Z
     .locals 0
 
-    .line 720
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasForegroundActivities:Z
 
     return p0
@@ -1855,7 +1644,6 @@
 .method public hasOverlayUi()Z
     .locals 0
 
-    .line 781
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasOverlayUi:Z
 
     return p0
@@ -1864,7 +1652,6 @@
 .method public hasProcStateChanged()Z
     .locals 0
 
-    .line 809
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mProcStateChanged:Z
 
     return p0
@@ -1873,7 +1660,6 @@
 .method public hasRepForegroundActivities()Z
     .locals 0
 
-    .line 730
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mRepForegroundActivities:Z
 
     return p0
@@ -1882,7 +1668,6 @@
 .method public hasReportedInteraction()Z
     .locals 0
 
-    .line 819
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mReportedInteraction:Z
 
     return p0
@@ -1891,7 +1676,6 @@
 .method public hasShownUi()Z
     .locals 0
 
-    .line 740
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasShownUi:Z
 
     return p0
@@ -1900,7 +1684,6 @@
 .method public hasTopUi()Z
     .locals 0
 
-    .line 770
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUi:Z
 
     return p0
@@ -1909,7 +1692,6 @@
 .method public init(J)V
     .locals 0
 
-    .line 474
     iput-wide p1, p0, Lcom/android/server/am/ProcessStateRecord;->mLastStateTime:J
 
     return-void
@@ -1918,7 +1700,6 @@
 .method public isBackgroundRestricted()Z
     .locals 0
 
-    .line 1223
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mBackgroundRestricted:Z
 
     return p0
@@ -1927,7 +1708,6 @@
 .method public isCached()Z
     .locals 0
 
-    .line 932
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCached:Z
 
     return p0
@@ -1936,7 +1716,6 @@
 .method public isCurBoundByNonBgRestrictedApp()Z
     .locals 0
 
-    .line 1233
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurBoundByNonBgRestrictedApp:Z
 
     return p0
@@ -1945,7 +1724,6 @@
 .method public isEmpty()Z
     .locals 0
 
-    .line 922
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mEmpty:Z
 
     return p0
@@ -1954,7 +1732,6 @@
 .method public isNotCachedSinceIdle()Z
     .locals 0
 
-    .line 695
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mNotCachedSinceIdle:Z
 
     return p0
@@ -1963,7 +1740,6 @@
 .method public isReachable()Z
     .locals 0
 
-    .line 1018
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mReachable:Z
 
     return p0
@@ -1972,7 +1748,6 @@
 .method public isRunningRemoteAnimation()Z
     .locals 0
 
-    .line 786
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mRunningRemoteAnimation:Z
 
     return p0
@@ -1981,7 +1756,6 @@
 .method public isServiceB()Z
     .locals 0
 
-    .line 675
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mServiceB:Z
 
     return p0
@@ -1990,7 +1764,6 @@
 .method public isSetBoundByNonBgRestrictedApp()Z
     .locals 0
 
-    .line 1243
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetBoundByNonBgRestrictedApp:Z
 
     return p0
@@ -1999,7 +1772,6 @@
 .method public isSetCached()Z
     .locals 0
 
-    .line 1283
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetCached:Z
 
     return p0
@@ -2008,7 +1780,6 @@
 .method public isSetNoKillOnBgRestrictedAndIdle()Z
     .locals 0
 
-    .line 1293
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetNoKillOnBgRestrictedAndIdle:Z
 
     return p0
@@ -2017,7 +1788,6 @@
 .method public isSystemNoUi()Z
     .locals 0
 
-    .line 947
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mSystemNoUi:Z
 
     return p0
@@ -2026,7 +1796,6 @@
 .method public makeAdjReason()Ljava/lang/String;
     .locals 4
 
-    .line 1178
     iget-object v0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSource:Ljava/lang/Object;
 
     if-nez v0, :cond_1
@@ -2042,7 +1811,6 @@
 
     return-object p0
 
-    .line 1179
     :cond_1
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2053,10 +1821,8 @@
 
     const/16 v1, 0x20
 
-    .line 1180
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1181
     iget-object v1, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjTarget:Ljava/lang/Object;
 
     instance-of v2, v1, Landroid/content/ComponentName;
@@ -2065,7 +1831,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1182
     check-cast v1, Landroid/content/ComponentName;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
@@ -2079,7 +1844,6 @@
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 1184
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -2088,17 +1852,14 @@
 
     goto :goto_1
 
-    .line 1186
     :cond_3
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_1
     const-string v1, "<="
 
-    .line 1188
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1189
     iget-object v1, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSource:Ljava/lang/Object;
 
     instance-of v2, v1, Lcom/android/server/am/ProcessRecord;
@@ -2107,10 +1868,8 @@
 
     const-string v1, "Proc{"
 
-    .line 1190
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1191
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSource:Ljava/lang/Object;
 
     check-cast p0, Lcom/android/server/am/ProcessRecord;
@@ -2123,7 +1882,6 @@
 
     const-string/jumbo p0, "}"
 
-    .line 1192
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -2131,7 +1889,6 @@
     :cond_4
     if-eqz v1, :cond_5
 
-    .line 1194
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -2140,11 +1897,9 @@
 
     goto :goto_2
 
-    .line 1196
     :cond_5
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1198
     :goto_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2158,20 +1913,16 @@
 
     const/4 v0, 0x0
 
-    .line 1209
     invoke-virtual {p0, v0}, Lcom/android/server/am/ProcessStateRecord;->setHasForegroundActivities(Z)V
 
-    .line 1210
     iput-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasShownUi:Z
 
     const/4 v1, 0x0
 
-    .line 1211
     iput-object v1, p0, Lcom/android/server/am/ProcessStateRecord;->mForcingToImportant:Ljava/lang/Object;
 
     const/16 v1, -0x2710
 
-    .line 1212
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mVerifiedAdj:I
 
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetAdj:I
@@ -2182,26 +1933,22 @@
 
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawAdj:I
 
-    .line 1213
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetCapability:I
 
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurCapability:I
 
-    .line 1214
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetSchedGroup:I
 
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurSchedGroup:I
 
     const/16 v1, 0x14
 
-    .line 1215
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetProcState:I
 
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawProcState:I
 
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurProcState:I
 
-    .line 1216
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedCompatChanges:[I
 
@@ -2211,7 +1958,6 @@
 
     const/4 v2, -0x1
 
-    .line 1217
     aput v2, v1, v0
 
     add-int/lit8 v0, v0, 0x1
@@ -2229,7 +1975,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 756
     iget p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
     add-int/2addr p1, v0
@@ -2238,7 +1983,6 @@
 
     goto :goto_0
 
-    .line 758
     :cond_0
     iget p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
@@ -2246,7 +1990,6 @@
 
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
-    .line 760
     :goto_0
     iget p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
@@ -2254,10 +1997,8 @@
 
     if-gez p1, :cond_1
 
-    .line 761
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
-    .line 763
     :cond_1
     iget p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUiRequester:I
 
@@ -2271,7 +2012,6 @@
     :goto_1
     iput-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUi:Z
 
-    .line 764
     iget-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p1}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2290,43 +2030,32 @@
 
     const/4 v0, -0x1
 
-    .line 1028
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasActivities:I
 
-    .line 1029
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHeavyWeight:I
 
-    .line 1030
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasVisibleActivities:I
 
-    .line 1031
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsHomeProcess:I
 
-    .line 1032
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsPreviousProcess:I
 
-    .line 1033
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedHasRecentTasks:I
 
-    .line 1034
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedIsReceivingBroadcast:I
 
     const/16 v0, -0x2710
 
-    .line 1035
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedAdj:I
 
     const/4 v0, 0x0
 
-    .line 1036
     iput-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedForegroundActivities:Z
 
     const/16 v1, 0x13
 
-    .line 1037
     iput v1, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedProcState:I
 
-    .line 1038
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCachedSchedGroup:I
 
     return-void
@@ -2335,7 +2064,6 @@
 .method public setAbnormalStatus(Z)V
     .locals 0
 
-    .line 1008
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSlowAbnormal:Z
 
     return-void
@@ -2344,7 +2072,6 @@
 .method public setAdjSeq(I)V
     .locals 0
 
-    .line 856
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSeq:I
 
     return-void
@@ -2353,7 +2080,6 @@
 .method public setAdjSource(Ljava/lang/Object;)V
     .locals 0
 
-    .line 978
     iput-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSource:Ljava/lang/Object;
 
     return-void
@@ -2362,7 +2088,6 @@
 .method public setAdjSourceProcState(I)V
     .locals 0
 
-    .line 988
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjSourceProcState:I
 
     return-void
@@ -2371,7 +2096,6 @@
 .method public setAdjTarget(Ljava/lang/Object;)V
     .locals 0
 
-    .line 998
     iput-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjTarget:Ljava/lang/Object;
 
     return-void
@@ -2380,7 +2104,6 @@
 .method public setAdjType(Ljava/lang/String;)V
     .locals 0
 
-    .line 958
     iput-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjType:Ljava/lang/String;
 
     return-void
@@ -2389,7 +2112,6 @@
 .method public setAdjTypeCode(I)V
     .locals 0
 
-    .line 968
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mAdjTypeCode:I
 
     return-void
@@ -2398,7 +2120,6 @@
 .method public setBackgroundRestricted(Z)V
     .locals 0
 
-    .line 1228
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mBackgroundRestricted:Z
 
     return-void
@@ -2407,10 +2128,8 @@
 .method public setCacheOomRankerRss(JJ)V
     .locals 0
 
-    .line 1308
     iput-wide p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCacheOomRankerRss:J
 
-    .line 1309
     iput-wide p3, p0, Lcom/android/server/am/ProcessStateRecord;->mCacheOomRankerRssTimeMs:J
 
     return-void
@@ -2419,7 +2138,6 @@
 .method public setCached(Z)V
     .locals 0
 
-    .line 927
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCached:Z
 
     return-void
@@ -2428,7 +2146,6 @@
 .method public setCompletedAdjSeq(I)V
     .locals 0
 
-    .line 871
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCompletedAdjSeq:I
 
     return-void
@@ -2437,7 +2154,6 @@
 .method public setContainsCycle(Z)V
     .locals 0
 
-    .line 886
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mContainsCycle:Z
 
     return-void
@@ -2446,10 +2162,8 @@
 .method public setCurAdj(I)V
     .locals 0
 
-    .line 511
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurAdj:I
 
-    .line 512
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2464,7 +2178,6 @@
 .method public setCurBoundByNonBgRestrictedApp(Z)V
     .locals 0
 
-    .line 1238
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurBoundByNonBgRestrictedApp:Z
 
     return-void
@@ -2473,7 +2186,6 @@
 .method public setCurCapability(I)V
     .locals 0
 
-    .line 552
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurCapability:I
 
     return-void
@@ -2482,10 +2194,8 @@
 .method public setCurProcState(I)V
     .locals 0
 
-    .line 593
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurProcState:I
 
-    .line 594
     iget-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p1}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2502,10 +2212,8 @@
 .method public setCurRawAdj(I)V
     .locals 1
 
-    .line 489
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawAdj:I
 
-    .line 490
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2532,7 +2240,6 @@
 .method public setCurRawProcState(I)V
     .locals 0
 
-    .line 604
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurRawProcState:I
 
     return-void
@@ -2541,10 +2248,8 @@
 .method public setCurrentSchedulingGroup(I)V
     .locals 0
 
-    .line 572
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mCurSchedGroup:I
 
-    .line 573
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2559,7 +2264,6 @@
 .method public setEmpty(Z)V
     .locals 0
 
-    .line 917
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mEmpty:Z
 
     return-void
@@ -2568,10 +2272,8 @@
 .method public setFgInteractionTime(J)V
     .locals 0
 
-    .line 835
     iput-wide p1, p0, Lcom/android/server/am/ProcessStateRecord;->mFgInteractionTime:J
 
-    .line 836
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2586,7 +2288,6 @@
 .method public setForcingToImportant(Ljava/lang/Object;)V
     .locals 0
 
-    .line 846
     iput-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mForcingToImportant:Ljava/lang/Object;
 
     return-void
@@ -2595,7 +2296,6 @@
 .method public setHasForegroundActivities(Z)V
     .locals 0
 
-    .line 715
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasForegroundActivities:Z
 
     return-void
@@ -2604,10 +2304,8 @@
 .method public setHasOverlayUi(Z)V
     .locals 0
 
-    .line 775
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasOverlayUi:Z
 
-    .line 776
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2622,7 +2320,6 @@
 .method public setHasShownUi(Z)V
     .locals 0
 
-    .line 735
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasShownUi:Z
 
     return-void
@@ -2631,14 +2328,12 @@
 .method public setHasStartedServices(Z)V
     .locals 1
 
-    .line 700
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasStartedServices:Z
 
     const/16 v0, 0x80
 
     if-eqz p1, :cond_0
 
-    .line 702
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->mProfile:Lcom/android/server/am/ProcessProfileRecord;
@@ -2647,7 +2342,6 @@
 
     goto :goto_0
 
-    .line 704
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -2662,10 +2356,8 @@
 .method public setHasTopUi(Z)V
     .locals 0
 
-    .line 745
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mHasTopUi:Z
 
-    .line 746
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2680,10 +2372,8 @@
 .method public setInteractionEventTime(J)V
     .locals 0
 
-    .line 824
     iput-wide p1, p0, Lcom/android/server/am/ProcessStateRecord;->mInteractionEventTime:J
 
-    .line 825
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2698,7 +2388,6 @@
 .method public setLastCanKillOnBgRestrictedAndIdleTime(J)V
     .locals 0
 
-    .line 1298
     iput-wide p1, p0, Lcom/android/server/am/ProcessStateRecord;->mLastCanKillOnBgRestrictedAndIdleTime:J
 
     return-void
@@ -2707,7 +2396,6 @@
 .method public setLastStateTime(J)V
     .locals 0
 
-    .line 650
     iput-wide p1, p0, Lcom/android/server/am/ProcessStateRecord;->mLastStateTime:J
 
     return-void
@@ -2716,7 +2404,6 @@
 .method public setLastTopTime(J)V
     .locals 0
 
-    .line 907
     iput-wide p1, p0, Lcom/android/server/am/ProcessStateRecord;->mLastTopTime:J
 
     return-void
@@ -2725,7 +2412,6 @@
 .method public setMaxAdj(I)V
     .locals 0
 
-    .line 479
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mMaxAdj:I
 
     return-void
@@ -2734,7 +2420,6 @@
 .method public setNoKillOnBgRestrictedAndIdle(Z)V
     .locals 0
 
-    .line 1268
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mNoKillOnBgRestrictedAndIdle:Z
 
     return-void
@@ -2743,7 +2428,6 @@
 .method public setNotCachedSinceIdle(Z)V
     .locals 0
 
-    .line 690
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mNotCachedSinceIdle:Z
 
     return-void
@@ -2752,7 +2436,6 @@
 .method public setProcStateChanged(Z)V
     .locals 0
 
-    .line 804
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mProcStateChanged:Z
 
     return-void
@@ -2761,7 +2444,6 @@
 .method public setReachable(Z)V
     .locals 0
 
-    .line 1023
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mReachable:Z
 
     return-void
@@ -2770,7 +2452,6 @@
 .method public setRepForegroundActivities(Z)V
     .locals 0
 
-    .line 725
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mRepForegroundActivities:Z
 
     return-void
@@ -2779,7 +2460,6 @@
 .method public setReportedInteraction(Z)V
     .locals 0
 
-    .line 814
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mReportedInteraction:Z
 
     return-void
@@ -2788,10 +2468,8 @@
 .method public setReportedProcState(I)V
     .locals 0
 
-    .line 614
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mRepProcState:I
 
-    .line 615
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2806,18 +2484,15 @@
 .method public setRunningRemoteAnimation(Z)V
     .locals 1
 
-    .line 791
     iget-boolean v0, p0, Lcom/android/server/am/ProcessStateRecord;->mRunningRemoteAnimation:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 794
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mRunningRemoteAnimation:Z
 
-    .line 799
     iget-object p1, p0, Lcom/android/server/am/ProcessStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -2832,7 +2507,6 @@
 .method public setSavedPriority(I)V
     .locals 0
 
-    .line 660
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSavedPriority:I
 
     return-void
@@ -2841,7 +2515,6 @@
 .method public setServiceB(Z)V
     .locals 0
 
-    .line 670
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mServiceB:Z
 
     return-void
@@ -2850,7 +2523,6 @@
 .method public setServiceHighRam(Z)V
     .locals 0
 
-    .line 680
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mServiceHighRam:Z
 
     return-void
@@ -2859,7 +2531,6 @@
 .method public setSetAdj(I)V
     .locals 0
 
-    .line 522
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetAdj:I
 
     return-void
@@ -2868,7 +2539,6 @@
 .method public setSetBoundByNonBgRestrictedApp(Z)V
     .locals 0
 
-    .line 1248
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetBoundByNonBgRestrictedApp:Z
 
     return-void
@@ -2877,7 +2547,6 @@
 .method public setSetCached(Z)V
     .locals 0
 
-    .line 1278
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetCached:Z
 
     return-void
@@ -2886,7 +2555,6 @@
 .method public setSetCapability(I)V
     .locals 0
 
-    .line 562
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetCapability:I
 
     return-void
@@ -2895,7 +2563,6 @@
 .method public setSetNoKillOnBgRestrictedAndIdle(Z)V
     .locals 0
 
-    .line 1288
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetNoKillOnBgRestrictedAndIdle:Z
 
     return-void
@@ -2904,7 +2571,6 @@
 .method public setSetProcState(I)V
     .locals 1
 
-    .line 636
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mSetProcState:I
 
     invoke-static {v0}, Landroid/app/ActivityManager;->isProcStateCached(I)Z
@@ -2913,21 +2579,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 637
     invoke-static {p1}, Landroid/app/ActivityManager;->isProcStateCached(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 638
     iget v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCacheOomRankerUseCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/am/ProcessStateRecord;->mCacheOomRankerUseCount:I
 
-    .line 640
     :cond_0
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetProcState:I
 
@@ -2937,7 +2600,6 @@
 .method public setSetRawAdj(I)V
     .locals 0
 
-    .line 501
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetRawAdj:I
 
     return-void
@@ -2946,7 +2608,6 @@
 .method public setSetSchedGroup(I)V
     .locals 0
 
-    .line 583
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSetSchedGroup:I
 
     return-void
@@ -2955,7 +2616,6 @@
 .method public setSystemNoUi(Z)V
     .locals 0
 
-    .line 942
     iput-boolean p1, p0, Lcom/android/server/am/ProcessStateRecord;->mSystemNoUi:Z
 
     return-void
@@ -2964,7 +2624,6 @@
 .method public setVerifiedAdj(I)V
     .locals 0
 
-    .line 542
     iput p1, p0, Lcom/android/server/am/ProcessStateRecord;->mVerifiedAdj:I
 
     return-void
@@ -2973,10 +2632,8 @@
 .method public setWhenUnimportant(J)V
     .locals 0
 
-    .line 896
     iput-wide p1, p0, Lcom/android/server/am/ProcessStateRecord;->mWhenUnimportant:J
 
-    .line 897
     iget-object p0, p0, Lcom/android/server/am/ProcessStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2991,7 +2648,6 @@
 .method public shouldNotKillOnBgRestrictedAndIdle()Z
     .locals 0
 
-    .line 1273
     iget-boolean p0, p0, Lcom/android/server/am/ProcessStateRecord;->mNoKillOnBgRestrictedAndIdle:Z
 
     return p0
@@ -3004,12 +2660,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1254
     iput-wide v0, p0, Lcom/android/server/am/ProcessStateRecord;->mLastInvisibleTime:J
 
     goto :goto_0
 
-    .line 1255
     :cond_0
     iget-wide v2, p0, Lcom/android/server/am/ProcessStateRecord;->mLastInvisibleTime:J
 
@@ -3017,7 +2671,6 @@
 
     if-nez p1, :cond_1
 
-    .line 1256
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

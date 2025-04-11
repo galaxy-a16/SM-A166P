@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1720
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1721
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

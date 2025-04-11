@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/PACMService;)V
     .locals 0
 
-    .line 216
     iput-object p1, p0, Lcom/android/server/PACMService$2;->this$0:Lcom/android/server/PACMService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 219
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 220
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +47,6 @@
 
     const-string p2, "com.samsung.android.aircommandmanager.START_LOCAL_SOCKET"
 
-    .line 222
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -59,10 +55,8 @@
 
     const-string p1, "GalaxyDiag app start"
 
-    .line 223
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     iget-object p1, p0, Lcom/android/server/PACMService$2;->this$0:Lcom/android/server/PACMService;
 
     const-string p2, "com.samsung.android.app.mobiledoctor"
@@ -77,7 +71,6 @@
 
     const-string/jumbo p2, "kr.co.avad.diagnostictool"
 
-    .line 225
     invoke-static {p1, p2}, Lcom/android/server/PACMService;->-$$Nest$misPackageInstalled(Lcom/android/server/PACMService;Ljava/lang/String;)Z
 
     move-result p1
@@ -88,7 +81,6 @@
 
     const-string p2, "com.samsung.android.app.mobiledoctor.ve"
 
-    .line 226
     invoke-static {p1, p2}, Lcom/android/server/PACMService;->-$$Nest$misPackageInstalled(Lcom/android/server/PACMService;Ljava/lang/String;)Z
 
     move-result p1
@@ -99,7 +91,6 @@
 
     const-string p1, "com.samsung.android.app.repaircal"
 
-    .line 227
     invoke-static {p0, p1}, Lcom/android/server/PACMService;->-$$Nest$misPackageInstalled(Lcom/android/server/PACMService;Ljava/lang/String;)Z
 
     move-result p0
@@ -109,7 +100,6 @@
     :cond_0
     const/4 p0, 0x1
 
-    .line 228
     sput-boolean p0, Lcom/android/server/PACMService;->mGalaxyDiag:Z
 
     goto :goto_0
@@ -117,7 +107,6 @@
     :cond_1
     const-string p0, "com.samsung.android.aircommandmanager.STOP_LOCAL_SOCKET"
 
-    .line 229
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -126,12 +115,10 @@
 
     const-string p0, "GalaxyDiag app end"
 
-    .line 230
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
-    .line 231
     sput-boolean p0, Lcom/android/server/PACMService;->mGalaxyDiag:Z
 
     :cond_2

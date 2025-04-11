@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$madjustRunningCount(Lcom/android/server/job/JobConcurrencyManager$PackageStats;ZZ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->adjustRunningCount(ZZ)V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$madjustStagedCount(Lcom/android/server/job/JobConcurrencyManager$PackageStats;ZZ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->adjustStagedCount(ZZ)V
 
     return-void
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$mdumpLocked(Lcom/android/server/job/JobConcurrencyManager$PackageStats;Landroid/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->dumpLocked(Landroid/util/IndentingPrintWriter;)V
 
     return-void
@@ -48,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$mresetStagedCount(Lcom/android/server/job/JobConcurrencyManager$PackageStats;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->resetStagedCount()V
 
     return-void
@@ -57,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$msetPackage(Lcom/android/server/job/JobConcurrencyManager$PackageStats;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->setPackage(ILjava/lang/String;)V
 
     return-void
@@ -84,7 +79,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 2892
     iget p2, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numRunningEj:I
 
     if-eqz p1, :cond_0
@@ -105,7 +99,6 @@
 
     goto :goto_2
 
-    .line 2894
     :cond_1
     iget p2, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numRunningRegular:I
 
@@ -140,7 +133,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 2900
     iget p2, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numStagedEj:I
 
     if-eqz p1, :cond_0
@@ -161,7 +153,6 @@
 
     goto :goto_2
 
-    .line 2902
     :cond_1
     iget p2, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numStagedRegular:I
 
@@ -190,25 +181,20 @@
 
     const-string v0, "PackageStats{"
 
-    .line 2908
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2909
     iget v0, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->userId:I
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(I)V
 
     const-string v0, "-"
 
-    .line 2910
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2911
     iget-object v0, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2912
     iget v0, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numRunningEj:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -219,7 +205,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 2913
     iget v0, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numRunningRegular:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -230,7 +215,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 2914
     iget v0, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numStagedEj:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -241,7 +225,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 2915
     iget p0, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numStagedRegular:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -254,7 +237,6 @@
 
     const-string/jumbo p0, "}"
 
-    .line 2916
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -265,7 +247,6 @@
 
     const/4 v0, 0x0
 
-    .line 2887
     iput v0, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numStagedRegular:I
 
     iput v0, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numStagedEj:I
@@ -276,20 +257,16 @@
 .method public final setPackage(ILjava/lang/String;)V
     .locals 0
 
-    .line 2880
     iput p1, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->userId:I
 
-    .line 2881
     iput-object p2, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->packageName:Ljava/lang/String;
 
     const/4 p1, 0x0
 
-    .line 2882
     iput p1, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numRunningRegular:I
 
     iput p1, p0, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->numRunningEj:I
 
-    .line 2883
     invoke-virtual {p0}, Lcom/android/server/job/JobConcurrencyManager$PackageStats;->resetStagedCount()V
 
     return-void

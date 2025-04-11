@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetURI_CAMERASHARE(Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;)Landroid/net/Uri;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->URI_CAMERASHARE:Landroid/net/Uri;
 
     return-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$mhandleSamsungAccountUpdate(Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->handleSamsungAccountUpdate()V
 
     return-void
@@ -47,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$mhandleSettingUpdate(Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->handleSettingUpdate(I)V
 
     return-void
@@ -56,12 +53,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "hwrs_camerashare_setting"
 
-    .line 48
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -70,10 +65,8 @@
 
     const/16 v0, -0x2710
 
-    .line 53
     iput v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mUserId:I
 
-    .line 185
     new-instance v0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -88,21 +81,18 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mSettingObserver:Landroid/database/ContentObserver;
 
-    .line 248
     new-instance v0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver$2;-><init>(Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;)V
 
     iput-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mOnAccountsUpdateListener:Landroid/accounts/OnAccountsUpdateListener;
 
-    .line 274
     new-instance v0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver$3;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver$3;-><init>(Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;)V
 
     iput-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mAccountChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 61
     iput-object p1, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     return-void
@@ -113,7 +103,6 @@
 .method public final addOnAccountsUpdatedListener()V
     .locals 11
 
-    .line 215
     iget-boolean v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mIsAddedAccountListener:Z
 
     const-string v1, "[HWRS_SYS]PreconditionObserver"
@@ -122,7 +111,6 @@
 
     const-string p0, "addOnAccountsUpdatedListener - already added"
 
-    .line 216
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -130,17 +118,14 @@
     :cond_0
     const-string v0, "addOnAccountsUpdatedListener"
 
-    .line 219
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
     move-result-object v0
 
-    .line 221
     iget-object v1, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mOnAccountsUpdateListener:Landroid/accounts/OnAccountsUpdateListener;
 
     const-string v2, "com.osp.app.signin"
@@ -155,22 +140,18 @@
 
     invoke-virtual {v0, v1, v3, v4, v2}, Landroid/accounts/AccountManager;->addOnAccountsUpdatedListener(Landroid/accounts/OnAccountsUpdateListener;Landroid/os/Handler;Z[Ljava/lang/String;)V
 
-    .line 223
     iget v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mUserId:I
 
     if-eqz v0, :cond_1
 
-    .line 224
     new-instance v8, Landroid/content/IntentFilter;
 
     invoke-direct {v8}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "android.accounts.LOGIN_ACCOUNTS_CHANGED"
 
-    .line 225
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 226
     iget-object v5, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     iget-object v6, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mAccountChangeReceiver:Landroid/content/BroadcastReceiver;
@@ -187,7 +168,6 @@
 
     invoke-virtual/range {v5 .. v10}, Landroid/content/Context;->semRegisterReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 229
     :cond_1
     iput-boolean v4, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mIsAddedAccountListener:Z
 
@@ -201,12 +181,10 @@
 
     const-string v1, "handleSamsungAccountUpdate"
 
-    .line 268
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 270
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isSamsungAccountLogin()Z
 
     move-result v1
@@ -215,7 +193,6 @@
 
     const/4 v0, 0x2
 
-    .line 271
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->notifyChanged(I)V
 
     return-void
@@ -224,14 +201,12 @@
 .method public final handleSettingUpdate(I)V
     .locals 3
 
-    .line 199
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isSettingEnabled()Z
 
     move-result v0
 
     const/4 v1, 0x4
 
-    .line 200
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isFlag(I)Z
 
     move-result v2
@@ -240,11 +215,9 @@
 
     return-void
 
-    .line 204
     :cond_0
     invoke-virtual {p0, v1, v0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->updateFlag(IZ)V
 
-    .line 205
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->notifyChanged(I)V
 
     return-void
@@ -257,19 +230,16 @@
 
     const-string v1, "[HWRS_SYS]PreconditionObserver"
 
-    .line 125
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x2
 
-    .line 126
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isFlag(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 127
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -290,7 +260,6 @@
 
     const-string p0, "hwrs_camerashare_setting is not set"
 
-    .line 129
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -300,7 +269,6 @@
 .method public isFlag(I)Z
     .locals 0
 
-    .line 109
     iget p0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mState:I
 
     and-int/2addr p0, p1
@@ -321,7 +289,6 @@
 .method public isHWRSEnable()Z
     .locals 3
 
-    .line 120
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -355,7 +322,6 @@
 
     const-string v1, "[HWRS_SYS]PreconditionObserver"
 
-    .line 138
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
@@ -369,7 +335,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 143
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -390,7 +355,6 @@
 
     return v2
 
-    .line 140
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -418,7 +382,6 @@
 .method public final isSamsungAccountLogin()Z
     .locals 2
 
-    .line 257
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
@@ -437,7 +400,6 @@
 
     move-result-object p0
 
-    .line 258
     array-length p0, p0
 
     const-string v0, "[HWRS_SYS]PreconditionObserver"
@@ -446,7 +408,6 @@
 
     const-string p0, "SamsungAccount login"
 
-    .line 259
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
@@ -456,7 +417,6 @@
     :cond_0
     const-string p0, "SamsungAccount not login"
 
-    .line 262
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -469,12 +429,10 @@
 
     const-string v0, "hwrs_camerashare_setting"
 
-    .line 156
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isSettingEnabled(Ljava/lang/String;)Z
 
     move-result p0
 
-    .line 157
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -499,7 +457,6 @@
 .method public isSettingEnabled(Ljava/lang/String;)Z
     .locals 2
 
-    .line 162
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -527,7 +484,6 @@
 .method public meetConditions()Z
     .locals 2
 
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -552,7 +508,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     iget p0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mState:I
 
     const/4 v0, 0x7
@@ -573,12 +528,10 @@
 .method public final notifyChanged(I)V
     .locals 1
 
-    .line 113
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mListener:Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver$StateChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 114
     iget p0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mState:I
 
     invoke-interface {v0, p0, p1}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver$StateChangedListener;->onChanged(II)V
@@ -590,7 +543,6 @@
 .method public registerCameraShareObserver()V
     .locals 4
 
-    .line 152
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -613,7 +565,6 @@
 .method public final registerSettingsObserver()V
     .locals 1
 
-    .line 166
     iget-boolean v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mIsRegisteredCameraShareObserver:Z
 
     if-eqz v0, :cond_0
@@ -623,20 +574,17 @@
     :cond_0
     const/4 v0, 0x2
 
-    .line 169
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isFlag(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 170
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->registerCameraShareObserver()V
 
     :cond_1
     const/4 v0, 0x1
 
-    .line 172
     iput-boolean v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mIsRegisteredCameraShareObserver:Z
 
     return-void
@@ -645,7 +593,6 @@
 .method public final removeOnAccountsUpdatedListener()V
     .locals 2
 
-    .line 233
     iget-boolean v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mIsAddedAccountListener:Z
 
     const-string v1, "[HWRS_SYS]PreconditionObserver"
@@ -654,7 +601,6 @@
 
     const-string/jumbo p0, "removeOnAccountsUpdatedListener - already added"
 
-    .line 234
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -662,27 +608,22 @@
     :cond_0
     const-string/jumbo v0, "removeOnAccountsUpdatedListener"
 
-    .line 237
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
     move-result-object v0
 
-    .line 239
     iget-object v1, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mOnAccountsUpdateListener:Landroid/accounts/OnAccountsUpdateListener;
 
     invoke-virtual {v0, v1}, Landroid/accounts/AccountManager;->removeOnAccountsUpdatedListener(Landroid/accounts/OnAccountsUpdateListener;)V
 
-    .line 241
     iget v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mUserId:I
 
     if-eqz v0, :cond_1
 
-    .line 242
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mAccountChangeReceiver:Landroid/content/BroadcastReceiver;
@@ -692,7 +633,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 245
     iput-boolean v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mIsAddedAccountListener:Z
 
     return-void
@@ -701,7 +641,6 @@
 .method public setFlag(I)V
     .locals 1
 
-    .line 101
     iget v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mState:I
 
     or-int/2addr p1, v0
@@ -714,15 +653,12 @@
 .method public start(ILcom/samsung/android/server/hwrs/AbstractPreconditionObserver$StateChangedListener;)V
     .locals 0
 
-    .line 65
     iput p1, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mUserId:I
 
-    .line 66
     iput-object p2, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mListener:Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver$StateChangedListener;
 
     const/4 p1, 0x1
 
-    .line 68
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isSamsungAccountLogin()Z
 
     move-result p2
@@ -731,7 +667,6 @@
 
     const-string p1, "com.samsung.android.hwresourceshare"
 
-    .line 69
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isPackageInstalled(Ljava/lang/String;)Z
 
     move-result p1
@@ -742,20 +677,16 @@
 
     const/4 p1, 0x4
 
-    .line 70
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isSettingEnabled()Z
 
     move-result p2
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->updateFlag(IZ)V
 
-    .line 72
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->initCheck()V
 
-    .line 74
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->registerSettingsObserver()V
 
-    .line 75
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->addOnAccountsUpdatedListener()V
 
     return-void
@@ -764,20 +695,16 @@
 .method public stop()V
     .locals 1
 
-    .line 79
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->unregisterSettingsObserver()V
 
-    .line 80
     invoke-virtual {p0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->removeOnAccountsUpdatedListener()V
 
     const/4 v0, 0x0
 
-    .line 82
     iput v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mState:I
 
     const/16 v0, -0x2710
 
-    .line 83
     iput v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mUserId:I
 
     return-void
@@ -786,7 +713,6 @@
 .method public final unregisterSettingsObserver()V
     .locals 2
 
-    .line 176
     iget-boolean v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mIsRegisteredCameraShareObserver:Z
 
     if-nez v0, :cond_0
@@ -796,14 +722,12 @@
     :cond_0
     const/4 v0, 0x2
 
-    .line 179
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->isFlag(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 180
     iget-object v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -817,7 +741,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 182
     iput-boolean v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mIsRegisteredCameraShareObserver:Z
 
     return-void
@@ -826,7 +749,6 @@
 .method public unsetFlag(I)V
     .locals 1
 
-    .line 105
     iget v0, p0, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->mState:I
 
     not-int p1, p1
@@ -841,7 +763,6 @@
 .method public updateFlag(IZ)V
     .locals 2
 
-    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -868,12 +789,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 94
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->setFlag(I)V
 
     goto :goto_0
 
-    .line 96
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/hwrs/AbstractPreconditionObserver;->unsetFlag(I)V
 

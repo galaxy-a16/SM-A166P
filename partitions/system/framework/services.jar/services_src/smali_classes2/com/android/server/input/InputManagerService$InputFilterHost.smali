@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;)V
     .locals 0
 
-    .line 4151
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$InputFilterHost;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/view/IInputFilterHost$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/input/InputManagerService;Lcom/android/server/input/InputManagerService$InputFilterHost-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/input/InputManagerService$InputFilterHost;-><init>(Lcom/android/server/input/InputManagerService;)V
 
     return-void
@@ -37,7 +35,6 @@
 
     const/4 v0, 0x1
 
-    .line 4157
     iput-boolean v0, p0, Lcom/android/server/input/InputManagerService$InputFilterHost;->mDisconnected:Z
 
     return-void
@@ -46,7 +43,6 @@
 .method public sendInputEvent(Landroid/view/InputEvent;I)V
     .locals 10
 
-    .line 4162
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$InputFilterHost;->this$0:Lcom/android/server/input/InputManagerService;
 
     const-string v1, "android.permission.INJECT_EVENTS"
@@ -61,23 +57,19 @@
 
     const-string v0, "event must not be null"
 
-    .line 4167
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4169
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$InputFilterHost;->this$0:Lcom/android/server/input/InputManagerService;
 
     iget-object v0, v0, Lcom/android/server/input/InputManagerService;->mInputFilterLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4170
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/input/InputManagerService$InputFilterHost;->mDisconnected:Z
 
     if-nez v1, :cond_0
 
-    .line 4171
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$InputFilterHost;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -104,7 +96,6 @@
 
     invoke-interface/range {v1 .. v9}, Lcom/android/server/input/NativeInputManagerService;->injectInputEvent(Landroid/view/InputEvent;ZIIIIII)I
 
-    .line 4179
     :cond_0
     monitor-exit v0
 
@@ -119,7 +110,6 @@
 
     throw p0
 
-    .line 4164
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 

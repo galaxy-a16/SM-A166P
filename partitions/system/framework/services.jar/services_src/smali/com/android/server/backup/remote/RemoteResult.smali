@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 36
     new-instance v0, Lcom/android/server/backup/remote/RemoteResult;
 
     const/4 v1, 0x1
@@ -32,7 +31,6 @@
 
     sput-object v0, Lcom/android/server/backup/remote/RemoteResult;->FAILED_TIMED_OUT:Lcom/android/server/backup/remote/RemoteResult;
 
-    .line 37
     new-instance v0, Lcom/android/server/backup/remote/RemoteResult;
 
     const/4 v1, 0x2
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/backup/remote/RemoteResult;->FAILED_CANCELLED:Lcom/android/server/backup/remote/RemoteResult;
 
-    .line 38
     new-instance v0, Lcom/android/server/backup/remote/RemoteResult;
 
     const/4 v1, 0x3
@@ -56,13 +53,10 @@
 .method public constructor <init>(IJ)V
     .locals 0
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput p1, p0, Lcom/android/server/backup/remote/RemoteResult;->mType:I
 
-    .line 50
     iput-wide p2, p0, Lcom/android/server/backup/remote/RemoteResult;->mValue:J
 
     return-void
@@ -71,7 +65,6 @@
 .method public static of(J)Lcom/android/server/backup/remote/RemoteResult;
     .locals 2
 
-    .line 42
     new-instance v0, Lcom/android/server/backup/remote/RemoteResult;
 
     const/4 v1, 0x0
@@ -92,7 +85,6 @@
 
     return v0
 
-    .line 92
     :cond_0
     instance-of v1, p1, Lcom/android/server/backup/remote/RemoteResult;
 
@@ -102,11 +94,9 @@
 
     return v2
 
-    .line 95
     :cond_1
     check-cast p1, Lcom/android/server/backup/remote/RemoteResult;
 
-    .line 96
     iget v1, p0, Lcom/android/server/backup/remote/RemoteResult;->mType:I
 
     iget v3, p1, Lcom/android/server/backup/remote/RemoteResult;->mType:I
@@ -133,7 +123,6 @@
 .method public get()J
     .locals 2
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/backup/remote/RemoteResult;->isPresent()Z
 
     move-result v0
@@ -142,7 +131,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 64
     iget-wide v0, p0, Lcom/android/server/backup/remote/RemoteResult;->mValue:J
 
     return-wide v0
@@ -151,7 +139,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 101
     iget v0, p0, Lcom/android/server/backup/remote/RemoteResult;->mType:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -178,7 +165,6 @@
 .method public isPresent()Z
     .locals 0
 
-    .line 54
     iget p0, p0, Lcom/android/server/backup/remote/RemoteResult;->mType:I
 
     if-nez p0, :cond_0
@@ -197,7 +183,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,7 +211,6 @@
 .method public final toStringDescription()Ljava/lang/String;
     .locals 2
 
-    .line 73
     iget v0, p0, Lcom/android/server/backup/remote/RemoteResult;->mType:I
 
     if-eqz v0, :cond_3
@@ -247,7 +231,6 @@
 
     return-object p0
 
-    .line 83
     :cond_0
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -267,7 +250,6 @@
 
     return-object p0
 
-    .line 75
     :cond_3
     iget-wide v0, p0, Lcom/android/server/backup/remote/RemoteResult;->mValue:J
 

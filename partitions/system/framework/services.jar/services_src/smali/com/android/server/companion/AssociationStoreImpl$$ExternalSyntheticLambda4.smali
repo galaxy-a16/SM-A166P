@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/net/MacAddress;
 
     invoke-static {p1}, Lcom/android/server/companion/AssociationStoreImpl;->$r8$lambda$K1mTqKO-f7-N_Vp1-h8MN-6WtHk(Landroid/net/MacAddress;)Ljava/util/Set;

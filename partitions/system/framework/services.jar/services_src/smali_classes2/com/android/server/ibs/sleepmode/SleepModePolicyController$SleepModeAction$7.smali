@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;Lcom/android/server/ibs/sleepmode/SleepModePolicyController;Landroid/content/Context;)V
     .locals 0
 
-    .line 1081
     iput-object p1, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     iput-object p2, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->val$this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
@@ -39,10 +38,8 @@
 
     const-string v1, "Notification cancelAction"
 
-    .line 1100
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1101
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->val$context:Landroid/content/Context;
 
     const-string/jumbo v1, "pref_sleep_mode_notification_key"
@@ -55,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1102
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->val$context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -66,7 +62,6 @@
 
     invoke-static {v0, v3, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1104
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     iget-object v0, v0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
@@ -79,7 +74,6 @@
 
     invoke-virtual {v0, v3}, Lcom/android/server/ibs/sleepmode/SleepModeLogger;->add(Ljava/lang/String;)V
 
-    .line 1106
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
@@ -99,10 +93,8 @@
 
     const-string v1, "Notification triggerAction"
 
-    .line 1084
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1085
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->val$context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -121,7 +113,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1088
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->val$context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -132,12 +123,10 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1090
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->val$context:Landroid/content/Context;
 
     invoke-static {v0, v3, v2}, Lcom/android/server/ibs/sleepmode/SharePrefUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 1091
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     iget-object v0, v0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
@@ -150,7 +139,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/ibs/sleepmode/SleepModePolicyController;->-$$Nest$msetSysState(Lcom/android/server/ibs/sleepmode/SleepModePolicyController;I)V
 
-    .line 1092
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
@@ -165,7 +153,6 @@
 
     goto :goto_0
 
-    .line 1094
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$7;->val$context:Landroid/content/Context;
 

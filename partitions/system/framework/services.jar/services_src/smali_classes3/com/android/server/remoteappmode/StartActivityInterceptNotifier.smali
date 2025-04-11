@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStartActivityInterceptListeners(Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->mStartActivityInterceptListeners:Ljava/util/Map;
 
     return-object p0
@@ -22,17 +21,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->mStartActivityInterceptListeners:Ljava/util/Map;
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->mContext:Landroid/content/Context;
 
     return-void
@@ -43,12 +39,10 @@
 .method public registerStartActivityInterceptListener(Lcom/samsung/android/remoteappmode/IStartActivityInterceptListener;Ljava/lang/String;)Z
     .locals 10
 
-    .line 37
     iget-object v0, p0, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->mStartActivityInterceptListeners:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 38
     :try_start_0
     invoke-interface {p1}, Lcom/samsung/android/remoteappmode/IStartActivityInterceptListener;->asBinder()Landroid/os/IBinder;
 
@@ -58,11 +52,9 @@
 
     const/4 v2, 0x0
 
-    .line 40
     :try_start_1
     new-instance v9, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier$StartActivityInterceptListenerInfo;
 
-    .line 41
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -78,7 +70,6 @@
     :cond_0
     move-object v6, p2
 
-    .line 42
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v7
@@ -95,10 +86,8 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier$StartActivityInterceptListenerInfo;-><init>(Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;Lcom/samsung/android/remoteappmode/IStartActivityInterceptListener;Ljava/lang/String;II)V
 
-    .line 44
     invoke-interface {v1, v9, v2}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 45
     iget-object p0, p0, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->mStartActivityInterceptListeners:Ljava/util/Map;
 
     invoke-interface {p0, v1, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -106,7 +95,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 46
     :try_start_2
     monitor-exit v0
 
@@ -114,7 +102,6 @@
 
     return p0
 
-    .line 48
     :catch_0
     monitor-exit v0
 
@@ -123,7 +110,6 @@
     :catchall_0
     move-exception p0
 
-    .line 50
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -134,12 +120,10 @@
 .method public unregisterStartActivityInterceptListener(Lcom/samsung/android/remoteappmode/IStartActivityInterceptListener;)Z
     .locals 2
 
-    .line 54
     iget-object v0, p0, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->mStartActivityInterceptListeners:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 55
     :try_start_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier;->mStartActivityInterceptListeners:Ljava/util/Map;
 
@@ -157,7 +141,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 57
     iget-object v1, p0, Lcom/android/server/remoteappmode/StartActivityInterceptNotifier$StartActivityInterceptListenerInfo;->listener:Lcom/samsung/android/remoteappmode/IStartActivityInterceptListener;
 
     invoke-interface {v1}, Lcom/samsung/android/remoteappmode/IStartActivityInterceptListener;->asBinder()Landroid/os/IBinder;
@@ -166,14 +149,12 @@
 
     invoke-interface {v1, p0, p1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 58
     monitor-exit v0
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 60
     :cond_0
     monitor-exit v0
 
@@ -182,7 +163,6 @@
     :catchall_0
     move-exception p0
 
-    .line 61
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

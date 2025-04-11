@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$mregister(Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->register()V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$munregister(Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->unregister()V
 
     return-void
@@ -33,15 +31,12 @@
 .method public constructor <init>(Lcom/android/server/compat/overrides/AppCompatOverridesService;Landroid/content/Context;)V
     .locals 0
 
-    .line 414
     iput-object p1, p0, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->this$0:Lcom/android/server/compat/overrides/AppCompatOverridesService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 415
     iput-object p2, p0, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->mContext:Landroid/content/Context;
 
-    .line 416
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
@@ -50,22 +45,18 @@
 
     const-string p0, "android.intent.action.PACKAGE_ADDED"
 
-    .line 417
     invoke-virtual {p1, p0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p0, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 418
     invoke-virtual {p1, p0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p0, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 419
     invoke-virtual {p1, p0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo p0, "package"
 
-    .line 420
     invoke-virtual {p1, p0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     return-void
@@ -74,7 +65,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/compat/overrides/AppCompatOverridesService;Landroid/content/Context;Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;-><init>(Lcom/android/server/compat/overrides/AppCompatOverridesService;Landroid/content/Context;)V
 
     return-void
@@ -85,7 +75,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 434
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
@@ -96,18 +85,15 @@
 
     const-string p0, "Failed to get package name in package receiver"
 
-    .line 436
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 439
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 440
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -116,12 +102,10 @@
 
     const-string p0, "Failed to get action in package receiver"
 
-    .line 442
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 445
     :cond_1
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
@@ -182,7 +166,6 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 456
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,7 +184,6 @@
 
     goto :goto_1
 
-    .line 451
     :pswitch_0
     iget-object p2, p0, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->this$0:Lcom/android/server/compat/overrides/AppCompatOverridesService;
 
@@ -211,14 +193,12 @@
 
     if-nez p2, :cond_5
 
-    .line 452
     iget-object p0, p0, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->this$0:Lcom/android/server/compat/overrides/AppCompatOverridesService;
 
     invoke-static {p0, p1}, Lcom/android/server/compat/overrides/AppCompatOverridesService;->-$$Nest$mremoveAllPackageOverrides(Lcom/android/server/compat/overrides/AppCompatOverridesService;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 448
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->this$0:Lcom/android/server/compat/overrides/AppCompatOverridesService;
 
@@ -248,7 +228,6 @@
 .method public final register()V
     .locals 3
 
-    .line 424
     iget-object v0, p0, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->mIntentFilter:Landroid/content/IntentFilter;
@@ -263,7 +242,6 @@
 .method public final unregister()V
     .locals 1
 
-    .line 429
     iget-object v0, p0, Lcom/android/server/compat/overrides/AppCompatOverridesService$PackageReceiver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V

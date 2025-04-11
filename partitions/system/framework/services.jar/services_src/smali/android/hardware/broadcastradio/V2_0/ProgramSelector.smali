@@ -13,17 +13,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     new-instance v0, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     invoke-direct {v0}, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
-    .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,7 +48,6 @@
 
     return v1
 
-    .line 47
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -63,11 +59,9 @@
 
     return v1
 
-    .line 50
     :cond_2
     check-cast p1, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;
 
-    .line 51
     iget-object v2, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     iget-object v3, p1, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
@@ -80,7 +74,6 @@
 
     return v1
 
-    .line 54
     :cond_3
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
@@ -101,10 +94,8 @@
 .method public final hashCode()I
     .locals 1
 
-    .line 62
     iget-object v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
-    .line 63
     invoke-static {v0}, Landroid/os/HidlSupport;->deepHashCode(Ljava/lang/Object;)I
 
     move-result v0
@@ -115,7 +106,6 @@
 
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
-    .line 64
     invoke-static {p0}, Landroid/os/HidlSupport;->deepHashCode(Ljava/lang/Object;)I
 
     move-result p0
@@ -128,7 +118,6 @@
 
     move-result-object p0
 
-    .line 62
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -145,7 +134,6 @@
 
     move-object/from16 v1, p2
 
-    .line 107
     iget-object v2, v0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     const-wide/16 v3, 0x0
@@ -162,7 +150,6 @@
 
     add-long/2addr v7, v5
 
-    .line 109
     invoke-virtual {v1, v7, v8}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result v10
@@ -171,7 +158,6 @@
 
     int-to-long v7, v2
 
-    .line 111
     invoke-virtual/range {p2 .. p2}, Landroid/os/HwBlob;->handle()J
 
     move-result-wide v11
@@ -190,12 +176,10 @@
 
     move v8, v15
 
-    .line 110
     invoke-virtual/range {v1 .. v8}, Landroid/os/HwParcel;->readEmbeddedBuffer(JJJZ)Landroid/os/HwBlob;
 
     move-result-object v1
 
-    .line 114
     iget-object v2, v0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
@@ -205,7 +189,6 @@
     :goto_0
     if-ge v2, v10, :cond_0
 
-    .line 116
     new-instance v3, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     invoke-direct {v3}, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;-><init>()V
@@ -214,10 +197,8 @@
 
     int-to-long v4, v4
 
-    .line 117
     invoke-virtual {v3, v9, v1, v4, v5}, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;->readEmbeddedFromParcel(Landroid/os/HwParcel;Landroid/os/HwBlob;J)V
 
-    .line 118
     iget-object v4, v0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -235,14 +216,12 @@
 
     const-wide/16 v0, 0x20
 
-    .line 80
     invoke-virtual {p1, v0, v1}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
 
     move-result-object v0
 
     const-wide/16 v1, 0x0
 
-    .line 81
     invoke-virtual {p0, p1, v0, v1, v2}, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->readEmbeddedFromParcel(Landroid/os/HwParcel;Landroid/os/HwBlob;J)V
 
     return-void
@@ -251,42 +230,34 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "{"
 
-    .line 70
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ".primaryId = "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 72
     iget-object v1, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ", .secondaryIds = "
 
-    .line 73
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 74
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string/jumbo p0, "}"
 
-    .line 75
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -297,7 +268,6 @@
 .method public final writeEmbeddedToBlob(Landroid/os/HwBlob;J)V
     .locals 8
 
-    .line 148
     iget-object v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     const-wide/16 v1, 0x0
@@ -306,7 +276,6 @@
 
     invoke-virtual {v0, p1, v3, v4}, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;->writeEmbeddedToBlob(Landroid/os/HwBlob;J)V
 
-    .line 150
     iget-object v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -321,7 +290,6 @@
 
     add-long/2addr v3, p2
 
-    .line 151
     invoke-virtual {p1, v3, v4, v0}, Landroid/os/HwBlob;->putInt32(JI)V
 
     const-wide/16 v3, 0xc
@@ -330,10 +298,8 @@
 
     const/4 v5, 0x0
 
-    .line 152
     invoke-virtual {p1, v3, v4, v5}, Landroid/os/HwBlob;->putBool(JZ)V
 
-    .line 153
     new-instance v3, Landroid/os/HwBlob;
 
     mul-int/lit8 v4, v0, 0x10
@@ -343,7 +309,6 @@
     :goto_0
     if-ge v5, v0, :cond_0
 
-    .line 155
     iget-object v4, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -365,7 +330,6 @@
     :cond_0
     add-long/2addr p2, v1
 
-    .line 157
     invoke-virtual {p1, p2, p3, v3}, Landroid/os/HwBlob;->putBlob(JLandroid/os/HwBlob;)V
 
     return-void
@@ -374,7 +338,6 @@
 .method public final writeToParcel(Landroid/os/HwParcel;)V
     .locals 3
 
-    .line 124
     new-instance v0, Landroid/os/HwBlob;
 
     const/16 v1, 0x20
@@ -383,10 +346,8 @@
 
     const-wide/16 v1, 0x0
 
-    .line 125
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->writeEmbeddedToBlob(Landroid/os/HwBlob;J)V
 
-    .line 126
     invoke-virtual {p1, v0}, Landroid/os/HwParcel;->writeBuffer(Landroid/os/HwBlob;)V
 
     return-void

@@ -20,7 +20,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 24
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,17 +48,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 23
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->mContext:Landroid/content/Context;
 
     const/4 v0, 0x0
 
-    .line 26
     iput-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->mIsDataConnectionConnected:Z
 
     return-void
@@ -68,7 +64,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;-><init>()V
 
     return-void
@@ -77,7 +72,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;
     .locals 1
 
-    .line 35
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter$ActiveTrafficFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;
 
     move-result-object v0
@@ -90,14 +84,12 @@
 .method public deInit()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public filter(Ljava/lang/String;III)I
     .locals 3
 
-    .line 51
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p4
@@ -120,7 +112,6 @@
 
     if-nez p4, :cond_0
 
-    .line 52
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object p4
@@ -137,7 +128,6 @@
 
     return v0
 
-    .line 57
     :cond_0
     iget-boolean p0, p0, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->mIsDataConnectionConnected:Z
 
@@ -145,21 +135,18 @@
 
     const-string/jumbo p0, "sdhms"
 
-    .line 58
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 60
     invoke-static {p0}, Lcom/sec/android/sdhms/ISamsungDeviceHealthManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/android/sdhms/ISamsungDeviceHealthManager;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 62
     :try_start_0
     invoke-interface {p0, p3}, Lcom/sec/android/sdhms/ISamsungDeviceHealthManager;->isDownLoadingForUid(I)Z
 
@@ -167,7 +154,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 63
     sget-object p0, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -205,7 +191,6 @@
     :catch_0
     move-exception p0
 
-    .line 69
     sget-object p1, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -233,7 +218,6 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->mContext:Landroid/content/Context;
 
     return-void
@@ -242,7 +226,6 @@
 .method public updateDataConnectionInfo()V
     .locals 3
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->mContext:Landroid/content/Context;
 
     const-string v1, "connectivity"
@@ -253,14 +236,12 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 79
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 80
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v0
@@ -277,12 +258,10 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->mIsDataConnectionConnected:Z
 
-    .line 82
     sget-boolean v0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_FILTER:Z
 
     if-eqz v0, :cond_1
 
-    .line 83
     sget-object v0, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

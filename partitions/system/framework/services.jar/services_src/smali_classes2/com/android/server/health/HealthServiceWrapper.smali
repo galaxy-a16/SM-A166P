@@ -23,7 +23,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_0
     new-instance v1, Lcom/android/server/health/HealthRegCallbackAidl;
 
@@ -38,7 +37,6 @@
 
     goto :goto_1
 
-    .line 90
     :cond_1
     new-instance v0, Lcom/android/server/health/HealthHalCallbackHidl;
 
@@ -53,7 +51,6 @@
 
     invoke-direct {v3}, Lcom/android/server/health/HealthServiceWrapper$3;-><init>()V
 
-    .line 87
     invoke-static {v1, v2, v0, p0, v3}, Lcom/android/server/health/HealthServiceWrapper;->create(Lcom/android/server/health/HealthRegCallbackAidl;Lcom/android/server/health/HealthServiceWrapperAidl$ServiceManagerStub;Lcom/android/server/health/HealthServiceWrapperHidl$Callback;Lcom/android/server/health/HealthServiceWrapperHidl$IServiceManagerSupplier;Lcom/android/server/health/HealthServiceWrapperHidl$IHealthSupplier;)Lcom/android/server/health/HealthServiceWrapper;
 
     move-result-object p0
@@ -64,7 +61,6 @@
 .method public static create(Lcom/android/server/health/HealthRegCallbackAidl;Lcom/android/server/health/HealthServiceWrapperAidl$ServiceManagerStub;Lcom/android/server/health/HealthServiceWrapperHidl$Callback;Lcom/android/server/health/HealthServiceWrapperHidl$IServiceManagerSupplier;Lcom/android/server/health/HealthServiceWrapperHidl$IHealthSupplier;)Lcom/android/server/health/HealthServiceWrapper;
     .locals 1
 
-    .line 116
     :try_start_0
     new-instance v0, Lcom/android/server/health/HealthServiceWrapperAidl;
 
@@ -74,7 +70,6 @@
 
     return-object v0
 
-    .line 120
     :catch_0
     new-instance p0, Lcom/android/server/health/HealthServiceWrapperHidl;
 

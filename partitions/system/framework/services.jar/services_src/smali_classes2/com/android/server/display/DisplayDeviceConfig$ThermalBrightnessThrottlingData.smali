@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 4
 
-    .line 3370
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3371
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -25,7 +23,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData;->throttlingLevels:Ljava/util/List;
 
-    .line 3372
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -43,7 +40,6 @@
 
     check-cast v0, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;
 
-    .line 3373
     iget-object v1, p0, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData;->throttlingLevels:Ljava/util/List;
 
     new-instance v2, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;
@@ -71,7 +67,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 3303
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -83,14 +78,12 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 3308
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;
 
-    .line 3309
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -100,21 +93,18 @@
     :goto_0
     if-ge v4, v3, :cond_3
 
-    .line 3311
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;
 
-    .line 3313
     iget v6, v5, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;->thermalStatus:I
 
     iget v7, v2, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;->thermalStatus:I
 
     if-gt v6, v7, :cond_1
 
-    .line 3314
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,7 +133,6 @@
 
     return-object v0
 
-    .line 3320
     :cond_1
     iget v6, v5, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;->brightness:F
 
@@ -153,7 +142,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 3321
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,7 +177,6 @@
 
     goto :goto_0
 
-    .line 3330
     :cond_3
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -208,7 +195,6 @@
 
     check-cast v3, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;
 
-    .line 3332
     iget v4, v3, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData$ThrottlingLevel;->brightness:F
 
     const/high16 v5, 0x3f800000    # 1.0f
@@ -217,7 +203,6 @@
 
     if-lez v4, :cond_4
 
-    .line 3333
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -244,7 +229,6 @@
 
     return-object v0
 
-    .line 3340
     :cond_5
     new-instance v0, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData;
 
@@ -256,7 +240,6 @@
     :goto_1
     const-string p0, "BrightnessThrottlingData received null or empty throttling levels"
 
-    .line 3304
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -273,7 +256,6 @@
 
     return p0
 
-    .line 3356
     :cond_0
     instance-of v0, p1, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData;
 
@@ -283,11 +265,9 @@
 
     return p0
 
-    .line 3360
     :cond_1
     check-cast p1, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData;
 
-    .line 3361
     iget-object p0, p0, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData;->throttlingLevels:Ljava/util/List;
 
     iget-object p1, p1, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData;->throttlingLevels:Ljava/util/List;
@@ -302,7 +282,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 3366
     iget-object p0, p0, Lcom/android/server/display/DisplayDeviceConfig$ThermalBrightnessThrottlingData;->throttlingLevels:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->hashCode()I
@@ -315,7 +294,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 3345
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

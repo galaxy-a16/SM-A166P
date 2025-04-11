@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 42
     invoke-static {}, Landroid/telephony/CellSignalStrength;->getNumSignalStrengthLevels()I
 
     move-result v0
@@ -38,7 +37,6 @@
 
     new-array v0, v0, [Landroid/os/BatteryConsumer$Key;
 
-    .line 44
     sput-object v0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->UNINITIALIZED_KEYS:[Landroid/os/BatteryConsumer$Key;
 
     return-void
@@ -47,29 +45,24 @@
 .method public constructor <init>(Lcom/android/internal/os/PowerProfile;)V
     .locals 13
 
-    .line 66
     invoke-direct {p0}, Lcom/android/server/power/stats/PowerCalculator;-><init>()V
 
-    .line 48
     sget v0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->NUM_SIGNAL_STRENGTH_LEVELS:I
 
     new-array v0, v0, [Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     iput-object v0, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mIdlePowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mPowerProfile:Lcom/android/internal/os/PowerProfile;
 
     const-wide v0, 0x100000000L
 
     const-wide/high16 v2, 0x7ff8000000000000L    # Double.NaN
 
-    .line 69
     invoke-virtual {p1, v0, v1, v2, v3}, Lcom/android/internal/os/PowerProfile;->getAverageBatteryDrainOrDefaultMa(JD)D
 
     move-result-wide v0
 
-    .line 72
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v4
@@ -78,12 +71,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 73
     iput-object v5, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mSleepPowerEstimator:Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     goto :goto_0
 
-    .line 75
     :cond_0
     new-instance v4, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
@@ -94,24 +85,20 @@
     :goto_0
     const-wide v0, 0x110000000L
 
-    .line 78
     invoke-virtual {p1, v0, v1, v2, v3}, Lcom/android/internal/os/PowerProfile;->getAverageBatteryDrainOrDefaultMa(JD)D
 
     move-result-wide v0
 
-    .line 81
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 82
     iput-object v5, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mIdlePowerEstimator:Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     goto :goto_1
 
-    .line 84
     :cond_1
     new-instance v4, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
@@ -122,12 +109,10 @@
     :goto_1
     const-string/jumbo v0, "radio.active"
 
-    .line 89
     invoke-virtual {p1, v0, v2, v3}, Lcom/android/internal/os/PowerProfile;->getAveragePowerOrDefault(Ljava/lang/String;D)D
 
     move-result-wide v0
 
-    .line 90
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v4
@@ -142,7 +127,6 @@
 
     const-string/jumbo v0, "modem.controller.rx"
 
-    .line 92
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
     move-result-wide v0
@@ -151,7 +135,6 @@
 
     move v4, v7
 
-    .line 93
     :goto_2
     sget v9, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->NUM_SIGNAL_STRENGTH_LEVELS:I
 
@@ -159,7 +142,6 @@
 
     const-string/jumbo v9, "modem.controller.tx"
 
-    .line 94
     invoke-virtual {p1, v9, v4}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;I)D
 
     move-result-wide v9
@@ -177,7 +159,6 @@
 
     div-double/2addr v0, v9
 
-    .line 98
     :cond_3
     new-instance v4, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
@@ -187,30 +168,25 @@
 
     const-string/jumbo v0, "radio.on"
 
-    .line 101
     invoke-virtual {p1, v0, v2, v3}, Lcom/android/internal/os/PowerProfile;->getAveragePowerOrDefault(Ljava/lang/String;D)D
 
     move-result-wide v1
 
-    .line 100
     invoke-static {v1, v2}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    .line 102
     :goto_3
     sget v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->NUM_SIGNAL_STRENGTH_LEVELS:I
 
     if-ge v7, v1, :cond_5
 
-    .line 103
     iget-object v1, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mIdlePowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     new-instance v2, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
-    .line 104
     invoke-virtual {p1, v0, v7}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;I)D
 
     move-result-wide v3
@@ -226,12 +202,10 @@
     :cond_4
     const-string/jumbo v0, "modem.controller.idle"
 
-    .line 107
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
     move-result-wide v0
 
-    .line 110
     iget-object v2, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mIdlePowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     new-instance v3, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
@@ -248,13 +222,11 @@
 
     aput-object v3, v2, v7
 
-    .line 111
     :goto_4
     sget v2, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->NUM_SIGNAL_STRENGTH_LEVELS:I
 
     if-ge v8, v2, :cond_5
 
-    .line 112
     iget-object v2, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mIdlePowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     new-instance v3, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
@@ -277,13 +249,11 @@
 
     goto :goto_4
 
-    .line 116
     :cond_5
     new-instance v0, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     const-string/jumbo v1, "radio.scanning"
 
-    .line 117
     invoke-virtual {p1, v1, v5, v6}, Lcom/android/internal/os/PowerProfile;->getAveragePowerOrDefault(Ljava/lang/String;D)D
 
     move-result-wide v1
@@ -325,7 +295,6 @@
 
     if-eq p1, v5, :cond_1
 
-    .line 415
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -378,7 +347,6 @@
 
     if-eq p2, p1, :cond_5
 
-    .line 439
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -437,7 +405,6 @@
 
     if-eq p3, p1, :cond_b
 
-    .line 463
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -492,7 +459,6 @@
 .method public calcIdlePowerAtSignalStrengthMah(JI)D
     .locals 0
 
-    .line 545
     iget-object p0, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mIdlePowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     aget-object p0, p0, p3
@@ -507,7 +473,6 @@
 .method public calcInactiveStatePowerMah(JJ)D
     .locals 2
 
-    .line 521
     iget-object v0, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mSleepPowerEstimator:Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     if-eqz v0, :cond_1
@@ -518,13 +483,11 @@
 
     goto :goto_0
 
-    .line 522
     :cond_0
     invoke-virtual {v0, p1, p2}, Lcom/android/server/power/stats/UsageBasedPowerEstimator;->calculatePower(J)D
 
     move-result-wide p1
 
-    .line 523
     iget-object p0, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mIdlePowerEstimator:Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     invoke-virtual {p0, p3, p4}, Lcom/android/server/power/stats/UsageBasedPowerEstimator;->calculatePower(J)D
@@ -545,7 +508,6 @@
 .method public calcPowerFromRadioActiveDurationMah(J)D
     .locals 0
 
-    .line 536
     iget-object p0, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mActivePowerEstimator:Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/power/stats/UsageBasedPowerEstimator;->calculatePower(J)D
@@ -562,12 +524,10 @@
 
     const/4 v1, -0x1
 
-    .line 474
     invoke-static {v0, p1, p2, v1}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->buildModemPowerProfileKey(IIII)J
 
     move-result-wide p1
 
-    .line 476
     iget-object p0, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mPowerProfile:Lcom/android/internal/os/PowerProfile;
 
     const-wide/high16 v0, 0x7ff8000000000000L    # Double.NaN
@@ -576,14 +536,12 @@
 
     move-result-wide v2
 
-    .line 478
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 479
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -623,7 +581,6 @@
 .method public calcScanTimePowerMah(J)D
     .locals 0
 
-    .line 552
     iget-object p0, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mScanPowerEstimator:Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/power/stats/UsageBasedPowerEstimator;->calculatePower(J)D
@@ -638,12 +595,10 @@
 
     const/high16 v0, 0x30000000
 
-    .line 498
     invoke-static {v0, p1, p2, p3}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->buildModemPowerProfileKey(IIII)J
 
     move-result-wide p1
 
-    .line 500
     iget-object p0, p0, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->mPowerProfile:Lcom/android/internal/os/PowerProfile;
 
     const-wide/high16 v0, 0x7ff8000000000000L    # Double.NaN
@@ -652,14 +607,12 @@
 
     move-result-wide v2
 
-    .line 502
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 503
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -707,21 +660,18 @@
 
     move-wide/from16 v3, p3
 
-    .line 129
     new-instance v5, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;
 
     const/4 v6, 0x0
 
     invoke-direct {v5, v6}, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;-><init>(Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration-IA;)V
 
-    .line 131
     invoke-virtual/range {p2 .. p2}, Landroid/os/BatteryStats;->getMobileRadioEnergyConsumptionUC()J
 
     move-result-wide v7
 
     move-object/from16 v9, p7
 
-    .line 132
     invoke-static {v7, v8, v9}, Lcom/android/server/power/stats/PowerCalculator;->getPowerModel(JLandroid/os/BatteryUsageStatsQuery;)I
 
     move-result v10
@@ -736,18 +686,15 @@
 
     goto :goto_0
 
-    .line 143
     :cond_0
     invoke-virtual {v0, v2, v3, v4}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->calculateActiveModemPowerMah(Landroid/os/BatteryStats;J)D
 
     move-result-wide v14
 
-    .line 144
     new-instance v16, Ljava/util/ArrayList;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/ArrayList;-><init>()V
 
-    .line 145
     new-instance v17, Landroid/util/LongArrayQueue;
 
     invoke-direct/range {v17 .. v17}, Landroid/util/LongArrayQueue;-><init>()V
@@ -756,16 +703,13 @@
 
     move-object/from16 v11, v17
 
-    .line 149
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/BatteryUsageStats$Builder;->getUidBatteryConsumerBuilders()Landroid/util/SparseArray;
 
     move-result-object v12
 
-    .line 150
     sget-object v18, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->UNINITIALIZED_KEYS:[Landroid/os/BatteryConsumer$Key;
 
-    .line 152
     invoke-virtual {v12}, Landroid/util/SparseArray;->size()I
 
     move-result v19
@@ -781,7 +725,6 @@
     :goto_1
     if-ltz v9, :cond_8
 
-    .line 153
     invoke-virtual {v12, v9}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v19
@@ -792,19 +735,16 @@
 
     move-object/from16 v19, v12
 
-    .line 154
     invoke-virtual {v1}, Landroid/os/UidBatteryConsumer$Builder;->getBatteryStatsUid()Landroid/os/BatteryStats$Uid;
 
     move-result-object v12
 
     move-wide/from16 v21, v7
 
-    .line 155
     sget-object v7, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->UNINITIALIZED_KEYS:[Landroid/os/BatteryConsumer$Key;
 
     if-ne v13, v7, :cond_2
 
-    .line 156
     invoke-virtual/range {p7 .. p7}, Landroid/os/BatteryUsageStatsQuery;->isProcessStateDataNeeded()Z
 
     move-result v7
@@ -813,7 +753,6 @@
 
     const/16 v7, 0x8
 
-    .line 157
     invoke-virtual {v1, v7}, Landroid/os/UidBatteryConsumer$Builder;->getKeys(I)[Landroid/os/BatteryConsumer$Key;
 
     move-result-object v8
@@ -837,20 +776,17 @@
 
     const/4 v7, 0x0
 
-    .line 164
     :goto_3
     invoke-virtual {v0, v12, v7}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->calculateDuration(Landroid/os/BatteryStats$Uid;I)J
 
     move-result-wide v14
 
-    .line 166
     invoke-virtual {v1}, Landroid/os/UidBatteryConsumer$Builder;->isVirtualUid()Z
 
     move-result v7
 
     if-nez v7, :cond_3
 
-    .line 167
     iget-wide v7, v5, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->totalAppDurationMs:J
 
     add-long/2addr v7, v14
@@ -860,14 +796,12 @@
     :cond_3
     const/16 v7, 0x8
 
-    .line 169
     invoke-virtual {v1, v7, v14, v15}, Landroid/os/UidBatteryConsumer$Builder;->setUsageDurationMillis(IJ)Landroid/os/BatteryConsumer$BaseBuilder;
 
     const/4 v7, 0x2
 
     if-ne v10, v7, :cond_7
 
-    .line 174
     invoke-virtual {v12}, Landroid/os/BatteryStats$Uid;->getMobileRadioEnergyConsumptionUC()J
 
     move-result-wide v7
@@ -878,19 +812,16 @@
 
     if-eqz v14, :cond_6
 
-    .line 176
     invoke-static {v7, v8}, Lcom/android/server/power/stats/PowerCalculator;->uCtoMah(J)D
 
     move-result-wide v7
 
-    .line 177
     invoke-virtual {v1}, Landroid/os/UidBatteryConsumer$Builder;->isVirtualUid()Z
 
     move-result v14
 
     if-nez v14, :cond_4
 
-    .line 178
     iget-wide v14, v5, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->totalAppPowerMah:D
 
     add-double/2addr v14, v7
@@ -900,10 +831,8 @@
     :cond_4
     const/16 v14, 0x8
 
-    .line 180
     invoke-virtual {v1, v14, v7, v8, v10}, Landroid/os/UidBatteryConsumer$Builder;->setConsumedPower(IDI)Landroid/os/BatteryConsumer$BaseBuilder;
 
-    .line 183
     invoke-virtual/range {p7 .. p7}, Landroid/os/BatteryUsageStatsQuery;->isProcessStateDataNeeded()Z
 
     move-result v7
@@ -912,7 +841,6 @@
 
     if-eqz v13, :cond_6
 
-    .line 184
     array-length v7, v13
 
     const/4 v8, 0x0
@@ -922,7 +850,6 @@
 
     aget-object v14, v13, v8
 
-    .line 185
     iget v15, v14, Landroid/os/BatteryConsumer$Key;->processState:I
 
     if-nez v15, :cond_5
@@ -933,7 +860,6 @@
 
     goto :goto_5
 
-    .line 191
     :cond_5
     invoke-virtual {v12, v15}, Landroid/os/BatteryStats$Uid;->getMobileRadioEnergyConsumptionUC(I)J
 
@@ -943,12 +869,10 @@
 
     move-object/from16 v20, v13
 
-    .line 192
     invoke-static/range {v25 .. v26}, Lcom/android/server/power/stats/PowerCalculator;->uCtoMah(J)D
 
     move-result-wide v12
 
-    .line 193
     invoke-virtual {v1, v14, v12, v13, v10}, Landroid/os/UidBatteryConsumer$Builder;->setConsumedPower(Landroid/os/BatteryConsumer$Key;DI)Landroid/os/BatteryConsumer$BaseBuilder;
 
     :goto_5
@@ -968,10 +892,8 @@
     :cond_7
     move-object/from16 v20, v13
 
-    .line 199
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 200
     invoke-virtual {v11, v14, v15}, Landroid/util/LongArrayQueue;->addLast(J)V
 
     :goto_6
@@ -994,7 +916,6 @@
 
     const/4 v1, 0x0
 
-    .line 204
     invoke-virtual {v2, v3, v4, v1}, Landroid/os/BatteryStats;->getMobileRadioActiveTime(JI)J
 
     move-result-wide v7
@@ -1003,7 +924,6 @@
 
     div-long/2addr v7, v14
 
-    .line 206
     iget-wide v14, v5, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->totalAppDurationMs:J
 
     cmp-long v1, v7, v14
@@ -1019,7 +939,6 @@
 
     if-eq v10, v1, :cond_10
 
-    .line 213
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -1029,7 +948,6 @@
     :goto_7
     if-ge v9, v1, :cond_10
 
-    .line 215
     invoke-virtual {v6, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -1038,7 +956,6 @@
 
     move/from16 p5, v1
 
-    .line 216
     invoke-virtual {v11, v9}, Landroid/util/LongArrayQueue;->get(I)J
 
     move-result-wide v1
@@ -1060,7 +977,6 @@
 
     move-wide v14, v3
 
-    .line 227
     :goto_8
     invoke-virtual {v12}, Landroid/os/UidBatteryConsumer$Builder;->isVirtualUid()Z
 
@@ -1068,7 +984,6 @@
 
     if-nez v3, :cond_b
 
-    .line 228
     iget-wide v3, v5, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->totalAppPowerMah:D
 
     add-double/2addr v3, v14
@@ -1078,10 +993,8 @@
     :cond_b
     const/16 v3, 0x8
 
-    .line 230
     invoke-virtual {v12, v3, v14, v15, v10}, Landroid/os/UidBatteryConsumer$Builder;->setConsumedPower(IDI)Landroid/os/BatteryConsumer$BaseBuilder;
 
-    .line 233
     invoke-virtual/range {p7 .. p7}, Landroid/os/BatteryUsageStatsQuery;->isProcessStateDataNeeded()Z
 
     move-result v4
@@ -1090,12 +1003,10 @@
 
     if-eqz v13, :cond_e
 
-    .line 234
     invoke-virtual {v12}, Landroid/os/UidBatteryConsumer$Builder;->getBatteryStatsUid()Landroid/os/BatteryStats$Uid;
 
     move-result-object v4
 
-    .line 235
     array-length v3, v13
 
     move-object/from16 v19, v6
@@ -1111,7 +1022,6 @@
 
     move-object/from16 v30, v11
 
-    .line 236
     iget v11, v3, Landroid/os/BatteryConsumer$Key;->processState:I
 
     if-nez v11, :cond_c
@@ -1124,7 +1034,6 @@
 
     goto :goto_b
 
-    .line 243
     :cond_c
     invoke-virtual {v4, v11}, Landroid/os/BatteryStats$Uid;->getMobileRadioActiveTimeInProcessState(I)J
 
@@ -1159,7 +1068,6 @@
 
     div-double v4, v7, v4
 
-    .line 253
     :goto_a
     invoke-virtual {v12, v3, v4, v5, v10}, Landroid/os/UidBatteryConsumer$Builder;->setConsumedPower(Landroid/os/BatteryConsumer$Key;DI)Landroid/os/BatteryConsumer$BaseBuilder;
 
@@ -1213,7 +1121,6 @@
 
     move-object v1, v5
 
-    .line 259
     iget-wide v2, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->totalAppDurationMs:J
 
     sub-long v7, v33, v2
@@ -1224,7 +1131,6 @@
 
     if-ne v10, v2, :cond_11
 
-    .line 263
     invoke-static/range {v21 .. v22}, Lcom/android/server/power/stats/PowerCalculator;->uCtoMah(J)D
 
     move-result-wide v2
@@ -1241,7 +1147,6 @@
 
     if-gez v0, :cond_16
 
-    .line 264
     iput-wide v4, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->remainingPowerMah:D
 
     goto :goto_e
@@ -1253,7 +1158,6 @@
 
     if-eqz v2, :cond_12
 
-    .line 268
     iget-wide v2, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->remainingPowerMah:D
 
     long-to-double v4, v7
@@ -1270,7 +1174,6 @@
 
     iput-wide v2, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->remainingPowerMah:D
 
-    .line 274
     :cond_12
     invoke-virtual/range {p2 .. p2}, Landroid/os/BatteryStats;->getModemControllerActivity()Landroid/os/BatteryStats$ControllerActivityCounter;
 
@@ -1278,7 +1181,6 @@
 
     if-eqz v2, :cond_13
 
-    .line 277
     invoke-virtual {v2}, Landroid/os/BatteryStats$ControllerActivityCounter;->getSleepTimeCounter()Landroid/os/BatteryStats$LongCounter;
 
     move-result-object v3
@@ -1289,7 +1191,6 @@
 
     move-result-wide v5
 
-    .line 279
     invoke-virtual {v2}, Landroid/os/BatteryStats$ControllerActivityCounter;->getIdleTimeCounter()Landroid/os/BatteryStats$LongCounter;
 
     move-result-object v2
@@ -1298,7 +1199,6 @@
 
     move-result-wide v2
 
-    .line 281
     invoke-virtual {v0, v5, v6, v2, v3}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->calcInactiveStatePowerMah(JJ)D
 
     move-result-wide v11
@@ -1310,7 +1210,6 @@
 
     const-wide/high16 v11, 0x7ff8000000000000L    # Double.NaN
 
-    .line 283
     :goto_c
     invoke-static {v11, v12}, Ljava/lang/Double;->isNaN(D)Z
 
@@ -1322,7 +1221,6 @@
 
     move-wide/from16 v5, p3
 
-    .line 285
     invoke-virtual {v2, v5, v6, v4}, Landroid/os/BatteryStats;->getPhoneSignalScanningTime(JI)J
 
     move-result-wide v7
@@ -1331,7 +1229,6 @@
 
     div-long/2addr v7, v11
 
-    .line 287
     invoke-virtual {v0, v7, v8}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->calcScanTimePowerMah(J)D
 
     move-result-wide v7
@@ -1340,20 +1237,17 @@
 
     move v7, v4
 
-    .line 288
     :goto_d
     sget v3, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->NUM_SIGNAL_STRENGTH_LEVELS:I
 
     if-ge v7, v3, :cond_14
 
-    .line 289
     invoke-virtual {v2, v7, v5, v6, v4}, Landroid/os/BatteryStats;->getPhoneSignalStrengthTime(IJI)J
 
     move-result-wide v13
 
     div-long/2addr v13, v11
 
-    .line 291
     invoke-virtual {v0, v13, v14, v7}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->calcIdlePowerAtSignalStrengthMah(JI)D
 
     move-result-wide v3
@@ -1369,7 +1263,6 @@
     :cond_14
     move-wide v11, v8
 
-    .line 294
     :cond_15
     invoke-static {v11, v12}, Ljava/lang/Double;->isNaN(D)Z
 
@@ -1377,14 +1270,12 @@
 
     if-nez v0, :cond_16
 
-    .line 295
     iget-wide v2, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->remainingPowerMah:D
 
     add-double/2addr v2, v11
 
     iput-wide v2, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->remainingPowerMah:D
 
-    .line 300
     :cond_16
     :goto_e
     iget-wide v2, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->remainingPowerMah:D
@@ -1408,7 +1299,6 @@
 
     const/4 v3, 0x0
 
-    .line 301
     invoke-virtual {v0, v3}, Landroid/os/BatteryUsageStats$Builder;->getAggregateBatteryConsumerBuilder(I)Landroid/os/AggregateBatteryConsumer$Builder;
 
     move-result-object v3
@@ -1419,7 +1309,6 @@
 
     add-long/2addr v4, v6
 
-    .line 303
     invoke-virtual {v3, v2, v4, v5}, Landroid/os/AggregateBatteryConsumer$Builder;->setUsageDurationMillis(IJ)Landroid/os/BatteryConsumer$BaseBuilder;
 
     move-result-object v3
@@ -1432,19 +1321,16 @@
 
     add-double/2addr v4, v6
 
-    .line 305
     invoke-virtual {v3, v2, v4, v5, v10}, Landroid/os/AggregateBatteryConsumer$Builder;->setConsumedPower(IDI)Landroid/os/BatteryConsumer$BaseBuilder;
 
     const/4 v3, 0x1
 
-    .line 308
     invoke-virtual {v0, v3}, Landroid/os/BatteryUsageStats$Builder;->getAggregateBatteryConsumerBuilder(I)Landroid/os/AggregateBatteryConsumer$Builder;
 
     move-result-object v0
 
     iget-wide v3, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->totalAppDurationMs:J
 
-    .line 310
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/AggregateBatteryConsumer$Builder;->setUsageDurationMillis(IJ)Landroid/os/BatteryConsumer$BaseBuilder;
 
     move-result-object v0
@@ -1453,7 +1339,6 @@
 
     iget-wide v3, v1, Lcom/android/server/power/stats/MobileRadioPowerCalculator$PowerAndDuration;->totalAppPowerMah:D
 
-    .line 312
     invoke-virtual {v0, v2, v3, v4, v10}, Landroid/os/AggregateBatteryConsumer$Builder;->setConsumedPower(IDI)Landroid/os/BatteryConsumer$BaseBuilder;
 
     :cond_18
@@ -1471,10 +1356,8 @@
 
     const-wide/16 v10, 0x3e8
 
-    .line 322
     div-long v12, v8, v10
 
-    .line 323
     invoke-static {}, Landroid/telephony/CellSignalStrength;->getNumSignalStrengthLevels()I
 
     move-result v14
@@ -1540,7 +1423,6 @@
 
     move-wide v4, v12
 
-    .line 338
     invoke-virtual/range {v0 .. v5}, Landroid/os/BatteryStats;->getActiveTxRadioDurationMs(IIIJ)J
 
     move-result-wide v4
@@ -1560,12 +1442,10 @@
 
     move/from16 v3, v22
 
-    .line 343
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->calcTxStatePowerMah(IIIJ)D
 
     move-result-wide v0
 
-    .line 345
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v2
@@ -1599,7 +1479,6 @@
 
     move v4, v5
 
-    .line 352
     invoke-virtual {v7, v4, v15, v12, v13}, Landroid/os/BatteryStats;->getActiveRxRadioDurationMs(IIJ)J
 
     move-result-wide v0
@@ -1610,13 +1489,11 @@
 
     goto :goto_5
 
-    .line 357
     :cond_4
     invoke-virtual {v6, v4, v15, v0, v1}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->calcRxStatePowerMah(IIJ)D
 
     move-result-wide v0
 
-    .line 358
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v2
@@ -1669,7 +1546,6 @@
 
     if-nez v0, :cond_9
 
-    .line 367
     invoke-virtual {v7, v8, v9, v10}, Landroid/os/BatteryStats;->getMobileRadioActiveTime(JI)J
 
     move-result-wide v0
@@ -1684,7 +1560,6 @@
 
     if-lez v2, :cond_8
 
-    .line 376
     invoke-virtual {v6, v0, v1}, Lcom/android/server/power/stats/MobileRadioPowerCalculator;->calcPowerFromRadioActiveDurationMah(J)D
 
     move-result-wide v15
@@ -1706,7 +1581,6 @@
 .method public final calculateDuration(Landroid/os/BatteryStats$Uid;I)J
     .locals 2
 
-    .line 318
     invoke-virtual {p1, p2}, Landroid/os/BatteryStats$Uid;->getMobileRadioActiveTime(I)J
 
     move-result-wide p0
@@ -1721,7 +1595,6 @@
 .method public isPowerComponentSupported(I)Z
     .locals 0
 
-    .line 0
     const/16 p0, 0x8
 
     if-ne p1, p0, :cond_0

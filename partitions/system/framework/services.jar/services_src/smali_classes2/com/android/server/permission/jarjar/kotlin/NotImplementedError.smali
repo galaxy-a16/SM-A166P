@@ -11,7 +11,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 15
     invoke-direct {p0, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -26,7 +25,6 @@
 
     const-string p1, "An operation is not implemented."
 
-    .line 15
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/permission/jarjar/kotlin/NotImplementedError;-><init>(Ljava/lang/String;)V
 

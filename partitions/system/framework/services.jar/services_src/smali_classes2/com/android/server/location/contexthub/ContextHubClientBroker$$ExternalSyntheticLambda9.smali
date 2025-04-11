@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(JI)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$$ExternalSyntheticLambda9;->f$0:J
@@ -31,7 +30,6 @@
 .method public final accept(Landroid/hardware/location/IContextHubClientCallback;)V
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$$ExternalSyntheticLambda9;->f$0:J
 
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$$ExternalSyntheticLambda9;->f$1:I

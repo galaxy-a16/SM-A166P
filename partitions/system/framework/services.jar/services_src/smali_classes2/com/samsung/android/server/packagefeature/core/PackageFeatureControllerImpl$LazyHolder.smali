@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 56
     new-instance v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     const/4 v1, 0x0

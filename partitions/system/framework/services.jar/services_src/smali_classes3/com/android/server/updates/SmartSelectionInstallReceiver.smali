@@ -15,7 +15,6 @@
 
     const-string/jumbo v3, "textclassifier.model"
 
-    .line 22
     invoke-direct {p0, v2, v3, v0, v1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public verifyVersion(II)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

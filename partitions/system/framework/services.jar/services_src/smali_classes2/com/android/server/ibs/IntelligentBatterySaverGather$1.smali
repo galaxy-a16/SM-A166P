@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/ibs/IntelligentBatterySaverGather;)V
     .locals 0
 
-    .line 24
     iput-object p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverGather$1;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverGather;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -36,12 +34,10 @@
 
     if-nez p1, :cond_0
 
-    .line 36
     iget-object p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverGather$1;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverGather;
 
     monitor-enter p1
 
-    .line 37
     :try_start_0
     iget-object p0, p0, Lcom/android/server/ibs/IntelligentBatterySaverGather$1;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverGather;
 
@@ -53,7 +49,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;->updateDisplayLocked()V
 
-    .line 38
     monitor-exit p1
 
     goto :goto_0
@@ -75,6 +70,5 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/companion/virtual/VirtualDeviceManagerService;)V
     .locals 0
 
-    .line 120
     iput-object p1, p0, Lcom/android/server/companion/virtual/VirtualDeviceManagerService$2;->this$0:Lcom/android/server/companion/virtual/VirtualDeviceManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onInterceptActivityLaunch(Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;)Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;
     .locals 3
 
-    .line 126
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getCallingPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -38,7 +36,6 @@
 
     return-object v1
 
-    .line 129
     :cond_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/VirtualDeviceManagerService$2;->this$0:Lcom/android/server/companion/virtual/VirtualDeviceManagerService;
 
@@ -58,7 +55,6 @@
 
     return-object v1
 
-    .line 133
     :cond_1
     iget-object v0, p0, Lcom/android/server/companion/virtual/VirtualDeviceImpl$PendingTrampoline;->mResultReceiver:Landroid/os/ResultReceiver;
 
@@ -66,23 +62,19 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    .line 134
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getCheckedOptions()Landroid/app/ActivityOptions;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    .line 136
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object v0
 
-    .line 138
     :cond_2
     new-instance v1, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;
 
-    .line 139
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getIntent()Landroid/content/Intent;
 
     move-result-object p1

@@ -10,7 +10,6 @@
 .method public constructor <init>(Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 0
 
-    .line 142
     invoke-direct {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;-><init>(Lorg/xmlpull/v1/XmlPullParser;)V
 
     return-void
@@ -21,14 +20,12 @@
 .method public getAttributeBoolean(I)Z
     .locals 4
 
-    .line 236
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v1, "true"
 
-    .line 237
     invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v1
@@ -42,7 +39,6 @@
     :cond_0
     const-string v1, "false"
 
-    .line 239
     invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v1
@@ -53,7 +49,6 @@
 
     return p0
 
-    .line 242
     :cond_1
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -65,7 +60,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 243
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -90,7 +84,6 @@
 .method public getAttributeBytesBase64(I)[B
     .locals 4
 
-    .line 160
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
@@ -109,7 +102,6 @@
     :catch_0
     move-exception v0
 
-    .line 162
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -120,7 +112,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 163
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -145,7 +136,6 @@
 .method public getAttributeBytesHex(I)[B
     .locals 4
 
-    .line 149
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
@@ -162,7 +152,6 @@
     :catch_0
     move-exception v0
 
-    .line 151
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -173,7 +162,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 152
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -198,7 +186,6 @@
 .method public getAttributeDouble(I)D
     .locals 4
 
-    .line 226
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
@@ -215,7 +202,6 @@
     :catch_0
     move-exception v0
 
-    .line 228
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -226,7 +212,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 229
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -251,7 +236,6 @@
 .method public getAttributeFloat(I)F
     .locals 4
 
-    .line 215
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
@@ -268,7 +252,6 @@
     :catch_0
     move-exception v0
 
-    .line 217
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -279,7 +262,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -304,7 +286,6 @@
 .method public getAttributeInt(I)I
     .locals 4
 
-    .line 171
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
@@ -321,7 +302,6 @@
     :catch_0
     move-exception v0
 
-    .line 173
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -332,7 +312,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 174
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -357,7 +336,6 @@
 .method public getAttributeIntHex(I)I
     .locals 4
 
-    .line 182
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
@@ -376,7 +354,6 @@
     :catch_0
     move-exception v0
 
-    .line 184
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -387,7 +364,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 185
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -412,7 +388,6 @@
 .method public getAttributeLong(I)J
     .locals 4
 
-    .line 193
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
@@ -429,7 +404,6 @@
     :catch_0
     move-exception v0
 
-    .line 195
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -440,7 +414,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 196
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -465,7 +438,6 @@
 .method public getAttributeLongHex(I)J
     .locals 4
 
-    .line 204
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeValue(I)Ljava/lang/String;
 
@@ -484,7 +456,6 @@
     :catch_0
     move-exception v0
 
-    .line 206
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -495,7 +466,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 207
     invoke-virtual {p0, p1}, Lcom/android/internal/util/XmlPullParserWrapper;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object p0

@@ -37,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1910
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -52,69 +51,56 @@
 
     move-object v0, p0
 
-    .line 1927
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     move-object v1, p1
 
-    .line 1928
     iput-object v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mRssAfterCompaction:[J
 
     move-object v1, p2
 
-    .line 1929
     iput-object v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mSourceType:Lcom/android/server/am/CachedAppOptimizer$CompactSource;
 
     move-object v1, p3
 
-    .line 1930
     iput-object v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mProcessName:Ljava/lang/String;
 
     move/from16 v1, p17
 
-    .line 1931
     iput v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mUid:I
 
     move-wide v1, p4
 
-    .line 1932
     iput-wide v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mDeltaAnonRssKBs:J
 
     move-wide v1, p6
 
-    .line 1933
     iput-wide v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mZramConsumedKBs:J
 
     move-wide v1, p8
 
-    .line 1934
     iput-wide v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mAnonMemFreedKBs:J
 
     move-wide v1, p12
 
     long-to-float v1, v1
 
-    .line 1935
     iput v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mCpuTimeMillis:F
 
     move-wide v1, p10
 
-    .line 1936
     iput-wide v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mOrigAnonRss:J
 
     move/from16 v1, p14
 
-    .line 1937
     iput v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mProcState:I
 
     move/from16 v1, p15
 
-    .line 1938
     iput v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mOomAdj:I
 
     move/from16 v1, p16
 
-    .line 1939
     iput v1, v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mOomAdjReason:I
 
     return-void
@@ -125,7 +111,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 1954
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -170,7 +155,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1955
     invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->getCompactEfficiency()D
 
     move-result-wide v2
@@ -179,7 +163,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1956
     invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->getCompactCost()D
 
     move-result-wide v2
@@ -202,7 +185,6 @@
 
     iget p0, p0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mOomAdjReason:I
 
-    .line 1957
     invoke-static {p0}, Lcom/android/server/am/OomAdjuster;->oomAdjReasonToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -217,7 +199,6 @@
 
     move-result-object p0
 
-    .line 1954
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -226,7 +207,6 @@
 .method public getCompactCost()D
     .locals 4
 
-    .line 1946
     iget v0, p0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mCpuTimeMillis:F
 
     float-to-double v0, v0
@@ -247,7 +227,6 @@
 .method public getCompactEfficiency()D
     .locals 4
 
-    .line 1942
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mAnonMemFreedKBs:J
 
     long-to-double v0, v0
@@ -264,7 +243,6 @@
 .method public getRssAfterCompaction()[J
     .locals 0
 
-    .line 1950
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mRssAfterCompaction:[J
 
     return-object p0
@@ -273,7 +251,6 @@
 .method public sendStat()V
     .locals 13
 
-    .line 1961
     sget-object v0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mRandom:Ljava/util/Random;
 
     invoke-virtual {v0}, Ljava/util/Random;->nextFloat()F
@@ -288,7 +265,6 @@
 
     const/16 v1, 0x1eb
 
-    .line 1962
     iget v2, p0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mUid:I
 
     iget v3, p0, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->mProcState:I

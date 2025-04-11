@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/auditlog/LogWritter;)V
     .locals 0
 
-    .line 153
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -26,7 +25,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 158
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
@@ -35,14 +33,12 @@
 
     const-string/jumbo v0, "swap"
 
-    .line 160
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 161
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-static {p1}, Lcom/android/server/enterprise/auditlog/LogWritter;->-$$Nest$fgetmCircularBuffer(Lcom/android/server/enterprise/auditlog/LogWritter;)Lcom/android/server/enterprise/auditlog/CircularBuffer;
@@ -53,7 +49,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/enterprise/auditlog/CircularBuffer;->write(Ljava/lang/String;)V
 
-    .line 162
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-static {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->-$$Nest$fgetmObserver(Lcom/android/server/enterprise/auditlog/LogWritter;)Lcom/android/server/enterprise/auditlog/IObserver;
@@ -66,7 +61,6 @@
 
     goto :goto_0
 
-    .line 164
     :cond_0
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->data:Landroid/os/Bundle;
 
@@ -78,7 +72,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 165
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-static {p1}, Lcom/android/server/enterprise/auditlog/LogWritter;->-$$Nest$fgetmCircularBuffer(Lcom/android/server/enterprise/auditlog/LogWritter;)Lcom/android/server/enterprise/auditlog/CircularBuffer;
@@ -95,7 +88,6 @@
 
     goto :goto_0
 
-    .line 168
     :cond_1
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/LogWritter$SaveLogHandler;->this$0:Lcom/android/server/enterprise/auditlog/LogWritter;
 

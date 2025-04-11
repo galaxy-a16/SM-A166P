@@ -15,10 +15,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 60
     invoke-direct {p0}, Lcom/samsung/android/knox/dar/ddar/proxy/KnoxProxyAgent;-><init>()V
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;->mContext:Landroid/content/Context;
 
     return-void
@@ -31,20 +29,17 @@
 
     monitor-enter v0
 
-    .line 53
     :try_start_0
     sget-object v1, Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;->mInstance:Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;
 
     if-nez v1, :cond_0
 
-    .line 54
     new-instance v1, Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;
 
     invoke-direct {v1, p0}, Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;->mInstance:Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;
 
-    .line 57
     :cond_0
     sget-object p0, Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;->mInstance:Lcom/android/server/knox/dar/ddar/proxy/SystemProxyAgent;
     :try_end_0
@@ -67,7 +62,6 @@
 .method public relay(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 6
 
-    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,7 +84,6 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 83
     :try_start_0
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
@@ -149,7 +142,6 @@
 
     if-eq v0, v4, :cond_3
 
-    .line 98
     :try_start_1
     invoke-super {p0, p1, p2, p3, p4}, Lcom/samsung/android/knox/dar/ddar/proxy/KnoxProxyAgent;->relay(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
@@ -157,23 +149,19 @@
 
     goto :goto_3
 
-    .line 92
     :cond_3
     invoke-virtual {p4, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 
-    .line 93
     invoke-virtual {p0, p1, p2, p4}, Lcom/samsung/android/knox/dar/ddar/proxy/KnoxProxyAgent;->teardownSecureSession(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
-    .line 94
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
-    .line 95
     invoke-virtual {p1, v2, p0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     :goto_2
@@ -181,7 +169,6 @@
 
     goto :goto_3
 
-    .line 85
     :cond_4
     invoke-virtual {p4, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -189,22 +176,18 @@
 
     const-string v4, "SECURE_CLIENT_PUB_KEY"
 
-    .line 86
     invoke-virtual {p4, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 
-    .line 87
     invoke-virtual {p0, p1, p2, v0, p4}, Lcom/samsung/android/knox/dar/ddar/proxy/KnoxProxyAgent;->establishSecureSession(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 88
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
-    .line 89
     invoke-virtual {p1, v2, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -217,7 +200,6 @@
     :catch_0
     move-exception p0
 
-    .line 104
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -242,7 +224,6 @@
 
     invoke-static {v3, p1, p2}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 105
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0

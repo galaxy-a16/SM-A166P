@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 3672
     iput-object p1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState$DeathRecipient-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowState$DeathRecipient;-><init>(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public binderDied()V
     .locals 5
 
-    .line 3676
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
@@ -50,7 +47,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3677
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
@@ -62,14 +58,12 @@
 
     const/4 v4, 0x0
 
-    .line 3678
     invoke-virtual {v2, v3, v1, v4}, Lcom/android/server/wm/WindowManagerService;->windowForClientLocked(Lcom/android/server/wm/Session;Landroid/view/IWindow;Z)Lcom/android/server/wm/WindowState;
 
     move-result-object v1
 
     const-string v2, "WindowManager"
 
-    .line 3679
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,19 +82,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 3681
     iget-object v2, v1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v2, :cond_0
 
-    .line 3682
     invoke-virtual {v2}, Lcom/android/server/wm/ActivityRecord;->findMainWindow()Lcom/android/server/wm/WindowState;
 
     move-result-object v2
 
     if-ne v2, v1, :cond_0
 
-    .line 3683
     iget-object p0, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
@@ -111,13 +102,11 @@
 
     invoke-virtual {p0, v2}, Lcom/android/server/wm/SnapshotController;->onAppDied(Lcom/android/server/wm/ActivityRecord;)V
 
-    .line 3685
     :cond_0
     invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->removeIfPossible()V
 
     goto :goto_0
 
-    .line 3686
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
@@ -129,15 +118,12 @@
 
     const-string v2, "!!! LEAK !!! Window removed but surface still valid."
 
-    .line 3687
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3688
     iget-object p0, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->removeIfPossible()V
 
-    .line 3690
     :cond_2
     :goto_0
     monitor-exit v0

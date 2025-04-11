@@ -13,7 +13,6 @@
 
     return-object p0
 
-    .line 37
     :cond_0
     invoke-virtual {p0}, Landroid/os/ParcelUuid;->hashCode()I
 

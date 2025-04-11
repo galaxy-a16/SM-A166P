@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;)V
     .locals 0
 
-    .line 413
     iput-object p1, p0, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo$1;->this$1:Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 416
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     instance-of v0, p1, Landroid/content/Context;
@@ -33,7 +31,6 @@
 
     return-void
 
-    .line 419
     :cond_0
     iget-object p0, p0, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo$1;->this$1:Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;
 

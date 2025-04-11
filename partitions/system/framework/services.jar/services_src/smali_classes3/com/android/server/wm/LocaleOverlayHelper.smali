@@ -7,7 +7,6 @@
 .method public static combineLocales(Landroid/os/LocaleList;Landroid/os/LocaleList;)Landroid/os/LocaleList;
     .locals 4
 
-    .line 50
     invoke-virtual {p0}, Landroid/os/LocaleList;->size()I
 
     move-result v0
@@ -24,7 +23,6 @@
 
     move v2, v1
 
-    .line 51
     :goto_0
     invoke-virtual {p0}, Landroid/os/LocaleList;->size()I
 
@@ -32,7 +30,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 52
     invoke-virtual {p0, v2}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
 
     move-result-object v3
@@ -43,7 +40,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_0
     :goto_1
     invoke-virtual {p1}, Landroid/os/LocaleList;->size()I
@@ -52,7 +48,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 55
     invoke-virtual {p0}, Landroid/os/LocaleList;->size()I
 
     move-result v2
@@ -69,7 +64,6 @@
 
     goto :goto_1
 
-    .line 58
     :cond_1
     new-instance p0, Landroid/os/LocaleList;
 
@@ -83,7 +77,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 39
     invoke-virtual {p0}, Landroid/os/LocaleList;->isEmpty()Z
 
     move-result v0
@@ -92,7 +85,6 @@
 
     goto :goto_0
 
-    .line 42
     :cond_0
     invoke-static {p0, p1}, Lcom/android/server/wm/LocaleOverlayHelper;->combineLocales(Landroid/os/LocaleList;Landroid/os/LocaleList;)Landroid/os/LocaleList;
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/vcn/TelephonySubscriptionTracker;)V
     .locals 0
 
-    .line 173
     iput-object p1, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$2;->this$0:Lcom/android/server/vcn/TelephonySubscriptionTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onCarrierPrivilegesChanged(Ljava/util/Set;Ljava/util/Set;)V
     .locals 0
 
-    .line 181
     iget-object p0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$2;->this$0:Lcom/android/server/vcn/TelephonySubscriptionTracker;
 
     invoke-virtual {p0}, Lcom/android/server/vcn/TelephonySubscriptionTracker;->handleSubscriptionsChanged()V

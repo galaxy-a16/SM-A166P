@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 1200
     iput-object p1, p0, Lcom/android/server/wm/ActivityRecord$1;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     const-string v0, "ActivityTaskManager"
 
-    .line 1205
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,7 +46,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1206
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord$1;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -59,7 +56,6 @@
 
     monitor-enter v0
 
-    .line 1207
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/ActivityRecord$1;->this$0:Lcom/android/server/wm/ActivityRecord;
 
@@ -69,7 +65,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1208
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -78,7 +73,6 @@
 
     return-void
 
-    .line 1210
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/ActivityRecord$1;->this$0:Lcom/android/server/wm/ActivityRecord;
@@ -107,14 +101,12 @@
 
     invoke-virtual {v2, v3, v4, v5, v1}, Lcom/android/server/wm/ActivityTaskManagerService;->logAppTooSlow(Lcom/android/server/wm/WindowProcessController;JLjava/lang/String;)V
 
-    .line 1211
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord$1;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/ActivityRecord;->activityPaused(Z)V
 
-    .line 1212
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

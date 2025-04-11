@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsService;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 2120
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$4;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     iput-object p2, p0, Lcom/android/server/locksettings/LockSettingsService$4;->val$latch:Ljava/util/concurrent/CountDownLatch;
@@ -32,10 +31,8 @@
 
     const-string/jumbo p2, "unlockUser finished"
 
-    .line 2133
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2134
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$4;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -46,7 +43,6 @@
 .method public onProgress(IILandroid/os/Bundle;)V
     .locals 0
 
-    .line 2128
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +71,6 @@
 
     const-string/jumbo p1, "unlockUser started"
 
-    .line 2123
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

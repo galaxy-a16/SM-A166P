@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverServiceManager;Landroid/content/ComponentName;ILandroid/os/IBinder;Landroid/content/ServiceConnection;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 724
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$SViewCoverBaseServiceInfo;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
-    .line 725
     invoke-direct/range {p0 .. p6}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;-><init>(Lcom/android/server/sepunion/cover/CoverServiceManager;Landroid/content/ComponentName;ILandroid/os/IBinder;Landroid/content/ServiceConnection;Landroid/os/UserHandle;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public asInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 0
 
-    .line 730
     invoke-static {p1}, Lcom/samsung/android/cover/ISViewCoverBaseService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cover/ISViewCoverBaseService;
 
     move-result-object p0
@@ -36,13 +33,11 @@
 .method public onCoverAppStateChanged(Z)I
     .locals 0
 
-    .line 767
     :try_start_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->service:Landroid/os/IInterface;
 
     if-eqz p0, :cond_0
 
-    .line 768
     check-cast p0, Lcom/samsung/android/cover/ISViewCoverBaseService;
 
     invoke-interface {p0, p1}, Lcom/samsung/android/cover/ISViewCoverBaseService;->onCoverAppCovered(Z)I
@@ -56,7 +51,6 @@
     :catch_0
     move-exception p0
 
-    .line 771
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
@@ -68,13 +62,11 @@
 .method public systemReady()V
     .locals 0
 
-    .line 739
     :try_start_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->service:Landroid/os/IInterface;
 
     if-eqz p0, :cond_0
 
-    .line 740
     check-cast p0, Lcom/samsung/android/cover/ISViewCoverBaseService;
 
     invoke-interface {p0}, Lcom/samsung/android/cover/ISViewCoverBaseService;->onSystemReady()V
@@ -86,7 +78,6 @@
     :catch_0
     move-exception p0
 
-    .line 743
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
@@ -97,13 +88,11 @@
 .method public updateCoverState(Lcom/samsung/android/cover/CoverState;)V
     .locals 0
 
-    .line 753
     :try_start_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->service:Landroid/os/IInterface;
 
     if-eqz p0, :cond_0
 
-    .line 754
     check-cast p0, Lcom/samsung/android/cover/ISViewCoverBaseService;
 
     invoke-interface {p0, p1}, Lcom/samsung/android/cover/ISViewCoverBaseService;->updateCoverState(Lcom/samsung/android/cover/CoverState;)V
@@ -115,7 +104,6 @@
     :catch_0
     move-exception p0
 
-    .line 757
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0

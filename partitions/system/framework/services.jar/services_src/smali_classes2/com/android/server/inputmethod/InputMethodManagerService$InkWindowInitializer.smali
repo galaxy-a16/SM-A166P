@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 2027
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InkWindowInitializer;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;Lcom/android/server/inputmethod/InputMethodManagerService$InkWindowInitializer-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/inputmethod/InputMethodManagerService$InkWindowInitializer;-><init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
 
     return-void
@@ -36,12 +34,10 @@
 .method public run()V
     .locals 1
 
-    .line 2029
     const-class v0, Lcom/android/server/inputmethod/ImfLock;
 
     monitor-enter v0
 
-    .line 2030
     :try_start_0
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InkWindowInitializer;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -51,10 +47,8 @@
 
     if-eqz p0, :cond_0
 
-    .line 2032
     invoke-virtual {p0}, Lcom/android/server/inputmethod/IInputMethodInvoker;->initInkWindow()V
 
-    .line 2034
     :cond_0
     monitor-exit v0
 

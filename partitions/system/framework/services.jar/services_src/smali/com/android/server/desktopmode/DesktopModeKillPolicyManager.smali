@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 9
 
-    .line 12
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,7 +53,6 @@
 
     const-string v8, "com.google.android.apps.docs.editors.slides"
 
-    .line 22
     invoke-static/range {v1 .. v8}, Ljava/util/Set;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
@@ -77,7 +75,6 @@
 
     const-string v8, "com.facebook.katana"
 
-    .line 34
     invoke-static/range {v1 .. v8}, Ljava/util/Set;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
@@ -90,7 +87,6 @@
 .method public static dump(Landroid/util/IndentingPrintWriter;)V
     .locals 3
 
-    .line 57
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,10 +113,8 @@
 
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 58
     invoke-virtual {p0}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -147,7 +141,6 @@
 
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +165,6 @@
 
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 61
     invoke-virtual {p0}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -181,7 +173,6 @@
 .method public static getDesktopModeKillPolicy()Landroid/os/Bundle;
     .locals 4
 
-    .line 47
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -190,10 +181,8 @@
 
     const-string v2, "DeX"
 
-    .line 48
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
     sget-object v1, Lcom/android/server/desktopmode/DesktopModeKillPolicyManager;->KILL_POLICY_PACKAGES:Ljava/util/Set;
 
     check-cast v1, Ljava/io/Serializable;
@@ -202,7 +191,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 50
     sget-object v1, Lcom/android/server/desktopmode/DesktopModeKillPolicyManager;->KEEP_POLICY_PACKAGES:Ljava/util/Set;
 
     check-cast v1, Ljava/io/Serializable;
@@ -215,10 +203,8 @@
 
     const/4 v2, 0x1
 
-    .line 51
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 52
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v1, :cond_0

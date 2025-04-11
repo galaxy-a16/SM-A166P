@@ -11,7 +11,6 @@
 .method public binderClearCallingIdentity()J
     .locals 2
 
-    .line 90
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
@@ -22,7 +21,6 @@
 .method public binderRestoreCallingIdentity(J)V
     .locals 0
 
-    .line 94
     invoke-static {p1, p2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public getAlarmManager()Landroid/app/AlarmManager;
     .locals 1
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/AlarmManager;
@@ -48,7 +45,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl$Injector;->mContext:Landroid/content/Context;
 
     return-object p0

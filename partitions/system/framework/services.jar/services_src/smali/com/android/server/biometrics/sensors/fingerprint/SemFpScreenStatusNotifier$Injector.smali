@@ -17,7 +17,6 @@
 .method public isInteractive(Landroid/content/Context;)Z
     .locals 0
 
-    .line 40
     const-class p0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -26,7 +25,6 @@
 
     check-cast p0, Landroid/os/PowerManager;
 
-    .line 41
     invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
 
     move-result p0

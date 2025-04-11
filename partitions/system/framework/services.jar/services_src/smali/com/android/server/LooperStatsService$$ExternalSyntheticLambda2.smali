@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/internal/os/LooperStats$ExportedEntry;
 
     invoke-static {p1}, Lcom/android/server/LooperStatsService;->$r8$lambda$w9f1AljrdWnUOFp4OAId-GVGP7Q(Lcom/android/internal/os/LooperStats$ExportedEntry;)Ljava/lang/String;

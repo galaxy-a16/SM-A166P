@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$0keGwPkIxR4m1GD-O0Dk5Yv2Ldo(ILjava/lang/String;Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->lambda$forEachReclaimersApplyPolicy$0(ILjava/lang/String;Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 745
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -41,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;-><init>()V
 
     return-void
@@ -50,7 +47,6 @@
 .method public static synthetic lambda$forEachReclaimersApplyPolicy$0(ILjava/lang/String;Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;)V
     .locals 0
 
-    .line 817
     :try_start_0
     invoke-virtual {p2, p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;->setMode(I)V
     :try_end_0
@@ -61,7 +57,6 @@
     :catch_0
     move-exception p0
 
-    .line 819
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -81,7 +76,6 @@
 
     if-lt p1, v1, :cond_0
 
-    .line 806
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->forEachReclaimersApplyPolicy(I)V
 
@@ -95,7 +89,6 @@
     :cond_0
     if-ne p1, v0, :cond_1
 
-    .line 808
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->forEachReclaimersApplyPolicy(I)V
 
     goto :goto_0
@@ -103,12 +96,10 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 810
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->forEachReclaimersApplyPolicy(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 812
     :goto_0
     monitor-exit p0
 
@@ -127,16 +118,13 @@
 
     const/4 v0, 0x0
 
-    .line 752
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->forEachReclaimersApplyPolicy(I)V
 
-    .line 753
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->unregisterKernelReclaimers()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 754
     monitor-exit p0
 
     return-void
@@ -152,7 +140,6 @@
 .method public final forEachReclaimersApplyPolicy(I)V
     .locals 1
 
-    .line 815
     sget-object p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->reclaimers:Ljava/util/HashMap;
 
     new-instance v0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager$$ExternalSyntheticLambda0;
@@ -167,7 +154,6 @@
 .method public getDefaultReclaimerMode()I
     .locals 1
 
-    .line 794
     sget-object p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->reclaimers:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->isEmpty()Z
@@ -180,7 +166,6 @@
 
     return v0
 
-    .line 798
     :cond_0
     :try_start_0
     sget-object p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->reclaimers:Ljava/util/HashMap;
@@ -214,7 +199,6 @@
 .method public getReclaimer(Ljava/lang/String;)Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;
     .locals 0
 
-    .line 789
     sget-object p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->reclaimers:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -229,7 +213,6 @@
 .method public getReclaimers()Ljava/util/HashMap;
     .locals 0
 
-    .line 785
     sget-object p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->reclaimers:Ljava/util/HashMap;
 
     return-object p0
@@ -238,7 +221,6 @@
 .method public init()V
     .locals 0
 
-    .line 748
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->registerKernelReclaimers()V
 
     return-void
@@ -247,14 +229,12 @@
 .method public final registerKernelReclaimers()V
     .locals 1
 
-    .line 771
     new-instance v0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$KswapdReclaimer;
 
     invoke-direct {v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$KswapdReclaimer;-><init>()V
 
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->registerReclaimer(Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;)V
 
-    .line 773
     invoke-static {}, Lcom/android/server/chimera/umr/DamonReclaimer;->getDamonReclaimer()Lcom/android/server/chimera/umr/DamonReclaimer;
 
     move-result-object v0
@@ -269,13 +249,11 @@
 
     monitor-enter p0
 
-    .line 757
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 758
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,7 +270,6 @@
 
     invoke-static {v1}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 759
     sget-object v1, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->reclaimers:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -301,7 +278,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 760
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -322,7 +298,6 @@
 
     invoke-static {v1}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 762
     :cond_0
     sget-object v1, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->reclaimers:Ljava/util/HashMap;
 
@@ -330,7 +305,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 763
     monitor-exit p0
 
     return-void
@@ -346,14 +320,12 @@
 .method public final unregisterKernelReclaimers()V
     .locals 1
 
-    .line 778
     new-instance v0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$KswapdReclaimer;
 
     invoke-direct {v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$KswapdReclaimer;-><init>()V
 
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->unregisterReclaimer(Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;)V
 
-    .line 780
     invoke-static {}, Lcom/android/server/chimera/umr/DamonReclaimer;->getDamonReclaimer()Lcom/android/server/chimera/umr/DamonReclaimer;
 
     move-result-object v0
@@ -368,7 +340,6 @@
 
     monitor-enter p0
 
-    .line 766
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -390,7 +361,6 @@
 
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 767
     sget-object v0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$ReclaimerManager;->reclaimers:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;->getName()Ljava/lang/String;
@@ -401,7 +371,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 768
     monitor-exit p0
 
     return-void

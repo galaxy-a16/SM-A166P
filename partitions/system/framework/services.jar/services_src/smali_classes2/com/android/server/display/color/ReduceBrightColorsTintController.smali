@@ -15,21 +15,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Lcom/android/server/display/color/TintController;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
-    .line 40
     iput-object v0, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mMatrix:[F
 
     const/4 v0, 0x3
 
     new-array v0, v0, [F
 
-    .line 41
     iput-object v0, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mCoefficients:[F
 
     return-void
@@ -40,7 +37,6 @@
 .method public bridge synthetic cancelAnimator()V
     .locals 0
 
-    .line 38
     invoke-super {p0}, Lcom/android/server/display/color/TintController;->cancelAnimator()V
 
     return-void
@@ -49,7 +45,6 @@
 .method public final clamp(F)F
     .locals 1
 
-    .line 0
     const/high16 p0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, p0
@@ -82,7 +77,6 @@
 
     mul-float v0, p1, p1
 
-    .line 145
     iget-object v1, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mCoefficients:[F
 
     const/4 v2, 0x0
@@ -115,7 +109,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 104
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,7 +133,6 @@
 .method public getAdjustedBrightness(F)F
     .locals 1
 
-    .line 139
     iget v0, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mStrength:I
 
     invoke-virtual {p0, v0}, Lcom/android/server/display/color/ReduceBrightColorsTintController;->computeComponentValue(I)F
@@ -155,7 +147,6 @@
 .method public getLevel()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xfa
 
     return p0
@@ -164,7 +155,6 @@
 .method public getMatrix()[F
     .locals 1
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/server/display/color/ReduceBrightColorsTintController;->isActivationLock()Z
 
     move-result v0
@@ -175,15 +165,12 @@
 
     const-string v0, "ReduceBrightColorsTintController: activation lock"
 
-    .line 65
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     sget-object p0, Lcom/android/server/display/color/ColorDisplayService;->MATRIX_IDENTITY:[F
 
     return-object p0
 
-    .line 69
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/display/color/ReduceBrightColorsTintController;->isActivated()Z
 
@@ -201,7 +188,6 @@
 
     goto :goto_0
 
-    .line 70
     :cond_1
     sget-object p0, Lcom/android/server/display/color/ColorDisplayService;->MATRIX_IDENTITY:[F
 
@@ -212,7 +198,6 @@
 .method public getOffsetFactor()F
     .locals 2
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mCoefficients:[F
 
     const/4 v0, 0x0
@@ -237,7 +222,6 @@
 .method public getStrength()I
     .locals 0
 
-    .line 125
     iget p0, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mStrength:I
 
     return p0
@@ -246,7 +230,6 @@
 .method public bridge synthetic getTransitionDurationMilliseconds()J
     .locals 2
 
-    .line 38
     invoke-super {p0}, Lcom/android/server/display/color/TintController;->getTransitionDurationMilliseconds()J
 
     move-result-wide v0
@@ -257,7 +240,6 @@
 .method public bridge synthetic isActivated()Z
     .locals 0
 
-    .line 38
     invoke-super {p0}, Lcom/android/server/display/color/TintController;->isActivated()Z
 
     move-result p0
@@ -268,7 +250,6 @@
 .method public bridge synthetic isActivatedStateNotSet()Z
     .locals 0
 
-    .line 38
     invoke-super {p0}, Lcom/android/server/display/color/TintController;->isActivatedStateNotSet()Z
 
     move-result p0
@@ -279,7 +260,6 @@
 .method public bridge synthetic isActivationLock()Z
     .locals 0
 
-    .line 38
     invoke-super {p0}, Lcom/android/server/display/color/TintController;->isActivationLock()Z
 
     move-result p0
@@ -290,7 +270,6 @@
 .method public isAvailable(Landroid/content/Context;)Z
     .locals 0
 
-    .line 114
     invoke-static {p1}, Landroid/hardware/display/ColorDisplayManager;->isColorTransformAccelerated(Landroid/content/Context;)Z
 
     move-result p0
@@ -301,12 +280,10 @@
 .method public setActivated(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 119
     invoke-super {p0, p1}, Lcom/android/server/display/color/TintController;->setActivated(Ljava/lang/Boolean;)V
 
     if-eqz p1, :cond_0
 
-    .line 120
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -331,7 +308,6 @@
 .method public bridge synthetic setActivationLock(Z)V
     .locals 0
 
-    .line 38
     invoke-super {p0, p1}, Lcom/android/server/display/color/TintController;->setActivationLock(Z)V
 
     return-void
@@ -340,7 +316,6 @@
 .method public bridge synthetic setAnimator(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    .line 38
     invoke-super {p0, p1}, Lcom/android/server/display/color/TintController;->setAnimator(Landroid/animation/ValueAnimator;)V
 
     return-void
@@ -364,7 +339,6 @@
 
     move p1, v1
 
-    .line 81
     :cond_1
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -385,32 +359,26 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     iput p1, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mStrength:I
 
-    .line 84
     iget-object v1, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mMatrix:[F
 
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 87
     invoke-virtual {p0, p1}, Lcom/android/server/display/color/ReduceBrightColorsTintController;->computeComponentValue(I)F
 
     move-result p1
 
-    .line 88
     iget-object p0, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mMatrix:[F
 
     aput p1, p0, v0
 
     const/4 v0, 0x5
 
-    .line 89
     aput p1, p0, v0
 
     const/16 v0, 0xa
 
-    .line 90
     aput p1, p0, v0
 
     return-void
@@ -419,7 +387,6 @@
 .method public setUp(Landroid/content/Context;Z)V
     .locals 2
 
-    .line 48
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_VIVID_WCG_ON:Z
 
     const/4 v1, 0x0
@@ -428,7 +395,6 @@
 
     move p2, v1
 
-    .line 53
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -453,12 +419,10 @@
 
     if-ge v1, p2, :cond_2
 
-    .line 56
     array-length p2, p1
 
     if-ge v1, p2, :cond_2
 
-    .line 57
     iget-object p2, p0, Lcom/android/server/display/color/ReduceBrightColorsTintController;->mCoefficients:[F
 
     aget-object v0, p1, v1

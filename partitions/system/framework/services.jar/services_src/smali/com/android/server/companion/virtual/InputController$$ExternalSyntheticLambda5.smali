@@ -20,7 +20,6 @@
 .method public final binderDied()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/companion/virtual/InputController;->$r8$lambda$3SD2C7dswJfE8qEYIbzBsqTYouY()V
 
     return-void

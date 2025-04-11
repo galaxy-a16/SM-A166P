@@ -25,17 +25,14 @@
 .method public close()V
     .locals 1
 
-    .line 1222
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mInputStream:Ljava/io/DataInputStream;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 1223
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mOutputStream:Ljava/io/DataOutputStream;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 1224
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mLocalSocket:Landroid/net/LocalSocket;
 
     invoke-static {p0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
@@ -46,7 +43,6 @@
 .method public connectService()Z
     .locals 8
 
-    .line 1151
     new-instance v0, Landroid/net/LocalSocket;
 
     invoke-direct {v0}, Landroid/net/LocalSocket;-><init>()V
@@ -66,7 +62,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1158
     :try_start_0
     iget-object v2, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mLocalSocket:Landroid/net/LocalSocket;
 
@@ -89,7 +84,6 @@
     :catch_0
     const-wide/16 v4, 0x3e8
 
-    .line 1164
     :try_start_1
     invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
     :try_end_1
@@ -102,7 +96,6 @@
 
     const-string v4, "Interrupted:"
 
-    .line 1166
     invoke-static {v3, v4, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -118,15 +111,12 @@
 
     const-string v1, "Timed out connecting to uncrypt socket"
 
-    .line 1171
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1172
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
     return v0
 
-    .line 1177
     :cond_1
     :try_start_2
     new-instance v1, Ljava/io/DataInputStream;
@@ -141,7 +131,6 @@
 
     iput-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mInputStream:Ljava/io/DataInputStream;
 
-    .line 1178
     new-instance v1, Ljava/io/DataOutputStream;
 
     iget-object v2, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mLocalSocket:Landroid/net/LocalSocket;
@@ -158,7 +147,6 @@
 
     return v4
 
-    .line 1180
     :catch_2
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
@@ -168,7 +156,6 @@
 .method public getPercentageUncrypted()I
     .locals 0
 
-    .line 1206
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {p0}, Ljava/io/DataInputStream;->readInt()I
@@ -181,7 +168,6 @@
 .method public sendAck()V
     .locals 1
 
-    .line 1215
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mOutputStream:Ljava/io/DataOutputStream;
 
     const/4 v0, 0x0
@@ -194,21 +180,18 @@
 .method public sendCommand(Ljava/lang/String;)V
     .locals 2
 
-    .line 1194
     sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object p1
 
-    .line 1195
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mOutputStream:Ljava/io/DataOutputStream;
 
     array-length v1, p1
 
     invoke-virtual {v0, v1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 1196
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->mOutputStream:Ljava/io/DataOutputStream;
 
     const/4 v0, 0x0

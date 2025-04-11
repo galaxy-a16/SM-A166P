@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$2DTWkSfGqKLTIjnAeq_vidiYD1E(Ljava/lang/String;Ljava/lang/String;ILcom/android/internal/widget/ILockSettings;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->lambda$setPassword$0(Ljava/lang/String;Ljava/lang/String;ILcom/android/internal/widget/ILockSettings;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$5TKM9ZhH8Kzl0LAjw29T-J9tFh8(Ljava/lang/String;J[BILcom/android/internal/widget/LockSettingsInternal;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->lambda$setPasswordWithToken$2(Ljava/lang/String;J[BILcom/android/internal/widget/LockSettingsInternal;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -33,7 +31,6 @@
 .method public static synthetic $r8$lambda$t-vEnJhNWjP-ONFBr8MN5XFfwso(ILcom/android/internal/widget/ILockSettings;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->lambda$clearLock$1(ILcom/android/internal/widget/ILockSettings;)V
 
     return-void
@@ -42,12 +39,10 @@
 .method public constructor <init>(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;Lcom/android/server/knox/dar/sdp/SdpManagerImpl;)V
     .locals 0
 
-    .line 3511
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3512
     iput-object p2, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->mSdpManager:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     return-void
@@ -56,18 +51,15 @@
 .method public static synthetic lambda$clearLock$1(ILcom/android/internal/widget/ILockSettings;)V
     .locals 2
 
-    .line 3624
     :try_start_0
     invoke-static {}, Lcom/android/internal/widget/LockscreenCredential;->createNone()Lcom/android/internal/widget/LockscreenCredential;
 
     move-result-object v0
 
-    .line 3625
     invoke-static {}, Lcom/android/internal/widget/LockscreenCredential;->createNone()Lcom/android/internal/widget/LockscreenCredential;
 
     move-result-object v1
 
-    .line 3623
     invoke-interface {p1, v0, v1, p0}, Lcom/android/internal/widget/ILockSettings;->setLockCredential(Lcom/android/internal/widget/LockscreenCredential;Lcom/android/internal/widget/LockscreenCredential;I)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -77,7 +69,6 @@
     :catch_0
     move-exception p0
 
-    .line 3628
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -87,18 +78,15 @@
 .method public static synthetic lambda$setPassword$0(Ljava/lang/String;Ljava/lang/String;ILcom/android/internal/widget/ILockSettings;)V
     .locals 0
 
-    .line 3590
     :try_start_0
     invoke-static {p0}, Lcom/android/internal/widget/LockscreenCredential;->createPassword(Ljava/lang/CharSequence;)Lcom/android/internal/widget/LockscreenCredential;
 
     move-result-object p0
 
-    .line 3591
     invoke-static {p1}, Lcom/android/internal/widget/LockscreenCredential;->createPassword(Ljava/lang/CharSequence;)Lcom/android/internal/widget/LockscreenCredential;
 
     move-result-object p1
 
-    .line 3589
     invoke-interface {p3, p0, p1, p2}, Lcom/android/internal/widget/ILockSettings;->setLockCredential(Lcom/android/internal/widget/LockscreenCredential;Lcom/android/internal/widget/LockscreenCredential;I)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -108,7 +96,6 @@
     :catch_0
     move-exception p0
 
-    .line 3594
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -118,7 +105,6 @@
 .method public static synthetic lambda$setPasswordWithToken$2(Ljava/lang/String;J[BILcom/android/internal/widget/LockSettingsInternal;)Ljava/lang/Boolean;
     .locals 6
 
-    .line 3675
     invoke-static {p0}, Lcom/android/internal/widget/LockscreenCredential;->createPassword(Ljava/lang/CharSequence;)Lcom/android/internal/widget/LockscreenCredential;
 
     move-result-object v1
@@ -131,12 +117,10 @@
 
     move v5, p4
 
-    .line 3674
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/widget/LockSettingsInternal;->setLockCredentialWithToken(Lcom/android/internal/widget/LockscreenCredential;J[BI)Z
 
     move-result p0
 
-    .line 3673
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -149,7 +133,6 @@
 .method public changePassword(Ljava/lang/String;Ljava/lang/String;I)Lcom/android/internal/widget/VerifyCredentialResponse;
     .locals 2
 
-    .line 3604
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +151,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3605
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -177,16 +159,13 @@
 
     if-nez v0, :cond_0
 
-    .line 3606
     sget-object p0, Lcom/android/internal/widget/VerifyCredentialResponse;->ERROR:Lcom/android/internal/widget/VerifyCredentialResponse;
 
     return-object p0
 
-    .line 3609
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->setPassword(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 3610
     invoke-virtual {p0, p1, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->checkPassword(Ljava/lang/String;I)Lcom/android/internal/widget/VerifyCredentialResponse;
 
     move-result-object p0
@@ -197,7 +176,6 @@
 .method public checkPassword(Ljava/lang/String;I)Lcom/android/internal/widget/VerifyCredentialResponse;
     .locals 2
 
-    .line 3571
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +194,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3572
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p2}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -225,12 +202,10 @@
 
     if-nez v0, :cond_0
 
-    .line 3573
     sget-object p0, Lcom/android/internal/widget/VerifyCredentialResponse;->ERROR:Lcom/android/internal/widget/VerifyCredentialResponse;
 
     return-object p0
 
-    .line 3575
     :cond_0
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->mSdpManager:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
@@ -246,7 +221,6 @@
 .method public clean(I)V
     .locals 6
 
-    .line 3536
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -257,18 +231,15 @@
 
     return-void
 
-    .line 3540
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3541
     invoke-static {p1}, Lcom/android/server/knox/dar/FileUtil;->getUserSystemDir(I)Ljava/io/File;
 
     move-result-object v2
 
-    .line 3542
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -277,7 +248,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 3543
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -294,14 +264,12 @@
 
     invoke-static {v4, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3544
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {p0, v2}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$mremoveDirectoryRecursive(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;Ljava/io/File;)V
 
     goto :goto_0
 
-    .line 3546
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -319,7 +287,6 @@
 
     invoke-static {v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3548
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -329,7 +296,6 @@
 .method public clearLock(I)V
     .locals 3
 
-    .line 3614
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -348,7 +314,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3615
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -359,13 +324,11 @@
 
     return-void
 
-    .line 3619
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3621
     :try_start_0
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
@@ -381,7 +344,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3632
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -391,14 +353,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3633
     throw p0
 .end method
 
 .method public establish(Ljava/lang/String;[BI)J
     .locals 11
 
-    .line 3552
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -411,18 +371,15 @@
 
     return-wide v1
 
-    .line 3556
     :cond_0
     invoke-virtual {p0, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->clearLock(I)V
 
-    .line 3558
     invoke-virtual {p0, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->prepare(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3559
     invoke-virtual {p0, p2, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->setResetPasswordToken([BI)J
 
     move-result-wide v9
@@ -437,14 +394,12 @@
 
     move v8, p3
 
-    .line 3560
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->setPasswordWithToken(Ljava/lang/String;J[BI)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 3563
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -459,7 +414,6 @@
 
     const-string p1, "establish - sp based credential established for user %d with %d"
 
-    .line 3561
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -477,7 +431,6 @@
 .method public prepare(I)Z
     .locals 3
 
-    .line 3516
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -490,13 +443,11 @@
 
     return v1
 
-    .line 3520
     :cond_0
     invoke-static {p1}, Lcom/android/server/knox/dar/FileUtil;->getUserSystemDir(I)Ljava/io/File;
 
     move-result-object v0
 
-    .line 3521
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -509,7 +460,6 @@
 
     if-nez v2, :cond_1
 
-    .line 3522
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -530,7 +480,6 @@
 
     return v1
 
-    .line 3527
     :cond_1
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -540,10 +489,8 @@
 
     const/4 v2, -0x1
 
-    .line 3526
     invoke-static {v0, v1, v2, v2}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 3531
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {p0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$minitInternalEngineInfo(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)V
@@ -556,7 +503,6 @@
 .method public setPassword(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 3
 
-    .line 3580
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -575,7 +521,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3581
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p3}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -586,13 +531,11 @@
 
     return-void
 
-    .line 3585
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3587
     :try_start_0
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
@@ -608,7 +551,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3598
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -618,14 +560,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3599
     throw p0
 .end method
 
 .method public setPasswordWithToken(Ljava/lang/String;J[BI)Z
     .locals 9
 
-    .line 3666
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -644,7 +584,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3667
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p5}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -657,13 +596,11 @@
 
     return p0
 
-    .line 3671
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3673
     :try_start_0
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
@@ -689,7 +626,6 @@
 
     move-result-object p0
 
-    .line 3677
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
@@ -704,7 +640,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3679
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -714,14 +649,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3680
     throw p0
 .end method
 
 .method public setResetPasswordToken([BI)J
     .locals 3
 
-    .line 3637
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -740,7 +673,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3638
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p2}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -753,13 +685,11 @@
 
     return-wide p0
 
-    .line 3642
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3644
     :try_start_0
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
@@ -775,7 +705,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3646
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-wide p0
@@ -785,14 +714,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3647
     throw p0
 .end method
 
 .method public verifyToken([BJI)Lcom/android/internal/widget/VerifyCredentialResponse;
     .locals 2
 
-    .line 3684
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -811,7 +738,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3685
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0, p4}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$misVirtualUserId(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Z
@@ -820,12 +746,10 @@
 
     if-nez v0, :cond_0
 
-    .line 3686
     sget-object p0, Lcom/android/internal/widget/VerifyCredentialResponse;->ERROR:Lcom/android/internal/widget/VerifyCredentialResponse;
 
     return-object p0
 
-    .line 3688
     :cond_0
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$VirtualLockClient;->mSdpManager:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 

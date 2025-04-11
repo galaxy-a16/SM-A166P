@@ -7,22 +7,18 @@
 .method public static findService(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Class;Landroid/content/pm/IPackageManager;Ljava/lang/StringBuilder;)Landroid/content/pm/ServiceInfo;
     .locals 8
 
-    .line 52
     invoke-virtual {p4}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
 
-    .line 53
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {v1, p0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v6, 0x0
 
-    .line 56
     invoke-virtual {p6, v6}, Ljava/lang/StringBuilder;->setLength(I)V
 
     const/4 v2, 0x0
@@ -35,7 +31,6 @@
 
     move v5, p1
 
-    .line 59
     :try_start_0
     invoke-interface/range {v0 .. v5}, Landroid/content/pm/IPackageManager;->queryIntentServices(Landroid/content/Intent;Ljava/lang/String;JI)Landroid/content/pm/ParceledListSlice;
 
@@ -43,7 +38,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 60
     invoke-virtual {p1}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object p5
@@ -56,13 +50,11 @@
 
     goto/16 :goto_0
 
-    .line 64
     :cond_0
     invoke-virtual {p1}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object p1
 
-    .line 67
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
@@ -75,7 +67,6 @@
 
     if-le p2, p5, :cond_1
 
-    .line 68
     :try_start_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -103,7 +94,6 @@
 
     invoke-virtual {p6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 70
     invoke-virtual {p6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -112,7 +102,6 @@
 
     return-object v7
 
-    .line 73
     :cond_1
     invoke-interface {p1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -122,7 +111,6 @@
 
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 75
     iget-object p1, p0, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     invoke-virtual {p3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -131,7 +119,6 @@
 
     if-nez p1, :cond_2
 
-    .line 76
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,7 +129,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 77
     invoke-virtual {p0}, Landroid/content/pm/ServiceInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p0
@@ -167,10 +153,8 @@
 
     move-result-object p0
 
-    .line 76
     invoke-virtual {p6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
     invoke-virtual {p6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -182,7 +166,6 @@
     :cond_2
     return-object p0
 
-    .line 61
     :cond_3
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;

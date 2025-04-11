@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/HsumBootUserInitializer;Landroid/os/Handler;)V
     .locals 0
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/HsumBootUserInitializer$1;->this$0:Lcom/android/server/HsumBootUserInitializer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 55
     iget-object p1, p0, Lcom/android/server/HsumBootUserInitializer$1;->this$0:Lcom/android/server/HsumBootUserInitializer;
 
     invoke-static {p1}, Lcom/android/server/HsumBootUserInitializer;->-$$Nest$misDeviceProvisioned(Lcom/android/server/HsumBootUserInitializer;)Z
@@ -33,7 +31,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 56
     invoke-static {}, Lcom/android/server/HsumBootUserInitializer;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -42,7 +39,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/utils/Slogf;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     iget-object p1, p0, Lcom/android/server/HsumBootUserInitializer$1;->this$0:Lcom/android/server/HsumBootUserInitializer;
 
     invoke-static {p1}, Lcom/android/server/HsumBootUserInitializer;->-$$Nest$fgetmContentResolver(Lcom/android/server/HsumBootUserInitializer;)Landroid/content/ContentResolver;
@@ -55,7 +51,6 @@
 
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 59
     iget-object p1, p0, Lcom/android/server/HsumBootUserInitializer$1;->this$0:Lcom/android/server/HsumBootUserInitializer;
 
     invoke-static {p1}, Lcom/android/server/HsumBootUserInitializer;->-$$Nest$fgetmContentResolver(Lcom/android/server/HsumBootUserInitializer;)Landroid/content/ContentResolver;

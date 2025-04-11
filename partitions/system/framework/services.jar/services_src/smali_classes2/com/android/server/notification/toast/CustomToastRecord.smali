@@ -33,10 +33,8 @@
 
     move-object/from16 v10, p11
 
-    .line 43
     invoke-direct/range {v0 .. v10}, Lcom/android/server/notification/toast/ToastRecord;-><init>(Lcom/android/server/notification/NotificationManagerService;IILjava/lang/String;ZLandroid/os/IBinder;ILandroid/os/Binder;ILjava/lang/String;)V
 
-    .line 45
     invoke-static/range {p7 .. p7}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -55,7 +53,6 @@
 .method public hide()V
     .locals 2
 
-    .line 67
     :try_start_0
     iget-object v0, p0, Lcom/android/server/notification/toast/CustomToastRecord;->callback:Landroid/app/ITransientNotification;
 
@@ -65,7 +62,6 @@
 
     goto :goto_0
 
-    .line 69
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -102,7 +98,6 @@
 .method public isAppRendered()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -111,7 +106,6 @@
 .method public keepProcessAlive()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -120,14 +114,12 @@
 .method public show()Z
     .locals 3
 
-    .line 50
     sget-boolean v0, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
 
     const-string v1, "NotificationService"
 
     if-eqz v0, :cond_0
 
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,7 +146,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/notification/toast/CustomToastRecord;->callback:Landroid/app/ITransientNotification;
@@ -169,7 +160,6 @@
 
     return p0
 
-    .line 57
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -197,7 +187,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     iget-object v0, p0, Lcom/android/server/notification/toast/ToastRecord;->mNotificationManager:Lcom/android/server/notification/NotificationManagerService;
 
     iget p0, p0, Lcom/android/server/notification/toast/ToastRecord;->pid:I
@@ -212,7 +201,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,7 +209,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 90
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -254,7 +241,6 @@
 
     iget v1, p0, Lcom/android/server/notification/toast/ToastRecord;->uid:I
 
-    .line 91
     invoke-static {v1}, Landroid/os/UserHandle;->formatUid(I)Ljava/lang/String;
 
     move-result-object v1
@@ -289,7 +275,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
     invoke-virtual {p0}, Lcom/android/server/notification/toast/ToastRecord;->getDuration()I
 
     move-result p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRouterService;)V
     .locals 0
 
-    .line 2043
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-direct {p0}, Landroid/media/IAudioRoutesObserver$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/media/MediaRouterService;Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;-><init>(Lcom/android/server/media/MediaRouterService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public dispatchAudioRoutesChanged(Landroid/media/AudioRoutesInfo;)V
     .locals 6
 
-    .line 2052
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-static {v0}, Lcom/android/server/media/MediaRouterService;->-$$Nest$fgetmLock(Lcom/android/server/media/MediaRouterService;)Ljava/lang/Object;
@@ -45,7 +42,6 @@
     :try_start_0
     const-string v1, "BT"
 
-    .line 2054
     invoke-virtual {p1}, Landroid/media/AudioRoutesInfo;->getSetForcePath()Ljava/lang/String;
 
     move-result-object v2
@@ -64,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2055
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-static {v1, v2}, Lcom/android/server/media/MediaRouterService;->-$$Nest$fputmForceBluetoothA2dpOn(Lcom/android/server/media/MediaRouterService;Z)V
@@ -74,7 +69,6 @@
     :cond_0
     const-string v1, "OTHERS"
 
-    .line 2056
     invoke-virtual {p1}, Landroid/media/AudioRoutesInfo;->getSetForcePath()Ljava/lang/String;
 
     move-result-object v4
@@ -85,7 +79,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2057
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-static {v1, v3}, Lcom/android/server/media/MediaRouterService;->-$$Nest$fputmForceBluetoothA2dpOn(Lcom/android/server/media/MediaRouterService;Z)V
@@ -94,7 +87,6 @@
     :goto_0
     const-string v1, "MediaRouterService"
 
-    .line 2059
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,7 +119,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2061
     iget v1, p1, Landroid/media/AudioRoutesInfo;->mainType:I
 
     iget-object v4, p0, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;->this$0:Lcom/android/server/media/MediaRouterService;
@@ -140,7 +131,6 @@
 
     if-nez v1, :cond_4
 
-    .line 2064
     iget-object v1, p1, Landroid/media/AudioRoutesInfo;->bluetoothName:Ljava/lang/CharSequence;
 
     if-nez v1, :cond_3
@@ -166,26 +156,21 @@
 
     const-string v2, "force restoreBluetoothA2dp()"
 
-    .line 2067
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2068
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-virtual {v1}, Lcom/android/server/media/MediaRouterService;->restoreBluetoothA2dp()V
 
-    .line 2069
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-static {v1, v3}, Lcom/android/server/media/MediaRouterService;->-$$Nest$fputmForceBluetoothA2dpOn(Lcom/android/server/media/MediaRouterService;Z)V
 
     goto :goto_2
 
-    .line 2073
     :cond_4
     iput-boolean v3, v4, Lcom/android/server/media/MediaRouterService;->mGlobalBluetoothA2dpOn:Z
 
-    .line 2075
     :cond_5
     :goto_2
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$AudioRoutesObserverImpl;->this$0:Lcom/android/server/media/MediaRouterService;
@@ -194,7 +179,6 @@
 
     iput p1, p0, Lcom/android/server/media/MediaRouterService;->mAudioRouteMainType:I
 
-    .line 2080
     :cond_6
     monitor-exit v0
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/AlarmManagerService;)V
     .locals 0
 
-    .line 3154
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/alarm/AlarmManagerService;Lcom/android/server/alarm/AlarmManagerService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/alarm/AlarmManagerService$LocalService;-><init>(Lcom/android/server/alarm/AlarmManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public isIdling()Z
     .locals 0
 
-    .line 3157
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-static {p0}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$misIdlingImpl(Lcom/android/server/alarm/AlarmManagerService;)Z
@@ -49,7 +46,6 @@
 .method public onFreezeStateChanged(ZI)V
     .locals 4
 
-    .line 3204
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v0, v0, Lcom/android/server/alarm/AlarmManagerService;->mHandler:Lcom/android/server/alarm/AlarmManagerService$AlarmHandler;
@@ -58,7 +54,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3205
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v0, v0, Lcom/android/server/alarm/AlarmManagerService;->mHandler:Lcom/android/server/alarm/AlarmManagerService$AlarmHandler;
@@ -69,14 +64,12 @@
 
     if-nez p1, :cond_0
 
-    .line 3207
     iget-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object p1, p1, Lcom/android/server/alarm/AlarmManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 3208
     :try_start_0
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -84,7 +77,6 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/android/server/alarm/AlarmManagerService;->sendPendingMARsRestrictedAlarmsLocked(Ljava/lang/String;I)V
 
-    .line 3209
     monitor-exit p1
 
     goto :goto_0
@@ -106,14 +98,12 @@
 .method public registerInFlightListener(Lcom/android/server/AlarmManagerInternal$InFlightListener;)V
     .locals 1
 
-    .line 3195
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v0, v0, Lcom/android/server/alarm/AlarmManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3196
     :try_start_0
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -123,7 +113,6 @@
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3197
     monitor-exit v0
 
     return-void
@@ -141,7 +130,6 @@
 .method public remove(Landroid/app/PendingIntent;)V
     .locals 1
 
-    .line 3169
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService;->mHandler:Lcom/android/server/alarm/AlarmManagerService$AlarmHandler;
@@ -160,14 +148,12 @@
 .method public removeAlarmsForUid(I)V
     .locals 2
 
-    .line 3162
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v0, v0, Lcom/android/server/alarm/AlarmManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3163
     :try_start_0
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -175,7 +161,6 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/alarm/AlarmManagerService;->removeLocked(II)V
 
-    .line 3164
     monitor-exit v0
 
     return-void
@@ -193,7 +178,6 @@
 .method public setTime(JILjava/lang/String;)V
     .locals 0
 
-    .line 3190
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/alarm/AlarmManagerService;->setTimeImpl(JILjava/lang/String;)Z
@@ -204,7 +188,6 @@
 .method public setTimeZone(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 3183
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/alarm/AlarmManagerService;->setTimeZoneImpl(Ljava/lang/String;ILjava/lang/String;)V
@@ -215,7 +198,6 @@
 .method public shouldGetBucketElevation(Ljava/lang/String;I)Z
     .locals 3
 
-    .line 3174
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/alarm/AlarmManagerService;->hasUseExactAlarmInternal(Ljava/lang/String;I)Z
@@ -226,12 +208,10 @@
 
     const-wide/32 v0, 0xfa7a8de
 
-    .line 3176
     invoke-static {p2}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
     move-result-object v2
 
-    .line 3174
     invoke-static {v0, v1, p1, v2}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result v0
@@ -240,7 +220,6 @@
 
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$LocalService;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
-    .line 3176
     invoke-virtual {p0, p1, p2}, Lcom/android/server/alarm/AlarmManagerService;->hasScheduleExactAlarmInternal(Ljava/lang/String;I)Z
 
     move-result p0

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/enterprise/application/ApplicationUsage;Landroid/os/Looper;)V
     .locals 0
 
-    .line 110
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationUsage$UsageHandler;->this$0:Lcom/android/server/enterprise/application/ApplicationUsage;
 
-    .line 111
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 117
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -55,17 +52,14 @@
 
     const-string v0, "handleMessage : MSG_UPDATE_USAGE_DB"
 
-    .line 136
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationUsage$UsageHandler;->this$0:Lcom/android/server/enterprise/application/ApplicationUsage;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/application/ApplicationUsage;->_insertToAppControlDB()V
 
     goto :goto_0
 
-    .line 132
     :cond_1
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationUsage$UsageHandler;->this$0:Lcom/android/server/enterprise/application/ApplicationUsage;
 
@@ -77,7 +71,6 @@
 
     goto :goto_0
 
-    .line 128
     :cond_2
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationUsage$UsageHandler;->this$0:Lcom/android/server/enterprise/application/ApplicationUsage;
 
@@ -89,7 +82,6 @@
 
     goto :goto_0
 
-    .line 124
     :cond_3
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationUsage$UsageHandler;->this$0:Lcom/android/server/enterprise/application/ApplicationUsage;
 
@@ -101,7 +93,6 @@
 
     goto :goto_0
 
-    .line 120
     :cond_4
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationUsage$UsageHandler;->this$0:Lcom/android/server/enterprise/application/ApplicationUsage;
 

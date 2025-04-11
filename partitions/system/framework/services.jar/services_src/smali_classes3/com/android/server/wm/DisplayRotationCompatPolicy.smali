@@ -27,7 +27,6 @@
 .method public static synthetic $r8$lambda$QIwo8o5bJddgkViOaq3D9QQjhc0(Lcom/android/server/wm/DisplayRotationCompatPolicy;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->lambda$showToast$2(I)V
 
     return-void
@@ -36,7 +35,6 @@
 .method public static synthetic $r8$lambda$Ra8A0MDmpzzv_6TKVqCuvUmkPhE(Lcom/android/server/wm/DisplayRotationCompatPolicy;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->lambda$notifyCameraOpened$1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -45,7 +43,6 @@
 .method public static synthetic $r8$lambda$hu0kdAUr4kdYmBNXu6Nn8inQbIw(Lcom/android/server/wm/DisplayRotationCompatPolicy;Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->lambda$onActivityConfigurationChanging$0(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -54,7 +51,6 @@
 .method public static synthetic $r8$lambda$tWw9pmlmg6tYM8nkdd8ibNfpfuA(Lcom/android/server/wm/DisplayRotationCompatPolicy;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->lambda$scheduleRemoveCameraId$4(Ljava/lang/String;)V
 
     return-void
@@ -63,7 +59,6 @@
 .method public static synthetic $r8$lambda$yZuRSmb3wby1ygD5DNqtN2Wb64A(Lcom/android/server/wm/DisplayRotationCompatPolicy;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->lambda$showToast$3(ILjava/lang/String;)V
 
     return-void
@@ -72,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyCameraClosed(Lcom/android/server/wm/DisplayRotationCompatPolicy;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->notifyCameraClosed(Ljava/lang/String;)V
 
     return-void
@@ -81,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyCameraOpened(Lcom/android/server/wm/DisplayRotationCompatPolicy;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->notifyCameraOpened(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -90,7 +83,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;)V
     .locals 1
 
-    .line 133
     iget-object v0, p1, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
@@ -103,10 +95,8 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;Landroid/os/Handler;)V
     .locals 2
 
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 109
     new-instance v0, Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;
 
     const/4 v1, 0x0
@@ -115,21 +105,18 @@
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mCameraIdPackageBiMap:Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;
 
-    .line 111
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledToBeRemovedCameraIdSet:Ljava/util/Set;
 
-    .line 113
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledOrientationUpdateCameraIdSet:Ljava/util/Set;
 
-    .line 116
     new-instance v0, Lcom/android/server/wm/DisplayRotationCompatPolicy$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy$1;-><init>(Lcom/android/server/wm/DisplayRotationCompatPolicy;)V
@@ -138,21 +125,16 @@
 
     const/4 v1, -0x2
 
-    .line 129
     iput v1, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mLastReportedOrientation:I
 
-    .line 140
     iput-object p2, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mHandler:Landroid/os/Handler;
 
-    .line 141
     iput-object p1, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 142
     iget-object p1, p1, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iput-object p1, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 143
     iget-object p2, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/hardware/camera2/CameraManager;
@@ -165,15 +147,12 @@
 
     iput-object p2, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mCameraManager:Landroid/hardware/camera2/CameraManager;
 
-    .line 144
     iget-object p0, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
-    .line 145
     invoke-virtual {p0}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p0
 
-    .line 144
     invoke-virtual {p2, p0, v0}, Landroid/hardware/camera2/CameraManager;->registerAvailabilityCallback(Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
 
     return-void
@@ -182,7 +161,6 @@
 .method private synthetic lambda$notifyCameraOpened$1(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 437
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->delayedUpdateOrientationWithWmLock(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -191,7 +169,6 @@
 .method private synthetic lambda$onActivityConfigurationChanging$0(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 250
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->onActivityRefreshed(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -200,7 +177,6 @@
 .method private synthetic lambda$scheduleRemoveCameraId$4(Ljava/lang/String;)V
     .locals 0
 
-    .line 513
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->removeCameraId(Ljava/lang/String;)V
 
     return-void
@@ -209,7 +185,6 @@
 .method private synthetic lambda$showToast$2(I)V
     .locals 1
 
-    .line 487
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -228,7 +203,6 @@
 .method private synthetic lambda$showToast$3(ILjava/lang/String;)V
     .locals 0
 
-    .line 493
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -237,19 +211,16 @@
 
     move-result-object p2
 
-    .line 495
     invoke-virtual {p0, p1, p2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     const/4 p2, 0x1
 
-    .line 493
     invoke-static {p0, p1, p2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object p0
 
-    .line 496
     invoke-virtual {p0}, Landroid/widget/Toast;->show()V
 
     return-void
@@ -260,28 +231,24 @@
 .method public final belowActivityRequestedConfigurationOrientation(Lcom/android/server/wm/ActivityRecord;)I
     .locals 0
 
-    .line 404
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->occludesParent()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 405
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 407
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowContainer;->getActivityBelow(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 409
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getRequestedConfigurationOrientation()I
 
     move-result p0
@@ -297,10 +264,8 @@
 .method public final delayedUpdateOrientationWithWmLock(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 443
     monitor-enter p0
 
-    .line 444
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledOrientationUpdateCameraIdSet:Ljava/util/Set;
 
@@ -310,23 +275,19 @@
 
     if-nez v0, :cond_0
 
-    .line 447
     monitor-exit p0
 
     return-void
 
-    .line 449
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mCameraIdPackageBiMap:Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;
 
     invoke-virtual {v0, p2, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 450
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 451
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -335,7 +296,6 @@
 
     monitor-enter p1
 
-    .line 452
     :try_start_1
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -347,7 +307,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 454
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v2
@@ -356,7 +315,6 @@
 
     goto :goto_1
 
-    .line 459
     :cond_1
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
@@ -364,17 +322,14 @@
 
     if-ne v2, v1, :cond_2
 
-    .line 460
     iget-object p2, v0, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
     invoke-virtual {p2}, Lcom/android/server/wm/LetterboxUiController;->recomputeConfigurationForCameraCompatIfNeeded()V
 
-    .line 461
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->updateOrientation()Z
 
-    .line 462
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -383,7 +338,6 @@
 
     return-void
 
-    .line 466
     :cond_2
     :try_start_2
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -400,14 +354,12 @@
 
     const/4 v1, 0x0
 
-    .line 467
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForActivity(Lcom/android/server/wm/ActivityRecord;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 468
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -418,13 +370,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 473
     :try_start_3
     invoke-virtual {v0, p2, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v2
 
-    .line 472
     invoke-virtual {v0, v2}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -433,7 +383,6 @@
 
     const v2, 0x1040452
 
-    .line 470
     invoke-virtual {p0, v2, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->showToast(ILjava/lang/String;)V
     :try_end_3
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
@@ -441,7 +390,6 @@
 
     goto :goto_0
 
-    .line 475
     :catch_0
     :try_start_4
     sget-boolean p0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
@@ -464,7 +412,6 @@
 
     invoke-static {p2, v0, v1, v2, p0}, Lcom/android/internal/protolog/ProtoLogImpl;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 481
     :cond_3
     :goto_0
     monitor-exit p1
@@ -475,7 +422,6 @@
 
     return-void
 
-    .line 455
     :cond_4
     :goto_1
     :try_start_5
@@ -490,7 +436,6 @@
     :catchall_0
     move-exception p0
 
-    .line 481
     :try_start_6
     monitor-exit p1
     :try_end_6
@@ -503,7 +448,6 @@
     :catchall_1
     move-exception p1
 
-    .line 450
     :try_start_7
     monitor-exit p0
     :try_end_7
@@ -515,7 +459,6 @@
 .method public dispose()V
     .locals 1
 
-    .line 149
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mCameraManager:Landroid/hardware/camera2/CameraManager;
 
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mAvailabilityCallback:Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
@@ -528,7 +471,6 @@
 .method public getOrientation()I
     .locals 2
 
-    .line 166
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->getOrientationInternal()I
 
     move-result v0
@@ -539,16 +481,13 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 168
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->rememberOverriddenOrientationIfNeeded()V
 
     goto :goto_0
 
-    .line 170
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->restoreOverriddenOrientationIfNeeded()V
 
-    .line 172
     :goto_0
     iget p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mLastReportedOrientation:I
 
@@ -560,7 +499,6 @@
 
     monitor-enter p0
 
-    .line 177
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForDisplay()Z
 
@@ -572,12 +510,10 @@
 
     if-nez v0, :cond_0
 
-    .line 178
     monitor-exit p0
 
     return v1
 
-    .line 180
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -588,7 +524,6 @@
 
     move-result-object v0
 
-    .line 182
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForActivity(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v3
@@ -597,12 +532,10 @@
 
     if-nez v3, :cond_1
 
-    .line 183
     monitor-exit p0
 
     return v1
 
-    .line 186
     :cond_1
     :try_start_2
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getRequestedConfigurationOrientation()I
@@ -620,7 +553,6 @@
     :cond_2
     move v1, v3
 
-    .line 188
     :goto_0
     sget-boolean v4, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_CAMERA_COMPAT:Z
 
@@ -628,7 +560,6 @@
 
     if-nez v1, :cond_3
 
-    .line 189
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->belowActivityRequestedConfigurationOrientation(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result v0
@@ -637,11 +568,9 @@
 
     move v1, v2
 
-    .line 194
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 195
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getNaturalOrientation()I
 
     move-result v0
@@ -673,7 +602,6 @@
     :cond_7
     move v4, v3
 
-    .line 210
     :goto_2
     sget-boolean v5, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
@@ -733,7 +661,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 216
     :cond_8
     monitor-exit p0
 
@@ -750,14 +677,12 @@
 .method public getSummaryForDisplayRotationHistoryRecord()Ljava/lang/String;
     .locals 3
 
-    .line 287
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForDisplay()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 288
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     const/4 v1, 0x1
@@ -766,7 +691,6 @@
 
     move-result-object v0
 
-    .line 290
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -777,7 +701,6 @@
 
     iget v2, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mLastReportedOrientation:I
 
-    .line 292
     invoke-static {v2}, Landroid/content/pm/ActivityInfo;->screenOrientationToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -794,7 +717,6 @@
 
     goto :goto_0
 
-    .line 294
     :cond_0
     iget-object v2, v0, Lcom/android/server/wm/ActivityRecord;->shortComponentName:Ljava/lang/String;
 
@@ -805,7 +727,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 296
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForActivity(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v0
@@ -818,7 +739,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mCameraIdPackageBiMap:Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;
 
-    .line 298
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;->getSummaryForDisplayRotationHistoryRecord()Ljava/lang/String;
 
     move-result-object v0
@@ -834,7 +754,6 @@
     :cond_1
     const-string v0, ""
 
-    .line 300
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -844,7 +763,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 301
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForDisplay()Z
 
     move-result p0
@@ -867,7 +785,6 @@
 .method public isActivityEligibleForOrientationOverride(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 1
 
-    .line 367
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForDisplay()Z
 
     move-result v0
@@ -876,7 +793,6 @@
 
     const/4 v0, 0x1
 
-    .line 368
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isCameraActive(Lcom/android/server/wm/ActivityRecord;Z)Z
 
     move-result p0
@@ -895,7 +811,6 @@
 .method public final isActivityForCameraIdRefreshing(Ljava/lang/String;)Z
     .locals 3
 
-    .line 552
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     const/4 v1, 0x1
@@ -904,7 +819,6 @@
 
     move-result-object v0
 
-    .line 554
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForActivity(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v1
@@ -915,7 +829,6 @@
 
     return v2
 
-    .line 557
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mCameraIdPackageBiMap:Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;
 
@@ -931,7 +844,6 @@
 
     goto :goto_0
 
-    .line 561
     :cond_1
     iget-object p0, v0, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
@@ -951,7 +863,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 420
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inMultiWindowMode()Z
 
     move-result p2
@@ -963,7 +874,6 @@
 
     iget-object p2, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
-    .line 421
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;->containsPackageName(Ljava/lang/String;)Z
 
     move-result p0
@@ -972,7 +882,6 @@
 
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
-    .line 422
     invoke-virtual {p0}, Lcom/android/server/wm/LetterboxUiController;->shouldForceRotateForCameraCompat()Z
 
     move-result p0
@@ -993,7 +902,6 @@
 .method public final isOrientationOverridden()Z
     .locals 1
 
-    .line 320
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getRotationReversionController()Lcom/android/server/wm/DisplayRotationReversionController;
@@ -1014,7 +922,6 @@
 
     const/4 v0, 0x1
 
-    .line 383
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForActivity(Lcom/android/server/wm/ActivityRecord;Z)Z
 
     move-result p0
@@ -1027,14 +934,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 388
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isCameraActive(Lcom/android/server/wm/ActivityRecord;Z)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 389
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getRequestedConfigurationOrientation()I
 
     move-result p2
@@ -1045,14 +950,12 @@
 
     if-eqz p2, :cond_1
 
-    .line 392
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->belowActivityRequestedConfigurationOrientation(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 397
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getOverrideOrientation()I
 
@@ -1062,7 +965,6 @@
 
     if-eq p0, p2, :cond_1
 
-    .line 398
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getOverrideOrientation()I
 
     move-result p0
@@ -1085,7 +987,6 @@
 .method public final isTreatmentEnabledForDisplay()Z
     .locals 2
 
-    .line 358
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
@@ -1100,7 +1001,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 360
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayArea;->getIgnoreOrientationRequest()Z
 
     move-result v0
@@ -1114,7 +1014,6 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 363
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getDisplay()Landroid/view/Display;
 
     move-result-object p0
@@ -1139,7 +1038,6 @@
 
     monitor-enter p0
 
-    .line 500
     :try_start_0
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
@@ -1179,23 +1077,19 @@
 
     invoke-static {v3, v1, v0, v2, v4}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 503
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledToBeRemovedCameraIdSet:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 505
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledOrientationUpdateCameraIdSet:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 506
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->scheduleRemoveCameraId(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 507
     monitor-exit p0
 
     return-void
@@ -1213,13 +1107,11 @@
 
     monitor-enter p0
 
-    .line 429
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledToBeRemovedCameraIdSet:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 430
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_0
@@ -1266,13 +1158,11 @@
 
     invoke-static {v4, v1, v0, v2, v5}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 435
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledOrientationUpdateCameraIdSet:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 436
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/wm/DisplayRotationCompatPolicy$$ExternalSyntheticLambda4;
@@ -1285,7 +1175,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 439
     monitor-exit p0
 
     return-void
@@ -1301,7 +1190,6 @@
 .method public onActivityConfigurationChanging(Lcom/android/server/wm/ActivityRecord;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
     .locals 4
 
-    .line 227
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForDisplay()Z
 
     move-result v0
@@ -1312,14 +1200,12 @@
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
-    .line 228
     invoke-virtual {v0}, Lcom/android/server/wm/LetterboxConfiguration;->isCameraCompatRefreshEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 229
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->shouldRefreshActivity(Lcom/android/server/wm/ActivityRecord;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
 
     move-result p2
@@ -1328,13 +1214,11 @@
 
     goto :goto_2
 
-    .line 232
     :cond_0
     iget-object p2, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p2, p2, Lcom/android/server/wm/WindowManagerService;->mLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
-    .line 234
     invoke-virtual {p2}, Lcom/android/server/wm/LetterboxConfiguration;->isCameraCompatRefreshCycleThroughStopEnabled()Z
 
     move-result p2
@@ -1347,7 +1231,6 @@
 
     iget-object p2, p1, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
-    .line 236
     invoke-virtual {p2}, Lcom/android/server/wm/LetterboxUiController;->shouldRefreshActivityViaPauseForCameraCompat()Z
 
     move-result p2
@@ -1361,14 +1244,12 @@
     :cond_1
     move p2, v0
 
-    .line 238
     :goto_0
     :try_start_0
     iget-object v1, p1, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
     invoke-virtual {v1, p3}, Lcom/android/server/wm/LetterboxUiController;->setIsRefreshAfterRotationRequested(Z)V
 
-    .line 239
     sget-boolean p3, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_STATES_enabled:Z
 
     if-eqz p3, :cond_2
@@ -1389,18 +1270,15 @@
 
     invoke-static {v1, v2, v0, v3, p3}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 242
     :cond_2
     iget-object p3, p1, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
 
-    .line 243
     invoke-virtual {p3}, Lcom/android/server/wm/WindowProcessController;->getThread()Landroid/app/IApplicationThread;
 
     move-result-object p3
 
     iget-object v1, p1, Lcom/android/server/wm/WindowToken;->token:Landroid/os/IBinder;
 
-    .line 242
     invoke-static {p3, v1}, Landroid/app/servertransaction/ClientTransaction;->obtain(Landroid/app/IApplicationThread;Landroid/os/IBinder;)Landroid/app/servertransaction/ClientTransaction;
 
     move-result-object p3
@@ -1414,23 +1292,19 @@
     :cond_3
     const/4 p2, 0x4
 
-    .line 245
     :goto_1
     invoke-static {p2}, Landroid/app/servertransaction/RefreshCallbackItem;->obtain(I)Landroid/app/servertransaction/RefreshCallbackItem;
 
     move-result-object p2
 
-    .line 244
     invoke-virtual {p3, p2}, Landroid/app/servertransaction/ClientTransaction;->addCallback(Landroid/app/servertransaction/ClientTransactionItem;)V
 
-    .line 246
     invoke-static {v0, v0}, Landroid/app/servertransaction/ResumeActivityItem;->obtain(ZZ)Landroid/app/servertransaction/ResumeActivityItem;
 
     move-result-object p2
 
     invoke-virtual {p3, p2}, Landroid/app/servertransaction/ClientTransaction;->setLifecycleStateRequest(Landroid/app/servertransaction/ActivityLifecycleItem;)V
 
-    .line 248
     iget-object p2, p1, Lcom/android/server/wm/ActivityRecord;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityTaskManagerService;->getLifecycleManager()Lcom/android/server/wm/ClientLifecycleManager;
@@ -1439,7 +1313,6 @@
 
     invoke-virtual {p2, p3}, Lcom/android/server/wm/ClientLifecycleManager;->scheduleTransaction(Landroid/app/servertransaction/ClientTransaction;)V
 
-    .line 249
     iget-object p2, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mHandler:Landroid/os/Handler;
 
     new-instance p3, Lcom/android/server/wm/DisplayRotationCompatPolicy$$ExternalSyntheticLambda2;
@@ -1454,7 +1327,6 @@
 
     goto :goto_2
 
-    .line 253
     :catch_0
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
@@ -1468,7 +1340,6 @@
 .method public onActivityRefreshed(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 258
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
     const/4 p1, 0x0
@@ -1481,7 +1352,6 @@
 .method public onScreenRotationAnimationFinished()V
     .locals 2
 
-    .line 268
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForDisplay()Z
 
     move-result v0
@@ -1498,7 +1368,6 @@
 
     goto :goto_0
 
-    .line 271
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1508,7 +1377,6 @@
 
     move-result-object v0
 
-    .line 273
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForActivity(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v0
@@ -1517,7 +1385,6 @@
 
     return-void
 
-    .line 277
     :cond_1
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_CAMERA_COMPAT:Z
 
@@ -1528,7 +1395,6 @@
     :cond_2
     const v0, 0x1040451
 
-    .line 282
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->showToast(I)V
 
     :cond_3
@@ -1539,14 +1405,12 @@
 .method public final rememberOverriddenOrientationIfNeeded()V
     .locals 4
 
-    .line 325
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isOrientationOverridden()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 326
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getRotationReversionController()Lcom/android/server/wm/DisplayRotationReversionController;
@@ -1557,7 +1421,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/DisplayRotationReversionController;->beforeOverrideApplied(I)V
 
-    .line 328
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_0
@@ -1593,10 +1456,8 @@
 .method public final removeCameraId(Ljava/lang/String;)V
     .locals 7
 
-    .line 518
     monitor-enter p0
 
-    .line 519
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledToBeRemovedCameraIdSet:Ljava/util/Set;
 
@@ -1606,12 +1467,10 @@
 
     if-nez v0, :cond_0
 
-    .line 521
     monitor-exit p0
 
     return-void
 
-    .line 523
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isActivityForCameraIdRefreshing(Ljava/lang/String;)Z
 
@@ -1623,7 +1482,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 524
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_1
@@ -1658,32 +1516,26 @@
 
     invoke-static {v5, v0, v2, v1, v6}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 528
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mScheduledToBeRemovedCameraIdSet:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 529
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->scheduleRemoveCameraId(Ljava/lang/String;)V
 
-    .line 530
     monitor-exit p0
 
     return-void
 
-    .line 532
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mCameraIdPackageBiMap:Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy$CameraIdPackageNameBiMap;->removeCameraId(Ljava/lang/String;)V
 
-    .line 533
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 534
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_3
@@ -1712,7 +1564,6 @@
 
     invoke-static {v0, v3, v2, v1, p1}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 537
     :cond_3
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -1722,7 +1573,6 @@
 
     monitor-enter p1
 
-    .line 538
     :try_start_1
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1732,7 +1582,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 543
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v1
@@ -1741,18 +1590,15 @@
 
     goto :goto_0
 
-    .line 546
     :cond_4
     iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
     invoke-virtual {v0}, Lcom/android/server/wm/LetterboxUiController;->recomputeConfigurationForCameraCompatIfNeeded()V
 
-    .line 547
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->updateOrientation()Z
 
-    .line 548
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1761,7 +1607,6 @@
 
     return-void
 
-    .line 544
     :cond_5
     :goto_0
     :try_start_2
@@ -1776,7 +1621,6 @@
     :catchall_0
     move-exception p0
 
-    .line 548
     :try_start_3
     monitor-exit p1
     :try_end_3
@@ -1789,7 +1633,6 @@
     :catchall_1
     move-exception p1
 
-    .line 533
     :try_start_4
     monitor-exit p0
     :try_end_4
@@ -1801,7 +1644,6 @@
 .method public final restoreOverriddenOrientationIfNeeded()V
     .locals 4
 
-    .line 307
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isOrientationOverridden()Z
 
     move-result v0
@@ -1810,7 +1652,6 @@
 
     return-void
 
-    .line 310
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1826,7 +1667,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 312
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     const/4 v1, 0x0
@@ -1841,7 +1681,6 @@
 
     invoke-static {v0, v2, v3, v1, v1}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 315
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1854,7 +1693,6 @@
 .method public final scheduleRemoveCameraId(Ljava/lang/String;)V
     .locals 2
 
-    .line 512
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationCompatPolicy;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/wm/DisplayRotationCompatPolicy$$ExternalSyntheticLambda3;
@@ -1871,7 +1709,6 @@
 .method public final shouldRefreshActivity(Lcom/android/server/wm/ActivityRecord;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
     .locals 2
 
-    .line 338
     iget-object p2, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {p2}, Landroid/app/WindowConfiguration;->getDisplayRotation()I
@@ -1880,7 +1717,6 @@
 
     iget-object p3, p3, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    .line 339
     invoke-virtual {p3}, Landroid/app/WindowConfiguration;->getDisplayRotation()I
 
     move-result p3
@@ -1901,17 +1737,14 @@
     :goto_0
     if-nez p2, :cond_1
 
-    .line 340
     iget-object p2, p1, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
-    .line 341
     invoke-virtual {p2}, Lcom/android/server/wm/LetterboxUiController;->isCameraCompatSplitScreenAspectRatioAllowed()Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 342
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->isTreatmentEnabledForActivity(Lcom/android/server/wm/ActivityRecord;)Z
 
@@ -1921,7 +1754,6 @@
 
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
-    .line 343
     invoke-virtual {p0}, Lcom/android/server/wm/LetterboxUiController;->shouldRefreshActivityForCameraCompat()Z
 
     move-result p0
@@ -1940,7 +1772,6 @@
 .method public showToast(I)V
     .locals 2
 
-    .line 486
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1957,7 +1788,6 @@
 .method public showToast(ILjava/lang/String;)V
     .locals 2
 
-    .line 492
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0

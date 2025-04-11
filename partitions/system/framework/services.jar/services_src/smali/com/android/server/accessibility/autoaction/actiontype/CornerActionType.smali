@@ -15,7 +15,6 @@
 .method public static create(Ljava/lang/String;Landroid/content/Context;I)Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;
     .locals 2
 
-    .line 68
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -349,7 +348,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 102
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "Wrong Corner Action Type"
@@ -358,7 +356,6 @@
 
     throw p0
 
-    .line 74
     :pswitch_0
     invoke-static {p1}, Lcom/android/server/accessibility/autoaction/actiontype/OpenCloseQuickPanel;->createAction(Landroid/content/Context;)Lcom/android/server/accessibility/autoaction/actiontype/OpenCloseQuickPanel;
 
@@ -366,7 +363,6 @@
 
     return-object p0
 
-    .line 80
     :pswitch_1
     invoke-static {p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages;->createAction(Landroid/content/Context;I)Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages;
 
@@ -374,7 +370,6 @@
 
     return-object p0
 
-    .line 95
     :pswitch_2
     invoke-static {p1}, Lcom/android/server/accessibility/autoaction/actiontype/PowerOffMenu;->createAction(Landroid/content/Context;)Lcom/android/server/accessibility/autoaction/actiontype/PowerOffMenu;
 
@@ -387,7 +382,6 @@
 
     return-object p0
 
-    .line 76
     :pswitch_4
     invoke-static {p1}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenShot;->createAction(Landroid/content/Context;)Lcom/android/server/accessibility/autoaction/actiontype/ScreenShot;
 
@@ -395,7 +389,6 @@
 
     return-object p0
 
-    .line 89
     :pswitch_5
     invoke-static {p1, p0, p2}, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->createAction(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;
 
@@ -403,7 +396,6 @@
 
     return-object p0
 
-    .line 93
     :pswitch_6
     invoke-static {p1}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenOff;->createAction(Landroid/content/Context;)Lcom/android/server/accessibility/autoaction/actiontype/ScreenOff;
 
@@ -411,7 +403,6 @@
 
     return-object p0
 
-    .line 91
     :pswitch_7
     invoke-static {p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;->createAction(Landroid/content/Context;I)Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;
 
@@ -419,7 +410,6 @@
 
     return-object p0
 
-    .line 86
     :pswitch_8
     invoke-static {p1, p0}, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->createAction(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;
 
@@ -427,7 +417,6 @@
 
     return-object p0
 
-    .line 78
     :pswitch_9
     invoke-static {p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/TalkToBixby;->createAction(Landroid/content/Context;I)Lcom/android/server/accessibility/autoaction/actiontype/TalkToBixby;
 
@@ -435,7 +424,6 @@
 
     return-object p0
 
-    .line 100
     :pswitch_a
     invoke-static {p1, p0, p2}, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->createAction(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;
 
@@ -443,7 +431,6 @@
 
     return-object p0
 
-    .line 72
     :pswitch_b
     invoke-static {p1}, Lcom/android/server/accessibility/autoaction/actiontype/OpenCloseNotifications;->createAction(Landroid/content/Context;)Lcom/android/server/accessibility/autoaction/actiontype/OpenCloseNotifications;
 
@@ -503,7 +490,6 @@
 .method public static create(Ljava/lang/String;Landroid/content/Context;Landroid/view/MotionEvent;)Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;
     .locals 2
 
-    .line 113
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -677,7 +663,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 130
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "Wrong Corner Action Type"
@@ -686,7 +671,6 @@
 
     throw p0
 
-    .line 115
     :pswitch_0
     invoke-static {p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->createAction(Landroid/content/Context;Landroid/view/MotionEvent;)Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;
 
@@ -694,7 +678,6 @@
 
     return-object p0
 
-    .line 128
     :pswitch_1
     invoke-static {p1, p2, p0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->createAction(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
@@ -702,7 +685,6 @@
 
     return-object p0
 
-    .line 123
     :pswitch_2
     invoke-static {p1, p2, p0}, Lcom/android/server/accessibility/autoaction/actiontype/Swipe;->createAction(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)Lcom/android/server/accessibility/autoaction/actiontype/Swipe;
 
@@ -710,7 +692,6 @@
 
     return-object p0
 
-    .line 118
     :pswitch_3
     invoke-static {p1, p2, p0}, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->createAction(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)Lcom/android/server/accessibility/autoaction/actiontype/Zoom;
 
@@ -718,7 +699,6 @@
 
     return-object p0
 
-    .line 125
     :pswitch_4
     invoke-static {p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/ClickAndHold;->createAction(Landroid/content/Context;Landroid/view/MotionEvent;)Lcom/android/server/accessibility/autoaction/actiontype/ClickAndHold;
 
@@ -758,7 +738,6 @@
 .method public static getTitleResId(Ljava/lang/String;)I
     .locals 2
 
-    .line 135
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -1284,7 +1263,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 188
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string v0, "Wrong Corner Action Type"
@@ -1293,7 +1271,6 @@
 
     throw p0
 
-    .line 139
     :pswitch_0
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/OpenCloseQuickPanel;->getStringResId()I
 
@@ -1311,7 +1288,6 @@
 
     return p0
 
-    .line 169
     :pswitch_3
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/DoubleClick;->getStringResId()I
 
@@ -1319,7 +1295,6 @@
 
     return p0
 
-    .line 145
     :pswitch_4
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages;->getStringResId()I
 
@@ -1327,7 +1302,6 @@
 
     return p0
 
-    .line 162
     :pswitch_5
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/PowerOffMenu;->getStringResId()I
 
@@ -1335,7 +1309,6 @@
 
     return p0
 
-    .line 186
     :pswitch_6
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->getStringResId(Ljava/lang/String;)I
 
@@ -1343,7 +1316,6 @@
 
     return p0
 
-    .line 141
     :pswitch_7
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenShot;->getStringResId()I
 
@@ -1351,7 +1323,6 @@
 
     return p0
 
-    .line 177
     :pswitch_8
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/Swipe;->getStringResId(Ljava/lang/String;)I
 
@@ -1359,7 +1330,6 @@
 
     return p0
 
-    .line 172
     :pswitch_9
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->getStringResId(Ljava/lang/String;)I
 
@@ -1372,7 +1342,6 @@
 
     return p0
 
-    .line 156
     :pswitch_b
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->getStringResId(Ljava/lang/String;)I
 
@@ -1380,7 +1349,6 @@
 
     return p0
 
-    .line 160
     :pswitch_c
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenOff;->getStringResId()I
 
@@ -1388,7 +1356,6 @@
 
     return p0
 
-    .line 158
     :pswitch_d
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;->getStringResId()I
 
@@ -1396,7 +1363,6 @@
 
     return p0
 
-    .line 151
     :pswitch_e
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->getStringResId(Ljava/lang/String;)I
 
@@ -1404,7 +1370,6 @@
 
     return p0
 
-    .line 183
     :pswitch_f
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/ClickAndHold;->getStringResId()I
 
@@ -1412,7 +1377,6 @@
 
     return p0
 
-    .line 143
     :pswitch_10
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/TalkToBixby;->getStringResId()I
 
@@ -1420,7 +1384,6 @@
 
     return p0
 
-    .line 167
     :pswitch_11
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->getStringResId(Ljava/lang/String;)I
 
@@ -1428,7 +1391,6 @@
 
     return p0
 
-    .line 137
     :pswitch_12
     invoke-static {}, Lcom/android/server/accessibility/autoaction/actiontype/OpenCloseNotifications;->getStringResId()I
 
@@ -1519,6 +1481,5 @@
 .method public setMotionEventForDragAction(Landroid/view/MotionEvent;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

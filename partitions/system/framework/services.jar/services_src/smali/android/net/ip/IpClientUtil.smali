@@ -21,7 +21,6 @@
 
     const-string p0, "IpClient logs have moved to dumpsys network_stack"
 
-    .line 224
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static makeIpClient(Landroid/content/Context;Ljava/lang/String;Landroid/net/ip/IpClientCallbacks;)V
     .locals 1
 
-    .line 80
     invoke-static {p0}, Landroid/net/networkstack/ModuleNetworkStackClient;->getInstance(Landroid/content/Context;)Landroid/net/networkstack/ModuleNetworkStackClient;
 
     move-result-object p0
@@ -39,7 +37,6 @@
 
     invoke-direct {v0, p2}, Landroid/net/ip/IpClientUtil$IpClientCallbacksProxy;-><init>(Landroid/net/ip/IpClientCallbacks;)V
 
-    .line 81
     invoke-virtual {p0, p1, v0}, Landroid/net/networkstack/NetworkStackClientBase;->makeIpClient(Ljava/lang/String;Landroid/net/ip/IIpClientCallbacks;)V
 
     return-void

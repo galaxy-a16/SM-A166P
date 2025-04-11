@@ -26,23 +26,18 @@
 .method public constructor <init>(Lcom/android/server/am/ContentProviderRecord;Landroid/os/IBinder;ILjava/lang/String;)V
     .locals 0
 
-    .line 348
     iput-object p1, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->this$0:Lcom/android/server/am/ContentProviderRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 349
     iput-object p2, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mToken:Landroid/os/IBinder;
 
-    .line 350
     iput p3, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mOwningUid:I
 
-    .line 351
     iput-object p4, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mOwningProcessName:Ljava/lang/String;
 
     const/4 p1, 0x0
 
-    .line 353
     :try_start_0
     invoke-interface {p2, p0, p1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -53,7 +48,6 @@
     :catch_0
     move-exception p1
 
-    .line 355
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,7 +77,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 400
     iget-object v0, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->this$0:Lcom/android/server/am/ContentProviderRecord;
 
     iget-object v0, v0, Lcom/android/server/am/ContentProviderRecord;->service:Lcom/android/server/am/ActivityManagerService;
@@ -92,7 +85,6 @@
 
     monitor-enter v0
 
-    .line 401
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->this$0:Lcom/android/server/am/ContentProviderRecord;
 
@@ -108,21 +100,18 @@
 
     iget-object v2, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mToken:Landroid/os/IBinder;
 
-    .line 402
     invoke-virtual {v1, v2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 403
     iget-object v1, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->this$0:Lcom/android/server/am/ContentProviderRecord;
 
     iget-object p0, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mToken:Landroid/os/IBinder;
 
     invoke-static {v1, p0}, Lcom/android/server/am/ContentProviderRecord;->-$$Nest$mremoveExternalProcessHandleInternalLocked(Lcom/android/server/am/ContentProviderRecord;Landroid/os/IBinder;)V
 
-    .line 405
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -148,7 +137,6 @@
 .method public startAssociationIfNeeded(Lcom/android/server/am/ContentProviderRecord;)V
     .locals 4
 
-    .line 366
     iget-object v0, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mAssociation:Lcom/android/internal/app/procstats/AssociationState$SourceState;
 
     if-nez v0, :cond_3
@@ -171,18 +159,15 @@
 
     iget-object v1, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mOwningProcessName:Ljava/lang/String;
 
-    .line 369
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 370
     :cond_0
     iget-object v0, p1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
-    .line 371
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getPkgList()Lcom/android/server/am/PackageList;
 
     move-result-object v0
@@ -201,7 +186,6 @@
 
     const-string p0, "ActivityManager"
 
-    .line 373
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -212,7 +196,6 @@
 
     iget-object v1, p1, Lcom/android/server/am/ContentProviderRecord;->name:Landroid/content/ComponentName;
 
-    .line 374
     invoke-virtual {v1}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object v1
@@ -231,12 +214,10 @@
 
     move-result-object p1
 
-    .line 373
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 375
     :cond_1
     iget-object v1, v0, Lcom/android/internal/app/procstats/ProcessStats$ProcessStateHolder;->pkg:Lcom/android/internal/app/procstats/ProcessStats$PackageState;
 
@@ -244,7 +225,6 @@
 
     const-string p0, "ActivityManager"
 
-    .line 376
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,7 +235,6 @@
 
     iget-object v1, p1, Lcom/android/server/am/ContentProviderRecord;->name:Landroid/content/ComponentName;
 
-    .line 377
     invoke-virtual {v1}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object v1
@@ -274,12 +253,10 @@
 
     move-result-object p1
 
-    .line 376
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 379
     :cond_2
     iget-object v1, p1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
@@ -291,10 +268,8 @@
 
     iput-object v1, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mProcStatsLock:Ljava/lang/Object;
 
-    .line 380
     monitor-enter v1
 
-    .line 381
     :try_start_0
     iget-object v2, v0, Lcom/android/internal/app/procstats/ProcessStats$ProcessStateHolder;->pkg:Lcom/android/internal/app/procstats/ProcessStats$PackageState;
 
@@ -302,12 +277,10 @@
 
     iget-object p1, p1, Lcom/android/server/am/ContentProviderRecord;->name:Landroid/content/ComponentName;
 
-    .line 382
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 381
     invoke-virtual {v2, v0, p1}, Lcom/android/internal/app/procstats/ProcessStats$PackageState;->getAssociationStateLocked(Lcom/android/internal/app/procstats/ProcessState;Ljava/lang/String;)Lcom/android/internal/app/procstats/AssociationState;
 
     move-result-object p1
@@ -318,14 +291,12 @@
 
     const/4 v3, 0x0
 
-    .line 382
     invoke-virtual {p1, v0, v2, v3}, Lcom/android/internal/app/procstats/AssociationState;->startSource(ILjava/lang/String;Ljava/lang/String;)Lcom/android/internal/app/procstats/AssociationState$SourceState;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mAssociation:Lcom/android/internal/app/procstats/AssociationState$SourceState;
 
-    .line 384
     monitor-exit v1
 
     goto :goto_0
@@ -347,30 +318,25 @@
 .method public stopAssociation()V
     .locals 2
 
-    .line 390
     iget-object v0, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mAssociation:Lcom/android/internal/app/procstats/AssociationState$SourceState;
 
     if-eqz v0, :cond_0
 
-    .line 391
     iget-object v0, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mProcStatsLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 392
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mAssociation:Lcom/android/internal/app/procstats/AssociationState$SourceState;
 
     invoke-virtual {v1}, Lcom/android/internal/app/procstats/AssociationState$SourceState;->stop()V
 
-    .line 393
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v0, 0x0
 
-    .line 394
     iput-object v0, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mAssociation:Lcom/android/internal/app/procstats/AssociationState$SourceState;
 
     goto :goto_0
@@ -378,7 +344,6 @@
     :catchall_0
     move-exception p0
 
-    .line 393
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -394,7 +359,6 @@
 .method public unlinkFromOwnDeathLocked()V
     .locals 2
 
-    .line 360
     iget-object v0, p0, Lcom/android/server/am/ContentProviderRecord$ExternalProcessHandle;->mToken:Landroid/os/IBinder;
 
     const/4 v1, 0x0

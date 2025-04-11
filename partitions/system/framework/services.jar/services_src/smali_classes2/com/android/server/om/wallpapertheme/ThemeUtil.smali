@@ -7,7 +7,6 @@
 .method public static adjustAlpha(FI)Ljava/lang/Integer;
     .locals 2
 
-    .line 8
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -20,22 +19,18 @@
 
     move-result p0
 
-    .line 9
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
 
-    .line 10
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
 
-    .line 11
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result p1
 
-    .line 12
     invoke-static {p0, v0, v1, p1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p0

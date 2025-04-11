@@ -15,19 +15,16 @@
 .method public constructor <init>(Lcom/android/server/display/AdaptiveBrightnessStatsTracker;Lcom/android/server/display/BrightnessMappingStrategy;)V
     .locals 0
 
-    .line 231
     iput-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->this$0:Lcom/android/server/display/AdaptiveBrightnessStatsTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 232
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
-    .line 233
     iput-object p2, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
 
     return-void
@@ -38,7 +35,6 @@
 .method public final getOrCreateUserStats(Ljava/util/Map;I)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
     .locals 3
 
-    .line 438
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -49,7 +45,6 @@
 
     if-nez v0, :cond_0
 
-    .line 439
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -68,7 +63,6 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 441
     :cond_0
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -86,7 +80,6 @@
 .method public final getOrCreateUserStats(Ljava/util/Map;[Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;I)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
     .locals 3
 
-    .line 446
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -97,7 +90,6 @@
 
     if-nez v0, :cond_0
 
-    .line 447
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -116,7 +108,6 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 449
     :cond_0
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -134,7 +125,6 @@
 .method public getUserStats(I)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
     .locals 2
 
-    .line 250
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -147,7 +137,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 251
     iget-object p0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -173,7 +162,6 @@
 
     move-object v0, p0
 
-    .line 240
     iget-object v1, v0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     move v2, p1
@@ -196,7 +184,6 @@
 
     move/from16 v9, p9
 
-    .line 242
     invoke-virtual/range {v2 .. v9}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->log(FFFLandroid/util/Spline;Landroid/hardware/display/BrightnessChangeEvent;Landroid/util/Spline;Z)V
 
     return-void
@@ -209,18 +196,15 @@
 
     const-string v2, "]["
 
-    .line 337
     :try_start_0
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 338
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v4
 
-    .line 339
     sget-object v5, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v5}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
@@ -231,7 +215,6 @@
 
     invoke-interface {v4, v6, v5}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 342
     :goto_0
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -247,7 +230,6 @@
 
     goto :goto_0
 
-    .line 345
     :cond_0
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -255,19 +237,16 @@
 
     const-string v7, "SBS-stats"
 
-    .line 346
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_b
 
-    .line 353
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v5
 
-    .line 361
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     const/4 v7, -0x1
@@ -282,7 +261,6 @@
 
     const/4 v12, 0x0
 
-    .line 362
     :goto_1
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -294,7 +272,6 @@
 
     if-ne v14, v15, :cond_1
 
-    .line 363
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v6
@@ -310,7 +287,6 @@
 
     goto/16 :goto_4
 
-    .line 367
     :cond_2
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -318,7 +294,6 @@
 
     const-string v14, "fixed-lux-zone"
 
-    .line 370
     invoke-virtual {v14, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v14
@@ -336,14 +311,12 @@
     :try_start_1
     const-string/jumbo v14, "user"
 
-    .line 371
     invoke-interface {v4, v9, v14}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
     const-string v8, "bucket-boundaries"
 
-    .line 372
     invoke-interface {v4, v9, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
@@ -356,10 +329,8 @@
 
     if-eqz v8, :cond_4
 
-    .line 374
     array-length v8, v8
 
-    .line 375
     iget-object v9, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->this$0:Lcom/android/server/display/AdaptiveBrightnessStatsTracker;
 
     invoke-static {v9}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->-$$Nest$fgetmInjector(Lcom/android/server/display/AdaptiveBrightnessStatsTracker;)Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
@@ -380,7 +351,6 @@
 
     move-result v9
 
-    .line 376
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -421,7 +391,6 @@
 
     if-eq v9, v7, :cond_3
 
-    .line 378
     iget-object v12, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->this$0:Lcom/android/server/display/AdaptiveBrightnessStatsTracker;
 
     invoke-static {v12}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->-$$Nest$fgetmBucketBoundariesForStats(Lcom/android/server/display/AdaptiveBrightnessStatsTracker;)[F
@@ -432,7 +401,6 @@
 
     if-ne v8, v12, :cond_3
 
-    .line 381
     new-array v10, v8, [Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
     move v12, v8
@@ -452,7 +420,6 @@
     :goto_2
     const-string v8, "adaptive-brightness-weight-stats"
 
-    .line 388
     invoke-virtual {v8, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -463,21 +430,18 @@
 
     const/4 v9, 0x0
 
-    .line 389
     invoke-interface {v4, v9, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const-string v14, "brightness-learned"
 
-    .line 390
     invoke-interface {v4, v9, v14}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
     const-string/jumbo v7, "weight"
 
-    .line 391
     invoke-interface {v4, v9, v7}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -486,34 +450,28 @@
 
     const-string v2, "last-user-brighntess-time"
 
-    .line 392
     invoke-interface {v4, v9, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 394
     invoke-static {v8}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v8
 
-    .line 395
     invoke-static {v14}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v14
 
-    .line 396
     invoke-static {v7}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v7
 
     move-object/from16 v23, v10
 
-    .line 397
     invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v9
 
-    .line 399
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -562,7 +520,6 @@
 
     add-int/lit8 v2, v11, 0x1
 
-    .line 403
     new-instance v4, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
     move-object/from16 v17, v4
@@ -594,7 +551,6 @@
     :goto_3
     const-string v2, "END"
 
-    .line 408
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -609,12 +565,10 @@
 
     const-string v4, "getOrCreateUserStats from xml"
 
-    .line 410
     invoke-static {v15, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object/from16 v10, v23
 
-    .line 411
     invoke-virtual {v1, v3, v10, v13}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->getOrCreateUserStats(Ljava/util/Map;[Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;I)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
 
     goto :goto_5
@@ -652,13 +606,11 @@
 
     goto/16 :goto_1
 
-    .line 416
     :cond_a
     iput-object v3, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     return-void
 
-    .line 347
     :cond_b
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -691,7 +643,6 @@
 
     move-object v1, v0
 
-    .line 420
     new-instance v2, Ljava/io/IOException;
 
     const-string v3, "Failed to parse brightness stats file."
@@ -704,21 +655,18 @@
 .method public setMaxWeight(I)V
     .locals 1
 
-    .line 258
     invoke-virtual {p0, p1}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->getUserStats(I)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 259
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->getOrCreateUserStats(Ljava/util/Map;I)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
 
     move-result-object p0
 
-    .line 260
     invoke-virtual {p0}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->setMaxWeight()V
 
     goto :goto_0
@@ -728,7 +676,6 @@
 
     const-string/jumbo p1, "setMaxWeight: shoudn\'t be here"
 
-    .line 264
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -738,14 +685,12 @@
 .method public summarizeStats(ILjava/time/LocalDate;)V
     .locals 0
 
-    .line 269
     iget-object p2, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->getOrCreateUserStats(Ljava/util/Map;I)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
 
     move-result-object p0
 
-    .line 270
     invoke-virtual {p0}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->summarizeStats()V
 
     return-void
@@ -754,12 +699,10 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 426
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 427
     iget-object p0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -783,7 +726,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 428
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -792,10 +734,8 @@
 
     const-string v3, "  "
 
-    .line 429
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 430
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -806,7 +746,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 431
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, "\n"
@@ -815,7 +754,6 @@
 
     goto :goto_0
 
-    .line 433
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -827,12 +765,10 @@
 .method public writeToXML(Ljava/io/OutputStream;)V
     .locals 14
 
-    .line 274
     new-instance v0, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v0}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 275
     sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v1}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
@@ -841,7 +777,6 @@
 
     invoke-interface {v0, p1, v1}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 276
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v2, 0x0
@@ -852,22 +787,18 @@
 
     const/4 v3, 0x1
 
-    .line 277
     invoke-interface {v0, v1, v3}, Lorg/xmlpull/v1/XmlSerializer;->setFeature(Ljava/lang/String;Z)V
 
     const-string/jumbo v1, "writeToXML start"
 
     const-string v3, "AdaptiveBrightnessStatsTracker"
 
-    .line 278
     invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v1, "SBS-stats"
 
-    .line 279
     invoke-interface {v0, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 280
     iget-object v4, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -892,7 +823,6 @@
 
     check-cast v5, Ljava/util/Map$Entry;
 
-    .line 281
     iget-object v6, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->this$0:Lcom/android/server/display/AdaptiveBrightnessStatsTracker;
 
     invoke-static {v6}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->-$$Nest$fgetmInjector(Lcom/android/server/display/AdaptiveBrightnessStatsTracker;)Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
@@ -919,7 +849,6 @@
 
     move-result v5
 
-    .line 282
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -940,7 +869,6 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 284
     iget-object v6, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->mStats:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -955,19 +883,16 @@
 
     const-string v7, "fixed-lux-zone"
 
-    .line 287
     invoke-interface {v0, v2, v7}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v8, "user"
 
-    .line 288
     invoke-static {v5}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v0, v2, v8, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 289
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -976,7 +901,6 @@
 
     move v9, v8
 
-    .line 290
     :goto_1
     invoke-virtual {v6}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->getBucketBoundaries()[F
 
@@ -990,10 +914,8 @@
 
     const-string v10, ","
 
-    .line 292
     invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 294
     :cond_1
     invoke-virtual {v6}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->getBucketBoundaries()[F
 
@@ -1010,17 +932,14 @@
     :cond_2
     const-string v9, "bucket-boundaries"
 
-    .line 296
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v0, v2, v9, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 297
     invoke-interface {v0, v2, v7}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 300
     :goto_2
     invoke-virtual {v6}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->getStats()[Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
@@ -1030,32 +949,26 @@
 
     if-ge v8, v5, :cond_3
 
-    .line 301
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 302
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 303
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 304
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v11, "adaptive-brightness-weight-stats"
 
-    .line 306
     invoke-interface {v0, v2, v11}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 308
     invoke-virtual {v6}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->getStats()[Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
     move-result-object v12
@@ -1068,7 +981,6 @@
 
     invoke-virtual {v5, v12}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 309
     invoke-virtual {v6}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->getStats()[Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
     move-result-object v12
@@ -1081,7 +993,6 @@
 
     invoke-virtual {v7, v12}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 310
     invoke-virtual {v6}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->getStats()[Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
     move-result-object v12
@@ -1094,7 +1005,6 @@
 
     invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 311
     invoke-virtual {v6}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->getStats()[Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
     move-result-object v12
@@ -1109,7 +1019,6 @@
 
     const-string v12, "lux"
 
-    .line 313
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v13
@@ -1118,7 +1027,6 @@
 
     const-string v12, "brightness-learned"
 
-    .line 314
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v13
@@ -1127,7 +1035,6 @@
 
     const-string/jumbo v12, "weight"
 
-    .line 315
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v13
@@ -1136,14 +1043,12 @@
 
     const-string v12, "last-user-brighntess-time"
 
-    .line 316
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v13
 
     invoke-interface {v0, v2, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 318
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1178,7 +1083,6 @@
 
     invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 319
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -1199,10 +1103,8 @@
 
     move-result-object v5
 
-    .line 318
     invoke-static {v3, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     invoke-interface {v0, v2, v11}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     add-int/lit8 v8, v8, 0x1
@@ -1212,27 +1114,21 @@
     :cond_3
     const-string v5, "END"
 
-    .line 325
     invoke-interface {v0, v2, v5}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 326
     invoke-interface {v0, v2, v5}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto/16 :goto_0
 
-    .line 329
     :cond_4
     invoke-interface {v0, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 330
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
     const-string/jumbo p0, "writeToXML done"
 
-    .line 331
     invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     invoke-virtual {p1}, Ljava/io/OutputStream;->flush()V
 
     return-void

@@ -23,7 +23,6 @@
 
     const/4 v0, 0x0
 
-    .line 427
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;-><init>(Landroid/content/Intent;Landroid/app/ActivityOptions;Z)V
 
     return-void
@@ -32,16 +31,12 @@
 .method public constructor <init>(Landroid/content/Intent;Landroid/app/ActivityOptions;Z)V
     .locals 0
 
-    .line 443
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 444
     iput-object p1, p0, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;->mIntent:Landroid/content/Intent;
 
-    .line 445
     iput-object p2, p0, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;->mActivityOptions:Landroid/app/ActivityOptions;
 
-    .line 446
     iput-boolean p3, p0, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;->mActivityResolved:Z
 
     return-void
@@ -52,7 +47,6 @@
 .method public getActivityOptions()Landroid/app/ActivityOptions;
     .locals 0
 
-    .line 459
     iget-object p0, p0, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;->mActivityOptions:Landroid/app/ActivityOptions;
 
     return-object p0
@@ -61,7 +55,6 @@
 .method public getIntent()Landroid/content/Intent;
     .locals 0
 
-    .line 453
     iget-object p0, p0, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;->mIntent:Landroid/content/Intent;
 
     return-object p0
@@ -70,7 +63,6 @@
 .method public isActivityResolved()Z
     .locals 0
 
-    .line 466
     iget-boolean p0, p0, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;->mActivityResolved:Z
 
     return p0

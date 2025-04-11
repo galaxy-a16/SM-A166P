@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/DisplayDeviceConfig;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/display/DisplayDeviceConfig;
@@ -27,7 +26,6 @@
 .method public final call()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/display/DisplayDeviceConfig;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;->$r8$lambda$575xw1IB_wKza2lQou_EFHETrZY(Lcom/android/server/display/DisplayDeviceConfig;)[I

@@ -32,31 +32,26 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
-    .line 41
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
-    .line 43
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, -0x1
@@ -65,7 +60,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLastSelectedBackupItemIndex:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 48
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,7 +84,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupFilesPrefName:Ljava/lang/String;
 
-    .line 52
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getControllerName()Ljava/lang/String;
 
     move-result-object v0
@@ -101,22 +94,18 @@
 
     if-nez v0, :cond_0
 
-    .line 55
     iput-object p1, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mContext:Landroid/content/Context;
 
-    .line 56
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getSharedPreferencesForConfigs()Landroid/content/SharedPreferences;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mSharedPrefForConfigs:Landroid/content/SharedPreferences;
 
-    .line 57
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->initController()V
 
     return-void
 
-    .line 53
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -130,7 +119,6 @@
 .method public static deleteContents(Ljava/io/File;)Z
     .locals 6
 
-    .line 310
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
@@ -139,7 +127,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 314
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -149,24 +136,20 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 317
     aget-object v4, p0, v3
 
-    .line 318
     invoke-virtual {v4}, Ljava/io/File;->isDirectory()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 319
     invoke-static {v4}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->deleteContents(Ljava/io/File;)Z
 
     move-result v5
 
     and-int/2addr v0, v5
 
-    .line 322
     :cond_0
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
@@ -174,7 +157,6 @@
 
     if-nez v5, :cond_1
 
-    .line 323
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +189,6 @@
 .method public static deleteContentsAndDir(Ljava/io/File;)Z
     .locals 1
 
-    .line 306
     invoke-static {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->deleteContents(Ljava/io/File;)Z
 
     move-result v0
@@ -232,12 +213,10 @@
 .method public addBackupItemList(Ljava/io/File;)V
     .locals 7
 
-    .line 216
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 217
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
@@ -251,7 +230,6 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 220
     iget-object p1, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -266,7 +244,6 @@
 
     move v2, p1
 
-    .line 221
     :goto_0
     iget-object v3, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
@@ -278,7 +255,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 222
     new-instance v3, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getControllerDir()Ljava/io/File;
@@ -295,12 +271,10 @@
 
     invoke-direct {v3, v4, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 223
     iget-object v4, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 224
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v4
@@ -313,7 +287,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 225
     sget-object v4, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -337,7 +310,6 @@
 
     goto :goto_0
 
-    .line 229
     :cond_1
     monitor-exit v0
 
@@ -356,12 +328,10 @@
 .method public final cleanUpOutdatedFiles()V
     .locals 8
 
-    .line 233
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 234
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getControllerDir()Ljava/io/File;
 
@@ -373,12 +343,10 @@
 
     if-nez v1, :cond_0
 
-    .line 236
     monitor-exit v0
 
     return-void
 
-    .line 238
     :cond_0
     array-length v2, v1
 
@@ -389,7 +357,6 @@
 
     aget-object v4, v1, v3
 
-    .line 239
     invoke-virtual {v4}, Ljava/io/File;->isDirectory()Z
 
     move-result v5
@@ -412,7 +379,6 @@
 
     if-nez v5, :cond_1
 
-    .line 240
     sget-object v5, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -431,7 +397,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     invoke-static {v4}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->deleteContentsAndDir(Ljava/io/File;)Z
 
     :cond_1
@@ -439,7 +404,6 @@
 
     goto :goto_0
 
-    .line 244
     :cond_2
     monitor-exit v0
 
@@ -464,18 +428,15 @@
 
     const-string v1, "Took "
 
-    .line 287
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 289
     :try_start_0
     sget-boolean v4, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 290
     sget-object v4, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -498,19 +459,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     :cond_0
     invoke-static {p1, p2}, Landroid/os/FileUtils;->copy(Ljava/io/File;Ljava/io/File;)J
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 298
     sget-boolean p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->DEBUG:Z
 
     if-eqz p0, :cond_1
 
-    .line 299
     sget-object p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -548,7 +506,6 @@
     :catch_0
     move-exception v4
 
-    .line 294
     :try_start_1
     sget-object v5, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
@@ -572,17 +529,14 @@
 
     invoke-static {v5, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 298
     sget-boolean p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->DEBUG:Z
 
     if-eqz p0, :cond_2
 
-    .line 299
     sget-object p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -612,13 +566,11 @@
 
     return p0
 
-    .line 298
     :goto_0
     sget-boolean p1, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->DEBUG:Z
 
     if-eqz p1, :cond_3
 
-    .line 299
     sget-object p1, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -643,7 +595,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     :cond_3
     throw p0
 .end method
@@ -651,12 +602,10 @@
 .method public getBackupConfigInt(Ljava/lang/String;I)I
     .locals 1
 
-    .line 358
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 359
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mSharedPrefForConfigs:Landroid/content/SharedPreferences;
 
@@ -671,7 +620,6 @@
     :catchall_0
     move-exception p0
 
-    .line 360
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -682,12 +630,10 @@
 .method public getBackupConfigStr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 364
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 365
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mSharedPrefForConfigs:Landroid/content/SharedPreferences;
 
@@ -702,7 +648,6 @@
     :catchall_0
     move-exception p0
 
-    .line 366
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -713,12 +658,10 @@
 .method public getBackupItemNameList()Ljava/util/List;
     .locals 2
 
-    .line 267
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 268
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -733,7 +676,6 @@
     :catchall_0
     move-exception p0
 
-    .line 269
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -744,7 +686,6 @@
 .method public final getBackupRootDir()Ljava/io/File;
     .locals 2
 
-    .line 257
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->injectSystemDataDir()Ljava/io/File;
@@ -761,7 +702,6 @@
 .method public getControllerDir()Ljava/io/File;
     .locals 4
 
-    .line 249
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getBackupRootDir()Ljava/io/File;
@@ -774,7 +714,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 250
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -787,7 +726,6 @@
 
     if-nez v1, :cond_0
 
-    .line 251
     sget-object v1, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -826,7 +764,6 @@
 .method public final getLastSelectedItemIndex()I
     .locals 0
 
-    .line 187
     iget-object p0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLastSelectedBackupItemIndex:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -839,7 +776,6 @@
 .method public getLatestBackupItemDir()Ljava/io/File;
     .locals 4
 
-    .line 155
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getLatestBackupItemSinceLastSelected()I
 
     move-result v0
@@ -850,7 +786,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 157
     sget-object v0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -875,16 +810,13 @@
 
     return-object v2
 
-    .line 162
     :cond_0
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->setLastSelectedItemIndex(I)V
 
     const/4 v1, 0x1
 
-    .line 163
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->writeLastSelectedItem(Z)V
 
-    .line 167
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
@@ -892,7 +824,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 168
     :try_start_1
     new-instance v3, Ljava/io/File;
 
@@ -906,19 +837,16 @@
 
     invoke-direct {v3, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 169
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 174
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-nez p0, :cond_1
 
-    .line 175
     sget-object p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -945,7 +873,6 @@
     :catchall_0
     move-exception p0
 
-    .line 169
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -959,7 +886,6 @@
     :catch_0
     move-exception p0
 
-    .line 171
     sget-object v0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -984,12 +910,10 @@
 .method public final getLatestBackupItemSinceLastSelected()I
     .locals 3
 
-    .line 198
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 199
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
@@ -997,7 +921,6 @@
 
     move-result v1
 
-    .line 200
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1011,14 +934,12 @@
     :cond_0
     add-int/lit8 v1, v1, -0x1
 
-    .line 206
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getLastSelectedItemIndex()I
 
     move-result v2
 
     if-eq v2, v0, :cond_1
 
-    .line 207
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getLastSelectedItemIndex()I
 
     move-result p0
@@ -1035,7 +956,6 @@
     :catchall_0
     move-exception p0
 
-    .line 200
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1047,7 +967,6 @@
 .method public final getNextBackupItemName()Ljava/lang/String;
     .locals 2
 
-    .line 144
     new-instance p0, Ljava/security/SecureRandom;
 
     invoke-direct {p0}, Ljava/security/SecureRandom;-><init>()V
@@ -1056,10 +975,8 @@
 
     new-array v0, v0, [B
 
-    .line 146
     invoke-virtual {p0, v0}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 147
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1086,7 +1003,6 @@
 .method public final getSharedPreferencesForConfigs()Landroid/content/SharedPreferences;
     .locals 3
 
-    .line 335
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getControllerDir()Ljava/io/File;
@@ -1097,7 +1013,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 336
     iget-object p0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
@@ -1106,7 +1021,6 @@
 
     const/4 v1, 0x0
 
-    .line 337
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/io/File;I)Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -1117,11 +1031,9 @@
 .method public final initController()V
     .locals 4
 
-    .line 62
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->readBackupItems()V
 
-    .line 63
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->readLastSelectedItem()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1131,7 +1043,6 @@
     :catch_0
     move-exception v0
 
-    .line 65
     sget-object v1, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1150,25 +1061,21 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 67
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLastSelectedBackupItemIndex:Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 69
     :goto_0
     sget-boolean v0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 70
     sget-object v0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1189,7 +1096,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     sget-object v0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1221,7 +1127,6 @@
 .method public injectSystemDataDir()Ljava/io/File;
     .locals 0
 
-    .line 262
     invoke-static {}, Landroid/os/Environment;->getDataSystemDirectory()Ljava/io/File;
 
     move-result-object p0
@@ -1235,14 +1140,12 @@
 .method public putBackupConfigInt(Ljava/lang/String;IZ)V
     .locals 1
 
-    .line 342
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     if-eqz p3, :cond_0
 
-    .line 344
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mSharedPrefForConfigs:Landroid/content/SharedPreferences;
 
@@ -1258,7 +1161,6 @@
 
     goto :goto_0
 
-    .line 346
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mSharedPrefForConfigs:Landroid/content/SharedPreferences;
 
@@ -1272,7 +1174,6 @@
 
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 348
     :goto_0
     monitor-exit v0
 
@@ -1291,12 +1192,10 @@
 .method public putBackupConfigStr(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 352
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 353
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mSharedPrefForConfigs:Landroid/content/SharedPreferences;
 
@@ -1310,7 +1209,6 @@
 
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 354
     monitor-exit v0
 
     return-void
@@ -1332,28 +1230,24 @@
 
     const-string v1, ""
 
-    .line 76
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getBackupConfigStr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, ","
 
-    .line 77
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 78
     array-length v1, v0
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 81
     :cond_0
     array-length v1, v0
 
@@ -1364,14 +1258,12 @@
 
     aget-object v3, v0, v2
 
-    .line 82
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 83
     iget-object v4, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1393,12 +1285,10 @@
 
     const/4 v1, -0x1
 
-    .line 89
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getBackupConfigInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 90
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->setLastSelectedItemIndex(I)V
 
     return-void
@@ -1407,12 +1297,10 @@
 .method public saveFiles()V
     .locals 6
 
-    .line 110
     iget-object v0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 111
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -1426,23 +1314,19 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 112
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 113
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 115
     :cond_0
     sget-boolean v2, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->DEBUG:Z
 
     if-eqz v2, :cond_1
 
-    .line 116
     sget-object v2, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1466,7 +1350,6 @@
     :cond_1
     const/4 v2, 0x0
 
-    .line 120
     :try_start_1
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->onSaveFiles(Ljava/io/File;)Z
 
@@ -1474,16 +1357,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 121
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->addBackupItemList(Ljava/io/File;)V
 
-    .line 122
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->writeBackupItems()V
 
-    .line 123
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->cleanUpOutdatedFiles()V
 
-    .line 125
     iget-object v3, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLastSelectedBackupItemIndex:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -1494,10 +1373,8 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 127
     invoke-virtual {p0, v4}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->setLastSelectedItemIndex(I)V
 
-    .line 128
     invoke-virtual {p0, v2}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->writeLastSelectedItem(Z)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -1511,7 +1388,6 @@
     :catch_0
     move-exception p0
 
-    .line 133
     :try_start_2
     sget-object v3, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->TAG:Ljava/lang/String;
 
@@ -1535,17 +1411,14 @@
     :goto_0
     if-nez v2, :cond_4
 
-    .line 136
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_4
 
-    .line 137
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 140
     :cond_4
     monitor-exit v0
 
@@ -1564,7 +1437,6 @@
 .method public setLastSelectedItemIndex(I)V
     .locals 0
 
-    .line 183
     iget-object p0, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mLastSelectedBackupItemIndex:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
@@ -1575,12 +1447,10 @@
 .method public final writeBackupItems()V
     .locals 4
 
-    .line 94
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 95
     iget-object v1, p0, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->mBackupItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1601,7 +1471,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 97
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -1616,7 +1485,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 98
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -1624,7 +1492,6 @@
     :cond_1
     const-string v1, ","
 
-    .line 101
     invoke-static {v1, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v0
@@ -1641,7 +1508,6 @@
 
     const-string v0, "last_selected_item"
 
-    .line 105
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/rescueparty/AbstractBackupController;->getLastSelectedItemIndex()I
 
     move-result v1

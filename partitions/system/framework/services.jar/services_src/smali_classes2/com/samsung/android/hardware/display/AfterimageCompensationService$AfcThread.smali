@@ -21,30 +21,24 @@
 .method public constructor <init>(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)V
     .locals 0
 
-    .line 654
     iput-object p1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 655
     iput-boolean p1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mDataValid:Z
 
-    .line 656
     iput-boolean p1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mBrightnessValid:Z
 
-    .line 657
     iput-boolean p1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mNormalValid:Z
 
-    .line 658
     iput p1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->rotation:I
 
     const/16 p1, 0xc
 
     new-array p1, p1, [D
 
-    .line 659
     iput-object p1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mAvgCoprRoi:[D
 
     return-void
@@ -53,7 +47,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/hardware/display/AfterimageCompensationService;Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;-><init>(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)V
 
     return-void
@@ -68,7 +61,6 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 663
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -78,7 +70,6 @@
 
     if-eqz v1, :cond_2b
 
-    .line 664
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfcThreadCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Z
@@ -100,7 +91,6 @@
 
     if-nez v1, :cond_1
 
-    .line 666
     :try_start_1
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -110,7 +100,6 @@
 
     invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 667
     iput-boolean v0, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mNormalValid:Z
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
@@ -119,14 +108,12 @@
 
     goto :goto_1
 
-    .line 669
     :catch_0
     :try_start_2
     iput-boolean v2, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mNormalValid:Z
 
     goto :goto_0
 
-    .line 672
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -136,10 +123,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 673
     iput-boolean v2, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mNormalValid:Z
 
-    .line 675
     :cond_2
     :goto_1
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -154,7 +139,6 @@
 
     const-string v3, "0"
 
-    .line 676
     invoke-static {v1, v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -171,7 +155,6 @@
 
     const-string v3, "0"
 
-    .line 677
     invoke-static {v1, v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -184,20 +167,17 @@
 
     if-eqz v1, :cond_3
 
-    .line 678
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v0}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputisRunningCameraApp(Lcom/samsung/android/hardware/display/AfterimageCompensationService;Z)V
 
     goto :goto_2
 
-    .line 680
     :cond_3
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputisRunningCameraApp(Lcom/samsung/android/hardware/display/AfterimageCompensationService;Z)V
 
-    .line 682
     :goto_2
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -223,13 +203,11 @@
 
     if-eqz v1, :cond_2a
 
-    .line 683
     :cond_4
     iget-boolean v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mNormalValid:Z
 
     if-eqz v1, :cond_7
 
-    .line 684
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfcThreadCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Z
@@ -238,7 +216,6 @@
 
     iput-boolean v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mDataValid:Z
 
-    .line 685
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfcThreadCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Z
@@ -247,7 +224,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 686
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$mgetBrightness(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Z
@@ -283,7 +259,6 @@
     :cond_7
     if-nez v1, :cond_8
 
-    .line 689
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfcThreadAODCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Z
@@ -292,7 +267,6 @@
 
     iput-boolean v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mDataValid:Z
 
-    .line 690
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAodBrightness(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -301,7 +275,6 @@
 
     invoke-static {v1, v3}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmLuminance(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 691
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAodBrightness(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -310,7 +283,6 @@
 
     invoke-static {v1, v3}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmLuminance_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 693
     :cond_8
     :goto_5
     iget-boolean v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mDataValid:Z
@@ -323,7 +295,6 @@
 
     if-eqz v1, :cond_15
 
-    .line 694
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmContext(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Landroid/content/Context;
@@ -364,7 +335,6 @@
 
     goto :goto_6
 
-    .line 702
     :cond_9
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -384,7 +354,6 @@
 
     if-ne v1, v3, :cond_d
 
-    .line 703
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfcThreadCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Z
@@ -393,7 +362,6 @@
 
     if-eqz v1, :cond_a
 
-    .line 704
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -406,7 +374,6 @@
 
     goto :goto_7
 
-    .line 706
     :cond_a
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -416,7 +383,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 707
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -429,7 +395,6 @@
 
     goto :goto_7
 
-    .line 695
     :cond_b
     :goto_6
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -440,7 +405,6 @@
 
     if-eqz v1, :cond_c
 
-    .line 696
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -453,7 +417,6 @@
 
     goto :goto_7
 
-    .line 698
     :cond_c
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -463,7 +426,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 699
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -474,7 +436,6 @@
 
     invoke-static {v1, v7}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 710
     :cond_d
     :goto_7
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -485,7 +446,6 @@
 
     if-eqz v1, :cond_12
 
-    .line 711
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmWindowManager(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Landroid/view/WindowManager;
@@ -508,34 +468,28 @@
 
     if-eq v1, v4, :cond_e
 
-    .line 725
     iput v2, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->rotation:I
 
     goto :goto_8
 
-    .line 722
     :cond_e
     iput v4, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->rotation:I
 
     goto :goto_8
 
-    .line 719
     :cond_f
     iput v5, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->rotation:I
 
     goto :goto_8
 
-    .line 716
     :cond_10
     iput v0, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->rotation:I
 
     goto :goto_8
 
-    .line 713
     :cond_11
     iput v2, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->rotation:I
 
-    .line 729
     :cond_12
     :goto_8
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -576,7 +530,6 @@
 
     goto :goto_9
 
-    .line 746
     :cond_13
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -598,7 +551,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 747
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -653,7 +605,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 748
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmLuminance_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -682,7 +633,6 @@
     :goto_9
     const-string v1, "AfterimageCompensationService"
 
-    .line 730
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -737,7 +687,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 731
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmLuminance(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -760,7 +709,6 @@
 
     invoke-static {v1, v6, v7, v8}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataRead(IIIZ)I
 
-    .line 732
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfcThreadAODCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Z
@@ -769,12 +717,10 @@
 
     if-eqz v1, :cond_15
 
-    .line 733
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfcThreadAODCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;Z)V
 
-    .line 734
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmAfcThread(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Ljava/lang/Thread;
@@ -786,7 +732,6 @@
 
     if-eqz v1, :cond_15
 
-    .line 736
     :try_start_3
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -800,7 +745,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_f
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 737
     :try_start_4
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -810,7 +754,6 @@
 
     invoke-virtual {v3}, Ljava/lang/Object;->wait()V
 
-    .line 738
     monitor-exit v1
 
     goto/16 :goto_0
@@ -818,7 +761,6 @@
     :catchall_0
     move-exception v3
 
-    .line 739
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -830,14 +772,12 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_f
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 741
     :catch_1
     :try_start_6
     iput-boolean v2, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mNormalValid:Z
 
     goto/16 :goto_0
 
-    .line 752
     :cond_15
     :goto_a
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -862,7 +802,6 @@
 
     if-lt v1, v6, :cond_28
 
-    .line 753
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmAfcType(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -871,7 +810,6 @@
 
     if-ne v1, v5, :cond_16
 
-    .line 754
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -884,14 +822,12 @@
 
     if-nez v1, :cond_28
 
-    .line 755
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 756
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -917,13 +853,11 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_f
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 758
     :try_start_7
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataEvaluate()F
 
     move-result v1
 
-    .line 759
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v4, "%.2f"
@@ -940,7 +874,6 @@
 
     move-result-object v1
 
-    .line 760
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -961,7 +894,6 @@
     :try_start_8
     const-string v3, "AfterimageCompensationService"
 
-    .line 762
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -978,12 +910,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 763
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 766
     :goto_b
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -991,7 +921,6 @@
 
     goto/16 :goto_15
 
-    .line 770
     :cond_16
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -1003,7 +932,6 @@
 
     if-ne v1, v5, :cond_19
 
-    .line 771
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1016,14 +944,12 @@
 
     if-nez v1, :cond_28
 
-    .line 772
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 773
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1049,13 +975,11 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_f
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 775
     :try_start_9
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataEvaluate()F
 
     move-result v1
 
-    .line 776
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v4, "%.2f"
@@ -1072,7 +996,6 @@
 
     move-result-object v1
 
-    .line 777
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -1093,7 +1016,6 @@
     :try_start_a
     const-string v3, "AfterimageCompensationService"
 
-    .line 779
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1110,12 +1032,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 780
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 783
     :goto_c
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -1157,7 +1077,6 @@
 
     if-ltz v1, :cond_18
 
-    .line 784
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1170,14 +1089,12 @@
 
     if-nez v1, :cond_17
 
-    .line 785
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "com.samsung.android.sm.ACTION_ABC_SOLUTION"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 786
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v3
@@ -1192,7 +1109,6 @@
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 787
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v3}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmContext(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)Landroid/content/Context;
@@ -1206,7 +1122,6 @@
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_f
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 790
     :cond_17
     :try_start_b
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1253,7 +1168,6 @@
 
     move-result-object v1
 
-    .line 791
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -1262,7 +1176,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 792
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1291,7 +1204,6 @@
     :try_start_c
     const-string v3, "AfterimageCompensationService"
 
-    .line 794
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1308,12 +1220,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 795
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 799
     :cond_18
     :goto_d
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -1322,7 +1232,6 @@
 
     goto/16 :goto_15
 
-    .line 803
     :cond_19
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -1334,7 +1243,6 @@
 
     if-ne v1, v4, :cond_1b
 
-    .line 804
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1347,12 +1255,10 @@
 
     if-nez v1, :cond_28
 
-    .line 805
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 806
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadAvgLum()D
@@ -1361,7 +1267,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 807
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadMaxBDI()D
@@ -1370,7 +1275,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 808
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadNBDI()D
@@ -1379,7 +1283,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 809
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffAvgLum()D
@@ -1388,7 +1291,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 810
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffMaxBDI()D
@@ -1397,7 +1299,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 811
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffNBDI()D
@@ -1408,7 +1309,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 812
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1457,7 +1357,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 813
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1504,7 +1403,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 815
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -1541,10 +1439,8 @@
 
     const-string/jumbo v3, "nativeDataUpdate"
 
-    .line 816
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 817
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1557,7 +1453,6 @@
 
     if-nez v1, :cond_1a
 
-    .line 818
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1571,7 +1466,6 @@
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_f
     .catchall {:try_start_c .. :try_end_c} :catchall_2
 
-    .line 820
     :try_start_d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1617,7 +1511,6 @@
 
     move-result-object v1
 
-    .line 821
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -1626,7 +1519,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 822
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1655,7 +1547,6 @@
     :try_start_e
     const-string v3, "AfterimageCompensationService"
 
-    .line 824
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1672,12 +1563,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 825
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 830
     :cond_1a
     :goto_e
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -1686,7 +1575,6 @@
 
     goto/16 :goto_15
 
-    .line 834
     :cond_1b
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -1696,7 +1584,6 @@
 
     if-ne v1, v3, :cond_1d
 
-    .line 835
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1709,12 +1596,10 @@
 
     if-nez v1, :cond_28
 
-    .line 836
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 837
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadAvgLum()D
@@ -1723,7 +1608,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 838
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadMaxBDI()D
@@ -1732,7 +1616,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 839
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadNBDI()D
@@ -1741,7 +1624,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 840
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffAvgLum()D
@@ -1750,7 +1632,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 841
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffMaxBDI()D
@@ -1759,7 +1640,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 842
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffNBDI()D
@@ -1770,7 +1650,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 843
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1819,7 +1698,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 844
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1866,7 +1744,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 846
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1889,7 +1766,6 @@
 
     if-ltz v1, :cond_1c
 
-    .line 847
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -1920,10 +1796,8 @@
 
     const-string/jumbo v3, "nativeDataUpdate"
 
-    .line 848
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 849
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1936,7 +1810,6 @@
 
     if-nez v1, :cond_1c
 
-    .line 850
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -1950,7 +1823,6 @@
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_f
     .catchall {:try_start_e .. :try_end_e} :catchall_2
 
-    .line 852
     :try_start_f
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1996,7 +1868,6 @@
 
     move-result-object v1
 
-    .line 853
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -2005,7 +1876,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 854
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2034,7 +1904,6 @@
     :try_start_10
     const-string v3, "AfterimageCompensationService"
 
-    .line 856
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2051,12 +1920,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 857
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 863
     :cond_1c
     :goto_f
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -2065,7 +1932,6 @@
 
     goto/16 :goto_15
 
-    .line 867
     :cond_1d
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -2081,7 +1947,6 @@
 
     if-ne v1, v3, :cond_1f
 
-    .line 868
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2094,12 +1959,10 @@
 
     if-nez v1, :cond_28
 
-    .line 869
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 870
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadAvgLum()D
@@ -2108,7 +1971,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 871
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadMaxBDI()D
@@ -2117,7 +1979,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 872
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadNBDI()D
@@ -2126,7 +1987,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 873
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffAvgLum()D
@@ -2135,7 +1995,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 874
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffMaxBDI()D
@@ -2144,7 +2003,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 875
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffNBDI()D
@@ -2155,7 +2013,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 876
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2204,7 +2061,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 877
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2251,7 +2107,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 879
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2270,7 +2125,6 @@
 
     if-ltz v1, :cond_1e
 
-    .line 880
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -2301,10 +2155,8 @@
 
     const-string/jumbo v3, "nativeDataUpdate"
 
-    .line 881
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2317,7 +2169,6 @@
 
     if-nez v1, :cond_1e
 
-    .line 883
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2331,7 +2182,6 @@
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_f
     .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
-    .line 885
     :try_start_11
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2377,7 +2227,6 @@
 
     move-result-object v1
 
-    .line 886
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -2386,7 +2235,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 887
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2415,7 +2263,6 @@
     :try_start_12
     const-string v3, "AfterimageCompensationService"
 
-    .line 889
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2432,12 +2279,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 890
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 896
     :cond_1e
     :goto_10
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -2446,7 +2291,6 @@
 
     goto/16 :goto_15
 
-    .line 900
     :cond_1f
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -2458,7 +2302,6 @@
 
     if-ne v1, v3, :cond_21
 
-    .line 901
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2471,12 +2314,10 @@
 
     if-nez v1, :cond_28
 
-    .line 902
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 903
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadAvgLum()D
@@ -2485,7 +2326,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 904
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadMaxBDI()D
@@ -2494,7 +2334,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 905
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadNBDI()D
@@ -2503,7 +2342,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 906
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffAvgLum()D
@@ -2512,7 +2350,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 907
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffMaxBDI()D
@@ -2521,7 +2358,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 908
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffNBDI()D
@@ -2532,7 +2368,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 909
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2581,7 +2416,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 910
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2628,7 +2462,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 912
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2647,7 +2480,6 @@
 
     if-ltz v1, :cond_20
 
-    .line 913
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -2678,10 +2510,8 @@
 
     const-string/jumbo v3, "nativeDataUpdate"
 
-    .line 914
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 915
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2694,7 +2524,6 @@
 
     if-nez v1, :cond_20
 
-    .line 916
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2708,7 +2537,6 @@
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_f
     .catchall {:try_start_12 .. :try_end_12} :catchall_2
 
-    .line 918
     :try_start_13
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2754,7 +2582,6 @@
 
     move-result-object v1
 
-    .line 919
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -2763,7 +2590,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 920
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2792,7 +2618,6 @@
     :try_start_14
     const-string v3, "AfterimageCompensationService"
 
-    .line 922
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2809,12 +2634,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 923
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 929
     :cond_20
     :goto_11
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -2823,7 +2646,6 @@
 
     goto/16 :goto_15
 
-    .line 933
     :cond_21
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -2835,7 +2657,6 @@
 
     if-ne v1, v3, :cond_24
 
-    .line 934
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -2848,12 +2669,10 @@
 
     if-nez v1, :cond_28
 
-    .line 935
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 936
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadAvgLum()D
@@ -2862,7 +2681,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 937
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadMaxBDI()D
@@ -2871,7 +2689,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 938
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadNBDI()D
@@ -2880,7 +2697,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 939
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffAvgLum()D
@@ -2889,7 +2705,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 940
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffMaxBDI()D
@@ -2898,7 +2713,6 @@
 
     invoke-static {v1, v5, v6}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 941
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffNBDI()D
@@ -2909,7 +2723,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 942
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2958,7 +2771,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 943
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3005,7 +2817,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 945
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmAfpcPanelNumber_main(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3016,7 +2827,6 @@
 
     if-ne v1, v3, :cond_22
 
-    .line 946
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3035,7 +2845,6 @@
 
     if-ltz v1, :cond_23
 
-    .line 947
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -3066,10 +2875,8 @@
 
     const-string/jumbo v3, "nativeDataUpdate"
 
-    .line 948
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 949
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3082,7 +2889,6 @@
 
     if-nez v1, :cond_23
 
-    .line 950
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3096,7 +2902,6 @@
     .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_f
     .catchall {:try_start_14 .. :try_end_14} :catchall_2
 
-    .line 952
     :try_start_15
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3142,7 +2947,6 @@
 
     move-result-object v1
 
-    .line 953
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -3151,7 +2955,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 954
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3180,7 +2983,6 @@
     :try_start_16
     const-string v3, "AfterimageCompensationService"
 
-    .line 956
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3197,14 +2999,12 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 957
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
     goto/16 :goto_12
 
-    .line 964
     :cond_22
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -3226,7 +3026,6 @@
 
     if-ltz v1, :cond_23
 
-    .line 965
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -3257,10 +3056,8 @@
 
     const-string/jumbo v3, "nativeDataUpdate"
 
-    .line 966
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 967
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3273,7 +3070,6 @@
 
     if-nez v1, :cond_23
 
-    .line 968
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3287,7 +3083,6 @@
     .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_16} :catch_f
     .catchall {:try_start_16 .. :try_end_16} :catchall_2
 
-    .line 970
     :try_start_17
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3333,7 +3128,6 @@
 
     move-result-object v1
 
-    .line 971
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -3342,7 +3136,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 972
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3371,7 +3164,6 @@
     :try_start_18
     const-string v3, "AfterimageCompensationService"
 
-    .line 974
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3388,12 +3180,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 975
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 982
     :cond_23
     :goto_12
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -3402,7 +3192,6 @@
 
     goto/16 :goto_15
 
-    .line 986
     :cond_24
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -3412,7 +3201,6 @@
 
     if-ne v1, v7, :cond_26
 
-    .line 987
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3425,12 +3213,10 @@
 
     if-nez v1, :cond_28
 
-    .line 988
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 989
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadAvgLum()D
@@ -3439,7 +3225,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 990
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadMaxBDI()D
@@ -3448,7 +3233,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 991
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadNBDI()D
@@ -3457,7 +3241,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 992
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffAvgLum()D
@@ -3466,7 +3249,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 993
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffMaxBDI()D
@@ -3475,7 +3257,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 994
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffNBDI()D
@@ -3486,7 +3267,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 995
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3535,7 +3315,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 996
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3582,7 +3361,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 998
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3601,7 +3379,6 @@
 
     if-ltz v1, :cond_25
 
-    .line 999
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -3632,10 +3409,8 @@
 
     const-string/jumbo v3, "nativeDataUpdate"
 
-    .line 1000
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1001
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3648,7 +3423,6 @@
 
     if-nez v1, :cond_25
 
-    .line 1002
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3662,7 +3436,6 @@
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_f
     .catchall {:try_start_18 .. :try_end_18} :catchall_2
 
-    .line 1004
     :try_start_19
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3708,7 +3481,6 @@
 
     move-result-object v1
 
-    .line 1005
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -3717,7 +3489,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 1006
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3746,7 +3517,6 @@
     :try_start_1a
     const-string v3, "AfterimageCompensationService"
 
-    .line 1008
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3763,12 +3533,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1009
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 1015
     :cond_25
     :goto_13
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -3777,7 +3545,6 @@
 
     goto/16 :goto_15
 
-    .line 1019
     :cond_26
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -3787,7 +3554,6 @@
 
     if-ne v1, v5, :cond_28
 
-    .line 1020
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3800,12 +3566,10 @@
 
     if-nez v1, :cond_28
 
-    .line 1021
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 1022
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadAvgLum()D
@@ -3814,7 +3578,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1023
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadMaxBDI()D
@@ -3823,7 +3586,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1024
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadNBDI()D
@@ -3832,7 +3594,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1025
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffAvgLum()D
@@ -3841,7 +3602,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffAvgLum(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1026
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffMaxBDI()D
@@ -3850,7 +3610,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffMaxBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1027
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffNBDI()D
@@ -3861,7 +3620,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 1028
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3910,7 +3668,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 1029
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3957,7 +3714,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1031
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -3976,7 +3732,6 @@
 
     if-ltz v1, :cond_27
 
-    .line 1032
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -4007,10 +3762,8 @@
 
     const-string/jumbo v3, "nativeDataUpdate"
 
-    .line 1033
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1034
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -4023,7 +3776,6 @@
 
     if-nez v1, :cond_27
 
-    .line 1035
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -4037,7 +3789,6 @@
     .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_f
     .catchall {:try_start_1a .. :try_end_1a} :catchall_2
 
-    .line 1037
     :try_start_1b
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4083,7 +3834,6 @@
 
     move-result-object v1
 
-    .line 1038
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc/apply_count"
@@ -4092,7 +3842,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 1039
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4121,7 +3870,6 @@
     :try_start_1c
     const-string v3, "AfterimageCompensationService"
 
-    .line 1041
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4138,19 +3886,16 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1042
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 1048
     :cond_27
     :goto_14
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$mupdateHWParam(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)V
 
-    .line 1053
     :cond_28
     :goto_15
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
@@ -4167,7 +3912,6 @@
 
     if-lt v1, v3, :cond_2a
 
-    .line 1054
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmAfcType(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -4176,7 +3920,6 @@
 
     if-ne v1, v7, :cond_2a
 
-    .line 1055
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetAfpcPeriodCount_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -4189,12 +3932,10 @@
 
     if-nez v1, :cond_2a
 
-    .line 1056
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v2}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfpcPeriodCount_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;I)V
 
-    .line 1057
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadAvgLumSub()D
@@ -4203,7 +3944,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmAvgLum_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1058
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadMaxBDISub()D
@@ -4212,7 +3952,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmMaxBDI_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1059
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadNBDISub()D
@@ -4221,7 +3960,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmNBDI_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1060
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffAvgLumSub()D
@@ -4230,7 +3968,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffAvgLum_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1061
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffMaxBDISub()D
@@ -4239,7 +3976,6 @@
 
     invoke-static {v1, v3, v4}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmEffMaxBDI_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;D)V
 
-    .line 1062
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$smnativeDataReadEffNBDISub()D
@@ -4250,7 +3986,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 1063
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4299,7 +4034,6 @@
 
     const-string v1, "AfterimageCompensationService"
 
-    .line 1064
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4346,7 +4080,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1065
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -4365,7 +4098,6 @@
 
     if-ltz v1, :cond_29
 
-    .line 1066
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmEffNBDI_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)D
@@ -4396,10 +4128,8 @@
 
     const-string/jumbo v3, "nativeDataUpdateSub"
 
-    .line 1067
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1068
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyScaleEffect(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -4412,7 +4142,6 @@
 
     if-nez v1, :cond_29
 
-    .line 1069
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fgetmApplyCount_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)I
@@ -4426,7 +4155,6 @@
     .catch Ljava/lang/Exception; {:try_start_1c .. :try_end_1c} :catch_f
     .catchall {:try_start_1c .. :try_end_1c} :catchall_2
 
-    .line 1071
     :try_start_1d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4472,7 +4200,6 @@
 
     move-result-object v1
 
-    .line 1072
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     const-string v4, "/efs/afc1/apply_count"
@@ -4481,7 +4208,6 @@
 
     const-string v3, "AfterimageCompensationService"
 
-    .line 1073
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4510,7 +4236,6 @@
     :try_start_1e
     const-string v3, "AfterimageCompensationService"
 
-    .line 1075
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4527,19 +4252,16 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1076
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1, v11}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputmApplyValue_sub(Lcom/samsung/android/hardware/display/AfterimageCompensationService;F)V
 
-    .line 1082
     :cond_29
     :goto_16
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {v1}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$mupdateHWParam(Lcom/samsung/android/hardware/display/AfterimageCompensationService;)V
 
-    .line 1089
     :cond_2a
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -4560,7 +4282,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1091
     :try_start_1f
     iget-object v1, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -4574,7 +4295,6 @@
     .catch Ljava/lang/Exception; {:try_start_1f .. :try_end_1f} :catch_f
     .catchall {:try_start_1f .. :try_end_1f} :catchall_2
 
-    .line 1092
     :try_start_20
     iget-object v3, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -4584,7 +4304,6 @@
 
     invoke-virtual {v3}, Ljava/lang/Object;->wait()V
 
-    .line 1093
     monitor-exit v1
 
     goto/16 :goto_0
@@ -4592,7 +4311,6 @@
     :catchall_1
     move-exception v3
 
-    .line 1094
     monitor-exit v1
     :try_end_20
     .catchall {:try_start_20 .. :try_end_20} :catchall_1
@@ -4604,7 +4322,6 @@
     .catch Ljava/lang/Exception; {:try_start_21 .. :try_end_21} :catch_f
     .catchall {:try_start_21 .. :try_end_21} :catchall_2
 
-    .line 1096
     :catch_e
     :try_start_22
     iput-boolean v2, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->mNormalValid:Z
@@ -4617,7 +4334,6 @@
     :cond_2b
     const-string v1, "AfterimageCompensationService"
 
-    .line 1105
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4641,7 +4357,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1106
     iget-object p0, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {p0, v0}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfcThreadTerminateCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;Z)V
@@ -4656,7 +4371,6 @@
     :catch_f
     move-exception v1
 
-    .line 1102
     :try_start_23
     iget-object v2, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
@@ -4666,7 +4380,6 @@
 
     if-eqz v2, :cond_2c
 
-    .line 1103
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_23
     .catchall {:try_start_23 .. :try_end_23} :catchall_2
@@ -4674,7 +4387,6 @@
     :cond_2c
     const-string v1, "AfterimageCompensationService"
 
-    .line 1105
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4709,11 +4421,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1106
     iget-object p0, p0, Lcom/samsung/android/hardware/display/AfterimageCompensationService$AfcThread;->this$0:Lcom/samsung/android/hardware/display/AfterimageCompensationService;
 
     invoke-static {p0, v0}, Lcom/samsung/android/hardware/display/AfterimageCompensationService;->-$$Nest$fputAfcThreadTerminateCondition(Lcom/samsung/android/hardware/display/AfterimageCompensationService;Z)V
 
-    .line 1107
     throw v1
 .end method

@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$-FUwVQgxHvAzgUoYShuTRMKkG3w(Lcom/android/server/wm/PopOverController;[ZZLcom/android/server/wm/WindowState;Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/wm/PopOverController;->lambda$updateTransparency$0([ZZLcom/android/server/wm/WindowState;Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayContent(Lcom/android/server/wm/PopOverController;)Lcom/android/server/wm/DisplayContent;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/PopOverController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     return-object p0
@@ -39,10 +37,8 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;)V
     .locals 0
 
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lcom/android/server/wm/PopOverController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     return-void
@@ -51,7 +47,6 @@
 .method private synthetic lambda$updateTransparency$0([ZZLcom/android/server/wm/WindowState;Lcom/android/server/wm/ActivityRecord;)Z
     .locals 2
 
-    .line 135
     iget-object v0, p4, Lcom/android/server/wm/ActivityRecord;->mPopOverState:Lcom/android/server/wm/PopOverState;
 
     invoke-virtual {v0}, Lcom/android/server/wm/PopOverState;->isActivated()Z
@@ -70,7 +65,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_0
     invoke-virtual {p4}, Lcom/android/server/wm/ActivityRecord;->findMainWindow()Lcom/android/server/wm/WindowState;
 
@@ -78,7 +72,6 @@
 
     if-eqz p4, :cond_4
 
-    .line 139
     iget-object v0, p4, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
 
     if-nez v0, :cond_1
@@ -88,7 +81,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 142
     aput-boolean p2, p1, v0
 
     if-ne p4, p3, :cond_2
@@ -98,17 +90,14 @@
     :cond_2
     const/16 p1, 0x10
 
-    .line 146
     invoke-virtual {p4, v0, p1}, Lcom/android/server/wm/WindowContainer;->isAnimating(II)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 147
     invoke-virtual {p4}, Lcom/android/server/wm/WindowContainer;->cancelAnimation()V
 
-    .line 149
     :cond_3
     invoke-virtual {p0, p4, p2}, Lcom/android/server/wm/PopOverController;->startTransparentAnimation(Lcom/android/server/wm/WindowState;Z)V
 
@@ -124,14 +113,12 @@
 .method public addPopOverWindowLw(Lcom/android/server/wm/WindowState;)V
     .locals 3
 
-    .line 57
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PopOverController;->isChildDimmingDialog(Lcom/android/server/wm/WindowState;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 58
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     const/4 v1, 0x0
@@ -144,7 +131,6 @@
 
     return-void
 
-    .line 62
     :cond_0
     iget-object v1, v0, Lcom/android/server/wm/WindowState;->mChildDimmingDialogs:Landroid/util/ArraySet;
 
@@ -154,7 +140,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 63
     iget-object v1, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -163,23 +148,19 @@
 
     iput v2, v0, Lcom/android/server/wm/WindowState;->mOriginalDimBehind:I
 
-    .line 64
     iget v2, v1, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
     iput v2, v0, Lcom/android/server/wm/WindowState;->mOriginalDimAmount:F
 
-    .line 65
     iget-wide v1, v1, Landroid/view/WindowManager$LayoutParams;->dimDuration:J
 
     iput-wide v1, v0, Lcom/android/server/wm/WindowState;->mOriginalDimDuration:J
 
-    .line 67
     :cond_1
     iget-object v1, v0, Lcom/android/server/wm/WindowState;->mChildDimmingDialogs:Landroid/util/ArraySet;
 
     invoke-virtual {v1, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 68
     iget-object p1, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/wm/PopOverController;->updatePopOverDimAttributesLw(Lcom/android/server/wm/WindowState;Landroid/view/WindowManager$LayoutParams;)V
@@ -191,7 +172,6 @@
 .method public getDistanceToTopForPopOver(Lcom/android/server/wm/WindowState;II)I
     .locals 1
 
-    .line 112
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->isDesktopModeEnabled()Z
 
     move-result v0
@@ -204,7 +184,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 113
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getCaptionHeight()I
 
@@ -212,21 +191,18 @@
 
     sub-int/2addr p2, v0
 
-    .line 114
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 115
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getFreeformThickness()I
 
     move-result v0
 
     sub-int/2addr p2, v0
 
-    .line 119
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inFullscreenWindowingMode()Z
 
@@ -234,7 +210,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/wm/PopOverController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
@@ -254,7 +229,6 @@
     :cond_2
     const/4 p0, 0x0
 
-    .line 123
     invoke-static {p2, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -271,7 +245,6 @@
 .method public final isChildDimmingDialog(Lcom/android/server/wm/WindowState;)Z
     .locals 2
 
-    .line 81
     iget-object p0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {p0}, Landroid/view/WindowManager$LayoutParams;->isFullscreen()Z
@@ -310,7 +283,6 @@
 .method public removePopOverWindowLw(Lcom/android/server/wm/WindowState;)V
     .locals 2
 
-    .line 73
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     const/4 v1, 0x0
@@ -321,7 +293,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 74
     iget-object v1, v0, Lcom/android/server/wm/WindowState;->mChildDimmingDialogs:Landroid/util/ArraySet;
 
     invoke-virtual {v1, p1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -330,12 +301,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 75
     iget-object v1, v0, Lcom/android/server/wm/WindowState;->mChildDimmingDialogs:Landroid/util/ArraySet;
 
     invoke-virtual {v1, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 76
     iget-object p1, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/wm/PopOverController;->updatePopOverDimAttributesLw(Lcom/android/server/wm/WindowState;Landroid/view/WindowManager$LayoutParams;)V
@@ -365,7 +334,6 @@
 
     move v0, v1
 
-    .line 165
     :cond_1
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
@@ -382,7 +350,6 @@
     :cond_2
     const-wide/16 v4, 0xc8
 
-    .line 166
     :goto_1
     invoke-virtual {v1, v4, v5}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
@@ -390,18 +357,15 @@
 
     const-wide/16 v2, 0x0
 
-    .line 167
     :cond_3
     invoke-virtual {v1, v2, v3}, Landroid/view/animation/AlphaAnimation;->setStartOffset(J)V
 
-    .line 168
     new-instance v2, Lcom/android/server/wm/PopOverController$1;
 
     invoke-direct {v2, p0, p2, p1, v0}, Lcom/android/server/wm/PopOverController$1;-><init>(Lcom/android/server/wm/PopOverController;ZLcom/android/server/wm/WindowState;F)V
 
     invoke-virtual {v1, v2}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 191
     invoke-virtual {p1, v1}, Lcom/android/server/wm/WindowState;->startAnimation(Landroid/view/animation/Animation;)V
 
     return-void
@@ -412,10 +376,8 @@
 
     const/4 v0, 0x0
 
-    .line 88
     iput-boolean v0, p1, Lcom/android/server/wm/WindowState;->mPopOverDimmerNeeded:Z
 
-    .line 89
     iget v0, p1, Lcom/android/server/wm/WindowState;->mOriginalDimBehind:I
 
     const/4 v1, 0x2
@@ -424,7 +386,6 @@
 
     return-void
 
-    .line 93
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/PopOverController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -440,7 +401,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 94
     iget p0, p2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/2addr p0, v1
@@ -449,15 +409,12 @@
 
     const/high16 p0, 0x3f000000    # 0.5f
 
-    .line 95
     iput p0, p2, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
-    .line 96
     iput-wide v2, p2, Landroid/view/WindowManager$LayoutParams;->dimDuration:J
 
     goto :goto_0
 
-    .line 97
     :cond_1
     iget-object p0, p1, Lcom/android/server/wm/WindowState;->mChildDimmingDialogs:Landroid/util/ArraySet;
 
@@ -467,7 +424,6 @@
 
     if-nez p0, :cond_2
 
-    .line 98
     iget p0, p2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/2addr p0, v1
@@ -476,15 +432,12 @@
 
     const p0, 0x3e051eb8    # 0.13f
 
-    .line 99
     iput p0, p2, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
-    .line 100
     iput-wide v2, p2, Landroid/view/WindowManager$LayoutParams;->dimDuration:J
 
     goto :goto_0
 
-    .line 102
     :cond_2
     iget p0, p2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -492,17 +445,14 @@
 
     iput p0, p2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 103
     iget p0, p1, Lcom/android/server/wm/WindowState;->mOriginalDimAmount:F
 
     iput p0, p2, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
-    .line 104
     iget-wide v2, p1, Lcom/android/server/wm/WindowState;->mOriginalDimDuration:J
 
     iput-wide v2, p2, Landroid/view/WindowManager$LayoutParams;->dimDuration:J
 
-    .line 106
     :goto_0
     iget p0, p2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -512,7 +462,6 @@
 
     const/4 p0, 0x1
 
-    .line 107
     iput-boolean p0, p1, Lcom/android/server/wm/WindowState;->mPopOverDimmerNeeded:Z
 
     :cond_3
@@ -522,7 +471,6 @@
 .method public updateTransparency(Lcom/android/server/wm/WindowState;Z)V
     .locals 6
 
-    .line 128
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -546,7 +494,6 @@
 
     aput-boolean v1, v0, v1
 
-    .line 134
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v2
@@ -561,7 +508,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 154
     iget-object p1, p0, Lcom/android/server/wm/PopOverController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
@@ -578,7 +524,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
-    .line 155
     invoke-virtual {p0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -589,7 +534,6 @@
 
     const-string v5, "Pop-over transparent mode"
 
-    .line 154
     invoke-interface/range {v0 .. v5}, Lcom/android/server/policy/WindowManagerPolicy;->performHapticFeedback(ILjava/lang/String;IZLjava/lang/String;)Z
 
     :cond_1

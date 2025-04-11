@@ -33,22 +33,18 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/PolicyPathProvider;)V
     .locals 1
 
-    .line 121
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, -0x2710
 
-    .line 94
     iput v0, p0, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerUserId:I
 
-    .line 97
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerTypes:Landroid/util/ArrayMap;
 
-    .line 105
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -57,13 +53,10 @@
 
     const/4 v0, 0x0
 
-    .line 117
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/OwnersData;->mMigratedToPolicyEngine:Z
 
-    .line 119
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/OwnersData;->mPoliciesMigratedPostUpdate:Z
 
-    .line 122
     iput-object p1, p0, Lcom/android/server/devicepolicy/OwnersData;->mPathProvider:Lcom/android/server/devicepolicy/PolicyPathProvider;
 
     return-void
@@ -74,7 +67,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 5
 
-    .line 162
     iget-object v0, p0, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwner:Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;
 
     const/4 v1, 0x1
@@ -83,18 +75,14 @@
 
     const-string v0, "Device Owner: "
 
-    .line 163
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 164
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwner:Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 166
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,7 +101,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 167
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     move v0, v1
@@ -123,7 +110,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 170
     :goto_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/OwnersData;->mSystemUpdatePolicy:Landroid/app/admin/SystemUpdatePolicy;
 
@@ -131,10 +117,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 172
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 174
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -156,13 +140,11 @@
 
     move v0, v1
 
-    .line 177
     :cond_2
     iget-object v2, p0, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
 
     if-eqz v2, :cond_4
 
-    .line 178
     invoke-virtual {v2}, Landroid/util/ArrayMap;->entrySet()Ljava/util/Set;
 
     move-result-object v2
@@ -186,10 +168,8 @@
 
     if-eqz v0, :cond_3
 
-    .line 180
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 182
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -215,10 +195,8 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 183
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 184
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -227,14 +205,12 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 185
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     move v0, v1
 
     goto :goto_1
 
-    .line 189
     :cond_4
     iget-object v2, p0, Lcom/android/server/devicepolicy/OwnersData;->mSystemUpdateInfo:Landroid/app/admin/SystemUpdateInfo;
 
@@ -242,10 +218,8 @@
 
     if-eqz v0, :cond_5
 
-    .line 191
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 193
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -270,7 +244,6 @@
     :cond_6
     move v1, v0
 
-    .line 196
     :goto_2
     iget-object v0, p0, Lcom/android/server/devicepolicy/OwnersData;->mSystemUpdateFreezeStart:Ljava/time/LocalDate;
 
@@ -283,10 +256,8 @@
     :cond_7
     if-eqz v1, :cond_8
 
-    .line 198
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 200
     :cond_8
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -296,7 +267,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 201
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OwnersData;->getSystemUpdateFreezePeriodRecordAsString()Ljava/lang/String;
 
     move-result-object p0
@@ -307,7 +277,6 @@
 
     move-result-object p0
 
-    .line 200
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     :cond_9
@@ -317,7 +286,6 @@
 .method public getDeviceOwnerFile()Ljava/io/File;
     .locals 2
 
-    .line 225
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/OwnersData;->mPathProvider:Lcom/android/server/devicepolicy/PolicyPathProvider;
@@ -336,7 +304,6 @@
 .method public getProfileOwnerFile(I)Ljava/io/File;
     .locals 1
 
-    .line 230
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/OwnersData;->mPathProvider:Lcom/android/server/devicepolicy/PolicyPathProvider;
@@ -355,24 +322,20 @@
 .method public getSystemUpdateFreezePeriodRecordAsString()Ljava/lang/String;
     .locals 3
 
-    .line 207
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "start: "
 
-    .line 208
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 209
     iget-object v1, p0, Lcom/android/server/devicepolicy/OwnersData;->mSystemUpdateFreezeStart:Ljava/time/LocalDate;
 
     const-string/jumbo v2, "null"
 
     if-eqz v1, :cond_0
 
-    .line 210
     invoke-virtual {v1}, Ljava/time/LocalDate;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -381,22 +344,18 @@
 
     goto :goto_0
 
-    .line 212
     :cond_0
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_0
     const-string v1, "; end: "
 
-    .line 214
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 215
     iget-object p0, p0, Lcom/android/server/devicepolicy/OwnersData;->mSystemUpdateFreezeEnd:Ljava/time/LocalDate;
 
     if-eqz p0, :cond_1
 
-    .line 216
     invoke-virtual {p0}, Ljava/time/LocalDate;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -405,11 +364,9 @@
 
     goto :goto_1
 
-    .line 218
     :cond_1
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 220
     :goto_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -421,14 +378,12 @@
 .method public load([I)V
     .locals 4
 
-    .line 126
     new-instance v0, Lcom/android/server/devicepolicy/OwnersData$DeviceOwnerReadWriter;
 
     invoke-direct {v0, p0}, Lcom/android/server/devicepolicy/OwnersData$DeviceOwnerReadWriter;-><init>(Lcom/android/server/devicepolicy/OwnersData;)V
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;->readFromFileLocked()V
 
-    .line 128
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -438,7 +393,6 @@
 
     aget v2, p1, v1
 
-    .line 129
     new-instance v3, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;
 
     invoke-direct {v3, p0, v2}, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;-><init>(Lcom/android/server/devicepolicy/OwnersData;I)V
@@ -449,7 +403,6 @@
 
     goto :goto_0
 
-    .line 132
     :cond_0
     iget-object p1, p0, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
 
@@ -467,7 +420,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 133
     iget-object p1, p1, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;->admin:Landroid/content/ComponentName;
 
     goto :goto_1
@@ -475,7 +427,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 134
     :goto_1
     iget-object v0, p0, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwner:Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;
 
@@ -483,10 +434,8 @@
 
     if-eqz p1, :cond_2
 
-    .line 135
     iget p0, p0, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerUserId:I
 
-    .line 136
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -497,7 +446,6 @@
 
     const-string p1, "User %d has both DO and PO, which is not supported"
 
-    .line 135
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -513,7 +461,6 @@
 .method public writeDeviceOwner()Z
     .locals 1
 
-    .line 147
     new-instance v0, Lcom/android/server/devicepolicy/OwnersData$DeviceOwnerReadWriter;
 
     invoke-direct {v0, p0}, Lcom/android/server/devicepolicy/OwnersData$DeviceOwnerReadWriter;-><init>(Lcom/android/server/devicepolicy/OwnersData;)V
@@ -528,7 +475,6 @@
 .method public writeProfileOwner(I)Z
     .locals 1
 
-    .line 157
     new-instance v0, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;-><init>(Lcom/android/server/devicepolicy/OwnersData;I)V

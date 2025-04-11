@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/tv/tunerresourcemanager/DemuxResource$Builder;)V
     .locals 0
 
-    .line 29
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/TunerResourceBasic;-><init>(Lcom/android/server/tv/tunerresourcemanager/TunerResourceBasic$Builder;)V
 
-    .line 30
     invoke-static {p1}, Lcom/android/server/tv/tunerresourcemanager/DemuxResource$Builder;->-$$Nest$fgetmFilterTypes(Lcom/android/server/tv/tunerresourcemanager/DemuxResource$Builder;)I
 
     move-result p1
@@ -27,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/tv/tunerresourcemanager/DemuxResource$Builder;Lcom/android/server/tv/tunerresourcemanager/DemuxResource-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/DemuxResource;-><init>(Lcom/android/server/tv/tunerresourcemanager/DemuxResource$Builder;)V
 
     return-void
@@ -49,7 +46,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 58
     iget v3, p0, Lcom/android/server/tv/tunerresourcemanager/DemuxResource;->mFilterTypes:I
 
     and-int/2addr v3, v0
@@ -72,7 +68,6 @@
 .method public hasSufficientCaps(I)Z
     .locals 0
 
-    .line 48
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/DemuxResource;->mFilterTypes:I
 
     and-int/2addr p0, p1
@@ -93,7 +88,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

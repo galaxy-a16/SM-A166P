@@ -17,12 +17,10 @@
 .method public constructor <init>(Lcom/android/internal/os/PowerProfile;)V
     .locals 4
 
-    .line 38
     invoke-direct {p0}, Lcom/android/server/power/stats/PowerCalculator;-><init>()V
 
     const-string v0, "cpu.suspend"
 
-    .line 40
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
     move-result-wide v0
@@ -35,7 +33,6 @@
 
     const-string v0, "cpu.idle"
 
-    .line 43
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
     move-result-wide v0
@@ -62,10 +59,8 @@
 
     move-wide v4, p5
 
-    .line 55
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/power/stats/IdlePowerCalculator;->calculatePowerAndDuration(Landroid/os/BatteryStats;JJI)V
 
-    .line 57
     iget-wide p2, p0, Lcom/android/server/power/stats/IdlePowerCalculator;->mPowerMah:D
 
     const-wide/16 p4, 0x0
@@ -76,7 +71,6 @@
 
     const/4 p2, 0x0
 
-    .line 58
     invoke-virtual {p1, p2}, Landroid/os/BatteryUsageStats$Builder;->getAggregateBatteryConsumerBuilder(I)Landroid/os/AggregateBatteryConsumer$Builder;
 
     move-result-object p1
@@ -85,7 +79,6 @@
 
     const/16 p4, 0x10
 
-    .line 60
     invoke-virtual {p1, p4, p2, p3}, Landroid/os/AggregateBatteryConsumer$Builder;->setConsumedPower(ID)Landroid/os/BatteryConsumer$BaseBuilder;
 
     move-result-object p1
@@ -94,7 +87,6 @@
 
     iget-wide p2, p0, Lcom/android/server/power/stats/IdlePowerCalculator;->mDurationMs:J
 
-    .line 61
     invoke-virtual {p1, p4, p2, p3}, Landroid/os/AggregateBatteryConsumer$Builder;->setUsageDurationMillis(IJ)Landroid/os/BatteryConsumer$BaseBuilder;
 
     :cond_0
@@ -104,38 +96,32 @@
 .method public final calculatePowerAndDuration(Landroid/os/BatteryStats;JJI)V
     .locals 4
 
-    .line 72
     invoke-virtual {p1, p2, p3, p6}, Landroid/os/BatteryStats;->computeBatteryRealtime(JI)J
 
     move-result-wide p2
 
-    .line 73
     invoke-virtual {p1, p4, p5, p6}, Landroid/os/BatteryStats;->computeBatteryUptime(JI)J
 
     move-result-wide p4
 
     long-to-double v0, p2
 
-    .line 79
     iget-wide v2, p0, Lcom/android/server/power/stats/IdlePowerCalculator;->mAveragePowerCpuSuspendMahPerUs:D
 
     mul-double/2addr v0, v2
 
     long-to-double p4, p4
 
-    .line 80
     iget-wide v2, p0, Lcom/android/server/power/stats/IdlePowerCalculator;->mAveragePowerCpuIdleMahPerUs:D
 
     mul-double/2addr p4, v2
 
     add-double/2addr v0, p4
 
-    .line 81
     iput-wide v0, p0, Lcom/android/server/power/stats/IdlePowerCalculator;->mPowerMah:D
 
     const-wide/16 p4, 0x3e8
 
-    .line 88
     div-long/2addr p2, p4
 
     iput-wide p2, p0, Lcom/android/server/power/stats/IdlePowerCalculator;->mDurationMs:J
@@ -146,7 +132,6 @@
 .method public isPowerComponentSupported(I)Z
     .locals 0
 
-    .line 0
     const/16 p0, 0x10
 
     if-ne p1, p0, :cond_0

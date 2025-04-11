@@ -22,7 +22,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/BackgroundDexOptService;Lcom/android/server/pm/PackageManagerService;Ljava/util/List;Landroid/app/job/JobParameters;Lcom/android/server/pm/BackgroundDexOptJobService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/BackgroundDexOptService$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/pm/BackgroundDexOptService;
@@ -43,7 +42,6 @@
 .method public final run()V
     .locals 4
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/pm/BackgroundDexOptService$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/pm/BackgroundDexOptService;
 
     iget-object v1, p0, Lcom/android/server/pm/BackgroundDexOptService$$ExternalSyntheticLambda2;->f$1:Lcom/android/server/pm/PackageManagerService;

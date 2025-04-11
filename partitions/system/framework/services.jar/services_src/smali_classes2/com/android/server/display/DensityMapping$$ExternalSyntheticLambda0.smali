@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/display/DensityMapping$Entry;
 
     invoke-static {p1}, Lcom/android/server/display/DensityMapping;->$r8$lambda$xFXh2oerFieTO7wAJHpJfRN11Qc(Lcom/android/server/display/DensityMapping$Entry;)I

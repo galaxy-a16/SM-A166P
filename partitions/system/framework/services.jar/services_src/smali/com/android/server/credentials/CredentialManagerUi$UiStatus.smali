@@ -19,7 +19,6 @@
 .method public static synthetic $values()[Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
     .locals 4
 
-    .line 59
     sget-object v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;->IN_PROGRESS:Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
     sget-object v1, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;->USER_INTERACTION:Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 60
     new-instance v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
     const-string v1, "IN_PROGRESS"
@@ -49,7 +47,6 @@
 
     sput-object v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;->IN_PROGRESS:Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
-    .line 61
     new-instance v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
     const-string v1, "USER_INTERACTION"
@@ -60,7 +57,6 @@
 
     sput-object v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;->USER_INTERACTION:Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
-    .line 62
     new-instance v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
     const-string v1, "NOT_STARTED"
@@ -81,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;->TERMINATED:Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
-    .line 59
     invoke-static {}, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;->$values()[Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
     move-result-object v0
@@ -94,7 +89,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 59
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -103,7 +97,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
     .locals 1
 
-    .line 59
     const-class v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -118,7 +111,6 @@
 .method public static values()[Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
     .locals 1
 
-    .line 59
     sget-object v0, Lcom/android/server/credentials/CredentialManagerUi$UiStatus;->$VALUES:[Lcom/android/server/credentials/CredentialManagerUi$UiStatus;
 
     invoke-virtual {v0}, [Lcom/android/server/credentials/CredentialManagerUi$UiStatus;->clone()Ljava/lang/Object;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/FaceService;)V
     .locals 0
 
-    .line 1224
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/FaceService$1;->this$0:Lcom/android/server/biometrics/sensors/face/FaceService;
 
     invoke-direct {p0}, Landroid/hardware/face/IFaceAuthenticatorsRegisteredCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onAllAuthenticatorsRegistered(Ljava/util/List;)V
     .locals 0
 
-    .line 1227
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/FaceService$1;->this$0:Lcom/android/server/biometrics/sensors/face/FaceService;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/face/FaceService;->-$$Nest$fgetmBiometricStateCallback(Lcom/android/server/biometrics/sensors/face/FaceService;)Lcom/android/server/biometrics/sensors/BiometricStateCallback;

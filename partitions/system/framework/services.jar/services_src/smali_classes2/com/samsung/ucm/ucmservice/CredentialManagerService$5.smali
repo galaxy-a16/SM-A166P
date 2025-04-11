@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/ucm/ucmservice/CredentialManagerService;)V
     .locals 0
 
-    .line 555
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$5;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 558
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,19 +49,16 @@
 
     const/4 v1, -0x1
 
-    .line 559
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     if-eq p1, v1, :cond_0
 
-    .line 561
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 562
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +83,6 @@
 
     if-nez p2, :cond_0
 
-    .line 564
     iget-object p2, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$5;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-static {p2, p1}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->-$$Nest$misActivePlugin(Lcom/samsung/ucm/ucmservice/CredentialManagerService;I)Z
@@ -97,7 +91,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 565
     iget-object p0, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$5;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-static {p0}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->-$$Nest$fgetmHandler(Lcom/samsung/ucm/ucmservice/CredentialManagerService;)Landroid/os/Handler;

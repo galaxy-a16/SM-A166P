@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->$r8$lambda$TMtyjV4Hu2PxW3eP6v-kOhT6CX4(Ljava/lang/String;)Ljava/util/Set;

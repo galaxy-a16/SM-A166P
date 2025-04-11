@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayPolicy;)V
     .locals 0
 
-    .line 3806
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 4
 
-    .line 3809
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmLock(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 3810
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
@@ -52,12 +49,10 @@
 
     if-nez v1, :cond_0
 
-    .line 3812
     monitor-exit v0
 
     return-void
 
-    .line 3814
     :cond_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
@@ -67,12 +62,10 @@
 
     invoke-static {v1, v2, v3}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fputmPendingPanicGestureUptime(Lcom/android/server/wm/DisplayPolicy;J)V
 
-    .line 3815
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->updateSystemBarAttributes()V
 
-    .line 3816
     monitor-exit v0
 
     return-void

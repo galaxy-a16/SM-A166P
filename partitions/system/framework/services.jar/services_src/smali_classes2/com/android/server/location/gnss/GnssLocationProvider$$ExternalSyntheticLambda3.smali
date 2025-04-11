@@ -20,7 +20,6 @@
 .method public final applyAsLong(Ljava/lang/Object;)J
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/location/Location;
 
     invoke-virtual {p1}, Landroid/location/Location;->getElapsedRealtimeNanos()J

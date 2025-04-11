@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;)V
     .locals 0
 
-    .line 395
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -24,7 +23,6 @@
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 0
 
-    .line 399
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     const/4 p1, 0x1
@@ -37,7 +35,6 @@
 .method public onPackageUpdateFinished(Ljava/lang/String;I)V
     .locals 0
 
-    .line 405
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     const/4 p1, 0x1

@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$sfgetACTION()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/notification/CountdownConditionProvider;->ACTION:Ljava/lang/String;
 
     return-object v0
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/notification/CountdownConditionProvider;->DEBUG:Z
 
     return v0
@@ -45,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$smnewCondition(JZI)Landroid/service/notification/Condition;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/notification/CountdownConditionProvider;->newCondition(JZI)Landroid/service/notification/Condition;
 
     move-result-object p0
@@ -60,19 +57,16 @@
 
     const/4 v1, 0x3
 
-    .line 42
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/notification/CountdownConditionProvider;->DEBUG:Z
 
-    .line 44
     new-instance v0, Landroid/content/ComponentName;
 
     const-class v1, Lcom/android/server/notification/CountdownConditionProvider;
 
-    .line 45
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -83,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/notification/CountdownConditionProvider;->COMPONENT:Landroid/content/ComponentName;
 
-    .line 47
     const-class v0, Lcom/android/server/notification/CountdownConditionProvider;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -98,13 +91,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 58
     invoke-direct {p0}, Lcom/android/server/notification/SystemConditionProviderService;-><init>()V
 
-    .line 51
     iput-object p0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mContext:Landroid/content/Context;
 
-    .line 52
     new-instance v0, Lcom/android/server/notification/CountdownConditionProvider$Receiver;
 
     const/4 v1, 0x0
@@ -113,7 +103,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mReceiver:Lcom/android/server/notification/CountdownConditionProvider$Receiver;
 
-    .line 59
     sget-boolean p0, Lcom/android/server/notification/CountdownConditionProvider;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -131,7 +120,6 @@
 .method public static final newCondition(JZI)Landroid/service/notification/Condition;
     .locals 9
 
-    .line 182
     new-instance v8, Landroid/service/notification/Condition;
 
     invoke-static {p0, p1, p2}, Landroid/service/notification/ZenModeConfig;->toCountdownConditionId(JZ)Landroid/net/Uri;
@@ -160,7 +148,6 @@
 .method public static tryParseDescription(Landroid/net/Uri;)Ljava/lang/String;
     .locals 10
 
-    .line 187
     invoke-static {p0}, Landroid/service/notification/ZenModeConfig;->tryParseCountdownConditionId(Landroid/net/Uri;)J
 
     move-result-wide v6
@@ -175,7 +162,6 @@
 
     return-object p0
 
-    .line 189
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -187,12 +173,10 @@
 
     move-wide v2, v8
 
-    .line 191
     invoke-static/range {v0 .. v5}, Landroid/text/format/DateUtils;->getRelativeTimeSpanString(JJJ)Ljava/lang/CharSequence;
 
     move-result-object p0
 
-    .line 193
     invoke-static {v6, v7}, Lcom/android/server/notification/SystemConditionProviderService;->ts(J)Ljava/lang/String;
 
     move-result-object v0
@@ -213,7 +197,6 @@
 
     const-string v0, "Scheduled for %s, %s in the future (%s), now=%s"
 
-    .line 192
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -228,7 +211,6 @@
 
     const/4 v0, 0x0
 
-    .line 84
     invoke-virtual {p0, v0}, Landroid/service/notification/ConditionProviderService;->onBind(Landroid/content/Intent;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -241,7 +223,6 @@
 .method public attachBase(Landroid/content/Context;)V
     .locals 0
 
-    .line 74
     invoke-virtual {p0, p1}, Landroid/service/notification/ConditionProviderService;->attachBaseContext(Landroid/content/Context;)V
 
     return-void
@@ -252,12 +233,10 @@
 
     const-string p2, "    CountdownConditionProvider:"
 
-    .line 89
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p2, "      mConnected="
 
-    .line 90
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean p2, p0, Lcom/android/server/notification/CountdownConditionProvider;->mConnected:Z
@@ -266,7 +245,6 @@
 
     const-string p2, "      mTime="
 
-    .line 91
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-wide v0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mTime:J
@@ -279,7 +257,6 @@
 .method public getComponent()Landroid/content/ComponentName;
     .locals 0
 
-    .line 64
     sget-object p0, Lcom/android/server/notification/CountdownConditionProvider;->COMPONENT:Landroid/content/ComponentName;
 
     return-object p0
@@ -288,7 +265,6 @@
 .method public getPendingIntent(Landroid/net/Uri;)Landroid/app/PendingIntent;
     .locals 2
 
-    .line 152
     new-instance v0, Landroid/content/Intent;
 
     sget-object v1, Lcom/android/server/notification/CountdownConditionProvider;->ACTION:Ljava/lang/String;
@@ -297,26 +273,22 @@
 
     const-string v1, "android"
 
-    .line 153
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
     const-string v1, "condition_id"
 
-    .line 154
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     move-result-object p1
 
     const/high16 v0, 0x40000000    # 2.0f
 
-    .line 155
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 156
     iget-object p0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mContext:Landroid/content/Context;
 
     const/16 v0, 0x64
@@ -333,7 +305,6 @@
 .method public isScheduleEnabled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -342,7 +313,6 @@
 .method public isValidConditionId(Landroid/net/Uri;)Z
     .locals 0
 
-    .line 69
     invoke-static {p1}, Landroid/service/notification/ZenModeConfig;->isValidCountdownConditionId(Landroid/net/Uri;)Z
 
     move-result p0
@@ -353,14 +323,12 @@
 .method public onBootComplete()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onConnected()V
     .locals 4
 
-    .line 96
     sget-boolean v0, Lcom/android/server/notification/CountdownConditionProvider;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -371,7 +339,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mContext:Landroid/content/Context;
 
@@ -389,7 +356,6 @@
 
     const/4 v0, 0x1
 
-    .line 99
     iput-boolean v0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mConnected:Z
 
     return-void
@@ -398,10 +364,8 @@
 .method public onDestroy()V
     .locals 2
 
-    .line 104
     invoke-super {p0}, Landroid/service/notification/ConditionProviderService;->onDestroy()V
 
-    .line 105
     sget-boolean v0, Lcom/android/server/notification/CountdownConditionProvider;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -412,13 +376,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mConnected:Z
 
     if-eqz v0, :cond_1
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/notification/CountdownConditionProvider;->mReceiver:Lcom/android/server/notification/CountdownConditionProvider$Receiver;
@@ -428,7 +390,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 109
     iput-boolean v0, p0, Lcom/android/server/notification/CountdownConditionProvider;->mConnected:Z
 
     return-void
@@ -437,7 +398,6 @@
 .method public onScheduleEnabled(Z)V
     .locals 1
 
-    .line 115
     sget-boolean p0, Lcom/android/server/notification/CountdownConditionProvider;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -467,7 +427,6 @@
 .method public onSubscribe(Landroid/net/Uri;)V
     .locals 12
 
-    .line 126
     sget-boolean v0, Lcom/android/server/notification/CountdownConditionProvider;->DEBUG:Z
 
     const-string v1, "ConditionProviders.CCP"
@@ -490,7 +449,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_0
     invoke-static {p1}, Landroid/service/notification/ZenModeConfig;->tryParseCountdownConditionId(Landroid/net/Uri;)J
 
@@ -498,34 +456,28 @@
 
     iput-wide v2, p0, Lcom/android/server/notification/CountdownConditionProvider;->mTime:J
 
-    .line 128
     invoke-static {p1}, Landroid/service/notification/ZenModeConfig;->isValidCountdownToAlarmConditionId(Landroid/net/Uri;)Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/android/server/notification/CountdownConditionProvider;->mIsAlarm:Z
 
-    .line 129
     iget-object v2, p0, Lcom/android/server/notification/CountdownConditionProvider;->mContext:Landroid/content/Context;
 
     const-string v3, "alarm"
 
-    .line 130
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/app/AlarmManager;
 
-    .line 131
     invoke-virtual {p0, p1}, Lcom/android/server/notification/CountdownConditionProvider;->getPendingIntent(Landroid/net/Uri;)Landroid/app/PendingIntent;
 
     move-result-object p1
 
-    .line 132
     invoke-virtual {v2, p1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 133
     iget-wide v3, p0, Lcom/android/server/notification/CountdownConditionProvider;->mTime:J
 
     const-wide/16 v5, 0x0
@@ -534,24 +486,20 @@
 
     if-lez v3, :cond_3
 
-    .line 134
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
-    .line 135
     iget-wide v4, p0, Lcom/android/server/notification/CountdownConditionProvider;->mTime:J
 
     const-wide/32 v8, 0xea60
 
     move-wide v6, v10
 
-    .line 136
     invoke-static/range {v4 .. v9}, Landroid/text/format/DateUtils;->getRelativeTimeSpanString(JJJ)Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 137
     iget-wide v4, p0, Lcom/android/server/notification/CountdownConditionProvider;->mTime:J
 
     cmp-long v6, v4, v10
@@ -560,7 +508,6 @@
 
     if-gtz v6, :cond_1
 
-    .line 139
     iget-boolean p1, p0, Lcom/android/server/notification/CountdownConditionProvider;->mIsAlarm:Z
 
     invoke-static {v4, v5, p1, v7}, Lcom/android/server/notification/CountdownConditionProvider;->newCondition(JZI)Landroid/service/notification/Condition;
@@ -571,7 +518,6 @@
 
     goto :goto_0
 
-    .line 142
     :cond_1
     invoke-virtual {v2, v7, v4, v5, p1}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
@@ -582,7 +528,6 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    .line 146
     iget-wide v4, p0, Lcom/android/server/notification/CountdownConditionProvider;->mTime:J
 
     cmp-long v0, v4, v10
@@ -607,7 +552,6 @@
 
     const/4 v0, 0x2
 
-    .line 147
     invoke-static {v4, v5}, Lcom/android/server/notification/SystemConditionProviderService;->ts(J)Ljava/lang/String;
 
     move-result-object v2
@@ -640,7 +584,6 @@
 
     const-string p0, "%s %s for %s, %s in the future (%s), now=%s"
 
-    .line 144
     invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -654,6 +597,5 @@
 .method public onUnsubscribe(Landroid/net/Uri;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

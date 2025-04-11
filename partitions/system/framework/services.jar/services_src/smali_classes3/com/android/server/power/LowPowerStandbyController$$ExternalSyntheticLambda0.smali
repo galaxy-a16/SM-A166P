@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/LowPowerStandbyController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/power/LowPowerStandbyController$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/power/LowPowerStandbyController;
@@ -27,7 +26,6 @@
 .method public final onAlarm()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-static {p0}, Lcom/android/server/power/LowPowerStandbyController;->$r8$lambda$_NYM5Y_vtJkCziUABpYM4TvLZkI(Lcom/android/server/power/LowPowerStandbyController;)V

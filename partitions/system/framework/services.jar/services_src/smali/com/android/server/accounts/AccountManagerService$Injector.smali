@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 6799
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6800
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public addLocalService(Landroid/accounts/AccountManagerInternal;)V
     .locals 0
 
-    .line 6815
     const-class p0, Landroid/accounts/AccountManagerInternal;
 
     invoke-static {p0, p1}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
@@ -36,7 +33,6 @@
 .method public getAccountAuthenticatorCache()Lcom/android/server/accounts/IAccountAuthenticatorCache;
     .locals 1
 
-    .line 6859
     new-instance v0, Lcom/android/server/accounts/AccountAuthenticatorCache;
 
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$Injector;->mContext:Landroid/content/Context;
@@ -49,7 +45,6 @@
 .method public getCeDatabaseName(I)Ljava/lang/String;
     .locals 1
 
-    .line 6825
     new-instance p0, Ljava/io/File;
 
     invoke-static {p1}, Landroid/os/Environment;->getDataSystemCeDirectory(I)Ljava/io/File;
@@ -60,7 +55,6 @@
 
     invoke-direct {p0, p1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 6827
     invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -71,7 +65,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 6811
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$Injector;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -80,7 +73,6 @@
 .method public getDeDatabaseName(I)Ljava/lang/String;
     .locals 1
 
-    .line 6819
     new-instance p0, Ljava/io/File;
 
     invoke-static {p1}, Landroid/os/Environment;->getDataSystemDeDirectory(I)Ljava/io/File;
@@ -91,7 +83,6 @@
 
     invoke-direct {p0, p1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 6821
     invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -102,7 +93,6 @@
 .method public getMessageHandlerLooper()Landroid/os/Looper;
     .locals 3
 
-    .line 6804
     new-instance p0, Lcom/android/server/ServiceThread;
 
     const/4 v0, -0x2
@@ -113,10 +103,8 @@
 
     invoke-direct {p0, v2, v0, v1}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
-    .line 6806
     invoke-virtual {p0}, Landroid/os/HandlerThread;->start()V
 
-    .line 6807
     invoke-virtual {p0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object p0
@@ -127,7 +115,6 @@
 .method public getNotificationManager()Landroid/app/INotificationManager;
     .locals 0
 
-    .line 6863
     invoke-static {}, Landroid/app/NotificationManager;->getService()Landroid/app/INotificationManager;
 
     move-result-object p0
@@ -138,12 +125,10 @@
 .method public getPreNDatabaseName(I)Ljava/lang/String;
     .locals 3
 
-    .line 6831
     invoke-static {}, Landroid/os/Environment;->getDataSystemDirectory()Ljava/io/File;
 
     move-result-object p0
 
-    .line 6832
     new-instance v0, Ljava/io/File;
 
     invoke-static {p1}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
@@ -156,12 +141,10 @@
 
     if-nez p1, :cond_3
 
-    .line 6839
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 6840
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -174,19 +157,16 @@
 
     if-nez p0, :cond_3
 
-    .line 6842
     invoke-static {p1}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object p0
 
-    .line 6843
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 6844
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
     move-result p1
@@ -195,7 +175,6 @@
 
     goto :goto_0
 
-    .line 6845
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -217,7 +196,6 @@
 
     throw p1
 
-    .line 6849
     :cond_1
     :goto_0
     invoke-virtual {v1, v0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
@@ -228,7 +206,6 @@
 
     goto :goto_1
 
-    .line 6850
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -250,7 +227,6 @@
 
     throw p0
 
-    .line 6855
     :cond_3
     :goto_1
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;

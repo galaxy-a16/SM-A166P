@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;)V
     .locals 0
 
-    .line 4386
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$5;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 4388
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "com.samsung.android.action.SHOWING_TOUCH_SENSITIVITY_NOTI"
 
-    .line 4389
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -40,7 +37,6 @@
 
     return-void
 
-    .line 4393
     :cond_0
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$5;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -64,14 +60,12 @@
 
     const/4 v0, 0x0
 
-    .line 4395
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 4397
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +86,6 @@
 
     return-void
 
-    .line 4400
     :cond_1
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$5;->this$0:Lcom/android/server/input/InputManagerService;
 

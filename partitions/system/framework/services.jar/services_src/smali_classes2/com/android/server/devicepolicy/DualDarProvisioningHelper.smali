@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/devicepolicy/DualDarProvisioningHelper;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -24,20 +23,16 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/UserManagerInternal;)V
     .locals 1
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 529
     new-instance v0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$5;
 
     invoke-direct {v0, p0}, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$5;-><init>(Lcom/android/server/devicepolicy/DualDarProvisioningHelper;)V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->connection:Landroid/content/ServiceConnection;
 
-    .line 59
     iput-object p1, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->mContext:Landroid/content/Context;
 
-    .line 60
     iput-object p2, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
     return-void
@@ -48,7 +43,6 @@
 
     const-string/jumbo v0, "persona"
 
-    .line 488
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -57,7 +51,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 490
     invoke-virtual {p0}, Lcom/samsung/android/knox/SemPersonaManager;->getDualDARProfile()Landroid/os/Bundle;
 
     move-result-object p0
@@ -82,7 +75,6 @@
 
     const-string v2, "dualdar-config"
 
-    .line 444
     invoke-virtual {p1, v2}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -91,12 +83,10 @@
 
     const-string p0, "isDualDARConfigured from provisioning params"
 
-    .line 445
     invoke-static {v1, p0}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 447
     :cond_0
     invoke-static {p0}, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->getDualDARProfile(Landroid/content/Context;)Landroid/os/Bundle;
 
@@ -106,7 +96,6 @@
 
     const-string p0, "isDualDARConfigured from preset params"
 
-    .line 448
     invoke-static {v1, p0}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -122,7 +111,6 @@
 .method public getDualDarProfileFlags(Landroid/app/admin/ManagedProfileProvisioningParams;)I
     .locals 0
 
-    .line 0
     const/16 p0, 0x40
 
     return p0
@@ -131,14 +119,12 @@
 .method public onCreateAndProvisioningManagedProfileCompletedForDualDar(Landroid/app/admin/ManagedProfileProvisioningParams;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onCreateAndProvisioningManagedProfileStartedForDualDar(Landroid/app/admin/ManagedProfileProvisioningParams;)V
     .locals 1
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/app/admin/ManagedProfileProvisioningParams;->getAdminExtras()Landroid/os/PersistableBundle;
@@ -153,7 +139,6 @@
 
     return-void
 
-    .line 67
     :cond_0
     new-instance p0, Landroid/os/ServiceSpecificException;
 
@@ -169,14 +154,12 @@
 .method public onProvisionFullyManagedDeviceCompletedForDualDar(Landroid/app/admin/FullyManagedDeviceProvisioningParams;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onProvisionFullyManagedDeviceStartedForDualDar(Landroid/app/admin/FullyManagedDeviceProvisioningParams;)V
     .locals 1
 
-    .line 259
     iget-object p0, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/app/admin/FullyManagedDeviceProvisioningParams;->getAdminExtras()Landroid/os/PersistableBundle;
@@ -191,7 +174,6 @@
 
     return-void
 
-    .line 261
     :cond_0
     new-instance p0, Landroid/os/ServiceSpecificException;
 

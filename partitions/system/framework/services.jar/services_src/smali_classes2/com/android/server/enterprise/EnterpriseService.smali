@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$x8Tln4y79hpLWL5fbq9B-6jiM-k(Ljava/lang/String;Landroid/content/Context;)Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/enterprise/EnterpriseService;->lambda$addLazySystemService$0(Ljava/lang/String;Landroid/content/Context;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -28,21 +27,18 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 14
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/EnterpriseService;->sPolicyServices:Ljava/util/Map;
 
-    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/EnterpriseService;->sInitializedList:Ljava/util/List;
 
-    .line 17
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -55,15 +51,12 @@
 .method public static addLazySystemService(Ljava/lang/String;Lcom/android/server/enterprise/EnterpriseServiceCallback;)V
     .locals 0
 
-    .line 43
     invoke-static {p0, p1}, Lcom/android/server/enterprise/EnterpriseService;->addPolicyService(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 44
     sget-object p1, Lcom/android/server/enterprise/EnterpriseService;->sLazyServiceList:Ljava/util/List;
 
     invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 46
     new-instance p1, Lcom/android/server/enterprise/EnterpriseService$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/enterprise/EnterpriseService$$ExternalSyntheticLambda0;-><init>(Ljava/lang/String;)V
@@ -78,7 +71,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 26
     instance-of v0, p1, Lcom/android/server/enterprise/EnterpriseServiceCallback;
 
     if-eqz v0, :cond_0
@@ -87,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 32
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/EnterpriseService;->sPolicyServices:Ljava/util/Map;
 
@@ -100,7 +91,6 @@
     :catch_0
     return-void
 
-    .line 28
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -114,17 +104,14 @@
 .method public static addSystemService(Ljava/lang/String;Lcom/android/server/enterprise/EnterpriseServiceCallback;)V
     .locals 1
 
-    .line 70
     move-object v0, p1
 
     check-cast v0, Landroid/os/IBinder;
 
     invoke-static {p0, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 71
     invoke-interface {p1, p0, v0}, Lcom/android/server/enterprise/EnterpriseServiceCallback;->notifyToAddSystemService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 72
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseService;->getPolicyServices()Ljava/util/Map;
 
     move-result-object v0
@@ -135,7 +122,6 @@
 
     if-nez v0, :cond_0
 
-    .line 73
     invoke-static {p0, p1}, Lcom/android/server/enterprise/EnterpriseService;->addPolicyService(Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_0
@@ -145,7 +131,6 @@
 .method public static getEdmsInstance()Ljava/lang/Object;
     .locals 1
 
-    .line 66
     sget-object v0, Lcom/android/server/enterprise/EnterpriseService;->sEdmsInstance:Ljava/lang/Object;
 
     return-object v0
@@ -154,7 +139,6 @@
 .method public static getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .line 21
     sget-object v0, Lcom/android/server/enterprise/EnterpriseService;->sPolicyServices:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -167,7 +151,6 @@
 .method public static getPolicyServices()Ljava/util/Map;
     .locals 2
 
-    .line 38
     new-instance v0, Ljava/util/TreeMap;
 
     sget-object v1, Lcom/android/server/enterprise/EnterpriseService;->sPolicyServices:Ljava/util/Map;
@@ -180,7 +163,6 @@
 .method public static invokeSystemReadyIfNeeded()V
     .locals 5
 
-    .line 78
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseService;->getPolicyServices()Ljava/util/Map;
 
     move-result-object v0
@@ -206,7 +188,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 80
     :try_start_0
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -229,7 +210,6 @@
     :catch_0
     move-exception v2
 
-    .line 82
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,7 +243,6 @@
 .method public static invokeSystemReadyIfNeeded(Lcom/android/server/enterprise/EnterpriseServiceCallback;Ljava/lang/String;)V
     .locals 2
 
-    .line 89
     sget-object v0, Lcom/android/server/enterprise/EnterpriseService;->sInitializedList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -272,17 +251,14 @@
 
     if-nez v1, :cond_0
 
-    .line 90
     invoke-interface {p0}, Lcom/android/server/enterprise/EnterpriseServiceCallback;->systemReady()V
 
-    .line 91
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 92
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,7 +284,6 @@
 .method public static synthetic lambda$addLazySystemService$0(Ljava/lang/String;Landroid/content/Context;)Landroid/os/IBinder;
     .locals 1
 
-    .line 47
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,7 +302,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     invoke-static {p0}, Lcom/android/server/enterprise/EnterpriseService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -340,7 +314,6 @@
 .method public static setEdmsInstance(Ljava/lang/Object;)V
     .locals 0
 
-    .line 62
     sput-object p0, Lcom/android/server/enterprise/EnterpriseService;->sEdmsInstance:Ljava/lang/Object;
 
     return-void
@@ -349,7 +322,6 @@
 .method public static wakeUpLazyServices()V
     .locals 4
 
-    .line 53
     sget-object v0, Lcom/android/server/enterprise/EnterpriseService;->sLazyServiceList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -369,17 +341,14 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 54
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    .line 55
     invoke-static {v1}, Lcom/android/server/enterprise/EnterpriseService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/enterprise/EnterpriseServiceCallback;
 
-    .line 57
     move-object v3, v2
 
     check-cast v3, Landroid/os/IBinder;

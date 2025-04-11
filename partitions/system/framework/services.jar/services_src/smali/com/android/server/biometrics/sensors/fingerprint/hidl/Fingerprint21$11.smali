@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;)V
     .locals 0
 
-    .line 1537
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$11;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1541
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$11;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     invoke-static {p2}, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;->-$$Nest$fgetmProviderEx(Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;)Lcom/android/server/biometrics/sensors/fingerprint/SemFpProviderEx;
@@ -42,7 +40,6 @@
 
     invoke-virtual {p2, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpProviderEx;->updateCacheDataOfHAL(I)V
 
-    .line 1542
     invoke-static {}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->getInstance()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p2
@@ -53,7 +50,6 @@
 
     move-result-object p0
 
-    .line 1543
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result p1

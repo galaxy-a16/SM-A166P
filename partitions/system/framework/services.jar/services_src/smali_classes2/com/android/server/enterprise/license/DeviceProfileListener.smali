@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,40 +45,32 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 20
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 18
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/license/DeviceProfileListener;->mObservers:Ljava/util/List;
 
-    .line 21
     iput-object p1, p0, Lcom/android/server/enterprise/license/DeviceProfileListener;->mContext:Landroid/content/Context;
 
-    .line 23
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.app.action.DEVICE_OWNER_CHANGED"
 
-    .line 24
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.USER_ADDED"
 
-    .line 25
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.USER_REMOVED"
 
-    .line 26
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 28
     invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
@@ -94,7 +85,6 @@
 
     const/4 v0, -0x1
 
-    .line 55
     invoke-virtual {p1, p0, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
@@ -105,14 +95,12 @@
 .method public final notifyDeviceOwnerAdded(Ljava/lang/String;)V
     .locals 2
 
-    .line 83
     sget-object v0, Lcom/android/server/enterprise/license/DeviceProfileListener;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifyDeviceOwnerAdded()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     iget-object p0, p0, Lcom/android/server/enterprise/license/DeviceProfileListener;->mObservers:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -132,7 +120,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/license/IDeviceProfileObserver;
 
-    .line 85
     invoke-interface {v0, p1}, Lcom/android/server/enterprise/license/IDeviceProfileObserver;->onDeviceOwnerAdded(Ljava/lang/String;)V
 
     goto :goto_0
@@ -144,14 +131,12 @@
 .method public final notifyDeviceOwnerRemoved(Ljava/lang/String;)V
     .locals 2
 
-    .line 90
     sget-object v0, Lcom/android/server/enterprise/license/DeviceProfileListener;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifyDeviceOwnerRemoved()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     iget-object p0, p0, Lcom/android/server/enterprise/license/DeviceProfileListener;->mObservers:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -171,7 +156,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/license/IDeviceProfileObserver;
 
-    .line 92
     invoke-interface {v0, p1}, Lcom/android/server/enterprise/license/IDeviceProfileObserver;->onDeviceOwnerRemoved(Ljava/lang/String;)V
 
     goto :goto_0
@@ -183,14 +167,12 @@
 .method public final notifyUserAdded(I)V
     .locals 2
 
-    .line 76
     sget-object v0, Lcom/android/server/enterprise/license/DeviceProfileListener;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifyUserAdded()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/enterprise/license/DeviceProfileListener;->mObservers:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -210,7 +192,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/license/IDeviceProfileObserver;
 
-    .line 78
     invoke-interface {v0, p1}, Lcom/android/server/enterprise/license/IDeviceProfileObserver;->onUserAdded(I)V
 
     goto :goto_0
@@ -222,14 +203,12 @@
 .method public final notifyUserRemoved(I)V
     .locals 2
 
-    .line 69
     sget-object v0, Lcom/android/server/enterprise/license/DeviceProfileListener;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifyUserRemoved()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/enterprise/license/DeviceProfileListener;->mObservers:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -249,7 +228,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/license/IDeviceProfileObserver;
 
-    .line 71
     invoke-interface {v0, p1}, Lcom/android/server/enterprise/license/IDeviceProfileObserver;->onUserRemoved(I)V
 
     goto :goto_0
@@ -261,7 +239,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 33
     sget-object p1, Lcom/android/server/enterprise/license/DeviceProfileListener;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -288,7 +265,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -358,7 +334,6 @@
 
     goto :goto_1
 
-    .line 44
     :pswitch_0
     invoke-virtual {p0, p2}, Lcom/android/server/enterprise/license/DeviceProfileListener;->getUserIdFromIntent(Landroid/content/Intent;)I
 
@@ -371,32 +346,27 @@
     :pswitch_1
     const-string p1, "com.samsung.android.knox.intent.extra.EXTRA_DO_PO_PACKAGE_NAME"
 
-    .line 36
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "com.samsung.android.knox.intent.extra.EXTRA_DO_CHANGED_STATUS"
 
-    .line 37
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 38
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/license/DeviceProfileListener;->notifyDeviceOwnerAdded(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 40
     :cond_3
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/license/DeviceProfileListener;->notifyDeviceOwnerRemoved(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 47
     :pswitch_2
     invoke-virtual {p0, p2}, Lcom/android/server/enterprise/license/DeviceProfileListener;->getUserIdFromIntent(Landroid/content/Intent;)I
 
@@ -427,14 +397,12 @@
 .method public registerObserver(Lcom/android/server/enterprise/license/IDeviceProfileObserver;)V
     .locals 2
 
-    .line 59
     sget-object v0, Lcom/android/server/enterprise/license/DeviceProfileListener;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "registerObserver()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/enterprise/license/DeviceProfileListener;->mObservers:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z

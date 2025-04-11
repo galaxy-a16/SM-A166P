@@ -27,16 +27,12 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;I)V
     .locals 0
 
-    .line 902
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 903
     iput-object p1, p0, Lcom/android/server/wm/WindowToken$Builder;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 904
     iput-object p2, p0, Lcom/android/server/wm/WindowToken$Builder;->mToken:Landroid/os/IBinder;
 
-    .line 905
     iput p3, p0, Lcom/android/server/wm/WindowToken$Builder;->mType:I
 
     return-void
@@ -49,7 +45,6 @@
 
     move-object/from16 v0, p0
 
-    .line 946
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_TRANSIENT_LAUNCH_OVERLAY:Z
 
     if-eqz v1, :cond_0
@@ -60,7 +55,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 948
     new-instance v1, Lcom/android/server/wm/TransientLaunchOverlayToken;
 
     iget-object v4, v0, Lcom/android/server/wm/WindowToken$Builder;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -81,7 +75,6 @@
 
     return-object v1
 
-    .line 953
     :cond_0
     new-instance v1, Lcom/android/server/wm/WindowToken;
 
@@ -121,7 +114,6 @@
 .method public setDisplayContent(Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/WindowToken$Builder;
     .locals 0
 
-    .line 916
     iput-object p1, p0, Lcom/android/server/wm/WindowToken$Builder;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     return-object p0
@@ -130,7 +122,6 @@
 .method public setFromClientToken(Z)Lcom/android/server/wm/WindowToken$Builder;
     .locals 0
 
-    .line 934
     iput-boolean p1, p0, Lcom/android/server/wm/WindowToken$Builder;->mFromClientToken:Z
 
     return-object p0
@@ -139,7 +130,6 @@
 .method public setOptions(Landroid/os/Bundle;)Lcom/android/server/wm/WindowToken$Builder;
     .locals 0
 
-    .line 940
     iput-object p1, p0, Lcom/android/server/wm/WindowToken$Builder;->mOptions:Landroid/os/Bundle;
 
     return-object p0
@@ -148,7 +138,6 @@
 .method public setOwnerCanManageAppTokens(Z)Lcom/android/server/wm/WindowToken$Builder;
     .locals 0
 
-    .line 922
     iput-boolean p1, p0, Lcom/android/server/wm/WindowToken$Builder;->mOwnerCanManageAppTokens:Z
 
     return-object p0
@@ -157,7 +146,6 @@
 .method public setPersistOnEmpty(Z)Lcom/android/server/wm/WindowToken$Builder;
     .locals 0
 
-    .line 910
     iput-boolean p1, p0, Lcom/android/server/wm/WindowToken$Builder;->mPersistOnEmpty:Z
 
     return-object p0
@@ -166,7 +154,6 @@
 .method public setRoundedCornerOverlay(Z)Lcom/android/server/wm/WindowToken$Builder;
     .locals 0
 
-    .line 928
     iput-boolean p1, p0, Lcom/android/server/wm/WindowToken$Builder;->mRoundedCornerOverlay:Z
 
     return-object p0

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/lights/LightsService$LightImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/lights/LightsService$LightImpl$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/lights/LightsService$LightImpl;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/lights/LightsService$LightImpl$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/lights/LightsService$LightImpl;
 
     invoke-static {p0}, Lcom/android/server/lights/LightsService$LightImpl;->$r8$lambda$1hERbgOHfvlzyyvM7RyLWMIKML8(Lcom/android/server/lights/LightsService$LightImpl;)V

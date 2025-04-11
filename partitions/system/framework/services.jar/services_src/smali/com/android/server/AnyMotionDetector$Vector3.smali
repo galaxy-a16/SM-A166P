@@ -17,19 +17,14 @@
 .method public constructor <init>(JFFF)V
     .locals 0
 
-    .line 387
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 388
     iput-wide p1, p0, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
 
-    .line 389
     iput p3, p0, Lcom/android/server/AnyMotionDetector$Vector3;->x:F
 
-    .line 390
     iput p4, p0, Lcom/android/server/AnyMotionDetector$Vector3;->y:F
 
-    .line 391
     iput p5, p0, Lcom/android/server/AnyMotionDetector$Vector3;->z:F
 
     return-void
@@ -40,12 +35,10 @@
 .method public angleBetween(Lcom/android/server/AnyMotionDetector$Vector3;)F
     .locals 4
 
-    .line 411
     invoke-virtual {p0, p1}, Lcom/android/server/AnyMotionDetector$Vector3;->cross(Lcom/android/server/AnyMotionDetector$Vector3;)Lcom/android/server/AnyMotionDetector$Vector3;
 
     move-result-object v0
 
-    .line 413
     invoke-virtual {v0}, Lcom/android/server/AnyMotionDetector$Vector3;->norm()F
 
     move-result v0
@@ -62,7 +55,6 @@
 
     move-result-wide v0
 
-    .line 412
     invoke-static {v0, v1}, Ljava/lang/Math;->toDegrees(D)D
 
     move-result-wide v0
@@ -73,7 +65,6 @@
 
     move-result v0
 
-    .line 414
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +83,6 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 415
     invoke-virtual {p1}, Lcom/android/server/AnyMotionDetector$Vector3;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -111,7 +101,6 @@
 
     const-string p1, "AnyMotionDetector"
 
-    .line 414
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -120,7 +109,6 @@
 .method public cross(Lcom/android/server/AnyMotionDetector$Vector3;)Lcom/android/server/AnyMotionDetector$Vector3;
     .locals 9
 
-    .line 420
     new-instance v6, Lcom/android/server/AnyMotionDetector$Vector3;
 
     iget-wide v1, p1, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
@@ -171,7 +159,6 @@
 .method public dotProduct(Lcom/android/server/AnyMotionDetector$Vector3;)F
     .locals 3
 
-    .line 438
     iget v0, p0, Lcom/android/server/AnyMotionDetector$Vector3;->x:F
 
     iget v1, p1, Lcom/android/server/AnyMotionDetector$Vector3;->x:F
@@ -200,7 +187,6 @@
 .method public minus(Lcom/android/server/AnyMotionDetector$Vector3;)Lcom/android/server/AnyMotionDetector$Vector3;
     .locals 7
 
-    .line 450
     new-instance v6, Lcom/android/server/AnyMotionDetector$Vector3;
 
     iget-wide v1, p1, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
@@ -233,7 +219,6 @@
 .method public norm()F
     .locals 2
 
-    .line 395
     invoke-virtual {p0, p0}, Lcom/android/server/AnyMotionDetector$Vector3;->dotProduct(Lcom/android/server/AnyMotionDetector$Vector3;)F
 
     move-result p0
@@ -252,12 +237,10 @@
 .method public normalized()Lcom/android/server/AnyMotionDetector$Vector3;
     .locals 8
 
-    .line 399
     invoke-virtual {p0}, Lcom/android/server/AnyMotionDetector$Vector3;->norm()F
 
     move-result v0
 
-    .line 400
     new-instance v7, Lcom/android/server/AnyMotionDetector$Vector3;
 
     iget-wide v2, p0, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
@@ -284,7 +267,6 @@
 .method public plus(Lcom/android/server/AnyMotionDetector$Vector3;)Lcom/android/server/AnyMotionDetector$Vector3;
     .locals 7
 
-    .line 446
     new-instance v6, Lcom/android/server/AnyMotionDetector$Vector3;
 
     iget-wide v1, p1, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
@@ -317,7 +299,6 @@
 .method public times(F)Lcom/android/server/AnyMotionDetector$Vector3;
     .locals 7
 
-    .line 442
     new-instance v6, Lcom/android/server/AnyMotionDetector$Vector3;
 
     iget-wide v1, p0, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
@@ -344,7 +325,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 430
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,7 +345,6 @@
 
     move-result-object v0
 
-    .line 431
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -384,7 +363,6 @@
 
     move-result-object v0
 
-    .line 432
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -403,7 +381,6 @@
 
     move-result-object v0
 
-    .line 433
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

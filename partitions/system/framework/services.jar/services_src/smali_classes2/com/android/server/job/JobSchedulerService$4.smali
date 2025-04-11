@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
-    .line 1462
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$4;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUidActive(I)V
     .locals 2
 
-    .line 1477
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$4;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService;->mHandler:Lcom/android/server/job/JobSchedulerService$JobHandler;
@@ -45,7 +43,6 @@
 .method public onUidGone(IZ)V
     .locals 1
 
-    .line 1473
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$4;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService;->mHandler:Lcom/android/server/job/JobSchedulerService$JobHandler;
@@ -64,7 +61,6 @@
 .method public onUidIdle(IZ)V
     .locals 1
 
-    .line 1481
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$4;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService;->mHandler:Lcom/android/server/job/JobSchedulerService$JobHandler;
@@ -83,21 +79,16 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 1465
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object p3
 
-    .line 1466
     iput p1, p3, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 1467
     iput p2, p3, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 1468
     iput p5, p3, Lcom/android/internal/os/SomeArgs;->argi3:I
 
-    .line 1469
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$4;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService;->mHandler:Lcom/android/server/job/JobSchedulerService$JobHandler;

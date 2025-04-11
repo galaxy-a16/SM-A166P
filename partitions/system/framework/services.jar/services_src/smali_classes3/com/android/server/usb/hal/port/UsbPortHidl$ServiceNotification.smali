@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/hal/port/UsbPortHidl;)V
     .locals 0
 
-    .line 133
     iput-object p1, p0, Lcom/android/server/usb/hal/port/UsbPortHidl$ServiceNotification;->this$0:Lcom/android/server/usb/hal/port/UsbPortHidl;
 
     invoke-direct {p0}, Landroid/hidl/manager/V1_0/IServiceNotification$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onRegistration(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 136
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,7 +49,6 @@
 
     invoke-static {p2, p3, p1}, Lcom/android/server/usb/UsbPortManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortHidl$ServiceNotification;->this$0:Lcom/android/server/usb/hal/port/UsbPortHidl;
 
     invoke-static {p0, p3}, Lcom/android/server/usb/hal/port/UsbPortHidl;->-$$Nest$mconnectToProxy(Lcom/android/server/usb/hal/port/UsbPortHidl;Lcom/android/internal/util/IndentingPrintWriter;)V

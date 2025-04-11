@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$ul3YNPUK-vCMEHWy4TGnfEAS0Gg(Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;Landroid/net/Uri;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->lambda$onReceive$0(Landroid/net/Uri;)V
 
     return-void
@@ -20,12 +19,10 @@
 .method public constructor <init>(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
     .locals 0
 
-    .line 510
     iput-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 511
     invoke-static {p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$minitFilter(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
 
     return-void
@@ -36,7 +33,6 @@
 
     const-string v0, "com.samsung.android.statsd"
 
-    .line 541
     invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p1
@@ -47,7 +43,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 542
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$mhandlePkgRemoved(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
@@ -63,7 +58,6 @@
 
     const-string p1, "android.intent.action.SCREEN_OFF"
 
-    .line 516
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -76,7 +70,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 517
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmLock(Lcom/android/server/ibs/sqd/IbsQuickDim;)Ljava/lang/Object;
@@ -85,18 +78,15 @@
 
     monitor-enter p1
 
-    .line 518
     :try_start_0
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p2, v0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmScreenOn(Lcom/android/server/ibs/sqd/IbsQuickDim;Z)V
 
-    .line 519
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p2}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$mquitDimMode(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
 
-    .line 520
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p2}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmQkDimHandler(Lcom/android/server/ibs/sqd/IbsQuickDim;)Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;
@@ -107,7 +97,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 521
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p2}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetDEBUG(Lcom/android/server/ibs/sqd/IbsQuickDim;)Z
@@ -122,7 +111,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 522
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -130,7 +118,6 @@
 
     invoke-static {p0, p2}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmQuickDimMode(Lcom/android/server/ibs/sqd/IbsQuickDim;I)V
 
-    .line 523
     monitor-exit p1
 
     goto/16 :goto_0
@@ -147,7 +134,6 @@
     :cond_1
     const-string p1, "android.intent.action.SCREEN_ON"
 
-    .line 524
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -160,7 +146,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 525
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0, v1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmScreenOn(Lcom/android/server/ibs/sqd/IbsQuickDim;Z)V
@@ -170,7 +155,6 @@
     :cond_2
     const-string p1, "android.intent.action.ACTION_POWER_CONNECTED"
 
-    .line 526
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -181,7 +165,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 527
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetDEBUG(Lcom/android/server/ibs/sqd/IbsQuickDim;)Z
@@ -196,7 +179,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
     :cond_3
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -207,7 +189,6 @@
     :cond_4
     const-string p1, "android.intent.action.ACTION_POWER_DISCONNECTED"
 
-    .line 529
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -218,7 +199,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 530
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetDEBUG(Lcom/android/server/ibs/sqd/IbsQuickDim;)Z
@@ -233,13 +213,11 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
     :cond_5
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1, v0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmCharging(Lcom/android/server/ibs/sqd/IbsQuickDim;Z)V
 
-    .line 532
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -248,7 +226,6 @@
 
     invoke-static {p1, v0, v1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmChargingFinishTime(Lcom/android/server/ibs/sqd/IbsQuickDim;J)V
 
-    .line 533
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     const/4 p1, 0x0
@@ -260,7 +237,6 @@
     :cond_6
     const-string p1, "com.samsung.server.PowerManagerService.action.USER_ACTIVITY"
 
-    .line 534
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -275,12 +251,10 @@
 
     const/4 v0, -0x1
 
-    .line 535
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 536
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0, p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$msetQuickDimModeFromPms(Lcom/android/server/ibs/sqd/IbsQuickDim;I)V
@@ -290,7 +264,6 @@
     :cond_7
     const-string p1, "android.intent.action.BOOT_COMPLETED"
 
-    .line 537
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -301,7 +274,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 538
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$IntentReceiver;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$mhandleBootComplete(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
@@ -311,7 +283,6 @@
     :cond_8
     const-string p1, "android.intent.action.PACKAGE_FULLY_REMOVED"
 
-    .line 539
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -322,7 +293,6 @@
 
     if-eqz p1, :cond_9
 
-    .line 540
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1

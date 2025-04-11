@@ -23,7 +23,6 @@
 .method public static synthetic $r8$lambda$wd-c1Cs4aNwzOau-PAdxuWluG4Q(Lcom/android/server/health/HealthServiceWrapperAidl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/health/HealthServiceWrapperAidl;->lambda$scheduleUpdate$0()V
 
     return-void
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastSehService(Lcom/android/server/health/HealthServiceWrapperAidl;)Ljava/util/concurrent/atomic/AtomicReference;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mLastSehService:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-object p0
@@ -41,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastService(Lcom/android/server/health/HealthServiceWrapperAidl;)Ljava/util/concurrent/atomic/AtomicReference;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mLastService:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-object p0
@@ -50,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRegCallback(Lcom/android/server/health/HealthServiceWrapperAidl;)Lcom/android/server/health/HealthRegCallbackAidl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mRegCallback:Lcom/android/server/health/HealthRegCallbackAidl;
 
     return-object p0
@@ -59,7 +55,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,10 +81,8 @@
 
     const-string v0, "HealthServiceWrapperAidl"
 
-    .line 77
     invoke-direct {p0}, Lcom/android/server/health/HealthServiceWrapper;-><init>()V
 
-    .line 54
     new-instance v1, Landroid/os/HandlerThread;
 
     const-string v2, "HealthServiceBinder"
@@ -98,14 +91,12 @@
 
     iput-object v1, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 55
     new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mLastService:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 56
     new-instance v2, Lcom/android/server/health/HealthServiceWrapperAidl$ServiceCallback;
 
     const/4 v3, 0x0
@@ -114,7 +105,6 @@
 
     iput-object v2, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mServiceCallback:Landroid/os/IServiceCallback;
 
-    .line 60
     new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -123,10 +113,8 @@
 
     const-string v2, "HealthInitGetServiceAidl"
 
-    .line 79
     invoke-static {v2}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceBegin(Ljava/lang/String;)V
 
-    .line 82
     :try_start_0
     sget-object v2, Lcom/android/server/health/HealthServiceWrapperAidl;->SERVICE_NAME:Ljava/lang/String;
 
@@ -134,7 +122,6 @@
 
     move-result-object v4
 
-    .line 84
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -153,15 +140,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 86
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
     if-eqz v4, :cond_2
 
-    .line 92
     invoke-virtual {v1, v4}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 96
     invoke-static {v2}, Landroid/os/ServiceManager;->waitForDeclaredService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
@@ -172,7 +156,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 99
     :try_start_1
     invoke-interface {v1}, Landroid/os/IBinder;->getExtension()Landroid/os/IBinder;
 
@@ -186,7 +169,6 @@
 
     goto :goto_0
 
-    .line 101
     :catch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -207,32 +189,26 @@
     :cond_0
     move-object v1, v3
 
-    .line 105
     :goto_0
     iget-object v2, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mLastSehService:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mRegCallback:Lcom/android/server/health/HealthRegCallbackAidl;
 
     if-eqz p1, :cond_1
 
-    .line 112
     invoke-virtual {p1, v3, v1}, Lcom/android/server/health/HealthRegCallbackAidl;->onRegistration(Lvendor/samsung/hardware/health/ISehHealth;Lvendor/samsung/hardware/health/ISehHealth;)V
 
     :cond_1
     const-string p1, "HealthInitRegisterNotificationAidl"
 
-    .line 116
     invoke-static {p1}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceBegin(Ljava/lang/String;)V
 
-    .line 117
     iget-object p1, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
-    .line 119
     :try_start_2
     sget-object p1, Lcom/android/server/health/HealthServiceWrapperAidl;->SERVICE_NAME:Ljava/lang/String;
 
@@ -242,12 +218,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 121
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
     const-string p0, "health: HealthServiceWrapper listening to AIDL HAL"
 
-    .line 123
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -255,13 +229,10 @@
     :catchall_0
     move-exception p0
 
-    .line 121
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
-    .line 122
     throw p0
 
-    .line 89
     :cond_2
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -274,10 +245,8 @@
     :catchall_1
     move-exception p0
 
-    .line 86
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
-    .line 87
     throw p0
 .end method
 
@@ -288,10 +257,8 @@
 
     const-string v1, "HealthScheduleUpdate"
 
-    .line 202
     invoke-static {v1}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceBegin(Ljava/lang/String;)V
 
-    .line 204
     :try_start_0
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mLastService:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -305,19 +272,16 @@
 
     const-string/jumbo p0, "no health service"
 
-    .line 206
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/ServiceSpecificException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 213
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
     return-void
 
-    .line 209
     :cond_0
     :try_start_1
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->update()V
@@ -339,12 +303,10 @@
     :try_start_2
     const-string v1, "Cannot call update on health AIDL HAL"
 
-    .line 211
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 213
     :goto_0
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
@@ -353,7 +315,6 @@
     :goto_1
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
-    .line 214
     throw p0
 .end method
 
@@ -362,7 +323,6 @@
 
     const-wide/32 v0, 0x80000
 
-    .line 247
     invoke-static {v0, v1, p0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
     return-void
@@ -373,7 +333,6 @@
 
     const-wide/32 v0, 0x80000
 
-    .line 251
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void
@@ -384,7 +343,6 @@
 .method public getHandlerThread()Landroid/os/HandlerThread;
     .locals 0
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mHandlerThread:Landroid/os/HandlerThread;
 
     return-object p0
@@ -393,7 +351,6 @@
 .method public getHealthInfo()Landroid/hardware/health/HealthInfo;
     .locals 1
 
-    .line 220
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mLastService:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -408,7 +365,6 @@
 
     return-object v0
 
-    .line 223
     :cond_0
     :try_start_0
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getHealthInfo()Landroid/hardware/health/HealthInfo;
@@ -429,10 +385,8 @@
 
     const-string v0, "HealthGetPropertyAidl"
 
-    .line 134
     invoke-static {v0}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceBegin(Ljava/lang/String;)V
 
-    .line 136
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/health/HealthServiceWrapperAidl;->getPropertyInternal(ILandroid/os/BatteryProperty;)I
 
@@ -440,7 +394,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 138
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
     return p0
@@ -450,14 +403,12 @@
 
     invoke-static {}, Lcom/android/server/health/HealthServiceWrapperAidl;->traceEnd()V
 
-    .line 139
     throw p0
 .end method
 
 .method public final getPropertyInternal(ILandroid/os/BatteryProperty;)I
     .locals 0
 
-    .line 143
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mLastService:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -472,21 +423,18 @@
 
     goto :goto_0
 
-    .line 178
     :pswitch_0
     :try_start_0
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getBatteryHealthData()Landroid/hardware/health/BatteryHealthData;
 
     move-result-object p0
 
-    .line 179
     iget-wide p0, p0, Landroid/hardware/health/BatteryHealthData;->batteryStateOfHealth:J
 
     invoke-virtual {p2, p0, p1}, Landroid/os/BatteryProperty;->setLong(J)V
 
     goto :goto_0
 
-    .line 175
     :pswitch_1
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getChargingPolicy()I
 
@@ -498,33 +446,28 @@
 
     goto :goto_0
 
-    .line 171
     :pswitch_2
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getBatteryHealthData()Landroid/hardware/health/BatteryHealthData;
 
     move-result-object p0
 
-    .line 172
     iget-wide p0, p0, Landroid/hardware/health/BatteryHealthData;->batteryFirstUsageSeconds:J
 
     invoke-virtual {p2, p0, p1}, Landroid/os/BatteryProperty;->setLong(J)V
 
     goto :goto_0
 
-    .line 167
     :pswitch_3
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getBatteryHealthData()Landroid/hardware/health/BatteryHealthData;
 
     move-result-object p0
 
-    .line 168
     iget-wide p0, p0, Landroid/hardware/health/BatteryHealthData;->batteryManufacturingDateSeconds:J
 
     invoke-virtual {p2, p0, p1}, Landroid/os/BatteryProperty;->setLong(J)V
 
     goto :goto_0
 
-    .line 161
     :pswitch_4
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getChargeStatus()I
 
@@ -536,7 +479,6 @@
 
     goto :goto_0
 
-    .line 164
     :pswitch_5
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getEnergyCounterNwh()J
 
@@ -546,7 +488,6 @@
 
     goto :goto_0
 
-    .line 158
     :pswitch_6
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getCapacity()I
 
@@ -558,7 +499,6 @@
 
     goto :goto_0
 
-    .line 155
     :pswitch_7
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getCurrentAverageMicroamps()I
 
@@ -570,7 +510,6 @@
 
     goto :goto_0
 
-    .line 152
     :pswitch_8
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getCurrentNowMicroamps()I
 
@@ -582,7 +521,6 @@
 
     goto :goto_0
 
-    .line 149
     :pswitch_9
     invoke-interface {p0}, Landroid/hardware/health/IHealth;->getChargeCounterUah()I
 
@@ -612,7 +550,6 @@
 
     return p0
 
-    .line 144
     :cond_0
     new-instance p0, Landroid/os/RemoteException;
 
@@ -642,12 +579,10 @@
 .method public scheduleUpdate()V
     .locals 2
 
-    .line 198
     invoke-virtual {p0}, Lcom/android/server/health/HealthServiceWrapperAidl;->getHandlerThread()Landroid/os/HandlerThread;
 
     move-result-object v0
 
-    .line 199
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -656,7 +591,6 @@
 
     invoke-direct {v1, p0}, Lcom/android/server/health/HealthServiceWrapperAidl$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/health/HealthServiceWrapperAidl;)V
 
-    .line 200
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
@@ -671,7 +605,6 @@
 
     const-string v2, "HealthServiceWrapperAidl"
 
-    .line 233
     :try_start_0
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperAidl;->mLastSehService:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -683,10 +616,8 @@
 
     if-eqz p0, :cond_0
 
-    .line 236
     invoke-interface {p0, p1, p2}, Lvendor/samsung/hardware/health/ISehHealth;->sehWriteEnableToParam(IZ)V
 
-    .line 238
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -713,7 +644,6 @@
 
     goto :goto_0
 
-    .line 234
     :cond_0
     new-instance p0, Landroid/os/RemoteException;
 
@@ -728,7 +658,6 @@
     :catch_0
     move-exception p0
 
-    .line 240
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -753,7 +682,6 @@
 
     invoke-static {v2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

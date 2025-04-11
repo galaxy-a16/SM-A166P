@@ -25,7 +25,6 @@
 .method public static synthetic $r8$lambda$9EiBSybNWdhc-g-txH3NVBzUzgk(Lcom/android/server/biometrics/SemBiometricSysUiWrapper;ILjava/lang/Long;Landroid/util/Pair;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->lambda$onBiometricError$2(ILjava/lang/Long;Landroid/util/Pair;)V
 
     return-void
@@ -34,7 +33,6 @@
 .method public static synthetic $r8$lambda$SuVtDcJWGgRPoATAAe1hzTa_iXM(Lcom/android/server/biometrics/SemBiometricSysUiWrapper;ILjava/lang/String;Ljava/lang/Long;Landroid/util/Pair;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->lambda$onBiometricAuthenticated$0(ILjava/lang/String;Ljava/lang/Long;Landroid/util/Pair;)V
 
     return-void
@@ -43,7 +41,6 @@
 .method public static synthetic $r8$lambda$ine1X-EWRP5xo5poKf-dSlybKW8(Lcom/android/server/biometrics/SemBiometricSysUiWrapper;IIILjava/lang/String;Ljava/lang/Long;Landroid/util/Pair;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->lambda$onBiometricHelp$1(IIILjava/lang/String;Ljava/lang/Long;Landroid/util/Pair;)V
 
     return-void
@@ -52,7 +49,6 @@
 .method public static synthetic $r8$lambda$ubvXJ4EQ_5b08tuzqlqpKC_Exgc(Lcom/android/server/biometrics/SemBiometricSysUiWrapper;IIILjava/lang/Long;Landroid/util/Pair;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->lambda$onBiometricError$3(IIILjava/lang/Long;Landroid/util/Pair;)V
 
     return-void
@@ -61,10 +57,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/log/BiometricContext;Lcom/android/internal/statusbar/IStatusBarService;Ljava/util/function/IntFunction;)V
     .locals 2
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-instance v0, Lcom/android/internal/logging/InstanceIdSequence;
 
     const/high16 v1, 0x100000
@@ -73,26 +67,20 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mInstanceIdGenerator:Lcom/android/internal/logging/InstanceIdSequence;
 
-    .line 44
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessionToInstanceId:Ljava/util/Map;
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mContext:Landroid/content/Context;
 
-    .line 51
     iput-object p2, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mBiometricContext:Lcom/android/server/biometrics/log/BiometricContext;
 
-    .line 52
     iput-object p3, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
-    .line 53
     iput-object p4, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mGetModalityFunc:Ljava/util/function/IntFunction;
 
-    .line 54
     new-instance p1, Ljava/util/HashMap;
 
     const/4 p2, 0x2
@@ -101,7 +89,6 @@
 
     iput-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
-    .line 55
     invoke-static {}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->get()Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     move-result-object p1
@@ -131,7 +118,6 @@
 
     return-object p0
 
-    .line 280
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -153,7 +139,6 @@
 .method private synthetic lambda$onBiometricAuthenticated$0(ILjava/lang/String;Ljava/lang/Long;Landroid/util/Pair;)V
     .locals 0
 
-    .line 173
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     iget-object p3, p4, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -174,7 +159,6 @@
 .method private synthetic lambda$onBiometricError$2(ILjava/lang/Long;Landroid/util/Pair;)V
     .locals 1
 
-    .line 194
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     iget-object p2, p3, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -197,7 +181,6 @@
 .method private synthetic lambda$onBiometricError$3(IIILjava/lang/Long;Landroid/util/Pair;)V
     .locals 6
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     iget-object p0, p5, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -224,7 +207,6 @@
 .method private synthetic lambda$onBiometricHelp$1(IIILjava/lang/String;Ljava/lang/Long;Landroid/util/Pair;)V
     .locals 6
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     iget-object p0, p6, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -253,7 +235,6 @@
 .method public closeSession(J)V
     .locals 2
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -268,7 +249,6 @@
 
     if-nez v0, :cond_0
 
-    .line 71
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,7 +269,6 @@
 
     return-void
 
-    .line 74
     :cond_0
     iget-object v1, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
@@ -299,7 +278,6 @@
 
     invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     iget-object p1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -320,7 +298,6 @@
 
     monitor-enter p0
 
-    .line 248
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mBiometricContext:Lcom/android/server/biometrics/log/BiometricContext;
 
@@ -332,12 +309,10 @@
 
     if-nez v0, :cond_0
 
-    .line 250
     monitor-exit p0
 
     return-void
 
-    .line 252
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessionToInstanceId:Ljava/util/Map;
@@ -356,7 +331,6 @@
 
     const-string v0, "SemBiometricSysUiWrapper"
 
-    .line 253
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -383,12 +357,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 254
     monitor-exit p0
 
     return-void
 
-    .line 256
     :cond_1
     :try_start_2
     iget-object v1, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessionToInstanceId:Ljava/util/Map;
@@ -403,7 +375,6 @@
 
     check-cast v1, Lcom/android/internal/logging/InstanceId;
 
-    .line 257
     iget-object v2, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessionToInstanceId:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -414,7 +385,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 259
     :try_start_3
     sget-boolean v2, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
@@ -422,7 +392,6 @@
 
     const-string v2, "SemBiometricSysUiWrapper"
 
-    .line 260
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -449,7 +418,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     :cond_2
     invoke-interface {v0, p1, v1}, Lcom/android/internal/statusbar/ISessionListener;->onSessionEnded(ILcom/android/internal/logging/InstanceId;)V
     :try_end_3
@@ -464,7 +432,6 @@
     :try_start_4
     const-string v1, "SemBiometricSysUiWrapper"
 
-    .line 264
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -473,7 +440,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 265
     invoke-static {p1}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -488,12 +454,10 @@
 
     move-result-object p1
 
-    .line 264
     invoke-static {v1, p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 267
     :goto_0
     monitor-exit p0
 
@@ -510,7 +474,6 @@
 .method public hideAuthenticationDialog(J)V
     .locals 2
 
-    .line 208
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -525,7 +488,6 @@
 
     if-nez v0, :cond_0
 
-    .line 210
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -546,7 +508,6 @@
 
     return-void
 
-    .line 213
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
@@ -570,7 +531,6 @@
 
     const-string v0, ""
 
-    .line 165
     invoke-virtual {p0, p1, v0}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->onBiometricAuthenticated(ILjava/lang/String;)V
 
     return-void
@@ -579,7 +539,6 @@
 .method public onBiometricAuthenticated(ILjava/lang/String;)V
     .locals 2
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
     new-instance v1, Lcom/android/server/biometrics/SemBiometricSysUiWrapper$$ExternalSyntheticLambda3;
@@ -598,7 +557,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 193
     iget-object p2, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
     new-instance p3, Lcom/android/server/biometrics/SemBiometricSysUiWrapper$$ExternalSyntheticLambda0;
@@ -609,7 +567,6 @@
 
     goto :goto_0
 
-    .line 197
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
@@ -626,7 +583,6 @@
 .method public onBiometricHelp(IIILjava/lang/String;)V
     .locals 8
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
     new-instance v7, Lcom/android/server/biometrics/SemBiometricSysUiWrapper$$ExternalSyntheticLambda2;
@@ -653,12 +609,10 @@
 .method public openSession(Landroid/os/IBinder;JLandroid/hardware/biometrics/IBiometricSysuiReceiver;)V
     .locals 2
 
-    .line 59
     instance-of v0, p4, Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -683,17 +637,14 @@
 
     check-cast p4, Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
-    .line 61
     invoke-virtual {p4}, Lcom/android/server/biometrics/SemBiometricSysUiReceiver;->getSysUiListener()Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
     move-result-object v1
 
-    .line 60
     invoke-virtual {v0, p1, v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->openSession(Ljava/lang/String;Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;)I
 
     move-result p1
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -702,14 +653,12 @@
 
     new-instance p3, Landroid/util/Pair;
 
-    .line 63
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-direct {p3, p1, p4}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 62
     invoke-interface {p0, p2, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
@@ -719,7 +668,6 @@
 .method public final setManagedProfileInfo(ILandroid/hardware/biometrics/PromptInfo;Landroid/os/Bundle;)V
     .locals 4
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/android/server/biometrics/Utils;->isWorkProfile(Landroid/content/Context;I)Z
@@ -730,7 +678,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 131
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mContext:Landroid/content/Context;
 
@@ -744,17 +691,14 @@
 
     const-string v2, "MANAGED_PROFILE"
 
-    .line 132
     invoke-virtual {p3, v2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v2, "MANAGED_PROFILE_COLOR"
 
-    .line 134
     invoke-virtual {v0, p1}, Landroid/app/admin/DevicePolicyManager;->getOrganizationColorForUser(I)I
 
     move-result v0
 
-    .line 133
     invoke-virtual {p3, v2, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -764,7 +708,6 @@
     :catch_0
     move-exception v0
 
-    .line 137
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -787,7 +730,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     :cond_0
     :goto_0
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
@@ -796,7 +738,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 143
     invoke-virtual {p2}, Landroid/hardware/biometrics/PromptInfo;->semGetPrivilegedFlag()I
 
     move-result v0
@@ -807,7 +748,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 144
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
 
     move-result v0
@@ -816,20 +756,16 @@
 
     const-string p2, "SECURE_FOLDER"
 
-    .line 145
     invoke-virtual {p3, p2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mContext:Landroid/content/Context;
 
-    .line 147
     invoke-static {p0, p1}, Lcom/samsung/android/knox/SemPersonaManager;->getPersonaName(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "SECURE_FOLDER_NAME"
 
-    .line 146
     invoke-virtual {p3, p1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
@@ -837,36 +773,28 @@
     :cond_1
     const-string v0, "MANAGED_PROFILE_KNOX"
 
-    .line 149
     invoke-virtual {p3, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mContext:Landroid/content/Context;
 
-    .line 151
     invoke-static {v0, p1}, Lcom/samsung/android/knox/SemPersonaManager;->getPersonaName(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "MANAGED_PROFILE_KNOX_NAME"
 
-    .line 150
     invoke-virtual {p3, v2, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mContext:Landroid/content/Context;
 
-    .line 153
     invoke-static {v0, p1}, Lcom/android/server/biometrics/Utils;->isKnoxTwoFactor(Landroid/content/Context;I)Z
 
     move-result v0
 
     const-string v2, "MANAGED_PROFILE_KNOX_TWO_FACTOR"
 
-    .line 152
     invoke-virtual {p3, v2, v0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 154
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p1}, Lcom/android/server/biometrics/Utils;->isKnoxTwoFactor(Landroid/content/Context;I)Z
@@ -875,7 +803,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 155
     invoke-virtual {p2}, Landroid/hardware/biometrics/PromptInfo;->semGetPrivilegedFlag()I
 
     move-result p0
@@ -888,7 +815,6 @@
 
     const-string p0, "MANAGED_PROFILE_KNOX_ONLY_CONFIRM_BIOMETRIC"
 
-    .line 156
     invoke-virtual {p3, p0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     :cond_2
@@ -903,7 +829,6 @@
 
     move-object/from16 v1, p3
 
-    .line 93
     iget-object v2, v0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
@@ -916,7 +841,6 @@
 
     move-result v8
 
-    .line 94
     iget-object v2, v0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessions:Ljava/util/Map;
 
     invoke-static/range {p10 .. p11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -933,7 +857,6 @@
 
     if-nez v2, :cond_0
 
-    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -954,7 +877,6 @@
 
     return-void
 
-    .line 99
     :cond_0
     new-instance v6, Landroid/os/Bundle;
 
@@ -962,12 +884,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 101
     array-length v4, v1
 
     if-lez v4, :cond_2
 
-    .line 103
     array-length v3, v1
 
     const/4 v4, 0x0
@@ -981,7 +901,6 @@
 
     aget v9, v1, v5
 
-    .line 104
     iget-object v10, v0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mGetModalityFunc:Ljava/util/function/IntFunction;
 
     invoke-interface {v10, v9}, Ljava/util/function/IntFunction;->apply(I)Ljava/lang/Object;
@@ -1003,15 +922,12 @@
     :cond_1
     const-string v3, "KEY_AVAILABILITY_BIOMETRIC"
 
-    .line 106
     invoke-virtual {v6, v3, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 107
     iget-object v3, v0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mGetModalityFunc:Ljava/util/function/IntFunction;
 
     aget v1, v1, v4
 
-    .line 108
     invoke-interface {v3, v1}, Ljava/util/function/IntFunction;->apply(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1022,7 +938,6 @@
 
     move-result v1
 
-    .line 107
     invoke-static {v1}, Lcom/android/server/biometrics/Utils;->biometricAuthenticatorModalityToVendorSysUiType(I)I
 
     move-result v1
@@ -1039,10 +954,8 @@
 
     move-object v1, p1
 
-    .line 120
     invoke-virtual {p0, v8, p1, v6}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->setManagedProfileInfo(ILandroid/hardware/biometrics/PromptInfo;Landroid/os/Bundle;)V
 
-    .line 122
     iget-object v3, v0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSysUiManager:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     iget-object v0, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -1068,10 +981,8 @@
     :cond_3
     const-string/jumbo v0, "showAuthenticationDialog: Unknown prompt type"
 
-    .line 113
     invoke-static {v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     iget-object v0, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
@@ -1090,7 +1001,6 @@
 
     monitor-enter p0
 
-    .line 222
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mBiometricContext:Lcom/android/server/biometrics/log/BiometricContext;
 
@@ -1102,12 +1012,10 @@
 
     if-nez v0, :cond_0
 
-    .line 224
     monitor-exit p0
 
     return-void
 
-    .line 226
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessionToInstanceId:Ljava/util/Map;
@@ -1126,7 +1034,6 @@
 
     const-string v0, "SemBiometricSysUiWrapper"
 
-    .line 227
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1153,12 +1060,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 228
     monitor-exit p0
 
     return-void
 
-    .line 230
     :cond_1
     :try_start_2
     iget-object v1, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mInstanceIdGenerator:Lcom/android/internal/logging/InstanceIdSequence;
@@ -1167,7 +1072,6 @@
 
     move-result-object v1
 
-    .line 231
     iget-object v2, p0, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->mSessionToInstanceId:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1178,7 +1082,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 233
     :try_start_3
     sget-boolean v2, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
@@ -1186,7 +1089,6 @@
 
     const-string v2, "SemBiometricSysUiWrapper"
 
-    .line 234
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1213,7 +1115,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     :cond_2
     invoke-interface {v0, p1, v1}, Lcom/android/internal/statusbar/ISessionListener;->onSessionStarted(ILcom/android/internal/logging/InstanceId;)V
     :try_end_3
@@ -1228,7 +1129,6 @@
     :try_start_4
     const-string v1, "SemBiometricSysUiWrapper"
 
-    .line 238
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1237,7 +1137,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 239
     invoke-static {p1}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1252,12 +1151,10 @@
 
     move-result-object p1
 
-    .line 238
     invoke-static {v1, p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 241
     :goto_0
     monitor-exit p0
 

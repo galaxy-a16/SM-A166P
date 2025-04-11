@@ -10,7 +10,6 @@
 .method public static makeAppDetailsActivity(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Z)Lcom/android/server/pm/pkg/component/ParsedActivity;
     .locals 0
 
-    .line 38
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/pm/pkg/component/ParsedActivityImpl;->makeAppDetailsActivity(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Z)Lcom/android/server/pm/pkg/component/ParsedActivityImpl;
 
     move-result-object p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)V
     .locals 0
 
-    .line 915
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-direct {p0}, Landroid/os/ContainerStateReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onContainerCreated(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 6
 
-    .line 971
     iget-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$mgetUserManagerService(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)Landroid/os/UserManager;
@@ -37,7 +35,6 @@
 
     if-nez p1, :cond_0
 
-    .line 974
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -64,7 +61,6 @@
 
     return-void
 
-    .line 977
     :cond_0
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -88,7 +84,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 979
     iget-object p2, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     iget v0, p1, Landroid/content/pm/UserInfo;->id:I
@@ -97,7 +92,6 @@
 
     invoke-static {p2, v0, v1}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$msendIntentBroadcastForContainer(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;ILjava/lang/String;)V
 
-    .line 981
     iget-object p2, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     iget v0, p1, Landroid/content/pm/UserInfo;->id:I
@@ -106,7 +100,6 @@
 
     move-result-object p2
 
-    .line 982
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -117,19 +110,16 @@
 
     if-eqz p2, :cond_1
 
-    .line 983
     invoke-virtual {p2}, Lcom/samsung/android/knox/container/KnoxConfigurationType;->isCustomizedContainerEnabled()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 984
     invoke-virtual {p2}, Lcom/samsung/android/knox/container/KnoxConfigurationType;->getCustomHomeScreenWallpaper()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 985
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -152,29 +142,24 @@
 
     const-string v3, "knox.container.proxy.EXTRA_KNOX_HOME_SCREEN_WALLPAPER"
 
-    .line 986
     invoke-virtual {v0, v3, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p2, 0x1
 
-    .line 987
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_0
 
-    .line 989
     :cond_1
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     :goto_0
     const-string p2, "android.intent.extra.user_handle"
 
-    .line 991
     iget v2, p1, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {v0, p2, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1000
     iget-object p2, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p2}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$mgetDarManagerService(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)Lcom/android/server/knox/dar/DarManagerService;
@@ -187,12 +172,10 @@
 
     const/4 v0, 0x0
 
-    .line 1001
     invoke-virtual {p3, p2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 1002
     iget-object p3, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p3}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$mgetDarManagerService(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)Lcom/android/server/knox/dar/DarManagerService;
@@ -203,7 +186,6 @@
 
     invoke-virtual {p3, v0, p2}, Lcom/android/server/knox/dar/DarManagerService;->setResetTokenForLegacyContainer(ILjava/lang/String;)V
 
-    .line 1007
     :cond_2
     iget p2, p1, Landroid/content/pm/UserInfo;->id:I
 
@@ -213,7 +195,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 1008
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -238,7 +219,6 @@
 
     invoke-static {p2, p3, v0}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 1009
     iget-object p0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I
@@ -252,7 +232,6 @@
 .method public onDeviceOwnerActivated(Landroid/content/Context;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 935
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -261,7 +240,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 937
     :try_start_0
     iget-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
@@ -275,14 +253,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 938
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 939
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object p2
@@ -301,7 +277,6 @@
 
     move-result p1
 
-    .line 940
     iget-object p2, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p2}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$fgetmEdmStorageProvider(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -312,7 +287,6 @@
 
     move-result p1
 
-    .line 941
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -341,7 +315,6 @@
     :catch_0
     move-exception p1
 
-    .line 946
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -367,7 +340,6 @@
     :catch_1
     move-exception p1
 
-    .line 944
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -388,7 +360,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 948
     :cond_0
     :goto_0
     iget-object p0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
@@ -401,7 +372,6 @@
 .method public onDeviceOwnerLicenseActivated(Landroid/content/Context;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 953
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -410,12 +380,10 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 954
     iget-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$mnotifyDOPremiumActivation(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)V
 
-    .line 956
     iget-object p0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p0}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$misDualDarLicenseLockedCase(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)Z
@@ -424,12 +392,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 957
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p0
 
-    .line 959
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
@@ -441,13 +407,11 @@
 
     const/4 v0, 0x0
 
-    .line 960
     invoke-virtual {p2, v0, v0, v0}, Lcom/android/server/enterprise/adapterlayer/SystemUIAdapter;->setAdminLockEnabled(IZZ)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 964
     :goto_0
     invoke-static {p0, p1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -461,7 +425,6 @@
     :catch_0
     move-exception p2
 
-    .line 962
     :try_start_1
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -475,11 +438,9 @@
 
     goto :goto_0
 
-    .line 964
     :goto_1
     invoke-static {p0, p1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 965
     throw p2
 
     :cond_0
@@ -490,7 +451,6 @@
 .method public onDeviceOwnerLicenseExpired(Landroid/content/Context;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 918
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -499,7 +459,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 920
     iget-object p0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$2;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p0}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$misDualDarLicenseLockedCase(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)Z
@@ -508,12 +467,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 921
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p0
 
-    .line 923
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
@@ -527,13 +484,11 @@
 
     const/4 v1, 0x1
 
-    .line 924
     invoke-virtual {p2, v0, v1, v1}, Lcom/android/server/enterprise/adapterlayer/SystemUIAdapter;->setAdminLockEnabled(IZZ)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 928
     :goto_0
     invoke-static {p0, p1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -547,7 +502,6 @@
     :catch_0
     move-exception p2
 
-    .line 926
     :try_start_1
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -561,11 +515,9 @@
 
     goto :goto_0
 
-    .line 928
     :goto_1
     invoke-static {p0, p1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 929
     throw p2
 
     :cond_0

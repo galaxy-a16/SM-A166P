@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/attention/AttentionManagerService;)V
     .locals 0
 
-    .line 515
     iput-object p1, p0, Lcom/android/server/attention/AttentionManagerService$LocalService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-direct {p0}, Landroid/attention/AttentionManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/attention/AttentionManagerService;Lcom/android/server/attention/AttentionManagerService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/attention/AttentionManagerService$LocalService;-><init>(Lcom/android/server/attention/AttentionManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public cancelAttentionCheck(Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;)V
     .locals 0
 
-    .line 528
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$LocalService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/attention/AttentionManagerService;->cancelAttentionCheck(Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;)V
@@ -44,7 +41,6 @@
 .method public checkAttention(JLandroid/attention/AttentionManagerInternal$AttentionCallbackInternal;)Z
     .locals 0
 
-    .line 523
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$LocalService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/attention/AttentionManagerService;->checkAttention(JLandroid/attention/AttentionManagerInternal$AttentionCallbackInternal;)Z
@@ -57,7 +53,6 @@
 .method public isAttentionServiceSupported()Z
     .locals 0
 
-    .line 518
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$LocalService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     iget-boolean p0, p0, Lcom/android/server/attention/AttentionManagerService;->mIsServiceEnabled:Z
@@ -68,7 +63,6 @@
 .method public onStartProximityUpdates(Landroid/attention/AttentionManagerInternal$ProximityUpdateCallbackInternal;)Z
     .locals 0
 
-    .line 534
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$LocalService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/attention/AttentionManagerService;->onStartProximityUpdates(Landroid/attention/AttentionManagerInternal$ProximityUpdateCallbackInternal;)Z
@@ -81,7 +75,6 @@
 .method public onStopProximityUpdates(Landroid/attention/AttentionManagerInternal$ProximityUpdateCallbackInternal;)V
     .locals 0
 
-    .line 539
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$LocalService;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/attention/AttentionManagerService;->onStopProximityUpdates(Landroid/attention/AttentionManagerInternal$ProximityUpdateCallbackInternal;)V

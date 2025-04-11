@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;Lcom/android/server/hdmi/HdmiCecLocalDevice;Ljava/util/ArrayList;Ljava/util/ArrayList;[II)V
     .locals 0
 
-    .line 1309
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$15;->val$localDevice:Lcom/android/server/hdmi/HdmiCecLocalDevice;
@@ -53,7 +52,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 1313
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,26 +76,21 @@
 
     goto :goto_0
 
-    .line 1319
     :cond_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
-    .line 1321
     invoke-virtual {v0}, Lcom/android/server/hdmi/HdmiControlService;->getCecVersion()I
 
     move-result v2
 
-    .line 1319
     invoke-static {v0, p2, p1, v1, v2}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$mcreateDeviceInfo(Lcom/android/server/hdmi/HdmiControlService;IIII)Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     move-result-object v0
 
-    .line 1322
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiControlService$15;->val$localDevice:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-virtual {v2, v0}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->setDeviceInfo(Landroid/hardware/hdmi/HdmiDeviceInfo;)V
 
-    .line 1323
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmHdmiCecNetwork(Lcom/android/server/hdmi/HdmiControlService;)Lcom/android/server/hdmi/HdmiCecNetwork;
@@ -108,7 +101,6 @@
 
     invoke-virtual {v0, p1, v2}, Lcom/android/server/hdmi/HdmiCecNetwork;->addLocalDevice(ILcom/android/server/hdmi/HdmiCecLocalDevice;)V
 
-    .line 1324
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmHdmiCecNetwork(Lcom/android/server/hdmi/HdmiControlService;)Lcom/android/server/hdmi/HdmiCecNetwork;
@@ -123,7 +115,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/hdmi/HdmiCecNetwork;->addCecDevice(Landroid/hardware/hdmi/HdmiDeviceInfo;)V
 
-    .line 1325
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmCecController(Lcom/android/server/hdmi/HdmiControlService;)Lcom/android/server/hdmi/HdmiCecController;
@@ -132,14 +123,12 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/hdmi/HdmiCecController;->addLogicalAddress(I)I
 
-    .line 1326
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->val$allocatedDevices:Ljava/util/ArrayList;
 
     iget-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$15;->val$localDevice:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1330
     :goto_0
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->val$allocatingDevices:Ljava/util/ArrayList;
 
@@ -159,7 +148,6 @@
 
     if-ne p1, v0, :cond_4
 
-    .line 1331
     iget p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->val$initiatedBy:I
 
     const/4 p2, 0x4
@@ -170,18 +158,15 @@
 
     if-eq p1, p2, :cond_1
 
-    .line 1336
     iget-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p2, p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$monInitializeCecComplete(Lcom/android/server/hdmi/HdmiControlService;I)V
 
-    .line 1338
     :cond_1
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1, v2}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fputmAddressAllocated(Lcom/android/server/hdmi/HdmiControlService;Z)V
 
-    .line 1339
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iget-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$15;->val$allocatedDevices:Ljava/util/ArrayList;
@@ -190,7 +175,6 @@
 
     invoke-static {p1, p2, v0}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$mnotifyAddressAllocated(Lcom/android/server/hdmi/HdmiControlService;Ljava/util/ArrayList;I)V
 
-    .line 1342
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmDisplayStatusCallback(Lcom/android/server/hdmi/HdmiControlService;)Landroid/hardware/hdmi/IHdmiControlCallback;
@@ -201,7 +185,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1343
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmDisplayStatusCallback(Lcom/android/server/hdmi/HdmiControlService;)Landroid/hardware/hdmi/IHdmiControlCallback;
@@ -210,12 +193,10 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/hdmi/HdmiControlService;->queryDisplayStatus(Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 1344
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1, p2}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fputmDisplayStatusCallback(Lcom/android/server/hdmi/HdmiControlService;Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 1346
     :cond_2
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -225,7 +206,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1347
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmOtpCallbackPendingAddressAllocation(Lcom/android/server/hdmi/HdmiControlService;)Landroid/hardware/hdmi/IHdmiControlCallback;
@@ -234,12 +214,10 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/hdmi/HdmiControlService;->oneTouchPlay(Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 1348
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1, p2}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fputmOtpCallbackPendingAddressAllocation(Lcom/android/server/hdmi/HdmiControlService;Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 1350
     :cond_3
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$15;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 

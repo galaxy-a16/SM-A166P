@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/ui/AutoFillUI;Landroid/metrics/LogMaker;Lcom/android/server/autofill/SaveEventLogger;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Lcom/android/server/autofill/ui/PendingUi;)V
     .locals 0
 
-    .line 385
     iput-object p1, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     iput-object p2, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$log:Landroid/metrics/LogMaker;
@@ -43,24 +42,20 @@
 .method public onCancel(Landroid/content/IntentSender;)V
     .locals 8
 
-    .line 399
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$log:Landroid/metrics/LogMaker;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/metrics/LogMaker;->setType(I)Landroid/metrics/LogMaker;
 
-    .line 400
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$mSaveEventLogger:Lcom/android/server/autofill/SaveEventLogger;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 401
     invoke-virtual {v0, v1}, Lcom/android/server/autofill/SaveEventLogger;->maybeSetCancelButtonClicked(Z)V
 
-    .line 403
     :cond_0
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
@@ -70,7 +65,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 406
     :try_start_0
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
@@ -97,7 +91,6 @@
     :catch_0
     move-exception v0
 
-    .line 408
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,14 +109,12 @@
 
     invoke-static {v2, p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 412
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     invoke-interface {p1}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->cancelSave()V
 
-    .line 413
     iget-object p1, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$pendingSaveUi:Lcom/android/server/autofill/ui/PendingUi;
@@ -136,7 +127,6 @@
 .method public onDestroy()V
     .locals 2
 
-    .line 418
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$log:Landroid/metrics/LogMaker;
 
     invoke-virtual {v0}, Landroid/metrics/LogMaker;->getType()I
@@ -145,19 +135,16 @@
 
     if-nez v0, :cond_0
 
-    .line 419
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$log:Landroid/metrics/LogMaker;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/metrics/LogMaker;->setType(I)Landroid/metrics/LogMaker;
 
-    .line 421
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     invoke-interface {v0}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->cancelSave()V
 
-    .line 423
     :cond_0
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
@@ -169,14 +156,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/logging/MetricsLogger;->write(Landroid/metrics/LogMaker;)V
 
-    .line 424
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$mSaveEventLogger:Lcom/android/server/autofill/SaveEventLogger;
 
     if-eqz p0, :cond_1
 
     const/4 v0, 0x1
 
-    .line 425
     invoke-virtual {p0, v0}, Lcom/android/server/autofill/SaveEventLogger;->maybeSetDialogDismissed(Z)V
 
     :cond_1
@@ -186,24 +171,20 @@
 .method public onSave()V
     .locals 3
 
-    .line 388
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$log:Landroid/metrics/LogMaker;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/metrics/LogMaker;->setType(I)Landroid/metrics/LogMaker;
 
-    .line 389
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$mSaveEventLogger:Lcom/android/server/autofill/SaveEventLogger;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 390
     invoke-virtual {v0, v1}, Lcom/android/server/autofill/SaveEventLogger;->maybeSetSaveButtonClicked(Z)V
 
-    .line 392
     :cond_0
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
@@ -211,12 +192,10 @@
 
     invoke-static {v0, v2}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$mhideSaveUiUiThread(Lcom/android/server/autofill/ui/AutoFillUI;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;)Lcom/android/server/autofill/ui/PendingUi;
 
-    .line 393
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     invoke-interface {v0}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->save()V
 
-    .line 394
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$pendingSaveUi:Lcom/android/server/autofill/ui/PendingUi;
@@ -229,7 +208,6 @@
 .method public startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;)V
     .locals 0
 
-    .line 431
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$2;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;)V

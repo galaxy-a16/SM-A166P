@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/att/iqi/lib/IQIManager;)V
     .locals 0
 
-    .line 526
     iput-object p1, p0, Lcom/att/iqi/lib/IQIManager$5;->this$0:Lcom/att/iqi/lib/IQIManager;
 
     invoke-direct {p0}, Lcom/att/iqi/IServiceStateChangeCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onServiceChange(Z)V
     .locals 2
 
-    .line 529
     iget-object p0, p0, Lcom/att/iqi/lib/IQIManager$5;->this$0:Lcom/att/iqi/lib/IQIManager;
 
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmMessageDispatcher(Lcom/att/iqi/lib/IQIManager;)Landroid/os/Handler;
@@ -39,7 +37,6 @@
 
     move-result-object p0
 
-    .line 530
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

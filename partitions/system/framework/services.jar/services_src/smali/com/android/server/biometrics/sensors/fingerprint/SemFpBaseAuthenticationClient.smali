@@ -57,7 +57,6 @@
 .method public static synthetic $r8$lambda$PZhNKY6ZVZ5vAlv3vs4sStlqyuI(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->lambda$resumeFaceAuth$2()V
 
     return-void
@@ -66,7 +65,6 @@
 .method public static synthetic $r8$lambda$eA4iQ9ivKj6VOiaSGMwStzFUKDA(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;ZJIIZ)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->lambda$handleBigDataOnBackgroundThread$0(ZJIIZ)V
 
     return-void
@@ -75,7 +73,6 @@
 .method public static synthetic $r8$lambda$zsdfgOKYu74nD5y9Pit_u7T2iRg(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->lambda$pauseFaceAuth$1()V
 
     return-void
@@ -84,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$fputmErrorEscrow(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mErrorEscrow:I
 
     return-void
@@ -93,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$fputmVendorErrorEscrow(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mVendorErrorEscrow:I
 
     return-void
@@ -102,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$mhandleNotificationAction(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;Landroid/content/Intent;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->handleNotificationAction(Landroid/content/Intent;)V
 
     return-void
@@ -149,10 +143,8 @@
 
     const/16 v17, 0x1
 
-    .line 204
     invoke-direct/range {v0 .. v18}, Lcom/android/server/biometrics/sensors/AuthenticationClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;JZLandroid/hardware/biometrics/AuthenticateOptions;IZLcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;ZLandroid/app/TaskStackListener;Lcom/android/server/biometrics/sensors/LockoutTracker;ZZI)V
 
-    .line 210
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;-><init>()V
@@ -161,14 +153,12 @@
 
     iput-object v0, v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
-    .line 211
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mAttribute:Landroid/os/Bundle;
 
-    .line 212
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isRestricted()Z
 
     move-result v0
@@ -195,7 +185,6 @@
     :goto_0
     iput-boolean v0, v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsKeyguard:Z
 
-    .line 213
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isRestricted()Z
 
     move-result v0
@@ -230,7 +219,6 @@
 
     const/16 v0, 0x10
 
-    .line 299
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->hasPrivilegedFlag(I)Z
 
     move-result v0
@@ -239,7 +227,6 @@
 
     const v0, 0x8000
 
-    .line 300
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->hasExtraAuthenticationFlag(I)Z
 
     move-result v0
@@ -260,7 +247,6 @@
     :goto_1
     move v6, v0
 
-    .line 302
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
@@ -275,29 +261,24 @@
 
     move-result-object v4
 
-    .line 303
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v5
 
-    .line 302
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;->createUdfpsSysUiImpl(Landroid/content/Context;Landroid/os/IBinder;Ljava/lang/String;IZ)Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
-    .line 304
     iget-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsKeyguard:Z
 
     if-eqz v1, :cond_2
 
     const/4 v1, 0x4
 
-    .line 305
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->setSysUiType(I)V
 
-    .line 307
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
 
@@ -305,14 +286,12 @@
 
     if-nez v0, :cond_3
 
-    .line 308
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     iget v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->checkGuideLayerAndTouchBlock(I)V
 
-    .line 309
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mAttribute:Landroid/os/Bundle;
@@ -321,7 +300,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->setCustomIconAttribute(Landroid/os/Bundle;I)V
 
-    .line 310
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$1;
@@ -349,12 +327,10 @@
 
     move v5, p6
 
-    .line 480
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->sendBigDataForAuthenticationSucceed(JIIZ)V
 
     goto :goto_0
 
-    .line 483
     :cond_0
     invoke-virtual {p0, p2, p3, p6}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->sendBigDataForAuthenticationFail(JZ)V
 
@@ -365,7 +341,6 @@
 .method private synthetic lambda$pauseFaceAuth$1()V
     .locals 1
 
-    .line 704
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -380,7 +355,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 706
     invoke-virtual {p0}, Landroid/hardware/face/FaceManager;->semPauseAuth()V
 
     :cond_0
@@ -390,7 +364,6 @@
 .method private synthetic lambda$resumeFaceAuth$2()V
     .locals 1
 
-    .line 718
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -405,7 +378,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 720
     invoke-virtual {p0}, Landroid/hardware/face/FaceManager;->semResumeAuth()V
 
     :cond_0
@@ -415,14 +387,12 @@
 .method private showBackgroundAuthenticationNotificationIfNeeded()V
     .locals 6
 
-    .line 393
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->semIsAllowedBackgroundAuthentication()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 394
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isKeyguard()Z
 
     move-result v0
@@ -445,32 +415,27 @@
 
     goto :goto_0
 
-    .line 397
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
     if-nez v0, :cond_1
 
-    .line 398
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 399
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 398
     invoke-virtual {v0, v1, v2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;->createBiometricNotification(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/biometrics/SemBiometricNotification;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
-    .line 401
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -480,7 +445,6 @@
 
     const-string/jumbo v2, "package"
 
-    .line 402
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v3
@@ -491,27 +455,22 @@
 
     const/4 v3, 0x2
 
-    .line 403
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 404
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotificationAction:Landroid/content/BroadcastReceiver;
 
     if-nez v2, :cond_2
 
-    .line 405
     new-instance v2, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$2;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;)V
 
     iput-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotificationAction:Landroid/content/BroadcastReceiver;
 
-    .line 411
     new-instance v2, Landroid/content/IntentFilter;
 
     invoke-direct {v2, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 412
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -520,7 +479,6 @@
 
     sget-object v4, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    .line 413
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v5
@@ -529,10 +487,8 @@
 
     move-result-object v5
 
-    .line 412
     invoke-static {v1, v3, v2, v4, v5}, Lcom/android/server/biometrics/Utils;->registerBroadcastAsUser(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/UserHandle;Landroid/os/Handler;)V
 
-    .line 415
     :cond_2
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
@@ -548,7 +504,6 @@
 .method public canIgnoreLockout()Z
     .locals 0
 
-    .line 783
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mCanIgnoreLockout:Z
 
     return p0
@@ -557,7 +512,6 @@
 .method public destroy()V
     .locals 10
 
-    .line 733
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -580,41 +534,32 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 734
     invoke-super {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->destroy()V
 
-    .line 735
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 736
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->destroy()V
 
-    .line 737
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
-    .line 739
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
     if-eqz v0, :cond_1
 
-    .line 740
     invoke-virtual {v0}, Lcom/android/server/biometrics/SemBiometricNotification;->cancelNotification()V
 
-    .line 741
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
-    .line 743
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotificationAction:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_2
 
-    .line 744
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -623,10 +568,8 @@
 
     invoke-static {v0, v2}, Lcom/android/server/biometrics/Utils;->unregisterBroadcast(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
 
-    .line 745
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mBackgroundNotificationAction:Landroid/content/BroadcastReceiver;
 
-    .line 747
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getBioLoggingManager()Lcom/android/server/biometrics/SemBioLoggingManager;
 
@@ -654,7 +597,6 @@
 .method public getAnalyticsManager()Lcom/android/server/biometrics/SemBioAnalyticsManager;
     .locals 0
 
-    .line 223
     invoke-static {}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->get()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p0
@@ -665,7 +607,6 @@
 .method public getAuthenticatorIds()Ljava/util/Map;
     .locals 0
 
-    .line 787
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mAuthenticatorIds:Ljava/util/Map;
 
     return-object p0
@@ -674,7 +615,6 @@
 .method public getBioLoggingManager()Lcom/android/server/biometrics/SemBioLoggingManager;
     .locals 0
 
-    .line 228
     invoke-static {}, Lcom/android/server/biometrics/SemBioLoggingManager;->get()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object p0
@@ -685,19 +625,16 @@
 .method public final getDisplayId()I
     .locals 1
 
-    .line 282
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPromptInfo:Landroid/hardware/biometrics/PromptInfo;
 
     if-eqz v0, :cond_0
 
-    .line 283
     invoke-virtual {v0}, Landroid/hardware/biometrics/PromptInfo;->semGetDisplayId()I
 
     move-result p0
 
     return p0
 
-    .line 285
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mAttribute:Landroid/os/Bundle;
 
@@ -713,10 +650,8 @@
 .method public final handleAuthenticationFailedReasonEvent(I)V
     .locals 3
 
-    .line 659
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mAuthenticationFailedReason:I
 
-    .line 660
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result v0
@@ -725,19 +660,16 @@
 
     move-result-object v0
 
-    .line 661
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v1
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/biometrics/sensors/PerformanceTracker;->semIncrementNoMatchReason(II)V
 
-    .line 662
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getAnalyticsManager()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p0
 
-    .line 663
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
@@ -746,7 +678,6 @@
 
     const/4 v2, 0x6
 
-    .line 662
     invoke-virtual {p0, v2, p1, v0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLogHelp(IILjava/lang/String;I)V
 
     return-void
@@ -755,7 +686,6 @@
 .method public final handleAuthenticationResult(I)V
     .locals 11
 
-    .line 452
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -764,26 +694,21 @@
 
     sub-long v8, v0, v2
 
-    .line 453
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->resumeFaceAuth()V
 
-    .line 454
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsAuthenticated:Z
 
     if-nez v0, :cond_0
 
-    .line 455
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mRejectCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mRejectCount:I
 
-    .line 457
     :cond_0
     invoke-virtual {p0, p1, v8, v9}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->handleLoggingData(IJ)V
 
-    .line 458
     iget-boolean v5, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsAuthenticated:Z
 
     iget v6, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mQualityErrorCount:I
@@ -798,7 +723,6 @@
 
     const/4 p1, 0x0
 
-    .line 460
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mQualityErrorCount:I
 
     return-void
@@ -807,7 +731,6 @@
 .method public final handleBigDataOnBackgroundThread(ZIIJZ)V
     .locals 10
 
-    .line 478
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
     move-result-object v0
@@ -838,25 +761,20 @@
 .method public final handleCaptureStarted()V
     .locals 3
 
-    .line 643
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mCaptureStartTime:J
 
-    .line 644
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->setEarlyWakeUp()V
 
-    .line 645
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->pauseFaceAuth()V
 
-    .line 646
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-nez v0, :cond_0
 
-    .line 647
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
@@ -865,7 +783,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;->acquireBoosting(Landroid/content/Context;)V
 
-    .line 649
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
@@ -879,16 +796,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 650
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->vibrateSuccess()V
 
-    .line 652
     :cond_1
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_2
 
-    .line 653
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getBioLoggingManager()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object v0
@@ -901,7 +815,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/SemBioLoggingManager;->fpUpdateUdfpsTouchMap(I)V
 
-    .line 655
     :cond_2
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
@@ -921,28 +834,23 @@
 .method public handleEarlyAuthenticationResult()V
     .locals 2
 
-    .line 766
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     if-eqz p0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 767
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->handleOnAuthenticated(Z)V
 
-    .line 769
     :cond_0
     sget-boolean p0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz p0, :cond_1
 
-    .line 770
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;->getInstance()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
 
     move-result-object p0
 
-    .line 771
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;->getOpticalSensorHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;
 
     move-result-object p0
@@ -960,12 +868,10 @@
 
     move-object/from16 v0, p0
 
-    .line 464
     iget-boolean v1, v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsAuthenticated:Z
 
     if-eqz v1, :cond_0
 
-    .line 465
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getBioLoggingManager()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object v2
@@ -994,7 +900,6 @@
 
     goto :goto_0
 
-    .line 469
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getBioLoggingManager()Lcom/android/server/biometrics/SemBioLoggingManager;
 
@@ -1004,7 +909,6 @@
 
     move-result-object v12
 
-    .line 470
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getRequestId()J
 
     move-result-wide v1
@@ -1025,7 +929,6 @@
 
     move/from16 v18, v0
 
-    .line 469
     invoke-virtual/range {v11 .. v18}, Lcom/android/server/biometrics/SemBioLoggingManager;->fpNoMatch(Landroid/content/Context;IJIIZ)V
 
     :goto_0
@@ -1035,7 +938,6 @@
 .method public final handleNotificationAction(Landroid/content/Intent;)V
     .locals 2
 
-    .line 419
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -1048,7 +950,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 420
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v0
@@ -1069,7 +970,6 @@
 
     const/4 v1, 0x0
 
-    .line 421
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -1082,10 +982,8 @@
 
     const-string v0, "Cancel authentication by Notification action"
 
-    .line 422
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->cancel()V
 
     :cond_0
@@ -1095,22 +993,18 @@
 .method public final handleQualityFailedEvent(II)V
     .locals 10
 
-    .line 668
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->resumeFaceAuth()V
 
     const/16 v0, 0x8
 
-    .line 669
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->hasPrivilegedFlag(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 670
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->vibrateError()V
 
-    .line 672
     :cond_0
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mQualityErrorCount:I
 
@@ -1118,14 +1012,12 @@
 
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mQualityErrorCount:I
 
-    .line 673
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mTotalQualityErrorCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mTotalQualityErrorCount:I
 
-    .line 675
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result v0
@@ -1134,7 +1026,6 @@
 
     move-result-object v0
 
-    .line 676
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v1
@@ -1145,22 +1036,18 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/biometrics/sensors/PerformanceTracker;->semIncrementQualityForUser(IZ)V
 
-    .line 678
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getAnalyticsManager()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object v0
 
-    .line 679
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
-    .line 678
     invoke-virtual {v0, p1, p2, v1, v2}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLogHelp(IILjava/lang/String;I)V
 
-    .line 681
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getBioLoggingManager()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object v3
@@ -1175,7 +1062,6 @@
 
     long-to-int v5, v0
 
-    .line 682
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1195,11 +1081,9 @@
     :cond_1
     move v8, p1
 
-    .line 684
     :goto_0
     iget-boolean v9, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsScreenOnWhenStartCapture:Z
 
-    .line 681
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/biometrics/SemBioLoggingManager;->fpCaptureFailed(Landroid/content/Context;IJIZ)V
 
     return-void
@@ -1222,13 +1106,11 @@
 
     goto :goto_0
 
-    .line 629
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->setEarlyWakeUp()V
 
     goto :goto_0
 
-    .line 632
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->handleCaptureStarted()V
 
@@ -1237,10 +1119,8 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 626
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsSetEarlyWakeUp:Z
 
-    .line 637
     :goto_0
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semIsAuthenticationFailedReasonEvent(I)Z
 
@@ -1248,7 +1128,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 638
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->handleAuthenticationFailedReasonEvent(I)V
 
     :cond_3
@@ -1258,7 +1137,6 @@
 .method public final hasExtraAuthenticationFlag(I)Z
     .locals 2
 
-    .line 289
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mAttribute:Landroid/os/Bundle;
 
     const-string v0, "EXTRA_KEY_AUTH_FLAG"
@@ -1282,7 +1160,6 @@
 .method public hasPrivilegedFlag(I)Z
     .locals 0
 
-    .line 336
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
     and-int/2addr p0, p1
@@ -1303,7 +1180,6 @@
 .method public final hasPromptPrivilegedAttr(I)Z
     .locals 0
 
-    .line 294
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->getPromptPrivilegedFlags()I
 
     move-result p0
@@ -1330,7 +1206,6 @@
 
     if-eq p1, p0, :cond_1
 
-    .line 620
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semIsAuthenticationFailedReasonEvent(I)Z
 
     move-result p0
@@ -1355,7 +1230,6 @@
 .method public isKeyguard()Z
     .locals 0
 
-    .line 370
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsKeyguard:Z
 
     return p0
@@ -1364,7 +1238,6 @@
 .method public isRestricted()Z
     .locals 1
 
-    .line 365
     invoke-super {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->isRestricted()Z
 
     move-result v0
@@ -1395,7 +1268,6 @@
 .method public onAcquired(II)V
     .locals 2
 
-    .line 571
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1420,26 +1292,21 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 573
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_1
 
-    .line 574
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     if-eqz v0, :cond_0
 
-    .line 575
     invoke-virtual {v0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->handleOnAcquired(II)V
 
-    .line 577
     :cond_0
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-eqz v0, :cond_1
 
-    .line 578
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->sendUdfpsPointEventForUltrasonic(II)V
 
     :cond_1
@@ -1449,17 +1316,14 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 582
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isInternalEvent(I)Z
 
     move-result v0
 
     xor-int/2addr v1, v0
 
-    .line 583
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->handleVendorEvent(I)V
 
-    .line 585
     :cond_2
     invoke-static {p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semIsQualityFailedEvent(II)Z
 
@@ -1467,13 +1331,11 @@
 
     if-eqz v0, :cond_3
 
-    .line 586
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->handleQualityFailedEvent(II)V
 
     :cond_3
     if-eqz v1, :cond_5
 
-    .line 589
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_TSP_BLOCK:Z
 
     if-eqz v0, :cond_4
@@ -1486,7 +1348,6 @@
 
     move p2, p1
 
-    .line 595
     :cond_4
     invoke-super {p0, p1, p2}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->onAcquired(II)V
 
@@ -1497,23 +1358,18 @@
 .method public onAuthenticated(Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;ZLjava/util/ArrayList;)V
     .locals 1
 
-    .line 441
     iput-boolean p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsAuthenticated:Z
 
-    .line 442
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_0
 
-    .line 443
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     if-eqz v0, :cond_0
 
-    .line 444
     invoke-virtual {v0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->handleOnAuthenticated(Z)V
 
-    .line 447
     :cond_0
     invoke-virtual {p1}, Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;->getBiometricId()I
 
@@ -1521,7 +1377,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->handleAuthenticationResult(I)V
 
-    .line 448
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->onAuthenticated(Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;ZLjava/util/ArrayList;)V
 
     return-void
@@ -1534,12 +1389,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 547
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mErrorEscrow:I
 
     if-eqz v0, :cond_0
 
-    .line 549
     iget p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mVendorErrorEscrow:I
 
     move p1, v0
@@ -1549,37 +1402,29 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 553
     iput p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mLastErrorCode:I
 
     goto :goto_0
 
-    .line 555
     :cond_1
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mLastErrorCode:I
 
-    .line 558
     :goto_0
     invoke-super {p0, p1, p2}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->onError(II)V
 
-    .line 560
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_2
 
-    .line 561
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     if-eqz v0, :cond_2
 
-    .line 562
     invoke-virtual {v0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->handleOnError(II)V
 
-    .line 565
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->resumeFaceAuth()V
 
-    .line 566
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->sendBigDataForError(II)V
 
     return-void
@@ -1592,10 +1437,8 @@
 
     const/16 v1, 0x1389
 
-    .line 358
     invoke-virtual {p0, v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->onError(II)V
 
-    .line 360
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->cancel()V
 
     return-void
@@ -1608,7 +1451,6 @@
 
     const/16 v1, 0x3ec
 
-    .line 346
     invoke-virtual {p0, v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->onAcquired(II)V
 
     return-void
@@ -1621,7 +1463,6 @@
 
     const/16 v1, 0x3ed
 
-    .line 352
     invoke-virtual {p0, v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->onAcquired(II)V
 
     return-void
@@ -1630,7 +1471,6 @@
 .method public final pauseFaceAuth()V
     .locals 2
 
-    .line 699
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isKeyguard()Z
 
     move-result v0
@@ -1639,7 +1479,6 @@
 
     return-void
 
-    .line 703
     :cond_0
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
@@ -1657,7 +1496,6 @@
 .method public final resumeFaceAuth()V
     .locals 2
 
-    .line 713
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isKeyguard()Z
 
     move-result v0
@@ -1666,7 +1504,6 @@
 
     return-void
 
-    .line 717
     :cond_0
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
@@ -1684,7 +1521,6 @@
 .method public semHasPromptPrivilegedAttr(I)Z
     .locals 0
 
-    .line 778
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->hasPromptPrivilegedAttr(I)Z
 
     move-result p0
@@ -1695,12 +1531,10 @@
 .method public final sendBigDataForAuthenticationFail(JZ)V
     .locals 5
 
-    .line 518
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getAnalyticsManager()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object v0
 
-    .line 521
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v1
@@ -1711,10 +1545,8 @@
 
     const/4 v4, 0x3
 
-    .line 520
     invoke-virtual {v0, v2, v1, v3, v4}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 524
     invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p1
@@ -1723,7 +1555,6 @@
 
     const-string v1, "FPTF"
 
-    .line 523
     invoke-virtual {v0, v1, p1, v3, p2}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     if-eqz p3, :cond_0
@@ -1735,7 +1566,6 @@
     :cond_0
     const-string p1, "FPFF"
 
-    .line 531
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
@@ -1745,7 +1575,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 534
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1769,12 +1598,10 @@
     :cond_1
     const-string p1, "FFOF"
 
-    .line 536
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 535
     invoke-virtual {v0, p1, p0, v3, v4}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     goto :goto_1
@@ -1782,7 +1609,6 @@
     :cond_2
     if-nez p3, :cond_4
 
-    .line 537
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1806,12 +1632,10 @@
     :cond_3
     const-string p1, "FFFF"
 
-    .line 539
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 538
     invoke-virtual {v0, p1, p0, v3, v4}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     :cond_4
@@ -1822,12 +1646,10 @@
 .method public final sendBigDataForAuthenticationSucceed(JIIZ)V
     .locals 5
 
-    .line 490
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getAnalyticsManager()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object v0
 
-    .line 492
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v1
@@ -1838,10 +1660,8 @@
 
     const/4 v4, 0x3
 
-    .line 491
     invoke-virtual {v0, v2, v1, v3, v4}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 494
     invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p1
@@ -1850,27 +1670,22 @@
 
     const/4 v1, 0x1
 
-    .line 493
     invoke-virtual {v0, p2, p1, v3, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     const-string p1, "FPSF"
 
-    .line 496
     invoke-static {p3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 495
     invoke-virtual {v0, p1, p2, v3, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     const-string p1, "FPSQ"
 
-    .line 499
     invoke-static {p4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 498
     invoke-virtual {v0, p1, p2, v3, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     if-eqz p5, :cond_0
@@ -1882,18 +1697,15 @@
     :cond_0
     const-string p1, "FPFS"
 
-    .line 506
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 505
     invoke-virtual {v0, p1, p2, v3, v4}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     if-eqz p5, :cond_2
 
-    .line 508
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1917,12 +1729,10 @@
     :cond_1
     const-string p1, "FFOS"
 
-    .line 510
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 509
     invoke-virtual {v0, p1, p0, v3, v4}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     goto :goto_1
@@ -1930,7 +1740,6 @@
     :cond_2
     if-nez p5, :cond_4
 
-    .line 511
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1954,12 +1763,10 @@
     :cond_3
     const-string p1, "FFFS"
 
-    .line 513
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 512
     invoke-virtual {v0, p1, p0, v3, v4}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     :cond_4
@@ -1970,17 +1777,14 @@
 .method public final sendBigDataForError(II)V
     .locals 1
 
-    .line 727
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getAnalyticsManager()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object v0
 
-    .line 728
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 727
     invoke-virtual {v0, p1, p2, p0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLogError(IILjava/lang/String;)V
 
     return-void
@@ -2005,7 +1809,6 @@
 
     if-ne p2, v0, :cond_2
 
-    .line 605
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
@@ -2016,7 +1819,6 @@
 
     if-ne p2, p1, :cond_1
 
-    .line 607
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object p1
@@ -2029,7 +1831,6 @@
 
     goto :goto_0
 
-    .line 609
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
@@ -2052,7 +1853,6 @@
 
     const-string p2, "Failed to invoke sendAcquired"
 
-    .line 613
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -2063,12 +1863,10 @@
 .method public final setEarlyWakeUp()V
     .locals 2
 
-    .line 688
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsSetEarlyWakeUp:Z
 
     if-nez v0, :cond_0
 
-    .line 689
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isKeyguard()Z
 
     move-result v0
@@ -2077,7 +1875,6 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
-    .line 690
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -2090,7 +1887,6 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
-    .line 691
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -2103,7 +1899,6 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
-    .line 692
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -2114,7 +1909,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 693
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
@@ -2125,7 +1919,6 @@
 
     const/4 v0, 0x1
 
-    .line 694
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsSetEarlyWakeUp:Z
 
     :cond_0
@@ -2137,23 +1930,19 @@
 
     if-nez p1, :cond_0
 
-    .line 233
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
-    .line 235
     :cond_0
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mAttribute:Landroid/os/Bundle;
 
-    .line 236
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 237
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getCookie()I
@@ -2166,26 +1955,21 @@
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPromptInfo:Landroid/hardware/biometrics/PromptInfo;
 
-    .line 239
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->setPrivilegedFlags()V
 
-    .line 240
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getDisplayId()I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->semSetDisplayId(I)V
 
-    .line 241
     sget-boolean p1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz p1, :cond_2
 
-    .line 242
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->initForUdfps()V
 
-    .line 244
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -2197,7 +1981,6 @@
 
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
-    .line 245
     invoke-static {v0}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -2208,7 +1991,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 246
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->getPromptPrivilegedFlags()I
 
     move-result p0
@@ -2225,7 +2007,6 @@
 
     const-string p1, "FingerprintService"
 
-    .line 244
     invoke-static {p1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2234,7 +2015,6 @@
 .method public setInjectorForTest(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;)V
     .locals 0
 
-    .line 218
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     return-void
@@ -2243,12 +2023,10 @@
 .method public final setPrivilegedFlags()V
     .locals 4
 
-    .line 250
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsKeyguard:Z
 
     if-eqz v0, :cond_0
 
-    .line 251
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
     or-int/lit8 v0, v0, 0x1b
@@ -2257,20 +2035,17 @@
 
     goto :goto_0
 
-    .line 255
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mIsSettingApp:Z
 
     if-eqz v0, :cond_1
 
-    .line 256
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
-    .line 258
     :cond_1
     :goto_0
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
@@ -2289,35 +2064,29 @@
 
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
-    .line 259
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->setPromptPrivilegedFlags()V
 
     const/4 v0, 0x1
 
-    .line 260
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->hasPrivilegedFlag(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 261
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mCanIgnoreLockout:Z
 
     :cond_2
     const/16 v0, 0x8
 
-    .line 263
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->hasPrivilegedFlag(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 264
     invoke-virtual {p0, v3}, Lcom/android/server/biometrics/sensors/AcquisitionClient;->semSetVibrationEffectUsage(Z)V
 
-    .line 266
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->semIsAllowedBackgroundAuthentication()Z
 
@@ -2325,7 +2094,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 267
     iget v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
     or-int/lit8 v0, v0, 0x4
@@ -2339,12 +2107,10 @@
 .method public final setPromptPrivilegedFlags()V
     .locals 2
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPromptInfo:Landroid/hardware/biometrics/PromptInfo;
 
     if-eqz v0, :cond_1
 
-    .line 273
     invoke-virtual {v0}, Landroid/hardware/biometrics/PromptInfo;->semGetPrivilegedFlag()I
 
     move-result v0
@@ -2353,7 +2119,6 @@
 
     const/4 v0, 0x1
 
-    .line 274
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->hasPromptPrivilegedAttr(I)Z
 
     move-result v1
@@ -2362,14 +2127,12 @@
 
     const/4 v1, 0x4
 
-    .line 275
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->hasPromptPrivilegedAttr(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 276
     :cond_0
     iget v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mPrivilegedFlags:I
 
@@ -2384,10 +2147,8 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 2
 
-    .line 375
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 376
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->getState()I
 
     move-result p1
@@ -2398,25 +2159,20 @@
 
     return-void
 
-    .line 379
     :cond_0
     sget-boolean p1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz p1, :cond_1
 
-    .line 380
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     if-eqz p1, :cond_1
 
-    .line 381
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->start()V
 
-    .line 384
     :cond_1
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->showBackgroundAuthenticationNotificationIfNeeded()V
 
-    .line 385
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->getBioLoggingManager()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object p1
@@ -2427,7 +2183,6 @@
 
     long-to-int v0, v0
 
-    .line 386
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
 
     move-result v1
@@ -2441,13 +2196,11 @@
     :cond_2
     const-string v1, "A"
 
-    .line 389
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 385
     invoke-virtual {p1, v0, v1, p0}, Lcom/android/server/biometrics/SemBioLoggingManager;->fpStart(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -2456,7 +2209,6 @@
 .method public stopHalOperation()V
     .locals 2
 
-    .line 429
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2479,20 +2231,16 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 430
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_0
 
-    .line 431
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mUdfpsImpl:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;
 
     if-eqz v0, :cond_0
 
-    .line 432
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsSysUiImpl;->stop()V
 
-    .line 435
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
@@ -2508,7 +2256,6 @@
 .method public useEarlyAuthenticationResult()Z
     .locals 1
 
-    .line 762
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->isKeyguard()Z
 
     move-result v0
@@ -2541,7 +2288,6 @@
 .method public vibrateError()V
     .locals 1
 
-    .line 758
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
@@ -2556,7 +2302,6 @@
 .method public vibrateSuccess()V
     .locals 1
 
-    .line 753
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseAuthenticationClient$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;

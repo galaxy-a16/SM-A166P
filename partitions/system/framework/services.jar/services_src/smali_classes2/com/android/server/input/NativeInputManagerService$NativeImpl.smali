@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;Landroid/os/MessageQueue;)V
     .locals 0
 
-    .line 368
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 369
     invoke-direct {p0, p1, p2}, Lcom/android/server/input/NativeInputManagerService$NativeImpl;->init(Lcom/android/server/input/InputManagerService;Landroid/os/MessageQueue;)J
 
     move-result-wide p1

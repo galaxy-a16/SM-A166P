@@ -23,17 +23,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 178
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x2
 
-    .line 179
     iput v0, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;->userId:I
 
     const-string v0, "SHA-256"
 
-    .line 181
     iput-object v0, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;->algorithm:Ljava/lang/String;
 
     return-void
@@ -42,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;-><init>()V
 
     return-void
@@ -53,7 +49,6 @@
 .method public getBlobHandle()Landroid/app/blob/BlobHandle;
     .locals 6
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;->algorithm:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;->digest:[B

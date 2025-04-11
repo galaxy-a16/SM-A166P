@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/vibrator/VibrationCustomSettings;)V
     .locals 0
 
-    .line 388
     iput-object p1, p0, Lcom/android/server/vibrator/VibrationCustomSettings$1;->this$0:Lcom/android/server/vibrator/VibrationCustomSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onFoldStateChanged(Z)V
     .locals 2
 
-    .line 391
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,7 +44,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     iget-object v0, p0, Lcom/android/server/vibrator/VibrationCustomSettings$1;->this$0:Lcom/android/server/vibrator/VibrationCustomSettings;
 
     invoke-static {v0}, Lcom/android/server/vibrator/VibrationCustomSettings;->-$$Nest$mgetDefaultVibratorController(Lcom/android/server/vibrator/VibrationCustomSettings;)Lcom/android/server/vibrator/VibratorController;
@@ -55,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 393
     iget-object p0, p0, Lcom/android/server/vibrator/VibrationCustomSettings$1;->this$0:Lcom/android/server/vibrator/VibrationCustomSettings;
 
     invoke-static {p0}, Lcom/android/server/vibrator/VibrationCustomSettings;->-$$Nest$mgetDefaultVibratorController(Lcom/android/server/vibrator/VibrationCustomSettings;)Lcom/android/server/vibrator/VibratorController;
@@ -71,7 +67,6 @@
 .method public onTableModeChanged(Z)V
     .locals 1
 
-    .line 399
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

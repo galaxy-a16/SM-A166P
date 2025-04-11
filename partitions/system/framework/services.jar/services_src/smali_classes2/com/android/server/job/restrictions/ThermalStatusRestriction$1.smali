@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/job/restrictions/ThermalStatusRestriction;)V
     .locals 0
 
-    .line 71
     iput-object p1, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$1;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +36,6 @@
 
     if-le p1, v1, :cond_2
 
-    .line 83
     :cond_0
     iget-object v3, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$1;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
@@ -68,7 +66,6 @@
     :cond_3
     move v1, v0
 
-    .line 94
     :goto_0
     iget-object v3, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$1;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
@@ -83,14 +80,12 @@
     :cond_4
     invoke-static {v3, v0}, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->-$$Nest$fputmIncrease(Lcom/android/server/job/restrictions/ThermalStatusRestriction;Z)V
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$1;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
     invoke-static {v0, p1}, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->-$$Nest$fputmThermalStatus(Lcom/android/server/job/restrictions/ThermalStatusRestriction;I)V
 
     if-eqz v1, :cond_5
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction$1;->this$0:Lcom/android/server/job/restrictions/ThermalStatusRestriction;
 
     iget-object p1, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;

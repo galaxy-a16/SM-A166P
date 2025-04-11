@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/util/List;
 
     invoke-static {p1}, Lcom/android/server/integrity/serializer/RuleBinarySerializer;->$r8$lambda$yUYjoaRB_r3j2soYlmFMhIfAtVY(Ljava/util/List;)Ljava/lang/Integer;

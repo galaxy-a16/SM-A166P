@@ -15,17 +15,14 @@
 .method public constructor <init>(ILandroid/service/notification/ZenModeConfig;Landroid/app/NotificationManager$Policy;)V
     .locals 0
 
-    .line 203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 204
     iput p1, p0, Lcom/android/server/notification/ZenModeEventLogger$ZenModeInfo;->mZenMode:I
 
     const/4 p1, 0x0
 
     if-eqz p2, :cond_0
 
-    .line 206
     invoke-virtual {p2}, Landroid/service/notification/ZenModeConfig;->copy()Landroid/service/notification/ZenModeConfig;
 
     move-result-object p2
@@ -40,7 +37,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 207
     invoke-virtual {p3}, Landroid/app/NotificationManager$Policy;->copy()Landroid/app/NotificationManager$Policy;
 
     move-result-object p1

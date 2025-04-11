@@ -7,7 +7,6 @@
 .method public static isAllowedCocktailCategory(Lcom/samsung/android/cocktailbar/CocktailProviderInfo;I)Z
     .locals 1
 
-    .line 37
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     invoke-static {v0}, Lcom/android/server/cocktailbar/utils/CocktailBarUtils$CocktailBarWhiteList;->isCategoryOfWhiteList(I)Z
@@ -16,7 +15,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 38
     iget-object p0, p0, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -38,7 +36,6 @@
 .method public static isCategoryOfWhiteList(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x20
 
     if-eq p0, v0, :cond_0
@@ -60,7 +57,6 @@
 .method public static isSystemApplication(Ljava/lang/String;I)Z
     .locals 4
 
-    .line 53
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
@@ -69,7 +65,6 @@
 
     if-nez v0, :cond_0
 
-    .line 55
     invoke-static {}, Lcom/android/server/cocktailbar/utils/CocktailBarUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -83,7 +78,6 @@
     :cond_0
     const-wide/16 v2, 0x40
 
-    .line 59
     :try_start_0
     invoke-interface {v0, p0, v2, v3, p1}, Landroid/content/pm/IPackageManager;->getPackageInfo(Ljava/lang/String;JI)Landroid/content/pm/PackageInfo;
 
@@ -91,7 +85,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 61
     iget-object v0, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -104,7 +97,6 @@
 
     return p0
 
-    .line 65
     :cond_1
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -118,7 +110,6 @@
 
     const-string p0, " is no signature app"
 
-    .line 67
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
@@ -126,7 +117,6 @@
     :cond_2
     const-string p0, " f="
 
-    .line 69
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     iget-object p0, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -135,7 +125,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 71
     :goto_0
     invoke-static {}, Lcom/android/server/cocktailbar/utils/CocktailBarUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -154,7 +143,6 @@
     :catch_0
     move-exception p0
 
-    .line 75
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     return v1

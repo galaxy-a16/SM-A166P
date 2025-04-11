@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;Lcom/android/server/inputmethod/IInputMethodInvoker;Landroid/view/InputChannel;)V
     .locals 0
 
-    .line 3260
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$1;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iput-object p2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$1;->val$curMethod:Lcom/android/server/inputmethod/IInputMethodInvoker;
@@ -32,12 +31,10 @@
 .method public sessionCreated(Lcom/android/internal/inputmethod/IInputMethodSession;)V
     .locals 4
 
-    .line 3263
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3265
     :try_start_0
     iget-object v2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$1;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -49,7 +46,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3267
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -59,6 +55,5 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3268
     throw p0
 .end method

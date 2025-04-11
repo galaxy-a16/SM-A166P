@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/SubDisplayMode;Landroid/os/Looper;)V
     .locals 0
 
-    .line 65
     iput-object p1, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$1;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 68
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x3f2
@@ -33,7 +31,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$1;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 

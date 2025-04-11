@@ -49,17 +49,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .line 216
     instance-of v0, p1, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 217
     check-cast p1, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;
 
-    .line 218
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->expirationTimeElapsed:J
 
     iget-wide v4, p1, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->expirationTimeElapsed:J
@@ -175,7 +172,6 @@
 .method public hashCode()I
     .locals 4
 
-    .line 244
     iget-wide v0, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->expirationTimeElapsed:J
 
     invoke-static {v0, v1}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$smhashLong(J)I
@@ -188,7 +184,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 245
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->allowedTimePerPeriodMs:J
 
     invoke-static {v2, v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$smhashLong(J)I
@@ -199,7 +194,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 246
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->windowSizeMs:J
 
     invoke-static {v2, v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$smhashLong(J)I
@@ -210,7 +204,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 247
     iget v0, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->jobCountLimit:I
 
     int-to-long v2, v0
@@ -223,7 +216,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 248
     iget v0, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->sessionCountLimit:I
 
     int-to-long v2, v0
@@ -236,7 +228,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 249
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->executionTimeInWindowMs:J
 
     invoke-static {v2, v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$smhashLong(J)I
@@ -247,14 +238,12 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 250
     iget v0, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->bgJobCountInWindow:I
 
     add-int/2addr v1, v0
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 251
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->executionTimeInMaxPeriodMs:J
 
     invoke-static {v2, v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$smhashLong(J)I
@@ -265,21 +254,18 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 252
     iget v0, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->bgJobCountInMaxPeriod:I
 
     add-int/2addr v1, v0
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 253
     iget v0, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->sessionCountInWindow:I
 
     add-int/2addr v1, v0
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 254
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->inQuotaTimeElapsed:J
 
     invoke-static {v2, v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$smhashLong(J)I
@@ -290,7 +276,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 255
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->jobRateLimitExpirationTimeElapsed:J
 
     invoke-static {v2, v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$smhashLong(J)I
@@ -301,14 +286,12 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 256
     iget v0, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->jobCountInRateLimitingWindow:I
 
     add-int/2addr v1, v0
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 257
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->sessionRateLimitExpirationTimeElapsed:J
 
     invoke-static {v2, v3}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$smhashLong(J)I
@@ -319,7 +302,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 258
     iget p0, p0, Lcom/android/server/job/controllers/QuotaController$ExecutionStats;->sessionCountInRateLimitingWindow:I
 
     add-int/2addr v1, p0
@@ -330,7 +312,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 196
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

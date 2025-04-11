@@ -20,19 +20,14 @@
 .method public constructor <init>(Ljava/lang/String;IILcom/android/server/policy/PermissionPolicyInternal;)V
     .locals 0
 
-    .line 10492
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10493
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mPkgName:Ljava/lang/String;
 
-    .line 10494
     iput p2, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mUserId:I
 
-    .line 10495
     iput p3, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mTaskId:I
 
-    .line 10496
     iput-object p4, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mPpi:Lcom/android/server/policy/PermissionPolicyInternal;
 
     return-void
@@ -43,7 +38,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 10501
     instance-of v0, p1, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;
 
     const/4 v1, 0x0
@@ -52,11 +46,9 @@
 
     return v1
 
-    .line 10505
     :cond_0
     check-cast p1, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;
 
-    .line 10508
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mPkgName:Ljava/lang/String;
 
     iget-object v2, p1, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mPkgName:Ljava/lang/String;
@@ -88,7 +80,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 10514
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mPkgName:Ljava/lang/String;
 
     iget v1, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mUserId:I
@@ -117,7 +108,6 @@
 .method public run()V
     .locals 3
 
-    .line 10519
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mPpi:Lcom/android/server/policy/PermissionPolicyInternal;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$ShowNotificationPermissionPromptRunnable;->mPkgName:Ljava/lang/String;

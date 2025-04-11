@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$5dnAREZ6DoCp9ML00c-ZsplRBu0(Lcom/android/server/app/GameServiceProviderInstanceImpl$7;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/app/GameServiceProviderInstanceImpl$7;->lambda$restartGame$1(I)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$mkDfAPf9TKUh00bam1fxJVE2s4M(Lcom/android/server/app/GameServiceProviderInstanceImpl$7;ILcom/android/internal/infra/AndroidFuture;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/app/GameServiceProviderInstanceImpl$7;->lambda$takeScreenshot$0(ILcom/android/internal/infra/AndroidFuture;)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public constructor <init>(Lcom/android/server/app/GameServiceProviderInstanceImpl;)V
     .locals 0
 
-    .line 198
     iput-object p1, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$7;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-direct {p0}, Landroid/service/games/IGameSessionController$Stub;-><init>()V
@@ -40,7 +37,6 @@
 .method private synthetic lambda$restartGame$1(I)V
     .locals 0
 
-    .line 217
     iget-object p0, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$7;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-static {p0, p1}, Lcom/android/server/app/GameServiceProviderInstanceImpl;->-$$Nest$mrestartGame(Lcom/android/server/app/GameServiceProviderInstanceImpl;I)V
@@ -51,7 +47,6 @@
 .method private synthetic lambda$takeScreenshot$0(ILcom/android/internal/infra/AndroidFuture;)V
     .locals 0
 
-    .line 206
     iget-object p0, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$7;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/app/GameServiceProviderInstanceImpl;->takeScreenshot(ILcom/android/internal/infra/AndroidFuture;)V
@@ -64,10 +59,8 @@
 .method public restartGame(I)V
     .locals 2
 
-    .line 214
     invoke-super {p0}, Landroid/service/games/IGameSessionController$Stub;->restartGame_enforcePermission()V
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$7;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-static {v0}, Lcom/android/server/app/GameServiceProviderInstanceImpl;->-$$Nest$fgetmBackgroundExecutor(Lcom/android/server/app/GameServiceProviderInstanceImpl;)Ljava/util/concurrent/Executor;
@@ -86,10 +79,8 @@
 .method public takeScreenshot(ILcom/android/internal/infra/AndroidFuture;)V
     .locals 2
 
-    .line 203
     invoke-super {p0}, Landroid/service/games/IGameSessionController$Stub;->takeScreenshot_enforcePermission()V
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$7;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-static {v0}, Lcom/android/server/app/GameServiceProviderInstanceImpl;->-$$Nest$fgetmBackgroundExecutor(Lcom/android/server/app/GameServiceProviderInstanceImpl;)Ljava/util/concurrent/Executor;

@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/updates/ConfigUpdateInstallReceiver;Landroid/content/Intent;Landroid/content/Context;)V
     .locals 0
 
-    .line 63
     iput-object p1, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
     iput-object p2, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->val$intent:Landroid/content/Intent;
@@ -36,7 +35,6 @@
 
     const v1, 0xc864
 
-    .line 68
     :try_start_0
     iget-object v2, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
@@ -46,7 +44,6 @@
 
     move-result v2
 
-    .line 70
     iget-object v3, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
     iget-object v4, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->val$intent:Landroid/content/Intent;
@@ -55,14 +52,12 @@
 
     move-result-object v3
 
-    .line 72
     iget-object v4, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
     invoke-static {v4}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->-$$Nest$mgetCurrentVersion(Lcom/android/server/updates/ConfigUpdateInstallReceiver;)I
 
     move-result v4
 
-    .line 74
     iget-object v5, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
     invoke-static {v5}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->-$$Nest$mgetCurrentContent(Lcom/android/server/updates/ConfigUpdateInstallReceiver;)[B
@@ -73,7 +68,6 @@
 
     move-result-object v5
 
-    .line 75
     iget-object v6, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
     invoke-virtual {v6, v4, v2}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->verifyVersion(II)Z
@@ -84,12 +78,10 @@
 
     const-string p0, "Not installing, new version is <= current version"
 
-    .line 76
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 77
     :cond_0
     iget-object v4, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
@@ -101,7 +93,6 @@
 
     const-string p0, "Current hash did not match required value"
 
-    .line 78
     invoke-static {v1, p0}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
     goto :goto_1
@@ -109,10 +100,8 @@
     :cond_1
     const-string v3, "Found new update, installing..."
 
-    .line 82
     invoke-static {v0, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     iget-object v3, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
     iget-object v4, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->val$context:Landroid/content/Context;
@@ -125,7 +114,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 84
     :try_start_1
     iget-object v4, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
@@ -135,17 +123,14 @@
 
     if-eqz v3, :cond_2
 
-    .line 85
     :try_start_2
     invoke-virtual {v3}, Ljava/io/BufferedInputStream;->close()V
 
     :cond_2
     const-string v2, "Installation successful"
 
-    .line 86
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     iget-object v2, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->this$0:Lcom/android/server/updates/ConfigUpdateInstallReceiver;
 
     iget-object v3, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->val$context:Landroid/content/Context;
@@ -163,7 +148,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 83
     :try_start_3
     invoke-virtual {v3}, Ljava/io/BufferedInputStream;->close()V
     :try_end_3
@@ -188,15 +172,12 @@
 
     const-string v2, "Could not update content!"
 
-    .line 90
     invoke-static {v0, v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 92
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 93
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -209,12 +190,10 @@
 
     const/16 v2, 0x63
 
-    .line 94
     invoke-virtual {p0, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 96
     :cond_4
     invoke-static {v1, p0}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 

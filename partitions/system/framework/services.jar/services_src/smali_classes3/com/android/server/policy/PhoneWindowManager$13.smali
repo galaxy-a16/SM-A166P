@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;IZ)V
     .locals 0
 
-    .line 4830
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$13;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iput p2, p0, Lcom/android/server/policy/PhoneWindowManager$13;->val$displayId:I
@@ -37,12 +36,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 4834
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 4836
     :try_start_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$13;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -56,7 +53,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4838
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -66,7 +62,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4839
     throw p0
 
     :cond_0

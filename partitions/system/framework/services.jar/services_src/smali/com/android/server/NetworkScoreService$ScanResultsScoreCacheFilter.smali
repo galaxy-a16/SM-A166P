@@ -14,22 +14,18 @@
 .method public constructor <init>(Ljava/util/function/Supplier;)V
     .locals 4
 
-    .line 665
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 666
     invoke-interface {p1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/util/List;
 
-    .line 667
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 668
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1, v0}, Landroid/util/ArraySet;-><init>(I)V
@@ -41,21 +37,18 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 670
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/net/wifi/ScanResult;
 
-    .line 671
     invoke-static {v2}, Landroid/net/NetworkKey;->createFromScanResult(Landroid/net/wifi/ScanResult;)Landroid/net/NetworkKey;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 673
     iget-object v3, p0, Lcom/android/server/NetworkScoreService$ScanResultsScoreCacheFilter;->mScanResultKeys:Ljava/util/Set;
 
     invoke-interface {v3, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -74,7 +67,6 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 661
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/android/server/NetworkScoreService$ScanResultsScoreCacheFilter;->apply(Ljava/util/List;)Ljava/util/List;
@@ -87,7 +79,6 @@
 .method public apply(Ljava/util/List;)Ljava/util/List;
     .locals 5
 
-    .line 680
     iget-object v0, p0, Lcom/android/server/NetworkScoreService$ScanResultsScoreCacheFilter;->mScanResultKeys:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -104,7 +95,6 @@
 
     goto :goto_1
 
-    .line 684
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -112,7 +102,6 @@
 
     const/4 v1, 0x0
 
-    .line 685
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -120,14 +109,12 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 686
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/net/ScoredNetwork;
 
-    .line 687
     iget-object v3, p0, Lcom/android/server/NetworkScoreService$ScanResultsScoreCacheFilter;->mScanResultKeys:Ljava/util/Set;
 
     iget-object v4, v2, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
@@ -138,7 +125,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 688
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -149,7 +135,6 @@
     :cond_2
     return-object v0
 
-    .line 681
     :cond_3
     :goto_1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;

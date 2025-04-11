@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/hardware/location/NanoAppMessage;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$$ExternalSyntheticLambda5;->f$0:Landroid/hardware/location/NanoAppMessage;
@@ -27,7 +26,6 @@
 .method public final accept(Landroid/hardware/location/IContextHubClientCallback;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$$ExternalSyntheticLambda5;->f$0:Landroid/hardware/location/NanoAppMessage;
 
     invoke-static {p0, p1}, Lcom/android/server/location/contexthub/ContextHubClientBroker;->$r8$lambda$FNcI6dKEOYt3Xb9PdRUAFHJumJ4(Landroid/hardware/location/NanoAppMessage;Landroid/hardware/location/IContextHubClientCallback;)V

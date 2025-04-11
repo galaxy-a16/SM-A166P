@@ -37,7 +37,6 @@
 .method public static synthetic $values()[Lcom/android/server/chimera/SkipReasonLogger$Reason;
     .locals 13
 
-    .line 18
     sget-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->LRU:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     sget-object v1, Lcom/android/server/chimera/SkipReasonLogger$Reason;->CACHED_EMPTY:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -74,7 +73,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 19
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "LRU"
@@ -85,7 +83,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->LRU:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 20
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "CACHED_EMPTY"
@@ -96,7 +93,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->CACHED_EMPTY:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 21
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "PERSISTENT_OR_PROTECTED"
@@ -107,7 +103,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->PERSISTENT_OR_PROTECTED:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 22
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "PICKED"
@@ -118,7 +113,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->PICKED:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 23
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "CACC"
@@ -129,7 +123,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->CACC:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 24
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "INTERVAL"
@@ -140,7 +133,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->INTERVAL:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 25
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "VISIBLE_SCREEN"
@@ -151,7 +143,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->VISIBLE_SCREEN:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 26
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "WAKELOCK"
@@ -162,7 +153,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->WAKELOCK:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 27
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "SERVICE"
@@ -173,7 +163,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->SERVICE:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 28
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "UID"
@@ -184,7 +173,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->UID:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 29
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "ADJ_OR_PROC_STATE"
@@ -195,7 +183,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->ADJ_OR_PROC_STATE:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 30
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "KILL_ONLY_ONE_SVC_AT_A_TIME"
@@ -206,7 +193,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->KILL_ONLY_ONE_SVC_AT_A_TIME:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 31
     new-instance v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     const-string v1, "HAS_CONNECTION_PROVIDER"
@@ -217,7 +203,6 @@
 
     sput-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->HAS_CONNECTION_PROVIDER:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
-    .line 18
     invoke-static {}, Lcom/android/server/chimera/SkipReasonLogger$Reason;->$values()[Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     move-result-object v0
@@ -230,7 +215,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 18
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -239,7 +223,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/chimera/SkipReasonLogger$Reason;
     .locals 1
 
-    .line 18
     const-class v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -254,7 +237,6 @@
 .method public static values()[Lcom/android/server/chimera/SkipReasonLogger$Reason;
     .locals 1
 
-    .line 18
     sget-object v0, Lcom/android/server/chimera/SkipReasonLogger$Reason;->$VALUES:[Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     invoke-virtual {v0}, [Lcom/android/server/chimera/SkipReasonLogger$Reason;->clone()Ljava/lang/Object;

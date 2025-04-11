@@ -15,7 +15,6 @@
 
     move-object v1, p1
 
-    .line 1518
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$10;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     move-object v1, p2
@@ -44,7 +43,6 @@
 .method public sehInstallTAEnd([B)I
     .locals 6
 
-    .line 1533
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$10;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
@@ -69,7 +67,6 @@
 .method public sehInstallTAStart()I
     .locals 6
 
-    .line 1521
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$10;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
@@ -94,7 +91,6 @@
 .method public sehInstallTAWrite([B)I
     .locals 6
 
-    .line 1527
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$10;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I

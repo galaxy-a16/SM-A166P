@@ -7,17 +7,14 @@
 .method public static aidl2hidlConfidenceLevel(Landroid/media/soundtrigger/ConfidenceLevel;)Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;
     .locals 2
 
-    .line 267
     new-instance v0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;-><init>()V
 
-    .line 269
     iget v1, p0, Landroid/media/soundtrigger/ConfidenceLevel;->userId:I
 
     iput v1, v0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->userId:I
 
-    .line 270
     iget p0, p0, Landroid/media/soundtrigger/ConfidenceLevel;->levelPercent:I
 
     iput p0, v0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->levelPercent:I
@@ -28,7 +25,6 @@
 .method public static aidl2hidlModelParameter(I)I
     .locals 0
 
-    .line 0
     if-eqz p0, :cond_0
 
     const/4 p0, -0x1
@@ -44,17 +40,14 @@
 .method public static aidl2hidlPhrase(Landroid/media/soundtrigger/Phrase;)Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;
     .locals 6
 
-    .line 150
     new-instance v0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;-><init>()V
 
-    .line 151
     iget v1, p0, Landroid/media/soundtrigger/Phrase;->id:I
 
     iput v1, v0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;->id:I
 
-    .line 152
     iget v1, p0, Landroid/media/soundtrigger/Phrase;->recognitionModes:I
 
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->aidl2hidlRecognitionModes(I)I
@@ -63,7 +56,6 @@
 
     iput v1, v0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;->recognitionModes:I
 
-    .line 153
     iget-object v1, p0, Landroid/media/soundtrigger/Phrase;->users:[I
 
     array-length v2, v1
@@ -75,7 +67,6 @@
 
     aget v4, v1, v3
 
-    .line 154
     iget-object v5, v0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;->users:Ljava/util/ArrayList;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -88,13 +79,11 @@
 
     goto :goto_0
 
-    .line 156
     :cond_0
     iget-object v1, p0, Landroid/media/soundtrigger/Phrase;->locale:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;->locale:Ljava/lang/String;
 
-    .line 157
     iget-object p0, p0, Landroid/media/soundtrigger/Phrase;->text:Ljava/lang/String;
 
     iput-object p0, v0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;->text:Ljava/lang/String;
@@ -105,17 +94,14 @@
 .method public static aidl2hidlPhraseRecognitionExtra(Landroid/media/soundtrigger/PhraseRecognitionExtra;)Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;
     .locals 5
 
-    .line 238
     new-instance v0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;-><init>()V
 
-    .line 240
     iget v1, p0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->id:I
 
     iput v1, v0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->id:I
 
-    .line 241
     iget v1, p0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->recognitionModes:I
 
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->aidl2hidlRecognitionModes(I)I
@@ -124,12 +110,10 @@
 
     iput v1, v0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->recognitionModes:I
 
-    .line 242
     iget v1, p0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->confidenceLevel:I
 
     iput v1, v0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->confidenceLevel:I
 
-    .line 243
     iget-object v1, v0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->levels:Ljava/util/ArrayList;
 
     iget-object v2, p0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->levels:[Landroid/media/soundtrigger/ConfidenceLevel;
@@ -138,7 +122,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->ensureCapacity(I)V
 
-    .line 244
     iget-object p0, p0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->levels:[Landroid/media/soundtrigger/ConfidenceLevel;
 
     array-length v1, p0
@@ -150,7 +133,6 @@
 
     aget-object v3, p0, v2
 
-    .line 245
     iget-object v4, v0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->levels:Ljava/util/ArrayList;
 
     invoke-static {v3}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->aidl2hidlConfidenceLevel(Landroid/media/soundtrigger/ConfidenceLevel;)Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;
@@ -170,12 +152,10 @@
 .method public static aidl2hidlPhraseSoundModel(Landroid/media/soundtrigger/PhraseSoundModel;)Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$PhraseSoundModel;
     .locals 5
 
-    .line 211
     new-instance v0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$PhraseSoundModel;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$PhraseSoundModel;-><init>()V
 
-    .line 212
     iget-object v1, p0, Landroid/media/soundtrigger/PhraseSoundModel;->common:Landroid/media/soundtrigger/SoundModel;
 
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->aidl2hidlSoundModel(Landroid/media/soundtrigger/SoundModel;)Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$SoundModel;
@@ -184,7 +164,6 @@
 
     iput-object v1, v0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$PhraseSoundModel;->common:Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$SoundModel;
 
-    .line 213
     iget-object p0, p0, Landroid/media/soundtrigger/PhraseSoundModel;->phrases:[Landroid/media/soundtrigger/Phrase;
 
     array-length v1, p0
@@ -196,7 +175,6 @@
 
     aget-object v3, p0, v2
 
-    .line 214
     iget-object v4, v0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$PhraseSoundModel;->phrases:Ljava/util/ArrayList;
 
     invoke-static {v3}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->aidl2hidlPhrase(Landroid/media/soundtrigger/Phrase;)Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Phrase;
@@ -216,27 +194,22 @@
 .method public static aidl2hidlRecognitionConfig(Landroid/media/soundtrigger/RecognitionConfig;II)Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;
     .locals 4
 
-    .line 221
     new-instance v0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;-><init>()V
 
-    .line 223
     iget-object v1, v0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->base:Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;
 
     iget-object v1, v1, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;->header:Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$RecognitionConfig;
 
     iput p1, v1, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$RecognitionConfig;->captureDevice:I
 
-    .line 224
     iput p2, v1, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$RecognitionConfig;->captureHandle:I
 
-    .line 225
     iget-boolean p1, p0, Landroid/media/soundtrigger/RecognitionConfig;->captureRequested:Z
 
     iput-boolean p1, v1, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$RecognitionConfig;->captureRequested:Z
 
-    .line 226
     iget-object p1, p0, Landroid/media/soundtrigger/RecognitionConfig;->phraseRecognitionExtras:[Landroid/media/soundtrigger/PhraseRecognitionExtra;
 
     array-length p2, p1
@@ -248,7 +221,6 @@
 
     aget-object v2, p1, v1
 
-    .line 227
     iget-object v3, v0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->base:Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;
 
     iget-object v3, v3, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;->header:Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$RecognitionConfig;
@@ -265,7 +237,6 @@
 
     goto :goto_0
 
-    .line 229
     :cond_0
     iget-object p1, v0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->base:Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;
 
@@ -279,7 +250,6 @@
 
     iput-object p2, p1, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;->data:Landroid/os/HidlMemory;
 
-    .line 231
     iget p0, p0, Landroid/media/soundtrigger/RecognitionConfig;->audioCapabilities:I
 
     iput p0, v0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->audioCapabilities:I
@@ -290,7 +260,6 @@
 .method public static aidl2hidlRecognitionModes(I)I
     .locals 2
 
-    .line 0
     and-int/lit8 v0, p0, 0x1
 
     if-eqz v0, :cond_0
@@ -330,12 +299,10 @@
 .method public static aidl2hidlSoundModel(Landroid/media/soundtrigger/SoundModel;)Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$SoundModel;
     .locals 3
 
-    .line 200
     new-instance v0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$SoundModel;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$SoundModel;-><init>()V
 
-    .line 201
     iget-object v1, v0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$SoundModel;->header:Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$SoundModel;
 
     iget v2, p0, Landroid/media/soundtrigger/SoundModel;->type:I
@@ -346,7 +313,6 @@
 
     iput v2, v1, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$SoundModel;->type:I
 
-    .line 202
     iget-object v1, v0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$SoundModel;->header:Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$SoundModel;
 
     iget-object v2, p0, Landroid/media/soundtrigger/SoundModel;->uuid:Ljava/lang/String;
@@ -357,7 +323,6 @@
 
     iput-object v2, v1, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$SoundModel;->uuid:Landroid/hardware/audio/common/V2_0/Uuid;
 
-    .line 203
     iget-object v1, v0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$SoundModel;->header:Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$SoundModel;
 
     iget-object v2, p0, Landroid/media/soundtrigger/SoundModel;->vendorUuid:Ljava/lang/String;
@@ -368,7 +333,6 @@
 
     iput-object v2, v1, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$SoundModel;->vendorUuid:Landroid/hardware/audio/common/V2_0/Uuid;
 
-    .line 204
     iget-object v1, p0, Landroid/media/soundtrigger/SoundModel;->data:Landroid/os/ParcelFileDescriptor;
 
     iget p0, p0, Landroid/media/soundtrigger/SoundModel;->dataSize:I
@@ -393,7 +357,6 @@
 
     return v0
 
-    .line 133
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -424,28 +387,24 @@
 .method public static aidl2hidlUuid(Ljava/lang/String;)Landroid/hardware/audio/common/V2_0/Uuid;
     .locals 11
 
-    .line 108
     sget-object v0, Lcom/android/server/soundtrigger_middleware/UuidUtil;->PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 109
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 112
     new-instance p0, Landroid/hardware/audio/common/V2_0/Uuid;
 
     invoke-direct {p0}, Landroid/hardware/audio/common/V2_0/Uuid;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 113
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
@@ -460,7 +419,6 @@
 
     const/4 v2, 0x2
 
-    .line 114
     invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -475,7 +433,6 @@
 
     const/4 v4, 0x3
 
-    .line 115
     invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v5
@@ -490,7 +447,6 @@
 
     const/4 v5, 0x4
 
-    .line 116
     invoke-virtual {v0, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -509,7 +465,6 @@
 
     const/4 v8, 0x5
 
-    .line 117
     invoke-virtual {v0, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -524,7 +479,6 @@
 
     aput-byte v9, v7, v10
 
-    .line 118
     invoke-virtual {v0, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -539,7 +493,6 @@
 
     const/4 v1, 0x7
 
-    .line 119
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -554,7 +507,6 @@
 
     const/16 v1, 0x8
 
-    .line 120
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -569,7 +521,6 @@
 
     const/16 v1, 0x9
 
-    .line 121
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -584,7 +535,6 @@
 
     const/16 v1, 0xa
 
-    .line 122
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -601,7 +551,6 @@
 
     return-object p0
 
-    .line 110
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -627,7 +576,6 @@
 .method public static hidl2aidlAudioCapabilities(I)I
     .locals 1
 
-    .line 0
     and-int/lit8 v0, p0, 0x1
 
     if-eqz v0, :cond_0
@@ -653,12 +601,10 @@
 .method public static hidl2aidlAudioConfig(Landroid/hardware/audio/common/V2_0/AudioConfig;Z)Landroid/media/audio/common/AudioConfig;
     .locals 4
 
-    .line 355
     new-instance v0, Landroid/media/audio/common/AudioConfig;
 
     invoke-direct {v0}, Landroid/media/audio/common/AudioConfig;-><init>()V
 
-    .line 356
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioConfig;->sampleRateHz:I
 
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioConfig;->channelMask:I
@@ -671,7 +617,6 @@
 
     iput-object p1, v0, Landroid/media/audio/common/AudioConfig;->base:Landroid/media/audio/common/AudioConfigBase;
 
-    .line 358
     iget-object p1, p0, Landroid/hardware/audio/common/V2_0/AudioConfig;->offloadInfo:Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;
 
     invoke-static {p1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlOffloadInfo(Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;)Landroid/media/audio/common/AudioOffloadInfo;
@@ -680,7 +625,6 @@
 
     iput-object p1, v0, Landroid/media/audio/common/AudioConfig;->offloadInfo:Landroid/media/audio/common/AudioOffloadInfo;
 
-    .line 359
     iget-wide p0, p0, Landroid/hardware/audio/common/V2_0/AudioConfig;->frameCount:J
 
     iput-wide p0, v0, Landroid/media/audio/common/AudioConfig;->frameCount:J
@@ -691,22 +635,18 @@
 .method public static hidl2aidlAudioConfigBase(IIIZ)Landroid/media/audio/common/AudioConfigBase;
     .locals 1
 
-    .line 386
     new-instance v0, Landroid/media/audio/common/AudioConfigBase;
 
     invoke-direct {v0}, Landroid/media/audio/common/AudioConfigBase;-><init>()V
 
-    .line 387
     iput p0, v0, Landroid/media/audio/common/AudioConfigBase;->sampleRate:I
 
-    .line 390
     invoke-static {p1, p3}, Landroid/media/audio/common/AidlConversion;->legacy2aidl_audio_channel_mask_t_AudioChannelLayout(IZ)Landroid/media/audio/common/AudioChannelLayout;
 
     move-result-object p0
 
     iput-object p0, v0, Landroid/media/audio/common/AudioConfigBase;->channelMask:Landroid/media/audio/common/AudioChannelLayout;
 
-    .line 393
     invoke-static {p2}, Landroid/media/audio/common/AidlConversion;->legacy2aidl_audio_format_t_AudioFormatDescription(I)Landroid/media/audio/common/AudioFormatDescription;
 
     move-result-object p0
@@ -719,17 +659,14 @@
 .method public static hidl2aidlConfidenceLevel(Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;)Landroid/media/soundtrigger/ConfidenceLevel;
     .locals 2
 
-    .line 277
     new-instance v0, Landroid/media/soundtrigger/ConfidenceLevel;
 
     invoke-direct {v0}, Landroid/media/soundtrigger/ConfidenceLevel;-><init>()V
 
-    .line 278
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->userId:I
 
     iput v1, v0, Landroid/media/soundtrigger/ConfidenceLevel;->userId:I
 
-    .line 279
     iget p0, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->levelPercent:I
 
     iput p0, v0, Landroid/media/soundtrigger/ConfidenceLevel;->levelPercent:I
@@ -746,18 +683,15 @@
 
     return-object p0
 
-    .line 403
     :cond_0
     new-instance v0, Landroid/media/soundtrigger/ModelParameterRange;
 
     invoke-direct {v0}, Landroid/media/soundtrigger/ModelParameterRange;-><init>()V
 
-    .line 404
     iget v1, p0, Landroid/hardware/soundtrigger/V2_3/ModelParameterRange;->start:I
 
     iput v1, v0, Landroid/media/soundtrigger/ModelParameterRange;->minInclusive:I
 
-    .line 405
     iget p0, p0, Landroid/hardware/soundtrigger/V2_3/ModelParameterRange;->end:I
 
     iput p0, v0, Landroid/media/soundtrigger/ModelParameterRange;->maxInclusive:I
@@ -768,12 +702,10 @@
 .method public static hidl2aidlOffloadInfo(Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;)Landroid/media/audio/common/AudioOffloadInfo;
     .locals 5
 
-    .line 366
     new-instance v0, Landroid/media/audio/common/AudioOffloadInfo;
 
     invoke-direct {v0}, Landroid/media/audio/common/AudioOffloadInfo;-><init>()V
 
-    .line 367
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->sampleRateHz:I
 
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->channelMask:I
@@ -788,7 +720,6 @@
 
     iput-object v1, v0, Landroid/media/audio/common/AudioOffloadInfo;->base:Landroid/media/audio/common/AudioConfigBase;
 
-    .line 369
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->streamType:I
 
     invoke-static {v1}, Landroid/media/audio/common/AidlConversion;->legacy2aidl_audio_stream_type_t_AudioStreamType(I)I
@@ -797,37 +728,30 @@
 
     iput v1, v0, Landroid/media/audio/common/AudioOffloadInfo;->streamType:I
 
-    .line 371
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitRatePerSecond:I
 
     iput v1, v0, Landroid/media/audio/common/AudioOffloadInfo;->bitRatePerSecond:I
 
-    .line 372
     iget-wide v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->durationMicroseconds:J
 
     iput-wide v1, v0, Landroid/media/audio/common/AudioOffloadInfo;->durationUs:J
 
-    .line 373
     iget-boolean v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->hasVideo:Z
 
     iput-boolean v1, v0, Landroid/media/audio/common/AudioOffloadInfo;->hasVideo:Z
 
-    .line 374
     iget-boolean v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->isStreaming:Z
 
     iput-boolean v1, v0, Landroid/media/audio/common/AudioOffloadInfo;->isStreaming:Z
 
-    .line 375
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitWidth:I
 
     iput v1, v0, Landroid/media/audio/common/AudioOffloadInfo;->bitWidth:I
 
-    .line 376
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bufferSize:I
 
     iput v1, v0, Landroid/media/audio/common/AudioOffloadInfo;->offloadBufferSize:I
 
-    .line 377
     iget p0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->usage:I
 
     invoke-static {p0}, Landroid/media/audio/common/AidlConversion;->legacy2aidl_audio_usage_t_AudioUsage(I)I
@@ -842,12 +766,10 @@
 .method public static hidl2aidlPhraseRecognitionEvent(Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$PhraseRecognitionEvent;)Landroid/media/soundtrigger/PhraseRecognitionEvent;
     .locals 4
 
-    .line 342
     new-instance v0, Landroid/media/soundtrigger/PhraseRecognitionEvent;
 
     invoke-direct {v0}, Landroid/media/soundtrigger/PhraseRecognitionEvent;-><init>()V
 
-    .line 343
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$PhraseRecognitionEvent;->common:Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$RecognitionEvent;
 
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlRecognitionEvent(Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$RecognitionEvent;)Landroid/media/soundtrigger/RecognitionEvent;
@@ -856,7 +778,6 @@
 
     iput-object v1, v0, Landroid/media/soundtrigger/PhraseRecognitionEvent;->common:Landroid/media/soundtrigger/RecognitionEvent;
 
-    .line 344
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$PhraseRecognitionEvent;->phraseExtras:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -869,7 +790,6 @@
 
     const/4 v1, 0x0
 
-    .line 345
     :goto_0
     iget-object v2, p0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$PhraseRecognitionEvent;->phraseExtras:Ljava/util/ArrayList;
 
@@ -879,19 +799,16 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 346
     iget-object v2, v0, Landroid/media/soundtrigger/PhraseRecognitionEvent;->phraseExtras:[Landroid/media/soundtrigger/PhraseRecognitionExtra;
 
     iget-object v3, p0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$PhraseRecognitionEvent;->phraseExtras:Ljava/util/ArrayList;
 
-    .line 347
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;
 
-    .line 346
     invoke-static {v3}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlPhraseRecognitionExtra(Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;)Landroid/media/soundtrigger/PhraseRecognitionExtra;
 
     move-result-object v3
@@ -909,17 +826,14 @@
 .method public static hidl2aidlPhraseRecognitionExtra(Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;)Landroid/media/soundtrigger/PhraseRecognitionExtra;
     .locals 4
 
-    .line 253
     new-instance v0, Landroid/media/soundtrigger/PhraseRecognitionExtra;
 
     invoke-direct {v0}, Landroid/media/soundtrigger/PhraseRecognitionExtra;-><init>()V
 
-    .line 254
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->id:I
 
     iput v1, v0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->id:I
 
-    .line 255
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->recognitionModes:I
 
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlRecognitionModes(I)I
@@ -928,12 +842,10 @@
 
     iput v1, v0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->recognitionModes:I
 
-    .line 256
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->confidenceLevel:I
 
     iput v1, v0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->confidenceLevel:I
 
-    .line 257
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->levels:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -946,7 +858,6 @@
 
     const/4 v1, 0x0
 
-    .line 258
     :goto_0
     iget-object v2, p0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->levels:Ljava/util/ArrayList;
 
@@ -956,7 +867,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 259
     iget-object v2, v0, Landroid/media/soundtrigger/PhraseRecognitionExtra;->levels:[Landroid/media/soundtrigger/ConfidenceLevel;
 
     iget-object v3, p0, Landroid/hardware/soundtrigger/V2_0/PhraseRecognitionExtra;->levels:Ljava/util/ArrayList;
@@ -984,27 +894,22 @@
 .method public static hidl2aidlProperties(Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;)Landroid/media/soundtrigger/Properties;
     .locals 2
 
-    .line 61
     new-instance v0, Landroid/media/soundtrigger/Properties;
 
     invoke-direct {v0}, Landroid/media/soundtrigger/Properties;-><init>()V
 
-    .line 62
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->implementor:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/media/soundtrigger/Properties;->implementor:Ljava/lang/String;
 
-    .line 63
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->description:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/media/soundtrigger/Properties;->description:Ljava/lang/String;
 
-    .line 64
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->version:I
 
     iput v1, v0, Landroid/media/soundtrigger/Properties;->version:I
 
-    .line 65
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->uuid:Landroid/hardware/audio/common/V2_0/Uuid;
 
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlUuid(Landroid/hardware/audio/common/V2_0/Uuid;)Ljava/lang/String;
@@ -1013,52 +918,42 @@
 
     iput-object v1, v0, Landroid/media/soundtrigger/Properties;->uuid:Ljava/lang/String;
 
-    .line 66
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->maxSoundModels:I
 
     iput v1, v0, Landroid/media/soundtrigger/Properties;->maxSoundModels:I
 
-    .line 67
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->maxKeyPhrases:I
 
     iput v1, v0, Landroid/media/soundtrigger/Properties;->maxKeyPhrases:I
 
-    .line 68
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->maxUsers:I
 
     iput v1, v0, Landroid/media/soundtrigger/Properties;->maxUsers:I
 
-    .line 69
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->recognitionModes:I
 
-    .line 70
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlRecognitionModes(I)I
 
     move-result v1
 
     iput v1, v0, Landroid/media/soundtrigger/Properties;->recognitionModes:I
 
-    .line 71
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->captureTransition:Z
 
     iput-boolean v1, v0, Landroid/media/soundtrigger/Properties;->captureTransition:Z
 
-    .line 72
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->maxBufferMs:I
 
     iput v1, v0, Landroid/media/soundtrigger/Properties;->maxBufferMs:I
 
-    .line 73
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->concurrentCapture:Z
 
     iput-boolean v1, v0, Landroid/media/soundtrigger/Properties;->concurrentCapture:Z
 
-    .line 74
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->triggerInEvent:Z
 
     iput-boolean v1, v0, Landroid/media/soundtrigger/Properties;->triggerInEvent:Z
 
-    .line 75
     iget p0, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;->powerConsumptionMw:I
 
     iput p0, v0, Landroid/media/soundtrigger/Properties;->powerConsumptionMw:I
@@ -1069,22 +964,18 @@
 .method public static hidl2aidlProperties(Landroid/hardware/soundtrigger/V2_3/Properties;)Landroid/media/soundtrigger/Properties;
     .locals 2
 
-    .line 81
     iget-object v0, p0, Landroid/hardware/soundtrigger/V2_3/Properties;->base:Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;
 
     invoke-static {v0}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlProperties(Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Properties;)Landroid/media/soundtrigger/Properties;
 
     move-result-object v0
 
-    .line 82
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_3/Properties;->supportedModelArch:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/media/soundtrigger/Properties;->supportedModelArch:Ljava/lang/String;
 
-    .line 83
     iget p0, p0, Landroid/hardware/soundtrigger/V2_3/Properties;->audioCapabilities:I
 
-    .line 84
     invoke-static {p0}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlAudioCapabilities(I)I
 
     move-result p0
@@ -1097,12 +988,10 @@
 .method public static hidl2aidlRecognitionEvent(Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;)Landroid/media/soundtrigger/RecognitionEvent;
     .locals 6
 
-    .line 301
     new-instance v0, Landroid/media/soundtrigger/RecognitionEvent;
 
     invoke-direct {v0}, Landroid/media/soundtrigger/RecognitionEvent;-><init>()V
 
-    .line 302
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->status:I
 
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlRecognitionStatus(I)I
@@ -1111,7 +1000,6 @@
 
     iput v1, v0, Landroid/media/soundtrigger/RecognitionEvent;->status:I
 
-    .line 303
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->type:I
 
     invoke-static {v1}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlSoundModelType(I)I
@@ -1120,27 +1008,22 @@
 
     iput v1, v0, Landroid/media/soundtrigger/RecognitionEvent;->type:I
 
-    .line 304
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->captureAvailable:Z
 
     iput-boolean v1, v0, Landroid/media/soundtrigger/RecognitionEvent;->captureAvailable:Z
 
-    .line 305
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->captureDelayMs:I
 
     iput v1, v0, Landroid/media/soundtrigger/RecognitionEvent;->captureDelayMs:I
 
-    .line 306
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->capturePreambleMs:I
 
     iput v1, v0, Landroid/media/soundtrigger/RecognitionEvent;->capturePreambleMs:I
 
-    .line 307
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->triggerInData:Z
 
     iput-boolean v1, v0, Landroid/media/soundtrigger/RecognitionEvent;->triggerInData:Z
 
-    .line 308
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->audioConfig:Landroid/hardware/audio/common/V2_0/AudioConfig;
 
     const/4 v2, 0x1
@@ -1151,7 +1034,6 @@
 
     iput-object v1, v0, Landroid/media/soundtrigger/RecognitionEvent;->audioConfig:Landroid/media/audio/common/AudioConfig;
 
-    .line 309
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1166,7 +1048,6 @@
 
     move v3, v1
 
-    .line 310
     :goto_0
     iget-object v4, v0, Landroid/media/soundtrigger/RecognitionEvent;->data:[B
 
@@ -1174,7 +1055,6 @@
 
     if-ge v3, v5, :cond_0
 
-    .line 311
     iget-object v5, p0, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1193,7 +1073,6 @@
 
     goto :goto_0
 
-    .line 313
     :cond_0
     iget p0, v0, Landroid/media/soundtrigger/RecognitionEvent;->status:I
 
@@ -1215,14 +1094,12 @@
 .method public static hidl2aidlRecognitionEvent(Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$RecognitionEvent;)Landroid/media/soundtrigger/RecognitionEvent;
     .locals 1
 
-    .line 320
     iget-object v0, p0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$RecognitionEvent;->header:Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;
 
     invoke-static {v0}, Lcom/android/server/soundtrigger_middleware/ConversionUtil;->hidl2aidlRecognitionEvent(Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHwCallback$RecognitionEvent;)Landroid/media/soundtrigger/RecognitionEvent;
 
     move-result-object v0
 
-    .line 322
     iget-object p0, p0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHwCallback$RecognitionEvent;->data:Landroid/os/HidlMemory;
 
     invoke-static {p0}, Landroid/os/HidlMemoryUtil;->hidlMemoryToByteArray(Landroid/os/HidlMemory;)[B
@@ -1237,7 +1114,6 @@
 .method public static hidl2aidlRecognitionModes(I)I
     .locals 2
 
-    .line 0
     and-int/lit8 v0, p0, 0x1
 
     if-eqz v0, :cond_0
@@ -1293,7 +1169,6 @@
 
     return v0
 
-    .line 294
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1335,7 +1210,6 @@
 
     return v0
 
-    .line 144
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1366,7 +1240,6 @@
 .method public static hidl2aidlUuid(Landroid/hardware/audio/common/V2_0/Uuid;)Ljava/lang/String;
     .locals 11
 
-    .line 90
     iget-object v0, p0, Landroid/hardware/audio/common/V2_0/Uuid;->node:[B
 
     if-eqz v0, :cond_0
@@ -1377,31 +1250,26 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 93
     iget v0, p0, Landroid/hardware/audio/common/V2_0/Uuid;->timeLow:I
 
-    .line 94
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iget-short v0, p0, Landroid/hardware/audio/common/V2_0/Uuid;->timeMid:S
 
-    .line 95
     invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
 
     move-result-object v2
 
     iget-short v0, p0, Landroid/hardware/audio/common/V2_0/Uuid;->versionAndTimeHigh:S
 
-    .line 96
     invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
 
     move-result-object v3
 
     iget-short v0, p0, Landroid/hardware/audio/common/V2_0/Uuid;->variantAndClockSeqHigh:S
 
-    .line 97
     invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
 
     move-result-object v4
@@ -1412,7 +1280,6 @@
 
     aget-byte v0, v0, v5
 
-    .line 98
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v5
@@ -1423,7 +1290,6 @@
 
     aget-byte v0, v0, v6
 
-    .line 99
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v6
@@ -1434,7 +1300,6 @@
 
     aget-byte v0, v0, v7
 
-    .line 100
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v7
@@ -1445,7 +1310,6 @@
 
     aget-byte v0, v0, v8
 
-    .line 101
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v8
@@ -1456,7 +1320,6 @@
 
     aget-byte v0, v0, v9
 
-    .line 102
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v9
@@ -1467,7 +1330,6 @@
 
     aget-byte p0, p0, v0
 
-    .line 103
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v10
@@ -1478,14 +1340,12 @@
 
     const-string v0, "%08x-%04x-%04x-%04x-%02x%02x%02x%02x%02x%02x"
 
-    .line 93
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 91
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1501,7 +1361,6 @@
 
     if-lez p1, :cond_0
 
-    .line 445
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p0
@@ -1517,7 +1376,6 @@
 
     const/4 p1, 0x0
 
-    .line 447
     invoke-static {p0, p1}, Landroid/os/HidlMemoryUtil;->fileDescriptorToHidlMemory(Ljava/io/FileDescriptor;I)Landroid/os/HidlMemory;
 
     move-result-object p0

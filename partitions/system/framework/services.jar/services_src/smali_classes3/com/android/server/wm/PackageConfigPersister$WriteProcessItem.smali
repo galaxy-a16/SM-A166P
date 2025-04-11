@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/wm/PackageConfigPersister;Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;)V
     .locals 0
 
-    .line 435
     iput-object p1, p0, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->this$0:Lcom/android/server/wm/PackageConfigPersister;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 436
     iput-object p2, p0, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->mRecord:Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;
 
     return-void
@@ -32,7 +30,6 @@
 .method public process()V
     .locals 6
 
-    .line 443
     iget-object v0, p0, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->this$0:Lcom/android/server/wm/PackageConfigPersister;
 
     invoke-static {v0}, Lcom/android/server/wm/PackageConfigPersister;->-$$Nest$fgetmLock(Lcom/android/server/wm/PackageConfigPersister;)Ljava/lang/Object;
@@ -43,7 +40,6 @@
 
     const/4 v1, 0x0
 
-    .line 445
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->saveToXml()[B
 
@@ -62,7 +58,6 @@
     :catch_0
     move-object v2, v1
 
-    .line 448
     :goto_0
     :try_start_1
     iget-object v3, p0, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->this$0:Lcom/android/server/wm/PackageConfigPersister;
@@ -75,14 +70,12 @@
 
     invoke-static {v3, v4, v5}, Lcom/android/server/wm/PackageConfigPersister;->-$$Nest$mremoveRecord(Lcom/android/server/wm/PackageConfigPersister;Landroid/util/SparseArray;Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;)V
 
-    .line 449
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v2, :cond_2
 
-    .line 455
     :try_start_2
     iget-object v0, p0, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->mRecord:Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;
 
@@ -92,7 +85,6 @@
 
     move-result-object v0
 
-    .line 456
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
     move-result v3
@@ -105,7 +97,6 @@
 
     if-nez v3, :cond_0
 
-    .line 457
     invoke-static {}, Lcom/android/server/wm/PackageConfigPersister;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -138,7 +129,6 @@
 
     return-void
 
-    .line 461
     :cond_0
     new-instance v3, Landroid/util/AtomicFile;
 
@@ -168,16 +158,13 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 463
     :try_start_3
     invoke-virtual {v3}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v1
 
-    .line 464
     invoke-virtual {v1, v2}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 465
     invoke-virtual {v3, v1}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
@@ -197,10 +184,8 @@
     :goto_1
     if-eqz v1, :cond_1
 
-    .line 468
     invoke-virtual {v3, v1}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 470
     :cond_1
     invoke-static {}, Lcom/android/server/wm/PackageConfigPersister;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -232,7 +217,6 @@
     :goto_2
     return-void
 
-    .line 449
     :goto_3
     :try_start_4
     monitor-exit v0
@@ -245,17 +229,14 @@
 .method public final saveToXml()[B
     .locals 6
 
-    .line 476
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 477
     invoke-static {v0}, Landroid/util/Xml;->resolveSerializer(Ljava/io/OutputStream;)Lcom/android/modules/utils/TypedXmlSerializer;
 
     move-result-object v1
 
-    .line 479
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v3, 0x0
@@ -264,10 +245,8 @@
 
     const-string v2, "config"
 
-    .line 483
     invoke-interface {v1, v3, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 484
     iget-object v4, p0, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->mRecord:Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;
 
     iget-object v4, v4, Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;->mName:Ljava/lang/String;
@@ -276,7 +255,6 @@
 
     invoke-interface {v1, v3, v5, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 485
     iget-object v4, p0, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->mRecord:Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;
 
     iget-object v4, v4, Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;->mNightMode:Ljava/lang/Integer;
@@ -285,14 +263,12 @@
 
     const-string/jumbo v5, "night_mode"
 
-    .line 486
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     invoke-interface {v1, v3, v5, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeInt(Ljava/lang/String;Ljava/lang/String;I)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 488
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/PackageConfigPersister$WriteProcessItem;->mRecord:Lcom/android/server/wm/PackageConfigPersister$PackageConfigRecord;
 
@@ -302,25 +278,19 @@
 
     const-string v4, "locale_list"
 
-    .line 490
     invoke-virtual {p0}, Landroid/os/LocaleList;->toLanguageTags()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 489
     invoke-interface {v1, v3, v4, p0}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 492
     :cond_1
     invoke-interface {v1, v3, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 493
     invoke-interface {v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endDocument()V
 
-    .line 494
     invoke-interface {v1}, Lcom/android/modules/utils/TypedXmlSerializer;->flush()V
 
-    .line 496
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0

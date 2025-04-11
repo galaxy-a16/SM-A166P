@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;)V
     .locals 2
 
-    .line 593
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 594
     iget-object p1, p1, Lcom/android/server/hdmi/HdmiLocalDevice;->mService:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiControlService;->getPowerManager()Lcom/android/server/hdmi/PowerManagerWrapper;
@@ -40,7 +38,6 @@
 
     const/4 p0, 0x0
 
-    .line 595
     invoke-virtual {p1, p0}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
     return-void
@@ -51,12 +48,10 @@
 .method public acquire()V
     .locals 1
 
-    .line 600
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 601
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;->isActiveSource()Z
@@ -81,7 +76,6 @@
 .method public isHeld()Z
     .locals 0
 
-    .line 612
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -94,7 +88,6 @@
 .method public release()V
     .locals 1
 
-    .line 606
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -105,7 +98,6 @@
 
     const-string v0, "Wake lock released"
 
-    .line 607
     invoke-static {v0, p0}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/net/NetworkPolicyManagerService;)V
     .locals 0
 
-    .line 6034
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$16;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 3
 
-    .line 6037
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x64
@@ -44,18 +42,15 @@
 
     return p0
 
-    .line 6043
     :cond_0
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 6044
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$16;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService;->handleUidGone(I)V
 
     return v2
 
-    .line 6039
     :cond_1
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$16;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 

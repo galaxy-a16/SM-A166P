@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/enterprise/email/AccountsReceiver;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/enterprise/email/AccountsReceiver;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$msendClientAuthResultIntent(Lcom/android/server/enterprise/email/AccountsReceiver;JII)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/enterprise/email/AccountsReceiver;->sendClientAuthResultIntent(JII)V
 
     return-void
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/enterprise/email/AccountsReceiver;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -46,7 +43,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 62
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -59,20 +55,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 7
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     new-instance v0, Lcom/android/server/enterprise/email/AccountsReceiver$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/email/AccountsReceiver$1;-><init>(Lcom/android/server/enterprise/email/AccountsReceiver;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/email/AccountsReceiver;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 66
     iput-object p1, p0, Lcom/android/server/enterprise/email/AccountsReceiver;->mContext:Landroid/content/Context;
 
-    .line 69
     :try_start_0
     new-instance v4, Landroid/content/IntentFilter;
 
@@ -80,30 +72,24 @@
 
     const-string v0, "edm.intent.action.sec.MDM_ACCOUNT_SETUP_RESULT"
 
-    .line 70
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "edm.intent.action.sec.MDM_ACCOUNT_DELETE_RESULT"
 
-    .line 71
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "com.samsung.android.knox.intent.action.MDM_ACCOUNT_SETUP_RESULT_INTERNAL"
 
-    .line 72
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "com.samsung.android.knox.intent.action.MDM_ACCOUNT_DELETE_RESULT_INTERNAL"
 
-    .line 73
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "com.samsung.android.knox.intent.action.CBA_INSTALL_STATUS_INTERNAL"
 
-    .line 74
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 75
     iget-object v2, p0, Lcom/android/server/enterprise/email/AccountsReceiver;->mReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -123,7 +109,6 @@
     :catch_0
     move-exception p0
 
-    .line 78
     sget-object p1, Lcom/android/server/enterprise/email/AccountsReceiver;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "register Account Receiver : failed. "
@@ -137,7 +122,6 @@
 .method public static getSMIMECertificate(Ljava/lang/String;)Lcom/android/server/enterprise/email/AccountSMIMECertificate;
     .locals 2
 
-    .line 223
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/email/AccountsReceiver;->mSmimeCerticateList:Ljava/util/Map;
 
@@ -147,12 +131,10 @@
 
     check-cast v0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;
 
-    .line 224
     sget-object v1, Lcom/android/server/enterprise/email/AccountsReceiver;->mSmimeCerticateList:Ljava/util/Map;
 
     invoke-interface {v1, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 225
     sget-object p0, Lcom/android/server/enterprise/email/AccountsReceiver;->TAG:Ljava/lang/String;
 
     const-string v1, "getSMIMECertificate() success."
@@ -166,7 +148,6 @@
     :catch_0
     move-exception p0
 
-    .line 227
     sget-object v0, Lcom/android/server/enterprise/email/AccountsReceiver;->TAG:Ljava/lang/String;
 
     const-string v1, "getSMIMECertificate() failed"
@@ -182,13 +163,11 @@
 .method public static pushSMIMECertificate(Ljava/lang/String;Lcom/android/server/enterprise/email/AccountSMIMECertificate;)Z
     .locals 1
 
-    .line 210
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/email/AccountsReceiver;->mSmimeCerticateList:Ljava/util/Map;
 
     invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
     sget-object p0, Lcom/android/server/enterprise/email/AccountsReceiver;->TAG:Ljava/lang/String;
 
     const-string/jumbo p1, "pushSMIMECertificate() success"
@@ -204,7 +183,6 @@
     :catch_0
     move-exception p0
 
-    .line 213
     sget-object p1, Lcom/android/server/enterprise/email/AccountsReceiver;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "pushSMIMECertificate() failed"
@@ -227,7 +205,6 @@
 
     if-gez p3, :cond_0
 
-    .line 283
     sget-object p3, Lcom/android/server/enterprise/email/AccountsReceiver;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -246,7 +223,6 @@
 
     invoke-static {p3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     :cond_0
     new-instance p1, Landroid/content/Intent;
 
@@ -256,10 +232,8 @@
 
     const-string p2, "com.samsung.android.knox.intent.extra.STATUS"
 
-    .line 286
     invoke-virtual {p1, p2, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 287
     iget-object p0, p0, Lcom/android/server/enterprise/email/AccountsReceiver;->mContext:Landroid/content/Context;
 
     sget-object p2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;

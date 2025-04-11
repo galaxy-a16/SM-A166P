@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Lcom/android/server/permission/jarjar/kotlin/internal/jdk7/JDK7PlatformImplementations;-><init>()V
 
     return-void

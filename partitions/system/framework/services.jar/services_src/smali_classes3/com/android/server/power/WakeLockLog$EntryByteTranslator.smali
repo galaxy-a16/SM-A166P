@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/power/WakeLockLog$TagDatabase;)V
     .locals 0
 
-    .line 488
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 489
     iput-object p1, p0, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;->mTagDatabase:Lcom/android/server/power/WakeLockLog$TagDatabase;
 
     return-void
@@ -29,7 +27,6 @@
 
     if-eqz p1, :cond_9
 
-    .line 505
     array-length v1, p1
 
     if-nez v1, :cond_0
@@ -41,7 +38,6 @@
 
     goto :goto_0
 
-    .line 510
     :cond_1
     new-instance p4, Lcom/android/server/power/WakeLockLog$LogEntry;
 
@@ -50,7 +46,6 @@
     :goto_0
     const/4 v1, 0x0
 
-    .line 512
     aget-byte v1, p1, v1
 
     shr-int/lit8 v2, v1, 0x6
@@ -76,7 +71,6 @@
 
     if-eq v2, v5, :cond_3
 
-    .line 559
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +99,6 @@
 
     goto :goto_1
 
-    .line 531
     :cond_3
     array-length v2, p1
 
@@ -118,14 +111,12 @@
 
     and-int/lit8 v0, v1, 0x7f
 
-    .line 537
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;->mTagDatabase:Lcom/android/server/power/WakeLockLog$TagDatabase;
 
     invoke-virtual {p0, v0}, Lcom/android/server/power/WakeLockLog$TagDatabase;->getTag(I)Lcom/android/server/power/WakeLockLog$TagData;
 
     move-result-object v5
 
-    .line 538
     aget-byte p0, p1, v4
 
     and-int/lit16 p0, p0, 0xff
@@ -138,12 +129,10 @@
 
     move-object v1, p4
 
-    .line 539
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/power/WakeLockLog$LogEntry;->set(JILcom/android/server/power/WakeLockLog$TagData;I)V
 
     return-object p4
 
-    .line 519
     :cond_5
     array-length v2, p1
 
@@ -154,19 +143,16 @@
     :cond_6
     and-int/lit8 v6, v1, 0x3f
 
-    .line 524
     aget-byte v0, p1, v4
 
     and-int/lit8 v0, v0, 0x7f
 
-    .line 525
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;->mTagDatabase:Lcom/android/server/power/WakeLockLog$TagDatabase;
 
     invoke-virtual {p0, v0}, Lcom/android/server/power/WakeLockLog$TagDatabase;->getTag(I)Lcom/android/server/power/WakeLockLog$TagData;
 
     move-result-object p0
 
-    .line 526
     aget-byte p1, p1, v5
 
     and-int/lit16 p1, p1, 0xff
@@ -181,12 +167,10 @@
 
     move-object v5, p0
 
-    .line 527
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/power/WakeLockLog$LogEntry;->set(JILcom/android/server/power/WakeLockLog$TagData;I)V
 
     return-object p4
 
-    .line 543
     :cond_7
     array-length p0, p1
 
@@ -197,7 +181,6 @@
     :goto_1
     return-object v0
 
-    .line 547
     :cond_8
     aget-byte p0, p1, v4
 
@@ -307,7 +290,6 @@
 
     move-object v1, p4
 
-    .line 555
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/power/WakeLockLog$LogEntry;->set(JILcom/android/server/power/WakeLockLog$TagData;I)V
 
     return-object p4
@@ -320,7 +302,6 @@
 .method public final getRelativeTime(JJ)I
     .locals 0
 
-    .line 0
     cmp-long p0, p3, p1
 
     if-gez p0, :cond_0
@@ -351,7 +332,6 @@
 .method public toBytes(Lcom/android/server/power/WakeLockLog$LogEntry;[BJ)I
     .locals 9
 
-    .line 600
     iget v0, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->type:I
 
     const/4 v1, 0x3
@@ -370,12 +350,10 @@
 
     if-eqz p2, :cond_1
 
-    .line 621
     array-length v0, p2
 
     if-lt v0, v3, :cond_1
 
-    .line 622
     iget-wide v0, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
 
     invoke-virtual {p0, p3, p4, v0, v1}, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;->getRelativeTime(JJ)I
@@ -386,7 +364,6 @@
 
     return p3
 
-    .line 627
     :cond_0
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;->mTagDatabase:Lcom/android/server/power/WakeLockLog$TagDatabase;
 
@@ -406,7 +383,6 @@
 
     int-to-byte p0, p0
 
-    .line 628
     aput-byte p0, p2, v4
 
     :cond_1
@@ -414,7 +390,6 @@
 
     goto/16 :goto_0
 
-    .line 652
     :cond_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -439,12 +414,10 @@
     :cond_3
     if-eqz p2, :cond_7
 
-    .line 603
     array-length v0, p2
 
     if-lt v0, v1, :cond_7
 
-    .line 604
     iget-wide v5, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
 
     invoke-virtual {p0, p3, p4, v5, v6}, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;->getRelativeTime(JJ)I
@@ -455,7 +428,6 @@
 
     return p3
 
-    .line 609
     :cond_4
     iget p4, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->flags:I
 
@@ -467,7 +439,6 @@
 
     aput-byte p4, p2, v2
 
-    .line 611
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;->mTagDatabase:Lcom/android/server/power/WakeLockLog$TagDatabase;
 
     iget-object p1, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->tag:Lcom/android/server/power/WakeLockLog$TagData;
@@ -484,12 +455,10 @@
 
     int-to-byte p0, p0
 
-    .line 612
     aput-byte p0, p2, v3
 
     goto :goto_0
 
-    .line 637
     :cond_5
     iget-wide p0, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
 
@@ -497,12 +466,10 @@
 
     if-eqz p2, :cond_6
 
-    .line 638
     array-length p4, p2
 
     if-lt p4, p3, :cond_6
 
-    .line 639
     aput-byte v2, p2, v2
 
     const/16 p4, 0x38
@@ -517,7 +484,6 @@
 
     int-to-byte p4, p4
 
-    .line 640
     aput-byte p4, p2, v4
 
     const/16 p4, 0x30
@@ -530,7 +496,6 @@
 
     int-to-byte p4, p4
 
-    .line 641
     aput-byte p4, p2, v3
 
     const/16 p4, 0x28
@@ -543,7 +508,6 @@
 
     int-to-byte p4, p4
 
-    .line 642
     aput-byte p4, p2, v1
 
     const/16 p4, 0x20
@@ -558,7 +522,6 @@
 
     const/4 v0, 0x4
 
-    .line 643
     aput-byte p4, p2, v0
 
     const/16 p4, 0x18
@@ -573,7 +536,6 @@
 
     const/4 v0, 0x5
 
-    .line 644
     aput-byte p4, p2, v0
 
     const/16 p4, 0x10
@@ -588,7 +550,6 @@
 
     const/4 v0, 0x6
 
-    .line 645
     aput-byte p4, p2, v0
 
     const/16 p4, 0x8
@@ -603,7 +564,6 @@
 
     const/4 v1, 0x7
 
-    .line 646
     aput-byte v0, p2, v1
 
     and-long/2addr p0, v7
@@ -612,7 +572,6 @@
 
     int-to-byte p0, p0
 
-    .line 647
     aput-byte p0, p2, p4
 
     :cond_6

@@ -24,28 +24,22 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;Lcom/android/server/accessibility/AccessibilityManagerService;Ljava/lang/Object;)V
     .locals 0
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mA11yController:Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;
 
-    .line 73
     iput-object p2, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mService:Lcom/android/server/accessibility/AccessibilityManagerService;
 
-    .line 74
     iput-object p3, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mA11yMSLock:Ljava/lang/Object;
 
     const-wide/16 p1, 0x0
 
-    .line 75
     iput-wide p1, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mEnabledLoggingFlags:J
 
     return-void
@@ -54,19 +48,16 @@
 .method public static getInstance(Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;Lcom/android/server/accessibility/AccessibilityManagerService;Ljava/lang/Object;)Lcom/android/server/accessibility/AccessibilityTraceManager;
     .locals 1
 
-    .line 62
     sget-object v0, Lcom/android/server/accessibility/AccessibilityTraceManager;->sInstance:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     if-nez v0, :cond_0
 
-    .line 63
     new-instance v0, Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/accessibility/AccessibilityTraceManager;-><init>(Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;Lcom/android/server/accessibility/AccessibilityManagerService;Ljava/lang/Object;)V
 
     sput-object v0, Lcom/android/server/accessibility/AccessibilityTraceManager;->sInstance:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
-    .line 65
     :cond_0
     sget-object p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->sInstance:Lcom/android/server/accessibility/AccessibilityTraceManager;
 
@@ -80,7 +71,6 @@
 
     const-wide/16 v0, 0x10
 
-    .line 91
     invoke-virtual {p0, v0, v1}, Lcom/android/server/accessibility/AccessibilityTraceManager;->isA11yTracingEnabledForTypes(J)Z
 
     move-result v0
@@ -97,7 +87,6 @@
     :goto_0
     const-wide/16 v1, 0x20
 
-    .line 94
     invoke-virtual {p0, v1, v2}, Lcom/android/server/accessibility/AccessibilityTraceManager;->isA11yTracingEnabledForTypes(J)Z
 
     move-result v1
@@ -109,7 +98,6 @@
     :cond_1
     const-wide/32 v1, 0x40000
 
-    .line 97
     invoke-virtual {p0, v1, v2}, Lcom/android/server/accessibility/AccessibilityTraceManager;->isA11yTracingEnabledForTypes(J)Z
 
     move-result v1
@@ -121,7 +109,6 @@
     :cond_2
     const-wide/16 v1, 0x4000
 
-    .line 100
     invoke-virtual {p0, v1, v2}, Lcom/android/server/accessibility/AccessibilityTraceManager;->isA11yTracingEnabledForTypes(J)Z
 
     move-result p0
@@ -137,7 +124,6 @@
 .method public isA11yTracingEnabled()Z
     .locals 4
 
-    .line 80
     iget-wide v0, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mEnabledLoggingFlags:J
 
     const-wide/16 v2, 0x0
@@ -160,7 +146,6 @@
 .method public isA11yTracingEnabledForTypes(J)Z
     .locals 2
 
-    .line 85
     iget-wide v0, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mEnabledLoggingFlags:J
 
     and-long p0, p1, v0
@@ -189,14 +174,12 @@
 
     move-wide/from16 v2, p4
 
-    .line 161
     invoke-virtual {p0, v2, v3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->isA11yTracingEnabledForTypes(J)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 162
     iget-object v0, v0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mA11yController:Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;
 
     const-string v1, ""
@@ -207,7 +190,6 @@
 
     if-nez p12, :cond_0
 
-    .line 164
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
@@ -236,7 +218,6 @@
 
     move-wide/from16 v11, p8
 
-    .line 162
     invoke-interface/range {v0 .. v13}, Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;->logTrace(Ljava/lang/String;JLjava/lang/String;[BI[Ljava/lang/StackTraceElement;JIJLjava/util/Set;)V
 
     :cond_1
@@ -248,7 +229,6 @@
 
     const-string v0, ""
 
-    .line 145
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/accessibility/AccessibilityTraceManager;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
     return-void
@@ -257,14 +237,12 @@
 .method public logTrace(Ljava/lang/String;JLjava/lang/String;)V
     .locals 10
 
-    .line 150
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/AccessibilityTraceManager;->isA11yTracingEnabledForTypes(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 151
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mA11yController:Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;
 
     const-string p0, ""
@@ -273,7 +251,6 @@
 
     move-result-object v6
 
-    .line 152
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v7
@@ -294,7 +271,6 @@
 
     move-result-object p0
 
-    .line 153
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -307,7 +283,6 @@
 
     move-object v5, p4
 
-    .line 151
     invoke-interface/range {v1 .. v9}, Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;->logTrace(Ljava/lang/String;JLjava/lang/String;[BI[Ljava/lang/StackTraceElement;Ljava/util/Set;)V
 
     :cond_0
@@ -317,7 +292,6 @@
 .method public final needToNotifyClients(J)Z
     .locals 4
 
-    .line 169
     iget-wide v0, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mEnabledLoggingFlags:J
 
     const-wide/32 v2, 0x44030
@@ -346,127 +320,102 @@
 
     const-string p0, "  start-trace [-t LOGGING_TYPE [LOGGING_TYPE...]]"
 
-    .line 214
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "    Start the debug tracing. If no option is present, full trace will be"
 
-    .line 215
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "    generated. Options are:"
 
-    .line 216
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "      -t: Only generate tracing for the logging type(s) specified here."
 
-    .line 217
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "          LOGGING_TYPE can be any one of below:"
 
-    .line 218
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IAccessibilityServiceConnection"
 
-    .line 219
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IAccessibilityServiceClient"
 
-    .line 220
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IAccessibilityManager"
 
-    .line 221
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IAccessibilityManagerClient"
 
-    .line 222
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IAccessibilityInteractionConnection"
 
-    .line 223
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IAccessibilityInteractionConnectionCallback"
 
-    .line 224
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IRemoteMagnificationAnimationCallback"
 
-    .line 225
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IWindowMagnificationConnection"
 
-    .line 226
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            IWindowMagnificationConnectionCallback"
 
-    .line 227
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            WindowManagerInternal"
 
-    .line 228
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            WindowsForAccessibilityCallback"
 
-    .line 229
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            MagnificationCallbacks"
 
-    .line 230
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            InputFilter"
 
-    .line 231
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            Gesture"
 
-    .line 232
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            AccessibilityService"
 
-    .line 233
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            PMBroadcastReceiver"
 
-    .line 234
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            UserBroadcastReceiver"
 
-    .line 235
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "            FingerprintGesture"
 
-    .line 236
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  stop-trace"
 
-    .line 237
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "    Stop the debug tracing."
 
-    .line 238
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -475,7 +424,6 @@
 .method public onShellCommand(Ljava/lang/String;Landroid/os/ShellCommand;)I
     .locals 4
 
-    .line 174
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     const-string/jumbo v0, "start-trace"
@@ -500,13 +448,11 @@
 
     return v1
 
-    .line 206
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityTraceManager;->stopTrace()V
 
     return v2
 
-    .line 176
     :cond_1
     invoke-virtual {p2}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -516,12 +462,10 @@
 
     const-wide/16 p1, -0x1
 
-    .line 178
     invoke-virtual {p0, p1, p2}, Lcom/android/server/accessibility/AccessibilityTraceManager;->startTrace(J)V
 
     return v2
 
-    .line 181
     :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
@@ -532,14 +476,12 @@
 
     const-string v3, "-t"
 
-    .line 183
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 193
     invoke-virtual {p2}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p2
@@ -560,12 +502,10 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 195
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityTraceManager;->stopTrace()V
 
     return v1
 
-    .line 185
     :cond_3
     invoke-virtual {p2}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
@@ -574,17 +514,14 @@
     :goto_1
     if-eqz p1, :cond_4
 
-    .line 187
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 188
     invoke-virtual {p2}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_1
 
-    .line 199
     :cond_4
     invoke-virtual {p2}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -592,13 +529,11 @@
 
     goto :goto_0
 
-    .line 201
     :cond_5
     invoke-static {v0}, Landroid/accessibilityservice/AccessibilityTrace;->getLoggingFlagsFromNames(Ljava/util/List;)J
 
     move-result-wide p1
 
-    .line 202
     invoke-virtual {p0, p1, p2}, Lcom/android/server/accessibility/AccessibilityTraceManager;->startTrace(J)V
 
     return v2
@@ -615,26 +550,21 @@
 
     return-void
 
-    .line 113
     :cond_0
     iget-wide v0, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mEnabledLoggingFlags:J
 
-    .line 114
     iput-wide p1, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mEnabledLoggingFlags:J
 
-    .line 116
     invoke-virtual {p0, v0, v1}, Lcom/android/server/accessibility/AccessibilityTraceManager;->needToNotifyClients(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mA11yMSLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 118
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mService:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -644,7 +574,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/accessibility/AccessibilityManagerService;->scheduleUpdateClientsIfNeededLocked(Lcom/android/server/accessibility/AccessibilityUserState;)V
 
-    .line 119
     monitor-exit v0
 
     goto :goto_0
@@ -658,7 +587,6 @@
 
     throw p0
 
-    .line 122
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mA11yController:Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;
@@ -671,32 +599,26 @@
 .method public stopTrace()V
     .locals 5
 
-    .line 128
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityTraceManager;->isA11yTracingEnabled()Z
 
     move-result v0
 
-    .line 130
     iget-wide v1, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mEnabledLoggingFlags:J
 
     const-wide/16 v3, 0x0
 
-    .line 131
     iput-wide v3, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mEnabledLoggingFlags:J
 
-    .line 133
     invoke-virtual {p0, v1, v2}, Lcom/android/server/accessibility/AccessibilityTraceManager;->needToNotifyClients(J)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 134
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mA11yMSLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 135
     :try_start_0
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mService:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -706,7 +628,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/accessibility/AccessibilityManagerService;->scheduleUpdateClientsIfNeededLocked(Lcom/android/server/accessibility/AccessibilityUserState;)V
 
-    .line 136
     monitor-exit v1
 
     goto :goto_0
@@ -724,7 +645,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityTraceManager;->mA11yController:Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;
 
     invoke-interface {p0}, Lcom/android/server/wm/WindowManagerInternal$AccessibilityControllerInternal;->stopTrace()V

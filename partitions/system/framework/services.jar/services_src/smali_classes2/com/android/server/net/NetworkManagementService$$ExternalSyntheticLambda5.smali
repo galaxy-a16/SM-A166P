@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(IZJI)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/net/NetworkManagementService$$ExternalSyntheticLambda5;->f$0:I
@@ -39,7 +38,6 @@
 .method public final sendCallback(Landroid/net/INetworkManagementEventObserver;)V
     .locals 6
 
-    .line 0
     iget v0, p0, Lcom/android/server/net/NetworkManagementService$$ExternalSyntheticLambda5;->f$0:I
 
     iget-boolean v1, p0, Lcom/android/server/net/NetworkManagementService$$ExternalSyntheticLambda5;->f$1:Z

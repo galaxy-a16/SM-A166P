@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/tv/TvInputHardwareManager;)V
     .locals 0
 
-    .line 1344
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiHotplugEventListener$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/tv/TvInputHardwareManager;Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;-><init>(Lcom/android/server/tv/TvInputHardwareManager;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onReceived(Landroid/hardware/hdmi/HdmiHotplugEvent;)V
     .locals 4
 
-    .line 1347
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-static {v0}, Lcom/android/server/tv/TvInputHardwareManager;->-$$Nest$fgetmLock(Lcom/android/server/tv/TvInputHardwareManager;)Ljava/lang/Object;
@@ -42,7 +39,6 @@
 
     monitor-enter v0
 
-    .line 1348
     :try_start_0
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -60,10 +56,8 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 1349
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
-    .line 1350
     invoke-virtual {p1}, Landroid/hardware/hdmi/HdmiHotplugEvent;->getPort()I
 
     move-result v2
@@ -74,12 +68,10 @@
 
     if-nez v1, :cond_0
 
-    .line 1352
     monitor-exit v0
 
     return-void
 
-    .line 1354
     :cond_0
     iget-object v2, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -99,12 +91,10 @@
 
     if-nez v1, :cond_1
 
-    .line 1356
     monitor-exit v0
 
     return-void
 
-    .line 1361
     :cond_1
     invoke-virtual {p1}, Landroid/hardware/hdmi/HdmiHotplugEvent;->isConnected()Z
 
@@ -123,7 +113,6 @@
     :cond_2
     move p1, v3
 
-    .line 1364
     :goto_0
     iget-object p0, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -135,10 +124,8 @@
 
     move-result-object p0
 
-    .line 1365
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1366
     monitor-exit v0
 
     return-void

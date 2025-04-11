@@ -79,7 +79,6 @@
 .method public static synthetic $r8$lambda$MnGfqFrmsPRIKBQ9rgwi2blPUjw(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/reflect/Method;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/wm/MultiWindowShellCommand;->lambda$cmdShowAllCommands$0(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/reflect/Method;)V
 
     return-void
@@ -88,7 +87,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 76
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/wm/MultiWindowShellCommand;->SUPPORTS_ALL_COMMANDS:Z
@@ -99,10 +97,8 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 1
 
-    .line 112
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 109
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -111,20 +107,16 @@
 
     const/4 v0, 0x0
 
-    .line 110
     iput-boolean v0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mInitialized:Z
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 114
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityTaskManagerService;->getGlobalLock()Lcom/android/server/wm/WindowManagerGlobalLock;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
-    .line 115
     new-instance p1, Lcom/samsung/android/multiwindow/MultiWindowManager;
 
     invoke-direct {p1}, Lcom/samsung/android/multiwindow/MultiWindowManager;-><init>()V
@@ -137,14 +129,12 @@
 .method private initCommands()V
     .locals 6
 
-    .line 119
     iget-boolean v0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mInitialized:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 123
     :cond_0
     const-class v0, Lcom/android/server/wm/MultiWindowShellCommand;
 
@@ -152,7 +142,6 @@
 
     move-result-object v0
 
-    .line 124
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -162,7 +151,6 @@
 
     aget-object v3, v0, v2
 
-    .line 125
     const-class v4, Lcom/android/server/wm/MWCommandInfo;
 
     invoke-virtual {v3, v4}, Ljava/lang/reflect/Method;->isAnnotationPresent(Ljava/lang/Class;)Z
@@ -171,7 +159,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 126
     const-class v4, Lcom/android/server/wm/MWCommandInfo;
 
     invoke-virtual {v3, v4}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -180,7 +167,6 @@
 
     check-cast v4, Lcom/android/server/wm/MWCommandInfo;
 
-    .line 127
     sget-boolean v5, Lcom/android/server/wm/MultiWindowShellCommand;->SUPPORTS_ALL_COMMANDS:Z
 
     if-nez v5, :cond_1
@@ -191,7 +177,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 128
     :cond_1
     iget-object v5, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mCommandMethods:Ljava/util/HashMap;
 
@@ -209,7 +194,6 @@
     :cond_3
     const/4 v0, 0x1
 
-    .line 132
     iput-boolean v0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mInitialized:Z
 
     return-void
@@ -218,7 +202,6 @@
 .method private invokeCommand(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)Z
     .locals 3
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mCommandMethods:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -229,7 +212,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 139
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -257,7 +239,6 @@
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 140
     filled-new-array {p2, p3}, [Ljava/lang/Object;
 
     move-result-object p1
@@ -279,7 +260,6 @@
     :catch_0
     move-exception p0
 
-    .line 142
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -291,7 +271,6 @@
 .method private static synthetic lambda$cmdShowAllCommands$0(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/reflect/Method;)V
     .locals 2
 
-    .line 443
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -326,33 +305,27 @@
 
     const-string p0, "MultiWindow Shell Commands:"
 
-    .line 619
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 620
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz p0, :cond_0
 
     const-string/jumbo p0, "support [on/off] : multiwindow dynamic enable/disable"
 
-    .line 622
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string/jumbo p0, "toggle-freeform : toggle freeform mode of top focused activity"
 
-    .line 625
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string/jumbo p0, "visibletasks : visible task list"
 
-    .line 628
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_0
     const-string p0, "adb shell dumpsys activity mt : print all about multi-tasking"
 
-    .line 632
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -366,7 +339,6 @@
         cmd = "add-split-activity"
     .end annotation
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -382,7 +354,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 213
     array-length v1, p1
 
     const/4 v2, 0x2
@@ -391,22 +362,18 @@
 
     const/4 p2, 0x0
 
-    .line 214
     aget-object p2, p1, p2
 
-    .line 215
     aget-object p1, p1, v0
 
     const-string v1, "add"
 
-    .line 216
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 217
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMwSupportPolicyController:Lcom/android/server/wm/MultiWindowSupportPolicyController;
@@ -418,14 +385,12 @@
     :cond_0
     const-string/jumbo v1, "remove"
 
-    .line 218
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 219
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMwSupportPolicyController:Lcom/android/server/wm/MultiWindowSupportPolicyController;
@@ -437,7 +402,6 @@
     :cond_1
     const-string p0, "Error: allow-multiwindow  option requires [add/remove] [packageName]"
 
-    .line 222
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_2
@@ -455,7 +419,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 234
     array-length v1, p1
 
     const/4 v2, 0x2
@@ -464,22 +427,18 @@
 
     const/4 p2, 0x0
 
-    .line 235
     aget-object p2, p1, p2
 
-    .line 236
     aget-object p1, p1, v0
 
     const-string v1, "add"
 
-    .line 237
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 238
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMwSupportPolicyController:Lcom/android/server/wm/MultiWindowSupportPolicyController;
@@ -491,14 +450,12 @@
     :cond_0
     const-string/jumbo v1, "remove"
 
-    .line 239
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 240
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMwSupportPolicyController:Lcom/android/server/wm/MultiWindowSupportPolicyController;
@@ -510,7 +467,6 @@
     :cond_1
     const-string p0, "Error: block-multiwindow  option requires [add/remove] [packageName]"
 
-    .line 243
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_2
@@ -528,12 +484,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 287
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 288
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -544,7 +498,6 @@
 
     const/4 v1, 0x0
 
-    .line 289
     aget-object p1, p1, v1
 
     invoke-virtual {v0, p1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
@@ -553,18 +506,14 @@
 
     const/high16 v0, 0x10000000
 
-    .line 290
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 291
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object v0
 
-    .line 292
     invoke-virtual {v0, p2}, Landroid/app/ActivityOptions;->setDismissSplitBeforeLaunch(Z)V
 
-    .line 293
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -585,7 +534,6 @@
         cmd = "dump-embed-activity"
     .end annotation
 
-    .line 380
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->MW_EMBED_ACTIVITY_PACKAGE_ENABLED:Z
 
     if-nez p1, :cond_0
@@ -594,7 +542,6 @@
 
     return p0
 
-    .line 384
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -613,7 +560,6 @@
         cmd = "dump-split-activity"
     .end annotation
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -625,7 +571,6 @@
         cmd = "get-embed-activity-package-enabled"
     .end annotation
 
-    .line 409
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_EMBED_ACTIVITY_PACKAGE_ENABLED:Z
 
     const/4 v1, 0x0
@@ -639,17 +584,14 @@
 
     if-eqz p1, :cond_2
 
-    .line 413
     array-length v2, p1
 
     const/4 v3, 0x2
 
     if-lt v2, v3, :cond_2
 
-    .line 414
     aget-object v1, p1, v1
 
-    .line 415
     aget-object p1, p1, v0
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -660,17 +602,14 @@
 
     move-result p1
 
-    .line 416
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiTaskingController:Lcom/android/server/wm/MultiTaskingController;
 
-    .line 417
     invoke-virtual {p0, v1, p1}, Lcom/android/server/wm/MultiTaskingController;->getEmbedActivityPackageEnabled(Ljava/lang/String;I)Z
 
     move-result p0
 
-    .line 418
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -704,7 +643,6 @@
     :cond_2
     const-string p0, "Error: get-embed-activity-package-enabled  option requires [packageName, userId]"
 
-    .line 420
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_1
@@ -717,19 +655,16 @@
         cmd = "get-multi-split-flags"
     .end annotation
 
-    .line 529
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mMultiWindowManager:Lcom/samsung/android/multiwindow/MultiWindowManager;
 
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/MultiWindowManager;->getMultiSplitFlags()I
 
     move-result p0
 
-    .line 530
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowManager;->multiSplitFlagsToString(I)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
-    .line 531
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -757,7 +692,6 @@
         cmd = "get-split-activity-package-enabled"
     .end annotation
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -771,24 +705,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 452
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 453
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mMultiWindowManager:Lcom/samsung/android/multiwindow/MultiWindowManager;
 
     const/4 v0, 0x0
 
     aget-object p1, p1, v0
 
-    .line 454
     invoke-virtual {p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowManager;->getTaskInfoFromPackageName(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 455
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -806,7 +736,6 @@
 
     check-cast p1, Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 456
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -837,14 +766,12 @@
         cmd = "visibletasks"
     .end annotation
 
-    .line 478
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mMultiWindowManager:Lcom/samsung/android/multiwindow/MultiWindowManager;
 
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/MultiWindowManager;->getVisibleTasks()Ljava/util/List;
 
     move-result-object p0
 
-    .line 479
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -862,7 +789,6 @@
 
     check-cast p1, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 480
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -895,7 +821,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 513
     array-length v0, p1
 
     if-lez v0, :cond_1
@@ -922,7 +847,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 514
     :cond_0
     aget-object p1, p1, v0
 
@@ -930,14 +854,12 @@
 
     move-result p1
 
-    .line 515
     iget-object p2, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p2, p2, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiWindowEnableController:Lcom/android/server/wm/MultiWindowEnableController;
 
     invoke-virtual {p2, p1}, Lcom/android/server/wm/MultiWindowEnableController;->setSplitImmersiveModeLocked(Z)V
 
-    .line 516
     iget-object p1, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -948,7 +870,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->setLayoutNeeded()V
 
-    .line 517
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -960,7 +881,6 @@
     :cond_1
     const-string p0, "Invalid argument: split-immersive  option requires [on/off]"
 
-    .line 519
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_0
@@ -979,12 +899,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 491
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 492
     aget-object p1, p1, p2
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -995,7 +913,6 @@
 
     move-result p2
 
-    .line 494
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -1014,14 +931,12 @@
         cmd = "minimize-all-intent"
     .end annotation
 
-    .line 503
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "com.samsung.android.multiwindow.MINIMIZE_ALL_BY_SYSTEM"
 
     invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 504
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -1039,7 +954,6 @@
         cmd = "support"
     .end annotation
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mAmInternal:Landroid/app/ActivityManagerInternal;
@@ -1052,7 +966,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 194
     array-length v2, p1
 
     if-lez v2, :cond_2
@@ -1077,7 +990,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 195
     :cond_0
     aget-object p2, p1, v1
 
@@ -1085,7 +997,6 @@
 
     move-result p2
 
-    .line 196
     array-length v1, p1
 
     const/4 v2, 0x1
@@ -1107,7 +1018,6 @@
     :cond_1
     const-string/jumbo p1, "shell_command"
 
-    .line 198
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -1120,7 +1030,6 @@
     :cond_2
     const-string p0, "Error: support  option requires [on/off]"
 
-    .line 203
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v1
@@ -1134,12 +1043,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 467
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 468
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1182,7 +1089,6 @@
         cmd = "remove-split-activity"
     .end annotation
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1196,14 +1102,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 431
     array-length p2, p1
 
     if-lez p2, :cond_0
 
     const/4 p2, 0x0
 
-    .line 432
     aget-object p1, p1, p2
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1214,7 +1118,6 @@
 
     move-result p1
 
-    .line 433
     iget-object p2, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p2, p2, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -1239,7 +1142,6 @@
 
     float-to-int p1, p2
 
-    .line 434
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiTaskingController:Lcom/android/server/wm/MultiTaskingController;
@@ -1258,7 +1160,6 @@
         cmd = "setDexSizeCompatModeAspectRatioScale"
     .end annotation
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1270,7 +1171,6 @@
         cmd = "setDexSizeCompatModeDefaultScale"
     .end annotation
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1282,7 +1182,6 @@
         cmd = "set-embed-activity-package-enabled"
     .end annotation
 
-    .line 390
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_EMBED_ACTIVITY_PACKAGE_ENABLED:Z
 
     const/4 v1, 0x0
@@ -1296,17 +1195,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 394
     array-length v2, p1
 
     const/4 v3, 0x3
 
     if-lt v2, v3, :cond_1
 
-    .line 395
     aget-object p2, p1, v1
 
-    .line 396
     aget-object v1, p1, v0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
@@ -1319,7 +1215,6 @@
 
     const/4 v2, 0x2
 
-    .line 397
     aget-object p1, p1, v2
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1330,12 +1225,10 @@
 
     move-result p1
 
-    .line 398
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiTaskingController:Lcom/android/server/wm/MultiTaskingController;
 
-    .line 399
     invoke-virtual {p0, p2, v1, p1}, Lcom/android/server/wm/MultiTaskingController;->setEmbedActivityPackageEnabled(Ljava/lang/String;ZI)V
 
     goto :goto_0
@@ -1343,7 +1236,6 @@
     :cond_1
     const-string p0, "Error: set-embed-activity-package-enabled  option requires [packageName, enabled, userId]"
 
-    .line 401
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_0
@@ -1356,7 +1248,6 @@
         cmd = "setMultiStarEnsureLaunchSplit"
     .end annotation
 
-    .line 606
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1365,7 +1256,6 @@
 
     return v1
 
-    .line 609
     :cond_0
     aget-object p1, p1, v1
 
@@ -1373,7 +1263,6 @@
 
     move-result p1
 
-    .line 610
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1390,7 +1279,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 611
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mMultiWindowManager:Lcom/samsung/android/multiwindow/MultiWindowManager;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowManager;->setEnsureLaunchSplitEnabled(Z)V
@@ -1406,7 +1294,6 @@
         cmd = "setNavStarImmersiveMode"
     .end annotation
 
-    .line 594
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1415,7 +1302,6 @@
 
     return v1
 
-    .line 597
     :cond_0
     aget-object p1, p1, v1
 
@@ -1423,7 +1309,6 @@
 
     move-result p1
 
-    .line 598
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1440,7 +1325,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 599
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mMultiWindowManager:Lcom/samsung/android/multiwindow/MultiWindowManager;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowManager;->setNaviBarImmersiveModeLocked(Z)V
@@ -1456,7 +1340,6 @@
         cmd = "setSizeCompatLaunchPolicy"
     .end annotation
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1468,7 +1351,6 @@
         cmd = "set-split-activity-package-enabled"
     .end annotation
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1481,7 +1363,6 @@
         supportsReleaseBuild = true
     .end annotation
 
-    .line 441
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1504,7 +1385,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 442
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mCommandMethods:Ljava/util/HashMap;
 
     new-instance p1, Lcom/android/server/wm/MultiWindowShellCommand$$ExternalSyntheticLambda0;
@@ -1524,7 +1404,6 @@
         cmd = "toggle-freeform"
     .end annotation
 
-    .line 271
     iget-object p1, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -1535,7 +1414,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 272
     iget-object p1, p1, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
 
     goto :goto_0
@@ -1546,14 +1424,12 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 273
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->isActivityTypeStandard()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mActivityClientController:Lcom/android/server/wm/ActivityClientController;
@@ -1562,7 +1438,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/ActivityClientController;->toggleFreeformWindowingMode(Landroid/os/IBinder;)V
 
-    .line 275
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1584,7 +1459,6 @@
     :cond_1
     const-string p0, "failed, cannot find candidate activity"
 
-    .line 277
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_1
@@ -1599,7 +1473,6 @@
         cmd = "top-task-supports-mw"
     .end annotation
 
-    .line 255
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -1610,7 +1483,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 258
     invoke-static {}, Lcom/samsung/android/multiwindow/MultiWindowManager;->getInstance()Lcom/samsung/android/multiwindow/MultiWindowManager;
 
     move-result-object p1
@@ -1621,7 +1493,6 @@
 
     move-result p1
 
-    .line 259
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1649,7 +1520,6 @@
     :cond_0
     const-string/jumbo p0, "top activity is null"
 
-    .line 261
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_0
@@ -1661,10 +1531,8 @@
 .method public execute(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)I
     .locals 1
 
-    .line 172
     invoke-direct {p0}, Lcom/android/server/wm/MultiWindowShellCommand;->initCommands()V
 
-    .line 174
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowShellCommand;->mLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->boostPriorityForLockedSection()V
@@ -1673,7 +1541,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 175
     :try_start_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wm/MultiWindowShellCommand;->invokeCommand(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)Z
 
@@ -1681,7 +1548,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 176
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1703,7 +1569,6 @@
     :try_start_1
     const-string p2, "help"
 
-    .line 178
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -1720,7 +1585,6 @@
 
     goto :goto_0
 
-    .line 181
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1740,12 +1604,10 @@
 
     goto :goto_1
 
-    .line 179
     :cond_2
     :goto_0
     invoke-direct {p0, p3}, Lcom/android/server/wm/MultiWindowShellCommand;->printHelp(Ljava/io/PrintWriter;)V
 
-    .line 183
     :goto_1
     monitor-exit v0
     :try_end_1
@@ -1773,25 +1635,21 @@
 
     if-nez p1, :cond_0
 
-    .line 151
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 153
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 154
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 155
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v2
@@ -1799,10 +1657,8 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 157
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 158
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v2
@@ -1814,14 +1670,12 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 160
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, [Ljava/lang/String;
 
-    .line 161
     invoke-virtual {p0, p1, v1, v0}, Lcom/android/server/wm/MultiWindowShellCommand;->execute(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)I
 
     move-result p0
@@ -1832,12 +1686,10 @@
 .method public onHelp()V
     .locals 1
 
-    .line 166
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 167
     invoke-direct {p0, v0}, Lcom/android/server/wm/MultiWindowShellCommand;->printHelp(Ljava/io/PrintWriter;)V
 
     return-void

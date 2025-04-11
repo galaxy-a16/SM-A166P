@@ -33,7 +33,6 @@
 
     const-string v0, "content://com.sec.android.sdhms.fasprovider/ForcedAppStandby"
 
-    .line 6
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -42,7 +41,6 @@
 
     const-string v0, "content://com.samsung.android.sm.battery.bridge"
 
-    .line 7
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -51,7 +49,6 @@
 
     const-string/jumbo v0, "prevCurrent"
 
-    .line 28
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +57,6 @@
 
     const-string v0, "disableReason"
 
-    .line 29
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -89,7 +85,6 @@
 
     const-string v11, "disableResetTime"
 
-    .line 31
     filled-new-array/range {v1 .. v11}, [Ljava/lang/String;
 
     move-result-object v0
@@ -120,7 +115,6 @@
 
     const-string/jumbo v12, "prevCurrent"
 
-    .line 33
     filled-new-array/range {v1 .. v12}, [Ljava/lang/String;
 
     move-result-object v0
@@ -153,7 +147,6 @@
 
     const-string v13, "disableReason"
 
-    .line 35
     filled-new-array/range {v1 .. v13}, [Ljava/lang/String;
 
     move-result-object v0
@@ -162,7 +155,6 @@
 
     const-string v0, "content://com.samsung.android.sm/settings"
 
-    .line 100
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -171,7 +163,6 @@
 
     const-string v0, "content://com.samsung.android.sm/DefaultAllowedList"
 
-    .line 105
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -180,7 +171,6 @@
 
     const-string v0, "content://com.samsung.android.sm.appstart/appstart_record"
 
-    .line 107
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -189,7 +179,6 @@
 
     const-string v0, "content://com.samsung.android.sm/FreezeExcludeList"
 
-    .line 109
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -204,7 +193,6 @@
 
     const-string v0, "default"
 
-    .line 214
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -218,7 +206,6 @@
     :cond_0
     const-string v0, "added_from_mars_auto"
 
-    .line 216
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -232,7 +219,6 @@
     :cond_1
     const-string v0, "added_from_user_manual"
 
-    .line 218
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -246,7 +232,6 @@
     :cond_2
     const-string v0, "deleted_from_mars_auto"
 
-    .line 220
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -260,7 +245,6 @@
     :cond_3
     const-string v0, "deleted_from_user_manual"
 
-    .line 222
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -274,7 +258,6 @@
     :cond_4
     const-string v0, "added_from_mars_auto_specific"
 
-    .line 224
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -288,7 +271,6 @@
     :cond_5
     const-string v0, "added_from_anomaly_manual"
 
-    .line 226
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -317,7 +299,6 @@
     :cond_0
     const-string v1, "0"
 
-    .line 162
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -329,7 +310,6 @@
     :cond_1
     const-string v1, "1"
 
-    .line 164
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -343,7 +323,6 @@
     :cond_2
     const-string v1, "2"
 
-    .line 166
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -357,7 +336,6 @@
     :cond_3
     const-string v1, "3"
 
-    .line 168
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -371,7 +349,6 @@
     :cond_4
     const-string v1, "4"
 
-    .line 170
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -388,7 +365,6 @@
 .method public static convertDisableReasonToDBValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_6
 
     const/4 v0, 0x1
@@ -467,7 +443,6 @@
     :cond_0
     const-string v1, "default"
 
-    .line 121
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -481,7 +456,6 @@
     :cond_1
     const-string v1, "added_from_mars_auto"
 
-    .line 123
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -495,7 +469,6 @@
     :cond_2
     const-string v1, "added_from_user_manual"
 
-    .line 125
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -509,7 +482,6 @@
     :cond_3
     const-string v1, "added_from_anomaly_auto"
 
-    .line 127
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -523,7 +495,6 @@
     :cond_4
     const-string v1, "added_from_anomaly_manual"
 
-    .line 129
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -537,7 +508,6 @@
     :cond_5
     const-string v1, "added_from_pre_o"
 
-    .line 131
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -551,7 +521,6 @@
     :cond_6
     const-string v1, "added_from_policy_in_china"
 
-    .line 133
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -565,7 +534,6 @@
     :cond_7
     const-string v1, "added_from_unknown"
 
-    .line 135
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -579,7 +547,6 @@
     :cond_8
     const-string v1, "deleted_from_mars_auto"
 
-    .line 137
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -593,7 +560,6 @@
     :cond_9
     const-string v1, "deleted_from_user_manual"
 
-    .line 139
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -607,7 +573,6 @@
     :cond_a
     const-string v1, "deleted_from_post_o"
 
-    .line 141
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -621,7 +586,6 @@
     :cond_b
     const-string v1, "deleted_from_policy_in_china"
 
-    .line 143
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -635,7 +599,6 @@
     :cond_c
     const-string v1, "deleted_from_unknown"
 
-    .line 145
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -653,7 +616,6 @@
 .method public static convertFASTypeToReason(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_c
 
     const/4 v0, 0x1
@@ -777,7 +739,6 @@
 .method public static convertStateToDBExtrasValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, 0x2
 
     if-eq p0, v0, :cond_3

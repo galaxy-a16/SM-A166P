@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemShortcutManagerService;)V
     .locals 0
 
-    .line 161
     iput-object p1, p0, Lcom/android/server/sepunion/SemShortcutManagerService$MyPackageMonitor;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -28,10 +27,8 @@
 
     const-string/jumbo v0, "onPackageModified"
 
-    .line 175
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     iget-object p1, p0, Lcom/android/server/sepunion/SemShortcutManagerService$MyPackageMonitor;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/SemShortcutManagerService;->-$$Nest$fgetmScanHandler(Lcom/android/server/sepunion/SemShortcutManagerService;)Landroid/os/Handler;
@@ -46,7 +43,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 177
     iget-object p1, p0, Lcom/android/server/sepunion/SemShortcutManagerService$MyPackageMonitor;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/SemShortcutManagerService;->-$$Nest$fgetmScanHandler(Lcom/android/server/sepunion/SemShortcutManagerService;)Landroid/os/Handler;
@@ -55,7 +51,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 179
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemShortcutManagerService$MyPackageMonitor;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
@@ -77,10 +72,8 @@
 
     const-string/jumbo v1, "onSomePackagesChanged"
 
-    .line 165
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     iget-object v0, p0, Lcom/android/server/sepunion/SemShortcutManagerService$MyPackageMonitor;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/SemShortcutManagerService;->-$$Nest$fgetmScanHandler(Lcom/android/server/sepunion/SemShortcutManagerService;)Landroid/os/Handler;
@@ -95,7 +88,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 167
     iget-object v0, p0, Lcom/android/server/sepunion/SemShortcutManagerService$MyPackageMonitor;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/SemShortcutManagerService;->-$$Nest$fgetmScanHandler(Lcom/android/server/sepunion/SemShortcutManagerService;)Landroid/os/Handler;
@@ -104,7 +96,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 169
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemShortcutManagerService$MyPackageMonitor;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 

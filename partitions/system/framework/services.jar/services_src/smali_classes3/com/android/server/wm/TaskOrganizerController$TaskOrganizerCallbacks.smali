@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/window/ITaskOrganizer;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
     iput-object p2, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mDeferTaskOrgCallbacksConsumer:Ljava/util/function/Consumer;
 
-    .line 122
     iput-object p1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
 
     return-void
@@ -30,7 +27,6 @@
 .method public getBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 126
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
 
     invoke-interface {p0}, Landroid/window/ITaskOrganizer;->asBinder()Landroid/os/IBinder;
@@ -43,7 +39,6 @@
 .method public onBackPressedOnTaskRoot(Lcom/android/server/wm/Task;)V
     .locals 5
 
-    .line 175
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_ORGANIZER_enabled:Z
 
     if-eqz v0, :cond_0
@@ -70,7 +65,6 @@
 
     invoke-static {v2, v1, v3, v4, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 177
     :cond_0
     iget-boolean v0, p1, Lcom/android/server/wm/Task;->mTaskAppearedSent:Z
 
@@ -78,7 +72,6 @@
 
     return-void
 
-    .line 181
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->isOrganized()Z
 
@@ -88,7 +81,6 @@
 
     return-void
 
-    .line 186
     :cond_2
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
@@ -110,7 +102,6 @@
 
     const-string v0, "Exception sending onBackPressedOnTaskRoot callback"
 
-    .line 188
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -120,7 +111,6 @@
 .method public onTaskAppeared(Lcom/android/server/wm/Task;)V
     .locals 5
 
-    .line 134
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_ORGANIZER_enabled:Z
 
     if-eqz v0, :cond_0
@@ -147,13 +137,11 @@
 
     invoke-static {v2, v1, v3, v4, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 135
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     move-result-object v0
 
-    .line 137
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
 
@@ -176,7 +164,6 @@
 
     const-string v0, "Exception sending onTaskAppeared callback"
 
-    .line 140
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -186,14 +173,12 @@
 .method public onTaskInfoChanged(Lcom/android/server/wm/Task;Landroid/app/ActivityManager$RunningTaskInfo;)V
     .locals 5
 
-    .line 155
     iget-boolean v0, p1, Lcom/android/server/wm/Task;->mTaskAppearedSent:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 159
     :cond_0
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_ORGANIZER_enabled:Z
 
@@ -221,7 +206,6 @@
 
     invoke-static {v2, v1, v3, v4, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 160
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->isOrganized()Z
 
@@ -231,7 +215,6 @@
 
     return-void
 
-    .line 168
     :cond_2
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
@@ -249,7 +232,6 @@
 
     const-string p2, "Exception sending onTaskInfoChanged callback"
 
-    .line 170
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -259,7 +241,6 @@
 .method public onTaskVanished(Lcom/android/server/wm/Task;)V
     .locals 5
 
-    .line 145
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_ORGANIZER_enabled:Z
 
     if-eqz v0, :cond_0
@@ -286,13 +267,11 @@
 
     invoke-static {v2, v1, v3, v4, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 146
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     move-result-object p1
 
-    .line 148
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
 
@@ -309,7 +288,6 @@
 
     const-string v0, "Exception sending onTaskVanished callback"
 
-    .line 150
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -319,7 +297,6 @@
 .method public prepareLeash(Lcom/android/server/wm/Task;Ljava/lang/String;)Landroid/view/SurfaceControl;
     .locals 0
 
-    .line 130
     new-instance p0, Landroid/view/SurfaceControl;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
@@ -334,14 +311,12 @@
 .method public requestAffordanceAnim(Lcom/android/server/wm/Task;I)V
     .locals 1
 
-    .line 194
     iget-boolean v0, p1, Lcom/android/server/wm/Task;->mTaskAppearedSent:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 198
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->isOrganized()Z
 
@@ -351,7 +326,6 @@
 
     return-void
 
-    .line 203
     :cond_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
@@ -373,7 +347,6 @@
 
     const-string p2, "Exception sending onAffordanceAnim callback"
 
-    .line 205
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

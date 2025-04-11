@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -29,7 +27,6 @@
 .method public assertCallerCanModifyListener(Landroid/os/IBinder;ZI)Z
     .locals 1
 
-    .line 149
     iget-object p0, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -40,7 +37,6 @@
 
     if-nez p0, :cond_1
 
-    .line 151
     sget-boolean p0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ADD_REMOVE_enabled:Z
 
     const/4 p1, 0x0
@@ -65,7 +61,6 @@
 
     return p1
 
-    .line 157
     :cond_2
     invoke-static {p0}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmOwnerUid(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)I
 
@@ -75,7 +70,6 @@
 
     return p1
 
-    .line 158
     :cond_3
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -111,7 +105,6 @@
 .method public dispatchPendingConfigurationIfNeeded(I)V
     .locals 3
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -123,7 +116,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 135
     iget-object v1, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -132,7 +124,6 @@
 
     check-cast v1, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;
 
-    .line 136
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->getWindowContainer()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v2
@@ -153,7 +144,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 138
     invoke-static {v1}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$mreportConfigToWindowTokenClient(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)V
 
     :cond_0
@@ -168,7 +158,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 4
 
-    .line 201
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,7 +172,6 @@
 
     move-result-object v0
 
-    .line 202
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-class p2, Lcom/android/server/wm/WindowContextListenerController;
@@ -194,7 +182,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 204
     iget-object p2, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {p2}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
@@ -210,7 +197,6 @@
     :goto_0
     if-ge v1, p2, :cond_1
 
-    .line 206
     iget-object v2, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -219,7 +205,6 @@
 
     check-cast v2, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;
 
-    .line 207
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "mListeners #"
@@ -230,12 +215,10 @@
 
     const-string v3, " {"
 
-    .line 208
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v3, "type:"
 
-    .line 209
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-static {v2}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmType(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)I
@@ -246,7 +229,6 @@
 
     const-string v3, ", display:"
 
-    .line 210
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-static {v2}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmLastReportedDisplay(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)I
@@ -257,7 +239,6 @@
 
     const-string v3, ", package="
 
-    .line 211
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-static {v2}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmPackageName(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)Ljava/lang/String;
@@ -268,7 +249,6 @@
 
     const-string v3, ", container="
 
-    .line 212
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-static {v2}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmContainer(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)Lcom/android/server/wm/WindowContainer;
@@ -279,30 +259,25 @@
 
     const-string/jumbo v3, "}"
 
-    .line 213
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 215
     invoke-static {v2}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmHasPendingConfiguration(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 216
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "  mHasPendingConfiguration=true"
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 219
     :cond_0
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "  mLastReportedConfig="
 
-    .line 220
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-static {v2}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmLastReportedConfig(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)Landroid/content/res/Configuration;
@@ -315,7 +290,6 @@
 
     goto :goto_0
 
-    .line 222
     :cond_1
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
@@ -325,7 +299,6 @@
 .method public getContainer(Landroid/os/IBinder;)Lcom/android/server/wm/WindowContainer;
     .locals 0
 
-    .line 179
     iget-object p0, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -336,7 +309,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 180
     invoke-static {p0}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmContainer(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)Lcom/android/server/wm/WindowContainer;
 
     move-result-object p0
@@ -353,7 +325,6 @@
 .method public getOptions(Landroid/os/IBinder;)Landroid/os/Bundle;
     .locals 0
 
-    .line 174
     iget-object p0, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -364,7 +335,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 175
     invoke-static {p0}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmOptions(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -381,7 +351,6 @@
 .method public getWindowType(Landroid/os/IBinder;)I
     .locals 0
 
-    .line 169
     iget-object p0, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -392,7 +361,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 170
     invoke-static {p0}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmType(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)I
 
     move-result p0
@@ -409,7 +377,6 @@
 .method public hasListener(Landroid/os/IBinder;)Z
     .locals 0
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -436,7 +403,6 @@
 
     move-object v5, p5
 
-    .line 86
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/wm/WindowContextListenerController;->registerWindowContainerListener(Landroid/os/IBinder;Lcom/android/server/wm/WindowContainer;IILandroid/os/Bundle;Z)V
 
     return-void
@@ -445,7 +411,6 @@
 .method public registerWindowContainerListener(Landroid/os/IBinder;Lcom/android/server/wm/WindowContainer;IILandroid/os/Bundle;Z)V
     .locals 9
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -456,7 +421,6 @@
 
     if-nez v0, :cond_0
 
-    .line 111
     new-instance v0, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;
 
     const/4 v8, 0x0
@@ -477,12 +441,10 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;-><init>(Lcom/android/server/wm/WindowContextListenerController;Landroid/os/IBinder;Lcom/android/server/wm/WindowContainer;IILandroid/os/Bundle;Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl-IA;)V
 
-    .line 113
     invoke-static {v0, p6}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$mregister(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;Z)V
 
     goto :goto_0
 
-    .line 115
     :cond_0
     invoke-static {v0, p2}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$mupdateContainer(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;Lcom/android/server/wm/WindowContainer;)V
 
@@ -493,7 +455,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 185
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "WindowContextListenerController{"
@@ -502,10 +463,8 @@
 
     const-string v1, "mListeners=["
 
-    .line 186
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 188
     iget-object v1, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
@@ -521,7 +480,6 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 190
     iget-object v3, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -536,7 +494,6 @@
 
     const-string v3, ", "
 
-    .line 192
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -547,10 +504,8 @@
     :cond_1
     const-string p0, "]}"
 
-    .line 195
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 196
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -561,7 +516,6 @@
 .method public unregisterWindowContainerListener(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/wm/WindowContextListenerController;->mListeners:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -574,18 +528,15 @@
 
     return-void
 
-    .line 127
     :cond_0
     invoke-static {p0}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$munregister(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)V
 
-    .line 128
     invoke-static {p0}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmDeathRecipient(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl$DeathRecipient;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 129
     invoke-static {p0}, Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;->-$$Nest$fgetmDeathRecipient(Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl;)Lcom/android/server/wm/WindowContextListenerController$WindowContextListenerImpl$DeathRecipient;
 
     move-result-object p0

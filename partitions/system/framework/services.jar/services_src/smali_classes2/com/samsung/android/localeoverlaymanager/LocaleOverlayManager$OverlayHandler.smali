@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 201
     iput-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
-    .line 202
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
 
-    .line 211
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -58,7 +55,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {v0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmInProgress(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Z
@@ -67,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 214
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x0
@@ -76,12 +71,10 @@
 
     move-result-object v0
 
-    .line 215
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 216
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
@@ -90,12 +83,10 @@
 
     const-wide/16 v1, 0x64
 
-    .line 217
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     return-void
 
-    .line 221
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -103,7 +94,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fputmInProgress(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;Z)V
 
-    .line 225
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {v0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetprogressHandler(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Landroid/os/Handler;
@@ -118,7 +108,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 226
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {v0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetprogressHandler(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Landroid/os/Handler;
@@ -135,7 +124,6 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 228
     iget v0, p1, Landroid/os/Message;->what:I
 
     const-string v2, "Package is not supported for Locale Overlays: "
@@ -146,12 +134,10 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 359
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0, v4}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fputmInProgress(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;Z)V
 
-    .line 360
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -174,23 +160,19 @@
 
     goto/16 :goto_2
 
-    .line 289
     :pswitch_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_c
 
-    .line 290
     check-cast p1, Landroid/os/Bundle;
 
-    .line 292
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     const-string/jumbo v1, "perAppPackageName"
 
-    .line 294
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -201,13 +183,11 @@
 
     goto :goto_0
 
-    .line 301
     :cond_1
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 303
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {v0, p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mhasZippedOverlaysPackage(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;Ljava/lang/String;)Z
@@ -216,7 +196,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 304
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
@@ -227,7 +206,6 @@
 
     goto/16 :goto_2
 
-    .line 307
     :cond_2
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -247,14 +225,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 309
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0, p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mcleanLocaleOverlayForDisable(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 297
     :cond_3
     :goto_0
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -283,14 +259,12 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mhandleTaskComplete(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
 
     return-void
 
-    .line 321
     :pswitch_1
     new-instance p1, Ljava/util/ArrayList;
 
@@ -300,7 +274,6 @@
 
     invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 322
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -321,7 +294,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 323
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->ensureOverlaysEnabled(Ljava/util/ArrayList;)Z
@@ -330,14 +302,12 @@
 
     if-eqz p1, :cond_c
 
-    .line 324
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mhandleTaskComplete(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
 
     goto/16 :goto_2
 
-    .line 242
     :pswitch_2
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -345,25 +315,21 @@
 
     goto/16 :goto_2
 
-    .line 233
     :pswitch_3
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_4
 
-    .line 234
     check-cast p1, Landroid/os/Bundle;
 
     const-string/jumbo v0, "safeMode"
 
-    .line 235
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v4
 
     const-string/jumbo v0, "startCleanUpOverlay"
 
-    .line 236
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -373,22 +339,18 @@
     :cond_4
     move p1, v4
 
-    .line 238
     :goto_1
     invoke-virtual {p0, v4, p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->init(ZZ)V
 
     goto/16 :goto_2
 
-    .line 329
     :pswitch_4
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_c
 
-    .line 330
     check-cast p1, Landroid/os/Bundle;
 
-    .line 332
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     const-string/jumbo v3, "token"
@@ -399,7 +361,6 @@
 
     invoke-static {v0, v3}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fputmToken(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;I)V
 
-    .line 334
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     const-string v3, "added_package"
@@ -410,7 +371,6 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fputmUpdatedPackage(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;Ljava/lang/String;)V
 
-    .line 335
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -441,7 +401,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 336
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmUpdatedPackage(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Ljava/lang/String;
@@ -450,14 +409,12 @@
 
     if-nez p1, :cond_5
 
-    .line 337
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mhandleTaskComplete(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
 
     return-void
 
-    .line 340
     :cond_5
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -469,7 +426,6 @@
 
     move-result-object p1
 
-    .line 341
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -488,12 +444,10 @@
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 342
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-virtual {p1, v1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->setPackageUpdateTask(Z)V
 
-    .line 344
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmUpdatedPackage(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Ljava/lang/String;
@@ -506,7 +460,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 345
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmOverlayManager(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Lcom/samsung/android/localeoverlaymanager/OMSHelper;
@@ -515,12 +468,10 @@
 
     if-nez p1, :cond_6
 
-    .line 346
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$minitOverlayManager(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
 
-    .line 348
     :cond_6
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -530,7 +481,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 349
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmOverlayManager(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Lcom/samsung/android/localeoverlaymanager/OMSHelper;
@@ -549,7 +499,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/samsung/android/localeoverlaymanager/OMSHelper;->updatePackageCache(Ljava/lang/String;I)V
 
-    .line 351
     :cond_7
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -565,7 +514,6 @@
 
     goto/16 :goto_2
 
-    .line 353
     :cond_8
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -591,7 +539,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmUpdatedPackage(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Ljava/lang/String;
@@ -602,7 +549,6 @@
 
     goto/16 :goto_2
 
-    .line 247
     :pswitch_5
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -614,7 +560,6 @@
 
     if-nez p1, :cond_9
 
-    .line 251
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -623,14 +568,12 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mhandleTaskComplete(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
 
     return-void
 
-    .line 257
     :cond_9
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/Utils;->getCurrentUserId()I
 
@@ -640,7 +583,6 @@
 
     move-result-object v0
 
-    .line 258
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -667,15 +609,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 262
     invoke-interface {v2, v0}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
-    .line 263
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -696,15 +635,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 267
     invoke-interface {v3, p1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
-    .line 268
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v4
@@ -725,20 +661,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     invoke-interface {v0, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 271
     invoke-interface {v0, v3}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
-    .line 272
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/Utils;->getCurrentUserId()I
 
     move-result v4
 
     invoke-static {v4, v0}, Lcom/samsung/android/localeoverlaymanager/PreferenceUtils;->setLocalesForUser(ILjava/util/Set;)V
 
-    .line 274
     invoke-interface {v3}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
@@ -751,7 +683,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 277
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->ensureOverlaysEnabled(Ljava/util/ArrayList;)Z
@@ -760,7 +691,6 @@
 
     if-eqz p1, :cond_a
 
-    .line 278
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mhandleTaskComplete(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
@@ -768,7 +698,6 @@
     :cond_a
     return-void
 
-    .line 283
     :cond_b
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -780,7 +709,6 @@
 
     move-result-object p1
 
-    .line 284
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -793,25 +721,21 @@
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 285
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-virtual {p0, v2, v3}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->installLocales(Ljava/util/Set;Ljava/util/Set;)V
 
     goto :goto_2
 
-    .line 315
     :pswitch_6
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {v0, v4}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fputmInProgress(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;Z)V
 
-    .line 316
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v0, :cond_c
 
-    .line 317
     invoke-virtual {p0, p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->handlePendingAction(Landroid/os/Message;)V
 
     :cond_c
@@ -835,35 +759,30 @@
 .method public final handlePendingAction(Landroid/os/Message;)V
     .locals 8
 
-    .line 416
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fputmRetryCount(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;I)V
 
-    .line 417
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/os/Bundle;
 
     const-string/jumbo v0, "pending_action"
 
-    .line 418
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v2, "userId"
 
-    .line 419
     invoke-virtual {p1, v2, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 
     invoke-static {v2}, Lcom/samsung/android/localeoverlaymanager/Utils;->setCurrentUserId(I)V
 
-    .line 420
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -886,7 +805,6 @@
 
     if-nez v0, :cond_0
 
-    .line 422
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -897,7 +815,6 @@
 
     return-void
 
-    .line 425
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -1019,7 +936,6 @@
 
     goto :goto_2
 
-    .line 445
     :pswitch_0
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -1031,13 +947,11 @@
 
     goto :goto_2
 
-    .line 428
     :pswitch_1
     invoke-static {v0, v5, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 430
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmHandler(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;
@@ -1048,16 +962,13 @@
 
     goto :goto_2
 
-    .line 434
     :pswitch_2
     invoke-static {v0, v6}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 435
     invoke-virtual {v0, p1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 436
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmHandler(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;
@@ -1071,12 +982,10 @@
     :pswitch_3
     const/4 v1, 0x7
 
-    .line 452
     invoke-static {v0, v1, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 453
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmHandler(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;
@@ -1087,13 +996,11 @@
 
     goto :goto_2
 
-    .line 440
     :pswitch_4
     invoke-static {v0, v4, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 441
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmHandler(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;
@@ -1104,7 +1011,6 @@
 
     goto :goto_2
 
-    .line 448
     :pswitch_5
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -1147,7 +1053,6 @@
 
     const/4 v0, 0x1
 
-    .line 401
     invoke-virtual {p0, v0}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v1
@@ -1156,7 +1061,6 @@
 
     const/4 v1, 0x2
 
-    .line 402
     invoke-virtual {p0, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v1
@@ -1165,7 +1069,6 @@
 
     const/4 v1, 0x7
 
-    .line 403
     invoke-virtual {p0, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v1
@@ -1174,7 +1077,6 @@
 
     const/4 v1, 0x3
 
-    .line 404
     invoke-virtual {p0, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v1
@@ -1183,7 +1085,6 @@
 
     const/4 v1, 0x4
 
-    .line 405
     invoke-virtual {p0, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v1
@@ -1192,7 +1093,6 @@
 
     const/4 v1, 0x5
 
-    .line 406
     invoke-virtual {p0, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v1
@@ -1201,7 +1101,6 @@
 
     const/4 v1, 0x6
 
-    .line 407
     invoke-virtual {p0, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result p0
@@ -1221,7 +1120,6 @@
 .method public final init(ZZ)V
     .locals 5
 
-    .line 370
     invoke-static {}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -1230,19 +1128,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 371
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {v0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mparseTargetApks(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
 
-    .line 373
     new-instance v0, Lcom/samsung/android/localeoverlaymanager/OnBootInitializer;
 
     iget-object v1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/localeoverlaymanager/OnBootInitializer;-><init>(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
 
-    .line 376
     iget-object v1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     const/4 v2, 0x1
@@ -1253,7 +1148,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 379
     iget-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p1}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmContext(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Landroid/content/Context;
@@ -1266,7 +1160,6 @@
 
     goto :goto_0
 
-    .line 382
     :cond_0
     iget-object p2, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -1282,7 +1175,6 @@
 
     invoke-virtual {p2, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 383
     iget-object p2, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p2}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetprogressHandler(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Landroid/os/Handler;
@@ -1299,7 +1191,6 @@
 
     invoke-virtual {p2, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 385
     iget-object p2, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p2}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$fgetmLocaleOverlayTargetApks(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)Ljava/util/Set;
@@ -1316,14 +1207,12 @@
 
     move-result p1
 
-    .line 386
     iget-object p2, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     const/4 v0, 0x0
 
     invoke-static {p2, v0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mcleanLocaleOverlayForDisable(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;Ljava/lang/String;)V
 
-    .line 388
     :goto_0
     iget-object p2, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
@@ -1331,7 +1220,6 @@
 
     if-nez p1, :cond_1
 
-    .line 391
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$OverlayHandler;->this$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->-$$Nest$mhandleTaskComplete(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V

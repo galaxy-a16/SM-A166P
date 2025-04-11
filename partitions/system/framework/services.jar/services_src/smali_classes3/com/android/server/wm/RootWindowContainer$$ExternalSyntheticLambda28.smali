@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/TaskFragment;
 
     invoke-static {p1}, Lcom/android/server/wm/RootWindowContainer;->$r8$lambda$7pvQiYr75sfRAOG9gj3H86Zco4M(Lcom/android/server/wm/TaskFragment;)V

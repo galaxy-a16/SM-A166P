@@ -15,7 +15,6 @@
 .method public get()Ljava/lang/Object;
     .locals 0
 
-    .line 127
     :try_start_0
     invoke-interface {p0}, Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingSupplier;->getOrThrow()Ljava/lang/Object;
 
@@ -28,7 +27,6 @@
     :catch_0
     move-exception p0
 
-    .line 129
     invoke-static {p0}, Landroid/util/ExceptionUtils;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0

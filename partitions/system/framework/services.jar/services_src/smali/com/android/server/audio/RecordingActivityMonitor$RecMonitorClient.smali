@@ -20,13 +20,10 @@
 .method public constructor <init>(Landroid/media/IRecordingConfigDispatcher;Z)V
     .locals 0
 
-    .line 568
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 569
     iput-object p1, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecMonitorClient;->mDispatcherCb:Landroid/media/IRecordingConfigDispatcher;
 
-    .line 570
     iput-boolean p2, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecMonitorClient;->mIsPrivileged:Z
 
     return-void
@@ -41,10 +38,8 @@
 
     const-string v1, "client died"
 
-    .line 574
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 575
     sget-object v0, Lcom/android/server/audio/RecordingActivityMonitor$RecMonitorClient;->sMonitor:Lcom/android/server/audio/RecordingActivityMonitor;
 
     iget-object p0, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecMonitorClient;->mDispatcherCb:Landroid/media/IRecordingConfigDispatcher;
@@ -59,7 +54,6 @@
 
     const/4 v0, 0x0
 
-    .line 580
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecMonitorClient;->mDispatcherCb:Landroid/media/IRecordingConfigDispatcher;
 
@@ -82,7 +76,6 @@
 
     const-string v2, "Could not link to client death"
 
-    .line 583
     invoke-static {v1, v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -91,7 +84,6 @@
 .method public release()V
     .locals 2
 
-    .line 589
     iget-object v0, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecMonitorClient;->mDispatcherCb:Landroid/media/IRecordingConfigDispatcher;
 
     invoke-interface {v0}, Landroid/media/IRecordingConfigDispatcher;->asBinder()Landroid/os/IBinder;

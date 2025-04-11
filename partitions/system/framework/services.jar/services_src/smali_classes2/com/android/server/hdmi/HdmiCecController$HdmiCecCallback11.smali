@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;)V
     .locals 0
 
-    .line 1641
     invoke-direct {p0}, Landroid/hardware/tv/cec/V1_1/IHdmiCecCallback$Stub;-><init>()V
 
-    .line 1642
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback11;->mHdmiCecCallback:Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
 
     return-void
@@ -25,7 +23,6 @@
 .method public onCecMessage(Landroid/hardware/tv/cec/V1_0/CecMessage;)V
     .locals 3
 
-    .line 1658
     iget-object v0, p1, Landroid/hardware/tv/cec/V1_0/CecMessage;->body:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -36,7 +33,6 @@
 
     const/4 v1, 0x0
 
-    .line 1659
     :goto_0
     iget-object v2, p1, Landroid/hardware/tv/cec/V1_0/CecMessage;->body:Ljava/util/ArrayList;
 
@@ -46,7 +42,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1660
     iget-object v2, p1, Landroid/hardware/tv/cec/V1_0/CecMessage;->body:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -65,7 +60,6 @@
 
     goto :goto_0
 
-    .line 1662
     :cond_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback11;->mHdmiCecCallback:Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
 
@@ -81,7 +75,6 @@
 .method public onCecMessage_1_1(Landroid/hardware/tv/cec/V1_1/CecMessage;)V
     .locals 3
 
-    .line 1648
     iget-object v0, p1, Landroid/hardware/tv/cec/V1_1/CecMessage;->body:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -92,7 +85,6 @@
 
     const/4 v1, 0x0
 
-    .line 1649
     :goto_0
     iget-object v2, p1, Landroid/hardware/tv/cec/V1_1/CecMessage;->body:Ljava/util/ArrayList;
 
@@ -102,7 +94,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1650
     iget-object v2, p1, Landroid/hardware/tv/cec/V1_1/CecMessage;->body:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -121,7 +112,6 @@
 
     goto :goto_0
 
-    .line 1652
     :cond_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback11;->mHdmiCecCallback:Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
 
@@ -137,7 +127,6 @@
 .method public onHotplugEvent(Landroid/hardware/tv/cec/V1_0/HotplugEvent;)V
     .locals 1
 
-    .line 1667
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback11;->mHdmiCecCallback:Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
 
     iget v0, p1, Landroid/hardware/tv/cec/V1_0/HotplugEvent;->portId:I

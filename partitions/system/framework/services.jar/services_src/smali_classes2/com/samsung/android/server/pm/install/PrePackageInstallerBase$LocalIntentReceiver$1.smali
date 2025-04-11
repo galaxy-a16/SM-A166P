@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$LocalIntentReceiver;)V
     .locals 0
 
-    .line 338
     iput-object p1, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$LocalIntentReceiver$1;->this$0:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$LocalIntentReceiver;
 
     invoke-direct {p0}, Landroid/content/IIntentSender$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public send(ILandroid/content/Intent;Ljava/lang/String;Landroid/os/IBinder;Landroid/content/IIntentReceiver;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 344
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$LocalIntentReceiver$1;->this$0:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$LocalIntentReceiver;
 
@@ -45,7 +43,6 @@
     :catch_0
     move-exception p0
 
-    .line 346
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

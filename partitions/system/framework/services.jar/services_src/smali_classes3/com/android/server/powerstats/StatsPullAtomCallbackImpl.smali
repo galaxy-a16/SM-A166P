@@ -26,7 +26,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 44
     const-class v0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -41,39 +40,32 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/power/PowerStatsInternal;)V
     .locals 2
 
-    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mChannels:Ljava/util/Map;
 
-    .line 48
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mEntityNames:Ljava/util/Map;
 
-    .line 49
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mStateNames:Ljava/util/Map;
 
-    .line 161
     iput-object p1, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mContext:Landroid/content/Context;
 
-    .line 162
     iput-object p2, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mPowerStatsInternal:Landroid/power/PowerStatsInternal;
 
     if-nez p2, :cond_0
 
-    .line 165
     sget-object p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->TAG:Ljava/lang/String;
 
     const-string p1, "Failed to start PowerStatsService statsd pullers"
@@ -82,7 +74,6 @@
 
     return-void
 
-    .line 169
     :cond_0
     const-class p2, Landroid/app/StatsManager;
 
@@ -92,7 +83,6 @@
 
     check-cast p1, Landroid/app/StatsManager;
 
-    .line 171
     invoke-virtual {p0}, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->initPullOnDevicePowerMeasurement()Z
 
     move-result p2
@@ -103,12 +93,10 @@
 
     const/16 p2, 0x2736
 
-    .line 172
     sget-object v1, Lcom/android/internal/util/ConcurrentUtils;->DIRECT_EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-virtual {p1, p2, v0, v1, p0}, Landroid/app/StatsManager;->setPullAtomCallback(ILandroid/app/StatsManager$PullAtomMetadata;Ljava/util/concurrent/Executor;Landroid/app/StatsManager$StatsPullAtomCallback;)V
 
-    .line 179
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->initSubsystemSleepState()Z
 
@@ -118,7 +106,6 @@
 
     const/16 p2, 0x2715
 
-    .line 180
     sget-object v1, Lcom/android/internal/util/ConcurrentUtils;->DIRECT_EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-virtual {p1, p2, v0, v1, p0}, Landroid/app/StatsManager;->setPullAtomCallback(ILandroid/app/StatsManager$PullAtomMetadata;Ljava/util/concurrent/Executor;Landroid/app/StatsManager$StatsPullAtomCallback;)V
@@ -132,7 +119,6 @@
 .method public final initPullOnDevicePowerMeasurement()Z
     .locals 5
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mPowerStatsInternal:Landroid/power/PowerStatsInternal;
 
     invoke-virtual {v0}, Landroid/power/PowerStatsInternal;->getEnergyMeterInfo()[Landroid/hardware/power/stats/Channel;
@@ -143,24 +129,20 @@
 
     if-eqz v0, :cond_2
 
-    .line 67
     array-length v2, v0
 
     if-nez v2, :cond_0
 
     goto :goto_1
 
-    .line 72
     :cond_0
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_1
 
-    .line 73
     aget-object v2, v0, v1
 
-    .line 74
     iget-object v3, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mChannels:Ljava/util/Map;
 
     iget v4, v2, Landroid/hardware/power/stats/Channel;->id:I
@@ -180,7 +162,6 @@
 
     return p0
 
-    .line 68
     :cond_2
     :goto_1
     sget-object p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->TAG:Ljava/lang/String;
@@ -195,7 +176,6 @@
 .method public final initSubsystemSleepState()Z
     .locals 8
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mPowerStatsInternal:Landroid/power/PowerStatsInternal;
 
     invoke-virtual {v0}, Landroid/power/PowerStatsInternal;->getPowerEntityInfo()[Landroid/hardware/power/stats/PowerEntity;
@@ -206,7 +186,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 110
     array-length v2, v0
 
     if-nez v2, :cond_0
@@ -216,23 +195,19 @@
     :cond_0
     move v2, v1
 
-    .line 115
     :goto_0
     array-length v3, v0
 
     if-ge v2, v3, :cond_2
 
-    .line 116
     aget-object v3, v0, v2
 
-    .line 117
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     move v5, v1
 
-    .line 118
     :goto_1
     iget-object v6, v3, Landroid/hardware/power/stats/PowerEntity;->states:[Landroid/hardware/power/stats/State;
 
@@ -240,10 +215,8 @@
 
     if-ge v5, v7, :cond_1
 
-    .line 119
     aget-object v6, v6, v5
 
-    .line 120
     iget v7, v6, Landroid/hardware/power/stats/State;->id:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -258,7 +231,6 @@
 
     goto :goto_1
 
-    .line 123
     :cond_1
     iget-object v5, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mEntityNames:Ljava/util/Map;
 
@@ -272,7 +244,6 @@
 
     invoke-interface {v5, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
     iget-object v5, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mStateNames:Ljava/util/Map;
 
     iget v3, v3, Landroid/hardware/power/stats/PowerEntity;->id:I
@@ -292,7 +263,6 @@
 
     return p0
 
-    .line 111
     :cond_3
     :goto_2
     sget-object p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->TAG:Ljava/lang/String;
@@ -315,14 +285,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 59
     invoke-virtual {p0, p1, p2}, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->pullOnDevicePowerMeasurement(ILjava/util/List;)I
 
     move-result p0
 
     return p0
 
-    .line 61
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -344,7 +312,6 @@
 
     throw p0
 
-    .line 57
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->pullSubsystemSleepState(ILjava/util/List;)I
 
@@ -358,7 +325,6 @@
 
     const/4 v0, 0x1
 
-    .line 83
     :try_start_0
     iget-object v1, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mPowerStatsInternal:Landroid/power/PowerStatsInternal;
 
@@ -374,7 +340,6 @@
 
     const-wide/16 v4, 0x7d0
 
-    .line 84
     invoke-virtual {v1, v4, v5, v3}, Ljava/util/concurrent/CompletableFuture;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object v1
@@ -390,16 +355,13 @@
     :cond_0
     move v0, v2
 
-    .line 92
     :goto_0
     array-length v3, v1
 
     if-ge v0, v3, :cond_2
 
-    .line 94
     aget-object v3, v1, v0
 
-    .line 95
     iget-wide v4, v3, Landroid/hardware/power/stats/EnergyMeasurement;->durationMs:J
 
     iget-wide v6, v3, Landroid/hardware/power/stats/EnergyMeasurement;->timestampMs:J
@@ -408,12 +370,10 @@
 
     if-nez v4, :cond_1
 
-    .line 96
     iget-object v4, p0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mChannels:Ljava/util/Map;
 
     iget v5, v3, Landroid/hardware/power/stats/EnergyMeasurement;->id:I
 
-    .line 98
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -430,7 +390,6 @@
 
     iget v5, v3, Landroid/hardware/power/stats/EnergyMeasurement;->id:I
 
-    .line 99
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -449,7 +408,6 @@
 
     move v5, p1
 
-    .line 96
     invoke-static/range {v5 .. v11}, Lcom/android/internal/util/FrameworkStatsLog;->buildStatsEvent(ILjava/lang/String;Ljava/lang/String;JJ)Landroid/util/StatsEvent;
 
     move-result-object v3
@@ -467,7 +425,6 @@
     :catch_0
     move-exception p0
 
-    .line 86
     sget-object p1, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->TAG:Ljava/lang/String;
 
     const-string p2, "Failed to readEnergyMeterAsync"
@@ -484,7 +441,6 @@
 
     const/4 v1, 0x1
 
-    .line 133
     :try_start_0
     iget-object v2, v0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mPowerStatsInternal:Landroid/power/PowerStatsInternal;
 
@@ -500,7 +456,6 @@
 
     const-wide/16 v5, 0x7d0
 
-    .line 134
     invoke-virtual {v2, v5, v6, v4}, Ljava/util/concurrent/CompletableFuture;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object v2
@@ -516,18 +471,15 @@
     :cond_0
     move v1, v3
 
-    .line 142
     :goto_0
     array-length v4, v2
 
     if-ge v1, v4, :cond_2
 
-    .line 143
     aget-object v4, v2, v1
 
     move v5, v3
 
-    .line 144
     :goto_1
     iget-object v6, v4, Landroid/hardware/power/stats/StateResidencyResult;->stateResidencyData:[Landroid/hardware/power/stats/StateResidency;
 
@@ -535,15 +487,12 @@
 
     if-ge v5, v7, :cond_1
 
-    .line 145
     aget-object v6, v6, v5
 
-    .line 146
     iget-object v7, v0, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->mEntityNames:Ljava/util/Map;
 
     iget v8, v4, Landroid/hardware/power/stats/StateResidencyResult;->id:I
 
-    .line 148
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -560,7 +509,6 @@
 
     iget v8, v4, Landroid/hardware/power/stats/StateResidencyResult;->id:I
 
-    .line 149
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -591,7 +539,6 @@
 
     move/from16 v8, p1
 
-    .line 146
     invoke-static/range {v8 .. v14}, Lcom/android/internal/util/FrameworkStatsLog;->buildStatsEvent(ILjava/lang/String;Ljava/lang/String;JJ)Landroid/util/StatsEvent;
 
     move-result-object v6
@@ -617,7 +564,6 @@
     :catch_0
     move-exception v0
 
-    .line 136
     sget-object v2, Lcom/android/server/powerstats/StatsPullAtomCallbackImpl;->TAG:Ljava/lang/String;
 
     const-string v3, "Failed to getStateResidencyAsync"

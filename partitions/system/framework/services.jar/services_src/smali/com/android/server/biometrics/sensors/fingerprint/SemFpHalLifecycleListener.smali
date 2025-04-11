@@ -10,6 +10,5 @@
 .method public onHalStop(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

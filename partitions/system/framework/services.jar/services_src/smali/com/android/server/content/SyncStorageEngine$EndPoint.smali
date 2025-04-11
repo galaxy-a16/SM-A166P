@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 200
     new-instance v0, Lcom/android/server/content/SyncStorageEngine$EndPoint;
 
     const/4 v1, 0x0
@@ -36,16 +35,12 @@
 .method public constructor <init>(Landroid/accounts/Account;Ljava/lang/String;I)V
     .locals 0
 
-    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 207
     iput-object p1, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
 
-    .line 208
     iput-object p2, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->provider:Ljava/lang/String;
 
-    .line 209
     iput p3, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->userId:I
 
     return-void
@@ -56,7 +51,6 @@
 .method public matchesSpec(Lcom/android/server/content/SyncStorageEngine$EndPoint;)Z
     .locals 4
 
-    .line 219
     iget v0, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->userId:I
 
     iget v1, p1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->userId:I
@@ -73,7 +67,6 @@
 
     return v2
 
-    .line 225
     :cond_0
     iget-object v0, p1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
 
@@ -85,7 +78,6 @@
 
     goto :goto_0
 
-    .line 228
     :cond_1
     iget-object v3, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
 
@@ -93,7 +85,6 @@
 
     move-result v0
 
-    .line 231
     :goto_0
     iget-object p1, p1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->provider:Ljava/lang/String;
 
@@ -103,7 +94,6 @@
 
     goto :goto_1
 
-    .line 234
     :cond_2
     iget-object p0, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->provider:Ljava/lang/String;
 
@@ -125,12 +115,10 @@
 .method public toSafeString()Ljava/lang/String;
     .locals 3
 
-    .line 249
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 250
     iget-object v1, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
 
     if-nez v1, :cond_0
@@ -149,10 +137,8 @@
 
     const-string v1, "/"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 252
     iget-object v1, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->provider:Ljava/lang/String;
 
     if-nez v1, :cond_1
@@ -162,7 +148,6 @@
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 253
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,7 +166,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 254
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -192,12 +176,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 240
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 241
     iget-object v1, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
 
     if-nez v1, :cond_0
@@ -214,10 +196,8 @@
 
     const-string v1, "/"
 
-    .line 242
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 243
     iget-object v1, p0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->provider:Ljava/lang/String;
 
     if-nez v1, :cond_1
@@ -227,7 +207,6 @@
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 244
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,7 +225,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 245
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

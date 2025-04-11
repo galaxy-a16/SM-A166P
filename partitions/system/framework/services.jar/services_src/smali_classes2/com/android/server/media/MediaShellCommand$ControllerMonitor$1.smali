@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaShellCommand$ControllerMonitor;Ljava/lang/String;)V
     .locals 0
 
-    .line 274
     iput-object p1, p0, Lcom/android/server/media/MediaShellCommand$ControllerMonitor$1;->this$1:Lcom/android/server/media/MediaShellCommand$ControllerMonitor;
 
     invoke-direct {p0, p2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
@@ -24,7 +23,6 @@
 .method public onLooperPrepared()V
     .locals 2
 
-    .line 278
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand$ControllerMonitor$1;->this$1:Lcom/android/server/media/MediaShellCommand$ControllerMonitor;
 
@@ -44,7 +42,6 @@
 
     goto :goto_0
 
-    .line 280
     :catch_0
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerMonitor$1;->this$1:Lcom/android/server/media/MediaShellCommand$ControllerMonitor;
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayController$20;)V
     .locals 0
 
-    .line 1489
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$20$1;->this$1:Lcom/android/server/display/WifiDisplayController$20;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1492
     iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -42,10 +40,8 @@
 
     const-string/jumbo v1, "onDeviceInfoAvailable"
 
-    .line 1493
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1494
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$20$1;->this$1:Lcom/android/server/display/WifiDisplayController$20;
 
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$20;->this$0:Lcom/android/server/display/WifiDisplayController;

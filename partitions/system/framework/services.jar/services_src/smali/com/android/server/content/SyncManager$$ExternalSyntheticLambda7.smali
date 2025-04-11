@@ -36,7 +36,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/content/SyncManager;Landroid/accounts/AccountAndUser;IILjava/lang/String;Landroid/os/Bundle;IJIIILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/content/SyncManager$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/content/SyncManager;
@@ -71,7 +70,6 @@
 .method public final onResult(Landroid/os/Bundle;)V
     .locals 14
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/content/SyncManager$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/content/SyncManager;
 
     iget-object v1, p0, Lcom/android/server/content/SyncManager$$ExternalSyntheticLambda7;->f$1:Landroid/accounts/AccountAndUser;

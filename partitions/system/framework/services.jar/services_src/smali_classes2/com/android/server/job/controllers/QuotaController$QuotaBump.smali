@@ -14,10 +14,8 @@
 .method public constructor <init>(J)V
     .locals 0
 
-    .line 2030
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2031
     iput-wide p1, p0, Lcom/android/server/job/controllers/QuotaController$QuotaBump;->eventTimeElapsed:J
 
     return-void
@@ -30,15 +28,12 @@
 
     const-string v0, "Quota bump @ "
 
-    .line 2041
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2042
     iget-wide v0, p0, Lcom/android/server/job/controllers/QuotaController$QuotaBump;->eventTimeElapsed:J
 
     invoke-virtual {p1, v0, v1}, Landroid/util/IndentingPrintWriter;->print(J)V
 
-    .line 2043
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
     return-void
@@ -47,7 +42,6 @@
 .method public getEndTimeElapsed()J
     .locals 2
 
-    .line 2036
     iget-wide v0, p0, Lcom/android/server/job/controllers/QuotaController$QuotaBump;->eventTimeElapsed:J
 
     return-wide v0

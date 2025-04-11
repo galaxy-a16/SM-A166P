@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/DeviceIdleJobsController;)V
     .locals 0
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .line 84
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -112,7 +110,6 @@
 
     goto/16 :goto_3
 
-    .line 87
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
@@ -140,7 +137,6 @@
 
     move-result-object p0
 
-    .line 88
     invoke-virtual {p0}, Landroid/os/PowerManager;->isLightDeviceIdleMode()Z
 
     move-result p0
@@ -152,14 +148,12 @@
     :cond_4
     move v0, v1
 
-    .line 87
     :cond_5
     :goto_1
     invoke-virtual {p1, v0}, Lcom/android/server/job/controllers/DeviceIdleJobsController;->updateIdleMode(Z)V
 
     goto/16 :goto_3
 
-    .line 91
     :pswitch_1
     iget-object p1, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
@@ -167,7 +161,6 @@
 
     monitor-enter p1
 
-    .line 92
     :try_start_0
     iget-object p2, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
@@ -175,14 +168,12 @@
 
     move-result-object v0
 
-    .line 93
     invoke-interface {v0}, Lcom/android/server/DeviceIdleInternal;->getPowerSaveWhitelistUserAppIds()[I
 
     move-result-object v0
 
     invoke-static {p2, v0}, Lcom/android/server/job/controllers/DeviceIdleJobsController;->-$$Nest$fputmDeviceIdleWhitelistAppIds(Lcom/android/server/job/controllers/DeviceIdleJobsController;[I)V
 
-    .line 94
     invoke-static {}, Lcom/android/server/job/controllers/DeviceIdleJobsController;->-$$Nest$sfgetDEBUG()Z
 
     move-result p2
@@ -191,7 +182,6 @@
 
     const-string p2, "JobScheduler.DeviceIdle"
 
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,7 +196,6 @@
 
     move-result-object p0
 
-    .line 96
     invoke-static {p0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object p0
@@ -217,10 +206,8 @@
 
     move-result-object p0
 
-    .line 95
     invoke-static {p2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     :cond_6
     monitor-exit p1
 
@@ -235,7 +222,6 @@
 
     throw p0
 
-    .line 101
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
@@ -243,7 +229,6 @@
 
     monitor-enter p1
 
-    .line 102
     :try_start_1
     iget-object p2, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
@@ -251,14 +236,12 @@
 
     move-result-object v0
 
-    .line 103
     invoke-interface {v0}, Lcom/android/server/DeviceIdleInternal;->getPowerSaveTempWhitelistAppIds()[I
 
     move-result-object v0
 
     invoke-static {p2, v0}, Lcom/android/server/job/controllers/DeviceIdleJobsController;->-$$Nest$fputmPowerSaveTempWhitelistAppIds(Lcom/android/server/job/controllers/DeviceIdleJobsController;[I)V
 
-    .line 104
     invoke-static {}, Lcom/android/server/job/controllers/DeviceIdleJobsController;->-$$Nest$sfgetDEBUG()Z
 
     move-result p2
@@ -267,7 +250,6 @@
 
     const-string p2, "JobScheduler.DeviceIdle"
 
-    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -282,7 +264,6 @@
 
     move-result-object v2
 
-    .line 106
     invoke-static {v2}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v2
@@ -293,23 +274,19 @@
 
     move-result-object v0
 
-    .line 105
     invoke-static {p2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     :cond_7
     new-instance p2, Landroid/util/ArraySet;
 
     invoke-direct {p2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 109
     sget-object v0, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {v0}, Ljava/time/Clock;->millis()J
 
     move-result-wide v2
 
-    .line 110
     :goto_2
     iget-object v0, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
@@ -323,7 +300,6 @@
 
     if-ge v1, v0, :cond_9
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
     invoke-static {v0}, Lcom/android/server/job/controllers/DeviceIdleJobsController;->-$$Nest$fgetmAllowInIdleJobs(Lcom/android/server/job/controllers/DeviceIdleJobsController;)Landroid/util/ArraySet;
@@ -342,7 +318,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
     invoke-static {v0}, Lcom/android/server/job/controllers/DeviceIdleJobsController;->-$$Nest$fgetmAllowInIdleJobs(Lcom/android/server/job/controllers/DeviceIdleJobsController;)Landroid/util/ArraySet;
@@ -362,7 +337,6 @@
 
     goto :goto_2
 
-    .line 115
     :cond_9
     invoke-virtual {p2}, Landroid/util/ArraySet;->size()I
 
@@ -370,14 +344,12 @@
 
     if-lez v0, :cond_a
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/job/controllers/DeviceIdleJobsController$1;->this$0:Lcom/android/server/job/controllers/DeviceIdleJobsController;
 
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {p0, p2}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
-    .line 118
     :cond_a
     monitor-exit p1
 

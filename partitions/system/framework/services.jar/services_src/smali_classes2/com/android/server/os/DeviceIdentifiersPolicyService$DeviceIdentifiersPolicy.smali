@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 51
     invoke-direct {p0}, Landroid/os/IDeviceIdentifiersPolicyService$Stub;-><init>()V
 
-    .line 52
     iput-object p1, p0, Lcom/android/server/os/DeviceIdentifiersPolicyService$DeviceIdentifiersPolicy;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,19 +23,16 @@
 .method public final checkPackageBelongsToCaller(Ljava/lang/String;)Z
     .locals 3
 
-    .line 85
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 86
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
     const/4 v2, 0x0
 
-    .line 89
     :try_start_0
     iget-object p0, p0, Lcom/android/server/os/DeviceIdentifiersPolicyService$DeviceIdentifiersPolicy;->mContext:Landroid/content/Context;
 
@@ -63,7 +58,6 @@
 .method public getSerial()Ljava/lang/String;
     .locals 2
 
-    .line 61
     iget-object p0, p0, Lcom/android/server/os/DeviceIdentifiersPolicyService$DeviceIdentifiersPolicy;->mContext:Landroid/content/Context;
 
     const/4 v0, 0x0
@@ -83,7 +77,6 @@
     :cond_0
     const-string/jumbo p0, "ro.serialno"
 
-    .line 65
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -94,14 +87,12 @@
 .method public getSerialForPackage(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 71
     invoke-virtual {p0, p1}, Lcom/android/server/os/DeviceIdentifiersPolicyService$DeviceIdentifiersPolicy;->checkPackageBelongsToCaller(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/os/DeviceIdentifiersPolicyService$DeviceIdentifiersPolicy;->mContext:Landroid/content/Context;
 
     const-string v0, "getSerial"
@@ -119,14 +110,12 @@
     :cond_0
     const-string/jumbo p0, "ro.serialno"
 
-    .line 81
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 72
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -138,7 +127,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 74
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p2

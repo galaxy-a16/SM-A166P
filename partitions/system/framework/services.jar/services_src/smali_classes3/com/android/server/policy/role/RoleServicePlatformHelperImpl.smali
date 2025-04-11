@@ -18,7 +18,6 @@
 .method public static synthetic $r8$lambda$7Dom3dNzcHm0uscc4SGXgGd8JeY(Ljava/io/DataOutputStream;Landroid/content/pm/PackageManagerInternal;ILcom/android/server/pm/pkg/AndroidPackage;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->lambda$computePackageStateHash$0(Ljava/io/DataOutputStream;Landroid/content/pm/PackageManagerInternal;ILcom/android/server/pm/pkg/AndroidPackage;)V
 
     return-void
@@ -27,17 +26,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     iput-object p1, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->mContext:Landroid/content/Context;
 
     return-void
@@ -46,7 +42,6 @@
 .method public static getFile(I)Ljava/io/File;
     .locals 2
 
-    .line 182
     new-instance v0, Ljava/io/File;
 
     invoke-static {p0}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
@@ -63,7 +58,6 @@
 .method public static synthetic lambda$computePackageStateHash$0(Ljava/io/DataOutputStream;Landroid/content/pm/PackageManagerInternal;ILcom/android/server/pm/pkg/AndroidPackage;)V
     .locals 5
 
-    .line 312
     :try_start_0
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
@@ -71,36 +65,30 @@
 
     invoke-virtual {p0, v0}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 313
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getLongVersionCode()J
 
     move-result-wide v0
 
     invoke-virtual {p0, v0, v1}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-    .line 315
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 314
     invoke-virtual {p1, v0, p2}, Landroid/content/pm/PackageManagerInternal;->getApplicationEnabledState(Ljava/lang/String;I)I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 317
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getRequestedPermissions()Ljava/util/List;
 
     move-result-object v0
 
-    .line 318
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 319
     invoke-virtual {p0, v1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
     const/4 v2, 0x0
@@ -110,7 +98,6 @@
     :goto_0
     if-ge v3, v1, :cond_0
 
-    .line 321
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -123,7 +110,6 @@
 
     goto :goto_0
 
-    .line 325
     :cond_0
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
@@ -133,12 +119,10 @@
 
     move-result-object v0
 
-    .line 326
     invoke-static {v0}, Lcom/android/internal/util/CollectionUtils;->size(Ljava/util/Collection;)I
 
     move-result v1
 
-    .line 327
     invoke-virtual {p0, v1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
     move v3, v2
@@ -146,7 +130,6 @@
     :goto_1
     if-ge v3, v1, :cond_1
 
-    .line 329
     invoke-virtual {v0, v3}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -159,7 +142,6 @@
 
     goto :goto_1
 
-    .line 333
     :cond_1
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
@@ -169,7 +151,6 @@
 
     move-result-object p1
 
-    .line 334
     invoke-static {p1}, Lcom/android/internal/util/CollectionUtils;->size(Ljava/util/Collection;)I
 
     move-result p2
@@ -179,7 +160,6 @@
     :goto_2
     if-ge v0, p2, :cond_2
 
-    .line 336
     invoke-virtual {p1, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -192,7 +172,6 @@
 
     goto :goto_2
 
-    .line 339
     :cond_2
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
@@ -209,7 +188,6 @@
 
     aget-object p3, p1, v2
 
-    .line 340
     invoke-virtual {p3}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object p3
@@ -228,7 +206,6 @@
     :catch_0
     move-exception p0
 
-    .line 344
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -241,7 +218,6 @@
 .method public computePackageStateHash(I)Ljava/lang/String;
     .locals 3
 
-    .line 305
     const-class p0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -250,12 +226,10 @@
 
     check-cast p0, Landroid/content/pm/PackageManagerInternal;
 
-    .line 307
     new-instance v0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$MessageDigestOutputStream;
 
     invoke-direct {v0}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$MessageDigestOutputStream;-><init>()V
 
-    .line 309
     new-instance v1, Ljava/io/DataOutputStream;
 
     new-instance v2, Ljava/io/BufferedOutputStream;
@@ -264,14 +238,12 @@
 
     invoke-direct {v1, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 310
     new-instance v2, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$$ExternalSyntheticLambda0;
 
     invoke-direct {v2, v1, p0, p1}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$$ExternalSyntheticLambda0;-><init>(Ljava/io/DataOutputStream;Landroid/content/pm/PackageManagerInternal;I)V
 
     invoke-virtual {p0, v2, p1}, Landroid/content/pm/PackageManagerInternal;->forEachInstalledPackage(Ljava/util/function/Consumer;I)V
 
-    .line 347
     invoke-virtual {v0}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$MessageDigestOutputStream;->getDigestAsString()Ljava/lang/String;
 
     move-result-object p0
@@ -282,14 +254,12 @@
 .method public getLegacyRoleState(I)Ljava/util/Map;
     .locals 1
 
-    .line 88
     invoke-virtual {p0, p1}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->readFile(I)Ljava/util/Map;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 90
     invoke-virtual {p0, p1}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->readFromLegacySettings(I)Ljava/util/Map;
 
     move-result-object v0
@@ -301,14 +271,12 @@
 .method public final isSettingsApplication(Ljava/lang/String;I)Z
     .locals 2
 
-    .line 291
     iget-object p0, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 292
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.settings.SETTINGS"
@@ -323,14 +291,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 296
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-nez p0, :cond_0
 
     goto :goto_0
 
-    .line 299
     :cond_0
     iget-object p0, p0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
@@ -350,12 +316,10 @@
 .method public final parseRoleHoldersLocked(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/Set;
     .locals 5
 
-    .line 160
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 164
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
@@ -364,7 +328,6 @@
 
     add-int/2addr v0, v1
 
-    .line 165
     :cond_0
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -373,7 +336,6 @@
 
     if-eq v2, v1, :cond_3
 
-    .line 166
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
@@ -393,7 +355,6 @@
 
     goto :goto_0
 
-    .line 171
     :cond_2
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -411,12 +372,10 @@
 
     const-string/jumbo v3, "name"
 
-    .line 172
     invoke-interface {p1, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 173
     invoke-interface {p0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -428,12 +387,10 @@
 .method public final parseRoles(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/Map;
     .locals 6
 
-    .line 136
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 140
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v1
@@ -442,7 +399,6 @@
 
     add-int/2addr v1, v2
 
-    .line 141
     :cond_0
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -451,7 +407,6 @@
 
     if-eq v3, v2, :cond_3
 
-    .line 142
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v4
@@ -471,7 +426,6 @@
 
     goto :goto_0
 
-    .line 147
     :cond_2
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -489,17 +443,14 @@
 
     const-string/jumbo v4, "name"
 
-    .line 148
     invoke-interface {p1, v3, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 149
     invoke-virtual {p0, p1}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->parseRoleHoldersLocked(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/Set;
 
     move-result-object v4
 
-    .line 150
     invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -511,7 +462,6 @@
 .method public final parseXml(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/Map;
     .locals 5
 
-    .line 118
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
@@ -520,7 +470,6 @@
 
     add-int/2addr v0, v1
 
-    .line 119
     :cond_0
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -529,7 +478,6 @@
 
     if-eq v2, v1, :cond_3
 
-    .line 120
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
@@ -549,7 +497,6 @@
 
     goto :goto_0
 
-    .line 125
     :cond_2
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -563,14 +510,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 126
     invoke-virtual {p0, p1}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->parseRoles(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 
-    .line 130
     :cond_3
     new-instance p0, Ljava/io/IOException;
 
@@ -584,14 +529,12 @@
 .method public final readFile(I)Ljava/util/Map;
     .locals 4
 
-    .line 97
     invoke-static {p1}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->getFile(I)Ljava/io/File;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 98
     :try_start_0
     new-instance v1, Landroid/util/AtomicFile;
 
@@ -605,21 +548,17 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 99
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v2
 
-    .line 100
     invoke-interface {v2, v1, v0}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 101
     invoke-virtual {p0, v2}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->parseXml(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/Map;
 
     move-result-object p0
 
-    .line 102
     sget-object v2, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->LOG_TAG:Ljava/lang/String;
 
     const-string v3, "Read legacy roles.xml successfully"
@@ -630,7 +569,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 104
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -646,7 +584,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 98
     :try_start_3
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_3
@@ -671,7 +608,6 @@
     :catch_0
     move-exception p0
 
-    .line 108
     sget-object v1, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->LOG_TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -692,7 +628,6 @@
 
     return-object v0
 
-    .line 105
     :catch_1
     sget-object p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->LOG_TAG:Ljava/lang/String;
 
@@ -706,12 +641,10 @@
 .method public final readFromLegacySettings(I)Ljava/util/Map;
     .locals 6
 
-    .line 187
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 190
     iget-object v1, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -720,12 +653,10 @@
 
     const-string v2, "assistant"
 
-    .line 191
     invoke-static {v1, v2, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 193
     iget-object v3, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -736,28 +667,24 @@
 
     if-eqz v2, :cond_0
 
-    .line 198
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
 
     if-nez v5, :cond_1
 
-    .line 199
     invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 200
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 205
     :cond_0
     invoke-virtual {v3}, Landroid/content/pm/PackageManager;->isDeviceUpgrading()Z
 
@@ -765,7 +692,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 206
     iget-object v2, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->mContext:Landroid/content/Context;
 
     const v5, 0x1040021
@@ -774,7 +700,6 @@
 
     move-result-object v2
 
-    .line 207
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -791,14 +716,12 @@
 
     const-string v5, "android.app.role.ASSISTANT"
 
-    .line 212
     invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
 
     invoke-interface {v0, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 216
     :cond_2
     const-class v2, Landroid/content/pm/PackageManagerInternal;
 
@@ -808,7 +731,6 @@
 
     check-cast v2, Landroid/content/pm/PackageManagerInternal;
 
-    .line 218
     invoke-virtual {v2, p1}, Landroid/content/pm/PackageManagerInternal;->removeLegacyDefaultBrowserPackageName(I)Ljava/lang/String;
 
     move-result-object v2
@@ -817,7 +739,6 @@
 
     const-string v5, "android.app.role.BROWSER"
 
-    .line 221
     invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
@@ -827,12 +748,10 @@
     :cond_3
     const-string v2, "dialer_default_application"
 
-    .line 225
     invoke-static {v1, v2, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 228
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -841,7 +760,6 @@
 
     goto :goto_1
 
-    .line 230
     :cond_4
     invoke-virtual {v3}, Landroid/content/pm/PackageManager;->isDeviceUpgrading()Z
 
@@ -849,7 +767,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 235
     iget-object v2, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->mContext:Landroid/content/Context;
 
     const v5, 0x1040023
@@ -868,7 +785,6 @@
 
     const-string v5, "android.app.role.DIALER"
 
-    .line 240
     invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
@@ -878,12 +794,10 @@
     :cond_6
     const-string/jumbo v2, "sms_default_application"
 
-    .line 244
     invoke-static {v1, v2, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 247
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -892,7 +806,6 @@
 
     goto :goto_2
 
-    .line 249
     :cond_7
     iget-object v2, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->mContext:Landroid/content/Context;
 
@@ -906,7 +819,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 252
     iget-object v2, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->mContext:Landroid/content/Context;
 
     const v5, 0x1040024
@@ -925,14 +837,12 @@
 
     const-string v5, "android.app.role.SMS"
 
-    .line 257
     invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
 
     invoke-interface {v0, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 262
     :cond_9
     invoke-virtual {v3}, Landroid/content/pm/PackageManager;->isDeviceUpgrading()Z
 
@@ -940,7 +850,6 @@
 
     if-eqz v2, :cond_c
 
-    .line 263
     new-instance v2, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.MAIN"
@@ -949,26 +858,22 @@
 
     const-string v5, "android.intent.category.HOME"
 
-    .line 264
     invoke-virtual {v2, v5}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v2
 
     const/high16 v5, 0xd0000
 
-    .line 263
     invoke-virtual {v3, v2, v5, p1}, Landroid/content/pm/PackageManager;->resolveActivityAsUser(Landroid/content/Intent;II)Landroid/content/pm/ResolveInfo;
 
     move-result-object v2
 
     if-eqz v2, :cond_a
 
-    .line 268
     iget-object v2, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v2, :cond_a
 
-    .line 269
     iget-object v2, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     goto :goto_3
@@ -979,7 +884,6 @@
     :goto_3
     if-eqz v2, :cond_b
 
-    .line 270
     invoke-virtual {p0, v2, p1}, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl;->isSettingsApplication(Ljava/lang/String;I)Z
 
     move-result p0
@@ -997,7 +901,6 @@
 
     const-string p0, "android.app.role.HOME"
 
-    .line 277
     invoke-static {v4}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
@@ -1007,7 +910,6 @@
     :cond_d
     const-string p0, "emergency_assistance_application"
 
-    .line 281
     invoke-static {v1, p0, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -1016,7 +918,6 @@
 
     const-string p1, "android.app.role.EMERGENCY"
 
-    .line 284
     invoke-static {p0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0

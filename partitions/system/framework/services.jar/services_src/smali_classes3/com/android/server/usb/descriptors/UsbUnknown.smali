@@ -7,7 +7,6 @@
 .method public constructor <init>(IB)V
     .locals 0
 
-    .line 26
     invoke-direct {p0, p1, p2}, Lcom/android/server/usb/descriptors/UsbDescriptor;-><init>(IB)V
 
     return-void

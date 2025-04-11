@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;Lcom/android/server/wm/WindowManagerInternal$AppTransitionListener;)V
     .locals 0
 
-    .line 5916
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$12;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iput-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt$12;->val$appTransitionListenerForDex:Lcom/android/server/wm/WindowManagerInternal$AppTransitionListener;
@@ -31,20 +30,17 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayChanged(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

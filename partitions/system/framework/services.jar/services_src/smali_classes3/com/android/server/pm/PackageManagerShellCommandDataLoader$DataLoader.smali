@@ -16,15 +16,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 245
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 246
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader;->mParams:Landroid/content/pm/DataLoaderParams;
 
-    .line 247
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader;->mConnector:Landroid/service/dataloader/DataLoaderService$FileSystemConnector;
 
     return-void
@@ -33,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader;-><init>()V
 
     return-void
@@ -44,10 +40,8 @@
 .method public onCreate(Landroid/content/pm/DataLoaderParams;Landroid/service/dataloader/DataLoaderService$FileSystemConnector;)Z
     .locals 0
 
-    .line 252
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader;->mParams:Landroid/content/pm/DataLoaderParams;
 
-    .line 253
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader;->mConnector:Landroid/service/dataloader/DataLoaderService$FileSystemConnector;
 
     const/4 p0, 0x1
@@ -58,7 +52,6 @@
 .method public onPrepareImage(Ljava/util/Collection;Ljava/util/Collection;)Z
     .locals 12
 
-    .line 260
     iget-object p2, p0, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader;->mParams:Landroid/content/pm/DataLoaderParams;
 
     invoke-virtual {p2}, Landroid/content/pm/DataLoaderParams;->getArguments()Ljava/lang/String;
@@ -77,12 +70,10 @@
 
     const-string p0, "Missing shell command."
 
-    .line 262
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 266
     :cond_0
     :try_start_0
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -104,7 +95,6 @@
 
     check-cast v2, Landroid/content/pm/InstallationFile;
 
-    .line 267
     invoke-virtual {v2}, Landroid/content/pm/InstallationFile;->getMetadata()[B
 
     move-result-object v4
@@ -115,7 +105,6 @@
 
     if-nez v4, :cond_1
 
-    .line 269
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +127,6 @@
 
     return v0
 
-    .line 272
     :cond_1
     invoke-virtual {v4}, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$Metadata;->getMode()B
 
@@ -148,7 +136,6 @@
 
     if-eq v5, v3, :cond_2
 
-    .line 290
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,7 +163,6 @@
     :cond_2
     const/4 v3, 0x0
 
-    .line 281
     :try_start_1
     invoke-virtual {v4}, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$Metadata;->getData()Ljava/lang/String;
 
@@ -186,7 +172,6 @@
 
     move-result-object v3
 
-    .line 282
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader;->mConnector:Landroid/service/dataloader/DataLoaderService$FileSystemConnector;
 
     invoke-virtual {v2}, Landroid/content/pm/InstallationFile;->getName()Ljava/lang/String;
@@ -205,7 +190,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 285
     :try_start_2
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -216,16 +200,13 @@
 
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 286
     throw p0
 
-    .line 274
     :cond_3
     invoke-static {p2}, Lcom/android/server/pm/PackageManagerShellCommandDataLoader;->getStdInPFD(Landroid/os/ShellCommand;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v8
 
-    .line 275
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerShellCommandDataLoader$DataLoader;->mConnector:Landroid/service/dataloader/DataLoaderService$FileSystemConnector;
 
     invoke-virtual {v2}, Landroid/content/pm/InstallationFile;->getName()Ljava/lang/String;
@@ -260,7 +241,6 @@
 
     const-string p1, "Exception while streaming files"
 
-    .line 296
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0

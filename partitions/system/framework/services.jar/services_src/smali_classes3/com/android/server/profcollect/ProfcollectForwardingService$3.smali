@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/profcollect/ProfcollectForwardingService;)V
     .locals 0
 
-    .line 309
     iput-object p1, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$3;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-direct {p0}, Landroid/os/UpdateEngineCallback;-><init>()V
@@ -24,21 +23,18 @@
 .method public onPayloadApplicationComplete(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStatusUpdate(IF)V
     .locals 2
 
-    .line 312
     invoke-static {}, Lcom/android/server/profcollect/ProfcollectForwardingService;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 313
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +64,6 @@
 
     if-ne p1, p2, :cond_1
 
-    .line 318
     iget-object p0, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$3;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-static {p0}, Lcom/android/server/profcollect/ProfcollectForwardingService;->-$$Nest$mpackAndUploadReport(Lcom/android/server/profcollect/ProfcollectForwardingService;)V

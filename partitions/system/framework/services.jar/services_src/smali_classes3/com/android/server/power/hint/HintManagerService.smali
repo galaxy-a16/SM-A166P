@@ -25,7 +25,6 @@
 .method public static synthetic $r8$lambda$bjaYKD_AmTWWA3z1PyzPeWjQ4ls(Lcom/android/server/power/hint/HintManagerService;ILjava/util/List;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/power/hint/HintManagerService;->onPullAtom(ILjava/util/List;)I
 
     move-result p0
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActiveSessions(Lcom/android/server/power/hint/HintManagerService;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService;->mActiveSessions:Landroid/util/ArrayMap;
 
     return-object p0
@@ -45,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -54,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetmNativeWrapper(Lcom/android/server/power/hint/HintManagerService;)Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService;->mNativeWrapper:Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
 
     return-object p0
@@ -63,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$mcheckTidValid(Lcom/android/server/power/hint/HintManagerService;II[I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/power/hint/HintManagerService;->checkTidValid(II[I)Z
 
     move-result p0
@@ -74,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$misHalSupported(Lcom/android/server/power/hint/HintManagerService;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService;->isHalSupported()Z
 
     move-result p0
@@ -85,7 +79,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 87
     new-instance v0, Lcom/android/server/power/hint/HintManagerService$Injector;
 
     invoke-direct {v0}, Lcom/android/server/power/hint/HintManagerService$Injector;-><init>()V
@@ -98,68 +91,56 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/power/hint/HintManagerService$Injector;)V
     .locals 1
 
-    .line 92
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 71
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/power/hint/HintManagerService;->mLock:Ljava/lang/Object;
 
-    .line 84
     new-instance v0, Lcom/android/server/power/hint/HintManagerService$BinderService;
 
     invoke-direct {v0, p0}, Lcom/android/server/power/hint/HintManagerService$BinderService;-><init>(Lcom/android/server/power/hint/HintManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/power/hint/HintManagerService;->mService:Landroid/os/IHintManager$Stub;
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/power/hint/HintManagerService;->mContext:Landroid/content/Context;
 
-    .line 94
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/power/hint/HintManagerService;->mActiveSessions:Landroid/util/ArrayMap;
 
-    .line 95
     invoke-virtual {p2}, Lcom/android/server/power/hint/HintManagerService$Injector;->createNativeWrapper()Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/power/hint/HintManagerService;->mNativeWrapper:Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
 
-    .line 96
     invoke-virtual {p1}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halInit()V
 
-    .line 97
     invoke-virtual {p1}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halGetHintSessionPreferredRate()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/android/server/power/hint/HintManagerService;->mHintSessionPreferredRate:J
 
-    .line 98
     new-instance p1, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;
 
     invoke-direct {p1, p0}, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;-><init>(Lcom/android/server/power/hint/HintManagerService;)V
 
     iput-object p1, p0, Lcom/android/server/power/hint/HintManagerService;->mUidObserver:Lcom/android/server/power/hint/HintManagerService$MyUidObserver;
 
-    .line 99
     const-class p1, Landroid/app/ActivityManagerInternal;
 
-    .line 100
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/app/ActivityManagerInternal;
 
-    .line 99
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p2, p1
@@ -176,7 +157,6 @@
 .method public final checkTidValid(II[I)Z
     .locals 10
 
-    .line 312
     array-length v0, p3
 
     const/4 v1, 0x0
@@ -196,7 +176,6 @@
 
     const-string v7, "Tgid:"
 
-    .line 313
     filled-new-array {v6, v7}, [Ljava/lang/String;
 
     move-result-object v6
@@ -205,7 +184,6 @@
 
     new-array v7, v7, [J
 
-    .line 318
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -249,7 +227,6 @@
 
     return v2
 
-    .line 332
     :cond_1
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService;->mAmInternal:Landroid/app/ActivityManagerInternal;
 
@@ -261,7 +238,6 @@
 
     return v2
 
-    .line 337
     :cond_2
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -291,7 +267,6 @@
 .method public getBinderServiceInstance()Landroid/os/IHintManager$Stub;
     .locals 0
 
-    .line 305
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService;->mService:Landroid/os/IHintManager$Stub;
 
     return-object p0
@@ -300,7 +275,6 @@
 .method public final isHalSupported()Z
     .locals 4
 
-    .line 111
     iget-wide v0, p0, Lcom/android/server/power/hint/HintManagerService;->mHintSessionPreferredRate:J
 
     const-wide/16 v2, -0x1
@@ -327,7 +301,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 122
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService;->systemReady()V
 
     :cond_0
@@ -335,7 +308,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 125
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService;->registerStatsCallbacks()V
 
     :cond_1
@@ -353,19 +325,16 @@
 
     const-string p1, "debug.sf.enable_adpf_cpu_hint"
 
-    .line 153
     invoke-static {p1, p0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
     const-string v1, "debug.hwui.use_hint_manager"
 
-    .line 155
     invoke-static {v1, p0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 157
     invoke-static {v0, p1, v1}, Lcom/android/internal/util/FrameworkStatsLog;->buildStatsEvent(IZZ)Landroid/util/StatsEvent;
 
     move-result-object p1
@@ -381,7 +350,6 @@
 
     const-string/jumbo v0, "performance_hint"
 
-    .line 116
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService;->mService:Landroid/os/IHintManager$Stub;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
@@ -392,7 +360,6 @@
 .method public final registerStatsCallbacks()V
     .locals 4
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/app/StatsManager;
@@ -403,7 +370,6 @@
 
     check-cast v0, Landroid/app/StatsManager;
 
-    .line 146
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
@@ -416,7 +382,6 @@
 
     const/4 v3, 0x0
 
-    .line 143
     invoke-virtual {v0, p0, v3, v1, v2}, Landroid/app/StatsManager;->setPullAtomCallback(ILandroid/app/StatsManager$PullAtomMetadata;Ljava/util/concurrent/Executor;Landroid/app/StatsManager$StatsPullAtomCallback;)V
 
     return-void
@@ -429,10 +394,8 @@
 
     const-string v1, "Initializing HintManager service..."
 
-    .line 130
     invoke-static {v0, v1}, Lcom/android/server/utils/Slogf;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 

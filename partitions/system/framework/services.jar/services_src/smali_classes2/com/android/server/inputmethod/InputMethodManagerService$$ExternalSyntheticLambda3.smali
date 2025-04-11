@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/view/inputmethod/InputMethodInfo;
 
     invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodInfo;->shouldShowInInputMethodPicker()Z

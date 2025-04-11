@@ -20,20 +20,16 @@
 .method public constructor <init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsService;Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;)V
     .locals 0
 
-    .line 1711
     iput-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 1706
     iput-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 1709
     iput-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->napInterface:Lcom/samsung/android/knox/net/nap/serviceprovider/INetworkAnalyticsService;
 
-    .line 1712
     iput-object p2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->handleObj:Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;
 
     return-void
@@ -44,7 +40,6 @@
 .method public getBinderObject()Lcom/samsung/android/knox/net/nap/serviceprovider/INetworkAnalyticsService;
     .locals 0
 
-    .line 1718
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->napInterface:Lcom/samsung/android/knox/net/nap/serviceprovider/INetworkAnalyticsService;
 
     return-object p0
@@ -53,7 +48,6 @@
 .method public getHandlerObject()Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;
     .locals 0
 
-    .line 1724
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->handleObj:Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;
 
     return-object p0
@@ -64,7 +58,6 @@
 
     monitor-enter p0
 
-    .line 1779
     :try_start_0
     iget-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->handleObj:Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;
 
@@ -78,7 +71,6 @@
 
     const-string v0, "NetworkAnalytics:Service"
 
-    .line 1780
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,7 +87,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1781
     iget-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
     invoke-static {p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->-$$Nest$fgetmConfigStore(Lcom/android/server/enterprise/nap/NetworkAnalyticsService;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;
@@ -114,12 +105,10 @@
 
     if-nez p1, :cond_0
 
-    .line 1784
     monitor-exit p0
 
     return-void
 
-    .line 1786
     :cond_0
     :try_start_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -140,7 +129,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
-    .line 1787
     invoke-virtual {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -155,7 +143,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1788
     invoke-virtual {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getUserId()I
 
     move-result v1
@@ -166,7 +153,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1789
     invoke-virtual {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getProfileName()Ljava/lang/String;
 
     move-result-object v1
@@ -183,7 +169,6 @@
 
     const-string v1, "NetworkAnalytics:Service"
 
-    .line 1791
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,7 +185,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1792
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
     const/4 v2, 0x1
@@ -211,7 +195,6 @@
 
     goto :goto_0
 
-    .line 1796
     :cond_2
     monitor-exit p0
 
@@ -230,7 +213,6 @@
 
     monitor-enter p0
 
-    .line 1731
     :try_start_0
     iget-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->handleObj:Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;
 
@@ -244,7 +226,6 @@
 
     const-string v0, "NetworkAnalytics:Service"
 
-    .line 1732
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -261,21 +242,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1733
     invoke-static {p2}, Lcom/samsung/android/knox/net/nap/serviceprovider/INetworkAnalyticsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/knox/net/nap/serviceprovider/INetworkAnalyticsService;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->napInterface:Lcom/samsung/android/knox/net/nap/serviceprovider/INetworkAnalyticsService;
 
-    .line 1737
     iget-object p2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->handleObj:Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;
 
     iget p2, p2, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;->userId:I
 
     if-nez p2, :cond_0
 
-    .line 1738
     iget-object p2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
     invoke-static {p2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->-$$Nest$fgetmConfigStore(Lcom/android/server/enterprise/nap/NetworkAnalyticsService;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;
@@ -292,7 +270,6 @@
 
     goto :goto_0
 
-    .line 1740
     :cond_0
     iget-object p2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
@@ -313,12 +290,10 @@
     :goto_0
     if-nez p2, :cond_1
 
-    .line 1746
     monitor-exit p0
 
     return-void
 
-    .line 1748
     :cond_1
     :try_start_1
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -339,7 +314,6 @@
 
     check-cast v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
-    .line 1749
     invoke-virtual {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -354,7 +328,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1750
     invoke-virtual {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getUserId()I
 
     move-result v1
@@ -365,7 +338,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 1751
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
     invoke-static {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->-$$Nest$fgetmConfigStore(Lcom/android/server/enterprise/nap/NetworkAnalyticsService;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;
@@ -388,19 +360,16 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 1752
     invoke-virtual {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getOpUserId()I
 
     move-result v1
 
-    .line 1753
     new-instance v2, Lcom/android/server/enterprise/nap/DataDeliveryHelper;
 
     invoke-direct {v2, v0, p0, v1}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;-><init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;I)V
 
     const-string v1, "NetworkAnalytics:Service"
 
-    .line 1754
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -421,7 +390,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1755
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
     invoke-static {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->-$$Nest$fgetmDataDelivery(Lcom/android/server/enterprise/nap/NetworkAnalyticsService;)Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;
@@ -432,7 +400,6 @@
 
     goto :goto_1
 
-    .line 1759
     :cond_3
     iget-object p2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
@@ -442,17 +409,14 @@
 
     invoke-virtual {p2, p1, p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConnectionManager;->storeBinderForPackage(Ljava/lang/String;Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;)V
 
-    .line 1760
     iget-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz p1, :cond_4
 
-    .line 1761
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1763
     :cond_4
     monitor-exit p0
 
@@ -471,7 +435,6 @@
 
     monitor-enter p0
 
-    .line 1769
     :try_start_0
     iget-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->handleObj:Lcom/android/server/enterprise/nap/NetworkAnalyticsService$AsyncHandlerObject;
 
@@ -485,7 +448,6 @@
 
     const-string v0, "NetworkAnalytics:Service"
 
-    .line 1770
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -502,7 +464,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1771
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
     invoke-static {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->-$$Nest$fgetmConnectionManager(Lcom/android/server/enterprise/nap/NetworkAnalyticsService;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConnectionManager;
@@ -511,7 +472,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConnectionManager;->removeBinderForPackage(Ljava/lang/String;)V
 
-    .line 1772
     iget-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsService;
 
     invoke-static {p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->-$$Nest$fgetmDataDelivery(Lcom/android/server/enterprise/nap/NetworkAnalyticsService;)Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;
@@ -528,7 +488,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1773
     monitor-exit p0
 
     return-void

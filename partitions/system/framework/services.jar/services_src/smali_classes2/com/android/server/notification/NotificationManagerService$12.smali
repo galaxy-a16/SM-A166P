@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;)V
     .locals 0
 
-    .line 3545
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$12;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCallStateChanged(ILjava/lang/String;)V
     .locals 1
 
-    .line 3548
     iget-object p2, p0, Lcom/android/server/notification/NotificationManagerService$12;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {p2}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmCallState(Lcom/android/server/notification/NotificationManagerService;)I
@@ -35,7 +33,6 @@
 
     return-void
 
-    .line 3549
     :cond_0
     sget-boolean p2, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
 
@@ -63,7 +60,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3550
     :cond_1
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$12;->this$0:Lcom/android/server/notification/NotificationManagerService;
 

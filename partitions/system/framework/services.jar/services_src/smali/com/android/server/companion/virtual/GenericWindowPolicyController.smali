@@ -49,7 +49,6 @@
 .method public static synthetic $r8$lambda$2XVsHnDJtrK5agLVxd5-Ao0UKCU(Lcom/android/server/companion/virtual/GenericWindowPolicyController;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->lambda$isEnteringPipAllowed$4(I)V
 
     return-void
@@ -58,7 +57,6 @@
 .method public static synthetic $r8$lambda$Aeg4WeHxY99afHg1YJp9vLS4csk(Lcom/android/server/companion/virtual/GenericWindowPolicyController;Landroid/content/ComponentName;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->lambda$onTopActivityChanged$1(Landroid/content/ComponentName;I)V
 
     return-void
@@ -67,7 +65,6 @@
 .method public static synthetic $r8$lambda$HfGxZXahYhbS5ZRU8fXk_AZaYdA(Lcom/android/server/companion/virtual/GenericWindowPolicyController;Landroid/content/pm/ActivityInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->lambda$keepActivityOnWindowFlagsChanged$0(Landroid/content/pm/ActivityInfo;)V
 
     return-void
@@ -76,7 +73,6 @@
 .method public static synthetic $r8$lambda$PZWFSL0NuuyIbC-EM3gY7wjHCFY(Lcom/android/server/companion/virtual/GenericWindowPolicyController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->lambda$onRunningAppsChanged$2()V
 
     return-void
@@ -85,7 +81,6 @@
 .method public static synthetic $r8$lambda$nH08hCrL42LRiYj8bEtKI2uaRWE(Landroid/util/ArraySet;Landroid/util/ArraySet;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->lambda$onRunningAppsChanged$3(Landroid/util/ArraySet;Landroid/util/ArraySet;)V
 
     return-void
@@ -94,12 +89,10 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 76
     new-instance v0, Landroid/content/ComponentName;
 
     const-class v1, Lcom/android/internal/app/BlockedAppStreamingActivity;
 
-    .line 77
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -118,10 +111,8 @@
 
     move-object v0, p0
 
-    .line 183
     invoke-direct {p0}, Landroid/window/DisplayWindowPolicyController;-><init>()V
 
-    .line 119
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
@@ -130,17 +121,14 @@
 
     const/4 v1, -0x1
 
-    .line 123
     iput v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
 
-    .line 125
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningUids:Landroid/util/ArraySet;
 
-    .line 131
     new-instance v1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -151,7 +139,6 @@
 
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mHandler:Landroid/os/Handler;
 
-    .line 132
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
@@ -160,10 +147,8 @@
 
     move-object v1, p3
 
-    .line 184
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mAllowedUsers:Landroid/util/ArraySet;
 
-    .line 185
     new-instance v1, Landroid/util/ArraySet;
 
     move-object v2, p4
@@ -172,7 +157,6 @@
 
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mAllowedCrossTaskNavigations:Landroid/util/ArraySet;
 
-    .line 186
     new-instance v1, Landroid/util/ArraySet;
 
     move-object v2, p5
@@ -181,7 +165,6 @@
 
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mBlockedCrossTaskNavigations:Landroid/util/ArraySet;
 
-    .line 187
     new-instance v1, Landroid/util/ArraySet;
 
     move-object v2, p6
@@ -190,7 +173,6 @@
 
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mAllowedActivities:Landroid/util/ArraySet;
 
-    .line 188
     new-instance v1, Landroid/util/ArraySet;
 
     move-object v2, p7
@@ -201,45 +183,36 @@
 
     move v1, p8
 
-    .line 189
     iput v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDefaultActivityPolicy:I
 
     move-object v1, p11
 
-    .line 190
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityBlockedCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$ActivityBlockedCallback;
 
-    .line 191
     invoke-virtual {p0, p1, p2}, Landroid/window/DisplayWindowPolicyController;->setInterestedWindowFlags(II)V
 
     move-object v1, p9
 
-    .line 192
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityListener:Landroid/companion/virtual/VirtualDeviceManager$ActivityListener;
 
     move-object v1, p10
 
-    .line 193
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mPipBlockedCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$PipBlockedCallback;
 
     move-object v1, p12
 
-    .line 194
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mSecureWindowCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$SecureWindowCallback;
 
     move-object/from16 v1, p13
 
-    .line 195
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mIntentListenerCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$IntentListenerCallback;
 
     move-object/from16 v1, p14
 
-    .line 196
     iput-object v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayCategories:Ljava/util/Set;
 
     move/from16 v1, p15
 
-    .line 197
     iput-boolean v1, v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mShowTasksInHostDeviceRecents:Z
 
     return-void
@@ -248,7 +221,6 @@
 .method private synthetic lambda$isEnteringPipAllowed$4(I)V
     .locals 0
 
-    .line 347
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mPipBlockedCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$PipBlockedCallback;
 
     invoke-interface {p0, p1}, Lcom/android/server/companion/virtual/GenericWindowPolicyController$PipBlockedCallback;->onEnteringPipBlocked(I)V
@@ -259,7 +231,6 @@
 .method private synthetic lambda$keepActivityOnWindowFlagsChanged$0(Landroid/content/pm/ActivityInfo;)V
     .locals 1
 
-    .line 292
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mSecureWindowCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$SecureWindowCallback;
 
     iget p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
@@ -276,7 +247,6 @@
 .method private synthetic lambda$onRunningAppsChanged$2()V
     .locals 1
 
-    .line 322
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityListener:Landroid/companion/virtual/VirtualDeviceManager$ActivityListener;
 
     iget p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
@@ -289,7 +259,6 @@
 .method public static synthetic lambda$onRunningAppsChanged$3(Landroid/util/ArraySet;Landroid/util/ArraySet;)V
     .locals 1
 
-    .line 328
     invoke-virtual {p0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -307,7 +276,6 @@
 
     check-cast v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController$RunningAppsChangedListener;
 
-    .line 329
     invoke-interface {v0, p1}, Lcom/android/server/companion/virtual/GenericWindowPolicyController$RunningAppsChangedListener;->onRunningAppsChanged(Landroid/util/ArraySet;)V
 
     goto :goto_0
@@ -319,7 +287,6 @@
 .method private synthetic lambda$onTopActivityChanged$1(Landroid/content/ComponentName;I)V
     .locals 1
 
-    .line 311
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityListener:Landroid/companion/virtual/VirtualDeviceManager$ActivityListener;
 
     iget p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
@@ -334,7 +301,6 @@
 .method public final activityMatchesDisplayCategory(Landroid/content/pm/ActivityInfo;)Z
     .locals 3
 
-    .line 363
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayCategories:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -347,7 +313,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 364
     iget-object p0, p1, Landroid/content/pm/ActivityInfo;->requiredDisplayCategory:Ljava/lang/String;
 
     if-nez p0, :cond_0
@@ -360,7 +325,6 @@
     :goto_0
     return v1
 
-    .line 366
     :cond_1
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->requiredDisplayCategory:Ljava/lang/String;
 
@@ -368,7 +332,6 @@
 
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayCategories:Ljava/util/Set;
 
-    .line 367
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -387,7 +350,6 @@
 .method public canActivityBeLaunched(Landroid/content/pm/ActivityInfo;Landroid/content/Intent;IIZ)Z
     .locals 3
 
-    .line 243
     invoke-virtual {p0, p3}, Landroid/window/DisplayWindowPolicyController;->isWindowingModeSupported(I)Z
 
     move-result p3
@@ -398,13 +360,11 @@
 
     return v0
 
-    .line 247
     :cond_0
     invoke-virtual {p1}, Landroid/content/pm/ActivityInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p3
 
-    .line 248
     sget-object v1, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->BLOCKED_APP_STREAMING_COMPONENT:Landroid/content/ComponentName;
 
     invoke-virtual {v1, p3}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
@@ -417,7 +377,6 @@
 
     return v2
 
-    .line 253
     :cond_1
     invoke-virtual {p0, p1, v0, v0}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->canContainActivity(Landroid/content/pm/ActivityInfo;II)Z
 
@@ -425,7 +384,6 @@
 
     if-nez v1, :cond_2
 
-    .line 254
     iget-object p2, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityBlockedCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$ActivityBlockedCallback;
 
     iget p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
@@ -444,7 +402,6 @@
 
     if-eqz p5, :cond_4
 
-    .line 261
     iget-object v1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mBlockedCrossTaskNavigations:Landroid/util/ArraySet;
 
     invoke-virtual {v1}, Landroid/util/ArraySet;->isEmpty()Z
@@ -455,14 +412,12 @@
 
     iget-object v1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mBlockedCrossTaskNavigations:Landroid/util/ArraySet;
 
-    .line 262
     invoke-virtual {v1, p3}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 263
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -479,7 +434,6 @@
 
     invoke-static {p4, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     iget-object p2, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityBlockedCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$ActivityBlockedCallback;
 
     iget p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
@@ -491,7 +445,6 @@
     :cond_4
     if-eqz p5, :cond_5
 
-    .line 267
     iget-object p5, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mAllowedCrossTaskNavigations:Landroid/util/ArraySet;
 
     invoke-virtual {p5}, Landroid/util/ArraySet;->isEmpty()Z
@@ -502,14 +455,12 @@
 
     iget-object p5, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mAllowedCrossTaskNavigations:Landroid/util/ArraySet;
 
-    .line 268
     invoke-virtual {p5, p3}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result p5
 
     if-nez p5, :cond_5
 
-    .line 269
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -526,7 +477,6 @@
 
     invoke-static {p4, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     iget-object p2, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityBlockedCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$ActivityBlockedCallback;
 
     iget p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
@@ -535,7 +485,6 @@
 
     return v0
 
-    .line 275
     :cond_5
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mIntentListenerCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$IntentListenerCallback;
 
@@ -543,7 +492,6 @@
 
     if-eqz p2, :cond_6
 
-    .line 276
     invoke-interface {p0, p2}, Lcom/android/server/companion/virtual/GenericWindowPolicyController$IntentListenerCallback;->shouldInterceptIntent(Landroid/content/Intent;)Z
 
     move-result p0
@@ -552,7 +500,6 @@
 
     const-string p0, "Virtual device has intercepted intent"
 
-    .line 277
     invoke-static {p4, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -564,7 +511,6 @@
 .method public canContainActivities(Ljava/util/List;I)Z
     .locals 4
 
-    .line 224
     invoke-virtual {p0, p2}, Landroid/window/DisplayWindowPolicyController;->isWindowingModeSupported(I)Z
 
     move-result p2
@@ -575,7 +521,6 @@
 
     return v0
 
-    .line 228
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -586,21 +531,18 @@
     :goto_0
     if-ge v1, p2, :cond_2
 
-    .line 230
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/pm/ActivityInfo;
 
-    .line 231
     invoke-virtual {p0, v2, v0, v0}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->canContainActivity(Landroid/content/pm/ActivityInfo;II)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 232
     iget-object p1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityBlockedCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$ActivityBlockedCallback;
 
     iget p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
@@ -623,7 +565,6 @@
 .method public final canContainActivity(Landroid/content/pm/ActivityInfo;II)Z
     .locals 6
 
-    .line 373
     iget v0, p1, Landroid/content/pm/ActivityInfo;->flags:I
 
     const/high16 v1, 0x10000
@@ -636,13 +577,11 @@
 
     return v1
 
-    .line 376
     :cond_0
     invoke-virtual {p1}, Landroid/content/pm/ActivityInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 377
     sget-object v2, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->BLOCKED_APP_STREAMING_COMPONENT:Landroid/content/ComponentName;
 
     invoke-virtual {v2, v0}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
@@ -655,7 +594,6 @@
 
     return v3
 
-    .line 382
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->activityMatchesDisplayCategory(Landroid/content/pm/ActivityInfo;)Z
 
@@ -665,12 +603,10 @@
 
     if-nez v2, :cond_2
 
-    .line 383
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->requiredDisplayCategory:Ljava/lang/String;
 
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayCategories:Ljava/util/Set;
 
-    .line 386
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -681,7 +617,6 @@
 
     const-string p1, "The activity\'s required display category: %s is not found on virtual display with the following categories: %s"
 
-    .line 383
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -690,18 +625,15 @@
 
     return v1
 
-    .line 389
     :cond_2
     iget-object v2, p1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 390
     invoke-static {v2}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
     move-result-object v2
 
-    .line 391
     iget-object v5, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mAllowedUsers:Landroid/util/ArraySet;
 
     invoke-virtual {v5, v2}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -710,7 +642,6 @@
 
     if-nez v5, :cond_3
 
-    .line 392
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -729,7 +660,6 @@
 
     return v1
 
-    .line 395
     :cond_3
     iget v5, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDefaultActivityPolicy:I
 
@@ -737,14 +667,12 @@
 
     iget-object v5, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mBlockedActivities:Landroid/util/ArraySet;
 
-    .line 396
     invoke-virtual {v5, v0}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_4
 
-    .line 397
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -763,7 +691,6 @@
 
     return v1
 
-    .line 400
     :cond_4
     iget v5, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDefaultActivityPolicy:I
 
@@ -771,14 +698,12 @@
 
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mAllowedActivities:Landroid/util/ArraySet;
 
-    .line 401
     invoke-virtual {p0, v0}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-nez p0, :cond_5
 
-    .line 402
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -800,7 +725,6 @@
     :cond_5
     const-wide/32 v4, 0xc05e3df
 
-    .line 405
     iget-object p0, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     invoke-static {v4, v5, p0, v2}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
@@ -831,7 +755,6 @@
 .method public canShowTasksInHostDeviceRecents()Z
     .locals 0
 
-    .line 338
     iget-boolean p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mShowTasksInHostDeviceRecents:Z
 
     return p0
@@ -840,12 +763,10 @@
 .method public containsUid(I)Z
     .locals 1
 
-    .line 357
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mGenericWindowPolicyControllerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 358
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningUids:Landroid/util/ArraySet;
 
@@ -864,7 +785,6 @@
     :catchall_0
     move-exception p0
 
-    .line 359
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -875,12 +795,10 @@
 .method public getRunningAppsChangedListenersSizeForTesting()I
     .locals 1
 
-    .line 420
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mGenericWindowPolicyControllerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 421
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningAppsChangedListeners:Landroid/util/ArraySet;
 
@@ -895,7 +813,6 @@
     :catchall_0
     move-exception p0
 
-    .line 422
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -906,7 +823,6 @@
 .method public isEnteringPipAllowed(I)Z
     .locals 2
 
-    .line 343
     invoke-super {p0, p1}, Landroid/window/DisplayWindowPolicyController;->isEnteringPipAllowed(I)Z
 
     move-result v0
@@ -917,7 +833,6 @@
 
     return p0
 
-    .line 346
     :cond_0
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mHandler:Landroid/os/Handler;
 
@@ -939,7 +854,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 292
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/companion/virtual/GenericWindowPolicyController$$ExternalSyntheticLambda3;
@@ -948,7 +862,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 296
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->canContainActivity(Landroid/content/pm/ActivityInfo;II)Z
 
@@ -956,7 +869,6 @@
 
     if-nez p2, :cond_1
 
-    .line 297
     iget-object p2, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityBlockedCallback:Lcom/android/server/companion/virtual/GenericWindowPolicyController$ActivityBlockedCallback;
 
     iget p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
@@ -976,23 +888,19 @@
 .method public onRunningAppsChanged(Landroid/util/ArraySet;)V
     .locals 3
 
-    .line 317
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mGenericWindowPolicyControllerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 318
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningUids:Landroid/util/ArraySet;
 
     invoke-virtual {v1}, Landroid/util/ArraySet;->clear()V
 
-    .line 319
     iget-object v1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningUids:Landroid/util/ArraySet;
 
     invoke-virtual {v1, p1}, Landroid/util/ArraySet;->addAll(Landroid/util/ArraySet;)V
 
-    .line 320
     iget-object v1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityListener:Landroid/companion/virtual/VirtualDeviceManager$ActivityListener;
 
     if-eqz v1, :cond_0
@@ -1005,7 +913,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 322
     iget-object v1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/android/server/companion/virtual/GenericWindowPolicyController$$ExternalSyntheticLambda1;
@@ -1014,7 +921,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 324
     :cond_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningAppsChangedListeners:Landroid/util/ArraySet;
 
@@ -1024,14 +930,12 @@
 
     if-nez v1, :cond_1
 
-    .line 325
     new-instance v1, Landroid/util/ArraySet;
 
     iget-object v2, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningAppsChangedListeners:Landroid/util/ArraySet;
 
     invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>(Landroid/util/ArraySet;)V
 
-    .line 327
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/android/server/companion/virtual/GenericWindowPolicyController$$ExternalSyntheticLambda2;
@@ -1040,7 +944,6 @@
 
     invoke-virtual {p0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 333
     :cond_1
     monitor-exit v0
 
@@ -1059,14 +962,12 @@
 .method public onTopActivityChanged(Landroid/content/ComponentName;II)V
     .locals 1
 
-    .line 308
     iget-object p2, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mActivityListener:Landroid/companion/virtual/VirtualDeviceManager$ActivityListener;
 
     if-eqz p2, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 310
     iget-object p2, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/server/companion/virtual/GenericWindowPolicyController$$ExternalSyntheticLambda4;
@@ -1082,18 +983,15 @@
 .method public registerRunningAppsChangedListener(Lcom/android/server/companion/virtual/GenericWindowPolicyController$RunningAppsChangedListener;)V
     .locals 1
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mGenericWindowPolicyControllerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 210
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningAppsChangedListeners:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 211
     monitor-exit v0
 
     return-void
@@ -1111,7 +1009,6 @@
 .method public setDisplayId(I)V
     .locals 0
 
-    .line 204
     iput p1, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mDisplayId:I
 
     return-void
@@ -1120,18 +1017,15 @@
 .method public unregisterRunningAppsChangedListener(Lcom/android/server/companion/virtual/GenericWindowPolicyController$RunningAppsChangedListener;)V
     .locals 1
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mGenericWindowPolicyControllerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 217
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/GenericWindowPolicyController;->mRunningAppsChangedListeners:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 218
     monitor-exit v0
 
     return-void

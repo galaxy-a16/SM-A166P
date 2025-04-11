@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetlz(Lorg/tukaani/xz/lzma/LZMADecoder;)Lorg/tukaani/xz/lz/LZDecoder;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetrc(Lorg/tukaani/xz/lzma/LZMADecoder;)Lorg/tukaani/xz/rangecoder/RangeDecoder;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
     return-object p0
@@ -37,10 +35,8 @@
 .method public constructor <init>(Lorg/tukaani/xz/lz/LZDecoder;Lorg/tukaani/xz/rangecoder/RangeDecoder;III)V
     .locals 1
 
-    .line 25
     invoke-direct {p0, p5}, Lorg/tukaani/xz/lzma/LZMACoder;-><init>(I)V
 
-    .line 21
     new-instance p5, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;
 
     const/4 v0, 0x0
@@ -49,27 +45,22 @@
 
     iput-object p5, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->matchLenDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;
 
-    .line 22
     new-instance p5, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;
 
     invoke-direct {p5, p0, v0}, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;-><init>(Lorg/tukaani/xz/lzma/LZMADecoder;Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder-IA;)V
 
     iput-object p5, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->repLenDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;
 
-    .line 26
     iput-object p1, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
-    .line 27
     iput-object p2, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
-    .line 28
     new-instance p1, Lorg/tukaani/xz/lzma/LZMADecoder$LiteralDecoder;
 
     invoke-direct {p1, p0, p3, p4}, Lorg/tukaani/xz/lzma/LZMADecoder$LiteralDecoder;-><init>(Lorg/tukaani/xz/lzma/LZMADecoder;II)V
 
     iput-object p1, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->literalDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LiteralDecoder;
 
-    .line 29
     invoke-virtual {p0}, Lorg/tukaani/xz/lzma/LZMADecoder;->reset()V
 
     return-void
@@ -80,12 +71,10 @@
 .method public decode()V
     .locals 4
 
-    .line 50
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     invoke-virtual {v0}, Lorg/tukaani/xz/lz/LZDecoder;->repeatPending()V
 
-    .line 52
     :goto_0
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
@@ -95,7 +84,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 53
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     invoke-virtual {v0}, Lorg/tukaani/xz/lz/LZDecoder;->getPos()I
@@ -106,7 +94,6 @@
 
     and-int/2addr v0, v1
 
-    .line 55
     iget-object v1, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
     iget-object v2, p0, Lorg/tukaani/xz/lzma/LZMACoder;->isMatch:[[S
@@ -125,14 +112,12 @@
 
     if-nez v1, :cond_0
 
-    .line 56
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->literalDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LiteralDecoder;
 
     invoke-virtual {v0}, Lorg/tukaani/xz/lzma/LZMADecoder$LiteralDecoder;->decode()V
 
     goto :goto_0
 
-    .line 58
     :cond_0
     iget-object v1, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
@@ -150,20 +135,17 @@
 
     if-nez v1, :cond_1
 
-    .line 59
     invoke-virtual {p0, v0}, Lorg/tukaani/xz/lzma/LZMADecoder;->decodeMatch(I)I
 
     move-result v0
 
     goto :goto_1
 
-    .line 60
     :cond_1
     invoke-virtual {p0, v0}, Lorg/tukaani/xz/lzma/LZMADecoder;->decodeRepMatch(I)I
 
     move-result v0
 
-    .line 65
     :goto_1
     iget-object v1, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
@@ -177,7 +159,6 @@
 
     goto :goto_0
 
-    .line 69
     :cond_2
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
@@ -189,12 +170,10 @@
 .method public final decodeMatch(I)I
     .locals 7
 
-    .line 73
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->state:Lorg/tukaani/xz/lzma/State;
 
     invoke-virtual {v0}, Lorg/tukaani/xz/lzma/State;->updateMatch()V
 
-    .line 75
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
     const/4 v1, 0x2
@@ -207,26 +186,22 @@
 
     const/4 v2, 0x1
 
-    .line 76
     aget v3, v0, v2
 
     aput v3, v0, v1
 
     const/4 v3, 0x0
 
-    .line 77
     aget v4, v0, v3
 
     aput v4, v0, v2
 
-    .line 79
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->matchLenDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;
 
     invoke-virtual {v0, p1}, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;->decode(I)I
 
     move-result p1
 
-    .line 80
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
     iget-object v4, p0, Lorg/tukaani/xz/lzma/LZMACoder;->distSlots:[[S
@@ -245,7 +220,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 83
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
     aput v0, p0, v3
@@ -257,7 +231,6 @@
 
     sub-int/2addr v5, v2
 
-    .line 86
     iget-object v2, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
     and-int/lit8 v6, v0, 0x1
@@ -272,7 +245,6 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 89
     iget-object v5, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->distSpecial:[[S
@@ -291,7 +263,6 @@
 
     goto :goto_0
 
-    .line 92
     :cond_1
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
@@ -307,7 +278,6 @@
 
     aput v0, v2, v3
 
-    .line 94
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
     aget v1, v0, v3
@@ -331,7 +301,6 @@
 .method public final decodeRepMatch(I)I
     .locals 6
 
-    .line 102
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
     iget-object v1, p0, Lorg/tukaani/xz/lzma/LZMACoder;->isRep0:[S
@@ -350,7 +319,6 @@
 
     if-nez v0, :cond_0
 
-    .line 103
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
     iget-object v2, p0, Lorg/tukaani/xz/lzma/LZMACoder;->isRep0Long:[[S
@@ -369,14 +337,12 @@
 
     if-nez v0, :cond_3
 
-    .line 104
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->state:Lorg/tukaani/xz/lzma/State;
 
     invoke-virtual {p0}, Lorg/tukaani/xz/lzma/State;->updateShortRep()V
 
     return v1
 
-    .line 110
     :cond_0
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
@@ -394,14 +360,12 @@
 
     if-nez v0, :cond_1
 
-    .line 111
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
     aget v0, v0, v1
 
     goto :goto_1
 
-    .line 113
     :cond_1
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoder;
 
@@ -421,14 +385,12 @@
 
     if-nez v0, :cond_2
 
-    .line 114
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
     aget v0, v0, v2
 
     goto :goto_0
 
-    .line 116
     :cond_2
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
@@ -436,14 +398,12 @@
 
     aget v4, v0, v3
 
-    .line 117
     aget v5, v0, v2
 
     aput v5, v0, v3
 
     move v0, v4
 
-    .line 120
     :goto_0
     iget-object v3, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
@@ -451,7 +411,6 @@
 
     aput v4, v3, v2
 
-    .line 123
     :goto_1
     iget-object v2, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
@@ -461,16 +420,13 @@
 
     aput v4, v2, v1
 
-    .line 124
     aput v0, v2, v3
 
-    .line 127
     :cond_3
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->state:Lorg/tukaani/xz/lzma/State;
 
     invoke-virtual {v0}, Lorg/tukaani/xz/lzma/State;->updateLongRep()V
 
-    .line 129
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->repLenDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;
 
     invoke-virtual {p0, p1}, Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;->decode(I)I
@@ -483,7 +439,6 @@
 .method public endMarkerDetected()Z
     .locals 2
 
-    .line 46
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMACoder;->reps:[I
 
     const/4 v0, 0x0
@@ -503,20 +458,16 @@
 .method public reset()V
     .locals 1
 
-    .line 33
     invoke-super {p0}, Lorg/tukaani/xz/lzma/LZMACoder;->reset()V
 
-    .line 34
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->literalDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LiteralDecoder;
 
     invoke-virtual {v0}, Lorg/tukaani/xz/lzma/LZMADecoder$LiteralDecoder;->reset()V
 
-    .line 35
     iget-object v0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->matchLenDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;
 
     invoke-virtual {v0}, Lorg/tukaani/xz/lzma/LZMACoder$LengthCoder;->reset()V
 
-    .line 36
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMADecoder;->repLenDecoder:Lorg/tukaani/xz/lzma/LZMADecoder$LengthDecoder;
 
     invoke-virtual {p0}, Lorg/tukaani/xz/lzma/LZMACoder$LengthCoder;->reset()V

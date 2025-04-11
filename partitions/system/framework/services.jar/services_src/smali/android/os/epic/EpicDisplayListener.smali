@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/hardware/display/DisplayManager;)V
     .locals 0
 
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p1, p0, Landroid/os/epic/EpicDisplayListener;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     return-void
@@ -28,7 +26,6 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -41,7 +38,6 @@
 
     return-void
 
-    .line 44
     :cond_0
     iget-object p0, p0, Landroid/os/epic/EpicDisplayListener;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
@@ -53,7 +49,6 @@
 
     return-void
 
-    .line 48
     :cond_1
     invoke-virtual {p0}, Landroid/view/Display;->getMode()Landroid/view/Display$Mode;
 
@@ -63,11 +58,9 @@
 
     return-void
 
-    .line 52
     :cond_2
     invoke-virtual {p1}, Landroid/view/Display$Mode;->getRefreshRate()F
 
-    .line 53
     invoke-virtual {p0}, Landroid/view/Display;->getState()I
 
     return-void
@@ -76,6 +69,5 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

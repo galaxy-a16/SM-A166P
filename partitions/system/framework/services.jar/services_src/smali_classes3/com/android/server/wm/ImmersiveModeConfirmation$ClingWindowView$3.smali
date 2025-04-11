@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;)V
     .locals 0
 
-    .line 382
     iput-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$3;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 385
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 386
     iget-object p0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$3;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-static {p0}, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;->-$$Nest$fgetmUpdateLayoutRunnable(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;)Ljava/lang/Runnable;

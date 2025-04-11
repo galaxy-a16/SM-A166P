@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;ILjava/lang/String;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;J)V
     .locals 0
 
-    .line 48
     invoke-direct/range {p0 .. p8}, Lcom/android/server/biometrics/sensors/RevokeChallengeClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;ILjava/lang/String;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
-    .line 49
     iput-wide p9, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceRevokeChallengeClient;->mChallenge:J
 
     return-void
@@ -25,7 +23,6 @@
 .method public onChallengeRevoked(IIJ)V
     .locals 0
 
-    .line 75
     iget-wide p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceRevokeChallengeClient;->mChallenge:J
 
     cmp-long p1, p3, p1
@@ -39,7 +36,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 76
     :goto_0
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
@@ -53,7 +49,6 @@
 
     const-string v0, "FaceRevokeChallengeClient"
 
-    .line 56
     :try_start_0
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;->getInstance()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
@@ -65,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 57
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;->getInstance()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
     move-result-object v1
@@ -76,7 +70,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -84,10 +77,8 @@
 
     const-string/jumbo v3, "revokeChallenge START"
 
-    .line 63
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getFreshDaemon()Ljava/lang/Object;
 
     move-result-object v3
@@ -102,7 +93,6 @@
 
     invoke-interface {v3, v4, v5}, Landroid/hardware/biometrics/face/ISession;->revokeChallenge(J)V
 
-    .line 65
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,10 +128,8 @@
 
     const-string v2, "Unable to revokeChallenge"
 
-    .line 69
     invoke-static {v0, v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0

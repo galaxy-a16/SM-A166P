@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/FlashNotificationsController;)V
     .locals 0
 
-    .line 293
     iput-object p1, p0, Lcom/android/server/accessibility/FlashNotificationsController$4;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayChanged(I)V
     .locals 1
 
-    .line 304
     iget-object v0, p0, Lcom/android/server/accessibility/FlashNotificationsController$4;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/FlashNotificationsController;->-$$Nest$fgetmDisplayManager(Lcom/android/server/accessibility/FlashNotificationsController;)Landroid/hardware/display/DisplayManager;
@@ -43,7 +40,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 305
     iget-object v0, p0, Lcom/android/server/accessibility/FlashNotificationsController$4;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/FlashNotificationsController;->-$$Nest$fgetmDisplayManager(Lcom/android/server/accessibility/FlashNotificationsController;)Landroid/hardware/display/DisplayManager;
@@ -56,7 +52,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 307
     iget-object p0, p0, Lcom/android/server/accessibility/FlashNotificationsController$4;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-virtual {p1}, Landroid/view/Display;->getState()I
@@ -72,6 +67,5 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -19,30 +19,25 @@
     :cond_0
     const-string v1, "android.hardware.tv.cec@1.1::IHdmiCec"
 
-    .line 21
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 23
     instance-of v3, v2, Landroid/hardware/tv/cec/V1_1/IHdmiCec;
 
     if-eqz v3, :cond_1
 
-    .line 24
     check-cast v2, Landroid/hardware/tv/cec/V1_1/IHdmiCec;
 
     return-object v2
 
-    .line 27
     :cond_1
     new-instance v2, Landroid/hardware/tv/cec/V1_1/IHdmiCec$Proxy;
 
     invoke-direct {v2, p0}, Landroid/hardware/tv/cec/V1_1/IHdmiCec$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 30
     :try_start_0
     invoke-interface {v2}, Landroid/hardware/tv/cec/V1_1/IHdmiCec;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 31
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -86,7 +80,6 @@
 
     const-string v0, "android.hardware.tv.cec@1.1::IHdmiCec"
 
-    .line 60
     invoke-static {v0, p0, p1}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;Z)Landroid/os/IHwBinder;
 
     move-result-object p0
@@ -103,7 +96,6 @@
 
     const-string v0, "default"
 
-    .line 67
     invoke-static {v0, p0}, Landroid/hardware/tv/cec/V1_1/IHdmiCec;->getService(Ljava/lang/String;Z)Landroid/hardware/tv/cec/V1_1/IHdmiCec;
 
     move-result-object p0

@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 328
     invoke-static {}, Lcom/android/server/enterprise/plm/SystemStateTracker$EbpfType;->values()[Lcom/android/server/enterprise/plm/SystemStateTracker$EbpfType;
 
     move-result-object v0

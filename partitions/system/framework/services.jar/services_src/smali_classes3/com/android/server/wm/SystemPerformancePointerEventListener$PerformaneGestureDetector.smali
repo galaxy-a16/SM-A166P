@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/SystemPerformancePointerEventListener;)V
     .locals 0
 
-    .line 105
     iput-object p1, p0, Lcom/android/server/wm/SystemPerformancePointerEventListener$PerformaneGestureDetector;->this$0:Lcom/android/server/wm/SystemPerformancePointerEventListener;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/SystemPerformancePointerEventListener;Lcom/android/server/wm/SystemPerformancePointerEventListener$PerformaneGestureDetector-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/SystemPerformancePointerEventListener$PerformaneGestureDetector;-><init>(Lcom/android/server/wm/SystemPerformancePointerEventListener;)V
 
     return-void
@@ -33,12 +31,10 @@
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 2
 
-    .line 111
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
 
-    .line 112
     iget-object p3, p0, Lcom/android/server/wm/SystemPerformancePointerEventListener$PerformaneGestureDetector;->this$0:Lcom/android/server/wm/SystemPerformancePointerEventListener;
 
     invoke-static {p3}, Lcom/android/server/wm/SystemPerformancePointerEventListener;->-$$Nest$fgetmContext(Lcom/android/server/wm/SystemPerformancePointerEventListener;)Landroid/content/Context;
@@ -49,7 +45,6 @@
 
     move-result-object p3
 
-    .line 114
     invoke-virtual {p3}, Landroid/view/Display;->getRefreshRate()F
 
     move-result p3
@@ -98,7 +93,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 117
     iget-object p3, p0, Lcom/android/server/wm/SystemPerformancePointerEventListener$PerformaneGestureDetector;->this$0:Lcom/android/server/wm/SystemPerformancePointerEventListener;
 
     invoke-static {p3}, Lcom/android/server/wm/SystemPerformancePointerEventListener;->-$$Nest$fgetmHandler(Lcom/android/server/wm/SystemPerformancePointerEventListener;)Landroid/os/Handler;
@@ -113,7 +107,6 @@
 
     invoke-virtual {p3, p4}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 118
     iget-object p3, p0, Lcom/android/server/wm/SystemPerformancePointerEventListener$PerformaneGestureDetector;->this$0:Lcom/android/server/wm/SystemPerformancePointerEventListener;
 
     invoke-static {p3}, Lcom/android/server/wm/SystemPerformancePointerEventListener;->-$$Nest$fgetmHandler(Lcom/android/server/wm/SystemPerformancePointerEventListener;)Landroid/os/Handler;
@@ -128,12 +121,10 @@
 
     invoke-virtual {p3, p4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 119
     iget-object p3, p0, Lcom/android/server/wm/SystemPerformancePointerEventListener$PerformaneGestureDetector;->this$0:Lcom/android/server/wm/SystemPerformancePointerEventListener;
 
     invoke-static {p3, p1, p2}, Lcom/android/server/wm/SystemPerformancePointerEventListener;->-$$Nest$fputmLastAcquireTime(Lcom/android/server/wm/SystemPerformancePointerEventListener;J)V
 
-    .line 120
     iget-object p1, p0, Lcom/android/server/wm/SystemPerformancePointerEventListener$PerformaneGestureDetector;->this$0:Lcom/android/server/wm/SystemPerformancePointerEventListener;
 
     invoke-static {p1}, Lcom/android/server/wm/SystemPerformancePointerEventListener;->-$$Nest$fgetmHandler(Lcom/android/server/wm/SystemPerformancePointerEventListener;)Landroid/os/Handler;

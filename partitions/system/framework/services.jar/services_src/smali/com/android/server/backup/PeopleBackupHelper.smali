@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 27
     const-class v0, Lcom/android/server/backup/PeopleBackupHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -32,7 +31,6 @@
 
     const-string/jumbo v0, "people_conversation_infos"
 
-    .line 39
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -41,7 +39,6 @@
 
     invoke-direct {p0, v1, v0}, Landroid/app/backup/BlobBackupHelper;-><init>(I[Ljava/lang/String;)V
 
-    .line 40
     iput p1, p0, Lcom/android/server/backup/PeopleBackupHelper;->mUserId:I
 
     return-void
@@ -54,14 +51,12 @@
 
     const-string/jumbo v0, "people_conversation_infos"
 
-    .line 58
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 59
     sget-object p0, Lcom/android/server/backup/PeopleBackupHelper;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -82,7 +77,6 @@
 
     return-void
 
-    .line 62
     :cond_0
     const-class p1, Lcom/android/server/people/PeopleServiceInternal;
 
@@ -92,7 +86,6 @@
 
     check-cast p1, Lcom/android/server/people/PeopleServiceInternal;
 
-    .line 66
     iget p0, p0, Lcom/android/server/backup/PeopleBackupHelper;->mUserId:I
 
     invoke-virtual {p1, p0, p2}, Lcom/android/server/people/PeopleServiceInternal;->restore(I[B)V
@@ -105,14 +98,12 @@
 
     const-string/jumbo v0, "people_conversation_infos"
 
-    .line 45
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 46
     sget-object p0, Lcom/android/server/backup/PeopleBackupHelper;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -137,7 +128,6 @@
 
     return-object p0
 
-    .line 49
     :cond_0
     const-class p1, Lcom/android/server/people/PeopleServiceInternal;
 
@@ -147,7 +137,6 @@
 
     check-cast p1, Lcom/android/server/people/PeopleServiceInternal;
 
-    .line 53
     iget p0, p0, Lcom/android/server/backup/PeopleBackupHelper;->mUserId:I
 
     invoke-virtual {p1, p0}, Lcom/android/server/people/PeopleServiceInternal;->getBackupPayload(I)[B

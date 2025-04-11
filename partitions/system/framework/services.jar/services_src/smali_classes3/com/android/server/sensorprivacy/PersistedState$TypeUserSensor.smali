@@ -15,16 +15,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 249
     iput p1, p0, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;->mType:I
 
-    .line 250
     iput p2, p0, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;->mUserId:I
 
-    .line 251
     iput p3, p0, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;->mSensor:I
 
     return-void
@@ -33,7 +29,6 @@
 .method public constructor <init>(Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;)V
     .locals 2
 
-    .line 255
     iget v0, p1, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;->mType:I
 
     iget v1, p1, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;->mUserId:I
@@ -56,7 +51,6 @@
 
     return v0
 
-    .line 261
     :cond_0
     instance-of v1, p1, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;
 
@@ -66,11 +60,9 @@
 
     return v2
 
-    .line 262
     :cond_1
     check-cast p1, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;
 
-    .line 263
     iget v1, p0, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;->mType:I
 
     iget v3, p1, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;->mType:I
@@ -101,7 +93,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 268
     iget v0, p0, Lcom/android/server/sensorprivacy/PersistedState$TypeUserSensor;->mType:I
 
     mul-int/lit8 v0, v0, 0x1f

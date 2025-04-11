@@ -15,20 +15,16 @@
 .method public constructor <init>(IZ)V
     .locals 1
 
-    .line 1209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1207
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mDuckedPlayers:Ljava/util/ArrayList;
 
-    .line 1210
     iput p1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mUid:I
 
-    .line 1211
     iput-boolean p2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mUseStrongDuck:Z
 
     return-void
@@ -41,7 +37,6 @@
 
     const-string v0, "AS.PlaybackActivityMon"
 
-    .line 1226
     new-instance v1, Ljava/lang/Integer;
 
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getPlayerInterfaceId()I
@@ -54,7 +49,6 @@
 
     move-result v1
 
-    .line 1227
     iget-object v2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mDuckedPlayers:Ljava/util/ArrayList;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -69,7 +63,6 @@
 
     return-void
 
-    .line 1232
     :cond_0
     :try_start_0
     sget-object v2, Lcom/android/server/audio/PlaybackActivityMonitor;->sEventLogger:Lcom/android/server/utils/EventLogger;
@@ -80,20 +73,16 @@
 
     invoke-direct {v3, p1, p2, v4}, Lcom/android/server/audio/PlaybackActivityMonitor$DuckEvent;-><init>(Landroid/media/AudioPlaybackConfiguration;ZZ)V
 
-    .line 1233
     invoke-virtual {v3, v0}, Lcom/android/server/utils/EventLogger$Event;->printLog(Ljava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object v3
 
-    .line 1232
     invoke-virtual {v2, v3}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 1234
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getPlayerProxy()Landroid/media/PlayerProxy;
 
     move-result-object p1
 
-    .line 1235
     iget-boolean v2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mUseStrongDuck:Z
 
     if-eqz v2, :cond_1
@@ -112,7 +101,6 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 1236
     invoke-static {}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$sfgetPLAY_SKIP_RAMP()Landroid/media/VolumeShaper$Operation;
 
     move-result-object p2
@@ -124,11 +112,9 @@
 
     move-result-object p2
 
-    .line 1234
     :goto_1
     invoke-virtual {p1, v2, p2}, Landroid/media/PlayerProxy;->applyVolumeShaper(Landroid/media/VolumeShaper$Configuration;Landroid/media/VolumeShaper$Operation;)V
 
-    .line 1237
     iget-object p1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mDuckedPlayers:Ljava/util/ArrayList;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -144,7 +130,6 @@
     :catch_0
     move-exception p1
 
-    .line 1239
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,7 +161,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 1215
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -199,7 +183,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1216
     iget-object p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mDuckedPlayers:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -223,7 +206,6 @@
 
     move-result v0
 
-    .line 1217
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,7 +227,6 @@
     :cond_0
     const-string p0, ""
 
-    .line 1219
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -254,7 +235,6 @@
 .method public removeReleased(Landroid/media/AudioPlaybackConfiguration;)V
     .locals 1
 
-    .line 1268
     iget-object p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mDuckedPlayers:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/lang/Integer;
@@ -275,7 +255,6 @@
 
     const-string v0, "AS.PlaybackActivityMon"
 
-    .line 1244
     iget-object v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mDuckedPlayers:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -300,7 +279,6 @@
 
     move-result v2
 
-    .line 1245
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -313,7 +291,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1248
     :try_start_0
     sget-object v4, Lcom/android/server/audio/PlaybackActivityMonitor;->sEventLogger:Lcom/android/server/utils/EventLogger;
 
@@ -335,20 +312,16 @@
 
     invoke-direct {v5, v6}, Lcom/android/server/utils/EventLogger$StringEvent;-><init>(Ljava/lang/String;)V
 
-    .line 1249
     invoke-virtual {v5, v0}, Lcom/android/server/utils/EventLogger$Event;->printLog(Ljava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object v5
 
-    .line 1248
     invoke-virtual {v4, v5}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 1250
     invoke-virtual {v3}, Landroid/media/AudioPlaybackConfiguration;->getPlayerProxy()Landroid/media/PlayerProxy;
 
     move-result-object v3
 
-    .line 1251
     iget-boolean v4, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mUseStrongDuck:Z
 
     if-eqz v4, :cond_1
@@ -367,7 +340,6 @@
     :goto_1
     sget-object v5, Landroid/media/VolumeShaper$Operation;->REVERSE:Landroid/media/VolumeShaper$Operation;
 
-    .line 1250
     invoke-virtual {v3, v4, v5}, Landroid/media/PlayerProxy;->applyVolumeShaper(Landroid/media/VolumeShaper$Configuration;Landroid/media/VolumeShaper$Operation;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -377,7 +349,6 @@
     :catch_0
     move-exception v3
 
-    .line 1254
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -404,7 +375,6 @@
 
     goto :goto_0
 
-    .line 1264
     :cond_2
     iget-object p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$DuckingManager$DuckedApp;->mDuckedPlayers:Ljava/util/ArrayList;
 

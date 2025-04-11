@@ -13,14 +13,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/display/layout/DisplayIdProducer;)V
     .locals 2
 
-    .line 79
     invoke-static {}, Landroid/os/Environment;->getVendorDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -31,7 +29,6 @@
 
     move-result-object v1
 
-    .line 78
     invoke-static {v0, v1}, Landroid/os/Environment;->buildPath(Ljava/io/File;[Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
@@ -44,25 +41,20 @@
 .method public constructor <init>(Lcom/android/server/display/layout/DisplayIdProducer;Ljava/io/File;)V
     .locals 1
 
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DeviceStateToLayoutMap;->mLayoutMap:Landroid/util/SparseArray;
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/display/DeviceStateToLayoutMap;->mIdProducer:Lcom/android/server/display/layout/DisplayIdProducer;
 
-    .line 84
     invoke-virtual {p0, p2}, Lcom/android/server/display/DeviceStateToLayoutMap;->loadLayoutsFromConfig(Ljava/io/File;)V
 
     const/4 p1, -0x1
 
-    .line 85
     invoke-virtual {p0, p1}, Lcom/android/server/display/DeviceStateToLayoutMap;->createLayout(I)Lcom/android/server/display/layout/Layout;
 
     return-void
@@ -73,7 +65,6 @@
 .method public final createLayout(I)Lcom/android/server/display/layout/Layout;
     .locals 1
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/display/DeviceStateToLayoutMap;->mLayoutMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->contains(I)Z
@@ -82,7 +73,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,13 +95,11 @@
 
     return-object p0
 
-    .line 168
     :cond_0
     new-instance v0, Lcom/android/server/display/layout/Layout;
 
     invoke-direct {v0}, Lcom/android/server/display/layout/Layout;-><init>()V
 
-    .line 169
     iget-object p0, p0, Lcom/android/server/display/DeviceStateToLayoutMap;->mLayoutMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
@@ -124,20 +112,16 @@
 
     const-string v0, "DeviceStateToLayoutMap:"
 
-    .line 89
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 90
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string v0, "Registered Layouts:"
 
-    .line 92
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    .line 93
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/DeviceStateToLayoutMap;->mLayoutMap:Landroid/util/SparseArray;
 
@@ -147,7 +131,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 94
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,7 +176,6 @@
 .method public get(I)Lcom/android/server/display/layout/Layout;
     .locals 1
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/display/DeviceStateToLayoutMap;->mLayoutMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -204,7 +186,6 @@
 
     if-nez p1, :cond_0
 
-    .line 101
     iget-object p0, p0, Lcom/android/server/display/DeviceStateToLayoutMap;->mLayoutMap:Landroid/util/SparseArray;
 
     const/4 p1, -0x1
@@ -226,7 +207,6 @@
 
     const-string p0, "front"
 
-    .line 154
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -240,7 +220,6 @@
     :cond_0
     const-string/jumbo p0, "rear"
 
-    .line 156
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -265,7 +244,6 @@
 
     move-object/from16 v1, p1
 
-    .line 115
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -274,7 +252,6 @@
 
     return-void
 
-    .line 119
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -294,7 +271,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     :try_start_0
     new-instance v2, Ljava/io/BufferedInputStream;
 
@@ -308,7 +284,6 @@
     .catch Ljavax/xml/datatype/DatatypeConfigurationException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 121
     :try_start_1
     invoke-static {v2}, Lcom/android/server/display/config/layout/XmlParser;->read(Ljava/io/InputStream;)Lcom/android/server/display/config/layout/Layouts;
 
@@ -316,7 +291,6 @@
 
     if-nez v4, :cond_1
 
-    .line 123
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -335,7 +309,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 146
     :try_start_2
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -348,7 +321,6 @@
     :cond_1
     const/4 v15, 0x0
 
-    .line 127
     :try_start_3
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Layouts;->getLayout()Ljava/util/List;
 
@@ -371,7 +343,6 @@
 
     check-cast v4, Lcom/android/server/display/config/layout/Layout;
 
-    .line 128
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Layout;->getState()Ljava/math/BigInteger;
 
     move-result-object v5
@@ -380,12 +351,10 @@
 
     move-result v5
 
-    .line 129
     invoke-virtual {v0, v5}, Lcom/android/server/display/DeviceStateToLayoutMap;->createLayout(I)Lcom/android/server/display/layout/Layout;
 
     move-result-object v17
 
-    .line 130
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Layout;->getDisplay()Ljava/util/List;
 
     move-result-object v4
@@ -407,7 +376,6 @@
 
     check-cast v4, Lcom/android/server/display/config/layout/Display;
 
-    .line 132
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Display;->getPosition()Ljava/lang/String;
 
     move-result-object v5
@@ -416,7 +384,6 @@
 
     move-result v10
 
-    .line 134
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Display;->getAddress()Ljava/math/BigInteger;
 
     move-result-object v5
@@ -429,34 +396,28 @@
 
     move-result-object v5
 
-    .line 135
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Display;->isDefaultDisplay()Z
 
     move-result v6
 
-    .line 136
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Display;->isEnabled()Z
 
     move-result v7
 
-    .line 137
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Display;->getDisplayGroup()Ljava/lang/String;
 
     move-result-object v8
 
     iget-object v9, v0, Lcom/android/server/display/DeviceStateToLayoutMap;->mIdProducer:Lcom/android/server/display/layout/DisplayIdProducer;
 
-    .line 141
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Display;->getBrightnessThrottlingMapId()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 142
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Display;->getRefreshRateZoneId()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 143
     invoke-virtual {v4}, Lcom/android/server/display/config/layout/Display;->getRefreshRateThermalThrottlingMapId()Ljava/lang/String;
 
     move-result-object v14
@@ -465,14 +426,12 @@
 
     move v11, v15
 
-    .line 133
     invoke-virtual/range {v4 .. v14}, Lcom/android/server/display/layout/Layout;->createDisplayLocked(Landroid/view/DisplayAddress;ZZLjava/lang/String;Lcom/android/server/display/layout/DisplayIdProducer;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_0
 
-    .line 146
     :cond_3
     :try_start_4
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
@@ -488,7 +447,6 @@
 
     move-object v4, v0
 
-    .line 120
     :try_start_5
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -514,7 +472,6 @@
     :catch_0
     move-exception v0
 
-    .line 147
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -538,7 +495,6 @@
 .method public size()I
     .locals 0
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/display/DeviceStateToLayoutMap;->mLayoutMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I

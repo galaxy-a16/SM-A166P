@@ -19,36 +19,30 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 45
     iput v0, p0, Lcom/android/server/usage/PackagesTokenData;->counter:I
 
-    .line 50
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/usage/PackagesTokenData;->tokensToPackagesMap:Landroid/util/SparseArray;
 
-    .line 55
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/usage/PackagesTokenData;->packagesToTokensMap:Landroid/util/ArrayMap;
 
-    .line 59
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/usage/PackagesTokenData;->removedPackagesMap:Landroid/util/ArrayMap;
 
-    .line 64
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -63,7 +57,6 @@
 .method public getPackageString(I)Ljava/lang/String;
     .locals 0
 
-    .line 140
     iget-object p0, p0, Lcom/android/server/usage/PackagesTokenData;->tokensToPackagesMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -81,7 +74,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 144
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -94,7 +86,6 @@
 .method public getPackageTokenOrAdd(Ljava/lang/String;J)I
     .locals 4
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/usage/PackagesTokenData;->removedPackagesMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -107,7 +98,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 80
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v2
@@ -118,7 +108,6 @@
 
     return v1
 
-    .line 94
     :cond_0
     iget-object p2, p0, Lcom/android/server/usage/PackagesTokenData;->packagesToTokensMap:Landroid/util/ArrayMap;
 
@@ -130,17 +119,14 @@
 
     if-nez p2, :cond_1
 
-    .line 96
     new-instance p2, Landroid/util/ArrayMap;
 
     invoke-direct {p2}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 97
     iget-object p3, p0, Lcom/android/server/usage/PackagesTokenData;->packagesToTokensMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p3, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 99
     :cond_1
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -158,29 +144,24 @@
 
     if-ne p3, v1, :cond_2
 
-    .line 101
     iget p3, p0, Lcom/android/server/usage/PackagesTokenData;->counter:I
 
     add-int/lit8 v0, p3, 0x1
 
     iput v0, p0, Lcom/android/server/usage/PackagesTokenData;->counter:I
 
-    .line 103
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 104
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 105
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {p2, p1, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
     iget-object p0, p0, Lcom/android/server/usage/PackagesTokenData;->tokensToPackagesMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -194,7 +175,6 @@
 
     const/4 v0, 0x0
 
-    .line 156
     :try_start_0
     iget-object p0, p0, Lcom/android/server/usage/PackagesTokenData;->tokensToPackagesMap:Landroid/util/SparseArray;
 
@@ -221,7 +201,6 @@
     :catch_1
     move-exception p0
 
-    .line 158
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,7 +225,6 @@
 .method public getTokenOrAdd(ILjava/lang/String;Ljava/lang/String;)I
     .locals 3
 
-    .line 121
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -257,7 +235,6 @@
 
     return p0
 
-    .line 124
     :cond_0
     iget-object v0, p0, Lcom/android/server/usage/PackagesTokenData;->packagesToTokensMap:Landroid/util/ArrayMap;
 
@@ -285,7 +262,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/usage/PackagesTokenData;->tokensToPackagesMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -298,7 +274,6 @@
 
     move-result v0
 
-    .line 127
     iget-object v1, p0, Lcom/android/server/usage/PackagesTokenData;->packagesToTokensMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -313,7 +288,6 @@
 
     invoke-virtual {p2, p3, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/usage/PackagesTokenData;->tokensToPackagesMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -331,7 +305,6 @@
 .method public removePackage(Ljava/lang/String;J)I
     .locals 1
 
-    .line 175
     iget-object v0, p0, Lcom/android/server/usage/PackagesTokenData;->removedPackagesMap:Landroid/util/ArrayMap;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -340,7 +313,6 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     iget-object p2, p0, Lcom/android/server/usage/PackagesTokenData;->packagesToTokensMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p2, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -353,7 +325,6 @@
 
     return p0
 
-    .line 180
     :cond_0
     iget-object p2, p0, Lcom/android/server/usage/PackagesTokenData;->packagesToTokensMap:Landroid/util/ArrayMap;
 
@@ -373,17 +344,14 @@
 
     move-result p2
 
-    .line 181
     iget-object p3, p0, Lcom/android/server/usage/PackagesTokenData;->packagesToTokensMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p3, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
     iget-object p1, p0, Lcom/android/server/usage/PackagesTokenData;->tokensToPackagesMap:Landroid/util/SparseArray;
 
     invoke-virtual {p1, p2}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 183
     iget-object p0, p0, Lcom/android/server/usage/PackagesTokenData;->removedPackageTokens:Landroid/util/ArraySet;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

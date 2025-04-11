@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/SystemServer;->$r8$lambda$GdFcqWB8sCTzm0hNmQqV36Q1mT8()V
 
     return-void

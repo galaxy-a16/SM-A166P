@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$8xDMWptfe4Po_y2hgZAOQwOG-zA(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->lambda$updateTemperature$0(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -32,7 +31,6 @@
 .method public static synthetic $r8$lambda$aBlLAo8SCfCGLs7NwQrI1qh7CBY(Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->updateTemperature()V
 
     return-void
@@ -41,26 +39,22 @@
 .method public constructor <init>(Lcom/android/server/power/ThermalManagerService;)V
     .locals 2
 
-    .line 1347
     iput-object p1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1348
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mHandler:Landroid/os/Handler;
 
-    .line 1351
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
-    .line 1356
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
@@ -69,12 +63,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1360
     iput-wide v0, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mLastForecastCallTimeMillis:J
 
     const-wide/16 v0, 0x2710
 
-    .line 1364
     iput-wide v0, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mInactivityThresholdMillis:J
 
     return-void
@@ -83,7 +75,6 @@
 .method public static synthetic lambda$updateTemperature$0(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 1
 
-    .line 1416
     new-instance p0, Ljava/util/ArrayList;
 
     const/16 v0, 0x1e
@@ -98,7 +89,6 @@
 .method public createSampleForTesting(JF)Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;
     .locals 1
 
-    .line 1534
     new-instance v0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;-><init>(Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;JF)V
@@ -109,12 +99,10 @@
 .method public getForecast(I)F
     .locals 8
 
-    .line 1476
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1477
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -122,7 +110,6 @@
 
     iput-wide v1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mLastForecastCallTimeMillis:J
 
-    .line 1478
     iget-object v1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->isEmpty()Z
@@ -131,10 +118,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1479
     invoke-virtual {p0}, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->updateTemperature()V
 
-    .line 1484
     :cond_0
     iget-object v1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
@@ -146,7 +131,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1485
     invoke-static {}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -155,12 +139,10 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1486
     monitor-exit v0
 
     return v2
 
-    .line 1491
     :cond_1
     iget-object v1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSevereThresholds:Landroid/util/ArrayMap;
 
@@ -170,7 +152,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1492
     invoke-static {}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -179,12 +160,10 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1493
     monitor-exit v0
 
     return v2
 
-    .line 1497
     :cond_2
     iget-object v1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
@@ -210,21 +189,18 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 1498
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    .line 1499
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 1501
     iget-object v5, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSevereThresholds:Landroid/util/ArrayMap;
 
     invoke-virtual {v5, v4}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -235,7 +211,6 @@
 
     if-nez v5, :cond_4
 
-    .line 1503
     invoke-static {}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -261,7 +236,6 @@
     :cond_4
     const/4 v4, 0x0
 
-    .line 1507
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -270,7 +244,6 @@
 
     iget v4, v4, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;->temperature:F
 
-    .line 1509
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v6
@@ -279,7 +252,6 @@
 
     if-ge v6, v7, :cond_6
 
-    .line 1511
     invoke-virtual {v5}, Ljava/lang/Float;->floatValue()F
 
     move-result v3
@@ -288,7 +260,6 @@
 
     move-result v3
 
-    .line 1512
     invoke-static {v2}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v4
@@ -305,7 +276,6 @@
 
     goto :goto_0
 
-    .line 1518
     :cond_6
     invoke-virtual {p0, v3}, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->getSlopeOf(Ljava/util/List;)F
 
@@ -321,17 +291,14 @@
 
     add-float/2addr v4, v3
 
-    .line 1520
     invoke-virtual {v5}, Ljava/lang/Float;->floatValue()F
 
     move-result v3
 
-    .line 1519
     invoke-virtual {p0, v4, v3}, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->normalizeTemperature(FF)F
 
     move-result v3
 
-    .line 1521
     invoke-static {v2}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v4
@@ -344,7 +311,6 @@
 
     goto :goto_1
 
-    .line 1526
     :cond_7
     monitor-exit v0
 
@@ -353,7 +319,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1527
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -376,7 +341,6 @@
 
     move v3, v2
 
-    .line 1433
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -384,19 +348,16 @@
 
     if-ge v3, v7, :cond_0
 
-    .line 1434
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;
 
-    .line 1435
     iget-wide v8, v7, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;->time:J
 
     add-long/2addr v4, v8
 
-    .line 1436
     iget v7, v7, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;->temperature:F
 
     add-float/2addr v6, v7
@@ -405,7 +366,6 @@
 
     goto :goto_0
 
-    .line 1438
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -415,7 +375,6 @@
 
     div-long/2addr v4, v7
 
-    .line 1439
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -424,7 +383,6 @@
 
     div-float/2addr v6, v3
 
-    .line 1443
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -432,19 +390,16 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 1444
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;
 
-    .line 1445
     iget-wide v7, v3, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;->time:J
 
     sub-long/2addr v7, v4
 
-    .line 1446
     iget v3, v3, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;->temperature:F
 
     sub-float/2addr v3, v6
@@ -474,7 +429,6 @@
 .method public normalizeTemperature(FF)F
     .locals 2
 
-    .line 1463
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
     monitor-enter p0
@@ -487,7 +441,6 @@
 
     if-gtz v1, :cond_0
 
-    .line 1466
     :try_start_0
     monitor-exit p0
 
@@ -500,7 +453,6 @@
 
     div-float/2addr p1, v0
 
-    .line 1469
     monitor-exit p0
 
     return p1
@@ -508,7 +460,6 @@
     :catchall_0
     move-exception p1
 
-    .line 1470
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -519,12 +470,10 @@
 .method public updateSevereThresholds()V
     .locals 7
 
-    .line 1368
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1369
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->this$0:Lcom/android/server/power/ThermalManagerService;
 
@@ -536,14 +485,12 @@
 
     const/4 v3, 0x3
 
-    .line 1370
     invoke-virtual {v1, v2, v3}, Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper;->getTemperatureThresholds(ZI)Ljava/util/List;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 1371
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -551,14 +498,12 @@
 
     if-ge v2, v4, :cond_2
 
-    .line 1372
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/hardware/thermal/TemperatureThreshold;
 
-    .line 1373
     iget-object v5, v4, Landroid/hardware/thermal/TemperatureThreshold;->hotThrottlingThresholds:[F
 
     array-length v6, v5
@@ -567,18 +512,15 @@
 
     goto :goto_1
 
-    .line 1376
     :cond_0
     aget v5, v5, v3
 
-    .line 1378
     invoke-static {v5}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v5
 
     if-nez v5, :cond_1
 
-    .line 1379
     iget-object v5, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSevereThresholds:Landroid/util/ArrayMap;
 
     iget-object v6, v4, Landroid/hardware/thermal/TemperatureThreshold;->name:Ljava/lang/String;
@@ -587,12 +529,10 @@
 
     aget v4, v4, v3
 
-    .line 1380
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v4
 
-    .line 1379
     invoke-virtual {v5, v6, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
@@ -601,7 +541,6 @@
 
     goto :goto_0
 
-    .line 1383
     :cond_2
     monitor-exit v0
 
@@ -620,12 +559,10 @@
 .method public final updateTemperature()V
     .locals 10
 
-    .line 1389
     iget-object v0, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1390
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -641,7 +578,6 @@
 
     if-gez v1, :cond_3
 
-    .line 1394
     iget-object v1, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$$ExternalSyntheticLambda0;
@@ -652,12 +588,10 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1402
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 1403
     iget-object v3, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->this$0:Lcom/android/server/power/ThermalManagerService;
 
     invoke-static {v3}, Lcom/android/server/power/ThermalManagerService;->-$$Nest$fgetmHalWrapper(Lcom/android/server/power/ThermalManagerService;)Lcom/android/server/power/ThermalManagerService$ThermalHalWrapper;
@@ -676,7 +610,6 @@
 
     move v5, v4
 
-    .line 1406
     :goto_0
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -684,14 +617,12 @@
 
     if-ge v5, v6, :cond_2
 
-    .line 1407
     invoke-interface {v3, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Landroid/os/Temperature;
 
-    .line 1411
     invoke-virtual {v6}, Landroid/os/Temperature;->getValue()F
 
     move-result v7
@@ -704,7 +635,6 @@
 
     goto :goto_1
 
-    .line 1415
     :cond_0
     iget-object v7, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
@@ -722,7 +652,6 @@
 
     check-cast v7, Ljava/util/ArrayList;
 
-    .line 1417
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v8
@@ -731,10 +660,8 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 1418
     invoke-virtual {v7, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1420
     :cond_1
     new-instance v8, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher$Sample;
 
@@ -751,19 +678,16 @@
 
     goto :goto_0
 
-    .line 1422
     :cond_2
     monitor-exit v0
 
     return-void
 
-    .line 1398
     :cond_3
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$TemperatureWatcher;->mSamples:Landroid/util/ArrayMap;
 
     invoke-virtual {p0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 1399
     monitor-exit v0
 
     return-void
@@ -771,7 +695,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1422
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

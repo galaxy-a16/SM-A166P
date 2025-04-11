@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/FreecessController;)V
     .locals 0
 
-    .line 3387
     iput-object p1, p0, Lcom/android/server/am/FreecessController$3;->this$0:Lcom/android/server/am/FreecessController;
 
     invoke-direct {p0}, Landroid/app/IUidObserver$Stub;-><init>()V
@@ -24,12 +23,10 @@
 .method public onUidActive(I)V
     .locals 3
 
-    .line 3426
     sget-object v0, Lcom/android/server/am/MARsPolicyManager;->MARsLock:Lcom/android/server/am/MARsPolicyManager$Lock;
 
     monitor-enter v0
 
-    .line 3427
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/FreecessController$3;->this$0:Lcom/android/server/am/FreecessController;
 
@@ -53,7 +50,6 @@
 
     goto :goto_0
 
-    .line 3428
     :cond_0
     invoke-static {p1}, Landroid/os/UserHandle;->isApp(I)Z
 
@@ -61,7 +57,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 3429
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/FreecessController$3;->this$0:Lcom/android/server/am/FreecessController;
 
@@ -77,12 +72,10 @@
 
     if-nez p1, :cond_1
 
-    .line 3430
     monitor-exit v0
 
     return-void
 
-    .line 3433
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/FreecessController$3;->this$0:Lcom/android/server/am/FreecessController;
 
@@ -90,7 +83,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 3434
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
     move-result-object p0
@@ -103,12 +95,10 @@
 
     invoke-virtual {p0, v1, p1, v2}, Lcom/android/server/am/FreecessHandler;->sendCalmModeRepeatMsg(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 3435
     monitor-exit v0
 
     return-void
 
-    .line 3438
     :cond_2
     iget v1, p1, Lcom/android/server/am/FreecessPkgStatus;->freezedState:I
 
@@ -132,13 +122,11 @@
 
     if-eqz p0, :cond_5
 
-    .line 3439
     :cond_3
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ENG:Z
 
     if-eqz p0, :cond_4
 
-    .line 3440
     sget-object p0, Lcom/android/server/am/FreecessController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -175,7 +163,6 @@
 
     invoke-static {p0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3442
     :cond_4
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
@@ -187,7 +174,6 @@
 
     invoke-virtual {p0, v1, p1}, Lcom/android/server/am/FreecessHandler;->sendResetStateMsg(Ljava/lang/String;I)V
 
-    .line 3446
     :cond_5
     monitor-exit v0
 
@@ -206,19 +192,16 @@
 .method public onUidCachedChanged(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidGone(IZ)V
     .locals 3
 
-    .line 3408
     sget-object p2, Lcom/android/server/am/MARsPolicyManager;->MARsLock:Lcom/android/server/am/MARsPolicyManager$Lock;
 
     monitor-enter p2
 
-    .line 3409
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/FreecessController$3;->this$0:Lcom/android/server/am/FreecessController;
 
@@ -228,12 +211,10 @@
 
     if-nez p1, :cond_0
 
-    .line 3410
     monitor-exit p2
 
     return-void
 
-    .line 3411
     :cond_0
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -253,7 +234,6 @@
 
     return-void
 
-    .line 3413
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/FreecessController$3;->this$0:Lcom/android/server/am/FreecessController;
 
@@ -265,10 +245,8 @@
 
     const/4 p0, 0x1
 
-    .line 3414
     iput p0, p1, Lcom/android/server/am/FreecessPkgStatus;->freezedState:I
 
-    .line 3415
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
     move-result-object v0
@@ -277,7 +255,6 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/android/server/am/FreecessHandler;->removeBgTriggerMsgByObj(ILjava/lang/Object;)V
 
-    .line 3416
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
     move-result-object p0
@@ -288,7 +265,6 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/am/FreecessHandler;->removeBgTriggerMsgByObj(ILjava/lang/Object;)V
 
-    .line 3417
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
     move-result-object p0
@@ -299,7 +275,6 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/am/FreecessHandler;->removeBgTriggerMsgByObj(ILjava/lang/Object;)V
 
-    .line 3418
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
     move-result-object p0
@@ -310,7 +285,6 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/am/FreecessHandler;->removeBgTriggerMsgByObj(ILjava/lang/Object;)V
 
-    .line 3419
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
     move-result-object p0
@@ -321,7 +295,6 @@
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/am/FreecessHandler;->removeBgTriggerMsgByObj(ILjava/lang/Object;)V
 
-    .line 3421
     :cond_2
     monitor-exit p2
 
@@ -340,14 +313,12 @@
 .method public onUidIdle(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidProcAdjChanged(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -358,7 +329,6 @@
 
     if-ne p2, p3, :cond_0
 
-    .line 3392
     iget-object p0, p0, Lcom/android/server/am/FreecessController$3;->this$0:Lcom/android/server/am/FreecessController;
 
     const-string p2, "UID_TOP"

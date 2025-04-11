@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$NwsDhLDHcokkCbOD7I20fARI6gc(Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->handleDoubleTapOnHome()V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$hXFruVBER4PKCDllpR87SxOxpM4(Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->lambda$handleHomeButton$0()V
 
     return-void
@@ -39,7 +37,6 @@
 .method public static synthetic $r8$lambda$ooB5E2H_HaB2BMwtzsjAOVv1l9E(Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;Landroid/view/KeyEvent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->lambda$handleHomeButton$2(Landroid/view/KeyEvent;)V
 
     return-void
@@ -48,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayId(Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mDisplayId:I
 
     return p0
@@ -57,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHomeDoubleTapPending(Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeDoubleTapPending:Z
 
     return p0
@@ -66,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fputmHomeDoubleTapPending(Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeDoubleTapPending:Z
 
     return-void
@@ -75,19 +69,16 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;I)V
     .locals 0
 
-    .line 2127
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2117
     new-instance p1, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler$1;-><init>(Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;)V
 
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
 
-    .line 2128
     iput p2, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mDisplayId:I
 
     return-void
@@ -96,7 +87,6 @@
 .method private synthetic lambda$handleHomeButton$0()V
     .locals 1
 
-    .line 2188
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mDisplayId:I
@@ -109,17 +99,14 @@
 .method private synthetic lambda$handleHomeButton$2(Landroid/view/KeyEvent;)V
     .locals 3
 
-    .line 2247
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDeviceId()I
 
     move-result v0
 
-    .line 2248
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getEventTime()J
 
     move-result-wide v1
 
-    .line 2247
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->handleLongPressOnHome(IJ)V
 
     return-void
@@ -132,7 +119,6 @@
 
     const/4 v0, 0x0
 
-    .line 2276
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->handleDoubleTapOnHome(I)V
 
     return-void
@@ -141,14 +127,12 @@
 .method public final handleDoubleTapOnHome(I)V
     .locals 2
 
-    .line 2281
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeConsumed:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 2284
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -164,7 +148,6 @@
 
     if-eq p1, v1, :cond_1
 
-    .line 2300
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,22 +174,18 @@
 
     goto :goto_0
 
-    .line 2296
     :cond_1
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeConsumed:Z
 
-    .line 2297
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$mshowPictureInPictureMenuInternal(Lcom/android/server/policy/PhoneWindowManager;)V
 
     goto :goto_0
 
-    .line 2286
     :cond_2
     iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeConsumed:Z
 
-    .line 2292
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->toggleRecentApps()V
@@ -218,19 +197,16 @@
 .method public handleHomeButton(Landroid/os/IBinder;Landroid/view/KeyEvent;)I
     .locals 12
 
-    .line 2132
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->keyguardOn()Z
 
     move-result v0
 
-    .line 2133
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v1
 
-    .line 2134
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v2
@@ -248,23 +224,19 @@
     :cond_0
     move v2, v4
 
-    .line 2135
     :goto_0
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isCanceled()Z
 
     move-result v5
 
-    .line 2137
     sget-boolean v6, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_INPUT:Z
 
     const-string v7, "WindowManager"
 
     if-eqz v6, :cond_1
 
-    .line 2138
     iget v6, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mDisplayId:I
 
-    .line 2139
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -281,7 +253,6 @@
 
     const-string v8, "handleHomeButton in display#%d mHomePressed = %b"
 
-    .line 2138
     invoke-static {v8, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
@@ -295,17 +266,14 @@
 
     if-nez v2, :cond_9
 
-    .line 2145
     iget p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mDisplayId:I
 
     if-nez p1, :cond_2
 
-    .line 2146
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p1}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$mcancelPreloadRecentApps(Lcom/android/server/policy/PhoneWindowManager;)V
 
-    .line 2150
     :cond_2
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_SEARCLE_HOME_LONG:Z
 
@@ -321,23 +289,19 @@
 
     if-eqz p1, :cond_3
 
-    .line 2151
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-virtual {p1, v4}, Lcom/android/server/policy/PhoneWindowManagerExt;->startSearcleHomeKeyPress(Z)V
 
-    .line 2155
     :cond_3
     iput-boolean v4, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomePressed:Z
 
-    .line 2156
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeConsumed:Z
 
     if-eqz p1, :cond_4
 
-    .line 2157
     iput-boolean v4, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeConsumed:Z
 
     return v8
@@ -347,12 +311,10 @@
 
     const-string p0, "Ignoring HOME; event canceled."
 
-    .line 2162
     invoke-static {v7, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v8
 
-    .line 2167
     :cond_5
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -362,7 +324,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 2169
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p1}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$fgetmDoubleTapOnHomeBehavior(Lcom/android/server/policy/PhoneWindowManager;)I
@@ -379,7 +340,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 2171
     :cond_6
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -391,10 +351,8 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2172
     iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeDoubleTapPending:Z
 
-    .line 2173
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p1}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$fgetmHandler(Lcom/android/server/policy/PhoneWindowManager;)Landroid/os/Handler;
@@ -403,25 +361,21 @@
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
 
-    .line 2174
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
 
     move-result p2
 
     int-to-long v0, p2
 
-    .line 2173
     invoke-virtual {p1, p0, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return v8
 
-    .line 2180
     :cond_7
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
-    .line 2181
     invoke-virtual {p1, v6, v6}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfo(II)Z
 
     move-result p1
@@ -430,12 +384,10 @@
 
     const-string/jumbo p0, "skip single press home, requestedSystemKey"
 
-    .line 2182
     invoke-static {v7, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
 
-    .line 2188
     :cond_8
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -451,20 +403,17 @@
 
     return v8
 
-    .line 2192
     :cond_9
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
-    .line 2193
     invoke-virtual {v2, p1}, Lcom/android/server/wm/WindowManagerInternal;->getKeyInterceptionInfoFromToken(Landroid/os/IBinder;)Lcom/android/internal/policy/KeyInterceptionInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_d
 
-    .line 2197
     iget v2, p1, Lcom/android/internal/policy/KeyInterceptionInfo;->layoutParamsType:I
 
     const/16 v5, 0x7d9
@@ -477,7 +426,6 @@
 
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 2199
     invoke-virtual {v2}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardShowing()Z
 
     move-result v2
@@ -486,7 +434,6 @@
 
     goto :goto_2
 
-    .line 2203
     :cond_a
     invoke-static {}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$sfgetWINDOW_TYPES_WHERE_HOME_DOESNT_WORK()[I
 
@@ -501,7 +448,6 @@
 
     aget v10, v2, v9
 
-    .line 2204
     iget v11, p1, Lcom/android/internal/policy/KeyInterceptionInfo;->layoutParamsType:I
 
     if-ne v11, v10, :cond_b
@@ -520,10 +466,8 @@
     :cond_d
     if-nez v1, :cond_10
 
-    .line 2213
     iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomePressed:Z
 
-    .line 2215
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_SEARCLE_HOME_LONG:Z
 
     if-eqz p1, :cond_e
@@ -538,23 +482,19 @@
 
     if-eqz p1, :cond_e
 
-    .line 2216
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-virtual {p1, v3}, Lcom/android/server/policy/PhoneWindowManagerExt;->startSearcleHomeKeyPress(Z)V
 
-    .line 2220
     :cond_e
     iget-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeDoubleTapPending:Z
 
     if-eqz p1, :cond_f
 
-    .line 2221
     iput-boolean v4, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeDoubleTapPending:Z
 
-    .line 2222
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p1}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$fgetmHandler(Lcom/android/server/policy/PhoneWindowManager;)Landroid/os/Handler;
@@ -565,7 +505,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2228
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p1}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$fgetmHandler(Lcom/android/server/policy/PhoneWindowManager;)Landroid/os/Handler;
@@ -580,7 +519,6 @@
 
     goto/16 :goto_3
 
-    .line 2232
     :cond_f
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -594,14 +532,12 @@
 
     if-nez p1, :cond_13
 
-    .line 2234
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p1}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$mpreloadRecentApps(Lcom/android/server/policy/PhoneWindowManager;)V
 
     goto :goto_3
 
-    .line 2236
     :cond_10
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -613,14 +549,12 @@
 
     if-nez v0, :cond_12
 
-    .line 2239
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     const/4 v0, 0x4
 
-    .line 2240
     invoke-virtual {p1, v6, v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->hasSystemKeyInfo(II)Z
 
     move-result p1
@@ -629,12 +563,10 @@
 
     const-string/jumbo p0, "skip long press home, requestedSystemKey"
 
-    .line 2241
     invoke-static {v7, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
 
-    .line 2247
     :cond_11
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -650,7 +582,6 @@
 
     goto :goto_3
 
-    .line 2253
     :cond_12
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -674,7 +605,6 @@
 
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 2254
     invoke-virtual {p2}, Lcom/android/server/policy/PhoneWindowManager;->inKeyguardRestrictedKeyInputMode()Z
 
     move-result p2
@@ -685,10 +615,8 @@
 
     move-result-object p1
 
-    .line 2253
     invoke-static {v7, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2256
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_SEARCLE_HOME_LONG:Z
 
     if-eqz p1, :cond_13
@@ -697,21 +625,18 @@
 
     if-nez p1, :cond_13
 
-    .line 2257
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-virtual {p1}, Lcom/android/server/policy/PhoneWindowManagerExt;->showingSearcleToastIfNeeded()V
 
-    .line 2264
     :cond_13
     :goto_3
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
-    .line 2265
     invoke-virtual {p0, v6}, Lcom/android/server/policy/PhoneWindowManagerExt;->canDispatchingSystemKeyEvent(I)Z
 
     move-result p0
@@ -720,7 +645,6 @@
 
     const-string p0, "can dispatching home key event, requestedSystemKey"
 
-    .line 2266
     invoke-static {v7, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
@@ -732,14 +656,12 @@
 .method public final handleLongPressOnHome(IJ)V
     .locals 1
 
-    .line 2307
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeConsumed:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 2312
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -753,7 +675,6 @@
 
     const/4 p1, 0x1
 
-    .line 2313
     iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mHomeConsumed:Z
 
     :cond_1
@@ -763,7 +684,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 2344
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManager$DisplayHomeButtonHandler;->mDisplayId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

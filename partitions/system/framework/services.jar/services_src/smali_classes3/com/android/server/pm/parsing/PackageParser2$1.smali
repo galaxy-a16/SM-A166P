@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/internal/compat/IPlatformCompat;)V
     .locals 0
 
-    .line 70
     iput-object p1, p0, Lcom/android/server/pm/parsing/PackageParser2$1;->val$platformCompat:Lcom/android/internal/compat/IPlatformCompat;
 
     invoke-direct {p0}, Lcom/android/server/pm/parsing/PackageParser2$Callback;-><init>()V
@@ -24,7 +23,6 @@
 .method public hasFeature(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -33,7 +31,6 @@
 .method public isChangeEnabled(JLandroid/content/pm/ApplicationInfo;)Z
     .locals 0
 
-    .line 74
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/parsing/PackageParser2$1;->val$platformCompat:Lcom/android/internal/compat/IPlatformCompat;
 
@@ -52,7 +49,6 @@
 
     const-string p2, "IPlatformCompat query failed"
 
-    .line 77
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x1

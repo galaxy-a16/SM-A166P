@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1947
     new-instance v0, Lcom/android/server/am/KillPolicyManager;
 
     invoke-direct {v0}, Lcom/android/server/am/KillPolicyManager;-><init>()V
@@ -22,7 +21,6 @@
 
     const/4 v0, 0x0
 
-    .line 1948
     sput-boolean v0, Lcom/android/server/am/KillPolicyManager$KpmClassLazy;->isinitKpmClass:Z
 
     return-void

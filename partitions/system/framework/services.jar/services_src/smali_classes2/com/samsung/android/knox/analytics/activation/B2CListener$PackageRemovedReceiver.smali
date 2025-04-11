@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/analytics/activation/B2CListener;)V
     .locals 0
 
-    .line 71
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/activation/B2CListener$PackageRemovedReceiver;->this$0:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 74
     invoke-static {}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -49,7 +47,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -62,12 +59,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 76
     invoke-static {p1}, Lcom/samsung/android/knox/analytics/util/KnoxAnalyticsQueryResolver;->getB2CFeaturePackageList(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 77
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p2
@@ -78,14 +73,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 78
     invoke-interface {p1, p2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 79
     iget-object p1, p0, Lcom/samsung/android/knox/analytics/activation/B2CListener$PackageRemovedReceiver;->this$0:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
     invoke-static {p1}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->-$$Nest$fgetmActivationMonitor(Lcom/samsung/android/knox/analytics/activation/B2CListener;)Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;
@@ -98,7 +91,6 @@
 
     invoke-virtual {p1, p2, v0, v1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkB2C(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 80
     invoke-static {}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -119,7 +111,6 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 82
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/B2CListener$PackageRemovedReceiver;->this$0:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 

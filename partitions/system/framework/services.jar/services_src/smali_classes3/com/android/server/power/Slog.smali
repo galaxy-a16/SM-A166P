@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 59
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x1f4
@@ -30,7 +29,6 @@
 
     monitor-enter v0
 
-    .line 71
     :try_start_0
     sget-object v1, Lcom/android/server/power/Slog;->sLogList:Ljava/util/ArrayList;
 
@@ -44,12 +42,10 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 72
     monitor-exit v0
 
     return-void
 
-    .line 74
     :cond_0
     :try_start_1
     sget-object v1, Lcom/android/server/power/Slog;->sLogList:Ljava/util/ArrayList;
@@ -88,7 +84,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 75
     monitor-exit v0
 
     return-void
@@ -104,7 +99,6 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 170
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -131,7 +125,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->addPMSLogList(Ljava/lang/String;)V
 
-    .line 171
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -143,7 +136,6 @@
 .method public static dk(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 146
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,20 +164,17 @@
 
     monitor-enter v0
 
-    .line 85
     :try_start_0
     sget-boolean v1, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v1, :cond_0
 
-    .line 86
     invoke-static {}, Lcom/android/server/power/Slog;->joiningListToString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 87
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,12 +202,10 @@
     :cond_0
     const-string v1, "Pass savePMSLog"
 
-    .line 89
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 91
     :goto_0
     monitor-exit v0
 
@@ -235,7 +222,6 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 204
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -262,7 +248,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->addPMSLogList(Ljava/lang/String;)V
 
-    .line 205
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -274,7 +259,6 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 2
 
-    .line 209
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -301,7 +285,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->addPMSLogList(Ljava/lang/String;)V
 
-    .line 210
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -313,7 +296,6 @@
 .method public static getFileName(Z)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p0, :cond_0
 
     const-string p0, "/data/log/Last.kpsn"
@@ -329,7 +311,6 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 180
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -356,7 +337,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->addPMSLogList(Ljava/lang/String;)V
 
-    .line 181
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -368,7 +348,6 @@
 .method public static ik(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -395,7 +374,6 @@
 
     const-string v0, "\n"
 
-    .line 126
     sget-object v1, Lcom/android/server/power/Slog;->sLogList:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
@@ -412,13 +390,11 @@
 
     monitor-enter v0
 
-    .line 100
     :try_start_0
     sget-boolean v1, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v1, :cond_1
 
-    .line 101
     sget-object v1, Lcom/android/server/power/Slog;->sLogList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -431,17 +407,14 @@
 
     const-string v1, "Normal_log size is zero"
 
-    .line 102
     invoke-static {p0, v1}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
     monitor-exit v0
 
     return-void
 
-    .line 106
     :cond_0
     :try_start_1
     new-instance v1, Ljava/io/File;
@@ -454,7 +427,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 108
     :try_start_2
     invoke-static {}, Lcom/android/server/power/Slog;->joiningListToString()Ljava/lang/String;
 
@@ -473,12 +445,10 @@
 
     const-string v1, "Pass savePMSLog"
 
-    .line 113
     invoke-static {p0, v1}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 115
     :catch_0
     :goto_0
     monitor-exit v0
@@ -496,7 +466,6 @@
 .method public static v(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 160
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -523,7 +492,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->addPMSLogList(Ljava/lang/String;)V
 
-    .line 161
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -535,7 +503,6 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 190
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -562,7 +529,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->addPMSLogList(Ljava/lang/String;)V
 
-    .line 191
     :cond_0
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -574,7 +540,6 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 2
 
-    .line 195
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
     if-eqz v0, :cond_0
@@ -601,7 +566,6 @@
 
     invoke-static {v0}, Lcom/android/server/power/Slog;->addPMSLogList(Ljava/lang/String;)V
 
-    .line 196
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -613,7 +577,6 @@
 .method public static wtf(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 219
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -624,7 +587,6 @@
 .method public static wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 0
 
-    .line 237
     invoke-static {p0, p1, p2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result p0
@@ -635,7 +597,6 @@
 .method public static wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 0
 
-    .line 228
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result p0

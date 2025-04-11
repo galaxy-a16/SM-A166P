@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetparameterSupport(Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState;->parameterSupport:Ljava/util/Map;
 
     return-object p0
@@ -26,15 +25,12 @@
 .method public constructor <init>(Landroid/media/soundtrigger/PhraseSoundModel;)V
     .locals 1
 
-    .line 257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 274
     sget-object v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState$Activity;->LOADED:Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState$Activity;
 
     iput-object v0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState;->activityState:Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState$Activity;
 
-    .line 287
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -43,7 +39,6 @@
 
     const/16 v0, 0x10
 
-    .line 258
     invoke-static {p1, v0}, Lcom/android/server/soundtrigger_middleware/ObjectPrinter;->print(Ljava/lang/Object;I)Ljava/lang/String;
 
     move-result-object p1
@@ -56,15 +51,12 @@
 .method public constructor <init>(Landroid/media/soundtrigger/SoundModel;)V
     .locals 1
 
-    .line 253
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 274
     sget-object v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState$Activity;->LOADED:Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState$Activity;
 
     iput-object v0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState;->activityState:Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState$Activity;
 
-    .line 287
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -73,7 +65,6 @@
 
     const/16 v0, 0x10
 
-    .line 254
     invoke-static {p1, v0}, Lcom/android/server/soundtrigger_middleware/ObjectPrinter;->print(Ljava/lang/Object;I)Ljava/lang/String;
 
     move-result-object p1
@@ -88,7 +79,6 @@
 .method public checkSupported(I)V
     .locals 2
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState;->parameterSupport:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -101,7 +91,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 298
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState;->parameterSupport:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -118,7 +107,6 @@
 
     return-void
 
-    .line 300
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -128,7 +116,6 @@
 
     throw p0
 
-    .line 296
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -142,7 +129,6 @@
 .method public checkSupported(II)V
     .locals 2
 
-    .line 312
     iget-object v0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState;->parameterSupport:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -155,7 +141,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 315
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation$ModelState;->parameterSupport:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -170,7 +155,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 319
     iget p1, p0, Landroid/media/soundtrigger/ModelParameterRange;->minInclusive:I
 
     iget p0, p0, Landroid/media/soundtrigger/ModelParameterRange;->maxInclusive:I
@@ -181,7 +165,6 @@
 
     return-void
 
-    .line 317
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -191,7 +174,6 @@
 
     throw p0
 
-    .line 313
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

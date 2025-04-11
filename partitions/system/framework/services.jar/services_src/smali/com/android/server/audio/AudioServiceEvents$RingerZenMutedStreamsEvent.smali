@@ -13,13 +13,10 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .line 624
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 625
     iput p1, p0, Lcom/android/server/audio/AudioServiceEvents$RingerZenMutedStreamsEvent;->mRingerZenMutedStreams:I
 
-    .line 626
     iput-object p2, p0, Lcom/android/server/audio/AudioServiceEvents$RingerZenMutedStreamsEvent;->mSource:Ljava/lang/String;
 
     return-void
@@ -30,7 +27,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 631
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "RingerZenMutedStreams 0x"
@@ -39,7 +35,6 @@
 
     iget v1, p0, Lcom/android/server/audio/AudioServiceEvents$RingerZenMutedStreamsEvent;->mRingerZenMutedStreams:I
 
-    .line 632
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -48,14 +43,12 @@
 
     const-string v1, " from "
 
-    .line 633
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/android/server/audio/AudioServiceEvents$RingerZenMutedStreamsEvent;->mSource:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 634
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

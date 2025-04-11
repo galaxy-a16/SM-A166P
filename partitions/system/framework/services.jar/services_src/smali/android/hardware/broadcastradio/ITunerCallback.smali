@@ -20,7 +20,6 @@
 
     const-string v2, "android$hardware$broadcastradio$ITunerCallback"
 
-    .line 317
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v0

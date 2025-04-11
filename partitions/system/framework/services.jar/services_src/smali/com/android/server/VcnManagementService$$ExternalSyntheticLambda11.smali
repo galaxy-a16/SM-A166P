@@ -20,7 +20,6 @@
 .method public final toPersistableBundle(Ljava/lang/Object;)Landroid/os/PersistableBundle;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/net/vcn/VcnConfig;
 
     invoke-virtual {p1}, Landroid/net/vcn/VcnConfig;->toPersistableBundle()Landroid/os/PersistableBundle;

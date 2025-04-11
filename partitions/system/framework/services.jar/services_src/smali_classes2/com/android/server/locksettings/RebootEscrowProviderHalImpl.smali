@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;
 
     invoke-direct {v0}, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;-><init>()V
@@ -30,10 +28,8 @@
 .method public constructor <init>(Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;)V
     .locals 0
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl;->mInjector:Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;
 
     return-void
@@ -44,7 +40,6 @@
 .method public clearRebootEscrowKey()V
     .locals 1
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl;->mInjector:Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;->getRebootEscrow()Landroid/hardware/rebootescrow/IRebootEscrow;
@@ -61,7 +56,6 @@
     :try_start_0
     new-array v0, v0, [B
 
-    .line 122
     invoke-interface {p0, v0}, Landroid/hardware/rebootescrow/IRebootEscrow;->storeKey([B)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -74,7 +68,6 @@
 
     const-string v0, "Could not call RebootEscrow HAL to shred key"
 
-    .line 124
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -84,7 +77,6 @@
 .method public getAndClearRebootEscrowKey(Ljavax/crypto/SecretKey;)Lcom/android/server/locksettings/RebootEscrowKey;
     .locals 6
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl;->mInjector:Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;->getRebootEscrow()Landroid/hardware/rebootescrow/IRebootEscrow;
@@ -99,12 +91,10 @@
 
     const-string p0, "Had reboot escrow data for users, but RebootEscrow HAL is unavailable"
 
-    .line 76
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p1
 
-    .line 81
     :cond_0
     :try_start_0
     invoke-interface {p0}, Landroid/hardware/rebootescrow/IRebootEscrow;->retrieveKey()[B
@@ -115,12 +105,10 @@
 
     const-string p0, "Had reboot escrow data for users, but could not retrieve key"
 
-    .line 83
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p1
 
-    .line 85
     :cond_1
     array-length v2, v1
 
@@ -128,7 +116,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 86
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,13 +141,11 @@
 
     move v4, v2
 
-    .line 93
     :goto_0
     array-length v5, v1
 
     if-ge v2, v5, :cond_3
 
-    .line 94
     aget-byte v5, v1, v2
 
     or-int/2addr v4, v5
@@ -174,7 +159,6 @@
 
     const-string p0, "IRebootEscrow returned an all-zeroes key"
 
-    .line 97
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p1
@@ -182,10 +166,8 @@
     :cond_4
     new-array v2, v3, [B
 
-    .line 102
     invoke-interface {p0, v2}, Landroid/hardware/rebootescrow/IRebootEscrow;->storeKey([B)V
 
-    .line 104
     invoke-static {v1}, Lcom/android/server/locksettings/RebootEscrowKey;->fromKeyBytes([B)Lcom/android/server/locksettings/RebootEscrowKey;
 
     move-result-object p0
@@ -198,7 +180,6 @@
     :catch_0
     move-exception p0
 
-    .line 109
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,7 +203,6 @@
     :catch_1
     const-string p0, "Could not retrieve escrow data"
 
-    .line 106
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p1
@@ -231,7 +211,6 @@
 .method public getType()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -240,7 +219,6 @@
 .method public hasRebootEscrowSupport()Z
     .locals 0
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl;->mInjector:Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;->getRebootEscrow()Landroid/hardware/rebootescrow/IRebootEscrow;
@@ -263,7 +241,6 @@
 .method public storeRebootEscrowKey(Lcom/android/server/locksettings/RebootEscrowKey;Ljavax/crypto/SecretKey;)Z
     .locals 1
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl;->mInjector:Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/locksettings/RebootEscrowProviderHalImpl$Injector;->getRebootEscrow()Landroid/hardware/rebootescrow/IRebootEscrow;
@@ -278,12 +255,10 @@
 
     const-string p0, "Escrow marked as ready, but RebootEscrow HAL is unavailable"
 
-    .line 133
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return p2
 
-    .line 140
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/locksettings/RebootEscrowKey;->getKeyBytes()[B
@@ -294,7 +269,6 @@
 
     const-string p0, "Reboot escrow key stored with RebootEscrow HAL"
 
-    .line 141
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -309,7 +283,6 @@
 
     const-string p1, "Failed escrow secret to RebootEscrow HAL"
 
-    .line 144
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return p2

@@ -22,21 +22,16 @@
 .method public constructor <init>(Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;Landroid/os/IBinder;Landroid/content/ComponentName;II)V
     .locals 0
 
-    .line 281
     iput-object p1, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 282
     iput-object p2, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->token:Landroid/os/IBinder;
 
-    .line 283
     iput-object p3, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->component:Landroid/content/ComponentName;
 
-    .line 284
     iput p4, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->pid:I
 
-    .line 285
     iput p5, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->uid:I
 
     return-void
@@ -47,7 +42,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 290
     invoke-static {}, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -70,7 +64,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;
 
     invoke-static {v0}, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;->-$$Nest$fgetmStateListeners(Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;)Ljava/util/ArrayList;
@@ -79,7 +72,6 @@
 
     monitor-enter v0
 
-    .line 292
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;
 
@@ -87,7 +79,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;->-$$Nest$mnotifyStateToBinder(Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;Landroid/os/IBinder;)V
 
-    .line 293
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->this$0:Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;
 
     invoke-static {v1}, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;->-$$Nest$fgetmStateListeners(Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;)Ljava/util/ArrayList;
@@ -96,12 +87,10 @@
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 294
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
@@ -113,7 +102,6 @@
     :catchall_0
     move-exception p0
 
-    .line 294
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -125,12 +113,10 @@
 .method public onSystemUiVisibilityChanged(I)V
     .locals 1
 
-    .line 299
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController$SystemUiVisibilityListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez p0, :cond_0
 
-    .line 300
     invoke-static {}, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -141,7 +127,6 @@
 
     return-void
 
-    .line 305
     :cond_0
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/cocktailbar/ISystemUiVisibilityCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cocktailbar/ISystemUiVisibilityCallback;
@@ -150,7 +135,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 307
     invoke-interface {p0, p1}, Lcom/samsung/android/cocktailbar/ISystemUiVisibilityCallback;->onSystemUiVisibilityChanged(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -160,7 +144,6 @@
     :catch_0
     move-exception p0
 
-    .line 310
     invoke-static {}, Lcom/android/server/cocktailbar/policy/systemui/SystemUiVisibilityPolicyController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

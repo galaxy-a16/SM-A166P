@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$G4jwq3vE9SARCP8MjSq6qA80MNg(Lcom/android/server/usage/AppStandbyController;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$mupdatePowerWhitelistCache(Lcom/android/server/usage/AppStandbyController;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/usage/AppStandbyController;)V
     .locals 0
 
-    .line 2949
     iput-object p1, p0, Lcom/android/server/usage/AppStandbyController$DeviceStateReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usage/AppStandbyController;Lcom/android/server/usage/AppStandbyController$DeviceStateReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/usage/AppStandbyController$DeviceStateReceiver;-><init>(Lcom/android/server/usage/AppStandbyController;)V
 
     return-void
@@ -42,7 +39,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 2952
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -114,7 +110,6 @@
 
     goto :goto_1
 
-    .line 2954
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$DeviceStateReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -122,7 +117,6 @@
 
     goto :goto_1
 
-    .line 2957
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$DeviceStateReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -130,7 +124,6 @@
 
     goto :goto_1
 
-    .line 2960
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/usage/AppStandbyController$DeviceStateReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -140,7 +133,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 2961
     iget-object p1, p0, Lcom/android/server/usage/AppStandbyController$DeviceStateReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {p1}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmHandler(Lcom/android/server/usage/AppStandbyController;)Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;

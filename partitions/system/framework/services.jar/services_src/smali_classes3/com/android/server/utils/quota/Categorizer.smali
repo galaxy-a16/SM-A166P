@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$br6fVIE9p341Uw_12kzI-_jVhgY(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/utils/quota/Categorizer;->lambda$static$0(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 29
     new-instance v0, Lcom/android/server/utils/quota/Categorizer$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/utils/quota/Categorizer$$ExternalSyntheticLambda0;-><init>()V
@@ -35,7 +33,6 @@
 .method public static synthetic lambda$static$0(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;
     .locals 0
 
-    .line 29
     sget-object p0, Lcom/android/server/utils/quota/Category;->SINGLE_CATEGORY:Lcom/android/server/utils/quota/Category;
 
     return-object p0

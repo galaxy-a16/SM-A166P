@@ -57,10 +57,8 @@
 .method public constructor <init>(IIZ)V
     .locals 4
 
-    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 207
     iput p1, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->pid:I
 
     const-string/jumbo v0, "stat"
@@ -73,7 +71,6 @@
 
     if-gez p2, :cond_1
 
-    .line 210
     new-instance p2, Ljava/io/File;
 
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -82,7 +79,6 @@
 
     invoke-direct {p2, v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 211
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -93,7 +89,6 @@
 
     iput-object p1, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->statFile:Ljava/lang/String;
 
-    .line 212
     new-instance p1, Ljava/io/File;
 
     const-string v0, "cmdline"
@@ -106,7 +101,6 @@
 
     iput-object p1, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->cmdlineFile:Ljava/lang/String;
 
-    .line 213
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p2, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -119,14 +113,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 216
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadStats:Ljava/util/ArrayList;
 
-    .line 217
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -135,16 +127,13 @@
 
     goto :goto_0
 
-    .line 219
     :cond_0
     iput-object v3, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadStats:Ljava/util/ArrayList;
 
-    .line 220
     iput-object v3, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->workingThreads:Ljava/util/ArrayList;
 
     goto :goto_0
 
-    .line 223
     :cond_1
     new-instance p3, Ljava/io/File;
 
@@ -154,21 +143,18 @@
 
     invoke-direct {p3, v2, p2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 225
     new-instance p2, Ljava/io/File;
 
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p3, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 226
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-direct {p2, v2, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 227
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -179,16 +165,12 @@
 
     iput-object p1, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->statFile:Ljava/lang/String;
 
-    .line 228
     iput-object v3, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->cmdlineFile:Ljava/lang/String;
 
-    .line 229
     iput-object v3, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadsDir:Ljava/lang/String;
 
-    .line 230
     iput-object v3, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->threadStats:Ljava/util/ArrayList;
 
-    .line 231
     iput-object v3, p0, Lcom/android/server/enterprise/application/ProcessStats$Stats;->workingThreads:Ljava/util/ArrayList;
 
     :goto_0

@@ -20,7 +20,6 @@
 .method public static synthetic $r8$lambda$HuE50OaXEb2Y4Lj8ijv-B77mMq0(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;Landroid/content/Intent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->lambda$handleFinancedDeviceKioskRoleChange$1(Landroid/content/Intent;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public static synthetic $r8$lambda$Lo9LYfi_zAqUVphXYDzlvU7oLfg(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->lambda$handleDevicePolicyManagementRoleChange$0(Ljava/lang/Boolean;)V
 
     return-void
@@ -38,22 +36,18 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/content/Context;)V
     .locals 0
 
-    .line 25009
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25010
     iput-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->mContext:Landroid/content/Context;
 
-    .line 25011
     invoke-virtual {p2}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 25012
     const-class p1, Landroid/app/role/RoleManager;
 
     invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -70,14 +64,12 @@
 .method public static synthetic lambda$handleDevicePolicyManagementRoleChange$0(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method private synthetic lambda$handleFinancedDeviceKioskRoleChange$1(Landroid/content/Intent;)V
     .locals 6
 
-    .line 25075
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -104,26 +96,22 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 25076
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
 
-    .line 25077
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     const-string v3, "android.app.role.SYSTEM_SUPERVISION"
 
     invoke-static {v2, p1, v3, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$mbroadcastExplicitIntentToRoleHolder(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/content/Intent;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 25079
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     const-string v3, "android.app.role.DEVICE_POLICY_MANAGEMENT"
 
     invoke-static {v2, p1, v3, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$mbroadcastExplicitIntentToRoleHolder(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/content/Intent;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 25081
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v1}, Landroid/os/UserHandle;->getIdentifier()I
@@ -138,13 +126,11 @@
 
     goto :goto_0
 
-    .line 25085
     :cond_1
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v4, v2, Lcom/android/server/devicepolicy/ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
-    .line 25086
     invoke-virtual {v4}, Landroid/app/admin/DeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v4
@@ -153,7 +139,6 @@
 
     move-result v5
 
-    .line 25085
     invoke-static {v3, v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$misProfileOwnerOfOrganizationOwnedDevice(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/content/ComponentName;I)Z
 
     move-result v3
@@ -162,7 +147,6 @@
 
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 25087
     invoke-virtual {v3, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isDeviceOwner(Lcom/android/server/devicepolicy/ActiveAdmin;)Z
 
     move-result v3
@@ -173,7 +157,6 @@
 
     iget-object v4, v2, Lcom/android/server/devicepolicy/ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
-    .line 25088
     invoke-virtual {v4}, Landroid/app/admin/DeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v4
@@ -188,7 +171,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 25089
     invoke-virtual {v2}, Lcom/android/server/devicepolicy/ActiveAdmin;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v3
@@ -201,7 +183,6 @@
 
     goto :goto_0
 
-    .line 25094
     :cond_2
     iget-object v3, v2, Lcom/android/server/devicepolicy/ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -221,13 +202,11 @@
 
     goto :goto_0
 
-    .line 25097
     :cond_3
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v3, v2, Lcom/android/server/devicepolicy/ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
-    .line 25098
     invoke-virtual {v3}, Landroid/app/admin/DeviceAdminInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -236,7 +215,6 @@
 
     move-result-object v2
 
-    .line 25097
     invoke-static {v1, p1, v3, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$mbroadcastExplicitIntentToPackage(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/content/Intent;Ljava/lang/String;Landroid/os/UserHandle;)V
 
     goto/16 :goto_0
@@ -250,7 +228,6 @@
 .method public final getDefaultRoleHolderPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 25137
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->getDefaultRoleHolderPackageNameAndSignature()[Ljava/lang/String;
 
     move-result-object p0
@@ -264,7 +241,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 25141
     aget-object p0, p0, v0
 
     return-object p0
@@ -273,7 +249,6 @@
 .method public final getDefaultRoleHolderPackageNameAndSignature()[Ljava/lang/String;
     .locals 2
 
-    .line 25153
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->mContext:Landroid/content/Context;
 
     const v0, 0x104003d
@@ -282,7 +257,6 @@
 
     move-result-object p0
 
-    .line 25155
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -296,21 +270,18 @@
     :cond_0
     const-string v0, ":"
 
-    .line 25158
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 25159
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 25161
     :cond_1
     filled-new-array {p0}, [Ljava/lang/String;
 
@@ -322,14 +293,12 @@
 .method public final getDefaultRoleHolderPackageSignature()Ljava/lang/String;
     .locals 2
 
-    .line 25145
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->getDefaultRoleHolderPackageNameAndSignature()[Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 25146
     array-length v0, p0
 
     const/4 v1, 0x2
@@ -341,7 +310,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 25149
     aget-object p0, p0, v0
 
     return-object p0
@@ -356,7 +324,6 @@
 .method public final getDeviceManagementRoleHolder(Landroid/os/UserHandle;)Ljava/lang/String;
     .locals 2
 
-    .line 25104
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->mContext:Landroid/content/Context;
@@ -373,12 +340,10 @@
 .method public final handleDevicePolicyManagementRoleChange(Landroid/os/UserHandle;)V
     .locals 7
 
-    .line 25033
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->getDeviceManagementRoleHolder(Landroid/os/UserHandle;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 25034
     invoke-virtual {p0, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->isDefaultRoleHolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -389,7 +354,6 @@
 
     const-string/jumbo p0, "onRoleHoldersChanged: Default role holder is set, returning early"
 
-    .line 25035
     invoke-static {v1, p0}, Lcom/android/server/utils/Slogf;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -399,12 +363,10 @@
 
     const-string/jumbo p0, "onRoleHoldersChanged: New role holder is null, returning early"
 
-    .line 25040
     invoke-static {v1, p0}, Lcom/android/server/utils/Slogf;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 25044
     :cond_1
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -414,7 +376,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 25045
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -431,7 +392,6 @@
 
     invoke-static {v1, p1}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25047
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     const/4 p1, 0x1
@@ -440,7 +400,6 @@
 
     return-void
 
-    .line 25051
     :cond_2
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -450,7 +409,6 @@
 
     move-result-object v0
 
-    .line 25052
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyData;->mCurrentRoleHolder:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -459,7 +417,6 @@
 
     if-nez v0, :cond_3
 
-    .line 25053
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -476,14 +433,12 @@
 
     invoke-static {v1, v0}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25056
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$msetBypassDevicePolicyManagementRoleQualificationStateInternal(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Ljava/lang/String;Z)V
 
-    .line 25058
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->mRm:Landroid/app/role/RoleManager;
 
     const-string v1, "android.app.role.DEVICE_POLICY_MANAGEMENT"
@@ -507,7 +462,6 @@
 .method public final handleFinancedDeviceKioskRoleChange()V
     .locals 3
 
-    .line 25069
     invoke-static {}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isPolicyEngineForFinanceFlagEnabled()Z
 
     move-result v0
@@ -521,17 +475,14 @@
 
     const-string v1, "Handling action android.app.admin.action.DEVICE_FINANCING_STATE_CHANGED"
 
-    .line 25072
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25073
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.app.admin.action.DEVICE_FINANCING_STATE_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 25074
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
@@ -556,7 +507,6 @@
 
     goto :goto_0
 
-    .line 25126
     :cond_0
     :try_start_0
     new-instance v1, Landroid/content/pm/Signature;
@@ -569,7 +519,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 25131
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
@@ -580,7 +529,6 @@
 
     const/4 v0, 0x1
 
-    .line 25132
     invoke-virtual {p0, p1, p2, v0}, Landroid/content/pm/PackageManager;->hasSigningCertificate(Ljava/lang/String;[BI)Z
 
     move-result p0
@@ -590,7 +538,6 @@
     :catch_0
     move-exception p0
 
-    .line 25128
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -617,7 +564,6 @@
 .method public final isDefaultRoleHolder(Ljava/lang/String;)Z
     .locals 2
 
-    .line 25109
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->getDefaultRoleHolderPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -630,7 +576,6 @@
 
     goto :goto_0
 
-    .line 25113
     :cond_0
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -640,13 +585,11 @@
 
     return v1
 
-    .line 25117
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->getDefaultRoleHolderPackageSignature()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 25116
     invoke-virtual {p0, p1, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->hasSigningCertificate(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -661,7 +604,6 @@
 .method public onRoleHoldersChanged(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 25021
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-static {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$fgetmDevicePolicyEngine(Lcom/android/server/devicepolicy/DevicePolicyManagerService;)Lcom/android/server/devicepolicy/DevicePolicyEngine;
@@ -676,14 +618,12 @@
 
     const-string v0, "android.app.role.DEVICE_POLICY_MANAGEMENT"
 
-    .line 25022
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 25023
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->handleDevicePolicyManagementRoleChange(Landroid/os/UserHandle;)V
 
     return-void
@@ -691,14 +631,12 @@
     :cond_0
     const-string p2, "android.app.role.FINANCED_DEVICE_KIOSK"
 
-    .line 25026
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 25027
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->handleFinancedDeviceKioskRoleChange()V
 
     :cond_1
@@ -708,7 +646,6 @@
 .method public register()V
     .locals 3
 
-    .line 25016
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->mRm:Landroid/app/role/RoleManager;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->mExecutor:Ljava/util/concurrent/Executor;

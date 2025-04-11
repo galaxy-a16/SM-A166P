@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;)V
     .locals 0
 
-    .line 1923
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreManagerService$StatsPullAtomCallbackImpl;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;Lcom/android/server/blob/BlobStoreManagerService$StatsPullAtomCallbackImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/blob/BlobStoreManagerService$StatsPullAtomCallbackImpl;-><init>(Lcom/android/server/blob/BlobStoreManagerService;)V
 
     return-void
@@ -40,7 +38,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1928
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreManagerService$StatsPullAtomCallbackImpl;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/blob/BlobStoreManagerService;->-$$Nest$mpullBlobData(Lcom/android/server/blob/BlobStoreManagerService;ILjava/util/List;)I
@@ -49,7 +46,6 @@
 
     return p0
 
-    .line 1930
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

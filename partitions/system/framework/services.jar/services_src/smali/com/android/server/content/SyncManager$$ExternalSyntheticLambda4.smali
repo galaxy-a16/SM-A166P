@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/content/SyncManager;->$r8$lambda$du-zC4MrCZn8_j49aRhbGP4hpjI(Ljava/lang/Integer;)Ljava/lang/String;

@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/pkg/PackageStateInternal;
 
     invoke-static {p1}, Lcom/android/server/pm/DexOptHelper;->$r8$lambda$766fOVooBD2fuT3QTZODUXVIPG0(Lcom/android/server/pm/pkg/PackageStateInternal;)Z

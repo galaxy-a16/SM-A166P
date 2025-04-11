@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 911
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 912
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -27,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;-><init>()V
 
     return-void
@@ -38,12 +35,10 @@
 .method public final dump()V
     .locals 5
 
-    .line 1005
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 1006
     :try_start_0
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;->-$$Nest$sfgetDEBUG()Z
 
@@ -51,7 +46,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1007
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -62,7 +56,6 @@
 
     move-result-object p0
 
-    .line 1008
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -70,14 +63,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 1009
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 1010
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,7 +121,6 @@
 
     goto :goto_0
 
-    .line 1013
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -172,7 +162,6 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1015
     :cond_1
     monitor-exit v0
 
@@ -191,12 +180,10 @@
 .method public getGroupData(Ljava/lang/String;)Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;
     .locals 1
 
-    .line 994
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 995
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
@@ -213,7 +200,6 @@
     :catchall_0
     move-exception p0
 
-    .line 996
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -224,7 +210,6 @@
 .method public final getKey(Landroid/service/notification/StatusBarNotification;)Ljava/lang/String;
     .locals 0
 
-    .line 1000
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getGroupKey()Ljava/lang/String;
 
     move-result-object p0
@@ -235,12 +220,10 @@
 .method public remove(Landroid/service/notification/StatusBarNotification;)V
     .locals 4
 
-    .line 932
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 933
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -276,7 +259,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 934
     iget-object v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->getKey(Landroid/service/notification/StatusBarNotification;)Ljava/lang/String;
@@ -291,28 +273,24 @@
 
     if-eqz v1, :cond_1
 
-    .line 936
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 937
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;->removeChild(Ljava/lang/String;)V
 
-    .line 938
     invoke-virtual {v1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;->getChildNotificationCount()I
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 939
     iget-object v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->getKey(Landroid/service/notification/StatusBarNotification;)Ljava/lang/String;
@@ -323,7 +301,6 @@
 
     goto :goto_0
 
-    .line 942
     :cond_0
     invoke-virtual {v1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;->getChildNotificationCount()I
 
@@ -331,7 +308,6 @@
 
     if-nez v1, :cond_2
 
-    .line 943
     iget-object v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->getKey(Landroid/service/notification/StatusBarNotification;)Ljava/lang/String;
@@ -342,7 +318,6 @@
 
     goto :goto_0
 
-    .line 947
     :cond_1
     iget-object v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
@@ -352,12 +327,10 @@
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 949
     :cond_2
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->dump()V
 
-    .line 950
     monitor-exit v0
 
     return-void
@@ -375,12 +348,10 @@
 .method public updateNotificationData(Landroid/service/notification/StatusBarNotification;Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationData;)V
     .locals 7
 
-    .line 955
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 956
     :try_start_0
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
@@ -404,7 +375,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 958
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -455,7 +425,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 959
     iget-object v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->getKey(Landroid/service/notification/StatusBarNotification;)Ljava/lang/String;
@@ -470,7 +439,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 962
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
 
     move-result-object v2
@@ -481,7 +449,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 964
     iget-object v3, p2, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationData;->mNotificationInfo:Landroid/os/Bundle;
 
     const-string/jumbo v4, "tickerText"
@@ -496,7 +463,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 965
     iget-object v3, p2, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationData;->mNotificationInfo:Landroid/os/Bundle;
 
     const-string/jumbo v4, "titleText"
@@ -511,7 +477,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 966
     iget-object v3, p2, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationData;->mNotificationInfo:Landroid/os/Bundle;
 
     const-string/jumbo v4, "text"
@@ -526,7 +491,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 967
     iget-object v3, p2, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationData;->mNotificationInfo:Landroid/os/Bundle;
 
     const-string/jumbo v4, "subText"
@@ -543,18 +507,15 @@
 
     goto :goto_0
 
-    .line 970
     :cond_0
     new-instance v1, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;
 
     invoke-direct {v1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;-><init>()V
 
-    .line 973
     :cond_1
     :goto_0
     invoke-virtual {v1, p2}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;->setSummaryNotification(Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationData;)V
 
-    .line 974
     iget-object p2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->getKey(Landroid/service/notification/StatusBarNotification;)Ljava/lang/String;
@@ -565,7 +526,6 @@
 
     goto :goto_2
 
-    .line 976
     :cond_2
     iget-object v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
@@ -581,12 +541,10 @@
 
     if-nez v1, :cond_3
 
-    .line 979
     new-instance v1, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;
 
     invoke-direct {v1}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;-><init>()V
 
-    .line 982
     :cond_3
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
@@ -598,12 +556,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 983
     invoke-virtual {v1, p2}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;->setSummaryNotification(Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationData;)V
 
     goto :goto_1
 
-    .line 985
     :cond_4
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
 
@@ -611,7 +567,6 @@
 
     invoke-virtual {v1, v2, p2}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$GroupNotificationData;->putChild(Ljava/lang/String;Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationData;)V
 
-    .line 987
     :goto_1
     iget-object p2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->mGroupMap:Ljava/util/HashMap;
 
@@ -621,10 +576,8 @@
 
     invoke-virtual {p2, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 988
     invoke-virtual {p0}, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$NotificationGroup;->dump()V
 
-    .line 990
     :goto_2
     monitor-exit v0
 

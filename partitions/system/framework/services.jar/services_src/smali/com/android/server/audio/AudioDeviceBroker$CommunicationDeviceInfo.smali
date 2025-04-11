@@ -27,36 +27,26 @@
 .method public constructor <init>(Landroid/os/IBinder;ILandroid/media/AudioDeviceAttributes;ZILjava/lang/String;ZZ)V
     .locals 1
 
-    .line 1546
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 1542
     iput-boolean v0, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mStatus:Z
 
-    .line 1547
     iput-object p1, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mCb:Landroid/os/IBinder;
 
-    .line 1548
     iput p2, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mUid:I
 
-    .line 1549
     iput-object p3, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mDevice:Landroid/media/AudioDeviceAttributes;
 
-    .line 1550
     iput-boolean p4, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mOn:Z
 
-    .line 1551
     iput p5, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mScoAudioMode:I
 
-    .line 1552
     iput-boolean p8, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mIsPrivileged:Z
 
-    .line 1553
     iput-object p6, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mEventSource:Ljava/lang/String;
 
-    .line 1554
     iput-boolean p7, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mWaitForStatus:Z
 
     return-void
@@ -80,7 +70,6 @@
 
     return v1
 
-    .line 1566
     :cond_1
     instance-of v2, p1, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;
 
@@ -88,7 +77,6 @@
 
     return v0
 
-    .line 1570
     :cond_2
     iget-object v2, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mCb:Landroid/os/IBinder;
 
@@ -117,7 +105,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1576
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +133,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1578
     iget-object v1, p0, Lcom/android/server/audio/AudioDeviceBroker$CommunicationDeviceInfo;->mDevice:Landroid/media/AudioDeviceAttributes;
 
     if-eqz v1, :cond_0

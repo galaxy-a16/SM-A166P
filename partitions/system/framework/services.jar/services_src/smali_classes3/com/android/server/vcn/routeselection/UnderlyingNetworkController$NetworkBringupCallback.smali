@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/vcn/routeselection/UnderlyingNetworkController;)V
     .locals 0
 
-    .line 456
     iput-object p1, p0, Lcom/android/server/vcn/routeselection/UnderlyingNetworkController$NetworkBringupCallback;->this$0:Lcom/android/server/vcn/routeselection/UnderlyingNetworkController;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V

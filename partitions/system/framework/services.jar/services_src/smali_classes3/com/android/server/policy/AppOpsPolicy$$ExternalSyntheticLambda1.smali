@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/policy/AppOpsPolicy;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/policy/AppOpsPolicy$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/policy/AppOpsPolicy;
@@ -27,7 +26,6 @@
 .method public final onRoleHoldersChanged(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/policy/AppOpsPolicy;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/policy/AppOpsPolicy;->$r8$lambda$rSwoDbz5FQDzO26nsB4OBi0hfyA(Lcom/android/server/policy/AppOpsPolicy;Ljava/lang/String;Landroid/os/UserHandle;)V

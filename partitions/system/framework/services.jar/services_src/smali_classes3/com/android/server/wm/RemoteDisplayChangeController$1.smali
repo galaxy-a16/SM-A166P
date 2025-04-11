@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$mO33xMqcjWpJ84H6J1PxN7tsPj4(Lcom/android/server/wm/RemoteDisplayChangeController$1;Lcom/android/server/wm/RemoteDisplayChangeController$ContinueRemoteDisplayChangeCallback;Landroid/window/WindowContainerTransaction;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/RemoteDisplayChangeController$1;->lambda$continueDisplayChange$0(Lcom/android/server/wm/RemoteDisplayChangeController$ContinueRemoteDisplayChangeCallback;Landroid/window/WindowContainerTransaction;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/wm/RemoteDisplayChangeController;Lcom/android/server/wm/RemoteDisplayChangeController$ContinueRemoteDisplayChangeCallback;)V
     .locals 0
 
-    .line 162
     iput-object p1, p0, Lcom/android/server/wm/RemoteDisplayChangeController$1;->this$0:Lcom/android/server/wm/RemoteDisplayChangeController;
 
     iput-object p2, p0, Lcom/android/server/wm/RemoteDisplayChangeController$1;->val$callback:Lcom/android/server/wm/RemoteDisplayChangeController$ContinueRemoteDisplayChangeCallback;
@@ -35,10 +33,8 @@
 .method private synthetic lambda$continueDisplayChange$0(Lcom/android/server/wm/RemoteDisplayChangeController$ContinueRemoteDisplayChangeCallback;Landroid/window/WindowContainerTransaction;)V
     .locals 0
 
-    .line 170
     iget-object p0, p0, Lcom/android/server/wm/RemoteDisplayChangeController$1;->this$0:Lcom/android/server/wm/RemoteDisplayChangeController;
 
-    .line 171
     invoke-static {p0, p1, p2}, Lcom/android/server/wm/RemoteDisplayChangeController;->-$$Nest$mcontinueDisplayChange(Lcom/android/server/wm/RemoteDisplayChangeController;Lcom/android/server/wm/RemoteDisplayChangeController$ContinueRemoteDisplayChangeCallback;Landroid/window/WindowContainerTransaction;)V
 
     return-void
@@ -49,7 +45,6 @@
 .method public continueDisplayChange(Landroid/window/WindowContainerTransaction;)V
     .locals 4
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/wm/RemoteDisplayChangeController$1;->this$0:Lcom/android/server/wm/RemoteDisplayChangeController;
 
     invoke-static {v0}, Lcom/android/server/wm/RemoteDisplayChangeController;->-$$Nest$fgetmService(Lcom/android/server/wm/RemoteDisplayChangeController;)Lcom/android/server/wm/WindowManagerService;
@@ -62,7 +57,6 @@
 
     monitor-enter v0
 
-    .line 166
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/RemoteDisplayChangeController$1;->this$0:Lcom/android/server/wm/RemoteDisplayChangeController;
 
@@ -78,7 +72,6 @@
 
     if-nez v1, :cond_0
 
-    .line 168
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -87,7 +80,6 @@
 
     return-void
 
-    .line 170
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/RemoteDisplayChangeController$1;->this$0:Lcom/android/server/wm/RemoteDisplayChangeController;
@@ -106,7 +98,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 172
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

@@ -11,17 +11,14 @@
 .method public constructor <init>(Lcom/android/internal/os/PowerProfile;)V
     .locals 4
 
-    .line 32
     invoke-direct {p0}, Lcom/android/server/power/stats/PowerCalculator;-><init>()V
 
-    .line 33
     new-instance v0, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     const-string/jumbo v1, "radio.active"
 
     const-wide v2, 0x4056800000000000L    # 90.0
 
-    .line 35
     invoke-virtual {p1, v1, v2, v3}, Lcom/android/internal/os/PowerProfile;->getAveragePowerOrDefault(Ljava/lang/String;D)D
 
     move-result-wide v1
@@ -38,19 +35,16 @@
 .method public calculate(Landroid/os/BatteryUsageStats$Builder;Landroid/os/BatteryStats;JJLandroid/os/BatteryUsageStatsQuery;)V
     .locals 3
 
-    .line 47
     invoke-virtual {p2}, Landroid/os/BatteryStats;->getPhoneEnergyConsumptionUC()J
 
     move-result-wide p5
 
-    .line 48
     invoke-static {p5, p6, p7}, Lcom/android/server/power/stats/PowerCalculator;->getPowerModel(JLandroid/os/BatteryUsageStatsQuery;)I
 
     move-result p7
 
     const/4 v0, 0x0
 
-    .line 50
     invoke-virtual {p2, p3, p4, v0}, Landroid/os/BatteryStats;->getPhoneOnTime(JI)J
 
     move-result-wide p2
@@ -63,7 +57,6 @@
 
     if-eq p7, p4, :cond_0
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/power/stats/PhonePowerCalculator;->mPowerEstimator:Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     invoke-virtual {p0, p2, p3}, Lcom/android/server/power/stats/UsageBasedPowerEstimator;->calculatePower(J)D
@@ -72,7 +65,6 @@
 
     goto :goto_0
 
-    .line 56
     :cond_0
     invoke-static {p5, p6}, Lcom/android/server/power/stats/PowerCalculator;->uCtoMah(J)D
 
@@ -87,7 +79,6 @@
 
     return-void
 
-    .line 65
     :cond_1
     invoke-virtual {p1, v0}, Landroid/os/BatteryUsageStats$Builder;->getAggregateBatteryConsumerBuilder(I)Landroid/os/AggregateBatteryConsumer$Builder;
 
@@ -95,14 +86,12 @@
 
     const/16 p1, 0xe
 
-    .line 67
     invoke-virtual {p0, p1, p4, p5, p7}, Landroid/os/AggregateBatteryConsumer$Builder;->setConsumedPower(IDI)Landroid/os/BatteryConsumer$BaseBuilder;
 
     move-result-object p0
 
     check-cast p0, Landroid/os/AggregateBatteryConsumer$Builder;
 
-    .line 68
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/AggregateBatteryConsumer$Builder;->setUsageDurationMillis(IJ)Landroid/os/BatteryConsumer$BaseBuilder;
 
     return-void
@@ -111,7 +100,6 @@
 .method public isPowerComponentSupported(I)Z
     .locals 0
 
-    .line 0
     const/16 p0, 0xe
 
     if-ne p1, p0, :cond_0

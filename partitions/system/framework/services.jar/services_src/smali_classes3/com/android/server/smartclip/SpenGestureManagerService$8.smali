@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenGestureManagerService;Z)V
     .locals 0
 
-    .line 1613
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$8;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     iput-boolean p2, p0, Lcom/android/server/smartclip/SpenGestureManagerService$8;->val$isShow:Z
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 2
 
-    .line 1616
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object v0
@@ -40,7 +38,6 @@
 
     move-result-object v0
 
-    .line 1617
     iget-boolean p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$8;->val$isShow:Z
 
     const-string/jumbo v1, "show_touches"

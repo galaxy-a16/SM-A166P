@@ -17,7 +17,6 @@
 .method public constructor <init>(IBBBI)V
     .locals 0
 
-    .line 42
     invoke-direct/range {p0 .. p5}, Lcom/android/server/usb/descriptors/UsbASFormat;-><init>(IBBBI)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public getMaxBitRate()I
     .locals 0
 
-    .line 46
     iget p0, p0, Lcom/android/server/usb/descriptors/Usb10ASFormatII;->mMaxBitRate:I
 
     return p0
@@ -37,7 +35,6 @@
 .method public getSamFreqType()B
     .locals 0
 
-    .line 54
     iget-byte p0, p0, Lcom/android/server/usb/descriptors/Usb10ASFormatII;->mSamFreqType:B
 
     return p0
@@ -46,7 +43,6 @@
 .method public getSampleRates()[I
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/usb/descriptors/Usb10ASFormatII;->mSampleRates:[I
 
     return-object p0
@@ -55,21 +51,18 @@
 .method public parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
     .locals 4
 
-    .line 63
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->unpackUsbShort()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/Usb10ASFormatII;->mMaxBitRate:I
 
-    .line 64
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->unpackUsbShort()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/Usb10ASFormatII;->mSamplesPerFrame:I
 
-    .line 65
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getByte()B
 
     move-result v0
@@ -80,7 +73,6 @@
 
     const/4 v0, 0x2
 
-    .line 67
     :cond_0
     new-array v1, v0, [I
 
@@ -91,7 +83,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 69
     iget-object v2, p0, Lcom/android/server/usb/descriptors/Usb10ASFormatII;->mSampleRates:[I
 
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->unpackUsbTriple()I
@@ -104,7 +95,6 @@
 
     goto :goto_0
 
-    .line 72
     :cond_1
     iget p0, p0, Lcom/android/server/usb/descriptors/UsbDescriptor;->mLength:I
 
@@ -114,13 +104,10 @@
 .method public report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
     .locals 4
 
-    .line 77
     invoke-super {p0, p1}, Lcom/android/server/usb/descriptors/UsbASFormat;->report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
 
-    .line 79
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->openList()V
 
-    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,7 +128,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 81
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,17 +148,14 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/Usb10ASFormatII;->getSamFreqType()B
 
     move-result v0
 
-    .line 83
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/Usb10ASFormatII;->getSampleRates()[I
 
     move-result-object p0
 
-    .line 84
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,14 +172,12 @@
 
     invoke-virtual {p1, v1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 85
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->openList()V
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -215,7 +196,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -242,7 +222,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 91
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -265,12 +244,10 @@
 
     goto :goto_0
 
-    .line 94
     :cond_1
     :goto_1
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->closeList()V
 
-    .line 96
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->closeList()V
 
     return-void

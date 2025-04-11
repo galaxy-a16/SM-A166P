@@ -13,13 +13,10 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-wide p1, p0, Lcom/android/server/twilight/TwilightState;->mSunriseTimeMillis:J
 
-    .line 39
     iput-wide p3, p0, Lcom/android/server/twilight/TwilightState;->mSunsetTimeMillis:J
 
     return-void
@@ -32,7 +29,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 88
     iget-wide v0, p0, Lcom/android/server/twilight/TwilightState;->mSunriseTimeMillis:J
 
     iget-wide v2, p1, Lcom/android/server/twilight/TwilightState;->mSunriseTimeMillis:J
@@ -63,7 +59,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 84
     instance-of v0, p1, Lcom/android/server/twilight/TwilightState;
 
     if-eqz v0, :cond_0
@@ -90,7 +85,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 95
     iget-wide v0, p0, Lcom/android/server/twilight/TwilightState;->mSunriseTimeMillis:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
@@ -111,12 +105,10 @@
 .method public isNight()Z
     .locals 4
 
-    .line 78
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 79
     iget-wide v2, p0, Lcom/android/server/twilight/TwilightState;->mSunsetTimeMillis:J
 
     cmp-long v2, v0, v2
@@ -143,7 +135,6 @@
 .method public sunrise()Ljava/time/LocalDateTime;
     .locals 3
 
-    .line 54
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v0
@@ -152,7 +143,6 @@
 
     move-result-object v0
 
-    .line 55
     iget-wide v1, p0, Lcom/android/server/twilight/TwilightState;->mSunriseTimeMillis:J
 
     invoke-static {v1, v2}, Ljava/time/Instant;->ofEpochMilli(J)Ljava/time/Instant;
@@ -169,7 +159,6 @@
 .method public sunriseTimeMillis()J
     .locals 2
 
-    .line 47
     iget-wide v0, p0, Lcom/android/server/twilight/TwilightState;->mSunriseTimeMillis:J
 
     return-wide v0
@@ -178,7 +167,6 @@
 .method public sunset()Ljava/time/LocalDateTime;
     .locals 3
 
-    .line 70
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v0
@@ -187,7 +175,6 @@
 
     move-result-object v0
 
-    .line 71
     iget-wide v1, p0, Lcom/android/server/twilight/TwilightState;->mSunsetTimeMillis:J
 
     invoke-static {v1, v2}, Ljava/time/Instant;->ofEpochMilli(J)Ljava/time/Instant;
@@ -204,7 +191,6 @@
 .method public sunsetTimeMillis()J
     .locals 2
 
-    .line 63
     iget-wide v0, p0, Lcom/android/server/twilight/TwilightState;->mSunsetTimeMillis:J
 
     return-wide v0
@@ -213,7 +199,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 100
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,7 +211,6 @@
 
     const-string v3, "MM-dd HH:mm"
 
-    .line 101
     invoke-static {v3, v1, v2}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -239,7 +223,6 @@
 
     iget-wide v1, p0, Lcom/android/server/twilight/TwilightState;->mSunsetTimeMillis:J
 
-    .line 102
     invoke-static {v3, v1, v2}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object p0

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/AmbientBrightnessStatsTracker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/display/AmbientBrightnessStatsTracker;
@@ -27,7 +26,6 @@
 .method public final elapsedTimeMillis()J
     .locals 2
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/display/AmbientBrightnessStatsTracker;
 
     invoke-static {p0}, Lcom/android/server/display/AmbientBrightnessStatsTracker;->$r8$lambda$OIIV5xqf-PRxPN2e6I0m_5ycuIo(Lcom/android/server/display/AmbientBrightnessStatsTracker;)J

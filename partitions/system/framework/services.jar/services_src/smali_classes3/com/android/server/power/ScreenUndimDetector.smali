@@ -45,7 +45,6 @@
 .method public static synthetic $r8$lambda$Vkzf80LIznpm76l3pmtMwSy1Riw(Lcom/android/server/power/ScreenUndimDetector;Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/ScreenUndimDetector;->lambda$systemReady$0(Landroid/provider/DeviceConfig$Properties;)V
 
     return-void
@@ -54,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 62
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0xa
@@ -67,7 +65,6 @@
 
     const-wide/16 v1, 0x5
 
-    .line 80
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v0
@@ -80,23 +77,18 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 88
     iput v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mUndimCounter:I
 
     const-wide/16 v0, -0x1
 
-    .line 92
     iput-wide v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mUndimOccurredTime:J
 
-    .line 93
     iput-wide v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mInteractionAfterUndimTime:J
 
-    .line 97
     new-instance v0, Lcom/android/server/power/ScreenUndimDetector$InternalClock;
 
     invoke-direct {v0}, Lcom/android/server/power/ScreenUndimDetector$InternalClock;-><init>()V
@@ -109,7 +101,6 @@
 .method private synthetic lambda$systemReady$0(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 115
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
     move-result-object p1
@@ -124,7 +115,6 @@
 .method public final onDeviceConfigChange(Ljava/util/Set;)V
     .locals 4
 
-    .line 239
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -142,7 +132,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 240
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,7 +150,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -239,7 +227,6 @@
     :goto_1
     packed-switch v3, :pswitch_data_0
 
-    .line 249
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,7 +245,6 @@
 
     goto :goto_0
 
-    .line 246
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/power/ScreenUndimDetector;->readValuesFromDeviceConfig()V
 
@@ -287,7 +273,6 @@
 
     const-string p0, "keep_screen_on_for_millis"
 
-    .line 213
     sget-wide v0, Lcom/android/server/power/ScreenUndimDetector;->DEFAULT_KEEP_SCREEN_ON_FOR_MILLIS:J
 
     const-string v2, "attention_manager_service"
@@ -308,7 +293,6 @@
 
     const-string v1, "attention_manager_service"
 
-    .line 207
     invoke-static {v1, p0, v0}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -321,7 +305,6 @@
 
     const-string/jumbo p0, "max_duration_between_undims_millis"
 
-    .line 233
     sget-wide v0, Lcom/android/server/power/ScreenUndimDetector;->DEFAULT_MAX_DURATION_BETWEEN_UNDIMS_MILLIS:J
 
     const-string v2, "attention_manager_service"
@@ -342,7 +325,6 @@
 
     const/4 v1, 0x2
 
-    .line 219
     invoke-static {p0, v0, v1}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result p0
@@ -360,7 +342,6 @@
     :cond_0
     return p0
 
-    .line 224
     :cond_1
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -393,35 +374,30 @@
 .method public readValuesFromDeviceConfig()V
     .locals 3
 
-    .line 256
     invoke-virtual {p0}, Lcom/android/server/power/ScreenUndimDetector;->readKeepScreenOnNotificationEnabled()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mKeepScreenOnEnabled:Z
 
-    .line 257
     invoke-virtual {p0}, Lcom/android/server/power/ScreenUndimDetector;->readKeepScreenOnForMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mKeepScreenOnForMillis:J
 
-    .line 258
     invoke-virtual {p0}, Lcom/android/server/power/ScreenUndimDetector;->readUndimsRequired()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mUndimsRequired:I
 
-    .line 259
     invoke-virtual {p0}, Lcom/android/server/power/ScreenUndimDetector;->readMaxDurationBetweenUndimsMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mMaxDurationBetweenUndimsMillis:J
 
-    .line 261
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,15 +442,12 @@
 
     const/4 v0, 0x0
 
-    .line 199
     iput v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mUndimCounter:I
 
     const-wide/16 v0, 0x0
 
-    .line 200
     iput-wide v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mUndimCounterStartedMillis:J
 
-    .line 201
     iget-object v0, p0, Lcom/android/server/power/ScreenUndimDetector;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_0
@@ -485,7 +458,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 202
     iget-object p0, p0, Lcom/android/server/power/ScreenUndimDetector;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -497,10 +469,8 @@
 .method public systemReady(Landroid/content/Context;)V
     .locals 3
 
-    .line 112
     invoke-virtual {p0}, Lcom/android/server/power/ScreenUndimDetector;->readValuesFromDeviceConfig()V
 
-    .line 114
     invoke-virtual {p1}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -511,10 +481,8 @@
 
     const-string v2, "attention_manager_service"
 
-    .line 113
     invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
-    .line 117
     const-class v0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -527,7 +495,6 @@
 
     const-string v1, "UndimDetectorWakeLock"
 
-    .line 118
     invoke-virtual {p1, v0, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1

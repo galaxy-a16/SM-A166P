@@ -15,36 +15,30 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static reclaimerLogSupported()Z
     .locals 3
 
-    .line 38
     sget-boolean v0, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->RECLAIMER_LOG_SUPPORT_CHECKED:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    .line 39
     sput-boolean v0, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->RECLAIMER_LOG_SUPPORT_CHECKED:Z
 
-    .line 40
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
-    .line 41
     new-instance v1, Ljava/io/File;
 
     sget-object v2, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->reclaimerLogPath:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 42
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -53,14 +47,11 @@
 
     const/4 v1, 0x0
 
-    .line 43
     sput-boolean v1, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->RECLAIMER_LOG_SUPPORT:Z
 
-    .line 45
     :cond_0
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 47
     :cond_1
     sget-boolean v0, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->RECLAIMER_LOG_SUPPORT:Z
 
@@ -72,7 +63,6 @@
 
     const/4 v0, 0x1
 
-    .line 75
     invoke-static {p0, v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;Z)V
 
     return-void
@@ -85,10 +75,8 @@
 
     const-string p1, "UMR"
 
-    .line 52
     invoke-static {p1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     :cond_0
     invoke-static {}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->reclaimerLogSupported()Z
 
@@ -98,7 +86,6 @@
 
     return-void
 
-    .line 57
     :cond_1
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskWrites()Landroid/os/StrictMode$ThreadPolicy;
 
@@ -106,7 +93,6 @@
 
     const/4 v0, 0x0
 
-    .line 60
     :try_start_0
     new-instance v1, Ljava/io/OutputStreamWriter;
 
@@ -123,7 +109,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 61
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -144,7 +129,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 67
     :try_start_2
     invoke-virtual {v1}, Ljava/io/Writer;->close()V
     :try_end_2
@@ -174,7 +158,6 @@
     :catch_1
     move-exception p0
 
-    .line 63
     :goto_0
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -183,13 +166,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 67
     :try_start_4
     invoke-virtual {v0}, Ljava/io/Writer;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 72
     :catch_2
     :cond_2
     :goto_1
@@ -200,13 +181,11 @@
     :goto_2
     if-eqz v0, :cond_3
 
-    .line 67
     :try_start_5
     invoke-virtual {v0}, Ljava/io/Writer;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 71
     :catch_3
     :cond_3
     throw p0

@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$e8Ue4kvietgDoWiwp5QyIoeVfo8(Landroid/window/ISurfaceSyncGroupCompletedListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/SurfaceSyncGroupController;->lambda$addToSyncGroup$0(Landroid/window/ISurfaceSyncGroupCompletedListener;)V
 
     return-void
@@ -22,17 +21,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/SurfaceSyncGroupController;->mLock:Ljava/lang/Object;
 
-    .line 35
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -45,7 +41,6 @@
 .method public static synthetic lambda$addToSyncGroup$0(Landroid/window/ISurfaceSyncGroupCompletedListener;)V
     .locals 0
 
-    .line 49
     :try_start_0
     invoke-interface {p0}, Landroid/window/ISurfaceSyncGroupCompletedListener;->onSurfaceSyncGroupComplete()V
     :try_end_0
@@ -60,12 +55,10 @@
 .method public addToSyncGroup(Landroid/os/IBinder;ZLandroid/window/ISurfaceSyncGroupCompletedListener;Landroid/window/AddToSurfaceSyncGroupResult;)Z
     .locals 4
 
-    .line 42
     iget-object v0, p0, Lcom/android/server/wm/SurfaceSyncGroupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 43
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/SurfaceSyncGroupController;->mSurfaceSyncGroups:Landroid/util/ArrayMap;
 
@@ -77,7 +70,6 @@
 
     if-nez v1, :cond_1
 
-    .line 45
     new-instance v1, Landroid/window/SurfaceSyncGroup;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -102,7 +94,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 47
     new-instance v2, Lcom/android/server/SystemServerInitThreadPool$$ExternalSyntheticLambda1;
 
     invoke-direct {v2}, Lcom/android/server/SystemServerInitThreadPool$$ExternalSyntheticLambda1;-><init>()V
@@ -113,13 +104,11 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/window/SurfaceSyncGroup;->addSyncCompleteCallback(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
 
-    .line 54
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/SurfaceSyncGroupController;->mSurfaceSyncGroups:Landroid/util/ArrayMap;
 
     new-instance p3, Lcom/android/server/wm/SurfaceSyncGroupController$SurfaceSyncGroupData;
 
-    .line 55
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
@@ -128,22 +117,18 @@
 
     invoke-direct {p3, v2, v1, v3}, Lcom/android/server/wm/SurfaceSyncGroupController$SurfaceSyncGroupData;-><init>(ILandroid/window/SurfaceSyncGroup;Lcom/android/server/wm/SurfaceSyncGroupController$SurfaceSyncGroupData-IA;)V
 
-    .line 54
     invoke-virtual {p0, p1, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 57
     :cond_1
     iget-object v1, v1, Lcom/android/server/wm/SurfaceSyncGroupController$SurfaceSyncGroupData;->mSurfaceSyncGroup:Landroid/window/SurfaceSyncGroup;
 
-    .line 59
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 62
     invoke-virtual {v1, p2}, Landroid/window/SurfaceSyncGroup;->createTransactionReadyCallback(Z)Landroid/window/ITransactionReadyCallback;
 
     move-result-object p0
@@ -154,13 +139,11 @@
 
     return p0
 
-    .line 66
     :cond_2
     iget-object p1, v1, Landroid/window/SurfaceSyncGroup;->mISurfaceSyncGroup:Landroid/window/ISurfaceSyncGroup;
 
     iput-object p1, p4, Landroid/window/AddToSurfaceSyncGroupResult;->mParentSyncGroup:Landroid/window/ISurfaceSyncGroup;
 
-    .line 67
     iput-object p0, p4, Landroid/window/AddToSurfaceSyncGroupResult;->mTransactionReadyCallback:Landroid/window/ITransactionReadyCallback;
 
     const/4 p0, 0x1
@@ -170,7 +153,6 @@
     :catchall_0
     move-exception p0
 
-    .line 59
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -182,12 +164,10 @@
 .method public markSyncGroupReady(Landroid/os/IBinder;)V
     .locals 4
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/wm/SurfaceSyncGroupController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 74
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/SurfaceSyncGroupController;->mSurfaceSyncGroups:Landroid/util/ArrayMap;
 
@@ -199,7 +179,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 80
     iget v2, v1, Lcom/android/server/wm/SurfaceSyncGroupController$SurfaceSyncGroupData;->mOwningUid:I
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -208,25 +187,20 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 85
     iget-object v1, v1, Lcom/android/server/wm/SurfaceSyncGroupController$SurfaceSyncGroupData;->mSurfaceSyncGroup:Landroid/window/SurfaceSyncGroup;
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/wm/SurfaceSyncGroupController;->mSurfaceSyncGroups:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 89
     invoke-virtual {v1}, Landroid/window/SurfaceSyncGroup;->markSyncReady()V
 
     return-void
 
-    .line 81
     :cond_0
     :try_start_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -237,7 +211,6 @@
 
     throw p0
 
-    .line 76
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -250,7 +223,6 @@
     :catchall_0
     move-exception p0
 
-    .line 87
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

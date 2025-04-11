@@ -31,10 +31,8 @@
 
     invoke-static {p6, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3485
     invoke-interface {p1, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
-    .line 3487
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -58,7 +56,6 @@
 
     if-le p3, v1, :cond_0
 
-    .line 3488
     invoke-interface {p1, p2}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
     :cond_0
@@ -66,7 +63,6 @@
 
     if-gt p3, p5, :cond_2
 
-    .line 3490
     :cond_1
     invoke-static {p1, v0, p7}, Lcom/android/server/permission/jarjar/kotlin/text/StringsKt__AppendableKt;->appendElement(Ljava/lang/Appendable;Ljava/lang/Object;Lcom/android/server/permission/jarjar/kotlin/jvm/functions/Function1;)V
 
@@ -77,10 +73,8 @@
 
     if-le p3, p5, :cond_3
 
-    .line 3493
     invoke-interface {p1, p6}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
-    .line 3494
     :cond_3
     invoke-interface {p1, p4}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
@@ -110,7 +104,6 @@
 
     invoke-static {p5, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3507
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,7 +214,6 @@
 
     move-object p8, v3
 
-    .line 3506
     invoke-static/range {p2 .. p8}, Lcom/android/server/permission/jarjar/kotlin/collections/CollectionsKt___CollectionsKt;->joinToString(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lcom/android/server/permission/jarjar/kotlin/jvm/functions/Function1;)Ljava/lang/String;
 
     move-result-object p0
@@ -240,7 +232,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1295
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -256,7 +247,6 @@
 
     move-result-object v0
 
-    .line 1296
     invoke-interface {p1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -272,12 +262,10 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1312
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_3
 
-    .line 1313
     move-object v0, p0
 
     check-cast v0, Ljava/util/Collection;
@@ -292,14 +280,12 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 1316
     invoke-static {v0}, Lcom/android/server/permission/jarjar/kotlin/collections/CollectionsKt___CollectionsKt;->toMutableList(Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object p0
 
     goto :goto_1
 
-    .line 1315
     :cond_0
     instance-of v0, p0, Ljava/util/List;
 
@@ -331,7 +317,6 @@
 
     goto :goto_1
 
-    .line 1314
     :cond_2
     invoke-static {}, Lcom/android/server/permission/jarjar/kotlin/collections/CollectionsKt__CollectionsKt;->emptyList()Ljava/util/List;
 
@@ -340,7 +325,6 @@
     :goto_1
     return-object p0
 
-    .line 1319
     :cond_3
     invoke-static {p0}, Lcom/android/server/permission/jarjar/kotlin/collections/CollectionsKt___CollectionsKt;->toMutableList(Ljava/lang/Iterable;)Ljava/util/List;
 
@@ -360,12 +344,10 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1326
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
-    .line 1327
     check-cast p0, Ljava/util/Collection;
 
     invoke-static {p0}, Lcom/android/server/permission/jarjar/kotlin/collections/CollectionsKt___CollectionsKt;->toMutableList(Ljava/util/Collection;)Ljava/util/List;
@@ -374,7 +356,6 @@
 
     return-object p0
 
-    .line 1328
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -396,7 +377,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1335
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V

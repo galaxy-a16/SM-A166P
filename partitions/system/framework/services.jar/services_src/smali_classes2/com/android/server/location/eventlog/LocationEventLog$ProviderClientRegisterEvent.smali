@@ -15,16 +15,12 @@
 .method public constructor <init>(Ljava/lang/String;ZLandroid/location/util/identity/CallerIdentity;Landroid/location/LocationRequest;)V
     .locals 0
 
-    .line 309
     invoke-direct {p0, p1}, Lcom/android/server/location/eventlog/LocationEventLog$ProviderEvent;-><init>(Ljava/lang/String;)V
 
-    .line 310
     iput-boolean p2, p0, Lcom/android/server/location/eventlog/LocationEventLog$ProviderClientRegisterEvent;->mRegistered:Z
 
-    .line 311
     iput-object p3, p0, Lcom/android/server/location/eventlog/LocationEventLog$ProviderClientRegisterEvent;->mIdentity:Landroid/location/util/identity/CallerIdentity;
 
-    .line 312
     iput-object p4, p0, Lcom/android/server/location/eventlog/LocationEventLog$ProviderClientRegisterEvent;->mLocationRequest:Landroid/location/LocationRequest;
 
     return-void
@@ -35,12 +31,10 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 317
     iget-boolean v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$ProviderClientRegisterEvent;->mRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 318
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +65,6 @@
 
     return-object p0
 
-    .line 321
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

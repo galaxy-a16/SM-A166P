@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/BatteryStatsService;)V
     .locals 0
 
-    .line 366
     iput-object p1, p0, Lcom/android/server/am/BatteryStatsService$2;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -26,7 +25,6 @@
 
     const/16 p1, 0x15
 
-    .line 370
     invoke-virtual {p2, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result p1
@@ -40,16 +38,13 @@
     :cond_0
     const-string p1, "SUSPENDED"
 
-    .line 372
     :goto_0
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$2;->this$0:Lcom/android/server/am/BatteryStatsService;
 
-    .line 373
     invoke-virtual {p2}, Landroid/net/NetworkCapabilities;->getTransportTypes()[I
 
     move-result-object p2
 
-    .line 372
     invoke-static {p2}, Lcom/android/net/module/util/NetworkCapabilitiesUtils;->getDisplayTransport([I)I
 
     move-result p2
@@ -62,7 +57,6 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 1
 
-    .line 378
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$2;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     const/4 p1, -0x1

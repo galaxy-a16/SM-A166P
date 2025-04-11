@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Landroid/content/pm/PackageManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService$$ExternalSyntheticLambda0;->f$0:Landroid/content/pm/PackageManager;
@@ -31,7 +30,6 @@
 .method public final getOrThrow()Ljava/lang/Object;
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService$$ExternalSyntheticLambda0;->f$0:Landroid/content/pm/PackageManager;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService$$ExternalSyntheticLambda0;->f$1:Ljava/lang/String;

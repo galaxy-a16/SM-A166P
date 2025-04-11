@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbDeviceManager;)V
     .locals 0
 
-    .line 455
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$4;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     const/4 v0, -0x1
 
-    .line 458
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -44,7 +42,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 460
     :goto_0
     iget-object p0, p0, Lcom/android/server/usb/UsbDeviceManager$4;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 

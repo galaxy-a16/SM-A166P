@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/attention/AttentionManagerService;)V
     .locals 0
 
-    .line 734
     iput-object p1, p0, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/attention/AttentionManagerService;Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;-><init>(Lcom/android/server/attention/AttentionManagerService;)V
 
     return-void
@@ -38,10 +36,8 @@
 
     const/4 v0, 0x0
 
-    .line 757
     invoke-virtual {p0, v0}, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->init(Landroid/service/attention/IAttentionService;)V
 
-    .line 758
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
@@ -58,7 +54,6 @@
 .method public final init(Landroid/service/attention/IAttentionService;)V
     .locals 2
 
-    .line 762
     iget-object v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-static {v0}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$fgetmLock(Lcom/android/server/attention/AttentionManagerService;)Ljava/lang/Object;
@@ -67,7 +62,6 @@
 
     monitor-enter v0
 
-    .line 763
     :try_start_0
     iget-object v1, p0, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
@@ -75,15 +69,12 @@
 
     const/4 p1, 0x0
 
-    .line 764
     invoke-static {v1, p1}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$fputmBinding(Lcom/android/server/attention/AttentionManagerService;Z)V
 
-    .line 765
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-static {p0}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$mhandlePendingCallbackLocked(Lcom/android/server/attention/AttentionManagerService;)V
 
-    .line 766
     monitor-exit v0
 
     return-void
@@ -101,7 +92,6 @@
 .method public onBindingDied(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 748
     invoke-virtual {p0}, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->cleanupService()V
 
     return-void
@@ -110,7 +100,6 @@
 .method public onNullBinding(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 753
     invoke-virtual {p0}, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->cleanupService()V
 
     return-void
@@ -119,14 +108,12 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 737
     invoke-static {p2}, Landroid/service/attention/IAttentionService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/attention/IAttentionService;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->init(Landroid/service/attention/IAttentionService;)V
 
-    .line 738
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->this$0:Lcom/android/server/attention/AttentionManagerService;
 
     invoke-static {p0}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$fgetmServiceBindingLatch(Lcom/android/server/attention/AttentionManagerService;)Ljava/util/concurrent/CountDownLatch;
@@ -141,7 +128,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 743
     invoke-virtual {p0}, Lcom/android/server/attention/AttentionManagerService$AttentionServiceConnection;->cleanupService()V
 
     return-void

@@ -20,7 +20,6 @@
 .method public compare(Lcom/android/server/notification/NotificationRecord;Lcom/android/server/notification/NotificationRecord;)I
     .locals 1
 
-    .line 30
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getGlobalSortKey()Ljava/lang/String;
 
     move-result-object p0
@@ -29,7 +28,6 @@
 
     if-nez p0, :cond_0
 
-    .line 31
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +48,6 @@
 
     return p0
 
-    .line 34
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/notification/NotificationRecord;->getGlobalSortKey()Ljava/lang/String;
 
@@ -58,7 +55,6 @@
 
     if-nez p0, :cond_1
 
-    .line 35
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +75,6 @@
 
     return p0
 
-    .line 38
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getGlobalSortKey()Ljava/lang/String;
 
@@ -99,7 +94,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 25
     check-cast p1, Lcom/android/server/notification/NotificationRecord;
 
     check-cast p2, Lcom/android/server/notification/NotificationRecord;

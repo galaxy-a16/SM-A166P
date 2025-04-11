@@ -43,7 +43,6 @@
 .method public static synthetic $r8$lambda$CY-kL5hQEjEmRiFK19Mn4tGjC8g()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/policy/DeviceStateProviderImpl;->lambda$static$0()Z
 
     move-result v0
@@ -54,7 +53,6 @@
 .method public static synthetic $r8$lambda$Ufigq7BdGNXDG80GLpR5V75c-9s()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/policy/DeviceStateProviderImpl;->lambda$static$1()Z
 
     move-result v0
@@ -65,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsLidOpen(Lcom/android/server/policy/DeviceStateProviderImpl;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mIsLidOpen:Ljava/lang/Boolean;
 
     return-object p0
@@ -74,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLatestSensorEvent(Lcom/android/server/policy/DeviceStateProviderImpl;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLatestSensorEvent:Ljava/util/Map;
 
     return-object p0
@@ -83,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/policy/DeviceStateProviderImpl;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -92,21 +87,18 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 96
     new-instance v0, Lcom/android/server/policy/DeviceStateProviderImpl$$ExternalSyntheticLambda1;
 
     invoke-direct {v0}, Lcom/android/server/policy/DeviceStateProviderImpl$$ExternalSyntheticLambda1;-><init>()V
 
     sput-object v0, Lcom/android/server/policy/DeviceStateProviderImpl;->TRUE_BOOLEAN_SUPPLIER:Ljava/util/function/BooleanSupplier;
 
-    .line 97
     new-instance v0, Lcom/android/server/policy/DeviceStateProviderImpl$$ExternalSyntheticLambda2;
 
     invoke-direct {v0}, Lcom/android/server/policy/DeviceStateProviderImpl$$ExternalSyntheticLambda2;-><init>()V
 
     sput-object v0, Lcom/android/server/policy/DeviceStateProviderImpl;->FALSE_BOOLEAN_SUPPLIER:Ljava/util/function/BooleanSupplier;
 
-    .line 100
     new-instance v0, Lcom/android/server/devicestate/DeviceState;
 
     const/4 v1, 0x0
@@ -123,17 +115,14 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;Ljava/util/List;)V
     .locals 3
 
-    .line 243
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 207
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
-    .line 213
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -142,15 +131,12 @@
 
     const/4 v0, 0x0
 
-    .line 215
     iput-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mListener:Lcom/android/server/devicestate/DeviceStateProvider$Listener;
 
     const/4 v0, -0x1
 
-    .line 218
     iput v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLastReportedState:I
 
-    .line 223
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -159,10 +145,8 @@
 
     const/4 v0, 0x0
 
-    .line 225
     iput v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mThermalStatus:I
 
-    .line 244
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v1
@@ -180,10 +164,8 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 247
     iput-object p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mContext:Landroid/content/Context;
 
-    .line 249
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
@@ -196,7 +178,6 @@
 
     check-cast v0, [Lcom/android/server/devicestate/DeviceState;
 
-    .line 250
     new-instance v1, Lcom/android/server/policy/DeviceStateProviderImpl$$ExternalSyntheticLambda0;
 
     invoke-direct {v1}, Lcom/android/server/policy/DeviceStateProviderImpl$$ExternalSyntheticLambda0;-><init>()V
@@ -207,13 +188,10 @@
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 251
     iput-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mOrderedStates:[Lcom/android/server/devicestate/DeviceState;
 
-    .line 253
     invoke-virtual {p0, p2, p3}, Lcom/android/server/policy/DeviceStateProviderImpl;->setStateConditions(Ljava/util/List;Ljava/util/List;)V
 
-    .line 255
     const-class p3, Landroid/os/PowerManager;
 
     invoke-virtual {p1, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -224,17 +202,14 @@
 
     if-eqz p3, :cond_2
 
-    .line 260
     invoke-static {p2}, Lcom/android/server/policy/DeviceStateProviderImpl;->hasThermalSensitiveState(Ljava/util/List;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 261
     invoke-virtual {p3, p0}, Landroid/os/PowerManager;->addThermalStatusListener(Landroid/os/PowerManager$OnThermalStatusChangedListener;)V
 
-    .line 267
     :cond_1
     invoke-static {p2}, Lcom/android/server/policy/DeviceStateProviderImpl;->hasPowerSaveSensitiveState(Ljava/util/List;)Z
 
@@ -242,19 +217,16 @@
 
     if-eqz p2, :cond_2
 
-    .line 268
     new-instance p2, Landroid/content/IntentFilter;
 
     const-string v0, "android.os.action.POWER_SAVE_MODE_CHANGED_INTERNAL"
 
     invoke-direct {p2, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 270
     new-instance v0, Lcom/android/server/policy/DeviceStateProviderImpl$1;
 
     invoke-direct {v0, p0, p3}, Lcom/android/server/policy/DeviceStateProviderImpl$1;-><init>(Lcom/android/server/policy/DeviceStateProviderImpl;Landroid/os/PowerManager;)V
 
-    .line 279
     invoke-virtual {p1, v0, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     :cond_2
@@ -264,7 +236,6 @@
 .method public static create(Landroid/content/Context;)Lcom/android/server/policy/DeviceStateProviderImpl;
     .locals 3
 
-    .line 131
     invoke-static {}, Lcom/android/server/policy/DeviceStateProviderImpl;->getConfigurationFile()Ljava/io/File;
 
     move-result-object v0
@@ -273,14 +244,12 @@
 
     if-nez v0, :cond_0
 
-    .line 133
     invoke-static {p0, v1}, Lcom/android/server/policy/DeviceStateProviderImpl;->createFromConfig(Landroid/content/Context;Lcom/android/server/policy/DeviceStateProviderImpl$ReadableConfig;)Lcom/android/server/policy/DeviceStateProviderImpl;
 
     move-result-object p0
 
     return-object p0
 
-    .line 135
     :cond_0
     new-instance v2, Lcom/android/server/policy/DeviceStateProviderImpl$ReadableFileConfig;
 
@@ -296,26 +265,22 @@
 .method public static createFromConfig(Landroid/content/Context;Lcom/android/server/policy/DeviceStateProviderImpl$ReadableConfig;)Lcom/android/server/policy/DeviceStateProviderImpl;
     .locals 12
 
-    .line 147
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 148
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz p1, :cond_9
 
-    .line 151
     invoke-static {p1}, Lcom/android/server/policy/DeviceStateProviderImpl;->parseConfig(Lcom/android/server/policy/DeviceStateProviderImpl$ReadableConfig;)Lcom/android/server/policy/devicestate/config/DeviceStateConfig;
 
     move-result-object p1
 
     if-eqz p1, :cond_9
 
-    .line 154
     invoke-virtual {p1}, Lcom/android/server/policy/devicestate/config/DeviceStateConfig;->getDeviceState()Ljava/util/List;
 
     move-result-object p1
@@ -337,7 +302,6 @@
 
     check-cast v2, Lcom/android/server/policy/devicestate/config/DeviceState;
 
-    .line 155
     invoke-virtual {v2}, Lcom/android/server/policy/devicestate/config/DeviceState;->getIdentifier()Ljava/math/BigInteger;
 
     move-result-object v3
@@ -346,7 +310,6 @@
 
     move-result v3
 
-    .line 156
     invoke-virtual {v2}, Lcom/android/server/policy/devicestate/config/DeviceState;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -362,7 +325,6 @@
 
     move-result-object v4
 
-    .line 159
     :goto_1
     invoke-virtual {v2}, Lcom/android/server/policy/devicestate/config/DeviceState;->getFlags()Lcom/android/server/policy/devicestate/config/Flags;
 
@@ -372,7 +334,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 161
     invoke-virtual {v5}, Lcom/android/server/policy/devicestate/config/Flags;->getFlag()Ljava/util/List;
 
     move-result-object v5
@@ -381,7 +342,6 @@
 
     move v8, v7
 
-    .line 162
     :goto_2
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -389,14 +349,12 @@
 
     if-ge v7, v9, :cond_7
 
-    .line 163
     invoke-interface {v5, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Ljava/lang/String;
 
-    .line 164
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
@@ -516,7 +474,6 @@
     :pswitch_1
     or-int/lit8 v8, v8, 0x20
 
-    .line 184
     :goto_4
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -564,7 +521,6 @@
     :cond_7
     move v6, v8
 
-    .line 191
     :cond_8
     new-instance v5, Lcom/android/server/devicestate/DeviceState;
 
@@ -572,17 +528,14 @@
 
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 193
     invoke-virtual {v2}, Lcom/android/server/policy/devicestate/config/DeviceState;->getConditions()Lcom/android/server/policy/devicestate/config/Conditions;
 
     move-result-object v2
 
-    .line 194
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 199
     :cond_9
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -590,17 +543,14 @@
 
     if-nez p1, :cond_a
 
-    .line 200
     sget-object p1, Lcom/android/server/policy/DeviceStateProviderImpl;->DEFAULT_DEVICE_STATE:Lcom/android/server/devicestate/DeviceState;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const/4 p1, 0x0
 
-    .line 201
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 203
     :cond_a
     new-instance p1, Lcom/android/server/policy/DeviceStateProviderImpl;
 
@@ -634,7 +584,6 @@
 .method public static getConfigurationFile()Ljava/io/File;
     .locals 3
 
-    .line 731
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -651,7 +600,6 @@
 
     move-result-object v0
 
-    .line 733
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -660,7 +608,6 @@
 
     return-object v0
 
-    .line 737
     :cond_0
     invoke-static {}, Landroid/os/Environment;->getVendorDirectory()Ljava/io/File;
 
@@ -676,7 +623,6 @@
 
     move-result-object v0
 
-    .line 739
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -698,7 +644,6 @@
 
     move v1, v0
 
-    .line 844
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -706,7 +651,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 845
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -737,7 +681,6 @@
 .method public static hasThermalSensitiveState(Ljava/util/List;)Z
     .locals 2
 
-    .line 835
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -757,7 +700,6 @@
 
     const/16 v1, 0x10
 
-    .line 836
     invoke-virtual {v0, v1}, Lcom/android/server/devicestate/DeviceState;->hasFlag(I)Z
 
     move-result v0
@@ -777,7 +719,6 @@
 .method public static isThermalStatusCriticalOrAbove(I)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x4
 
     if-eq p0, v0, :cond_0
@@ -803,7 +744,6 @@
 .method public static synthetic lambda$static$0()Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     return v0
@@ -812,7 +752,6 @@
 .method public static synthetic lambda$static$1()Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x0
 
     return v0
@@ -821,7 +760,6 @@
 .method public static parseConfig(Lcom/android/server/policy/DeviceStateProviderImpl$ReadableConfig;)Lcom/android/server/policy/devicestate/config/DeviceStateConfig;
     .locals 2
 
-    .line 765
     :try_start_0
     invoke-interface {p0}, Lcom/android/server/policy/DeviceStateProviderImpl$ReadableConfig;->openRead()Ljava/io/InputStream;
 
@@ -831,7 +769,6 @@
     .catch Ljavax/xml/datatype/DatatypeConfigurationException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 766
     :try_start_1
     new-instance v0, Ljava/io/BufferedInputStream;
 
@@ -839,7 +776,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 767
     :try_start_2
     invoke-static {v0}, Lcom/android/server/policy/devicestate/config/XmlParser;->read(Ljava/io/InputStream;)Lcom/android/server/policy/devicestate/config/DeviceStateConfig;
 
@@ -847,7 +783,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 768
     :try_start_3
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -868,7 +803,6 @@
     :catchall_0
     move-exception v1
 
-    .line 765
     :try_start_5
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -920,7 +854,6 @@
 
     const-string v1, "Encountered an error while reading device state config"
 
-    .line 769
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -937,10 +870,8 @@
 
     const-string v1, "DeviceStateProviderImpl"
 
-    .line 748
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 749
     iget-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLatestSensorEvent:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -964,7 +895,6 @@
 
     check-cast v2, Landroid/hardware/Sensor;
 
-    .line 750
     iget-object v3, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLatestSensorEvent:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -975,7 +905,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 752
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1006,7 +935,6 @@
 
     goto :goto_0
 
-    .line 754
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1037,7 +965,6 @@
 .method public final findSensor(Ljava/lang/String;Ljava/lang/String;)Landroid/hardware/Sensor;
     .locals 4
 
-    .line 396
     iget-object p0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/hardware/SensorManager;
@@ -1050,14 +977,12 @@
 
     const/4 v0, -0x1
 
-    .line 397
     invoke-virtual {p0, v0}, Landroid/hardware/SensorManager;->getSensorList(I)Ljava/util/List;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 398
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -1065,19 +990,16 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 399
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/hardware/Sensor;
 
-    .line 400
     invoke-virtual {v1}, Landroid/hardware/Sensor;->getStringType()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 401
     invoke-virtual {v1}, Landroid/hardware/Sensor;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -1088,7 +1010,6 @@
 
     goto :goto_1
 
-    .line 407
     :cond_0
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1119,18 +1040,15 @@
 .method public notifyDeviceStateChangedIfNeeded()V
     .locals 5
 
-    .line 456
     iget-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 457
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mListener:Lcom/android/server/devicestate/DeviceStateProvider$Listener;
 
     if-nez v1, :cond_0
 
-    .line 458
     monitor-exit v0
 
     return-void
@@ -1138,7 +1056,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 462
     :goto_0
     iget-object v2, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mOrderedStates:[Lcom/android/server/devicestate/DeviceState;
 
@@ -1148,7 +1065,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 463
     aget-object v2, v2, v1
 
     invoke-virtual {v2}, Lcom/android/server/devicestate/DeviceState;->getIdentifier()I
@@ -1157,7 +1073,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 470
     :try_start_1
     iget-object v3, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mStateConditions:Landroid/util/SparseArray;
 
@@ -1195,21 +1110,17 @@
 
     const-string v3, "No declared device states match any of the required conditions."
 
-    .line 491
     invoke-static {v1, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
     invoke-virtual {p0}, Lcom/android/server/policy/DeviceStateProviderImpl;->dumpSensorValues()V
 
     :cond_3
     if-eq v2, v4, :cond_4
 
-    .line 501
     iget v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLastReportedState:I
 
     if-eq v2, v1, :cond_4
 
-    .line 502
     iput v2, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLastReportedState:I
 
     goto :goto_2
@@ -1217,7 +1128,6 @@
     :cond_4
     move v2, v4
 
-    .line 519
     :goto_2
     monitor-exit v0
     :try_end_2
@@ -1225,7 +1135,6 @@
 
     if-eq v2, v4, :cond_5
 
-    .line 522
     iget-object p0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mListener:Lcom/android/server/devicestate/DeviceStateProvider$Listener;
 
     invoke-interface {p0, v2}, Lcom/android/server/devicestate/DeviceStateProvider$Listener;->onStateChanged(I)V
@@ -1236,7 +1145,6 @@
     :catchall_0
     move-exception p0
 
-    .line 519
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -1248,12 +1156,10 @@
 .method public notifyLidSwitchChanged(JZ)V
     .locals 0
 
-    .line 528
     iget-object p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 529
     :try_start_0
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1261,12 +1167,10 @@
 
     iput-object p2, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mIsLidOpen:Ljava/lang/Boolean;
 
-    .line 530
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 544
     invoke-virtual {p0}, Lcom/android/server/policy/DeviceStateProviderImpl;->notifyDeviceStateChangedIfNeeded()V
 
     return-void
@@ -1274,7 +1178,6 @@
     :catchall_0
     move-exception p0
 
-    .line 530
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -1286,28 +1189,23 @@
 .method public final notifySupportedStatesChanged(I)V
     .locals 8
 
-    .line 428
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 430
     iget-object v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 431
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mListener:Lcom/android/server/devicestate/DeviceStateProvider$Listener;
 
     if-nez v2, :cond_0
 
-    .line 432
     monitor-exit v1
 
     return-void
 
-    .line 435
     :cond_0
     iget-object v3, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mOrderedStates:[Lcom/android/server/devicestate/DeviceState;
 
@@ -1320,7 +1218,6 @@
 
     aget-object v6, v3, v5
 
-    .line 436
     iget v7, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mThermalStatus:I
 
     invoke-static {v7}, Lcom/android/server/policy/DeviceStateProviderImpl;->isThermalStatusCriticalOrAbove(I)Z
@@ -1331,7 +1228,6 @@
 
     const/16 v7, 0x10
 
-    .line 437
     invoke-virtual {v6, v7}, Lcom/android/server/devicestate/DeviceState;->hasFlag(I)Z
 
     move-result v7
@@ -1340,7 +1236,6 @@
 
     goto :goto_1
 
-    .line 441
     :cond_1
     iget-boolean v7, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mPowerSaveModeEnabled:Z
 
@@ -1356,7 +1251,6 @@
 
     goto :goto_1
 
-    .line 445
     :cond_2
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1365,13 +1259,11 @@
 
     goto :goto_0
 
-    .line 447
     :cond_3
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 450
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -1384,7 +1276,6 @@
 
     check-cast p0, [Lcom/android/server/devicestate/DeviceState;
 
-    .line 449
     invoke-interface {v2, p0, p1}, Lcom/android/server/devicestate/DeviceStateProvider$Listener;->onSupportedDeviceStatesChanged([Lcom/android/server/devicestate/DeviceState;I)V
 
     return-void
@@ -1392,7 +1283,6 @@
     :catchall_0
     move-exception p0
 
-    .line 447
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -1404,25 +1294,21 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPowerSaveModeChanged(Z)V
     .locals 2
 
-    .line 791
     iget-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 792
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mPowerSaveModeEnabled:Z
 
     if-eq v1, p1, :cond_1
 
-    .line 793
     iput-boolean p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mPowerSaveModeEnabled:Z
 
     if-eqz p1, :cond_0
@@ -1434,11 +1320,9 @@
     :cond_0
     const/4 p1, 0x5
 
-    .line 794
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/DeviceStateProviderImpl;->notifySupportedStatesChanged(I)V
 
-    .line 798
     :cond_1
     monitor-exit v0
 
@@ -1457,12 +1341,10 @@
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 3
 
-    .line 549
     iget-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 550
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLatestSensorEvent:Ljava/util/Map;
 
@@ -1470,12 +1352,10 @@
 
     invoke-interface {v1, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 556
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 557
     invoke-virtual {p0}, Lcom/android/server/policy/DeviceStateProviderImpl;->notifyDeviceStateChangedIfNeeded()V
 
     return-void
@@ -1483,7 +1363,6 @@
     :catchall_0
     move-exception p0
 
-    .line 556
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1495,29 +1374,23 @@
 .method public onThermalStatusChanged(I)V
     .locals 3
 
-    .line 804
     iget-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 805
     :try_start_0
     iget v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mThermalStatus:I
 
-    .line 806
     iput p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mThermalStatus:I
 
-    .line 807
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 809
     invoke-static {p1}, Lcom/android/server/policy/DeviceStateProviderImpl;->isThermalStatusCriticalOrAbove(I)Z
 
     move-result p1
 
-    .line 811
     invoke-static {v1}, Lcom/android/server/policy/DeviceStateProviderImpl;->isThermalStatusCriticalOrAbove(I)Z
 
     move-result v0
@@ -1526,7 +1399,6 @@
 
     const-string v0, "DeviceStateProviderImpl"
 
-    .line 813
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1552,7 +1424,6 @@
     :cond_0
     const/4 p1, 0x2
 
-    .line 815
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/DeviceStateProviderImpl;->notifySupportedStatesChanged(I)V
 
@@ -1562,7 +1433,6 @@
     :catchall_0
     move-exception p0
 
-    .line 807
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1574,36 +1444,29 @@
 .method public setListener(Lcom/android/server/devicestate/DeviceStateProvider$Listener;)V
     .locals 2
 
-    .line 416
     iget-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 417
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mListener:Lcom/android/server/devicestate/DeviceStateProvider$Listener;
 
     if-nez v1, :cond_0
 
-    .line 420
     iput-object p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl;->mListener:Lcom/android/server/devicestate/DeviceStateProvider$Listener;
 
-    .line 421
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 p1, 0x1
 
-    .line 422
     invoke-virtual {p0, p1}, Lcom/android/server/policy/DeviceStateProviderImpl;->notifySupportedStatesChanged(I)V
 
-    .line 423
     invoke-virtual {p0}, Lcom/android/server/policy/DeviceStateProviderImpl;->notifyDeviceStateChangedIfNeeded()V
 
     return-void
 
-    .line 418
     :cond_0
     :try_start_1
     new-instance p0, Ljava/lang/RuntimeException;
@@ -1617,7 +1480,6 @@
     :catchall_0
     move-exception p0
 
-    .line 421
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1632,7 +1494,6 @@
 
     move-object/from16 v1, p1
 
-    .line 292
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
@@ -1641,7 +1502,6 @@
 
     const/4 v5, 0x0
 
-    .line 294
     :goto_0
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->size()I
 
@@ -1649,7 +1509,6 @@
 
     if-ge v4, v6, :cond_8
 
-    .line 295
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -1662,7 +1521,6 @@
 
     move-object/from16 v7, p2
 
-    .line 300
     invoke-interface {v7, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -1671,7 +1529,6 @@
 
     if-nez v8, :cond_1
 
-    .line 304
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -1686,7 +1543,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 305
     iget-object v8, v0, Lcom/android/server/policy/DeviceStateProviderImpl;->mStateConditions:Landroid/util/SparseArray;
 
     sget-object v9, Lcom/android/server/policy/DeviceStateProviderImpl;->FALSE_BOOLEAN_SUPPLIER:Ljava/util/function/BooleanSupplier;
@@ -1695,7 +1551,6 @@
 
     goto/16 :goto_4
 
-    .line 307
     :cond_0
     iget-object v8, v0, Lcom/android/server/policy/DeviceStateProviderImpl;->mStateConditions:Landroid/util/SparseArray;
 
@@ -1705,25 +1560,21 @@
 
     goto/16 :goto_4
 
-    .line 318
     :cond_1
     new-instance v9, Landroid/util/ArraySet;
 
     invoke-direct {v9}, Landroid/util/ArraySet;-><init>()V
 
-    .line 320
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 322
     invoke-virtual {v8}, Lcom/android/server/policy/devicestate/config/Conditions;->getLidSwitch()Lcom/android/server/policy/devicestate/config/LidSwitchCondition;
 
     move-result-object v11
 
     if-eqz v11, :cond_2
 
-    .line 324
     new-instance v13, Lcom/android/server/policy/DeviceStateProviderImpl$LidSwitchBooleanSupplier;
 
     invoke-virtual {v11}, Lcom/android/server/policy/devicestate/config/LidSwitchCondition;->getOpen()Z
@@ -1741,7 +1592,6 @@
     :cond_2
     const/4 v11, 0x0
 
-    .line 331
     :goto_1
     invoke-virtual {v8}, Lcom/android/server/policy/devicestate/config/Conditions;->getSensor()Ljava/util/List;
 
@@ -1749,7 +1599,6 @@
 
     const/4 v13, 0x0
 
-    .line 332
     :goto_2
     invoke-interface {v8}, Ljava/util/List;->size()I
 
@@ -1757,31 +1606,26 @@
 
     if-ge v13, v14, :cond_4
 
-    .line 333
     invoke-interface {v8, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Lcom/android/server/policy/devicestate/config/SensorCondition;
 
-    .line 334
     invoke-virtual {v14}, Lcom/android/server/policy/devicestate/config/SensorCondition;->getType()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 335
     invoke-virtual {v14}, Lcom/android/server/policy/devicestate/config/SensorCondition;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 337
     invoke-virtual {v0, v15, v3}, Lcom/android/server/policy/DeviceStateProviderImpl;->findSensor(Ljava/lang/String;Ljava/lang/String;)Landroid/hardware/Sensor;
 
     move-result-object v12
 
     if-nez v12, :cond_3
 
-    .line 339
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1810,7 +1654,6 @@
 
     goto :goto_3
 
-    .line 350
     :cond_3
     new-instance v3, Lcom/android/server/policy/DeviceStateProviderImpl$SensorBooleanSupplier;
 
@@ -1822,7 +1665,6 @@
 
     invoke-interface {v10, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 351
     invoke-virtual {v9, v12}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v13, v13, 0x1
@@ -1835,7 +1677,6 @@
     :goto_3
     if-nez v3, :cond_5
 
-    .line 371
     iget-object v3, v0, Lcom/android/server/policy/DeviceStateProviderImpl;->mStateConditions:Landroid/util/SparseArray;
 
     sget-object v8, Lcom/android/server/policy/DeviceStateProviderImpl;->FALSE_BOOLEAN_SUPPLIER:Ljava/util/function/BooleanSupplier;
@@ -1847,10 +1688,8 @@
     :cond_5
     or-int/2addr v5, v11
 
-    .line 357
     invoke-virtual {v2, v9}, Landroid/util/ArraySet;->addAll(Landroid/util/ArraySet;)V
 
-    .line 359
     invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v3
@@ -1859,7 +1698,6 @@
 
     if-le v3, v8, :cond_6
 
-    .line 360
     iget-object v3, v0, Lcom/android/server/policy/DeviceStateProviderImpl;->mStateConditions:Landroid/util/SparseArray;
 
     new-instance v8, Lcom/android/server/policy/DeviceStateProviderImpl$AndBooleanSupplier;
@@ -1870,7 +1708,6 @@
 
     goto :goto_4
 
-    .line 361
     :cond_6
     invoke-interface {v10}, Ljava/util/List;->size()I
 
@@ -1878,7 +1715,6 @@
 
     if-lez v3, :cond_7
 
-    .line 363
     iget-object v3, v0, Lcom/android/server/policy/DeviceStateProviderImpl;->mStateConditions:Landroid/util/SparseArray;
 
     const/4 v8, 0x0
@@ -1893,7 +1729,6 @@
 
     goto :goto_4
 
-    .line 366
     :cond_7
     iget-object v3, v0, Lcom/android/server/policy/DeviceStateProviderImpl;->mStateConditions:Landroid/util/SparseArray;
 
@@ -1909,7 +1744,6 @@
     :cond_8
     if-eqz v5, :cond_9
 
-    .line 376
     const-class v1, Lcom/android/server/input/InputManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1918,10 +1752,8 @@
 
     check-cast v1, Lcom/android/server/input/InputManagerInternal;
 
-    .line 378
     invoke-virtual {v1, v0}, Lcom/android/server/input/InputManagerInternal;->registerLidSwitchCallback(Lcom/android/server/input/InputManagerInternal$LidSwitchCallback;)V
 
-    .line 381
     :cond_9
     iget-object v1, v0, Lcom/android/server/policy/DeviceStateProviderImpl;->mContext:Landroid/content/Context;
 
@@ -1935,7 +1767,6 @@
 
     const/4 v8, 0x0
 
-    .line 382
     :goto_5
     invoke-virtual {v2}, Landroid/util/ArraySet;->size()I
 
@@ -1943,7 +1774,6 @@
 
     if-ge v8, v3, :cond_a
 
-    .line 383
     invoke-virtual {v2, v8}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1952,7 +1782,6 @@
 
     const/4 v4, 0x0
 
-    .line 390
     invoke-virtual {v1, v0, v3, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
     add-int/lit8 v8, v8, 0x1

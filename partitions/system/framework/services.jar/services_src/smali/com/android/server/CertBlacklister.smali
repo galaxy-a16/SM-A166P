@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -38,7 +37,6 @@
 
     sput-object v0, Lcom/android/server/CertBlacklister;->BLACKLIST_ROOT:Ljava/lang/String;
 
-    .line 43
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,7 +53,6 @@
 
     sput-object v1, Lcom/android/server/CertBlacklister;->PUBKEY_PATH:Ljava/lang/String;
 
-    .line 44
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,10 +75,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 109
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 110
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -96,7 +91,6 @@
 .method public final buildPubkeyObserver(Landroid/content/ContentResolver;)Lcom/android/server/CertBlacklister$BlacklistObserver;
     .locals 3
 
-    .line 114
     new-instance p0, Lcom/android/server/CertBlacklister$BlacklistObserver;
 
     const-string/jumbo v0, "pubkey"
@@ -113,7 +107,6 @@
 .method public final buildSerialObserver(Landroid/content/ContentResolver;)Lcom/android/server/CertBlacklister$BlacklistObserver;
     .locals 3
 
-    .line 121
     new-instance p0, Lcom/android/server/CertBlacklister$BlacklistObserver;
 
     const-string/jumbo v0, "serial"
@@ -132,34 +125,28 @@
 
     const-string/jumbo v0, "pubkey_blacklist"
 
-    .line 130
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 132
     invoke-virtual {p0, p1}, Lcom/android/server/CertBlacklister;->buildPubkeyObserver(Landroid/content/ContentResolver;)Lcom/android/server/CertBlacklister$BlacklistObserver;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    .line 129
     invoke-virtual {p1, v0, v2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     const-string/jumbo v0, "serial_blacklist"
 
-    .line 137
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 139
     invoke-virtual {p0, p1}, Lcom/android/server/CertBlacklister;->buildSerialObserver(Landroid/content/ContentResolver;)Lcom/android/server/CertBlacklister$BlacklistObserver;
 
     move-result-object p0
 
-    .line 136
     invoke-virtual {p1, v0, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     return-void

@@ -23,14 +23,12 @@
 
     const-string v1, "29"
 
-    .line 58
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 61
     :try_start_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -49,7 +47,6 @@
 
     move v1, v0
 
-    .line 67
     :catch_0
     :goto_0
     sput-boolean v1, Lcom/android/server/om/IdmapManager;->VENDOR_IS_Q_OR_LATER:Z
@@ -60,16 +57,12 @@
 .method public constructor <init>(Lcom/android/server/om/IdmapDaemon;Lcom/android/server/om/PackageManagerHelper;)V
     .locals 0
 
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
     iput-object p2, p0, Lcom/android/server/om/IdmapManager;->mPackageManager:Lcom/android/server/om/PackageManagerHelper;
 
-    .line 95
     iput-object p1, p0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
-    .line 96
     invoke-interface {p2}, Lcom/android/server/om/PackageManagerHelper;->getConfigSignaturePackage()Ljava/lang/String;
 
     move-result-object p1
@@ -84,19 +77,16 @@
 .method public final calculateFulfilledPolicies(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;I)I
     .locals 3
 
-    .line 219
     iget-object v0, p0, Lcom/android/server/om/IdmapManager;->mPackageManager:Lcom/android/server/om/PackageManagerHelper;
 
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 220
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 219
     invoke-interface {v0, v1, v2, p4}, Lcom/android/server/om/PackageManagerHelper;->signaturesMatching(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -110,7 +100,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 225
     :goto_0
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/om/IdmapManager;->matchesActorSignature(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/AndroidPackage;I)Z
 
@@ -120,7 +109,6 @@
 
     or-int/lit16 v0, v0, 0x80
 
-    .line 232
     :cond_1
     iget-object p1, p0, Lcom/android/server/om/IdmapManager;->mConfigSignaturePackage:Ljava/lang/String;
 
@@ -134,12 +122,10 @@
 
     iget-object p0, p0, Lcom/android/server/om/IdmapManager;->mConfigSignaturePackage:Ljava/lang/String;
 
-    .line 234
     invoke-interface {p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p3
 
-    .line 233
     invoke-interface {p1, p0, p3, p4}, Lcom/android/server/om/PackageManagerHelper;->signaturesMatching(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result p0
@@ -148,7 +134,6 @@
 
     or-int/lit16 v0, v0, 0x100
 
-    .line 240
     :cond_2
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageState;->isVendor()Z
 
@@ -160,7 +145,6 @@
 
     return p0
 
-    .line 245
     :cond_3
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageState;->isProduct()Z
 
@@ -172,7 +156,6 @@
 
     return p0
 
-    .line 250
     :cond_4
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageState;->isOdm()Z
 
@@ -184,7 +167,6 @@
 
     return p0
 
-    .line 255
     :cond_5
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageState;->isOem()Z
 
@@ -196,7 +178,6 @@
 
     return p0
 
-    .line 261
     :cond_6
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
@@ -227,14 +208,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 292
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 293
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object p0
@@ -247,7 +226,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 294
     new-instance p0, Ljava/io/File;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -262,7 +240,6 @@
 
     const-string v2, "."
 
-    .line 295
     invoke-virtual {p2, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p2
@@ -279,7 +256,6 @@
 
     invoke-direct {p0, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 297
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -288,7 +264,6 @@
 
     return-void
 
-    .line 304
     :cond_0
     invoke-static {p1}, Lcom/android/server/om/ResourceMapParser;->parseResourceMap(Lcom/android/server/pm/pkg/AndroidPackage;)V
 
@@ -299,7 +274,6 @@
 .method public createFabricatedOverlay(Landroid/os/FabricatedOverlayInternal;)Landroid/os/FabricatedOverlayInfo;
     .locals 0
 
-    .line 168
     iget-object p0, p0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
     invoke-virtual {p0, p1}, Lcom/android/server/om/IdmapDaemon;->createFabricatedOverlay(Landroid/os/FabricatedOverlayInternal;)Landroid/os/FabricatedOverlayInfo;
@@ -320,7 +294,6 @@
 
     move-object/from16 v3, p3
 
-    .line 113
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,7 +312,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 114
     invoke-interface/range {p3 .. p3}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -352,10 +324,8 @@
 
     const-string v6, "OverlayManager"
 
-    .line 113
     invoke-static {v6, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplits()Ljava/util/List;
 
     move-result-object v4
@@ -372,23 +342,19 @@
 
     move-result-object v4
 
-    .line 119
     invoke-virtual {v0, v1, v4}, Lcom/android/server/om/IdmapManager;->checkForResourceMapping(Lcom/android/server/pm/pkg/AndroidPackage;Ljava/lang/String;)V
 
     move/from16 v15, p6
 
-    .line 123
     :try_start_0
     invoke-virtual {v0, v1, v2, v3, v15}, Lcom/android/server/om/IdmapManager;->calculateFulfilledPolicies(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;I)I
 
     move-result v1
 
-    .line 125
     invoke-virtual {v0, v2, v3}, Lcom/android/server/om/IdmapManager;->enforceOverlayable(Lcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;)Z
 
     move-result v2
 
-    .line 126
     iget-object v8, v0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
     move-object v9, v4
@@ -413,7 +379,6 @@
 
     return v16
 
-    .line 130
     :cond_0
     iget-object v8, v0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
@@ -453,7 +418,6 @@
     :catch_0
     move-exception v0
 
-    .line 134
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -482,7 +446,6 @@
 .method public deleteFabricatedOverlay(Ljava/lang/String;)Z
     .locals 0
 
-    .line 176
     iget-object p0, p0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
     invoke-virtual {p0, p1}, Lcom/android/server/om/IdmapDaemon;->deleteFabricatedOverlay(Ljava/lang/String;)Z
@@ -495,7 +458,6 @@
 .method public dumpIdmap(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 184
     iget-object p0, p0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
     invoke-virtual {p0, p1}, Lcom/android/server/om/IdmapDaemon;->dumpIdmap(Ljava/lang/String;)Ljava/lang/String;
@@ -508,7 +470,6 @@
 .method public final enforceOverlayable(Lcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;)Z
     .locals 2
 
-    .line 193
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result p0
@@ -521,7 +482,6 @@
 
     return v1
 
-    .line 198
     :cond_0
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->isVendor()Z
 
@@ -529,12 +489,10 @@
 
     if-eqz p0, :cond_1
 
-    .line 202
     sget-boolean p0, Lcom/android/server/om/IdmapManager;->VENDOR_IS_Q_OR_LATER:Z
 
     return p0
 
-    .line 207
     :cond_1
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
@@ -560,7 +518,6 @@
 .method public getFabricatedOverlayInfos()Ljava/util/List;
     .locals 0
 
-    .line 160
     iget-object p0, p0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
     invoke-virtual {p0}, Lcom/android/server/om/IdmapDaemon;->getFabricatedOverlayInfos()Ljava/util/List;
@@ -573,7 +530,6 @@
 .method public idmapExists(Landroid/content/om/OverlayInfo;)Z
     .locals 1
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
     iget-object v0, p1, Landroid/content/om/OverlayInfo;->baseCodePath:Ljava/lang/String;
@@ -590,43 +546,35 @@
 .method public final matchesActorSignature(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/AndroidPackage;I)Z
     .locals 2
 
-    .line 270
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getOverlayTargetOverlayableName()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 273
     :try_start_0
     iget-object v1, p0, Lcom/android/server/om/IdmapManager;->mPackageManager:Lcom/android/server/om/PackageManagerHelper;
 
-    .line 274
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 273
     invoke-interface {v1, p1, v0, p3}, Lcom/android/server/om/PackageManagerHelper;->getOverlayableForTarget(Ljava/lang/String;Ljava/lang/String;I)Landroid/content/om/OverlayableInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 275
     iget-object p1, p1, Landroid/content/om/OverlayableInfo;->actor:Ljava/lang/String;
 
     if-eqz p1, :cond_0
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/om/IdmapManager;->mPackageManager:Lcom/android/server/om/PackageManagerHelper;
 
-    .line 277
     invoke-interface {v0}, Lcom/android/server/om/PackageManagerHelper;->getNamedActors()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 276
     invoke-static {p1, v0}, Lcom/android/server/om/OverlayActorEnforcer;->getPackageNameForActor(Ljava/lang/String;Ljava/util/Map;)Landroid/util/Pair;
 
     move-result-object p1
@@ -635,15 +583,12 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 278
     iget-object p0, p0, Lcom/android/server/om/IdmapManager;->mPackageManager:Lcom/android/server/om/PackageManagerHelper;
 
-    .line 279
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 278
     invoke-interface {p0, p1, p2, p3}, Lcom/android/server/om/PackageManagerHelper;->signaturesMatching(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result p0
@@ -666,7 +611,6 @@
 .method public removeIdmap(Landroid/content/om/OverlayInfo;I)Z
     .locals 2
 
-    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -687,7 +631,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     :try_start_0
     iget-object p0, p0, Lcom/android/server/om/IdmapManager;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
@@ -704,7 +647,6 @@
     :catch_0
     move-exception p0
 
-    .line 147
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V

@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/am/AppExitInfoTracker;Landroid/os/Looper;)V
     .locals 1
 
-    .line 1746
     iput-object p1, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 1747
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,23 +27,19 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1752
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1792
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     goto/16 :goto_0
 
-    .line 1784
     :pswitch_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/app/ApplicationExitInfo;
 
-    .line 1785
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-static {v0}, Lcom/android/server/am/AppExitInfoTracker;->-$$Nest$fgetmLock(Lcom/android/server/am/AppExitInfoTracker;)Ljava/lang/Object;
@@ -54,18 +48,15 @@
 
     monitor-enter v0
 
-    .line 1786
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-virtual {v1, p1}, Lcom/android/server/am/AppExitInfoTracker;->handleNoteAppRecoverableCrashLocked(Landroid/app/ApplicationExitInfo;)V
 
-    .line 1787
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1788
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppExitInfoTracker;->recycleRawRecord(Landroid/app/ApplicationExitInfo;)V
@@ -75,7 +66,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1787
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -83,7 +73,6 @@
 
     throw p0
 
-    .line 1778
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
@@ -93,7 +82,6 @@
 
     monitor-enter v0
 
-    .line 1779
     :try_start_2
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
@@ -103,7 +91,6 @@
 
     invoke-static {p0, p1}, Lcom/android/server/am/AppExitInfoTracker;->-$$Nest$mperformLogToStatsdLocked(Lcom/android/server/am/AppExitInfoTracker;Landroid/app/ApplicationExitInfo;)V
 
-    .line 1780
     monitor-exit v0
 
     goto :goto_0
@@ -117,13 +104,11 @@
 
     throw p0
 
-    .line 1770
     :pswitch_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/app/ApplicationExitInfo;
 
-    .line 1771
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-static {v0}, Lcom/android/server/am/AppExitInfoTracker;->-$$Nest$fgetmLock(Lcom/android/server/am/AppExitInfoTracker;)Ljava/lang/Object;
@@ -132,18 +117,15 @@
 
     monitor-enter v0
 
-    .line 1772
     :try_start_3
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-virtual {v1, p1}, Lcom/android/server/am/AppExitInfoTracker;->handleNoteAppKillLocked(Landroid/app/ApplicationExitInfo;)V
 
-    .line 1773
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 1774
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppExitInfoTracker;->recycleRawRecord(Landroid/app/ApplicationExitInfo;)V
@@ -153,7 +135,6 @@
     :catchall_2
     move-exception p0
 
-    .line 1773
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -161,13 +142,11 @@
 
     throw p0
 
-    .line 1762
     :pswitch_3
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/app/ApplicationExitInfo;
 
-    .line 1763
     iget-object v0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-static {v0}, Lcom/android/server/am/AppExitInfoTracker;->-$$Nest$fgetmLock(Lcom/android/server/am/AppExitInfoTracker;)Ljava/lang/Object;
@@ -176,18 +155,15 @@
 
     monitor-enter v0
 
-    .line 1764
     :try_start_5
     iget-object v1, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-virtual {v1, p1}, Lcom/android/server/am/AppExitInfoTracker;->handleNoteProcessDiedLocked(Landroid/app/ApplicationExitInfo;)V
 
-    .line 1765
     monitor-exit v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 1766
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppExitInfoTracker;->recycleRawRecord(Landroid/app/ApplicationExitInfo;)V
@@ -197,7 +173,6 @@
     :catchall_3
     move-exception p0
 
-    .line 1765
     :try_start_6
     monitor-exit v0
     :try_end_6
@@ -205,7 +180,6 @@
 
     throw p0
 
-    .line 1758
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
@@ -223,7 +197,6 @@
 
     goto :goto_0
 
-    .line 1754
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$KillHandler;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 

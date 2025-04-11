@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 5994
     iput-object p1, p0, Lcom/android/server/StorageManagerService$16;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 5997
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,19 +31,16 @@
 
     const-string/jumbo v0, "mRestartSdcardBadremoveReceiver :: get Intent RESTART_OF_SDCARDBADREMOVED_HASAPK"
 
-    .line 5998
     invoke-static {p2, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p2, "com.samsung.intent.action.RESTART_OF_SDCARDBADREMOVED_HASAPK"
 
-    .line 5999
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 6000
     iget-object p0, p0, Lcom/android/server/StorageManagerService$16;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p0}, Lcom/android/server/StorageManagerService;->-$$Nest$fgetmContext(Lcom/android/server/StorageManagerService;)Landroid/content/Context;

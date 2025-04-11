@@ -20,7 +20,6 @@
 .method public final test(Lcom/android/server/am/BroadcastRecord;I)Z
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/am/BroadcastQueueModernImpl;->$r8$lambda$SxWdPIjblBw9fPfPD1Zroh1SUk8(Lcom/android/server/am/BroadcastRecord;I)Z
 
     move-result p0

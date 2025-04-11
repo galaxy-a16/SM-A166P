@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmExclusiveGroupId(Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;->mExclusiveGroupId:I
 
     return p0
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmType(Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;->mType:I
 
     return p0
@@ -31,7 +29,6 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 108
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/TunerResourceBasic$Builder;-><init>(I)V
 
     return-void
@@ -42,7 +39,6 @@
 .method public build()Lcom/android/server/tv/tunerresourcemanager/FrontendResource;
     .locals 2
 
-    .line 138
     new-instance v0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;
 
     const/4 v1, 0x0
@@ -55,7 +51,6 @@
 .method public exclusiveGroupId(I)Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;
     .locals 0
 
-    .line 127
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;->mExclusiveGroupId:I
 
     return-object p0
@@ -64,7 +59,6 @@
 .method public type(I)Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;
     .locals 0
 
-    .line 117
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;->mType:I
 
     return-object p0

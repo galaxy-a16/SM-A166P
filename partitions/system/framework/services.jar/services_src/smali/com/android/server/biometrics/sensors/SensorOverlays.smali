@@ -15,24 +15,20 @@
 .method public constructor <init>(Landroid/hardware/fingerprint/IUdfpsOverlayController;Landroid/hardware/fingerprint/ISidefpsController;Landroid/hardware/fingerprint/IUdfpsOverlay;)V
     .locals 0
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     invoke-static {p1}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlayController:Ljava/util/Optional;
 
-    .line 60
     invoke-static {p2}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mSidefpsController:Ljava/util/Optional;
 
-    .line 61
     invoke-static {p3}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p1
@@ -47,7 +43,6 @@
 .method public hide(I)V
     .locals 3
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mSidefpsController:Ljava/util/Optional;
 
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
@@ -58,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 115
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mSidefpsController:Ljava/util/Optional;
 
@@ -79,10 +73,8 @@
 
     const-string v2, "Remote exception when hiding the side-fps overlay"
 
-    .line 117
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 121
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlayController:Ljava/util/Optional;
@@ -93,7 +85,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 123
     :try_start_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlayController:Ljava/util/Optional;
 
@@ -114,10 +105,8 @@
 
     const-string v2, "Remote exception when hiding the UDFPS overlay"
 
-    .line 125
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 129
     :cond_1
     :goto_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlay:Ljava/util/Optional;
@@ -128,7 +117,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 131
     :try_start_2
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlay:Ljava/util/Optional;
 
@@ -149,7 +137,6 @@
 
     const-string p1, "Remote exception when hiding the new udfps overlay"
 
-    .line 133
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -160,7 +147,6 @@
 .method public ifUdfps(Lcom/android/server/biometrics/sensors/SensorOverlays$OverlayControllerConsumer;)V
     .locals 1
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlayController:Ljava/util/Optional;
 
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
@@ -169,7 +155,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 145
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlayController:Ljava/util/Optional;
 
@@ -192,7 +177,6 @@
 
     const-string v0, "Remote exception using overlay controller"
 
-    .line 147
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -203,7 +187,6 @@
 .method public show(IILcom/android/server/biometrics/sensors/AcquisitionClient;)V
     .locals 8
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mSidefpsController:Ljava/util/Optional;
 
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
@@ -214,7 +197,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 75
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mSidefpsController:Ljava/util/Optional;
 
@@ -235,10 +217,8 @@
 
     const-string v2, "Remote exception when showing the side-fps overlay"
 
-    .line 77
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 81
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlayController:Ljava/util/Optional;
@@ -249,12 +229,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 82
     new-instance v7, Lcom/android/server/biometrics/sensors/SensorOverlays$1;
 
     invoke-direct {v7, p0, p3}, Lcom/android/server/biometrics/sensors/SensorOverlays$1;-><init>(Lcom/android/server/biometrics/sensors/SensorOverlays;Lcom/android/server/biometrics/sensors/AcquisitionClient;)V
 
-    .line 91
     :try_start_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlayController:Ljava/util/Optional;
 
@@ -266,7 +244,6 @@
 
     check-cast v2, Landroid/hardware/fingerprint/IUdfpsOverlayController;
 
-    .line 92
     invoke-virtual {p3}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getRequestId()J
 
     move-result-wide v3
@@ -275,7 +252,6 @@
 
     move v6, p2
 
-    .line 91
     invoke-interface/range {v2 .. v7}, Landroid/hardware/fingerprint/IUdfpsOverlayController;->showUdfpsOverlay(JIILandroid/hardware/fingerprint/IUdfpsOverlayControllerCallback;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -287,10 +263,8 @@
 
     const-string v2, "Remote exception when showing the UDFPS overlay"
 
-    .line 94
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 98
     :cond_1
     :goto_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlay:Ljava/util/Optional;
@@ -301,7 +275,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 100
     :try_start_2
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorOverlays;->mUdfpsOverlay:Ljava/util/Optional;
 
@@ -326,7 +299,6 @@
 
     const-string p1, "Remote exception when showing the new UDFPS overlay"
 
-    .line 102
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2

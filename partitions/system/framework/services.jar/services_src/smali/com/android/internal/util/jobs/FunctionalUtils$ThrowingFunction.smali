@@ -15,7 +15,6 @@
 .method public apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 192
     :try_start_0
     invoke-interface {p0, p1}, Lcom/android/internal/util/jobs/FunctionalUtils$ThrowingFunction;->applyOrThrow(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -28,7 +27,6 @@
     :catch_0
     move-exception p0
 
-    .line 194
     invoke-static {p0}, Landroid/util/ExceptionUtils;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0

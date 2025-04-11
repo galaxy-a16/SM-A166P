@@ -11,15 +11,12 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService;)V
     .locals 1
 
-    .line 606
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     const-string v0, "FeatureSetting"
 
-    .line 607
     invoke-direct {p0, p1, v0}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;-><init>(Lcom/android/server/sepunion/SemGoodCatchService;Ljava/lang/String;)V
 
-    .line 608
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->on()V
 
     return-void
@@ -30,7 +27,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 721
     invoke-super {p0, p1}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;->dump(Ljava/io/PrintWriter;)V
 
     return-void
@@ -39,32 +35,26 @@
 .method public on()V
     .locals 3
 
-    .line 686
     invoke-super {p0}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;->on()V
 
-    .line 688
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 689
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo v1, "package"
 
-    .line 690
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     const-string v1, "com.samsung.android.app.goodcatch"
 
     const/4 v2, 0x0
 
-    .line 691
     invoke-virtual {v0, v1, v2}, Landroid/content/IntentFilter;->addDataSchemeSpecificPart(Ljava/lang/String;I)V
 
-    .line 692
     iget-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     invoke-static {v1}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/SemGoodCatchService;)Landroid/content/Context;
@@ -83,7 +73,6 @@
 .method public reset()V
     .locals 2
 
-    .line 677
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -94,7 +83,6 @@
 
     const/4 v0, 0x0
 
-    .line 678
     invoke-virtual {p0, v0}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;->setUri(Landroid/net/Uri;)V
 
     return-void
@@ -103,14 +91,12 @@
 .method public update()V
     .locals 10
 
-    .line 615
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;->getUri()Landroid/net/Uri;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 616
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -121,7 +107,6 @@
 
     return-void
 
-    .line 620
     :cond_0
     iget-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -133,7 +118,6 @@
 
     const/4 v1, 0x0
 
-    .line 625
     :try_start_0
     iget-object v2, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -159,7 +143,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 628
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -186,7 +169,6 @@
 
     goto :goto_0
 
-    .line 630
     :cond_1
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -206,7 +188,6 @@
     :goto_2
     if-eqz v1, :cond_9
 
-    .line 633
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v4
@@ -215,7 +196,6 @@
 
     const-string/jumbo v4, "module"
 
-    .line 634
     invoke-interface {v1, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
@@ -226,7 +206,6 @@
 
     const-string v5, "function"
 
-    .line 635
     invoke-interface {v1, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v5
@@ -237,7 +216,6 @@
 
     const-string/jumbo v6, "value"
 
-    .line 636
     invoke-interface {v1, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v6
@@ -246,7 +224,6 @@
 
     move-result-object v6
 
-    .line 638
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v7
@@ -291,7 +268,6 @@
 
     goto/16 :goto_5
 
-    .line 644
     :cond_3
     iget-object v7, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureSetting;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -320,7 +296,6 @@
 
     check-cast v8, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;
 
-    .line 645
     invoke-virtual {v8, v4, v5}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->has(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v9
@@ -329,7 +304,6 @@
 
     const-string/jumbo v7, "on"
 
-    .line 646
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -338,19 +312,16 @@
 
     if-eqz v6, :cond_5
 
-    .line 647
     invoke-virtual {v8, v5}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->isOn(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_6
 
-    .line 648
     invoke-virtual {v8, v5}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->on(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 652
     :cond_5
     invoke-virtual {v8, v5}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->isOn(Ljava/lang/String;)Z
 
@@ -358,7 +329,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 653
     invoke-virtual {v8, v5}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchClient;->off(Ljava/lang/String;)V
 
     :goto_3
@@ -367,7 +337,6 @@
     :cond_6
     if-eqz v3, :cond_2
 
-    .line 659
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -420,7 +389,6 @@
 
     goto/16 :goto_1
 
-    .line 640
     :cond_8
     :goto_5
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -439,7 +407,6 @@
     :cond_9
     if-eqz v1, :cond_a
 
-    .line 671
     :goto_6
     :try_start_1
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
@@ -456,7 +423,6 @@
     :catch_0
     move-exception p0
 
-    .line 668
     :try_start_2
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -484,7 +450,6 @@
 
     goto :goto_6
 
-    .line 673
     :cond_a
     :goto_7
     :try_start_3
@@ -495,17 +460,14 @@
     :goto_8
     if-eqz v1, :cond_b
 
-    .line 671
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 672
     :cond_b
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 673
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1

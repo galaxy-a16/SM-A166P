@@ -15,7 +15,6 @@
 
     move-object v1, p1
 
-    .line 5927
     iput-object v1, v0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     move-object v1, p2
@@ -48,10 +47,8 @@
 
     const-string/jumbo v1, "knox vpn network is created"
 
-    .line 5934
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5935
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$monKnoxVpnConnected(Lcom/android/server/connectivity/Vpn;)V
@@ -66,7 +63,6 @@
 
     const-string/jumbo v0, "knox vpn network is destroyed"
 
-    .line 5939
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -75,6 +71,5 @@
 .method public onNetworkUnwanted()V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;->$r8$lambda$as86gM0OgOdikQHy6hd26F_Rfho(Ljava/lang/String;)Ljava/util/ArrayList;

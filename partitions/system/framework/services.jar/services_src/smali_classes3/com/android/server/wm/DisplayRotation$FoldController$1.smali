@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$qQNZpwXZhw6J1EjnIx2wrs99Y1k(Lcom/android/server/wm/Task;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/DisplayRotation$FoldController$1;->lambda$run$0(Lcom/android/server/wm/Task;)Z
 
     move-result p0
@@ -27,7 +26,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayRotation$FoldController;Lcom/android/server/wm/DisplayRotation;)V
     .locals 0
 
-    .line 2087
     iput-object p1, p0, Lcom/android/server/wm/DisplayRotation$FoldController$1;->this$1:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     iput-object p2, p0, Lcom/android/server/wm/DisplayRotation$FoldController$1;->val$this$0:Lcom/android/server/wm/DisplayRotation;
@@ -40,7 +38,6 @@
 .method public static synthetic lambda$run$0(Lcom/android/server/wm/Task;)Z
     .locals 1
 
-    .line 2094
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result p0
@@ -63,7 +60,6 @@
 .method public run()V
     .locals 2
 
-    .line 2089
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController$1;->this$1:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayRotation$FoldController;->-$$Nest$fgetmDeviceState(Lcom/android/server/wm/DisplayRotation$FoldController;)Lcom/android/server/wm/DeviceStateController$DeviceState;
@@ -84,7 +80,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 2091
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation$FoldController$1;->this$1:Lcom/android/server/wm/DisplayRotation$FoldController;
 
@@ -96,7 +91,6 @@
 
     monitor-enter v0
 
-    .line 2092
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController$1;->this$1:Lcom/android/server/wm/DisplayRotation$FoldController;
 
@@ -110,24 +104,20 @@
 
     invoke-direct {v1}, Lcom/android/server/wm/DisplayRotation$FoldController$1$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 2093
     invoke-virtual {p0, v1}, Lcom/android/server/wm/WindowContainer;->getTask(Ljava/util/function/Predicate;)Lcom/android/server/wm/Task;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 2097
     invoke-virtual {p0}, Lcom/android/server/wm/TaskFragment;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 2099
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->recomputeConfiguration()V
 
-    .line 2102
     :cond_1
     monitor-exit v0
 

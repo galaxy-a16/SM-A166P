@@ -7,28 +7,24 @@
 .method public static getMetrics()Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;
     .locals 17
 
-    .line 29
     invoke-static {}, Landroid/os/Debug;->getDmabufHeapTotalExportedKb()J
 
     move-result-wide v0
 
     long-to-int v0, v0
 
-    .line 30
     invoke-static {}, Landroid/os/Debug;->getGpuTotalUsageKb()J
 
     move-result-wide v1
 
     long-to-int v1, v1
 
-    .line 31
     invoke-static {}, Landroid/os/Debug;->getGpuPrivateMemoryKb()J
 
     move-result-wide v2
 
     long-to-int v2, v2
 
-    .line 32
     invoke-static {}, Landroid/os/Debug;->getDmabufTotalExportedKb()J
 
     move-result-wide v3
@@ -39,7 +35,6 @@
 
     new-array v4, v4, [J
 
-    .line 35
     invoke-static {v4}, Landroid/os/Debug;->getMemInfo([J)V
 
     const/16 v5, 0x13
@@ -111,7 +106,6 @@
 
     add-long/2addr v8, v13
 
-    .line 56
     invoke-static {}, Landroid/os/Debug;->isVmapStack()Z
 
     move-result v13
@@ -137,7 +131,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_2
     invoke-static {v13, v1}, Ljava/lang/Math;->max(II)I
 
@@ -163,7 +156,6 @@
 
     goto :goto_0
 
-    .line 80
     :cond_4
     :goto_1
     new-instance v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;
@@ -174,28 +166,24 @@
 
     long-to-int v11, v11
 
-    .line 81
     iput v11, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->unreclaimableSlabKb:I
 
     aget-wide v11, v4, v5
 
     long-to-int v5, v11
 
-    .line 82
     iput v5, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->vmallocUsedKb:I
 
     aget-wide v5, v4, v6
 
     long-to-int v5, v5
 
-    .line 83
     iput v5, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->pageTablesKb:I
 
     aget-wide v5, v4, v14
 
     long-to-int v5, v5
 
-    .line 84
     iput v5, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->kernelStackKb:I
 
     const/16 v5, 0x8
@@ -204,21 +192,18 @@
 
     long-to-int v5, v5
 
-    .line 85
     iput v5, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->shmemKb:I
 
     aget-wide v5, v4, v13
 
     long-to-int v11, v5
 
-    .line 86
     iput v11, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->totalKb:I
 
     aget-wide v11, v4, v7
 
     long-to-int v7, v11
 
-    .line 87
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->freeKb:I
 
     const/16 v7, 0x17
@@ -227,7 +212,6 @@
 
     long-to-int v7, v11
 
-    .line 88
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->availableKb:I
 
     const/16 v7, 0x14
@@ -236,7 +220,6 @@
 
     long-to-int v7, v11
 
-    .line 89
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->activeKb:I
 
     const/16 v7, 0x15
@@ -245,7 +228,6 @@
 
     long-to-int v7, v11
 
-    .line 90
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->inactiveKb:I
 
     const/16 v7, 0x18
@@ -254,7 +236,6 @@
 
     long-to-int v7, v11
 
-    .line 91
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->activeAnonKb:I
 
     const/16 v7, 0x19
@@ -263,7 +244,6 @@
 
     long-to-int v7, v11
 
-    .line 92
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->inactiveAnonKb:I
 
     const/16 v7, 0x1a
@@ -272,7 +252,6 @@
 
     long-to-int v7, v11
 
-    .line 93
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->activeFileKb:I
 
     const/16 v7, 0x1b
@@ -281,7 +260,6 @@
 
     long-to-int v7, v11
 
-    .line 94
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->inactiveFileKb:I
 
     const/16 v7, 0xc
@@ -290,7 +268,6 @@
 
     long-to-int v7, v11
 
-    .line 95
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->swapTotalKb:I
 
     const/16 v7, 0xd
@@ -299,7 +276,6 @@
 
     long-to-int v7, v11
 
-    .line 96
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->swapFreeKb:I
 
     const/16 v7, 0x1c
@@ -308,7 +284,6 @@
 
     long-to-int v7, v11
 
-    .line 97
     iput v7, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->cmaTotalKb:I
 
     const/16 v7, 0x1d
@@ -317,26 +292,20 @@
 
     long-to-int v4, v11
 
-    .line 98
     iput v4, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->cmaFreeKb:I
 
-    .line 99
     iput v0, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->totalIonKb:I
 
-    .line 100
     iput v1, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->gpuTotalUsageKb:I
 
-    .line 101
     iput v2, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->gpuPrivateAllocationsKb:I
 
-    .line 102
     iput v3, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->dmaBufTotalExportedKb:I
 
     sub-long/2addr v5, v8
 
     long-to-int v0, v5
 
-    .line 103
     iput v0, v10, Lcom/android/server/stats/pull/SystemMemoryUtil$Metrics;->unaccountedKb:I
 
     return-object v10

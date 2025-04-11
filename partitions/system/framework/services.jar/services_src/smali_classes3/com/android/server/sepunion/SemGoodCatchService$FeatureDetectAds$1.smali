@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;)V
     .locals 0
 
-    .line 785
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -26,12 +25,10 @@
 
     if-eqz p3, :cond_0
 
-    .line 790
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     invoke-static {p1, p2}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;->-$$Nest$fputmForegroundUid(Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;I)V
 
-    .line 791
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     invoke-static {p1}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;->-$$Nest$fgetmForegroundUid(Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;)I
@@ -46,7 +43,6 @@
 
     aget-object v2, p1, p2
 
-    .line 793
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     invoke-static {p1}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;->-$$Nest$misActiveState(Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;)Z
@@ -69,7 +65,6 @@
 
     if-eq p1, p2, :cond_0
 
-    .line 794
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -106,7 +101,6 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 795
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     invoke-static {p0}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;->-$$Nest$fgetmSemGoodCatchManager(Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;)Lcom/samsung/android/sepunion/SemGoodCatchManager;
@@ -130,13 +124,11 @@
 .method public onForegroundServicesChanged(III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onProcessDied(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method

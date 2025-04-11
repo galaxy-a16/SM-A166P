@@ -21,24 +21,18 @@
 .method public constructor <init>(Lcom/android/server/stats/pull/StatsPullAtomService;Ljava/lang/String;Ljava/lang/String;Landroid/app/AppOpsManager$HistoricalOp;I)V
     .locals 0
 
-    .line 3820
     iput-object p1, p0, Lcom/android/server/stats/pull/StatsPullAtomService$AppOpEntry;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3821
     iput-object p2, p0, Lcom/android/server/stats/pull/StatsPullAtomService$AppOpEntry;->mPackageName:Ljava/lang/String;
 
-    .line 3822
     iput-object p3, p0, Lcom/android/server/stats/pull/StatsPullAtomService$AppOpEntry;->mAttributionTag:Ljava/lang/String;
 
-    .line 3823
     iput p5, p0, Lcom/android/server/stats/pull/StatsPullAtomService$AppOpEntry;->mUid:I
 
-    .line 3824
     iput-object p4, p0, Lcom/android/server/stats/pull/StatsPullAtomService$AppOpEntry;->mOp:Landroid/app/AppOpsManager$HistoricalOp;
 
-    .line 3825
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result p1

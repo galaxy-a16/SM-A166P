@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 50
     new-instance v0, Lcom/android/server/wm/InputConfigAdapter$FlagMapping;
 
     const/4 v1, 0x1
@@ -48,14 +47,12 @@
 
     sput-object v0, Lcom/android/server/wm/InputConfigAdapter;->INPUT_FEATURE_TO_CONFIG_MAP:Ljava/util/List;
 
-    .line 63
     invoke-static {v0}, Lcom/android/server/wm/InputConfigAdapter;->computeMask(Ljava/util/List;)I
 
     move-result v0
 
     sput v0, Lcom/android/server/wm/InputConfigAdapter;->INPUT_FEATURE_TO_CONFIG_MASK:I
 
-    .line 72
     new-instance v0, Lcom/android/server/wm/InputConfigAdapter$FlagMapping;
 
     const/16 v3, 0x8
@@ -92,7 +89,6 @@
 
     sput-object v0, Lcom/android/server/wm/InputConfigAdapter;->LAYOUT_PARAM_FLAG_TO_CONFIG_MAP:Ljava/util/List;
 
-    .line 88
     invoke-static {v0}, Lcom/android/server/wm/InputConfigAdapter;->computeMask(Ljava/util/List;)I
 
     move-result v0
@@ -105,7 +101,6 @@
 .method public static applyMapping(ILjava/util/List;)I
     .locals 5
 
-    .line 121
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -128,7 +123,6 @@
 
     check-cast v2, Lcom/android/server/wm/InputConfigAdapter$FlagMapping;
 
-    .line 122
     iget v3, v2, Lcom/android/server/wm/InputConfigAdapter$FlagMapping;->mFlag:I
 
     and-int/2addr v3, p0
@@ -142,13 +136,11 @@
     :cond_1
     move v3, v0
 
-    .line 123
     :goto_1
     iget-boolean v4, v2, Lcom/android/server/wm/InputConfigAdapter$FlagMapping;->mInverted:Z
 
     if-eq v3, v4, :cond_0
 
-    .line 124
     iget v2, v2, Lcom/android/server/wm/InputConfigAdapter$FlagMapping;->mInputConfig:I
 
     or-int/2addr v1, v2
@@ -162,7 +154,6 @@
 .method public static computeMask(Ljava/util/List;)I
     .locals 2
 
-    .line 133
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -182,7 +173,6 @@
 
     check-cast v1, Lcom/android/server/wm/InputConfigAdapter$FlagMapping;
 
-    .line 134
     iget v1, v1, Lcom/android/server/wm/InputConfigAdapter$FlagMapping;->mInputConfig:I
 
     or-int/2addr v0, v1
@@ -207,11 +197,9 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 113
     :goto_0
     sget-object v0, Lcom/android/server/wm/InputConfigAdapter;->LAYOUT_PARAM_FLAG_TO_CONFIG_MAP:Ljava/util/List;
 
-    .line 114
     invoke-static {p1, v0}, Lcom/android/server/wm/InputConfigAdapter;->applyMapping(ILjava/util/List;)I
 
     move-result p1
@@ -220,7 +208,6 @@
 
     sget-object p1, Lcom/android/server/wm/InputConfigAdapter;->INPUT_FEATURE_TO_CONFIG_MAP:Ljava/util/List;
 
-    .line 115
     invoke-static {p2, p1}, Lcom/android/server/wm/InputConfigAdapter;->applyMapping(ILjava/util/List;)I
 
     move-result p1
@@ -233,7 +220,6 @@
 .method public static getMask()I
     .locals 2
 
-    .line 96
     sget v0, Lcom/android/server/wm/InputConfigAdapter;->LAYOUT_PARAM_FLAG_TO_CONFIG_MASK:I
 
     sget v1, Lcom/android/server/wm/InputConfigAdapter;->INPUT_FEATURE_TO_CONFIG_MASK:I

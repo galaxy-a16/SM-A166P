@@ -20,7 +20,6 @@
 .method public final produce(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p3, Landroid/content/ComponentName;
 
     invoke-static {p1, p2, p3}, Lcom/android/server/pm/PackageManagerService;->$r8$lambda$vzfp4ye5cwA7HmLXpxCepleDRmM(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;Landroid/content/ComponentName;)Lcom/android/server/pm/InstantAppResolverConnection;

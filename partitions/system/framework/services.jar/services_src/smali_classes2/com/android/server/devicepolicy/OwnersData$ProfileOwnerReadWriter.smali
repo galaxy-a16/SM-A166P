@@ -13,17 +13,14 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/OwnersData;I)V
     .locals 0
 
-    .line 479
     iput-object p1, p0, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;->this$0:Lcom/android/server/devicepolicy/OwnersData;
 
-    .line 480
     invoke-virtual {p1, p2}, Lcom/android/server/devicepolicy/OwnersData;->getProfileOwnerFile(I)Ljava/io/File;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;-><init>(Ljava/io/File;)V
 
-    .line 481
     iput p2, p0, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;->mUserId:I
 
     return-void
@@ -42,7 +39,6 @@
 
     return v1
 
-    .line 502
     :cond_0
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
@@ -54,7 +50,6 @@
 
     if-nez p2, :cond_1
 
-    .line 507
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,7 +72,6 @@
 
     return p0
 
-    .line 504
     :cond_1
     iget-object p2, p0, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;->this$0:Lcom/android/server/devicepolicy/OwnersData;
 
@@ -101,7 +95,6 @@
 .method public shouldWrite()Z
     .locals 1
 
-    .line 486
     iget-object v0, p0, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;->this$0:Lcom/android/server/devicepolicy/OwnersData;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
@@ -132,7 +125,6 @@
 .method public writeInner(Lcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 1
 
-    .line 491
     iget-object v0, p0, Lcom/android/server/devicepolicy/OwnersData$ProfileOwnerReadWriter;->this$0:Lcom/android/server/devicepolicy/OwnersData;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
@@ -153,7 +145,6 @@
 
     const-string/jumbo v0, "profile-owner"
 
-    .line 493
     invoke-virtual {p0, p1, v0}, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;->writeToXml(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;)V
 
     :cond_0

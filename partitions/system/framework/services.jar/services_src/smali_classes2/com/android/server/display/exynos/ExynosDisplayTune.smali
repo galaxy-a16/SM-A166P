@@ -53,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$mgetCalibXMLPath(Lcom/android/server/display/exynos/ExynosDisplayTune;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getCalibXMLPath()Ljava/lang/String;
 
     move-result-object p0
@@ -64,12 +63,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "eng"
 
-    .line 30
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,100 +77,80 @@
 
     const-string v0, "/sys/class/dqe/dqe/gamma_ext"
 
-    .line 32
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->GAMMA_EXT_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/gamma"
 
-    .line 33
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->GAMMA_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/degamma_ext"
 
-    .line 34
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->DEGAMMA_EXT_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/degamma"
 
-    .line 35
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->DEGAMMA_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/hsc"
 
-    .line 36
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->HSC_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/cgc17_idx"
 
-    .line 38
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC17_IDX_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/cgc17_enc"
 
-    .line 39
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC17_ENC_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/cgc17_dec"
 
-    .line 40
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC17_DEC_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/cgc17_con"
 
-    .line 41
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC17_CON_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/gamma_matrix"
 
-    .line 43
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->GAMMA_MATRIX_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/cgc_dither"
 
-    .line 44
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC_DITHER_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/hsc48_idx"
 
-    .line 46
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->HSC48_IDX_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/hsc48_lcg"
 
-    .line 47
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->HSC48_LCG_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/scl"
 
-    .line 48
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->SCL_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "/sys/class/dqe/dqe/de"
 
-    .line 49
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->DE_SYSFS_PATH:Ljava/lang/String;
 
     const-string v0, "0"
 
-    .line 51
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->EXTENSION_OFF:Ljava/lang/String;
 
     const-string v0, "1"
 
-    .line 52
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->EXTENSION_ON:Ljava/lang/String;
 
     const-wide/16 v0, 0x3e8
 
-    .line 55
     iput-wide v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->mDelayMs:J
 
-    .line 56
     iput-wide v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->mPeriodMs:J
 
     const-string v0, "/data/dqe/calib_data.xml"
 
-    .line 58
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CALIB_DATA_XML_PATH:Ljava/lang/String;
 
     return-void
@@ -184,7 +161,6 @@
 .method public enableTuneDQE(Z)V
     .locals 2
 
-    .line 412
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,7 +181,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 414
     invoke-virtual {p0}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getCalibXMLPath()Ljava/lang/String;
 
     move-result-object p1
@@ -223,16 +198,13 @@
 
     if-eqz p1, :cond_0
 
-    .line 85
     invoke-virtual {p0}, Lcom/android/server/display/exynos/ExynosDisplayTune;->startTuneTimer()V
 
     goto :goto_0
 
-    .line 88
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/display/exynos/ExynosDisplayTune;->stopTuneTimer()V
 
-    .line 90
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -258,7 +230,6 @@
 .method public final getCalibXMLPath()Ljava/lang/String;
     .locals 0
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CALIB_DATA_XML_PATH:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->getPathWithPanel(Ljava/lang/String;)Ljava/lang/String;
@@ -273,7 +244,6 @@
 
     const/4 p0, 0x0
 
-    .line 125
     :try_start_0
     invoke-static {p1, p2, p3, p0, p0}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
@@ -283,7 +253,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 126
     array-length v2, v0
 
     if-ge v2, v1, :cond_1
@@ -291,21 +260,18 @@
     :cond_0
     const/16 v0, 0xa
 
-    .line 127
     invoke-static {p1, p2, p3, v0, p0}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 128
     array-length p1, v0
 
     if-ge p1, v1, :cond_1
 
     goto :goto_0
 
-    .line 132
     :cond_1
     aget-object p1, v0, p0
 
@@ -315,7 +281,6 @@
 
     move-result-object p1
 
-    .line 133
     aget-object p1, p1, p0
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -333,7 +298,6 @@
     :catch_0
     move-exception p1
 
-    .line 136
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -348,7 +312,6 @@
     :try_start_0
     const-string/jumbo v0, "version"
 
-    .line 102
     invoke-static {p1, v0}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserXMLNodeText(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
@@ -359,7 +322,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 104
     :try_start_1
     array-length v1, p1
 
@@ -372,10 +334,8 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 109
     aget-object p0, p1, v1
 
-    .line 110
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,7 +358,6 @@
     :goto_0
     const-string/jumbo p1, "xml version not found"
 
-    .line 105
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -408,7 +367,6 @@
     :catch_0
     move-exception p1
 
-    .line 113
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -440,7 +398,6 @@
 
     const-string v10, "degamma"
 
-    .line 187
     invoke-static/range {p1 .. p1}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->existFile(Ljava/lang/String;)Z
 
     move-result v11
@@ -449,7 +406,6 @@
 
     return-void
 
-    .line 190
     :cond_0
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getXMLVersion(Ljava/lang/String;)Ljava/lang/String;
 
@@ -459,7 +415,6 @@
 
     return-void
 
-    .line 193
     :cond_1
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -489,7 +444,6 @@
 
     invoke-static {v13, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
 
     move-result v11
@@ -500,7 +454,6 @@
 
     move v14, v12
 
-    .line 199
     :goto_0
     sget-object v15, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->max:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -510,21 +463,18 @@
 
     if-ge v14, v15, :cond_2
 
-    .line 200
     aput v12, v11, v14
 
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_0
 
-    .line 207
     :cond_2
     :try_start_0
     invoke-virtual {v0, v1, v2, v8}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getItemEnable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v14
 
-    .line 208
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -545,7 +495,6 @@
 
     if-lez v14, :cond_3
 
-    .line 210
     sget-object v14, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc_dither:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v14}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -554,13 +503,11 @@
 
     aput v12, v11, v14
 
-    .line 212
     :cond_3
     invoke-virtual {v0, v1, v2, v10}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getItemEnable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v14
 
-    .line 213
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -579,7 +526,6 @@
 
     if-lez v14, :cond_4
 
-    .line 215
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->degamma:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -590,13 +536,11 @@
 
     aput v14, v11, v12
 
-    .line 217
     :cond_4
     invoke-virtual {v0, v1, v2, v9}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getItemEnable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v12
 
-    .line 218
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -615,7 +559,6 @@
 
     if-lez v12, :cond_5
 
-    .line 220
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->gamma:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -626,13 +569,11 @@
 
     aput v14, v11, v12
 
-    .line 222
     :cond_5
     invoke-virtual {v0, v1, v2, v7}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getItemEnable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v12
 
-    .line 223
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -651,7 +592,6 @@
 
     if-lez v12, :cond_6
 
-    .line 225
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->gamma_matrix:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -662,13 +602,11 @@
 
     aput v14, v11, v12
 
-    .line 227
     :cond_6
     invoke-virtual {v0, v1, v2, v6}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getItemEnable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v12
 
-    .line 228
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -687,7 +625,6 @@
 
     if-lez v12, :cond_8
 
-    .line 230
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->hsc48_lcg_s:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -705,7 +642,6 @@
 
     const/4 v14, 0x1
 
-    .line 231
     aput v14, v11, v12
 
     add-int/lit8 v12, v12, 0x1
@@ -715,7 +651,6 @@
     :cond_7
     const/4 v14, 0x1
 
-    .line 232
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->hsc:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -724,13 +659,11 @@
 
     aput v14, v11, v12
 
-    .line 235
     :cond_8
     invoke-virtual {v0, v1, v2, v5}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getItemEnable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v12
 
-    .line 236
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -749,7 +682,6 @@
 
     if-lez v12, :cond_9
 
-    .line 238
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->scl:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -760,13 +692,11 @@
 
     aput v14, v11, v12
 
-    .line 240
     :cond_9
     invoke-virtual {v0, v1, v2, v4}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getItemEnable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v12
 
-    .line 241
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -785,7 +715,6 @@
 
     if-lez v12, :cond_b
 
-    .line 243
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc17_enc_s:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -803,7 +732,6 @@
 
     const/4 v14, 0x1
 
-    .line 244
     aput v14, v11, v12
 
     add-int/lit8 v12, v12, 0x1
@@ -813,7 +741,6 @@
     :cond_a
     const/4 v14, 0x1
 
-    .line 245
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc17_dec:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -822,7 +749,6 @@
 
     aput v14, v11, v12
 
-    .line 246
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc17_con:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -831,13 +757,11 @@
 
     aput v14, v11, v12
 
-    .line 249
     :cond_b
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/display/exynos/ExynosDisplayTune;->getItemEnable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v12
 
-    .line 250
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -856,7 +780,6 @@
 
     if-lez v12, :cond_c
 
-    .line 252
     sget-object v12, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->de:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v12}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -870,7 +793,6 @@
     :cond_c
     const/4 v12, 0x0
 
-    .line 254
     :goto_3
     sget-object v14, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->max:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -880,10 +802,8 @@
 
     if-ge v12, v14, :cond_25
 
-    .line 255
     aget v14, v11, v12
 
-    .line 257
     sget-object v15, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->none:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v15}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -909,7 +829,6 @@
 
     goto/16 :goto_9
 
-    .line 260
     :cond_f
     sget-object v15, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc_dither:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -921,14 +840,12 @@
 
     const/4 v14, 0x0
 
-    .line 261
     invoke-static {v1, v2, v8, v14, v14}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v15
 
     if-eqz v15, :cond_11
 
-    .line 263
     array-length v14, v15
 
     move-object/from16 v16, v8
@@ -939,10 +856,8 @@
 
     const/4 v8, 0x0
 
-    .line 264
     aget-object v14, v15, v8
 
-    .line 265
     iget-object v8, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC_DITHER_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v8, v14}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
@@ -977,7 +892,6 @@
     :cond_12
     move-object/from16 v16, v8
 
-    .line 269
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->degamma:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v8}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -988,14 +902,12 @@
 
     const/4 v8, 0x0
 
-    .line 272
     invoke-static {v1, v2, v10, v8, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v14
 
     if-eqz v14, :cond_13
 
-    .line 274
     array-length v15, v14
 
     move-object/from16 v18, v11
@@ -1004,10 +916,8 @@
 
     if-lt v15, v11, :cond_14
 
-    .line 275
     aget-object v11, v14, v8
 
-    .line 276
     iget-object v8, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->EXTENSION_OFF:Ljava/lang/String;
 
     invoke-virtual {v0, v11, v8}, Lcom/android/server/display/exynos/ExynosDisplayTune;->sysfsWriteDegamma(Ljava/lang/String;Ljava/lang/String;)V
@@ -1022,48 +932,40 @@
 
     const/4 v11, 0x0
 
-    .line 280
     invoke-static {v1, v2, v10, v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_15
 
-    .line 282
     array-length v14, v8
 
     const/4 v15, 0x1
 
     if-lt v14, v15, :cond_15
 
-    .line 283
     aget-object v8, v8, v11
 
-    .line 284
     iget-object v14, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->EXTENSION_OFF:Ljava/lang/String;
 
     invoke-virtual {v0, v8, v14}, Lcom/android/server/display/exynos/ExynosDisplayTune;->sysfsWriteDegamma(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v8, 0x8
 
-    .line 286
     invoke-static {v1, v2, v10, v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_15
 
-    .line 288
     array-length v14, v8
 
     const/4 v15, 0x1
 
     if-lt v14, v15, :cond_15
 
-    .line 289
     aget-object v8, v8, v11
 
-    .line 290
     iget-object v11, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->EXTENSION_ON:Ljava/lang/String;
 
     invoke-virtual {v0, v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayTune;->sysfsWriteDegamma(Ljava/lang/String;Ljava/lang/String;)V
@@ -1077,7 +979,6 @@
     :cond_16
     move-object/from16 v18, v11
 
-    .line 295
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->gamma:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v8}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -1088,24 +989,20 @@
 
     const/4 v8, 0x0
 
-    .line 298
     invoke-static {v1, v2, v9, v8, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v11
 
     if-eqz v11, :cond_17
 
-    .line 300
     array-length v14, v11
 
     const/4 v15, 0x1
 
     if-lt v14, v15, :cond_17
 
-    .line 301
     aget-object v11, v11, v8
 
-    .line 302
     iget-object v8, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->EXTENSION_OFF:Ljava/lang/String;
 
     invoke-virtual {v0, v11, v8}, Lcom/android/server/display/exynos/ExynosDisplayTune;->sysfsWriteGamma(Ljava/lang/String;Ljava/lang/String;)V
@@ -1117,55 +1014,46 @@
 
     const/4 v11, 0x0
 
-    .line 306
     invoke-static {v1, v2, v9, v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_15
 
-    .line 308
     array-length v14, v8
 
     const/4 v15, 0x1
 
     if-lt v14, v15, :cond_15
 
-    .line 309
     aget-object v8, v8, v11
 
-    .line 310
     iget-object v14, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->EXTENSION_OFF:Ljava/lang/String;
 
     invoke-virtual {v0, v8, v14}, Lcom/android/server/display/exynos/ExynosDisplayTune;->sysfsWriteGamma(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v8, 0x8
 
-    .line 312
     invoke-static {v1, v2, v9, v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_15
 
-    .line 314
     array-length v14, v8
 
     const/4 v15, 0x1
 
     if-lt v14, v15, :cond_15
 
-    .line 315
     aget-object v8, v8, v11
 
-    .line 316
     iget-object v11, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->EXTENSION_ON:Ljava/lang/String;
 
     invoke-virtual {v0, v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayTune;->sysfsWriteGamma(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_8
 
-    .line 321
     :cond_18
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->gamma_matrix:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -1177,24 +1065,20 @@
 
     const/4 v8, 0x0
 
-    .line 322
     invoke-static {v1, v2, v7, v8, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v11
 
     if-eqz v11, :cond_1a
 
-    .line 324
     array-length v14, v11
 
     const/4 v15, 0x1
 
     if-lt v14, v15, :cond_19
 
-    .line 325
     aget-object v11, v11, v8
 
-    .line 326
     iget-object v8, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->GAMMA_MATRIX_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1217,7 +1101,6 @@
 
     goto/16 :goto_6
 
-    .line 329
     :cond_1b
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->hsc48_lcg_e:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -1231,7 +1114,6 @@
 
     if-ne v14, v8, :cond_1c
 
-    .line 331
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->hsc48_lcg_s:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v8}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -1244,36 +1126,30 @@
 
     const/4 v14, 0x0
 
-    .line 332
     invoke-static {v1, v2, v11, v8, v14}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v11
 
     if-eqz v11, :cond_15
 
-    .line 334
     array-length v15, v11
 
     const/4 v14, 0x1
 
     if-lt v15, v14, :cond_15
 
-    .line 335
     invoke-static {v8}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v8
 
     const/4 v14, 0x0
 
-    .line 336
     aget-object v11, v11, v14
 
-    .line 337
     iget-object v14, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->HSC48_IDX_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v14, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 338
     iget-object v8, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->HSC48_LCG_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1287,7 +1163,6 @@
 
     goto/16 :goto_7
 
-    .line 342
     :cond_1d
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->hsc:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -1299,31 +1174,26 @@
 
     const/4 v8, 0x0
 
-    .line 343
     invoke-static {v1, v2, v6, v8, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v11
 
     if-eqz v11, :cond_1a
 
-    .line 345
     array-length v14, v11
 
     const/4 v15, 0x1
 
     if-lt v14, v15, :cond_19
 
-    .line 346
     aget-object v11, v11, v8
 
-    .line 347
     iget-object v8, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->HSC_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
 
     goto/16 :goto_8
 
-    .line 350
     :cond_1e
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->scl:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -1335,31 +1205,26 @@
 
     const/4 v8, 0x0
 
-    .line 351
     invoke-static {v1, v2, v5, v8, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v11
 
     if-eqz v11, :cond_1a
 
-    .line 353
     array-length v14, v11
 
     const/4 v15, 0x1
 
     if-lt v14, v15, :cond_19
 
-    .line 354
     aget-object v11, v11, v8
 
-    .line 355
     iget-object v8, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->SCL_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v8, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
 
     goto/16 :goto_8
 
-    .line 359
     :cond_1f
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc17_enc_e:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -1373,7 +1238,6 @@
 
     if-ne v14, v8, :cond_1c
 
-    .line 361
     sget-object v8, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc17_enc_s:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v8}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -1384,7 +1248,6 @@
 
     div-int/lit8 v11, v11, 0x11
 
-    .line 362
     invoke-virtual {v8}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
 
     move-result v8
@@ -1395,14 +1258,12 @@
 
     const-string v14, "cgc17_enc"
 
-    .line 364
     invoke-static {v1, v2, v14, v11, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v14
 
     if-eqz v14, :cond_15
 
-    .line 366
     array-length v15, v14
 
     move-object/from16 v17, v5
@@ -1411,7 +1272,6 @@
 
     if-lt v15, v5, :cond_d
 
-    .line 367
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1438,15 +1298,12 @@
 
     const/4 v8, 0x0
 
-    .line 368
     aget-object v11, v14, v8
 
-    .line 370
     iget-object v8, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC17_IDX_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v8, v5}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 371
     iget-object v5, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC17_ENC_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v5, v11}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1456,7 +1313,6 @@
     :cond_20
     move-object/from16 v17, v5
 
-    .line 375
     sget-object v5, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc17_dec:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v5}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
@@ -1469,7 +1325,6 @@
 
     if-ne v14, v5, :cond_21
 
-    .line 377
     iget-object v5, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC17_DEC_SYSFS_PATH:Ljava/lang/String;
 
     const-string v8, "7"
@@ -1483,7 +1338,6 @@
 
     goto/16 :goto_7
 
-    .line 380
     :cond_22
     sget-object v5, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc17_con:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -1495,31 +1349,26 @@
 
     const/4 v5, 0x0
 
-    .line 381
     invoke-static {v1, v2, v4, v5, v5}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_e
 
-    .line 383
     array-length v11, v8
 
     const/4 v14, 0x1
 
     if-lt v11, v14, :cond_24
 
-    .line 384
     aget-object v8, v8, v5
 
-    .line 385
     iget-object v5, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->CGC17_CON_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v5, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
 
     goto/16 :goto_5
 
-    .line 388
     :cond_23
     sget-object v5, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->de:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
@@ -1531,24 +1380,20 @@
 
     const/4 v5, 0x0
 
-    .line 389
     invoke-static {v1, v2, v3, v5, v5}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->parserFactoryXMLText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_e
 
-    .line 391
     array-length v11, v8
 
     const/4 v14, 0x1
 
     if-lt v11, v14, :cond_24
 
-    .line 392
     aget-object v8, v8, v5
 
-    .line 393
     iget-object v11, v0, Lcom/android/server/display/exynos/ExynosDisplayTune;->DE_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v11, v8}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1570,19 +1415,15 @@
     :catch_0
     move-exception v0
 
-    .line 401
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 404
     :cond_25
     invoke-static {}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sendEmptyUpdate()V
 
-    .line 405
     invoke-static {}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sendEmptyUpdate()V
 
     const-string/jumbo v0, "setCalibrationDQE-"
 
-    .line 407
     invoke-static {v13, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1591,19 +1432,16 @@
 .method public final startTuneTimer()V
     .locals 7
 
-    .line 65
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->mTuneTimer:Ljava/util/Timer;
 
     if-nez v0, :cond_0
 
-    .line 66
     new-instance v1, Ljava/util/Timer;
 
     invoke-direct {v1}, Ljava/util/Timer;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->mTuneTimer:Ljava/util/Timer;
 
-    .line 67
     new-instance v2, Lcom/android/server/display/exynos/ExynosDisplayTune$1;
 
     invoke-direct {v2, p0}, Lcom/android/server/display/exynos/ExynosDisplayTune$1;-><init>(Lcom/android/server/display/exynos/ExynosDisplayTune;)V
@@ -1621,17 +1459,14 @@
 .method public final stopTuneTimer()V
     .locals 1
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->mTuneTimer:Ljava/util/Timer;
 
     if-eqz v0, :cond_0
 
-    .line 78
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 79
     iput-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->mTuneTimer:Ljava/util/Timer;
 
     :cond_0
@@ -1645,12 +1480,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->DEGAMMA_EXT_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v0, p2}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 152
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->DEGAMMA_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {p0, p1}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1666,12 +1499,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->GAMMA_EXT_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {v0, p2}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune;->GAMMA_SYSFS_PATH:Ljava/lang/String;
 
     invoke-static {p0, p1}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sysfsWriteSting(Ljava/lang/String;Ljava/lang/String;)Z

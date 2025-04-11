@@ -11,13 +11,11 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 353
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     :try_start_0
     const-string v0, "SHA256"
 
-    .line 355
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -31,7 +29,6 @@
     :catch_0
     move-exception p0
 
-    .line 358
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Failed to create MessageDigest"
@@ -46,7 +43,6 @@
 .method public getDigestAsString()Ljava/lang/String;
     .locals 1
 
-    .line 364
     iget-object p0, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$MessageDigestOutputStream;->mMessageDigest:Ljava/security/MessageDigest;
 
     invoke-virtual {p0}, Ljava/security/MessageDigest;->digest()[B
@@ -65,7 +61,6 @@
 .method public write(I)V
     .locals 0
 
-    .line 369
     iget-object p0, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$MessageDigestOutputStream;->mMessageDigest:Ljava/security/MessageDigest;
 
     int-to-byte p1, p1
@@ -78,7 +73,6 @@
 .method public write([B)V
     .locals 0
 
-    .line 374
     iget-object p0, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$MessageDigestOutputStream;->mMessageDigest:Ljava/security/MessageDigest;
 
     invoke-virtual {p0, p1}, Ljava/security/MessageDigest;->update([B)V
@@ -89,7 +83,6 @@
 .method public write([BII)V
     .locals 0
 
-    .line 379
     iget-object p0, p0, Lcom/android/server/policy/role/RoleServicePlatformHelperImpl$MessageDigestOutputStream;->mMessageDigest:Ljava/security/MessageDigest;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/security/MessageDigest;->update([BII)V

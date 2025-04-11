@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 2564
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$BackKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     const/4 p1, 0x4
 
-    .line 2565
     invoke-direct {p0, p1}, Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;-><init>(I)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public onPress(JLandroid/view/KeyEvent;)V
     .locals 0
 
-    .line 2570
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getFlags()I
 
     move-result p1
@@ -40,7 +37,6 @@
 
     return-void
 
-    .line 2573
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$BackKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 

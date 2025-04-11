@@ -19,27 +19,22 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessRecord;)V
     .locals 1
 
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
-    .line 102
     iput-object p1, p0, Lcom/android/server/am/ProcessProviderRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 103
     iget-object p1, p1, Lcom/android/server/am/ProcessRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p1, p0, Lcom/android/server/am/ProcessProviderRecord;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -52,7 +47,6 @@
 .method public addProviderConnection(Lcom/android/server/am/ContentProviderConnection;)V
     .locals 0
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -63,7 +57,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;J)V
     .locals 4
 
-    .line 155
     iget-wide v0, p0, Lcom/android/server/am/ProcessProviderRecord;->mLastProviderTime:J
 
     const-wide/16 v2, 0x0
@@ -72,22 +65,18 @@
 
     if-lez v0, :cond_0
 
-    .line 156
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "lastProviderTime="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 157
     iget-wide v0, p0, Lcom/android/server/am/ProcessProviderRecord;->mLastProviderTime:J
 
     invoke-static {v0, v1, p3, p4, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 158
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 160
     :cond_0
     iget-object p3, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
@@ -101,14 +90,12 @@
 
     if-lez p3, :cond_1
 
-    .line 161
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p3, "Published Providers:"
 
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 162
     iget-object p3, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {p3}, Landroid/util/ArrayMap;->size()I
@@ -120,7 +107,6 @@
     :goto_0
     if-ge v1, p3, :cond_1
 
-    .line 163
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p1, p4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -135,7 +121,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 164
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "    -> "
@@ -154,7 +139,6 @@
 
     goto :goto_0
 
-    .line 167
     :cond_1
     iget-object p3, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
@@ -164,14 +148,12 @@
 
     if-lez p3, :cond_2
 
-    .line 168
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p3, "Connected Providers:"
 
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 169
     iget-object p3, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
     invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
@@ -181,12 +163,10 @@
     :goto_1
     if-ge v0, p3, :cond_2
 
-    .line 170
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p1, p4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 171
     iget-object v1, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -212,7 +192,6 @@
 .method public ensureProviderCapacity(I)V
     .locals 0
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->ensureCapacity(I)V
@@ -223,7 +202,6 @@
 .method public getLastProviderTime()J
     .locals 2
 
-    .line 50
     iget-wide v0, p0, Lcom/android/server/am/ProcessProviderRecord;->mLastProviderTime:J
 
     return-wide v0
@@ -232,7 +210,6 @@
 .method public getProvider(Ljava/lang/String;)Lcom/android/server/am/ContentProviderRecord;
     .locals 0
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -247,7 +224,6 @@
 .method public getProviderAt(I)Lcom/android/server/am/ContentProviderRecord;
     .locals 0
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -262,7 +238,6 @@
 .method public getProviderConnectionAt(I)Lcom/android/server/am/ContentProviderConnection;
     .locals 0
 
-    .line 90
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -277,7 +252,6 @@
 .method public hasProvider(Ljava/lang/String;)Z
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -290,7 +264,6 @@
 .method public installProvider(Ljava/lang/String;Lcom/android/server/am/ContentProviderRecord;)V
     .locals 0
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -301,7 +274,6 @@
 .method public numberOfProviderConnections()I
     .locals 0
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -314,7 +286,6 @@
 .method public numberOfProviders()I
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {p0}, Landroid/util/ArrayMap;->size()I
@@ -327,7 +298,6 @@
 .method public onCleanupApplicationRecordLocked(Z)Z
     .locals 12
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -345,7 +315,6 @@
     :goto_0
     if-ltz v0, :cond_4
 
-    .line 114
     iget-object v4, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {v4, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -354,7 +323,6 @@
 
     check-cast v4, Lcom/android/server/am/ContentProviderRecord;
 
-    .line 115
     iget-object v5, v4, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
     iget-object v6, p0, Lcom/android/server/am/ProcessProviderRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -363,7 +331,6 @@
 
     goto :goto_3
 
-    .line 119
     :cond_0
     iget-object v5, v6, Lcom/android/server/am/ProcessRecord;->mErrorState:Lcom/android/server/am/ProcessErrorStateRecord;
 
@@ -386,7 +353,6 @@
     :goto_1
     move v5, v1
 
-    .line 120
     :goto_2
     iget-object v6, p0, Lcom/android/server/am/ProcessProviderRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -394,7 +360,6 @@
 
     iget-object v7, p0, Lcom/android/server/am/ProcessProviderRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 121
     invoke-virtual {v6, v7, v4, v5}, Lcom/android/server/am/ContentProviderHelper;->removeDyingProviderLocked(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/ContentProviderRecord;Z)Z
 
     move-result v6
@@ -403,7 +368,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 122
     invoke-virtual {v4}, Lcom/android/server/am/ContentProviderRecord;->hasConnectionOrHandle()Z
 
     move-result v5
@@ -415,10 +379,8 @@
     :cond_3
     const/4 v5, 0x0
 
-    .line 128
     iput-object v5, v4, Lcom/android/server/am/ContentProviderRecord;->provider:Landroid/content/IContentProvider;
 
-    .line 129
     invoke-virtual {v4, v5}, Lcom/android/server/am/ContentProviderRecord;->setProcess(Lcom/android/server/am/ProcessRecord;)V
 
     :goto_3
@@ -426,13 +388,11 @@
 
     goto :goto_0
 
-    .line 131
     :cond_4
     iget-object p1, p0, Lcom/android/server/am/ProcessProviderRecord;->mPubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {p1}, Landroid/util/ArrayMap;->clear()V
 
-    .line 134
     iget-object p1, p0, Lcom/android/server/am/ProcessProviderRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p1, p1, Lcom/android/server/am/ActivityManagerService;->mCpHelper:Lcom/android/server/am/ContentProviderHelper;
@@ -445,7 +405,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 135
     iget-object p1, p0, Lcom/android/server/am/ProcessProviderRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p1, p1, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
@@ -456,7 +415,6 @@
 
     move v3, v1
 
-    .line 140
     :cond_5
     iget-object p1, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
@@ -466,7 +424,6 @@
 
     if-nez p1, :cond_7
 
-    .line 141
     iget-object p1, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -478,7 +435,6 @@
     :goto_4
     if-ltz p1, :cond_6
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -487,14 +443,12 @@
 
     check-cast v0, Lcom/android/server/am/ContentProviderConnection;
 
-    .line 143
     iget-object v1, v0, Lcom/android/server/am/ContentProviderConnection;->provider:Lcom/android/server/am/ContentProviderRecord;
 
     iget-object v1, v1, Lcom/android/server/am/ContentProviderRecord;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 144
     iget-object v4, p0, Lcom/android/server/am/ProcessProviderRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, p0, Lcom/android/server/am/ProcessProviderRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -523,7 +477,6 @@
 
     goto :goto_4
 
-    .line 148
     :cond_6
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
@@ -536,7 +489,6 @@
 .method public removeProviderConnection(Lcom/android/server/am/ContentProviderConnection;)Z
     .locals 0
 
-    .line 98
     iget-object p0, p0, Lcom/android/server/am/ProcessProviderRecord;->mConProviders:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -549,7 +501,6 @@
 .method public setLastProviderTime(J)V
     .locals 0
 
-    .line 54
     iput-wide p1, p0, Lcom/android/server/am/ProcessProviderRecord;->mLastProviderTime:J
 
     return-void

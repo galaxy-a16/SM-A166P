@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,12 +23,10 @@
 .method public canChangeDeviceColorMode()Z
     .locals 1
 
-    .line 143
     const-class v0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
     monitor-enter v0
 
-    .line 144
     :try_start_0
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mIsDisabled:Z
 
@@ -50,7 +47,6 @@
     :catchall_0
     move-exception p0
 
-    .line 145
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -61,12 +57,10 @@
 .method public disable()V
     .locals 4
 
-    .line 97
     const-class v0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
     monitor-enter v0
 
-    .line 98
     :try_start_0
     sget-boolean v1, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
@@ -74,7 +68,6 @@
 
     const-string v1, "FingerprintService"
 
-    .line 99
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,13 +86,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mIsDisabled:Z
 
     if-eqz v1, :cond_1
 
-    .line 102
     monitor-exit v0
 
     return-void
@@ -107,21 +98,17 @@
     :cond_1
     const/4 v1, 0x1
 
-    .line 104
     iput-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mIsDisabled:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 106
     :try_start_1
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mColorDisplayServiceInternal:Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;
 
     if-nez v1, :cond_2
 
-    .line 107
     const-class v1, Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;
 
-    .line 108
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -130,13 +117,11 @@
 
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mColorDisplayServiceInternal:Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;
 
-    .line 110
     :cond_2
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mColorDisplayServiceInternal:Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;
 
     if-eqz p0, :cond_3
 
-    .line 111
     invoke-virtual {p0}, Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;->onOpticalUdfpsStarted()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -150,7 +135,6 @@
     :try_start_2
     const-string v1, "FingerprintService"
 
-    .line 114
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,7 +155,6 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     :cond_3
     :goto_0
     monitor-exit v0
@@ -191,12 +174,10 @@
 .method public restore()V
     .locals 5
 
-    .line 120
     const-class v0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;
 
     monitor-enter v0
 
-    .line 121
     :try_start_0
     sget-boolean v1, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
@@ -204,7 +185,6 @@
 
     const-string v1, "FingerprintService"
 
-    .line 122
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -223,30 +203,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mIsDisabled:Z
 
     if-nez v1, :cond_1
 
-    .line 125
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
-    .line 128
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mColorDisplayServiceInternal:Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;
 
     if-nez v1, :cond_2
 
-    .line 129
     const-class v1, Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;
 
-    .line 130
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
@@ -255,13 +230,11 @@
 
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mColorDisplayServiceInternal:Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;
 
-    .line 132
     :cond_2
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mColorDisplayServiceInternal:Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;
 
     if-eqz v1, :cond_3
 
-    .line 133
     invoke-virtual {v1}, Lcom/android/server/display/color/ColorDisplayService$ColorDisplayServiceInternal;->onOpticalUdfpsStopped()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -275,7 +248,6 @@
     :try_start_2
     const-string v2, "FingerprintService"
 
-    .line 136
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,10 +272,8 @@
     :goto_0
     const/4 v1, 0x0
 
-    .line 138
     iput-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper$DisplayAdjustmentManager;->mIsDisabled:Z
 
-    .line 139
     monitor-exit v0
 
     return-void

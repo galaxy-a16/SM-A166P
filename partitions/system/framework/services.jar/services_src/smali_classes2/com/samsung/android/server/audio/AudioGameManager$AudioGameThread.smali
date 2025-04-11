@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/AudioGameManager;)V
     .locals 0
 
-    .line 117
     iput-object p1, p0, Lcom/samsung/android/server/audio/AudioGameManager$AudioGameThread;->this$0:Lcom/samsung/android/server/audio/AudioGameManager;
 
     const-string p1, "AudioGameThread"
 
-    .line 118
     invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public run()V
     .locals 4
 
-    .line 124
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/server/audio/AudioGameManager$AudioGameThread;->this$0:Lcom/samsung/android/server/audio/AudioGameManager;
 
@@ -39,7 +36,6 @@
 
     move-result-object v0
 
-    .line 125
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -58,7 +54,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 126
     iget-object v2, p0, Lcom/samsung/android/server/audio/AudioGameManager$AudioGameThread;->this$0:Lcom/samsung/android/server/audio/AudioGameManager;
 
     invoke-static {v2}, Lcom/samsung/android/server/audio/AudioGameManager;->-$$Nest$fgetmContext(Lcom/samsung/android/server/audio/AudioGameManager;)Landroid/content/Context;
@@ -73,7 +68,6 @@
 
     goto :goto_0
 
-    .line 128
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/server/audio/AudioGameManager$AudioGameThread;->this$0:Lcom/samsung/android/server/audio/AudioGameManager;
 
@@ -81,7 +75,6 @@
 
     invoke-virtual {v2, v1, v3}, Lcom/samsung/android/server/audio/AudioGameManager;->addGameUid(IZ)V
 
-    .line 129
     iget-object v1, p0, Lcom/samsung/android/server/audio/AudioGameManager$AudioGameThread;->this$0:Lcom/samsung/android/server/audio/AudioGameManager;
 
     invoke-static {v1}, Lcom/samsung/android/server/audio/AudioGameManager;->-$$Nest$fgetmUidList(Lcom/samsung/android/server/audio/AudioGameManager;)Ljava/util/ArrayList;
@@ -96,7 +89,6 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 133
     :cond_2
     iget-object p0, p0, Lcom/samsung/android/server/audio/AudioGameManager$AudioGameThread;->this$0:Lcom/samsung/android/server/audio/AudioGameManager;
 
@@ -109,7 +101,6 @@
     :catch_0
     move-exception p0
 
-    .line 135
     invoke-virtual {p0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     :goto_1

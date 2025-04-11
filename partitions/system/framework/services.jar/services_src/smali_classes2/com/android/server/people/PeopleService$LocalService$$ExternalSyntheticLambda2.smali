@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/people/SessionInfo;
 
     invoke-static {p1}, Lcom/android/server/people/PeopleService$LocalService;->$r8$lambda$Soypu26D3N5cN6U93d7HKnnvSL8(Lcom/android/server/people/SessionInfo;)V

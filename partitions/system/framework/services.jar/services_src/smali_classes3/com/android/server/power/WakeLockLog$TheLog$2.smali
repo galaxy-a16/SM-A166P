@@ -22,28 +22,24 @@
 .method public constructor <init>(Lcom/android/server/power/WakeLockLog$TheLog;Lcom/android/server/power/WakeLockLog$LogEntry;)V
     .locals 2
 
-    .line 834
     iput-object p1, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->this$0:Lcom/android/server/power/WakeLockLog$TheLog;
 
     iput-object p2, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->val$tempEntry:Lcom/android/server/power/WakeLockLog$LogEntry;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 835
     invoke-static {p1}, Lcom/android/server/power/WakeLockLog$TheLog;->-$$Nest$fgetmStart(Lcom/android/server/power/WakeLockLog$TheLog;)I
 
     move-result p2
 
     iput p2, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->mCurrent:I
 
-    .line 836
     invoke-static {p1}, Lcom/android/server/power/WakeLockLog$TheLog;->-$$Nest$fgetmStartTime(Lcom/android/server/power/WakeLockLog$TheLog;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->mCurrentTimeReference:J
 
-    .line 837
     invoke-static {p1}, Lcom/android/server/power/WakeLockLog$TheLog;->-$$Nest$fgetmChangeCount(Lcom/android/server/power/WakeLockLog$TheLog;)J
 
     move-result-wide p1
@@ -58,7 +54,6 @@
 .method public final checkState()V
     .locals 4
 
-    .line 881
     iget-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->mChangeValue:J
 
     iget-object v2, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->this$0:Lcom/android/server/power/WakeLockLog$TheLog;
@@ -73,7 +68,6 @@
 
     return-void
 
-    .line 882
     :cond_0
     new-instance v0, Ljava/util/ConcurrentModificationException;
 
@@ -113,10 +107,8 @@
 .method public hasNext()Z
     .locals 1
 
-    .line 845
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog$2;->checkState()V
 
-    .line 846
     iget v0, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->mCurrent:I
 
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->this$0:Lcom/android/server/power/WakeLockLog$TheLog;
@@ -141,17 +133,14 @@
 .method public next()Lcom/android/server/power/WakeLockLog$LogEntry;
     .locals 5
 
-    .line 858
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog$2;->checkState()V
 
-    .line 860
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog$2;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 864
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->this$0:Lcom/android/server/power/WakeLockLog$TheLog;
 
     iget v1, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->mCurrent:I
@@ -164,7 +153,6 @@
 
     move-result-object v0
 
-    .line 865
     iget-object v1, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->this$0:Lcom/android/server/power/WakeLockLog$TheLog;
 
     invoke-static {v1}, Lcom/android/server/power/WakeLockLog$TheLog;->-$$Nest$fgetmTranslator(Lcom/android/server/power/WakeLockLog$TheLog;)Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
@@ -183,7 +171,6 @@
 
     move-result v1
 
-    .line 866
     iget v2, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->mCurrent:I
 
     add-int/2addr v2, v1
@@ -200,14 +187,12 @@
 
     iput v2, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->mCurrent:I
 
-    .line 867
     iget-wide v1, v0, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
 
     iput-wide v1, p0, Lcom/android/server/power/WakeLockLog$TheLog$2;->mCurrentTimeReference:J
 
     return-object v0
 
-    .line 861
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -221,7 +206,6 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
-    .line 834
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog$2;->next()Lcom/android/server/power/WakeLockLog$LogEntry;
 
     move-result-object p0
@@ -232,7 +216,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 873
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

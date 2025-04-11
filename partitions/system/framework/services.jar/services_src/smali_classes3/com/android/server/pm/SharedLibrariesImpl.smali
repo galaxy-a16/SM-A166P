@@ -34,7 +34,6 @@
 .method public static synthetic $r8$lambda$fpnWoz9zAXPoOCmaucjbsg964so(Landroid/content/pm/SharedLibraryInfo;Landroid/content/pm/SharedLibraryInfo;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/pm/SharedLibrariesImpl;->lambda$executeSharedLibrariesUpdateLPw$0(Landroid/content/pm/SharedLibraryInfo;Landroid/content/pm/SharedLibraryInfo;)V
 
     return-void
@@ -43,7 +42,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWatchable(Lcom/android/server/pm/SharedLibrariesImpl;)Lcom/android/server/utils/WatchableImpl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mWatchable:Lcom/android/server/utils/WatchableImpl;
 
     return-object p0
@@ -52,37 +50,30 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/PackageManagerServiceInjector;)V
     .locals 2
 
-    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 124
     new-instance v0, Lcom/android/server/utils/WatchableImpl;
 
     invoke-direct {v0}, Lcom/android/server/utils/WatchableImpl;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mWatchable:Lcom/android/server/utils/WatchableImpl;
 
-    .line 129
     new-instance v0, Lcom/android/server/pm/SharedLibrariesImpl$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/SharedLibrariesImpl$1;-><init>(Lcom/android/server/pm/SharedLibrariesImpl;)V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mObserver:Lcom/android/server/utils/Watcher;
 
-    .line 153
     iput-object p1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 154
     iput-object p2, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
-    .line 156
     new-instance p1, Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-direct {p1}, Lcom/android/server/utils/WatchedArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
-    .line 157
     new-instance p2, Lcom/android/server/utils/SnapshotCache$Auto;
 
     const-string v1, "SharedLibrariesImpl.mSharedLibraries"
@@ -91,14 +82,12 @@
 
     iput-object p2, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibrariesSnapshot:Lcom/android/server/utils/SnapshotCache;
 
-    .line 159
     new-instance p1, Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-direct {p1}, Lcom/android/server/utils/WatchedArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackage:Lcom/android/server/utils/WatchedArrayMap;
 
-    .line 160
     new-instance p2, Lcom/android/server/utils/SnapshotCache$Auto;
 
     const-string v1, "SharedLibrariesImpl.mStaticLibsByDeclaringPackage"
@@ -107,13 +96,10 @@
 
     iput-object p2, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackageSnapshot:Lcom/android/server/utils/SnapshotCache;
 
-    .line 164
     invoke-virtual {p0}, Lcom/android/server/pm/SharedLibrariesImpl;->registerObservers()V
 
-    .line 165
     invoke-static {p0, v0}, Lcom/android/server/utils/Watchable;->verifyWatchedAttributes(Ljava/lang/Object;Lcom/android/server/utils/Watcher;)V
 
-    .line 166
     invoke-virtual {p0}, Lcom/android/server/pm/SharedLibrariesImpl;->makeCache()Lcom/android/server/utils/SnapshotCache;
 
     move-result-object p1
@@ -126,34 +112,28 @@
 .method public constructor <init>(Lcom/android/server/pm/SharedLibrariesImpl;)V
     .locals 1
 
-    .line 184
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 124
     new-instance v0, Lcom/android/server/utils/WatchableImpl;
 
     invoke-direct {v0}, Lcom/android/server/utils/WatchableImpl;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mWatchable:Lcom/android/server/utils/WatchableImpl;
 
-    .line 129
     new-instance v0, Lcom/android/server/pm/SharedLibrariesImpl$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/SharedLibrariesImpl$1;-><init>(Lcom/android/server/pm/SharedLibrariesImpl;)V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mObserver:Lcom/android/server/utils/Watcher;
 
-    .line 185
     iget-object v0, p1, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iput-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 186
     iget-object v0, p1, Lcom/android/server/pm/SharedLibrariesImpl;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     iput-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
-    .line 188
     iget-object v0, p1, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibrariesSnapshot:Lcom/android/server/utils/SnapshotCache;
 
     invoke-virtual {v0}, Lcom/android/server/utils/SnapshotCache;->snapshot()Ljava/lang/Object;
@@ -164,14 +144,12 @@
 
     iput-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
-    .line 189
     new-instance v0, Lcom/android/server/utils/SnapshotCache$Sealed;
 
     invoke-direct {v0}, Lcom/android/server/utils/SnapshotCache$Sealed;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibrariesSnapshot:Lcom/android/server/utils/SnapshotCache;
 
-    .line 190
     iget-object p1, p1, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackageSnapshot:Lcom/android/server/utils/SnapshotCache;
 
     invoke-virtual {p1}, Lcom/android/server/utils/SnapshotCache;->snapshot()Ljava/lang/Object;
@@ -182,14 +160,12 @@
 
     iput-object p1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackage:Lcom/android/server/utils/WatchedArrayMap;
 
-    .line 191
     new-instance p1, Lcom/android/server/utils/SnapshotCache$Sealed;
 
     invoke-direct {p1}, Lcom/android/server/utils/SnapshotCache$Sealed;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackageSnapshot:Lcom/android/server/utils/SnapshotCache;
 
-    .line 194
     new-instance p1, Lcom/android/server/utils/SnapshotCache$Sealed;
 
     invoke-direct {p1}, Lcom/android/server/utils/SnapshotCache$Sealed;-><init>()V
@@ -202,7 +178,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/SharedLibrariesImpl;Lcom/android/server/pm/SharedLibrariesImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/SharedLibrariesImpl;-><init>(Lcom/android/server/pm/SharedLibrariesImpl;)V
 
     return-void
@@ -219,7 +194,6 @@
 
     goto :goto_2
 
-    .line 627
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -232,7 +206,6 @@
     :goto_0
     if-ltz v1, :cond_3
 
-    .line 628
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -242,7 +215,6 @@
     :goto_1
     if-ltz v3, :cond_2
 
-    .line 629
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -279,7 +251,6 @@
 .method public static synthetic lambda$executeSharedLibrariesUpdateLPw$0(Landroid/content/pm/SharedLibraryInfo;Landroid/content/pm/SharedLibraryInfo;)V
     .locals 0
 
-    .line 581
     invoke-virtual {p0}, Landroid/content/pm/SharedLibraryInfo;->clearDependencies()V
 
     return-void
@@ -290,7 +261,6 @@
 .method public addBuiltInSharedLibraryLPw(Lcom/android/server/SystemConfig$SharedLibraryEntry;)V
     .locals 13
 
-    .line 748
     iget-object v0, p1, Lcom/android/server/SystemConfig$SharedLibraryEntry;->name:Ljava/lang/String;
 
     const-wide/16 v1, -0x1
@@ -303,7 +273,6 @@
 
     return-void
 
-    .line 752
     :cond_0
     new-instance v0, Landroid/content/pm/SharedLibraryInfo;
 
@@ -337,7 +306,6 @@
 
     invoke-direct/range {v1 .. v12}, Landroid/content/pm/SharedLibraryInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;JILandroid/content/pm/VersionedPackage;Ljava/util/List;Ljava/util/List;Z)V
 
-    .line 758
     invoke-virtual {p0, v0}, Lcom/android/server/pm/SharedLibrariesImpl;->commitSharedLibraryInfoLPw(Landroid/content/pm/SharedLibraryInfo;)V
 
     return-void
@@ -346,14 +314,12 @@
 .method public final addSharedLibraryLPr(Lcom/android/server/pm/pkg/AndroidPackage;Ljava/util/Set;Landroid/content/pm/SharedLibraryInfo;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;)V
     .locals 4
 
-    .line 503
     invoke-virtual {p3}, Landroid/content/pm/SharedLibraryInfo;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 504
     invoke-virtual {p3}, Landroid/content/pm/SharedLibraryInfo;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -362,7 +328,6 @@
 
     return-void
 
-    .line 507
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -378,7 +343,6 @@
 
     check-cast v0, Lcom/android/server/pm/pkg/AndroidPackage;
 
-    .line 508
     iget-object v1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
@@ -393,7 +357,6 @@
 
     if-eqz p4, :cond_1
 
-    .line 509
     invoke-interface {p4}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -410,7 +373,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 515
     invoke-interface {v0}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -436,14 +398,12 @@
     :goto_0
     if-eqz p4, :cond_3
 
-    .line 521
     invoke-static {p4}, Lcom/android/server/pm/parsing/pkg/AndroidPackageUtils;->getAllCodePaths(Lcom/android/server/pm/pkg/AndroidPackage;)Ljava/util/List;
 
     move-result-object p4
 
     invoke-interface {p2, p4}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 523
     new-instance p4, Lcom/android/server/pm/SharedLibrariesImpl$$ExternalSyntheticLambda1;
 
     invoke-direct {p4}, Lcom/android/server/pm/SharedLibrariesImpl$$ExternalSyntheticLambda1;-><init>()V
@@ -452,7 +412,6 @@
 
     if-eqz p5, :cond_3
 
-    .line 525
     invoke-virtual {p5}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
 
     move-result-object p0
@@ -470,21 +429,18 @@
 .method public final applyDefiningSharedLibraryUpdateLPr(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/pm/SharedLibraryInfo;Ljava/util/function/BiConsumer;)V
     .locals 3
 
-    .line 463
     invoke-static {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackageUtils;->isLibrary(Lcom/android/server/pm/pkg/AndroidPackage;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 464
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSdkLibraryName()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 466
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSdkLibraryName()Ljava/lang/String;
 
     move-result-object v0
@@ -495,19 +451,16 @@
 
     int-to-long v1, p1
 
-    .line 465
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/pm/SharedLibrariesImpl;->getSharedLibraryInfo(Ljava/lang/String;J)Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    .line 468
     invoke-interface {p3, p0, p2}, Ljava/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 470
     :cond_0
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getStaticSharedLibraryName()Ljava/lang/String;
 
@@ -515,7 +468,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 472
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getStaticSharedLibraryName()Ljava/lang/String;
 
     move-result-object v0
@@ -524,19 +476,16 @@
 
     move-result-wide v1
 
-    .line 471
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/pm/SharedLibrariesImpl;->getSharedLibraryInfo(Ljava/lang/String;J)Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    .line 474
     invoke-interface {p3, p0, p2}, Ljava/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 477
     :cond_1
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getLibraryNames()Ljava/util/List;
 
@@ -562,14 +511,12 @@
 
     const-wide/16 v1, -0x1
 
-    .line 478
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/pm/SharedLibrariesImpl;->getSharedLibraryInfo(Ljava/lang/String;J)Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 481
     invoke-interface {p3, v0, p2}, Ljava/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_0
@@ -591,14 +538,12 @@
     :cond_0
     move-object v12, p0
 
-    .line 917
     iget-object v1, v12, Lcom/android/server/pm/SharedLibrariesImpl;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     invoke-virtual {v1}, Lcom/android/server/pm/PackageManagerServiceInjector;->getCompatibility()Lcom/android/server/compat/PlatformCompat;
 
     move-result-object v13
 
-    .line 922
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesLibraries()Ljava/util/List;
 
     move-result-object v1
@@ -609,7 +554,6 @@
 
     if-nez v1, :cond_1
 
-    .line 923
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesLibraries()Ljava/util/List;
 
     move-result-object v2
@@ -618,7 +562,6 @@
 
     const/4 v4, 0x0
 
-    .line 924
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -639,7 +582,6 @@
 
     move-object/from16 v11, p3
 
-    .line 923
     invoke-virtual/range {v1 .. v11}, Lcom/android/server/pm/SharedLibrariesImpl;->collectSharedLibraryInfos(Ljava/util/List;[J[[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/util/ArrayList;Ljava/util/Map;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -647,7 +589,6 @@
     :cond_1
     move-object v9, v0
 
-    .line 927
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesStaticLibraries()Ljava/util/List;
 
     move-result-object v0
@@ -658,12 +599,10 @@
 
     if-nez v0, :cond_2
 
-    .line 928
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesStaticLibraries()Ljava/util/List;
 
     move-result-object v2
 
-    .line 929
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesStaticLibrariesVersions()[J
 
     move-result-object v3
@@ -672,7 +611,6 @@
 
     move-result-object v4
 
-    .line 930
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -691,14 +629,12 @@
 
     move-object/from16 v11, p3
 
-    .line 928
     invoke-virtual/range {v1 .. v11}, Lcom/android/server/pm/SharedLibrariesImpl;->collectSharedLibraryInfos(Ljava/util/List;[J[[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/util/ArrayList;Ljava/util/Map;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     move-object v9, v0
 
-    .line 933
     :cond_2
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesOptionalLibraries()Ljava/util/List;
 
@@ -710,7 +646,6 @@
 
     if-nez v0, :cond_3
 
-    .line 934
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesOptionalLibraries()Ljava/util/List;
 
     move-result-object v2
@@ -719,7 +654,6 @@
 
     const/4 v4, 0x0
 
-    .line 935
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -738,14 +672,12 @@
 
     move-object/from16 v11, p3
 
-    .line 934
     invoke-virtual/range {v1 .. v11}, Lcom/android/server/pm/SharedLibrariesImpl;->collectSharedLibraryInfos(Ljava/util/List;[J[[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/util/ArrayList;Ljava/util/Map;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     move-object v9, v0
 
-    .line 939
     :cond_3
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
@@ -757,14 +689,12 @@
 
     const-wide/32 v2, 0x879a9f0
 
-    .line 938
     invoke-virtual {v13, v2, v3, v0, v1}, Lcom/android/server/compat/PlatformCompat;->isChangeEnabledInternal(JLjava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 940
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesNativeLibraries()Ljava/util/List;
 
     move-result-object v0
@@ -775,7 +705,6 @@
 
     if-nez v0, :cond_4
 
-    .line 941
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesNativeLibraries()Ljava/util/List;
 
     move-result-object v2
@@ -784,7 +713,6 @@
 
     const/4 v4, 0x0
 
-    .line 942
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -793,7 +721,6 @@
 
     const/4 v7, 0x1
 
-    .line 943
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result v8
@@ -804,14 +731,12 @@
 
     move-object/from16 v11, p3
 
-    .line 941
     invoke-virtual/range {v1 .. v11}, Lcom/android/server/pm/SharedLibrariesImpl;->collectSharedLibraryInfos(Ljava/util/List;[J[[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/util/ArrayList;Ljava/util/Map;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     move-object v9, v0
 
-    .line 946
     :cond_4
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesOptionalNativeLibraries()Ljava/util/List;
 
@@ -823,7 +748,6 @@
 
     if-nez v0, :cond_5
 
-    .line 947
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesOptionalNativeLibraries()Ljava/util/List;
 
     move-result-object v2
@@ -832,7 +756,6 @@
 
     const/4 v4, 0x0
 
-    .line 948
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -841,7 +764,6 @@
 
     const/4 v7, 0x0
 
-    .line 949
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result v8
@@ -852,14 +774,12 @@
 
     move-object/from16 v11, p3
 
-    .line 947
     invoke-virtual/range {v1 .. v11}, Lcom/android/server/pm/SharedLibrariesImpl;->collectSharedLibraryInfos(Ljava/util/List;[J[[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/util/ArrayList;Ljava/util/Map;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     move-object v9, v0
 
-    .line 953
     :cond_5
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesSdkLibraries()Ljava/util/List;
 
@@ -871,12 +791,10 @@
 
     if-nez v0, :cond_6
 
-    .line 954
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesSdkLibraries()Ljava/util/List;
 
     move-result-object v2
 
-    .line 955
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesSdkLibrariesVersionsMajor()[J
 
     move-result-object v3
@@ -885,7 +803,6 @@
 
     move-result-object v4
 
-    .line 956
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -904,7 +821,6 @@
 
     move-object/from16 v11, p3
 
-    .line 954
     invoke-virtual/range {v1 .. v11}, Lcom/android/server/pm/SharedLibrariesImpl;->collectSharedLibraryInfos(Ljava/util/List;[J[[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/util/ArrayList;Ljava/util/Map;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object v9
@@ -922,7 +838,6 @@
 
     move-object/from16 v2, p5
 
-    .line 970
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -938,7 +853,6 @@
 
     move-object/from16 v7, p1
 
-    .line 972
     invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -947,7 +861,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 973
     aget-wide v9, p2, v6
 
     goto :goto_1
@@ -955,7 +868,6 @@
     :cond_0
     const-wide/16 v9, -0x1
 
-    .line 976
     :goto_1
     iget-object v11, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -963,7 +875,6 @@
 
     monitor-enter v11
 
-    .line 977
     :try_start_0
     iget-object v12, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
@@ -973,7 +884,6 @@
 
     move-result-object v9
 
-    .line 979
     monitor-exit v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -992,7 +902,6 @@
 
     goto/16 :goto_6
 
-    .line 982
     :cond_1
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1035,7 +944,6 @@
 
     if-eqz p3, :cond_b
 
-    .line 991
     invoke-virtual {v9}, Landroid/content/pm/SharedLibraryInfo;->getLongVersion()J
 
     move-result-wide v11
@@ -1046,7 +954,6 @@
 
     if-nez v11, :cond_a
 
-    .line 997
     invoke-virtual {v9}, Landroid/content/pm/SharedLibraryInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v11
@@ -1065,7 +972,6 @@
 
     goto :goto_2
 
-    .line 998
     :cond_3
     invoke-interface {v11}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
@@ -1074,10 +980,8 @@
     :goto_2
     if-eqz v11, :cond_9
 
-    .line 1004
     aget-object v14, p3, v6
 
-    .line 1005
     array-length v15, v14
 
     const/4 v10, 0x1
@@ -1090,19 +994,16 @@
 
     if-lt v10, v8, :cond_4
 
-    .line 1009
     invoke-virtual {v11}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
 
     move-result-object v8
 
-    .line 1008
     invoke-static {v8}, Landroid/util/PackageUtils;->computeSignaturesSha256Digests([Landroid/content/pm/Signature;)[Ljava/lang/String;
 
     move-result-object v8
 
     goto :goto_3
 
-    .line 1011
     :cond_4
     invoke-virtual {v11}, Landroid/content/pm/SigningDetails;->getSignatures()[Landroid/content/pm/Signature;
 
@@ -1114,12 +1015,10 @@
 
     move-result-object v8
 
-    .line 1010
     invoke-static {v8}, Landroid/util/PackageUtils;->computeSignaturesSha256Digests([Landroid/content/pm/Signature;)[Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1017
     :goto_3
     array-length v11, v14
 
@@ -1127,13 +1026,10 @@
 
     if-ne v11, v15, :cond_6
 
-    .line 1024
     invoke-static {v8}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 1025
     invoke-static {v14}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 1027
     array-length v11, v8
 
     move v15, v4
@@ -1141,7 +1037,6 @@
     :goto_4
     if-ge v15, v11, :cond_c
 
-    .line 1029
     aget-object v4, v8, v15
 
     aget-object v0, v14, v15
@@ -1160,7 +1055,6 @@
 
     goto :goto_4
 
-    .line 1030
     :cond_5
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1194,7 +1088,6 @@
 
     throw v0
 
-    .line 1018
     :cond_6
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1233,7 +1126,6 @@
 
     move v0, v4
 
-    .line 1041
     :try_start_1
     aget-object v4, v14, v0
 
@@ -1243,7 +1135,6 @@
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1050
     invoke-virtual {v11, v4}, Landroid/content/pm/SigningDetails;->hasSha256Certificate([B)Z
 
     move-result v4
@@ -1252,7 +1143,6 @@
 
     goto/16 :goto_5
 
-    .line 1051
     :cond_8
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1286,7 +1176,6 @@
 
     throw v0
 
-    .line 1044
     :catch_0
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1326,7 +1215,6 @@
 
     throw v0
 
-    .line 1000
     :cond_9
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1360,7 +1248,6 @@
 
     throw v0
 
-    .line 992
     :cond_a
     new-instance v0, Lcom/android/server/pm/PackageManagerException;
 
@@ -1390,7 +1277,6 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 995
     invoke-virtual {v9}, Landroid/content/pm/SharedLibraryInfo;->getLongVersion()J
 
     move-result-wide v1
@@ -1422,12 +1308,10 @@
     :goto_5
     if-nez v5, :cond_d
 
-    .line 1058
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1060
     :cond_d
     invoke-virtual {v5, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1443,7 +1327,6 @@
     :catchall_0
     move-exception v0
 
-    .line 979
     :try_start_2
     monitor-exit v11
     :try_end_2
@@ -1458,7 +1341,6 @@
 .method public commitSharedLibraryChanges(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/util/List;Ljava/util/Map;I)Ljava/util/ArrayList;
     .locals 8
 
-    .line 640
     invoke-static {p3}, Lcom/android/internal/util/ArrayUtils;->isEmpty(Ljava/util/Collection;)Z
 
     move-result v0
@@ -1469,7 +1351,6 @@
 
     return-object v1
 
-    .line 643
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -1477,7 +1358,6 @@
 
     monitor-enter v0
 
-    .line 644
     :try_start_0
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1496,7 +1376,6 @@
 
     check-cast v2, Landroid/content/pm/SharedLibraryInfo;
 
-    .line 645
     invoke-virtual {p0, v2}, Lcom/android/server/pm/SharedLibrariesImpl;->commitSharedLibraryInfoLPw(Landroid/content/pm/SharedLibraryInfo;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1516,7 +1395,6 @@
 
     move-object v7, p4
 
-    .line 649
     :try_start_1
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/pm/SharedLibrariesImpl;->updateSharedLibraries(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/util/Map;)V
     :try_end_1
@@ -1533,7 +1411,6 @@
 
     const-string/jumbo v3, "updateSharedLibraries failed: "
 
-    .line 651
     invoke-static {v2, v3, p3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -1541,7 +1418,6 @@
 
     if-nez p3, :cond_2
 
-    .line 656
     invoke-virtual {p0, p1, p2, p4}, Lcom/android/server/pm/SharedLibrariesImpl;->updateAllSharedLibrariesLPw(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -1550,7 +1426,6 @@
 
     return-object p0
 
-    .line 658
     :cond_2
     monitor-exit v0
 
@@ -1569,12 +1444,10 @@
 .method public commitSharedLibraryInfoLPw(Landroid/content/pm/SharedLibraryInfo;)V
     .locals 4
 
-    .line 768
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 769
     iget-object v1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {v1, v0}, Lcom/android/server/utils/WatchedArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1585,17 +1458,14 @@
 
     if-nez v1, :cond_0
 
-    .line 771
     new-instance v1, Lcom/android/server/utils/WatchedLongSparseArray;
 
     invoke-direct {v1}, Lcom/android/server/utils/WatchedLongSparseArray;-><init>()V
 
-    .line 772
     iget-object v2, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {v2, v0, v1}, Lcom/android/server/utils/WatchedArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 774
     :cond_0
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getDeclaringPackage()Landroid/content/pm/VersionedPackage;
 
@@ -1605,7 +1475,6 @@
 
     move-result-object v0
 
-    .line 775
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getType()I
 
     move-result v2
@@ -1614,12 +1483,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 776
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackage:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/utils/WatchedArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 778
     :cond_1
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getLongVersion()J
 
@@ -1633,7 +1500,6 @@
 .method public dispatchChange(Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 238
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mWatchable:Lcom/android/server/utils/WatchableImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/WatchableImpl;->dispatchChange(Lcom/android/server/utils/Watchable;)V
@@ -1644,12 +1510,10 @@
 .method public dump(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;)V
     .locals 12
 
-    .line 1072
     invoke-virtual {p2}, Lcom/android/server/pm/DumpState;->isCheckIn()Z
 
     move-result v0
 
-    .line 1074
     iget-object v1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {v1}, Lcom/android/server/utils/WatchedArrayMap;->size()I
@@ -1665,7 +1529,6 @@
     :goto_0
     if-ge v3, v1, :cond_9
 
-    .line 1076
     iget-object v5, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {v5, v3}, Lcom/android/server/utils/WatchedArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -1674,10 +1537,8 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 1077
     iget-object v6, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
-    .line 1078
     invoke-virtual {v6, v5}, Lcom/android/server/utils/WatchedArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -1688,7 +1549,6 @@
 
     goto/16 :goto_5
 
-    .line 1082
     :cond_0
     invoke-virtual {v5}, Lcom/android/server/utils/WatchedLongSparseArray;->size()I
 
@@ -1699,7 +1559,6 @@
     :goto_1
     if-ge v7, v6, :cond_8
 
-    .line 1084
     invoke-virtual {v5, v7}, Lcom/android/server/utils/WatchedLongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -1710,20 +1569,17 @@
 
     if-nez v4, :cond_2
 
-    .line 1087
     invoke-virtual {p2}, Lcom/android/server/pm/DumpState;->onTitlePrinted()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 1088
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     :cond_1
     const-string v4, "Libraries:"
 
-    .line 1090
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 v4, 0x1
@@ -1731,7 +1587,6 @@
     :cond_2
     const-string v9, "  "
 
-    .line 1093
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_2
@@ -1739,10 +1594,8 @@
     :cond_3
     const-string v9, "lib,"
 
-    .line 1095
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1097
     :goto_2
     invoke-virtual {v8}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
@@ -1750,14 +1603,12 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1098
     invoke-virtual {v8}, Landroid/content/pm/SharedLibraryInfo;->isStatic()Z
 
     move-result v9
 
     if-eqz v9, :cond_4
 
-    .line 1099
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1783,10 +1634,8 @@
 
     const-string v9, " -> "
 
-    .line 1102
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1104
     :cond_5
     invoke-virtual {v8}, Landroid/content/pm/SharedLibraryInfo;->getPath()Ljava/lang/String;
 
@@ -1794,7 +1643,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 1105
     invoke-virtual {v8}, Landroid/content/pm/SharedLibraryInfo;->isNative()Z
 
     move-result v9
@@ -1803,7 +1651,6 @@
 
     const-string v9, " (so) "
 
-    .line 1106
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_3
@@ -1811,10 +1658,8 @@
     :cond_6
     const-string v9, " (jar) "
 
-    .line 1108
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1110
     :goto_3
     invoke-virtual {v8}, Landroid/content/pm/SharedLibraryInfo;->getPath()Ljava/lang/String;
 
@@ -1827,17 +1672,14 @@
     :cond_7
     const-string v9, " (apk) "
 
-    .line 1112
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1113
     invoke-virtual {v8}, Landroid/content/pm/SharedLibraryInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {p1, v8}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1115
     :goto_4
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
@@ -1858,7 +1700,6 @@
 .method public dumpProto(Landroid/util/proto/ProtoOutputStream;)V
     .locals 12
 
-    .line 1126
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {v0}, Lcom/android/server/utils/WatchedArrayMap;->size()I
@@ -1872,7 +1713,6 @@
     :goto_0
     if-ge v2, v0, :cond_4
 
-    .line 1128
     iget-object v3, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {v3, v2}, Lcom/android/server/utils/WatchedArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -1881,10 +1721,8 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 1129
     iget-object v4, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
-    .line 1130
     invoke-virtual {v4, v3}, Lcom/android/server/utils/WatchedArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -1895,7 +1733,6 @@
 
     goto :goto_4
 
-    .line 1134
     :cond_0
     invoke-virtual {v3}, Lcom/android/server/utils/WatchedLongSparseArray;->size()I
 
@@ -1906,7 +1743,6 @@
     :goto_1
     if-ge v5, v4, :cond_3
 
-    .line 1136
     invoke-virtual {v3, v5}, Lcom/android/server/utils/WatchedLongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -1915,12 +1751,10 @@
 
     const-wide v7, 0x20b00000003L
 
-    .line 1138
     invoke-virtual {p1, v7, v8}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v7
 
-    .line 1139
     invoke-virtual {v6}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
     move-result-object v9
@@ -1929,7 +1763,6 @@
 
     invoke-virtual {p1, v10, v11, v9}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 1140
     invoke-virtual {v6}, Landroid/content/pm/SharedLibraryInfo;->getPath()Ljava/lang/String;
 
     move-result-object v9
@@ -1946,19 +1779,16 @@
     :goto_2
     const-wide v10, 0x10800000002L
 
-    .line 1141
     invoke-virtual {p1, v10, v11, v9}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
     if-eqz v9, :cond_2
 
     const-wide v9, 0x10900000003L
 
-    .line 1144
     invoke-virtual {v6}, Landroid/content/pm/SharedLibraryInfo;->getPath()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1143
     invoke-virtual {p1, v9, v10, v6}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
     goto :goto_3
@@ -1966,15 +1796,12 @@
     :cond_2
     const-wide v9, 0x10900000004L
 
-    .line 1147
     invoke-virtual {v6}, Landroid/content/pm/SharedLibraryInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1146
     invoke-virtual {p1, v9, v10, v6}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 1149
     :goto_3
     invoke-virtual {p1, v7, v8}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
@@ -1995,18 +1822,15 @@
 .method public executeSharedLibrariesUpdate(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/util/ArrayList;[I)V
     .locals 1
 
-    .line 556
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 557
     :try_start_0
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/pm/SharedLibrariesImpl;->executeSharedLibrariesUpdateLPw(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/util/ArrayList;[I)V
 
-    .line 559
     monitor-exit v0
 
     return-void
@@ -2024,7 +1848,6 @@
 .method public final executeSharedLibrariesUpdateLPw(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/util/ArrayList;[I)V
     .locals 8
 
-    .line 580
     new-instance v0, Lcom/android/server/pm/SharedLibrariesImpl$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/pm/SharedLibrariesImpl$$ExternalSyntheticLambda0;-><init>()V
@@ -2035,19 +1858,16 @@
 
     if-eqz p5, :cond_6
 
-    .line 584
     invoke-virtual {p2}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
 
     move-result-object v0
 
     invoke-virtual {v0, p5}, Lcom/android/server/pm/pkg/PackageStateUnserialized;->setUsesLibraryInfos(Ljava/util/List;)Lcom/android/server/pm/pkg/PackageStateUnserialized;
 
-    .line 587
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 588
     invoke-virtual {p5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -2077,16 +1897,13 @@
 
     move-object v6, p4
 
-    .line 589
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/pm/SharedLibrariesImpl;->addSharedLibraryLPr(Lcom/android/server/pm/pkg/AndroidPackage;Ljava/util/Set;Landroid/content/pm/SharedLibraryInfo;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;)V
 
     goto :goto_0
 
-    .line 592
     :cond_0
     invoke-virtual {p2, v0}, Lcom/android/server/pm/PackageSetting;->setPkgStateLibraryFiles(Ljava/util/Collection;)Lcom/android/server/pm/PackageSetting;
 
-    .line 596
     array-length p1, p6
 
     new-array p1, p1, [I
@@ -2097,13 +1914,11 @@
 
     move v0, p4
 
-    .line 598
     :goto_1
     array-length v1, p6
 
     if-ge p4, v1, :cond_2
 
-    .line 599
     aget v1, p6, p4
 
     invoke-virtual {p2, v1}, Lcom/android/server/pm/PackageSetting;->getInstalled(I)Z
@@ -2114,7 +1929,6 @@
 
     add-int/lit8 v1, v0, 0x1
 
-    .line 600
     aget v2, p6, p4
 
     aput v2, p1, v0
@@ -2126,7 +1940,6 @@
 
     goto :goto_1
 
-    .line 603
     :cond_2
     invoke-virtual {p5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2146,7 +1959,6 @@
 
     check-cast p4, Landroid/content/pm/SharedLibraryInfo;
 
-    .line 604
     invoke-virtual {p4}, Landroid/content/pm/SharedLibraryInfo;->isStatic()Z
 
     move-result p5
@@ -2155,11 +1967,9 @@
 
     goto :goto_2
 
-    .line 607
     :cond_4
     iget-object p5, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 608
     invoke-virtual {p4}, Landroid/content/pm/SharedLibraryInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p6
@@ -2170,7 +1980,6 @@
 
     if-nez p5, :cond_5
 
-    .line 610
     new-instance p5, Ljava/lang/StringBuilder;
 
     invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2197,7 +2006,6 @@
     :goto_3
     if-ge p4, v0, :cond_3
 
-    .line 614
     aget p6, p1, p4
 
     const/4 v1, 0x1
@@ -2208,7 +2016,6 @@
 
     goto :goto_3
 
-    .line 618
     :cond_6
     invoke-virtual {p2}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
 
@@ -2222,7 +2029,6 @@
 
     move-result-object p0
 
-    .line 619
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
@@ -2236,7 +2042,6 @@
 .method public getAll()Lcom/android/server/utils/WatchedArrayMap;
     .locals 0
 
-    .line 256
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     return-object p0
@@ -2245,12 +2050,10 @@
 .method public getAllowedSharedLibInfos(Lcom/android/server/pm/InstallRequest;)Ljava/util/List;
     .locals 9
 
-    .line 832
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getParsedPackage()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v0
 
-    .line 833
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getSdkSharedLibraryInfo()Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object v1
@@ -2259,14 +2062,12 @@
 
     if-nez v1, :cond_0
 
-    .line 834
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getStaticSharedLibraryInfo()Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 835
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getDynamicSharedLibraryInfos()Ljava/util/List;
 
     move-result-object v1
@@ -2275,7 +2076,6 @@
 
     return-object v2
 
-    .line 840
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getSdkSharedLibraryInfo()Landroid/content/pm/SharedLibraryInfo;
 
@@ -2283,7 +2083,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 841
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getSdkSharedLibraryInfo()Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object p0
@@ -2294,7 +2093,6 @@
 
     return-object p0
 
-    .line 843
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getStaticSharedLibraryInfo()Landroid/content/pm/SharedLibraryInfo;
 
@@ -2302,7 +2100,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 844
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getStaticSharedLibraryInfo()Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object p0
@@ -2313,7 +2110,6 @@
 
     return-object p0
 
-    .line 846
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getScannedPackageSetting()Lcom/android/server/pm/PackageSetting;
 
@@ -2325,7 +2121,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 847
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getScannedPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v1
@@ -2348,7 +2143,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 849
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getDynamicSharedLibraryInfos()Ljava/util/List;
 
     move-result-object v1
@@ -2367,7 +2161,6 @@
 
     return-object v2
 
-    .line 853
     :cond_5
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getScannedPackageSetting()Lcom/android/server/pm/PackageSetting;
 
@@ -2375,7 +2168,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 854
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getScannedPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v1
@@ -2394,21 +2186,18 @@
     :goto_2
     if-eqz v3, :cond_8
 
-    .line 858
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getDisabledPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v1
 
     if-nez v1, :cond_7
 
-    .line 859
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getScanRequestOldPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v1
 
     goto :goto_3
 
-    .line 860
     :cond_7
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getDisabledPackageSetting()Lcom/android/server/pm/PackageSetting;
 
@@ -2422,14 +2211,12 @@
     :goto_3
     if-eqz v3, :cond_a
 
-    .line 862
     invoke-virtual {v1}, Lcom/android/server/pm/PackageSetting;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v4
 
     if-eqz v4, :cond_9
 
-    .line 863
     invoke-virtual {v1}, Lcom/android/server/pm/PackageSetting;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v4
@@ -2443,7 +2230,6 @@
     :cond_9
     const-string p0, "PackageManager"
 
-    .line 864
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2470,11 +2256,9 @@
 
     return-object v2
 
-    .line 868
     :cond_a
     new-instance v2, Ljava/util/ArrayList;
 
-    .line 869
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getDynamicSharedLibraryInfos()Ljava/util/List;
 
     move-result-object v4
@@ -2485,7 +2269,6 @@
 
     invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 870
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getDynamicSharedLibraryInfos()Ljava/util/List;
 
     move-result-object p1
@@ -2507,14 +2290,12 @@
 
     check-cast v4, Landroid/content/pm/SharedLibraryInfo;
 
-    .line 871
     invoke-virtual {v4}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
     move-result-object v5
 
     if-eqz v3, :cond_b
 
-    .line 883
     invoke-virtual {v1}, Lcom/android/server/pm/PackageSetting;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v6
@@ -2531,7 +2312,6 @@
 
     const-string v4, "PackageManager"
 
-    .line 884
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2564,7 +2344,6 @@
 
     goto :goto_4
 
-    .line 890
     :cond_b
     iget-object v6, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -2574,7 +2353,6 @@
 
     const-wide/16 v7, -0x1
 
-    .line 891
     :try_start_0
     invoke-virtual {p0, v5, v7, v8}, Lcom/android/server/pm/SharedLibrariesImpl;->getSharedLibraryInfo(Ljava/lang/String;J)Landroid/content/pm/SharedLibraryInfo;
 
@@ -2584,7 +2362,6 @@
 
     const-string v4, "PackageManager"
 
-    .line 892
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2615,18 +2392,15 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 894
     monitor-exit v6
 
     goto :goto_4
 
-    .line 896
     :cond_c
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 897
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_4
@@ -2634,7 +2408,6 @@
     :catchall_0
     move-exception p0
 
-    .line 896
     :try_start_1
     monitor-exit v6
     :try_end_1
@@ -2649,14 +2422,12 @@
 .method public getLatestStaticSharedLibraVersion(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/content/pm/SharedLibraryInfo;
     .locals 1
 
-    .line 389
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 390
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/SharedLibrariesImpl;->getLatestStaticSharedLibraVersionLPr(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/content/pm/SharedLibraryInfo;
 
@@ -2669,7 +2440,6 @@
     :catchall_0
     move-exception p0
 
-    .line 391
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2680,15 +2450,12 @@
 .method public final getLatestStaticSharedLibraVersionLPr(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/content/pm/SharedLibraryInfo;
     .locals 9
 
-    .line 403
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
-    .line 404
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getStaticSharedLibraryName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 403
     invoke-virtual {p0, v0}, Lcom/android/server/utils/WatchedArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2701,7 +2468,6 @@
 
     return-object v0
 
-    .line 409
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/utils/WatchedLongSparseArray;->size()I
 
@@ -2714,12 +2480,10 @@
     :goto_0
     if-ge v4, v1, :cond_2
 
-    .line 411
     invoke-virtual {p0, v4}, Lcom/android/server/utils/WatchedLongSparseArray;->keyAt(I)J
 
     move-result-wide v5
 
-    .line 412
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getStaticSharedLibraryVersion()J
 
     move-result-wide v7
@@ -2728,7 +2492,6 @@
 
     if-gez v7, :cond_1
 
-    .line 413
     invoke-static {v2, v3, v5, v6}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
@@ -2745,7 +2508,6 @@
 
     if-ltz p1, :cond_3
 
-    .line 417
     invoke-virtual {p0, v2, v3}, Lcom/android/server/utils/WatchedLongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object p0
@@ -2761,41 +2523,34 @@
 .method public final getLibraryPackage(Lcom/android/server/pm/Computer;Landroid/content/pm/SharedLibraryInfo;)Lcom/android/server/pm/pkg/PackageStateInternal;
     .locals 2
 
-    .line 304
     invoke-virtual {p2}, Landroid/content/pm/SharedLibraryInfo;->getDeclaringPackage()Landroid/content/pm/VersionedPackage;
 
     move-result-object p0
 
-    .line 305
     invoke-virtual {p2}, Landroid/content/pm/SharedLibraryInfo;->isStatic()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 308
     invoke-virtual {p0}, Landroid/content/pm/VersionedPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 309
     invoke-virtual {p0}, Landroid/content/pm/VersionedPackage;->getLongVersionCode()J
 
     move-result-wide v0
 
-    .line 307
     invoke-interface {p1, p2, v0, v1}, Lcom/android/server/pm/Computer;->resolveInternalPackageName(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 310
     invoke-interface {p1, p0}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
 
     return-object p0
 
-    .line 312
     :cond_0
     invoke-virtual {p2}, Landroid/content/pm/SharedLibraryInfo;->isSdk()Z
 
@@ -2803,7 +2558,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 313
     invoke-virtual {p0}, Landroid/content/pm/VersionedPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -2823,7 +2577,6 @@
 .method public getSharedLibraries()Lcom/android/server/utils/WatchedArrayMap;
     .locals 0
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     return-object p0
@@ -2832,10 +2585,8 @@
 .method public getSharedLibraryInfo(Ljava/lang/String;J)Landroid/content/pm/SharedLibraryInfo;
     .locals 0
 
-    .line 283
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
-    .line 284
     invoke-virtual {p0, p1}, Lcom/android/server/utils/WatchedArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2848,7 +2599,6 @@
 
     return-object p0
 
-    .line 288
     :cond_0
     invoke-virtual {p0, p2, p3}, Lcom/android/server/utils/WatchedLongSparseArray;->get(J)Ljava/lang/Object;
 
@@ -2862,14 +2612,12 @@
 .method public getSharedLibraryInfos(Ljava/lang/String;)Lcom/android/server/utils/WatchedLongSparseArray;
     .locals 1
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 268
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
@@ -2886,7 +2634,6 @@
     :catchall_0
     move-exception p0
 
-    .line 269
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2897,7 +2644,6 @@
 .method public getStaticLibraryInfos(Ljava/lang/String;)Lcom/android/server/utils/WatchedLongSparseArray;
     .locals 0
 
-    .line 298
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackage:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/WatchedArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2912,7 +2658,6 @@
 .method public getStaticSharedLibLatestVersionSetting(Lcom/android/server/pm/InstallRequest;)Lcom/android/server/pm/PackageSetting;
     .locals 2
 
-    .line 431
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getParsedPackage()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v0
@@ -2923,7 +2668,6 @@
 
     return-object v1
 
-    .line 435
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -2931,7 +2675,6 @@
 
     monitor-enter v0
 
-    .line 437
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/pm/InstallRequest;->getParsedPackage()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
@@ -2943,22 +2686,18 @@
 
     if-eqz p1, :cond_1
 
-    .line 439
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
-    .line 440
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 439
     invoke-virtual {p0, p1}, Lcom/android/server/pm/Settings;->getPackageLPr(Ljava/lang/String;)Lcom/android/server/pm/PackageSetting;
 
     move-result-object v1
 
-    .line 442
     :cond_1
     monitor-exit v0
 
@@ -2977,7 +2716,6 @@
 .method public isRegisteredObserver(Lcom/android/server/utils/Watcher;)Z
     .locals 0
 
-    .line 226
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mWatchable:Lcom/android/server/utils/WatchableImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/WatchableImpl;->isRegisteredObserver(Lcom/android/server/utils/Watcher;)Z
@@ -2990,7 +2728,6 @@
 .method public final makeCache()Lcom/android/server/utils/SnapshotCache;
     .locals 1
 
-    .line 140
     new-instance v0, Lcom/android/server/pm/SharedLibrariesImpl$2;
 
     invoke-direct {v0, p0, p0, p0}, Lcom/android/server/pm/SharedLibrariesImpl$2;-><init>(Lcom/android/server/pm/SharedLibrariesImpl;Lcom/android/server/pm/SharedLibrariesImpl;Lcom/android/server/utils/Watchable;)V
@@ -3003,7 +2740,6 @@
 
     move-object/from16 v0, p0
 
-    .line 331
     iget-object v1, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     const-class v2, Landroid/os/storage/StorageManager;
@@ -3014,29 +2750,24 @@
 
     check-cast v1, Landroid/os/storage/StorageManager;
 
-    .line 332
     sget-object v2, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/os/storage/StorageManager;->findPathForUuid(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 334
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 335
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 341
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/Computer;->getSharedLibraries()Lcom/android/server/utils/WatchedArrayMap;
 
     move-result-object v5
 
-    .line 342
     invoke-virtual {v5}, Lcom/android/server/utils/WatchedArrayMap;->size()I
 
     move-result v6
@@ -3046,7 +2777,6 @@
     :goto_0
     if-ge v8, v6, :cond_5
 
-    .line 345
     invoke-virtual {v5, v8}, Lcom/android/server/utils/WatchedArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -3062,7 +2792,6 @@
 
     goto :goto_4
 
-    .line 349
     :cond_1
     invoke-virtual {v9}, Lcom/android/server/utils/WatchedLongSparseArray;->size()I
 
@@ -3073,7 +2802,6 @@
     :goto_1
     if-ge v11, v10, :cond_0
 
-    .line 351
     invoke-virtual {v9, v11}, Lcom/android/server/utils/WatchedLongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -3082,7 +2810,6 @@
 
     move-object/from16 v13, p1
 
-    .line 352
     invoke-virtual {v0, v13, v12}, Lcom/android/server/pm/SharedLibrariesImpl;->getLibraryPackage(Lcom/android/server/pm/Computer;Landroid/content/pm/SharedLibraryInfo;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object v14
@@ -3094,7 +2821,6 @@
 
     goto :goto_3
 
-    .line 358
     :cond_2
     invoke-interface {v14}, Lcom/android/server/pm/pkg/PackageState;->getLastUpdateTime()J
 
@@ -3108,7 +2834,6 @@
 
     goto :goto_2
 
-    .line 362
     :cond_3
     invoke-interface {v14}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
@@ -3118,7 +2843,6 @@
 
     goto :goto_2
 
-    .line 366
     :cond_4
     new-instance v15, Landroid/content/pm/VersionedPackage;
 
@@ -3130,7 +2854,6 @@
 
     move-result-object v14
 
-    .line 367
     invoke-virtual {v12}, Landroid/content/pm/SharedLibraryInfo;->getDeclaringPackage()Landroid/content/pm/VersionedPackage;
 
     move-result-object v12
@@ -3143,7 +2866,6 @@
 
     invoke-direct {v15, v14, v7, v8}, Landroid/content/pm/VersionedPackage;-><init>(Ljava/lang/String;J)V
 
-    .line 366
     invoke-virtual {v2, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :goto_3
@@ -3158,7 +2880,6 @@
 
     goto :goto_0
 
-    .line 371
     :cond_5
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -3169,21 +2890,18 @@
     :goto_5
     if-ge v4, v3, :cond_7
 
-    .line 373
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/content/pm/VersionedPackage;
 
-    .line 375
     iget-object v6, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mDeletePackageHelper:Lcom/android/server/pm/DeletePackageHelper;
 
     invoke-virtual {v5}, Landroid/content/pm/VersionedPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 376
     invoke-virtual {v5}, Landroid/content/pm/VersionedPackage;->getLongVersionCode()J
 
     move-result-wide v8
@@ -3194,7 +2912,6 @@
 
     const/4 v12, 0x1
 
-    .line 375
     invoke-virtual/range {v6 .. v12}, Lcom/android/server/pm/DeletePackageHelper;->deletePackageX(Ljava/lang/String;JIIZ)I
 
     move-result v5
@@ -3203,7 +2920,6 @@
 
     if-ne v5, v6, :cond_6
 
-    .line 379
     invoke-virtual {v1}, Ljava/io/File;->getUsableSpace()J
 
     move-result-wide v7
@@ -3228,7 +2944,6 @@
 .method public registerObserver(Lcom/android/server/utils/Watcher;)V
     .locals 0
 
-    .line 205
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mWatchable:Lcom/android/server/utils/WatchableImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/WatchableImpl;->registerObserver(Lcom/android/server/utils/Watcher;)V
@@ -3239,14 +2954,12 @@
 .method public final registerObservers()V
     .locals 2
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     iget-object v1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mObserver:Lcom/android/server/utils/Watcher;
 
     invoke-virtual {v0, v1}, Lcom/android/server/utils/WatchedArrayMap;->registerObserver(Lcom/android/server/utils/Watcher;)V
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackage:Lcom/android/server/utils/WatchedArrayMap;
 
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mObserver:Lcom/android/server/utils/Watcher;
@@ -3265,14 +2978,12 @@
 
     move-wide/from16 v2, p2
 
-    .line 785
     iget-object v4, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v4, v4, Lcom/android/server/pm/PackageManagerService;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v4
 
-    .line 786
     :try_start_0
     iget-object v5, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
@@ -3286,12 +2997,10 @@
 
     if-nez v5, :cond_0
 
-    .line 788
     monitor-exit v4
 
     return v6
 
-    .line 790
     :cond_0
     invoke-virtual {v5, v2, v3}, Lcom/android/server/utils/WatchedLongSparseArray;->indexOfKey(J)I
 
@@ -3299,12 +3008,10 @@
 
     if-gez v7, :cond_1
 
-    .line 792
     monitor-exit v4
 
     return v6
 
-    .line 794
     :cond_1
     invoke-virtual {v5, v7}, Lcom/android/server/utils/WatchedLongSparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -3312,14 +3019,12 @@
 
     check-cast v7, Landroid/content/pm/SharedLibraryInfo;
 
-    .line 796
     iget-object v8, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v8}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
 
     move-result-object v14
 
-    .line 799
     iget-object v8, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v8, v8, Lcom/android/server/pm/PackageManagerService;->mUserManager:Lcom/android/server/pm/UserManagerService;
@@ -3351,7 +3056,6 @@
 
     move/from16 v13, v17
 
-    .line 800
     invoke-interface/range {v8 .. v13}, Lcom/android/server/pm/Computer;->getPackagesUsingSharedLibrary(Landroid/content/pm/SharedLibraryInfo;JII)Ljava/util/List;
 
     move-result-object v8
@@ -3360,7 +3064,6 @@
 
     goto :goto_3
 
-    .line 805
     :cond_2
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3379,24 +3082,20 @@
 
     check-cast v9, Landroid/content/pm/VersionedPackage;
 
-    .line 806
     iget-object v10, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v10, v10, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
-    .line 807
     invoke-virtual {v9}, Landroid/content/pm/VersionedPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 806
     invoke-virtual {v10, v9}, Lcom/android/server/pm/Settings;->getPackageLPr(Ljava/lang/String;)Lcom/android/server/pm/PackageSetting;
 
     move-result-object v9
 
     if-eqz v9, :cond_3
 
-    .line 809
     invoke-virtual {v7}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
     move-result-object v10
@@ -3425,23 +3124,19 @@
 
     goto :goto_0
 
-    .line 814
     :cond_5
     invoke-virtual {v5, v2, v3}, Lcom/android/server/utils/WatchedLongSparseArray;->remove(J)V
 
-    .line 815
     invoke-virtual {v5}, Lcom/android/server/utils/WatchedLongSparseArray;->size()I
 
     move-result v2
 
     if-gtz v2, :cond_6
 
-    .line 816
     iget-object v2, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mSharedLibraries:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {v2, v1}, Lcom/android/server/utils/WatchedArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 817
     invoke-virtual {v7}, Landroid/content/pm/SharedLibraryInfo;->getType()I
 
     move-result v1
@@ -3450,22 +3145,18 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 818
     iget-object v0, v0, Lcom/android/server/pm/SharedLibrariesImpl;->mStaticLibsByDeclaringPackage:Lcom/android/server/utils/WatchedArrayMap;
 
     invoke-virtual {v7}, Landroid/content/pm/SharedLibraryInfo;->getDeclaringPackage()Landroid/content/pm/VersionedPackage;
 
     move-result-object v1
 
-    .line 819
     invoke-virtual {v1}, Landroid/content/pm/VersionedPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 818
     invoke-virtual {v0, v1}, Lcom/android/server/utils/WatchedArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 822
     :cond_6
     monitor-exit v4
 
@@ -3476,7 +3167,6 @@
     :catchall_0
     move-exception v0
 
-    .line 823
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3487,7 +3177,6 @@
 .method public setDeletePackageHelper(Lcom/android/server/pm/DeletePackageHelper;)V
     .locals 0
 
-    .line 173
     iput-object p1, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mDeletePackageHelper:Lcom/android/server/pm/DeletePackageHelper;
 
     return-void
@@ -3496,7 +3185,6 @@
 .method public snapshot()Lcom/android/server/pm/SharedLibrariesRead;
     .locals 0
 
-    .line 247
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mSnapshot:Lcom/android/server/utils/SnapshotCache;
 
     invoke-virtual {p0}, Lcom/android/server/utils/SnapshotCache;->snapshot()Ljava/lang/Object;
@@ -3511,7 +3199,6 @@
 .method public bridge synthetic snapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 81
     invoke-virtual {p0}, Lcom/android/server/pm/SharedLibrariesImpl;->snapshot()Lcom/android/server/pm/SharedLibrariesRead;
 
     move-result-object p0
@@ -3522,7 +3209,6 @@
 .method public unregisterObserver(Lcom/android/server/utils/Watcher;)V
     .locals 0
 
-    .line 216
     iget-object p0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mWatchable:Lcom/android/server/utils/WatchableImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/WatchableImpl;->unregisterObserver(Lcom/android/server/utils/Watcher;)V
@@ -3543,12 +3229,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 681
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v8}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 682
     invoke-static/range {p1 .. p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v1
@@ -3581,7 +3265,6 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 686
     invoke-interface {v10, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -3591,7 +3274,6 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 688
     iget-object v3, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v3, Lcom/android/server/pm/pkg/AndroidPackage;
@@ -3606,7 +3288,6 @@
     :goto_2
     if-eqz v2, :cond_4
 
-    .line 690
     iget-object v2, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/server/pm/PackageSetting;
@@ -3618,7 +3299,6 @@
     :cond_4
     move-object v12, v9
 
-    .line 691
     :goto_3
     iget-object v2, v7, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -3635,7 +3315,6 @@
     :goto_4
     if-ltz v13, :cond_b
 
-    .line 692
     iget-object v2, v7, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mPackages:Lcom/android/server/utils/WatchedArrayMap;
@@ -3648,7 +3327,6 @@
 
     check-cast v14, Lcom/android/server/pm/pkg/AndroidPackage;
 
-    .line 693
     iget-object v2, v7, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
@@ -3663,7 +3341,6 @@
 
     if-eqz v11, :cond_5
 
-    .line 695
     invoke-interface {v14}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesLibraries()Ljava/util/List;
 
     move-result-object v2
@@ -3678,7 +3355,6 @@
 
     if-nez v2, :cond_5
 
-    .line 696
     invoke-interface {v14}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesOptionalLibraries()Ljava/util/List;
 
     move-result-object v2
@@ -3693,34 +3369,28 @@
 
     if-nez v2, :cond_5
 
-    .line 697
     invoke-interface {v14}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesStaticLibraries()Ljava/util/List;
 
     move-result-object v2
 
-    .line 698
     invoke-interface {v11}, Lcom/android/server/pm/pkg/AndroidPackage;->getStaticSharedLibraryName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 697
     invoke-static {v2, v3}, Lcom/android/internal/util/ArrayUtils;->contains(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
-    .line 699
     invoke-interface {v14}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesSdkLibraries()Ljava/util/List;
 
     move-result-object v2
 
-    .line 700
     invoke-interface {v11}, Lcom/android/server/pm/pkg/AndroidPackage;->getSdkLibraryName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 699
     invoke-static {v2, v3}, Lcom/android/internal/util/ArrayUtils;->contains(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result v2
@@ -3732,7 +3402,6 @@
     :cond_5
     if-nez v0, :cond_6
 
-    .line 704
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -3740,21 +3409,18 @@
     :cond_6
     move-object v6, v0
 
-    .line 706
     invoke-virtual {v6, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     if-eqz v11, :cond_8
 
     if-nez v1, :cond_7
 
-    .line 710
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     move-object v1, v0
 
-    .line 712
     :cond_7
     invoke-interface {v14}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
@@ -3766,14 +3432,12 @@
 
     if-nez v0, :cond_8
 
-    .line 713
     invoke-interface {v14}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 714
     invoke-static {v14, v15}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v0
@@ -3797,7 +3461,6 @@
 
     move-object/from16 v6, p3
 
-    .line 718
     :try_start_0
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/pm/SharedLibrariesImpl;->updateSharedLibraries(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/util/Map;)V
     :try_end_0
@@ -3810,7 +3473,6 @@
 
     move-object v1, v0
 
-    .line 726
     invoke-virtual {v15}, Lcom/android/server/pm/PackageSetting;->isSystem()Z
 
     move-result v0
@@ -3823,20 +3485,17 @@
 
     if-eqz v0, :cond_a
 
-    .line 727
     :cond_9
     invoke-virtual {v15}, Lcom/android/server/pm/PackageSetting;->isUpdatedSystemApp()Z
 
     move-result v23
 
-    .line 729
     iget-object v0, v7, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 730
     :try_start_1
     iget-object v0, v7, Lcom/android/server/pm/SharedLibrariesImpl;->mDeletePackageHelper:Lcom/android/server/pm/DeletePackageHelper;
 
@@ -3852,7 +3511,6 @@
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
-    .line 731
     invoke-virtual {v3}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
 
     move-result-object v22
@@ -3863,10 +3521,8 @@
 
     move-object/from16 v18, v0
 
-    .line 730
     invoke-virtual/range {v18 .. v25}, Lcom/android/server/pm/DeletePackageHelper;->deletePackageLIF(Ljava/lang/String;Landroid/os/UserHandle;Z[IILcom/android/server/pm/PackageRemovedInfo;Z)Z
 
-    .line 733
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -3874,7 +3530,6 @@
     :cond_a
     const-string v0, "PackageManager"
 
-    .line 735
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3908,7 +3563,6 @@
     :catchall_0
     move-exception v0
 
-    .line 733
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -3919,7 +3573,6 @@
     :cond_b
     if-eqz v10, :cond_c
 
-    .line 738
     invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v2
@@ -3935,25 +3588,21 @@
 
     const/4 v0, 0x0
 
-    .line 544
     invoke-virtual {p0, p1, p5, v0}, Lcom/android/server/pm/SharedLibrariesImpl;->collectSharedLibraryInfos(Lcom/android/server/pm/pkg/AndroidPackage;Ljava/util/Map;Ljava/util/Map;)Ljava/util/ArrayList;
 
     move-result-object v6
 
-    .line 546
     iget-object p5, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p5, p5, Lcom/android/server/pm/PackageManagerService;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter p5
 
-    .line 547
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/SharedLibrariesImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
-    .line 548
     invoke-virtual {v0}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
 
     move-result-object v7
@@ -3968,10 +3617,8 @@
 
     move-object v5, p4
 
-    .line 547
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/pm/SharedLibrariesImpl;->executeSharedLibrariesUpdateLPw(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/util/ArrayList;[I)V
 
-    .line 549
     monitor-exit p5
 
     return-void

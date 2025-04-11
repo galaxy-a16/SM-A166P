@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/EngmodeService;)V
     .locals 0
 
-    .line 138
     iput-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -28,10 +27,8 @@
 
     const-string v0, "engmode_service"
 
-    .line 141
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     :try_start_0
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
@@ -41,7 +38,6 @@
 
     if-nez p1, :cond_0
 
-    .line 145
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
     new-instance v0, Ljava/util/Timer;
@@ -50,7 +46,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$fputmTimerObserve(Lcom/android/server/sepunion/EngmodeService;Ljava/util/Timer;)V
 
-    .line 146
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$mmakeRunTimeTask(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/TimerTask;
@@ -59,7 +54,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$fputmRunTimeTask(Lcom/android/server/sepunion/EngmodeService;Ljava/util/TimerTask;)V
 
-    .line 147
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$fgetmTimerObserve(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/Timer;
@@ -80,7 +74,6 @@
 
     goto :goto_0
 
-    .line 149
     :cond_0
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
@@ -92,12 +85,10 @@
 
     const-string p0, "There is no need for update"
 
-    .line 150
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 154
     :cond_1
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
@@ -113,12 +104,10 @@
 
     const-string p0, "Previous thread is alive, skip this time"
 
-    .line 155
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 159
     :cond_2
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
@@ -128,7 +117,6 @@
 
     invoke-virtual {p1}, Ljava/util/TimerTask;->cancel()Z
 
-    .line 160
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$mmakeRunTimeTask(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/TimerTask;
@@ -137,7 +125,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$fputmRunTimeTask(Lcom/android/server/sepunion/EngmodeService;Ljava/util/TimerTask;)V
 
-    .line 162
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$fgetmTimerObserve(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/Timer;
@@ -146,7 +133,6 @@
 
     invoke-virtual {p1}, Ljava/util/Timer;->cancel()V
 
-    .line 163
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
     new-instance v0, Ljava/util/Timer;
@@ -155,7 +141,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$fputmTimerObserve(Lcom/android/server/sepunion/EngmodeService;Ljava/util/Timer;)V
 
-    .line 164
     iget-object p1, p0, Lcom/android/server/sepunion/EngmodeService$3;->this$0:Lcom/android/server/sepunion/EngmodeService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/EngmodeService;->-$$Nest$fgetmTimerObserve(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/Timer;
@@ -181,7 +166,6 @@
     :catch_0
     move-exception p0
 
-    .line 167
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -195,7 +179,6 @@
 
     const-string p1, "Network isn\'t available"
 
-    .line 173
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

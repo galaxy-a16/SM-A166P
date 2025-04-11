@@ -7,12 +7,10 @@
 .method public static maybeSnapshot(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 37
     instance-of v0, p0, Lcom/android/server/utils/Snappable;
 
     if-eqz v0, :cond_0
 
-    .line 38
     check-cast p0, Lcom/android/server/utils/Snappable;
 
     invoke-interface {p0}, Lcom/android/server/utils/Snappable;->snapshot()Ljava/lang/Object;

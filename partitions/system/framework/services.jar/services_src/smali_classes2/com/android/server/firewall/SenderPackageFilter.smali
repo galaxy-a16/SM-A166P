@@ -18,7 +18,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 63
     new-instance v0, Lcom/android/server/firewall/SenderPackageFilter$1;
 
     const-string/jumbo v1, "sender-package"
@@ -33,10 +32,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/firewall/SenderPackageFilter;->mPackageName:Ljava/lang/String;
 
     return-void
@@ -47,7 +44,6 @@
 .method public matches(Lcom/android/server/firewall/IntentFirewall;Landroid/content/ComponentName;Landroid/content/Intent;IILjava/lang/String;I)Z
     .locals 0
 
-    .line 44
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object p1
@@ -56,7 +52,6 @@
 
     const/4 p3, -0x1
 
-    .line 50
     :try_start_0
     iget-object p0, p0, Lcom/android/server/firewall/SenderPackageFilter;->mPackageName:Ljava/lang/String;
 
@@ -78,7 +73,6 @@
 
     return p2
 
-    .line 60
     :cond_0
     invoke-static {p0, p4}, Landroid/os/UserHandle;->isSameApp(II)Z
 

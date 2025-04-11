@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 35
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -38,24 +37,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/install/PackageInstallTimeLogger;->mInstallLogging:Landroid/util/ArrayMap;
 
-    .line 53
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/install/PackageInstallTimeLogger;->mHistoricalInfo:Ljava/util/ArrayList;
 
-    .line 68
     iput-object p1, p0, Lcom/samsung/android/server/pm/install/PackageInstallTimeLogger;->mContext:Landroid/content/Context;
 
     return-void

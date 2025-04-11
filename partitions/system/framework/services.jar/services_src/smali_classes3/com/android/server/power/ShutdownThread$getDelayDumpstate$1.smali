@@ -20,7 +20,6 @@
 .method public run()V
     .locals 2
 
-    .line 1403
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$sfgetBIN_TYPE_PRODUCTSHIP()Z
 
     move-result p0
@@ -47,7 +46,6 @@
 
     move-result-object v1
 
-    .line 1404
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -59,7 +57,6 @@
     :cond_0
     const-string p0, "!@ShutdownThread.run() : checking timeout, done."
 
-    .line 1408
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -68,10 +65,8 @@
     :goto_0
     const-string p0, "!@ShutdownThread.run() : Checking timeout, done. Try force shutdown again."
 
-    .line 1405
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1406
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$sfgetsInstance()Lcom/android/server/power/ShutdownThread;
 
     move-result-object p0

@@ -21,7 +21,6 @@
 .method public static synthetic $values()[Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
     .locals 5
 
-    .line 38
     sget-object v0, Lcom/android/server/enterprise/storage/Column$DATA_TYPE;->INTEGER:Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
 
     sget-object v1, Lcom/android/server/enterprise/storage/Column$DATA_TYPE;->TEXT:Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
@@ -42,7 +41,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 39
     new-instance v0, Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
 
     const-string v1, "INTEGER"
@@ -93,7 +91,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/Column$DATA_TYPE;->REAL:Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
 
-    .line 38
     invoke-static {}, Lcom/android/server/enterprise/storage/Column$DATA_TYPE;->$values()[Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
 
     move-result-object v0
@@ -106,7 +103,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 38
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -115,7 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
     .locals 1
 
-    .line 38
     const-class v0, Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -130,7 +125,6 @@
 .method public static values()[Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
     .locals 1
 
-    .line 38
     sget-object v0, Lcom/android/server/enterprise/storage/Column$DATA_TYPE;->$VALUES:[Lcom/android/server/enterprise/storage/Column$DATA_TYPE;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/storage/Column$DATA_TYPE;->clone()Ljava/lang/Object;

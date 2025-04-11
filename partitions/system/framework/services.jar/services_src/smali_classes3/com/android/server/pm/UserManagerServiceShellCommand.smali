@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$dUQEqUh7JN9FbS4WkI_JvBecK5A()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/pm/UserManagerServiceShellCommand;->lambda$runSetSystemUserModeEmulation$0()V
 
     return-void
@@ -26,19 +25,14 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;Lcom/android/server/pm/UserSystemPackageInstaller;Lcom/android/internal/widget/LockPatternUtils;Landroid/content/Context;)V
     .locals 0
 
-    .line 69
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 70
     iput-object p1, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mService:Lcom/android/server/pm/UserManagerService;
 
-    .line 71
     iput-object p2, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mSystemPackageInstaller:Lcom/android/server/pm/UserSystemPackageInstaller;
 
-    .line 72
     iput-object p3, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 73
     iput-object p4, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mContext:Landroid/content/Context;
 
     return-void
@@ -47,7 +41,6 @@
 .method public static synthetic lambda$runSetSystemUserModeEmulation$0()V
     .locals 3
 
-    .line 363
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object v0
@@ -60,7 +53,6 @@
 
     const/4 v2, 0x0
 
-    .line 362
     invoke-static {v0, v1, v2}, Lcom/android/server/power/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -71,19 +63,16 @@
 .method public final canSwitchToHeadlessSystemUser()I
     .locals 1
 
-    .line 541
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 542
     iget-object p0, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mService:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerService;->canSwitchToHeadlessSystemUser()Z
 
     move-result p0
 
-    .line 543
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -94,7 +83,6 @@
 .method public final confirmBuildIsDebuggable()Z
     .locals 1
 
-    .line 569
     invoke-static {}, Landroid/os/Build;->isDebuggable()Z
 
     move-result v0
@@ -105,7 +93,6 @@
 
     return p0
 
-    .line 572
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
@@ -123,7 +110,6 @@
 .method public final confirmIsCalledByRoot()Z
     .locals 1
 
-    .line 582
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -134,7 +120,6 @@
 
     return p0
 
-    .line 585
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
@@ -152,12 +137,10 @@
 .method public final getUserManagerForUser(I)Landroid/os/UserManager;
     .locals 1
 
-    .line 558
     invoke-static {p1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object p1
 
-    .line 559
     iget-object p0, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mContext:Landroid/content/Context;
 
     const/4 v0, 0x0
@@ -166,7 +149,6 @@
 
     move-result-object p0
 
-    .line 560
     const-class p1, Landroid/os/UserManager;
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -181,19 +163,16 @@
 .method public final isMainUserPermanentAdmin()I
     .locals 1
 
-    .line 548
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 549
     iget-object p0, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mService:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerService;->isMainUserPermanentAdmin()Z
 
     move-result p0
 
-    .line 550
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -208,7 +187,6 @@
 
     const/4 p1, 0x0
 
-    .line 132
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
@@ -218,7 +196,6 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 136
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -365,14 +342,12 @@
     :goto_1
     packed-switch v1, :pswitch_data_0
 
-    .line 158
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     goto :goto_2
 
-    .line 156
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->isMainUserPermanentAdmin()I
 
@@ -380,7 +355,6 @@
 
     return p0
 
-    .line 154
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->canSwitchToHeadlessSystemUser()I
 
@@ -388,7 +362,6 @@
 
     return p0
 
-    .line 152
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->runGetMainUserId()I
 
@@ -396,7 +369,6 @@
 
     return p0
 
-    .line 150
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->runIsUserVisible()I
 
@@ -404,7 +376,6 @@
 
     return p0
 
-    .line 148
     :pswitch_4
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->runIsVisibleBackgroundUserOnDefaultDisplaySupported()I
 
@@ -412,7 +383,6 @@
 
     return p0
 
-    .line 146
     :pswitch_5
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->runIsVisibleBackgroundUserSupported()I
 
@@ -420,7 +390,6 @@
 
     return p0
 
-    .line 144
     :pswitch_6
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->runIsHeadlessSystemUserMode()I
 
@@ -428,7 +397,6 @@
 
     return p0
 
-    .line 142
     :pswitch_7
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->runSetSystemUserModeEmulation()I
 
@@ -436,7 +404,6 @@
 
     return p0
 
-    .line 140
     :pswitch_8
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->runReportPackageAllowlistProblems()I
 
@@ -444,7 +411,6 @@
 
     return p0
 
-    .line 138
     :pswitch_9
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->runList()I
 
@@ -458,7 +424,6 @@
     :catch_0
     move-exception p1
 
-    .line 161
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -515,199 +480,156 @@
 .method public onHelp()V
     .locals 3
 
-    .line 78
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "User manager (user) commands:"
 
-    .line 79
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 80
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Prints this help text."
 
-    .line 81
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  list [-v | --verbose] [--all]"
 
-    .line 83
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Prints all users on the system."
 
-    .line 84
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 85
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  report-system-user-package-whitelist-problems [-v | --verbose] [--critical-only] [--mode MODE]"
 
-    .line 86
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Reports all issues on user-type package allowlist XML files. Options:"
 
-    .line 88
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    -v | --verbose: shows extra info, like number of issues"
 
-    .line 89
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    --critical-only: show only critical issues, excluding warnings"
 
-    .line 90
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    --mode MODE: shows what errors would be if device used mode MODE"
 
-    .line 91
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      (where MODE is the allowlist mode integer as defined by config_userTypePackageWhitelistMode)"
 
-    .line 92
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 94
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  set-system-user-mode-emulation [--reboot | --no-restart] <headless | full | default>"
 
-    .line 95
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Changes whether the system user is headless, full, or default (as defined by OEM)."
 
-    .line 97
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    WARNING: this command is meant just for development and debugging purposes."
 
-    .line 99
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "             It should NEVER be used on automated tests."
 
-    .line 101
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    NOTE: by default it restarts the Android runtime, unless called with"
 
-    .line 102
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "          --reboot (which does a full reboot) or"
 
-    .line 103
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "          --no-restart (which requires a manual restart)"
 
-    .line 104
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 105
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  is-headless-system-user-mode [-v | --verbose]"
 
-    .line 106
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Checks whether the device uses headless system user mode."
 
-    .line 107
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  is-visible-background-users-on-default-display-supported [-v | --verbose]"
 
-    .line 108
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Checks whether the device allows users to be start visible on background in the default display."
 
-    .line 109
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    It returns the effective mode, even when using emulation"
 
-    .line 111
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    (to get the real mode as well, use -v or --verbose)"
 
-    .line 112
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 113
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v2, "  is-visible-background-users-supported [-v | --verbose]"
 
-    .line 114
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "    Checks whether the device allows users to be start visible on background."
 
-    .line 115
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 116
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 117
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 118
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  is-user-visible [--display DISPLAY_ID] <USER_ID>"
 
-    .line 119
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Checks if the given user is visible in the given display."
 
-    .line 120
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    If the display option is not set, it uses the user\'s context to check"
 
-    .line 121
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    (so it emulates what apps would get from UserManager.isUserVisible())"
 
-    .line 122
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 123
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  get-main-user "
 
-    .line 124
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Displays main user id or message if there is no main user"
 
-    .line 125
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 126
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -716,12 +638,10 @@
 .method public final runGetMainUserId()I
     .locals 2
 
-    .line 530
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 531
     iget-object p0, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mService:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerService;->getMainUserId()I
@@ -734,14 +654,12 @@
 
     const-string p0, "None"
 
-    .line 533
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 536
     :cond_0
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(I)V
 
@@ -753,7 +671,6 @@
 .method public final runIsHeadlessSystemUserMode()I
     .locals 4
 
-    .line 444
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -762,7 +679,6 @@
 
     move v2, v1
 
-    .line 448
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -772,7 +688,6 @@
 
     const-string v2, "-v"
 
-    .line 449
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -787,7 +702,6 @@
 
     if-nez v2, :cond_0
 
-    .line 455
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -813,7 +727,6 @@
 
     goto :goto_0
 
-    .line 459
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mService:Lcom/android/server/pm/UserManagerService;
 
@@ -823,12 +736,10 @@
 
     if-nez v2, :cond_2
 
-    .line 463
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     goto :goto_1
 
-    .line 465
     :cond_2
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -836,7 +747,6 @@
 
     sget-boolean v2, Lcom/android/internal/os/RoSystemProperties;->MULTIUSER_HEADLESS_SYSTEM_USER:Z
 
-    .line 466
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -847,7 +757,6 @@
 
     const-string v2, "effective=%b real=%b\n"
 
-    .line 465
     invoke-virtual {v0, v2, p0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     :goto_1
@@ -857,14 +766,12 @@
 .method public final runIsUserVisible()I
     .locals 5
 
-    .line 407
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 410
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -876,14 +783,12 @@
 
     const-string v1, "--display"
 
-    .line 411
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 416
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -902,7 +807,6 @@
 
     return v3
 
-    .line 413
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -918,7 +822,6 @@
 
     goto :goto_0
 
-    .line 420
     :cond_1
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -944,7 +847,6 @@
 
     goto :goto_1
 
-    .line 428
     :cond_2
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -953,7 +855,6 @@
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 434
     iget-object p0, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mService:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -966,7 +867,6 @@
 
     goto :goto_2
 
-    .line 436
     :cond_3
     invoke-virtual {p0, v2}, Lcom/android/server/pm/UserManagerServiceShellCommand;->getUserManagerForUser(I)Landroid/os/UserManager;
 
@@ -976,7 +876,6 @@
 
     move-result p0
 
-    .line 439
     :goto_2
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
@@ -984,7 +883,6 @@
 
     return p0
 
-    .line 425
     :cond_4
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1004,7 +902,6 @@
 .method public final runIsVisibleBackgroundUserOnDefaultDisplaySupported()I
     .locals 4
 
-    .line 501
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -1013,7 +910,6 @@
 
     move v2, v1
 
-    .line 505
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -1023,7 +919,6 @@
 
     const-string v2, "-v"
 
-    .line 506
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1038,7 +933,6 @@
 
     if-nez v2, :cond_0
 
-    .line 512
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1064,7 +958,6 @@
 
     goto :goto_0
 
-    .line 517
     :cond_1
     invoke-static {}, Landroid/os/UserManager;->isVisibleBackgroundUsersOnDefaultDisplayEnabled()Z
 
@@ -1072,12 +965,10 @@
 
     if-nez v2, :cond_2
 
-    .line 521
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     goto :goto_1
 
-    .line 523
     :cond_2
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1089,12 +980,10 @@
 
     const v3, 0x11101bd
 
-    .line 524
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v2
 
-    .line 523
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -1114,7 +1003,6 @@
 .method public final runIsVisibleBackgroundUserSupported()I
     .locals 4
 
-    .line 472
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -1123,7 +1011,6 @@
 
     move v2, v1
 
-    .line 476
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -1133,7 +1020,6 @@
 
     const-string v2, "-v"
 
-    .line 477
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1148,7 +1034,6 @@
 
     if-nez v2, :cond_0
 
-    .line 483
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1174,7 +1059,6 @@
 
     goto :goto_0
 
-    .line 488
     :cond_1
     invoke-static {}, Landroid/os/UserManager;->isVisibleBackgroundUsersEnabled()Z
 
@@ -1182,12 +1066,10 @@
 
     if-nez v2, :cond_2
 
-    .line 492
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     goto :goto_1
 
-    .line 494
     :cond_2
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1199,12 +1081,10 @@
 
     const v3, 0x11101bc
 
-    .line 495
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v2
 
-    .line 494
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -1226,7 +1106,6 @@
 
     move-object/from16 v0, p0
 
-    .line 167
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v1
@@ -1237,7 +1116,6 @@
 
     move v4, v3
 
-    .line 171
     :goto_0
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -1247,7 +1125,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 172
     invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
 
     move-result v8
@@ -1310,7 +1187,6 @@
     :goto_2
     packed-switch v6, :pswitch_data_0
 
-    .line 181
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1339,13 +1215,11 @@
 
     goto :goto_0
 
-    .line 185
     :cond_3
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object v5
 
-    .line 186
     iget-object v8, v0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mService:Lcom/android/server/pm/UserManagerService;
 
     xor-int/lit8 v9, v3, 0x1
@@ -1360,12 +1234,10 @@
 
     const-string v0, "Error: couldn\'t get users"
 
-    .line 189
     invoke-virtual {v1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v7
 
-    .line 192
     :cond_4
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1375,7 +1247,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 195
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -1388,7 +1259,6 @@
 
     invoke-virtual {v1, v11, v10}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 196
     invoke-interface {v5}, Landroid/app/IActivityManager;->getCurrentUser()Landroid/content/pm/UserInfo;
 
     move-result-object v10
@@ -1400,7 +1270,6 @@
     :cond_5
     const-string v10, "Users:"
 
-    .line 201
     invoke-virtual {v1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     move v10, v9
@@ -1411,14 +1280,12 @@
     :goto_4
     if-ge v11, v8, :cond_14
 
-    .line 204
     invoke-interface {v3, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, Landroid/content/pm/UserInfo;
 
-    .line 205
     iget v13, v12, Landroid/content/pm/UserInfo;->id:I
 
     invoke-interface {v5, v13, v2}, Landroid/app/IActivityManager;->isUserRunning(II)Z
@@ -1429,10 +1296,8 @@
 
     if-eqz v4, :cond_12
 
-    .line 207
     const-class v15, Landroid/app/admin/DevicePolicyManagerInternal;
 
-    .line 208
     invoke-static {v15}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v15
@@ -1441,12 +1306,10 @@
 
     if-eqz v15, :cond_8
 
-    .line 212
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 215
     :try_start_0
     invoke-virtual {v15}, Landroid/app/admin/DevicePolicyManagerInternal;->getDeviceOwnerUserId()I
 
@@ -1463,7 +1326,6 @@
     :cond_6
     move-object v6, v14
 
-    .line 218
     :goto_5
     invoke-virtual {v15, v7}, Landroid/app/admin/DevicePolicyManagerInternal;->getProfileOwnerAsUser(I)Landroid/content/ComponentName;
 
@@ -1480,7 +1342,6 @@
     :cond_7
     move-object v7, v14
 
-    .line 222
     :goto_6
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1491,7 +1352,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 223
     throw v0
 
     :cond_8
@@ -1499,7 +1359,6 @@
 
     move-object v7, v6
 
-    .line 225
     :goto_7
     iget v15, v12, Landroid/content/pm/UserInfo;->id:I
 
@@ -1512,7 +1371,6 @@
     :cond_9
     move/from16 v16, v2
 
-    .line 226
     :goto_8
     iget v2, v12, Landroid/content/pm/UserInfo;->profileGroupId:I
 
@@ -1527,7 +1385,6 @@
     :cond_a
     const/4 v2, 0x0
 
-    .line 228
     :goto_9
     iget-object v9, v0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mService:Lcom/android/server/pm/UserManagerService;
 
@@ -1539,7 +1396,6 @@
 
     new-array v15, v15, [Ljava/lang/Object;
 
-    .line 230
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v20
@@ -1550,7 +1406,6 @@
 
     iget v0, v12, Landroid/content/pm/UserInfo;->id:I
 
-    .line 231
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1571,7 +1426,6 @@
 
     const-string v3, "android.os.usertype."
 
-    .line 233
     invoke-virtual {v0, v3, v14}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v0
@@ -1582,7 +1436,6 @@
 
     iget v0, v12, Landroid/content/pm/UserInfo;->flags:I
 
-    .line 234
     invoke-static {v0}, Landroid/content/pm/UserInfo;->flagsToString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1593,7 +1446,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 235
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1638,7 +1490,6 @@
 
     aput-object v0, v15, v2
 
-    .line 237
     iget-boolean v0, v12, Landroid/content/pm/UserInfo;->partial:Z
 
     if-eqz v0, :cond_d
@@ -1655,7 +1506,6 @@
 
     aput-object v0, v15, v2
 
-    .line 238
     iget-boolean v0, v12, Landroid/content/pm/UserInfo;->preCreated:Z
 
     if-eqz v0, :cond_e
@@ -1672,7 +1522,6 @@
 
     aput-object v0, v15, v2
 
-    .line 239
     iget-boolean v0, v12, Landroid/content/pm/UserInfo;->convertedFromPreCreated:Z
 
     if-eqz v0, :cond_f
@@ -1722,7 +1571,6 @@
 
     const-string v0, "%d: id=%d, name=%s, type=%s, flags=%s%s%s%s%s%s%s%s%s%s\n"
 
-    .line 229
     invoke-virtual {v1, v0, v15}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const/4 v0, 0x2
@@ -1753,7 +1601,6 @@
 
     const-string v6, "\t%s%s\n"
 
-    .line 248
     invoke-virtual {v1, v6, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     :goto_10
@@ -1794,7 +1641,6 @@
 .method public final runReportPackageAllowlistProblems()I
     .locals 9
 
-    .line 256
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -1807,7 +1653,6 @@
 
     move v4, v3
 
-    .line 261
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -1815,7 +1660,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 262
     invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
 
     move-result v6
@@ -1896,7 +1740,6 @@
     :goto_2
     packed-switch v6, :pswitch_data_0
 
-    .line 274
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1915,7 +1758,6 @@
 
     return v7
 
-    .line 271
     :pswitch_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -1937,7 +1779,6 @@
 
     goto :goto_0
 
-    .line 279
     :cond_4
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1959,7 +1800,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 281
     invoke-static {v2}, Lcom/android/server/pm/UserSystemPackageInstaller;->modeToString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -1972,17 +1812,14 @@
 
     const-string v6, "UserManagerServiceShellCommand"
 
-    .line 279
     invoke-static {v6, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     new-instance v5, Landroid/util/IndentingPrintWriter;
 
     const-string v6, "  "
 
     invoke-direct {v5, v0, v6}, Landroid/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 284
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mSystemPackageInstaller:Lcom/android/server/pm/UserSystemPackageInstaller;
 
@@ -1990,7 +1827,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 286
     invoke-virtual {v5}, Landroid/util/IndentingPrintWriter;->close()V
 
     return v1
@@ -1998,7 +1834,6 @@
     :catchall_0
     move-exception p0
 
-    .line 283
     :try_start_1
     invoke-virtual {v5}, Landroid/util/IndentingPrintWriter;->close()V
     :try_end_1
@@ -2036,7 +1871,6 @@
 .method public final runSetSystemUserModeEmulation()I
     .locals 11
 
-    .line 292
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerServiceShellCommand;->confirmBuildIsDebuggable()Z
 
     move-result v0
@@ -2053,13 +1887,11 @@
 
     goto/16 :goto_6
 
-    .line 296
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 301
     iget-object v2, p0, Lcom/android/server/pm/UserManagerServiceShellCommand;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v3, 0x0
@@ -2072,7 +1904,6 @@
 
     const-string p0, "Cannot change system user mode when it has a credential"
 
-    .line 302
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v1
@@ -2084,7 +1915,6 @@
 
     move v4, v3
 
-    .line 309
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -2094,7 +1924,6 @@
 
     const-string v7, "--no-restart"
 
-    .line 310
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -2109,7 +1938,6 @@
 
     if-nez v4, :cond_2
 
-    .line 318
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2143,7 +1971,6 @@
 
     if-nez v5, :cond_5
 
-    .line 323
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -2154,18 +1981,15 @@
 
     return v1
 
-    .line 327
     :cond_5
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 329
     invoke-static {}, Landroid/os/UserManager;->isHeadlessSystemUserMode()Z
 
     move-result v7
 
-    .line 332
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
@@ -2228,7 +2052,6 @@
     :goto_2
     packed-switch v8, :pswitch_data_0
 
-    .line 343
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -2270,7 +2093,6 @@
 
     const-string v1, "No change needed, system user is already %s\n"
 
-    .line 348
     invoke-virtual {v0, v1, p0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     return v3
@@ -2280,7 +2102,6 @@
 
     const-string/jumbo v1, "persist.debug.user_mode_emulation"
 
-    .line 353
     filled-new-array {v1, v6}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -2289,22 +2110,18 @@
 
     invoke-static {v7, p0, v2}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 356
     invoke-static {v1, v6}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v4, :cond_b
 
     const-string p0, "Rebooting to finalize the changes"
 
-    .line 359
     invoke-static {v7, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, "Rebooting to finalize changes"
 
-    .line 360
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 361
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p0
@@ -2313,7 +2130,6 @@
 
     invoke-direct {v0}, Lcom/android/server/pm/UserManagerServiceShellCommand$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 362
     invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_5
@@ -2323,10 +2139,8 @@
 
     const-string p0, "Shutting PackageManager down"
 
-    .line 367
     invoke-static {v7, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
     const-class p0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2337,7 +2151,6 @@
 
     invoke-virtual {p0}, Landroid/content/pm/PackageManagerInternal;->shutdown()V
 
-    .line 370
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object p0
@@ -2347,12 +2160,10 @@
     :try_start_0
     const-string v1, "Shutting ActivityManager down"
 
-    .line 373
     invoke-static {v7, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 v1, 0x2710
 
-    .line 374
     invoke-interface {p0, v1}, Landroid/app/IActivityManager;->shutdown(I)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -2362,7 +2173,6 @@
     :catch_0
     move-exception p0
 
-    .line 376
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2379,14 +2189,12 @@
 
     invoke-static {v7, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     :cond_c
     :goto_4
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result p0
 
-    .line 381
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -2401,18 +2209,14 @@
 
     const-string v1, "Restarting Android runtime to finalize changes"
 
-    .line 382
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "The restart may trigger a \'Broken pipe\' message; this is to be expected."
 
-    .line 383
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 384
     invoke-virtual {v0}, Ljava/io/PrintWriter;->flush()V
 
-    .line 392
     invoke-static {p0}, Landroid/os/Process;->killProcess(I)V
 
     goto :goto_5
@@ -2420,12 +2224,10 @@
     :cond_d
     const-string p0, "System user mode changed - please reboot (or restart Android runtime) to continue"
 
-    .line 394
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "NOTICE: after restart, some apps might be uninstalled (and their data will be lost)"
 
-    .line 396
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_5

@@ -31,7 +31,6 @@
 .method public static synthetic $values()[Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
     .locals 6
 
-    .line 72
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->ELM:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     sget-object v1, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->KLM:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
@@ -54,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 13
 
-    .line 73
     new-instance v6, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     const-string v1, "ELM"
@@ -73,7 +71,6 @@
 
     sput-object v6, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->ELM:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
-    .line 74
     new-instance v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     const-string v8, "KLM"
@@ -92,7 +89,6 @@
 
     sput-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->KLM:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
-    .line 75
     new-instance v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     const-string v2, "DO"
@@ -111,7 +107,6 @@
 
     sput-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->DO:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
-    .line 76
     new-instance v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     const-string v8, "PO"
@@ -130,7 +125,6 @@
 
     sput-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->PO:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
-    .line 77
     new-instance v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     const-string v2, "KME"
@@ -149,7 +143,6 @@
 
     sput-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->KME:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
-    .line 78
     new-instance v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     const-string v8, "B2C"
@@ -168,7 +161,6 @@
 
     sput-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->B2C:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
-    .line 72
     invoke-static {}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->$values()[Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     move-result-object v0
@@ -181,16 +173,12 @@
 .method public constructor <init>(Ljava/lang/String;IILjava/lang/String;I)V
     .locals 0
 
-    .line 85
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 86
     iput p3, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->mValue:I
 
-    .line 87
     iput-object p4, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->mName:Ljava/lang/String;
 
-    .line 88
     iput p5, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->mId:I
 
     return-void
@@ -199,7 +187,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
     .locals 1
 
-    .line 72
     const-class v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -214,7 +201,6 @@
 .method public static values()[Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
     .locals 1
 
-    .line 72
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->$VALUES:[Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     invoke-virtual {v0}, [Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->clone()Ljava/lang/Object;
@@ -231,7 +217,6 @@
 .method public getId()I
     .locals 0
 
-    .line 100
     iget p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->mId:I
 
     return p0
@@ -240,7 +225,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 96
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->mName:Ljava/lang/String;
 
     return-object p0
@@ -249,7 +233,6 @@
 .method public getValue()I
     .locals 0
 
-    .line 92
     iget p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->mValue:I
 
     return p0

@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 156
     invoke-direct {p0}, Landroid/media/midi/MidiReceiver;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usb/UsbDirectMidiDevice$InputReceiverProxy-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/usb/UsbDirectMidiDevice$InputReceiverProxy;-><init>()V
 
     return-void
@@ -31,12 +29,10 @@
 .method public onFlush()V
     .locals 0
 
-    .line 173
     iget-object p0, p0, Lcom/android/server/usb/UsbDirectMidiDevice$InputReceiverProxy;->mReceiver:Landroid/media/midi/MidiReceiver;
 
     if-eqz p0, :cond_0
 
-    .line 175
     invoke-virtual {p0}, Landroid/media/midi/MidiReceiver;->flush()V
 
     :cond_0
@@ -46,7 +42,6 @@
 .method public onSend([BIIJ)V
     .locals 6
 
-    .line 161
     iget-object v0, p0, Lcom/android/server/usb/UsbDirectMidiDevice$InputReceiverProxy;->mReceiver:Landroid/media/midi/MidiReceiver;
 
     if-eqz v0, :cond_0
@@ -59,7 +54,6 @@
 
     move-wide v4, p4
 
-    .line 163
     invoke-virtual/range {v0 .. v5}, Landroid/media/midi/MidiReceiver;->send([BIIJ)V
 
     :cond_0
@@ -69,7 +63,6 @@
 .method public setReceiver(Landroid/media/midi/MidiReceiver;)V
     .locals 0
 
-    .line 168
     iput-object p1, p0, Lcom/android/server/usb/UsbDirectMidiDevice$InputReceiverProxy;->mReceiver:Landroid/media/midi/MidiReceiver;
 
     return-void

@@ -35,15 +35,12 @@
 
     move-object/from16 v9, p10
 
-    .line 58
     invoke-direct/range {v0 .. v9}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;-><init>(Landroid/content/Context;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;IILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
     move-object v0, p2
 
-    .line 60
     iput-object v0, v10, Lcom/android/server/biometrics/sensors/HalClientMonitor;->mLazyDaemon:Ljava/util/function/Supplier;
 
-    .line 61
     new-instance v0, Lcom/android/server/biometrics/log/OperationContextExt;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
@@ -62,10 +59,8 @@
 .method public destroy()V
     .locals 0
 
-    .line 83
     invoke-super {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->destroy()V
 
-    .line 86
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->unsubscribeBiometricContext()V
 
     return-void
@@ -74,7 +69,6 @@
 .method public getBiometricContextUnsubscriber()Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
     .locals 1
 
-    .line 98
     new-instance v0, Lcom/android/server/biometrics/sensors/HalClientMonitor$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor$1;-><init>(Lcom/android/server/biometrics/sensors/HalClientMonitor;)V
@@ -85,7 +79,6 @@
 .method public getFreshDaemon()Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/HalClientMonitor;->mLazyDaemon:Ljava/util/function/Supplier;
 
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
@@ -98,7 +91,6 @@
 .method public getOperationContext()Lcom/android/server/biometrics/log/OperationContextExt;
     .locals 2
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getBiometricContext()Lcom/android/server/biometrics/log/BiometricContext;
 
     move-result-object v0
@@ -119,7 +111,6 @@
 .method public isBiometricPrompt()Z
     .locals 0
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getCookie()I
 
     move-result p0
@@ -146,7 +137,6 @@
 .method public unsubscribeBiometricContext()V
     .locals 1
 
-    .line 107
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getBiometricContext()Lcom/android/server/biometrics/log/BiometricContext;
 
     move-result-object v0

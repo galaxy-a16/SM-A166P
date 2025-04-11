@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/view/accessibility/AccessibilityManager;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->$r8$lambda$a4vET6ajXHTaPOxdOEX0Qm-stcQ(Landroid/view/accessibility/AccessibilityManager;)Ljava/util/List;

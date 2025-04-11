@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/FreecessHandler;)V
     .locals 0
 
-    .line 498
     iput-object p1, p0, Lcom/android/server/am/FreecessHandler$BluetoothHandler;->this$0:Lcom/android/server/am/FreecessHandler;
 
-    .line 499
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
@@ -25,14 +23,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 504
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
-    .line 505
     iget-object v1, p0, Lcom/android/server/am/FreecessHandler$BluetoothHandler;->this$0:Lcom/android/server/am/FreecessHandler;
 
     iget-object v1, v1, Lcom/android/server/am/FreecessHandler;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
@@ -46,12 +42,10 @@
 
     const/4 v2, -0x1
 
-    .line 509
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 510
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/BlueToothConnectedFilter;->getInstance()Lcom/android/server/am/mars/filter/filter/BlueToothConnectedFilter;
 
     move-result-object v1
@@ -62,7 +56,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 511
     iget v1, p1, Landroid/os/Message;->what:I
 
     const/16 v2, 0x1a
@@ -73,19 +66,16 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 519
     sget-boolean p1, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ENG:Z
 
     if-eqz p1, :cond_1
 
-    .line 520
     sget-object p1, Lcom/android/server/am/FreecessHandler;->TAG:Ljava/lang/String;
 
     const-string v1, "handle FREECESS_UNFREEZE_BT_SCAN_MSG...."
 
     invoke-static {p1, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 522
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/FreecessHandler$BluetoothHandler;->this$0:Lcom/android/server/am/FreecessHandler;
 
@@ -95,7 +85,6 @@
 
     goto :goto_0
 
-    .line 525
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -119,20 +108,17 @@
 
     throw p0
 
-    .line 513
     :cond_3
     sget-boolean p1, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ENG:Z
 
     if-eqz p1, :cond_4
 
-    .line 514
     sget-object p1, Lcom/android/server/am/FreecessHandler;->TAG:Ljava/lang/String;
 
     const-string v1, "handle FREECESS_FREEZE_BT_SCAN_MSG...."
 
     invoke-static {p1, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 516
     :cond_4
     iget-object p0, p0, Lcom/android/server/am/FreecessHandler$BluetoothHandler;->this$0:Lcom/android/server/am/FreecessHandler;
 

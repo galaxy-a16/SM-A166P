@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/usb/AltModeData;
     .locals 1
 
-    .line 54
     new-instance p0, Landroid/hardware/usb/AltModeData;
 
     const/4 v0, 0x0
@@ -33,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 51
     invoke-virtual {p0, p1}, Landroid/hardware/usb/AltModeData$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/usb/AltModeData;
 
     move-result-object p0
@@ -44,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/usb/AltModeData;
     .locals 0
 
-    .line 58
     new-array p0, p1, [Landroid/hardware/usb/AltModeData;
 
     return-object p0
@@ -53,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 51
     invoke-virtual {p0, p1}, Landroid/hardware/usb/AltModeData$1;->newArray(I)[Landroid/hardware/usb/AltModeData;
 
     move-result-object p0

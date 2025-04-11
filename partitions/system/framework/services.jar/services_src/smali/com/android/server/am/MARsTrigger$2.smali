@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/MARsTrigger;)V
     .locals 0
 
-    .line 407
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 410
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -35,18 +33,15 @@
 
     goto :goto_0
 
-    .line 412
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 413
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     const-string p2, "android.intent.action.SCREEN_OFF"
 
-    .line 415
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -55,14 +50,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 416
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Lcom/android/server/am/MARsPolicyManager;->setScreenOnState(Z)V
 
-    .line 417
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object p1
@@ -73,7 +66,6 @@
 
     if-nez p1, :cond_3
 
-    .line 418
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p1
@@ -84,7 +76,6 @@
 
     if-nez p1, :cond_3
 
-    .line 419
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p1
@@ -95,7 +86,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 421
     invoke-static {}, Lcom/android/server/am/MARsHandler;->getInstance()Lcom/android/server/am/MARsHandler;
 
     move-result-object p0
@@ -104,7 +94,6 @@
 
     goto :goto_0
 
-    .line 424
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -116,7 +105,6 @@
 
     goto :goto_0
 
-    .line 427
     :cond_2
     sget-object p0, Landroid/app/UiModeManager;->ACTION_EXIT_CAR_MODE:Ljava/lang/String;
 
@@ -126,7 +114,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 428
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0

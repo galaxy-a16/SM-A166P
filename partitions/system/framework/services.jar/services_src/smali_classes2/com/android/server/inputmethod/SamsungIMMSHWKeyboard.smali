@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetkeyboardState(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->keyboardState:I
 
     return p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBTKeyboardCount(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mBTKeyboardCount:I
 
     return p0
@@ -41,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUSBKeyboardCount(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mUSBKeyboardCount:I
 
     return p0
@@ -50,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUSBKeyboardCountOld(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mUSBKeyboardCountOld:I
 
     return p0
@@ -59,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fputkeyboardState(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->keyboardState:I
 
     return-void
@@ -68,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fputmBTKeyboardCount(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mBTKeyboardCount:I
 
     return-void
@@ -77,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fputmUSBKeyboardCount(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mUSBKeyboardCount:I
 
     return-void
@@ -86,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fputmUSBKeyboardCountOld(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mUSBKeyboardCountOld:I
 
     return-void
@@ -95,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$mconnectedHWKeyboard(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->connectedHWKeyboard()V
 
     return-void
@@ -104,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$mupdateBrightnessMode(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->updateBrightnessMode()V
 
     return-void
@@ -113,18 +103,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 42
     iput v0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mBTKeyboardCount:I
 
-    .line 43
     iput v0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mUSBKeyboardCount:I
 
-    .line 44
     iput v0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mUSBKeyboardCountOld:I
 
     return-void
@@ -135,7 +121,6 @@
 .method public final connectedHWKeyboard()V
     .locals 1
 
-    .line 104
     iget-object p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mHardKeyboardStatusChangeListener:Lcom/android/server/inputmethod/HWKeyboardStatusChangeListener;
 
     const/4 v0, 0x1
@@ -148,7 +133,6 @@
 .method public isAccessoryKeyboard()I
     .locals 0
 
-    .line 70
     iget p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->keyboardState:I
 
     return p0
@@ -157,7 +141,6 @@
 .method public isHWAccessoryKeyboard()Z
     .locals 5
 
-    .line 82
     iget p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->keyboardState:I
 
     and-int/lit8 v0, p0, 0xf
@@ -187,7 +170,6 @@
     :cond_1
     move p0, v2
 
-    .line 85
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -224,7 +206,6 @@
 .method public isPogoBackfolded()Z
     .locals 2
 
-    .line 90
     iget p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->keyboardState:I
 
     and-int/lit8 p0, p0, 0x8
@@ -238,7 +219,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 91
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -264,7 +244,6 @@
 .method public isPogoConnectedOnly()Z
     .locals 0
 
-    .line 100
     iget p0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->keyboardState:I
 
     if-eqz p0, :cond_0
@@ -287,20 +266,16 @@
 .method public registerReceiver(Landroid/content/Context;)V
     .locals 4
 
-    .line 115
     iput-object p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mContext:Landroid/content/Context;
 
-    .line 116
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "com.sec.android.sidesync.action.PSS_KEYBOARD"
 
-    .line 117
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 118
     new-instance v1, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$PSSKeyboardReceiver;
 
     invoke-direct {v1, p0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$PSSKeyboardReceiver;-><init>(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
@@ -311,39 +286,32 @@
 
     invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 119
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "com.sec.android.sidesync.action.KMS_KEYBOARD"
 
-    .line 120
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 121
     new-instance v1, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$KMSKeyboardReceiver;
 
     invoke-direct {v1, p0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$KMSKeyboardReceiver;-><init>(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
 
     invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 122
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.hardware.usb.action.USB_DEVICE_ATTACHED"
 
-    .line 123
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.hardware.usb.action.USB_DEVICE_DETACHED"
 
-    .line 124
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 125
     new-instance v1, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;
 
     invoke-direct {v1, p0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;-><init>(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
@@ -352,47 +320,38 @@
 
     invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 127
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.bluetooth.input.profile.action.CONNECTION_STATE_CHANGED"
 
-    .line 128
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.bluetooth.adapter.action.STATE_CHANGED"
 
-    .line 129
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 130
     new-instance v1, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$BTKeyboardReceiver;
 
     invoke-direct {v1, p0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$BTKeyboardReceiver;-><init>(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 132
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "com.samsung.android.input.POGO_KEYBOARD_CHANGED"
 
-    .line 133
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 134
     new-instance v1, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$POGOKeyboardReceiver;
 
     invoke-direct {v1, p0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$POGOKeyboardReceiver;-><init>(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
 
-    .line 135
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 136
     invoke-virtual {v1}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$POGOKeyboardReceiver;->init()V
 
     return-void
@@ -401,7 +360,6 @@
 .method public setOnHardKeyboardStatusChangeListener(Lcom/android/server/inputmethod/HWKeyboardStatusChangeListener;)V
     .locals 0
 
-    .line 357
     iput-object p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mHardKeyboardStatusChangeListener:Lcom/android/server/inputmethod/HWKeyboardStatusChangeListener;
 
     return-void
@@ -410,14 +368,12 @@
 .method public final updateBrightnessMode()V
     .locals 3
 
-    .line 108
     iget v0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->prevAutoMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -433,7 +389,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 111
     iput v0, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->prevAutoMode:I
 
     return-void
@@ -446,7 +401,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 75
     iget p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->keyboardState:I
 
     or-int/lit16 p1, p1, 0x80
@@ -455,7 +409,6 @@
 
     goto :goto_0
 
-    .line 77
     :cond_0
     iget p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->keyboardState:I
 

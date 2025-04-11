@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$eALN8wbEPikTJfDk4bq25sj1mKk(Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher;Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher;->lambda$wrap$0(Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$mwrap(Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher;Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher;->wrap(Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
 
     return-void
@@ -29,10 +27,8 @@
 .method public constructor <init>(Landroid/media/soundtrigger_middleware/ISoundTriggerInjection;)V
     .locals 0
 
-    .line 710
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 711
     iput-object p1, p0, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher;->mInjection:Landroid/media/soundtrigger_middleware/ISoundTriggerInjection;
 
     return-void
@@ -41,7 +37,6 @@
 .method public synthetic constructor <init>(Landroid/media/soundtrigger_middleware/ISoundTriggerInjection;Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher;-><init>(Landroid/media/soundtrigger_middleware/ISoundTriggerInjection;)V
 
     return-void
@@ -50,7 +45,6 @@
 .method private synthetic lambda$wrap$0(Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
     .locals 1
 
-    .line 717
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher;->mInjection:Landroid/media/soundtrigger_middleware/ISoundTriggerInjection;
 
@@ -67,7 +61,6 @@
 
     const-string v0, "Callback dispatch threw"
 
-    .line 721
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -79,7 +72,6 @@
 .method public final wrap(Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
     .locals 2
 
-    .line 715
     sget-object v0, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$ExecutorHolder;->INJECTION_EXECUTOR:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$InjectionDispatcher$$ExternalSyntheticLambda0;

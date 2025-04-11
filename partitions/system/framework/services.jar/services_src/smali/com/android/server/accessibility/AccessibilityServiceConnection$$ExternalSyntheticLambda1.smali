@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/accessibility/AccessibilityServiceConnection;
 
     invoke-static {p1}, Lcom/android/server/accessibility/AccessibilityServiceConnection;->$r8$lambda$kgYrVCQdL4snb1Con0bA0MM4dwM(Lcom/android/server/accessibility/AccessibilityServiceConnection;)V

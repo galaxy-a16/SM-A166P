@@ -9,7 +9,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 327
     invoke-interface {p0}, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$State;->name()Ljava/lang/String;
 
     move-result-object p0
@@ -28,7 +27,6 @@
 .method public name()Ljava/lang/String;
     .locals 0
 
-    .line 323
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -43,14 +41,12 @@
 .method public onEnter()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onExit()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

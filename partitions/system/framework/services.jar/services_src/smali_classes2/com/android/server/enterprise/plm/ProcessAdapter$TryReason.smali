@@ -21,7 +21,6 @@
 .method public static synthetic $values()[Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
     .locals 5
 
-    .line 136
     sget-object v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->START:Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     sget-object v1, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->STOP:Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
@@ -42,7 +41,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 137
     new-instance v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     const-string v1, "START"
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->START:Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
-    .line 138
     new-instance v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     const-string v1, "STOP"
@@ -64,7 +61,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->STOP:Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
-    .line 139
     new-instance v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     const-string v1, "ALIVE"
@@ -75,7 +71,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->ALIVE:Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
-    .line 140
     new-instance v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     const-string v1, "DEATH"
@@ -86,7 +81,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->DEATH:Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
-    .line 141
     new-instance v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     const-string v1, "UPDATE"
@@ -97,7 +91,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->UPDATE:Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
-    .line 136
     invoke-static {}, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->$values()[Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     move-result-object v0
@@ -110,7 +103,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 136
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -119,7 +111,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
     .locals 1
 
-    .line 136
     const-class v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -134,7 +125,6 @@
 .method public static values()[Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
     .locals 1
 
-    .line 136
     sget-object v0, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->$VALUES:[Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->clone()Ljava/lang/Object;

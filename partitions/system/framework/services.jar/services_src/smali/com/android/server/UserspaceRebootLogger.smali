@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$Q-q8TcwFv6lwM8NPogx0A-QnwQY(IJI)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/UserspaceRebootLogger;->lambda$logEventAsync$0(IJI)V
 
     return-void
@@ -20,7 +19,6 @@
 
     const-wide/16 v1, -0x1
 
-    .line 141
     invoke-static {v0, v1, v2}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v3
@@ -38,7 +36,6 @@
 
     const-string v1, ""
 
-    .line 144
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -49,7 +46,6 @@
 
     const-string/jumbo v1, "reboot,"
 
-    .line 145
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -58,7 +54,6 @@
 
     const/4 v1, 0x6
 
-    .line 146
     invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
@@ -66,7 +61,6 @@
     :cond_1
     const-string/jumbo v1, "userspace_failed,watchdog_fork"
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -80,7 +74,6 @@
     :cond_2
     const-string/jumbo v1, "userspace_failed,shutdown_aborted"
 
-    .line 151
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -92,7 +85,6 @@
     :cond_3
     const-string/jumbo v1, "mount_userdata_failed"
 
-    .line 154
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -106,7 +98,6 @@
     :cond_4
     const-string/jumbo v1, "userspace_failed,init_user0"
 
-    .line 157
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -118,7 +109,6 @@
     :cond_5
     const-string/jumbo v1, "userspace_failed,enablefilecrypto"
 
-    .line 160
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -130,7 +120,6 @@
     :cond_6
     const-string/jumbo v1, "userspace_failed,watchdog_triggered"
 
-    .line 163
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -150,7 +139,6 @@
 .method public static synthetic lambda$logEventAsync$0(IJI)V
     .locals 2
 
-    .line 131
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,14 +175,12 @@
 
     const/16 v0, 0xf3
 
-    .line 134
     invoke-static {v0, p0, p1, p2, p3}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIJI)V
 
     const-string/jumbo p0, "persist.sys.userspace_reboot.log.should_log"
 
     const-string p1, ""
 
-    .line 136
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -203,7 +189,6 @@
 .method public static logEventAsync(ZLjava/util/concurrent/Executor;)V
     .locals 7
 
-    .line 112
     invoke-static {}, Landroid/os/PowerManager;->isRebootingUserspaceSupportedImpl()Z
 
     move-result v0
@@ -214,12 +199,10 @@
 
     const-string/jumbo p1, "logEventAsync: Userspace reboot is not supported."
 
-    .line 113
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 117
     :cond_0
     invoke-static {}, Lcom/android/server/UserspaceRebootLogger;->computeOutcome()I
 
@@ -233,14 +216,12 @@
 
     const-string/jumbo v4, "sys.userspace_reboot.log.last_finished"
 
-    .line 120
     invoke-static {v4, v2, v3}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v4
 
     const-string/jumbo v6, "sys.userspace_reboot.log.last_started"
 
-    .line 121
     invoke-static {v6, v2, v3}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v2
@@ -255,7 +236,6 @@
     :cond_2
     const/4 v1, 0x2
 
-    .line 129
     :goto_0
     new-instance p0, Lcom/android/server/UserspaceRebootLogger$$ExternalSyntheticLambda0;
 
@@ -269,7 +249,6 @@
 .method public static noteUserspaceRebootSuccess()V
     .locals 2
 
-    .line 79
     invoke-static {}, Landroid/os/PowerManager;->isRebootingUserspaceSupportedImpl()Z
 
     move-result v0
@@ -280,12 +259,10 @@
 
     const-string/jumbo v1, "noteUserspaceRebootSuccess: Userspace reboot is not supported."
 
-    .line 80
     invoke-static {v0, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 85
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -297,7 +274,6 @@
 
     const-string/jumbo v1, "sys.userspace_reboot.log.last_finished"
 
-    .line 84
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -306,7 +282,6 @@
 .method public static noteUserspaceRebootWasRequested()V
     .locals 2
 
-    .line 61
     invoke-static {}, Landroid/os/PowerManager;->isRebootingUserspaceSupportedImpl()Z
 
     move-result v0
@@ -317,7 +292,6 @@
 
     const-string/jumbo v1, "noteUserspaceRebootWasRequested: Userspace reboot is not supported."
 
-    .line 62
     invoke-static {v0, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -327,10 +301,8 @@
 
     const-string v1, "1"
 
-    .line 66
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -341,7 +313,6 @@
 
     const-string/jumbo v1, "sys.userspace_reboot.log.last_started"
 
-    .line 67
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -350,7 +321,6 @@
 .method public static shouldLogUserspaceRebootEvent()Z
     .locals 2
 
-    .line 95
     invoke-static {}, Landroid/os/PowerManager;->isRebootingUserspaceSupportedImpl()Z
 
     move-result v0
@@ -364,7 +334,6 @@
     :cond_0
     const-string/jumbo v0, "persist.sys.userspace_reboot.log.should_log"
 
-    .line 99
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0

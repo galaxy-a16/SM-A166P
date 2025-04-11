@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 32
     new-instance v0, Lcom/android/server/enterprise/EnterpriseServiceConstants$1;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/EnterpriseServiceConstants$1;-><init>()V
@@ -26,7 +25,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/EnterpriseServiceConstants;->KEY_CUSTOMIZE_KEYCODE:Ljava/util/List;
 
-    .line 46
     new-instance v0, Lcom/android/server/enterprise/EnterpriseServiceConstants$2;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/EnterpriseServiceConstants$2;-><init>()V
@@ -37,7 +35,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/EnterpriseServiceConstants;->KEY_CUSTOMIZE_KEYPRESS:Ljava/util/List;
 
-    .line 54
     new-instance v0, Lcom/android/server/enterprise/EnterpriseServiceConstants$3;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/EnterpriseServiceConstants$3;-><init>()V

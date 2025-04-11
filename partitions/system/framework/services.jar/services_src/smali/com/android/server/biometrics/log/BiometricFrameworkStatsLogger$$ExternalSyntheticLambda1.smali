@@ -20,7 +20,6 @@
 .method public final test(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;->$r8$lambda$y0xrlTF93nBKcU8YLmcmrqwkFXQ(I)Z
 
     move-result p0

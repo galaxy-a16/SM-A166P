@@ -17,7 +17,6 @@
 .method public getElapsedRealtime()J
     .locals 2
 
-    .line 95
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

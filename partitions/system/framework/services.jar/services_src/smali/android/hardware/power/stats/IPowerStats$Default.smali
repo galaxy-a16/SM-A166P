@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public getEnergyConsumed([I)[Landroid/hardware/power/stats/EnergyConsumerResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -38,7 +36,6 @@
 .method public getEnergyConsumerInfo()[Landroid/hardware/power/stats/EnergyConsumer;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -47,7 +44,6 @@
 .method public getEnergyMeterInfo()[Landroid/hardware/power/stats/Channel;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -56,7 +52,6 @@
 .method public getPowerEntityInfo()[Landroid/hardware/power/stats/PowerEntity;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -65,7 +60,6 @@
 .method public getStateResidency([I)[Landroid/hardware/power/stats/StateResidencyResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -74,7 +68,6 @@
 .method public readEnergyMeter([I)[Landroid/hardware/power/stats/EnergyMeasurement;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0

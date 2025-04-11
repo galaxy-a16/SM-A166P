@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/DesktopModeService;Ljava/lang/String;)V
     .locals 0
 
-    .line 337
     iput-object p1, p0, Lcom/android/server/desktopmode/DesktopModeService$3;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-direct {p0, p2}, Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;-><init>(Ljava/lang/String;)V
@@ -24,21 +23,18 @@
 .method public onSettingChanged(Ljava/lang/String;I)V
     .locals 0
 
-    .line 340
     invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 342
     iget-object p1, p0, Lcom/android/server/desktopmode/DesktopModeService$3;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$msetUserRequest(Lcom/android/server/desktopmode/DesktopModeService;I)V
 
-    .line 343
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$3;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p0, p2}, Lcom/android/server/desktopmode/DesktopModeService;->scheduleUpdateDesktopMode(Z)V

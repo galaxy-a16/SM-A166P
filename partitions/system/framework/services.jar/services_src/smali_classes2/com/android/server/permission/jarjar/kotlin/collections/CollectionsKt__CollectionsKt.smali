@@ -7,7 +7,6 @@
 .method public static final emptyList()Ljava/util/List;
     .locals 1
 
-    .line 71
     sget-object v0, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyList;->INSTANCE:Lcom/android/server/permission/jarjar/kotlin/collections/EmptyList;
 
     return-object v0
@@ -20,7 +19,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 293
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -36,7 +34,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 295
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -47,7 +44,6 @@
 
     goto :goto_0
 
-    .line 294
     :cond_1
     invoke-static {}, Lcom/android/server/permission/jarjar/kotlin/collections/CollectionsKt__CollectionsKt;->emptyList()Ljava/util/List;
 

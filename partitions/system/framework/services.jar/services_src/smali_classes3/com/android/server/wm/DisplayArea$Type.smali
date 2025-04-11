@@ -17,7 +17,6 @@
 .method public static synthetic $values()[Lcom/android/server/wm/DisplayArea$Type;
     .locals 3
 
-    .line 849
     sget-object v0, Lcom/android/server/wm/DisplayArea$Type;->ABOVE_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
     sget-object v1, Lcom/android/server/wm/DisplayArea$Type;->BELOW_TASKS:Lcom/android/server/wm/DisplayArea$Type;
@@ -34,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 851
     new-instance v0, Lcom/android/server/wm/DisplayArea$Type;
 
     const-string v1, "ABOVE_TASKS"
@@ -45,7 +43,6 @@
 
     sput-object v0, Lcom/android/server/wm/DisplayArea$Type;->ABOVE_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
-    .line 853
     new-instance v0, Lcom/android/server/wm/DisplayArea$Type;
 
     const-string v1, "BELOW_TASKS"
@@ -56,7 +53,6 @@
 
     sput-object v0, Lcom/android/server/wm/DisplayArea$Type;->BELOW_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
-    .line 855
     new-instance v0, Lcom/android/server/wm/DisplayArea$Type;
 
     const-string v1, "ANY"
@@ -67,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/wm/DisplayArea$Type;->ANY:Lcom/android/server/wm/DisplayArea$Type;
 
-    .line 849
     invoke-static {}, Lcom/android/server/wm/DisplayArea$Type;->$values()[Lcom/android/server/wm/DisplayArea$Type;
 
     move-result-object v0
@@ -80,7 +75,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 849
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -89,7 +83,6 @@
 .method public static checkChild(Lcom/android/server/wm/DisplayArea$Type;Lcom/android/server/wm/DisplayArea$Type;)V
     .locals 3
 
-    .line 865
     sget-object v0, Lcom/android/server/wm/DisplayArea$1;->$SwitchMap$com$android$server$wm$DisplayArea$Type:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -110,7 +103,6 @@
 
     goto :goto_0
 
-    .line 870
     :cond_0
     sget-object p0, Lcom/android/server/wm/DisplayArea$Type;->BELOW_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
@@ -125,7 +117,6 @@
 
     goto :goto_0
 
-    .line 867
     :cond_2
     sget-object p0, Lcom/android/server/wm/DisplayArea$Type;->ABOVE_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
@@ -145,7 +136,6 @@
 .method public static checkSiblings(Lcom/android/server/wm/DisplayArea$Type;Lcom/android/server/wm/DisplayArea$Type;)V
     .locals 5
 
-    .line 858
     sget-object v0, Lcom/android/server/wm/DisplayArea$Type;->BELOW_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
     const/4 v1, 0x0
@@ -184,7 +174,6 @@
 
     invoke-static {v0, v3}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 860
     sget-object v0, Lcom/android/server/wm/DisplayArea$Type;->ABOVE_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
     if-ne p0, v0, :cond_2
@@ -217,21 +206,18 @@
 .method public static typeOf(Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/DisplayArea$Type;
     .locals 3
 
-    .line 876
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asDisplayArea()Lcom/android/server/wm/DisplayArea;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 877
     check-cast p0, Lcom/android/server/wm/DisplayArea;
 
     iget-object p0, p0, Lcom/android/server/wm/DisplayArea;->mType:Lcom/android/server/wm/DisplayArea$Type;
 
     return-object p0
 
-    .line 878
     :cond_0
     instance-of v0, p0, Lcom/android/server/wm/WindowToken;
 
@@ -241,7 +227,6 @@
 
     if-nez v0, :cond_1
 
-    .line 879
     check-cast p0, Lcom/android/server/wm/WindowToken;
 
     invoke-static {p0}, Lcom/android/server/wm/DisplayArea$Type;->typeOf(Lcom/android/server/wm/WindowToken;)Lcom/android/server/wm/DisplayArea$Type;
@@ -250,18 +235,15 @@
 
     return-object p0
 
-    .line 880
     :cond_1
     instance-of v0, p0, Lcom/android/server/wm/Task;
 
     if-eqz v0, :cond_2
 
-    .line 881
     sget-object p0, Lcom/android/server/wm/DisplayArea$Type;->ANY:Lcom/android/server/wm/DisplayArea$Type;
 
     return-object p0
 
-    .line 883
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -287,26 +269,22 @@
 .method public static typeOf(Lcom/android/server/wm/WindowToken;)Lcom/android/server/wm/DisplayArea$Type;
     .locals 1
 
-    .line 889
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_LETTERBOX_ENHANCED_AS_CAPTURED_BLUR:Z
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->token:Landroid/os/IBinder;
 
-    .line 890
     invoke-static {v0}, Lcom/android/server/wm/CustomLetterboxConfiguration;->isEnhancedControllerToken(Landroid/os/IBinder;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 891
     sget-object p0, Lcom/android/server/wm/DisplayArea$Type;->BELOW_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
     return-object p0
 
-    .line 894
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->getWindowLayerFromType()I
 
@@ -330,7 +308,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/wm/DisplayArea$Type;
     .locals 1
 
-    .line 849
     const-class v0, Lcom/android/server/wm/DisplayArea$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -345,7 +322,6 @@
 .method public static values()[Lcom/android/server/wm/DisplayArea$Type;
     .locals 1
 
-    .line 849
     sget-object v0, Lcom/android/server/wm/DisplayArea$Type;->$VALUES:[Lcom/android/server/wm/DisplayArea$Type;
 
     invoke-virtual {v0}, [Lcom/android/server/wm/DisplayArea$Type;->clone()Ljava/lang/Object;

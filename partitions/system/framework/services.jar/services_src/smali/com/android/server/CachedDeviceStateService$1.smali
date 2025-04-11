@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/CachedDeviceStateService;)V
     .locals 0
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/CachedDeviceStateService$1;->this$0:Lcom/android/server/CachedDeviceStateService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 43
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -96,7 +94,6 @@
 
     goto :goto_2
 
-    .line 51
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/CachedDeviceStateService$1;->this$0:Lcom/android/server/CachedDeviceStateService;
 
@@ -108,7 +105,6 @@
 
     goto :goto_2
 
-    .line 45
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/CachedDeviceStateService$1;->this$0:Lcom/android/server/CachedDeviceStateService;
 
@@ -118,7 +114,6 @@
 
     const-string/jumbo p1, "plugged"
 
-    .line 46
     invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -130,13 +125,11 @@
     :cond_3
     move v1, v2
 
-    .line 45
     :goto_1
     invoke-virtual {p0, v1}, Lcom/android/internal/os/CachedDeviceState;->setCharging(Z)V
 
     goto :goto_2
 
-    .line 54
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/CachedDeviceStateService$1;->this$0:Lcom/android/server/CachedDeviceStateService;
 

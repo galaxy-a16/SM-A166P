@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$h-wU361nbcPbHNODEJdqsghtzzQ(Lcom/android/server/BinderCallsStatsService$LifeCycle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/BinderCallsStatsService$LifeCycle;->lambda$onBootPhase$0()V
 
     return-void
@@ -24,7 +23,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 289
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method private synthetic lambda$onBootPhase$0()V
     .locals 0
 
-    .line 342
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     invoke-virtual {p0}, Lcom/android/internal/os/BinderCallsStats;->init()V
@@ -50,7 +47,6 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 314
     const-class p1, Lcom/android/internal/os/CachedDeviceState$Readonly;
 
     invoke-virtual {p0, p1}, Lcom/android/server/SystemService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -59,19 +55,16 @@
 
     check-cast p1, Lcom/android/internal/os/CachedDeviceState$Readonly;
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BinderCallsStats;->setDeviceState(Lcom/android/internal/os/CachedDeviceState$Readonly;)V
 
-    .line 317
     iget-object p1, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/BinderCallsStats;->enablePackageStats(Z)V
 
-    .line 319
     const-class p1, Landroid/os/BatteryStatsInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/SystemService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -80,7 +73,6 @@
 
     check-cast p1, Landroid/os/BatteryStatsInternal;
 
-    .line 321
     iget-object v0, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     new-instance v1, Lcom/android/server/BinderCallsStatsService$LifeCycle$1;
@@ -89,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BinderCallsStats;->setCallStatsObserver(Lcom/android/internal/os/BinderInternal$CallStatsObserver;)V
 
-    .line 337
     iget-object p1, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mWorkSourceProvider:Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -98,7 +89,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;->systemReady(Landroid/content/Context;)V
 
-    .line 338
     iget-object p1, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mService:Lcom/android/server/BinderCallsStatsService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -114,7 +104,6 @@
 
     if-ne v0, p1, :cond_1
 
-    .line 341
     invoke-static {}, Lcom/android/server/IoThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -133,7 +122,6 @@
 .method public onStart()V
     .locals 3
 
-    .line 294
     new-instance v0, Lcom/android/internal/os/BinderCallsStats;
 
     new-instance v1, Lcom/android/internal/os/BinderCallsStats$Injector;
@@ -144,14 +132,12 @@
 
     iput-object v0, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
-    .line 295
     new-instance v0, Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;
 
     invoke-direct {v0}, Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mWorkSourceProvider:Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;
 
-    .line 296
     new-instance v0, Lcom/android/server/BinderCallsStatsService;
 
     iget-object v1, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
@@ -162,7 +148,6 @@
 
     iput-object v0, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mService:Lcom/android/server/BinderCallsStatsService;
 
-    .line 298
     new-instance v0, Lcom/android/server/BinderCallsStatsService$Internal;
 
     iget-object v1, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
@@ -179,7 +164,6 @@
 
     const-string v0, "binder_calls_stats"
 
-    .line 299
     iget-object v1, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mService:Lcom/android/server/BinderCallsStatsService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
@@ -188,7 +172,6 @@
 
     const/4 v1, 0x0
 
-    .line 300
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -199,10 +182,8 @@
 
     const-string v1, "Enabled CPU usage tracking for binder calls. Controlled by persist.sys.binder_calls_detailed_tracking or via dumpsys binder_calls_stats --enable-detailed-tracking"
 
-    .line 304
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$LifeCycle;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     const/4 v0, 0x1

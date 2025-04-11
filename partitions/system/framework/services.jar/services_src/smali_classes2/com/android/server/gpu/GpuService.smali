@@ -35,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContentResolver(Lcom/android/server/gpu/GpuService;)Landroid/content/ContentResolver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/gpu/GpuService;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object p0
@@ -44,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/gpu/GpuService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/gpu/GpuService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -53,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDevDriverPackageName(Lcom/android/server/gpu/GpuService;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/gpu/GpuService;->mDevDriverPackageName:Ljava/lang/String;
 
     return-object p0
@@ -62,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceConfigLock(Lcom/android/server/gpu/GpuService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/gpu/GpuService;->mDeviceConfigLock:Ljava/lang/Object;
 
     return-object p0
@@ -71,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmProdDriverPackageName(Lcom/android/server/gpu/GpuService;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/gpu/GpuService;->mProdDriverPackageName:Ljava/lang/String;
 
     return-object p0
@@ -80,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$mfetchPrereleaseDriverPackageProperties(Lcom/android/server/gpu/GpuService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/gpu/GpuService;->fetchPrereleaseDriverPackageProperties()V
 
     return-void
@@ -89,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$mfetchProductionDriverPackageProperties(Lcom/android/server/gpu/GpuService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/gpu/GpuService;->fetchProductionDriverPackageProperties()V
 
     return-void
@@ -98,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$mparseDenylists(Lcom/android/server/gpu/GpuService;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/gpu/GpuService;->parseDenylists(Ljava/lang/String;)V
 
     return-void
@@ -107,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$mprocessDenylists(Lcom/android/server/gpu/GpuService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/gpu/GpuService;->processDenylists()V
 
     return-void
@@ -116,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$msetDenylist(Lcom/android/server/gpu/GpuService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/gpu/GpuService;->setDenylist()V
 
     return-void
@@ -125,29 +115,24 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 7
 
-    .line 87
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 75
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/gpu/GpuService;->mLock:Ljava/lang/Object;
 
-    .line 76
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/gpu/GpuService;->mDeviceConfigLock:Ljava/lang/Object;
 
-    .line 89
     iput-object p1, p0, Lcom/android/server/gpu/GpuService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "ro.gfx.driver.0"
 
-    .line 90
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -156,26 +141,22 @@
 
     const-wide/16 v1, -0x1
 
-    .line 91
     iput-wide v1, p0, Lcom/android/server/gpu/GpuService;->mProdDriverVersionCode:J
 
     const-string/jumbo v1, "ro.gfx.driver.1"
 
-    .line 92
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/gpu/GpuService;->mDevDriverPackageName:Ljava/lang/String;
 
-    .line 93
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/gpu/GpuService;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 94
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -184,7 +165,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/gpu/GpuService;->mHasProdDriver:Z
 
-    .line 95
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -197,7 +177,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 97
     :cond_0
     new-instance v4, Landroid/content/IntentFilter;
 
@@ -205,25 +184,20 @@
 
     const-string p1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 98
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p1, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 99
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 100
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo p1, "package"
 
-    .line 101
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 102
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -249,13 +223,11 @@
 .method public static assetToSettingsGlobal(Landroid/content/Context;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;)V
     .locals 2
 
-    .line 207
     :try_start_0
     new-instance v0, Ljava/io/BufferedReader;
 
     new-instance v1, Ljava/io/InputStreamReader;
 
-    .line 208
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p1
@@ -268,12 +240,10 @@
 
     invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 209
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 210
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -281,23 +251,19 @@
 
     if-eqz p2, :cond_0
 
-    .line 211
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 213
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 215
     invoke-static {p4, p1}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 213
     invoke-static {p0, p3, p1}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -314,7 +280,6 @@
 .method public final fetchPrereleaseDriverPackageProperties()V
     .locals 3
 
-    .line 314
     :try_start_0
     iget-object v0, p0, Lcom/android/server/gpu/GpuService;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -328,7 +293,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 325
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
     const/16 v2, 0x1a
@@ -337,7 +301,6 @@
 
     return-void
 
-    .line 332
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/server/gpu/GpuService;->setUpdatableDriverPath(Landroid/content/pm/ApplicationInfo;)V
 
@@ -348,7 +311,6 @@
 .method public final fetchProductionDriverPackageProperties()V
     .locals 4
 
-    .line 226
     :try_start_0
     iget-object v0, p0, Lcom/android/server/gpu/GpuService;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -362,7 +324,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 237
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
     const/16 v2, 0x1a
@@ -371,7 +332,6 @@
 
     return-void
 
-    .line 245
     :cond_0
     iget-object v1, p0, Lcom/android/server/gpu/GpuService;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -381,12 +341,10 @@
 
     invoke-static {v1, v3, v2}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 247
     iget-wide v0, v0, Landroid/content/pm/ApplicationInfo;->longVersionCode:J
 
     iput-wide v0, p0, Lcom/android/server/gpu/GpuService;->mProdDriverVersionCode:J
 
-    .line 250
     :try_start_1
     iget-object v0, p0, Lcom/android/server/gpu/GpuService;->mContext:Landroid/content/Context;
 
@@ -398,7 +356,6 @@
 
     move-result-object v0
 
-    .line 253
     iget-object p0, p0, Lcom/android/server/gpu/GpuService;->mContext:Landroid/content/Context;
 
     const-string v1, "allowlist.txt"
@@ -420,7 +377,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 114
     iget-object p1, p0, Lcom/android/server/gpu/GpuService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -429,7 +385,6 @@
 
     iput-object p1, p0, Lcom/android/server/gpu/GpuService;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 115
     iget-boolean p1, p0, Lcom/android/server/gpu/GpuService;->mHasProdDriver:Z
 
     if-nez p1, :cond_0
@@ -440,7 +395,6 @@
 
     return-void
 
-    .line 118
     :cond_0
     new-instance p1, Lcom/android/server/gpu/GpuService$SettingsObserver;
 
@@ -448,23 +402,18 @@
 
     iput-object p1, p0, Lcom/android/server/gpu/GpuService;->mSettingsObserver:Lcom/android/server/gpu/GpuService$SettingsObserver;
 
-    .line 119
     new-instance p1, Lcom/android/server/gpu/GpuService$DeviceConfigListener;
 
     invoke-direct {p1, p0}, Lcom/android/server/gpu/GpuService$DeviceConfigListener;-><init>(Lcom/android/server/gpu/GpuService;)V
 
     iput-object p1, p0, Lcom/android/server/gpu/GpuService;->mDeviceConfigListener:Lcom/android/server/gpu/GpuService$DeviceConfigListener;
 
-    .line 120
     invoke-virtual {p0}, Lcom/android/server/gpu/GpuService;->fetchProductionDriverPackageProperties()V
 
-    .line 121
     invoke-virtual {p0}, Lcom/android/server/gpu/GpuService;->processDenylists()V
 
-    .line 122
     invoke-virtual {p0}, Lcom/android/server/gpu/GpuService;->setDenylist()V
 
-    .line 123
     invoke-virtual {p0}, Lcom/android/server/gpu/GpuService;->fetchPrereleaseDriverPackageProperties()V
 
     :cond_1
@@ -474,21 +423,18 @@
 .method public onStart()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final parseDenylists(Ljava/lang/String;)V
     .locals 2
 
-    .line 275
     iget-object v0, p0, Lcom/android/server/gpu/GpuService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 277
     :try_start_0
     iput-object v1, p0, Lcom/android/server/gpu/GpuService;->mDenylists:Landroid/updatabledriver/UpdatableDriverProto$Denylists;
     :try_end_0
@@ -496,7 +442,6 @@
 
     const/4 v1, 0x3
 
-    .line 279
     :try_start_1
     invoke-static {p1, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
@@ -512,7 +457,6 @@
     .catch Lcom/android/framework/protobuf/InvalidProtocolBufferException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 289
     :catch_0
     :try_start_2
     monitor-exit v0
@@ -536,17 +480,14 @@
 
     const-string/jumbo v1, "updatable_driver_production_denylists"
 
-    .line 264
     invoke-static {v0, v1}, Landroid/provider/DeviceConfig;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/gpu/GpuService;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 268
     invoke-static {v0, v1}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -559,7 +500,6 @@
     :cond_1
     const-string v0, ""
 
-    .line 271
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/server/gpu/GpuService;->parseDenylists(Ljava/lang/String;)V
 
@@ -569,7 +509,6 @@
 .method public final setDenylist()V
     .locals 7
 
-    .line 293
     iget-object v0, p0, Lcom/android/server/gpu/GpuService;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "updatable_driver_production_denylist"
@@ -578,29 +517,24 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/gpu/GpuService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 296
     :try_start_0
     iget-object v1, p0, Lcom/android/server/gpu/GpuService;->mDenylists:Landroid/updatabledriver/UpdatableDriverProto$Denylists;
 
     if-nez v1, :cond_0
 
-    .line 297
     monitor-exit v0
 
     return-void
 
-    .line 299
     :cond_0
     invoke-virtual {v1}, Landroid/updatabledriver/UpdatableDriverProto$Denylists;->getDenylistsList()Ljava/util/List;
 
     move-result-object v1
 
-    .line 300
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -618,7 +552,6 @@
 
     check-cast v2, Landroid/updatabledriver/UpdatableDriverProto$Denylist;
 
-    .line 301
     invoke-virtual {v2}, Landroid/updatabledriver/UpdatableDriverProto$Denylist;->getVersionCode()J
 
     move-result-wide v3
@@ -629,14 +562,12 @@
 
     if-nez v3, :cond_1
 
-    .line 302
     iget-object p0, p0, Lcom/android/server/gpu/GpuService;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "updatable_driver_production_denylist"
 
     const-string v3, ","
 
-    .line 304
     invoke-virtual {v2}, Landroid/updatabledriver/UpdatableDriverProto$Denylist;->getPackageNamesList()Ljava/util/List;
 
     move-result-object v2
@@ -645,15 +576,12 @@
 
     move-result-object v2
 
-    .line 302
     invoke-static {p0, v1, v2}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 305
     monitor-exit v0
 
     return-void
 
-    .line 308
     :cond_2
     monitor-exit v0
 
@@ -672,25 +600,21 @@
 .method public final setUpdatableDriverPath(Landroid/content/pm/ApplicationInfo;)V
     .locals 0
 
-    .line 336
     iget-object p0, p1, Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
 
     if-nez p0, :cond_0
 
     const-string p0, ""
 
-    .line 337
     invoke-static {p0}, Lcom/android/server/gpu/GpuService;->nSetUpdatableDriverPath(Ljava/lang/String;)V
 
     return-void
 
-    .line 340
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 341
     iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -699,7 +623,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 342
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

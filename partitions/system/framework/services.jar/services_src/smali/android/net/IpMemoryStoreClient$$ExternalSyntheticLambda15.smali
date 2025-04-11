@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Landroid/net/IIpMemoryStore;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda15;->f$0:Landroid/net/IIpMemoryStore;
@@ -35,7 +34,6 @@
 .method public final run()V
     .locals 2
 
-    .line 0
     iget-object v0, p0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda15;->f$0:Landroid/net/IIpMemoryStore;
 
     iget-object v1, p0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda15;->f$1:Landroid/net/ipmemorystore/NetworkAttributes;

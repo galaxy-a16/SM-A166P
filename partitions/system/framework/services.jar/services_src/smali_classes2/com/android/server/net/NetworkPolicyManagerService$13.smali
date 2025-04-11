@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/net/NetworkPolicyManagerService;)V
     .locals 0
 
-    .line 2168
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$13;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 2173
     iget-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$13;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p1}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$mupdateNetworksInternal(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
     const-string/jumbo p1, "networkInfo"
 
-    .line 2175
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -40,14 +37,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 2177
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 2178
     iget-object p2, p0, Lcom/android/server/net/NetworkPolicyManagerService$13;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
@@ -58,7 +53,6 @@
 
     goto :goto_0
 
-    .line 2180
     :cond_0
     iget-object p2, p0, Lcom/android/server/net/NetworkPolicyManagerService$13;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -66,7 +60,6 @@
 
     invoke-static {p2, v0}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fputmActiveNetworkType(Lcom/android/server/net/NetworkPolicyManagerService;I)V
 
-    .line 2182
     :goto_0
     new-instance p2, Ljava/lang/StringBuilder;
 

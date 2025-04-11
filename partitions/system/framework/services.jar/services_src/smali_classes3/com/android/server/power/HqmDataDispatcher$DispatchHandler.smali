@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/power/HqmDataDispatcher;Landroid/os/Looper;)V
     .locals 0
 
-    .line 80
     iput-object p1, p0, Lcom/android/server/power/HqmDataDispatcher$DispatchHandler;->this$0:Lcom/android/server/power/HqmDataDispatcher;
 
-    .line 81
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,12 +23,10 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 92
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_0
 
-    .line 98
     invoke-static {}, Lcom/android/server/power/HqmDataDispatcher;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -55,7 +51,6 @@
 
     goto :goto_0
 
-    .line 94
     :cond_0
     iget-object p0, p0, Lcom/android/server/power/HqmDataDispatcher$DispatchHandler;->this$0:Lcom/android/server/power/HqmDataDispatcher;
 
@@ -74,17 +69,14 @@
 .method public sendMessageDelayed(ILjava/lang/Object;I)V
     .locals 0
 
-    .line 85
     invoke-static {p0, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 86
     iput-object p2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     int-to-long p2, p3
 
-    .line 87
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;)V
     .locals 0
 
-    .line 310
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiControlService;Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;-><init>(Lcom/android/server/hdmi/HdmiControlService;)V
 
     return-void
@@ -33,14 +31,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 314
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$massertRunOnServiceThread(Lcom/android/server/hdmi/HdmiControlService;)V
 
     const-string/jumbo p1, "sys.shutdown.requested"
 
-    .line 315
     invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -51,7 +47,6 @@
 
     move-result p1
 
-    .line 316
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -139,7 +134,6 @@
 
     goto :goto_1
 
-    .line 334
     :pswitch_0
     iget-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -151,14 +145,12 @@
 
     if-nez p1, :cond_4
 
-    .line 335
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {p0, v1}, Lcom/android/server/hdmi/HdmiControlService;->onStandby(I)V
 
     goto :goto_1
 
-    .line 328
     :pswitch_1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -168,7 +160,6 @@
 
     move-result-object p1
 
-    .line 329
     iget-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p2}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmMenuLanguage(Lcom/android/server/hdmi/HdmiControlService;)Ljava/lang/String;
@@ -181,14 +172,12 @@
 
     if-nez p2, :cond_4
 
-    .line 330
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$monLanguageChanged(Lcom/android/server/hdmi/HdmiControlService;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 323
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -198,14 +187,12 @@
 
     if-eqz p1, :cond_4
 
-    .line 324
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {p0, v2}, Lcom/android/server/hdmi/HdmiControlService;->onWakeUp(I)V
 
     goto :goto_1
 
-    .line 318
     :pswitch_3
     iget-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -217,7 +204,6 @@
 
     if-nez p1, :cond_4
 
-    .line 319
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {p0, v2}, Lcom/android/server/hdmi/HdmiControlService;->onStandby(I)V

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/location/countrydetector/ComprehensiveCountryDetector;Landroid/location/Country;Landroid/location/Country;ZZ)V
     .locals 0
 
-    .line 283
     iput-object p1, p0, Lcom/android/server/location/countrydetector/ComprehensiveCountryDetector$2;->this$0:Lcom/android/server/location/countrydetector/ComprehensiveCountryDetector;
 
     iput-object p2, p0, Lcom/android/server/location/countrydetector/ComprehensiveCountryDetector$2;->val$country:Landroid/location/Country;
@@ -43,7 +42,6 @@
 .method public run()V
     .locals 4
 
-    .line 286
     iget-object v0, p0, Lcom/android/server/location/countrydetector/ComprehensiveCountryDetector$2;->this$0:Lcom/android/server/location/countrydetector/ComprehensiveCountryDetector;
 
     iget-object v1, p0, Lcom/android/server/location/countrydetector/ComprehensiveCountryDetector$2;->val$country:Landroid/location/Country;

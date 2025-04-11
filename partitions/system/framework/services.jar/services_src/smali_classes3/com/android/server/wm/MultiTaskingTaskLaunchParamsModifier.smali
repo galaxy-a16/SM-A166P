@@ -42,7 +42,6 @@
 .method public static synthetic $r8$lambda$HxnBSTm0Frh3n15jSu85z-zNMS0(Ljava/lang/String;Landroid/graphics/Rect;Lcom/android/server/wm/Task;Ljava/util/List;Lcom/android/server/wm/Task;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->lambda$adjustBoundsToAvoidConflictInDisplayArea$2(Ljava/lang/String;Landroid/graphics/Rect;Lcom/android/server/wm/Task;Ljava/util/List;Lcom/android/server/wm/Task;)V
 
     return-void
@@ -51,7 +50,6 @@
 .method public static synthetic $r8$lambda$LtnrshQZ9qOiPXfo-AjtN77qms8(Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;IILcom/android/server/wm/TaskDisplayArea;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->lambda$calculate$0(IILcom/android/server/wm/TaskDisplayArea;)Z
 
     move-result p0
@@ -62,7 +60,6 @@
 .method public static synthetic $r8$lambda$TuRRmHjEYcKLKJZyEM3QdVLDy10(Lcom/android/server/wm/Task;Ljava/lang/String;Landroid/graphics/Rect;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->filterCheckBounds(Lcom/android/server/wm/Task;Ljava/lang/String;Landroid/graphics/Rect;)Z
 
     move-result p0
@@ -73,7 +70,6 @@
 .method public static synthetic $r8$lambda$cxA1P0wZFs4zpI7grG0akjP_KdI(ILcom/android/server/wm/TaskDisplayArea;)Lcom/android/server/wm/TaskDisplayArea;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->lambda$getPreferredLaunchTaskDisplayArea$1(ILcom/android/server/wm/TaskDisplayArea;)Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object p0
@@ -84,7 +80,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 131
     new-instance v0, Landroid/graphics/PointF;
 
     const v1, 0x3ed70a3d    # 0.42f
@@ -95,7 +90,6 @@
 
     sput-object v0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->DEX_DEFAULT_SIZE_RATIO:Landroid/graphics/PointF;
 
-    .line 132
     new-instance v0, Landroid/graphics/PointF;
 
     const v1, 0x3f0ccccd    # 0.55f
@@ -106,7 +100,6 @@
 
     sput-object v0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->DEX_DEFAULT_SIZE_RATIO_FOR_STANDALONE:Landroid/graphics/PointF;
 
-    .line 133
     new-instance v0, Landroid/graphics/PointF;
 
     const v1, 0x3f0a7efa    # 0.541f
@@ -123,17 +116,14 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskSupervisor;)V
     .locals 1
 
-    .line 142
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
-    .line 117
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -144,10 +134,8 @@
 
     new-array v0, v0, [I
 
-    .line 118
     iput-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDirections:[I
 
-    .line 127
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -156,17 +144,14 @@
 
     const/4 v0, 0x0
 
-    .line 135
     iput-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpLayout:Landroid/content/pm/ActivityInfo$WindowLayout;
 
-    .line 139
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSnappingBounds:Landroid/graphics/Rect;
 
-    .line 143
     iput-object p1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     return-void
@@ -175,7 +160,6 @@
 .method public static filterCheckBounds(Lcom/android/server/wm/Task;Ljava/lang/String;Landroid/graphics/Rect;)Z
     .locals 2
 
-    .line 1854
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
 
     move-result v0
@@ -191,14 +175,12 @@
 
     if-eqz p2, :cond_1
 
-    .line 1860
     invoke-virtual {p0}, Lcom/android/server/wm/TaskFragment;->getTopNonFinishingActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1861
     iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -207,7 +189,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1862
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p0
@@ -229,7 +210,6 @@
 .method public static synthetic lambda$adjustBoundsToAvoidConflictInDisplayArea$2(Ljava/lang/String;Landroid/graphics/Rect;Lcom/android/server/wm/Task;Ljava/util/List;Lcom/android/server/wm/Task;)V
     .locals 2
 
-    .line 1429
     invoke-virtual {p4}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result v0
@@ -238,7 +218,6 @@
 
     return-void
 
-    .line 1434
     :cond_0
     invoke-virtual {p4}, Lcom/android/server/wm/Task;->isUnderHomeRootTask()Z
 
@@ -260,7 +239,6 @@
 
     goto :goto_0
 
-    .line 1437
     :cond_1
     new-instance v0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier$$ExternalSyntheticLambda3;
 
@@ -268,29 +246,24 @@
 
     const-class v1, Lcom/android/server/wm/Task;
 
-    .line 1439
     invoke-static {v1}, Lcom/android/internal/util/function/pooled/PooledLambda;->__(Ljava/lang/Class;)Lcom/android/internal/util/function/pooled/ArgumentPlaceholder;
 
     move-result-object v1
 
-    .line 1437
     invoke-static {v0, v1, p0, p1}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainPredicate(Lcom/android/internal/util/function/TriPredicate;Lcom/android/internal/util/function/pooled/ArgumentPlaceholder;Ljava/lang/Object;Ljava/lang/Object;)Lcom/android/internal/util/function/pooled/PooledPredicate;
 
     move-result-object p0
 
-    .line 1440
     invoke-virtual {p4, p0}, Lcom/android/server/wm/WindowContainer;->getTask(Ljava/util/function/Predicate;)Lcom/android/server/wm/Task;
 
     move-result-object p1
 
-    .line 1441
     invoke-interface {p0}, Lcom/android/internal/util/function/pooled/PooledPredicate;->recycle()V
 
     if-eqz p1, :cond_3
 
     if-eqz p2, :cond_2
 
-    .line 1442
     invoke-virtual {p2, p4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -299,7 +272,6 @@
 
     goto :goto_0
 
-    .line 1445
     :cond_2
     invoke-virtual {p4}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
@@ -327,7 +299,6 @@
 
     move v2, p2
 
-    .line 672
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/wm/TaskDisplayArea;->getLaunchRootTask(IILandroid/app/ActivityOptions;Lcom/android/server/wm/Task;I)Lcom/android/server/wm/Task;
 
     move-result-object p1
@@ -338,7 +309,6 @@
 
     return p0
 
-    .line 678
     :cond_0
     iput-object p3, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
@@ -350,7 +320,6 @@
 .method public static synthetic lambda$getPreferredLaunchTaskDisplayArea$1(ILcom/android/server/wm/TaskDisplayArea;)Lcom/android/server/wm/TaskDisplayArea;
     .locals 1
 
-    .line 796
     iget v0, p1, Lcom/android/server/wm/DisplayArea;->mFeatureId:I
 
     if-ne v0, p0, :cond_0
@@ -367,7 +336,6 @@
 .method public static orientationFromBounds(Landroid/graphics/Rect;)I
     .locals 1
 
-    .line 1668
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -392,7 +360,6 @@
 .method public static sizeMatches(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
     .locals 2
 
-    .line 1673
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -411,7 +378,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1674
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
@@ -444,7 +410,6 @@
 .method public adjustBoundsToAvoidConflict(Landroid/graphics/Rect;Ljava/util/List;Landroid/graphics/Rect;Z)V
     .locals 8
 
-    .line 1478
     invoke-virtual {p1, p3}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
 
     move-result v0
@@ -453,7 +418,6 @@
 
     return-void
 
-    .line 1484
     :cond_0
     invoke-virtual {p0, p2, p3}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->boundsConflict(Ljava/util/List;Landroid/graphics/Rect;)Z
 
@@ -463,11 +427,9 @@
 
     return-void
 
-    .line 1490
     :cond_1
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->calculateCandidateShiftDirections(Landroid/graphics/Rect;Landroid/graphics/Rect;Z)V
 
-    .line 1494
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDirections:[I
 
     array-length v1, v0
@@ -485,7 +447,6 @@
 
     goto/16 :goto_3
 
-    .line 1500
     :cond_2
     iget-object v5, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
@@ -493,7 +454,6 @@
 
     move v5, v2
 
-    .line 1504
     :goto_1
     iget-object v6, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
@@ -505,7 +465,6 @@
 
     iget-object v6, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
-    .line 1505
     invoke-virtual {p1, v6}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
 
     move-result v6
@@ -514,7 +473,6 @@
 
     if-eqz p4, :cond_5
 
-    .line 1511
     :cond_3
     iget-object v6, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
@@ -526,7 +484,6 @@
 
     if-le v5, v7, :cond_4
 
-    .line 1517
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -573,7 +530,6 @@
 
     const/16 v5, 0x8
 
-    .line 1523
     invoke-static {v5}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object v5
@@ -586,13 +542,10 @@
 
     const-string v5, "ActivityTaskManager"
 
-    .line 1517
     invoke-static {v5, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1524
     invoke-virtual {p3, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1525
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -620,7 +573,6 @@
 
     goto/16 :goto_1
 
-    .line 1535
     :cond_5
     :goto_2
     iget-object v4, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
@@ -633,19 +585,16 @@
 
     iget-object v4, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
-    .line 1536
     invoke-virtual {p1, v4}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    .line 1538
     iget-object p1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p3, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1539
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -689,7 +638,6 @@
 
     move-object v2, p2
 
-    .line 1420
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->adjustBoundsToAvoidConflictInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;Ljava/lang/String;Landroid/graphics/Rect;Lcom/android/server/wm/Task;)V
 
     return-void
@@ -698,12 +646,10 @@
 .method public final adjustBoundsToAvoidConflictInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;Ljava/lang/String;Landroid/graphics/Rect;Lcom/android/server/wm/Task;)V
     .locals 2
 
-    .line 1427
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1428
     new-instance v1, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier$$ExternalSyntheticLambda1;
 
     invoke-direct {v1, p3, p4, p5, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier$$ExternalSyntheticLambda1;-><init>(Ljava/lang/String;Landroid/graphics/Rect;Lcom/android/server/wm/Task;Ljava/util/List;)V
@@ -712,7 +658,6 @@
 
     invoke-virtual {p1, v1, p3}, Lcom/android/server/wm/WindowContainer;->forAllRootTasks(Ljava/util/function/Consumer;Z)V
 
-    .line 1453
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p1
@@ -725,7 +670,6 @@
 .method public final adjustBoundsToFitInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;Landroid/content/pm/ActivityInfo$WindowLayout;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 1399
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -734,12 +678,10 @@
 
     move-result-object p0
 
-    .line 1400
     invoke-virtual {p0}, Landroid/content/res/Configuration;->getLayoutDirection()I
 
     move-result p0
 
-    .line 1401
     invoke-static {p1, p0, p2, p3}, Lcom/android/server/wm/LaunchParamsUtil;->adjustBoundsToFitInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;ILandroid/content/pm/ActivityInfo$WindowLayout;Landroid/graphics/Rect;)V
 
     return-void
@@ -748,33 +690,26 @@
 .method public final adjustPersistFreeformBounds(Lcom/android/server/wm/Task;Lcom/android/server/wm/DisplayContent;Lcom/android/server/wm/LaunchParamsController$LaunchParams;Landroid/graphics/Rect;)V
     .locals 4
 
-    .line 1903
     iget-object p3, p3, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mFreeformPersistBoundsParam:Lcom/android/server/wm/FreeformPersistBoundsParams;
 
-    .line 1904
     iget-object v0, p3, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p4, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1906
     iget v0, p3, Lcom/android/server/wm/FreeformPersistBoundsParams;->mRotation:I
 
-    .line 1907
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object v1
 
     iget v1, v1, Landroid/view/DisplayInfo;->rotation:I
 
-    .line 1909
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1910
     invoke-virtual {p2, v2}, Lcom/android/server/wm/DisplayContent;->getBaseDisplayRect(Landroid/graphics/Rect;)V
 
-    .line 1912
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_LARGE_SCREEN_BOUNDS_POLICY:Z
 
     if-eqz v3, :cond_0
@@ -785,14 +720,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 1913
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->isDexMode()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 1914
     iget-object p0, p3, Lcom/android/server/wm/FreeformPersistBoundsParams;->mDisplayBounds:Landroid/graphics/Rect;
 
     iget-object p2, p3, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
@@ -801,11 +734,9 @@
 
     goto :goto_0
 
-    .line 1917
     :cond_0
     invoke-virtual {p0, v2, v1, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->rotateDisplayRect(Landroid/graphics/Rect;II)V
 
-    .line 1920
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result p0
@@ -822,7 +753,6 @@
 
     div-float/2addr p0, p1
 
-    .line 1922
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result p1
@@ -847,7 +777,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1924
     iget v2, p4, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -860,7 +789,6 @@
 
     iput v2, p4, Landroid/graphics/Rect;->left:I
 
-    .line 1925
     iget v2, p4, Landroid/graphics/Rect;->right:I
 
     int-to-float v2, v2
@@ -878,7 +806,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1928
     iget p0, p4, Landroid/graphics/Rect;->top:I
 
     int-to-float p0, p0
@@ -891,7 +818,6 @@
 
     iput p0, p4, Landroid/graphics/Rect;->top:I
 
-    .line 1929
     iget p0, p4, Landroid/graphics/Rect;->bottom:I
 
     int-to-float p0, p0
@@ -907,7 +833,6 @@
     :cond_2
     if-eq v0, v1, :cond_3
 
-    .line 1933
     invoke-virtual {p2, v0, v1, p4}, Lcom/android/server/wm/DisplayContent;->rotateBounds(IILandroid/graphics/Rect;)V
 
     :cond_3
@@ -918,7 +843,6 @@
 .method public final appendLog(Ljava/lang/String;)V
     .locals 1
 
-    .line 1660
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mLogBuilder:Ljava/lang/StringBuilder;
 
     const-string v0, " "
@@ -933,7 +857,6 @@
 .method public final boundsConflict(Ljava/util/List;Landroid/graphics/Rect;)Z
     .locals 7
 
-    .line 1603
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -953,7 +876,6 @@
 
     check-cast p1, Landroid/graphics/Rect;
 
-    .line 1604
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
     iget v2, p2, Landroid/graphics/Rect;->left:I
@@ -977,7 +899,6 @@
     :cond_1
     move v1, v0
 
-    .line 1606
     :goto_0
     iget v4, p1, Landroid/graphics/Rect;->top:I
 
@@ -998,7 +919,6 @@
     :cond_2
     move v4, v0
 
-    .line 1608
     :goto_1
     iget v5, p1, Landroid/graphics/Rect;->right:I
 
@@ -1019,7 +939,6 @@
     :cond_3
     move v5, v0
 
-    .line 1610
     :goto_2
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
@@ -1085,7 +1004,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 164
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/Task;->getRootActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
@@ -1135,18 +1053,14 @@
 
     move-object/from16 v6, p6
 
-    .line 179
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getPreferredLaunchTaskDisplayArea(Lcom/android/server/wm/Task;Landroid/app/ActivityOptions;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/LaunchParamsController$LaunchParams;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityStarter$Request;)Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v6
 
-    .line 181
     iput-object v6, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mPreferredTaskDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
-    .line 182
     iget-object v5, v6, Lcom/android/server/wm/TaskDisplayArea;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 184
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1165,7 +1079,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 185
     invoke-virtual {v6}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v1
@@ -1182,7 +1095,6 @@
 
     move-result-object v0
 
-    .line 184
     invoke-virtual {v7, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     const/4 v4, 0x0
@@ -1191,12 +1103,10 @@
 
     if-eqz v10, :cond_5
 
-    .line 191
     iget-object v0, v10, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
     if-eqz v0, :cond_5
 
-    .line 192
     invoke-virtual {v0}, Landroid/content/Intent;->getLaunchOverTargetTaskId()I
 
     move-result v0
@@ -1207,14 +1117,12 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 195
     invoke-virtual {v6}, Lcom/android/server/wm/TaskDisplayArea;->getFocusedRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    .line 196
     invoke-virtual {v6}, Lcom/android/server/wm/TaskDisplayArea;->getFocusedRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -1225,7 +1133,6 @@
 
     goto :goto_2
 
-    .line 198
     :cond_3
     iget-object v1, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -1238,7 +1145,6 @@
     :goto_2
     if-eqz v0, :cond_4
 
-    .line 201
     invoke-virtual {v0}, Lcom/android/server/wm/TaskFragment;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v0
@@ -1251,10 +1157,8 @@
     :goto_3
     if-eqz v0, :cond_5
 
-    .line 207
     iput-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mPreferredTaskDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
-    .line 209
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1279,7 +1183,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 210
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v0
@@ -1290,7 +1193,6 @@
 
     move-result-object v0
 
-    .line 209
     invoke-virtual {v7, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     :cond_5
@@ -1300,7 +1202,6 @@
 
     return v2
 
-    .line 224
     :cond_6
     iget-object v0, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -1308,14 +1209,12 @@
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
 
-    .line 227
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     const v1, 0x105031e
 
-    .line 234
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v1
@@ -1328,7 +1227,6 @@
 
     const v1, 0x105031d
 
-    .line 236
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
@@ -1341,7 +1239,6 @@
 
     if-eqz v12, :cond_7
 
-    .line 248
     invoke-virtual/range {p5 .. p5}, Landroid/app/ActivityOptions;->getLaunchWindowingMode()I
 
     move-result v0
@@ -1351,7 +1248,6 @@
     :cond_7
     move v0, v14
 
-    .line 251
     :goto_4
     invoke-virtual {v5}, Lcom/android/server/wm/DisplayContent;->isAppCastingDisplay()Z
 
@@ -1364,14 +1260,12 @@
     :cond_8
     if-nez v0, :cond_a
 
-    .line 260
     invoke-virtual {v7, v5, v6, v11, v8}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->canInheritWindowingModeFromSource(Lcom/android/server/wm/DisplayContent;Lcom/android/server/wm/TaskDisplayArea;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/Task;)Z
 
     move-result v1
 
     if-eqz v1, :cond_a
 
-    .line 264
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -1382,21 +1276,18 @@
 
     if-eqz v0, :cond_9
 
-    .line 265
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/ConfigurationContainer;->inPinnedWindowingMode()Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
-    .line 268
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v0
 
     goto :goto_5
 
-    .line 274
     :cond_9
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
@@ -1406,7 +1297,6 @@
 
     move-result v0
 
-    .line 277
     :goto_5
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1416,7 +1306,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 278
     invoke-static {v0}, Landroid/app/WindowConfiguration;->windowingModeToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1427,7 +1316,6 @@
 
     move-result-object v1
 
-    .line 277
     invoke-virtual {v7, v1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     :cond_a
@@ -1435,14 +1323,12 @@
 
     if-eqz v8, :cond_c
 
-    .line 286
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowContainer;->getTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v1
 
     if-ne v1, v6, :cond_c
 
-    .line 287
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/TaskFragment;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v1
@@ -1451,27 +1337,23 @@
 
     if-nez v1, :cond_c
 
-    .line 289
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result v1
 
     if-eqz v1, :cond_b
 
-    .line 290
     invoke-virtual {v6}, Lcom/android/server/wm/TaskDisplayArea;->getDisplayId()I
 
     move-result v1
 
     if-eqz v1, :cond_c
 
-    .line 292
     :cond_b
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v0
 
-    .line 294
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1480,7 +1362,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 295
     invoke-static {v0}, Landroid/app/WindowConfiguration;->windowingModeToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1491,13 +1372,11 @@
 
     move-result-object v1
 
-    .line 294
     invoke-virtual {v7, v1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     :cond_c
     move v2, v0
 
-    .line 315
     invoke-virtual {v7, v6, v2}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->canCalculateBoundsForFullscreenTask(Lcom/android/server/wm/TaskDisplayArea;I)Z
 
     move-result v18
@@ -1518,7 +1397,6 @@
 
     move-object/from16 v5, p4
 
-    .line 316
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->canApplyFreeformWindowPolicy(Lcom/android/server/wm/TaskDisplayArea;ILcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v0
@@ -1537,11 +1415,9 @@
     :cond_e
     const/4 v5, 0x0
 
-    .line 320
     :goto_6
     iget-object v1, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
-    .line 321
     invoke-virtual {v1, v12}, Lcom/android/server/wm/ActivityTaskSupervisor;->canUseActivityOptionsLaunchBounds(Landroid/app/ActivityOptions;)Z
 
     move-result v1
@@ -1552,7 +1428,6 @@
 
     if-nez v0, :cond_f
 
-    .line 323
     invoke-virtual {v7, v1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->canApplyPipWindowPolicy(I)Z
 
     move-result v2
@@ -1594,7 +1469,6 @@
     :cond_13
     move v2, v1
 
-    .line 344
     :goto_9
     invoke-virtual/range {p5 .. p5}, Landroid/app/ActivityOptions;->getLaunchBounds()Landroid/graphics/Rect;
 
@@ -1604,24 +1478,20 @@
 
     if-eqz v1, :cond_15
 
-    .line 352
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
     move-object/from16 v5, v20
 
-    .line 353
     invoke-virtual {v5, v3}, Lcom/android/server/wm/DisplayContent;->getStableRect(Landroid/graphics/Rect;)V
 
-    .line 358
     iget v10, v1, Landroid/graphics/Rect;->top:I
 
     iget v3, v3, Landroid/graphics/Rect;->top:I
 
     if-ge v10, v3, :cond_14
 
-    .line 359
     iget v10, v1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {v5}, Lcom/android/server/wm/WindowContainer;->getFreeformTopInset()I
@@ -1635,7 +1505,6 @@
     :cond_14
     if-eqz v8, :cond_16
 
-    .line 363
     invoke-virtual {v8, v1}, Lcom/android/server/wm/Task;->setLastNonFullscreenBounds(Landroid/graphics/Rect;)V
 
     goto :goto_a
@@ -1643,7 +1512,6 @@
     :cond_15
     move-object/from16 v5, v20
 
-    .line 367
     :cond_16
     :goto_a
     iget-object v1, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
@@ -1654,7 +1522,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 368
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1692,7 +1559,6 @@
 
     if-eqz v5, :cond_1a
 
-    .line 419
     iget-object v2, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     move-object/from16 v5, p8
@@ -1703,19 +1569,16 @@
 
     invoke-virtual {v2, v14}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 422
     invoke-virtual {v7, v6, v9, v10}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->recalculateLayout(Lcom/android/server/wm/TaskDisplayArea;Landroid/content/pm/ActivityInfo$WindowLayout;Lcom/android/server/wm/ActivityRecord;)Landroid/content/pm/ActivityInfo$WindowLayout;
 
     move-result-object v2
 
-    .line 424
     iget-object v10, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     move-object/from16 v14, v16
 
     invoke-virtual {v7, v6, v14, v2, v10}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getLayoutBounds(Lcom/android/server/wm/TaskDisplayArea;Lcom/android/server/wm/ActivityRecord;Landroid/content/pm/ActivityInfo$WindowLayout;Landroid/graphics/Rect;)V
 
-    .line 429
     iget-object v2, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->isEmpty()Z
@@ -1733,7 +1596,6 @@
     :cond_18
     move v2, v1
 
-    .line 431
     :goto_b
     iget-object v1, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
@@ -1741,7 +1603,6 @@
 
     invoke-virtual {v1, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 434
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1769,7 +1630,6 @@
     :cond_19
     const-string v2, "empty-window-layout"
 
-    .line 436
     invoke-virtual {v7, v2}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     goto :goto_d
@@ -1787,14 +1647,12 @@
 
     if-eqz v12, :cond_1b
 
-    .line 439
     invoke-virtual/range {p5 .. p5}, Landroid/app/ActivityOptions;->getLaunchBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
     if-eqz v2, :cond_1b
 
-    .line 442
     iget-object v2, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual/range {p5 .. p5}, Landroid/app/ActivityOptions;->getLaunchBounds()Landroid/graphics/Rect;
@@ -1803,7 +1661,6 @@
 
     invoke-virtual {v2, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 444
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1827,19 +1684,16 @@
     :cond_1b
     if-eqz v0, :cond_1c
 
-    .line 447
     invoke-virtual {v7, v3, v5}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->canApplyFreeformPersistentBounds(Lcom/android/server/wm/DisplayContent;Lcom/android/server/wm/LaunchParamsController$LaunchParams;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1c
 
-    .line 448
     iget-object v2, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v7, v8, v3, v5, v2}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->adjustPersistFreeformBounds(Lcom/android/server/wm/Task;Lcom/android/server/wm/DisplayContent;Lcom/android/server/wm/LaunchParamsController$LaunchParams;Landroid/graphics/Rect;)V
 
-    .line 451
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1872,7 +1726,6 @@
 
     if-ne v1, v4, :cond_1d
 
-    .line 455
     iput v4, v5, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mWindowingMode:I
 
     :cond_1d
@@ -1883,7 +1736,6 @@
 
     move/from16 v16, v10
 
-    .line 481
     :goto_e
     invoke-virtual/range {p8 .. p8}, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->isEmpty()Z
 
@@ -1897,12 +1749,10 @@
 
     if-eqz v1, :cond_1f
 
-    .line 483
     invoke-virtual {v1}, Lcom/android/server/wm/TaskDisplayArea;->getDisplayId()I
 
     move-result v1
 
-    .line 484
     invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
     move-result v4
@@ -1916,7 +1766,6 @@
 
     goto/16 :goto_14
 
-    .line 487
     :cond_1f
     :goto_f
     invoke-virtual/range {p8 .. p8}, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->hasWindowingMode()Z
@@ -1925,7 +1774,6 @@
 
     if-eqz v1, :cond_23
 
-    .line 488
     invoke-virtual {v6}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result v1
@@ -1943,7 +1791,6 @@
     :cond_20
     const/4 v0, 0x5
 
-    .line 495
     :cond_21
     iget v2, v5, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mWindowingMode:I
 
@@ -1957,7 +1804,6 @@
     :cond_22
     move/from16 v0, v17
 
-    .line 499
     :goto_11
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1981,7 +1827,6 @@
 
     goto :goto_12
 
-    .line 506
     :cond_23
     iget-object v0, v5, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
@@ -1989,7 +1834,6 @@
 
     move/from16 v0, v17
 
-    .line 510
     :goto_12
     iget-object v1, v5, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
@@ -1999,10 +1843,8 @@
 
     if-nez v1, :cond_26
 
-    .line 514
     iget v1, v5, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mOrientation:I
 
-    .line 515
     invoke-virtual {v3}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v4
@@ -2013,7 +1855,6 @@
 
     goto :goto_13
 
-    .line 519
     :cond_24
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
@@ -2025,7 +1866,6 @@
 
     if-ne v2, v4, :cond_25
 
-    .line 522
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2061,7 +1901,6 @@
     :goto_14
     move/from16 v19, v17
 
-    .line 548
     :goto_15
     invoke-virtual {v6}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
@@ -2075,12 +1914,10 @@
 
     const-string/jumbo v0, "picture-in-picture"
 
-    .line 550
     invoke-virtual {v7, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     goto :goto_17
 
-    .line 572
     :cond_28
     invoke-virtual {v14}, Lcom/android/server/wm/ActivityRecord;->isResizeable()Z
 
@@ -2088,7 +1925,6 @@
 
     if-nez v0, :cond_2b
 
-    .line 576
     invoke-virtual {v7, v14, v6, v12}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->shouldLaunchUnresizableAppInFreeform(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/TaskDisplayArea;Landroid/app/ActivityOptions;)Z
 
     move-result v0
@@ -2097,7 +1933,6 @@
 
     const/16 v20, 0x5
 
-    .line 578
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
@@ -2106,7 +1941,6 @@
 
     if-eqz v0, :cond_29
 
-    .line 579
     iget-object v2, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     move-object/from16 v0, p0
@@ -2149,7 +1983,6 @@
     :goto_16
     const-string/jumbo v0, "unresizable-freeform"
 
-    .line 583
     invoke-virtual {v7, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     goto :goto_19
@@ -2161,14 +1994,12 @@
 
     move-object v11, v6
 
-    .line 586
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
     const-string/jumbo v0, "unresizable-forced-maximize"
 
-    .line 587
     invoke-virtual {v7, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     move/from16 v5, v17
@@ -2196,7 +2027,6 @@
 
     const-string/jumbo v0, "non-freeform-task-display-area"
 
-    .line 591
     invoke-virtual {v7, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     :goto_18
@@ -2207,21 +2037,18 @@
     :goto_19
     if-nez v20, :cond_2e
 
-    .line 595
     invoke-virtual {v14}, Lcom/android/server/wm/ActivityRecord;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
 
     if-eqz v0, :cond_2e
 
-    .line 596
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result v1
 
     if-eqz v1, :cond_2e
 
-    .line 597
     invoke-virtual {v11, v0}, Lcom/android/server/wm/TaskDisplayArea;->isUnderHomeTask(Lcom/android/server/wm/Task;)Z
 
     move-result v1
@@ -2234,12 +2061,10 @@
 
     if-nez v1, :cond_2d
 
-    .line 598
     invoke-virtual/range {p3 .. p3}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v0
 
-    .line 600
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2248,7 +2073,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 601
     invoke-static {v0}, Landroid/app/WindowConfiguration;->windowingModeToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -2259,7 +2083,6 @@
 
     move-result-object v1
 
-    .line 600
     invoke-virtual {v7, v1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     move-object/from16 v6, p3
@@ -2268,7 +2091,6 @@
 
     goto :goto_1a
 
-    .line 603
     :cond_2d
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
@@ -2282,7 +2104,6 @@
 
     if-eqz v0, :cond_2f
 
-    .line 606
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2291,7 +2112,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 607
     invoke-static/range {v22 .. v22}, Landroid/app/WindowConfiguration;->windowingModeToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -2302,7 +2122,6 @@
 
     move-result-object v0
 
-    .line 606
     invoke-virtual {v7, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     move/from16 v3, v22
@@ -2323,7 +2142,6 @@
     :goto_1b
     if-ne v4, v3, :cond_30
 
-    .line 613
     iput v4, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mWindowingMode:I
 
     :goto_1c
@@ -2331,7 +2149,6 @@
 
     goto :goto_1e
 
-    .line 617
     :cond_30
     invoke-virtual {v11}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
@@ -2346,7 +2163,6 @@
     :cond_31
     move v0, v4
 
-    .line 618
     :goto_1d
     iput v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mWindowingMode:I
 
@@ -2366,7 +2182,6 @@
 
     goto :goto_1f
 
-    .line 663
     :cond_33
     invoke-virtual {v11}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
@@ -2377,14 +2192,12 @@
     :goto_1f
     if-eqz v12, :cond_35
 
-    .line 667
     invoke-virtual/range {p5 .. p5}, Landroid/app/ActivityOptions;->getLaunchTaskDisplayArea()Landroid/window/WindowContainerToken;
 
     move-result-object v0
 
     if-nez v0, :cond_34
 
-    .line 668
     invoke-virtual/range {p5 .. p5}, Landroid/app/ActivityOptions;->getLaunchTaskDisplayAreaFeatureId()I
 
     move-result v0
@@ -2408,33 +2221,28 @@
 
     goto/16 :goto_23
 
-    .line 669
     :cond_35
     :goto_20
     iget-object v0, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 670
     invoke-virtual {v0, v14, v12, v8}, Lcom/android/server/wm/RootWindowContainer;->resolveActivityType(Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;Lcom/android/server/wm/Task;)I
 
     move-result v8
 
-    .line 671
     new-instance v0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, v7, v2, v8}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;II)V
 
     invoke-virtual {v6, v0}, Lcom/android/server/wm/WindowContainer;->forAllTaskDisplayAreas(Ljava/util/function/Predicate;)Z
 
-    .line 684
     iget-object v0, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
     if-eqz v0, :cond_37
 
     if-eq v0, v11, :cond_37
 
-    .line 685
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v0
@@ -2448,25 +2256,21 @@
     :cond_36
     move v0, v4
 
-    .line 686
     :goto_21
     iput v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mWindowingMode:I
 
     if-eqz v16, :cond_38
 
-    .line 688
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 689
     iget-object v0, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
     iget-object v1, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v7, v0, v14, v9, v1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getLayoutBounds(Lcom/android/server/wm/TaskDisplayArea;Lcom/android/server/wm/ActivityRecord;Landroid/content/pm/ActivityInfo$WindowLayout;Landroid/graphics/Rect;)V
 
-    .line 690
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
@@ -2491,12 +2295,10 @@
     :cond_38
     if-eqz v5, :cond_37
 
-    .line 692
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 693
     iget-object v5, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
     iget-object v1, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
@@ -2527,7 +2329,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getTaskBounds(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/TaskDisplayArea;Landroid/content/pm/ActivityInfo$WindowLayout;IZLandroid/graphics/Rect;)V
 
-    .line 698
     :goto_22
     iget-object v0, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
@@ -2535,10 +2336,8 @@
 
     const/4 v1, 0x0
 
-    .line 700
     iput-object v1, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
-    .line 701
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2547,7 +2346,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 702
     invoke-static {v8}, Landroid/app/WindowConfiguration;->activityTypeToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -2558,7 +2356,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 703
     invoke-static/range {p1 .. p1}, Landroid/app/WindowConfiguration;->windowingModeToString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -2577,7 +2374,6 @@
 
     move-result-object v1
 
-    .line 701
     invoke-virtual {v7, v1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     move-object v2, v0
@@ -2591,7 +2387,6 @@
 
     move-object/from16 v2, v17
 
-    .line 707
     :goto_23
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2609,7 +2404,6 @@
 
     invoke-virtual {v7, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
-    .line 708
     iput-object v2, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mPreferredTaskDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
     const/4 v0, 0x2
@@ -2627,17 +2421,14 @@
 
     move-object/from16 v0, p8
 
-    .line 723
     iget-object v0, v0, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mPreferredTaskDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
     if-eq v0, v2, :cond_3b
 
-    .line 724
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v7, v2, v9, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->adjustBoundsToFitInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;Landroid/content/pm/ActivityInfo$WindowLayout;Landroid/graphics/Rect;)V
 
-    .line 728
     :cond_3b
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
@@ -2652,7 +2443,6 @@
     :cond_3d
     move/from16 v4, p1
 
-    .line 732
     invoke-virtual {v2}, Lcom/android/server/wm/TaskDisplayArea;->getDisplayId()I
 
     move-result v0
@@ -2661,7 +2451,6 @@
 
     if-eqz v12, :cond_3f
 
-    .line 733
     invoke-virtual/range {p5 .. p5}, Landroid/app/ActivityOptions;->isApplyBigFreeformSize()Z
 
     move-result v0
@@ -2670,22 +2459,18 @@
 
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
-    .line 734
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_3f
 
-    .line 735
     iget-object v0, v7, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpStableBounds:Landroid/graphics/Rect;
 
     move-object/from16 v1, v23
 
-    .line 736
     invoke-virtual {v1, v0}, Lcom/android/server/wm/ConfigurationContainer;->getBounds(Landroid/graphics/Rect;)V
 
-    .line 737
     invoke-virtual {v14}, Lcom/android/server/wm/ActivityRecord;->isResizeable()Z
 
     move-result v1
@@ -2694,16 +2479,13 @@
 
     const v1, 0x3f733333    # 0.95f
 
-    .line 738
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->scale(F)V
 
-    .line 740
     :cond_3e
     iget-object v1, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 741
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2729,7 +2511,6 @@
 
     if-eqz v8, :cond_40
 
-    .line 744
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result v0
@@ -2740,14 +2521,12 @@
 
     iget-object v0, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
-    .line 746
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_40
 
-    .line 747
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/ActivityRecord;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v0
@@ -2758,7 +2537,6 @@
 
     if-nez v0, :cond_40
 
-    .line 753
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
@@ -2773,7 +2551,6 @@
 
     invoke-virtual {v7, v0, v2, v1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->cascadeBounds(Landroid/graphics/Rect;Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;)V
 
-    .line 759
     :cond_40
     iget-object v6, v15, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mBounds:Landroid/graphics/Rect;
 
@@ -2800,7 +2577,6 @@
 
     move v0, p3
 
-    .line 1560
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDirections:[I
 
@@ -2808,14 +2584,12 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1561
     aput p3, v1, v0
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1571
     :cond_0
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
@@ -2833,10 +2607,8 @@
 
     add-int/2addr v0, v2
 
-    .line 1572
     div-int/2addr v0, v3
 
-    .line 1573
     invoke-virtual {p2}, Landroid/graphics/Rect;->centerX()I
 
     move-result v2
@@ -2845,7 +2617,6 @@
 
     if-ge v2, v1, :cond_1
 
-    .line 1576
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDirections:[I
 
     aput v4, p0, p3
@@ -2855,14 +2626,12 @@
     :cond_1
     if-le v2, v0, :cond_2
 
-    .line 1580
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDirections:[I
 
     aput v3, p0, p3
 
     return-void
 
-    .line 1584
     :cond_2
     iget v0, p1, Landroid/graphics/Rect;->top:I
 
@@ -2878,10 +2647,8 @@
 
     add-int/2addr v0, p1
 
-    .line 1585
     div-int/2addr v0, v3
 
-    .line 1586
     invoke-virtual {p2}, Landroid/graphics/Rect;->centerY()I
 
     move-result p1
@@ -2894,7 +2661,6 @@
 
     goto :goto_1
 
-    .line 1597
     :cond_3
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDirections:[I
 
@@ -2904,19 +2670,16 @@
 
     const/16 p1, 0x33
 
-    .line 1598
     aput p1, p0, p2
 
     return-void
 
-    .line 1590
     :cond_4
     :goto_1
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpDirections:[I
 
     aput v4, p0, p3
 
-    .line 1591
     aput v3, p0, p2
 
     return-void
@@ -2925,7 +2688,6 @@
 .method public final canApplyFreeformPersistentBounds(Lcom/android/server/wm/DisplayContent;Lcom/android/server/wm/LaunchParamsController$LaunchParams;)Z
     .locals 0
 
-    .line 1947
     iget-boolean p0, p1, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
 
     if-eqz p0, :cond_1
@@ -2940,7 +2702,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1949
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p0
@@ -2951,7 +2712,6 @@
 
     if-ne p0, p1, :cond_1
 
-    .line 1951
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->hasValidFreeformPersistBounds()Z
 
@@ -2977,7 +2737,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 1059
     invoke-virtual {p4}, Landroid/app/ActivityOptions;->getLaunchBounds()Landroid/graphics/Rect;
 
     move-result-object p5
@@ -2988,7 +2747,6 @@
 
     if-eq p2, p5, :cond_0
 
-    .line 1061
     invoke-virtual {p4}, Landroid/app/ActivityOptions;->getLaunchBounds()Landroid/graphics/Rect;
 
     move-result-object p5
@@ -3007,7 +2765,6 @@
 
     return p3
 
-    .line 1070
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -3017,7 +2774,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1071
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result p0
@@ -3044,7 +2800,6 @@
 .method public final canApplyPipWindowPolicy(I)Z
     .locals 0
 
-    .line 1077
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -3071,7 +2826,6 @@
 .method public final canCalculateBoundsForFullscreenTask(Lcom/android/server/wm/TaskDisplayArea;I)Z
     .locals 0
 
-    .line 1045
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -3080,7 +2834,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1046
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result p0
@@ -3113,7 +2866,6 @@
 
     return p0
 
-    .line 1017
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
@@ -3123,7 +2875,6 @@
 
     return p0
 
-    .line 1021
     :cond_1
     invoke-virtual {p3}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
@@ -3144,21 +2895,18 @@
 
     if-eqz p4, :cond_3
 
-    .line 1029
     invoke-virtual {p4}, Lcom/android/server/wm/ConfigurationContainer;->inPinnedWindowingMode()Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 1030
     invoke-virtual {p4}, Lcom/android/server/wm/Task;->getRootActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p2
 
     if-eqz p2, :cond_3
 
-    .line 1031
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityRecord;->getLastParentBeforePip()Lcom/android/server/wm/Task;
 
     move-result-object p2
@@ -3167,7 +2915,6 @@
 
     return p0
 
-    .line 1040
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
@@ -3188,22 +2935,18 @@
 .method public final cascadeBounds(Landroid/graphics/Rect;Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;)V
     .locals 2
 
-    .line 1239
     invoke-virtual {p3, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1240
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
 
     iget v0, v0, Landroid/content/res/Configuration;->densityDpi:I
 
-    .line 1243
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v0}, Lcom/android/server/wm/ConfigurationContainer;->getBounds(Landroid/graphics/Rect;)V
 
-    .line 1246
     iget p2, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mDefaultFreeformStepHorizontal:I
 
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
@@ -3216,17 +2959,14 @@
 
     const/4 v1, 0x0
 
-    .line 1247
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 1246
     invoke-static {p2, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p2
 
-    .line 1248
     iget v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mDefaultFreeformStepVertical:I
 
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
@@ -3237,17 +2977,14 @@
 
     sub-int/2addr p0, p1
 
-    .line 1249
     invoke-static {v1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
 
-    .line 1248
     invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
 
     move-result p0
 
-    .line 1250
     invoke-virtual {p3, p2, p0}, Landroid/graphics/Rect;->offset(II)V
 
     return-void
@@ -3256,17 +2993,14 @@
 .method public final centerBounds(Lcom/android/server/wm/TaskDisplayArea;IILandroid/graphics/Rect;)V
     .locals 1
 
-    .line 1388
     invoke-virtual {p4}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 1389
     invoke-virtual {p1, p4}, Lcom/android/server/wm/DisplayArea;->getStableRect(Landroid/graphics/Rect;)V
 
-    .line 1391
     :cond_0
     invoke-virtual {p4}, Landroid/graphics/Rect;->centerX()I
 
@@ -3276,7 +3010,6 @@
 
     sub-int/2addr p0, p1
 
-    .line 1392
     invoke-virtual {p4}, Landroid/graphics/Rect;->centerY()I
 
     move-result p1
@@ -3289,7 +3022,6 @@
 
     add-int/2addr p3, p1
 
-    .line 1393
     invoke-virtual {p4, p0, p1, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
@@ -3298,7 +3030,6 @@
 .method public final convertOrientationToScreenOrientation(I)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     if-eq p1, p0, :cond_1
@@ -3321,7 +3052,6 @@
 .method public getCustomFreeformSize(Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;)Landroid/util/Size;
     .locals 2
 
-    .line 1824
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_MULTI_SPLIT_FREEFORM_FOLDING_POLICY:Z
 
     if-eqz v0, :cond_1
@@ -3332,26 +3062,22 @@
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiWindowFoldController:Lcom/android/server/wm/MultiWindowFoldController;
 
-    .line 1825
     invoke-virtual {v0}, Lcom/android/server/wm/MultiWindowFoldController;->isLidOpened()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 1826
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 1827
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiWindowFoldController:Lcom/android/server/wm/MultiWindowFoldController;
 
-    .line 1828
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -3369,7 +3095,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1827
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/server/wm/MultiWindowFoldController;->getMainDisplayBounds(Z)Landroid/graphics/Rect;
 
@@ -3377,25 +3102,20 @@
 
     goto :goto_1
 
-    .line 1830
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p0
 
-    .line 1833
     :goto_1
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1834
     invoke-static {p0, v0}, Lcom/samsung/android/multiwindow/MultiWindowUtils;->getDefaultFreeformBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 1840
     invoke-virtual {p1, p2}, Lcom/android/server/wm/DisplayArea;->getStableRect(Landroid/graphics/Rect;)V
 
-    .line 1842
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result p0
@@ -3406,14 +3126,12 @@
 
     if-ge p0, p1, :cond_2
 
-    .line 1843
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result p0
 
     iput p0, v0, Landroid/graphics/Rect;->right:I
 
-    .line 1845
     :cond_2
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
@@ -3425,14 +3143,12 @@
 
     if-ge p0, p1, :cond_3
 
-    .line 1846
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
     move-result p0
 
     iput p0, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 1849
     :cond_3
     new-instance p0, Landroid/util/Size;
 
@@ -3452,7 +3168,6 @@
 .method public final getFallbackDisplayAreaForActivity(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityStarter$Request;)Lcom/android/server/wm/TaskDisplayArea;
     .locals 3
 
-    .line 979
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -3461,7 +3176,6 @@
 
     iget v2, p1, Lcom/android/server/wm/ActivityRecord;->launchedFromUid:I
 
-    .line 980
     invoke-virtual {v0, v1, v2}, Lcom/android/server/wm/ActivityTaskManagerService;->getProcessController(II)Lcom/android/server/wm/WindowProcessController;
 
     move-result-object v0
@@ -3474,7 +3188,6 @@
 
     goto :goto_0
 
-    .line 983
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->getTopActivityDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
@@ -3485,13 +3198,11 @@
 
     return-object v0
 
-    .line 988
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 989
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getProcessName()Ljava/lang/String;
 
     move-result-object v2
@@ -3500,7 +3211,6 @@
 
     move-result p1
 
-    .line 988
     invoke-virtual {v0, v2, p1}, Lcom/android/server/wm/ActivityTaskManagerService;->getProcessController(Ljava/lang/String;I)Lcom/android/server/wm/WindowProcessController;
 
     move-result-object p1
@@ -3511,7 +3221,6 @@
 
     goto :goto_1
 
-    .line 991
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/WindowProcessController;->getTopActivityDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
@@ -3529,7 +3238,6 @@
 
     goto :goto_2
 
-    .line 997
     :cond_4
     iget-object p1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -3548,7 +3256,6 @@
 
     goto :goto_3
 
-    .line 999
     :cond_5
     invoke-virtual {p1}, Lcom/android/server/wm/WindowProcessController;->getTopActivityDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
@@ -3559,7 +3266,6 @@
 
     return-object v1
 
-    .line 1004
     :cond_6
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -3575,33 +3281,28 @@
 .method public final getFocusedDisplayAreaIfNeeded(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/TaskDisplayArea;
     .locals 2
 
-    .line 947
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->isActivityTypeHomeOrRecents()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 950
     iget-object p1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 951
     invoke-virtual {p1}, Lcom/android/server/wm/RootWindowContainer;->getTopFocusedDisplayContent()Lcom/android/server/wm/DisplayContent;
 
     move-result-object p1
 
-    .line 952
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 953
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3622,7 +3323,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
-    .line 954
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object p0
@@ -3642,14 +3342,12 @@
 
     move-object/from16 v7, p4
 
-    .line 1083
     iget v0, v3, Landroid/content/pm/ActivityInfo$WindowLayout;->gravity:I
 
     and-int/lit8 v8, v0, 0x70
 
     and-int/lit8 v9, v0, 0x7
 
-    .line 1085
     invoke-virtual/range {p3 .. p3}, Landroid/content/pm/ActivityInfo$WindowLayout;->hasSpecifiedSize()Z
 
     move-result v0
@@ -3660,7 +3358,6 @@
 
     if-nez v9, :cond_0
 
-    .line 1086
     invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->setEmpty()V
 
     return-void
@@ -3668,25 +3365,20 @@
     :cond_0
     move-object v0, p0
 
-    .line 1092
     iget-object v10, v0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpStableBounds:Landroid/graphics/Rect;
 
     move-object/from16 v2, p1
 
-    .line 1093
     invoke-virtual {v2, v10}, Lcom/android/server/wm/DisplayArea;->getStableRect(Landroid/graphics/Rect;)V
 
-    .line 1094
     invoke-virtual {v10}, Landroid/graphics/Rect;->width()I
 
     move-result v11
 
-    .line 1095
     invoke-virtual {v10}, Landroid/graphics/Rect;->height()I
 
     move-result v12
 
-    .line 1099
     invoke-virtual/range {p3 .. p3}, Landroid/content/pm/ActivityInfo$WindowLayout;->hasSpecifiedSize()Z
 
     move-result v1
@@ -3697,19 +3389,16 @@
 
     if-nez v1, :cond_2
 
-    .line 1100
     invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1103
     invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    .line 1104
     invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->height()I
 
     move-result v1
@@ -3731,22 +3420,18 @@
 
     move-object/from16 v6, p4
 
-    .line 1106
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getTaskBounds(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/TaskDisplayArea;Landroid/content/pm/ActivityInfo$WindowLayout;IZLandroid/graphics/Rect;)V
 
-    .line 1108
     invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    .line 1109
     invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
     goto :goto_1
 
-    .line 1115
     :cond_2
     iget v0, v3, Landroid/content/pm/ActivityInfo$WindowLayout;->width:I
 
@@ -3756,7 +3441,6 @@
 
     goto :goto_0
 
-    .line 1117
     :cond_3
     iget v0, v3, Landroid/content/pm/ActivityInfo$WindowLayout;->widthFraction:F
 
@@ -3779,7 +3463,6 @@
     :cond_4
     move v0, v11
 
-    .line 1122
     :goto_0
     iget v1, v3, Landroid/content/pm/ActivityInfo$WindowLayout;->height:I
 
@@ -3789,7 +3472,6 @@
 
     goto :goto_1
 
-    .line 1124
     :cond_5
     iget v1, v3, Landroid/content/pm/ActivityInfo$WindowLayout;->heightFraction:F
 
@@ -3855,10 +3537,8 @@
     :goto_3
     const/4 v3, 0x0
 
-    .line 1169
     invoke-virtual {v7, v3, v3, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1170
     iget v3, v10, Landroid/graphics/Rect;->left:I
 
     iget v4, v10, Landroid/graphics/Rect;->top:I
@@ -3881,7 +3561,6 @@
 
     float-to-int v1, v13
 
-    .line 1173
     invoke-virtual {v7, v0, v1}, Landroid/graphics/Rect;->offset(II)V
 
     return-void
@@ -3894,7 +3573,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 780
     invoke-virtual {p2}, Landroid/app/ActivityOptions;->getLaunchTaskDisplayArea()Landroid/window/WindowContainerToken;
 
     move-result-object v1
@@ -3907,19 +3585,16 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 783
     invoke-virtual {v1}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 782
     invoke-static {v1}, Lcom/android/server/wm/WindowContainer;->fromBinder(Landroid/os/IBinder;)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/wm/TaskDisplayArea;
 
-    .line 784
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3950,14 +3625,12 @@
 
     if-eqz p2, :cond_3
 
-    .line 788
     invoke-virtual {p2}, Landroid/app/ActivityOptions;->getLaunchTaskDisplayAreaFeatureId()I
 
     move-result v4
 
     if-eq v4, v3, :cond_3
 
-    .line 790
     invoke-virtual {p2}, Landroid/app/ActivityOptions;->getLaunchDisplayId()I
 
     move-result v5
@@ -3968,26 +3641,22 @@
 
     goto :goto_2
 
-    .line 791
     :cond_2
     invoke-virtual {p2}, Landroid/app/ActivityOptions;->getLaunchDisplayId()I
 
     move-result v5
 
-    .line 792
     :goto_2
     iget-object v6, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v6, v6, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 793
     invoke-virtual {v6, v5}, Lcom/android/server/wm/RootWindowContainer;->getDisplayContent(I)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v5
 
     if-eqz v5, :cond_3
 
-    .line 795
     new-instance v1, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, v4}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier$$ExternalSyntheticLambda2;-><init>(I)V
@@ -3998,7 +3667,6 @@
 
     check-cast v1, Lcom/android/server/wm/TaskDisplayArea;
 
-    .line 797
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4020,7 +3688,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 805
     invoke-virtual {p2}, Landroid/app/ActivityOptions;->getLaunchDisplayId()I
 
     move-result v4
@@ -4033,24 +3700,20 @@
     :goto_3
     if-eq v4, v3, :cond_5
 
-    .line 807
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v3, v3, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 808
     invoke-virtual {v3, v4}, Lcom/android/server/wm/RootWindowContainer;->getDisplayContent(I)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v3
 
     if-eqz v3, :cond_5
 
-    .line 810
     invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v1
 
-    .line 811
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4072,17 +3735,14 @@
 
     if-eqz p3, :cond_7
 
-    .line 818
     iget-boolean v3, p3, Lcom/android/server/wm/ActivityRecord;->noDisplay:Z
 
     if-eqz v3, :cond_7
 
-    .line 820
     iget-object v1, p3, Lcom/android/server/wm/ActivityRecord;->mHandoverTaskDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
     if-eqz v1, :cond_6
 
-    .line 822
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4101,28 +3761,23 @@
 
     goto :goto_4
 
-    .line 825
     :cond_6
     iget v3, p3, Lcom/android/server/wm/ActivityRecord;->mHandoverLaunchDisplayId:I
 
-    .line 826
     iget-object v4, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v4, v4, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 827
     invoke-virtual {v4, v3}, Lcom/android/server/wm/RootWindowContainer;->getDisplayContent(I)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v4
 
     if-eqz v4, :cond_7
 
-    .line 829
     invoke-virtual {v4}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v1
 
-    .line 830
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4143,7 +3798,6 @@
     :goto_4
     if-eqz p1, :cond_9
 
-    .line 837
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->getRootActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v3
@@ -4168,12 +3822,10 @@
 
     if-eqz p3, :cond_a
 
-    .line 870
     invoke-virtual {p3}, Lcom/android/server/wm/ActivityRecord;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v1
 
-    .line 871
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4195,7 +3847,6 @@
 
     if-eqz p1, :cond_b
 
-    .line 876
     invoke-virtual {p1}, Lcom/android/server/wm/TaskFragment;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -4203,7 +3854,6 @@
     :cond_b
     if-eqz v0, :cond_d
 
-    .line 880
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->isEnabled()Z
 
     move-result p1
@@ -4218,7 +3868,6 @@
 
     if-eqz p1, :cond_c
 
-    .line 881
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->getInstance()Lcom/android/server/wm/WmCoverState;
 
     move-result-object p1
@@ -4229,7 +3878,6 @@
 
     if-nez p1, :cond_c
 
-    .line 882
     invoke-virtual {p0, v3}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getFocusedDisplayAreaIfNeeded(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object p1
@@ -4239,7 +3887,6 @@
     :cond_c
     if-nez v1, :cond_d
 
-    .line 886
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4260,7 +3907,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
-    .line 887
     invoke-virtual {v0}, Lcom/android/server/wm/TaskFragment;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v1
@@ -4270,29 +3916,24 @@
 
     if-eqz p2, :cond_e
 
-    .line 892
     invoke-virtual {p2}, Landroid/app/ActivityOptions;->getCallerDisplayId()I
 
     move-result p1
 
-    .line 893
     iget-object p2, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p2, p2, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 894
     invoke-virtual {p2, p1}, Lcom/android/server/wm/RootWindowContainer;->getDisplayContent(I)Lcom/android/server/wm/DisplayContent;
 
     move-result-object p2
 
     if-eqz p2, :cond_e
 
-    .line 896
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v1
 
-    .line 897
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4312,13 +3953,11 @@
     :cond_e
     if-nez v1, :cond_f
 
-    .line 902
     iget-object v1, p4, Lcom/android/server/wm/LaunchParamsController$LaunchParams;->mPreferredTaskDisplayArea:Lcom/android/server/wm/TaskDisplayArea;
 
     :cond_f
     if-eqz v1, :cond_10
 
-    .line 906
     iget-object p1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -4327,14 +3966,12 @@
 
     if-nez p1, :cond_10
 
-    .line 907
     invoke-virtual {v1}, Lcom/android/server/wm/TaskDisplayArea;->getDisplayId()I
 
     move-result p1
 
     if-eqz p1, :cond_10
 
-    .line 908
     iget-object p1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -4348,7 +3985,6 @@
 
     if-eqz p5, :cond_11
 
-    .line 914
     invoke-virtual {p5}, Lcom/android/server/wm/ConfigurationContainer;->isActivityTypeHome()Z
 
     move-result p1
@@ -4361,14 +3997,12 @@
 
     iget-object p2, p5, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
-    .line 915
     invoke-virtual {p1, p2, v1, v2}, Lcom/android/server/wm/RootWindowContainer;->canStartHomeOnDisplayArea(Landroid/content/pm/ActivityInfo;Lcom/android/server/wm/TaskDisplayArea;Z)Z
 
     move-result p1
 
     if-nez p1, :cond_11
 
-    .line 917
     iget-object p1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -4382,13 +4016,11 @@
 
     return-object v1
 
-    .line 928
     :cond_12
     invoke-virtual {p0, p5, p6}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getFallbackDisplayAreaForActivity(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityStarter$Request;)Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object p1
 
-    .line 935
     iget-object p2, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p2, p2, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -4399,19 +4031,16 @@
 
     iget-object p2, p2, Lcom/android/server/wm/WindowManagerServiceExt;->mExtraDisplayPolicy:Lcom/android/server/wm/ExtraDisplayPolicy;
 
-    .line 937
     invoke-virtual {p1}, Lcom/android/server/wm/TaskDisplayArea;->getDisplayId()I
 
     move-result p3
 
-    .line 936
     invoke-interface {p2, p3}, Lcom/android/server/wm/ExtraDisplayPolicy;->shouldChooseDefaultTaskDisplayArea(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_13
 
-    .line 938
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -4445,7 +4074,6 @@
 
     move-object v6, p6
 
-    .line 1264
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getTaskBounds(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/TaskDisplayArea;Landroid/content/pm/ActivityInfo$WindowLayout;IZLandroid/graphics/Rect;Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -4462,7 +4090,6 @@
 
     if-eq p4, v1, :cond_0
 
-    .line 1276
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4485,7 +4112,6 @@
 
     return-void
 
-    .line 1281
     :cond_0
     invoke-virtual {p0, p1, p2, p6}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->resolveOrientation(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;)I
 
@@ -4497,7 +4123,6 @@
 
     goto :goto_0
 
-    .line 1284
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -4509,7 +4134,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1286
     invoke-static {p4}, Landroid/content/pm/ActivityInfo;->screenOrientationToString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -4524,22 +4148,18 @@
 
     throw p0
 
-    .line 1290
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpStableBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v0}, Lcom/android/server/wm/DisplayArea;->getStableRect(Landroid/graphics/Rect;)V
 
-    .line 1291
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpStableBounds:Landroid/graphics/Rect;
 
-    .line 1292
     invoke-virtual {p0, p2, v0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->getCustomFreeformSize(Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;)Landroid/util/Size;
 
     move-result-object v0
 
-    .line 1295
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
@@ -4556,7 +4176,6 @@
 
     if-nez p5, :cond_4
 
-    .line 1296
     iget-object p5, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     invoke-static {p6, p5}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->sizeMatches(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
@@ -4567,16 +4186,13 @@
 
     goto :goto_1
 
-    .line 1322
     :cond_3
     iget-object p4, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->adjustBoundsToFitInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;Landroid/content/pm/ActivityInfo$WindowLayout;Landroid/graphics/Rect;)V
 
-    .line 1323
     invoke-virtual {p6}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 1324
     iget-object p3, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
@@ -4591,7 +4207,6 @@
 
     invoke-static {p2, p3, p4, p6}, Lcom/android/server/wm/LaunchParamsUtil;->centerBounds(Lcom/android/server/wm/TaskDisplayArea;IILandroid/graphics/Rect;)V
 
-    .line 1326
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4610,7 +4225,6 @@
 
     goto :goto_2
 
-    .line 1301
     :cond_4
     :goto_1
     invoke-static {p6}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->orientationFromBounds(Landroid/graphics/Rect;)I
@@ -4619,7 +4233,6 @@
 
     if-ne p4, p3, :cond_5
 
-    .line 1302
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4638,7 +4251,6 @@
 
     goto :goto_2
 
-    .line 1304
     :cond_5
     iget-object p3, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
@@ -4648,12 +4260,10 @@
 
     if-eqz p3, :cond_6
 
-    .line 1305
     iget-object p3, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds2:Landroid/graphics/Rect;
 
     invoke-virtual {p2, p3}, Lcom/android/server/wm/ConfigurationContainer;->getBounds(Landroid/graphics/Rect;)V
 
-    .line 1306
     iget-object p3, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
@@ -4670,12 +4280,10 @@
 
     invoke-virtual {p0, p2, p3, p4, p5}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->centerBounds(Lcom/android/server/wm/TaskDisplayArea;IILandroid/graphics/Rect;)V
 
-    .line 1307
     iget-object p3, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mTmpBounds2:Landroid/graphics/Rect;
 
     invoke-virtual {p6, p3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1308
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4694,21 +4302,17 @@
 
     goto :goto_2
 
-    .line 1312
     :cond_6
     invoke-virtual {p6}, Landroid/graphics/Rect;->height()I
 
     move-result p3
 
-    .line 1313
     invoke-virtual {p6}, Landroid/graphics/Rect;->width()I
 
     move-result p4
 
-    .line 1312
     invoke-static {p2, p3, p4, p6}, Lcom/android/server/wm/LaunchParamsUtil;->centerBounds(Lcom/android/server/wm/TaskDisplayArea;IILandroid/graphics/Rect;)V
 
-    .line 1314
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4728,24 +4332,20 @@
     :goto_2
     if-eqz p7, :cond_7
 
-    .line 1331
     iget-object p3, p1, Lcom/android/server/wm/ActivityRecord;->taskAffinityWithoutUid:Ljava/lang/String;
 
     if-eqz p3, :cond_7
 
     iget-object p4, p7, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
-    .line 1333
     invoke-virtual {p3, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
 
     if-eqz p3, :cond_7
 
-    .line 1336
     iget-object v3, p1, Lcom/android/server/wm/ActivityRecord;->taskAffinityWithoutUid:Ljava/lang/String;
 
-    .line 1337
     invoke-virtual {p7}, Lcom/android/server/wm/ActivityRecord;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v4
@@ -4758,12 +4358,10 @@
 
     move-object v2, p6
 
-    .line 1336
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->adjustBoundsToAvoidConflictInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;Ljava/lang/String;Landroid/graphics/Rect;Lcom/android/server/wm/Task;)V
 
     goto :goto_3
 
-    .line 1340
     :cond_7
     invoke-virtual {p0, p2, p6}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->adjustBoundsToAvoidConflictInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;)V
 
@@ -4774,7 +4372,6 @@
 .method public final initLogBuilder(Lcom/android/server/wm/Task;Lcom/android/server/wm/ActivityRecord;)V
     .locals 3
 
-    .line 1654
     new-instance v0, Ljava/lang/StringBuilder;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4807,15 +4404,12 @@
 .method public onCalculate(Lcom/android/server/wm/Task;Landroid/content/pm/ActivityInfo$WindowLayout;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;Lcom/android/server/wm/ActivityStarter$Request;ILcom/android/server/wm/LaunchParamsController$LaunchParams;Lcom/android/server/wm/LaunchParamsController$LaunchParams;)I
     .locals 0
 
-    .line 151
     invoke-virtual {p0, p1, p3}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->initLogBuilder(Lcom/android/server/wm/Task;Lcom/android/server/wm/ActivityRecord;)V
 
-    .line 152
     invoke-virtual/range {p0 .. p9}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->calculate(Lcom/android/server/wm/Task;Landroid/content/pm/ActivityInfo$WindowLayout;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;Lcom/android/server/wm/ActivityStarter$Request;ILcom/android/server/wm/LaunchParamsController$LaunchParams;Lcom/android/server/wm/LaunchParamsController$LaunchParams;)I
 
     move-result p1
 
-    .line 154
     invoke-virtual {p0}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->outputLog()V
 
     return p1
@@ -4824,7 +4418,6 @@
 .method public final outputLog()V
     .locals 1
 
-    .line 1664
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mLogBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -4841,7 +4434,6 @@
 .method public final recalculateLayout(Lcom/android/server/wm/TaskDisplayArea;Landroid/content/pm/ActivityInfo$WindowLayout;Lcom/android/server/wm/ActivityRecord;)Landroid/content/pm/ActivityInfo$WindowLayout;
     .locals 9
 
-    .line 1791
     invoke-virtual {p2}, Landroid/content/pm/ActivityInfo$WindowLayout;->hasSpecifiedSize()Z
 
     move-result v0
@@ -4850,7 +4442,6 @@
 
     return-object p2
 
-    .line 1797
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -4860,7 +4451,6 @@
 
     const/4 v0, 0x0
 
-    .line 1798
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowManagerService;->getInitialDisplayDensity(I)I
 
     move-result p0
@@ -4880,7 +4470,6 @@
 
     const-string v0, "android.server.wm.app"
 
-    .line 1805
     iget-object p3, p3, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4889,12 +4478,10 @@
 
     if-eqz p3, :cond_2
 
-    .line 1806
     sget p1, Landroid/util/DisplayMetrics;->DENSITY_DEVICE_STABLE:I
 
     goto :goto_0
 
-    .line 1808
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -4907,7 +4494,6 @@
 
     div-float/2addr p1, p0
 
-    .line 1813
     iget p0, p2, Landroid/content/pm/ActivityInfo$WindowLayout;->width:I
 
     const/4 p3, -0x1
@@ -4931,7 +4517,6 @@
 
     move v2, p0
 
-    .line 1814
     :goto_1
     iget p0, p2, Landroid/content/pm/ActivityInfo$WindowLayout;->height:I
 
@@ -4952,7 +4537,6 @@
 
     move v4, p0
 
-    .line 1815
     :goto_2
     iget p0, p2, Landroid/content/pm/ActivityInfo$WindowLayout;->minWidth:I
 
@@ -4973,7 +4557,6 @@
 
     move v7, p0
 
-    .line 1816
     :goto_3
     iget p0, p2, Landroid/content/pm/ActivityInfo$WindowLayout;->minHeight:I
 
@@ -4993,7 +4576,6 @@
     :goto_4
     move v8, p3
 
-    .line 1817
     new-instance p0, Landroid/content/pm/ActivityInfo$WindowLayout;
 
     iget v3, p2, Landroid/content/pm/ActivityInfo$WindowLayout;->widthFraction:F
@@ -5012,7 +4594,6 @@
 .method public final resolveOrientation(Lcom/android/server/wm/ActivityRecord;)I
     .locals 2
 
-    .line 1210
     iget-object p1, p1, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     iget p1, p1, Landroid/content/pm/ActivityInfo;->screenOrientation:I
@@ -5051,7 +4632,6 @@
     :pswitch_1
     const-string p1, "activity-requested-portrait"
 
-    .line 1227
     invoke-virtual {p0, p1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     goto :goto_0
@@ -5060,7 +4640,6 @@
     :pswitch_2
     const-string p1, "activity-requested-landscape"
 
-    .line 1220
     invoke-virtual {p0, p1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -5083,7 +4662,6 @@
 .method public final resolveOrientation(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;)I
     .locals 1
 
-    .line 1357
     invoke-virtual {p0, p1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->resolveOrientation(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result p1
@@ -5092,34 +4670,29 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 1360
     invoke-virtual {p3}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 1362
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p1
 
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
-    .line 1361
     invoke-virtual {p0, p1}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->convertOrientationToScreenOrientation(I)I
 
     move-result p1
 
     goto :goto_0
 
-    .line 1363
     :cond_0
     invoke-static {p3}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->orientationFromBounds(Landroid/graphics/Rect;)I
 
     move-result p1
 
-    .line 1365
     :goto_0
     invoke-virtual {p3}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -5143,7 +4716,6 @@
 
     goto :goto_1
 
-    .line 1366
     :cond_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -5159,7 +4731,6 @@
 
     move-result-object p2
 
-    .line 1365
     :goto_1
     invoke-virtual {p0, p2}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
@@ -5168,7 +4739,6 @@
 
     if-ne p1, p2, :cond_5
 
-    .line 1371
     invoke-virtual {p3}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result p1
@@ -5179,13 +4749,11 @@
 
     goto :goto_2
 
-    .line 1372
     :cond_3
     invoke-static {p3}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->orientationFromBounds(Landroid/graphics/Rect;)I
 
     move-result p1
 
-    .line 1374
     :goto_2
     invoke-virtual {p3}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -5197,7 +4765,6 @@
 
     goto :goto_3
 
-    .line 1375
     :cond_4
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -5213,7 +4780,6 @@
 
     move-result-object p2
 
-    .line 1374
     :goto_3
     invoke-virtual {p0, p2}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->appendLog(Ljava/lang/String;)V
 
@@ -5224,7 +4790,6 @@
 .method public final rotateDisplayRect(Landroid/graphics/Rect;II)V
     .locals 0
 
-    .line 1939
     invoke-static {p2, p3}, Landroid/util/RotationUtils;->deltaRotation(II)I
 
     move-result p0
@@ -5237,7 +4802,6 @@
 
     if-ne p0, p2, :cond_1
 
-    .line 1941
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
@@ -5274,13 +4838,11 @@
 
     goto :goto_0
 
-    .line 1879
     :cond_0
     iget v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mDefaultFreeformStepHorizontal:I
 
     goto :goto_0
 
-    .line 1876
     :cond_1
     iget v0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mDefaultFreeformStepHorizontal:I
 
@@ -5299,19 +4861,16 @@
 
     goto :goto_1
 
-    .line 1891
     :cond_2
     iget v2, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mDefaultFreeformStepVertical:I
 
     goto :goto_1
 
-    .line 1888
     :cond_3
     iget p0, p0, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->mDefaultFreeformStepVertical:I
 
     neg-int v2, p0
 
-    .line 1896
     :goto_1
     invoke-virtual {p2, v0, v2}, Landroid/graphics/Rect;->offset(II)V
 
@@ -5327,7 +4886,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 1178
     invoke-virtual {p3}, Landroid/app/ActivityOptions;->getLaunchWindowingMode()I
 
     move-result p3
@@ -5336,7 +4894,6 @@
 
     return v1
 
-    .line 1182
     :cond_0
     invoke-virtual {p1, p2}, Lcom/android/server/wm/ActivityRecord;->supportsFreeformInDisplayArea(Lcom/android/server/wm/TaskDisplayArea;)Z
 
@@ -5352,7 +4909,6 @@
 
     goto :goto_0
 
-    .line 1186
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
@@ -5362,17 +4918,14 @@
 
     move-result p3
 
-    .line 1188
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 1187
     invoke-virtual {p0, p1, p2, v2}, Lcom/android/server/wm/MultiTaskingTaskLaunchParamsModifier;->resolveOrientation(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/TaskDisplayArea;Landroid/graphics/Rect;)I
 
     move-result p0
 
-    .line 1189
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result p1

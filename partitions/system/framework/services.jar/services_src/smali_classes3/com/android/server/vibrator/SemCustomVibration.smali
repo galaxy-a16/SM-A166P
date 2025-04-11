@@ -15,16 +15,12 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/vibrator/SemVibrationBundle;Landroid/os/vibrator/SemHapticSegment;Lcom/android/server/vibrator/VibrationSettings;)V
     .locals 0
 
-    .line 22
     invoke-direct {p0, p2}, Lcom/android/server/vibrator/SemVibration;-><init>(Lcom/android/server/vibrator/SemVibrationBundle;)V
 
-    .line 24
     iput-object p1, p0, Lcom/android/server/vibrator/SemCustomVibration;->mContext:Landroid/content/Context;
 
-    .line 25
     iput-object p3, p0, Lcom/android/server/vibrator/SemCustomVibration;->mSemHapticSegment:Landroid/os/vibrator/SemHapticSegment;
 
-    .line 26
     iput-object p4, p0, Lcom/android/server/vibrator/SemCustomVibration;->mSettings:Lcom/android/server/vibrator/VibrationSettings;
 
     return-void
@@ -37,14 +33,12 @@
 
     const-string v0, "#"
 
-    .line 93
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    .line 94
     aget-object p1, p1, v0
 
     const-string v0, " "
@@ -53,12 +47,10 @@
 
     move-result-object p1
 
-    .line 95
     array-length v0, p1
 
     new-array v0, v0, [I
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/vibrator/SemCustomVibration;->mSettings:Lcom/android/server/vibrator/VibrationSettings;
 
     invoke-virtual {p0}, Lcom/android/server/vibrator/VibrationSettings;->getMaxMagnitude()I
@@ -73,14 +65,12 @@
 
     const/4 p0, 0x0
 
-    .line 99
     :goto_0
     :try_start_0
     array-length p2, p1
 
     if-ge p0, p2, :cond_0
 
-    .line 100
     aget-object p2, p1, p0
 
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -104,7 +94,6 @@
     :catch_0
     move-exception p0
 
-    .line 103
     invoke-virtual {p0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     :cond_0
@@ -116,14 +105,12 @@
 
     const-string p0, "#"
 
-    .line 77
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
-    .line 78
     aget-object p0, p0, p1
 
     const-string v0, " "
@@ -132,19 +119,16 @@
 
     move-result-object p0
 
-    .line 79
     array-length v0, p0
 
     new-array v0, v0, [J
 
-    .line 82
     :goto_0
     :try_start_0
     array-length v1, p0
 
     if-ge p1, v1, :cond_0
 
-    .line 83
     aget-object v1, p0, p1
 
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -162,7 +146,6 @@
     :catch_0
     move-exception p0
 
-    .line 86
     invoke-virtual {p0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     :cond_0
@@ -172,7 +155,6 @@
 .method public getVibration()Lcom/android/server/vibrator/HalVibration;
     .locals 13
 
-    .line 31
     invoke-virtual {p0}, Lcom/android/server/vibrator/SemVibration;->commonValidation()Z
 
     move-result v0
@@ -183,20 +165,17 @@
 
     return-object v1
 
-    .line 37
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 38
     iget-object v0, p0, Lcom/android/server/vibrator/SemCustomVibration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    .line 40
     :try_start_0
     iget-object v0, p0, Lcom/android/server/vibrator/SemCustomVibration;->mSemHapticSegment:Landroid/os/vibrator/SemHapticSegment;
 
@@ -218,7 +197,6 @@
 
     iget v0, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
 
-    .line 42
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -229,7 +207,6 @@
 
     const/4 v9, 0x0
 
-    .line 40
     invoke-virtual/range {v4 .. v9}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
@@ -239,7 +216,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 43
     :try_start_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -249,52 +225,44 @@
 
     const-string v4, "custom_data"
 
-    .line 44
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
     if-ltz v4, :cond_3
 
-    .line 46
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
     if-nez v4, :cond_1
 
-    .line 48
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 60
     :try_start_2
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 63
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v1
 
-    .line 51
     :cond_1
     :try_start_3
     invoke-virtual {p0, v4}, Lcom/android/server/vibrator/SemCustomVibration;->getCustomPatternData(Ljava/lang/String;)[J
 
     move-result-object v5
 
-    .line 52
     iget v6, p0, Lcom/android/server/vibrator/SemVibration;->mMagnitude:I
 
     invoke-virtual {p0, v4, v6}, Lcom/android/server/vibrator/SemCustomVibration;->getCustomAmplitudeData(Ljava/lang/String;I)[I
 
     move-result-object v4
 
-    .line 53
     iget v6, p0, Lcom/android/server/vibrator/SemVibration;->mRepeat:I
 
     invoke-static {v5, v4, v6}, Landroid/os/VibrationEffect;->createWaveform([J[II)Landroid/os/VibrationEffect;
@@ -303,11 +271,9 @@
 
     goto :goto_0
 
-    .line 56
     :cond_2
     iget-object v4, p0, Lcom/android/server/vibrator/SemCustomVibration;->mSemHapticSegment:Landroid/os/vibrator/SemHapticSegment;
 
-    .line 57
     invoke-virtual {v4}, Landroid/os/vibrator/SemHapticSegment;->getDefaultSepIndex()I
 
     move-result v4
@@ -324,7 +290,6 @@
     :goto_0
     if-eqz v0, :cond_5
 
-    .line 60
     :try_start_4
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -338,7 +303,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 40
     :try_start_5
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_5
@@ -367,31 +331,26 @@
     :catch_0
     move-exception v0
 
-    .line 61
     :try_start_7
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 63
     :cond_5
     :goto_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-eqz v1, :cond_6
 
-    .line 67
     iget v0, p0, Lcom/android/server/vibrator/SemVibration;->mMagnitude:I
 
     invoke-virtual {v1, v0}, Landroid/os/VibrationEffect;->semSetMagnitude(I)V
 
-    .line 69
     :cond_6
     invoke-static {v1}, Landroid/os/CombinedVibration;->createParallel(Landroid/os/VibrationEffect;)Landroid/os/CombinedVibration;
 
     move-result-object v4
 
-    .line 71
     new-instance v0, Lcom/android/server/vibrator/HalVibration;
 
     iget-object v3, p0, Lcom/android/server/vibrator/SemVibration;->mToken:Landroid/os/IBinder;
@@ -406,7 +365,6 @@
 
     iget v2, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
 
-    .line 72
     invoke-virtual {v1, v2}, Lcom/samsung/android/server/vibrator/VibratorHelper;->getPatternFrequencyByIndex(I)I
 
     move-result v9
@@ -415,7 +373,6 @@
 
     const/4 v11, 0x0
 
-    .line 73
     invoke-virtual {p0}, Lcom/android/server/vibrator/SemVibration;->getCallerInfo()Lcom/android/server/vibrator/Vibration$CallerInfo;
 
     move-result-object v12
@@ -426,18 +383,15 @@
 
     return-object v0
 
-    .line 63
     :goto_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 64
     throw p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 110
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

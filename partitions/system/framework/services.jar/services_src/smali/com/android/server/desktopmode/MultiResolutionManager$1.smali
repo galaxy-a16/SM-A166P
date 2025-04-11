@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/MultiResolutionManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 95
     iput-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$1;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-direct {p0, p2}, Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;-><init>(Ljava/lang/String;)V
@@ -24,7 +23,6 @@
 .method public onSettingChanged(Ljava/lang/String;I)V
     .locals 1
 
-    .line 98
     iget-object p2, p0, Lcom/android/server/desktopmode/MultiResolutionManager$1;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/IStateManager;
@@ -46,7 +44,6 @@
     :cond_0
     if-nez p1, :cond_2
 
-    .line 103
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_1
@@ -59,7 +56,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     :cond_1
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$1;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
@@ -79,7 +75,6 @@
 
     return-void
 
-    .line 108
     :cond_2
     invoke-static {}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$sfgetRESOLUTION_TABLE()Ljava/util/Map;
 
@@ -91,7 +86,6 @@
 
     check-cast p1, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 109
     iget-object p2, p0, Lcom/android/server/desktopmode/MultiResolutionManager$1;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmMaxSupportedResolution(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
@@ -106,7 +100,6 @@
 
     goto :goto_0
 
-    .line 110
     :cond_3
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$1;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
@@ -123,7 +116,6 @@
 
     iget p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->density:I
 
-    .line 109
     invoke-static {p2, p1, p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$msetSelectedDisplayMetrics(Lcom/android/server/desktopmode/MultiResolutionManager;Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;I)V
 
     return-void

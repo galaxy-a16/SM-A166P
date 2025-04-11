@@ -11,10 +11,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 436
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 437
     iput p1, p0, Lcom/android/server/location/eventlog/LocationEventLog$LocationPowerSaveModeEvent;->mLocationPowerSaveMode:I
 
     return-void
@@ -25,7 +23,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 443
     iget p0, p0, Lcom/android/server/location/eventlog/LocationEventLog$LocationPowerSaveModeEvent;->mLocationPowerSaveMode:I
 
     if-eqz p0, :cond_4
@@ -73,7 +70,6 @@
     :cond_4
     const-string p0, "NO_CHANGE"
 
-    .line 463
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 

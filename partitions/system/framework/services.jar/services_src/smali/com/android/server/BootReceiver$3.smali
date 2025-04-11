@@ -18,19 +18,16 @@
 .method public constructor <init>(Lcom/android/server/BootReceiver;)V
     .locals 0
 
-    .line 1644
     iput-object p1, p0, Lcom/android/server/BootReceiver$3;->this$0:Lcom/android/server/BootReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 p1, 0x400
 
-    .line 1645
     iput p1, p0, Lcom/android/server/BootReceiver$3;->mBufferSize:I
 
     new-array p1, p1, [B
 
-    .line 1646
     iput-object p1, p0, Lcom/android/server/BootReceiver$3;->mTraceBuffer:[B
 
     return-void
@@ -43,7 +40,6 @@
 
     const/4 p2, 0x0
 
-    .line 1661
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BootReceiver$3;->mTraceBuffer:[B
 
@@ -57,7 +53,6 @@
 
     if-lez p1, :cond_1
 
-    .line 1663
     new-instance p1, Ljava/lang/String;
 
     iget-object p0, p0, Lcom/android/server/BootReceiver$3;->mTraceBuffer:[B
@@ -66,7 +61,6 @@
 
     const-string p0, "\n"
 
-    .line 1664
     invoke-virtual {p1, p0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result p0
@@ -77,7 +71,6 @@
 
     return v0
 
-    .line 1667
     :cond_0
     invoke-static {}, Lcom/android/server/BootReceiver;->-$$Nest$sfgetsSentReports()I
 
@@ -91,10 +84,8 @@
 
     const-string p1, "1"
 
-    .line 1668
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1669
     invoke-static {}, Lcom/android/server/BootReceiver;->-$$Nest$sfgetsSentReports()I
 
     move-result p0
@@ -115,7 +106,6 @@
 
     const-string v0, "Error watching for trace events"
 
-    .line 1673
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return p2

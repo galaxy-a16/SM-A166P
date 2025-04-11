@@ -23,7 +23,6 @@
 .method public build()Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
     .locals 2
 
-    .line 22
     new-instance v0, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable;
 
     iget-object v1, p0, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable$Builder;->message:Ljava/lang/String;
@@ -38,7 +37,6 @@
 .method public setMessage(Ljava/lang/String;)Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable$Builder;
     .locals 0
 
-    .line 13
     iput-object p1, p0, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable$Builder;->message:Ljava/lang/String;
 
     return-object p0
@@ -47,7 +45,6 @@
 .method public setReason(I)Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable$Builder;
     .locals 0
 
-    .line 18
     iput p1, p0, Landroid/net/networkstack/aidl/ip/ReachabilityLossInfoParcelable$Builder;->reason:I
 
     return-object p0

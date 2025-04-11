@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Landroid/os/Looper;)V
     .locals 0
 
-    .line 218
     iput-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 220
     invoke-static {}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -47,7 +45,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x0
@@ -62,18 +59,15 @@
 
     goto/16 :goto_3
 
-    .line 298
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v3}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fputmIsTodaySleepChargingFinished(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Z)V
 
-    .line 299
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v2}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mactivateNextAlarmChangedReceiver(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Z)V
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmDeliveredHandler(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Landroid/os/Handler;
@@ -84,7 +78,6 @@
 
     goto/16 :goto_3
 
-    .line 289
     :pswitch_1
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -94,17 +87,14 @@
 
     invoke-static {p1, v2}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;->-$$Nest$fputisNowSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;Z)V
 
-    .line 291
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v2}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mactivateNextAlarmChangedReceiver(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Z)V
 
-    .line 292
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fputmNextAlarmDateTimeWithinSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Ljava/time/LocalDateTime;)V
 
-    .line 294
     iget-object p0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmHandler(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Landroid/os/Handler;
@@ -117,7 +107,6 @@
 
     goto/16 :goto_3
 
-    .line 279
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -127,7 +116,6 @@
 
     invoke-static {p1, v3}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;->-$$Nest$fputisNowSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;Z)V
 
-    .line 281
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mgetNextAlarmDateTimeWithinSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Ljava/time/LocalDateTime;
@@ -136,7 +124,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fputmNextAlarmDateTimeWithinSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Ljava/time/LocalDateTime;)V
 
-    .line 282
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmSleepChargingStatus(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;
@@ -145,12 +132,10 @@
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;->-$$Nest$mupdateExpectedFullChargeDateTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;)V
 
-    .line 283
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v3}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mactivateNextAlarmChangedReceiver(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Z)V
 
-    .line 285
     iget-object p0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmDeliveredHandler(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Landroid/os/Handler;
@@ -161,7 +146,6 @@
 
     goto/16 :goto_3
 
-    .line 261
     :pswitch_3
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -171,7 +155,6 @@
 
     if-nez p1, :cond_0
 
-    .line 262
     invoke-static {}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -182,7 +165,6 @@
 
     goto/16 :goto_3
 
-    .line 265
     :cond_0
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -190,7 +172,6 @@
 
     move-result-object p1
 
-    .line 266
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {v0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmNextAlarmDateTimeWithinSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Ljava/time/LocalDateTime;
@@ -203,7 +184,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 267
     invoke-static {}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -214,7 +194,6 @@
 
     goto/16 :goto_3
 
-    .line 270
     :cond_1
     invoke-static {}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -224,12 +203,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {v0, p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fputmNextAlarmDateTimeWithinSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Ljava/time/LocalDateTime;)V
 
-    .line 273
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmSleepChargingStatus(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;
@@ -238,7 +215,6 @@
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;->-$$Nest$mupdateExpectedFullChargeDateTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;)V
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmDeliveredHandler(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Landroid/os/Handler;
@@ -251,13 +227,11 @@
 
     goto/16 :goto_3
 
-    .line 224
     :pswitch_4
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v2}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mreset(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Z)V
 
-    .line 225
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmIsEndCalled(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Z
@@ -266,7 +240,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 226
     invoke-static {}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -295,7 +268,6 @@
 
     return-void
 
-    .line 230
     :cond_2
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -305,7 +277,6 @@
 
     if-nez p1, :cond_3
 
-    .line 231
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mgetSleepPatterns(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Ljava/util/Map;
@@ -314,7 +285,6 @@
 
     invoke-static {p1, v1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fputmSleepPatterns(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Ljava/util/Map;)V
 
-    .line 234
     :cond_3
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -328,20 +298,17 @@
 
     if-eqz p1, :cond_4
 
-    .line 235
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fputmSleepChargingStatus(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;)V
 
     goto :goto_0
 
-    .line 237
     :cond_4
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v3}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mactivateDeviceTimeChangedReceiver(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Z)V
 
-    .line 238
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mgetSleepChargingStatus(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;
@@ -350,7 +317,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fputmSleepChargingStatus(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;)V
 
-    .line 241
     :goto_0
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -360,7 +326,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 242
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmSleepChargingStatus(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;
@@ -373,7 +338,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 243
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmSleepChargingStatus(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;
@@ -386,7 +350,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 244
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mgetNextAlarmDateTimeWithinSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Ljava/time/LocalDateTime;
@@ -395,7 +358,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fputmNextAlarmDateTimeWithinSleepTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Ljava/time/LocalDateTime;)V
 
-    .line 245
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$fgetmSleepChargingStatus(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;)Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;
@@ -404,14 +366,12 @@
 
     invoke-static {p1}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;->-$$Nest$mupdateExpectedFullChargeDateTime(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$SleepChargingStatus;)V
 
-    .line 246
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
     invoke-static {p1, v3}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$mactivateNextAlarmChangedReceiver(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Z)V
 
     goto :goto_1
 
-    .line 248
     :cond_5
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -421,7 +381,6 @@
 
     goto :goto_1
 
-    .line 251
     :cond_6
     invoke-static {}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -431,7 +390,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     :goto_1
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -441,7 +399,6 @@
 
     goto :goto_2
 
-    .line 255
     :cond_7
     iget-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 
@@ -449,7 +406,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;->-$$Nest$msetTimeNoti(Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;Ljava/lang/String;)V
 
-    .line 257
     :goto_2
     iget-object p0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingTimeController$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;
 

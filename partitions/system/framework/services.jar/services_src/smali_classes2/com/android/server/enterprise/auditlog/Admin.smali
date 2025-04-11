@@ -42,69 +42,54 @@
 .method public constructor <init>(ILandroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 67
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mPackageName:Ljava/lang/String;
 
-    .line 69
     new-instance v1, Lcom/samsung/android/knox/log/AuditLogRulesInfo;
 
     invoke-direct {v1}, Lcom/samsung/android/knox/log/AuditLogRulesInfo;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mAuditLogRulesInfo:Lcom/samsung/android/knox/log/AuditLogRulesInfo;
 
-    .line 74
     iput-object p3, p0, Lcom/android/server/enterprise/auditlog/Admin;->mPackageName:Ljava/lang/String;
 
-    .line 75
     new-instance v1, Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-direct {v1, p1, p2, p3}, Lcom/android/server/enterprise/auditlog/LogWritter;-><init>(ILandroid/content/Context;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
-    .line 76
     new-instance p3, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-direct {p3, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/android/server/enterprise/auditlog/Admin;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 77
     iget-object p3, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p3, p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->setObserver(Lcom/android/server/enterprise/auditlog/IObserver;)V
 
     const/4 p3, 0x0
 
-    .line 79
     iput-boolean p3, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsDumping:Z
 
-    .line 80
     iput-boolean p3, p0, Lcom/android/server/enterprise/auditlog/Admin;->mMdmLogging:Z
 
-    .line 81
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mDumpFilter:Lcom/android/server/enterprise/auditlog/Filter;
 
-    .line 82
     iput-object p2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mContext:Landroid/content/Context;
 
     const-wide/16 p2, 0x0
 
-    .line 83
     iput-wide p2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mBegin:J
 
-    .line 84
     iput-wide p2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mEnd:J
 
-    .line 85
     iput p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mUid:I
 
-    .line 86
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,7 +108,6 @@
 
     invoke-static {p3, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     :try_start_0
     iget-object p2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -133,7 +117,6 @@
 
     iput-boolean p2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsPseudoAdminOfOrganizationOwnedDevice:Z
 
-    .line 89
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -159,7 +142,6 @@
     :catch_0
     move-exception p2
 
-    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,32 +165,27 @@
     :goto_0
     const-string p2, "device_policy"
 
-    .line 95
     invoke-static {p2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p2
 
-    .line 94
     invoke-static {p2}, Landroid/app/admin/IDevicePolicyManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/admin/IDevicePolicyManager;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 99
     :try_start_1
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
 
-    .line 98
     invoke-interface {p2, p1}, Landroid/app/admin/IDevicePolicyManager;->isProfileOwnerOfOrganizationOwnedDeviceMDM(I)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsProfileOwnerOfOrganizationOwnedDevice:Z
 
-    .line 101
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -234,7 +211,6 @@
     :catch_1
     move-exception p0
 
-    .line 105
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -265,7 +241,6 @@
 .method public createBubbleDirectory()V
     .locals 0
 
-    .line 189
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->createBubbleDirectory()V
@@ -276,7 +251,6 @@
 .method public createBubbleFile()V
     .locals 0
 
-    .line 193
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->createBubbleFile()V
@@ -287,7 +261,6 @@
 .method public deleteAllFiles()V
     .locals 0
 
-    .line 157
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->deleteAllFiles()V
@@ -298,7 +271,6 @@
 .method public dump(JJLandroid/os/ParcelFileDescriptor;)Z
     .locals 2
 
-    .line 122
     iget-boolean v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsDumping:Z
 
     const/4 v1, 0x0
@@ -307,36 +279,28 @@
 
     const/4 v0, 0x1
 
-    .line 123
     iput-boolean v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsDumping:Z
 
-    .line 124
     iput-wide p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mBegin:J
 
-    .line 125
     iput-wide p3, p0, Lcom/android/server/enterprise/auditlog/Admin;->mEnd:J
 
-    .line 126
     iput-object p5, p0, Lcom/android/server/enterprise/auditlog/Admin;->mAdminOutputFile:Landroid/os/ParcelFileDescriptor;
 
-    .line 127
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p1, p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->setObserver(Lcom/android/server/enterprise/auditlog/IObserver;)V
 
-    .line 128
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/enterprise/auditlog/LogWritter;->setIsDumping(ZZ)V
 
-    .line 129
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     const-string/jumbo p2, "swap"
 
     invoke-virtual {p1, p2}, Lcom/android/server/enterprise/auditlog/LogWritter;->swapFiles(Ljava/lang/String;)V
 
-    .line 130
     iget-boolean p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsDumping:Z
 
     return p0
@@ -348,7 +312,6 @@
 .method public getAuditLogRulesInfo()Lcom/samsung/android/knox/log/AuditLogRulesInfo;
     .locals 0
 
-    .line 291
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mAuditLogRulesInfo:Lcom/samsung/android/knox/log/AuditLogRulesInfo;
 
     return-object p0
@@ -357,7 +320,6 @@
 .method public getCriticalLogSize()I
     .locals 0
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->getCriticalLogSize()I
@@ -370,7 +332,6 @@
 .method public getCurrentLogFileSize()I
     .locals 0
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->getCurrentLogFileSize()I
@@ -383,7 +344,6 @@
 .method public getDumpState()Z
     .locals 0
 
-    .line 283
     iget-boolean p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsDumping:Z
 
     return p0
@@ -392,7 +352,6 @@
 .method public getMaximumLogSize()I
     .locals 0
 
-    .line 149
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->getMaximumLogSize()I
@@ -405,7 +364,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 118
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -414,7 +372,6 @@
 .method public getUid()I
     .locals 0
 
-    .line 177
     iget p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mUid:I
 
     return p0
@@ -423,7 +380,6 @@
 .method public isProfileOwnerOfOrganizationOwnedDevice()Z
     .locals 0
 
-    .line 201
     iget-boolean p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsProfileOwnerOfOrganizationOwnedDevice:Z
 
     return p0
@@ -432,7 +388,6 @@
 .method public isPseudoAdminOfOrganizationOwnedDevice()Z
     .locals 0
 
-    .line 197
     iget-boolean p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsPseudoAdminOfOrganizationOwnedDevice:Z
 
     return p0
@@ -443,23 +398,18 @@
 
     const/4 v0, 0x0
 
-    .line 227
     iput-boolean v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsDumping:Z
 
-    .line 228
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {v1, p2}, Lcom/android/server/enterprise/auditlog/LogWritter;->setTypeOfDump(Z)V
 
-    .line 229
     iget-object p2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p2, v0, p1}, Lcom/android/server/enterprise/auditlog/LogWritter;->setIsDumping(ZZ)V
 
-    .line 230
     iget p2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mUid:I
 
-    .line 232
     const-class v1, Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;
 
     invoke-static {v1}, Lcom/android/server/enterprise/adapter/AdapterRegistry;->getAdapter(Ljava/lang/Class;)Ljava/lang/Object;
@@ -470,19 +420,16 @@
 
     iget v2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mUid:I
 
-    .line 233
     invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
 
-    .line 232
     invoke-interface {v1, v2}, Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;->isLegacyContainer(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 234
     iget-object p2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mUid:I
@@ -491,30 +438,25 @@
 
     move-result p2
 
-    .line 237
     :cond_0
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 238
     iget-boolean v1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mIsPseudoAdminOfOrganizationOwnedDevice:Z
 
     if-eqz v1, :cond_1
 
-    .line 239
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 241
     invoke-virtual {v1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getOrganizationOwnedProfileUserId()I
 
     move-result p2
 
-    .line 245
     :cond_1
     new-instance v1, Landroid/content/Intent;
 
@@ -522,12 +464,10 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 247
     iget-object v2, p0, Lcom/android/server/enterprise/auditlog/Admin;->mPackageName:Ljava/lang/String;
 
     if-eqz v2, :cond_2
 
-    .line 248
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_2
@@ -535,12 +475,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 252
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     goto :goto_0
 
-    .line 254
     :cond_3
     invoke-static {}, Lcom/android/server/enterprise/auditlog/InformFailure;->getInstance()Lcom/android/server/enterprise/auditlog/InformFailure;
 
@@ -554,10 +492,8 @@
 
     const/16 p1, -0x7d0
 
-    .line 256
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 258
     :goto_0
     iget p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mUid:I
 
@@ -565,7 +501,6 @@
 
     invoke-virtual {v1, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 260
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -576,7 +511,6 @@
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 264
     :try_start_0
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mContext:Landroid/content/Context;
 
@@ -588,19 +522,16 @@
 
     move-result-object p1
 
-    .line 265
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 266
     iget-object v1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 267
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
@@ -609,18 +540,14 @@
 
     move-result v1
 
-    .line 266
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mPackageName:Ljava/lang/String;
 
     if-eqz v0, :cond_4
 
-    .line 269
     invoke-virtual {v2, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 271
     :cond_4
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mContext:Landroid/content/Context;
 
@@ -637,7 +564,6 @@
     :catch_0
     move-exception p0
 
-    .line 274
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -649,7 +575,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 209
     iget-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/auditlog/LogWritter;->getDumpFilesList()Ljava/lang/Object;
@@ -664,7 +589,6 @@
 
     const/4 p1, 0x0
 
-    .line 211
     invoke-virtual {v6, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -677,7 +601,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 212
     new-instance p1, Lcom/android/server/enterprise/auditlog/Dumper;
 
     iget-wide v1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mBegin:J
@@ -692,29 +615,23 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/enterprise/auditlog/Dumper;-><init>(JJLandroid/os/ParcelFileDescriptor;Ljava/util/ArrayList;Lcom/android/server/enterprise/auditlog/IObserver;)V
 
-    .line 213
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mDumpFilter:Lcom/android/server/enterprise/auditlog/Filter;
 
     if-eqz v0, :cond_0
 
-    .line 214
     invoke-virtual {p1, v0}, Lcom/android/server/enterprise/auditlog/Dumper;->setFilter(Lcom/android/server/enterprise/auditlog/Filter;)V
 
-    .line 215
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mDeviceInfo:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Lcom/android/server/enterprise/auditlog/Dumper;->setDeviceInfo(Ljava/util/List;)V
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/android/server/enterprise/auditlog/Dumper;->setPackageName(Ljava/lang/String;)V
 
-    .line 217
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
-    .line 218
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->setLastTimestamp()V
@@ -726,7 +643,6 @@
 .method public setAuditLogRulesInfo(Lcom/samsung/android/knox/log/AuditLogRulesInfo;)V
     .locals 0
 
-    .line 287
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mAuditLogRulesInfo:Lcom/samsung/android/knox/log/AuditLogRulesInfo;
 
     return-void
@@ -735,7 +651,6 @@
 .method public setBootCompleted(Z)V
     .locals 0
 
-    .line 173
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/auditlog/LogWritter;->setBootCompleted(Z)V
@@ -746,7 +661,6 @@
 .method public setBufferSize(J)V
     .locals 0
 
-    .line 181
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/auditlog/LogWritter;->setBufferLogSize(J)V
@@ -757,7 +671,6 @@
 .method public setCriticalLogSize(I)V
     .locals 0
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/auditlog/LogWritter;->setCriticalLogSize(I)V
@@ -768,7 +681,6 @@
 .method public setDeviceInfo(Ljava/util/List;)V
     .locals 0
 
-    .line 114
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mDeviceInfo:Ljava/util/List;
 
     return-void
@@ -779,14 +691,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 298
     new-instance v0, Lcom/android/server/enterprise/auditlog/Filter;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/auditlog/Filter;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mDumpFilter:Lcom/android/server/enterprise/auditlog/Filter;
 
-    .line 299
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/auditlog/Filter;->setFilter(Ljava/lang/String;)Z
 
     move-result p0
@@ -796,7 +706,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 302
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mDumpFilter:Lcom/android/server/enterprise/auditlog/Filter;
 
     const/4 p0, 0x1
@@ -807,7 +716,6 @@
 .method public setMDMLogging(Z)V
     .locals 0
 
-    .line 165
     iput-boolean p1, p0, Lcom/android/server/enterprise/auditlog/Admin;->mMdmLogging:Z
 
     return-void
@@ -816,7 +724,6 @@
 .method public setMaximumLogSize(I)V
     .locals 0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/auditlog/LogWritter;->setMaximumLogSize(I)V
@@ -827,7 +734,6 @@
 .method public shutdown()V
     .locals 0
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/auditlog/LogWritter;->shutdown()V
@@ -838,7 +744,6 @@
 .method public write(Ljava/lang/String;)V
     .locals 0
 
-    .line 110
     iget-object p0, p0, Lcom/android/server/enterprise/auditlog/Admin;->mLogWritter:Lcom/android/server/enterprise/auditlog/LogWritter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/auditlog/LogWritter;->write(Ljava/lang/String;)V

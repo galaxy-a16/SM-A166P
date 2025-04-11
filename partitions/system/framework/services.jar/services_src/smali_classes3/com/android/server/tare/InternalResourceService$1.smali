@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 0
 
-    .line 227
     iput-object p1, p0, Lcom/android/server/tare/InternalResourceService$1;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-direct {p0}, Lcom/android/internal/app/IAppOpsCallback$Stub;-><init>()V
@@ -26,7 +25,6 @@
 
     const/4 p1, 0x0
 
-    .line 232
     :try_start_0
     iget-object v0, p0, Lcom/android/server/tare/InternalResourceService$1;->this$0:Lcom/android/server/tare/InternalResourceService;
 
@@ -46,14 +44,12 @@
 
     const/4 p1, 0x1
 
-    .line 238
     :catch_0
     :cond_0
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 239
     iget-object v1, p0, Lcom/android/server/tare/InternalResourceService$1;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {v1}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fgetmLock(Lcom/android/server/tare/InternalResourceService;)Ljava/lang/Object;
@@ -64,7 +60,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 241
     :try_start_1
     iget-object p1, p0, Lcom/android/server/tare/InternalResourceService$1;->this$0:Lcom/android/server/tare/InternalResourceService;
 
@@ -78,7 +73,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 242
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$1;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {p0}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fgetmAgent(Lcom/android/server/tare/InternalResourceService;)Lcom/android/server/tare/Agent;
@@ -89,7 +83,6 @@
 
     goto :goto_0
 
-    .line 244
     :cond_1
     iget-object p1, p0, Lcom/android/server/tare/InternalResourceService$1;->this$0:Lcom/android/server/tare/InternalResourceService;
 
@@ -107,7 +100,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 245
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$1;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {p0}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fgetmAgent(Lcom/android/server/tare/InternalResourceService;)Lcom/android/server/tare/Agent;
@@ -116,7 +108,6 @@
 
     invoke-virtual {p0, v0, p3}, Lcom/android/server/tare/Agent;->onAppUnrestrictedLocked(ILjava/lang/String;)V
 
-    .line 247
     :cond_2
     :goto_0
     monitor-exit v1

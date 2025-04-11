@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallbackRunnable(Lcom/android/server/sepunion/cover/ResolutionMonitor;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mCallbackRunnable:Ljava/lang/Runnable;
 
     return-object p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmConfiguration(Lcom/android/server/sepunion/cover/ResolutionMonitor;)Landroid/content/res/Configuration;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mConfiguration:Landroid/content/res/Configuration;
 
     return-object p0
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/sepunion/cover/ResolutionMonitor;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -48,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/sepunion/cover/ResolutionMonitor;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -57,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fputmConfiguration(Lcom/android/server/sepunion/cover/ResolutionMonitor;Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mConfiguration:Landroid/content/res/Configuration;
 
     return-void
@@ -66,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -75,7 +69,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,23 +97,18 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mContext:Landroid/content/Context;
 
-    .line 28
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mHandler:Landroid/os/Handler;
 
-    .line 29
     iput-object p3, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mCallbackRunnable:Ljava/lang/Runnable;
 
-    .line 30
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -131,7 +119,6 @@
 
     iput-object p1, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mConfiguration:Landroid/content/res/Configuration;
 
-    .line 31
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/ResolutionMonitor;->registerReceiver()V
 
     return-void
@@ -142,17 +129,14 @@
 .method public final registerReceiver()V
     .locals 3
 
-    .line 35
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.CONFIGURATION_CHANGED"
 
-    .line 36
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 37
     iget-object v1, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcom/android/server/sepunion/cover/ResolutionMonitor$1;

@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 15
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -36,21 +35,18 @@
 .method public static isSupport(Ljava/lang/String;)Z
     .locals 3
 
-    .line 29
     invoke-static {}, Lcom/android/server/battery/BattFeatures;->readSupportNode()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 31
     invoke-virtual {v0, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 32
     sget-object v0, Lcom/android/server/battery/BattFeatures;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -86,21 +82,18 @@
 .method public static readSupportNode()Ljava/lang/String;
     .locals 3
 
-    .line 20
     sget-object v0, Lcom/android/server/battery/BattFeatures;->cachedData:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
     const-string v0, "/sys/class/power_supply/battery/support_functions"
 
-    .line 21
     invoke-static {v0}, Lcom/android/server/battery/BattUtils;->readNode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/battery/BattFeatures;->cachedData:Ljava/lang/String;
 
-    .line 24
     :cond_0
     sget-object v0, Lcom/android/server/battery/BattFeatures;->TAG:Ljava/lang/String;
 
@@ -122,7 +115,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     sget-object v0, Lcom/android/server/battery/BattFeatures;->cachedData:Ljava/lang/String;
 
     return-object v0

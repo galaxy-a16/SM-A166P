@@ -19,22 +19,16 @@
 .method public constructor <init>(IIIII)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput p1, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mWatchingUid:I
 
-    .line 39
     iput p2, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mFlags:I
 
-    .line 40
     iput p3, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mWatchedOpCode:I
 
-    .line 41
     iput p4, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mCallingUid:I
 
-    .line 42
     iput p5, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mCallingPid:I
 
     return-void
@@ -45,7 +39,6 @@
 .method public getCallingPid()I
     .locals 0
 
-    .line 77
     iget p0, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mCallingPid:I
 
     return p0
@@ -54,7 +47,6 @@
 .method public getCallingUid()I
     .locals 0
 
-    .line 70
     iget p0, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mCallingUid:I
 
     return p0
@@ -63,7 +55,6 @@
 .method public getFlags()I
     .locals 0
 
-    .line 56
     iget p0, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mFlags:I
 
     return p0
@@ -72,7 +63,6 @@
 .method public getWatchedOpCode()I
     .locals 0
 
-    .line 63
     iget p0, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mWatchedOpCode:I
 
     return p0
@@ -81,7 +71,6 @@
 .method public getWatchingUid()I
     .locals 0
 
-    .line 49
     iget p0, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mWatchingUid:I
 
     return p0
@@ -94,7 +83,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 85
     iget p0, p0, Lcom/android/server/appop/OnOpModeChangedListener;->mWatchingUid:I
 
     if-ltz p0, :cond_1

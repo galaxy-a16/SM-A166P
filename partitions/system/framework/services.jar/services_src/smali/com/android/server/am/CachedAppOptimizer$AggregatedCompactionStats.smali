@@ -41,7 +41,6 @@
 .method public constructor <init>(Lcom/android/server/am/CachedAppOptimizer;)V
     .locals 0
 
-    .line 546
     iput-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -60,17 +59,14 @@
 
     div-double/2addr v0, v2
 
-    .line 575
     iget-wide v2, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mMaxCompactEfficiency:D
 
     cmpl-double v2, v0, v2
 
     if-lez v2, :cond_0
 
-    .line 576
     iput-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mMaxCompactEfficiency:D
 
-    .line 578
     :cond_0
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalDeltaAnonRssKBs:J
 
@@ -78,28 +74,24 @@
 
     iput-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalDeltaAnonRssKBs:J
 
-    .line 579
     iget-wide p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalZramConsumedKBs:J
 
     add-long/2addr p1, p3
 
     iput-wide p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalZramConsumedKBs:J
 
-    .line 580
     iget-wide p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalAnonMemFreedKBs:J
 
     add-long/2addr p1, p5
 
     iput-wide p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalAnonMemFreedKBs:J
 
-    .line 581
     iget-wide p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSumOrigAnonRss:J
 
     add-long/2addr p1, p7
 
     iput-wide p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSumOrigAnonRss:J
 
-    .line 582
     iget-wide p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalCpuTimeMillis:J
 
     add-long/2addr p1, p9
@@ -112,14 +104,12 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 12
 
-    .line 586
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSomeCompactRequested:J
 
     iget-wide v2, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactRequested:J
 
     add-long/2addr v0, v2
 
-    .line 587
     iget-wide v2, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSomeCompactPerformed:J
 
     iget-wide v4, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactPerformed:J
@@ -128,10 +118,8 @@
 
     const-string v4, "    Performed / Requested:"
 
-    .line 588
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 589
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,7 +150,6 @@
 
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 590
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,12 +176,10 @@
 
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 592
     invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->getThrottledSome()J
 
     move-result-wide v4
 
-    .line 593
     invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->getThrottledFull()J
 
     move-result-wide v6
@@ -212,10 +197,8 @@
     :cond_0
     const-string v10, "    Throttled:"
 
-    .line 596
     invoke-virtual {p1, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 597
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -240,12 +223,10 @@
 
     const-string v4, "    Throttled by Type:"
 
-    .line 598
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     sub-long v2, v0, v2
 
-    .line 601
     iget-wide v4, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsNoPidThrottled:J
 
     sub-long v4, v2, v4
@@ -266,7 +247,6 @@
 
     sub-long/2addr v4, v6
 
-    .line 605
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -333,7 +313,6 @@
 
     mul-double/2addr v2, v0
 
-    .line 612
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -350,7 +329,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 615
     :cond_1
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactPerformed:J
 
@@ -360,10 +338,8 @@
 
     const-string v0, "    -----Memory Stats----"
 
-    .line 616
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 617
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +358,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 618
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -401,7 +376,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 619
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -420,7 +394,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 622
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -447,7 +420,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 624
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,7 +438,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 626
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -497,19 +468,16 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 628
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactPerformed:J
 
     cmp-long v2, v0, v8
 
     if-lez v2, :cond_2
 
-    .line 629
     iget-wide v2, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalAnonMemFreedKBs:J
 
     div-long v8, v2, v0
 
-    .line 631
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -527,7 +495,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 632
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mTotalCpuTimeMillis:J
 
     long-to-double v0, v0
@@ -542,7 +509,6 @@
 
     div-double/2addr v0, v2
 
-    .line 634
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -566,7 +532,6 @@
 .method public getThrottledFull()J
     .locals 4
 
-    .line 570
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactRequested:J
 
     iget-wide v2, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactPerformed:J
@@ -579,7 +544,6 @@
 .method public getThrottledSome()J
     .locals 4
 
-    .line 568
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSomeCompactRequested:J
 
     iget-wide v2, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSomeCompactPerformed:J

@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/server/tv/tunerresourcemanager/CiCamResource$Builder;)V
     .locals 0
 
-    .line 26
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/CasResource;-><init>(Lcom/android/server/tv/tunerresourcemanager/CasResource$Builder;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/tv/tunerresourcemanager/CiCamResource$Builder;Lcom/android/server/tv/tunerresourcemanager/CiCamResource-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/CiCamResource;-><init>(Lcom/android/server/tv/tunerresourcemanager/CiCamResource$Builder;)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public getCiCamId()I
     .locals 0
 
-    .line 38
     invoke-virtual {p0}, Lcom/android/server/tv/tunerresourcemanager/CasResource;->getSystemId()I
 
     move-result p0
@@ -38,7 +35,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 31
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,7 +53,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 32
     invoke-virtual {p0}, Lcom/android/server/tv/tunerresourcemanager/CasResource;->isFullyUsed()Z
 
     move-result v1
@@ -68,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/tv/tunerresourcemanager/CasResource;->getMaxSessionNum()I
 
     move-result v1
@@ -79,7 +73,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 34
     invoke-virtual {p0}, Lcom/android/server/tv/tunerresourcemanager/CasResource;->ownersMapToString()Ljava/lang/String;
 
     move-result-object p0

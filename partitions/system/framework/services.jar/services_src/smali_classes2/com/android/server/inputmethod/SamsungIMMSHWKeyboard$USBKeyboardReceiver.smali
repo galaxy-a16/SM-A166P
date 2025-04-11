@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
     .locals 0
 
-    .line 140
     iput-object p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 10
 
-    .line 144
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "device"
 
-    .line 145
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p2
@@ -46,13 +43,11 @@
 
     goto :goto_0
 
-    .line 146
     :cond_0
     invoke-virtual {p2}, Landroid/hardware/usb/UsbDevice;->getInterfaceCount()I
 
     move-result v1
 
-    .line 147
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -83,14 +78,12 @@
 
     if-ge v2, v1, :cond_6
 
-    .line 149
     invoke-virtual {p2, v2}, Landroid/hardware/usb/UsbDevice;->getInterface(I)Landroid/hardware/usb/UsbInterface;
 
     move-result-object v7
 
     if-nez v7, :cond_1
 
-    .line 151
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,13 +102,11 @@
 
     goto/16 :goto_2
 
-    .line 155
     :cond_1
     invoke-virtual {v7}, Landroid/hardware/usb/UsbInterface;->getInterfaceClass()I
 
     move-result v8
 
-    .line 156
     invoke-virtual {v7}, Landroid/hardware/usb/UsbInterface;->getInterfaceProtocol()I
 
     move-result v7
@@ -126,14 +117,12 @@
 
     if-ne v7, v6, :cond_5
 
-    .line 159
     invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 160
     iget-object p2, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-static {p2}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fgetmUSBKeyboardCount(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)I
@@ -142,7 +131,6 @@
 
     if-gez p2, :cond_2
 
-    .line 161
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,12 +157,10 @@
 
     invoke-static {v3, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     iget-object p2, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-static {p2, v0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fputmUSBKeyboardCount(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
 
-    .line 164
     :cond_2
     iget-object p2, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
@@ -188,7 +174,6 @@
 
     goto :goto_3
 
-    .line 165
     :cond_3
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -196,7 +181,6 @@
 
     if-eqz p2, :cond_6
 
-    .line 166
     iget-object p2, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-static {p2}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fgetmUSBKeyboardCount(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)I
@@ -205,7 +189,6 @@
 
     if-ge p2, v6, :cond_4
 
-    .line 167
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -232,12 +215,10 @@
 
     invoke-static {v3, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     iget-object p2, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-static {p2, v6}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fputmUSBKeyboardCount(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
 
-    .line 170
     :cond_4
     iget-object p2, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
@@ -257,7 +238,6 @@
 
     goto/16 :goto_1
 
-    .line 177
     :cond_6
     :goto_3
     iget-object p2, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
@@ -276,7 +256,6 @@
 
     move v0, v6
 
-    .line 180
     :cond_7
     iget-object p2, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
@@ -286,7 +265,6 @@
 
     invoke-static {p2, v1}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fputmUSBKeyboardCountOld(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
 
-    .line 182
     invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -295,7 +273,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 184
     iget-object p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fgetkeyboardState(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)I
@@ -306,7 +283,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fputkeyboardState(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
 
-    .line 185
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -329,14 +305,12 @@
 
     invoke-static {v3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     iget-object p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$mconnectedHWKeyboard(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
 
     goto :goto_4
 
-    .line 188
     :cond_8
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -352,7 +326,6 @@
 
     if-nez p1, :cond_9
 
-    .line 190
     iget-object p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fgetkeyboardState(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)I
@@ -363,7 +336,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$fputkeyboardState(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;I)V
 
-    .line 191
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -386,12 +358,10 @@
 
     invoke-static {v3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     iget-object p1, p0, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard$USBKeyboardReceiver;->this$0:Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->-$$Nest$mupdateBrightnessMode(Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;)V
 
-    .line 194
     :cond_9
     :goto_4
     new-instance p1, Ljava/lang/StringBuilder;

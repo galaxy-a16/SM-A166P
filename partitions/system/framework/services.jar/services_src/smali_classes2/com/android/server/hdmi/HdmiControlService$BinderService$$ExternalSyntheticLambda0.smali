@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService$BinderService;->$r8$lambda$owdB1AV81E3Glsxymmg_bhOPbu4(Ljava/lang/Integer;)I

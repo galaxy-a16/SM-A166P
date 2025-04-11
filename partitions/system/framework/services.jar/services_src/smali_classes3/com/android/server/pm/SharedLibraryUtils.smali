@@ -7,19 +7,16 @@
 .method public static addSharedLibraryToPackageVersionMap(Ljava/util/Map;Landroid/content/pm/SharedLibraryInfo;)Z
     .locals 6
 
-    .line 42
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 43
     invoke-interface {p0, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 44
     invoke-virtual {p1}, Landroid/content/pm/SharedLibraryInfo;->getType()I
 
     move-result v1
@@ -32,7 +29,6 @@
 
     return v3
 
-    .line 47
     :cond_0
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,7 +48,6 @@
 
     return v3
 
-    .line 52
     :cond_1
     new-instance v1, Lcom/android/server/utils/WatchedLongSparseArray;
 
@@ -60,7 +55,6 @@
 
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     :cond_2
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -82,7 +76,6 @@
 .method public static findSharedLibraries(Lcom/android/server/pm/pkg/PackageStateInternal;)Ljava/util/List;
     .locals 3
 
-    .line 80
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageStateInternal;->getTransientState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
 
     move-result-object v0
@@ -97,17 +90,14 @@
 
     if-nez v0, :cond_1
 
-    .line 81
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 82
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 83
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageStateInternal;->getTransientState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
 
     move-result-object p0
@@ -133,7 +123,6 @@
 
     check-cast v2, Lcom/android/server/pm/pkg/SharedLibraryWrapper;
 
-    .line 84
     invoke-virtual {v2}, Lcom/android/server/pm/pkg/SharedLibraryWrapper;->getInfo()Landroid/content/pm/SharedLibraryInfo;
 
     move-result-object v2
@@ -145,7 +134,6 @@
     :cond_0
     return-object v0
 
-    .line 88
     :cond_1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -157,7 +145,6 @@
 .method public static findSharedLibrariesRecursive(Landroid/content/pm/SharedLibraryInfo;Ljava/util/ArrayList;Ljava/util/Set;)V
     .locals 1
 
-    .line 94
     invoke-virtual {p0}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -168,24 +155,20 @@
 
     if-nez v0, :cond_0
 
-    .line 95
     invoke-virtual {p0}, Landroid/content/pm/SharedLibraryInfo;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {p2, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 96
     invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 98
     invoke-virtual {p0}, Landroid/content/pm/SharedLibraryInfo;->getDependencies()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 99
     invoke-virtual {p0}, Landroid/content/pm/SharedLibraryInfo;->getDependencies()Ljava/util/List;
 
     move-result-object p0
@@ -207,7 +190,6 @@
 
     check-cast v0, Landroid/content/pm/SharedLibraryInfo;
 
-    .line 100
     invoke-static {v0, p1, p2}, Lcom/android/server/pm/SharedLibraryUtils;->findSharedLibrariesRecursive(Landroid/content/pm/SharedLibraryInfo;Ljava/util/ArrayList;Ljava/util/Set;)V
 
     goto :goto_0
@@ -223,7 +205,6 @@
 
     if-eqz p4, :cond_1
 
-    .line 63
     invoke-interface {p4, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p4
@@ -232,7 +213,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 66
     invoke-virtual {p4, p1, p2}, Lcom/android/server/utils/WatchedLongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object p4
@@ -249,7 +229,6 @@
 
     return-object p4
 
-    .line 72
     :cond_1
     invoke-interface {p3, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -261,7 +240,6 @@
 
     return-object v0
 
-    .line 76
     :cond_2
     invoke-virtual {p0, p1, p2}, Lcom/android/server/utils/WatchedLongSparseArray;->get(J)Ljava/lang/Object;
 

@@ -19,30 +19,25 @@
     :cond_0
     const-string v1, "android.hardware.usb@1.0::IUsbCallback"
 
-    .line 23
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 25
     instance-of v3, v2, Landroid/hardware/usb/V1_0/IUsbCallback;
 
     if-eqz v3, :cond_1
 
-    .line 26
     check-cast v2, Landroid/hardware/usb/V1_0/IUsbCallback;
 
     return-object v2
 
-    .line 29
     :cond_1
     new-instance v2, Landroid/hardware/usb/V1_0/IUsbCallback$Proxy;
 
     invoke-direct {v2, p0}, Landroid/hardware/usb/V1_0/IUsbCallback$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 32
     :try_start_0
     invoke-interface {v2}, Landroid/hardware/usb/V1_0/IUsbCallback;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 33
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3

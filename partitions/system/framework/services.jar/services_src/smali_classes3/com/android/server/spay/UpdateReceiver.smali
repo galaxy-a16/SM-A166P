@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/spay/UpdateReceiver;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -22,10 +21,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 18
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 62
     new-instance v0, Lcom/android/server/spay/UpdateReceiver$2;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -44,17 +41,14 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 28
     iput-object p1, p0, Lcom/android/server/spay/UpdateReceiver;->mContext:Landroid/content/Context;
 
     if-eqz p2, :cond_0
 
-    .line 31
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,12 +67,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
     new-instance v0, Lcom/android/server/spay/UpdateReceiver$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/spay/UpdateReceiver$1;-><init>(Lcom/android/server/spay/UpdateReceiver;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 48
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_0
@@ -88,22 +80,18 @@
 .method public triggerPFInstall(Landroid/content/Context;)V
     .locals 3
 
-    .line 54
     new-instance p0, Landroid/content/Intent;
 
     invoke-direct {p0}, Landroid/content/Intent;-><init>()V
 
     const-string v0, "com.samsung.android.spay.action.PFINSTALL"
 
-    .line 55
     invoke-virtual {p0, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const/16 v0, 0x20
 
-    .line 56
     invoke-virtual {p0, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 57
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "com.samsung.android.spay"
@@ -114,7 +102,6 @@
 
     invoke-virtual {p0, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 59
     sget-object v0, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     const-string v1, "com.samsung.android.spay.permission.INSTALL_PF"

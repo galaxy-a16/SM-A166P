@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/pm/PersonaServiceHelper$$ExternalSyntheticLambda1;->f$0:I
@@ -27,7 +26,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/pm/PersonaServiceHelper$$ExternalSyntheticLambda1;->f$0:I
 
     invoke-static {p0}, Lcom/android/server/pm/PersonaServiceHelper;->$r8$lambda$ZNttXnj5F3kdBemd2rS9F48iP6A(I)Landroid/os/Bundle;

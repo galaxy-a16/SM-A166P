@@ -25,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 42
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->allocUsbStrings()V
 
     return-void
@@ -34,28 +33,20 @@
 .method public static allocUsbStrings()V
     .locals 0
 
-    .line 255
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->initDescriptorNames()V
 
-    .line 256
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->initACControlInterfaceNames()V
 
-    .line 257
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->initACStreamingInterfaceNames()V
 
-    .line 258
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->initClassNames()V
 
-    .line 259
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->initAudioSubclassNames()V
 
-    .line 260
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->initAudioEncodingNames()V
 
-    .line 261
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->initTerminalNames()V
 
-    .line 262
     invoke-static {}, Lcom/android/server/usb/descriptors/report/UsbStrings;->initFormatNames()V
 
     return-void
@@ -64,7 +55,6 @@
 .method public static getACControlInterfaceName(B)Ljava/lang/String;
     .locals 2
 
-    .line 281
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -83,7 +73,6 @@
 
     goto :goto_0
 
-    .line 286
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -93,7 +82,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 285
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -121,7 +109,6 @@
 .method public static getACInterfaceSubclassName(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-ne p0, v0, :cond_0
@@ -140,7 +127,6 @@
 .method public static getAudioFormatName(I)Ljava/lang/String;
     .locals 2
 
-    .line 329
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -157,7 +143,6 @@
 
     goto :goto_0
 
-    .line 333
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -167,7 +152,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 332
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -195,7 +179,6 @@
 .method public static getAudioSubclassName(I)Ljava/lang/String;
     .locals 2
 
-    .line 317
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioSubclassNames:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -214,7 +197,6 @@
 
     goto :goto_0
 
-    .line 322
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -224,7 +206,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 321
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -252,7 +233,6 @@
 .method public static getClassName(I)Ljava/lang/String;
     .locals 2
 
-    .line 305
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -271,7 +251,6 @@
 
     goto :goto_0
 
-    .line 310
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -281,7 +260,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 309
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -309,7 +287,6 @@
 .method public static getDescriptorName(B)Ljava/lang/String;
     .locals 2
 
-    .line 269
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -328,7 +305,6 @@
 
     goto :goto_0
 
-    .line 274
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -338,7 +314,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 273
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -366,7 +341,6 @@
 .method public static getFormatName(I)Ljava/lang/String;
     .locals 2
 
-    .line 245
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sFormatNames:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -383,7 +357,6 @@
 
     goto :goto_0
 
-    .line 248
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -410,7 +383,6 @@
 .method public static getTerminalName(I)Ljava/lang/String;
     .locals 2
 
-    .line 223
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -427,7 +399,6 @@
 
     goto :goto_0
 
-    .line 226
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -454,7 +425,6 @@
 .method public static initACControlInterfaceNames()V
     .locals 3
 
-    .line 70
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -463,7 +433,6 @@
 
     const/4 v1, 0x0
 
-    .line 71
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v1
@@ -472,7 +441,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x1
@@ -485,7 +453,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -498,7 +465,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 74
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -511,7 +477,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x4
@@ -524,7 +489,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x5
@@ -537,7 +501,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 77
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x6
@@ -550,7 +513,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x7
@@ -563,7 +525,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/16 v1, 0x8
@@ -576,7 +537,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 80
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/16 v1, 0xa
@@ -589,7 +549,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/16 v1, 0xb
@@ -602,7 +561,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/16 v1, 0xc
@@ -615,7 +573,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACControlInterfaceNames:Ljava/util/HashMap;
 
     const/16 v1, 0xd
@@ -634,7 +591,6 @@
 .method public static initACStreamingInterfaceNames()V
     .locals 3
 
-    .line 88
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -643,7 +599,6 @@
 
     const/4 v1, 0x0
 
-    .line 89
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v1
@@ -652,7 +607,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACStreamingInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x1
@@ -665,7 +619,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACStreamingInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -678,7 +631,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 92
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sACStreamingInterfaceNames:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -697,7 +649,6 @@
 .method public static initAudioEncodingNames()V
     .locals 3
 
-    .line 130
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -706,7 +657,6 @@
 
     const/4 v1, 0x0
 
-    .line 131
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -715,7 +665,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/4 v1, 0x1
@@ -728,7 +677,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -741,7 +689,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -754,7 +701,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/4 v1, 0x4
@@ -767,7 +713,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/4 v1, 0x5
@@ -780,7 +725,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x1000
@@ -793,7 +737,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x1001
@@ -806,7 +749,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x1002
@@ -819,7 +761,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x2000
@@ -832,7 +773,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 141
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x2001
@@ -845,7 +785,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 142
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x2002
@@ -858,7 +797,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x2003
@@ -871,7 +809,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 146
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x2004
@@ -884,7 +821,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 148
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioEncodingNames:Ljava/util/HashMap;
 
     const/16 v1, 0x2005
@@ -903,7 +839,6 @@
 .method public static initAudioSubclassNames()V
     .locals 3
 
-    .line 122
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -912,7 +847,6 @@
 
     const/4 v1, 0x0
 
-    .line 123
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -921,7 +855,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioSubclassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x1
@@ -934,7 +867,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 125
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioSubclassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -947,7 +879,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 126
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sAudioSubclassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -966,7 +897,6 @@
 .method public static initClassNames()V
     .locals 3
 
-    .line 96
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -975,7 +905,6 @@
 
     const/4 v1, 0x0
 
-    .line 97
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -984,7 +913,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x1
@@ -997,7 +925,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 99
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -1010,7 +937,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -1023,7 +949,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 101
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x5
@@ -1036,7 +961,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x6
@@ -1049,7 +973,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 103
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/4 v1, 0x7
@@ -1062,7 +985,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 104
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0x8
@@ -1075,7 +997,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0x9
@@ -1088,7 +1009,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xa
@@ -1101,7 +1021,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xb
@@ -1114,7 +1033,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xd
@@ -1127,7 +1045,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xe
@@ -1140,7 +1057,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xf
@@ -1153,7 +1069,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0x10
@@ -1166,7 +1081,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 112
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0x11
@@ -1179,7 +1093,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0x12
@@ -1192,7 +1105,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 114
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xdc
@@ -1205,7 +1117,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 115
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xe0
@@ -1218,7 +1129,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 116
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xef
@@ -1231,7 +1141,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 117
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xfe
@@ -1244,7 +1153,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sClassNames:Ljava/util/HashMap;
 
     const/16 v1, 0xff
@@ -1263,7 +1171,6 @@
 .method public static initDescriptorNames()V
     .locals 3
 
-    .line 46
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1272,7 +1179,6 @@
 
     const/4 v1, 0x1
 
-    .line 47
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v1
@@ -1281,7 +1187,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -1294,7 +1199,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -1307,7 +1211,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/4 v1, 0x4
@@ -1320,7 +1223,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/4 v1, 0x5
@@ -1333,7 +1235,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0xf
@@ -1346,7 +1247,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0xb
@@ -1359,7 +1259,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x10
@@ -1372,7 +1271,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x21
@@ -1385,7 +1283,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x22
@@ -1398,7 +1295,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x23
@@ -1411,7 +1307,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 59
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x24
@@ -1424,7 +1319,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x25
@@ -1437,7 +1331,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 63
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x29
@@ -1450,7 +1343,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x2a
@@ -1463,7 +1355,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 65
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sDescriptorNames:Ljava/util/HashMap;
 
     const/16 v1, 0x30
@@ -1482,7 +1373,6 @@
 .method public static initFormatNames()V
     .locals 3
 
-    .line 230
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1491,7 +1381,6 @@
 
     const/4 v1, 0x1
 
-    .line 232
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1500,7 +1389,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 233
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sFormatNames:Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -1513,7 +1401,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sFormatNames:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -1526,7 +1413,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sFormatNames:Ljava/util/HashMap;
 
     const/4 v1, 0x4
@@ -1539,7 +1425,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sFormatNames:Ljava/util/HashMap;
 
     const/16 v1, -0x7f
@@ -1552,7 +1437,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sFormatNames:Ljava/util/HashMap;
 
     const/16 v1, -0x7e
@@ -1565,7 +1449,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sFormatNames:Ljava/util/HashMap;
 
     const/16 v1, -0x7d
@@ -1584,7 +1467,6 @@
 .method public static initTerminalNames()V
     .locals 4
 
-    .line 153
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1593,7 +1475,6 @@
 
     const/16 v1, 0x101
 
-    .line 154
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1602,7 +1483,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 156
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x200
@@ -1615,7 +1495,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x201
@@ -1628,7 +1507,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x202
@@ -1641,7 +1519,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x203
@@ -1654,7 +1531,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 161
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x204
@@ -1667,7 +1543,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x205
@@ -1680,7 +1555,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 163
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x206
@@ -1693,7 +1567,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x300
@@ -1704,7 +1577,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x301
@@ -1717,7 +1589,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x302
@@ -1730,7 +1601,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x303
@@ -1743,7 +1613,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x304
@@ -1756,7 +1625,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x305
@@ -1769,7 +1637,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 172
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x306
@@ -1782,7 +1649,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x307
@@ -1795,7 +1661,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x400
@@ -1806,7 +1671,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x401
@@ -1819,7 +1683,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x402
@@ -1832,7 +1695,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x403
@@ -1845,7 +1707,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x404
@@ -1858,7 +1719,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 181
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x405
@@ -1871,7 +1731,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x500
@@ -1882,7 +1741,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 185
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x501
@@ -1895,7 +1753,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x502
@@ -1908,7 +1765,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 187
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x503
@@ -1921,7 +1777,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x600
@@ -1932,7 +1787,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x601
@@ -1945,7 +1799,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 191
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x602
@@ -1958,7 +1811,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 192
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x603
@@ -1971,7 +1823,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 193
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x604
@@ -1984,7 +1835,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x605
@@ -1997,7 +1847,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 195
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x606
@@ -2010,7 +1859,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 196
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x607
@@ -2023,7 +1871,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x700
@@ -2034,7 +1881,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 199
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x701
@@ -2047,7 +1893,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x702
@@ -2060,7 +1905,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x703
@@ -2073,7 +1917,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 202
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x704
@@ -2086,7 +1929,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 203
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x705
@@ -2099,7 +1941,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 204
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x706
@@ -2112,7 +1953,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x707
@@ -2125,7 +1965,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x708
@@ -2138,7 +1977,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 207
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x709
@@ -2151,7 +1989,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x70a
@@ -2164,7 +2001,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x70b
@@ -2177,7 +2013,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 210
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x70c
@@ -2190,7 +2025,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x70d
@@ -2203,7 +2037,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 212
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x70e
@@ -2216,7 +2049,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 213
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x70f
@@ -2229,7 +2061,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 214
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x711
@@ -2242,7 +2073,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x712
@@ -2255,7 +2085,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 216
     sget-object v0, Lcom/android/server/usb/descriptors/report/UsbStrings;->sTerminalNames:Ljava/util/HashMap;
 
     const/16 v1, 0x713

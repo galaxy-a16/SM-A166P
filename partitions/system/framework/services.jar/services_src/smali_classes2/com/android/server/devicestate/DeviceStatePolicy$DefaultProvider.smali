@@ -20,7 +20,6 @@
 .method public instantiate(Landroid/content/Context;)Lcom/android/server/devicestate/DeviceStatePolicy;
     .locals 0
 
-    .line 62
     new-instance p0, Lcom/android/server/policy/DeviceStatePolicyImpl;
 
     invoke-direct {p0, p1}, Lcom/android/server/policy/DeviceStatePolicyImpl;-><init>(Landroid/content/Context;)V

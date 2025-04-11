@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/policy/PermissionPolicyService;I)V
     .locals 0
 
-    .line 493
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 494
     iput p2, p0, Lcom/android/server/policy/PermissionPolicyService$PhoneCarrierPrivilegesCallback;->mPhoneId:I
 
     return-void
@@ -32,12 +30,10 @@
 .method public onCarrierPrivilegesChanged(Ljava/util/Set;Ljava/util/Set;)V
     .locals 5
 
-    .line 500
     iget-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {p1}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$minitTelephonyManagerIfNeeded(Lcom/android/server/policy/PermissionPolicyService;)V
 
-    .line 501
     iget-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {p1}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fgetmTelephonyManager(Lcom/android/server/policy/PermissionPolicyService;)Landroid/telephony/TelephonyManager;
@@ -46,7 +42,6 @@
 
     if-nez p1, :cond_0
 
-    .line 502
     invoke-static {}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
     move-result-object p0
@@ -57,7 +52,6 @@
 
     return-void
 
-    .line 507
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -75,7 +69,6 @@
 
     return-void
 
-    .line 512
     :cond_1
     const-class p2, Lcom/android/server/pm/UserManagerInternal;
 
@@ -89,7 +82,6 @@
 
     move-result-object p2
 
-    .line 513
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {v0}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fgetmContext(Lcom/android/server/policy/PermissionPolicyService;)Landroid/content/Context;
@@ -98,7 +90,6 @@
 
     const-class v1, Landroid/permission/LegacyPermissionManager;
 
-    .line 514
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -109,13 +100,11 @@
 
     move v2, v1
 
-    .line 515
     :goto_0
     array-length v3, p2
 
     if-ge v2, v3, :cond_2
 
-    .line 517
     :try_start_0
     iget-object v3, p0, Lcom/android/server/policy/PermissionPolicyService$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -127,7 +116,6 @@
 
     invoke-virtual {v3, p1, v1, v4}, Landroid/content/pm/PackageManager;->getPackageInfoAsUser(Ljava/lang/String;II)Landroid/content/pm/PackageInfo;
 
-    .line 518
     aget v3, p2, v2
 
     invoke-virtual {v0, p1, v3}, Landroid/permission/LegacyPermissionManager;->grantDefaultPermissionsToCarrierServiceApp(Ljava/lang/String;I)V

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/UserSwitchingDialog;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 322
     iput-object p1, p0, Lcom/android/server/am/UserSwitchingDialog$2;->this$0:Lcom/android/server/am/UserSwitchingDialog;
 
     iput-object p2, p0, Lcom/android/server/am/UserSwitchingDialog$2;->val$onAnimationEndWithTimeout:Ljava/lang/Runnable;
@@ -31,7 +30,6 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 330
     iget-object p0, p0, Lcom/android/server/am/UserSwitchingDialog$2;->val$onAnimationEndWithTimeout:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
@@ -42,13 +40,11 @@
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

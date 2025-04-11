@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/device/DeviceInfo;)V
     .locals 0
 
-    .line 241
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$2;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 243
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -41,14 +39,12 @@
 
     const/4 v0, 0x0
 
-    .line 244
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 245
     iget-object p0, p0, Lcom/android/server/enterprise/device/DeviceInfo$2;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     const/4 p1, 0x1
@@ -57,7 +53,6 @@
 
     goto :goto_0
 
-    .line 247
     :cond_0
     iget-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$2;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
@@ -65,12 +60,10 @@
 
     invoke-static {p1, v1, v2}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fputmDataCallLogLastTime(Lcom/android/server/enterprise/device/DeviceInfo;J)V
 
-    .line 248
     iget-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$2;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {p1, v1, v2}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fputmDataCallLogLastValue(Lcom/android/server/enterprise/device/DeviceInfo;J)V
 
-    .line 249
     iget-object p0, p0, Lcom/android/server/enterprise/device/DeviceInfo$2;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {p0, v0}, Lcom/android/server/enterprise/device/DeviceInfo;->-$$Nest$fputmDataCallConnected(Lcom/android/server/enterprise/device/DeviceInfo;Z)V

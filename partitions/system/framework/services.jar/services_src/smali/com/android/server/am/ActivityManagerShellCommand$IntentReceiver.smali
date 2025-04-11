@@ -13,15 +13,12 @@
 .method public constructor <init>(Ljava/io/PrintWriter;)V
     .locals 1
 
-    .line 1198
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 1196
     iput-boolean v0, p0, Lcom/android/server/am/ActivityManagerShellCommand$IntentReceiver;->mFinished:Z
 
-    .line 1199
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$IntentReceiver;->mPw:Ljava/io/PrintWriter;
 
     return-void
@@ -32,7 +29,6 @@
 .method public performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZI)V
     .locals 0
 
-    .line 1205
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,7 +45,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 1206
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +68,6 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 1207
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,30 +84,24 @@
 
     move-result-object p1
 
-    .line 1208
     :cond_1
     iget-object p2, p0, Lcom/android/server/am/ActivityManagerShellCommand$IntentReceiver;->mPw:Ljava/io/PrintWriter;
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1209
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$IntentReceiver;->mPw:Ljava/io/PrintWriter;
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 1210
     monitor-enter p0
 
     const/4 p1, 0x1
 
-    .line 1211
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$IntentReceiver;->mFinished:Z
 
-    .line 1212
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1213
     monitor-exit p0
 
     return-void
@@ -133,7 +121,6 @@
 
     monitor-enter p0
 
-    .line 1218
     :goto_0
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/am/ActivityManagerShellCommand$IntentReceiver;->mFinished:Z
@@ -147,7 +134,6 @@
 
     goto :goto_0
 
-    .line 1222
     :cond_0
     monitor-exit p0
 
@@ -161,7 +147,6 @@
     :catch_0
     move-exception v0
 
-    .line 1220
     :try_start_1
     new-instance v1, Ljava/lang/IllegalStateException;
 

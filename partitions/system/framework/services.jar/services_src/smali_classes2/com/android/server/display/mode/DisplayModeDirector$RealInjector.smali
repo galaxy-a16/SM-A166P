@@ -16,10 +16,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 3031
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3032
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->mContext:Landroid/content/Context;
 
     return-void
@@ -30,7 +28,6 @@
 .method public getBrightnessInfo(I)Landroid/hardware/display/BrightnessInfo;
     .locals 0
 
-    .line 3084
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->getDisplayManager()Landroid/hardware/display/DisplayManager;
 
     move-result-object p0
@@ -41,7 +38,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 3086
     invoke-virtual {p0}, Landroid/view/Display;->getBrightnessInfo()Landroid/hardware/display/BrightnessInfo;
 
     move-result-object p0
@@ -57,7 +53,6 @@
 .method public getDeviceConfig()Landroid/provider/DeviceConfigInterface;
     .locals 0
 
-    .line 3038
     sget-object p0, Landroid/provider/DeviceConfigInterface;->REAL:Landroid/provider/DeviceConfigInterface;
 
     return-object p0
@@ -66,7 +61,6 @@
 .method public getDisplay(I)Landroid/view/Display;
     .locals 0
 
-    .line 3062
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->getDisplayManager()Landroid/hardware/display/DisplayManager;
 
     move-result-object p0
@@ -81,7 +75,6 @@
 .method public getDisplayInfo(ILandroid/view/DisplayInfo;)Z
     .locals 0
 
-    .line 3072
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->getDisplayManager()Landroid/hardware/display/DisplayManager;
 
     move-result-object p0
@@ -96,7 +89,6 @@
 
     return p0
 
-    .line 3079
     :cond_0
     invoke-virtual {p0, p2}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
@@ -108,12 +100,10 @@
 .method public final getDisplayManager()Landroid/hardware/display/DisplayManager;
     .locals 2
 
-    .line 3122
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     if-nez v0, :cond_0
 
-    .line 3123
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/hardware/display/DisplayManager;
@@ -126,7 +116,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 3125
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
@@ -136,7 +125,6 @@
 .method public getDisplays()[Landroid/view/Display;
     .locals 1
 
-    .line 3067
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->getDisplayManager()Landroid/hardware/display/DisplayManager;
 
     move-result-object p0
@@ -155,12 +143,10 @@
 
     const-string/jumbo p0, "thermalservice"
 
-    .line 3130
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 3129
     invoke-static {p0}, Landroid/os/IThermalService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IThermalService;
 
     move-result-object p0
@@ -177,7 +163,6 @@
 
     return p0
 
-    .line 3096
     :cond_0
     invoke-virtual {p1}, Landroid/view/Display;->getState()I
 
@@ -193,7 +178,6 @@
 .method public registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3051
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->getDisplayManager()Landroid/hardware/display/DisplayManager;
 
     move-result-object p0
@@ -206,7 +190,6 @@
 .method public registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;J)V
     .locals 0
 
-    .line 3057
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->getDisplayManager()Landroid/hardware/display/DisplayManager;
 
     move-result-object p0
@@ -219,7 +202,6 @@
 .method public registerPeakRefreshRateObserver(Landroid/content/ContentResolver;Landroid/database/ContentObserver;)V
     .locals 1
 
-    .line 3044
     sget-object p0, Lcom/android/server/display/mode/DisplayModeDirector$Injector;->PEAK_REFRESH_RATE_URI:Landroid/net/Uri;
 
     const/4 v0, 0x0
@@ -232,7 +214,6 @@
 .method public registerThermalServiceListener(Landroid/os/IThermalEventListener;)Z
     .locals 3
 
-    .line 3101
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;->getThermalService()Landroid/os/IThermalService;
 
     move-result-object p0
@@ -245,7 +226,6 @@
 
     const-string p0, "Could not observe thermal status. Service not available"
 
-    .line 3103
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -253,7 +233,6 @@
     :cond_0
     const/4 v2, 0x3
 
-    .line 3107
     :try_start_0
     invoke-interface {p0, p1, v2}, Landroid/os/IThermalService;->registerThermalEventListenerWithType(Landroid/os/IThermalEventListener;I)Z
     :try_end_0
@@ -268,7 +247,6 @@
 
     const-string p1, "Failed to register thermal status listener"
 
-    .line 3110
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -277,7 +255,6 @@
 .method public supportsFrameRateOverride()Z
     .locals 1
 
-    .line 3118
     invoke-static {}, Landroid/sysprop/SurfaceFlingerProperties;->enable_frame_rate_override()Ljava/util/Optional;
 
     move-result-object p0

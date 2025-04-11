@@ -41,10 +41,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
@@ -59,15 +57,12 @@
 .method public getActiveTime(J)J
     .locals 4
 
-    .line 95
     iget-wide v0, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->pastActiveTime:J
 
-    .line 96
     iget v2, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->activeNesting:I
 
     if-lez v2, :cond_0
 
-    .line 97
     iget-wide v2, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->activeStartTime:J
 
     sub-long/2addr p1, v2
@@ -81,15 +76,12 @@
 .method public getActiveTopTime(J)J
     .locals 4
 
-    .line 103
     iget-wide v0, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->pastActiveTopTime:J
 
-    .line 104
     iget v2, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->activeTopNesting:I
 
     if-lez v2, :cond_0
 
-    .line 105
     iget-wide v2, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->activeTopStartTime:J
 
     sub-long/2addr p1, v2
@@ -103,15 +95,12 @@
 .method public getPendingTime(J)J
     .locals 4
 
-    .line 111
     iget-wide v0, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->pastPendingTime:J
 
-    .line 112
     iget v2, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->pendingNesting:I
 
     if-lez v2, :cond_0
 
-    .line 113
     iget-wide v2, p0, Lcom/android/server/job/JobPackageTracker$PackageEntry;->pendingStartTime:J
 
     sub-long/2addr p1, v2

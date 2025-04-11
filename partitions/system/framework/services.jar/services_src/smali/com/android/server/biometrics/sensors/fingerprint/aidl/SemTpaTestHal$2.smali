@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)V
     .locals 0
 
-    .line 473
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$2;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-direct {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/ISehFingerprint$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, ""
 
     return-object p0
@@ -42,7 +39,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -51,12 +47,10 @@
 .method public sehRequest(III[B)Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
     .locals 0
 
-    .line 476
     new-instance p1, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
 
     invoke-direct {p1}, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;-><init>()V
 
-    .line 477
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal$2;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;->-$$Nest$fgetmRequestActionTable(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestHal;)Landroid/util/SparseIntArray;

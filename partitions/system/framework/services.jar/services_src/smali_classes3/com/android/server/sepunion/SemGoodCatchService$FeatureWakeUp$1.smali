@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;)V
     .locals 0
 
-    .line 936
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onStart(Ljava/lang/String;)V
     .locals 3
 
-    .line 939
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -48,12 +46,10 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 940
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;
 
     invoke-virtual {p1}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;->on()V
 
-    .line 941
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;
 
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->update()V
@@ -64,7 +60,6 @@
 .method public onStop(Ljava/lang/String;)V
     .locals 3
 
-    .line 946
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -85,7 +80,6 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 947
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$1;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;
 
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;->off()V

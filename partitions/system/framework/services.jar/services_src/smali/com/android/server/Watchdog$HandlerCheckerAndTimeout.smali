@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/Watchdog$HandlerChecker;Ljava/util/Optional;)V
     .locals 0
 
-    .line 287
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 288
     iput-object p1, p0, Lcom/android/server/Watchdog$HandlerCheckerAndTimeout;->mHandler:Lcom/android/server/Watchdog$HandlerChecker;
 
-    .line 289
     iput-object p2, p0, Lcom/android/server/Watchdog$HandlerCheckerAndTimeout;->mCustomTimeoutMillis:Ljava/util/Optional;
 
     return-void
@@ -28,7 +25,6 @@
 .method public static withCustomTimeout(Lcom/android/server/Watchdog$HandlerChecker;J)Lcom/android/server/Watchdog$HandlerCheckerAndTimeout;
     .locals 1
 
-    .line 315
     new-instance v0, Lcom/android/server/Watchdog$HandlerCheckerAndTimeout;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -47,7 +43,6 @@
 .method public static withDefaultTimeout(Lcom/android/server/Watchdog$HandlerChecker;)Lcom/android/server/Watchdog$HandlerCheckerAndTimeout;
     .locals 2
 
-    .line 306
     new-instance v0, Lcom/android/server/Watchdog$HandlerCheckerAndTimeout;
 
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
@@ -64,7 +59,6 @@
 .method public checker()Lcom/android/server/Watchdog$HandlerChecker;
     .locals 0
 
-    .line 293
     iget-object p0, p0, Lcom/android/server/Watchdog$HandlerCheckerAndTimeout;->mHandler:Lcom/android/server/Watchdog$HandlerChecker;
 
     return-object p0
@@ -73,7 +67,6 @@
 .method public customTimeoutMillis()Ljava/util/Optional;
     .locals 0
 
-    .line 298
     iget-object p0, p0, Lcom/android/server/Watchdog$HandlerCheckerAndTimeout;->mCustomTimeoutMillis:Ljava/util/Optional;
 
     return-object p0

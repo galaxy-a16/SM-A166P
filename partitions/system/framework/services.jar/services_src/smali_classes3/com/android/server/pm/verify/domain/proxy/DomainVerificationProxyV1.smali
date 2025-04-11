@@ -28,17 +28,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;Lcom/android/server/pm/verify/domain/DomainVerificationCollector;Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mLock:Ljava/lang/Object;
 
-    .line 81
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -47,22 +44,16 @@
 
     const/4 v0, 0x0
 
-    .line 85
     iput v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mVerificationToken:I
 
-    .line 92
     iput-object p1, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mContext:Landroid/content/Context;
 
-    .line 93
     iput-object p4, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mConnection:Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;
 
-    .line 94
     iput-object p5, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mVerifierComponent:Landroid/content/ComponentName;
 
-    .line 95
     iput-object p2, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mManager:Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;
 
-    .line 96
     iput-object p3, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mCollector:Lcom/android/server/pm/verify/domain/DomainVerificationCollector;
 
     return-void
@@ -75,10 +66,8 @@
 
     const-string v1, "Only the intent filter verification agent can verify applications"
 
-    .line 102
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     new-instance p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response;
 
     const/4 v7, 0x0
@@ -107,19 +96,16 @@
 .method public final buildHostsString(Lcom/android/server/pm/pkg/AndroidPackage;)Ljava/lang/String;
     .locals 4
 
-    .line 288
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mCollector:Lcom/android/server/pm/verify/domain/DomainVerificationCollector;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->collectValidAutoVerifyDomains(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/util/ArraySet;
 
     move-result-object p0
 
-    .line 291
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 292
     invoke-virtual {p0}, Landroid/util/ArraySet;->size()I
 
     move-result v0
@@ -133,10 +119,8 @@
 
     const-string v2, " "
 
-    .line 295
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 297
     :cond_0
     invoke-virtual {p0, v1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
@@ -146,7 +130,6 @@
 
     const-string v3, "*."
 
-    .line 298
     invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
@@ -155,12 +138,10 @@
 
     const/4 v3, 0x2
 
-    .line 299
     invoke-virtual {v2, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 301
     :cond_1
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -168,7 +149,6 @@
 
     goto :goto_0
 
-    .line 303
     :cond_2
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -180,7 +160,6 @@
 .method public getComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 309
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mVerifierComponent:Landroid/content/ComponentName;
 
     return-object p0
@@ -189,7 +168,6 @@
 .method public isCallerVerifier(I)Z
     .locals 1
 
-    .line 242
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mConnection:Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;
 
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mVerifierComponent:Landroid/content/ComponentName;
@@ -222,11 +200,9 @@
 
     return p0
 
-    .line 152
     :cond_0
     check-cast p2, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response;
 
-    .line 154
     iget-object p1, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mRequests:Landroid/util/ArrayMap;
 
     iget v2, p2, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response;->verificationId:I
@@ -245,18 +221,15 @@
 
     return v1
 
-    .line 159
     :cond_1
     iget-object v2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/UUID;
 
-    .line 160
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/String;
 
-    .line 163
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mManager:Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;
 
@@ -270,7 +243,6 @@
 
     return v1
 
-    .line 172
     :cond_2
     invoke-virtual {v3}, Landroid/content/pm/verify/domain/DomainVerificationInfo;->getIdentifier()Ljava/util/UUID;
 
@@ -284,7 +256,6 @@
 
     return v1
 
-    .line 176
     :cond_3
     iget-object v4, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mConnection:Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;
 
@@ -296,7 +267,6 @@
 
     return v1
 
-    .line 181
     :cond_4
     new-instance v4, Landroid/util/ArraySet;
 
@@ -304,25 +274,20 @@
 
     invoke-direct {v4, v5}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    .line 182
     invoke-virtual {v3}, Landroid/content/pm/verify/domain/DomainVerificationInfo;->getHostToStateMap()Ljava/util/Map;
 
     move-result-object v3
 
-    .line 183
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 184
     new-instance v5, Landroid/util/ArraySet;
 
     invoke-direct {v5, v3}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    .line 185
     invoke-virtual {v5, v4}, Landroid/util/ArraySet;->removeAll(Landroid/util/ArraySet;)Z
 
-    .line 188
     invoke-virtual {v5}, Landroid/util/ArraySet;->size()I
 
     move-result v6
@@ -332,7 +297,6 @@
     :goto_0
     if-ltz v6, :cond_6
 
-    .line 190
     invoke-virtual {v5, v6}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -341,39 +305,32 @@
 
     const-string v8, "*."
 
-    .line 191
     invoke-virtual {v7, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_5
 
-    .line 192
     invoke-virtual {v7, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 193
     invoke-virtual {v4, v8}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_5
 
-    .line 194
     invoke-virtual {v4, v7}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 195
     invoke-virtual {v5, v6}, Landroid/util/ArraySet;->removeAt(I)Ljava/lang/Object;
 
-    .line 202
     invoke-interface {v3, v8}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-nez v7, :cond_5
 
-    .line 203
     invoke-virtual {v4, v8}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
     :cond_5
@@ -381,18 +338,15 @@
 
     goto :goto_0
 
-    .line 209
     :cond_6
     iget p2, p2, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response;->callingUid:I
 
-    .line 210
     invoke-virtual {v5}, Landroid/util/ArraySet;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_7
 
-    .line 212
     :try_start_1
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mManager:Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;
 
@@ -404,7 +358,6 @@
 
     const-string v0, "DomainVerificationProxyV1"
 
-    .line 215
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,7 +383,6 @@
 
     const-string v3, "DomainVerificationProxyV1"
 
-    .line 218
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -447,7 +399,6 @@
 
     invoke-static {v3, v5, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 222
     :cond_7
     :goto_1
     invoke-virtual {v4}, Landroid/util/ArraySet;->isEmpty()Z
@@ -456,7 +407,6 @@
 
     if-nez v0, :cond_8
 
-    .line 224
     :try_start_2
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mManager:Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;
 
@@ -470,7 +420,6 @@
 
     const-string p0, "DomainVerificationProxyV1"
 
-    .line 227
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -496,7 +445,6 @@
 
     const-string p2, "DomainVerificationProxyV1"
 
-    .line 230
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -518,26 +466,21 @@
     :goto_2
     return v1
 
-    .line 129
     :cond_9
     check-cast p2, Ljava/util/Set;
 
-    .line 134
     new-instance p1, Landroid/util/ArrayMap;
 
-    .line 135
     invoke-interface {p2}, Ljava/util/Set;->size()I
 
     move-result v0
 
     invoke-direct {p1, v0}, Landroid/util/ArrayMap;-><init>(I)V
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 137
     :try_start_3
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -556,7 +499,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 138
     iget-object v3, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mManager:Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;
 
     invoke-interface {v3, v2}, Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;->getDomainVerificationInfoId(Ljava/lang/String;)Ljava/util/UUID;
@@ -567,7 +509,6 @@
 
     goto :goto_3
 
-    .line 143
     :cond_a
     iget v4, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mVerificationToken:I
 
@@ -579,28 +520,23 @@
 
     move-result-object v4
 
-    .line 144
     invoke-static {v3, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v2
 
-    .line 143
     invoke-virtual {p1, v4, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_3
 
-    .line 146
     :cond_b
     iget-object p2, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mRequests:Landroid/util/ArrayMap;
 
     invoke-virtual {p2, p1}, Landroid/util/ArrayMap;->putAll(Landroid/util/ArrayMap;)V
 
-    .line 147
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 149
     invoke-virtual {p0, p1}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->sendBroadcasts(Landroid/util/ArrayMap;)V
 
     return v1
@@ -608,7 +544,6 @@
     :catchall_0
     move-exception p0
 
-    .line 147
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -620,12 +555,10 @@
 .method public sendBroadcastForPackages(Ljava/util/Set;)V
     .locals 3
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 113
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mRequests:Landroid/util/ArrayMap;
 
@@ -638,7 +571,6 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 115
     iget-object v2, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mRequests:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -647,7 +579,6 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 116
     iget-object v2, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     invoke-interface {p1, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -656,7 +587,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 117
     iget-object v2, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mRequests:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
@@ -666,13 +596,11 @@
 
     goto :goto_0
 
-    .line 120
     :cond_1
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mConnection:Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;
 
     const/4 v0, 0x2
@@ -684,7 +612,6 @@
     :catchall_0
     move-exception p0
 
-    .line 120
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -696,14 +623,12 @@
 .method public final sendBroadcasts(Landroid/util/ArrayMap;)V
     .locals 12
 
-    .line 247
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mConnection:Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;
 
     invoke-interface {v0}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxy$BaseConnection;->getPowerSaveTempWhitelistAppDuration()J
 
     move-result-wide v10
 
-    .line 248
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mConnection:Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;
 
     invoke-interface {v0}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxy$BaseConnection;->getDeviceIdleInternal()Lcom/android/server/DeviceIdleInternal;
@@ -716,7 +641,6 @@
 
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mVerifierComponent:Landroid/content/ComponentName;
 
-    .line 249
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -731,10 +655,8 @@
 
     move-wide v4, v10
 
-    .line 248
     invoke-interface/range {v1 .. v9}, Lcom/android/server/DeviceIdleInternal;->addPowerSaveTempWhitelistApp(ILjava/lang/String;JIZILjava/lang/String;)V
 
-    .line 253
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
 
     move-result v0
@@ -746,7 +668,6 @@
     :goto_0
     if-ge v7, v0, :cond_1
 
-    .line 255
     invoke-virtual {p1, v7}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -757,7 +678,6 @@
 
     move-result v1
 
-    .line 256
     invoke-virtual {p1, v7}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -768,7 +688,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 257
     iget-object v3, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mConnection:Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;
 
     invoke-interface {v3, v2}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Connection;->getPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/AndroidPackage;
@@ -779,13 +698,11 @@
 
     goto :goto_1
 
-    .line 262
     :cond_0
     invoke-virtual {p0, v3}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->buildHostsString(Lcom/android/server/pm/pkg/AndroidPackage;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 264
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.INTENT_FILTER_NEEDS_VERIFICATION"
@@ -794,14 +711,12 @@
 
     iget-object v5, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mVerifierComponent:Landroid/content/ComponentName;
 
-    .line 265
     invoke-virtual {v4, v5}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v4
 
     const-string v5, "android.content.pm.extra.INTENT_FILTER_VERIFICATION_ID"
 
-    .line 266
     invoke-virtual {v4, v5, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object v1
@@ -810,33 +725,28 @@
 
     const-string v5, "https"
 
-    .line 268
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
     const-string v4, "android.content.pm.extra.INTENT_FILTER_VERIFICATION_HOSTS"
 
-    .line 270
     invoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
     const-string v3, "android.content.pm.extra.INTENT_FILTER_VERIFICATION_PACKAGE_NAME"
 
-    .line 272
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
     const/high16 v2, 0x10000000
 
-    .line 274
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-result-object v8
 
-    .line 276
     invoke-static {}, Landroid/app/BroadcastOptions;->makeBasic()Landroid/app/BroadcastOptions;
 
     move-result-object v9
@@ -851,10 +761,8 @@
 
     move-wide v2, v10
 
-    .line 277
     invoke-virtual/range {v1 .. v6}, Landroid/app/BroadcastOptions;->setTemporaryAppAllowlist(JIILjava/lang/String;)V
 
-    .line 280
     iget-object v1, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;

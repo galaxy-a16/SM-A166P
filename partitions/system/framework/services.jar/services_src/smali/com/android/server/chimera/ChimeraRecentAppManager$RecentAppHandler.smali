@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/chimera/ChimeraRecentAppManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 252
     iput-object p1, p0, Lcom/android/server/chimera/ChimeraRecentAppManager$RecentAppHandler;->this$0:Lcom/android/server/chimera/ChimeraRecentAppManager;
 
-    .line 253
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 258
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -34,7 +31,6 @@
 
     move-result v0
 
-    .line 259
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -47,7 +43,6 @@
 
     goto :goto_0
 
-    .line 264
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager$RecentAppHandler;->this$0:Lcom/android/server/chimera/ChimeraRecentAppManager;
 
@@ -55,7 +50,6 @@
 
     goto :goto_0
 
-    .line 261
     :cond_1
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager$RecentAppHandler;->this$0:Lcom/android/server/chimera/ChimeraRecentAppManager;
 

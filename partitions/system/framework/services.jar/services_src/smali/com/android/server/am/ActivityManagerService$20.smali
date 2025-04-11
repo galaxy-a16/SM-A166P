@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;IILandroid/os/IBinder;Ljava/lang/String;Landroid/app/ApplicationErrorReport$ParcelableCrashInfo;)V
     .locals 0
 
-    .line 11288
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$20;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$20;->val$callingUid:I
@@ -47,7 +46,6 @@
 .method public run()V
     .locals 6
 
-    .line 11290
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$20;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget v1, p0, Lcom/android/server/am/ActivityManagerService$20;->val$callingUid:I

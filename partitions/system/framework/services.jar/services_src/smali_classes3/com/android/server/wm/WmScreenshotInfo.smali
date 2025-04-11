@@ -19,28 +19,22 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 42
     iput v0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mType:I
 
-    .line 43
     iput v0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mSweepDirection:I
 
     const/4 v1, 0x0
 
-    .line 44
     iput v1, p0, Lcom/android/server/wm/WmScreenshotInfo;->mDisplayId:I
 
-    .line 45
     iput v0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mOrigin:I
 
     const/4 v0, 0x0
 
-    .line 46
     iput-object v0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mBundle:Landroid/os/Bundle;
 
     return-void
@@ -51,7 +45,6 @@
 .method public getBundle()Landroid/os/Bundle;
     .locals 0
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mBundle:Landroid/os/Bundle;
 
     return-object p0
@@ -60,7 +53,6 @@
 .method public getDisplayId()I
     .locals 0
 
-    .line 129
     iget p0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mDisplayId:I
 
     return p0
@@ -69,7 +61,6 @@
 .method public getOrigin()I
     .locals 0
 
-    .line 133
     iget p0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mOrigin:I
 
     return p0
@@ -78,7 +69,6 @@
 .method public getSweepDirection()I
     .locals 0
 
-    .line 125
     iget p0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mSweepDirection:I
 
     return p0
@@ -87,7 +77,6 @@
 .method public getType()I
     .locals 0
 
-    .line 121
     iget p0, p0, Lcom/android/server/wm/WmScreenshotInfo;->mType:I
 
     return p0
@@ -96,19 +85,14 @@
 .method public set(IIIILandroid/os/Bundle;)V
     .locals 0
 
-    .line 113
     iput p1, p0, Lcom/android/server/wm/WmScreenshotInfo;->mType:I
 
-    .line 114
     iput p2, p0, Lcom/android/server/wm/WmScreenshotInfo;->mSweepDirection:I
 
-    .line 115
     iput p3, p0, Lcom/android/server/wm/WmScreenshotInfo;->mDisplayId:I
 
-    .line 116
     iput p4, p0, Lcom/android/server/wm/WmScreenshotInfo;->mOrigin:I
 
-    .line 117
     iput-object p5, p0, Lcom/android/server/wm/WmScreenshotInfo;->mBundle:Landroid/os/Bundle;
 
     return-void
@@ -117,7 +101,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

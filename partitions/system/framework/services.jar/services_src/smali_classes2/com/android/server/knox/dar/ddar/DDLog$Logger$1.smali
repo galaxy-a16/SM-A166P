@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/knox/dar/ddar/DDLog$Logger;)V
     .locals 0
 
-    .line 292
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/DDLog$Logger$1;->this$0:Lcom/android/server/knox/dar/ddar/DDLog$Logger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     const-string p0, "ddar_fw_log"
 
-    .line 295
     invoke-virtual {p2, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -46,7 +44,6 @@
 
     const-string p0, "ddar_fw_log.txt"
 
-    .line 296
     invoke-virtual {p2, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p0

@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -38,7 +37,6 @@
 
     const/4 v0, 0x0
 
-    .line 30
     sput v0, Lcom/samsung/android/localeoverlaymanager/Utils;->sCurrentUserId:I
 
     return-void
@@ -47,21 +45,18 @@
 .method public static deleteDisabledLocaleOverlays(Ljava/util/List;)V
     .locals 5
 
-    .line 103
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/Utils;->TAG:Ljava/lang/String;
 
     const-string v1, "deleteDisabledLocaleOverlays"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/overlays/current_locale_apks/files/"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 105
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -80,7 +75,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 106
     new-instance v2, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -99,14 +93,12 @@
 
     invoke-direct {v2, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 107
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 108
     sget-object v1, Lcom/samsung/android/localeoverlaymanager/Utils;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -129,7 +121,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     invoke-static {v2}, Lcom/samsung/android/localeoverlaymanager/Utils;->deleteFile(Ljava/io/File;)V
 
     goto :goto_0
@@ -143,7 +134,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 70
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
 
@@ -155,7 +145,6 @@
 
     goto :goto_0
 
-    .line 72
     :catch_0
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/Utils;->TAG:Ljava/lang/String;
 
@@ -189,7 +178,6 @@
 .method public static deleteFilesInDir(Ljava/io/File;)V
     .locals 6
 
-    .line 84
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/Utils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -212,14 +200,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 87
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -229,7 +215,6 @@
 
     aget-object v3, v0, v2
 
-    .line 89
     :try_start_0
     invoke-virtual {v3}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
 
@@ -241,7 +226,6 @@
 
     goto :goto_1
 
-    .line 91
     :catch_0
     sget-object v3, Lcom/samsung/android/localeoverlaymanager/Utils;->TAG:Ljava/lang/String;
 
@@ -279,7 +263,6 @@
 .method public static getCurrentUserId()I
     .locals 1
 
-    .line 38
     sget v0, Lcom/samsung/android/localeoverlaymanager/Utils;->sCurrentUserId:I
 
     return v0
@@ -288,14 +271,12 @@
 .method public static getLocalesListAsSet(Landroid/os/LocaleList;)Ljava/util/Set;
     .locals 6
 
-    .line 138
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 140
     :goto_0
     invoke-virtual {p0}, Landroid/os/LocaleList;->size()I
 
@@ -303,7 +284,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 141
     invoke-virtual {p0, v1}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
 
     move-result-object v2
@@ -312,7 +292,6 @@
 
     move-result-object v2
 
-    .line 142
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -321,7 +300,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 143
     sget-object v3, Lcom/samsung/android/localeoverlaymanager/Utils;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -340,7 +318,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     sget-object v3, Lcom/samsung/android/localeoverlaymanager/OverlayConstants;->ISO_639_2_TO_639_1_MAPPING:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -352,7 +329,6 @@
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 147
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -367,7 +343,6 @@
 .method public static getPathForUser(Ljava/lang/String;I)Ljava/lang/String;
     .locals 0
 
-    .line 59
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -386,19 +361,16 @@
 .method public static getSystemLocales()Ljava/util/Set;
     .locals 7
 
-    .line 120
     invoke-static {}, Lcom/android/internal/app/LocalePicker;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v0
 
-    .line 121
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     const/4 v2, 0x0
 
-    .line 124
     :goto_0
     invoke-virtual {v0}, Landroid/os/LocaleList;->size()I
 
@@ -406,7 +378,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 125
     invoke-virtual {v0, v2}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
 
     move-result-object v3
@@ -415,7 +386,6 @@
 
     move-result-object v3
 
-    .line 126
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -424,7 +394,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 127
     sget-object v4, Lcom/samsung/android/localeoverlaymanager/Utils;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -443,7 +412,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     sget-object v4, Lcom/samsung/android/localeoverlaymanager/OverlayConstants;->ISO_639_2_TO_639_1_MAPPING:Ljava/util/Map;
 
     invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -455,7 +423,6 @@
     :cond_0
     if-eqz v3, :cond_1
 
-    .line 131
     invoke-interface {v1, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -472,7 +439,6 @@
 
     const/4 v0, 0x0
 
-    .line 155
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -480,12 +446,10 @@
 
     const-wide/16 v1, 0x0
 
-    .line 156
     invoke-static {v1, v2}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
 
     move-result-object v1
 
-    .line 155
     invoke-virtual {p0, p1, v1, v0}, Landroid/content/pm/PackageManager;->getPackageUidAsUser(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;I)I
 
     move-result p0
@@ -504,7 +468,6 @@
 .method public static setCurrentUserId(I)V
     .locals 3
 
-    .line 47
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/Utils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -527,7 +490,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/localeoverlaymanager/LogWriter;->logDebugInfoAndLogcat(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 48
     sput p0, Lcom/samsung/android/localeoverlaymanager/Utils;->sCurrentUserId:I
 
     return-void

@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/Session;Landroid/service/autofill/FillResponse;Landroid/view/autofill/AutofillId;)V
     .locals 0
 
-    .line 4621
     iput-object p1, p0, Lcom/android/server/autofill/Session$3;->this$0:Lcom/android/server/autofill/Session;
 
     iput-object p2, p0, Lcom/android/server/autofill/Session$3;->val$response:Landroid/service/autofill/FillResponse;
@@ -35,7 +34,6 @@
 .method public authenticate(II)V
     .locals 6
 
-    .line 4629
     iget-object v0, p0, Lcom/android/server/autofill/Session$3;->this$0:Lcom/android/server/autofill/Session;
 
     iget-object p1, p0, Lcom/android/server/autofill/Session$3;->val$response:Landroid/service/autofill/FillResponse;
@@ -46,7 +44,6 @@
 
     iget-object p1, p0, Lcom/android/server/autofill/Session$3;->val$response:Landroid/service/autofill/FillResponse;
 
-    .line 4630
     invoke-virtual {p1}, Landroid/service/autofill/FillResponse;->getAuthentication()Landroid/content/IntentSender;
 
     move-result-object v3
@@ -61,7 +58,6 @@
 
     move v2, p2
 
-    .line 4629
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/autofill/Session;->authenticate(IILandroid/content/IntentSender;Landroid/os/Bundle;I)V
 
     return-void
@@ -70,7 +66,6 @@
 .method public autofill(Landroid/service/autofill/Dataset;I)V
     .locals 2
 
-    .line 4624
     iget-object v0, p0, Lcom/android/server/autofill/Session$3;->this$0:Lcom/android/server/autofill/Session;
 
     iget-object p0, p0, Lcom/android/server/autofill/Session$3;->val$response:Landroid/service/autofill/FillResponse;
@@ -89,14 +84,12 @@
 .method public onError()V
     .locals 2
 
-    .line 4641
     iget-object v0, p0, Lcom/android/server/autofill/Session$3;->this$0:Lcom/android/server/autofill/Session;
 
     iget-object v0, v0, Lcom/android/server/autofill/Session;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4642
     :try_start_0
     iget-object v1, p0, Lcom/android/server/autofill/Session$3;->this$0:Lcom/android/server/autofill/Session;
 
@@ -104,15 +97,12 @@
 
     iget-object p0, p0, Lcom/android/server/autofill/Session$3;->val$focusedId:Landroid/view/autofill/AutofillId;
 
-    .line 4643
     invoke-static {p0}, Lcom/android/server/autofill/ui/InlineFillUi;->emptyUi(Landroid/view/autofill/AutofillId;)Lcom/android/server/autofill/ui/InlineFillUi;
 
     move-result-object p0
 
-    .line 4642
     invoke-virtual {v1, p0}, Lcom/android/server/autofill/AutofillInlineSessionController;->setInlineFillUiLocked(Lcom/android/server/autofill/ui/InlineFillUi;)Z
 
-    .line 4644
     monitor-exit v0
 
     return-void
@@ -130,7 +120,6 @@
 .method public onInflate()V
     .locals 1
 
-    .line 4649
     iget-object p0, p0, Lcom/android/server/autofill/Session$3;->this$0:Lcom/android/server/autofill/Session;
 
     const/4 v0, 0x2
@@ -143,7 +132,6 @@
 .method public startIntentSender(Landroid/content/IntentSender;)V
     .locals 1
 
-    .line 4636
     iget-object p0, p0, Lcom/android/server/autofill/Session$3;->this$0:Lcom/android/server/autofill/Session;
 
     new-instance v0, Landroid/content/Intent;

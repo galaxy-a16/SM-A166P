@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;)V
     .locals 0
 
-    .line 97
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation$2;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,10 +26,8 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .line 100
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 101
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation$2;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;
 
     invoke-static {p1}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;)Landroid/content/Context;
@@ -57,7 +54,6 @@
 
     invoke-static {p1, p2, v1, v0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation$2;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;
 
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;->-$$Nest$mrotateScreen(Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;)V

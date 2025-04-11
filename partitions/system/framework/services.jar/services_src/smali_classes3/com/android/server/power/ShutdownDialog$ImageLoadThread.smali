@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/ShutdownDialog;)V
     .locals 1
 
-    .line 570
     iput-object p1, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     const/4 v0, 0x0
@@ -24,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/ShutdownDialog;Lcom/android/server/power/ShutdownDialog$ImageLoadThread-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;-><init>(Lcom/android/server/power/ShutdownDialog;)V
 
     return-void
@@ -35,10 +33,8 @@
 .method public final frameLoadLoop(Lcom/android/server/power/LibQmg;)V
     .locals 5
 
-    .line 641
     invoke-virtual {p1}, Lcom/android/server/power/LibQmg;->ensureQmgHandle()V
 
-    .line 642
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetmDrawHandler(Lcom/android/server/power/ShutdownDialog;)Lcom/android/server/power/ShutdownDialog$DrawHandler;
@@ -55,7 +51,6 @@
 
     const-string v0, "ShutdownDialog"
 
-    .line 643
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,7 +71,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 647
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
@@ -101,7 +95,6 @@
 
     const-string v1, "ShutdownDialog"
 
-    .line 652
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,7 +113,6 @@
 
     if-ltz v0, :cond_2
 
-    .line 655
     iget-object v1, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v1}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetdrawBufferLock(Lcom/android/server/power/ShutdownDialog;)Ljava/lang/Object;
@@ -129,7 +121,6 @@
 
     monitor-enter v1
 
-    .line 656
     :try_start_1
     iget-object v2, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -143,7 +134,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fputbitmapQFront(Lcom/android/server/power/ShutdownDialog;I)V
 
-    .line 657
     iget-object v2, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v2}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetbitmapQFront(Lcom/android/server/power/ShutdownDialog;)I
@@ -164,7 +154,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 659
     :try_start_2
     iget-object v2, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -189,10 +178,8 @@
 
     const-string v4, "InterruptedException"
 
-    .line 661
     invoke-static {v3, v4, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 664
     :cond_1
     :goto_0
     monitor-exit v1
@@ -221,10 +208,8 @@
 
     const-string/jumbo v1, "qmgLoadFrame return < 0"
 
-    .line 649
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 667
     :goto_2
     invoke-virtual {p1}, Lcom/android/server/power/LibQmg;->close()I
 
@@ -234,12 +219,10 @@
 .method public final multiFrameLoadLoop(Lcom/android/server/power/LibQmg;Lcom/android/server/power/LibQmg;)V
     .locals 5
 
-    .line 675
     invoke-virtual {p1}, Lcom/android/server/power/LibQmg;->ensureQmgHandle()V
 
     const-string v0, "ShutdownDialog"
 
-    .line 676
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -260,12 +243,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 677
     invoke-virtual {p2}, Lcom/android/server/power/LibQmg;->ensureQmgHandle()V
 
     const-string v0, "ShutdownDialog"
 
-    .line 678
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -286,7 +267,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 679
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetmDrawHandler(Lcom/android/server/power/ShutdownDialog;)Lcom/android/server/power/ShutdownDialog$DrawHandler;
@@ -301,7 +281,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 684
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
@@ -322,7 +301,6 @@
 
     move-result v0
 
-    .line 685
     iget-object v1, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v1}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetsubbitmapQ(Lcom/android/server/power/ShutdownDialog;)[Landroid/graphics/Bitmap;
@@ -345,7 +323,6 @@
 
     const-string v2, "ShutdownDialog"
 
-    .line 690
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -370,7 +347,6 @@
 
     if-ltz v0, :cond_2
 
-    .line 693
     iget-object v1, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v1}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetdrawBufferLock(Lcom/android/server/power/ShutdownDialog;)Ljava/lang/Object;
@@ -379,7 +355,6 @@
 
     monitor-enter v1
 
-    .line 694
     :try_start_1
     iget-object v2, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -393,7 +368,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fputbitmapQFront(Lcom/android/server/power/ShutdownDialog;I)V
 
-    .line 695
     iget-object v2, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v2}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetbitmapQFront(Lcom/android/server/power/ShutdownDialog;)I
@@ -414,7 +388,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 697
     :try_start_2
     iget-object v2, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -439,10 +412,8 @@
 
     const-string v4, "InterruptedException"
 
-    .line 699
     invoke-static {v3, v4, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 702
     :cond_1
     :goto_0
     monitor-exit v1
@@ -471,14 +442,11 @@
 
     const-string/jumbo v1, "qmgLoadFrame return < 0"
 
-    .line 687
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 705
     :goto_2
     invoke-virtual {p1}, Lcom/android/server/power/LibQmg;->close()I
 
-    .line 706
     invoke-virtual {p2}, Lcom/android/server/power/LibQmg;->close()I
 
     return-void
@@ -487,7 +455,6 @@
 .method public run()V
     .locals 10
 
-    .line 573
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -516,7 +483,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 575
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetmDrawHandler(Lcom/android/server/power/ShutdownDialog;)Lcom/android/server/power/ShutdownDialog$DrawHandler;
@@ -527,7 +493,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 579
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
@@ -542,7 +507,6 @@
 
     if-lez v0, :cond_1
 
-    .line 580
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetsubqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -555,7 +519,6 @@
 
     if-lez v0, :cond_0
 
-    .line 581
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -568,7 +531,6 @@
 
     check-cast v0, Lcom/android/server/power/LibQmg;
 
-    .line 582
     iget-object v3, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v3}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetsubqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -581,10 +543,8 @@
 
     check-cast v3, Lcom/android/server/power/LibQmg;
 
-    .line 583
     invoke-virtual {p0, v0, v3}, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->multiFrameLoadLoop(Lcom/android/server/power/LibQmg;Lcom/android/server/power/LibQmg;)V
 
-    .line 584
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -593,7 +553,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 585
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetsubqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -604,7 +563,6 @@
 
     goto :goto_0
 
-    .line 588
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -618,10 +576,8 @@
 
     check-cast v0, Lcom/android/server/power/LibQmg;
 
-    .line 589
     invoke-virtual {p0, v0}, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->frameLoadLoop(Lcom/android/server/power/LibQmg;)V
 
-    .line 590
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -639,14 +595,11 @@
 
     const-string v3, "!@qmgList or subqmgList IndexOutOfBoundsException"
 
-    .line 595
     invoke-static {v1, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 599
     :cond_1
     iput-boolean v2, p0, Lcom/android/server/power/ShutdownDialog$RunningCheckable;->running:Z
 
-    .line 600
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -669,7 +622,6 @@
 
     move-result-object v0
 
-    .line 602
     iget-object v3, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v3}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetb2bAnimPath(Lcom/android/server/power/ShutdownDialog;)Ljava/lang/String;
@@ -687,7 +639,6 @@
     :cond_2
     const-string/jumbo v3, "persist.sys.omc_respath"
 
-    .line 605
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -696,7 +647,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 606
     new-instance v4, Ljava/io/File;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -735,7 +685,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 607
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -762,7 +711,6 @@
 
     move-result-object v0
 
-    .line 608
     new-instance v4, Ljava/io/File;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -801,7 +749,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 609
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -830,7 +777,6 @@
 
     move-object v5, v3
 
-    .line 613
     :cond_3
     :goto_1
     new-instance v3, Ljava/io/File;
@@ -846,18 +792,15 @@
 
     if-eqz v5, :cond_4
 
-    .line 617
     :try_start_1
     iget-object v4, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v4, v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$maddToPlaylistIfExists(Lcom/android/server/power/ShutdownDialog;Ljava/lang/String;)Z
 
-    .line 618
     iget-object v4, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v4, v5}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$maddToSubPlaylistIfExists(Lcom/android/server/power/ShutdownDialog;Ljava/lang/String;)Z
 
-    .line 619
     iget-object v4, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v4}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -870,7 +813,6 @@
 
     check-cast v4, Lcom/android/server/power/LibQmg;
 
-    .line 620
     iget-object v6, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v6}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetsubqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -883,10 +825,8 @@
 
     check-cast v6, Lcom/android/server/power/LibQmg;
 
-    .line 621
     invoke-virtual {p0, v4, v6}, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->multiFrameLoadLoop(Lcom/android/server/power/LibQmg;Lcom/android/server/power/LibQmg;)V
 
-    .line 622
     iget-object v4, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v4}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -895,7 +835,6 @@
 
     invoke-interface {v4, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 623
     iget-object v4, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v4}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetsubqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -906,13 +845,11 @@
 
     goto :goto_2
 
-    .line 626
     :cond_4
     iget-object v4, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v4, v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$maddToPlaylistIfExists(Lcom/android/server/power/ShutdownDialog;Ljava/lang/String;)Z
 
-    .line 627
     iget-object v4, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v4}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -925,10 +862,8 @@
 
     check-cast v4, Lcom/android/server/power/LibQmg;
 
-    .line 628
     invoke-virtual {p0, v4}, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->frameLoadLoop(Lcom/android/server/power/LibQmg;)V
 
-    .line 629
     iget-object v4, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v4}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetqmgList(Lcom/android/server/power/ShutdownDialog;)Ljava/util/List;
@@ -946,10 +881,8 @@
 
     const-string v2, "!@loopqmgList or subloopqmgList IndexOutOfBoundsException"
 
-    .line 634
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 636
     :cond_5
     iget-object p0, p0, Lcom/android/server/power/ShutdownDialog$ImageLoadThread;->this$0:Lcom/android/server/power/ShutdownDialog;
 

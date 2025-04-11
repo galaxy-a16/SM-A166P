@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/app/GameServiceController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/app/GameServiceController$PackageChangedBroadcastReceiver$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/app/GameServiceController;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/app/GameServiceController$PackageChangedBroadcastReceiver$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/app/GameServiceController;
 
     invoke-static {p0}, Lcom/android/server/app/GameServiceController$PackageChangedBroadcastReceiver;->$r8$lambda$dxEVeVs-2voEKyO2JI1mJZMxiiQ(Lcom/android/server/app/GameServiceController;)V

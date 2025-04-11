@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/vcn/Vcn;)V
     .locals 0
 
-    .line 727
     iput-object p1, p0, Lcom/android/server/vcn/Vcn$VcnUserMobileDataStateListener;->this$0:Lcom/android/server/vcn/Vcn;
 
     invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
@@ -27,7 +26,6 @@
 .method public onUserMobileDataStateChanged(Z)V
     .locals 0
 
-    .line 732
     iget-object p0, p0, Lcom/android/server/vcn/Vcn$VcnUserMobileDataStateListener;->this$0:Lcom/android/server/vcn/Vcn;
 
     const/4 p1, 0x5

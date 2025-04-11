@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Lcom/android/server/devicepolicy/ResolutionMechanism;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getParcelableResolutionMechanism()Landroid/app/admin/MostRecent;
     .locals 0
 
-    .line 39
     new-instance p0, Landroid/app/admin/MostRecent;
 
     invoke-direct {p0}, Landroid/app/admin/MostRecent;-><init>()V
@@ -29,7 +27,6 @@
 .method public bridge synthetic getParcelableResolutionMechanism()Landroid/app/admin/ResolutionMechanism;
     .locals 0
 
-    .line 28
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/MostRecent;->getParcelableResolutionMechanism()Landroid/app/admin/MostRecent;
 
     move-result-object p0
@@ -40,17 +37,14 @@
 .method public resolve(Ljava/util/LinkedHashMap;)Landroid/app/admin/PolicyValue;
     .locals 0
 
-    .line 32
     new-instance p0, Ljava/util/ArrayList;
 
-    .line 33
     invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 34
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
@@ -87,7 +81,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "MostRecent {}"
 
     return-object p0

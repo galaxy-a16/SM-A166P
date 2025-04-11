@@ -11,10 +11,8 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 51
     invoke-direct {p0}, Lcom/android/server/backup/keyvalue/BackupException;-><init>()V
 
-    .line 52
     iput-boolean p1, p0, Lcom/android/server/backup/keyvalue/AgentException;->mTransitory:Z
 
     return-void
@@ -23,10 +21,8 @@
 .method public constructor <init>(ZLjava/lang/Exception;)V
     .locals 0
 
-    .line 56
     invoke-direct {p0, p2}, Lcom/android/server/backup/keyvalue/BackupException;-><init>(Ljava/lang/Exception;)V
 
-    .line 57
     iput-boolean p1, p0, Lcom/android/server/backup/keyvalue/AgentException;->mTransitory:Z
 
     return-void
@@ -35,7 +31,6 @@
 .method public static permanent()Lcom/android/server/backup/keyvalue/AgentException;
     .locals 2
 
-    .line 42
     new-instance v0, Lcom/android/server/backup/keyvalue/AgentException;
 
     const/4 v1, 0x0
@@ -48,7 +43,6 @@
 .method public static permanent(Ljava/lang/Exception;)Lcom/android/server/backup/keyvalue/AgentException;
     .locals 2
 
-    .line 46
     new-instance v0, Lcom/android/server/backup/keyvalue/AgentException;
 
     const/4 v1, 0x0
@@ -61,7 +55,6 @@
 .method public static transitory()Lcom/android/server/backup/keyvalue/AgentException;
     .locals 2
 
-    .line 34
     new-instance v0, Lcom/android/server/backup/keyvalue/AgentException;
 
     const/4 v1, 0x1
@@ -74,7 +67,6 @@
 .method public static transitory(Ljava/lang/Exception;)Lcom/android/server/backup/keyvalue/AgentException;
     .locals 2
 
-    .line 38
     new-instance v0, Lcom/android/server/backup/keyvalue/AgentException;
 
     const/4 v1, 0x1
@@ -89,7 +81,6 @@
 .method public isTransitory()Z
     .locals 0
 
-    .line 61
     iget-boolean p0, p0, Lcom/android/server/backup/keyvalue/AgentException;->mTransitory:Z
 
     return p0

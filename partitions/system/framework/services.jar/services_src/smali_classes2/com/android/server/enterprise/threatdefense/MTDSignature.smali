@@ -17,31 +17,26 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 3
 
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 37
     invoke-static {p1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object p1
 
-    .line 38
     array-length v1, p1
 
     const/16 v2, 0x100
 
     if-le v1, v2, :cond_0
 
-    .line 39
     array-length v1, p1
 
     sub-int/2addr v1, v2
@@ -52,7 +47,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;->mData:[B
 
-    .line 41
     array-length v0, p1
 
     sub-int/2addr v0, v2
@@ -67,7 +61,6 @@
 
     return-void
 
-    .line 44
     :cond_0
     sget-object p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
 
@@ -89,7 +82,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "Invalid SHA256. please encode the String as UTF_8"
@@ -108,7 +100,6 @@
 
     const/4 v0, 0x0
 
-    .line 68
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -124,12 +115,10 @@
     :try_start_1
     const-string v2, "X.509"
 
-    .line 69
     invoke-static {v2}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v2
 
-    .line 70
     invoke-virtual {v2, v1}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
     move-result-object v0
@@ -139,7 +128,6 @@
     .catch Ljava/security/cert/CertificateException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 82
     :try_start_2
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -150,7 +138,6 @@
     :catch_0
     move-exception v1
 
-    .line 84
     sget-object v2, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
 
     invoke-static {v2, p0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -188,7 +175,6 @@
 
     move-object v1, v0
 
-    .line 77
     :goto_0
     :try_start_3
     sget-object v3, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
@@ -213,14 +199,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     invoke-virtual {v2}, Ljava/security/cert/CertificateException;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     if-eqz v1, :cond_0
 
-    .line 82
     :try_start_4
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -233,7 +217,6 @@
 
     move-object v1, v0
 
-    .line 75
     :goto_1
     :try_start_5
     sget-object v3, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
@@ -262,7 +245,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 82
     :try_start_6
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_6
@@ -275,7 +257,6 @@
 
     move-object v1, v0
 
-    .line 73
     :goto_2
     :try_start_7
     sget-object v3, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
@@ -288,7 +269,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 82
     :try_start_8
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_8
@@ -314,12 +294,10 @@
     :catch_7
     move-exception v1
 
-    .line 84
     sget-object v2, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
 
     invoke-static {v2, p0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 86
     :cond_1
     :goto_5
     throw v0
@@ -330,7 +308,6 @@
 
     const/4 p0, 0x0
 
-    .line 113
     :try_start_0
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
@@ -342,19 +319,16 @@
     :try_start_1
     const-string p1, "X.509"
 
-    .line 114
     invoke-static {p1}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object p1
 
-    .line 115
     invoke-virtual {p1, v0}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
     move-result-object p1
 
     check-cast p1, Ljava/security/cert/X509Certificate;
 
-    .line 116
     invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object p0
@@ -362,7 +336,6 @@
     .catch Ljava/security/cert/CertificateException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 122
     :try_start_2
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -373,7 +346,6 @@
     :catch_0
     move-exception p1
 
-    .line 124
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
@@ -398,7 +370,6 @@
 
     move-object v0, p0
 
-    .line 118
     :goto_1
     :try_start_3
     invoke-virtual {p1}, Ljava/security/cert/CertificateException;->printStackTrace()V
@@ -407,7 +378,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 122
     :try_start_4
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -418,7 +388,6 @@
     :catch_3
     move-exception p1
 
-    .line 124
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_0
@@ -431,7 +400,6 @@
     :goto_3
     if-eqz v0, :cond_1
 
-    .line 122
     :try_start_5
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -442,10 +410,8 @@
     :catch_4
     move-exception p1
 
-    .line 124
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 127
     :cond_1
     :goto_4
     throw p0
@@ -454,14 +420,12 @@
 .method public getVerifiedData()Ljava/lang/String;
     .locals 3
 
-    .line 50
     invoke-virtual {p0}, Lcom/android/server/enterprise/threatdefense/MTDSignature;->verify()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 51
     new-instance v0, Ljava/lang/String;
 
     iget-object p0, p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;->mData:[B
@@ -470,12 +434,10 @@
 
     invoke-direct {v0, p0, v1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 52
     sget-boolean p0, Lcom/android/server/enterprise/threatdefense/ThreatDefenseService;->DEBUG:Z
 
     if-eqz p0, :cond_0
 
-    .line 53
     sget-object p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -496,7 +458,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_0
     sget-object p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
 
@@ -507,7 +468,6 @@
     :goto_0
     return-object v0
 
-    .line 59
     :cond_1
     sget-object p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;->TAG:Ljava/lang/String;
 
@@ -525,7 +485,6 @@
 
     const/4 v0, 0x0
 
-    .line 93
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/threatdefense/MTDSignature;->getCertificate()Ljava/security/cert/Certificate;
 
@@ -535,12 +494,10 @@
 
     const-string v2, "SHA256withRSA/PSS"
 
-    .line 96
     invoke-static {v2}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
 
     move-result-object v2
 
-    .line 97
     invoke-virtual {v1}, Ljava/security/cert/Certificate;->getEncoded()[B
 
     move-result-object v1
@@ -553,16 +510,13 @@
 
     return v0
 
-    .line 99
     :cond_0
     invoke-virtual {v2, v1}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
 
-    .line 100
     iget-object v1, p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;->mData:[B
 
     invoke-virtual {v2, v1}, Ljava/security/Signature;->update([B)V
 
-    .line 101
     iget-object p0, p0, Lcom/android/server/enterprise/threatdefense/MTDSignature;->mSignature:[B
 
     invoke-virtual {v2, p0}, Ljava/security/Signature;->verify([B)Z
@@ -579,7 +533,6 @@
     :catch_0
     move-exception p0
 
-    .line 105
     invoke-virtual {p0}, Ljava/security/GeneralSecurityException;->printStackTrace()V
 
     :cond_1

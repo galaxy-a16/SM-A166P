@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/tv/TvInputHardwareManager;)V
     .locals 0
 
-    .line 1431
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/tv/TvInputHardwareManager;Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;-><init>(Lcom/android/server/tv/TvInputHardwareManager;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onStatusChanged(Z)V
     .locals 2
 
-    .line 1435
     iget-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-static {p1}, Lcom/android/server/tv/TvInputHardwareManager;->-$$Nest$fgetmLock(Lcom/android/server/tv/TvInputHardwareManager;)Ljava/lang/Object;
@@ -44,7 +41,6 @@
 
     const/4 v0, 0x0
 
-    .line 1436
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
@@ -59,7 +55,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1437
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiSystemAudioModeChangeListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-static {v1}, Lcom/android/server/tv/TvInputHardwareManager;->-$$Nest$fgetmConnections(Lcom/android/server/tv/TvInputHardwareManager;)Landroid/util/SparseArray;
@@ -78,7 +73,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1439
     invoke-static {v1}, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->-$$Nest$mhandleAudioSinkUpdated(Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;)V
 
     :cond_0
@@ -86,7 +80,6 @@
 
     goto :goto_0
 
-    .line 1442
     :cond_1
     monitor-exit p1
 

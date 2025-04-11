@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$gvBS4kjBFz3YcSPGsSRUFKDoa4c(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/audio/AudioService$RestorableParameters;->lambda$setParameters$0(Ljava/lang/String;)Z
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$tcryFOhh04D1NMhDdtoHy2JkFc0(Ljava/util/function/BooleanSupplier;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/audio/AudioService$RestorableParameters;->lambda$restoreAll$1(Ljava/util/function/BooleanSupplier;)Z
 
     move-result p0
@@ -33,10 +31,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 842
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 917
     new-instance v0, Lcom/android/server/audio/AudioService$RestorableParameters$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/audio/AudioService$RestorableParameters$1;-><init>(Lcom/android/server/audio/AudioService$RestorableParameters;)V
@@ -49,7 +45,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/audio/AudioService$RestorableParameters-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/audio/AudioService$RestorableParameters;-><init>()V
 
     return-void
@@ -58,7 +53,6 @@
 .method public static synthetic lambda$restoreAll$1(Ljava/util/function/BooleanSupplier;)Z
     .locals 0
 
-    .line 901
     invoke-interface {p0}, Ljava/util/function/BooleanSupplier;->getAsBoolean()Z
 
     move-result p0
@@ -69,7 +63,6 @@
 .method public static synthetic lambda$setParameters$0(Ljava/lang/String;)Z
     .locals 0
 
-    .line 857
     invoke-static {p0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
     move-result p0
@@ -94,17 +87,14 @@
 
     const-string v0, "id must not be null"
 
-    .line 879
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 880
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RestorableParameters;->mMap:Ljava/util/Map;
 
     monitor-enter v0
 
     if-eqz p2, :cond_0
 
-    .line 882
     :try_start_0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$RestorableParameters;->mMap:Ljava/util/Map;
 
@@ -112,13 +102,11 @@
 
     goto :goto_0
 
-    .line 884
     :cond_0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$RestorableParameters;->mMap:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 886
     :goto_0
     monitor-exit v0
 
@@ -137,12 +125,10 @@
 .method public restoreAll()V
     .locals 2
 
-    .line 897
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RestorableParameters;->mMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 900
     :try_start_0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$RestorableParameters;->mMap:Ljava/util/Map;
 
@@ -156,7 +142,6 @@
 
     invoke-interface {p0, v1}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
 
-    .line 903
     monitor-exit v0
 
     return-void
@@ -176,20 +161,16 @@
 
     const-string v0, "id must not be null"
 
-    .line 851
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string/jumbo v0, "parameter must not be null"
 
-    .line 852
     invoke-static {p2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 853
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RestorableParameters;->mMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 854
     :try_start_0
     invoke-static {p2}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
@@ -197,14 +178,12 @@
 
     if-nez v1, :cond_0
 
-    .line 856
     new-instance v2, Lcom/android/server/audio/AudioService$RestorableParameters$$ExternalSyntheticLambda0;
 
     invoke-direct {v2, p2}, Lcom/android/server/audio/AudioService$RestorableParameters$$ExternalSyntheticLambda0;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, v2}, Lcom/android/server/audio/AudioService$RestorableParameters;->queueRestoreWithRemovalIfTrue(Ljava/lang/String;Ljava/util/function/BooleanSupplier;)V
 
-    .line 861
     :cond_0
     monitor-exit v0
 
@@ -213,7 +192,6 @@
     :catchall_0
     move-exception p0
 
-    .line 862
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

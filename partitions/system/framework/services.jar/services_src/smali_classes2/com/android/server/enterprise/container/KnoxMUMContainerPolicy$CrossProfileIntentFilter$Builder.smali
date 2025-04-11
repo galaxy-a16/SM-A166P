@@ -13,17 +13,14 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 3737
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3734
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;->mFilter:Landroid/content/IntentFilter;
 
-    .line 3738
     iput p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;->mFlags:I
 
     return-void
@@ -34,7 +31,6 @@
 .method public addAction(Ljava/lang/String;)Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;
     .locals 1
 
-    .line 3742
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -45,7 +41,6 @@
 .method public addDataScheme(Ljava/lang/String;)Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;
     .locals 1
 
-    .line 3756
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, p1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
@@ -56,7 +51,6 @@
 .method public addDataType(Ljava/lang/String;)Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;
     .locals 3
 
-    .line 3748
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;->mFilter:Landroid/content/IntentFilter;
 
@@ -69,7 +63,6 @@
     :catch_0
     move-exception p1
 
-    .line 3750
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -97,7 +90,6 @@
 .method public build()Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter;
     .locals 3
 
-    .line 3761
     new-instance v0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$CrossProfileIntentFilter$Builder;->mFilter:Landroid/content/IntentFilter;

@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 579
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 577
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
@@ -32,14 +30,12 @@
 .method public add(Lcom/android/server/am/Pageboost$PageboostAppInfo;Z)V
     .locals 1
 
-    .line 592
     iget-object v0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v0
 
     if-eqz p2, :cond_0
 
-    .line 594
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -47,13 +43,11 @@
 
     goto :goto_0
 
-    .line 596
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     invoke-virtual {p0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 598
     :goto_0
     monitor-exit v0
 
@@ -72,12 +66,10 @@
 .method public contains(Lcom/android/server/am/Pageboost$PageboostAppInfo;)Z
     .locals 1
 
-    .line 611
     iget-object v0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 612
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -85,7 +77,6 @@
 
     move-result p0
 
-    .line 615
     monitor-exit v0
 
     return p0
@@ -103,7 +94,6 @@
 .method public getPageboostApp(Ljava/lang/String;)Lcom/android/server/am/Pageboost$PageboostAppInfo;
     .locals 4
 
-    .line 622
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -114,13 +104,11 @@
 
     return-object v1
 
-    .line 626
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 627
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -128,7 +116,6 @@
 
     move-result-object p0
 
-    .line 628
     :cond_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -136,14 +123,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 629
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
-    .line 630
     iget-object v3, v2, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -154,7 +139,6 @@
 
     move-object v1, v2
 
-    .line 635
     :cond_2
     monitor-exit v0
 
@@ -173,7 +157,6 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 0
 
-    .line 588
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     invoke-virtual {p0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
@@ -186,12 +169,10 @@
 .method public print(Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 682
     iget-object v0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 683
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -212,7 +193,6 @@
 
     check-cast v1, Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
-    .line 684
     invoke-virtual {v1}, Lcom/android/server/am/Pageboost$PageboostAppInfo;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -221,7 +201,6 @@
 
     goto :goto_0
 
-    .line 686
     :cond_0
     monitor-exit v0
 
@@ -240,12 +219,10 @@
 .method public remove(Lcom/android/server/am/Pageboost$PageboostAppInfo;)Z
     .locals 1
 
-    .line 603
     iget-object v0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 604
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -253,7 +230,6 @@
 
     move-result p0
 
-    .line 605
     monitor-exit v0
 
     return p0
@@ -271,7 +247,6 @@
 .method public removeFromName(Ljava/lang/String;)Lcom/android/server/am/Pageboost$PageboostAppInfo;
     .locals 4
 
-    .line 642
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -282,13 +257,11 @@
 
     return-object v1
 
-    .line 645
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 646
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -303,14 +276,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 647
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
-    .line 648
     iget-object v3, v2, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -319,10 +290,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 650
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
-    .line 651
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -347,7 +316,6 @@
 
     move-object v1, v2
 
-    .line 655
     :cond_2
     monitor-exit v0
 
@@ -366,12 +334,10 @@
 .method public removeNotInstalled()V
     .locals 5
 
-    .line 660
     iget-object v0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 661
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -387,22 +353,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 662
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
-    .line 663
     iget v2, v1, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mInstalled:I
 
     if-nez v2, :cond_0
 
-    .line 664
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
-    .line 665
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -427,7 +389,6 @@
 
     goto :goto_0
 
-    .line 668
     :cond_1
     monitor-exit v0
 
@@ -448,12 +409,10 @@
 
     const-string v0, ""
 
-    .line 673
     iget-object v1, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v1
 
-    .line 674
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -474,7 +433,6 @@
 
     check-cast v2, Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
-    .line 675
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -497,7 +455,6 @@
 
     goto :goto_0
 
-    .line 677
     :cond_0
     monitor-exit v1
 

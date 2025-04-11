@@ -13,17 +13,14 @@
 .method public constructor <init>(Landroid/os/Handler;I)V
     .locals 1
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/plm/common/HandlerObserver;->handler:Ljava/lang/ref/WeakReference;
 
-    .line 16
     iput p2, p0, Lcom/android/server/enterprise/plm/common/HandlerObserver;->what:I
 
     return-void
@@ -34,7 +31,6 @@
 .method public getHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 20
     iget-object p0, p0, Lcom/android/server/enterprise/plm/common/HandlerObserver;->handler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -49,7 +45,6 @@
 .method public notifyMessage(Ljava/lang/Object;)V
     .locals 2
 
-    .line 30
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/common/HandlerObserver;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -58,7 +53,6 @@
 
     return-void
 
-    .line 32
     :cond_0
     iget p0, p0, Lcom/android/server/enterprise/plm/common/HandlerObserver;->what:I
 
@@ -76,7 +70,6 @@
 .method public notifyMessage(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    .line 36
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/common/HandlerObserver;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -85,7 +78,6 @@
 
     return-void
 
-    .line 38
     :cond_0
     iget p0, p0, Lcom/android/server/enterprise/plm/common/HandlerObserver;->what:I
 
@@ -103,7 +95,6 @@
 .method public notifyMessage(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 7
 
-    .line 42
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/common/HandlerObserver;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -112,7 +103,6 @@
 
     return-void
 
-    .line 44
     :cond_0
     iget v1, p0, Lcom/android/server/enterprise/plm/common/HandlerObserver;->what:I
 
@@ -138,7 +128,6 @@
 .method public notifyMessage(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 8
 
-    .line 48
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/common/HandlerObserver;->getHandler()Landroid/os/Handler;
 
     move-result-object v7
@@ -147,7 +136,6 @@
 
     return-void
 
-    .line 50
     :cond_0
     iget v1, p0, Lcom/android/server/enterprise/plm/common/HandlerObserver;->what:I
 

@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$01dChnRTBlW-IAVxo3mxOeB0NJk(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetFillRequestSentTimestampMs$9(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$7Kqx6Ov2Jb_cyfNoPEkD5ZYkZ-A(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetDialogDismissed$14(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static synthetic $r8$lambda$7WH005vSSh1PL-bObaKEkF4sJ7M(Lcom/android/server/autofill/PresentationStatsEventLogger;ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetSelectedDatasetPickReason$26(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -40,7 +37,6 @@
 .method public static synthetic $r8$lambda$8LEVfa5J6sDFcKC3eEk5YMEEnbE(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetSuggestionPresentedTimestampMs$12(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -49,7 +45,6 @@
 .method public static synthetic $r8$lambda$95QTimOJkFUrUczVNOoJX-FiCZU(Ljava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetCountShown$4(Ljava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -58,7 +53,6 @@
 .method public static synthetic $r8$lambda$AmIEErDdcpRvyF9t87lLrpkebM0(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetIsNewRequest$19(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -67,7 +61,6 @@
 .method public static synthetic $r8$lambda$BbRnjJano1ZeSkOcH_gvDev_h4g(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetFillResponseReceivedTimestampMs$10(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -76,7 +69,6 @@
 .method public static synthetic $r8$lambda$ByEm_Bds3g-wdVJiuseWayyAbUc(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetDisplayPresentationType$8(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -85,7 +77,6 @@
 .method public static synthetic $r8$lambda$EUf5xJOFPjl-oaqdCdSoGtqvsMw(Landroid/content/Context;ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetInlinePresentationAndSuggestionHostUid$17(Landroid/content/Context;ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -94,7 +85,6 @@
 .method public static synthetic $r8$lambda$SxPLA8_Zli_SsC1QKfapNPxN87Y(Ljava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetAvailableCount$3(Ljava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -103,7 +93,6 @@
 .method public static synthetic $r8$lambda$UnM34EworBhX1R_XdkVVS8bzhTE(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetDetectionPreference$27(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -112,7 +101,6 @@
 .method public static synthetic $r8$lambda$Uqq3kQQO_rxgeVFL7fGMOCn9JP8(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetSelectedDatasetId$13(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -121,7 +109,6 @@
 .method public static synthetic $r8$lambda$VwmEiEMdTJohsue6kpe0BBrKuws(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetSuggestionSentTimestampMs$11(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -130,7 +117,6 @@
 .method public static synthetic $r8$lambda$_7GQzHxIqa1ZfJWPsbn_ZkT2tnc(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetAutofillServiceUid$18(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -139,7 +125,6 @@
 .method public static synthetic $r8$lambda$elhiqBbWtCkxBK3T7KJfKicku6M(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetNoPresentationEventReason$1(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -148,7 +133,6 @@
 .method public static synthetic $r8$lambda$imu690k2WhBmB39epkYWZG7iSiM(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetRequestId$0(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -157,7 +141,6 @@
 .method public static synthetic $r8$lambda$mNYUtVIepuG67DBm7-e5pA-2BGw(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetAuthenticationResult$21(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -166,7 +149,6 @@
 .method public static synthetic $r8$lambda$uSc8P61Ll_Xh90rA-6CpQUcLvNY(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetPositiveCtaButtonClicked$16(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -175,7 +157,6 @@
 .method public static synthetic $r8$lambda$usiXRw5iKhFOJg1L8iFzc0-_TqA(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetAuthenticationType$20(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -184,7 +165,6 @@
 .method public static synthetic $r8$lambda$wR1o0n4RAEB6GPMfKfUI902v8Vk(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetNegativeCtaButtonClicked$15(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -193,7 +173,6 @@
 .method public static synthetic $r8$lambda$xAydplq7nY7uAopR-vUprhWIuOs(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->lambda$maybeSetNoPresentationEventReasonIfNoReasonExists$2(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
 
     return-void
@@ -202,13 +181,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 216
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 217
     iput p1, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mSessionId:I
 
-    .line 218
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
 
     move-result-object p1
@@ -221,7 +197,6 @@
 .method public static forSessionId(I)Lcom/android/server/autofill/PresentationStatsEventLogger;
     .locals 1
 
-    .line 222
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger;
 
     invoke-direct {v0, p0}, Lcom/android/server/autofill/PresentationStatsEventLogger;-><init>(I)V
@@ -232,7 +207,6 @@
 .method public static getDatasetCountForAutofillId(Ljava/util/List;Landroid/view/autofill/AutofillId;)Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;
     .locals 5
 
-    .line 278
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;
 
     invoke-direct {v0}, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;-><init>()V
@@ -241,7 +215,6 @@
 
     const/4 v1, 0x0
 
-    .line 280
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -249,7 +222,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 281
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -258,14 +230,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 282
     invoke-virtual {v2}, Landroid/service/autofill/Dataset;->getFieldIds()Ljava/util/ArrayList;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 283
     invoke-virtual {v2}, Landroid/service/autofill/Dataset;->getFieldIds()Ljava/util/ArrayList;
 
     move-result-object v3
@@ -276,14 +246,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 284
     iget v3, v0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailableCount:I
 
     add-int/lit8 v3, v3, 0x1
 
     iput v3, v0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailableCount:I
 
-    .line 285
     invoke-virtual {v2}, Landroid/service/autofill/Dataset;->getEligibleReason()I
 
     move-result v3
@@ -292,14 +260,12 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 286
     iget v2, v0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailablePccOnlyCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, v0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailablePccOnlyCount:I
 
-    .line 287
     iget v2, v0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailablePccCount:I
 
     add-int/lit8 v2, v2, 0x1
@@ -308,7 +274,6 @@
 
     goto :goto_1
 
-    .line 288
     :cond_0
     invoke-virtual {v2}, Landroid/service/autofill/Dataset;->getEligibleReason()I
 
@@ -318,7 +283,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 290
     iget v2, v0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailablePccCount:I
 
     add-int/lit8 v2, v2, 0x1
@@ -338,7 +302,6 @@
 .method public static getDisplayPresentationType(I)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_0
@@ -362,7 +325,6 @@
 .method public static getNoPresentationEventReason(I)I
     .locals 2
 
-    .line 0
     const/4 v0, 0x1
 
     const/4 v1, 0x4
@@ -396,7 +358,6 @@
 .method public static synthetic lambda$maybeSetAuthenticationResult$21(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 440
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mAuthenticationResult:I
 
     return-void
@@ -405,7 +366,6 @@
 .method public static synthetic lambda$maybeSetAuthenticationType$20(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 431
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mAuthenticationType:I
 
     return-void
@@ -414,7 +374,6 @@
 .method public static synthetic lambda$maybeSetAutofillServiceUid$18(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 416
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mAutofillServiceUid:I
 
     return-void
@@ -423,22 +382,18 @@
 .method public static synthetic lambda$maybeSetAvailableCount$3(Ljava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 1
 
-    .line 256
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->getDatasetCountForAutofillId(Ljava/util/List;Landroid/view/autofill/AutofillId;)Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;
 
     move-result-object p0
 
-    .line 257
     iget p1, p0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailableCount:I
 
     iput p1, p2, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mAvailableCount:I
 
-    .line 258
     iget v0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailablePccCount:I
 
     iput v0, p2, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mAvailablePccCount:I
 
-    .line 259
     iget p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailablePccOnlyCount:I
 
     iput p0, p2, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mAvailablePccOnlyCount:I
@@ -452,7 +407,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 260
     :goto_0
     iput-boolean p0, p2, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mIsDatasetAvailable:Z
 
@@ -462,12 +416,10 @@
 .method public static synthetic lambda$maybeSetCountShown$4(Ljava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 267
     invoke-static {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->getDatasetCountForAutofillId(Ljava/util/List;Landroid/view/autofill/AutofillId;)Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;
 
     move-result-object p0
 
-    .line 268
     iget p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger$CountContainer;->mAvailableCount:I
 
     iput p0, p2, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mCountShown:I
@@ -476,7 +428,6 @@
 
     const/4 p0, 0x1
 
-    .line 270
     iput p0, p2, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mNoPresentationReason:I
 
     :cond_0
@@ -486,7 +437,6 @@
 .method public static synthetic lambda$maybeSetDetectionPreference$27(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 494
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mDetectionPreference:I
 
     return-void
@@ -495,7 +445,6 @@
 .method public static synthetic lambda$maybeSetDialogDismissed$14(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 370
     iput-boolean p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mDialogDismissed:Z
 
     return-void
@@ -504,7 +453,6 @@
 .method public static synthetic lambda$maybeSetDisplayPresentationType$8(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 334
     invoke-static {p0}, Lcom/android/server/autofill/PresentationStatsEventLogger;->getDisplayPresentationType(I)I
 
     move-result p0
@@ -517,7 +465,6 @@
 .method public static synthetic lambda$maybeSetFillRequestSentTimestampMs$9(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 340
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mFillRequestSentTimestampMs:I
 
     return-void
@@ -526,7 +473,6 @@
 .method public static synthetic lambda$maybeSetFillResponseReceivedTimestampMs$10(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 346
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mFillResponseReceivedTimestampMs:I
 
     return-void
@@ -537,10 +483,8 @@
 
     const/4 v0, 0x2
 
-    .line 388
     iput v0, p2, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mDisplayPresentationType:I
 
-    .line 390
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -551,7 +495,6 @@
 
     move-result-object v0
 
-    .line 392
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -562,12 +505,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 393
     invoke-static {v3, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 396
     :cond_0
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -575,18 +516,15 @@
 
     if-nez v0, :cond_1
 
-    .line 398
     invoke-static {v3, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 402
     :cond_1
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 404
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -594,12 +532,10 @@
 
     const-wide/16 v1, 0x0
 
-    .line 405
     invoke-static {v1, v2}, Landroid/content/pm/PackageManager$ApplicationInfoFlags;->of(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
 
     move-result-object v1
 
-    .line 404
     invoke-virtual {p0, v0, v1, p1}, Landroid/content/pm/PackageManager;->getApplicationInfoAsUser(Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
@@ -608,12 +544,10 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 410
     iput p0, p2, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mInlineSuggestionHostUid:I
 
     return-void
 
-    .line 407
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -637,7 +571,6 @@
 .method public static synthetic lambda$maybeSetIsNewRequest$19(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 422
     iput-boolean p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mIsRequestTriggered:Z
 
     return-void
@@ -646,7 +579,6 @@
 .method public static synthetic lambda$maybeSetNegativeCtaButtonClicked$15(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 376
     iput-boolean p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mNegativeCtaButtonClicked:Z
 
     return-void
@@ -655,12 +587,10 @@
 .method public static synthetic lambda$maybeSetNoPresentationEventReason$1(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 1
 
-    .line 239
     iget v0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mCountShown:I
 
     if-nez v0, :cond_0
 
-    .line 240
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mNoPresentationReason:I
 
     :cond_0
@@ -670,7 +600,6 @@
 .method public static synthetic lambda$maybeSetNoPresentationEventReasonIfNoReasonExists$2(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 1
 
-    .line 247
     iget v0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mCountShown:I
 
     if-nez v0, :cond_0
@@ -679,7 +608,6 @@
 
     if-nez v0, :cond_0
 
-    .line 248
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mNoPresentationReason:I
 
     :cond_0
@@ -689,7 +617,6 @@
 .method public static synthetic lambda$maybeSetPositiveCtaButtonClicked$16(ZLcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 382
     iput-boolean p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mPositiveCtaButtonClicked:Z
 
     return-void
@@ -698,7 +625,6 @@
 .method public static synthetic lambda$maybeSetRequestId$0(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 234
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mRequestId:I
 
     return-void
@@ -707,7 +633,6 @@
 .method public static synthetic lambda$maybeSetSelectedDatasetId$13(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 364
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mSelectedDatasetId:I
 
     return-void
@@ -716,7 +641,6 @@
 .method private synthetic lambda$maybeSetSelectedDatasetPickReason$26(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 485
     invoke-virtual {p0, p1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->convertDatasetPickReason(I)I
 
     move-result p0
@@ -729,7 +653,6 @@
 .method public static synthetic lambda$maybeSetSuggestionPresentedTimestampMs$12(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 358
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mSuggestionPresentedTimestampMs:I
 
     return-void
@@ -738,7 +661,6 @@
 .method public static synthetic lambda$maybeSetSuggestionSentTimestampMs$11(ILcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;)V
     .locals 0
 
-    .line 352
     iput p0, p1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mSuggestionSentTimestampMs:I
 
     return-void
@@ -749,7 +671,6 @@
 .method public final convertDatasetPickReason(I)I
     .locals 0
 
-    .line 0
     if-eqz p1, :cond_0
 
     const/4 p0, 0x1
@@ -785,7 +706,6 @@
 
     move-object/from16 v0, p0
 
-    .line 513
     iget-object v1, v0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     invoke-virtual {v1}, Ljava/util/Optional;->isPresent()Z
@@ -798,12 +718,10 @@
 
     const-string v0, "Shouldn\'t be logging AutofillPresentationEventReported again for same event"
 
-    .line 514
     invoke-static {v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 518
     :cond_0
     iget-object v1, v0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
@@ -813,12 +731,10 @@
 
     check-cast v1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;
 
-    .line 519
     sget-boolean v3, Lcom/android/server/autofill/Helper;->sVerbose:Z
 
     if-eqz v3, :cond_1
 
-    .line 520
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1053,13 +969,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     :cond_1
     iget-boolean v2, v1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mIsDatasetAvailable:Z
 
     if-nez v2, :cond_2
 
-    .line 555
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
 
     move-result-object v1
@@ -1071,7 +985,6 @@
     :cond_2
     const/16 v2, 0x1d5
 
-    .line 558
     iget v3, v1, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;->mRequestId:I
 
     iget v4, v0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mSessionId:I
@@ -1170,7 +1083,6 @@
 
     invoke-static/range {v2 .. v32}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIIIIIIIIIIIZIIIIIZZZIIJJIIII)V
 
-    .line 588
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
 
     move-result-object v1
@@ -1183,7 +1095,6 @@
 .method public maybeSetAuthenticationResult(I)V
     .locals 1
 
-    .line 439
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda15;
@@ -1198,7 +1109,6 @@
 .method public maybeSetAuthenticationType(I)V
     .locals 1
 
-    .line 430
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda12;
@@ -1213,7 +1123,6 @@
 .method public maybeSetAutofillServiceUid(I)V
     .locals 1
 
-    .line 415
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda5;
@@ -1228,7 +1137,6 @@
 .method public maybeSetAvailableCount(Ljava/util/List;Landroid/view/autofill/AutofillId;)V
     .locals 1
 
-    .line 255
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda2;
@@ -1243,7 +1151,6 @@
 .method public maybeSetCountShown(Ljava/util/List;Landroid/view/autofill/AutofillId;)V
     .locals 1
 
-    .line 266
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda14;
@@ -1258,7 +1165,6 @@
 .method public maybeSetDetectionPreference(I)V
     .locals 1
 
-    .line 493
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda0;
@@ -1273,7 +1179,6 @@
 .method public maybeSetDialogDismissed(Z)V
     .locals 1
 
-    .line 369
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda20;
@@ -1288,7 +1193,6 @@
 .method public maybeSetDisplayPresentationType(I)V
     .locals 1
 
-    .line 333
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda10;
@@ -1303,7 +1207,6 @@
 .method public maybeSetFillRequestSentTimestampMs(I)V
     .locals 1
 
-    .line 339
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda7;
@@ -1318,7 +1221,6 @@
 .method public maybeSetFillResponseReceivedTimestampMs(I)V
     .locals 1
 
-    .line 345
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda17;
@@ -1333,7 +1235,6 @@
 .method public maybeSetInlinePresentationAndSuggestionHostUid(Landroid/content/Context;I)V
     .locals 1
 
-    .line 387
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda9;
@@ -1348,7 +1249,6 @@
 .method public maybeSetIsNewRequest(Z)V
     .locals 1
 
-    .line 421
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda6;
@@ -1363,7 +1263,6 @@
 .method public maybeSetNegativeCtaButtonClicked(Z)V
     .locals 1
 
-    .line 375
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda18;
@@ -1378,7 +1277,6 @@
 .method public maybeSetNoPresentationEventReason(I)V
     .locals 1
 
-    .line 238
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda3;
@@ -1393,7 +1291,6 @@
 .method public maybeSetNoPresentationEventReasonIfNoReasonExists(I)V
     .locals 1
 
-    .line 246
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda11;
@@ -1408,7 +1305,6 @@
 .method public maybeSetPositiveCtaButtonClicked(Z)V
     .locals 1
 
-    .line 381
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda19;
@@ -1423,7 +1319,6 @@
 .method public maybeSetRequestId(I)V
     .locals 1
 
-    .line 234
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda16;
@@ -1438,7 +1333,6 @@
 .method public maybeSetSelectedDatasetId(I)V
     .locals 1
 
-    .line 363
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda1;
@@ -1453,7 +1347,6 @@
 .method public maybeSetSelectedDatasetPickReason(I)V
     .locals 2
 
-    .line 484
     iget-object v0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v1, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda8;
@@ -1468,7 +1361,6 @@
 .method public maybeSetSuggestionPresentedTimestampMs(I)V
     .locals 1
 
-    .line 357
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda4;
@@ -1483,7 +1375,6 @@
 .method public maybeSetSuggestionSentTimestampMs(I)V
     .locals 1
 
-    .line 351
     iget-object p0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$$ExternalSyntheticLambda13;
@@ -1498,7 +1389,6 @@
 .method public startNewEvent()V
     .locals 1
 
-    .line 226
     iget-object v0, p0, Lcom/android/server/autofill/PresentationStatsEventLogger;->mEventInternal:Ljava/util/Optional;
 
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
@@ -1511,12 +1401,10 @@
 
     const-string v0, "Failed to start new event because already have active event."
 
-    .line 227
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 230
     :cond_0
     new-instance v0, Lcom/android/server/autofill/PresentationStatsEventLogger$PresentationStatsEventInternal;
 

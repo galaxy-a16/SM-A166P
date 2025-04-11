@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$8PXUGzSPuXRS_B9RDA7KiYqHOZk(Lcom/android/server/wm/PackagesChangeAsTask;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wm/PackagesChangeAsTask;->updateValueToTaskImmediately()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$IyJObiVuDrdR4ZvTTDs6YHEoMC4(Lcom/android/server/wm/PackagesChangeAsTask;Lcom/android/server/wm/Task;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/PackagesChangeAsTask;->lambda$updateValueToTaskImmediately$0(Lcom/android/server/wm/Task;)V
 
     return-void
@@ -29,17 +27,14 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 265
     invoke-direct {p0, p1}, Lcom/android/server/wm/PackagesChange;-><init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
 
-    .line 262
     new-instance p1, Lcom/android/server/wm/PackagesChangeAsTask$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0}, Lcom/android/server/wm/PackagesChangeAsTask$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/wm/PackagesChangeAsTask;)V
 
     iput-object p1, p0, Lcom/android/server/wm/PackagesChangeAsTask;->mUpdateValueToTaskImmediately:Ljava/lang/Runnable;
 
-    .line 266
     invoke-static {p0}, Lcom/android/server/wm/PackagesChange;->addPackagesChangeAsTask(Lcom/android/server/wm/PackagesChangeAsTask;)V
 
     return-void
@@ -50,7 +45,6 @@
 
     const/4 v0, 0x1
 
-    .line 281
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/PackagesChangeAsTask;->updateValueToTask(Lcom/android/server/wm/Task;Z)V
 
     return-void
@@ -67,7 +61,6 @@
 .method public final updateValueToTask(Lcom/android/server/wm/Task;Z)V
     .locals 1
 
-    .line 288
     iget-object v0, p1, Lcom/android/server/wm/Task;->realActivity:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
@@ -81,7 +74,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 289
     :goto_0
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/wm/PackagesChangeAsTask;->onUpdateValueToTask(Lcom/android/server/wm/Task;Ljava/lang/String;Z)V
 
@@ -93,12 +85,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 271
     invoke-virtual {p0}, Lcom/android/server/wm/PackagesChangeAsTask;->updateValueToTaskImmediately()V
 
     return-void
 
-    .line 274
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/PackagesChange;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -108,7 +98,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 275
     iget-object p1, p0, Lcom/android/server/wm/PackagesChange;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mH:Lcom/android/server/wm/ActivityTaskManagerService$H;
@@ -125,7 +114,6 @@
 .method public final updateValueToTaskImmediately()V
     .locals 3
 
-    .line 279
     iget-object v0, p0, Lcom/android/server/wm/PackagesChange;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -134,7 +122,6 @@
 
     monitor-enter v0
 
-    .line 280
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/PackagesChange;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -146,7 +133,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wm/WindowContainer;->forAllTasks(Ljava/util/function/Consumer;)V
 
-    .line 283
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

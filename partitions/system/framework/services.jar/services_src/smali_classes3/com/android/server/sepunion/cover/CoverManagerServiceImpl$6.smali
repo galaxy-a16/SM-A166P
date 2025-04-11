@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)V
     .locals 0
 
-    .line 216
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$6;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 3
 
-    .line 219
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$6;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     const/4 v0, 0x0

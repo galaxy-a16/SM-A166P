@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;II)V
     .locals 0
 
-    .line 2871
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;-><init>(II)V
@@ -24,7 +23,6 @@
 .method public cancel()V
     .locals 0
 
-    .line 2879
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$mcancelAccessibilityGestureTv(Lcom/android/server/policy/PhoneWindowManager;)V
@@ -35,14 +33,12 @@
 .method public execute()V
     .locals 2
 
-    .line 2874
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mBackKeyHandled:Z
 
-    .line 2875
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$minterceptAccessibilityGestureTv(Lcom/android/server/policy/PhoneWindowManager;)V
@@ -53,7 +49,6 @@
 .method public getKeyInterceptDelayMs()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0

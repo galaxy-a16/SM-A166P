@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetdataEntry(Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;)Ljava/util/List;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->dataEntry:Ljava/util/List;
 
     return-object p0
@@ -40,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetstartTimer(Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->startTimer:J
 
     return-wide v0
@@ -49,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fputstartTimer(Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->startTimer:J
 
     return-void
@@ -58,15 +55,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 140
     sget-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->DBG:Z
 
     sput-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
-    .line 208
     invoke-static {}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getPackageManagerImpl()Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
-    .line 210
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -83,43 +77,34 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 216
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 144
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->dataEntry:Ljava/util/List;
 
     const-wide/16 v1, 0x0
 
-    .line 146
     iput-wide v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->startTimer:J
 
-    .line 160
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->registeredDataRecipients:Ljava/util/List;
 
-    .line 162
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->syncObject:Ljava/lang/Object;
 
-    .line 166
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 168
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mHandler:Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$DataDeliveryHandler;
 
-    .line 218
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->dataEntry:Ljava/util/List;
 
-    .line 220
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -132,12 +117,10 @@
 .method public static checkIfProcessIsDaemon(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 661
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 667
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -161,10 +144,8 @@
 
     move-result-object p0
 
-    .line 669
     invoke-virtual {p0}, Ljava/lang/Process;->waitFor()I
 
-    .line 671
     new-instance v1, Ljava/io/BufferedReader;
 
     new-instance v2, Ljava/io/InputStreamReader;
@@ -177,7 +158,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 675
     :goto_0
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -185,12 +165,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 677
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
 
-    .line 681
     :cond_0
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_0
@@ -201,10 +179,8 @@
     :catch_0
     move-exception p0
 
-    .line 685
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 689
     :goto_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -218,7 +194,6 @@
 
     const/4 v0, 0x0
 
-    .line 701
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
@@ -226,7 +201,6 @@
 
     return-object v0
 
-    .line 705
     :cond_0
     invoke-virtual {v1, p0}, Lcom/android/server/pm/IPackageManagerBase;->getPackagesForUid(I)[Ljava/lang/String;
 
@@ -238,7 +212,6 @@
 
     if-nez v1, :cond_1
 
-    .line 709
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -264,7 +237,6 @@
 
     return-object v0
 
-    .line 715
     :cond_1
     array-length v3, v1
 
@@ -272,7 +244,6 @@
 
     if-ne v3, v4, :cond_6
 
-    .line 719
     invoke-static {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getHashFromCacheBasedOnUid(I)Ljava/lang/String;
 
     move-result-object v3
@@ -284,10 +255,8 @@
     :cond_2
     const/4 v3, 0x0
 
-    .line 727
     aget-object v6, v1, v3
 
-    .line 729
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -302,26 +271,22 @@
 
     if-eqz v1, :cond_6
 
-    .line 731
     iget-object v3, v1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     if-eqz v3, :cond_6
 
-    .line 733
     new-instance v3, Ljava/io/File;
 
     iget-object v4, v1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 737
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    .line 739
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -352,7 +317,6 @@
 
     return-object v0
 
-    .line 745
     :cond_3
     invoke-static {v3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getHash(Ljava/io/File;)Ljava/lang/String;
 
@@ -360,12 +324,10 @@
 
     if-eqz p1, :cond_6
 
-    .line 749
     iget-object v2, v1, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
 
     if-eqz v2, :cond_5
 
-    .line 753
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -374,7 +336,6 @@
 
     if-le v2, v3, :cond_4
 
-    .line 755
     new-instance v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;
 
     iget-object v7, v1, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
@@ -403,7 +364,6 @@
 
     goto :goto_0
 
-    .line 761
     :cond_4
     new-instance v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;
 
@@ -423,7 +383,6 @@
 
     invoke-direct/range {v4 .. v10}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 767
     :goto_0
     invoke-static {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->insertHashIntoCache(Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;)V
     :try_end_1
@@ -435,7 +394,6 @@
     :catch_0
     move-exception p0
 
-    .line 785
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_6
@@ -445,12 +403,10 @@
 .method public static clearHashCacheEntire()V
     .locals 5
 
-    .line 551
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 553
     :try_start_0
     sget-boolean v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
@@ -480,7 +436,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 555
     :cond_0
     sget-object v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
@@ -490,7 +445,6 @@
 
     const-string v1, "NetworkAnalytics:NetworkAnalyticsDataDelivery"
 
-    .line 557
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -513,7 +467,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     :cond_1
     monitor-exit v0
 
@@ -542,7 +495,6 @@
 
     if-eqz p4, :cond_4
 
-    .line 1059
     :try_start_0
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
@@ -562,7 +514,6 @@
 
     if-le v1, v6, :cond_2
 
-    .line 1061
     :try_start_1
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
@@ -586,27 +537,23 @@
 
     if-eqz v1, :cond_4
 
-    .line 1063
     :cond_0
     iget-object v1, p4, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
-    .line 1065
     new-instance v1, Ljava/io/File;
 
     iget-object p4, p4, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     invoke-direct {v1, p4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1069
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result p4
 
     if-nez p4, :cond_1
 
-    .line 1071
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -631,7 +578,6 @@
 
     return-object v0
 
-    .line 1077
     :cond_1
     invoke-static {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getHash(Ljava/io/File;)Ljava/lang/String;
 
@@ -639,7 +585,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 1081
     new-instance p4, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
@@ -668,12 +613,10 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 1085
     invoke-static {p4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->insertHashIntoCache(Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;)V
 
     return-object p1
 
-    .line 1101
     :cond_2
     invoke-virtual {p3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -681,26 +624,22 @@
 
     if-eqz v1, :cond_4
 
-    .line 1103
     iget-object v1, p4, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
-    .line 1105
     new-instance v1, Ljava/io/File;
 
     iget-object p4, p4, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     invoke-direct {v1, p4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1109
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result p4
 
     if-nez p4, :cond_3
 
-    .line 1111
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -725,7 +664,6 @@
 
     return-object v0
 
-    .line 1117
     :cond_3
     invoke-static {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getHash(Ljava/io/File;)Ljava/lang/String;
 
@@ -733,7 +671,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 1121
     new-instance p4, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;
 
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -754,7 +691,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 1125
     invoke-static {p4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->insertHashIntoCache(Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -764,7 +700,6 @@
     :catch_0
     move-exception p0
 
-    .line 1145
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_4
@@ -776,7 +711,6 @@
 
     const/4 v0, 0x0
 
-    .line 799
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
@@ -784,7 +718,6 @@
 
     return-object v0
 
-    .line 803
     :cond_0
     invoke-virtual {v1, p0}, Lcom/android/server/pm/IPackageManagerBase;->getPackagesForUid(I)[Ljava/lang/String;
 
@@ -794,7 +727,6 @@
 
     return-object v0
 
-    .line 809
     :cond_1
     array-length v2, v1
 
@@ -807,7 +739,6 @@
 
     aget-object v5, v1, v4
 
-    .line 813
     sget-object v6, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -822,14 +753,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 815
     iget-object v7, v6, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
 
     if-eqz v7, :cond_2
 
     if-eqz p1, :cond_2
 
-    .line 817
     invoke-static {p0, p1, v5, v7, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->compareProcessNamesAndCalculateHash(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
 
     move-result-object v7
@@ -838,7 +767,6 @@
 
     return-object v7
 
-    .line 831
     :cond_2
     sget-object v7, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
@@ -854,12 +782,10 @@
 
     if-eqz v7, :cond_4
 
-    .line 835
     iget-object v7, v7, Landroid/content/pm/PackageInfo;->services:[Landroid/content/pm/ServiceInfo;
 
     if-eqz v7, :cond_4
 
-    .line 839
     array-length v8, v7
 
     move v9, v3
@@ -871,7 +797,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 841
     iget-object v10, v10, Landroid/content/pm/ServiceInfo;->processName:Ljava/lang/String;
 
     if-eqz v10, :cond_3
@@ -880,7 +805,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 843
     invoke-static {p0, p1, v5, v10, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->compareProcessNamesAndCalculateHash(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
 
     move-result-object v10
@@ -894,7 +818,6 @@
 
     goto :goto_1
 
-    .line 863
     :cond_4
     sget-object v7, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
@@ -910,12 +833,10 @@
 
     if-eqz v7, :cond_6
 
-    .line 867
     iget-object v7, v7, Landroid/content/pm/PackageInfo;->providers:[Landroid/content/pm/ProviderInfo;
 
     if-eqz v7, :cond_6
 
-    .line 871
     array-length v8, v7
 
     move v9, v3
@@ -927,7 +848,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 873
     iget-object v10, v10, Landroid/content/pm/ProviderInfo;->processName:Ljava/lang/String;
 
     if-eqz v10, :cond_5
@@ -936,7 +856,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 875
     invoke-static {p0, p1, v5, v10, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->compareProcessNamesAndCalculateHash(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
 
     move-result-object v10
@@ -950,7 +869,6 @@
 
     goto :goto_2
 
-    .line 895
     :cond_6
     sget-object v7, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
@@ -966,12 +884,10 @@
 
     if-eqz v7, :cond_8
 
-    .line 899
     iget-object v7, v7, Landroid/content/pm/PackageInfo;->receivers:[Landroid/content/pm/ActivityInfo;
 
     if-eqz v7, :cond_8
 
-    .line 903
     array-length v8, v7
 
     move v9, v3
@@ -983,7 +899,6 @@
 
     if-eqz v10, :cond_7
 
-    .line 905
     iget-object v10, v10, Landroid/content/pm/ActivityInfo;->processName:Ljava/lang/String;
 
     if-eqz v10, :cond_7
@@ -992,7 +907,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 907
     invoke-static {p0, p1, v5, v10, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->compareProcessNamesAndCalculateHash(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
 
     move-result-object v10
@@ -1006,7 +920,6 @@
 
     goto :goto_3
 
-    .line 927
     :cond_8
     sget-object v7, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
@@ -1022,12 +935,10 @@
 
     if-eqz v7, :cond_a
 
-    .line 931
     iget-object v7, v7, Landroid/content/pm/PackageInfo;->activities:[Landroid/content/pm/ActivityInfo;
 
     if-eqz v7, :cond_a
 
-    .line 935
     array-length v8, v7
 
     move v9, v3
@@ -1039,7 +950,6 @@
 
     if-eqz v10, :cond_9
 
-    .line 937
     iget-object v10, v10, Landroid/content/pm/ActivityInfo;->processName:Ljava/lang/String;
 
     if-eqz v10, :cond_9
@@ -1048,7 +958,6 @@
 
     if-eqz v6, :cond_9
 
-    .line 939
     invoke-static {p0, p1, v5, v10, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->compareProcessNamesAndCalculateHash(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
 
     move-result-object v10
@@ -1072,7 +981,6 @@
     :catch_0
     move-exception p0
 
-    .line 959
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_b
@@ -1091,12 +999,10 @@
     :try_start_0
     const-string v3, "SHA-256"
 
-    .line 1165
     invoke-static {v3}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v3
 
-    .line 1167
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-direct {v4, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -1111,7 +1017,6 @@
     :try_start_1
     new-array p0, p0, [B
 
-    .line 1173
     :goto_0
     invoke-virtual {v4, p0}, Ljava/io/FileInputStream;->read([B)I
 
@@ -1123,18 +1028,15 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 1175
     invoke-virtual {v3, p0, v7, v5}, Ljava/security/MessageDigest;->update([BII)V
 
     goto :goto_0
 
-    .line 1179
     :cond_0
     invoke-virtual {v3}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
 
-    .line 1181
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
@@ -1146,7 +1048,6 @@
 
     move v5, v7
 
-    .line 1183
     :goto_1
     :try_start_2
     array-length v6, p0
@@ -1159,7 +1060,6 @@
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    .line 1185
     aget-byte v9, p0, v5
 
     and-int/lit16 v9, v9, 0xff
@@ -1185,7 +1085,6 @@
 
     goto :goto_1
 
-    .line 1207
     :cond_1
     :try_start_3
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
@@ -1197,7 +1096,6 @@
     :catch_0
     move-exception p0
 
-    .line 1213
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_5
@@ -1254,14 +1152,12 @@
     :try_start_4
     const-string v5, "getHash: IOException"
 
-    .line 1199
     invoke-static {v1, v5, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     if-eqz v4, :cond_2
 
-    .line 1207
     :try_start_5
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -1280,14 +1176,12 @@
     :try_start_6
     const-string v5, "getHash: FileNotFoundException"
 
-    .line 1195
     invoke-static {v1, v5, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     if-eqz v4, :cond_2
 
-    .line 1207
     :try_start_7
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_7
@@ -1306,14 +1200,12 @@
     :try_start_8
     const-string v5, "getHash: NoSuchAlgorithmException"
 
-    .line 1191
     invoke-static {v1, v5, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
     if-eqz v4, :cond_2
 
-    .line 1207
     :try_start_9
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_9
@@ -1325,7 +1217,6 @@
 
     return-object v2
 
-    .line 1223
     :cond_3
     invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -1341,7 +1232,6 @@
     :goto_6
     if-eqz v2, :cond_4
 
-    .line 1207
     :try_start_a
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_a
@@ -1352,10 +1242,8 @@
     :catch_a
     move-exception v2
 
-    .line 1213
     invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1217
     :cond_4
     :goto_7
     throw p0
@@ -1364,12 +1252,10 @@
 .method public static getHashFromCache(ILjava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 427
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 429
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
@@ -1377,7 +1263,6 @@
 
     move-result-object v1
 
-    .line 431
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1385,14 +1270,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 433
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;
 
-    .line 435
     iget v3, v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;->uid:I
 
     if-ne v3, p0, :cond_0
@@ -1413,7 +1296,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 437
     :cond_1
     iget-object p0, v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;->hash:Ljava/lang/String;
 
@@ -1421,7 +1303,6 @@
 
     return-object p0
 
-    .line 443
     :cond_2
     monitor-exit v0
 
@@ -1442,12 +1323,10 @@
 .method public static getHashFromCacheBasedOnUid(I)Ljava/lang/String;
     .locals 4
 
-    .line 453
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 455
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
@@ -1455,7 +1334,6 @@
 
     move-result-object v1
 
-    .line 457
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1463,26 +1341,22 @@
 
     if-eqz v2, :cond_1
 
-    .line 459
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;
 
-    .line 461
     iget v3, v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;->uid:I
 
     if-ne v3, p0, :cond_0
 
-    .line 463
     iget-object p0, v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;->hash:Ljava/lang/String;
 
     monitor-exit v0
 
     return-object p0
 
-    .line 469
     :cond_1
     monitor-exit v0
 
@@ -1503,19 +1377,16 @@
 .method public static getInstance()Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;
     .locals 1
 
-    .line 228
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mInstance:Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;
 
     if-nez v0, :cond_0
 
-    .line 230
     new-instance v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mInstance:Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;
 
-    .line 232
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mInstance:Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;
 
@@ -1527,7 +1398,6 @@
 
     const/4 v0, 0x0
 
-    .line 571
     :try_start_0
     invoke-static {p0, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getHashFromCache(ILjava/lang/String;)Ljava/lang/String;
 
@@ -1537,7 +1407,6 @@
 
     return-object v1
 
-    .line 583
     :cond_0
     invoke-static {p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->checkIfProcessIsDaemon(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1545,7 +1414,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 585
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v2
@@ -1560,12 +1428,10 @@
 
     if-nez v2, :cond_2
 
-    .line 587
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 591
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -1574,7 +1440,6 @@
 
     return-object v0
 
-    .line 597
     :cond_1
     invoke-static {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getHash(Ljava/io/File;)Ljava/lang/String;
 
@@ -1584,7 +1449,6 @@
 
     return-object p0
 
-    .line 611
     :cond_2
     invoke-static {p0, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->checkSingleUidAndCalculateHash(ILjava/lang/String;)Ljava/lang/String;
 
@@ -1594,7 +1458,6 @@
 
     return-object v1
 
-    .line 621
     :cond_3
     invoke-static {p0, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getFileLocationFromProcessNameAndCalculateHash(ILjava/lang/String;)Ljava/lang/String;
 
@@ -1604,7 +1467,6 @@
 
     return-object v1
 
-    .line 631
     :cond_4
     invoke-static {p0, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getPackageNameFromPathAndCalculateHash(ILjava/lang/String;)Ljava/lang/String;
 
@@ -1623,7 +1485,6 @@
 
     const-string v1, "getPackageHash: Exception"
 
-    .line 649
     invoke-static {p1, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_5
@@ -1633,14 +1494,12 @@
 .method public static getPackageManagerImpl()Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
     .locals 1
 
-    .line 1231
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
     if-nez v0, :cond_0
 
     const-string/jumbo v0, "package"
 
-    .line 1233
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -1649,7 +1508,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
-    .line 1237
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
@@ -1661,7 +1519,6 @@
 
     const/4 v0, 0x0
 
-    .line 973
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
@@ -1672,12 +1529,10 @@
     :cond_0
     const-string v1, "/"
 
-    .line 979
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 981
     array-length v2, v1
 
     const/4 v3, 0x4
@@ -1686,7 +1541,6 @@
 
     const/4 v2, 0x2
 
-    .line 983
     aget-object v4, v1, v2
 
     const-string v5, "data"
@@ -1699,12 +1553,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 985
     aget-object v1, v1, v5
 
     goto :goto_0
 
-    .line 987
     :cond_1
     array-length v4, v1
 
@@ -1738,7 +1590,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 989
     aget-object v1, v1, v3
 
     goto :goto_0
@@ -1749,7 +1600,6 @@
     :goto_0
     if-eqz v1, :cond_6
 
-    .line 995
     sget-object v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
     invoke-virtual {v2, p0}, Lcom/android/server/pm/IPackageManagerBase;->getPackagesForUid(I)[Ljava/lang/String;
@@ -1760,7 +1610,6 @@
 
     return-object v0
 
-    .line 1001
     :cond_3
     array-length v3, v2
 
@@ -1771,14 +1620,12 @@
 
     aget-object v5, v2, v4
 
-    .line 1003
     invoke-virtual {v5, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_5
 
-    .line 1005
     sget-object v6, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->pmsImp:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -1793,19 +1640,16 @@
 
     if-eqz v5, :cond_5
 
-    .line 1007
     iget-object v6, v5, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     if-eqz v6, :cond_5
 
-    .line 1009
     new-instance v6, Ljava/io/File;
 
     iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     invoke-direct {v6, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1013
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
     move-result v5
@@ -1814,7 +1658,6 @@
 
     const-string v1, "NetworkAnalytics:NetworkAnalyticsDataDelivery"
 
-    .line 1015
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1839,7 +1682,6 @@
 
     return-object v0
 
-    .line 1021
     :cond_4
     invoke-static {v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getHash(Ljava/io/File;)Ljava/lang/String;
 
@@ -1859,7 +1701,6 @@
     :catch_0
     move-exception p0
 
-    .line 1043
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_6
@@ -1869,7 +1710,6 @@
 .method public static insertHashIntoCache(Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;)V
     .locals 4
 
-    .line 479
     sget-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1880,7 +1720,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
     :cond_0
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
@@ -1891,7 +1730,6 @@
     :try_start_0
     const-string v0, "NetworkAnalytics:NetworkAnalyticsDataDelivery"
 
-    .line 483
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1942,13 +1780,11 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 485
     :cond_1
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 487
     monitor-exit v1
 
     return-void
@@ -1969,7 +1805,6 @@
 .method public static updateHashCache(ILjava/lang/String;)V
     .locals 6
 
-    .line 495
     sget-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1980,13 +1815,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 497
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 499
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
@@ -1994,7 +1827,6 @@
 
     move-result-object v1
 
-    .line 501
     :cond_1
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -2003,14 +1835,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 503
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;
 
-    .line 505
     iget v3, v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;->uid:I
 
     if-ne v3, p0, :cond_1
@@ -2023,7 +1853,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 507
     sget-boolean v3, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
     if-eqz v3, :cond_2
@@ -2080,13 +1909,11 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 509
     :cond_2
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 515
     :cond_3
     monitor-exit v0
 
@@ -2105,7 +1932,6 @@
 .method public static updateHashCacheForUser(I)V
     .locals 6
 
-    .line 523
     sget-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -2116,13 +1942,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 527
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->appset:Ljava/util/Set;
 
@@ -2130,7 +1954,6 @@
 
     move-result-object v1
 
-    .line 529
     :cond_1
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -2139,19 +1962,16 @@
 
     if-eqz v2, :cond_3
 
-    .line 531
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;
 
-    .line 533
     iget v3, v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$AppInfoSet;->userId:I
 
     if-ne v3, p0, :cond_1
 
-    .line 535
     sget-boolean v3, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
     if-eqz v3, :cond_2
@@ -2208,13 +2028,11 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 537
     :cond_2
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 543
     :cond_3
     monitor-exit v0
 
@@ -2239,7 +2057,6 @@
 
     const/4 v1, 0x0
 
-    .line 395
     invoke-virtual {p0, v0, v1, v1, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->sendMessageToHandler(IIILjava/lang/Object;)V
 
     return v1
@@ -2248,7 +2065,6 @@
 .method public addNAPDataRecipient(Lcom/android/server/enterprise/nap/DataDeliveryHelper;)V
     .locals 5
 
-    .line 240
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->validateRecipientObject(Lcom/android/server/enterprise/nap/DataDeliveryHelper;)Z
 
     move-result v0
@@ -2261,7 +2077,6 @@
 
     const-string v0, "NetworkAnalytics:NetworkAnalyticsDataDelivery"
 
-    .line 242
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2282,13 +2097,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->getIdentifier()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 248
     sget-boolean v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
     if-eqz v1, :cond_1
@@ -2311,31 +2124,26 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
     :cond_1
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->syncObject:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 252
     :try_start_0
     invoke-static {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->getVendorNameFromTransformedName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 254
     invoke-static {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->getCidFromTransformedName(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 252
     invoke-virtual {p0, v3, v4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->isDataRecipientPresent(Ljava/lang/String;I)I
 
     move-result v3
 
     if-gez v3, :cond_2
 
-    .line 256
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getRecipientList()Ljava/util/List;
 
     move-result-object p0
@@ -2346,7 +2154,6 @@
 
     const-string p0, "NetworkAnalytics:NetworkAnalyticsDataDelivery"
 
-    .line 258
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2363,7 +2170,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     :cond_2
     monitor-exit v2
 
@@ -2386,7 +2192,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 330
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -2395,13 +2200,11 @@
 
     goto/16 :goto_2
 
-    .line 336
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->syncObject:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 338
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getRecipientList()Ljava/util/List;
 
@@ -2409,7 +2212,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 340
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
@@ -2418,7 +2220,6 @@
 
     goto :goto_1
 
-    .line 348
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2440,13 +2241,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 352
     :try_start_1
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->getServiceBinder()Lcom/samsung/android/knox/net/nap/serviceprovider/INetworkAnalyticsService;
 
     move-result-object v3
 
-    .line 354
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->getProfile()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object v4
@@ -2457,7 +2256,6 @@
 
     if-nez v3, :cond_3
 
-    .line 358
     sget-boolean v3, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
     if-eqz v3, :cond_2
@@ -2486,7 +2284,6 @@
 
     goto :goto_0
 
-    .line 364
     :cond_3
     invoke-virtual {p0, v2, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getAugmentedData(Lcom/android/server/enterprise/nap/DataDeliveryHelper;Ljava/util/List;)Ljava/util/List;
 
@@ -2494,7 +2291,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 366
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v5
@@ -2503,7 +2299,6 @@
 
     goto :goto_0
 
-    .line 372
     :cond_4
     invoke-interface {v3, v4, v2}, Lcom/samsung/android/knox/net/nap/serviceprovider/INetworkAnalyticsService;->onDataAvailable(Ljava/lang/String;Ljava/util/List;)V
     :try_end_1
@@ -2521,7 +2316,6 @@
 
     const-string v4, "deliverData: Exception "
 
-    .line 380
     invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -2533,12 +2327,10 @@
 
     const-string v4, "deliverData: RemoteException "
 
-    .line 376
     invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 385
     :cond_5
     monitor-exit v1
 
@@ -2546,7 +2338,6 @@
 
     return p0
 
-    .line 342
     :cond_6
     :goto_1
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
@@ -2559,7 +2350,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     :cond_7
     monitor-exit v1
 
@@ -2568,7 +2358,6 @@
     :catchall_0
     move-exception p0
 
-    .line 385
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -2591,7 +2380,6 @@
 
     goto :goto_1
 
-    .line 1269
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -2599,12 +2387,10 @@
 
     if-lez v0, :cond_2
 
-    .line 1271
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1273
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -2623,14 +2409,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1275
     invoke-virtual {p1, v0}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->processData(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1277
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -2638,7 +2422,6 @@
     :cond_2
     return-object p0
 
-    .line 1263
     :cond_3
     :goto_1
     sget-boolean p1, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
@@ -2658,25 +2441,21 @@
 .method public getRecipientList()Ljava/util/List;
     .locals 2
 
-    .line 1339
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->syncObject:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1341
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->registeredDataRecipients:Ljava/util/List;
 
     if-nez v1, :cond_0
 
-    .line 1343
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->registeredDataRecipients:Ljava/util/List;
 
-    .line 1345
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->registeredDataRecipients:Ljava/util/List;
 
@@ -2687,7 +2466,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1347
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2698,7 +2476,6 @@
 .method public initializeHandlerThread()V
     .locals 3
 
-    .line 415
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "DataDeliveryHandler"
@@ -2709,10 +2486,8 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 417
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 419
     new-instance v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$DataDeliveryHandler;
 
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mHandlerThread:Landroid/os/HandlerThread;
@@ -2731,14 +2506,12 @@
 .method public final isDataRecipientPresent(Ljava/lang/String;I)I
     .locals 3
 
-    .line 1315
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getRecipientList()Ljava/util/List;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 1317
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -2746,7 +2519,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1319
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2767,7 +2539,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1321
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
     if-eqz p0, :cond_2
@@ -2812,23 +2583,19 @@
 .method public removeDataRecipientsForPackage(Ljava/lang/String;I)V
     .locals 5
 
-    .line 296
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->syncObject:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 298
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getRecipientList()Ljava/util/List;
 
     move-result-object p0
 
-    .line 300
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    .line 302
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -2837,14 +2604,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 304
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/enterprise/nap/DataDeliveryHelper;
 
-    .line 306
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->getProfile()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object v2
@@ -2859,7 +2624,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 308
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->getProfile()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object v2
@@ -2870,7 +2634,6 @@
 
     if-ne v2, p2, :cond_0
 
-    .line 310
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->getProfile()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object v1
@@ -2881,7 +2644,6 @@
 
     const-string v2, "NetworkAnalytics:NetworkAnalyticsDataDelivery"
 
-    .line 312
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2902,12 +2664,10 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 322
     :cond_1
     monitor-exit v0
 
@@ -2926,12 +2686,10 @@
 .method public removeNAPDataRecipient(Ljava/lang/String;I)V
     .locals 5
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->syncObject:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 272
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->isDataRecipientPresent(Ljava/lang/String;I)I
 
@@ -2939,12 +2697,10 @@
 
     if-gez v1, :cond_0
 
-    .line 276
     monitor-exit v0
 
     return-void
 
-    .line 280
     :cond_0
     sget-boolean v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->DBG:Z
 
@@ -2960,7 +2716,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 282
     invoke-static {p1, p2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->getTransformedVendorName(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -2971,10 +2726,8 @@
 
     move-result-object p1
 
-    .line 280
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->getRecipientList()Ljava/util/List;
 
@@ -2982,7 +2735,6 @@
 
     invoke-interface {p0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 288
     monitor-exit v0
 
     return-void
@@ -3000,17 +2752,14 @@
 .method public final sendMessageToHandler(IIILjava/lang/Object;)V
     .locals 1
 
-    .line 1245
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mHandler:Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$DataDeliveryHandler;
 
     if-eqz v0, :cond_0
 
-    .line 1247
     invoke-static {v0, p1, p2, p3, p4}, Landroid/os/Message;->obtain(Landroid/os/Handler;IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 1249
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->mHandler:Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery$DataDeliveryHandler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -3028,7 +2777,6 @@
 
     return p0
 
-    .line 1295
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->getProfile()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
@@ -3036,7 +2784,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1297
     invoke-virtual {p1}, Lcom/android/server/enterprise/nap/DataDeliveryHelper;->getServiceConnection()Lcom/android/server/enterprise/nap/NetworkAnalyticsService$NetworkAnalyticsServiceConnection;
 
     move-result-object p1

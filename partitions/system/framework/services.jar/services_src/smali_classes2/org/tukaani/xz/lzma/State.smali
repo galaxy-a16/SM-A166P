@@ -21,7 +21,6 @@
 .method public get()I
     .locals 0
 
-    .line 44
     iget p0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     return p0
@@ -30,7 +29,6 @@
 .method public isLiteral()Z
     .locals 1
 
-    .line 73
     iget p0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     const/4 v0, 0x7
@@ -53,7 +51,6 @@
 
     const/4 v0, 0x0
 
-    .line 40
     iput v0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     return-void
@@ -62,7 +59,6 @@
 .method public updateLiteral()V
     .locals 3
 
-    .line 52
     iget v0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     const/4 v1, 0x3
@@ -71,7 +67,6 @@
 
     const/4 v0, 0x0
 
-    .line 53
     iput v0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     goto :goto_0
@@ -83,7 +78,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 55
     iput v0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     goto :goto_0
@@ -91,7 +85,6 @@
     :cond_1
     add-int/lit8 v0, v0, -0x6
 
-    .line 57
     iput v0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     :goto_0
@@ -101,7 +94,6 @@
 .method public updateLongRep()V
     .locals 2
 
-    .line 65
     iget v0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     const/4 v1, 0x7
@@ -124,7 +116,6 @@
 .method public updateMatch()V
     .locals 2
 
-    .line 61
     iget v0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     const/4 v1, 0x7
@@ -145,7 +136,6 @@
 .method public updateShortRep()V
     .locals 2
 
-    .line 69
     iget v0, p0, Lorg/tukaani/xz/lzma/State;->state:I
 
     const/4 v1, 0x7

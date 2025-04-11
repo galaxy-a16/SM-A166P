@@ -23,7 +23,6 @@
 .method public getControl()I
     .locals 0
 
-    .line 139
     iget p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallControlRequest;->mControl:I
 
     return p0
@@ -32,7 +31,6 @@
 .method public getId()Ljava/lang/String;
     .locals 0
 
-    .line 135
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallControlRequest;->mId:Ljava/lang/String;
 
     return-object p0
@@ -41,7 +39,6 @@
 .method public setControl(I)V
     .locals 0
 
-    .line 131
     iput p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallControlRequest;->mControl:I
 
     return-void
@@ -50,7 +47,6 @@
 .method public setId(Ljava/lang/String;)V
     .locals 0
 
-    .line 127
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallControlRequest;->mId:Ljava/lang/String;
 
     return-void

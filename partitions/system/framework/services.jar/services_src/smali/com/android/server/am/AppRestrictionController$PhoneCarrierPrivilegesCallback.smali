@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/am/AppRestrictionController;I)V
     .locals 0
 
-    .line 2951
     iput-object p1, p0, Lcom/android/server/am/AppRestrictionController$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2952
     iput p2, p0, Lcom/android/server/am/AppRestrictionController$PhoneCarrierPrivilegesCallback;->mPhoneId:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public onCarrierPrivilegesChanged(Ljava/util/Set;Ljava/util/Set;)V
     .locals 1
 
-    .line 2958
     iget-object p2, p0, Lcom/android/server/am/AppRestrictionController$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p2}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmCarrierPrivilegedLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -41,7 +38,6 @@
 
     monitor-enter p2
 
-    .line 2959
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$PhoneCarrierPrivilegesCallback;->this$0:Lcom/android/server/am/AppRestrictionController;
 
@@ -51,15 +47,12 @@
 
     iget p0, p0, Lcom/android/server/am/AppRestrictionController$PhoneCarrierPrivilegesCallback;->mPhoneId:I
 
-    .line 2960
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p1
 
-    .line 2959
     invoke-virtual {v0, p0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2961
     monitor-exit p2
 
     return-void

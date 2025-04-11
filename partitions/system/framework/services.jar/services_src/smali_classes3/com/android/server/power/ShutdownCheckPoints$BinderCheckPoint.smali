@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/power/ShutdownCheckPoints$Injector;ILjava/lang/String;)V
     .locals 0
 
-    .line 274
     invoke-direct {p0, p1, p3}, Lcom/android/server/power/ShutdownCheckPoints$SystemServerCheckPoint;-><init>(Lcom/android/server/power/ShutdownCheckPoints$Injector;Ljava/lang/String;)V
 
-    .line 275
     iput p2, p0, Lcom/android/server/power/ShutdownCheckPoints$BinderCheckPoint;->mCallerProcessId:I
 
-    .line 276
     invoke-interface {p1}, Lcom/android/server/power/ShutdownCheckPoints$Injector;->activityManager()Landroid/app/IActivityManager;
 
     move-result-object p1
@@ -34,7 +31,6 @@
 .method public dumpDetails(Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 286
     invoke-virtual {p0}, Lcom/android/server/power/ShutdownCheckPoints$SystemServerCheckPoint;->getMethodName()Ljava/lang/String;
 
     move-result-object v0
@@ -43,29 +39,24 @@
 
     const-string v0, "Failed to get method name"
 
-    .line 287
     :cond_0
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 289
     invoke-virtual {p0}, Lcom/android/server/power/ShutdownCheckPoints$BinderCheckPoint;->getProcessName()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "From process "
 
-    .line 290
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     if-nez v0, :cond_1
 
     const-string v0, "?"
 
-    .line 291
     :cond_1
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 292
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,7 +85,6 @@
 .method public getOrigin()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "BINDER"
 
     return-object p0
@@ -107,20 +97,17 @@
 
     const/4 v1, 0x0
 
-    .line 299
     :try_start_0
     iget-object v2, p0, Lcom/android/server/power/ShutdownCheckPoints$BinderCheckPoint;->mActivityManager:Landroid/app/IActivityManager;
 
     if-eqz v2, :cond_0
 
-    .line 300
     invoke-interface {v2}, Landroid/app/IActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 302
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -145,7 +132,6 @@
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 306
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -163,14 +149,12 @@
 
     check-cast v3, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 307
     iget v4, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     iget v5, p0, Lcom/android/server/power/ShutdownCheckPoints$BinderCheckPoint;->mCallerProcessId:I
 
     if-ne v4, v5, :cond_1
 
-    .line 308
     iget-object p0, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -182,7 +166,6 @@
 
     const-string v2, "Failed to get running app processes from ActivityManager"
 
-    .line 313
     invoke-static {v0, v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2

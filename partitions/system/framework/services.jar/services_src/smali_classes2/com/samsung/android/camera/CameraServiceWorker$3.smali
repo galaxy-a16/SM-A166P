@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;)V
     .locals 0
 
-    .line 512
     iput-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-direct {p0}, Lcom/samsung/android/camera/ICameraServiceWorker$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public acquireRequestInjector()Landroid/os/IBinder;
     .locals 2
 
-    .line 642
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -37,7 +35,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 647
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p0}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmRequestInjectorService(Lcom/samsung/android/camera/CameraServiceWorker;)Lcom/samsung/android/camera/requestinjector/RequestInjectorService;
@@ -51,10 +48,8 @@
 
     const-string v0, "Only system user is allowed to call acquireRequestInjector"
 
-    .line 643
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 644
     new-instance p0, Ljava/lang/SecurityException;
 
     invoke-direct {p0, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
@@ -67,15 +62,12 @@
 
     const-string p1, "CameraService_worker is up and running"
 
-    .line 748
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p1, "\tInterface v4 Hash:d9fcda68f4b826972b6433fa34b53cce41b2d3f6"
 
-    .line 749
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 750
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,17 +90,14 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 751
     sget-object p1, Lcom/samsung/android/camera/Logger$ID;->CAMERA_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {p1, p2}, Lcom/samsung/android/camera/Logger;->dumpLog(Lcom/samsung/android/camera/Logger$ID;Ljava/io/PrintWriter;)V
 
     const-string p1, "\n\tFold Event"
 
-    .line 753
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 754
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -131,12 +120,10 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 755
     sget-object p1, Lcom/samsung/android/camera/Logger$ID;->FOLD_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {p1, p2}, Lcom/samsung/android/camera/Logger;->dumpLog(Lcom/samsung/android/camera/Logger$ID;Ljava/io/PrintWriter;)V
 
-    .line 757
     iget-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmShakeEventListener(Lcom/samsung/android/camera/CameraServiceWorker;)Lcom/samsung/android/camera/ShakeEventListener;
@@ -145,7 +132,6 @@
 
     invoke-virtual {p1, p2}, Lcom/samsung/android/camera/ShakeEventListener;->dump(Ljava/io/PrintWriter;)V
 
-    .line 758
     iget-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmRequestInjectorService(Lcom/samsung/android/camera/CameraServiceWorker;)Lcom/samsung/android/camera/requestinjector/RequestInjectorService;
@@ -154,7 +140,6 @@
 
     invoke-virtual {p1, p2}, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->dump(Ljava/io/PrintWriter;)V
 
-    .line 759
     iget-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmVtCameraProviderObserver(Lcom/samsung/android/camera/CameraServiceWorker;)Lcom/samsung/android/camera/requestinjector/VtCameraProviderObserver;
@@ -163,7 +148,6 @@
 
     invoke-virtual {p1, p2}, Lcom/samsung/android/camera/requestinjector/VtCameraProviderObserver;->dump(Ljava/io/PrintWriter;)V
 
-    .line 760
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p0}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmScpmReceiver(Lcom/samsung/android/camera/CameraServiceWorker;)Lcom/samsung/android/camera/scpm/ScpmReceiver;
@@ -172,22 +156,18 @@
 
     invoke-virtual {p0, p2}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->dump(Ljava/io/PrintWriter;)V
 
-    .line 761
     sget-object p0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {p0, p2}, Lcom/samsung/android/camera/Logger;->dumpLog(Lcom/samsung/android/camera/Logger$ID;Ljava/io/PrintWriter;)V
 
-    .line 762
     sget-object p0, Lcom/samsung/android/camera/Logger$ID;->POST_PROCESS_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {p0, p2}, Lcom/samsung/android/camera/Logger;->dumpLog(Lcom/samsung/android/camera/Logger$ID;Ljava/io/PrintWriter;)V
 
-    .line 763
     sget-object p0, Lcom/samsung/android/camera/Logger$ID;->CAMERA_APPLICATION_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {p0, p2}, Lcom/samsung/android/camera/Logger;->dumpLog(Lcom/samsung/android/camera/Logger$ID;Ljava/io/PrintWriter;)V
 
-    .line 764
     sget-object p0, Lcom/samsung/android/camera/Logger$ID;->DATABASE_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {p0, p2}, Lcom/samsung/android/camera/Logger;->dumpLog(Lcom/samsung/android/camera/Logger$ID;Ljava/io/PrintWriter;)V
@@ -198,7 +178,6 @@
 .method public getDeviceInjectorOverride(Ljava/lang/String;I)Z
     .locals 5
 
-    .line 717
     invoke-static {}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$sfgetDEVICE_INJECTOR_TEST_PACKAGES()[Ljava/lang/String;
 
     move-result-object p0
@@ -216,7 +195,6 @@
 
     aget-object v4, p0, v2
 
-    .line 718
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -230,7 +208,6 @@
 
     goto :goto_0
 
-    .line 722
     :cond_1
     invoke-static {}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$sfgetDEVICE_INJECTOR_TEST_PACKAGES_FOR_BLOCK()[Ljava/lang/String;
 
@@ -245,7 +222,6 @@
 
     aget-object v4, p0, v2
 
-    .line 723
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -264,7 +240,6 @@
 
     const/4 v0, 0x3
 
-    .line 728
     invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
@@ -273,7 +248,6 @@
 
     return v3
 
-    .line 730
     :cond_4
     invoke-static {p1, p2}, Lcom/samsung/android/camera/CameraServiceWorker;->getTaskInfo(Ljava/lang/String;I)Lcom/samsung/android/camera/CameraServiceWorker$TaskInfo;
 
@@ -283,7 +257,6 @@
 
     return v1
 
-    .line 733
     :cond_5
     iget p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$TaskInfo;->displayId:I
 
@@ -298,7 +271,6 @@
 .method public getDeviceOrientationForDeviceInjector(Ljava/lang/String;I)I
     .locals 3
 
-    .line 652
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -311,7 +283,6 @@
 
     const-string p0, "CameraService_worker"
 
-    .line 653
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -338,7 +309,6 @@
 
     return v2
 
-    .line 657
     :cond_0
     invoke-static {p1, p2}, Lcom/samsung/android/camera/CameraServiceWorker;->getTaskInfo(Ljava/lang/String;I)Lcom/samsung/android/camera/CameraServiceWorker$TaskInfo;
 
@@ -348,7 +318,6 @@
 
     return v2
 
-    .line 660
     :cond_1
     iget-object p2, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -366,7 +335,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 663
     iget v0, p1, Lcom/samsung/android/camera/CameraServiceWorker$TaskInfo;->displayId:I
 
     invoke-virtual {p2, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
@@ -377,7 +345,6 @@
 
     const-string p0, "CameraService_worker"
 
-    .line 665
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,11 +365,9 @@
 
     return v2
 
-    .line 669
     :cond_2
     invoke-virtual {p2}, Landroid/view/Display;->getRotation()I
 
-    .line 675
     iget-object p2, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p2}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmOrientationLock(Lcom/samsung/android/camera/CameraServiceWorker;)Ljava/lang/Object;
@@ -411,7 +376,6 @@
 
     monitor-enter p2
 
-    .line 676
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -421,23 +385,19 @@
 
     if-nez v0, :cond_3
 
-    .line 677
     monitor-exit p2
 
     return v2
 
-    .line 680
     :cond_3
     iget p1, p1, Lcom/samsung/android/camera/CameraServiceWorker$TaskInfo;->displayId:I
 
     if-eqz p1, :cond_4
 
-    .line 687
     monitor-exit p2
 
     return v2
 
-    .line 689
     :cond_4
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -456,7 +416,6 @@
     :catchall_0
     move-exception p0
 
-    .line 691
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -468,7 +427,6 @@
 
     const-string p1, "Failed to query display manager!"
 
-    .line 671
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -477,7 +435,6 @@
 .method public final getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "d9fcda68f4b826972b6433fa34b53cce41b2d3f6"
 
     return-object p0
@@ -486,7 +443,6 @@
 .method public final getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x4
 
     return p0
@@ -495,7 +451,6 @@
 .method public notifyCameraSessionEvent(ILjava/lang/String;)V
     .locals 3
 
-    .line 571
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -506,7 +461,6 @@
 
     const-string p0, "CameraService_worker"
 
-    .line 572
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -533,7 +487,6 @@
 
     return-void
 
-    .line 576
     :cond_0
     invoke-static {}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$sfgetDEBUG()Z
 
@@ -543,7 +496,6 @@
 
     const-string v0, "CameraService_worker"
 
-    .line 577
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -566,7 +518,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 580
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -585,7 +536,6 @@
 
     goto :goto_0
 
-    .line 598
     :pswitch_0
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -595,7 +545,6 @@
 
     goto :goto_1
 
-    .line 595
     :pswitch_1
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -605,7 +554,6 @@
 
     goto :goto_1
 
-    .line 592
     :pswitch_2
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -615,7 +563,6 @@
 
     goto :goto_1
 
-    .line 589
     :pswitch_3
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -625,7 +572,6 @@
 
     goto :goto_1
 
-    .line 586
     :pswitch_4
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -635,7 +581,6 @@
 
     goto :goto_1
 
-    .line 583
     :pswitch_5
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -650,7 +595,6 @@
 
     goto :goto_2
 
-    .line 601
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -674,7 +618,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 604
     :goto_1
     monitor-exit v0
 
@@ -701,7 +644,6 @@
 .method public notifyCameraState(Ljava/lang/String;IILjava/lang/String;I)V
     .locals 9
 
-    .line 554
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -712,7 +654,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 555
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -739,25 +680,21 @@
 
     return-void
 
-    .line 559
     :cond_0
     invoke-static {p2}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$smcameraStateToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 560
     invoke-static {p3}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$smcameraFacingToString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 561
     invoke-static {}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$sfgetDEBUG()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 562
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -798,7 +735,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     :cond_1
     iget-object v3, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -820,7 +756,6 @@
 .method public pingForUpdate()V
     .locals 6
 
-    .line 525
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -841,7 +776,6 @@
 
     const-string p0, "CameraService_worker"
 
-    .line 526
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -868,13 +802,11 @@
 
     return-void
 
-    .line 530
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 533
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -884,7 +816,6 @@
 
     invoke-virtual {v2}, Lcom/samsung/android/camera/requestinjector/VtCameraProviderObserver;->updateCameraService()V
 
-    .line 534
     iget-object v2, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {v2}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmScpmReceiver(Lcom/samsung/android/camera/CameraServiceWorker;)Lcom/samsung/android/camera/scpm/ScpmReceiver;
@@ -895,7 +826,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 537
     :try_start_1
     iget-object v2, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -916,7 +846,6 @@
     :try_start_2
     const-string v3, "CameraService_worker"
 
-    .line 539
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -933,7 +862,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 543
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -945,7 +873,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 544
     :try_start_3
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -953,12 +880,10 @@
 
     invoke-static {p0, v3}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$mnotifyDeviceChangeRetryLocked(Lcom/samsung/android/camera/CameraServiceWorker;I)V
 
-    .line 545
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 547
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -966,7 +891,6 @@
     :catchall_0
     move-exception p0
 
-    .line 545
     :try_start_4
     monitor-exit v2
     :try_end_4
@@ -980,17 +904,14 @@
     :catchall_1
     move-exception p0
 
-    .line 547
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 548
     throw p0
 .end method
 
 .method public queryPackageName(II)Ljava/lang/String;
     .locals 6
 
-    .line 609
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -1003,7 +924,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 610
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1030,13 +950,11 @@
 
     return-object v2
 
-    .line 615
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 618
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -1052,19 +970,16 @@
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 619
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object p0
 
     if-nez p0, :cond_1
 
-    .line 620
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
-    .line 621
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1083,7 +998,6 @@
 
     check-cast v4, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 622
     iget v5, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v5, p1, :cond_2
@@ -1092,7 +1006,6 @@
 
     if-ne v5, p2, :cond_2
 
-    .line 623
     iget-object p0, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     if-eqz p0, :cond_3
@@ -1103,7 +1016,6 @@
 
     if-ne p0, p1, :cond_3
 
-    .line 628
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1126,14 +1038,12 @@
 
     invoke-static {v3, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 629
     iget-object p0, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     aget-object p0, p0, p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 636
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -1148,14 +1058,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 637
     throw p0
 .end method
 
 .method public setDeviceOrientationListener(Z)V
     .locals 2
 
-    .line 696
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -1166,7 +1074,6 @@
 
     const-string p0, "CameraService_worker"
 
-    .line 697
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1193,7 +1100,6 @@
 
     return-void
 
-    .line 701
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -1203,7 +1109,6 @@
 
     monitor-enter v0
 
-    .line 702
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -1213,7 +1118,6 @@
 
     if-nez v1, :cond_1
 
-    .line 703
     monitor-exit v0
 
     return-void
@@ -1221,7 +1125,6 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 707
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p0}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmOrientationEventListener(Lcom/samsung/android/camera/CameraServiceWorker;)Lcom/samsung/android/camera/CameraServiceWorker$WorkerOrientationListener;
@@ -1232,7 +1135,6 @@
 
     goto :goto_0
 
-    .line 709
     :cond_2
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$3;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -1242,7 +1144,6 @@
 
     invoke-virtual {p0}, Landroid/view/OrientationEventListener;->disable()V
 
-    .line 711
     :goto_0
     monitor-exit v0
 
@@ -1261,7 +1162,6 @@
 .method public storeLoggingData(ILjava/lang/String;)V
     .locals 0
 
-    .line 738
     invoke-static {}, Lcom/samsung/android/camera/Logger$ID;->values()[Lcom/samsung/android/camera/Logger$ID;
 
     move-result-object p0
@@ -1274,7 +1174,6 @@
 
     goto :goto_0
 
-    .line 742
     :cond_0
     invoke-static {}, Lcom/samsung/android/camera/Logger$ID;->values()[Lcom/samsung/android/camera/Logger$ID;
 
@@ -1292,7 +1191,6 @@
 
     const-string/jumbo p1, "storeLoggingData : type has Inacceptable"
 
-    .line 739
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

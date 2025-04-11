@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/samsung/android/knoxguard/service/receiver/SystemSeReceiver;->$r8$lambda$VvlhLfNYgQPqOoM64jEggk5nwCE()V
 
     return-void

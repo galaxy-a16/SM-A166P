@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-static {p1}, Lcom/android/server/wm/Transition;->$r8$lambda$umlWTRfj3K4oOA8W25AIgXpZbaI(Lcom/android/server/wm/ActivityRecord;)Z

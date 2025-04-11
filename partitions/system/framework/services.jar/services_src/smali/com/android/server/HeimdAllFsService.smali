@@ -29,7 +29,6 @@
 .method public static synthetic $r8$lambda$0KLb71xlGmFeh--FtV9FnOvDMGU(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$scanApkPackagesForBigdata$7(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -40,7 +39,6 @@
 .method public static synthetic $r8$lambda$4T93knqS6-npfUXWJ90IA8UZrsY(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$doCompressPackages$6(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -51,7 +49,6 @@
 .method public static synthetic $r8$lambda$NmTFjjT-TaiHK9wj3VlmuD6d6xY(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$getPackagesOnUserdata$0(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -62,7 +59,6 @@
 .method public static synthetic $r8$lambda$O34VMu3KJnswA5VatbQ26jqIM34(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$doCompressFilesInDir$4(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -73,7 +69,6 @@
 .method public static synthetic $r8$lambda$YP9CKURD05zlzxF3Cfe-tmCR-LQ(Ljava/nio/file/Path;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$getPackagesOnUserdata$2(Ljava/nio/file/Path;)V
 
     return-void
@@ -82,7 +77,6 @@
 .method public static synthetic $r8$lambda$aLY3XEsNpSP0J9XI-gnFCkGZI7Q(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$getPackagesOnUserdata$1(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -93,7 +87,6 @@
 .method public static synthetic $r8$lambda$bQ4MhcPCJv8XG_jNXN4dH0_tBOI(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$doCompressFilesInDir$3(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -104,7 +97,6 @@
 .method public static synthetic $r8$lambda$lS5P2QcbZLdfyk8eMsaUHMrXViE(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$doCompressPackages$5(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -115,7 +107,6 @@
 .method public static synthetic $r8$lambda$rbb49d2zFVwH467YgyMTeoBCLPc(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/HeimdAllFsService;->lambda$scanApkPackagesForBigdata$8(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -126,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHeimdallFsLatch(Lcom/android/server/HeimdAllFsService;)Ljava/util/concurrent/CountDownLatch;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-object p0
@@ -135,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPackagesInfo(Lcom/android/server/HeimdAllFsService;)Ljava/util/List;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/HeimdAllFsService;->mPackagesInfo:Ljava/util/List;
 
     return-object p0
@@ -144,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$fputmHeimdallFsLatch(Lcom/android/server/HeimdAllFsService;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-void
@@ -153,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$fputmPackagesInfo(Lcom/android/server/HeimdAllFsService;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/HeimdAllFsService;->mPackagesInfo:Ljava/util/List;
 
     return-void
@@ -162,39 +149,30 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 89
     iput-object v0, p0, Lcom/android/server/HeimdAllFsService;->mUsageStats:Ljava/util/SortedMap;
 
-    .line 90
     iput-object v0, p0, Lcom/android/server/HeimdAllFsService;->mPackagesInfo:Ljava/util/List;
 
-    .line 92
     iput-object v0, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsThread:Ljava/lang/Thread;
 
-    .line 94
     iput-object v0, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 112
     iput-object p1, p0, Lcom/android/server/HeimdAllFsService;->mContext:Landroid/content/Context;
 
-    .line 113
     invoke-virtual {p0}, Lcom/android/server/HeimdAllFsService;->connectInstalld()V
 
     const-string/jumbo p0, "persist.sys.heimdallfs.dryrun"
 
-    .line 117
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -207,7 +185,6 @@
 
     sput-boolean p0, Lcom/android/server/HeimdAllFsService;->mDryrun:Z
 
-    .line 124
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -256,7 +233,6 @@
 
     const-string/jumbo p1, "sys.heimdallfs.todayinfo"
 
-    .line 125
     invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -269,7 +245,6 @@
 
     const-string p1, "HeimdAllFS"
 
-    .line 124
     invoke-static {p1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -278,12 +253,10 @@
 .method public static checkSysfsPath(Ljava/lang/String;)Z
     .locals 1
 
-    .line 129
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -305,7 +278,6 @@
 
     const/4 v0, 0x0
 
-    .line 201
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -313,7 +285,6 @@
 
     const/16 v1, 0x80
 
-    .line 202
     invoke-virtual {p0, p1, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
@@ -324,7 +295,6 @@
 
     return-object v0
 
-    .line 206
     :cond_0
     invoke-virtual {p0, p2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -332,7 +302,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 207
     invoke-virtual {p0, p2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -348,7 +317,6 @@
     :catch_0
     move-exception p0
 
-    .line 209
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     :cond_1
@@ -360,7 +328,6 @@
 
     const-string/jumbo v0, "persist.sys.heimdallfs.force"
 
-    .line 143
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -377,20 +344,17 @@
 
     return v1
 
-    .line 146
     :cond_0
     sget-object v0, Lcom/android/server/HeimdAllFsService;->heimdAllFSSupported:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_1
 
-    .line 147
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     return v0
 
-    .line 149
     :cond_1
     new-instance v0, Ljava/io/File;
 
@@ -398,7 +362,6 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 150
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -413,7 +376,6 @@
 
     goto :goto_0
 
-    .line 153
     :cond_2
     new-instance v0, Ljava/io/File;
 
@@ -421,7 +383,6 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 154
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -430,10 +391,8 @@
 
     const-string v0, "getServiceLevel: [/sys/fs/f2fs/userdata/feature_list/compression] or legacy path does not exist"
 
-    .line 156
     invoke-static {v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     sput-object v0, Lcom/android/server/HeimdAllFsService;->heimdAllFSSupported:Ljava/lang/Boolean;
@@ -446,7 +405,6 @@
     :goto_0
     const/4 v5, 0x0
 
-    .line 163
     :try_start_0
     new-instance v6, Ljava/io/FileReader;
 
@@ -455,7 +413,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 164
     :try_start_1
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -464,7 +421,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 166
     :cond_4
     :try_start_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -477,7 +433,6 @@
 
     const-string v7, "compression"
 
-    .line 167
     invoke-virtual {v5, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -489,20 +444,17 @@
 
     const-string/jumbo v7, "supported"
 
-    .line 168
     invoke-virtual {v5, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
     if-eqz v5, :cond_4
 
-    .line 170
     :cond_6
     sget-object v2, Lcom/android/server/HeimdAllFsService;->heimdAllFSSupported:Ljava/lang/Boolean;
 
     if-nez v2, :cond_7
 
-    .line 171
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     sput-object v2, Lcom/android/server/HeimdAllFsService;->heimdAllFSSupported:Ljava/lang/Boolean;
@@ -520,20 +472,17 @@
 
     const-string v5, "[/sys/fs/f2fs/userdata/feature_list/compression] does not have [compression] feature"
 
-    .line 176
     invoke-static {v3, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 181
     :cond_9
     :try_start_3
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 182
     :catch_0
     :try_start_4
     invoke-virtual {v6}, Ljava/io/FileReader;->close()V
@@ -574,14 +523,12 @@
     :try_start_5
     const-string v0, "Error while reading [/sys/fs/f2fs/userdata/feature_list/compression]"
 
-    .line 178
     invoke-static {v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     if-eqz v5, :cond_a
 
-    .line 181
     :try_start_6
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
     :try_end_6
@@ -591,7 +538,6 @@
     :cond_a
     if-eqz v6, :cond_b
 
-    .line 182
     :try_start_7
     invoke-virtual {v6}, Ljava/io/FileReader;->close()V
     :try_end_7
@@ -610,7 +556,6 @@
     :cond_c
     const-string v0, "/sys/fs/f2fs/features/sec_heimdallfs"
 
-    .line 188
     invoke-static {v0}, Lcom/android/server/HeimdAllFsService;->checkSysfsPath(Ljava/lang/String;)Z
 
     move-result v0
@@ -634,19 +579,16 @@
     :goto_4
     if-nez v1, :cond_f
 
-    .line 190
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     sput-object v0, Lcom/android/server/HeimdAllFsService;->heimdAllFSSupported:Ljava/lang/Boolean;
 
     const-string v0, "[/sys/fs/f2fs/features/sec_dnode_relocation] does not have [dnode_relocation] feature"
 
-    .line 192
     invoke-static {v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "[/sys/fs/f2fs/features/sec_heimdallfs] does not have [sec_heimdallfs] feature"
 
-    .line 193
     invoke-static {v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_5
@@ -660,7 +602,6 @@
     :goto_6
     if-eqz v5, :cond_10
 
-    .line 181
     :try_start_8
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
     :try_end_8
@@ -670,13 +611,11 @@
     :cond_10
     if-eqz v6, :cond_11
 
-    .line 182
     :try_start_9
     invoke-virtual {v6}, Ljava/io/FileReader;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_8
 
-    .line 183
     :catch_8
     :cond_11
     throw v1
@@ -689,7 +628,6 @@
 
     new-array v0, v0, [Ljava/nio/file/LinkOption;
 
-    .line 380
     invoke-static {p0, v0}, Ljava/nio/file/Files;->isRegularFile(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
 
     move-result p0
@@ -700,7 +638,6 @@
 .method public static synthetic lambda$doCompressFilesInDir$4(Ljava/nio/file/Path;)Z
     .locals 1
 
-    .line 381
     invoke-interface {p0}, Ljava/nio/file/Path;->getFileName()Ljava/nio/file/Path;
 
     move-result-object p0
@@ -727,7 +664,6 @@
 
     new-array v0, v0, [Ljava/nio/file/LinkOption;
 
-    .line 423
     invoke-static {p0, v0}, Ljava/nio/file/Files;->isRegularFile(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
 
     move-result p0
@@ -738,7 +674,6 @@
 .method public static synthetic lambda$doCompressPackages$6(Ljava/nio/file/Path;)Z
     .locals 1
 
-    .line 424
     invoke-interface {p0}, Ljava/nio/file/Path;->getFileName()Ljava/nio/file/Path;
 
     move-result-object p0
@@ -763,7 +698,6 @@
 
     new-array v0, v0, [Ljava/nio/file/LinkOption;
 
-    .line 239
     invoke-static {p0, v0}, Ljava/nio/file/Files;->isRegularFile(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
 
     move-result p0
@@ -774,7 +708,6 @@
 .method public static synthetic lambda$getPackagesOnUserdata$1(Ljava/nio/file/Path;)Z
     .locals 1
 
-    .line 240
     invoke-interface {p0}, Ljava/nio/file/Path;->getFileName()Ljava/nio/file/Path;
 
     move-result-object p0
@@ -797,7 +730,6 @@
 
     const-string v0, "HeimdAllFS"
 
-    .line 247
     invoke-interface {p0}, Ljava/nio/file/Path;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -814,7 +746,6 @@
 
     new-array v0, v0, [Ljava/nio/file/LinkOption;
 
-    .line 490
     invoke-static {p0, v0}, Ljava/nio/file/Files;->isRegularFile(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
 
     move-result p0
@@ -825,7 +756,6 @@
 .method public static synthetic lambda$scanApkPackagesForBigdata$8(Ljava/nio/file/Path;)Z
     .locals 1
 
-    .line 491
     invoke-interface {p0}, Ljava/nio/file/Path;->getFileName()Ljava/nio/file/Path;
 
     move-result-object p0
@@ -852,12 +782,10 @@
 
     const-string v1, "Abort()"
 
-    .line 581
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 582
     iput-object v0, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsThread:Ljava/lang/Thread;
 
     return-void
@@ -868,7 +796,6 @@
 
     const-string v0, "installd"
 
-    .line 354
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -887,13 +814,11 @@
 
     const-string v0, "HeimdAllFS"
 
-    .line 359
     :try_start_0
     sget-boolean v1, Lcom/android/server/HeimdAllFsService;->mDebugMode:Z
 
     if-eqz v1, :cond_1
 
-    .line 360
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -926,7 +851,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     :cond_1
     sget-boolean v1, Lcom/android/server/HeimdAllFsService;->mDryrun:Z
 
@@ -934,7 +858,6 @@
 
     return-void
 
-    .line 365
     :cond_2
     iget-object p0, p0, Lcom/android/server/HeimdAllFsService;->mInstalld:Landroid/os/IInstalld;
 
@@ -945,7 +868,6 @@
 
     goto :goto_1
 
-    .line 369
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -965,7 +887,6 @@
 
     goto :goto_1
 
-    .line 367
     :catch_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -990,12 +911,10 @@
 .method public doCompressFilesInDir(Ljava/lang/String;)V
     .locals 6
 
-    .line 375
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    .line 376
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1021,7 +940,6 @@
     :try_start_0
     new-array v4, v1, [Ljava/lang/String;
 
-    .line 379
     invoke-static {p1, v4}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object v4
@@ -1034,7 +952,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 380
     :try_start_1
     new-instance v4, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda5;
 
@@ -1048,12 +965,10 @@
 
     invoke-direct {v5}, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda6;-><init>()V
 
-    .line 381
     invoke-interface {v4, v5}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v4
 
-    .line 382
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v5
@@ -1066,7 +981,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 383
     :try_start_2
     invoke-interface {v1}, Ljava/util/stream/Stream;->close()V
     :try_end_2
@@ -1084,7 +998,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 379
     :try_start_3
     invoke-interface {v1}, Ljava/util/stream/Stream;->close()V
     :try_end_3
@@ -1104,7 +1017,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 384
     :catch_1
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1128,7 +1040,6 @@
     :goto_2
     if-eqz v4, :cond_2
 
-    .line 388
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1146,7 +1057,6 @@
 
     check-cast v1, Ljava/nio/file/Path;
 
-    .line 389
     iget-object v2, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsThread:Ljava/lang/Thread;
 
     invoke-virtual {v2, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -1157,7 +1067,6 @@
 
     goto :goto_4
 
-    .line 391
     :cond_1
     invoke-interface {v1}, Ljava/nio/file/Path;->toString()Ljava/lang/String;
 
@@ -1177,12 +1086,10 @@
 .method public doCompressPackages(Ljava/util/List;Z)V
     .locals 8
 
-    .line 397
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    .line 399
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1211,17 +1118,14 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     sget-boolean v1, Lcom/android/server/HeimdAllFsService;->mDebugMode:Z
 
     if-eqz v1, :cond_1
 
     const-string v1, "Get Package Info!!"
 
-    .line 402
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 403
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/HeimdAllFsService;->getAppUsageStats()Ljava/util/SortedMap;
 
@@ -1229,12 +1133,10 @@
 
     iput-object v1, p0, Lcom/android/server/HeimdAllFsService;->mUsageStats:Ljava/util/SortedMap;
 
-    .line 404
     invoke-virtual {p0, p1, v1, p2}, Lcom/android/server/HeimdAllFsService;->getCandidatePackages(Ljava/util/List;Ljava/util/SortedMap;Z)Ljava/util/List;
 
     move-result-object p1
 
-    .line 406
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1252,7 +1154,6 @@
 
     check-cast v1, Landroid/content/pm/PackageInfo;
 
-    .line 407
     iget-object v3, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsThread:Ljava/lang/Thread;
 
     invoke-virtual {v3, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -1263,7 +1164,6 @@
 
     goto/16 :goto_6
 
-    .line 410
     :cond_3
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1271,7 +1171,6 @@
 
     invoke-virtual {p0, v3, p2}, Lcom/android/server/HeimdAllFsService;->doCompressAction(Ljava/lang/String;Z)V
 
-    .line 411
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v3, v3, Landroid/content/pm/ApplicationInfo;->splitSourceDirs:[Ljava/lang/String;
@@ -1280,7 +1179,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 412
     array-length v5, v3
 
     move v6, v4
@@ -1290,14 +1188,12 @@
 
     aget-object v7, v3, v6
 
-    .line 413
     invoke-virtual {p0, v7, p2}, Lcom/android/server/HeimdAllFsService;->doCompressAction(Ljava/lang/String;Z)V
 
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 417
     :cond_4
     new-instance v3, Ljava/io/File;
 
@@ -1307,7 +1203,6 @@
 
     invoke-direct {v3, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 420
     new-instance v1, Ljava/io/File;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1330,7 +1225,6 @@
 
     invoke-direct {v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 421
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v1
@@ -1339,7 +1233,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 422
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1373,7 +1266,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 423
     :try_start_1
     new-instance v3, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda0;
 
@@ -1387,12 +1279,10 @@
 
     invoke-direct {v4}, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 424
     invoke-interface {v3, v4}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v3
 
-    .line 425
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v4
@@ -1405,7 +1295,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 426
     :try_start_2
     invoke-interface {v1}, Ljava/util/stream/Stream;->close()V
     :try_end_2
@@ -1425,7 +1314,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 422
     :try_start_3
     invoke-interface {v1}, Ljava/util/stream/Stream;->close()V
     :try_end_3
@@ -1449,14 +1337,12 @@
     :goto_3
     const-string v1, "Error while reading oat path"
 
-    .line 427
     invoke-static {v2, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
     :goto_4
     if-eqz v5, :cond_2
 
-    .line 431
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1474,7 +1360,6 @@
 
     check-cast v3, Ljava/nio/file/Path;
 
-    .line 432
     invoke-interface {v3}, Ljava/nio/file/Path;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1497,10 +1382,8 @@
 
     new-array v1, v1, [J
 
-    .line 586
     fill-array-data v1, :array_0
 
-    .line 587
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1517,7 +1400,6 @@
 
     invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 589
     :try_start_0
     invoke-static {p2}, Landroid/os/incremental/IncrementalManager;->isIncrementalPath(Ljava/lang/String;)Z
 
@@ -1525,7 +1407,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 590
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1547,10 +1428,8 @@
     :cond_0
     const-string v2, "Compressed? "
 
-    .line 594
     invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 595
     iget-object p0, p0, Lcom/android/server/HeimdAllFsService;->mInstalld:Landroid/os/IInstalld;
 
     invoke-interface {p0, p2, v1}, Landroid/os/IInstalld;->getCompressedStats(Ljava/lang/String;[J)Z
@@ -1573,10 +1452,8 @@
 
     const-string v3, "True"
 
-    .line 596
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 597
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1616,7 +1493,6 @@
 
     const-string p0, "Unknown - failed to acquire installd mLock"
 
-    .line 601
     invoke-virtual {p1, p0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1624,7 +1500,6 @@
     :cond_2
     const-string p0, "False"
 
-    .line 603
     invoke-virtual {p1, p0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
@@ -1632,7 +1507,6 @@
 
     goto :goto_0
 
-    .line 609
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1650,7 +1524,6 @@
 
     invoke-virtual {p1, p0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 610
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1667,7 +1540,6 @@
 
     goto :goto_0
 
-    .line 606
     :catch_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1685,7 +1557,6 @@
 
     invoke-virtual {p1, p0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 607
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1715,7 +1586,6 @@
 .method public getAppUsageStats()Ljava/util/SortedMap;
     .locals 7
 
-    .line 271
     iget-object p0, p0, Lcom/android/server/HeimdAllFsService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "usagestats"
@@ -1728,7 +1598,6 @@
 
     check-cast v0, Landroid/app/usage/UsageStatsManager;
 
-    .line 272
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -1737,30 +1606,24 @@
 
     sub-long v3, v1, v3
 
-    .line 274
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object p0
 
-    .line 275
     invoke-virtual {p0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 276
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
 
-    .line 277
     invoke-virtual {v1, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     const/4 v2, 0x2
 
-    .line 280
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v3
 
-    .line 281
     invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v5
@@ -1771,19 +1634,16 @@
 
     move-wide v4, v5
 
-    .line 279
     invoke-virtual/range {v0 .. v5}, Landroid/app/usage/UsageStatsManager;->queryUsageStats(IJJ)Ljava/util/List;
 
     move-result-object p0
 
-    .line 283
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     if-eqz p0, :cond_1
 
-    .line 285
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1801,12 +1661,10 @@
 
     check-cast v1, Landroid/app/usage/UsageStats;
 
-    .line 286
     sget-boolean v2, Lcom/android/server/HeimdAllFsService;->mDebugMode:Z
 
     if-eqz v2, :cond_0
 
-    .line 287
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1839,7 +1697,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     :cond_0
     invoke-virtual {v1}, Landroid/app/usage/UsageStats;->getPackageName()Ljava/lang/String;
 
@@ -1864,14 +1721,12 @@
 .method public getCandidatePackages(Ljava/util/List;Ljava/util/SortedMap;Z)Ljava/util/List;
     .locals 5
 
-    .line 301
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     const-string/jumbo v0, "persist.sys.heimdallfs.force"
 
-    .line 302
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1882,7 +1737,6 @@
 
     move-result v0
 
-    .line 304
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1907,23 +1761,19 @@
 
     if-nez v0, :cond_1
 
-    .line 305
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 306
     invoke-interface {p2, v3}, Ljava/util/SortedMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     if-nez v3, :cond_3
 
-    .line 308
     :cond_1
     sget-boolean v3, Lcom/android/server/HeimdAllFsService;->mDebugMode:Z
 
     if-eqz v3, :cond_2
 
-    .line 309
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1942,7 +1792,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 310
     :cond_2
     invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1953,23 +1802,19 @@
 
     if-nez v0, :cond_4
 
-    .line 312
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 313
     invoke-interface {p2, v3}, Ljava/util/SortedMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 315
     :cond_4
     sget-boolean v3, Lcom/android/server/HeimdAllFsService;->mDebugMode:Z
 
     if-eqz v3, :cond_5
 
-    .line 316
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1988,7 +1833,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     :cond_5
     invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -2001,7 +1845,6 @@
 .method public getPackagesOnUserdata()Ljava/util/List;
     .locals 12
 
-    .line 218
     iget-object v0, p0, Lcom/android/server/HeimdAllFsService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2010,27 +1853,22 @@
 
     const/4 v1, 0x0
 
-    .line 219
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getInstalledPackages(I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 220
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 221
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 222
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 224
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2049,7 +1887,6 @@
 
     check-cast v5, Landroid/content/pm/PackageInfo;
 
-    .line 226
     iget-object v6, v5, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v6, v6, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
@@ -2062,14 +1899,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 227
     sget-boolean v6, Lcom/android/server/HeimdAllFsService;->mDebugMode:Z
 
     const-string v7, "HeimdAllFS"
 
     if-eqz v6, :cond_3
 
-    .line 228
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2088,7 +1923,6 @@
 
     invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2109,7 +1943,6 @@
 
     invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2134,7 +1967,6 @@
 
     invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     new-instance v6, Ljava/io/File;
 
     iget-object v8, v5, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2143,7 +1975,6 @@
 
     invoke-direct {v6, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 233
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2168,7 +1999,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     new-instance v8, Ljava/io/File;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2189,7 +2019,6 @@
 
     invoke-direct {v8, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 237
     invoke-virtual {v8}, Ljava/io/File;->isDirectory()Z
 
     move-result v8
@@ -2198,7 +2027,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 238
     :try_start_0
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2232,7 +2060,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 239
     :try_start_1
     new-instance v8, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda2;
 
@@ -2246,12 +2073,10 @@
 
     invoke-direct {v9}, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda3;-><init>()V
 
-    .line 240
     invoke-interface {v8, v9}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v8
 
-    .line 241
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v9
@@ -2264,7 +2089,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 242
     :try_start_2
     invoke-interface {v6}, Ljava/util/stream/Stream;->close()V
     :try_end_2
@@ -2284,7 +2108,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 238
     :try_start_3
     invoke-interface {v6}, Ljava/util/stream/Stream;->close()V
     :try_end_3
@@ -2308,21 +2131,18 @@
     :goto_2
     const-string v6, "Error while reading oat path"
 
-    .line 243
     invoke-static {v7, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     :goto_3
     if-eqz v10, :cond_3
 
-    .line 247
     new-instance v6, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda4;
 
     invoke-direct {v6}, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda4;-><init>()V
 
     invoke-interface {v10, v6}, Ljava/util/List;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 249
     :cond_3
     iget-object v6, v5, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -2334,7 +2154,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 250
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2355,7 +2174,6 @@
 
     goto/16 :goto_0
 
-    .line 254
     :cond_4
     iget-object v6, p0, Lcom/android/server/HeimdAllFsService;->mContext:Landroid/content/Context;
 
@@ -2371,7 +2189,6 @@
 
     if-ne v6, v8, :cond_5
 
-    .line 255
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2390,22 +2207,18 @@
 
     invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 258
     :cond_5
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 262
     :cond_6
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 263
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object v2
@@ -2414,12 +2227,10 @@
 .method public scanApkPackagesForBigdata()V
     .locals 14
 
-    .line 450
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    .line 452
     iget-object v1, p0, Lcom/android/server/HeimdAllFsService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2428,7 +2239,6 @@
 
     const/4 v2, 0x0
 
-    .line 453
     invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->getInstalledPackages(I)Ljava/util/List;
 
     move-result-object v1
@@ -2441,7 +2251,6 @@
 
     move-object v5, v3
 
-    .line 457
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -2449,7 +2258,6 @@
 
     if-ge v4, v7, :cond_8
 
-    .line 458
     iget-object v7, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsThread:Ljava/lang/Thread;
 
     invoke-virtual {v7, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -2460,7 +2268,6 @@
 
     goto/16 :goto_7
 
-    .line 463
     :cond_0
     iget-object v7, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsThread:Ljava/lang/Thread;
 
@@ -2472,19 +2279,16 @@
 
     if-nez v7, :cond_1
 
-    .line 464
     sget-boolean v0, Lcom/android/server/HeimdAllFsService;->mDebugMode:Z
 
     if-eqz v0, :cond_8
 
     const-string v0, "Break!!"
 
-    .line 465
     invoke-static {v8, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_7
 
-    .line 469
     :cond_1
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2506,7 +2310,6 @@
 
     goto/16 :goto_6
 
-    .line 473
     :cond_2
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2523,7 +2326,6 @@
     :cond_3
     move v5, v7
 
-    .line 475
     :goto_1
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -2539,7 +2341,6 @@
 
     move v6, v10
 
-    .line 480
     :cond_4
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2551,17 +2352,14 @@
 
     iget-object v9, v9, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
-    .line 481
     invoke-virtual {p0, v9, v5}, Lcom/android/server/HeimdAllFsService;->scanCompressedFileAction(Ljava/lang/String;I)V
 
     and-int/lit8 v5, v5, -0x2
 
-    .line 485
     new-instance v10, Ljava/io/File;
 
     invoke-direct {v10, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 487
     new-instance v11, Ljava/io/File;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -2584,7 +2382,6 @@
 
     invoke-direct {v11, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 488
     invoke-virtual {v11}, Ljava/io/File;->isDirectory()Z
 
     move-result v11
@@ -2593,7 +2390,6 @@
 
     if-eqz v11, :cond_6
 
-    .line 489
     :try_start_0
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -2625,7 +2421,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 490
     :try_start_1
     new-instance v10, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda7;
 
@@ -2639,12 +2434,10 @@
 
     invoke-direct {v11}, Lcom/android/server/HeimdAllFsService$$ExternalSyntheticLambda8;-><init>()V
 
-    .line 491
     invoke-interface {v10, v11}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v10
 
-    .line 492
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v11
@@ -2657,7 +2450,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 493
     :try_start_2
     invoke-interface {v7}, Ljava/util/stream/Stream;->close()V
     :try_end_2
@@ -2677,7 +2469,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 489
     :try_start_3
     invoke-interface {v7}, Ljava/util/stream/Stream;->close()V
     :try_end_3
@@ -2701,14 +2492,12 @@
     :goto_3
     const-string v7, "Error while reading oat path"
 
-    .line 494
     invoke-static {v8, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
     :goto_4
     if-eqz v12, :cond_7
 
-    .line 498
     invoke-interface {v12}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -2726,7 +2515,6 @@
 
     check-cast v8, Ljava/nio/file/Path;
 
-    .line 499
     invoke-interface {v8}, Ljava/nio/file/Path;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -2747,7 +2535,6 @@
     :goto_7
     if-nez v6, :cond_9
 
-    .line 504
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2756,7 +2543,6 @@
 
     const/4 v0, 0x4
 
-    .line 506
     invoke-virtual {p0, v5, v0}, Lcom/android/server/HeimdAllFsService;->scanCompressedFileAction(Ljava/lang/String;I)V
 
     :cond_9
@@ -2766,14 +2552,12 @@
 .method public scanCompressedFileAction(Ljava/lang/String;I)V
     .locals 3
 
-    .line 439
     sget-boolean v0, Lcom/android/server/HeimdAllFsService;->mDebugMode:Z
 
     const-string v1, "HeimdAllFS"
 
     if-eqz v0, :cond_0
 
-    .line 440
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2796,7 +2580,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/HeimdAllFsService;->mInstalld:Landroid/os/IInstalld;
@@ -2807,7 +2590,6 @@
 
     goto :goto_0
 
-    .line 445
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2832,7 +2614,6 @@
 .method public start()V
     .locals 2
 
-    .line 513
     new-instance v0, Lcom/android/server/HeimdAllFsService$1;
 
     const-string v1, "HeimdAllFS"
@@ -2841,7 +2622,6 @@
 
     iput-object v0, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsThread:Ljava/lang/Thread;
 
-    .line 564
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -2852,7 +2632,6 @@
 
     const-string v0, "HeimdAllFS"
 
-    .line 569
     :try_start_0
     iget-object v1, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsLatch:Ljava/util/concurrent/CountDownLatch;
 
@@ -2860,23 +2639,19 @@
 
     const-string/jumbo v1, "waitForFinished, HeimdAllLatch await"
 
-    .line 570
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     iget-object v1, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->await()V
 
     const/4 v1, 0x0
 
-    .line 572
     iput-object v1, p0, Lcom/android/server/HeimdAllFsService;->mHeimdallFsLatch:Ljava/util/concurrent/CountDownLatch;
 
     :cond_0
     const-string/jumbo p0, "waitForFinished, HeimdAllLatch await End"
 
-    .line 574
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
@@ -2886,7 +2661,6 @@
     :catch_0
     const-string p0, "Interrupt while waiting for heimdallFsLatch:CountDownLatch(1)"
 
-    .line 576
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 301
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 302
     invoke-virtual {p0}, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->reset()Z
 
     return-void
@@ -27,7 +25,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 320
     instance-of v0, p1, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;
 
     const/4 v1, 0x0
@@ -36,11 +33,9 @@
 
     return v1
 
-    .line 324
     :cond_0
     check-cast p1, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;
 
-    .line 325
     iget v0, p1, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->mRefreshRate:F
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->refreshRateEquals(F)Z
@@ -64,7 +59,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 331
     iget v0, p0, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->mRefreshRate:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -91,7 +85,6 @@
 .method public final refreshRateEquals(F)Z
     .locals 2
 
-    .line 340
     iget p0, p0, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->mRefreshRate:F
 
     const v0, 0x3c23d70a    # 0.01f
@@ -126,7 +119,6 @@
 
     const/4 v1, 0x0
 
-    .line 315
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->update(FI)Z
 
     move-result p0
@@ -137,7 +129,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 336
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +159,6 @@
 .method public update(FI)Z
     .locals 1
 
-    .line 306
     invoke-virtual {p0, p1}, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->refreshRateEquals(F)Z
 
     move-result v0
@@ -186,12 +176,10 @@
 
     return p0
 
-    .line 307
     :cond_1
     :goto_0
     iput p1, p0, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->mRefreshRate:F
 
-    .line 308
     iput p2, p0, Lcom/android/server/wm/RefreshRatePolicy$FrameRateVote;->mCompatibility:I
 
     const/4 p0, 0x1

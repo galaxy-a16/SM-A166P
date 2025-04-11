@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskSupervisor;Landroid/os/Looper;)V
     .locals 0
 
-    .line 3233
     iput-object p1, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
-    .line 3234
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public final activityIdleFromMessage(Lcom/android/server/wm/ActivityRecord;Z)V
     .locals 1
 
-    .line 3265
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     const/4 v0, 0x0
@@ -38,7 +35,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 3239
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -49,7 +45,6 @@
 
     monitor-enter v0
 
-    .line 3240
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->handleMessageInner(Landroid/os/Message;)Z
 
@@ -57,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3241
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -66,7 +60,6 @@
 
     return-void
 
-    .line 3243
     :cond_0
     :try_start_1
     monitor-exit v0
@@ -75,7 +68,6 @@
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 3245
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0xd5
@@ -84,13 +76,11 @@
 
     goto :goto_1
 
-    .line 3247
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
-    .line 3250
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -101,7 +91,6 @@
 
     monitor-enter v1
 
-    .line 3251
     :try_start_2
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->attachedToProcess()Z
 
@@ -117,12 +106,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 3252
     iget-object p1, p1, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
 
     iget-object v0, p1, Lcom/android/server/wm/WindowProcessController;->mName:Ljava/lang/String;
 
-    .line 3253
     iget p1, p1, Lcom/android/server/wm/WindowProcessController;->mUid:I
 
     goto :goto_0
@@ -132,7 +119,6 @@
 
     const/4 p1, 0x0
 
-    .line 3255
     :goto_0
     monitor-exit v1
     :try_end_2
@@ -142,7 +128,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 3257
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -160,7 +145,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3255
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -173,7 +157,6 @@
     :catchall_1
     move-exception p0
 
-    .line 3243
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -187,7 +170,6 @@
 .method public final handleMessageInner(Landroid/os/Message;)Z
     .locals 7
 
-    .line 3275
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0xd4
@@ -206,13 +188,11 @@
 
     return v3
 
-    .line 3342
     :pswitch_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
-    .line 3343
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -229,14 +209,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3344
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->hasProcess()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3345
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -261,7 +239,6 @@
 
     invoke-virtual {v0, v1, v3, v4, p1}, Lcom/android/server/wm/ActivityTaskManagerService;->logAppTooSlow(Lcom/android/server/wm/WindowProcessController;JLjava/lang/String;)V
 
-    .line 3348
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -269,7 +246,6 @@
 
     goto/16 :goto_2
 
-    .line 3336
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -281,7 +257,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3339
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -294,7 +269,6 @@
 
     goto/16 :goto_2
 
-    .line 3283
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -311,7 +285,6 @@
     :goto_0
     if-ltz p1, :cond_2
 
-    .line 3284
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     invoke-static {v0}, Lcom/android/server/wm/ActivityTaskSupervisor;->-$$Nest$fgetmPipModeChangedActivities(Lcom/android/server/wm/ActivityTaskSupervisor;)Ljava/util/ArrayList;
@@ -324,7 +297,6 @@
 
     check-cast v0, Lcom/android/server/wm/ActivityRecord;
 
-    .line 3285
     iget-object v1, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     invoke-static {v1}, Lcom/android/server/wm/ActivityTaskSupervisor;->-$$Nest$fgetmPipModeChangedTargetRootTaskBounds(Lcom/android/server/wm/ActivityTaskSupervisor;)Landroid/graphics/Rect;
@@ -337,7 +309,6 @@
 
     goto :goto_0
 
-    .line 3277
     :pswitch_3
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -354,7 +325,6 @@
     :goto_1
     if-ltz p1, :cond_2
 
-    .line 3278
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     invoke-static {v0}, Lcom/android/server/wm/ActivityTaskSupervisor;->-$$Nest$fgetmMultiWindowModeChangedActivities(Lcom/android/server/wm/ActivityTaskSupervisor;)Ljava/util/ArrayList;
@@ -367,25 +337,21 @@
 
     check-cast v0, Lcom/android/server/wm/ActivityRecord;
 
-    .line 3279
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->updateMultiWindowMode()V
 
     add-int/lit8 p1, p1, -0x1
 
     goto :goto_1
 
-    .line 3323
     :pswitch_4
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/wm/Task;
 
-    .line 3324
     iget-boolean v0, p1, Lcom/android/server/wm/Task;->mKillProcessesOnDestroyed:Z
 
     if-eqz v0, :cond_2
 
-    .line 3325
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -402,14 +368,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3326
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     invoke-static {p0, p1}, Lcom/android/server/wm/ActivityTaskSupervisor;->-$$Nest$mkillTaskProcessesIfPossible(Lcom/android/server/wm/ActivityTaskSupervisor;Lcom/android/server/wm/Task;)V
 
     goto :goto_2
 
-    .line 3319
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -421,7 +385,6 @@
 
     goto :goto_2
 
-    .line 3310
     :pswitch_6
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -435,10 +398,8 @@
 
     const-string p1, "Launch timeout has expired, giving up wake lock!"
 
-    .line 3311
     invoke-static {v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3315
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor;->mLaunchingActivityWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -447,7 +408,6 @@
 
     goto :goto_2
 
-    .line 3304
     :pswitch_7
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -461,17 +421,14 @@
 
     const-string p1, "Sleep timeout!  Sleeping now."
 
-    .line 3305
     invoke-static {v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3306
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     invoke-virtual {p0, v3}, Lcom/android/server/wm/ActivityTaskSupervisor;->checkReadyForSleepLocked(Z)V
 
     goto :goto_2
 
-    .line 3301
     :pswitch_8
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -481,7 +438,6 @@
 
     goto :goto_2
 
-    .line 3298
     :pswitch_9
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -491,7 +447,6 @@
 
     goto :goto_2
 
-    .line 3294
     :pswitch_a
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -501,7 +456,6 @@
 
     goto :goto_2
 
-    .line 3330
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -513,7 +467,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 3332
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskSupervisor$ActivityTaskSupervisorHandler;->this$0:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     invoke-static {p0, p1}, Lcom/android/server/wm/ActivityTaskSupervisor;->-$$Nest$mhandleLaunchTaskBehindCompleteLocked(Lcom/android/server/wm/ActivityTaskSupervisor;Lcom/android/server/wm/ActivityRecord;)V

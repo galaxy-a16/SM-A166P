@@ -41,7 +41,6 @@
 .method public static synthetic $r8$lambda$5Lb-EMs6s5t-Uf9NV67Sq8sRafQ(Lcom/android/server/utils/quota/QuotaTracker;IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/utils/quota/QuotaTracker;->lambda$scheduleAlarm$0(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;)V
 
     return-void
@@ -50,7 +49,6 @@
 .method public static synthetic $r8$lambda$SWofI2huIZHSvR-C1pPpDdtLMps(Lcom/android/server/utils/quota/QuotaTracker;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->lambda$postQuotaStatusChanged$3(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -59,7 +57,6 @@
 .method public static synthetic $r8$lambda$StM00JUta5i8YZZO29Oa017BdzM(Lcom/android/server/utils/quota/QuotaTracker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/utils/quota/QuotaTracker;->lambda$scheduleQuotaCheck$2()V
 
     return-void
@@ -68,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$monUserRemovedLocked(Lcom/android/server/utils/quota/QuotaTracker;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/utils/quota/QuotaTracker;->onUserRemovedLocked(I)V
 
     return-void
@@ -77,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$sfgetALARM_TAG_QUOTA_CHECK()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/utils/quota/QuotaTracker;->ALARM_TAG_QUOTA_CHECK:Ljava/lang/String;
 
     return-object v0
@@ -86,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/utils/quota/QuotaTracker;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -95,14 +89,12 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 68
     const-class v0, Lcom/android/server/utils/quota/QuotaTracker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 71
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,24 +121,20 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/utils/quota/Categorizer;Lcom/android/server/utils/quota/QuotaTracker$Injector;)V
     .locals 7
 
-    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
-    .line 86
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mQuotaChangeListeners:Landroid/util/ArraySet;
 
-    .line 96
     new-instance v0, Landroid/util/SparseArrayMap;
 
     invoke-direct {v0}, Landroid/util/SparseArrayMap;-><init>()V
@@ -155,26 +143,20 @@
 
     const/4 v0, 0x1
 
-    .line 110
     iput-boolean v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mIsEnabled:Z
 
-    .line 113
     new-instance v0, Lcom/android/server/utils/quota/QuotaTracker$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/utils/quota/QuotaTracker$1;-><init>(Lcom/android/server/utils/quota/QuotaTracker;)V
 
     iput-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 161
     iput-object p2, p0, Lcom/android/server/utils/quota/QuotaTracker;->mCategorizer:Lcom/android/server/utils/quota/Categorizer;
 
-    .line 162
     iput-object p1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mContext:Landroid/content/Context;
 
-    .line 163
     iput-object p3, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInjector:Lcom/android/server/utils/quota/QuotaTracker$Injector;
 
-    .line 164
     const-class p2, Landroid/app/AlarmManager;
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -185,7 +167,6 @@
 
     iput-object p2, p0, Lcom/android/server/utils/quota/QuotaTracker;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 166
     new-instance p2, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
@@ -202,27 +183,22 @@
 
     iput-object p2, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInQuotaAlarmQueue:Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
-    .line 168
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p0, "android.intent.action.PACKAGE_FULLY_REMOVED"
 
-    .line 169
     invoke-virtual {v4, p0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo p0, "package"
 
-    .line 170
     invoke-virtual {v4, p0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 171
     sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     const/4 v5, 0x0
 
-    .line 172
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -231,25 +207,20 @@
 
     move-object v2, v0
 
-    .line 171
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 173
     new-instance v4, Landroid/content/IntentFilter;
 
     const-string p0, "android.intent.action.USER_REMOVED"
 
     invoke-direct {v4, p0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 174
     sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    .line 175
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
 
-    .line 174
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     return-void
@@ -258,35 +229,29 @@
 .method private synthetic lambda$postQuotaStatusChanged$3(ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 397
     iget-object p1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 399
     :try_start_0
     iget-object p0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mQuotaChangeListeners:Landroid/util/ArraySet;
 
-    .line 400
     invoke-virtual {p0}, Landroid/util/ArraySet;->size()I
 
     move-result p2
 
     new-array p2, p2, [Lcom/android/server/utils/quota/QuotaChangeListener;
 
-    .line 399
     invoke-virtual {p0, p2}, Landroid/util/ArraySet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, [Lcom/android/server/utils/quota/QuotaChangeListener;
 
-    .line 401
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 402
     array-length p1, p0
 
     if-gtz p1, :cond_0
@@ -300,13 +265,11 @@
 
     const/4 p0, 0x0
 
-    .line 403
     throw p0
 
     :catchall_0
     move-exception p0
 
-    .line 401
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -318,7 +281,6 @@
 .method private synthetic lambda$scheduleAlarm$0(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;)V
     .locals 8
 
-    .line 319
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInjector:Lcom/android/server/utils/quota/QuotaTracker$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/utils/quota/QuotaTracker$Injector;->isAlarmManagerReady()Z
@@ -327,7 +289,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 320
     iget-object v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker;->getHandler()Landroid/os/Handler;
@@ -346,7 +307,6 @@
 
     goto :goto_0
 
-    .line 322
     :cond_0
     sget-object p0, Lcom/android/server/utils/quota/QuotaTracker;->TAG:Ljava/lang/String;
 
@@ -361,12 +321,10 @@
 .method private synthetic lambda$scheduleQuotaCheck$2()V
     .locals 2
 
-    .line 353
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 354
     :try_start_0
     iget-object v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mQuotaChangeListeners:Landroid/util/ArraySet;
 
@@ -376,10 +334,8 @@
 
     if-lez v1, :cond_0
 
-    .line 355
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker;->maybeUpdateAllQuotaStatusLocked()V
 
-    .line 357
     :cond_0
     monitor-exit v0
 
@@ -400,7 +356,6 @@
 .method public cancelScheduledStartAlarmLocked(ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 450
     iget-object p0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInQuotaAlarmQueue:Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
     new-instance v0, Lcom/android/server/utils/quota/Uptc;
@@ -415,26 +370,21 @@
 .method public clear()V
     .locals 2
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 183
     :try_start_0
     iget-object v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInQuotaAlarmQueue:Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
     invoke-virtual {v1}, Lcom/android/server/utils/AlarmQueue;->removeAllAlarms()V
 
-    .line 184
     iget-object v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v1}, Landroid/util/SparseArrayMap;->clear()V
 
-    .line 186
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker;->dropEverythingLocked()V
 
-    .line 187
     monitor-exit v0
 
     return-void
@@ -457,18 +407,14 @@
 
     const-string v0, "QuotaTracker:"
 
-    .line 482
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 483
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 485
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 486
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -488,7 +434,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 487
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,7 +452,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 488
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -530,33 +474,26 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 489
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 491
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 492
     iget-object v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInQuotaAlarmQueue:Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
     invoke-virtual {v1, p1}, Lcom/android/server/utils/AlarmQueue;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 494
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
     const-string v1, "Per-app free quota:"
 
-    .line 495
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 496
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const/4 v1, 0x0
 
     move v2, v1
 
-    .line 497
     :goto_0
     iget-object v3, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
@@ -566,7 +503,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 498
     iget-object v3, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArrayMap;->keyAt(I)I
@@ -575,7 +511,6 @@
 
     move v4, v1
 
-    .line 499
     :goto_1
     iget-object v5, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
@@ -585,7 +520,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 500
     iget-object v5, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v5, v2, v4}, Landroid/util/SparseArrayMap;->keyAt(II)Ljava/lang/Object;
@@ -596,7 +530,6 @@
 
     const/4 v6, 0x0
 
-    .line 502
     invoke-static {v3, v5, v6}, Lcom/android/server/utils/quota/Uptc;->string(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -605,10 +538,8 @@
 
     const-string v6, ": "
 
-    .line 503
     invoke-virtual {p1, v6}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 504
     iget-object v6, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v6, v3, v5}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -626,16 +557,13 @@
 
     goto :goto_0
 
-    .line 507
     :cond_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 508
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 510
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -643,7 +571,6 @@
     :catchall_0
     move-exception p0
 
-    .line 508
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -655,17 +582,14 @@
 .method public dump(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 5
 
-    .line 520
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
-    .line 522
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 523
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mIsEnabled:Z
 
@@ -673,14 +597,12 @@
 
     invoke-virtual {p1, v2, v3, v1}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
-    .line 524
     iget-boolean v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mIsQuotaFree:Z
 
     const-wide v2, 0x10800000002L
 
     invoke-virtual {p1, v2, v3, v1}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
-    .line 525
     iget-object p0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInjector:Lcom/android/server/utils/quota/QuotaTracker$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker$Injector;->getElapsedRealtime()J
@@ -691,12 +613,10 @@
 
     invoke-virtual {p1, v3, v4, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    .line 526
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 528
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -704,7 +624,6 @@
     :catchall_0
     move-exception p0
 
-    .line 526
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -728,7 +647,6 @@
 .method public isEnabledLocked()Z
     .locals 0
 
-    .line 272
     iget-boolean p0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mIsEnabled:Z
 
     return p0
@@ -737,7 +655,6 @@
 .method public isIndividualQuotaFreeLocked(ILjava/lang/String;)Z
     .locals 1
 
-    .line 293
     iget-object p0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -758,7 +675,6 @@
 .method public isQuotaFreeLocked(ILjava/lang/String;)Z
     .locals 1
 
-    .line 284
     iget-boolean v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mIsQuotaFree:Z
 
     if-nez v0, :cond_1
@@ -797,12 +713,10 @@
 .method public isWithinQuota(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 196
     :try_start_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->isWithinQuotaLocked(ILjava/lang/String;Ljava/lang/String;)Z
 
@@ -815,7 +729,6 @@
     :catchall_0
     move-exception p0
 
-    .line 197
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -829,7 +742,6 @@
 .method public maybeScheduleStartAlarmLocked(ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 424
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mQuotaChangeListeners:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
@@ -840,18 +752,15 @@
 
     return-void
 
-    .line 430
     :cond_0
     invoke-static {p1, p2, p3}, Lcom/android/server/utils/quota/Uptc;->string(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 432
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->isWithinQuota(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInQuotaAlarmQueue:Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
     new-instance v1, Lcom/android/server/utils/quota/Uptc;
@@ -860,12 +769,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/utils/AlarmQueue;->removeAlarmForKey(Ljava/lang/Object;)V
 
-    .line 439
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->maybeUpdateQuotaStatus(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 443
     :cond_1
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInQuotaAlarmQueue:Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
@@ -873,12 +780,10 @@
 
     invoke-direct {v1, p1, p2, p3}, Lcom/android/server/utils/quota/Uptc;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 444
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker;->getInQuotaTimeElapsedLocked(ILjava/lang/String;Ljava/lang/String;)J
 
     move-result-wide p0
 
-    .line 443
     invoke-virtual {v0, v1, p0, p1}, Lcom/android/server/utils/AlarmQueue;->addAlarm(Ljava/lang/Object;J)V
 
     return-void
@@ -895,7 +800,6 @@
 
     if-nez p2, :cond_0
 
-    .line 367
     sget-object p0, Lcom/android/server/utils/quota/QuotaTracker;->TAG:Ljava/lang/String;
 
     const-string p1, "Told app removed but given null package name."
@@ -904,18 +808,15 @@
 
     return-void
 
-    .line 371
     :cond_0
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInQuotaAlarmQueue:Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;->removeAlarms(ILjava/lang/String;)V
 
-    .line 373
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArrayMap;->delete(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 375
     invoke-virtual {p0, p1, p2}, Lcom/android/server/utils/quota/QuotaTracker;->handleRemovedAppLocked(ILjava/lang/String;)V
 
     return-void
@@ -924,17 +825,14 @@
 .method public final onUserRemovedLocked(I)V
     .locals 1
 
-    .line 383
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mInQuotaAlarmQueue:Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;
 
     invoke-virtual {v0, p1}, Lcom/android/server/utils/AlarmQueue;->removeAlarmsForUserId(I)V
 
-    .line 384
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mFreeQuota:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArrayMap;->delete(I)V
 
-    .line 386
     invoke-virtual {p0, p1}, Lcom/android/server/utils/quota/QuotaTracker;->handleRemovedUserLocked(I)V
 
     return-void
@@ -943,7 +841,6 @@
 .method public postQuotaStatusChanged(ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 395
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -960,7 +857,6 @@
 .method public scheduleAlarm(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;)V
     .locals 9
 
-    .line 318
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -989,7 +885,6 @@
 .method public scheduleQuotaCheck()V
     .locals 2
 
-    .line 352
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1006,32 +901,26 @@
 .method public setEnabled(Z)V
     .locals 2
 
-    .line 256
     iget-object v0, p0, Lcom/android/server/utils/quota/QuotaTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 257
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mIsEnabled:Z
 
     if-ne v1, p1, :cond_0
 
-    .line 258
     monitor-exit v0
 
     return-void
 
-    .line 260
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/utils/quota/QuotaTracker;->mIsEnabled:Z
 
     if-nez p1, :cond_1
 
-    .line 263
     invoke-virtual {p0}, Lcom/android/server/utils/quota/QuotaTracker;->clear()V
 
-    .line 265
     :cond_1
     monitor-exit v0
 

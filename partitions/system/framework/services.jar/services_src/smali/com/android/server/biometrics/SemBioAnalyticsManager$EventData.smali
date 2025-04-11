@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 361
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,19 +25,14 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 0
 
-    .line 364
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 365
     iput-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
-    .line 366
     iput-object p2, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
-    .line 367
     iput p3, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mValue:I
 
-    .line 368
     iput p4, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mType:I
 
     return-void
@@ -49,7 +43,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 374
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

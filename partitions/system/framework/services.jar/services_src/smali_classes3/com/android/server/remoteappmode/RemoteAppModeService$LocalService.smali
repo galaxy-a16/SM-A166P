@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/remoteappmode/RemoteAppModeService;)V
     .locals 0
 
-    .line 256
     iput-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-direct {p0}, Lcom/samsung/android/remoteappmode/RemoteAppModeManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/remoteappmode/RemoteAppModeService;Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;-><init>(Lcom/android/server/remoteappmode/RemoteAppModeService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;I)V
     .locals 0
 
-    .line 260
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/remoteappmode/RemoteAppModeService;->onConfigurationChanged(Landroid/content/res/Configuration;I)V
@@ -44,7 +41,6 @@
 .method public onSecuredAppLaunched(ILjava/lang/String;)V
     .locals 0
 
-    .line 265
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/remoteappmode/RemoteAppModeService;->-$$Nest$monSecuredAppLaunched(Lcom/android/server/remoteappmode/RemoteAppModeService;ILjava/lang/String;)V
@@ -55,7 +51,6 @@
 .method public onSecuredAppRemoved(ILjava/lang/String;)V
     .locals 0
 
-    .line 270
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$LocalService;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/remoteappmode/RemoteAppModeService;->-$$Nest$monSecuredAppRemoved(Lcom/android/server/remoteappmode/RemoteAppModeService;ILjava/lang/String;)V

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingManager;)V
     .locals 0
 
-    .line 120
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$2;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,21 +23,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 124
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.intent.action.SCREEN_OFF"
 
-    .line 125
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 126
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$2;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
     invoke-static {p1}, Lcom/android/server/notification/edgelighting/EdgeLightingManager;->-$$Nest$fgetmEdgeLightingClientManager(Lcom/android/server/notification/edgelighting/EdgeLightingManager;)Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
@@ -49,7 +45,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->onScreenChanged(Z)V
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$2;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
     const-wide/16 p1, 0x0
@@ -61,14 +56,12 @@
     :cond_0
     const-string p2, "android.intent.action.SCREEN_ON"
 
-    .line 128
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 129
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$2;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
     invoke-static {p1}, Lcom/android/server/notification/edgelighting/EdgeLightingManager;->-$$Nest$fgetmEdgeLightingClientManager(Lcom/android/server/notification/edgelighting/EdgeLightingManager;)Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
@@ -79,7 +72,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->onScreenChanged(Z)V
 
-    .line 130
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$2;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingManager;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

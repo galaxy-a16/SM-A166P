@@ -25,14 +25,12 @@
 
     const-string v2, "PROC_USAGE"
 
-    .line 20
     filled-new-array {v2, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->EVENT:[Ljava/lang/String;
 
-    .line 27
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
@@ -45,10 +43,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -71,7 +67,6 @@
 
     goto/16 :goto_3
 
-    .line 39
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->mLock:Ljava/lang/Object;
 
@@ -79,7 +74,6 @@
 
     const/4 v1, 0x1
 
-    .line 41
     :try_start_0
     sget-object v2, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->sApiCalledCount:Ljava/util/Hashtable;
 
@@ -91,12 +85,10 @@
 
     if-nez v3, :cond_1
 
-    .line 42
     new-instance v3, Ljava/util/Hashtable;
 
     invoke-direct {v3}, Ljava/util/Hashtable;-><init>()V
 
-    .line 43
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -109,7 +101,6 @@
 
     invoke-virtual {v3, v5, v8}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -122,7 +113,6 @@
 
     const/4 v5, 0x2
 
-    .line 45
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -133,10 +123,8 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     invoke-virtual {v2, p1, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
     :cond_1
     invoke-virtual {v2, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -166,12 +154,10 @@
 
     if-nez v3, :cond_3
 
-    .line 51
     sget-boolean v2, Lcom/android/server/enterprise/threatdefense/ThreatDefenseService;->DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 52
     sget-object v2, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -205,15 +191,12 @@
     :cond_2
     add-long/2addr v5, v7
 
-    .line 54
     invoke-virtual {p0, p1, p2, v5, v6}, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->sendKnoxAnalyticsLogs(Ljava/lang/String;IJ)V
 
-    .line 55
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->flush(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 57
     :cond_3
     invoke-virtual {v2, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -252,7 +235,6 @@
     :catch_0
     move-exception p1
 
-    .line 69
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/UnsupportedOperationException;->printStackTrace()V
 
@@ -261,7 +243,6 @@
     :catch_1
     move-exception p1
 
-    .line 66
     invoke-virtual {p1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_1
@@ -269,7 +250,6 @@
     :catch_2
     move-exception p1
 
-    .line 63
     invoke-virtual {p1}, Ljava/lang/ClassCastException;->printStackTrace()V
 
     goto :goto_1
@@ -277,16 +257,13 @@
     :catch_3
     move-exception p1
 
-    .line 60
     invoke-virtual {p1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 73
     invoke-virtual {p0}, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->reset()V
 
-    .line 75
     :cond_4
     monitor-exit v0
 
@@ -318,7 +295,6 @@
     :cond_0
     const-wide/16 v0, 0x0
 
-    .line 137
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->mLock:Ljava/lang/Object;
 
@@ -326,7 +302,6 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 138
     :try_start_1
     sget-object v2, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->sApiCalledCount:Ljava/util/Hashtable;
 
@@ -352,7 +327,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 139
     :try_start_2
     invoke-virtual {v2, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -370,7 +344,6 @@
 
     invoke-virtual {v5, v6, v7}, Ljava/util/Hashtable;->replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
     invoke-virtual {v2, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -391,7 +364,6 @@
 
     move-result-wide v0
 
-    .line 141
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -440,7 +412,6 @@
 
     move-wide v2, v0
 
-    .line 143
     :goto_1
     invoke-virtual {p0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
@@ -450,7 +421,6 @@
 
     move-wide v3, v8
 
-    .line 145
     :goto_2
     sget-object p0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->TAG:Ljava/lang/String;
 
@@ -478,7 +448,6 @@
 
     return-void
 
-    .line 130
     :cond_1
     :goto_3
     sget-object p0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->TAG:Ljava/lang/String;
@@ -511,25 +480,21 @@
 .method public final reset()V
     .locals 2
 
-    .line 122
     sget-object v0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->TAG:Ljava/lang/String;
 
     const-string v1, "Reset"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     iget-object p0, p0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->mLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 124
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->sApiCalledCount:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->clear()V
 
-    .line 125
     monitor-exit p0
 
     return-void
@@ -547,12 +512,10 @@
 .method public schedule()V
     .locals 6
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 80
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->sApiCalledCount:Ljava/util/Hashtable;
 
@@ -577,19 +540,16 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 81
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 82
     sget-boolean v3, Lcom/android/server/enterprise/threatdefense/ThreatDefenseService;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 83
     sget-object v3, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -611,7 +571,6 @@
     :cond_1
     if-eqz v2, :cond_0
 
-    .line 85
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
@@ -627,7 +586,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 91
     :try_start_1
     sget-object v4, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->sApiCalledCount:Ljava/util/Hashtable;
 
@@ -661,7 +619,6 @@
     :catch_0
     move-exception v4
 
-    .line 93
     :try_start_2
     invoke-virtual {v4}, Ljava/lang/NullPointerException;->printStackTrace()V
 
@@ -670,7 +627,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_2
     monitor-exit v0
 
@@ -689,7 +645,6 @@
 .method public final sendKnoxAnalyticsLogs(Ljava/lang/String;IJ)V
     .locals 4
 
-    .line 103
     new-instance v0, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;
 
     const/4 v1, 0x1
@@ -700,7 +655,6 @@
 
     invoke-direct {v0, v3, v1, v2}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 105
     sget-object v1, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->EVENT:[Ljava/lang/String;
 
     aget-object v1, v1, p2
@@ -711,12 +665,10 @@
 
     const-string v1, "c"
 
-    .line 106
     invoke-virtual {v0, v1, p3, p4}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;J)V
 
     const-string/jumbo v1, "pN"
 
-    .line 107
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v1, 0x0
@@ -725,7 +677,6 @@
 
     if-nez p3, :cond_0
 
-    .line 109
     sget-object p0, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -746,18 +697,15 @@
 
     goto :goto_1
 
-    .line 111
     :cond_0
     invoke-static {v0}, Lcom/samsung/android/knox/analytics/KnoxAnalytics;->log(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 
-    .line 112
     sget-boolean p3, Lcom/android/server/enterprise/threatdefense/ThreatDefenseService;->DEBUG:Z
 
     const-string p4, "KA Data : "
 
     if-eqz p3, :cond_1
 
-    .line 113
     sget-object p3, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -780,7 +728,6 @@
 
     goto :goto_0
 
-    .line 115
     :cond_1
     sget-object p3, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->TAG:Ljava/lang/String;
 
@@ -806,7 +753,6 @@
 
     invoke-static {p3, p4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     :goto_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/threatdefense/KnoxAnalyticsThread;->flush(Ljava/lang/String;I)V
 

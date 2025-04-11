@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/camera/CameraServiceProxy;)V
     .locals 0
 
-    .line 374
     iput-object p1, p0, Lcom/android/server/camera/CameraServiceProxy$1;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 377
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 
     return-void
 
-    .line 380
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -160,7 +157,6 @@
 
     goto :goto_1
 
-    .line 386
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/camera/CameraServiceProxy$1;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
@@ -170,7 +166,6 @@
 
     monitor-enter v0
 
-    .line 388
     :try_start_0
     iget-object p1, p0, Lcom/android/server/camera/CameraServiceProxy$1;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
@@ -184,7 +179,6 @@
 
     return-void
 
-    .line 389
     :cond_8
     iget-object p0, p0, Lcom/android/server/camera/CameraServiceProxy$1;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
@@ -194,7 +188,6 @@
 
     invoke-static {p0, p1}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$mswitchUserLocked(Lcom/android/server/camera/CameraServiceProxy;I)V
 
-    .line 390
     monitor-exit v0
 
     goto :goto_1
@@ -208,7 +201,6 @@
 
     throw p0
 
-    .line 394
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/camera/CameraServiceProxy$1;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
@@ -221,7 +213,6 @@
     :try_start_1
     const-string v1, "device"
 
-    .line 395
     const-class v2, Landroid/hardware/usb/UsbDevice;
 
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -232,20 +223,16 @@
 
     if-eqz p2, :cond_9
 
-    .line 397
     iget-object p0, p0, Lcom/android/server/camera/CameraServiceProxy$1;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     const-string v1, "android.hardware.usb.action.USB_DEVICE_ATTACHED"
 
-    .line 398
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    .line 397
     invoke-static {p0, p2, p1}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$mnotifyUsbDeviceHotplugLocked(Lcom/android/server/camera/CameraServiceProxy;Landroid/hardware/usb/UsbDevice;Z)Z
 
-    .line 400
     :cond_9
     monitor-exit v0
 

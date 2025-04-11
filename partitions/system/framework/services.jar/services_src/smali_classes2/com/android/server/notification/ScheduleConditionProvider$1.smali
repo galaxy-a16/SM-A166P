@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/ScheduleConditionProvider;)V
     .locals 0
 
-    .line 358
     iput-object p1, p0, Lcom/android/server/notification/ScheduleConditionProvider$1;->this$0:Lcom/android/server/notification/ScheduleConditionProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 361
     sget-boolean p1, Lcom/android/server/notification/ScheduleConditionProvider;->DEBUG:Z
 
     if-eqz p1, :cond_0
@@ -54,7 +52,6 @@
     :cond_0
     const-string p1, "android.intent.action.TIMEZONE_CHANGED"
 
-    .line 362
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -65,7 +62,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 363
     iget-object p1, p0, Lcom/android/server/notification/ScheduleConditionProvider$1;->this$0:Lcom/android/server/notification/ScheduleConditionProvider;
 
     invoke-static {p1}, Lcom/android/server/notification/ScheduleConditionProvider;->-$$Nest$fgetmSubscriptions(Lcom/android/server/notification/ScheduleConditionProvider;)Landroid/util/ArrayMap;
@@ -74,7 +70,6 @@
 
     monitor-enter p1
 
-    .line 364
     :try_start_0
     iget-object p2, p0, Lcom/android/server/notification/ScheduleConditionProvider$1;->this$0:Lcom/android/server/notification/ScheduleConditionProvider;
 
@@ -104,7 +99,6 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 365
     iget-object v1, p0, Lcom/android/server/notification/ScheduleConditionProvider$1;->this$0:Lcom/android/server/notification/ScheduleConditionProvider;
 
     invoke-static {v1}, Lcom/android/server/notification/ScheduleConditionProvider;->-$$Nest$fgetmSubscriptions(Lcom/android/server/notification/ScheduleConditionProvider;)Landroid/util/ArrayMap;
@@ -119,7 +113,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 367
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
@@ -132,7 +125,6 @@
 
     goto :goto_0
 
-    .line 370
     :cond_2
     monitor-exit p1
 
@@ -147,7 +139,6 @@
 
     throw p0
 
-    .line 372
     :cond_3
     :goto_1
     iget-object p0, p0, Lcom/android/server/notification/ScheduleConditionProvider$1;->this$0:Lcom/android/server/notification/ScheduleConditionProvider;

@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$48v1Eyh62NdSE7laF5KIaB0BByc(Lcom/android/server/biometrics/BiometricService$2;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/BiometricService$2;->lambda$onModalitySwitched$6(I)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$8HHaODHJVdpJLq-TRrT1zKkaZf4(Lcom/android/server/biometrics/BiometricService$2;J)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/BiometricService$2;->lambda$onDeviceCredentialPressed$2(J)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static synthetic $r8$lambda$AQCRAPOBkYRaj5OoYHfzbvqBkFs(Lcom/android/server/biometrics/BiometricService$2;J)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/BiometricService$2;->lambda$onStartFingerprintNow$5(J)V
 
     return-void
@@ -40,7 +37,6 @@
 .method public static synthetic $r8$lambda$Qxmdx2LZqXN8ZJa53tYGoz9SIPY(Lcom/android/server/biometrics/BiometricService$2;JI[B)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/BiometricService$2;->lambda$onDialogDismissed$0(JI[B)V
 
     return-void
@@ -49,7 +45,6 @@
 .method public static synthetic $r8$lambda$VQ2z1a3xvkEwb0J8_eSCE3GhabQ(Lcom/android/server/biometrics/BiometricService$2;JZ)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/BiometricService$2;->lambda$onDialogAnimatedIn$4(JZ)V
 
     return-void
@@ -58,7 +53,6 @@
 .method public static synthetic $r8$lambda$cl4IDaQD2up6BUyNPjWrxAHt-5M(Lcom/android/server/biometrics/BiometricService$2;JI)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/BiometricService$2;->lambda$onSystemEvent$3(JI)V
 
     return-void
@@ -67,7 +61,6 @@
 .method public static synthetic $r8$lambda$o-9p3rCP_tF9GzaeMwFRhtKN0JE(Lcom/android/server/biometrics/BiometricService$2;JII)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/BiometricService$2;->lambda$onSysUiError$7(JII)V
 
     return-void
@@ -76,7 +69,6 @@
 .method public static synthetic $r8$lambda$oNnRy-z7Pn2iZtWynY9Ff3XCwcs(Lcom/android/server/biometrics/BiometricService$2;J)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/BiometricService$2;->lambda$onTryAgainPressed$1(J)V
 
     return-void
@@ -85,7 +77,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/BiometricService;J)V
     .locals 0
 
-    .line 510
     iput-object p1, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     iput-wide p2, p0, Lcom/android/server/biometrics/BiometricService$2;->val$requestId:J
@@ -98,7 +89,6 @@
 .method private synthetic lambda$onDeviceCredentialPressed$2(J)V
     .locals 0
 
-    .line 527
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleOnDeviceCredentialPressed(Lcom/android/server/biometrics/BiometricService;J)V
@@ -109,7 +99,6 @@
 .method private synthetic lambda$onDialogAnimatedIn$4(JZ)V
     .locals 0
 
-    .line 540
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleOnDialogAnimatedIn(Lcom/android/server/biometrics/BiometricService;JZ)V
@@ -120,7 +109,6 @@
 .method private synthetic lambda$onDialogDismissed$0(JI[B)V
     .locals 0
 
-    .line 517
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleOnDismissed(Lcom/android/server/biometrics/BiometricService;JI[B)V
@@ -131,7 +119,6 @@
 .method private synthetic lambda$onModalitySwitched$6(I)V
     .locals 0
 
-    .line 551
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleOnSwitchingSensorPressed(Lcom/android/server/biometrics/BiometricService;I)V
@@ -142,7 +129,6 @@
 .method private synthetic lambda$onStartFingerprintNow$5(J)V
     .locals 0
 
-    .line 545
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleOnStartFingerprintNow(Lcom/android/server/biometrics/BiometricService;J)V
@@ -153,7 +139,6 @@
 .method private synthetic lambda$onSysUiError$7(JII)V
     .locals 0
 
-    .line 556
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleOnErrorFromSysUi(Lcom/android/server/biometrics/BiometricService;JII)V
@@ -164,7 +149,6 @@
 .method private synthetic lambda$onSystemEvent$3(JI)V
     .locals 0
 
-    .line 532
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleOnSystemEvent(Lcom/android/server/biometrics/BiometricService;JI)V
@@ -175,7 +159,6 @@
 .method private synthetic lambda$onTryAgainPressed$1(J)V
     .locals 0
 
-    .line 522
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleOnTryAgainPressed(Lcom/android/server/biometrics/BiometricService;J)V
@@ -188,7 +171,6 @@
 .method public onDeviceCredentialPressed()V
     .locals 4
 
-    .line 527
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -209,7 +191,6 @@
 .method public onDialogAnimatedIn(Z)V
     .locals 4
 
-    .line 538
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     iget-object v0, v0, Lcom/android/server/biometrics/BiometricService;->mStatusBarService:Lcom/android/server/biometrics/SemBiometricSysUiWrapper;
@@ -218,7 +199,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->startSession(I)V
 
-    .line 540
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -239,7 +219,6 @@
 .method public onDialogDismissed(I[B)V
     .locals 8
 
-    .line 515
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     iget-object v0, v0, Lcom/android/server/biometrics/BiometricService;->mStatusBarService:Lcom/android/server/biometrics/SemBiometricSysUiWrapper;
@@ -248,7 +227,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/SemBiometricSysUiWrapper;->endSession(I)V
 
-    .line 517
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -277,7 +255,6 @@
 .method public onModalitySwitched(I)V
     .locals 2
 
-    .line 551
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -296,7 +273,6 @@
 .method public onStartFingerprintNow()V
     .locals 4
 
-    .line 545
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -317,7 +293,6 @@
 .method public onSysUiError(II)V
     .locals 8
 
-    .line 556
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -346,7 +321,6 @@
 .method public onSystemEvent(I)V
     .locals 4
 
-    .line 532
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -367,7 +341,6 @@
 .method public onTryAgainPressed()V
     .locals 4
 
-    .line 522
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$2;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;

@@ -16,13 +16,10 @@
 .method public constructor <init>(ZI)V
     .locals 0
 
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-boolean p1, p0, Lorg/tukaani/xz/simple/SPARC;->isEncoder:Z
 
-    .line 19
     iput p2, p0, Lorg/tukaani/xz/simple/SPARC;->pos:I
 
     return-void
@@ -42,7 +39,6 @@
     :goto_0
     if-gt v0, p3, :cond_4
 
-    .line 27
     aget-byte v1, p1, v0
 
     const/16 v2, 0x40
@@ -79,7 +75,6 @@
 
     add-int/lit8 v2, v0, 0x1
 
-    .line 29
     aget-byte v3, p1, v2
 
     and-int/lit16 v3, v3, 0xff
@@ -108,12 +103,10 @@
 
     shl-int/lit8 v1, v1, 0x2
 
-    .line 36
     iget-boolean v5, p0, Lorg/tukaani/xz/simple/SPARC;->isEncoder:Z
 
     if-eqz v5, :cond_2
 
-    .line 37
     iget v5, p0, Lorg/tukaani/xz/simple/SPARC;->pos:I
 
     add-int/2addr v5, v0
@@ -124,7 +117,6 @@
 
     goto :goto_1
 
-    .line 39
     :cond_2
     iget v5, p0, Lorg/tukaani/xz/simple/SPARC;->pos:I
 
@@ -163,26 +155,22 @@
 
     int-to-byte v5, v5
 
-    .line 45
     aput-byte v5, p1, v0
 
     ushr-int/lit8 v5, v1, 0x10
 
     int-to-byte v5, v5
 
-    .line 46
     aput-byte v5, p1, v2
 
     ushr-int/lit8 v2, v1, 0x8
 
     int-to-byte v2, v2
 
-    .line 47
     aput-byte v2, p1, v3
 
     int-to-byte v1, v1
 
-    .line 48
     aput-byte v1, p1, v4
 
     :cond_3
@@ -193,7 +181,6 @@
     :cond_4
     sub-int/2addr v0, p2
 
-    .line 53
     iget p1, p0, Lorg/tukaani/xz/simple/SPARC;->pos:I
 
     add-int/2addr p1, v0

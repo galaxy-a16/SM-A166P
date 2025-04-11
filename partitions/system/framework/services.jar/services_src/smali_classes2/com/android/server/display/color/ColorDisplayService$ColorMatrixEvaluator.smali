@@ -14,14 +14,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1357
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
-    .line 1362
     iput-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$ColorMatrixEvaluator;->mResultMatrix:[F
 
     return-void
@@ -30,7 +28,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/color/ColorDisplayService$ColorMatrixEvaluator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService$ColorMatrixEvaluator;-><init>()V
 
     return-void
@@ -41,7 +38,6 @@
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1357
     check-cast p2, [F
 
     check-cast p3, [F
@@ -58,7 +54,6 @@
 
     const/4 v0, 0x0
 
-    .line 1366
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/color/ColorDisplayService$ColorMatrixEvaluator;->mResultMatrix:[F
 
@@ -66,7 +61,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1367
     aget v2, p2, v0
 
     aget v3, p3, v0

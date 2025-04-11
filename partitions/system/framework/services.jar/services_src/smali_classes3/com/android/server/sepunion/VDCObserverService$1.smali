@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/VDCObserverService;)V
     .locals 0
 
-    .line 148
     iput-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$1;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-direct {p0}, Landroid/app/IForegroundServiceObserver$Stub;-><init>()V
@@ -24,17 +23,14 @@
 .method public onForegroundStateChanged(Landroid/os/IBinder;Ljava/lang/String;IZ)V
     .locals 3
 
-    .line 152
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
     const/16 v1, 0xa
 
-    .line 153
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 155
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
@@ -45,7 +41,6 @@
 
     goto :goto_0
 
-    .line 156
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -54,28 +49,22 @@
     :goto_0
     const-string v2, "component_name"
 
-    .line 158
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p1, "pkg_name"
 
-    .line 159
     invoke-virtual {v1, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p1, "user_id"
 
-    .line 160
     invoke-virtual {v1, p1, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "is_foreground"
 
-    .line 161
     invoke-virtual {v1, p1, p4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 163
     invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$1;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/VDCObserverService;->-$$Nest$fgetmHandler(Lcom/android/server/sepunion/VDCObserverService;)Landroid/os/Handler;

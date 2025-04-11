@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/am/ServiceRecord;Ljava/lang/String;I)V
     .locals 0
 
-    .line 1258
     iput-object p1, p0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
 
     iput-object p2, p0, Lcom/android/server/am/ServiceRecord$1;->val$localPackageName:Ljava/lang/String;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 1260
     const-class v0, Lcom/android/server/notification/NotificationManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -48,7 +46,6 @@
 
     return-void
 
-    .line 1266
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
 

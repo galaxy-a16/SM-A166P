@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0, p1}, Lcom/android/server/devicestate/DeviceStatePolicy;-><init>(Landroid/content/Context;)V
 
-    .line 35
     iget-object p1, p0, Lcom/android/server/devicestate/DeviceStatePolicy;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/android/server/policy/DeviceStateProviderImpl;->create(Landroid/content/Context;)Lcom/android/server/policy/DeviceStateProviderImpl;
@@ -31,7 +29,6 @@
 .method public configureDeviceForState(ILjava/lang/Runnable;)V
     .locals 0
 
-    .line 44
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     return-void
@@ -40,7 +37,6 @@
 .method public getDeviceStateProvider()Lcom/android/server/devicestate/DeviceStateProvider;
     .locals 0
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/policy/DeviceStatePolicyImpl;->mProvider:Lcom/android/server/devicestate/DeviceStateProvider;
 
     return-object p0

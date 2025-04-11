@@ -29,7 +29,6 @@
 .method public static synthetic $values()[Lcom/android/server/display/config/ThermalStatus;
     .locals 7
 
-    .line 3
     sget-object v0, Lcom/android/server/display/config/ThermalStatus;->none:Lcom/android/server/display/config/ThermalStatus;
 
     sget-object v1, Lcom/android/server/display/config/ThermalStatus;->light:Lcom/android/server/display/config/ThermalStatus;
@@ -54,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 4
     new-instance v0, Lcom/android/server/display/config/ThermalStatus;
 
     const-string/jumbo v1, "none"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/display/config/ThermalStatus;->none:Lcom/android/server/display/config/ThermalStatus;
 
-    .line 5
     new-instance v0, Lcom/android/server/display/config/ThermalStatus;
 
     const-string v1, "light"
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/android/server/display/config/ThermalStatus;->light:Lcom/android/server/display/config/ThermalStatus;
 
-    .line 6
     new-instance v0, Lcom/android/server/display/config/ThermalStatus;
 
     const-string/jumbo v1, "moderate"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/android/server/display/config/ThermalStatus;->moderate:Lcom/android/server/display/config/ThermalStatus;
 
-    .line 7
     new-instance v0, Lcom/android/server/display/config/ThermalStatus;
 
     const-string/jumbo v1, "severe"
@@ -98,7 +93,6 @@
 
     sput-object v0, Lcom/android/server/display/config/ThermalStatus;->severe:Lcom/android/server/display/config/ThermalStatus;
 
-    .line 8
     new-instance v0, Lcom/android/server/display/config/ThermalStatus;
 
     const-string v1, "critical"
@@ -109,7 +103,6 @@
 
     sput-object v0, Lcom/android/server/display/config/ThermalStatus;->critical:Lcom/android/server/display/config/ThermalStatus;
 
-    .line 9
     new-instance v0, Lcom/android/server/display/config/ThermalStatus;
 
     const-string v1, "emergency"
@@ -120,7 +113,6 @@
 
     sput-object v0, Lcom/android/server/display/config/ThermalStatus;->emergency:Lcom/android/server/display/config/ThermalStatus;
 
-    .line 10
     new-instance v0, Lcom/android/server/display/config/ThermalStatus;
 
     const-string/jumbo v1, "shutdown"
@@ -131,7 +123,6 @@
 
     sput-object v0, Lcom/android/server/display/config/ThermalStatus;->shutdown:Lcom/android/server/display/config/ThermalStatus;
 
-    .line 3
     invoke-static {}, Lcom/android/server/display/config/ThermalStatus;->$values()[Lcom/android/server/display/config/ThermalStatus;
 
     move-result-object v0
@@ -144,10 +135,8 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 14
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 15
     iput-object p3, p0, Lcom/android/server/display/config/ThermalStatus;->rawName:Ljava/lang/String;
 
     return-void
@@ -156,7 +145,6 @@
 .method public static fromString(Ljava/lang/String;)Lcom/android/server/display/config/ThermalStatus;
     .locals 5
 
-    .line 23
     invoke-static {}, Lcom/android/server/display/config/ThermalStatus;->values()[Lcom/android/server/display/config/ThermalStatus;
 
     move-result-object v0
@@ -170,7 +158,6 @@
 
     aget-object v3, v0, v2
 
-    .line 24
     invoke-virtual {v3}, Lcom/android/server/display/config/ThermalStatus;->getRawName()Ljava/lang/String;
 
     move-result-object v4
@@ -188,7 +175,6 @@
 
     goto :goto_0
 
-    .line 28
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -200,7 +186,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/display/config/ThermalStatus;
     .locals 1
 
-    .line 3
     const-class v0, Lcom/android/server/display/config/ThermalStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -215,7 +200,6 @@
 .method public static values()[Lcom/android/server/display/config/ThermalStatus;
     .locals 1
 
-    .line 3
     sget-object v0, Lcom/android/server/display/config/ThermalStatus;->$VALUES:[Lcom/android/server/display/config/ThermalStatus;
 
     invoke-virtual {v0}, [Lcom/android/server/display/config/ThermalStatus;->clone()Ljava/lang/Object;
@@ -232,7 +216,6 @@
 .method public getRawName()Ljava/lang/String;
     .locals 0
 
-    .line 19
     iget-object p0, p0, Lcom/android/server/display/config/ThermalStatus;->rawName:Ljava/lang/String;
 
     return-object p0

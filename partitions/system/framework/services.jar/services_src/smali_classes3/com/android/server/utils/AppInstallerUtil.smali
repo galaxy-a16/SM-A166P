@@ -7,12 +7,10 @@
 .method public static createIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
     .locals 1
 
-    .line 69
     invoke-static {p0, p1}, Lcom/android/server/utils/AppInstallerUtil;->getInstallerPackageName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 70
     invoke-static {p0, v0, p1}, Lcom/android/server/utils/AppInstallerUtil;->createIntent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p0
@@ -23,7 +21,6 @@
 .method public static createIntent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     .locals 2
 
-    .line 55
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SHOW_APP_INFO"
@@ -34,7 +31,6 @@
 
     move-result-object p1
 
-    .line 56
     invoke-static {p0, p1}, Lcom/android/server/utils/AppInstallerUtil;->resolveIntent(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object p0
@@ -43,12 +39,10 @@
 
     const-string p1, "android.intent.extra.PACKAGE_NAME"
 
-    .line 58
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 p1, 0x10000000
 
-    .line 59
     invoke-virtual {p0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     return-object p0
@@ -64,7 +58,6 @@
 
     const/4 v0, 0x0
 
-    .line 40
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -81,7 +74,6 @@
     :catch_0
     move-exception p0
 
-    .line 42
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +106,6 @@
 .method public static resolveIntent(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
     .locals 1
 
-    .line 28
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -127,10 +118,8 @@
 
     if-eqz p0, :cond_0
 
-    .line 30
     new-instance v0, Landroid/content/Intent;
 
-    .line 29
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -143,7 +132,6 @@
 
     iget-object p0, p0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 30
     invoke-virtual {v0, p1, p0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p0

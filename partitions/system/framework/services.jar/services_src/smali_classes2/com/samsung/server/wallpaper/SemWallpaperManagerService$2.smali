@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$mDoCJynH80KNjrgxY5vpj5-iPb8(Lcom/samsung/server/wallpaper/SemWallpaperManagerService$2;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$2;->lambda$onHomeVisibilityChanged$0(Z)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/SemWallpaperManagerService;)V
     .locals 0
 
-    .line 339
     iput-object p1, p0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$2;->this$0:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     invoke-direct {p0}, Landroid/app/HomeVisibilityListener;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onHomeVisibilityChanged$0(Z)V
     .locals 2
 
-    .line 343
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +47,6 @@
 
     invoke-static {v1, v0}, Lcom/samsung/server/wallpaper/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     iget-object p0, p0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$2;->this$0:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     invoke-static {p0}, Lcom/samsung/server/wallpaper/SemWallpaperManagerService;->-$$Nest$fgetmCallback(Lcom/samsung/server/wallpaper/SemWallpaperManagerService;)Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
@@ -67,7 +63,6 @@
 .method public onHomeVisibilityChanged(Z)V
     .locals 2
 
-    .line 342
     iget-object v0, p0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$2;->this$0:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     invoke-static {v0}, Lcom/samsung/server/wallpaper/SemWallpaperManagerService;->-$$Nest$fgetmHandler(Lcom/samsung/server/wallpaper/SemWallpaperManagerService;)Landroid/os/Handler;

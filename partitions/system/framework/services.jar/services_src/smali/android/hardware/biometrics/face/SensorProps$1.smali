@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/biometrics/face/SensorProps;
     .locals 0
 
-    .line 22
     new-instance p0, Landroid/hardware/biometrics/face/SensorProps;
 
     invoke-direct {p0}, Landroid/hardware/biometrics/face/SensorProps;-><init>()V
 
-    .line 23
     invoke-virtual {p0, p1}, Landroid/hardware/biometrics/face/SensorProps;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 19
     invoke-virtual {p0, p1}, Landroid/hardware/biometrics/face/SensorProps$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/biometrics/face/SensorProps;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/biometrics/face/SensorProps;
     .locals 0
 
-    .line 28
     new-array p0, p1, [Landroid/hardware/biometrics/face/SensorProps;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 19
     invoke-virtual {p0, p1}, Landroid/hardware/biometrics/face/SensorProps$1;->newArray(I)[Landroid/hardware/biometrics/face/SensorProps;
 
     move-result-object p0

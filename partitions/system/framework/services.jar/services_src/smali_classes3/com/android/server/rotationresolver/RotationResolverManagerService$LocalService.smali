@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/rotationresolver/RotationResolverManagerService;)V
     .locals 0
 
-    .line 174
     iput-object p1, p0, Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService;->this$0:Lcom/android/server/rotationresolver/RotationResolverManagerService;
 
     invoke-direct {p0}, Landroid/rotationresolver/RotationResolverInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/rotationresolver/RotationResolverManagerService;Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService;-><init>(Lcom/android/server/rotationresolver/RotationResolverManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public isRotationResolverSupported()Z
     .locals 1
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService;->this$0:Lcom/android/server/rotationresolver/RotationResolverManagerService;
 
     invoke-static {v0}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->access$000(Lcom/android/server/rotationresolver/RotationResolverManagerService;)Ljava/lang/Object;
@@ -42,7 +39,6 @@
 
     monitor-enter v0
 
-    .line 178
     :try_start_0
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService;->this$0:Lcom/android/server/rotationresolver/RotationResolverManagerService;
 
@@ -55,7 +51,6 @@
     :catchall_0
     move-exception p0
 
-    .line 179
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -70,13 +65,10 @@
 
     move-object v1, p1
 
-    .line 187
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 188
     invoke-static/range {p7 .. p7}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
     iget-object v2, v0, Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService;->this$0:Lcom/android/server/rotationresolver/RotationResolverManagerService;
 
     invoke-static {v2}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->access$100(Lcom/android/server/rotationresolver/RotationResolverManagerService;)Ljava/lang/Object;
@@ -85,7 +77,6 @@
 
     monitor-enter v2
 
-    .line 190
     :try_start_0
     iget-object v3, v0, Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService;->this$0:Lcom/android/server/rotationresolver/RotationResolverManagerService;
 
@@ -110,7 +101,6 @@
     :cond_0
     move v3, v4
 
-    .line 192
     :goto_0
     iget-object v0, v0, Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService;->this$0:Lcom/android/server/rotationresolver/RotationResolverManagerService;
 
@@ -120,12 +110,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 195
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
-    .line 194
     invoke-static {v0, v3}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->access$200(Lcom/android/server/rotationresolver/RotationResolverManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object v0
@@ -134,7 +122,6 @@
 
     if-nez p2, :cond_1
 
-    .line 198
     new-instance v10, Landroid/service/rotationresolver/RotationResolutionRequest;
 
     const-string v4, ""
@@ -153,7 +140,6 @@
 
     goto :goto_1
 
-    .line 202
     :cond_1
     new-instance v10, Landroid/service/rotationresolver/RotationResolutionRequest;
 
@@ -174,7 +160,6 @@
     :goto_1
     move-object/from16 v3, p7
 
-    .line 206
     invoke-virtual {v0, p1, v10, v3}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->resolveRotationLocked(Landroid/rotationresolver/RotationResolverInternal$RotationResolverCallbackInternal;Landroid/service/rotationresolver/RotationResolutionRequest;Landroid/os/CancellationSignal;)V
 
     goto :goto_3
@@ -182,7 +167,6 @@
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 210
     invoke-static {}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -193,7 +177,6 @@
 
     goto :goto_2
 
-    .line 212
     :cond_3
     invoke-static {}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -203,7 +186,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     :goto_2
     invoke-interface {p1, v4}, Landroid/rotationresolver/RotationResolverInternal$RotationResolverCallbackInternal;->onFailure(I)V
 
@@ -213,10 +195,8 @@
 
     move v3, p4
 
-    .line 215
     invoke-static {p3, p4, v0}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->logRotationStats(III)V
 
-    .line 217
     :goto_3
     monitor-exit v2
 

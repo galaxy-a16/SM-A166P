@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/NetworkScoreService;Ljava/lang/String;)V
     .locals 0
 
-    .line 158
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->this$0:Lcom/android/server/NetworkScoreService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
 
-    .line 159
     iput-object p2, p0, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->mPackageToWatch:Ljava/lang/String;
 
     return-void
@@ -27,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/NetworkScoreService;Ljava/lang/String;Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;-><init>(Lcom/android/server/NetworkScoreService;Ljava/lang/String;)V
 
     return-void
@@ -38,7 +35,6 @@
 .method public final evaluateBinding(Ljava/lang/String;Z)V
     .locals 3
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->mPackageToWatch:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -49,7 +45,6 @@
 
     return-void
 
-    .line 198
     :cond_0
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
@@ -59,7 +54,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 199
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +76,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     :cond_1
     iget-object p1, p0, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->this$0:Lcom/android/server/NetworkScoreService;
 
@@ -96,7 +89,6 @@
 
     if-nez p1, :cond_3
 
-    .line 207
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
     move-result p1
@@ -107,7 +99,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     :cond_2
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->this$0:Lcom/android/server/NetworkScoreService;
 
@@ -118,12 +109,10 @@
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 211
     iget-object p2, p0, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->this$0:Lcom/android/server/NetworkScoreService;
 
     invoke-static {p2}, Lcom/android/server/NetworkScoreService;->-$$Nest$munbindFromScoringServiceIfNeeded(Lcom/android/server/NetworkScoreService;)V
 
-    .line 213
     :cond_4
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
@@ -131,7 +120,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 214
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,7 +144,6 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     :cond_5
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->this$0:Lcom/android/server/NetworkScoreService;
 
@@ -171,7 +158,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 180
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -183,14 +169,12 @@
 
     const/4 v3, 0x1
 
-    .line 181
     invoke-virtual {p0, v2, v3}, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->evaluateBinding(Ljava/lang/String;Z)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 184
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/android/internal/content/PackageMonitor;->onHandleForceStop(Landroid/content/Intent;[Ljava/lang/String;IZ)Z
 
@@ -204,7 +188,6 @@
 
     const/4 p2, 0x1
 
-    .line 164
     invoke-virtual {p0, p1, p2}, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->evaluateBinding(Ljava/lang/String;Z)V
 
     return-void
@@ -215,7 +198,6 @@
 
     const/4 v0, 0x0
 
-    .line 174
     invoke-virtual {p0, p1, v0}, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->evaluateBinding(Ljava/lang/String;Z)V
 
     return-void
@@ -226,7 +208,6 @@
 
     const/4 p2, 0x1
 
-    .line 169
     invoke-virtual {p0, p1, p2}, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->evaluateBinding(Ljava/lang/String;Z)V
 
     return-void
@@ -237,7 +218,6 @@
 
     const/4 p2, 0x1
 
-    .line 189
     invoke-virtual {p0, p1, p2}, Lcom/android/server/NetworkScoreService$NetworkScorerPackageMonitor;->evaluateBinding(Ljava/lang/String;Z)V
 
     return-void

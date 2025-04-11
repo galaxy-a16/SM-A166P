@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;)V
     .locals 0
 
-    .line 176
     iput-object p1, p0, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector$1;->this$0:Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,12 +28,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 180
     iget-object v0, p0, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector$1;->this$0:Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;
 
     invoke-virtual {v0}, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;->stop()V
 
-    .line 181
     iget-object p0, p0, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector$1;->this$0:Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;
 
     invoke-static {p0, p1}, Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;->-$$Nest$mqueryCountryCode(Lcom/android/server/location/countrydetector/LocationBasedCountryDetector;Landroid/location/Location;)V
@@ -46,20 +43,17 @@
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

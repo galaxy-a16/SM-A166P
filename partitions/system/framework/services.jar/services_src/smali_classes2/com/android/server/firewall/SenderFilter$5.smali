@@ -32,7 +32,6 @@
 
     move v4, p7
 
-    .line 100
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/firewall/IntentFirewall;->checkComponentPermission(Ljava/lang/String;IIIZ)Z
 
     move-result p0

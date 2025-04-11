@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/SamsungStickyKeys;)V
     .locals 0
 
-    .line 107
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$2;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 110
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +45,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$2;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     invoke-static {p1}, Lcom/android/server/accessibility/SamsungStickyKeys;->-$$Nest$misHardwareKeyboardAvailable(Lcom/android/server/accessibility/SamsungStickyKeys;)Z
@@ -56,7 +53,6 @@
 
     if-nez p1, :cond_0
 
-    .line 113
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$2;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     const/4 p2, 0x0
@@ -70,7 +66,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungStickyKeys$2;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     invoke-static {v0, p1, p2}, Lcom/android/server/accessibility/SamsungStickyKeys;->-$$Nest$msetModifierKeyStatus(Lcom/android/server/accessibility/SamsungStickyKeys;II)V

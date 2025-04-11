@@ -51,75 +51,57 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;Landroid/app/ActivityOptions;IZZIIZ)V
     .locals 1
 
-    .line 445
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 395
     iput v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mSourceEventDelayMs:I
 
-    .line 399
     iput v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mStartingWindowDelayMs:I
 
-    .line 401
     iput v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mBindApplicationDelayMs:I
 
     const/4 v0, 0x3
 
-    .line 405
     iput v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mReason:I
 
-    .line 446
     iput-object p2, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mLaunchingState:Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;
 
-    .line 447
     iput p4, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mTransitionType:I
 
-    .line 448
     iput-boolean p5, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mProcessRunning:Z
 
-    .line 449
     iput-boolean p6, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mProcessSwitch:Z
 
-    .line 450
     iput p7, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mProcessState:I
 
-    .line 451
     iput p8, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mProcessOomAdj:I
 
-    .line 452
     iput-boolean p9, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mIsInTaskActivityStart:Z
 
-    .line 453
     invoke-virtual {p0, p1}, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->setLatestLaunchedActivity(Lcom/android/server/wm/ActivityRecord;)V
 
-    .line 456
     invoke-static {p2}, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->-$$Nest$fgetmAssociatedTransitionInfo(Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;)Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
-    .line 457
     invoke-static {p2, p0}, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->-$$Nest$fputmAssociatedTransitionInfo(Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;)V
 
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 460
     invoke-virtual {p3}, Landroid/app/ActivityOptions;->getSourceInfo()Landroid/app/ActivityOptions$SourceInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 462
     iget p3, p1, Landroid/app/ActivityOptions$SourceInfo;->type:I
 
     iput p3, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mSourceType:I
 
-    .line 463
     sget-object p3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     iget-wide p4, p2, Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;->mStartUptimeNs:J
@@ -160,7 +142,6 @@
 
     if-nez p7, :cond_1
 
-    .line 429
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->attachedToProcess()Z
 
     move-result v0
@@ -182,7 +163,6 @@
     :goto_0
     move v5, v0
 
-    .line 437
     new-instance v0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;
 
     move-object v1, v0
@@ -213,7 +193,6 @@
 .method public calculateCurrentDelay()I
     .locals 2
 
-    .line 523
     invoke-static {}, Landroid/os/SystemClock;->uptimeNanos()J
 
     move-result-wide v0
@@ -228,7 +207,6 @@
 .method public calculateDelay(J)I
     .locals 3
 
-    .line 528
     sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mLaunchingState:Lcom/android/server/wm/ActivityMetricsLogger$LaunchingState;
@@ -249,7 +227,6 @@
 .method public canCoalesce(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 3
 
-    .line 492
     iget-object v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mLastLaunchedActivity:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v1, v0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -258,7 +235,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 493
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v0
@@ -271,7 +247,6 @@
 
     goto :goto_0
 
-    .line 498
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mLastLaunchedActivity:Lcom/android/server/wm/ActivityRecord;
 
@@ -279,7 +254,6 @@
 
     move-result-object v0
 
-    .line 499
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v1
@@ -294,7 +268,6 @@
 
     return p0
 
-    .line 504
     :cond_1
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
@@ -310,7 +283,6 @@
 
     return p0
 
-    .line 506
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mLastLaunchedActivity:Lcom/android/server/wm/ActivityRecord;
 
@@ -332,7 +304,6 @@
 .method public contains(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 511
     iget-object p0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mLastLaunchedActivity:Lcom/android/server/wm/ActivityRecord;
 
     if-ne p1, p0, :cond_0
@@ -351,7 +322,6 @@
 .method public isInterestingToLoggerAndObserver()Z
     .locals 0
 
-    .line 519
     iget-boolean p0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mProcessSwitch:Z
 
     return p0
@@ -360,7 +330,6 @@
 .method public setLatestLaunchedActivity(Lcom/android/server/wm/ActivityRecord;)V
     .locals 3
 
-    .line 475
     iget-object v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mLastLaunchedActivity:Lcom/android/server/wm/ActivityRecord;
 
     if-ne v0, p1, :cond_0
@@ -370,29 +339,23 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 481
     iget-object v1, v0, Lcom/android/server/wm/ActivityRecord;->mLaunchCookie:Landroid/os/IBinder;
 
     iput-object v1, p1, Lcom/android/server/wm/ActivityRecord;->mLaunchCookie:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
-    .line 482
     iput-object v1, v0, Lcom/android/server/wm/ActivityRecord;->mLaunchCookie:Landroid/os/IBinder;
 
-    .line 483
     iget-object v2, v0, Lcom/android/server/wm/ActivityRecord;->mLaunchRootTask:Landroid/window/WindowContainerToken;
 
     iput-object v2, p1, Lcom/android/server/wm/ActivityRecord;->mLaunchRootTask:Landroid/window/WindowContainerToken;
 
-    .line 484
     iput-object v1, v0, Lcom/android/server/wm/ActivityRecord;->mLaunchRootTask:Landroid/window/WindowContainerToken;
 
-    .line 486
     :cond_1
     iput-object p1, p0, Lcom/android/server/wm/ActivityMetricsLogger$TransitionInfo;->mLastLaunchedActivity:Lcom/android/server/wm/ActivityRecord;
 
-    .line 487
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isReportedDrawn()Z
 
     move-result p1
@@ -405,7 +368,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 534
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

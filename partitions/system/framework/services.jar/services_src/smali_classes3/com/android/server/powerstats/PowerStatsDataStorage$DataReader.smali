@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/android/server/powerstats/PowerStatsDataStorage$DataElementReadCallback;)V
     .locals 0
 
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/powerstats/PowerStatsDataStorage$DataReader;->mCallback:Lcom/android/server/powerstats/PowerStatsDataStorage$DataElementReadCallback;
 
     return-void
@@ -28,7 +26,6 @@
 .method public read(Ljava/io/InputStream;)V
     .locals 2
 
-    .line 126
     :goto_0
     invoke-virtual {p1}, Ljava/io/InputStream;->available()I
 
@@ -36,14 +33,12 @@
 
     if-lez v0, :cond_0
 
-    .line 127
     new-instance v0, Lcom/android/server/powerstats/PowerStatsDataStorage$DataElement;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/android/server/powerstats/PowerStatsDataStorage$DataElement;-><init>(Ljava/io/InputStream;Lcom/android/server/powerstats/PowerStatsDataStorage$DataElement-IA;)V
 
-    .line 128
     iget-object v1, p0, Lcom/android/server/powerstats/PowerStatsDataStorage$DataReader;->mCallback:Lcom/android/server/powerstats/PowerStatsDataStorage$DataElementReadCallback;
 
     invoke-virtual {v0}, Lcom/android/server/powerstats/PowerStatsDataStorage$DataElement;->getData()[B

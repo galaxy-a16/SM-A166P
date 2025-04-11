@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/UserController;->$r8$lambda$ruYvcbXCBcj2KNR2EOw0NXxJGpw()V
 
     return-void

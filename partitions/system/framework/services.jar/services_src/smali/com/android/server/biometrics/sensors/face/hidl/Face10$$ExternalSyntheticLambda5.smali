@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/Face10;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
@@ -27,7 +26,6 @@
 .method public final onHardwareUnavailable()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->$r8$lambda$SlhKCjtEevwvUQHuA-Mnq2leCpg(Lcom/android/server/biometrics/sensors/face/hidl/Face10;)V

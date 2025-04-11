@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;)V
     .locals 0
 
-    .line 154
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiControlCallback$Stub;-><init>()V
@@ -34,10 +33,8 @@
 
     const-string p1, "TV power toggle: TV power status unknown"
 
-    .line 158
     invoke-static {v2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;
 
     const/16 p1, 0x6b
@@ -67,10 +64,8 @@
     :cond_2
     const-string p1, "TV power toggle: turning on TV"
 
-    .line 170
     invoke-static {v2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;
 
     new-instance v0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1$1;
@@ -85,15 +80,12 @@
     :goto_0
     const-string p1, "TV power toggle: turning off TV"
 
-    .line 164
     invoke-static {v2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;
 
     invoke-virtual {p1, v1}, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;->sendStandby(I)V
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;
 
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiLocalDevice;->mService:Lcom/android/server/hdmi/HdmiControlService;

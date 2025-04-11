@@ -13,22 +13,18 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;I)V
     .locals 0
 
-    .line 494
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_0
 
     if-lez p2, :cond_0
 
-    .line 498
     iput-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->resolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 499
     iput p2, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->density:I
 
     return-void
 
-    .line 496
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -53,7 +49,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 513
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -66,11 +61,9 @@
 
     goto :goto_1
 
-    .line 515
     :cond_1
     check-cast p1, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
-    .line 517
     iget-object v2, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->resolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     iget-object v3, p1, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->resolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
@@ -103,7 +96,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 523
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->resolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     iget p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->density:I
@@ -126,7 +118,6 @@
 .method public setDensity(I)V
     .locals 0
 
-    .line 507
     iput p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->density:I
 
     return-void
@@ -135,7 +126,6 @@
 .method public setResolution(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)V
     .locals 0
 
-    .line 503
     iput-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->resolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     return-void
@@ -144,7 +134,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 528
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

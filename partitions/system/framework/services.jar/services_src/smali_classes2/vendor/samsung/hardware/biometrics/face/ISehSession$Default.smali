@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public authenticateExtension(JI[B)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -38,7 +36,6 @@
 .method public authenticateForIssuance(JI[BZLandroid/hardware/common/NativeHandle;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -47,14 +44,12 @@
 .method public close()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getTaInfo()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -63,7 +58,6 @@
 .method public getWrappedData()[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -72,7 +66,6 @@
 .method public getWrappedDataFromMemory()Landroid/hardware/common/Ashmem;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -81,7 +74,6 @@
 .method public isTAUnloaded()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -90,7 +82,6 @@
 .method public loadTA()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -99,7 +90,6 @@
 .method public pause()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -108,7 +98,6 @@
 .method public resume()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -117,7 +106,6 @@
 .method public setFaceTag(I[B)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -126,7 +114,6 @@
 .method public setRotation(I)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -135,7 +122,6 @@
 .method public unloadTA()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

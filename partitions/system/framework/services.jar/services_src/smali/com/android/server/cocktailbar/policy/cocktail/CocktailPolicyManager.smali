@@ -22,34 +22,28 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$OnCocktailBarPolicyListener;)V
     .locals 1
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mCocktailPolicys:Ljava/util/ArrayList;
 
-    .line 30
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mUpdatableCocktailMap:Landroid/util/SparseArray;
 
-    .line 34
     iput-object p2, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mListener:Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$OnCocktailBarPolicyListener;
 
-    .line 35
     invoke-static {p1}, Lcom/android/server/cocktailbar/utils/CocktailBarConfig;->getInstance(Landroid/content/Context;)Lcom/android/server/cocktailbar/utils/CocktailBarConfig;
 
     move-result-object p2
@@ -70,7 +64,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 37
     :cond_0
     new-instance v0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailContextualPolicy;
 
@@ -83,7 +76,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 40
     new-instance v0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailWhisperPolicy;
 
     invoke-direct {v0, p1, p0}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailWhisperPolicy;-><init>(Landroid/content/Context;Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;)V
@@ -97,7 +89,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 46
     :cond_3
     new-instance p1, Lcom/android/server/cocktailbar/policy/cocktail/CocktailNativePolicy;
 
@@ -105,7 +96,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->setupCocktailPolicy(Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;)V
 
-    .line 48
     :cond_4
     new-instance p1, Lcom/android/server/cocktailbar/policy/cocktail/CocktailNormalPolicy;
 
@@ -125,7 +115,6 @@
 
     if-nez p1, :cond_0
 
-    .line 135
     sget-object p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->TAG:Ljava/lang/String;
 
     const-string p1, "canCloseCocktail: cocktail is null"
@@ -134,7 +123,6 @@
 
     return p4
 
-    .line 138
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->findMatchedPolicy(Lcom/samsung/android/cocktailbar/Cocktail;)Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
 
@@ -142,7 +130,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 141
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
 
     move-result p4
@@ -151,7 +138,6 @@
 
     move-result p0
 
-    .line 140
     invoke-interface {v0, p1, p2, p3, p0}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;->isAcceptCloseCocktail(Lcom/samsung/android/cocktailbar/Cocktail;Lcom/android/server/cocktailbar/settings/CocktailBarSettings;IZ)Z
 
     move-result p0
@@ -165,7 +151,6 @@
 .method public canSendUpdateIntent(Lcom/samsung/android/cocktailbar/Cocktail;Lcom/android/server/cocktailbar/settings/CocktailBarSettings;)Z
     .locals 0
 
-    .line 98
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
 
     move-result p0
@@ -193,7 +178,6 @@
 
     if-nez p1, :cond_0
 
-    .line 121
     sget-object p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->TAG:Ljava/lang/String;
 
     const-string p1, "canShowCocktail: cocktail is null"
@@ -202,7 +186,6 @@
 
     return p4
 
-    .line 124
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->findMatchedPolicy(Lcom/samsung/android/cocktailbar/Cocktail;)Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
 
@@ -210,7 +193,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 127
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
 
     move-result p4
@@ -219,7 +201,6 @@
 
     move-result p0
 
-    .line 126
     invoke-interface {v0, p1, p2, p3, p0}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;->isAcceptShowCocktail(Lcom/samsung/android/cocktailbar/Cocktail;Lcom/android/server/cocktailbar/settings/CocktailBarSettings;IZ)Z
 
     move-result p0
@@ -237,7 +218,6 @@
 
     if-nez p1, :cond_0
 
-    .line 107
     sget-object p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->TAG:Ljava/lang/String;
 
     const-string p1, "canUpdateCocktail: cocktail is null"
@@ -246,7 +226,6 @@
 
     return v0
 
-    .line 110
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->findMatchedPolicy(Lcom/samsung/android/cocktailbar/Cocktail;)Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
 
@@ -254,7 +233,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 113
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
 
     move-result v0
@@ -271,7 +249,6 @@
 
     move v5, p3
 
-    .line 112
     invoke-interface/range {v1 .. v6}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;->isAcceptUpdateCocktail(Lcom/samsung/android/cocktailbar/Cocktail;Lcom/android/server/cocktailbar/settings/CocktailBarSettings;Lcom/android/server/cocktailbar/mode/CocktailBarModeManager;IZ)Z
 
     move-result p0
@@ -285,14 +262,12 @@
 .method public changeResumePackage(Ljava/lang/String;I)V
     .locals 0
 
-    .line 67
     invoke-virtual {p0, p2}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->findCocktailPolicy(I)Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 69
     invoke-interface {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;->changeResumePackage(Ljava/lang/String;)V
 
     :cond_0
@@ -302,7 +277,6 @@
 .method public disableUpdatableCocktail(II)V
     .locals 0
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mUpdatableCocktailMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -313,7 +287,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 85
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->disableUpdate(I)V
 
     :cond_0
@@ -323,7 +296,6 @@
 .method public enableUpdatableCocktail(II)V
     .locals 1
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mUpdatableCocktailMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -334,17 +306,14 @@
 
     if-nez v0, :cond_0
 
-    .line 76
     new-instance v0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;
 
     invoke-direct {v0, p2}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;-><init>(I)V
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mUpdatableCocktailMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 79
     :cond_0
     invoke-virtual {v0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->enableUpdate(I)V
 
@@ -356,7 +325,6 @@
 
     if-nez p1, :cond_0
 
-    .line 57
     sget-object p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->TAG:Ljava/lang/String;
 
     const-string p1, "establishPolicy: cocktail is null"
@@ -365,7 +333,6 @@
 
     return-void
 
-    .line 60
     :cond_0
     invoke-virtual {p0, p2}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->findCocktailPolicy(I)Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
 
@@ -373,7 +340,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 62
     invoke-interface {p0, p1, p3}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;->establishPolicy(Lcom/samsung/android/cocktailbar/Cocktail;I)V
 
     :cond_1
@@ -383,7 +349,6 @@
 .method public final findCocktailPolicy(I)Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
     .locals 3
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mCocktailPolicys:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -403,14 +368,12 @@
 
     check-cast v0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
 
-    .line 162
     invoke-interface {v0}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;->getCocktailType()I
 
     move-result v1
 
     if-ne v1, p1, :cond_0
 
-    .line 164
     sget-object p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -440,7 +403,6 @@
 .method public final findMatchedPolicy(Lcom/samsung/android/cocktailbar/Cocktail;)Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
     .locals 2
 
-    .line 148
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mCocktailPolicys:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -460,14 +422,12 @@
 
     check-cast v0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;
 
-    .line 149
     invoke-interface {v0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;->isMatchedPolicy(Lcom/samsung/android/cocktailbar/Cocktail;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 151
     sget-object p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -502,7 +462,6 @@
 .method public isUpdatedCocktail(II)Z
     .locals 0
 
-    .line 90
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mUpdatableCocktailMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -513,7 +472,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 92
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->isUpdatedCocktail(I)Z
 
     move-result p0
@@ -529,7 +487,6 @@
 .method public onDisableUpdatableCocktail(II)V
     .locals 0
 
-    .line 179
     invoke-virtual {p0, p1, p2}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->disableUpdatableCocktail(II)V
 
     return-void
@@ -538,7 +495,6 @@
 .method public onEanbleUpdatableCocktail(II)V
     .locals 0
 
-    .line 174
     invoke-virtual {p0, p1, p2}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->enableUpdatableCocktail(II)V
 
     return-void
@@ -549,7 +505,6 @@
 
     shr-int/lit8 v0, p1, 0x10
 
-    .line 194
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mUpdatableCocktailMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -560,14 +515,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 195
     invoke-virtual {v1, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->isUpdatedCocktail(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 196
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mListener:Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$OnCocktailBarPolicyListener;
 
     invoke-interface {p0, p1, v0}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$OnCocktailBarPolicyListener;->onRemoveCocktail(II)V
@@ -581,7 +534,6 @@
 
     shr-int/lit8 v0, p1, 0x10
 
-    .line 185
     iget-object v1, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mUpdatableCocktailMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -592,14 +544,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 186
     invoke-virtual {v1, p1}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$UpadatableCocktailInfo;->isUpdatedCocktail(I)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 187
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mListener:Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$OnCocktailBarPolicyListener;
 
     invoke-interface {p0, p1, v0}, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager$OnCocktailBarPolicyListener;->onUpdateCocktail(II)V
@@ -611,7 +561,6 @@
 .method public final setupCocktailPolicy(Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy;)V
     .locals 0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicyManager;->mCocktailPolicys:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z

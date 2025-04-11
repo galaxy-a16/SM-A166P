@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;)V
     .locals 0
 
-    .line 747
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;
 
     const/4 p1, 0x0
@@ -26,7 +25,6 @@
 .method public onGetPrintJobInfoResult(Landroid/print/PrintJobInfo;I)V
     .locals 0
 
-    .line 750
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;->access$100(Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;Ljava/lang/Object;I)V

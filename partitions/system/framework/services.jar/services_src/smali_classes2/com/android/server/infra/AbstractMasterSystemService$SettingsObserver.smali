@@ -11,13 +11,10 @@
 .method public constructor <init>(Lcom/android/server/infra/AbstractMasterSystemService;Landroid/os/Handler;)V
     .locals 3
 
-    .line 1291
     iput-object p1, p0, Lcom/android/server/infra/AbstractMasterSystemService$SettingsObserver;->this$0:Lcom/android/server/infra/AbstractMasterSystemService;
 
-    .line 1292
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1293
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -26,7 +23,6 @@
 
     move-result-object p2
 
-    .line 1294
     invoke-virtual {p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceSettingsProperty()Ljava/lang/String;
 
     move-result-object v0
@@ -37,7 +33,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1296
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -47,14 +42,12 @@
     :cond_0
     const-string/jumbo v0, "user_setup_complete"
 
-    .line 1299
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     invoke-virtual {p2, v0, v2, p0, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1301
     invoke-virtual {p1, p2, p0}, Lcom/android/server/infra/AbstractMasterSystemService;->registerForExtraSettingsChanges(Landroid/content/ContentResolver;Landroid/database/ContentObserver;)V
 
     return-void
@@ -65,7 +58,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 2
 
-    .line 1306
     iget-object p1, p0, Lcom/android/server/infra/AbstractMasterSystemService$SettingsObserver;->this$0:Lcom/android/server/infra/AbstractMasterSystemService;
 
     iget-boolean v0, p1, Lcom/android/server/infra/AbstractMasterSystemService;->verbose:Z
@@ -96,7 +88,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1307
     :cond_0
     invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
@@ -106,7 +97,6 @@
 
     return-void
 
-    .line 1311
     :cond_1
     iget-object p2, p0, Lcom/android/server/infra/AbstractMasterSystemService$SettingsObserver;->this$0:Lcom/android/server/infra/AbstractMasterSystemService;
 
@@ -122,7 +112,6 @@
 
     const-string/jumbo p2, "user_setup_complete"
 
-    .line 1312
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -131,7 +120,6 @@
 
     goto :goto_0
 
-    .line 1317
     :cond_2
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService$SettingsObserver;->this$0:Lcom/android/server/infra/AbstractMasterSystemService;
 
@@ -139,7 +127,6 @@
 
     goto :goto_1
 
-    .line 1313
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/android/server/infra/AbstractMasterSystemService$SettingsObserver;->this$0:Lcom/android/server/infra/AbstractMasterSystemService;
@@ -148,13 +135,11 @@
 
     monitor-enter p1
 
-    .line 1314
     :try_start_0
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService$SettingsObserver;->this$0:Lcom/android/server/infra/AbstractMasterSystemService;
 
     invoke-virtual {p0, p3}, Lcom/android/server/infra/AbstractMasterSystemService;->updateCachedServiceLocked(I)V
 
-    .line 1315
     monitor-exit p1
 
     :goto_1

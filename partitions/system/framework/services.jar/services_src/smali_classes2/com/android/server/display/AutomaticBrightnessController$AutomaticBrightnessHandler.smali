@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/display/AutomaticBrightnessController;Landroid/os/Looper;)V
     .locals 1
 
-    .line 2243
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 2244
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,14 +27,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 2249
     iget p1, p1, Landroid/os/Message;->what:I
 
     packed-switch p1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 2280
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -44,7 +40,6 @@
 
     goto :goto_0
 
-    .line 2275
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -56,7 +51,6 @@
 
     goto :goto_0
 
-    .line 2251
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -68,7 +62,6 @@
 
     goto :goto_0
 
-    .line 2271
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -76,7 +69,6 @@
 
     goto :goto_0
 
-    .line 2267
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -84,7 +76,6 @@
 
     goto :goto_0
 
-    .line 2263
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -96,7 +87,6 @@
 
     goto :goto_0
 
-    .line 2259
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -104,7 +94,6 @@
 
     goto :goto_0
 
-    .line 2255
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 

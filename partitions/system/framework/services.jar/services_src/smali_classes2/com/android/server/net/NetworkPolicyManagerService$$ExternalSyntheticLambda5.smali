@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/net/NetworkPolicyManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -27,7 +26,6 @@
 .method public final accept(I)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService;->$r8$lambda$x2BT68kI85CB_0HHeKhrm1akO1g(Lcom/android/server/net/NetworkPolicyManagerService;I)V

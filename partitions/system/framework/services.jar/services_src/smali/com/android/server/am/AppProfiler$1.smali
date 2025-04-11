@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppProfiler;)V
     .locals 0
 
-    .line 381
     iput-object p1, p0, Lcom/android/server/am/AppProfiler$1;->this$0:Lcom/android/server/am/AppProfiler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 4
 
-    .line 384
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
     move-result-object v0
@@ -40,7 +38,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 385
     iget-object p0, p0, Lcom/android/server/am/AppProfiler$1;->this$0:Lcom/android/server/am/AppProfiler;
 
     const-wide/16 v2, 0x0

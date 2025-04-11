@@ -11,15 +11,12 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 9
 
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 38
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -31,21 +28,18 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 40
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, [B
 
-    .line 41
     array-length v5, v4
 
     const/4 v6, 0x4
 
     if-gt v5, v6, :cond_1
 
-    .line 43
     array-length v5, v4
 
     move v6, v2
@@ -67,7 +61,6 @@
 
     goto :goto_1
 
-    .line 47
     :cond_0
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -80,7 +73,6 @@
 
     goto :goto_0
 
-    .line 50
     :cond_2
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -96,7 +88,6 @@
 .method public contains(I)Z
     .locals 0
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/net/watchlist/HarmfulCrcs;->mCrcSet:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -113,7 +104,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/net/watchlist/HarmfulCrcs;->mCrcSet:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -137,7 +127,6 @@
 
     move-result p1
 
-    .line 59
     invoke-static {p1}, Lcom/android/internal/util/HexDump;->toHexString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -149,7 +138,6 @@
     :cond_0
     const-string p0, ""
 
-    .line 61
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void

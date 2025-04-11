@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/GestureLauncherService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 789
     iput-object p1, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 0
 
-    .line 791
     iget-object p1, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-static {p1}, Lcom/android/server/GestureLauncherService;->-$$Nest$fgetmUserId(Lcom/android/server/GestureLauncherService;)I
@@ -33,22 +31,18 @@
 
     if-ne p3, p1, :cond_0
 
-    .line 792
     iget-object p1, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-static {p1}, Lcom/android/server/GestureLauncherService;->-$$Nest$mupdateCameraRegistered(Lcom/android/server/GestureLauncherService;)V
 
-    .line 793
     iget-object p1, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-virtual {p1}, Lcom/android/server/GestureLauncherService;->updateCameraDoubleTapPowerEnabled()V
 
-    .line 794
     iget-object p1, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-virtual {p1}, Lcom/android/server/GestureLauncherService;->updateEmergencyGestureEnabled()V
 
-    .line 795
     iget-object p0, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-virtual {p0}, Lcom/android/server/GestureLauncherService;->updateEmergencyGesturePowerButtonCooldownPeriodMs()V

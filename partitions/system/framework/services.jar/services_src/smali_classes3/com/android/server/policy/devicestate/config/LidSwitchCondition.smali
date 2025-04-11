@@ -19,15 +19,12 @@
 .method public static read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/policy/devicestate/config/LidSwitchCondition;
     .locals 4
 
-    .line 25
     new-instance v0, Lcom/android/server/policy/devicestate/config/LidSwitchCondition;
 
     invoke-direct {v0}, Lcom/android/server/policy/devicestate/config/LidSwitchCondition;-><init>()V
 
-    .line 27
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    .line 29
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -41,7 +38,6 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 31
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -52,7 +48,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -60,29 +55,24 @@
 
     const-string/jumbo v2, "open"
 
-    .line 33
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 34
     invoke-static {p0}, Lcom/android/server/policy/devicestate/config/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 35
     invoke-static {v1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 36
     invoke-virtual {v0, v1}, Lcom/android/server/policy/devicestate/config/LidSwitchCondition;->setOpen(Z)V
 
     goto :goto_0
 
-    .line 38
     :cond_1
     invoke-static {p0}, Lcom/android/server/policy/devicestate/config/XmlParser;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
@@ -93,7 +83,6 @@
 
     return-object v0
 
-    .line 42
     :cond_3
     new-instance p0, Ljavax/xml/datatype/DatatypeConfigurationException;
 
@@ -109,7 +98,6 @@
 .method public getOpen()Z
     .locals 0
 
-    .line 7
     iget-object p0, p0, Lcom/android/server/policy/devicestate/config/LidSwitchCondition;->open:Ljava/lang/Boolean;
 
     if-nez p0, :cond_0
@@ -118,7 +106,6 @@
 
     return p0
 
-    .line 10
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -130,7 +117,6 @@
 .method public setOpen(Z)V
     .locals 0
 
-    .line 21
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1

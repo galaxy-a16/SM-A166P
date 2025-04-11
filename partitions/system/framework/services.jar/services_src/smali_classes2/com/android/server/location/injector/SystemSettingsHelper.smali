@@ -29,7 +29,6 @@
 .method public static synthetic $r8$lambda$I803zMVfB5OQFl7sZosPNo4j_hM()Landroid/util/ArraySet;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/injector/SystemSettingsHelper;->lambda$new$0()Landroid/util/ArraySet;
 
     move-result-object v0
@@ -40,7 +39,6 @@
 .method public static synthetic $r8$lambda$l_eY5dkiR5-a0ZoYAGefMhP2DW8()Landroid/util/ArrayMap;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/injector/SystemSettingsHelper;->lambda$new$1()Landroid/util/ArrayMap;
 
     move-result-object v0
@@ -51,7 +49,6 @@
 .method public static synthetic $r8$lambda$phx90M-T5H5RqXZ_vAskjy-Vdrc()Landroid/util/ArrayMap;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/injector/SystemSettingsHelper;->lambda$new$2()Landroid/util/ArrayMap;
 
     move-result-object v0
@@ -62,13 +59,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 97
     invoke-direct {p0}, Lcom/android/server/location/injector/SettingsHelper;-><init>()V
 
-    .line 98
     iput-object p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mContext:Landroid/content/Context;
 
-    .line 100
     new-instance v0, Lcom/android/server/location/injector/SystemSettingsHelper$IntegerSecureSetting;
 
     const-string v1, "location_mode"
@@ -81,12 +75,10 @@
 
     iput-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationMode:Lcom/android/server/location/injector/SystemSettingsHelper$IntegerSecureSetting;
 
-    .line 101
     new-instance v0, Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;
 
     const-string v1, "location_background_throttle_interval_ms"
 
-    .line 102
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
@@ -95,12 +87,10 @@
 
     iput-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottleIntervalMs:Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;
 
-    .line 103
     new-instance v0, Lcom/android/server/location/injector/SystemSettingsHelper$BooleanGlobalSetting;
 
     const-string v1, "enable_gnss_raw_meas_full_tracking"
 
-    .line 104
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
@@ -109,12 +99,10 @@
 
     iput-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mGnssMeasurementFullTracking:Lcom/android/server/location/injector/SystemSettingsHelper$BooleanGlobalSetting;
 
-    .line 105
     new-instance v0, Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     const-string v1, "locationPackagePrefixBlacklist"
 
-    .line 106
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
@@ -123,12 +111,10 @@
 
     iput-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageBlacklist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
-    .line 107
     new-instance v0, Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     const-string v1, "locationPackagePrefixWhitelist"
 
-    .line 108
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
@@ -137,14 +123,12 @@
 
     iput-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
-    .line 109
     new-instance v0, Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;
 
     new-instance v1, Lcom/android/server/location/injector/SystemSettingsHelper$$ExternalSyntheticLambda0;
 
     invoke-direct {v1}, Lcom/android/server/location/injector/SystemSettingsHelper$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 112
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
@@ -155,7 +139,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;
 
-    .line 113
     new-instance p1, Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     new-instance v0, Lcom/android/server/location/injector/SystemSettingsHelper$$ExternalSyntheticLambda1;
@@ -168,7 +151,6 @@
 
     iput-object p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mAdasPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
-    .line 116
     new-instance p1, Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     new-instance v0, Lcom/android/server/location/injector/SystemSettingsHelper$$ExternalSyntheticLambda2;
@@ -181,7 +163,6 @@
 
     iput-object p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mIgnoreSettingsPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
-    .line 121
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
@@ -194,7 +175,6 @@
 .method public static synthetic lambda$new$0()Landroid/util/ArraySet;
     .locals 1
 
-    .line 111
     invoke-static {}, Lcom/android/server/SystemConfig;->getInstance()Lcom/android/server/SystemConfig;
 
     move-result-object v0
@@ -209,7 +189,6 @@
 .method public static synthetic lambda$new$1()Landroid/util/ArrayMap;
     .locals 1
 
-    .line 115
     invoke-static {}, Lcom/android/server/SystemConfig;->getInstance()Lcom/android/server/SystemConfig;
 
     move-result-object v0
@@ -224,7 +203,6 @@
 .method public static synthetic lambda$new$2()Landroid/util/ArrayMap;
     .locals 1
 
-    .line 118
     invoke-static {}, Lcom/android/server/SystemConfig;->getInstance()Lcom/android/server/SystemConfig;
 
     move-result-object v0
@@ -241,7 +219,6 @@
 .method public addAdasAllowlistChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 261
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mAdasPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$DeviceConfigSetting;->addListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
@@ -252,7 +229,6 @@
 .method public addIgnoreSettingsAllowlistChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 277
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mIgnoreSettingsPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$DeviceConfigSetting;->addListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
@@ -263,7 +239,6 @@
 .method public addOnBackgroundThrottleIntervalChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 174
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottleIntervalMs:Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->addListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -274,7 +249,6 @@
 .method public addOnBackgroundThrottlePackageWhitelistChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 228
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->addListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -285,7 +259,6 @@
 .method public addOnGnssMeasurementsFullTrackingEnabledChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 245
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mGnssMeasurementFullTracking:Lcom/android/server/location/injector/SystemSettingsHelper$BooleanGlobalSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->addListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -296,7 +269,6 @@
 .method public addOnLocationEnabledChangedListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
     .locals 0
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationMode:Lcom/android/server/location/injector/SystemSettingsHelper$IntegerSecureSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->addListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -307,12 +279,10 @@
 .method public addOnLocationPackageBlacklistChangedListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
     .locals 1
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageBlacklist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     invoke-virtual {v0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->addListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
 
-    .line 210
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->addListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -323,7 +293,6 @@
 .method public dump(Ljava/io/FileDescriptor;Landroid/util/IndentingPrintWriter;[Ljava/lang/String;)V
     .locals 6
 
-    .line 317
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -337,13 +306,10 @@
 
     const-string p3, "Location Setting: "
 
-    .line 322
     invoke-virtual {p2, p3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 323
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 324
     array-length p3, p1
 
     const/4 v0, 0x1
@@ -352,10 +318,8 @@
 
     if-le p3, v0, :cond_0
 
-    .line 325
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 326
     array-length p3, p1
 
     move v2, v1
@@ -367,18 +331,14 @@
 
     const-string v4, "[u"
 
-    .line 327
     invoke-virtual {p2, v4}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 328
     invoke-virtual {p2, v3}, Landroid/util/IndentingPrintWriter;->print(I)V
 
     const-string v4, "] "
 
-    .line 329
     invoke-virtual {p2, v4}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 330
     invoke-virtual {p0, v3}, Lcom/android/server/location/injector/SystemSettingsHelper;->isLocationEnabled(I)Z
 
     move-result v3
@@ -389,7 +349,6 @@
 
     goto :goto_0
 
-    .line 333
     :cond_0
     aget p3, p1, v1
 
@@ -399,19 +358,15 @@
 
     invoke-virtual {p2, p3}, Landroid/util/IndentingPrintWriter;->println(Z)V
 
-    .line 335
     :cond_1
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p3, "Location Allow/Deny Packages:"
 
-    .line 337
     invoke-virtual {p2, p3}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 338
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 339
     array-length p3, p1
 
     const-string v2, "[allow] "
@@ -420,7 +375,6 @@
 
     if-le p3, v0, :cond_5
 
-    .line 340
     array-length p3, p1
 
     :goto_1
@@ -428,14 +382,12 @@
 
     aget v0, p1, v1
 
-    .line 341
     iget-object v4, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageBlacklist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     invoke-virtual {v4, v0}, Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;->getValueForUser(I)Ljava/util/List;
 
     move-result-object v4
 
-    .line 343
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result v5
@@ -447,21 +399,16 @@
     :cond_2
     const-string/jumbo v5, "user "
 
-    .line 347
     invoke-virtual {p2, v5}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 348
     invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->print(I)V
 
     const-string v5, ":"
 
-    .line 349
     invoke-virtual {p2, v5}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 350
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 352
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -479,15 +426,12 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 353
     invoke-virtual {p2, v3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 354
     invoke-virtual {p2, v5}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 357
     :cond_3
     iget-object v4, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
@@ -495,7 +439,6 @@
 
     move-result-object v0
 
-    .line 359
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -513,15 +456,12 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 360
     invoke-virtual {p2, v2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 361
     invoke-virtual {p2, v4}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 364
     :cond_4
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -530,7 +470,6 @@
 
     goto :goto_1
 
-    .line 367
     :cond_5
     iget-object p3, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageBlacklist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
@@ -540,7 +479,6 @@
 
     move-result-object p3
 
-    .line 369
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -558,15 +496,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 370
     invoke-virtual {p2, v3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 371
     invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_5
 
-    .line 374
     :cond_6
     iget-object p3, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
@@ -576,7 +511,6 @@
 
     move-result-object p1
 
-    .line 376
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -594,27 +528,21 @@
 
     check-cast p3, Ljava/lang/String;
 
-    .line 377
     invoke-virtual {p2, v2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 378
     invoke-virtual {p2, p3}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_6
 
-    .line 381
     :cond_7
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 383
     iget-object p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;
 
-    .line 384
     invoke-virtual {p1}, Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;->getValue()Ljava/util/Set;
 
     move-result-object p1
 
-    .line 385
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
     move-result p3
@@ -623,13 +551,10 @@
 
     const-string p3, "Throttling Allow Packages:"
 
-    .line 386
     invoke-virtual {p2, p3}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 387
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 388
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -647,16 +572,13 @@
 
     check-cast p3, Ljava/lang/String;
 
-    .line 389
     invoke-virtual {p2, p3}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_7
 
-    .line 391
     :cond_8
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 395
     :cond_9
     iget-object p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageAllowlistByNsflp:Ljava/util/HashSet;
 
@@ -668,13 +590,10 @@
 
     const-string p1, "Throttling Allow Packages by nsflp:"
 
-    .line 396
     invoke-virtual {p2, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 397
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 398
     iget-object p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageAllowlistByNsflp:Ljava/util/HashSet;
 
     invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -694,16 +613,13 @@
 
     check-cast p3, Ljava/lang/String;
 
-    .line 399
     invoke-virtual {p2, p3}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_8
 
-    .line 401
     :cond_a
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 405
     :cond_b
     iget-object p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mIgnoreSettingsPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
@@ -711,7 +627,6 @@
 
     move-result-object p1
 
-    .line 406
     invoke-virtual {p1}, Landroid/os/PackageTagsList;->isEmpty()Z
 
     move-result p3
@@ -720,19 +635,14 @@
 
     const-string p3, "Emergency Bypass Allow Packages:"
 
-    .line 407
     invoke-virtual {p2, p3}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 408
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 409
     invoke-virtual {p1, p2}, Landroid/os/PackageTagsList;->dump(Ljava/io/PrintWriter;)V
 
-    .line 410
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 413
     :cond_c
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mAdasPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
@@ -740,7 +650,6 @@
 
     move-result-object p0
 
-    .line 414
     invoke-virtual {p0}, Landroid/os/PackageTagsList;->isEmpty()Z
 
     move-result p1
@@ -749,16 +658,12 @@
 
     const-string p1, "ADAS Bypass Allow Packages:"
 
-    .line 415
     invoke-virtual {p2, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 416
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 417
     invoke-virtual {p0, p2}, Landroid/os/PackageTagsList;->dump(Ljava/io/PrintWriter;)V
 
-    .line 418
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     :cond_d
@@ -767,7 +672,6 @@
     :catch_0
     move-exception p0
 
-    .line 319
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -778,7 +682,6 @@
 .method public getAdasAllowlist()Landroid/os/PackageTagsList;
     .locals 0
 
-    .line 256
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mAdasPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     invoke-virtual {p0}, Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;->getValue()Landroid/os/PackageTagsList;
@@ -791,7 +694,6 @@
 .method public getBackgroundThrottleIntervalMs()J
     .locals 2
 
-    .line 168
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottleIntervalMs:Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;
 
     const-wide/32 v0, 0x1b7740
@@ -806,7 +708,6 @@
 .method public getBackgroundThrottlePackageWhitelist()Ljava/util/Set;
     .locals 0
 
-    .line 222
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;
 
     invoke-virtual {p0}, Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;->getValue()Ljava/util/Set;
@@ -819,12 +720,10 @@
 .method public getBackgroundThrottleProximityAlertIntervalMs()J
     .locals 5
 
-    .line 288
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 290
     :try_start_0
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mContext:Landroid/content/Context;
 
@@ -842,7 +741,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 294
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-wide v2
@@ -852,19 +750,16 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 295
     throw p0
 .end method
 
 .method public getCoarseLocationAccuracyM()F
     .locals 5
 
-    .line 300
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 301
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -874,21 +769,18 @@
     :try_start_0
     const-string v2, "locationCoarseAccuracy"
 
-    .line 307
     invoke-virtual {p0}, Landroid/content/ContentResolver;->getUserId()I
 
     move-result v3
 
     const/high16 v4, 0x44fa0000    # 2000.0f
 
-    .line 303
     invoke-static {p0, v2, v4, v3}, Landroid/provider/Settings$Secure;->getFloatForUser(Landroid/content/ContentResolver;Ljava/lang/String;FI)F
 
     move-result p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 309
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -898,14 +790,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 310
     throw p0
 .end method
 
 .method public getIgnoreSettingsAllowlist()Landroid/os/PackageTagsList;
     .locals 0
 
-    .line 271
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mIgnoreSettingsPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     invoke-virtual {p0}, Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;->getValue()Landroid/os/PackageTagsList;
@@ -918,7 +808,6 @@
 .method public isBackgroundThrottlingAllowlistByNsflp(Ljava/lang/String;)Z
     .locals 0
 
-    .line 830
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageAllowlistByNsflp:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -931,7 +820,6 @@
 .method public isGnssMeasurementsFullTrackingEnabled()Z
     .locals 1
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mGnssMeasurementFullTracking:Lcom/android/server/location/injector/SystemSettingsHelper$BooleanGlobalSetting;
 
     const/4 v0, 0x0
@@ -946,7 +834,6 @@
 .method public isLocationEnabled(I)Z
     .locals 1
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationMode:Lcom/android/server/location/injector/SystemSettingsHelper$IntegerSecureSetting;
 
     const/4 v0, 0x0
@@ -966,14 +853,12 @@
 .method public isLocationPackageBlacklisted(ILjava/lang/String;)Z
     .locals 3
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageBlacklist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     invoke-virtual {v0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;->getValueForUser(I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 186
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -984,7 +869,6 @@
 
     return v2
 
-    .line 190
     :cond_0
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
@@ -992,7 +876,6 @@
 
     move-result-object p0
 
-    .line 191
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1010,7 +893,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 192
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -1019,7 +901,6 @@
 
     return v2
 
-    .line 197
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1038,7 +919,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 198
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -1056,32 +936,26 @@
 .method public onSystemReady()V
     .locals 1
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationMode:Lcom/android/server/location/injector/SystemSettingsHelper$IntegerSecureSetting;
 
     invoke-virtual {v0}, Lcom/android/server/location/injector/SystemSettingsHelper$IntegerSecureSetting;->register()V
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottleIntervalMs:Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;
 
     invoke-virtual {v0}, Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;->register()V
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageBlacklist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     invoke-virtual {v0}, Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;->register()V
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     invoke-virtual {v0}, Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;->register()V
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;
 
     invoke-virtual {v0}, Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;->register()V
 
-    .line 132
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mIgnoreSettingsPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     invoke-virtual {p0}, Lcom/android/server/location/injector/SystemSettingsHelper$DeviceConfigSetting;->register()V
@@ -1092,7 +966,6 @@
 .method public removeAdasAllowlistChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 266
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mAdasPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$DeviceConfigSetting;->removeListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
@@ -1103,7 +976,6 @@
 .method public removeIgnoreSettingsAllowlistChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 283
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mIgnoreSettingsPackageAllowlist:Lcom/android/server/location/injector/SystemSettingsHelper$PackageTagsListSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$DeviceConfigSetting;->removeListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
@@ -1114,7 +986,6 @@
 .method public removeOnBackgroundThrottleIntervalChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottleIntervalMs:Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->removeListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -1125,7 +996,6 @@
 .method public removeOnBackgroundThrottlePackageWhitelistChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 234
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->removeListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -1136,7 +1006,6 @@
 .method public removeOnGnssMeasurementsFullTrackingEnabledChangedListener(Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;)V
     .locals 0
 
-    .line 251
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mGnssMeasurementFullTracking:Lcom/android/server/location/injector/SystemSettingsHelper$BooleanGlobalSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->removeListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -1147,7 +1016,6 @@
 .method public removeOnLocationEnabledChangedListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
     .locals 0
 
-    .line 163
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationMode:Lcom/android/server/location/injector/SystemSettingsHelper$IntegerSecureSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->removeListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -1158,12 +1026,10 @@
 .method public removeOnLocationPackageBlacklistChangedListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
     .locals 1
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageBlacklist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     invoke-virtual {v0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->removeListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
 
-    .line 217
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mLocationPackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringListCachedSecureSetting;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->removeListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
@@ -1174,16 +1040,13 @@
 .method public setLocationEnabled(ZI)V
     .locals 3
 
-    .line 142
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 144
     :try_start_0
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mContext:Landroid/content/Context;
 
-    .line 145
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1199,13 +1062,11 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 144
     :goto_0
     invoke-static {p0, v2, p1, p2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 152
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1215,14 +1076,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 153
     throw p0
 .end method
 
 .method public updateBackgroundThrottlingAllowlist(Ljava/util/List;)V
     .locals 1
 
-    .line 816
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageAllowlistByNsflp:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
@@ -1233,18 +1092,15 @@
 
     const-string p1, "Null package is updated, so just clear"
 
-    .line 819
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 823
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageAllowlistByNsflp:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 826
     iget-object p0, p0, Lcom/android/server/location/injector/SystemSettingsHelper;->mBackgroundThrottlePackageWhitelist:Lcom/android/server/location/injector/SystemSettingsHelper$StringSetCachedGlobalSetting;
 
     invoke-virtual {p0}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;->onChangedByNsflp()V

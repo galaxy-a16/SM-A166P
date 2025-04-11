@@ -30,12 +30,10 @@
 .method public constructor <init>(Lcom/android/server/wm/RootWindowContainer;)V
     .locals 0
 
-    .line 3686
     iput-object p1, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->this$0:Lcom/android/server/wm/RootWindowContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3694
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -50,15 +48,12 @@
 .method public process(Ljava/lang/String;Ljava/util/Set;ZZIZ)Z
     .locals 3
 
-    .line 3709
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->reset(Ljava/lang/String;Ljava/util/Set;ZZIZ)V
 
-    .line 3710
     iget-object p1, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->this$0:Lcom/android/server/wm/RootWindowContainer;
 
     invoke-virtual {p1, p0}, Lcom/android/server/wm/WindowContainer;->forAllActivities(Ljava/util/function/Predicate;)Z
 
-    .line 3713
     iget-object p1, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mCollectedActivities:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -74,7 +69,6 @@
     :goto_0
     if-ge p3, p1, :cond_2
 
-    .line 3716
     iget-object p5, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mCollectedActivities:Ljava/util/ArrayList;
 
     invoke-virtual {p5, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -83,7 +77,6 @@
 
     check-cast p5, Lcom/android/server/wm/ActivityRecord;
 
-    .line 3717
     iget-boolean p6, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mOnlyRemoveNoProcess:Z
 
     const-string v0, "force-stop"
@@ -94,14 +87,12 @@
 
     if-eqz p6, :cond_0
 
-    .line 3718
     invoke-virtual {p5}, Lcom/android/server/wm/ActivityRecord;->hasProcess()Z
 
     move-result p6
 
     if-nez p6, :cond_1
 
-    .line 3720
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,15 +109,12 @@
 
     invoke-static {v1, p4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3721
     invoke-virtual {p5, p2, p2}, Lcom/android/server/wm/ActivityRecord;->cleanUp(ZZ)V
 
-    .line 3722
     invoke-virtual {p5, v0}, Lcom/android/server/wm/ActivityRecord;->removeFromHistory(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 3726
     :cond_0
     new-instance p4, Ljava/lang/StringBuilder;
 
@@ -144,7 +132,6 @@
 
     invoke-static {v1, p4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3727
     invoke-virtual {p5, v0, v2}, Lcom/android/server/wm/ActivityRecord;->finishIfPossible(Ljava/lang/String;Z)I
 
     :goto_1
@@ -155,7 +142,6 @@
 
     goto :goto_0
 
-    .line 3730
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mCollectedActivities:Ljava/util/ArrayList;
 
@@ -167,27 +153,20 @@
 .method public final reset(Ljava/lang/String;Ljava/util/Set;ZZIZ)V
     .locals 0
 
-    .line 3698
     iput-object p1, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mPackageName:Ljava/lang/String;
 
-    .line 3699
     iput-object p2, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mFilterByClasses:Ljava/util/Set;
 
-    .line 3700
     iput-boolean p3, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mDoit:Z
 
-    .line 3701
     iput-boolean p4, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mEvenPersistent:Z
 
-    .line 3702
     iput p5, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mUserId:I
 
-    .line 3703
     iput-boolean p6, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mOnlyRemoveNoProcess:Z
 
     const/4 p1, 0x0
 
-    .line 3704
     iput-object p1, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mLastTask:Lcom/android/server/wm/Task;
 
     return-void
@@ -196,12 +175,10 @@
 .method public test(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 6
 
-    .line 3737
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mPackageName:Ljava/lang/String;
 
-    .line 3738
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -218,7 +195,6 @@
 
     iget-object v3, p1, Lcom/android/server/wm/ActivityRecord;->mActivityComponent:Landroid/content/ComponentName;
 
-    .line 3739
     invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v3
@@ -248,7 +224,6 @@
     :cond_2
     move v0, v2
 
-    .line 3741
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->hasProcess()Z
 
@@ -256,7 +231,6 @@
 
     xor-int/2addr v3, v1
 
-    .line 3742
     iget v4, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mUserId:I
 
     const/4 v5, -0x1
@@ -270,7 +244,6 @@
     :cond_3
     if-nez v0, :cond_4
 
-    .line 3743
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -288,20 +261,17 @@
 
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
 
-    .line 3744
     invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->isPersistent()Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
-    .line 3745
     :cond_5
     iget-boolean v0, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mDoit:Z
 
     if-nez v0, :cond_7
 
-    .line 3746
     iget-boolean p0, p1, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
     if-eqz p0, :cond_6
@@ -311,13 +281,11 @@
     :cond_6
     return v1
 
-    .line 3753
     :cond_7
     iget-object v0, p0, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->mCollectedActivities:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3754
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
@@ -331,7 +299,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 3686
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/RootWindowContainer$FinishDisabledPackageActivitiesHelper;->test(Lcom/android/server/wm/ActivityRecord;)Z

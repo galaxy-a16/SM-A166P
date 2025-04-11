@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/credentials/CredentialManagerService;)V
     .locals 0
 
-    .line 1036
     iput-object p1, p0, Lcom/android/server/credentials/CredentialManagerService$SessionManager;->this$0:Lcom/android/server/credentials/CredentialManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/credentials/CredentialManagerService;Lcom/android/server/credentials/CredentialManagerService$SessionManager-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/credentials/CredentialManagerService$SessionManager;-><init>(Lcom/android/server/credentials/CredentialManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public addSession(ILandroid/os/IBinder;Lcom/android/server/credentials/RequestSession;)V
     .locals 2
 
-    .line 1047
     iget-object v0, p0, Lcom/android/server/credentials/CredentialManagerService$SessionManager;->this$0:Lcom/android/server/credentials/CredentialManagerService;
 
     invoke-static {v0}, Lcom/android/server/credentials/CredentialManagerService;->-$$Nest$fgetmRequestSessions(Lcom/android/server/credentials/CredentialManagerService;)Landroid/util/SparseArray;
@@ -49,7 +46,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1048
     iget-object v0, p0, Lcom/android/server/credentials/CredentialManagerService$SessionManager;->this$0:Lcom/android/server/credentials/CredentialManagerService;
 
     invoke-static {v0}, Lcom/android/server/credentials/CredentialManagerService;->-$$Nest$fgetmRequestSessions(Lcom/android/server/credentials/CredentialManagerService;)Landroid/util/SparseArray;
@@ -62,7 +58,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1050
     :cond_0
     iget-object p0, p0, Lcom/android/server/credentials/CredentialManagerService$SessionManager;->this$0:Lcom/android/server/credentials/CredentialManagerService;
 
@@ -84,7 +79,6 @@
 .method public onFinishRequestSession(ILandroid/os/IBinder;)V
     .locals 1
 
-    .line 1040
     iget-object v0, p0, Lcom/android/server/credentials/CredentialManagerService$SessionManager;->this$0:Lcom/android/server/credentials/CredentialManagerService;
 
     invoke-static {v0}, Lcom/android/server/credentials/CredentialManagerService;->-$$Nest$fgetmRequestSessions(Lcom/android/server/credentials/CredentialManagerService;)Landroid/util/SparseArray;
@@ -97,7 +91,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1041
     iget-object p0, p0, Lcom/android/server/credentials/CredentialManagerService$SessionManager;->this$0:Lcom/android/server/credentials/CredentialManagerService;
 
     invoke-static {p0}, Lcom/android/server/credentials/CredentialManagerService;->-$$Nest$fgetmRequestSessions(Lcom/android/server/credentials/CredentialManagerService;)Landroid/util/SparseArray;

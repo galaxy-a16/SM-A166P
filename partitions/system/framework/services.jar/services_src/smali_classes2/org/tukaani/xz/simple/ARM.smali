@@ -16,15 +16,12 @@
 .method public constructor <init>(ZI)V
     .locals 0
 
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-boolean p1, p0, Lorg/tukaani/xz/simple/ARM;->isEncoder:Z
 
     add-int/lit8 p2, p2, 0x8
 
-    .line 19
     iput p2, p0, Lorg/tukaani/xz/simple/ARM;->pos:I
 
     return-void
@@ -46,7 +43,6 @@
 
     add-int/lit8 v1, v0, 0x3
 
-    .line 27
     aget-byte v1, p1, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -57,7 +53,6 @@
 
     add-int/lit8 v1, v0, 0x2
 
-    .line 28
     aget-byte v2, p1, v1
 
     and-int/lit16 v2, v2, 0xff
@@ -82,12 +77,10 @@
 
     shl-int/lit8 v2, v2, 0x2
 
-    .line 34
     iget-boolean v4, p0, Lorg/tukaani/xz/simple/ARM;->isEncoder:Z
 
     if-eqz v4, :cond_0
 
-    .line 35
     iget v4, p0, Lorg/tukaani/xz/simple/ARM;->pos:I
 
     add-int/2addr v4, v0
@@ -98,7 +91,6 @@
 
     goto :goto_1
 
-    .line 37
     :cond_0
     iget v4, p0, Lorg/tukaani/xz/simple/ARM;->pos:I
 
@@ -115,19 +107,16 @@
 
     int-to-byte v4, v4
 
-    .line 40
     aput-byte v4, p1, v1
 
     ushr-int/lit8 v1, v2, 0x8
 
     int-to-byte v1, v1
 
-    .line 41
     aput-byte v1, p1, v3
 
     int-to-byte v1, v2
 
-    .line 42
     aput-byte v1, p1, v0
 
     :cond_1
@@ -138,7 +127,6 @@
     :cond_2
     sub-int/2addr v0, p2
 
-    .line 47
     iget p1, p0, Lorg/tukaani/xz/simple/ARM;->pos:I
 
     add-int/2addr p1, v0

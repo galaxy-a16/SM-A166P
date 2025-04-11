@@ -9,7 +9,6 @@
 
     const/4 v0, 0x1
 
-    .line 76
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/model/BitInputStream;->getNext(I)I
 
     move-result p0
@@ -30,7 +29,6 @@
 
     const/16 v0, 0x20
 
-    .line 71
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/model/BitInputStream;->getNext(I)I
 
     move-result p0
@@ -43,7 +41,6 @@
 
     const/4 v0, 0x1
 
-    .line 41
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/model/BitInputStream;->getNext(I)I
 
     move-result v1
@@ -58,12 +55,10 @@
     :goto_0
     const/16 v1, 0x8
 
-    .line 42
     invoke-virtual {p0, v1}, Lcom/android/server/integrity/model/BitInputStream;->getNext(I)I
 
     move-result v1
 
-    .line 43
     invoke-static {p0, v1, v0}, Lcom/android/server/integrity/parser/BinaryFileOperations;->getStringValue(Lcom/android/server/integrity/model/BitInputStream;IZ)Ljava/lang/String;
 
     move-result-object p0
@@ -78,7 +73,6 @@
 
     if-nez p2, :cond_1
 
-    .line 56
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +82,6 @@
 
     if-lez p1, :cond_0
 
-    .line 58
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/model/BitInputStream;->getNext(I)I
 
     move-result p1
@@ -101,7 +94,6 @@
 
     goto :goto_0
 
-    .line 60
     :cond_0
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -109,7 +101,6 @@
 
     return-object p0
 
-    .line 62
     :cond_1
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
@@ -120,7 +111,6 @@
 
     if-lez p1, :cond_2
 
-    .line 64
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/model/BitInputStream;->getNext(I)I
 
     move-result p1
@@ -135,7 +125,6 @@
 
     goto :goto_1
 
-    .line 66
     :cond_2
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
 

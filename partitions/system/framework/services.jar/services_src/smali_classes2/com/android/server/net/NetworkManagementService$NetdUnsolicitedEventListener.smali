@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$C8FYwQ3yic9SCNrTQOr5-X7UllE(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onInterfaceAdded$5(Ljava/lang/String;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$JMcJZMmR5jiOWx_SSjC7PH1VkQ8(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;Ljava/lang/String;J[Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onInterfaceDnsServerInfo$2(Ljava/lang/String;J[Ljava/lang/String;)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public static synthetic $r8$lambda$KDQFAO3vtV8N_neJkRrZ8btBA9Q(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;Ljava/lang/String;Landroid/net/LinkAddress;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onInterfaceAddressRemoved$4(Ljava/lang/String;Landroid/net/LinkAddress;)V
 
     return-void
@@ -38,7 +35,6 @@
 .method public static synthetic $r8$lambda$KWdqtGoZOpbcCr9Jrg6nnzOijhQ(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onInterfaceLinkStateChanged$8(Ljava/lang/String;Z)V
 
     return-void
@@ -47,7 +43,6 @@
 .method public static synthetic $r8$lambda$WgLMX-PmJwm4IYIDXMVkfC2O-LU(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;IZJI)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onInterfaceClassActivityChanged$0(IZJI)V
 
     return-void
@@ -56,7 +51,6 @@
 .method public static synthetic $r8$lambda$doamMuLpyEU180OKw4V3H0Es4i0(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onQuotaLimitReached$1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -65,7 +59,6 @@
 .method public static synthetic $r8$lambda$f3Lk7EueQvwS7oTCKJuQ_YtPZXk(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;Ljava/lang/String;Landroid/net/LinkAddress;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onInterfaceAddressUpdated$3(Ljava/lang/String;Landroid/net/LinkAddress;)V
 
     return-void
@@ -74,7 +67,6 @@
 .method public static synthetic $r8$lambda$mZBw-qng_tS8z8HShWZ09w_LmJg(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onInterfaceChanged$7(Ljava/lang/String;Z)V
 
     return-void
@@ -83,7 +75,6 @@
 .method public static synthetic $r8$lambda$piup9FgGLVmuqEVHCUukqqP2cGU(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onInterfaceRemoved$6(Ljava/lang/String;)V
 
     return-void
@@ -92,7 +83,6 @@
 .method public static synthetic $r8$lambda$rue8XlXlWtn_lkTJOzccfvmsck8(Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;ZLandroid/net/RouteInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->lambda$onRouteChanged$9(ZLandroid/net/RouteInfo;)V
 
     return-void
@@ -101,7 +91,6 @@
 .method public constructor <init>(Lcom/android/server/net/NetworkManagementService;)V
     .locals 0
 
-    .line 671
     iput-object p1, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-direct {p0}, Landroid/net/INetdUnsolicitedEventListener$Stub;-><init>()V
@@ -112,7 +101,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/net/NetworkManagementService;Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;-><init>(Lcom/android/server/net/NetworkManagementService;)V
 
     return-void
@@ -121,7 +109,6 @@
 .method private synthetic lambda$onInterfaceAdded$5(Ljava/lang/String;)V
     .locals 0
 
-    .line 713
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyInterfaceAdded(Lcom/android/server/net/NetworkManagementService;Ljava/lang/String;)V
@@ -132,7 +119,6 @@
 .method private synthetic lambda$onInterfaceAddressRemoved$4(Ljava/lang/String;Landroid/net/LinkAddress;)V
     .locals 0
 
-    .line 708
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyAddressRemoved(Lcom/android/server/net/NetworkManagementService;Ljava/lang/String;Landroid/net/LinkAddress;)V
@@ -143,7 +129,6 @@
 .method private synthetic lambda$onInterfaceAddressUpdated$3(Ljava/lang/String;Landroid/net/LinkAddress;)V
     .locals 0
 
-    .line 701
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyAddressUpdated(Lcom/android/server/net/NetworkManagementService;Ljava/lang/String;Landroid/net/LinkAddress;)V
@@ -154,7 +139,6 @@
 .method private synthetic lambda$onInterfaceChanged$7(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 724
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyInterfaceStatusChanged(Lcom/android/server/net/NetworkManagementService;Ljava/lang/String;Z)V
@@ -165,7 +149,6 @@
 .method private synthetic lambda$onInterfaceClassActivityChanged$0(IZJI)V
     .locals 6
 
-    .line 682
     iget-object v0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     move v1, p1
@@ -184,7 +167,6 @@
 .method private synthetic lambda$onInterfaceDnsServerInfo$2(Ljava/lang/String;J[Ljava/lang/String;)V
     .locals 0
 
-    .line 694
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyInterfaceDnsServerInfo(Lcom/android/server/net/NetworkManagementService;Ljava/lang/String;J[Ljava/lang/String;)V
@@ -195,7 +177,6 @@
 .method private synthetic lambda$onInterfaceLinkStateChanged$8(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 730
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyInterfaceLinkStateChanged(Lcom/android/server/net/NetworkManagementService;Ljava/lang/String;Z)V
@@ -206,7 +187,6 @@
 .method private synthetic lambda$onInterfaceRemoved$6(Ljava/lang/String;)V
     .locals 0
 
-    .line 718
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyInterfaceRemoved(Lcom/android/server/net/NetworkManagementService;Ljava/lang/String;)V
@@ -217,7 +197,6 @@
 .method private synthetic lambda$onQuotaLimitReached$1(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 688
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyLimitReached(Lcom/android/server/net/NetworkManagementService;Ljava/lang/String;Ljava/lang/String;)V
@@ -228,7 +207,6 @@
 .method private synthetic lambda$onRouteChanged$9(ZLandroid/net/RouteInfo;)V
     .locals 0
 
-    .line 739
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$mnotifyRouteChange(Lcom/android/server/net/NetworkManagementService;ZLandroid/net/RouteInfo;)V
@@ -241,7 +219,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "38614f80a23b92603d4851177e57c460aec1b606"
 
     return-object p0
@@ -250,7 +227,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xd
 
     return p0
@@ -259,7 +235,6 @@
 .method public onInterfaceAdded(Ljava/lang/String;)V
     .locals 2
 
-    .line 713
     iget-object v0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {v0}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -278,12 +253,10 @@
 .method public onInterfaceAddressRemoved(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 1
 
-    .line 707
     new-instance v0, Landroid/net/LinkAddress;
 
     invoke-direct {v0, p1, p3, p4}, Landroid/net/LinkAddress;-><init>(Ljava/lang/String;II)V
 
-    .line 708
     iget-object p1, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p1}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -302,12 +275,10 @@
 .method public onInterfaceAddressUpdated(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 1
 
-    .line 700
     new-instance v0, Landroid/net/LinkAddress;
 
     invoke-direct {v0, p1, p3, p4}, Landroid/net/LinkAddress;-><init>(Ljava/lang/String;II)V
 
-    .line 701
     iget-object p1, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p1}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -326,7 +297,6 @@
 .method public onInterfaceChanged(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 724
     iget-object v0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {v0}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -351,7 +321,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 677
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide p3
@@ -359,7 +328,6 @@
     :cond_0
     move-wide v4, p3
 
-    .line 681
     iget-object p3, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p3}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -388,7 +356,6 @@
 .method public onInterfaceDnsServerInfo(Ljava/lang/String;J[Ljava/lang/String;)V
     .locals 8
 
-    .line 694
     iget-object v0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {v0}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -417,7 +384,6 @@
 .method public onInterfaceLinkStateChanged(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 730
     iget-object v0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {v0}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -436,7 +402,6 @@
 .method public onInterfaceRemoved(Ljava/lang/String;)V
     .locals 2
 
-    .line 718
     iget-object v0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {v0}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -455,7 +420,6 @@
 .method public onQuotaLimitReached(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 688
     iget-object v0, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {v0}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -474,7 +438,6 @@
 .method public onRouteChanged(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 736
     new-instance v0, Landroid/net/RouteInfo;
 
     new-instance v1, Landroid/net/IpPrefix;
@@ -483,7 +446,6 @@
 
     const-string p2, ""
 
-    .line 737
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -504,7 +466,6 @@
 
     invoke-direct {v0, v1, p2, p4, p3}, Landroid/net/RouteInfo;-><init>(Landroid/net/IpPrefix;Ljava/net/InetAddress;Ljava/lang/String;I)V
 
-    .line 739
     iget-object p2, p0, Lcom/android/server/net/NetworkManagementService$NetdUnsolicitedEventListener;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p2}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$fgetmDaemonHandler(Lcom/android/server/net/NetworkManagementService;)Landroid/os/Handler;
@@ -523,17 +484,14 @@
 .method public onStrictCleartextDetected(ILjava/lang/String;)V
     .locals 0
 
-    .line 746
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object p0
 
-    .line 747
     invoke-static {p2}, Lcom/android/internal/util/HexDump;->hexStringToByteArray(Ljava/lang/String;)[B
 
     move-result-object p2
 
-    .line 746
     invoke-interface {p0, p1, p2}, Landroid/app/IActivityManager;->notifyCleartextNetwork(I[B)V
 
     return-void

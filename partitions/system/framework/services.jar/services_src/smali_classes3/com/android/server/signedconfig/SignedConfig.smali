@@ -13,13 +13,10 @@
 .method public constructor <init>(ILjava/util/List;)V
     .locals 0
 
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     iput p1, p0, Lcom/android/server/signedconfig/SignedConfig;->version:I
 
-    .line 86
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -32,7 +29,6 @@
 .method public static parse(Ljava/lang/String;Ljava/util/Set;Ljava/util/Map;)Lcom/android/server/signedconfig/SignedConfig;
     .locals 4
 
-    .line 128
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -40,26 +36,22 @@
 
     const-string/jumbo p0, "version"
 
-    .line 129
     invoke-virtual {v0, p0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result p0
 
     const-string v1, "config"
 
-    .line 131
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v0
 
-    .line 132
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v2, 0x0
 
-    .line 133
     :goto_0
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
@@ -67,7 +59,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 134
     invoke-virtual {v0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v3
@@ -82,7 +73,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_0
     new-instance p1, Lcom/android/server/signedconfig/SignedConfig;
 
@@ -95,7 +85,6 @@
     :catch_0
     move-exception p0
 
-    .line 140
     new-instance p1, Lcom/android/server/signedconfig/InvalidConfigException;
 
     const-string p2, "Could not parse JSON"
@@ -110,31 +99,26 @@
 
     const-string/jumbo v0, "min_sdk"
 
-    .line 157
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
     const-string/jumbo v1, "max_sdk"
 
-    .line 158
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
     const-string/jumbo v2, "values"
 
-    .line 159
     invoke-virtual {p0, v2}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p0
 
-    .line 160
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 161
     invoke-virtual {p0}, Lorg/json/JSONObject;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -156,12 +140,10 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 162
     invoke-virtual {p0, v4}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
-    .line 163
     sget-object v6, Lorg/json/JSONObject;->NULL:Ljava/lang/Object;
 
     if-eq v5, v6, :cond_1
@@ -170,7 +152,6 @@
 
     goto :goto_1
 
-    .line 165
     :cond_0
     invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -182,7 +163,6 @@
     :goto_1
     const/4 v5, 0x0
 
-    .line 166
     :goto_2
     invoke-interface {p1, v4}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -192,28 +172,24 @@
 
     if-eqz v6, :cond_4
 
-    .line 169
     invoke-interface {p2, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 170
     invoke-interface {p2, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/util/Map;
 
-    .line 171
     invoke-interface {v6, v5}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v8
 
     if-eqz v8, :cond_2
 
-    .line 175
     invoke-interface {v6, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -222,7 +198,6 @@
 
     goto :goto_3
 
-    .line 172
     :cond_2
     new-instance p0, Lcom/android/server/signedconfig/InvalidConfigException;
 
@@ -238,7 +213,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 173
     invoke-static {v5}, Lcom/android/server/signedconfig/SignedConfig;->quoted(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object p2
@@ -253,14 +227,12 @@
 
     throw p0
 
-    .line 177
     :cond_3
     :goto_3
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 167
     :cond_4
     new-instance p0, Lcom/android/server/signedconfig/InvalidConfigException;
 
@@ -284,7 +256,6 @@
 
     throw p0
 
-    .line 179
     :cond_5
     new-instance p0, Lcom/android/server/signedconfig/SignedConfig$PerSdkConfig;
 
@@ -302,7 +273,6 @@
 
     return-object p0
 
-    .line 149
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -328,7 +298,6 @@
 .method public getMatchingConfig(I)Lcom/android/server/signedconfig/SignedConfig$PerSdkConfig;
     .locals 2
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/signedconfig/SignedConfig;->perSdkConfig:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -348,7 +317,6 @@
 
     check-cast v0, Lcom/android/server/signedconfig/SignedConfig$PerSdkConfig;
 
-    .line 97
     iget v1, v0, Lcom/android/server/signedconfig/SignedConfig$PerSdkConfig;->minSdk:I
 
     if-gt v1, p1, :cond_0

@@ -17,21 +17,16 @@
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 2516
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2511
     iput v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mUsageCounter:I
 
-    .line 2517
     iput p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mNetId:I
 
-    .line 2518
     iput-object p2, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns1:Ljava/lang/String;
 
-    .line 2519
     iput-object p3, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns2:Ljava/lang/String;
 
     return-void
@@ -44,7 +39,6 @@
 
     monitor-enter p0
 
-    .line 2529
     :try_start_0
     iget v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mUsageCounter:I
 
@@ -69,7 +63,6 @@
 .method public getDns1()Ljava/lang/String;
     .locals 0
 
-    .line 2533
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns1:Ljava/lang/String;
 
     return-object p0
@@ -78,7 +71,6 @@
 .method public getDns2()Ljava/lang/String;
     .locals 0
 
-    .line 2537
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns2:Ljava/lang/String;
 
     return-object p0
@@ -87,7 +79,6 @@
 .method public getNetId()I
     .locals 0
 
-    .line 2545
     iget p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mNetId:I
 
     return p0
@@ -96,7 +87,6 @@
 .method public hasDns2()Z
     .locals 0
 
-    .line 2541
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns2:Ljava/lang/String;
 
     if-eqz p0, :cond_0
@@ -117,7 +107,6 @@
 
     monitor-enter p0
 
-    .line 2524
     :try_start_0
     iget v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mUsageCounter:I
 
@@ -142,14 +131,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 2550
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "{Net Id= "
 
-    .line 2551
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mNetId:I
@@ -166,7 +153,6 @@
 
     const-string v1, " , DNS(2)="
 
-    .line 2552
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns2:Ljava/lang/String;
@@ -183,10 +169,8 @@
 
     const-string/jumbo p0, "}"
 
-    .line 2553
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2554
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 185
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryExternalStatsWorker$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 0
 
-    .line 194
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -36,7 +33,6 @@
 .method public getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 0
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryExternalStatsWorker$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;

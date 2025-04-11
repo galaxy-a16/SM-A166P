@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 312
     invoke-static {}, Lcom/android/server/backup/restore/UnifiedRestoreState;->values()[Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     move-result-object v0

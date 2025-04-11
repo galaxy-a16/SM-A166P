@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)V
     .locals 0
 
-    .line 10658
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$5;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 4
 
-    .line 10661
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$5;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmTempContext(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Landroid/content/Context;
@@ -42,7 +40,6 @@
 
     check-cast v0, Landroid/net/TetheringManager;
 
-    .line 10663
     iget-object v1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$5;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-virtual {v1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->getUsbNetStateInternal()Z
@@ -71,7 +68,6 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 10664
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$5;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$menableTethering(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)I
@@ -83,7 +79,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 10666
     invoke-virtual {v0, p0}, Landroid/net/TetheringManager;->setUsbTethering(Z)I
 
     move-result p0
@@ -95,12 +90,10 @@
 
     const-string/jumbo p0, "startUsbNet OK"
 
-    .line 10669
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 10671
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 

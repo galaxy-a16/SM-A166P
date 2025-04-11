@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/InstantAppRegistry;)V
     .locals 0
 
-    .line 187
     iput-object p1, p0, Lcom/android/server/pm/InstantAppRegistry$1;->this$0:Lcom/android/server/pm/InstantAppRegistry;
 
     invoke-direct {p0}, Lcom/android/server/utils/Watcher;-><init>()V
@@ -24,7 +23,6 @@
 .method public onChange(Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/pm/InstantAppRegistry$1;->this$0:Lcom/android/server/pm/InstantAppRegistry;
 
     invoke-static {p0}, Lcom/android/server/pm/InstantAppRegistry;->-$$Nest$monChanged(Lcom/android/server/pm/InstantAppRegistry;)V

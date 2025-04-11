@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/inputmethod/InputMethodMenuController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodMenuController$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/inputmethod/InputMethodMenuController;
@@ -27,7 +26,6 @@
 .method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodMenuController$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/inputmethod/InputMethodMenuController;
 
     invoke-static {p0, p1}, Lcom/android/server/inputmethod/InputMethodMenuController;->$r8$lambda$j9xr4zJLwlv670tgRdCaOEA2uIQ(Lcom/android/server/inputmethod/InputMethodMenuController;Landroid/content/DialogInterface;)V

@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$1GAzkIeIQ_rmgxOkh5rJl2QtcmU(Lcom/android/server/wearable/WearableSensingShellCommand$TestableCallbackInternal;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wearable/WearableSensingShellCommand$TestableCallbackInternal;->lambda$createRemoteStatusCallback$0(Landroid/os/Bundle;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$mcreateRemoteStatusCallback(Lcom/android/server/wearable/WearableSensingShellCommand$TestableCallbackInternal;)Landroid/os/RemoteCallback;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wearable/WearableSensingShellCommand$TestableCallbackInternal;->createRemoteStatusCallback()Landroid/os/RemoteCallback;
 
     move-result-object p0
@@ -41,23 +39,19 @@
 
     const-string v0, "android.app.wearable.WearableSensingStatusBundleKey"
 
-    .line 59
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 60
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 62
     :try_start_0
     iput p1, p0, Lcom/android/server/wearable/WearableSensingShellCommand$TestableCallbackInternal;->mLastStatus:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 64
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -67,7 +61,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 65
     throw p0
 .end method
 
@@ -76,7 +69,6 @@
 .method public final createRemoteStatusCallback()Landroid/os/RemoteCallback;
     .locals 2
 
-    .line 58
     new-instance v0, Landroid/os/RemoteCallback;
 
     new-instance v1, Lcom/android/server/wearable/WearableSensingShellCommand$TestableCallbackInternal$$ExternalSyntheticLambda0;
@@ -91,7 +83,6 @@
 .method public getLastStatus()I
     .locals 0
 
-    .line 53
     iget p0, p0, Lcom/android/server/wearable/WearableSensingShellCommand$TestableCallbackInternal;->mLastStatus:I
 
     return p0

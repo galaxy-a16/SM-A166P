@@ -17,19 +17,14 @@
 .method public constructor <init>(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothDevice;Landroid/media/BluetoothProfileConnectionInfo;Ljava/lang/String;)V
     .locals 0
 
-    .line 846
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 847
     iput-object p1, p0, Lcom/android/server/audio/AudioDeviceBroker$BtDeviceChangedData;->mNewDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 848
     iput-object p2, p0, Lcom/android/server/audio/AudioDeviceBroker$BtDeviceChangedData;->mPreviousDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 849
     iput-object p3, p0, Lcom/android/server/audio/AudioDeviceBroker$BtDeviceChangedData;->mInfo:Landroid/media/BluetoothProfileConnectionInfo;
 
-    .line 850
     iput-object p4, p0, Lcom/android/server/audio/AudioDeviceBroker$BtDeviceChangedData;->mEventSource:Ljava/lang/String;
 
     return-void
@@ -40,7 +35,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 855
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,12 +45,10 @@
 
     iget-object v1, p0, Lcom/android/server/audio/AudioDeviceBroker$BtDeviceChangedData;->mInfo:Landroid/media/BluetoothProfileConnectionInfo;
 
-    .line 856
     invoke-virtual {v1}, Landroid/media/BluetoothProfileConnectionInfo;->getProfile()I
 
     move-result v1
 
-    .line 855
     invoke-static {v1}, Landroid/bluetooth/BluetoothProfile;->getProfileName(I)Ljava/lang/String;
 
     move-result-object v1

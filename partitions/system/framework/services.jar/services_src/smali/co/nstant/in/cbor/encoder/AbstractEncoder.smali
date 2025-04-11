@@ -13,13 +13,10 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     iput-object p1, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encoder:Lco/nstant/in/cbor/CborEncoder;
 
-    .line 21
     iput-object p2, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->outputStream:Ljava/io/OutputStream;
 
     return-void
@@ -30,7 +27,6 @@
 .method public encodeTypeAndLength(Lco/nstant/in/cbor/model/MajorType;J)V
     .locals 8
 
-    .line 37
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/MajorType;->getValue()I
 
     move-result p1
@@ -49,7 +45,6 @@
 
     long-to-int p1, p1
 
-    .line 39
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     goto/16 :goto_0
@@ -61,7 +56,6 @@
 
     if-gtz v2, :cond_1
 
-    .line 41
     sget-object v0, Lco/nstant/in/cbor/model/AdditionalInformation;->ONE_BYTE:Lco/nstant/in/cbor/model/AdditionalInformation;
 
     invoke-virtual {v0}, Lco/nstant/in/cbor/model/AdditionalInformation;->getValue()I
@@ -70,12 +64,10 @@
 
     or-int/2addr p1, v0
 
-    .line 42
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     long-to-int p1, p2
 
-    .line 43
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     goto/16 :goto_0
@@ -89,7 +81,6 @@
 
     if-gtz v2, :cond_2
 
-    .line 45
     sget-object v2, Lco/nstant/in/cbor/model/AdditionalInformation;->TWO_BYTES:Lco/nstant/in/cbor/model/AdditionalInformation;
 
     invoke-virtual {v2}, Lco/nstant/in/cbor/model/AdditionalInformation;->getValue()I
@@ -98,21 +89,18 @@
 
     or-int/2addr p1, v2
 
-    .line 46
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v2, p2, v3
 
     long-to-int p1, v2
 
-    .line 47
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     and-long p1, p2, v0
 
     long-to-int p1, p1
 
-    .line 48
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     goto/16 :goto_0
@@ -128,7 +116,6 @@
 
     if-gtz v2, :cond_3
 
-    .line 50
     sget-object v2, Lco/nstant/in/cbor/model/AdditionalInformation;->FOUR_BYTES:Lco/nstant/in/cbor/model/AdditionalInformation;
 
     invoke-virtual {v2}, Lco/nstant/in/cbor/model/AdditionalInformation;->getValue()I
@@ -137,7 +124,6 @@
 
     or-int/2addr p1, v2
 
-    .line 51
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v5, p2, v5
@@ -146,7 +132,6 @@
 
     long-to-int p1, v5
 
-    .line 52
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v4, p2, v4
@@ -155,7 +140,6 @@
 
     long-to-int p1, v4
 
-    .line 53
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v2, p2, v3
@@ -164,19 +148,16 @@
 
     long-to-int p1, v2
 
-    .line 54
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     and-long p1, p2, v0
 
     long-to-int p1, p1
 
-    .line 55
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     goto :goto_0
 
-    .line 57
     :cond_3
     sget-object v2, Lco/nstant/in/cbor/model/AdditionalInformation;->EIGHT_BYTES:Lco/nstant/in/cbor/model/AdditionalInformation;
 
@@ -186,7 +167,6 @@
 
     or-int/2addr p1, v2
 
-    .line 58
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x38
@@ -197,7 +177,6 @@
 
     long-to-int p1, v6
 
-    .line 59
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x30
@@ -208,7 +187,6 @@
 
     long-to-int p1, v6
 
-    .line 60
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x28
@@ -219,7 +197,6 @@
 
     long-to-int p1, v6
 
-    .line 61
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x20
@@ -230,7 +207,6 @@
 
     long-to-int p1, v6
 
-    .line 62
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v5, p2, v5
@@ -239,7 +215,6 @@
 
     long-to-int p1, v5
 
-    .line 63
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v4, p2, v4
@@ -248,7 +223,6 @@
 
     long-to-int p1, v4
 
-    .line 64
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v2, p2, v3
@@ -257,14 +231,12 @@
 
     long-to-int p1, v2
 
-    .line 65
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     and-long p1, p2, v0
 
     long-to-int p1, p1
 
-    .line 66
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     :goto_0
@@ -274,7 +246,6 @@
 .method public encodeTypeAndLength(Lco/nstant/in/cbor/model/MajorType;Ljava/math/BigInteger;)V
     .locals 9
 
-    .line 71
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->NEGATIVE_INTEGER:Lco/nstant/in/cbor/model/MajorType;
 
     if-ne p1, v0, :cond_0
@@ -286,7 +257,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 72
     :goto_0
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/MajorType;->getValue()I
 
@@ -296,7 +266,6 @@
 
     const-wide/16 v1, 0x18
 
-    .line 73
     invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v1
@@ -309,7 +278,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 74
     invoke-virtual {p2}, Ljava/math/BigInteger;->intValue()I
 
     move-result p2
@@ -323,7 +291,6 @@
     :cond_1
     const-wide/16 v3, 0x100
 
-    .line 75
     invoke-static {v3, v4}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v1
@@ -334,7 +301,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 76
     sget-object v0, Lco/nstant/in/cbor/model/AdditionalInformation;->ONE_BYTE:Lco/nstant/in/cbor/model/AdditionalInformation;
 
     invoke-virtual {v0}, Lco/nstant/in/cbor/model/AdditionalInformation;->getValue()I
@@ -343,10 +309,8 @@
 
     or-int/2addr p1, v0
 
-    .line 77
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 78
     invoke-virtual {p2}, Ljava/math/BigInteger;->intValue()I
 
     move-result p1
@@ -358,7 +322,6 @@
     :cond_2
     const-wide/32 v3, 0x10000
 
-    .line 79
     invoke-static {v3, v4}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v1
@@ -373,7 +336,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 80
     sget-object v0, Lco/nstant/in/cbor/model/AdditionalInformation;->TWO_BYTES:Lco/nstant/in/cbor/model/AdditionalInformation;
 
     invoke-virtual {v0}, Lco/nstant/in/cbor/model/AdditionalInformation;->getValue()I
@@ -382,10 +344,8 @@
 
     or-int/2addr p1, v0
 
-    .line 81
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 82
     invoke-virtual {p2}, Ljava/math/BigInteger;->longValue()J
 
     move-result-wide p1
@@ -394,14 +354,12 @@
 
     long-to-int v0, v0
 
-    .line 83
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     and-long/2addr p1, v4
 
     long-to-int p1, p1
 
-    .line 84
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     goto/16 :goto_2
@@ -409,7 +367,6 @@
     :cond_3
     const-wide v6, 0x100000000L
 
-    .line 85
     invoke-static {v6, v7}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v1
@@ -424,7 +381,6 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 86
     sget-object v0, Lco/nstant/in/cbor/model/AdditionalInformation;->FOUR_BYTES:Lco/nstant/in/cbor/model/AdditionalInformation;
 
     invoke-virtual {v0}, Lco/nstant/in/cbor/model/AdditionalInformation;->getValue()I
@@ -433,10 +389,8 @@
 
     or-int/2addr p1, v0
 
-    .line 87
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 88
     invoke-virtual {p2}, Ljava/math/BigInteger;->longValue()J
 
     move-result-wide p1
@@ -447,7 +401,6 @@
 
     long-to-int v0, v0
 
-    .line 89
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v0, p1, v6
@@ -456,7 +409,6 @@
 
     long-to-int v0, v0
 
-    .line 90
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-long v0, p1, v3
@@ -465,19 +417,16 @@
 
     long-to-int v0, v0
 
-    .line 91
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     and-long/2addr p1, v4
 
     long-to-int p1, p1
 
-    .line 92
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     goto/16 :goto_2
 
-    .line 93
     :cond_4
     new-instance v1, Ljava/math/BigInteger;
 
@@ -491,7 +440,6 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 94
     sget-object v0, Lco/nstant/in/cbor/model/AdditionalInformation;->EIGHT_BYTES:Lco/nstant/in/cbor/model/AdditionalInformation;
 
     invoke-virtual {v0}, Lco/nstant/in/cbor/model/AdditionalInformation;->getValue()I
@@ -500,17 +448,14 @@
 
     or-int/2addr p1, v0
 
-    .line 95
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 96
     invoke-static {v4, v5}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
 
     const/16 v0, 0x38
 
-    .line 97
     invoke-virtual {p2, v0}, Ljava/math/BigInteger;->shiftRight(I)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -527,7 +472,6 @@
 
     const/16 v0, 0x30
 
-    .line 98
     invoke-virtual {p2, v0}, Ljava/math/BigInteger;->shiftRight(I)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -544,7 +488,6 @@
 
     const/16 v0, 0x28
 
-    .line 99
     invoke-virtual {p2, v0}, Ljava/math/BigInteger;->shiftRight(I)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -561,7 +504,6 @@
 
     const/16 v0, 0x20
 
-    .line 100
     invoke-virtual {p2, v0}, Ljava/math/BigInteger;->shiftRight(I)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -576,7 +518,6 @@
 
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 101
     invoke-virtual {p2, v7}, Ljava/math/BigInteger;->shiftRight(I)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -591,7 +532,6 @@
 
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 102
     invoke-virtual {p2, v6}, Ljava/math/BigInteger;->shiftRight(I)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -606,7 +546,6 @@
 
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 103
     invoke-virtual {p2, v3}, Ljava/math/BigInteger;->shiftRight(I)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -621,7 +560,6 @@
 
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 104
     invoke-virtual {p2, p1}, Ljava/math/BigInteger;->and(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -637,7 +575,6 @@
     :cond_5
     if-eqz v0, :cond_6
 
-    .line 107
     iget-object p1, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encoder:Lco/nstant/in/cbor/CborEncoder;
 
     new-instance v0, Lco/nstant/in/cbor/model/Tag;
@@ -650,7 +587,6 @@
 
     goto :goto_1
 
-    .line 109
     :cond_6
     iget-object p1, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encoder:Lco/nstant/in/cbor/CborEncoder;
 
@@ -662,7 +598,6 @@
 
     invoke-virtual {p1, v0}, Lco/nstant/in/cbor/CborEncoder;->encode(Lco/nstant/in/cbor/model/DataItem;)V
 
-    .line 111
     :goto_1
     iget-object p0, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encoder:Lco/nstant/in/cbor/CborEncoder;
 
@@ -683,14 +618,12 @@
 .method public encodeTypeChunked(Lco/nstant/in/cbor/model/MajorType;)V
     .locals 1
 
-    .line 27
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/MajorType;->getValue()I
 
     move-result p1
 
     shl-int/lit8 p1, p1, 0x5
 
-    .line 28
     sget-object v0, Lco/nstant/in/cbor/model/AdditionalInformation;->INDEFINITE:Lco/nstant/in/cbor/model/AdditionalInformation;
 
     invoke-virtual {v0}, Lco/nstant/in/cbor/model/AdditionalInformation;->getValue()I
@@ -699,7 +632,6 @@
 
     or-int/2addr p1, v0
 
-    .line 30
     :try_start_0
     iget-object p0, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->outputStream:Ljava/io/OutputStream;
 
@@ -712,7 +644,6 @@
     :catch_0
     move-exception p0
 
-    .line 32
     new-instance p1, Lco/nstant/in/cbor/CborException;
 
     invoke-direct {p1, p0}, Lco/nstant/in/cbor/CborException;-><init>(Ljava/lang/Throwable;)V
@@ -723,7 +654,6 @@
 .method public write(I)V
     .locals 0
 
-    .line 117
     :try_start_0
     iget-object p0, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->outputStream:Ljava/io/OutputStream;
 
@@ -736,7 +666,6 @@
     :catch_0
     move-exception p0
 
-    .line 119
     new-instance p1, Lco/nstant/in/cbor/CborException;
 
     invoke-direct {p1, p0}, Lco/nstant/in/cbor/CborException;-><init>(Ljava/lang/Throwable;)V
@@ -747,7 +676,6 @@
 .method public write([B)V
     .locals 0
 
-    .line 125
     :try_start_0
     iget-object p0, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->outputStream:Ljava/io/OutputStream;
 
@@ -760,7 +688,6 @@
     :catch_0
     move-exception p0
 
-    .line 127
     new-instance p1, Lco/nstant/in/cbor/CborException;
 
     invoke-direct {p1, p0}, Lco/nstant/in/cbor/CborException;-><init>(Ljava/lang/Throwable;)V

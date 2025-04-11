@@ -15,16 +15,12 @@
 .method public constructor <init>(Ljava/lang/String;ILandroid/content/ComponentName;)V
     .locals 0
 
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     iput-object p1, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mAction:Ljava/lang/String;
 
-    .line 156
     iput p2, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mUid:I
 
-    .line 157
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p3
@@ -47,7 +43,6 @@
 
     return v0
 
-    .line 180
     :cond_0
     instance-of v1, p1, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;
 
@@ -57,11 +52,9 @@
 
     return v2
 
-    .line 184
     :cond_1
     check-cast p1, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;
 
-    .line 185
     iget v1, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mUid:I
 
     iget v3, p1, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mUid:I
@@ -72,7 +65,6 @@
 
     iget-object v3, p1, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mAction:Ljava/lang/String;
 
-    .line 186
     invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -83,7 +75,6 @@
 
     iget-object p1, p1, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mComponentName:Landroid/content/ComponentName;
 
-    .line 187
     invoke-virtual {p0, p1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -102,7 +93,6 @@
 .method public getAction()Ljava/lang/String;
     .locals 0
 
-    .line 162
     iget-object p0, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mAction:Ljava/lang/String;
 
     return-object p0
@@ -111,7 +101,6 @@
 .method public getComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mComponentName:Landroid/content/ComponentName;
 
     return-object p0
@@ -120,7 +109,6 @@
 .method public getUserId()I
     .locals 0
 
-    .line 172
     iget p0, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mUid:I
 
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -133,7 +121,6 @@
 .method public final hashCode()I
     .locals 2
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mAction:Ljava/lang/String;
 
     iget v1, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mUid:I
@@ -158,7 +145,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 197
     iget-object v0, p0, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->mComponentName:Landroid/content/ComponentName;
 
     if-nez v0, :cond_0
@@ -167,7 +153,6 @@
 
     return-object p0
 
-    .line 200
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

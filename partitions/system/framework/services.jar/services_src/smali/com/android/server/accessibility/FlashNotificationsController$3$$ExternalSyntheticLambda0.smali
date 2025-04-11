@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/media/AudioPlaybackConfiguration;
 
     invoke-static {p1}, Lcom/android/server/accessibility/FlashNotificationsController$3;->$r8$lambda$hgwZFTlGDEKnlZb_4n0FC3BvXiI(Landroid/media/AudioPlaybackConfiguration;)Z

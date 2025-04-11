@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, [Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/slice/SliceClientPermissions$SliceAuthority;->$r8$lambda$H9LKh6ud9UUZE-LxU1_xH3hmzK0([Ljava/lang/String;)Ljava/lang/String;

@@ -13,7 +13,6 @@
 
     const-string/jumbo v0, "ukey2_jni"
 
-    .line 23
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -22,10 +21,8 @@
 .method public constructor <init>(Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;)V
     .locals 2
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     sget-object v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->Initiator:Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
 
     if-ne p1, v0, :cond_0
@@ -53,7 +50,6 @@
 .method public static forInitiator()Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;
     .locals 2
 
-    .line 55
     new-instance v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;
 
     sget-object v1, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->Initiator:Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
@@ -66,7 +62,6 @@
 .method public static forResponder()Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;
     .locals 2
 
-    .line 64
     new-instance v0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;
 
     sget-object v1, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;->Responder:Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext$Role;
@@ -93,7 +88,6 @@
 .method public getNextHandshakeMessage()[B
     .locals 2
 
-    .line 82
     iget-wide v0, p0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;->context_ptr:J
 
     invoke-static {v0, v1}, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;->get_next_handshake_message(J)[B
@@ -106,7 +100,6 @@
 .method public isHandshakeComplete()Z
     .locals 2
 
-    .line 73
     iget-wide v0, p0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;->context_ptr:J
 
     invoke-static {v0, v1}, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;->is_handshake_complete(J)Z
@@ -119,7 +112,6 @@
 .method public parseHandshakeMessage([B)V
     .locals 2
 
-    .line 91
     iget-wide v0, p0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;->context_ptr:J
 
     invoke-static {v0, v1, p1}, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;->parse_handshake_message(J[B)V
@@ -130,7 +122,6 @@
 .method public toConnectionContext()Lcom/google/security/cryptauth/lib/securegcm/D2DConnectionContextV1;
     .locals 3
 
-    .line 117
     new-instance v0, Lcom/google/security/cryptauth/lib/securegcm/D2DConnectionContextV1;
 
     iget-wide v1, p0, Lcom/google/security/cryptauth/lib/securegcm/D2DHandshakeContext;->context_ptr:J

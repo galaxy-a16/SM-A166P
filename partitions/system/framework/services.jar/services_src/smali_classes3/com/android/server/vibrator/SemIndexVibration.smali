@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/server/vibrator/SemVibrationBundle;)V
     .locals 0
 
-    .line 12
     invoke-direct {p0, p1}, Lcom/android/server/vibrator/SemVibration;-><init>(Lcom/android/server/vibrator/SemVibrationBundle;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
     .locals 2
 
-    .line 29
     invoke-static {}, Lcom/samsung/android/vibrator/VibRune;->SUPPORT_HYBRID_HAPTIC()Z
 
     move-result v0
@@ -37,7 +35,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_0
     iget v0, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
 
@@ -47,7 +44,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 33
     iget-object v0, p0, Lcom/android/server/vibrator/SemVibration;->mVibratorHelper:Lcom/samsung/android/server/vibrator/VibratorHelper;
 
     iget p0, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
@@ -58,7 +54,6 @@
 
     return-object p0
 
-    .line 34
     :cond_1
     iget v0, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
 
@@ -68,7 +63,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 35
     iget-object v0, p0, Lcom/android/server/vibrator/SemVibration;->mVibratorHelper:Lcom/samsung/android/server/vibrator/VibratorHelper;
 
     iget p0, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
@@ -87,7 +81,6 @@
 .method public getVibration()Lcom/android/server/vibrator/HalVibration;
     .locals 13
 
-    .line 16
     invoke-virtual {p0}, Lcom/android/server/vibrator/SemVibration;->commonValidation()Z
 
     move-result v0
@@ -98,7 +91,6 @@
 
     return-object v1
 
-    .line 19
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/vibrator/SemIndexVibration;->isSilentPatternIndex()Z
 
@@ -110,12 +102,10 @@
 
     const-string v0, "Silent vibration is ignored."
 
-    .line 20
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 24
     :cond_1
     new-instance v0, Lcom/android/server/vibrator/HalVibration;
 
@@ -141,7 +131,6 @@
 
     const/4 v10, 0x0
 
-    .line 25
     invoke-virtual {p0}, Lcom/android/server/vibrator/SemIndexVibration;->getCommonData()[Lcom/samsung/android/server/vibrator/CommonPatternInfo;
 
     move-result-object v11
@@ -160,7 +149,6 @@
 .method public final isSilentPatternIndex()Z
     .locals 1
 
-    .line 41
     iget p0, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
 
     const v0, 0xc3a4
@@ -181,7 +169,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 45
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

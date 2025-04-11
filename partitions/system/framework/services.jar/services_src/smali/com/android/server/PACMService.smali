@@ -35,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAtMap(Lcom/android/server/PACMService;)Ljava/util/LinkedHashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PACMService;->mAtMap:Ljava/util/LinkedHashMap;
 
     return-object p0
@@ -44,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCache(Lcom/android/server/PACMService;)Ljava/util/HashSet;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PACMService;->mCache:Ljava/util/HashSet;
 
     return-object p0
@@ -53,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/PACMService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PACMService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -62,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEmTokenState(Lcom/android/server/PACMService;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PACMService;->mEmTokenState:Ljava/lang/String;
 
     return-object p0
@@ -71,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/PACMService;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PACMService;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -80,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/PACMService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PACMService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -89,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$fgetmReceiver(Lcom/android/server/PACMService;)Landroid/content/BroadcastReceiver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PACMService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-object p0
@@ -98,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWakeLock(Lcom/android/server/PACMService;)Landroid/os/PowerManager$WakeLock;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/PACMService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object p0
@@ -107,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$misPackageInstalled(Lcom/android/server/PACMService;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/PACMService;->isPackageInstalled(Ljava/lang/String;)Z
 
     move-result p0
@@ -118,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$mregisterForBroadcasts(Lcom/android/server/PACMService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/PACMService;->registerForBroadcasts()V
 
     return-void
@@ -127,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$sfgetmIsJDMDevice()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/PACMService;->mIsJDMDevice:Z
 
     return v0
@@ -136,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$sfgetmReceiverList()Ljava/util/List;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/PACMService;->mReceiverList:Ljava/util/List;
 
     return-object v0
@@ -145,7 +133,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 111
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -160,10 +147,8 @@
 
     const-string v0, "PACMService"
 
-    .line 114
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 90
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
@@ -172,53 +157,44 @@
 
     const-string v1, ""
 
-    .line 93
     iput-object v1, p0, Lcom/android/server/PACMService;->mEmTokenState:Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    .line 104
     iput-object v1, p0, Lcom/android/server/PACMService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 107
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/PACMService;->mCache:Ljava/util/HashSet;
 
-    .line 109
     new-instance v2, Ljava/util/LinkedHashMap;
 
     invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/PACMService;->mAtMap:Ljava/util/LinkedHashMap;
 
-    .line 147
     new-instance v2, Lcom/android/server/PACMService$1;
 
     invoke-direct {v2, p0}, Lcom/android/server/PACMService$1;-><init>(Lcom/android/server/PACMService;)V
 
     iput-object v2, p0, Lcom/android/server/PACMService;->mHandler:Landroid/os/Handler;
 
-    .line 216
     new-instance v2, Lcom/android/server/PACMService$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/PACMService$2;-><init>(Lcom/android/server/PACMService;)V
 
     iput-object v2, p0, Lcom/android/server/PACMService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 115
     iput-object p1, p0, Lcom/android/server/PACMService;->mContext:Landroid/content/Context;
 
-    .line 116
     iget-object v2, p0, Lcom/android/server/PACMService;->mCache:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
 
     const-string/jumbo v2, "power"
 
-    .line 117
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -229,17 +205,14 @@
 
     const-string v3, "PACM_WL"
 
-    .line 118
     invoke-virtual {p1, v2, v3}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/PACMService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 120
     invoke-virtual {p0}, Lcom/android/server/PACMService;->registerProtectedCommandList()V
 
-    .line 122
     :try_start_0
     new-instance p1, Ljava/lang/Thread;
 
@@ -251,7 +224,6 @@
 
     iput-object p1, p0, Lcom/android/server/PACMService;->mThreadSocket:Ljava/lang/Thread;
 
-    .line 123
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -263,16 +235,13 @@
 
     const-string p1, "Failed to start PACM Service"
 
-    .line 125
     invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
     const-string p0, "Success to start PACM Service(S-ver : 10.6.0/ P-ver : 1)"
 
-    .line 129
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -283,7 +252,6 @@
 .method public final isPackageInstalled(Ljava/lang/String;)Z
     .locals 3
 
-    .line 194
     iget-object p0, p0, Lcom/android/server/PACMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -298,12 +266,10 @@
 
     const-string/jumbo p0, "package name is null in isPackageInstalled"
 
-    .line 197
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 202
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
@@ -312,14 +278,12 @@
 
     const-string v2, "android"
 
-    .line 208
     invoke-virtual {p0, v2, p1}, Landroid/content/pm/PackageManager;->checkSignatures(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 209
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -338,7 +302,6 @@
 
     return v1
 
-    .line 212
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -363,7 +326,6 @@
     :catch_0
     const-string p0, "GalaxyDiag app is not installed!"
 
-    .line 204
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -380,13 +342,10 @@
 
     const-string v0, "PHASE_LOCK_SETTINGS_READY"
 
-    .line 141
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     invoke-virtual {p0}, Lcom/android/server/PACMService;->registerForBroadcasts()V
 
-    .line 143
     iget-object p0, p0, Lcom/android/server/PACMService;->mHandler:Landroid/os/Handler;
 
     const/4 p1, 0x1
@@ -406,7 +365,6 @@
 
     const-string/jumbo v0, "onStart() "
 
-    .line 135
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -415,7 +373,6 @@
 .method public final registerForBroadcasts()V
     .locals 3
 
-    .line 238
     :try_start_0
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -423,22 +380,18 @@
 
     const-string v1, "com.samsung.android.aircommandmanager.START_LOCAL_SOCKET"
 
-    .line 239
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "com.samsung.android.aircommandmanager.STOP_LOCAL_SOCKET"
 
-    .line 240
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 241
     iget-object v1, p0, Lcom/android/server/PACMService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/PACMService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 242
     sget-object v0, Lcom/android/server/PACMService;->mReceiverList:Ljava/util/List;
 
     iget-object p0, p0, Lcom/android/server/PACMService;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -456,10 +409,8 @@
 
     const-string v1, "Failed to add Broadcast"
 
-    .line 244
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -474,7 +425,6 @@
     :try_start_0
     new-array v1, v0, [Lcom/samsung/android/service/ProtectedATCommand/list/ICmdList;
 
-    .line 174
     new-instance v2, Lcom/samsung/android/service/ProtectedATCommand/list/ProtectedCommandOpt1;
 
     iget-object v3, p0, Lcom/android/server/PACMService;->mContext:Landroid/content/Context;
@@ -518,10 +468,8 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 182
     aget-object v2, v1, v3
 
-    .line 183
     iget-object v5, p0, Lcom/android/server/PACMService;->mAtMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v2}, Lcom/samsung/android/service/ProtectedATCommand/list/ICmdList;->getList()Ljava/util/List;
@@ -536,7 +484,6 @@
 
     const-string v5, "PACMService"
 
-    .line 185
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -567,7 +514,6 @@
     :catch_0
     move-exception p0
 
-    .line 189
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1

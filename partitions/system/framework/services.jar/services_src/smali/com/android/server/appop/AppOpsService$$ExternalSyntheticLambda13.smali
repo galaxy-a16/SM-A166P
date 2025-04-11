@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/appop/AppOpsService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$$ExternalSyntheticLambda13;->f$0:Lcom/android/server/appop/AppOpsService;
@@ -27,7 +26,6 @@
 .method public final onUidStateChanged(IIZ)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/appop/AppOpsService$$ExternalSyntheticLambda13;->f$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/appop/AppOpsService;->$r8$lambda$Of7cei3-vLHF_EaHPQfoMrpPMGQ(Lcom/android/server/appop/AppOpsService;IIZ)V

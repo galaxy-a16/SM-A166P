@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageInstallerSession;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 3120
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$5;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageInstallerSession$5;->val$future:Ljava/util/concurrent/CompletableFuture;
@@ -32,7 +31,6 @@
 
     if-ne p2, p1, :cond_0
 
-    .line 3130
     iget-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$5;->val$future:Ljava/util/concurrent/CompletableFuture;
 
     new-instance p2, Lcom/android/server/pm/PackageInstallerSession$InstallResult;
@@ -45,7 +43,6 @@
 
     goto :goto_0
 
-    .line 3132
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$5;->val$future:Ljava/util/concurrent/CompletableFuture;
 
@@ -62,7 +59,6 @@
 .method public onUserActionRequired(Landroid/content/Intent;)V
     .locals 0
 
-    .line 3123
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V

@@ -15,10 +15,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -35,20 +33,17 @@
 
     monitor-enter v0
 
-    .line 21
     :try_start_0
     sget-object v1, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->sInstance:Lcom/android/server/biometrics/SemBiometricLockoutTracker;
 
     if-nez v1, :cond_0
 
-    .line 22
     new-instance v1, Lcom/android/server/biometrics/SemBiometricLockoutTracker;
 
     invoke-direct {v1}, Lcom/android/server/biometrics/SemBiometricLockoutTracker;-><init>()V
 
     sput-object v1, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->sInstance:Lcom/android/server/biometrics/SemBiometricLockoutTracker;
 
-    .line 24
     :cond_0
     sget-object v1, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->sInstance:Lcom/android/server/biometrics/SemBiometricLockoutTracker;
     :try_end_0
@@ -73,7 +68,6 @@
 
     monitor-enter p0
 
-    .line 43
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->mFailedAttempts:Landroid/util/SparseArray;
 
@@ -87,22 +81,18 @@
 
     if-nez v0, :cond_0
 
-    .line 45
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    .line 46
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 47
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->mFailedAttempts:Landroid/util/SparseArray;
 
     invoke-virtual {p1, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 49
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->get(I)I
 
@@ -114,7 +104,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 51
     :goto_0
     monitor-exit p0
 
@@ -137,7 +126,6 @@
 
     move v1, v0
 
-    .line 36
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->mFailedAttempts:Landroid/util/SparseArray;
@@ -148,7 +136,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 37
     iget-object v2, p0, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->mFailedAttempts:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -169,7 +156,6 @@
 
     goto :goto_0
 
-    .line 39
     :cond_0
     monitor-exit p0
 
@@ -188,7 +174,6 @@
 
     monitor-enter p0
 
-    .line 31
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->mFailedAttempts:Landroid/util/SparseArray;
 
@@ -196,7 +181,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 32
     monitor-exit p0
 
     return-void
@@ -214,7 +198,6 @@
 
     monitor-enter p0
 
-    .line 54
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->mFailedAttempts:Landroid/util/SparseArray;
 
@@ -228,12 +211,10 @@
 
     const/4 v0, 0x0
 
-    .line 56
     invoke-virtual {p2, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 58
     :cond_0
     monitor-exit p0
 

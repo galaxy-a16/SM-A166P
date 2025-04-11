@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService$NotificationListeners;Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 15334
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$1;->this$1:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$1;->val$info:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -43,14 +42,12 @@
 .method public run()V
     .locals 4
 
-    .line 15337
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$1;->val$info:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
 
     iget-object v0, v0, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->service:Landroid/os/IInterface;
 
     check-cast v0, Landroid/service/notification/INotificationListener;
 
-    .line 15339
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$1;->val$pkg:Ljava/lang/String;
 
@@ -67,7 +64,6 @@
     :catch_0
     move-exception v1
 
-    .line 15341
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$1;->this$1:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
 
     iget-object p0, p0, Lcom/android/server/notification/ManagedServices;->TAG:Ljava/lang/String;

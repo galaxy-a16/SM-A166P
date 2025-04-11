@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/MARsTrigger;)V
     .locals 0
 
-    .line 707
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$12;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 710
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -35,13 +33,11 @@
 
     goto :goto_0
 
-    .line 712
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 713
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,7 +58,6 @@
 
     const-string p2, "android.intent.action.ACTION_SHUTDOWN"
 
-    .line 714
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -77,7 +72,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 715
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/MARsTrigger$12;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -89,14 +83,12 @@
 
     invoke-virtual {p0}, Lcom/android/server/am/mars/MARsBigData;->sendBigDataInfoToHQM()V
 
-    .line 716
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
 
     invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->updateResetTime()V
 
-    .line 717
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MID:Z
 
     if-nez p0, :cond_2
@@ -114,13 +106,11 @@
 
     invoke-virtual {p0}, Lcom/android/server/am/mars/MARsHistoryLog$SaveLogThread;->start()V
 
-    .line 718
     :cond_3
     sget-boolean p0, Lcom/android/server/am/MARsPolicyManager;->App_StartUp_History:Z
 
     if-eqz p0, :cond_4
 
-    .line 719
     invoke-static {}, Lcom/android/server/am/mars/database/MARsDBManager;->getInstance()Lcom/android/server/am/mars/database/MARsDBManager;
 
     move-result-object p0

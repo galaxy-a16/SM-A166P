@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/VcnManagementService$Dependencies;->$r8$lambda$_VNloC3iCskBRy_SBrw380QTwwc(Ljava/lang/Integer;)I

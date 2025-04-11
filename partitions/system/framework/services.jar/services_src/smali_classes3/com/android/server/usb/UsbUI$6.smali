@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbUI;)V
     .locals 0
 
-    .line 324
     iput-object p1, p0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -28,7 +27,6 @@
 
     move-object/from16 v1, p1
 
-    .line 327
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,28 +47,24 @@
 
     const-string v2, "ACTION"
 
-    .line 329
     invoke-virtual {v1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "STATE"
 
-    .line 330
     invoke-virtual {v1, v3}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v3, "remove"
 
-    .line 332
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 333
     iget-object v0, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {v0}, Lcom/android/server/usb/UsbUI;->-$$Nest$mcancelAllHostNotification(Lcom/android/server/usb/UsbUI;)V
@@ -80,7 +74,6 @@
     :cond_0
     const-string v3, "change"
 
-    .line 337
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -89,7 +82,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 338
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -167,7 +159,6 @@
 
     goto :goto_1
 
-    .line 364
     :pswitch_0
     iget-object v6, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
@@ -185,13 +176,11 @@
 
     goto :goto_1
 
-    .line 340
     :pswitch_1
     iget-object v2, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {v2}, Lcom/android/server/usb/UsbUI;->-$$Nest$mturnOnDisplay(Lcom/android/server/usb/UsbUI;)V
 
-    .line 341
     iget-object v5, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
     const/16 v6, 0x6f
@@ -206,7 +195,6 @@
 
     goto :goto_1
 
-    .line 356
     :pswitch_2
     iget-object v11, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
@@ -224,13 +212,11 @@
 
     goto :goto_1
 
-    .line 348
     :pswitch_3
     iget-object v2, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {v2}, Lcom/android/server/usb/UsbUI;->-$$Nest$mcancelAllHostNotification(Lcom/android/server/usb/UsbUI;)V
 
-    .line 349
     iget-object v5, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
     const/16 v6, 0x6f
@@ -243,7 +229,6 @@
 
     invoke-static/range {v5 .. v10}, Lcom/android/server/usb/UsbUI;->-$$Nest$mpostNotification(Lcom/android/server/usb/UsbUI;IIIJ)V
 
-    .line 377
     :goto_1
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -257,7 +242,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 378
     :cond_5
     iget-object v2, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
@@ -267,7 +251,6 @@
 
     invoke-static {v2, v1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fputmIsHostConnected(Lcom/android/server/usb/UsbUI;Z)V
 
-    .line 380
     iget-object v1, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {v1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmSupportDualRole(Lcom/android/server/usb/UsbUI;)Z
@@ -284,7 +267,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 381
     iget-object v0, v0, Lcom/android/server/usb/UsbUI$6;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {v0}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmIsHostConnected(Lcom/android/server/usb/UsbUI;)Z

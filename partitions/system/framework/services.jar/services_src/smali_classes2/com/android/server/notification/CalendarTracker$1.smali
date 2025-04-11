@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/CalendarTracker;Landroid/os/Handler;)V
     .locals 0
 
-    .line 276
     iput-object p1, p0, Lcom/android/server/notification/CalendarTracker$1;->this$0:Lcom/android/server/notification/CalendarTracker;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 286
     invoke-static {}, Lcom/android/server/notification/CalendarTracker;->-$$Nest$sfgetDEBUG()Z
 
     move-result p0
@@ -56,7 +54,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    .line 279
     invoke-static {}, Lcom/android/server/notification/CalendarTracker;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -89,7 +86,6 @@
 
     move-result-object p1
 
-    .line 280
     invoke-virtual {p1}, Landroid/content/Context;->getUserId()I
 
     move-result p1
@@ -102,10 +98,8 @@
 
     const-string p2, "ConditionProviders.CT"
 
-    .line 279
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/CalendarTracker$1;->this$0:Lcom/android/server/notification/CalendarTracker;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/telecom/TelecomLoaderService;)V
     .locals 0
 
-    .line 249
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 252
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 253
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
     move-result-object p1
@@ -55,7 +52,6 @@
 
     aget v1, p1, v0
 
-    .line 254
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-static {v2, v1}, Lcom/android/server/telecom/TelecomLoaderService;->-$$Nest$mupdateSimCallManagerPermissions(Lcom/android/server/telecom/TelecomLoaderService;I)V

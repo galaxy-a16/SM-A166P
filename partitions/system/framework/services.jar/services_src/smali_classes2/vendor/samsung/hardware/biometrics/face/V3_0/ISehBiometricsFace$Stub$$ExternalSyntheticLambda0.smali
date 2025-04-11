@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/os/HwParcel;
 
     invoke-static {p1}, Lvendor/samsung/hardware/biometrics/face/V3_0/ISehBiometricsFace$Stub;->$r8$lambda$j_5IBseoUHxiThNKkenRtD6oWao(Landroid/os/HwParcel;)Landroid/os/HidlMemory;

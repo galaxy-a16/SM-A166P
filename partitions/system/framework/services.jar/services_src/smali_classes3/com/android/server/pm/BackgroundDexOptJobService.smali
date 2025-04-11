@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 26
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public onStartJob(Landroid/app/job/JobParameters;)Z
     .locals 1
 
-    .line 30
     invoke-static {}, Lcom/android/server/pm/BackgroundDexOptService;->getService()Lcom/android/server/pm/BackgroundDexOptService;
 
     move-result-object v0
@@ -33,7 +31,6 @@
 .method public onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 1
 
-    .line 35
     invoke-static {}, Lcom/android/server/pm/BackgroundDexOptService;->getService()Lcom/android/server/pm/BackgroundDexOptService;
 
     move-result-object v0

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wallpaper/WallpaperManagerService$DisplayConnector;
 
     invoke-static {p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->$r8$lambda$vZpBX-i1bSAgbKLOC0ahZHf2V1w(Lcom/android/server/wallpaper/WallpaperManagerService$DisplayConnector;)V

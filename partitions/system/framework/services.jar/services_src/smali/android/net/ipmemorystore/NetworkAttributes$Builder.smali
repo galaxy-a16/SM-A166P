@@ -29,25 +29,20 @@
 .method public constructor <init>(Landroid/net/ipmemorystore/NetworkAttributes;)V
     .locals 2
 
-    .line 248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 249
     iget-object v0, p1, Landroid/net/ipmemorystore/NetworkAttributes;->assignedV4Address:Ljava/net/Inet4Address;
 
     iput-object v0, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mAssignedAddress:Ljava/net/Inet4Address;
 
-    .line 250
     iget-object v0, p1, Landroid/net/ipmemorystore/NetworkAttributes;->assignedV4AddressExpiry:Ljava/lang/Long;
 
     iput-object v0, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mAssignedAddressExpiry:Ljava/lang/Long;
 
-    .line 251
     iget-object v0, p1, Landroid/net/ipmemorystore/NetworkAttributes;->cluster:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mCluster:Ljava/lang/String;
 
-    .line 252
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p1, Landroid/net/ipmemorystore/NetworkAttributes;->dnsAddresses:Ljava/util/List;
@@ -56,12 +51,10 @@
 
     iput-object v0, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mDnsAddresses:Ljava/util/List;
 
-    .line 253
     iget-object v0, p1, Landroid/net/ipmemorystore/NetworkAttributes;->mtu:Ljava/lang/Integer;
 
     iput-object v0, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mMtu:Ljava/lang/Integer;
 
-    .line 254
     iget-object p1, p1, Landroid/net/ipmemorystore/NetworkAttributes;->ipv6ProvisioningLossQuirk:Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;
 
     iput-object p1, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mIpv6ProvLossQuirk:Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;
@@ -74,7 +67,6 @@
 .method public build()Landroid/net/ipmemorystore/NetworkAttributes;
     .locals 8
 
-    .line 336
     new-instance v7, Landroid/net/ipmemorystore/NetworkAttributes;
 
     iget-object v1, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mAssignedAddress:Ljava/net/Inet4Address;
@@ -99,7 +91,6 @@
 .method public setAssignedV4Address(Ljava/net/Inet4Address;)Landroid/net/ipmemorystore/NetworkAttributes$Builder;
     .locals 0
 
-    .line 263
     iput-object p1, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mAssignedAddress:Ljava/net/Inet4Address;
 
     return-object p0
@@ -110,7 +101,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 276
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -123,7 +113,6 @@
 
     goto :goto_0
 
-    .line 277
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -133,7 +122,6 @@
 
     throw p0
 
-    .line 279
     :cond_1
     :goto_0
     iput-object p1, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mAssignedAddressExpiry:Ljava/lang/Long;
@@ -144,7 +132,6 @@
 .method public setCluster(Ljava/lang/String;)Landroid/net/ipmemorystore/NetworkAttributes$Builder;
     .locals 0
 
-    .line 289
     iput-object p1, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mCluster:Ljava/lang/String;
 
     return-object p0
@@ -155,7 +142,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 302
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -177,7 +163,6 @@
 
     goto :goto_0
 
-    .line 303
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -187,7 +172,6 @@
 
     throw p0
 
-    .line 306
     :cond_1
     iput-object p1, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mDnsAddresses:Ljava/util/List;
 
@@ -197,7 +181,6 @@
 .method public setIpv6ProvLossQuirk(Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;)Landroid/net/ipmemorystore/NetworkAttributes$Builder;
     .locals 0
 
-    .line 327
     iput-object p1, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mIpv6ProvLossQuirk:Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;
 
     return-object p0
@@ -208,7 +191,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 316
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -226,7 +208,6 @@
 
     throw p0
 
-    .line 317
     :cond_1
     :goto_0
     iput-object p1, p0, Landroid/net/ipmemorystore/NetworkAttributes$Builder;->mMtu:Ljava/lang/Integer;

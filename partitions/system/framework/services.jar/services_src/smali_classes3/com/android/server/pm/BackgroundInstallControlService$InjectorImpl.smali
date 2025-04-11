@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 542
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 543
     iput-object p1, p0, Lcom/android/server/pm/BackgroundInstallControlService$InjectorImpl;->mContext:Landroid/content/Context;
 
     return-void
@@ -28,7 +26,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 548
     iget-object p0, p0, Lcom/android/server/pm/BackgroundInstallControlService$InjectorImpl;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -37,7 +34,6 @@
 .method public getDiskFile()Ljava/io/File;
     .locals 2
 
-    .line 582
     new-instance p0, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getDataSystemDirectory()Ljava/io/File;
@@ -48,7 +44,6 @@
 
     invoke-direct {p0, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 583
     new-instance v0, Ljava/io/File;
 
     const-string/jumbo v1, "states"
@@ -61,7 +56,6 @@
 .method public getLooper()Landroid/os/Looper;
     .locals 3
 
-    .line 573
     new-instance p0, Lcom/android/server/ServiceThread;
 
     const/4 v0, -0x2
@@ -72,10 +66,8 @@
 
     invoke-direct {p0, v2, v0, v1}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
-    .line 575
     invoke-virtual {p0}, Landroid/os/HandlerThread;->start()V
 
-    .line 576
     invoke-virtual {p0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object p0
@@ -86,7 +78,6 @@
 .method public getPackageManager()Landroid/content/pm/PackageManager;
     .locals 0
 
-    .line 553
     iget-object p0, p0, Lcom/android/server/pm/BackgroundInstallControlService$InjectorImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -99,7 +90,6 @@
 .method public getPackageManagerInternal()Landroid/content/pm/PackageManagerInternal;
     .locals 0
 
-    .line 558
     const-class p0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -114,7 +104,6 @@
 .method public getPermissionManager()Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
     .locals 0
 
-    .line 568
     const-class p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -129,7 +118,6 @@
 .method public getUsageStatsManagerInternal()Landroid/app/usage/UsageStatsManagerInternal;
     .locals 0
 
-    .line 563
     const-class p0, Landroid/app/usage/UsageStatsManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;

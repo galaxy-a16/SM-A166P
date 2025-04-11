@@ -18,15 +18,12 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;I[Ljava/lang/String;)V
     .locals 0
 
-    .line 23331
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23332
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mTargetUid:I
 
-    .line 23333
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mPermissions:[Ljava/lang/String;
 
     return-void
@@ -37,7 +34,6 @@
 .method public checkAudioOperation(IIILjava/lang/String;Lcom/android/internal/util/function/QuadFunction;)I
     .locals 1
 
-    .line 23360
     iget v0, p0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mTargetUid:I
 
     if-ne p3, v0, :cond_0
@@ -48,7 +44,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 23361
     invoke-static {p3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p0
@@ -59,12 +54,10 @@
 
     move-result p0
 
-    .line 23363
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p3
 
-    .line 23365
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -92,7 +85,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23367
     invoke-static {p3, p4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -102,10 +94,8 @@
 
     invoke-static {p3, p4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 23368
     throw p0
 
-    .line 23370
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -135,7 +125,6 @@
 .method public checkOperation(IILjava/lang/String;Ljava/lang/String;ZLcom/android/internal/util/function/QuintFunction;)I
     .locals 6
 
-    .line 23344
     iget v0, p0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mTargetUid:I
 
     if-ne p2, v0, :cond_0
@@ -146,7 +135,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 23345
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p0
@@ -157,12 +145,10 @@
 
     move-result p0
 
-    .line 23347
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p2
 
-    .line 23349
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -194,7 +180,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23351
     invoke-static {p2, p3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -204,10 +189,8 @@
 
     invoke-static {p2, p3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 23352
     throw p0
 
-    .line 23354
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -249,7 +232,6 @@
 
     move-object/from16 v2, p5
 
-    .line 23479
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v3
@@ -266,12 +248,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 23481
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v0
 
-    .line 23480
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -282,12 +262,10 @@
 
     move-result v6
 
-    .line 23482
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v13
 
-    .line 23484
     :try_start_0
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -299,7 +277,6 @@
 
     const-string v8, "com.android.shell"
 
-    .line 23486
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getAttributionTag()Ljava/lang/String;
 
     move-result-object v9
@@ -310,7 +287,6 @@
 
     const/4 v11, 0x0
 
-    .line 23487
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getNext()Landroid/content/AttributionSource;
 
     move-result-object v12
@@ -319,17 +295,14 @@
 
     invoke-direct/range {v5 .. v12}, Landroid/content/AttributionSource;-><init>(IILjava/lang/String;Ljava/lang/String;Landroid/os/IBinder;[Ljava/lang/String;Landroid/content/AttributionSource;)V
 
-    .line 23488
     invoke-static/range {p4 .. p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v5
 
-    .line 23484
     invoke-interface {v2, v1, v0, v4, v5}, Lcom/android/internal/util/function/QuadFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23490
     invoke-static {v13, v14}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -339,13 +312,11 @@
 
     invoke-static {v13, v14}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 23491
     throw v0
 
     :cond_0
     move/from16 v3, p2
 
-    .line 23493
     :cond_1
     :goto_0
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -366,7 +337,6 @@
 .method public getDelegateUid()I
     .locals 0
 
-    .line 23337
     iget p0, p0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mTargetUid:I
 
     return p0
@@ -375,7 +345,6 @@
 .method public final isTargetOp(I)Z
     .locals 2
 
-    .line 23498
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mPermissions:[Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -384,7 +353,6 @@
 
     return v1
 
-    .line 23502
     :cond_0
     invoke-static {p1}, Landroid/app/AppOpsManager;->opToPermission(I)Ljava/lang/String;
 
@@ -394,7 +362,6 @@
 
     return v1
 
-    .line 23506
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->isTargetPermission(Ljava/lang/String;)Z
 
@@ -406,7 +373,6 @@
 .method public final isTargetPermission(Ljava/lang/String;)Z
     .locals 0
 
-    .line 23511
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mPermissions:[Ljava/lang/String;
 
     if-eqz p0, :cond_1
@@ -437,7 +403,6 @@
 
     move-object v0, p0
 
-    .line 23379
     iget v1, v0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mTargetUid:I
 
     move v2, p2
@@ -450,7 +415,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 23380
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -461,12 +425,10 @@
 
     move-result v0
 
-    .line 23382
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 23384
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -478,7 +440,6 @@
 
     const-string v6, "com.android.shell"
 
-    .line 23385
     invoke-static/range {p5 .. p5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v8
@@ -493,7 +454,6 @@
 
     move-object/from16 v9, p6
 
-    .line 23384
     invoke-interface/range {v3 .. v10}, Lcom/android/internal/util/function/HeptFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -502,7 +462,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23387
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v0
@@ -512,10 +471,8 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 23388
     throw v0
 
-    .line 23390
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -529,7 +486,6 @@
 
     move-result-object v8
 
-    .line 23391
     invoke-static/range {p7 .. p7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v10
@@ -542,7 +498,6 @@
 
     move-object/from16 v9, p6
 
-    .line 23390
     invoke-interface/range {v3 .. v10}, Lcom/android/internal/util/function/HeptFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -555,7 +510,6 @@
 .method public noteProxyOperation(ILandroid/content/AttributionSource;ZLjava/lang/String;ZZLcom/android/internal/util/function/HexFunction;)Landroid/app/SyncNotedAppOp;
     .locals 19
 
-    .line 23400
     invoke-virtual/range {p2 .. p2}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v0
@@ -572,12 +526,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 23402
     invoke-virtual/range {p2 .. p2}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v0
 
-    .line 23401
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -588,12 +540,10 @@
 
     move-result v3
 
-    .line 23403
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 23405
     :try_start_0
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -605,7 +555,6 @@
 
     const-string v5, "com.android.shell"
 
-    .line 23407
     invoke-virtual/range {p2 .. p2}, Landroid/content/AttributionSource;->getAttributionTag()Ljava/lang/String;
 
     move-result-object v6
@@ -616,7 +565,6 @@
 
     const/4 v8, 0x0
 
-    .line 23408
     invoke-virtual/range {p2 .. p2}, Landroid/content/AttributionSource;->getNext()Landroid/content/AttributionSource;
 
     move-result-object v9
@@ -625,7 +573,6 @@
 
     invoke-direct/range {v2 .. v9}, Landroid/content/AttributionSource;-><init>(IILjava/lang/String;Ljava/lang/String;Landroid/os/IBinder;[Ljava/lang/String;Landroid/content/AttributionSource;)V
 
-    .line 23409
     invoke-static/range {p3 .. p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v15
@@ -634,7 +581,6 @@
 
     move-result-object v17
 
-    .line 23410
     invoke-static/range {p6 .. p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v18
@@ -643,7 +589,6 @@
 
     move-object/from16 v16, p4
 
-    .line 23405
     invoke-interface/range {v12 .. v18}, Lcom/android/internal/util/function/HexFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -652,7 +597,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23412
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v0
@@ -662,10 +606,8 @@
 
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 23413
     throw v0
 
-    .line 23415
     :cond_0
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -675,7 +617,6 @@
 
     move-result-object v4
 
-    .line 23416
     invoke-static/range {p5 .. p5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
@@ -690,7 +631,6 @@
 
     move-object/from16 v5, p4
 
-    .line 23415
     invoke-interface/range {v1 .. v7}, Lcom/android/internal/util/function/HexFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -705,7 +645,6 @@
 
     move-object/from16 v0, p0
 
-    .line 23427
     iget v1, v0, Lcom/android/server/am/ActivityManagerService$ShellDelegate;->mTargetUid:I
 
     move/from16 v2, p3
@@ -720,7 +659,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 23428
     invoke-static/range {p3 .. p3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -731,12 +669,10 @@
 
     move-result v0
 
-    .line 23430
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 23432
     :try_start_0
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -748,7 +684,6 @@
 
     const-string v8, "com.android.shell"
 
-    .line 23433
     invoke-static/range {p6 .. p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v10
@@ -757,7 +692,6 @@
 
     move-result-object v11
 
-    .line 23434
     invoke-static/range {p9 .. p9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v13
@@ -778,7 +712,6 @@
 
     move-object/from16 v12, p8
 
-    .line 23432
     invoke-interface/range {v4 .. v15}, Lcom/android/internal/util/function/UndecFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -787,7 +720,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23436
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v0
@@ -797,13 +729,11 @@
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 23437
     throw v0
 
     :cond_0
     move/from16 v1, p2
 
-    .line 23439
     :cond_1
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -813,7 +743,6 @@
 
     move-result-object v7
 
-    .line 23440
     invoke-static/range {p6 .. p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v10
@@ -826,7 +755,6 @@
 
     move-result-object v13
 
-    .line 23441
     invoke-static/range {p10 .. p10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v14
@@ -845,7 +773,6 @@
 
     move-object/from16 v12, p8
 
-    .line 23439
     invoke-interface/range {v4 .. v15}, Lcom/android/internal/util/function/UndecFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -860,7 +787,6 @@
 
     move-object/from16 v0, p0
 
-    .line 23453
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v1
@@ -877,12 +803,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 23455
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v0
 
-    .line 23454
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -893,12 +817,10 @@
 
     move-result v4
 
-    .line 23456
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v11
 
-    .line 23458
     :try_start_0
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -910,7 +832,6 @@
 
     const-string v6, "com.android.shell"
 
-    .line 23460
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getAttributionTag()Ljava/lang/String;
 
     move-result-object v7
@@ -921,7 +842,6 @@
 
     const/4 v9, 0x0
 
-    .line 23461
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getNext()Landroid/content/AttributionSource;
 
     move-result-object v10
@@ -930,7 +850,6 @@
 
     invoke-direct/range {v3 .. v10}, Landroid/content/AttributionSource;-><init>(IILjava/lang/String;Ljava/lang/String;Landroid/os/IBinder;[Ljava/lang/String;Landroid/content/AttributionSource;)V
 
-    .line 23462
     invoke-static/range {p4 .. p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v17
@@ -939,7 +858,6 @@
 
     move-result-object v18
 
-    .line 23463
     invoke-static/range {p7 .. p7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v20
@@ -952,7 +870,6 @@
 
     move-result-object v22
 
-    .line 23464
     invoke-static/range {p10 .. p10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v23
@@ -967,7 +884,6 @@
 
     move-object/from16 v19, p6
 
-    .line 23458
     invoke-interface/range {v13 .. v24}, Lcom/android/internal/util/function/UndecFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -976,7 +892,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23466
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v0
@@ -986,13 +901,11 @@
 
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 23467
     throw v0
 
     :cond_0
     move/from16 v1, p2
 
-    .line 23469
     :cond_1
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1002,7 +915,6 @@
 
     move-result-object v17
 
-    .line 23470
     invoke-static/range {p5 .. p5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v18
@@ -1015,7 +927,6 @@
 
     move-result-object v21
 
-    .line 23471
     invoke-static/range {p9 .. p9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v22
@@ -1036,7 +947,6 @@
 
     move-object/from16 v19, p6
 
-    .line 23469
     invoke-interface/range {v13 .. v24}, Lcom/android/internal/util/function/UndecFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0

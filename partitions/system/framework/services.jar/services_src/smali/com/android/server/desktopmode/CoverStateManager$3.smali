@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/CoverStateManager;)V
     .locals 0
 
-    .line 116
     iput-object p1, p0, Lcom/android/server/desktopmode/CoverStateManager$3;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onBlocked()Ljava/lang/String;
     .locals 2
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/desktopmode/CoverStateManager$3;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmAuthComplete(Lcom/android/server/desktopmode/CoverStateManager;)Z
@@ -38,7 +36,6 @@
 
     if-nez p0, :cond_0
 
-    .line 121
     invoke-static {}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -49,7 +46,6 @@
 
     return-object v0
 
-    .line 131
     :cond_0
     invoke-static {}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

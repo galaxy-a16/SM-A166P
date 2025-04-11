@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCocktailMap(Lcom/android/server/cocktailbar/settings/CocktailBarSettings;)Ljava/util/HashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     return-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$mupdateEnabledCocktailListLocked(Lcom/android/server/cocktailbar/settings/CocktailBarSettings;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->updateEnabledCocktailListLocked()Z
 
     move-result p0
@@ -49,17 +47,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/SparseArray;I)V
     .locals 2
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     new-instance v0, Landroid/text/TextUtils$SimpleStringSplitter;
 
     const/16 v1, 0x3b
@@ -68,34 +63,28 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
-    .line 37
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
-    .line 41
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailListCache:Ljava/util/ArrayList;
 
-    .line 59
     iput-object p1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mContext:Landroid/content/Context;
 
-    .line 60
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mResolver:Landroid/content/ContentResolver;
 
-    .line 61
     iput p3, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCurrentUserId:I
 
-    .line 62
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -106,10 +95,8 @@
 
     iput-object p1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mHandler:Landroid/os/Handler;
 
-    .line 63
     invoke-virtual {p0, p2}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->initCocktailMap(Landroid/util/SparseArray;)V
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->updateEnabledCocktailList()V
 
     return-void
@@ -118,7 +105,6 @@
 .method public static isLocalBinder()Z
     .locals 2
 
-    .line 277
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -145,36 +131,30 @@
 .method public getChangedCocktailIdsListLocked(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 4
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailListCache:Ljava/util/ArrayList;
 
-    .line 250
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 251
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->getEnabledCocktailsStr()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsStrCache:Ljava/lang/String;
 
-    .line 252
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 253
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
     iget-object v3, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsStrCache:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 254
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
@@ -185,14 +165,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 255
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
     invoke-virtual {v2}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 256
     iget-object v3, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -203,17 +181,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 258
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 259
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 260
     iget v2, v3, Lcom/android/server/cocktailbar/settings/CocktailBarSettings$CocktailInfo;->cocktailId:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -224,7 +199,6 @@
 
     goto :goto_0
 
-    .line 265
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -244,7 +218,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 266
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -255,14 +228,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 268
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 269
     iget v0, v2, Lcom/android/server/cocktailbar/settings/CocktailBarSettings$CocktailInfo;->cocktailId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -273,7 +244,6 @@
 
     goto :goto_1
 
-    .line 273
     :cond_3
     iput-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailListCache:Ljava/util/ArrayList;
 
@@ -283,15 +253,12 @@
 .method public getEnableCocktailIds()Ljava/util/ArrayList;
     .locals 4
 
-    .line 128
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 129
     iget-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailListCache:Ljava/util/ArrayList;
 
-    .line 130
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -310,7 +277,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 131
     iget-object v3, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -321,7 +287,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 133
     iget v2, v2, Lcom/android/server/cocktailbar/settings/CocktailBarSettings$CocktailInfo;->cocktailId:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -339,7 +304,6 @@
 .method public getEnabledCocktailsStr()Ljava/lang/String;
     .locals 3
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "cocktail_bar_enabled_cocktails"
@@ -352,7 +316,6 @@
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsStrCache:Ljava/lang/String;
 
-    .line 123
     sget-object v0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -381,7 +344,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     iget-object p0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsStrCache:Ljava/lang/String;
 
     return-object p0
@@ -390,18 +352,15 @@
 .method public final initCocktailMap(Landroid/util/SparseArray;)V
     .locals 7
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 69
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 70
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
     move-result v1
@@ -411,21 +370,18 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 72
     invoke-virtual {p1, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/samsung/android/cocktailbar/Cocktail;
 
-    .line 73
     invoke-virtual {v3}, Lcom/samsung/android/cocktailbar/Cocktail;->getProvider()Landroid/content/ComponentName;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    .line 75
     new-instance v5, Lcom/android/server/cocktailbar/settings/CocktailBarSettings$CocktailInfo;
 
     invoke-virtual {v3}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
@@ -438,7 +394,6 @@
 
     invoke-direct {v5, v6, v4}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings$CocktailInfo;-><init>(ILjava/lang/String;)V
 
-    .line 76
     iget-object v4, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Lcom/samsung/android/cocktailbar/Cocktail;->getProvider()Landroid/content/ComponentName;
@@ -456,7 +411,6 @@
 
     goto :goto_0
 
-    .line 79
     :cond_1
     monitor-exit v0
 
@@ -475,16 +429,13 @@
 .method public isEnabledCocktail(I)Z
     .locals 5
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 198
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailListCache:Ljava/util/ArrayList;
 
-    .line 199
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -505,7 +456,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 200
     iget-object v4, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -518,7 +468,6 @@
 
     if-nez v2, :cond_1
 
-    .line 203
     new-instance v2, Ljava/lang/StringBuffer;
 
     const-string v4, "isEnabledCocktail: invalid "
@@ -527,7 +476,6 @@
 
     const-string v4, " for cid="
 
-    .line 204
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
@@ -538,13 +486,11 @@
 
     iget v4, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCurrentUserId:I
 
-    .line 205
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     :cond_1
     const-string v4, " ["
 
-    .line 207
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -555,13 +501,11 @@
 
     goto :goto_0
 
-    .line 210
     :cond_2
     iget v3, v4, Lcom/android/server/cocktailbar/settings/CocktailBarSettings$CocktailInfo;->cocktailId:I
 
     if-ne v3, p1, :cond_0
 
-    .line 211
     monitor-exit v0
 
     const/4 p0, 0x1
@@ -571,7 +515,6 @@
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 215
     sget-object p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->TAG:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -580,7 +523,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     :cond_4
     monitor-exit v0
 
@@ -591,7 +533,6 @@
     :catchall_0
     move-exception p0
 
-    .line 218
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -602,16 +543,13 @@
 .method public isEnabledCocktail(Ljava/lang/String;)Z
     .locals 5
 
-    .line 222
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 224
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailListCache:Ljava/util/ArrayList;
 
-    .line 225
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -632,7 +570,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 226
     iget-object v4, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -645,7 +582,6 @@
 
     if-nez v2, :cond_1
 
-    .line 229
     new-instance v2, Ljava/lang/StringBuffer;
 
     const-string v4, "isEnabledCocktail: invalid "
@@ -654,7 +590,6 @@
 
     const-string v4, " for pName="
 
-    .line 230
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -665,13 +600,11 @@
 
     iget v4, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCurrentUserId:I
 
-    .line 231
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     :cond_1
     const-string v4, " ["
 
-    .line 233
     invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -682,7 +615,6 @@
 
     goto :goto_0
 
-    .line 236
     :cond_2
     iget-object v3, v4, Lcom/android/server/cocktailbar/settings/CocktailBarSettings$CocktailInfo;->packageName:Ljava/lang/String;
 
@@ -692,7 +624,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 237
     monitor-exit v0
 
     const/4 p0, 0x1
@@ -702,7 +633,6 @@
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 241
     sget-object p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->TAG:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -711,7 +641,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     :cond_4
     monitor-exit v0
 
@@ -722,7 +651,6 @@
     :catchall_0
     move-exception p0
 
-    .line 244
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -733,7 +661,6 @@
 .method public final putEnabledCocktailsStr(Ljava/lang/String;)V
     .locals 3
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "cocktail_bar_enabled_cocktails"
@@ -742,10 +669,8 @@
 
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 117
     iput-object p1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsStrCache:Ljava/lang/String;
 
-    .line 118
     sget-object p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -770,12 +695,10 @@
 .method public setEnabledCocktailsLocked(Ljava/util/ArrayList;)V
     .locals 4
 
-    .line 92
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 93
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -789,10 +712,8 @@
 
     const/16 v3, 0x3b
 
-    .line 96
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 98
     :cond_0
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -806,7 +727,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_1
     :try_start_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -815,7 +735,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->putEnabledCocktailsStr(Ljava/lang/String;)V
 
-    .line 102
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -826,7 +745,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 103
     iget-object p1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v0, "previous_enable_list"
@@ -839,14 +757,12 @@
 
     invoke-static {p1, v0, v1, v2}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 104
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->getEnableCocktailIds()Ljava/util/ArrayList;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 106
     iget-object p0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v0, "previous_enable_id_cnt"
@@ -864,7 +780,6 @@
     :catch_0
     move-exception p0
 
-    .line 110
     sget-object p1, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -895,23 +810,19 @@
 .method public final updateEnabledCocktailList()V
     .locals 2
 
-    .line 140
     invoke-static {}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->isLocalBinder()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 142
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->updateEnabledCocktailListLocked()Z
 
-    .line 143
     monitor-exit v0
 
     goto :goto_0
@@ -925,7 +836,6 @@
 
     throw p0
 
-    .line 145
     :cond_0
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mHandler:Landroid/os/Handler;
 
@@ -942,17 +852,14 @@
 .method public final updateEnabledCocktailListLocked()Z
     .locals 9
 
-    .line 167
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->getEnabledCocktailsStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 168
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 169
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -963,7 +870,6 @@
 
     return v3
 
-    .line 172
     :cond_0
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -971,7 +877,6 @@
 
     move v0, v3
 
-    .line 173
     :goto_0
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -983,14 +888,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 174
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailsSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
     invoke-virtual {v2}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 175
     iget-object v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v5, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1001,12 +904,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 177
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 179
     :cond_1
     iget-object v0, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mContext:Landroid/content/Context;
 
@@ -1018,7 +919,6 @@
 
     move-result-object v0
 
-    .line 180
     iget-object v5, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mCocktailMap:Ljava/util/HashMap;
 
     invoke-virtual {v5, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1027,7 +927,6 @@
 
     check-cast v5, Lcom/android/server/cocktailbar/settings/CocktailBarSettings$CocktailInfo;
 
-    .line 181
     sget-object v6, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1070,7 +969,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 183
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
@@ -1081,10 +979,8 @@
     :cond_4
     if-eqz v0, :cond_5
 
-    .line 189
     invoke-virtual {p0, v1}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->setEnabledCocktailsLocked(Ljava/util/ArrayList;)V
 
-    .line 191
     :cond_5
     iput-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->mEnabledCocktailListCache:Ljava/util/ArrayList;
 
@@ -1094,10 +990,8 @@
 .method public updateInstalledCocktails(Landroid/util/SparseArray;)V
     .locals 0
 
-    .line 83
     invoke-virtual {p0, p1}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->initCocktailMap(Landroid/util/SparseArray;)V
 
-    .line 84
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/settings/CocktailBarSettings;->updateEnabledCocktailList()V
 
     return-void

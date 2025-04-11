@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;)V
     .locals 0
 
-    .line 172
     iput-object p1, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener$1;->this$1:Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUidGone(IZ)V
     .locals 0
 
-    .line 175
     iget-object p2, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener$1;->this$1:Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;
 
     invoke-static {p2}, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;->-$$Nest$fgetmUid(Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;)I
@@ -33,7 +31,6 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 176
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener$1;->this$1:Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;
 
     const/4 p1, 0x0
@@ -47,7 +44,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 183
     iget-object p3, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener$1;->this$1:Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;
 
     invoke-static {p3}, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;->-$$Nest$fgetmUid(Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;)I
@@ -64,7 +60,6 @@
 
     if-eq p2, p1, :cond_0
 
-    .line 186
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener$1;->this$1:Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;
 
     const/4 p1, 0x1
@@ -73,7 +68,6 @@
 
     goto :goto_0
 
-    .line 188
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener$1;->this$1:Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;
 

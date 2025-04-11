@@ -39,24 +39,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
-    .line 46
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mAllActivities:Ljava/util/ArrayList;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -71,12 +67,10 @@
 .method public accept(Lcom/android/server/wm/Task;)V
     .locals 2
 
-    .line 74
     invoke-virtual {p0, p1}, Lcom/android/server/wm/ResetTargetTaskHelper;->reset(Lcom/android/server/wm/Task;)V
 
     const/4 v0, 0x1
 
-    .line 75
     invoke-virtual {p1, v0}, Lcom/android/server/wm/Task;->getRootActivity(Z)Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v1
@@ -87,7 +81,6 @@
 
     return-void
 
-    .line 78
     :cond_0
     iget-object v1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetTask:Lcom/android/server/wm/Task;
 
@@ -105,10 +98,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 79
     iput-boolean v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetTaskFound:Z
 
-    .line 81
     :cond_2
     invoke-virtual {p1, p0}, Lcom/android/server/wm/WindowContainer;->forAllActivities(Ljava/util/function/Predicate;)Z
 
@@ -118,7 +109,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 34
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/ResetTargetTaskHelper;->accept(Lcom/android/server/wm/Task;)V
@@ -129,10 +119,8 @@
 .method public final finishActivities(Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 7
 
-    .line 190
     iget-boolean v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mCanMoveOptions:Z
 
-    .line 192
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -142,27 +130,23 @@
 
     const/4 v1, 0x0
 
-    .line 193
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/wm/ActivityRecord;
 
-    .line 194
     iget-boolean v3, v2, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
     if-eqz v3, :cond_0
 
     goto :goto_0
 
-    .line 196
     :cond_0
     invoke-virtual {p0, v2, v0}, Lcom/android/server/wm/ResetTargetTaskHelper;->takeOption(Lcom/android/server/wm/ActivityRecord;Z)Z
 
     move-result v0
 
-    .line 198
     sget-boolean v3, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_TASKS_enabled:Z
 
     if-eqz v3, :cond_1
@@ -183,7 +167,6 @@
 
     invoke-static {v4, v6, v1, v5, v3}, Lcom/android/internal/protolog/ProtoLogImpl;->w(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 200
     :cond_1
     invoke-virtual {v2, p2, v1}, Lcom/android/server/wm/ActivityRecord;->finishIfPossible(Ljava/lang/String;Z)I
 
@@ -196,18 +179,14 @@
 .method public process(Lcom/android/server/wm/Task;Z)Landroid/app/ActivityOptions;
     .locals 0
 
-    .line 59
     iput-boolean p2, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mForceReset:Z
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetTask:Lcom/android/server/wm/Task;
 
     const/4 p2, 0x0
 
-    .line 61
     iput-boolean p2, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetTaskFound:Z
 
-    .line 62
     invoke-virtual {p1}, Lcom/android/server/wm/TaskFragment;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object p2
@@ -216,10 +195,8 @@
 
     const/4 p2, -0x1
 
-    .line 63
     iput p2, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mActivityReparentPosition:I
 
-    .line 65
     iget-object p1, p1, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
@@ -228,15 +205,12 @@
 
     invoke-virtual {p1, p0, p2}, Lcom/android/server/wm/WindowContainer;->forAllLeafTasks(Ljava/util/function/Consumer;Z)V
 
-    .line 67
     invoke-virtual {p0}, Lcom/android/server/wm/ResetTargetTaskHelper;->processPendingReparentActivities()V
 
     const/4 p1, 0x0
 
-    .line 68
     invoke-virtual {p0, p1}, Lcom/android/server/wm/ResetTargetTaskHelper;->reset(Lcom/android/server/wm/Task;)V
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTopOptions:Landroid/app/ActivityOptions;
 
     return-object p0
@@ -245,7 +219,6 @@
 .method public final processPendingReparentActivities()V
     .locals 13
 
-    .line 224
     iget-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mPendingReparentActivities:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -256,32 +229,27 @@
 
     return-void
 
-    .line 228
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetRootTask:Lcom/android/server/wm/Task;
 
     iget-object v1, v0, Lcom/android/server/wm/TaskFragment;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 229
     invoke-virtual {v0}, Lcom/android/server/wm/TaskFragment;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v0
 
-    .line 231
     iget-object v2, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetRootTask:Lcom/android/server/wm/Task;
 
     invoke-virtual {v2}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v2
 
-    .line 232
     iget-object v3, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetRootTask:Lcom/android/server/wm/Task;
 
     invoke-virtual {v3}, Lcom/android/server/wm/TaskFragment;->getActivityType()I
 
     move-result v3
 
-    .line 234
     :goto_0
     iget-object v4, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mPendingReparentActivities:Ljava/util/ArrayList;
 
@@ -291,7 +259,6 @@
 
     if-nez v4, :cond_6
 
-    .line 235
     iget-object v4, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mPendingReparentActivities:Ljava/util/ArrayList;
 
     const/4 v5, 0x0
@@ -302,14 +269,12 @@
 
     check-cast v4, Lcom/android/server/wm/ActivityRecord;
 
-    .line 236
     invoke-static {v2, v3}, Lcom/android/server/wm/DisplayContent;->alwaysCreateRootTask(II)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 239
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getBottomMostTask()Lcom/android/server/wm/Task;
 
     move-result-object v7
@@ -328,7 +293,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 241
     iget-object v9, v4, Lcom/android/server/wm/ActivityRecord;->taskAffinity:Ljava/lang/String;
 
     iget-object v10, v7, Lcom/android/server/wm/Task;->affinity:Ljava/lang/String;
@@ -339,7 +303,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 245
     sget-boolean v9, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_TASKS_enabled:Z
 
     if-eqz v9, :cond_3
@@ -373,14 +336,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 250
     invoke-virtual {v0, v2, v3, v5}, Lcom/android/server/wm/TaskDisplayArea;->getOrCreateRootTask(IIZ)Lcom/android/server/wm/Task;
 
     move-result-object v6
 
     goto :goto_3
 
-    .line 253
     :cond_4
     iget-object v6, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetRootTask:Lcom/android/server/wm/Task;
 
@@ -393,7 +354,6 @@
     :goto_3
     move-object v7, v6
 
-    .line 256
     iget-object v6, v4, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
     iput-object v6, v7, Lcom/android/server/wm/Task;->affinityIntent:Landroid/content/Intent;
@@ -401,10 +361,8 @@
     :cond_5
     const-string/jumbo v6, "resetTargetTaskIfNeeded"
 
-    .line 258
     invoke-virtual {v4, v7, v5, v6}, Lcom/android/server/wm/ActivityRecord;->reparent(Lcom/android/server/wm/TaskFragment;ILjava/lang/String;)V
 
-    .line 259
     iget-object v4, v1, Lcom/android/server/wm/ActivityTaskManagerService;->mTaskSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     iget-object v4, v4, Lcom/android/server/wm/ActivityTaskSupervisor;->mRecentTasks:Lcom/android/server/wm/RecentTasks;
@@ -420,10 +378,8 @@
 .method public final processResultActivities(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/Task;IZZ)V
     .locals 10
 
-    .line 206
     iget-boolean v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mCanMoveOptions:Z
 
-    .line 208
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
@@ -433,7 +389,6 @@
 
     if-nez v1, :cond_4
 
-    .line 209
     iget-object v1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
@@ -446,7 +401,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 210
     iget-boolean v3, v1, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
     if-eqz v3, :cond_0
@@ -456,12 +410,10 @@
     :cond_0
     if-eqz p5, :cond_1
 
-    .line 213
     invoke-virtual {p0, v1, v0}, Lcom/android/server/wm/ResetTargetTaskHelper;->takeOption(Lcom/android/server/wm/ActivityRecord;Z)Z
 
     move-result v0
 
-    .line 215
     :cond_1
     sget-boolean v3, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ADD_REMOVE_enabled:Z
 
@@ -503,7 +455,6 @@
 
     invoke-static {v8, v9, v2, v4, v3}, Lcom/android/internal/protolog/ProtoLogImpl;->i(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 217
     :cond_2
     sget-boolean v3, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_TASKS_enabled:Z
 
@@ -530,7 +481,6 @@
     :cond_3
     const-string/jumbo v2, "resetTargetTaskIfNeeded"
 
-    .line 219
     invoke-virtual {v1, p2, p3, v2}, Lcom/android/server/wm/ActivityRecord;->reparent(Lcom/android/server/wm/TaskFragment;ILjava/lang/String;)V
 
     goto :goto_0
@@ -542,28 +492,22 @@
 .method public final reset(Lcom/android/server/wm/Task;)V
     .locals 1
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTask:Lcom/android/server/wm/Task;
 
     const/4 p1, 0x0
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
     const/4 v0, 0x1
 
-    .line 52
     iput-boolean v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mCanMoveOptions:Z
 
-    .line 53
     iput-object p1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTopOptions:Landroid/app/ActivityOptions;
 
-    .line 54
     iget-object p1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mAllActivities:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -576,17 +520,14 @@
 
     const/4 v0, 0x0
 
-    .line 264
     iput-boolean v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mCanMoveOptions:Z
 
     if-eqz p2, :cond_0
 
-    .line 265
     iget-object v1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTopOptions:Landroid/app/ActivityOptions;
 
     if-nez v1, :cond_0
 
-    .line 266
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getOptions()Landroid/app/ActivityOptions;
 
     move-result-object v1
@@ -595,7 +536,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 268
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->clearOptionsAnimation()V
 
     move p2, v0
@@ -607,7 +547,6 @@
 .method public test(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 10
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
     const/4 v1, 0x1
@@ -616,13 +555,11 @@
 
     return v1
 
-    .line 89
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mAllActivities:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 90
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     iget v0, v0, Landroid/content/pm/ActivityInfo;->flags:I
@@ -652,11 +589,9 @@
     :cond_2
     move v0, v3
 
-    .line 95
     :goto_1
     iget-object v4, p1, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
-    .line 96
     invoke-virtual {v4}, Landroid/content/Intent;->getFlags()I
 
     move-result v4
@@ -674,7 +609,6 @@
     :cond_3
     move v4, v3
 
-    .line 98
     :goto_2
     iget-boolean v5, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mIsTargetTask:Z
 
@@ -684,12 +618,10 @@
 
     if-nez v4, :cond_5
 
-    .line 100
     iget-object v1, p1, Lcom/android/server/wm/ActivityRecord;->resultTo:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v1, :cond_4
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -699,7 +631,6 @@
     :cond_4
     if-eqz v0, :cond_5
 
-    .line 108
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->taskAffinity:Ljava/lang/String;
 
     if-eqz v0, :cond_5
@@ -708,21 +639,18 @@
 
     iget-object v1, v1, Lcom/android/server/wm/Task;->affinity:Ljava/lang/String;
 
-    .line 109
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mPendingReparentActivities:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return v3
 
-    .line 120
     :cond_5
     iget-boolean v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mForceReset:Z
 
@@ -734,7 +662,6 @@
 
     goto :goto_3
 
-    .line 138
     :cond_6
     iget-object p0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
@@ -746,7 +673,6 @@
     :goto_3
     if-eqz v4, :cond_8
 
-    .line 127
     iget-object p1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mAllActivities:Ljava/util/ArrayList;
 
     const-string v0, "clearWhenTaskReset"
@@ -755,20 +681,17 @@
 
     goto :goto_4
 
-    .line 129
     :cond_8
     iget-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 130
     iget-object p1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
     const-string/jumbo v0, "reset-task"
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/ResetTargetTaskHelper;->finishActivities(Ljava/util/ArrayList;Ljava/lang/String;)V
 
-    .line 133
     :goto_4
     iget-object p0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
@@ -776,20 +699,17 @@
 
     return v3
 
-    .line 144
     :cond_9
     iget-object v4, p1, Lcom/android/server/wm/ActivityRecord;->resultTo:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v4, :cond_a
 
-    .line 149
     iget-object p0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return v3
 
-    .line 151
     :cond_a
     iget-boolean v4, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetTaskFound:Z
 
@@ -805,19 +725,16 @@
 
     iget-object v4, p1, Lcom/android/server/wm/ActivityRecord;->taskAffinity:Ljava/lang/String;
 
-    .line 152
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_e
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 162
     iget-boolean v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mForceReset:Z
 
     if-nez v0, :cond_d
@@ -826,7 +743,6 @@
 
     goto :goto_5
 
-    .line 166
     :cond_b
     iget v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mActivityReparentPosition:I
 
@@ -834,7 +750,6 @@
 
     if-ne v0, v2, :cond_c
 
-    .line 167
     iget-object v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetTask:Lcom/android/server/wm/Task;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
@@ -843,7 +758,6 @@
 
     iput v0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mActivityReparentPosition:I
 
-    .line 170
     :cond_c
     iget-object v6, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetTask:Lcom/android/server/wm/Task;
 
@@ -859,14 +773,12 @@
 
     invoke-virtual/range {v4 .. v9}, Lcom/android/server/wm/ResetTargetTaskHelper;->processResultActivities(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/Task;IZZ)V
 
-    .line 176
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     iget v0, v0, Landroid/content/pm/ActivityInfo;->launchMode:I
 
     if-ne v0, v1, :cond_e
 
-    .line 177
     iget-object p0, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mTargetTask:Lcom/android/server/wm/Task;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowContainer;->getActivityBelow(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/ActivityRecord;
@@ -875,7 +787,6 @@
 
     if-eqz p0, :cond_e
 
-    .line 179
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
@@ -896,12 +807,10 @@
 
     const-string/jumbo p1, "replace"
 
-    .line 180
     invoke-virtual {p0, p1, v3}, Lcom/android/server/wm/ActivityRecord;->finishIfPossible(Ljava/lang/String;Z)I
 
     goto :goto_6
 
-    .line 163
     :cond_d
     :goto_5
     iget-object p1, p0, Lcom/android/server/wm/ResetTargetTaskHelper;->mResultActivities:Ljava/util/ArrayList;
@@ -918,7 +827,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 34
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/ResetTargetTaskHelper;->test(Lcom/android/server/wm/ActivityRecord;)Z

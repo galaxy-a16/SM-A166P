@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 3506
     iput-object p1, p0, Lcom/android/server/StorageManagerService$12;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-direct {p0}, Landroid/os/IVoldTaskListener$Stub;-><init>()V
@@ -24,14 +23,12 @@
 .method public onFinished(ILandroid/os/PersistableBundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStatus(ILandroid/os/PersistableBundle;)V
     .locals 0
 
-    .line 3509
     iget-object p2, p0, Lcom/android/server/StorageManagerService$12;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p2}, Lcom/android/server/StorageManagerService;->-$$Nest$fgetmLock(Lcom/android/server/StorageManagerService;)Ljava/lang/Object;
@@ -40,13 +37,11 @@
 
     monitor-enter p2
 
-    .line 3510
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService$12;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/StorageManagerService;->-$$Nest$monMoveStatusLocked(Lcom/android/server/StorageManagerService;I)V
 
-    .line 3511
     monitor-exit p2
 
     return-void

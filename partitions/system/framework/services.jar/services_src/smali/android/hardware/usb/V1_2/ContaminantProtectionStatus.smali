@@ -49,7 +49,6 @@
 
     return-object p0
 
-    .line 49
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 

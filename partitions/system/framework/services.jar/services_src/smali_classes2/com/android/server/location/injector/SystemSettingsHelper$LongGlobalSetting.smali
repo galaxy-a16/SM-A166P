@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Handler;)V
     .locals 0
 
-    .line 600
     invoke-direct {p0, p3}, Lcom/android/server/location/injector/SystemSettingsHelper$ObservingSetting;-><init>(Landroid/os/Handler;)V
 
-    .line 601
     iput-object p1, p0, Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;->mContext:Landroid/content/Context;
 
-    .line 602
     iput-object p2, p0, Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;->mSettingName:Ljava/lang/String;
 
     return-void
@@ -30,12 +27,10 @@
 .method public getValue(J)J
     .locals 3
 
-    .line 610
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 612
     :try_start_0
     iget-object v2, p0, Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;->mContext:Landroid/content/Context;
 
@@ -51,7 +46,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 615
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-wide p0
@@ -61,14 +55,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 616
     throw p0
 .end method
 
 .method public register()V
     .locals 2
 
-    .line 606
     iget-object v0, p0, Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/location/injector/SystemSettingsHelper$LongGlobalSetting;->mSettingName:Ljava/lang/String;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;)V
     .locals 0
 
-    .line 1228
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$1;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Lcom/android/server/utils/Watcher;-><init>()V
@@ -24,7 +23,6 @@
 .method public onChange(Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 1231
     invoke-static {p1}, Lcom/android/server/pm/PackageManagerService;->onChange(Lcom/android/server/utils/Watchable;)V
 
     return-void

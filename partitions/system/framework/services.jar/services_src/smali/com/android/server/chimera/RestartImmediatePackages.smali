@@ -15,10 +15,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -35,20 +33,17 @@
 
     monitor-enter v0
 
-    .line 18
     :try_start_0
     sget-object v1, Lcom/android/server/chimera/RestartImmediatePackages;->INSTANCE:Lcom/android/server/chimera/RestartImmediatePackages;
 
     if-nez v1, :cond_0
 
-    .line 19
     new-instance v1, Lcom/android/server/chimera/RestartImmediatePackages;
 
     invoke-direct {v1}, Lcom/android/server/chimera/RestartImmediatePackages;-><init>()V
 
     sput-object v1, Lcom/android/server/chimera/RestartImmediatePackages;->INSTANCE:Lcom/android/server/chimera/RestartImmediatePackages;
 
-    .line 21
     :cond_0
     sget-object v1, Lcom/android/server/chimera/RestartImmediatePackages;->INSTANCE:Lcom/android/server/chimera/RestartImmediatePackages;
     :try_end_0
@@ -75,7 +70,6 @@
 
     return-void
 
-    .line 29
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/RestartImmediatePackages;->sPackages:Ljava/util/Map;
 
@@ -95,7 +89,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/RestartImmediatePackages;->sPackages:Ljava/util/Map;
 
@@ -109,7 +102,6 @@
 .method public clearAll()V
     .locals 0
 
-    .line 41
     iget-object p0, p0, Lcom/android/server/chimera/RestartImmediatePackages;->sPackages:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
@@ -122,12 +114,10 @@
 
     if-nez p1, :cond_0
 
-    .line 46
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
 
-    .line 49
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/RestartImmediatePackages;->sPackages:Ljava/util/Map;
 

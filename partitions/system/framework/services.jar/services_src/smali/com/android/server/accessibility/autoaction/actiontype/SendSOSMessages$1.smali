@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages;)V
     .locals 0
 
-    .line 49
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,11 +28,9 @@
 
     const-wide/16 v0, 0x64
 
-    .line 52
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/autoaction/actiontype/SendSOSMessages;)Landroid/content/Context;
@@ -63,7 +60,6 @@
     :goto_0
     if-ge v0, p0, :cond_0
 
-    .line 61
     new-instance v1, Landroid/app/Instrumentation;
 
     invoke-direct {v1}, Landroid/app/Instrumentation;-><init>()V
@@ -85,7 +81,6 @@
 
     const-string v1, "Exception!"
 
-    .line 64
     invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0

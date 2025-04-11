@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/content/SyncLogger$RotatingFileLogger;Landroid/os/Looper;)V
     .locals 0
 
-    .line 295
     iput-object p1, p0, Lcom/android/server/content/SyncLogger$RotatingFileLogger$MyHandler;->this$0:Lcom/android/server/content/SyncLogger$RotatingFileLogger;
 
-    .line 296
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 306
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -34,7 +31,6 @@
 
     goto :goto_0
 
-    .line 308
     :cond_0
     iget-object p0, p0, Lcom/android/server/content/SyncLogger$RotatingFileLogger$MyHandler;->this$0:Lcom/android/server/content/SyncLogger$RotatingFileLogger;
 
@@ -59,7 +55,6 @@
 .method public log(J[Ljava/lang/Object;)V
     .locals 1
 
-    .line 300
     invoke-static {p1, p2}, Lcom/android/internal/util/IntPair;->first(J)I
 
     move-result v0
@@ -74,7 +69,6 @@
 
     move-result-object p0
 
-    .line 301
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

@@ -16,7 +16,6 @@
 .method public constructor <init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
     .locals 0
 
-    .line 1021
     iput-object p1, p0, Landroid/hardware/health/V2_1/IHealth$Stub$8;->this$0:Landroid/hardware/health/V2_1/IHealth$Stub;
 
     iput-object p2, p0, Landroid/hardware/health/V2_1/IHealth$Stub$8;->val$_hidl_reply:Landroid/os/HwParcel;

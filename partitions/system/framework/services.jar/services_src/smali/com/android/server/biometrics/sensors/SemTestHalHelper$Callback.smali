@@ -16,7 +16,6 @@
 .method public deliverEnumerate(III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -26,6 +25,5 @@
 .method public deliverTspEvent(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

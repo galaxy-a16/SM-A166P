@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/wm/InsetsStateController$1;->$r8$lambda$g9jop99seUO01YSOxSk08rHCh3w()V
 
     return-void

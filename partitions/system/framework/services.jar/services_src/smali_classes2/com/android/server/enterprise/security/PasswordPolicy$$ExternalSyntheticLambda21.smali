@@ -20,7 +20,6 @@
 .method public final getOrThrow()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/enterprise/security/PasswordPolicy;->$r8$lambda$crWzHD54mj4RVFkJgJQwQuqRboU()Ljava/lang/Integer;
 
     move-result-object p0

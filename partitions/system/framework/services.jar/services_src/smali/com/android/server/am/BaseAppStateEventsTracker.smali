@@ -16,17 +16,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
     .locals 0
 
-    .line 57
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/am/BaseAppStateTracker;-><init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
 
-    .line 49
     new-instance p1, Lcom/android/server/am/UidProcessMap;
 
     invoke-direct {p1}, Lcom/android/server/am/UidProcessMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
-    .line 52
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
@@ -43,7 +40,6 @@
 
     move-object/from16 v0, p0
 
-    .line 172
     iget-object v1, v0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {v1}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
@@ -54,25 +50,21 @@
 
     check-cast v8, Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;
 
-    .line 173
     iget-object v9, v0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v9
 
-    .line 174
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v10
 
-    .line 175
     iget-object v1, v0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
     invoke-virtual {v1}, Lcom/android/server/am/UidProcessMap;->getMap()Landroid/util/SparseArray;
 
     move-result-object v12
 
-    .line 176
     invoke-virtual {v12}, Landroid/util/SparseArray;->size()I
 
     move-result v1
@@ -84,12 +76,10 @@
     :goto_0
     if-ltz v13, :cond_1
 
-    .line 177
     invoke-virtual {v12, v13}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v14
 
-    .line 178
     invoke-virtual {v12, v13}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -98,7 +88,6 @@
 
     check-cast v15, Landroid/util/ArrayMap;
 
-    .line 179
     invoke-virtual {v15}, Landroid/util/ArrayMap;->size()I
 
     move-result v1
@@ -110,7 +99,6 @@
     :goto_1
     if-ltz v7, :cond_0
 
-    .line 180
     invoke-virtual {v15, v7}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -119,7 +107,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 181
     invoke-virtual {v15, v7}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -142,7 +129,6 @@
 
     move-object v7, v8
 
-    .line 182
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/am/BaseAppStateEventsTracker;->dumpEventHeaderLocked(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;ILcom/android/server/am/BaseAppStateEvents;Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;)V
 
     move-object/from16 v1, p0
@@ -155,7 +141,6 @@
 
     move-wide v5, v10
 
-    .line 183
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/BaseAppStateEventsTracker;->dumpEventLocked(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/am/BaseAppStateEvents;J)V
 
     add-int/lit8 v7, v17, -0x1
@@ -167,20 +152,17 @@
 
     goto :goto_0
 
-    .line 186
     :cond_1
     monitor-exit v9
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 187
     invoke-virtual/range {p0 .. p2}, Lcom/android/server/am/BaseAppStateEventsTracker;->dumpOthers(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
 
-    .line 188
     invoke-virtual {v8, v0, v1}, Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
@@ -188,7 +170,6 @@
     :catchall_0
     move-exception v0
 
-    .line 186
     :try_start_1
     monitor-exit v9
     :try_end_1
@@ -200,23 +181,18 @@
 .method public dumpEventHeaderLocked(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;ILcom/android/server/am/BaseAppStateEvents;Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;)V
     .locals 0
 
-    .line 197
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, "* "
 
-    .line 198
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 199
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const/16 p0, 0x2f
 
-    .line 200
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 201
     invoke-static {p4}, Landroid/os/UserHandle;->formatUid(I)Ljava/lang/String;
 
     move-result-object p0
@@ -225,10 +201,8 @@
 
     const-string p0, " exemption="
 
-    .line 202
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 203
     iget p0, p5, Lcom/android/server/am/BaseAppStateEvents;->mExemptReason:I
 
     invoke-virtual {p6, p3, p4, p0}, Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;->getExemptionReasonString(Ljava/lang/String;II)Ljava/lang/String;
@@ -243,7 +217,6 @@
 .method public dumpEventLocked(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/am/BaseAppStateEvents;J)V
     .locals 1
 
-    .line 208
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -266,14 +239,12 @@
 .method public dumpOthers(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getUidEventsLocked(I)Lcom/android/server/am/BaseAppStateEvents;
     .locals 4
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
     invoke-virtual {v0}, Lcom/android/server/am/UidProcessMap;->getMap()Landroid/util/SparseArray;
@@ -292,7 +263,6 @@
 
     return-object v1
 
-    .line 75
     :cond_0
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
 
@@ -303,7 +273,6 @@
     :goto_0
     if-ltz v2, :cond_3
 
-    .line 76
     invoke-virtual {v0, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -314,14 +283,12 @@
 
     if-nez v1, :cond_1
 
-    .line 79
     iget-object v1, v3, Lcom/android/server/am/BaseAppStateEvents;->mPackageName:Ljava/lang/String;
 
     invoke-interface {p0, p1, v1}, Lcom/android/server/am/BaseAppStateEvents$Factory;->createAppStateEvents(ILjava/lang/String;)Lcom/android/server/am/BaseAppStateEvents;
 
     move-result-object v1
 
-    .line 81
     :cond_1
     invoke-virtual {v1, v3}, Lcom/android/server/am/BaseAppStateEvents;->add(Lcom/android/server/am/BaseAppStateEvents;)V
 
@@ -337,12 +304,10 @@
 .method public isUidOnTop(I)Z
     .locals 1
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 113
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mTopUids:Landroid/util/ArraySet;
 
@@ -361,7 +326,6 @@
     :catchall_0
     move-exception p0
 
-    .line 114
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -372,12 +336,10 @@
 .method public onUidGone(I)V
     .locals 1
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 144
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mTopUids:Landroid/util/ArraySet;
 
@@ -387,7 +349,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 145
     monitor-exit v0
 
     return-void
@@ -405,12 +366,10 @@
 .method public onUidProcStateChanged(II)V
     .locals 2
 
-    .line 123
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 124
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
@@ -424,16 +383,13 @@
 
     if-gez v1, :cond_0
 
-    .line 126
     monitor-exit v0
 
     return-void
 
-    .line 128
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/BaseAppStateEventsTracker;->onUidProcStateChangedUncheckedLocked(II)V
 
-    .line 129
     monitor-exit v0
 
     return-void
@@ -455,7 +411,6 @@
 
     if-ge p2, v0, :cond_0
 
-    .line 135
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mTopUids:Landroid/util/ArraySet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -466,7 +421,6 @@
 
     goto :goto_0
 
-    .line 137
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mTopUids:Landroid/util/ArraySet;
 
@@ -483,12 +437,10 @@
 .method public onUidRemoved(I)V
     .locals 2
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 151
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
@@ -498,10 +450,8 @@
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 152
     invoke-virtual {p0, p1}, Lcom/android/server/am/BaseAppStateEventsTracker;->onUntrackingUidLocked(I)V
 
-    .line 153
     monitor-exit v0
 
     return-void
@@ -519,19 +469,16 @@
 .method public onUntrackingUidLocked(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserRemoved(I)V
     .locals 5
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 159
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
@@ -539,7 +486,6 @@
 
     move-result-object v1
 
-    .line 160
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
     move-result v2
@@ -549,22 +495,18 @@
     :goto_0
     if-ltz v2, :cond_1
 
-    .line 161
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
-    .line 162
     invoke-static {v3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
     if-ne v4, p1, :cond_0
 
-    .line 163
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->removeAt(I)V
 
-    .line 164
     invoke-virtual {p0, v3}, Lcom/android/server/am/BaseAppStateEventsTracker;->onUntrackingUidLocked(I)V
 
     :cond_0
@@ -572,7 +514,6 @@
 
     goto :goto_0
 
-    .line 167
     :cond_1
     monitor-exit v0
 
@@ -591,23 +532,19 @@
 .method public reset()V
     .locals 2
 
-    .line 62
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 63
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
     invoke-virtual {v1}, Lcom/android/server/am/UidProcessMap;->clear()V
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mTopUids:Landroid/util/ArraySet;
 
     invoke-virtual {p0}, Landroid/util/ArraySet;->clear()V
 
-    .line 65
     monitor-exit v0
 
     return-void
@@ -625,16 +562,13 @@
 .method public trim(J)V
     .locals 1
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 89
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/BaseAppStateEventsTracker;->trimLocked(J)V
 
-    .line 90
     monitor-exit v0
 
     return-void
@@ -652,14 +586,12 @@
 .method public trimLocked(J)V
     .locals 4
 
-    .line 95
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
     invoke-virtual {p0}, Lcom/android/server/am/UidProcessMap;->getMap()Landroid/util/SparseArray;
 
     move-result-object p0
 
-    .line 96
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
@@ -669,14 +601,12 @@
     :goto_0
     if-ltz v0, :cond_3
 
-    .line 97
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/util/ArrayMap;
 
-    .line 98
     invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
 
     move-result v2
@@ -686,24 +616,20 @@
     :goto_1
     if-ltz v2, :cond_1
 
-    .line 99
     invoke-virtual {v1, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/am/BaseAppStateEvents;
 
-    .line 100
     invoke-virtual {v3, p1, p2}, Lcom/android/server/am/BaseAppStateEvents;->trim(J)V
 
-    .line 101
     invoke-virtual {v3}, Lcom/android/server/am/BaseAppStateEvents;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 102
     invoke-virtual {v1, v2}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
     :cond_0
@@ -711,7 +637,6 @@
 
     goto :goto_1
 
-    .line 105
     :cond_1
     invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
 
@@ -719,7 +644,6 @@
 
     if-nez v1, :cond_2
 
-    .line 106
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->removeAt(I)V
 
     :cond_2

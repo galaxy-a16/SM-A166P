@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/PaymentSafetyService;)V
     .locals 0
 
-    .line 302
     iput-object p1, p0, Lcom/android/server/sepunion/PaymentSafetyService$3;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-direct {p0}, Lcom/samsung/android/app/usage/IUsageStatsWatcher$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public notePauseComponent(Landroid/content/ComponentName;Landroid/content/Intent;II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -33,7 +31,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 307
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$3;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -53,6 +50,5 @@
 .method public noteStopComponent(Landroid/content/ComponentName;Landroid/content/Intent;II)V
     .locals 0
 
-    .line 0
     return-void
 .end method

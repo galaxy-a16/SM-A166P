@@ -17,10 +17,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 8510
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8511
     iput p1, p0, Lcom/android/server/power/PowerManagerService$UidState;->mUid:I
 
     return-void

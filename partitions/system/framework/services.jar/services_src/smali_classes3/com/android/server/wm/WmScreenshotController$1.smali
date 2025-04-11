@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WmScreenshotController;Lcom/android/server/wm/WmScreenshotInfo;)V
     .locals 0
 
-    .line 239
     iput-object p1, p0, Lcom/android/server/wm/WmScreenshotController$1;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
     iput-object p2, p0, Lcom/android/server/wm/WmScreenshotController$1;->val$info:Lcom/android/server/wm/WmScreenshotInfo;
@@ -31,7 +30,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 242
     iget-object p1, p0, Lcom/android/server/wm/WmScreenshotController$1;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController$1;->val$info:Lcom/android/server/wm/WmScreenshotInfo;
@@ -44,6 +42,5 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

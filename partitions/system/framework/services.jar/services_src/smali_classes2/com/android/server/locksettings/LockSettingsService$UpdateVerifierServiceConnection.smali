@@ -20,7 +20,6 @@
 .method public static bridge synthetic -$$Nest$mmakeSalt(Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;)[B
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->makeSalt()[B
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public static bridge synthetic -$$Nest$mmakeVerifier(Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;Ljava/lang/String;[B[B)[B
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->makeVerifier(Ljava/lang/String;[B[B)[B
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public static bridge synthetic -$$Nest$munbindService(Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->unbindService()V
 
     return-void
@@ -51,21 +48,18 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsService;[B)V
     .locals 2
 
-    .line 2724
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x5
 
-    .line 2710
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->g:Ljava/math/BigInteger;
 
-    .line 2711
     new-instance p1, Ljava/math/BigInteger;
 
     const-string v0, "FFFFFFFFFFFFFFFFC90FDAA22168C234C4C6628B80DC1CD129024E088A67CC74020BBEA63B139B22514A08798E3404DDEF9519B3CD3A431B302B0A6DF25F14374FE1356D6D51C245E485B576625E7EC6F44C42E9A637ED6B0BFF5CB6F406B7EDEE386BFB5A899FA5AE9F24117C4B1FE649286651ECE45B3DC2007CB8A163BF0598DA48361C55D39A69163FA8FD24CF5F83655D23DCA3AD961C62F356208552BB9ED529077096966D670C354E4ABC9804F1746C08CA18217C32905E462E36CE3BE39E772C180E86039B2783A2EC07A28FB5C55DF06F4C52C9DE2BCBF6955817183995497CEA956AE515D2261898FA051015728E5A8AAAC42DAD33170D04507A33A85521ABDF1CBA64ECFB850458DBEF0A8AEA71575D060C7DB3970F85A6E1E4C7ABF5AE8CDB0933D71E8C94E04A25619DCEE3D2261AD2EE6BF12FFA06D98A0864D87602733EC86A64521F2B18177B200CBBE117577A615D6C770988C0BAD946E208E24FA074E5AB3143DB5BFCE0FD108E4B82D120A93AD2CAFFFFFFFFFFFFFFFF"
@@ -76,7 +70,6 @@
 
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->N:Ljava/math/BigInteger;
 
-    .line 2725
     iput-object p2, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->mCredential:[B
 
     return-void
@@ -90,12 +83,10 @@
     :try_start_0
     const-string p0, "SHA-256"
 
-    .line 2787
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p0
 
-    .line 2788
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -105,14 +96,12 @@
 
     aget-object v2, p1, v1
 
-    .line 2789
     invoke-virtual {p0, v2}, Ljava/security/MessageDigest;->update([B)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2791
     :cond_0
     new-instance p1, Ljava/math/BigInteger;
 
@@ -135,7 +124,6 @@
     :catch_0
     move-exception p0
 
-    .line 2793
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,7 +152,6 @@
 
     const/16 p0, 0x20
 
-    .line 2782
     invoke-static {p0}, Lcom/android/server/locksettings/SecureRandomUtils;->randomBytes(I)[B
 
     move-result-object p0
@@ -175,7 +162,6 @@
 .method public final makeVerifier(Ljava/lang/String;[B[B)[B
     .locals 4
 
-    .line 2800
     :try_start_0
     new-instance v0, Ljava/lang/String;
 
@@ -183,7 +169,6 @@
 
     invoke-direct {v0, p2, v1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 2801
     new-instance p2, Ljavax/crypto/spec/PBEKeySpec;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -214,12 +199,10 @@
 
     const-string v0, "PBKDF2WithHmacSHA256"
 
-    .line 2802
     invoke-static {v0}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
 
     move-result-object v0
 
-    .line 2803
     invoke-virtual {v0, p2}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
 
     move-result-object p2
@@ -232,7 +215,6 @@
 
     new-array v0, v0, [[B
 
-    .line 2804
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p1
@@ -263,7 +245,6 @@
 
     move-result-object p1
 
-    .line 2805
     filled-new-array {p3, p1}, [[B
 
     move-result-object p1
@@ -272,7 +253,6 @@
 
     move-result-object p1
 
-    .line 2806
     iget-object p2, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->g:Ljava/math/BigInteger;
 
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->N:Ljava/math/BigInteger;
@@ -292,7 +272,6 @@
     :catch_0
     move-exception p0
 
-    .line 2808
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -323,7 +302,6 @@
 
     const-string/jumbo p1, "onBindingDied"
 
-    .line 2765
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -336,10 +314,8 @@
 
     const-string/jumbo v0, "onNullBinding"
 
-    .line 2770
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2771
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->unbindService()V
 
     return-void
@@ -352,10 +328,8 @@
 
     const-string v0, "LockSettingsService"
 
-    .line 2730
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2732
     invoke-static {p2}, Lcom/android/internal/widget/IUpdateVerifierInterface$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/widget/IUpdateVerifierInterface;
 
     move-result-object p1
@@ -364,15 +338,12 @@
 
     const-string p1, "bind failed"
 
-    .line 2734
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2735
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->unbindService()V
 
     return-void
 
-    .line 2740
     :cond_0
     :try_start_0
     new-instance p2, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection$1;
@@ -389,10 +360,8 @@
     :catch_0
     const-string p1, "RemoteException"
 
-    .line 2753
     invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2754
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->unbindService()V
 
     :goto_0
@@ -406,7 +375,6 @@
 
     const-string/jumbo p1, "onServiceDisconnected"
 
-    .line 2760
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -415,7 +383,6 @@
 .method public final unbindService()V
     .locals 1
 
-    .line 2775
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {v0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmShouldUnbind(Lcom/android/server/locksettings/LockSettingsService;)Z
@@ -424,7 +391,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2776
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {v0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmContext(Lcom/android/server/locksettings/LockSettingsService;)Landroid/content/Context;
@@ -433,7 +399,6 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 2777
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$UpdateVerifierServiceConnection;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     const/4 v0, 0x0

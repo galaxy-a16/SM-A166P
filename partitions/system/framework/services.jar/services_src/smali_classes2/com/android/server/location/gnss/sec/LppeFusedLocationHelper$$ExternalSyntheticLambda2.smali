@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;
 
     invoke-static {p0}, Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;->$r8$lambda$_waYYMFvFw_9HfqB_N9CiJ7aljI(Lcom/android/server/location/gnss/sec/LppeFusedLocationHelper;)V

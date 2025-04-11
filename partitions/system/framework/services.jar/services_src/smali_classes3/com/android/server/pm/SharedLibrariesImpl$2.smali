@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/SharedLibrariesImpl;Lcom/android/server/pm/SharedLibrariesImpl;Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 140
     iput-object p1, p0, Lcom/android/server/pm/SharedLibrariesImpl$2;->this$0:Lcom/android/server/pm/SharedLibrariesImpl;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/utils/SnapshotCache;-><init>(Ljava/lang/Object;Lcom/android/server/utils/Watchable;)V
@@ -24,7 +23,6 @@
 .method public createSnapshot()Lcom/android/server/pm/SharedLibrariesImpl;
     .locals 2
 
-    .line 143
     new-instance v0, Lcom/android/server/pm/SharedLibrariesImpl;
 
     iget-object p0, p0, Lcom/android/server/utils/SnapshotCache;->mSource:Ljava/lang/Object;
@@ -35,7 +33,6 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/pm/SharedLibrariesImpl;-><init>(Lcom/android/server/pm/SharedLibrariesImpl;Lcom/android/server/pm/SharedLibrariesImpl-IA;)V
 
-    .line 144
     invoke-static {v0}, Lcom/android/server/pm/SharedLibrariesImpl;->-$$Nest$fgetmWatchable(Lcom/android/server/pm/SharedLibrariesImpl;)Lcom/android/server/utils/WatchableImpl;
 
     move-result-object p0
@@ -48,7 +45,6 @@
 .method public bridge synthetic createSnapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 140
     invoke-virtual {p0}, Lcom/android/server/pm/SharedLibrariesImpl$2;->createSnapshot()Lcom/android/server/pm/SharedLibrariesImpl;
 
     move-result-object p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 35
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -26,7 +25,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 47
     iget-object p0, p0, Lcom/android/server/os/NativeTombstoneManagerService;->mManager:Lcom/android/server/os/NativeTombstoneManager;
 
     invoke-virtual {p0}, Lcom/android/server/os/NativeTombstoneManager;->onSystemReady()V
@@ -38,7 +36,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 40
     new-instance v0, Lcom/android/server/os/NativeTombstoneManager;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -49,7 +46,6 @@
 
     iput-object v0, p0, Lcom/android/server/os/NativeTombstoneManagerService;->mManager:Lcom/android/server/os/NativeTombstoneManager;
 
-    .line 41
     const-class p0, Lcom/android/server/os/NativeTombstoneManager;
 
     invoke-static {p0, v0}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V

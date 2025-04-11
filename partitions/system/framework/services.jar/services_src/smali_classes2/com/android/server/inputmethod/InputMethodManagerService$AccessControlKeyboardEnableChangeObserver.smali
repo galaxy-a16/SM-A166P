@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 8327
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessControlKeyboardEnableChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
-    .line 8328
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,12 +27,10 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 8331
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessControlKeyboardEnableChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p1, p1, Lcom/android/server/inputmethod/InputMethodManagerService;->mContext:Landroid/content/Context;
 
-    .line 8332
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -43,7 +39,6 @@
 
     iget-object v0, v0, Lcom/android/server/inputmethod/InputMethodManagerService;->mSettings:Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;
 
-    .line 8333
     invoke-virtual {v0}, Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;->getCurrentUserId()I
 
     move-result v0
@@ -52,7 +47,6 @@
 
     const/4 v2, 0x1
 
-    .line 8331
     invoke-static {p1, v1, v2, v0}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p1
@@ -64,7 +58,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 8334
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -84,7 +77,6 @@
 
     iget-object v0, v0, Lcom/android/server/inputmethod/InputMethodManagerService;->mSettings:Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;
 
-    .line 8335
     invoke-virtual {v0}, Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;->getCurrentUserId()I
 
     move-result v0
@@ -97,10 +89,8 @@
 
     const-string v0, "InputMethodManagerService"
 
-    .line 8334
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8336
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessControlKeyboardEnableChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-virtual {p0, v2}, Lcom/android/server/inputmethod/InputMethodManagerService;->setisAccessControlKeyboardBlockEnable(Z)V

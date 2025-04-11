@@ -85,7 +85,6 @@
 .method public scheduleWatchdog(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

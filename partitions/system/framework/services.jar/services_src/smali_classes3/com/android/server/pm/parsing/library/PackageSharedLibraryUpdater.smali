@@ -15,14 +15,12 @@
 .method public static isLibraryPresent(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)Z
     .locals 0
 
-    .line 60
     invoke-static {p0, p2}, Lcom/android/internal/util/ArrayUtils;->contains(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result p0
 
     if-nez p0, :cond_1
 
-    .line 61
     invoke-static {p1, p2}, Lcom/android/internal/util/ArrayUtils;->contains(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result p0
@@ -47,12 +45,10 @@
 .method public static removeLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
     .locals 0
 
-    .line 45
     invoke-interface {p0, p1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->removeUsesLibrary(Ljava/lang/String;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object p0
 
-    .line 46
     invoke-interface {p0, p1}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->removeUsesOptionalLibrary(Ljava/lang/String;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     return-void
@@ -63,24 +59,20 @@
 .method public prefixImplicitDependency(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 76
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesLibraries()Ljava/util/List;
 
     move-result-object p0
 
-    .line 77
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesOptionalLibraries()Ljava/util/List;
 
     move-result-object v0
 
-    .line 79
     invoke-static {p0, v0, p3}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->isLibraryPresent(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 80
     invoke-static {p0, p2}, Lcom/android/internal/util/ArrayUtils;->contains(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result p0
@@ -89,12 +81,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 81
     invoke-interface {p1, v1, p3}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->addUsesLibrary(ILjava/lang/String;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     goto :goto_0
 
-    .line 82
     :cond_0
     invoke-static {v0, p2}, Lcom/android/internal/util/ArrayUtils;->contains(Ljava/util/Collection;Ljava/lang/Object;)Z
 
@@ -102,7 +92,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 83
     invoke-interface {p1, v1, p3}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->addUsesOptionalLibrary(ILjava/lang/String;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     :cond_1
@@ -113,17 +102,14 @@
 .method public prefixRequiredLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
     .locals 1
 
-    .line 89
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesLibraries()Ljava/util/List;
 
     move-result-object p0
 
-    .line 90
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesOptionalLibraries()Ljava/util/List;
 
     move-result-object v0
 
-    .line 92
     invoke-static {p0, v0, p2}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->isLibraryPresent(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)Z
 
     move-result p0
@@ -132,7 +118,6 @@
 
     const/4 p0, 0x0
 
-    .line 95
     invoke-interface {p1, p0, p2}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->addUsesLibrary(ILjava/lang/String;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     :cond_0

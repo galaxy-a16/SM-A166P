@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/SamsungStickyKeys;)V
     .locals 0
 
-    .line 68
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 73
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x0
@@ -33,7 +31,6 @@
 
     goto :goto_0
 
-    .line 91
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
@@ -49,7 +46,6 @@
 
     goto :goto_1
 
-    .line 87
     :pswitch_1
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
@@ -63,7 +59,6 @@
 
     goto :goto_0
 
-    .line 83
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
@@ -79,7 +74,6 @@
 
     goto :goto_1
 
-    .line 79
     :pswitch_3
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
@@ -95,7 +89,6 @@
 
     goto :goto_1
 
-    .line 75
     :pswitch_4
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
@@ -104,7 +97,6 @@
     :goto_0
     move p1, v0
 
-    .line 95
     :goto_1
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
@@ -116,7 +108,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 96
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     invoke-static {v1}, Lcom/android/server/accessibility/SamsungStickyKeys;->-$$Nest$fgetmNext(Lcom/android/server/accessibility/SamsungStickyKeys;)Lcom/android/server/accessibility/EventStreamTransformation;
@@ -125,7 +116,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 97
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -162,7 +152,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/accessibility/SamsungStickyKeys;->-$$Nest$mdebugLog(Lcom/android/server/accessibility/SamsungStickyKeys;Ljava/lang/String;)V
 
-    .line 98
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     invoke-static {v1}, Lcom/android/server/accessibility/SamsungStickyKeys;->-$$Nest$fgetmNext(Lcom/android/server/accessibility/SamsungStickyKeys;)Lcom/android/server/accessibility/EventStreamTransformation;
@@ -187,7 +176,6 @@
 
     invoke-interface {v1, v2, v3}, Lcom/android/server/accessibility/EventStreamTransformation;->onKeyEvent(Landroid/view/KeyEvent;I)V
 
-    .line 99
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     invoke-static {v1}, Lcom/android/server/accessibility/SamsungStickyKeys;->-$$Nest$fgetmModifierKeyUpEvent(Lcom/android/server/accessibility/SamsungStickyKeys;)[Landroid/view/KeyEvent;
@@ -198,7 +186,6 @@
 
     aput-object v2, v1, p1
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/accessibility/SamsungStickyKeys$1;->this$0:Lcom/android/server/accessibility/SamsungStickyKeys;
 
     invoke-static {p0}, Lcom/android/server/accessibility/SamsungStickyKeys;->-$$Nest$fgetmModifierKeyUpPolicyFlags(Lcom/android/server/accessibility/SamsungStickyKeys;)[I

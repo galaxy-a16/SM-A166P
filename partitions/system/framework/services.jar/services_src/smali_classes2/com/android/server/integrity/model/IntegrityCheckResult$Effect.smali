@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
     .locals 2
 
-    .line 36
     sget-object v0, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;->ALLOW:Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
 
     sget-object v1, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;->DENY:Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 37
     new-instance v0, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
 
     const-string v1, "ALLOW"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;->ALLOW:Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
 
-    .line 38
     new-instance v0, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
 
     const-string v1, "DENY"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;->DENY:Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
 
-    .line 36
     invoke-static {}, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;->$values()[Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 36
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
     .locals 1
 
-    .line 36
     const-class v0, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
     .locals 1
 
-    .line 36
     sget-object v0, Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;->$VALUES:[Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;
 
     invoke-virtual {v0}, [Lcom/android/server/integrity/model/IntegrityCheckResult$Effect;->clone()Ljava/lang/Object;

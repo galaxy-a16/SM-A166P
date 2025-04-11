@@ -18,13 +18,10 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
-    .line 78
     const-class p1, Lcom/android/server/wm/WindowManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -35,7 +32,6 @@
 
     iput-object p1, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
-    .line 79
     const-class p1, Lcom/android/server/wm/ImeTargetVisibilityPolicy;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -56,7 +52,6 @@
 
     const/4 v0, -0x1
 
-    .line 142
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->applyImeVisibility(Landroid/os/IBinder;Landroid/view/inputmethod/ImeTracker$Token;II)V
 
     return-void
@@ -65,7 +60,6 @@
 .method public applyImeVisibility(Landroid/os/IBinder;Landroid/view/inputmethod/ImeTracker$Token;II)V
     .locals 6
 
-    .line 150
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,7 +88,6 @@
 
     packed-switch p3, :pswitch_data_0
 
-    .line 199
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -115,7 +108,6 @@
 
     throw v0
 
-    .line 196
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -127,7 +119,6 @@
 
     goto/16 :goto_0
 
-    .line 189
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -145,7 +136,6 @@
 
     goto :goto_0
 
-    .line 185
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -163,7 +153,6 @@
 
     goto :goto_0
 
-    .line 182
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -181,7 +170,6 @@
 
     goto :goto_0
 
-    .line 193
     :pswitch_4
     iget-object v2, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -195,7 +183,6 @@
 
     goto :goto_0
 
-    .line 155
     :cond_0
     invoke-static {}, Landroid/view/inputmethod/ImeTracker;->forLogging()Landroid/view/inputmethod/ImeTracker;
 
@@ -203,14 +190,12 @@
 
     invoke-interface {v3, p2, v4}, Landroid/view/inputmethod/ImeTracker;->onProgress(Landroid/view/inputmethod/ImeTracker$Token;I)V
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wm/WindowManagerInternal;->showImePostLayout(Landroid/os/IBinder;Landroid/view/inputmethod/ImeTracker$Token;)V
 
     goto :goto_0
 
-    .line 161
     :cond_1
     iget-object v3, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -220,24 +205,20 @@
 
     if-eqz v3, :cond_2
 
-    .line 162
     invoke-static {}, Landroid/view/inputmethod/ImeTracker;->forLogging()Landroid/view/inputmethod/ImeTracker;
 
     move-result-object v3
 
     invoke-interface {v3, p2, v4}, Landroid/view/inputmethod/ImeTracker;->onProgress(Landroid/view/inputmethod/ImeTracker$Token;I)V
 
-    .line 169
     iget-object v3, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
-    .line 170
     invoke-virtual {v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->getDisplayIdToShowImeLocked()I
 
     move-result v0
 
-    .line 169
     invoke-virtual {v3, p1, v0, p2}, Lcom/android/server/wm/WindowManagerInternal;->hideIme(Landroid/os/IBinder;ILandroid/view/inputmethod/ImeTracker$Token;)V
 
     goto :goto_0
@@ -245,10 +226,8 @@
     :cond_2
     const-string v0, "applyImeVisibility: client is null."
 
-    .line 174
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     invoke-static {}, Landroid/view/inputmethod/ImeTracker;->forLogging()Landroid/view/inputmethod/ImeTracker;
 
     move-result-object v0
@@ -273,7 +252,6 @@
 .method public performHideIme(Landroid/os/IBinder;Landroid/view/inputmethod/ImeTracker$Token;Landroid/os/ResultReceiver;I)V
     .locals 4
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->getCurMethodLocked()Lcom/android/server/inputmethod/IInputMethodInvoker;
@@ -282,7 +260,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 119
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -309,7 +286,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 121
     invoke-static {p4}, Lcom/android/internal/inputmethod/InputMethodDebug;->softInputDisplayReasonToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -322,24 +298,20 @@
 
     const-string v2, "InputMethodManagerService"
 
-    .line 119
     invoke-static {v2, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 124
     invoke-virtual {v0, p1, p2, v1, p3}, Lcom/android/server/inputmethod/IInputMethodInvoker;->hideSoftInput(Landroid/os/IBinder;Landroid/view/inputmethod/ImeTracker$Token;ILandroid/os/ResultReceiver;)Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
-    .line 125
     sget-boolean p3, Landroid/view/inputmethod/ImeTracker;->DEBUG_IME_VISIBILITY:Z
 
     if-eqz p3, :cond_0
 
-    .line 126
     invoke-virtual {p2}, Landroid/view/inputmethod/ImeTracker$Token;->getTag()Ljava/lang/String;
 
     move-result-object p3
@@ -348,12 +320,10 @@
 
     iget-object v0, v0, Lcom/android/server/inputmethod/InputMethodManagerService;->mCurFocusedWindow:Landroid/os/IBinder;
 
-    .line 127
     invoke-static {v0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 128
     invoke-static {p4}, Lcom/android/internal/inputmethod/InputMethodDebug;->softInputDisplayReasonToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -362,7 +332,6 @@
 
     iget v3, v3, Lcom/android/server/inputmethod/InputMethodManagerService;->mCurFocusedWindowSoftInputMode:I
 
-    .line 129
     invoke-static {v3}, Lcom/android/internal/inputmethod/InputMethodDebug;->softInputModeToString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -373,10 +342,8 @@
 
     const/16 v0, 0x7d02
 
-    .line 126
     invoke-static {v0, p3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 132
     :cond_0
     iget-object p0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -389,7 +356,6 @@
 .method public performShowIme(Landroid/os/IBinder;Landroid/view/inputmethod/ImeTracker$Token;ILandroid/os/ResultReceiver;I)V
     .locals 3
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->getCurMethodLocked()Lcom/android/server/inputmethod/IInputMethodInvoker;
@@ -398,7 +364,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 89
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -429,7 +394,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 91
     invoke-static {p5}, Lcom/android/internal/inputmethod/InputMethodDebug;->softInputDisplayReasonToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -442,22 +406,18 @@
 
     const-string v2, "InputMethodManagerService"
 
-    .line 89
     invoke-static {v2, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/inputmethod/IInputMethodInvoker;->showSoftInput(Landroid/os/IBinder;Landroid/view/inputmethod/ImeTracker$Token;ILandroid/os/ResultReceiver;)Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
-    .line 95
     sget-boolean p3, Landroid/view/inputmethod/ImeTracker;->DEBUG_IME_VISIBILITY:Z
 
     if-eqz p3, :cond_0
 
-    .line 96
     invoke-virtual {p2}, Landroid/view/inputmethod/ImeTracker$Token;->getTag()Ljava/lang/String;
 
     move-result-object p3
@@ -466,12 +426,10 @@
 
     iget-object p4, p4, Lcom/android/server/inputmethod/InputMethodManagerService;->mCurFocusedWindow:Landroid/os/IBinder;
 
-    .line 97
     invoke-static {p4}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p4
 
-    .line 98
     invoke-static {p5}, Lcom/android/internal/inputmethod/InputMethodDebug;->softInputDisplayReasonToString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -480,7 +438,6 @@
 
     iget v1, v1, Lcom/android/server/inputmethod/InputMethodManagerService;->mCurFocusedWindowSoftInputMode:I
 
-    .line 99
     invoke-static {v1}, Lcom/android/internal/inputmethod/InputMethodDebug;->softInputModeToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -491,10 +448,8 @@
 
     const/16 p4, 0x7d01
 
-    .line 96
     invoke-static {p4, p3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 102
     :cond_0
     iget-object p0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -509,7 +464,6 @@
 .method public removeImeScreenshot(I)Z
     .locals 3
 
-    .line 218
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mImeTargetVisibilityPolicy:Lcom/android/server/wm/ImeTargetVisibilityPolicy;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/ImeTargetVisibilityPolicy;->removeImeScreenshot(I)Z
@@ -520,7 +474,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 219
     iget-object p0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mCurFocusedWindow:Landroid/os/IBinder;
@@ -542,7 +495,6 @@
 .method public showImeScreenshot(Landroid/os/IBinder;ILandroid/view/inputmethod/ImeTracker$Token;)Z
     .locals 1
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mImeTargetVisibilityPolicy:Lcom/android/server/wm/ImeTargetVisibilityPolicy;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wm/ImeTargetVisibilityPolicy;->showImeScreenshot(Landroid/os/IBinder;I)Z
@@ -553,7 +505,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 208
     iget-object p0, p0, Lcom/android/server/inputmethod/DefaultImeVisibilityApplier;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     const/16 p2, 0x22

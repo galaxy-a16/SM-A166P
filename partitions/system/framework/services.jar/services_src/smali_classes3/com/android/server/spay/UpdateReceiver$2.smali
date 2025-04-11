@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/spay/UpdateReceiver;Landroid/os/Looper;)V
     .locals 0
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 9
 
-    .line 65
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,21 +43,18 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
 
     const-string v0, "action"
 
-    .line 67
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_6
 
-    .line 69
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -132,10 +127,8 @@
     :pswitch_0
     const-string p1, "ACTION_BOOT_COMPLETED received : triggering PF Install"
 
-    .line 71
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     iget-object p1, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p1}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -144,7 +137,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 73
     iget-object p1, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p1}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -153,7 +145,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/spay/UpdateReceiver;->triggerPFInstall(Landroid/content/Context;)V
 
-    .line 76
     iget-object p1, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p1}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -162,7 +153,6 @@
 
     invoke-static {p1, v6}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;)Z
 
-    .line 77
     iget-object p1, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p1}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -173,7 +163,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;)Z
 
-    .line 78
     iget-object p1, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p1}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -182,7 +171,6 @@
 
     invoke-static {p1, v5}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;)Z
 
-    .line 79
     iget-object p1, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p1}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -191,7 +179,6 @@
 
     invoke-static {p1, v4}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;)Z
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p0}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -202,7 +189,6 @@
 
     goto/16 :goto_1
 
-    .line 86
     :pswitch_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -232,7 +218,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     iget-object v3, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {v3}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -247,7 +232,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 88
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -258,7 +242,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 89
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,7 +258,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     iget-object p1, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p1}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -284,7 +266,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/spay/UpdateReceiver;->triggerPFInstall(Landroid/content/Context;)V
 
-    .line 91
     iget-object p0, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p0}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -295,7 +276,6 @@
 
     goto :goto_1
 
-    .line 92
     :cond_3
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -307,7 +287,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p0}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -318,7 +297,6 @@
 
     goto :goto_1
 
-    .line 94
     :cond_4
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -330,7 +308,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 95
     iget-object p0, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p0}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;
@@ -341,7 +318,6 @@
 
     goto :goto_1
 
-    .line 96
     :cond_5
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -353,7 +329,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/spay/UpdateReceiver$2;->this$0:Lcom/android/server/spay/UpdateReceiver;
 
     invoke-static {p0}, Lcom/android/server/spay/UpdateReceiver;->-$$Nest$fgetmContext(Lcom/android/server/spay/UpdateReceiver;)Landroid/content/Context;

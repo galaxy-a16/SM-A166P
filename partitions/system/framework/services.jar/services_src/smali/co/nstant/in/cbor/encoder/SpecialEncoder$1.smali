@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 9
 
-    .line 29
     invoke-static {}, Lco/nstant/in/cbor/model/SpecialType;->values()[Lco/nstant/in/cbor/model/SpecialType;
 
     move-result-object v0
@@ -133,7 +132,6 @@
     :try_end_6
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    .line 35
     :catch_6
     invoke-static {}, Lco/nstant/in/cbor/model/SimpleValueType;->values()[Lco/nstant/in/cbor/model/SimpleValueType;
 

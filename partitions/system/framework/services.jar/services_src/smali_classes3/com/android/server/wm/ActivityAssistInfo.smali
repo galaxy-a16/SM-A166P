@@ -19,20 +19,16 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityRecord;)V
     .locals 1
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iget-object v0, p1, Lcom/android/server/wm/WindowToken;->token:Landroid/os/IBinder;
 
     iput-object v0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mActivityToken:Landroid/os/IBinder;
 
-    .line 39
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->assistToken:Landroid/os/Binder;
 
     iput-object v0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mAssistToken:Landroid/os/IBinder;
 
-    .line 40
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -41,12 +37,10 @@
 
     iput v0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mTaskId:I
 
-    .line 41
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->mActivityComponent:Landroid/content/ComponentName;
 
     iput-object v0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mComponentName:Landroid/content/ComponentName;
 
-    .line 42
     iget p1, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
     iput p1, p0, Lcom/android/server/wm/ActivityAssistInfo;->mUserId:I
@@ -59,7 +53,6 @@
 .method public getActivityToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 47
     iget-object p0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mActivityToken:Landroid/os/IBinder;
 
     return-object p0
@@ -68,7 +61,6 @@
 .method public getAssistToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mAssistToken:Landroid/os/IBinder;
 
     return-object p0
@@ -77,7 +69,6 @@
 .method public getComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mComponentName:Landroid/content/ComponentName;
 
     return-object p0
@@ -86,7 +77,6 @@
 .method public getTaskId()I
     .locals 0
 
-    .line 57
     iget p0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mTaskId:I
 
     return p0
@@ -95,7 +85,6 @@
 .method public getUserId()I
     .locals 0
 
-    .line 71
     iget p0, p0, Lcom/android/server/wm/ActivityAssistInfo;->mUserId:I
 
     return p0

@@ -20,7 +20,6 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/job/JobConcurrencyManager$ContextAssignment;
 
     check-cast p2, Lcom/android/server/job/JobConcurrencyManager$ContextAssignment;

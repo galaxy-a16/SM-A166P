@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/logcat/LogcatManagerService;)V
     .locals 0
 
-    .line 194
     iput-object p1, p0, Lcom/android/server/logcat/LogcatManagerService$BinderService;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-direct {p0}, Landroid/os/logcat/ILogcatManagerService$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/logcat/LogcatManagerService;Lcom/android/server/logcat/LogcatManagerService$BinderService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/logcat/LogcatManagerService$BinderService;-><init>(Lcom/android/server/logcat/LogcatManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public finishThread(IIII)V
     .locals 7
 
-    .line 207
     new-instance v6, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;
 
     const/4 v5, 0x0
@@ -50,7 +47,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;-><init>(IIIILcom/android/server/logcat/LogcatManagerService$LogAccessRequest-IA;)V
 
-    .line 211
     iget-object p1, p0, Lcom/android/server/logcat/LogcatManagerService$BinderService;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-static {p1}, Lcom/android/server/logcat/LogcatManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/logcat/LogcatManagerService;)Landroid/os/Handler;
@@ -63,7 +59,6 @@
 
     move-result-object p1
 
-    .line 212
     iget-object p2, p0, Lcom/android/server/logcat/LogcatManagerService$BinderService;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-static {p2}, Lcom/android/server/logcat/LogcatManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/logcat/LogcatManagerService;)Landroid/os/Handler;
@@ -94,7 +89,6 @@
 .method public startThread(IIII)V
     .locals 7
 
-    .line 197
     new-instance v6, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;
 
     const/4 v5, 0x0
@@ -111,7 +105,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/logcat/LogcatManagerService$LogAccessRequest;-><init>(IIIILcom/android/server/logcat/LogcatManagerService$LogAccessRequest-IA;)V
 
-    .line 201
     iget-object p1, p0, Lcom/android/server/logcat/LogcatManagerService$BinderService;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-static {p1}, Lcom/android/server/logcat/LogcatManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/logcat/LogcatManagerService;)Landroid/os/Handler;
@@ -124,7 +117,6 @@
 
     move-result-object p1
 
-    .line 202
     iget-object p2, p0, Lcom/android/server/logcat/LogcatManagerService$BinderService;->this$0:Lcom/android/server/logcat/LogcatManagerService;
 
     invoke-static {p2}, Lcom/android/server/logcat/LogcatManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/logcat/LogcatManagerService;)Landroid/os/Handler;

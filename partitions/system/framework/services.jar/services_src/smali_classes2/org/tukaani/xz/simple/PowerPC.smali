@@ -16,13 +16,10 @@
 .method public constructor <init>(ZI)V
     .locals 0
 
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-boolean p1, p0, Lorg/tukaani/xz/simple/PowerPC;->isEncoder:Z
 
-    .line 19
     iput p2, p0, Lorg/tukaani/xz/simple/PowerPC;->pos:I
 
     return-void
@@ -42,7 +39,6 @@
     :goto_0
     if-gt v0, p3, :cond_2
 
-    .line 27
     aget-byte v1, p1, v0
 
     and-int/lit16 v2, v1, 0xfc
@@ -67,7 +63,6 @@
 
     add-int/lit8 v5, v0, 0x1
 
-    .line 28
     aget-byte v6, p1, v5
 
     and-int/lit16 v6, v6, 0xff
@@ -90,12 +85,10 @@
 
     or-int/2addr v1, v4
 
-    .line 34
     iget-boolean v4, p0, Lorg/tukaani/xz/simple/PowerPC;->isEncoder:Z
 
     if-eqz v4, :cond_0
 
-    .line 35
     iget v4, p0, Lorg/tukaani/xz/simple/PowerPC;->pos:I
 
     add-int/2addr v4, v0
@@ -106,7 +99,6 @@
 
     goto :goto_1
 
-    .line 37
     :cond_0
     iget v4, p0, Lorg/tukaani/xz/simple/PowerPC;->pos:I
 
@@ -125,24 +117,20 @@
 
     int-to-byte v3, v3
 
-    .line 39
     aput-byte v3, p1, v0
 
     ushr-int/lit8 v3, v1, 0x10
 
     int-to-byte v3, v3
 
-    .line 40
     aput-byte v3, p1, v5
 
     ushr-int/lit8 v3, v1, 0x8
 
     int-to-byte v3, v3
 
-    .line 41
     aput-byte v3, p1, v6
 
-    .line 42
     aget-byte v3, p1, v2
 
     and-int/lit8 v3, v3, 0x3
@@ -161,7 +149,6 @@
     :cond_2
     sub-int/2addr v0, p2
 
-    .line 47
     iget p1, p0, Lorg/tukaani/xz/simple/PowerPC;->pos:I
 
     add-int/2addr p1, v0

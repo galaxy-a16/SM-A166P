@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmA11yRequestingNoSoftKeyboard(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mA11yRequestingNoSoftKeyboard:Z
 
     return p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmImeHiddenByDisplayPolicy(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mImeHiddenByDisplayPolicy:Z
 
     return p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPendingA11yRequestingHideKeyboard(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mPendingA11yRequestingHideKeyboard:Z
 
     return p0
@@ -42,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fputmPendingA11yRequestingHideKeyboard(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mPendingA11yRequestingHideKeyboard:Z
 
     return-void
@@ -61,7 +57,6 @@
 .method public isA11yRequestNoSoftKeyboard()Z
     .locals 0
 
-    .line 638
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mA11yRequestingNoSoftKeyboard:Z
 
     return p0
@@ -70,7 +65,6 @@
 .method public isImeHiddenByDisplayPolicy()Z
     .locals 0
 
-    .line 626
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mImeHiddenByDisplayPolicy:Z
 
     return p0
@@ -92,13 +86,11 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 630
     :goto_0
     iput-boolean p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mA11yRequestingNoSoftKeyboard:Z
 
     if-eqz p1, :cond_1
 
-    .line 633
     iput-boolean v0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mPendingA11yRequestingHideKeyboard:Z
 
     :cond_1
@@ -108,7 +100,6 @@
 .method public setImeHiddenByDisplayPolicy(Z)V
     .locals 0
 
-    .line 622
     iput-boolean p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityPolicy;->mImeHiddenByDisplayPolicy:Z
 
     return-void

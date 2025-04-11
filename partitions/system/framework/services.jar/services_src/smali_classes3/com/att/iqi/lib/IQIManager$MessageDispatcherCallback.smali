@@ -26,7 +26,6 @@
 .method public static synthetic $r8$lambda$1vSMpZlU7xsF71bowzDdB6L9JwE(Lcom/att/iqi/lib/IQIManager$MetricSourcingListener;ILjava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/att/iqi/lib/IQIManager$MessageDispatcherCallback;->lambda$handleMessage$1(Lcom/att/iqi/lib/IQIManager$MetricSourcingListener;ILjava/nio/ByteBuffer;)V
 
     return-void
@@ -35,7 +34,6 @@
 .method public static synthetic $r8$lambda$KiF8h8Okv_iOyvwHY-kDwVE2dM4(Lcom/att/iqi/lib/IQIManager$MetricQueryCallback;ILjava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/att/iqi/lib/IQIManager$MessageDispatcherCallback;->lambda$handleMessage$0(Lcom/att/iqi/lib/IQIManager$MetricQueryCallback;ILjava/nio/ByteBuffer;)V
 
     return-void
@@ -44,7 +42,6 @@
 .method public static synthetic $r8$lambda$qqz18SHD3R3M1vnmBX0qYLw_XgA(Lcom/att/iqi/lib/IQIManager$ServiceStateChangeListener;Z)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/att/iqi/lib/IQIManager$MessageDispatcherCallback;->lambda$handleMessage$2(Lcom/att/iqi/lib/IQIManager$ServiceStateChangeListener;Z)V
 
     return-void
@@ -53,10 +50,8 @@
 .method public constructor <init>(Lcom/att/iqi/lib/IQIManager;)V
     .locals 1
 
-    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -69,7 +64,6 @@
 .method private static synthetic lambda$handleMessage$0(Lcom/att/iqi/lib/IQIManager$MetricQueryCallback;ILjava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 126
     new-instance v0, Lcom/att/iqi/lib/Metric$ID;
 
     invoke-direct {v0, p1}, Lcom/att/iqi/lib/Metric$ID;-><init>(I)V
@@ -82,7 +76,6 @@
 .method private static synthetic lambda$handleMessage$1(Lcom/att/iqi/lib/IQIManager$MetricSourcingListener;ILjava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 136
     new-instance v0, Lcom/att/iqi/lib/Metric$ID;
 
     invoke-direct {v0, p1}, Lcom/att/iqi/lib/Metric$ID;-><init>(I)V
@@ -95,7 +88,6 @@
 .method private static synthetic lambda$handleMessage$2(Lcom/att/iqi/lib/IQIManager$ServiceStateChangeListener;Z)V
     .locals 0
 
-    .line 152
     invoke-interface {p0, p1}, Lcom/att/iqi/lib/IQIManager$ServiceStateChangeListener;->onServiceChange(Z)V
 
     return-void
@@ -106,7 +98,6 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 6
 
-    .line 117
     iget-object p0, p0, Lcom/att/iqi/lib/IQIManager$MessageDispatcherCallback;->reference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -121,7 +112,6 @@
 
     return v0
 
-    .line 119
     :cond_0
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -152,20 +142,16 @@
 
     const-string v2, "Timed out waiting for package to be force stopped"
 
-    .line 157
     invoke-static {v1, v2}, Lcom/att/iqi/lib/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     instance-of v1, p1, Ljava/lang/Runnable;
 
     if-eqz v1, :cond_b
 
-    .line 159
     check-cast p1, Ljava/lang/Runnable;
 
-    .line 160
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmExecutorService(Lcom/att/iqi/lib/IQIManager;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -174,7 +160,6 @@
 
     goto/16 :goto_4
 
-    .line 148
     :cond_2
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -182,7 +167,6 @@
 
     move v2, v0
 
-    .line 149
     :cond_3
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmServiceStateChangeListenerList(Lcom/att/iqi/lib/IQIManager;)Ljava/util/List;
 
@@ -190,7 +174,6 @@
 
     monitor-enter p1
 
-    .line 151
     :try_start_0
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmServiceStateChangeListenerList(Lcom/att/iqi/lib/IQIManager;)Ljava/util/List;
 
@@ -213,7 +196,6 @@
 
     check-cast v3, Lcom/att/iqi/lib/IQIManager$ServiceStateChangeListener;
 
-    .line 152
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmExecutorService(Lcom/att/iqi/lib/IQIManager;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v4
@@ -226,7 +208,6 @@
 
     goto :goto_0
 
-    .line 154
     :cond_4
     monitor-exit p1
 
@@ -241,7 +222,6 @@
 
     throw p0
 
-    .line 141
     :cond_5
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmProfileChangeListenerList(Lcom/att/iqi/lib/IQIManager;)Ljava/util/List;
 
@@ -249,7 +229,6 @@
 
     monitor-enter v1
 
-    .line 142
     :try_start_1
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmProfileChangeListenerList(Lcom/att/iqi/lib/IQIManager;)Ljava/util/List;
 
@@ -272,7 +251,6 @@
 
     check-cast v2, Lcom/att/iqi/lib/IQIManager$ProfileChangeListener;
 
-    .line 143
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmExecutorService(Lcom/att/iqi/lib/IQIManager;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v3
@@ -287,7 +265,6 @@
 
     goto :goto_1
 
-    .line 145
     :cond_6
     monitor-exit v1
 
@@ -302,11 +279,9 @@
 
     throw p0
 
-    .line 131
     :cond_7
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 132
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmMetricSourcingListenerMap(Lcom/att/iqi/lib/IQIManager;)Landroid/util/SparseArray;
 
     move-result-object v3
@@ -319,12 +294,10 @@
 
     if-eqz v3, :cond_b
 
-    .line 134
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_8
 
-    .line 135
     check-cast p1, [B
 
     goto :goto_2
@@ -332,13 +305,11 @@
     :cond_8
     new-array p1, v2, [B
 
-    .line 134
     :goto_2
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 136
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmExecutorService(Lcom/att/iqi/lib/IQIManager;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -351,11 +322,9 @@
 
     goto :goto_4
 
-    .line 121
     :cond_9
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 122
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmMetricQueryCallbackMap(Lcom/att/iqi/lib/IQIManager;)Landroid/util/SparseArray;
 
     move-result-object v3
@@ -368,12 +337,10 @@
 
     if-eqz v3, :cond_b
 
-    .line 124
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_a
 
-    .line 125
     check-cast p1, [B
 
     goto :goto_3
@@ -381,13 +348,11 @@
     :cond_a
     new-array p1, v2, [B
 
-    .line 124
     :goto_3
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 126
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmExecutorService(Lcom/att/iqi/lib/IQIManager;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0

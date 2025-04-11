@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/net/UrspService;)V
     .locals 0
 
-    .line 99
     iput-object p1, p0, Lcom/android/server/net/UrspService$1;->this$0:Lcom/android/server/net/UrspService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 102
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -40,7 +38,6 @@
 
     const/4 v0, -0x1
 
-    .line 106
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -49,7 +46,6 @@
 
     return-void
 
-    .line 109
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -65,7 +61,6 @@
 
     if-nez v0, :cond_2
 
-    .line 114
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,7 +85,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_2
     iget-object p0, p0, Lcom/android/server/net/UrspService$1;->this$0:Lcom/android/server/net/UrspService;
 

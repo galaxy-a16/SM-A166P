@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/mars/database/MARsDBManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1367
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsDBManager$SmartManagerFASObserver;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 
-    .line 1368
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -29,13 +27,11 @@
 
     return-void
 
-    .line 1376
     :cond_0
     sget-boolean p1, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ENG:Z
 
     if-eqz p1, :cond_1
 
-    .line 1377
     iget-object p1, p0, Lcom/android/server/am/mars/database/MARsDBManager$SmartManagerFASObserver;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 
     invoke-static {p1}, Lcom/android/server/am/mars/database/MARsDBManager;->-$$Nest$fgetTAG(Lcom/android/server/am/mars/database/MARsDBManager;)Ljava/lang/String;
@@ -63,7 +59,6 @@
 
     const/4 p3, 0x0
 
-    .line 1380
     invoke-virtual {p2, p1, p3}, Landroid/net/Uri;->getBooleanQueryParameter(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -72,7 +67,6 @@
 
     return-void
 
-    .line 1384
     :cond_2
     iget-object p1, p0, Lcom/android/server/am/mars/database/MARsDBManager$SmartManagerFASObserver;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 

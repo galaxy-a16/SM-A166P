@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$lsl1-ITSzgxW57M3wkMV_WbzFUk(Lcom/android/server/input/BatteryController$ListenerRecord;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/input/BatteryController$ListenerRecord;->lambda$new$0(I)V
 
     return-void
@@ -28,25 +27,20 @@
 .method public constructor <init>(Lcom/android/server/input/BatteryController;ILandroid/hardware/input/IInputDeviceBatteryListener;)V
     .locals 0
 
-    .line 509
     iput-object p1, p0, Lcom/android/server/input/BatteryController$ListenerRecord;->this$0:Lcom/android/server/input/BatteryController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 510
     iput p2, p0, Lcom/android/server/input/BatteryController$ListenerRecord;->mPid:I
 
-    .line 511
     iput-object p3, p0, Lcom/android/server/input/BatteryController$ListenerRecord;->mListener:Landroid/hardware/input/IInputDeviceBatteryListener;
 
-    .line 512
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/input/BatteryController$ListenerRecord;->mMonitoredDevices:Ljava/util/Set;
 
-    .line 513
     new-instance p1, Lcom/android/server/input/BatteryController$ListenerRecord$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0, p2}, Lcom/android/server/input/BatteryController$ListenerRecord$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/input/BatteryController$ListenerRecord;I)V
@@ -59,7 +53,6 @@
 .method private synthetic lambda$new$0(I)V
     .locals 0
 
-    .line 513
     iget-object p0, p0, Lcom/android/server/input/BatteryController$ListenerRecord;->this$0:Lcom/android/server/input/BatteryController;
 
     invoke-static {p0, p1}, Lcom/android/server/input/BatteryController;->-$$Nest$mhandleListeningProcessDied(Lcom/android/server/input/BatteryController;I)V
@@ -72,7 +65,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 518
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +83,6 @@
 
     iget-object p0, p0, Lcom/android/server/input/BatteryController$ListenerRecord;->mMonitoredDevices:Ljava/util/Set;
 
-    .line 519
     invoke-interface {p0}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
 
     move-result-object p0

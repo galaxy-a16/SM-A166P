@@ -33,7 +33,6 @@
 
     const-string/jumbo v5, "max"
 
-    .line 755
     filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
 
     move-result-object v0
@@ -46,25 +45,20 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
-    .line 762
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 763
     iput-object p1, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mContext:Landroid/content/Context;
 
     const/4 p1, 0x6
 
     new-array v0, p1, [I
 
-    .line 764
     iput-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCount:[I
 
     new-array v0, p1, [Ljava/lang/String;
 
-    .line 765
     iput-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCounterNames:[Ljava/lang/String;
 
-    .line 766
     iput-object p2, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mPrefix:Ljava/lang/String;
 
     const/4 p2, 0x0
@@ -72,7 +66,6 @@
     :goto_0
     if-ge p2, p1, :cond_0
 
-    .line 768
     iget-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCounterNames:[Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -108,7 +101,6 @@
 .method public increment(I)V
     .locals 1
 
-    .line 773
     iget-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCount:[I
 
     array-length v0, v0
@@ -125,7 +117,6 @@
 
     move-result p1
 
-    .line 774
     iget-object p0, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCount:[I
 
     aget v0, p0, p1
@@ -147,7 +138,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 779
     iget-object v1, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCount:[I
 
     aget v1, v1, v0
@@ -160,7 +150,6 @@
 
     if-lez v1, :cond_0
 
-    .line 781
     iget-object v2, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCounterNames:[Ljava/lang/String;
@@ -181,7 +170,6 @@
 .method public maybePut(Lorg/json/JSONObject;Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;)V
     .locals 1
 
-    .line 794
     iget-object p2, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mPrefix:Ljava/lang/String;
 
     new-instance v0, Lorg/json/JSONArray;
@@ -198,12 +186,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 799
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 800
     iget-object v1, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mPrefix:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -219,7 +205,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 802
     iget-object v2, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCount:[I
 
     aget v2, v2, v1
@@ -232,7 +217,6 @@
 
     const-string v2, ", "
 
-    .line 804
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -243,10 +227,8 @@
     :cond_1
     const-string p0, "]"
 
-    .line 807
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 808
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -264,7 +246,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 788
     iget-object v1, p0, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCount:[I
 
     iget-object v2, p1, Lcom/android/server/notification/NotificationUsageStats$ImportanceHistogram;->mCount:[I

@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1510
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
 .method public activeLaunch(Lcom/android/server/am/Pageboost$PageboostAppInfo;)Z
     .locals 4
 
-    .line 1529
     iget-object p0, p1, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mNameTrimmed:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -34,7 +32,6 @@
 
     if-lt p0, v0, :cond_0
 
-    .line 1530
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -59,7 +56,6 @@
 
     return v1
 
-    .line 1533
     :cond_0
     iget p0, p1, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mProcStatus:I
 
@@ -71,12 +67,10 @@
 
     const/4 p0, 0x4
 
-    .line 1534
     iget-object v0, p1, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mNameTrimmed:Ljava/lang/String;
 
     invoke-static {p0, v0}, Lcom/android/server/am/Pageboost$PageboostdProxy;->executeCmd(ILjava/lang/String;)V
 
-    .line 1535
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -109,7 +103,6 @@
 
     goto :goto_0
 
-    .line 1538
     :cond_1
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -146,7 +139,6 @@
 .method public execute(Lcom/android/server/am/Pageboost$PageboostAppInfo;)Z
     .locals 3
 
-    .line 1515
     iget-object p0, p1, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mNameTrimmed:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -159,7 +151,6 @@
 
     if-lt p0, v0, :cond_0
 
-    .line 1516
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -184,7 +175,6 @@
 
     return v1
 
-    .line 1519
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/am/Pageboost$PageboostAppInfo;->getCapturedLevel()I
 
@@ -192,14 +182,12 @@
 
     if-lez p0, :cond_1
 
-    .line 1520
     iget-object p0, p1, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mNameTrimmed:Ljava/lang/String;
 
     const/4 v1, 0x1
 
     invoke-static {v1, p0}, Lcom/android/server/am/Pageboost$PageboostdProxy;->executeCmd(ILjava/lang/String;)V
 
-    .line 1521
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0

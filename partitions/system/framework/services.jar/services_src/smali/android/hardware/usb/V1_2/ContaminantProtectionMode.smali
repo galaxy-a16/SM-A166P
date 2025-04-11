@@ -7,14 +7,12 @@
 .method public static final dumpBitfield(I)Ljava/lang/String;
     .locals 4
 
-    .line 44
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "NONE"
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     and-int/lit8 v1, p0, 0x1
@@ -25,7 +23,6 @@
 
     const-string v1, "FORCE_SINK"
 
-    .line 48
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -42,7 +39,6 @@
 
     const-string v1, "FORCE_SOURCE"
 
-    .line 52
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     or-int/lit8 v2, v2, 0x2
@@ -56,7 +52,6 @@
 
     const-string v1, "FORCE_DISABLE"
 
-    .line 56
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     or-int/lit8 v2, v2, 0x4
@@ -64,7 +59,6 @@
     :cond_2
     if-eq p0, v2, :cond_3
 
-    .line 60
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +86,6 @@
     :cond_3
     const-string p0, " | "
 
-    .line 62
     invoke-static {p0, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0

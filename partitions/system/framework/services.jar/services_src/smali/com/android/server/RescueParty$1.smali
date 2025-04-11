@@ -18,7 +18,6 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 0
 
-    .line 556
     iput-object p1, p0, Lcom/android/server/RescueParty$1;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/android/server/RescueParty$1;->val$failedPackage:Ljava/lang/String;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 562
     :try_start_0
     iget-object v0, p0, Lcom/android/server/RescueParty$1;->val$context:Landroid/content/Context;
 
@@ -47,7 +45,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 563
     iget-object v2, p0, Lcom/android/server/RescueParty$1;->val$failedPackage:Ljava/lang/String;
 
     if-nez v2, :cond_0
@@ -61,7 +58,6 @@
 
     move-result-object v1
 
-    .line 562
     invoke-static {v0, v1}, Landroid/os/RecoverySystem;->rebootPromptAndWipeAppData(Landroid/content/Context;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -71,7 +67,6 @@
     :catchall_0
     move-exception v0
 
-    .line 566
     iget v1, p0, Lcom/android/server/RescueParty$1;->val$level:I
 
     iget-object p0, p0, Lcom/android/server/RescueParty$1;->val$failedPackage:Ljava/lang/String;

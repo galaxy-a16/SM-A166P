@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationUsageDb;->mContext:Landroid/content/Context;
 
     return-void
@@ -28,7 +26,6 @@
     :try_start_0
     const-string v1, " (_id integer primary key autoincrement, pkgname text, lastpausetime long, applastservicestarttime long, applastservicestoptime long, totalusagetime long, launchcount integer, lastlaunchtime long );"
 
-    .line 378
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +44,6 @@
 
     const-string p0, "::createDmAppMgrTable: Table is Created "
 
-    .line 379
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -59,10 +55,8 @@
 
     const-string v1, "::createDmAppMgrTable: Exception while table is creating "
 
-    .line 381
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 382
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -80,7 +74,6 @@
 
     const/4 v2, 0x0
 
-    .line 355
     :try_start_0
     invoke-virtual {p0, v0, v2, v1}, Landroid/content/Context;->openOrCreateDatabase(Ljava/lang/String;ILandroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
 
@@ -97,10 +90,8 @@
 
     const-string v2, "::getAppControlDB: Exception to create DB"
 
-    .line 358
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 359
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -108,14 +99,12 @@
 
     const-string p0, "ApplicationControl"
 
-    .line 361
     invoke-static {v1, p0}, Lcom/android/server/enterprise/application/ApplicationUsageDb;->isTableExists(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 362
     invoke-static {v1}, Lcom/android/server/enterprise/application/ApplicationUsageDb;->createDmAppMgrTable(Landroid/database/sqlite/SQLiteDatabase;)V
 
     :cond_0
@@ -131,7 +120,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 388
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
@@ -142,7 +130,6 @@
 
     if-lez v1, :cond_0
 
-    .line 390
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -175,7 +162,6 @@
 
     const-string p1, "::isTableExists:Table Does not exists "
 
-    .line 394
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -188,7 +174,6 @@
 .method public final calculateLastUsageTime(JJJJ)J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     cmp-long p0, p5, v0
@@ -258,7 +243,6 @@
 
     const-string v4, "applastservicestoptime"
 
-    .line 241
     filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
 
     move-result-object v7
@@ -267,7 +251,6 @@
 
     move-object/from16 v15, p0
 
-    .line 247
     :try_start_0
     iget-object v5, v15, Lcom/android/server/enterprise/application/ApplicationUsageDb;->mContext:Landroid/content/Context;
 
@@ -282,7 +265,6 @@
 
     if-eqz v23, :cond_0
 
-    .line 292
     invoke-virtual/range {v23 .. v23}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_0
@@ -304,7 +286,6 @@
 
     move-object/from16 v5, v23
 
-    .line 250
     invoke-virtual/range {v5 .. v12}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v5
@@ -314,7 +295,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 253
     :try_start_2
     invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -322,7 +302,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 254
     new-instance v6, Ljava/util/HashMap;
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
@@ -330,54 +309,44 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 258
     :goto_0
     :try_start_3
     invoke-interface {v5, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v7
 
-    .line 257
     invoke-interface {v5, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 260
     invoke-interface {v5, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v8
 
-    .line 259
     invoke-interface {v5, v8}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v8
 
-    .line 262
     invoke-interface {v5, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 261
     invoke-interface {v5, v10}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v17
 
-    .line 264
     invoke-interface {v5, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 263
     invoke-interface {v5, v10}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v10
 
-    .line 266
     invoke-interface {v5, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v12
 
-    .line 265
     invoke-interface {v5, v12}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v21
@@ -388,7 +357,6 @@
 
     move-wide/from16 v19, v10
 
-    .line 267
     invoke-virtual/range {v14 .. v22}, Lcom/android/server/enterprise/application/ApplicationUsageDb;->calculateLastUsageTime(JJJJ)J
 
     move-result-wide v12
@@ -401,16 +369,13 @@
 
     goto :goto_2
 
-    .line 273
     :cond_2
     new-instance v14, Lcom/samsung/android/knox/application/AppInfoLastUsage;
 
     invoke-direct {v14}, Lcom/samsung/android/knox/application/AppInfoLastUsage;-><init>()V
 
-    .line 274
     iput-object v7, v14, Lcom/samsung/android/knox/application/AppInfoLastUsage;->packageName:Ljava/lang/String;
 
-    .line 275
     iput-wide v12, v14, Lcom/samsung/android/knox/application/AppInfoLastUsage;->lastAppUsage:J
 
     const-wide/16 v12, 0x0
@@ -419,20 +384,16 @@
 
     if-eqz v12, :cond_3
 
-    .line 277
     iput-wide v8, v14, Lcom/samsung/android/knox/application/AppInfoLastUsage;->lastLaunchTime:J
 
     goto :goto_1
 
-    .line 279
     :cond_3
     iput-wide v10, v14, Lcom/samsung/android/knox/application/AppInfoLastUsage;->lastLaunchTime:J
 
-    .line 280
     :goto_1
     invoke-virtual {v6, v7, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 282
     :goto_2
     invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -478,10 +439,8 @@
     :goto_4
     if-eqz v5, :cond_6
 
-    .line 290
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
-    .line 292
     :cond_6
     invoke-virtual/range {v23 .. v23}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
@@ -508,7 +467,6 @@
 
     move-object/from16 v23, v6
 
-    .line 286
     :goto_5
     :try_start_4
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -517,13 +475,11 @@
 
     if-eqz v13, :cond_7
 
-    .line 290
     invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
     :cond_7
     if-eqz v23, :cond_8
 
-    .line 292
     invoke-virtual/range {v23 .. v23}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_8
@@ -538,16 +494,13 @@
     :goto_7
     if-eqz v13, :cond_9
 
-    .line 290
     invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
     :cond_9
     if-eqz v23, :cond_a
 
-    .line 292
     invoke-virtual/range {v23 .. v23}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 294
     :cond_a
     throw v0
 .end method
@@ -557,7 +510,6 @@
 
     const/4 v0, 0x0
 
-    .line 203
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationUsageDb;->mContext:Landroid/content/Context;
 
@@ -587,7 +539,6 @@
 
     move-object v1, p0
 
-    .line 205
     invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
@@ -597,7 +548,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 208
     :try_start_2
     new-instance v2, Ljava/util/HashMap;
 
@@ -606,7 +556,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 210
     :try_start_3
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -617,36 +566,30 @@
     :cond_0
     const-string/jumbo v0, "pkgname"
 
-    .line 213
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 212
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v3, "launchcount"
 
-    .line 216
     invoke-interface {v1, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 215
     invoke-interface {v1, v3}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
-    .line 217
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v2, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
@@ -711,13 +654,11 @@
     :goto_1
     if-eqz v0, :cond_4
 
-    .line 227
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     :cond_4
     if-eqz p0, :cond_6
 
-    .line 229
     :goto_2
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
@@ -745,7 +686,6 @@
 
     move-object p0, v2
 
-    .line 223
     :goto_3
     :try_start_4
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -754,7 +694,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 227
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_5
@@ -777,10 +716,8 @@
     :cond_7
     if-eqz p0, :cond_8
 
-    .line 229
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 231
     :cond_8
     throw v0
 .end method
@@ -794,7 +731,6 @@
 
     const/4 v2, 0x0
 
-    .line 134
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationUsageDb;->mContext:Landroid/content/Context;
 
@@ -809,7 +745,6 @@
 
     return v1
 
-    .line 137
     :cond_0
     :try_start_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -835,7 +770,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 142
     :try_start_2
     invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -854,27 +788,23 @@
 
     if-eqz v4, :cond_1
 
-    .line 144
     :try_start_3
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 145
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
 
     invoke-virtual {v4, v8, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 146
     invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
 
     invoke-virtual {v4, v7, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 147
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -902,7 +832,6 @@
 
     goto :goto_1
 
-    .line 152
     :cond_1
     new-instance v0, Landroid/content/ContentValues;
 
@@ -910,24 +839,20 @@
 
     const-string/jumbo v4, "pkgname"
 
-    .line 153
     invoke-virtual {v0, v4, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 154
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
     invoke-virtual {v0, v8, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 155
     invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
     invoke-virtual {v0, v7, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 156
     invoke-virtual {p0, v6, v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide p1
@@ -943,7 +868,6 @@
 
     goto :goto_0
 
-    .line 165
     :cond_2
     :goto_1
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
@@ -979,7 +903,6 @@
 
     move-object p0, v2
 
-    .line 162
     :goto_2
     :try_start_4
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
@@ -988,14 +911,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 165
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     :cond_3
     :goto_3
     if-eqz p0, :cond_4
 
-    .line 168
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_4
@@ -1004,10 +925,8 @@
     :goto_4
     if-eqz v2, :cond_5
 
-    .line 165
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 166
     :cond_5
     throw p0
 .end method
@@ -1025,7 +944,6 @@
 
     move-object v4, p0
 
-    .line 82
     :try_start_0
     iget-object v4, v4, Lcom/android/server/enterprise/application/ApplicationUsageDb;->mContext:Landroid/content/Context;
 
@@ -1040,7 +958,6 @@
 
     return v2
 
-    .line 85
     :cond_0
     :try_start_1
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1066,7 +983,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 90
     :try_start_2
     invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -1087,46 +1003,39 @@
 
     if-eqz v6, :cond_1
 
-    .line 93
     :try_start_3
     invoke-interface {v5, v11}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 92
     invoke-interface {v5, v6}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v6
 
     add-int/2addr v6, p2
 
-    .line 95
     new-instance v12, Landroid/content/ContentValues;
 
     invoke-direct {v12}, Landroid/content/ContentValues;-><init>()V
 
-    .line 96
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     invoke-virtual {v12, v11, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 97
     invoke-static/range {p3 .. p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
     invoke-virtual {v12, v10, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 98
     invoke-static/range {p5 .. p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
     invoke-virtual {v12, v9, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 99
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1154,13 +1063,11 @@
 
     goto :goto_1
 
-    .line 104
     :cond_1
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 105
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1169,24 +1076,20 @@
 
     const-string/jumbo v6, "pkgname"
 
-    .line 106
     invoke-virtual {v1, v6, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
     invoke-static/range {p3 .. p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-virtual {v1, v10, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 108
     invoke-static/range {p5 .. p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-virtual {v1, v9, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 109
     invoke-virtual {v4, v8, v3, v1}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v0
@@ -1202,7 +1105,6 @@
 
     goto :goto_0
 
-    .line 118
     :cond_2
     :goto_1
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
@@ -1238,7 +1140,6 @@
 
     move-object v4, v3
 
-    .line 115
     :goto_2
     :try_start_4
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -1247,14 +1148,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 118
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
     :cond_3
     :goto_3
     if-eqz v4, :cond_4
 
-    .line 121
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_4
@@ -1263,10 +1162,8 @@
     :goto_4
     if-eqz v3, :cond_5
 
-    .line 118
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 119
     :cond_5
     throw v0
 .end method

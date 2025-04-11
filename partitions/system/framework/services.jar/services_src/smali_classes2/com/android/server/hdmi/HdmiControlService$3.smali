@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;)V
     .locals 0
 
-    .line 777
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onChange(Ljava/lang/String;)V
     .locals 0
 
-    .line 780
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     const/4 p1, 0x0

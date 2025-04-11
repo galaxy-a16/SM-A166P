@@ -20,7 +20,6 @@
 .method public final onPersistableDirty(Lcom/android/server/slice/DirtyTracker$Persistable;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/slice/SlicePermissionManager;->$r8$lambda$xX1O_lwk6EE4hK3suWyWChD_Y8I(Lcom/android/server/slice/DirtyTracker$Persistable;)V
 
     return-void

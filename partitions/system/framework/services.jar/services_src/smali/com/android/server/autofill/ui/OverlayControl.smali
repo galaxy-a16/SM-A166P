@@ -13,17 +13,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/autofill/ui/OverlayControl;->mToken:Landroid/os/IBinder;
 
-    .line 38
     const-class v0, Landroid/app/AppOpsManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -44,7 +41,6 @@
 
     const/4 v0, 0x0
 
-    .line 42
     invoke-virtual {p0, v0}, Lcom/android/server/autofill/ui/OverlayControl;->setOverlayAllowed(Z)V
 
     return-void
@@ -53,7 +49,6 @@
 .method public final setOverlayAllowed(Z)V
     .locals 12
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/autofill/ui/OverlayControl;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     if-eqz v0, :cond_0
@@ -62,7 +57,6 @@
 
     xor-int/lit8 v2, p1, 0x1
 
-    .line 51
     iget-object v3, p0, Lcom/android/server/autofill/ui/OverlayControl;->mToken:Landroid/os/IBinder;
 
     const/4 v4, 0x0
@@ -71,7 +65,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/app/AppOpsManager;->setUserRestrictionForUser(IZLandroid/os/IBinder;Landroid/os/PackageTagsList;I)V
 
-    .line 53
     iget-object v6, p0, Lcom/android/server/autofill/ui/OverlayControl;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     const/16 v7, 0x2d
@@ -95,7 +88,6 @@
 
     const/4 v0, 0x1
 
-    .line 46
     invoke-virtual {p0, v0}, Lcom/android/server/autofill/ui/OverlayControl;->setOverlayAllowed(Z)V
 
     return-void

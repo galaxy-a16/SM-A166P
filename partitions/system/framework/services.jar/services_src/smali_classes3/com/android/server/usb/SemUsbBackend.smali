@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 66
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -42,13 +41,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/usb/UsbPortManager;Lcom/android/server/usb/UsbDeviceManager;)V
     .locals 3
 
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     iput-object p1, p0, Lcom/android/server/usb/SemUsbBackend;->mContext:Landroid/content/Context;
 
-    .line 70
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.hardware.usb.action.USB_STATE"
@@ -65,14 +61,12 @@
 
     const/4 v2, 0x0
 
-    .line 72
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/usb/SemUsbBackend;->mIsUnlocked:Z
 
-    .line 74
     invoke-static {p1}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
     move-result-object p1
@@ -81,20 +75,16 @@
 
     const-string/jumbo v0, "no_usb_file_transfer"
 
-    .line 75
     invoke-virtual {p1, v0}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/server/usb/SemUsbBackend;->mRestricted:Z
 
-    .line 76
     iput-object p2, p0, Lcom/android/server/usb/SemUsbBackend;->mPortManager:Lcom/android/server/usb/UsbPortManager;
 
-    .line 77
     iput-object p3, p0, Lcom/android/server/usb/SemUsbBackend;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/usb/SemUsbBackend;->updateUsbPort()V
 
     return-void
@@ -105,7 +95,6 @@
 .method public final containsFunction(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
-    .line 266
     invoke-virtual {p1, p2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result p0
@@ -123,7 +112,6 @@
 
     add-int/lit8 v2, p0, -0x1
 
-    .line 268
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -132,7 +120,6 @@
 
     return v0
 
-    .line 269
     :cond_1
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -140,7 +127,6 @@
 
     add-int/2addr p0, p2
 
-    .line 270
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p2
@@ -164,14 +150,12 @@
 .method public getCurrentMode()I
     .locals 3
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/usb/SemUsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
 
     const-string v1, "SemUsbBackend"
 
     if-eqz v0, :cond_0
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/usb/SemUsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     invoke-virtual {v0}, Landroid/hardware/usb/UsbPortStatus;->getCurrentPowerRole()I
@@ -184,12 +168,10 @@
 
     const-string p0, "USB connection getCurrentMode : 1"
 
-    .line 109
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 113
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -213,7 +195,6 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     invoke-virtual {p0}, Lcom/android/server/usb/SemUsbBackend;->getUsbDataMode()I
 
     move-result p0
@@ -226,7 +207,6 @@
 .method public getUsbDataMode()I
     .locals 3
 
-    .line 132
     iget-boolean v0, p0, Lcom/android/server/usb/SemUsbBackend;->mIsUnlocked:Z
 
     const/4 v1, 0x0
@@ -237,7 +217,6 @@
 
     const-string p0, "USB connection getUsbDataMode : None"
 
-    .line 133
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -245,7 +224,6 @@
     :cond_0
     const-string/jumbo v0, "mtp"
 
-    .line 135
     invoke-virtual {p0, v0}, Lcom/android/server/usb/SemUsbBackend;->isFunctionEnabled(Ljava/lang/String;)Z
 
     move-result v0
@@ -254,7 +232,6 @@
 
     const-string p0, "USB connection getUsbDataMode : mtp"
 
-    .line 136
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x2
@@ -264,7 +241,6 @@
     :cond_1
     const-string/jumbo v0, "ptp"
 
-    .line 138
     invoke-virtual {p0, v0}, Lcom/android/server/usb/SemUsbBackend;->isFunctionEnabled(Ljava/lang/String;)Z
 
     move-result v0
@@ -273,7 +249,6 @@
 
     const-string p0, "USB connection getUsbDataMode : ptp"
 
-    .line 139
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x4
@@ -283,7 +258,6 @@
     :cond_2
     const-string/jumbo v0, "midi"
 
-    .line 141
     invoke-virtual {p0, v0}, Lcom/android/server/usb/SemUsbBackend;->isFunctionEnabled(Ljava/lang/String;)Z
 
     move-result v0
@@ -292,7 +266,6 @@
 
     const-string p0, "USB connection getUsbDataMode : midi"
 
-    .line 142
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x6
@@ -302,7 +275,6 @@
     :cond_3
     const-string/jumbo v0, "mass_storage"
 
-    .line 144
     invoke-virtual {p0, v0}, Lcom/android/server/usb/SemUsbBackend;->isFunctionEnabled(Ljava/lang/String;)Z
 
     move-result v0
@@ -311,7 +283,6 @@
 
     const-string p0, "USB connection getUsbDataMode : mass_storage"
 
-    .line 145
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 p0, 0x8
@@ -321,7 +292,6 @@
     :cond_4
     const-string/jumbo v0, "sec_charging"
 
-    .line 147
     invoke-virtual {p0, v0}, Lcom/android/server/usb/SemUsbBackend;->isFunctionEnabled(Ljava/lang/String;)Z
 
     move-result v0
@@ -330,7 +300,6 @@
 
     const-string p0, "USB connection getUsbDataMode : sec_charging"
 
-    .line 148
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -338,7 +307,6 @@
     :cond_5
     const-string/jumbo v0, "mtp,conn_gadget"
 
-    .line 150
     invoke-virtual {p0, v0}, Lcom/android/server/usb/SemUsbBackend;->isFunctionEnabled(Ljava/lang/String;)Z
 
     move-result p0
@@ -347,7 +315,6 @@
 
     const-string p0, "USB connection getUsbDataMode : mtp,conn_gadget"
 
-    .line 151
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 p0, 0xa
@@ -363,7 +330,6 @@
 
     const-string/jumbo v0, "sys.usb.config"
 
-    .line 262
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -378,7 +344,6 @@
 .method public final modeToPower(I)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     and-int/2addr p1, p0
@@ -397,14 +362,12 @@
 .method public setMode(I)V
     .locals 7
 
-    .line 201
     iget-object v0, p0, Lcom/android/server/usb/SemUsbBackend;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string v1, "SemUsbBackend"
 
     if-eqz v0, :cond_0
 
-    .line 202
     invoke-virtual {v0}, Lcom/android/server/usb/UsbDeviceManager;->rmSetNextUsbModeToDefault()V
 
     goto :goto_0
@@ -412,10 +375,8 @@
     :cond_0
     const-string/jumbo v0, "setMode : mDeviceManager is null"
 
-    .line 204
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     :goto_0
     iget-object v0, p0, Lcom/android/server/usb/SemUsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
 
@@ -423,7 +384,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 207
     invoke-virtual {p0, p1}, Lcom/android/server/usb/SemUsbBackend;->modeToPower(I)I
 
     move-result v0
@@ -432,7 +392,6 @@
 
     if-nez v3, :cond_1
 
-    .line 212
     iget-object v3, p0, Lcom/android/server/usb/SemUsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     invoke-virtual {v3, v0, v2}, Landroid/hardware/usb/UsbPortStatus;->isRoleCombinationSupported(II)Z
@@ -448,7 +407,6 @@
     :cond_1
     const/4 v3, 0x2
 
-    .line 214
     :goto_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -472,7 +430,6 @@
 
     invoke-static {v1, v4}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     iget-object v4, p0, Lcom/android/server/usb/SemUsbBackend;->mPortManager:Lcom/android/server/usb/UsbPortManager;
 
     iget-object v5, p0, Lcom/android/server/usb/SemUsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
@@ -501,7 +458,6 @@
 
     goto :goto_3
 
-    .line 221
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -523,7 +479,6 @@
 
     goto :goto_4
 
-    .line 218
     :cond_4
     :goto_3
     new-instance v0, Ljava/lang/StringBuilder;
@@ -542,7 +497,6 @@
 
     and-int/lit8 p1, p1, 0xe
 
-    .line 219
     invoke-virtual {p0, p1}, Lcom/android/server/usb/SemUsbBackend;->setUsbFunction(I)V
 
     :goto_4
@@ -552,7 +506,6 @@
 .method public final setUsbFunction(I)V
     .locals 3
 
-    .line 158
     sget-object v0, Lcom/android/server/usb/SemUsbBackend;->sUsbOperationCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
@@ -565,7 +518,6 @@
 
     add-int/2addr v0, v1
 
-    .line 159
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -612,10 +564,8 @@
 
     const-string p1, "USB connection setUsbFunction :  + UsbManager.USB_FUNCTION_SEC_CHARGING"
 
-    .line 189
     invoke-static {v2, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/usb/SemUsbBackend;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string/jumbo p1, "sec_charging"
@@ -631,10 +581,8 @@
     :cond_0
     const-string p1, "USB connection setUsbFunction :  + UsbManager.USB_FUNCTION_MTP_GADGET"
 
-    .line 184
     invoke-static {v2, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     iget-object p0, p0, Lcom/android/server/usb/SemUsbBackend;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string/jumbo p1, "mtp,conn_gadget"
@@ -650,10 +598,8 @@
     :cond_1
     const-string p1, "USB connection setUsbFunction :  + UsbManager.USB_FUNCTION_MASS_STORAGE"
 
-    .line 179
     invoke-static {v2, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/usb/SemUsbBackend;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string/jumbo p1, "mass_storage"
@@ -669,10 +615,8 @@
     :cond_2
     const-string p1, "USB connection setUsbFunction :  + UsbManager.USB_FUNCTION_MIDI"
 
-    .line 174
     invoke-static {v2, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
     iget-object p0, p0, Lcom/android/server/usb/SemUsbBackend;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string/jumbo p1, "midi"
@@ -688,10 +632,8 @@
     :cond_3
     const-string p1, "USB connection setUsbFunction :  + UsbManager.USB_FUNCTION_PTP"
 
-    .line 169
     invoke-static {v2, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     iget-object p0, p0, Lcom/android/server/usb/SemUsbBackend;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string/jumbo p1, "ptp"
@@ -707,10 +649,8 @@
     :cond_4
     const-string p1, "USB connection setUsbFunction : + UsbManager.USB_FUNCTION_MTP"
 
-    .line 164
     invoke-static {v2, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/usb/SemUsbBackend;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string/jumbo p1, "mtp"
@@ -728,7 +668,6 @@
 .method public updateUsbPort()V
     .locals 8
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/usb/SemUsbBackend;->mPortManager:Lcom/android/server/usb/UsbPortManager;
 
     invoke-virtual {v0}, Lcom/android/server/usb/UsbPortManager;->getPorts()[Landroid/hardware/usb/UsbPort;
@@ -737,7 +676,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 86
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -745,7 +683,6 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 88
     iget-object v3, p0, Lcom/android/server/usb/SemUsbBackend;->mPortManager:Lcom/android/server/usb/UsbPortManager;
 
     aget-object v4, v0, v2
@@ -758,7 +695,6 @@
 
     move-result-object v3
 
-    .line 89
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -781,7 +717,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 92
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -802,22 +737,18 @@
 
     invoke-static {v5, v6}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     invoke-virtual {v3}, Landroid/hardware/usb/UsbPortStatus;->isConnected()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 95
     aget-object v0, v0, v2
 
     iput-object v0, p0, Lcom/android/server/usb/SemUsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
 
-    .line 96
     iput-object v3, p0, Lcom/android/server/usb/SemUsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 97
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -836,7 +767,6 @@
 
     goto :goto_1
 
-    .line 101
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-static {p1}, Lcom/android/server/wm/RemoteAnimationController;->$r8$lambda$TnxzpqA4-o8-vPJD0xrkO4GaeQk(Lcom/android/server/wm/ActivityRecord;)V

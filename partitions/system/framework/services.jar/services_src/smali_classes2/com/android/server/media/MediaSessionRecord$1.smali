@@ -26,7 +26,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaSessionRecord;IIILjava/lang/String;II)V
     .locals 0
 
-    .line 390
     iput-object p1, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     iput p2, p0, Lcom/android/server/media/MediaSessionRecord$1;->val$stream:I
@@ -51,7 +50,6 @@
 .method public run()V
     .locals 9
 
-    .line 394
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -77,14 +75,12 @@
 
     move-result-object v0
 
-    .line 396
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
     iget v8, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 394
     invoke-virtual/range {v1 .. v8}, Landroid/media/AudioManager;->setStreamVolumeForUid(IIILjava/lang/String;III)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -95,7 +91,6 @@
     :catch_0
     move-exception v0
 
-    .line 398
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

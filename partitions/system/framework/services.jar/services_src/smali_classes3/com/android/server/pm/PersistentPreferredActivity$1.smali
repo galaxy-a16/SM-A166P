@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersistentPreferredActivity;Lcom/android/server/pm/PersistentPreferredActivity;Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/pm/PersistentPreferredActivity$1;->this$0:Lcom/android/server/pm/PersistentPreferredActivity;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/utils/SnapshotCache;-><init>(Ljava/lang/Object;Lcom/android/server/utils/Watchable;)V
@@ -24,7 +23,6 @@
 .method public createSnapshot()Lcom/android/server/pm/PersistentPreferredActivity;
     .locals 2
 
-    .line 53
     new-instance v0, Lcom/android/server/pm/PersistentPreferredActivity;
 
     iget-object p0, p0, Lcom/android/server/utils/SnapshotCache;->mSource:Ljava/lang/Object;
@@ -35,7 +33,6 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/pm/PersistentPreferredActivity;-><init>(Lcom/android/server/pm/PersistentPreferredActivity;Lcom/android/server/pm/PersistentPreferredActivity-IA;)V
 
-    .line 54
     invoke-virtual {v0}, Lcom/android/server/utils/WatchableImpl;->seal()V
 
     return-object v0
@@ -44,7 +41,6 @@
 .method public bridge synthetic createSnapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 50
     invoke-virtual {p0}, Lcom/android/server/pm/PersistentPreferredActivity$1;->createSnapshot()Lcom/android/server/pm/PersistentPreferredActivity;
 
     move-result-object p0

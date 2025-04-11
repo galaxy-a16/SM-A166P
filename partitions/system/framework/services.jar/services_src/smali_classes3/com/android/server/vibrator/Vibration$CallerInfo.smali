@@ -19,25 +19,18 @@
 .method public constructor <init>(Landroid/os/VibrationAttributes;IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     iput-object p1, p0, Lcom/android/server/vibrator/Vibration$CallerInfo;->attrs:Landroid/os/VibrationAttributes;
 
-    .line 132
     iput p2, p0, Lcom/android/server/vibrator/Vibration$CallerInfo;->uid:I
 
-    .line 133
     iput p3, p0, Lcom/android/server/vibrator/Vibration$CallerInfo;->displayId:I
 
-    .line 134
     iput-object p4, p0, Lcom/android/server/vibrator/Vibration$CallerInfo;->opPkg:Ljava/lang/String;
 
-    .line 135
     iput-object p5, p0, Lcom/android/server/vibrator/Vibration$CallerInfo;->reason:Ljava/lang/String;
 
     return-void
@@ -54,7 +47,6 @@
 
     return v0
 
-    .line 141
     :cond_0
     instance-of v1, p1, Lcom/android/server/vibrator/Vibration$CallerInfo;
 
@@ -64,11 +56,9 @@
 
     return v2
 
-    .line 142
     :cond_1
     check-cast p1, Lcom/android/server/vibrator/Vibration$CallerInfo;
 
-    .line 143
     iget-object v1, p0, Lcom/android/server/vibrator/Vibration$CallerInfo;->attrs:Landroid/os/VibrationAttributes;
 
     iget-object v3, p1, Lcom/android/server/vibrator/Vibration$CallerInfo;->attrs:Landroid/os/VibrationAttributes;
@@ -95,7 +85,6 @@
 
     iget-object v3, p1, Lcom/android/server/vibrator/Vibration$CallerInfo;->opPkg:Ljava/lang/String;
 
-    .line 146
     invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -106,7 +95,6 @@
 
     iget-object p1, p1, Lcom/android/server/vibrator/Vibration$CallerInfo;->reason:Ljava/lang/String;
 
-    .line 147
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -125,7 +113,6 @@
 .method public hashCode()I
     .locals 4
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/vibrator/Vibration$CallerInfo;->attrs:Landroid/os/VibrationAttributes;
 
     iget v1, p0, Lcom/android/server/vibrator/Vibration$CallerInfo;->uid:I
@@ -158,7 +145,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 157
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

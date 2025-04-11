@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;
@@ -27,7 +26,6 @@
 .method public final dispatchMotionEvent(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;->$r8$lambda$s91Xtd5_AkEYLwOr8-mhnL9UhBA(Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;

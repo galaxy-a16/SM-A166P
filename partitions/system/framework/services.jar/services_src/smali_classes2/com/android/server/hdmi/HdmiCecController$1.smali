@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecController;)V
     .locals 0
 
-    .line 126
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$1;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public test(Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecController$1;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiCecController;->-$$Nest$fgetmService(Lcom/android/server/hdmi/HdmiCecController;)Lcom/android/server/hdmi/HdmiControlService;
@@ -54,7 +52,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 126
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/server/hdmi/HdmiCecController$1;->test(Ljava/lang/Integer;)Z

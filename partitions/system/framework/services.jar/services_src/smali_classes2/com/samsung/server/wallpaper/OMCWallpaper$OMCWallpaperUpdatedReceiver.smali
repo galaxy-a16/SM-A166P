@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/OMCWallpaper;)V
     .locals 0
 
-    .line 98
     iput-object p1, p0, Lcom/samsung/server/wallpaper/OMCWallpaper$OMCWallpaperUpdatedReceiver;->this$0:Lcom/samsung/server/wallpaper/OMCWallpaper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/server/wallpaper/OMCWallpaper;Lcom/samsung/server/wallpaper/OMCWallpaper$OMCWallpaperUpdatedReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/server/wallpaper/OMCWallpaper$OMCWallpaperUpdatedReceiver;-><init>(Lcom/samsung/server/wallpaper/OMCWallpaper;)V
 
     return-void
@@ -33,12 +31,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 100
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 101
     iget-object p0, p0, Lcom/samsung/server/wallpaper/OMCWallpaper$OMCWallpaperUpdatedReceiver;->this$0:Lcom/samsung/server/wallpaper/OMCWallpaper;
 
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/OMCWallpaper;->updateOmcWallpaper(Ljava/lang/String;)V

@@ -181,7 +181,6 @@
 
     const-string v73, "disallow_config_default_apps"
 
-    .line 81
     filled-new-array/range {v0 .. v73}, [Ljava/lang/String;
 
     move-result-object v0
@@ -196,7 +195,6 @@
 
     const-string/jumbo v1, "no_remove_managed_profile"
 
-    .line 160
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -209,7 +207,6 @@
 
     const-string/jumbo v0, "no_record_audio"
 
-    .line 168
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v1
@@ -250,7 +247,6 @@
 
     const-string/jumbo v16, "no_airplane_mode"
 
-    .line 176
     filled-new-array/range {v2 .. v16}, [Ljava/lang/String;
 
     move-result-object v1
@@ -281,7 +277,6 @@
 
     const-string/jumbo v11, "no_ultra_wideband_radio"
 
-    .line 197
     filled-new-array/range {v2 .. v11}, [Ljava/lang/String;
 
     move-result-object v1
@@ -296,7 +291,6 @@
 
     const-string/jumbo v2, "no_oem_unlock"
 
-    .line 213
     filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
@@ -323,7 +317,6 @@
 
     const-string/jumbo v8, "no_camera"
 
-    .line 223
     filled-new-array/range {v1 .. v8}, [Ljava/lang/String;
 
     move-result-object v0
@@ -354,12 +347,10 @@
 
     const-string/jumbo v10, "no_ultra_wideband_radio"
 
-    .line 238
     filled-new-array/range {v1 .. v10}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 239
     invoke-static {v0}, Lcom/google/android/collect/Sets;->newArraySet([Ljava/lang/Object;)Landroid/util/ArraySet;
 
     move-result-object v0
@@ -406,12 +397,10 @@
 
     const-string/jumbo v20, "no_unmute_microphone"
 
-    .line 256
     filled-new-array/range {v1 .. v20}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 257
     invoke-static {v0}, Lcom/google/android/collect/Sets;->newArraySet([Ljava/lang/Object;)Landroid/util/ArraySet;
 
     move-result-object v0
@@ -420,7 +409,6 @@
 
     const-string/jumbo v0, "no_bluetooth_sharing"
 
-    .line 287
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -437,7 +425,6 @@
 
     const-string v2, "ensure_verify_apps"
 
-    .line 294
     filled-new-array {v2, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -460,7 +447,6 @@
 
     const-string/jumbo v6, "no_outgoing_calls"
 
-    .line 304
     filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
 
     move-result-object v0
@@ -479,17 +465,14 @@
 
     const-string v0, "airplane_mode_on"
 
-    .line 584
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 585
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 587
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
@@ -675,7 +658,6 @@
 
     goto/16 :goto_5
 
-    .line 702
     :pswitch_0
     :try_start_2
     const-class p0, Landroid/content/pm/PackageManagerInternal;
@@ -686,13 +668,10 @@
 
     check-cast p0, Landroid/content/pm/PackageManagerInternal;
 
-    .line 704
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManagerInternal;->removeAllNonSystemPackageSuspensions(I)V
 
-    .line 705
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManagerInternal;->removeAllDistractingPackageRestrictions(I)V
 
-    .line 706
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManagerInternal;->flushPackageRestrictions(I)V
 
     goto/16 :goto_5
@@ -700,12 +679,10 @@
     :pswitch_1
     if-eqz p3, :cond_4
 
-    .line 694
     new-instance p2, Landroid/hardware/display/AmbientDisplayConfiguration;
 
     invoke-direct {p2, p0}, Landroid/hardware/display/AmbientDisplayConfiguration;-><init>(Landroid/content/Context;)V
 
-    .line 696
     invoke-virtual {p2, p1}, Landroid/hardware/display/AmbientDisplayConfiguration;->disableDozeSettings(I)V
 
     goto/16 :goto_5
@@ -713,12 +690,10 @@
     :pswitch_2
     if-eqz p3, :cond_4
 
-    .line 679
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
-    .line 678
     invoke-static {p1, v0, v8}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
@@ -733,15 +708,12 @@
     :goto_2
     if-eqz v7, :cond_4
 
-    .line 683
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
-    .line 682
     invoke-static {p1, v0, v8}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 686
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "android.intent.action.AIRPLANE_MODE"
@@ -750,17 +722,14 @@
 
     const-string/jumbo p2, "state"
 
-    .line 687
     invoke-virtual {p1, p2, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 688
     sget-object p2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     goto/16 :goto_5
 
-    .line 672
     :pswitch_3
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -775,7 +744,6 @@
     :cond_2
     move v7, v8
 
-    .line 671
     :goto_3
     invoke-static {p0, p1, v7}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -784,7 +752,6 @@
     :pswitch_4
     if-eqz p3, :cond_4
 
-    .line 655
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result p0
@@ -795,7 +762,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 658
     :try_start_3
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -813,7 +779,6 @@
     :catch_0
     move-exception p0
 
-    .line 660
     :try_start_4
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
@@ -821,7 +786,6 @@
 
     throw p0
 
-    .line 649
     :pswitch_5
     invoke-static {p0, p1, v6, p3}, Lcom/android/server/pm/UserRestrictionsUtils;->getNewUserRestrictionSetting(Landroid/content/Context;ILjava/lang/String;Z)I
 
@@ -831,7 +795,6 @@
 
     goto :goto_5
 
-    .line 641
     :pswitch_6
     invoke-static {p0, p1, v5, p3}, Lcom/android/server/pm/UserRestrictionsUtils;->getNewUserRestrictionSetting(Landroid/content/Context;ILjava/lang/String;Z)I
 
@@ -844,7 +807,6 @@
     :pswitch_7
     if-eqz p3, :cond_4
 
-    .line 635
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -853,7 +815,6 @@
 
     const-string p3, "1"
 
-    .line 634
     invoke-static {p0, p2, p3, p1}, Landroid/provider/Settings$Global;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
     goto :goto_5
@@ -865,12 +826,10 @@
 
     const-string p0, "adb_enabled"
 
-    .line 623
     invoke-static {v1, p0, v4, p1}, Landroid/provider/Settings$Global;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
     const-string p0, "adb_wifi_enabled"
 
-    .line 626
     invoke-static {v1, p0, v4, p1}, Landroid/provider/Settings$Global;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
     goto :goto_5
@@ -880,7 +839,6 @@
 
     const-string p0, "location_mode"
 
-    .line 612
     invoke-static {v1, p0, v8, p1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     goto :goto_5
@@ -888,17 +846,14 @@
     :pswitch_a
     if-eqz p3, :cond_4
 
-    .line 593
     const-class p2, Landroid/telephony/SubscriptionManager;
 
-    .line 594
     invoke-virtual {p0, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/telephony/SubscriptionManager;
 
-    .line 596
     invoke-virtual {p0}, Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfoList()Ljava/util/List;
 
     move-result-object p0
@@ -909,7 +864,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 598
     :try_start_5
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -928,14 +882,12 @@
 
     check-cast p3, Landroid/telephony/SubscriptionInfo;
 
-    .line 599
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 601
     invoke-virtual {p3}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
 
     move-result p3
@@ -946,18 +898,15 @@
 
     move-result-object p3
 
-    .line 599
     invoke-static {v1, p3, v4, p1}, Landroid/provider/Settings$Global;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
     goto :goto_4
 
-    .line 606
     :cond_3
     invoke-static {v1, p2, v4, p1}, Landroid/provider/Settings$Global;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 710
     :cond_4
     :goto_5
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -969,7 +918,6 @@
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 711
     throw p0
 
     nop
@@ -1010,7 +958,6 @@
 .method public static applyUserRestrictions(Landroid/content/Context;ILandroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 4
 
-    .line 552
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->USER_RESTRICTIONS:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1031,19 +978,16 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 553
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 554
     invoke-virtual {p3, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eq v2, v3, :cond_0
 
-    .line 557
     invoke-static {p0, p1, v1, v2}, Lcom/android/server/pm/UserRestrictionsUtils;->applyUserRestriction(Landroid/content/Context;ILjava/lang/String;Z)V
 
     goto :goto_0
@@ -1061,7 +1005,6 @@
 
     return v0
 
-    .line 525
     :cond_0
     invoke-static {p0}, Lcom/android/server/BundleUtils;->isEmpty(Landroid/os/Bundle;)Z
 
@@ -1069,14 +1012,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 526
     invoke-static {p1}, Lcom/android/server/BundleUtils;->isEmpty(Landroid/os/Bundle;)Z
 
     move-result p0
 
     return p0
 
-    .line 528
     :cond_1
     invoke-static {p1}, Lcom/android/server/BundleUtils;->isEmpty(Landroid/os/Bundle;)Z
 
@@ -1088,7 +1029,6 @@
 
     return v2
 
-    .line 531
     :cond_2
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -1111,7 +1051,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 532
     invoke-virtual {p0, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v4
@@ -1124,7 +1063,6 @@
 
     return v2
 
-    .line 536
     :cond_4
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -1147,7 +1085,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 537
     invoke-virtual {p0, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v4
@@ -1167,7 +1104,6 @@
 .method public static canDeviceOwnerChange(Ljava/lang/String;)Z
     .locals 1
 
-    .line 457
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->IMMUTABLE_BY_OWNERS:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1182,7 +1118,6 @@
 .method public static canFinancedDeviceOwnerChange(Ljava/lang/String;)Z
     .locals 1
 
-    .line 491
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->FINANCED_DEVICE_OWNER_RESTRICTIONS:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1191,7 +1126,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 492
     invoke-static {p0}, Lcom/android/server/pm/UserRestrictionsUtils;->canDeviceOwnerChange(Ljava/lang/String;)Z
 
     move-result p0
@@ -1212,7 +1146,6 @@
 .method public static canProfileOwnerChange(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 466
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->IMMUTABLE_BY_OWNERS:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1223,7 +1156,6 @@
 
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->DEVICE_OWNER_ONLY_RESTRICTIONS:Ljava/util/Set;
 
-    .line 467
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1234,7 +1166,6 @@
 
     sget-object p1, Lcom/android/server/pm/UserRestrictionsUtils;->MAIN_USER_ONLY_RESTRICTIONS:Ljava/util/Set;
 
-    .line 468
     invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1256,7 +1187,6 @@
 .method public static canProfileOwnerOfOrganizationOwnedDeviceChange(Ljava/lang/String;)Z
     .locals 1
 
-    .line 475
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->PROFILE_OWNER_ORGANIZATION_OWNED_GLOBAL_RESTRICTIONS:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1267,7 +1197,6 @@
 
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->PROFILE_OWNER_ORGANIZATION_OWNED_LOCAL_RESTRICTIONS:Ljava/util/Set;
 
-    .line 476
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1294,7 +1223,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 437
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p0
@@ -1317,7 +1245,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 846
     invoke-virtual {p2}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1344,14 +1271,12 @@
 
     const/4 v3, 0x0
 
-    .line 847
     invoke-virtual {p2, v2, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 848
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1373,7 +1298,6 @@
     :cond_1
     if-eqz v1, :cond_3
 
-    .line 853
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1392,7 +1316,6 @@
 
     goto :goto_1
 
-    .line 856
     :cond_2
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -1418,7 +1341,6 @@
 .method public static getDefaultEnabledForManagedProfiles()Ljava/util/Set;
     .locals 1
 
-    .line 483
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->DEFAULT_ENABLED_FOR_MANAGED_PROFILES:Ljava/util/Set;
 
     return-object v0
@@ -1429,17 +1351,14 @@
 
     if-nez p3, :cond_1
 
-    .line 901
     invoke-static {p0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
     move-result-object p0
 
-    .line 902
     invoke-static {p1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object p1
 
-    .line 901
     invoke-virtual {p0, p2, p1}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p0
@@ -1466,10 +1385,8 @@
 
     if-nez p0, :cond_0
 
-    .line 500
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->MAIN_USER_ONLY_RESTRICTIONS:Ljava/util/Set;
 
-    .line 501
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1491,7 +1408,6 @@
 
     sget-object p0, Lcom/android/server/pm/UserRestrictionsUtils;->PROFILE_OWNER_ORGANIZATION_OWNED_GLOBAL_RESTRICTIONS:Ljava/util/Set;
 
-    .line 504
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1501,7 +1417,6 @@
     :cond_1
     sget-object p0, Lcom/android/server/pm/UserRestrictionsUtils;->PROFILE_GLOBAL_RESTRICTIONS:Ljava/util/Set;
 
-    .line 505
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1510,7 +1425,6 @@
 
     sget-object p0, Lcom/android/server/pm/UserRestrictionsUtils;->DEVICE_OWNER_ONLY_RESTRICTIONS:Ljava/util/Set;
 
-    .line 506
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1535,7 +1449,6 @@
 .method public static isLocal(ILjava/lang/String;)Z
     .locals 0
 
-    .line 514
     invoke-static {p0, p1}, Lcom/android/server/pm/UserRestrictionsUtils;->isGlobal(ILjava/lang/String;)Z
 
     move-result p0
@@ -1548,10 +1461,8 @@
 .method public static isSettingRestrictedForUser(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;I)Z
     .locals 6
 
-    .line 716
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 717
     const-class v0, Landroid/os/UserManager;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1560,7 +1471,6 @@
 
     check-cast p0, Landroid/os/UserManager;
 
-    .line 720
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -1968,14 +1878,12 @@
 
     const-string p4, "data_roaming"
 
-    .line 826
     invoke-virtual {p1, p4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_19
 
-    .line 827
     invoke-virtual {v4, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -1992,7 +1900,6 @@
     :cond_19
     return v2
 
-    .line 733
     :pswitch_0
     invoke-virtual {v4, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2017,7 +1924,6 @@
 
     goto/16 :goto_2
 
-    .line 777
     :pswitch_2
     invoke-virtual {v4, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2052,7 +1958,6 @@
 
     goto :goto_2
 
-    .line 770
     :pswitch_5
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2072,7 +1977,6 @@
 
     goto :goto_2
 
-    .line 762
     :pswitch_7
     invoke-static {p4}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -2103,7 +2007,6 @@
 
     goto :goto_2
 
-    .line 748
     :pswitch_9
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2118,7 +2021,6 @@
 
     goto :goto_2
 
-    .line 788
     :pswitch_a
     invoke-virtual {v4, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2136,12 +2038,10 @@
     :pswitch_b
     const-string/jumbo p1, "no_config_location"
 
-    .line 723
     invoke-static {p2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 722
     invoke-virtual {p0, p1, v0}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p1
@@ -2152,7 +2052,6 @@
 
     return v1
 
-    .line 726
     :cond_25
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2171,7 +2070,6 @@
 
     goto :goto_2
 
-    .line 741
     :pswitch_c
     invoke-virtual {v4, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2184,7 +2082,6 @@
     :cond_27
     const-string/jumbo p1, "no_debugging_features"
 
-    .line 839
     :goto_2
     invoke-static {p2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
@@ -2256,7 +2153,6 @@
 .method public static isSystemApp(I[Ljava/lang/String;)Z
     .locals 8
 
-    .line 350
     invoke-static {p0}, Landroid/os/UserHandle;->isCore(I)Z
 
     move-result v0
@@ -2274,7 +2170,6 @@
 
     return v0
 
-    .line 356
     :cond_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -2282,17 +2177,14 @@
 
     move v3, v0
 
-    .line 357
     :goto_0
     array-length v4, p1
 
     if-ge v3, v4, :cond_3
 
-    .line 362
     :try_start_0
     aget-object v4, p1, v3
 
-    .line 363
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
@@ -2305,7 +2197,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 364
     invoke-virtual {v4}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
 
     move-result v4
@@ -2329,7 +2220,6 @@
 .method public static isValidRestriction(Ljava/lang/String;)Z
     .locals 6
 
-    .line 317
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->USER_RESTRICTIONS:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2340,12 +2230,10 @@
 
     if-nez v0, :cond_3
 
-    .line 319
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 322
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -2362,7 +2250,6 @@
     :catch_0
     const/4 v2, 0x0
 
-    .line 326
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2370,65 +2257,54 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 327
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const/4 v4, 0x0
 
     if-eqz v2, :cond_1
 
-    .line 328
     array-length v5, v2
 
     if-lez v5, :cond_1
 
     const-string v5, " ("
 
-    .line 329
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 330
     aget-object v5, v2, v4
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 331
     array-length v5, v2
 
     if-le v5, v1, :cond_0
 
     const-string v1, " et al"
 
-    .line 332
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
     const-string v1, ")"
 
-    .line 334
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
     const-string v1, ": "
 
-    .line 336
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 337
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "UserRestrictionsUtils"
 
     if-eqz p0, :cond_2
 
-    .line 338
     invoke-static {v0, v2}, Lcom/android/server/pm/UserRestrictionsUtils;->isSystemApp(I[Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 339
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -2437,7 +2313,6 @@
 
     goto :goto_1
 
-    .line 341
     :cond_2
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2455,7 +2330,6 @@
 .method public static merge(Landroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 5
 
-    .line 441
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x1
@@ -2471,7 +2345,6 @@
     :cond_0
     move v2, v1
 
-    .line 442
     :goto_0
     invoke-static {v2}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
@@ -2479,7 +2352,6 @@
 
     return-void
 
-    .line 446
     :cond_1
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -2503,14 +2375,12 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 447
     invoke-virtual {p1, v3, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 448
     invoke-virtual {p0, v3, v0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_1
@@ -2522,12 +2392,10 @@
 .method public static newSetWithUniqueCheck([Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 74
     invoke-static {p0}, Lcom/google/android/collect/Sets;->newArraySet([Ljava/lang/Object;)Landroid/util/ArraySet;
 
     move-result-object v0
 
-    .line 77
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
@@ -2556,7 +2424,6 @@
 
     goto :goto_0
 
-    .line 429
     :cond_0
     new-instance p0, Landroid/os/Bundle;
 
@@ -2569,12 +2436,10 @@
 .method public static readRestrictions(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/os/Bundle;
     .locals 1
 
-    .line 420
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 421
     invoke-static {p0, v0}, Lcom/android/server/pm/UserRestrictionsUtils;->readRestrictions(Lcom/android/modules/utils/TypedXmlPullParser;Landroid/os/Bundle;)V
 
     return-object v0
@@ -2583,10 +2448,8 @@
 .method public static readRestrictions(Lcom/android/modules/utils/TypedXmlPullParser;Landroid/os/Bundle;)V
     .locals 4
 
-    .line 406
     invoke-virtual {p1}, Landroid/os/Bundle;->clear()V
 
-    .line 407
     sget-object v0, Lcom/android/server/pm/UserRestrictionsUtils;->USER_RESTRICTIONS:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -2611,7 +2474,6 @@
 
     const/4 v3, 0x0
 
-    .line 408
     invoke-interface {p0, v2, v1, v3}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2620,7 +2482,6 @@
 
     const/4 v2, 0x1
 
-    .line 410
     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_0
@@ -2632,19 +2493,16 @@
 .method public static varargs restrictionsChanged(Landroid/os/Bundle;Landroid/os/Bundle;[Ljava/lang/String;)Z
     .locals 5
 
-    .line 881
     array-length v0, p2
 
     if-nez v0, :cond_0
 
-    .line 882
     invoke-static {p0, p1}, Lcom/android/server/pm/UserRestrictionsUtils;->areEqual(Landroid/os/Bundle;Landroid/os/Bundle;)Z
 
     move-result p0
 
     return p0
 
-    .line 884
     :cond_0
     array-length v0, p2
 
@@ -2657,12 +2515,10 @@
 
     aget-object v3, p2, v2
 
-    .line 885
     invoke-virtual {p0, v3, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v4
 
-    .line 886
     invoke-virtual {p1, v3, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
@@ -2687,7 +2543,6 @@
 
     const-string v0, "install_non_market_apps"
 
-    .line 895
     invoke-static {p0, v0, p2, p1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     return-void
@@ -2703,10 +2558,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 385
     invoke-interface {p0, v0, p2}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 386
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -2729,7 +2582,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 387
     sget-object v3, Lcom/android/server/pm/UserRestrictionsUtils;->NON_PERSIST_USER_RESTRICTIONS:Ljava/util/Set;
 
     invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2740,7 +2592,6 @@
 
     goto :goto_0
 
-    .line 390
     :cond_2
     sget-object v3, Lcom/android/server/pm/UserRestrictionsUtils;->USER_RESTRICTIONS:Ljava/util/Set;
 
@@ -2750,7 +2601,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 391
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v3
@@ -2759,12 +2609,10 @@
 
     const/4 v3, 0x1
 
-    .line 392
     invoke-interface {p0, v0, v2, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeBoolean(Ljava/lang/String;Ljava/lang/String;Z)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    .line 396
     :cond_3
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2786,7 +2634,6 @@
 
     goto :goto_0
 
-    .line 398
     :cond_4
     invoke-interface {p0, v0, p2}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 

@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$KBAqlw0c-NFvrvm5quxy_KJbntU(Lcom/android/server/blob/BlobStoreManagerService;Lcom/android/server/blob/BlobStoreSession;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/blob/BlobStoreManagerService;->-$$Nest$monStateChangedInternal(Lcom/android/server/blob/BlobStoreManagerService;Lcom/android/server/blob/BlobStoreSession;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;)V
     .locals 0
 
-    .line 671
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +31,6 @@
 .method public onStateChanged(Lcom/android/server/blob/BlobStoreSession;)V
     .locals 2
 
-    .line 673
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-static {v0}, Lcom/android/server/blob/BlobStoreManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/blob/BlobStoreManagerService;)Landroid/os/Handler;
@@ -50,12 +47,10 @@
 
     move-result-object p0
 
-    .line 675
     invoke-interface {p0}, Lcom/android/internal/util/function/pooled/PooledRunnable;->recycleOnUse()Lcom/android/internal/util/function/pooled/PooledRunnable;
 
     move-result-object p0
 
-    .line 673
     invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void

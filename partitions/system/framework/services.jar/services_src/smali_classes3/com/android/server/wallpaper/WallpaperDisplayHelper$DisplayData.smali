@@ -17,18 +17,14 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 44
     iput v0, p0, Lcom/android/server/wallpaper/WallpaperDisplayHelper$DisplayData;->mWidth:I
 
-    .line 45
     iput v0, p0, Lcom/android/server/wallpaper/WallpaperDisplayHelper$DisplayData;->mHeight:I
 
-    .line 46
     new-instance v0, Landroid/graphics/Rect;
 
     const/4 v1, 0x0
@@ -37,7 +33,6 @@
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperDisplayHelper$DisplayData;->mPadding:Landroid/graphics/Rect;
 
-    .line 49
     iput p1, p0, Lcom/android/server/wallpaper/WallpaperDisplayHelper$DisplayData;->mDisplayId:I
 
     return-void

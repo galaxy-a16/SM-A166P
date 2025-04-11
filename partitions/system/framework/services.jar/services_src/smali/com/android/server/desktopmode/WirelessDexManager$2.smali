@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 208
     iput-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$2;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onPointerIconChanged(ILandroid/graphics/Bitmap;FF)V
     .locals 0
 
-    .line 212
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager$2;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/WirelessDexManager;->-$$Nest$msetWirelessDeXPointerIcon(Lcom/android/server/desktopmode/WirelessDexManager;I)V

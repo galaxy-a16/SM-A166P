@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/RCPManagerService;)V
     .locals 0
 
-    .line 125
     iput-object p1, p0, Lcom/android/server/RCPManagerService$1;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 129
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -36,7 +34,6 @@
     :cond_0
     const-string v1, "com.samsung.android.plugin.ACTION_PLUGIN_CHANGE_NOTI"
 
-    .line 135
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -45,7 +42,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 136
     invoke-static {}, Lcom/android/server/RCPManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -54,7 +50,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     invoke-static {}, Lcom/android/server/RCPManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -63,7 +58,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/RCPManagerService$1;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-static {v0, p1, v1}, Lcom/android/server/RCPManagerService;->-$$Nest$msendRCPPolicyBroadcastToGearManager(Lcom/android/server/RCPManagerService;Landroid/content/Context;I)V
@@ -71,7 +65,6 @@
     :cond_1
     const-string v0, "android.intent.action.MANAGED_PROFILE_ADDED"
 
-    .line 147
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -84,12 +77,10 @@
 
     const-string v0, "android.intent.extra.user_handle"
 
-    .line 148
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     const-string v0, "android.intent.extra.USER"
 
-    .line 149
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p2
@@ -98,7 +89,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 150
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v0
@@ -109,7 +99,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 151
     invoke-static {}, Lcom/android/server/RCPManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -122,7 +111,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 153
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v2
@@ -133,10 +121,8 @@
 
     move-result-object v1
 
-    .line 151
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/RCPManagerService$1;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-static {v0}, Lcom/android/server/RCPManagerService;->-$$Nest$mcheckIfGearConnected(Lcom/android/server/RCPManagerService;)Z
@@ -145,7 +131,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 162
     iget-object p0, p0, Lcom/android/server/RCPManagerService$1;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I

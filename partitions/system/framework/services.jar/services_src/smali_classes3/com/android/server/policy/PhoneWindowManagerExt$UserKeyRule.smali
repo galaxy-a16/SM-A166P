@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 2623
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     const/16 p1, 0x3f7
 
-    .line 2624
     invoke-direct {p0, p1}, Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;-><init>(I)V
 
     return-void
@@ -29,10 +27,8 @@
 
     const/4 v0, 0x0
 
-    .line 2656
     iput-boolean v0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;->mIsKeyLongPressed:Z
 
-    .line 2657
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
@@ -49,7 +45,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2660
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
@@ -60,7 +55,6 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/android/server/policy/KeyCustomizationManager;->launchPressSendBroadcast(Landroid/view/KeyEvent;IZ)V
 
-    .line 2664
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_XCOVER_AND_TOP_KEY:Z
 
@@ -78,7 +72,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2665
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
@@ -96,7 +89,6 @@
 .method public onKeyUp(Landroid/view/KeyEvent;)V
     .locals 3
 
-    .line 2671
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
@@ -113,7 +105,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2674
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
@@ -124,7 +115,6 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/android/server/policy/KeyCustomizationManager;->launchPressSendBroadcast(Landroid/view/KeyEvent;IZ)V
 
-    .line 2678
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_XCOVER_AND_TOP_KEY:Z
 
@@ -142,7 +132,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2679
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
@@ -162,10 +151,8 @@
 
     const/4 p1, 0x1
 
-    .line 2642
     iput-boolean p1, p0, Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;->mIsKeyLongPressed:Z
 
-    .line 2643
     sget-boolean p2, Lcom/samsung/android/rune/CoreRune;->FW_ACTIVE_OR_XCOVER_KEY:Z
 
     if-eqz p2, :cond_1
@@ -178,14 +165,12 @@
 
     iget v0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;->mKeyCode:I
 
-    .line 2644
     invoke-virtual {p2, p4, v0}, Lcom/android/server/policy/KeyCustomizationManager;->hasXCoverTopId(II)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 2645
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p2, p2, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -200,7 +185,6 @@
 
     return-void
 
-    .line 2648
     :cond_0
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -212,7 +196,6 @@
 
     goto :goto_0
 
-    .line 2650
     :cond_1
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -227,7 +210,6 @@
 .method public onPress(JLandroid/view/KeyEvent;)V
     .locals 1
 
-    .line 2629
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_ACTIVE_OR_XCOVER_KEY:Z
 
     if-eqz p1, :cond_1
@@ -240,14 +222,12 @@
 
     iget v0, p0, Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;->mKeyCode:I
 
-    .line 2630
     invoke-virtual {p1, p2, v0}, Lcom/android/server/policy/KeyCustomizationManager;->hasXCoverTopId(II)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 2631
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -262,7 +242,6 @@
 
     return-void
 
-    .line 2634
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -276,7 +255,6 @@
 
     goto :goto_0
 
-    .line 2636
     :cond_1
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$UserKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 

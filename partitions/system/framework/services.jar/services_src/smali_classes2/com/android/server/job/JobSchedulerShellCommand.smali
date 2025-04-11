@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
-    .line 43
     invoke-direct {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
-    .line 45
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object p1
@@ -36,7 +33,6 @@
 
     const-string v0, "cancel jobs"
 
-    .line 270
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -48,7 +44,6 @@
     :goto_0
     move-object v6, v1
 
-    .line 276
     :goto_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextOption()Ljava/lang/String;
 
@@ -60,7 +55,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 277
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v4
@@ -133,7 +127,6 @@
     :goto_3
     packed-switch v2, :pswitch_data_0
 
-    .line 289
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,7 +149,6 @@
 
     return v3
 
-    .line 280
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -168,7 +160,6 @@
 
     goto :goto_1
 
-    .line 285
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -181,25 +172,21 @@
 
     const-string p0, "Error: must specify a concrete user ID"
 
-    .line 295
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v3
 
-    .line 299
     :cond_5
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArg()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 300
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArg()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_6
 
-    .line 301
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
@@ -207,12 +194,10 @@
     :cond_6
     move v8, v3
 
-    .line 303
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v9
 
-    .line 305
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -236,7 +221,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 308
     invoke-static {v9, v10}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -246,7 +230,6 @@
 
     invoke-static {v9, v10}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 309
     throw p0
 
     nop
@@ -271,7 +254,6 @@
 .method public final checkPermission(Ljava/lang/String;)V
     .locals 3
 
-    .line 101
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -280,7 +262,6 @@
 
     return-void
 
-    .line 106
     :cond_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mPM:Landroid/content/pm/IPackageManager;
 
@@ -294,7 +275,6 @@
 
     return-void
 
-    .line 109
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -328,12 +308,10 @@
 
     const-string/jumbo v0, "manipulate scheduler heartbeat"
 
-    .line 497
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const-string p0, "Heartbeat command is no longer supported"
 
-    .line 499
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, -0x1
@@ -344,14 +322,12 @@
 .method public final getBatteryCharging(Ljava/io/PrintWriter;)I
     .locals 0
 
-    .line 342
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService;->isBatteryCharging()Z
 
     move-result p0
 
-    .line 343
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -362,14 +338,12 @@
 .method public final getBatteryNotLow(Ljava/io/PrintWriter;)I
     .locals 0
 
-    .line 348
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService;->isBatteryNotLow()Z
 
     move-result p0
 
-    .line 349
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -380,14 +354,12 @@
 .method public final getBatterySeq(Ljava/io/PrintWriter;)I
     .locals 0
 
-    .line 336
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService;->getBatterySeq()I
 
     move-result p0
 
-    .line 337
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(I)V
 
     const/4 p0, 0x0
@@ -400,7 +372,6 @@
 
     const-string v0, "get estimated bytes"
 
-    .line 354
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -409,7 +380,6 @@
 
     move v2, v0
 
-    .line 360
     :goto_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextOption()Ljava/lang/String;
 
@@ -417,7 +387,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 361
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     move-result v4
@@ -496,7 +465,6 @@
     :goto_2
     packed-switch v4, :pswitch_data_0
 
-    .line 373
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -519,7 +487,6 @@
 
     return v5
 
-    .line 364
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -531,7 +498,6 @@
 
     goto :goto_0
 
-    .line 369
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -544,7 +510,6 @@
 
     if-ne v2, v0, :cond_5
 
-    .line 379
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
@@ -554,28 +519,23 @@
     :cond_5
     move v0, v2
 
-    .line 382
     :goto_3
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 383
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 384
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 386
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v11
 
-    .line 388
     :try_start_0
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -607,12 +567,10 @@
 
     move v7, v10
 
-    .line 390
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/job/JobSchedulerShellCommand;->printError(ILjava/lang/String;ILjava/lang/String;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 393
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p1
@@ -622,7 +580,6 @@
 
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 394
     throw p0
 
     nop
@@ -649,7 +606,6 @@
 
     const-string v0, "get job state"
 
-    .line 454
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -658,7 +614,6 @@
 
     move v2, v0
 
-    .line 460
     :goto_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextOption()Ljava/lang/String;
 
@@ -666,7 +621,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 461
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     move-result v4
@@ -745,7 +699,6 @@
     :goto_2
     packed-switch v4, :pswitch_data_0
 
-    .line 473
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -768,7 +721,6 @@
 
     return v5
 
-    .line 464
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -780,7 +732,6 @@
 
     goto :goto_0
 
-    .line 469
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -793,7 +744,6 @@
 
     if-ne v2, v0, :cond_5
 
-    .line 479
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
@@ -803,28 +753,23 @@
     :cond_5
     move v0, v2
 
-    .line 482
     :goto_3
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 483
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 484
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v9
 
-    .line 486
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 488
     :try_start_0
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -854,12 +799,10 @@
 
     move v7, v9
 
-    .line 489
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/job/JobSchedulerShellCommand;->printError(ILjava/lang/String;ILjava/lang/String;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 492
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p1
@@ -869,7 +812,6 @@
 
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 493
     throw p0
 
     :sswitch_data_0
@@ -892,14 +834,12 @@
 .method public final getStorageNotLow(Ljava/io/PrintWriter;)I
     .locals 0
 
-    .line 404
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService;->getStorageNotLow()Z
 
     move-result p0
 
-    .line 405
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -910,14 +850,12 @@
 .method public final getStorageSeq(Ljava/io/PrintWriter;)I
     .locals 0
 
-    .line 398
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService;->getStorageSeq()I
 
     move-result p0
 
-    .line 399
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(I)V
 
     const/4 p0, 0x0
@@ -930,7 +868,6 @@
 
     const-string v0, "get transferred bytes"
 
-    .line 410
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -939,7 +876,6 @@
 
     move v2, v0
 
-    .line 416
     :goto_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextOption()Ljava/lang/String;
 
@@ -947,7 +883,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 417
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     move-result v4
@@ -1026,7 +961,6 @@
     :goto_2
     packed-switch v4, :pswitch_data_0
 
-    .line 429
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1049,7 +983,6 @@
 
     return v5
 
-    .line 420
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -1061,7 +994,6 @@
 
     goto :goto_0
 
-    .line 425
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -1074,7 +1006,6 @@
 
     if-ne v2, v0, :cond_5
 
-    .line 435
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
@@ -1084,28 +1015,23 @@
     :cond_5
     move v0, v2
 
-    .line 438
     :goto_3
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 439
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 440
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 442
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v11
 
-    .line 444
     :try_start_0
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -1137,12 +1063,10 @@
 
     move v7, v10
 
-    .line 446
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/job/JobSchedulerShellCommand;->printError(ILjava/lang/String;ILjava/lang/String;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 449
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p1
@@ -1152,7 +1076,6 @@
 
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 450
     throw p0
 
     nop
@@ -1179,17 +1102,14 @@
 
     const-string v0, "change battery monitoring"
 
-    .line 313
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
-    .line 314
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v1, "on"
 
-    .line 316
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1205,7 +1125,6 @@
     :cond_0
     const-string/jumbo v1, "off"
 
-    .line 318
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1214,13 +1133,11 @@
 
     move v3, v2
 
-    .line 324
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 326
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -1230,7 +1147,6 @@
 
     const-string p0, "Battery monitoring enabled"
 
-    .line 327
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_1
@@ -1238,12 +1154,10 @@
     :cond_1
     const-string p0, "Battery monitoring disabled"
 
-    .line 328
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 330
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1254,10 +1168,8 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 331
     throw p0
 
-    .line 321
     :cond_2
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getErrPrintWriter()Ljava/io/PrintWriter;
 
@@ -1285,7 +1197,6 @@
 .method public onCommand(Ljava/lang/String;)I
     .locals 6
 
-    .line 50
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -1302,7 +1213,6 @@
     :try_start_0
     const-string v2, ""
 
-    .line 52
     :goto_0
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
@@ -1570,14 +1480,12 @@
     :goto_2
     packed-switch v2, :pswitch_data_0
 
-    .line 92
     invoke-virtual {p0, p1}, Lcom/android/modules/utils/BasicShellCommandHandler;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     goto :goto_3
 
-    .line 90
     :pswitch_0
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->triggerDockState(Ljava/io/PrintWriter;)I
 
@@ -1585,7 +1493,6 @@
 
     return p0
 
-    .line 88
     :pswitch_1
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->stop(Ljava/io/PrintWriter;)I
 
@@ -1593,7 +1500,6 @@
 
     return p0
 
-    .line 86
     :pswitch_2
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->resetScheduleQuota(Ljava/io/PrintWriter;)I
 
@@ -1601,7 +1507,6 @@
 
     return p0
 
-    .line 84
     :pswitch_3
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->resetExecutionQuota(Ljava/io/PrintWriter;)I
 
@@ -1609,7 +1514,6 @@
 
     return p0
 
-    .line 82
     :pswitch_4
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->doHeartbeat(Ljava/io/PrintWriter;)I
 
@@ -1617,7 +1521,6 @@
 
     return p0
 
-    .line 80
     :pswitch_5
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->getJobState(Ljava/io/PrintWriter;)I
 
@@ -1625,7 +1528,6 @@
 
     return p0
 
-    .line 78
     :pswitch_6
     invoke-virtual {p0, v0, v4}, Lcom/android/server/job/JobSchedulerShellCommand;->getTransferredNetworkBytes(Ljava/io/PrintWriter;I)I
 
@@ -1633,7 +1535,6 @@
 
     return p0
 
-    .line 76
     :pswitch_7
     invoke-virtual {p0, v0, v5}, Lcom/android/server/job/JobSchedulerShellCommand;->getTransferredNetworkBytes(Ljava/io/PrintWriter;I)I
 
@@ -1641,7 +1542,6 @@
 
     return p0
 
-    .line 74
     :pswitch_8
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->getStorageNotLow(Ljava/io/PrintWriter;)I
 
@@ -1649,7 +1549,6 @@
 
     return p0
 
-    .line 72
     :pswitch_9
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->getStorageSeq(Ljava/io/PrintWriter;)I
 
@@ -1657,7 +1556,6 @@
 
     return p0
 
-    .line 70
     :pswitch_a
     invoke-virtual {p0, v0, v4}, Lcom/android/server/job/JobSchedulerShellCommand;->getEstimatedNetworkBytes(Ljava/io/PrintWriter;I)I
 
@@ -1665,7 +1563,6 @@
 
     return p0
 
-    .line 68
     :pswitch_b
     invoke-virtual {p0, v0, v5}, Lcom/android/server/job/JobSchedulerShellCommand;->getEstimatedNetworkBytes(Ljava/io/PrintWriter;I)I
 
@@ -1673,7 +1570,6 @@
 
     return p0
 
-    .line 66
     :pswitch_c
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->getBatteryNotLow(Ljava/io/PrintWriter;)I
 
@@ -1681,7 +1577,6 @@
 
     return p0
 
-    .line 64
     :pswitch_d
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->getBatteryCharging(Ljava/io/PrintWriter;)I
 
@@ -1689,7 +1584,6 @@
 
     return p0
 
-    .line 62
     :pswitch_e
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->getBatterySeq(Ljava/io/PrintWriter;)I
 
@@ -1697,7 +1591,6 @@
 
     return p0
 
-    .line 60
     :pswitch_f
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->monitorBattery(Ljava/io/PrintWriter;)I
 
@@ -1705,7 +1598,6 @@
 
     return p0
 
-    .line 58
     :pswitch_10
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->cancelJob(Ljava/io/PrintWriter;)I
 
@@ -1713,7 +1605,6 @@
 
     return p0
 
-    .line 56
     :pswitch_11
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->timeout(Ljava/io/PrintWriter;)I
 
@@ -1721,7 +1612,6 @@
 
     return p0
 
-    .line 54
     :pswitch_12
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->runJob(Ljava/io/PrintWriter;)I
 
@@ -1735,7 +1625,6 @@
     :catch_0
     move-exception p0
 
-    .line 95
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1804,468 +1693,362 @@
 .method public onHelp()V
     .locals 8
 
-    .line 628
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Job scheduler (jobscheduler) commands:"
 
-    .line 630
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 631
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 632
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  run [-f | --force] [-s | --satisfied] [-u | --user USER_ID] [-n | --namespace NAMESPACE] PACKAGE JOB_ID"
 
-    .line 633
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Trigger immediate execution of a specific scheduled job. For historical"
 
-    .line 635
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    reasons, some constraints, such as battery, are ignored when this"
 
-    .line 636
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    command is called. If you don\'t want any constraints to be ignored,"
 
-    .line 637
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    include the -s flag."
 
-    .line 638
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Options:"
 
-    .line 639
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "      -f or --force: run the job even if technical constraints such as"
 
-    .line 640
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "         connectivity are not currently met. This is incompatible with -f "
 
-    .line 641
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "         and so an error will be reported if both are given."
 
-    .line 642
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "      -n or --namespace: specify the namespace this job sits in; the default"
 
-    .line 643
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "         is null (no namespace)."
 
-    .line 644
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v3, "      -s or --satisfied: run the job only if all constraints are met."
 
-    .line 645
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v3, "         This is incompatible with -f and so an error will be reported"
 
-    .line 646
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v3, "         if both are given."
 
-    .line 647
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v3, "      -u or --user: specify which user\'s job is to be run; the default is"
 
-    .line 648
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v4, "         the primary or system user"
 
-    .line 649
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  stop [-u | --user USER_ID] [-n | --namespace NAMESPACE] [-s | --stop-reason STOP_REASON] [-i | --internal-stop-reason STOP_REASON] [PACKAGE] [JOB_ID]"
 
-    .line 650
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Trigger immediate stop of currently executing jobs using the specified"
 
-    .line 653
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    stop reasons."
 
-    .line 654
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 655
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 656
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "         all users"
 
-    .line 657
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 658
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 659
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v6, "      -s or --stop-reason: specify the stop reason given to the job."
 
-    .line 660
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v6, "         Valid values are those that can be returned from"
 
-    .line 661
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v7, "         JobParameters.getStopReason()."
 
-    .line 662
     invoke-virtual {p0, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v7, "          The default value is STOP_REASON_USER."
 
-    .line 663
     invoke-virtual {p0, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v7, "      -i or --internal-stop-reason: specify the internal stop reason."
 
-    .line 664
     invoke-virtual {p0, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v7, "         JobScheduler will use for internal processing."
 
-    .line 665
     invoke-virtual {p0, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 666
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v6, "         JobParameters.getInternalStopReason()."
 
-    .line 667
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v6, "          The default value is INTERNAL_STOP_REASON_UNDEFINED."
 
-    .line 668
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v6, "  timeout [-u | --user USER_ID] [-n | --namespace NAMESPACE] [PACKAGE] [JOB_ID]"
 
-    .line 669
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v6, "    Trigger immediate timeout of currently executing jobs, as if their"
 
-    .line 671
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v6, "    execution timeout had expired."
 
-    .line 672
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v6, "    This is the equivalent of calling `stop -s 3 -i 3`."
 
-    .line 673
     invoke-virtual {p0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 674
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 675
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 676
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 677
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 678
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  cancel [-u | --user USER_ID] [-n | --namespace NAMESPACE] PACKAGE [JOB_ID]"
 
-    .line 679
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Cancel a scheduled job.  If a job ID is not supplied, all jobs scheduled"
 
-    .line 680
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    by that package will be canceled.  USE WITH CAUTION."
 
-    .line 681
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 682
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 683
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 684
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 685
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 686
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  heartbeat [num]"
 
-    .line 687
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    No longer used."
 
-    .line 688
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  monitor-battery [on|off]"
 
-    .line 689
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Control monitoring of all battery changes.  Off by default.  Turning"
 
-    .line 690
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    on makes get-battery-seq useful."
 
-    .line 691
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-battery-seq"
 
-    .line 692
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return the last battery update sequence number that was received."
 
-    .line 693
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-battery-charging"
 
-    .line 694
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return whether the battery is currently considered to be charging."
 
-    .line 695
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-battery-not-low"
 
-    .line 696
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return whether the battery is currently considered to not be low."
 
-    .line 697
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-estimated-download-bytes [-u | --user USER_ID] [-n | --namespace NAMESPACE] PACKAGE JOB_ID"
 
-    .line 698
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return the most recent estimated download bytes for the job."
 
-    .line 700
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 701
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 702
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 703
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-estimated-upload-bytes [-u | --user USER_ID] [-n | --namespace NAMESPACE] PACKAGE JOB_ID"
 
-    .line 704
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return the most recent estimated upload bytes for the job."
 
-    .line 706
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 707
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 708
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 709
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-storage-seq"
 
-    .line 710
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return the last storage update sequence number that was received."
 
-    .line 711
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-storage-not-low"
 
-    .line 712
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return whether storage is currently considered to not be low."
 
-    .line 713
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-transferred-download-bytes [-u | --user USER_ID] [-n | --namespace NAMESPACE] PACKAGE JOB_ID"
 
-    .line 714
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return the most recent transferred download bytes for the job."
 
-    .line 716
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 717
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 718
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 719
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-transferred-upload-bytes [-u | --user USER_ID] [-n | --namespace NAMESPACE] PACKAGE JOB_ID"
 
-    .line 720
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return the most recent transferred upload bytes for the job."
 
-    .line 722
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 723
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 724
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 725
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "  get-job-state [-u | --user USER_ID] [-n | --namespace NAMESPACE] PACKAGE JOB_ID"
 
-    .line 726
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "    Return the current state of a job, may be any combination of:"
 
-    .line 728
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "      pending: currently on the pending list, waiting to be active"
 
-    .line 729
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "      active: job is actively running"
 
-    .line 730
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "      user-stopped: job can\'t run because its user is stopped"
 
-    .line 731
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "      backing-up: job can\'t run because app is currently backing up its data"
 
-    .line 732
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "      no-component: job can\'t run because its component is not available"
 
-    .line 733
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "      ready: job is ready to run (all constraints satisfied or bypassed)"
 
-    .line 734
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v5, "      waiting: if nothing else above is printed, job not ready to run"
 
-    .line 735
     invoke-virtual {p0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 736
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 737
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 738
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 739
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 740
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  trigger-dock-state [idle|active]"
 
-    .line 741
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Trigger wireless charging dock state.  Active by default."
 
-    .line 742
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 743
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -2288,7 +2071,6 @@
 
     return p0
 
-    .line 119
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getErrPrintWriter()Ljava/io/PrintWriter;
 
@@ -2296,21 +2078,16 @@
 
     const-string p1, "Package not found: "
 
-    .line 120
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 121
     invoke-virtual {p0, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 122
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 123
     invoke-virtual {p0, p3}, Ljava/io/PrintWriter;->println(I)V
 
     return v2
 
-    .line 127
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getErrPrintWriter()Ljava/io/PrintWriter;
 
@@ -2318,36 +2095,27 @@
 
     const-string p1, "Could not find job "
 
-    .line 128
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 129
     invoke-virtual {p0, p5}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 130
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 131
     invoke-virtual {p0, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     if-eqz p4, :cond_0
 
-    .line 133
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 134
     invoke-virtual {p0, p4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 136
     :cond_0
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 137
     invoke-virtual {p0, p3}, Ljava/io/PrintWriter;->println(I)V
 
     return v2
 
-    .line 141
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getErrPrintWriter()Ljava/io/PrintWriter;
 
@@ -2355,36 +2123,27 @@
 
     const-string p1, "Job "
 
-    .line 142
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 143
     invoke-virtual {p0, p5}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 144
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 145
     invoke-virtual {p0, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     if-eqz p4, :cond_1
 
-    .line 147
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 148
     invoke-virtual {p0, p4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 150
     :cond_1
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 151
     invoke-virtual {p0, p3}, Ljava/io/PrintWriter;->print(I)V
 
     const-string p1, " has functional constraints but --force not specified"
 
-    .line 152
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v2
@@ -2402,14 +2161,12 @@
 
     const-string/jumbo v0, "reset execution quota"
 
-    .line 504
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 509
     :goto_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextOption()Ljava/lang/String;
 
@@ -2419,7 +2176,6 @@
 
     const-string v1, "-u"
 
-    .line 510
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2434,7 +2190,6 @@
 
     if-nez v1, :cond_0
 
-    .line 517
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2459,7 +2214,6 @@
 
     return p0
 
-    .line 513
     :cond_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -2476,23 +2230,19 @@
 
     if-ne v1, p1, :cond_2
 
-    .line 523
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
 
-    .line 526
     :cond_2
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 528
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 530
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -2500,7 +2250,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 532
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v0
@@ -2510,7 +2259,6 @@
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 533
     throw p0
 .end method
 
@@ -2519,15 +2267,12 @@
 
     const-string/jumbo p1, "reset schedule quota"
 
-    .line 538
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
-    .line 540
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 542
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -2535,7 +2280,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 544
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x0
@@ -2547,7 +2291,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 545
     throw p0
 .end method
 
@@ -2556,7 +2299,6 @@
 
     const-string v0, "force scheduled jobs"
 
-    .line 161
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -2569,7 +2311,6 @@
 
     move v10, v9
 
-    .line 169
     :goto_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextOption()Ljava/lang/String;
 
@@ -2579,7 +2320,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 170
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v4
@@ -2722,7 +2462,6 @@
     :goto_2
     packed-switch v4, :pswitch_data_0
 
-    .line 192
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2745,7 +2484,6 @@
 
     return v3
 
-    .line 183
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -2757,7 +2495,6 @@
 
     goto/16 :goto_0
 
-    .line 188
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -2782,18 +2519,15 @@
 
     const-string p0, "Cannot specify both --force and --satisfied"
 
-    .line 198
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v3
 
-    .line 202
     :cond_9
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 203
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v2
@@ -2802,12 +2536,10 @@
 
     move-result v11
 
-    .line 205
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 207
     :try_start_0
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -2837,7 +2569,6 @@
 
     move v7, v11
 
-    .line 209
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/job/JobSchedulerShellCommand;->printError(ILjava/lang/String;ILjava/lang/String;I)Z
 
     move-result p0
@@ -2846,7 +2577,6 @@
 
     if-eqz p0, :cond_a
 
-    .line 222
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v8
@@ -2855,23 +2585,19 @@
     :try_start_1
     const-string p0, "Running job"
 
-    .line 214
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     if-eqz v10, :cond_b
 
     const-string p0, " [FORCED]"
 
-    .line 216
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 218
     :cond_b
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 222
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v8
@@ -2881,7 +2607,6 @@
 
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 223
     throw p0
 
     nop
@@ -2916,7 +2641,6 @@
 
     const-string/jumbo v0, "stop jobs"
 
-    .line 550
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const/4 v0, -0x1
@@ -2933,7 +2657,6 @@
 
     move v1, v11
 
-    .line 558
     :goto_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextOption()Ljava/lang/String;
 
@@ -2945,7 +2668,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 559
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v5
@@ -3082,7 +2804,6 @@
     :goto_2
     packed-switch v3, :pswitch_data_0
 
-    .line 581
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3105,7 +2826,6 @@
 
     return v0
 
-    .line 562
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -3117,7 +2837,6 @@
 
     goto/16 :goto_0
 
-    .line 567
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -3127,7 +2846,6 @@
 
     goto/16 :goto_0
 
-    .line 577
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -3139,7 +2857,6 @@
 
     goto/16 :goto_0
 
-    .line 572
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -3158,7 +2875,6 @@
 
     if-ne v1, v2, :cond_9
 
-    .line 587
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
@@ -3166,19 +2882,16 @@
     :cond_9
     move v6, v1
 
-    .line 590
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArg()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 591
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArg()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_a
 
-    .line 592
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -3186,12 +2899,10 @@
     :cond_a
     move v9, v0
 
-    .line 594
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 596
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -3215,7 +2926,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 599
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -3225,7 +2935,6 @@
 
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 600
     throw p0
 
     :sswitch_data_0
@@ -3258,7 +2967,6 @@
 
     const-string v0, "force timeout jobs"
 
-    .line 227
     invoke-virtual {p0, v0}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
     const/4 v0, -0x1
@@ -3269,7 +2977,6 @@
 
     move v1, v0
 
-    .line 233
     :goto_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextOption()Ljava/lang/String;
 
@@ -3281,7 +2988,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 234
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v5
@@ -3354,7 +3060,6 @@
     :goto_2
     packed-switch v3, :pswitch_data_0
 
-    .line 246
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3377,7 +3082,6 @@
 
     return v0
 
-    .line 237
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -3389,7 +3093,6 @@
 
     goto :goto_0
 
-    .line 242
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
@@ -3404,7 +3107,6 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 252
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
@@ -3412,19 +3114,16 @@
     :cond_5
     move v5, v1
 
-    .line 255
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArg()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 256
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArg()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_6
 
-    .line 257
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -3432,12 +3131,10 @@
     :cond_6
     move v8, v0
 
-    .line 259
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v11
 
-    .line 261
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -3467,7 +3164,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 265
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -3477,7 +3173,6 @@
 
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 266
     throw p0
 
     nop
@@ -3504,17 +3199,14 @@
 
     const-string/jumbo p1, "trigger wireless charging dock state"
 
-    .line 604
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobSchedulerShellCommand;->checkPermission(Ljava/lang/String;)V
 
-    .line 606
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "idle"
 
-    .line 608
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3530,7 +3222,6 @@
     :cond_0
     const-string v0, "active"
 
-    .line 610
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3539,13 +3230,11 @@
 
     move v2, v1
 
-    .line 617
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v3
 
-    .line 619
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerShellCommand;->mInternal:Lcom/android/server/job/JobSchedulerService;
 
@@ -3553,7 +3242,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 621
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v1
@@ -3563,10 +3251,8 @@
 
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 622
     throw p0
 
-    .line 613
     :cond_1
     invoke-virtual {p0}, Lcom/android/modules/utils/BasicShellCommandHandler;->getErrPrintWriter()Ljava/io/PrintWriter;
 

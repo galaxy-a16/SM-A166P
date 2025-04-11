@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/PaymentSafetyService;)V
     .locals 0
 
-    .line 394
     iput-object p1, p0, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/sepunion/PaymentSafetyService;Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;-><init>(Lcom/android/server/sepunion/PaymentSafetyService;)V
 
     return-void
@@ -37,7 +35,6 @@
 
     return-void
 
-    .line 400
     :cond_0
     iget-object p3, p0, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
@@ -63,7 +60,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 401
     invoke-static {}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -86,7 +82,6 @@
 
     return-void
 
-    .line 404
     :cond_1
     iget-object p3, p0, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
@@ -102,7 +97,6 @@
 
     invoke-virtual {p3, v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 405
     iget-object p3, p0, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-static {p3}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$fgetmCheckedAppMap(Lcom/android/server/sepunion/PaymentSafetyService;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -115,7 +109,6 @@
 
     invoke-virtual {p3, v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 407
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$mcheckPaymentApp(Lcom/android/server/sepunion/PaymentSafetyService;II)V
@@ -126,14 +119,12 @@
 .method public onForegroundServicesChanged(III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onProcessDied(II)V
     .locals 3
 
-    .line 416
     iget-object v0, p0, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$fgetmForegroundActivitiesPidMap(Lcom/android/server/sepunion/PaymentSafetyService;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -158,7 +149,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$fgetmForegroundActivitiesPidMap(Lcom/android/server/sepunion/PaymentSafetyService;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -171,7 +161,6 @@
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 418
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$RunningProcessObserver;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$fgetmCheckedAppMap(Lcom/android/server/sepunion/PaymentSafetyService;)Ljava/util/concurrent/ConcurrentHashMap;

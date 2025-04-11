@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 25
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 
     const/4 v0, 0x0
 
-    .line 28
     invoke-virtual {p0, v0, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public peekFirst()Ljava/lang/Object;
     .locals 1
 
-    .line 36
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -54,7 +51,6 @@
 .method public peekLast()Ljava/lang/Object;
     .locals 1
 
-    .line 32
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/job/JobConcurrencyManager;)V
     .locals 0
 
-    .line 570
     iput-object p1, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 573
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -112,7 +110,6 @@
 
     goto :goto_1
 
-    .line 589
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
@@ -134,7 +131,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 590
     iget-object p1, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
     invoke-static {p1}, Lcom/android/server/job/JobConcurrencyManager;->-$$Nest$fgetmLock(Lcom/android/server/job/JobConcurrencyManager;)Ljava/lang/Object;
@@ -143,7 +139,6 @@
 
     monitor-enter p1
 
-    .line 591
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
@@ -151,7 +146,6 @@
 
     invoke-static {p0, p2}, Lcom/android/server/job/JobConcurrencyManager;->-$$Nest$mstopOvertimeJobsLocked(Lcom/android/server/job/JobConcurrencyManager;Ljava/lang/String;)V
 
-    .line 592
     monitor-exit p1
 
     goto :goto_1
@@ -165,7 +159,6 @@
 
     throw p0
 
-    .line 581
     :pswitch_1
     iget-object p1, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
@@ -187,7 +180,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 582
     iget-object p1, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
     invoke-static {p1}, Lcom/android/server/job/JobConcurrencyManager;->-$$Nest$fgetmLock(Lcom/android/server/job/JobConcurrencyManager;)Ljava/lang/Object;
@@ -196,20 +188,17 @@
 
     monitor-enter p1
 
-    .line 583
     :try_start_1
     iget-object p2, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
     invoke-static {p2}, Lcom/android/server/job/JobConcurrencyManager;->-$$Nest$mstopUnexemptedJobsForDoze(Lcom/android/server/job/JobConcurrencyManager;)V
 
-    .line 584
     iget-object p0, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
     const-string p2, "deep doze"
 
     invoke-static {p0, p2}, Lcom/android/server/job/JobConcurrencyManager;->-$$Nest$mstopOvertimeJobsLocked(Lcom/android/server/job/JobConcurrencyManager;Ljava/lang/String;)V
 
-    .line 585
     monitor-exit p1
 
     goto :goto_1
@@ -223,7 +212,6 @@
 
     throw p0
 
-    .line 575
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 
@@ -231,7 +219,6 @@
 
     goto :goto_1
 
-    .line 578
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/job/JobConcurrencyManager$1;->this$0:Lcom/android/server/job/JobConcurrencyManager;
 

@@ -16,14 +16,12 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/ConnectivityController;)V
     .locals 0
 
-    .line 1705
     iput-object p1, p0, Lcom/android/server/job/controllers/ConnectivityController$CellSignalStrengthCallback;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
 
     const/4 p1, 0x4
 
-    .line 1707
     iput p1, p0, Lcom/android/server/job/controllers/ConnectivityController$CellSignalStrengthCallback;->signalStrength:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/job/controllers/ConnectivityController;Lcom/android/server/job/controllers/ConnectivityController$CellSignalStrengthCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/job/controllers/ConnectivityController$CellSignalStrengthCallback;-><init>(Lcom/android/server/job/controllers/ConnectivityController;)V
 
     return-void
@@ -43,20 +40,17 @@
 .method public onSignalStrengthsChanged(Landroid/telephony/SignalStrength;)V
     .locals 6
 
-    .line 1712
     iget-object v0, p0, Lcom/android/server/job/controllers/ConnectivityController$CellSignalStrengthCallback;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     iget-object v0, v0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1713
     :try_start_0
     invoke-virtual {p1}, Landroid/telephony/SignalStrength;->getLevel()I
 
     move-result v1
 
-    .line 1714
     invoke-static {}, Lcom/android/server/job/controllers/ConnectivityController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v2
@@ -65,7 +59,6 @@
 
     const-string v2, "JobScheduler.Connectivity"
 
-    .line 1715
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,7 +83,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1717
     invoke-virtual {p1}, Landroid/telephony/SignalStrength;->getCellSignalStrengths()Ljava/util/List;
 
     move-result-object p1
@@ -114,7 +106,6 @@
 
     const-string v3, "JobScheduler.Connectivity"
 
-    .line 1718
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,22 +134,18 @@
 
     goto :goto_0
 
-    .line 1721
     :cond_0
     iget p1, p0, Lcom/android/server/job/controllers/ConnectivityController$CellSignalStrengthCallback;->signalStrength:I
 
     if-ne p1, v1, :cond_1
 
-    .line 1723
     monitor-exit v0
 
     return-void
 
-    .line 1725
     :cond_1
     iput v1, p0, Lcom/android/server/job/controllers/ConnectivityController$CellSignalStrengthCallback;->signalStrength:I
 
-    .line 1727
     iget-object p0, p0, Lcom/android/server/job/controllers/ConnectivityController$CellSignalStrengthCallback;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     invoke-static {p0}, Lcom/android/server/job/controllers/ConnectivityController;->-$$Nest$fgetmHandler(Lcom/android/server/job/controllers/ConnectivityController;)Landroid/os/Handler;
@@ -175,7 +162,6 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1728
     monitor-exit v0
 
     return-void

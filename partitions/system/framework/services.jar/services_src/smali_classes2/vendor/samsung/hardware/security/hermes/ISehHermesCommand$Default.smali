@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public getBigdataLog()Lvendor/samsung/hardware/security/hermes/SehCommandResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -38,7 +36,6 @@
 .method public getSecureHWInfo()Lvendor/samsung/hardware/security/hermes/SehCommandResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -47,7 +44,6 @@
 .method public provisioning()Lvendor/samsung/hardware/security/hermes/SehCommandResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -56,7 +52,6 @@
 .method public secnvmPowerOn()Lvendor/samsung/hardware/security/hermes/SehCommandResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -65,7 +60,6 @@
 .method public selftest()Lvendor/samsung/hardware/security/hermes/SehCommandResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -74,7 +68,6 @@
 .method public terminateService()Lvendor/samsung/hardware/security/hermes/SehCommandResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -83,7 +76,6 @@
 .method public verifyProvisioning()Lvendor/samsung/hardware/security/hermes/SehCommandResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0

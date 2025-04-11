@@ -15,20 +15,16 @@
 .method public constructor <init>(Lcom/android/server/KnoxCaptureInputFilter;Landroid/os/Looper;)V
     .locals 0
 
-    .line 163
     iput-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->this$0:Lcom/android/server/KnoxCaptureInputFilter;
 
-    .line 164
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 165
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->activeScanInput:Ljava/util/List;
 
-    .line 166
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -41,7 +37,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/KnoxCaptureInputFilter;Landroid/os/Looper;Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;-><init>(Lcom/android/server/KnoxCaptureInputFilter;Landroid/os/Looper;)V
 
     return-void
@@ -52,7 +47,6 @@
 .method public final convertNumpadToString(Landroid/view/KeyEvent;)Ljava/lang/String;
     .locals 0
 
-    .line 292
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result p0
@@ -131,7 +125,6 @@
 .method public final getAsciiControlChar(Landroid/view/KeyEvent;)[B
     .locals 4
 
-    .line 309
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result p0
@@ -154,7 +147,6 @@
 
     goto/16 :goto_0
 
-    .line 310
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
 
@@ -168,7 +160,6 @@
 
     return-object p0
 
-    .line 311
     :cond_0
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -185,7 +176,6 @@
 
     return-object p0
 
-    .line 312
     :cond_1
     :pswitch_2
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -202,7 +192,6 @@
 
     return-object p0
 
-    .line 313
     :cond_2
     :pswitch_3
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -219,7 +208,6 @@
 
     return-object p0
 
-    .line 314
     :cond_3
     :pswitch_4
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -236,7 +224,6 @@
 
     return-object p0
 
-    .line 315
     :cond_4
     :pswitch_5
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -253,7 +240,6 @@
 
     return-object p0
 
-    .line 316
     :cond_5
     :pswitch_6
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -270,7 +256,6 @@
 
     return-object p0
 
-    .line 317
     :cond_6
     :pswitch_7
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -287,7 +272,6 @@
 
     return-object p0
 
-    .line 318
     :cond_7
     :pswitch_8
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -304,7 +288,6 @@
 
     return-object p0
 
-    .line 319
     :cond_8
     :pswitch_9
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -321,7 +304,6 @@
 
     return-object p0
 
-    .line 320
     :cond_9
     :pswitch_a
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -338,7 +320,6 @@
 
     return-object p0
 
-    .line 321
     :cond_a
     :pswitch_b
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -355,7 +336,6 @@
 
     return-object p0
 
-    .line 322
     :cond_b
     :pswitch_c
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -370,7 +350,6 @@
 
     return-object p0
 
-    .line 323
     :cond_c
     :pswitch_d
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -387,7 +366,6 @@
 
     return-object p0
 
-    .line 324
     :cond_d
     :pswitch_e
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -404,7 +382,6 @@
 
     return-object p0
 
-    .line 325
     :cond_e
     :pswitch_f
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -421,7 +398,6 @@
 
     return-object p0
 
-    .line 326
     :cond_f
     :pswitch_10
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -438,7 +414,6 @@
 
     return-object p0
 
-    .line 327
     :cond_10
     :pswitch_11
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -455,7 +430,6 @@
 
     return-object p0
 
-    .line 328
     :cond_11
     :pswitch_12
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -472,7 +446,6 @@
 
     return-object p0
 
-    .line 329
     :cond_12
     :pswitch_13
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -489,7 +462,6 @@
 
     return-object p0
 
-    .line 330
     :cond_13
     :pswitch_14
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -506,7 +478,6 @@
 
     return-object p0
 
-    .line 331
     :cond_14
     :pswitch_15
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -523,7 +494,6 @@
 
     return-object p0
 
-    .line 332
     :cond_15
     :pswitch_16
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -540,7 +510,6 @@
 
     return-object p0
 
-    .line 333
     :cond_16
     :pswitch_17
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -557,7 +526,6 @@
 
     return-object p0
 
-    .line 334
     :cond_17
     :pswitch_18
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -574,7 +542,6 @@
 
     return-object p0
 
-    .line 335
     :cond_18
     :pswitch_19
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -591,7 +558,6 @@
 
     return-object p0
 
-    .line 336
     :cond_19
     :pswitch_1a
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -608,7 +574,6 @@
 
     return-object p0
 
-    .line 337
     :cond_1a
     :pswitch_1b
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -625,7 +590,6 @@
 
     return-object p0
 
-    .line 338
     :cond_1b
     :pswitch_1c
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
@@ -642,7 +606,6 @@
 
     return-object p0
 
-    .line 339
     :cond_1c
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
 
@@ -664,7 +627,6 @@
 
     return-object p0
 
-    .line 340
     :cond_1d
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
 
@@ -735,25 +697,21 @@
 .method public final getUnicodeChar(Ljava/lang/String;)[B
     .locals 5
 
-    .line 347
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
 
-    .line 348
     invoke-static {p0}, Ljava/lang/Character;->toChars(I)[C
 
     move-result-object v0
 
-    .line 349
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 350
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -790,13 +748,11 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 353
     :cond_0
     array-length p0, v0
 
     new-array p0, p0, [B
 
-    .line 355
     array-length p1, v0
 
     const/4 v1, 0x0
@@ -812,7 +768,6 @@
 
     int-to-byte v3, v3
 
-    .line 356
     aput-byte v3, p0, v2
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -829,7 +784,6 @@
     :catch_0
     move-exception p0
 
-    .line 361
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -858,7 +812,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    .line 171
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x353
@@ -871,7 +824,6 @@
 
     goto/16 :goto_2
 
-    .line 181
     :cond_0
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
@@ -879,7 +831,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 182
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -906,13 +857,11 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     :cond_1
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->activeScanInput:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -934,14 +883,12 @@
 
     check-cast v1, Landroid/view/KeyEvent;
 
-    .line 186
     invoke-virtual {p0, v1}, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->processKeyEvent(Landroid/view/KeyEvent;)[B
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 188
     array-length v3, v1
 
     :goto_0
@@ -949,7 +896,6 @@
 
     aget-byte v4, v1, v2
 
-    .line 189
     invoke-static {v4}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v4
@@ -960,7 +906,6 @@
 
     goto :goto_0
 
-    .line 194
     :cond_3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -968,14 +913,12 @@
 
     if-lez v0, :cond_6
 
-    .line 195
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     new-array v0, v0, [B
 
-    .line 197
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -997,7 +940,6 @@
 
     add-int/lit8 v4, v1, 0x1
 
-    .line 198
     invoke-virtual {v3}, Ljava/lang/Byte;->byteValue()B
 
     move-result v3
@@ -1008,7 +950,6 @@
 
     goto :goto_1
 
-    .line 200
     :cond_4
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
@@ -1016,7 +957,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 201
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -1041,7 +981,6 @@
 
     invoke-static {p1, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :cond_5
     iget-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->this$0:Lcom/android/server/KnoxCaptureInputFilter;
 
@@ -1051,7 +990,6 @@
 
     invoke-static {p1, v1, v0}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$mupdateBarcodeDataFromhw(Lcom/android/server/KnoxCaptureInputFilter;I[B)V
 
-    .line 208
     :cond_6
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
@@ -1059,7 +997,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 209
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -1068,20 +1005,17 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     :cond_7
     iget-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->activeScanInput:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
-    .line 212
     iget-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->this$0:Lcom/android/server/KnoxCaptureInputFilter;
 
     const/4 v0, -0x1
 
     invoke-static {p1, v0}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$fputactiveScanDeviceId(Lcom/android/server/KnoxCaptureInputFilter;I)V
 
-    .line 213
     iget-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->unicodeCodepoint:Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
@@ -1090,7 +1024,6 @@
 
     if-lez p1, :cond_a
 
-    .line 214
     iget-object p0, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->unicodeCodepoint:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
@@ -1101,7 +1034,6 @@
 
     goto :goto_2
 
-    .line 173
     :cond_8
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
@@ -1109,7 +1041,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 174
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -1118,7 +1049,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     :cond_9
     iget-object p0, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->activeScanInput:Ljava/util/List;
 
@@ -1136,7 +1066,6 @@
 .method public final isAsciiControlCharacter(Landroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 280
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result p0
@@ -1170,7 +1099,6 @@
 
     if-ne p0, v0, :cond_2
 
-    .line 287
     :cond_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
 
@@ -1192,7 +1120,6 @@
 .method public final isUnicodeCodepoint(Landroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 273
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result p0
@@ -1205,7 +1132,6 @@
 
     if-gt p0, v0, :cond_0
 
-    .line 275
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isAltPressed()Z
 
     move-result p0
@@ -1226,7 +1152,6 @@
 .method public final processKeyEvent(Landroid/view/KeyEvent;)[B
     .locals 8
 
-    .line 224
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -1253,13 +1178,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     :cond_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
-    .line 226
     invoke-static {v0}, Landroid/view/KeyEvent;->isModifierKey(I)Z
 
     move-result v1
@@ -1270,7 +1193,6 @@
 
     return-object v2
 
-    .line 232
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->isUnicodeCodepoint(Landroid/view/KeyEvent;)Z
 
@@ -1282,7 +1204,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 234
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -1297,7 +1218,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     :cond_2
     iget-object v0, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->unicodeCodepoint:Ljava/lang/StringBuilder;
 
@@ -1307,7 +1227,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 236
     iget-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->unicodeCodepoint:Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
@@ -1318,7 +1237,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 237
     iget-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->unicodeCodepoint:Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1336,7 +1254,6 @@
 
     goto :goto_0
 
-    .line 241
     :cond_4
     invoke-virtual {p0, p1}, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->isAsciiControlCharacter(Landroid/view/KeyEvent;)Z
 
@@ -1344,12 +1261,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 243
     invoke-virtual {p0, p1}, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->getAsciiControlChar(Landroid/view/KeyEvent;)[B
 
     move-result-object v2
 
-    .line 245
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDeviceId()I
 
     move-result v1
@@ -1358,14 +1273,12 @@
 
     move-result-object v1
 
-    .line 246
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
     move-result v5
 
     if-eqz v5, :cond_7
 
-    .line 247
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v5
@@ -1378,12 +1291,10 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 248
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getMetaState()I
 
     move-result p1
 
-    .line 247
     invoke-virtual {v1, v0, p1}, Landroid/view/KeyCharacterMap;->get(II)I
 
     move-result p1
@@ -1398,7 +1309,6 @@
 
     goto :goto_0
 
-    .line 252
     :cond_5
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
@@ -1406,7 +1316,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 253
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -1415,7 +1324,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     :cond_6
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDeviceId()I
 
@@ -1427,7 +1335,6 @@
 
     new-array v2, v3, [B
 
-    .line 256
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getMetaState()I
 
     move-result p1
@@ -1444,14 +1351,12 @@
     :goto_0
     if-eqz v3, :cond_9
 
-    .line 260
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetDEBUG()Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 261
     invoke-static {}, Lcom/android/server/KnoxCaptureInputFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -1460,7 +1365,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     :cond_8
     iget-object p1, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->unicodeCodepoint:Ljava/lang/StringBuilder;
 
@@ -1470,7 +1374,6 @@
 
     if-lez p1, :cond_9
 
-    .line 264
     iget-object p0, p0, Lcom/android/server/KnoxCaptureInputFilter$ScanEventHandler;->unicodeCodepoint:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I

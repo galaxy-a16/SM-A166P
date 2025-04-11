@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/ui/InlineContentProviderImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/ui/InlineContentProviderImpl$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/autofill/ui/InlineContentProviderImpl;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/autofill/ui/InlineContentProviderImpl$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/autofill/ui/InlineContentProviderImpl;
 
     invoke-static {p0}, Lcom/android/server/autofill/ui/InlineContentProviderImpl;->$r8$lambda$cATOQd5viSjoQm4aLED_QIK0KCQ(Lcom/android/server/autofill/ui/InlineContentProviderImpl;)V

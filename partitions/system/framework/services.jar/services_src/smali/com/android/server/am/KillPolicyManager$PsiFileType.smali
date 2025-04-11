@@ -21,7 +21,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/KillPolicyManager$PsiFileType;
     .locals 3
 
-    .line 3664
     sget-object v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;->IO:Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
     sget-object v1, Lcom/android/server/am/KillPolicyManager$PsiFileType;->MEMORY:Lcom/android/server/am/KillPolicyManager$PsiFileType;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 3665
     new-instance v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
     const/4 v1, 0x0
@@ -51,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;->IO:Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
-    .line 3666
     new-instance v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
     const/4 v1, 0x1
@@ -64,7 +61,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;->MEMORY:Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
-    .line 3667
     new-instance v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
     const/4 v1, 0x2
@@ -77,7 +73,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;->CPU:Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
-    .line 3664
     invoke-static {}, Lcom/android/server/am/KillPolicyManager$PsiFileType;->$values()[Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
     move-result-object v0
@@ -90,10 +85,8 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 3671
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3672
     iput-object p3, p0, Lcom/android/server/am/KillPolicyManager$PsiFileType;->mPath:Ljava/lang/String;
 
     return-void
@@ -102,7 +95,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/KillPolicyManager$PsiFileType;
     .locals 1
 
-    .line 3664
     const-class v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -117,7 +109,6 @@
 .method public static values()[Lcom/android/server/am/KillPolicyManager$PsiFileType;
     .locals 1
 
-    .line 3664
     sget-object v0, Lcom/android/server/am/KillPolicyManager$PsiFileType;->$VALUES:[Lcom/android/server/am/KillPolicyManager$PsiFileType;
 
     invoke-virtual {v0}, [Lcom/android/server/am/KillPolicyManager$PsiFileType;->clone()Ljava/lang/Object;
@@ -134,7 +125,6 @@
 .method public getPath()Ljava/lang/String;
     .locals 0
 
-    .line 3676
     iget-object p0, p0, Lcom/android/server/am/KillPolicyManager$PsiFileType;->mPath:Ljava/lang/String;
 
     return-object p0

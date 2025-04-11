@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/isrb/IsrbManagerServiceImpl;)V
     .locals 0
 
-    .line 131
     iput-object p1, p0, Lcom/android/server/isrb/IsrbManagerServiceImpl$1;->this$0:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 134
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.intent.action.SCREEN_ON"
 
-    .line 135
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -46,7 +43,6 @@
 
     if-nez p2, :cond_2
 
-    .line 136
     iget-object p1, p0, Lcom/android/server/isrb/IsrbManagerServiceImpl$1;->this$0:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-virtual {p1}, Lcom/android/server/isrb/IsrbManagerServiceImpl;->isNetworkReady()Z
@@ -67,13 +63,11 @@
 
     return-void
 
-    .line 139
     :cond_0
     invoke-static {}, Landroid/icu/util/Calendar;->getInstance()Landroid/icu/util/Calendar;
 
     move-result-object p1
 
-    .line 140
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -82,14 +76,12 @@
 
     const/16 p2, 0xb
 
-    .line 141
     invoke-virtual {p1, p2}, Landroid/icu/util/Calendar;->get(I)I
 
     move-result p2
 
     const/4 v0, 0x1
 
-    .line 143
     invoke-virtual {p1, v0}, Landroid/icu/util/Calendar;->get(I)I
 
     move-result v0
@@ -104,7 +96,6 @@
 
     const/4 v0, 0x2
 
-    .line 144
     invoke-virtual {p1, v0}, Landroid/icu/util/Calendar;->get(I)I
 
     move-result v0
@@ -149,7 +140,6 @@
 
     if-ge p2, p1, :cond_3
 
-    .line 146
     :cond_1
     iget-object p0, p0, Lcom/android/server/isrb/IsrbManagerServiceImpl$1;->this$0:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
@@ -160,14 +150,12 @@
     :cond_2
     const-string p2, "com.samsung.isrb.SYSTEM_UPDATE"
 
-    .line 149
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 154
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "com.samsung.intent.action.LAUNCH_SOFTWARE_UPDATE_NON_SYSTEM"
@@ -176,10 +164,8 @@
 
     const p2, 0x10000020
 
-    .line 155
     invoke-virtual {p1, p2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 157
     iget-object p0, p0, Lcom/android/server/isrb/IsrbManagerServiceImpl$1;->this$0:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/isrb/IsrbManagerServiceImpl;->-$$Nest$fgetmContext(Lcom/android/server/isrb/IsrbManagerServiceImpl;)Landroid/content/Context;
@@ -194,7 +180,6 @@
 
     const-string p1, "Sent SW update broadcast to FOTA modul."
 
-    .line 158
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3

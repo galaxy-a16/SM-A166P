@@ -21,45 +21,38 @@
 .method public constructor <init>(Landroid/media/AudioPlaybackConfiguration;)V
     .locals 1
 
-    .line 1361
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 1362
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getPlayerInterfaceId()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$NewPlayerEvent;->mPlayerIId:I
 
-    .line 1363
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getPlayerType()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$NewPlayerEvent;->mPlayerType:I
 
-    .line 1364
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getClientUid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$NewPlayerEvent;->mClientUid:I
 
-    .line 1365
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getClientPid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$NewPlayerEvent;->mClientPid:I
 
-    .line 1366
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getAudioAttributes()Landroid/media/AudioAttributes;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$NewPlayerEvent;->mPlayerAttr:Landroid/media/AudioAttributes;
 
-    .line 1367
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getSessionId()I
 
     move-result p1
@@ -74,7 +67,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 3
 
-    .line 1372
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -111,7 +103,6 @@
 
     iget v2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$NewPlayerEvent;->mPlayerType:I
 
-    .line 1374
     invoke-static {v2}, Landroid/media/AudioPlaybackConfiguration;->toLogFriendlyPlayerType(I)Ljava/lang/String;
 
     move-result-object v2

@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/app/time/UnixEpochTime;)V
     .locals 2
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-instance v0, Landroid/app/timedetector/TimeSuggestionHelper;
 
     const-class v1, Lcom/android/server/timedetector/GnssTimeSuggestion;
@@ -29,10 +27,8 @@
 .method public constructor <init>(Landroid/app/timedetector/TimeSuggestionHelper;)V
     .locals 1
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -47,15 +43,12 @@
 .method public static parseCommandLineArg(Landroid/os/ShellCommand;)Lcom/android/server/timedetector/GnssTimeSuggestion;
     .locals 1
 
-    .line 89
     const-class v0, Lcom/android/server/timedetector/GnssTimeSuggestion;
 
-    .line 90
     invoke-static {v0, p0}, Landroid/app/timedetector/TimeSuggestionHelper;->handleParseCommandLineArg(Ljava/lang/Class;Landroid/os/ShellCommand;)Landroid/app/timedetector/TimeSuggestionHelper;
 
     move-result-object p0
 
-    .line 91
     new-instance v0, Lcom/android/server/timedetector/GnssTimeSuggestion;
 
     invoke-direct {v0, p0}, Lcom/android/server/timedetector/GnssTimeSuggestion;-><init>(Landroid/app/timedetector/TimeSuggestionHelper;)V
@@ -68,7 +61,6 @@
 
     const-string v0, "GNSS"
 
-    .line 96
     const-class v1, Lcom/android/server/timedetector/GnssTimeSuggestion;
 
     invoke-static {p0, v0, v1}, Landroid/app/timedetector/TimeSuggestionHelper;->handlePrintCommandLineOpts(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/Class;)V
@@ -90,7 +82,6 @@
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 69
     const-class v0, Lcom/android/server/timedetector/GnssTimeSuggestion;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -101,11 +92,9 @@
 
     goto :goto_0
 
-    .line 72
     :cond_1
     check-cast p1, Lcom/android/server/timedetector/GnssTimeSuggestion;
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/timedetector/GnssTimeSuggestion;->mTimeSuggestionHelper:Landroid/app/timedetector/TimeSuggestionHelper;
 
     iget-object p1, p1, Lcom/android/server/timedetector/GnssTimeSuggestion;->mTimeSuggestionHelper:Landroid/app/timedetector/TimeSuggestionHelper;
@@ -126,7 +115,6 @@
 .method public getUnixEpochTime()Landroid/app/time/UnixEpochTime;
     .locals 0
 
-    .line 47
     iget-object p0, p0, Lcom/android/server/timedetector/GnssTimeSuggestion;->mTimeSuggestionHelper:Landroid/app/timedetector/TimeSuggestionHelper;
 
     invoke-virtual {p0}, Landroid/app/timedetector/TimeSuggestionHelper;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
@@ -139,7 +127,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/timedetector/GnssTimeSuggestion;->mTimeSuggestionHelper:Landroid/app/timedetector/TimeSuggestionHelper;
 
     invoke-virtual {p0}, Landroid/app/timedetector/TimeSuggestionHelper;->hashCode()I
@@ -152,7 +139,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/timedetector/GnssTimeSuggestion;->mTimeSuggestionHelper:Landroid/app/timedetector/TimeSuggestionHelper;
 
     invoke-virtual {p0}, Landroid/app/timedetector/TimeSuggestionHelper;->handleToString()Ljava/lang/String;

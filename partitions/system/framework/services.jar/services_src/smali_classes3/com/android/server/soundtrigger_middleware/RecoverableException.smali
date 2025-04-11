@@ -11,10 +11,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
-    .line 46
     iput p1, p0, Lcom/android/server/soundtrigger_middleware/RecoverableException;->errorCode:I
 
     return-void
@@ -23,10 +21,8 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .line 41
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 42
     iput p1, p0, Lcom/android/server/soundtrigger_middleware/RecoverableException;->errorCode:I
 
     return-void
@@ -37,7 +33,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

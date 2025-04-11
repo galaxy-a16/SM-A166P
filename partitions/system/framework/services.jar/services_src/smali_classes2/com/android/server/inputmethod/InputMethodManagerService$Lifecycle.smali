@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1818
     new-instance v0, Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-direct {v0, p1}, Lcom/android/server/inputmethod/InputMethodManagerService;-><init>(Landroid/content/Context;)V
@@ -24,10 +23,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 1823
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 1824
     iput-object p2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$Lifecycle;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     return-void
@@ -42,7 +39,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1848
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$Lifecycle;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/inputmethod/InputMethodManagerService;->systemRunning()V
@@ -54,12 +50,10 @@
 .method public onStart()V
     .locals 4
 
-    .line 1829
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$Lifecycle;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$mpublishLocalService(Lcom/android/server/inputmethod/InputMethodManagerService;)V
 
-    .line 1830
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$Lifecycle;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     const/4 v1, 0x0
@@ -76,12 +70,10 @@
 .method public onUserSwitching(Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$TargetUser;)V
     .locals 1
 
-    .line 1837
     const-class p1, Lcom/android/server/inputmethod/ImfLock;
 
     monitor-enter p1
 
-    .line 1838
     :try_start_0
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$Lifecycle;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -93,7 +85,6 @@
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->scheduleSwitchUserTaskLocked(ILcom/android/server/inputmethod/IInputMethodClientInvoker;)V
 
-    .line 1840
     monitor-exit p1
 
     return-void
@@ -111,7 +102,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 2
 
-    .line 1855
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$Lifecycle;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {p0}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/inputmethod/InputMethodManagerService;)Landroid/os/Handler;
@@ -130,7 +120,6 @@
 
     move-result-object p0
 
-    .line 1856
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

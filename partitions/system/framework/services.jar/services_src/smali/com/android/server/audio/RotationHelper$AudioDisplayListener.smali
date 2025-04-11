@@ -20,14 +20,12 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayChanged(I)V
     .locals 0
 
-    .line 194
     invoke-static {}, Lcom/android/server/audio/RotationHelper;->updateOrientation()V
 
     return-void
@@ -36,6 +34,5 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

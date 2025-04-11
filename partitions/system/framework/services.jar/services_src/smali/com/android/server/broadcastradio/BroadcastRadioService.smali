@@ -11,15 +11,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 34
     invoke-static {}, Lcom/android/server/broadcastradio/IRadioServiceAidlImpl;->getServicesNames()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    .line 35
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -32,7 +29,6 @@
 
     goto :goto_0
 
-    .line 36
     :cond_0
     new-instance v0, Lcom/android/server/broadcastradio/IRadioServiceAidlImpl;
 
@@ -51,7 +47,6 @@
 .method public enforcePolicyAccess()V
     .locals 1
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -66,7 +61,6 @@
 
     return-void
 
-    .line 48
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -80,7 +74,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 41
     iget-object v0, p0, Lcom/android/server/broadcastradio/BroadcastRadioService;->mServiceImpl:Landroid/hardware/radio/IRadioService;
 
     invoke-interface {v0}, Landroid/hardware/radio/IRadioService;->asBinder()Landroid/os/IBinder;

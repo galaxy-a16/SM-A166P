@@ -15,24 +15,20 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 1804
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1798
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
 
-    .line 1800
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousExternalVibrations:Ljava/util/LinkedList;
 
-    .line 1805
     iput p1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrationsLimit:I
 
     return-void
@@ -47,7 +43,6 @@
 
     const/4 v0, 0x0
 
-    .line 1847
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
@@ -58,7 +53,6 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 1849
     iget-object v1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
@@ -94,7 +88,6 @@
     :cond_2
     const-wide v1, 0x20b0000000fL
 
-    .line 1863
     :goto_1
     iget-object v3, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
 
@@ -121,7 +114,6 @@
 
     check-cast v4, Lcom/android/server/vibrator/Vibration$DebugInfo;
 
-    .line 1864
     invoke-virtual {v4, p1, v1, v2}, Lcom/android/server/vibrator/Vibration$DebugInfo;->dumpProto(Landroid/util/proto/ProtoOutputStream;J)V
 
     goto :goto_2
@@ -131,7 +123,6 @@
 
     goto :goto_0
 
-    .line 1868
     :cond_4
     iget-object v0, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousExternalVibrations:Ljava/util/LinkedList;
 
@@ -154,14 +145,12 @@
 
     const-wide v2, 0x20b00000011L
 
-    .line 1869
     invoke-virtual {v1, p1, v2, v3}, Lcom/android/server/vibrator/Vibration$DebugInfo;->dumpProto(Landroid/util/proto/ProtoOutputStream;J)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_3
 
-    .line 1872
     :cond_5
     monitor-exit p0
 
@@ -182,7 +171,6 @@
 
     const/4 v0, 0x0
 
-    .line 1829
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
@@ -193,15 +181,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1830
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     const-string v1, "  Previous vibrations for usage "
 
-    .line 1831
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1832
     iget-object v1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
@@ -216,10 +201,8 @@
 
     const-string v1, ":"
 
-    .line 1833
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1834
     iget-object v1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -245,7 +228,6 @@
 
     check-cast v2, Lcom/android/server/vibrator/Vibration$DebugInfo;
 
-    .line 1835
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -269,16 +251,13 @@
 
     goto :goto_0
 
-    .line 1839
     :cond_1
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "  Previous external vibrations:"
 
-    .line 1840
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1841
     iget-object v0, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousExternalVibrations:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
@@ -298,7 +277,6 @@
 
     check-cast v1, Lcom/android/server/vibrator/Vibration$DebugInfo;
 
-    .line 1842
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -319,7 +297,6 @@
 
     goto :goto_2
 
-    .line 1844
     :cond_2
     monitor-exit p0
 
@@ -338,7 +315,6 @@
 
     monitor-enter p0
 
-    .line 1809
     :try_start_0
     iget-object v0, p1, Lcom/android/server/vibrator/Vibration;->callerInfo:Lcom/android/server/vibrator/Vibration$CallerInfo;
 
@@ -348,7 +324,6 @@
 
     move-result v0
 
-    .line 1810
     iget-object v1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->contains(I)Z
@@ -357,7 +332,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1811
     iget-object v1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
 
     new-instance v2, Ljava/util/LinkedList;
@@ -366,7 +340,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1813
     :cond_0
     iget-object v1, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousVibrations:Landroid/util/SparseArray;
 
@@ -384,7 +357,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1814
     monitor-exit p0
 
     return-void
@@ -402,7 +374,6 @@
 
     monitor-enter p0
 
-    .line 1817
     :try_start_0
     iget-object v0, p0, Lcom/android/server/vibrator/VibratorManagerService$VibratorManagerRecords;->mPreviousExternalVibrations:Ljava/util/LinkedList;
 
@@ -414,7 +385,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1818
     monitor-exit p0
 
     return-void
@@ -432,7 +402,6 @@
 
     monitor-enter p0
 
-    .line 1822
     :try_start_0
     invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
@@ -442,16 +411,13 @@
 
     if-le v0, v1, :cond_0
 
-    .line 1823
     invoke-virtual {p1}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
-    .line 1825
     :cond_0
     invoke-virtual {p1, p2}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1826
     monitor-exit p0
 
     return-void

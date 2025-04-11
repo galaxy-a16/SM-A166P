@@ -13,10 +13,8 @@
 .method public constructor <init>(Lcom/android/internal/logging/InstanceId;)V
     .locals 2
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -25,7 +23,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/log/BiometricContextSessionInfo;->mOrder:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/biometrics/log/BiometricContextSessionInfo;->mId:Lcom/android/internal/logging/InstanceId;
 
     return-void
@@ -36,7 +33,6 @@
 .method public getId()I
     .locals 0
 
-    .line 37
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricContextSessionInfo;->mId:Lcom/android/internal/logging/InstanceId;
 
     invoke-virtual {p0}, Lcom/android/internal/logging/InstanceId;->getId()I
@@ -49,7 +45,6 @@
 .method public getOrderAndIncrement()I
     .locals 0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricContextSessionInfo;->mOrder:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -62,7 +57,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 57
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

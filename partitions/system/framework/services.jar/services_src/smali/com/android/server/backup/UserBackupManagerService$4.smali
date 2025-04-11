@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/backup/UserBackupManagerService;Ljava/lang/String;Ljava/util/HashSet;)V
     .locals 0
 
-    .line 2677
     iput-object p1, p0, Lcom/android/server/backup/UserBackupManagerService$4;->this$0:Lcom/android/server/backup/UserBackupManagerService;
 
     iput-object p2, p0, Lcom/android/server/backup/UserBackupManagerService$4;->val$packageName:Ljava/lang/String;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 2
 
-    .line 2679
     iget-object v0, p0, Lcom/android/server/backup/UserBackupManagerService$4;->this$0:Lcom/android/server/backup/UserBackupManagerService;
 
     iget-object v1, p0, Lcom/android/server/backup/UserBackupManagerService$4;->val$packageName:Ljava/lang/String;

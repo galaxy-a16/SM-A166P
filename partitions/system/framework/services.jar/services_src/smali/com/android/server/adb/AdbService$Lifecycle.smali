@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 103
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -26,7 +25,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 115
     iget-object p0, p0, Lcom/android/server/adb/AdbService$Lifecycle;->mAdbService:Lcom/android/server/adb/AdbService;
 
     invoke-virtual {p0}, Lcom/android/server/adb/AdbService;->systemReady()V
@@ -38,7 +36,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 117
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -63,7 +60,6 @@
 .method public onStart()V
     .locals 3
 
-    .line 108
     new-instance v0, Lcom/android/server/adb/AdbService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -78,7 +74,6 @@
 
     const-string v1, "adb"
 
-    .line 109
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void

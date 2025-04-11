@@ -21,7 +21,6 @@
 .method public exists(I)Z
     .locals 0
 
-    .line 494
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$UserInfoProvider;->userIds:[I
 
     if-eqz p0, :cond_0
@@ -45,7 +44,6 @@
 .method public final refreshUserIds()V
     .locals 1
 
-    .line 490
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$UserInfoProvider;->getUserIds()[I
 
     move-result-object v0

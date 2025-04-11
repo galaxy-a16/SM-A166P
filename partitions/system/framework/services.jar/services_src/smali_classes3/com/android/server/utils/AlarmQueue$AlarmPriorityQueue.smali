@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$d9iiClPvFwDHjOxNjAC2AhSc94c(Landroid/util/Pair;Landroid/util/Pair;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/utils/AlarmQueue$AlarmPriorityQueue;->lambda$static$0(Landroid/util/Pair;Landroid/util/Pair;)I
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 67
     new-instance v0, Lcom/android/server/utils/AlarmQueue$AlarmPriorityQueue$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/utils/AlarmQueue$AlarmPriorityQueue$$ExternalSyntheticLambda0;-><init>()V
@@ -37,7 +35,6 @@
 
     const/4 v0, 0x1
 
-    .line 71
     sget-object v1, Lcom/android/server/utils/AlarmQueue$AlarmPriorityQueue;->sTimeComparator:Ljava/util/Comparator;
 
     invoke-direct {p0, v0, v1}, Ljava/util/PriorityQueue;-><init>(ILjava/util/Comparator;)V
@@ -48,7 +45,6 @@
 .method public static synthetic lambda$static$0(Landroid/util/Pair;Landroid/util/Pair;)I
     .locals 2
 
-    .line 68
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Long;
@@ -77,7 +73,6 @@
 .method public removeKey(Ljava/lang/Object;)Z
     .locals 5
 
-    .line 81
     invoke-virtual {p0}, Ljava/util/PriorityQueue;->size()I
 
     move-result v0
@@ -90,7 +85,6 @@
 
     check-cast v0, [Landroid/util/Pair;
 
-    .line 82
     array-length v1, v0
 
     const/4 v2, 0x1
@@ -102,7 +96,6 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 83
     aget-object v4, v0, v1
 
     iget-object v4, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -113,7 +106,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 84
     aget-object v3, v0, v1
 
     invoke-virtual {p0, v3}, Ljava/util/PriorityQueue;->remove(Ljava/lang/Object;)Z

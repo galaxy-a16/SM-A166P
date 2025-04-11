@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/notification/EasyMuteController;Landroid/os/Handler;)V
     .locals 0
 
-    .line 208
     iput-object p1, p0, Lcom/android/server/notification/EasyMuteController$EasyMuteSettingObserver;->this$0:Lcom/android/server/notification/EasyMuteController;
 
-    .line 209
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 214
     invoke-virtual {p0}, Lcom/android/server/notification/EasyMuteController$EasyMuteSettingObserver;->update()V
 
     return-void
@@ -34,14 +31,12 @@
 .method public update()V
     .locals 6
 
-    .line 219
     iget-object v0, p0, Lcom/android/server/notification/EasyMuteController$EasyMuteSettingObserver;->this$0:Lcom/android/server/notification/EasyMuteController;
 
     invoke-static {v0}, Lcom/android/server/notification/EasyMuteController;->-$$Nest$fgetmContext(Lcom/android/server/notification/EasyMuteController;)Landroid/content/Context;
 
     move-result-object v0
 
-    .line 220
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -70,21 +65,18 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 223
     iget-object v4, p0, Lcom/android/server/notification/EasyMuteController$EasyMuteSettingObserver;->this$0:Lcom/android/server/notification/EasyMuteController;
 
     invoke-static {v4}, Lcom/android/server/notification/EasyMuteController;->-$$Nest$fgetmContext(Lcom/android/server/notification/EasyMuteController;)Landroid/content/Context;
 
     move-result-object v4
 
-    .line 224
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
     const-string/jumbo v5, "motion_overturn"
 
-    .line 223
     invoke-static {v4, v5, v2, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v3
@@ -93,7 +85,6 @@
 
     move v2, v1
 
-    .line 226
     :cond_1
     iget-object p0, p0, Lcom/android/server/notification/EasyMuteController$EasyMuteSettingObserver;->this$0:Lcom/android/server/notification/EasyMuteController;
 

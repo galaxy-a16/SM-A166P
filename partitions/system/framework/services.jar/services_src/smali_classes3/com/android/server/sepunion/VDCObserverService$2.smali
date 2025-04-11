@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$o1rVX5EvC3wWE_f2QbzxhvjdbJk(Lcom/android/server/sepunion/VDCObserverService$2;Landroid/content/Intent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sepunion/VDCObserverService$2;->lambda$onReceive$0(Landroid/content/Intent;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/VDCObserverService;)V
     .locals 0
 
-    .line 170
     iput-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$2;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onReceive$0(Landroid/content/Intent;)V
     .locals 2
 
-    .line 174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,7 +51,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -67,7 +63,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 176
     iget-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$2;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/VDCObserverService;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/VDCObserverService;)Landroid/content/Context;
@@ -84,14 +79,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 177
     invoke-virtual {p1}, Landroid/os/UserManager;->isUserUnlocked()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 178
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$2;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/VDCObserverService;->-$$Nest$mregisterUsageStatsWatcher(Lcom/android/server/sepunion/VDCObserverService;)V
@@ -101,7 +94,6 @@
     :cond_0
     const-string/jumbo p0, "registerUsageStatsWatcher: failed"
 
-    .line 180
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -114,7 +106,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 173
     iget-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$2;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/VDCObserverService;->-$$Nest$fgetmHandler(Lcom/android/server/sepunion/VDCObserverService;)Landroid/os/Handler;

@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/media/AudioAttributes;
 
     invoke-static {p1}, Lcom/android/server/audio/AudioService;->$r8$lambda$0nxPvYGS5ZTAO_msQbTymQCHLGA(Landroid/media/AudioAttributes;)Z

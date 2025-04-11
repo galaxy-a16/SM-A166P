@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;)V
     .locals 0
 
-    .line 17895
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;-><init>(Lcom/android/server/power/stats/BatteryStatsImpl;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onServiceStateChanged(Landroid/telephony/ServiceState;)V
     .locals 8
 
-    .line 17899
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget-object v0, v0, Lcom/android/server/power/stats/BatteryStatsImpl;->mClock:Lcom/android/internal/os/Clock;
@@ -45,17 +42,14 @@
 
     move-result-wide v0
 
-    .line 17900
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getRilDataRadioTechnology()I
 
     move-result v2
 
-    .line 17901
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getDataNetworkType()I
 
     move-result v3
 
-    .line 17902
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getNrState()I
 
     move-result p1
@@ -82,7 +76,6 @@
 
     goto :goto_0
 
-    .line 17922
     :cond_0
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
@@ -94,14 +87,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 17926
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget-object p1, p1, Lcom/android/server/power/stats/BatteryStatsImpl;->mMobileActive5GTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 17928
     :cond_1
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
@@ -109,7 +100,6 @@
 
     goto :goto_1
 
-    .line 17914
     :cond_2
     :goto_0
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
@@ -122,14 +112,12 @@
 
     if-nez p1, :cond_3
 
-    .line 17918
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget-object p1, p1, Lcom/android/server/power/stats/BatteryStatsImpl;->mMobileActive5GTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 17920
     :cond_3
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
@@ -140,7 +128,6 @@
     :cond_4
     if-ne v2, v7, :cond_6
 
-    .line 17931
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget-object p1, p1, Lcom/android/server/power/stats/BatteryStatsImpl;->mMobileActive5GTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
@@ -151,14 +138,12 @@
 
     if-nez p1, :cond_5
 
-    .line 17935
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget-object p1, p1, Lcom/android/server/power/stats/BatteryStatsImpl;->mMobileActive5GTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 17937
     :cond_5
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
@@ -166,7 +151,6 @@
 
     goto :goto_1
 
-    .line 17939
     :cond_6
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
@@ -178,14 +162,12 @@
 
     if-eqz p1, :cond_7
 
-    .line 17943
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget-object p1, p1, Lcom/android/server/power/stats/BatteryStatsImpl;->mMobileActive5GTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 17945
     :cond_7
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CustomTelephonyCallback;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 

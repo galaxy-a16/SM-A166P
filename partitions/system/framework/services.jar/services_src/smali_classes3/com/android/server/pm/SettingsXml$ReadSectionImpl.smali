@@ -18,10 +18,8 @@
 .method public constructor <init>(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 1
 
-    .line 178
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 166
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
@@ -30,13 +28,10 @@
 
     const/4 v0, 0x0
 
-    .line 179
     iput-object v0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mInput:Ljava/io/InputStream;
 
-    .line 180
     iput-object p1, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
-    .line 181
     invoke-virtual {p0}, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->moveToFirstTag()V
 
     return-void
@@ -47,7 +42,6 @@
 .method public children()Lcom/android/server/pm/SettingsXml$ChildSection;
     .locals 2
 
-    .line 261
     iget-object v0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mDepthStack:Ljava/util/Stack;
 
     iget-object v1, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
@@ -68,7 +62,6 @@
 .method public close()V
     .locals 3
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mDepthStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
@@ -77,7 +70,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 308
     new-instance v0, Ljava/lang/Exception;
 
     invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
@@ -88,13 +80,11 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 311
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mInput:Ljava/io/InputStream;
 
     if-eqz p0, :cond_1
 
-    .line 312
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
     :cond_1
@@ -106,7 +96,6 @@
 
     const/4 v0, 0x0
 
-    .line 231
     invoke-virtual {p0, p1, v0}, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -117,7 +106,6 @@
 .method public getBoolean(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 236
     iget-object p0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
     const/4 v0, 0x0
@@ -134,7 +122,6 @@
 
     const/4 v0, -0x1
 
-    .line 241
     invoke-virtual {p0, p1, v0}, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -145,7 +132,6 @@
 .method public getInt(Ljava/lang/String;I)I
     .locals 1
 
-    .line 246
     iget-object p0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
     const/4 v0, 0x0
@@ -160,7 +146,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 199
     iget-object p0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
@@ -173,7 +158,6 @@
 .method public getString(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 216
     iget-object p0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
     const/4 v0, 0x0
@@ -188,7 +172,6 @@
 .method public final moveToFirstTag()V
     .locals 3
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
     invoke-interface {v0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
@@ -201,7 +184,6 @@
 
     return-void
 
-    .line 191
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
@@ -227,7 +209,6 @@
 
     const/4 v0, 0x0
 
-    .line 267
     invoke-virtual {p0, v0}, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->moveToNextInternal(Ljava/lang/String;)Z
 
     move-result p0
@@ -238,7 +219,6 @@
 .method public moveToNext(Ljava/lang/String;)Z
     .locals 0
 
-    .line 272
     invoke-virtual {p0, p1}, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->moveToNextInternal(Ljava/lang/String;)Z
 
     move-result p0
@@ -251,7 +231,6 @@
 
     const/4 v0, 0x0
 
-    .line 277
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mDepthStack:Ljava/util/Stack;
 
@@ -270,10 +249,8 @@
     :goto_0
     if-nez v2, :cond_3
 
-    .line 280
     iget-object v3, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
-    .line 281
     invoke-interface {v3}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
     move-result v3
@@ -288,7 +265,6 @@
 
     iget-object v5, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
-    .line 282
     invoke-interface {v5}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v5
@@ -305,10 +281,8 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 287
     iget-object v3, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mParser:Lcom/android/modules/utils/TypedXmlPullParser;
 
-    .line 288
     invoke-interface {v3}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -329,7 +303,6 @@
     :cond_3
     if-nez v2, :cond_4
 
-    .line 296
     iget-object p0, p0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;->mDepthStack:Ljava/util/Stack;
 
     invoke-virtual {p0}, Ljava/util/Stack;->pop()Ljava/lang/Object;

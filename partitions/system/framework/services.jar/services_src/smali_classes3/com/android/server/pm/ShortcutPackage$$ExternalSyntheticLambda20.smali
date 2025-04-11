@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/ShortcutInfo;
 
     invoke-virtual {p1}, Landroid/content/pm/ShortcutInfo;->isNonManifestVisible()Z

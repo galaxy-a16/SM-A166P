@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ServiceRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/ServiceRecord;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/ActiveServices$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/ServiceRecord;
 
     invoke-static {p0}, Lcom/android/server/am/ActiveServices;->$r8$lambda$ZHyuPccUrID3-qkiK-noOUK-NgY(Lcom/android/server/am/ServiceRecord;)V

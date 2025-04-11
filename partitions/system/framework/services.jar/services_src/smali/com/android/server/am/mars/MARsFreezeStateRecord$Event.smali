@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
     .locals 2
 
-    .line 58
     sget-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;->FREEZE:Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
 
     sget-object v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;->UNFREEZE:Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 59
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
 
     const-string v1, "FREEZE"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;->FREEZE:Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
 
-    .line 60
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
 
     const-string v1, "UNFREEZE"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;->UNFREEZE:Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
 
-    .line 58
     invoke-static {}, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;->$values()[Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 58
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
     .locals 1
 
-    .line 58
     const-class v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
     .locals 1
 
-    .line 58
     sget-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;->$VALUES:[Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;
 
     invoke-virtual {v0}, [Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;->clone()Ljava/lang/Object;

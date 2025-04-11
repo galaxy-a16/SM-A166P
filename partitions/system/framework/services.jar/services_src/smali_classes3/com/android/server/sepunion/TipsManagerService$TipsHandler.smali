@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/TipsManagerService;)V
     .locals 0
 
-    .line 548
     iput-object p1, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
 
-    .line 554
     iget-object v0, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/TipsManagerService;)Landroid/content/Context;
@@ -39,7 +37,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 557
     iget-object v0, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/TipsManagerService;)Landroid/content/Context;
@@ -58,7 +55,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 560
     invoke-static {}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -69,7 +65,6 @@
 
     return-void
 
-    .line 564
     :cond_1
     iget p1, p1, Landroid/os/Message;->what:I
 
@@ -93,7 +88,6 @@
 
     goto/16 :goto_3
 
-    .line 605
     :cond_2
     invoke-static {}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -103,20 +97,16 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 606
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    .line 608
     invoke-virtual {p1, v4, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v0, 0x5
 
-    .line 609
     invoke-virtual {p1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 611
     :try_start_0
     iget-object p0, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
@@ -132,7 +122,6 @@
 
     goto/16 :goto_3
 
-    .line 613
     :catch_0
     invoke-static {}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -144,7 +133,6 @@
 
     goto/16 :goto_3
 
-    .line 584
     :cond_3
     iget-object p1, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
@@ -166,25 +154,20 @@
 
     if-eqz p1, :cond_4
 
-    .line 586
     rem-int/lit16 v1, p1, 0x2d0
 
     if-nez v1, :cond_4
 
-    .line 588
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 590
     invoke-virtual {v1, v4, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v3, 0x6
 
-    .line 591
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 593
     :try_start_1
     iget-object v2, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
@@ -200,7 +183,6 @@
 
     goto :goto_1
 
-    .line 595
     :catch_1
     invoke-static {}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -210,7 +192,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 600
     :cond_4
     :goto_1
     iget-object v1, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
@@ -227,7 +208,6 @@
 
     invoke-static {v1, v0, p1, v5}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 601
     iget-object p0, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fgetmTipsHandler(Lcom/android/server/sepunion/TipsManagerService;)Lcom/android/server/sepunion/TipsManagerService$TipsHandler;
@@ -250,7 +230,6 @@
 
     goto :goto_3
 
-    .line 566
     :cond_5
     iget-object p1, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
@@ -270,20 +249,16 @@
 
     if-ge p1, v0, :cond_6
 
-    .line 567
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    .line 569
     invoke-virtual {p1, v4, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v0, 0x2
 
-    .line 570
     invoke-virtual {p1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 572
     :try_start_2
     iget-object v0, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
@@ -299,7 +274,6 @@
 
     goto :goto_2
 
-    .line 574
     :catch_2
     invoke-static {}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -309,7 +283,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 577
     :goto_2
     iget-object p1, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
@@ -321,7 +294,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fputmHUNDisplayCount(Lcom/android/server/sepunion/TipsManagerService;I)V
 
-    .line 580
     iget-object p0, p0, Lcom/android/server/sepunion/TipsManagerService$TipsHandler;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fgetmTipsHandler(Lcom/android/server/sepunion/TipsManagerService;)Lcom/android/server/sepunion/TipsManagerService$TipsHandler;

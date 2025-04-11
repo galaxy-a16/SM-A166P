@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/usage/AppStandbyController;)V
     .locals 0
 
-    .line 2969
     iput-object p1, p0, Lcom/android/server/usage/AppStandbyController$2;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -36,14 +34,12 @@
 
     if-nez p1, :cond_0
 
-    .line 2979
     iget-object p1, p0, Lcom/android/server/usage/AppStandbyController$2;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {p1}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$misDisplayOn(Lcom/android/server/usage/AppStandbyController;)Z
 
     move-result p1
 
-    .line 2980
     iget-object v0, p0, Lcom/android/server/usage/AppStandbyController$2;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {v0}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmAppIdleLock(Lcom/android/server/usage/AppStandbyController;)Ljava/lang/Object;
@@ -52,7 +48,6 @@
 
     monitor-enter v0
 
-    .line 2981
     :try_start_0
     iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$2;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -70,7 +65,6 @@
 
     invoke-virtual {v1, p1, v2, v3}, Lcom/android/server/usage/AppIdleHistory;->updateDisplay(ZJ)V
 
-    .line 2982
     monitor-exit v0
 
     goto :goto_0
@@ -92,6 +86,5 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

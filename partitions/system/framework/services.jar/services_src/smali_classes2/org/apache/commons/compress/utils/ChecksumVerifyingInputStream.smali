@@ -17,19 +17,14 @@
 .method public constructor <init>(Ljava/util/zip/Checksum;Ljava/io/InputStream;JJ)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->checksum:Ljava/util/zip/Checksum;
 
-    .line 39
     iput-object p2, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->in:Ljava/io/InputStream;
 
-    .line 40
     iput-wide p5, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->expectedChecksum:J
 
-    .line 41
     iput-wide p3, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->bytesRemaining:J
 
     return-void
@@ -40,7 +35,6 @@
 .method public close()V
     .locals 0
 
-    .line 107
     iget-object p0, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
@@ -51,7 +45,6 @@
 .method public read()I
     .locals 8
 
-    .line 52
     iget-wide v0, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
@@ -64,7 +57,6 @@
 
     return p0
 
-    .line 55
     :cond_0
     iget-object v0, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->in:Ljava/io/InputStream;
 
@@ -74,12 +66,10 @@
 
     if-ltz v0, :cond_1
 
-    .line 57
     iget-object v1, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->checksum:Ljava/util/zip/Checksum;
 
     invoke-interface {v1, v0}, Ljava/util/zip/Checksum;->update(I)V
 
-    .line 58
     iget-wide v4, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->bytesRemaining:J
 
     const-wide/16 v6, 0x1
@@ -88,7 +78,6 @@
 
     iput-wide v4, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->bytesRemaining:J
 
-    .line 60
     :cond_1
     iget-wide v4, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->bytesRemaining:J
 
@@ -110,7 +99,6 @@
 
     goto :goto_0
 
-    .line 61
     :cond_2
     new-instance p0, Ljava/io/IOException;
 
@@ -128,7 +116,6 @@
 .method public read([B)I
     .locals 2
 
-    .line 74
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -143,7 +130,6 @@
 .method public read([BII)I
     .locals 2
 
-    .line 85
     iget-object v0, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
@@ -152,12 +138,10 @@
 
     if-ltz p3, :cond_0
 
-    .line 87
     iget-object v0, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->checksum:Ljava/util/zip/Checksum;
 
     invoke-interface {v0, p1, p2, p3}, Ljava/util/zip/Checksum;->update([BII)V
 
-    .line 88
     iget-wide p1, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->bytesRemaining:J
 
     int-to-long v0, p3
@@ -166,7 +150,6 @@
 
     iput-wide p1, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->bytesRemaining:J
 
-    .line 90
     :cond_0
     iget-wide p1, p0, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->bytesRemaining:J
 
@@ -190,7 +173,6 @@
 
     goto :goto_0
 
-    .line 91
     :cond_1
     new-instance p0, Ljava/io/IOException;
 
@@ -208,7 +190,6 @@
 .method public skip(J)J
     .locals 0
 
-    .line 99
     invoke-virtual {p0}, Lorg/apache/commons/compress/utils/ChecksumVerifyingInputStream;->read()I
 
     move-result p0

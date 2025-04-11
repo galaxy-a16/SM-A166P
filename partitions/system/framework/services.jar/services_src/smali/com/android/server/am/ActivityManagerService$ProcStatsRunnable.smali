@@ -16,13 +16,10 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessStatsService;)V
     .locals 0
 
-    .line 19551
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19552
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$ProcStatsRunnable;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 19553
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$ProcStatsRunnable;->mProcessStats:Lcom/android/server/am/ProcessStatsService;
 
     return-void
@@ -33,7 +30,6 @@
 .method public run()V
     .locals 0
 
-    .line 19557
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$ProcStatsRunnable;->mProcessStats:Lcom/android/server/am/ProcessStatsService;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessStatsService;->writeStateAsync()V

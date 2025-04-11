@@ -20,7 +20,6 @@
 .method public onIdMatch(Landroid/view/InsetsSource;Landroid/view/InsetsSource;)V
     .locals 0
 
-    .line 382
     invoke-virtual {p2}, Landroid/view/InsetsSource;->isVisible()Z
 
     move-result p0

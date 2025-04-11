@@ -20,7 +20,6 @@
 .method public getInputStream(Ljava/io/InputStream;)Ljava/io/InputStream;
     .locals 1
 
-    .line 91
     invoke-static {}, Lorg/tukaani/xz/ArrayCache;->getDefaultCache()Lorg/tukaani/xz/ArrayCache;
 
     move-result-object v0

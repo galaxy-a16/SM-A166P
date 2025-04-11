@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$3RsRTKn9dwWfrQSG_99gd8XkO4w(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Landroid/util/ArraySet;Lcom/android/server/pm/pkg/PackageStateInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/pm/AppStateHelper;->lambda$addLibraryDependency$0(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Landroid/util/ArraySet;Lcom/android/server/pm/pkg/PackageStateInternal;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 49
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0xa
@@ -41,10 +39,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/pm/AppStateHelper;->mContext:Landroid/content/Context;
 
     return-void
@@ -53,10 +49,8 @@
 .method public static containsAny([Ljava/lang/String;Ljava/util/List;)Z
     .locals 7
 
-    .line 167
     array-length v0, p0
 
-    .line 168
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -72,7 +66,6 @@
 
     if-ge v4, v1, :cond_2
 
-    .line 170
     aget-object v5, p0, v3
 
     invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -110,7 +103,6 @@
 .method public static isPackageLoaded(Landroid/app/ActivityManager$RunningAppProcessInfo;Ljava/lang/String;)Z
     .locals 1
 
-    .line 61
     iget-object v0, p0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -121,7 +113,6 @@
 
     iget-object p0, p0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgDeps:[Ljava/lang/String;
 
-    .line 62
     invoke-static {p0, p1}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -146,7 +137,6 @@
 .method public static synthetic lambda$addLibraryDependency$0(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Landroid/util/ArraySet;Lcom/android/server/pm/pkg/PackageStateInternal;)V
     .locals 1
 
-    .line 215
     invoke-interface {p4}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object p4
@@ -155,7 +145,6 @@
 
     return-void
 
-    .line 219
     :cond_0
     invoke-interface {p4}, Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;->getUsesLibrariesSorted()[Ljava/lang/String;
 
@@ -167,7 +156,6 @@
 
     if-nez v0, :cond_1
 
-    .line 220
     invoke-interface {p4}, Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;->getUsesOptionalLibrariesSorted()[Ljava/lang/String;
 
     move-result-object v0
@@ -178,7 +166,6 @@
 
     if-nez p0, :cond_1
 
-    .line 221
     invoke-interface {p4}, Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;->getUsesStaticLibrariesSorted()[Ljava/lang/String;
 
     move-result-object p0
@@ -189,7 +176,6 @@
 
     if-nez p0, :cond_1
 
-    .line 222
     invoke-interface {p4}, Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;->getUsesSdkLibrariesSorted()[Ljava/lang/String;
 
     move-result-object p0
@@ -200,7 +186,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 223
     :cond_1
     invoke-interface {p4}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
@@ -217,7 +202,6 @@
 .method public final addLibraryDependency(Landroid/util/ArraySet;Ljava/util/List;)V
     .locals 5
 
-    .line 183
     const-class p0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -226,22 +210,18 @@
 
     check-cast p0, Landroid/content/pm/PackageManagerInternal;
 
-    .line 185
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 186
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 187
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 188
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -260,7 +240,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 189
     invoke-virtual {p0, v3}, Landroid/content/pm/PackageManagerInternal;->getAndroidPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/AndroidPackage;
 
     move-result-object v3
@@ -269,7 +248,6 @@
 
     goto :goto_0
 
-    .line 193
     :cond_1
     invoke-interface {v3}, Lcom/android/server/pm/pkg/AndroidPackage;->getLibraryNames()Ljava/util/List;
 
@@ -277,17 +255,14 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 194
     invoke-interface {v3}, Lcom/android/server/pm/pkg/AndroidPackage;->getStaticSharedLibraryName()Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_2
 
-    .line 196
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 198
     :cond_2
     invoke-interface {v3}, Lcom/android/server/pm/pkg/AndroidPackage;->getSdkLibraryName()Ljava/lang/String;
 
@@ -295,12 +270,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 200
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 204
     :cond_3
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -308,14 +281,12 @@
 
     if-eqz p2, :cond_4
 
-    .line 205
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
-    .line 206
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p2
@@ -324,17 +295,13 @@
 
     return-void
 
-    .line 210
     :cond_4
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 211
     invoke-static {v2}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 212
     invoke-static {v1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 214
     new-instance p2, Lcom/android/server/pm/AppStateHelper$$ExternalSyntheticLambda0;
 
     invoke-direct {p2, v0, v1, v2, p1}, Lcom/android/server/pm/AppStateHelper$$ExternalSyntheticLambda0;-><init>(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Landroid/util/ArraySet;)V
@@ -347,12 +314,10 @@
 .method public getDependencyPackages(Ljava/util/List;)Ljava/util/List;
     .locals 8
 
-    .line 295
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 297
     iget-object v1, p0, Lcom/android/server/pm/AppStateHelper;->mContext:Landroid/content/Context;
 
     const-class v2, Landroid/app/ActivityManager;
@@ -363,7 +328,6 @@
 
     check-cast v1, Landroid/app/ActivityManager;
 
-    .line 298
     invoke-virtual {v1}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v1
@@ -385,7 +349,6 @@
 
     check-cast v2, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 299
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -404,7 +367,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 300
     invoke-static {v2, v4}, Lcom/android/server/pm/AppStateHelper;->isPackageLoaded(Landroid/app/ActivityManager$RunningAppProcessInfo;Ljava/lang/String;)Z
 
     move-result v4
@@ -413,7 +375,6 @@
 
     goto :goto_0
 
-    .line 303
     :cond_2
     iget-object v4, v2, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
@@ -426,14 +387,12 @@
 
     aget-object v7, v4, v6
 
-    .line 304
     invoke-virtual {v0, v7}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 309
     :cond_3
     const-class v1, Landroid/app/ActivityManagerInternal;
 
@@ -443,7 +402,6 @@
 
     check-cast v1, Landroid/app/ActivityManagerInternal;
 
-    .line 310
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -461,7 +419,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 311
     invoke-virtual {v1, v3}, Landroid/app/ActivityManagerInternal;->getClientPackages(Ljava/lang/String;)Landroid/util/ArraySet;
 
     move-result-object v3
@@ -470,11 +427,9 @@
 
     goto :goto_2
 
-    .line 314
     :cond_4
     invoke-virtual {p0, v0, p1}, Lcom/android/server/pm/AppStateHelper;->addLibraryDependency(Landroid/util/ArraySet;Ljava/util/List;)V
 
-    .line 316
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -485,7 +440,6 @@
 .method public final getImportance(Ljava/lang/String;)I
     .locals 1
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/pm/AppStateHelper;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/ActivityManager;
@@ -496,7 +450,6 @@
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 70
     invoke-virtual {p0, p1}, Landroid/app/ActivityManager;->getPackageImportance(Ljava/lang/String;)I
 
     move-result p0
@@ -507,7 +460,6 @@
 .method public final hasActiveAudio(Ljava/lang/String;)Z
     .locals 1
 
-    .line 137
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppStateHelper;->hasAudioFocus(Ljava/lang/String;)Z
 
     move-result v0
@@ -540,7 +492,6 @@
 
     const/4 v0, 0x1
 
-    .line 233
     invoke-virtual {p0, p1, v0}, Lcom/android/server/pm/AppStateHelper;->hasActiveNetwork(Ljava/util/List;I)Z
 
     move-result v1
@@ -549,7 +500,6 @@
 
     const/4 v1, 0x0
 
-    .line 234
     invoke-virtual {p0, p1, v1}, Lcom/android/server/pm/AppStateHelper;->hasActiveNetwork(Ljava/util/List;I)Z
 
     move-result p0
@@ -569,12 +519,10 @@
 .method public final hasActiveNetwork(Ljava/util/List;I)Z
     .locals 8
 
-    .line 141
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/pm/AppStateHelper;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/app/usage/NetworkStatsManager;
@@ -587,12 +535,10 @@
 
     check-cast v1, Landroid/app/usage/NetworkStatsManager;
 
-    .line 143
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 144
     sget-wide v2, Lcom/android/server/pm/AppStateHelper;->ACTIVE_NETWORK_DURATION_MILLIS:J
 
     sub-long v4, v6, v2
@@ -601,7 +547,6 @@
 
     move v2, p2
 
-    .line 145
     :try_start_0
     invoke-virtual/range {v1 .. v7}, Landroid/app/usage/NetworkStatsManager;->querySummary(ILjava/lang/String;JJ)Landroid/app/usage/NetworkStats;
 
@@ -609,13 +554,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 146
     :try_start_1
     new-instance p2, Landroid/app/usage/NetworkStats$Bucket;
 
     invoke-direct {p2}, Landroid/app/usage/NetworkStats$Bucket;-><init>()V
 
-    .line 147
     :cond_0
     :goto_0
     invoke-virtual {p0}, Landroid/app/usage/NetworkStats;->hasNextBucket()Z
@@ -624,10 +567,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 148
     invoke-virtual {p0, p2}, Landroid/app/usage/NetworkStats;->getNextBucket(Landroid/app/usage/NetworkStats$Bucket;)Z
 
-    .line 149
     invoke-virtual {p2}, Landroid/app/usage/NetworkStats$Bucket;->getUid()I
 
     move-result v1
@@ -636,7 +577,6 @@
 
     move-result-object v1
 
-    .line 150
     invoke-interface {p1, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v1
@@ -645,7 +585,6 @@
 
     goto :goto_0
 
-    .line 153
     :cond_1
     invoke-virtual {p2}, Landroid/app/usage/NetworkStats$Bucket;->getRxPackets()J
 
@@ -667,7 +606,6 @@
 
     if-lez v1, :cond_0
 
-    .line 157
     :cond_2
     :try_start_2
     invoke-virtual {p0}, Landroid/app/usage/NetworkStats;->close()V
@@ -688,7 +626,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 145
     :try_start_3
     invoke-virtual {p0}, Landroid/app/usage/NetworkStats;->close()V
     :try_end_3
@@ -720,23 +657,19 @@
 
     const-string p0, "audio"
 
-    .line 78
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 77
     invoke-static {p0}, Landroid/media/IAudioService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/IAudioService;
 
     move-result-object p0
 
-    .line 80
     :try_start_0
     invoke-interface {p0}, Landroid/media/IAudioService;->getFocusStack()Ljava/util/List;
 
     move-result-object p0
 
-    .line 81
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -745,7 +678,6 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 82
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -761,7 +693,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 83
     :goto_0
     invoke-static {p1, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -780,7 +711,6 @@
 .method public hasForegroundApp(Ljava/util/List;)Z
     .locals 1
 
-    .line 254
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -798,7 +728,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 255
     invoke-virtual {p0, v0}, Lcom/android/server/pm/AppStateHelper;->isAppForeground(Ljava/lang/String;)Z
 
     move-result v0
@@ -818,7 +747,6 @@
 .method public hasInteractingApp(Ljava/util/List;)Z
     .locals 3
 
-    .line 241
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -836,14 +764,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 242
     invoke-virtual {p0, v1}, Lcom/android/server/pm/AppStateHelper;->hasActiveAudio(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 243
     invoke-virtual {p0, v1}, Lcom/android/server/pm/AppStateHelper;->isAppTopVisible(Ljava/lang/String;)Z
 
     move-result v1
@@ -855,7 +781,6 @@
 
     return p0
 
-    .line 247
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppStateHelper;->hasActiveNetwork(Ljava/util/List;)Z
 
@@ -867,7 +792,6 @@
 .method public hasTopVisibleApp(Ljava/util/List;)Z
     .locals 1
 
-    .line 266
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -885,7 +809,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 267
     invoke-virtual {p0, v0}, Lcom/android/server/pm/AppStateHelper;->isAppTopVisible(Ljava/lang/String;)Z
 
     move-result v0
@@ -905,7 +828,6 @@
 .method public final hasVoiceCall()Z
     .locals 2
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/pm/AppStateHelper;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/media/AudioManager;
@@ -918,7 +840,6 @@
 
     const/4 v0, 0x0
 
-    .line 95
     :try_start_0
     invoke-virtual {p0}, Landroid/media/AudioManager;->getMode()I
 
@@ -945,7 +866,6 @@
 .method public final isAppForeground(Ljava/lang/String;)Z
     .locals 0
 
-    .line 123
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppStateHelper;->getImportance(Ljava/lang/String;)I
 
     move-result p0
@@ -968,7 +888,6 @@
 .method public isAppTopVisible(Ljava/lang/String;)Z
     .locals 0
 
-    .line 130
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppStateHelper;->getImportance(Ljava/lang/String;)I
 
     move-result p0
@@ -995,7 +914,6 @@
 
     const/4 v1, 0x0
 
-    .line 279
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -1006,7 +924,6 @@
 
     return v2
 
-    .line 285
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/AppStateHelper;->mContext:Landroid/content/Context;
 
@@ -1018,7 +935,6 @@
 
     check-cast v0, Landroid/telecom/TelecomManager;
 
-    .line 286
     invoke-virtual {v0}, Landroid/telecom/TelecomManager;->isInCall()Z
 
     move-result v0
@@ -1041,7 +957,6 @@
 .method public final isRecordingAudio(Ljava/lang/String;)Z
     .locals 1
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/pm/AppStateHelper;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/media/AudioManager;
@@ -1052,7 +967,6 @@
 
     check-cast p0, Landroid/media/AudioManager;
 
-    .line 109
     :try_start_0
     invoke-virtual {p0}, Landroid/media/AudioManager;->getActiveRecordingConfigurations()Ljava/util/List;
 
@@ -1075,7 +989,6 @@
 
     check-cast v0, Landroid/media/AudioRecordingConfiguration;
 
-    .line 110
     invoke-virtual {v0}, Landroid/media/AudioRecordingConfiguration;->getClientPackageName()Ljava/lang/String;
 
     move-result-object v0

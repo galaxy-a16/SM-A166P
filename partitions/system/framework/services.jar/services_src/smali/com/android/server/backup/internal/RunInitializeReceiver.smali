@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/backup/UserBackupManagerService;)V
     .locals 0
 
-    .line 39
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/backup/internal/RunInitializeReceiver;->mUserBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
     return-void
@@ -27,7 +25,6 @@
 
     const-string p1, "android.app.backup.intent.INIT"
 
-    .line 44
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -40,7 +37,6 @@
 
     return-void
 
-    .line 48
     :cond_0
     iget-object p1, p0, Lcom/android/server/backup/internal/RunInitializeReceiver;->mUserBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
@@ -50,7 +46,6 @@
 
     monitor-enter p1
 
-    .line 49
     :try_start_0
     iget-object p2, p0, Lcom/android/server/backup/internal/RunInitializeReceiver;->mUserBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
@@ -60,7 +55,6 @@
 
     const-string v0, "BackupManagerService"
 
-    .line 51
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,14 +79,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     invoke-interface {p2}, Ljava/util/Set;->size()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 55
     invoke-interface {p2}, Ljava/util/Set;->size()I
 
     move-result v0
@@ -105,19 +97,16 @@
 
     check-cast p2, [Ljava/lang/String;
 
-    .line 56
     iget-object v0, p0, Lcom/android/server/backup/internal/RunInitializeReceiver;->mUserBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/backup/UserBackupManagerService;->clearPendingInits()V
 
-    .line 57
     iget-object p0, p0, Lcom/android/server/backup/internal/RunInitializeReceiver;->mUserBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/backup/UserBackupManagerService;->initializeTransports([Ljava/lang/String;Landroid/app/backup/IBackupObserver;)V
 
-    .line 59
     :cond_1
     monitor-exit p1
 

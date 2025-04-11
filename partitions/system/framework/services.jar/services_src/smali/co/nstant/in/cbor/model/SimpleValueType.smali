@@ -27,7 +27,6 @@
 .method public static synthetic $values()[Lco/nstant/in/cbor/model/SimpleValueType;
     .locals 6
 
-    .line 3
     sget-object v0, Lco/nstant/in/cbor/model/SimpleValueType;->FALSE:Lco/nstant/in/cbor/model/SimpleValueType;
 
     sget-object v1, Lco/nstant/in/cbor/model/SimpleValueType;->TRUE:Lco/nstant/in/cbor/model/SimpleValueType;
@@ -50,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 5
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValueType;
 
     const/16 v1, 0x14
@@ -63,7 +61,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValueType;->FALSE:Lco/nstant/in/cbor/model/SimpleValueType;
 
-    .line 6
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValueType;
 
     const/4 v1, 0x1
@@ -76,7 +73,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValueType;->TRUE:Lco/nstant/in/cbor/model/SimpleValueType;
 
-    .line 7
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValueType;
 
     const/4 v1, 0x2
@@ -89,7 +85,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValueType;->NULL:Lco/nstant/in/cbor/model/SimpleValueType;
 
-    .line 8
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValueType;
 
     const/4 v1, 0x3
@@ -102,7 +97,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValueType;->UNDEFINED:Lco/nstant/in/cbor/model/SimpleValueType;
 
-    .line 9
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValueType;
 
     const-string v1, "RESERVED"
@@ -113,7 +107,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValueType;->RESERVED:Lco/nstant/in/cbor/model/SimpleValueType;
 
-    .line 10
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValueType;
 
     const-string v1, "UNALLOCATED"
@@ -124,7 +117,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValueType;->UNALLOCATED:Lco/nstant/in/cbor/model/SimpleValueType;
 
-    .line 3
     invoke-static {}, Lco/nstant/in/cbor/model/SimpleValueType;->$values()[Lco/nstant/in/cbor/model/SimpleValueType;
 
     move-result-object v0
@@ -137,10 +129,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 14
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 15
     iput p3, p0, Lco/nstant/in/cbor/model/SimpleValueType;->value:I
 
     return-void
@@ -153,36 +143,30 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 42
     sget-object p0, Lco/nstant/in/cbor/model/SimpleValueType;->UNALLOCATED:Lco/nstant/in/cbor/model/SimpleValueType;
 
     return-object p0
 
-    .line 40
     :pswitch_0
     sget-object p0, Lco/nstant/in/cbor/model/SimpleValueType;->RESERVED:Lco/nstant/in/cbor/model/SimpleValueType;
 
     return-object p0
 
-    .line 31
     :pswitch_1
     sget-object p0, Lco/nstant/in/cbor/model/SimpleValueType;->UNDEFINED:Lco/nstant/in/cbor/model/SimpleValueType;
 
     return-object p0
 
-    .line 29
     :pswitch_2
     sget-object p0, Lco/nstant/in/cbor/model/SimpleValueType;->NULL:Lco/nstant/in/cbor/model/SimpleValueType;
 
     return-object p0
 
-    .line 27
     :pswitch_3
     sget-object p0, Lco/nstant/in/cbor/model/SimpleValueType;->TRUE:Lco/nstant/in/cbor/model/SimpleValueType;
 
     return-object p0
 
-    .line 25
     :pswitch_4
     sget-object p0, Lco/nstant/in/cbor/model/SimpleValueType;->FALSE:Lco/nstant/in/cbor/model/SimpleValueType;
 
@@ -210,7 +194,6 @@
 .method public static valueOf(Ljava/lang/String;)Lco/nstant/in/cbor/model/SimpleValueType;
     .locals 1
 
-    .line 3
     const-class v0, Lco/nstant/in/cbor/model/SimpleValueType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -225,7 +208,6 @@
 .method public static values()[Lco/nstant/in/cbor/model/SimpleValueType;
     .locals 1
 
-    .line 3
     sget-object v0, Lco/nstant/in/cbor/model/SimpleValueType;->$VALUES:[Lco/nstant/in/cbor/model/SimpleValueType;
 
     invoke-virtual {v0}, [Lco/nstant/in/cbor/model/SimpleValueType;->clone()Ljava/lang/Object;
@@ -242,7 +224,6 @@
 .method public getValue()I
     .locals 0
 
-    .line 19
     iget p0, p0, Lco/nstant/in/cbor/model/SimpleValueType;->value:I
 
     return p0

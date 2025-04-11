@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppRestrictionController;)V
     .locals 0
 
-    .line 1462
     iput-object p1, p0, Lcom/android/server/am/AppRestrictionController$5;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUidActive(I)V
     .locals 2
 
-    .line 1484
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$5;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -47,7 +45,6 @@
 .method public onUidGone(IZ)V
     .locals 1
 
-    .line 1478
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$5;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -60,7 +57,6 @@
 
     move-result-object p0
 
-    .line 1479
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -69,7 +65,6 @@
 .method public onUidIdle(IZ)V
     .locals 1
 
-    .line 1472
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$5;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -82,7 +77,6 @@
 
     move-result-object p0
 
-    .line 1473
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -91,7 +85,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 1466
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$5;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -104,7 +97,6 @@
 
     move-result-object p0
 
-    .line 1467
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

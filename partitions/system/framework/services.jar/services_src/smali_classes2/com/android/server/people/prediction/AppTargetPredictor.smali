@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$PX1ZzbWR4eiQEDW6DdwMdZBvWM4(Lcom/android/server/people/prediction/AppTargetPredictor;Landroid/app/prediction/AppTargetEvent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/people/prediction/AppTargetPredictor;->lambda$onAppTargetEvent$0(Landroid/app/prediction/AppTargetEvent;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static synthetic $r8$lambda$_OZqHdgSxFX0EayuToD-OHYiVFk(Lcom/android/server/people/prediction/AppTargetPredictor;Ljava/util/List;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/people/prediction/AppTargetPredictor;->lambda$onSortAppTargets$1(Ljava/util/List;Ljava/util/function/Consumer;)V
 
     return-void
@@ -37,22 +35,16 @@
 .method public constructor <init>(Landroid/app/prediction/AppPredictionContext;Ljava/util/function/Consumer;Lcom/android/server/people/data/DataManager;I)V
     .locals 0
 
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mPredictionContext:Landroid/app/prediction/AppPredictionContext;
 
-    .line 66
     iput-object p2, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mUpdatePredictionsMethod:Ljava/util/function/Consumer;
 
-    .line 67
     iput-object p3, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mDataManager:Lcom/android/server/people/data/DataManager;
 
-    .line 68
     iput p4, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mCallingUserId:I
 
-    .line 69
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p1
@@ -65,7 +57,6 @@
 .method public static create(Landroid/app/prediction/AppPredictionContext;Ljava/util/function/Consumer;Lcom/android/server/people/data/DataManager;ILandroid/content/Context;)Lcom/android/server/people/prediction/AppTargetPredictor;
     .locals 7
 
-    .line 48
     invoke-virtual {p0}, Landroid/app/prediction/AppPredictionContext;->getUiSurface()Ljava/lang/String;
 
     move-result-object v0
@@ -78,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 49
     new-instance v0, Lcom/android/server/people/prediction/ShareTargetPredictor;
 
     move-object v1, v0
@@ -97,7 +87,6 @@
 
     return-object v0
 
-    .line 52
     :cond_0
     new-instance p4, Lcom/android/server/people/prediction/AppTargetPredictor;
 
@@ -109,7 +98,6 @@
 .method private synthetic lambda$onAppTargetEvent$0(Landroid/app/prediction/AppTargetEvent;)V
     .locals 0
 
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/people/prediction/AppTargetPredictor;->reportAppTargetEvent(Landroid/app/prediction/AppTargetEvent;)V
 
     return-void
@@ -118,7 +106,6 @@
 .method private synthetic lambda$onSortAppTargets$1(Ljava/util/List;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 93
     invoke-virtual {p0, p1, p2}, Lcom/android/server/people/prediction/AppTargetPredictor;->sortTargets(Ljava/util/List;Ljava/util/function/Consumer;)V
 
     return-void
@@ -129,7 +116,6 @@
 .method public getDataManager()Lcom/android/server/people/data/DataManager;
     .locals 0
 
-    .line 138
     iget-object p0, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mDataManager:Lcom/android/server/people/data/DataManager;
 
     return-object p0
@@ -138,7 +124,6 @@
 .method public getPredictionContext()Landroid/app/prediction/AppPredictionContext;
     .locals 0
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mPredictionContext:Landroid/app/prediction/AppPredictionContext;
 
     return-object p0
@@ -147,7 +132,6 @@
 .method public getUpdatePredictionsMethod()Ljava/util/function/Consumer;
     .locals 0
 
-    .line 106
     iget-object p0, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mUpdatePredictionsMethod:Ljava/util/function/Consumer;
 
     return-object p0
@@ -156,7 +140,6 @@
 .method public onAppTargetEvent(Landroid/app/prediction/AppTargetEvent;)V
     .locals 2
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mCallbackExecutor:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/android/server/people/prediction/AppTargetPredictor$$ExternalSyntheticLambda0;
@@ -171,14 +154,12 @@
 .method public onLaunchLocationShown(Ljava/lang/String;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onRequestPredictionUpdate()V
     .locals 2
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mCallbackExecutor:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/android/server/people/prediction/AppTargetPredictor$$ExternalSyntheticLambda1;
@@ -193,7 +174,6 @@
 .method public onSortAppTargets(Ljava/util/List;Ljava/util/function/Consumer;)V
     .locals 2
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mCallbackExecutor:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/android/server/people/prediction/AppTargetPredictor$$ExternalSyntheticLambda2;
@@ -208,21 +188,18 @@
 .method public predictTargets()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public reportAppTargetEvent(Landroid/app/prediction/AppTargetEvent;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public sortTargets(Ljava/util/List;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 125
     invoke-interface {p2, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
@@ -231,7 +208,6 @@
 .method public updatePredictions(Ljava/util/List;)V
     .locals 0
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/people/prediction/AppTargetPredictor;->mUpdatePredictionsMethod:Ljava/util/function/Consumer;
 
     invoke-interface {p0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V

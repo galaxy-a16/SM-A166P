@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 4364
     iput-object p1, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 9
 
-    .line 4367
     iget-object v0, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmLockBatteryInfoBackUp(Lcom/android/server/BatteryService;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 4368
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
@@ -46,7 +43,6 @@
 
     move-result-wide v1
 
-    .line 4369
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -67,7 +63,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4370
     iget-object v3, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v3}, Lcom/android/server/BatteryService;->-$$Nest$mreadBatteryAsocFromEfsLocked(Lcom/android/server/BatteryService;)J
@@ -76,7 +71,6 @@
 
     invoke-static {v3, v4, v5}, Lcom/android/server/BatteryService;->-$$Nest$fputmSavedBatteryAsoc(Lcom/android/server/BatteryService;J)V
 
-    .line 4371
     iget-object v3, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v3}, Lcom/android/server/BatteryService;->-$$Nest$fgetmSavedBatteryAsoc(Lcom/android/server/BatteryService;)J
@@ -89,7 +83,6 @@
 
     if-gez v3, :cond_0
 
-    .line 4372
     iget-object v3, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v3, v1, v2}, Lcom/android/server/BatteryService;->-$$Nest$minitializeSavedAsoc(Lcom/android/server/BatteryService;J)J
@@ -103,7 +96,6 @@
 
     if-ltz v3, :cond_1
 
-    .line 4375
     iget-object v3, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v3}, Lcom/android/server/BatteryService;->-$$Nest$fgetmSavedBatteryAsoc(Lcom/android/server/BatteryService;)J
@@ -128,7 +120,6 @@
 
     if-gez v1, :cond_1
 
-    .line 4377
     iget-object v1, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmSavedBatteryAsoc(Lcom/android/server/BatteryService;)J
@@ -141,7 +132,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/android/server/BatteryService;->-$$Nest$fputmSavedBatteryAsoc(Lcom/android/server/BatteryService;J)V
 
-    .line 4378
     iget-object v1, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     const-string v2, "/efs/FactoryApp/asoc"
@@ -152,7 +142,6 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/android/server/BatteryService;->-$$Nest$msaveBatteryInfo(Lcom/android/server/BatteryService;Ljava/lang/String;J)I
 
-    .line 4379
     iget-object v1, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmBatteryType(Lcom/android/server/BatteryService;)I
@@ -163,7 +152,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 4380
     iget-object v1, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
     const-string v2, "/sys/class/power_supply/sec_auth/asoc"
@@ -174,7 +162,6 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/android/server/BatteryService;->-$$Nest$msaveBatteryInfo(Lcom/android/server/BatteryService;Ljava/lang/String;J)I
 
-    .line 4383
     :cond_1
     iget-object p0, p0, Lcom/android/server/BatteryService$40;->this$0:Lcom/android/server/BatteryService;
 
@@ -186,7 +173,6 @@
 
     invoke-static {p0, v1, v2, v3}, Lcom/android/server/BatteryService;->-$$Nest$msaveBatteryInfo(Lcom/android/server/BatteryService;Ljava/lang/String;J)I
 
-    .line 4384
     monitor-exit v0
 
     return-void

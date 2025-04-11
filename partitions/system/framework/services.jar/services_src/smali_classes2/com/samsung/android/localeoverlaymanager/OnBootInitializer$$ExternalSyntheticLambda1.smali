@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Ljava/util/Set;Landroid/content/Context;Landroid/app/LocaleManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/localeoverlaymanager/OnBootInitializer$$ExternalSyntheticLambda1;->f$0:Ljava/util/Set;
@@ -35,7 +34,6 @@
 .method public final accept(Ljava/io/File;)Z
     .locals 2
 
-    .line 0
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/OnBootInitializer$$ExternalSyntheticLambda1;->f$0:Ljava/util/Set;
 
     iget-object v1, p0, Lcom/samsung/android/localeoverlaymanager/OnBootInitializer$$ExternalSyntheticLambda1;->f$1:Landroid/content/Context;

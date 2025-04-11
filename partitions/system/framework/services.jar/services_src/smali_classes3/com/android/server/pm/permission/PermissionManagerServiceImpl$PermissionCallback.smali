@@ -15,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/permission/PermissionManagerServiceImpl$PermissionCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$PermissionCallback;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
 
     const/4 v0, 0x0
 
-    .line 6044
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$PermissionCallback;->onPermissionRevoked(IILjava/lang/String;Z)V
 
     return-void
@@ -67,7 +65,6 @@
 
     move-object v3, p3
 
-    .line 6048
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$PermissionCallback;->onPermissionRevoked(IILjava/lang/String;ZLjava/lang/String;)V
 
     return-void

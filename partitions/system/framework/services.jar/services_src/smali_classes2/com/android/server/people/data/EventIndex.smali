@@ -25,7 +25,6 @@
 .method public static synthetic $r8$lambda$Z0TvfTrZD5p3vWOd81wN3kjR-3Y(J)Landroid/util/Range;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->createTwoMinutesLongTimeSlot(J)Landroid/util/Range;
 
     move-result-object p0
@@ -36,7 +35,6 @@
 .method public static synthetic $r8$lambda$i3NyDYgz20fi26r3acGyjk-ocyM(J)Landroid/util/Range;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->createFourHoursLongTimeSlot(J)Landroid/util/Range;
 
     move-result-object p0
@@ -47,7 +45,6 @@
 .method public static synthetic $r8$lambda$ky5s_Q51WvF3zZTzaSUFPNb-wB4(J)Landroid/util/Range;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->createOneHourLongTimeSlot(J)Landroid/util/Range;
 
     move-result-object p0
@@ -58,7 +55,6 @@
 .method public static synthetic $r8$lambda$oObI4tb0P1GmvfZmYp2X84WEua0(J)Landroid/util/Range;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->createOneDayLongTimeSlot(J)Landroid/util/Range;
 
     move-result-object p0
@@ -69,14 +65,12 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 93
     new-instance v0, Lcom/android/server/people/data/EventIndex;
 
     invoke-direct {v0}, Lcom/android/server/people/data/EventIndex;-><init>()V
 
     sput-object v0, Lcom/android/server/people/data/EventIndex;->EMPTY:Lcom/android/server/people/data/EventIndex;
 
-    .line 95
     new-instance v0, Lcom/android/server/people/data/EventIndex$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/people/data/EventIndex$$ExternalSyntheticLambda0;-><init>()V
@@ -97,12 +91,10 @@
 
     move-result-object v0
 
-    .line 97
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 96
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -115,7 +107,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 128
     new-instance v0, Lcom/android/server/people/data/EventIndex$Injector;
 
     invoke-direct {v0}, Lcom/android/server/people/data/EventIndex$Injector;-><init>()V
@@ -132,7 +123,6 @@
 
     new-array v0, v0, [J
 
-    .line 137
     fill-array-data v0, :array_0
 
     invoke-virtual {p1}, Lcom/android/server/people/data/EventIndex$Injector;->currentTimeMillis()J
@@ -155,29 +145,24 @@
 .method public constructor <init>(Lcom/android/server/people/data/EventIndex$Injector;[JJ)V
     .locals 1
 
-    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/people/data/EventIndex;->mLock:Ljava/lang/Object;
 
-    .line 141
     iput-object p1, p0, Lcom/android/server/people/data/EventIndex;->mInjector:Lcom/android/server/people/data/EventIndex$Injector;
 
     const/4 p1, 0x4
 
-    .line 142
     invoke-static {p2, p1}, Ljava/util/Arrays;->copyOf([JI)[J
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
-    .line 143
     iput-wide p3, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
     return-void
@@ -186,7 +171,6 @@
 .method public constructor <init>(Lcom/android/server/people/data/EventIndex;)V
     .locals 4
 
-    .line 132
     iget-object v0, p1, Lcom/android/server/people/data/EventIndex;->mInjector:Lcom/android/server/people/data/EventIndex$Injector;
 
     iget-object v1, p1, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
@@ -201,7 +185,6 @@
 .method public static combine(Lcom/android/server/people/data/EventIndex;Lcom/android/server/people/data/EventIndex;)Lcom/android/server/people/data/EventIndex;
     .locals 6
 
-    .line 107
     iget-wide v0, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
     iget-wide v2, p1, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
@@ -227,13 +210,11 @@
     :cond_1
     move-object p0, p1
 
-    .line 110
     :goto_1
     new-instance p1, Lcom/android/server/people/data/EventIndex;
 
     invoke-direct {p1, v4}, Lcom/android/server/people/data/EventIndex;-><init>(Lcom/android/server/people/data/EventIndex;)V
 
-    .line 111
     iget-wide v0, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/people/data/EventIndex;->updateEventBitmaps(J)V
@@ -245,7 +226,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 114
     iget-object v1, p1, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     aget-wide v2, v1, v0
@@ -269,7 +249,6 @@
 .method public static combineTimeSlotLists(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
     .locals 9
 
-    .line 362
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -278,7 +257,6 @@
 
     move v2, v1
 
-    .line 365
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -292,28 +270,24 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 366
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/util/Range;
 
-    .line 367
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/util/Range;
 
-    .line 368
     invoke-virtual {v3, v4}, Landroid/util/Range;->contains(Landroid/util/Range;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 369
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v1, v1, 0x1
@@ -323,7 +297,6 @@
 
     goto :goto_0
 
-    .line 372
     :cond_0
     invoke-virtual {v3}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
@@ -349,12 +322,10 @@
 
     if-gez v5, :cond_1
 
-    .line 373
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 376
     :cond_1
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -362,7 +333,6 @@
 
     goto :goto_0
 
-    .line 380
     :cond_2
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -370,7 +340,6 @@
 
     if-ge v1, v3, :cond_3
 
-    .line 381
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -383,7 +352,6 @@
 
     goto :goto_2
 
-    .line 382
     :cond_3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -391,7 +359,6 @@
 
     if-ge v2, p0, :cond_4
 
-    .line 383
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p0
@@ -410,7 +377,6 @@
 .method public static createFourHoursLongTimeSlot(J)Landroid/util/Range;
     .locals 2
 
-    .line 402
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->toLocalDateTime(J)Ljava/time/LocalDateTime;
 
     move-result-object v0
@@ -419,7 +385,6 @@
 
     move-result v0
 
-    .line 404
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->toLocalDateTime(J)Ljava/time/LocalDateTime;
 
     move-result-object p0
@@ -438,7 +403,6 @@
 
     move-result-object p0
 
-    .line 405
     invoke-static {p0}, Lcom/android/server/people/data/EventIndex;->toEpochMilli(Ljava/time/LocalDateTime;)J
 
     move-result-wide v0
@@ -471,7 +435,6 @@
 .method public static createOneDayLongTimeSlot(J)Landroid/util/Range;
     .locals 2
 
-    .line 393
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->toLocalDateTime(J)Ljava/time/LocalDateTime;
 
     move-result-object p0
@@ -482,7 +445,6 @@
 
     move-result-object p0
 
-    .line 394
     invoke-static {p0}, Lcom/android/server/people/data/EventIndex;->toEpochMilli(Ljava/time/LocalDateTime;)J
 
     move-result-wide v0
@@ -515,7 +477,6 @@
 .method public static createOneHourLongTimeSlot(J)Landroid/util/Range;
     .locals 2
 
-    .line 413
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->toLocalDateTime(J)Ljava/time/LocalDateTime;
 
     move-result-object p0
@@ -526,7 +487,6 @@
 
     move-result-object p0
 
-    .line 414
     invoke-static {p0}, Lcom/android/server/people/data/EventIndex;->toEpochMilli(Ljava/time/LocalDateTime;)J
 
     move-result-wide v0
@@ -559,7 +519,6 @@
 .method public static createTwoMinutesLongTimeSlot(J)Landroid/util/Range;
     .locals 2
 
-    .line 422
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->toLocalDateTime(J)Ljava/time/LocalDateTime;
 
     move-result-object v0
@@ -568,7 +527,6 @@
 
     move-result v0
 
-    .line 423
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventIndex;->toLocalDateTime(J)Ljava/time/LocalDateTime;
 
     move-result-object p0
@@ -583,12 +541,10 @@
 
     int-to-long v0, v0
 
-    .line 424
     invoke-virtual {p0, v0, v1}, Ljava/time/LocalDateTime;->minusMinutes(J)Ljava/time/LocalDateTime;
 
     move-result-object p0
 
-    .line 425
     invoke-static {p0}, Lcom/android/server/people/data/EventIndex;->toEpochMilli(Ljava/time/LocalDateTime;)J
 
     move-result-wide v0
@@ -621,7 +577,6 @@
 .method public static diffTimeSlots(IJJ)I
     .locals 2
 
-    .line 324
     sget-object v0, Lcom/android/server/people/data/EventIndex;->TIME_SLOT_FACTORIES:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -630,7 +585,6 @@
 
     check-cast p0, Ljava/util/function/Function;
 
-    .line 325
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -641,7 +595,6 @@
 
     check-cast p1, Landroid/util/Range;
 
-    .line 326
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
@@ -652,7 +605,6 @@
 
     check-cast p0, Landroid/util/Range;
 
-    .line 327
     invoke-virtual {p0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
     move-result-object p0
@@ -689,7 +641,6 @@
 .method public static getDuration(Landroid/util/Range;)J
     .locals 4
 
-    .line 316
     invoke-virtual {p0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v0
@@ -726,7 +677,6 @@
 
     const-wide/16 v2, 0x0
 
-    .line 288
     :goto_0
     invoke-virtual {p0}, Landroid/util/proto/ProtoInputStream;->nextField()I
 
@@ -736,7 +686,6 @@
 
     if-eq v4, v5, :cond_2
 
-    .line 289
     invoke-virtual {p0}, Landroid/util/proto/ProtoInputStream;->getFieldNumber()I
 
     move-result v4
@@ -749,7 +698,6 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 299
     sget-object v4, Lcom/android/server/people/data/EventIndex;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -760,7 +708,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 300
     invoke-virtual {p0}, Landroid/util/proto/ProtoInputStream;->getFieldNumber()I
 
     move-result v6
@@ -771,7 +718,6 @@
 
     move-result-object v5
 
-    .line 299
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -779,7 +725,6 @@
     :cond_0
     const-wide v2, 0x10300000002L
 
-    .line 295
     invoke-virtual {p0, v2, v3}, Landroid/util/proto/ProtoInputStream;->readLong(J)J
 
     move-result-wide v2
@@ -791,7 +736,6 @@
 
     const-wide v5, 0x20300000001L
 
-    .line 291
     invoke-virtual {p0, v5, v6}, Landroid/util/proto/ProtoInputStream;->readLong(J)J
 
     move-result-wide v5
@@ -802,7 +746,6 @@
 
     goto :goto_0
 
-    .line 303
     :cond_2
     new-instance p0, Lcom/android/server/people/data/EventIndex;
 
@@ -818,7 +761,6 @@
 .method public static toEpochMilli(Ljava/time/LocalDateTime;)J
     .locals 2
 
-    .line 312
     invoke-static {}, Ljava/time/ZoneId;->systemDefault()Ljava/time/ZoneId;
 
     move-result-object v0
@@ -841,7 +783,6 @@
 .method public static toLocalDateTime(J)Ljava/time/LocalDateTime;
     .locals 0
 
-    .line 308
     invoke-static {p0, p1}, Ljava/time/Instant;->ofEpochMilli(J)Ljava/time/Instant;
 
     move-result-object p0
@@ -854,7 +795,6 @@
 
     move-result-object p1
 
-    .line 307
     invoke-static {p0, p1}, Ljava/time/LocalDateTime;->ofInstant(Ljava/time/Instant;Ljava/time/ZoneId;)Ljava/time/LocalDateTime;
 
     move-result-object p0
@@ -867,17 +807,14 @@
 .method public addEvent(J)V
     .locals 10
 
-    .line 204
     sget-object v0, Lcom/android/server/people/data/EventIndex;->EMPTY:Lcom/android/server/people/data/EventIndex;
 
     if-eq v0, p0, :cond_2
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/people/data/EventIndex;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 208
     :try_start_0
     iget-object v1, p0, Lcom/android/server/people/data/EventIndex;->mInjector:Lcom/android/server/people/data/EventIndex$Injector;
 
@@ -885,7 +822,6 @@
 
     move-result-wide v1
 
-    .line 209
     invoke-virtual {p0, v1, v2}, Lcom/android/server/people/data/EventIndex;->updateEventBitmaps(J)V
 
     const/4 v3, 0x0
@@ -895,7 +831,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 211
     invoke-static {v3, p1, p2, v1, v2}, Lcom/android/server/people/data/EventIndex;->diffTimeSlots(IJJ)I
 
     move-result v4
@@ -904,7 +839,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 213
     iget-object v5, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     aget-wide v6, v5, v3
@@ -922,7 +856,6 @@
 
     goto :goto_0
 
-    .line 216
     :cond_1
     monitor-exit v0
 
@@ -937,7 +870,6 @@
 
     throw p0
 
-    .line 205
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -957,7 +889,6 @@
 
     return v0
 
-    .line 247
     :cond_0
     instance-of v1, p1, Lcom/android/server/people/data/EventIndex;
 
@@ -967,11 +898,9 @@
 
     return v2
 
-    .line 250
     :cond_1
     check-cast p1, Lcom/android/server/people/data/EventIndex;
 
-    .line 251
     iget-wide v3, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
     iget-wide v5, p1, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
@@ -984,7 +913,6 @@
 
     iget-object p1, p1, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
-    .line 252
     invoke-static {p0, p1}, Ljava/util/Arrays;->equals([J[J)Z
 
     move-result p0
@@ -1003,12 +931,10 @@
 .method public getActiveTimeSlots()Ljava/util/List;
     .locals 4
 
-    .line 176
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 177
     iget-object v1, p0, Lcom/android/server/people/data/EventIndex;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
@@ -1020,13 +946,11 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 180
     :try_start_0
     invoke-virtual {p0, v2}, Lcom/android/server/people/data/EventIndex;->getActiveTimeSlotsForType(I)Ljava/util/List;
 
     move-result-object v3
 
-    .line 179
     invoke-static {v0, v3}, Lcom/android/server/people/data/EventIndex;->combineTimeSlotLists(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -1035,13 +959,11 @@
 
     goto :goto_0
 
-    .line 182
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 183
     invoke-static {v0}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
     return-object v0
@@ -1049,7 +971,6 @@
     :catchall_0
     move-exception p0
 
-    .line 182
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -1061,12 +982,10 @@
 .method public final getActiveTimeSlotsForType(I)Ljava/util/List;
     .locals 10
 
-    .line 335
     iget-object v0, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     aget-wide v0, v0, p1
 
-    .line 336
     sget-object v2, Lcom/android/server/people/data/EventIndex;->TIME_SLOT_FACTORIES:Ljava/util/List;
 
     invoke-interface {v2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1087,7 +1006,6 @@
 
     check-cast p0, Landroid/util/Range;
 
-    .line 337
     invoke-virtual {p0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
     move-result-object p1
@@ -1098,12 +1016,10 @@
 
     move-result-wide v2
 
-    .line 338
     invoke-static {p0}, Lcom/android/server/people/data/EventIndex;->getDuration(Landroid/util/Range;)J
 
     move-result-wide p0
 
-    .line 339
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
@@ -1116,7 +1032,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 341
     invoke-static {v0, v1}, Ljava/lang/Long;->numberOfTrailingZeros(J)I
 
     move-result v7
@@ -1136,7 +1051,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 347
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
@@ -1168,7 +1082,6 @@
 .method public getMostRecentActiveTimeSlot()Landroid/util/Range;
     .locals 7
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/people/data/EventIndex;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -1178,7 +1091,6 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 154
     :try_start_0
     iget-object v2, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
@@ -1194,11 +1106,9 @@
 
     goto :goto_0
 
-    .line 157
     :cond_0
     sget-object v2, Lcom/android/server/people/data/EventIndex;->TIME_SLOT_FACTORIES:Ljava/util/List;
 
-    .line 158
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -1217,7 +1127,6 @@
 
     check-cast v2, Landroid/util/Range;
 
-    .line 159
     iget-object p0, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     aget-wide v3, p0, v1
@@ -1226,7 +1135,6 @@
 
     move-result p0
 
-    .line 160
     invoke-static {v2}, Lcom/android/server/people/data/EventIndex;->getDuration(Landroid/util/Range;)J
 
     move-result-wide v3
@@ -1235,7 +1143,6 @@
 
     mul-long/2addr v3, v5
 
-    .line 161
     invoke-virtual {v2}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
     move-result-object p0
@@ -1252,7 +1159,6 @@
 
     move-result-object p0
 
-    .line 162
     invoke-virtual {v2}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v1
@@ -1269,7 +1175,6 @@
 
     move-result-object v1
 
-    .line 161
     invoke-static {p0, v1}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
 
     move-result-object p0
@@ -1278,7 +1183,6 @@
 
     return-object p0
 
-    .line 164
     :cond_1
     monitor-exit v0
 
@@ -1299,7 +1203,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 257
     iget-wide v0, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1330,7 +1233,6 @@
 .method public isEmpty()Z
     .locals 7
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/people/data/EventIndex;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -1344,7 +1246,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 191
     :try_start_0
     iget-object v3, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
@@ -1356,7 +1257,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 192
     monitor-exit v0
 
     return v1
@@ -1366,7 +1266,6 @@
 
     goto :goto_0
 
-    .line 195
     :cond_1
     monitor-exit v0
 
@@ -1387,22 +1286,18 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 226
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "EventIndex {"
 
-    .line 227
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "perDayEventBitmap=0b"
 
-    .line 228
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 229
     iget-object v1, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     const/4 v2, 0x0
@@ -1417,10 +1312,8 @@
 
     const-string v1, ", perFourHoursEventBitmap=0b"
 
-    .line 230
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 231
     iget-object v1, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     const/4 v2, 0x1
@@ -1435,10 +1328,8 @@
 
     const-string v1, ", perHourEventBitmap=0b"
 
-    .line 232
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 233
     iget-object v1, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     const/4 v2, 0x2
@@ -1453,10 +1344,8 @@
 
     const-string v1, ", perTwoMinutesEventBitmap=0b"
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 235
     iget-object v1, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     const/4 v2, 0x3
@@ -1471,12 +1360,10 @@
 
     const-string v1, ", lastUpdatedTime="
 
-    .line 236
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss"
 
-    .line 237
     iget-wide v2, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
     invoke-static {v1, v2, v3}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
@@ -1487,10 +1374,8 @@
 
     const-string/jumbo p0, "}"
 
-    .line 238
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 239
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1510,7 +1395,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 270
     iget-wide v2, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
     invoke-static {v1, v2, v3, p1, p2}, Lcom/android/server/people/data/EventIndex;->diffTimeSlots(IJJ)I
@@ -1521,7 +1405,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 272
     iget-object v3, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
     aget-wide v4, v3, v1
@@ -1532,7 +1415,6 @@
 
     goto :goto_1
 
-    .line 274
     :cond_0
     iget-object v2, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
@@ -1545,7 +1427,6 @@
 
     goto :goto_0
 
-    .line 279
     :cond_1
     iget-object v1, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
@@ -1559,10 +1440,8 @@
 
     ushr-long/2addr v2, v4
 
-    .line 280
     aput-wide v2, v1, v0
 
-    .line 281
     iput-wide p1, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
     return-void
@@ -1573,7 +1452,6 @@
 
     monitor-enter p0
 
-    .line 261
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventIndex;->mEventBitmaps:[J
 
@@ -1588,14 +1466,12 @@
 
     const-wide v5, 0x20300000001L
 
-    .line 262
     invoke-virtual {p1, v5, v6, v3, v4}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 264
     :cond_0
     iget-wide v0, p0, Lcom/android/server/people/data/EventIndex;->mLastUpdatedTime:J
 
@@ -1605,7 +1481,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 265
     monitor-exit p0
 
     return-void

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/io/File;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSUtLogger;->$r8$lambda$UuPY92wCLZnRKKWm36wY6Nfmpc8(Ljava/io/File;)Z
 
     move-result p0

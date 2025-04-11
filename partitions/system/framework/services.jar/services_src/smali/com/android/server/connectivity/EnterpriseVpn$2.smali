@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/connectivity/EnterpriseVpn;)V
     .locals 0
 
-    .line 884
     iput-object p1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
@@ -24,12 +23,10 @@
 .method public interfaceRemoved(Ljava/lang/String;)V
     .locals 4
 
-    .line 887
     iget-object v0, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     monitor-enter v0
 
-    .line 888
     :try_start_0
     iget-object v1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
@@ -51,7 +48,6 @@
 
     const-string/jumbo v1, "knoxEnterpriseVpn"
 
-    .line 889
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,7 +66,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 891
     :try_start_1
     iget-object v1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
@@ -80,7 +75,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 892
     iget-object v1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-static {v1}, Lcom/android/server/connectivity/EnterpriseVpn;->-$$Nest$fgetmContext(Lcom/android/server/connectivity/EnterpriseVpn;)Landroid/content/Context;
@@ -95,17 +89,14 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 893
     iget-object v1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-static {v1}, Lcom/android/server/connectivity/EnterpriseVpn;->-$$Nest$mcloseInterface(Lcom/android/server/connectivity/EnterpriseVpn;)V
 
-    .line 894
     iget-object v1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-static {v1, p1}, Lcom/android/server/connectivity/EnterpriseVpn;->-$$Nest$mdismissConnectingNotification(Lcom/android/server/connectivity/EnterpriseVpn;Ljava/lang/String;)V
 
-    .line 895
     iget-object p1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     sget-object v1, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTING:Landroid/net/NetworkInfo$DetailedState;
@@ -114,7 +105,6 @@
 
     invoke-virtual {p1, v1, v2}, Lcom/android/server/connectivity/EnterpriseVpn;->updateState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;)V
 
-    .line 896
     invoke-static {}, Lcom/android/server/connectivity/EnterpriseVpn;->-$$Nest$smgetService()Landroid/net/IVpnManager;
 
     move-result-object p1
@@ -133,12 +123,10 @@
 
     invoke-interface {p1, v1, v2}, Landroid/net/IVpnManager;->disconnectKnoxVpn(Ljava/lang/String;I)Z
 
-    .line 897
     iget-object p1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-static {p1}, Lcom/android/server/connectivity/EnterpriseVpn;->-$$Nest$mcleanupVpnStateLocked(Lcom/android/server/connectivity/EnterpriseVpn;)V
 
-    .line 898
     invoke-static {}, Lcom/android/server/connectivity/EnterpriseVpn;->-$$Nest$smgetKnoxVpnService()Lcom/samsung/android/knox/net/vpn/IKnoxVpnPolicy;
 
     move-result-object p1
@@ -151,7 +139,6 @@
 
     invoke-interface {p1, v1}, Lcom/samsung/android/knox/net/vpn/IKnoxVpnPolicy;->removeVpnUidRanges(Ljava/lang/String;)V
 
-    .line 900
     iget-object p1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-static {p1}, Lcom/android/server/connectivity/EnterpriseVpn;->-$$Nest$fgetisVpnObjectRemoved(Lcom/android/server/connectivity/EnterpriseVpn;)Z
@@ -164,10 +151,8 @@
 
     const-string/jumbo v1, "resetting the network capability and unregistering the observer since the interface is removed"
 
-    .line 901
     invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 902
     iget-object p1, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-static {p1}, Lcom/android/server/connectivity/EnterpriseVpn;->-$$Nest$fgetmUserId(Lcom/android/server/connectivity/EnterpriseVpn;)I
@@ -176,7 +161,6 @@
 
     invoke-virtual {p1, v1}, Lcom/android/server/connectivity/EnterpriseVpn;->hideNotification(I)V
 
-    .line 903
     iget-object p0, p0, Lcom/android/server/connectivity/EnterpriseVpn$2;->this$0:Lcom/android/server/connectivity/EnterpriseVpn;
 
     invoke-virtual {p0}, Lcom/android/server/connectivity/EnterpriseVpn;->cleanupObjects()V
@@ -192,7 +176,6 @@
     :try_start_2
     const-string/jumbo p1, "knoxEnterpriseVpn"
 
-    .line 908
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,7 +196,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 911
     :cond_0
     :goto_0
     monitor-exit v0

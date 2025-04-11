@@ -20,7 +20,6 @@
 .method public final onFinished(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/backup/internal/OnTaskFinishedListener;->$r8$lambda$oeBgztBFhkLstOt5uU4vzRLgDig(Ljava/lang/String;)V
 
     return-void

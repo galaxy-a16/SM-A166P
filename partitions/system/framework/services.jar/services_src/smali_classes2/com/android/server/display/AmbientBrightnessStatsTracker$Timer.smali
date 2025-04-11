@@ -15,10 +15,8 @@
 .method public constructor <init>(Lcom/android/server/display/AmbientBrightnessStatsTracker$Clock;)V
     .locals 0
 
-    .line 322
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 323
     iput-object p1, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$Timer;->clock:Lcom/android/server/display/AmbientBrightnessStatsTracker$Clock;
 
     return-void
@@ -29,7 +27,6 @@
 .method public isRunning()Z
     .locals 0
 
-    .line 338
     iget-boolean p0, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$Timer;->started:Z
 
     return p0
@@ -40,7 +37,6 @@
 
     const/4 v0, 0x0
 
-    .line 327
     iput-boolean v0, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$Timer;->started:Z
 
     return-void
@@ -49,12 +45,10 @@
 .method public start()V
     .locals 2
 
-    .line 331
     iget-boolean v0, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$Timer;->started:Z
 
     if-nez v0, :cond_0
 
-    .line 332
     iget-object v0, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$Timer;->clock:Lcom/android/server/display/AmbientBrightnessStatsTracker$Clock;
 
     invoke-interface {v0}, Lcom/android/server/display/AmbientBrightnessStatsTracker$Clock;->elapsedTimeMillis()J
@@ -65,7 +59,6 @@
 
     const/4 v0, 0x1
 
-    .line 333
     iput-boolean v0, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$Timer;->started:Z
 
     :cond_0
@@ -75,12 +68,10 @@
 .method public totalDurationSec()F
     .locals 4
 
-    .line 342
     iget-boolean v0, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$Timer;->started:Z
 
     if-eqz v0, :cond_0
 
-    .line 343
     iget-object v0, p0, Lcom/android/server/display/AmbientBrightnessStatsTracker$Timer;->clock:Lcom/android/server/display/AmbientBrightnessStatsTracker$Clock;
 
     invoke-interface {v0}, Lcom/android/server/display/AmbientBrightnessStatsTracker$Clock;->elapsedTimeMillis()J

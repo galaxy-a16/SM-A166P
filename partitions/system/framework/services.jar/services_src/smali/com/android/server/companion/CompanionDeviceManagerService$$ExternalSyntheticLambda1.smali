@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->$r8$lambda$47SAL0mY48qNHL1gZxol6T77ra0(Lcom/android/server/companion/CompanionDeviceManagerService;)V

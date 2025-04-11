@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$DT0fODtXkyGTbQxQFNLmb5Uy22k(Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;)Lcom/android/server/timezonedetector/LocationAlgorithmEvent;
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->lambda$runHandleLocationEvent$0()Lcom/android/server/timezonedetector/LocationAlgorithmEvent;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$NhCA5XyLBBWvW7VoZvL2ebMYOaU(Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;)Landroid/app/timezonedetector/ManualTimeZoneSuggestion;
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->lambda$runSuggestManualTimeZone$1()Landroid/app/timezonedetector/ManualTimeZoneSuggestion;
 
     move-result-object p0
@@ -33,7 +31,6 @@
 .method public static synthetic $r8$lambda$W_QLov4SYsvZR1RPQr3JQsGhMq0(Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;)Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->lambda$runSuggestTelephonyTimeZone$2()Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;
 
     move-result-object p0
@@ -44,10 +41,8 @@
 .method public constructor <init>(Lcom/android/server/timezonedetector/TimeZoneDetectorService;)V
     .locals 0
 
-    .line 60
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     return-void
@@ -56,7 +51,6 @@
 .method private synthetic lambda$runHandleLocationEvent$0()Lcom/android/server/timezonedetector/LocationAlgorithmEvent;
     .locals 0
 
-    .line 159
     invoke-static {p0}, Lcom/android/server/timezonedetector/LocationAlgorithmEvent;->parseCommandLineArg(Landroid/os/ShellCommand;)Lcom/android/server/timezonedetector/LocationAlgorithmEvent;
 
     move-result-object p0
@@ -67,7 +61,6 @@
 .method private synthetic lambda$runSuggestManualTimeZone$1()Landroid/app/timezonedetector/ManualTimeZoneSuggestion;
     .locals 0
 
-    .line 165
     invoke-static {p0}, Landroid/app/timezonedetector/ManualTimeZoneSuggestion;->parseCommandLineArg(Landroid/os/ShellCommand;)Landroid/app/timezonedetector/ManualTimeZoneSuggestion;
 
     move-result-object p0
@@ -78,7 +71,6 @@
 .method private synthetic lambda$runSuggestTelephonyTimeZone$2()Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;
     .locals 0
 
-    .line 171
     invoke-static {p0}, Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;->parseCommandLineArg(Landroid/os/ShellCommand;)Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;
 
     move-result-object p0
@@ -91,7 +83,6 @@
 
     const/4 v0, 0x0
 
-    .line 218
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
@@ -101,21 +92,18 @@
 
     const-string v0, "--zone_id"
 
-    .line 219
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 221
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 225
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -142,7 +130,6 @@
 
     return-object v0
 
-    .line 231
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -160,14 +147,12 @@
 
     if-nez p1, :cond_0
 
-    .line 67
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 70
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -404,14 +389,12 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 100
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 74
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runSetAutoDetectionEnabled()I
 
@@ -419,7 +402,6 @@
 
     return p0
 
-    .line 84
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runHandleLocationEvent()I
 
@@ -427,7 +409,6 @@
 
     return p0
 
-    .line 78
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runIsGeoDetectionSupported()I
 
@@ -435,7 +416,6 @@
 
     return p0
 
-    .line 90
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runEnableTelephonyFallback()I
 
@@ -443,7 +423,6 @@
 
     return p0
 
-    .line 88
     :pswitch_4
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runSuggestTelephonyTimeZone()I
 
@@ -451,7 +430,6 @@
 
     return p0
 
-    .line 80
     :pswitch_5
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runIsGeoDetectionEnabled()I
 
@@ -459,7 +437,6 @@
 
     return p0
 
-    .line 96
     :pswitch_6
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runConfirmTimeZone()I
 
@@ -467,7 +444,6 @@
 
     return p0
 
-    .line 82
     :pswitch_7
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runSetGeoDetectionEnabled()I
 
@@ -475,7 +451,6 @@
 
     return p0
 
-    .line 98
     :pswitch_8
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runDumpMetrics()I
 
@@ -483,7 +458,6 @@
 
     return p0
 
-    .line 72
     :pswitch_9
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runIsAutoDetectionEnabled()I
 
@@ -491,7 +465,6 @@
 
     return p0
 
-    .line 94
     :pswitch_a
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runSetTimeZoneState()I
 
@@ -499,7 +472,6 @@
 
     return p0
 
-    .line 92
     :pswitch_b
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runGetTimeZoneState()I
 
@@ -507,7 +479,6 @@
 
     return p0
 
-    .line 86
     :pswitch_c
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runSuggestManualTimeZone()I
 
@@ -515,7 +486,6 @@
 
     return p0
 
-    .line 76
     :pswitch_d
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runIsTelephonyDetectionSupported()I
 
@@ -565,14 +535,12 @@
 .method public onHelp()V
     .locals 5
 
-    .line 246
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string/jumbo v0, "time_zone_detector"
 
-    .line 247
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -587,19 +555,16 @@
 
     const-string v2, "  help\n"
 
-    .line 248
     invoke-virtual {p0, v2, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v1, "    Print this help text.\n"
 
     new-array v2, v0, [Ljava/lang/Object;
 
-    .line 249
     invoke-virtual {p0, v1, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v1, "is_auto_detection_enabled"
 
-    .line 250
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -612,12 +577,10 @@
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 251
     invoke-virtual {p0, v1, v3}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v1, "set_auto_detection_enabled"
 
-    .line 252
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -630,12 +593,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 253
     invoke-virtual {p0, v1, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v1, "is_telephony_detection_supported"
 
-    .line 254
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -646,12 +607,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 255
     invoke-virtual {p0, v1, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v1, "is_geo_detection_supported"
 
-    .line 257
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -662,12 +621,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 258
     invoke-virtual {p0, v1, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v1, "is_geo_detection_enabled"
 
-    .line 260
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -678,12 +635,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 261
     invoke-virtual {p0, v1, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v1, "set_geo_detection_enabled"
 
-    .line 263
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -694,12 +649,10 @@
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 264
     invoke-virtual {p0, v1, v3}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v1, "enable_telephony_fallback"
 
-    .line 265
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -710,26 +663,22 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 266
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "    This is a temporary state until geolocation detection becomes \"certain\".\n"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 268
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "    To have an effect this requires that the telephony fallback feature is supported on the device, see below for device_config flags.\n"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 270
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "handle_location_algorithm_event"
 
-    .line 272
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -742,12 +691,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 273
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v3, "suggest_manual_time_zone"
 
-    .line 274
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -760,12 +707,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 275
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v3, "suggest_telephony_time_zone"
 
-    .line 276
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -778,12 +723,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 277
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "get_time_zone_state"
 
-    .line 279
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -794,12 +737,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 280
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v3, "set_time_zone_state_for_tests"
 
-    .line 281
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -812,12 +753,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 282
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "confirm_time_zone"
 
-    .line 283
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -830,12 +769,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 284
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "dump_metrics"
 
-    .line 285
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -846,39 +783,28 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 286
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 287
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
-    .line 288
     invoke-static {p0}, Lcom/android/server/timezonedetector/LocationAlgorithmEvent;->printCommandLineOpts(Ljava/io/PrintWriter;)V
 
-    .line 289
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
-    .line 290
     invoke-static {p0}, Landroid/app/timezonedetector/ManualTimeZoneSuggestion;->printCommandLineOpts(Ljava/io/PrintWriter;)V
 
-    .line 291
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
-    .line 292
     invoke-static {p0}, Landroid/app/timezonedetector/TelephonyTimeZoneSuggestion;->printCommandLineOpts(Ljava/io/PrintWriter;)V
 
-    .line 293
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
-    .line 294
     invoke-static {p0}, Landroid/app/time/TimeZoneState;->printCommandLineOpts(Ljava/io/PrintWriter;)V
 
-    .line 295
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string/jumbo v3, "system_time"
 
-    .line 296
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -889,7 +815,6 @@
 
     const-string v3, "location_time_zone_detection_feature_supported"
 
-    .line 298
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -900,19 +825,16 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 299
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "    Set this to false to disable the feature.\n"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 301
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "location_time_zone_detection_run_in_background_enabled"
 
-    .line 302
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -923,12 +845,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 303
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "location_time_zone_detection_setting_enabled_default"
 
-    .line 305
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -939,19 +859,16 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 306
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "    The default is when unset is false.\n"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 308
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v3, "location_time_zone_detection_setting_enabled_override"
 
-    .line 309
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -962,12 +879,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 310
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v3, "time_zone_detector_auto_detection_enabled_default"
 
-    .line 312
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -978,12 +893,10 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    .line 313
     invoke-virtual {p0, v3, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v3, "time_zone_detector_telephony_fallback_supported"
 
-    .line 316
     filled-new-array {v3}, [Ljava/lang/Object;
 
     move-result-object v3
@@ -992,7 +905,6 @@
 
     const-string v3, "    Used to enable / disable support for telephony detection fallback. Also see the %s command.\n"
 
-    .line 317
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -1001,7 +913,6 @@
 
     const-string v1, "enhanced_metrics_collection_enabled"
 
-    .line 319
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -1012,35 +923,28 @@
 
     new-array v2, v0, [Ljava/lang/Object;
 
-    .line 320
     invoke-virtual {p0, v1, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 321
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v1, "[*] To be enabled, the user must still have location = on / auto time zone detection = on.\n"
 
     new-array v2, v0, [Ljava/lang/Object;
 
-    .line 322
     invoke-virtual {p0, v1, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 324
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v1, "See \"adb shell cmd device_config\" for more information on setting flags.\n"
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 325
     invoke-virtual {p0, v1, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 326
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "location_time_zone_manager"
 
-    .line 327
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1049,7 +953,6 @@
 
     invoke-virtual {p0, v1, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 329
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -1058,12 +961,10 @@
 .method public final runConfirmTimeZone()I
     .locals 2
 
-    .line 210
     invoke-static {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->parseTimeZoneIdArg(Landroid/os/ShellCommand;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 211
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v1
@@ -1084,12 +985,10 @@
 .method public final runDumpMetrics()I
     .locals 2
 
-    .line 237
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 238
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorService;->generateMetricsState()Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState;
@@ -1098,10 +997,8 @@
 
     const-string v1, "MetricsTimeZoneDetectorState:"
 
-    .line 239
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 240
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1116,7 +1013,6 @@
 .method public final runEnableTelephonyFallback()I
     .locals 1
 
-    .line 193
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     const-string v0, "Command line"
@@ -1131,14 +1027,12 @@
 .method public final runGetTimeZoneState()I
     .locals 1
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/TimeZoneDetectorService;->getTimeZoneState()Landroid/app/time/TimeZoneState;
 
     move-result-object v0
 
-    .line 199
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -1153,21 +1047,18 @@
 .method public final runHandleLocationEvent()I
     .locals 3
 
-    .line 158
     new-instance v0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;)V
 
     iget-object v1, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
-    .line 160
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda3;
 
     invoke-direct {v2, v1}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/timezonedetector/TimeZoneDetectorService;)V
 
-    .line 158
     invoke-virtual {p0, v0, v2}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runSingleArgMethod(Ljava/util/function/Supplier;Ljava/util/function/Consumer;)I
 
     move-result p0
@@ -1178,31 +1069,26 @@
 .method public final runIsAutoDetectionEnabled()I
     .locals 2
 
-    .line 106
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
     const/4 v1, -0x2
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     invoke-virtual {p0, v1}, Lcom/android/server/timezonedetector/TimeZoneDetectorService;->getCapabilitiesAndConfig(I)Landroid/app/time/TimeZoneCapabilitiesAndConfig;
 
     move-result-object p0
 
-    .line 109
     invoke-virtual {p0}, Landroid/app/time/TimeZoneCapabilitiesAndConfig;->getConfiguration()Landroid/app/time/TimeZoneConfiguration;
 
     move-result-object p0
 
-    .line 110
     invoke-virtual {p0}, Landroid/app/time/TimeZoneConfiguration;->isAutoDetectionEnabled()Z
 
     move-result p0
 
-    .line 111
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -1213,31 +1099,26 @@
 .method public final runIsGeoDetectionEnabled()I
     .locals 2
 
-    .line 130
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
     const/4 v1, -0x2
 
-    .line 132
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     invoke-virtual {p0, v1}, Lcom/android/server/timezonedetector/TimeZoneDetectorService;->getCapabilitiesAndConfig(I)Landroid/app/time/TimeZoneCapabilitiesAndConfig;
 
     move-result-object p0
 
-    .line 133
     invoke-virtual {p0}, Landroid/app/time/TimeZoneCapabilitiesAndConfig;->getConfiguration()Landroid/app/time/TimeZoneConfiguration;
 
     move-result-object p0
 
-    .line 134
     invoke-virtual {p0}, Landroid/app/time/TimeZoneConfiguration;->isGeoDetectionEnabled()Z
 
     move-result p0
 
-    .line 135
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -1248,19 +1129,16 @@
 .method public final runIsGeoDetectionSupported()I
     .locals 1
 
-    .line 123
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 124
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorService;->isGeoTimeZoneDetectionSupported()Z
 
     move-result p0
 
-    .line 125
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -1271,19 +1149,16 @@
 .method public final runIsTelephonyDetectionSupported()I
     .locals 1
 
-    .line 116
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorService;->isTelephonyTimeZoneDetectionSupported()Z
 
     move-result p0
 
-    .line 118
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Z)V
 
     const/4 p0, 0x0
@@ -1294,7 +1169,6 @@
 .method public final runSetAutoDetectionEnabled()I
     .locals 2
 
-    .line 140
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1303,22 +1177,18 @@
 
     move-result v0
 
-    .line 142
     new-instance v1, Landroid/app/time/TimeZoneConfiguration$Builder;
 
     invoke-direct {v1}, Landroid/app/time/TimeZoneConfiguration$Builder;-><init>()V
 
-    .line 143
     invoke-virtual {v1, v0}, Landroid/app/time/TimeZoneConfiguration$Builder;->setAutoDetectionEnabled(Z)Landroid/app/time/TimeZoneConfiguration$Builder;
 
     move-result-object v0
 
-    .line 144
     invoke-virtual {v0}, Landroid/app/time/TimeZoneConfiguration$Builder;->build()Landroid/app/time/TimeZoneConfiguration;
 
     move-result-object v0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     const/4 v1, -0x2
@@ -1335,7 +1205,6 @@
 .method public final runSetGeoDetectionEnabled()I
     .locals 2
 
-    .line 149
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1344,22 +1213,18 @@
 
     move-result v0
 
-    .line 151
     new-instance v1, Landroid/app/time/TimeZoneConfiguration$Builder;
 
     invoke-direct {v1}, Landroid/app/time/TimeZoneConfiguration$Builder;-><init>()V
 
-    .line 152
     invoke-virtual {v1, v0}, Landroid/app/time/TimeZoneConfiguration$Builder;->setGeoDetectionEnabled(Z)Landroid/app/time/TimeZoneConfiguration$Builder;
 
     move-result-object v0
 
-    .line 153
     invoke-virtual {v0}, Landroid/app/time/TimeZoneConfiguration$Builder;->build()Landroid/app/time/TimeZoneConfiguration;
 
     move-result-object v0
 
-    .line 154
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     const/4 v1, -0x2
@@ -1376,12 +1241,10 @@
 .method public final runSetTimeZoneState()I
     .locals 1
 
-    .line 204
     invoke-static {p0}, Landroid/app/time/TimeZoneState;->parseCommandLineArgs(Landroid/os/ShellCommand;)Landroid/app/time/TimeZoneState;
 
     move-result-object v0
 
-    .line 205
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
     invoke-virtual {p0, v0}, Lcom/android/server/timezonedetector/TimeZoneDetectorService;->setTimeZoneState(Landroid/app/time/TimeZoneState;)V
@@ -1394,14 +1257,12 @@
 .method public final runSingleArgMethod(Ljava/util/function/Supplier;Ljava/util/function/Consumer;)I
     .locals 2
 
-    .line 176
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const/4 v0, 0x1
 
-    .line 178
     :try_start_0
     invoke-interface {p1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -1411,16 +1272,13 @@
 
     const-string p1, "Error: arg not specified"
 
-    .line 180
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v0
 
-    .line 183
     :cond_0
     invoke-interface {p2, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 184
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1450,7 +1308,6 @@
     :catch_0
     move-exception p1
 
-    .line 187
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     return v0
@@ -1459,21 +1316,18 @@
 .method public final runSuggestManualTimeZone()I
     .locals 3
 
-    .line 164
     new-instance v0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;)V
 
     iget-object v1, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
-    .line 166
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda1;
 
     invoke-direct {v2, v1}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/timezonedetector/TimeZoneDetectorService;)V
 
-    .line 164
     invoke-virtual {p0, v0, v2}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runSingleArgMethod(Ljava/util/function/Supplier;Ljava/util/function/Consumer;)I
 
     move-result p0
@@ -1484,21 +1338,18 @@
 .method public final runSuggestTelephonyTimeZone()I
     .locals 3
 
-    .line 170
     new-instance v0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda4;
 
     invoke-direct {v0, p0}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda4;-><init>(Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;)V
 
     iget-object v1, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->mInterface:Lcom/android/server/timezonedetector/TimeZoneDetectorService;
 
-    .line 172
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda5;
 
     invoke-direct {v2, v1}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand$$ExternalSyntheticLambda5;-><init>(Lcom/android/server/timezonedetector/TimeZoneDetectorService;)V
 
-    .line 170
     invoke-virtual {p0, v0, v2}, Lcom/android/server/timezonedetector/TimeZoneDetectorShellCommand;->runSingleArgMethod(Ljava/util/function/Supplier;Ljava/util/function/Consumer;)I
 
     move-result p0

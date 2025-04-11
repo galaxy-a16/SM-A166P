@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/FreeformContainerServiceBinder;)V
     .locals 0
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/wm/FreeformContainerServiceBinder$1;->this$0:Lcom/android/server/wm/FreeformContainerServiceBinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 54
     sget-boolean p2, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz p2, :cond_0
@@ -59,7 +57,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 58
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -84,7 +81,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/FreeformContainerServiceBinder$1;->this$0:Lcom/android/server/wm/FreeformContainerServiceBinder;
 
@@ -94,14 +90,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 61
     iget-object p1, p0, Lcom/android/server/wm/FreeformContainerServiceBinder$1;->this$0:Lcom/android/server/wm/FreeformContainerServiceBinder;
 
     const-string/jumbo v0, "service_disconnected"
 
     invoke-virtual {p1, v0}, Lcom/android/server/wm/FreeformContainerServiceBinder;->unbindServiceIfNeeded(Ljava/lang/String;)V
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/wm/FreeformContainerServiceBinder$1;->this$0:Lcom/android/server/wm/FreeformContainerServiceBinder;
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/FreeformContainerServiceBinder;->bindServiceIfNeeded(Ljava/lang/String;)V

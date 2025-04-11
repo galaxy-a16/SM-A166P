@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/HermesService;)V
     .locals 0
 
-    .line 198
     iput-object p1, p0, Lcom/android/server/HermesService$2;->this$0:Lcom/android/server/HermesService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -24,7 +23,6 @@
 .method public run()V
     .locals 1
 
-    .line 200
     iget-object v0, p0, Lcom/android/server/HermesService$2;->this$0:Lcom/android/server/HermesService;
 
     invoke-static {v0}, Lcom/android/server/HermesService;->-$$Nest$fgethalAdapter(Lcom/android/server/HermesService;)Lcom/android/server/HermesHalAdapter;
@@ -37,7 +35,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 202
     iget-object p0, p0, Lcom/android/server/HermesService$2;->this$0:Lcom/android/server/HermesService;
 
     invoke-static {p0, v0}, Lcom/android/server/HermesService;->-$$Nest$msendBigData(Lcom/android/server/HermesService;Ljava/lang/String;)I
@@ -49,7 +46,6 @@
 
     const-string v0, "getBigdataLog is null, skip send bigdata."
 
-    .line 204
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

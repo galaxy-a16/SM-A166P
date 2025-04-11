@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/devicepolicy/OneTimeSafetyChecker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/devicepolicy/OneTimeSafetyChecker;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/devicepolicy/OneTimeSafetyChecker;
 
     invoke-static {p0}, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->$r8$lambda$U5-2Gk1Rn0BOAitb4utOaWbYxhU(Lcom/android/server/devicepolicy/OneTimeSafetyChecker;)V

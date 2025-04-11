@@ -13,13 +13,10 @@
 .method public constructor <init>(ILandroid/content/ComponentName;)V
     .locals 0
 
-    .line 16674
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16675
     iput p1, p0, Lcom/android/server/audio/AudioService$SoundEventReceiver;->mEventType:I
 
-    .line 16676
     iput-object p2, p0, Lcom/android/server/audio/AudioService$SoundEventReceiver;->mEventReceiver:Landroid/content/ComponentName;
 
     return-void
@@ -34,18 +31,15 @@
 
     if-eqz p1, :cond_1
 
-    .line 16683
     :try_start_0
     check-cast p1, Lcom/android/server/audio/AudioService$SoundEventReceiver;
 
-    .line 16684
     iget-object p1, p1, Lcom/android/server/audio/AudioService$SoundEventReceiver;->mEventReceiver:Landroid/content/ComponentName;
 
     if-nez p1, :cond_0
 
     return v0
 
-    .line 16686
     :cond_0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$SoundEventReceiver;->mEventReceiver:Landroid/content/ComponentName;
 
@@ -65,7 +59,6 @@
 .method public hasEventType(I)Z
     .locals 0
 
-    .line 16694
     iget p0, p0, Lcom/android/server/audio/AudioService$SoundEventReceiver;->mEventType:I
 
     and-int/2addr p0, p1
@@ -86,7 +79,6 @@
 .method public samePackageName(Ljava/lang/String;)Z
     .locals 0
 
-    .line 16698
     iget-object p0, p0, Lcom/android/server/audio/AudioService$SoundEventReceiver;->mEventReceiver:Landroid/content/ComponentName;
 
     if-nez p0, :cond_0
@@ -95,7 +87,6 @@
 
     return p0
 
-    .line 16699
     :cond_0
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 

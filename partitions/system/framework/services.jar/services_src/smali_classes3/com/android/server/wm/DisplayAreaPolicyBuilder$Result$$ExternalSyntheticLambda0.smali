@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/TaskDisplayArea;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$Result;->$r8$lambda$am8Z89jNU7AG9qZKA6dA1j44b84(Lcom/android/server/wm/TaskDisplayArea;)Lcom/android/server/wm/TaskDisplayArea;

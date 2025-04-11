@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIrs(Lcom/android/server/tare/DeviceIdleModifier;)Lcom/android/server/tare/InternalResourceService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     return-object p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPowerManager(Lcom/android/server/tare/DeviceIdleModifier;)Landroid/os/PowerManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mPowerManager:Landroid/os/PowerManager;
 
     return-object p0
@@ -39,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 30
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,14 +59,12 @@
 
     sput-object v0, Lcom/android/server/tare/DeviceIdleModifier;->TAG:Ljava/lang/String;
 
-    .line 31
     sget-boolean v1, Lcom/android/server/tare/InternalResourceService;->DEBUG:Z
 
     if-nez v1, :cond_1
 
     const/4 v1, 0x3
 
-    .line 32
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -96,13 +91,10 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 1
 
-    .line 39
     invoke-direct {p0}, Lcom/android/server/tare/Modifier;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/tare/DeviceIdleModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
-    .line 41
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -117,7 +109,6 @@
 
     iput-object p1, p0, Lcom/android/server/tare/DeviceIdleModifier;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 42
     new-instance p1, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;
 
     invoke-direct {p1, p0}, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;-><init>(Lcom/android/server/tare/DeviceIdleModifier;)V
@@ -134,10 +125,8 @@
 
     const-string v0, "idle="
 
-    .line 68
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mDeviceIdleTracker:Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;
 
     invoke-static {v0}, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->-$$Nest$fgetmDeviceIdle(Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;)Z
@@ -148,10 +137,8 @@
 
     const-string v0, "lightIdle="
 
-    .line 70
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mDeviceIdleTracker:Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;
 
     invoke-static {p0}, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->-$$Nest$fgetmDeviceLightIdle(Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;)Z
@@ -166,7 +153,6 @@
 .method public getModifiedCostToProduce(J)J
     .locals 2
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mDeviceIdleTracker:Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;
 
     invoke-static {v0}, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->-$$Nest$fgetmDeviceIdle(Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;)Z
@@ -186,7 +172,6 @@
 
     return-wide p0
 
-    .line 60
     :cond_0
     iget-object p0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mDeviceIdleTracker:Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;
 
@@ -207,7 +192,6 @@
 .method public setup()V
     .locals 1
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mDeviceIdleTracker:Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;
 
     iget-object p0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
@@ -224,7 +208,6 @@
 .method public tearDown()V
     .locals 1
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mDeviceIdleTracker:Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;
 
     iget-object p0, p0, Lcom/android/server/tare/DeviceIdleModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/NotificationManagerService$PostNotificationTracker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationTracker$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/notification/NotificationManagerService$PostNotificationTracker;
@@ -27,7 +26,6 @@
 .method public final runOrThrow()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationTracker$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/notification/NotificationManagerService$PostNotificationTracker;
 
     invoke-static {p0}, Lcom/android/server/notification/NotificationManagerService$PostNotificationTracker;->$r8$lambda$RCjqYUpikbzCh6vjX3htfwHl9ZE(Lcom/android/server/notification/NotificationManagerService$PostNotificationTracker;)V

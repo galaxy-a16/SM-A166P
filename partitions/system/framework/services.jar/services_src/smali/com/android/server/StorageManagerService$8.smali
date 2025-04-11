@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;Landroid/os/IVoldTaskListener;)V
     .locals 0
 
-    .line 2877
     iput-object p1, p0, Lcom/android/server/StorageManagerService$8;->this$0:Lcom/android/server/StorageManagerService;
 
     iput-object p2, p0, Lcom/android/server/StorageManagerService$8;->val$listener:Landroid/os/IVoldTaskListener;
@@ -28,7 +27,6 @@
 .method public onFinished(ILandroid/os/PersistableBundle;)V
     .locals 10
 
-    .line 2885
     iget-object v0, p0, Lcom/android/server/StorageManagerService$8;->this$0:Lcom/android/server/StorageManagerService;
 
     iget-object v1, p0, Lcom/android/server/StorageManagerService$8;->val$listener:Landroid/os/IVoldTaskListener;
@@ -37,40 +35,34 @@
 
     const-string/jumbo p1, "path"
 
-    .line 2887
     invoke-virtual {p2, p1}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "ident"
 
-    .line 2888
     invoke-virtual {p2, v0}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "create"
 
-    .line 2889
     invoke-virtual {p2, v1}, Landroid/os/PersistableBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v1
 
     const-string/jumbo v3, "run"
 
-    .line 2890
     invoke-virtual {p2, v3}, Landroid/os/PersistableBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v3
 
     const-string v5, "destroy"
 
-    .line 2891
     invoke-virtual {p2, v5}, Landroid/os/PersistableBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v5
 
-    .line 2893
     iget-object p2, p0, Lcom/android/server/StorageManagerService$8;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p2}, Lcom/android/server/StorageManagerService;->-$$Nest$fgetmContext(Lcom/android/server/StorageManagerService;)Landroid/content/Context;
@@ -87,7 +79,6 @@
 
     const-string/jumbo v7, "storage_benchmark"
 
-    .line 2894
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,7 +121,6 @@
 
     invoke-virtual {p2, v7, v0}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2897
     iget-object p2, p0, Lcom/android/server/StorageManagerService$8;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p2}, Lcom/android/server/StorageManagerService;->-$$Nest$fgetmLock(Lcom/android/server/StorageManagerService;)Ljava/lang/Object;
@@ -139,7 +129,6 @@
 
     monitor-enter p2
 
-    .line 2898
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService$8;->this$0:Lcom/android/server/StorageManagerService;
 
@@ -149,19 +138,16 @@
 
     if-eqz p1, :cond_0
 
-    .line 2900
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p1, Landroid/os/storage/VolumeRecord;->lastBenchMillis:J
 
-    .line 2901
     iget-object p0, p0, Lcom/android/server/StorageManagerService$8;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p0}, Lcom/android/server/StorageManagerService;->-$$Nest$mwriteSettingsLocked(Lcom/android/server/StorageManagerService;)V
 
-    .line 2903
     :cond_0
     monitor-exit p2
 
@@ -180,7 +166,6 @@
 .method public onStatus(ILandroid/os/PersistableBundle;)V
     .locals 1
 
-    .line 2880
     iget-object v0, p0, Lcom/android/server/StorageManagerService$8;->this$0:Lcom/android/server/StorageManagerService;
 
     iget-object p0, p0, Lcom/android/server/StorageManagerService$8;->val$listener:Landroid/os/IVoldTaskListener;

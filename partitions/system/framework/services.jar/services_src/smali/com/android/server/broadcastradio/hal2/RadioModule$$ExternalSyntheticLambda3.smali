@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/broadcastradio/hal2/Mutable;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/broadcastradio/hal2/Mutable;
@@ -27,7 +26,6 @@
 .method public final onValues(ILandroid/hardware/broadcastradio/V2_0/AmFmRegionConfig;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/broadcastradio/hal2/Mutable;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/broadcastradio/hal2/RadioModule;->$r8$lambda$QGJ1KnE6jA17lltX4UvEaWTDlJE(Lcom/android/server/broadcastradio/hal2/Mutable;ILandroid/hardware/broadcastradio/V2_0/AmFmRegionConfig;)V

@@ -107,7 +107,6 @@
 .method public static synthetic $values()[Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
     .locals 48
 
-    .line 377
     sget-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->USA_TMO:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     sget-object v1, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->USA_ATT:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
@@ -214,7 +213,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 378
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "USA_TMO"
@@ -315,7 +313,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->USA_XAA:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 379
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "USA_XAR"
@@ -416,7 +413,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->USA_USC:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 380
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "USA_ACG"
@@ -437,7 +433,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->USA_DSG:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 381
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "JPN_DCM"
@@ -468,7 +463,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->JPN_RKT:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 382
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "CAD_TLS"
@@ -509,7 +503,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->CAD_XAC:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 383
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "KOR_SKT"
@@ -540,7 +533,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->KOR_LGT:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 384
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "CHN_CMC"
@@ -591,7 +583,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->CHN_CHC:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 385
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "ARG_UFN"
@@ -602,7 +593,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->ARG_UFN:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 386
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "MEX_MNX"
@@ -633,7 +623,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->MEX_UNE:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 387
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "PER_PEO"
@@ -664,7 +653,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->PER_PET:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 388
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "SUI_SWC"
@@ -675,7 +663,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->SUI_SWC:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 389
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "TUR_TUR"
@@ -686,7 +673,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->TUR_TUR:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 390
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "SWA_IND"
@@ -697,7 +683,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->SWA_IND:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 391
     new-instance v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     const-string v1, "NO_OPERATOR"
@@ -708,7 +693,6 @@
 
     sput-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->NO_OPERATOR:Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
-    .line 377
     invoke-static {}, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->$values()[Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     move-result-object v0
@@ -721,7 +705,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 377
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -730,7 +713,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
     .locals 1
 
-    .line 377
     const-class v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -745,7 +727,6 @@
 .method public static values()[Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
     .locals 1
 
-    .line 377
     sget-object v0, Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->$VALUES:[Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;
 
     invoke-virtual {v0}, [Lcom/android/server/location/gnss/sec/CarrierConfig$Carrier;->clone()Ljava/lang/Object;

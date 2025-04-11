@@ -16,14 +16,12 @@
     :try_start_0
     const-string/jumbo v0, "wpa_supplicant"
 
-    .line 45
     invoke-static {v0}, Landroid/os/SystemService;->start(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    .line 48
     :catch_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -40,7 +38,6 @@
     :try_start_0
     const-string/jumbo v0, "wpa_supplicant"
 
-    .line 58
     invoke-static {v0}, Landroid/os/SystemService;->stop(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -54,7 +51,6 @@
 
     const-string v2, "Failed to stop Supplicant"
 
-    .line 61
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

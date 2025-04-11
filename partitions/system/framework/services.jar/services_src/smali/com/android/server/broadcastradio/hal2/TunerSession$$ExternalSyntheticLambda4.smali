@@ -20,7 +20,6 @@
 .method public final run(Landroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/broadcastradio/hal2/TunerSession;->$r8$lambda$WIcMK7kZ1bThPSRkcik45_hwH-g(Landroid/hardware/radio/ITunerCallback;)V
 
     return-void

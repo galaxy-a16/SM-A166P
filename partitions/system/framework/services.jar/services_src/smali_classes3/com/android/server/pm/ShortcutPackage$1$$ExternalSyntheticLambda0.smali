@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/ShortcutPackage$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/ShortcutPackage$1$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/pm/ShortcutPackage$1;
@@ -27,7 +26,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/ShortcutPackage$1$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/pm/ShortcutPackage$1;
 
     check-cast p1, Landroid/app/appsearch/GenericDocument;

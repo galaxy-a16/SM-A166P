@@ -7,7 +7,6 @@
 .method public static addInsets(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 2
 
-    .line 63
     iget v0, p0, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -16,7 +15,6 @@
 
     iput v0, p0, Landroid/graphics/Rect;->left:I
 
-    .line 64
     iget v0, p0, Landroid/graphics/Rect;->top:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -25,7 +23,6 @@
 
     iput v0, p0, Landroid/graphics/Rect;->top:I
 
-    .line 65
     iget v0, p0, Landroid/graphics/Rect;->right:I
 
     iget v1, p1, Landroid/graphics/Rect;->right:I
@@ -34,7 +31,6 @@
 
     iput v0, p0, Landroid/graphics/Rect;->right:I
 
-    .line 66
     iget v0, p0, Landroid/graphics/Rect;->bottom:I
 
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
@@ -63,7 +59,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 52
     iget p1, p0, Landroid/graphics/Rect;->bottom:I
 
     iget v0, p0, Landroid/graphics/Rect;->left:I
@@ -76,7 +71,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -98,7 +92,6 @@
 
     throw p0
 
-    .line 49
     :cond_1
     iget p1, p0, Landroid/graphics/Rect;->right:I
 
@@ -112,7 +105,6 @@
 
     goto :goto_0
 
-    .line 46
     :cond_2
     iget p1, p0, Landroid/graphics/Rect;->top:I
 

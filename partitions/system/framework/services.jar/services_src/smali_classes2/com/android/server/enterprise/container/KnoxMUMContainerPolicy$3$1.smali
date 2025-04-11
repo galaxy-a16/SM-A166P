@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;Lcom/samsung/android/knox/SemPersonaState;Lcom/samsung/android/knox/SemPersonaState;I)V
     .locals 0
 
-    .line 1037
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->this$1:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;
 
     iput-object p2, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->val$newState:Lcom/samsung/android/knox/SemPersonaState;
@@ -39,7 +38,6 @@
 .method public run()V
     .locals 14
 
-    .line 1040
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -70,7 +68,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1042
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->this$1:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;
 
     iget-object v0, v0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
@@ -85,19 +82,16 @@
 
     move-result v0
 
-    .line 1043
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v7
 
-    .line 1045
     iget-object v1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->val$oldState:Lcom/samsung/android/knox/SemPersonaState;
 
     invoke-static {v1}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$smtranslateStatus(Lcom/samsung/android/knox/SemPersonaState;)I
 
     move-result v8
 
-    .line 1046
     iget-object v1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->val$newState:Lcom/samsung/android/knox/SemPersonaState;
 
     invoke-static {v1}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$smtranslateStatus(Lcom/samsung/android/knox/SemPersonaState;)I
@@ -108,7 +102,6 @@
 
     if-eq v9, v8, :cond_1
 
-    .line 1048
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object v1
@@ -123,7 +116,6 @@
 
     if-eqz v11, :cond_0
 
-    .line 1050
     array-length v12, v11
 
     move v13, v10
@@ -133,7 +125,6 @@
 
     aget-object v2, v11, v13
 
-    .line 1051
     iget-object v1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->this$1:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;
 
     iget-object v1, v1, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
@@ -152,7 +143,6 @@
 
     goto :goto_0
 
-    .line 1054
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->this$1:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;
 
@@ -170,7 +160,6 @@
 
     invoke-static/range {v1 .. v6}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$msendContainerStateChangeIntent(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;Ljava/lang/String;IIII)V
 
-    .line 1059
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->val$newState:Lcom/samsung/android/knox/SemPersonaState;
 
@@ -192,7 +181,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 1060
     :cond_2
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
@@ -208,7 +196,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1062
     array-length v1, v0
 
     :goto_1
@@ -216,7 +203,6 @@
 
     aget-object v2, v0, v10
 
-    .line 1063
     iget-object v3, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->this$1:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;
 
     iget-object v3, v3, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
@@ -229,7 +215,6 @@
 
     goto :goto_1
 
-    .line 1066
     :cond_3
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3$1;->this$1:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;
 

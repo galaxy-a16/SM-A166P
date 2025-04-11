@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersonaManagerService;)V
     .locals 0
 
-    .line 571
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/knox/PersonaManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PersonaManagerService;Lcom/android/server/pm/PersonaManagerService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/PersonaManagerService$LocalService;-><init>(Lcom/android/server/pm/PersonaManagerService;)V
 
     return-void
@@ -37,10 +35,8 @@
 
     const-string v1, "doKeyguardTimeout"
 
-    .line 608
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 609
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmPersonaHandler(Lcom/android/server/pm/PersonaManagerService;)Lcom/android/server/pm/PersonaManagerService$PersonaHandler;
@@ -55,7 +51,6 @@
 
     move-result-object v0
 
-    .line 610
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmPersonaHandler(Lcom/android/server/pm/PersonaManagerService;)Lcom/android/server/pm/PersonaManagerService$PersonaHandler;
@@ -70,7 +65,6 @@
 .method public getAdminComponentNameFromEdm(I)Landroid/content/ComponentName;
     .locals 1
 
-    .line 649
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService;->containerDependencyWrapper:Lcom/android/server/knox/ContainerDependencyWrapper;
@@ -89,7 +83,6 @@
 .method public getECName(I)Ljava/lang/String;
     .locals 0
 
-    .line 654
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService;->containerDependencyWrapper:Lcom/android/server/knox/ContainerDependencyWrapper;
@@ -104,7 +97,6 @@
 .method public isKnoxId(I)Z
     .locals 0
 
-    .line 574
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
     move-result p0
@@ -115,14 +107,12 @@
 .method public onDeviceLockedChanged(I)V
     .locals 5
 
-    .line 615
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     const-string/jumbo v1, "onDeviceLockedChanged"
 
     invoke-static {v0, v1}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$mcheckCallerPermissionFor(Lcom/android/server/pm/PersonaManagerService;Ljava/lang/String;)I
 
-    .line 616
     invoke-static {}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$sfgetDEVICE_SUPPORT_KNOX()Z
 
     move-result v0
@@ -133,12 +123,10 @@
 
     const-string p1, "Knox not supported - onDeviceLockedChanged"
 
-    .line 617
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 621
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -148,7 +136,6 @@
 
     monitor-enter v0
 
-    .line 624
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -162,12 +149,10 @@
 
     move-result v1
 
-    .line 625
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 627
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmKeyguardManager(Lcom/android/server/pm/PersonaManagerService;)Landroid/app/KeyguardManager;
@@ -182,7 +167,6 @@
 
     const-string v2, "PersonaManagerService"
 
-    .line 630
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,7 +195,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 634
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v1}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmContext(Lcom/android/server/pm/PersonaManagerService;)Landroid/content/Context;
@@ -224,7 +207,6 @@
 
     goto :goto_0
 
-    .line 636
     :cond_1
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -238,7 +220,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 637
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v1}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmContext(Lcom/android/server/pm/PersonaManagerService;)Landroid/content/Context;
@@ -256,10 +237,8 @@
 
     const-string v2, "container is unlocked when user is not running. ignore"
 
-    .line 639
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     :goto_0
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -269,7 +248,6 @@
 
     monitor-enter v1
 
-    .line 642
     :try_start_1
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -279,7 +257,6 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 643
     monitor-exit v1
 
     goto :goto_1
@@ -300,7 +277,6 @@
     :catchall_1
     move-exception p0
 
-    .line 625
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -312,7 +288,6 @@
 .method public shouldConfirmCredentials(I)Z
     .locals 7
 
-    .line 579
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$mgetUserManager(Lcom/android/server/pm/PersonaManagerService;)Landroid/os/UserManager;
@@ -323,7 +298,6 @@
 
     move-result-object v0
 
-    .line 580
     invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isEnabled()Z
 
     move-result v1
@@ -334,18 +308,15 @@
 
     return v2
 
-    .line 583
     :cond_0
     invoke-virtual {v0}, Landroid/content/pm/UserInfo;->needSetupCredential()Z
 
     move-result v1
 
-    .line 584
     invoke-static {p1}, Lcom/android/server/knox/ContainerDependencyWrapper;->isPwdChangeRequested(I)Z
 
     move-result v3
 
-    .line 585
     iget-object v4, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v4, p1}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$misBiometricsEnabledAfterFota(Lcom/android/server/pm/PersonaManagerService;I)Z
@@ -364,7 +335,6 @@
 
     goto :goto_0
 
-    .line 592
     :cond_1
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -380,7 +350,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 593
     iget-object p1, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {p1}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmKeyguardManager(Lcom/android/server/pm/PersonaManagerService;)Landroid/app/KeyguardManager;
@@ -393,7 +362,6 @@
 
     move-result p1
 
-    .line 594
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmKeyguardManager(Lcom/android/server/pm/PersonaManagerService;)Landroid/app/KeyguardManager;
@@ -406,7 +374,6 @@
 
     move-result p0
 
-    .line 595
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -438,7 +405,6 @@
     :cond_2
     return v2
 
-    .line 599
     :cond_3
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -456,7 +422,6 @@
 
     return v6
 
-    .line 602
     :cond_4
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService$LocalService;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -466,7 +431,6 @@
 
     return p0
 
-    .line 587
     :cond_5
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;

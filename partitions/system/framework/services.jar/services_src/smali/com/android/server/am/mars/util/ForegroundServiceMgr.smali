@@ -26,7 +26,6 @@
 .method public static synthetic $r8$lambda$zXN20kYe8tCoaXs_4uzVf4VaJc0(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->lambda$new$0()V
 
     return-void
@@ -35,7 +34,6 @@
 .method public static bridge synthetic -$$Nest$fgetmGetUsingFGSTypeRunnable(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mGetUsingFGSTypeRunnable:Ljava/lang/Runnable;
 
     return-object p0
@@ -44,7 +42,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMapFGSRecord(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)Ljava/util/concurrent/ConcurrentHashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mMapFGSRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -53,7 +50,6 @@
 .method public static bridge synthetic -$$Nest$mconvertFGSType(Lcom/android/server/am/mars/util/ForegroundServiceMgr;Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->convertFGSType(Ljava/lang/String;)I
 
     move-result p0
@@ -64,7 +60,6 @@
 .method public static bridge synthetic -$$Nest$mformatDateTime(Lcom/android/server/am/mars/util/ForegroundServiceMgr;J)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->formatDateTime(J)Ljava/lang/String;
 
     move-result-object p0
@@ -75,7 +70,6 @@
 .method public static bridge synthetic -$$Nest$misFGSTarget(Lcom/android/server/am/mars/util/ForegroundServiceMgr;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->isFGSTarget(Ljava/lang/String;)Z
 
     move-result p0
@@ -86,7 +80,6 @@
 .method public static bridge synthetic -$$Nest$misInDuration(Lcom/android/server/am/mars/util/ForegroundServiceMgr;JJJ)Z
     .locals 0
 
-    .line 0
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->isInDuration(JJJ)Z
 
     move-result p0
@@ -97,7 +90,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 45
     const-class v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -112,31 +104,26 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mMapFGSRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 77
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;-><init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)V
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mProcessObserver:Landroid/app/IProcessObserver$Stub;
 
-    .line 150
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;-><init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)V
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->getAccesesTimeHelper:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;
 
-    .line 283
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)V
@@ -149,7 +136,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;-><init>()V
 
     return-void
@@ -158,7 +144,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/util/ForegroundServiceMgr;
     .locals 1
 
-    .line 58
     invoke-static {}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$ForegroundServiceMgrHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 
     move-result-object v0
@@ -169,7 +154,6 @@
 .method private synthetic lambda$new$0()V
     .locals 1
 
-    .line 285
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->getAccesesTimeHelper:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;
 
     iget-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->visitor:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;
@@ -184,7 +168,6 @@
 .method public clearMap()V
     .locals 0
 
-    .line 114
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mMapFGSRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
@@ -204,7 +187,6 @@
     :cond_0
     const-string/jumbo v0, "location"
 
-    .line 271
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -218,7 +200,6 @@
     :cond_1
     const-string/jumbo v0, "record"
 
-    .line 273
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -232,7 +213,6 @@
     :cond_2
     const-string v0, "audio"
 
-    .line 275
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -246,7 +226,6 @@
     :cond_3
     const-string v0, "camera"
 
-    .line 277
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -271,7 +250,6 @@
 
     const-string/jumbo p0, "null"
 
-    .line 262
     filled-new-array {p0}, [Ljava/lang/Object;
 
     move-result-object p0
@@ -284,7 +262,6 @@
 
     return-object p0
 
-    .line 263
     :cond_0
     new-instance p0, Ljava/text/SimpleDateFormat;
 
@@ -292,12 +269,10 @@
 
     invoke-direct {p0, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 264
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
 
-    .line 265
     invoke-virtual {p0, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p0
@@ -308,7 +283,6 @@
 .method public getMap()Ljava/util/concurrent/ConcurrentHashMap;
     .locals 0
 
-    .line 110
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mMapFGSRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -317,7 +291,6 @@
 .method public init()V
     .locals 1
 
-    .line 63
     const-class v0, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -330,10 +303,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
     invoke-virtual {v0, p0}, Landroid/app/ActivityManagerInternal;->addForegroundServiceStateListener(Landroid/app/ActivityManagerInternal$ForegroundServiceStateListener;)V
 
-    .line 67
     iget-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mProcessObserver:Landroid/app/IProcessObserver$Stub;
@@ -342,7 +313,6 @@
 
     goto :goto_0
 
-    .line 69
     :cond_0
     sget-object p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->TAG:Ljava/lang/String;
 
@@ -359,7 +329,6 @@
 
     const/4 p0, 0x0
 
-    .line 291
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -376,7 +345,6 @@
     :catch_0
     move-exception p1
 
-    .line 293
     sget-object v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -411,17 +379,14 @@
 .method public final isInDuration(JJJ)Z
     .locals 2
 
-    .line 299
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->roundDownToMinute(J)J
 
     move-result-wide p1
 
-    .line 300
     invoke-virtual {p0, p3, p4}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->roundDownToMinute(J)J
 
     move-result-wide p3
 
-    .line 301
     invoke-virtual {p0, p5, p6}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->roundDownToMinute(J)J
 
     move-result-wide p5
@@ -458,21 +423,18 @@
 .method public onForegroundServiceNotificationUpdated(Ljava/lang/String;IIZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onForegroundServiceStateChanged(Ljava/lang/String;IIZ)V
     .locals 2
 
-    .line 129
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->isFGSTarget(Ljava/lang/String;)Z
 
     move-result p3
 
     if-eqz p3, :cond_2
 
-    .line 130
     iget-object p3, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mMapFGSRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -487,12 +449,10 @@
 
     if-nez p3, :cond_0
 
-    .line 132
     new-instance p3, Lcom/android/server/am/mars/ForegroundServiceRecord;
 
     invoke-direct {p3, p1, p2}, Lcom/android/server/am/mars/ForegroundServiceRecord;-><init>(Ljava/lang/String;I)V
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mMapFGSRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -504,7 +464,6 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 137
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
@@ -513,7 +472,6 @@
 
     goto :goto_0
 
-    .line 139
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -521,7 +479,6 @@
 
     invoke-virtual {p3, v0, v1}, Lcom/android/server/am/mars/ForegroundServiceRecord;->setFGSEndTime(J)V
 
-    .line 140
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->getAccesesTimeHelper:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->getAllAccessTimeOfPackage(ILjava/lang/String;)V
@@ -542,7 +499,6 @@
 
     const-wide/16 v0, 0x3e8
 
-    .line 309
     div-long/2addr p1, v0
 
     const-wide/16 v0, 0x3c

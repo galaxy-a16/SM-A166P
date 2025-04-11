@@ -37,7 +37,6 @@
 
     xor-int/lit8 v27, p10, 0x1
 
-    .line 434
     new-instance v0, Landroid/content/pm/ShortcutInfo;
 
     move-object v1, v0
@@ -62,7 +61,6 @@
 
     const/16 v19, 0x0
 
-    .line 453
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/ShortcutService;->injectCurrentTimeMillis()J
 
     move-result-wide v20
@@ -107,7 +105,6 @@
 .method public static parseCategories(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;)Ljava/lang/String;
     .locals 2
 
-    .line 355
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -122,7 +119,6 @@
 
     const/4 p1, 0x0
 
-    .line 358
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getType(I)I
 
@@ -132,14 +128,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 359
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getNonResourceString(I)Ljava/lang/String;
 
     move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 365
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object p1
@@ -150,12 +144,10 @@
 
     const-string v0, "android:name for shortcut category must be string literal."
 
-    .line 361
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 365
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     const/4 p0, 0x0
@@ -167,14 +159,12 @@
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 366
     throw p1
 .end method
 
 .method public static parseCategory(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;)Ljava/lang/String;
     .locals 2
 
-    .line 467
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -189,7 +179,6 @@
 
     const/4 p1, 0x0
 
-    .line 470
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getType(I)I
 
@@ -203,19 +192,16 @@
 
     const-string v0, "android:name must be string literal."
 
-    .line 471
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 476
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 474
     :cond_0
     :try_start_1
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -224,7 +210,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 476
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object p1
@@ -234,14 +219,12 @@
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 477
     throw p1
 .end method
 
 .method public static parseShareTargetAttributes(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;)Lcom/android/server/pm/ShareTargetInfo;
     .locals 2
 
-    .line 482
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -256,13 +239,11 @@
 
     const/4 p1, 0x4
 
-    .line 485
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 486
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -275,17 +256,14 @@
 
     const-string v0, "android:targetClass must be provided."
 
-    .line 487
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 492
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v1
 
-    .line 490
     :cond_0
     :try_start_1
     new-instance v0, Lcom/android/server/pm/ShareTargetInfo;
@@ -294,7 +272,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 492
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v0
@@ -304,14 +281,12 @@
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 493
     throw p1
 .end method
 
 .method public static parseShareTargetData(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;)Lcom/android/server/pm/ShareTargetInfo$TargetData;
     .locals 10
 
-    .line 498
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -326,7 +301,6 @@
 
     const/4 p1, 0x0
 
-    .line 501
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getType(I)I
 
@@ -340,12 +314,10 @@
 
     const-string v0, "android:mimeType must be string literal."
 
-    .line 502
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 515
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     const/4 p0, 0x0
@@ -355,7 +327,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 505
     :try_start_1
     invoke-virtual {p0, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -363,43 +334,36 @@
 
     const/4 v0, 0x2
 
-    .line 506
     invoke-virtual {p0, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 507
     invoke-virtual {p0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     const/4 v0, 0x4
 
-    .line 508
     invoke-virtual {p0, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
     const/4 v0, 0x6
 
-    .line 509
     invoke-virtual {p0, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
     const/4 v0, 0x5
 
-    .line 510
     invoke-virtual {p0, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 511
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 512
     new-instance p1, Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     move-object v2, p1
@@ -408,7 +372,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 515
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object p1
@@ -418,7 +381,6 @@
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 516
     throw p1
 .end method
 
@@ -429,7 +391,6 @@
 
     move-object/from16 v5, p3
 
-    .line 372
     iget-object v1, v0, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -446,7 +407,6 @@
 
     const/4 v1, 0x2
 
-    .line 375
     :try_start_0
     invoke-virtual {v13, v1}, Landroid/content/res/TypedArray;->getType(I)I
 
@@ -462,7 +422,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 376
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -482,12 +441,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 415
     invoke-virtual {v13}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v6
 
-    .line 379
     :cond_0
     :try_start_2
     invoke-virtual {v13, v1}, Landroid/content/res/TypedArray;->getNonResourceString(I)Ljava/lang/String;
@@ -496,47 +453,40 @@
 
     const/4 v1, 0x1
 
-    .line 380
     invoke-virtual {v13, v1, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v11
 
     const/4 v1, 0x0
 
-    .line 381
     invoke-virtual {v13, v1, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v10
 
-    .line 382
     invoke-virtual {v13, v3, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v8
 
     const/4 v2, 0x4
 
-    .line 383
     invoke-virtual {v13, v2, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v9
 
     const/4 v2, 0x5
 
-    .line 384
     invoke-virtual {v13, v2, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v12
 
     const/4 v2, 0x6
 
-    .line 386
     invoke-virtual {v13, v2, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 389
     iget-object v2, v0, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -554,7 +504,6 @@
     :cond_1
     move-object v14, v6
 
-    .line 392
     :goto_0
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -562,7 +511,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 393
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -581,7 +529,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 415
     invoke-virtual {v13}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v6
@@ -589,7 +536,6 @@
     :cond_2
     if-nez v8, :cond_3
 
-    .line 397
     :try_start_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -609,7 +555,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 415
     invoke-virtual {v13}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v6
@@ -635,7 +580,6 @@
 
     move-object v12, v14
 
-    .line 401
     :try_start_4
     invoke-static/range {v1 .. v12}, Lcom/android/server/pm/ShortcutParser;->createShortcutFromManifest(Lcom/android/server/pm/ShortcutService;ILjava/lang/String;Ljava/lang/String;Landroid/content/ComponentName;IIIIIZLjava/lang/String;)Landroid/content/pm/ShortcutInfo;
 
@@ -643,7 +587,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 415
     invoke-virtual {v13}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v0
@@ -653,14 +596,12 @@
 
     invoke-virtual {v13}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 416
     throw v0
 .end method
 
 .method public static parseShortcuts(Lcom/android/server/pm/ShortcutService;Ljava/lang/String;ILjava/util/List;)Ljava/util/List;
     .locals 10
 
-    .line 71
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/ShortcutService;->injectGetMainActivities(Ljava/lang/String;I)Ljava/util/List;
 
     move-result-object v0
@@ -669,7 +610,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 72
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -678,11 +618,9 @@
 
     goto :goto_2
 
-    .line 77
     :cond_0
     invoke-interface {p3}, Ljava/util/List;->clear()V
 
-    .line 80
     :try_start_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -695,7 +633,6 @@
     :goto_0
     if-ge v3, v2, :cond_3
 
-    .line 82
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -708,13 +645,11 @@
 
     goto :goto_1
 
-    .line 89
     :cond_1
     invoke-virtual {v4}, Landroid/content/pm/ActivityInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v4
 
-    .line 88
     invoke-virtual {p0, v4, p2}, Lcom/android/server/pm/ShortcutService;->getActivityInfoWithMetadata(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
 
     move-result-object v5
@@ -729,7 +664,6 @@
 
     move-object v9, p3
 
-    .line 91
     invoke-static/range {v4 .. v9}, Lcom/android/server/pm/ShortcutParser;->parseShortcutsOneFile(Lcom/android/server/pm/ShortcutService;Landroid/content/pm/ActivityInfo;Ljava/lang/String;ILjava/util/List;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v8
@@ -748,7 +682,6 @@
     :catch_0
     move-exception p2
 
-    .line 98
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -780,7 +713,6 @@
     :try_start_0
     const-string v1, "android.app.shortcuts"
 
-    .line 117
     invoke-virtual {v0, v7, v1}, Lcom/android/server/pm/ShortcutService;->injectXmlMetaData(Landroid/content/pm/ActivityInfo;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;
 
     move-result-object v9
@@ -791,13 +723,11 @@
 
     if-eqz v9, :cond_0
 
-    .line 348
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->close()V
 
     :cond_0
     return-object p4
 
-    .line 122
     :cond_1
     :try_start_1
     new-instance v10, Landroid/content/ComponentName;
@@ -808,22 +738,18 @@
 
     invoke-direct {v10, v11, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 124
     invoke-static {v9}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v12
 
-    .line 129
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/ShortcutService;->getMaxActivityShortcuts()I
 
     move-result v13
 
-    .line 144
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 147
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
@@ -840,7 +766,6 @@
 
     const/16 v16, 0x0
 
-    .line 150
     :goto_0
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -854,20 +779,17 @@
 
     if-ne v8, v6, :cond_2
 
-    .line 151
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v18
 
     if-lez v18, :cond_29
 
-    .line 152
     :cond_2
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v6
 
-    .line 153
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v7
@@ -890,7 +812,6 @@
 
     if-ne v6, v0, :cond_9
 
-    .line 156
     :try_start_2
     invoke-virtual {v11, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -904,7 +825,6 @@
 
     goto/16 :goto_2
 
-    .line 164
     :cond_3
     invoke-virtual {v4}, Landroid/content/pm/ShortcutInfo;->isEnabled()Z
 
@@ -912,14 +832,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 165
     invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    .line 166
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -948,11 +866,9 @@
 
     goto :goto_1
 
-    .line 171
     :cond_4
     invoke-virtual {v14}, Ljava/util/ArrayList;->clear()V
 
-    .line 172
     new-instance v0, Landroid/content/Intent;
 
     const-string v6, "android.intent.action.VIEW"
@@ -964,7 +880,6 @@
     :cond_5
     if-lt v3, v13, :cond_6
 
-    .line 176
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -979,7 +894,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 177
     invoke-virtual/range {p1 .. p1}, Landroid/content/pm/ActivityInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -994,12 +908,10 @@
 
     move-result-object v0
 
-    .line 176
     invoke-static {v10, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 348
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->close()V
 
     return-object v5
@@ -1007,7 +919,6 @@
     :cond_6
     const/4 v12, 0x0
 
-    .line 182
     :try_start_3
     invoke-virtual {v14, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1021,7 +932,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 187
     :try_start_4
     invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
 
@@ -1040,13 +950,11 @@
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 195
     :try_start_5
     invoke-virtual {v14}, Ljava/util/ArrayList;->clear()V
 
     if-eqz v2, :cond_7
 
-    .line 198
     invoke-virtual {v4, v2}, Landroid/content/pm/ShortcutInfo;->setCategories(Ljava/util/Set;)V
 
     const/4 v2, 0x0
@@ -1054,14 +962,12 @@
     :cond_7
     if-nez v5, :cond_8
 
-    .line 203
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     move-object v5, v0
 
-    .line 205
     :cond_8
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1074,7 +980,6 @@
     :catch_0
     const-string v0, "Shortcut\'s extras contain un-persistable values. Skipping it."
 
-    .line 192
     invoke-static {v10, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -1105,7 +1010,6 @@
 
     if-ne v6, v0, :cond_d
 
-    .line 216
     :try_start_6
     invoke-virtual {v12, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1133,7 +1037,6 @@
     :cond_a
     if-eqz v2, :cond_c
 
-    .line 224
     invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
 
     move-result v3
@@ -1148,11 +1051,9 @@
 
     goto :goto_3
 
-    .line 229
     :cond_b
     new-instance v3, Lcom/android/server/pm/ShareTargetInfo;
 
-    .line 230
     invoke-virtual {v15}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -1169,7 +1070,6 @@
 
     move-object/from16 v22, v4
 
-    .line 231
     invoke-interface {v2}, Ljava/util/Set;->size()I
 
     move-result v4
@@ -1186,10 +1086,8 @@
 
     move-object/from16 v0, p5
 
-    .line 232
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 237
     invoke-virtual {v15}, Ljava/util/ArrayList;->clear()V
 
     const/4 v1, 0x2
@@ -1258,7 +1156,6 @@
 
     const-string/jumbo v1, "shortcuts"
 
-    .line 245
     invoke-virtual {v1, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1272,7 +1169,6 @@
 
     if-ne v6, v1, :cond_14
 
-    .line 248
     invoke-virtual {v11, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1297,7 +1193,6 @@
 
     move/from16 v6, v16
 
-    .line 249
     invoke-static/range {v1 .. v6}, Lcom/android/server/pm/ShortcutParser;->parseShortcutAttributes(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;Ljava/lang/String;Landroid/content/ComponentName;II)Landroid/content/pm/ShortcutInfo;
 
     move-result-object v4
@@ -1316,7 +1211,6 @@
     :cond_10
     if-eqz v11, :cond_12
 
-    .line 259
     invoke-interface {v11}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1326,7 +1220,6 @@
     :goto_7
     if-ltz v1, :cond_12
 
-    .line 260
     invoke-virtual {v4}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -1349,7 +1242,6 @@
 
     const-string v1, "Duplicate shortcut ID detected. Skipping it."
 
-    .line 261
     invoke-static {v10, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_6
@@ -1400,7 +1292,6 @@
     :goto_9
     if-ne v6, v1, :cond_16
 
-    .line 270
     invoke-virtual {v12, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1411,7 +1302,6 @@
 
     move-object/from16 v2, v20
 
-    .line 271
     invoke-static {v1, v2}, Lcom/android/server/pm/ShortcutParser;->parseShareTargetAttributes(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;)Lcom/android/server/pm/ShareTargetInfo;
 
     move-result-object v3
@@ -1422,7 +1312,6 @@
 
     goto/16 :goto_f
 
-    .line 278
     :cond_15
     invoke-virtual {v15}, Ljava/util/ArrayList;->clear()V
 
@@ -1457,7 +1346,6 @@
 
     const-string v4, "intent"
 
-    .line 281
     invoke-virtual {v4, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -1466,7 +1354,6 @@
 
     if-eqz v22, :cond_19
 
-    .line 283
     invoke-virtual/range {v22 .. v22}, Landroid/content/pm/ShortcutInfo;->isEnabled()Z
 
     move-result v3
@@ -1475,7 +1362,6 @@
 
     goto :goto_a
 
-    .line 288
     :cond_17
     iget-object v3, v1, Lcom/android/server/pm/ShortcutService;->mContext:Landroid/content/Context;
 
@@ -1487,7 +1373,6 @@
 
     move-result-object v3
 
-    .line 290
     invoke-virtual {v3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -1498,7 +1383,6 @@
 
     if-eqz v4, :cond_18
 
-    .line 291
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1540,7 +1424,6 @@
     :cond_18
     move-object/from16 v4, v19
 
-    .line 295
     invoke-virtual {v14, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_f
@@ -1551,7 +1434,6 @@
 
     const-string v3, "Ignoring excessive intent tag."
 
-    .line 284
     invoke-static {v10, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
@@ -1570,7 +1452,6 @@
     :try_start_7
     const-string v12, "categories"
 
-    .line 298
     invoke-virtual {v12, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
@@ -1579,7 +1460,6 @@
 
     if-eqz v22, :cond_28
 
-    .line 300
     invoke-virtual/range {v22 .. v22}, Landroid/content/pm/ShortcutInfo;->getCategories()Ljava/util/Set;
 
     move-result-object v3
@@ -1588,20 +1468,17 @@
 
     goto/16 :goto_f
 
-    .line 303
     :cond_1b
     invoke-static {v1, v2}, Lcom/android/server/pm/ShortcutParser;->parseCategories(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 304
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1c
 
-    .line 305
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1621,7 +1498,6 @@
     :cond_1c
     if-nez v24, :cond_1d
 
-    .line 310
     new-instance v5, Landroid/util/ArraySet;
 
     invoke-direct {v5}, Landroid/util/ArraySet;-><init>()V
@@ -1631,7 +1507,6 @@
     :cond_1d
     move-object/from16 v5, v24
 
-    .line 312
     :goto_b
     invoke-interface {v5, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -1645,7 +1520,6 @@
 
     const-string v12, "category"
 
-    .line 315
     invoke-virtual {v12, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
@@ -1656,20 +1530,17 @@
 
     goto/16 :goto_f
 
-    .line 319
     :cond_20
     invoke-static {v1, v2}, Lcom/android/server/pm/ShortcutParser;->parseCategory(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 320
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-eqz v6, :cond_21
 
-    .line 321
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1689,7 +1560,6 @@
     :cond_21
     if-nez v24, :cond_22
 
-    .line 326
     new-instance v5, Landroid/util/ArraySet;
 
     invoke-direct {v5}, Landroid/util/ArraySet;-><init>()V
@@ -1699,7 +1569,6 @@
     :cond_22
     move-object/from16 v5, v24
 
-    .line 328
     :goto_c
     invoke-interface {v5, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -1737,7 +1606,6 @@
 
     const-string v5, "data"
 
-    .line 331
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -1748,7 +1616,6 @@
 
     goto :goto_f
 
-    .line 335
     :cond_25
     invoke-static {v1, v2}, Lcom/android/server/pm/ShortcutParser;->parseShareTargetData(Lcom/android/server/pm/ShortcutService;Landroid/util/AttributeSet;)Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
@@ -1756,7 +1623,6 @@
 
     if-nez v3, :cond_26
 
-    .line 337
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1775,7 +1641,6 @@
 
     goto :goto_f
 
-    .line 340
     :cond_26
     invoke-virtual {v15, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1788,7 +1653,6 @@
 
     aput-object v7, v3, v8
 
-    .line 344
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1831,7 +1695,6 @@
     :cond_29
     move-object v11, v5
 
-    .line 348
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->close()V
 
     return-object v11
@@ -1853,7 +1716,6 @@
 
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 350
     :cond_2a
     throw v0
 .end method

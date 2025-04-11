@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/ShortcutInfo;
 
     invoke-static {p1}, Lcom/android/server/pm/ShortcutService$LocalService;->$r8$lambda$n_WOId_3T49L5bSl2N7IDr5x4AI(Landroid/content/pm/ShortcutInfo;)Z

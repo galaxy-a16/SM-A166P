@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/app/GameManagerService;->$r8$lambda$5uYx4mAOyiXa9wM2td6hRlCpZ0g(I)[Ljava/lang/String;
 
     move-result-object p0

@@ -9,7 +9,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 72
     :try_start_0
     invoke-interface {p0, p1}, Landroid/app/backup/IBackupObserver;->backupFinished(I)V
     :try_end_0
@@ -22,7 +21,6 @@
 
     const-string p1, "Backup observer went away: backupFinished"
 
-    .line 75
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -35,7 +33,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 56
     :try_start_0
     invoke-interface {p0, p1, p2}, Landroid/app/backup/IBackupObserver;->onResult(Ljava/lang/String;I)V
     :try_end_0
@@ -48,7 +45,6 @@
 
     const-string p1, "Backup observer went away: onResult"
 
-    .line 59
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -61,7 +57,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 39
     :try_start_0
     invoke-interface {p0, p1, p2}, Landroid/app/backup/IBackupObserver;->onUpdate(Ljava/lang/String;Landroid/app/backup/BackupProgress;)V
     :try_end_0
@@ -74,7 +69,6 @@
 
     const-string p1, "Backup observer went away: onUpdate"
 
-    .line 42
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0

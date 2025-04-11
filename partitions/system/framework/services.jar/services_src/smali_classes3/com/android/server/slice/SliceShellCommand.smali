@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/slice/SliceManagerService;)V
     .locals 0
 
-    .line 36
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/slice/SliceShellCommand;->mService:Lcom/android/server/slice/SliceManagerService;
 
     return-void
@@ -27,7 +25,6 @@
 
     if-nez p1, :cond_0
 
-    .line 43
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
@@ -37,7 +34,6 @@
     :cond_0
     const-string v0, "get-permissions"
 
-    .line 45
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -48,7 +44,6 @@
 
     return p0
 
-    .line 47
     :cond_1
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -64,42 +59,34 @@
 .method public onHelp()V
     .locals 2
 
-    .line 54
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Status bar commands:"
 
-    .line 55
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 56
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 57
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, ""
 
-    .line 58
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "  get-permissions <authority>"
 
-    .line 59
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    List the pkgs that have permission to an authority."
 
-    .line 60
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 61
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -108,7 +95,6 @@
 .method public final runGetPermissions(Ljava/lang/String;)I
     .locals 8
 
-    .line 66
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -119,14 +105,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 67
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 68
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -137,7 +121,6 @@
 
     return v2
 
-    .line 71
     :cond_0
     iget-object v0, p0, Lcom/android/server/slice/SliceShellCommand;->mService:Lcom/android/server/slice/SliceManagerService;
 
@@ -145,12 +128,10 @@
 
     move-result-object v0
 
-    .line 72
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v3
 
-    .line 74
     :try_start_0
     new-instance v1, Landroid/net/Uri$Builder;
 
@@ -158,24 +139,20 @@
 
     const-string v5, "content"
 
-    .line 75
     invoke-virtual {v1, v5}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v1
 
-    .line 76
     invoke-virtual {v1, p1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v1
 
-    .line 77
     invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1
 
     const-string/jumbo v5, "vnd.android.slice"
 
-    .line 78
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
@@ -190,7 +167,6 @@
 
     if-nez v5, :cond_1
 
-    .line 79
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -213,12 +189,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 106
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
 
-    .line 82
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -235,7 +209,6 @@
 
     if-nez v1, :cond_2
 
-    .line 85
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -246,7 +219,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 106
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -255,17 +227,14 @@
     :try_start_2
     const-string/jumbo v2, "result"
 
-    .line 88
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 89
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v2
 
-    .line 90
     new-instance v5, Landroid/util/ArraySet;
 
     invoke-direct {v5}, Landroid/util/ArraySet;-><init>()V
@@ -274,12 +243,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 91
     array-length v7, v1
 
     if-eqz v7, :cond_3
 
-    .line 93
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -288,7 +255,6 @@
 
     move-result-object v0
 
-    .line 94
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -306,19 +272,16 @@
 
     check-cast v1, Landroid/content/pm/PackageInfo;
 
-    .line 95
     iget-object v7, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 96
     iget-object v1, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-interface {v5, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 99
     :cond_3
     iget-object p0, p0, Lcom/android/server/slice/SliceShellCommand;->mService:Lcom/android/server/slice/SliceManagerService;
 
@@ -335,17 +298,14 @@
 
     aget-object v1, p0, v0
 
-    .line 100
     invoke-interface {v5, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-nez v7, :cond_4
 
-    .line 101
     invoke-virtual {v2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 102
     invoke-interface {v5, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -355,7 +315,6 @@
 
     goto :goto_1
 
-    .line 106
     :cond_5
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -366,6 +325,5 @@
 
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 107
     throw p0
 .end method

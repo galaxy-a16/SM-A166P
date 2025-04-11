@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 935
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 936
     iput-object p1, p0, Lcom/android/server/blob/BlobMetadata$Accessor;->packageName:Ljava/lang/String;
 
-    .line 937
     iput p2, p0, Lcom/android/server/blob/BlobMetadata$Accessor;->uid:I
 
     return-void
@@ -41,18 +38,15 @@
 
     if-eqz p1, :cond_3
 
-    .line 949
     instance-of v2, p1, Lcom/android/server/blob/BlobMetadata$Accessor;
 
     if-nez v2, :cond_1
 
     goto :goto_1
 
-    .line 952
     :cond_1
     check-cast p1, Lcom/android/server/blob/BlobMetadata$Accessor;
 
-    .line 953
     iget v2, p0, Lcom/android/server/blob/BlobMetadata$Accessor;->uid:I
 
     iget v3, p1, Lcom/android/server/blob/BlobMetadata$Accessor;->uid:I
@@ -85,7 +79,6 @@
 .method public equals(Ljava/lang/String;I)Z
     .locals 1
 
-    .line 941
     iget v0, p0, Lcom/android/server/blob/BlobMetadata$Accessor;->uid:I
 
     if-ne v0, p2, :cond_0
@@ -112,7 +105,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 958
     iget-object v0, p0, Lcom/android/server/blob/BlobMetadata$Accessor;->packageName:Ljava/lang/String;
 
     iget p0, p0, Lcom/android/server/blob/BlobMetadata$Accessor;->uid:I
@@ -135,7 +127,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 963
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

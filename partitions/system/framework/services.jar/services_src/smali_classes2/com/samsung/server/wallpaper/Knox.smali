@@ -11,15 +11,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Knox"
 
-    .line 34
     invoke-static {v0, v0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     iput-object p1, p0, Lcom/samsung/server/wallpaper/Knox;->mContext:Landroid/content/Context;
 
     return-void
@@ -32,7 +29,6 @@
 
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy4"
 
-    .line 42
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
@@ -41,19 +37,16 @@
 
     const-string v7, "false"
 
-    .line 44
     filled-new-array {v7}, [Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v3, "true"
 
-    .line 45
     filled-new-array {v3}, [Ljava/lang/String;
 
     move-result-object v3
 
-    .line 46
     iget-object p0, p0, Lcom/samsung/server/wallpaper/Knox;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -88,11 +81,9 @@
 
     if-eqz p0, :cond_1
 
-    .line 49
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 50
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
@@ -110,7 +101,6 @@
 
     xor-int/2addr p1, v0
 
-    .line 55
     :catch_0
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
@@ -121,10 +111,8 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 56
     throw p1
 
-    .line 59
     :cond_1
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;

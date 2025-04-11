@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/accessibility/magnification/MagnificationController;)V
     .locals 0
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput-object p1, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     return-void
@@ -27,7 +25,6 @@
 
     const/4 v0, 0x0
 
-    .line 399
     :goto_0
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
@@ -35,7 +32,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 400
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -46,12 +42,10 @@
 
     move-result v1
 
-    .line 402
     invoke-virtual {p0, v1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getMagnificationConfig(I)Landroid/accessibilityservice/MagnificationConfig;
 
     move-result-object v2
 
-    .line 403
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +62,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 404
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,17 +82,14 @@
 
     invoke-virtual {v3}, Ljava/io/PrintWriter;->println()V
 
-    .line 406
     new-instance v3, Landroid/graphics/Region;
 
     invoke-direct {v3}, Landroid/graphics/Region;-><init>()V
 
     const/4 v4, 0x1
 
-    .line 407
     invoke-virtual {p0, v1, v3, v4}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getCurrentMagnificationRegion(ILandroid/graphics/Region;Z)V
 
-    .line 408
     invoke-virtual {v3}, Landroid/graphics/Region;->isEmpty()Z
 
     move-result v4
@@ -108,7 +98,6 @@
 
     const-string v4, "    Magnification region="
 
-    .line 409
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v4
@@ -123,7 +112,6 @@
 
     invoke-virtual {v3}, Ljava/io/PrintWriter;->println()V
 
-    .line 411
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -133,7 +121,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 412
     invoke-virtual {v2}, Landroid/accessibilityservice/MagnificationConfig;->getMode()I
 
     move-result v4
@@ -148,15 +135,12 @@
 
     move-result-object v3
 
-    .line 411
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v3
 
-    .line 412
     invoke-virtual {v3}, Ljava/io/PrintWriter;->println()V
 
-    .line 414
     invoke-virtual {v2}, Landroid/accessibilityservice/MagnificationConfig;->getMode()I
 
     move-result v2
@@ -167,7 +151,6 @@
 
     goto/16 :goto_0
 
-    .line 416
     :cond_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -179,7 +162,6 @@
 
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
-    .line 417
     invoke-virtual {v0}, Lcom/android/server/accessibility/magnification/MagnificationController;->supportWindowMagnification()Z
 
     move-result v0
@@ -190,15 +172,12 @@
 
     move-result-object p2
 
-    .line 416
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object p2
 
-    .line 417
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 418
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +188,6 @@
 
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
-    .line 419
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getWindowMagnificationMgr()Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
 
     move-result-object p0
@@ -224,12 +202,10 @@
 
     move-result-object p0
 
-    .line 418
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object p0
 
-    .line 419
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -242,7 +218,6 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 433
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -253,7 +228,6 @@
 
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
-    .line 434
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getWindowMagnificationMgr()Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
 
     move-result-object p0
@@ -268,12 +242,10 @@
 
     move-result-object p0
 
-    .line 433
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object p0
 
-    .line 435
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     :cond_0
@@ -283,12 +255,10 @@
 .method public getCenterX(IZ)F
     .locals 1
 
-    .line 201
     invoke-virtual {p0, p1, p2}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->registerDisplayMagnificationIfNeeded(IZ)Z
 
     move-result p2
 
-    .line 204
     :try_start_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -304,7 +274,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 207
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->unregister(I)V
 
     :cond_0
@@ -317,7 +286,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->unregister(I)V
 
-    .line 209
     :cond_1
     throw v0
 .end method
@@ -325,12 +293,10 @@
 .method public getCenterY(IZ)F
     .locals 1
 
-    .line 223
     invoke-virtual {p0, p1, p2}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->registerDisplayMagnificationIfNeeded(IZ)Z
 
     move-result p2
 
-    .line 226
     :try_start_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -346,7 +312,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 229
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->unregister(I)V
 
     :cond_0
@@ -359,7 +324,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->unregister(I)V
 
-    .line 231
     :cond_1
     throw v0
 .end method
@@ -367,7 +331,6 @@
 .method public getControllingMode(I)I
     .locals 3
 
-    .line 353
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     const/4 v1, 0x2
@@ -380,7 +343,6 @@
 
     return v1
 
-    .line 356
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -394,7 +356,6 @@
 
     return v2
 
-    .line 360
     :cond_1
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -416,7 +377,6 @@
 .method public getCurrentMagnificationRegion(ILandroid/graphics/Region;Z)V
     .locals 2
 
-    .line 255
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getControllingMode(I)I
 
     move-result v0
@@ -425,7 +385,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 257
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getFullscreenMagnificationRegion(ILandroid/graphics/Region;Z)V
 
     goto :goto_0
@@ -435,7 +394,6 @@
 
     if-ne v0, p3, :cond_1
 
-    .line 259
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getWindowMagnificationMgr()Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
@@ -452,12 +410,10 @@
 .method public getFullscreenMagnificationRegion(ILandroid/graphics/Region;Z)V
     .locals 1
 
-    .line 273
     invoke-virtual {p0, p1, p3}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->registerDisplayMagnificationIfNeeded(IZ)Z
 
     move-result p3
 
-    .line 276
     :try_start_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -471,7 +427,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 280
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->unregister(I)V
 
     :cond_0
@@ -484,7 +439,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->unregister(I)V
 
-    .line 282
     :cond_1
     throw p2
 .end method
@@ -496,22 +450,18 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 425
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
-    .line 424
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     move-result-object p0
 
-    .line 425
     invoke-virtual {p0, p2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->getIdOfLastServiceToMagnify(I)I
 
     move-result p0
 
     goto :goto_0
 
-    .line 426
     :cond_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -530,12 +480,10 @@
 .method public getMagnificationConfig(I)Landroid/accessibilityservice/MagnificationConfig;
     .locals 4
 
-    .line 76
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getControllingMode(I)I
 
     move-result v0
 
-    .line 77
     new-instance v1, Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     invoke-direct {v1}, Landroid/accessibilityservice/MagnificationConfig$Builder;-><init>()V
@@ -544,22 +492,18 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 79
     iget-object v3, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
-    .line 80
     invoke-virtual {v3}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     move-result-object v3
 
-    .line 81
     invoke-virtual {v1, v0}, Landroid/accessibilityservice/MagnificationConfig$Builder;->setMode(I)Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
-    .line 82
     invoke-virtual {p0, p1, v2}, Lcom/android/server/accessibility/magnification/MagnificationController;->isActivated(II)Z
 
     move-result p0
@@ -568,7 +512,6 @@
 
     move-result-object p0
 
-    .line 83
     invoke-virtual {v3, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->getScale(I)F
 
     move-result v0
@@ -577,7 +520,6 @@
 
     move-result-object p0
 
-    .line 84
     invoke-virtual {v3, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->getCenterX(I)F
 
     move-result v0
@@ -586,7 +528,6 @@
 
     move-result-object p0
 
-    .line 85
     invoke-virtual {v3, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->getCenterY(I)F
 
     move-result p1
@@ -600,22 +541,18 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 87
     iget-object v3, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
-    .line 88
     invoke-virtual {v3}, Lcom/android/server/accessibility/magnification/MagnificationController;->getWindowMagnificationMgr()Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
 
     move-result-object v3
 
-    .line 89
     invoke-virtual {v1, v0}, Landroid/accessibilityservice/MagnificationConfig$Builder;->setMode(I)Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
-    .line 90
     invoke-virtual {p0, p1, v2}, Lcom/android/server/accessibility/magnification/MagnificationController;->isActivated(II)Z
 
     move-result p0
@@ -624,7 +561,6 @@
 
     move-result-object p0
 
-    .line 91
     invoke-virtual {v3, p1}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->getScale(I)F
 
     move-result v0
@@ -633,7 +569,6 @@
 
     move-result-object p0
 
-    .line 92
     invoke-virtual {v3, p1}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->getCenterX(I)F
 
     move-result v0
@@ -642,7 +577,6 @@
 
     move-result-object p0
 
-    .line 93
     invoke-virtual {v3, p1}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->getCenterY(I)F
 
     move-result p1
@@ -654,10 +588,8 @@
     :cond_1
     const/4 p0, 0x0
 
-    .line 96
     invoke-virtual {v1, p0}, Landroid/accessibilityservice/MagnificationConfig$Builder;->setActivated(Z)Landroid/accessibilityservice/MagnificationConfig$Builder;
 
-    .line 98
     :goto_0
     invoke-virtual {v1}, Landroid/accessibilityservice/MagnificationConfig$Builder;->build()Landroid/accessibilityservice/MagnificationConfig;
 
@@ -669,7 +601,6 @@
 .method public getScale(I)F
     .locals 0
 
-    .line 187
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
@@ -686,7 +617,6 @@
 .method public isMagnifying(I)Z
     .locals 2
 
-    .line 336
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getControllingMode(I)I
 
     move-result v0
@@ -695,7 +625,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 338
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
@@ -713,7 +642,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 340
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getWindowMagnificationMgr()Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
@@ -735,7 +663,6 @@
 .method public final isRegistered(I)Z
     .locals 0
 
-    .line 377
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
@@ -752,7 +679,6 @@
 .method public final register(I)V
     .locals 0
 
-    .line 384
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
@@ -767,7 +693,6 @@
 .method public final registerDisplayMagnificationIfNeeded(IZ)Z
     .locals 1
 
-    .line 369
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->isRegistered(I)Z
 
     move-result v0
@@ -776,7 +701,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 370
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->register(I)V
 
     const/4 p0, 0x1
@@ -792,7 +716,6 @@
 .method public resetAllIfNeeded(I)V
     .locals 1
 
-    .line 327
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
@@ -801,7 +724,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->resetAllIfNeeded(I)V
 
-    .line 328
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getWindowMagnificationMgr()Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
@@ -816,7 +738,6 @@
 .method public resetCurrentMagnification(IZ)Z
     .locals 3
 
-    .line 296
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getControllingMode(I)I
 
     move-result v0
@@ -825,7 +746,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 298
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
@@ -845,7 +765,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getWindowMagnificationMgr()Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
@@ -854,7 +773,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 301
     sget-object p2, Landroid/view/accessibility/MagnificationAnimationCallback;->STUB_ANIMATION_CALLBACK:Landroid/view/accessibility/MagnificationAnimationCallback;
 
     goto :goto_0
@@ -862,7 +780,6 @@
     :cond_1
     const/4 p2, 0x0
 
-    .line 300
     :goto_0
     invoke-virtual {p0, p1, v2, p2}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->disableWindowMagnification(IZLandroid/view/accessibility/MagnificationAnimationCallback;)Z
 
@@ -877,7 +794,6 @@
 .method public resetFullscreenMagnification(IZ)Z
     .locals 0
 
-    .line 316
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
@@ -894,7 +810,6 @@
 .method public setMagnificationConfig(ILandroid/accessibilityservice/MagnificationConfig;ZI)Z
     .locals 10
 
-    .line 118
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->transitionModeIfNeeded(ILandroid/accessibilityservice/MagnificationConfig;ZI)Z
 
     move-result v0
@@ -905,7 +820,6 @@
 
     return v1
 
-    .line 122
     :cond_0
     invoke-virtual {p2}, Landroid/accessibilityservice/MagnificationConfig;->getMode()I
 
@@ -913,12 +827,10 @@
 
     if-nez v0, :cond_1
 
-    .line 124
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getControllingMode(I)I
 
     move-result v0
 
-    .line 127
     :cond_1
     invoke-virtual {p2}, Landroid/accessibilityservice/MagnificationConfig;->isActivated()Z
 
@@ -928,12 +840,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 130
     invoke-virtual {p2}, Landroid/accessibilityservice/MagnificationConfig;->getScale()F
 
     move-result v5
 
-    .line 131
     invoke-virtual {p2}, Landroid/accessibilityservice/MagnificationConfig;->getCenterX()F
 
     move-result v6
@@ -950,14 +860,12 @@
 
     move v9, p4
 
-    .line 130
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->setScaleAndCenterForFullScreenMagnification(IFFFZI)Z
 
     move-result p0
 
     return p0
 
-    .line 134
     :cond_2
     invoke-virtual {p0, p1, p3}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->resetFullscreenMagnification(IZ)Z
 
@@ -974,14 +882,12 @@
 
     if-eqz v2, :cond_5
 
-    .line 138
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getWindowMagnificationMgr()Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
 
     move-result-object v0
 
-    .line 139
     invoke-virtual {p2}, Landroid/accessibilityservice/MagnificationConfig;->getScale()F
 
     move-result v2
@@ -996,7 +902,6 @@
 
     if-eqz p3, :cond_4
 
-    .line 140
     sget-object p0, Landroid/view/accessibility/MagnificationAnimationCallback;->STUB_ANIMATION_CALLBACK:Landroid/view/accessibility/MagnificationAnimationCallback;
 
     goto :goto_0
@@ -1011,14 +916,12 @@
 
     move v6, p4
 
-    .line 138
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->enableWindowMagnification(IFFFLandroid/view/accessibility/MagnificationAnimationCallback;I)Z
 
     move-result p0
 
     return p0
 
-    .line 143
     :cond_5
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -1026,7 +929,6 @@
 
     move-result-object p0
 
-    .line 144
     invoke-virtual {p0, p1, v3}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->disableWindowMagnification(IZ)Z
 
     move-result p0
@@ -1040,17 +942,14 @@
 .method public final setScaleAndCenterForFullScreenMagnification(IFFFZI)Z
     .locals 7
 
-    .line 153
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->isRegistered(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 154
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->register(I)V
 
-    .line 156
     :cond_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -1080,12 +979,10 @@
 .method public final transitionModeIfNeeded(ILandroid/accessibilityservice/MagnificationConfig;ZI)Z
     .locals 3
 
-    .line 166
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->getControllingMode(I)I
 
     move-result v0
 
-    .line 167
     invoke-virtual {p2}, Landroid/accessibilityservice/MagnificationConfig;->getMode()I
 
     move-result v1
@@ -1096,7 +993,6 @@
 
     return v2
 
-    .line 171
     :cond_0
     invoke-virtual {p2}, Landroid/accessibilityservice/MagnificationConfig;->getMode()I
 
@@ -1114,7 +1010,6 @@
 
     return v2
 
-    .line 175
     :cond_1
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
@@ -1128,7 +1023,6 @@
 .method public final unregister(I)V
     .locals 0
 
-    .line 391
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/MagnificationProcessor;->mController:Lcom/android/server/accessibility/magnification/MagnificationController;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationController;->getFullScreenMagnificationController()Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;

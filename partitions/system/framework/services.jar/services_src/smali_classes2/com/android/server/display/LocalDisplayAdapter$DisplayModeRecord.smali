@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/view/SurfaceControl$DisplayMode;[F)V
     .locals 3
 
-    .line 1686
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1687
     iget v0, p1, Landroid/view/SurfaceControl$DisplayMode;->width:I
 
     iget v1, p1, Landroid/view/SurfaceControl$DisplayMode;->height:I
@@ -37,7 +35,6 @@
 .method public hasMatchingMode(Landroid/view/SurfaceControl$DisplayMode;)Z
     .locals 2
 
-    .line 1699
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
     invoke-virtual {v0}, Landroid/view/Display$Mode;->getPhysicalWidth()I
@@ -50,7 +47,6 @@
 
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
-    .line 1700
     invoke-virtual {v0}, Landroid/view/Display$Mode;->getPhysicalHeight()I
 
     move-result v0
@@ -61,7 +57,6 @@
 
     iget-object p0, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
-    .line 1701
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result p0
@@ -72,7 +67,6 @@
 
     iget p1, p1, Landroid/view/SurfaceControl$DisplayMode;->refreshRate:F
 
-    .line 1702
     invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result p1
@@ -93,7 +87,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1706
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

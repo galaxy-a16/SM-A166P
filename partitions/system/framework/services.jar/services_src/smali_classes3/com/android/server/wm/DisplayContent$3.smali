@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 5415
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent$3;->this$0:Lcom/android/server/wm/DisplayContent;
 
     iput-object p2, p0, Lcom/android/server/wm/DisplayContent$3;->val$targetWin:Lcom/android/server/wm/WindowState;
@@ -31,7 +30,6 @@
 .method public onVisibleRequestedChanged(Z)V
     .locals 2
 
-    .line 5420
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent$3;->this$0:Lcom/android/server/wm/DisplayContent;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
@@ -40,7 +38,6 @@
 
     iget-object v1, v1, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
 
-    .line 5421
     invoke-interface {v1}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
 
     move-result-object v1
@@ -62,7 +59,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 5420
     :goto_0
     invoke-virtual {v0, v1, p1, p0}, Lcom/android/server/wm/WindowManagerService;->dispatchImeInputTargetVisibilityChanged(Landroid/os/IBinder;ZZ)V
 

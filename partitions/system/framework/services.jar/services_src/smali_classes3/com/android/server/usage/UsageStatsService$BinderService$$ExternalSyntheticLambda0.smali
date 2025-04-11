@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usage/UsageStatsService$BinderService;IIZ)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$BinderService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/usage/UsageStatsService$BinderService;
@@ -39,7 +38,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/usage/UsageStatsService$BinderService;
 
     iget v1, p0, Lcom/android/server/usage/UsageStatsService$BinderService$$ExternalSyntheticLambda0;->f$1:I

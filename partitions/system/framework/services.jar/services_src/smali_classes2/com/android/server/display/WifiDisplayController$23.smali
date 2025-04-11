@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayController;II)V
     .locals 0
 
-    .line 1932
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$23;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     iput p2, p0, Lcom/android/server/display/WifiDisplayController$23;->val$event:I
@@ -39,15 +38,12 @@
 
     const-string/jumbo v1, "sendEventToSemDeviceStatusListener"
 
-    .line 1935
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1936
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1937
     iget v1, p0, Lcom/android/server/display/WifiDisplayController$23;->val$event:I
 
     const/4 v2, 0x6
@@ -56,12 +52,10 @@
 
     const-string/jumbo v1, "status"
 
-    .line 1938
     iget v2, p0, Lcom/android/server/display/WifiDisplayController$23;->val$param:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1940
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$23;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -79,10 +73,8 @@
 
     move-result-object v1
 
-    .line 1941
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 1942
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$23;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmHandler(Lcom/android/server/display/WifiDisplayController;)Landroid/os/Handler;

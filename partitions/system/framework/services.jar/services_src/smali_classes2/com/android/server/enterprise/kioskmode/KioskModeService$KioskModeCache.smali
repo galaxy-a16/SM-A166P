@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBlockedHwKeys(Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
 
     return-object p0
@@ -22,14 +21,12 @@
 .method public constructor <init>(Lcom/android/server/enterprise/kioskmode/KioskModeService;)V
     .locals 0
 
-    .line 2733
     iput-object p1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
     invoke-direct {p0}, Lcom/android/server/enterprise/EdmCache;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2734
     iput-object p1, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
 
     return-void
@@ -38,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/enterprise/kioskmode/KioskModeService;Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;-><init>(Lcom/android/server/enterprise/kioskmode/KioskModeService;)V
 
     return-void
@@ -49,32 +45,26 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 3
 
-    .line 2758
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2759
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2760
     iget-object p2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
 
     if-eqz p2, :cond_2
 
-    .line 2761
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p2
 
-    .line 2762
     invoke-interface {p2}, Ljava/util/Set;->size()I
 
     move-result v1
 
     if-lez v1, :cond_2
 
-    .line 2763
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -94,18 +84,14 @@
 
     const-string v2, "BlockedKeyList for userId "
 
-    .line 2764
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2765
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v2, " {"
 
-    .line 2766
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2767
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -118,7 +104,6 @@
 
     move-result-object v1
 
-    .line 2768
     :cond_0
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -127,17 +112,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 2769
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 2770
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2771
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -146,7 +128,6 @@
 
     const-string v2, ", "
 
-    .line 2772
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -154,10 +135,8 @@
     :cond_1
     const-string/jumbo v1, "} "
 
-    .line 2775
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2776
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
 
     move-result-object v1
@@ -166,7 +145,6 @@
 
     goto :goto_0
 
-    .line 2780
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -180,7 +158,6 @@
 .method public updateCache()Z
     .locals 5
 
-    .line 2739
     iget-object v0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->mBlockedHwKeys:Ljava/util/Map;
 
     const/4 v1, 0x1
@@ -194,7 +171,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2742
     :goto_0
     iget-object v2, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
@@ -206,7 +182,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2744
     new-instance v0, Landroid/content/Intent;
 
     invoke-static {}, Lcom/android/server/enterprise/kioskmode/KioskModeService;->-$$Nest$sfgetACTION_REFRESH_HWKEY_INTERNAL()Ljava/lang/String;
@@ -217,15 +192,12 @@
 
     const/high16 v2, 0x4000000
 
-    .line 2745
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2746
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2748
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$KioskModeCache;->this$0:Lcom/android/server/enterprise/kioskmode/KioskModeService;
 
@@ -245,13 +217,10 @@
     :catchall_0
     move-exception p0
 
-    .line 2751
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2752
     throw p0
 
-    .line 2751
     :catch_0
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V

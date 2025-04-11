@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/samsung/accessory/manager/SAccessoryManager;Landroid/os/Looper;)V
     .locals 1
 
-    .line 448
     iput-object p1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$AuthHandler;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 449
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 0
 
-    .line 453
     iget-object p0, p0, Lcom/samsung/accessory/manager/SAccessoryManager$AuthHandler;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-static {p0, p1}, Lcom/samsung/accessory/manager/SAccessoryManager;->-$$Nest$mprocessAuthMessage(Lcom/samsung/accessory/manager/SAccessoryManager;Landroid/os/Message;)V

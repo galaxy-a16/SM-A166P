@@ -28,7 +28,6 @@
 .method public static synthetic $r8$lambda$UeWNSQD1RFTPRJAb6Fl8AceRm-4(Lcom/android/server/people/data/EventHistoryImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/people/data/EventHistoryImpl;->lambda$loadFromDisk$1()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public static synthetic $r8$lambda$yXjfGHzynQfgnIsUXtecuuxtr3M(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/people/data/EventHistoryImpl;->lambda$eventHistoriesImplFromDisk$0(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result p0
@@ -48,61 +46,50 @@
 .method public constructor <init>(Lcom/android/server/people/data/EventHistoryImpl$Injector;Ljava/io/File;Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 2
 
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
 
-    .line 65
     new-instance v0, Lcom/android/server/people/data/EventList;
 
     invoke-direct {v0}, Lcom/android/server/people/data/EventList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mRecentEvents:Lcom/android/server/people/data/EventList;
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/people/data/EventHistoryImpl;->mInjector:Lcom/android/server/people/data/EventHistoryImpl$Injector;
 
-    .line 79
     iput-object p3, p0, Lcom/android/server/people/data/EventHistoryImpl;->mScheduledExecutorService:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 80
     invoke-virtual {p1}, Lcom/android/server/people/data/EventHistoryImpl$Injector;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mLastPruneTime:J
 
-    .line 82
     iput-object p2, p0, Lcom/android/server/people/data/EventHistoryImpl;->mRootDir:Ljava/io/File;
 
-    .line 83
     new-instance p1, Ljava/io/File;
 
     const-string v0, "events"
 
     invoke-direct {p1, p2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 84
     new-instance v0, Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;
 
     invoke-direct {v0, p1, p3}, Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;-><init>(Ljava/io/File;Ljava/util/concurrent/ScheduledExecutorService;)V
 
     iput-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventsProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;
 
-    .line 86
     new-instance p1, Ljava/io/File;
 
     const-string v0, "indexes"
 
     invoke-direct {p1, p2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 87
     new-instance p2, Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;
 
     invoke-direct {p2, p1, p3}, Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;-><init>(Ljava/io/File;Ljava/util/concurrent/ScheduledExecutorService;)V
@@ -115,7 +102,6 @@
 .method public constructor <init>(Ljava/io/File;Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 1
 
-    .line 72
     new-instance v0, Lcom/android/server/people/data/EventHistoryImpl$Injector;
 
     invoke-direct {v0}, Lcom/android/server/people/data/EventHistoryImpl$Injector;-><init>()V
@@ -128,12 +114,10 @@
 .method public static eventHistoriesImplFromDisk(Lcom/android/server/people/data/EventHistoryImpl$Injector;Ljava/io/File;Ljava/util/concurrent/ScheduledExecutorService;)Ljava/util/Map;
     .locals 6
 
-    .line 102
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 103
     new-instance v1, Lcom/android/server/cpu/CpuInfoReader$$ExternalSyntheticLambda2;
 
     invoke-direct {v1}, Lcom/android/server/cpu/CpuInfoReader$$ExternalSyntheticLambda2;-><init>()V
@@ -146,7 +130,6 @@
 
     return-object v0
 
-    .line 107
     :cond_0
     array-length v1, p1
 
@@ -157,7 +140,6 @@
 
     aget-object v3, p1, v2
 
-    .line 108
     new-instance v4, Lcom/android/server/people/data/EventHistoryImpl$$ExternalSyntheticLambda1;
 
     invoke-direct {v4}, Lcom/android/server/people/data/EventHistoryImpl$$ExternalSyntheticLambda1;-><init>()V
@@ -168,22 +150,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 110
     array-length v4, v4
 
     const/4 v5, 0x2
 
     if-ne v4, v5, :cond_1
 
-    .line 111
     new-instance v4, Lcom/android/server/people/data/EventHistoryImpl;
 
     invoke-direct {v4, p0, v3, p2}, Lcom/android/server/people/data/EventHistoryImpl;-><init>(Lcom/android/server/people/data/EventHistoryImpl$Injector;Ljava/io/File;Ljava/util/concurrent/ScheduledExecutorService;)V
 
-    .line 113
     invoke-virtual {v4}, Lcom/android/server/people/data/EventHistoryImpl;->loadFromDisk()V
 
-    .line 114
     invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -206,7 +184,6 @@
 .method public static eventHistoriesImplFromDisk(Ljava/io/File;Ljava/util/concurrent/ScheduledExecutorService;)Ljava/util/Map;
     .locals 1
 
-    .line 95
     new-instance v0, Lcom/android/server/people/data/EventHistoryImpl$Injector;
 
     invoke-direct {v0}, Lcom/android/server/people/data/EventHistoryImpl$Injector;-><init>()V
@@ -223,7 +200,6 @@
 
     const-string p0, "events"
 
-    .line 109
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -256,10 +232,8 @@
 .method private synthetic lambda$loadFromDisk$1()V
     .locals 5
 
-    .line 128
     monitor-enter p0
 
-    .line 129
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventsProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;
 
@@ -269,7 +243,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 131
     iget-object v1, p0, Lcom/android/server/people/data/EventHistoryImpl;->mInjector:Lcom/android/server/people/data/EventHistoryImpl$Injector;
 
     invoke-virtual {v1}, Lcom/android/server/people/data/EventHistoryImpl$Injector;->currentTimeMillis()J
@@ -282,7 +255,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/people/data/EventList;->removeOldEvents(J)V
 
-    .line 132
     iget-object v1, p0, Lcom/android/server/people/data/EventHistoryImpl;->mRecentEvents:Lcom/android/server/people/data/EventList;
 
     invoke-virtual {v0}, Lcom/android/server/people/data/EventList;->getAllEvents()Ljava/util/List;
@@ -291,11 +263,9 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/people/data/EventList;->addAll(Ljava/util/List;)V
 
-    .line 135
     :cond_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexesProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;
 
-    .line 136
     invoke-virtual {v0}, Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;->loadIndexesFromDisk()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -304,7 +274,6 @@
 
     const/4 v1, 0x0
 
-    .line 138
     :goto_0
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -312,7 +281,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 139
     iget-object v2, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -331,7 +299,6 @@
 
     goto :goto_0
 
-    .line 142
     :cond_1
     monitor-exit p0
 
@@ -354,21 +321,17 @@
 
     monitor-enter p0
 
-    .line 183
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/people/data/EventHistoryImpl;->pruneOldEvents()V
 
-    .line 184
     invoke-virtual {p0, p1}, Lcom/android/server/people/data/EventHistoryImpl;->addEventInMemory(Lcom/android/server/people/data/Event;)V
 
-    .line 185
     iget-object p1, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventsProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;
 
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mRecentEvents:Lcom/android/server/people/data/EventList;
 
     invoke-virtual {p1, v0}, Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;->scheduleEventsSave(Lcom/android/server/people/data/EventList;)V
 
-    .line 186
     iget-object p1, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexesProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;
 
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
@@ -377,7 +340,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 187
     monitor-exit p0
 
     return-void
@@ -395,7 +357,6 @@
 
     monitor-enter p0
 
-    .line 207
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
 
@@ -411,14 +372,12 @@
 
     if-nez v0, :cond_0
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mInjector:Lcom/android/server/people/data/EventHistoryImpl$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/people/data/EventHistoryImpl$Injector;->createEventIndex()Lcom/android/server/people/data/EventIndex;
 
     move-result-object v0
 
-    .line 210
     iget-object v1, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Lcom/android/server/people/data/Event;->getType()I
@@ -427,7 +386,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 212
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/people/data/Event;->getTimestamp()J
 
@@ -435,14 +393,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/people/data/EventIndex;->addEvent(J)V
 
-    .line 213
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mRecentEvents:Lcom/android/server/people/data/EventList;
 
     invoke-virtual {v0, p1}, Lcom/android/server/people/data/EventList;->add(Lcom/android/server/people/data/Event;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 214
     monitor-exit p0
 
     return-void
@@ -460,7 +416,6 @@
 
     monitor-enter p0
 
-    .line 158
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
 
@@ -472,7 +427,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 159
     new-instance v0, Lcom/android/server/people/data/EventIndex;
 
     invoke-direct {v0, p1}, Lcom/android/server/people/data/EventIndex;-><init>(Lcom/android/server/people/data/EventIndex;)V
@@ -506,7 +460,6 @@
 
     monitor-enter p0
 
-    .line 165
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mInjector:Lcom/android/server/people/data/EventHistoryImpl$Injector;
 
@@ -514,7 +467,6 @@
 
     move-result-object v0
 
-    .line 166
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -537,7 +489,6 @@
 
     move-result v1
 
-    .line 167
     iget-object v2, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -548,7 +499,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 169
     invoke-static {v0, v1}, Lcom/android/server/people/data/EventIndex;->combine(Lcom/android/server/people/data/EventIndex;Lcom/android/server/people/data/EventIndex;)Lcom/android/server/people/data/EventIndex;
 
     move-result-object v0
@@ -557,7 +507,6 @@
 
     goto :goto_0
 
-    .line 172
     :cond_1
     monitor-exit p0
 
@@ -576,7 +525,6 @@
 
     monitor-enter p0
 
-    .line 127
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mScheduledExecutorService:Ljava/util/concurrent/ScheduledExecutorService;
 
@@ -588,7 +536,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 144
     monitor-exit p0
 
     return-void
@@ -606,35 +553,29 @@
 
     monitor-enter p0
 
-    .line 190
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mRecentEvents:Lcom/android/server/people/data/EventList;
 
     invoke-virtual {v0}, Lcom/android/server/people/data/EventList;->clear()V
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventsProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;
 
     invoke-virtual {v0}, Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;->deleteRecentEventsFile()V
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexesProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;
 
     invoke-virtual {v0}, Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;->deleteIndexesFile()V
 
-    .line 194
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mRootDir:Ljava/io/File;
 
     invoke-static {v0}, Landroid/os/FileUtils;->deleteContentsAndDir(Ljava/io/File;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 195
     monitor-exit p0
 
     return-void
@@ -652,7 +593,6 @@
 
     monitor-enter p0
 
-    .line 199
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mInjector:Lcom/android/server/people/data/EventHistoryImpl$Injector;
 
@@ -660,7 +600,6 @@
 
     move-result-wide v0
 
-    .line 200
     iget-wide v2, p0, Lcom/android/server/people/data/EventHistoryImpl;->mLastPruneTime:J
 
     sub-long v2, v0, v2
@@ -671,7 +610,6 @@
 
     if-lez v2, :cond_0
 
-    .line 201
     iget-object v2, p0, Lcom/android/server/people/data/EventHistoryImpl;->mRecentEvents:Lcom/android/server/people/data/EventList;
 
     const-wide/32 v3, 0xdbba00
@@ -680,12 +618,10 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/people/data/EventList;->removeOldEvents(J)V
 
-    .line 202
     iput-wide v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mLastPruneTime:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 204
     :cond_0
     monitor-exit p0
 
@@ -704,7 +640,6 @@
 
     monitor-enter p0
 
-    .line 151
     :try_start_0
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventsProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;
 
@@ -712,7 +647,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/people/data/EventHistoryImpl$EventsProtoDiskReadWriter;->saveEventsImmediately(Lcom/android/server/people/data/EventList;)V
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexesProtoDiskReadWriter:Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;
 
     iget-object v1, p0, Lcom/android/server/people/data/EventHistoryImpl;->mEventIndexArray:Landroid/util/SparseArray;
@@ -721,7 +655,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 153
     monitor-exit p0
 
     return-void

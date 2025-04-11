@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/BatteryStatsService$LocalService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/power/stats/BatteryStatsImpl;
@@ -27,7 +26,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 9
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/am/BatteryStatsService$LocalService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     check-cast p1, Ljava/lang/Integer;

@@ -13,17 +13,14 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 202
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/DockObserver$ExtconStateConfig;->keyValuePairs:Ljava/util/List;
 
-    .line 205
     iput p1, p0, Lcom/android/server/DockObserver$ExtconStateConfig;->extraStateValue:I
 
     return-void

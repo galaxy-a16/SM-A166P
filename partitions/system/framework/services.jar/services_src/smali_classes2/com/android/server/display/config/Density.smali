@@ -23,15 +23,12 @@
 .method public static read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/display/config/Density;
     .locals 4
 
-    .line 54
     new-instance v0, Lcom/android/server/display/config/Density;
 
     invoke-direct {v0}, Lcom/android/server/display/config/Density;-><init>()V
 
-    .line 56
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    .line 58
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -45,7 +42,6 @@
 
     if-eq v1, v3, :cond_4
 
-    .line 60
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -56,7 +52,6 @@
 
     goto :goto_0
 
-    .line 61
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -64,24 +59,20 @@
 
     const-string/jumbo v2, "width"
 
-    .line 62
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 63
     invoke-static {p0}, Lcom/android/server/display/config/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 64
     new-instance v2, Ljava/math/BigInteger;
 
     invoke-direct {v2, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
 
-    .line 65
     invoke-virtual {v0, v2}, Lcom/android/server/display/config/Density;->setWidth(Ljava/math/BigInteger;)V
 
     goto :goto_0
@@ -89,24 +80,20 @@
     :cond_1
     const-string v2, "height"
 
-    .line 66
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 67
     invoke-static {p0}, Lcom/android/server/display/config/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 68
     new-instance v2, Ljava/math/BigInteger;
 
     invoke-direct {v2, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
 
-    .line 69
     invoke-virtual {v0, v2}, Lcom/android/server/display/config/Density;->setHeight(Ljava/math/BigInteger;)V
 
     goto :goto_0
@@ -114,29 +101,24 @@
     :cond_2
     const-string v2, "density"
 
-    .line 70
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 71
     invoke-static {p0}, Lcom/android/server/display/config/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 72
     new-instance v2, Ljava/math/BigInteger;
 
     invoke-direct {v2, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {v0, v2}, Lcom/android/server/display/config/Density;->setDensity(Ljava/math/BigInteger;)V
 
     goto :goto_0
 
-    .line 75
     :cond_3
     invoke-static {p0}, Lcom/android/server/display/config/XmlParser;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
@@ -147,7 +129,6 @@
 
     return-object v0
 
-    .line 79
     :cond_5
     new-instance p0, Ljavax/xml/datatype/DatatypeConfigurationException;
 
@@ -163,7 +144,6 @@
 .method public final getDensity()Ljava/math/BigInteger;
     .locals 0
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/display/config/Density;->density:Ljava/math/BigInteger;
 
     return-object p0
@@ -172,7 +152,6 @@
 .method public final getHeight()Ljava/math/BigInteger;
     .locals 0
 
-    .line 24
     iget-object p0, p0, Lcom/android/server/display/config/Density;->height:Ljava/math/BigInteger;
 
     return-object p0
@@ -181,7 +160,6 @@
 .method public final getWidth()Ljava/math/BigInteger;
     .locals 0
 
-    .line 9
     iget-object p0, p0, Lcom/android/server/display/config/Density;->width:Ljava/math/BigInteger;
 
     return-object p0
@@ -190,7 +168,6 @@
 .method public final setDensity(Ljava/math/BigInteger;)V
     .locals 0
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/display/config/Density;->density:Ljava/math/BigInteger;
 
     return-void
@@ -199,7 +176,6 @@
 .method public final setHeight(Ljava/math/BigInteger;)V
     .locals 0
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/display/config/Density;->height:Ljava/math/BigInteger;
 
     return-void
@@ -208,7 +184,6 @@
 .method public final setWidth(Ljava/math/BigInteger;)V
     .locals 0
 
-    .line 20
     iput-object p1, p0, Lcom/android/server/display/config/Density;->width:Ljava/math/BigInteger;
 
     return-void

@@ -15,16 +15,12 @@
 .method public constructor <init>(ILcom/android/server/backup/BackupRestoreTask;I)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput p1, p0, Lcom/android/server/backup/internal/Operation;->state:I
 
-    .line 29
     iput-object p2, p0, Lcom/android/server/backup/internal/Operation;->callback:Lcom/android/server/backup/BackupRestoreTask;
 
-    .line 30
     iput p3, p0, Lcom/android/server/backup/internal/Operation;->type:I
 
     return-void

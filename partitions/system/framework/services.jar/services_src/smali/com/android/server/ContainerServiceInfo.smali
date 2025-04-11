@@ -15,16 +15,12 @@
 .method public constructor <init>(ILandroid/content/ComponentName;Ljava/lang/String;)V
     .locals 0
 
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     iput p1, p0, Lcom/android/server/ContainerServiceInfo;->userid:I
 
-    .line 12
     iput-object p2, p0, Lcom/android/server/ContainerServiceInfo;->name:Landroid/content/ComponentName;
 
-    .line 13
     iput-object p3, p0, Lcom/android/server/ContainerServiceInfo;->category:Ljava/lang/String;
 
     return-void
@@ -46,11 +42,9 @@
 
     if-eqz p1, :cond_2
 
-    .line 28
     :try_start_0
     check-cast p1, Lcom/android/server/ContainerServiceInfo;
 
-    .line 29
     iget v2, p0, Lcom/android/server/ContainerServiceInfo;->userid:I
 
     iget v3, p1, Lcom/android/server/ContainerServiceInfo;->userid:I
@@ -59,7 +53,6 @@
 
     iget-object p0, p0, Lcom/android/server/ContainerServiceInfo;->name:Landroid/content/ComponentName;
 
-    .line 30
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object p0
@@ -94,7 +87,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -103,7 +95,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 17
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,7 +115,6 @@
 
     iget-object v2, p0, Lcom/android/server/ContainerServiceInfo;->name:Landroid/content/ComponentName;
 
-    .line 18
     invoke-virtual {v2}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
     move-result-object v2

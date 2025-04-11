@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbAlsaMidiDevice;Ljava/lang/String;Lcom/android/internal/midi/MidiEventScheduler;Ljava/io/FileOutputStream;I)V
     .locals 0
 
-    .line 279
     iput-object p1, p0, Lcom/android/server/usb/UsbAlsaMidiDevice$3;->this$0:Lcom/android/server/usb/UsbAlsaMidiDevice;
 
     iput-object p3, p0, Lcom/android/server/usb/UsbAlsaMidiDevice$3;->val$eventSchedulerF:Lcom/android/internal/midi/MidiEventScheduler;
@@ -36,7 +35,6 @@
 .method public run()V
     .locals 6
 
-    .line 285
     :catch_0
     :goto_0
     :try_start_0
@@ -56,12 +54,10 @@
 
     const-string/jumbo p0, "output thread exit"
 
-    .line 300
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 294
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/android/server/usb/UsbAlsaMidiDevice$3;->val$outputStreamF:Ljava/io/FileOutputStream;
@@ -78,7 +74,6 @@
 
     goto :goto_1
 
-    .line 296
     :catch_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -98,7 +93,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     :goto_1
     iget-object v1, p0, Lcom/android/server/usb/UsbAlsaMidiDevice$3;->val$eventSchedulerF:Lcom/android/internal/midi/MidiEventScheduler;
 

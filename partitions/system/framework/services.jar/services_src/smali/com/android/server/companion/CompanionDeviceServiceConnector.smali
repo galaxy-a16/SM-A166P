@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$XDBz48xhupV3Rp362pShmd6DfcQ(Landroid/companion/AssociationInfo;Landroid/companion/ICompanionDeviceService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/companion/CompanionDeviceServiceConnector;->lambda$postOnDeviceAppeared$0(Landroid/companion/AssociationInfo;Landroid/companion/ICompanionDeviceService;)V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$v7y2R5rlIaWn16ZdEJpPlgNxGio(Landroid/companion/AssociationInfo;Landroid/companion/ICompanionDeviceService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/companion/CompanionDeviceServiceConnector;->lambda$postOnDeviceDisappeared$1(Landroid/companion/AssociationInfo;Landroid/companion/ICompanionDeviceService;)V
 
     return-void
@@ -39,7 +37,6 @@
 .method public constructor <init>(Landroid/content/Context;ILandroid/content/ComponentName;IZ)V
     .locals 6
 
-    .line 93
     invoke-static {p3}, Lcom/android/server/companion/CompanionDeviceServiceConnector;->buildIntent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v2
@@ -56,13 +53,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/infra/ServiceConnector$Impl;-><init>(Landroid/content/Context;Landroid/content/Intent;IILjava/util/function/Function;)V
 
-    .line 94
     iput p2, p0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->mUserId:I
 
-    .line 95
     iput-object p3, p0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->mComponentName:Landroid/content/ComponentName;
 
-    .line 96
     iput-boolean p5, p0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->mIsPrimary:Z
 
     return-void
@@ -71,14 +65,12 @@
 .method public static buildIntent(Landroid/content/ComponentName;)Landroid/content/Intent;
     .locals 2
 
-    .line 190
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.companion.CompanionDeviceService"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 191
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p0
@@ -89,23 +81,19 @@
 .method public static getServiceThread()Lcom/android/server/ServiceThread;
     .locals 4
 
-    .line 195
     sget-object v0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->sServiceThread:Lcom/android/server/ServiceThread;
 
     if-nez v0, :cond_1
 
-    .line 196
     const-class v0, Lcom/android/server/companion/CompanionDeviceManagerService;
 
     monitor-enter v0
 
-    .line 197
     :try_start_0
     sget-object v1, Lcom/android/server/companion/CompanionDeviceServiceConnector;->sServiceThread:Lcom/android/server/ServiceThread;
 
     if-nez v1, :cond_0
 
-    .line 198
     new-instance v1, Lcom/android/server/ServiceThread;
 
     const-string v2, "companion-device-service-connector"
@@ -116,12 +104,10 @@
 
     sput-object v1, Lcom/android/server/companion/CompanionDeviceServiceConnector;->sServiceThread:Lcom/android/server/ServiceThread;
 
-    .line 200
     sget-object v1, Lcom/android/server/companion/CompanionDeviceServiceConnector;->sServiceThread:Lcom/android/server/ServiceThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 202
     :cond_0
     monitor-exit v0
 
@@ -136,7 +122,6 @@
 
     throw v1
 
-    .line 204
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->sServiceThread:Lcom/android/server/ServiceThread;
@@ -147,7 +132,6 @@
 .method public static synthetic lambda$postOnDeviceAppeared$0(Landroid/companion/AssociationInfo;Landroid/companion/ICompanionDeviceService;)V
     .locals 0
 
-    .line 107
     invoke-interface {p1, p0}, Landroid/companion/ICompanionDeviceService;->onDeviceAppeared(Landroid/companion/AssociationInfo;)V
 
     return-void
@@ -156,7 +140,6 @@
 .method public static synthetic lambda$postOnDeviceDisappeared$1(Landroid/companion/AssociationInfo;Landroid/companion/ICompanionDeviceService;)V
     .locals 0
 
-    .line 114
     invoke-interface {p1, p0}, Landroid/companion/ICompanionDeviceService;->onDeviceDisappeared(Landroid/companion/AssociationInfo;)V
 
     return-void
@@ -177,7 +160,6 @@
     :goto_0
     move v4, p3
 
-    .line 87
     new-instance p3, Lcom/android/server/companion/CompanionDeviceServiceConnector;
 
     move-object v0, p3
@@ -200,7 +182,6 @@
 .method public binderAsInterface(Landroid/os/IBinder;)Landroid/companion/ICompanionDeviceService;
     .locals 0
 
-    .line 167
     invoke-static {p1}, Landroid/companion/ICompanionDeviceService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/companion/ICompanionDeviceService;
 
     move-result-object p0
@@ -211,7 +192,6 @@
 .method public bridge synthetic binderAsInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 0
 
-    .line 45
     invoke-virtual {p0, p1}, Lcom/android/server/companion/CompanionDeviceServiceConnector;->binderAsInterface(Landroid/os/IBinder;)Landroid/companion/ICompanionDeviceService;
 
     move-result-object p0
@@ -222,10 +202,8 @@
 .method public binderDied()V
     .locals 3
 
-    .line 153
     invoke-super {p0}, Lcom/android/internal/infra/ServiceConnector$Impl;->binderDied()V
 
-    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,12 +228,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->mListener:Lcom/android/server/companion/CompanionDeviceServiceConnector$Listener;
 
     if-eqz v0, :cond_0
 
-    .line 161
     iget v1, p0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->mUserId:I
 
     iget-object v2, p0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->mComponentName:Landroid/content/ComponentName;
@@ -273,7 +249,6 @@
 .method public getAutoDisconnectTimeoutMs()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, -0x1
 
     return-wide v0
@@ -282,7 +257,6 @@
 .method public getJobHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 180
     invoke-static {}, Lcom/android/server/companion/CompanionDeviceServiceConnector;->getServiceThread()Lcom/android/server/ServiceThread;
 
     move-result-object p0
@@ -297,7 +271,6 @@
 .method public isPrimary()Z
     .locals 0
 
-    .line 135
     iget-boolean p0, p0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->mIsPrimary:Z
 
     return p0
@@ -306,7 +279,6 @@
 .method public onServiceConnectionStatusChanged(Landroid/companion/ICompanionDeviceService;Z)V
     .locals 1
 
-    .line 146
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -343,7 +315,6 @@
 .method public bridge synthetic onServiceConnectionStatusChanged(Landroid/os/IInterface;Z)V
     .locals 0
 
-    .line 45
     check-cast p1, Landroid/companion/ICompanionDeviceService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/companion/CompanionDeviceServiceConnector;->onServiceConnectionStatusChanged(Landroid/companion/ICompanionDeviceService;Z)V
@@ -354,7 +325,6 @@
 .method public postOnDeviceAppeared(Landroid/companion/AssociationInfo;)V
     .locals 2
 
-    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -377,7 +347,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     new-instance v0, Lcom/android/server/companion/CompanionDeviceServiceConnector$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p1}, Lcom/android/server/companion/CompanionDeviceServiceConnector$$ExternalSyntheticLambda0;-><init>(Landroid/companion/AssociationInfo;)V
@@ -390,7 +359,6 @@
 .method public postOnDeviceDisappeared(Landroid/companion/AssociationInfo;)V
     .locals 2
 
-    .line 112
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -413,7 +381,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     new-instance v0, Lcom/android/server/companion/CompanionDeviceServiceConnector$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p1}, Lcom/android/server/companion/CompanionDeviceServiceConnector$$ExternalSyntheticLambda2;-><init>(Landroid/companion/AssociationInfo;)V
@@ -426,7 +393,6 @@
 .method public postUnbind()V
     .locals 4
 
-    .line 131
     invoke-virtual {p0}, Lcom/android/server/companion/CompanionDeviceServiceConnector;->getJobHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -445,7 +411,6 @@
 .method public setListener(Lcom/android/server/companion/CompanionDeviceServiceConnector$Listener;)V
     .locals 0
 
-    .line 100
     iput-object p1, p0, Lcom/android/server/companion/CompanionDeviceServiceConnector;->mListener:Lcom/android/server/companion/CompanionDeviceServiceConnector$Listener;
 
     return-void

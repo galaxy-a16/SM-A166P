@@ -17,10 +17,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 150
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -37,7 +35,6 @@
 
     move v1, v0
 
-    .line 261
     :goto_0
     invoke-static {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmTaskDisplayAreas(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Ljava/util/ArrayList;
 
@@ -49,7 +46,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 262
     invoke-static {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmTaskDisplayAreas(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Ljava/util/ArrayList;
 
     move-result-object v2
@@ -80,27 +76,22 @@
 .method private validate()V
     .locals 9
 
-    .line 212
     iget-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mRootHierarchyBuilder:Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
 
     if-eqz v0, :cond_a
 
-    .line 216
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 217
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 218
     iget-object v2, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mRootHierarchyBuilder:Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
 
     invoke-static {v2, v0, v1}, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->validateIds(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;Ljava/util/Set;Ljava/util/Set;)V
 
-    .line 219
     iget-object v2, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mRootHierarchyBuilder:Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
 
     invoke-static {v2}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmImeContainer(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Lcom/android/server/wm/DisplayArea$Tokens;
@@ -120,7 +111,6 @@
     :cond_0
     move v2, v4
 
-    .line 220
     :goto_0
     iget-object v5, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mRootHierarchyBuilder:Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
 
@@ -130,7 +120,6 @@
 
     move v6, v4
 
-    .line 221
     :goto_1
     iget-object v7, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mDisplayAreaGroupHierarchyBuilders:Ljava/util/ArrayList;
 
@@ -140,7 +129,6 @@
 
     if-ge v6, v7, :cond_7
 
-    .line 222
     iget-object v7, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mDisplayAreaGroupHierarchyBuilders:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -149,10 +137,8 @@
 
     check-cast v7, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
 
-    .line 223
     invoke-static {v7, v0, v1}, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->validateIds(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;Ljava/util/Set;Ljava/util/Set;)V
 
-    .line 225
     invoke-static {v7}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmTaskDisplayAreas(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Ljava/util/ArrayList;
 
     move-result-object v8
@@ -165,7 +151,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 231
     invoke-static {v7}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmImeContainer(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Lcom/android/server/wm/DisplayArea$Tokens;
 
     move-result-object v8
@@ -174,7 +159,6 @@
 
     goto :goto_2
 
-    .line 232
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -184,7 +168,6 @@
 
     throw p0
 
-    .line 236
     :cond_2
     invoke-static {v7}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmImeContainer(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Lcom/android/server/wm/DisplayArea$Tokens;
 
@@ -202,7 +185,6 @@
     :goto_2
     if-eqz v5, :cond_5
 
-    .line 240
     invoke-static {v7}, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->containsDefaultTaskDisplayArea(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Z
 
     move-result v7
@@ -211,7 +193,6 @@
 
     goto :goto_3
 
-    .line 241
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -221,7 +202,6 @@
 
     throw p0
 
-    .line 245
     :cond_5
     invoke-static {v7}, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->containsDefaultTaskDisplayArea(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Z
 
@@ -232,7 +212,6 @@
 
     goto :goto_1
 
-    .line 226
     :cond_6
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -249,7 +228,6 @@
 
     return-void
 
-    .line 254
     :cond_8
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -259,7 +237,6 @@
 
     throw p0
 
-    .line 250
     :cond_9
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -269,7 +246,6 @@
 
     throw p0
 
-    .line 213
     :cond_a
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -283,14 +259,12 @@
 .method private static validateIds(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;Ljava/util/Set;Ljava/util/Set;)V
     .locals 6
 
-    .line 285
     invoke-static {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmRoot(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Lcom/android/server/wm/RootDisplayArea;
 
     move-result-object v0
 
     iget v0, v0, Lcom/android/server/wm/DisplayArea;->mFeatureId:I
 
-    .line 286
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -321,7 +295,6 @@
 
     move v3, v0
 
-    .line 296
     :goto_0
     invoke-static {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmTaskDisplayAreas(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Ljava/util/ArrayList;
 
@@ -333,7 +306,6 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 297
     invoke-static {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmTaskDisplayAreas(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Ljava/util/ArrayList;
 
     move-result-object v4
@@ -346,7 +318,6 @@
 
     iget v4, v4, Lcom/android/server/wm/DisplayArea;->mFeatureId:I
 
-    .line 298
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -373,7 +344,6 @@
 
     goto :goto_0
 
-    .line 303
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -383,7 +353,6 @@
 
     throw p0
 
-    .line 299
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -407,13 +376,11 @@
 
     throw p0
 
-    .line 309
     :cond_2
     new-instance v3, Landroid/util/ArraySet;
 
     invoke-direct {v3}, Landroid/util/ArraySet;-><init>()V
 
-    .line 310
     :goto_1
     invoke-static {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmFeatures(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Ljava/util/ArrayList;
 
@@ -425,7 +392,6 @@
 
     if-ge v0, v4, :cond_6
 
-    .line 311
     invoke-static {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmFeatures(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Ljava/util/ArrayList;
 
     move-result-object v4
@@ -440,7 +406,6 @@
 
     move-result v4
 
-    .line 312
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -451,7 +416,6 @@
 
     if-nez v5, :cond_5
 
-    .line 316
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -468,7 +432,6 @@
 
     goto :goto_1
 
-    .line 321
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -478,7 +441,6 @@
 
     throw p0
 
-    .line 317
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -502,7 +464,6 @@
 
     throw p0
 
-    .line 313
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -528,13 +489,11 @@
 
     throw p0
 
-    .line 328
     :cond_6
     invoke-interface {p2, v3}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     return-void
 
-    .line 291
     :cond_7
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -544,7 +503,6 @@
 
     throw p0
 
-    .line 287
     :cond_8
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -574,7 +532,6 @@
 .method public addDisplayAreaGroupHierarchy(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Lcom/android/server/wm/DisplayAreaPolicyBuilder;
     .locals 1
 
-    .line 176
     iget-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mDisplayAreaGroupHierarchyBuilders:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -585,22 +542,18 @@
 .method public build(Lcom/android/server/wm/WindowManagerService;)Lcom/android/server/wm/DisplayAreaPolicyBuilder$Result;
     .locals 8
 
-    .line 332
     invoke-direct {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->validate()V
 
-    .line 335
     iget-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mRootHierarchyBuilder:Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mDisplayAreaGroupHierarchyBuilders:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$mbuild(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;Ljava/util/List;)V
 
-    .line 336
     new-instance v5, Ljava/util/ArrayList;
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mDisplayAreaGroupHierarchyBuilders:Ljava/util/ArrayList;
 
-    .line 337
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -609,7 +562,6 @@
 
     const/4 v0, 0x0
 
-    .line 338
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mDisplayAreaGroupHierarchyBuilders:Ljava/util/ArrayList;
 
@@ -619,7 +571,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 339
     iget-object v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mDisplayAreaGroupHierarchyBuilders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -628,10 +579,8 @@
 
     check-cast v1, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
 
-    .line 340
     invoke-static {v1}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$mbuild(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)V
 
-    .line 341
     invoke-static {v1}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;->-$$Nest$fgetmRoot(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Lcom/android/server/wm/RootDisplayArea;
 
     move-result-object v1
@@ -642,13 +591,11 @@
 
     goto :goto_0
 
-    .line 344
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mSelectRootForWindowFunc:Ljava/util/function/BiFunction;
 
     if-nez v0, :cond_1
 
-    .line 345
     new-instance v0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mRootHierarchyBuilder:Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
@@ -661,7 +608,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mSelectRootForWindowFunc:Ljava/util/function/BiFunction;
 
-    .line 348
     :cond_1
     new-instance v0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$Result;
 
@@ -687,7 +633,6 @@
 .method public setRootHierarchy(Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;)Lcom/android/server/wm/DisplayAreaPolicyBuilder;
     .locals 0
 
-    .line 166
     iput-object p1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mRootHierarchyBuilder:Lcom/android/server/wm/DisplayAreaPolicyBuilder$HierarchyBuilder;
 
     return-object p0
@@ -696,7 +641,6 @@
 .method public setSelectRootForWindowFunc(Ljava/util/function/BiFunction;)Lcom/android/server/wm/DisplayAreaPolicyBuilder;
     .locals 0
 
-    .line 186
     iput-object p1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mSelectRootForWindowFunc:Ljava/util/function/BiFunction;
 
     return-object p0
@@ -705,7 +649,6 @@
 .method public setSelectTaskDisplayAreaFunc(Ljava/util/function/Function;)Lcom/android/server/wm/DisplayAreaPolicyBuilder;
     .locals 0
 
-    .line 196
     iput-object p1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder;->mSelectTaskDisplayAreaFunc:Ljava/util/function/Function;
 
     return-object p0

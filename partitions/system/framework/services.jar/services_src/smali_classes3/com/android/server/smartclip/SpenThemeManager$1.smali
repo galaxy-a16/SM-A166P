@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenThemeManager;)V
     .locals 0
 
-    .line 72
     iput-object p1, p0, Lcom/android/server/smartclip/SpenThemeManager$1;->this$0:Lcom/android/server/smartclip/SpenThemeManager;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -24,10 +23,8 @@
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 2
 
-    .line 76
     invoke-super {p0, p1, p2}, Lcom/android/internal/content/PackageMonitor;->onPackageRemoved(Ljava/lang/String;I)V
 
-    .line 77
     invoke-static {}, Lcom/android/server/smartclip/SpenThemeManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -48,7 +45,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     iget-object p2, p0, Lcom/android/server/smartclip/SpenThemeManager$1;->this$0:Lcom/android/server/smartclip/SpenThemeManager;
 
     invoke-static {p2}, Lcom/android/server/smartclip/SpenThemeManager;->-$$Nest$fgetmPackageRemovedHandler(Lcom/android/server/smartclip/SpenThemeManager;)Landroid/os/Handler;

@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAttachPenSoundPath(Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mAttachPenSoundPath:Ljava/lang/String;
 
     return-object p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDetachPenSoundPath(Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mDetachPenSoundPath:Ljava/lang/String;
 
     return-object p0
@@ -41,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPenAttachSoundId(Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenAttachSoundId:I
 
     return p0
@@ -50,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPenDetachSoundId(Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenDetachSoundId:I
 
     return p0
@@ -59,21 +55,16 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 4848
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 4838
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mAttachPenSoundPath:Ljava/lang/String;
 
-    .line 4839
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mDetachPenSoundPath:Ljava/lang/String;
 
-    .line 4841
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPath:Ljava/lang/String;
 
-    .line 4849
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->updatePenSound(Ljava/lang/String;)V
 
     return-void
@@ -84,12 +75,10 @@
 .method public final getFile(Ljava/lang/String;)Ljava/io/File;
     .locals 4
 
-    .line 4925
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4926
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -119,14 +108,12 @@
 
     const-string/jumbo p0, "persist.sys.omc_respath"
 
-    .line 4920
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 4921
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,7 +142,6 @@
 .method public getPenSoundPath()Ljava/lang/String;
     .locals 0
 
-    .line 4938
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPath:Ljava/lang/String;
 
     return-object p0
@@ -164,7 +150,6 @@
 .method public playPenSound(Z)V
     .locals 10
 
-    .line 4900
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPool:Landroid/media/SoundPool;
 
     if-nez v0, :cond_0
@@ -174,7 +159,6 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 4904
     iget p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenAttachSoundId:I
 
     goto :goto_0
@@ -189,7 +173,6 @@
 
     if-nez p1, :cond_2
 
-    .line 4906
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,14 +189,12 @@
 
     return-void
 
-    .line 4911
     :cond_2
     :try_start_0
     iget v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundStreamId:I
 
     invoke-virtual {v0, v1}, Landroid/media/SoundPool;->stop(I)V
 
-    .line 4912
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPool:Landroid/media/SoundPool;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -238,7 +219,6 @@
 
     goto :goto_1
 
-    .line 4914
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -261,7 +241,6 @@
 .method public setPenSoundPath(Ljava/lang/String;)V
     .locals 0
 
-    .line 4934
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->updatePenSound(Ljava/lang/String;)V
 
     return-void
@@ -270,7 +249,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 4943
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -305,34 +283,28 @@
 .method public final updatePenSound(Ljava/lang/String;)V
     .locals 6
 
-    .line 4853
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPath:Ljava/lang/String;
 
     const-string p1, "Pen_att_noti1.ogg"
 
-    .line 4856
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->getOMCPenSoundPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "Pen_det_noti1.ogg"
 
-    .line 4857
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->getOMCPenSoundPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4858
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->getFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 4859
     invoke-virtual {p0, v0}, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->getFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v2
 
-    .line 4862
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->FW_OMC_SPEN_SOUND:Z
 
     const/4 v4, 0x0
@@ -345,15 +317,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 4864
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mAttachPenSoundPath:Ljava/lang/String;
 
-    .line 4865
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mDetachPenSoundPath:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 4868
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPath:Ljava/lang/String;
 
@@ -363,7 +332,6 @@
 
     if-nez p1, :cond_1
 
-    .line 4869
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPath:Ljava/lang/String;
 
     const-string v0, ","
@@ -372,22 +340,18 @@
 
     move-result-object p1
 
-    .line 4870
     array-length v0, p1
 
     if-le v0, v5, :cond_1
 
-    .line 4871
     aget-object v0, p1, v4
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mAttachPenSoundPath:Ljava/lang/String;
 
-    .line 4872
     aget-object p1, p1, v5
 
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mDetachPenSoundPath:Ljava/lang/String;
 
-    .line 4877
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mAttachPenSoundPath:Ljava/lang/String;
@@ -402,7 +366,6 @@
 
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mDetachPenSoundPath:Ljava/lang/String;
 
-    .line 4878
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -411,13 +374,11 @@
 
     goto :goto_2
 
-    .line 4883
     :cond_2
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPool:Landroid/media/SoundPool;
 
     if-nez p1, :cond_3
 
-    .line 4885
     :try_start_0
     new-instance p1, Landroid/media/SoundPool;
 
@@ -427,7 +388,6 @@
 
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPool:Landroid/media/SoundPool;
 
-    .line 4886
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mAttachPenSoundPath:Ljava/lang/String;
 
     invoke-virtual {p1, v1, v5}, Landroid/media/SoundPool;->load(Ljava/lang/String;I)I
@@ -436,7 +396,6 @@
 
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenAttachSoundId:I
 
-    .line 4887
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPool:Landroid/media/SoundPool;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mDetachPenSoundPath:Ljava/lang/String;
@@ -454,17 +413,14 @@
     :catch_0
     const-string p1, "Cannot load pen sound"
 
-    .line 4890
     invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
-    .line 4891
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPool:Landroid/media/SoundPool;
 
     goto :goto_1
 
-    .line 4894
     :cond_3
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mAttachPenSoundPath:Ljava/lang/String;
 
@@ -474,7 +430,6 @@
 
     iput p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenAttachSoundId:I
 
-    .line 4895
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mPenSoundPool:Landroid/media/SoundPool;
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PenSoundInfo;->mDetachPenSoundPath:Ljava/lang/String;
@@ -488,7 +443,6 @@
     :goto_1
     return-void
 
-    .line 4879
     :cond_4
     :goto_2
     new-instance p1, Ljava/lang/StringBuilder;

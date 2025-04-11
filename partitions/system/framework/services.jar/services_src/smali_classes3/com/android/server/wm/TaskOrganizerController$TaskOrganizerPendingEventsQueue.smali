@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$mdispatchTaskInfoChanged(Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;Lcom/android/server/wm/Task;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->dispatchTaskInfoChanged(Lcom/android/server/wm/Task;Z)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$mgetPendingTaskEvent(Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;Lcom/android/server/wm/Task;I)Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->getPendingTaskEvent(Lcom/android/server/wm/Task;I)Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;
 
     move-result-object p0
@@ -37,24 +35,20 @@
 .method public constructor <init>(Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;)V
     .locals 1
 
-    .line 221
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 215
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mLastSentTaskInfos:Ljava/util/WeakHashMap;
 
-    .line 219
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
-    .line 222
     iput-object p1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mOrganizerState:Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;
 
     return-void
@@ -65,7 +59,6 @@
 .method public addPendingTaskEvent(Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;)V
     .locals 0
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -76,7 +69,6 @@
 .method public clearPendingTaskEvents()V
     .locals 0
 
-    .line 235
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -87,10 +79,8 @@
 .method public final dispatchPendingEvent(Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;)V
     .locals 3
 
-    .line 303
     iget-object v0, p1, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;->mTask:Lcom/android/server/wm/Task;
 
-    .line 304
     iget v1, p1, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;->mEventType:I
 
     if-eqz v1, :cond_4
@@ -113,7 +103,6 @@
 
     goto :goto_0
 
-    .line 322
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mOrganizerState:Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;
 
@@ -127,7 +116,6 @@
 
     goto :goto_0
 
-    .line 318
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mOrganizerState:Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;
 
@@ -139,7 +127,6 @@
 
     goto :goto_0
 
-    .line 315
     :cond_2
     iget-boolean p1, p1, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;->mForce:Z
 
@@ -147,7 +134,6 @@
 
     goto :goto_0
 
-    .line 311
     :cond_3
     iget-object p1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mOrganizerState:Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;
 
@@ -157,14 +143,12 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->onTaskVanished(Lcom/android/server/wm/Task;)V
 
-    .line 312
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mLastSentTaskInfos:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0, v0}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 306
     :cond_4
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->taskAppearedReady()Z
 
@@ -172,7 +156,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 307
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mOrganizerState:Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;
 
     invoke-static {p0}, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;->-$$Nest$fgetmOrganizer(Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;)Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;
@@ -189,7 +172,6 @@
 .method public dispatchPendingEvents()V
     .locals 3
 
-    .line 293
     iget-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -200,7 +182,6 @@
 
     return-void
 
-    .line 296
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
@@ -213,7 +194,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 297
     iget-object v2, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -228,7 +208,6 @@
 
     goto :goto_0
 
-    .line 299
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
@@ -240,7 +219,6 @@
 .method public final dispatchTaskInfoChanged(Lcom/android/server/wm/Task;Z)V
     .locals 3
 
-    .line 329
     iget-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mLastSentTaskInfos:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -249,19 +227,16 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 330
     iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mTmpTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     if-nez v1, :cond_0
 
-    .line 331
     new-instance v1, Landroid/app/ActivityManager$RunningTaskInfo;
 
     invoke-direct {v1}, Landroid/app/ActivityManager$RunningTaskInfo;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mTmpTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 333
     :cond_0
     iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mTmpTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
@@ -269,15 +244,12 @@
 
     invoke-virtual {v1}, Landroid/content/res/Configuration;->unset()V
 
-    .line 334
     iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mTmpTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     invoke-virtual {p1, v1}, Lcom/android/server/wm/Task;->fillTaskInfo(Landroid/app/TaskInfo;)V
 
-    .line 336
     iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mTmpTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 337
     invoke-virtual {v1, v0}, Landroid/app/ActivityManager$RunningTaskInfo;->equalsForTaskOrganizer(Landroid/app/TaskInfo;)Z
 
     move-result v1
@@ -292,7 +264,6 @@
 
     iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
 
-    .line 338
     invoke-static {v1, v0}, Lcom/android/server/wm/WindowOrganizerController;->configurationsAreEqualForOrganizer(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
 
     move-result v0
@@ -317,18 +288,15 @@
 
     return-void
 
-    .line 345
     :cond_3
     iget-object p2, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mTmpTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 348
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inSplitScreenWindowingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 349
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->isLeafTask()Z
 
     move-result v0
@@ -341,7 +309,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 350
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
@@ -352,10 +319,8 @@
 
     if-ne v0, p1, :cond_4
 
-    .line 351
     iput-boolean v2, p2, Landroid/app/ActivityManager$RunningTaskInfo;->isTopTaskInStage:Z
 
-    .line 355
     :cond_4
     iget-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mLastSentTaskInfos:Ljava/util/WeakHashMap;
 
@@ -365,17 +330,14 @@
 
     const/4 v0, 0x0
 
-    .line 361
     iput-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mTmpTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 363
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->isOrganized()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 368
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mOrganizerState:Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;
 
     invoke-static {p0}, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;->-$$Nest$fgetmOrganizer(Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerState;)Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;
@@ -391,7 +353,6 @@
 .method public getPendingEventList()Ljava/util/ArrayList;
     .locals 0
 
-    .line 227
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     return-object p0
@@ -400,7 +361,6 @@
 .method public getPendingLifecycleTaskEvent(Lcom/android/server/wm/Task;)Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;
     .locals 4
 
-    .line 283
     iget-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -412,7 +372,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 284
     iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -421,7 +380,6 @@
 
     check-cast v1, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;
 
-    .line 285
     iget v2, p1, Lcom/android/server/wm/Task;->mTaskId:I
 
     iget-object v3, v1, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;->mTask:Lcom/android/server/wm/Task;
@@ -452,7 +410,6 @@
 .method public final getPendingTaskEvent(Lcom/android/server/wm/Task;I)Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;
     .locals 4
 
-    .line 271
     iget-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -464,7 +421,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 272
     iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -473,7 +429,6 @@
 
     check-cast v1, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;
 
-    .line 273
     iget v2, p1, Lcom/android/server/wm/Task;->mTaskId:I
 
     iget-object v3, v1, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;->mTask:Lcom/android/server/wm/Task;
@@ -502,7 +457,6 @@
 .method public numPendingTaskEvents()I
     .locals 0
 
-    .line 231
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -515,7 +469,6 @@
 .method public removePendingTaskEvent(Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;)V
     .locals 0
 
-    .line 243
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -526,7 +479,6 @@
 .method public removePendingTaskEvents(Lcom/android/server/wm/Task;)Z
     .locals 6
 
-    .line 255
     iget-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -542,7 +494,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 256
     iget-object v3, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -551,7 +502,6 @@
 
     check-cast v3, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;
 
-    .line 257
     iget v4, p1, Lcom/android/server/wm/Task;->mTaskId:I
 
     iget-object v5, v3, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;->mTask:Lcom/android/server/wm/Task;
@@ -560,12 +510,10 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 259
     iget-object v4, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerPendingEventsQueue;->mPendingTaskEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 261
     iget v3, v3, Lcom/android/server/wm/TaskOrganizerController$PendingTaskEvent;->mEventType:I
 
     if-nez v3, :cond_0

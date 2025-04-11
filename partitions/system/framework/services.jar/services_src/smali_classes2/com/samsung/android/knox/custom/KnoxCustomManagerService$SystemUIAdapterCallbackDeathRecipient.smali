@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;I)V
     .locals 0
 
-    .line 12079
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$SystemUIAdapterCallbackDeathRecipient;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12080
     iput p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$SystemUIAdapterCallbackDeathRecipient;->key:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 12084
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$SystemUIAdapterCallbackDeathRecipient;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmSystemUiCallbacks(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Ljava/util/HashMap;
@@ -43,7 +40,6 @@
 
     return-void
 
-    .line 12087
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$SystemUIAdapterCallbackDeathRecipient;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
@@ -63,7 +59,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 12088
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$SystemUIAdapterCallbackDeathRecipient;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmSystemUiCallbacks(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Ljava/util/HashMap;
@@ -90,7 +85,6 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 12089
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$SystemUIAdapterCallbackDeathRecipient;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmSystemUiCallbacks(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Ljava/util/HashMap;
@@ -105,7 +99,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12091
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$SystemUIAdapterCallbackDeathRecipient;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
@@ -119,7 +112,6 @@
 
     if-nez v0, :cond_2
 
-    .line 12092
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$SystemUIAdapterCallbackDeathRecipient;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     const/4 v0, 0x1

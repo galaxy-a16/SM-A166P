@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 158
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -26,15 +25,12 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 173
     sget-object p0, Lcom/android/server/pm/StagingManager$Lifecycle;->sStagingManager:Lcom/android/server/pm/StagingManager;
 
     if-eqz p0, :cond_0
 
-    .line 174
     invoke-static {p0}, Lcom/android/server/pm/StagingManager;->-$$Nest$mmarkStagedSessionsAsSuccessful(Lcom/android/server/pm/StagingManager;)V
 
-    .line 175
     sget-object p0, Lcom/android/server/pm/StagingManager$Lifecycle;->sStagingManager:Lcom/android/server/pm/StagingManager;
 
     invoke-static {p0}, Lcom/android/server/pm/StagingManager;->-$$Nest$mmarkBootCompleted(Lcom/android/server/pm/StagingManager;)V
@@ -46,17 +42,14 @@
 .method public onStart()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public startService(Lcom/android/server/pm/StagingManager;)V
     .locals 0
 
-    .line 162
     sput-object p1, Lcom/android/server/pm/StagingManager$Lifecycle;->sStagingManager:Lcom/android/server/pm/StagingManager;
 
-    .line 163
     const-class p1, Lcom/android/server/SystemServiceManager;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;

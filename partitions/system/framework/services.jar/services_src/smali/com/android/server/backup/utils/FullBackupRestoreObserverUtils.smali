@@ -9,7 +9,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 80
     :try_start_0
     invoke-interface {p0}, Landroid/app/backup/IFullBackupRestoreObserver;->onEndRestore()V
     :try_end_0
@@ -22,7 +21,6 @@
 
     const-string v0, "full restore observer went away: endRestore"
 
-    .line 82
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -37,7 +35,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 61
     :try_start_0
     invoke-interface {p0, p1}, Landroid/app/backup/IFullBackupRestoreObserver;->onRestorePackage(Ljava/lang/String;)V
     :try_end_0
@@ -50,7 +47,6 @@
 
     const-string p1, "full restore observer went away: restorePackage"
 
-    .line 63
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -65,7 +61,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 39
     :try_start_0
     invoke-interface {p0}, Landroid/app/backup/IFullBackupRestoreObserver;->onStartRestore()V
     :try_end_0
@@ -78,7 +73,6 @@
 
     const-string v0, "full restore observer went away: startRestore"
 
-    .line 41
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0

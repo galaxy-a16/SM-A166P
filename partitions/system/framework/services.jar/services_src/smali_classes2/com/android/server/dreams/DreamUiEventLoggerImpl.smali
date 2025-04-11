@@ -14,10 +14,8 @@
 .method public constructor <init>([Ljava/lang/String;)V
     .locals 0
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/dreams/DreamUiEventLoggerImpl;->mLoggableDreamPrefixes:[Ljava/lang/String;
 
     return-void
@@ -32,7 +30,6 @@
 
     move v1, v0
 
-    .line 50
     :goto_0
     iget-object v2, p0, Lcom/android/server/dreams/DreamUiEventLoggerImpl;->mLoggableDreamPrefixes:[Ljava/lang/String;
 
@@ -40,7 +37,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 51
     aget-object v2, v2, v1
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -65,7 +61,6 @@
 .method public log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;Ljava/lang/String;)V
     .locals 1
 
-    .line 37
     invoke-interface {p1}, Lcom/android/internal/logging/UiEventLogger$UiEventEnum;->getId()I
 
     move-result p1
@@ -74,7 +69,6 @@
 
     return-void
 
-    .line 46
     :cond_0
     invoke-virtual {p0, p2}, Lcom/android/server/dreams/DreamUiEventLoggerImpl;->isFirstPartyDream(Ljava/lang/String;)Z
 
@@ -92,7 +86,6 @@
 
     const/4 v0, 0x0
 
-    .line 41
     invoke-static {p0, v0, p1, v0, p2}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIIILjava/lang/String;)V
 
     return-void

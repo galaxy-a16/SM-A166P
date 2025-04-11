@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/server/vibrator/SemVibrationBundle;)V
     .locals 0
 
-    .line 9
     invoke-direct {p0, p1}, Lcom/android/server/vibrator/SemVibration;-><init>(Lcom/android/server/vibrator/SemVibrationBundle;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getVibration()Lcom/android/server/vibrator/HalVibration;
     .locals 12
 
-    .line 13
     invoke-virtual {p0}, Lcom/android/server/vibrator/SemVibration;->commonValidation()Z
 
     move-result v0
@@ -29,7 +27,6 @@
 
     return-object p0
 
-    .line 17
     :cond_0
     iget v0, p0, Lcom/android/server/vibrator/SemVibration;->mMagnitude:I
 
@@ -41,12 +38,10 @@
 
     move-result-object v0
 
-    .line 19
     invoke-static {v0}, Landroid/os/CombinedVibration;->createParallel(Landroid/os/VibrationEffect;)Landroid/os/CombinedVibration;
 
     move-result-object v3
 
-    .line 21
     new-instance v0, Lcom/android/server/vibrator/HalVibration;
 
     iget-object v2, p0, Lcom/android/server/vibrator/SemVibration;->mToken:Landroid/os/IBinder;
@@ -61,7 +56,6 @@
 
     iget v8, p0, Lcom/android/server/vibrator/SemVibration;->mIndex:I
 
-    .line 22
     invoke-virtual {v1, v8}, Lcom/samsung/android/server/vibrator/VibratorHelper;->getPatternFrequencyByIndex(I)I
 
     move-result v8
@@ -70,7 +64,6 @@
 
     const/4 v10, 0x0
 
-    .line 23
     invoke-virtual {p0}, Lcom/android/server/vibrator/SemVibration;->getCallerInfo()Lcom/android/server/vibrator/Vibration$CallerInfo;
 
     move-result-object v11
@@ -85,7 +78,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

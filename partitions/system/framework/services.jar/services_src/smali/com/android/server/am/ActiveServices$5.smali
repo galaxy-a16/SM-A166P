@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActiveServices;)V
     .locals 0
 
-    .line 3117
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$5;->this$0:Lcom/android/server/am/ActiveServices;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public run()V
     .locals 8
 
-    .line 3123
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 3124
     iget-object v2, p0, Lcom/android/server/am/ActiveServices$5;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object v2, v2, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -41,7 +38,6 @@
 
     monitor-enter v2
 
-    .line 3126
     :try_start_0
     iget-object v3, p0, Lcom/android/server/am/ActiveServices$5;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -58,7 +54,6 @@
     :goto_0
     if-ltz v3, :cond_1
 
-    .line 3127
     iget-object v5, p0, Lcom/android/server/am/ActiveServices$5;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object v5, v5, Lcom/android/server/am/ActiveServices;->mPendingFgsNotifications:Ljava/util/ArrayList;
@@ -69,21 +64,18 @@
 
     check-cast v5, Lcom/android/server/am/ServiceRecord;
 
-    .line 3128
     iget-wide v6, v5, Lcom/android/server/am/ServiceRecord;->fgDisplayTime:J
 
     cmp-long v6, v6, v0
 
     if-gtz v6, :cond_0
 
-    .line 3133
     iget-object v6, p0, Lcom/android/server/am/ActiveServices$5;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object v6, v6, Lcom/android/server/am/ActiveServices;->mPendingFgsNotifications:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 3137
     iget-boolean v6, v5, Lcom/android/server/am/ServiceRecord;->isForeground:Z
 
     if-eqz v6, :cond_0
@@ -92,10 +84,8 @@
 
     if-eqz v6, :cond_0
 
-    .line 3138
     invoke-virtual {v5, v4}, Lcom/android/server/am/ServiceRecord;->postNotification(Z)V
 
-    .line 3139
     iput-boolean v4, v5, Lcom/android/server/am/ServiceRecord;->mFgsNotificationShown:Z
 
     :cond_0
@@ -103,7 +93,6 @@
 
     goto :goto_0
 
-    .line 3151
     :cond_1
     monitor-exit v2
     :try_end_0

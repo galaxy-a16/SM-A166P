@@ -49,25 +49,20 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 1
 
-    .line 36
     invoke-direct {p0}, Landroid/os/epic/IEpicObject$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 31
     iput-object v0, p0, Landroid/os/epic/EpicHIDLObject;->m_request_obj:Ljava/lang/Object;
 
-    .line 32
     iput-object v0, p0, Landroid/os/epic/EpicHIDLObject;->m_handle_obj:Ljava/lang/Object;
 
-    .line 37
     invoke-virtual {p0}, Landroid/os/epic/EpicHIDLObject;->create_instance()V
 
     return-void
@@ -76,10 +71,8 @@
 .method public constructor <init>(I)V
     .locals 4
 
-    .line 43
     invoke-direct {p0}, Landroid/os/epic/EpicHIDLObject;-><init>()V
 
-    .line 45
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     if-eqz v0, :cond_1
@@ -98,7 +91,6 @@
 
     const/4 v3, 0x0
 
-    .line 50
     invoke-virtual {v0, v3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -107,7 +99,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 52
     sget-object v2, Landroid/os/epic/EpicHIDLObject;->m_epic_init_func:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x1
@@ -137,10 +128,8 @@
 .method public constructor <init>([I)V
     .locals 4
 
-    .line 62
     invoke-direct {p0}, Landroid/os/epic/EpicHIDLObject;-><init>()V
 
-    .line 64
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     if-eqz v0, :cond_2
@@ -159,7 +148,6 @@
 
     const/4 v3, 0x0
 
-    .line 69
     invoke-virtual {v0, v3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -168,18 +156,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 71
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 72
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_1
 
-    .line 73
     aget v2, p1, v1
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -192,7 +177,6 @@
 
     goto :goto_0
 
-    .line 75
     :cond_1
     sget-object p1, Landroid/os/epic/EpicHIDLObject;->m_epic_init_multi_func:Ljava/lang/reflect/Method;
 
@@ -221,7 +205,6 @@
 .method public acquire_lock()Z
     .locals 5
 
-    .line 88
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     const/4 v1, 0x0
@@ -234,7 +217,6 @@
 
     goto :goto_0
 
-    .line 93
     :cond_0
     :try_start_0
     sget-object v2, Landroid/os/epic/EpicHIDLObject;->m_epic_request_func:Ljava/lang/reflect/Method;
@@ -272,7 +254,6 @@
 .method public acquire_lock_conditional(Ljava/lang/String;)Z
     .locals 4
 
-    .line 176
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     const/4 v1, 0x0
@@ -285,7 +266,6 @@
 
     goto :goto_0
 
-    .line 181
     :cond_0
     :try_start_0
     sget-object v2, Landroid/os/epic/EpicHIDLObject;->m_epic_request_conditional_func:Ljava/lang/reflect/Method;
@@ -327,7 +307,6 @@
 .method public acquire_lock_option(II)Z
     .locals 4
 
-    .line 128
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     const/4 v1, 0x0
@@ -340,7 +319,6 @@
 
     goto :goto_0
 
-    .line 133
     :cond_0
     :try_start_0
     sget-object v2, Landroid/os/epic/EpicHIDLObject;->m_epic_request_opt_func:Ljava/lang/reflect/Method;
@@ -394,7 +372,6 @@
 .method public acquire_lock_option_multi([I[I)Z
     .locals 4
 
-    .line 147
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     const/4 v1, 0x0
@@ -407,7 +384,6 @@
 
     goto :goto_2
 
-    .line 152
     :cond_0
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
@@ -416,13 +392,11 @@
 
     move v2, v1
 
-    .line 153
     :goto_0
     array-length v3, p1
 
     if-ge v2, v3, :cond_1
 
-    .line 154
     aget v3, p1, v2
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -435,7 +409,6 @@
 
     goto :goto_0
 
-    .line 157
     :cond_1
     new-instance p1, Ljava/util/ArrayList;
 
@@ -443,13 +416,11 @@
 
     move v2, v1
 
-    .line 158
     :goto_1
     array-length v3, p2
 
     if-ge v2, v3, :cond_2
 
-    .line 159
     aget v3, p2, v2
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -462,7 +433,6 @@
 
     goto :goto_1
 
-    .line 162
     :cond_2
     sget-object p2, Landroid/os/epic/EpicHIDLObject;->m_epic_request_opt_multi_func:Ljava/lang/reflect/Method;
 
@@ -509,12 +479,10 @@
 .method public final create_instance()V
     .locals 15
 
-    .line 252
     const-class p0, Landroid/os/epic/EpicHIDLObject;
 
     monitor-enter p0
 
-    .line 254
     :try_start_0
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
     :try_end_0
@@ -525,7 +493,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 255
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -537,7 +504,6 @@
     :try_start_2
     const-string/jumbo v0, "vendor.samsung_slsi.hardware.epic.V1_0.IEpicRequest"
 
-    .line 257
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -546,7 +512,6 @@
 
     const-string/jumbo v0, "vendor.samsung_slsi.hardware.epic.V1_0.IEpicHandle"
 
-    .line 258
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -559,14 +524,12 @@
 
     new-array v4, v1, [Ljava/lang/Class;
 
-    .line 261
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v5, v4, v2
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 262
     const-class v7, Ljava/util/ArrayList;
 
     aput-object v7, v6, v2
@@ -595,7 +558,6 @@
 
     aput-object v0, v5, v2
 
-    .line 266
     const-class v9, Ljava/util/ArrayList;
 
     aput-object v9, v5, v1
@@ -608,7 +570,6 @@
 
     aput-object v0, v9, v2
 
-    .line 267
     const-class v12, Ljava/lang/String;
 
     aput-object v12, v9, v1
@@ -617,7 +578,6 @@
 
     aput-object v0, v12, v2
 
-    .line 268
     const-class v13, Ljava/lang/String;
 
     aput-object v13, v12, v1
@@ -626,7 +586,6 @@
 
     aput-object v0, v13, v2
 
-    .line 269
     const-class v14, Ljava/lang/String;
 
     aput-object v14, v13, v1
@@ -635,12 +594,10 @@
 
     aput-object v0, v11, v2
 
-    .line 270
     const-class v0, Ljava/lang/String;
 
     aput-object v0, v11, v1
 
-    .line 272
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string v2, "getService"
@@ -651,7 +608,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_getservice_func:Ljava/lang/reflect/Method;
 
-    .line 273
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string v2, "init"
@@ -662,7 +618,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_init_func:Ljava/lang/reflect/Method;
 
-    .line 274
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string v2, "init_multi"
@@ -673,7 +628,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_init_multi_func:Ljava/lang/reflect/Method;
 
-    .line 275
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string v2, "acquire_lock"
@@ -684,7 +638,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_func:Ljava/lang/reflect/Method;
 
-    .line 276
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string/jumbo v2, "release_lock"
@@ -695,7 +648,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_release_func:Ljava/lang/reflect/Method;
 
-    .line 277
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string v2, "acquire_lock_option"
@@ -706,7 +658,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_opt_func:Ljava/lang/reflect/Method;
 
-    .line 278
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string v2, "acquire_lock_multi_option"
@@ -717,7 +668,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_opt_multi_func:Ljava/lang/reflect/Method;
 
-    .line 279
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string v2, "acquire_lock_conditional"
@@ -728,7 +678,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_conditional_func:Ljava/lang/reflect/Method;
 
-    .line 280
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string/jumbo v2, "release_lock_conditional"
@@ -739,7 +688,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_release_conditional_func:Ljava/lang/reflect/Method;
 
-    .line 281
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string/jumbo v2, "perf_hint"
@@ -750,7 +698,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_perf_hint_func:Ljava/lang/reflect/Method;
 
-    .line 282
     sget-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_request_cls:Ljava/lang/Class;
 
     const-string v2, "hint_release"
@@ -761,7 +708,6 @@
 
     sput-object v0, Landroid/os/epic/EpicHIDLObject;->m_epic_hint_release_func:Ljava/lang/reflect/Method;
 
-    .line 284
     sput-boolean v1, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -774,7 +720,6 @@
 
     goto :goto_1
 
-    .line 288
     :catch_0
     :goto_0
     :try_start_3
@@ -793,7 +738,6 @@
 .method public hint_release(Ljava/lang/String;)Z
     .locals 4
 
-    .line 235
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     const/4 v1, 0x0
@@ -806,7 +750,6 @@
 
     goto :goto_0
 
-    .line 240
     :cond_0
     :try_start_0
     sget-object v2, Landroid/os/epic/EpicHIDLObject;->m_epic_hint_release_func:Ljava/lang/reflect/Method;
@@ -848,7 +791,6 @@
 .method public perf_hint(Ljava/lang/String;)Z
     .locals 4
 
-    .line 215
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     const/4 v1, 0x0
@@ -861,7 +803,6 @@
 
     goto :goto_0
 
-    .line 220
     :cond_0
     :try_start_0
     sget-object v2, Landroid/os/epic/EpicHIDLObject;->m_epic_perf_hint_func:Ljava/lang/reflect/Method;
@@ -903,7 +844,6 @@
 .method public release_lock()Z
     .locals 5
 
-    .line 108
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     const/4 v1, 0x0
@@ -916,7 +856,6 @@
 
     goto :goto_0
 
-    .line 113
     :cond_0
     :try_start_0
     sget-object v2, Landroid/os/epic/EpicHIDLObject;->m_epic_release_func:Ljava/lang/reflect/Method;
@@ -954,7 +893,6 @@
 .method public release_lock_conditional(Ljava/lang/String;)Z
     .locals 4
 
-    .line 195
     sget-boolean v0, Landroid/os/epic/EpicHIDLObject;->m_has_load:Z
 
     const/4 v1, 0x0
@@ -967,7 +905,6 @@
 
     goto :goto_0
 
-    .line 200
     :cond_0
     :try_start_0
     sget-object v2, Landroid/os/epic/EpicHIDLObject;->m_epic_release_conditional_func:Ljava/lang/reflect/Method;

@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationRecord;Lcom/android/server/notification/NotificationRecord;)V
     .locals 0
 
-    .line 373
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 374
     iput-object p1, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
-    .line 375
     iput-object p2, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->old:Lcom/android/server/notification/NotificationRecord;
 
     return-void
@@ -30,7 +27,6 @@
 .method public getAssistantHash()I
     .locals 0
 
-    .line 434
     iget-object p0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getAdjustmentIssuer()Ljava/lang/String;
@@ -43,7 +39,6 @@
 
     goto :goto_0
 
-    .line 435
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
@@ -56,7 +51,6 @@
 .method public getChannelIdHash()I
     .locals 0
 
-    .line 453
     iget-object p0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
@@ -81,7 +75,6 @@
 .method public getGroupIdHash()I
     .locals 0
 
-    .line 460
     iget-object p0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
@@ -102,7 +95,6 @@
 .method public getInstanceId()I
     .locals 1
 
-    .line 439
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
@@ -141,7 +133,6 @@
 .method public getNotificationIdHash()I
     .locals 1
 
-    .line 446
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
@@ -178,7 +169,6 @@
 .method public getNumPeople()I
     .locals 1
 
-    .line 419
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
@@ -205,7 +195,6 @@
 
     const-string p0, "android.people.list"
 
-    .line 424
     const-class v0, Landroid/app/Person;
 
     invoke-virtual {p1, p0, v0}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/ArrayList;
@@ -214,14 +203,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 426
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 427
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -237,7 +224,6 @@
 .method public getStyle()I
     .locals 1
 
-    .line 405
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
@@ -264,21 +250,18 @@
 
     const-string p0, "android.template"
 
-    .line 410
     invoke-virtual {p1, p0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 411
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 412
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result p0
@@ -294,7 +277,6 @@
 .method public shouldLogReported(I)Z
     .locals 4
 
-    .line 382
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
     const/4 v1, 0x0
@@ -303,7 +285,6 @@
 
     return v1
 
-    .line 385
     :cond_0
     iget-object v2, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->old:Lcom/android/server/notification/NotificationRecord;
 
@@ -315,7 +296,6 @@
 
     goto/16 :goto_0
 
-    .line 389
     :cond_1
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
@@ -327,7 +307,6 @@
 
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->old:Lcom/android/server/notification/NotificationRecord;
 
-    .line 390
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0
@@ -336,7 +315,6 @@
 
     move-result-object v0
 
-    .line 389
     invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
@@ -345,7 +323,6 @@
 
     iget-object p1, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
-    .line 391
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object p1
@@ -372,7 +349,6 @@
 
     iget-object p1, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
-    .line 392
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object p1
@@ -387,7 +363,6 @@
 
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->old:Lcom/android/server/notification/NotificationRecord;
 
-    .line 393
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0
@@ -404,7 +379,6 @@
 
     iget-object p1, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
-    .line 394
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object p1
@@ -417,7 +391,6 @@
 
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->old:Lcom/android/server/notification/NotificationRecord;
 
-    .line 395
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0
@@ -428,7 +401,6 @@
 
     iget-object v0, v0, Landroid/app/Notification;->category:Ljava/lang/String;
 
-    .line 394
     invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
@@ -437,7 +409,6 @@
 
     iget-object p1, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
-    .line 396
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getImportance()I
 
     move-result p1
@@ -452,7 +423,6 @@
 
     iget-object p1, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->r:Lcom/android/server/notification/NotificationRecord;
 
-    .line 397
     invoke-static {p1}, Lcom/android/server/notification/NotificationRecordLogger;->getLoggingImportance(Lcom/android/server/notification/NotificationRecord;)I
 
     move-result p1
@@ -469,7 +439,6 @@
 
     iget-object p0, p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->old:Lcom/android/server/notification/NotificationRecord;
 
-    .line 398
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getRankingScore()F
 
     move-result p0

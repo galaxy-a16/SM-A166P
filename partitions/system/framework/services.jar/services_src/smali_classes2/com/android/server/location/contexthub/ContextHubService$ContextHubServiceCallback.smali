@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubService;I)V
     .locals 0
 
-    .line 180
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 181
     iput p2, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->mContextHubId:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public handleContextHubEvent(I)V
     .locals 1
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->mContextHubId:I
@@ -45,7 +42,6 @@
 .method public handleNanoappAbort(JI)V
     .locals 1
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->mContextHubId:I
@@ -58,7 +54,6 @@
 .method public handleNanoappInfo(Ljava/util/List;)V
     .locals 1
 
-    .line 201
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->mContextHubId:I
@@ -71,7 +66,6 @@
 .method public handleNanoappMessage(SLandroid/hardware/location/NanoAppMessage;Ljava/util/List;Ljava/util/List;)V
     .locals 6
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iget v1, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->mContextHubId:I
@@ -96,22 +90,18 @@
 
     const-string v1, "ContextHubService"
 
-    .line 213
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     invoke-static {v0}, Lcom/android/server/location/contexthub/ContextHubService;->-$$Nest$minitExistingCallbacks(Lcom/android/server/location/contexthub/ContextHubService;)V
 
-    .line 215
     iget-object p0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     invoke-static {p0}, Lcom/android/server/location/contexthub/ContextHubService;->-$$Nest$mresetSettings(Lcom/android/server/location/contexthub/ContextHubService;)V
 
     const-string p0, "Finished Context Hub Service restart"
 
-    .line 216
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -120,7 +110,6 @@
 .method public handleTransactionResult(IZ)V
     .locals 1
 
-    .line 186
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubService$ContextHubServiceCallback;->mContextHubId:I

@@ -23,15 +23,12 @@
 .method public constructor <init>(I)V
     .locals 4
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 32
     iput v0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mProviderUid:I
 
-    .line 35
     new-instance v1, Lcom/android/server/credentials/metrics/shared/ResponseCollective;
 
     invoke-static {}, Ljava/util/Map;->of()Ljava/util/Map;
@@ -48,21 +45,16 @@
 
     const/4 v1, 0x0
 
-    .line 38
     iput-boolean v1, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mHasException:Z
 
     const-string v2, ""
 
-    .line 40
     iput-object v2, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mFrameworkException:Ljava/lang/String;
 
-    .line 42
     iput v0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mProviderStatus:I
 
-    .line 44
     iput-boolean v1, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mAuthReturned:Z
 
-    .line 47
     iput p1, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mSessionIdProvider:I
 
     return-void
@@ -73,7 +65,6 @@
 .method public getAuthEntryCollective()Lcom/android/server/credentials/metrics/shared/ResponseCollective;
     .locals 0
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mAuthEntryCollective:Lcom/android/server/credentials/metrics/shared/ResponseCollective;
 
     return-object p0
@@ -82,7 +73,6 @@
 .method public getFrameworkException()Ljava/lang/String;
     .locals 0
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mFrameworkException:Ljava/lang/String;
 
     return-object p0
@@ -91,7 +81,6 @@
 .method public getProviderStatus()I
     .locals 0
 
-    .line 92
     iget p0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mProviderStatus:I
 
     return p0
@@ -100,7 +89,6 @@
 .method public getProviderUid()I
     .locals 0
 
-    .line 59
     iget p0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mProviderUid:I
 
     return p0
@@ -109,7 +97,6 @@
 .method public getSessionIdProvider()I
     .locals 0
 
-    .line 51
     iget p0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mSessionIdProvider:I
 
     return p0
@@ -118,7 +105,6 @@
 .method public isAuthReturned()Z
     .locals 0
 
-    .line 88
     iget-boolean p0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mAuthReturned:Z
 
     return p0
@@ -127,7 +113,6 @@
 .method public isHasException()Z
     .locals 0
 
-    .line 100
     iget-boolean p0, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mHasException:Z
 
     return p0
@@ -136,7 +121,6 @@
 .method public setAuthEntryCollective(Lcom/android/server/credentials/metrics/shared/ResponseCollective;)V
     .locals 0
 
-    .line 64
     iput-object p1, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mAuthEntryCollective:Lcom/android/server/credentials/metrics/shared/ResponseCollective;
 
     return-void
@@ -145,7 +129,6 @@
 .method public setAuthReturned(Z)V
     .locals 0
 
-    .line 84
     iput-boolean p1, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mAuthReturned:Z
 
     return-void
@@ -154,7 +137,6 @@
 .method public setHasException(Z)V
     .locals 0
 
-    .line 72
     iput-boolean p1, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mHasException:Z
 
     return-void
@@ -163,7 +145,6 @@
 .method public setProviderStatus(I)V
     .locals 0
 
-    .line 80
     iput p1, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mProviderStatus:I
 
     return-void
@@ -172,7 +153,6 @@
 .method public setProviderUid(I)V
     .locals 0
 
-    .line 55
     iput p1, p0, Lcom/android/server/credentials/metrics/BrowsedAuthenticationMetric;->mProviderUid:I
 
     return-void

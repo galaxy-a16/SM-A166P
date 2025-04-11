@@ -20,7 +20,6 @@
 .method public final uptimeMillis()J
     .locals 2
 
-    .line 0
     invoke-static {}, Lcom/android/server/display/DisplayPowerProximityStateController$Injector;->$r8$lambda$kkCNAGguZhTdDWA8PiZQoUjZn1g()J
 
     move-result-wide v0

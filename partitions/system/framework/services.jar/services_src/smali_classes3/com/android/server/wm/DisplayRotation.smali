@@ -109,7 +109,6 @@
 .method public static synthetic $r8$lambda$8kCIbnYrpx-79-y5QX3R2xQpb44(Lcom/android/server/wm/DisplayRotation;ILandroid/window/WindowContainerTransaction;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/DisplayRotation;->lambda$startRemoteRotation$0(ILandroid/window/WindowContainerTransaction;)V
 
     return-void
@@ -118,7 +117,6 @@
 .method public static synthetic $r8$lambda$wFTGOohq4GsLXoHqspr04t3o7vQ(Lcom/android/server/wm/WindowState;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/DisplayRotation;->lambda$shouldRotateSeamlessly$2(Lcom/android/server/wm/WindowState;)Z
 
     move-result p0
@@ -129,7 +127,6 @@
 .method public static synthetic $r8$lambda$xm0K83qh82lt4aECDOO9Z0X2scw(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/DisplayRotation;->lambda$cancelSeamlessRotation$1(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -138,7 +135,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAllowRotationResolver(Lcom/android/server/wm/DisplayRotation;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation;->mAllowRotationResolver:Z
 
     return p0
@@ -147,7 +143,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCameraRotationMode(Lcom/android/server/wm/DisplayRotation;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mCameraRotationMode:I
 
     return p0
@@ -156,7 +151,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/wm/DisplayRotation;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -165,7 +159,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayContent(Lcom/android/server/wm/DisplayRotation;)Lcom/android/server/wm/DisplayContent;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     return-object p0
@@ -174,7 +167,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastOrientation(Lcom/android/server/wm/DisplayRotation;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
     return p0
@@ -183,7 +175,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/wm/DisplayRotation;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -192,7 +183,6 @@
 .method public static bridge synthetic -$$Nest$fgetmOrientationListener(Lcom/android/server/wm/DisplayRotation;)Lcom/android/server/wm/DisplayRotation$OrientationListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     return-object p0
@@ -201,7 +191,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRotation(Lcom/android/server/wm/DisplayRotation;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
     return p0
@@ -210,7 +199,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Lcom/android/server/wm/DisplayRotation;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -219,7 +207,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserRotation(Lcom/android/server/wm/DisplayRotation;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     return p0
@@ -228,7 +215,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserRotationMode(Lcom/android/server/wm/DisplayRotation;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     return p0
@@ -237,7 +223,6 @@
 .method public static bridge synthetic -$$Nest$fputmRotationChoiceShownToUserForConfirmation(Lcom/android/server/wm/DisplayRotation;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mRotationChoiceShownToUserForConfirmation:I
 
     return-void
@@ -246,7 +231,6 @@
 .method public static bridge synthetic -$$Nest$misRotationChoiceAllowed(Lcom/android/server/wm/DisplayRotation;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotation;->isRotationChoiceAllowed(I)Z
 
     move-result p0
@@ -257,7 +241,6 @@
 .method public static bridge synthetic -$$Nest$misValidRotationChoice(Lcom/android/server/wm/DisplayRotation;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotation;->isValidRotationChoice(I)Z
 
     move-result p0
@@ -268,7 +251,6 @@
 .method public static bridge synthetic -$$Nest$msendProposedRotationChangeToStatusBarInternal(Lcom/android/server/wm/DisplayRotation;IZ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayRotation;->sendProposedRotationChangeToStatusBarInternal(IZ)V
 
     return-void
@@ -277,7 +259,6 @@
 .method public static bridge synthetic -$$Nest$mupdateOrientationListenerLw(Lcom/android/server/wm/DisplayRotation;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->updateOrientationListenerLw()V
 
     return-void
@@ -286,7 +267,6 @@
 .method public static bridge synthetic -$$Nest$mupdateSettings(Lcom/android/server/wm/DisplayRotation;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->updateSettings()Z
 
     move-result p0
@@ -297,7 +277,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/DisplayContent;Landroid/view/DisplayAddress;Lcom/android/server/wm/DeviceStateController;Lcom/android/server/wm/DisplayRotationCoordinator;)V
     .locals 10
 
-    .line 271
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object v4
@@ -306,7 +285,6 @@
 
     iget-object v6, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
-    .line 272
     invoke-virtual {p1}, Lcom/android/server/wm/WindowManagerService;->getWindowManagerLock()Ljava/lang/Object;
 
     move-result-object v7
@@ -323,7 +301,6 @@
 
     move-object v9, p5
 
-    .line 271
     invoke-direct/range {v0 .. v9}, Lcom/android/server/wm/DisplayRotation;-><init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/DisplayContent;Landroid/view/DisplayAddress;Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/DisplayWindowSettings;Landroid/content/Context;Ljava/lang/Object;Lcom/android/server/wm/DeviceStateController;Lcom/android/server/wm/DisplayRotationCoordinator;)V
 
     return-void
@@ -332,10 +309,8 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/DisplayContent;Landroid/view/DisplayAddress;Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/DisplayWindowSettings;Landroid/content/Context;Ljava/lang/Object;Lcom/android/server/wm/DeviceStateController;Lcom/android/server/wm/DisplayRotationCoordinator;)V
     .locals 3
 
-    .line 281
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 144
     new-instance v0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
     const/4 v1, 0x0
@@ -344,7 +319,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mTmpRotationAnim:Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
-    .line 145
     new-instance v0, Lcom/android/server/wm/DisplayRotation$RotationHistory;
 
     invoke-direct {v0, v1}, Lcom/android/server/wm/DisplayRotation$RotationHistory;-><init>(Lcom/android/server/wm/DisplayRotation$RotationHistory-IA;)V
@@ -353,80 +327,58 @@
 
     const/4 v0, -0x1
 
-    .line 158
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mCurrentAppOrientation:I
 
-    .line 166
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
-    .line 186
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mLastSensorRotation:I
 
-    .line 216
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotationChoiceShownToUserForConfirmation:I
 
-    .line 233
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
     const/4 v0, 0x0
 
-    .line 236
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
-    .line 239
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
-    .line 244
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mCameraRotationMode:I
 
-    .line 256
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mFixedToUserRotation:I
 
     const/4 v2, 0x1
 
-    .line 1896
     iput-boolean v2, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationUpdateCompleted:Z
 
-    .line 1990
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mTableMode:I
 
-    .line 2306
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapePreferred:Z
 
-    .line 282
     iput-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 283
     iput-object p2, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 284
     iput-object p4, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
-    .line 285
     iput-object p5, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayWindowSettings:Lcom/android/server/wm/DisplayWindowSettings;
 
-    .line 286
     iput-object p6, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
-    .line 287
     iput-object p7, p0, Lcom/android/server/wm/DisplayRotation;->mLock:Ljava/lang/Object;
 
-    .line 288
     iput-object p8, p0, Lcom/android/server/wm/DisplayRotation;->mDeviceStateController:Lcom/android/server/wm/DeviceStateController;
 
-    .line 289
     iget-boolean p4, p2, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
 
     iput-boolean p4, p0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
-    .line 290
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayRotation;->initImmersiveAppCompatPolicy(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mCompatPolicyForImmersiveApps:Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;
 
-    .line 293
     invoke-virtual {p6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -439,7 +391,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
-    .line 295
     invoke-virtual {p6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p5
@@ -454,7 +405,6 @@
 
     const p5, 0x10e00b3
 
-    .line 296
     invoke-virtual {p0, p5}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
     move-result p5
@@ -463,7 +413,6 @@
 
     const p5, 0x10e0050
 
-    .line 297
     invoke-virtual {p0, p5}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
     move-result p5
@@ -472,7 +421,6 @@
 
     const p5, 0x10e0079
 
-    .line 298
     invoke-virtual {p0, p5}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
     move-result p5
@@ -481,30 +429,24 @@
 
     const p5, 0x10e0131
 
-    .line 299
     invoke-virtual {p0, p5}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
     move-result p5
 
     iput p5, p0, Lcom/android/server/wm/DisplayRotation;->mUndockedHdmiRotation:I
 
-    .line 301
     invoke-virtual {p0, p3}, Lcom/android/server/wm/DisplayRotation;->readDefaultDisplayRotation(Landroid/view/DisplayAddress;)I
 
     move-result p3
 
-    .line 302
     iput p3, p0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
-    .line 304
     iput-object p9, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayRotationCoordinator:Lcom/android/server/wm/DisplayRotationCoordinator;
 
     if-eqz p4, :cond_0
 
-    .line 306
     invoke-virtual {p9, p3}, Lcom/android/server/wm/DisplayRotationCoordinator;->setDefaultDisplayDefaultRotation(I)V
 
-    .line 308
     :cond_0
     new-instance p5, Lcom/android/server/wm/DisplayRotation$$ExternalSyntheticLambda2;
 
@@ -512,56 +454,47 @@
 
     iput-object p5, p0, Lcom/android/server/wm/DisplayRotation;->mDefaultDisplayRotationChangedCallback:Ljava/lang/Runnable;
 
-    .line 310
     invoke-static {p2}, Lcom/android/server/wm/DisplayRotationCoordinator;->isSecondaryInternalDisplay(Lcom/android/server/wm/DisplayContent;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 312
     invoke-virtual {p8}, Lcom/android/server/wm/DeviceStateController;->shouldMatchBuiltInDisplayOrientationToReverseDefaultDisplay()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 313
     invoke-virtual {p9, p5}, Lcom/android/server/wm/DisplayRotationCoordinator;->setDefaultDisplayRotationChangedCallback(Ljava/lang/Runnable;)V
 
     :cond_1
     if-eqz p4, :cond_3
 
-    .line 318
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p2
 
-    .line 319
     new-instance p4, Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     invoke-direct {p4, p0, p6, p2, p3}, Lcom/android/server/wm/DisplayRotation$OrientationListener;-><init>(Lcom/android/server/wm/DisplayRotation;Landroid/content/Context;Landroid/os/Handler;I)V
 
     iput-object p4, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
-    .line 321
     iget p3, p0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
     invoke-virtual {p4, p3}, Lcom/android/server/wm/WindowOrientationListener;->setCurrentRotation(I)V
 
-    .line 322
     new-instance p3, Lcom/android/server/wm/DisplayRotation$SettingsObserver;
 
     invoke-direct {p3, p0, p2}, Lcom/android/server/wm/DisplayRotation$SettingsObserver;-><init>(Lcom/android/server/wm/DisplayRotation;Landroid/os/Handler;)V
 
     iput-object p3, p0, Lcom/android/server/wm/DisplayRotation;->mSettingsObserver:Lcom/android/server/wm/DisplayRotation$SettingsObserver;
 
-    .line 323
     invoke-virtual {p3}, Lcom/android/server/wm/DisplayRotation$SettingsObserver;->observe()V
 
     if-eqz p1, :cond_2
 
-    .line 324
     invoke-virtual {p6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -574,7 +507,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 326
     new-instance p1, Lcom/android/server/wm/DisplayRotation$FoldController;
 
     invoke-direct {p1, p0}, Lcom/android/server/wm/DisplayRotation$FoldController;-><init>(Lcom/android/server/wm/DisplayRotation;)V
@@ -583,13 +515,11 @@
 
     goto :goto_0
 
-    .line 328
     :cond_2
     iput-object v1, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     goto :goto_0
 
-    .line 340
     :cond_3
     iput-object v1, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
@@ -610,7 +540,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 1805
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -636,17 +565,14 @@
 .method public static synthetic lambda$cancelSeamlessRotation$1(Lcom/android/server/wm/WindowState;)V
     .locals 1
 
-    .line 801
     iget-boolean v0, p0, Lcom/android/server/wm/WindowState;->mSeamlesslyRotated:Z
 
     if-eqz v0, :cond_0
 
-    .line 802
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->cancelSeamlessRotation()V
 
     const/4 v0, 0x0
 
-    .line 803
     iput-boolean v0, p0, Lcom/android/server/wm/WindowState;->mSeamlesslyRotated:Z
 
     :cond_0
@@ -656,7 +582,6 @@
 .method public static synthetic lambda$shouldRotateSeamlessly$2(Lcom/android/server/wm/WindowState;)Z
     .locals 0
 
-    .line 917
     iget-boolean p0, p0, Lcom/android/server/wm/WindowState;->mSeamlesslyRotated:Z
 
     return p0
@@ -665,7 +590,6 @@
 .method private synthetic lambda$startRemoteRotation$0(ILandroid/window/WindowContainerTransaction;)V
     .locals 0
 
-    .line 755
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayRotation;->continueRotation(ILandroid/window/WindowContainerTransaction;)V
 
     return-void
@@ -676,17 +600,14 @@
 .method public applyCurrentRotation(I)V
     .locals 1
 
-    .line 481
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotationHistory:Lcom/android/server/wm/DisplayRotation$RotationHistory;
 
     invoke-virtual {v0, p0, p1}, Lcom/android/server/wm/DisplayRotation$RotationHistory;->addRecord(Lcom/android/server/wm/DisplayRotation;I)V
 
-    .line 482
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     if-eqz p0, :cond_0
 
-    .line 483
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowOrientationListener;->setCurrentRotation(I)V
 
     :cond_0
@@ -696,7 +617,6 @@
 .method public canRotateSeamlessly(II)Z
     .locals 2
 
-    .line 928
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mAllowSeamlessRotationDespiteNavBarMoving:Z
 
     const/4 v1, 0x1
@@ -733,14 +653,12 @@
 .method public cancelSeamlessRotation()V
     .locals 3
 
-    .line 797
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotatingSeamlessly:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 800
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -754,13 +672,10 @@
 
     const/4 v0, 0x0
 
-    .line 806
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mSeamlessRotationCount:I
 
-    .line 807
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotatingSeamlessly:Z
 
-    .line 808
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->finishAsyncRotationIfPossible()V
@@ -771,7 +686,6 @@
 .method public configure(II)V
     .locals 6
 
-    .line 420
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -790,69 +704,54 @@
 
     if-le p1, p2, :cond_1
 
-    .line 422
     iput v5, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
-    .line 423
     iput v2, p0, Lcom/android/server/wm/DisplayRotation;->mSeascapeRotation:I
 
-    .line 424
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 425
     iput v4, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
-    .line 426
     iput v3, p0, Lcom/android/server/wm/DisplayRotation;->mUpsideDownRotation:I
 
     goto :goto_0
 
-    .line 428
     :cond_0
     iput v3, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
-    .line 429
     iput v4, p0, Lcom/android/server/wm/DisplayRotation;->mUpsideDownRotation:I
 
     goto :goto_0
 
-    .line 432
     :cond_1
     iput v5, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
-    .line 433
     iput v2, p0, Lcom/android/server/wm/DisplayRotation;->mUpsideDownRotation:I
 
-    .line 434
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 435
     iput v3, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
-    .line 436
     iput v4, p0, Lcom/android/server/wm/DisplayRotation;->mSeascapeRotation:I
 
     goto :goto_0
 
-    .line 438
     :cond_2
     iput v4, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
-    .line 439
     iput v3, p0, Lcom/android/server/wm/DisplayRotation;->mSeascapeRotation:I
 
     :goto_0
     const-string/jumbo p1, "persist.demo.hdmirotation"
 
-    .line 445
     invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -865,14 +764,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 446
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mDemoHdmiRotation:I
 
     goto :goto_1
 
-    .line 448
     :cond_3
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
@@ -881,7 +778,6 @@
     :goto_1
     const-string/jumbo p1, "persist.demo.hdmirotationlock"
 
-    .line 450
     invoke-static {p1, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -890,7 +786,6 @@
 
     const-string/jumbo p1, "persist.demo.remoterotation"
 
-    .line 454
     invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -901,14 +796,12 @@
 
     if-eqz p1, :cond_4
 
-    .line 455
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mDemoRotation:I
 
     goto :goto_2
 
-    .line 457
     :cond_4
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
@@ -917,14 +810,12 @@
     :goto_2
     const-string/jumbo p1, "persist.demo.rotationlock"
 
-    .line 459
     invoke-static {p1, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/server/wm/DisplayRotation;->mDemoRotationLock:Z
 
-    .line 462
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -937,7 +828,6 @@
 
     move-result p1
 
-    .line 465
     iget-object p2, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -954,7 +844,6 @@
 
     if-nez p2, :cond_5
 
-    .line 471
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-boolean p1, p1, Lcom/android/server/wm/WindowManagerService;->mIsPc:Z
@@ -963,7 +852,6 @@
 
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 472
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->forceDesktopMode()Z
 
     move-result p1
@@ -975,7 +863,6 @@
     :cond_5
     const-string p1, "config.override_forced_orient"
 
-    .line 477
     invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -1003,14 +890,12 @@
 .method public final continueRotation(ILandroid/window/WindowContainerTransaction;)V
     .locals 1
 
-    .line 760
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
     if-eq p1, v0, :cond_0
 
     return-void
 
-    .line 766
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1022,7 +907,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 767
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
@@ -1037,10 +921,8 @@
 
     const-string v0, "Trying to continue rotation outside a transition"
 
-    .line 769
     invoke-static {p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 771
     :cond_1
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1048,7 +930,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/TransitionController;->collect(Lcom/android/server/wm/WindowContainer;)V
 
-    .line 773
     :cond_2
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -1056,7 +937,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityTaskManagerService;->deferWindowLayout()V
 
-    .line 775
     :try_start_0
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1064,7 +944,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 777
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -1075,7 +954,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 780
     :cond_3
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -1094,14 +972,12 @@
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityTaskManagerService;->continueWindowLayout()V
 
-    .line 781
     throw p1
 .end method
 
 .method public dispatchProposedRotation(I)V
     .locals 2
 
-    .line 1788
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mRotationWatcherController:Lcom/android/server/wm/RotationWatcherController;
@@ -1112,12 +988,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1789
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1790
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -1127,7 +1001,6 @@
 
     invoke-virtual {v1, p0, p1}, Lcom/android/server/wm/RotationWatcherController;->dispatchProposedRotation(Lcom/android/server/wm/DisplayContent;I)V
 
-    .line 1792
     monitor-exit v0
 
     goto :goto_0
@@ -1149,7 +1022,6 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 1913
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1166,7 +1038,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1914
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1179,7 +1050,6 @@
 
     iget v1, p0, Lcom/android/server/wm/DisplayRotation;->mCurrentAppOrientation:I
 
-    .line 1915
     invoke-static {v1}, Landroid/content/pm/ActivityInfo;->screenOrientationToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1190,10 +1060,8 @@
 
     move-result-object v0
 
-    .line 1914
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1916
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1214,7 +1082,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1917
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1235,7 +1102,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1918
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1254,7 +1120,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1920
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1279,7 +1144,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1921
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1302,7 +1166,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1922
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1327,7 +1190,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1923
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1350,7 +1212,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1925
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1371,12 +1232,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1926
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     if-eqz v0, :cond_0
 
-    .line 1927
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1393,11 +1252,9 @@
 
     invoke-virtual {v0, p2, v1}, Lcom/android/server/wm/WindowOrientationListener;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 1929
     :cond_0
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1931
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1422,7 +1279,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1932
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1445,7 +1301,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1933
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1458,7 +1313,6 @@
 
     iget v1, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
-    .line 1934
     invoke-static {v1}, Lcom/android/server/policy/WindowManagerPolicy;->userRotationModeToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1469,10 +1323,8 @@
 
     move-result-object v0
 
-    .line 1933
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1935
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1495,7 +1347,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1936
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1514,7 +1365,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1937
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1537,7 +1387,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1939
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1562,7 +1411,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1940
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1581,7 +1429,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1941
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1604,7 +1451,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1942
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1629,7 +1475,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1943
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1652,12 +1497,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1945
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     if-eqz v0, :cond_1
 
-    .line 1946
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1674,7 +1517,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1947
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1699,7 +1541,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1949
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1724,7 +1565,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1951
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1749,7 +1589,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1953
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1774,7 +1613,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1955
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1799,7 +1637,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1957
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1824,7 +1661,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1962
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotatingSeamlessly:Z
 
@@ -1834,7 +1670,6 @@
 
     if-lez v0, :cond_3
 
-    .line 1963
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1856,7 +1691,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1964
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1875,7 +1709,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1968
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotationHistory:Lcom/android/server/wm/DisplayRotation$RotationHistory;
 
@@ -1887,10 +1720,8 @@
 
     if-nez v0, :cond_4
 
-    .line 1969
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1970
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1907,7 +1738,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1971
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1922,7 +1752,6 @@
 
     move-result-object p1
 
-    .line 1972
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mRotationHistory:Lcom/android/server/wm/DisplayRotation$RotationHistory;
 
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$RotationHistory;->mRecords:Ljava/util/ArrayDeque;
@@ -1944,7 +1773,6 @@
 
     check-cast v0, Lcom/android/server/wm/DisplayRotation$RotationHistory$Record;
 
-    .line 1973
     invoke-virtual {v0, p1, p2}, Lcom/android/server/wm/DisplayRotation$RotationHistory$Record;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
     goto :goto_0
@@ -1956,14 +1784,12 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 3
 
-    .line 1979
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10500000001L
 
-    .line 1980
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->getRotation()I
 
     move-result v2
@@ -1972,7 +1798,6 @@
 
     const-wide v0, 0x10800000002L
 
-    .line 1981
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->isRotationFrozen()Z
 
     move-result v2
@@ -1981,7 +1806,6 @@
 
     const-wide v0, 0x10500000003L
 
-    .line 1982
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->getUserRotation()I
 
     move-result v2
@@ -1990,28 +1814,24 @@
 
     const-wide v0, 0x10500000004L
 
-    .line 1983
     iget v2, p0, Lcom/android/server/wm/DisplayRotation;->mFixedToUserRotation:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
     const-wide v0, 0x10500000005L
 
-    .line 1984
     iget v2, p0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
     const-wide v0, 0x10800000006L
 
-    .line 1985
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->isFixedToUserRotation()Z
 
     move-result p0
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
-    .line 1986
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -2020,23 +1840,19 @@
 .method public foldStateChanged(Lcom/android/server/wm/DeviceStateController$DeviceState;)V
     .locals 1
 
-    .line 2012
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     if-eqz v0, :cond_0
 
-    .line 2013
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2014
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotation$FoldController;->foldStateChanged(Lcom/android/server/wm/DeviceStateController$DeviceState;)V
 
-    .line 2015
     monitor-exit v0
 
     goto :goto_0
@@ -2058,7 +1874,6 @@
 .method public freezeRotation(I)V
     .locals 2
 
-    .line 1110
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDeviceStateController:Lcom/android/server/wm/DeviceStateController;
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -2069,7 +1884,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1111
     invoke-static {p1}, Landroid/util/RotationUtils;->reverseRotationDirectionAroundZAxis(I)I
 
     move-result p1
@@ -2079,13 +1893,11 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1114
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
     :cond_1
     const/4 v0, 0x1
 
-    .line 1115
     invoke-virtual {p0, v0, p1}, Lcom/android/server/wm/DisplayRotation;->setUserRotation(II)V
 
     return-void
@@ -2094,20 +1906,16 @@
 .method public final getAllowAllRotations()I
     .locals 2
 
-    .line 1628
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1633
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_ALLOW_ALL_ROTATION:Z
 
-    .line 1634
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
-    .line 1644
     :cond_0
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
@@ -2142,7 +1950,6 @@
 
     return p0
 
-    .line 2564
     :pswitch_0
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
@@ -2152,13 +1959,11 @@
 
     return p2
 
-    .line 2567
     :cond_1
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mUpsideDownRotation:I
 
     return p0
 
-    .line 2571
     :pswitch_1
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
@@ -2168,13 +1973,11 @@
 
     return p2
 
-    .line 2574
     :cond_2
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mSeascapeRotation:I
 
     return p0
 
-    .line 2590
     :cond_3
     :pswitch_2
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
@@ -2185,7 +1988,6 @@
 
     return p2
 
-    .line 2593
     :cond_4
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
@@ -2195,13 +1997,11 @@
 
     return p2
 
-    .line 2596
     :cond_5
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     return p0
 
-    .line 2579
     :cond_6
     :pswitch_3
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
@@ -2212,7 +2012,6 @@
 
     return p2
 
-    .line 2582
     :cond_7
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
@@ -2222,13 +2021,11 @@
 
     return p2
 
-    .line 2585
     :cond_8
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
     return p0
 
-    .line 2550
     :cond_9
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
@@ -2238,13 +2035,11 @@
 
     return p2
 
-    .line 2553
     :cond_a
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     return p0
 
-    .line 2557
     :cond_b
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
@@ -2254,7 +2049,6 @@
 
     return p2
 
-    .line 2560
     :cond_c
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
@@ -2274,7 +2068,6 @@
 .method public getCurrentAppOrientation()I
     .locals 0
 
-    .line 1163
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mCurrentAppOrientation:I
 
     return p0
@@ -2283,7 +2076,6 @@
 .method public getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
     .locals 0
 
-    .line 1167
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     return-object p0
@@ -2292,7 +2084,6 @@
 .method public getFixedToUserRotationMode()I
     .locals 0
 
-    .line 1143
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mFixedToUserRotation:I
 
     return p0
@@ -2301,7 +2092,6 @@
 .method public getHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 2302
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
@@ -2312,7 +2102,6 @@
 .method public getLastOrientation()I
     .locals 0
 
-    .line 499
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
     return p0
@@ -2321,7 +2110,6 @@
 .method public getOrientationListener()Lcom/android/server/wm/WindowOrientationListener;
     .locals 0
 
-    .line 1171
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     return-object p0
@@ -2330,7 +2118,6 @@
 .method public getRotation()I
     .locals 0
 
-    .line 494
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
     return p0
@@ -2339,15 +2126,12 @@
 .method public getRotationLockOrientation()I
     .locals 4
 
-    .line 1899
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
-    .line 1900
     iget-boolean v1, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationUpdateCompleted:Z
 
     if-nez v1, :cond_0
 
-    .line 1903
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2364,7 +2148,6 @@
 
     move-result v0
 
-    .line 1907
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
@@ -2386,7 +2169,6 @@
 .method public getUserRotation()I
     .locals 0
 
-    .line 1175
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     return p0
@@ -2395,7 +2177,6 @@
 .method public getUserRotationMode()I
     .locals 0
 
-    .line 1179
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     return p0
@@ -2404,7 +2185,6 @@
 .method public hasSeamlessRotatingWindow()Z
     .locals 0
 
-    .line 823
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mSeamlessRotationCount:I
 
     if-lez p0, :cond_0
@@ -2423,7 +2203,6 @@
 .method public initImmersiveAppCompatPolicy(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;
     .locals 0
 
-    .line 348
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
     invoke-static {p1, p0, p2}, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->createIfNeeded(Lcom/android/server/wm/LetterboxConfiguration;Lcom/android/server/wm/DisplayRotation;Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;
@@ -2436,7 +2215,6 @@
 .method public isAllowAllRotations()Z
     .locals 1
 
-    .line 2640
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
     const/4 v0, 0x1
@@ -2455,7 +2233,6 @@
 .method public isAnyPortrait(I)Z
     .locals 1
 
-    .line 1652
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     if-eq p1, v0, :cond_1
@@ -2482,7 +2259,6 @@
 .method public isDeviceInPosture(Lcom/android/server/wm/DeviceStateController$DeviceState;Z)Z
     .locals 0
 
-    .line 1998
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     if-nez p0, :cond_0
@@ -2491,7 +2267,6 @@
 
     return p0
 
-    .line 1999
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayRotation$FoldController;->isDeviceInPosture(Lcom/android/server/wm/DeviceStateController$DeviceState;Z)Z
 
@@ -2503,7 +2278,6 @@
 .method public isDisplaySeparatingHinge()Z
     .locals 0
 
-    .line 2003
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     if-eqz p0, :cond_0
@@ -2528,7 +2302,6 @@
 .method public isFixedToUserRotation()Z
     .locals 3
 
-    .line 1132
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mFixedToUserRotation:I
 
     const/4 v1, 0x1
@@ -2539,7 +2312,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 1138
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation;->mDefaultFixedToUserRotation:Z
 
     return p0
@@ -2556,7 +2328,6 @@
 .method public isLandscapeOrSeascape(I)Z
     .locals 1
 
-    .line 1648
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
     if-eq p1, v0, :cond_1
@@ -2583,7 +2354,6 @@
 .method public isRotatingSeamlessly()Z
     .locals 0
 
-    .line 819
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation;->mRotatingSeamlessly:Z
 
     return p0
@@ -2592,7 +2362,6 @@
 .method public final isRotationChoiceAllowed(I)Z
     .locals 5
 
-    .line 1691
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mCompatPolicyForImmersiveApps:Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;
 
     const/4 v1, 0x1
@@ -2601,7 +2370,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1692
     invoke-virtual {v0, p1}, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->isRotationLockEnforced(I)Z
 
     move-result p1
@@ -2618,14 +2386,12 @@
     :goto_0
     if-nez p1, :cond_1
 
-    .line 1695
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     if-eq p1, v1, :cond_1
 
     return v2
 
-    .line 1702
     :cond_1
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
@@ -2639,7 +2405,6 @@
 
     return v2
 
-    .line 1707
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->isTabletopAutoRotateOverrideEnabled()Z
 
@@ -2649,7 +2414,6 @@
 
     return v2
 
-    .line 1713
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->isFixedToUserRotation()Z
 
@@ -2659,7 +2423,6 @@
 
     return v2
 
-    .line 1717
     :cond_4
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -2669,14 +2432,12 @@
 
     if-ne p1, v1, :cond_5
 
-    .line 1718
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mLidOpenRotation:I
 
     if-ltz p1, :cond_5
 
     return v2
 
-    .line 1722
     :cond_5
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -2690,11 +2451,9 @@
 
     return v2
 
-    .line 1728
     :cond_6
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
-    .line 1729
     invoke-virtual {v3}, Lcom/android/server/wm/DisplayPolicy;->isDeskDockEnablesAccelerometer()Z
 
     move-result v3
@@ -2714,7 +2473,6 @@
 
     return v2
 
-    .line 1737
     :cond_8
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -2724,7 +2482,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 1738
     iget-boolean v4, p0, Lcom/android/server/wm/DisplayRotation;->mDemoHdmiRotationLock:Z
 
     if-eqz v4, :cond_9
@@ -2736,14 +2493,12 @@
 
     if-nez p1, :cond_a
 
-    .line 1741
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mUndockedHdmiRotation:I
 
     if-ltz p1, :cond_a
 
     return v2
 
-    .line 1745
     :cond_a
     iget-boolean p1, p0, Lcom/android/server/wm/DisplayRotation;->mDemoRotationLock:Z
 
@@ -2751,7 +2506,6 @@
 
     return v2
 
-    .line 1748
     :cond_b
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -2763,7 +2517,6 @@
 
     return v2
 
-    .line 1751
     :cond_c
     iget-boolean p1, p0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
@@ -2771,7 +2524,6 @@
 
     return v2
 
-    .line 1763
     :cond_d
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mCurrentAppOrientation:I
 
@@ -2800,7 +2552,6 @@
 .method public isRotationFrozen()Z
     .locals 4
 
-    .line 1123
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
     const/4 v1, 0x1
@@ -2809,7 +2560,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1124
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     if-ne p0, v1, :cond_0
@@ -2822,7 +2572,6 @@
     :goto_0
     return v1
 
-    .line 1127
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
@@ -2852,7 +2601,6 @@
 .method public final isTabletopAutoRotateOverrideEnabled()Z
     .locals 0
 
-    .line 1687
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     if-eqz p0, :cond_0
@@ -2877,7 +2625,6 @@
 .method public final isValidRotationChoice(I)Z
     .locals 5
 
-    .line 1657
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mCurrentAppOrientation:I
 
     const/4 v1, -0x1
@@ -2904,7 +2651,6 @@
     :cond_0
     return v3
 
-    .line 1666
     :pswitch_1
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
@@ -2915,7 +2661,6 @@
     :cond_1
     return v3
 
-    .line 1670
     :pswitch_2
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
@@ -2923,7 +2668,6 @@
 
     return p0
 
-    .line 1675
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->getAllowAllRotations()I
 
@@ -2961,7 +2705,6 @@
 .method public markForSeamlessRotation(Lcom/android/server/wm/WindowState;Z)V
     .locals 2
 
-    .line 939
     iget-boolean v0, p1, Lcom/android/server/wm/WindowState;->mSeamlesslyRotated:Z
 
     if-eq p2, v0, :cond_3
@@ -2972,7 +2715,6 @@
 
     goto :goto_1
 
-    .line 944
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2996,7 +2738,6 @@
 
     const/4 v1, 0x3
 
-    .line 945
     invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3009,15 +2750,12 @@
 
     const-string v1, "WindowManager"
 
-    .line 944
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 949
     iput-boolean p2, p1, Lcom/android/server/wm/WindowState;->mSeamlesslyRotated:Z
 
     if-eqz p2, :cond_1
 
-    .line 951
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mSeamlessRotationCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -3026,7 +2764,6 @@
 
     goto :goto_0
 
-    .line 953
     :cond_1
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mSeamlessRotationCount:I
 
@@ -3034,13 +2771,11 @@
 
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mSeamlessRotationCount:I
 
-    .line 955
     :goto_0
     iget p1, p0, Lcom/android/server/wm/DisplayRotation;->mSeamlessRotationCount:I
 
     if-nez p1, :cond_3
 
-    .line 956
     sget-boolean p1, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     const/4 p2, 0x0
@@ -3055,16 +2790,13 @@
 
     invoke-static {p1, v0, p2, v1, v1}, Lcom/android/internal/protolog/ProtoLogImpl;->i(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 959
     :cond_2
     iput-boolean p2, p0, Lcom/android/server/wm/DisplayRotation;->mRotatingSeamlessly:Z
 
-    .line 960
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->finishAsyncRotationIfPossible()V
 
-    .line 962
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->updateRotationAndSendNewConfigIfChanged()Z
 
     :cond_3
@@ -3075,7 +2807,6 @@
 .method public final needSensorRunning()Z
     .locals 5
 
-    .line 1285
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->isFixedToUserRotation()Z
 
     move-result v0
@@ -3086,7 +2817,6 @@
 
     return v1
 
-    .line 1292
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->shouldDisableRotationSensor()Z
 
@@ -3096,7 +2826,6 @@
 
     return v1
 
-    .line 1297
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
@@ -3110,7 +2839,6 @@
 
     return v1
 
-    .line 1301
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
@@ -3120,7 +2848,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1302
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mCurrentAppOrientation:I
 
     if-eq v0, v2, :cond_3
@@ -3140,7 +2867,6 @@
     :cond_3
     return v3
 
-    .line 1312
     :cond_4
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -3148,7 +2874,6 @@
 
     move-result v0
 
-    .line 1313
     iget-object v4, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v4}, Lcom/android/server/wm/DisplayPolicy;->isCarDockEnablesAccelerometer()Z
@@ -3164,7 +2889,6 @@
     :cond_5
     iget-object v4, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
-    .line 1315
     invoke-virtual {v4}, Lcom/android/server/wm/DisplayPolicy;->isDeskDockEnablesAccelerometer()Z
 
     move-result v4
@@ -3182,13 +2906,11 @@
     :cond_6
     return v3
 
-    .line 1324
     :cond_7
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     if-ne v0, v3, :cond_9
 
-    .line 1344
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
     if-eqz v0, :cond_8
@@ -3202,7 +2924,6 @@
     :cond_8
     return v1
 
-    .line 1347
     :cond_9
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
@@ -3212,10 +2933,8 @@
 .method public needsUpdate()Z
     .locals 2
 
-    .line 1358
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
-    .line 1359
     iget v1, p0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/wm/DisplayRotation;->rotationForOrientation(II)I
@@ -3238,15 +2957,12 @@
 .method public onDisplayRemoved()V
     .locals 0
 
-    .line 1816
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->removeDefaultDisplayRotationChangedCallback()V
 
-    .line 1817
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     if-eqz p0, :cond_0
 
-    .line 1818
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->onDisplayRemoved()V
 
     :cond_0
@@ -3256,7 +2972,6 @@
 .method public onSetRequestedOrientation()V
     .locals 2
 
-    .line 1888
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mCompatPolicyForImmersiveApps:Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;
 
     if-eqz v0, :cond_1
@@ -3269,7 +2984,6 @@
 
     goto :goto_0
 
-    .line 1892
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
@@ -3283,14 +2997,12 @@
 .method public onUserSwitch()V
     .locals 1
 
-    .line 1810
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mSettingsObserver:Lcom/android/server/wm/DisplayRotation$SettingsObserver;
 
     if-eqz p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 1811
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotation$SettingsObserver;->onChange(Z)V
 
     :cond_0
@@ -3300,7 +3012,6 @@
 .method public pause()V
     .locals 1
 
-    .line 1197
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mDeferredRotationPauseCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -3313,12 +3024,10 @@
 .method public physicalDisplayChanged()V
     .locals 0
 
-    .line 2023
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     if-eqz p0, :cond_0
 
-    .line 2024
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation$FoldController;->onPhysicalDisplayChanged()V
 
     :cond_0
@@ -3328,15 +3037,12 @@
 .method public prepareNormalRotationAnimation()V
     .locals 3
 
-    .line 785
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->cancelSeamlessRotation()V
 
-    .line 786
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->selectRotationAnimation()Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
     move-result-object v0
 
-    .line 787
     iget-object v1, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget v2, v0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mExit:I
@@ -3355,12 +3061,10 @@
 
     const/4 v0, 0x0
 
-    .line 814
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mSeamlessRotationCount:I
 
     const/4 v0, 0x1
 
-    .line 815
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotatingSeamlessly:Z
 
     return-void
@@ -3369,7 +3073,6 @@
 .method public final readDefaultDisplayRotation(Landroid/view/DisplayAddress;)I
     .locals 3
 
-    .line 362
     instance-of p0, p1, Landroid/view/DisplayAddress$Physical;
 
     const/4 v0, 0x0
@@ -3378,11 +3081,9 @@
 
     return v0
 
-    .line 372
     :cond_0
     check-cast p1, Landroid/view/DisplayAddress$Physical;
 
-    .line 373
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3391,7 +3092,6 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 374
     invoke-virtual {p1}, Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J
 
     move-result-wide v1
@@ -3404,14 +3104,12 @@
 
     const-string p1, "ORIENTATION_0"
 
-    .line 373
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "ORIENTATION_90"
 
-    .line 376
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -3425,7 +3123,6 @@
     :cond_1
     const-string p1, "ORIENTATION_180"
 
-    .line 378
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -3439,7 +3136,6 @@
     :cond_2
     const-string p1, "ORIENTATION_270"
 
-    .line 380
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -3457,7 +3153,6 @@
 .method public final readRotation(I)I
     .locals 0
 
-    .line 388
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
@@ -3517,7 +3212,6 @@
 .method public removeDefaultDisplayRotationChangedCallback()V
     .locals 1
 
-    .line 1879
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayRotationCoordinator;->isSecondaryInternalDisplay(Lcom/android/server/wm/DisplayContent;)Z
@@ -3526,7 +3220,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1880
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayRotationCoordinator:Lcom/android/server/wm/DisplayRotationCoordinator;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotationCoordinator;->removeDefaultDisplayRotationChangedCallback()V
@@ -3540,7 +3233,6 @@
 
     const/4 v0, -0x1
 
-    .line 1375
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
     return-void
@@ -3549,10 +3241,8 @@
 .method public restoreSettings(III)V
     .locals 4
 
-    .line 1040
     iput p3, p0, Lcom/android/server/wm/DisplayRotation;->mFixedToUserRotation:I
 
-    .line 1043
     iget-boolean p3, p0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
     if-eqz p3, :cond_0
@@ -3572,7 +3262,6 @@
 
     if-eq p1, v2, :cond_1
 
-    .line 1048
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3604,7 +3293,6 @@
 
     if-le p2, v2, :cond_3
 
-    .line 1053
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3630,11 +3318,9 @@
 
     move p2, p3
 
-    .line 1057
     :cond_3
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
-    .line 1058
     iput p2, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     return-void
@@ -3643,7 +3329,6 @@
 .method public resume()V
     .locals 1
 
-    .line 1202
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mDeferredRotationPauseCount:I
 
     if-gtz v0, :cond_0
@@ -3653,12 +3338,10 @@
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
-    .line 1206
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mDeferredRotationPauseCount:I
 
     if-nez v0, :cond_1
 
-    .line 1208
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->updateRotationAndSendNewConfigIfChanged()Z
 
     :cond_1
@@ -3668,7 +3351,6 @@
 .method public rotationForOrientation(II)I
     .locals 13
 
-    .line 1393
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_FORCE_DEBUG_ORIENTATION_enabled:Z
 
     const/4 v1, 0x1
@@ -3755,7 +3437,6 @@
 
     invoke-static {v11, v2, v3, v4, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1413
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3767,7 +3448,6 @@
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 1414
     invoke-virtual {v2}, Lcom/android/server/wm/WindowContainer;->getLastOrientationSource()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v2
@@ -3780,15 +3460,12 @@
 
     const-string v2, "WindowManager"
 
-    .line 1413
     invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1415
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL:Z
 
     if-eqz v0, :cond_2
 
-    .line 1416
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -3801,7 +3478,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/wm/OrientationController;->logInRotationForOrientation(Lcom/android/server/wm/DisplayContent;)V
 
-    .line 1422
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->isFixedToUserRotation()Z
 
@@ -3809,12 +3485,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 1423
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     return p0
 
-    .line 1427
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
@@ -3822,7 +3496,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1428
     invoke-virtual {v0}, Lcom/android/server/wm/WindowOrientationListener;->getProposedRotation()I
 
     move-result v0
@@ -3832,7 +3505,6 @@
     :cond_4
     move v0, v2
 
-    .line 1430
     :goto_1
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
@@ -3846,7 +3518,6 @@
 
     move v0, v2
 
-    .line 1433
     :cond_5
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDeviceStateController:Lcom/android/server/wm/DeviceStateController;
 
@@ -3858,12 +3529,10 @@
 
     if-eqz v3, :cond_6
 
-    .line 1434
     invoke-static {v0}, Landroid/util/RotationUtils;->reverseRotationDirectionAroundZAxis(I)I
 
     move-result v0
 
-    .line 1436
     :cond_6
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mLastSensorRotation:I
 
@@ -3871,7 +3540,6 @@
 
     move v0, p2
 
-    .line 1441
     :cond_7
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -3879,37 +3547,30 @@
 
     move-result v3
 
-    .line 1442
     iget-object v4, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v4}, Lcom/android/server/wm/DisplayPolicy;->getDockMode()I
 
     move-result v4
 
-    .line 1443
     iget-object v5, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v5}, Lcom/android/server/wm/DisplayPolicy;->isHdmiPlugged()Z
 
     move-result v5
 
-    .line 1444
     iget-object v6, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
-    .line 1445
     invoke-virtual {v6}, Lcom/android/server/wm/DisplayPolicy;->isCarDockEnablesAccelerometer()Z
 
     move-result v6
 
-    .line 1446
     iget-object v7, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
-    .line 1447
     invoke-virtual {v7}, Lcom/android/server/wm/DisplayPolicy;->isDeskDockEnablesAccelerometer()Z
 
     move-result v7
 
-    .line 1462
     iget-boolean v8, p0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
     const/16 v9, 0xc
@@ -3918,7 +3579,6 @@
 
     if-nez v8, :cond_8
 
-    .line 1465
     iget v2, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     goto/16 :goto_6
@@ -3926,7 +3586,6 @@
     :cond_8
     if-ne v3, v1, :cond_9
 
-    .line 1466
     iget v3, p0, Lcom/android/server/wm/DisplayRotation;->mLidOpenRotation:I
 
     if-ltz v3, :cond_9
@@ -3942,7 +3601,6 @@
 
     if-nez v6, :cond_a
 
-    .line 1469
     iget v8, p0, Lcom/android/server/wm/DisplayRotation;->mCarDockRotation:I
 
     if-ltz v8, :cond_d
@@ -3953,7 +3611,6 @@
     :goto_2
     goto :goto_3
 
-    .line 1474
     :cond_b
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mCarDockRotation:I
 
@@ -3981,7 +3638,6 @@
     :cond_e
     if-nez v7, :cond_f
 
-    .line 1475
     iget v12, p0, Lcom/android/server/wm/DisplayRotation;->mDeskDockRotation:I
 
     if-ltz v12, :cond_11
@@ -3995,7 +3651,6 @@
 
     goto :goto_2
 
-    .line 1483
     :cond_10
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mDeskDockRotation:I
 
@@ -4004,12 +3659,10 @@
     :cond_11
     if-eqz v5, :cond_12
 
-    .line 1484
     iget-boolean v7, p0, Lcom/android/server/wm/DisplayRotation;->mDemoHdmiRotationLock:Z
 
     if-eqz v7, :cond_12
 
-    .line 1487
     iget v2, p0, Lcom/android/server/wm/DisplayRotation;->mDemoHdmiRotation:I
 
     goto/16 :goto_6
@@ -4019,7 +3672,6 @@
 
     if-nez v4, :cond_13
 
-    .line 1488
     iget v4, p0, Lcom/android/server/wm/DisplayRotation;->mUndockedHdmiRotation:I
 
     if-ltz v4, :cond_13
@@ -4028,18 +3680,15 @@
 
     goto/16 :goto_6
 
-    .line 1495
     :cond_13
     iget-boolean v4, p0, Lcom/android/server/wm/DisplayRotation;->mDemoRotationLock:Z
 
     if-eqz v4, :cond_14
 
-    .line 1498
     iget v2, p0, Lcom/android/server/wm/DisplayRotation;->mDemoRotation:I
 
     goto/16 :goto_6
 
-    .line 1499
     :cond_14
     iget-object v4, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -4049,7 +3698,6 @@
 
     if-eqz v4, :cond_15
 
-    .line 1504
     iget v2, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     goto :goto_6
@@ -4059,7 +3707,6 @@
 
     goto :goto_5
 
-    .line 1508
     :cond_16
     iget-boolean v4, p0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
@@ -4067,7 +3714,6 @@
 
     goto :goto_6
 
-    .line 1512
     :cond_17
     iget v4, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
@@ -4077,7 +3723,6 @@
 
     if-eqz v4, :cond_18
 
-    .line 1513
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->isTabletopAutoRotateOverrideEnabled()Z
 
     move-result v4
@@ -4110,7 +3755,6 @@
 
     goto :goto_4
 
-    .line 1545
     :cond_1a
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
@@ -4130,7 +3774,6 @@
 
     if-eq p1, v0, :cond_1d
 
-    .line 1559
     iget v2, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     goto :goto_6
@@ -4139,7 +3782,6 @@
     :goto_4
     if-ne v0, v3, :cond_c
 
-    .line 1526
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->getAllowAllRotations()I
 
     move-result v2
@@ -4177,7 +3819,6 @@
 
     return p0
 
-    .line 1583
     :pswitch_0
     invoke-virtual {p0, v2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
@@ -4187,13 +3828,11 @@
 
     return v2
 
-    .line 1586
     :cond_1f
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mUpsideDownRotation:I
 
     return p0
 
-    .line 1590
     :pswitch_1
     invoke-virtual {p0, v2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
@@ -4203,13 +3842,11 @@
 
     return v2
 
-    .line 1593
     :cond_20
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mSeascapeRotation:I
 
     return p0
 
-    .line 1609
     :cond_21
     :pswitch_2
     invoke-virtual {p0, v2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
@@ -4220,7 +3857,6 @@
 
     return v2
 
-    .line 1612
     :cond_22
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
@@ -4230,13 +3866,11 @@
 
     return p2
 
-    .line 1615
     :cond_23
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     return p0
 
-    .line 1598
     :cond_24
     :pswitch_3
     invoke-virtual {p0, v2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
@@ -4247,7 +3881,6 @@
 
     return v2
 
-    .line 1601
     :cond_25
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
@@ -4257,13 +3890,11 @@
 
     return p2
 
-    .line 1604
     :cond_26
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
     return p0
 
-    .line 1569
     :cond_27
     invoke-virtual {p0, v2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
@@ -4273,13 +3904,11 @@
 
     return v2
 
-    .line 1572
     :cond_28
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     return p0
 
-    .line 1576
     :cond_29
     invoke-virtual {p0, v2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
@@ -4289,7 +3918,6 @@
 
     return v2
 
-    .line 1579
     :cond_2a
     iget p0, p0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
@@ -4307,7 +3935,6 @@
 .method public final selectRotationAnimation()Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
     .locals 9
 
-    .line 973
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayPolicy;->isScreenOnFully()Z
@@ -4324,7 +3951,6 @@
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
 
-    .line 974
     invoke-interface {v0, v2}, Lcom/android/server/policy/WindowManagerPolicy;->okToAnimate(Z)Z
 
     move-result v0
@@ -4342,7 +3968,6 @@
     :goto_0
     move v0, v1
 
-    .line 975
     :goto_1
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -4350,7 +3975,6 @@
 
     move-result-object v3
 
-    .line 976
     sget-boolean v4, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ANIM_enabled:Z
 
     if-eqz v4, :cond_3
@@ -4404,12 +4028,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 982
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mTmpRotationAnim:Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
     iput v4, p0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mExit:I
 
-    .line 983
     iput v5, p0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mEnter:I
 
     return-object p0
@@ -4417,14 +4039,12 @@
     :cond_4
     if-eqz v3, :cond_8
 
-    .line 987
     invoke-virtual {v3}, Lcom/android/server/wm/WindowState;->getRotationAnimationHint()I
 
     move-result v0
 
     if-gez v0, :cond_5
 
-    .line 988
     iget-object v6, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v6}, Lcom/android/server/wm/DisplayPolicy;->isTopLayoutFullscreen()Z
@@ -4433,7 +4053,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 989
     invoke-virtual {v3}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
@@ -4451,7 +4070,6 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 1003
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mTmpRotationAnim:Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
     iput v2, v0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mEnter:I
@@ -4460,18 +4078,15 @@
 
     goto :goto_3
 
-    .line 998
     :cond_6
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mTmpRotationAnim:Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
     iput v4, v0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mExit:I
 
-    .line 999
     iput v5, v0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mEnter:I
 
     goto :goto_3
 
-    .line 994
     :cond_7
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mTmpRotationAnim:Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
@@ -4479,12 +4094,10 @@
 
     iput v1, v0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mExit:I
 
-    .line 995
     iput v5, v0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mEnter:I
 
     goto :goto_3
 
-    .line 1007
     :cond_8
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mTmpRotationAnim:Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
@@ -4492,7 +4105,6 @@
 
     iput v2, v0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mExit:I
 
-    .line 1009
     :goto_3
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mTmpRotationAnim:Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
@@ -4502,12 +4114,10 @@
 .method public final sendProposedRotationChangeToStatusBarInternal(IZ)V
     .locals 1
 
-    .line 1779
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mStatusBarManagerInternal:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     if-nez v0, :cond_0
 
-    .line 1780
     const-class v0, Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -4518,13 +4128,11 @@
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mStatusBarManagerInternal:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
-    .line 1782
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mStatusBarManagerInternal:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     if-eqz p0, :cond_1
 
-    .line 1783
     invoke-interface {p0, p1, p2}, Lcom/android/server/statusbar/StatusBarManagerInternal;->onProposedRotationChanged(IZ)V
 
     :cond_1
@@ -4534,40 +4142,33 @@
 .method public setFixedToUserRotation(I)V
     .locals 2
 
-    .line 1062
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mFixedToUserRotation:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 1066
     :cond_0
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mFixedToUserRotation:I
 
-    .line 1067
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayWindowSettings:Lcom/android/server/wm/DisplayWindowSettings;
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/wm/DisplayWindowSettings;->setFixedToUserRotation(Lcom/android/server/wm/DisplayContent;I)V
 
-    .line 1068
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v0, p1, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v0, :cond_1
 
-    .line 1072
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v0
 
-    .line 1071
     invoke-virtual {p1, v0}, Lcom/android/server/wm/DisplayContent;->onLastFocusedTaskDisplayAreaChanged(Lcom/android/server/wm/TaskDisplayArea;)V
 
-    .line 1074
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -4579,7 +4180,6 @@
 .method public setRotation(I)V
     .locals 0
 
-    .line 489
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
     return-void
@@ -4590,10 +4190,8 @@
 
     const/4 v0, -0x1
 
-    .line 1079
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mRotationChoiceShownToUserForConfirmation:I
 
-    .line 1080
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->useDefaultSettingsProvider()Z
 
     move-result v0
@@ -4604,7 +4202,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1082
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4623,23 +4220,19 @@
 
     const/4 v0, -0x2
 
-    .line 1085
     invoke-static {p0, p1, v1, v0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     const-string/jumbo p1, "user_rotation"
 
-    .line 1087
     invoke-static {p0, p1, p2, v0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     return-void
 
-    .line 1093
     :cond_1
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     if-eq v0, p1, :cond_2
 
-    .line 1094
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     move v0, v2
@@ -4649,18 +4242,15 @@
     :cond_2
     move v0, v1
 
-    .line 1097
     :goto_1
     iget v3, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     if-eq v3, p2, :cond_3
 
-    .line 1098
     iput p2, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     move v0, v2
 
-    .line 1101
     :cond_3
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayWindowSettings:Lcom/android/server/wm/DisplayWindowSettings;
 
@@ -4670,7 +4260,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1104
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {p0, v2, v1}, Lcom/android/server/wm/WindowManagerService;->updateRotation(ZZ)V
@@ -4682,7 +4271,6 @@
 .method public final shouldDisableRotationSensor()Z
     .locals 3
 
-    .line 2617
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->isEnabled()Z
 
     move-result v0
@@ -4693,7 +4281,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2618
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     iget-object v0, v0, Lcom/android/server/wm/DisplayPolicy;->mExt:Lcom/android/server/wm/DisplayPolicyExt;
@@ -4702,14 +4289,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2619
     invoke-virtual {v0}, Lcom/android/server/wm/CoverPolicy;->isLastCoverAppOpened()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2620
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->getInstance()Lcom/android/server/wm/WmCoverState;
 
     move-result-object v0
@@ -4722,18 +4307,15 @@
 
     const-string/jumbo p0, "shouldDisableRotationSensor, rotation sensor is disabled due to cover policy"
 
-    .line 2621
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 2627
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
-    .line 2628
     invoke-virtual {p0}, Landroid/os/PowerManagerInternal;->isProximityPositive()Z
 
     move-result p0
@@ -4742,7 +4324,6 @@
 
     const-string/jumbo p0, "shouldDisableRotationSensor, rotation sensor is disabled due to proximity sensor"
 
-    .line 2629
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -4756,7 +4337,6 @@
 .method public shouldRotateSeamlessly(IIZ)Z
     .locals 5
 
-    .line 837
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
     const/4 v1, 0x1
@@ -4765,19 +4345,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 838
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v0
 
-    .line 839
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->isSplitScreenVisible()Z
 
     move-result v3
 
-    .line 840
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->isSplitScreenStarting()Z
 
     move-result v0
@@ -4786,10 +4363,8 @@
 
     if-nez v0, :cond_0
 
-    .line 841
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 843
     invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->hasVisibleFreeformTask()Z
 
     move-result v3
@@ -4799,7 +4374,6 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 848
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     const-string/jumbo v3, "reject_seamless_rot(starting)"
@@ -4814,7 +4388,6 @@
     :cond_2
     move v0, v2
 
-    .line 857
     :goto_0
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -4826,7 +4399,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 860
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     const-string/jumbo p1, "reject_seamless_rot"
@@ -4843,7 +4415,6 @@
 
     return v2
 
-    .line 873
     :cond_5
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -4853,7 +4424,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 874
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v3, v3, Lcom/android/server/wm/DisplayContent;->mCurrentFocus:Lcom/android/server/wm/WindowState;
@@ -4862,7 +4432,6 @@
 
     goto :goto_2
 
-    .line 880
     :cond_6
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -4874,14 +4443,12 @@
 
     if-eq v3, v4, :cond_7
 
-    .line 883
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isAllowedSeamlessRotation()Z
 
     move-result v3
 
     if-eqz v3, :cond_e
 
-    .line 885
     :cond_7
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->inMultiWindowMode()Z
 
@@ -4897,7 +4464,6 @@
 
     goto :goto_2
 
-    .line 889
     :cond_8
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayRotation;->canRotateSeamlessly(II)Z
 
@@ -4905,7 +4471,6 @@
 
     if-nez p1, :cond_a
 
-    .line 892
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isAllowedSeamlessRotation()Z
 
     move-result p1
@@ -4917,7 +4482,6 @@
     :cond_9
     return v2
 
-    .line 903
     :cond_a
     :goto_1
     iget-object p1, v0, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
@@ -4932,7 +4496,6 @@
 
     return v2
 
-    .line 909
     :cond_b
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -4948,7 +4511,6 @@
 
     iget-object p1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 910
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->hasAlertWindowSurfaces()Z
 
     move-result p1
@@ -4960,7 +4522,6 @@
     :cond_c
     if-nez p3, :cond_d
 
-    .line 917
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     new-instance p1, Lcom/android/server/wm/DisplayRotation$$ExternalSyntheticLambda1;
@@ -4986,7 +4547,6 @@
 .method public final startRemoteRotation(II)V
     .locals 2
 
-    .line 753
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v0, v0, Lcom/android/server/wm/DisplayContent;->mRemoteDisplayChangeController:Lcom/android/server/wm/RemoteDisplayChangeController;
@@ -5007,7 +4567,6 @@
 
     const/4 v0, 0x0
 
-    .line 1119
     iget v1, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/DisplayRotation;->setUserRotation(II)V
@@ -5018,7 +4577,6 @@
 .method public updateOrientation(IZ)Z
     .locals 1
 
-    .line 503
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
     if-ne p1, v0, :cond_0
@@ -5029,30 +4587,24 @@
 
     return p0
 
-    .line 506
     :cond_0
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
-    .line 507
     iget v0, p0, Lcom/android/server/wm/DisplayRotation;->mCurrentAppOrientation:I
 
     if-eq p1, v0, :cond_2
 
-    .line 508
     iput p1, p0, Lcom/android/server/wm/DisplayRotation;->mCurrentAppOrientation:I
 
-    .line 509
     iget-boolean p1, p0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
     if-nez p1, :cond_1
 
     goto :goto_0
 
-    .line 514
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->updateOrientationListenerLw()V
 
-    .line 517
     :cond_2
     :goto_0
     invoke-virtual {p0, p2}, Lcom/android/server/wm/DisplayRotation;->updateRotationUnchecked(Z)Z
@@ -5065,16 +4617,13 @@
 .method public updateOrientationListener()V
     .locals 1
 
-    .line 1183
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1184
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->updateOrientationListenerLw()V
 
-    .line 1185
     monitor-exit v0
 
     return-void
@@ -5092,7 +4641,6 @@
 .method public final updateOrientationListenerLw()V
     .locals 14
 
-    .line 1224
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     if-eqz v0, :cond_6
@@ -5105,7 +4653,6 @@
 
     goto/16 :goto_2
 
-    .line 1229
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -5113,28 +4660,24 @@
 
     move-result v0
 
-    .line 1230
     iget-object v1, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayPolicy;->isAwake()Z
 
     move-result v1
 
-    .line 1231
     iget-object v2, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayPolicy;->isKeyguardDrawComplete()Z
 
     move-result v2
 
-    .line 1232
     iget-object v3, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v3}, Lcom/android/server/wm/DisplayPolicy;->isWindowManagerDrawComplete()Z
 
     move-result v3
 
-    .line 1236
     sget-boolean v4, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v4, :cond_1
@@ -5190,10 +4733,8 @@
 
     if-nez v1, :cond_2
 
-    .line 1251
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
-    .line 1252
     invoke-virtual {v0}, Lcom/android/server/wm/WindowOrientationListener;->shouldStayEnabledWhileDreaming()Z
 
     move-result v0
@@ -5207,7 +4748,6 @@
 
     goto :goto_0
 
-    .line 1258
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->needSensorRunning()Z
 
@@ -5215,14 +4755,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 1261
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     iget-boolean v1, v0, Lcom/android/server/wm/DisplayRotation$OrientationListener;->mEnabled:Z
 
     if-nez v1, :cond_4
 
-    .line 1262
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayRotation$OrientationListener;->enable()V
 
     :cond_4
@@ -5237,7 +4775,6 @@
     :goto_1
     if-eqz v0, :cond_6
 
-    .line 1268
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation$OrientationListener;->disable()V
@@ -5252,14 +4789,12 @@
 
     const/4 v0, 0x0
 
-    .line 526
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotation;->updateRotationUnchecked(Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 528
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->sendNewConfiguration()V
@@ -5275,7 +4810,6 @@
 
     move/from16 v1, p1
 
-    .line 549
     iget-object v2, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
@@ -5288,12 +4822,10 @@
 
     if-nez v1, :cond_6
 
-    .line 551
     iget v5, v0, Lcom/android/server/wm/DisplayRotation;->mDeferredRotationPauseCount:I
 
     if-lez v5, :cond_1
 
-    .line 554
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_0
@@ -5307,7 +4839,6 @@
     :cond_0
     return v4
 
-    .line 558
     :cond_1
     iget-object v5, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -5319,7 +4850,6 @@
 
     iget-object v5, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 559
     invoke-virtual {v5}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object v5
@@ -5334,14 +4864,12 @@
 
     iget-object v5, v5, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
-    .line 560
     invoke-virtual {v5}, Lcom/android/server/wm/TransitionController;->useShellTransitionsRotation()Z
 
     move-result v5
 
     if-nez v5, :cond_3
 
-    .line 564
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_2
@@ -5355,7 +4883,6 @@
     :cond_2
     return v4
 
-    .line 567
     :cond_3
     iget-object v5, v0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -5363,7 +4890,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 571
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_4
@@ -5377,7 +4903,6 @@
     :cond_4
     return v4
 
-    .line 576
     :cond_5
     iget-object v5, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -5391,12 +4916,10 @@
 
     const/4 v1, -0x2
 
-    .line 579
     iput v1, v0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
     return v4
 
-    .line 589
     :cond_6
     iget-object v5, v0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -5404,7 +4927,6 @@
 
     if-nez v5, :cond_8
 
-    .line 591
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_7
@@ -5418,19 +4940,15 @@
     :cond_7
     return v4
 
-    .line 596
     :cond_8
     iget v5, v0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
-    .line 598
     iget v6, v0, Lcom/android/server/wm/DisplayRotation;->mLastOrientation:I
 
-    .line 600
     invoke-virtual {v0, v6, v5}, Lcom/android/server/wm/DisplayRotation;->rotationForOrientation(II)I
 
     move-result v7
 
-    .line 602
     iget-object v8, v0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     if-eqz v8, :cond_a
@@ -5441,14 +4959,12 @@
 
     if-eqz v8, :cond_a
 
-    .line 604
     iget-object v8, v0, Lcom/android/server/wm/DisplayRotation;->mFoldController:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     invoke-virtual {v8}, Lcom/android/server/wm/DisplayRotation$FoldController;->revertOverriddenRotation()I
 
     move-result v8
 
-    .line 605
     sget-boolean v9, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v9, :cond_9
@@ -5490,7 +5006,6 @@
     :cond_9
     move v7, v8
 
-    .line 612
     :cond_a
     iget-object v8, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -5502,27 +5017,22 @@
 
     iget-object v8, v0, Lcom/android/server/wm/DisplayRotation;->mDeviceStateController:Lcom/android/server/wm/DeviceStateController;
 
-    .line 614
     invoke-virtual {v8}, Lcom/android/server/wm/DeviceStateController;->shouldMatchBuiltInDisplayOrientationToReverseDefaultDisplay()Z
 
     move-result v8
 
     if-eqz v8, :cond_b
 
-    .line 615
     iget-object v7, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayRotationCoordinator:Lcom/android/server/wm/DisplayRotationCoordinator;
 
-    .line 616
     invoke-virtual {v7}, Lcom/android/server/wm/DisplayRotationCoordinator;->getDefaultDisplayCurrentRotation()I
 
     move-result v7
 
-    .line 615
     invoke-static {v7}, Landroid/util/RotationUtils;->reverseRotationDirectionAroundZAxis(I)I
 
     move-result v7
 
-    .line 621
     :cond_b
     sget-boolean v8, Lcom/android/server/wm/ProtoLogCache;->WM_FORCE_DEBUG_ORIENTATION_enabled:Z
 
@@ -5606,7 +5116,6 @@
 
     invoke-static {v1, v4, v8, v9, v3}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 638
     :cond_c
     sget-boolean v1, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
@@ -5667,32 +5176,26 @@
 
     return v1
 
-    .line 648
     :cond_e
     iget-boolean v1, v0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
     if-eqz v1, :cond_f
 
-    .line 649
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayRotationCoordinator:Lcom/android/server/wm/DisplayRotationCoordinator;
 
     invoke-virtual {v1, v7}, Lcom/android/server/wm/DisplayRotationCoordinator;->onDefaultDisplayRotationChanged(I)V
 
-    .line 662
     :cond_f
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 663
     invoke-virtual {v1}, Lcom/android/server/wm/WindowManagerService;->getRecentsAnimationController()Lcom/android/server/wm/RecentsAnimationController;
 
     move-result-object v1
 
     if-eqz v1, :cond_10
 
-    .line 665
     invoke-virtual {v1}, Lcom/android/server/wm/RecentsAnimationController;->cancelAnimationForDisplayChange()V
 
-    .line 668
     :cond_10
     sget-boolean v1, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
@@ -5741,16 +5244,13 @@
     :cond_11
     const/4 v4, 0x0
 
-    .line 672
     :goto_0
     iput v7, v0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
-    .line 675
     iget-boolean v1, v0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
     if-eqz v1, :cond_12
 
-    .line 676
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mExt:Lcom/android/server/wm/WindowManagerServiceExt;
@@ -5759,7 +5259,6 @@
 
     invoke-interface {v1, v7}, Lcom/android/server/policy/WindowManagerPolicyExt;->setRotation(I)V
 
-    .line 678
     :cond_12
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_TSP_STATE_CONTROLLER:Z
 
@@ -5769,7 +5268,6 @@
 
     if-eqz v1, :cond_13
 
-    .line 679
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mExt:Lcom/android/server/wm/WindowManagerServiceExt;
@@ -5782,7 +5280,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wm/TspStateController;->setOrientation(Z)V
 
-    .line 681
     :cond_13
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_VRR_PERFORMANCE:Z
 
@@ -5792,7 +5289,6 @@
 
     if-eqz v1, :cond_14
 
-    .line 682
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
@@ -5801,27 +5297,23 @@
 
     invoke-virtual {v1, v2, v2}, Landroid/os/PowerManagerInternal;->setPowerBoost(II)V
 
-    .line 686
     :cond_14
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->setLayoutNeeded()V
 
-    .line 687
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Lcom/android/server/wm/DisplayContent;->mWaitingForConfig:Z
 
-    .line 691
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mExt:Lcom/android/server/wm/WindowManagerServiceExt;
 
     invoke-virtual {v1}, Lcom/android/server/wm/WindowManagerServiceExt;->postRotationInfoForAudioManager()V
 
-    .line 702
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
@@ -5832,7 +5324,6 @@
 
     if-eqz v1, :cond_18
 
-    .line 703
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
@@ -5847,7 +5338,6 @@
 
     goto :goto_1
 
-    .line 705
     :cond_15
     new-instance v3, Landroid/window/TransitionRequestInfo$DisplayChange;
 
@@ -5861,7 +5351,6 @@
 
     invoke-direct {v3, v4, v5, v6}, Landroid/window/TransitionRequestInfo$DisplayChange;-><init>(III)V
 
-    .line 708
     :goto_1
     iget-object v4, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -5871,12 +5360,10 @@
 
     if-eqz v1, :cond_16
 
-    .line 724
     iget v1, v0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
     invoke-virtual {v0, v5, v1}, Lcom/android/server/wm/DisplayRotation;->startRemoteRotation(II)V
 
-    .line 726
     :cond_16
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -5884,7 +5371,6 @@
 
     if-eqz v3, :cond_17
 
-    .line 727
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v1
@@ -5895,7 +5381,6 @@
 
     if-eqz v1, :cond_17
 
-    .line 728
     iget-object v0, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     const-string/jumbo v1, "split_screen_starting"
@@ -5905,13 +5390,11 @@
     :cond_17
     return v2
 
-    .line 733
     :cond_18
     iget-object v1, v0, Lcom/android/server/wm/DisplayRotation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iput v2, v1, Lcom/android/server/wm/WindowManagerService;->mWindowsFreezingScreen:I
 
-    .line 734
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
 
     iget-object v3, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -5924,23 +5407,19 @@
 
     move/from16 v1, p1
 
-    .line 737
     invoke-virtual {v0, v5, v7, v1}, Lcom/android/server/wm/DisplayRotation;->shouldRotateSeamlessly(IIZ)Z
 
     move-result v1
 
     if-eqz v1, :cond_19
 
-    .line 741
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayRotation;->prepareSeamlessRotation()V
 
     goto :goto_2
 
-    .line 743
     :cond_19
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayRotation;->prepareNormalRotationAnimation()V
 
-    .line 747
     :goto_2
     iget v1, v0, Lcom/android/server/wm/DisplayRotation;->mRotation:I
 
@@ -5952,19 +5431,16 @@
 .method public final updateSettings()Z
     .locals 9
 
-    .line 1824
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1827
     iget-object v1, p0, Lcom/android/server/wm/DisplayRotation;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1832
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
@@ -5985,18 +5461,15 @@
     :cond_0
     const-string/jumbo v2, "show_rotation_suggestions"
 
-    .line 1834
     invoke-static {v0, v2, v4, v3}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v2
 
-    .line 1838
     :goto_0
     iget v6, p0, Lcom/android/server/wm/DisplayRotation;->mShowRotationSuggestions:I
 
     if-eq v6, v2, :cond_1
 
-    .line 1839
     iput v2, p0, Lcom/android/server/wm/DisplayRotation;->mShowRotationSuggestions:I
 
     move v2, v4
@@ -6009,17 +5482,14 @@
     :goto_1
     const-string/jumbo v6, "user_rotation"
 
-    .line 1844
     invoke-static {v0, v6, v5, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v6
 
-    .line 1847
     iget v7, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     if-eq v7, v6, :cond_2
 
-    .line 1848
     iput v6, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     move v6, v4
@@ -6032,7 +5502,6 @@
     :goto_2
     const-string v7, "accelerometer_rotation"
 
-    .line 1852
     invoke-static {v0, v7, v5, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v7
@@ -6046,13 +5515,11 @@
     :cond_3
     move v7, v4
 
-    .line 1856
     :goto_3
     iget v8, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     if-eq v8, v7, :cond_4
 
-    .line 1857
     iput v7, p0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     move v2, v4
@@ -6062,23 +5529,19 @@
     :cond_4
     if-eqz v2, :cond_5
 
-    .line 1863
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->updateOrientationListenerLw()V
 
     :cond_5
     const-string v2, "camera_autorotate"
 
-    .line 1866
     invoke-static {v0, v2, v5, v3}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 
-    .line 1869
     iget v2, p0, Lcom/android/server/wm/DisplayRotation;->mCameraRotationMode:I
 
     if-eq v2, v0, :cond_6
 
-    .line 1870
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mCameraRotationMode:I
 
     goto :goto_4
@@ -6086,7 +5549,6 @@
     :cond_6
     move v4, v6
 
-    .line 1873
     :goto_4
     monitor-exit v1
 
@@ -6107,7 +5569,6 @@
 
     const v0, 0x1110020
 
-    .line 416
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p1
@@ -6120,7 +5581,6 @@
 .method public uptimeMillis()J
     .locals 2
 
-    .line 2030
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -6131,7 +5591,6 @@
 .method public useDefaultSettingsProvider()Z
     .locals 0
 
-    .line 407
     iget-boolean p0, p0, Lcom/android/server/wm/DisplayRotation;->isDefaultDisplay:Z
 
     return p0
@@ -6153,13 +5612,11 @@
 
     return v1
 
-    .line 1032
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayRotation;->selectRotationAnimation()Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;
 
     move-result-object p0
 
-    .line 1033
     iget p3, p0, Lcom/android/server/wm/DisplayRotation$RotationAnimationPair;->mExit:I
 
     if-ne p1, p3, :cond_1

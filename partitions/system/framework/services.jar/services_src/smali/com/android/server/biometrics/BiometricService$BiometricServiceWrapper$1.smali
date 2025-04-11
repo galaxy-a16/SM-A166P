@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper;Landroid/content/Context;IIILandroid/hardware/biometrics/IBiometricAuthenticator;)V
     .locals 6
 
-    .line 757
     iput-object p1, p0, Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper$1;->this$1:Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper;
 
     move-object v0, p0
@@ -36,7 +35,6 @@
 .method public confirmationAlwaysRequired(I)Z
     .locals 1
 
-    .line 760
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper$1;->this$1:Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper;
 
     iget-object v0, v0, Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper;->this$0:Lcom/android/server/biometrics/BiometricService;
@@ -55,7 +53,6 @@
 .method public confirmationSupported()Z
     .locals 0
 
-    .line 765
     iget p0, p0, Lcom/android/server/biometrics/BiometricSensor;->modality:I
 
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->isConfirmationSupported(I)Z

@@ -29,7 +29,6 @@
 .method public static synthetic $r8$lambda$3SD2C7dswJfE8qEYIbzBsqTYouY()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/companion/virtual/InputController;->lambda$addDeviceForTesting$6()V
 
     return-void
@@ -38,7 +37,6 @@
 .method public static synthetic $r8$lambda$CMe-Qbj8pbuDrg46g-ahGpq8xOw(Lcom/android/server/companion/virtual/InputController;Ljava/lang/String;IILjava/lang/String;II)Ljava/lang/Long;
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/companion/virtual/InputController;->lambda$createNavigationTouchpad$5(Ljava/lang/String;IILjava/lang/String;II)Ljava/lang/Long;
 
     move-result-object p0
@@ -49,7 +47,6 @@
 .method public static synthetic $r8$lambda$f5rdGxKmzTxubwSBNCJHgvDMIwg(Landroid/os/Handler;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/companion/virtual/InputController;->lambda$new$0(Landroid/os/Handler;)Z
 
     move-result p0
@@ -60,7 +57,6 @@
 .method public static synthetic $r8$lambda$fQNpWCdadmOvaZy2DQbW8RfxNG4(Lcom/android/server/companion/virtual/InputController;Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController;->lambda$createKeyboard$2(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
 
     move-result-object p0
@@ -71,7 +67,6 @@
 .method public static synthetic $r8$lambda$q9cYoo-OTe_ZEEH4ctnOGGsYy04(Lcom/android/server/companion/virtual/InputController;Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController;->lambda$createDpad$1(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
 
     move-result-object p0
@@ -82,7 +77,6 @@
 .method public static synthetic $r8$lambda$r7xl2ecFHCBKXeCso4BMvG3wTG4(Lcom/android/server/companion/virtual/InputController;Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController;->lambda$createMouse$3(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
 
     move-result-object p0
@@ -93,7 +87,6 @@
 .method public static synthetic $r8$lambda$t5tupgakklF6k0-dDt62YsPHsNI(Lcom/android/server/companion/virtual/InputController;Ljava/lang/String;IILjava/lang/String;II)Ljava/lang/Long;
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/companion/virtual/InputController;->lambda$createTouchscreen$4(Ljava/lang/String;IILjava/lang/String;II)Ljava/lang/Long;
 
     move-result-object p0
@@ -104,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/companion/virtual/InputController;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -113,7 +105,6 @@
 .method public static bridge synthetic -$$Nest$smnativeCloseUinput(J)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/companion/virtual/InputController;->nativeCloseUinput(J)V
 
     return-void
@@ -122,7 +113,6 @@
 .method public static bridge synthetic -$$Nest$smnativeOpenUinputDpad(Ljava/lang/String;IILjava/lang/String;)J
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/companion/virtual/InputController;->nativeOpenUinputDpad(Ljava/lang/String;IILjava/lang/String;)J
 
     move-result-wide p0
@@ -133,7 +123,6 @@
 .method public static bridge synthetic -$$Nest$smnativeOpenUinputKeyboard(Ljava/lang/String;IILjava/lang/String;)J
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/companion/virtual/InputController;->nativeOpenUinputKeyboard(Ljava/lang/String;IILjava/lang/String;)J
 
     move-result-wide p0
@@ -144,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$smnativeOpenUinputMouse(Ljava/lang/String;IILjava/lang/String;)J
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/companion/virtual/InputController;->nativeOpenUinputMouse(Ljava/lang/String;IILjava/lang/String;)J
 
     move-result-wide p0
@@ -155,7 +143,6 @@
 .method public static bridge synthetic -$$Nest$smnativeOpenUinputTouchscreen(Ljava/lang/String;IILjava/lang/String;II)J
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/companion/virtual/InputController;->nativeOpenUinputTouchscreen(Ljava/lang/String;IILjava/lang/String;II)J
 
     move-result-wide p0
@@ -166,7 +153,6 @@
 .method public static bridge synthetic -$$Nest$smnativeWriteButtonEvent(JIIJ)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/companion/virtual/InputController;->nativeWriteButtonEvent(JIIJ)Z
 
     move-result p0
@@ -177,7 +163,6 @@
 .method public static bridge synthetic -$$Nest$smnativeWriteDpadKeyEvent(JIIJ)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/companion/virtual/InputController;->nativeWriteDpadKeyEvent(JIIJ)Z
 
     move-result p0
@@ -188,7 +173,6 @@
 .method public static bridge synthetic -$$Nest$smnativeWriteKeyEvent(JIIJ)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/companion/virtual/InputController;->nativeWriteKeyEvent(JIIJ)Z
 
     move-result p0
@@ -199,7 +183,6 @@
 .method public static bridge synthetic -$$Nest$smnativeWriteRelativeEvent(JFFJ)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/companion/virtual/InputController;->nativeWriteRelativeEvent(JFFJ)Z
 
     move-result p0
@@ -210,7 +193,6 @@
 .method public static bridge synthetic -$$Nest$smnativeWriteScrollEvent(JFFJ)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/companion/virtual/InputController;->nativeWriteScrollEvent(JFFJ)Z
 
     move-result p0
@@ -221,7 +203,6 @@
 .method public static bridge synthetic -$$Nest$smnativeWriteTouchEvent(JIIIFFFFJ)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p10}, Lcom/android/server/companion/virtual/InputController;->nativeWriteTouchEvent(JIIIFFFFJ)Z
 
     move-result p0
@@ -232,7 +213,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 64
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v1, 0x1
@@ -247,7 +227,6 @@
 .method public constructor <init>(Landroid/os/Handler;Landroid/view/WindowManager;)V
     .locals 2
 
-    .line 108
     new-instance v0, Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-direct {v0}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;-><init>()V
@@ -264,30 +243,24 @@
 .method public constructor <init>(Lcom/android/server/companion/virtual/InputController$NativeWrapper;Landroid/os/Handler;Landroid/view/WindowManager;Lcom/android/server/companion/virtual/InputController$DeviceCreationThreadVerifier;)V
     .locals 1
 
-    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
-    .line 95
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
-    .line 117
     iput-object p2, p0, Lcom/android/server/companion/virtual/InputController;->mHandler:Landroid/os/Handler;
 
-    .line 118
     iput-object p1, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
-    .line 119
     const-class p1, Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -298,7 +271,6 @@
 
     iput-object p1, p0, Lcom/android/server/companion/virtual/InputController;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 120
     const-class p1, Lcom/android/server/input/InputManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -309,10 +281,8 @@
 
     iput-object p1, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
-    .line 121
     iput-object p3, p0, Lcom/android/server/companion/virtual/InputController;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 122
     iput-object p4, p0, Lcom/android/server/companion/virtual/InputController;->mThreadVerifier:Lcom/android/server/companion/virtual/InputController$DeviceCreationThreadVerifier;
 
     return-void
@@ -321,7 +291,6 @@
 .method public static createPhys(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 353
     sget-object v0, Lcom/android/server/companion/virtual/InputController;->sNextPhysId:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
@@ -348,14 +317,12 @@
 .method public static synthetic lambda$addDeviceForTesting$6()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method private synthetic lambda$createDpad$1(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
     .locals 0
 
-    .line 148
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->openUinputDpad(Ljava/lang/String;IILjava/lang/String;)J
@@ -372,7 +339,6 @@
 .method private synthetic lambda$createKeyboard$2(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
     .locals 0
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->openUinputKeyboard(Ljava/lang/String;IILjava/lang/String;)J
@@ -389,7 +355,6 @@
 .method private synthetic lambda$createMouse$3(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/Long;
     .locals 0
 
-    .line 181
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->openUinputMouse(Ljava/lang/String;IILjava/lang/String;)J
@@ -406,7 +371,6 @@
 .method private synthetic lambda$createNavigationTouchpad$5(Ljava/lang/String;IILjava/lang/String;II)Ljava/lang/Long;
     .locals 7
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     move-object v1, p1
@@ -435,7 +399,6 @@
 .method private synthetic lambda$createTouchscreen$4(Ljava/lang/String;IILjava/lang/String;II)Ljava/lang/Long;
     .locals 7
 
-    .line 200
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     move-object v1, p1
@@ -464,7 +427,6 @@
 .method public static synthetic lambda$new$0(Landroid/os/Handler;)Z
     .locals 0
 
-    .line 110
     invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object p0
@@ -518,12 +480,10 @@
 
     move-object v0, p0
 
-    .line 494
     iget-object v1, v0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 495
     :try_start_0
     iget-object v0, v0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -553,7 +513,6 @@
 
     invoke-virtual {v0, p1, v11}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 497
     monitor-exit v1
 
     return-void
@@ -571,16 +530,13 @@
 .method public close()V
     .locals 4
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 127
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
-    .line 128
     invoke-virtual {v1}, Landroid/util/ArrayMap;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -589,41 +545,34 @@
 
     move-result-object v1
 
-    .line 129
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 130
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 131
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/os/IBinder;
 
-    .line 132
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;
 
-    .line 133
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
-    .line 134
     invoke-virtual {p0, v3, v2}, Lcom/android/server/companion/virtual/InputController;->closeInputDeviceDescriptorLocked(Landroid/os/IBinder;Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;)V
 
-    .line 136
     :cond_0
     monitor-exit v0
 
@@ -642,7 +591,6 @@
 .method public final closeInputDeviceDescriptorLocked(Landroid/os/IBinder;Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;)V
     .locals 2
 
-    .line 245
     invoke-virtual {p2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getDeathRecipient()Landroid/os/IBinder$DeathRecipient;
 
     move-result-object v0
@@ -651,7 +599,6 @@
 
     invoke-interface {p1, v0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 246
     iget-object p1, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getNativePointer()J
@@ -660,19 +607,16 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->closeUinput(J)V
 
-    .line 247
     invoke-virtual {p2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getPhys()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 248
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/hardware/input/InputManagerGlobal;->removeUniqueIdAssociation(Ljava/lang/String;)V
 
-    .line 251
     invoke-virtual {p2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getType()I
 
     move-result v0
@@ -681,12 +625,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 252
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {v0, p1}, Lcom/android/server/input/InputManagerInternal;->unsetTypeAssociation(Ljava/lang/String;)V
 
-    .line 255
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getType()I
 
@@ -696,12 +638,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 256
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {v0, p1}, Lcom/android/server/input/InputManagerInternal;->removeKeyboardLayoutAssociation(Ljava/lang/String;)V
 
-    .line 262
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->isMouse()Z
 
@@ -709,21 +649,18 @@
 
     if-eqz p1, :cond_2
 
-    .line 263
     iget-object p1, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p1}, Lcom/android/server/input/InputManagerInternal;->getVirtualMousePointerDisplayId()I
 
     move-result p1
 
-    .line 264
     invoke-virtual {p2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getDisplayId()I
 
     move-result p2
 
     if-ne p1, p2, :cond_2
 
-    .line 265
     invoke-virtual {p0}, Lcom/android/server/companion/virtual/InputController;->updateActivePointerDisplayIdLocked()V
 
     :cond_2
@@ -741,7 +678,6 @@
 
     move-object/from16 v7, p7
 
-    .line 785
     iget-object v2, v1, Lcom/android/server/companion/virtual/InputController;->mThreadVerifier:Lcom/android/server/companion/virtual/InputController$DeviceCreationThreadVerifier;
 
     invoke-interface {v2}, Lcom/android/server/companion/virtual/InputController$DeviceCreationThreadVerifier;->isValidThread()Z
@@ -750,15 +686,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 790
     invoke-virtual {p0, v0}, Lcom/android/server/companion/virtual/InputController;->validateDeviceName(Ljava/lang/String;)V
 
     move/from16 v6, p6
 
-    .line 797
     invoke-virtual {p0, v6, v7}, Lcom/android/server/companion/virtual/InputController;->setUniqueIdAssociation(ILjava/lang/String;)V
 
-    .line 798
     :try_start_0
     new-instance v2, Lcom/android/server/companion/virtual/InputController$WaitForDevice;
 
@@ -770,7 +703,6 @@
     :try_end_0
     .catch Lcom/android/server/companion/virtual/InputController$DeviceCreationException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 799
     :try_start_1
     invoke-interface/range {p8 .. p8}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -790,13 +722,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 809
     :try_start_2
     invoke-virtual {v2}, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->waitForDeviceCreation()I
 
     move-result v9
 
-    .line 811
     new-instance v5, Lcom/android/server/companion/virtual/InputController$BinderDeathRecipient;
 
     invoke-direct {v5, p0, v10}, Lcom/android/server/companion/virtual/InputController$BinderDeathRecipient;-><init>(Lcom/android/server/companion/virtual/InputController;Landroid/os/IBinder;)V
@@ -806,7 +736,6 @@
 
     const/4 v8, 0x0
 
-    .line 813
     :try_start_3
     invoke-interface {v10, v5, v8}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_3
@@ -814,18 +743,15 @@
     .catch Lcom/android/server/companion/virtual/InputController$DeviceCreationException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 822
     :try_start_4
     invoke-virtual {v2}, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->close()V
     :try_end_4
     .catch Lcom/android/server/companion/virtual/InputController$DeviceCreationException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 827
     iget-object v11, v1, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 828
     :try_start_5
     iget-object v12, v1, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -849,7 +775,6 @@
 
     invoke-virtual {v12, v10, v13}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 831
     monitor-exit v11
 
     return-void
@@ -868,7 +793,6 @@
 
     move-object v5, v0
 
-    .line 815
     :try_start_6
     new-instance v0, Lcom/android/server/companion/virtual/InputController$DeviceCreationException;
 
@@ -884,16 +808,13 @@
     :catch_1
     move-exception v0
 
-    .line 819
     :try_start_7
     iget-object v1, v1, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {v1, v3, v4}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->closeUinput(J)V
 
-    .line 820
     throw v0
 
-    .line 802
     :cond_0
     new-instance v1, Lcom/android/server/companion/virtual/InputController$DeviceCreationException;
 
@@ -922,7 +843,6 @@
 
     move-object v1, v0
 
-    .line 798
     :try_start_8
     invoke-virtual {v2}, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->close()V
     :try_end_8
@@ -946,17 +866,14 @@
     :catch_2
     move-exception v0
 
-    .line 823
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object v1
 
     invoke-virtual {v1, v7}, Landroid/hardware/input/InputManagerGlobal;->removeUniqueIdAssociation(Ljava/lang/String;)V
 
-    .line 824
     throw v0
 
-    .line 786
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -972,14 +889,12 @@
 
     const-string v0, "Dpad"
 
-    .line 144
     invoke-static {v0}, Lcom/android/server/companion/virtual/InputController;->createPhys(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const/4 v0, 0x4
 
-    .line 146
     :try_start_0
     new-instance v9, Lcom/android/server/companion/virtual/InputController$$ExternalSyntheticLambda6;
 
@@ -1020,7 +935,6 @@
     :catch_0
     move-exception p0
 
-    .line 150
     new-instance p2, Ljava/lang/RuntimeException;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -1053,12 +967,10 @@
 
     const-string v0, "Keyboard"
 
-    .line 158
     invoke-static {v0}, Lcom/android/server/companion/virtual/InputController;->createPhys(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 159
     iget-object v0, v10, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     move-object/from16 v1, p6
@@ -1069,7 +981,6 @@
 
     const/4 v0, 0x1
 
-    .line 162
     :try_start_0
     new-instance v9, Lcom/android/server/companion/virtual/InputController$$ExternalSyntheticLambda3;
 
@@ -1112,12 +1023,10 @@
     :catch_0
     move-exception v0
 
-    .line 166
     iget-object v1, v10, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {v1, v11}, Lcom/android/server/input/InputManagerInternal;->removeKeyboardLayoutAssociation(Ljava/lang/String;)V
 
-    .line 167
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1150,14 +1059,12 @@
 
     const-string v0, "Mouse"
 
-    .line 177
     invoke-static {v0}, Lcom/android/server/companion/virtual/InputController;->createPhys(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const/4 v0, 0x2
 
-    .line 179
     :try_start_0
     new-instance v9, Lcom/android/server/companion/virtual/InputController$$ExternalSyntheticLambda0;
 
@@ -1193,7 +1100,6 @@
     :try_end_0
     .catch Lcom/android/server/companion/virtual/InputController$DeviceCreationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 186
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p0, p5}, Lcom/android/server/input/InputManagerInternal;->setVirtualMousePointerDisplayId(I)Z
@@ -1203,7 +1109,6 @@
     :catch_0
     move-exception p0
 
-    .line 183
     new-instance p2, Ljava/lang/RuntimeException;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -1236,12 +1141,10 @@
 
     const-string v0, "NavigationTouchpad"
 
-    .line 216
     invoke-static {v0}, Lcom/android/server/companion/virtual/InputController;->createPhys(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 217
     iget-object v0, v10, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     const-string/jumbo v1, "touchNavigation"
@@ -1250,7 +1153,6 @@
 
     const/4 v0, 0x5
 
-    .line 219
     :try_start_0
     new-instance v9, Lcom/android/server/companion/virtual/InputController$$ExternalSyntheticLambda4;
 
@@ -1297,12 +1199,10 @@
     :catch_0
     move-exception v0
 
-    .line 224
     iget-object v1, v10, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {v1, v11}, Lcom/android/server/input/InputManagerInternal;->unsetTypeAssociation(Ljava/lang/String;)V
 
-    .line 225
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1335,14 +1235,12 @@
 
     const-string v0, "Touchscreen"
 
-    .line 196
     invoke-static {v0}, Lcom/android/server/companion/virtual/InputController;->createPhys(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v9, 0x3
 
-    .line 198
     :try_start_0
     new-instance v10, Lcom/android/server/companion/virtual/InputController$$ExternalSyntheticLambda2;
 
@@ -1391,7 +1289,6 @@
     :catch_0
     move-exception v0
 
-    .line 203
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1424,10 +1321,8 @@
 
     const-string v0, "    InputController: "
 
-    .line 474
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 475
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -1435,12 +1330,10 @@
     :try_start_0
     const-string v1, "      Active descriptors: "
 
-    .line 476
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    .line 477
     :goto_0
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -1450,7 +1343,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 478
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -1459,7 +1351,6 @@
 
     check-cast v2, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;
 
-    .line 479
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1480,7 +1371,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 480
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1501,7 +1391,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 481
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1510,7 +1399,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 482
     invoke-virtual {v2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getCreationOrderNumber()J
 
     move-result-wide v4
@@ -1521,10 +1409,8 @@
 
     move-result-object v3
 
-    .line 481
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 483
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1545,7 +1431,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 484
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1566,7 +1451,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 485
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1575,7 +1459,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 486
     invoke-virtual {v2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getInputDeviceId()I
 
     move-result v2
@@ -1586,14 +1469,12 @@
 
     move-result-object v2
 
-    .line 485
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    .line 488
     :cond_0
     monitor-exit v0
 
@@ -1612,12 +1493,10 @@
 .method public getCursorPosition(Landroid/os/IBinder;)Landroid/graphics/PointF;
     .locals 2
 
-    .line 457
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 458
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -1629,21 +1508,18 @@
 
     if-eqz p1, :cond_1
 
-    .line 464
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getDisplayId()I
 
     move-result p1
 
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
-    .line 465
     invoke-virtual {p0}, Lcom/android/server/input/InputManagerInternal;->getVirtualMousePointerDisplayId()I
 
     move-result p0
 
     if-ne p1, p0, :cond_0
 
-    .line 469
     const-class p0, Lcom/android/server/input/InputManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1660,7 +1536,6 @@
 
     return-object p0
 
-    .line 466
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1670,7 +1545,6 @@
 
     throw p0
 
-    .line 461
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1683,7 +1557,6 @@
     :catchall_0
     move-exception p0
 
-    .line 470
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1694,23 +1567,19 @@
 .method public getInputDeviceDescriptors()Ljava/util/Map;
     .locals 2
 
-    .line 502
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 503
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 504
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 505
     monitor-exit v1
 
     return-object v0
@@ -1728,12 +1597,10 @@
 .method public getInputDeviceId(Landroid/os/IBinder;)I
     .locals 1
 
-    .line 274
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 275
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -1745,7 +1612,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 279
     invoke-virtual {p0}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getInputDeviceId()I
 
     move-result p0
@@ -1754,7 +1620,6 @@
 
     return p0
 
-    .line 277
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1767,7 +1632,6 @@
     :catchall_0
     move-exception p0
 
-    .line 280
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1778,12 +1642,10 @@
 .method public sendButtonEvent(Landroid/os/IBinder;Landroid/hardware/input/VirtualMouseButtonEvent;)Z
     .locals 10
 
-    .line 388
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 389
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -1795,28 +1657,24 @@
 
     if-eqz p1, :cond_1
 
-    .line 395
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getDisplayId()I
 
     move-result v1
 
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
-    .line 396
     invoke-virtual {v2}, Lcom/android/server/input/InputManagerInternal;->getVirtualMousePointerDisplayId()I
 
     move-result v2
 
     if-ne v1, v2, :cond_0
 
-    .line 400
     iget-object v3, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getNativePointer()J
 
     move-result-wide v4
 
-    .line 401
     invoke-virtual {p2}, Landroid/hardware/input/VirtualMouseButtonEvent;->getButtonCode()I
 
     move-result v6
@@ -1829,7 +1687,6 @@
 
     move-result-wide v8
 
-    .line 400
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->writeButtonEvent(JIIJ)Z
 
     move-result p0
@@ -1838,7 +1695,6 @@
 
     return p0
 
-    .line 397
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1848,7 +1704,6 @@
 
     throw p0
 
-    .line 392
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1861,7 +1716,6 @@
     :catchall_0
     move-exception p0
 
-    .line 402
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1872,12 +1726,10 @@
 .method public sendDpadKeyEvent(Landroid/os/IBinder;Landroid/hardware/input/VirtualKeyEvent;)Z
     .locals 8
 
-    .line 362
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 363
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -1889,14 +1741,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 369
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getNativePointer()J
 
     move-result-wide v2
 
-    .line 370
     invoke-virtual {p2}, Landroid/hardware/input/VirtualKeyEvent;->getKeyCode()I
 
     move-result v4
@@ -1909,7 +1759,6 @@
 
     move-result-wide v6
 
-    .line 369
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->writeDpadKeyEvent(JIIJ)Z
 
     move-result p0
@@ -1918,7 +1767,6 @@
 
     return p0
 
-    .line 366
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1931,7 +1779,6 @@
     :catchall_0
     move-exception p0
 
-    .line 371
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1942,12 +1789,10 @@
 .method public sendKeyEvent(Landroid/os/IBinder;Landroid/hardware/input/VirtualKeyEvent;)Z
     .locals 8
 
-    .line 375
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 376
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -1959,14 +1804,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 382
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getNativePointer()J
 
     move-result-wide v2
 
-    .line 383
     invoke-virtual {p2}, Landroid/hardware/input/VirtualKeyEvent;->getKeyCode()I
 
     move-result v4
@@ -1979,7 +1822,6 @@
 
     move-result-wide v6
 
-    .line 382
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->writeKeyEvent(JIIJ)Z
 
     move-result p0
@@ -1988,7 +1830,6 @@
 
     return p0
 
-    .line 379
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2001,7 +1842,6 @@
     :catchall_0
     move-exception p0
 
-    .line 384
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2012,12 +1852,10 @@
 .method public sendRelativeEvent(Landroid/os/IBinder;Landroid/hardware/input/VirtualMouseRelativeEvent;)Z
     .locals 10
 
-    .line 421
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 422
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -2029,28 +1867,24 @@
 
     if-eqz p1, :cond_1
 
-    .line 428
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getDisplayId()I
 
     move-result v1
 
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
-    .line 429
     invoke-virtual {v2}, Lcom/android/server/input/InputManagerInternal;->getVirtualMousePointerDisplayId()I
 
     move-result v2
 
     if-ne v1, v2, :cond_0
 
-    .line 433
     iget-object v3, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getNativePointer()J
 
     move-result-wide v4
 
-    .line 434
     invoke-virtual {p2}, Landroid/hardware/input/VirtualMouseRelativeEvent;->getRelativeX()F
 
     move-result v6
@@ -2063,7 +1897,6 @@
 
     move-result-wide v8
 
-    .line 433
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->writeRelativeEvent(JFFJ)Z
 
     move-result p0
@@ -2072,7 +1905,6 @@
 
     return p0
 
-    .line 430
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2082,7 +1914,6 @@
 
     throw p0
 
-    .line 425
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2095,7 +1926,6 @@
     :catchall_0
     move-exception p0
 
-    .line 435
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2106,12 +1936,10 @@
 .method public sendScrollEvent(Landroid/os/IBinder;Landroid/hardware/input/VirtualMouseScrollEvent;)Z
     .locals 10
 
-    .line 439
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 440
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -2123,28 +1951,24 @@
 
     if-eqz p1, :cond_1
 
-    .line 446
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getDisplayId()I
 
     move-result v1
 
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
-    .line 447
     invoke-virtual {v2}, Lcom/android/server/input/InputManagerInternal;->getVirtualMousePointerDisplayId()I
 
     move-result v2
 
     if-ne v1, v2, :cond_0
 
-    .line 451
     iget-object v3, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getNativePointer()J
 
     move-result-wide v4
 
-    .line 452
     invoke-virtual {p2}, Landroid/hardware/input/VirtualMouseScrollEvent;->getXAxisMovement()F
 
     move-result v6
@@ -2157,7 +1981,6 @@
 
     move-result-wide v8
 
-    .line 451
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->writeScrollEvent(JFFJ)Z
 
     move-result p0
@@ -2166,7 +1989,6 @@
 
     return p0
 
-    .line 448
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2176,7 +1998,6 @@
 
     throw p0
 
-    .line 443
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2189,7 +2010,6 @@
     :catchall_0
     move-exception p0
 
-    .line 453
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2200,12 +2020,10 @@
 .method public sendTouchEvent(Landroid/os/IBinder;Landroid/hardware/input/VirtualTouchEvent;)Z
     .locals 13
 
-    .line 406
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 407
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -2217,14 +2035,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 413
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mNativeWrapper:Lcom/android/server/companion/virtual/InputController$NativeWrapper;
 
     invoke-virtual {p1}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getNativePointer()J
 
     move-result-wide v2
 
-    .line 414
     invoke-virtual {p2}, Landroid/hardware/input/VirtualTouchEvent;->getPointerId()I
 
     move-result v4
@@ -2241,7 +2057,6 @@
 
     move-result v7
 
-    .line 415
     invoke-virtual {p2}, Landroid/hardware/input/VirtualTouchEvent;->getY()F
 
     move-result v8
@@ -2254,12 +2069,10 @@
 
     move-result v10
 
-    .line 416
     invoke-virtual {p2}, Landroid/hardware/input/VirtualTouchEvent;->getEventTimeNanos()J
 
     move-result-wide v11
 
-    .line 413
     invoke-virtual/range {v1 .. v12}, Lcom/android/server/companion/virtual/InputController$NativeWrapper;->writeTouchEvent(JIIIFFFFJ)Z
 
     move-result p0
@@ -2268,7 +2081,6 @@
 
     return p0
 
-    .line 410
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2281,7 +2093,6 @@
     :catchall_0
     move-exception p0
 
-    .line 417
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2292,7 +2103,6 @@
 .method public setDisplayEligibilityForPointerCapture(ZI)V
     .locals 0
 
-    .line 292
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/input/InputManagerInternal;->setDisplayEligibilityForPointerCapture(IZ)V
@@ -2303,7 +2113,6 @@
 .method public setLocalIme(I)V
     .locals 2
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManagerInternal;->getDisplayInfo(I)Landroid/view/DisplayInfo;
@@ -2318,7 +2127,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 299
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mWindowManager:Landroid/view/WindowManager;
 
     const/4 v0, 0x0
@@ -2332,7 +2140,6 @@
 .method public setPointerAcceleration(FI)V
     .locals 0
 
-    .line 288
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/input/InputManagerInternal;->setPointerAcceleration(FI)V
@@ -2343,7 +2150,6 @@
 .method public setShowPointerIcon(ZI)V
     .locals 0
 
-    .line 284
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/input/InputManagerInternal;->setPointerIconVisible(ZI)V
@@ -2354,7 +2160,6 @@
 .method public final setUniqueIdAssociation(ILjava/lang/String;)V
     .locals 0
 
-    .line 357
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-virtual {p0, p1}, Landroid/hardware/display/DisplayManagerInternal;->getDisplayInfo(I)Landroid/view/DisplayInfo;
@@ -2363,7 +2168,6 @@
 
     iget-object p0, p0, Landroid/view/DisplayInfo;->uniqueId:Ljava/lang/String;
 
-    .line 358
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object p1
@@ -2376,12 +2180,10 @@
 .method public unregisterInputDevice(Landroid/os/IBinder;)V
     .locals 2
 
-    .line 231
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 232
     :try_start_0
     iget-object v1, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -2393,15 +2195,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 238
     invoke-virtual {p0, p1, v1}, Lcom/android/server/companion/virtual/InputController;->closeInputDeviceDescriptorLocked(Landroid/os/IBinder;Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;)V
 
-    .line 239
     monitor-exit v0
 
     return-void
 
-    .line 235
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2414,7 +2213,6 @@
     :catchall_0
     move-exception p0
 
-    .line 239
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2429,7 +2227,6 @@
 
     const/4 v1, 0x0
 
-    .line 307
     :goto_0
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
@@ -2439,7 +2236,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 308
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -2448,7 +2244,6 @@
 
     check-cast v2, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;
 
-    .line 309
     invoke-virtual {v2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->isMouse()Z
 
     move-result v3
@@ -2457,12 +2252,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 311
     invoke-virtual {v2}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getCreationOrderNumber()J
 
     move-result-wide v3
 
-    .line 312
     invoke-virtual {v0}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getCreationOrderNumber()J
 
     move-result-wide v5
@@ -2482,20 +2275,16 @@
     :cond_2
     if-eqz v0, :cond_3
 
-    .line 318
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
-    .line 319
     invoke-virtual {v0}, Lcom/android/server/companion/virtual/InputController$InputDeviceDescriptor;->getDisplayId()I
 
     move-result v0
 
-    .line 318
     invoke-virtual {p0, v0}, Lcom/android/server/input/InputManagerInternal;->setVirtualMousePointerDisplayId(I)Z
 
     goto :goto_1
 
-    .line 322
     :cond_3
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
@@ -2510,7 +2299,6 @@
 .method public final validateDeviceName(Ljava/lang/String;)V
     .locals 3
 
-    .line 336
     sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -2523,14 +2311,12 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 342
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 343
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
@@ -2541,7 +2327,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 344
     iget-object v2, p0, Lcom/android/server/companion/virtual/InputController;->mInputDeviceDescriptors:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -2564,7 +2349,6 @@
 
     goto :goto_0
 
-    .line 345
     :cond_0
     new-instance p0, Lcom/android/server/companion/virtual/InputController$DeviceCreationException;
 
@@ -2586,7 +2370,6 @@
 
     throw p0
 
-    .line 349
     :cond_1
     monitor-exit v0
 
@@ -2601,7 +2384,6 @@
 
     throw p0
 
-    .line 337
     :cond_2
     new-instance p0, Lcom/android/server/companion/virtual/InputController$DeviceCreationException;
 

@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionPolicyProvider;-><init>(Landroid/content/Context;)V
 
-    .line 34
     invoke-static {p1}, Lcom/samsung/android/server/audio/AudioSettingsHelper;->getInstance(Landroid/content/Context;)Lcom/samsung/android/server/audio/AudioSettingsHelper;
 
     move-result-object p1
@@ -29,7 +27,6 @@
 .method public getSessionPoliciesForApplication(ILjava/lang/String;)I
     .locals 2
 
-    .line 40
     iget-object v0, p0, Lcom/android/server/media/CustomSessionPolicyProvider;->mAudioSettingsHelper:Lcom/samsung/android/server/audio/AudioSettingsHelper;
 
     const-string/jumbo v1, "media_button_deny"
@@ -44,7 +41,6 @@
 
     return p0
 
-    .line 46
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/server/media/MediaSessionPolicyProvider;->getSessionPoliciesForApplication(ILjava/lang/String;)I
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService$RestorableParameters;)V
     .locals 0
 
-    .line 919
     iput-object p1, p0, Lcom/android/server/audio/AudioService$RestorableParameters$1;->this$0:Lcom/android/server/audio/AudioService$RestorableParameters;
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -24,7 +23,6 @@
 .method public removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 1
 
-    .line 924
     invoke-virtual {p0}, Ljava/util/LinkedHashMap;->size()I
 
     move-result p0
@@ -37,7 +35,6 @@
 
     return p0
 
-    .line 925
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -47,7 +44,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 926
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
@@ -60,7 +56,6 @@
 
     const-string p1, "AS.AudioService"
 
-    .line 925
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1

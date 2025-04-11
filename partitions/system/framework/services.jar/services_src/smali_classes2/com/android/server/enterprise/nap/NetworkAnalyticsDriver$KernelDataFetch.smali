@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;)V
     .locals 0
 
-    .line 218
     iput-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -24,7 +23,6 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 216
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -43,7 +41,6 @@
 
     const/4 v1, 0x0
 
-    .line 226
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;->-$$Nest$sfgetDBG()Z
 
@@ -55,7 +52,6 @@
 
     invoke-static {p1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 227
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;
 
@@ -65,7 +61,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 228
     invoke-static {}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;->-$$Nest$sfgetDBG()Z
 
     move-result v2
@@ -76,7 +71,6 @@
 
     invoke-static {p1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     :cond_1
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;
 
@@ -86,7 +80,6 @@
 
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDataDelivery;->initializeHandlerThread()V
 
-    .line 235
     :goto_0
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;
 
@@ -98,12 +91,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 236
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;
 
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;->readDevice()Ljava/lang/String;
 
-    .line 237
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     const-wide/16 v2, 0x19
@@ -112,7 +103,6 @@
 
     goto :goto_0
 
-    .line 231
     :cond_2
     invoke-static {}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;->-$$Nest$sfgetDBG()Z
 
@@ -124,7 +114,6 @@
 
     invoke-static {p1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     :cond_3
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;
 
@@ -140,10 +129,8 @@
 
     const-string v3, "doInBackground: Exception"
 
-    .line 242
     invoke-static {p1, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 244
     :catch_1
     :cond_4
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->this$0:Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver;
@@ -156,7 +143,6 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 216
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsDriver$KernelDataFetch;->onPostExecute(Ljava/lang/Void;)V
@@ -167,13 +153,11 @@
 .method public onPostExecute(Ljava/lang/Void;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPreExecute()V
     .locals 0
 
-    .line 0
     return-void
 .end method

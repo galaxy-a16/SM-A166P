@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/io/File;)V
     .locals 2
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-instance v0, Ljava/io/File;
 
     const-string v1, "backup_preferences"
@@ -25,14 +23,12 @@
 
     const/4 p2, 0x0
 
-    .line 39
     invoke-virtual {p1, v0, p2}, Landroid/content/Context;->getSharedPreferences(Ljava/io/File;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/backup/UserBackupPreferences;->mPreferences:Landroid/content/SharedPreferences;
 
-    .line 40
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -47,12 +43,10 @@
 .method public addExcludedKeys(Ljava/lang/String;Ljava/util/List;)V
     .locals 3
 
-    .line 44
     new-instance v0, Ljava/util/HashSet;
 
     iget-object v1, p0, Lcom/android/server/backup/UserBackupPreferences;->mPreferences:Landroid/content/SharedPreferences;
 
-    .line 45
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v2
@@ -63,15 +57,12 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 46
     invoke-interface {v0, p2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 47
     iget-object p2, p0, Lcom/android/server/backup/UserBackupPreferences;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p2, p1, v0}, Landroid/content/SharedPreferences$Editor;->putStringSet(Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
 
-    .line 48
     iget-object p0, p0, Lcom/android/server/backup/UserBackupPreferences;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -82,7 +73,6 @@
 .method public getExcludedRestoreKeysForPackage(Ljava/lang/String;)Ljava/util/Set;
     .locals 1
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/backup/UserBackupPreferences;->mPreferences:Landroid/content/SharedPreferences;
 
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;

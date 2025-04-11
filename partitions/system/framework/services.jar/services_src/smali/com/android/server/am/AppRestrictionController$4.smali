@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppRestrictionController;)V
     .locals 0
 
-    .line 1446
     iput-object p1, p0, Lcom/android/server/am/AppRestrictionController$4;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-direct {p0}, Lcom/android/server/usage/AppStandbyInternal$AppIdleStateChangeListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onAppIdleStateChanged(Ljava/lang/String;IZII)V
     .locals 0
 
-    .line 1450
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$4;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -37,7 +35,6 @@
 
     move-result-object p0
 
-    .line 1451
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -46,7 +43,6 @@
 .method public onUserInteractionStarted(Ljava/lang/String;I)V
     .locals 2
 
-    .line 1456
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$4;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -61,7 +57,6 @@
 
     move-result-object p0
 
-    .line 1457
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

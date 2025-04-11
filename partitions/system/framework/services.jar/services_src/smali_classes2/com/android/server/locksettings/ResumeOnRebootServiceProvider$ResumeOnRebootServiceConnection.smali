@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fputmBinder(Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;Landroid/service/resumeonreboot/IResumeOnRebootService;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mBinder:Landroid/service/resumeonreboot/IResumeOnRebootService;
 
     return-void
@@ -26,13 +25,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 126
     iput-object p1, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mContext:Landroid/content/Context;
 
-    .line 127
     iput-object p2, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mComponentName:Landroid/content/ComponentName;
 
     return-void
@@ -41,7 +37,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;-><init>(Landroid/content/Context;Landroid/content/ComponentName;)V
 
     return-void
@@ -52,7 +47,6 @@
 .method public bindToService(J)V
     .locals 8
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mBinder:Landroid/service/resumeonreboot/IResumeOnRebootService;
 
     if-eqz v0, :cond_0
@@ -67,7 +61,6 @@
 
     if-nez v0, :cond_2
 
-    .line 141
     :cond_0
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
@@ -75,43 +68,36 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 142
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 143
     iget-object v1, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mComponentName:Landroid/content/ComponentName;
 
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 144
     new-instance v4, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection$1;
 
     invoke-direct {v4, p0, v0}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection$1;-><init>(Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;Ljava/util/concurrent/CountDownLatch;)V
 
     iput-object v4, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 156
     iget-object v2, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mContext:Landroid/content/Context;
 
     const v5, 0x4000001
 
-    .line 158
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
 
     sget-object v7, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
-    .line 156
     invoke-virtual/range {v2 .. v7}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/Handler;Landroid/os/UserHandle;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 161
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +135,6 @@
     :cond_1
     const-string/jumbo v1, "serviceConnection"
 
-    .line 165
     invoke-virtual {p0, v0, v1, p1, p2}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->waitForLatch(Ljava/util/concurrent/CountDownLatch;Ljava/lang/String;J)V
 
     :cond_2
@@ -161,7 +146,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 214
     invoke-virtual {p1}, Landroid/os/ParcelableException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
@@ -170,14 +154,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 215
     const-class p0, Ljava/io/IOException;
 
     invoke-virtual {p1, p0}, Landroid/os/ParcelableException;->maybeRethrow(Ljava/lang/Class;)V
 
     return-void
 
-    .line 218
     :cond_0
     new-instance p0, Landroid/os/RemoteException;
 
@@ -193,12 +175,10 @@
 .method public unbindService()V
     .locals 2
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mServiceConnection:Landroid/content/ServiceConnection;
 
     if-eqz v0, :cond_0
 
-    .line 133
     iget-object v1, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
@@ -206,7 +186,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 135
     iput-object v0, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mBinder:Landroid/service/resumeonreboot/IResumeOnRebootService;
 
     return-void
@@ -215,7 +194,6 @@
 .method public unwrap([BJ)[B
     .locals 4
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mBinder:Landroid/service/resumeonreboot/IResumeOnRebootService;
 
     if-eqz v0, :cond_1
@@ -230,21 +208,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 196
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 198
     new-instance v1, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v0, v2}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;-><init>(Ljava/util/concurrent/CountDownLatch;Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback-IA;)V
 
-    .line 201
     iget-object v2, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mBinder:Landroid/service/resumeonreboot/IResumeOnRebootService;
 
     new-instance v3, Landroid/os/RemoteCallback;
@@ -255,10 +230,8 @@
 
     const-string/jumbo p1, "unWrapSecret"
 
-    .line 202
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->waitForLatch(Ljava/util/concurrent/CountDownLatch;Ljava/lang/String;J)V
 
-    .line 203
     invoke-static {v1}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;->-$$Nest$mgetResult(Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -271,7 +244,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 204
     invoke-static {v1}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;->-$$Nest$mgetResult(Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -286,7 +258,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->throwTypedException(Landroid/os/ParcelableException;)V
 
-    .line 207
     :cond_0
     invoke-static {v1}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;->-$$Nest$mgetResult(Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;)Landroid/os/Bundle;
 
@@ -300,7 +271,6 @@
 
     return-object p0
 
-    .line 194
     :cond_1
     new-instance p0, Landroid/os/RemoteException;
 
@@ -316,7 +286,6 @@
 
     const-string p0, "Latch wait for "
 
-    .line 226
     :try_start_0
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -328,7 +297,6 @@
 
     return-void
 
-    .line 227
     :cond_0
     new-instance p1, Ljava/util/concurrent/TimeoutException;
 
@@ -354,7 +322,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 230
     :catch_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -362,7 +329,6 @@
 
     invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
 
-    .line 231
     new-instance p1, Landroid/os/RemoteException;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -389,7 +355,6 @@
 .method public wrapBlob([BJJ)[B
     .locals 4
 
-    .line 173
     iget-object v0, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mBinder:Landroid/service/resumeonreboot/IResumeOnRebootService;
 
     if-eqz v0, :cond_1
@@ -404,21 +369,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 176
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 178
     new-instance v1, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v0, v2}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;-><init>(Ljava/util/concurrent/CountDownLatch;Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback-IA;)V
 
-    .line 181
     iget-object v2, p0, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->mBinder:Landroid/service/resumeonreboot/IResumeOnRebootService;
 
     new-instance v3, Landroid/os/RemoteCallback;
@@ -429,10 +391,8 @@
 
     const-string/jumbo p1, "wrapSecret"
 
-    .line 182
     invoke-virtual {p0, v0, p1, p4, p5}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->waitForLatch(Ljava/util/concurrent/CountDownLatch;Ljava/lang/String;J)V
 
-    .line 183
     invoke-static {v1}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;->-$$Nest$mgetResult(Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -445,7 +405,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 184
     invoke-static {v1}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;->-$$Nest$mgetResult(Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -460,7 +419,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceConnection;->throwTypedException(Landroid/os/ParcelableException;)V
 
-    .line 187
     :cond_0
     invoke-static {v1}, Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;->-$$Nest$fgetmResult(Lcom/android/server/locksettings/ResumeOnRebootServiceProvider$ResumeOnRebootServiceCallback;)Landroid/os/Bundle;
 
@@ -474,7 +432,6 @@
 
     return-object p0
 
-    .line 174
     :cond_1
     new-instance p0, Landroid/os/RemoteException;
 

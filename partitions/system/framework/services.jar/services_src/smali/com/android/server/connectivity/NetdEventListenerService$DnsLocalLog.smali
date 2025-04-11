@@ -15,21 +15,18 @@
 .method public constructor <init>(Lcom/android/server/connectivity/NetdEventListenerService;I)V
     .locals 0
 
-    .line 724
     iput-object p1, p0, Lcom/android/server/connectivity/NetdEventListenerService$DnsLocalLog;->this$0:Lcom/android/server/connectivity/NetdEventListenerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 725
     invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/connectivity/NetdEventListenerService$DnsLocalLog;->mMaxLines:I
 
-    .line 726
     new-instance p2, Ljava/util/ArrayDeque;
 
     invoke-direct {p2, p1}, Ljava/util/ArrayDeque;-><init>(I)V
@@ -46,7 +43,6 @@
 
     monitor-enter p0
 
-    .line 730
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetdEventListenerService$DnsLocalLog;->mLog:Ljava/util/Deque;
@@ -59,14 +55,12 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 731
     iget-object v0, p0, Lcom/android/server/connectivity/NetdEventListenerService$DnsLocalLog;->mLog:Ljava/util/Deque;
 
     invoke-interface {v0}, Ljava/util/Deque;->remove()Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 733
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetdEventListenerService$DnsLocalLog;->mLog:Ljava/util/Deque;
 
@@ -74,7 +68,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 734
     monitor-exit p0
 
     return-void
@@ -92,7 +85,6 @@
 
     monitor-enter p0
 
-    .line 758
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetdEventListenerService$DnsLocalLog;->mLog:Ljava/util/Deque;
 
@@ -100,7 +92,6 @@
 
     move-result-object v0
 
-    .line 759
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -108,7 +99,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 760
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -127,7 +117,6 @@
 
     goto :goto_0
 
-    .line 762
     :cond_0
     monitor-exit p0
 
@@ -148,7 +137,6 @@
 
     const/4 v0, 0x0
 
-    .line 738
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -156,7 +144,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 739
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -171,7 +158,6 @@
 
     add-int/lit8 v1, v1, 0x20
 
-    .line 743
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -198,20 +184,17 @@
 .method public log(Ljava/lang/String;)V
     .locals 8
 
-    .line 749
     iget v0, p0, Lcom/android/server/connectivity/NetdEventListenerService$DnsLocalLog;->mMaxLines:I
 
     if-gtz v0, :cond_0
 
     return-void
 
-    .line 752
     :cond_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v6
 
-    .line 753
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -232,7 +215,6 @@
 
     move-object v7, p1
 
-    .line 754
     filled-new-array/range {v1 .. v7}, [Ljava/lang/Object;
 
     move-result-object p1

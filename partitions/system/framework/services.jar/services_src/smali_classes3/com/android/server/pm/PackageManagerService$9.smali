@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 9506
     invoke-static {}, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->values()[Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
     move-result-object v0

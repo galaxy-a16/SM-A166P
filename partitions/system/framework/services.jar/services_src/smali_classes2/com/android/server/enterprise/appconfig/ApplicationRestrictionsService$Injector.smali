@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
     iput-object p1, p0, Lcom/android/server/enterprise/appconfig/ApplicationRestrictionsService$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getActivityManager()Landroid/app/ActivityManager;
     .locals 1
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/enterprise/appconfig/ApplicationRestrictionsService$Injector;->mContext:Landroid/content/Context;
 
     const-string v0, "activity"
@@ -42,7 +39,6 @@
 .method public getUserManager()Landroid/os/UserManager;
     .locals 0
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/enterprise/appconfig/ApplicationRestrictionsService$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;

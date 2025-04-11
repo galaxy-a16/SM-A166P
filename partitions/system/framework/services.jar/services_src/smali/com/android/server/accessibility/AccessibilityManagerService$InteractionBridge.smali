@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmConnectionId(Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->mConnectionId:I
 
     return p0
@@ -32,12 +31,10 @@
 
     move-object/from16 v11, p1
 
-    .line 5202
     iput-object v11, v0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5195
     new-instance v5, Landroid/content/ComponentName;
 
     const-string v1, "com.android.server.accessibility"
@@ -48,48 +45,39 @@
 
     iput-object v5, v0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->COMPONENT_NAME:Landroid/content/ComponentName;
 
-    .line 5203
     new-instance v6, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     invoke-direct {v6}, Landroid/accessibilityservice/AccessibilityServiceInfo;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 5204
     invoke-virtual {v6, v1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->setCapabilities(I)V
 
-    .line 5205
     iget v2, v6, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
     or-int/lit8 v2, v2, 0x40
 
     or-int/lit8 v2, v2, 0x2
 
-    .line 5206
     iput v2, v6, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
-    .line 5207
     invoke-virtual {v6, v1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->setAccessibilityTool(Z)V
 
-    .line 5209
     invoke-static/range {p1 .. p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/AccessibilityManagerService;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 5210
     :try_start_0
     invoke-static/range {p1 .. p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$mgetCurrentUserStateLocked(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/AccessibilityUserState;
 
     move-result-object v3
 
-    .line 5211
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5212
     new-instance v2, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge$1;
 
     move-object v1, v2
@@ -120,7 +108,6 @@
 
     move-result-object v10
 
-    .line 5216
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->getTraceManager()Lcom/android/server/accessibility/AccessibilityTraceManager;
 
     move-result-object v12
@@ -129,7 +116,6 @@
 
     move-result-object v13
 
-    .line 5217
     invoke-static/range {p1 .. p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$mgetSystemActionPerformer(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/SystemActionPerformer;
 
     move-result-object v14
@@ -152,7 +138,6 @@
 
     invoke-direct/range {v1 .. v17}, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge$1;-><init>(Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;Lcom/android/server/accessibility/AccessibilityUserState;Landroid/content/Context;Landroid/content/ComponentName;Landroid/accessibilityservice/AccessibilityServiceInfo;ILandroid/os/Handler;Ljava/lang/Object;Lcom/android/server/accessibility/AccessibilitySecurityPolicy;Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection$SystemSupport;Landroid/accessibilityservice/AccessibilityTrace;Lcom/android/server/wm/WindowManagerInternal;Lcom/android/server/accessibility/SystemActionPerformer;Lcom/android/server/accessibility/AccessibilityWindowManager;Lcom/android/server/wm/ActivityTaskManagerInternal;Lcom/android/server/accessibility/AccessibilityManagerService;)V
 
-    .line 5224
     iget v1, v0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mId:I
 
     move-object v2, v0
@@ -161,7 +146,6 @@
 
     iput v1, v0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->mConnectionId:I
 
-    .line 5226
     invoke-static/range {p1 .. p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/AccessibilityManagerService;)Landroid/content/Context;
 
     move-result-object v3
@@ -174,24 +158,20 @@
 
     const/4 v3, 0x0
 
-    .line 5227
     invoke-static {v1, v2, v3}, Landroid/view/accessibility/AccessibilityInteractionClient;->addConnection(ILandroid/accessibilityservice/IAccessibilityServiceConnection;Z)V
 
-    .line 5230
     invoke-static/range {p1 .. p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/AccessibilityManagerService;)Landroid/content/Context;
 
     move-result-object v1
 
     const-string v2, "display"
 
-    .line 5231
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/hardware/display/DisplayManager;
 
-    .line 5232
     invoke-virtual {v1, v3}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v1
@@ -203,7 +183,6 @@
     :catchall_0
     move-exception v0
 
-    .line 5211
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -217,7 +196,6 @@
 .method public getAccessibilityFocusClickPointInScreenNotLocked(Landroid/graphics/Point;)Z
     .locals 8
 
-    .line 5267
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->getAccessibilityFocusNotLocked()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v0
@@ -228,7 +206,6 @@
 
     return v1
 
-    .line 5272
     :cond_0
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -238,7 +215,6 @@
 
     monitor-enter v2
 
-    .line 5273
     :try_start_0
     iget-object v3, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -246,27 +222,22 @@
 
     move-result-object v3
 
-    .line 5275
     invoke-virtual {v0, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
 
-    .line 5276
     new-instance v4, Landroid/graphics/Point;
 
     invoke-virtual {v3}, Landroid/graphics/Rect;->centerX()I
 
     move-result v5
 
-    .line 5277
     invoke-virtual {v3}, Landroid/graphics/Rect;->centerY()I
 
     move-result v6
 
     invoke-direct {v4, v5, v6}, Landroid/graphics/Point;-><init>(II)V
 
-    .line 5280
     iget-object v5, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
-    .line 5281
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getWindowId()I
 
     move-result v6
@@ -277,17 +248,14 @@
 
     if-eqz v5, :cond_1
 
-    .line 5283
     iget-object v6, v5, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     if-eqz v6, :cond_1
 
-    .line 5284
     new-instance v6, Landroid/view/MagnificationSpec;
 
     invoke-direct {v6}, Landroid/view/MagnificationSpec;-><init>()V
 
-    .line 5285
     iget-object v5, v5, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v5, Landroid/view/MagnificationSpec;
@@ -302,14 +270,12 @@
     :goto_0
     if-eqz v6, :cond_2
 
-    .line 5288
     invoke-virtual {v6}, Landroid/view/MagnificationSpec;->isNop()Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
-    .line 5289
     iget v5, v6, Landroid/view/MagnificationSpec;->offsetX:F
 
     neg-float v5, v5
@@ -324,7 +290,6 @@
 
     invoke-virtual {v3, v5, v7}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 5291
     iget v5, v6, Landroid/view/MagnificationSpec;->scale:F
 
     const/high16 v6, 0x3f800000    # 1.0f
@@ -333,7 +298,6 @@
 
     invoke-virtual {v3, v6}, Landroid/graphics/Rect;->scale(F)V
 
-    .line 5295
     :cond_2
     iget-object v5, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -341,7 +305,6 @@
 
     move-result-object v5
 
-    .line 5296
     iget-object v6, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getWindowId()I
@@ -350,7 +313,6 @@
 
     invoke-virtual {v6, v7, v5}, Lcom/android/server/accessibility/AccessibilityManagerService;->getWindowBounds(ILandroid/graphics/Rect;)Z
 
-    .line 5298
     iget-object v6, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getWindowId()I
@@ -363,19 +325,16 @@
 
     if-nez v0, :cond_3
 
-    .line 5300
     invoke-virtual {v3, v5}, Landroid/graphics/Rect;->intersect(Landroid/graphics/Rect;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 5301
     monitor-exit v2
 
     return v1
 
-    .line 5305
     :cond_3
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -383,12 +342,10 @@
 
     move-result-object v0
 
-    .line 5306
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->mDefaultDisplay:Landroid/view/Display;
 
     invoke-virtual {p0, v0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 5307
     iget p0, v0, Landroid/graphics/Point;->x:I
 
     iget v0, v0, Landroid/graphics/Point;->y:I
@@ -399,12 +356,10 @@
 
     if-nez p0, :cond_4
 
-    .line 5309
     monitor-exit v2
 
     return v1
 
-    .line 5312
     :cond_4
     iget p0, v4, Landroid/graphics/Point;->x:I
 
@@ -412,7 +367,6 @@
 
     invoke-virtual {p1, p0, v0}, Landroid/graphics/Point;->set(II)V
 
-    .line 5313
     monitor-exit v2
 
     const/4 p0, 0x1
@@ -432,7 +386,6 @@
 .method public final getAccessibilityFocusNotLocked()Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 3
 
-    .line 5320
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/AccessibilityManagerService;)Ljava/lang/Object;
@@ -441,7 +394,6 @@
 
     monitor-enter v0
 
-    .line 5321
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -459,20 +411,17 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 5324
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 5326
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5327
     invoke-virtual {p0, v1}, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->getAccessibilityFocusNotLocked(I)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object p0
@@ -482,7 +431,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5326
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -494,7 +442,6 @@
 .method public final getAccessibilityFocusNotLocked(I)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 6
 
-    .line 5331
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->mClient:Landroid/view/accessibility/AccessibilityInteractionClient;
 
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->mConnectionId:I
@@ -515,14 +462,12 @@
 .method public performActionOnAccessibilityFocusedItemNotLocked(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)Z
     .locals 1
 
-    .line 5259
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;->getAccessibilityFocusNotLocked()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 5260
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getActionList()Ljava/util/List;
 
     move-result-object v0
@@ -535,7 +480,6 @@
 
     goto :goto_0
 
-    .line 5263
     :cond_0
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getId()I
 

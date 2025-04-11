@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService$12;Z)V
     .locals 0
 
-    .line 1168
     iput-object p1, p0, Lcom/android/server/BatteryService$12$1;->this$1:Lcom/android/server/BatteryService$12;
 
     iput-boolean p2, p0, Lcom/android/server/BatteryService$12$1;->val$fastWirelessAutoModeEnable:Z
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 3
 
-    .line 1171
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -54,7 +52,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1172
     iget-object v0, p0, Lcom/android/server/BatteryService$12$1;->this$1:Lcom/android/server/BatteryService$12;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$12;->this$0:Lcom/android/server/BatteryService;

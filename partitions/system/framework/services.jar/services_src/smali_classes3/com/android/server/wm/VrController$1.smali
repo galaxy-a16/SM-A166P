@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/VrController;)V
     .locals 0
 
-    .line 112
     iput-object p1, p0, Lcom/android/server/wm/VrController$1;->this$0:Lcom/android/server/wm/VrController;
 
     invoke-direct {p0}, Landroid/service/vr/IPersistentVrStateCallbacks$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onPersistentVrStateChanged(Z)V
     .locals 4
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/wm/VrController$1;->this$0:Lcom/android/server/wm/VrController;
 
     invoke-static {v0}, Lcom/android/server/wm/VrController;->-$$Nest$fgetmGlobalAmLock(Lcom/android/server/wm/VrController;)Ljava/lang/Object;
@@ -39,7 +37,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 119
     :try_start_0
     iget-object p1, p0, Lcom/android/server/wm/VrController$1;->this$0:Lcom/android/server/wm/VrController;
 
@@ -47,7 +44,6 @@
 
     invoke-static {p1, v2, v3, v1}, Lcom/android/server/wm/VrController;->-$$Nest$msetVrRenderThreadLocked(Lcom/android/server/wm/VrController;IIZ)I
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/wm/VrController$1;->this$0:Lcom/android/server/wm/VrController;
 
     invoke-static {p0}, Lcom/android/server/wm/VrController;->-$$Nest$fgetmVrState(Lcom/android/server/wm/VrController;)I
@@ -60,13 +56,11 @@
 
     goto :goto_0
 
-    .line 122
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/VrController$1;->this$0:Lcom/android/server/wm/VrController;
 
     invoke-static {p1, v2, v1}, Lcom/android/server/wm/VrController;->-$$Nest$msetPersistentVrRenderThreadLocked(Lcom/android/server/wm/VrController;IZ)I
 
-    .line 123
     iget-object p0, p0, Lcom/android/server/wm/VrController$1;->this$0:Lcom/android/server/wm/VrController;
 
     invoke-static {p0}, Lcom/android/server/wm/VrController;->-$$Nest$fgetmVrState(Lcom/android/server/wm/VrController;)I
@@ -77,7 +71,6 @@
 
     invoke-static {p0, p1}, Lcom/android/server/wm/VrController;->-$$Nest$fputmVrState(Lcom/android/server/wm/VrController;I)V
 
-    .line 125
     :goto_0
     monitor-exit v0
 

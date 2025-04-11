@@ -19,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/pm/VerifyingSession;ZILcom/android/server/pm/PackageVerificationResponse;J)V
     .locals 0
 
-    .line 667
     iput-object p1, p0, Lcom/android/server/pm/VerifyingSession$2;->this$0:Lcom/android/server/pm/VerifyingSession;
 
     iput-boolean p2, p0, Lcom/android/server/pm/VerifyingSession$2;->val$streaming:Z
@@ -40,12 +39,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    .line 670
     iget-boolean v2, p0, Lcom/android/server/pm/VerifyingSession$2;->val$streaming:Z
 
     if-nez v2, :cond_0
 
-    .line 673
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession$2;->this$0:Lcom/android/server/pm/VerifyingSession;
 
     iget v1, p0, Lcom/android/server/pm/VerifyingSession$2;->val$verificationId:I

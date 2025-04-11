@@ -19,7 +19,6 @@
 .method public static synthetic $values()[Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
     .locals 4
 
-    .line 240
     sget-object v0, Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;->APPEND:Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
 
     sget-object v1, Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;->INSERT:Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 241
     new-instance v0, Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
 
     const-string v1, "APPEND"
@@ -79,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;->REMOVE_CHAIN:Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
 
-    .line 240
     invoke-static {}, Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;->$values()[Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
 
     move-result-object v0
@@ -92,7 +89,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 240
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -101,7 +97,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
     .locals 1
 
-    .line 240
     const-class v0, Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -116,7 +111,6 @@
 .method public static values()[Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
     .locals 1
 
-    .line 240
     sget-object v0, Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;->$VALUES:[Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/filter/KnoxNetworkFilterFirewall$IpRestoreActionType;->clone()Ljava/lang/Object;

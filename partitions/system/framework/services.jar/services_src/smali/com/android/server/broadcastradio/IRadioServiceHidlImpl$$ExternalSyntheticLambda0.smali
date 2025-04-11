@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/hardware/radio/RadioManager$ModuleProperties;
 
     invoke-virtual {p1}, Landroid/hardware/radio/RadioManager$ModuleProperties;->getId()I

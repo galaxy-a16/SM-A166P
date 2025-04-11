@@ -7,14 +7,12 @@
 .method public constructor <init>(Lcom/android/server/pm/resolution/ComponentResolver;Lcom/android/server/pm/UserNeedsBadgingCache;)V
     .locals 3
 
-    .line 29
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/server/pm/resolution/ComponentResolverBase;-><init>(Lcom/android/server/pm/UserManagerService;)V
 
-    .line 30
     new-instance v0, Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
 
     iget-object v1, p1, Lcom/android/server/pm/resolution/ComponentResolverBase;->mActivities:Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
@@ -25,7 +23,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mActivities:Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
 
-    .line 32
     new-instance v0, Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
     iget-object v1, p1, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
@@ -36,7 +33,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
-    .line 33
     new-instance v0, Lcom/android/server/pm/resolution/ComponentResolver$ReceiverIntentResolver;
 
     iget-object v1, p1, Lcom/android/server/pm/resolution/ComponentResolverBase;->mReceivers:Lcom/android/server/pm/resolution/ComponentResolver$ReceiverIntentResolver;
@@ -47,7 +43,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mReceivers:Lcom/android/server/pm/resolution/ComponentResolver$ReceiverIntentResolver;
 
-    .line 35
     new-instance p2, Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
 
     iget-object v0, p1, Lcom/android/server/pm/resolution/ComponentResolverBase;->mServices:Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
@@ -58,7 +53,6 @@
 
     iput-object p2, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mServices:Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
 
-    .line 36
     new-instance p2, Landroid/util/ArrayMap;
 
     iget-object p1, p1, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProvidersByAuthority:Landroid/util/ArrayMap;

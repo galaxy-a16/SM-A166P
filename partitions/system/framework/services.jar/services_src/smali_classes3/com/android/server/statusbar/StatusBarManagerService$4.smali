@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/statusbar/StatusBarManagerService;I)V
     .locals 0
 
-    .line 1821
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService$4;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     iput p2, p0, Lcom/android/server/statusbar/StatusBarManagerService$4;->val$barType:I
@@ -31,7 +30,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 1824
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$4;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     invoke-static {v0}, Lcom/android/server/statusbar/StatusBarManagerService;->-$$Nest$fgetmBarLock(Lcom/android/server/statusbar/StatusBarManagerService;)Ljava/lang/Object;
@@ -40,7 +38,6 @@
 
     monitor-enter v0
 
-    .line 1825
     :try_start_0
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService$4;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
@@ -56,12 +53,10 @@
 
     invoke-virtual {v1, v2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1826
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1827
     iget-object p0, p0, Lcom/android/server/statusbar/StatusBarManagerService$4;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     invoke-static {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->-$$Nest$mnotifyBarAttachChanged(Lcom/android/server/statusbar/StatusBarManagerService;)V
@@ -71,7 +66,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1826
     :try_start_1
     monitor-exit v0
     :try_end_1

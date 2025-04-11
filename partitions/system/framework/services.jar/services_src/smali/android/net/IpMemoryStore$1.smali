@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/net/IpMemoryStore;)V
     .locals 0
 
-    .line 46
     iput-object p1, p0, Landroid/net/IpMemoryStore$1;->this$0:Landroid/net/IpMemoryStore;
 
     invoke-direct {p0}, Landroid/net/IIpMemoryStoreCallbacks$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "d5ea5eb3ddbdaa9a986ce6ba70b0804ca3e39b0c"
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xa
 
     return p0
@@ -42,7 +39,6 @@
 .method public onIpMemoryStoreFetched(Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 49
     iget-object p0, p0, Landroid/net/IpMemoryStore$1;->this$0:Landroid/net/IpMemoryStore;
 
     invoke-static {p0}, Landroid/net/IpMemoryStore;->-$$Nest$fgetmService(Landroid/net/IpMemoryStore;)Ljava/util/concurrent/CompletableFuture;

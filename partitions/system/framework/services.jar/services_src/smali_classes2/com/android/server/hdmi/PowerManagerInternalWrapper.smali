@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     const-class v0, Landroid/os/PowerManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -33,7 +31,6 @@
 .method public wasDeviceIdleFor(J)Z
     .locals 0
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/hdmi/PowerManagerInternalWrapper;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
     invoke-virtual {p0, p1, p2}, Landroid/os/PowerManagerInternal;->wasDeviceIdleFor(J)Z

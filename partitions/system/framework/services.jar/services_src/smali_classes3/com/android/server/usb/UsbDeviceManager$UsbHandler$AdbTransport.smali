@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;)V
     .locals 0
 
-    .line 1119
     invoke-direct {p0}, Landroid/debug/IAdbTransport$Stub;-><init>()V
 
-    .line 1120
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$AdbTransport;->mHandler:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
 
     return-void
@@ -27,7 +25,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1126
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->-$$Nest$sfgetsUsbOperationCount()Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-result-object p2
@@ -36,7 +33,6 @@
 
     move-result p2
 
-    .line 1127
     iget-object p0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$AdbTransport;->mHandler:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
 
     const/4 v0, 0x1

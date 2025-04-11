@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/app/slice/SliceSpec;
 
     invoke-static {p1}, Lcom/android/server/slice/PinnedSliceState;->$r8$lambda$MPBILTkBeFQUvCUH0InA99pZsdg(Landroid/app/slice/SliceSpec;)Z

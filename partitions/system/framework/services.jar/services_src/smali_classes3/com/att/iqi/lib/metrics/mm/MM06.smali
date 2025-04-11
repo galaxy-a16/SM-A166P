@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 36
     new-instance v0, Lcom/att/iqi/lib/Metric$ID;
 
     const-string v1, "MM06"
@@ -36,7 +35,6 @@
 
     sput-object v0, Lcom/att/iqi/lib/metrics/mm/MM06;->ID:Lcom/att/iqi/lib/Metric$ID;
 
-    .line 163
     new-instance v0, Lcom/att/iqi/lib/metrics/mm/MM06$1;
 
     invoke-direct {v0}, Lcom/att/iqi/lib/metrics/mm/MM06$1;-><init>()V
@@ -49,10 +47,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 60
     invoke-direct {p0}, Lcom/att/iqi/lib/Metric;-><init>()V
 
-    .line 61
     invoke-virtual {p0}, Lcom/att/iqi/lib/metrics/mm/MM06;->reset()V
 
     return-void
@@ -61,10 +57,8 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 75
     invoke-direct {p0, p1}, Lcom/att/iqi/lib/Metric;-><init>(Landroid/os/Parcel;)V
 
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -73,7 +67,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 79
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -82,7 +75,6 @@
 
     iput-short v0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_shResult:S
 
-    .line 80
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -98,7 +90,6 @@
 .method public getCallId()Ljava/lang/String;
     .locals 0
 
-    .line 144
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_szCallId:Ljava/lang/String;
 
     return-object p0
@@ -107,7 +98,6 @@
 .method public getResponseCode()S
     .locals 0
 
-    .line 122
     iget-short p0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_shResult:S
 
     and-int/lit16 p0, p0, 0x7fff
@@ -120,7 +110,6 @@
 .method public getTerminationDirection()B
     .locals 0
 
-    .line 101
     iget-short p0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_shResult:S
 
     shr-int/lit8 p0, p0, 0xf
@@ -135,12 +124,10 @@
 
     const/4 v0, 0x0
 
-    .line 69
     iput-short v0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_shResult:S
 
     const-string v0, ""
 
-    .line 70
     iput-object v0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_szCallId:Ljava/lang/String;
 
     return-void
@@ -149,17 +136,14 @@
 .method public serialize(Ljava/nio/ByteBuffer;)I
     .locals 1
 
-    .line 149
     iget-short v0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_shResult:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 150
     iget-object v0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_szCallId:Ljava/lang/String;
 
     invoke-virtual {p0, p1, v0}, Lcom/att/iqi/lib/Metric;->stringOut(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
-    .line 151
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result p0
@@ -170,7 +154,6 @@
 .method public setCallId(Ljava/lang/String;)Lcom/att/iqi/lib/metrics/mm/MM06;
     .locals 0
 
-    .line 135
     iput-object p1, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_szCallId:Ljava/lang/String;
 
     return-object p0
@@ -179,7 +162,6 @@
 .method public setResponseCode(S)Lcom/att/iqi/lib/metrics/mm/MM06;
     .locals 1
 
-    .line 112
     iget-short v0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_shResult:S
 
     and-int/lit16 v0, v0, -0x8000
@@ -198,7 +180,6 @@
 .method public setTerminationDirection(B)Lcom/att/iqi/lib/metrics/mm/MM06;
     .locals 1
 
-    .line 91
     iget-short v0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_shResult:S
 
     and-int/lit16 v0, v0, 0x7fff
@@ -219,15 +200,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 156
     invoke-super {p0, p1, p2}, Lcom/att/iqi/lib/Metric;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 159
     iget-short p2, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_shResult:S
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 160
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM06;->m_szCallId:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V

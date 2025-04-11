@@ -17,41 +17,35 @@
 .method public onActivityLaunchCancelled(J)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onActivityLaunchFinished(JLandroid/content/ComponentName;J)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onActivityLaunched(JLandroid/content/ComponentName;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onIntentFailed(J)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onIntentStarted(Landroid/content/Intent;J)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onReportFullyDrawn(JJ)V
     .locals 0
 
-    .line 0
     return-void
 .end method

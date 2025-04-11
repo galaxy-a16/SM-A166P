@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/am/PendingIntentRecord;
 
     invoke-static {p1}, Lcom/android/server/am/PendingIntentRecord;->$r8$lambda$5tEDvYuKgIUYxOR-XiVc3T02W70(Lcom/android/server/am/PendingIntentRecord;)V

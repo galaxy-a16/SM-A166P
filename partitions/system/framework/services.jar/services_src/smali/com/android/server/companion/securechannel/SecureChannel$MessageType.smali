@@ -29,7 +29,6 @@
 .method public static synthetic $values()[Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
     .locals 7
 
-    .line 597
     sget-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->HANDSHAKE_INIT:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     sget-object v1, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->HANDSHAKE_FINISH:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
@@ -54,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmValue(Lcom/android/server/companion/securechannel/SecureChannel$MessageType;)S
     .locals 0
 
-    .line 0
     iget-short p0, p0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->mValue:S
 
     return p0
@@ -63,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$smshouldEncrypt(Lcom/android/server/companion/securechannel/SecureChannel$MessageType;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->shouldEncrypt(Lcom/android/server/companion/securechannel/SecureChannel$MessageType;)Z
 
     move-result p0
@@ -74,7 +71,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 598
     new-instance v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     const/16 v1, 0x4849
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->HANDSHAKE_INIT:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
-    .line 599
     new-instance v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     const/4 v1, 0x1
@@ -100,7 +95,6 @@
 
     sput-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->HANDSHAKE_FINISH:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
-    .line 600
     new-instance v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     const/4 v1, 0x2
@@ -113,7 +107,6 @@
 
     sput-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->PRE_SHARED_KEY:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
-    .line 601
     new-instance v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     const/4 v1, 0x3
@@ -126,7 +119,6 @@
 
     sput-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->ATTESTATION:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
-    .line 602
     new-instance v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     const/4 v1, 0x4
@@ -139,7 +131,6 @@
 
     sput-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->AVF_RESULT:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
-    .line 603
     new-instance v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     const/4 v1, 0x5
@@ -152,7 +143,6 @@
 
     sput-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->SECURE_MESSAGE:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
-    .line 604
     new-instance v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     const-string v1, "UNKNOWN"
@@ -163,7 +153,6 @@
 
     sput-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->UNKNOWN:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
-    .line 597
     invoke-static {}, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->$values()[Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     move-result-object v0
@@ -176,12 +165,10 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 608
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     int-to-short p1, p3
 
-    .line 609
     iput-short p1, p0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->mValue:S
 
     return-void
@@ -190,7 +177,6 @@
 .method public static from(S)Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
     .locals 5
 
-    .line 613
     invoke-static {}, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->values()[Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     move-result-object v0
@@ -204,7 +190,6 @@
 
     aget-object v3, v0, v2
 
-    .line 614
     iget-short v4, v3, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->mValue:S
 
     if-ne p0, v4, :cond_0
@@ -216,7 +201,6 @@
 
     goto :goto_0
 
-    .line 618
     :cond_1
     sget-object p0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->UNKNOWN:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
@@ -226,7 +210,6 @@
 .method public static shouldEncrypt(Lcom/android/server/companion/securechannel/SecureChannel$MessageType;)Z
     .locals 1
 
-    .line 623
     sget-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->HANDSHAKE_INIT:Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     if-eq p0, v0, :cond_0
@@ -249,7 +232,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
     .locals 1
 
-    .line 597
     const-class v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -264,7 +246,6 @@
 .method public static values()[Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
     .locals 1
 
-    .line 597
     sget-object v0, Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->$VALUES:[Lcom/android/server/companion/securechannel/SecureChannel$MessageType;
 
     invoke-virtual {v0}, [Lcom/android/server/companion/securechannel/SecureChannel$MessageType;->clone()Ljava/lang/Object;

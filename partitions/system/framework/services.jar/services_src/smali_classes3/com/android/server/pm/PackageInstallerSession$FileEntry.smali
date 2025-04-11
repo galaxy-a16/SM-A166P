@@ -13,13 +13,10 @@
 .method public constructor <init>(ILandroid/content/pm/InstallationFile;)V
     .locals 0
 
-    .line 522
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 523
     iput p1, p0, Lcom/android/server/pm/PackageInstallerSession$FileEntry;->mIndex:I
 
-    .line 524
     iput-object p2, p0, Lcom/android/server/pm/PackageInstallerSession$FileEntry;->mFile:Landroid/content/pm/InstallationFile;
 
     return-void
@@ -30,7 +27,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 537
     instance-of v0, p1, Lcom/android/server/pm/PackageInstallerSession$FileEntry;
 
     const/4 v1, 0x0
@@ -39,11 +35,9 @@
 
     return v1
 
-    .line 540
     :cond_0
     check-cast p1, Lcom/android/server/pm/PackageInstallerSession$FileEntry;
 
-    .line 541
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$FileEntry;->mFile:Landroid/content/pm/InstallationFile;
 
     invoke-virtual {v0}, Landroid/content/pm/InstallationFile;->getLocation()I
@@ -60,7 +54,6 @@
 
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$FileEntry;->mFile:Landroid/content/pm/InstallationFile;
 
-    .line 542
     invoke-virtual {p0}, Landroid/content/pm/InstallationFile;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -71,7 +64,6 @@
 
     move-result-object p1
 
-    .line 541
     invoke-static {p0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -87,7 +79,6 @@
 .method public getFile()Landroid/content/pm/InstallationFile;
     .locals 0
 
-    .line 532
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$FileEntry;->mFile:Landroid/content/pm/InstallationFile;
 
     return-object p0
@@ -96,7 +87,6 @@
 .method public getIndex()I
     .locals 0
 
-    .line 528
     iget p0, p0, Lcom/android/server/pm/PackageInstallerSession$FileEntry;->mIndex:I
 
     return p0
@@ -105,7 +95,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 547
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$FileEntry;->mFile:Landroid/content/pm/InstallationFile;
 
     invoke-virtual {v0}, Landroid/content/pm/InstallationFile;->getLocation()I

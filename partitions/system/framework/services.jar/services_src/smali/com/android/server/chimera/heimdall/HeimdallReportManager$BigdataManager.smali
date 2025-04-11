@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$maddBigdataInfoList(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->addBigdataInfoList(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$mexportBigdataInfoList(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->exportBigdataInfoList()V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$msendBigdataInfoList(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->sendBigdataInfoList()V
 
     return-void
@@ -42,12 +39,10 @@
 .method public constructor <init>(Lcom/android/server/chimera/heimdall/HeimdallReportManager;)V
     .locals 1
 
-    .line 395
     iput-object p1, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->this$0:Lcom/android/server/chimera/heimdall/HeimdallReportManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 396
     invoke-static {p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->-$$Nest$fgetmContext(Lcom/android/server/chimera/heimdall/HeimdallReportManager;)Landroid/content/Context;
 
     move-result-object p1
@@ -62,14 +57,12 @@
 
     iput-object p1, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mSemHqmManager:Landroid/os/SemHqmManager;
 
-    .line 397
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mBigdataInfoList:Ljava/util/ArrayList;
 
-    .line 399
     invoke-virtual {p0}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->importBigdataInfoList()V
 
     return-void
@@ -80,7 +73,6 @@
 .method public final addBigdataInfoList(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;)V
     .locals 5
 
-    .line 403
     iget-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mBigdataInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -102,7 +94,6 @@
 
     check-cast v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;
 
-    .line 404
     iget-object v3, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->packageName:Ljava/lang/String;
 
     iget-object v4, p1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->packageName:Ljava/lang/String;
@@ -117,14 +108,12 @@
 
     iget-object v4, p1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->versionName:Ljava/lang/String;
 
-    .line 405
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 406
     iget p0, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->globalKillCnt:I
 
     iget v0, p1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->globalKillCnt:I
@@ -133,7 +122,6 @@
 
     iput p0, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->globalKillCnt:I
 
-    .line 407
     iget p0, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->specKillCnt:I
 
     iget v0, p1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->specKillCnt:I
@@ -142,7 +130,6 @@
 
     iput p0, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->specKillCnt:I
 
-    .line 408
     iget p0, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->realKillCnt:I
 
     iget v0, p1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->realKillCnt:I
@@ -151,17 +138,14 @@
 
     iput p0, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->realKillCnt:I
 
-    .line 409
     iget p0, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->memoryUsage:I
 
     iget p1, p1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->memoryUsage:I
 
     if-ge p0, p1, :cond_1
 
-    .line 410
     iput p1, v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->memoryUsage:I
 
-    .line 412
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -183,13 +167,11 @@
 
     return-void
 
-    .line 416
     :cond_2
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mBigdataInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 417
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -214,7 +196,6 @@
 .method public final exportBigdataInfoList()V
     .locals 4
 
-    .line 458
     iget-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mBigdataInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -225,7 +206,6 @@
 
     return-void
 
-    .line 462
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -233,7 +213,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 464
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -241,7 +220,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 465
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v0
@@ -250,7 +228,6 @@
 
     const-string v0, "Big data backup file is deleted during exporting."
 
-    .line 466
     invoke-static {v0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     goto :goto_0
@@ -258,12 +235,10 @@
     :cond_1
     const-string v0, "Big data backup file is NOT deleted during exporting."
 
-    .line 468
     invoke-static {v0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 477
     :cond_2
     :goto_0
     :try_start_1
@@ -274,7 +249,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 478
     :try_start_2
     new-instance v1, Ljava/io/OutputStreamWriter;
 
@@ -284,7 +258,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 480
     :try_start_3
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mBigdataInfoList:Ljava/util/ArrayList;
 
@@ -305,7 +278,6 @@
 
     check-cast v2, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;
 
-    .line 481
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -331,12 +303,10 @@
     :cond_3
     const-string p0, "Export BigdataInfoList"
 
-    .line 483
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 484
     :try_start_4
     invoke-virtual {v1}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_4
@@ -353,7 +323,6 @@
     :catchall_0
     move-exception p0
 
-    .line 476
     :try_start_6
     invoke-virtual {v1}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_6
@@ -397,7 +366,6 @@
     :catch_0
     move-exception p0
 
-    .line 485
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -410,7 +378,6 @@
     :catch_1
     move-exception p0
 
-    .line 472
     invoke-virtual {p0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -423,14 +390,12 @@
 .method public final importBigdataInfoList()V
     .locals 7
 
-    .line 421
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/misc/pageboost/heimdall_last_bigdata_string"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 423
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -442,7 +407,6 @@
 
     return-void
 
-    .line 432
     :cond_0
     :try_start_1
     new-instance v2, Ljava/io/FileInputStream;
@@ -452,7 +416,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 433
     :try_start_2
     new-instance v1, Ljava/io/InputStreamReader;
 
@@ -462,7 +425,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_4
 
-    .line 434
     :try_start_3
     new-instance v3, Ljava/io/BufferedReader;
 
@@ -470,7 +432,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 438
     :goto_0
     :try_start_4
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -479,24 +440,20 @@
 
     if-eqz v4, :cond_1
 
-    .line 439
     new-instance v5, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;
 
     iget-object v6, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->this$0:Lcom/android/server/chimera/heimdall/HeimdallReportManager;
 
     invoke-direct {v5, v6, v4}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;-><init>(Lcom/android/server/chimera/heimdall/HeimdallReportManager;Ljava/lang/String;)V
 
-    .line 440
     iget-object v4, v5, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->packageName:Ljava/lang/String;
 
     if-eqz v4, :cond_1
 
-    .line 441
     invoke-virtual {p0, v5}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->addBigdataInfoList(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;)V
 
     goto :goto_0
 
-    .line 446
     :cond_1
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
@@ -506,7 +463,6 @@
 
     const-string p0, "Big data backup file is deleted during importing."
 
-    .line 447
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     goto :goto_1
@@ -514,18 +470,15 @@
     :cond_2
     const-string p0, "Big data backup file is NOT deleted during importing."
 
-    .line 449
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     :goto_1
     const-string p0, "Import BigdataInfoList"
 
-    .line 451
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 452
     :try_start_5
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -547,7 +500,6 @@
     :catchall_0
     move-exception p0
 
-    .line 431
     :try_start_8
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_8
@@ -612,7 +564,6 @@
     :catch_0
     move-exception p0
 
-    .line 453
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -625,7 +576,6 @@
     :catch_1
     move-exception p0
 
-    .line 427
     invoke-virtual {p0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -638,20 +588,17 @@
 .method public final sendBigdataInfo(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;)V
     .locals 11
 
-    .line 497
     iget-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mSemHqmManager:Landroid/os/SemHqmManager;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 500
     :cond_0
     invoke-static {p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;->-$$Nest$mtoJsonData(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 501
     invoke-virtual {v9}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -662,7 +609,6 @@
 
     return-void
 
-    .line 504
     :cond_1
     iget-object v1, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mSemHqmManager:Landroid/os/SemHqmManager;
 
@@ -688,7 +634,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 515
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -711,7 +656,6 @@
 
     goto :goto_0
 
-    .line 517
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -740,7 +684,6 @@
 .method public final sendBigdataInfoList()V
     .locals 2
 
-    .line 490
     iget-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mBigdataInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -760,12 +703,10 @@
 
     check-cast v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;
 
-    .line 491
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->sendBigdataInfo(Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;)V
 
     goto :goto_0
 
-    .line 493
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;->mBigdataInfoList:Ljava/util/ArrayList;
 

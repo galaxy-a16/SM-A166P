@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;Lcom/android/server/sepunion/SemGoodCatchService;)V
     .locals 0
 
-    .line 956
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$2;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;
 
     iput-object p2, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$2;->val$this$0:Lcom/android/server/sepunion/SemGoodCatchService;
@@ -28,7 +27,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 959
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -41,7 +39,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 962
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$2;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;
 
     new-instance p2, Lcom/samsung/android/sepunion/SemGoodCatchManager;

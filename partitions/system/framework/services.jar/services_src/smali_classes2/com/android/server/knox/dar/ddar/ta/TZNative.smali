@@ -25,10 +25,8 @@
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
     .locals 4
 
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,30 +49,22 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 24
     iput p1, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mTAId:I
 
     const-wide/16 v2, 0x0
 
-    .line 25
     iput-wide v2, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mDDARTZNativePtr_:J
 
-    .line 26
     iput p5, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mSendBufSize:I
 
-    .line 27
     iput p6, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mRecvBufSize:I
 
-    .line 28
     iput-object p2, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mTATechnology:Ljava/lang/String;
 
-    .line 29
     iput-object p3, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mRootName:Ljava/lang/String;
 
-    .line 30
     iput-object p4, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mProcessName:Ljava/lang/String;
 
-    .line 31
     iput-boolean v1, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mIsLoaded:Z
 
     return-void
@@ -94,7 +84,6 @@
 
     move-wide/from16 v3, p4
 
-    .line 35
     iget-wide v5, v0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mDDARTZNativePtr_:J
 
     const-wide/16 v11, 0x0
@@ -113,7 +102,6 @@
 
     new-array v2, v14, [Ljava/lang/Object;
 
-    .line 36
     invoke-static {v0, v1, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return v13
@@ -136,7 +124,6 @@
 
     long-to-int v4, v3
 
-    .line 45
     iget v6, v0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mTAId:I
 
     iget v7, v0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mSendBufSize:I
@@ -183,29 +170,24 @@
 
     new-array v2, v14, [Ljava/lang/Object;
 
-    .line 48
     invoke-static {v0, v1, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return v14
 
-    .line 52
     :cond_2
     const-class v1, Lcom/android/server/knox/dar/ddar/ta/TZNative;
 
     monitor-enter v1
 
-    .line 53
     :try_start_0
     iput-boolean v13, v0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mIsLoaded:Z
 
-    .line 54
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const-string v1, "DualDAR:TZNative"
 
-    .line 55
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -231,7 +213,6 @@
     :catchall_0
     move-exception v0
 
-    .line 54
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -247,7 +228,6 @@
 
     new-array v2, v14, [Ljava/lang/Object;
 
-    .line 41
     invoke-static {v0, v1, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return v14
@@ -262,7 +242,6 @@
 .method public processTACommand(Lcom/android/server/knox/dar/ddar/ta/TACommandRequest;)Lcom/android/server/knox/dar/ddar/ta/TACommandResponse;
     .locals 4
 
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -293,12 +272,10 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 75
     new-instance v0, Lcom/android/server/knox/dar/ddar/ta/TACommandResponse;
 
     invoke-direct {v0}, Lcom/android/server/knox/dar/ddar/ta/TACommandResponse;-><init>()V
 
-    .line 76
     invoke-direct {p0, p1, v0}, Lcom/android/server/knox/dar/ddar/ta/TZNative;->nativeDDARProcessTACommand(Lcom/android/server/knox/dar/ddar/ta/TACommandRequest;Lcom/android/server/knox/dar/ddar/ta/TACommandResponse;)Z
 
     move-result p0
@@ -309,7 +286,6 @@
 
     new-array p1, v1, [Ljava/lang/Object;
 
-    .line 78
     invoke-static {v3, p0, p1}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     const/4 p0, 0x0
@@ -323,12 +299,10 @@
 .method public unloadTA()V
     .locals 5
 
-    .line 60
     const-class v0, Lcom/android/server/knox/dar/ddar/ta/TZNative;
 
     monitor-enter v0
 
-    .line 61
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mDDARTZNativePtr_:J
 
@@ -346,19 +320,15 @@
 
     goto :goto_0
 
-    .line 65
     :cond_0
     iput-boolean v2, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mIsLoaded:Z
 
-    .line 66
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/ta/TZNative;->nativeDDARDestroyTLCommunicationContext()V
 
-    .line 69
     iput-wide v3, p0, Lcom/android/server/knox/dar/ddar/ta/TZNative;->mDDARTZNativePtr_:J
 
     const-string p0, "DualDAR:TZNative"
@@ -367,7 +337,6 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    .line 70
     invoke-static {p0, v0, v1}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return-void
@@ -377,7 +346,6 @@
     :try_start_1
     const-string v1, "DualDAR:TZNative"
 
-    .line 62
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,7 +366,6 @@
 
     invoke-static {v1, p0, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 63
     monitor-exit v0
 
     return-void
@@ -406,7 +373,6 @@
     :catchall_0
     move-exception p0
 
-    .line 66
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

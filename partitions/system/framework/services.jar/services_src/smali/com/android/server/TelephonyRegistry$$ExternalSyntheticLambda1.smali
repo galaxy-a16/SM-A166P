@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/TelephonyRegistry;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/TelephonyRegistry$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/TelephonyRegistry;
@@ -27,7 +26,6 @@
 .method public final getOrThrow()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/TelephonyRegistry$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/TelephonyRegistry;
 
     invoke-static {p0}, Lcom/android/server/TelephonyRegistry;->$r8$lambda$rjuqDkEShpyQiHDxombKMWgCcIk(Lcom/android/server/TelephonyRegistry;)[Ljava/lang/String;

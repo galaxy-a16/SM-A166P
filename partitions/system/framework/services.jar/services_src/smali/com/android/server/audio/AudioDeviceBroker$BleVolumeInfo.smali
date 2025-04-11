@@ -15,16 +15,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 831
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 832
     iput p1, p0, Lcom/android/server/audio/AudioDeviceBroker$BleVolumeInfo;->mIndex:I
 
-    .line 833
     iput p2, p0, Lcom/android/server/audio/AudioDeviceBroker$BleVolumeInfo;->mMaxIndex:I
 
-    .line 834
     iput p3, p0, Lcom/android/server/audio/AudioDeviceBroker$BleVolumeInfo;->mStreamType:I
 
     return-void

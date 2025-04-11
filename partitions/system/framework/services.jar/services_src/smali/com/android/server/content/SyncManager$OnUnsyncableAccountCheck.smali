@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$monReady(Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;->onReady()V
 
     return-void
@@ -25,13 +24,10 @@
 .method public constructor <init>(Landroid/content/pm/RegisteredServicesCache$ServiceInfo;Lcom/android/server/content/SyncManager$OnReadyCallback;)V
     .locals 0
 
-    .line 2940
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2941
     iput-object p1, p0, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;->mSyncAdapterInfo:Landroid/content/pm/RegisteredServicesCache$ServiceInfo;
 
-    .line 2942
     iput-object p2, p0, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;->mOnReadyCallback:Lcom/android/server/content/SyncManager$OnReadyCallback;
 
     return-void
@@ -42,12 +38,10 @@
 .method public final onReady()V
     .locals 2
 
-    .line 2946
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2948
     :try_start_0
     iget-object p0, p0, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;->mOnReadyCallback:Lcom/android/server/content/SyncManager$OnReadyCallback;
 
@@ -55,7 +49,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2950
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -65,19 +58,16 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2951
     throw p0
 .end method
 
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 2956
     invoke-static {p2}, Landroid/content/ISyncAdapter$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/ISyncAdapter;
 
     move-result-object p1
 
-    .line 2959
     :try_start_0
     new-instance p2, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck$1;
 
@@ -92,7 +82,6 @@
     :catch_0
     move-exception p1
 
-    .line 2968
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,7 +102,6 @@
 
     invoke-static {v0, p2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2973
     invoke-virtual {p0}, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;->onReady()V
 
     :goto_0
@@ -123,6 +111,5 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

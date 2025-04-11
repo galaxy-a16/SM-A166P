@@ -11,10 +11,8 @@
 .method public constructor <init>(IBBBI)V
     .locals 0
 
-    .line 44
     invoke-direct {p0, p1, p2, p3, p5}, Lcom/android/server/usb/descriptors/UsbACInterface;-><init>(IBBI)V
 
-    .line 45
     iput-byte p4, p0, Lcom/android/server/usb/descriptors/UsbASFormat;->mFormatType:B
 
     return-void
@@ -23,12 +21,10 @@
 .method public static allocDescriptor(Lcom/android/server/usb/descriptors/UsbDescriptorParser;Lcom/android/server/usb/descriptors/ByteStream;IBBI)Lcom/android/server/usb/descriptors/UsbDescriptor;
     .locals 6
 
-    .line 72
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getByte()B
 
     move-result v4
 
-    .line 73
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbDescriptorParser;->getACInterfaceSpec()I
 
     move-result p0
@@ -47,7 +43,6 @@
 
     if-eq v4, p0, :cond_0
 
-    .line 97
     new-instance p0, Lcom/android/server/usb/descriptors/UsbASFormat;
 
     move-object v0, p0
@@ -64,7 +59,6 @@
 
     return-object p0
 
-    .line 92
     :cond_0
     new-instance p0, Lcom/android/server/usb/descriptors/Usb20ASFormatIII;
 
@@ -85,7 +79,6 @@
     :cond_1
     if-ne p0, v0, :cond_2
 
-    .line 85
     new-instance p0, Lcom/android/server/usb/descriptors/Usb20ASFormatII;
 
     move-object v0, p0
@@ -102,7 +95,6 @@
 
     return-object p0
 
-    .line 87
     :cond_2
     new-instance p0, Lcom/android/server/usb/descriptors/Usb10ASFormatII;
 
@@ -123,7 +115,6 @@
     :cond_3
     if-ne p0, v0, :cond_4
 
-    .line 78
     new-instance p0, Lcom/android/server/usb/descriptors/Usb20ASFormatI;
 
     move-object v0, p0
@@ -140,7 +131,6 @@
 
     return-object p0
 
-    .line 80
     :cond_4
     new-instance p0, Lcom/android/server/usb/descriptors/Usb10ASFormatI;
 
@@ -164,7 +154,6 @@
 .method public getFormatType()B
     .locals 0
 
-    .line 49
     iget-byte p0, p0, Lcom/android/server/usb/descriptors/UsbASFormat;->mFormatType:B
 
     return p0
@@ -173,10 +162,8 @@
 .method public report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
     .locals 1
 
-    .line 103
     invoke-super {p0, p1}, Lcom/android/server/usb/descriptors/UsbACInterface;->report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbASFormat;->getFormatType()B
 
     move-result p0

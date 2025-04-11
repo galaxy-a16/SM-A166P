@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/hardware/broadcastradio/V2_0/ProgramFilter;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/broadcastradio/hal2/Convert$$ExternalSyntheticLambda1;->f$0:Landroid/hardware/broadcastradio/V2_0/ProgramFilter;
@@ -27,7 +26,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/Convert$$ExternalSyntheticLambda1;->f$0:Landroid/hardware/broadcastradio/V2_0/ProgramFilter;
 
     check-cast p1, Landroid/hardware/radio/ProgramSelector$Identifier;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/emergency/EmergencyAffordanceService;)V
     .locals 0
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/emergency/EmergencyAffordanceService$1;->this$0:Lcom/android/server/emergency/EmergencyAffordanceService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 86
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -39,7 +37,6 @@
 
     const-string p1, "android.telephony.extra.NETWORK_COUNTRY"
 
-    .line 87
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -48,12 +45,10 @@
 
     const/4 v1, -0x1
 
-    .line 88
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 90
     iget-object p0, p0, Lcom/android/server/emergency/EmergencyAffordanceService$1;->this$0:Lcom/android/server/emergency/EmergencyAffordanceService;
 
     invoke-static {p0}, Lcom/android/server/emergency/EmergencyAffordanceService;->-$$Nest$fgetmHandler(Lcom/android/server/emergency/EmergencyAffordanceService;)Lcom/android/server/emergency/EmergencyAffordanceService$MyHandler;
@@ -68,7 +63,6 @@
 
     move-result-object p0
 
-    .line 91
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
@@ -76,7 +70,6 @@
     :cond_0
     const-string p1, "android.intent.action.AIRPLANE_MODE"
 
-    .line 92
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -87,7 +80,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/emergency/EmergencyAffordanceService$1;->this$0:Lcom/android/server/emergency/EmergencyAffordanceService;
 
     invoke-static {p0}, Lcom/android/server/emergency/EmergencyAffordanceService;->-$$Nest$fgetmHandler(Lcom/android/server/emergency/EmergencyAffordanceService;)Lcom/android/server/emergency/EmergencyAffordanceService$MyHandler;

@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$sfgetCODE_INDEX_NUMBER_FROM_SYSTEM_TYPE()[I
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/usb/UsbMidiPacketConverter;->CODE_INDEX_NUMBER_FROM_SYSTEM_TYPE:[I
 
     return-object v0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$sfgetPAYLOAD_SIZE()[I
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/usb/UsbMidiPacketConverter;->PAYLOAD_SIZE:[I
 
     return-object v0
@@ -43,14 +41,12 @@
 
     new-array v1, v0, [I
 
-    .line 32
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/android/server/usb/UsbMidiPacketConverter;->PAYLOAD_SIZE:[I
 
     new-array v0, v0, [I
 
-    .line 53
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/server/usb/UsbMidiPacketConverter;->CODE_INDEX_NUMBER_FROM_SYSTEM_TYPE:[I
@@ -103,10 +99,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -121,7 +115,6 @@
 .method public createDecoders(I)V
     .locals 1
 
-    .line 139
     new-instance v0, Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiDecoder;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiDecoder;-><init>(Lcom/android/server/usb/UsbMidiPacketConverter;I)V
@@ -134,7 +127,6 @@
 .method public createEncoders(I)V
     .locals 3
 
-    .line 95
     new-array v0, p1, [Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiEncoder;
 
     iput-object v0, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mUsbMidiEncoders:[Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiEncoder;
@@ -144,7 +136,6 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
-    .line 97
     iget-object v1, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mUsbMidiEncoders:[Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiEncoder;
 
     new-instance v2, Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiEncoder;
@@ -164,7 +155,6 @@
 .method public decodeMidiPackets([BI)V
     .locals 0
 
-    .line 151
     iget-object p0, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mUsbMidiDecoder:Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiDecoder;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiDecoder;->decode([BI)V
@@ -175,7 +165,6 @@
 .method public encodeMidiPackets([BII)V
     .locals 3
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mUsbMidiEncoders:[Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiEncoder;
 
     array-length v0, v0
@@ -184,7 +173,6 @@
 
     if-lt p3, v0, :cond_0
 
-    .line 113
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +197,6 @@
 
     move p3, v1
 
-    .line 116
     :cond_0
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mUsbMidiEncoders:[Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiEncoder;
 
@@ -219,7 +206,6 @@
 
     move-result-object p1
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mEncoderOutputStream:Ljava/io/ByteArrayOutputStream;
 
     array-length p2, p1
@@ -232,7 +218,6 @@
 .method public pullDecodedMidiPackets(I)[B
     .locals 0
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mUsbMidiDecoder:Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiDecoder;
 
     invoke-virtual {p0, p1}, Lcom/android/server/usb/UsbMidiPacketConverter$UsbMidiDecoder;->pullBytes(I)[B
@@ -245,14 +230,12 @@
 .method public pullEncodedMidiPackets()[B
     .locals 1
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mEncoderOutputStream:Ljava/io/ByteArrayOutputStream;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v0
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/usb/UsbMidiPacketConverter;->mEncoderOutputStream:Ljava/io/ByteArrayOutputStream;
 
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->reset()V

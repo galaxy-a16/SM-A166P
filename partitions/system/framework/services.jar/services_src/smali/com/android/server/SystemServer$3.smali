@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/SystemServer;)V
     .locals 0
 
-    .line 2589
     iput-object p1, p0, Lcom/android/server/SystemServer$3;->this$0:Lcom/android/server/SystemServer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public createService(Landroid/content/Context;)Landroid/os/IBinder;
     .locals 0
 
-    .line 2592
     new-instance p0, Lcom/android/server/IcccManagerService;
 
     invoke-direct {p0, p1}, Lcom/android/server/IcccManagerService;-><init>(Landroid/content/Context;)V

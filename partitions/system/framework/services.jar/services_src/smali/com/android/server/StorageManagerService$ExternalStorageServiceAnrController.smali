@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 1198
     iput-object p1, p0, Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController;-><init>(Lcom/android/server/StorageManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public getAnrDelayMillis(Ljava/lang/String;I)J
     .locals 1
 
-    .line 1201
     iget-object p0, p0, Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p0, p2}, Lcom/android/server/StorageManagerService;->-$$Nest$misAppIoBlocked(Lcom/android/server/StorageManagerService;I)Z
@@ -56,12 +53,10 @@
 
     const-string/jumbo v0, "storage_native_boot"
 
-    .line 1205
     invoke-static {v0, p0, p2}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 1207
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,7 +93,6 @@
 .method public onAnrDelayCompleted(Ljava/lang/String;I)Z
     .locals 1
 
-    .line 1236
     iget-object p0, p0, Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p0, p2}, Lcom/android/server/StorageManagerService;->-$$Nest$misAppIoBlocked(Lcom/android/server/StorageManagerService;I)Z
@@ -111,7 +105,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1237
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +127,6 @@
 
     return p0
 
-    .line 1240
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -162,7 +154,6 @@
 .method public onAnrDelayStarted(Ljava/lang/String;I)V
     .locals 3
 
-    .line 1213
     iget-object v0, p0, Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {v0, p2}, Lcom/android/server/StorageManagerService;->-$$Nest$misAppIoBlocked(Lcom/android/server/StorageManagerService;I)Z
@@ -180,14 +171,12 @@
 
     const/4 v2, 0x1
 
-    .line 1217
     invoke-static {v0, v1, v2}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1221
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -210,7 +199,6 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1224
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController;->this$0:Lcom/android/server/StorageManagerService;
 
@@ -229,7 +217,6 @@
     :catch_0
     move-exception p0
 
-    .line 1227
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V

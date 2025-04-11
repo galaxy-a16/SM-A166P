@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$2;Landroid/os/ConditionVariable;)V
     .locals 0
 
-    .line 371
     iput-object p1, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$2$1;->this$1:Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$2;
 
     iput-object p2, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$2$1;->val$condition:Landroid/os/ConditionVariable;
@@ -32,7 +31,6 @@
 
     const/high16 v0, -0x80000000
 
-    .line 376
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -41,7 +39,6 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 378
     iget-object p0, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$2$1;->val$condition:Landroid/os/ConditionVariable;
 
     invoke-virtual {p0}, Landroid/os/ConditionVariable;->open()V

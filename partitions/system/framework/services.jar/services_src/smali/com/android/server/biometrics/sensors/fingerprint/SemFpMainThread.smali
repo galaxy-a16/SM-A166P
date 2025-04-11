@@ -20,7 +20,6 @@
 
     const-string v2, "biometrics.fp"
 
-    .line 28
     invoke-direct {p0, v2, v0, v1}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
     return-void
@@ -29,33 +28,27 @@
 .method public static get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
     .locals 2
 
-    .line 32
     sget-object v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->sInstance:Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     if-nez v0, :cond_1
 
-    .line 33
     const-class v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     monitor-enter v0
 
-    .line 34
     :try_start_0
     sget-object v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->sInstance:Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     if-nez v1, :cond_0
 
-    .line 35
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     invoke-direct {v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;-><init>()V
 
     sput-object v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->sInstance:Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
-    .line 36
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 38
     :cond_0
     monitor-exit v0
 
@@ -70,7 +63,6 @@
 
     throw v1
 
-    .line 40
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->sInstance:Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
@@ -83,7 +75,6 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 45
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->post(Ljava/lang/Runnable;)Z
 
     move-result p1
@@ -92,7 +83,6 @@
 
     return-void
 
-    .line 46
     :cond_0
     new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
 
@@ -122,7 +112,6 @@
 .method public getHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 51
     invoke-virtual {p0}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
 
     move-result-object p0
@@ -133,7 +122,6 @@
 .method public post(Ljava/lang/Runnable;)Z
     .locals 0
 
-    .line 55
     invoke-virtual {p0}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
 
     move-result-object p0

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;I)V
     .locals 0
 
-    .line 1261
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1$1;->this$1:Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;
 
     iput p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1$1;->val$userHandle:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 1
 
-    .line 1264
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1$1;->this$1:Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;

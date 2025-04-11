@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/companion/presence/BleCompanionDeviceScanner;)V
     .locals 0
 
-    .line 330
     iput-object p1, p0, Lcom/android/server/companion/presence/BleCompanionDeviceScanner$2;->this$0:Lcom/android/server/companion/presence/BleCompanionDeviceScanner;
 
     invoke-direct {p0}, Landroid/bluetooth/le/ScanCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onScanFailed(I)V
     .locals 0
 
-    .line 371
     iget-object p0, p0, Lcom/android/server/companion/presence/BleCompanionDeviceScanner$2;->this$0:Lcom/android/server/companion/presence/BleCompanionDeviceScanner;
 
     const/4 p1, 0x0
@@ -37,7 +35,6 @@
 .method public onScanResult(ILandroid/bluetooth/le/ScanResult;)V
     .locals 1
 
-    .line 334
     invoke-virtual {p2}, Landroid/bluetooth/le/ScanResult;->getDevice()Landroid/bluetooth/BluetoothDevice;
 
     move-result-object p2
@@ -50,7 +47,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 361
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,7 +55,6 @@
 
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 362
     invoke-static {p1}, Lcom/android/server/companion/presence/BleCompanionDeviceScanner;->-$$Nest$smnameForBleScanCallbackType(I)Ljava/lang/String;
 
     move-result-object p1
@@ -72,12 +67,10 @@
 
     const-string p1, "CDM_BleCompanionDeviceScanner"
 
-    .line 361
     invoke-static {p1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 357
     :cond_0
     iget-object p0, p0, Lcom/android/server/companion/presence/BleCompanionDeviceScanner$2;->this$0:Lcom/android/server/companion/presence/BleCompanionDeviceScanner;
 
@@ -89,7 +82,6 @@
 
     goto :goto_0
 
-    .line 348
     :cond_1
     iget-object p1, p0, Lcom/android/server/companion/presence/BleCompanionDeviceScanner$2;->this$0:Lcom/android/server/companion/presence/BleCompanionDeviceScanner;
 
@@ -103,7 +95,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 349
     iget-object p0, p0, Lcom/android/server/companion/presence/BleCompanionDeviceScanner$2;->this$0:Lcom/android/server/companion/presence/BleCompanionDeviceScanner;
 
     invoke-static {p0}, Lcom/android/server/companion/presence/BleCompanionDeviceScanner;->-$$Nest$fgetmMainThreadHandler(Lcom/android/server/companion/presence/BleCompanionDeviceScanner;)Lcom/android/server/companion/presence/BleCompanionDeviceScanner$MainThreadHandler;
@@ -114,7 +105,6 @@
 
     return-void
 
-    .line 353
     :cond_2
     iget-object p0, p0, Lcom/android/server/companion/presence/BleCompanionDeviceScanner$2;->this$0:Lcom/android/server/companion/presence/BleCompanionDeviceScanner;
 

@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 22
     invoke-direct {p0}, Lcom/samsung/android/security/mdf/MdfService/IMdfService$Stub;-><init>()V
 
-    .line 23
     invoke-static {p1}, Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;->getInstance(Landroid/content/Context;)Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;
 
     move-result-object p1
@@ -27,12 +25,10 @@
 
     const-string/jumbo p0, "mdfService is null"
 
-    .line 25
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 26
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;->isCCModeSupport()Z
 
@@ -42,7 +38,6 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 29
     :try_start_0
     iget-object p0, p0, Lcom/android/server/MdfService;->mdfPolicy:Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;
 
@@ -52,7 +47,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 31
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,16 +74,13 @@
     :catch_0
     move-exception p0
 
-    .line 33
     invoke-virtual {p0}, Ljava/lang/SecurityException;->printStackTrace()V
 
-    .line 34
     throw p0
 
     :cond_1
     const-string p0, "This device does not support the MDF"
 
-    .line 37
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -102,7 +93,6 @@
 .method public initCCMode()I
     .locals 0
 
-    .line 45
     :try_start_0
     iget-object p0, p0, Lcom/android/server/MdfService;->mdfPolicy:Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;
 
@@ -112,7 +102,6 @@
 
     return p0
 
-    .line 48
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;->initCCMode()I
 
@@ -125,9 +114,7 @@
     :catch_0
     move-exception p0
 
-    .line 51
     invoke-virtual {p0}, Ljava/lang/SecurityException;->printStackTrace()V
 
-    .line 52
     throw p0
 .end method

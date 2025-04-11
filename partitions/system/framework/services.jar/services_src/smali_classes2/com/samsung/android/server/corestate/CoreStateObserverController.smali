@@ -31,7 +31,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 38
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     sput-boolean v0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->DEBUG:Z
@@ -42,63 +41,52 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/server/corestate/CoreStateObserverController$Callback;Landroid/os/Handler;)V
     .locals 1
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStateForUser:Landroid/util/SparseArray;
 
-    .line 47
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStartedUserIds:Landroid/util/ArraySet;
 
-    .line 50
     iput-object p1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mContext:Landroid/content/Context;
 
-    .line 51
     iput-object p2, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mCallback:Lcom/samsung/android/server/corestate/CoreStateObserverController$Callback;
 
-    .line 52
     new-instance p2, Lcom/samsung/android/server/corestate/CoreStateSettingObserver;
 
     invoke-direct {p2, p1, p3, p0}, Lcom/samsung/android/server/corestate/CoreStateSettingObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/samsung/android/server/corestate/CoreStateObserverController;)V
 
     iput-object p2, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mSettingObserver:Lcom/samsung/android/server/corestate/CoreStateSettingObserver;
 
-    .line 53
     new-instance p2, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;
 
     invoke-direct {p2, p1}, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mSystemFeatureObserver:Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;
 
-    .line 54
     new-instance p2, Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;
 
     invoke-direct {p2, p3, p0}, Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;-><init>(Landroid/os/Handler;Lcom/samsung/android/server/corestate/CoreStateObserverController;)V
 
     iput-object p2, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mVolatileObserver:Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;
 
-    .line 55
     new-instance p2, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;
 
     invoke-direct {p2, p1}, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mPreferenceObserver:Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;
 
-    .line 57
     sget-boolean p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->DEBUG:Z
 
     if-eqz p0, :cond_0
 
-    .line 58
     sget-object p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->TAG:Ljava/lang/String;
 
     const-string p1, "CoreStateController()"
@@ -114,7 +102,6 @@
 .method public copyCoreStateLocked(I)Landroid/os/Bundle;
     .locals 0
 
-    .line 153
     iget-object p0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStateForUser:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -125,7 +112,6 @@
 
     if-nez p0, :cond_0
 
-    .line 154
     new-instance p0, Landroid/os/Bundle;
 
     invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
@@ -146,7 +132,6 @@
 .method public init()V
     .locals 3
 
-    .line 63
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStartedUserIds:Landroid/util/ArraySet;
 
     const/4 v1, 0x0
@@ -157,19 +142,16 @@
 
     invoke-virtual {v0, v2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 64
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mSystemFeatureObserver:Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;
 
     invoke-virtual {v0}, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->init()V
 
-    .line 65
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mSettingObserver:Lcom/samsung/android/server/corestate/CoreStateSettingObserver;
 
     invoke-virtual {v0}, Lcom/samsung/android/server/corestate/CoreStateSettingObserver;->beginObserveCoreStateSettings()V
 
     const/4 v0, 0x1
 
-    .line 66
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->sendCoreState(ZI)V
 
     return-void
@@ -180,7 +162,6 @@
 
     const/4 v0, 0x0
 
-    .line 158
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->onCoreStateChanged(ILjava/lang/Runnable;)V
 
     return-void
@@ -191,7 +172,6 @@
 
     const/4 v0, 0x0
 
-    .line 162
     invoke-virtual {p0, v0, p1, p2}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->sendCoreState(ZILjava/lang/Runnable;)V
 
     return-void
@@ -200,7 +180,6 @@
 .method public final populateCoreState(I)I
     .locals 3
 
-    .line 95
     sget-boolean v0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -227,7 +206,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStateForUser:Landroid/util/SparseArray;
 
@@ -239,25 +217,20 @@
 
     if-nez v0, :cond_1
 
-    .line 99
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 100
     iget-object v1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStateForUser:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 101
     iget-object v1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mSystemFeatureObserver:Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;
 
     if-eqz v1, :cond_1
 
-    .line 102
     invoke-virtual {v1, v0, p1}, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->populateState(Landroid/os/Bundle;I)I
 
-    .line 107
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mSettingObserver:Lcom/samsung/android/server/corestate/CoreStateSettingObserver;
 
@@ -265,33 +238,28 @@
 
     if-eqz v1, :cond_2
 
-    .line 108
     invoke-virtual {v1, v0, p1}, Lcom/samsung/android/server/corestate/CoreStateSettingObserver;->populateState(Landroid/os/Bundle;I)I
 
     move-result v1
 
     or-int/2addr v2, v1
 
-    .line 110
     :cond_2
     iget-object v1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mVolatileObserver:Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;
 
     if-eqz v1, :cond_3
 
-    .line 111
     invoke-virtual {v1, v0, p1}, Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;->populateState(Landroid/os/Bundle;I)I
 
     move-result v1
 
     or-int/2addr v2, v1
 
-    .line 113
     :cond_3
     iget-object p0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mPreferenceObserver:Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;
 
     if-eqz p0, :cond_4
 
-    .line 114
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/server/corestate/CoreStatePreferenceObserver;->populateState(Landroid/os/Bundle;I)I
 
     move-result p0
@@ -307,7 +275,6 @@
 
     const/4 v0, 0x0
 
-    .line 70
     invoke-virtual {p0, p1, p2, v0}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->sendCoreState(ZILjava/lang/Runnable;)V
 
     return-void
@@ -316,7 +283,6 @@
 .method public final sendCoreState(ZILjava/lang/Runnable;)V
     .locals 4
 
-    .line 74
     sget-boolean v0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -343,7 +309,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_0
     invoke-virtual {p0, p2}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->populateCoreState(I)I
 
@@ -351,7 +316,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 80
     iget-object p1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mCallback:Lcom/samsung/android/server/corestate/CoreStateObserverController$Callback;
 
     invoke-virtual {p0, p2}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->copyCoreStateLocked(I)Landroid/os/Bundle;
@@ -371,7 +335,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 82
     iget-object p1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStartedUserIds:Landroid/util/ArraySet;
 
     invoke-virtual {p1}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
@@ -397,10 +360,8 @@
 
     if-eq v0, p2, :cond_2
 
-    .line 84
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->populateCoreState(I)I
 
-    .line 86
     :cond_2
     iget-object v2, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mCallback:Lcom/samsung/android/server/corestate/CoreStateObserverController$Callback;
 
@@ -417,7 +378,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 90
     iget-object p1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mCallback:Lcom/samsung/android/server/corestate/CoreStateObserverController$Callback;
 
     invoke-virtual {p0, p2}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->copyCoreStateLocked(I)Landroid/os/Bundle;
@@ -434,7 +394,6 @@
 .method public setVolatileState(Ljava/lang/String;Ljava/lang/Object;IZZLjava/lang/Runnable;)V
     .locals 7
 
-    .line 167
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mVolatileObserver:Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;
 
     if-eqz v0, :cond_0
@@ -451,7 +410,6 @@
 
     move-object v6, p6
 
-    .line 168
     invoke-virtual/range {v0 .. v6}, Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;->setState(Ljava/lang/String;Ljava/lang/Object;IZZLjava/lang/Runnable;)V
 
     :cond_0
@@ -461,7 +419,6 @@
 .method public startUserLocked(IZZ)V
     .locals 3
 
-    .line 120
     sget-object v0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -488,7 +445,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStartedUserIds:Landroid/util/ArraySet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -499,12 +455,10 @@
 
     if-eqz p3, :cond_0
 
-    .line 123
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mSettingObserver:Lcom/samsung/android/server/corestate/CoreStateSettingObserver;
 
     if-eqz v0, :cond_0
 
-    .line 124
     invoke-virtual {v0, p1}, Lcom/samsung/android/server/corestate/CoreStateSettingObserver;->beginObserveCoreStateSettingsForSingleUser(I)V
 
     :cond_0
@@ -515,7 +469,6 @@
     :cond_1
     const/4 p2, 0x1
 
-    .line 131
     invoke-virtual {p0, p2, p1}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->sendCoreState(ZI)V
 
     :cond_2
@@ -525,7 +478,6 @@
 .method public stopUserLocked(IZ)V
     .locals 3
 
-    .line 136
     sget-object v0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -552,7 +504,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStartedUserIds:Landroid/util/ArraySet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -561,17 +512,14 @@
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 138
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mSettingObserver:Lcom/samsung/android/server/corestate/CoreStateSettingObserver;
 
     if-eqz v0, :cond_0
 
-    .line 139
     iget-object v1, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStartedUserIds:Landroid/util/ArraySet;
 
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/server/corestate/CoreStateSettingObserver;->endObserveCoreStateSettingsForSingleUser(Landroid/util/ArraySet;I)V
 
-    .line 141
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mStateForUser:Landroid/util/SparseArray;
 
@@ -579,12 +527,10 @@
 
     if-eqz p2, :cond_1
 
-    .line 145
     iget-object p0, p0, Lcom/samsung/android/server/corestate/CoreStateObserverController;->mVolatileObserver:Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;
 
     if-eqz p0, :cond_1
 
-    .line 146
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/corestate/CoreStateVolatileObserver;->removeStatesForUser(I)V
 
     :cond_1

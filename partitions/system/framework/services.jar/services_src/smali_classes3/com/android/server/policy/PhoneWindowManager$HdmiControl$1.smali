@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager$HdmiControl;)V
     .locals 0
 
-    .line 2024
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$HdmiControl$1;->this$0:Lcom/android/server/policy/PhoneWindowManager$HdmiControl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2028
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

@@ -19,16 +19,12 @@
 .method public constructor <init>(IIFFFFZF)V
     .locals 0
 
-    .line 215
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
     iput p1, p0, Lcom/android/server/display/mode/Vote;->width:I
 
-    .line 217
     iput p2, p0, Lcom/android/server/display/mode/Vote;->height:I
 
-    .line 218
     new-instance p1, Landroid/view/SurfaceControl$RefreshRateRanges;
 
     new-instance p2, Landroid/view/SurfaceControl$RefreshRateRange;
@@ -43,10 +39,8 @@
 
     iput-object p1, p0, Lcom/android/server/display/mode/Vote;->refreshRateRanges:Landroid/view/SurfaceControl$RefreshRateRanges;
 
-    .line 221
     iput-boolean p7, p0, Lcom/android/server/display/mode/Vote;->disableRefreshRateSwitching:Z
 
-    .line 222
     iput p8, p0, Lcom/android/server/display/mode/Vote;->appRequestBaseModeRefreshRate:F
 
     return-void
@@ -55,7 +49,6 @@
 .method public static forBaseModeRefreshRate(F)Lcom/android/server/display/mode/Vote;
     .locals 10
 
-    .line 204
     new-instance v9, Lcom/android/server/display/mode/Vote;
 
     const/4 v1, -0x1
@@ -84,7 +77,6 @@
 .method public static forDisableRefreshRateSwitching()Lcom/android/server/display/mode/Vote;
     .locals 10
 
-    .line 198
     new-instance v9, Lcom/android/server/display/mode/Vote;
 
     const/4 v1, -0x1
@@ -113,7 +105,6 @@
 .method public static forPhysicalRefreshRates(FF)Lcom/android/server/display/mode/Vote;
     .locals 10
 
-    .line 180
     new-instance v9, Lcom/android/server/display/mode/Vote;
 
     const/4 v1, -0x1
@@ -154,7 +145,6 @@
 .method public static forRenderFrameRates(FF)Lcom/android/server/display/mode/Vote;
     .locals 10
 
-    .line 186
     new-instance v9, Lcom/android/server/display/mode/Vote;
 
     const/4 v1, -0x1
@@ -183,7 +173,6 @@
 .method public static forSize(II)Lcom/android/server/display/mode/Vote;
     .locals 10
 
-    .line 192
     new-instance v9, Lcom/android/server/display/mode/Vote;
 
     const/4 v3, 0x0
@@ -214,7 +203,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 270
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -347,7 +335,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 276
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

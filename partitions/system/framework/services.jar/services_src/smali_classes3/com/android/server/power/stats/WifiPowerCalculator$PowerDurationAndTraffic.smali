@@ -33,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/WifiPowerCalculator$PowerDurationAndTraffic-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/power/stats/WifiPowerCalculator$PowerDurationAndTraffic;-><init>()V
 
     return-void

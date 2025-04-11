@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/WindowContainer;
 
     invoke-static {p1}, Lcom/android/server/wm/Transition;->$r8$lambda$vjMFmiX5EX1BmoXGf9G3HYYuRvo(Lcom/android/server/wm/WindowContainer;)Landroid/view/SurfaceControl;

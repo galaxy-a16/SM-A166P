@@ -17,7 +17,6 @@
 
     move-object/from16 v1, p1
 
-    .line 5217
     iput-object v1, v0, Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge$1;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$InteractionBridge;
 
     move-object/from16 v1, p16
@@ -62,7 +61,6 @@
 .method public supportsFlagForNotImportantViews(Landroid/accessibilityservice/AccessibilityServiceInfo;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

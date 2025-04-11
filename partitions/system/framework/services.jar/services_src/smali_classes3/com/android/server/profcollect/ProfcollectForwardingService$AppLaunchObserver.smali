@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/profcollect/ProfcollectForwardingService;)V
     .locals 0
 
-    .line 300
     iput-object p1, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$AppLaunchObserver;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-direct {p0}, Lcom/android/server/wm/ActivityMetricsLaunchObserver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/profcollect/ProfcollectForwardingService;Lcom/android/server/profcollect/ProfcollectForwardingService$AppLaunchObserver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/profcollect/ProfcollectForwardingService$AppLaunchObserver;-><init>(Lcom/android/server/profcollect/ProfcollectForwardingService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onIntentStarted(Landroid/content/Intent;J)V
     .locals 0
 
-    .line 303
     iget-object p0, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$AppLaunchObserver;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;

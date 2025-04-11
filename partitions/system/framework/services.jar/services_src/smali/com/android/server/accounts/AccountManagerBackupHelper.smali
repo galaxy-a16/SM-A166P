@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAccountManagerInternal(Lcom/android/server/accounts/AccountManagerBackupHelper;)Landroid/accounts/AccountManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerInternal:Landroid/accounts/AccountManagerInternal;
 
     return-object p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAccountManagerService(Lcom/android/server/accounts/AccountManagerBackupHelper;)Lcom/android/server/accounts/AccountManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerService:Lcom/android/server/accounts/AccountManagerService;
 
     return-object p0
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/accounts/AccountManagerBackupHelper;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -48,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRestoreCancelCommand(Lcom/android/server/accounts/AccountManagerBackupHelper;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestoreCancelCommand:Ljava/lang/Runnable;
 
     return-object p0
@@ -57,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRestorePackageMonitor(Lcom/android/server/accounts/AccountManagerBackupHelper;)Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePackageMonitor:Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;
 
     return-object p0
@@ -66,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRestorePendingAppPermissions(Lcom/android/server/accounts/AccountManagerBackupHelper;)Ljava/util/List;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePendingAppPermissions:Ljava/util/List;
 
     return-object p0
@@ -75,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fputmRestoreCancelCommand(Lcom/android/server/accounts/AccountManagerBackupHelper;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestoreCancelCommand:Ljava/lang/Runnable;
 
     return-void
@@ -84,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fputmRestorePackageMonitor(Lcom/android/server/accounts/AccountManagerBackupHelper;Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePackageMonitor:Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;
 
     return-void
@@ -93,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fputmRestorePendingAppPermissions(Lcom/android/server/accounts/AccountManagerBackupHelper;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePendingAppPermissions:Ljava/util/List;
 
     return-void
@@ -102,20 +93,16 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/AccountManagerInternal;)V
     .locals 1
 
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mLock:Ljava/lang/Object;
 
-    .line 79
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerService:Lcom/android/server/accounts/AccountManagerService;
 
-    .line 80
     iput-object p2, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerInternal:Landroid/accounts/AccountManagerInternal;
 
     return-void
@@ -126,20 +113,16 @@
 .method public backupAccountAccessPermissions(I)[B
     .locals 14
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerService:Lcom/android/server/accounts/AccountManagerService;
 
-    .line 152
     invoke-virtual {v0, p1}, Lcom/android/server/accounts/AccountManagerService;->getUserAccounts(I)Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     move-result-object v0
 
-    .line 153
     iget-object v1, v0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->dbLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 154
     :try_start_0
     iget-object v2, v0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->cacheLock:Ljava/lang/Object;
 
@@ -147,16 +130,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 155
     :try_start_1
     iget-object v0, v0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->accountsDb:Lcom/android/server/accounts/AccountsDb;
 
-    .line 156
     invoke-virtual {v0}, Lcom/android/server/accounts/AccountsDb;->findAllAccountGrants()Ljava/util/List;
 
     move-result-object v0
 
-    .line 157
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -165,7 +145,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 158
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -177,19 +156,16 @@
 
     return-object v4
 
-    .line 161
     :cond_0
     :try_start_3
     new-instance v3, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v3}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 162
     invoke-static {}, Landroid/util/Xml;->newFastSerializer()Lcom/android/modules/utils/TypedXmlSerializer;
 
     move-result-object v5
 
-    .line 163
     sget-object v6, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v6}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
@@ -198,27 +174,22 @@
 
     invoke-interface {v5, v3, v6}, Lcom/android/modules/utils/TypedXmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 164
     sget-object v6, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-interface {v5, v4, v6}, Lcom/android/modules/utils/TypedXmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     const-string/jumbo v6, "permissions"
 
-    .line 165
     invoke-interface {v5, v4, v6}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerService:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService;->mContext:Landroid/content/Context;
 
-    .line 168
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 169
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -237,12 +208,10 @@
 
     check-cast v6, Landroid/util/Pair;
 
-    .line 170
     iget-object v7, v6, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v7, Ljava/lang/String;
 
-    .line 171
     iget-object v6, v6, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v6, Ljava/lang/Integer;
@@ -251,7 +220,6 @@
 
     move-result v6
 
-    .line 173
     invoke-virtual {p0, v6}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v6
@@ -260,7 +228,6 @@
 
     goto :goto_0
 
-    .line 178
     :cond_2
     array-length v8, v6
 
@@ -276,7 +243,6 @@
 
     const/16 v11, 0x40
 
-    .line 181
     :try_start_4
     invoke-virtual {p0, v10, v11, p1}, Landroid/content/pm/PackageManager;->getPackageInfoAsUser(Ljava/lang/String;II)Landroid/content/pm/PackageInfo;
 
@@ -286,7 +252,6 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 188
     :try_start_5
     iget-object v11, v11, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -298,12 +263,10 @@
 
     const-string/jumbo v12, "permission"
 
-    .line 191
     invoke-interface {v5, v4, v12}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v12, "account-sha-256"
 
-    .line 193
     invoke-virtual {v7}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v13
@@ -312,22 +275,18 @@
 
     move-result-object v13
 
-    .line 192
     invoke-interface {v5, v4, v12, v13}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v12, "package"
 
-    .line 194
     invoke-interface {v5, v4, v12, v10}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v10, "digest"
 
-    .line 195
     invoke-interface {v5, v4, v10, v11}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v10, "permission"
 
-    .line 196
     invoke-interface {v5, v4, v10}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_2
@@ -335,7 +294,6 @@
     :catch_0
     const-string v11, "AccountManagerBackupHelper"
 
-    .line 184
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,16 +319,12 @@
     :cond_4
     const-string/jumbo p0, "permissions"
 
-    .line 200
     invoke-interface {v5, v4, p0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 201
     invoke-interface {v5}, Lcom/android/modules/utils/TypedXmlSerializer;->endDocument()V
 
-    .line 202
     invoke-interface {v5}, Lcom/android/modules/utils/TypedXmlSerializer;->flush()V
 
-    .line 203
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -398,10 +352,8 @@
 
     const-string v0, "Error backing up account access grants"
 
-    .line 205
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 206
     monitor-exit v2
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
@@ -416,7 +368,6 @@
     :catchall_0
     move-exception p0
 
-    .line 208
     :try_start_a
     monitor-exit v2
     :try_end_a
@@ -428,7 +379,6 @@
     :catchall_1
     move-exception p0
 
-    .line 209
     monitor-exit v1
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
@@ -439,18 +389,15 @@
 .method public restoreAccountAccessPermissions([BI)V
     .locals 11
 
-    .line 214
     :try_start_0
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 215
     invoke-static {}, Landroid/util/Xml;->newFastPullParser()Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object p1
 
-    .line 216
     sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v1}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
@@ -459,7 +406,6 @@
 
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 217
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerService:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v0, v0, Lcom/android/server/accounts/AccountManagerService;->mContext:Landroid/content/Context;
@@ -468,12 +414,10 @@
 
     move-result-object v0
 
-    .line 219
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v1
 
-    .line 220
     :cond_0
     :goto_0
     invoke-static {p1, v1}, Lcom/android/internal/util/XmlUtils;->nextElementWithin(Lorg/xmlpull/v1/XmlPullParser;I)Z
@@ -486,7 +430,6 @@
 
     const-string/jumbo v2, "permissions"
 
-    .line 221
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -499,13 +442,11 @@
 
     goto :goto_0
 
-    .line 224
     :cond_1
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v2
 
-    .line 225
     :cond_2
     :goto_1
     invoke-static {p1, v2}, Lcom/android/internal/util/XmlUtils;->nextElementWithin(Lorg/xmlpull/v1/XmlPullParser;I)Z
@@ -516,7 +457,6 @@
 
     const-string/jumbo v4, "permission"
 
-    .line 226
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -532,58 +472,48 @@
     :cond_3
     const-string v4, "account-sha-256"
 
-    .line 229
     invoke-interface {p1, v3, v4}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 230
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 231
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     :cond_4
     const-string/jumbo v4, "package"
 
-    .line 233
     invoke-interface {p1, v3, v4}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 234
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-eqz v4, :cond_5
 
-    .line 235
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     :cond_5
     const-string v4, "digest"
 
-    .line 237
     invoke-interface {p1, v3, v4}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 238
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    .line 239
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 242
     :cond_6
     new-instance v4, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;
 
@@ -595,14 +525,12 @@
 
     invoke-direct/range {v5 .. v10}, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;-><init>(Lcom/android/server/accounts/AccountManagerBackupHelper;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 245
     invoke-virtual {v4, v0}, Lcom/android/server/accounts/AccountManagerBackupHelper$PendingAppPermission;->apply(Landroid/content/pm/PackageManager;)Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
-    .line 246
     iget-object v5, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
@@ -610,56 +538,47 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 248
     :try_start_1
     iget-object v6, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePackageMonitor:Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;
 
     if-nez v6, :cond_7
 
-    .line 249
     new-instance v6, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;
 
     invoke-direct {v6, p0, v3}, Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;-><init>(Lcom/android/server/accounts/AccountManagerBackupHelper;Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor-IA;)V
 
     iput-object v6, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePackageMonitor:Lcom/android/server/accounts/AccountManagerBackupHelper$RestorePackageMonitor;
 
-    .line 250
     iget-object v7, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerService:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v8, v7, Lcom/android/server/accounts/AccountManagerService;->mContext:Landroid/content/Context;
 
     iget-object v7, v7, Lcom/android/server/accounts/AccountManagerService;->mHandler:Lcom/android/server/accounts/AccountManagerService$MessageHandler;
 
-    .line 251
     invoke-virtual {v7}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v7
 
     const/4 v9, 0x1
 
-    .line 250
     invoke-virtual {v6, v8, v7, v9}, Lcom/android/internal/content/PackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Z)V
 
-    .line 253
     :cond_7
     iget-object v6, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePendingAppPermissions:Ljava/util/List;
 
     if-nez v6, :cond_8
 
-    .line 254
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePendingAppPermissions:Ljava/util/List;
 
-    .line 256
     :cond_8
     iget-object v6, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestorePendingAppPermissions:Ljava/util/List;
 
     invoke-interface {v6, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 257
     monitor-exit v5
 
     goto :goto_1
@@ -674,7 +593,6 @@
     :try_start_2
     throw p0
 
-    .line 263
     :cond_9
     new-instance p1, Lcom/android/server/accounts/AccountManagerBackupHelper$CancelRestoreCommand;
 
@@ -682,7 +600,6 @@
 
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mRestoreCancelCommand:Ljava/lang/Runnable;
 
-    .line 264
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerBackupHelper;->mAccountManagerService:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService;->mHandler:Lcom/android/server/accounts/AccountManagerService$MessageHandler;
@@ -703,7 +620,6 @@
 
     const-string p2, "Error restoring app permissions"
 
-    .line 267
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2

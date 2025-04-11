@@ -17,7 +17,6 @@
 .method public getBoostBrightnessStrategy()Lcom/android/server/display/brightness/strategy/BoostBrightnessStrategy;
     .locals 0
 
-    .line 191
     new-instance p0, Lcom/android/server/display/brightness/strategy/BoostBrightnessStrategy;
 
     invoke-direct {p0}, Lcom/android/server/display/brightness/strategy/BoostBrightnessStrategy;-><init>()V
@@ -28,7 +27,6 @@
 .method public getDozeBrightnessStrategy()Lcom/android/server/display/brightness/strategy/DozeBrightnessStrategy;
     .locals 0
 
-    .line 179
     new-instance p0, Lcom/android/server/display/brightness/strategy/DozeBrightnessStrategy;
 
     invoke-direct {p0}, Lcom/android/server/display/brightness/strategy/DozeBrightnessStrategy;-><init>()V
@@ -39,7 +37,6 @@
 .method public getFollowerBrightnessStrategy(I)Lcom/android/server/display/brightness/strategy/FollowerBrightnessStrategy;
     .locals 0
 
-    .line 195
     new-instance p0, Lcom/android/server/display/brightness/strategy/FollowerBrightnessStrategy;
 
     invoke-direct {p0, p1}, Lcom/android/server/display/brightness/strategy/FollowerBrightnessStrategy;-><init>(I)V
@@ -50,7 +47,6 @@
 .method public getInvalidBrightnessStrategy()Lcom/android/server/display/brightness/strategy/InvalidBrightnessStrategy;
     .locals 0
 
-    .line 199
     new-instance p0, Lcom/android/server/display/brightness/strategy/InvalidBrightnessStrategy;
 
     invoke-direct {p0}, Lcom/android/server/display/brightness/strategy/InvalidBrightnessStrategy;-><init>()V
@@ -61,7 +57,6 @@
 .method public getOverrideBrightnessStrategy()Lcom/android/server/display/brightness/strategy/OverrideBrightnessStrategy;
     .locals 0
 
-    .line 183
     new-instance p0, Lcom/android/server/display/brightness/strategy/OverrideBrightnessStrategy;
 
     invoke-direct {p0}, Lcom/android/server/display/brightness/strategy/OverrideBrightnessStrategy;-><init>()V
@@ -72,7 +67,6 @@
 .method public getScreenOffBrightnessStrategy()Lcom/android/server/display/brightness/strategy/ScreenOffBrightnessStrategy;
     .locals 0
 
-    .line 175
     new-instance p0, Lcom/android/server/display/brightness/strategy/ScreenOffBrightnessStrategy;
 
     invoke-direct {p0}, Lcom/android/server/display/brightness/strategy/ScreenOffBrightnessStrategy;-><init>()V
@@ -83,7 +77,6 @@
 .method public getTemporaryBrightnessStrategy()Lcom/android/server/display/brightness/strategy/TemporaryBrightnessStrategy;
     .locals 0
 
-    .line 187
     new-instance p0, Lcom/android/server/display/brightness/strategy/TemporaryBrightnessStrategy;
 
     invoke-direct {p0}, Lcom/android/server/display/brightness/strategy/TemporaryBrightnessStrategy;-><init>()V

@@ -20,7 +20,6 @@
 .method public compare(Lcom/android/server/am/BroadcastStats$ActionEntry;Lcom/android/server/am/BroadcastStats$ActionEntry;)I
     .locals 2
 
-    .line 39
     iget-wide p0, p1, Lcom/android/server/am/BroadcastStats$ActionEntry;->mTotalDispatchTime:J
 
     iget-wide v0, p2, Lcom/android/server/am/BroadcastStats$ActionEntry;->mTotalDispatchTime:J
@@ -51,7 +50,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 37
     check-cast p1, Lcom/android/server/am/BroadcastStats$ActionEntry;
 
     check-cast p2, Lcom/android/server/am/BroadcastStats$ActionEntry;

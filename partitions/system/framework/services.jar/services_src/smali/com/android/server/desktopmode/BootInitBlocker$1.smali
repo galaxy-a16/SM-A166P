@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$vB-hQO8pYuymUmAkDM0hmdl5uE4(Lcom/android/server/desktopmode/BootInitBlocker$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/desktopmode/BootInitBlocker$1;->lambda$onUserChanged$0()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/BootInitBlocker;)V
     .locals 0
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/desktopmode/BootInitBlocker$1;->this$0:Lcom/android/server/desktopmode/BootInitBlocker;
 
     invoke-direct {p0}, Lcom/android/server/desktopmode/StateManager$StateListener;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onUserChanged$0()V
     .locals 2
 
-    .line 40
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -44,7 +41,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/BootInitBlocker$1;->this$0:Lcom/android/server/desktopmode/BootInitBlocker;
 
@@ -60,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/desktopmode/SemDesktopModeManager;->unregisterBlocker(Lcom/samsung/android/desktopmode/SemDesktopModeManager$DesktopModeBlocker;)V
 
-    .line 42
     iget-object p0, p0, Lcom/android/server/desktopmode/BootInitBlocker$1;->this$0:Lcom/android/server/desktopmode/BootInitBlocker;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/BootInitBlocker;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/BootInitBlocker;)Lcom/android/server/desktopmode/IStateManager;
@@ -79,7 +74,6 @@
 .method public onUserChanged(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 39
     iget-object p1, p0, Lcom/android/server/desktopmode/BootInitBlocker$1;->this$0:Lcom/android/server/desktopmode/BootInitBlocker;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/BootInitBlocker;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/BootInitBlocker;)Landroid/os/Handler;
@@ -94,7 +88,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 44
     iget-object p1, p0, Lcom/android/server/desktopmode/BootInitBlocker$1;->this$0:Lcom/android/server/desktopmode/BootInitBlocker;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/BootInitBlocker;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/BootInitBlocker;)Lcom/android/server/desktopmode/IStateManager;

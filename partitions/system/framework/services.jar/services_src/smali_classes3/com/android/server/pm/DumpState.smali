@@ -35,7 +35,6 @@
 .method public getSharedUser()Lcom/android/server/pm/SharedUserSetting;
     .locals 0
 
-    .line 104
     iget-object p0, p0, Lcom/android/server/pm/DumpState;->mSharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     return-object p0
@@ -44,7 +43,6 @@
 .method public getTargetPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 112
     iget-object p0, p0, Lcom/android/server/pm/DumpState;->mTargetPackageName:Ljava/lang/String;
 
     return-object p0
@@ -53,7 +51,6 @@
 .method public getTitlePrinted()Z
     .locals 0
 
-    .line 96
     iget-boolean p0, p0, Lcom/android/server/pm/DumpState;->mTitlePrinted:Z
 
     return p0
@@ -62,7 +59,6 @@
 .method public isBrief()Z
     .locals 0
 
-    .line 136
     iget-boolean p0, p0, Lcom/android/server/pm/DumpState;->mBrief:Z
 
     return p0
@@ -71,7 +67,6 @@
 .method public isCheckIn()Z
     .locals 0
 
-    .line 128
     iget-boolean p0, p0, Lcom/android/server/pm/DumpState;->mCheckIn:Z
 
     return p0
@@ -80,7 +75,6 @@
 .method public isDumping(I)Z
     .locals 2
 
-    .line 70
     iget p0, p0, Lcom/android/server/pm/DumpState;->mTypes:I
 
     const/4 v0, 0x1
@@ -110,7 +104,6 @@
 .method public isFullPreferred()Z
     .locals 0
 
-    .line 120
     iget-boolean p0, p0, Lcom/android/server/pm/DumpState;->mFullPreferred:Z
 
     return p0
@@ -119,7 +112,6 @@
 .method public isOptionEnabled(I)Z
     .locals 0
 
-    .line 82
     iget p0, p0, Lcom/android/server/pm/DumpState;->mOptions:I
 
     and-int/2addr p0, p1
@@ -140,12 +132,10 @@
 .method public onTitlePrinted()Z
     .locals 2
 
-    .line 90
     iget-boolean v0, p0, Lcom/android/server/pm/DumpState;->mTitlePrinted:Z
 
     const/4 v1, 0x1
 
-    .line 91
     iput-boolean v1, p0, Lcom/android/server/pm/DumpState;->mTitlePrinted:Z
 
     return v0
@@ -154,7 +144,6 @@
 .method public setBrief(Z)V
     .locals 0
 
-    .line 140
     iput-boolean p1, p0, Lcom/android/server/pm/DumpState;->mBrief:Z
 
     return-void
@@ -163,7 +152,6 @@
 .method public setCheckIn(Z)V
     .locals 0
 
-    .line 132
     iput-boolean p1, p0, Lcom/android/server/pm/DumpState;->mCheckIn:Z
 
     return-void
@@ -172,7 +160,6 @@
 .method public setDump(I)V
     .locals 1
 
-    .line 78
     iget v0, p0, Lcom/android/server/pm/DumpState;->mTypes:I
 
     or-int/2addr p1, v0
@@ -185,7 +172,6 @@
 .method public setFullPreferred(Z)V
     .locals 0
 
-    .line 124
     iput-boolean p1, p0, Lcom/android/server/pm/DumpState;->mFullPreferred:Z
 
     return-void
@@ -194,7 +180,6 @@
 .method public setOptionEnabled(I)V
     .locals 1
 
-    .line 86
     iget v0, p0, Lcom/android/server/pm/DumpState;->mOptions:I
 
     or-int/2addr p1, v0
@@ -207,7 +192,6 @@
 .method public setSharedUser(Lcom/android/server/pm/SharedUserSetting;)V
     .locals 0
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/pm/DumpState;->mSharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     return-void
@@ -216,7 +200,6 @@
 .method public setTargetPackageName(Ljava/lang/String;)V
     .locals 0
 
-    .line 116
     iput-object p1, p0, Lcom/android/server/pm/DumpState;->mTargetPackageName:Ljava/lang/String;
 
     return-void
@@ -225,7 +208,6 @@
 .method public setTitlePrinted(Z)V
     .locals 0
 
-    .line 100
     iput-boolean p1, p0, Lcom/android/server/pm/DumpState;->mTitlePrinted:Z
 
     return-void

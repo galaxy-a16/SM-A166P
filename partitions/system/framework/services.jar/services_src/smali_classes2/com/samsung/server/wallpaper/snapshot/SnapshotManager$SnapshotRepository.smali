@@ -17,25 +17,20 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 416
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 417
     iput v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->key:I
 
-    .line 418
     iput p1, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->userId:I
 
-    .line 419
     new-instance p1, Ljava/util/LinkedList;
 
     invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
-    .line 420
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -50,7 +45,6 @@
 .method public add(Landroid/content/Context;IILcom/android/server/wallpaper/WallpaperData;)I
     .locals 3
 
-    .line 504
     invoke-virtual {p0, p2}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->getByKey(I)Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
 
     move-result-object v0
@@ -59,7 +53,6 @@
 
     if-nez v0, :cond_1
 
-    .line 507
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
@@ -72,14 +65,12 @@
 
     const-string p0, "add: Maximum number of snapshot is reached."
 
-    .line 508
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, -0x4
 
     return p0
 
-    .line 511
     :cond_0
     new-instance v0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
 
@@ -87,12 +78,10 @@
 
     invoke-direct {v0, v2, p2}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;-><init>(II)V
 
-    .line 512
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     invoke-virtual {p0, v0}, Ljava/util/LinkedList;->addFirst(Ljava/lang/Object;)V
 
-    .line 515
     :cond_1
     invoke-virtual {v0, p3}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->hasWallpaperData(I)Z
 
@@ -100,7 +89,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 516
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,11 +113,9 @@
 
     return p0
 
-    .line 520
     :cond_2
     invoke-virtual {v0, p3, p4}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->setWallpaperData(ILcom/android/server/wallpaper/WallpaperData;)V
 
-    .line 521
     invoke-virtual {v0, p1, p3}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->setSettingsData(Landroid/content/Context;I)V
 
     return p2
@@ -146,12 +132,10 @@
 
     const-string p0, "add: wallpaper is null."
 
-    .line 527
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 531
     :cond_0
     iget-object v2, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
@@ -165,12 +149,10 @@
 
     const-string p0, "add: Maximum backup data capacity is exceeded."
 
-    .line 532
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 536
     :cond_1
     invoke-virtual {p1}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->getKey()I
 
@@ -182,7 +164,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 537
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +190,6 @@
 
     return v0
 
-    .line 541
     :cond_2
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
@@ -223,7 +203,6 @@
 .method public addHistory(Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotHistory;)V
     .locals 2
 
-    .line 579
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshotHistories:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -234,14 +213,12 @@
 
     if-le v0, v1, :cond_0
 
-    .line 580
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshotHistories:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 583
     :cond_0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshotHistories:Ljava/util/ArrayList;
 
@@ -253,12 +230,10 @@
 .method public clear()V
     .locals 0
 
-    .line 573
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     if-eqz p0, :cond_0
 
-    .line 574
     invoke-virtual {p0}, Ljava/util/LinkedList;->clear()V
 
     :cond_0
@@ -268,7 +243,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 2
 
-    .line 599
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,7 +261,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 600
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -306,7 +279,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 602
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshotHistories:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -315,7 +287,6 @@
 
     if-lez v0, :cond_0
 
-    .line 603
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshotHistories:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -335,12 +306,10 @@
 
     check-cast v1, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotHistory;
 
-    .line 604
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 608
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->getAll()Ljava/util/ArrayList;
 
@@ -363,7 +332,6 @@
 
     check-cast v0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
 
-    .line 609
     invoke-virtual {v0, p1, p2, p3}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_1
@@ -375,12 +343,10 @@
 .method public getAll()Ljava/util/ArrayList;
     .locals 1
 
-    .line 452
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_0
 
-    .line 453
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
@@ -398,7 +364,6 @@
 .method public getByIndex(I)Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
     .locals 1
 
-    .line 460
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_1
@@ -411,7 +376,6 @@
 
     goto :goto_0
 
-    .line 464
     :cond_0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
@@ -433,7 +397,6 @@
 .method public getByKey(I)Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
     .locals 3
 
-    .line 468
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     const/4 v1, 0x0
@@ -448,7 +411,6 @@
 
     goto :goto_0
 
-    .line 472
     :cond_0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
@@ -469,7 +431,6 @@
 
     check-cast v0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
 
-    .line 473
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->getKey()I
 
     move-result v2
@@ -486,7 +447,6 @@
 .method public getHistory()Ljava/util/List;
     .locals 0
 
-    .line 595
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshotHistories:Ljava/util/ArrayList;
 
     return-object p0
@@ -495,12 +455,10 @@
 .method public getHistoryLength()I
     .locals 0
 
-    .line 587
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshotHistories:Ljava/util/ArrayList;
 
     if-eqz p0, :cond_0
 
-    .line 588
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -516,7 +474,6 @@
 .method public getIndex(I)I
     .locals 3
 
-    .line 482
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     const/4 v1, -0x1
@@ -534,7 +491,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 486
     :goto_0
     iget-object v2, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
@@ -544,7 +500,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 487
     iget-object v2, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v0}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -574,7 +529,6 @@
 .method public getLastSnapshot()Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
     .locals 1
 
-    .line 496
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_0
@@ -585,7 +539,6 @@
 
     if-lez v0, :cond_0
 
-    .line 497
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     invoke-virtual {p0}, Ljava/util/LinkedList;->getFirst()Ljava/lang/Object;
@@ -605,7 +558,6 @@
 .method public getUserId()I
     .locals 0
 
-    .line 424
     iget p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->userId:I
 
     return p0
@@ -614,7 +566,6 @@
 .method public makeKey()I
     .locals 1
 
-    .line 429
     :cond_0
     iget v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->key:I
 
@@ -630,24 +581,20 @@
 .method public remove(II)V
     .locals 2
 
-    .line 546
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->getByKey(I)Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 548
     invoke-virtual {v0, p2}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->hasWallpaperData(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 549
     invoke-virtual {v0, p2}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->remove(I)V
 
-    .line 552
     :cond_0
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;->hasWallpaperData()Z
 
@@ -655,7 +602,6 @@
 
     if-nez p2, :cond_1
 
-    .line 553
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->removeByKey(I)Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
 
     :cond_1
@@ -665,7 +611,6 @@
 .method public removeByKey(I)Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotData;
     .locals 3
 
-    .line 559
     iget-object v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     const/4 v1, 0x0
@@ -680,7 +625,6 @@
 
     goto :goto_0
 
-    .line 563
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->getIndex(I)I
 
@@ -690,7 +634,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 565
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -715,7 +658,6 @@
 
     return-object v1
 
-    .line 569
     :cond_1
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
@@ -735,7 +677,6 @@
 .method public setKey(I)V
     .locals 0
 
-    .line 436
     iput p1, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->key:I
 
     return-void
@@ -744,12 +685,10 @@
 .method public size()I
     .locals 0
 
-    .line 444
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$SnapshotRepository;->mSnapshots:Ljava/util/LinkedList;
 
     if-eqz p0, :cond_0
 
-    .line 445
     invoke-virtual {p0}, Ljava/util/LinkedList;->size()I
 
     move-result p0

@@ -579,7 +579,6 @@
 
     return-object p0
 
-    .line 326
     :cond_40
     new-instance v0, Ljava/lang/StringBuilder;
 

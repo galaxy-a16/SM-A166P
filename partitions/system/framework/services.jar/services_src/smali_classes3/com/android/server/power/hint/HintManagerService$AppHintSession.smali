@@ -30,7 +30,6 @@
 .method public static bridge synthetic -$$Nest$mdump(Lcom/android/server/power/hint/HintManagerService$AppHintSession;Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
@@ -39,7 +38,6 @@
 .method public static bridge synthetic -$$Nest$monProcStateChanged(Lcom/android/server/power/hint/HintManagerService$AppHintSession;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->onProcStateChanged()V
 
     return-void
@@ -48,40 +46,30 @@
 .method public constructor <init>(Lcom/android/server/power/hint/HintManagerService;II[ILandroid/os/IBinder;JJ)V
     .locals 0
 
-    .line 454
     iput-object p1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-direct {p0}, Landroid/os/IHintSession$Stub;-><init>()V
 
-    .line 455
     iput p2, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mUid:I
 
-    .line 456
     iput p3, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mPid:I
 
-    .line 457
     iput-object p5, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mToken:Landroid/os/IBinder;
 
-    .line 458
     iput-object p4, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mThreadIds:[I
 
-    .line 459
     iput-wide p6, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
 
-    .line 460
     iput-wide p8, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mTargetDurationNanos:J
 
     const/4 p2, 0x1
 
-    .line 461
     iput-boolean p2, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mUpdateAllowed:Z
 
-    .line 462
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->updateHintAllowed()Z
 
     const/4 p2, 0x0
 
-    .line 464
     :try_start_0
     invoke-interface {p5, p0, p2}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -92,7 +80,6 @@
     :catch_0
     move-exception p2
 
-    .line 466
     invoke-static {p1}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmNativeWrapper(Lcom/android/server/power/hint/HintManagerService;)Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
 
     move-result-object p1
@@ -101,7 +88,6 @@
 
     invoke-virtual {p1, p3, p4}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halCloseHintSession(J)V
 
-    .line 467
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Client already dead"
@@ -116,7 +102,6 @@
 .method public binderDied()V
     .locals 0
 
-    .line 625
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->close()V
 
     return-void
@@ -125,7 +110,6 @@
 .method public close()V
     .locals 7
 
-    .line 520
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -134,7 +118,6 @@
 
     monitor-enter v0
 
-    .line 521
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
 
@@ -148,7 +131,6 @@
 
     return-void
 
-    .line 522
     :cond_0
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -160,7 +142,6 @@
 
     invoke-virtual {v1, v5, v6}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halCloseHintSession(J)V
 
-    .line 523
     iput-wide v3, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -169,7 +150,6 @@
 
     const/4 v2, 0x0
 
-    .line 525
     :try_start_1
     iget-object v3, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mToken:Landroid/os/IBinder;
 
@@ -190,7 +170,6 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 527
     iget v6, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mUid:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -209,7 +188,6 @@
 
     invoke-static {v3, v4, v5}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 530
     :goto_0
     iget-object v3, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -237,7 +215,6 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 532
     iget p0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mUid:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -248,12 +225,10 @@
 
     invoke-static {v3, v4, v1}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 533
     monitor-exit v0
 
     return-void
 
-    .line 535
     :cond_1
     iget-object v4, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mToken:Landroid/os/IBinder;
 
@@ -271,7 +246,6 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 537
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mToken:Landroid/os/IBinder;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -282,16 +256,13 @@
 
     invoke-static {v3, v4, v1}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 538
     monitor-exit v0
 
     return-void
 
-    .line 540
     :cond_2
     invoke-virtual {v4, p0}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 541
     invoke-virtual {v4}, Landroid/util/ArraySet;->isEmpty()Z
 
     move-result v1
@@ -302,7 +273,6 @@
 
     invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 542
     :cond_3
     invoke-virtual {v3}, Landroid/util/ArrayMap;->isEmpty()Z
 
@@ -324,7 +294,6 @@
 
     invoke-virtual {v1, p0}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 543
     :cond_4
     monitor-exit v0
 
@@ -343,7 +312,6 @@
 .method public final dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 4
 
-    .line 614
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -352,7 +320,6 @@
 
     monitor-enter v0
 
-    .line 615
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -374,7 +341,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 616
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -395,7 +361,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 617
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -420,7 +385,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 618
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -441,7 +405,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 619
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -464,7 +427,6 @@
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 620
     monitor-exit v0
 
     return-void
@@ -482,7 +444,6 @@
 .method public getThreadIds()[I
     .locals 0
 
-    .line 587
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mThreadIds:[I
 
     return-object p0
@@ -491,7 +452,6 @@
 .method public final onProcStateChanged()V
     .locals 0
 
-    .line 591
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->updateHintAllowed()Z
 
     return-void
@@ -500,7 +460,6 @@
 .method public final pause()V
     .locals 5
 
-    .line 595
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -509,7 +468,6 @@
 
     monitor-enter v0
 
-    .line 596
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
 
@@ -523,7 +481,6 @@
 
     return-void
 
-    .line 597
     :cond_0
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -535,7 +492,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halPauseHintSession(J)V
 
-    .line 598
     monitor-exit v0
 
     return-void
@@ -553,7 +509,6 @@
 .method public reportActualWorkDuration([J[J)V
     .locals 8
 
-    .line 497
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -562,7 +517,6 @@
 
     monitor-enter v0
 
-    .line 498
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
 
@@ -580,7 +534,6 @@
 
     goto :goto_3
 
-    .line 501
     :cond_0
     array-length v1, p1
 
@@ -602,7 +555,6 @@
 
     invoke-static {v1, v6}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 503
     array-length v1, p1
 
     array-length v6, p2
@@ -623,13 +575,11 @@
 
     move v1, v5
 
-    .line 505
     :goto_2
     array-length v6, p1
 
     if-ge v1, v6, :cond_4
 
-    .line 506
     aget-wide v6, p1, v1
 
     cmp-long v6, v6, v3
@@ -640,7 +590,6 @@
 
     goto :goto_2
 
-    .line 507
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -650,7 +599,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 509
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -665,7 +613,6 @@
 
     aput-object p1, v3, v2
 
-    .line 508
     invoke-static {p2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -674,7 +621,6 @@
 
     throw p0
 
-    .line 512
     :cond_4
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -686,12 +632,10 @@
 
     invoke-virtual {v1, v2, v3, p1, p2}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halReportActualWorkDuration(J[J[J)V
 
-    .line 514
     monitor-exit v0
 
     return-void
 
-    .line 499
     :cond_5
     :goto_3
     monitor-exit v0
@@ -701,7 +645,6 @@
     :catchall_0
     move-exception p0
 
-    .line 514
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -712,7 +655,6 @@
 .method public final resume()V
     .locals 5
 
-    .line 602
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -721,7 +663,6 @@
 
     monitor-enter v0
 
-    .line 603
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
 
@@ -735,7 +676,6 @@
 
     return-void
 
-    .line 604
     :cond_0
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -747,12 +687,10 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halResumeHintSession(J)V
 
-    .line 605
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mNewThreadIds:[I
 
     if-eqz v1, :cond_1
 
-    .line 606
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmNativeWrapper(Lcom/android/server/power/hint/HintManagerService;)Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
@@ -765,17 +703,14 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halSetThreads(J[I)V
 
-    .line 607
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mNewThreadIds:[I
 
     iput-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mThreadIds:[I
 
     const/4 v1, 0x0
 
-    .line 608
     iput-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mNewThreadIds:[I
 
-    .line 610
     :cond_1
     monitor-exit v0
 
@@ -794,7 +729,6 @@
 .method public sendHint(I)V
     .locals 5
 
-    .line 548
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -803,7 +737,6 @@
 
     monitor-enter v0
 
-    .line 549
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
 
@@ -834,10 +767,8 @@
     :goto_0
     const-string/jumbo v2, "the hint ID the hint value should be greater than zero."
 
-    .line 552
     invoke-static {v1, v2}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 554
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmNativeWrapper(Lcom/android/server/power/hint/HintManagerService;)Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
@@ -848,12 +779,10 @@
 
     invoke-virtual {v1, v2, v3, p1}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halSendHint(JI)V
 
-    .line 555
     monitor-exit v0
 
     return-void
 
-    .line 550
     :cond_2
     :goto_1
     monitor-exit v0
@@ -863,7 +792,6 @@
     :catchall_0
     move-exception p0
 
-    .line 555
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -874,7 +802,6 @@
 .method public setThreads([I)V
     .locals 6
 
-    .line 559
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -883,7 +810,6 @@
 
     monitor-enter v0
 
-    .line 560
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
 
@@ -893,23 +819,19 @@
 
     if-nez v1, :cond_0
 
-    .line 561
     monitor-exit v0
 
     return-void
 
-    .line 563
     :cond_0
     array-length v1, p1
 
     if-eqz v1, :cond_3
 
-    .line 566
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 567
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
@@ -918,14 +840,12 @@
 
     move-result v2
 
-    .line 568
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 570
     :try_start_1
     iget-object v5, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -937,11 +857,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 574
     :try_start_2
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 576
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->updateHintAllowed()Z
 
     move-result v1
@@ -952,18 +870,14 @@
 
     const-string/jumbo v2, "update hint not allowed, storing tids."
 
-    .line 577
     invoke-static {v1, v2}, Lcom/android/server/utils/Slogf;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     iput-object p1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mNewThreadIds:[I
 
-    .line 579
     monitor-exit v0
 
     return-void
 
-    .line 581
     :cond_1
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -975,17 +889,14 @@
 
     invoke-virtual {v1, v2, v3, p1}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halSetThreads(J[I)V
 
-    .line 582
     iput-object p1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mThreadIds:[I
 
-    .line 583
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     return-void
 
-    .line 571
     :cond_2
     :try_start_3
     new-instance p0, Ljava/lang/SecurityException;
@@ -1001,14 +912,11 @@
     :catchall_0
     move-exception p0
 
-    .line 574
     :try_start_4
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 575
     throw p0
 
-    .line 564
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1021,7 +929,6 @@
     :catchall_1
     move-exception p0
 
-    .line 583
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -1032,7 +939,6 @@
 .method public updateHintAllowed()Z
     .locals 3
 
-    .line 473
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -1041,7 +947,6 @@
 
     monitor-enter v0
 
-    .line 474
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -1055,7 +960,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 475
     iget-boolean v2, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mUpdateAllowed:Z
 
     if-nez v2, :cond_0
@@ -1065,18 +969,15 @@
     :cond_0
     if-nez v1, :cond_1
 
-    .line 476
     iget-boolean v2, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mUpdateAllowed:Z
 
     if-eqz v2, :cond_1
 
     invoke-virtual {p0}, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->pause()V
 
-    .line 477
     :cond_1
     iput-boolean v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mUpdateAllowed:Z
 
-    .line 478
     monitor-exit v0
 
     return v1
@@ -1084,7 +985,6 @@
     :catchall_0
     move-exception p0
 
-    .line 479
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1095,7 +995,6 @@
 .method public updateTargetWorkDuration(J)V
     .locals 5
 
-    .line 484
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -1104,7 +1003,6 @@
 
     monitor-enter v0
 
-    .line 485
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mHalSessionPtr:J
 
@@ -1137,10 +1035,8 @@
     :goto_0
     const-string v2, "Expected the target duration to be greater than 0."
 
-    .line 488
     invoke-static {v1, v2}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 490
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmNativeWrapper(Lcom/android/server/power/hint/HintManagerService;)Lcom/android/server/power/hint/HintManagerService$NativeWrapper;
@@ -1151,15 +1047,12 @@
 
     invoke-virtual {v1, v2, v3, p1, p2}, Lcom/android/server/power/hint/HintManagerService$NativeWrapper;->halUpdateTargetWorkDuration(JJ)V
 
-    .line 491
     iput-wide p1, p0, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->mTargetDurationNanos:J
 
-    .line 492
     monitor-exit v0
 
     return-void
 
-    .line 486
     :cond_2
     :goto_1
     monitor-exit v0
@@ -1169,7 +1062,6 @@
     :catchall_0
     move-exception p0
 
-    .line 492
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

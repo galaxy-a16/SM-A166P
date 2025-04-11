@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;)V
     .locals 0
 
-    .line 11814
     iput-object p1, p0, Lcom/android/server/audio/AudioService$MyHdmiControlStatusChangeListenerCallback;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/audio/AudioService;Lcom/android/server/audio/AudioService$MyHdmiControlStatusChangeListenerCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/audio/AudioService$MyHdmiControlStatusChangeListenerCallback;-><init>(Lcom/android/server/audio/AudioService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onStatusChange(IZ)V
     .locals 3
 
-    .line 11818
     iget-object v0, p0, Lcom/android/server/audio/AudioService$MyHdmiControlStatusChangeListenerCallback;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {v0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmHdmiClientLock(Lcom/android/server/audio/AudioService;)Ljava/lang/Object;
@@ -45,7 +42,6 @@
 
     monitor-enter v0
 
-    .line 11819
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/AudioService$MyHdmiControlStatusChangeListenerCallback;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -71,7 +67,6 @@
     :cond_1
     move v2, v1
 
-    .line 11821
     :goto_0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$MyHdmiControlStatusChangeListenerCallback;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -85,7 +80,6 @@
     :goto_1
     invoke-static {p0, p2}, Lcom/android/server/audio/AudioService;->-$$Nest$mupdateHdmiCecSinkLocked(Lcom/android/server/audio/AudioService;Z)V
 
-    .line 11822
     monitor-exit v0
 
     return-void

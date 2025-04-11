@@ -39,7 +39,6 @@
 
     const/4 v0, 0x0
 
-    .line 66
     :goto_0
     iget-object v1, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->bindPairs:[Lorg/apache/commons/compress/archivers/sevenz/BindPair;
 
@@ -47,7 +46,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 67
     aget-object v1, v1, v0
 
     iget-wide v1, v1, Lorg/apache/commons/compress/archivers/sevenz/BindPair;->inIndex:J
@@ -76,7 +74,6 @@
 
     const/4 v0, 0x0
 
-    .line 75
     :goto_0
     iget-object v1, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->bindPairs:[Lorg/apache/commons/compress/archivers/sevenz/BindPair;
 
@@ -84,7 +81,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 76
     aget-object v1, v1, v0
 
     iget-wide v1, v1, Lorg/apache/commons/compress/archivers/sevenz/BindPair;->outIndex:J
@@ -111,12 +107,10 @@
 .method public getOrderedCoders()Ljava/lang/Iterable;
     .locals 4
 
-    .line 55
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 56
     iget-object v1, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->packedStreams:[J
 
     const/4 v2, 0x0
@@ -131,21 +125,18 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 58
     iget-object v3, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->coders:[Lorg/apache/commons/compress/archivers/sevenz/Coder;
 
     aget-object v3, v3, v1
 
     invoke-virtual {v0, v3}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    .line 59
     invoke-virtual {p0, v1}, Lorg/apache/commons/compress/archivers/sevenz/Folder;->findBindPairForOutStream(I)I
 
     move-result v1
 
     if-eq v1, v2, :cond_0
 
-    .line 60
     iget-object v2, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->bindPairs:[Lorg/apache/commons/compress/archivers/sevenz/BindPair;
 
     aget-object v1, v2, v1
@@ -166,7 +157,6 @@
 .method public getUnpackSize()J
     .locals 5
 
-    .line 84
     iget-wide v0, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->totalOutputStreams:J
 
     const-wide/16 v2, 0x0
@@ -185,14 +175,12 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 88
     invoke-virtual {p0, v0}, Lorg/apache/commons/compress/archivers/sevenz/Folder;->findBindPairForOutStream(I)I
 
     move-result v1
 
     if-gez v1, :cond_1
 
-    .line 89
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->unpackSizes:[J
 
     aget-wide v0, p0, v0
@@ -211,14 +199,12 @@
 .method public getUnpackSizeForCoder(Lorg/apache/commons/compress/archivers/sevenz/Coder;)J
     .locals 3
 
-    .line 96
     iget-object v0, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->coders:[Lorg/apache/commons/compress/archivers/sevenz/Coder;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 97
     :goto_0
     iget-object v1, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->coders:[Lorg/apache/commons/compress/archivers/sevenz/Coder;
 
@@ -226,12 +212,10 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 98
     aget-object v1, v1, v0
 
     if-ne v1, p1, :cond_0
 
-    .line 99
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->unpackSizes:[J
 
     aget-wide p0, p0, v0
@@ -252,7 +236,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -317,7 +300,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 112
     iget-boolean v1, p0, Lorg/apache/commons/compress/archivers/sevenz/Folder;->hasCrc:Z
 
     if-eqz v1, :cond_0

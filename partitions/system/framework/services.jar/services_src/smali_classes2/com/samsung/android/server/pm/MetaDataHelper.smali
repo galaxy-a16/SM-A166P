@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 
     return-object v0
 
-    .line 35
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/pm/PackageSetting;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
@@ -35,7 +33,6 @@
     :cond_1
     const/4 v2, -0x1
 
-    .line 39
     invoke-virtual {p0, v2}, Lcom/android/server/pm/PackageSetting;->readUserState(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v4
@@ -46,7 +43,6 @@
 
     move-object v6, p0
 
-    .line 40
     invoke-static/range {v1 .. v6}, Lcom/android/server/pm/parsing/PackageInfoUtils;->generateApplicationInfo(Lcom/android/server/pm/pkg/AndroidPackage;JLcom/android/server/pm/pkg/PackageUserStateInternal;ILcom/android/server/pm/pkg/PackageStateInternal;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
@@ -55,7 +51,6 @@
 
     return-object v0
 
-    .line 45
     :cond_2
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
@@ -69,7 +64,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 49
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -87,7 +81,6 @@
 .method public getAppMetaData(Lcom/android/server/pm/PackageSetting;)Landroid/os/Bundle;
     .locals 0
 
-    .line 23
     invoke-static {p1}, Lcom/samsung/android/server/pm/MetaDataHelper;->getAppMetaBundle(Lcom/android/server/pm/PackageSetting;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -98,7 +91,6 @@
 .method public getComponentMetaData(Lcom/android/server/pm/pkg/component/ParsedComponent;)Landroid/os/Bundle;
     .locals 0
 
-    .line 27
     invoke-interface {p1}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getMetaData()Landroid/os/Bundle;
 
     move-result-object p0

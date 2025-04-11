@@ -9,7 +9,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 13
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -21,10 +20,8 @@
     :cond_0
     const-string p0, "Apex packages were not scanned."
 
-    .line 14
     invoke-static {p0}, Lcom/samsung/android/server/pm/PmLog;->logDebugInfo(Ljava/lang/String;)V
 
-    .line 15
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V

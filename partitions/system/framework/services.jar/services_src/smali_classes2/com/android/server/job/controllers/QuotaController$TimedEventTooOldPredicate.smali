@@ -14,7 +14,6 @@
 .method public static bridge synthetic -$$Nest$mupdateNow(Lcom/android/server/job/controllers/QuotaController$TimedEventTooOldPredicate;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/job/controllers/QuotaController$TimedEventTooOldPredicate;->updateNow()V
 
     return-void
@@ -31,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/job/controllers/QuotaController$TimedEventTooOldPredicate-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/job/controllers/QuotaController$TimedEventTooOldPredicate;-><init>()V
 
     return-void
@@ -42,7 +40,6 @@
 .method public test(Lcom/android/server/job/controllers/QuotaController$TimedEvent;)Z
     .locals 4
 
-    .line 2602
     invoke-interface {p1}, Lcom/android/server/job/controllers/QuotaController$TimedEvent;->getEndTimeElapsed()J
 
     move-result-wide v0
@@ -71,7 +68,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 2593
     check-cast p1, Lcom/android/server/job/controllers/QuotaController$TimedEvent;
 
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/QuotaController$TimedEventTooOldPredicate;->test(Lcom/android/server/job/controllers/QuotaController$TimedEvent;)Z
@@ -84,7 +80,6 @@
 .method public final updateNow()V
     .locals 2
 
-    .line 2597
     sget-object v0, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {v0}, Ljava/time/Clock;->millis()J

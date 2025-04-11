@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyManagementRoleObserver;->$r8$lambda$Lo9LYfi_zAqUVphXYDzlvU7oLfg(Ljava/lang/Boolean;)V

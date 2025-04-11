@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/application/ApplicationPolicy;Landroid/app/ActivityManager;Ljava/lang/String;I)V
     .locals 0
 
-    .line 13664
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$14;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iput-object p2, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$14;->val$activityManager:Landroid/app/ActivityManager;
@@ -36,12 +35,10 @@
 .method public run()V
     .locals 3
 
-    .line 13669
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$14;->val$activityManager:Landroid/app/ActivityManager;
 
     if-eqz v0, :cond_0
 
-    .line 13670
     iget-object v1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$14;->val$packageName:Ljava/lang/String;
 
     iget v2, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$14;->val$userId:I
@@ -51,13 +48,11 @@
     :cond_0
     const-wide/16 v0, 0x1f4
 
-    .line 13674
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 13676
     :catch_0
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$14;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 

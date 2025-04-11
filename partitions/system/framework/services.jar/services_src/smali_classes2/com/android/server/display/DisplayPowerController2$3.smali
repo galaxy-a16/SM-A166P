@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayPowerController2;)V
     .locals 0
 
-    .line 1249
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController2$3;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public getHdrBrightnessFromSdr(FF)F
     .locals 0
 
-    .line 1253
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController2$3;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmDisplayDeviceConfig(Lcom/android/server/display/DisplayPowerController2;)Lcom/android/server/display/DisplayDeviceConfig;

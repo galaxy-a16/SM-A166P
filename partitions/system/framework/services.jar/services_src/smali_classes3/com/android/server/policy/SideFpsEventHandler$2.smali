@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/policy/SideFpsEventHandler;Landroid/hardware/fingerprint/FingerprintManager;)V
     .locals 0
 
-    .line 199
     iput-object p1, p0, Lcom/android/server/policy/SideFpsEventHandler$2;->this$0:Lcom/android/server/policy/SideFpsEventHandler;
 
     iput-object p2, p0, Lcom/android/server/policy/SideFpsEventHandler$2;->val$fingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
@@ -28,7 +27,6 @@
 .method public onAllAuthenticatorsRegistered(Ljava/util/List;)V
     .locals 1
 
-    .line 203
     iget-object p1, p0, Lcom/android/server/policy/SideFpsEventHandler$2;->val$fingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {p1}, Landroid/hardware/fingerprint/FingerprintManager;->isPowerbuttonFps()Z
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 204
     iget-object p1, p0, Lcom/android/server/policy/SideFpsEventHandler$2;->val$fingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     new-instance v0, Lcom/android/server/policy/SideFpsEventHandler$2$1;
@@ -46,7 +43,6 @@
 
     invoke-virtual {p1, v0}, Landroid/hardware/fingerprint/FingerprintManager;->registerBiometricStateListener(Landroid/hardware/biometrics/BiometricStateListener;)V
 
-    .line 243
     iget-object p0, p0, Lcom/android/server/policy/SideFpsEventHandler$2;->this$0:Lcom/android/server/policy/SideFpsEventHandler;
 
     invoke-static {p0}, Lcom/android/server/policy/SideFpsEventHandler;->-$$Nest$fgetmSideFpsEventHandlerReady(Lcom/android/server/policy/SideFpsEventHandler;)Ljava/util/concurrent/atomic/AtomicBoolean;

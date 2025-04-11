@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$wa0gC0k8fxLxXeLDn6ws_8lUBV0(Lcom/android/server/apphibernation/HibernationStateDiskStore;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/apphibernation/HibernationStateDiskStore;->writeHibernationStates()V
 
     return-void
@@ -30,7 +29,6 @@
 
     const-string/jumbo v0, "states"
 
-    .line 68
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/server/apphibernation/HibernationStateDiskStore;-><init>(Ljava/io/File;Lcom/android/server/apphibernation/ProtoReadWriter;Ljava/util/concurrent/ScheduledExecutorService;Ljava/lang/String;)V
 
     return-void
@@ -39,27 +37,22 @@
 .method public constructor <init>(Ljava/io/File;Lcom/android/server/apphibernation/ProtoReadWriter;Ljava/util/concurrent/ScheduledExecutorService;Ljava/lang/String;)V
     .locals 1
 
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mScheduledStatesToWrite:Ljava/util/List;
 
-    .line 76
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1, p4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mHibernationFile:Ljava/io/File;
 
-    .line 77
     iput-object p3, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mExecutorService:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 78
     iput-object p2, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mProtoReadWriter:Lcom/android/server/apphibernation/ProtoReadWriter;
 
     return-void
@@ -70,10 +63,8 @@
 .method public readHibernationStates()Ljava/util/List;
     .locals 4
 
-    .line 114
     monitor-enter p0
 
-    .line 115
     :try_start_0
     iget-object v0, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mHibernationFile:Ljava/io/File;
 
@@ -87,7 +78,6 @@
 
     const-string v0, "HibernationStateDiskStore"
 
-    .line 116
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,12 +100,10 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     monitor-exit p0
 
     return-object v1
 
-    .line 119
     :cond_0
     new-instance v0, Landroid/util/AtomicFile;
 
@@ -125,18 +113,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
     :try_start_1
     invoke-virtual {v0}, Landroid/util/AtomicFile;->openRead()Ljava/io/FileInputStream;
 
     move-result-object v0
 
-    .line 123
     new-instance v2, Landroid/util/proto/ProtoInputStream;
 
     invoke-direct {v2, v0}, Landroid/util/proto/ProtoInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mProtoReadWriter:Lcom/android/server/apphibernation/ProtoReadWriter;
 
     invoke-interface {v0, v2}, Lcom/android/server/apphibernation/ProtoReadWriter;->readFromProto(Landroid/util/proto/ProtoInputStream;)Ljava/lang/Object;
@@ -160,10 +145,8 @@
 
     const-string v3, "Failed to read states protobuf."
 
-    .line 126
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 127
     monitor-exit p0
 
     return-object v1
@@ -171,7 +154,6 @@
     :catchall_0
     move-exception v0
 
-    .line 129
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -182,14 +164,11 @@
 .method public scheduleWriteHibernationStates(Ljava/util/List;)V
     .locals 4
 
-    .line 88
     monitor-enter p0
 
-    .line 89
     :try_start_0
     iput-object p1, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mScheduledStatesToWrite:Ljava/util/List;
 
-    .line 90
     iget-object p1, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mExecutorService:Ljava/util/concurrent/ScheduledExecutorService;
 
     invoke-interface {p1}, Ljava/util/concurrent/ScheduledExecutorService;->isShutdown()Z
@@ -202,15 +181,12 @@
 
     const-string v0, "Scheduled executor service is shut down."
 
-    .line 91
     invoke-static {p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     monitor-exit p0
 
     return-void
 
-    .line 96
     :cond_0
     iget-object p1, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mFuture:Ljava/util/concurrent/ScheduledFuture;
 
@@ -220,15 +196,12 @@
 
     const-string v0, "Write already scheduled. Skipping schedule."
 
-    .line 97
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     monitor-exit p0
 
     return-void
 
-    .line 101
     :cond_1
     iget-object p1, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mExecutorService:Ljava/util/concurrent/ScheduledExecutorService;
 
@@ -246,7 +219,6 @@
 
     iput-object p1, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mFuture:Ljava/util/concurrent/ScheduledFuture;
 
-    .line 103
     monitor-exit p0
 
     return-void
@@ -264,26 +236,21 @@
 .method public final writeHibernationStates()V
     .locals 1
 
-    .line 134
     monitor-enter p0
 
-    .line 135
     :try_start_0
     iget-object v0, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mScheduledStatesToWrite:Ljava/util/List;
 
     invoke-virtual {p0, v0}, Lcom/android/server/apphibernation/HibernationStateDiskStore;->writeStateProto(Ljava/util/List;)V
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mScheduledStatesToWrite:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     const/4 v0, 0x0
 
-    .line 137
     iput-object v0, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mFuture:Ljava/util/concurrent/ScheduledFuture;
 
-    .line 138
     monitor-exit p0
 
     return-void
@@ -303,14 +270,12 @@
 
     const-string v0, "HibernationStateDiskStore"
 
-    .line 143
     new-instance v1, Landroid/util/AtomicFile;
 
     iget-object v2, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mHibernationFile:Ljava/io/File;
 
     invoke-direct {v1, v2}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
 
-    .line 147
     :try_start_0
     invoke-virtual {v1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
@@ -318,21 +283,17 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 154
     :try_start_1
     new-instance v3, Landroid/util/proto/ProtoOutputStream;
 
     invoke-direct {v3, v2}, Landroid/util/proto/ProtoOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/apphibernation/HibernationStateDiskStore;->mProtoReadWriter:Lcom/android/server/apphibernation/ProtoReadWriter;
 
     invoke-interface {p0, v3, p1}, Lcom/android/server/apphibernation/ProtoReadWriter;->writeToProto(Landroid/util/proto/ProtoOutputStream;Ljava/lang/Object;)V
 
-    .line 156
     invoke-virtual {v3}, Landroid/util/proto/ProtoOutputStream;->flush()V
 
-    .line 157
     invoke-virtual {v1, v2}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -344,10 +305,8 @@
 
     const-string p1, "Failed to finish write to states protobuf."
 
-    .line 159
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 160
     invoke-virtual {v1, v2}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
     :goto_0
@@ -358,7 +317,6 @@
 
     const-string p1, "Failed to start write to states protobuf."
 
-    .line 149
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void

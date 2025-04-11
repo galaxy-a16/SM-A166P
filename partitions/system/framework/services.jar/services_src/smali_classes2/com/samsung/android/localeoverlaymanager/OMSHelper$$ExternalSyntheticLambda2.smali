@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/samsung/android/localeoverlaymanager/OMSHelper;->$r8$lambda$EgxBeIE817hFJyxGgSKSIYaXnqo(Ljava/lang/String;)Ljava/lang/String;

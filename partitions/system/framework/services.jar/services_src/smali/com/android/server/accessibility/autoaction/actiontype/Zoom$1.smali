@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/actiontype/Zoom;IIII)V
     .locals 0
 
-    .line 101
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/Zoom;
 
     iput p2, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom$1;->val$x:I
@@ -43,7 +42,6 @@
 .method public run()V
     .locals 4
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/Zoom;
 
     iget v1, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom$1;->val$x:I

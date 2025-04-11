@@ -13,13 +13,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 200
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 201
     iput p1, p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;->mRebootErrorCode:I
 
-    .line 202
     iput p2, p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;->mProviderErrorCode:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public getErrorCodeForMetrics()I
     .locals 1
 
-    .line 208
     iget v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;->mRebootErrorCode:I
 
     iget p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;->mProviderErrorCode:I

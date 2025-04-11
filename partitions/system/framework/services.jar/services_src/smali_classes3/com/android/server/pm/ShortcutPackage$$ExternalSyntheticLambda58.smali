@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/app/appsearch/AppSearchResult;
 
     invoke-static {p1}, Lcom/android/server/pm/ShortcutPackage;->$r8$lambda$3kqREohz1wMdRquXfMR_ECrP8iA(Landroid/app/appsearch/AppSearchResult;)V

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Landroid/service/appprediction/IPredictionService$Stub;-><init>()V
 
     return-void

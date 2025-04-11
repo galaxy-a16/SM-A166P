@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 0
     new-instance v0, Lcom/android/server/permission/jarjar/kotlin/Unit;
 
     invoke-direct {v0}, Lcom/android/server/permission/jarjar/kotlin/Unit;-><init>()V
@@ -34,7 +33,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "com.android.server.permission.jarjar.kotlin.Unit"
 
     return-object p0

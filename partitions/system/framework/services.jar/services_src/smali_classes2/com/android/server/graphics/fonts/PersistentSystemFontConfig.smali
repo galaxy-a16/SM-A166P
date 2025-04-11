@@ -9,7 +9,6 @@
 
     const/4 v0, 0x0
 
-    .line 137
     invoke-interface {p0, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -25,12 +24,10 @@
 .method public static loadFromXml(Ljava/io/InputStream;Lcom/android/server/graphics/fonts/PersistentSystemFontConfig$Config;)V
     .locals 6
 
-    .line 59
     invoke-static {p0}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object p0
 
-    .line 62
     :cond_0
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -47,13 +44,11 @@
 
     goto :goto_0
 
-    .line 66
     :cond_1
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 67
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -64,14 +59,12 @@
 
     const-string v0, "fontConfig"
 
-    .line 69
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 70
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,7 +86,6 @@
     :cond_2
     if-ne v0, v2, :cond_0
 
-    .line 74
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
@@ -156,7 +148,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,7 +166,6 @@
 
     goto :goto_0
 
-    .line 79
     :pswitch_0
     iget-object v1, p1, Lcom/android/server/graphics/fonts/PersistentSystemFontConfig$Config;->updatedFontDirs:Ljava/util/Set;
 
@@ -187,7 +177,6 @@
 
     goto/16 :goto_0
 
-    .line 84
     :pswitch_1
     iget-object v0, p1, Lcom/android/server/graphics/fonts/PersistentSystemFontConfig$Config;->fontFamilies:Ljava/util/List;
 
@@ -202,7 +191,6 @@
     :pswitch_2
     const-wide/16 v1, 0x0
 
-    .line 76
     invoke-static {p0, v0, v1, v2}, Lcom/android/server/graphics/fonts/PersistentSystemFontConfig;->parseLongAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -234,12 +222,10 @@
 
     const/4 v0, 0x0
 
-    .line 124
     invoke-interface {p0, v0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 125
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -248,7 +234,6 @@
 
     return-wide p2
 
-    .line 129
     :cond_0
     :try_start_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -266,12 +251,10 @@
 .method public static writeToXml(Ljava/io/OutputStream;Lcom/android/server/graphics/fonts/PersistentSystemFontConfig$Config;)V
     .locals 6
 
-    .line 99
     invoke-static {p0}, Landroid/util/Xml;->resolveSerializer(Ljava/io/OutputStream;)Lcom/android/modules/utils/TypedXmlSerializer;
 
     move-result-object p0
 
-    .line 100
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v1, 0x0
@@ -280,15 +263,12 @@
 
     const-string v0, "fontConfig"
 
-    .line 102
     invoke-interface {p0, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v2, "lastModifiedDate"
 
-    .line 103
     invoke-interface {p0, v1, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 104
     iget-wide v3, p1, Lcom/android/server/graphics/fonts/PersistentSystemFontConfig$Config;->lastModifiedMillis:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -299,10 +279,8 @@
 
     invoke-interface {p0, v1, v4, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 105
     invoke-interface {p0, v1, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 106
     iget-object v2, p1, Lcom/android/server/graphics/fonts/PersistentSystemFontConfig$Config;->updatedFontDirs:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -324,24 +302,19 @@
 
     const-string/jumbo v5, "updatedFontDir"
 
-    .line 107
     invoke-interface {p0, v1, v5}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 108
     invoke-interface {p0, v1, v4, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 109
     invoke-interface {p0, v1, v5}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    .line 111
     :cond_0
     iget-object p1, p1, Lcom/android/server/graphics/fonts/PersistentSystemFontConfig$Config;->fontFamilies:Ljava/util/List;
 
     const/4 v2, 0x0
 
-    .line 112
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -349,7 +322,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 113
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -358,24 +330,19 @@
 
     const-string v4, "family"
 
-    .line 114
     invoke-interface {p0, v1, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 115
     invoke-static {p0, v3}, Landroid/graphics/fonts/FontUpdateRequest$Family;->writeFamilyToXml(Lcom/android/modules/utils/TypedXmlSerializer;Landroid/graphics/fonts/FontUpdateRequest$Family;)V
 
-    .line 116
     invoke-interface {p0, v1, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 118
     :cond_1
     invoke-interface {p0, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 120
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlSerializer;->endDocument()V
 
     return-void

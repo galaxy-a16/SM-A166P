@@ -13,10 +13,8 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 4
 
-    .line 57
     invoke-direct {p0}, Lcom/android/server/integrity/parser/RandomAccessObject;-><init>()V
 
-    .line 58
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v0
@@ -27,7 +25,6 @@
 
     if-gtz v2, :cond_0
 
-    .line 63
     new-instance v2, Ljava/io/RandomAccessFile;
 
     const-string/jumbo v3, "r"
@@ -38,12 +35,10 @@
 
     long-to-int p1, v0
 
-    .line 64
     iput p1, p0, Lcom/android/server/integrity/parser/RandomAccessObject$RandomAccessFileObject;->mLength:I
 
     return-void
 
-    .line 60
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -71,7 +66,6 @@
 .method public close()V
     .locals 0
 
-    .line 84
     iget-object p0, p0, Lcom/android/server/integrity/parser/RandomAccessObject$RandomAccessFileObject;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p0}, Ljava/io/RandomAccessFile;->close()V
@@ -82,7 +76,6 @@
 .method public length()I
     .locals 0
 
-    .line 89
     iget p0, p0, Lcom/android/server/integrity/parser/RandomAccessObject$RandomAccessFileObject;->mLength:I
 
     return p0
@@ -91,7 +84,6 @@
 .method public read()I
     .locals 0
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/integrity/parser/RandomAccessObject$RandomAccessFileObject;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p0}, Ljava/io/RandomAccessFile;->read()I
@@ -104,7 +96,6 @@
 .method public read([BII)I
     .locals 0
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/integrity/parser/RandomAccessObject$RandomAccessFileObject;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/io/RandomAccessFile;->read([BII)I
@@ -117,7 +108,6 @@
 .method public seek(I)V
     .locals 2
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/integrity/parser/RandomAccessObject$RandomAccessFileObject;->mRandomAccessFile:Ljava/io/RandomAccessFile;
 
     int-to-long v0, p1

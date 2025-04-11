@@ -14,7 +14,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,7 +42,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
 .method public attachProbes(I)I
     .locals 3
 
-    .line 35
     sget-object v0, Lcom/android/server/knox/zt/devicetrust/OemNetdAdapterImpl;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -81,7 +78,6 @@
 
     if-lez p1, :cond_0
 
-    .line 38
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/OemNetdAdapterImpl;->enablePacketTracing()I
 
     move-result p0
@@ -97,7 +93,6 @@
 .method public detachProbes(I)I
     .locals 3
 
-    .line 45
     sget-object v0, Lcom/android/server/knox/zt/devicetrust/OemNetdAdapterImpl;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,7 +119,6 @@
 
     if-lez p1, :cond_0
 
-    .line 48
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/OemNetdAdapterImpl;->disablePacketTracing()I
 
     move-result p0
@@ -140,7 +134,6 @@
 .method public final disablePacketTracing()I
     .locals 3
 
-    .line 71
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/OemNetdAdapterImpl;->getOemNetdService()Lcom/android/internal/net/IOemNetd;
 
     move-result-object p0
@@ -150,7 +143,6 @@
     :try_start_0
     const-string/jumbo v0, "wlan0"
 
-    .line 74
     invoke-interface {p0, v0}, Lcom/android/internal/net/IOemNetd;->disableTlsPacketTracing(Ljava/lang/String;)I
 
     move-result p0
@@ -162,7 +154,6 @@
     :catch_0
     move-exception p0
 
-    .line 76
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
@@ -171,7 +162,6 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 80
     sget-object v0, Lcom/android/server/knox/zt/devicetrust/OemNetdAdapterImpl;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -201,7 +191,6 @@
 .method public final enablePacketTracing()I
     .locals 3
 
-    .line 55
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/OemNetdAdapterImpl;->getOemNetdService()Lcom/android/internal/net/IOemNetd;
 
     move-result-object p0
@@ -211,7 +200,6 @@
     :try_start_0
     const-string/jumbo v0, "wlan0"
 
-    .line 58
     invoke-interface {p0, v0}, Lcom/android/internal/net/IOemNetd;->enableTlsPacketTracing(Ljava/lang/String;)I
 
     move-result p0
@@ -223,7 +211,6 @@
     :catch_0
     move-exception p0
 
-    .line 60
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
@@ -232,7 +219,6 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 64
     sget-object v0, Lcom/android/server/knox/zt/devicetrust/OemNetdAdapterImpl;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -265,17 +251,14 @@
     :try_start_0
     const-string/jumbo p0, "netd"
 
-    .line 25
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 24
     invoke-static {p0}, Landroid/net/INetd$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/INetd;
 
     move-result-object p0
 
-    .line 26
     invoke-interface {p0}, Landroid/net/INetd;->getOemNetd()Landroid/os/IBinder;
 
     move-result-object p0
@@ -291,7 +274,6 @@
     :catchall_0
     move-exception p0
 
-    .line 28
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const/4 p0, 0x0

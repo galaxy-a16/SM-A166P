@@ -19,7 +19,6 @@
 
     const-string p0, "hdmi_control"
 
-    .line 35
     invoke-static {p0, p1, p2}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     return-void
@@ -30,7 +29,6 @@
 
     const-string p0, "hdmi_control"
 
-    .line 30
     invoke-static {p0, p1, p2}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0

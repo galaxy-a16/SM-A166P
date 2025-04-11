@@ -37,7 +37,6 @@
 .method public drainPerHour()D
     .locals 6
 
-    .line 132
     iget-wide v0, p0, Lcom/android/server/power/batterysaver/BatterySavingStats$Stat;->totalTimeMillis:J
 
     const-wide/16 v2, 0x0
@@ -50,7 +49,6 @@
 
     return-wide v0
 
-    .line 135
     :cond_0
     iget p0, p0, Lcom/android/server/power/batterysaver/BatterySavingStats$Stat;->totalBatteryDrain:I
 
@@ -70,7 +68,6 @@
 .method public drainPercentPerHour()D
     .locals 6
 
-    .line 139
     iget-wide v0, p0, Lcom/android/server/power/batterysaver/BatterySavingStats$Stat;->totalTimeMillis:J
 
     const-wide/16 v2, 0x0
@@ -83,7 +80,6 @@
 
     return-wide v0
 
-    .line 142
     :cond_0
     iget p0, p0, Lcom/android/server/power/batterysaver/BatterySavingStats$Stat;->totalBatteryDrainPercent:I
 
@@ -103,7 +99,6 @@
 .method public toStringForTest()Ljava/lang/String;
     .locals 5
 
-    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,7 +125,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 148
     invoke-virtual {p0}, Lcom/android/server/power/batterysaver/BatterySavingStats$Stat;->drainPerHour()D
 
     move-result-wide v1
@@ -155,7 +149,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 149
     invoke-virtual {p0}, Lcom/android/server/power/batterysaver/BatterySavingStats$Stat;->drainPercentPerHour()D
 
     move-result-wide v3
@@ -188,7 +181,6 @@
 .method public totalMinutes()J
     .locals 4
 
-    .line 128
     iget-wide v0, p0, Lcom/android/server/power/batterysaver/BatterySavingStats$Stat;->totalTimeMillis:J
 
     const-wide/32 v2, 0xea60

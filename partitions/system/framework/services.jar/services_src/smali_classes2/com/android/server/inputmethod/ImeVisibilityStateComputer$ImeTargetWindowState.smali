@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRequestedImeVisible(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mRequestedImeVisible:Z
 
     return p0
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSoftInputModeState(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mSoftInputModeState:I
 
     return p0
@@ -45,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$fgetmToolType(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mToolType:I
 
     return p0
@@ -54,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$msetImeDisplayId(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->setImeDisplayId(I)V
 
     return-void
@@ -63,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$msetRequestedImeVisible(Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->setRequestedImeVisible(Z)V
 
     return-void
@@ -86,7 +81,6 @@
 
     move v5, p5
 
-    .line 654
     invoke-direct/range {v0 .. v6}, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;-><init>(IIZZZI)V
 
     return-void
@@ -95,30 +89,22 @@
 .method public constructor <init>(IIZZZI)V
     .locals 1
 
-    .line 660
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 708
     iput v0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mImeDisplayId:I
 
-    .line 661
     iput p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mSoftInputModeState:I
 
-    .line 662
     iput p2, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mWindowFlags:I
 
-    .line 663
     iput-boolean p3, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mImeFocusChanged:Z
 
-    .line 664
     iput-boolean p4, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mHasFocusedEditor:Z
 
-    .line 665
     iput-boolean p5, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mIsStartInputByGainFocus:Z
 
-    .line 666
     iput p6, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mToolType:I
 
     return-void
@@ -129,7 +115,6 @@
 .method public getRequestImeToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 755
     iget-object p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mRequestImeToken:Landroid/os/IBinder;
 
     return-object p0
@@ -138,7 +123,6 @@
 .method public getSoftInputModeState()I
     .locals 0
 
-    .line 723
     iget p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mSoftInputModeState:I
 
     return p0
@@ -147,7 +131,6 @@
 .method public getWindowFlags()I
     .locals 0
 
-    .line 727
     iget p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mWindowFlags:I
 
     return p0
@@ -156,7 +139,6 @@
 .method public hasEditorFocused()Z
     .locals 0
 
-    .line 715
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mHasFocusedEditor:Z
 
     return p0
@@ -165,7 +147,6 @@
 .method public hasImeFocusChanged()Z
     .locals 0
 
-    .line 711
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mImeFocusChanged:Z
 
     return p0
@@ -174,7 +155,6 @@
 .method public isRequestedImeVisible()Z
     .locals 0
 
-    .line 747
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mRequestedImeVisible:Z
 
     return p0
@@ -183,7 +163,6 @@
 .method public isStartInputByGainFocus()Z
     .locals 0
 
-    .line 719
     iget-boolean p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mIsStartInputByGainFocus:Z
 
     return p0
@@ -192,7 +171,6 @@
 .method public final setImeDisplayId(I)V
     .locals 0
 
-    .line 735
     iput p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mImeDisplayId:I
 
     return-void
@@ -201,7 +179,6 @@
 .method public setRequestImeToken(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 751
     iput-object p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mRequestImeToken:Landroid/os/IBinder;
 
     return-void
@@ -210,7 +187,6 @@
 .method public final setRequestedImeVisible(Z)V
     .locals 0
 
-    .line 743
     iput-boolean p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mRequestedImeVisible:Z
 
     return-void
@@ -219,7 +195,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 760
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -270,7 +245,6 @@
 
     iget v1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeTargetWindowState;->mSoftInputModeState:I
 
-    .line 765
     invoke-static {v1}, Lcom/android/internal/inputmethod/InputMethodDebug;->softInputModeToString(I)Ljava/lang/String;
 
     move-result-object v1

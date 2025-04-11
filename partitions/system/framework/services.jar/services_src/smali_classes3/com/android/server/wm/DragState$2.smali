@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DragState;Landroid/animation/AnimatorSet;)V
     .locals 0
 
-    .line 1379
     iput-object p1, p0, Lcom/android/server/wm/DragState$2;->this$0:Lcom/android/server/wm/DragState;
 
     iput-object p2, p0, Lcom/android/server/wm/DragState$2;->val$scaleInAnimatorSet:Landroid/animation/AnimatorSet;
@@ -30,7 +29,6 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 1403
     iget-object p0, p0, Lcom/android/server/wm/DragState$2;->val$scaleInAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
@@ -43,21 +41,18 @@
 
     const-string/jumbo v0, "scale"
 
-    .line 1382
     iget-object v1, p0, Lcom/android/server/wm/DragState$2;->this$0:Lcom/android/server/wm/DragState;
 
     iget-object v1, v1, Lcom/android/server/wm/DragState;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mTransactionFactory:Ljava/util/function/Supplier;
 
-    .line 1383
     invoke-interface {v1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/SurfaceControl$Transaction;
 
-    .line 1384
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DragState$2;->this$0:Lcom/android/server/wm/DragState;
 
@@ -69,14 +64,12 @@
 
     const-string/jumbo p1, "mSurfaceControl is null, animation cannot be updated."
 
-    .line 1385
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v1, :cond_0
 
-    .line 1398
     invoke-virtual {v1}, Landroid/view/SurfaceControl$Transaction;->close()V
 
     :cond_0
@@ -86,7 +79,6 @@
     :try_start_1
     const-string/jumbo v2, "pivot_offset"
 
-    .line 1388
     invoke-virtual {p1, v2}, Landroid/animation/ValueAnimator;->getAnimatedValue(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -97,7 +89,6 @@
 
     move-result v2
 
-    .line 1389
     iget-object v3, p0, Lcom/android/server/wm/DragState$2;->this$0:Lcom/android/server/wm/DragState;
 
     iget v4, v3, Lcom/android/server/wm/DragState;->mCurrentX:F
@@ -110,7 +101,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/wm/DragState;->-$$Nest$fputmCenterPivotOffsetX(Lcom/android/server/wm/DragState;F)V
 
-    .line 1390
     iget-object v3, p0, Lcom/android/server/wm/DragState$2;->this$0:Lcom/android/server/wm/DragState;
 
     iget v4, v3, Lcom/android/server/wm/DragState;->mCurrentY:F
@@ -123,12 +113,10 @@
 
     invoke-static {v3, v4}, Lcom/android/server/wm/DragState;->-$$Nest$fputmCenterPivotOffsetY(Lcom/android/server/wm/DragState;F)V
 
-    .line 1392
     iget-object v2, p0, Lcom/android/server/wm/DragState$2;->this$0:Lcom/android/server/wm/DragState;
 
     iget-object v3, v2, Lcom/android/server/wm/DragState;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    .line 1394
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->getAnimatedValue(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -143,7 +131,6 @@
 
     const/4 v6, 0x0
 
-    .line 1395
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->getAnimatedValue(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -156,10 +143,8 @@
 
     move-object v2, v1
 
-    .line 1392
     invoke-virtual/range {v2 .. v7}, Landroid/view/SurfaceControl$Transaction;->setMatrix(Landroid/view/SurfaceControl;FFFF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 1396
     iget-object p1, p0, Lcom/android/server/wm/DragState$2;->this$0:Lcom/android/server/wm/DragState;
 
     iget-object v0, p1, Lcom/android/server/wm/DragState;->mSurfaceControl:Landroid/view/SurfaceControl;
@@ -176,12 +161,10 @@
 
     invoke-virtual {v1, v0, p1, p0}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 1397
     invoke-virtual {v1}, Landroid/view/SurfaceControl$Transaction;->apply()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1398
     invoke-virtual {v1}, Landroid/view/SurfaceControl$Transaction;->close()V
 
     return-void
@@ -191,7 +174,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1382
     :try_start_2
     invoke-virtual {v1}, Landroid/view/SurfaceControl$Transaction;->close()V
     :try_end_2

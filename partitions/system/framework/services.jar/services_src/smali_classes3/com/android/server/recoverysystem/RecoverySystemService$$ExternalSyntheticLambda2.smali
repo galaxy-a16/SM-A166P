@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/recoverysystem/RecoverySystemService;->$r8$lambda$afeSNyx9k0owE1yKBfcEslbjNCA(I)[Landroid/apex/CompressedApexInfo;
 
     move-result-object p0

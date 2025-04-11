@@ -20,7 +20,6 @@
 .method public test(Landroid/content/pm/ResolveInfo;)Z
     .locals 0
 
-    .line 371
     iget-object p0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-boolean p0, p0, Landroid/content/pm/ActivityInfo;->exported:Z
@@ -33,7 +32,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 369
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/ShortcutService$1;->test(Landroid/content/pm/ResolveInfo;)Z

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/chimera/SystemEventListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/chimera/SystemEventListener$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/chimera/SystemEventListener;
@@ -27,7 +26,6 @@
 .method public final onForegroundActivitiesChanged(IIZI[Ljava/lang/String;Z)V
     .locals 7
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/chimera/SystemEventListener$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/chimera/SystemEventListener;
 
     move v1, p1

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/DevicePowerStatusAction;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/hdmi/DevicePowerStatusAction$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/hdmi/DevicePowerStatusAction;
@@ -27,7 +26,6 @@
 .method public final onSendCompleted(I)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/hdmi/DevicePowerStatusAction$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/hdmi/DevicePowerStatusAction;
 
     invoke-static {p0, p1}, Lcom/android/server/hdmi/DevicePowerStatusAction;->$r8$lambda$sr1FqfHeVfktbzjdkZqlRJoT_dg(Lcom/android/server/hdmi/DevicePowerStatusAction;I)V

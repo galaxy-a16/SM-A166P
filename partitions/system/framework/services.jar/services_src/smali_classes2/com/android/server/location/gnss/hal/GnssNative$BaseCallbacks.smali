@@ -7,7 +7,6 @@
 .method public onCapabilitiesChanged(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -17,6 +16,5 @@
 .method public onHalStarted()V
     .locals 0
 
-    .line 0
     return-void
 .end method

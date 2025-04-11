@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenGestureManagerService;)V
     .locals 0
 
-    .line 768
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,17 +23,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 771
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 791
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     goto :goto_0
 
-    .line 787
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -44,7 +40,6 @@
 
     goto :goto_0
 
-    .line 783
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -52,7 +47,6 @@
 
     goto :goto_0
 
-    .line 777
     :pswitch_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -60,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 778
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     check-cast p1, Lcom/android/server/smartclip/SpenGestureManagerService$PenDetectionInfo;
@@ -69,7 +62,6 @@
 
     goto :goto_0
 
-    .line 773
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$6;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 

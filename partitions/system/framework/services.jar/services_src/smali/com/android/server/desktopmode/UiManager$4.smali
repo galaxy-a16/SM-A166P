@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/UiManager;)V
     .locals 0
 
-    .line 303
     iput-object p1, p0, Lcom/android/server/desktopmode/UiManager$4;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-direct {p0}, Lcom/samsung/android/desktopmode/IDesktopModeUiServiceCallback$Stub;-><init>()V
@@ -24,28 +23,24 @@
 .method public onAnimationComplete()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onClickButtonNegative()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onClickButtonPositive()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDismiss()V
     .locals 0
 
-    .line 318
     iget-object p0, p0, Lcom/android/server/desktopmode/UiManager$4;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$mpostUnbindServiceRunnable(Lcom/android/server/desktopmode/UiManager;)V
@@ -56,6 +51,5 @@
 .method public onShow()V
     .locals 0
 
-    .line 0
     return-void
 .end method

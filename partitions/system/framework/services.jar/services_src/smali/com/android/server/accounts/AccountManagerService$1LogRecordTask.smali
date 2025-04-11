@@ -26,27 +26,20 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;Ljava/lang/String;Ljava/lang/String;JLcom/android/server/accounts/AccountManagerService$UserAccounts;IJ)V
     .locals 0
 
-    .line 5657
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5658
     iput-object p2, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->action:Ljava/lang/String;
 
-    .line 5659
     iput-object p3, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->tableName:Ljava/lang/String;
 
-    .line 5660
     iput-wide p4, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->accountId:J
 
-    .line 5661
     iput-object p6, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->userAccount:Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
-    .line 5662
     iput p7, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->callingUid:I
 
-    .line 5663
     iput-wide p8, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->userDebugDbInsertionPoint:J
 
     return-void
@@ -57,7 +50,6 @@
 .method public run()V
     .locals 7
 
-    .line 5668
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->userAccount:Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     iget-object v0, v0, Lcom/android/server/accounts/AccountManagerService$UserAccounts;->accountsDb:Lcom/android/server/accounts/AccountsDb;
@@ -66,7 +58,6 @@
 
     monitor-enter v0
 
-    .line 5669
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->userAccount:Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
@@ -78,12 +69,10 @@
 
     if-nez v1, :cond_0
 
-    .line 5671
     monitor-exit v0
 
     return-void
 
-    .line 5673
     :cond_0
     iget-wide v2, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->accountId:J
 
@@ -91,14 +80,12 @@
 
     invoke-virtual {v1, v4, v2, v3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
-    .line 5674
     iget-object v2, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->action:Ljava/lang/String;
 
     const/4 v3, 0x2
 
     invoke-virtual {v1, v3, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    .line 5675
     iget-object v2, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     invoke-static {v2}, Lcom/android/server/accounts/AccountManagerService;->-$$Nest$fgetmDateFormat(Lcom/android/server/accounts/AccountManagerService;)Ljava/text/SimpleDateFormat;
@@ -117,7 +104,6 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    .line 5676
     iget v2, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->callingUid:I
 
     int-to-long v2, v2
@@ -126,14 +112,12 @@
 
     invoke-virtual {v1, v4, v2, v3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
-    .line 5677
     iget-object v2, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->tableName:Ljava/lang/String;
 
     const/4 v3, 0x5
 
     invoke-virtual {v1, v3, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    .line 5678
     iget-wide v2, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->userDebugDbInsertionPoint:J
 
     const/4 v4, 0x6
@@ -142,7 +126,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 5680
     :try_start_1
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
     :try_end_1
@@ -150,7 +133,6 @@
     .catch Landroid/database/sqlite/SQLiteFullException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5687
     :goto_0
     :try_start_2
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
@@ -170,7 +152,6 @@
     :try_start_3
     const-string v3, "AccountManagerService"
 
-    .line 5684
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -215,24 +196,20 @@
 
     goto :goto_0
 
-    .line 5689
     :goto_1
     :try_start_4
     monitor-exit v0
 
     return-void
 
-    .line 5687
     :goto_2
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
 
-    .line 5688
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 5689
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1

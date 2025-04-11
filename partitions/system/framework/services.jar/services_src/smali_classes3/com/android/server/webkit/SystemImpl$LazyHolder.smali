@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetINSTANCE()Lcom/android/server/webkit/SystemImpl;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/webkit/SystemImpl$LazyHolder;->INSTANCE:Lcom/android/server/webkit/SystemImpl;
 
     return-object v0
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 66
     new-instance v0, Lcom/android/server/webkit/SystemImpl;
 
     const/4 v1, 0x0

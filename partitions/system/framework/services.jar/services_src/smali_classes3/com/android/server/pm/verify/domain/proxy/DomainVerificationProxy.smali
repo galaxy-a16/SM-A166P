@@ -13,7 +13,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 51
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -38,7 +37,6 @@
     :goto_0
     if-eqz v7, :cond_1
 
-    .line 60
     new-instance p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1;
 
     move-object v2, p0
@@ -61,7 +59,6 @@
     :goto_1
     if-eqz p1, :cond_2
 
-    .line 65
     new-instance v0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV2;
 
     check-cast p5, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV2$Connection;
@@ -73,7 +70,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 69
     new-instance p1, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyCombined;
 
     invoke-direct {p1, p0, v0}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyCombined;-><init>(Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxy;Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxy;)V
@@ -90,7 +86,6 @@
 
     return-object v0
 
-    .line 80
     :cond_5
     new-instance p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyUnavailable;
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverServiceManager;)V
     .locals 0
 
-    .line 667
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$3;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 1
 
-    .line 669
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$3;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fgetmCoverWakeLock(Lcom/android/server/sepunion/cover/CoverServiceManager;)Landroid/os/PowerManager$WakeLock;
@@ -40,7 +38,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 670
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$3;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {p0}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fgetmCoverWakeLock(Lcom/android/server/sepunion/cover/CoverServiceManager;)Landroid/os/PowerManager$WakeLock;

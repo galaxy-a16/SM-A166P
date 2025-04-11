@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$2NBFDUZ4FD4H9WV7uKdu9T4YwUA(Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->lambda$onReportGeofencePauseStatus$4(II)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public static synthetic $r8$lambda$ADdbQfywA_xs9Na3pmGhAT-Rgec(Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->lambda$onReportGeofenceResumeStatus$5(II)V
 
     return-void
@@ -34,7 +32,6 @@
 .method public static synthetic $r8$lambda$QR-TUHLiXuXIPrY_HMSaS08uzgg(Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->lambda$onReportGeofenceAddStatus$2(II)V
 
     return-void
@@ -43,7 +40,6 @@
 .method public static synthetic $r8$lambda$Qq8Cx_08s37Wh3yszrEx-ystqMI(Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;ILandroid/location/Location;IJ)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->lambda$onReportGeofenceTransition$0(ILandroid/location/Location;IJ)V
 
     return-void
@@ -52,7 +48,6 @@
 .method public static synthetic $r8$lambda$TXjoZrLhS_xP8pLAVDYyA1vfDIM(Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;ILandroid/location/Location;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->lambda$onReportGeofenceStatus$1(ILandroid/location/Location;)V
 
     return-void
@@ -61,7 +56,6 @@
 .method public static synthetic $r8$lambda$mK8R6cLsUyKoP1XluWiEngCY_kM(Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->lambda$onReportGeofenceRemoveStatus$3(II)V
 
     return-void
@@ -70,12 +64,10 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssManagerService;Lcom/android/server/location/gnss/hal/GnssNative;)V
     .locals 0
 
-    .line 392
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->this$0:Lcom/android/server/location/gnss/GnssManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 393
     invoke-virtual {p2, p0}, Lcom/android/server/location/gnss/hal/GnssNative;->setGeofenceCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;)V
 
     return-void
@@ -84,17 +76,14 @@
 .method private synthetic lambda$onReportGeofenceAddStatus$2(II)V
     .locals 1
 
-    .line 431
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->getGeofenceHardware()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
 
-    .line 432
     invoke-virtual {p0, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->translateGeofenceStatus(I)I
 
     move-result p0
 
-    .line 431
     invoke-virtual {v0, p1, p0}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceAddStatus(II)V
 
     return-void
@@ -103,17 +92,14 @@
 .method private synthetic lambda$onReportGeofencePauseStatus$4(II)V
     .locals 1
 
-    .line 445
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->getGeofenceHardware()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
 
-    .line 446
     invoke-virtual {p0, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->translateGeofenceStatus(I)I
 
     move-result p0
 
-    .line 445
     invoke-virtual {v0, p1, p0}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofencePauseStatus(II)V
 
     return-void
@@ -122,17 +108,14 @@
 .method private synthetic lambda$onReportGeofenceRemoveStatus$3(II)V
     .locals 1
 
-    .line 438
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->getGeofenceHardware()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
 
-    .line 439
     invoke-virtual {p0, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->translateGeofenceStatus(I)I
 
     move-result p0
 
-    .line 438
     invoke-virtual {v0, p1, p0}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceRemoveStatus(II)V
 
     return-void
@@ -141,17 +124,14 @@
 .method private synthetic lambda$onReportGeofenceResumeStatus$5(II)V
     .locals 1
 
-    .line 452
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->getGeofenceHardware()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
 
-    .line 453
     invoke-virtual {p0, p2}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->translateGeofenceStatus(I)I
 
     move-result p0
 
-    .line 452
     invoke-virtual {v0, p1, p0}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceResumeStatus(II)V
 
     return-void
@@ -173,7 +153,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 420
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->getGeofenceHardware()Landroid/hardware/location/GeofenceHardwareImpl;
 
@@ -183,7 +162,6 @@
 
     invoke-virtual {v2, v1, v0, p2, v3}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceMonitorStatus(IILandroid/location/Location;I)V
 
-    .line 425
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->this$0:Lcom/android/server/location/gnss/GnssManagerService;
 
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssManagerService;->-$$Nest$fgetmSLocationProxy(Lcom/android/server/location/gnss/GnssManagerService;)Lcom/android/server/location/gnss/sec/SLocationProxy;
@@ -198,7 +176,6 @@
 .method private synthetic lambda$onReportGeofenceTransition$0(ILandroid/location/Location;IJ)V
     .locals 8
 
-    .line 406
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->getGeofenceHardware()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
@@ -227,13 +204,11 @@
 
     monitor-enter p0
 
-    .line 397
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
 
     if-nez v0, :cond_0
 
-    .line 398
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->this$0:Lcom/android/server/location/gnss/GnssManagerService;
 
     iget-object v0, v0, Lcom/android/server/location/gnss/GnssManagerService;->mContext:Landroid/content/Context;
@@ -244,7 +219,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
 
-    .line 400
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->mGeofenceHardwareImpl:Landroid/hardware/location/GeofenceHardwareImpl;
     :try_end_0
@@ -265,7 +239,6 @@
 .method public onReportGeofenceAddStatus(II)V
     .locals 2
 
-    .line 431
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -276,7 +249,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 433
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->this$0:Lcom/android/server/location/gnss/GnssManagerService;
 
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssManagerService;->-$$Nest$fgetmSLocationProxy(Lcom/android/server/location/gnss/GnssManagerService;)Lcom/android/server/location/gnss/sec/SLocationProxy;
@@ -291,7 +263,6 @@
 .method public onReportGeofencePauseStatus(II)V
     .locals 2
 
-    .line 445
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -302,7 +273,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 447
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->this$0:Lcom/android/server/location/gnss/GnssManagerService;
 
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssManagerService;->-$$Nest$fgetmSLocationProxy(Lcom/android/server/location/gnss/GnssManagerService;)Lcom/android/server/location/gnss/sec/SLocationProxy;
@@ -317,7 +287,6 @@
 .method public onReportGeofenceRemoveStatus(II)V
     .locals 2
 
-    .line 438
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -328,7 +297,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 440
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->this$0:Lcom/android/server/location/gnss/GnssManagerService;
 
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssManagerService;->-$$Nest$fgetmSLocationProxy(Lcom/android/server/location/gnss/GnssManagerService;)Lcom/android/server/location/gnss/sec/SLocationProxy;
@@ -343,7 +311,6 @@
 .method public onReportGeofenceResumeStatus(II)V
     .locals 2
 
-    .line 452
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -354,7 +321,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 454
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->this$0:Lcom/android/server/location/gnss/GnssManagerService;
 
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssManagerService;->-$$Nest$fgetmSLocationProxy(Lcom/android/server/location/gnss/GnssManagerService;)Lcom/android/server/location/gnss/sec/SLocationProxy;
@@ -369,7 +335,6 @@
 .method public onReportGeofenceStatus(ILandroid/location/Location;)V
     .locals 2
 
-    .line 415
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -386,7 +351,6 @@
 .method public onReportGeofenceTransition(ILandroid/location/Location;IJ)V
     .locals 9
 
-    .line 406
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -409,7 +373,6 @@
 
     invoke-virtual {v0, v8}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 410
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssManagerService$GnssGeofenceHalModule;->this$0:Lcom/android/server/location/gnss/GnssManagerService;
 
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssManagerService;->-$$Nest$fgetmSLocationProxy(Lcom/android/server/location/gnss/GnssManagerService;)Lcom/android/server/location/gnss/sec/SLocationProxy;
@@ -432,7 +395,6 @@
 .method public final translateGeofenceStatus(I)I
     .locals 0
 
-    .line 0
     const/16 p0, -0x95
 
     if-eq p1, p0, :cond_2

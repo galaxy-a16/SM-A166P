@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;
     .locals 0
 
-    .line 12
     new-instance p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;
 
     invoke-direct {p0}, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;-><init>()V
 
-    .line 13
     invoke-virtual {p0, p1}, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 9
     invoke-virtual {p0, p1}, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;
     .locals 0
 
-    .line 18
     new-array p0, p1, [Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 9
     invoke-virtual {p0, p1}, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable$1;->newArray(I)[Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;
 
     move-result-object p0

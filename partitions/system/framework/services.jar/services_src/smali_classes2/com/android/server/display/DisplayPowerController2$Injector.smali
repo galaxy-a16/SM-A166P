@@ -17,7 +17,6 @@
 .method public getAdaptiveBrightnessLongtermModelBuilder(Landroid/content/Context;Lcom/android/server/display/AdaptiveBrightnessLongtermModelBuilder$Injector;Lcom/android/server/display/BrightnessMappingStrategy;)Lcom/android/server/display/AdaptiveBrightnessLongtermModelBuilder;
     .locals 0
 
-    .line 4298
     new-instance p0, Lcom/android/server/display/AdaptiveBrightnessLongtermModelBuilder;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/display/AdaptiveBrightnessLongtermModelBuilder;-><init>(Landroid/content/Context;Lcom/android/server/display/AdaptiveBrightnessLongtermModelBuilder$Injector;Lcom/android/server/display/BrightnessMappingStrategy;)V
@@ -84,7 +83,6 @@
 
     move-object/from16 v30, p30
 
-    .line 4237
     new-instance v31, Lcom/android/server/display/AutomaticBrightnessController;
 
     move-object/from16 v0, v31
@@ -97,7 +95,6 @@
 .method public getClock()Lcom/android/server/display/DisplayPowerController2$Clock;
     .locals 0
 
-    .line 4190
     new-instance p0, Lcom/android/server/display/DisplayPowerController2$Injector$$ExternalSyntheticLambda0;
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerController2$Injector$$ExternalSyntheticLambda0;-><init>()V
@@ -108,7 +105,6 @@
 .method public getDisplayPowerProximityStateController(Lcom/android/server/display/WakelockController;Lcom/android/server/display/DisplayDeviceConfig;Landroid/os/Looper;Ljava/lang/Runnable;ILandroid/hardware/SensorManager;)Lcom/android/server/display/DisplayPowerProximityStateController;
     .locals 8
 
-    .line 4213
     new-instance p0, Lcom/android/server/display/DisplayPowerProximityStateController;
 
     const/4 v7, 0x0
@@ -135,7 +131,6 @@
 .method public getDisplayPowerState(Lcom/android/server/display/DisplayBlanker;Lcom/android/server/display/ColorFade;II)Lcom/android/server/display/DisplayPowerState;
     .locals 0
 
-    .line 4195
     new-instance p0, Lcom/android/server/display/DisplayPowerState;
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/display/DisplayPowerState;-><init>(Lcom/android/server/display/DisplayBlanker;Lcom/android/server/display/ColorFade;II)V
@@ -146,7 +141,6 @@
 .method public getDualRampAnimator(Lcom/android/server/display/DisplayPowerState;Landroid/util/FloatProperty;Landroid/util/FloatProperty;)Lcom/android/server/display/RampAnimator$DualRampAnimator;
     .locals 0
 
-    .line 4201
     new-instance p0, Lcom/android/server/display/RampAnimator$DualRampAnimator;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/display/RampAnimator$DualRampAnimator;-><init>(Ljava/lang/Object;Landroid/util/FloatProperty;Landroid/util/FloatProperty;)V
@@ -157,7 +151,6 @@
 .method public getHqmDataDispatcher()Lcom/android/server/power/HqmDataDispatcher;
     .locals 0
 
-    .line 4304
     invoke-static {}, Lcom/android/server/power/HqmDataDispatcher;->getInstance()Lcom/android/server/power/HqmDataDispatcher;
 
     move-result-object p0
@@ -168,7 +161,6 @@
 .method public getInteractiveModeBrightnessMapper(Landroid/content/res/Resources;Lcom/android/server/display/DisplayDeviceConfig;Lcom/android/server/display/whitebalance/DisplayWhiteBalanceController;)Lcom/android/server/display/BrightnessMappingStrategy;
     .locals 0
 
-    .line 4252
     invoke-static {p1, p2, p3}, Lcom/android/server/display/BrightnessMappingStrategy;->create(Landroid/content/res/Resources;Lcom/android/server/display/DisplayDeviceConfig;Lcom/android/server/display/whitebalance/DisplayWhiteBalanceController;)Lcom/android/server/display/BrightnessMappingStrategy;
 
     move-result-object p0
@@ -179,7 +171,6 @@
 .method public getScreenOffBrightnessSensorController(Landroid/hardware/SensorManager;Landroid/hardware/Sensor;Landroid/os/Handler;Lcom/android/server/display/ScreenOffBrightnessSensorController$Clock;[ILcom/android/server/display/BrightnessMappingStrategy;)Lcom/android/server/display/ScreenOffBrightnessSensorController;
     .locals 7
 
-    .line 4284
     new-instance p0, Lcom/android/server/display/ScreenOffBrightnessSensorController;
 
     move-object v0, p0
@@ -204,7 +195,6 @@
 .method public getWakelockController(ILandroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;)Lcom/android/server/display/WakelockController;
     .locals 0
 
-    .line 4206
     new-instance p0, Lcom/android/server/display/WakelockController;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/WakelockController;-><init>(ILandroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;)V

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection;Landroid/content/Context;)V
     .locals 0
 
-    .line 1032
     iput-object p1, p0, Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection$1;->this$0:Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection;
 
     iput-object p2, p0, Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection$1;->val$context:Landroid/content/Context;
@@ -31,17 +30,14 @@
 .method public run()V
     .locals 3
 
-    .line 1035
     invoke-static {}, Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection;->-$$Nest$sfgetsInstance()Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1036
     monitor-enter p0
 
-    .line 1037
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection$1;->val$context:Landroid/content/Context;
 
@@ -51,7 +47,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1038
     iget-object v0, p0, Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection$1;->this$0:Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection;
 
     const/4 v1, 0x0
@@ -60,13 +55,10 @@
 
     const/4 v2, 0x0
 
-    .line 1039
     iput-boolean v2, v0, Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection;->mBinding:Z
 
-    .line 1040
     invoke-static {v0, v1}, Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection;->-$$Nest$fputmUnbindingRunnable(Lcom/android/server/pm/AsecInstallHelper$MyServiceConnection;Ljava/lang/Runnable;)V
 
-    .line 1041
     monitor-exit p0
 
     goto :goto_0

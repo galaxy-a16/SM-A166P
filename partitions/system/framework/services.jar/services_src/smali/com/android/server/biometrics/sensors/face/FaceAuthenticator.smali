@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/hardware/face/IFaceService;I)V
     .locals 0
 
-    .line 41
     invoke-direct {p0}, Landroid/hardware/biometrics/IBiometricAuthenticator$Stub;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
-    .line 43
     iput p2, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public cancelAuthenticationFromService(Landroid/os/IBinder;Ljava/lang/String;J)V
     .locals 6
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget v1, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -49,7 +45,6 @@
 .method public createTestSession(Landroid/hardware/biometrics/ITestSessionCallback;Ljava/lang/String;)Landroid/hardware/biometrics/ITestSession;
     .locals 1
 
-    .line 49
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -64,7 +59,6 @@
 .method public dumpSensorServiceStateProto(Z)[B
     .locals 1
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -79,7 +73,6 @@
 .method public getAuthenticatorId(I)J
     .locals 1
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -94,7 +87,6 @@
 .method public getLockoutModeForUser(I)I
     .locals 1
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -109,7 +101,6 @@
 .method public getSensorProperties(Ljava/lang/String;)Landroid/hardware/biometrics/SensorPropertiesInternal;
     .locals 1
 
-    .line 55
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -124,7 +115,6 @@
 .method public hasEnrolledTemplates(ILjava/lang/String;)Z
     .locals 1
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -139,7 +129,6 @@
 .method public invalidateAuthenticatorId(ILandroid/hardware/biometrics/IInvalidationCallback;)V
     .locals 1
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -152,7 +141,6 @@
 .method public isHardwareDetected(Ljava/lang/String;)Z
     .locals 1
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -169,7 +157,6 @@
 
     move-object v0, p0
 
-    .line 68
     iget-object v1, v0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     new-instance v2, Landroid/hardware/face/FaceAuthenticateOptions$Builder;
@@ -178,26 +165,22 @@
 
     move/from16 v3, p5
 
-    .line 70
     invoke-virtual {v2, v3}, Landroid/hardware/face/FaceAuthenticateOptions$Builder;->setUserId(I)Landroid/hardware/face/FaceAuthenticateOptions$Builder;
 
     move-result-object v2
 
     iget v0, v0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
 
-    .line 71
     invoke-virtual {v2, v0}, Landroid/hardware/face/FaceAuthenticateOptions$Builder;->setSensorId(I)Landroid/hardware/face/FaceAuthenticateOptions$Builder;
 
     move-result-object v0
 
     move-object/from16 v2, p7
 
-    .line 72
     invoke-virtual {v0, v2}, Landroid/hardware/face/FaceAuthenticateOptions$Builder;->setOpPackageName(Ljava/lang/String;)Landroid/hardware/face/FaceAuthenticateOptions$Builder;
 
     move-result-object v0
 
-    .line 73
     invoke-virtual {v0}, Landroid/hardware/face/FaceAuthenticateOptions$Builder;->build()Landroid/hardware/face/FaceAuthenticateOptions;
 
     move-result-object v6
@@ -218,7 +201,6 @@
 
     move/from16 v10, p11
 
-    .line 68
     invoke-interface/range {v0 .. v10}, Landroid/hardware/face/IFaceService;->prepareForAuthentication(ZLandroid/os/IBinder;JLandroid/hardware/biometrics/IBiometricSensorReceiver;Landroid/hardware/face/FaceAuthenticateOptions;JIZ)V
 
     return-void
@@ -227,7 +209,6 @@
 .method public resetLockout(Landroid/os/IBinder;Ljava/lang/String;I[B)V
     .locals 6
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget v2, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I
@@ -248,7 +229,6 @@
 .method public startPreparedClient(I)V
     .locals 1
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mFaceService:Landroid/hardware/face/IFaceService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/FaceAuthenticator;->mSensorId:I

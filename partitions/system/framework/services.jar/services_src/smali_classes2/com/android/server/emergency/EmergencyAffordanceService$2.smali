@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/emergency/EmergencyAffordanceService;)V
     .locals 0
 
-    .line 99
     iput-object p1, p0, Lcom/android/server/emergency/EmergencyAffordanceService$2;->this$0:Lcom/android/server/emergency/EmergencyAffordanceService;
 
     invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onSubscriptionsChanged()V
     .locals 1
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/emergency/EmergencyAffordanceService$2;->this$0:Lcom/android/server/emergency/EmergencyAffordanceService;
 
     invoke-static {p0}, Lcom/android/server/emergency/EmergencyAffordanceService;->-$$Nest$fgetmHandler(Lcom/android/server/emergency/EmergencyAffordanceService;)Lcom/android/server/emergency/EmergencyAffordanceService$MyHandler;

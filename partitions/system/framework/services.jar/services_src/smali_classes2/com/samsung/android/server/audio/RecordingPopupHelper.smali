@@ -13,32 +13,27 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static getAppName(Landroid/content/Context;I)Ljava/lang/String;
     .locals 2
 
-    .line 80
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 81
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getNameForUid(I)Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 83
     :try_start_0
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
-    .line 84
     invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -51,7 +46,6 @@
 
     return-object p0
 
-    .line 86
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -71,7 +65,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -82,7 +75,6 @@
 
     const p1, 0x10401ae
 
-    .line 90
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -92,7 +84,6 @@
     :cond_0
     const p1, 0x104000e
 
-    .line 92
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -109,34 +100,27 @@
 
     const-string p0, "[RECORDING POPUP] There is no audio handler"
 
-    .line 60
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 64
     :cond_0
     sget v1, Lcom/samsung/android/server/audio/RecordingPopupHelper;->sOldPortId:I
 
     if-eq v1, p2, :cond_2
 
-    .line 65
     sput p2, Lcom/samsung/android/server/audio/RecordingPopupHelper;->sOldPortId:I
 
-    .line 66
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    .line 67
     sget-wide v3, Lcom/samsung/android/server/audio/RecordingPopupHelper;->sPreviousTime:J
 
     sub-long v3, v1, v3
 
-    .line 68
     sput-wide v1, Lcom/samsung/android/server/audio/RecordingPopupHelper;->sPreviousTime:J
 
-    .line 69
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,7 +151,6 @@
 
     const/16 p2, 0xad4
 
-    .line 70
     invoke-virtual {p0, p2}, Landroid/os/Handler;->removeMessages(I)V
 
     const-wide/16 v0, 0xfa0
@@ -176,7 +159,6 @@
 
     if-lez v0, :cond_1
 
-    .line 72
     invoke-virtual {p0, p2, p1, p3}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p1
@@ -187,7 +169,6 @@
 
     goto :goto_0
 
-    .line 74
     :cond_1
     invoke-virtual {p0, p2, p1, p3}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
@@ -205,7 +186,6 @@
 .method public static showRecordingPopup(Landroid/content/Context;II)V
     .locals 2
 
-    .line 43
     invoke-static {p0, p1}, Lcom/samsung/android/server/audio/RecordingPopupHelper;->getAppName(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
@@ -229,7 +209,6 @@
 
     const p2, 0x1040bb4
 
-    .line 49
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
@@ -247,7 +226,6 @@
 
     const p2, 0x1040bb3
 
-    .line 51
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -265,7 +243,6 @@
     :cond_2
     const p2, 0x1040bb2
 
-    .line 53
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
@@ -280,7 +257,6 @@
     :goto_0
     const p2, 0x10405da
 
-    .line 47
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -296,7 +272,6 @@
     :goto_1
     const/4 p2, 0x0
 
-    .line 55
     invoke-static {p0, p1, p2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object p0

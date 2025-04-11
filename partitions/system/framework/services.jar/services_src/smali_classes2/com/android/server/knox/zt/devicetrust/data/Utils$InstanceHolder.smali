@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetINSTANCE()Lcom/android/server/knox/zt/devicetrust/data/Utils;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/knox/zt/devicetrust/data/Utils$InstanceHolder;->INSTANCE:Lcom/android/server/knox/zt/devicetrust/data/Utils;
 
     return-object v0
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 63
     new-instance v0, Lcom/android/server/knox/zt/devicetrust/data/Utils;
 
     const/4 v1, 0x0

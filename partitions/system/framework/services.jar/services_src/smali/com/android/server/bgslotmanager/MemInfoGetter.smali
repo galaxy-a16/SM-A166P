@@ -15,14 +15,12 @@
 .method public constructor <init>()V
     .locals 10
 
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x3000
 
     const/16 v1, 0x10
 
-    .line 9
     filled-new-array {v0, v1}, [I
 
     move-result-object v2
@@ -89,14 +87,12 @@
 
     iput-object v0, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->memoryMBToGBPool:[[I
 
-    .line 21
     new-instance v0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->mInfoInner:Lcom/android/internal/util/MemInfoReader;
 
-    .line 22
     invoke-static {}, Lcom/android/server/bgslotmanager/MemInfoGetter;->getTotalMemoryMB()J
 
     move-result-wide v0
@@ -109,7 +105,6 @@
 .method public static getTotalMemoryMB()J
     .locals 4
 
-    .line 26
     invoke-static {}, Landroid/os/Process;->getTotalMemory()J
 
     move-result-wide v0
@@ -126,31 +121,26 @@
 .method public getAvailableMemLegacy()J
     .locals 8
 
-    .line 39
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/MemInfoGetter;->readLightMemInfo()V
 
-    .line 40
     iget-object v0, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->mInfoInner:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->getFreeSize()J
 
     move-result-wide v0
 
-    .line 41
     iget-object v2, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->mInfoInner:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v2}, Lcom/android/internal/util/MemInfoReader;->getCachedSizeLegacy()J
 
     move-result-wide v2
 
-    .line 42
     iget-object v4, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->mInfoInner:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {v4}, Lcom/android/internal/util/MemInfoReader;->getRbinTotalSize()J
 
     move-result-wide v4
 
-    .line 43
     iget-object p0, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->mInfoInner:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getRbinAllocedSize()J
@@ -169,7 +159,6 @@
 .method public getPhysicalMemory()I
     .locals 9
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->memoryMBToGBPool:[[I
 
     array-length v1, v0
@@ -183,7 +172,6 @@
 
     aget-object v4, v0, v3
 
-    .line 61
     iget-wide v5, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->mTotalMemMb:J
 
     aget v7, v4, v2
@@ -196,7 +184,6 @@
 
     const/4 p0, 0x1
 
-    .line 62
     aget p0, v4, p0
 
     return p0
@@ -213,10 +200,8 @@
 .method public final getSwapTotalSizeKb()J
     .locals 2
 
-    .line 34
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/MemInfoGetter;->readLightMemInfo()V
 
-    .line 35
     iget-object p0, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->mInfoInner:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getSwapTotalSizeKb()J
@@ -229,7 +214,6 @@
 .method public getSwapsizeGB()I
     .locals 6
 
-    .line 49
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/MemInfoGetter;->getSwapTotalSizeKb()J
 
     move-result-wide v0
@@ -240,7 +224,6 @@
 
     long-to-int v0, v0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->memoryMBToGBPool:[[I
 
     array-length v1, p0
@@ -254,14 +237,12 @@
 
     aget-object v4, p0, v3
 
-    .line 52
     aget v5, v4, v2
 
     if-le v0, v5, :cond_0
 
     const/4 p0, 0x1
 
-    .line 53
     aget p0, v4, p0
 
     return p0
@@ -278,7 +259,6 @@
 .method public final readLightMemInfo()V
     .locals 0
 
-    .line 30
     iget-object p0, p0, Lcom/android/server/bgslotmanager/MemInfoGetter;->mInfoInner:Lcom/android/internal/util/MemInfoReader;
 
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->readLightMemInfo()V

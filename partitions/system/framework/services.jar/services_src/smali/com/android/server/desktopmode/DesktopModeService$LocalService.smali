@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/DesktopModeService;)V
     .locals 0
 
-    .line 919
     iput-object p1, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-direct {p0}, Lcom/samsung/android/desktopmode/DesktopModeManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/DesktopModeService;Lcom/android/server/desktopmode/DesktopModeService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService$LocalService;-><init>(Lcom/android/server/desktopmode/DesktopModeService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public getCurrentUiMode()I
     .locals 0
 
-    .line 994
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$mgetCurrentUiMode(Lcom/android/server/desktopmode/DesktopModeService;)I
@@ -46,7 +43,6 @@
 .method public getDesktopModeKillPolicy()Landroid/os/Bundle;
     .locals 0
 
-    .line 948
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DesktopModeService;->getDesktopModeKillPolicy()Landroid/os/Bundle;
@@ -59,7 +55,6 @@
 .method public getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
     .locals 0
 
-    .line 928
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DesktopModeService;->getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
@@ -72,7 +67,6 @@
 .method public getDexHDMIAutoEnterState()I
     .locals 2
 
-    .line 1075
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/DesktopModeService;)Landroid/content/Context;
@@ -87,7 +81,6 @@
 
     const/16 v1, 0x9
 
-    .line 1076
     invoke-static {p0, v0, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettings(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -98,7 +91,6 @@
 .method public getModeToModeChangeType()I
     .locals 0
 
-    .line 1088
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$mgetModeToModeChangeType(Lcom/android/server/desktopmode/DesktopModeService;)I
@@ -111,7 +103,6 @@
 .method public getTouchpadSupportedFeatures()I
     .locals 0
 
-    .line 1083
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$mgetTouchpadSupportedFeatures(Lcom/android/server/desktopmode/DesktopModeService;)I
@@ -124,7 +115,6 @@
 .method public isConfigurationChangedFromDeX(Landroid/content/res/Configuration;)Z
     .locals 0
 
-    .line 1004
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misConfigurationChangedFromDeX(Lcom/android/server/desktopmode/DesktopModeService;Landroid/content/res/Configuration;)Z
@@ -137,7 +127,6 @@
 .method public isDesktopModeAvailableEx(ZZ)Z
     .locals 0
 
-    .line 964
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misDesktopModeAvailableEx(Lcom/android/server/desktopmode/DesktopModeService;ZZ)Z
@@ -150,7 +139,6 @@
 .method public isDesktopModeEnablingOrEnabled()Z
     .locals 0
 
-    .line 958
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misDesktopModeEnablingOrEnabled(Lcom/android/server/desktopmode/DesktopModeService;)Z
@@ -163,7 +151,6 @@
 .method public isDesktopModeForPreparing()Z
     .locals 0
 
-    .line 933
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misDesktopModeForPreparing(Lcom/android/server/desktopmode/DesktopModeService;)Z
@@ -176,7 +163,6 @@
 .method public isDesktopModeForPreparing(I)Z
     .locals 0
 
-    .line 938
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misDesktopModeForPreparing(Lcom/android/server/desktopmode/DesktopModeService;I)Z
@@ -189,7 +175,6 @@
 .method public isExternalDisplayConnected()Z
     .locals 0
 
-    .line 943
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DesktopModeService;->isExternalDisplayConnected()Z
@@ -202,7 +187,6 @@
 .method public isForcedInternalScreenModeEnabled()Z
     .locals 0
 
-    .line 969
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misForcedInternalScreenModeEnabled(Lcom/android/server/desktopmode/DesktopModeService;)Z
@@ -215,7 +199,6 @@
 .method public isLockTaskModeEnabledAndSecured()Z
     .locals 0
 
-    .line 999
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misLockTaskModeEnabledAndSecured(Lcom/android/server/desktopmode/DesktopModeService;)Z
@@ -228,7 +211,6 @@
 .method public isModeChangePending()Z
     .locals 0
 
-    .line 974
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misModeChangePending(Lcom/android/server/desktopmode/DesktopModeService;)Z
@@ -241,7 +223,6 @@
 .method public isModeChangePending(I)Z
     .locals 0
 
-    .line 979
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misModeChangePending(Lcom/android/server/desktopmode/DesktopModeService;I)Z
@@ -254,7 +235,6 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 984
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService;->onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -265,7 +245,6 @@
 .method public onDesktopDisplayConfigured(Z)V
     .locals 0
 
-    .line 989
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$monDesktopDisplayConfigured(Lcom/android/server/desktopmode/DesktopModeService;Z)V
@@ -276,7 +255,6 @@
 .method public onSecuredAppLaunched(ILjava/lang/String;)V
     .locals 0
 
-    .line 1093
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$monSecuredAppLaunched(Lcom/android/server/desktopmode/DesktopModeService;ILjava/lang/String;)V
@@ -287,7 +265,6 @@
 .method public scheduleUpdateDesktopMode(Z)V
     .locals 0
 
-    .line 923
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService;->scheduleUpdateDesktopMode(Z)V
@@ -298,7 +275,6 @@
 .method public sendMessage(Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 0
 
-    .line 953
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService;->sendMessage(Landroid/os/Bundle;)Landroid/os/Bundle;
@@ -311,7 +287,6 @@
 .method public setDexHDMIAutoEnterState(I)I
     .locals 5
 
-    .line 1014
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/DesktopModeService;)Landroid/content/Context;
@@ -346,21 +321,16 @@
     :try_start_0
     const-string v1, "hdmi_initial_connection_dialog_shown"
 
-    .line 1053
     invoke-static {p0, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->deleteSettings(Landroid/content/ContentResolver;Ljava/lang/String;)V
 
-    .line 1055
     invoke-static {p0, v2}, Lcom/android/server/desktopmode/DesktopModeSettings;->deleteSettings(Landroid/content/ContentResolver;Ljava/lang/String;)V
 
-    .line 1057
     invoke-static {p0, v3}, Lcom/android/server/desktopmode/DesktopModeSettings;->deleteSettings(Landroid/content/ContentResolver;Ljava/lang/String;)V
 
-    .line 1059
     invoke-static {p0, v0, p1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;I)V
 
     goto :goto_1
 
-    .line 1032
     :cond_1
     invoke-static {p0, v3, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -370,7 +340,6 @@
 
     goto :goto_1
 
-    .line 1036
     :cond_2
     invoke-static {p0, v2, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -380,27 +349,22 @@
 
     const-string v1, "false"
 
-    .line 1040
     invoke-static {p0, v3, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1043
     :cond_3
     invoke-static {p0, v3, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     const-string/jumbo v1, "true"
 
-    .line 1046
     invoke-static {p0, v2, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1048
     invoke-static {p0, v0, p1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;I)V
 
     goto :goto_1
 
-    .line 1018
     :cond_4
     invoke-static {p0, v3, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -408,13 +372,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 1022
     invoke-static {p0, v2, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1024
     invoke-static {p0, v3}, Lcom/android/server/desktopmode/DesktopModeSettings;->deleteSettings(Landroid/content/ContentResolver;Ljava/lang/String;)V
 
-    .line 1027
     :cond_5
     invoke-static {p0, v0, p1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;I)V
     :try_end_0
@@ -425,7 +386,6 @@
 
     return p0
 
-    .line 1066
     :catch_0
     invoke-static {}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -459,7 +419,6 @@
 .method public startHome()V
     .locals 0
 
-    .line 1009
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$LocalService;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$mstartHome(Lcom/android/server/desktopmode/DesktopModeService;)V

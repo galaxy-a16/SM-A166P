@@ -9,7 +9,6 @@
 
     const-string p0, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
-    .line 101
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -25,6 +24,5 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 102
     throw p0
 .end method

@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivitySnapshotController;Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;IILcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 258
     iput-object p1, p0, Lcom/android/server/wm/ActivitySnapshotController$2;->this$0:Lcom/android/server/wm/ActivitySnapshotController;
 
     iput p3, p0, Lcom/android/server/wm/ActivitySnapshotController$2;->val$code:I
@@ -36,7 +35,6 @@
 .method public write()V
     .locals 4
 
-    .line 261
     iget-object v0, p0, Lcom/android/server/wm/ActivitySnapshotController$2;->this$0:Lcom/android/server/wm/ActivitySnapshotController;
 
     invoke-static {v0}, Lcom/android/server/wm/ActivitySnapshotController;->-$$Nest$fgetmSnapshotLoader(Lcom/android/server/wm/ActivitySnapshotController;)Lcom/android/server/wm/AppSnapshotLoader;
@@ -53,7 +51,6 @@
 
     move-result-object v0
 
-    .line 263
     iget-object v1, p0, Lcom/android/server/wm/ActivitySnapshotController$2;->this$0:Lcom/android/server/wm/ActivitySnapshotController;
 
     iget-object v1, v1, Lcom/android/server/wm/AbsAppSnapshotController;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -66,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 264
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/ActivitySnapshotController$2;->val$ar:Lcom/android/server/wm/ActivityRecord;
 
@@ -74,7 +70,6 @@
 
     if-nez v3, :cond_0
 
-    .line 265
     iget-object p0, p0, Lcom/android/server/wm/ActivitySnapshotController$2;->this$0:Lcom/android/server/wm/ActivitySnapshotController;
 
     iget-object p0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mCache:Lcom/android/server/wm/SnapshotCache;
@@ -83,7 +78,6 @@
 
     invoke-virtual {p0, v2, v0}, Lcom/android/server/wm/ActivitySnapshotCache;->putSnapshot(Lcom/android/server/wm/ActivityRecord;Landroid/window/TaskSnapshot;)V
 
-    .line 267
     :cond_0
     monitor-exit v1
 

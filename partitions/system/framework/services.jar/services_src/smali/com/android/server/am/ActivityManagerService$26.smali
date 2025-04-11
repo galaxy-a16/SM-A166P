@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Ljava/util/List;)V
     .locals 0
 
-    .line 23901
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$packageNames:Ljava/util/List;
@@ -31,14 +30,12 @@
 .method public run()V
     .locals 9
 
-    .line 23904
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->val$packageNames:Ljava/util/List;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    .line 23905
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {v0}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/DynamicHiddenApp;
@@ -49,7 +46,6 @@
 
     goto :goto_0
 
-    .line 23906
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -63,7 +59,6 @@
 
     if-nez v0, :cond_1
 
-    .line 23907
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {v0}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/DynamicHiddenApp;
@@ -72,7 +67,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/am/DynamicHiddenApp;->removeAllowlistByBUB()V
 
-    .line 23910
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -83,7 +77,6 @@
 
     monitor-enter v0
 
-    .line 23911
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -93,7 +86,6 @@
 
     move-result-object v2
 
-    .line 23912
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -105,14 +97,12 @@
     :goto_1
     if-ltz v3, :cond_6
 
-    .line 23913
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/am/ProcessRecord;
 
-    .line 23914
     iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {v6}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/DynamicHiddenApp;
@@ -131,10 +121,8 @@
 
     const/4 v6, -0x1
 
-    .line 23915
     invoke-virtual {v5, v6}, Lcom/android/server/am/ProcessRecord;->setIpmLaunchType(I)V
 
-    .line 23917
     :cond_2
     iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$26;->val$packageNames:Ljava/util/List;
 
@@ -166,16 +154,13 @@
 
     if-eqz v6, :cond_3
 
-    .line 23918
     invoke-virtual {v5, v4}, Lcom/android/server/am/ProcessRecord;->setIpmLaunchType(I)V
 
-    .line 23921
     :cond_3
     iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$26;->val$packageNames:Ljava/util/List;
 
     if-nez v6, :cond_4
 
-    .line 23922
     iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {v6}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/DynamicHiddenApp;
@@ -186,7 +171,6 @@
 
     goto :goto_2
 
-    .line 23923
     :cond_4
     iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -200,7 +184,6 @@
 
     if-nez v6, :cond_5
 
-    .line 23924
     iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {v6}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/DynamicHiddenApp;
@@ -215,7 +198,6 @@
 
     goto :goto_1
 
-    .line 23927
     :cond_6
     monitor-exit v0
     :try_end_0
@@ -223,7 +205,6 @@
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterProcLockedSection()V
 
-    .line 23928
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {v0}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/DynamicHiddenApp;
@@ -234,12 +215,10 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/am/DynamicHiddenApp;->updatePickedProcessLists(Ljava/util/List;)V
 
-    .line 23930
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->val$packageNames:Ljava/util/List;
 
     if-nez v0, :cond_7
 
-    .line 23931
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {p0}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/DynamicHiddenApp;
@@ -252,12 +231,10 @@
 
     const-string v0, "ALLOWLIST set in bootupbooster"
 
-    .line 23932
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 23933
     :cond_7
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -271,7 +248,6 @@
 
     if-nez v0, :cond_8
 
-    .line 23934
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {p0}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/DynamicHiddenApp;
@@ -284,7 +260,6 @@
 
     const-string v0, "ALLOWLIST clear in bootupbooster"
 
-    .line 23935
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_8
@@ -294,7 +269,6 @@
     :catchall_0
     move-exception p0
 
-    .line 23927
     :try_start_1
     monitor-exit v0
     :try_end_1

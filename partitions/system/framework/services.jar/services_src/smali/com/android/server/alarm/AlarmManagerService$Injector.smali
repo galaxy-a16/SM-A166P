@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 5378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5379
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -27,7 +25,6 @@
 .method public close()V
     .locals 2
 
-    .line 5457
     iget-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mNativeData:J
 
     invoke-static {v0, v1}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$smclose(J)V
@@ -38,7 +35,6 @@
 .method public getAlarmWakeLock()Landroid/os/PowerManager$WakeLock;
     .locals 2
 
-    .line 5471
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "power"
@@ -53,7 +49,6 @@
 
     const-string v1, "*alarm*"
 
-    .line 5472
     invoke-virtual {p0, v0, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p0
@@ -66,12 +61,10 @@
 
     const-string p0, "appops"
 
-    .line 5482
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 5481
     invoke-static {p0}, Lcom/android/internal/app/IAppOpsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IAppOpsService;
 
     move-result-object p0
@@ -82,7 +75,6 @@
 .method public getCallingUid()I
     .locals 0
 
-    .line 5418
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -93,7 +85,6 @@
 .method public getClockReceiver(Lcom/android/server/alarm/AlarmManagerService;)Lcom/android/server/alarm/AlarmManagerService$ClockReceiver;
     .locals 0
 
-    .line 5486
     new-instance p0, Lcom/android/server/alarm/AlarmManagerService$ClockReceiver;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -106,7 +97,6 @@
 .method public getCurrentTimeMillis()J
     .locals 2
 
-    .line 5467
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -117,7 +107,6 @@
 .method public getElapsedRealtimeMillis()J
     .locals 2
 
-    .line 5462
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -128,7 +117,6 @@
 .method public getNextAlarm(I)J
     .locals 2
 
-    .line 5422
     iget-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mNativeData:J
 
     invoke-static {v0, v1, p1}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$smgetNextAlarm(JI)J
@@ -141,7 +129,6 @@
 .method public getSystemUiUid(Landroid/content/pm/PackageManagerInternal;)I
     .locals 3
 
-    .line 5476
     invoke-virtual {p1}, Landroid/content/pm/PackageManagerInternal;->getSystemUiServiceComponent()Landroid/content/ComponentName;
 
     move-result-object p0
@@ -166,10 +153,8 @@
 
     const-string v0, "alarm_jni"
 
-    .line 5383
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 5384
     invoke-static {}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$sminit()J
 
     move-result-wide v0
@@ -182,7 +167,6 @@
 .method public initializeTimeIfRequired()V
     .locals 0
 
-    .line 5440
     invoke-static {}, Lcom/android/server/SystemClockTime;->initializeIfRequired()V
 
     return-void
@@ -191,7 +175,6 @@
 .method public isAlarmDriverPresent()Z
     .locals 4
 
-    .line 5392
     iget-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mNativeData:J
 
     const-wide/16 v2, 0x0
@@ -216,12 +199,10 @@
 
     const-string p0, "alarm_manager"
 
-    .line 5491
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
-    .line 5490
     invoke-static {p0, v0, p1}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     return-void
@@ -243,10 +224,8 @@
     :cond_0
     const-wide/16 v0, 0x3e8
 
-    .line 5403
     div-long v2, p2, v0
 
-    .line 5404
     rem-long/2addr p2, v0
 
     mul-long/2addr p2, v0
@@ -257,7 +236,6 @@
 
     move-wide v0, v2
 
-    .line 5407
     :goto_0
     iget-wide v4, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mNativeData:J
 
@@ -273,12 +251,10 @@
 
     if-eqz p0, :cond_1
 
-    .line 5410
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 5411
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -317,7 +293,6 @@
 
     invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5413
     invoke-static {p0}, Landroid/system/Os;->strerror(I)Ljava/lang/String;
 
     move-result-object p0
@@ -330,7 +305,6 @@
 
     const-string p1, "AlarmManager"
 
-    .line 5411
     invoke-static {p1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -340,7 +314,6 @@
 .method public setBootAlarm(Ljava/lang/String;)V
     .locals 4
 
-    .line 5451
     iget-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mNativeData:J
 
     const-wide/16 v2, 0x0
@@ -349,7 +322,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 5452
     invoke-static {v0, v1, p1}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$smsetBootAlarm(JLjava/lang/String;)V
 
     :cond_0
@@ -359,7 +331,6 @@
 .method public setCurrentTimeMillis(JILjava/lang/String;)V
     .locals 0
 
-    .line 5447
     invoke-static {p1, p2, p3, p4}, Lcom/android/server/SystemClockTime;->setTimeAndConfidence(JILjava/lang/String;)V
 
     return-void
@@ -368,7 +339,6 @@
 .method public setKernelTimeZoneOffset(I)V
     .locals 2
 
-    .line 5427
     iget-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mNativeData:J
 
     const p0, 0xea60
@@ -385,12 +355,10 @@
 .method public syncKernelTimeZoneOffset()V
     .locals 3
 
-    .line 5431
     invoke-virtual {p0}, Lcom/android/server/alarm/AlarmManagerService$Injector;->getCurrentTimeMillis()J
 
     move-result-wide v0
 
-    .line 5432
     invoke-static {}, Lcom/android/server/SystemTimeZone;->getTimeZoneId()Ljava/lang/String;
 
     move-result-object v2
@@ -399,12 +367,10 @@
 
     move-result-object v2
 
-    .line 5435
     invoke-virtual {v2, v0, v1}, Ljava/util/TimeZone;->getOffset(J)I
 
     move-result v0
 
-    .line 5436
     invoke-virtual {p0, v0}, Lcom/android/server/alarm/AlarmManagerService$Injector;->setKernelTimeZoneOffset(I)V
 
     return-void
@@ -413,7 +379,6 @@
 .method public waitForAlarm()I
     .locals 2
 
-    .line 5388
     iget-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$Injector;->mNativeData:J
 
     invoke-static {v0, v1}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$smwaitForAlarm(J)I

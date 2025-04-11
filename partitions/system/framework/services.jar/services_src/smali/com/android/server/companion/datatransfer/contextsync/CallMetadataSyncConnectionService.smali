@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCdmsi(Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;)Lcom/android/server/companion/CompanionDeviceManagerServiceInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mCdmsi:Lcom/android/server/companion/CompanionDeviceManagerServiceInternal;
 
     return-object p0
@@ -28,17 +27,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 42
     invoke-direct {p0}, Landroid/telecom/ConnectionService;-><init>()V
 
-    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mActiveConnections:Ljava/util/Map;
 
-    .line 54
     new-instance v0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$1;-><init>(Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;)V
@@ -53,10 +49,8 @@
 .method public onCreate()V
     .locals 2
 
-    .line 116
     invoke-super {p0}, Landroid/telecom/ConnectionService;->onCreate()V
 
-    .line 118
     const-class v0, Landroid/media/AudioManager;
 
     invoke-virtual {p0, v0}, Landroid/telecom/ConnectionService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -67,7 +61,6 @@
 
     iput-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 119
     const-class v0, Landroid/telecom/TelecomManager;
 
     invoke-virtual {p0, v0}, Landroid/telecom/ConnectionService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -78,7 +71,6 @@
 
     iput-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mTelecomManager:Landroid/telecom/TelecomManager;
 
-    .line 120
     const-class v0, Lcom/android/server/companion/CompanionDeviceManagerServiceInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -89,7 +81,6 @@
 
     iput-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mCdmsi:Lcom/android/server/companion/CompanionDeviceManagerServiceInternal;
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mCrossDeviceSyncControllerCallback:Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncControllerCallback;
 
     const/4 v1, 0x1
@@ -102,35 +93,28 @@
 .method public onCreateConnectionComplete(Landroid/telecom/Connection;)V
     .locals 3
 
-    .line 225
     instance-of v0, p1, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;
 
     if-eqz v0, :cond_0
 
-    .line 226
     check-cast p1, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;
 
-    .line 228
     invoke-static {p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;->-$$Nest$minitialize(Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;)V
 
-    .line 229
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mActiveConnections:Ljava/util/Map;
 
     new-instance v0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnectionIdentifier;
 
-    .line 230
     invoke-virtual {p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;->getAssociationId()I
 
     move-result v1
 
-    .line 231
     invoke-virtual {p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;->getCallId()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnectionIdentifier;-><init>(ILjava/lang/String;)V
 
-    .line 229
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
@@ -140,7 +124,6 @@
 .method public onCreateIncomingConnection(Landroid/telecom/PhoneAccountHandle;Landroid/telecom/ConnectionRequest;)Landroid/telecom/Connection;
     .locals 7
 
-    .line 128
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
@@ -151,7 +134,6 @@
 
     move-result v4
 
-    .line 131
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
@@ -162,24 +144,20 @@
 
     move-result-object p1
 
-    .line 130
     invoke-static {p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->fromBundle(Landroid/os/Bundle;)Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;
 
     move-result-object v5
 
     const/4 p1, 0x1
 
-    .line 132
     invoke-virtual {v5, p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->setDirection(I)V
 
-    .line 133
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 134
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
@@ -188,14 +166,12 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 135
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 136
     new-instance p1, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;
 
     iget-object v2, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mTelecomManager:Landroid/telecom/TelecomManager;
@@ -212,10 +188,8 @@
 
     const/16 p0, 0x10
 
-    .line 148
     invoke-virtual {p1, p0}, Landroid/telecom/Connection;->setConnectionProperties(I)V
 
-    .line 149
     invoke-virtual {p1}, Landroid/telecom/Connection;->setInitializing()V
 
     return-object p1
@@ -226,7 +200,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 157
     invoke-virtual {p1}, Landroid/telecom/PhoneAccountHandle;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -236,7 +209,6 @@
     :cond_0
     const-string/jumbo p0, "unknown PhoneAccount"
 
-    .line 158
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -266,13 +238,11 @@
 
     goto :goto_0
 
-    .line 165
     :cond_0
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getAccountHandle()Landroid/telecom/PhoneAccountHandle;
 
     move-result-object p1
 
-    .line 166
     :goto_0
     iget-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mTelecomManager:Landroid/telecom/TelecomManager;
 
@@ -280,12 +250,10 @@
 
     move-result-object v0
 
-    .line 168
     new-instance v7, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;
 
     invoke-direct {v7}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;-><init>()V
 
-    .line 170
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
@@ -296,20 +264,16 @@
 
     move-result-object v1
 
-    .line 169
     invoke-virtual {v7, v1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->setId(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    .line 171
     invoke-virtual {v7, v1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->setStatus(I)V
 
-    .line 172
     new-instance v1, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     if-eqz v0, :cond_1
 
-    .line 174
     invoke-virtual {v0}, Landroid/telecom/PhoneAccount;->getLabel()Ljava/lang/CharSequence;
 
     move-result-object v2
@@ -320,7 +284,6 @@
 
     goto :goto_1
 
-    .line 175
     :cond_1
     invoke-virtual {p1}, Landroid/telecom/PhoneAccountHandle;->getComponentName()Landroid/content/ComponentName;
 
@@ -335,7 +298,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 176
     invoke-virtual {v0}, Landroid/telecom/PhoneAccount;->getExtras()Landroid/os/Bundle;
 
     move-result-object v4
@@ -346,7 +308,6 @@
 
     goto :goto_2
 
-    .line 178
     :cond_2
     invoke-virtual {p1}, Landroid/telecom/PhoneAccountHandle;->getComponentName()Landroid/content/ComponentName;
 
@@ -356,7 +317,6 @@
 
     move-result-object v4
 
-    .line 179
     :goto_2
     invoke-virtual {p1}, Landroid/telecom/PhoneAccountHandle;->getComponentName()Landroid/content/ComponentName;
 
@@ -368,15 +328,12 @@
 
     invoke-direct {v1, v2, v4, p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 180
     invoke-virtual {v7, v1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->setFacilitator(Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;)V
 
     const/4 p1, 0x2
 
-    .line 181
     invoke-virtual {v7, p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->setDirection(I)V
 
-    .line 182
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getAddress()Landroid/net/Uri;
 
     move-result-object p1
@@ -387,7 +344,6 @@
 
     invoke-virtual {v7, p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->setCallerId(Ljava/lang/String;)V
 
-    .line 184
     invoke-virtual {v0}, Landroid/telecom/PhoneAccount;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
@@ -398,7 +354,6 @@
 
     move-result p1
 
-    .line 187
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
@@ -407,21 +362,18 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 188
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 189
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 191
     new-instance v0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;
 
     iget-object v2, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mTelecomManager:Landroid/telecom/TelecomManager;
@@ -440,7 +392,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnection;-><init>(Landroid/telecom/TelecomManager;Landroid/media/AudioManager;ILcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService$CallMetadataSyncConnectionCallback;)V
 
-    .line 203
     invoke-virtual {v7}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getCallerId()Ljava/lang/String;
 
     move-result-object v1
@@ -449,7 +400,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telecom/Connection;->setCallerDisplayName(Ljava/lang/String;I)V
 
-    .line 205
     iget-object v1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mCdmsi:Lcom/android/server/companion/CompanionDeviceManagerServiceInternal;
 
     invoke-virtual {v7}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getId()Ljava/lang/String;
@@ -458,15 +408,12 @@
 
     invoke-interface {v1, v2}, Lcom/android/server/companion/CompanionDeviceManagerServiceInternal;->addSelfOwnedCallId(Ljava/lang/String;)V
 
-    .line 206
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncConnectionService;->mCdmsi:Lcom/android/server/companion/CompanionDeviceManagerServiceInternal;
 
-    .line 207
     invoke-virtual {v7}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 208
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getAddress()Landroid/net/Uri;
 
     move-result-object p2
@@ -475,7 +422,6 @@
 
     move-result-object p2
 
-    .line 209
     invoke-virtual {v7}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getFacilitator()Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     move-result-object v2
@@ -484,15 +430,12 @@
 
     move-result-object v2
 
-    .line 207
     invoke-static {v1, p2, v2}, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController;->createCallCreateMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object p2
 
-    .line 206
     invoke-interface {p0, p1, p2}, Lcom/android/server/companion/CompanionDeviceManagerServiceInternal;->sendCrossDeviceSyncMessage(I[B)V
 
-    .line 211
     invoke-virtual {v0}, Landroid/telecom/Connection;->setInitializing()V
 
     return-object v0
@@ -503,7 +446,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 219
     invoke-virtual {p1}, Landroid/telecom/PhoneAccountHandle;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -513,7 +455,6 @@
     :cond_0
     const-string/jumbo p0, "unknown PhoneAccount"
 
-    .line 220
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 

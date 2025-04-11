@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/content/SyncManager;)V
     .locals 0
 
-    .line 642
     iput-object p1, p0, Lcom/android/server/content/SyncManager$7;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,7 +30,6 @@
 
     move-object v1, p0
 
-    .line 646
     iget-object v1, v1, Lcom/android/server/content/SyncManager$7;->this$0:Lcom/android/server/content/SyncManager;
 
     iget-object v2, v0, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;

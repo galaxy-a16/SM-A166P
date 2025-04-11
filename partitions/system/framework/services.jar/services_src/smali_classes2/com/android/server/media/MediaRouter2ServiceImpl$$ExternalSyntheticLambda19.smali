@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 9
 
-    .line 0
     move-object v0, p1
 
     check-cast v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;

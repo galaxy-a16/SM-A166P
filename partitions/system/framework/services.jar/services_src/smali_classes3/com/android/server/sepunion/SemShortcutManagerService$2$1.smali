@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemShortcutManagerService$2;)V
     .locals 0
 
-    .line 508
     iput-object p1, p0, Lcom/android/server/sepunion/SemShortcutManagerService$2$1;->this$1:Lcom/android/server/sepunion/SemShortcutManagerService$2;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -26,10 +25,8 @@
 
     const/16 v0, 0xa
 
-    .line 511
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 512
     iget-object p0, p0, Lcom/android/server/sepunion/SemShortcutManagerService$2$1;->this$1:Lcom/android/server/sepunion/SemShortcutManagerService$2;
 
     iget-object p0, p0, Lcom/android/server/sepunion/SemShortcutManagerService$2;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;

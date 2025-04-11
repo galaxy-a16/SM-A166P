@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/SystemServer;ZLjava/lang/String;)V
     .locals 0
 
-    .line 1413
     iput-object p1, p0, Lcom/android/server/SystemServer$2;->this$0:Lcom/android/server/SystemServer;
 
     iput-boolean p2, p0, Lcom/android/server/SystemServer$2;->val$reboot:Z
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 2
 
-    .line 1416
     iget-boolean v0, p0, Lcom/android/server/SystemServer$2;->val$reboot:Z
 
     iget-object p0, p0, Lcom/android/server/SystemServer$2;->val$reason:Ljava/lang/String;

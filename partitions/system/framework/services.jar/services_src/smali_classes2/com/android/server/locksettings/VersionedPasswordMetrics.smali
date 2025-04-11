@@ -13,13 +13,10 @@
 .method public constructor <init>(ILandroid/app/admin/PasswordMetrics;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p2, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
-    .line 36
     iput p1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mVersion:I
 
     return-void
@@ -30,7 +27,6 @@
 
     const/4 v0, 0x1
 
-    .line 40
     invoke-static {p1}, Landroid/app/admin/PasswordMetrics;->computeForCredential(Lcom/android/internal/widget/LockscreenCredential;)Landroid/app/admin/PasswordMetrics;
 
     move-result-object p1
@@ -43,7 +39,6 @@
 .method public static deserialize([B)Lcom/android/server/locksettings/VersionedPasswordMetrics;
     .locals 13
 
-    .line 70
     array-length v0, p0
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
@@ -52,20 +47,16 @@
 
     const/4 v1, 0x0
 
-    .line 71
     array-length v2, p0
 
     invoke-virtual {v0, p0, v1, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 72
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 73
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p0
 
-    .line 74
     new-instance v12, Landroid/app/admin/PasswordMetrics;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
@@ -76,7 +67,6 @@
 
     move-result v3
 
-    .line 75
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v4
@@ -97,7 +87,6 @@
 
     move-result v8
 
-    .line 76
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v9
@@ -114,7 +103,6 @@
 
     invoke-direct/range {v1 .. v11}, Landroid/app/admin/PasswordMetrics;-><init>(IIIIIIIIII)V
 
-    .line 77
     new-instance v0, Lcom/android/server/locksettings/VersionedPasswordMetrics;
 
     invoke-direct {v0, p0, v12}, Lcom/android/server/locksettings/VersionedPasswordMetrics;-><init>(ILandroid/app/admin/PasswordMetrics;)V
@@ -127,7 +115,6 @@
 .method public getMetrics()Landroid/app/admin/PasswordMetrics;
     .locals 0
 
-    .line 48
     iget-object p0, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     return-object p0
@@ -138,87 +125,74 @@
 
     const/16 v0, 0x2c
 
-    .line 53
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 54
     iget v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mVersion:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 55
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->credType:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 56
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->length:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 57
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->letters:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 58
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->upperCase:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 59
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->lowerCase:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 60
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->numeric:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 61
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->symbols:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 62
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->nonLetter:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 63
     iget-object v1, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget v1, v1, Landroid/app/admin/PasswordMetrics;->nonNumeric:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/locksettings/VersionedPasswordMetrics;->mMetrics:Landroid/app/admin/PasswordMetrics;
 
     iget p0, p0, Landroid/app/admin/PasswordMetrics;->seqLength:I
 
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 65
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0

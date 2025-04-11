@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/DesktopModeHelper;)V
     .locals 0
 
-    .line 58
     iput-object p1, p0, Lcom/samsung/android/server/audio/DesktopModeHelper$1;->this$0:Lcom/samsung/android/server/audio/DesktopModeHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDesktopModeStateChanged(Lcom/samsung/android/desktopmode/SemDesktopModeState;)V
     .locals 6
 
-    .line 61
     iget v0, p1, Lcom/samsung/android/desktopmode/SemDesktopModeState;->enabled:I
 
     const/4 v1, 0x1
@@ -50,7 +48,6 @@
     :cond_1
     move v0, v3
 
-    .line 66
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/DesktopModeHelper$1;->this$0:Lcom/samsung/android/server/audio/DesktopModeHelper;
 
@@ -64,7 +61,6 @@
 
     move-result v2
 
-    .line 68
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,7 +91,6 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    .line 73
     :cond_2
     iget-object v2, p0, Lcom/samsung/android/server/audio/DesktopModeHelper$1;->this$0:Lcom/samsung/android/server/audio/DesktopModeHelper;
 
@@ -105,15 +100,12 @@
 
     if-eq v2, v0, :cond_5
 
-    .line 74
     iget-object v2, p0, Lcom/samsung/android/server/audio/DesktopModeHelper$1;->this$0:Lcom/samsung/android/server/audio/DesktopModeHelper;
 
     invoke-static {v2, v0}, Lcom/samsung/android/server/audio/DesktopModeHelper;->-$$Nest$fputmDexState(Lcom/samsung/android/server/audio/DesktopModeHelper;Z)V
 
-    .line 75
     iget-object v0, p0, Lcom/samsung/android/server/audio/DesktopModeHelper$1;->this$0:Lcom/samsung/android/server/audio/DesktopModeHelper;
 
-    .line 76
     invoke-virtual {p1}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->getDisplayType()I
 
     move-result p1
@@ -128,7 +120,6 @@
     :goto_1
     invoke-static {v0, v1}, Lcom/samsung/android/server/audio/DesktopModeHelper;->-$$Nest$fputmIsDesktopMode(Lcom/samsung/android/server/audio/DesktopModeHelper;Z)V
 
-    .line 77
     iget-object p0, p0, Lcom/samsung/android/server/audio/DesktopModeHelper$1;->this$0:Lcom/samsung/android/server/audio/DesktopModeHelper;
 
     invoke-static {p0}, Lcom/samsung/android/server/audio/DesktopModeHelper;->-$$Nest$fgetmDexState(Lcom/samsung/android/server/audio/DesktopModeHelper;)Z

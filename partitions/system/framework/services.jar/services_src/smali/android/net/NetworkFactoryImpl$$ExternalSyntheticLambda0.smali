@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/net/NetworkFactoryImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroid/net/NetworkFactoryImpl$$ExternalSyntheticLambda0;->f$0:Landroid/net/NetworkFactoryImpl;
@@ -27,7 +26,6 @@
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Landroid/net/NetworkFactoryImpl$$ExternalSyntheticLambda0;->f$0:Landroid/net/NetworkFactoryImpl;
 
     invoke-static {p0, p1}, Landroid/net/NetworkFactoryImpl;->$r8$lambda$vKD6CEiPRjd7yw1gUI5QpSGW6mc(Landroid/net/NetworkFactoryImpl;Ljava/lang/Runnable;)V

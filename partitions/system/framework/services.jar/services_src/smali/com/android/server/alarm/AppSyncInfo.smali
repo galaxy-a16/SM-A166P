@@ -77,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAccountListener(Lcom/android/server/alarm/AppSyncInfo;)Lcom/android/server/alarm/AppSyncInfo$AccountListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->mAccountListener:Lcom/android/server/alarm/AppSyncInfo$AccountListener;
 
     return-object p0
@@ -86,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAccountsPackages(Lcom/android/server/alarm/AppSyncInfo;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->mAccountsPackages:Ljava/util/ArrayList;
 
     return-object p0
@@ -95,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/alarm/AppSyncInfo;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -104,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCscPackages(Lcom/android/server/alarm/AppSyncInfo;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->mCscPackages:Ljava/util/ArrayList;
 
     return-object p0
@@ -113,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTargetPackages(Lcom/android/server/alarm/AppSyncInfo;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
 
     return-object p0
@@ -122,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$fputmCharging(Lcom/android/server/alarm/AppSyncInfo;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mCharging:Z
 
     return-void
@@ -131,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$fputmScreenOn(Lcom/android/server/alarm/AppSyncInfo;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mScreenOn:Z
 
     return-void
@@ -140,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$mgetPackageTag(Lcom/android/server/alarm/AppSyncInfo;Ljava/lang/String;I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/alarm/AppSyncInfo;->getPackageTag(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -151,7 +143,6 @@
 .method public static bridge synthetic -$$Nest$minitFilter(Lcom/android/server/alarm/AppSyncInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/alarm/AppSyncInfo;->initFilter()V
 
     return-void
@@ -160,7 +151,6 @@
 .method public static bridge synthetic -$$Nest$mupdateSuspiciousPolicy(Lcom/android/server/alarm/AppSyncInfo;Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/alarm/AppSyncInfo;->updateSuspiciousPolicy(Landroid/content/Context;)V
 
     return-void
@@ -169,189 +159,160 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 12
 
-    .line 211
     invoke-direct {p0}, Lcom/android/server/alarm/AppSyncWrapper;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 146
     iput-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mReceiver:Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;
 
-    .line 147
     iput-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mFilter:Landroid/content/IntentFilter;
 
-    .line 152
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockExt:Ljava/lang/Object;
 
-    .line 159
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSet:Ljava/lang/Object;
 
-    .line 160
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSet:Ljava/util/Set;
 
-    .line 162
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSetFromApi:Ljava/lang/Object;
 
-    .line 163
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSetFromApi:Ljava/util/Set;
 
-    .line 165
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSetFromSCPM:Ljava/lang/Object;
 
-    .line 166
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSetFromSCPM:Ljava/util/Set;
 
-    .line 168
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
-    .line 172
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
 
-    .line 176
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mAccountsPackages:Ljava/util/ArrayList;
 
-    .line 180
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mCscPackages:Ljava/util/ArrayList;
 
-    .line 184
     new-instance v3, Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
     invoke-direct {v3}, Lcom/android/server/alarm/AppSyncInfo$PackageList;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackages:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
-    .line 185
     new-instance v4, Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
     invoke-direct {v4}, Lcom/android/server/alarm/AppSyncInfo$PackageList;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistAppSync3P:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
-    .line 186
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v5, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackagesFromConfig:Ljava/util/ArrayList;
 
-    .line 187
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackagesFromConfig3P:Ljava/util/ArrayList;
 
-    .line 192
     new-instance v6, Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
     invoke-direct {v6}, Lcom/android/server/alarm/AppSyncInfo$PackageList;-><init>()V
 
     iput-object v6, p0, Lcom/android/server/alarm/AppSyncInfo;->mAllowlistPackages:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
-    .line 194
     new-instance v7, Ljava/lang/Object;
 
     invoke-direct {v7}, Ljava/lang/Object;-><init>()V
 
     iput-object v7, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockAllowlistFromSCPM:Ljava/lang/Object;
 
-    .line 195
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v7, p0, Lcom/android/server/alarm/AppSyncInfo;->mAllowlistPackagesFromSCPM:Ljava/util/ArrayList;
 
-    .line 196
     new-instance v7, Ljava/lang/Object;
 
     invoke-direct {v7}, Ljava/lang/Object;-><init>()V
 
     iput-object v7, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockBlocklistFromSCPM:Ljava/lang/Object;
 
-    .line 197
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v7, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackagesFromSCPM:Ljava/util/ArrayList;
 
-    .line 202
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v7, p0, Lcom/android/server/alarm/AppSyncInfo;->mPermanentAllowlistPackages:Ljava/util/ArrayList;
 
-    .line 310
     new-instance v8, Landroid/content/IntentFilter;
 
     invoke-direct {v8}, Landroid/content/IntentFilter;-><init>()V
 
     iput-object v8, p0, Lcom/android/server/alarm/AppSyncInfo;->boot_filter:Landroid/content/IntentFilter;
 
-    .line 311
     new-instance v8, Lcom/android/server/alarm/AppSyncInfo$1;
 
     invoke-direct {v8, p0}, Lcom/android/server/alarm/AppSyncInfo$1;-><init>(Lcom/android/server/alarm/AppSyncInfo;)V
 
     iput-object v8, p0, Lcom/android/server/alarm/AppSyncInfo;->mBootIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 212
     iput-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mContext:Landroid/content/Context;
 
-    .line 213
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
@@ -360,118 +321,93 @@
 
     const/4 v8, 0x1
 
-    .line 214
     iput-boolean v8, p0, Lcom/android/server/alarm/AppSyncInfo;->mScreenOn:Z
 
     const/4 v8, 0x0
 
-    .line 215
     iput-boolean v8, p0, Lcom/android/server/alarm/AppSyncInfo;->mCharging:Z
 
-    .line 216
     new-instance v9, Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;
 
     invoke-direct {v9, p0}, Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;-><init>(Lcom/android/server/alarm/AppSyncInfo;)V
 
     iput-object v9, p0, Lcom/android/server/alarm/AppSyncInfo;->mReceiver:Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;
 
-    .line 217
     iget-object v10, p0, Lcom/android/server/alarm/AppSyncInfo;->mContext:Landroid/content/Context;
 
     iget-object v11, p0, Lcom/android/server/alarm/AppSyncInfo;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v10, v9, v11}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 218
     new-instance v9, Lcom/android/server/alarm/AppSyncInfo$AccountListener;
 
     invoke-direct {v9, p0, v0}, Lcom/android/server/alarm/AppSyncInfo$AccountListener;-><init>(Lcom/android/server/alarm/AppSyncInfo;Lcom/android/server/alarm/AppSyncInfo$AccountListener-IA;)V
 
     iput-object v9, p0, Lcom/android/server/alarm/AppSyncInfo;->mAccountListener:Lcom/android/server/alarm/AppSyncInfo$AccountListener;
 
-    .line 221
     new-instance v0, Lcom/android/server/alarm/AppSyncInfo$SCPMBroadcastReceiver;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/alarm/AppSyncInfo$SCPMBroadcastReceiver;-><init>(Lcom/android/server/alarm/AppSyncInfo;Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mSCPMReceiver:Lcom/android/server/alarm/AppSyncInfo$SCPMBroadcastReceiver;
 
-    .line 223
     monitor-enter v1
 
-    .line 224
     :try_start_0
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 225
     invoke-virtual {v3}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->clear()V
 
-    .line 226
     invoke-virtual {v4}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->clear()V
 
-    .line 227
     invoke-virtual {v7}, Ljava/util/ArrayList;->clear()V
 
     const-string p1, "com.sec.spp.push"
 
-    .line 232
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "com.sec.chaton"
 
-    .line 233
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "com.facebook.katana"
 
-    .line 234
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "com.twitter.android"
 
-    .line 235
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "com.facebook.orca"
 
-    .line 236
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "com.kakao.talk"
 
-    .line 237
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "com.google.android.apps.plus"
 
-    .line 238
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "com.mobilesrepublic.appygeek"
 
-    .line 239
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string/jumbo p1, "mnn.Android"
 
-    .line 240
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "com.google.android.apps.maps"
 
-    .line 241
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 247
     invoke-virtual {v3}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->loadAppSyncBlockList()V
 
-    .line 248
     invoke-virtual {v4}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->loadAppSync3PlusBlockList()V
 
-    .line 250
     invoke-virtual {v6}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->loadChnAllowlist()V
 
-    .line 252
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -490,7 +426,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 253
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackages:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
     invoke-virtual {v2, v0}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->contains(Ljava/lang/String;)Z
@@ -499,14 +434,12 @@
 
     if-nez v2, :cond_0
 
-    .line 254
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackages:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
     invoke-virtual {v2, v0}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->add(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 257
     :cond_1
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackagesFromConfig3P:Ljava/util/ArrayList;
 
@@ -528,7 +461,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 258
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistAppSync3P:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
     invoke-virtual {v2, v0}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->contains(Ljava/lang/String;)Z
@@ -537,14 +469,12 @@
 
     if-nez v2, :cond_2
 
-    .line 259
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistAppSync3P:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
     invoke-virtual {v2, v0}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->add(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 266
     :cond_3
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mPermanentAllowlistPackages:Ljava/util/ArrayList;
 
@@ -552,12 +482,10 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 271
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 272
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mCscPackages:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -577,14 +505,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 273
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 275
     :cond_4
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mPermanentAllowlistPackages:Ljava/util/ArrayList;
 
@@ -605,14 +531,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 276
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 278
     :cond_5
     :goto_4
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
@@ -625,7 +549,6 @@
 
     const-string p1, "AppSyncInfo"
 
-    .line 279
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -660,7 +583,6 @@
 
     goto :goto_4
 
-    .line 282
     :cond_6
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->boot_filter:Landroid/content/IntentFilter;
 
@@ -668,7 +590,6 @@
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 283
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mContext:Landroid/content/Context;
 
     iget-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mBootIntentReceiver:Landroid/content/BroadcastReceiver;
@@ -677,84 +598,72 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 287
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.facebook.services"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 288
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.facebook.katana"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 289
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.facebook.orca"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 290
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.facebook.pages.app"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 291
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.facebook.appmanager"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 292
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.facebook.system"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 293
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.whatsapp"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 294
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.instagram.android"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 295
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.skype.raider"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 296
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string v0, "com.microsoft.skydrive"
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 297
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
     const-string p1, "com.samsung.android.opencalendar"
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 298
     monitor-exit v1
 
     return-void
@@ -774,7 +683,6 @@
 
     const-string/jumbo v0, "ro.csc.country_code"
 
-    .line 205
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -787,14 +695,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 206
     new-instance v0, Lcom/android/server/alarm/AppSyncInfo;
 
     invoke-direct {v0, p0}, Lcom/android/server/alarm/AppSyncInfo;-><init>(Landroid/content/Context;)V
 
     return-object v0
 
-    .line 208
     :cond_0
     new-instance p0, Lcom/android/server/alarm/DummyAppSync;
 
@@ -812,14 +718,12 @@
 
     return v0
 
-    .line 407
     :cond_0
     :try_start_0
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p0
 
-    .line 408
     const-class v1, Landroid/app/usage/UsageStatsManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -828,12 +732,10 @@
 
     check-cast v1, Landroid/app/usage/UsageStatsManagerInternal;
 
-    .line 411
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 410
     invoke-virtual {v1, p1, p0, v2, v3}, Landroid/app/usage/UsageStatsManagerInternal;->getAppStandbyBucket(Ljava/lang/String;IJ)I
 
     move-result p0
@@ -862,7 +764,6 @@
 
     goto :goto_1
 
-    .line 867
     :cond_0
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -881,7 +782,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 868
     invoke-interface {p2, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -900,7 +800,6 @@
 
     return v0
 
-    .line 824
     :cond_0
     sget-object v1, Lcom/android/server/alarm/AppSyncInfo$2;->$SwitchMap$com$android$server$alarm$AppSyncWrapper$SET_TYPE:[I
 
@@ -916,7 +815,6 @@
 
     return v0
 
-    .line 826
     :cond_1
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSet:Ljava/lang/Object;
 
@@ -942,7 +840,6 @@
 
     goto :goto_0
 
-    .line 837
     :cond_0
     invoke-virtual {p0, p3, p4}, Lcom/android/server/alarm/AppSyncInfo;->getPackageTag(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -950,15 +847,12 @@
 
     const/4 v1, -0x1
 
-    .line 838
     invoke-virtual {p0, p3, v1}, Lcom/android/server/alarm/AppSyncInfo;->getPackageTag(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 839
     monitor-enter p1
 
-    .line 840
     :try_start_0
     invoke-interface {p2, p4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
@@ -983,7 +877,6 @@
     :catchall_0
     move-exception p0
 
-    .line 841
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1000,15 +893,12 @@
 
     const-string v0, ""
 
-    .line 450
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "<AppSyncInfo>"
 
-    .line 451
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 452
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1027,7 +917,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 453
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1046,7 +935,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 454
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1065,7 +953,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 455
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1086,10 +973,8 @@
 
     const-string v1, "  <AppSync3 Allowlist>"
 
-    .line 457
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 458
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mCscPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1111,7 +996,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 459
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1130,7 +1014,6 @@
 
     goto :goto_0
 
-    .line 461
     :cond_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1140,10 +1023,8 @@
 
     const-string v2, "  <AppSync3 TargetList>"
 
-    .line 463
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 464
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1163,7 +1044,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 465
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1182,7 +1062,6 @@
 
     goto :goto_1
 
-    .line 467
     :cond_1
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1190,10 +1069,8 @@
 
     const-string v2, "  <AppSync3 Blocklist>"
 
-    .line 470
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 471
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1216,17 +1093,14 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 472
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "  <AppSync3p Blocklist>"
 
-    .line 474
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 475
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1249,12 +1123,10 @@
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 476
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 478
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -1263,7 +1135,6 @@
 .method public final getPackageTag(Ljava/lang/String;I)Ljava/lang/String;
     .locals 0
 
-    .line 815
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1286,7 +1157,6 @@
 .method public getWindowLength()J
     .locals 2
 
-    .line 435
     sget-wide v0, Lcom/android/server/alarm/AppSyncInfo;->EXP_MIN_INEXACT_WINDOW:J
 
     return-wide v0
@@ -1295,7 +1165,6 @@
 .method public final initFilter()V
     .locals 2
 
-    .line 427
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
@@ -1304,24 +1173,20 @@
 
     const-string v1, "android.intent.action.SCREEN_OFF"
 
-    .line 428
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 429
     iget-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 430
     iget-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.ACTION_POWER_CONNECTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 431
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->mFilter:Landroid/content/IntentFilter;
 
     const-string v0, "android.intent.action.ACTION_POWER_DISCONNECTED"
@@ -1336,7 +1201,6 @@
 
     move-wide/from16 v0, p6
 
-    .line 439
     sget-wide v2, Lcom/android/server/alarm/AppSyncInfo;->EXP_MIN_INEXACT_WINDOW:J
 
     const-wide/16 v4, 0x0
@@ -1373,7 +1237,6 @@
 
     move-object/from16 v11, p9
 
-    .line 440
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/alarm/AppSyncInfo;->isSuspiciousAlarm(IJILjava/lang/String;)Z
 
     move-result v2
@@ -1384,7 +1247,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 441
     sget-wide v6, Lcom/android/server/alarm/AppSyncInfo;->EXP_MIN_INEXACT_WINDOW:J
 
     cmp-long v3, p4, v6
@@ -1432,13 +1294,11 @@
 
     return v0
 
-    .line 305
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 306
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackages:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
     invoke-virtual {v1, p1}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->contains(Ljava/lang/String;)Z
@@ -1449,7 +1309,6 @@
 
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistAppSync3P:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
-    .line 307
     invoke-virtual {p0, p1}, Lcom/android/server/alarm/AppSyncInfo$PackageList;->contains(Ljava/lang/String;)Z
 
     move-result p0
@@ -1470,14 +1329,12 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 336
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     goto :goto_0
 
-    .line 338
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1486,7 +1343,6 @@
     :goto_0
     sub-long/2addr p2, v1
 
-    .line 341
     sget-wide v1, Lcom/android/server/alarm/AppSyncInfo;->SUSPICIOUS_TIME_THRESHOLD:J
 
     cmp-long p1, p2, v1
@@ -1495,7 +1351,6 @@
 
     return v0
 
-    .line 344
     :cond_1
     sget-object p1, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->SUSPICIOUS_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
@@ -1513,7 +1368,6 @@
 .method public final isSystemApplication(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     and-int/2addr p1, p0
@@ -1532,7 +1386,6 @@
 .method public isTargetApplication(ILjava/lang/String;)Z
     .locals 3
 
-    .line 359
     invoke-static {p1}, Landroid/os/UserHandle;->isApp(I)Z
 
     move-result v0
@@ -1543,13 +1396,11 @@
 
     return v1
 
-    .line 363
     :cond_0
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 366
     :try_start_0
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mPm:Landroid/content/pm/PackageManager;
 
@@ -1569,7 +1420,6 @@
 
     return v1
 
-    .line 373
     :cond_1
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -1581,7 +1431,6 @@
 
     iget-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
-    .line 374
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v2
@@ -1594,7 +1443,6 @@
 
     iget-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
 
-    .line 375
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v2
@@ -1607,7 +1455,6 @@
 
     return v1
 
-    .line 379
     :cond_2
     invoke-virtual {p0, p2}, Lcom/android/server/alarm/AppSyncInfo;->isIgnorePackage(Ljava/lang/String;)Z
 
@@ -1617,7 +1464,6 @@
 
     return v1
 
-    .line 383
     :cond_3
     invoke-static {p1, p2}, Lcom/android/server/alarm/AppSyncInfo;->isActivePackage(ILjava/lang/String;)Z
 
@@ -1627,7 +1473,6 @@
 
     return v1
 
-    .line 387
     :cond_4
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mAllowlistPackages:Lcom/android/server/alarm/AppSyncInfo$PackageList;
 
@@ -1645,7 +1490,6 @@
 
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mAllowlistPackagesFromSCPM:Ljava/util/ArrayList;
 
-    .line 388
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v2
@@ -1659,7 +1503,6 @@
     :cond_5
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackagesFromSCPM:Ljava/util/ArrayList;
 
-    .line 389
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v2
@@ -1672,7 +1515,6 @@
 
     return v0
 
-    .line 393
     :cond_6
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->preloadedPackages:Ljava/util/Set;
 
@@ -1688,7 +1530,6 @@
 
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo;->mTargetPackages:Ljava/util/ArrayList;
 
-    .line 394
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p1
@@ -1712,12 +1553,10 @@
 .method public final updateSuspiciousPolicy(Landroid/content/Context;)V
     .locals 13
 
-    .line 949
     new-instance v0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;-><init>(Lcom/android/server/alarm/AppSyncInfo;Landroid/content/Context;)V
 
-    .line 950
     invoke-virtual {v0}, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->isSCPMAvailable()Z
 
     move-result p1
@@ -1728,29 +1567,23 @@
 
     if-nez p1, :cond_0
 
-    .line 953
     sput-wide v3, Lcom/android/server/alarm/AppSyncInfo;->SUSPICIOUS_TIME_THRESHOLD:J
 
-    .line 954
     sput-wide v1, Lcom/android/server/alarm/AppSyncInfo;->EXP_MIN_INEXACT_WINDOW:J
 
-    .line 955
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSetFromSCPM:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 956
     :try_start_0
     iget-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSetFromSCPM:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 957
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 958
     invoke-virtual {p0}, Lcom/android/server/alarm/AppSyncInfo;->updateSuspiciousTags()V
 
     return-void
@@ -1758,7 +1591,6 @@
     :catchall_0
     move-exception p0
 
-    .line 957
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -1766,28 +1598,23 @@
 
     throw p0
 
-    .line 962
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->getSuspiciousTimeLimitFromSCPM()J
 
     move-result-wide v5
 
-    .line 963
     invoke-virtual {v0}, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->getInexactWindowFromSCPM()J
 
     move-result-wide v7
 
-    .line 964
     invoke-virtual {v0}, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->getSuspiciousTagFromSCPM()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    .line 965
     invoke-virtual {v0}, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->getAllowlistPkgFromSCPM()Ljava/util/ArrayList;
 
     move-result-object v9
 
-    .line 966
     invoke-virtual {v0}, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->getBlocklistPkgFromSCPM()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -1803,7 +1630,6 @@
     :cond_1
     move-wide v3, v5
 
-    .line 968
     :goto_0
     sput-wide v3, Lcom/android/server/alarm/AppSyncInfo;->SUSPICIOUS_TIME_THRESHOLD:J
 
@@ -1816,74 +1642,60 @@
     :cond_2
     move-wide v1, v5
 
-    .line 969
     :goto_1
     sput-wide v1, Lcom/android/server/alarm/AppSyncInfo;->EXP_MIN_INEXACT_WINDOW:J
 
-    .line 973
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSetFromSCPM:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 974
     :try_start_2
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSetFromSCPM:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->clear()V
 
-    .line 975
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSetFromSCPM:Ljava/util/Set;
 
     invoke-virtual {p0, p1, v2}, Lcom/android/server/alarm/AppSyncInfo;->addCollection(Ljava/util/Collection;Ljava/util/Collection;)V
 
-    .line 976
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 977
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockAllowlistFromSCPM:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 978
     :try_start_3
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mAllowlistPackagesFromSCPM:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 979
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mAllowlistPackagesFromSCPM:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v9, v1}, Lcom/android/server/alarm/AppSyncInfo;->addCollection(Ljava/util/Collection;Ljava/util/Collection;)V
 
-    .line 980
     monitor-exit p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 981
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockBlocklistFromSCPM:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 982
     :try_start_4
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackagesFromSCPM:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 983
     iget-object p1, p0, Lcom/android/server/alarm/AppSyncInfo;->mBlocklistPackagesFromSCPM:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/alarm/AppSyncInfo;->addCollection(Ljava/util/Collection;Ljava/util/Collection;)V
 
-    .line 984
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 985
     invoke-virtual {p0}, Lcom/android/server/alarm/AppSyncInfo;->updateSuspiciousTags()V
 
     return-void
@@ -1891,7 +1703,6 @@
     :catchall_1
     move-exception p0
 
-    .line 984
     :try_start_5
     monitor-exit v1
     :try_end_5
@@ -1902,7 +1713,6 @@
     :catchall_2
     move-exception p0
 
-    .line 980
     :try_start_6
     monitor-exit p1
     :try_end_6
@@ -1913,7 +1723,6 @@
     :catchall_3
     move-exception p0
 
-    .line 976
     :try_start_7
     monitor-exit v1
     :try_end_7
@@ -1925,53 +1734,43 @@
 .method public final updateSuspiciousTags()V
     .locals 3
 
-    .line 927
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 928
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSetFromSCPM:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 929
     :try_start_0
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSetFromSCPM:Ljava/util/Set;
 
     invoke-interface {v0, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 930
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 931
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSetFromApi:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 932
     :try_start_1
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSetFromApi:Ljava/util/Set;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 933
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 935
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo;->mLockSuspiciousTagSet:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 936
     :try_start_2
     iput-object v0, p0, Lcom/android/server/alarm/AppSyncInfo;->mSuspiciousTagSet:Ljava/util/Set;
 
-    .line 937
     monitor-exit v1
 
     return-void
@@ -1988,7 +1787,6 @@
     :catchall_1
     move-exception p0
 
-    .line 933
     :try_start_3
     monitor-exit v2
     :try_end_3
@@ -1999,7 +1797,6 @@
     :catchall_2
     move-exception p0
 
-    .line 930
     :try_start_4
     monitor-exit v1
     :try_end_4

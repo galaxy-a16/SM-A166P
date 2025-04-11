@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;I)V
     .locals 0
 
-    .line 777
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$3;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     iput p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$3;->val$targetUserId:I
@@ -33,7 +32,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 782
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$3;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$3;->val$targetUserId:I
@@ -42,7 +40,6 @@
 
     goto :goto_0
 
-    .line 784
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 

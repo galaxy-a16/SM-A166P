@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/input/KeyboardLayoutManager;->$r8$lambda$Z1OX3xVkPNI1nVPkxhiXZcZDhRk(I)[Landroid/hardware/input/KeyboardLayout;
 
     move-result-object p0

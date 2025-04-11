@@ -14,13 +14,11 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 314
     :goto_0
     array-length v1, p0
 
     if-ge v0, v1, :cond_1
 
-    .line 315
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,15 +70,12 @@
 .method public static getProtoBytes([Landroid/hardware/power/stats/Channel;)[B
     .locals 1
 
-    .line 284
     new-instance v0, Landroid/util/proto/ProtoOutputStream;
 
     invoke-direct {v0}, Landroid/util/proto/ProtoOutputStream;-><init>()V
 
-    .line 285
     invoke-static {p0, v0}, Lcom/android/server/powerstats/ProtoStreamUtils$ChannelUtils;->packProtoMessage([Landroid/hardware/power/stats/Channel;Landroid/util/proto/ProtoOutputStream;)V
 
-    .line 286
     invoke-virtual {v0}, Landroid/util/proto/ProtoOutputStream;->getBytes()[B
 
     move-result-object p0
@@ -98,7 +93,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 292
     :goto_0
     array-length v1, p0
 
@@ -106,12 +100,10 @@
 
     const-wide v1, 0x20b00000001L
 
-    .line 293
     invoke-virtual {p1, v1, v2}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v1
 
-    .line 294
     aget-object v3, p0, v0
 
     iget v3, v3, Landroid/hardware/power/stats/Channel;->id:I
@@ -120,7 +112,6 @@
 
     invoke-virtual {p1, v4, v5, v3}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
-    .line 295
     aget-object v3, p0, v0
 
     iget-object v3, v3, Landroid/hardware/power/stats/Channel;->name:Ljava/lang/String;
@@ -129,7 +120,6 @@
 
     invoke-virtual {p1, v4, v5, v3}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 296
     aget-object v3, p0, v0
 
     iget-object v3, v3, Landroid/hardware/power/stats/Channel;->subsystem:Ljava/lang/String;
@@ -138,7 +128,6 @@
 
     invoke-virtual {p1, v4, v5, v3}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 297
     invoke-virtual {p1, v1, v2}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     add-int/lit8 v0, v0, 0x1

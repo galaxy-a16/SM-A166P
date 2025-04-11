@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/server/battery/DeviceBatteryInfoService;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
@@ -35,7 +34,6 @@
 .method public final run()V
     .locals 2
 
-    .line 0
     iget-object v0, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
     iget v1, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$$ExternalSyntheticLambda0;->f$1:I

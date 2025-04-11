@@ -67,7 +67,6 @@
 .method public static synthetic $values()[Lcom/samsung/android/server/packagefeature/PackageFeature;
     .locals 21
 
-    .line 40
     sget-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->DISPLAY_COMPAT:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     sget-object v1, Lcom/samsung/android/server/packagefeature/PackageFeature;->FIXED_ASPECT_RATIO:Lcom/samsung/android/server/packagefeature/PackageFeature;
@@ -120,7 +119,6 @@
 .method public static constructor <clinit>()V
     .locals 19
 
-    .line 43
     new-instance v7, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v1, "DISPLAY_COMPAT"
@@ -147,7 +145,6 @@
 
     sput-object v7, Lcom/samsung/android/server/packagefeature/PackageFeature;->DISPLAY_COMPAT:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 49
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "FIXED_ASPECT_RATIO"
@@ -170,7 +167,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->FIXED_ASPECT_RATIO:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 55
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "TABLET_MIN_ASPECT_RATIO"
@@ -191,7 +187,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->TABLET_MIN_ASPECT_RATIO:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 61
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "TABLET_APP_ROTATION_COMPAT"
@@ -218,7 +213,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->TABLET_APP_ROTATION_COMPAT:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 67
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "FULL_SCREEN"
@@ -235,7 +229,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->FULL_SCREEN:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 72
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "IGNORE_APP_ROTATION"
@@ -262,7 +255,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->IGNORE_APP_ROTATION:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 78
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "IGNORE_APP_ROTATION_DISABLED"
@@ -289,7 +281,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->IGNORE_APP_ROTATION_DISABLED:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 84
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "FLEX_MODE_APP"
@@ -316,7 +307,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->FLEX_MODE_APP:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 90
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "FLEX_PANEL_DEFAULT"
@@ -341,7 +331,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->FLEX_PANEL_DEFAULT:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 96
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "ALLOW_MULTI_WINDOW"
@@ -358,7 +347,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->ALLOW_MULTI_WINDOW:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 101
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "SPLIT_ACTIVITY"
@@ -375,7 +363,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->SPLIT_ACTIVITY:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 106
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "ALLOW_NO_WAIT_ROTATION_FOR_4_1"
@@ -400,7 +387,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->ALLOW_NO_WAIT_ROTATION_FOR_4_1:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 112
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "DEX_LAUNCH_B"
@@ -415,7 +401,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->DEX_LAUNCH_B:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 117
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "DEX_LAUNCH_RESTART"
@@ -440,7 +425,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->DEX_LAUNCH_RESTART:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 124
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "COVER_LAUNCHER_WIDGET"
@@ -459,7 +443,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->COVER_LAUNCHER_WIDGET:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 131
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v9, "COVER_LAUNCHER_WIDGET_CHN"
@@ -476,7 +459,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->COVER_LAUNCHER_WIDGET_CHN:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 138
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v2, "LOW_REFRESH_RATE"
@@ -507,7 +489,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->LOW_REFRESH_RATE:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 144
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v6, "HIGH_REFRESH_RATE"
@@ -536,7 +517,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->HIGH_REFRESH_RATE:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 150
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v6, "NAVIGATION_LOW_REFRESH_RATE"
@@ -563,7 +543,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->NAVIGATION_LOW_REFRESH_RATE:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 158
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v14, "BROADCAST_RECEIVER_ALLOW_LIST"
@@ -582,7 +561,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->BROADCAST_RECEIVER_ALLOW_LIST:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 165
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     const-string v2, "TEST_PACKAGE_FEATURE"
@@ -601,7 +579,6 @@
 
     sput-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->TEST_PACKAGE_FEATURE:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
-    .line 40
     invoke-static {}, Lcom/samsung/android/server/packagefeature/PackageFeature;->$values()[Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     move-result-object v0
@@ -628,7 +605,6 @@
 
     move-object v5, p5
 
-    .line 187
     invoke-direct/range {v0 .. v6}, Lcom/samsung/android/server/packagefeature/PackageFeature;-><init>(Ljava/lang/String;IZLcom/samsung/android/server/packagefeature/PackageFeatureGroup;Ljava/lang/String;Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;)V
 
     return-void
@@ -637,26 +613,20 @@
 .method public constructor <init>(Ljava/lang/String;IZLcom/samsung/android/server/packagefeature/PackageFeatureGroup;Ljava/lang/String;Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;)V
     .locals 0
 
-    .line 191
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 184
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mTmpCallbacks:Ljava/util/List;
 
-    .line 192
     iput-boolean p3, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mEnabled:Z
 
-    .line 193
     iput-object p4, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mGroup:Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;
 
-    .line 194
     iput-object p5, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mName:Ljava/lang/String;
 
-    .line 195
     iput-object p6, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mDebugCommand:Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;
 
     return-void
@@ -665,7 +635,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/samsung/android/server/packagefeature/PackageFeature;
     .locals 1
 
-    .line 40
     const-class v0, Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -680,7 +649,6 @@
 .method public static values()[Lcom/samsung/android/server/packagefeature/PackageFeature;
     .locals 1
 
-    .line 40
     sget-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->$VALUES:[Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     invoke-virtual {v0}, [Lcom/samsung/android/server/packagefeature/PackageFeature;->clone()Ljava/lang/Object;
@@ -697,34 +665,28 @@
 .method public registerCallback(Lcom/samsung/android/server/packagefeature/PackageFeatureCallback;)V
     .locals 2
 
-    .line 212
     iget-object v0, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mTmpCallbacks:Ljava/util/List;
 
     monitor-enter v0
 
-    .line 213
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mController:Lcom/samsung/android/server/packagefeature/PackageFeatureController;
 
     if-nez v1, :cond_0
 
-    .line 214
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mTmpCallbacks:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 215
     monitor-exit v0
 
     return-void
 
-    .line 217
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 218
     invoke-interface {v1, p0, p1}, Lcom/samsung/android/server/packagefeature/PackageFeatureController;->registerCallback(Lcom/samsung/android/server/packagefeature/PackageFeature;Lcom/samsung/android/server/packagefeature/PackageFeatureCallback;)V
 
     return-void
@@ -732,7 +694,6 @@
     :catchall_0
     move-exception p0
 
-    .line 217
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -748,17 +709,14 @@
 
     return-void
 
-    .line 202
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mTmpCallbacks:Ljava/util/List;
 
     monitor-enter v0
 
-    .line 203
     :try_start_0
     iput-object p1, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mController:Lcom/samsung/android/server/packagefeature/PackageFeatureController;
 
-    .line 204
     iget-object v1, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mTmpCallbacks:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -778,18 +736,15 @@
 
     check-cast v2, Lcom/samsung/android/server/packagefeature/PackageFeatureCallback;
 
-    .line 205
     invoke-interface {p1, p0, v2}, Lcom/samsung/android/server/packagefeature/PackageFeatureController;->registerCallback(Lcom/samsung/android/server/packagefeature/PackageFeature;Lcom/samsung/android/server/packagefeature/PackageFeatureCallback;)V
 
     goto :goto_0
 
-    .line 207
     :cond_1
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/PackageFeature;->mTmpCallbacks:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
 
-    .line 208
     monitor-exit v0
 
     return-void

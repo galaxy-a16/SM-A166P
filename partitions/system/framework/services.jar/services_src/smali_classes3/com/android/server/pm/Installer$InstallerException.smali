@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1219
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static from(Ljava/lang/Exception;)Lcom/android/server/pm/Installer$InstallerException;
     .locals 1
 
-    .line 1223
     new-instance v0, Lcom/android/server/pm/Installer$InstallerException;
 
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;

@@ -7,7 +7,6 @@
 .method public static final emptySet()Ljava/util/Set;
     .locals 1
 
-    .line 36
     sget-object v0, Lcom/android/server/permission/jarjar/kotlin/collections/EmptySet;->INSTANCE:Lcom/android/server/permission/jarjar/kotlin/collections/EmptySet;
 
     return-object v0

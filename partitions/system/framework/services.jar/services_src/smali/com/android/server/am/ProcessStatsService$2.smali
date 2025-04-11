@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessStatsService;J)V
     .locals 0
 
-    .line 307
     iput-object p1, p0, Lcom/android/server/am/ProcessStatsService$2;->this$0:Lcom/android/server/am/ProcessStatsService;
 
     iput-wide p2, p0, Lcom/android/server/am/ProcessStatsService$2;->val$totalTime:J
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 3
 
-    .line 309
     iget-object v0, p0, Lcom/android/server/am/ProcessStatsService$2;->this$0:Lcom/android/server/am/ProcessStatsService;
 
     iget-wide v1, p0, Lcom/android/server/am/ProcessStatsService$2;->val$totalTime:J

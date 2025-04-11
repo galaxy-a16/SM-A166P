@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, [I
 
     invoke-static {p1}, Lcom/android/server/stats/pull/StatsPullAtomService;->$r8$lambda$ngUspDbYKOmMV__2FeVIAY8GRl0([I)Z

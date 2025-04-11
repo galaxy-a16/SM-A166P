@@ -13,7 +13,6 @@
 .method public onSettingChanged(I)V
     .locals 0
 
-    .line 56
     invoke-interface {p0}, Lcom/android/server/location/injector/SettingsHelper$GlobalSettingChangedListener;->onSettingChanged()V
 
     return-void

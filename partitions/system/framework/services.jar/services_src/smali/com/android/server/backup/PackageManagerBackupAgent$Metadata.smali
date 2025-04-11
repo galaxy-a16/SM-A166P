@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/backup/PackageManagerBackupAgent;JLjava/util/ArrayList;)V
     .locals 0
 
-    .line 124
     iput-object p1, p0, Lcom/android/server/backup/PackageManagerBackupAgent$Metadata;->this$0:Lcom/android/server/backup/PackageManagerBackupAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
     iput-wide p2, p0, Lcom/android/server/backup/PackageManagerBackupAgent$Metadata;->versionCode:J
 
-    .line 126
     iput-object p4, p0, Lcom/android/server/backup/PackageManagerBackupAgent$Metadata;->sigHashes:Ljava/util/ArrayList;
 
     return-void

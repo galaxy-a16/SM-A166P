@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;)V
     .locals 0
 
-    .line 2907
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$7;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,10 +30,8 @@
 
     const-string v1, "PhoneRestrictionPolicy"
 
-    .line 2909
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2910
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v2, "com.sec.enterprise.mdm.services.simpin"
@@ -43,7 +40,6 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2912
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$7;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
     invoke-static {v2}, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;->-$$Nest$fgetmSimPinHandler(Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;)Landroid/os/Handler;
@@ -52,7 +48,6 @@
 
     invoke-virtual {v2, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2914
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$7;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
@@ -87,7 +82,6 @@
     :catch_0
     const-string p0, "Failed to bind Sim Pin Service"
 
-    .line 2917
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

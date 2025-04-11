@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;)V
     .locals 0
 
-    .line 460
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,10 +30,8 @@
 
     const-string/jumbo v0, "mSemCancelDaemonCallback.onClientFinished"
 
-    .line 470
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;->access$100(Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;)Lcom/android/server/biometrics/log/BiometricContext;
@@ -47,14 +44,12 @@
 
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
-    .line 472
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v1
 
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
-    .line 473
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result p1
@@ -71,14 +66,12 @@
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
-    .line 474
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getRequestId()J
 
     move-result-wide v4
 
     move v6, p2
 
-    .line 472
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->authEndedFor(IIIJZ)V
 
     return-void
@@ -91,10 +84,8 @@
 
     const-string/jumbo v0, "mSemCancelDaemonCallback.onClientStarted"
 
-    .line 463
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 464
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;->access$000(Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;)Lcom/android/server/biometrics/log/BiometricContext;
@@ -107,7 +98,6 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
-    .line 465
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v0

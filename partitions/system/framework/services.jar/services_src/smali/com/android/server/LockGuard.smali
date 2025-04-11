@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$f5k-HvMfh78ZfmB_A1qoi_mgrDg(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/LockGuard;->lambda$doLog$0(Ljava/lang/Throwable;)V
 
     return-void
@@ -26,10 +25,8 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 85
     sput-object v0, Lcom/android/server/LockGuard;->sKnownFixed:[Ljava/lang/Object;
 
-    .line 88
     new-instance v0, Landroid/util/ArrayMap;
 
     const/4 v1, 0x0
@@ -48,7 +45,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 172
     invoke-static {p0}, Lcom/android/server/LockGuard;->findOrCreateLockInfo(Ljava/lang/Object;)Lcom/android/server/LockGuard$LockInfo;
 
     move-result-object p0
@@ -57,12 +53,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 177
     new-instance p0, Ljava/lang/RuntimeException;
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 178
     new-instance p1, Ljava/lang/Thread;
 
     new-instance v0, Lcom/android/server/LockGuard$$ExternalSyntheticLambda0;
@@ -75,7 +69,6 @@
 
     return-void
 
-    .line 181
     :cond_0
     new-instance p0, Ljava/lang/Throwable;
 
@@ -95,7 +88,6 @@
 
     move p2, p0
 
-    .line 249
     :goto_0
     sget-object v0, Lcom/android/server/LockGuard;->sKnown:Landroid/util/ArrayMap;
 
@@ -105,14 +97,12 @@
 
     if-ge p2, v0, :cond_1
 
-    .line 250
     sget-object v0, Lcom/android/server/LockGuard;->sKnown:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p2}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 251
     sget-object v1, Lcom/android/server/LockGuard;->sKnown:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -121,7 +111,6 @@
 
     check-cast v1, Lcom/android/server/LockGuard$LockInfo;
 
-    .line 252
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,7 +137,6 @@
 
     move v0, p0
 
-    .line 253
     :goto_1
     iget-object v2, v1, Lcom/android/server/LockGuard$LockInfo;->children:Landroid/util/ArraySet;
 
@@ -158,7 +146,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 254
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,7 +176,6 @@
 
     goto :goto_1
 
-    .line 256
     :cond_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
@@ -204,7 +190,6 @@
 .method public static findOrCreateLockInfo(Ljava/lang/Object;)Lcom/android/server/LockGuard$LockInfo;
     .locals 4
 
-    .line 102
     sget-object v0, Lcom/android/server/LockGuard;->sKnown:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -215,14 +200,12 @@
 
     if-nez v0, :cond_0
 
-    .line 104
     new-instance v0, Lcom/android/server/LockGuard$LockInfo;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/LockGuard$LockInfo;-><init>(Lcom/android/server/LockGuard$LockInfo-IA;)V
 
-    .line 105
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -249,7 +232,6 @@
 
     invoke-direct {v2}, Ljava/lang/Throwable;-><init>()V
 
-    .line 106
     invoke-virtual {v2}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v2
@@ -274,7 +256,6 @@
 
     iput-object v1, v0, Lcom/android/server/LockGuard$LockInfo;->label:Ljava/lang/String;
 
-    .line 107
     sget-object v1, Lcom/android/server/LockGuard;->sKnown:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p0, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -291,26 +272,22 @@
     :goto_0
     if-ge v0, p0, :cond_1
 
-    .line 158
     sget-object v1, Lcom/android/server/LockGuard;->sKnownFixed:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
 
     if-eqz v1, :cond_0
 
-    .line 159
     invoke-static {v1}, Ljava/lang/Thread;->holdsLock(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 163
     sget-object v1, Lcom/android/server/LockGuard;->sKnownFixed:[Ljava/lang/Object;
 
     aget-object v1, v1, p0
 
-    .line 164
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -333,7 +310,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 165
     invoke-static {v0}, Lcom/android/server/LockGuard;->lockToString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -344,7 +320,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 166
     invoke-static {p0}, Lcom/android/server/LockGuard;->lockToString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -355,7 +330,6 @@
 
     move-result-object v2
 
-    .line 164
     invoke-static {v1, v2}, Lcom/android/server/LockGuard;->doLog(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
@@ -372,7 +346,6 @@
 
     const/4 v0, 0x0
 
-    .line 197
     invoke-static {p0, p1, v0}, Lcom/android/server/LockGuard;->installLock(Ljava/lang/Object;IZ)Ljava/lang/Object;
 
     move-result-object p0
@@ -383,20 +356,16 @@
 .method public static installLock(Ljava/lang/Object;IZ)Ljava/lang/Object;
     .locals 2
 
-    .line 204
     sget-object v0, Lcom/android/server/LockGuard;->sKnownFixed:[Ljava/lang/Object;
 
     aput-object p0, v0, p1
 
-    .line 205
     invoke-static {p0}, Lcom/android/server/LockGuard;->findOrCreateLockInfo(Ljava/lang/Object;)Lcom/android/server/LockGuard$LockInfo;
 
     move-result-object v0
 
-    .line 206
     iput-boolean p2, v0, Lcom/android/server/LockGuard$LockInfo;->doWtf:Z
 
-    .line 207
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -425,7 +394,6 @@
 
     const/4 v0, 0x0
 
-    .line 212
     invoke-static {p0, v0}, Lcom/android/server/LockGuard;->installNewLock(IZ)Ljava/lang/Object;
 
     move-result-object p0
@@ -436,12 +404,10 @@
 .method public static installNewLock(IZ)Ljava/lang/Object;
     .locals 1
 
-    .line 216
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 217
     invoke-static {v0, p0, p1}, Lcom/android/server/LockGuard;->installLock(Ljava/lang/Object;IZ)Ljava/lang/Object;
 
     return-object v0
@@ -452,7 +418,6 @@
 
     const-string v0, "LockGuard"
 
-    .line 178
     invoke-static {v0, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -463,7 +428,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 244
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -538,7 +502,6 @@
 .method public static lockToString(Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
 
-    .line 222
     sget-object v0, Lcom/android/server/LockGuard;->sKnown:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -549,7 +512,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 223
     iget-object v1, v0, Lcom/android/server/LockGuard$LockInfo;->label:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -558,12 +520,10 @@
 
     if-nez v1, :cond_0
 
-    .line 224
     iget-object p0, v0, Lcom/android/server/LockGuard$LockInfo;->label:Ljava/lang/String;
 
     return-object p0
 
-    .line 226
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

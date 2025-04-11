@@ -13,7 +13,6 @@
 
     const/4 v4, 0x0
 
-    .line 53
     invoke-virtual {p1}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -40,7 +39,6 @@
 
     move-object/from16 v1, p8
 
-    .line 55
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/StopUserClient;->mUserStoppedCallback:Lcom/android/server/biometrics/sensors/StopUserClient$UserStoppedCallback;
 
     return-void
@@ -51,7 +49,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x10
 
     return p0
@@ -60,12 +57,10 @@
 .method public onUserStopped()V
     .locals 2
 
-    .line 45
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/StopUserClient;->mUserStoppedCallback:Lcom/android/server/biometrics/sensors/StopUserClient$UserStoppedCallback;
 
     invoke-interface {v0}, Lcom/android/server/biometrics/sensors/StopUserClient$UserStoppedCallback;->onUserStopped()V
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getCallback()Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     move-result-object v0

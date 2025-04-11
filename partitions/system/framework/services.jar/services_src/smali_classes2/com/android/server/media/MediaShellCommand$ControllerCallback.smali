@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaShellCommand;)V
     .locals 0
 
-    .line 208
     iput-object p1, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
     invoke-direct {p0}, Landroid/media/session/MediaController$Callback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onAudioInfoChanged(Landroid/media/session/MediaController$PlaybackInfo;)V
     .locals 2
 
-    .line 249
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
     invoke-static {p0}, Lcom/android/server/media/MediaShellCommand;->-$$Nest$fgetmWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;
@@ -53,7 +51,6 @@
 .method public onExtrasChanged(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 244
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
     invoke-static {p0}, Lcom/android/server/media/MediaShellCommand;->-$$Nest$fgetmWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;
@@ -88,7 +85,6 @@
 
     goto :goto_0
 
-    .line 226
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -98,7 +94,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 227
     invoke-virtual {p1}, Landroid/media/MediaMetadata;->getDescription()Landroid/media/MediaDescription;
 
     move-result-object p1
@@ -109,7 +104,6 @@
 
     move-result-object p1
 
-    .line 228
     :goto_0
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
@@ -139,7 +133,6 @@
 .method public onPlaybackStateChanged(Landroid/media/session/PlaybackState;)V
     .locals 2
 
-    .line 221
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
     invoke-static {p0}, Lcom/android/server/media/MediaShellCommand;->-$$Nest$fgetmWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;
@@ -168,7 +161,6 @@
 .method public onQueueChanged(Ljava/util/List;)V
     .locals 3
 
-    .line 233
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
     invoke-static {p0}, Lcom/android/server/media/MediaShellCommand;->-$$Nest$fgetmWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;
@@ -189,7 +181,6 @@
 
     goto :goto_0
 
-    .line 234
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -216,7 +207,6 @@
 
     move-result-object p1
 
-    .line 233
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -225,7 +215,6 @@
 .method public onQueueTitleChanged(Ljava/lang/CharSequence;)V
     .locals 2
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
     invoke-static {p0}, Lcom/android/server/media/MediaShellCommand;->-$$Nest$fgetmWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;
@@ -254,7 +243,6 @@
 .method public onSessionDestroyed()V
     .locals 1
 
-    .line 211
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
     invoke-static {p0}, Lcom/android/server/media/MediaShellCommand;->-$$Nest$fgetmWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;
@@ -271,7 +259,6 @@
 .method public onSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 216
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand$ControllerCallback;->this$0:Lcom/android/server/media/MediaShellCommand;
 
     invoke-static {p0}, Lcom/android/server/media/MediaShellCommand;->-$$Nest$fgetmWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;

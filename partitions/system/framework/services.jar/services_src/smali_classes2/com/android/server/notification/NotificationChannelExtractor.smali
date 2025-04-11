@@ -26,7 +26,6 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/notification/NotificationChannelExtractor;->mContext:Landroid/content/Context;
 
     return-void
@@ -39,7 +38,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 38
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
@@ -48,7 +46,6 @@
 
     goto :goto_0
 
-    .line 43
     :cond_0
     iget-object v2, p0, Lcom/android/server/notification/NotificationChannelExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
@@ -56,7 +53,6 @@
 
     return-object v0
 
-    .line 48
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
@@ -66,7 +62,6 @@
 
     move-result-object v3
 
-    .line 49
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object p0
@@ -83,7 +78,6 @@
 
     move-result-object v5
 
-    .line 50
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object p0
@@ -96,12 +90,10 @@
 
     const/4 v8, 0x0
 
-    .line 47
     invoke-interface/range {v2 .. v8}, Lcom/android/server/notification/RankingConfig;->getConversationNotificationChannel(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ZZ)Landroid/app/NotificationChannel;
 
     move-result-object p0
 
-    .line 51
     invoke-virtual {p1, p0}, Lcom/android/server/notification/NotificationRecord;->updateNotificationChannel(Landroid/app/NotificationChannel;)V
 
     :cond_2
@@ -112,7 +104,6 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/notification/NotificationChannelExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
     return-void
@@ -121,6 +112,5 @@
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -15,14 +15,12 @@
 .method public static getContextHubWrapper()Lcom/android/server/location/contexthub/IContextHubWrapper;
     .locals 1
 
-    .line 108
     invoke-static {}, Lcom/android/server/location/contexthub/IContextHubWrapper;->maybeConnectToAidl()Lcom/android/server/location/contexthub/IContextHubWrapper;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 110
     invoke-static {}, Lcom/android/server/location/contexthub/IContextHubWrapper;->maybeConnectTo1_2()Lcom/android/server/location/contexthub/IContextHubWrapper;
 
     move-result-object v0
@@ -30,7 +28,6 @@
     :cond_0
     if-nez v0, :cond_1
 
-    .line 113
     invoke-static {}, Lcom/android/server/location/contexthub/IContextHubWrapper;->maybeConnectTo1_1()Lcom/android/server/location/contexthub/IContextHubWrapper;
 
     move-result-object v0
@@ -38,7 +35,6 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 116
     invoke-static {}, Lcom/android/server/location/contexthub/IContextHubWrapper;->maybeConnectTo1_0()Lcom/android/server/location/contexthub/IContextHubWrapper;
 
     move-result-object v0
@@ -56,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 131
     :try_start_0
     invoke-static {v1}, Landroid/hardware/contexthub/V1_0/IContexthub;->getService(Z)Landroid/hardware/contexthub/V1_0/IContexthub;
 
@@ -70,7 +65,6 @@
     :catch_0
     const-string v1, "Context Hub HAL service not found"
 
-    .line 135
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -80,7 +74,6 @@
 
     const-string v3, "RemoteException while attaching to Context Hub HAL proxy"
 
-    .line 133
     invoke-static {v0, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -91,7 +84,6 @@
 
     goto :goto_2
 
-    .line 138
     :cond_0
     new-instance v2, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperV1_0;
 
@@ -110,7 +102,6 @@
 
     const/4 v2, 0x0
 
-    .line 150
     :try_start_0
     invoke-static {v1}, Landroid/hardware/contexthub/V1_1/IContexthub;->getService(Z)Landroid/hardware/contexthub/V1_1/IContexthub;
 
@@ -124,7 +115,6 @@
     :catch_0
     const-string v1, "Context Hub HAL service not found"
 
-    .line 154
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -134,7 +124,6 @@
 
     const-string v3, "RemoteException while attaching to Context Hub HAL proxy"
 
-    .line 152
     invoke-static {v0, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -145,7 +134,6 @@
 
     goto :goto_2
 
-    .line 157
     :cond_0
     new-instance v2, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperV1_1;
 
@@ -164,7 +152,6 @@
 
     const/4 v2, 0x0
 
-    .line 169
     :try_start_0
     invoke-static {v1}, Landroid/hardware/contexthub/V1_2/IContexthub;->getService(Z)Landroid/hardware/contexthub/V1_2/IContexthub;
 
@@ -178,7 +165,6 @@
     :catch_0
     const-string v1, "Context Hub HAL service not found"
 
-    .line 173
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -188,7 +174,6 @@
 
     const-string v3, "RemoteException while attaching to Context Hub HAL proxy"
 
-    .line 171
     invoke-static {v0, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -199,7 +184,6 @@
 
     goto :goto_2
 
-    .line 176
     :cond_0
     new-instance v2, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperV1_2;
 
@@ -212,7 +196,6 @@
 .method public static maybeConnectToAidl()Lcom/android/server/location/contexthub/IContextHubWrapper;
     .locals 2
 
-    .line 205
     invoke-static {}, Lcom/android/server/location/contexthub/IContextHubWrapper;->maybeConnectToAidlGetProxy()Landroid/hardware/contexthub/IContextHub;
 
     move-result-object v0
@@ -223,7 +206,6 @@
 
     goto :goto_0
 
-    .line 206
     :cond_0
     new-instance v1, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperAidl;
 
@@ -238,14 +220,12 @@
 .method public static maybeConnectToAidlGetProxy()Landroid/hardware/contexthub/IContextHub;
     .locals 3
 
-    .line 184
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-class v1, Landroid/hardware/contexthub/IContextHub;
 
-    .line 185
     invoke-virtual {v1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v1
@@ -260,7 +240,6 @@
 
     move-result-object v0
 
-    .line 186
     invoke-static {v0}, Landroid/os/ServiceManager;->isDeclared(Ljava/lang/String;)Z
 
     move-result v1
@@ -269,12 +248,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 188
     invoke-static {v0}, Landroid/os/ServiceManager;->waitForService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 187
     invoke-static {v0}, Landroid/hardware/contexthub/IContextHub$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/contexthub/IContextHub;
 
     move-result-object v0
@@ -283,7 +260,6 @@
 
     const-string v1, "Context Hub AIDL service was declared but was not found"
 
-    .line 190
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -291,7 +267,6 @@
     :cond_0
     const-string v0, "Context Hub AIDL service is not declared"
 
-    .line 193
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -330,14 +305,12 @@
 .method public onHostEndpointConnected(Landroid/hardware/contexthub/HostEndpointInfo;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onHostEndpointDisconnected(S)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

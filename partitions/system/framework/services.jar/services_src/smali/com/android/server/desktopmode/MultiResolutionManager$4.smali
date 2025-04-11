@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/MultiResolutionManager;)V
     .locals 0
 
-    .line 132
     iput-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-direct {p0}, Lcom/android/server/desktopmode/StateManager$StateListener;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 183
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmSettingsHelper(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/SettingsHelper;
@@ -41,7 +39,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/desktopmode/SettingsHelper;->registerListener(Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;)V
 
-    .line 184
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmSettingsHelper(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/SettingsHelper;
@@ -58,7 +55,6 @@
 
     goto :goto_0
 
-    .line 186
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
@@ -74,7 +70,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/desktopmode/SettingsHelper;->unregisterListener(Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;)V
 
-    .line 187
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmSettingsHelper(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/SettingsHelper;
@@ -98,12 +93,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 194
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$mshowUserSettingIsNotSupportedToast(Lcom/android/server/desktopmode/MultiResolutionManager;)V
 
-    .line 196
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
@@ -117,12 +110,10 @@
 .method public onExternalDisplayConnectionChanged(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 156
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
 
     move-result-object v0
 
-    .line 157
     iget-object v1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getConnectedDisplay()Lcom/android/server/desktopmode/DisplayInfo;
@@ -131,14 +122,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$mupdateDisplayResolutionUnsupported(Lcom/android/server/desktopmode/MultiResolutionManager;Lcom/android/server/desktopmode/DisplayInfo;)V
 
-    .line 158
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->isExternalDisplayConnected()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 159
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmDisplayRemovedOnEnablingDesktopMode(Lcom/android/server/desktopmode/MultiResolutionManager;)Z
@@ -147,12 +136,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$mhandleReconnection(Lcom/android/server/desktopmode/MultiResolutionManager;Lcom/android/server/desktopmode/State;)V
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     const/4 p1, 0x0
@@ -161,7 +148,6 @@
 
     goto :goto_0
 
-    .line 163
     :cond_0
     iget v1, v0, Lcom/samsung/android/desktopmode/SemDesktopModeState;->enabled:I
 
@@ -178,7 +164,6 @@
 
     if-ne v1, v0, :cond_3
 
-    .line 166
     :cond_2
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopDisplayId()I
 
@@ -188,7 +173,6 @@
 
     if-eq p1, v0, :cond_3
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     const/4 p1, 0x1
@@ -203,7 +187,6 @@
 .method public onExternalDisplayUpdated(Lcom/android/server/desktopmode/State;)V
     .locals 1
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getConnectedDisplay()Lcom/android/server/desktopmode/DisplayInfo;
@@ -212,7 +195,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$mupdateDisplayResolutionUnsupported(Lcom/android/server/desktopmode/MultiResolutionManager;Lcom/android/server/desktopmode/DisplayInfo;)V
 
-    .line 143
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/IStateManager;
@@ -233,7 +215,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 149
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmStandaloneModeDisplayMetrics(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;
@@ -242,7 +223,6 @@
 
     invoke-static {v0}, Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;->-$$Nest$mupdateDesktopModeDensity(Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;)V
 
-    .line 151
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
@@ -260,7 +240,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 174
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->-$$Nest$fgetmSettingsHelper(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/SettingsHelper;
@@ -277,7 +256,6 @@
 
     goto :goto_0
 
-    .line 176
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
@@ -300,10 +278,8 @@
 .method public onUserChanged(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 135
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$4;->this$0:Lcom/android/server/desktopmode/MultiResolutionManager;
 
-    .line 136
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
 
     move-result-object p1
@@ -318,7 +294,6 @@
 
     move-result p1
 
-    .line 135
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->onUserChanged(Z)V
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppExitInfoTracker;)V
     .locals 0
 
-    .line 689
     iput-object p1, p0, Lcom/android/server/am/AppExitInfoTracker$2;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     const/4 v0, 0x0
 
-    .line 692
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -42,19 +40,16 @@
 
     const/16 v1, -0x2710
 
-    .line 697
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string v1, "android.intent.extra.REMOVED_FOR_ALL_USERS"
 
-    .line 698
     invoke-virtual {p2, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 700
     iget-object p0, p0, Lcom/android/server/am/AppExitInfoTracker$2;->this$0:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/DisplayPowerController2;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController2$$ExternalSyntheticLambda9;->f$0:Lcom/android/server/display/DisplayPowerController2;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController2$$ExternalSyntheticLambda9;->f$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController2;->$r8$lambda$OzP9BjgcQe1k-QM2HOpgA_yNk1k(Lcom/android/server/display/DisplayPowerController2;)V

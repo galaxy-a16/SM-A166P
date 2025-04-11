@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/widget/HorizontalScrollView;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/input/FocusEventDebugView$$ExternalSyntheticLambda0;->f$0:Landroid/widget/HorizontalScrollView;
@@ -27,7 +26,6 @@
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 10
 
-    .line 0
     move-object v0, p0
 
     iget-object v0, v0, Lcom/android/server/input/FocusEventDebugView$$ExternalSyntheticLambda0;->f$0:Landroid/widget/HorizontalScrollView;

@@ -17,16 +17,12 @@
 .method public constructor <init>(Landroid/os/IBinder;Ljava/lang/String;)V
     .locals 0
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo$Builder;->mToken:Landroid/os/IBinder;
 
-    .line 109
     iput-object p2, p0, Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo$Builder;->mTag:Ljava/lang/String;
 
-    .line 110
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
@@ -41,7 +37,6 @@
 .method public build()Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;
     .locals 2
 
-    .line 104
     new-instance v0, Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;
 
     const/4 v1, 0x0
@@ -54,7 +49,6 @@
 .method public setRefreshRate(I)Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo$Builder;
     .locals 0
 
-    .line 114
     iput p1, p0, Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo$Builder;->mRefreshRate:I
 
     return-object p0

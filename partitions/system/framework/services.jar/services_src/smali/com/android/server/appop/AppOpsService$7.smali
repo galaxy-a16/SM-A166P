@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;)V
     .locals 0
 
-    .line 1188
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$7;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public getPackageTrustedToInstallApps(Ljava/lang/String;I)I
     .locals 1
 
-    .line 1191
     iget-object p0, p0, Lcom/android/server/appop/AppOpsService$7;->this$0:Lcom/android/server/appop/AppOpsService;
 
     const/16 v0, 0x42

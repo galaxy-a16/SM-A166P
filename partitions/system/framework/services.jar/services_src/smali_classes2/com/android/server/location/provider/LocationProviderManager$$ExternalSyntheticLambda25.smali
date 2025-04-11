@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/location/provider/LocationProviderManager$Registration;
 
     invoke-static {p1}, Lcom/android/server/location/provider/LocationProviderManager;->$r8$lambda$XDWWWHw0PXJKtJToOMmX_ZM_PGw(Lcom/android/server/location/provider/LocationProviderManager$Registration;)Z

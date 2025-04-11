@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;IIILcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
     .locals 0
 
-    .line 35
     invoke-direct/range {p0 .. p5}, Lcom/android/server/accessibility/gestures/MultiFingerMultiTapAndHold;-><init>(Landroid/content/Context;IIILcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
 
     return-void
@@ -18,10 +17,8 @@
 .method public onPointerDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 8
 
-    .line 40
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/MultiFingerMultiTapAndHold;->onPointerDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
-    .line 41
     iget-boolean v0, p0, Lcom/android/server/accessibility/gestures/MultiFingerMultiTap;->mIsTargetFingerCountReached:Z
 
     if-eqz v0, :cond_0
@@ -44,10 +41,8 @@
 
     move v7, p3
 
-    .line 43
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/accessibility/gestures/GestureMatcher;->completeAfter(JLandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
-    .line 49
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -57,7 +52,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 50
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     :cond_1

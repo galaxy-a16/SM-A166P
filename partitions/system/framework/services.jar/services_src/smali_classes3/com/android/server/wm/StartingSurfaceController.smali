@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Lcom/android/server/wm/StartingSurfaceController;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/StartingSurfaceController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -36,27 +35,22 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;)V
     .locals 1
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartActivities:Ljava/util/ArrayList;
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/wm/StartingSurfaceController;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 82
     new-instance v0, Lcom/android/server/wm/SplashScreenExceptionList;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
@@ -123,12 +117,10 @@
 
     const-wide/32 p1, 0xc45e600
 
-    .line 136
     invoke-static {p10}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object p3
 
-    .line 135
     invoke-static {p1, p2, p9, p3}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p1
@@ -146,7 +138,6 @@
 .method public final addDeferringRecord(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;ZZLcom/android/server/wm/ActivityRecord;)V
     .locals 1
 
-    .line 224
     iget-object v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartActivities:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -155,20 +146,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 225
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isProcessRunning()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mInitProcessRunning:Z
 
-    .line 226
     iput-boolean p3, p0, Lcom/android/server/wm/StartingSurfaceController;->mInitNewTask:Z
 
-    .line 227
     iput-boolean p4, p0, Lcom/android/server/wm/StartingSurfaceController;->mInitTaskSwitch:Z
 
-    .line 229
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartActivities:Ljava/util/ArrayList;
 
@@ -186,7 +173,6 @@
 
     const/4 v0, 0x1
 
-    .line 260
     iput-boolean v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartingWindow:Z
 
     return-void
@@ -197,10 +183,8 @@
 
     const/4 v0, 0x0
 
-    .line 273
     iput-boolean v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartingWindow:Z
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartActivities:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -211,7 +195,6 @@
 .method public createSplashScreenStartingSurface(Lcom/android/server/wm/ActivityRecord;I)Lcom/android/server/wm/StartingSurfaceController$StartingSurface;
     .locals 4
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -220,7 +203,6 @@
 
     monitor-enter v0
 
-    .line 88
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
@@ -230,7 +212,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 89
     iget-object v3, p0, Lcom/android/server/wm/StartingSurfaceController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -243,7 +224,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 91
     new-instance p1, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;
 
     invoke-direct {p1, p0, v1}, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;-><init>(Lcom/android/server/wm/StartingSurfaceController;Lcom/android/server/wm/Task;)V
@@ -256,7 +236,6 @@
 
     return-object p1
 
-    .line 93
     :cond_0
     :try_start_1
     monitor-exit v0
@@ -283,7 +262,6 @@
 .method public createTaskSnapshotSurface(Lcom/android/server/wm/ActivityRecord;Landroid/window/TaskSnapshot;)Lcom/android/server/wm/StartingSurfaceController$StartingSurface;
     .locals 5
 
-    .line 145
     iget-object v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -292,7 +270,6 @@
 
     monitor-enter v0
 
-    .line 146
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
@@ -302,7 +279,6 @@
 
     if-nez v1, :cond_0
 
-    .line 148
     sget-object p0, Lcom/android/server/wm/StartingSurfaceController;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -321,7 +297,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -330,7 +305,6 @@
 
     return-object v2
 
-    .line 153
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -343,7 +317,6 @@
 
     if-nez v3, :cond_1
 
-    .line 155
     sget-object p0, Lcom/android/server/wm/StartingSurfaceController;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -362,7 +335,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -371,7 +343,6 @@
 
     return-object v2
 
-    .line 159
     :cond_1
     :try_start_2
     invoke-virtual {v3}, Lcom/android/server/wm/ActivityRecord;->getTopFullscreenOpaqueWindow()Lcom/android/server/wm/WindowState;
@@ -380,7 +351,6 @@
 
     if-nez v4, :cond_2
 
-    .line 161
     sget-object p0, Lcom/android/server/wm/StartingSurfaceController;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -399,7 +369,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -408,7 +377,6 @@
 
     return-object v2
 
-    .line 165
     :cond_2
     :try_start_3
     iget-object v2, p1, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -425,12 +393,10 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 170
     iget-object v2, p1, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v2, p1, v4}, Lcom/android/server/wm/DisplayContent;->handleTopActivityLaunchingInDifferentOrientation(Lcom/android/server/wm/ActivityRecord;Z)Z
 
-    .line 173
     :cond_3
     iget-object v2, p0, Lcom/android/server/wm/StartingSurfaceController;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -440,7 +406,6 @@
 
     invoke-virtual {v2, v1, p1, v4, p2}, Lcom/android/server/wm/TaskOrganizerController;->addStartingWindow(Lcom/android/server/wm/Task;Lcom/android/server/wm/ActivityRecord;ILandroid/window/TaskSnapshot;)Z
 
-    .line 175
     new-instance p1, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;
 
     invoke-direct {p1, p0, v1}, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;-><init>(Lcom/android/server/wm/StartingSurfaceController;Lcom/android/server/wm/Task;)V
@@ -456,7 +421,6 @@
     :catchall_0
     move-exception p0
 
-    .line 176
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -472,10 +436,8 @@
 
     const/4 v0, 0x0
 
-    .line 267
     iput-boolean v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartingWindow:Z
 
-    .line 268
     invoke-virtual {p0, p1}, Lcom/android/server/wm/StartingSurfaceController;->showStartingWindowFromDeferringActivities(Landroid/app/ActivityOptions;)V
 
     return-void
@@ -484,7 +446,6 @@
 .method public isExceptionApp(Ljava/lang/String;ILjava/util/function/Supplier;)Z
     .locals 0
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/wm/StartingSurfaceController;->mSplashScreenExceptionsList:Lcom/android/server/wm/SplashScreenExceptionList;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/SplashScreenExceptionList;->isException(Ljava/lang/String;ILjava/util/function/Supplier;)Z
@@ -499,12 +460,10 @@
 
     move-object v0, p0
 
-    .line 201
     iget-boolean v1, v0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartingWindow:Z
 
     if-eqz v1, :cond_0
 
-    .line 202
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/wm/StartingSurfaceController;->addDeferringRecord(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;ZZLcom/android/server/wm/ActivityRecord;)V
 
     goto :goto_0
@@ -512,7 +471,6 @@
     :cond_0
     if-eqz p6, :cond_1
 
-    .line 206
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->isProcessRunning()Z
 
     move-result v4
@@ -550,7 +508,6 @@
 
     move-object/from16 v14, p5
 
-    .line 210
     invoke-virtual/range {v9 .. v14}, Lcom/android/server/wm/ActivityRecord;->showStartingWindow(Lcom/android/server/wm/ActivityRecord;ZZZLcom/android/server/wm/ActivityRecord;)V
 
     :goto_0
@@ -560,7 +517,6 @@
 .method public final showStartingWindowFromDeferringActivities(Landroid/app/ActivityOptions;)V
     .locals 11
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartActivities:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -572,7 +528,6 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 236
     iget-object v1, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartActivities:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -581,7 +536,6 @@
 
     check-cast v1, Lcom/android/server/wm/StartingSurfaceController$DeferringStartingWindowRecord;
 
-    .line 237
     iget-object v2, v1, Lcom/android/server/wm/StartingSurfaceController$DeferringStartingWindowRecord;->mDeferring:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v2}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -590,7 +544,6 @@
 
     if-nez v2, :cond_0
 
-    .line 238
     sget-object v2, Lcom/android/server/wm/StartingSurfaceController;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -613,7 +566,6 @@
 
     iget-object v1, v1, Lcom/android/server/wm/StartingSurfaceController$DeferringStartingWindowRecord;->mDeferring:Lcom/android/server/wm/ActivityRecord;
 
-    .line 239
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v1
@@ -624,12 +576,10 @@
 
     move-result-object v1
 
-    .line 238
     invoke-static {v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 242
     :cond_0
     iget-object v3, v1, Lcom/android/server/wm/StartingSurfaceController$DeferringStartingWindowRecord;->mDeferring:Lcom/android/server/wm/ActivityRecord;
 
@@ -649,7 +599,6 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/server/wm/ActivityRecord;->showStartingWindow(Lcom/android/server/wm/ActivityRecord;ZZZZLcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;)V
 
-    .line 245
     iget-object v1, v1, Lcom/android/server/wm/StartingSurfaceController$DeferringStartingWindowRecord;->mDeferring:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v1, v1, Lcom/android/server/wm/ActivityRecord;->mStartingData:Lcom/android/server/wm/StartingData;
@@ -664,7 +613,6 @@
 
     goto :goto_0
 
-    .line 249
     :cond_2
     :goto_2
     iget-object p0, p0, Lcom/android/server/wm/StartingSurfaceController;->mDeferringAddStartActivities:Ljava/util/ArrayList;

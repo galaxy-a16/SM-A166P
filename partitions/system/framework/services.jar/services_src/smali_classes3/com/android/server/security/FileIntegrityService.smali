@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTrustedCertificates(Lcom/android/server/security/FileIntegrityService;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/security/FileIntegrityService;->mTrustedCertificates:Ljava/util/ArrayList;
 
     return-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$mcollectCertificate(Lcom/android/server/security/FileIntegrityService;[B)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/security/FileIntegrityService;->collectCertificate([B)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$smtoCertificate([B)Ljava/security/cert/X509Certificate;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/security/FileIntegrityService;->toCertificate([B)Ljava/security/cert/X509Certificate;
 
     move-result-object p0
@@ -46,17 +43,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 143
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 70
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/security/FileIntegrityService;->mTrustedCertificates:Ljava/util/ArrayList;
 
-    .line 79
     new-instance p1, Lcom/android/server/security/FileIntegrityService$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/security/FileIntegrityService$1;-><init>(Lcom/android/server/security/FileIntegrityService;)V
@@ -66,7 +60,6 @@
     :try_start_0
     const-string p1, "X.509"
 
-    .line 145
     invoke-static {p1}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object p1
@@ -82,10 +75,8 @@
 
     const-string v0, "Cannot get an instance of X.509 certificate factory"
 
-    .line 147
     invoke-static {p1, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
     :goto_0
     const-class p1, Lcom/android/server/security/FileIntegrityService;
 
@@ -97,7 +88,6 @@
 .method public static getService()Lcom/android/server/security/FileIntegrityService;
     .locals 1
 
-    .line 76
     const-class v0, Lcom/android/server/security/FileIntegrityService;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -112,7 +102,6 @@
 .method public static toCertificate([B)Ljava/security/cert/X509Certificate;
     .locals 2
 
-    .line 238
     sget-object v0, Lcom/android/server/security/FileIntegrityService;->sCertFactory:Ljava/security/cert/CertificateFactory;
 
     new-instance v1, Ljava/io/ByteArrayInputStream;
@@ -123,17 +112,14 @@
 
     move-result-object p0
 
-    .line 239
     instance-of v0, p0, Ljava/security/cert/X509Certificate;
 
     if-eqz v0, :cond_0
 
-    .line 242
     check-cast p0, Ljava/security/cert/X509Certificate;
 
     return-object p0
 
-    .line 240
     :cond_0
     new-instance p0, Ljava/security/cert/CertificateException;
 
@@ -149,7 +135,6 @@
 .method public final collectCertificate([B)V
     .locals 2
 
-    .line 223
     :try_start_0
     iget-object v0, p0, Lcom/android/server/security/FileIntegrityService;->mTrustedCertificates:Ljava/util/ArrayList;
 
@@ -157,7 +142,6 @@
     :try_end_0
     .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 224
     :try_start_1
     iget-object p0, p0, Lcom/android/server/security/FileIntegrityService;->mTrustedCertificates:Ljava/util/ArrayList;
 
@@ -167,7 +151,6 @@
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 225
     monitor-exit v0
 
     goto :goto_0
@@ -189,7 +172,6 @@
 
     const-string p1, "FileIntegrityService"
 
-    .line 227
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,7 +195,6 @@
 .method public final loadAllCertificates()V
     .locals 2
 
-    .line 195
     invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -224,15 +205,12 @@
 
     const-string v1, "etc/security/fsverity"
 
-    .line 196
     invoke-interface {v0, v1}, Ljava/nio/file/Path;->resolve(Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object v0
 
-    .line 195
     invoke-virtual {p0, v0}, Lcom/android/server/security/FileIntegrityService;->loadCertificatesFromDirectory(Ljava/nio/file/Path;)V
 
-    .line 197
     invoke-static {}, Landroid/os/Environment;->getProductDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -241,12 +219,10 @@
 
     move-result-object v0
 
-    .line 198
     invoke-interface {v0, v1}, Ljava/nio/file/Path;->resolve(Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object v0
 
-    .line 197
     invoke-virtual {p0, v0}, Lcom/android/server/security/FileIntegrityService;->loadCertificatesFromDirectory(Ljava/nio/file/Path;)V
 
     return-void
@@ -255,7 +231,6 @@
 .method public final loadCertificatesFromDirectory(Ljava/nio/file/Path;)V
     .locals 4
 
-    .line 203
     :try_start_0
     invoke-interface {p1}, Ljava/nio/file/Path;->toFile()Ljava/io/File;
 
@@ -269,7 +244,6 @@
 
     return-void
 
-    .line 208
     :cond_0
     array-length v1, v0
 
@@ -280,7 +254,6 @@
 
     aget-object v3, v0, v2
 
-    .line 209
     invoke-virtual {v3}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
 
     move-result-object v3
@@ -289,7 +262,6 @@
 
     move-result-object v3
 
-    .line 210
     invoke-virtual {p0, v3}, Lcom/android/server/security/FileIntegrityService;->collectCertificate([B)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -301,7 +273,6 @@
     :catch_0
     move-exception p0
 
-    .line 213
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,12 +298,10 @@
 .method public onStart()V
     .locals 2
 
-    .line 154
     invoke-virtual {p0}, Lcom/android/server/security/FileIntegrityService;->loadAllCertificates()V
 
     const-string v0, "file_integrity"
 
-    .line 155
     iget-object v1, p0, Lcom/android/server/security/FileIntegrityService;->mService:Landroid/os/IBinder;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
@@ -347,7 +316,6 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 164
     invoke-static {p1, v1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object v1
@@ -364,7 +332,6 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 168
     invoke-static {p1, v1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object p1
@@ -373,17 +340,14 @@
 
     move-result-object p1
 
-    .line 169
     invoke-static {p2}, Lcom/android/internal/security/VerityUtils;->getFsverityDigest(Ljava/lang/String;)[B
 
     move-result-object p2
 
-    .line 170
     iget-object v1, p0, Lcom/android/server/security/FileIntegrityService;->mTrustedCertificates:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 171
     :try_start_0
     iget-object p0, p0, Lcom/android/server/security/FileIntegrityService;->mTrustedCertificates:Ljava/util/ArrayList;
 
@@ -407,13 +371,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 173
     :try_start_1
     invoke-virtual {v2}, Ljava/security/cert/X509Certificate;->getEncoded()[B
 
     move-result-object v2
 
-    .line 174
     new-instance v3, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v3, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
@@ -427,7 +389,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 176
     :try_start_2
     monitor-exit v1
 
@@ -440,7 +401,6 @@
 
     const-string v3, "FileIntegrityService"
 
-    .line 179
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -459,7 +419,6 @@
 
     goto :goto_0
 
-    .line 182
     :cond_1
     monitor-exit v1
 
@@ -474,7 +433,6 @@
 
     throw p0
 
-    .line 165
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 

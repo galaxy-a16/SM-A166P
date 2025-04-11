@@ -13,17 +13,14 @@
 .method public constructor <init>(Landroid/app/IActivityManager;)V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/SensorList;->mSensors:Landroid/util/SparseArray;
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/SensorList;->mActivityManager:Landroid/app/IActivityManager;
 
     return-void
@@ -34,7 +31,6 @@
 .method public addSensor(ILjava/lang/Object;ILandroid/app/SynchronousUserSwitchObserver;)V
     .locals 1
 
-    .line 46
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SensorList;->mSensors:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -43,10 +39,8 @@
 
     const-string/jumbo p2, "registerUserSwitchObserver"
 
-    .line 47
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     invoke-virtual {p0, p3, p4}, Lcom/android/server/biometrics/sensors/SensorList;->registerUserSwitchObserver(ILandroid/app/SynchronousUserSwitchObserver;)V
 
     return-void
@@ -55,7 +49,6 @@
 .method public contains(I)Z
     .locals 0
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorList;->mSensors:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->contains(I)Z
@@ -68,7 +61,6 @@
 .method public get(I)Ljava/lang/Object;
     .locals 0
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorList;->mSensors:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -81,7 +73,6 @@
 .method public keyAt(I)I
     .locals 0
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorList;->mSensors:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -96,7 +87,6 @@
 
     const-string v0, "SensorList"
 
-    .line 54
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorList;->mActivityManager:Landroid/app/IActivityManager;
 
@@ -108,7 +98,6 @@
 
     const/4 p0, 0x0
 
-    .line 57
     invoke-virtual {p2, p0}, Landroid/app/SynchronousUserSwitchObserver;->onUserSwitching(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -118,7 +107,6 @@
     :catch_0
     const-string p0, "Unable to register user switch observer"
 
-    .line 60
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -129,7 +117,6 @@
 .method public size()I
     .locals 0
 
-    .line 89
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorList;->mSensors:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
@@ -142,7 +129,6 @@
 .method public valueAt(I)Ljava/lang/Object;
     .locals 0
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SensorList;->mSensors:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;

@@ -41,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDockChargerPower(Lcom/android/server/desktopmode/DockManager;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/desktopmode/DockManager;->mDockChargerPower:I
 
     return p0
@@ -50,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDockControlLibError(Lcom/android/server/desktopmode/DockManager;)Landroid/util/SparseBooleanArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mDockControlLibError:Landroid/util/SparseBooleanArray;
 
     return-object p0
@@ -59,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$fgetmISDCDeviceController(Lcom/android/server/desktopmode/DockManager;)Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mISDCDeviceController:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController;
 
     return-object p0
@@ -68,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastDockControlLibMsgState(Lcom/android/server/desktopmode/DockManager;)Lcom/android/server/desktopmode/DockManager$DockMsgState;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mLastDockControlLibMsgState:Lcom/android/server/desktopmode/DockManager$DockMsgState;
 
     return-object p0
@@ -77,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/DockManager;)Lcom/android/server/desktopmode/IStateManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     return-object p0
@@ -86,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$fputmDockChargerPower(Lcom/android/server/desktopmode/DockManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/desktopmode/DockManager;->mDockChargerPower:I
 
     return-void
@@ -95,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$fputmDockChargerSupport(Lcom/android/server/desktopmode/DockManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/desktopmode/DockManager;->mDockChargerSupport:I
 
     return-void
@@ -104,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$fputmDockVersionExtra(Lcom/android/server/desktopmode/DockManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersionExtra:Ljava/lang/String;
 
     return-void
@@ -113,7 +105,6 @@
 .method public static bridge synthetic -$$Nest$mcreateDockControlLib(Lcom/android/server/desktopmode/DockManager;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DockManager;->createDockControlLib(I)V
 
     return-void
@@ -122,7 +113,6 @@
 .method public static bridge synthetic -$$Nest$mdestroyDockControlLib(Lcom/android/server/desktopmode/DockManager;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DockManager;->destroyDockControlLib(I)V
 
     return-void
@@ -131,7 +121,6 @@
 .method public static bridge synthetic -$$Nest$minitialize(Lcom/android/server/desktopmode/DockManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DockManager;->initialize()V
 
     return-void
@@ -140,7 +129,6 @@
 .method public static bridge synthetic -$$Nest$mrequestConnectedPowerChargerInfoUpdate(Lcom/android/server/desktopmode/DockManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DockManager;->requestConnectedPowerChargerInfoUpdate()V
 
     return-void
@@ -149,7 +137,6 @@
 .method public static bridge synthetic -$$Nest$mrequestUpdateDockLibStatus(Lcom/android/server/desktopmode/DockManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DockManager;->requestUpdateDockLibStatus(Ljava/lang/String;)V
 
     return-void
@@ -158,7 +145,6 @@
 .method public static bridge synthetic -$$Nest$mupdateDockLibStatus(Lcom/android/server/desktopmode/DockManager;Lcom/android/server/desktopmode/State;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DockManager;->updateDockLibStatus(Lcom/android/server/desktopmode/State;)V
 
     return-void
@@ -167,7 +153,6 @@
 .method public static bridge synthetic -$$Nest$mupdateDockVersionToSettings(Lcom/android/server/desktopmode/DockManager;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DockManager;->updateDockVersionToSettings(Z)V
 
     return-void
@@ -176,7 +161,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/desktopmode/DockManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -185,7 +169,6 @@
 .method public static bridge synthetic -$$Nest$smdockControlErrorToString(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/desktopmode/DockManager;->dockControlErrorToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -196,7 +179,6 @@
 .method public static bridge synthetic -$$Nest$smisDexPadConnected(Lcom/android/server/desktopmode/State;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/desktopmode/DockManager;->isDexPadConnected(Lcom/android/server/desktopmode/State;)Z
 
     move-result p0
@@ -207,7 +189,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,7 +199,6 @@
 
     const-class v1, Lcom/android/server/desktopmode/DockManager;
 
-    .line 42
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
@@ -237,61 +217,46 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/ServiceThread;Lcom/android/server/desktopmode/IStateManager;)V
     .locals 6
 
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 77
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
-    .line 79
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersion:Ljava/lang/String;
 
-    .line 80
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersionExtra:Ljava/lang/String;
 
-    .line 81
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mLastDockVersion:Ljava/lang/String;
 
-    .line 83
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mISDCDeviceController:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController;
 
-    .line 84
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mControlResponseListener:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController$ControlResponseListener;
 
     const/4 v0, 0x0
 
-    .line 87
     iput v0, p0, Lcom/android/server/desktopmode/DockManager;->mDockChargerPower:I
 
-    .line 88
     iput v0, p0, Lcom/android/server/desktopmode/DockManager;->mDockChargerSupport:I
 
-    .line 91
     new-instance v0, Lcom/android/server/desktopmode/DockManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/DockManager$1;-><init>(Lcom/android/server/desktopmode/DockManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mStateListener:Lcom/android/server/desktopmode/StateManager$StateListener;
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mContext:Landroid/content/Context;
 
-    .line 122
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/desktopmode/DockManager;->mResolver:Landroid/content/ContentResolver;
 
-    .line 123
     iput-object p3, p0, Lcom/android/server/desktopmode/DockManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
-    .line 124
     invoke-interface {p3, v0}, Lcom/android/server/desktopmode/IStateManager;->registerListener(Lcom/android/server/desktopmode/StateManager$StateListener;)V
 
-    .line 126
     new-instance p3, Lcom/android/server/desktopmode/DockManager$DockHandler;
 
     invoke-virtual {p2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -302,7 +267,6 @@
 
     iput-object p3, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
-    .line 127
     new-instance p2, Lcom/android/server/desktopmode/DockManager$DockMsgState;
 
     const/16 v1, 0xc8
@@ -321,29 +285,24 @@
 
     iput-object p2, p0, Lcom/android/server/desktopmode/DockManager;->mLastDockControlLibMsgState:Lcom/android/server/desktopmode/DockManager$DockMsgState;
 
-    .line 131
     new-instance p2, Landroid/util/SparseBooleanArray;
 
     invoke-direct {p2}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object p2, p0, Lcom/android/server/desktopmode/DockManager;->mDockControlLibError:Landroid/util/SparseBooleanArray;
 
-    .line 133
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p2, "android.intent.action.ACTION_POWER_CONNECTED"
 
-    .line 134
     invoke-virtual {v3, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p2, "android.intent.action.ACTION_POWER_DISCONNECTED"
 
-    .line 135
     invoke-virtual {v3, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 137
     new-instance v1, Lcom/android/server/desktopmode/DockManager$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/desktopmode/DockManager$2;-><init>(Lcom/android/server/desktopmode/DockManager;)V
@@ -366,7 +325,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 326
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -429,7 +387,6 @@
 .method public static isDexPadConnected(Lcom/android/server/desktopmode/State;)Z
     .locals 0
 
-    .line 331
     invoke-interface {p0}, Lcom/android/server/desktopmode/State;->getDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     move-result-object p0
@@ -456,7 +413,6 @@
 
     goto :goto_0
 
-    .line 276
     :cond_0
     sget-boolean p0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -470,27 +426,23 @@
 
     goto :goto_1
 
-    .line 202
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mControlResponseListener:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController$ControlResponseListener;
 
     if-nez v0, :cond_2
 
-    .line 203
     new-instance v0, Lcom/android/server/desktopmode/DockManager$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/DockManager$3;-><init>(Lcom/android/server/desktopmode/DockManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mControlResponseListener:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController$ControlResponseListener;
 
-    .line 265
     :cond_2
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mISDCDeviceController:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController;
 
     if-nez v0, :cond_4
 
-    .line 266
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_3
@@ -513,7 +465,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     :cond_3
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mLastDockControlLibMsgState:Lcom/android/server/desktopmode/DockManager$DockMsgState;
 
@@ -525,7 +476,6 @@
 
     invoke-virtual {v0, v4, v2, v3}, Lcom/android/server/desktopmode/DockManager$DockMsgState;->setLast(IILjava/lang/String;)V
 
-    .line 268
     new-instance v0, Lcom/samsung/android/lib/dexcontrol/SDCDeviceController;
 
     iget-object v2, p0, Lcom/android/server/desktopmode/DockManager;->mContext:Landroid/content/Context;
@@ -538,7 +488,6 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 272
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DockManager;->requestConnectedPowerChargerInfoUpdate()V
 
     :cond_4
@@ -549,23 +498,19 @@
 .method public final destroyDockControlLib(I)V
     .locals 4
 
-    .line 281
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mControlResponseListener:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController$ControlResponseListener;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 282
     iput-object v1, p0, Lcom/android/server/desktopmode/DockManager;->mControlResponseListener:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController$ControlResponseListener;
 
-    .line 284
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mISDCDeviceController:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController;
 
     if-eqz v0, :cond_2
 
-    .line 285
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -576,7 +521,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :cond_1
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mLastDockControlLibMsgState:Lcom/android/server/desktopmode/DockManager$DockMsgState;
 
@@ -586,19 +530,16 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/android/server/desktopmode/DockManager$DockMsgState;->setLast(IILjava/lang/String;)V
 
-    .line 287
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mISDCDeviceController:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController;
 
     invoke-interface {v0}, Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController;->destroy()V
 
-    .line 288
     iput-object v1, p0, Lcom/android/server/desktopmode/DockManager;->mISDCDeviceController:Lcom/samsung/android/lib/dexcontrol/ISDCDeviceController;
 
     const v0, 0xa029
 
     if-ne p1, v0, :cond_2
 
-    .line 291
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     const/4 p1, -0x1
@@ -612,7 +553,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 4
 
-    .line 343
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -639,10 +579,8 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 344
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 345
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -661,7 +599,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 346
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -680,7 +617,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 347
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -699,7 +635,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 348
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -718,7 +653,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 349
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -741,10 +675,8 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 350
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 351
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -765,7 +697,6 @@
 
     const/4 v0, 0x0
 
-    .line 352
     :goto_0
     iget-object v1, p0, Lcom/android/server/desktopmode/DockManager;->mLastDockControlLibMsgState:Lcom/android/server/desktopmode/DockManager$DockMsgState;
 
@@ -779,7 +710,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 353
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -806,11 +736,9 @@
 
     goto :goto_0
 
-    .line 355
     :cond_0
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 356
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -819,7 +747,6 @@
 .method public final initialize()V
     .locals 2
 
-    .line 335
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -833,18 +760,14 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 336
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersion:Ljava/lang/String;
 
-    .line 337
     iput-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersionExtra:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 338
     iput v0, p0, Lcom/android/server/desktopmode/DockManager;->mDockChargerPower:I
 
-    .line 339
     iput v0, p0, Lcom/android/server/desktopmode/DockManager;->mDockChargerSupport:I
 
     return-void
@@ -853,14 +776,12 @@
 .method public final requestConnectedPowerChargerInfoUpdate()V
     .locals 2
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
     const/16 v1, 0xca
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 308
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
     invoke-virtual {p0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -875,14 +796,12 @@
 .method public final requestCreateDockControlLib(I)V
     .locals 2
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
     const/16 v1, 0xc9
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 298
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -901,14 +820,12 @@
 .method public final requestDestroyDockControlLib(I)V
     .locals 2
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
     const/16 v1, 0xcb
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 303
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -927,7 +844,6 @@
 .method public final requestUpdateDockLibStatus(Ljava/lang/String;)V
     .locals 3
 
-    .line 154
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -950,7 +866,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
@@ -958,15 +873,12 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 156
     iget-object p0, p0, Lcom/android/server/desktopmode/DockManager;->mHandler:Lcom/android/server/desktopmode/DockManager$DockHandler;
 
-    .line 157
     invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 156
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
@@ -975,12 +887,10 @@
 .method public final updateDockLibStatus(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 161
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 162
     sget-object v0, Lcom/android/server/desktopmode/DockManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -991,7 +901,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 163
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     move-result-object v2
@@ -1006,7 +915,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 164
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     move-result-object v2
@@ -1021,7 +929,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 165
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     move-result-object v2
@@ -1036,7 +943,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 166
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getPreviousDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     move-result-object v2
@@ -1067,10 +973,8 @@
 
     move-result-object v1
 
-    .line 162
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     :cond_0
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
@@ -1086,12 +990,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 172
     invoke-virtual {p0, v2}, Lcom/android/server/desktopmode/DockManager;->requestCreateDockControlLib(I)V
 
     goto :goto_0
 
-    .line 173
     :cond_1
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
@@ -1105,12 +1007,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 174
     invoke-virtual {p0, v1}, Lcom/android/server/desktopmode/DockManager;->requestCreateDockControlLib(I)V
 
     goto :goto_0
 
-    .line 175
     :cond_2
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
@@ -1122,7 +1022,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 176
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getPreviousDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     move-result-object v0
@@ -1133,12 +1032,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 177
     invoke-virtual {p0, v2}, Lcom/android/server/desktopmode/DockManager;->requestDestroyDockControlLib(I)V
 
     goto :goto_0
 
-    .line 178
     :cond_3
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDockState()Lcom/android/server/desktopmode/HardwareManager$DockState;
 
@@ -1160,7 +1057,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 179
     invoke-virtual {p0, v1}, Lcom/android/server/desktopmode/DockManager;->requestDestroyDockControlLib(I)V
 
     :cond_4
@@ -1173,7 +1069,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 185
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1194,7 +1089,6 @@
 
     const-string v2, "/sys/class/sec/ccic/acc_device_version"
 
-    .line 186
     invoke-static {v2, v1}, Lcom/android/server/desktopmode/Utils;->readFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1207,12 +1101,10 @@
 
     iput-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersion:Ljava/lang/String;
 
-    .line 187
     iget-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersionExtra:Ljava/lang/String;
 
     if-eqz p1, :cond_0
 
-    .line 188
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1233,7 +1125,6 @@
 
     iput-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersion:Ljava/lang/String;
 
-    .line 190
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersion:Ljava/lang/String;
 
@@ -1244,10 +1135,8 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 192
     iput-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mDockVersion:Ljava/lang/String;
 
-    .line 194
     :goto_0
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -1273,7 +1162,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     :cond_2
     iget-object p1, p0, Lcom/android/server/desktopmode/DockManager;->mResolver:Landroid/content/ContentResolver;
 

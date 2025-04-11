@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 11
     invoke-direct {p0}, Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations;-><init>()V
 
     return-void
@@ -28,19 +27,16 @@
 
     const/16 v0, 0x13
 
-    .line 27
     invoke-virtual {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/internal/jdk7/JDK7PlatformImplementations;->sdkIsNullOrAtLeast(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 28
     invoke-virtual {p1, p2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 30
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations;->addSuppressed(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
@@ -51,7 +47,6 @@
 .method public final sdkIsNullOrAtLeast(I)Z
     .locals 0
 
-    .line 22
     sget-object p0, Lcom/android/server/permission/jarjar/kotlin/internal/jdk7/JDK7PlatformImplementations$ReflectSdkVersion;->sdkVersion:Ljava/lang/Integer;
 
     if-eqz p0, :cond_1

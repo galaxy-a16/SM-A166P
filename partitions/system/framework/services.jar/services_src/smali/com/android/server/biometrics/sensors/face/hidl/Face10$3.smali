@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/Face10;Lcom/android/server/biometrics/sensors/face/hidl/FaceGenerateChallengeClient;)V
     .locals 0
 
-    .line 956
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$3;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$3;->val$client:Lcom/android/server/biometrics/sensors/face/hidl/FaceGenerateChallengeClient;
@@ -31,12 +30,10 @@
 .method public onClientStarted(Lcom/android/server/biometrics/sensors/BaseClientMonitor;)V
     .locals 2
 
-    .line 959
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$3;->val$client:Lcom/android/server/biometrics/sensors/face/hidl/FaceGenerateChallengeClient;
 
     if-eq v0, p1, :cond_0
 
-    .line 960
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

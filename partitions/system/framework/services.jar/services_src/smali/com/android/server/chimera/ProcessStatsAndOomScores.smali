@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$k0tO76VJ7wVYbq4_J0M8GtavSDU(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/chimera/ProcessStatsAndOomScores;->lambda$hasCachedProcess$0(I)Z
 
     move-result p0
@@ -26,18 +25,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 10
     iput-object v0, p0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mPids:[I
 
-    .line 11
     iput-object v0, p0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mStates:[I
 
-    .line 12
     iput-object v0, p0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mScores:[I
 
     return-void
@@ -52,25 +47,21 @@
 
     goto :goto_2
 
-    .line 22
     :cond_0
     new-instance v0, Lcom/android/server/chimera/ProcessStatsAndOomScores;
 
     invoke-direct {v0}, Lcom/android/server/chimera/ProcessStatsAndOomScores;-><init>()V
 
-    .line 23
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 24
     new-array v2, v1, [I
 
     iput-object v2, v0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mPids:[I
 
-    .line 27
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -92,7 +83,6 @@
 
     check-cast v3, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 28
     iget-object v4, v0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mPids:[I
 
     add-int/lit8 v5, v2, 0x1
@@ -105,7 +95,6 @@
 
     goto :goto_0
 
-    .line 31
     :cond_1
     iget-object p0, v0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mPids:[I
 
@@ -115,14 +104,12 @@
 
     if-eqz p0, :cond_2
 
-    .line 33
     iget-object p1, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p1, [I
 
     iput-object p1, v0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mStates:[I
 
-    .line 34
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, [I
@@ -131,13 +118,11 @@
 
     goto :goto_1
 
-    .line 36
     :cond_2
     new-array p0, v1, [I
 
     iput-object p0, v0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mStates:[I
 
-    .line 37
     new-array p0, v1, [I
 
     iput-object p0, v0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mScores:[I
@@ -155,7 +140,6 @@
 .method public static synthetic lambda$hasCachedProcess$0(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x352
 
     if-lt p0, v0, :cond_0
@@ -176,7 +160,6 @@
 .method public hasCachedProcess()Z
     .locals 1
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mScores:[I
 
     if-nez p0, :cond_0
@@ -185,7 +168,6 @@
 
     return p0
 
-    .line 48
     :cond_0
     invoke-static {p0}, Ljava/util/Arrays;->stream([I)Ljava/util/stream/IntStream;
 
@@ -205,7 +187,6 @@
 .method public isAllCachedEmptyProcess()Z
     .locals 5
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mStates:[I
 
     const/4 v0, 0x0
@@ -214,7 +195,6 @@
 
     return v0
 
-    .line 56
     :cond_0
     array-length v1, p0
 
@@ -245,21 +225,18 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "pids: "
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
 
     move v2, v1
 
-    .line 70
     :goto_0
     iget-object v3, p0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mPids:[I
 
@@ -269,12 +246,10 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 71
     aget v3, v3, v2
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 72
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
@@ -284,12 +259,10 @@
     :cond_0
     const-string v2, "/ stats: "
 
-    .line 75
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move v2, v1
 
-    .line 76
     :goto_1
     iget-object v3, p0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mStates:[I
 
@@ -297,12 +270,10 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 77
     aget v3, v3, v2
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 78
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
@@ -312,10 +283,8 @@
     :cond_1
     const-string v2, "/ adjs: "
 
-    .line 81
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 82
     :goto_2
     iget-object v2, p0, Lcom/android/server/chimera/ProcessStatsAndOomScores;->mScores:[I
 
@@ -323,19 +292,16 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 83
     aget v2, v2, v1
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 84
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 87
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

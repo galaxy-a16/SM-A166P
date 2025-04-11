@@ -15,18 +15,14 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-wide p1, p0, Lcom/android/server/location/gnss/ExponentialBackOff;->mInitIntervalMillis:J
 
-    .line 30
     iput-wide p3, p0, Lcom/android/server/location/gnss/ExponentialBackOff;->mMaxIntervalMillis:J
 
     const-wide/16 p3, 0x2
 
-    .line 32
     div-long/2addr p1, p3
 
     iput-wide p1, p0, Lcom/android/server/location/gnss/ExponentialBackOff;->mCurrentIntervalMillis:J
@@ -39,7 +35,6 @@
 .method public nextBackoffMillis()J
     .locals 5
 
-    .line 36
     iget-wide v0, p0, Lcom/android/server/location/gnss/ExponentialBackOff;->mCurrentIntervalMillis:J
 
     iget-wide v2, p0, Lcom/android/server/location/gnss/ExponentialBackOff;->mMaxIntervalMillis:J
@@ -55,7 +50,6 @@
 
     mul-long/2addr v0, v2
 
-    .line 40
     iput-wide v0, p0, Lcom/android/server/location/gnss/ExponentialBackOff;->mCurrentIntervalMillis:J
 
     return-wide v0
@@ -64,7 +58,6 @@
 .method public reset()V
     .locals 4
 
-    .line 45
     iget-wide v0, p0, Lcom/android/server/location/gnss/ExponentialBackOff;->mInitIntervalMillis:J
 
     const-wide/16 v2, 0x2
@@ -79,7 +72,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

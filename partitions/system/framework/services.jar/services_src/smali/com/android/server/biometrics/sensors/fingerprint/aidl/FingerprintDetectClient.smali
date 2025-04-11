@@ -20,7 +20,6 @@
 .method public static synthetic $r8$lambda$aUo9IiRy2zNLV-arj2yG8RSAjvQ(Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;Landroid/hardware/biometrics/common/OperationContext;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->lambda$doDetectInteraction$0(Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;Landroid/hardware/biometrics/common/OperationContext;)V
 
     return-void
@@ -31,12 +30,10 @@
 
     move-object v12, p0
 
-    .line 64
     invoke-virtual/range {p7 .. p7}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;->getUserId()I
 
     move-result v5
 
-    .line 65
     invoke-virtual/range {p7 .. p7}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -63,20 +60,16 @@
 
     move-object/from16 v11, p9
 
-    .line 64
     invoke-direct/range {v0 .. v11}, Lcom/android/server/biometrics/sensors/AcquisitionClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;IIZLcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
     move-wide/from16 v0, p4
 
-    .line 67
     invoke-virtual {p0, v0, v1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->setRequestId(J)V
 
     move/from16 v0, p12
 
-    .line 68
     iput-boolean v0, v12, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->mIsStrongBiometric:Z
 
-    .line 69
     new-instance v0, Lcom/android/server/biometrics/sensors/SensorOverlays;
 
     const/4 v1, 0x0
@@ -91,7 +84,6 @@
 
     move-object/from16 v0, p7
 
-    .line 71
     iput-object v0, v12, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->mOptions:Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;
 
     return-void
@@ -100,7 +92,6 @@
 .method public static synthetic lambda$doDetectInteraction$0(Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;Landroid/hardware/biometrics/common/OperationContext;)V
     .locals 1
 
-    .line 118
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->getSession()Landroid/hardware/biometrics/fingerprint/ISession;
 
@@ -119,7 +110,6 @@
 
     const-string v0, "Unable to notify context changed"
 
-    .line 120
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -131,43 +121,36 @@
 .method public final doDetectInteraction()Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 4
 
-    .line 110
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getFreshDaemon()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;
 
-    .line 112
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->hasContextMethods()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 113
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getOperationContext()Lcom/android/server/biometrics/log/OperationContextExt;
 
     move-result-object v1
 
-    .line 114
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->getSession()Landroid/hardware/biometrics/fingerprint/ISession;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->mOptions:Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;
 
-    .line 115
     invoke-virtual {v1, v3}, Lcom/android/server/biometrics/log/OperationContextExt;->toAidlContext(Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;)Landroid/hardware/biometrics/common/OperationContext;
 
     move-result-object v3
 
-    .line 114
     invoke-interface {v2, v3}, Landroid/hardware/biometrics/fingerprint/ISession;->detectInteractionWithContext(Landroid/hardware/biometrics/common/OperationContext;)Landroid/hardware/biometrics/common/ICancellationSignal;
 
     move-result-object v2
 
-    .line 116
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getBiometricContext()Lcom/android/server/biometrics/log/BiometricContext;
 
     move-result-object p0
@@ -180,7 +163,6 @@
 
     return-object v2
 
-    .line 125
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->getSession()Landroid/hardware/biometrics/fingerprint/ISession;
 
@@ -196,7 +178,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xd
 
     return p0
@@ -205,7 +186,6 @@
 .method public interruptsPrecedingClients()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -214,7 +194,6 @@
 .method public onInteractionDetected()V
     .locals 4
 
-    .line 134
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
@@ -232,7 +211,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;->onDetected(IIZ)V
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x1
@@ -250,10 +228,8 @@
 
     const-string v2, "Remote exception when sending onDetected"
 
-    .line 137
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0
@@ -267,10 +243,8 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 0
 
-    .line 76
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 77
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->startHalOperation()V
 
     return-void
@@ -279,7 +253,6 @@
 .method public startHalOperation()V
     .locals 3
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->mSensorOverlays:Lcom/android/server/biometrics/sensors/SensorOverlays;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
@@ -290,7 +263,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Lcom/android/server/biometrics/sensors/SensorOverlays;->show(IILcom/android/server/biometrics/sensors/AcquisitionClient;)V
 
-    .line 101
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->doDetectInteraction()Landroid/hardware/biometrics/common/ICancellationSignal;
 
@@ -309,10 +281,8 @@
 
     const-string v2, "Remote exception when requesting finger detect"
 
-    .line 103
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->mSensorOverlays:Lcom/android/server/biometrics/sensors/SensorOverlays;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
@@ -321,7 +291,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/SensorOverlays;->hide(I)V
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0
@@ -335,7 +304,6 @@
 .method public stopHalOperation()V
     .locals 3
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->mSensorOverlays:Lcom/android/server/biometrics/sensors/SensorOverlays;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
@@ -344,15 +312,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/SensorOverlays;->hide(I)V
 
-    .line 83
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->unsubscribeBiometricContext()V
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintDetectClient;->mCancellationSignal:Landroid/hardware/biometrics/common/ICancellationSignal;
 
     if-eqz v0, :cond_0
 
-    .line 87
     :try_start_0
     invoke-interface {v0}, Landroid/hardware/biometrics/common/ICancellationSignal;->cancel()V
     :try_end_0
@@ -367,10 +332,8 @@
 
     const-string v2, "Remote exception"
 
-    .line 89
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0

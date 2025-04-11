@@ -13,13 +13,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 601
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 602
     iput p1, p0, Lcom/android/server/audio/AudioServiceEvents$StreamUnmuteErrorEvent;->mStreamType:I
 
-    .line 603
     iput p2, p0, Lcom/android/server/audio/AudioServiceEvents$StreamUnmuteErrorEvent;->mRingerZenMutedStreams:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 3
 
-    .line 609
     iget v0, p0, Lcom/android/server/audio/AudioServiceEvents$StreamUnmuteErrorEvent;->mStreamType:I
 
     invoke-static {}, Landroid/media/AudioSystem;->getNumStreamTypes()I
@@ -43,14 +39,12 @@
 
     if-ltz v0, :cond_0
 
-    .line 610
     sget-object v1, Landroid/media/AudioSystem;->STREAM_NAMES:[Ljava/lang/String;
 
     aget-object v0, v1, v0
 
     goto :goto_0
 
-    .line 611
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -68,7 +62,6 @@
 
     move-result-object v0
 
-    .line 612
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -76,24 +69,20 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 613
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, " despite muted streams 0x"
 
-    .line 614
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p0, p0, Lcom/android/server/audio/AudioServiceEvents$StreamUnmuteErrorEvent;->mRingerZenMutedStreams:I
 
-    .line 615
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 616
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

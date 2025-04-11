@@ -39,7 +39,6 @@
 
     const-string/jumbo v12, "sendBroadcast"
 
-    .line 54
     filled-new-array/range {v0 .. v12}, [Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +59,6 @@
 .method public static checkKeyType(Ljava/lang/String;)Z
     .locals 5
 
-    .line 990
     sget-object v0, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->unusedBundleKeys:[Ljava/lang/String;
 
     array-length v1, v0
@@ -74,7 +72,6 @@
 
     aget-object v4, v0, v3
 
-    .line 991
     invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -97,12 +94,10 @@
 .method public static checkPermission(Landroid/content/Context;Ljava/lang/String;Lcom/samsung/android/knox/appconfig/info/KeyInfo$KEY;)I
     .locals 1
 
-    .line 972
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 974
     :try_start_0
     invoke-virtual {p2}, Lcom/samsung/android/knox/appconfig/info/KeyInfo$KEY;->getPermission()Ljava/lang/String;
 
@@ -118,14 +113,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 975
     sget p0, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_PERMISSION_DENIED:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return p0
 
-    .line 981
     :cond_0
     sget p0, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NONE:I
 
@@ -134,7 +127,6 @@
     :catch_0
     move-exception p0
 
-    .line 978
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -153,7 +145,6 @@
 
     invoke-static {p1, p0}, Lcom/samsung/android/knox/custom/utils/KnoxsdkFileLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 979
     sget p0, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_UNKNOWN:I
 
     return p0
@@ -162,7 +153,6 @@
 .method public static checkVersion(Lcom/samsung/android/knox/appconfig/info/KeyInfo$KEY;)I
     .locals 2
 
-    .line 961
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/android/knox/appconfig/info/KeyInfo$KEY;->getVersion()I
 
@@ -174,14 +164,12 @@
 
     if-le p0, v0, :cond_0
 
-    .line 962
     sget p0, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NOT_SUPPORTED:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return p0
 
-    .line 968
     :cond_0
     sget p0, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NONE:I
 
@@ -190,7 +178,6 @@
     :catch_0
     move-exception p0
 
-    .line 965
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +196,6 @@
 
     invoke-static {v0, p0}, Lcom/samsung/android/knox/custom/utils/KnoxsdkFileLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 966
     sget p0, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_UNKNOWN:I
 
     return p0
@@ -220,14 +206,12 @@
 
     const-string v0, "device_policy"
 
-    .line 985
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/admin/DevicePolicyManager;
 
-    .line 986
     invoke-virtual {p0}, Landroid/app/admin/DevicePolicyManager;->isOrganizationOwnedDeviceWithManagedProfile()Z
 
     move-result p0
@@ -238,7 +222,6 @@
 .method public static getCallerPackage(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    .line 1075
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -249,7 +232,6 @@
 .method public static hasSystemVibrationMenu(Landroid/content/Context;)Z
     .locals 2
 
-    .line 999
     invoke-static {p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->isSupportDcHaptic(Landroid/content/Context;)Z
 
     move-result v0
@@ -260,7 +242,6 @@
 
     return v1
 
-    .line 1002
     :cond_0
     invoke-static {p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->hasVibrator(Landroid/content/Context;)Z
 
@@ -288,7 +269,6 @@
 
     const-string/jumbo v0, "vibrator"
 
-    .line 1015
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -297,7 +277,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1016
     invoke-virtual {p0}, Landroid/os/Vibrator;->hasVibrator()Z
 
     move-result p0
@@ -320,7 +299,6 @@
 
     const-string/jumbo v0, "vibrator"
 
-    .line 1020
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -333,7 +311,6 @@
 
     return v0
 
-    .line 1024
     :cond_0
     invoke-virtual {p0}, Landroid/os/Vibrator;->semGetSupportedVibrationType()I
 
@@ -352,12 +329,10 @@
 .method public static isSupportDcHaptic(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1006
     sget-boolean v0, Lcom/samsung/android/vibrator/VibRune;->SUPPORT_HAPTIC_FEEDBACK_ON_DC_MOTOR:Z
 
     if-eqz v0, :cond_0
 
-    .line 1007
     invoke-static {p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->hasVibrator(Landroid/content/Context;)Z
 
     move-result v0
@@ -383,7 +358,6 @@
 .method public static supportAutoBrightness(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1061
     invoke-static {p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->supportLightSensor(Landroid/content/Context;)Z
 
     move-result v0
@@ -416,7 +390,6 @@
 
     const-string/jumbo v0, "sensor"
 
-    .line 1048
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -432,7 +405,6 @@
     :cond_0
     const/4 v1, 0x5
 
-    .line 1053
     invoke-virtual {p0, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v1
@@ -458,7 +430,6 @@
 
     const-string/jumbo v0, "sensor"
 
-    .line 1029
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -474,14 +445,12 @@
     :cond_0
     const/4 v1, -0x1
 
-    .line 1033
     invoke-virtual {p0, v1}, Landroid/hardware/SensorManager;->getSensorList(I)Ljava/util/List;
 
     move-result-object p0
 
     move v1, v0
 
-    .line 1035
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -489,7 +458,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 1036
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -528,7 +496,6 @@
 
     const-string/jumbo v0, "motion_recognition"
 
-    .line 1066
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -544,7 +511,6 @@
     :cond_0
     const/high16 v0, 0x800000
 
-    .line 1070
     invoke-virtual {p0, v0}, Lcom/samsung/android/gesture/SemMotionRecognitionManager;->isAvailable(I)Z
 
     move-result p0
@@ -561,28 +527,23 @@
 
     if-nez v1, :cond_0
 
-    .line 61
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     return-object v1
 
-    .line 64
     :cond_0
     invoke-static/range {p0 .. p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->getCallerPackage(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 65
     sget-object v4, Lcom/samsung/android/knox/appconfig/info/KeyInfo$KEY;->NONE:Lcom/samsung/android/knox/appconfig/info/KeyInfo$KEY;
 
-    .line 66
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 68
     invoke-virtual/range {p1 .. p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v5
@@ -604,7 +565,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 69
     sget-object v7, Lcom/samsung/android/knox/appconfig/info/KeyInfo;->KEYMAP:Ljava/util/Map;
 
     invoke-interface {v7, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -617,18 +577,15 @@
 
     goto :goto_0
 
-    .line 77
     :cond_1
     invoke-static {v7}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->checkVersion(Lcom/samsung/android/knox/appconfig/info/KeyInfo$KEY;)I
 
     move-result v8
 
-    .line 78
     sget v9, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NONE:I
 
     if-eq v9, v8, :cond_2
 
-    .line 79
     invoke-virtual {v4, v6, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_0
@@ -636,22 +593,18 @@
     :cond_2
     move-object/from16 v8, p0
 
-    .line 83
     invoke-static {v8, v3, v7}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->checkPermission(Landroid/content/Context;Ljava/lang/String;Lcom/samsung/android/knox/appconfig/info/KeyInfo$KEY;)I
 
     move-result v7
 
-    .line 84
     sget v9, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NONE:I
 
     if-eq v9, v7, :cond_3
 
-    .line 85
     invoke-virtual {v4, v6, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 89
     :cond_3
     invoke-static/range {p0 .. p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->checkWPCODMode(Landroid/content/Context;)Z
 
@@ -673,7 +626,6 @@
 
     if-ne v7, v15, :cond_5
 
-    .line 91
     invoke-virtual {v14, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -686,7 +638,6 @@
 
     if-nez v7, :cond_4
 
-    .line 92
     invoke-virtual {v12, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -699,7 +650,6 @@
 
     if-nez v7, :cond_4
 
-    .line 93
     invoke-virtual {v10, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -712,7 +662,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 94
     :cond_4
     sget v7, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NOT_SUPPORTED:I
 
@@ -720,7 +669,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_5
     invoke-static {v6}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->checkKeyType(Ljava/lang/String;)Z
 
@@ -730,7 +678,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_6
     invoke-virtual {v1, v6}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -738,7 +685,6 @@
 
     if-eqz v7, :cond_25
 
-    .line 105
     invoke-virtual {v7}, Landroid/os/Bundle;->isEmpty()Z
 
     move-result v16
@@ -750,14 +696,12 @@
     :cond_7
     const-string/jumbo v15, "value"
 
-    .line 108
     invoke-virtual {v7, v15}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v15
 
     if-eqz v15, :cond_25
 
-    .line 109
     invoke-virtual {v15}, Ljava/lang/String;->isEmpty()Z
 
     move-result v17
@@ -766,7 +710,6 @@
 
     goto/16 :goto_0
 
-    .line 114
     :cond_8
     :try_start_0
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
@@ -3436,7 +3379,6 @@
 
     goto/16 :goto_7
 
-    .line 516
     :pswitch_0
     :try_start_1
     invoke-virtual {v13, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3457,14 +3399,12 @@
 
     if-nez v1, :cond_25
 
-    .line 517
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 511
     :pswitch_1
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3478,14 +3418,12 @@
 
     if-nez v1, :cond_25
 
-    .line 512
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 506
     :pswitch_2
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3499,14 +3437,12 @@
 
     if-nez v1, :cond_25
 
-    .line 507
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 371
     :pswitch_3
     invoke-static/range {p0 .. p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->hasSystemVibrationMenu(Landroid/content/Context;)Z
 
@@ -3514,12 +3450,10 @@
 
     if-nez v1, :cond_a
 
-    .line 372
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NOT_SUPPORTED:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 374
     :cond_a
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3533,14 +3467,12 @@
 
     if-nez v1, :cond_25
 
-    .line 375
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 366
     :pswitch_4
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3554,14 +3486,12 @@
 
     if-nez v1, :cond_25
 
-    .line 367
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 361
     :pswitch_5
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3575,14 +3505,12 @@
 
     if-nez v1, :cond_25
 
-    .line 362
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 356
     :pswitch_6
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3596,14 +3524,12 @@
 
     if-nez v1, :cond_25
 
-    .line 357
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 347
     :pswitch_7
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3617,14 +3543,12 @@
 
     if-nez v1, :cond_25
 
-    .line 348
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 342
     :pswitch_8
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3638,14 +3562,12 @@
 
     if-nez v1, :cond_25
 
-    .line 343
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 337
     :pswitch_9
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3659,14 +3581,12 @@
 
     if-nez v1, :cond_25
 
-    .line 338
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 332
     :pswitch_a
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3680,14 +3600,12 @@
 
     if-nez v1, :cond_25
 
-    .line 333
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 327
     :pswitch_b
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3701,14 +3619,12 @@
 
     if-nez v1, :cond_25
 
-    .line 328
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 322
     :pswitch_c
     invoke-virtual {v12, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3734,14 +3650,12 @@
 
     if-nez v1, :cond_25
 
-    .line 323
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 317
     :pswitch_d
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3755,14 +3669,12 @@
 
     if-nez v1, :cond_25
 
-    .line 318
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 312
     :pswitch_e
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3776,14 +3688,12 @@
 
     if-nez v1, :cond_25
 
-    .line 313
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 307
     :pswitch_f
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3797,14 +3707,12 @@
 
     if-nez v1, :cond_25
 
-    .line 308
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 302
     :pswitch_10
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3818,14 +3726,12 @@
 
     if-nez v1, :cond_25
 
-    .line 303
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 297
     :pswitch_11
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3839,14 +3745,12 @@
 
     if-nez v1, :cond_25
 
-    .line 298
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 292
     :pswitch_12
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -3862,7 +3766,6 @@
 
     if-le v1, v7, :cond_25
 
-    .line 293
     :cond_b
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
@@ -3870,7 +3773,6 @@
 
     goto/16 :goto_7
 
-    .line 287
     :pswitch_13
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3884,14 +3786,12 @@
 
     if-nez v1, :cond_25
 
-    .line 288
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 282
     :pswitch_14
     invoke-virtual {v13, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3911,14 +3811,12 @@
 
     if-nez v1, :cond_25
 
-    .line 283
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 277
     :pswitch_15
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3932,14 +3830,12 @@
 
     if-nez v1, :cond_25
 
-    .line 278
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 272
     :pswitch_16
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3953,14 +3849,12 @@
 
     if-nez v1, :cond_25
 
-    .line 273
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 258
     :pswitch_17
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3974,14 +3868,12 @@
 
     if-nez v1, :cond_25
 
-    .line 259
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 253
     :pswitch_18
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3995,14 +3887,12 @@
 
     if-nez v1, :cond_25
 
-    .line 254
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 248
     :pswitch_19
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -4016,7 +3906,6 @@
 
     if-le v7, v1, :cond_25
 
-    .line 249
     :cond_c
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
@@ -4027,7 +3916,6 @@
     :sswitch_c6
     const-string v1, "UWQHD"
 
-    .line 928
     invoke-virtual {v1, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -4060,7 +3948,6 @@
 
     const-string v1, "WUXGA"
 
-    .line 929
     invoke-virtual {v1, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -4091,14 +3978,12 @@
 
     if-nez v1, :cond_25
 
-    .line 930
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 893
     :sswitch_c7
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4112,14 +3997,12 @@
 
     if-nez v1, :cond_25
 
-    .line 894
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 879
     :sswitch_c8
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4133,14 +4016,12 @@
 
     if-nez v1, :cond_25
 
-    .line 880
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 859
     :sswitch_c9
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4154,12 +4035,10 @@
 
     if-nez v1, :cond_d
 
-    .line 860
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 863
     :cond_d
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -4167,13 +4046,11 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 865
     :try_start_2
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 866
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
@@ -4185,7 +4062,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 870
     :goto_3
     :try_start_3
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -4206,7 +4082,6 @@
 
     move-object v1, v0
 
-    .line 868
     :try_start_4
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -4228,15 +4103,12 @@
 
     goto :goto_3
 
-    .line 870
     :goto_4
     :try_start_5
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 871
     throw v1
 
-    .line 852
     :sswitch_ca
     invoke-virtual {v10, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4244,14 +4116,12 @@
 
     if-nez v1, :cond_25
 
-    .line 853
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 835
     :sswitch_cb
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NOT_SUPPORTED:I
 
@@ -4259,7 +4129,6 @@
 
     goto/16 :goto_7
 
-    .line 823
     :sswitch_cc
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4273,14 +4142,12 @@
 
     if-nez v1, :cond_25
 
-    .line 824
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 818
     :sswitch_cd
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4294,14 +4161,12 @@
 
     if-nez v1, :cond_25
 
-    .line 819
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 813
     :sswitch_ce
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4315,14 +4180,12 @@
 
     if-nez v1, :cond_25
 
-    .line 814
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 808
     :sswitch_cf
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4336,14 +4199,12 @@
 
     if-nez v1, :cond_25
 
-    .line 809
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 803
     :sswitch_d0
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4357,14 +4218,12 @@
 
     if-nez v1, :cond_25
 
-    .line 804
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 795
     :sswitch_d1
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4378,14 +4237,12 @@
 
     if-nez v1, :cond_25
 
-    .line 796
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 790
     :sswitch_d2
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4399,14 +4256,12 @@
 
     if-nez v1, :cond_25
 
-    .line 791
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 785
     :sswitch_d3
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4420,14 +4275,12 @@
 
     if-nez v1, :cond_25
 
-    .line 786
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 780
     :sswitch_d4
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4441,14 +4294,12 @@
 
     if-nez v1, :cond_25
 
-    .line 781
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 775
     :sswitch_d5
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4462,14 +4313,12 @@
 
     if-nez v1, :cond_25
 
-    .line 776
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 698
     :sswitch_d6
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4483,14 +4332,12 @@
 
     if-nez v1, :cond_25
 
-    .line 699
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 693
     :sswitch_d7
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4504,14 +4351,12 @@
 
     if-nez v1, :cond_25
 
-    .line 694
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 679
     :sswitch_d8
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4525,14 +4370,12 @@
 
     if-nez v1, :cond_25
 
-    .line 680
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 674
     :sswitch_d9
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4546,14 +4389,12 @@
 
     if-nez v1, :cond_25
 
-    .line 675
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 669
     :sswitch_da
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4567,14 +4408,12 @@
 
     if-nez v1, :cond_25
 
-    .line 670
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 649
     :sswitch_db
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4588,14 +4427,12 @@
 
     if-nez v1, :cond_25
 
-    .line 650
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 564
     :sswitch_dc
     invoke-virtual {v12, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4621,7 +4458,6 @@
 
     if-nez v1, :cond_25
 
-    .line 565
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -4631,7 +4467,6 @@
     :sswitch_dd
     const-string v1, "7"
 
-    .line 552
     invoke-virtual {v1, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -4662,7 +4497,6 @@
 
     if-nez v1, :cond_25
 
-    .line 553
     invoke-virtual {v12, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -4681,14 +4515,12 @@
 
     if-nez v1, :cond_25
 
-    .line 554
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 523
     :sswitch_de
     invoke-virtual {v13, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4708,14 +4540,12 @@
 
     if-nez v1, :cond_25
 
-    .line 524
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 497
     :sswitch_df
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4729,14 +4559,12 @@
 
     if-nez v1, :cond_25
 
-    .line 498
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 488
     :sswitch_e0
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4750,14 +4578,12 @@
 
     if-nez v1, :cond_25
 
-    .line 489
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 265
     :sswitch_e1
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4771,14 +4597,12 @@
 
     if-nez v1, :cond_25
 
-    .line 266
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 236
     :sswitch_e2
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4792,14 +4616,12 @@
 
     if-nez v1, :cond_25
 
-    .line 237
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 228
     :sswitch_e3
     invoke-static/range {p0 .. p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->supportPocketMode(Landroid/content/Context;)Z
 
@@ -4807,12 +4629,10 @@
 
     if-nez v1, :cond_e
 
-    .line 229
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NOT_SUPPORTED:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 231
     :cond_e
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4826,14 +4646,12 @@
 
     if-nez v1, :cond_25
 
-    .line 232
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 223
     :sswitch_e4
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4847,14 +4665,12 @@
 
     if-nez v1, :cond_25
 
-    .line 224
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 218
     :sswitch_e5
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4868,14 +4684,12 @@
 
     if-nez v1, :cond_25
 
-    .line 219
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 213
     :sswitch_e6
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4889,14 +4703,12 @@
 
     if-nez v1, :cond_25
 
-    .line 214
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 194
     :sswitch_e7
     invoke-static/range {p0 .. p0}, Lcom/samsung/android/knox/appconfig/ApplicationRestrictionsValidator;->supportAutoBrightness(Landroid/content/Context;)Z
 
@@ -4904,12 +4716,10 @@
 
     if-nez v1, :cond_f
 
-    .line 195
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NOT_SUPPORTED:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 197
     :cond_f
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4923,7 +4733,6 @@
 
     if-nez v1, :cond_10
 
-    .line 198
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -4931,14 +4740,12 @@
     :cond_10
     const-string v1, "level"
 
-    .line 200
     invoke-virtual {v7, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_25
 
-    .line 201
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v9
@@ -4948,7 +4755,6 @@
     :try_start_6
     const-string v1, "level"
 
-    .line 203
     invoke-virtual {v7, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -4957,7 +4763,6 @@
 
     move-result v1
 
-    .line 204
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
@@ -4969,7 +4774,6 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 208
     :goto_5
     :try_start_7
     invoke-static {v9, v10}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -4990,7 +4794,6 @@
 
     move-object v1, v0
 
-    .line 206
     :try_start_8
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -5012,15 +4815,12 @@
 
     goto :goto_5
 
-    .line 208
     :goto_6
     :try_start_9
     invoke-static {v9, v10}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 209
     throw v1
 
-    .line 189
     :sswitch_e8
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5034,14 +4834,12 @@
 
     if-nez v1, :cond_25
 
-    .line 190
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 184
     :sswitch_e9
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5055,14 +4853,12 @@
 
     if-nez v1, :cond_25
 
-    .line 185
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 179
     :sswitch_ea
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5076,14 +4872,12 @@
 
     if-nez v1, :cond_25
 
-    .line 180
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 174
     :sswitch_eb
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5097,14 +4891,12 @@
 
     if-nez v1, :cond_25
 
-    .line 175
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 169
     :sswitch_ec
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5118,14 +4910,12 @@
 
     if-nez v1, :cond_25
 
-    .line 170
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 164
     :sswitch_ed
     invoke-virtual {v12, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5139,14 +4929,12 @@
 
     if-nez v1, :cond_25
 
-    .line 165
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 159
     :sswitch_ee
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5160,14 +4948,12 @@
 
     if-nez v1, :cond_25
 
-    .line 160
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 154
     :sswitch_ef
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5181,7 +4967,6 @@
 
     if-nez v1, :cond_25
 
-    .line 155
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -5191,7 +4976,6 @@
     :cond_11
     const-string/jumbo v1, "true"
 
-    .line 617
     invoke-virtual {v1, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -5206,14 +4990,12 @@
 
     if-nez v1, :cond_25
 
-    .line 618
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 612
     :cond_12
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5227,14 +5009,12 @@
 
     if-nez v1, :cond_25
 
-    .line 613
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 604
     :cond_13
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5248,14 +5028,12 @@
 
     if-nez v1, :cond_25
 
-    .line 605
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 596
     :cond_14
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5269,14 +5047,12 @@
 
     if-nez v1, :cond_25
 
-    .line 597
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 453
     :cond_15
     invoke-virtual {v12, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5302,14 +5078,12 @@
 
     if-nez v1, :cond_25
 
-    .line 454
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 448
     :cond_16
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5323,14 +5097,12 @@
 
     if-nez v1, :cond_25
 
-    .line 449
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 398
     :cond_17
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -5348,7 +5120,6 @@
 
     if-le v1, v7, :cond_25
 
-    .line 399
     :cond_18
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
@@ -5356,7 +5127,6 @@
 
     goto/16 :goto_7
 
-    .line 393
     :cond_19
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -5374,7 +5144,6 @@
 
     if-le v1, v7, :cond_25
 
-    .line 394
     :cond_1a
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
@@ -5382,7 +5151,6 @@
 
     goto/16 :goto_7
 
-    .line 386
     :cond_1b
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5396,14 +5164,12 @@
 
     if-nez v1, :cond_25
 
-    .line 387
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 381
     :cond_1c
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5417,14 +5183,12 @@
 
     if-nez v1, :cond_25
 
-    .line 382
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 149
     :cond_1d
     :sswitch_f0
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5439,14 +5203,12 @@
 
     if-nez v1, :cond_25
 
-    .line 150
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 144
     :cond_1e
     invoke-virtual {v12, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5472,14 +5234,12 @@
 
     if-nez v1, :cond_25
 
-    .line 145
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto/16 :goto_7
 
-    .line 141
     :cond_1f
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_NOT_SUPPORTED:I
 
@@ -5487,7 +5247,6 @@
 
     goto/16 :goto_7
 
-    .line 136
     :cond_20
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5501,14 +5260,12 @@
 
     if-nez v1, :cond_25
 
-    .line 137
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_7
 
-    .line 131
     :cond_21
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5522,14 +5279,12 @@
 
     if-nez v1, :cond_25
 
-    .line 132
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_7
 
-    .line 126
     :cond_22
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5543,14 +5298,12 @@
 
     if-nez v1, :cond_25
 
-    .line 127
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_7
 
-    .line 121
     :cond_23
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5564,14 +5317,12 @@
 
     if-nez v1, :cond_25
 
-    .line 122
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_7
 
-    .line 116
     :cond_24
     invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5585,7 +5336,6 @@
 
     if-nez v1, :cond_25
 
-    .line 117
     sget v1, Lcom/samsung/android/knox/appconfig/info/ResultInfo;->ERROR_INVALID_VALUE:I
 
     invoke-virtual {v4, v6, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -5599,7 +5349,6 @@
 
     move-object v1, v0
 
-    .line 953
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V

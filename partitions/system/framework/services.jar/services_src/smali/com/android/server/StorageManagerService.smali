@@ -167,7 +167,6 @@
 .method public static synthetic $r8$lambda$3K7C9KnxnC6gmsi3QcdKiDlJERI(Lcom/android/server/StorageManagerService;ILandroid/os/storage/VolumeInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/StorageManagerService;->lambda$onVolumeStateChangedLocked$1(ILandroid/os/storage/VolumeInfo;)V
 
     return-void
@@ -176,7 +175,6 @@
 .method public static synthetic $r8$lambda$RcU40sZh5WzidnZAiYAuHCCB0p8(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/StorageManagerService;->lambda$connectVold$3()V
 
     return-void
@@ -185,7 +183,6 @@
 .method public static synthetic $r8$lambda$g9RUPXxb7vc7vgEXAyX3YVhyBRk(Lcom/android/internal/util/IndentingPrintWriter;Ljava/lang/Integer;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/StorageManagerService;->lambda$dump$4(Lcom/android/internal/util/IndentingPrintWriter;Ljava/lang/Integer;Ljava/lang/Boolean;)V
 
     return-void
@@ -194,7 +191,6 @@
 .method public static synthetic $r8$lambda$ioyqpYzxw0iQEejDsYSJPRZ-mjU(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/StorageManagerService;->lambda$resetIfBootedAndConnected$0()V
 
     return-void
@@ -203,7 +199,6 @@
 .method public static synthetic $r8$lambda$pt8lZztqxl_cHcQvYqmZZ559zRc(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/StorageManagerService;->lambda$connectStoraged$2()V
 
     return-void
@@ -212,7 +207,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallbacks(Lcom/android/server/StorageManagerService;)Lcom/android/server/StorageManagerService$Callbacks;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     return-object p0
@@ -221,7 +215,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCeStoragePreparedUsers(Lcom/android/server/StorageManagerService;)Ljava/util/Set;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mCeStoragePreparedUsers:Ljava/util/Set;
 
     return-object p0
@@ -230,7 +223,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/StorageManagerService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -239,7 +231,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisks(Lcom/android/server/StorageManagerService;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mDisks:Landroid/util/ArrayMap;
 
     return-object p0
@@ -248,7 +239,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFuseMountedUser(Lcom/android/server/StorageManagerService;)Ljava/util/Set;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mFuseMountedUser:Ljava/util/Set;
 
     return-object p0
@@ -257,7 +247,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/StorageManagerService;)Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     return-object p0
@@ -266,7 +255,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHeimdAllFs(Lcom/android/server/StorageManagerService;)Lcom/android/server/HeimdAllFsService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHeimdAllFs:Lcom/android/server/HeimdAllFsService;
 
     return-object p0
@@ -275,7 +263,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIAppOpsService(Lcom/android/server/StorageManagerService;)Lcom/android/internal/app/IAppOpsService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mIAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
     return-object p0
@@ -284,7 +271,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIPackageManager(Lcom/android/server/StorageManagerService;)Landroid/content/pm/IPackageManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
     return-object p0
@@ -293,7 +279,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInstaller(Lcom/android/server/StorageManagerService;)Lcom/android/server/pm/Installer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
     return-object p0
@@ -302,7 +287,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastMaintenance(Lcom/android/server/StorageManagerService;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/StorageManagerService;->mLastMaintenance:J
 
     return-wide v0
@@ -311,7 +295,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastMaintenanceFile(Lcom/android/server/StorageManagerService;)Ljava/io/File;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mLastMaintenanceFile:Ljava/io/File;
 
     return-object p0
@@ -320,7 +303,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/StorageManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -329,7 +311,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMediaStoreAuthorityAppId(Lcom/android/server/StorageManagerService;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
 
     return p0
@@ -338,7 +319,6 @@
 .method public static bridge synthetic -$$Nest$fgetmObbActionHandler(Lcom/android/server/StorageManagerService;)Lcom/android/server/StorageManagerService$ObbActionHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbActionHandler:Lcom/android/server/StorageManagerService$ObbActionHandler;
 
     return-object p0
@@ -347,7 +327,6 @@
 .method public static bridge synthetic -$$Nest$fgetmObbMounts(Lcom/android/server/StorageManagerService;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     return-object p0
@@ -356,7 +335,6 @@
 .method public static bridge synthetic -$$Nest$fgetmObbPathToStateMap(Lcom/android/server/StorageManagerService;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbPathToStateMap:Ljava/util/Map;
 
     return-object p0
@@ -365,7 +343,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPmInternal(Lcom/android/server/StorageManagerService;)Landroid/content/pm/PackageManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
     return-object p0
@@ -374,7 +351,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStorageSessionController(Lcom/android/server/StorageManagerService;)Lcom/android/server/storage/StorageSessionController;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
     return-object p0
@@ -383,7 +359,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUidsWithLegacyExternalStorage(Lcom/android/server/StorageManagerService;)Ljava/util/Set;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mUidsWithLegacyExternalStorage:Ljava/util/Set;
 
     return-object p0
@@ -392,7 +367,6 @@
 .method public static bridge synthetic -$$Nest$fgetmVold(Lcom/android/server/StorageManagerService;)Landroid/os/IVold;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     return-object p0
@@ -401,7 +375,6 @@
 .method public static bridge synthetic -$$Nest$fgetmVolumes(Lcom/android/server/StorageManagerService;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     return-object p0
@@ -410,7 +383,6 @@
 .method public static bridge synthetic -$$Nest$fputmCurrentUserId(Lcom/android/server/StorageManagerService;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/StorageManagerService;->mCurrentUserId:I
 
     return-void
@@ -419,7 +391,6 @@
 .method public static bridge synthetic -$$Nest$fputmHeimdAllFs(Lcom/android/server/StorageManagerService;Lcom/android/server/HeimdAllFsService;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mHeimdAllFs:Lcom/android/server/HeimdAllFsService;
 
     return-void
@@ -428,7 +399,6 @@
 .method public static bridge synthetic -$$Nest$fputmLastMaintenance(Lcom/android/server/StorageManagerService;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/StorageManagerService;->mLastMaintenance:J
 
     return-void
@@ -437,7 +407,6 @@
 .method public static bridge synthetic -$$Nest$fputmRemountCurrentUserVolumesOnUnlock(Lcom/android/server/StorageManagerService;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/StorageManagerService;->mRemountCurrentUserVolumesOnUnlock:Z
 
     return-void
@@ -446,7 +415,6 @@
 .method public static bridge synthetic -$$Nest$fputmStoraged(Lcom/android/server/StorageManagerService;Landroid/os/IStoraged;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mStoraged:Landroid/os/IStoraged;
 
     return-void
@@ -455,7 +423,6 @@
 .method public static bridge synthetic -$$Nest$fputmVold(Lcom/android/server/StorageManagerService;Landroid/os/IVold;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     return-void
@@ -464,7 +431,6 @@
 .method public static bridge synthetic -$$Nest$maddObbStateLocked(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$ObbState;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->addObbStateLocked(Lcom/android/server/StorageManagerService$ObbState;)V
 
     return-void
@@ -473,7 +439,6 @@
 .method public static bridge synthetic -$$Nest$mapplyCurrentSdCardPolicy(Lcom/android/server/StorageManagerService;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->applyCurrentSdCardPolicy(Z)V
 
     return-void
@@ -482,7 +447,6 @@
 .method public static bridge synthetic -$$Nest$mbootCompleted(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->bootCompleted()V
 
     return-void
@@ -491,7 +455,6 @@
 .method public static bridge synthetic -$$Nest$mcompleteUnlockUser(Lcom/android/server/StorageManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->completeUnlockUser(I)V
 
     return-void
@@ -500,7 +463,6 @@
 .method public static bridge synthetic -$$Nest$mconnectStoraged(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->connectStoraged()V
 
     return-void
@@ -509,7 +471,6 @@
 .method public static bridge synthetic -$$Nest$mconnectVold(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->connectVold()V
 
     return-void
@@ -518,7 +479,6 @@
 .method public static bridge synthetic -$$Nest$mcreateVolumeInfoStrForPulbicVolume(Lcom/android/server/StorageManagerService;Landroid/os/storage/VolumeInfo;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->createVolumeInfoStrForPulbicVolume(Landroid/os/storage/VolumeInfo;)Ljava/lang/String;
 
     move-result-object p0
@@ -529,7 +489,6 @@
 .method public static bridge synthetic -$$Nest$mdispatchOnFinished(Lcom/android/server/StorageManagerService;Landroid/os/IVoldTaskListener;ILandroid/os/PersistableBundle;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/StorageManagerService;->dispatchOnFinished(Landroid/os/IVoldTaskListener;ILandroid/os/PersistableBundle;)V
 
     return-void
@@ -538,7 +497,6 @@
 .method public static bridge synthetic -$$Nest$mdispatchOnStatus(Lcom/android/server/StorageManagerService;Landroid/os/IVoldTaskListener;ILandroid/os/PersistableBundle;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/StorageManagerService;->dispatchOnStatus(Landroid/os/IVoldTaskListener;ILandroid/os/PersistableBundle;)V
 
     return-void
@@ -547,7 +505,6 @@
 .method public static bridge synthetic -$$Nest$mfindRecordForPath(Lcom/android/server/StorageManagerService;Ljava/lang/String;)Landroid/os/storage/VolumeRecord;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findRecordForPath(Ljava/lang/String;)Landroid/os/storage/VolumeRecord;
 
     move-result-object p0
@@ -558,7 +515,6 @@
 .method public static bridge synthetic -$$Nest$mfindVolumeByIdOrThrow(Lcom/android/server/StorageManagerService;Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findVolumeByIdOrThrow(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
     move-result-object p0
@@ -569,7 +525,6 @@
 .method public static bridge synthetic -$$Nest$mforgetPartition(Lcom/android/server/StorageManagerService;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/StorageManagerService;->forgetPartition(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -578,7 +533,6 @@
 .method public static bridge synthetic -$$Nest$mgetMountModeInternal(Lcom/android/server/StorageManagerService;ILjava/lang/String;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/StorageManagerService;->getMountModeInternal(ILjava/lang/String;)I
 
     move-result p0
@@ -589,7 +543,6 @@
 .method public static bridge synthetic -$$Nest$mhandleBootCompleted(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->handleBootCompleted()V
 
     return-void
@@ -598,7 +551,6 @@
 .method public static bridge synthetic -$$Nest$mhandleDaemonConnected(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->handleDaemonConnected()V
 
     return-void
@@ -607,7 +559,6 @@
 .method public static bridge synthetic -$$Nest$mhandleSystemReady(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->handleSystemReady()V
 
     return-void
@@ -616,7 +567,6 @@
 .method public static bridge synthetic -$$Nest$misAppIoBlocked(Lcom/android/server/StorageManagerService;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isAppIoBlocked(I)Z
 
     move-result p0
@@ -627,7 +577,6 @@
 .method public static bridge synthetic -$$Nest$misExtSDCardTrayRemoved(Lcom/android/server/StorageManagerService;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->isExtSDCardTrayRemoved()Z
 
     move-result p0
@@ -638,7 +587,6 @@
 .method public static bridge synthetic -$$Nest$misMountDisallowed(Lcom/android/server/StorageManagerService;Landroid/os/storage/VolumeInfo;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isMountDisallowed(Landroid/os/storage/VolumeInfo;)Z
 
     move-result p0
@@ -649,7 +597,6 @@
 .method public static bridge synthetic -$$Nest$misMountDisallowedByEAS(Lcom/android/server/StorageManagerService;Z)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isMountDisallowedByEAS(Z)Z
 
     move-result p0
@@ -660,7 +607,6 @@
 .method public static bridge synthetic -$$Nest$misUidOwnerOfPackageOrSystem(Lcom/android/server/StorageManagerService;Ljava/lang/String;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/StorageManagerService;->isUidOwnerOfPackageOrSystem(Ljava/lang/String;I)Z
 
     move-result p0
@@ -671,7 +617,6 @@
 .method public static bridge synthetic -$$Nest$mmaybeRemountVolumes(Lcom/android/server/StorageManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->maybeRemountVolumes(I)V
 
     return-void
@@ -680,7 +625,6 @@
 .method public static bridge synthetic -$$Nest$mmount(Lcom/android/server/StorageManagerService;Landroid/os/storage/VolumeInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->mount(Landroid/os/storage/VolumeInfo;)V
 
     return-void
@@ -689,7 +633,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyCloudMediaProviderChangedAsync(Lcom/android/server/StorageManagerService;Landroid/os/storage/StorageManagerInternal$CloudProviderChangeListener;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->notifyCloudMediaProviderChangedAsync(Landroid/os/storage/StorageManagerInternal$CloudProviderChangeListener;)V
 
     return-void
@@ -698,7 +641,6 @@
 .method public static bridge synthetic -$$Nest$monCleanupUser(Lcom/android/server/StorageManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onCleanupUser(I)V
 
     return-void
@@ -707,7 +649,6 @@
 .method public static bridge synthetic -$$Nest$monCloudMediaProviderChangedAsync(Lcom/android/server/StorageManagerService;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/StorageManagerService;->onCloudMediaProviderChangedAsync(ILjava/lang/String;)V
 
     return-void
@@ -716,7 +657,6 @@
 .method public static bridge synthetic -$$Nest$monDiskScannedLocked(Lcom/android/server/StorageManagerService;Landroid/os/storage/DiskInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onDiskScannedLocked(Landroid/os/storage/DiskInfo;)V
 
     return-void
@@ -725,7 +665,6 @@
 .method public static bridge synthetic -$$Nest$monMoveStatusLocked(Lcom/android/server/StorageManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onMoveStatusLocked(I)V
 
     return-void
@@ -734,7 +673,6 @@
 .method public static bridge synthetic -$$Nest$monStopUser(Lcom/android/server/StorageManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onStopUser(I)V
 
     return-void
@@ -743,7 +681,6 @@
 .method public static bridge synthetic -$$Nest$monUnlockUser(Lcom/android/server/StorageManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onUnlockUser(I)V
 
     return-void
@@ -752,7 +689,6 @@
 .method public static bridge synthetic -$$Nest$monVolumeCreatedLocked(Lcom/android/server/StorageManagerService;Landroid/os/storage/VolumeInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onVolumeCreatedLocked(Landroid/os/storage/VolumeInfo;)V
 
     return-void
@@ -761,7 +697,6 @@
 .method public static bridge synthetic -$$Nest$monVolumeStateChangedAsync(Lcom/android/server/StorageManagerService;Landroid/os/storage/VolumeInfo;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/StorageManagerService;->onVolumeStateChangedAsync(Landroid/os/storage/VolumeInfo;II)V
 
     return-void
@@ -770,7 +705,6 @@
 .method public static bridge synthetic -$$Nest$monVolumeStateChangedLocked(Lcom/android/server/StorageManagerService;Landroid/os/storage/VolumeInfo;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/StorageManagerService;->onVolumeStateChangedLocked(Landroid/os/storage/VolumeInfo;I)V
 
     return-void
@@ -779,7 +713,6 @@
 .method public static bridge synthetic -$$Nest$mrefreshZramSettings(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->refreshZramSettings()V
 
     return-void
@@ -788,7 +721,6 @@
 .method public static bridge synthetic -$$Nest$mremoveObbStateLocked(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$ObbState;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->removeObbStateLocked(Lcom/android/server/StorageManagerService$ObbState;)V
 
     return-void
@@ -797,7 +729,6 @@
 .method public static bridge synthetic -$$Nest$mresetIfBootedAndConnected(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->resetIfBootedAndConnected()V
 
     return-void
@@ -806,7 +737,6 @@
 .method public static bridge synthetic -$$Nest$mscrubPath(Lcom/android/server/StorageManagerService;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->scrubPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -817,7 +747,6 @@
 .method public static bridge synthetic -$$Nest$mservicesReady(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->servicesReady()V
 
     return-void
@@ -826,7 +755,6 @@
 .method public static bridge synthetic -$$Nest$msnapshotAndMonitorLegacyStorageAppOp(Lcom/android/server/StorageManagerService;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->snapshotAndMonitorLegacyStorageAppOp(Landroid/os/UserHandle;)V
 
     return-void
@@ -835,7 +763,6 @@
 .method public static bridge synthetic -$$Nest$mstart(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->start()V
 
     return-void
@@ -844,7 +771,6 @@
 .method public static bridge synthetic -$$Nest$msystemReady(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->systemReady()V
 
     return-void
@@ -853,7 +779,6 @@
 .method public static bridge synthetic -$$Nest$munmount(Lcom/android/server/StorageManagerService;Landroid/os/storage/VolumeInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->unmount(Landroid/os/storage/VolumeInfo;)V
 
     return-void
@@ -862,7 +787,6 @@
 .method public static bridge synthetic -$$Nest$mupdateLegacyStorageApps(Lcom/android/server/StorageManagerService;Ljava/lang/String;IZ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/StorageManagerService;->updateLegacyStorageApps(Ljava/lang/String;IZ)V
 
     return-void
@@ -871,7 +795,6 @@
 .method public static bridge synthetic -$$Nest$mwarnOnNotMounted(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
     return-void
@@ -880,7 +803,6 @@
 .method public static bridge synthetic -$$Nest$mwriteSettingsLocked(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->writeSettingsLocked()V
 
     return-void
@@ -889,7 +811,6 @@
 .method public static bridge synthetic -$$Nest$sfgetLOCAL_LOGV()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/StorageManagerService;->LOCAL_LOGV:Z
 
     return v0
@@ -902,7 +823,6 @@
 
     const/4 v1, 0x2
 
-    .line 369
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -911,12 +831,10 @@
 
     const/16 v0, 0x3c
 
-    .line 398
     sput v0, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
     const-string v0, "(?i)(^/storage/[^/]+/(?:([0-9]+)/)?Android/(?:data|media|obb|sandbox)/)([^/]+)(/.*)?"
 
-    .line 611
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -929,17 +847,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 2295
     invoke-direct {p0}, Landroid/os/storage/IStorageManager$Stub;-><init>()V
 
-    .line 290
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mFuseMountedUser:Ljava/util/Set;
 
-    .line 293
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -948,59 +863,50 @@
 
     const/4 v0, 0x1
 
-    .line 442
     iput-boolean v0, p0, Lcom/android/server/StorageManagerService;->mNeedGC:Z
 
     const/4 v1, 0x4
 
-    .line 452
     invoke-static {v1}, Lcom/android/server/LockGuard;->installNewLock(I)Ljava/lang/Object;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
-    .line 496
     new-instance v1, Lcom/android/server/StorageManagerService$WatchedLockedUsers;
 
     invoke-direct {v1}, Lcom/android/server/StorageManagerService$WatchedLockedUsers;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mLocalUnlockedUsers:Lcom/android/server/StorageManagerService$WatchedLockedUsers;
 
-    .line 499
     sget-object v1, Llibcore/util/EmptyArray;->INT:[I
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
-    .line 503
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mDisks:Landroid/util/ArrayMap;
 
-    .line 506
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
-    .line 510
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
-    .line 516
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mDiskScanLatches:Landroid/util/ArrayMap;
 
-    .line 524
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
@@ -1009,170 +915,138 @@
 
     const/4 v1, -0x1
 
-    .line 527
     iput v1, p0, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
 
-    .line 529
     iput v1, p0, Lcom/android/server/StorageManagerService;->mDownloadsAuthorityAppId:I
 
-    .line 531
     iput v1, p0, Lcom/android/server/StorageManagerService;->mExternalStorageAuthorityAppId:I
 
     const/4 v1, 0x0
 
-    .line 533
     iput v1, p0, Lcom/android/server/StorageManagerService;->mCurrentUserId:I
 
-    .line 535
     iput-boolean v1, p0, Lcom/android/server/StorageManagerService;->mRemountCurrentUserVolumesOnUnlock:Z
 
-    .line 540
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/StorageManagerService;->mAppFuseLock:Ljava/lang/Object;
 
-    .line 542
     iput v1, p0, Lcom/android/server/StorageManagerService;->mNextAppFuseName:I
 
     const/4 v2, 0x0
 
-    .line 545
     iput-object v2, p0, Lcom/android/server/StorageManagerService;->mAppFuseBridge:Lcom/android/server/storage/AppFuseBridge;
 
-    .line 549
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/StorageManagerService;->mIsMediaSharedWithParent:Ljava/util/HashMap;
 
-    .line 558
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
-    .line 594
     new-instance v3, Ljava/lang/Object;
 
     invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/StorageManagerService;->mUnmountLock:Ljava/lang/Object;
 
-    .line 598
     new-instance v3, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {v3, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
     iput-object v3, p0, Lcom/android/server/StorageManagerService;->mAsecsScanned:Ljava/util/concurrent/CountDownLatch;
 
-    .line 602
     iput-boolean v0, p0, Lcom/android/server/StorageManagerService;->preSDPolicy:Z
 
-    .line 605
     new-instance v3, Landroid/util/SparseIntArray;
 
     invoke-direct {v3}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
-    .line 696
     iput-boolean v1, p0, Lcom/android/server/StorageManagerService;->mBootCompleted:Z
 
-    .line 697
     iput-boolean v1, p0, Lcom/android/server/StorageManagerService;->mDaemonConnected:Z
 
-    .line 698
     iput-boolean v0, p0, Lcom/android/server/StorageManagerService;->mSecureKeyguardShowing:Z
 
-    .line 721
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
-    .line 724
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mObbPathToStateMap:Ljava/util/Map;
 
-    .line 727
     new-instance v0, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     invoke-direct {v0, p0, v2}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;-><init>(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$StorageManagerInternalImpl-IA;)V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
-    .line 735
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mUidsWithLegacyExternalStorage:Ljava/util/Set;
 
-    .line 738
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mPackageMonitorsForUser:Landroid/util/SparseArray;
 
-    .line 1022
     new-instance v0, Lcom/android/server/StorageManagerService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/StorageManagerService$1;-><init>(Lcom/android/server/StorageManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mUserReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1575
     new-instance v0, Lcom/android/server/StorageManagerService$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/StorageManagerService$3;-><init>(Lcom/android/server/StorageManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mListener:Landroid/os/IVoldListener;
 
-    .line 5591
     iput-object v2, p0, Lcom/android/server/StorageManagerService;->mDirEncryptListner:Lcom/android/server/StorageManagerService$DirEncryptListner;
 
-    .line 5592
     iput-object v2, p0, Lcom/android/server/StorageManagerService;->mDem:Lcom/samsung/android/security/SemSdCardEncryption;
 
-    .line 5994
     new-instance v0, Lcom/android/server/StorageManagerService$16;
 
     invoke-direct {v0, p0}, Lcom/android/server/StorageManagerService$16;-><init>(Lcom/android/server/StorageManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mRestartSdcardBadremoveReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 6006
     new-instance v0, Lcom/android/server/StorageManagerService$17;
 
     invoke-direct {v0, p0}, Lcom/android/server/StorageManagerService$17;-><init>(Lcom/android/server/StorageManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mPolicyReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 2296
     sput-object p0, Lcom/android/server/StorageManagerService;->sSelf:Lcom/android/server/StorageManagerService;
 
     const-string/jumbo v0, "persist.sys.vold_app_data_isolation_enabled"
 
-    .line 2297
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/StorageManagerService;->mVoldAppDataIsolationEnabled:Z
 
-    .line 2299
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
-    .line 2300
     new-instance v0, Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-static {}, Lcom/android/server/FgThread;->get()Lcom/android/server/FgThread;
@@ -1187,17 +1061,14 @@
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
-    .line 2302
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "StorageManagerService"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 2303
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 2304
     new-instance v1, Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -1208,7 +1079,6 @@
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
-    .line 2307
     new-instance v0, Lcom/android/server/StorageManagerService$ObbActionHandler;
 
     invoke-static {}, Lcom/android/server/IoThread;->get()Lcom/android/server/IoThread;
@@ -1223,36 +1093,30 @@
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mObbActionHandler:Lcom/android/server/StorageManagerService$ObbActionHandler;
 
-    .line 2309
     new-instance v0, Lcom/android/server/storage/StorageSessionController;
 
     invoke-direct {v0, p1}, Lcom/android/server/storage/StorageSessionController;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
-    .line 2311
     new-instance v0, Lcom/android/server/pm/Installer;
 
     invoke-direct {v0, p1}, Lcom/android/server/pm/Installer;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
-    .line 2312
     invoke-virtual {v0}, Lcom/android/server/pm/Installer;->onStart()V
 
-    .line 2315
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object p1
 
-    .line 2316
     new-instance v0, Ljava/io/File;
 
     const-string/jumbo v1, "system"
 
     invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2317
     new-instance p1, Ljava/io/File;
 
     const-string/jumbo v1, "last-fstrim"
@@ -1261,14 +1125,12 @@
 
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mLastMaintenanceFile:Ljava/io/File;
 
-    .line 2318
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2322
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -1283,7 +1145,6 @@
     :catch_0
     const-string p1, "StorageManagerService"
 
-    .line 2324
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1308,7 +1169,6 @@
 
     goto :goto_0
 
-    .line 2327
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
@@ -1316,13 +1176,11 @@
 
     iput-wide v0, p0, Lcom/android/server/StorageManagerService;->mLastMaintenance:J
 
-    .line 2330
     :goto_0
     new-instance p1, Landroid/util/AtomicFile;
 
     new-instance v0, Ljava/io/File;
 
-    .line 2331
     invoke-static {}, Landroid/os/Environment;->getDataSystemDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -1337,12 +1195,10 @@
 
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mSettingsFile:Landroid/util/AtomicFile;
 
-    .line 2332
     new-instance p1, Landroid/util/AtomicFile;
 
     new-instance v0, Ljava/io/File;
 
-    .line 2333
     invoke-static {}, Landroid/os/Environment;->getDataSystemDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -1361,26 +1217,22 @@
 
     const/16 v1, 0x3c
 
-    .line 2335
     invoke-static {p1, v0, v1}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result p1
 
     sput p1, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
-    .line 2337
     sget p1, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
     const/16 v0, 0xa
 
     if-ge p1, v0, :cond_1
 
-    .line 2338
     sput v0, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
     goto :goto_1
 
-    .line 2339
     :cond_1
     sget p1, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
@@ -1388,64 +1240,53 @@
 
     if-le p1, v0, :cond_2
 
-    .line 2340
     sput v0, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
     :cond_2
     :goto_1
     const/16 p1, 0x10e0
 
-    .line 2343
     sget v0, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
     div-int/2addr p1, v0
 
     iput p1, p0, Lcom/android/server/StorageManagerService;->mMaxWriteRecords:I
 
-    .line 2344
     iget p1, p0, Lcom/android/server/StorageManagerService;->mMaxWriteRecords:I
 
     new-array p1, p1, [I
 
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mStorageWriteRecords:[I
 
-    .line 2346
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 2347
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->readSettingsLocked()V
 
-    .line 2348
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 2350
     const-class p1, Landroid/os/storage/StorageManagerInternal;
 
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     invoke-static {p1, v0}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
 
-    .line 2352
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "android.intent.action.USER_ADDED"
 
-    .line 2353
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.USER_REMOVED"
 
-    .line 2354
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2355
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mUserReceiver:Landroid/content/BroadcastReceiver;
@@ -1454,28 +1295,23 @@
 
     invoke-virtual {v0, v1, p1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 2357
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2358
     :try_start_2
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->addInternalVolumeLocked()V
 
-    .line 2359
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2363
     invoke-static {}, Lcom/android/server/Watchdog;->getInstance()Lcom/android/server/Watchdog;
 
     move-result-object p1
 
     invoke-virtual {p1, p0}, Lcom/android/server/Watchdog;->addMonitor(Lcom/android/server/Watchdog$Monitor;)V
 
-    .line 2368
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mRestartSdcardBadremoveReceiver:Landroid/content/BroadcastReceiver;
@@ -1488,7 +1324,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 2372
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mPolicyReceiver:Landroid/content/BroadcastReceiver;
@@ -1506,7 +1341,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2359
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -1517,7 +1351,6 @@
     :catchall_1
     move-exception p0
 
-    .line 2348
     :try_start_4
     monitor-exit p1
     :try_end_4
@@ -1529,7 +1362,6 @@
 .method private synthetic lambda$connectStoraged$2()V
     .locals 0
 
-    .line 2407
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->connectStoraged()V
 
     return-void
@@ -1538,7 +1370,6 @@
 .method private synthetic lambda$connectVold$3()V
     .locals 0
 
-    .line 2445
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->connectVold()V
 
     return-void
@@ -1547,7 +1378,6 @@
 .method public static synthetic lambda$dump$4(Lcom/android/internal/util/IndentingPrintWriter;Ljava/lang/Integer;Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 5274
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1582,25 +1412,21 @@
 
     if-nez p1, :cond_0
 
-    .line 1958
     sget v0, Landroid/os/Build$VERSION;->DEVICE_INITIAL_SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-ge v0, v1, :cond_0
 
-    .line 1960
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
     invoke-virtual {v0}, Landroid/content/pm/PackageManagerInternal;->migrateLegacyObbData()V
 
-    .line 1965
     :cond_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1966
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mFuseMountedUser:Ljava/util/Set;
 
@@ -1610,7 +1436,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1967
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1622,7 +1447,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1975
     :try_start_1
     const-class v1, Landroid/app/ActivityManagerInternal;
 
@@ -1632,7 +1456,6 @@
 
     check-cast v1, Landroid/app/ActivityManagerInternal;
 
-    .line 1976
     invoke-virtual {p2}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
 
     move-result v2
@@ -1650,12 +1473,10 @@
 
     const-string v2, "Some processes are starting, retry"
 
-    .line 1979
     invoke-static {v1, v2}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-wide/16 v1, 0x64
 
-    .line 1981
     invoke-static {v1, v2}, Landroid/os/SystemClock;->sleep(J)V
 
     add-int/lit8 v0, v0, 0x1
@@ -1668,7 +1489,6 @@
     :goto_1
     if-eqz p2, :cond_2
 
-    .line 1985
     invoke-virtual {p0, p2, p1}, Lcom/android/server/StorageManagerService;->remountAppStorageDirs(Ljava/util/Map;I)V
 
     goto :goto_2
@@ -1678,7 +1498,6 @@
 
     const-string p1, "Not able to getStorageNotOptimizedProcesses() after 5 retries"
 
-    .line 1987
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
@@ -1687,7 +1506,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1967
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -1699,7 +1517,6 @@
 .method private synthetic lambda$resetIfBootedAndConnected$0()V
     .locals 1
 
-    .line 1264
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v0, 0x0
@@ -1716,26 +1533,22 @@
 
     const/4 v1, 0x0
 
-    .line 2629
     invoke-interface {p0, v1, v0}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     const-string v2, "fsUuid"
 
-    .line 2630
     invoke-static {p0, v2}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2631
     new-instance v3, Landroid/os/storage/VolumeRecord;
 
     invoke-direct {v3, v0, v2}, Landroid/os/storage/VolumeRecord;-><init>(ILjava/lang/String;)V
 
     const-string/jumbo v0, "partGuid"
 
-    .line 2632
     invoke-static {p0, v0}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1744,7 +1557,6 @@
 
     const-string/jumbo v0, "nickname"
 
-    .line 2633
     invoke-static {p0, v0}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1753,7 +1565,6 @@
 
     const-string/jumbo v0, "userFlags"
 
-    .line 2634
     invoke-interface {p0, v1, v0}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -1764,7 +1575,6 @@
 
     const-wide/16 v4, 0x0
 
-    .line 2635
     invoke-interface {p0, v1, v0, v4, v5}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v6
@@ -1773,7 +1583,6 @@
 
     const-string/jumbo v0, "lastSeenMillis"
 
-    .line 2636
     invoke-interface {p0, v1, v0, v4, v5}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v6
@@ -1782,7 +1591,6 @@
 
     const-string/jumbo v0, "lastTrimMillis"
 
-    .line 2637
     invoke-interface {p0, v1, v0, v4, v5}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v6
@@ -1791,7 +1599,6 @@
 
     const-string/jumbo v0, "lastBenchMillis"
 
-    .line 2638
     invoke-interface {p0, v1, v0, v4, v5}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -1808,10 +1615,8 @@
 
     const-string/jumbo v1, "volume"
 
-    .line 2644
     invoke-interface {p0, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2645
     iget v2, p1, Landroid/os/storage/VolumeRecord;->type:I
 
     const-string/jumbo v3, "type"
@@ -1820,61 +1625,52 @@
 
     const-string v2, "fsUuid"
 
-    .line 2646
     iget-object v3, p1, Landroid/os/storage/VolumeRecord;->fsUuid:Ljava/lang/String;
 
     invoke-static {p0, v2, v3}, Lcom/android/internal/util/XmlUtils;->writeStringAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string/jumbo v2, "partGuid"
 
-    .line 2647
     iget-object v3, p1, Landroid/os/storage/VolumeRecord;->partGuid:Ljava/lang/String;
 
     invoke-static {p0, v2, v3}, Lcom/android/internal/util/XmlUtils;->writeStringAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string/jumbo v2, "nickname"
 
-    .line 2648
     iget-object v3, p1, Landroid/os/storage/VolumeRecord;->nickname:Ljava/lang/String;
 
     invoke-static {p0, v2, v3}, Lcom/android/internal/util/XmlUtils;->writeStringAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string/jumbo v2, "userFlags"
 
-    .line 2649
     iget v3, p1, Landroid/os/storage/VolumeRecord;->userFlags:I
 
     invoke-interface {p0, v0, v2, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeInt(Ljava/lang/String;Ljava/lang/String;I)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v2, "createdMillis"
 
-    .line 2650
     iget-wide v3, p1, Landroid/os/storage/VolumeRecord;->createdMillis:J
 
     invoke-interface {p0, v0, v2, v3, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeLong(Ljava/lang/String;Ljava/lang/String;J)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v2, "lastSeenMillis"
 
-    .line 2651
     iget-wide v3, p1, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
 
     invoke-interface {p0, v0, v2, v3, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeLong(Ljava/lang/String;Ljava/lang/String;J)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v2, "lastTrimMillis"
 
-    .line 2652
     iget-wide v3, p1, Landroid/os/storage/VolumeRecord;->lastTrimMillis:J
 
     invoke-interface {p0, v0, v2, v3, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeLong(Ljava/lang/String;Ljava/lang/String;J)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v2, "lastBenchMillis"
 
-    .line 2653
     iget-wide v3, p1, Landroid/os/storage/VolumeRecord;->lastBenchMillis:J
 
     invoke-interface {p0, v0, v2, v3, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeLong(Ljava/lang/String;Ljava/lang/String;J)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2654
     invoke-interface {p0, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     return-void
@@ -1885,7 +1681,6 @@
 .method public abortChanges(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 3673
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -1894,14 +1689,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3677
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {p0, p1, p2}, Landroid/os/IVold;->abortChanges(Ljava/lang/String;Z)V
 
     return-void
 
-    .line 3674
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1919,10 +1712,8 @@
 
     const-string v1, "android.permission.MOUNT_FORMAT_FILESYSTEMS"
 
-    .line 3141
     invoke-virtual {p0, v1}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 3144
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -1934,15 +1725,12 @@
 
     const-string p1, "abortIdleMaint, HeimdAllFSThread = null"
 
-    .line 3163
     invoke-static {v0, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3164
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHeimdAllFs:Lcom/android/server/HeimdAllFsService;
 
     if-eqz p0, :cond_0
 
-    .line 3165
     invoke-virtual {p0}, Lcom/android/server/HeimdAllFsService;->abort()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1952,7 +1740,6 @@
     :catch_0
     move-exception p0
 
-    .line 3168
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -1965,7 +1752,6 @@
 
     const/4 v0, 0x0
 
-    .line 3174
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->abortIdleMaint(Ljava/lang/Runnable;)V
 
     return-void
@@ -1974,7 +1760,6 @@
 .method public final addInternalVolumeLocked()V
     .locals 4
 
-    .line 1249
     new-instance v0, Landroid/os/storage/VolumeInfo;
 
     const/4 v1, 0x1
@@ -1987,10 +1772,8 @@
 
     const/4 v1, 0x2
 
-    .line 1251
     iput v1, v0, Landroid/os/storage/VolumeInfo;->state:I
 
-    .line 1252
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -2001,7 +1784,6 @@
 
     iput-object v1, v0, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
 
-    .line 1253
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     iget-object v1, v0, Landroid/os/storage/VolumeInfo;->id:Ljava/lang/String;
@@ -2014,12 +1796,10 @@
 .method public final addObbStateLocked(Lcom/android/server/StorageManagerService$ObbState;)V
     .locals 5
 
-    .line 4689
     invoke-virtual {p1}, Lcom/android/server/StorageManagerService$ObbState;->getBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 4690
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2030,19 +1810,16 @@
 
     if-nez v1, :cond_0
 
-    .line 4693
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4694
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 4696
     :cond_0
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2061,7 +1838,6 @@
 
     check-cast v3, Lcom/android/server/StorageManagerService$ObbState;
 
-    .line 4697
     iget-object v3, v3, Lcom/android/server/StorageManagerService$ObbState;->rawPath:Ljava/lang/String;
 
     iget-object v4, p1, Lcom/android/server/StorageManagerService$ObbState;->rawPath:Ljava/lang/String;
@@ -2074,7 +1850,6 @@
 
     goto :goto_0
 
-    .line 4698
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2084,18 +1859,15 @@
 
     throw p0
 
-    .line 4704
     :cond_2
     :goto_1
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4706
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/StorageManagerService$ObbState;->link()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4721
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbPathToStateMap:Ljava/util/Map;
 
     iget-object v0, p1, Lcom/android/server/StorageManagerService$ObbState;->rawPath:Ljava/lang/String;
@@ -2107,22 +1879,18 @@
     :catch_0
     move-exception v2
 
-    .line 4712
     invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 4713
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 4714
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     invoke-interface {p0, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4718
     :cond_3
     throw v2
 .end method
@@ -2136,7 +1904,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4581
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.ALLOCATE_AGGRESSIVE"
@@ -2148,7 +1915,6 @@
 
     and-int/lit8 p1, p1, -0x5
 
-    .line 4592
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/AppOpsManager;
@@ -2159,14 +1925,12 @@
 
     check-cast p0, Landroid/app/AppOpsManager;
 
-    .line 4593
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
     const/16 v0, 0x1a
 
-    .line 4595
     :try_start_0
     invoke-virtual {p0, v0, p2, p3}, Landroid/app/AppOpsManager;->isOperationActive(IILjava/lang/String;)Z
 
@@ -2174,7 +1938,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 4596
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2199,7 +1962,6 @@
 
     or-int/lit8 p1, p1, 0x4
 
-    .line 4601
     :cond_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -2210,14 +1972,12 @@
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4602
     throw p0
 .end method
 
 .method public allocateBytes(Ljava/lang/String;JILjava/lang/String;)V
     .locals 4
 
-    .line 4653
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -2228,7 +1988,6 @@
 
     or-int/lit8 v0, p4, 0x8
 
-    .line 4655
     invoke-virtual {p0, p1, v0, p5}, Lcom/android/server/StorageManagerService;->getAllocatableBytes(Ljava/lang/String;ILjava/lang/String;)J
 
     move-result-wide v0
@@ -2239,7 +1998,6 @@
 
     or-int/lit8 v2, p4, 0x10
 
-    .line 4660
     invoke-virtual {p0, p1, v2, p5}, Lcom/android/server/StorageManagerService;->getAllocatableBytes(Ljava/lang/String;ILjava/lang/String;)J
 
     move-result-wide v2
@@ -2252,7 +2010,6 @@
 
     goto :goto_0
 
-    .line 4663
     :cond_0
     new-instance p0, Landroid/os/ParcelableException;
 
@@ -2288,7 +2045,6 @@
 
     throw p0
 
-    .line 4668
     :cond_1
     :goto_0
     iget-object p5, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
@@ -2301,12 +2057,10 @@
 
     check-cast p5, Landroid/os/storage/StorageManager;
 
-    .line 4669
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 4673
     :try_start_0
     invoke-virtual {p5, p1}, Landroid/os/storage/StorageManager;->findPathForUuid(Ljava/lang/String;)Ljava/io/File;
 
@@ -2316,7 +2070,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 4675
     invoke-virtual {p5, v2}, Landroid/os/storage/StorageManager;->getStorageFullBytes(Ljava/io/File;)J
 
     move-result-wide v2
@@ -2326,7 +2079,6 @@
 
     goto :goto_2
 
-    .line 4677
     :cond_2
     invoke-virtual {p5, v2}, Landroid/os/storage/StorageManager;->getStorageLowBytes(Ljava/io/File;)J
 
@@ -2334,7 +2086,6 @@
 
     goto :goto_1
 
-    .line 4680
     :goto_2
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
@@ -2343,7 +2094,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4684
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -2356,7 +2106,6 @@
     :catch_0
     move-exception p0
 
-    .line 4682
     :try_start_1
     new-instance p1, Landroid/os/ParcelableException;
 
@@ -2366,18 +2115,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4684
     :goto_3
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4685
     throw p0
 .end method
 
 .method public final applyCurrentSdCardPolicy(Z)V
     .locals 7
 
-    .line 6042
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2402,7 +2148,6 @@
 
     const/4 p1, 0x0
 
-    .line 6045
     :goto_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -2412,7 +2157,6 @@
 
     if-ge p1, v2, :cond_5
 
-    .line 6046
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -2421,15 +2165,12 @@
 
     check-cast v2, Landroid/os/storage/VolumeInfo;
 
-    .line 6047
     iget-object v3, v2, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
 
-    .line 6048
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->getId()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 6050
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->getType()I
 
     move-result v5
@@ -2440,7 +2181,6 @@
 
     goto :goto_2
 
-    .line 6055
     :cond_0
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->getDiskId()Ljava/lang/String;
 
@@ -2450,7 +2190,6 @@
 
     goto :goto_2
 
-    .line 6059
     :cond_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2468,7 +2207,6 @@
 
     invoke-static {v1, v3}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6061
     :try_start_0
     iget v2, v2, Landroid/os/storage/VolumeInfo;->state:I
 
@@ -2476,7 +2214,6 @@
 
     const/16 v2, 0x1e
 
-    .line 6063
     :goto_1
     invoke-virtual {p0, v4}, Lcom/android/server/StorageManagerService;->findVolumeByIdOrThrow(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
@@ -2496,7 +2233,6 @@
 
     const-wide/16 v5, 0x3e8
 
-    .line 6065
     :try_start_1
     invoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V
     :try_end_1
@@ -2513,7 +2249,6 @@
     :try_start_2
     const-string v5, "Interrupted while waiting for media"
 
-    .line 6067
     invoke-static {v1, v5, v2}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -2524,10 +2259,8 @@
 
     const-string v2, "Timed out waiting for media to check"
 
-    .line 6072
     invoke-static {v1, v2}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6075
     :cond_4
     invoke-virtual {p0, v4}, Lcom/android/server/StorageManagerService;->unmount(Ljava/lang/String;)V
     :try_end_2
@@ -2540,7 +2273,6 @@
 
     const-string/jumbo v3, "volume removed, while waiting "
 
-    .line 6077
     invoke-static {v1, v3, v2}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
@@ -2555,10 +2287,8 @@
 .method public benchmark(Ljava/lang/String;Landroid/os/IVoldTaskListener;)V
     .locals 2
 
-    .line 2874
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->benchmark_enforcePermission()V
 
-    .line 2877
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -2575,7 +2305,6 @@
     :catch_0
     move-exception p0
 
-    .line 2907
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -2588,10 +2317,8 @@
 
     const/4 v0, 0x1
 
-    .line 2540
     iput-boolean v0, p0, Lcom/android/server/StorageManagerService;->mBootCompleted:Z
 
-    .line 2541
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 v0, 0xd
@@ -2608,7 +2335,6 @@
 .method public final checkCallerPermissionIsSystemOrRoot()V
     .locals 1
 
-    .line 6214
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -2621,7 +2347,6 @@
 
     goto :goto_0
 
-    .line 6216
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -2639,14 +2364,12 @@
 .method public final checkChargeStatus()Z
     .locals 6
 
-    .line 3282
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 3283
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -2655,7 +2378,6 @@
 
     move-result-object v0
 
-    .line 3285
     iget-boolean v1, p0, Lcom/android/server/StorageManagerService;->mChargingRequired:Z
 
     const/4 v2, 0x0
@@ -2668,7 +2390,6 @@
 
     const-string/jumbo v1, "status"
 
-    .line 3286
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
@@ -2683,7 +2404,6 @@
 
     const-string p0, "Battery is not being charged"
 
-    .line 3289
     invoke-static {v3, p0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -2691,14 +2411,12 @@
     :cond_0
     const-string/jumbo v1, "level"
 
-    .line 3294
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
     const-string/jumbo v5, "scale"
 
-    .line 3295
     invoke-virtual {v0, v5, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
@@ -2713,14 +2431,12 @@
 
     div-float/2addr v1, v0
 
-    .line 3298
     iget v0, p0, Lcom/android/server/StorageManagerService;->mLowBatteryLevel:F
 
     cmpg-float v0, v1, v0
 
     if-gez v0, :cond_1
 
-    .line 3299
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2756,7 +2472,6 @@
 .method public final checkExternalSecureContainerMounted()Z
     .locals 3
 
-    .line 6341
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/os/storage/StorageManager;
@@ -2767,12 +2482,10 @@
 
     check-cast p0, Landroid/os/storage/StorageManager;
 
-    .line 6352
     invoke-virtual {p0}, Landroid/os/storage/StorageManager;->getVolumes()Ljava/util/List;
 
     move-result-object p0
 
-    .line 6353
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2790,7 +2503,6 @@
 
     check-cast v0, Landroid/os/storage/VolumeInfo;
 
-    .line 6354
     invoke-virtual {v0}, Landroid/os/storage/VolumeInfo;->getState()I
 
     move-result v1
@@ -2799,21 +2511,18 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 6355
     invoke-virtual {v0}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 6356
     invoke-virtual {v1}, Landroid/os/storage/DiskInfo;->isSd()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 6357
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2861,7 +2570,6 @@
 
     const-string p0, "com.sec.android.app.myfiles"
 
-    .line 6134
     invoke-virtual {p0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p0
@@ -2872,7 +2580,6 @@
 
     const-string p1, "Caller is not MyFiles"
 
-    .line 6135
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -2888,7 +2595,6 @@
 .method public final cleanupSercureContainerList(Ljava/lang/String;)V
     .locals 3
 
-    .line 6557
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter v0
@@ -2896,21 +2602,18 @@
     :try_start_0
     const-string v1, "all"
 
-    .line 6558
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 6559
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->clear()V
 
     goto :goto_1
 
-    .line 6561
     :cond_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -2918,7 +2621,6 @@
 
     move-result-object p0
 
-    .line 6562
     :cond_1
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -2927,14 +2629,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 6563
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/StorageManagerService$PackageInstalledMap;
 
-    .line 6564
     iget-boolean v2, v1, Lcom/android/server/StorageManagerService$PackageInstalledMap;->external:Z
 
     if-eqz v2, :cond_2
@@ -2947,12 +2647,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 6565
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 6568
     :cond_2
     iget-boolean v1, v1, Lcom/android/server/StorageManagerService$PackageInstalledMap;->external:Z
 
@@ -2966,12 +2664,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 6569
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 6574
     :cond_3
     :goto_1
     monitor-exit v0
@@ -2991,7 +2687,6 @@
 .method public commitChanges()V
     .locals 2
 
-    .line 3649
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -3000,14 +2695,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3653
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {p0}, Landroid/os/IVold;->commitChanges()V
 
     return-void
 
-    .line 3650
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -3023,7 +2716,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 1418
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3042,15 +2734,12 @@
 
     const/4 v0, 0x0
 
-    .line 1420
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->onKeyguardStateChanged(Z)V
 
-    .line 1424
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1425
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
@@ -3067,7 +2756,6 @@
 
     const-string p0, "StorageManagerService"
 
-    .line 1428
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3084,7 +2772,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1429
     monitor-exit v1
 
     return-void
@@ -3097,7 +2784,6 @@
     :cond_1
     move v2, v0
 
-    .line 1432
     :goto_1
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -3107,7 +2793,6 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 1433
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -3116,7 +2801,6 @@
 
     check-cast v3, Landroid/os/storage/VolumeInfo;
 
-    .line 1434
     invoke-virtual {v3, p1}, Landroid/os/storage/VolumeInfo;->isVisibleForUser(I)Z
 
     move-result v4
@@ -3129,14 +2813,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 1435
     iget-object v4, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v4, p1, v0}, Landroid/os/storage/VolumeInfo;->buildStorageVolume(Landroid/content/Context;IZ)Landroid/os/storage/StorageVolume;
 
     move-result-object v4
 
-    .line 1436
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v6, 0x6
@@ -3147,7 +2829,6 @@
 
     invoke-virtual {v5}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1438
     invoke-virtual {v3}, Landroid/os/storage/VolumeInfo;->getState()I
 
     move-result v3
@@ -3156,7 +2837,6 @@
 
     move-result-object v3
 
-    .line 1439
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-virtual {v4}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
@@ -3170,7 +2850,6 @@
 
     goto :goto_1
 
-    .line 1442
     :cond_3
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
@@ -3180,7 +2859,6 @@
 
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
-    .line 1443
     monitor-exit v1
 
     return-void
@@ -3198,7 +2876,6 @@
 .method public final configureTranscoding()V
     .locals 3
 
-    .line 1181
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->isHevcDecoderSupported()Z
 
     move-result v0
@@ -3207,7 +2884,6 @@
 
     const/4 v2, 0x0
 
-    .line 1183
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -3216,7 +2892,6 @@
 
     const-string/jumbo v1, "persist.sys.fuse.transcode_enabled"
 
-    .line 1184
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -3228,7 +2903,6 @@
 
     const-string/jumbo v2, "transcode_enabled"
 
-    .line 1187
     invoke-static {v1, v2, v0}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -3236,7 +2910,6 @@
     :goto_0
     const-string/jumbo v1, "sys.fuse.transcode_enabled"
 
-    .line 1190
     invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v2
@@ -3245,7 +2918,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1193
     const-class v0, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3260,7 +2932,6 @@
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController;-><init>(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$ExternalStorageServiceAnrController-IA;)V
 
-    .line 1194
     invoke-virtual {v0, v1}, Landroid/app/ActivityManagerInternal;->registerAnrController(Landroid/app/AnrController;)V
 
     :cond_1
@@ -3272,14 +2943,12 @@
 
     const-string/jumbo v0, "storaged"
 
-    .line 2383
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2386
     :try_start_0
     new-instance v1, Lcom/android/server/StorageManagerService$4;
 
@@ -3300,7 +2969,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2400
     invoke-static {v0}, Landroid/os/IStoraged$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IStoraged;
 
     move-result-object v0
@@ -3314,16 +2982,13 @@
 
     const-string/jumbo v1, "storaged not found; trying again"
 
-    .line 2402
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2405
     :goto_1
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStoraged:Landroid/os/IStoraged;
 
     if-nez v0, :cond_2
 
-    .line 2406
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -3338,7 +3003,6 @@
 
     goto :goto_2
 
-    .line 2410
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->onDaemonConnected()V
 
@@ -3351,7 +3015,6 @@
 
     const-string/jumbo v0, "vold"
 
-    .line 2415
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -3360,7 +3023,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2418
     :try_start_0
     new-instance v2, Lcom/android/server/StorageManagerService$5;
 
@@ -3383,14 +3045,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 2432
     invoke-static {v0}, Landroid/os/IVold$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IVold;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
-    .line 2434
     :try_start_1
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -3405,12 +3065,10 @@
     :catch_1
     move-exception v0
 
-    .line 2436
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     const-string/jumbo v1, "vold listener rejected; trying again"
 
-    .line 2437
     invoke-static {v2, v1, v0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
@@ -3418,16 +3076,13 @@
     :cond_1
     const-string/jumbo v0, "vold not found; trying again"
 
-    .line 2440
     invoke-static {v2, v0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2443
     :goto_1
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     if-nez v0, :cond_2
 
-    .line 2444
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -3442,11 +3097,9 @@
 
     goto :goto_2
 
-    .line 2448
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->restoreLocalUnlockedUsers()V
 
-    .line 2449
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->onDaemonConnected()V
 
     :goto_2
@@ -3456,7 +3109,6 @@
 .method public cpFileAtData(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 9
 
-    .line 5954
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.samsung.android.permission.SEM_VOLD_DATA_MOVE"
@@ -3465,7 +3117,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5956
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isValidPath(Ljava/lang/String;)Z
 
     move-result v0
@@ -3484,7 +3135,6 @@
 
     goto :goto_1
 
-    .line 5961
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isMediaPath(Ljava/lang/String;)Z
 
@@ -3500,19 +3150,16 @@
 
     const-string p0, "cpFileAtData not support from media to media dir, so return false"
 
-    .line 5962
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 5967
     :cond_1
     :try_start_0
     new-instance v0, Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {v0}, Ljava/util/concurrent/CompletableFuture;-><init>()V
 
-    .line 5969
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     iget v6, p0, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
@@ -3531,7 +3178,6 @@
 
     invoke-interface/range {v3 .. v8}, Landroid/os/IVold;->cpFileAtData(Ljava/lang/String;Ljava/lang/String;IILandroid/os/IVoldTaskListener;)V
 
-    .line 5983
     invoke-virtual {v0}, Ljava/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -3544,7 +3190,6 @@
 
     move-result p0
 
-    .line 5984
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3578,7 +3223,6 @@
     :catch_0
     move-exception p0
 
-    .line 5987
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v1
@@ -3587,7 +3231,6 @@
     :goto_1
     const-string p0, "cpFileAtData not support other than media or sec dir, so return false"
 
-    .line 5957
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -3598,15 +3241,12 @@
 
     const-string v0, "android.permission.ASEC_CREATE"
 
-    .line 6411
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6413
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
     const/4 v0, 0x0
 
-    .line 6417
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -3635,7 +3275,6 @@
 
     const-string p3, "StorageManagerService"
 
-    .line 6420
     invoke-static {p3, p2}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p2, -0x1
@@ -3643,14 +3282,12 @@
     :goto_0
     if-nez p2, :cond_1
 
-    .line 6425
     iget-object p3, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter p3
 
     if-eqz p6, :cond_0
 
-    .line 6427
     :try_start_1
     iget-object p4, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -3664,7 +3301,6 @@
 
     goto :goto_1
 
-    .line 6429
     :cond_0
     iget-object p4, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -3674,7 +3310,6 @@
 
     invoke-virtual {p4, p5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 6431
     :goto_1
     monitor-exit p3
 
@@ -3697,29 +3332,24 @@
 .method public createUserKey(IIZ)V
     .locals 1
 
-    .line 3684
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->createUserKey_enforcePermission()V
 
-    .line 3687
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/os/IVold;->createUserKey(IIZ)V
 
-    .line 3689
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3690
     :try_start_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mLocalUnlockedUsers:Lcom/android/server/StorageManagerService$WatchedLockedUsers;
 
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService$WatchedLockedUsers;->append(I)V
 
-    .line 3691
     monitor-exit p2
 
     goto :goto_0
@@ -3741,7 +3371,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 3693
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -3751,7 +3380,6 @@
 .method public final createVolumeInfoStrForPulbicVolume(Landroid/os/storage/VolumeInfo;)Ljava/lang/String;
     .locals 7
 
-    .line 1476
     const-class p0, Landroid/os/storage/VolumeInfo;
 
     iget v0, p1, Landroid/os/storage/VolumeInfo;->type:I
@@ -3762,14 +3390,12 @@
 
     move-result-object p0
 
-    .line 1478
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getDiskId()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1479
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getDiskId()Ljava/lang/String;
 
     move-result-object v0
@@ -3779,7 +3405,6 @@
     :cond_0
     const-string/jumbo v0, "null"
 
-    .line 1482
     :goto_0
     iget-object v1, p1, Landroid/os/storage/VolumeInfo;->partGuid:Ljava/lang/String;
 
@@ -3790,7 +3415,6 @@
     :cond_1
     const-string v1, ""
 
-    .line 1485
     :goto_1
     const-class v2, Landroid/os/storage/VolumeInfo;
 
@@ -3804,7 +3428,6 @@
 
     move-result-object v2
 
-    .line 1486
     const-class v3, Landroid/os/storage/VolumeInfo;
 
     const-string v4, "STATE_"
@@ -3815,7 +3438,6 @@
 
     move-result-object v3
 
-    .line 1489
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3842,7 +3464,6 @@
 
     move-result-object v4
 
-    .line 1490
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3857,7 +3478,6 @@
 
     move-result-object v5
 
-    .line 1491
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3880,7 +3500,6 @@
 
     move-result-object p0
 
-    .line 1492
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3911,7 +3530,6 @@
 
     move-result-object p0
 
-    .line 1493
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3924,7 +3542,6 @@
 
     move-result-object p0
 
-    .line 1494
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3963,20 +3580,16 @@
 
     const-string v0, "android.permission.ASEC_DESTROY"
 
-    .line 6493
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6495
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6503
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Runtime;->gc()V
 
-    .line 6507
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -3993,7 +3606,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 6509
     invoke-static {v0, p2}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p2, -0x1
@@ -4001,12 +3613,10 @@
     :goto_0
     if-nez p2, :cond_1
 
-    .line 6514
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter v0
 
-    .line 6515
     :try_start_1
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -4020,7 +3630,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 6516
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     new-instance v2, Lcom/android/server/StorageManagerService$PackageInstalledMap;
@@ -4029,7 +3638,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 6518
     :cond_0
     monitor-exit v0
 
@@ -4052,29 +3660,24 @@
 .method public destroyUserKey(I)V
     .locals 1
 
-    .line 3701
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->destroyUserKey_enforcePermission()V
 
-    .line 3704
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {v0, p1}, Landroid/os/IVold;->destroyUserKey(I)V
 
-    .line 3706
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3707
     :try_start_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mLocalUnlockedUsers:Lcom/android/server/StorageManagerService$WatchedLockedUsers;
 
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService$WatchedLockedUsers;->remove(I)V
 
-    .line 3708
     monitor-exit v0
 
     goto :goto_0
@@ -4096,7 +3699,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 3710
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -4106,10 +3708,8 @@
 .method public destroyUserStorage(Ljava/lang/String;II)V
     .locals 0
 
-    .line 3887
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->destroyUserStorage_enforcePermission()V
 
-    .line 3890
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -4124,7 +3724,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 3892
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -4134,7 +3733,6 @@
 .method public disableAppDataIsolation(Ljava/lang/String;II)V
     .locals 4
 
-    .line 3928
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -4147,7 +3745,6 @@
 
     goto :goto_0
 
-    .line 3930
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -4157,17 +3754,14 @@
 
     throw p0
 
-    .line 3932
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
-    .line 3933
     invoke-virtual {v0, p1, p3}, Landroid/content/pm/PackageManagerInternal;->getSharedUserPackagesForPackage(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3934
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
     const-wide/16 v2, 0x0
@@ -4176,7 +3770,6 @@
 
     move-result p3
 
-    .line 3936
     array-length v1, v0
 
     if-eqz v1, :cond_2
@@ -4188,7 +3781,6 @@
 
     move-result-object v0
 
-    .line 3938
     :goto_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -4202,7 +3794,6 @@
     :catch_0
     move-exception p0
 
-    .line 3940
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -4215,7 +3806,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4977
     :try_start_0
     invoke-interface {p1, p2, p3}, Landroid/os/IVoldTaskListener;->onFinished(ILandroid/os/PersistableBundle;)V
     :try_end_0
@@ -4231,7 +3821,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4967
     :try_start_0
     invoke-interface {p1, p2, p3}, Landroid/os/IVoldTaskListener;->onStatus(ILandroid/os/PersistableBundle;)V
     :try_end_0
@@ -4245,7 +3834,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 5
 
-    .line 5202
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string p3, "StorageManagerService"
@@ -4258,7 +3846,6 @@
 
     return-void
 
-    .line 5204
     :cond_0
     new-instance p1, Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -4268,22 +3855,18 @@
 
     invoke-direct {p1, p2, p3, v0}, Lcom/android/internal/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;I)V
 
-    .line 5206
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->getStorageVolumes()Ljava/util/List;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    .line 5208
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string p3, "StorageVolumes:"
 
-    .line 5209
     invoke-virtual {p1, p3}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5210
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4304,10 +3887,8 @@
 
     invoke-virtual {p1, p3}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5211
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5213
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -4325,23 +3906,18 @@
 
     check-cast p3, Landroid/os/storage/StorageVolume;
 
-    .line 5214
     invoke-virtual {p3, p1}, Landroid/os/storage/StorageVolume;->dump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 5215
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     goto :goto_0
 
-    .line 5217
     :cond_1
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5219
     :cond_2
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 5222
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
@@ -4349,17 +3925,14 @@
     :try_start_0
     const-string p3, "Disks:"
 
-    .line 5223
     invoke-virtual {p1, p3}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5224
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
     const/4 p3, 0x0
 
     move v0, p3
 
-    .line 5225
     :goto_1
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mDisks:Landroid/util/ArrayMap;
 
@@ -4369,7 +3942,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 5226
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mDisks:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -4378,26 +3950,21 @@
 
     check-cast v1, Landroid/os/storage/DiskInfo;
 
-    .line 5227
     invoke-virtual {v1, p1}, Landroid/os/storage/DiskInfo;->dump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 5229
     :cond_3
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5231
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string v0, "Volumes:"
 
-    .line 5232
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5233
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4420,12 +3987,10 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5234
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
     move v0, p3
 
-    .line 5235
     :goto_2
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -4435,7 +4000,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 5236
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -4446,7 +4010,6 @@
 
     const-string/jumbo v2, "private"
 
-    .line 5237
     iget-object v3, v1, Landroid/os/storage/VolumeInfo;->id:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4457,7 +4020,6 @@
 
     goto :goto_3
 
-    .line 5238
     :cond_4
     invoke-virtual {v1, p1}, Landroid/os/storage/VolumeInfo;->dump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
@@ -4466,24 +4028,19 @@
 
     goto :goto_2
 
-    .line 5240
     :cond_5
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5242
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string v0, "Records:"
 
-    .line 5243
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5244
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
     move v0, p3
 
-    .line 5245
     :goto_4
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -4493,7 +4050,6 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 5246
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -4502,21 +4058,17 @@
 
     check-cast v1, Landroid/os/storage/VolumeRecord;
 
-    .line 5247
     invoke-virtual {v1, p1}, Landroid/os/storage/VolumeRecord;->dump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 5249
     :cond_6
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5251
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 5252
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4535,10 +4087,8 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5254
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 5255
     invoke-static {}, Landroid/os/storage/StorageManager;->getPrimaryStoragePathAndSize()Landroid/util/Pair;
 
     move-result-object v0
@@ -4547,7 +4097,6 @@
 
     const-string v0, "Internal storage total size: N/A"
 
-    .line 5257
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_5
@@ -4555,10 +4104,8 @@
     :cond_7
     const-string v1, "Internal storage ("
 
-    .line 5259
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 5260
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
@@ -4567,20 +4114,16 @@
 
     const-string v1, ") total size: "
 
-    .line 5261
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 5262
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/Object;)V
 
     const-string v1, " ("
 
-    .line 5263
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 5264
     sget-object v1, Landroid/util/DataUnit;->MEBIBYTES:Landroid/util/DataUnit;
 
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -4599,14 +4142,11 @@
 
     const-string v0, " MiB)"
 
-    .line 5265
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5268
     :goto_5
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 5269
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4625,7 +4165,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5270
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4650,10 +4189,8 @@
 
     const-string v0, "Sharing media with parent : "
 
-    .line 5273
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 5274
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mIsMediaSharedWithParent:Ljava/util/HashMap;
 
     new-instance v1, Lcom/android/server/StorageManagerService$$ExternalSyntheticLambda0;
@@ -4662,17 +4199,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->forEach(Ljava/util/function/BiConsumer;)V
 
-    .line 5275
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string v0, "User pairs for sharing media : "
 
-    .line 5276
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     move v0, p3
 
-    .line 5278
     :goto_6
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
@@ -4682,14 +4216,12 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 5279
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->keyAt(I)I
 
     move-result v1
 
-    .line 5280
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
     const/4 v3, -0x1
@@ -4698,7 +4230,6 @@
 
     move-result v2
 
-    .line 5281
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4729,11 +4260,9 @@
 
     goto :goto_6
 
-    .line 5283
     :cond_8
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 5284
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     move v0, p3
@@ -4749,7 +4278,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 5287
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -4762,7 +4290,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 5289
     :try_start_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4780,7 +4307,6 @@
 
     invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5290
     invoke-static {v1}, Llibcore/io/IoUtils;->readFileAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -4795,43 +4321,35 @@
 
     goto :goto_7
 
-    .line 5296
     :cond_9
     :try_start_2
     monitor-exit p2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 5298
     iget-object p3, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     monitor-enter p3
 
-    .line 5299
     :try_start_3
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string/jumbo p2, "mObbMounts:"
 
-    .line 5300
     invoke-virtual {p1, p2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5301
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5302
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
 
-    .line 5303
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
 
-    .line 5304
     :goto_8
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -4839,14 +4357,12 @@
 
     if-eqz v0, :cond_b
 
-    .line 5305
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 5306
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4867,17 +4383,14 @@
 
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5307
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5308
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    .line 5309
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -4895,36 +4408,28 @@
 
     check-cast v1, Lcom/android/server/StorageManagerService$ObbState;
 
-    .line 5310
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
 
     goto :goto_9
 
-    .line 5312
     :cond_a
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
     goto :goto_8
 
-    .line 5314
     :cond_b
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5316
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string/jumbo p2, "mObbPathToStateMap:"
 
-    .line 5317
     invoke-virtual {p1, p2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5318
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5319
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mObbPathToStateMap:Ljava/util/Map;
 
-    .line 5320
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -4933,7 +4438,6 @@
 
     move-result-object p2
 
-    .line 5321
     :goto_a
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -4941,14 +4445,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 5322
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 5323
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -4959,10 +4461,8 @@
 
     const-string v1, " -> "
 
-    .line 5324
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 5325
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -4971,48 +4471,38 @@
 
     goto :goto_a
 
-    .line 5327
     :cond_c
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 5328
     monitor-exit p3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 5330
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
     monitor-enter p2
 
-    .line 5331
     :try_start_4
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string p3, "Media cloud providers: "
 
-    .line 5332
     invoke-virtual {p1, p3}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 5333
     iget-object p3, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
     invoke-virtual {p1, p3}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 5334
     monitor-exit p2
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 5336
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string p2, "Last maintenance: "
 
-    .line 5337
     invoke-virtual {p1, p2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 5338
     iget-wide p2, p0, Lcom/android/server/StorageManagerService;->mLastMaintenance:J
 
     invoke-static {p2, p3}, Landroid/util/TimeUtils;->formatForLogging(J)Ljava/lang/String;
@@ -5026,7 +4516,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5334
     :try_start_5
     monitor-exit p2
     :try_end_5
@@ -5037,7 +4526,6 @@
     :catchall_1
     move-exception p0
 
-    .line 5328
     :try_start_6
     monitor-exit p3
     :try_end_6
@@ -5048,7 +4536,6 @@
     :catchall_2
     move-exception p0
 
-    .line 5296
     :try_start_7
     monitor-exit p2
     :try_end_7
@@ -5060,7 +4547,6 @@
 .method public final encodeBytes([B)Ljava/lang/String;
     .locals 0
 
-    .line 3739
     invoke-static {p1}, Lcom/android/internal/util/ArrayUtils;->isEmpty([B)Z
 
     move-result p0
@@ -5071,7 +4557,6 @@
 
     return-object p0
 
-    .line 3742
     :cond_0
     invoke-static {p1}, Lcom/android/internal/util/HexDump;->toHexString([B)Ljava/lang/String;
 
@@ -5083,7 +4568,6 @@
 .method public encryptExternalStorage(Z)I
     .locals 13
 
-    .line 5695
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/os/storage/StorageManager;
@@ -5094,19 +4578,16 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    .line 5696
     invoke-virtual {v0}, Landroid/os/storage/StorageManager;->getVolumes()Ljava/util/List;
 
     move-result-object v0
 
-    .line 5699
     invoke-static {}, Landroid/os/storage/VolumeInfo;->getDescriptionComparator()Ljava/util/Comparator;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 5701
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -5126,14 +4607,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 5702
     invoke-virtual {v1}, Landroid/os/storage/VolumeInfo;->getType()I
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 5703
     invoke-virtual {v1}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
     move-result-object v2
@@ -5164,7 +4643,6 @@
 
     const-string/jumbo p0, "sdVolume == null"
 
-    .line 5710
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -5172,7 +4650,6 @@
     :cond_2
     const-string/jumbo v3, "readonly_storage"
 
-    .line 5718
     invoke-virtual {p0, v3}, Lcom/android/server/StorageManagerService;->hasDeviceRestriction(Ljava/lang/String;)Z
 
     move-result v3
@@ -5183,7 +4660,6 @@
 
     const-string v3, "Policy has restriction \'readonly_storage\'; readonly"
 
-    .line 5719
     invoke-static {v2, v3}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/high16 v3, -0x80000000
@@ -5193,7 +4669,6 @@
     :cond_3
     move v3, v4
 
-    .line 5725
     :goto_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5215,21 +4690,17 @@
 
     invoke-static {v2, v5}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5726
     invoke-virtual {v1}, Landroid/os/storage/VolumeInfo;->getState()I
 
-    .line 5730
     :try_start_0
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mDem:Lcom/samsung/android/security/SemSdCardEncryption;
 
     if-eqz v5, :cond_4
 
-    .line 5731
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
     invoke-virtual {v5, v1}, Lcom/android/server/storage/StorageSessionController;->onVolumeUnmount(Landroid/os/storage/VolumeInfo;)V
 
-    .line 5733
     iget-object v6, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     iget-object v7, v1, Landroid/os/storage/VolumeInfo;->id:Ljava/lang/String;
@@ -5242,7 +4713,6 @@
 
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mDem:Lcom/samsung/android/security/SemSdCardEncryption;
 
-    .line 5738
     invoke-virtual {v3}, Lcom/samsung/android/security/SemSdCardEncryption;->getListener()Landroid/os/IVoldTaskListener;
 
     move-result-object v11
@@ -5253,7 +4723,6 @@
 
     move v10, p1
 
-    .line 5733
     invoke-interface/range {v6 .. v12}, Landroid/os/IVold;->sdeEnable(Ljava/lang/String;IIZLandroid/os/IVoldTaskListener;Landroid/os/IVoldMountCallback;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -5264,7 +4733,6 @@
     :catch_0
     move-exception p0
 
-    .line 5769
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -5273,7 +4741,6 @@
 .method public final enforceAdminUser()V
     .locals 3
 
-    .line 2276
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "user"
@@ -5284,17 +4751,14 @@
 
     check-cast p0, Landroid/os/UserManager;
 
-    .line 2277
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 2279
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 2281
     :try_start_0
     invoke-virtual {p0, v0}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
@@ -5306,14 +4770,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2283
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-eqz p0, :cond_0
 
     return-void
 
-    .line 2286
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -5326,10 +4788,8 @@
     :catchall_0
     move-exception p0
 
-    .line 2283
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2284
     throw p0
 .end method
 
@@ -5338,10 +4798,8 @@
 
     const-string v0, "android.permission.WRITE_MEDIA_STORAGE"
 
-    .line 4082
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 4083
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -5350,14 +4808,12 @@
 
     move-result v0
 
-    .line 4084
     iget p0, p0, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
 
     if-ne v0, p0, :cond_0
 
     return-void
 
-    .line 4085
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -5371,7 +4827,6 @@
 .method public final enforcePermission(Ljava/lang/String;)V
     .locals 0
 
-    .line 2204
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1, p1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
@@ -5384,13 +4839,10 @@
 
     const-string v0, "android.permission.ASEC_CREATE"
 
-    .line 6452
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6453
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6457
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -5407,7 +4859,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6463
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, -0x1
@@ -5419,12 +4870,10 @@
 .method public final findOrCreateDiskScanLatch(Ljava/lang/String;)Ljava/util/concurrent/CountDownLatch;
     .locals 3
 
-    .line 681
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 682
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mDiskScanLatches:Landroid/util/ArrayMap;
 
@@ -5436,19 +4885,16 @@
 
     if-nez v1, :cond_0
 
-    .line 684
     new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v2, 0x1
 
     invoke-direct {v1, v2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 685
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mDiskScanLatches:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 687
     :cond_0
     monitor-exit v0
 
@@ -5457,7 +4903,6 @@
     :catchall_0
     move-exception p0
 
-    .line 688
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -5468,14 +4913,12 @@
 .method public final findRecordForPath(Ljava/lang/String;)Landroid/os/storage/VolumeRecord;
     .locals 4
 
-    .line 638
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 639
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
@@ -5486,7 +4929,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 640
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -5495,7 +4937,6 @@
 
     check-cast v2, Landroid/os/storage/VolumeInfo;
 
-    .line 641
     iget-object v3, v2, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
 
     if-eqz v3, :cond_0
@@ -5506,7 +4947,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 642
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     iget-object p1, v2, Landroid/os/storage/VolumeInfo;->fsUuid:Ljava/lang/String;
@@ -5526,7 +4966,6 @@
 
     goto :goto_0
 
-    .line 645
     :cond_1
     monitor-exit v0
 
@@ -5547,7 +4986,6 @@
 .method public final findStorageForUuidAsUser(Ljava/lang/String;I)Landroid/os/storage/VolumeInfo;
     .locals 3
 
-    .line 664
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/os/storage/StorageManager;
@@ -5558,7 +4996,6 @@
 
     check-cast p0, Landroid/os/storage/StorageManager;
 
-    .line 665
     sget-object v0, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
     invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -5567,7 +5004,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 666
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5591,21 +5027,18 @@
     :cond_0
     const-string/jumbo v0, "primary_physical"
 
-    .line 667
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 668
     invoke-virtual {p0}, Landroid/os/storage/StorageManager;->getPrimaryPhysicalVolume()Landroid/os/storage/VolumeInfo;
 
     move-result-object p0
 
     return-object p0
 
-    .line 670
     :cond_1
     invoke-virtual {p0, p1}, Landroid/os/storage/StorageManager;->findVolumeByUuid(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
@@ -5613,7 +5046,6 @@
 
     if-nez v0, :cond_2
 
-    .line 672
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5636,7 +5068,6 @@
 
     return-object p0
 
-    .line 675
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -5666,7 +5097,6 @@
 
     move-result-object p1
 
-    .line 676
     invoke-virtual {p0, p1}, Landroid/os/storage/StorageManager;->findVolumeById(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
     move-result-object p0
@@ -5677,12 +5107,10 @@
 .method public final findVolumeByIdOrThrow(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
     .locals 2
 
-    .line 616
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 617
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -5694,18 +5122,15 @@
 
     if-eqz p0, :cond_0
 
-    .line 619
     monitor-exit v0
 
     return-object p0
 
-    .line 621
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 622
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -5729,7 +5154,6 @@
     :catchall_0
     move-exception p0
 
-    .line 621
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -5741,14 +5165,12 @@
 .method public final findVolumeIdForPathOrThrow(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 626
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 627
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
@@ -5759,7 +5181,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 628
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -5768,7 +5189,6 @@
 
     check-cast v2, Landroid/os/storage/VolumeInfo;
 
-    .line 629
     iget-object v3, v2, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
 
     if-eqz v3, :cond_0
@@ -5779,7 +5199,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 630
     iget-object p0, v2, Landroid/os/storage/VolumeInfo;->id:Ljava/lang/String;
 
     monitor-exit v0
@@ -5791,13 +5210,11 @@
 
     goto :goto_0
 
-    .line 633
     :cond_1
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 634
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -5821,7 +5238,6 @@
     :catchall_0
     move-exception p0
 
-    .line 633
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -5833,7 +5249,6 @@
 .method public finishMediaUpdate()V
     .locals 2
 
-    .line 6711
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -5842,12 +5257,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 6714
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mUnmountSignal:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz p0, :cond_0
 
-    .line 6715
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     goto :goto_0
@@ -5857,13 +5270,11 @@
 
     const-string v0, "Odd, nobody asked to unmount?"
 
-    .line 6717
     invoke-static {p0, v0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return-void
 
-    .line 6712
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -5877,7 +5288,6 @@
 .method public fixPermissionsSecureContainer(Ljava/lang/String;ILjava/lang/String;)I
     .locals 2
 
-    .line 6470
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5910,17 +5320,14 @@
 
     const-string v0, "android.permission.ASEC_CREATE"
 
-    .line 6471
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6472
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
     if-nez p3, :cond_0
 
     const-string p3, ""
 
-    .line 6480
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -5936,7 +5343,6 @@
     :catch_0
     move-exception p0
 
-    .line 6486
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, -0x1
@@ -5948,14 +5354,12 @@
 .method public fixupAppDir(Ljava/lang/String;)V
     .locals 5
 
-    .line 3898
     sget-object v0, Lcom/android/server/StorageManagerService;->KNOWN_APP_DIR_PATHS:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 3899
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
@@ -5966,14 +5370,12 @@
 
     const/4 v1, 0x2
 
-    .line 3900
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
-    .line 3901
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5992,7 +5394,6 @@
 
     return-void
 
-    .line 3905
     :cond_0
     :try_start_0
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -6005,12 +5406,10 @@
 
     const/4 v3, 0x3
 
-    .line 3906
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3907
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -6024,7 +5423,6 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3909
     :try_start_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -6054,7 +5452,6 @@
     :catch_0
     move-exception p0
 
-    .line 3911
     :try_start_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -6080,7 +5477,6 @@
     :catch_1
     move-exception p0
 
-    .line 3916
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6102,7 +5498,6 @@
     :catch_2
     move-exception p0
 
-    .line 3914
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6121,7 +5516,6 @@
 
     goto :goto_0
 
-    .line 3919
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -6150,24 +5544,20 @@
 .method public forgetAllVolumes()V
     .locals 6
 
-    .line 3013
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->forgetAllVolumes_enforcePermission()V
 
     const-string v0, "StorageManagerService"
 
     const-string v1, "forgetAllVolumes"
 
-    .line 3014
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3015
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 3016
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
@@ -6178,7 +5568,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 3017
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -6187,7 +5576,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 3018
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -6196,7 +5584,6 @@
 
     check-cast v3, Landroid/os/storage/VolumeRecord;
 
-    .line 3019
     iget-object v4, v3, Landroid/os/storage/VolumeRecord;->partGuid:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -6205,7 +5592,6 @@
 
     if-nez v4, :cond_0
 
-    .line 3020
     iget-object v4, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 v5, 0x9
@@ -6216,7 +5602,6 @@
 
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3022
     :cond_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
@@ -6226,13 +5611,11 @@
 
     goto :goto_0
 
-    .line 3024
     :cond_1
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->clear()V
 
-    .line 3026
     sget-object v1, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
@@ -6243,18 +5626,15 @@
 
     if-nez v1, :cond_2
 
-    .line 3027
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->getDefaultPrimaryStorageUuid()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
-    .line 3030
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->writeSettingsLocked()V
 
-    .line 3031
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 v1, 0xa
@@ -6265,7 +5645,6 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3032
     monitor-exit v0
 
     return-void
@@ -6283,7 +5662,6 @@
 .method public final forgetPartition(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 3037
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -6298,7 +5676,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 3039
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -6308,12 +5685,10 @@
 .method public forgetVolume(Ljava/lang/String;)V
     .locals 4
 
-    .line 2988
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->forgetVolume_enforcePermission()V
 
     const-string v0, "StorageManagerService"
 
-    .line 2989
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6330,15 +5705,12 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2990
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2992
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2993
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -6350,7 +5722,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2994
     iget-object v2, v1, Landroid/os/storage/VolumeRecord;->partGuid:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -6359,7 +5730,6 @@
 
     if-nez v2, :cond_0
 
-    .line 2995
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 v3, 0x9
@@ -6370,13 +5740,11 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2997
     :cond_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-static {v1, p1}, Lcom/android/server/StorageManagerService$Callbacks;->-$$Nest$mnotifyVolumeForgotten(Lcom/android/server/StorageManagerService$Callbacks;Ljava/lang/String;)V
 
-    .line 3001
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
     invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -6385,14 +5753,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 3002
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->getDefaultPrimaryStorageUuid()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
-    .line 3003
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 v1, 0xa
@@ -6403,11 +5769,9 @@
 
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3006
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->writeSettingsLocked()V
 
-    .line 3007
     monitor-exit v0
 
     return-void
@@ -6425,10 +5789,8 @@
 .method public format(Ljava/lang/String;)V
     .locals 4
 
-    .line 2853
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->format_enforcePermission()V
 
-    .line 2854
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6447,15 +5809,12 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2855
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findVolumeByIdOrThrow(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
     move-result-object p1
 
-    .line 2856
     iget-object v0, p1, Landroid/os/storage/VolumeInfo;->fsUuid:Ljava/lang/String;
 
-    .line 2858
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -6465,14 +5824,12 @@
 
     invoke-interface {v2, p1, v3}, Landroid/os/IVold;->format(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2862
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 2863
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->forgetVolume(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -6482,7 +5839,6 @@
     :catch_0
     move-exception p0
 
-    .line 2866
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -6493,7 +5849,6 @@
 .method public formatBySecApp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    .line 6107
     invoke-virtual {p0, p2}, Lcom/android/server/StorageManagerService;->chkMountUnmountFormatCaller(Ljava/lang/String;)Z
 
     move-result v0
@@ -6504,10 +5859,8 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 6108
     invoke-static {v0, p2}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6114
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/os/storage/StorageManager;
@@ -6518,12 +5871,10 @@
 
     check-cast p2, Landroid/os/storage/StorageManager;
 
-    .line 6115
     invoke-virtual {p2}, Landroid/os/storage/StorageManager;->getVolumes()Ljava/util/List;
 
     move-result-object p2
 
-    .line 6119
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -6544,7 +5895,6 @@
 
     check-cast v2, Landroid/os/storage/VolumeInfo;
 
-    .line 6120
     iget-object v3, v2, Landroid/os/storage/VolumeInfo;->id:Ljava/lang/String;
 
     invoke-static {v3, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -6553,7 +5903,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 6121
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->getDiskId()Ljava/lang/String;
 
     move-result-object v1
@@ -6565,18 +5914,15 @@
 
     const-string p0, "No matched storage to format by SecApp, so just return"
 
-    .line 6126
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 6129
     :cond_2
     invoke-virtual {p0, v1}, Lcom/android/server/StorageManagerService;->partitionPublic(Ljava/lang/String;)V
 
     return-void
 
-    .line 6110
     :cond_3
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -6606,10 +5952,8 @@
 .method public fstrim(ILandroid/os/IVoldTaskListener;)V
     .locals 2
 
-    .line 3047
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->fstrim_enforcePermission()V
 
-    .line 3054
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->needsCheckpoint()Z
 
@@ -6630,12 +5974,10 @@
 
     const-string p1, "Skipping fstrim - block based checkpoint in progress"
 
-    .line 3087
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 3055
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -6654,7 +5996,6 @@
     :catch_0
     move-exception p0
 
-    .line 3090
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -6665,7 +6006,6 @@
 .method public getAllocatableBytes(Ljava/lang/String;ILjava/lang/String;)J
     .locals 12
 
-    .line 4609
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -6674,7 +6014,6 @@
 
     move-result p2
 
-    .line 4611
     iget-object p3, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/os/storage/StorageManager;
@@ -6685,7 +6024,6 @@
 
     check-cast p3, Landroid/os/storage/StorageManager;
 
-    .line 4612
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/usage/StorageStatsManager;
@@ -6696,12 +6034,10 @@
 
     check-cast p0, Landroid/app/usage/StorageStatsManager;
 
-    .line 4613
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 4619
     :try_start_0
     invoke-virtual {p3, p1}, Landroid/os/storage/StorageManager;->findPathForUuid(Ljava/lang/String;)Ljava/io/File;
 
@@ -6713,17 +6049,14 @@
 
     if-nez v3, :cond_0
 
-    .line 4627
     invoke-virtual {v2}, Ljava/io/File;->getUsableSpace()J
 
     move-result-wide v6
 
-    .line 4628
     invoke-virtual {p3, v2}, Landroid/os/storage/StorageManager;->getStorageLowBytes(Ljava/io/File;)J
 
     move-result-wide v8
 
-    .line 4629
     invoke-virtual {p3, v2}, Landroid/os/storage/StorageManager;->getStorageFullBytes(Ljava/io/File;)J
 
     move-result-wide v10
@@ -6742,26 +6075,22 @@
 
     if-nez v3, :cond_1
 
-    .line 4633
     invoke-virtual {p0, p1}, Landroid/app/usage/StorageStatsManager;->isQuotaSupported(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 4634
     invoke-virtual {p0, p1}, Landroid/app/usage/StorageStatsManager;->getCacheBytes(Ljava/lang/String;)J
 
     move-result-wide p0
 
-    .line 4635
     invoke-virtual {p3, v2, p2}, Landroid/os/storage/StorageManager;->getStorageCacheBytes(Ljava/io/File;I)J
 
     move-result-wide v2
 
     sub-long/2addr p0, v2
 
-    .line 4636
     invoke-static {v4, v5, p0, p1}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p0
@@ -6780,7 +6109,6 @@
 
     sub-long/2addr v6, v10
 
-    .line 4640
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p0
@@ -6788,7 +6116,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4647
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-wide p0
@@ -6798,7 +6125,6 @@
 
     sub-long/2addr v6, v8
 
-    .line 4642
     :try_start_1
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
 
@@ -6807,7 +6133,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4647
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-wide p0
@@ -6820,7 +6145,6 @@
     :catch_0
     move-exception p0
 
-    .line 4645
     :try_start_2
     new-instance p1, Landroid/os/ParcelableException;
 
@@ -6830,18 +6154,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4647
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4648
     throw p0
 .end method
 
 .method public final getAverageWriteAmount()I
     .locals 1
 
-    .line 3258
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageWriteRecords:[I
 
     invoke-static {v0}, Ljava/util/Arrays;->stream([I)Ljava/util/stream/IntStream;
@@ -6862,14 +6183,12 @@
 .method public getCacheQuotaBytes(Ljava/lang/String;I)J
     .locals 3
 
-    .line 4550
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     if-eq p2, v0, :cond_0
 
-    .line 4551
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.STORAGE_INTERNAL"
@@ -6878,13 +6197,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4553
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 4555
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -6896,14 +6213,12 @@
 
     check-cast p0, Landroid/app/usage/StorageStatsManager;
 
-    .line 4556
     invoke-virtual {p0, p1, p2}, Landroid/app/usage/StorageStatsManager;->getCacheQuotaBytes(Ljava/lang/String;I)J
 
     move-result-wide p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4558
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-wide p0
@@ -6913,21 +6228,18 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4559
     throw p0
 .end method
 
 .method public getCacheSizeBytes(Ljava/lang/String;I)J
     .locals 3
 
-    .line 4564
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     if-eq p2, v0, :cond_0
 
-    .line 4565
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.STORAGE_INTERNAL"
@@ -6936,13 +6248,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4567
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 4569
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -6954,7 +6264,6 @@
 
     check-cast p0, Landroid/app/usage/StorageStatsManager;
 
-    .line 4570
     invoke-virtual {p0, p1, p2}, Landroid/app/usage/StorageStatsManager;->queryStatsForUid(Ljava/lang/String;I)Landroid/app/usage/StorageStats;
 
     move-result-object p0
@@ -6966,7 +6275,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4574
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-wide p0
@@ -6979,7 +6287,6 @@
     :catch_0
     move-exception p0
 
-    .line 4572
     :try_start_1
     new-instance p1, Landroid/os/ParcelableException;
 
@@ -6989,33 +6296,27 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4574
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4575
     throw p0
 .end method
 
 .method public getCloudMediaProvider()Ljava/lang/String;
     .locals 10
 
-    .line 4056
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v6
 
-    .line 4057
     invoke-static {v6}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v7
 
-    .line 4059
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 4060
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
@@ -7027,7 +6328,6 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 4061
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -7038,7 +6338,6 @@
 
     return-object v9
 
-    .line 4065
     :cond_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
@@ -7056,12 +6355,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 4067
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
-    .line 4068
     invoke-virtual {p0, v0, v6, v7}, Landroid/content/pm/PackageManagerInternal;->filterAppAccess(Ljava/lang/String;II)Z
 
     move-result p0
@@ -7080,7 +6377,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4061
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -7096,7 +6392,6 @@
 
     const/4 v0, 0x0
 
-    .line 2549
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -7107,7 +6402,6 @@
 
     return-object p0
 
-    .line 2552
     :cond_0
     sget-object p0, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
@@ -7117,12 +6411,10 @@
 .method public getDisks()[Landroid/os/storage/DiskInfo;
     .locals 4
 
-    .line 4517
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4518
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mDisks:Landroid/util/ArrayMap;
 
@@ -7134,7 +6426,6 @@
 
     const/4 v2, 0x0
 
-    .line 4519
     :goto_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mDisks:Landroid/util/ArrayMap;
 
@@ -7144,7 +6435,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 4520
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mDisks:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -7159,7 +6449,6 @@
 
     goto :goto_0
 
-    .line 4522
     :cond_0
     monitor-exit v0
 
@@ -7168,7 +6457,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4523
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -7179,10 +6467,8 @@
 .method public getExternalStorageMountMode(ILjava/lang/String;)I
     .locals 0
 
-    .line 4986
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->getExternalStorageMountMode_enforcePermission()V
 
-    .line 4988
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->getExternalStorageMountMode(ILjava/lang/String;)I
@@ -7197,12 +6483,10 @@
 
     const-string v0, "Unknown uid "
 
-    .line 3954
     invoke-static {}, Landroid/os/Binder;->getCallingUidOrThrow()I
 
     move-result v1
 
-    .line 3957
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -7212,7 +6496,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 3964
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     const/4 v4, 0x0
@@ -7229,32 +6512,27 @@
 
     if-eqz v2, :cond_2
 
-    .line 3974
     :try_start_1
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
-    .line 3975
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
     const-wide/16 v5, 0x0
 
-    .line 3974
     invoke-interface {v0, p1, v5, v6, v1}, Landroid/content/pm/IPackageManager;->getApplicationInfo(Ljava/lang/String;JI)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 3980
     iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->manageSpaceActivityName:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
     const-string p0, "StorageManagerService"
 
-    .line 3981
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -7277,13 +6555,11 @@
 
     return-object p0
 
-    .line 3990
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 3992
     :try_start_2
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -7291,43 +6567,36 @@
 
     move-result-object p0
 
-    .line 3993
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.VIEW"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3994
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->manageSpaceActivityName:Ljava/lang/String;
 
     invoke-virtual {v3, p1, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 p1, 0x10000000
 
-    .line 3996
     invoke-virtual {v3, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 3998
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object p1
 
     const/4 v0, 0x2
 
-    .line 3999
     invoke-virtual {p1, v0}, Landroid/app/ActivityOptions;->setPendingIntentCreatorBackgroundActivityStartMode(I)Landroid/app/ActivityOptions;
 
     move-result-object p1
 
-    .line 4004
     invoke-virtual {p1}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p1
 
     const/high16 v0, 0x54000000
 
-    .line 4002
     invoke-static {p0, p2, v3, v0, p1}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
 
     move-result-object p0
@@ -7335,7 +6604,6 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4010
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -7345,7 +6613,6 @@
 
     goto :goto_0
 
-    .line 4007
     :catch_0
     :try_start_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -7358,14 +6625,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 4010
     :goto_0
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4011
     throw p0
 
-    .line 3977
     :cond_1
     :try_start_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -7378,7 +6642,6 @@
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 3985
     :catch_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -7386,7 +6649,6 @@
 
     throw p0
 
-    .line 3966
     :cond_2
     :try_start_5
     new-instance p0, Ljava/lang/SecurityException;
@@ -7395,7 +6657,6 @@
 
     throw p0
 
-    .line 3959
     :cond_3
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -7420,7 +6681,6 @@
     :catch_2
     move-exception p0
 
-    .line 3969
     new-instance p1, Ljava/lang/SecurityException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -7445,7 +6705,6 @@
 
     const/4 v0, 0x0
 
-    .line 4994
     :try_start_0
     invoke-static {p1}, Landroid/os/Process;->isIsolated(I)Z
 
@@ -7461,7 +6720,6 @@
 
     goto/16 :goto_6
 
-    .line 4998
     :cond_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -7469,7 +6727,6 @@
 
     move-result-object v1
 
-    .line 4999
     invoke-static {v1}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
 
     move-result v2
@@ -7481,10 +6738,8 @@
     :cond_1
     if-nez p2, :cond_2
 
-    .line 5004
     aget-object p2, v1, v0
 
-    .line 5007
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -7492,7 +6747,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5009
     :try_start_1
     iget-object v4, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
@@ -7508,7 +6762,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 5013
     :try_start_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -7517,7 +6770,6 @@
     :cond_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5016
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     invoke-virtual {v2, p1}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->isExternalStorageService(I)Z
@@ -7530,7 +6782,6 @@
 
     return p0
 
-    .line 5023
     :cond_4
     iget v2, p0, Lcom/android/server/StorageManagerService;->mDownloadsAuthorityAppId:I
 
@@ -7544,7 +6795,6 @@
 
     iget v2, p0, Lcom/android/server/StorageManagerService;->mExternalStorageAuthorityAppId:I
 
-    .line 5024
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v3
@@ -7553,7 +6803,6 @@
 
     goto :goto_5
 
-    .line 5031
     :cond_5
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -7577,24 +6826,20 @@
     :goto_0
     if-eqz v2, :cond_7
 
-    .line 5034
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
-    .line 5035
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
     const-wide/16 v6, 0x0
 
-    .line 5034
     invoke-interface {v2, p2, v6, v7, v5}, Landroid/content/pm/IPackageManager;->getApplicationInfo(Ljava/lang/String;JI)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p2
 
     if-eqz p2, :cond_7
 
-    .line 5036
     invoke-virtual {p2}, Landroid/content/pm/ApplicationInfo;->isSignedWithPlatformKey()Z
 
     move-result p2
@@ -7603,7 +6848,6 @@
 
     return v4
 
-    .line 5044
     :cond_7
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -7622,7 +6866,6 @@
     :cond_8
     move p2, v0
 
-    .line 5051
     :goto_1
     array-length v2, v1
 
@@ -7633,7 +6876,6 @@
 
     aget-object v5, v1, v4
 
-    .line 5052
     iget-object v6, p0, Lcom/android/server/StorageManagerService;->mIAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
     const/16 v7, 0x42
@@ -7677,10 +6919,8 @@
     :catchall_0
     move-exception p0
 
-    .line 5013
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5014
     throw p0
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
@@ -7696,18 +6936,14 @@
 
     const-string/jumbo v0, "rawPath cannot be null"
 
-    .line 3548
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3550
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 3553
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 3554
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mObbPathToStateMap:Ljava/util/Map;
 
@@ -7717,7 +6953,6 @@
 
     check-cast v1, Lcom/android/server/StorageManagerService$ObbState;
 
-    .line 3555
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -7726,7 +6961,6 @@
 
     const-string p0, "StorageManagerService"
 
-    .line 3557
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -7747,7 +6981,6 @@
 
     return-object p0
 
-    .line 3561
     :cond_0
     iget-object p1, v1, Lcom/android/server/StorageManagerService$ObbState;->volId:Ljava/lang/String;
 
@@ -7768,7 +7001,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3555
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -7780,12 +7012,10 @@
 .method public getPrimaryStorageUuid()Ljava/lang/String;
     .locals 1
 
-    .line 3443
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3444
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
@@ -7796,7 +7026,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3445
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -7807,14 +7036,12 @@
 .method public final getProviderInfo(Ljava/lang/String;)Landroid/content/pm/ProviderInfo;
     .locals 6
 
-    .line 2479
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
     const-wide/32 v2, 0xc0000
 
     const/4 p0, 0x0
 
-    .line 2482
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
@@ -7823,7 +7050,6 @@
 
     move-object v1, p1
 
-    .line 2479
     invoke-virtual/range {v0 .. v5}, Landroid/content/pm/PackageManagerInternal;->resolveContentProvider(Ljava/lang/String;JII)Landroid/content/pm/ProviderInfo;
 
     move-result-object p0
@@ -7836,13 +7062,10 @@
 
     const-string v0, "android.permission.ASEC_ACCESS"
 
-    .line 6696
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6698
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6702
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -7859,7 +7082,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6704
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -7872,15 +7094,12 @@
 
     const-string v0, "android.permission.ASEC_ACCESS"
 
-    .line 6366
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6368
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
     const/4 v0, 0x0
 
-    .line 6372
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -7897,12 +7116,10 @@
 
     const-string v2, "StorageManagerService"
 
-    .line 6374
     invoke-static {v2, v1}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 6378
     :goto_0
     new-instance v2, Ljava/util/ArrayList;
 
@@ -7912,12 +7129,10 @@
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 6381
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter v1
 
-    .line 6382
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->checkExternalSecureContainerMounted()Z
 
@@ -7925,12 +7140,10 @@
 
     if-nez v3, :cond_3
 
-    .line 6385
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6387
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -7939,7 +7152,6 @@
 
     move v4, v0
 
-    .line 6388
     :cond_0
     :goto_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -7948,19 +7160,16 @@
 
     if-eqz v5, :cond_1
 
-    .line 6390
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/StorageManagerService$PackageInstalledMap;
 
-    .line 6391
     iget-boolean v6, v5, Lcom/android/server/StorageManagerService$PackageInstalledMap;->external:Z
 
     if-eqz v6, :cond_0
 
-    .line 6392
     iget-object v5, v5, Lcom/android/server/StorageManagerService$PackageInstalledMap;->id:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -7974,7 +7183,6 @@
 
     const-string p0, "StorageManagerService"
 
-    .line 6398
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -7991,11 +7199,9 @@
 
     invoke-static {p0, v4}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6401
     :cond_2
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 6404
     :cond_3
     monitor-exit v1
     :try_end_1
@@ -8003,7 +7209,6 @@
 
     new-array p0, v0, [Ljava/lang/String;
 
-    .line 6406
     invoke-virtual {v2, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -8015,7 +7220,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6404
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -8027,7 +7231,6 @@
 .method public getSecureContainerPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 6675
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -8048,13 +7251,10 @@
 
     const-string v0, "android.permission.ASEC_ACCESS"
 
-    .line 6676
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6678
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6680
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isExternalSecureContainer(Ljava/lang/String;)Z
 
     move-result v0
@@ -8067,7 +7267,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6681
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     new-instance v2, Lcom/android/server/StorageManagerService$PackageInstalledMap;
@@ -8080,7 +7279,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 6682
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -8097,7 +7295,6 @@
 
     return-object p0
 
-    .line 6687
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -8113,7 +7310,6 @@
     :catch_0
     move-exception p0
 
-    .line 6689
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -8124,12 +7320,10 @@
 .method public final getStorageVolumes()Ljava/util/List;
     .locals 4
 
-    .line 5181
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5187
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -8141,12 +7335,10 @@
 
     const/16 v3, 0x600
 
-    .line 5191
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/server/StorageManagerService;->getVolumeList(ILjava/lang/String;I)[Landroid/os/storage/StorageVolume;
 
     move-result-object p0
 
-    .line 5190
     invoke-static {v0, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -8160,7 +7352,6 @@
 
     const-string v1, "Failed to get StorageVolume List "
 
-    .line 5194
     invoke-static {v0, v1, p0}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -8171,7 +7362,6 @@
 .method public getUsedF2fsFileNode()J
     .locals 2
 
-    .line 5852
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -8188,7 +7378,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 5854
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const-wide/16 v0, -0x1
@@ -8201,13 +7390,10 @@
 
     const-string v0, "android.permission.ASEC_CREATE"
 
-    .line 6738
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6740
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6744
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -8224,7 +7410,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6746
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, -0x1
@@ -8245,7 +7430,6 @@
 
     move-object/from16 v4, p2
 
-    .line 4281
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -8254,7 +7438,6 @@
 
     const/16 v3, 0x3e8
 
-    .line 4283
     invoke-static {v3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
@@ -8269,18 +7452,15 @@
 
     goto :goto_0
 
-    .line 4286
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 4287
     invoke-static {v3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
-    .line 4291
     :goto_0
     invoke-virtual {v0, v4, v3}, Lcom/android/server/StorageManagerService;->isUidOwnerOfPackageOrSystem(Ljava/lang/String;I)Z
 
@@ -8290,7 +7470,6 @@
 
     if-eq v5, v1, :cond_1
 
-    .line 4296
     iget-object v5, v0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string v6, "android.permission.INTERACT_ACROSS_USERS"
@@ -8361,7 +7540,6 @@
     :cond_6
     move v2, v7
 
-    .line 4312
     :goto_5
     iget v11, v0, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
 
@@ -8371,7 +7549,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 4320
     :try_start_0
     iget-object v12, v0, Lcom/android/server/StorageManagerService;->mIPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -8383,12 +7560,10 @@
 
     if-nez v11, :cond_9
 
-    .line 4331
     iget-object v13, v0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     aget-object v12, v12, v7
 
-    .line 4332
     invoke-virtual {v13, v3, v12}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->hasExternalStorageAccess(ILjava/lang/String;)Z
 
     move-result v12
@@ -8397,7 +7572,6 @@
 
     goto :goto_6
 
-    .line 4334
     :cond_7
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -8407,7 +7581,6 @@
 
     throw v0
 
-    .line 4322
     :cond_8
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -8434,7 +7607,6 @@
     :catch_0
     move-exception v0
 
-    .line 4337
     new-instance v1, Ljava/lang/SecurityException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -8455,7 +7627,6 @@
 
     throw v1
 
-    .line 4344
     :cond_9
     :goto_6
     invoke-virtual {v0, v7}, Lcom/android/server/StorageManagerService;->isSystemUnlocked(I)Z
@@ -8466,7 +7637,6 @@
 
     if-nez v12, :cond_b
 
-    .line 4345
     invoke-virtual {v0, v13}, Lcom/android/server/StorageManagerService;->isSystemUnlocked(I)Z
 
     move-result v12
@@ -8484,13 +7654,11 @@
     :goto_7
     const/4 v12, 0x1
 
-    .line 4350
     :goto_8
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 4352
     :try_start_1
     const-class v16, Lcom/android/server/pm/UserManagerInternal;
 
@@ -8502,7 +7670,6 @@
 
     check-cast v6, Lcom/android/server/pm/UserManagerInternal;
 
-    .line 4353
     invoke-virtual {v6, v1}, Lcom/android/server/pm/UserManagerInternal;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
     move-result-object v6
@@ -8511,34 +7678,28 @@
 
     move-result v6
 
-    .line 4354
     iget-object v7, v0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     invoke-virtual {v7, v3, v4}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->hasExternalStorage(ILjava/lang/String;)Z
 
     move-result v3
 
-    .line 4356
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/StorageManagerService;->isUserKeyUnlocked(I)Z
 
     move-result v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4358
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4363
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4364
     new-instance v14, Landroid/util/ArraySet;
 
     invoke-direct {v14}, Landroid/util/ArraySet;-><init>()V
 
-    .line 4365
     iget-object v15, v0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
     const/4 v13, -0x1
@@ -8547,7 +7708,6 @@
 
     move-result v13
 
-    .line 4366
     iget-object v15, v0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v15
@@ -8560,7 +7720,6 @@
 
     const/16 v18, 0x0
 
-    .line 4367
     :goto_9
     :try_start_2
     iget-object v10, v0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
@@ -8571,7 +7730,6 @@
 
     if-ge v6, v10, :cond_21
 
-    .line 4368
     iget-object v10, v0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v10, v6}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -8582,7 +7740,6 @@
 
     move-object/from16 v20, v14
 
-    .line 4369
     iget-object v14, v0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v14, v6}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -8593,7 +7750,6 @@
 
     move/from16 v21, v6
 
-    .line 4370
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->getType()I
 
     move-result v6
@@ -8614,7 +7770,6 @@
 
     goto/16 :goto_f
 
-    .line 4375
     :cond_c
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
 
@@ -8627,7 +7782,6 @@
     :cond_d
     if-eqz v2, :cond_e
 
-    .line 4378
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
 
     move-result v6
@@ -8636,7 +7790,6 @@
 
     goto :goto_a
 
-    .line 4384
     :cond_e
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
 
@@ -8657,7 +7810,6 @@
     :goto_a
     if-eqz v5, :cond_14
 
-    .line 4398
     invoke-virtual {v14, v1}, Landroid/os/storage/VolumeInfo;->isVisibleForWrite(I)Z
 
     move-result v6
@@ -8666,7 +7818,6 @@
 
     if-eqz v2, :cond_11
 
-    .line 4399
     invoke-virtual {v14, v13}, Landroid/os/storage/VolumeInfo;->isVisibleForWrite(I)Z
 
     move-result v6
@@ -8676,7 +7827,6 @@
     :cond_11
     const/16 v6, 0x4d
 
-    .line 4400
     invoke-virtual {v14, v6}, Landroid/os/storage/VolumeInfo;->isVisibleForWrite(I)Z
 
     move-result v7
@@ -8701,7 +7851,6 @@
 
     goto :goto_e
 
-    .line 4407
     :cond_14
     invoke-virtual {v14, v1}, Landroid/os/storage/VolumeInfo;->isVisibleForUser(I)Z
 
@@ -8711,14 +7860,12 @@
 
     const/16 v6, 0x4d
 
-    .line 4408
     invoke-virtual {v14, v6}, Landroid/os/storage/VolumeInfo;->isVisibleForUser(I)Z
 
     move-result v7
 
     if-nez v7, :cond_19
 
-    .line 4409
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->isVisible()Z
 
     move-result v7
@@ -8733,7 +7880,6 @@
 
     if-nez v7, :cond_19
 
-    .line 4410
     :cond_15
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->getType()I
 
@@ -8741,7 +7887,6 @@
 
     if-nez v7, :cond_16
 
-    .line 4411
     invoke-virtual {v14, v13}, Landroid/os/storage/VolumeInfo;->isVisibleForUser(I)Z
 
     move-result v7
@@ -8751,7 +7896,6 @@
     :cond_16
     if-eqz v2, :cond_17
 
-    .line 4412
     invoke-virtual {v14, v13}, Landroid/os/storage/VolumeInfo;->isVisibleForUser(I)Z
 
     move-result v7
@@ -8796,7 +7940,6 @@
 
     const-string v7, "StorageManagerService"
 
-    .line 4424
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -8827,7 +7970,6 @@
     :cond_1c
     move/from16 v24, v2
 
-    .line 4425
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->getType()I
 
     move-result v2
@@ -8840,7 +7982,6 @@
 
     const-string v2, "StorageManagerService"
 
-    .line 4427
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -8876,7 +8017,6 @@
 
     const-string v2, "StorageManagerService"
 
-    .line 4429
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -8903,7 +8043,6 @@
     :goto_11
     const/4 v2, 0x0
 
-    .line 4434
     :goto_12
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
 
@@ -8917,7 +8056,6 @@
 
     if-ltz v6, :cond_1f
 
-    .line 4435
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
 
     move-result v6
@@ -8927,7 +8065,6 @@
     :cond_1f
     move v6, v1
 
-    .line 4437
     :goto_13
     iget-object v7, v0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -8935,7 +8072,6 @@
 
     move-result-object v2
 
-    .line 4439
     invoke-virtual {v14}, Landroid/os/storage/VolumeInfo;->isPrimary()Z
 
     move-result v6
@@ -8952,7 +8088,6 @@
 
     const/4 v7, 0x0
 
-    .line 4440
     invoke-virtual {v6, v7, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     const/16 v18, 0x1
@@ -8962,10 +8097,8 @@
     :cond_20
     move-object/from16 v6, v22
 
-    .line 4443
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4445
     :goto_14
     invoke-virtual {v2}, Landroid/os/storage/StorageVolume;->getUuid()Ljava/lang/String;
 
@@ -8995,7 +8128,6 @@
 
     if-eqz v19, :cond_24
 
-    .line 4449
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -9006,7 +8138,6 @@
 
     const/4 v4, 0x0
 
-    .line 4450
     :goto_16
     iget-object v5, v0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -9016,7 +8147,6 @@
 
     if-ge v4, v5, :cond_24
 
-    .line 4451
     iget-object v5, v0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v5, v4}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -9025,7 +8155,6 @@
 
     check-cast v5, Landroid/os/storage/VolumeRecord;
 
-    .line 4454
     iget-object v8, v5, Landroid/os/storage/VolumeRecord;->fsUuid:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -9036,7 +8165,6 @@
 
     goto :goto_17
 
-    .line 4457
     :cond_22
     iget-wide v8, v5, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
 
@@ -9050,17 +8178,14 @@
 
     if-gez v8, :cond_23
 
-    .line 4458
     iget-object v8, v0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5, v8}, Landroid/os/storage/VolumeRecord;->buildStorageVolume(Landroid/content/Context;)Landroid/os/storage/StorageVolume;
 
     move-result-object v5
 
-    .line 4459
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4460
     invoke-virtual {v5}, Landroid/os/storage/StorageVolume;->getUuid()Ljava/lang/String;
 
     move-result-object v5
@@ -9073,7 +8198,6 @@
 
     goto :goto_16
 
-    .line 4464
     :cond_24
     monitor-exit v15
     :try_end_2
@@ -9083,24 +8207,20 @@
 
     if-eqz v17, :cond_25
 
-    .line 4470
     invoke-static {}, Landroid/os/Environment;->getDataPreloadsMediaDirectory()Ljava/io/File;
 
     move-result-object v22
 
-    .line 4477
     new-instance v3, Landroid/os/UserHandle;
 
     invoke-direct {v3, v1}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 4479
     iget-object v4, v0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v23
 
-    .line 4481
     new-instance v4, Landroid/os/storage/StorageVolume;
 
     const-string v20, "demo"
@@ -9140,24 +8260,20 @@
 
     const-string v4, "No primary storage defined yet; hacking together a stub"
 
-    .line 4487
     invoke-static {v3, v4}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo v3, "ro.vold.primary_physical"
 
     const/4 v4, 0x0
 
-    .line 4489
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v23
 
-    .line 4493
     invoke-static {}, Landroid/os/Environment;->getLegacyExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v20
 
-    .line 4494
     iget-object v0, v0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -9166,7 +8282,6 @@
 
     xor-int/lit8 v24, v23, 0x1
 
-    .line 4501
     new-instance v0, Landroid/os/UserHandle;
 
     move-object/from16 v29, v0
@@ -9177,7 +8292,6 @@
 
     const/16 v30, 0x0
 
-    .line 4506
     new-instance v0, Landroid/os/storage/StorageVolume;
 
     move-object/from16 v17, v0
@@ -9208,7 +8322,6 @@
 
     invoke-virtual {v6, v1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 4512
     :cond_26
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -9227,7 +8340,6 @@
     :catchall_0
     move-exception v0
 
-    .line 4464
     :try_start_3
     monitor-exit v15
     :try_end_3
@@ -9238,13 +8350,10 @@
     :catchall_1
     move-exception v0
 
-    .line 4358
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4359
     throw v0
 
-    .line 4292
     :cond_27
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -9258,12 +8367,10 @@
 .method public getVolumeRecords(I)[Landroid/os/storage/VolumeRecord;
     .locals 3
 
-    .line 4539
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 4540
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -9275,7 +8382,6 @@
 
     const/4 v1, 0x0
 
-    .line 4541
     :goto_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -9285,7 +8391,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 4542
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -9300,7 +8405,6 @@
 
     goto :goto_0
 
-    .line 4544
     :cond_0
     monitor-exit p1
 
@@ -9309,7 +8413,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4545
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -9326,13 +8429,11 @@
 
     return-object p0
 
-    .line 6326
     :cond_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 6327
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -9344,7 +8445,6 @@
 
     const/4 v2, 0x0
 
-    .line 6328
     :goto_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -9354,7 +8454,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 6329
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -9365,7 +8464,6 @@
 
     aput-object v3, v1, v2
 
-    .line 6330
     iget-object v3, v3, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -9376,7 +8474,6 @@
 
     const-string p0, "StorageManagerService"
 
-    .line 6331
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -9413,7 +8510,6 @@
 
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6332
     aget-object p0, v1, v2
 
     iget p0, p0, Landroid/os/storage/VolumeInfo;->state:I
@@ -9436,12 +8532,10 @@
 
     const-string p1, "getVolumeState: No matched Volume"
 
-    .line 6335
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo p0, "unknown"
 
-    .line 6336
     monitor-exit v0
 
     return-object p0
@@ -9449,7 +8543,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6337
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -9460,12 +8553,10 @@
 .method public getVolumes(I)[Landroid/os/storage/VolumeInfo;
     .locals 3
 
-    .line 4528
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 4529
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -9477,7 +8568,6 @@
 
     const/4 v1, 0x0
 
-    .line 4530
     :goto_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -9487,7 +8577,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 4531
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -9502,7 +8591,6 @@
 
     goto :goto_0
 
-    .line 4533
     :cond_0
     monitor-exit p1
 
@@ -9511,7 +8599,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4534
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -9522,7 +8609,6 @@
 .method public final handleBootCompleted()V
     .locals 0
 
-    .line 2545
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->resetIfBootedAndConnected()V
 
     return-void
@@ -9531,7 +8617,6 @@
 .method public final handleDaemonConnected()V
     .locals 0
 
-    .line 1572
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->resetIfBootedAndConnected()V
 
     return-void
@@ -9540,32 +8625,27 @@
 .method public final handleSystemReady()V
     .locals 4
 
-    .line 1097
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->prepareSmartIdleMaint()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1098
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     sget v1, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
     invoke-static {v0, v1}, Lcom/android/server/SmartStorageMaintIdler;->scheduleSmartIdlePass(Landroid/content/Context;I)V
 
-    .line 1102
     :cond_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/MountServiceIdler;->scheduleIdlePass(Landroid/content/Context;)V
 
-    .line 1106
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/NandswapManager;->scheduleNandswapManager(Landroid/content/Context;)V
 
-    .line 1110
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -9574,7 +8654,6 @@
 
     const-string/jumbo v1, "zram_enabled"
 
-    .line 1111
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -9587,22 +8666,18 @@
 
     const/4 v3, 0x0
 
-    .line 1110
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1119
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->refreshZramSettings()V
 
     const-string/jumbo v0, "persist.sys.zram_enabled"
 
-    .line 1122
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "0"
 
-    .line 1123
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -9611,7 +8686,6 @@
 
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
-    .line 1124
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -9624,12 +8698,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 1126
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/ZramWriteback;->scheduleZramWriteback(Landroid/content/Context;)V
 
-    .line 1129
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->configureTranscoding()V
 
@@ -9639,7 +8711,6 @@
 .method public final hasDeviceRestriction(Ljava/lang/String;)Z
     .locals 5
 
-    .line 6167
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -9660,7 +8731,6 @@
 
     const-string/jumbo v0, "usbhost_storage"
 
-    .line 6168
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -9673,7 +8743,6 @@
 
     const-string/jumbo v0, "isUsbHostStorageAllowed"
 
-    .line 6169
     filled-new-array {v2}, [Ljava/lang/String;
 
     move-result-object v1
@@ -9687,7 +8756,6 @@
     :cond_0
     const-string/jumbo v0, "sdcard_storage"
 
-    .line 6171
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -9700,7 +8768,6 @@
 
     const-string/jumbo v1, "isSdCardEnabled"
 
-    .line 6172
     invoke-virtual {p0, p1, v0, v1, v4}, Lcom/android/server/StorageManagerService;->hasSecRestriction(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result p0
@@ -9710,7 +8777,6 @@
     :cond_1
     const-string/jumbo v0, "mass_storage"
 
-    .line 6174
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -9719,7 +8785,6 @@
 
     const-string/jumbo v0, "isUsbMassStorageEnabled"
 
-    .line 6175
     filled-new-array {v2}, [Ljava/lang/String;
 
     move-result-object v1
@@ -9733,7 +8798,6 @@
     :cond_2
     const-string/jumbo v0, "readonly_storage"
 
-    .line 6177
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -9742,7 +8806,6 @@
 
     const-string/jumbo v0, "isSDCardWriteAllowed"
 
-    .line 6178
     invoke-virtual {p0, p1, v3, v0, v4}, Lcom/android/server/StorageManagerService;->hasSecRestriction(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result p0
@@ -9752,7 +8815,6 @@
     :cond_3
     const-string/jumbo p0, "not define policy !!!"
 
-    .line 6181
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -9763,12 +8825,10 @@
 .method public final hasSecRestriction(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Z
     .locals 6
 
-    .line 6187
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 6188
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -9793,11 +8853,9 @@
 
     if-eqz p0, :cond_0
 
-    .line 6191
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6192
     invoke-interface {p0, p3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p3
@@ -9806,7 +8864,6 @@
 
     move-result-object p3
 
-    .line 6194
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -9829,7 +8886,6 @@
 
     const-string v0, "false"
 
-    .line 6195
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -9839,7 +8895,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 6205
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     const/4 p0, 0x1
@@ -9856,7 +8911,6 @@
 
     goto :goto_1
 
-    .line 6199
     :cond_0
     :try_start_1
     new-instance p3, Ljava/lang/StringBuilder;
@@ -9881,13 +8935,11 @@
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 6205
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     goto :goto_2
 
-    .line 6202
     :goto_1
     :try_start_2
     new-instance v0, Ljava/lang/StringBuilder;
@@ -9923,10 +8975,8 @@
     :goto_3
     if-eqz p0, :cond_3
 
-    .line 6205
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 6207
     :cond_3
     throw p1
 .end method
@@ -9938,15 +8988,12 @@
 
     const-string v1, "StorageManagerService"
 
-    .line 5639
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5641
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mDem:Lcom/samsung/android/security/SemSdCardEncryption;
 
     if-nez v0, :cond_0
 
-    .line 5642
     new-instance v0, Lcom/samsung/android/security/SemSdCardEncryption;
 
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
@@ -9955,27 +9002,23 @@
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mDem:Lcom/samsung/android/security/SemSdCardEncryption;
 
-    .line 5645
     :cond_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mDirEncryptListner:Lcom/android/server/StorageManagerService$DirEncryptListner;
 
     if-nez v0, :cond_1
 
-    .line 5646
     new-instance v0, Lcom/android/server/StorageManagerService$DirEncryptListner;
 
     invoke-direct {v0, p0}, Lcom/android/server/StorageManagerService$DirEncryptListner;-><init>(Lcom/android/server/StorageManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mDirEncryptListner:Lcom/android/server/StorageManagerService$DirEncryptListner;
 
-    .line 5647
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mDem:Lcom/samsung/android/security/SemSdCardEncryption;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/security/SemSdCardEncryption;->registerListener(Lcom/samsung/android/security/IDirEncryptServiceListener;)V
 
     const-string/jumbo p0, "register direncryption listener"
 
-    .line 5648
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -9987,7 +9030,6 @@
 .method public final isAppIoBlocked(I)Z
     .locals 0
 
-    .line 4035
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
     invoke-virtual {p0, p1}, Lcom/android/server/storage/StorageSessionController;->isAppIoBlocked(I)Z
@@ -10000,7 +9042,6 @@
 .method public isAppIoBlocked(Ljava/lang/String;III)Z
     .locals 0
 
-    .line 4031
     invoke-virtual {p0, p2}, Lcom/android/server/StorageManagerService;->isAppIoBlocked(I)Z
 
     move-result p0
@@ -10011,7 +9052,6 @@
 .method public final isBroadcastWorthy(Landroid/os/storage/VolumeInfo;)Z
     .locals 4
 
-    .line 1910
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getType()I
 
     move-result p0
@@ -10034,7 +9074,6 @@
 
     return v3
 
-    .line 1920
     :cond_0
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getState()I
 
@@ -10064,7 +9103,6 @@
 
     return v3
 
-    .line 1930
     :cond_1
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
@@ -10072,7 +9110,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1931
     invoke-virtual {p0}, Landroid/os/storage/DiskInfo;->isUsb()Z
 
     move-result p0
@@ -10096,7 +9133,6 @@
 
     const/4 v0, 0x0
 
-    .line 1764
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -10104,7 +9140,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1765
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -10115,7 +9150,6 @@
 
     const/4 v2, 0x0
 
-    .line 1766
     invoke-static {v1, v0, v2}, Landroid/os/FileUtils;->readTextFile(Ljava/io/File;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10126,7 +9160,6 @@
 
     const-string v2, "Notray"
 
-    .line 1768
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -10138,7 +9171,6 @@
     :cond_0
     const-string v1, "Ext SD Card Tray State is not proper"
 
-    .line 1771
     invoke-static {p0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -10146,7 +9178,6 @@
     :cond_1
     const-string v1, "Ext SD Card Tray State File Not Exist"
 
-    .line 1775
     invoke-static {p0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -10158,7 +9189,6 @@
 
     const-string v2, "Could\'t read Ext SD Card Tray State File : "
 
-    .line 1779
     invoke-static {p0, v2, v1}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -10167,12 +9197,10 @@
 .method public final isExternalSecureContainer(Ljava/lang/String;)Z
     .locals 3
 
-    .line 6579
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter v0
 
-    .line 6580
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -10180,7 +9208,6 @@
 
     move-result-object p0
 
-    .line 6581
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -10188,14 +9215,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 6582
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/StorageManagerService$PackageInstalledMap;
 
-    .line 6583
     iget-object v2, v1, Lcom/android/server/StorageManagerService$PackageInstalledMap;->id:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -10204,7 +9229,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6584
     iget-boolean p0, v1, Lcom/android/server/StorageManagerService$PackageInstalledMap;->external:Z
 
     goto :goto_0
@@ -10212,7 +9236,6 @@
     :cond_1
     const/4 p0, 0x0
 
-    .line 6588
     :goto_0
     monitor-exit v0
     :try_end_0
@@ -10220,7 +9243,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 6589
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -10248,7 +9270,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6588
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -10260,19 +9281,16 @@
 .method public final isHevcDecoderSupported()Z
     .locals 8
 
-    .line 1162
     new-instance p0, Landroid/media/MediaCodecList;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/media/MediaCodecList;-><init>(I)V
 
-    .line 1163
     invoke-virtual {p0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
 
     move-result-object p0
 
-    .line 1164
     array-length v1, p0
 
     move v2, v0
@@ -10282,7 +9300,6 @@
 
     aget-object v3, p0, v2
 
-    .line 1165
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v4
@@ -10291,13 +9308,11 @@
 
     goto :goto_2
 
-    .line 1168
     :cond_0
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1169
     array-length v4, v3
 
     move v5, v0
@@ -10309,7 +9324,6 @@
 
     const-string/jumbo v7, "video/hevc"
 
-    .line 1170
     invoke-virtual {v6, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v6
@@ -10340,13 +9354,11 @@
 
     const/4 p0, 0x0
 
-    .line 5896
     :try_start_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5897
     invoke-virtual {v0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object p1
@@ -10355,7 +9367,6 @@
 
     const-string v0, "/data/media"
 
-    .line 5900
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -10368,7 +9379,6 @@
     :catch_0
     move-exception p1
 
-    .line 5905
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     return p0
@@ -10377,7 +9387,6 @@
 .method public final isMountDisallowed(Landroid/os/storage/VolumeInfo;)Z
     .locals 7
 
-    .line 2212
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getType()I
 
     move-result v0
@@ -10390,7 +9399,6 @@
 
     return v2
 
-    .line 2217
     :cond_0
     invoke-virtual {p0, v2}, Lcom/android/server/StorageManagerService;->isMountDisallowedByEAS(Z)Z
 
@@ -10404,12 +9412,10 @@
 
     const-string p0, "Policy has restriction \'storage_itpolicy_ui\'; cannot mount volume."
 
-    .line 2218
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
 
-    .line 2223
     :cond_1
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -10424,7 +9430,6 @@
     :try_start_0
     const-string/jumbo v4, "restriction_policy"
 
-    .line 2229
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v4
@@ -10433,12 +9438,10 @@
 
     move-result-object v4
 
-    .line 2230
     new-instance v5, Lcom/samsung/android/knox/ContextInfo;
 
     invoke-direct {v5}, Lcom/samsung/android/knox/ContextInfo;-><init>()V
 
-    .line 2231
     iget-object v6, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
     if-eqz v6, :cond_2
@@ -10459,17 +9462,14 @@
 
     const-string v4, "SDcard is restricted in MDM"
 
-    .line 2232
     invoke-static {v1, v4}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2233
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "com.samsung.intent.action.SDCARD_ITPOLICY_TOAST_EVENT"
 
     invoke-direct {v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2234
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     sget-object v6, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -10478,7 +9478,6 @@
 
     return v3
 
-    .line 2236
     :cond_2
     iget-object v6, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
@@ -10500,14 +9499,12 @@
 
     const-string v4, "USB MEMORY is restricted in MDM"
 
-    .line 2237
     invoke-static {v1, v4}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     return v3
 
-    .line 2243
     :catch_0
     :cond_3
     iget-object v4, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
@@ -10527,7 +9524,6 @@
     :cond_4
     move v4, v2
 
-    .line 2244
     :goto_0
     iget-object v5, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
@@ -10551,7 +9547,6 @@
 
     const-string/jumbo v4, "sdcard_storage"
 
-    .line 2246
     invoke-virtual {p0, v4}, Lcom/android/server/StorageManagerService;->hasDeviceRestriction(Ljava/lang/String;)Z
 
     move-result v4
@@ -10560,7 +9555,6 @@
 
     const-string p0, "Policy has restriction \'sdcard\'; cannot mount volume."
 
-    .line 2247
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -10570,7 +9564,6 @@
 
     const-string/jumbo v4, "usbhost_storage"
 
-    .line 2251
     invoke-virtual {p0, v4}, Lcom/android/server/StorageManagerService;->hasDeviceRestriction(Ljava/lang/String;)Z
 
     move-result p0
@@ -10579,12 +9572,10 @@
 
     const-string p0, "Policy has restriction \'usbhost_storage\'; cannot mount volume."
 
-    .line 2252
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
 
-    .line 2259
     :cond_7
     iget-object p0, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
@@ -10598,12 +9589,10 @@
 
     const-string/jumbo p0, "no_usb_file_transfer"
 
-    .line 2261
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
 
-    .line 2260
     invoke-virtual {v0, p0, v1}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p0
@@ -10613,7 +9602,6 @@
     :cond_8
     move p0, v2
 
-    .line 2265
     :goto_2
     iget p1, p1, Landroid/os/storage/VolumeInfo;->type:I
 
@@ -10636,12 +9624,10 @@
     :goto_3
     const-string/jumbo p1, "no_physical_media"
 
-    .line 2269
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
 
-    .line 2268
     invoke-virtual {v0, p1, v1}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p1
@@ -10661,7 +9647,6 @@
 .method public final isMountDisallowedByEAS(Z)Z
     .locals 4
 
-    .line 6014
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -10680,7 +9665,6 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6015
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "device_policy"
@@ -10697,7 +9681,6 @@
 
     const-string/jumbo p0, "isMountDisallowedByEAS: DevicePolicyManager is NULL"
 
-    .line 6017
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -10705,7 +9688,6 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 6020
     invoke-virtual {v0, v3}, Landroid/app/admin/DevicePolicyManager;->semGetAllowStorageCard(Landroid/content/ComponentName;)Z
 
     move-result v0
@@ -10716,40 +9698,33 @@
 
     if-eqz p1, :cond_1
 
-    .line 6022
     iget-boolean p1, p0, Lcom/android/server/StorageManagerService;->preSDPolicy:Z
 
     if-ne v0, p1, :cond_1
 
     const-string/jumbo p0, "policy has restriction but not show noti storage_itpolicy"
 
-    .line 6023
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
 
-    .line 6026
     :cond_1
     iput-boolean v2, p0, Lcom/android/server/StorageManagerService;->preSDPolicy:Z
 
     const-string/jumbo p1, "policy has restriction storage_itpolicy"
 
-    .line 6027
     invoke-static {v1, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p1, "Send ACTION_SDCARD_ITPOLICY_TOAST_EVENT INTENT!!"
 
-    .line 6028
     invoke-static {v1, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6029
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "com.samsung.intent.action.SDCARD_ITPOLICY_TOAST_EVENT"
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 6030
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     sget-object v0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -10761,10 +9736,8 @@
     :cond_2
     const-string/jumbo p1, "isMountDisallowedByEAS: check is true"
 
-    .line 6034
     invoke-static {v1, p1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6035
     iput-boolean v3, p0, Lcom/android/server/StorageManagerService;->preSDPolicy:Z
 
     return v2
@@ -10775,15 +9748,12 @@
 
     const-string/jumbo v0, "rawPath cannot be null"
 
-    .line 3566
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3567
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 3568
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbPathToStateMap:Ljava/util/Map;
 
@@ -10798,7 +9768,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3569
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -10809,7 +9778,6 @@
 .method public isPassedLifetimeThresh()Z
     .locals 0
 
-    .line 3234
     iget-boolean p0, p0, Lcom/android/server/StorageManagerService;->mPassedLifetimeThresh:Z
 
     return p0
@@ -10820,18 +9788,14 @@
 
     const-string v0, "android.permission.ASEC_ACCESS"
 
-    .line 6636
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6638
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6640
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter v0
 
-    .line 6641
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -10845,7 +9809,6 @@
 
     const-string v1, "StorageManagerService"
 
-    .line 6642
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -10868,7 +9831,6 @@
 
     invoke-static {v1, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6643
     monitor-exit v0
 
     return p0
@@ -10876,7 +9838,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6644
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -10889,7 +9850,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 6236
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
@@ -10897,7 +9857,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6237
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {p0, p1}, Landroid/os/IVold;->isSensitive(Ljava/lang/String;)Z
@@ -10913,7 +9872,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6240
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -10925,12 +9883,10 @@
 .method public final isSystemUnlocked(I)Z
     .locals 1
 
-    .line 3783
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3784
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
@@ -10945,7 +9901,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3785
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -10964,7 +9919,6 @@
 
     return p0
 
-    .line 3543
     :cond_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
@@ -10982,12 +9936,10 @@
 .method public isUserKeyUnlocked(I)Z
     .locals 1
 
-    .line 3777
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3778
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mLocalUnlockedUsers:Lcom/android/server/StorageManagerService$WatchedLockedUsers;
 
@@ -11002,7 +9954,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3779
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -11015,13 +9966,11 @@
 
     const/4 p0, 0x0
 
-    .line 5874
     :try_start_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5875
     invoke-virtual {v0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object p1
@@ -11030,7 +9979,6 @@
 
     const-string v0, "/data/media"
 
-    .line 5878
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -11052,7 +10000,6 @@
 
     const-string v0, "input path is not supported"
 
-    .line 5881
     invoke-static {p1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -11069,7 +10016,6 @@
     :catch_0
     move-exception p1
 
-    .line 5888
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     return p0
@@ -11078,7 +10024,6 @@
 .method public lastMaintenance()J
     .locals 2
 
-    .line 1563
     iget-wide v0, p0, Lcom/android/server/StorageManagerService;->mLastMaintenance:J
 
     return-wide v0
@@ -11087,12 +10032,10 @@
 .method public lockUserKey(I)V
     .locals 2
 
-    .line 3750
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->lockUserKey_enforcePermission()V
 
     if-nez p1, :cond_1
 
-    .line 3753
     invoke-static {}, Landroid/os/UserManager;->isHeadlessSystemUserMode()Z
 
     move-result v0
@@ -11101,7 +10044,6 @@
 
     goto :goto_0
 
-    .line 3754
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -11111,7 +10053,6 @@
 
     throw p0
 
-    .line 3758
     :cond_1
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isUserKeyUnlocked(I)Z
@@ -11122,7 +10063,6 @@
 
     const-string p0, "StorageManagerService"
 
-    .line 3759
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -11145,7 +10085,6 @@
 
     return-void
 
-    .line 3764
     :cond_2
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -11154,18 +10093,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3770
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3771
     :try_start_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mLocalUnlockedUsers:Lcom/android/server/StorageManagerService$WatchedLockedUsers;
 
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService$WatchedLockedUsers;->remove(I)V
 
-    .line 3772
     monitor-exit v0
 
     return-void
@@ -11184,7 +10120,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 3766
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -11193,7 +10128,6 @@
 .method public final maybeLogMediaMount(Landroid/os/storage/VolumeInfo;I)V
     .locals 1
 
-    .line 2152
     invoke-static {}, Landroid/app/admin/SecurityLog;->isLoggingEnabled()Z
 
     move-result p0
@@ -11202,7 +10136,6 @@
 
     return-void
 
-    .line 2156
     :cond_0
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
@@ -11210,7 +10143,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 2157
     iget v0, p0, Landroid/os/storage/DiskInfo;->flags:I
 
     and-int/lit8 v0, v0, 0xc
@@ -11219,7 +10151,6 @@
 
     goto :goto_2
 
-    .line 2162
     :cond_1
     iget-object p0, p0, Landroid/os/storage/DiskInfo;->label:Ljava/lang/String;
 
@@ -11252,7 +10183,6 @@
 
     if-ne p2, v0, :cond_6
 
-    .line 2169
     :cond_4
     iget-object p1, p1, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
 
@@ -11266,7 +10196,6 @@
 
     goto :goto_2
 
-    .line 2166
     :cond_5
     :goto_1
     iget-object p1, p1, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
@@ -11287,19 +10216,16 @@
 .method public final maybeRemountVolumes(I)V
     .locals 6
 
-    .line 1501
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1502
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
     const/4 v2, 0x0
 
-    .line 1503
     :goto_0
     :try_start_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
@@ -11310,7 +10236,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 1504
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -11319,7 +10244,6 @@
 
     check-cast v3, Landroid/os/storage/VolumeInfo;
 
-    .line 1505
     invoke-virtual {v3}, Landroid/os/storage/VolumeInfo;->isPrimary()Z
 
     move-result v4
@@ -11338,7 +10262,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1506
     invoke-virtual {v3}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
 
     move-result v4
@@ -11347,12 +10270,10 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 1509
     iget v4, p0, Lcom/android/server/StorageManagerService;->mCurrentUserId:I
 
     iput v4, v3, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
-    .line 1510
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -11360,13 +10281,11 @@
 
     goto :goto_0
 
-    .line 1513
     :cond_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1515
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -11384,14 +10303,12 @@
 
     check-cast v1, Landroid/os/storage/VolumeInfo;
 
-    .line 1517
     invoke-virtual {p0, v1}, Lcom/android/server/StorageManagerService;->createVolumeInfoStrForPulbicVolume(Landroid/os/storage/VolumeInfo;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "StorageManagerService"
 
-    .line 1518
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -11414,7 +10331,6 @@
 
     invoke-static {v3, v2}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1520
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 v3, 0x8
@@ -11425,7 +10341,6 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1521
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v3, 0x5
@@ -11444,7 +10359,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1513
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -11458,17 +10372,14 @@
 
     const-string v0, ": "
 
-    .line 4205
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 4206
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
 
-    .line 4207
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -11487,7 +10398,6 @@
 
     move-result-object v3
 
-    .line 4210
     invoke-virtual {p0, v2}, Lcom/android/server/StorageManagerService;->isUserKeyUnlocked(I)Z
 
     move-result v4
@@ -11500,7 +10410,6 @@
 
     const/4 v4, 0x0
 
-    .line 4216
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
@@ -11509,7 +10418,6 @@
 
     goto :goto_0
 
-    .line 4217
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -11529,7 +10437,6 @@
 
     throw p0
 
-    .line 4221
     :cond_1
     :goto_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
@@ -11542,10 +10449,8 @@
 
     check-cast v3, Landroid/app/AppOpsManager;
 
-    .line 4223
     invoke-virtual {v3, v1, p1}, Landroid/app/AppOpsManager;->checkPackage(ILjava/lang/String;)V
 
-    .line 4226
     :try_start_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -11557,14 +10462,12 @@
 
     const/4 v6, 0x0
 
-    .line 4227
     invoke-virtual {v3, v4, p1, v6, v2}, Landroid/content/pm/PackageManager;->getPropertyAsUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Landroid/content/pm/PackageManager$Property;
 
     move-result-object v3
 
     if-eqz v3, :cond_3
 
-    .line 4229
     invoke-virtual {v3}, Landroid/content/pm/PackageManager$Property;->getBoolean()Z
 
     move-result v3
@@ -11573,7 +10476,6 @@
 
     goto :goto_1
 
-    .line 4230
     :cond_2
     new-instance v3, Ljava/lang/SecurityException;
 
@@ -11599,7 +10501,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4238
     :catch_0
     :cond_3
     :goto_1
@@ -11614,21 +10515,18 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 4243
     invoke-virtual {p2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "/"
 
-    .line 4244
     invoke-virtual {v3, v4}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_4
 
-    .line 4245
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -11641,7 +10539,6 @@
 
     move-result-object v3
 
-    .line 4249
     :cond_4
     sget-object v4, Lcom/android/server/StorageManagerService;->KNOWN_APP_DIR_PATHS:Ljava/util/regex/Pattern;
 
@@ -11649,7 +10546,6 @@
 
     move-result-object v4
 
-    .line 4250
     invoke-virtual {v4}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v6
@@ -11660,7 +10556,6 @@
 
     const/4 v6, 0x3
 
-    .line 4252
     invoke-virtual {v4, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -11673,7 +10568,6 @@
 
     const/4 p1, 0x2
 
-    .line 4258
     invoke-virtual {v4, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -11694,7 +10588,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 4259
     :cond_5
     invoke-virtual {v4, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -11708,7 +10601,6 @@
 
     goto :goto_2
 
-    .line 4260
     :cond_6
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -11734,7 +10626,6 @@
 
     throw p0
 
-    .line 4264
     :cond_7
     :goto_2
     :try_start_2
@@ -11749,7 +10640,6 @@
     :catch_1
     move-exception p0
 
-    .line 4266
     new-instance p1, Ljava/lang/IllegalStateException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -11772,7 +10662,6 @@
 
     throw p1
 
-    .line 4253
     :cond_8
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -11798,7 +10687,6 @@
 
     throw p0
 
-    .line 4271
     :cond_9
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -11825,7 +10713,6 @@
     :catch_2
     move-exception p0
 
-    .line 4240
     new-instance p1, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -11850,7 +10737,6 @@
 
     throw p1
 
-    .line 4211
     :cond_a
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -11874,7 +10760,6 @@
 .method public monitor()V
     .locals 1
 
-    .line 5345
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -11889,7 +10774,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 5347
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -11901,7 +10785,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 2716
     :try_start_0
     iget v1, p1, Landroid/os/storage/VolumeInfo;->type:I
     :try_end_0
@@ -11911,13 +10794,11 @@
 
     if-nez v1, :cond_0
 
-    .line 2717
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->createVolumeInfoStrForPulbicVolume(Landroid/os/storage/VolumeInfo;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2718
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -11934,7 +10815,6 @@
 
     goto :goto_0
 
-    .line 2721
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -11953,7 +10833,6 @@
     :goto_0
     const-string/jumbo v1, "readonly_storage"
 
-    .line 2726
     invoke-virtual {p0, v1}, Lcom/android/server/StorageManagerService;->hasDeviceRestriction(Ljava/lang/String;)Z
 
     move-result v1
@@ -11964,7 +10843,6 @@
 
     const-string v1, "Policy has restriction \'readonly_storage\'; readonly"
 
-    .line 2727
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/high16 v1, -0x80000000
@@ -11974,7 +10852,6 @@
     :cond_1
     move v1, v2
 
-    .line 2734
     :goto_1
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -11988,7 +10865,6 @@
 
     const/4 v4, 0x0
 
-    .line 2735
     invoke-virtual {v3, v4}, Landroid/app/admin/DevicePolicyManager;->semGetRequireStorageCardEncryption(Landroid/content/ComponentName;)Z
 
     move-result v3
@@ -11997,7 +10873,6 @@
 
     const-string v3, "Admin Stirage Card Encryption Policy is Set"
 
-    .line 2736
     invoke-static {v0, v3}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/high16 v3, 0x20000000
@@ -12007,7 +10882,6 @@
     :cond_2
     move v3, v2
 
-    .line 2740
     :goto_2
     iget-object v4, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -12027,17 +10901,14 @@
 
     invoke-interface {v4, v5, v1, v3, v6}, Landroid/os/IVold;->mount(Ljava/lang/String;IILandroid/os/IVoldMountCallback;)V
 
-    .line 2781
     iget v1, p1, Landroid/os/storage/VolumeInfo;->type:I
 
     if-nez v1, :cond_3
 
-    .line 2782
     iget v1, p0, Lcom/android/server/StorageManagerService;->mCurrentUserId:I
 
     iput v1, p1, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
-    .line 2787
     :cond_3
     iget v1, p1, Landroid/os/storage/VolumeInfo;->type:I
     :try_end_1
@@ -12047,13 +10918,11 @@
 
     if-nez v1, :cond_4
 
-    .line 2788
     :try_start_2
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->createVolumeInfoStrForPulbicVolume(Landroid/os/storage/VolumeInfo;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2789
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12070,7 +10939,6 @@
 
     goto :goto_3
 
-    .line 2792
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -12086,7 +10954,6 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2795
     :goto_3
     iget-object p1, p1, Landroid/os/storage/VolumeInfo;->internalPath:Ljava/lang/String;
 
@@ -12098,7 +10965,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 2797
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -12107,19 +10973,16 @@
 
     const-string v1, "com.google.android.providers.media.module"
 
-    .line 2798
     invoke-virtual {p1, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p1
 
-    .line 2799
     iget-object p1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget p1, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
     if-eqz p1, :cond_5
 
-    .line 2801
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {p0, p1}, Landroid/os/IVold;->setMpUidForFileSystem(I)V
@@ -12131,7 +10994,6 @@
     :catch_0
     move-exception p0
 
-    .line 2805
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_5
@@ -12142,10 +11004,8 @@
 .method public mount(Ljava/lang/String;)V
     .locals 2
 
-    .line 2684
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->mount_enforcePermission()V
 
-    .line 2685
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -12164,24 +11024,20 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2686
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findVolumeByIdOrThrow(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
     move-result-object v0
 
-    .line 2687
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->isMountDisallowed(Landroid/os/storage/VolumeInfo;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 2691
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->mount(Landroid/os/storage/VolumeInfo;)V
 
     return-void
 
-    .line 2688
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -12211,7 +11067,6 @@
 .method public mountBySecApp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 6087
     invoke-virtual {p0, p2}, Lcom/android/server/StorageManagerService;->chkMountUnmountFormatCaller(Ljava/lang/String;)Z
 
     move-result v0
@@ -12222,15 +11077,12 @@
 
     const-string v0, "Mount call accepted"
 
-    .line 6088
     invoke-static {p2, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6093
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->mount(Ljava/lang/String;)V
 
     return-void
 
-    .line 6090
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -12262,30 +11114,24 @@
 
     const-string/jumbo v0, "rawPath cannot be null"
 
-    .line 3575
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "canonicalPath cannot be null"
 
-    .line 3576
     invoke-static {p2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string/jumbo v0, "token cannot be null"
 
-    .line 3577
     invoke-static {p3, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string/jumbo v0, "obbIfno cannot be null"
 
-    .line 3578
     invoke-static {p5, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3580
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 3581
     new-instance v9, Lcom/android/server/StorageManagerService$ObbState;
 
     const/4 v8, 0x0
@@ -12306,12 +11152,10 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/android/server/StorageManagerService$ObbState;-><init>(Lcom/android/server/StorageManagerService;Ljava/lang/String;Ljava/lang/String;ILandroid/os/storage/IObbActionListener;ILjava/lang/String;)V
 
-    .line 3583
     new-instance p1, Lcom/android/server/StorageManagerService$MountObbAction;
 
     invoke-direct {p1, p0, v9, v0, p5}, Lcom/android/server/StorageManagerService$MountObbAction;-><init>(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$ObbState;ILandroid/content/res/ObbInfo;)V
 
-    .line 3584
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbActionHandler:Lcom/android/server/StorageManagerService$ObbActionHandler;
 
     const/4 p2, 0x1
@@ -12332,34 +11176,28 @@
 
     const-string/jumbo v1, "mountProxyFileDescriptorBridge"
 
-    .line 4149
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4150
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 4153
     :goto_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAppFuseLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 4155
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mAppFuseBridge:Lcom/android/server/storage/AppFuseBridge;
 
     if-nez v2, :cond_0
 
-    .line 4156
     new-instance v2, Lcom/android/server/storage/AppFuseBridge;
 
     invoke-direct {v2}, Lcom/android/server/storage/AppFuseBridge;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/StorageManagerService;->mAppFuseBridge:Lcom/android/server/storage/AppFuseBridge;
 
-    .line 4157
     new-instance v2, Ljava/lang/Thread;
 
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mAppFuseBridge:Lcom/android/server/storage/AppFuseBridge;
@@ -12379,7 +11217,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 4161
     :goto_1
     :try_start_1
     iget v3, p0, Lcom/android/server/StorageManagerService;->mNextAppFuseName:I
@@ -12391,7 +11228,6 @@
     .catch Lcom/android/server/AppFuseMountException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4163
     :try_start_2
     new-instance v4, Lcom/android/internal/os/AppFuseMount;
 
@@ -12401,7 +11237,6 @@
 
     invoke-direct {v6, p0, v0, v3}, Lcom/android/server/StorageManagerService$AppFuseMountScope;-><init>(Lcom/android/server/StorageManagerService;II)V
 
-    .line 4164
     invoke-virtual {v5, v6}, Lcom/android/server/storage/AppFuseBridge;->addBridge(Lcom/android/server/storage/AppFuseBridge$MountScope;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v5
@@ -12431,13 +11266,11 @@
 
     const-string v0, ""
 
-    .line 4168
     invoke-static {p0, v0, v3}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catch Lcom/android/server/AppFuseMountException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 4169
     :try_start_5
     monitor-exit v1
     :try_end_5
@@ -12445,7 +11278,6 @@
 
     return-object v4
 
-    .line 4172
     :cond_1
     :try_start_6
     iput-object v4, p0, Lcom/android/server/StorageManagerService;->mAppFuseBridge:Lcom/android/server/storage/AppFuseBridge;
@@ -12453,7 +11285,6 @@
     .catch Lcom/android/server/AppFuseMountException; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 4177
     :try_start_7
     monitor-exit v1
 
@@ -12462,7 +11293,6 @@
     :catch_1
     move-exception p0
 
-    .line 4175
     invoke-virtual {p0}, Lcom/android/server/AppFuseMountException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
     move-result-object p0
@@ -12472,7 +11302,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4177
     monitor-exit v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
@@ -12483,7 +11312,6 @@
 .method public mountSdpMediaStorageCmd(I)Z
     .locals 0
 
-    .line 6248
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -12500,7 +11328,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6250
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -12513,18 +11340,14 @@
 
     const-string v0, "android.permission.ASEC_MOUNT_UNMOUNT"
 
-    .line 6525
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6527
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6529
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter v0
 
-    .line 6530
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -12538,14 +11361,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 6531
     monitor-exit v0
 
     const/4 p0, -0x6
 
     return p0
 
-    .line 6533
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -12553,7 +11374,6 @@
 
     const/4 v0, 0x0
 
-    .line 6537
     :try_start_1
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -12570,12 +11390,10 @@
 
     const-string p3, "StorageManagerService"
 
-    .line 6539
     invoke-static {p3, p2}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p2, -0x1
 
-    .line 6543
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->getSecureContainerFilesystemPath(Ljava/lang/String;)Ljava/lang/String;
 
@@ -12583,7 +11401,6 @@
 
     if-nez p2, :cond_2
 
-    .line 6545
     iget-object p4, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter p4
@@ -12593,14 +11410,12 @@
     :try_start_2
     const-string v1, "/data/app-asec/"
 
-    .line 6546
     invoke-virtual {p3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
-    .line 6547
     iget-object p3, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     new-instance v1, Lcom/android/server/StorageManagerService$PackageInstalledMap;
@@ -12611,7 +11426,6 @@
 
     goto :goto_1
 
-    .line 6549
     :cond_1
     iget-object p3, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -12623,7 +11437,6 @@
 
     invoke-virtual {p3, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 6551
     :goto_1
     monitor-exit p4
 
@@ -12645,7 +11458,6 @@
     :catchall_1
     move-exception p0
 
-    .line 6533
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -12657,7 +11469,6 @@
 .method public mountVolume(Ljava/lang/String;)I
     .locals 2
 
-    .line 6148
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -12676,7 +11487,6 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6149
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findVolumeIdForPathOrThrow(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -12691,7 +11501,6 @@
 .method public mvFileAtData(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 9
 
-    .line 5911
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.samsung.android.permission.SEM_VOLD_DATA_MOVE"
@@ -12700,7 +11509,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5913
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isValidPath(Ljava/lang/String;)Z
 
     move-result v0
@@ -12719,7 +11527,6 @@
 
     goto :goto_1
 
-    .line 5918
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isMediaPath(Ljava/lang/String;)Z
 
@@ -12735,19 +11542,16 @@
 
     const-string/jumbo p0, "mvFileAtData not support from media to media dir, so return false"
 
-    .line 5919
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 5924
     :cond_1
     :try_start_0
     new-instance v0, Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {v0}, Ljava/util/concurrent/CompletableFuture;-><init>()V
 
-    .line 5926
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     iget v6, p0, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
@@ -12766,7 +11570,6 @@
 
     invoke-interface/range {v3 .. v8}, Landroid/os/IVold;->mvFileAtData(Ljava/lang/String;Ljava/lang/String;IILandroid/os/IVoldTaskListener;)V
 
-    .line 5939
     invoke-virtual {v0}, Ljava/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -12779,7 +11582,6 @@
 
     move-result p0
 
-    .line 5940
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -12813,7 +11615,6 @@
     :catch_0
     move-exception p0
 
-    .line 5943
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v1
@@ -12822,7 +11623,6 @@
     :goto_1
     const-string/jumbo p0, "mvFileAtData not support other than media or sec dir, so return false"
 
-    .line 5914
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -12831,10 +11631,8 @@
 .method public needsCheckpoint()Z
     .locals 0
 
-    .line 3662
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->needsCheckpoint_enforcePermission()V
 
-    .line 3664
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {p0}, Landroid/os/IVold;->needsCheckpoint()Z
@@ -12847,10 +11645,8 @@
 .method public notifyAppIoBlocked(Ljava/lang/String;III)V
     .locals 0
 
-    .line 4016
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->enforceExternalStorageService()V
 
-    .line 4018
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/storage/StorageSessionController;->notifyAppIoBlocked(Ljava/lang/String;III)V
@@ -12861,10 +11657,8 @@
 .method public notifyAppIoResumed(Ljava/lang/String;III)V
     .locals 0
 
-    .line 4023
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->enforceExternalStorageService()V
 
-    .line 4025
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/storage/StorageSessionController;->notifyAppIoResumed(Ljava/lang/String;III)V
@@ -12875,12 +11669,10 @@
 .method public final notifyCloudMediaProviderChangedAsync(Landroid/os/storage/StorageManagerInternal$CloudProviderChangeListener;)V
     .locals 4
 
-    .line 2134
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 2135
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
@@ -12893,14 +11685,12 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 2136
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 2137
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -12909,14 +11699,12 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 2138
     invoke-interface {p1, v2, v3}, Landroid/os/storage/StorageManagerInternal$CloudProviderChangeListener;->onCloudProviderChanged(ILjava/lang/String;)V
 
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 2140
     :cond_0
     monitor-exit v0
 
@@ -12935,7 +11723,6 @@
 .method public onAwakeStateChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -12944,7 +11731,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 1447
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -12961,13 +11747,11 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1450
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {v0, p1}, Landroid/os/IVold;->onUserStopped(I)V
 
-    .line 1451
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStoraged:Landroid/os/IStoraged;
 
     invoke-interface {v0, p1}, Landroid/os/IStoraged;->onUserStopped(I)V
@@ -12981,16 +11765,13 @@
 
     const-string v1, "StorageManagerService"
 
-    .line 1453
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1456
     :goto_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1457
     :try_start_1
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
@@ -13000,7 +11781,6 @@
 
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
-    .line 1458
     monitor-exit v0
 
     return-void
@@ -13018,7 +11798,6 @@
 .method public final onCloudMediaProviderChangedAsync(ILjava/lang/String;)V
     .locals 1
 
-    .line 2146
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     invoke-static {p0}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->-$$Nest$fgetmCloudProviderChangeListeners(Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;)Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -13042,7 +11821,6 @@
 
     check-cast v0, Landroid/os/storage/StorageManagerInternal$CloudProviderChangeListener;
 
-    .line 2147
     invoke-interface {v0, p1, p2}, Landroid/os/storage/StorageManagerInternal$CloudProviderChangeListener;->onCloudProviderChanged(ILjava/lang/String;)V
 
     goto :goto_0
@@ -13056,10 +11834,8 @@
 
     const/4 v0, 0x1
 
-    .line 1567
     iput-boolean v0, p0, Lcom/android/server/StorageManagerService;->mDaemonConnected:Z
 
-    .line 1568
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v0, 0x2
@@ -13080,7 +11856,6 @@
 
     move v1, v0
 
-    .line 1789
     :goto_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -13090,7 +11865,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1790
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -13099,7 +11873,6 @@
 
     check-cast v2, Landroid/os/storage/VolumeInfo;
 
-    .line 1791
     iget-object v3, p1, Landroid/os/storage/DiskInfo;->id:Ljava/lang/String;
 
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->getDiskId()Ljava/lang/String;
@@ -13119,7 +11892,6 @@
 
     goto :goto_0
 
-    .line 1797
     :cond_1
     iget v0, p1, Landroid/os/storage/DiskInfo;->flags:I
 
@@ -13143,7 +11915,6 @@
     :cond_3
     const-string/jumbo v0, "null"
 
-    .line 1804
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -13171,7 +11942,6 @@
 
     move-result-object v2
 
-    .line 1805
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -13186,7 +11956,6 @@
 
     move-result-object v3
 
-    .line 1806
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -13221,7 +11990,6 @@
 
     move-result-object v0
 
-    .line 1807
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -13234,7 +12002,6 @@
 
     move-result-object v0
 
-    .line 1808
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -13259,7 +12026,6 @@
 
     move-result-object v0
 
-    .line 1809
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -13272,7 +12038,6 @@
 
     move-result-object v0
 
-    .line 1813
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -13297,7 +12062,6 @@
 
     invoke-static {v2, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1815
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "android.os.storage.action.DISK_SCANNED"
@@ -13306,22 +12070,18 @@
 
     const/high16 v2, 0x5000000
 
-    .line 1816
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string v2, "android.os.storage.extra.DISK_ID"
 
-    .line 1818
     iget-object v3, p1, Landroid/os/storage/DiskInfo;->id:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "android.os.storage.extra.VOLUME_COUNT"
 
-    .line 1819
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1820
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v3, 0x7
@@ -13332,7 +12092,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1822
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mDiskScanLatches:Landroid/util/ArrayMap;
 
     iget-object v2, p1, Landroid/os/storage/DiskInfo;->id:Ljava/lang/String;
@@ -13345,14 +12104,11 @@
 
     if-eqz v0, :cond_4
 
-    .line 1824
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 1827
     :cond_4
     iput v1, p1, Landroid/os/storage/DiskInfo;->volumeCount:I
 
-    .line 1828
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-static {p0, p1, v1}, Lcom/android/server/StorageManagerService$Callbacks;->-$$Nest$mnotifyDiskScanned(Lcom/android/server/StorageManagerService$Callbacks;Landroid/os/storage/DiskInfo;I)V
@@ -13365,12 +12121,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1539
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/KeyguardManager;
 
-    .line 1540
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
@@ -13392,16 +12146,13 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1541
     :goto_0
     iget-boolean v0, p0, Lcom/android/server/StorageManagerService;->mSecureKeyguardShowing:Z
 
     if-eq v0, p1, :cond_1
 
-    .line 1542
     iput-boolean p1, p0, Lcom/android/server/StorageManagerService;->mSecureKeyguardShowing:Z
 
-    .line 1543
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     iget-boolean p0, p0, Lcom/android/server/StorageManagerService;->mSecureKeyguardShowing:Z
@@ -13416,7 +12167,6 @@
 
     move-result-object p0
 
-    .line 1544
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_1
@@ -13426,7 +12176,6 @@
 .method public final onMoveStatusLocked(I)V
     .locals 5
 
-    .line 2175
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mMoveCallback:Landroid/content/pm/IPackageMoveObserver;
 
     const-string v1, "StorageManagerService"
@@ -13435,7 +12184,6 @@
 
     const-string p0, "Odd, status but no move requested"
 
-    .line 2176
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -13445,7 +12193,6 @@
 
     const-wide/16 v3, -0x1
 
-    .line 2182
     :try_start_0
     invoke-interface {v0, v2, p1, v3, v4}, Landroid/content/pm/IPackageMoveObserver;->onStatusChanged(IIJ)V
     :try_end_0
@@ -13458,7 +12205,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 2189
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -13479,15 +12225,12 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2191
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mMoveTargetUuid:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
-    .line 2192
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->writeSettingsLocked()V
 
-    .line 2195
     :cond_1
     invoke-static {p1}, Landroid/content/pm/PackageManager;->isMoveStatusFinished(I)Z
 
@@ -13495,7 +12238,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2196
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -13520,10 +12262,8 @@
 
     const/4 p1, 0x0
 
-    .line 2198
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mMoveCallback:Landroid/content/pm/IPackageMoveObserver;
 
-    .line 2199
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mMoveTargetUuid:Ljava/lang/String;
 
     :cond_2
@@ -13533,7 +12273,6 @@
 .method public final onStopUser(I)V
     .locals 2
 
-    .line 1462
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -13552,7 +12291,6 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1464
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
@@ -13565,10 +12303,8 @@
     :catch_0
     move-exception v0
 
-    .line 1466
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1468
     :goto_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mPackageMonitorsForUser:Landroid/util/SparseArray;
 
@@ -13580,7 +12316,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1470
     invoke-virtual {p0}, Lcom/android/internal/content/PackageMonitor;->unregister()V
 
     :cond_0
@@ -13590,7 +12325,6 @@
 .method public final onUnlockUser(I)V
     .locals 6
 
-    .line 1363
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -13613,23 +12347,19 @@
 
     if-eqz p1, :cond_2
 
-    .line 1368
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v3, "system"
 
-    .line 1369
     invoke-static {p1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v4
 
-    .line 1368
     invoke-virtual {v2, v3, v0, v4}, Landroid/content/Context;->createPackageContextAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/Context;
 
     move-result-object v2
 
-    .line 1370
     const-class v3, Landroid/os/UserManager;
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -13640,7 +12370,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1373
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mIsMediaSharedWithParent:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -13659,7 +12388,6 @@
 
     goto :goto_0
 
-    .line 1375
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -13681,7 +12409,6 @@
 
     invoke-static {v1, v3}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1376
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mIsMediaSharedWithParent:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -13695,33 +12422,28 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 1379
     invoke-virtual {v2}, Landroid/os/UserManager;->isMediaSharedWithParent()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 1380
     invoke-virtual {v2, p1}, Landroid/os/UserManager;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v2
 
     iget v2, v2, Landroid/content/pm/UserInfo;->id:I
 
-    .line 1381
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
     invoke-virtual {v3, p1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1382
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
     invoke-virtual {v3, v2, p1}, Landroid/util/SparseIntArray;->put(II)V
 
     goto :goto_1
 
-    .line 1384
     :cond_1
     invoke-static {p1}, Lcom/samsung/android/app/SemDualAppManager;->isDualAppId(I)Z
 
@@ -13729,12 +12451,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 1385
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1386
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mUserSharesMediaWith:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2, v0, p1}, Landroid/util/SparseIntArray;->put(II)V
@@ -13743,7 +12463,6 @@
 
     goto :goto_1
 
-    .line 1390
     :catch_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -13761,7 +12480,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1397
     :cond_2
     :goto_1
     :try_start_1
@@ -13769,12 +12487,10 @@
 
     invoke-virtual {v2, p1}, Lcom/android/server/storage/StorageSessionController;->onUnlockUser(I)V
 
-    .line 1398
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {v2, p1}, Landroid/os/IVold;->onUserStarted(I)V
 
-    .line 1399
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mStoraged:Landroid/os/IStoraged;
 
     invoke-interface {v2, p1}, Landroid/os/IStoraged;->onUserStarted(I)V
@@ -13786,10 +12502,8 @@
     :catch_1
     move-exception v2
 
-    .line 1401
     invoke-static {v1, v2}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1405
     :goto_2
     invoke-static {}, Lcom/samsung/android/security/SemSdCardEncryption;->isEncryptionFeatureEnabled()Z
 
@@ -13799,10 +12513,8 @@
 
     if-nez p1, :cond_3
 
-    .line 1406
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->initDirEncryptService()Z
 
-    .line 1409
     :cond_3
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
@@ -13812,10 +12524,8 @@
 
     move-result-object v1
 
-    .line 1410
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1411
     iget-boolean v1, p0, Lcom/android/server/StorageManagerService;->mRemountCurrentUserVolumesOnUnlock:Z
 
     if-eqz v1, :cond_4
@@ -13824,10 +12534,8 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 1412
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->maybeRemountVolumes(I)V
 
-    .line 1413
     iput-boolean v0, p0, Lcom/android/server/StorageManagerService;->mRemountCurrentUserVolumesOnUnlock:Z
 
     :cond_4
@@ -13837,17 +12545,14 @@
 .method public final onVolumeCreatedLocked(Landroid/os/storage/VolumeInfo;)V
     .locals 8
 
-    .line 1833
     const-class v0, Landroid/app/ActivityManagerInternal;
 
-    .line 1834
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ActivityManagerInternal;
 
-    .line 1836
     iget v1, p1, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
     const-string v2, " because user "
@@ -13866,7 +12571,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1837
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -13883,7 +12587,6 @@
 
     iget p1, p1, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
-    .line 1838
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -13898,12 +12601,10 @@
 
     move-result-object p0
 
-    .line 1837
     invoke-static {v5, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1842
     :cond_0
     iget v0, p1, Landroid/os/storage/VolumeInfo;->type:I
 
@@ -13915,34 +12616,28 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 1843
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     iget v1, p1, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
-    .line 1844
     invoke-static {v1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v1
 
-    .line 1843
     invoke-virtual {v0, v1, v4}, Landroid/content/Context;->createContextAsUser(Landroid/os/UserHandle;I)Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1848
     const-class v1, Landroid/os/UserManager;
 
-    .line 1847
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/os/UserManager;
 
-    .line 1848
     invoke-virtual {v0}, Landroid/os/UserManager;->isMediaSharedWithParent()Z
 
     move-result v4
@@ -13950,19 +12645,16 @@
     :cond_1
     if-nez v4, :cond_2
 
-    .line 1853
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
     iget v1, p1, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
-    .line 1854
     invoke-virtual {v0, v1}, Lcom/android/server/storage/StorageSessionController;->supportsExternalStorage(I)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 1855
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -13979,7 +12671,6 @@
 
     iget p1, p1, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
-    .line 1856
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -13994,12 +12685,10 @@
 
     move-result-object p0
 
-    .line 1855
     invoke-static {v5, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1861
     :cond_2
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -14011,12 +12700,10 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    .line 1862
     invoke-virtual {v0, p1}, Landroid/os/storage/StorageManager;->findPrivateForEmulated(Landroid/os/storage/VolumeInfo;)Landroid/os/storage/VolumeInfo;
 
     move-result-object v0
 
-    .line 1864
     sget-object v1, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
@@ -14031,7 +12718,6 @@
 
     iget-object v2, v0, Landroid/os/storage/VolumeInfo;->id:Ljava/lang/String;
 
-    .line 1865
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -14043,14 +12729,12 @@
 
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
-    .line 1866
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    .line 1867
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -14068,17 +12752,14 @@
 
     invoke-static {v5, v0}, Landroid/util/sysfwutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1868
     iget v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
     or-int/2addr v0, v6
 
     or-int/lit8 v0, v0, 0x4
 
-    .line 1869
     iput v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
-    .line 1870
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {p0, v7, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -14094,7 +12775,6 @@
 
     const-string/jumbo v0, "primary_physical"
 
-    .line 1875
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -14105,14 +12785,12 @@
 
     iget-object v0, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
-    .line 1876
     invoke-virtual {v0}, Landroid/os/storage/DiskInfo;->isDefaultPrimary()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 1877
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -14129,17 +12807,14 @@
 
     invoke-static {v5, v0}, Landroid/util/sysfwutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1878
     iget v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
     or-int/2addr v0, v6
 
     or-int/lit8 v0, v0, 0x4
 
-    .line 1879
     iput v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
-    .line 1885
     :cond_6
     iget-object v0, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
@@ -14157,20 +12832,17 @@
 
     if-eqz v0, :cond_7
 
-    .line 1887
     iget v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
     or-int/lit8 v0, v0, 0x4
 
     iput v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
-    .line 1890
     :cond_7
     iget v0, p0, Lcom/android/server/StorageManagerService;->mCurrentUserId:I
 
     iput v0, p1, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
-    .line 1891
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {p0, v7, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -14184,7 +12856,6 @@
     :cond_8
     if-ne v0, v6, :cond_9
 
-    .line 1894
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {p0, v7, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -14198,7 +12869,6 @@
     :cond_9
     if-ne v0, v7, :cond_b
 
-    .line 1897
     iget-object v0, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v0}, Landroid/os/storage/DiskInfo;->isStubVisible()Z
@@ -14207,7 +12877,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 1898
     iget v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
     or-int/lit8 v0, v0, 0x4
@@ -14216,7 +12885,6 @@
 
     goto :goto_0
 
-    .line 1900
     :cond_a
     iget v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
@@ -14224,13 +12892,11 @@
 
     iput v0, p1, Landroid/os/storage/VolumeInfo;->mountFlags:I
 
-    .line 1902
     :goto_0
     iget v0, p0, Lcom/android/server/StorageManagerService;->mCurrentUserId:I
 
     iput v0, p1, Landroid/os/storage/VolumeInfo;->mountUserId:I
 
-    .line 1903
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {p0, v7, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -14241,7 +12907,6 @@
 
     goto :goto_1
 
-    .line 1905
     :cond_b
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -14271,7 +12936,6 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 2001
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->prepareUserStorageIfNeeded(Landroid/os/storage/VolumeInfo;)V
     :try_end_0
@@ -14279,7 +12943,6 @@
 
     goto :goto_1
 
-    .line 2005
     :catch_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -14297,20 +12960,17 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 2007
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void
 
-    .line 2013
     :cond_0
     :goto_1
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 2016
     :try_start_2
     iget-object v2, p1, Landroid/os/storage/VolumeInfo;->fsUuid:Ljava/lang/String;
 
@@ -14320,7 +12980,6 @@
 
     if-nez v2, :cond_4
 
-    .line 2017
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     iget-object v3, p1, Landroid/os/storage/VolumeInfo;->fsUuid:Ljava/lang/String;
@@ -14333,7 +12992,6 @@
 
     if-nez v2, :cond_2
 
-    .line 2019
     new-instance v2, Landroid/os/storage/VolumeRecord;
 
     iget v3, p1, Landroid/os/storage/VolumeInfo;->type:I
@@ -14342,26 +13000,22 @@
 
     invoke-direct {v2, v3, v4}, Landroid/os/storage/VolumeRecord;-><init>(ILjava/lang/String;)V
 
-    .line 2020
     iget-object v3, p1, Landroid/os/storage/VolumeInfo;->partGuid:Ljava/lang/String;
 
     iput-object v3, v2, Landroid/os/storage/VolumeRecord;->partGuid:Ljava/lang/String;
 
-    .line 2021
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
     iput-wide v3, v2, Landroid/os/storage/VolumeRecord;->createdMillis:J
 
-    .line 2022
     iget v3, p1, Landroid/os/storage/VolumeInfo;->type:I
 
     const/4 v4, 0x1
 
     if-ne v3, v4, :cond_1
 
-    .line 2023
     iget-object v3, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v3}, Landroid/os/storage/DiskInfo;->getDescription()Ljava/lang/String;
@@ -14370,7 +13024,6 @@
 
     iput-object v3, v2, Landroid/os/storage/VolumeRecord;->nickname:Ljava/lang/String;
 
-    .line 2025
     :cond_1
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -14380,7 +13033,6 @@
 
     goto :goto_2
 
-    .line 2028
     :cond_2
     iget-object v3, v2, Landroid/os/storage/VolumeRecord;->partGuid:Ljava/lang/String;
 
@@ -14390,12 +13042,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 2029
     iget-object v3, p1, Landroid/os/storage/VolumeInfo;->partGuid:Ljava/lang/String;
 
     iput-object v3, v2, Landroid/os/storage/VolumeRecord;->partGuid:Ljava/lang/String;
 
-    .line 2033
     :cond_3
     :goto_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -14404,16 +13054,13 @@
 
     iput-wide v3, v2, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
 
-    .line 2034
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->writeSettingsLocked()V
 
-    .line 2036
     :cond_4
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 2042
     :try_start_3
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
@@ -14430,22 +13077,18 @@
 
     const-string v3, "Failed to notify volume state changed to the Storage Service"
 
-    .line 2044
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2046
     :goto_3
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 2047
     :try_start_4
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-static {v1, p1, p2, p3}, Lcom/android/server/StorageManagerService$Callbacks;->-$$Nest$mnotifyVolumeStateChanged(Lcom/android/server/StorageManagerService$Callbacks;Landroid/os/storage/VolumeInfo;II)V
 
-    .line 2051
     iget-boolean v1, p0, Lcom/android/server/StorageManagerService;->mBootCompleted:Z
 
     if-eqz v1, :cond_5
@@ -14456,7 +13099,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 2052
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.os.storage.action.VOLUME_STATE_CHANGED"
@@ -14465,29 +13107,24 @@
 
     const-string v3, "android.os.storage.extra.VOLUME_ID"
 
-    .line 2053
     iget-object v4, p1, Landroid/os/storage/VolumeInfo;->id:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v3, "android.os.storage.extra.VOLUME_STATE"
 
-    .line 2054
     invoke-virtual {v1, v3, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v3, "android.os.storage.extra.FS_UUID"
 
-    .line 2055
     iget-object v4, p1, Landroid/os/storage/VolumeInfo;->fsUuid:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v3, 0x5000000
 
-    .line 2056
     invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2058
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v4, 0x7
@@ -14498,25 +13135,21 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2061
     :cond_5
     invoke-static {p2}, Landroid/os/storage/VolumeInfo;->getEnvironmentForState(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 2062
     invoke-static {p3}, Landroid/os/storage/VolumeInfo;->getEnvironmentForState(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2064
     invoke-static {p2, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_7
 
-    .line 2068
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
     array-length v4, v3
@@ -14530,21 +13163,18 @@
 
     aget v7, v3, v6
 
-    .line 2069
     invoke-virtual {p1, v7}, Landroid/os/storage/VolumeInfo;->isVisibleForUser(I)Z
 
     move-result v8
 
     if-eqz v8, :cond_6
 
-    .line 2070
     iget-object v8, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1, v8, v7, v5}, Landroid/os/storage/VolumeInfo;->buildStorageVolume(Landroid/content/Context;IZ)Landroid/os/storage/StorageVolume;
 
     move-result-object v7
 
-    .line 2072
     iget-object v8, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v9, 0x6
@@ -14555,7 +13185,6 @@
 
     invoke-virtual {v8}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2074
     iget-object v8, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-virtual {v7}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
@@ -14569,20 +13198,17 @@
 
     goto :goto_4
 
-    .line 2081
     :cond_7
     iget p2, p1, Landroid/os/storage/VolumeInfo;->type:I
 
     if-nez p2, :cond_b
 
-    .line 2082
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
     move-result-object p2
 
     if-eqz p2, :cond_9
 
-    .line 2083
     invoke-virtual {p2}, Landroid/os/storage/DiskInfo;->isSd()Z
 
     move-result v3
@@ -14591,26 +13217,22 @@
 
     const-string/jumbo p2, "mounted"
 
-    .line 2084
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_8
 
-    .line 2085
     iget-object p2, p1, Landroid/os/storage/VolumeInfo;->fsType:Ljava/lang/String;
 
     const-string v1, "StorageManagerService"
 
     const-string v3, "Set Ext SD Card FsType Property by Ext SD Card Info"
 
-    .line 2086
     invoke-static {v1, v3}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo v1, "sys.ext_sdcard.fstype"
 
-    .line 2087
     invoke-static {v1, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
@@ -14620,14 +13242,12 @@
 
     const-string v1, "Set Ext SD Card FsType Property to default"
 
-    .line 2089
     invoke-static {p2, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo p2, "sys.ext_sdcard.fstype"
 
     const-string/jumbo v1, "none"
 
-    .line 2090
     invoke-static {p2, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
@@ -14635,7 +13255,6 @@
     :cond_9
     if-eqz p2, :cond_b
 
-    .line 2092
     invoke-virtual {p2}, Landroid/os/storage/DiskInfo;->isUsb()Z
 
     move-result p2
@@ -14644,26 +13263,22 @@
 
     const-string/jumbo p2, "mounted"
 
-    .line 2093
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_a
 
-    .line 2094
     iget-object p2, p1, Landroid/os/storage/VolumeInfo;->fsType:Ljava/lang/String;
 
     const-string v1, "StorageManagerService"
 
     const-string v3, "Set USB Storage FsType Property by USB Storage Info"
 
-    .line 2095
     invoke-static {v1, v3}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo v1, "sys.usb_storage.fstype"
 
-    .line 2096
     invoke-static {v1, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
@@ -14673,17 +13288,14 @@
 
     const-string v1, "Set USB Storage FsType Property to default"
 
-    .line 2098
     invoke-static {p2, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo p2, "sys.usb_storage.fstype"
 
     const-string/jumbo v1, "none"
 
-    .line 2099
     invoke-static {p2, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2105
     :cond_b
     :goto_5
     iget p2, p1, Landroid/os/storage/VolumeInfo;->type:I
@@ -14699,7 +13311,6 @@
 
     if-ne p2, v1, :cond_d
 
-    .line 2113
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mObbActionHandler:Lcom/android/server/StorageManagerService$ObbActionHandler;
 
     iget-object v1, p1, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
@@ -14710,11 +13321,9 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2116
     :cond_d
     invoke-virtual {p0, p1, p3}, Lcom/android/server/StorageManagerService;->maybeLogMediaMount(Landroid/os/storage/VolumeInfo;I)V
 
-    .line 2117
     monitor-exit v2
 
     return-void
@@ -14731,7 +13340,6 @@
     :catchall_1
     move-exception p0
 
-    .line 2036
     :try_start_5
     monitor-exit v1
     :try_end_5
@@ -14743,7 +13351,6 @@
 .method public final onVolumeStateChangedLocked(Landroid/os/storage/VolumeInfo;I)V
     .locals 2
 
-    .line 1946
     iget v0, p1, Landroid/os/storage/VolumeInfo;->type:I
 
     const/4 v1, 0x2
@@ -14752,7 +13359,6 @@
 
     if-eq p2, v1, :cond_0
 
-    .line 1948
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mFuseMountedUser:Ljava/util/Set;
 
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
@@ -14767,18 +13373,15 @@
 
     goto :goto_0
 
-    .line 1949
     :cond_0
     iget-boolean p2, p0, Lcom/android/server/StorageManagerService;->mVoldAppDataIsolationEnabled:Z
 
     if-eqz p2, :cond_1
 
-    .line 1950
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
 
     move-result p2
 
-    .line 1952
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/StorageManagerService$$ExternalSyntheticLambda3;
@@ -14787,7 +13390,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 1990
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_1
@@ -14802,7 +13404,6 @@
 
     const-string/jumbo v1, "mountProxyFileDescriptor"
 
-    .line 4184
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/high16 v0, 0x30000000
@@ -14811,7 +13412,6 @@
 
     const/4 v0, 0x0
 
-    .line 4190
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAppFuseLock:Ljava/lang/Object;
 
@@ -14820,7 +13420,6 @@
     .catch Lcom/android/internal/os/FuseUnavailableMountException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4191
     :try_start_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mAppFuseBridge:Lcom/android/server/storage/AppFuseBridge;
 
@@ -14830,15 +13429,12 @@
 
     const-string p1, "FuseBridge has not been created"
 
-    .line 4192
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4193
     monitor-exit v1
 
     return-object v0
 
-    .line 4195
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/storage/AppFuseBridge;->openFile(III)Landroid/os/ParcelFileDescriptor;
 
@@ -14851,7 +13447,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4196
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -14869,7 +13464,6 @@
 
     const-string p2, "The mount point has already been invalid"
 
-    .line 4198
     invoke-static {p1, p2, p0}, Landroid/util/sysfwutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -14878,13 +13472,10 @@
 .method public partitionMixed(Ljava/lang/String;I)V
     .locals 4
 
-    .line 2944
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->partitionMixed_enforcePermission()V
 
-    .line 2946
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->enforceAdminUser()V
 
-    .line 2947
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -14903,12 +13494,10 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2948
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findOrCreateDiskScanLatch(Ljava/lang/String;)Ljava/util/concurrent/CountDownLatch;
 
     move-result-object v0
 
-    .line 2950
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -14920,7 +13509,6 @@
 
     const-wide/32 v2, 0x2bf20
 
-    .line 2951
     invoke-virtual {p0, v0, p1, v2, v3}, Lcom/android/server/StorageManagerService;->waitForLatch(Ljava/util/concurrent/CountDownLatch;Ljava/lang/String;J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -14930,7 +13518,6 @@
     :catch_0
     move-exception p0
 
-    .line 2953
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -14940,13 +13527,10 @@
 .method public partitionPrivate(Ljava/lang/String;)V
     .locals 5
 
-    .line 2928
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->partitionPrivate_enforcePermission()V
 
-    .line 2930
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->enforceAdminUser()V
 
-    .line 2931
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -14965,12 +13549,10 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2932
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findOrCreateDiskScanLatch(Ljava/lang/String;)Ljava/util/concurrent/CountDownLatch;
 
     move-result-object v0
 
-    .line 2934
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -14984,7 +13566,6 @@
 
     const-wide/32 v2, 0x2bf20
 
-    .line 2935
     invoke-virtual {p0, v0, p1, v2, v3}, Lcom/android/server/StorageManagerService;->waitForLatch(Ljava/util/concurrent/CountDownLatch;Ljava/lang/String;J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -14994,7 +13575,6 @@
     :catch_0
     move-exception p0
 
-    .line 2937
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -15004,10 +13584,8 @@
 .method public partitionPublic(Ljava/lang/String;)V
     .locals 5
 
-    .line 2914
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->partitionPublic_enforcePermission()V
 
-    .line 2915
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -15026,12 +13604,10 @@
 
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2916
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findOrCreateDiskScanLatch(Ljava/lang/String;)Ljava/util/concurrent/CountDownLatch;
 
     move-result-object v0
 
-    .line 2918
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -15045,7 +13621,6 @@
 
     const-wide/32 v2, 0x927c0
 
-    .line 2919
     invoke-virtual {p0, v0, p1, v2, v3}, Lcom/android/server/StorageManagerService;->waitForLatch(Ljava/util/concurrent/CountDownLatch;Ljava/lang/String;J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -15055,7 +13630,6 @@
     :catch_0
     move-exception p0
 
-    .line 2921
     invoke-static {v1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -15065,7 +13639,6 @@
 .method public final prepareSmartIdleMaint()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -15074,10 +13647,8 @@
 .method public prepareUserStorage(Ljava/lang/String;III)V
     .locals 0
 
-    .line 3815
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->prepareUserStorage_enforcePermission()V
 
-    .line 3818
     :try_start_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/StorageManagerService;->prepareUserStorageInternal(Ljava/lang/String;III)V
     :try_end_0
@@ -15088,7 +13659,6 @@
     :catch_0
     move-exception p0
 
-    .line 3820
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -15099,7 +13669,6 @@
 .method public final prepareUserStorageIfNeeded(Landroid/os/storage/VolumeInfo;)V
     .locals 7
 
-    .line 3789
     iget v0, p1, Landroid/os/storage/VolumeInfo;->type:I
 
     const/4 v1, 0x1
@@ -15108,7 +13677,6 @@
 
     return-void
 
-    .line 3793
     :cond_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -15120,17 +13688,14 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    .line 3794
     const-class v2, Lcom/android/server/pm/UserManagerInternal;
 
-    .line 3795
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/pm/UserManagerInternal;
 
-    .line 3797
     invoke-virtual {v0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v0
@@ -15153,7 +13718,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 3799
     iget v4, v3, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {v2, v4}, Lcom/android/server/pm/UserManagerInternal;->isUserUnlockingOrUnlocked(I)Z
@@ -15166,7 +13730,6 @@
 
     goto :goto_1
 
-    .line 3801
     :cond_2
     iget v4, v3, Landroid/content/pm/UserInfo;->id:I
 
@@ -15178,7 +13741,6 @@
 
     move v4, v1
 
-    .line 3807
     :goto_1
     iget-object v5, p1, Landroid/os/storage/VolumeInfo;->fsUuid:Ljava/lang/String;
 
@@ -15203,7 +13765,6 @@
 
     const-string v2, "StorageManagerService"
 
-    .line 3827
     :try_start_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -15211,7 +13772,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3831
     iget-object p3, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class p4, Landroid/os/storage/StorageManager;
@@ -15222,7 +13782,6 @@
 
     check-cast p3, Landroid/os/storage/StorageManager;
 
-    .line 3832
     invoke-virtual {p3, p1}, Landroid/os/storage/StorageManager;->findVolumeByUuid(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
     move-result-object p3
@@ -15231,14 +13790,12 @@
 
     if-nez p2, :cond_0
 
-    .line 3833
     iget p3, p3, Landroid/os/storage/VolumeInfo;->type:I
 
     const/4 p4, 0x1
 
     if-ne p3, p4, :cond_0
 
-    .line 3834
     iget-object p3, p0, Lcom/android/server/StorageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
     invoke-virtual {p3, p1}, Lcom/android/server/pm/Installer;->tryMountDataMirror(Ljava/lang/String;)V
@@ -15248,7 +13805,6 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 3873
     :try_start_1
     new-instance p1, Lcom/samsung/android/jdsms/Sender;
 
@@ -15260,10 +13816,8 @@
 
     const-string p2, "encryption policy success"
 
-    .line 3874
     invoke-virtual {p1, p0, p2}, Lcom/samsung/android/jdsms/Sender;->send(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3875
     invoke-static {v2, v0}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -15273,7 +13827,6 @@
     :catch_0
     move-exception p0
 
-    .line 3877
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -15301,7 +13854,6 @@
 
     const/4 p3, -0x1
 
-    .line 3838
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -15318,17 +13870,14 @@
 
     invoke-static {p4, p3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 3839
     invoke-static {v2, p1}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const-string/jumbo p3, "security.fbe.global_de"
 
-    .line 3847
     invoke-static {p3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 3848
     const-class p4, Lcom/android/server/pm/UserManagerInternal;
 
     invoke-static {p4}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -15337,7 +13886,6 @@
 
     check-cast p4, Lcom/android/server/pm/UserManagerInternal;
 
-    .line 3849
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v3
@@ -15354,7 +13902,6 @@
 
     const-string/jumbo v3, "loaded"
 
-    .line 3850
     invoke-virtual {v3, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
@@ -15369,7 +13916,6 @@
 
     goto :goto_1
 
-    .line 3868
     :cond_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -15377,7 +13923,6 @@
 
     throw p0
 
-    .line 3851
     :cond_3
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -15402,7 +13947,6 @@
 
     if-nez p2, :cond_4
 
-    .line 3855
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object p1
@@ -15413,7 +13957,6 @@
 
     if-nez p1, :cond_4
 
-    .line 3857
     :try_start_2
     new-instance p1, Lcom/samsung/android/jdsms/Sender;
 
@@ -15423,17 +13966,14 @@
 
     const-string/jumbo p0, "security.fbe.fail_cause"
 
-    .line 3858
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p2, "FBE5"
 
-    .line 3859
     invoke-virtual {p1, p2, p0}, Lcom/samsung/android/jdsms/Sender;->send(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3860
     invoke-static {v2, v0}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
@@ -15443,7 +13983,6 @@
     :catch_2
     move-exception p0
 
-    .line 3862
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -15474,12 +14013,10 @@
 
     const-string v1, "StorageManagerService"
 
-    .line 2558
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v2}, Landroid/util/ArrayMap;->clear()V
 
-    .line 2559
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->getDefaultPrimaryStorageUuid()Ljava/lang/String;
 
     move-result-object v2
@@ -15488,7 +14025,6 @@
 
     const/4 v2, 0x0
 
-    .line 2563
     :try_start_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mSettingsFile:Landroid/util/AtomicFile;
 
@@ -15501,7 +14037,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2564
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -15529,12 +14064,10 @@
 
     invoke-static {v1, v4}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2565
     invoke-static {v3}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object v4
 
-    .line 2568
     :cond_0
     :goto_0
     invoke-interface {v4}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -15549,14 +14082,12 @@
 
     if-ne v5, v7, :cond_0
 
-    .line 2570
     invoke-interface {v4}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v5
 
     const-string/jumbo v8, "volumes"
 
-    .line 2571
     invoke-virtual {v8, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -15565,7 +14096,6 @@
 
     const-string/jumbo v5, "version"
 
-    .line 2572
     invoke-interface {v4, v2, v5, v6}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v5
@@ -15574,7 +14104,6 @@
 
     const/4 v9, 0x0
 
-    .line 2573
     invoke-static {v8, v9}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v8
@@ -15598,7 +14127,6 @@
 
     const-string/jumbo v5, "primaryStorageUuid"
 
-    .line 2578
     invoke-static {v4, v5}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -15610,26 +14138,22 @@
     :cond_3
     const-string/jumbo v6, "volume"
 
-    .line 2581
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 2582
     invoke-static {v4}, Lcom/android/server/StorageManagerService;->readVolumeRecord(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/os/storage/VolumeRecord;
 
     move-result-object v5
 
-    .line 2583
     iget-object v6, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     iget-object v7, v5, Landroid/os/storage/VolumeRecord;->fsUuid:Ljava/lang/String;
 
     invoke-virtual {v6, v7, v5}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2584
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -15661,7 +14185,6 @@
 
     goto :goto_0
 
-    .line 2595
     :cond_4
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -15701,7 +14224,6 @@
     :catch_3
     move-exception p0
 
-    .line 2593
     :goto_2
     :try_start_2
     invoke-static {v1, v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -15711,7 +14233,6 @@
     :catch_4
     move-exception p0
 
-    .line 2591
     :goto_3
     invoke-static {v1, v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -15719,14 +14240,11 @@
 
     goto :goto_5
 
-    .line 2595
     :goto_4
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 2596
     throw p0
 
-    .line 2595
     :catch_5
     :goto_5
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
@@ -15742,7 +14260,6 @@
 
     const/4 v1, 0x0
 
-    .line 3310
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -15758,12 +14275,10 @@
 
     const-string p0, "Failed to get storage lifetime"
 
-    .line 3317
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 3319
     :cond_0
     iget v3, p0, Lcom/android/server/StorageManagerService;->mLifetimePercentThreshold:I
 
@@ -15771,7 +14286,6 @@
 
     if-le v2, v3, :cond_1
 
-    .line 3320
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -15800,12 +14314,10 @@
 
     invoke-static {v0, v2}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3322
     iput-boolean v4, p0, Lcom/android/server/StorageManagerService;->mPassedLifetimeThresh:Z
 
     return v1
 
-    .line 3325
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -15828,7 +14340,6 @@
     :catch_0
     move-exception p0
 
-    .line 3312
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v1
@@ -15839,14 +14350,12 @@
 
     const-string/jumbo v0, "persist.sys.zram_enabled"
 
-    .line 1138
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, ""
 
-    .line 1139
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -15855,11 +14364,9 @@
 
     return-void
 
-    .line 1145
     :cond_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
-    .line 1143
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -15883,7 +14390,6 @@
     :cond_1
     const-string v2, "0"
 
-    .line 1147
     :goto_0
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15891,10 +14397,8 @@
 
     if-nez v1, :cond_2
 
-    .line 1151
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1153
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -15903,7 +14407,6 @@
 
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
-    .line 1154
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -15916,7 +14419,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1156
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/ZramWriteback;->scheduleZramWriteback(Landroid/content/Context;)V
@@ -15928,7 +14430,6 @@
 .method public registerListener(Landroid/os/storage/IStorageEventListener;)V
     .locals 0
 
-    .line 2663
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService$Callbacks;->register(Landroid/os/storage/IStorageEventListener;)V
@@ -15939,7 +14440,6 @@
 .method public final remountAppStorageDirs(Ljava/util/Map;I)V
     .locals 6
 
-    .line 2695
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -15961,7 +14461,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2696
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -15972,14 +14471,12 @@
 
     move-result v1
 
-    .line 2697
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 2698
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -15998,15 +14495,12 @@
 
     invoke-static {v3, v2}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2699
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
-    .line 2700
     invoke-virtual {v2, v0, p2}, Landroid/content/pm/PackageManagerInternal;->getSharedUserPackagesForPackage(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2701
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
     const-wide/16 v4, 0x0
@@ -16015,7 +14509,6 @@
 
     move-result v3
 
-    .line 2703
     array-length v4, v2
 
     if-eqz v4, :cond_0
@@ -16027,7 +14520,6 @@
 
     move-result-object v2
 
-    .line 2705
     :goto_1
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -16041,7 +14533,6 @@
     :catch_0
     move-exception p0
 
-    .line 2707
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -16055,12 +14546,10 @@
 .method public final removeObbStateLocked(Lcom/android/server/StorageManagerService$ObbState;)V
     .locals 3
 
-    .line 4725
     invoke-virtual {p1}, Lcom/android/server/StorageManagerService$ObbState;->getBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 4726
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -16071,17 +14560,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 4728
     invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 4729
     invoke-virtual {p1}, Lcom/android/server/StorageManagerService$ObbState;->unlink()V
 
-    .line 4731
     :cond_0
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -16089,12 +14575,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 4732
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4736
     :cond_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbPathToStateMap:Ljava/util/Map;
 
@@ -16110,18 +14594,14 @@
 
     const-string v0, "android.permission.ASEC_RENAME"
 
-    .line 6648
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6650
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6652
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter v0
 
-    .line 6657
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -16141,7 +14621,6 @@
 
     invoke-direct {v2, p0, p2}, Lcom/android/server/StorageManagerService$PackageInstalledMap;-><init>(Lcom/android/server/StorageManagerService;Ljava/lang/String;)V
 
-    .line 6658
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v1
@@ -16150,13 +14629,11 @@
 
     goto :goto_1
 
-    .line 6661
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6665
     :try_start_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -16173,7 +14650,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6667
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, -0x1
@@ -16181,7 +14657,6 @@
     :goto_0
     return p0
 
-    .line 6659
     :cond_1
     :goto_1
     :try_start_2
@@ -16194,7 +14669,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6661
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -16205,7 +14679,6 @@
 .method public reserveDataBlocks(J)I
     .locals 0
 
-    .line 6309
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -16222,7 +14695,6 @@
 
     const-string p1, "[DDP] Failed to set reserved_blocks"
 
-    .line 6311
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, -0x1
@@ -16236,7 +14708,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 1257
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -16263,7 +14734,6 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1259
     iget-boolean v0, p0, Lcom/android/server/StorageManagerService;->mBootCompleted:Z
 
     if-eqz v0, :cond_3
@@ -16272,7 +14742,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1260
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/os/UserManager;
@@ -16283,12 +14752,10 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    .line 1261
     invoke-virtual {v0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v1
 
-    .line 1263
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -16299,12 +14766,10 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/storage/StorageSessionController;->onReset(Landroid/os/IVold;Ljava/lang/Runnable;)V
 
-    .line 1268
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1270
     :try_start_0
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mSystemUnlockedUsers:[I
 
@@ -16314,20 +14779,16 @@
 
     move-result-object v3
 
-    .line 1273
     iget-object v4, p0, Lcom/android/server/StorageManagerService;->mDisks:Landroid/util/ArrayMap;
 
     invoke-virtual {v4}, Landroid/util/ArrayMap;->clear()V
 
-    .line 1274
     iget-object v4, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v4}, Landroid/util/ArrayMap;->clear()V
 
-    .line 1276
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->addInternalVolumeLocked()V
 
-    .line 1277
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -16337,10 +14798,8 @@
 
     const-string v4, "Resetting vold..."
 
-    .line 1285
     invoke-static {v2, v4}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1286
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {v2}, Landroid/os/IVold;->reset()V
@@ -16349,15 +14808,12 @@
 
     const-string v4, "Reset vold"
 
-    .line 1287
     invoke-static {v2, v4}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v2, "external"
 
-    .line 1290
     invoke-virtual {p0, v2}, Lcom/android/server/StorageManagerService;->cleanupSercureContainerList(Ljava/lang/String;)V
 
-    .line 1293
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -16375,14 +14831,12 @@
 
     check-cast v4, Landroid/content/pm/UserInfo;
 
-    .line 1294
     invoke-virtual {v4}, Landroid/content/pm/UserInfo;->isCloneProfile()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 1295
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     iget v6, v4, Landroid/content/pm/UserInfo;->id:I
@@ -16395,7 +14849,6 @@
 
     goto :goto_0
 
-    .line 1297
     :cond_0
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -16409,7 +14862,6 @@
 
     goto :goto_0
 
-    .line 1300
     :cond_1
     array-length v2, v3
 
@@ -16420,12 +14872,10 @@
 
     aget v5, v3, v4
 
-    .line 1301
     iget-object v6, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {v6, v5}, Landroid/os/IVold;->onUserStarted(I)V
 
-    .line 1302
     iget-object v6, p0, Lcom/android/server/StorageManagerService;->mStoraged:Landroid/os/IStoraged;
 
     invoke-interface {v6, v5}, Landroid/os/IStoraged;->onUserStarted(I)V
@@ -16434,18 +14884,15 @@
 
     goto :goto_1
 
-    .line 1304
     :cond_2
     invoke-virtual {p0, v0, v1, v3}, Lcom/android/server/StorageManagerService;->restoreSystemUnlockedUsers(Landroid/os/UserManager;Ljava/util/List;[I)V
 
-    .line 1305
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     iget-boolean v1, p0, Lcom/android/server/StorageManagerService;->mSecureKeyguardShowing:Z
 
     invoke-interface {v0, v1}, Landroid/os/IVold;->onSecureKeyguardStateChanged(Z)V
 
-    .line 1306
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -16461,7 +14908,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 1308
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_2
@@ -16469,7 +14915,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1277
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -16487,13 +14932,10 @@
 
     const-string v0, "android.permission.ASEC_CREATE"
 
-    .line 6437
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6439
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6443
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -16510,7 +14952,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6445
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, -0x1
@@ -16522,7 +14963,6 @@
 .method public final restoreLocalUnlockedUsers()V
     .locals 4
 
-    .line 1344
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -16532,7 +14972,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1349
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->isEmpty([I)Z
 
     move-result v1
@@ -16541,7 +14980,6 @@
 
     const-string v1, "StorageManagerService"
 
-    .line 1350
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -16566,18 +15004,15 @@
 
     invoke-static {v1, v2}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1352
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1357
     :try_start_1
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mLocalUnlockedUsers:Lcom/android/server/StorageManagerService$WatchedLockedUsers;
 
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService$WatchedLockedUsers;->appendAll([I)V
 
-    .line 1358
     monitor-exit v1
 
     goto :goto_0
@@ -16602,7 +15037,6 @@
 
     const-string v1, "Failed to get unlocked users from vold"
 
-    .line 1346
     invoke-static {v0, v1, p0}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -16611,13 +15045,10 @@
 .method public final restoreSystemUnlockedUsers(Landroid/os/UserManager;Ljava/util/List;[I)V
     .locals 4
 
-    .line 1315
     invoke-static {p3}, Ljava/util/Arrays;->sort([I)V
 
-    .line 1316
     invoke-static {}, Landroid/os/UserManager;->invalidateIsUserUnlockedCache()V
 
-    .line 1317
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -16635,10 +15066,8 @@
 
     check-cast v0, Landroid/content/pm/UserInfo;
 
-    .line 1318
     iget v0, v0, Landroid/content/pm/UserInfo;->id:I
 
-    .line 1319
     invoke-virtual {p1, v0}, Landroid/os/UserManager;->isUserRunning(I)Z
 
     move-result v1
@@ -16647,7 +15076,6 @@
 
     goto :goto_0
 
-    .line 1322
     :cond_0
     invoke-static {p3, v0}, Ljava/util/Arrays;->binarySearch([II)I
 
@@ -16657,7 +15085,6 @@
 
     goto :goto_0
 
-    .line 1325
     :cond_1
     invoke-virtual {p1, v0}, Landroid/os/UserManager;->isUserUnlockingOrUnlocked(I)Z
 
@@ -16667,7 +15094,6 @@
 
     goto :goto_0
 
-    .line 1329
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -16687,17 +15113,14 @@
 
     invoke-static {v2, v1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1330
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {v1, v0}, Landroid/os/IVold;->onUserStarted(I)V
 
-    .line 1331
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mStoraged:Landroid/os/IStoraged;
 
     invoke-interface {v1, v0}, Landroid/os/IStoraged;->onUserStarted(I)V
 
-    .line 1332
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 v2, 0xe
@@ -16708,7 +15131,6 @@
 
     move-result-object v0
 
-    .line 1333
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
@@ -16724,10 +15146,8 @@
 
     const-string v1, "android.permission.MOUNT_FORMAT_FILESYSTEMS"
 
-    .line 3095
     invoke-virtual {p0, v1}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 3099
     :try_start_0
     new-instance v1, Lcom/android/server/HeimdAllFsService;
 
@@ -16737,7 +15157,6 @@
 
     iput-object v1, p0, Lcom/android/server/StorageManagerService;->mHeimdAllFs:Lcom/android/server/HeimdAllFsService;
 
-    .line 3105
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->needsCheckpoint()Z
 
     move-result v1
@@ -16755,12 +15174,10 @@
     :cond_0
     const-string p0, "Skipping idle maintenance - block based checkpoint in progress"
 
-    .line 3128
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 3106
     :cond_1
     :goto_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -16773,12 +15190,10 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/IVold;->runIdleMaint(ZLandroid/os/IVoldTaskListener;)V
 
-    .line 3124
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHeimdAllFs:Lcom/android/server/HeimdAllFsService;
 
     if-eqz p0, :cond_2
 
-    .line 3125
     invoke-virtual {p0}, Lcom/android/server/HeimdAllFsService;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -16788,7 +15203,6 @@
     :catch_0
     move-exception p0
 
-    .line 3131
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -16801,7 +15215,6 @@
 
     const/4 v0, 0x0
 
-    .line 3137
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->runIdleMaint(Ljava/lang/Runnable;)V
 
     return-void
@@ -16810,7 +15223,6 @@
 .method public runIdleMaintenance(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 1549
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v0, 0x4
@@ -16827,12 +15239,10 @@
 .method public runMaintenance()V
     .locals 1
 
-    .line 1556
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->runMaintenance_enforcePermission()V
 
     const/4 v0, 0x0
 
-    .line 1558
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->runIdleMaintenance(Ljava/lang/Runnable;)V
 
     return-void
@@ -16846,16 +15256,13 @@
     :try_start_0
     const-string v0, "android.permission.MOUNT_FORMAT_FILESYSTEMS"
 
-    .line 3330
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3334
     :try_start_1
     iget v0, p0, Lcom/android/server/StorageManagerService;->mTargetDirtyRatio:I
 
-    .line 3335
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {v1}, Landroid/os/IVold;->getWriteAmount()I
@@ -16870,7 +15277,6 @@
 
     const-string v1, "Failed to get storage write record"
 
-    .line 3337
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -16878,24 +15284,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 3371
     :try_start_2
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 3338
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 3341
     :cond_1
     :try_start_3
     invoke-virtual {p0, v1}, Lcom/android/server/StorageManagerService;->updateStorageWriteRecords(I)V
 
-    .line 3345
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->needsCheckpoint()Z
 
     move-result v2
@@ -16915,12 +15317,10 @@
 
     const-string v1, "Skipping smart idle maintenance - block based checkpoint in progress"
 
-    .line 3365
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_3
 
-    .line 3346
     :cond_3
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->refreshLifetimeConstraint()Z
@@ -16937,7 +15337,6 @@
 
     goto :goto_1
 
-    .line 3350
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->getAverageWriteAmount()I
 
@@ -16951,7 +15350,6 @@
 
     const-string v2, "Turn off gc_urgent based on checking lifetime and charge status"
 
-    .line 3347
     invoke-static {v0, v2}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v2, 0x0
@@ -16965,7 +15363,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 3353
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -17034,7 +15431,6 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3361
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     iget v5, p0, Lcom/android/server/StorageManagerService;->mMinSegmentsThreshold:I
@@ -17055,7 +15451,6 @@
     :goto_3
     if-eqz p1, :cond_6
 
-    .line 3371
     :goto_4
     :try_start_4
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
@@ -17075,7 +15470,6 @@
     :try_start_5
     const-string v1, "StorageManagerService"
 
-    .line 3368
     invoke-static {v1, v0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -17084,7 +15478,6 @@
 
     goto :goto_4
 
-    .line 3374
     :cond_6
     :goto_5
     monitor-exit p0
@@ -17094,11 +15487,9 @@
     :goto_6
     if-eqz p1, :cond_7
 
-    .line 3371
     :try_start_6
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 3373
     :cond_7
     throw v0
     :try_end_6
@@ -17115,7 +15506,6 @@
 .method public final scrubPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 650
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -17134,7 +15524,6 @@
 
     return-object p0
 
-    .line 653
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findRecordForPath(Ljava/lang/String;)Landroid/os/storage/VolumeRecord;
 
@@ -17142,7 +15531,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 654
     iget-wide v0, p0, Landroid/os/storage/VolumeRecord;->createdMillis:J
 
     const-wide/16 v2, 0x0
@@ -17153,7 +15541,6 @@
 
     goto :goto_0
 
-    .line 657
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -17201,14 +15588,12 @@
 
     const-string p0, "]"
 
-    .line 5780
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sys/class/sec/sdinfo/fc"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5782
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -17221,7 +15606,6 @@
 
     const-string p0, "EXTERNAL SD CARD HEALTH CHECK FILE does not exist!!"
 
-    .line 5783
     invoke-static {v3, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -17233,7 +15617,6 @@
 
     const/4 v5, 0x0
 
-    .line 5789
     :try_start_0
     invoke-static {v0, v5, v4}, Landroid/os/FileUtils;->readTextFile(Ljava/io/File;ILjava/lang/String;)Ljava/lang/String;
 
@@ -17243,7 +15626,6 @@
 
     move-result-object v1
 
-    .line 5790
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -17271,13 +15653,11 @@
 
     const-string v4, "Error at reading SD Card Health State"
 
-    .line 5792
     invoke-static {v3, v4, v0}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     const-string v0, "GOOD"
 
-    .line 5795
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -17291,7 +15671,6 @@
     :cond_1
     const-string v0, "BAD"
 
-    .line 5797
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -17300,7 +15679,6 @@
 
     const/4 v2, 0x1
 
-    .line 5803
     :cond_2
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -17329,14 +15707,12 @@
 
     const-string v0, "empty"
 
-    .line 5809
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 5810
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -17359,12 +15735,10 @@
 
     const-string p0, "The caller is not qualified."
 
-    .line 5811
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 5816
     :cond_0
     new-instance p0, Ljava/io/File;
 
@@ -17374,7 +15748,6 @@
 
     const-string/jumbo v3, "ro.build.type"
 
-    .line 5817
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -17383,7 +15756,6 @@
 
     move-result-object v3
 
-    .line 5819
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v4
@@ -17392,7 +15764,6 @@
 
     const-string p0, "EXTERNAL SD CARD CID VALUE FILE does not exist!!"
 
-    .line 5820
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -17400,7 +15771,6 @@
     :cond_1
     const/4 v4, 0x0
 
-    .line 5826
     :try_start_0
     invoke-static {p0, v4, v1}, Landroid/os/FileUtils;->readTextFile(Ljava/io/File;ILjava/lang/String;)Ljava/lang/String;
 
@@ -17415,7 +15785,6 @@
     :try_start_1
     const-string v4, "eng"
 
-    .line 5827
     invoke-virtual {v3, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
@@ -17430,7 +15799,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 5828
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -17469,10 +15837,8 @@
     :goto_0
     const-string v4, "Error at reading SD Card CID Value"
 
-    .line 5831
     invoke-static {v2, v4, v3}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 5834
     :cond_3
     :goto_1
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -17500,7 +15866,6 @@
     :goto_2
     const-string p0, "External SD Card CID value -> return as null"
 
-    .line 5835
     invoke-static {v2, p0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_3
@@ -17510,7 +15875,6 @@
 .method public final servicesReady()V
     .locals 2
 
-    .line 2454
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -17523,12 +15887,10 @@
 
     const-string/jumbo v0, "package"
 
-    .line 2457
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 2456
     invoke-static {v0}, Landroid/content/pm/IPackageManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageManager;
 
     move-result-object v0
@@ -17537,12 +15899,10 @@
 
     const-string v0, "appops"
 
-    .line 2459
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 2458
     invoke-static {v0}, Lcom/android/internal/app/IAppOpsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IAppOpsService;
 
     move-result-object v0
@@ -17551,14 +15911,12 @@
 
     const-string/jumbo v0, "media"
 
-    .line 2461
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->getProviderInfo(Ljava/lang/String;)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2463
     iget-object v1, v0, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -17569,7 +15927,6 @@
 
     iput v1, p0, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
 
-    .line 2464
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
@@ -17579,14 +15936,12 @@
     :cond_0
     const-string v0, "downloads"
 
-    .line 2467
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->getProviderInfo(Ljava/lang/String;)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2469
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -17600,14 +15955,12 @@
     :cond_1
     const-string v0, "com.android.externalstorage.documents"
 
-    .line 2472
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->getProviderInfo(Ljava/lang/String;)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 2474
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -17625,10 +15978,8 @@
 .method public setCloudMediaProvider(Ljava/lang/String;)V
     .locals 4
 
-    .line 4040
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->enforceExternalStorageService()V
 
-    .line 4042
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -17637,12 +15988,10 @@
 
     move-result v0
 
-    .line 4043
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    .line 4044
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
@@ -17652,19 +16001,16 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 4045
     invoke-static {p1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 4046
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mCloudMediaProviders:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 4047
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 v2, 0x10
@@ -17675,10 +16021,8 @@
 
     move-result-object p0
 
-    .line 4048
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4050
     :cond_0
     monitor-exit v1
 
@@ -17697,7 +16041,6 @@
 .method public setDebugFlags(II)V
     .locals 8
 
-    .line 3380
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->setDebugFlags_enforcePermission()V
 
     and-int/lit8 v0, p2, 0x3
@@ -17732,7 +16075,6 @@
     :cond_1
     move-object v0, v2
 
-    .line 3393
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -17741,10 +16083,8 @@
     :try_start_0
     const-string/jumbo v7, "persist.sys.adoptable"
 
-    .line 3395
     invoke-static {v7, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3398
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -17755,7 +16095,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3400
     invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -17765,7 +16104,6 @@
 
     invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3401
     throw p0
 
     :cond_2
@@ -17792,7 +16130,6 @@
     :cond_4
     move-object v1, v2
 
-    .line 3415
     :goto_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -17801,10 +16138,8 @@
     :try_start_1
     const-string/jumbo v0, "persist.sys.sdcardfs"
 
-    .line 3417
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3420
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -17815,7 +16150,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3422
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_3
@@ -17825,7 +16159,6 @@
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3423
     throw p0
 
     :cond_5
@@ -17845,7 +16178,6 @@
     :cond_6
     const/4 p1, 0x0
 
-    .line 3429
     :goto_4
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -17854,14 +16186,12 @@
     :try_start_2
     const-string/jumbo p2, "persist.sys.virtual_disk"
 
-    .line 3431
     invoke-static {p1}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {p2, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3434
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {p0, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -17872,7 +16202,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 3436
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_5
@@ -17882,7 +16211,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3437
     throw p0
 
     :cond_7
@@ -17893,10 +16221,8 @@
 .method public setDualDARPolicyCmd(II)Z
     .locals 0
 
-    .line 6285
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->checkCallerPermissionIsSystemOrRoot()V
 
-    .line 6287
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -17913,7 +16239,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6289
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -17924,15 +16249,12 @@
 .method public setPrimaryStorageUuid(Ljava/lang/String;Landroid/content/pm/IPackageMoveObserver;)V
     .locals 4
 
-    .line 3452
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->setPrimaryStorageUuid_enforcePermission()V
 
-    .line 3457
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3458
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
@@ -17942,18 +16264,14 @@
 
     if-nez v1, :cond_7
 
-    .line 3462
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mMoveCallback:Landroid/content/pm/IPackageMoveObserver;
 
     if-nez v1, :cond_6
 
-    .line 3465
     iput-object p2, p0, Lcom/android/server/StorageManagerService;->mMoveCallback:Landroid/content/pm/IPackageMoveObserver;
 
-    .line 3466
     iput-object p1, p0, Lcom/android/server/StorageManagerService;->mMoveTargetUuid:Ljava/lang/String;
 
-    .line 3469
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/os/UserManager;
@@ -17968,7 +16286,6 @@
 
     move-result-object p2
 
-    .line 3470
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -17986,7 +16303,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 3471
     invoke-static {}, Landroid/os/storage/StorageManager;->isFileEncrypted()Z
 
     move-result v2
@@ -18003,7 +16319,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 3472
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -18024,10 +16339,8 @@
 
     const/16 p1, -0xa
 
-    .line 3473
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onMoveStatusLocked(I)V
 
-    .line 3474
     monitor-exit v0
 
     return-void
@@ -18035,7 +16348,6 @@
     :cond_1
     const-string/jumbo p2, "primary_physical"
 
-    .line 3480
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
     invoke-virtual {p2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -18046,7 +16358,6 @@
 
     const-string/jumbo p2, "primary_physical"
 
-    .line 3481
     invoke-virtual {p2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -18055,18 +16366,15 @@
 
     goto :goto_1
 
-    .line 3489
     :cond_2
     iget p2, p0, Lcom/android/server/StorageManagerService;->mCurrentUserId:I
 
-    .line 3490
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
     invoke-virtual {p0, v1, p2}, Lcom/android/server/StorageManagerService;->findStorageForUuidAsUser(Ljava/lang/String;I)Landroid/os/storage/VolumeInfo;
 
     move-result-object v1
 
-    .line 3491
     invoke-virtual {p0, p1, p2}, Lcom/android/server/StorageManagerService;->findStorageForUuidAsUser(Ljava/lang/String;I)Landroid/os/storage/VolumeInfo;
 
     move-result-object p2
@@ -18077,7 +16385,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 3494
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -18096,10 +16403,8 @@
 
     invoke-static {p1, p2}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3495
     invoke-virtual {p0, v2}, Lcom/android/server/StorageManagerService;->onMoveStatusLocked(I)V
 
-    .line 3496
     monitor-exit v0
 
     return-void
@@ -18109,7 +16414,6 @@
 
     const-string p2, "StorageManagerService"
 
-    .line 3498
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -18126,21 +16430,17 @@
 
     invoke-static {p2, p1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3499
     invoke-virtual {p0, v2}, Lcom/android/server/StorageManagerService;->onMoveStatusLocked(I)V
 
-    .line 3500
     monitor-exit v0
 
     return-void
 
-    .line 3503
     :cond_4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3506
     :try_start_1
     iget-object p1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -18163,7 +16463,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 3520
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -18176,20 +16475,16 @@
 
     const-string p2, "Skipping move to/from primary physical"
 
-    .line 3482
     invoke-static {p1, p2}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 p1, 0x52
 
-    .line 3483
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onMoveStatusLocked(I)V
 
     const/16 p1, -0x64
 
-    .line 3484
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->onMoveStatusLocked(I)V
 
-    .line 3485
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/16 p1, 0xa
@@ -18200,12 +16495,10 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3486
     monitor-exit v0
 
     return-void
 
-    .line 3463
     :cond_6
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -18215,7 +16508,6 @@
 
     throw p0
 
-    .line 3459
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -18240,7 +16532,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3503
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -18251,7 +16542,6 @@
 .method public setSdpPolicyCmd(I)Z
     .locals 0
 
-    .line 6259
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -18268,7 +16558,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6261
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -18279,7 +16568,6 @@
 .method public setSdpPolicyToPathCmd(ILjava/lang/String;)Z
     .locals 0
 
-    .line 6268
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -18296,7 +16584,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6270
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -18309,7 +16596,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 6224
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
@@ -18317,7 +16603,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6225
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {p0, p1, p2}, Landroid/os/IVold;->setSensitive(ILjava/lang/String;)Z
@@ -18333,7 +16618,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6228
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -18345,10 +16629,8 @@
 .method public setUserKeyProtection(I[B)V
     .locals 0
 
-    .line 3718
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->setUserKeyProtection_enforcePermission()V
 
-    .line 3720
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-static {p2}, Lcom/android/internal/util/HexDump;->toHexString([B)Ljava/lang/String;
@@ -18363,12 +16645,10 @@
 .method public setVolumeNickname(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 2960
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->setVolumeNickname_enforcePermission()V
 
     const-string v0, "StorageManagerService"
 
-    .line 2961
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -18391,15 +16671,12 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2962
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2963
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2964
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -18409,18 +16686,14 @@
 
     check-cast p1, Landroid/os/storage/VolumeRecord;
 
-    .line 2965
     iput-object p2, p1, Landroid/os/storage/VolumeRecord;->nickname:Ljava/lang/String;
 
-    .line 2966
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-static {p2, p1}, Lcom/android/server/StorageManagerService$Callbacks;->-$$Nest$mnotifyVolumeRecordChanged(Lcom/android/server/StorageManagerService$Callbacks;Landroid/os/storage/VolumeRecord;)V
 
-    .line 2967
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->writeSettingsLocked()V
 
-    .line 2968
     monitor-exit v0
 
     return-void
@@ -18438,12 +16711,10 @@
 .method public setVolumeUserFlags(Ljava/lang/String;II)V
     .locals 3
 
-    .line 2974
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->setVolumeUserFlags_enforcePermission()V
 
     const-string v0, "StorageManagerService"
 
-    .line 2975
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -18472,15 +16743,12 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2976
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2977
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2978
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -18490,7 +16758,6 @@
 
     check-cast p1, Landroid/os/storage/VolumeRecord;
 
-    .line 2979
     iget v1, p1, Landroid/os/storage/VolumeRecord;->userFlags:I
 
     not-int v2, p3
@@ -18503,15 +16770,12 @@
 
     iput p2, p1, Landroid/os/storage/VolumeRecord;->userFlags:I
 
-    .line 2980
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-static {p2, p1}, Lcom/android/server/StorageManagerService$Callbacks;->-$$Nest$mnotifyVolumeRecordChanged(Lcom/android/server/StorageManagerService$Callbacks;Landroid/os/storage/VolumeRecord;)V
 
-    .line 2981
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->writeSettingsLocked()V
 
-    .line 2982
     monitor-exit v0
 
     return-void
@@ -18529,7 +16793,6 @@
 .method public shrinkDataDdp(J)Z
     .locals 0
 
-    .line 6299
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -18546,7 +16809,6 @@
 
     const-string p1, "[DDP] Failed to shrink data partition"
 
-    .line 6301
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -18558,17 +16820,14 @@
 .method public shutdown(Landroid/os/storage/IStorageShutdownObserver;)V
     .locals 2
 
-    .line 2675
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->shutdown_enforcePermission()V
 
     const-string v0, "StorageManagerService"
 
     const-string v1, "Shutting down"
 
-    .line 2677
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2678
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v0, 0x3
@@ -18585,22 +16844,18 @@
 .method public final snapshotAndMonitorLegacyStorageAppOp(Landroid/os/UserHandle;)V
     .locals 9
 
-    .line 2500
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v0
 
-    .line 2505
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
     const-wide/32 v2, 0x4c2000
 
-    .line 2507
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v4
 
-    .line 2505
     invoke-virtual {v1, v2, v3, v0, v4}, Landroid/content/pm/PackageManagerInternal;->getInstalledApplications(JII)Ljava/util/List;
 
     move-result-object v1
@@ -18626,7 +16881,6 @@
 
     check-cast v2, Landroid/content/pm/ApplicationInfo;
 
-    .line 2509
     :try_start_0
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mIAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
@@ -18647,7 +16901,6 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 2511
     :goto_1
     iget-object v5, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -18662,7 +16915,6 @@
     :catch_0
     move-exception v3
 
-    .line 2513
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -18683,7 +16935,6 @@
 
     goto :goto_0
 
-    .line 2517
     :cond_1
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mPackageMonitorsForUser:Landroid/util/SparseArray;
 
@@ -18693,26 +16944,22 @@
 
     if-nez v1, :cond_2
 
-    .line 2518
     new-instance v1, Lcom/android/server/StorageManagerService$6;
 
     invoke-direct {v1, p0}, Lcom/android/server/StorageManagerService$6;-><init>(Lcom/android/server/StorageManagerService;)V
 
-    .line 2525
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     invoke-virtual {v1, v2, p1, v3, v4}, Lcom/android/internal/content/PackageMonitor;->register(Landroid/content/Context;Landroid/os/UserHandle;ZLandroid/os/Handler;)V
 
-    .line 2526
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mPackageMonitorsForUser:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     goto :goto_2
 
-    .line 2528
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -18737,10 +16984,8 @@
 .method public final start()V
     .locals 0
 
-    .line 2378
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->connectStoraged()V
 
-    .line 2379
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->connectVold()V
 
     return-void
@@ -18749,7 +16994,6 @@
 .method public startCheckpoint(I)V
     .locals 2
 
-    .line 3634
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -18766,7 +17010,6 @@
 
     goto :goto_0
 
-    .line 3637
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -18776,7 +17019,6 @@
 
     throw p0
 
-    .line 3640
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -18791,10 +17033,8 @@
 
     const-string v0, "android.permission.MOUNT_FORMAT_FILESYSTEMS"
 
-    .line 1526
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 1527
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {p0}, Landroid/os/IVold;->supportsBlockCheckpoint()Z
@@ -18807,7 +17047,6 @@
 .method public supportsCheckpoint()Z
     .locals 0
 
-    .line 3621
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-interface {p0}, Landroid/os/IVold;->supportsCheckpoint()Z
@@ -18820,7 +17059,6 @@
 .method public final systemReady()V
     .locals 1
 
-    .line 2533
     const-class v0, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -18829,10 +17067,8 @@
 
     check-cast v0, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 2534
     invoke-virtual {v0, p0}, Lcom/android/server/wm/ActivityTaskManagerInternal;->registerScreenObserver(Lcom/android/server/wm/ActivityTaskManagerInternal$ScreenObserver;)V
 
-    .line 2536
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mHandler:Lcom/android/server/StorageManagerService$StorageManagerServiceHandler;
 
     const/4 v0, 0x1
@@ -18851,13 +17087,10 @@
 
     const-string v0, "android.permission.ASEC_CREATE"
 
-    .line 6723
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6725
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6729
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -18874,7 +17107,6 @@
 
     const-string p1, "StorageManagerService"
 
-    .line 6731
     invoke-static {p1, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, -0x1
@@ -18886,17 +17118,14 @@
 .method public unlockUserKey(II[B[B)V
     .locals 1
 
-    .line 3728
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->unlockUserKey_enforcePermission()V
 
-    .line 3730
     invoke-static {}, Landroid/os/storage/StorageManager;->isFileEncrypted()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3731
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
     invoke-virtual {p0, p3}, Lcom/android/server/StorageManagerService;->encodeBytes([B)Ljava/lang/String;
@@ -18909,19 +17138,16 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/os/IVold;->unlockUserKey(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 3733
     :cond_0
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 3734
     :try_start_0
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mLocalUnlockedUsers:Lcom/android/server/StorageManagerService$WatchedLockedUsers;
 
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService$WatchedLockedUsers;->append(I)V
 
-    .line 3735
     monitor-exit p2
 
     return-void
@@ -18941,7 +17167,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 2837
     :try_start_0
     iget v1, p1, Landroid/os/storage/VolumeInfo;->type:I
 
@@ -18949,7 +17174,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2838
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getFsUuid()Ljava/lang/String;
@@ -18974,10 +17198,8 @@
     :try_start_1
     const-string v2, "Failed unmount mirror data"
 
-    .line 2841
     invoke-static {v0, v2, v1}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2843
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
@@ -18986,7 +17208,6 @@
 
     invoke-interface {v1, v2}, Landroid/os/IVold;->unmount(Ljava/lang/String;)V
 
-    .line 2844
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mStorageSessionController:Lcom/android/server/storage/StorageSessionController;
 
     invoke-virtual {p0, p1}, Lcom/android/server/storage/StorageSessionController;->onVolumeUnmount(Landroid/os/storage/VolumeInfo;)V
@@ -18995,7 +17216,6 @@
 
     goto :goto_2
 
-    .line 2846
     :goto_1
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -19006,12 +17226,10 @@
 .method public unmount(Ljava/lang/String;)V
     .locals 6
 
-    .line 2812
     invoke-super {p0}, Landroid/os/storage/IStorageManager$Stub;->unmount_enforcePermission()V
 
     const-string v0, "StorageManagerService"
 
-    .line 2813
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -19028,12 +17246,10 @@
 
     invoke-static {v0, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2814
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findVolumeByIdOrThrow(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
     move-result-object p1
 
-    .line 2817
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->isPrimaryPhysical()Z
 
     move-result v0
@@ -19050,13 +17266,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 2818
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2820
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mUnmountLock:Ljava/lang/Object;
 
@@ -19064,7 +17278,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2821
     :try_start_1
     new-instance v3, Ljava/util/concurrent/CountDownLatch;
 
@@ -19074,14 +17287,12 @@
 
     iput-object v3, p0, Lcom/android/server/StorageManagerService;->mUnmountSignal:Ljava/util/concurrent/CountDownLatch;
 
-    .line 2822
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
 
     const/4 v5, 0x0
 
     invoke-virtual {v3, v5, v4}, Landroid/content/pm/PackageManagerInternal;->updateExternalMediaStatus(ZZ)V
 
-    .line 2823
     iget-object v3, p0, Lcom/android/server/StorageManagerService;->mUnmountSignal:Ljava/util/concurrent/CountDownLatch;
 
     const-string/jumbo v4, "mUnmountSignal"
@@ -19090,18 +17301,14 @@
 
     const/4 v3, 0x0
 
-    .line 2824
     iput-object v3, p0, Lcom/android/server/StorageManagerService;->mUnmountSignal:Ljava/util/concurrent/CountDownLatch;
 
-    .line 2825
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2827
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2831
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->unmount(Landroid/os/storage/VolumeInfo;)V
 
@@ -19110,7 +17317,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2825
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -19124,17 +17330,14 @@
     :catchall_1
     move-exception p0
 
-    .line 2827
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2828
     throw p0
 .end method
 
 .method public unmountBySecApp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 6097
     invoke-virtual {p0, p2}, Lcom/android/server/StorageManagerService;->chkMountUnmountFormatCaller(Ljava/lang/String;)Z
 
     move-result v0
@@ -19145,15 +17348,12 @@
 
     const-string v0, "Unmount call accepted"
 
-    .line 6098
     invoke-static {p2, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6103
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->unmount(Ljava/lang/String;)V
 
     return-void
 
-    .line 6100
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -19185,15 +17385,12 @@
 
     const-string/jumbo v0, "rawPath cannot be null"
 
-    .line 3592
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3595
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mObbMounts:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 3596
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mObbPathToStateMap:Ljava/util/Map;
 
@@ -19203,19 +17400,16 @@
 
     check-cast v1, Lcom/android/server/StorageManagerService$ObbState;
 
-    .line 3597
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v1, :cond_0
 
-    .line 3601
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v6
 
-    .line 3602
     new-instance v0, Lcom/android/server/StorageManagerService$ObbState;
 
     iget-object v5, v1, Lcom/android/server/StorageManagerService$ObbState;->canonicalPath:Ljava/lang/String;
@@ -19234,12 +17428,10 @@
 
     invoke-direct/range {v2 .. v9}, Lcom/android/server/StorageManagerService$ObbState;-><init>(Lcom/android/server/StorageManagerService;Ljava/lang/String;Ljava/lang/String;ILandroid/os/storage/IObbActionListener;ILjava/lang/String;)V
 
-    .line 3604
     new-instance p1, Lcom/android/server/StorageManagerService$UnmountObbAction;
 
     invoke-direct {p1, p0, v0, p2}, Lcom/android/server/StorageManagerService$UnmountObbAction;-><init>(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$ObbState;Z)V
 
-    .line 3605
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mObbActionHandler:Lcom/android/server/StorageManagerService$ObbActionHandler;
 
     const/4 p2, 0x1
@@ -19255,7 +17447,6 @@
     :cond_0
     const-string p0, "StorageManagerService"
 
-    .line 3610
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -19278,7 +17469,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3597
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -19292,7 +17482,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 6594
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -19317,18 +17506,14 @@
 
     const-string v0, "android.permission.ASEC_MOUNT_UNMOUNT"
 
-    .line 6595
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService;->enforcePermission(Ljava/lang/String;)V
 
-    .line 6597
     invoke-virtual {p0}, Lcom/android/server/StorageManagerService;->warnOnNotMounted()V
 
-    .line 6599
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter v0
 
-    .line 6600
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -19346,17 +17531,14 @@
 
     const-string/jumbo p1, "unmountSecureContainer: fail"
 
-    .line 6601
     invoke-static {p0, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6602
     monitor-exit v0
 
     const/4 p0, -0x5
 
     return p0
 
-    .line 6604
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->isExternalSecureContainer(Ljava/lang/String;)Z
 
@@ -19376,10 +17558,8 @@
 
     const-string/jumbo v1, "unmountSecureContainer: no media"
 
-    .line 6605
     invoke-static {p2, v1}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6606
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     new-instance v1, Lcom/android/server/StorageManagerService$PackageInstalledMap;
@@ -19388,25 +17568,21 @@
 
     invoke-virtual {p2, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 6607
     monitor-exit v0
 
     return v2
 
-    .line 6609
     :cond_1
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6617
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Runtime;->gc()V
 
-    .line 6621
     :try_start_1
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mVold:Landroid/os/IVold;
 
@@ -19421,7 +17597,6 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 6623
     invoke-static {v0, p2}, Landroid/util/sysfwutil/Slog;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v2, -0x1
@@ -19429,12 +17604,10 @@
     :goto_0
     if-nez v2, :cond_2
 
-    .line 6628
     iget-object p2, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
     monitor-enter p2
 
-    .line 6629
     :try_start_2
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecMountSet:Ljava/util/HashSet;
 
@@ -19444,7 +17617,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 6630
     monitor-exit p2
 
     goto :goto_1
@@ -19465,7 +17637,6 @@
     :catchall_1
     move-exception p0
 
-    .line 6609
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -19477,7 +17648,6 @@
 .method public unmountVolume(Ljava/lang/String;ZZ)V
     .locals 0
 
-    .line 6157
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -19496,7 +17666,6 @@
 
     invoke-static {p3, p2}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6158
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService;->findVolumeIdForPathOrThrow(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -19509,7 +17678,6 @@
 .method public unregisterListener(Landroid/os/storage/IStorageEventListener;)V
     .locals 0
 
-    .line 2668
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mCallbacks:Lcom/android/server/StorageManagerService$Callbacks;
 
     invoke-virtual {p0, p1}, Lcom/android/server/StorageManagerService$Callbacks;->unregister(Landroid/os/storage/IStorageEventListener;)V
@@ -19520,7 +17688,6 @@
 .method public final updateLegacyStorageApps(Ljava/lang/String;IZ)V
     .locals 3
 
-    .line 2486
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -19530,7 +17697,6 @@
     :try_start_0
     const-string p3, "StorageManagerService"
 
-    .line 2488
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -19551,7 +17717,6 @@
 
     invoke-static {p3, p1}, Landroid/util/sysfwutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2489
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mUidsWithLegacyExternalStorage:Ljava/util/Set;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -19565,7 +17730,6 @@
     :cond_0
     const-string p3, "StorageManagerService"
 
-    .line 2493
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -19586,7 +17750,6 @@
 
     invoke-static {p3, p1}, Landroid/util/sysfwutil/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2494
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mUidsWithLegacyExternalStorage:Ljava/util/Set;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -19595,7 +17758,6 @@
 
     invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 2496
     :goto_0
     monitor-exit v0
 
@@ -19614,7 +17776,6 @@
 .method public final updateStorageWriteRecords(I)V
     .locals 5
 
-    .line 3264
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageWriteRecords:[I
 
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mStorageWriteRecords:[I
@@ -19629,14 +17790,12 @@
 
     invoke-static {v0, v4, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 3266
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mStorageWriteRecords:[I
 
     aput p1, v0, v4
 
     const/4 p1, 0x0
 
-    .line 3268
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mWriteRecordFile:Landroid/util/AtomicFile;
 
@@ -19644,22 +17803,18 @@
 
     move-result-object p1
 
-    .line 3269
     new-instance v0, Ljava/io/ObjectOutputStream;
 
     invoke-direct {v0, p1}, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 3271
     sget v1, Lcom/android/server/StorageManagerService;->sSmartIdleMaintPeriod:I
 
     invoke-virtual {v0, v1}, Ljava/io/ObjectOutputStream;->writeInt(I)V
 
-    .line 3272
     iget-object v1, p0, Lcom/android/server/StorageManagerService;->mStorageWriteRecords:[I
 
     invoke-virtual {v0, v1}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
-    .line 3273
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mWriteRecordFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v0, p1}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
@@ -19671,7 +17826,6 @@
     :catch_0
     if-eqz p1, :cond_0
 
-    .line 3276
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mWriteRecordFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p0, p1}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
@@ -19684,7 +17838,6 @@
 .method public waitForAsecScan()V
     .locals 2
 
-    .line 1063
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mAsecsScanned:Ljava/util/concurrent/CountDownLatch;
 
     const-string/jumbo v1, "mAsecsScanned"
@@ -19699,7 +17852,6 @@
 
     const-wide/16 v0, -0x1
 
-    .line 1068
     :try_start_0
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/android/server/StorageManagerService;->waitForLatch(Ljava/util/concurrent/CountDownLatch;Ljava/lang/String;J)V
     :try_end_0
@@ -19710,7 +17862,6 @@
     :catch_0
     move-exception p0
 
-    .line 1070
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -19740,12 +17891,10 @@
 
     const-string v0, "StorageManagerService"
 
-    .line 1077
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 1080
     :cond_0
     :goto_0
     :try_start_0
@@ -19761,7 +17910,6 @@
 
     return-void
 
-    .line 1083
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -19799,7 +17947,6 @@
 
     goto :goto_1
 
-    .line 1087
     :catch_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -19824,7 +17971,6 @@
 
     if-lez v3, :cond_0
 
-    .line 1089
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -19837,7 +17983,6 @@
 
     goto :goto_0
 
-    .line 1090
     :cond_2
     new-instance p1, Ljava/util/concurrent/TimeoutException;
 
@@ -19885,14 +18030,12 @@
 .method public final warnOnNotMounted()V
     .locals 4
 
-    .line 3525
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 3526
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
@@ -19903,7 +18046,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 3527
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -19912,7 +18054,6 @@
 
     check-cast v2, Landroid/os/storage/VolumeInfo;
 
-    .line 3528
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->isPrimary()Z
 
     move-result v3
@@ -19925,7 +18066,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3530
     monitor-exit v0
 
     return-void
@@ -19935,7 +18075,6 @@
 
     goto :goto_0
 
-    .line 3533
     :cond_1
     monitor-exit v0
     :try_end_0
@@ -19945,7 +18084,6 @@
 
     const-string v0, "No primary storage mounted!"
 
-    .line 3535
     invoke-static {p0, v0}, Landroid/util/sysfwutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -19953,7 +18091,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3533
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -19969,7 +18106,6 @@
 
     const/4 v1, 0x0
 
-    .line 2603
     :try_start_0
     iget-object v2, p0, Lcom/android/server/StorageManagerService;->mSettingsFile:Landroid/util/AtomicFile;
 
@@ -19982,7 +18118,6 @@
     :try_start_1
     const-string v3, "StorageManagerService"
 
-    .line 2604
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -20009,34 +18144,28 @@
 
     invoke-static {v3, v4}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2606
     invoke-static {v2}, Landroid/util/Xml;->resolveSerializer(Ljava/io/OutputStream;)Lcom/android/modules/utils/TypedXmlSerializer;
 
     move-result-object v3
 
-    .line 2607
     sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-interface {v3, v1, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 2608
     invoke-interface {v3, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v4, "version"
 
     const/4 v5, 0x3
 
-    .line 2609
     invoke-interface {v3, v1, v4, v5}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeInt(Ljava/lang/String;Ljava/lang/String;I)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v4, "primaryStorageUuid"
 
-    .line 2610
     iget-object v5, p0, Lcom/android/server/StorageManagerService;->mPrimaryStorageUuid:Ljava/lang/String;
 
     invoke-static {v3, v4, v5}, Lcom/android/internal/util/XmlUtils;->writeStringAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 2611
     iget-object v4, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v4}, Landroid/util/ArrayMap;->size()I
@@ -20048,7 +18177,6 @@
     :goto_0
     if-ge v5, v4, :cond_0
 
-    .line 2613
     iget-object v6, p0, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
     invoke-virtual {v6, v5}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -20057,21 +18185,17 @@
 
     check-cast v6, Landroid/os/storage/VolumeRecord;
 
-    .line 2614
     invoke-static {v3, v6}, Lcom/android/server/StorageManagerService;->writeVolumeRecord(Lcom/android/modules/utils/TypedXmlSerializer;Landroid/os/storage/VolumeRecord;)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 2616
     :cond_0
     invoke-interface {v3, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2617
     invoke-interface {v3}, Lcom/android/modules/utils/TypedXmlSerializer;->endDocument()V
 
-    .line 2619
     iget-object v0, p0, Lcom/android/server/StorageManagerService;->mSettingsFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v0, v2}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
@@ -20086,7 +18210,6 @@
     :catch_1
     if-eqz v1, :cond_1
 
-    .line 2622
     iget-object p0, p0, Lcom/android/server/StorageManagerService;->mSettingsFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p0, v1}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V

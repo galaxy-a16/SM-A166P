@@ -53,55 +53,42 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(ILcom/android/server/power/PowerGroup$PowerGroupListener;Lcom/android/server/power/Notifier;Landroid/hardware/display/DisplayManagerInternal;IZZJ)V
     .locals 1
 
-    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     new-instance v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     invoke-direct {v0}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
-    .line 96
     new-instance v0, Lcom/android/server/power/SuspendBlockerMonitor;
 
     invoke-direct {v0}, Lcom/android/server/power/SuspendBlockerMonitor;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/power/PowerGroup;->mSuspendBlockerMonitor:Lcom/android/server/power/SuspendBlockerMonitor;
 
-    .line 101
     iput p1, p0, Lcom/android/server/power/PowerGroup;->mGroupId:I
 
-    .line 102
     iput-object p2, p0, Lcom/android/server/power/PowerGroup;->mWakefulnessListener:Lcom/android/server/power/PowerGroup$PowerGroupListener;
 
-    .line 103
     iput-object p3, p0, Lcom/android/server/power/PowerGroup;->mNotifier:Lcom/android/server/power/Notifier;
 
-    .line 104
     iput-object p4, p0, Lcom/android/server/power/PowerGroup;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 105
     iput p5, p0, Lcom/android/server/power/PowerGroup;->mWakefulness:I
 
-    .line 106
     iput-boolean p6, p0, Lcom/android/server/power/PowerGroup;->mReady:Z
 
-    .line 107
     iput-boolean p7, p0, Lcom/android/server/power/PowerGroup;->mSupportsSandman:Z
 
-    .line 108
     iput-wide p8, p0, Lcom/android/server/power/PowerGroup;->mLastWakeTime:J
 
-    .line 109
     iput-wide p8, p0, Lcom/android/server/power/PowerGroup;->mLastSleepTime:J
 
     return-void
@@ -110,17 +97,14 @@
 .method public constructor <init>(ILcom/android/server/power/PowerGroup$PowerGroupListener;Lcom/android/server/power/Notifier;Landroid/hardware/display/DisplayManagerInternal;J)V
     .locals 1
 
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     new-instance v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     invoke-direct {v0}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
-    .line 96
     new-instance v0, Lcom/android/server/power/SuspendBlockerMonitor;
 
     invoke-direct {v0}, Lcom/android/server/power/SuspendBlockerMonitor;-><init>()V
@@ -129,33 +113,24 @@
 
     const/4 v0, 0x0
 
-    .line 114
     iput v0, p0, Lcom/android/server/power/PowerGroup;->mGroupId:I
 
-    .line 115
     iput-object p2, p0, Lcom/android/server/power/PowerGroup;->mWakefulnessListener:Lcom/android/server/power/PowerGroup$PowerGroupListener;
 
-    .line 116
     iput-object p3, p0, Lcom/android/server/power/PowerGroup;->mNotifier:Lcom/android/server/power/Notifier;
 
-    .line 117
     iput-object p4, p0, Lcom/android/server/power/PowerGroup;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 118
     iput p1, p0, Lcom/android/server/power/PowerGroup;->mWakefulness:I
 
-    .line 119
     iput-boolean v0, p0, Lcom/android/server/power/PowerGroup;->mReady:Z
 
     const/4 p1, 0x1
 
-    .line 120
     iput-boolean p1, p0, Lcom/android/server/power/PowerGroup;->mSupportsSandman:Z
 
-    .line 121
     iput-wide p5, p0, Lcom/android/server/power/PowerGroup;->mLastWakeTime:J
 
-    .line 122
     iput-wide p5, p0, Lcom/android/server/power/PowerGroup;->mLastSleepTime:J
 
     return-void
@@ -172,14 +147,12 @@
 
     const-wide/32 v10, 0x20000
 
-    .line 270
     invoke-static {v10, v11, v1}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
     const/4 v1, 0x0
 
     move/from16 v2, p4
 
-    .line 273
     :try_start_0
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
@@ -187,12 +160,10 @@
 
     const/16 v2, 0x19
 
-    .line 272
     invoke-static {v2, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v6
 
-    .line 274
     iget-wide v1, v0, Lcom/android/server/power/PowerGroup;->mLastUserActivityTimeNoChangeLights:J
 
     iget-wide v3, v0, Lcom/android/server/power/PowerGroup;->mLastUserActivityTime:J
@@ -203,7 +174,6 @@
 
     sub-long v1, p1, v1
 
-    .line 276
     sget-object v3, Lcom/android/server/power/PowerGroup;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -214,7 +184,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 277
     invoke-static {v6}, Landroid/os/PowerManager;->sleepReasonToString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -225,7 +194,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 278
     invoke-virtual {p0}, Lcom/android/server/power/PowerGroup;->getGroupId()I
 
     move-result v5
@@ -252,7 +220,6 @@
 
     iget v1, v0, Lcom/android/server/power/PowerGroup;->mLastUserActivityEvent:I
 
-    .line 280
     invoke-static {v1}, Landroid/os/PowerManager;->userActivityEventToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -267,12 +234,10 @@
 
     move-result-object v1
 
-    .line 276
     invoke-static {v3, v1}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v12, 0x1
 
-    .line 283
     invoke-virtual {p0, v12}, Lcom/android/server/power/PowerGroup;->setSandmanSummonedLocked(Z)V
 
     const/4 v2, 0x3
@@ -289,12 +254,10 @@
 
     move/from16 v5, p3
 
-    .line 284
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/power/PowerGroup;->setWakefulnessLocked(IJIIILjava/lang/String;Ljava/lang/String;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 287
     invoke-static {v10, v11}, Landroid/os/Trace;->traceEnd(J)V
 
     return v12
@@ -304,7 +267,6 @@
 
     invoke-static {v10, v11}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 288
     throw v0
 .end method
 
@@ -313,7 +275,6 @@
 
     move-object v0, p0
 
-    .line 248
     iget-wide v1, v0, Lcom/android/server/power/PowerGroup;->mLastWakeTime:J
 
     cmp-long v1, p1, v1
@@ -330,7 +291,6 @@
 
     goto :goto_0
 
-    .line 252
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -354,7 +314,6 @@
 
     invoke-static {v11, v12, v1}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 254
     :try_start_0
     sget-object v1, Lcom/android/server/power/PowerGroup;->TAG:Ljava/lang/String;
 
@@ -390,7 +349,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     invoke-virtual {p0, v10}, Lcom/android/server/power/PowerGroup;->setSandmanSummonedLocked(Z)V
 
     const/4 v2, 0x2
@@ -409,12 +367,10 @@
 
     move/from16 v5, p3
 
-    .line 256
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/power/PowerGroup;->setWakefulnessLocked(IJIIILjava/lang/String;Ljava/lang/String;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 259
     invoke-static {v11, v12}, Landroid/os/Trace;->traceEnd(J)V
 
     return v10
@@ -424,7 +380,6 @@
 
     invoke-static {v11, v12}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 260
     throw v0
 
     :cond_1
@@ -449,7 +404,6 @@
 
     move v4, p4
 
-    .line 486
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/power/PowerGroup;->getDesiredScreenPolicyLocked(ZZZZJ)I
 
     move-result p0
@@ -460,12 +414,10 @@
 .method public getDesiredScreenPolicyLocked(ZZZZJ)I
     .locals 5
 
-    .line 495
     invoke-virtual {p0}, Lcom/android/server/power/PowerGroup;->getWakefulnessLocked()I
 
     move-result v0
 
-    .line 496
     invoke-virtual {p0}, Lcom/android/server/power/PowerGroup;->getWakeLockSummaryLocked()I
 
     move-result v1
@@ -487,7 +439,6 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 501
     iget v0, p0, Lcom/android/server/power/PowerGroup;->mGroupId:I
 
     if-ne v0, v4, :cond_1
@@ -513,7 +464,6 @@
 
     if-eqz p3, :cond_6
 
-    .line 519
     invoke-virtual {p0}, Lcom/android/server/power/PowerGroup;->getUserActivitySummaryLocked()I
 
     move-result p2
@@ -533,14 +483,12 @@
 
     if-nez p1, :cond_5
 
-    .line 525
     iget p1, p0, Lcom/android/server/power/PowerGroup;->mWakeLockSummary:I
 
     and-int/lit8 p1, p1, 0x4
 
     if-nez p1, :cond_5
 
-    .line 528
     iget-object p1, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     invoke-virtual {p1}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->isBrightOrDim()Z
@@ -549,7 +497,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 529
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     iget p0, p0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->policy:I
@@ -571,7 +518,6 @@
 .method public getDisplayPowerRequestLocked()Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
     .locals 0
 
-    .line 389
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     return-object p0
@@ -580,7 +526,6 @@
 .method public getGroupId()I
     .locals 0
 
-    .line 138
     iget p0, p0, Lcom/android/server/power/PowerGroup;->mGroupId:I
 
     return p0
@@ -589,7 +534,6 @@
 .method public getLastGoToSleepReasonLocked()I
     .locals 0
 
-    .line 395
     iget p0, p0, Lcom/android/server/power/PowerGroup;->mLastGoToSleepReason:I
 
     return p0
@@ -598,7 +542,6 @@
 .method public getLastPowerOnTimeLocked()J
     .locals 2
 
-    .line 192
     iget-wide v0, p0, Lcom/android/server/power/PowerGroup;->mLastPowerOnTime:J
 
     return-wide v0
@@ -607,7 +550,6 @@
 .method public getLastSleepTimeLocked()J
     .locals 2
 
-    .line 130
     iget-wide v0, p0, Lcom/android/server/power/PowerGroup;->mLastSleepTime:J
 
     return-wide v0
@@ -616,7 +558,6 @@
 .method public getLastUserActivityTimeLocked()J
     .locals 2
 
-    .line 313
     iget-wide v0, p0, Lcom/android/server/power/PowerGroup;->mLastUserActivityTime:J
 
     return-wide v0
@@ -625,7 +566,6 @@
 .method public getLastUserActivityTimeNoChangeLightsLocked()J
     .locals 2
 
-    .line 323
     iget-wide v0, p0, Lcom/android/server/power/PowerGroup;->mLastUserActivityTimeNoChangeLights:J
 
     return-wide v0
@@ -634,7 +574,6 @@
 .method public getLastWakeTimeLocked()J
     .locals 2
 
-    .line 126
     iget-wide v0, p0, Lcom/android/server/power/PowerGroup;->mLastWakeTime:J
 
     return-wide v0
@@ -643,7 +582,6 @@
 .method public getSuspendBlockerMonitorInfo()Ljava/lang/String;
     .locals 2
 
-    .line 358
     iget-object v0, p0, Lcom/android/server/power/PowerGroup;->mSuspendBlockerMonitor:Lcom/android/server/power/SuspendBlockerMonitor;
 
     invoke-virtual {v0}, Lcom/android/server/power/SuspendBlockerMonitor;->hasGroupEvent()Z
@@ -652,7 +590,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 359
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -671,7 +608,6 @@
 
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mSuspendBlockerMonitor:Lcom/android/server/power/SuspendBlockerMonitor;
 
-    .line 360
     invoke-virtual {p0}, Lcom/android/server/power/SuspendBlockerMonitor;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -693,7 +629,6 @@
 .method public getUserActivitySummaryLocked()I
     .locals 0
 
-    .line 333
     iget p0, p0, Lcom/android/server/power/PowerGroup;->mUserActivitySummary:I
 
     return p0
@@ -702,7 +637,6 @@
 .method public getWakeLockSummaryLocked()I
     .locals 0
 
-    .line 353
     iget p0, p0, Lcom/android/server/power/PowerGroup;->mWakeLockSummary:I
 
     return p0
@@ -711,7 +645,6 @@
 .method public getWakefulnessLocked()I
     .locals 0
 
-    .line 134
     iget p0, p0, Lcom/android/server/power/PowerGroup;->mWakefulness:I
 
     return p0
@@ -720,7 +653,6 @@
 .method public hasWakeLockKeepingScreenOnLocked()Z
     .locals 0
 
-    .line 380
     iget p0, p0, Lcom/android/server/power/PowerGroup;->mWakeLockSummary:I
 
     and-int/lit8 p0, p0, 0x26
@@ -741,7 +673,6 @@
 .method public isBrightOrDimLocked()Z
     .locals 0
 
-    .line 345
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     invoke-virtual {p0}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->isBrightOrDim()Z
@@ -754,7 +685,6 @@
 .method public isPolicyBrightLocked()Z
     .locals 1
 
-    .line 337
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     iget p0, p0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->policy:I
@@ -777,7 +707,6 @@
 .method public isPolicyDimLocked()Z
     .locals 1
 
-    .line 341
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     iget p0, p0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->policy:I
@@ -800,7 +729,6 @@
 .method public isPoweringOnLocked()Z
     .locals 0
 
-    .line 200
     iget-boolean p0, p0, Lcom/android/server/power/PowerGroup;->mPoweringOn:Z
 
     return p0
@@ -809,7 +737,6 @@
 .method public isReadyLocked()Z
     .locals 0
 
-    .line 169
     iget-boolean p0, p0, Lcom/android/server/power/PowerGroup;->mReady:Z
 
     return p0
@@ -818,7 +745,6 @@
 .method public isSandmanSummonedLocked()Z
     .locals 0
 
-    .line 208
     iget-boolean p0, p0, Lcom/android/server/power/PowerGroup;->mIsSandmanSummoned:Z
 
     return p0
@@ -827,12 +753,10 @@
 .method public needSuspendBlockerLocked(ZZI)Z
     .locals 3
 
-    .line 420
     iget-object p2, p0, Lcom/android/server/power/PowerGroup;->mSuspendBlockerMonitor:Lcom/android/server/power/SuspendBlockerMonitor;
 
     invoke-virtual {p2}, Lcom/android/server/power/SuspendBlockerMonitor;->clearGroupEvent()V
 
-    .line 421
     invoke-virtual {p0}, Lcom/android/server/power/PowerGroup;->isBrightOrDimLocked()Z
 
     move-result p2
@@ -843,7 +767,6 @@
 
     if-nez p1, :cond_0
 
-    .line 436
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mSuspendBlockerMonitor:Lcom/android/server/power/SuspendBlockerMonitor;
 
     const/16 p1, 0x10
@@ -852,7 +775,6 @@
 
     return v0
 
-    .line 443
     :cond_0
     iget-object p1, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
@@ -866,7 +788,6 @@
 
     if-ne v2, v1, :cond_1
 
-    .line 449
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mSuspendBlockerMonitor:Lcom/android/server/power/SuspendBlockerMonitor;
 
     const/16 p1, 0x20
@@ -875,7 +796,6 @@
 
     return v0
 
-    .line 455
     :cond_1
     sget-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_AOD_LOOK_CHARGING_UI:Z
 
@@ -892,7 +812,6 @@
     :cond_2
     if-ne p2, v0, :cond_3
 
-    .line 458
     iget p1, p1, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->dozeScreenState:I
 
     if-eq p1, v0, :cond_3
@@ -901,7 +820,6 @@
 
     if-eq p1, p2, :cond_3
 
-    .line 462
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mSuspendBlockerMonitor:Lcom/android/server/power/SuspendBlockerMonitor;
 
     const/16 p1, 0x40
@@ -913,7 +831,6 @@
     :cond_3
     if-ne p3, v1, :cond_4
 
-    .line 473
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mSuspendBlockerMonitor:Lcom/android/server/power/SuspendBlockerMonitor;
 
     const/16 p1, 0x80
@@ -931,7 +848,6 @@
 .method public setIsPoweringOnLocked(Z)V
     .locals 0
 
-    .line 204
     iput-boolean p1, p0, Lcom/android/server/power/PowerGroup;->mPoweringOn:Z
 
     return-void
@@ -940,7 +856,6 @@
 .method public setLastGoToSleepReasonLocked(I)V
     .locals 0
 
-    .line 399
     iput p1, p0, Lcom/android/server/power/PowerGroup;->mLastGoToSleepReason:I
 
     return-void
@@ -949,7 +864,6 @@
 .method public setLastPowerOnTimeLocked(J)V
     .locals 0
 
-    .line 196
     iput-wide p1, p0, Lcom/android/server/power/PowerGroup;->mLastPowerOnTime:J
 
     return-void
@@ -958,10 +872,8 @@
 .method public setLastUserActivityTimeLocked(JI)V
     .locals 0
 
-    .line 318
     iput-wide p1, p0, Lcom/android/server/power/PowerGroup;->mLastUserActivityTime:J
 
-    .line 319
     iput p3, p0, Lcom/android/server/power/PowerGroup;->mLastUserActivityEvent:I
 
     return-void
@@ -970,10 +882,8 @@
 .method public setLastUserActivityTimeNoChangeLightsLocked(JI)V
     .locals 0
 
-    .line 328
     iput-wide p1, p0, Lcom/android/server/power/PowerGroup;->mLastUserActivityTimeNoChangeLights:J
 
-    .line 329
     iput p3, p0, Lcom/android/server/power/PowerGroup;->mLastUserActivityEvent:I
 
     return-void
@@ -982,12 +892,10 @@
 .method public setReadyLocked(Z)Z
     .locals 1
 
-    .line 184
     iget-boolean v0, p0, Lcom/android/server/power/PowerGroup;->mReady:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 185
     iput-boolean p1, p0, Lcom/android/server/power/PowerGroup;->mReady:Z
 
     const/4 p0, 0x1
@@ -1003,7 +911,6 @@
 .method public setSandmanSummonedLocked(Z)V
     .locals 0
 
-    .line 217
     iput-boolean p1, p0, Lcom/android/server/power/PowerGroup;->mIsSandmanSummoned:Z
 
     return-void
@@ -1012,7 +919,6 @@
 .method public setUserActivitySummaryLocked(I)V
     .locals 0
 
-    .line 349
     iput p1, p0, Lcom/android/server/power/PowerGroup;->mUserActivitySummary:I
 
     return-void
@@ -1021,7 +927,6 @@
 .method public setWakeLockSummaryLocked(I)V
     .locals 0
 
-    .line 384
     iput p1, p0, Lcom/android/server/power/PowerGroup;->mWakeLockSummary:I
 
     return-void
@@ -1036,7 +941,6 @@
 
     move-wide v3, p2
 
-    .line 148
     iget v1, v0, Lcom/android/server/power/PowerGroup;->mWakefulness:I
 
     if-eq v1, v2, :cond_2
@@ -1045,18 +949,14 @@
 
     if-ne v2, v10, :cond_0
 
-    .line 150
     invoke-virtual {p0, p2, p3}, Lcom/android/server/power/PowerGroup;->setLastPowerOnTimeLocked(J)V
 
-    .line 151
     invoke-virtual {p0, v10}, Lcom/android/server/power/PowerGroup;->setIsPoweringOnLocked(Z)V
 
-    .line 152
     iput-wide v3, v0, Lcom/android/server/power/PowerGroup;->mLastWakeTime:J
 
     goto :goto_0
 
-    .line 153
     :cond_0
     invoke-static {v1}, Landroid/os/PowerManagerInternal;->isInteractive(I)Z
 
@@ -1070,15 +970,12 @@
 
     if-nez v1, :cond_1
 
-    .line 154
     iput-wide v3, v0, Lcom/android/server/power/PowerGroup;->mLastSleepTime:J
 
-    .line 156
     :cond_1
     :goto_0
     iput v2, v0, Lcom/android/server/power/PowerGroup;->mWakefulness:I
 
-    .line 157
     iget-object v1, v0, Lcom/android/server/power/PowerGroup;->mWakefulnessListener:Lcom/android/server/power/PowerGroup$PowerGroupListener;
 
     iget v5, v0, Lcom/android/server/power/PowerGroup;->mGroupId:I
@@ -1114,7 +1011,6 @@
 .method public shouldEnableInteractiveModeLocked(ZZ)Z
     .locals 3
 
-    .line 598
     invoke-virtual {p0}, Lcom/android/server/power/PowerGroup;->isBrightOrDimLocked()Z
 
     move-result v0
@@ -1125,7 +1021,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 599
     iget p0, p0, Lcom/android/server/power/PowerGroup;->mWakefulness:I
 
     if-nez p0, :cond_0
@@ -1140,7 +1035,6 @@
     :cond_1
     return v2
 
-    .line 608
     :cond_2
     iget-object p0, p0, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
@@ -1169,10 +1063,8 @@
 
     const-wide/32 v1, 0x20000
 
-    .line 298
     invoke-static {v1, v2, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 300
     :try_start_0
     sget-object v0, Lcom/android/server/power/PowerGroup;->TAG:Ljava/lang/String;
 
@@ -1184,7 +1076,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 301
     invoke-virtual {p0}, Lcom/android/server/power/PowerGroup;->getGroupId()I
 
     move-result v4
@@ -1203,7 +1094,6 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 302
     invoke-static/range {p4 .. p4}, Landroid/os/PowerManager;->sleepReasonToString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -1218,14 +1108,12 @@
 
     move-result-object v3
 
-    .line 300
     invoke-static {v0, v3}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
     move-object v3, p0
 
-    .line 303
     invoke-virtual {p0, v0}, Lcom/android/server/power/PowerGroup;->setSandmanSummonedLocked(Z)V
 
     const/4 v6, 0x0
@@ -1244,12 +1132,10 @@
 
     move/from16 v10, p4
 
-    .line 304
     invoke-virtual/range {v5 .. v13}, Lcom/android/server/power/PowerGroup;->setWakefulnessLocked(IJIIILjava/lang/String;Ljava/lang/String;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 307
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return v0
@@ -1259,14 +1145,12 @@
 
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 308
     throw v0
 .end method
 
 .method public supportsSandmanLocked()Z
     .locals 0
 
-    .line 408
     iget-boolean p0, p0, Lcom/android/server/power/PowerGroup;->mSupportsSandman:Z
 
     return p0
@@ -1277,7 +1161,6 @@
 
     move-object v7, p0
 
-    .line 562
     iget-object v8, v7, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     move-object v0, p0
@@ -1298,7 +1181,6 @@
 
     iput v0, v8, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->policy:I
 
-    .line 565
     iget-object v0, v7, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     move v1, p1
@@ -1307,15 +1189,12 @@
 
     move v1, p2
 
-    .line 566
     iput-boolean v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->useProximitySensor:Z
 
     move v1, p3
 
-    .line 567
     iput-boolean v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->boostScreenBrightness:Z
 
-    .line 569
     iget v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->policy:I
 
     const/4 v2, 0x1
@@ -1324,10 +1203,8 @@
 
     move v1, p4
 
-    .line 570
     iput v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->dozeScreenState:I
 
-    .line 571
     invoke-virtual {p0}, Lcom/android/server/power/PowerGroup;->getWakeLockSummaryLocked()I
 
     move-result v0
@@ -1338,7 +1215,6 @@
 
     if-nez p6, :cond_1
 
-    .line 572
     iget-object v0, v7, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
     iget v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->dozeScreenState:I
@@ -1349,10 +1225,8 @@
 
     const/4 v1, 0x3
 
-    .line 573
     iput v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->dozeScreenState:I
 
-    .line 575
     :cond_0
     iget v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->dozeScreenState:I
 
@@ -1362,10 +1236,8 @@
 
     const/4 v1, 0x2
 
-    .line 576
     iput v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->dozeScreenState:I
 
-    .line 579
     :cond_1
     iget-object v0, v7, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
@@ -1378,15 +1250,12 @@
     :cond_2
     const/4 v1, 0x0
 
-    .line 581
     iput v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->dozeScreenState:I
 
     const/high16 v1, 0x7fc00000    # Float.NaN
 
-    .line 582
     iput v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->dozeScreenBrightness:F
 
-    .line 584
     :goto_0
     iget-object v0, v7, Lcom/android/server/power/PowerGroup;->mDisplayPowerRequest:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;
 
@@ -1398,10 +1267,8 @@
 
     move/from16 v1, p15
 
-    .line 587
     iput v1, v0, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->screenLowPowerBrightnessFactor:F
 
-    .line 589
     iget-object v1, v7, Lcom/android/server/power/PowerGroup;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     iget v2, v7, Lcom/android/server/power/PowerGroup;->mGroupId:I
@@ -1412,7 +1279,6 @@
 
     move-result v0
 
-    .line 591
     iget-object v1, v7, Lcom/android/server/power/PowerGroup;->mNotifier:Lcom/android/server/power/Notifier;
 
     iget v2, v7, Lcom/android/server/power/PowerGroup;->mGroupId:I
@@ -1431,7 +1297,6 @@
 
     move-object v0, p0
 
-    .line 227
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1452,7 +1317,6 @@
 
     invoke-static {v10, v11, v1}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 229
     :try_start_0
     sget-object v1, Lcom/android/server/power/PowerGroup;->TAG:Ljava/lang/String;
 
@@ -1466,7 +1330,6 @@
 
     iget v3, v0, Lcom/android/server/power/PowerGroup;->mWakefulness:I
 
-    .line 230
     invoke-static {v3}, Landroid/os/PowerManagerInternal;->wakefulnessToString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1493,7 +1356,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 233
     invoke-static {p3}, Landroid/os/PowerManager;->wakeReasonToString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1516,17 +1378,14 @@
 
     move-result-object v2
 
-    .line 229
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v1, "Screen turning on"
 
-    .line 236
     iget v2, v0, Lcom/android/server/power/PowerGroup;->mGroupId:I
 
     invoke-static {v10, v11, v1, v2}, Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V
 
-    .line 238
     iget v1, v0, Lcom/android/server/power/PowerGroup;->mGroupId:I
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1555,12 +1414,10 @@
 
     move-object/from16 v9, p4
 
-    .line 240
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/power/PowerGroup;->setWakefulnessLocked(IJIIILjava/lang/String;Ljava/lang/String;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 243
     invoke-static {v10, v11}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void
@@ -1570,6 +1427,5 @@
 
     invoke-static {v10, v11}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 244
     throw v0
 .end method

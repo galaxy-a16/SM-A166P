@@ -59,7 +59,6 @@
 .method public static synthetic $r8$lambda$ArUNrYCbabE_h-th2phk-PAd_Sc(Lcom/android/server/pm/VerifyingSession;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->start()V
 
     return-void
@@ -68,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPm(Lcom/android/server/pm/VerifyingSession;)Lcom/android/server/pm/PackageManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     return-object p0
@@ -77,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$mgetIntegrityVerificationTimeout(Lcom/android/server/pm/VerifyingSession;)J
     .locals 2
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->getIntegrityVerificationTimeout()J
 
     move-result-wide v0
@@ -88,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$mstartVerificationTimeoutCountdown(Lcom/android/server/pm/VerifyingSession;IZLcom/android/server/pm/PackageVerificationResponse;J)V
     .locals 0
 
-    .line 0
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/pm/VerifyingSession;->startVerificationTimeoutCountdown(IZLcom/android/server/pm/PackageVerificationResponse;J)V
 
     return-void
@@ -97,31 +93,24 @@
 .method public constructor <init>(Landroid/os/UserHandle;Ljava/io/File;Ljava/lang/String;Landroid/content/pm/IPackageInstallObserver2;Landroid/content/pm/PackageInstaller$SessionParams;Lcom/android/server/pm/InstallSource;ILandroid/content/pm/SigningDetails;ILandroid/content/pm/parsing/PackageLite;ZLcom/android/server/pm/PackageManagerService;)V
     .locals 3
 
-    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 138
     iput v0, p0, Lcom/android/server/pm/VerifyingSession;->sessionFlags:I
 
     const/4 v1, 0x1
 
-    .line 144
     iput v1, p0, Lcom/android/server/pm/VerifyingSession;->mRet:I
 
     const/4 v2, 0x0
 
-    .line 145
     iput-object v2, p0, Lcom/android/server/pm/VerifyingSession;->mErrorMessage:Ljava/lang/String;
 
-    .line 159
     iput-object p12, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 160
     iput-object p1, p0, Lcom/android/server/pm/VerifyingSession;->mUser:Landroid/os/UserHandle;
 
-    .line 161
     new-instance p1, Lcom/android/server/pm/InstallPackageHelper;
 
     invoke-direct {p1, p12}, Lcom/android/server/pm/InstallPackageHelper;-><init>(Lcom/android/server/pm/PackageManagerService;)V
@@ -130,7 +119,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 164
     invoke-static {p2}, Lcom/android/server/pm/OriginInfo;->fromStagedFile(Ljava/io/File;)Lcom/android/server/pm/OriginInfo;
 
     move-result-object p1
@@ -139,7 +127,6 @@
 
     goto :goto_0
 
-    .line 166
     :cond_0
     invoke-static {p3}, Lcom/android/server/pm/OriginInfo;->fromStagedContainer(Ljava/lang/String;)Lcom/android/server/pm/OriginInfo;
 
@@ -147,24 +134,19 @@
 
     iput-object p1, p0, Lcom/android/server/pm/VerifyingSession;->mOriginInfo:Lcom/android/server/pm/OriginInfo;
 
-    .line 169
     :goto_0
     iput-object p4, p0, Lcom/android/server/pm/VerifyingSession;->mObserver:Landroid/content/pm/IPackageInstallObserver2;
 
-    .line 170
     iget p1, p5, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     iput p1, p0, Lcom/android/server/pm/VerifyingSession;->mInstallFlags:I
 
-    .line 171
     iput-object p6, p0, Lcom/android/server/pm/VerifyingSession;->mInstallSource:Lcom/android/server/pm/InstallSource;
 
-    .line 172
     iget-object p1, p5, Landroid/content/pm/PackageInstaller$SessionParams;->abiOverride:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/server/pm/VerifyingSession;->mPackageAbiOverride:Ljava/lang/String;
 
-    .line 173
     new-instance p1, Lcom/android/server/pm/VerificationInfo;
 
     iget-object p2, p5, Landroid/content/pm/PackageInstaller$SessionParams;->originatingUri:Landroid/net/Uri;
@@ -177,20 +159,16 @@
 
     iput-object p1, p0, Lcom/android/server/pm/VerifyingSession;->mVerificationInfo:Lcom/android/server/pm/VerificationInfo;
 
-    .line 179
     iput-object p8, p0, Lcom/android/server/pm/VerifyingSession;->mSigningDetails:Landroid/content/pm/SigningDetails;
 
-    .line 180
     iget-wide p1, p5, Landroid/content/pm/PackageInstaller$SessionParams;->requiredInstalledVersionCode:J
 
     iput-wide p1, p0, Lcom/android/server/pm/VerifyingSession;->mRequiredInstalledVersionCode:J
 
-    .line 181
     iget-object p1, p5, Landroid/content/pm/PackageInstaller$SessionParams;->dataLoaderParams:Landroid/content/pm/DataLoaderParams;
 
     if-eqz p1, :cond_1
 
-    .line 182
     invoke-virtual {p1}, Landroid/content/pm/DataLoaderParams;->getType()I
 
     move-result p1
@@ -203,26 +181,20 @@
     :goto_1
     iput p1, p0, Lcom/android/server/pm/VerifyingSession;->mDataLoaderType:I
 
-    .line 183
     iput p9, p0, Lcom/android/server/pm/VerifyingSession;->mSessionId:I
 
-    .line 185
     iget p1, p5, Landroid/content/pm/PackageInstaller$SessionParams;->sessionFlags:I
 
     iput p1, p0, Lcom/android/server/pm/VerifyingSession;->sessionFlags:I
 
-    .line 187
     iput-object p10, p0, Lcom/android/server/pm/VerifyingSession;->mPackageLite:Landroid/content/pm/parsing/PackageLite;
 
-    .line 188
     iput-boolean p11, p0, Lcom/android/server/pm/VerifyingSession;->mUserActionRequired:Z
 
-    .line 189
     iget p1, p5, Landroid/content/pm/PackageInstaller$SessionParams;->requireUserAction:I
 
     iput p1, p0, Lcom/android/server/pm/VerifyingSession;->mUserActionRequiredType:I
 
-    .line 190
     iget p1, p5, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
     const/4 p2, 0x2
@@ -234,7 +206,6 @@
     :cond_2
     iput-boolean v0, p0, Lcom/android/server/pm/VerifyingSession;->mIsInherit:Z
 
-    .line 191
     iget-boolean p1, p5, Landroid/content/pm/PackageInstaller$SessionParams;->isStaged:Z
 
     iput-boolean p1, p0, Lcom/android/server/pm/VerifyingSession;->mIsStaged:Z
@@ -245,7 +216,6 @@
 .method public static matchComponentForVerifier(Ljava/lang/String;Ljava/util/List;)Landroid/content/ComponentName;
     .locals 5
 
-    .line 851
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -257,21 +227,18 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 853
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/content/pm/ResolveInfo;
 
-    .line 854
     iget-object v4, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-nez v4, :cond_0
 
     goto :goto_1
 
-    .line 858
     :cond_0
     iget-object v4, v4, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
@@ -281,7 +248,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 859
     iget-object p0, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     goto :goto_2
@@ -300,7 +266,6 @@
 
     return-object v2
 
-    .line 868
     :cond_3
     new-instance p1, Landroid/content/ComponentName;
 
@@ -318,7 +283,6 @@
 .method public getDataLoaderType()I
     .locals 0
 
-    .line 981
     iget p0, p0, Lcom/android/server/pm/VerifyingSession;->mDataLoaderType:I
 
     return p0
@@ -327,12 +291,10 @@
 .method public getDefaultVerificationResponse()I
     .locals 3
 
-    .line 704
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
-    .line 705
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->getUser()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -343,7 +305,6 @@
 
     const-string v2, "ensure_verify_apps"
 
-    .line 704
     invoke-virtual {v0, v2, v1}, Lcom/android/server/pm/UserManagerService;->hasUserRestriction(Ljava/lang/String;I)Z
 
     move-result v0
@@ -354,7 +315,6 @@
 
     return p0
 
-    .line 708
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -378,7 +338,6 @@
 .method public getErrorMessage()Ljava/lang/String;
     .locals 0
 
-    .line 972
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mErrorMessage:Ljava/lang/String;
 
     return-object p0
@@ -387,7 +346,6 @@
 .method public getInstallerPackageUid()I
     .locals 0
 
-    .line 993
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mInstallSource:Lcom/android/server/pm/InstallSource;
 
     iget p0, p0, Lcom/android/server/pm/InstallSource;->mInstallerPackageUid:I
@@ -398,7 +356,6 @@
 .method public final getIntegrityVerificationTimeout()J
     .locals 5
 
-    .line 376
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -415,7 +372,6 @@
 
     move-result-wide v3
 
-    .line 381
     invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
@@ -426,7 +382,6 @@
 .method public getRet()I
     .locals 0
 
-    .line 969
     iget p0, p0, Lcom/android/server/pm/VerifyingSession;->mRet:I
 
     return p0
@@ -435,7 +390,6 @@
 .method public getSessionId()I
     .locals 0
 
-    .line 978
     iget p0, p0, Lcom/android/server/pm/VerifyingSession;->mSessionId:I
 
     return p0
@@ -444,7 +398,6 @@
 .method public getUser()Landroid/os/UserHandle;
     .locals 0
 
-    .line 975
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mUser:Landroid/os/UserHandle;
 
     return-object p0
@@ -453,7 +406,6 @@
 .method public getUserActionRequiredType()I
     .locals 0
 
-    .line 984
     iget p0, p0, Lcom/android/server/pm/VerifyingSession;->mUserActionRequiredType:I
 
     return p0
@@ -464,10 +416,8 @@
 
     const/4 v0, 0x0
 
-    .line 910
     iput-boolean v0, p0, Lcom/android/server/pm/VerifyingSession;->mWaitForIntegrityVerificationToComplete:Z
 
-    .line 911
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->handleReturnCode()V
 
     return-void
@@ -476,7 +426,6 @@
 .method public handleReturnCode()V
     .locals 2
 
-    .line 922
     iget-boolean v0, p0, Lcom/android/server/pm/VerifyingSession;->mWaitForVerificationToComplete:Z
 
     if-nez v0, :cond_1
@@ -491,18 +440,15 @@
 
     goto :goto_0
 
-    .line 926
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->sendVerificationCompleteNotification()V
 
-    .line 927
     iget v0, p0, Lcom/android/server/pm/VerifyingSession;->mRet:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 928
     invoke-static {p0}, Lcom/android/server/pm/PackageMetrics;->onVerificationFailed(Lcom/android/server/pm/VerifyingSession;)V
 
     :cond_1
@@ -515,10 +461,8 @@
 
     const/4 v0, 0x0
 
-    .line 917
     iput-boolean v0, p0, Lcom/android/server/pm/VerifyingSession;->mWaitForEnableRollbackToComplete:Z
 
-    .line 918
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->handleReturnCode()V
 
     return-void
@@ -527,7 +471,6 @@
 .method public handleStartVerify()V
     .locals 5
 
-    .line 201
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -546,7 +489,6 @@
 
     move-result-object v0
 
-    .line 204
     iget-object v1, p0, Lcom/android/server/pm/VerifyingSession;->mInstallPackageHelper:Lcom/android/server/pm/InstallPackageHelper;
 
     iget-wide v2, p0, Lcom/android/server/pm/VerifyingSession;->mRequiredInstalledVersionCode:J
@@ -557,7 +499,6 @@
 
     move-result-object v1
 
-    .line 206
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -572,7 +513,6 @@
 
     invoke-virtual {p0, v2, v1}, Lcom/android/server/pm/VerifyingSession;->setReturnCode(ILjava/lang/String;)V
 
-    .line 207
     iget v1, p0, Lcom/android/server/pm/VerifyingSession;->mRet:I
 
     const/4 v2, 0x1
@@ -581,7 +521,6 @@
 
     return-void
 
-    .line 213
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/VerifyingSession;->mOriginInfo:Lcom/android/server/pm/OriginInfo;
 
@@ -589,17 +528,14 @@
 
     if-nez v1, :cond_2
 
-    .line 214
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->isApex()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 216
     invoke-virtual {p0, v0}, Lcom/android/server/pm/VerifyingSession;->sendApkVerificationRequest(Landroid/content/pm/PackageInfoLite;)V
 
-    .line 218
     :cond_1
     iget v0, p0, Lcom/android/server/pm/VerifyingSession;->mInstallFlags:I
 
@@ -609,7 +545,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 219
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->sendEnableRollbackRequest()V
 
     :cond_2
@@ -621,10 +556,8 @@
 
     const/4 v0, 0x0
 
-    .line 905
     iput-boolean v0, p0, Lcom/android/server/pm/VerifyingSession;->mWaitForVerificationToComplete:Z
 
-    .line 906
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->handleReturnCode()V
 
     return-void
@@ -633,12 +566,10 @@
 .method public final isAdbVerificationEnabled(Landroid/content/pm/PackageInfoLite;IZ)Z
     .locals 5
 
-    .line 720
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
 
-    .line 721
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -647,7 +578,6 @@
 
     const/4 v2, 0x1
 
-    .line 720
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -663,7 +593,6 @@
     :cond_0
     move v0, v1
 
-    .line 724
     :goto_0
     iget-object v3, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -681,7 +610,6 @@
 
     const-string p1, "Force verification of ADB install because of user restriction."
 
-    .line 726
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -695,7 +623,6 @@
     :cond_3
     if-eqz p3, :cond_5
 
-    .line 738
     iget-object p2, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
     invoke-virtual {p0, p2}, Lcom/android/server/pm/VerifyingSession;->packageExists(Ljava/lang/String;)Z
@@ -706,7 +633,6 @@
 
     return v2
 
-    .line 743
     :cond_4
     iget-boolean p0, p1, Landroid/content/pm/PackageInfoLite;->debuggable:Z
 
@@ -721,7 +647,6 @@
 .method public isApex()Z
     .locals 1
 
-    .line 996
     iget p0, p0, Lcom/android/server/pm/VerifyingSession;->mInstallFlags:I
 
     const/high16 v0, 0x20000
@@ -744,7 +669,6 @@
 .method public isInherit()Z
     .locals 0
 
-    .line 990
     iget-boolean p0, p0, Lcom/android/server/pm/VerifyingSession;->mIsInherit:Z
 
     return p0
@@ -753,7 +677,6 @@
 .method public isInstant()Z
     .locals 0
 
-    .line 987
     iget p0, p0, Lcom/android/server/pm/VerifyingSession;->mInstallFlags:I
 
     and-int/lit16 p0, p0, 0x800
@@ -774,7 +697,6 @@
 .method public final isIntegrityVerificationEnabled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -783,7 +705,6 @@
 .method public isStaged()Z
     .locals 0
 
-    .line 999
     iget-boolean p0, p0, Lcom/android/server/pm/VerifyingSession;->mIsStaged:Z
 
     return p0
@@ -792,7 +713,6 @@
 .method public final isVerificationEnabled(Landroid/content/pm/PackageInfoLite;ILjava/util/List;)Z
     .locals 10
 
-    .line 760
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mVerificationInfo:Lcom/android/server/pm/VerificationInfo;
 
     if-nez v0, :cond_0
@@ -804,7 +724,6 @@
     :cond_0
     iget v0, v0, Lcom/android/server/pm/VerificationInfo;->mInstallerUid:I
 
-    .line 761
     :goto_0
     iget v1, p0, Lcom/android/server/pm/VerifyingSession;->mInstallFlags:I
 
@@ -825,7 +744,6 @@
     :cond_1
     move v1, v3
 
-    .line 766
     :goto_1
     :try_start_0
     iget-object v4, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
@@ -838,7 +756,6 @@
 
     const-string/jumbo v5, "mum_container_policy"
 
-    .line 767
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v5
@@ -847,7 +764,6 @@
 
     move-result-object v5
 
-    .line 768
     invoke-static {v4, p2}, Lcom/android/server/knox/ContainerDependencyWrapper;->getContextInfo(II)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object v4
@@ -856,7 +772,6 @@
 
     move-result-object v4
 
-    .line 769
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -879,7 +794,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 770
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -901,7 +815,6 @@
     :cond_2
     const-string v5, ".*"
 
-    .line 772
     invoke-interface {v4, v5}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v4
@@ -910,7 +823,6 @@
 
     const-string v4, "isVerificationEnabled :: installer policy contains *."
 
-    .line 773
     invoke-static {v7, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
@@ -918,7 +830,6 @@
     :cond_3
     const-string v4, "isVerificationEnabled :: installer policy exits."
 
-    .line 775
     invoke-static {v7, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -928,10 +839,8 @@
     :catch_0
     move-exception v4
 
-    .line 778
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 782
     :goto_3
     iget v4, p0, Lcom/android/server/pm/VerifyingSession;->mInstallFlags:I
 
@@ -939,7 +848,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 783
     invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/pm/VerifyingSession;->isAdbVerificationEnabled(Landroid/content/pm/PackageInfoLite;IZ)Z
 
     move-result p0
@@ -951,7 +859,6 @@
 
     return v3
 
-    .line 791
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->isInstant()Z
 
@@ -965,10 +872,8 @@
 
     if-eqz p1, :cond_7
 
-    .line 792
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 793
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -987,14 +892,12 @@
 
     check-cast p3, Ljava/lang/String;
 
-    .line 794
     invoke-virtual {p1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    .line 796
     :try_start_2
     iget-object v1, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -1008,14 +911,12 @@
 
     check-cast v1, Landroid/app/AppOpsManager;
 
-    .line 797
     invoke-virtual {v1, v0, p3}, Landroid/app/AppOpsManager;->checkPackage(ILjava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_1
 
     return v3
 
-    .line 808
     :cond_7
     iget p0, p0, Lcom/android/server/pm/VerifyingSession;->sessionFlags:I
 
@@ -1034,7 +935,6 @@
 .method public final matchVerifiers(Landroid/content/pm/PackageInfoLite;Ljava/util/List;Lcom/android/server/pm/PackageVerificationState;)Ljava/util/List;
     .locals 6
 
-    .line 816
     iget-object v0, p1, Landroid/content/pm/PackageInfoLite;->verifiers:[Landroid/content/pm/VerifierInfo;
 
     if-eqz v0, :cond_4
@@ -1045,11 +945,9 @@
 
     goto :goto_2
 
-    .line 820
     :cond_0
     array-length v0, v0
 
-    .line 821
     new-instance v1, Ljava/util/ArrayList;
 
     add-int/lit8 v2, v0, 0x1
@@ -1061,12 +959,10 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
-    .line 823
     iget-object v3, p1, Landroid/content/pm/PackageInfoLite;->verifiers:[Landroid/content/pm/VerifierInfo;
 
     aget-object v3, v3, v2
 
-    .line 825
     iget-object v4, v3, Landroid/content/pm/VerifierInfo;->packageName:Ljava/lang/String;
 
     invoke-static {v4, p2}, Lcom/android/server/pm/VerifyingSession;->matchComponentForVerifier(Ljava/lang/String;Ljava/util/List;)Landroid/content/ComponentName;
@@ -1077,7 +973,6 @@
 
     goto :goto_1
 
-    .line 831
     :cond_1
     iget-object v5, p0, Lcom/android/server/pm/VerifyingSession;->mInstallPackageHelper:Lcom/android/server/pm/InstallPackageHelper;
 
@@ -1091,11 +986,9 @@
 
     goto :goto_1
 
-    .line 840
     :cond_2
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 841
     invoke-virtual {p3, v3}, Lcom/android/server/pm/PackageVerificationState;->addSufficientVerifier(I)V
 
     :goto_1
@@ -1116,14 +1009,12 @@
 .method public final packageExists(Ljava/lang/String;)Z
     .locals 0
 
-    .line 714
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
 
     move-result-object p0
 
-    .line 715
     invoke-interface {p0, p1}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p0
@@ -1144,7 +1035,6 @@
 .method public populateInstallerExtras(Landroid/content/Intent;)V
     .locals 2
 
-    .line 872
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mInstallSource:Lcom/android/server/pm/InstallSource;
 
     iget-object v0, v0, Lcom/android/server/pm/InstallSource;->mInitiatingPackageName:Ljava/lang/String;
@@ -1153,22 +1043,18 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 875
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mVerificationInfo:Lcom/android/server/pm/VerificationInfo;
 
     if-eqz v0, :cond_3
 
-    .line 876
     iget-object v0, v0, Lcom/android/server/pm/VerificationInfo;->mOriginatingUri:Landroid/net/Uri;
 
     if-eqz v0, :cond_0
 
     const-string v1, "android.intent.extra.ORIGINATING_URI"
 
-    .line 877
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 880
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mVerificationInfo:Lcom/android/server/pm/VerificationInfo;
 
@@ -1178,10 +1064,8 @@
 
     const-string v1, "android.intent.extra.REFERRER"
 
-    .line 881
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 884
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mVerificationInfo:Lcom/android/server/pm/VerificationInfo;
 
@@ -1191,10 +1075,8 @@
 
     const-string v1, "android.intent.extra.ORIGINATING_UID"
 
-    .line 885
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 888
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mVerificationInfo:Lcom/android/server/pm/VerificationInfo;
 
@@ -1204,7 +1086,6 @@
 
     const-string v0, "android.content.pm.extra.VERIFICATION_INSTALLER_UID"
 
-    .line 889
     invoke-virtual {p1, v0, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     :cond_3
@@ -1216,7 +1097,6 @@
 
     const-string v0, "PackageManager"
 
-    .line 225
     iget-object v1, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget v2, v1, Lcom/android/server/pm/PackageManagerService;->mPendingVerificationToken:I
@@ -1225,53 +1105,43 @@
 
     iput v3, v1, Lcom/android/server/pm/PackageManagerService;->mPendingVerificationToken:I
 
-    .line 227
     new-instance v1, Lcom/android/server/pm/PackageVerificationState;
 
     invoke-direct {v1, p0}, Lcom/android/server/pm/PackageVerificationState;-><init>(Lcom/android/server/pm/VerifyingSession;)V
 
-    .line 229
     iget-object v3, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mPendingVerification:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 231
     invoke-virtual {p0, v2, p1, v1}, Lcom/android/server/pm/VerifyingSession;->sendIntegrityVerificationRequest(ILandroid/content/pm/PackageInfoLite;Lcom/android/server/pm/PackageVerificationState;)V
 
-    .line 232
     invoke-virtual {p0, v2, p1, v1}, Lcom/android/server/pm/VerifyingSession;->sendPackageVerificationRequest(ILandroid/content/pm/PackageInfoLite;Lcom/android/server/pm/PackageVerificationState;)V
 
-    .line 236
     invoke-virtual {v1}, Lcom/android/server/pm/PackageVerificationState;->areAllVerificationsComplete()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 237
     iget-object v1, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mPendingVerification:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 240
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->getUser()Landroid/os/UserHandle;
 
     move-result-object v1
 
-    .line 241
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     if-ne v1, v2, :cond_1
 
-    .line 242
     sget-object v1, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
-    .line 245
     :cond_1
     :try_start_0
     new-instance v2, Landroid/content/Intent;
@@ -1282,21 +1152,18 @@
 
     const-string/jumbo v3, "packageName"
 
-    .line 246
     iget-object p1, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo p1, "userID"
 
-    .line 247
     invoke-virtual {v1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v1
 
     invoke-virtual {v2, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -1309,7 +1176,6 @@
 
     const-string/jumbo p0, "sendBroadcastAsUser. PACKAGE_INSTALL_STARTED"
 
-    .line 249
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1321,7 +1187,6 @@
 
     const-string p1, "Failed to send an intent for PACKAGE_INSTALL_STARTED: "
 
-    .line 251
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1331,7 +1196,6 @@
 .method public sendEnableRollbackRequest()V
     .locals 9
 
-    .line 257
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget v1, v0, Lcom/android/server/pm/PackageManagerService;->mPendingEnableRollbackToken:I
@@ -1344,17 +1208,14 @@
 
     const-string v0, "enable_rollback"
 
-    .line 258
     invoke-static {v2, v3, v0, v1}, Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V
 
-    .line 260
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mPendingEnableRollback:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1, p0}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 262
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.PACKAGE_ENABLE_ROLLBACK"
@@ -1363,32 +1224,26 @@
 
     const-string v2, "android.content.pm.extra.ENABLE_ROLLBACK_TOKEN"
 
-    .line 263
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v2, "android.content.pm.extra.ENABLE_ROLLBACK_SESSION_ID"
 
-    .line 266
     iget v3, p0, Lcom/android/server/pm/VerifyingSession;->mSessionId:I
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v2, "application/vnd.android.package-archive"
 
-    .line 269
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     const v2, 0x10000001
 
-    .line 270
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const/high16 v2, 0x4000000
 
-    .line 278
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 280
     iget-object v2, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -1401,7 +1256,6 @@
 
     const/4 v0, 0x1
 
-    .line 283
     iput-boolean v0, p0, Lcom/android/server/pm/VerifyingSession;->mWaitForEnableRollbackToComplete:Z
 
     const-string/jumbo v0, "rollback"
@@ -1410,7 +1264,6 @@
 
     const-wide/16 v3, 0x2710
 
-    .line 286
     invoke-static {v0, v2, v3, v4}, Landroid/provider/DeviceConfig;->getLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -1426,7 +1279,6 @@
     :cond_0
     move-wide v3, v5
 
-    .line 293
     :goto_0
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -1438,15 +1290,12 @@
 
     move-result-object v0
 
-    .line 294
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 295
     iget v1, p0, Lcom/android/server/pm/VerifyingSession;->mSessionId:I
 
     iput v1, v0, Landroid/os/Message;->arg2:I
 
-    .line 296
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mHandler:Landroid/os/Handler;
@@ -1467,7 +1316,6 @@
 
     move-object/from16 v3, p3
 
-    .line 306
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/VerifyingSession;->isIntegrityVerificationEnabled()Z
 
     move-result v4
@@ -1476,12 +1324,10 @@
 
     if-nez v4, :cond_0
 
-    .line 308
     invoke-virtual {v3, v5}, Lcom/android/server/pm/PackageVerificationState;->setIntegrityVerificationResult(I)V
 
     return-void
 
-    .line 314
     :cond_0
     iget-object v4, v0, Lcom/android/server/pm/VerifyingSession;->mInstallSource:Lcom/android/server/pm/InstallSource;
 
@@ -1495,7 +1341,6 @@
 
     iget-object v4, v4, Lcom/android/server/pm/InstallSource;->mInitiatingPackageName:Ljava/lang/String;
 
-    .line 315
     invoke-virtual {v6, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -1510,12 +1355,10 @@
 
     if-ne v4, v6, :cond_1
 
-    .line 317
     invoke-virtual {v3, v5}, Lcom/android/server/pm/PackageVerificationState;->setIntegrityVerificationResult(I)V
 
     return-void
 
-    .line 323
     :cond_1
     new-instance v8, Landroid/content/Intent;
 
@@ -1523,7 +1366,6 @@
 
     invoke-direct {v8, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 326
     new-instance v3, Ljava/io/File;
 
     iget-object v4, v0, Lcom/android/server/pm/VerifyingSession;->mOriginInfo:Lcom/android/server/pm/OriginInfo;
@@ -1542,15 +1384,12 @@
 
     const v3, 0x50000001
 
-    .line 332
     invoke-virtual {v8, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string v3, "android.content.pm.extra.VERIFICATION_ID"
 
-    .line 334
     invoke-virtual {v8, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 335
     iget-object v3, v2, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
     const-string v4, "android.intent.extra.PACKAGE_NAME"
@@ -1559,34 +1398,28 @@
 
     const-string v3, "android.intent.extra.VERSION_CODE"
 
-    .line 336
     iget v4, v2, Landroid/content/pm/PackageInfoLite;->versionCode:I
 
     invoke-virtual {v8, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v3, "android.intent.extra.LONG_VERSION_CODE"
 
-    .line 337
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/PackageInfoLite;->getLongVersionCode()J
 
     move-result-wide v6
 
     invoke-virtual {v8, v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 338
     invoke-virtual {v0, v8}, Lcom/android/server/pm/VerifyingSession;->populateInstallerExtras(Landroid/content/Intent;)V
 
     const-string v2, "android"
 
-    .line 341
     invoke-virtual {v8, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 343
     invoke-static {}, Landroid/app/BroadcastOptions;->makeBasic()Landroid/app/BroadcastOptions;
 
     move-result-object v2
 
-    .line 345
     iget-object v3, v0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v7, v3, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -1597,7 +1430,6 @@
 
     const/4 v11, -0x1
 
-    .line 348
     invoke-virtual {v2}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object v12
@@ -1614,17 +1446,14 @@
 
     const/16 v17, 0x0
 
-    .line 345
     invoke-virtual/range {v7 .. v17}, Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;ILandroid/os/Bundle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
     const-wide/32 v2, 0x40000
 
     const-string v4, "integrity_verification"
 
-    .line 362
     invoke-static {v2, v3, v4, v1}, Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V
 
-    .line 366
     iput-boolean v5, v0, Lcom/android/server/pm/VerifyingSession;->mWaitForIntegrityVerificationToComplete:Z
 
     return-void
@@ -1641,17 +1470,14 @@
 
     move-object/from16 v1, p3
 
-    .line 402
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/VerifyingSession;->getUser()Landroid/os/UserHandle;
 
     move-result-object v2
 
-    .line 403
     sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     if-ne v2, v3, :cond_0
 
-    .line 404
     iget-object v2, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mUserManager:Lcom/android/server/pm/UserManagerService;
@@ -1667,26 +1493,22 @@
     :cond_0
     move-object v15, v2
 
-    .line 406
     invoke-virtual {v15}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v14
 
-    .line 408
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mRequiredVerifierPackages:[Ljava/lang/String;
 
-    .line 409
     invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 415
     iget v3, v7, Lcom/android/server/pm/VerifyingSession;->mInstallFlags:I
 
     and-int/lit8 v4, v3, 0x20
@@ -1705,12 +1527,10 @@
 
     const-string v4, ""
 
-    .line 417
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 418
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -1719,17 +1539,14 @@
 
     const-string v4, ";"
 
-    .line 419
     invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 420
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 421
     array-length v6, v3
 
     const/4 v9, 0x0
@@ -1739,7 +1556,6 @@
 
     aget-object v10, v3, v9
 
-    .line 422
     invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v11
@@ -1752,7 +1568,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 423
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -1760,7 +1575,6 @@
 
     goto :goto_0
 
-    .line 427
     :cond_2
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -1768,7 +1582,6 @@
 
     if-lez v3, :cond_3
 
-    .line 432
     invoke-virtual {v7, v0, v14, v13}, Lcom/android/server/pm/VerifyingSession;->isAdbVerificationEnabled(Landroid/content/pm/PackageInfoLite;IZ)Z
 
     move-result v3
@@ -1786,7 +1599,6 @@
 
     const/16 v25, 0x0
 
-    .line 441
     :goto_1
     iget-object v2, v7, Lcom/android/server/pm/VerifyingSession;->mOriginInfo:Lcom/android/server/pm/OriginInfo;
 
@@ -1802,7 +1614,6 @@
 
     goto/16 :goto_f
 
-    .line 451
     :cond_4
     iget-object v2, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -1810,7 +1621,6 @@
 
     move-result-object v11
 
-    .line 453
     invoke-interface {v12}, Ljava/util/List;->size()I
 
     move-result v2
@@ -1822,7 +1632,6 @@
 
     if-ltz v2, :cond_6
 
-    .line 455
     invoke-interface {v12, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1835,7 +1644,6 @@
 
     if-nez v3, :cond_5
 
-    .line 457
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1844,7 +1652,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 458
     invoke-interface {v12, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -1861,10 +1668,8 @@
 
     move-result-object v3
 
-    .line 457
     invoke-static {v10, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
     invoke-interface {v12, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_5
@@ -1872,7 +1677,6 @@
 
     goto :goto_2
 
-    .line 463
     :cond_6
     invoke-interface {v12}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1897,12 +1701,10 @@
 
     move/from16 v9, v26
 
-    .line 464
     invoke-interface {v11, v3, v13, v14, v9}, Lcom/android/server/pm/Computer;->getPackageUid(Ljava/lang/String;JI)I
 
     move-result v3
 
-    .line 466
     invoke-virtual {v1, v3}, Lcom/android/server/pm/PackageVerificationState;->addRequiredVerifierUid(I)V
 
     move v14, v9
@@ -1914,7 +1716,6 @@
     :cond_7
     move/from16 v9, v26
 
-    .line 469
     new-instance v6, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.PACKAGE_NEEDS_VERIFICATION"
@@ -1923,10 +1724,8 @@
 
     const/high16 v3, 0x10000000
 
-    .line 470
     invoke-virtual {v6, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 471
     new-instance v2, Ljava/io/File;
 
     iget-object v5, v7, Lcom/android/server/pm/VerifyingSession;->mOriginInfo:Lcom/android/server/pm/OriginInfo;
@@ -1945,10 +1744,8 @@
 
     const/4 v2, 0x1
 
-    .line 473
     invoke-virtual {v6, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 476
     iget-object v2, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     const-string v19, "application/vnd.android.package-archive"
@@ -1969,17 +1766,14 @@
 
     const-string v2, "android.content.pm.extra.VERIFICATION_ID"
 
-    .line 485
     invoke-virtual {v6, v2, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v3, "android.content.pm.extra.VERIFICATION_INSTALL_FLAGS"
 
-    .line 487
     iget v13, v7, Lcom/android/server/pm/VerifyingSession;->mInstallFlags:I
 
     invoke-virtual {v6, v3, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 490
     iget-object v3, v0, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
     const-string v13, "android.content.pm.extra.VERIFICATION_PACKAGE_NAME"
@@ -1988,36 +1782,30 @@
 
     const-string v3, "android.content.pm.extra.VERIFICATION_VERSION_CODE"
 
-    .line 493
     iget v13, v0, Landroid/content/pm/PackageInfoLite;->versionCode:I
 
     invoke-virtual {v6, v3, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v3, "android.content.pm.extra.VERIFICATION_LONG_VERSION_CODE"
 
-    .line 498
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/PackageInfoLite;->getLongVersionCode()J
 
     move-result-wide v13
 
-    .line 496
     invoke-virtual {v6, v3, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 500
     iget-object v3, v7, Lcom/android/server/pm/VerifyingSession;->mPackageLite:Landroid/content/pm/parsing/PackageLite;
 
     invoke-virtual {v3}, Landroid/content/pm/parsing/PackageLite;->getBaseApkPath()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 501
     iget-object v13, v7, Lcom/android/server/pm/VerifyingSession;->mPackageLite:Landroid/content/pm/parsing/PackageLite;
 
     invoke-virtual {v13}, Landroid/content/pm/parsing/PackageLite;->getSplitApkPaths()[Ljava/lang/String;
 
     move-result-object v13
 
-    .line 504
     invoke-static {v3}, Landroid/os/incremental/IncrementalManager;->isIncrementalPath(Ljava/lang/String;)Z
 
     move-result v14
@@ -2028,12 +1816,10 @@
 
     if-eqz v14, :cond_8
 
-    .line 505
     invoke-static {v3, v13}, Lcom/android/server/pm/PackageManagerServiceUtils;->buildVerificationRootHashString(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 507
     invoke-virtual {v6, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-object v14, v3
@@ -2043,7 +1829,6 @@
     :cond_8
     const/4 v14, 0x0
 
-    .line 512
     :goto_4
     iget v3, v7, Lcom/android/server/pm/VerifyingSession;->mDataLoaderType:I
 
@@ -2051,7 +1836,6 @@
 
     invoke-virtual {v6, v13, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 514
     iget v3, v7, Lcom/android/server/pm/VerifyingSession;->mSessionId:I
 
     const-string v8, "android.content.pm.extra.SESSION_ID"
@@ -2062,15 +1846,12 @@
 
     move-object/from16 v33, v2
 
-    .line 516
     iget-boolean v2, v7, Lcom/android/server/pm/VerifyingSession;->mUserActionRequired:Z
 
     invoke-virtual {v6, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 518
     invoke-virtual {v7, v6}, Lcom/android/server/pm/VerifyingSession;->populateInstallerExtras(Landroid/content/Intent;)V
 
-    .line 523
     iget v2, v7, Lcom/android/server/pm/VerifyingSession;->mDataLoaderType:I
 
     const/4 v3, 0x2
@@ -2079,7 +1860,6 @@
 
     iget-object v2, v7, Lcom/android/server/pm/VerifyingSession;->mSigningDetails:Landroid/content/pm/SigningDetails;
 
-    .line 524
     invoke-virtual {v2}, Landroid/content/pm/SigningDetails;->getSignatureSchemeVersion()I
 
     move-result v2
@@ -2088,7 +1868,6 @@
 
     if-ne v2, v3, :cond_9
 
-    .line 525
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/VerifyingSession;->getDefaultVerificationResponse()I
 
     move-result v2
@@ -2104,7 +1883,6 @@
     :cond_9
     const/4 v3, 0x0
 
-    .line 530
     :goto_5
     iget-object v2, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -2114,7 +1892,6 @@
 
     move-result-wide v16
 
-    .line 533
     iget-object v2, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -2131,7 +1908,6 @@
 
     if-lez v2, :cond_a
 
-    .line 537
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2159,32 +1935,27 @@
 
     move-wide/from16 v38, v16
 
-    .line 545
     :goto_6
     invoke-virtual/range {v26 .. v26}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object v2
 
-    .line 544
     invoke-virtual {v7, v0, v2, v1}, Lcom/android/server/pm/VerifyingSession;->matchVerifiers(Landroid/content/pm/PackageInfoLite;Ljava/util/List;Lcom/android/server/pm/PackageVerificationState;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 548
     iget-boolean v0, v0, Landroid/content/pm/PackageInfoLite;->isSdkLibrary:Z
 
     if-eqz v0, :cond_c
 
     if-nez v2, :cond_b
 
-    .line 550
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     move-object v2, v0
 
-    .line 552
     :cond_b
     new-instance v0, Landroid/content/ComponentName;
 
@@ -2194,17 +1965,14 @@
 
     invoke-direct {v0, v3, v13}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 554
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 557
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/PackageVerificationState;->addSufficientVerifier(I)V
 
-    .line 560
     :cond_c
     iget-object v0, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -2212,7 +1980,6 @@
 
     const-class v1, Lcom/android/server/DeviceIdleInternal;
 
-    .line 561
     invoke-virtual {v0, v1}, Lcom/android/server/pm/PackageManagerServiceInjector;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -2221,7 +1988,6 @@
 
     check-cast v40, Lcom/android/server/DeviceIdleInternal;
 
-    .line 562
     invoke-static {}, Landroid/app/BroadcastOptions;->makeBasic()Landroid/app/BroadcastOptions;
 
     move-result-object v41
@@ -2236,12 +2002,10 @@
 
     move-wide/from16 v17, v38
 
-    .line 563
     invoke-virtual/range {v16 .. v21}, Landroid/app/BroadcastOptions;->setTemporaryAppAllowlist(JIILjava/lang/String;)V
 
     if-eqz v2, :cond_e
 
-    .line 572
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
@@ -2250,12 +2014,10 @@
 
     const-string v0, "Additional verifiers required, but none installed."
 
-    .line 575
     invoke-static {v10, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 v1, -0x16
 
-    .line 576
     invoke-virtual {v7, v1, v0}, Lcom/android/server/pm/VerifyingSession;->setReturnCode(ILjava/lang/String;)V
 
     goto :goto_8
@@ -2266,19 +2028,16 @@
     :goto_7
     if-ge v1, v0, :cond_e
 
-    .line 579
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/content/ComponentName;
 
-    .line 580
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v17
 
-    .line 581
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v18
@@ -2295,23 +2054,18 @@
 
     move/from16 v21, v9
 
-    .line 580
     invoke-interface/range {v16 .. v24}, Lcom/android/server/DeviceIdleInternal;->addPowerSaveTempWhitelistApp(ILjava/lang/String;JIZILjava/lang/String;)V
 
-    .line 585
     new-instance v13, Landroid/content/Intent;
 
     invoke-direct {v13, v6}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 586
     invoke-virtual {v13, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 587
     iget-object v3, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
 
-    .line 589
     invoke-virtual/range {v41 .. v41}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object v14
@@ -2320,7 +2074,6 @@
 
     const/4 v0, 0x0
 
-    .line 587
     invoke-virtual {v3, v13, v15, v0, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/os/Bundle;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -2333,7 +2086,6 @@
     :goto_8
     const/4 v0, 0x0
 
-    .line 594
     invoke-interface {v12}, Ljava/util/List;->size()I
 
     move-result v1
@@ -2342,12 +2094,10 @@
 
     const-string v0, "No required verifiers"
 
-    .line 595
     invoke-static {v10, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 600
     :cond_f
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/VerifyingSession;->getDefaultVerificationResponse()I
 
@@ -2366,7 +2116,6 @@
 
     move v14, v3
 
-    .line 606
     :goto_9
     invoke-interface {v12}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2389,14 +2138,12 @@
 
     const-wide/32 v2, 0x10000000
 
-    .line 607
     invoke-interface {v11, v13, v2, v3, v9}, Lcom/android/server/pm/Computer;->getPackageUid(Ljava/lang/String;JI)I
 
     move-result v1
 
     if-eqz v25, :cond_13
 
-    .line 612
     invoke-interface {v12}, Ljava/util/List;->size()I
 
     move-result v0
@@ -2419,26 +2166,21 @@
 
     goto :goto_b
 
-    .line 626
     :cond_11
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 627
     invoke-virtual {v0, v12}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const/high16 v3, 0x10000000
 
-    .line 628
     invoke-virtual {v0, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const/16 v2, 0x20
 
-    .line 629
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 630
     new-instance v2, Ljava/io/File;
 
     iget-object v3, v7, Lcom/android/server/pm/VerifyingSession;->mOriginInfo:Lcom/android/server/pm/OriginInfo;
@@ -2453,12 +2195,10 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 632
     iget v2, v7, Lcom/android/server/pm/VerifyingSession;->mSessionId:I
 
     invoke-virtual {v0, v8, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 633
     iget v2, v7, Lcom/android/server/pm/VerifyingSession;->mDataLoaderType:I
 
     move-object/from16 v3, v36
@@ -2471,10 +2211,8 @@
 
     if-eqz v35, :cond_12
 
-    .line 635
     invoke-virtual {v0, v12, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 638
     :cond_12
     invoke-virtual {v0, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -2492,7 +2230,6 @@
 
     move-object/from16 v3, v31
 
-    .line 640
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-object/from16 v31, v0
@@ -2514,7 +2251,6 @@
 
     move-object/from16 v33, v0
 
-    .line 614
     :goto_b
     new-instance v0, Landroid/content/Intent;
 
@@ -2522,22 +2258,18 @@
 
     if-nez v25, :cond_14
 
-    .line 617
     invoke-virtual/range {v26 .. v26}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object v2
 
-    .line 616
     invoke-static {v13, v2}, Lcom/android/server/pm/VerifyingSession;->matchComponentForVerifier(Ljava/lang/String;Ljava/util/List;)Landroid/content/ComponentName;
 
     move-result-object v2
 
-    .line 618
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     goto :goto_c
 
-    .line 620
     :cond_14
     invoke-virtual {v0, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -2548,7 +2280,6 @@
 
     move-object/from16 v34, v2
 
-    .line 645
     :goto_d
     invoke-static {}, Landroid/os/Process;->myUid()I
 
@@ -2570,7 +2301,6 @@
 
     invoke-interface/range {v16 .. v24}, Lcom/android/server/DeviceIdleInternal;->addPowerSaveTempWhitelistApp(ILjava/lang/String;JIZILjava/lang/String;)V
 
-    .line 649
     new-instance v2, Lcom/android/server/pm/PackageVerificationResponse;
 
     invoke-direct {v2, v14, v1}, Lcom/android/server/pm/PackageVerificationResponse;-><init>(II)V
@@ -2607,7 +2337,6 @@
 
     move-wide/from16 v4, v38
 
-    .line 654
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/pm/VerifyingSession;->startVerificationTimeoutCountdown(IZLcom/android/server/pm/PackageVerificationResponse;J)V
 
     goto :goto_e
@@ -2633,7 +2362,6 @@
 
     move-object v12, v2
 
-    .line 659
     :goto_e
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2665,14 +2393,12 @@
 
     invoke-static {v10, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 665
     iget-object v0, v7, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v13, v0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
 
     const/16 v35, -0x1
 
-    .line 666
     invoke-virtual/range {v41 .. v41}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object v36
@@ -2745,7 +2471,6 @@
 
     move-object/from16 v19, v3
 
-    .line 665
     invoke-virtual/range {v9 .. v19}, Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;ILandroid/os/Bundle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
     move v9, v4
@@ -2789,17 +2514,14 @@
 
     const-string/jumbo v2, "verification"
 
-    .line 680
     invoke-static {v0, v1, v2, v8}, Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V
 
     const/4 v0, 0x1
 
-    .line 686
     iput-boolean v0, v7, Lcom/android/server/pm/VerifyingSession;->mWaitForVerificationToComplete:Z
 
     return-void
 
-    .line 443
     :cond_17
     :goto_f
     invoke-virtual/range {p3 .. p3}, Lcom/android/server/pm/PackageVerificationState;->passRequiredVerification()V
@@ -2810,17 +2532,14 @@
 .method public final sendVerificationCompleteNotification()V
     .locals 4
 
-    .line 933
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mParentVerifyingSession:Lcom/android/server/pm/MultiPackageVerifyingSession;
 
     if-eqz v0, :cond_0
 
-    .line 934
     invoke-virtual {v0, p0}, Lcom/android/server/pm/MultiPackageVerifyingSession;->trySendVerificationCompleteNotification(Lcom/android/server/pm/VerifyingSession;)V
 
     goto :goto_0
 
-    .line 937
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mObserver:Landroid/content/pm/IPackageInstallObserver2;
@@ -2846,7 +2565,6 @@
 
     const-string v0, "Observer no longer exists."
 
-    .line 940
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -2856,17 +2574,14 @@
 .method public setReturnCode(ILjava/lang/String;)V
     .locals 2
 
-    .line 896
     iget v0, p0, Lcom/android/server/pm/VerifyingSession;->mRet:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 899
     iput p1, p0, Lcom/android/server/pm/VerifyingSession;->mRet:I
 
-    .line 900
     iput-object p2, p0, Lcom/android/server/pm/VerifyingSession;->mErrorMessage:Ljava/lang/String;
 
     :cond_0
@@ -2878,28 +2593,22 @@
 
     const-string/jumbo v0, "queueVerify"
 
-    .line 948
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
 
     const-wide/32 v2, 0x40000
 
-    .line 947
     invoke-static {v2, v3, v0, v1}, Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V
 
     const-string/jumbo v0, "start"
 
-    .line 949
     invoke-static {v2, v3, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 950
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->handleStartVerify()V
 
-    .line 951
     invoke-virtual {p0}, Lcom/android/server/pm/VerifyingSession;->handleReturnCode()V
 
-    .line 952
     invoke-static {v2, v3}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void
@@ -2908,7 +2617,6 @@
 .method public final startVerificationTimeoutCountdown(IZLcom/android/server/pm/PackageVerificationResponse;J)V
     .locals 2
 
-    .line 691
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mHandler:Landroid/os/Handler;
@@ -2919,16 +2627,12 @@
 
     move-result-object v0
 
-    .line 692
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 693
     iput p2, v0, Landroid/os/Message;->arg2:I
 
-    .line 694
     iput-object p3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 695
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mHandler:Landroid/os/Handler;
@@ -2941,7 +2645,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 196
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2986,17 +2689,14 @@
 
     const-string/jumbo v0, "queueVerify"
 
-    .line 957
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
 
     const-wide/32 v2, 0x40000
 
-    .line 956
     invoke-static {v2, v3, v0, v1}, Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V
 
-    .line 958
     iget-object v0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mHandler:Landroid/os/Handler;
@@ -3013,12 +2713,10 @@
 .method public verifyStage(Ljava/util/List;)V
     .locals 1
 
-    .line 963
     new-instance v0, Lcom/android/server/pm/MultiPackageVerifyingSession;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/pm/MultiPackageVerifyingSession;-><init>(Lcom/android/server/pm/VerifyingSession;Ljava/util/List;)V
 
-    .line 965
     iget-object p0, p0, Lcom/android/server/pm/VerifyingSession;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mHandler:Landroid/os/Handler;

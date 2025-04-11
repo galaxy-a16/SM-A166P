@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/pm/Settings$RuntimePermissionPersistence;)V
     .locals 0
 
-    .line 6268
     iput-object p1, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$PersistenceHandler;->this$0:Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
 
-    .line 6269
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 0
 
-    .line 6274
     iget-object p0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$PersistenceHandler;->this$0:Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
 
     invoke-static {p0}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->-$$Nest$mwritePendingStates(Lcom/android/server/pm/Settings$RuntimePermissionPersistence;)V

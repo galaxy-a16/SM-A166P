@@ -13,7 +13,6 @@
 .method public constructor <init>([Ljava/lang/String;Landroid/os/ConditionVariable;)V
     .locals 0
 
-    .line 655
     iput-object p1, p0, Lcom/android/server/enterprise/email/SettingsUtils$1;->val$ret:[Ljava/lang/String;
 
     iput-object p2, p0, Lcom/android/server/enterprise/email/SettingsUtils$1;->val$condition:Landroid/os/ConditionVariable;
@@ -30,7 +29,6 @@
 
     const-string p1, "eas_account"
 
-    .line 659
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -39,7 +37,6 @@
 
     const-string p1, "com.samsung.android.knox.intent.extra.ACCOUNT_EAS_INTERNAL"
 
-    .line 661
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -49,28 +46,24 @@
 
     const-wide/16 v1, -0x1
 
-    .line 663
     invoke-virtual {p2, v0, v1, v2}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v3
 
     const-string v0, "com.samsung.android.knox.intent.extra.USER_PASSWD_ID_INTERNAL"
 
-    .line 664
     invoke-virtual {p2, v0, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v3
 
     const-string/jumbo v0, "outgoing_user_passwd_id"
 
-    .line 665
     invoke-virtual {p2, v0, v1, v2}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v0
 
     const-string v2, "com.samsung.android.knox.intent.extra.OUTGOING_USER_PASSWD_ID_INTERNAL"
 
-    .line 666
     invoke-virtual {p2, v2, v0, v1}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -83,14 +76,12 @@
 
     const-string v5, "eas"
 
-    .line 668
     invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 669
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +96,6 @@
 
     move-result-object p1
 
-    .line 670
     iget-object v0, p0, Lcom/android/server/enterprise/email/SettingsUtils$1;->val$ret:[Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/enterprise/email/SettingsUtils;->getSecurityPassword(Ljava/lang/String;)Ljava/lang/String;
@@ -114,7 +104,6 @@
 
     aput-object p1, v0, v2
 
-    .line 671
     iget-object p1, p0, Lcom/android/server/enterprise/email/SettingsUtils$1;->val$ret:[Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -123,7 +112,6 @@
 
     goto :goto_0
 
-    .line 674
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -139,7 +127,6 @@
 
     move-result-object p1
 
-    .line 675
     iget-object v3, p0, Lcom/android/server/enterprise/email/SettingsUtils$1;->val$ret:[Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/enterprise/email/SettingsUtils;->getSecurityPassword(Ljava/lang/String;)Ljava/lang/String;
@@ -148,7 +135,6 @@
 
     aput-object p1, v3, v2
 
-    .line 676
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,7 +149,6 @@
 
     move-result-object p1
 
-    .line 677
     iget-object v0, p0, Lcom/android/server/enterprise/email/SettingsUtils$1;->val$ret:[Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/enterprise/email/SettingsUtils;->getSecurityPassword(Ljava/lang/String;)Ljava/lang/String;
@@ -172,7 +157,6 @@
 
     aput-object p1, v0, p2
 
-    .line 679
     :goto_0
     iget-object p0, p0, Lcom/android/server/enterprise/email/SettingsUtils$1;->val$condition:Landroid/os/ConditionVariable;
 

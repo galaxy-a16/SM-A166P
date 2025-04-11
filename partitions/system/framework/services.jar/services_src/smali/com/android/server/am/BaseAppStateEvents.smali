@@ -21,27 +21,20 @@
 .method public constructor <init>(ILjava/lang/String;ILjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
     .locals 1
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 57
     iput v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mExemptReason:I
 
-    .line 61
     iput p1, p0, Lcom/android/server/am/BaseAppStateEvents;->mUid:I
 
-    .line 62
     iput-object p2, p0, Lcom/android/server/am/BaseAppStateEvents;->mPackageName:Ljava/lang/String;
 
-    .line 63
     iput-object p4, p0, Lcom/android/server/am/BaseAppStateEvents;->mTag:Ljava/lang/String;
 
-    .line 64
     iput-object p5, p0, Lcom/android/server/am/BaseAppStateEvents;->mMaxTrackingDurationConfig:Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;
 
-    .line 65
     new-array p1, p3, [Ljava/util/LinkedList;
 
     iput-object p1, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
@@ -52,35 +45,28 @@
 .method public constructor <init>(Lcom/android/server/am/BaseAppStateEvents;)V
     .locals 4
 
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 57
     iput v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mExemptReason:I
 
-    .line 69
     iget v0, p1, Lcom/android/server/am/BaseAppStateEvents;->mUid:I
 
     iput v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mUid:I
 
-    .line 70
     iget-object v0, p1, Lcom/android/server/am/BaseAppStateEvents;->mPackageName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mPackageName:Ljava/lang/String;
 
-    .line 71
     iget-object v0, p1, Lcom/android/server/am/BaseAppStateEvents;->mTag:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mTag:Ljava/lang/String;
 
-    .line 72
     iget-object v0, p1, Lcom/android/server/am/BaseAppStateEvents;->mMaxTrackingDurationConfig:Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mMaxTrackingDurationConfig:Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;
 
-    .line 73
     iget-object v0, p1, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     array-length v0, v0
@@ -91,7 +77,6 @@
 
     const/4 v0, 0x0
 
-    .line 74
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
@@ -99,14 +84,12 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 75
     iget-object v2, p1, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object v2, v2, v0
 
     if-eqz v2, :cond_0
 
-    .line 76
     new-instance v2, Ljava/util/LinkedList;
 
     iget-object v3, p1, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
@@ -134,7 +117,6 @@
 .method public add(Lcom/android/server/am/BaseAppStateEvents;)V
     .locals 4
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     array-length v0, v0
@@ -150,7 +132,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 136
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
@@ -158,7 +139,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 137
     aget-object v2, v1, v0
 
     iget-object v3, p1, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
@@ -184,7 +164,6 @@
 
     const/4 v0, 0x0
 
-    .line 171
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
@@ -192,25 +171,21 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 172
     aget-object v1, v1, v0
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 175
     :cond_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 176
     invoke-virtual {p0, v0}, Lcom/android/server/am/BaseAppStateEvents;->formatEventTypeLabel(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 177
     invoke-virtual {p0, p3, p4, v0}, Lcom/android/server/am/BaseAppStateEvents;->formatEventSummary(JI)Ljava/lang/String;
 
     move-result-object v1
@@ -232,7 +207,6 @@
 .method public formatEventTypeLabel(I)Ljava/lang/String;
     .locals 0
 
-    .line 186
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -257,7 +231,6 @@
 .method public getEarliest(J)J
     .locals 2
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEvents;->mMaxTrackingDurationConfig:Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;
 
     invoke-interface {p0}, Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;->getMaxTrackingDuration()J
@@ -278,7 +251,6 @@
 .method public getRawEvents(I)Ljava/util/LinkedList;
     .locals 0
 
-    .line 143
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object p0, p0, p1
@@ -291,7 +263,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 160
     invoke-virtual {p0, v0, v1}, Lcom/android/server/am/BaseAppStateEvents;->getEarliest(J)J
 
     move-result-wide v3
@@ -319,7 +290,6 @@
 
     move v1, v0
 
-    .line 111
     :goto_0
     iget-object v2, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
@@ -327,7 +297,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 112
     aget-object v2, v2, v1
 
     if-eqz v2, :cond_0
@@ -354,7 +323,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 191
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -379,7 +347,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
@@ -404,7 +371,6 @@
 
     const/4 v0, 0x0
 
-    .line 97
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
@@ -412,7 +378,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 98
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/am/BaseAppStateEvents;->trimEvents(JI)V
 
     add-int/lit8 v0, v0, 0x1

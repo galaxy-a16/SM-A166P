@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$smLogI(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/knox/dar/DarDatabaseCache;->LogI(Ljava/lang/String;)V
 
     return-void
@@ -22,10 +21,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Lcom/android/server/knox/dar/DarDatabaseCache$1;
 
     const/high16 v1, 0x3f400000    # 0.75f
@@ -38,7 +35,6 @@
 
     iput-object v0, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
-    .line 48
     new-instance v0, Lcom/android/server/knox/dar/DarDatabaseCache$DatabaseHelper;
 
     invoke-direct {v0, p1}, Lcom/android/server/knox/dar/DarDatabaseCache$DatabaseHelper;-><init>(Landroid/content/Context;)V
@@ -51,7 +47,6 @@
 .method public static LogD(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -60,7 +55,6 @@
 
     const-string v0, "DarDatabaseCache"
 
-    .line 324
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -69,7 +63,6 @@
 .method public static makeTag(ILjava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 315
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +85,6 @@
 .method public static reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 2
 
-    .line 319
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,7 +103,6 @@
 
     invoke-static {v0, p0}, Lcom/android/server/knox/dar/sdp/SDPLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
     invoke-static {p1}, Lcom/android/server/knox/dar/sdp/SDPLog;->e(Ljava/lang/Exception;)V
 
     return-void
@@ -122,17 +113,14 @@
 .method public final cache(ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 204
     invoke-static {p1, p2}, Lcom/android/server/knox/dar/DarDatabaseCache;->makeTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 205
     iget-object p2, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
     monitor-enter p2
 
-    .line 206
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -160,12 +148,10 @@
 
     invoke-static {v0}, Lcom/android/server/knox/dar/DarDatabaseCache;->LogD(Ljava/lang/String;)V
 
-    .line 207
     iget-object p0, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
     monitor-exit p2
 
     return-void
@@ -183,17 +169,14 @@
 .method public final decache(ILjava/lang/String;)V
     .locals 2
 
-    .line 212
     invoke-static {p1, p2}, Lcom/android/server/knox/dar/DarDatabaseCache;->makeTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 213
     iget-object p2, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
     monitor-enter p2
 
-    .line 214
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
@@ -203,7 +186,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 215
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -224,12 +206,10 @@
 
     invoke-static {v0}, Lcom/android/server/knox/dar/DarDatabaseCache;->LogD(Ljava/lang/String;)V
 
-    .line 216
     iget-object p0, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
     :cond_0
     monitor-exit p2
 
@@ -252,7 +232,6 @@
 
     const/4 v1, 0x0
 
-    .line 170
     :try_start_0
     iget-object v2, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mDatabaseHelper:Lcom/android/server/knox/dar/DarDatabaseCache$DatabaseHelper;
 
@@ -260,7 +239,6 @@
 
     move-result-object v1
 
-    .line 172
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
     const-string v2, "dar_info"
@@ -273,7 +251,6 @@
 
     aput-object p2, v4, v0
 
-    .line 174
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -282,19 +259,15 @@
 
     aput-object v5, v4, v6
 
-    .line 173
     invoke-virtual {v1, v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 175
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 183
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 184
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     move v0, v6
@@ -312,24 +285,20 @@
     :try_start_1
     const-string v3, "del"
 
-    .line 180
     invoke-static {v3, v2}, Lcom/android/server/knox/dar/DarDatabaseCache;->reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v1, :cond_0
 
-    .line 183
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 184
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 188
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/DarDatabaseCache;->decache(ILjava/lang/String;)V
 
     :cond_1
@@ -338,13 +307,10 @@
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 183
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 184
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 186
     :cond_2
     throw p0
 .end method
@@ -352,7 +318,6 @@
 .method public getInt(ILjava/lang/String;I)I
     .locals 0
 
-    .line 112
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/DarDatabaseCache;->getInternal(ILjava/lang/String;)Ljava/lang/String;
 
@@ -360,7 +325,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 113
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
@@ -377,7 +341,6 @@
 .method public final getInternal(ILjava/lang/String;)Ljava/lang/String;
     .locals 12
 
-    .line 138
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/DarDatabaseCache;->hitOrNull(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -391,7 +354,6 @@
 
     const/4 v2, 0x0
 
-    .line 146
     :try_start_0
     iget-object v3, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mDatabaseHelper:Lcom/android/server/knox/dar/DarDatabaseCache$DatabaseHelper;
 
@@ -417,7 +379,6 @@
 
     aput-object p2, v8, v1
 
-    .line 149
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v9
@@ -430,14 +391,12 @@
 
     const/4 v11, 0x0
 
-    .line 147
     invoke-virtual/range {v4 .. v11}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 151
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
@@ -458,7 +417,6 @@
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 158
     :goto_0
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
@@ -475,7 +433,6 @@
     :try_start_1
     const-string v4, "get"
 
-    .line 156
     invoke-static {v4, v3}, Lcom/android/server/knox/dar/DarDatabaseCache;->reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -488,7 +445,6 @@
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 161
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/knox/dar/DarDatabaseCache;->cache(ILjava/lang/String;Ljava/lang/String;)V
 
     :cond_3
@@ -497,10 +453,8 @@
     :goto_2
     if-eqz v2, :cond_4
 
-    .line 158
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 159
     :cond_4
     throw p0
 .end method
@@ -508,7 +462,6 @@
 .method public getLong(ILjava/lang/String;J)J
     .locals 0
 
-    .line 124
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/DarDatabaseCache;->getInternal(ILjava/lang/String;)Ljava/lang/String;
 
@@ -516,7 +469,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 125
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide p0
@@ -533,7 +485,6 @@
 .method public getString(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 133
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/DarDatabaseCache;->getInternal(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -549,17 +500,14 @@
 .method public final hitOrNull(ILjava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 193
     invoke-static {p1, p2}, Lcom/android/server/knox/dar/DarDatabaseCache;->makeTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 194
     iget-object p2, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
     monitor-enter p2
 
-    .line 195
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
@@ -569,7 +517,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 196
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -590,7 +537,6 @@
 
     invoke-static {v0}, Lcom/android/server/knox/dar/DarDatabaseCache;->LogD(Ljava/lang/String;)V
 
-    .line 197
     iget-object p0, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mCache:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -603,7 +549,6 @@
 
     return-object p0
 
-    .line 199
     :cond_0
     monitor-exit p2
 
@@ -624,7 +569,6 @@
 .method public putInt(ILjava/lang/String;I)V
     .locals 0
 
-    .line 56
     invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p3
@@ -645,7 +589,6 @@
 
     goto :goto_3
 
-    .line 72
     :cond_0
     new-instance v1, Landroid/content/ContentValues;
 
@@ -653,12 +596,10 @@
 
     const-string/jumbo v2, "name"
 
-    .line 73
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v2, "user"
 
-    .line 74
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -667,14 +608,12 @@
 
     const-string/jumbo v2, "value"
 
-    .line 75
     invoke-virtual {v1, v2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    .line 80
     :try_start_0
     iget-object v4, p0, Lcom/android/server/knox/dar/DarDatabaseCache;->mDatabaseHelper:Lcom/android/server/knox/dar/DarDatabaseCache$DatabaseHelper;
 
@@ -685,7 +624,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 82
     :try_start_1
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
@@ -697,7 +635,6 @@
 
     aput-object p2, v6, v3
 
-    .line 84
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v7
@@ -706,22 +643,17 @@
 
     aput-object v7, v6, v8
 
-    .line 83
     invoke-virtual {v4, v0, v5, v6}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 85
     invoke-virtual {v4, v0, v2, v1}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 86
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 94
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 95
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     move v3, v8
@@ -754,24 +686,20 @@
     :try_start_2
     const-string/jumbo v1, "put"
 
-    .line 91
     invoke-static {v1, v0}, Lcom/android/server/knox/dar/DarDatabaseCache;->reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     if-eqz v2, :cond_1
 
-    .line 94
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 95
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_1
     :goto_1
     if-eqz v3, :cond_2
 
-    .line 99
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/knox/dar/DarDatabaseCache;->cache(ILjava/lang/String;Ljava/lang/String;)V
 
     :cond_2
@@ -780,13 +708,10 @@
     :goto_2
     if-eqz v2, :cond_3
 
-    .line 94
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 95
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 97
     :cond_3
     throw p0
 
@@ -798,7 +723,6 @@
 .method public putLong(ILjava/lang/String;J)V
     .locals 0
 
-    .line 60
     invoke-static {p3, p4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p3
@@ -811,7 +735,6 @@
 .method public putString(ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 64
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/knox/dar/DarDatabaseCache;->putInternal(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void

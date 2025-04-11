@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$Tace-lqpX3BpL0RMatGKVDmL32E(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/ResourcePressureUtil;->readResourcePsiState(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -28,7 +27,6 @@
 
     const-string v2, "/proc/pressure/memory"
 
-    .line 37
     filled-new-array {v2, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -45,17 +43,14 @@
 .method public static currentPsiState()Ljava/lang/String;
     .locals 4
 
-    .line 61
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
-    .line 62
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
-    .line 65
     :try_start_0
     sget-object v2, Lcom/android/server/ResourcePressureUtil;->PSI_FILES:Ljava/util/List;
 
@@ -67,12 +62,10 @@
 
     invoke-direct {v3}, Lcom/android/server/ResourcePressureUtil$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 66
     invoke-interface {v2, v3}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v2
 
-    .line 67
     new-instance v3, Lcom/android/server/ResourcePressureUtil$$ExternalSyntheticLambda1;
 
     invoke-direct {v3, v1}, Lcom/android/server/ResourcePressureUtil$$ExternalSyntheticLambda1;-><init>(Ljava/io/StringWriter;)V
@@ -81,15 +74,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 69
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 72
     invoke-virtual {v1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 74
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -116,10 +106,8 @@
     :catchall_0
     move-exception v1
 
-    .line 69
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 70
     throw v1
 .end method
 
@@ -128,12 +116,10 @@
 
     const-string v0, " -----\n"
 
-    .line 44
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
-    .line 46
     :try_start_0
     new-instance v2, Ljava/io/File;
 
@@ -145,7 +131,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 47
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,14 +149,12 @@
 
     invoke-virtual {v1, v2}, Ljava/io/StringWriter;->append(Ljava/lang/CharSequence;)Ljava/io/StringWriter;
 
-    .line 48
     invoke-static {p0}, Llibcore/io/IoUtils;->readFileAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/io/StringWriter;->append(Ljava/lang/CharSequence;)Ljava/io/StringWriter;
 
-    .line 49
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,7 +180,6 @@
     :catch_0
     move-exception v0
 
-    .line 52
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +198,6 @@
 
     invoke-static {v2, p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 54
     :cond_0
     :goto_0
     invoke-virtual {v1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;

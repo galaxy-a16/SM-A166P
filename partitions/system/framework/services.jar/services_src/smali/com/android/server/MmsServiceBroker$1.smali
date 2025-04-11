@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/MmsServiceBroker;)V
     .locals 0
 
-    .line 85
     iput-object p1, p0, Lcom/android/server/MmsServiceBroker$1;->this$0:Lcom/android/server/MmsServiceBroker;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 88
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -35,12 +33,10 @@
 
     const-string p1, "Unknown message"
 
-    .line 93
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 90
     :cond_0
     iget-object p0, p0, Lcom/android/server/MmsServiceBroker$1;->this$0:Lcom/android/server/MmsServiceBroker;
 

@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;Lcom/android/server/hdmi/HdmiControlService$HdmiControlStatusChangeListenerRecord;Landroid/hardware/hdmi/IHdmiControlStatusChangeListener;)V
     .locals 0
 
-    .line 3109
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$16;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$16;->val$record:Lcom/android/server/hdmi/HdmiControlService$HdmiControlStatusChangeListenerRecord;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 3112
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$16;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmLock(Lcom/android/server/hdmi/HdmiControlService;)Ljava/lang/Object;
@@ -44,7 +42,6 @@
 
     monitor-enter v0
 
-    .line 3113
     :try_start_0
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$16;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -64,13 +61,11 @@
 
     return-void
 
-    .line 3114
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3117
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$16;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmLock(Lcom/android/server/hdmi/HdmiControlService;)Ljava/lang/Object;
@@ -79,7 +74,6 @@
 
     monitor-enter v1
 
-    .line 3118
     :try_start_1
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$16;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -91,7 +85,6 @@
 
     invoke-static {v0, p0, v2}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$minvokeHdmiControlStatusChangeListenerLocked(Lcom/android/server/hdmi/HdmiControlService;Landroid/hardware/hdmi/IHdmiControlStatusChangeListener;I)V
 
-    .line 3119
     monitor-exit v1
 
     return-void
@@ -108,7 +101,6 @@
     :catchall_1
     move-exception p0
 
-    .line 3114
     :try_start_2
     monitor-exit v0
     :try_end_2

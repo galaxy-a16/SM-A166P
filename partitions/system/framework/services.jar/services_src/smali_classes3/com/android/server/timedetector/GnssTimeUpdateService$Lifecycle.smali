@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 69
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -26,7 +25,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/timedetector/GnssTimeUpdateService$Lifecycle;->mService:Lcom/android/server/timedetector/GnssTimeUpdateService;
 
     invoke-virtual {p0}, Lcom/android/server/timedetector/GnssTimeUpdateService;->startGnssListeningInternal()Z
@@ -38,7 +36,6 @@
 .method public onStart()V
     .locals 8
 
-    .line 74
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -49,7 +46,6 @@
 
     move-result-object v3
 
-    .line 75
     const-class v0, Landroid/app/AlarmManager;
 
     invoke-virtual {v3, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -60,7 +56,6 @@
 
     check-cast v4, Landroid/app/AlarmManager;
 
-    .line 76
     const-class v0, Landroid/location/LocationManager;
 
     invoke-virtual {v3, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -71,10 +66,8 @@
 
     check-cast v5, Landroid/location/LocationManager;
 
-    .line 77
     const-class v0, Landroid/location/LocationManagerInternal;
 
-    .line 78
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -83,10 +76,8 @@
 
     check-cast v6, Landroid/location/LocationManagerInternal;
 
-    .line 79
     const-class v0, Lcom/android/server/timedetector/TimeDetectorInternal;
 
-    .line 80
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -95,7 +86,6 @@
 
     check-cast v7, Lcom/android/server/timedetector/TimeDetectorInternal;
 
-    .line 82
     new-instance v0, Lcom/android/server/timedetector/GnssTimeUpdateService;
 
     move-object v2, v0
@@ -106,7 +96,6 @@
 
     const-string v1, "gnss_time_update_service"
 
-    .line 84
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void

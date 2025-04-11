@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda2;->f$0:Landroid/net/ipmemorystore/OnDeleteStatusListener;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda2;->f$0:Landroid/net/ipmemorystore/OnDeleteStatusListener;
 
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->$r8$lambda$ACLdAZXuc2dE30BOqq7iS1jZQoU(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V

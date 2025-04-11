@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/RCPManagerService;)V
     .locals 0
 
-    .line 309
     iput-object p1, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 9
 
-    .line 317
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -35,15 +33,12 @@
 
     const-wide/16 v2, 0x3e8
 
-    .line 318
     div-long v2, v0, v2
 
     const-wide/16 v4, 0x3c
 
-    .line 319
     div-long v4, v2, v4
 
-    .line 320
     invoke-static {}, Lcom/android/server/RCPManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v6
@@ -76,14 +71,12 @@
 
     invoke-static {v6, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     iget-object v0, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/server/RCPManagerService;->-$$Nest$mscanAndStartBridgeProxy(Lcom/android/server/RCPManagerService;I)V
 
-    .line 322
     iget-object v0, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     const/4 v1, 0x1
@@ -94,14 +87,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 323
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
-    .line 324
     invoke-static {}, Lcom/android/server/RCPManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -126,7 +117,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 326
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -144,7 +134,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 327
     invoke-static {}, Lcom/android/server/RCPManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -167,7 +156,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
     iget-object v2, p0, Lcom/android/server/RCPManagerService$3;->this$0:Lcom/android/server/RCPManagerService;
 
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
@@ -176,7 +164,6 @@
 
     goto :goto_0
 
-    .line 332
     :cond_0
     invoke-static {}, Lcom/android/server/RCPManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -193,7 +180,6 @@
     :catch_0
     move-exception p0
 
-    .line 335
     invoke-static {}, Lcom/android/server/RCPManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0

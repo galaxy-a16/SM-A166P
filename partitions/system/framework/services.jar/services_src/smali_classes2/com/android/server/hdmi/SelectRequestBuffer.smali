@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 33
     new-instance v0, Lcom/android/server/hdmi/SelectRequestBuffer$1;
 
     invoke-direct {v0}, Lcom/android/server/hdmi/SelectRequestBuffer$1;-><init>()V
@@ -36,7 +35,6 @@
 .method public static newDeviceSelect(Lcom/android/server/hdmi/HdmiControlService;ILandroid/hardware/hdmi/IHdmiControlCallback;)Lcom/android/server/hdmi/SelectRequestBuffer$DeviceSelectRequest;
     .locals 2
 
-    .line 127
     new-instance v0, Lcom/android/server/hdmi/SelectRequestBuffer$DeviceSelectRequest;
 
     const/4 v1, 0x0
@@ -49,7 +47,6 @@
 .method public static newPortSelect(Lcom/android/server/hdmi/HdmiControlService;ILandroid/hardware/hdmi/IHdmiControlCallback;)Lcom/android/server/hdmi/SelectRequestBuffer$PortSelectRequest;
     .locals 2
 
-    .line 132
     new-instance v0, Lcom/android/server/hdmi/SelectRequestBuffer$PortSelectRequest;
 
     const/4 v1, 0x0
@@ -66,7 +63,6 @@
 
     const/4 v0, 0x0
 
-    .line 151
     iput-object v0, p0, Lcom/android/server/hdmi/SelectRequestBuffer;->mRequest:Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;
 
     return-void
@@ -75,15 +71,12 @@
 .method public process()V
     .locals 1
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/hdmi/SelectRequestBuffer;->mRequest:Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;
 
     if-eqz v0, :cond_0
 
-    .line 145
     invoke-virtual {v0}, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;->process()V
 
-    .line 146
     invoke-virtual {p0}, Lcom/android/server/hdmi/SelectRequestBuffer;->clear()V
 
     :cond_0
@@ -93,7 +86,6 @@
 .method public set(Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;)V
     .locals 0
 
-    .line 140
     iput-object p1, p0, Lcom/android/server/hdmi/SelectRequestBuffer;->mRequest:Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;
 
     return-void

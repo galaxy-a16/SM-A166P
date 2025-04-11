@@ -15,20 +15,16 @@
 .method public constructor <init>(Lcom/android/server/policy/KeyCustomizationInfoManager;)V
     .locals 1
 
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
     sget-object v0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->FAIL:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     iput-object v0, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->xmlFileErrorCode:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 94
     iput v0, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mXmlVersion:F
 
-    .line 99
     iput-object p1, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mKeyCustomizationInfoManager:Lcom/android/server/policy/KeyCustomizationInfoManager;
 
     return-void
@@ -37,7 +33,6 @@
 .method public static getKeyCustomizationDir(I)Ljava/io/File;
     .locals 0
 
-    .line 253
     invoke-static {p0}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object p0
@@ -50,7 +45,6 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 492
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p1, "XmlFileErrorCode="
@@ -71,12 +65,10 @@
 
     const/4 p0, 0x0
 
-    .line 420
     invoke-interface {p1, p0, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 421
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -85,7 +77,6 @@
 
     return p3
 
-    .line 424
     :cond_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -97,7 +88,6 @@
 .method public getXmlFileErrorCode()Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
     .locals 0
 
-    .line 428
     iget-object p0, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->xmlFileErrorCode:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     return-object p0
@@ -106,7 +96,6 @@
 .method public getXmlVersion()F
     .locals 0
 
-    .line 119
     iget p0, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mXmlVersion:F
 
     return p0
@@ -117,7 +106,6 @@
 
     const v0, 0x40466666    # 3.1f
 
-    .line 103
     iput v0, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mXmlVersion:F
 
     return-void
@@ -126,7 +114,6 @@
 .method public loadSettingsLocked(I)V
     .locals 8
 
-    .line 257
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -145,7 +132,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 260
     new-instance v0, Ljava/io/File;
 
     invoke-static {p1}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getKeyCustomizationDir(I)Ljava/io/File;
@@ -158,7 +144,6 @@
 
     const/4 p1, 0x0
 
-    .line 262
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -178,16 +163,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 264
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v3
 
-    .line 265
     invoke-interface {v3, v2}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 269
     :cond_0
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -197,14 +179,12 @@
 
     if-ne v4, v5, :cond_8
 
-    .line 271
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v5
 
     const-string v6, "keycustomize_info_version"
 
-    .line 272
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -213,19 +193,16 @@
 
     const-string/jumbo v5, "version"
 
-    .line 273
     invoke-interface {v3, p1, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 274
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-nez v6, :cond_8
 
-    .line 275
     invoke-static {v5}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v5
@@ -237,7 +214,6 @@
     :cond_1
     const-string/jumbo v6, "press"
 
-    .line 277
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -246,7 +222,6 @@
 
     const/4 v5, 0x3
 
-    .line 278
     invoke-virtual {p0, v3, v5}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->parseKeyCustomizationInfoByPress(Lorg/xmlpull/v1/XmlPullParser;I)V
 
     goto :goto_0
@@ -254,7 +229,6 @@
     :cond_2
     const-string v6, "long"
 
-    .line 279
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -263,7 +237,6 @@
 
     const/4 v5, 0x4
 
-    .line 280
     invoke-virtual {p0, v3, v5}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->parseKeyCustomizationInfoByPress(Lorg/xmlpull/v1/XmlPullParser;I)V
 
     goto :goto_0
@@ -271,7 +244,6 @@
     :cond_3
     const-string v6, "double"
 
-    .line 281
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -280,7 +252,6 @@
 
     const/16 v5, 0x8
 
-    .line 282
     invoke-virtual {p0, v3, v5}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->parseKeyCustomizationInfoByPress(Lorg/xmlpull/v1/XmlPullParser;I)V
 
     goto :goto_0
@@ -288,7 +259,6 @@
     :cond_4
     const-string/jumbo v6, "triple"
 
-    .line 283
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -297,7 +267,6 @@
 
     const/16 v5, 0x10
 
-    .line 284
     invoke-virtual {p0, v3, v5}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->parseKeyCustomizationInfoByPress(Lorg/xmlpull/v1/XmlPullParser;I)V
 
     goto :goto_0
@@ -305,7 +274,6 @@
     :cond_5
     const-string/jumbo v6, "quadruple"
 
-    .line 285
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -314,7 +282,6 @@
 
     const/16 v5, 0x20
 
-    .line 286
     invoke-virtual {p0, v3, v5}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->parseKeyCustomizationInfoByPress(Lorg/xmlpull/v1/XmlPullParser;I)V
 
     goto :goto_0
@@ -322,7 +289,6 @@
     :cond_6
     const-string/jumbo v6, "quintuple"
 
-    .line 287
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -331,7 +297,6 @@
 
     const/16 v5, 0x40
 
-    .line 288
     invoke-virtual {p0, v3, v5}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->parseKeyCustomizationInfoByPress(Lorg/xmlpull/v1/XmlPullParser;I)V
 
     goto :goto_0
@@ -339,25 +304,20 @@
     :cond_7
     const-string v6, "hot_key"
 
-    .line 290
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_8
 
-    .line 291
     iget-object v5, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mKeyCustomizationInfoManager:Lcom/android/server/policy/KeyCustomizationInfoManager;
 
-    .line 292
     invoke-virtual {v5}, Lcom/android/server/policy/KeyCustomizationInfoManager;->getHotKeyMapLocked()Landroid/util/SparseArray;
 
     move-result-object v5
 
-    .line 293
     invoke-virtual {v5}, Landroid/util/SparseArray;->clear()V
 
-    .line 294
     invoke-virtual {p0, v3, v5}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->parseHotKeysAttributes(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/SparseArray;)V
 
     :cond_8
@@ -366,7 +326,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 298
     sget-object p1, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->SUCCESS:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     iput-object p1, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->xmlFileErrorCode:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
@@ -401,7 +360,6 @@
 
     move-object p1, v7
 
-    .line 303
     :goto_1
     :try_start_2
     new-instance v3, Ljava/lang/StringBuilder;
@@ -424,14 +382,12 @@
 
     invoke-static {v1, v0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 304
     sget-object p1, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->UNKNOWN_ERROR:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     iput-object p1, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->xmlFileErrorCode:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 306
     :goto_2
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -444,7 +400,6 @@
 
     goto :goto_5
 
-    .line 300
     :catch_3
     :goto_3
     :try_start_3
@@ -464,14 +419,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     sget-object v0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->FILE_NOT_FOUND:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     iput-object v0, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->xmlFileErrorCode:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 306
     invoke-static {p1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     :goto_4
@@ -480,19 +433,16 @@
     :goto_5
     invoke-static {p1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 307
     throw p0
 .end method
 
 .method public final parseHotKeysAttributes(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/SparseArray;)V
     .locals 11
 
-    .line 460
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 462
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -509,7 +459,6 @@
 
     move-object v6, v5
 
-    .line 465
     :cond_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -530,21 +479,18 @@
     :cond_1
     if-eqz v4, :cond_2
 
-    .line 475
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v9
 
     if-nez v9, :cond_2
 
-    .line 476
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v9
 
     if-nez v9, :cond_2
 
-    .line 477
     new-instance v9, Landroid/content/ComponentName;
 
     invoke-direct {v9, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -554,7 +500,6 @@
     :cond_2
     if-eqz v0, :cond_4
 
-    .line 479
     invoke-virtual {v0, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -568,7 +513,6 @@
     :cond_3
     const-string v9, "key"
 
-    .line 468
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -577,21 +521,18 @@
 
     const-string v4, "keyCode"
 
-    .line 469
     invoke-virtual {p0, p1, v4, v2}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getAttributeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v4
 
     const-string/jumbo v5, "package_name"
 
-    .line 470
     invoke-interface {p1, v3, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v6, "class_name"
 
-    .line 471
     invoke-interface {p1, v3, v6}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -600,7 +541,6 @@
     :goto_0
     if-nez v7, :cond_5
 
-    .line 485
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
@@ -617,12 +557,10 @@
 .method public final parseKeyCustomizationAttributes(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/SparseArray;I)V
     .locals 10
 
-    .line 322
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 324
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -635,7 +573,6 @@
 
     move v5, v3
 
-    .line 327
     :cond_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -658,14 +595,12 @@
     :cond_1
     if-eqz v4, :cond_3
 
-    .line 382
     invoke-virtual {v9, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    .line 383
     iget v7, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->keyCode:I
 
     invoke-virtual {p2, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -674,7 +609,6 @@
 
     if-nez v7, :cond_2
 
-    .line 384
     iget v7, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->keyCode:I
 
     new-instance v9, Landroid/util/SparseArray;
@@ -683,7 +617,6 @@
 
     invoke-virtual {p2, v7, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 387
     :cond_2
     iget v7, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->keyCode:I
 
@@ -700,7 +633,6 @@
     :cond_3
     if-eqz v0, :cond_a
 
-    .line 390
     invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -711,7 +643,6 @@
 
     goto/16 :goto_1
 
-    .line 330
     :cond_4
     invoke-virtual {v9, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -721,14 +652,12 @@
 
     if-eqz v7, :cond_7
 
-    .line 331
     new-instance v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;
 
     invoke-direct {v4}, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;-><init>()V
 
     const-string v6, "keyCode"
 
-    .line 332
     invoke-virtual {p0, p1, v6, v3}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getAttributeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v6
@@ -739,7 +668,6 @@
 
     const/4 v7, -0x1
 
-    .line 334
     invoke-virtual {p0, p1, v6, v7}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getAttributeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v6
@@ -748,7 +676,6 @@
 
     const-string v6, "dispatching"
 
-    .line 335
     invoke-virtual {p0, p1, v6, v3}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getAttributeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v6
@@ -757,7 +684,6 @@
 
     const-string v6, "id"
 
-    .line 337
     invoke-virtual {p0, p1, v6, v7}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getAttributeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v6
@@ -768,7 +694,6 @@
 
     const/4 v7, -0x2
 
-    .line 338
     invoke-virtual {p0, p1, v6, v7}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getAttributeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v6
@@ -777,7 +702,6 @@
 
     const-string v6, "longPressTimeoutMs"
 
-    .line 340
     invoke-virtual {p0, p1, v6, v3}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getAttributeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v6
@@ -788,7 +712,6 @@
 
     const-string/jumbo v6, "multiPressTimeoutMs"
 
-    .line 342
     invoke-virtual {p0, p1, v6, v3}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->getAttributeInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v6
@@ -797,7 +720,6 @@
 
     iput-wide v6, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->multiPressTimeout:J
 
-    .line 345
     iget v6, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->id:I
 
     const/16 v7, 0x44e
@@ -806,10 +728,8 @@
 
     const/16 v6, 0x3b7
 
-    .line 347
     iput v6, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->id:I
 
-    .line 350
     :cond_5
     iget v6, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->id:I
 
@@ -817,27 +737,22 @@
 
     const-string/jumbo v6, "ownerPackage"
 
-    .line 351
     invoke-interface {p1, v2, v6}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 353
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-nez v7, :cond_6
 
-    .line 354
     iput-object v6, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->ownerPackage:Ljava/lang/String;
 
-    .line 355
     iget-object v7, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mKeyCustomizationInfoManager:Lcom/android/server/policy/KeyCustomizationInfoManager;
 
     invoke-virtual {v7, v6}, Lcom/android/server/policy/KeyCustomizationInfoManager;->addOwnerPackageList(Ljava/lang/String;)V
 
-    .line 358
     :cond_6
     iput p3, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->press:I
 
@@ -846,7 +761,6 @@
     :cond_7
     const-string v7, "intent"
 
-    .line 359
     invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -855,7 +769,6 @@
 
     if-eqz v4, :cond_a
 
-    .line 361
     invoke-virtual {p0, p1}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->restoreFromXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/content/Intent;
 
     move-result-object v6
@@ -864,28 +777,24 @@
 
     if-eqz v6, :cond_a
 
-    .line 363
     iget v7, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->id:I
 
     if-ne v7, v9, :cond_a
 
     iget-object v7, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->ownerPackage:Ljava/lang/String;
 
-    .line 364
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-eqz v7, :cond_a
 
-    .line 366
     invoke-virtual {v6}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v7
 
     if-eqz v7, :cond_8
 
-    .line 367
     invoke-virtual {v6}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v7
@@ -899,7 +808,6 @@
     :cond_8
     move-object v7, v2
 
-    .line 369
     :goto_0
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -907,12 +815,10 @@
 
     if-eqz v9, :cond_9
 
-    .line 370
     invoke-virtual {v6}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 372
     :cond_9
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -920,10 +826,8 @@
 
     if-nez v6, :cond_a
 
-    .line 373
     iput-object v7, v4, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->ownerPackage:Ljava/lang/String;
 
-    .line 374
     iget-object v6, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mKeyCustomizationInfoManager:Lcom/android/server/policy/KeyCustomizationInfoManager;
 
     invoke-virtual {v6, v7}, Lcom/android/server/policy/KeyCustomizationInfoManager;->addOwnerPackageList(Ljava/lang/String;)V
@@ -932,7 +836,6 @@
     :goto_1
     if-nez v5, :cond_b
 
-    .line 396
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
@@ -949,18 +852,14 @@
 .method public final parseKeyCustomizationInfoByPress(Lorg/xmlpull/v1/XmlPullParser;I)V
     .locals 1
 
-    .line 312
     iget-object v0, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mKeyCustomizationInfoManager:Lcom/android/server/policy/KeyCustomizationInfoManager;
 
-    .line 313
     invoke-virtual {v0, p2}, Lcom/android/server/policy/KeyCustomizationInfoManager;->getInfoMapLocked(I)Landroid/util/SparseArray;
 
     move-result-object v0
 
-    .line 314
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 315
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->parseKeyCustomizationAttributes(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/SparseArray;I)V
 
     return-void
@@ -973,12 +872,10 @@
 
     const/4 v0, 0x0
 
-    .line 402
     invoke-interface {p1, v0, p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 403
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -997,7 +894,6 @@
 
     goto :goto_0
 
-    .line 409
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
@@ -1006,7 +902,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 410
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1026,7 +921,6 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 412
     invoke-static {p0, p1}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object p0
@@ -1040,10 +934,8 @@
 
     const-string/jumbo p1, "restoreFromXml failed "
 
-    .line 414
     invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 416
     new-instance p0, Landroid/content/Intent;
 
     invoke-direct {p0}, Landroid/content/Intent;-><init>()V
@@ -1054,7 +946,6 @@
     :goto_0
     const-string/jumbo p0, "restoreFromXml intent info is empty or null"
 
-    .line 404
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -1067,7 +958,6 @@
 
     const-string v1, "keycustomize_info_version"
 
-    .line 123
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1092,46 +982,37 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     new-instance v2, Ljava/io/StringWriter;
 
     invoke-direct {v2}, Ljava/io/StringWriter;-><init>()V
 
-    .line 127
     :try_start_0
     new-instance v4, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v4}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 128
     invoke-interface {v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/Writer;)V
 
-    .line 129
     sget-object v5, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v6, 0x0
 
     invoke-interface {v4, v6, v5}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 131
     invoke-interface {v4, v6, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v5, "version"
 
     const v7, 0x40466666    # 3.1f
 
-    .line 133
     invoke-static {v7}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 132
     invoke-interface {v4, v6, v5, v7}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 134
     invoke-interface {v4, v6, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 137
     sget-object v1, Lcom/android/server/policy/KeyCustomizationConstants;->SUPPORT_PRESS_TYPE_ALL:[I
 
     array-length v5, v1
@@ -1143,7 +1024,6 @@
 
     aget v8, v1, v7
 
-    .line 138
     iget-object v9, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mKeyCustomizationInfoManager:Lcom/android/server/policy/KeyCustomizationInfoManager;
 
     invoke-virtual {v9, v8}, Lcom/android/server/policy/KeyCustomizationInfoManager;->getInfoMapLocked(I)Landroid/util/SparseArray;
@@ -1206,7 +1086,6 @@
     :cond_5
     move-object v8, v6
 
-    .line 153
     :goto_1
     invoke-virtual {p0, v4, v8, v9}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->writeKeyCustomizationAttributes(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Landroid/util/SparseArray;)V
 
@@ -1214,28 +1093,21 @@
 
     goto :goto_0
 
-    .line 157
     :cond_6
     invoke-interface {v4, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 158
     iget-object v1, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mKeyCustomizationInfoManager:Lcom/android/server/policy/KeyCustomizationInfoManager;
 
-    .line 159
     invoke-virtual {v1}, Lcom/android/server/policy/KeyCustomizationInfoManager;->getHotKeyMapLocked()Landroid/util/SparseArray;
 
     move-result-object v1
 
-    .line 158
     invoke-virtual {p0, v4, v1}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->writeHotKeysAttributes(Lorg/xmlpull/v1/XmlSerializer;Landroid/util/SparseArray;)V
 
-    .line 160
     invoke-interface {v4, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 163
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 164
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlSerializer;->flush()V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1247,7 +1119,6 @@
     :catch_0
     move-exception v0
 
-    .line 166
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1264,7 +1135,6 @@
 
     invoke-static {v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     :goto_2
     invoke-virtual {p0, v2, p1}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->writeOutXmlFileLocked(Ljava/io/StringWriter;I)V
 
@@ -1274,7 +1144,6 @@
 .method public updateXmlVersionIfNeeded()Z
     .locals 4
 
-    .line 107
     iget v0, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mXmlVersion:F
 
     const v1, 0x40466666    # 3.1f
@@ -1287,7 +1156,6 @@
 
     if-nez v0, :cond_1
 
-    .line 108
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result p0
@@ -1296,7 +1164,6 @@
 
     const-string/jumbo p0, "the version has same with latest."
 
-    .line 109
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -1304,7 +1171,6 @@
 
     return p0
 
-    .line 113
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1330,7 +1196,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     iput v1, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils;->mXmlVersion:F
 
     const/4 p0, 0x1
@@ -1341,7 +1206,6 @@
 .method public final writeHotKeysAttributes(Lorg/xmlpull/v1/XmlSerializer;Landroid/util/SparseArray;)V
     .locals 5
 
-    .line 434
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result p0
@@ -1352,7 +1216,6 @@
 
     const-string/jumbo v0, "writeHotKeysAttributes."
 
-    .line 435
     invoke-static {p0, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -1363,7 +1226,6 @@
     :cond_1
     const/4 p0, 0x0
 
-    .line 442
     :goto_0
     invoke-virtual {p2}, Landroid/util/SparseArray;->size()I
 
@@ -1375,15 +1237,12 @@
 
     const-string v1, "key"
 
-    .line 443
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 444
     invoke-virtual {p2, p0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 445
     invoke-virtual {p2, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1392,7 +1251,6 @@
 
     const-string v4, "keyCode"
 
-    .line 446
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1403,7 +1261,6 @@
 
     const-string/jumbo v2, "package_name"
 
-    .line 448
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -1412,14 +1269,12 @@
 
     const-string v2, "class_name"
 
-    .line 449
     invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {p1, v0, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 451
     :cond_2
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -1434,14 +1289,12 @@
 .method public final writeKeyCustomizationAttributes(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Landroid/util/SparseArray;)V
     .locals 11
 
-    .line 199
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 200
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1463,14 +1316,12 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 203
     invoke-interface {p1, p0, p2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 204
     :goto_0
     invoke-virtual {p3}, Landroid/util/SparseArray;->size()I
 
@@ -1478,7 +1329,6 @@
 
     if-ge v1, v2, :cond_9
 
-    .line 205
     invoke-virtual {p3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -1487,7 +1337,6 @@
 
     move v3, v0
 
-    .line 206
     :goto_1
     invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
 
@@ -1497,10 +1346,8 @@
 
     const-string v4, "key"
 
-    .line 207
     invoke-interface {p1, p0, v4}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 208
     invoke-virtual {v2, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -1511,7 +1358,6 @@
 
     goto/16 :goto_3
 
-    .line 212
     :cond_1
     iget v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->keyCode:I
 
@@ -1523,7 +1369,6 @@
 
     invoke-interface {p1, p0, v7, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 213
     iget v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->action:I
 
     invoke-static {v6}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -1534,7 +1379,6 @@
 
     invoke-interface {p1, p0, v7, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 214
     iget v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->dispatching:I
 
     const/4 v7, -0x1
@@ -1543,14 +1387,12 @@
 
     const-string v7, "dispatching"
 
-    .line 216
     invoke-static {v6}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {p1, p0, v7, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 218
     :cond_2
     iget v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->id:I
 
@@ -1562,7 +1404,6 @@
 
     invoke-interface {p1, p0, v7, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 219
     iget v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->userId:I
 
     const/4 v7, -0x2
@@ -1571,14 +1412,12 @@
 
     const-string/jumbo v7, "userId"
 
-    .line 221
     invoke-static {v6}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {p1, p0, v7, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 223
     :cond_3
     iget-wide v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->longPressTimeout:J
 
@@ -1590,15 +1429,12 @@
 
     const-string v10, "longPressTimeoutMs"
 
-    .line 226
     invoke-static {v6, v7}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 225
     invoke-interface {p1, p0, v10, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 228
     :cond_4
     iget-wide v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->multiPressTimeout:J
 
@@ -1608,15 +1444,12 @@
 
     const-string/jumbo v8, "multiPressTimeoutMs"
 
-    .line 231
     invoke-static {v6, v7}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 230
     invoke-interface {p1, p0, v8, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 233
     :cond_5
     iget v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->id:I
 
@@ -1626,7 +1459,6 @@
 
     iget-object v6, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->ownerPackage:Ljava/lang/String;
 
-    .line 234
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
@@ -1635,7 +1467,6 @@
 
     const-string/jumbo v6, "ownerPackage"
 
-    .line 235
     iget-object v7, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->ownerPackage:Ljava/lang/String;
 
     invoke-interface {p1, p0, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
@@ -1643,10 +1474,8 @@
     :cond_6
     const-string v6, "intent"
 
-    .line 238
     invoke-interface {p1, p0, v6}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 239
     iget-object v5, v5, Lcom/samsung/android/view/SemWindowManager$KeyCustomizationInfo;->intent:Landroid/content/Intent;
 
     const-string v7, "action"
@@ -1655,12 +1484,10 @@
 
     const/4 v8, 0x1
 
-    .line 241
     invoke-virtual {v5, v8}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 240
     invoke-interface {p1, p0, v7, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_2
@@ -1668,14 +1495,11 @@
     :cond_7
     const-string/jumbo v5, "null"
 
-    .line 243
     invoke-interface {p1, p0, v7, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 245
     :goto_2
     invoke-interface {p1, p0, v6}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 246
     invoke-interface {p1, p0, v4}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     :goto_3
@@ -1688,7 +1512,6 @@
 
     goto/16 :goto_0
 
-    .line 249
     :cond_9
     invoke-interface {p1, p0, p2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -1702,7 +1525,6 @@
 
     const-string v0, "KeyCustomizationInfoXmlUtils"
 
-    .line 174
     new-instance v1, Landroid/util/AtomicFile;
 
     new-instance v2, Ljava/io/File;
@@ -1719,13 +1541,11 @@
 
     const/4 p2, 0x0
 
-    .line 178
     :try_start_0
     invoke-virtual {v1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object p2
 
-    .line 179
     invoke-virtual {p1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1740,16 +1560,13 @@
 
     const/16 p1, 0xa
 
-    .line 180
     invoke-virtual {p2, p1}, Ljava/io/FileOutputStream;->write(I)V
 
-    .line 181
     invoke-virtual {v1, p2}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 188
     :try_start_1
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
@@ -1760,7 +1577,6 @@
     :catch_0
     move-exception p1
 
-    .line 191
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1786,11 +1602,9 @@
     :catch_1
     move-exception p1
 
-    .line 183
     :try_start_2
     invoke-virtual {v1, p2}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 184
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1817,7 +1631,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 188
     :try_start_3
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -1828,7 +1641,6 @@
     :catch_2
     move-exception p1
 
-    .line 191
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1842,7 +1654,6 @@
     :goto_2
     if-eqz p2, :cond_1
 
-    .line 188
     :try_start_4
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -1853,7 +1664,6 @@
     :catch_3
     move-exception p2
 
-    .line 191
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1868,7 +1678,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     :cond_1
     :goto_3
     throw p1

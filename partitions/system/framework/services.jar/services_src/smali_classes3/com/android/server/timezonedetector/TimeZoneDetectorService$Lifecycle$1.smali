@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/timezonedetector/TimeZoneDetectorService$Lifecycle;Lcom/android/server/timezonedetector/TimeZoneDetectorStrategy;)V
     .locals 0
 
-    .line 91
     iput-object p1, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorService$Lifecycle$1;->this$0:Lcom/android/server/timezonedetector/TimeZoneDetectorService$Lifecycle;
 
     iput-object p2, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorService$Lifecycle$1;->val$timeZoneDetectorStrategy:Lcom/android/server/timezonedetector/TimeZoneDetectorStrategy;
@@ -31,7 +30,6 @@
 .method public onFlightComplete()V
     .locals 1
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/timezonedetector/TimeZoneDetectorService$Lifecycle$1;->val$timeZoneDetectorStrategy:Lcom/android/server/timezonedetector/TimeZoneDetectorStrategy;
 
     const-string/jumbo v0, "onFlightComplete()"

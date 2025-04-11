@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$$ExternalSyntheticLambda6;->f$0:Ljava/util/List;
@@ -27,7 +26,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/autofill/ui/SaveUi$$ExternalSyntheticLambda6;->f$0:Ljava/util/List;
 
     check-cast p1, Landroid/view/View;

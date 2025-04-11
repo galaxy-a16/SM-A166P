@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;)V
     .locals 0
 
-    .line 2868
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 7
 
-    .line 2872
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     invoke-static {v0}, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->-$$Nest$fgetisTriggered(Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;)Z
@@ -43,17 +41,14 @@
 
     const-string v1, "PhoneWindowManagerExt"
 
-    .line 2875
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2876
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->-$$Nest$fputisTriggered(Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;Z)V
 
-    .line 2880
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
@@ -83,7 +78,6 @@
 
     move-result-object v0
 
-    .line 2881
     :goto_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -91,7 +85,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 2882
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,7 +111,6 @@
 
     return-void
 
-    .line 2888
     :cond_2
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
@@ -130,7 +122,6 @@
 
     move-result-object v4
 
-    .line 2891
     :try_start_0
     invoke-virtual {v4, v0, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
@@ -143,7 +134,6 @@
     :catch_0
     move-exception v5
 
-    .line 2893
     invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -151,7 +141,6 @@
 
     return-void
 
-    .line 2898
     :cond_3
     iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
@@ -169,7 +158,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 2899
     iget-object v6, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     invoke-static {v6, v0}, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->-$$Nest$misMatchWithLauncherApps(Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;Ljava/lang/String;)Z
@@ -178,7 +166,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 2901
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     iget-object v6, v1, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
@@ -195,7 +182,6 @@
 
     invoke-virtual {v6, v1, v5}, Lcom/android/server/policy/KeyCustomizationManager;->putHotKey(ILandroid/content/ComponentName;)V
 
-    .line 2908
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
@@ -204,12 +190,10 @@
 
     const v5, 0x10405e1
 
-    .line 2909
     invoke-virtual {v1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2910
     invoke-virtual {v4, v3}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object v3
@@ -222,12 +206,10 @@
 
     move-result-object v3
 
-    .line 2908
     invoke-static {v1, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2911
     iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     iget-object v3, v3, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
@@ -236,12 +218,10 @@
 
     invoke-virtual {v3, v4, v1}, Lcom/android/server/policy/PhoneWindowManagerExt;->showToast(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 2913
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz v1, :cond_4
 
-    .line 2914
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey$registerAppRunnable;->this$1:Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;
 
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->-$$Nest$fgetkeyCode(Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;)I
@@ -267,7 +247,6 @@
     :cond_4
     return-void
 
-    .line 2903
     :cond_5
     new-instance p0, Ljava/lang/StringBuilder;
 

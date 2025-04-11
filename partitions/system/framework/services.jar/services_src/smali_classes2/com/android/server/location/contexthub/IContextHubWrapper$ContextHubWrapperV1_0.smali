@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/hardware/contexthub/V1_0/IContexthub;)V
     .locals 0
 
-    .line 968
     invoke-direct {p0, p1}, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperHidl;-><init>(Landroid/hardware/contexthub/V1_0/IContexthub;)V
 
-    .line 969
     iput-object p1, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperV1_0;->mHub:Landroid/hardware/contexthub/V1_0/IContexthub;
 
     return-void
@@ -25,12 +23,10 @@
 .method public getHubs()Landroid/util/Pair;
     .locals 3
 
-    .line 973
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 974
     iget-object p0, p0, Lcom/android/server/location/contexthub/IContextHubWrapper$ContextHubWrapperV1_0;->mHub:Landroid/hardware/contexthub/V1_0/IContexthub;
 
     invoke-interface {p0}, Landroid/hardware/contexthub/V1_0/IContexthub;->getHubs()Ljava/util/ArrayList;
@@ -54,7 +50,6 @@
 
     check-cast v1, Landroid/hardware/contexthub/V1_0/ContextHub;
 
-    .line 975
     new-instance v2, Landroid/hardware/location/ContextHubInfo;
 
     invoke-direct {v2, v1}, Landroid/hardware/location/ContextHubInfo;-><init>(Landroid/hardware/contexthub/V1_0/ContextHub;)V
@@ -63,7 +58,6 @@
 
     goto :goto_0
 
-    .line 977
     :cond_0
     new-instance p0, Landroid/util/Pair;
 
@@ -79,35 +73,30 @@
 .method public onAirplaneModeSettingChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onLocationSettingChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onMicrophoneSettingChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onWifiSettingChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public supportsAirplaneModeSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -116,7 +105,6 @@
 .method public supportsLocationSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -125,7 +113,6 @@
 .method public supportsMicrophoneSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -134,7 +121,6 @@
 .method public supportsWifiSettingNotifications()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

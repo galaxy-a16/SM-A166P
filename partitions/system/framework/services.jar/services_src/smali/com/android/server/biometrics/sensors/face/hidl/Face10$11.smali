@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/Face10;I)V
     .locals 0
 
-    .line 1429
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$11;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     iput p2, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$11;->val$targetUserId:I
@@ -33,7 +32,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1434
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$11;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$11;->val$targetUserId:I
@@ -42,7 +40,6 @@
 
     goto :goto_0
 
-    .line 1436
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 

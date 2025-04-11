@@ -20,7 +20,6 @@
 .method public final dump(II)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/wm/AccessibilityWindowsPopulator;->$r8$lambda$uiBTFddlP_fr4HDz7fpjGe3RzNU(II)V
 
     return-void

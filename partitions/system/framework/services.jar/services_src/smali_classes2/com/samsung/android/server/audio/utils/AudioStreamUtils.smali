@@ -7,7 +7,6 @@
 .method public static getActiveStreamTypeInternal(IZ)I
     .locals 6
 
-    .line 66
     invoke-static {}, Lcom/samsung/android/server/audio/utils/AudioStreamUtils;->getActiveStreams()I
 
     move-result v0
@@ -38,7 +37,6 @@
 
     if-nez v1, :cond_9
 
-    .line 73
     invoke-static {v3, v2}, Landroid/media/AudioSystem;->isStreamActiveRemotely(II)Z
 
     move-result v1
@@ -72,7 +70,6 @@
 
     const-string p0, "getActiveStreamTypeInternal: forcing STREAM_ASSISTANT..."
 
-    .line 82
     invoke-static {v4, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 p0, 0xb
@@ -92,7 +89,6 @@
 
     const-string p0, "getActiveStreamTypeInternal: only adjust media volume"
 
-    .line 87
     invoke-static {v4, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -100,14 +96,12 @@
     :cond_6
     const-string p0, "getActiveStreamTypeInternal: forcing STREAM_RING b/c default"
 
-    .line 90
     invoke-static {v4, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x2
 
     return p0
 
-    .line 93
     :cond_7
     sget-boolean p0, Lcom/samsung/android/audio/Rune;->SEC_AUDIO_DEFAULT_STREAM_NOTIFICATION:Z
 
@@ -117,7 +111,6 @@
 
     const-string p0, "getActiveStreamTypeInternal: using STREAM_NOTIFICATION as default"
 
-    .line 94
     invoke-static {v4, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return v5
@@ -125,7 +118,6 @@
     :cond_8
     const-string p0, "getActiveStreamTypeInternal: using STREAM_MUSIC as default"
 
-    .line 97
     invoke-static {v4, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -134,7 +126,6 @@
     :goto_0
     const-string p0, "getActiveStreamTypeInternal: forcing STREAM_MUSIC"
 
-    .line 74
     invoke-static {v4, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -146,12 +137,10 @@
     :try_start_0
     const-string v0, "l_stream_active"
 
-    .line 39
     invoke-static {v0}, Lcom/samsung/android/media/SemAudioSystem;->getPolicyParameters(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 41
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -167,7 +156,6 @@
 
     const-string v2, "Can\'t get active stream"
 
-    .line 43
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, -0x1

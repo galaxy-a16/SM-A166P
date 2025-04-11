@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/McfManager;)V
     .locals 0
 
-    .line 126
     iput-object p1, p0, Lcom/android/server/desktopmode/McfManager$1;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 129
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_0
@@ -53,7 +51,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -61,14 +58,12 @@
 
     const-string v0, "android.intent.action.AIRPLANE_MODE"
 
-    .line 132
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 133
     iget-object p1, p0, Lcom/android/server/desktopmode/McfManager$1;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/desktopmode/McfManager;)Lcom/android/server/desktopmode/McfManager$McfHandler;
@@ -79,7 +74,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 134
     iget-object p1, p0, Lcom/android/server/desktopmode/McfManager$1;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/desktopmode/McfManager;)Lcom/android/server/desktopmode/McfManager$McfHandler;
@@ -92,12 +86,10 @@
 
     move-result-object p0
 
-    .line 135
     invoke-virtual {p0, p2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 134
     invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
@@ -105,14 +97,12 @@
     :cond_1
     const-string v0, "com.samsung.bluetooth.adapter.action.BLE_STATE_CHANGED"
 
-    .line 136
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 137
     iget-object p1, p0, Lcom/android/server/desktopmode/McfManager$1;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/desktopmode/McfManager;)Lcom/android/server/desktopmode/McfManager$McfHandler;
@@ -123,7 +113,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 138
     iget-object p1, p0, Lcom/android/server/desktopmode/McfManager$1;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/desktopmode/McfManager;)Lcom/android/server/desktopmode/McfManager$McfHandler;
@@ -136,12 +125,10 @@
 
     move-result-object p0
 
-    .line 139
     invoke-virtual {p0, v0, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 138
     invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
@@ -149,14 +136,12 @@
     :cond_2
     const-string p2, "com.samsung.android.nearbyscanning"
 
-    .line 140
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 141
     iget-object p1, p0, Lcom/android/server/desktopmode/McfManager$1;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/desktopmode/McfManager;)Lcom/android/server/desktopmode/McfManager$McfHandler;
@@ -167,7 +152,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 142
     iget-object p1, p0, Lcom/android/server/desktopmode/McfManager$1;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/desktopmode/McfManager;)Lcom/android/server/desktopmode/McfManager$McfHandler;
@@ -180,12 +164,10 @@
 
     move-result-object p0
 
-    .line 143
     invoke-virtual {p0, p2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 142
     invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :cond_3

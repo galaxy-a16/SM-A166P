@@ -27,12 +27,10 @@
 .method public constructor <init>(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 3170
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 3171
     iget-object p1, p1, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -49,10 +47,8 @@
 
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mPm:Landroid/os/PowerManager;
 
-    .line 3172
     iput-object p2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mPackageName:Ljava/lang/String;
 
-    .line 3173
     iput-object p3, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mOpPackageName:Ljava/lang/String;
 
     return-void
@@ -63,7 +59,6 @@
 .method public final isScreenOn()Z
     .locals 2
 
-    .line 3185
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mPm:Landroid/os/PowerManager;
 
     invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
@@ -76,7 +71,6 @@
 
     return p0
 
-    .line 3191
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
@@ -118,7 +112,6 @@
     :cond_2
     return v1
 
-    .line 3195
     :cond_3
     iget-object p0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
@@ -144,7 +137,6 @@
 
     move v1, v0
 
-    .line 3204
     :goto_0
     :try_start_0
     iget v2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mSleepDuration:I
@@ -155,7 +147,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3208
     :catch_0
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
@@ -167,7 +158,6 @@
 
     monitor-enter v2
 
-    .line 3209
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->isScreenOn()Z
 
@@ -179,15 +169,12 @@
 
     const-string/jumbo v0, "screen is on"
 
-    .line 3210
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3211
     monitor-exit v2
 
     goto :goto_3
 
-    .line 3214
     :cond_0
     iget-boolean v3, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mNeedToRun:Z
 
@@ -204,7 +191,6 @@
 
     const-string v3, "MediaSessionService"
 
-    .line 3219
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,7 +207,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3221
     iget v3, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mSleepDuration:I
 
     const/16 v4, 0x1f4
@@ -230,10 +215,8 @@
 
     const/16 v3, 0x32
 
-    .line 3222
     iput v3, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mSleepDuration:I
 
-    .line 3225
     :cond_2
     iget v3, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mFlags:I
 
@@ -250,7 +233,6 @@
     :cond_3
     move v13, v0
 
-    .line 3226
     :goto_1
     iget-object v4, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
@@ -276,12 +258,10 @@
 
     invoke-static/range {v4 .. v13}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->-$$Nest$mdispatchAdjustVolumeLocked(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZIIIZ)V
 
-    .line 3230
     monitor-exit v2
 
     goto :goto_0
 
-    .line 3215
     :cond_4
     :goto_2
     monitor-exit v2
@@ -292,7 +272,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3230
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -303,21 +282,16 @@
 .method public updateInfoLocked(IIIZ)V
     .locals 0
 
-    .line 3177
     iput p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mStream:I
 
-    .line 3178
     iput p2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mDirection:I
 
     const/16 p1, 0x1f4
 
-    .line 3179
     iput p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mSleepDuration:I
 
-    .line 3180
     iput-boolean p4, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mNeedToRun:Z
 
-    .line 3181
     iput p3, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$VolumeKeyLongPressControlThread;->mFlags:I
 
     return-void

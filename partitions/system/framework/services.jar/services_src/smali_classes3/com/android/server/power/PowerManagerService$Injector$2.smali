@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService$Injector;)V
     .locals 0
 
-    .line 1424
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$Injector$2;->this$0:Lcom/android/server/power/PowerManagerService$Injector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public elapsedRealtime()J
     .locals 2
 
-    .line 1432
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -38,7 +36,6 @@
 .method public uptimeMillis()J
     .locals 2
 
-    .line 1427
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0

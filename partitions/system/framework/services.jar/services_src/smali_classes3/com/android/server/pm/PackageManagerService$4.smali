@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;Landroid/os/Handler;Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 4759
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$4;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$4;->val$resolver:Landroid/content/ContentResolver;
@@ -28,14 +27,12 @@
 .method public onChange(Z)V
     .locals 8
 
-    .line 4762
     iget-object p1, p0, Lcom/android/server/pm/PackageManagerService$4;->val$resolver:Landroid/content/ContentResolver;
 
     const-string v0, "enable_ephemeral_feature"
 
     const/4 v1, 0x1
 
-    .line 4763
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
@@ -51,7 +48,6 @@
     :cond_0
     move p1, v0
 
-    .line 4764
     :goto_0
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
@@ -72,12 +68,10 @@
 
     if-nez p1, :cond_2
 
-    .line 4765
     iget-object v6, p0, Lcom/android/server/pm/PackageManagerService$4;->val$resolver:Landroid/content/ContentResolver;
 
     const-string v7, "instant_apps_enabled"
 
-    .line 4766
     invoke-static {v6, v7, v1, v5}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v6
@@ -95,7 +89,6 @@
     :goto_2
     move v6, v1
 
-    .line 4768
     :goto_3
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$4;->this$0:Lcom/android/server/pm/PackageManagerService;
 

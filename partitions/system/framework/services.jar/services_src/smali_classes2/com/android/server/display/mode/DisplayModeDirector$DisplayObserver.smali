@@ -20,18 +20,14 @@
 .method public constructor <init>(Lcom/android/server/display/mode/DisplayModeDirector;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/mode/VotesStorage;)V
     .locals 0
 
-    .line 1485
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1486
     iput-object p2, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->mContext:Landroid/content/Context;
 
-    .line 1487
     iput-object p3, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->mHandler:Landroid/os/Handler;
 
-    .line 1488
     iput-object p4, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 
     return-void
@@ -42,12 +38,10 @@
 .method public final getDisplayInfo(I)Landroid/view/DisplayInfo;
     .locals 1
 
-    .line 1544
     new-instance v0, Landroid/view/DisplayInfo;
 
     invoke-direct {v0}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 1546
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmInjector(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$Injector;
@@ -72,7 +66,6 @@
 .method public observe()V
     .locals 9
 
-    .line 1492
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmInjector(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$Injector;
@@ -83,22 +76,18 @@
 
     invoke-interface {v0, p0, v1}, Lcom/android/server/display/mode/DisplayModeDirector$Injector;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    .line 1495
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 1496
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    .line 1497
     new-instance v2, Landroid/view/DisplayInfo;
 
     invoke-direct {v2}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 1498
     iget-object v3, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v3}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmInjector(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$Injector;
@@ -109,7 +98,6 @@
 
     move-result-object v3
 
-    .line 1499
     array-length v4, v3
 
     const/4 v5, 0x0
@@ -121,20 +109,16 @@
 
     aget-object v7, v3, v6
 
-    .line 1500
     invoke-virtual {v7}, Landroid/view/Display;->getDisplayId()I
 
     move-result v8
 
-    .line 1501
     invoke-virtual {v7, v2}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 1502
     iget-object v7, v2, Landroid/view/DisplayInfo;->supportedModes:[Landroid/view/Display$Mode;
 
     invoke-virtual {v0, v8, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1503
     invoke-virtual {v2}, Landroid/view/DisplayInfo;->getDefaultMode()Landroid/view/Display$Mode;
 
     move-result-object v7
@@ -145,7 +129,6 @@
 
     goto :goto_0
 
-    .line 1505
     :cond_0
     iget-object v2, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
@@ -155,7 +138,6 @@
 
     monitor-enter v2
 
-    .line 1506
     :try_start_0
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -164,7 +146,6 @@
     :goto_1
     if-ge v5, v3, :cond_1
 
-    .line 1508
     iget-object v4, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v4}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmSupportedModesByDisplay(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/util/SparseArray;
@@ -183,7 +164,6 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1509
     iget-object v4, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v4}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDefaultModeByDisplay(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/util/SparseArray;
@@ -206,7 +186,6 @@
 
     goto :goto_1
 
-    .line 1511
     :cond_1
     monitor-exit v2
 
@@ -225,15 +204,12 @@
 .method public onDisplayAdded(I)V
     .locals 1
 
-    .line 1516
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->getDisplayInfo(I)Landroid/view/DisplayInfo;
 
     move-result-object v0
 
-    .line 1517
     invoke-virtual {p0, p1, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->updateDisplayModes(ILandroid/view/DisplayInfo;)V
 
-    .line 1518
     invoke-virtual {p0, p1, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->updateLayoutLimitedFrameRate(ILandroid/view/DisplayInfo;)V
 
     return-void
@@ -242,25 +218,20 @@
 .method public onDisplayChanged(I)V
     .locals 1
 
-    .line 1532
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->getDisplayInfo(I)Landroid/view/DisplayInfo;
 
     move-result-object v0
 
-    .line 1533
     invoke-virtual {p0, p1, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->updateDisplayModes(ILandroid/view/DisplayInfo;)V
 
-    .line 1534
     invoke-virtual {p0, p1, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->updateLayoutLimitedFrameRate(ILandroid/view/DisplayInfo;)V
 
-    .line 1536
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_VRR_REFRESH_RATE_MODE:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 1537
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmRefreshRateModeManager(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/RefreshRateModeManager;
@@ -276,7 +247,6 @@
 .method public onDisplayRemoved(I)V
     .locals 2
 
-    .line 1523
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmLock(Lcom/android/server/display/mode/DisplayModeDirector;)Ljava/lang/Object;
@@ -285,7 +255,6 @@
 
     monitor-enter v0
 
-    .line 1524
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
@@ -295,7 +264,6 @@
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 1525
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDefaultModeByDisplay(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/util/SparseArray;
@@ -304,14 +272,12 @@
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 1526
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v0, 0x0
 
-    .line 1527
     invoke-virtual {p0, p1, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->updateLayoutLimitedFrameRate(ILandroid/view/DisplayInfo;)V
 
     return-void
@@ -319,7 +285,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1526
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -335,7 +300,6 @@
 
     return-void
 
-    .line 1561
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
@@ -345,7 +309,6 @@
 
     monitor-enter v0
 
-    .line 1562
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
@@ -369,7 +332,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1563
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmSupportedModesByDisplay(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/util/SparseArray;
@@ -387,7 +349,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 1566
     :goto_0
     iget-object v3, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
@@ -409,7 +370,6 @@
 
     if-nez v3, :cond_2
 
-    .line 1568
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDefaultModeByDisplay(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/util/SparseArray;
@@ -430,12 +390,10 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 1571
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$mnotifyDesiredDisplayModeSpecsChangedLocked(Lcom/android/server/display/mode/DisplayModeDirector;)V
 
-    .line 1573
     :cond_3
     monitor-exit v0
 
@@ -456,12 +414,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 1550
     iget-object p2, p2, Landroid/view/DisplayInfo;->layoutLimitedRefreshRate:Landroid/view/SurfaceControl$RefreshRateRange;
 
     if-eqz p2, :cond_0
 
-    .line 1551
     iget v0, p2, Landroid/view/SurfaceControl$RefreshRateRange;->min:F
 
     iget p2, p2, Landroid/view/SurfaceControl$RefreshRateRange;->max:F
@@ -475,7 +431,6 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 1553
     :goto_0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 

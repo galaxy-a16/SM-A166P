@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;ILandroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 4474
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$17;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p2, p0, Lcom/android/server/accounts/AccountManagerService$17;->val$account:Landroid/accounts/Account;
@@ -36,7 +35,6 @@
 .method public final handleAuthenticatorResponse(Z)V
     .locals 4
 
-    .line 4491
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$17;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$17;->val$account:Landroid/accounts/Account;
@@ -51,30 +49,24 @@
 
     iget v2, p0, Lcom/android/server/accounts/AccountManagerService$17;->val$uid:I
 
-    .line 4493
     invoke-static {v2}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
     move-result-object v2
 
-    .line 4491
     invoke-static {v0, v1, v2}, Lcom/android/server/accounts/AccountManagerService;->-$$Nest$mcancelNotification(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$NotificationId;Landroid/os/UserHandle;)V
 
-    .line 4494
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$17;->val$callback:Landroid/os/RemoteCallback;
 
     if-eqz v0, :cond_0
 
-    .line 4495
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "booleanResult"
 
-    .line 4496
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 4497
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$17;->val$callback:Landroid/os/RemoteCallback;
 
     invoke-virtual {p0, v0}, Landroid/os/RemoteCallback;->sendResult(Landroid/os/Bundle;)V
@@ -88,7 +80,6 @@
 
     const/4 p1, 0x0
 
-    .line 4487
     invoke-virtual {p0, p1}, Lcom/android/server/accounts/AccountManagerService$17;->handleAuthenticatorResponse(Z)V
 
     return-void
@@ -97,7 +88,6 @@
 .method public onRequestContinued()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -106,7 +96,6 @@
 
     const/4 p1, 0x1
 
-    .line 4477
     invoke-virtual {p0, p1}, Lcom/android/server/accounts/AccountManagerService$17;->handleAuthenticatorResponse(Z)V
 
     return-void

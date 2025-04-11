@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/util/Set;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/BroadcastQueueModernImpl$$ExternalSyntheticLambda17;->f$0:Ljava/lang/String;
@@ -31,7 +30,6 @@
 .method public final test(Lcom/android/server/am/BroadcastRecord;I)Z
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/am/BroadcastQueueModernImpl$$ExternalSyntheticLambda17;->f$0:Ljava/lang/String;
 
     iget-object p0, p0, Lcom/android/server/am/BroadcastQueueModernImpl$$ExternalSyntheticLambda17;->f$1:Ljava/util/Set;

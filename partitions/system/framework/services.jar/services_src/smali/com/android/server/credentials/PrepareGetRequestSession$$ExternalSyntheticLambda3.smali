@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/credentials/ui/GetCredentialProviderData;
 
     invoke-static {p1}, Lcom/android/server/credentials/PrepareGetRequestSession;->$r8$lambda$8opb07_ZnZVASXSfyBDjRzmAVI4(Landroid/credentials/ui/GetCredentialProviderData;)Z

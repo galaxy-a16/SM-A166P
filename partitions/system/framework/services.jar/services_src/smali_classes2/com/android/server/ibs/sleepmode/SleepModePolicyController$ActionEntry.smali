@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeCallBack;)V
     .locals 0
 
-    .line 573
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 574
     iput-object p1, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;->tag:Ljava/lang/String;
 
-    .line 575
     iput-object p2, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;->callBack:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeCallBack;
 
     return-void
@@ -30,15 +27,12 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 580
     instance-of v0, p1, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;
 
     if-eqz v0, :cond_1
 
-    .line 581
     check-cast p1, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;
 
-    .line 582
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;->tag:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;->tag:Ljava/lang/String;
@@ -65,7 +59,6 @@
     :goto_0
     return p0
 
-    .line 584
     :cond_1
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -77,7 +70,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 589
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;->tag:Ljava/lang/String;
 
     if-nez p0, :cond_0

@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFirstEvent(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Landroid/view/MotionEvent;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstEvent:Landroid/view/MotionEvent;
 
     return-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFirstPoint(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstPoint:Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
 
     return-object p0
@@ -47,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFirstPointerCoords(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)[Landroid/view/MotionEvent$PointerCoords;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     return-object p0
@@ -56,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSecondEvent(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Landroid/view/MotionEvent;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mSecondEvent:Landroid/view/MotionEvent;
 
     return-object p0
@@ -65,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSecondPoint(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mSecondPoint:Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
 
     return-object p0
@@ -74,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSecondPointerCoords(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)[Landroid/view/MotionEvent$PointerCoords;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mSecondPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     return-object p0
@@ -83,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fputmFirstPointerCoords(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;[Landroid/view/MotionEvent$PointerCoords;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     return-void
@@ -92,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fputmSecondPointerCoords(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;[Landroid/view/MotionEvent$PointerCoords;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mSecondPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     return-void
@@ -101,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$mdragAndDrop(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->dragAndDrop(I)V
 
     return-void
@@ -110,38 +101,30 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)V
     .locals 1
 
-    .line 51
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 46
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstEvent:Landroid/view/MotionEvent;
 
-    .line 47
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mSecondEvent:Landroid/view/MotionEvent;
 
-    .line 52
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mContext:Landroid/content/Context;
 
-    .line 53
     iput-object p3, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mType:Ljava/lang/String;
 
-    .line 54
     invoke-static {p2}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstEvent:Landroid/view/MotionEvent;
 
-    .line 55
     new-instance p1, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
 
     iget-object p2, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mContext:Landroid/content/Context;
@@ -152,7 +135,6 @@
 
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstPoint:Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
 
-    .line 56
     new-instance p1, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
 
     iget-object p2, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mContext:Landroid/content/Context;
@@ -167,7 +149,6 @@
 .method public static createAction(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
     .locals 1
 
-    .line 60
     new-instance v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;-><init>(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)V
@@ -178,7 +159,6 @@
 .method public static getStringResId(Ljava/lang/String;)I
     .locals 1
 
-    .line 64
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     const-string v0, "drag"
@@ -201,7 +181,6 @@
 
     return p0
 
-    .line 70
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -226,17 +205,14 @@
 
     move/from16 v1, p1
 
-    .line 112
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v10
 
-    .line 113
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v12
 
-    .line 118
     new-instance v2, Landroid/view/MotionEvent$PointerProperties;
 
     invoke-direct {v2}, Landroid/view/MotionEvent$PointerProperties;-><init>()V
@@ -245,7 +221,6 @@
 
     move-result-object v2
 
-    .line 119
     iget-object v3, v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getActionIndex()I
@@ -258,7 +233,6 @@
 
     invoke-virtual {v3, v4, v2}, Landroid/view/MotionEvent;->getPointerProperties(ILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 121
     iget-object v2, v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mContext:Landroid/content/Context;
 
     const-string v3, "input"
@@ -278,7 +252,6 @@
     :cond_0
     const/4 v6, 0x0
 
-    .line 125
     iget-object v2, v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     aget-object v2, v2, v14
@@ -299,26 +272,20 @@
 
     const/16 v9, 0x1002
 
-    .line 127
     invoke-virtual {v2, v9}, Landroid/view/MotionEvent;->setSource(I)V
 
     const/high16 v8, 0x800000
 
-    .line 128
     invoke-virtual {v2, v8}, Landroid/view/MotionEvent;->setFlags(I)V
 
-    .line 129
     invoke-virtual {v2, v1}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
     const/4 v7, 0x2
 
-    .line 131
     invoke-virtual {v15, v2, v7}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 132
     invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 134
     iget-object v2, v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -335,7 +302,6 @@
 
     const-string v3, "drag"
 
-    .line 136
     iget-object v5, v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mType:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -354,13 +320,11 @@
     :goto_0
     int-to-long v2, v2
 
-    .line 139
     :try_start_0
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     new-instance v2, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v2}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
@@ -369,7 +333,6 @@
 
     move-result-object v16
 
-    .line 151
     iget-object v2, v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mContext:Landroid/content/Context;
 
     const-string v3, "display"
@@ -380,20 +343,16 @@
 
     check-cast v2, Landroid/hardware/display/DisplayManager;
 
-    .line 152
     invoke-virtual {v2, v1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v2
 
-    .line 153
     new-instance v3, Landroid/view/DisplayInfo;
 
     invoke-direct {v3}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 154
     invoke-virtual {v2, v3}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 157
     iget-object v2, v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mSecondPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     aget-object v2, v2, v14
@@ -412,7 +371,6 @@
 
     div-float v17, v3, v6
 
-    .line 158
     iget v2, v2, Landroid/view/MotionEvent$PointerCoords;->y:F
 
     iget v3, v4, Landroid/view/MotionEvent$PointerCoords;->y:F
@@ -421,12 +379,10 @@
 
     div-float v18, v2, v6
 
-    .line 160
     aget-object v2, v16, v14
 
     iput v5, v2, Landroid/view/MotionEvent$PointerCoords;->x:F
 
-    .line 161
     iput v3, v2, Landroid/view/MotionEvent$PointerCoords;->y:F
 
     move v6, v14
@@ -438,7 +394,6 @@
 
     if-ge v6, v2, :cond_2
 
-    .line 164
     aget-object v2, v16, v14
 
     iget v4, v2, Landroid/view/MotionEvent$PointerCoords;->x:F
@@ -447,7 +402,6 @@
 
     iput v4, v2, Landroid/view/MotionEvent$PointerCoords;->x:F
 
-    .line 165
     iget v5, v2, Landroid/view/MotionEvent$PointerCoords;->y:F
 
     add-float v5, v5, v18
@@ -486,28 +440,22 @@
 
     move/from16 v9, v20
 
-    .line 167
     invoke-static/range {v2 .. v9}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
 
     move-result-object v2
 
-    .line 169
     invoke-virtual {v2, v14}, Landroid/view/MotionEvent;->setSource(I)V
 
     const/high16 v3, 0x800000
 
-    .line 170
     invoke-virtual {v2, v3}, Landroid/view/MotionEvent;->setFlags(I)V
 
-    .line 171
     invoke-virtual {v2, v1}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
     const/4 v3, 0x2
 
-    .line 173
     invoke-virtual {v15, v2, v3}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 174
     invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
 
     add-int/lit8 v6, v23, 0x1
@@ -531,7 +479,6 @@
 
     const/4 v6, 0x1
 
-    .line 179
     iget-object v0, v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mSecondPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     const/4 v2, 0x0
@@ -550,23 +497,18 @@
 
     move-result-object v0
 
-    .line 181
     invoke-virtual {v0, v14}, Landroid/view/MotionEvent;->setSource(I)V
 
     const/high16 v2, 0x800000
 
-    .line 182
     invoke-virtual {v0, v2}, Landroid/view/MotionEvent;->setFlags(I)V
 
-    .line 183
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
     const/4 v1, 0x2
 
-    .line 185
     invoke-virtual {v15, v0, v1}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 186
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
     return-void
@@ -576,7 +518,6 @@
 
     move-object v1, v0
 
-    .line 141
     sget-object v0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->TAG:Ljava/lang/String;
 
     const-string v2, "InterruptedException!"
@@ -589,12 +530,10 @@
 .method public performCornerAction(I)V
     .locals 2
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->mFirstEvent:Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_0
 
-    .line 82
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;
@@ -603,7 +542,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 107
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_0
@@ -613,7 +551,6 @@
 .method public setMotionEventForDragAction(Landroid/view/MotionEvent;)V
     .locals 0
 
-    .line 76
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p1

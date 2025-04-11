@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/stats/pull/StatsPullAtomService;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 2109
     iput-object p1, p0, Lcom/android/server/stats/pull/StatsPullAtomService$3;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     iput-object p2, p0, Lcom/android/server/stats/pull/StatsPullAtomService$3;->val$modemFuture:Ljava/util/concurrent/CompletableFuture;
@@ -31,7 +30,6 @@
 .method public onError(Landroid/telephony/TelephonyManager$ModemActivityInfoException;)V
     .locals 2
 
-    .line 2117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +48,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2118
     iget-object p0, p0, Lcom/android/server/stats/pull/StatsPullAtomService$3;->val$modemFuture:Ljava/util/concurrent/CompletableFuture;
 
     const/4 p1, 0x0
@@ -63,7 +60,6 @@
 .method public bridge synthetic onError(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2109
     check-cast p1, Landroid/telephony/TelephonyManager$ModemActivityInfoException;
 
     invoke-virtual {p0, p1}, Lcom/android/server/stats/pull/StatsPullAtomService$3;->onError(Landroid/telephony/TelephonyManager$ModemActivityInfoException;)V
@@ -74,7 +70,6 @@
 .method public onResult(Landroid/telephony/ModemActivityInfo;)V
     .locals 0
 
-    .line 2112
     iget-object p0, p0, Lcom/android/server/stats/pull/StatsPullAtomService$3;->val$modemFuture:Ljava/util/concurrent/CompletableFuture;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
@@ -85,7 +80,6 @@
 .method public bridge synthetic onResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 2109
     check-cast p1, Landroid/telephony/ModemActivityInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/server/stats/pull/StatsPullAtomService$3;->onResult(Landroid/telephony/ModemActivityInfo;)V

@@ -15,16 +15,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
-    .line 232
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 233
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;->mContext:Landroid/content/Context;
 
-    .line 234
     iput-object p2, p0, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;->mHandler:Landroid/os/Handler;
 
-    .line 235
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
@@ -39,7 +35,6 @@
 .method public observe(Landroid/net/Uri;I)V
     .locals 1
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;->mUriEventMap:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -48,7 +43,6 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     iget-object p2, p0, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -57,7 +51,6 @@
 
     const/4 v0, 0x0
 
-    .line 241
     invoke-virtual {p2, p1, v0, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     return-void
@@ -68,7 +61,6 @@
 
     const/4 v0, 0x0
 
-    .line 246
     invoke-virtual {p0, p1, v0}, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;->onChange(ZLandroid/net/Uri;)V
 
     return-void
@@ -77,7 +69,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    .line 251
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
     move-result v0
@@ -102,7 +93,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     :cond_0
     iget-object p1, p0, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;->mUriEventMap:Ljava/util/Map;
 
@@ -114,7 +104,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 254
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$DispatchingContentObserver;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -129,7 +118,6 @@
 
     goto :goto_0
 
-    .line 256
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 

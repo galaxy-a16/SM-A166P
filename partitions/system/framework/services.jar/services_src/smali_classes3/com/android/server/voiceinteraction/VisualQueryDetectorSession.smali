@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$r615OxOEMK_hkmFEBFKd-VOxUU0(Landroid/service/voice/IDetectorSessionVisualQueryDetectionCallback;Landroid/service/voice/ISandboxedDetectionService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->lambda$startPerceivingLocked$0(Landroid/service/voice/IDetectorSessionVisualQueryDetectionCallback;Landroid/service/voice/ISandboxedDetectionService;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAttentionListener(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;)Lcom/android/internal/app/IVisualQueryDetectionAttentionListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mAttentionListener:Lcom/android/internal/app/IVisualQueryDetectionAttentionListener;
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEgressingData(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mEgressingData:Z
 
     return p0
@@ -42,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmQueryStreaming(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mQueryStreaming:Z
 
     return p0
@@ -51,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fputmEgressingData(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mEgressingData:Z
 
     return-void
@@ -60,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fputmQueryStreaming(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mQueryStreaming:Z
 
     return-void
@@ -69,20 +63,16 @@
 .method public constructor <init>(Lcom/android/server/voiceinteraction/HotwordDetectionConnection$ServiceConnection;Ljava/lang/Object;Landroid/content/Context;Landroid/os/IBinder;Lcom/android/internal/app/IHotwordRecognitionStatusCallback;ILandroid/media/permission/Identity;Ljava/util/concurrent/ScheduledExecutorService;ZLcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl$DetectorRemoteExceptionListener;)V
     .locals 0
 
-    .line 70
     invoke-direct/range {p0 .. p10}, Lcom/android/server/voiceinteraction/DetectorSession;-><init>(Lcom/android/server/voiceinteraction/HotwordDetectionConnection$ServiceConnection;Ljava/lang/Object;Landroid/content/Context;Landroid/os/IBinder;Lcom/android/internal/app/IHotwordRecognitionStatusCallback;ILandroid/media/permission/Identity;Ljava/util/concurrent/ScheduledExecutorService;ZLcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl$DetectorRemoteExceptionListener;)V
 
     const/4 p1, 0x0
 
-    .line 73
     iput-boolean p1, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mEgressingData:Z
 
-    .line 74
     iput-boolean p1, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mQueryStreaming:Z
 
     const/4 p1, 0x0
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mAttentionListener:Lcom/android/internal/app/IVisualQueryDetectionAttentionListener;
 
     return-void
@@ -91,7 +81,6 @@
 .method public static synthetic lambda$startPerceivingLocked$0(Landroid/service/voice/IDetectorSessionVisualQueryDetectionCallback;Landroid/service/voice/ISandboxedDetectionService;)V
     .locals 0
 
-    .line 201
     invoke-interface {p1, p0}, Landroid/service/voice/ISandboxedDetectionService;->detectWithVisualSignals(Landroid/service/voice/IDetectorSessionVisualQueryDetectionCallback;)V
 
     return-void
@@ -102,10 +91,8 @@
 .method public dumpLocked(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 226
     invoke-super {p0, p1, p2}, Lcom/android/server/voiceinteraction/DetectorSession;->dumpLocked(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 227
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     return-void
@@ -118,17 +105,14 @@
 
     const-string v1, "VisualQueryDetectorSession"
 
-    .line 82
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/voiceinteraction/DetectorSession;->mUpdateStateAfterStartFinished:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 85
     :try_start_0
     iget-object v0, p0, Lcom/android/server/voiceinteraction/DetectorSession;->mCallback:Lcom/android/internal/app/IHotwordRecognitionStatusCallback;
 
@@ -143,10 +127,8 @@
 
     const-string v2, "Failed to communicate #onProcessRestarted"
 
-    .line 87
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/voiceinteraction/DetectorSession;->notifyOnDetectorRemoteException()V
 
     :goto_0
@@ -156,7 +138,6 @@
 .method public setVisualQueryDetectionAttentionListenerLocked(Lcom/android/internal/app/IVisualQueryDetectionAttentionListener;)V
     .locals 0
 
-    .line 94
     iput-object p1, p0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;->mAttentionListener:Lcom/android/internal/app/IVisualQueryDetectionAttentionListener;
 
     return-void
@@ -165,7 +146,6 @@
 .method public startListeningFromExternalSourceLocked(Landroid/os/ParcelFileDescriptor;Landroid/media/AudioFormat;Landroid/os/PersistableBundle;Landroid/service/voice/IMicrophoneHotwordDetectionVoiceInteractionCallback;)V
     .locals 0
 
-    .line 219
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "HotwordDetectionService method should not be called from VisualQueryDetectorSession."
@@ -178,12 +158,10 @@
 .method public startPerceivingLocked(Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;)V
     .locals 1
 
-    .line 103
     new-instance v0, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$1;-><init>(Lcom/android/server/voiceinteraction/VisualQueryDetectorSession;Landroid/service/voice/IVisualQueryDetectionVoiceInteractionCallback;)V
 
-    .line 201
     iget-object p0, p0, Lcom/android/server/voiceinteraction/DetectorSession;->mRemoteDetectionService:Lcom/android/server/voiceinteraction/HotwordDetectionConnection$ServiceConnection;
 
     new-instance p1, Lcom/android/server/voiceinteraction/VisualQueryDetectorSession$$ExternalSyntheticLambda0;
@@ -198,7 +176,6 @@
 .method public stopPerceivingLocked()V
     .locals 1
 
-    .line 209
     iget-object p0, p0, Lcom/android/server/voiceinteraction/DetectorSession;->mRemoteDetectionService:Lcom/android/server/voiceinteraction/HotwordDetectionConnection$ServiceConnection;
 
     new-instance v0, Lcom/android/server/voiceinteraction/SoftwareTrustedHotwordDetectorSession$$ExternalSyntheticLambda0;

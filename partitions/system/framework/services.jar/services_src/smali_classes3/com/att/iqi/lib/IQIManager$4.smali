@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/att/iqi/lib/IQIManager;)V
     .locals 0
 
-    .line 517
     iput-object p1, p0, Lcom/att/iqi/lib/IQIManager$4;->this$0:Lcom/att/iqi/lib/IQIManager;
 
     invoke-direct {p0}, Lcom/att/iqi/IProfileChangedCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onProfileChanged()V
     .locals 1
 
-    .line 520
     iget-object p0, p0, Lcom/att/iqi/lib/IQIManager$4;->this$0:Lcom/att/iqi/lib/IQIManager;
 
     invoke-static {p0}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmMessageDispatcher(Lcom/att/iqi/lib/IQIManager;)Landroid/os/Handler;
@@ -37,7 +35,6 @@
 
     move-result-object p0
 
-    .line 521
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

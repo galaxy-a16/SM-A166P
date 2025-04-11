@@ -25,7 +25,6 @@
 
     new-array v0, v0, [C
 
-    .line 128
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/enterprise/utils/Utils;->HEX_DIGITS:[C
@@ -96,7 +95,6 @@
 
     const-string v33, "com.samsung.android.knox.permission.KNOX_ENHANCED_ATTESTATION"
 
-    .line 131
     filled-new-array/range {v1 .. v33}, [Ljava/lang/String;
 
     move-result-object v0
@@ -147,7 +145,6 @@
 
     const-string v22, "com.samsung.android.knox.permission.KNOX_CRITICAL_COMMUNICATIONS"
 
-    .line 166
     filled-new-array/range {v1 .. v22}, [Ljava/lang/String;
 
     move-result-object v0
@@ -162,7 +159,6 @@
 
     const-string v3, "com.samsung.android.knox.permission.CUSTOM_SETTING"
 
-    .line 190
     filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -171,10 +167,8 @@
 
     const-string v0, "EnterpriseUtils"
 
-    .line 197
     sput-object v0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
-    .line 198
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -209,7 +203,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 747
     new-instance v0, Ljava/lang/StringBuilder;
 
     array-length v1, p0
@@ -222,20 +215,17 @@
 
     const/4 v1, 0x0
 
-    .line 748
     :goto_0
     array-length v3, p0
 
     if-ge v1, v3, :cond_3
 
-    .line 749
     aget-byte v3, p0, v1
 
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 750
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -244,7 +234,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 752
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,12 +253,10 @@
 
     add-int/lit8 v6, v4, -0x2
 
-    .line 754
     invoke-virtual {v3, v6, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 755
     :cond_1
     invoke-virtual {v3}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
@@ -277,7 +264,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 756
     array-length v3, p0
 
     sub-int/2addr v3, v5
@@ -286,7 +272,6 @@
 
     const/16 v3, 0x3a
 
-    .line 757
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_2
@@ -294,7 +279,6 @@
 
     goto :goto_0
 
-    .line 759
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -317,7 +301,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 789
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result p0
@@ -334,20 +317,17 @@
 
     goto :goto_0
 
-    .line 792
     :cond_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object p0
 
-    .line 793
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
     if-eqz p0, :cond_1
 
-    .line 796
     :try_start_0
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -368,7 +348,6 @@
     :catch_0
     move-exception p0
 
-    .line 801
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_1
@@ -381,7 +360,6 @@
 
     const/4 v0, 0x0
 
-    .line 1010
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/enterprise/utils/Utils;->comparePackageSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result p0
@@ -400,7 +378,6 @@
 
     goto/16 :goto_5
 
-    .line 1028
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -414,7 +391,6 @@
 
     if-nez p3, :cond_1
 
-    .line 1031
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -427,7 +403,6 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1032
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -449,7 +424,6 @@
 
     goto :goto_0
 
-    .line 1034
     :cond_1
     :try_start_2
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -463,7 +437,6 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1036
     :try_start_3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -499,14 +472,12 @@
 
     move-object p3, v5
 
-    .line 1040
     :goto_0
     :try_start_4
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1042
     :goto_1
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -514,12 +485,10 @@
 
     if-eqz p3, :cond_3
 
-    .line 1045
     iget-object p1, p3, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz p1, :cond_3
 
-    .line 1047
     array-length p3, p1
 
     move v1, v0
@@ -531,7 +500,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1049
     invoke-virtual {v2}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v2
@@ -552,17 +520,14 @@
     :cond_3
     if-eqz v5, :cond_5
 
-    .line 1055
     iget-object p1, v5, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     if-eqz p1, :cond_5
 
-    .line 1056
     invoke-virtual {p1}, Landroid/content/pm/SigningInfo;->getApkContentsSigners()[Landroid/content/pm/Signature;
 
     move-result-object p1
 
-    .line 1057
     array-length p3, p1
 
     move v1, v0
@@ -574,7 +539,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 1059
     invoke-virtual {v2}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v2
@@ -595,14 +559,11 @@
     :cond_5
     return v0
 
-    .line 1042
     :goto_4
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1043
     throw p0
 
-    .line 1023
     :cond_6
     :goto_5
     sget-object p0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
@@ -619,7 +580,6 @@
 
     const/4 v0, 0x0
 
-    .line 975
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -637,7 +597,6 @@
 
     if-nez p0, :cond_0
 
-    .line 981
     sget-object v1, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     const-string v2, "Could not Read package info"
@@ -647,19 +606,16 @@
     :cond_0
     if-eqz p0, :cond_3
 
-    .line 983
     iget-object v1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz v1, :cond_3
 
     if-eqz p1, :cond_3
 
-    .line 984
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 985
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     array-length v2, p0
@@ -671,20 +627,17 @@
 
     aget-object v4, p0, v3
 
-    .line 986
     invoke-virtual {v1, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 988
     :cond_1
     new-instance p0, Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
-    .line 989
     array-length v2, p1
 
     move v3, v0
@@ -694,14 +647,12 @@
 
     aget-object v4, p1, v3
 
-    .line 990
     invoke-virtual {p0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 993
     :cond_2
     invoke-virtual {v1, p0}, Ljava/util/HashSet;->equals(Ljava/lang/Object;)Z
 
@@ -719,7 +670,6 @@
     :catch_0
     move-exception p0
 
-    .line 977
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     return v0
@@ -730,14 +680,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 540
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 541
     invoke-static {p1, p0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0
@@ -753,14 +701,12 @@
 .method public static convertStringToList(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
     .locals 1
 
-    .line 533
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 534
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -775,7 +721,6 @@
 
     return-object v0
 
-    .line 536
     :cond_0
     new-instance p0, Ljava/util/ArrayList;
 
@@ -787,7 +732,6 @@
 .method public static createContextAsUser(Landroid/content/Context;Ljava/lang/String;II)Landroid/content/Context;
     .locals 3
 
-    .line 931
     sget-object v0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -806,12 +750,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 934
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 936
     :try_start_0
     new-instance v2, Landroid/os/UserHandle;
 
@@ -824,7 +766,6 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 941
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -837,7 +778,6 @@
     :catch_0
     move-exception p0
 
-    .line 939
     :try_start_1
     sget-object p2, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
@@ -869,7 +809,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 941
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x0
@@ -880,7 +819,6 @@
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 942
     throw p0
 .end method
 
@@ -889,7 +827,6 @@
 
     const/4 v0, 0x0
 
-    .line 480
     :try_start_0
     new-instance v1, Ljava/io/ObjectInputStream;
 
@@ -899,12 +836,10 @@
 
     invoke-direct {v1, v2}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 482
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 483
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->close()V
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -925,7 +860,6 @@
 
     return-object v0
 
-    .line 512
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/ByteArrayInputStream;
@@ -941,7 +875,6 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 513
     :try_start_1
     new-instance p0, Ljava/util/zip/GZIPInputStream;
 
@@ -949,7 +882,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    .line 514
     :try_start_2
     new-instance v2, Ljava/io/ObjectInputStream;
 
@@ -957,7 +889,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 515
     :try_start_3
     invoke-virtual {v2}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
@@ -965,7 +896,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 516
     :try_start_4
     invoke-virtual {v2}, Ljava/io/ObjectInputStream;->close()V
     :try_end_4
@@ -987,7 +917,6 @@
     :catchall_0
     move-exception v3
 
-    .line 511
     :try_start_7
     invoke-virtual {v2}, Ljava/io/ObjectInputStream;->close()V
     :try_end_7
@@ -1052,7 +981,6 @@
     :catch_0
     move-exception p0
 
-    .line 520
     sget-object v1, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1076,7 +1004,6 @@
     :catch_1
     move-exception p0
 
-    .line 517
     sget-object v1, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1107,13 +1034,11 @@
 
     goto :goto_0
 
-    .line 685
     :cond_0
     invoke-static {p1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p1
 
-    .line 686
     invoke-virtual {p1, p0}, Ljava/security/MessageDigest;->digest([B)[B
 
     move-result-object p0
@@ -1132,7 +1057,6 @@
 
     const/16 v0, 0xb
 
-    .line 667
     invoke-static {p0, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object p0
@@ -1145,7 +1069,6 @@
 
     const/4 v0, 0x1
 
-    .line 1121
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1154,12 +1077,10 @@
 
     const-string v2, "ethernetOnlyEnabled"
 
-    .line 1120
     invoke-virtual {p0, v1, v2, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminByField(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
-    .line 1122
     sget-object v0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1186,30 +1107,25 @@
 
     const-string/jumbo v0, "user"
 
-    .line 843
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/os/UserManager;
 
-    .line 844
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 845
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 847
     :try_start_0
     invoke-virtual {p0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object p0
 
-    .line 848
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1227,7 +1143,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 849
     invoke-virtual {v3}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v3
@@ -1236,7 +1151,6 @@
 
     move-result v3
 
-    .line 850
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1256,13 +1170,11 @@
     :catch_0
     move-exception p0
 
-    .line 853
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 855
     :cond_0
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1271,7 +1183,6 @@
     :goto_1
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 856
     throw p0
 .end method
 
@@ -1284,20 +1195,17 @@
 
     goto :goto_1
 
-    .line 724
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 726
     invoke-static {p0, p1}, Lcom/android/server/enterprise/utils/Utils;->getApplicationPubKeys(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
 
     if-eqz p0, :cond_2
 
-    .line 728
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1316,7 +1224,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 729
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p1
@@ -1329,7 +1236,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 731
     invoke-static {p1}, Lcom/android/server/enterprise/utils/Utils;->encodeToString([B)Ljava/lang/String;
 
     move-result-object p1
@@ -1357,25 +1263,21 @@
 
     goto :goto_1
 
-    .line 698
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 699
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 700
     invoke-static {p0}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     move-result-object p0
 
     const/16 v2, 0x40
 
-    .line 701
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -1386,14 +1288,12 @@
 
     if-eqz p0, :cond_2
 
-    .line 702
     iget-object p1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz p1, :cond_2
 
     const/4 p1, 0x0
 
-    .line 703
     :goto_0
     iget-object v0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -1401,7 +1301,6 @@
 
     if-ge p1, v2, :cond_2
 
-    .line 704
     aget-object v0, v0, p1
 
     invoke-static {v0}, Lcom/android/server/enterprise/utils/Utils;->getEncodedPubKey(Landroid/content/pm/Signature;)[B
@@ -1410,7 +1309,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 706
     invoke-static {v0}, Lcom/android/server/enterprise/utils/Utils;->encodeToString([B)Ljava/lang/String;
 
     move-result-object v0
@@ -1441,25 +1339,21 @@
 
     goto :goto_1
 
-    .line 647
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 648
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 649
     invoke-static {p0}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     move-result-object p0
 
     const/16 v2, 0x40
 
-    .line 650
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -1470,14 +1364,12 @@
 
     if-eqz p0, :cond_2
 
-    .line 651
     iget-object p1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz p1, :cond_2
 
     const/4 p1, 0x0
 
-    .line 652
     :goto_0
     iget-object v0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -1485,7 +1377,6 @@
 
     if-ge p1, v2, :cond_2
 
-    .line 653
     aget-object v0, v0, p1
 
     invoke-static {v0}, Lcom/android/server/enterprise/utils/Utils;->getEncodedPubKey(Landroid/content/pm/Signature;)[B
@@ -1496,14 +1387,12 @@
 
     const-string v2, "SHA-256"
 
-    .line 655
     invoke-static {v0, v2}, Lcom/android/server/enterprise/utils/Utils;->digestBytes([BLjava/lang/String;)[B
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 657
     invoke-static {v0}, Lcom/android/server/enterprise/utils/Utils;->byte2HexFormatted([B)Ljava/lang/String;
 
     move-result-object v0
@@ -1530,7 +1419,6 @@
 
     if-nez p0, :cond_0
 
-    .line 874
     new-instance p0, Lcom/samsung/android/knox/ContextInfo;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -1539,7 +1427,6 @@
 
     invoke-direct {p0, v0}, Lcom/samsung/android/knox/ContextInfo;-><init>(I)V
 
-    .line 877
     :cond_0
     iget-boolean v0, p0, Lcom/samsung/android/knox/ContextInfo;->mParent:Z
 
@@ -1549,7 +1436,6 @@
 
     return p0
 
-    .line 881
     :cond_1
     invoke-static {}, Lcom/android/server/enterprise/utils/Utils;->getPersonaManagerAdapter()Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;
 
@@ -1563,7 +1449,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 882
     sget-object v0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1584,12 +1469,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 883
     iget p0, p0, Lcom/samsung/android/knox/ContextInfo;->mContainerId:I
 
     return p0
 
-    .line 885
     :cond_2
     sget v0, Lcom/android/server/enterprise/utils/Utils;->MY_PID:I
 
@@ -1599,12 +1482,10 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 886
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 888
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -1612,7 +1493,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 890
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -1622,10 +1502,8 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 891
     throw p0
 
-    .line 895
     :cond_3
     iget p0, p0, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
@@ -1641,20 +1519,17 @@
 
     if-nez p0, :cond_0
 
-    .line 905
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
 
     return p0
 
-    .line 908
     :cond_0
     iget-boolean v0, p0, Lcom/samsung/android/knox/ContextInfo;->mParent:Z
 
     if-eqz v0, :cond_1
 
-    .line 909
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     move-result-object p0
@@ -1665,7 +1540,6 @@
 
     return p0
 
-    .line 912
     :cond_1
     invoke-static {}, Lcom/android/server/enterprise/utils/Utils;->getPersonaManagerAdapter()Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;
 
@@ -1679,7 +1553,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 913
     iget v0, p0, Lcom/samsung/android/knox/ContextInfo;->mContainerId:I
 
     iget p0, p0, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
@@ -1690,7 +1563,6 @@
 
     return p0
 
-    .line 915
     :cond_2
     iget p0, p0, Lcom/samsung/android/knox/ContextInfo;->mCallerUid:I
 
@@ -1709,12 +1581,10 @@
     :cond_0
     const-string v1, "X.509"
 
-    .line 626
     invoke-static {v1}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v1
 
-    .line 627
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
     invoke-virtual {p0}, Landroid/content/pm/Signature;->toByteArray()[B
@@ -1723,21 +1593,18 @@
 
     invoke-direct {v2, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 628
     invoke-virtual {v1, v2}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 630
     invoke-virtual {p0}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 632
     invoke-interface {p0}, Ljava/security/PublicKey;->getEncoded()[B
 
     move-result-object v0
@@ -1749,12 +1616,10 @@
 .method public static getMessagePackageName(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
 
-    .line 590
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 592
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v1
@@ -1763,12 +1628,10 @@
 
     const-string v3, "com.android.mms"
 
-    .line 593
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/feature/SemFloatingFeature;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 594
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1777,14 +1640,12 @@
 
     return-object v3
 
-    .line 602
     :cond_0
     :try_start_0
     invoke-static {p0}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     move-result-object p0
 
-    .line 603
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -1806,18 +1667,15 @@
 
     const/4 v0, 0x0
 
-    .line 809
     :try_start_0
     invoke-static {p0, p1}, Lcom/android/server/enterprise/utils/Utils;->hasStandardPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 810
     invoke-static {p0, p1}, Lcom/android/server/enterprise/utils/Utils;->hasCustomPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 811
     invoke-static {p0, p1}, Lcom/android/server/enterprise/utils/Utils;->hasPremiumPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -1854,7 +1712,6 @@
 
     goto :goto_1
 
-    .line 834
     :catch_0
     sget-object p0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
@@ -1870,7 +1727,6 @@
 .method public static getPersonaManagerAdapter()Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;
     .locals 1
 
-    .line 899
     const-class v0, Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;
 
     invoke-static {v0}, Lcom/android/server/enterprise/adapter/AdapterRegistry;->getAdapter(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1887,19 +1743,16 @@
 
     const-string v0, "adminUid"
 
-    .line 1070
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1073
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
     const-string/jumbo v3, "proxyUid"
 
-    .line 1074
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1908,12 +1761,10 @@
 
     const-string v3, "PROXY_ADMIN_INFO"
 
-    .line 1075
     invoke-virtual {p0, v3, v1, v2}, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->getValues(Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 1078
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -1922,7 +1773,6 @@
 
     const/4 v1, 0x0
 
-    .line 1079
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -1935,7 +1785,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1081
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -1947,7 +1796,6 @@
 .method public static hasCustomPermission(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
-    .line 770
     sget-object v0, Lcom/android/server/enterprise/utils/Utils;->customPermissions:[Ljava/lang/String;
 
     invoke-static {p0, p1, v0}, Lcom/android/server/enterprise/utils/Utils;->hasPermission(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;)Z
@@ -1960,7 +1808,6 @@
 .method public static hasPermission(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;)Z
     .locals 4
 
-    .line 779
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -1972,7 +1819,6 @@
 
     aget-object v3, p2, v2
 
-    .line 780
     invoke-static {p0, p1, v3}, Lcom/android/server/enterprise/utils/Utils;->checkPermission(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
@@ -1995,7 +1841,6 @@
 .method public static hasPremiumPermission(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
-    .line 766
     sget-object v0, Lcom/android/server/enterprise/utils/Utils;->premiumPermissions:[Ljava/lang/String;
 
     invoke-static {p0, p1, v0}, Lcom/android/server/enterprise/utils/Utils;->hasPermission(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;)Z
@@ -2008,7 +1853,6 @@
 .method public static hasStandardPermission(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
-    .line 774
     sget-object v0, Lcom/android/server/enterprise/utils/Utils;->standardPermissions:[Ljava/lang/String;
 
     invoke-static {p0, p1, v0}, Lcom/android/server/enterprise/utils/Utils;->hasPermission(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;)Z
@@ -2028,7 +1872,6 @@
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
-    .line 866
     sget-object v2, Lcom/android/server/enterprise/utils/Utils;->HEX_DIGITS:[C
 
     and-int/lit8 v3, p0, 0xf
@@ -2045,7 +1888,6 @@
 
     if-lt v2, p1, :cond_0
 
-    .line 869
     new-instance p0, Ljava/lang/String;
 
     invoke-direct {p0, v1, v0, v2}, Ljava/lang/String;-><init>([CII)V
@@ -2056,7 +1898,6 @@
 .method public static isDexActivated(Landroid/content/Context;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -2072,12 +1913,10 @@
 
     const-string v2, "ethernetOnlyApplied"
 
-    .line 1102
     invoke-virtual {p0, v1, v2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getBooleanList(Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 1105
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2112,7 +1951,6 @@
     :catch_0
     move-exception p0
 
-    .line 1112
     sget-object v1, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2135,10 +1973,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1113
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1115
     :cond_1
     :goto_0
     sget-object p0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
@@ -2167,7 +2003,6 @@
 
     const/4 v0, 0x0
 
-    .line 548
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
@@ -2191,7 +2026,6 @@
 
     return v0
 
-    .line 952
     :cond_0
     :try_start_0
     invoke-static {p0}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
@@ -2200,7 +2034,6 @@
 
     const/16 v2, 0x40
 
-    .line 953
     invoke-virtual {v1, p1, v2, p2}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->getPackageInfo(Ljava/lang/String;II)Landroid/content/pm/PackageInfo;
 
     move-result-object p2
@@ -2212,7 +2045,6 @@
     :catch_0
     move-exception p2
 
-    .line 955
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p2, 0x0
@@ -2220,7 +2052,6 @@
     :goto_0
     if-nez p2, :cond_1
 
-    .line 958
     sget-object p0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2241,7 +2072,6 @@
 
     return v0
 
-    .line 964
     :cond_1
     :try_start_1
     iget-object p1, p2, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -2257,7 +2087,6 @@
     :catch_1
     move-exception p0
 
-    .line 966
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     return v0
@@ -2274,7 +2103,6 @@
 
     goto :goto_1
 
-    .line 573
     :cond_0
     iget-object v1, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -2286,7 +2114,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 576
     iget-object v1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz v1, :cond_3
@@ -2299,13 +2126,11 @@
 
     move v1, v0
 
-    .line 577
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_2
 
-    .line 578
     aget-object v2, p1, v1
 
     iget-object v3, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -2333,7 +2158,6 @@
     :cond_3
     return v0
 
-    .line 569
     :cond_4
     :goto_1
     sget-object p0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
@@ -2350,12 +2174,10 @@
 
     const-string v0, "="
 
-    .line 224
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 225
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -2364,7 +2186,6 @@
 
     if-nez v1, :cond_0
 
-    .line 226
     sget-object p0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2385,7 +2206,6 @@
 
     return-object v2
 
-    .line 232
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/FileReader;
@@ -2394,14 +2214,12 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_5
 
-    .line 239
     new-instance p1, Ljava/io/BufferedReader;
 
     const/16 v3, 0x200
 
     invoke-direct {p1, v1, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;I)V
 
-    .line 242
     :cond_1
     :try_start_1
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -2410,7 +2228,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 243
     invoke-virtual {v3, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
@@ -2425,12 +2242,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 245
     invoke-virtual {v3, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 246
     array-length v0, p0
 
     const/4 v3, 0x2
@@ -2449,7 +2264,6 @@
     :goto_0
     const-string/jumbo v0, "null"
 
-    .line 247
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2464,12 +2278,10 @@
     :cond_3
     move-object v2, p0
 
-    .line 258
     :goto_1
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
-    .line 262
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
@@ -2479,18 +2291,15 @@
     :catch_0
     move-exception p0
 
-    .line 266
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_2
     return-object v2
 
-    .line 258
     :cond_4
     :try_start_3
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
-    .line 262
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
@@ -2500,7 +2309,6 @@
     :catch_1
     move-exception p0
 
-    .line 266
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_3
@@ -2514,17 +2322,14 @@
     :catch_2
     move-exception p0
 
-    .line 253
     :try_start_4
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 258
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
-    .line 262
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
@@ -2534,18 +2339,15 @@
     :catch_3
     move-exception p0
 
-    .line 266
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_4
     return-object v2
 
-    .line 258
     :goto_5
     :try_start_6
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
-    .line 262
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
@@ -2555,20 +2357,16 @@
     :catch_4
     move-exception p1
 
-    .line 266
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 268
     :goto_6
     throw p0
 
     :catch_5
     move-exception p0
 
-    .line 234
     invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
-    .line 235
     sget-object p0, Lcom/android/server/enterprise/utils/Utils;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2593,24 +2391,19 @@
 .method public static serializeObject(Ljava/lang/Object;)[B
     .locals 2
 
-    .line 457
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 460
     :try_start_0
     new-instance v1, Ljava/io/ObjectOutputStream;
 
     invoke-direct {v1, v0}, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 461
     invoke-interface {v1, p0}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 462
     invoke-interface {v1}, Ljava/io/ObjectOutput;->close()V
 
-    .line 465
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -2622,7 +2415,6 @@
     :catch_0
     move-exception p0
 
-    .line 468
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -2637,23 +2429,19 @@
 
     const/4 v1, 0x0
 
-    .line 292
     :try_start_0
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 293
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 294
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
 
-    .line 297
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p2
@@ -2662,10 +2450,8 @@
 
     const/4 v4, -0x1
 
-    .line 296
     invoke-static {p2, v3, v4, v4}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 304
     :cond_0
     new-instance p2, Ljava/io/FileReader;
 
@@ -2674,7 +2460,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    .line 305
     :try_start_1
     new-instance v3, Ljava/io/BufferedReader;
 
@@ -2685,7 +2470,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 307
     :try_start_2
     new-instance v4, Ljava/lang/StringBuffer;
 
@@ -2695,7 +2479,6 @@
 
     move v5, v0
 
-    .line 309
     :goto_0
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -2712,7 +2495,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 310
     :try_start_3
     invoke-virtual {v6, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -2726,7 +2508,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 313
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2743,11 +2524,9 @@
 
     move v5, v8
 
-    .line 315
     :cond_1
     invoke-virtual {v4, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 316
     invoke-static {v7}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -2759,7 +2538,6 @@
     :cond_2
     if-nez v5, :cond_3
 
-    .line 321
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2776,21 +2554,18 @@
 
     invoke-virtual {v4, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 322
     invoke-static {v7}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v4, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 326
     :cond_3
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 328
     :try_start_4
     new-instance p0, Ljava/io/PrintStream;
 
@@ -2799,7 +2574,6 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 329
     :try_start_5
     invoke-virtual {v4}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -2810,7 +2584,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 336
     :try_start_6
     invoke-virtual {p2}, Ljava/io/FileReader;->close()V
     :try_end_6
@@ -2821,10 +2594,8 @@
     :catch_0
     move-exception p1
 
-    .line 345
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 348
     :goto_1
     invoke-virtual {p0}, Ljava/io/PrintStream;->close()V
 
@@ -2916,7 +2687,6 @@
 
     move-object v3, p1
 
-    .line 332
     :goto_4
     :try_start_7
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -2925,7 +2695,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 336
     :try_start_8
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
@@ -2940,14 +2709,12 @@
     :goto_5
     if-eqz v3, :cond_5
 
-    .line 341
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
 
     goto :goto_7
 
-    .line 345
     :goto_6
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
@@ -2955,7 +2722,6 @@
     :goto_7
     if-eqz p1, :cond_6
 
-    .line 348
     invoke-virtual {p1}, Ljava/io/PrintStream;->close()V
 
     :cond_6
@@ -2968,7 +2734,6 @@
     :goto_9
     if-eqz v1, :cond_7
 
-    .line 336
     :try_start_9
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
@@ -2983,14 +2748,12 @@
     :goto_a
     if-eqz v3, :cond_8
 
-    .line 341
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_6
 
     goto :goto_c
 
-    .line 345
     :goto_b
     invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
 
@@ -2998,10 +2761,8 @@
     :goto_c
     if-eqz p1, :cond_9
 
-    .line 348
     invoke-virtual {p1}, Ljava/io/PrintStream;->close()V
 
-    .line 351
     :cond_9
     throw p0
 .end method

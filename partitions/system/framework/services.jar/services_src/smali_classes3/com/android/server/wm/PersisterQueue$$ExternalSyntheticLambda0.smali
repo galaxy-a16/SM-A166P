@@ -20,7 +20,6 @@
 .method public final process()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/wm/PersisterQueue;->$r8$lambda$syVj9EGgTHDI9mYKZaXH4FHirr0()V
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/RealTimeTokenService;)V
     .locals 0
 
-    .line 174
     iput-object p1, p0, Lcom/android/server/RealTimeTokenService$3;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,22 +23,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .line 177
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     const-string p1, "Time has changed"
 
     const-string p2, "RealTimeTokenService"
 
-    .line 178
     invoke-static {p2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     iget-object p1, p0, Lcom/android/server/RealTimeTokenService$3;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-static {p1}, Lcom/android/server/RealTimeTokenService;->-$$Nest$mgetSystemTime(Lcom/android/server/RealTimeTokenService;)V
 
-    .line 180
     iget-object p1, p0, Lcom/android/server/RealTimeTokenService$3;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-static {p1}, Lcom/android/server/RealTimeTokenService;->-$$Nest$fgetbootingTime(Lcom/android/server/RealTimeTokenService;)J
@@ -58,7 +53,6 @@
 
     div-long/2addr v0, v2
 
-    .line 182
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,7 +91,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     iget-object p0, p0, Lcom/android/server/RealTimeTokenService$3;->this$0:Lcom/android/server/RealTimeTokenService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/RealTimeTokenService;->setUserTime(J)I
@@ -106,7 +99,6 @@
 
     if-gez p0, :cond_0
 
-    .line 185
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

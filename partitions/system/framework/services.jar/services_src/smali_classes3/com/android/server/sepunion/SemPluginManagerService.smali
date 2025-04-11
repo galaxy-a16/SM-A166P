@@ -25,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 22
     const-class v0, Lcom/android/server/sepunion/SemPluginManagerService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -40,20 +39,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 30
     invoke-direct {p0}, Lcom/samsung/android/sepunion/IPluginManager$Stub;-><init>()V
 
-    .line 31
     sget-object v0, Lcom/android/server/sepunion/SemPluginManagerService;->TAG:Ljava/lang/String;
 
     const-string v1, "SemPluginManagerService"
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mContext:Landroid/content/Context;
 
-    .line 33
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
@@ -66,7 +61,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
-    .line 34
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemPluginManagerService;->initialize()V
 
     return-void
@@ -79,7 +73,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 138
     array-length v0, p3
 
     if-eqz v0, :cond_0
@@ -96,12 +89,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 139
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/sepunion/SemPluginManagerService;->dumpCoverInfomation(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 141
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/sepunion/SemPluginManagerService;->dumpCoverInfomation(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
@@ -112,7 +103,6 @@
 .method public final dumpCoverInfomation(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 4
 
-    .line 146
     iget-boolean v0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-nez v0, :cond_0
@@ -122,12 +112,10 @@
     :cond_0
     const-string v0, "\n##### SEP COVER MANAGER SERVICE #####\n##### (dumpsys sepunion cover) #####\n"
 
-    .line 149
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     if-eqz p3, :cond_6
 
-    .line 152
     array-length v0, p3
 
     if-nez v0, :cond_1
@@ -137,7 +125,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 155
     aget-object v1, p3, v0
 
     const-string v2, "close"
@@ -148,7 +135,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 156
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -159,7 +145,6 @@
 
     goto :goto_1
 
-    .line 157
     :cond_2
     aget-object v1, p3, v0
 
@@ -173,7 +158,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -184,7 +168,6 @@
 
     goto :goto_1
 
-    .line 159
     :cond_3
     aget-object v1, p3, v0
 
@@ -198,7 +181,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 160
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -209,14 +191,12 @@
 
     const-string p1, "111111"
 
-    .line 161
     invoke-virtual {p0, p1, v2}, Landroid/app/admin/DevicePolicyManager;->resetPassword(Ljava/lang/String;I)Z
 
     move-result p0
 
     if-nez p0, :cond_7
 
-    .line 162
     sget-object p0, Lcom/android/server/sepunion/SemPluginManagerService;->TAG:Ljava/lang/String;
 
     const-string p1, "dumpCoverInfomation: resetPassword(secure_on) failed."
@@ -225,7 +205,6 @@
 
     goto :goto_1
 
-    .line 164
     :cond_4
     aget-object v0, p3, v0
 
@@ -237,7 +216,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -248,14 +226,12 @@
 
     const-string p1, ""
 
-    .line 166
     invoke-virtual {p0, p1, v2}, Landroid/app/admin/DevicePolicyManager;->resetPassword(Ljava/lang/String;I)Z
 
     move-result p0
 
     if-nez p0, :cond_7
 
-    .line 167
     sget-object p0, Lcom/android/server/sepunion/SemPluginManagerService;->TAG:Ljava/lang/String;
 
     const-string p1, "dumpCoverInfomation: resetPassword(secure_off) failed."
@@ -264,7 +240,6 @@
 
     goto :goto_1
 
-    .line 170
     :cond_5
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
@@ -272,7 +247,6 @@
 
     goto :goto_1
 
-    .line 153
     :cond_6
     :goto_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
@@ -287,7 +261,6 @@
 .method public getCoverManagerServiceImpl()Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
     .locals 0
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     return-object p0
@@ -296,12 +269,10 @@
 .method public getCoverState()Lcom/samsung/android/cover/CoverState;
     .locals 1
 
-    .line 70
     iget-boolean v0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-eqz v0, :cond_0
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->getCoverState()Lcom/samsung/android/cover/CoverState;
@@ -319,12 +290,10 @@
 .method public initialize()V
     .locals 2
 
-    .line 38
     iget-boolean v0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-eqz v0, :cond_0
 
-    .line 39
     new-instance v0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     iget-object v1, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mContext:Landroid/content/Context;
@@ -333,7 +302,6 @@
 
     iput-object v0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
-    .line 42
     :cond_0
     const-class v0, Lcom/samsung/android/sepunion/SemPluginManagerLocal;
 
@@ -347,7 +315,6 @@
 
     if-nez v0, :cond_1
 
-    .line 44
     const-class v0, Lcom/samsung/android/sepunion/SemPluginManagerLocal;
 
     new-instance v1, Lcom/android/server/sepunion/SemPluginLocalService;
@@ -365,21 +332,18 @@
 .method public notifyCoverSwitchStateChanged(JZ)V
     .locals 2
 
-    .line 57
     sget-object v0, Lcom/android/server/sepunion/SemPluginManagerService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifyCoverSwitchStateChanged"
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     iget-boolean v0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 61
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
@@ -391,21 +355,18 @@
 .method public notifySmartCoverAttachStateChanged(JZLcom/samsung/android/cover/CoverState;)V
     .locals 2
 
-    .line 49
     sget-object v0, Lcom/android/server/sepunion/SemPluginManagerService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifySmartCoverAttachStateChanged"
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     iget-boolean v0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 53
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
@@ -421,12 +382,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 95
     iget-boolean p1, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-eqz p1, :cond_1
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->systemRunning()V
@@ -438,12 +397,10 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 99
     iget-boolean p1, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-eqz p1, :cond_1
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->onBootComplete()V
@@ -456,40 +413,34 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserStarting(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserStopped(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserStopping(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserSwitching(II)V
     .locals 0
 
-    .line 194
     iget-boolean p1, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-eqz p1, :cond_0
 
-    .line 195
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-virtual {p0, p2}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->onSwitchUser(I)V
@@ -501,12 +452,10 @@
 .method public onUserUnlocked(I)V
     .locals 1
 
-    .line 187
     iget-boolean v0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mIsCoverSupport:Z
 
     if-eqz v0, :cond_0
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/sepunion/SemPluginManagerService;->mCoverManagerServiceImpl:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->onUserUnlocked(I)V
@@ -518,6 +467,5 @@
 .method public onUserUnlocking(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

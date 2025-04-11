@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;Landroid/content/Context;)V
     .locals 0
 
-    .line 914
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7$1;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;
 
     iput-object p2, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7$1;->val$context:Landroid/content/Context;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 3
 
-    .line 918
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7$1;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;
 
     iget-object v0, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 919
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7$1;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;
 
     iget-object v0, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
@@ -63,7 +60,6 @@
 
     if-nez v0, :cond_0
 
-    .line 920
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7$1;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;
 
     iget-object v0, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
@@ -76,7 +72,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->-$$Nest$fputmPaletteCover(Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;Lcom/samsung/accessory/manager/authentication/cover/PaletteCover;)V
 
-    .line 922
     :cond_0
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7$1;->this$1:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$7;
 

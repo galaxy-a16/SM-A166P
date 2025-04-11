@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/translation/TranslationManagerServiceImpl;)V
     .locals 0
 
-    .line 620
     iput-object p1, p0, Lcom/android/server/translation/TranslationManagerServiceImpl$TranslationServiceRemoteCallback;->this$0:Lcom/android/server/translation/TranslationManagerServiceImpl;
 
     invoke-direct {p0}, Landroid/view/translation/ITranslationServiceCallback$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/translation/TranslationManagerServiceImpl;Lcom/android/server/translation/TranslationManagerServiceImpl$TranslationServiceRemoteCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/translation/TranslationManagerServiceImpl$TranslationServiceRemoteCallback;-><init>(Lcom/android/server/translation/TranslationManagerServiceImpl;)V
 
     return-void
@@ -39,12 +37,10 @@
 
     const-string/jumbo p1, "received a null TranslationCapability from TranslationService."
 
-    .line 626
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 629
     :cond_0
     iget-object p0, p0, Lcom/android/server/translation/TranslationManagerServiceImpl$TranslationServiceRemoteCallback;->this$0:Lcom/android/server/translation/TranslationManagerServiceImpl;
 

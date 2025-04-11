@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppRestrictionController;)V
     .locals 0
 
-    .line 1436
     iput-object p1, p0, Lcom/android/server/am/AppRestrictionController$3;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public updateBackgroundRestrictedForUidPackage(ILjava/lang/String;Z)V
     .locals 1
 
-    .line 1440
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$3;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -40,7 +38,6 @@
 
     move-result-object p0
 
-    .line 1441
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

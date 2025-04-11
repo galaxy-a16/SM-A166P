@@ -18,7 +18,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,12 +46,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 19
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/NoAppIconFilter;->context:Landroid/content/Context;
 
     return-void
@@ -61,7 +58,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/NoAppIconFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/NoAppIconFilter;-><init>()V
 
     return-void
@@ -70,7 +66,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/NoAppIconFilter;
     .locals 1
 
-    .line 28
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/NoAppIconFilter$NoAppIconFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/NoAppIconFilter;
 
     move-result-object v0
@@ -83,14 +78,12 @@
 .method public deInit()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 42
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -103,7 +96,6 @@
 
     if-nez p0, :cond_1
 
-    .line 44
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -116,7 +108,6 @@
 
     const-string p0, "com.sec."
 
-    .line 45
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -133,7 +124,6 @@
 
     const-string p0, "com.sds."
 
-    .line 46
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -154,7 +144,6 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/NoAppIconFilter;->context:Landroid/content/Context;
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 6528
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$15;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     const-string p1, "No Action"
 
-    .line 6531
     invoke-static {p0, p1}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

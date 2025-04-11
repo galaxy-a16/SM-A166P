@@ -9,14 +9,12 @@
 
     const/16 v0, 0x82
 
-    .line 309
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecMessageBuilder;->physicalAddressToParam(I)[B
 
     move-result-object p1
 
     const/16 v1, 0xf
 
-    .line 308
     invoke-static {p0, v1, v0, p1}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -41,7 +39,6 @@
 
     const/16 p2, 0x9e
 
-    .line 189
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -54,7 +51,6 @@
 
     const/16 v0, 0x33
 
-    .line 667
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -67,7 +63,6 @@
 
     const/16 v0, 0x99
 
-    .line 655
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -80,7 +75,6 @@
 
     const/16 v0, 0xa1
 
-    .line 679
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -99,7 +93,6 @@
 
     aput-byte p3, v0, v1
 
-    .line 702
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -146,7 +139,6 @@
 
     const/16 v1, 0x87
 
-    .line 172
     invoke-static {p0, p1, v1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -177,7 +169,6 @@
 
     aput-byte p2, v0, p3
 
-    .line 50
     invoke-static {p0, p1, v1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -190,7 +181,6 @@
 
     const/16 v0, 0x71
 
-    .line 480
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -203,7 +193,6 @@
 
     const/16 v0, 0x8f
 
-    .line 379
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -216,7 +205,6 @@
 
     const/16 v0, 0x8c
 
-    .line 83
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -229,7 +217,6 @@
 
     const/16 v0, 0xa5
 
-    .line 683
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -242,7 +229,6 @@
 
     const/16 v0, 0x46
 
-    .line 72
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -255,7 +241,6 @@
 
     const/16 v0, 0x83
 
-    .line 61
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -268,7 +253,6 @@
 
     const/16 v0, 0x7d
 
-    .line 542
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -281,14 +265,12 @@
 
     const/16 v0, 0x9d
 
-    .line 321
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecMessageBuilder;->physicalAddressToParam(I)[B
 
     move-result-object p1
 
     const/4 v1, 0x0
 
-    .line 320
     invoke-static {p0, v1, v0, p1}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -301,7 +283,6 @@
 
     const/16 v0, 0xc0
 
-    .line 211
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -314,7 +295,6 @@
 
     const/16 v0, 0xb
 
-    .line 607
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -327,7 +307,6 @@
 
     const/16 v0, 0x9
 
-    .line 596
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -340,7 +319,6 @@
 
     const/16 v0, 0xc1
 
-    .line 244
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -353,7 +331,6 @@
 
     const/16 v0, 0xc2
 
-    .line 255
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -394,7 +371,6 @@
 
     const/16 p2, 0x7a
 
-    .line 495
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -419,7 +395,6 @@
 
     const/16 p2, 0x8e
 
-    .line 409
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -464,7 +439,6 @@
 
     const/16 p2, 0x84
 
-    .line 151
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -489,7 +463,6 @@
 
     const/16 p2, 0x90
 
-    .line 394
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -502,7 +475,6 @@
 
     const/16 v0, 0xa3
 
-    .line 468
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -515,7 +487,6 @@
 
     const/16 v0, 0x7e
 
-    .line 454
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessageBuilder;->buildCommandWithBooleanParam(IIIZ)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -530,7 +501,6 @@
 
     const/16 v1, 0x85
 
-    .line 296
     invoke-static {p0, v0, v1}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -543,7 +513,6 @@
 
     const/16 v0, 0xc3
 
-    .line 200
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -556,7 +525,6 @@
 
     const/16 v0, 0xc4
 
-    .line 233
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -567,7 +535,6 @@
 .method public static buildRequestShortAudioDescriptor(II[I)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 4
 
-    .line 269
     array-length v0, p2
 
     const/4 v1, 0x4
@@ -583,7 +550,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 271
     aget v3, p2, v2
 
     and-int/lit16 v3, v3, 0xff
@@ -599,7 +565,6 @@
     :cond_0
     const/16 p2, 0xa4
 
-    .line 273
     invoke-static {p0, p1, p2, v1}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -654,7 +619,6 @@
 
     const/16 p2, 0x80
 
-    .line 353
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -667,14 +631,12 @@
 
     const/16 v0, 0x81
 
-    .line 368
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecMessageBuilder;->physicalAddressToParam(I)[B
 
     move-result-object p1
 
     const/16 v1, 0xf
 
-    .line 367
     invoke-static {p0, v1, v0, p1}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -687,7 +649,6 @@
 
     const/16 v0, 0x34
 
-    .line 631
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -700,7 +661,6 @@
 
     const/16 v0, 0x97
 
-    .line 619
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -713,7 +673,6 @@
 
     const/16 v0, 0xa2
 
-    .line 643
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -724,7 +683,6 @@
 .method public static buildSetMenuLanguageCommand(ILjava/lang/String;)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 3
 
-    .line 97
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -737,7 +695,6 @@
 
     return-object p0
 
-    .line 101
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -747,7 +704,6 @@
 
     const/4 v1, 0x0
 
-    .line 103
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -760,7 +716,6 @@
 
     const/4 v1, 0x1
 
-    .line 104
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -773,7 +728,6 @@
 
     const/4 v1, 0x2
 
-    .line 105
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result p1
@@ -788,7 +742,6 @@
 
     const/16 v1, 0x32
 
-    .line 108
     invoke-static {p0, p1, v1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -799,7 +752,6 @@
 .method public static buildSetOsdNameCommand(IILjava/lang/String;)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 2
 
-    .line 121
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -812,7 +764,6 @@
 
     const/4 v1, 0x0
 
-    .line 124
     :try_start_0
     invoke-virtual {p2, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -828,7 +779,6 @@
 
     const/16 v0, 0x47
 
-    .line 128
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -846,14 +796,12 @@
 
     const/16 v0, 0x86
 
-    .line 335
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecMessageBuilder;->physicalAddressToParam(I)[B
 
     move-result-object p1
 
     const/16 v1, 0xf
 
-    .line 334
     invoke-static {p0, v1, v0, p1}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -866,7 +814,6 @@
 
     const/16 v0, 0x72
 
-    .line 440
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessageBuilder;->buildCommandWithBooleanParam(IIIZ)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -879,7 +826,6 @@
 
     const/16 v0, 0x36
 
-    .line 553
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -894,19 +840,16 @@
 
     if-eqz p3, :cond_0
 
-    .line 425
     invoke-static {p2}, Lcom/android/server/hdmi/HdmiCecMessageBuilder;->physicalAddressToParam(I)[B
 
     move-result-object p2
 
-    .line 424
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
 
     return-object p0
 
-    .line 427
     :cond_0
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
@@ -920,7 +863,6 @@
 
     const/16 v0, 0xc5
 
-    .line 222
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -933,7 +875,6 @@
 
     const/16 v0, 0xd
 
-    .line 286
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -956,7 +897,6 @@
 
     aput-byte p2, v0, v1
 
-    .line 507
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessageBuilder;->buildUserControlPressed(II[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -969,7 +909,6 @@
 
     const/16 v0, 0x44
 
-    .line 519
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -982,7 +921,6 @@
 
     const/16 v0, 0x45
 
-    .line 531
     invoke-static {p0, p1, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -995,7 +933,6 @@
 
     const/16 v0, 0x89
 
-    .line 565
     invoke-static {p0, p1, v0, p2}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -1006,7 +943,6 @@
 .method public static buildVendorCommandWithId(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 5
 
-    .line 579
     array-length v0, p3
 
     const/4 v1, 0x3
@@ -1023,7 +959,6 @@
 
     const/4 v3, 0x0
 
-    .line 580
     aput-byte v2, v0, v3
 
     shr-int/lit8 v2, p2, 0x8
@@ -1034,7 +969,6 @@
 
     const/4 v4, 0x1
 
-    .line 581
     aput-byte v2, v0, v4
 
     and-int/lit16 p2, p2, 0xff
@@ -1043,17 +977,14 @@
 
     const/4 v2, 0x2
 
-    .line 582
     aput-byte p2, v0, v2
 
-    .line 583
     array-length p2, p3
 
     invoke-static {p3, v3, v0, v1, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     const/16 p2, 0xa0
 
-    .line 584
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/hdmi/HdmiCecMessage;->build(III[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -1064,7 +995,6 @@
 .method public static physicalAddressToParam(I)[B
     .locals 3
 
-    .line 0
     const/4 v0, 0x2
 
     new-array v0, v0, [B

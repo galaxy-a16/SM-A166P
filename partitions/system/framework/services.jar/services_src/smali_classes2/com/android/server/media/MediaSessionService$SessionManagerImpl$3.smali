@@ -30,7 +30,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;ZLjava/lang/String;IIIIILjava/lang/String;)V
     .locals 0
 
-    .line 2415
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$3;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     iput-boolean p2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$3;->val$asSystemService:Z
@@ -59,12 +58,10 @@
 .method public run()V
     .locals 11
 
-    .line 2421
     iget-boolean v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$3;->val$asSystemService:Z
 
     if-eqz v0, :cond_0
 
-    .line 2422
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$3;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
@@ -77,26 +74,21 @@
 
     move-result-object v0
 
-    .line 2423
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
 
-    .line 2424
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2
 
     goto :goto_0
 
-    .line 2426
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$3;->val$opPackageName:Ljava/lang/String;
 
-    .line 2427
     iget v1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$3;->val$uid:I
 
-    .line 2428
     iget v2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$3;->val$pid:I
 
     :goto_0
@@ -106,7 +98,6 @@
 
     move v9, v2
 
-    .line 2431
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$3;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
@@ -126,7 +117,6 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    .line 2433
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -137,7 +127,6 @@
 
     iget v10, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 2431
     invoke-virtual/range {v3 .. v10}, Landroid/media/AudioManager;->adjustSuggestedStreamVolumeForUid(IIILjava/lang/String;III)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
@@ -148,7 +137,6 @@
     :catch_0
     move-exception v0
 
-    .line 2435
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

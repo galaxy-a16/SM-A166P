@@ -19,21 +19,16 @@
 .method public constructor <init>(Lcom/android/server/am/mars/database/MARsVersionManager;IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 155
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetExcludePackage;->this$0:Lcom/android/server/am/mars/database/MARsVersionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 156
     iput p2, p0, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetExcludePackage;->policyNum:I
 
-    .line 157
     iput p3, p0, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetExcludePackage;->condition:I
 
-    .line 158
     iput-object p4, p0, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetExcludePackage;->pkgNameMatchType:Ljava/lang/String;
 
-    .line 159
     iput-object p5, p0, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetExcludePackage;->packageName:Ljava/lang/String;
 
     return-void
@@ -44,7 +39,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 163
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

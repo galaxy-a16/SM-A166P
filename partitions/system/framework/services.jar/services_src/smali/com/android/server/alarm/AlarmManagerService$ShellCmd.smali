@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/AlarmManagerService;)V
     .locals 0
 
-    .line 6753
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$ShellCmd;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/alarm/AlarmManagerService;Lcom/android/server/alarm/AlarmManagerService$ShellCmd-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/alarm/AlarmManagerService$ShellCmd;-><init>(Lcom/android/server/alarm/AlarmManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public getBinderService()Landroid/app/IAlarmManager;
     .locals 0
 
-    .line 6756
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$ShellCmd;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-static {p0}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$fgetmService(Lcom/android/server/alarm/AlarmManagerService;)Landroid/os/IBinder;
@@ -52,14 +49,12 @@
 
     if-nez p1, :cond_0
 
-    .line 6762
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 6765
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -67,7 +62,6 @@
 
     const/4 v1, -0x1
 
-    .line 6767
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -143,14 +137,12 @@
 
     if-eq v2, v4, :cond_5
 
-    .line 6780
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 6776
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/alarm/AlarmManagerService$ShellCmd;->getBinderService()Landroid/app/IAlarmManager;
 
@@ -160,18 +152,15 @@
 
     move-result p0
 
-    .line 6777
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(I)V
 
     return v6
 
-    .line 6772
     :cond_6
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 6773
     invoke-virtual {p0}, Lcom/android/server/alarm/AlarmManagerService$ShellCmd;->getBinderService()Landroid/app/IAlarmManager;
 
     move-result-object p0
@@ -180,7 +169,6 @@
 
     return v6
 
-    .line 6769
     :cond_7
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -190,7 +178,6 @@
 
     move-result-wide v2
 
-    .line 6770
     invoke-virtual {p0}, Lcom/android/server/alarm/AlarmManagerService$ShellCmd;->getBinderService()Landroid/app/IAlarmManager;
 
     move-result-object p0
@@ -211,7 +198,6 @@
     :catch_0
     move-exception p0
 
-    .line 6783
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     return v1
@@ -220,59 +206,48 @@
 .method public onHelp()V
     .locals 1
 
-    .line 6790
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Alarm manager service (alarm) commands:"
 
-    .line 6791
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 6792
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 6793
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  set-time TIME"
 
-    .line 6794
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Set the system clock time to TIME where TIME is milliseconds"
 
-    .line 6795
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    since the Epoch."
 
-    .line 6796
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  set-timezone TZ"
 
-    .line 6797
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Set the system timezone to TZ where TZ is an Olson id."
 
-    .line 6798
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  get-config-version"
 
-    .line 6799
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Returns an integer denoting the version of device_config keys the service is sync\'ed to. As long as this returns the same version, the values of the config are guaranteed to remain the same."
 
-    .line 6800
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void

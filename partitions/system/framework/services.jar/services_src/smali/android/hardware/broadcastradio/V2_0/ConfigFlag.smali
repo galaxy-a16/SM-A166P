@@ -87,7 +87,6 @@
 
     return-object p0
 
-    .line 90
     :cond_8
     new-instance v0, Ljava/lang/StringBuilder;
 

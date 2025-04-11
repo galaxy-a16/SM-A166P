@@ -21,15 +21,12 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationReminder;Landroid/os/Handler;)V
     .locals 0
 
-    .line 536
     iput-object p1, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
-    .line 537
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const-string/jumbo p1, "notification_reminder_selectable"
 
-    .line 526
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -38,7 +35,6 @@
 
     const-string/jumbo p1, "notification_reminder_type"
 
-    .line 528
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -47,7 +43,6 @@
 
     const-string/jumbo p1, "notification_reminder_app_list"
 
-    .line 530
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -56,7 +51,6 @@
 
     const-string/jumbo p1, "notification_reminder_vibrate"
 
-    .line 532
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -65,7 +59,6 @@
 
     const-string/jumbo p1, "time_key"
 
-    .line 534
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -80,7 +73,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 0
 
-    .line 542
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->update(Landroid/net/Uri;)V
 
     return-void
@@ -89,7 +81,6 @@
 .method public update(Landroid/net/Uri;)V
     .locals 7
 
-    .line 546
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,7 +99,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     iget-object v0, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$fgetmContext(Lcom/android/server/notification/NotificationReminder;)Landroid/content/Context;
@@ -127,7 +117,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 548
     iget-object v5, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->NOTIFICATION_REMINDER_SELECTABLE:Landroid/net/Uri;
 
     invoke-virtual {v5, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -136,7 +125,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 549
     :cond_0
     iget-object v5, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
@@ -158,7 +146,6 @@
     :goto_0
     invoke-static {v5, v6}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$fputmEnableReminder(Lcom/android/server/notification/NotificationReminder;Z)V
 
-    .line 551
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,7 +168,6 @@
 
     invoke-static {v1, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 552
     iget-object v5, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     invoke-static {v5}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$fgetmEnableReminder(Lcom/android/server/notification/NotificationReminder;)Z
@@ -190,7 +176,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 553
     iget-object v5, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     iget-object v6, v5, Lcom/android/server/notification/NotificationReminder;->mActiveNotiList:Ljava/util/ArrayList;
@@ -201,14 +186,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 554
     iget-object v5, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     invoke-static {v5}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$msetReminderAlarm(Lcom/android/server/notification/NotificationReminder;)V
 
     goto :goto_1
 
-    .line 557
     :cond_2
     iget-object v5, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
@@ -218,7 +201,6 @@
     :goto_1
     if-eqz p1, :cond_4
 
-    .line 560
     iget-object v5, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->NOTIFICATION_REMINDER_VIBRATE:Landroid/net/Uri;
 
     invoke-virtual {v5, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -227,7 +209,6 @@
 
     if-eqz v5, :cond_6
 
-    .line 561
     :cond_4
     iget-object v5, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
@@ -247,7 +228,6 @@
     :goto_2
     invoke-static {v5, v2}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$fputmEnableVibrate(Lcom/android/server/notification/NotificationReminder;Z)V
 
-    .line 563
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -273,7 +253,6 @@
     :cond_6
     if-eqz p1, :cond_7
 
-    .line 565
     iget-object v2, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->TIME_KEY:Landroid/net/Uri;
 
     invoke-virtual {v2, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -282,7 +261,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 566
     :cond_7
     iget-object v2, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
@@ -296,7 +274,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$fputmInterval(Lcom/android/server/notification/NotificationReminder;I)V
 
-    .line 568
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,7 +298,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 570
     iget-object v2, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     invoke-static {v2}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$fgetmHandler(Lcom/android/server/notification/NotificationReminder;)Landroid/os/Handler;
@@ -337,7 +313,6 @@
     :cond_8
     if-eqz p1, :cond_9
 
-    .line 580
     iget-object v2, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->REMINDER_TYPE:Landroid/net/Uri;
 
     invoke-virtual {v2, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -346,7 +321,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 581
     :cond_9
     iget-object v2, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
@@ -360,7 +334,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$fputmReminderType(Lcom/android/server/notification/NotificationReminder;I)V
 
-    .line 583
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -386,7 +359,6 @@
     :cond_a
     if-eqz p1, :cond_b
 
-    .line 589
     iget-object v2, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->NOTIFICATION_REMINDER_APP_LIST:Landroid/net/Uri;
 
     invoke-virtual {v2, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -395,7 +367,6 @@
 
     if-eqz p1, :cond_c
 
-    .line 590
     :cond_b
     iget-object p1, p0, Lcom/android/server/notification/NotificationReminder$NotificationReminderObserver;->this$0:Lcom/android/server/notification/NotificationReminder;
 
@@ -407,7 +378,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$fputmAppSettingList(Lcom/android/server/notification/NotificationReminder;Ljava/lang/String;)V
 
-    .line 592
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

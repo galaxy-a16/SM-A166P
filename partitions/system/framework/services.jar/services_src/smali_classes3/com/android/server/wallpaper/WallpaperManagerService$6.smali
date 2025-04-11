@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/wallpaper/WallpaperManagerService;Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperDestinationChangeHandler;)V
     .locals 0
 
-    .line 5295
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$6;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iput-object p2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$6;->val$liveSync:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperDestinationChangeHandler;
@@ -28,7 +27,6 @@
 .method public sendResult(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 5301
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$6;->val$liveSync:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperDestinationChangeHandler;
 
     invoke-virtual {p0}, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperDestinationChangeHandler;->complete()V

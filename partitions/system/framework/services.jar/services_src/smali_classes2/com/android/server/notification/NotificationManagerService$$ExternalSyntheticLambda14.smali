@@ -20,7 +20,6 @@
 .method public final getOrThrow()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->$r8$lambda$_TOgA8lRdc-Tu2UAExiPInhkwwg()Ljava/lang/Boolean;
 
     move-result-object p0

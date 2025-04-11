@@ -11,10 +11,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 29
     invoke-direct {p0}, Ljava/util/concurrent/ConcurrentLinkedDeque;-><init>()V
 
-    .line 30
     iput p1, p0, Lcom/android/server/location/contexthub/ConcurrentLinkedEvictingDeque;->mSize:I
 
     return-void
@@ -25,10 +23,8 @@
 .method public add(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 35
     monitor-enter p0
 
-    .line 36
     :try_start_0
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentLinkedDeque;->size()I
 
@@ -38,10 +34,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 37
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentLinkedDeque;->poll()Ljava/lang/Object;
 
-    .line 40
     :cond_0
     invoke-super {p0, p1}, Ljava/util/concurrent/ConcurrentLinkedDeque;->add(Ljava/lang/Object;)Z
 
@@ -54,7 +48,6 @@
     :catchall_0
     move-exception p1
 
-    .line 41
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

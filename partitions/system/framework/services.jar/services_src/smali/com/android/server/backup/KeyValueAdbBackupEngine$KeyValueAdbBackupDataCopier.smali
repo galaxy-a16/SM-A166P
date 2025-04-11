@@ -20,15 +20,12 @@
 .method public constructor <init>(Lcom/android/server/backup/KeyValueAdbBackupEngine;Landroid/content/pm/PackageInfo;Landroid/os/ParcelFileDescriptor;I)V
     .locals 0
 
-    .line 199
     iput-object p1, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->this$0:Lcom/android/server/backup/KeyValueAdbBackupEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 200
     iput-object p2, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->mPackage:Landroid/content/pm/PackageInfo;
 
-    .line 201
     invoke-virtual {p3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p1
@@ -39,7 +36,6 @@
 
     iput-object p1, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->mPipe:Landroid/os/ParcelFileDescriptor;
 
-    .line 202
     iput p4, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->mToken:I
 
     return-void
@@ -52,7 +48,6 @@
 
     const-string v0, "KeyValueAdbBackupEngine"
 
-    .line 208
     :try_start_0
     new-instance v6, Landroid/app/backup/FullBackupDataOutput;
 
@@ -60,7 +55,6 @@
 
     invoke-direct {v6, v1}, Landroid/app/backup/FullBackupDataOutput;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 209
     new-instance v7, Lcom/android/server/backup/fullbackup/AppMetadataBackupWriter;
 
     iget-object v1, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->this$0:Lcom/android/server/backup/KeyValueAdbBackupEngine;
@@ -71,7 +65,6 @@
 
     invoke-direct {v7, v6, v1}, Lcom/android/server/backup/fullbackup/AppMetadataBackupWriter;-><init>(Landroid/app/backup/FullBackupDataOutput;Landroid/content/pm/PackageManager;)V
 
-    .line 216
     iget-object v8, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->mPackage:Landroid/content/pm/PackageInfo;
 
     iget-object v1, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->this$0:Lcom/android/server/backup/KeyValueAdbBackupEngine;
@@ -94,7 +87,6 @@
 
     invoke-virtual/range {v7 .. v13}, Lcom/android/server/backup/fullbackup/AppMetadataBackupWriter;->backupManifest(Landroid/content/pm/PackageInfo;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 223
     iget-object v1, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->this$0:Lcom/android/server/backup/KeyValueAdbBackupEngine;
 
     invoke-static {v1}, Lcom/android/server/backup/KeyValueAdbBackupEngine;->-$$Nest$fgetmManifestFile(Lcom/android/server/backup/KeyValueAdbBackupEngine;)Ljava/io/File;
@@ -103,7 +95,6 @@
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 228
     iget-object v1, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->mPackage:Landroid/content/pm/PackageInfo;
 
     iget-object v1, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
@@ -118,7 +109,6 @@
 
     move-result-object v4
 
-    .line 229
     invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
@@ -129,18 +119,15 @@
 
     move-result-object v5
 
-    .line 230
     invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 228
     invoke-static/range {v1 .. v6}, Landroid/app/backup/FullBackup;->backupToTar(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/backup/FullBackupDataOutput;)I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 235
     :try_start_1
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -156,7 +143,6 @@
 
     new-array v2, v2, [B
 
-    .line 237
     invoke-virtual {v1, v2}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -168,13 +154,11 @@
     :try_start_2
     const-string v1, "Unable to finalize backup stream!"
 
-    .line 239
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 243
     :goto_0
     :try_start_3
     iget-object v1, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->this$0:Lcom/android/server/backup/KeyValueAdbBackupEngine;
@@ -207,7 +191,6 @@
     :catch_1
     move-exception v1
 
-    .line 249
     :try_start_4
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -237,7 +220,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 251
     :catch_2
     :goto_1
     iget-object p0, p0, Lcom/android/server/backup/KeyValueAdbBackupEngine$KeyValueAdbBackupDataCopier;->mPipe:Landroid/os/ParcelFileDescriptor;
@@ -251,6 +233,5 @@
 
     invoke-static {p0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 252
     throw v0
 .end method

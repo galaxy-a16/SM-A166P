@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubTransactionManager;IILjava/lang/String;ILandroid/hardware/location/IContextHubTransactionCallback;)V
     .locals 0
 
-    .line 323
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$5;->this$0:Lcom/android/server/location/contexthub/ContextHubTransactionManager;
 
     iput p5, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$5;->val$contextHubId:I
@@ -32,7 +31,6 @@
 .method public onQueryResponse(ILjava/util/List;)V
     .locals 0
 
-    .line 343
     :try_start_0
     iget-object p0, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$5;->val$onCompleteCallback:Landroid/hardware/location/IContextHubTransactionCallback;
 
@@ -49,7 +47,6 @@
 
     const-string p2, "RemoteException while calling client onQueryComplete"
 
-    .line 345
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -59,7 +56,6 @@
 .method public onTransact()I
     .locals 2
 
-    .line 327
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubTransactionManager$5;->this$0:Lcom/android/server/location/contexthub/ContextHubTransactionManager;
 
@@ -84,7 +80,6 @@
 
     const-string v1, "RemoteException while trying to query for nanoapps"
 
-    .line 329
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x1
@@ -95,7 +90,6 @@
 .method public onTransactionComplete(I)V
     .locals 1
 
-    .line 336
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0

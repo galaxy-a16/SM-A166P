@@ -17,18 +17,14 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Ljava/lang/String;Landroid/util/ArraySet;Z)V
     .locals 0
 
-    .line 1166
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$PackageAssociationInfo;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1167
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$PackageAssociationInfo;->mSourcePackage:Ljava/lang/String;
 
-    .line 1168
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$PackageAssociationInfo;->mAllowedPackageAssociations:Landroid/util/ArraySet;
 
-    .line 1169
     iput-boolean p4, p0, Lcom/android/server/am/ActivityManagerService$PackageAssociationInfo;->mIsDebuggable:Z
 
     return-void
@@ -39,7 +35,6 @@
 .method public getAllowedPackageAssociations()Landroid/util/ArraySet;
     .locals 0
 
-    .line 1189
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$PackageAssociationInfo;->mAllowedPackageAssociations:Landroid/util/ArraySet;
 
     return-object p0
@@ -48,7 +43,6 @@
 .method public isDebuggable()Z
     .locals 0
 
-    .line 1181
     iget-boolean p0, p0, Lcom/android/server/am/ActivityManagerService$PackageAssociationInfo;->mIsDebuggable:Z
 
     return p0
@@ -57,7 +51,6 @@
 .method public isPackageAssociationAllowed(Ljava/lang/String;)Z
     .locals 1
 
-    .line 1177
     iget-boolean v0, p0, Lcom/android/server/am/ActivityManagerService$PackageAssociationInfo;->mIsDebuggable:Z
 
     if-nez v0, :cond_1
@@ -88,7 +81,6 @@
 .method public setDebuggable(Z)V
     .locals 0
 
-    .line 1185
     iput-boolean p1, p0, Lcom/android/server/am/ActivityManagerService$PackageAssociationInfo;->mIsDebuggable:Z
 
     return-void

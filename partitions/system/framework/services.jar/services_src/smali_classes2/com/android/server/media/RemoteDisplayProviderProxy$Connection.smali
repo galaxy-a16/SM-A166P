@@ -18,15 +18,12 @@
 .method public constructor <init>(Lcom/android/server/media/RemoteDisplayProviderProxy;Landroid/media/IRemoteDisplayProvider;)V
     .locals 0
 
-    .line 329
     iput-object p1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 330
     iput-object p2, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
-    .line 331
     new-instance p1, Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;
 
     invoke-direct {p1, p0}, Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;-><init>(Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;)V
@@ -41,7 +38,6 @@
 .method public adjustVolume(Ljava/lang/String;I)V
     .locals 0
 
-    .line 390
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -58,7 +54,6 @@
 
     const-string p2, "Failed to deliver request to adjust display volume."
 
-    .line 392
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -68,7 +63,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 398
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     invoke-static {v0}, Lcom/android/server/media/RemoteDisplayProviderProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/RemoteDisplayProviderProxy;)Landroid/os/Handler;
@@ -87,7 +81,6 @@
 .method public connect(Ljava/lang/String;)V
     .locals 1
 
-    .line 366
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -104,7 +97,6 @@
 
     const-string v0, "Failed to deliver request to connect to display."
 
-    .line 368
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -114,7 +106,6 @@
 .method public disconnect(Ljava/lang/String;)V
     .locals 1
 
-    .line 374
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -131,7 +122,6 @@
 
     const-string v0, "Failed to deliver request to disconnect from display."
 
-    .line 376
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -141,7 +131,6 @@
 .method public dispose()V
     .locals 2
 
-    .line 352
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
     invoke-interface {v0}, Landroid/media/IRemoteDisplayProvider;->asBinder()Landroid/os/IBinder;
@@ -152,7 +141,6 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 353
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mCallback:Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;
 
     invoke-virtual {p0}, Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;->dispose()V
@@ -163,7 +151,6 @@
 .method public postStateChanged(Landroid/media/RemoteDisplayState;)V
     .locals 2
 
-    .line 407
     iget-object v0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     invoke-static {v0}, Lcom/android/server/media/RemoteDisplayProviderProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/RemoteDisplayProviderProxy;)Landroid/os/Handler;
@@ -184,7 +171,6 @@
 
     const/4 v0, 0x0
 
-    .line 336
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -194,14 +180,12 @@
 
     invoke-interface {v1, p0, v0}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 337
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
     iget-object v2, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mCallback:Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;
 
     invoke-interface {v1, v2}, Landroid/media/IRemoteDisplayProvider;->setCallback(Landroid/media/IRemoteDisplayCallback;)V
 
-    .line 338
     iget-object v1, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->this$0:Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     invoke-static {v1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/RemoteDisplayProviderProxy;)Landroid/os/Handler;
@@ -220,7 +204,6 @@
 
     return p0
 
-    .line 346
     :catch_0
     invoke-virtual {p0}, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->binderDied()V
 
@@ -230,7 +213,6 @@
 .method public setDiscoveryMode(I)V
     .locals 1
 
-    .line 358
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -247,7 +229,6 @@
 
     const-string v0, "Failed to deliver request to set discovery mode."
 
-    .line 360
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -257,7 +238,6 @@
 .method public setVolume(Ljava/lang/String;I)V
     .locals 0
 
-    .line 382
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->mProvider:Landroid/media/IRemoteDisplayProvider;
 
@@ -274,7 +254,6 @@
 
     const-string p2, "Failed to deliver request to set display volume."
 
-    .line 384
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

@@ -25,14 +25,12 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 53
     new-instance v0, Landroid/media/VolumeShaper$Configuration$Builder;
 
     invoke-direct {v0}, Landroid/media/VolumeShaper$Configuration$Builder;-><init>()V
 
     const/4 v1, 0x2
 
-    .line 55
     invoke-virtual {v0, v1}, Landroid/media/VolumeShaper$Configuration$Builder;->setId(I)Landroid/media/VolumeShaper$Configuration$Builder;
 
     move-result-object v0
@@ -47,43 +45,36 @@
 
     fill-array-data v4, :array_1
 
-    .line 56
     invoke-virtual {v0, v3, v4}, Landroid/media/VolumeShaper$Configuration$Builder;->setCurve([F[F)Landroid/media/VolumeShaper$Configuration$Builder;
 
     move-result-object v0
 
-    .line 58
     invoke-virtual {v0, v1}, Landroid/media/VolumeShaper$Configuration$Builder;->setOptionFlags(I)Landroid/media/VolumeShaper$Configuration$Builder;
 
     move-result-object v0
 
     const-wide/16 v3, 0x7d0
 
-    .line 59
     invoke-virtual {v0, v3, v4}, Landroid/media/VolumeShaper$Configuration$Builder;->setDuration(J)Landroid/media/VolumeShaper$Configuration$Builder;
 
     move-result-object v0
 
-    .line 60
     invoke-virtual {v0}, Landroid/media/VolumeShaper$Configuration$Builder;->build()Landroid/media/VolumeShaper$Configuration;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/audio/FadeOutManager;->FADEOUT_VSHAPE:Landroid/media/VolumeShaper$Configuration;
 
-    .line 61
     new-instance v0, Landroid/media/VolumeShaper$Operation$Builder;
 
     sget-object v1, Landroid/media/VolumeShaper$Operation;->PLAY:Landroid/media/VolumeShaper$Operation;
 
     invoke-direct {v0, v1}, Landroid/media/VolumeShaper$Operation$Builder;-><init>(Landroid/media/VolumeShaper$Operation;)V
 
-    .line 63
     invoke-virtual {v0}, Landroid/media/VolumeShaper$Operation$Builder;->createIfNeeded()Landroid/media/VolumeShaper$Operation$Builder;
 
     move-result-object v0
 
-    .line 64
     invoke-virtual {v0}, Landroid/media/VolumeShaper$Operation$Builder;->build()Landroid/media/VolumeShaper$Operation;
 
     move-result-object v0
@@ -92,7 +83,6 @@
 
     const/16 v1, 0xd
 
-    .line 66
     filled-new-array {v1, v2}, [I
 
     move-result-object v1
@@ -101,7 +91,6 @@
 
     const/4 v1, 0x1
 
-    .line 71
     filled-new-array {v1}, [I
 
     move-result-object v2
@@ -110,21 +99,18 @@
 
     const/16 v2, 0xe
 
-    .line 75
     filled-new-array {v2, v1}, [I
 
     move-result-object v1
 
     sput-object v1, Lcom/android/server/audio/FadeOutManager;->FADEABLE_USAGES:[I
 
-    .line 81
     new-instance v1, Landroid/media/VolumeShaper$Operation$Builder;
 
     invoke-direct {v1, v0}, Landroid/media/VolumeShaper$Operation$Builder;-><init>(Landroid/media/VolumeShaper$Operation;)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 82
     invoke-virtual {v1, v0}, Landroid/media/VolumeShaper$Operation$Builder;->setXOffset(F)Landroid/media/VolumeShaper$Operation$Builder;
 
     move-result-object v0
@@ -157,10 +143,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 148
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -177,7 +161,6 @@
 
     monitor-enter p0
 
-    .line 182
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/FadeOutManager;->mFadedApps:Ljava/util/HashMap;
 
@@ -197,7 +180,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 184
     monitor-exit p0
 
     return-void
@@ -215,7 +197,6 @@
 
     monitor-enter p0
 
-    .line 207
     :try_start_0
     iget-object p1, p0, Lcom/android/server/audio/FadeOutManager;->mFadedApps:Ljava/util/HashMap;
 
@@ -235,12 +216,10 @@
 
     if-nez v0, :cond_0
 
-    .line 210
     monitor-exit p0
 
     return-void
 
-    .line 207
     :cond_0
     :try_start_1
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -251,7 +230,6 @@
 
     const/4 p1, 0x0
 
-    .line 208
     throw p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -269,13 +247,11 @@
 
     monitor-enter p0
 
-    .line 194
     :try_start_0
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getClientUid()I
 
     move-result p1
 
-    .line 199
     iget-object v0, p0, Lcom/android/server/audio/FadeOutManager;->mFadedApps:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -290,7 +266,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 201
     monitor-exit p0
 
     return-void
@@ -311,7 +286,6 @@
     :try_start_0
     const-string p2, "AudioService.FadeOutManager"
 
-    .line 167
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -328,7 +302,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     iget-object p2, p0, Lcom/android/server/audio/FadeOutManager;->mFadedApps:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -343,7 +316,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 170
     monitor-exit p0
 
     return-void

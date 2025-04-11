@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersonaManagerService;)V
     .locals 0
 
-    .line 2601
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 2604
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +45,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2605
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PersonaManagerService;->revokeSUWAgreements(Landroid/content/Context;)V

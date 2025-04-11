@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$wGyTyj6ru6XWfWJ4bFulWAfjKtk(Ljava/io/PrintWriter;Lcom/android/server/wm/RefreshRatePolicyLogger$RefreshRateHistory;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/RefreshRatePolicyLogger;->lambda$dump$0(Ljava/io/PrintWriter;Lcom/android/server/wm/RefreshRatePolicyLogger$RefreshRateHistory;)V
 
     return-void
@@ -20,10 +19,8 @@
 .method public constructor <init>()V
     .locals 5
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -37,21 +34,18 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 41
     iget-object v1, p0, Lcom/android/server/wm/RefreshRatePolicyLogger;->mRefreshRateHistories:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/server/wm/RefreshRatePolicyLogger$RefreshRateHistory;
 
     const/16 v3, 0xf
 
-    .line 42
     invoke-virtual {p0, v0}, Lcom/android/server/wm/RefreshRatePolicyLogger;->refreshRateHistoryTypeToString(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-direct {v2, p0, v3, v4}, Lcom/android/server/wm/RefreshRatePolicyLogger$RefreshRateHistory;-><init>(Lcom/android/server/wm/RefreshRatePolicyLogger;ILjava/lang/String;)V
 
-    .line 41
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v0, v0, 0x1
@@ -65,7 +59,6 @@
 .method public static synthetic lambda$dump$0(Ljava/io/PrintWriter;Lcom/android/server/wm/RefreshRatePolicyLogger$RefreshRateHistory;)V
     .locals 2
 
-    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,7 +83,6 @@
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 70
     invoke-static {p1}, Lcom/android/server/wm/RefreshRatePolicyLogger$RefreshRateHistory;->-$$Nest$fgetmHistory(Lcom/android/server/wm/RefreshRatePolicyLogger$RefreshRateHistory;)Lcom/samsung/android/core/SystemHistory;
 
     move-result-object p1
@@ -105,14 +97,12 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 67
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p1, "RefreshRatePolicy History"
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/wm/RefreshRatePolicyLogger;->mRefreshRateHistories:Ljava/util/ArrayList;
 
     new-instance p1, Lcom/android/server/wm/RefreshRatePolicyLogger$$ExternalSyntheticLambda0;
@@ -137,7 +127,6 @@
 
     if-eq p1, p0, :cond_0
 
-    .line 62
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -173,7 +162,6 @@
 .method public update(Lcom/android/server/wm/WindowState;IFI)V
     .locals 0
 
-    .line 47
     iget-object p0, p0, Lcom/android/server/wm/RefreshRatePolicyLogger;->mRefreshRateHistories:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -184,7 +172,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 49
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/RefreshRatePolicyLogger$RefreshRateHistory;->update(Lcom/android/server/wm/WindowState;IF)V
 
     :cond_0

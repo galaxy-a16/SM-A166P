@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssLocationProvider;)V
     .locals 0
 
-    .line 1737
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProvider$5;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     invoke-direct {p0}, Landroid/location/INetInitiatedListener$Stub;-><init>()V
@@ -30,7 +29,6 @@
 
     move/from16 v15, p2
 
-    .line 1744
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,7 +53,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1747
     iget-object v1, v0, Lcom/android/server/location/gnss/GnssLocationProvider$5;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     iget-object v1, v1, Lcom/android/server/location/gnss/GnssLocationProvider;->mGnssNative:Lcom/android/server/location/gnss/hal/GnssNative;
@@ -86,7 +83,6 @@
 
     const/4 v13, 0x0
 
-    .line 1749
     iget-object v14, v0, Lcom/android/server/location/gnss/GnssLocationProvider$5;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     invoke-static {v14}, Lcom/android/server/location/gnss/GnssLocationProvider;->-$$Nest$fgetmSuplEsEnabled(Lcom/android/server/location/gnss/GnssLocationProvider;)Z
@@ -95,7 +91,6 @@
 
     iget-object v0, v0, Lcom/android/server/location/gnss/GnssLocationProvider$5;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
-    .line 1763
     invoke-virtual {v0}, Lcom/android/server/location/gnss/GnssLocationProvider;->isGpsEnabled()Z
 
     move-result v16
@@ -128,7 +123,6 @@
 
     move/from16 v14, v16
 
-    .line 1749
     invoke-static/range {v0 .. v15}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIIIZZZIILjava/lang/String;Ljava/lang/String;IIZZI)V
 
     const/4 v0, 0x1

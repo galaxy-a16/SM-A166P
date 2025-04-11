@@ -7,7 +7,6 @@
 .method public static getLogPackage(Landroid/content/Context;Landroid/content/pm/VersionedPackage;)Landroid/content/pm/VersionedPackage;
     .locals 4
 
-    .line 90
     invoke-virtual {p1}, Landroid/content/pm/VersionedPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -22,7 +21,6 @@
 
     return-object v0
 
-    .line 95
     :cond_0
     :try_start_0
     new-instance v1, Landroid/content/pm/VersionedPackage;
@@ -33,7 +31,6 @@
 
     const/4 v2, 0x0
 
-    .line 96
     invoke-virtual {p0, p1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
@@ -55,12 +52,10 @@
 .method public static getLogPackages(Landroid/content/Context;Ljava/util/List;)Ljava/util/Set;
     .locals 4
 
-    .line 111
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 112
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -78,7 +73,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 113
     new-instance v2, Landroid/content/pm/VersionedPackage;
 
     const/4 v3, 0x0
@@ -100,7 +94,6 @@
 .method public static getLoggingParentName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 64
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -109,7 +102,6 @@
 
     const/4 v1, 0x0
 
-    .line 67
     :try_start_0
     invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -117,7 +109,6 @@
 
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 68
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     if-nez p0, :cond_0
@@ -127,7 +118,6 @@
     :cond_0
     const-string v0, "android.content.pm.LOGGING_PARENT"
 
-    .line 71
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -139,7 +129,6 @@
     :catch_0
     move-exception p0
 
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,12 +153,10 @@
 .method public static logApexdRevert(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;)V
     .locals 2
 
-    .line 176
     invoke-static {p0, p1}, Lcom/android/server/rollback/WatchdogRollbackLogger;->getLogPackages(Landroid/content/Context;Ljava/util/List;)Ljava/util/Set;
 
     move-result-object p0
 
-    .line 177
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -191,7 +178,6 @@
 
     const/4 v1, 0x5
 
-    .line 178
     invoke-static {p1, v0, v1, p2}, Lcom/android/server/rollback/WatchdogRollbackLogger;->logEvent(Landroid/content/pm/VersionedPackage;IILjava/lang/String;)V
 
     goto :goto_0
@@ -203,7 +189,6 @@
 .method public static logEvent(Landroid/content/pm/VersionedPackage;IILjava/lang/String;)V
     .locals 9
 
-    .line 195
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -228,7 +213,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 197
     invoke-static {p2}, Lcom/android/server/rollback/WatchdogRollbackLogger;->rollbackReasonToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -247,7 +231,6 @@
 
     const-string v2, "WatchdogRollbackLogger"
 
-    .line 195
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -256,12 +239,10 @@
 
     const/16 v2, 0x93
 
-    .line 203
     invoke-virtual {p0}, Landroid/content/pm/VersionedPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 204
     invoke-virtual {p0}, Landroid/content/pm/VersionedPackage;->getVersionCode()I
 
     move-result v5
@@ -274,7 +255,6 @@
 
     move-object v7, p3
 
-    .line 200
     invoke-static/range {v2 .. v8}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;IILjava/lang/String;[B)V
 
     goto :goto_0
@@ -294,10 +274,8 @@
 
     move-object v7, p3
 
-    .line 211
     invoke-static/range {v2 .. v8}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;IILjava/lang/String;[B)V
 
-    .line 221
     :goto_0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/rollback/WatchdogRollbackLogger;->logTestProperties(Landroid/content/pm/VersionedPackage;IILjava/lang/String;)V
 
@@ -307,7 +285,6 @@
 .method public static logRollbackStatusOnBoot(Landroid/content/Context;ILjava/lang/String;Ljava/util/List;)V
     .locals 4
 
-    .line 121
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -316,7 +293,6 @@
 
     move-result-object p0
 
-    .line 124
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -336,7 +312,6 @@
 
     check-cast v0, Landroid/content/rollback/RollbackInfo;
 
-    .line 125
     invoke-virtual {v0}, Landroid/content/rollback/RollbackInfo;->getRollbackId()I
 
     move-result v2
@@ -353,7 +328,6 @@
 
     if-nez v0, :cond_2
 
-    .line 132
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -372,7 +346,6 @@
 
     return-void
 
-    .line 139
     :cond_2
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -380,7 +353,6 @@
 
     if-nez p1, :cond_4
 
-    .line 140
     invoke-virtual {v0}, Landroid/content/rollback/RollbackInfo;->getPackages()Ljava/util/List;
 
     move-result-object p1
@@ -402,7 +374,6 @@
 
     check-cast v2, Landroid/content/rollback/PackageRollbackInfo;
 
-    .line 141
     invoke-virtual {v2}, Landroid/content/rollback/PackageRollbackInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -413,25 +384,21 @@
 
     if-eqz v3, :cond_3
 
-    .line 142
     invoke-virtual {v2}, Landroid/content/rollback/PackageRollbackInfo;->getVersionRolledBackFrom()Landroid/content/pm/VersionedPackage;
 
     move-result-object v1
 
-    .line 148
     :cond_4
     invoke-virtual {v0}, Landroid/content/rollback/RollbackInfo;->getCommittedSessionId()I
 
     move-result p1
 
-    .line 149
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageInstaller;->getSessionInfo(I)Landroid/content/pm/PackageInstaller$SessionInfo;
 
     move-result-object p0
 
     if-nez p0, :cond_5
 
-    .line 151
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -450,7 +417,6 @@
 
     return-void
 
-    .line 155
     :cond_5
     invoke-virtual {p0}, Landroid/content/pm/PackageInstaller$SessionInfo;->isStagedSessionApplied()Z
 
@@ -464,12 +430,10 @@
 
     const/4 p0, 0x2
 
-    .line 156
     invoke-static {v1, p0, p3, p2}, Lcom/android/server/rollback/WatchdogRollbackLogger;->logEvent(Landroid/content/pm/VersionedPackage;IILjava/lang/String;)V
 
     goto :goto_1
 
-    .line 159
     :cond_6
     invoke-virtual {p0}, Landroid/content/pm/PackageInstaller$SessionInfo;->isStagedSessionFailed()Z
 
@@ -479,7 +443,6 @@
 
     const/4 p0, 0x3
 
-    .line 160
     invoke-static {v1, p0, p3, p2}, Lcom/android/server/rollback/WatchdogRollbackLogger;->logEvent(Landroid/content/pm/VersionedPackage;IILjava/lang/String;)V
 
     :cond_7
@@ -494,7 +457,6 @@
 
     const/4 v1, 0x0
 
-    .line 240
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -503,7 +465,6 @@
 
     return-void
 
-    .line 243
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -525,14 +486,12 @@
 
     const/4 v0, 0x1
 
-    .line 244
     invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 245
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -561,7 +520,6 @@
     :goto_0
     invoke-static {v0, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 246
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -582,7 +540,6 @@
 
     invoke-static {p0, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 247
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -605,7 +562,6 @@
 .method public static mapFailureReasonToMetric(I)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_0
@@ -633,7 +589,6 @@
 .method public static rollbackReasonToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_4
@@ -687,7 +642,6 @@
 .method public static rollbackTypeToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_3

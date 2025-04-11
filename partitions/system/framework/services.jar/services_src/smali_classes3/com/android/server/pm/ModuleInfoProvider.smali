@@ -21,20 +21,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iput-object p1, p0, Lcom/android/server/pm/ModuleInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 73
     invoke-static {}, Lcom/android/server/pm/ApexManager;->getInstance()Lcom/android/server/pm/ApexManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/pm/ModuleInfoProvider;->mApexManager:Lcom/android/server/pm/ApexManager;
 
-    .line 74
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
@@ -47,25 +43,20 @@
 .method public constructor <init>(Landroid/content/res/XmlResourceParser;Landroid/content/res/Resources;Lcom/android/server/pm/ApexManager;)V
     .locals 1
 
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 80
     iput-object v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mContext:Landroid/content/Context;
 
-    .line 81
     iput-object p3, p0, Lcom/android/server/pm/ModuleInfoProvider;->mApexManager:Lcom/android/server/pm/ApexManager;
 
-    .line 82
     new-instance p3, Landroid/util/ArrayMap;
 
     invoke-direct {p3}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object p3, p0, Lcom/android/server/pm/ModuleInfoProvider;->mModuleInfo:Ljava/util/Map;
 
-    .line 83
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/ModuleInfoProvider;->loadModuleMetadata(Landroid/content/res/XmlResourceParser;Landroid/content/res/Resources;)V
 
     return-void
@@ -76,7 +67,6 @@
 .method public getInstalledModules(I)Ljava/util/List;
     .locals 3
 
-    .line 185
     iget-boolean v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mMetadataLoaded:Z
 
     if-eqz v0, :cond_3
@@ -87,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 190
     new-instance p1, Ljava/util/ArrayList;
 
     iget-object p0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mModuleInfo:Ljava/util/Map;
@@ -100,7 +89,6 @@
 
     return-object p1
 
-    .line 195
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/ModuleInfoProvider;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -113,24 +101,20 @@
 
     int-to-long v1, p1
 
-    .line 196
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result p1
 
-    .line 195
     invoke-interface {v0, v1, v2, p1}, Landroid/content/pm/IPackageManager;->getInstalledPackages(JI)Landroid/content/pm/ParceledListSlice;
 
     move-result-object p1
 
-    .line 196
     invoke-virtual {p1}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object p1
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -139,7 +123,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 203
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -158,7 +141,6 @@
 
     check-cast v1, Landroid/content/pm/PackageInfo;
 
-    .line 204
     iget-object v2, p0, Lcom/android/server/pm/ModuleInfoProvider;->mModuleInfo:Ljava/util/Map;
 
     iget-object v1, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
@@ -171,7 +153,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 206
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -186,17 +167,14 @@
 
     const-string v0, "Unable to retrieve all package names"
 
-    .line 198
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 199
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 186
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -210,7 +188,6 @@
 .method public getModuleInfo(Ljava/lang/String;I)Landroid/content/pm/ModuleInfo;
     .locals 1
 
-    .line 213
     iget-boolean v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mMetadataLoaded:Z
 
     if-eqz v0, :cond_3
@@ -219,7 +196,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 217
     iget-object p0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mModuleInfo:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -243,7 +219,6 @@
 
     check-cast p2, Landroid/content/pm/ModuleInfo;
 
-    .line 218
     invoke-virtual {p2}, Landroid/content/pm/ModuleInfo;->getApexModuleName()Ljava/lang/String;
 
     move-result-object v0
@@ -261,7 +236,6 @@
 
     return-object p0
 
-    .line 224
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mModuleInfo:Ljava/util/Map;
 
@@ -273,7 +247,6 @@
 
     return-object p0
 
-    .line 214
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -287,26 +260,22 @@
 .method public final getPackageManager()Landroid/content/pm/IPackageManager;
     .locals 1
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mPackageManager:Landroid/content/pm/IPackageManager;
 
     if-nez v0, :cond_0
 
     const-string/jumbo v0, "package"
 
-    .line 90
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 89
     invoke-static {v0}, Landroid/content/pm/IPackageManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mPackageManager:Landroid/content/pm/IPackageManager;
 
-    .line 92
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -316,17 +285,14 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 228
     iget-boolean v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mMetadataLoaded:Z
 
     if-eqz v0, :cond_0
 
-    .line 231
     iget-object p0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mPackageName:Ljava/lang/String;
 
     return-object p0
 
-    .line 229
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -347,14 +313,11 @@
     :try_start_0
     const-string/jumbo v2, "module-metadata"
 
-    .line 137
     invoke-static {p1, v2}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 139
     :goto_0
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 140
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getEventType()I
 
     move-result v2
@@ -366,7 +329,6 @@
     :cond_0
     const-string/jumbo v2, "module"
 
-    .line 144
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -377,7 +339,6 @@
 
     if-nez v2, :cond_1
 
-    .line 145
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,7 +359,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     iget-object p2, p0, Lcom/android/server/pm/ModuleInfoProvider;->mModuleInfo:Ljava/util/Map;
 
     invoke-interface {p2}, Ljava/util/Map;->clear()V
@@ -407,11 +367,9 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 174
     :goto_1
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 175
     iput-boolean v1, p0, Lcom/android/server/pm/ModuleInfoProvider;->mMetadataLoaded:Z
 
     goto :goto_2
@@ -422,7 +380,6 @@
 
     const/4 v3, 0x0
 
-    .line 156
     invoke-interface {p1, v3, v2}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -435,51 +392,40 @@
 
     move-result v2
 
-    .line 155
     invoke-virtual {p2, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     const-string/jumbo v3, "packageName"
 
-    .line 157
     invoke-static {p1, v3}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "isHidden"
 
-    .line 159
     invoke-static {p1, v4}, Lcom/android/internal/util/XmlUtils;->readBooleanAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v4
 
-    .line 161
     new-instance v5, Landroid/content/pm/ModuleInfo;
 
     invoke-direct {v5}, Landroid/content/pm/ModuleInfo;-><init>()V
 
-    .line 162
     invoke-virtual {v5, v4}, Landroid/content/pm/ModuleInfo;->setHidden(Z)Landroid/content/pm/ModuleInfo;
 
-    .line 163
     invoke-virtual {v5, v3}, Landroid/content/pm/ModuleInfo;->setPackageName(Ljava/lang/String;)Landroid/content/pm/ModuleInfo;
 
-    .line 164
     invoke-virtual {v5, v2}, Landroid/content/pm/ModuleInfo;->setName(Ljava/lang/CharSequence;)Landroid/content/pm/ModuleInfo;
 
-    .line 165
     iget-object v2, p0, Lcom/android/server/pm/ModuleInfoProvider;->mApexManager:Lcom/android/server/pm/ApexManager;
 
-    .line 166
     invoke-virtual {v2, v3}, Lcom/android/server/pm/ApexManager;->getApexModuleNameForPackageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 165
     invoke-virtual {v5, v2}, Landroid/content/pm/ModuleInfo;->setApexModuleName(Ljava/lang/String;)Landroid/content/pm/ModuleInfo;
 
-    .line 168
     iget-object v2, p0, Lcom/android/server/pm/ModuleInfoProvider;->mModuleInfo:Ljava/util/Map;
 
     invoke-interface {v2, v3, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -501,10 +447,8 @@
     :try_start_2
     const-string v2, "Error parsing module metadata"
 
-    .line 171
     invoke-static {v0, v2, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 172
     iget-object p2, p0, Lcom/android/server/pm/ModuleInfoProvider;->mModuleInfo:Ljava/util/Map;
 
     invoke-interface {p2}, Ljava/util/Map;->clear()V
@@ -516,21 +460,17 @@
     :goto_2
     return-void
 
-    .line 174
     :goto_3
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 175
     iput-boolean v1, p0, Lcom/android/server/pm/ModuleInfoProvider;->mMetadataLoaded:Z
 
-    .line 176
     throw p2
 .end method
 
 .method public systemReady()V
     .locals 6
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -545,7 +485,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mPackageName:Ljava/lang/String;
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/pm/ModuleInfoProvider;->mPackageName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -558,12 +497,10 @@
 
     const-string p0, "No configured module metadata provider."
 
-    .line 100
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 107
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/ModuleInfoProvider;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -580,7 +517,6 @@
 
     move-result-object v0
 
-    .line 110
     iget-object v2, p0, Lcom/android/server/pm/ModuleInfoProvider;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/server/pm/ModuleInfoProvider;->mPackageName:Ljava/lang/String;
@@ -589,7 +525,6 @@
 
     move-result-object v2
 
-    .line 111
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -597,24 +532,20 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 117
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     const-string v2, "android.content.pm.MODULE_METADATA"
 
-    .line 118
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 117
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object v0
 
-    .line 119
     invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/ModuleInfoProvider;->loadModuleMetadata(Landroid/content/res/XmlResourceParser;Landroid/content/res/Resources;)V
 
     return-void
@@ -622,7 +553,6 @@
     :catch_0
     move-exception v0
 
-    .line 113
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

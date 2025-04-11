@@ -18,7 +18,6 @@
 .method public static synthetic $r8$lambda$vbq4zUGY7oDgmAH4-EYC_NcfrgA(Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog$Watchdog;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog$Watchdog;->lambda$new$0()V
 
     return-void
@@ -27,19 +26,16 @@
 .method public constructor <init>(Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog;)V
     .locals 3
 
-    .line 173
     iput-object p1, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog$Watchdog;->this$0:Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 170
     new-instance v0, Ljava/lang/Exception;
 
     invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog$Watchdog;->mException:Ljava/lang/Exception;
 
-    .line 174
     invoke-static {p1}, Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog;->-$$Nest$fgetmTimer(Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog;)Lcom/android/server/soundtrigger_middleware/UptimeTimer;
 
     move-result-object p1
@@ -64,14 +60,12 @@
 
     const-string v0, "HAL deadline expired. Rebooting."
 
-    .line 175
     iget-object v1, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog$Watchdog;->mException:Ljava/lang/Exception;
 
     const-string v2, "SoundTriggerHalWatchdog"
 
     invoke-static {v2, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 176
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog$Watchdog;->this$0:Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog;
 
     invoke-virtual {p0}, Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog;->reboot()V
@@ -84,7 +78,6 @@
 .method public close()V
     .locals 0
 
-    .line 182
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHalWatchdog$Watchdog;->mTask:Lcom/android/server/soundtrigger_middleware/UptimeTimer$Task;
 
     invoke-interface {p0}, Lcom/android/server/soundtrigger_middleware/UptimeTimer$Task;->cancel()V

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/samsung/android/security/mdf/MdfService/MdfReceiver;Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;)V
     .locals 0
 
-    .line 22
     iput-object p1, p0, Lcom/samsung/android/security/mdf/MdfService/MdfReceiver$1;->this$0:Lcom/samsung/android/security/mdf/MdfService/MdfReceiver;
 
     iput-object p2, p0, Lcom/samsung/android/security/mdf/MdfService/MdfReceiver$1;->val$mdfPolicy:Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 0
 
-    .line 25
     iget-object p0, p0, Lcom/samsung/android/security/mdf/MdfService/MdfReceiver$1;->val$mdfPolicy:Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;
 
     invoke-virtual {p0}, Lcom/samsung/android/security/mdf/MdfService/MdfPolicy;->sendSamsungAnalyticsMultiLog()V

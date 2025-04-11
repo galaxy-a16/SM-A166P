@@ -38,7 +38,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 149
     const-class v2, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -49,11 +48,9 @@
 
     goto :goto_1
 
-    .line 150
     :cond_1
     check-cast p1, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;
 
-    .line 151
     iget v2, p0, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->pid:I
 
     iget v3, p1, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->pid:I
@@ -98,7 +95,6 @@
 .method public hashCode()I
     .locals 5
 
-    .line 157
     iget v0, p0, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->pid:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -137,7 +133,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 162
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

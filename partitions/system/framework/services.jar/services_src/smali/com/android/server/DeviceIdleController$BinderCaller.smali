@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetpid(Lcom/android/server/DeviceIdleController$BinderCaller;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/DeviceIdleController$BinderCaller;->pid:I
 
     return p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetprocName(Lcom/android/server/DeviceIdleController$BinderCaller;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$BinderCaller;->procName:Ljava/lang/String;
 
     return-object p0
@@ -33,15 +31,12 @@
 .method public constructor <init>(Lcom/android/server/DeviceIdleController;I)V
     .locals 0
 
-    .line 704
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$BinderCaller;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 705
     iput p2, p0, Lcom/android/server/DeviceIdleController$BinderCaller;->pid:I
 
-    .line 706
     invoke-static {p1, p2}, Lcom/android/server/DeviceIdleController;->-$$Nest$mgetProcNameByPid(Lcom/android/server/DeviceIdleController;I)Ljava/lang/String;
 
     move-result-object p1

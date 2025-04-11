@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/broadcastradio/aidl/ConversionUtils;->$r8$lambda$CMmglkevCuRAHPHVrdeNLXkxp8I(I)[Landroid/hardware/broadcastradio/VendorKeyValue;
 
     move-result-object p0

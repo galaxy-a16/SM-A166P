@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/timedetector/ServiceConfigAccessorImpl;)V
     .locals 0
 
-    .line 136
     iput-object p1, p0, Lcom/android/server/timedetector/ServiceConfigAccessorImpl$1;->this$0:Lcom/android/server/timedetector/ServiceConfigAccessorImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/timedetector/ServiceConfigAccessorImpl$1;->this$0:Lcom/android/server/timedetector/ServiceConfigAccessorImpl;
 
     invoke-static {p0}, Lcom/android/server/timedetector/ServiceConfigAccessorImpl;->-$$Nest$mhandleConfigurationInternalChangeOnMainThread(Lcom/android/server/timedetector/ServiceConfigAccessorImpl;)V

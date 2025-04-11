@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/notification/SmartAlertController;Landroid/os/Handler;)V
     .locals 0
 
-    .line 225
     iput-object p1, p0, Lcom/android/server/notification/SmartAlertController$SmartAlertSettingObserver;->this$0:Lcom/android/server/notification/SmartAlertController;
 
-    .line 226
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 231
     invoke-virtual {p0}, Lcom/android/server/notification/SmartAlertController$SmartAlertSettingObserver;->update()V
 
     return-void
@@ -34,7 +31,6 @@
 .method public update()V
     .locals 4
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/notification/SmartAlertController$SmartAlertSettingObserver;->this$0:Lcom/android/server/notification/SmartAlertController;
 
     invoke-static {v0}, Lcom/android/server/notification/SmartAlertController;->-$$Nest$fgetmContext(Lcom/android/server/notification/SmartAlertController;)Landroid/content/Context;
@@ -62,7 +58,6 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 237
     :goto_0
     iget-object p0, p0, Lcom/android/server/notification/SmartAlertController$SmartAlertSettingObserver;->this$0:Lcom/android/server/notification/SmartAlertController;
 

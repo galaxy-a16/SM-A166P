@@ -20,7 +20,6 @@
 .method public final getOrThrow()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->$r8$lambda$VvKRHa3iQqOeYejckbvGHZjcOvA()Ljava/lang/Boolean;
 
     move-result-object p0

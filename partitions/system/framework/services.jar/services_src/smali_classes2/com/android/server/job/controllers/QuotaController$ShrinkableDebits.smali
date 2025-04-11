@@ -13,15 +13,12 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 2053
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2054
     iput-wide v0, p0, Lcom/android/server/job/controllers/QuotaController$ShrinkableDebits;->mDebitTally:J
 
-    .line 2055
     iput p1, p0, Lcom/android/server/job/controllers/QuotaController$ShrinkableDebits;->mStandbyBucket:I
 
     return-void
@@ -32,7 +29,6 @@
 .method public dumpLocked(Landroid/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 2089
     invoke-virtual {p0}, Lcom/android/server/job/controllers/QuotaController$ShrinkableDebits;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -45,7 +41,6 @@
 .method public getStandbyBucketLocked()I
     .locals 0
 
-    .line 2078
     iget p0, p0, Lcom/android/server/job/controllers/QuotaController$ShrinkableDebits;->mStandbyBucket:I
 
     return p0
@@ -54,7 +49,6 @@
 .method public getTallyLocked()J
     .locals 2
 
-    .line 2059
     iget-wide v0, p0, Lcom/android/server/job/controllers/QuotaController$ShrinkableDebits;->mDebitTally:J
 
     return-wide v0
@@ -63,7 +57,6 @@
 .method public setStandbyBucketLocked(I)V
     .locals 0
 
-    .line 2074
     iput p1, p0, Lcom/android/server/job/controllers/QuotaController$ShrinkableDebits;->mStandbyBucket:I
 
     return-void
@@ -72,7 +65,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 2083
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,7 +105,6 @@
 
     if-gez v2, :cond_0
 
-    .line 2067
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v2
@@ -131,7 +122,6 @@
     :cond_0
     move-wide v4, v0
 
-    .line 2069
     :goto_0
     iget-wide v2, p0, Lcom/android/server/job/controllers/QuotaController$ShrinkableDebits;->mDebitTally:J
 

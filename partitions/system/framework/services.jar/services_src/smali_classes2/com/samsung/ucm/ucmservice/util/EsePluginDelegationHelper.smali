@@ -11,12 +11,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "/efs/sec_efs/ucm/ese_plugin"
 
-    .line 18
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/util/EsePluginDelegationHelper;->rootPath:Ljava/lang/String;
 
     return-void
@@ -29,7 +27,6 @@
 
     const/4 v0, 0x0
 
-    .line 31
     :try_start_0
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/util/EsePluginDelegationHelper;->rootPath:Ljava/lang/String;
 
@@ -39,7 +36,6 @@
 
     move-result-object v1
 
-    .line 32
     invoke-virtual {p0, v1}, Lcom/samsung/ucm/ucmservice/util/EsePluginDelegationHelper;->filesCreateDirectories(Ljava/nio/file/Path;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -55,10 +51,8 @@
 
     const-string v2, "checkDirPath() error during creating directory"
 
-    .line 34
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     return v0
@@ -67,7 +61,6 @@
 .method public final checkWriteFileValidity(Ljava/lang/String;)Z
     .locals 2
 
-    .line 73
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -80,12 +73,10 @@
 
     const-string p0, "checkWriteFileValidity(). fileName is empty"
 
-    .line 74
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 77
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/util/EsePluginDelegationHelper;->checkDirPath()Z
 
@@ -95,7 +86,6 @@
 
     const-string p0, "checkWriteFileValidity(). fail to make dir"
 
-    .line 78
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -116,14 +106,12 @@
 
     const-string v1, "deleteFile() called"
 
-    .line 58
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v0, 0x0
 
-    .line 61
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/samsung/ucm/ucmservice/util/EsePluginDelegationHelper;->getFileFullPath(Ljava/lang/String;)Ljava/lang/String;
 
@@ -141,7 +129,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 62
     monitor-exit p0
 
     const/4 p0, 0x1
@@ -154,7 +141,6 @@
     :try_start_2
     const-string v1, "EsePluginDelegationHelper"
 
-    .line 67
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -182,7 +168,6 @@
 
     const-string v1, "EsePluginDelegationHelper"
 
-    .line 64
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,12 +188,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 69
     :goto_0
     monitor-exit p0
 
@@ -229,7 +212,6 @@
 
     new-array p0, p0, [Ljava/nio/file/attribute/FileAttribute;
 
-    .line 101
     invoke-static {p1, p0}, Ljava/nio/file/Files;->createDirectories(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
 
     return-void
@@ -238,7 +220,6 @@
 .method public filesDeleteFile(Ljava/nio/file/Path;)Z
     .locals 0
 
-    .line 109
     invoke-static {p1}, Ljava/nio/file/Files;->deleteIfExists(Ljava/nio/file/Path;)Z
 
     move-result p0
@@ -249,7 +230,6 @@
 .method public filesReadAllBytes(Ljava/nio/file/Path;)[B
     .locals 0
 
-    .line 105
     invoke-static {p1}, Ljava/nio/file/Files;->readAllBytes(Ljava/nio/file/Path;)[B
 
     move-result-object p0
@@ -260,7 +240,6 @@
 .method public getFileFullPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 97
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,12 +271,10 @@
 
     const-string/jumbo v1, "readFromFile() called"
 
-    .line 42
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 45
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/samsung/ucm/ucmservice/util/EsePluginDelegationHelper;->getFileFullPath(Ljava/lang/String;)Ljava/lang/String;
 
@@ -330,7 +307,6 @@
     :try_start_2
     const-string v0, "EsePluginDelegationHelper"
 
-    .line 52
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -358,7 +334,6 @@
 
     const-string v0, "EsePluginDelegationHelper"
 
-    .line 49
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -379,7 +354,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
@@ -387,7 +361,6 @@
     :catch_2
     const-string v0, "EsePluginDelegationHelper"
 
-    .line 47
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -410,7 +383,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 54
     :goto_0
     monitor-exit p0
 
@@ -436,10 +408,8 @@
 
     const-string/jumbo v1, "saveToFile() called"
 
-    .line 21
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     invoke-virtual {p0, p1}, Lcom/samsung/ucm/ucmservice/util/EsePluginDelegationHelper;->checkWriteFileValidity(Ljava/lang/String;)Z
 
     move-result v0
@@ -448,14 +418,12 @@
 
     if-nez v0, :cond_0
 
-    .line 23
     monitor-exit p0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 26
     :cond_0
     :try_start_1
     invoke-virtual {p0, p1, p2}, Lcom/samsung/ucm/ucmservice/util/EsePluginDelegationHelper;->writeDataToFile(Ljava/lang/String;[B)Z
@@ -479,7 +447,6 @@
 .method public final writeDataToFile(Ljava/lang/String;[B)Z
     .locals 1
 
-    .line 85
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -491,13 +458,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 86
     :try_start_1
     invoke-virtual {v0, p2}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 87
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -510,7 +475,6 @@
     :catchall_0
     move-exception p0
 
-    .line 85
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -536,10 +500,8 @@
 
     const-string/jumbo p2, "writeDataToFile() error during calling write"
 
-    .line 88
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0

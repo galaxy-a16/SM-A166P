@@ -7,7 +7,6 @@
 .method public static getMultiWindowLayerFromTypeLw(I)I
     .locals 1
 
-    .line 0
     const/16 v0, 0xa2b
 
     if-eq p0, v0, :cond_1
@@ -38,7 +37,6 @@
 .method public static getSubWindowLayerFromTypeLw(I)I
     .locals 1
 
-    .line 0
     const/16 v0, 0x44c
 
     if-eq p0, v0, :cond_0
@@ -62,7 +60,6 @@
 
     sparse-switch p0, :sswitch_data_0
 
-    .line 300
     invoke-static {p0}, Lcom/android/server/policy/WindowManagerPolicyExt;->getMultiWindowLayerFromTypeLw(I)I
 
     move-result p0
@@ -172,7 +169,6 @@
 
     return p0
 
-    .line 244
     :sswitch_15
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->isEnabled()Z
 
@@ -180,7 +176,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 245
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->getInstance()Lcom/android/server/wm/WmCoverState;
 
     move-result-object p2
@@ -256,7 +251,6 @@
 .method public static isAppWindowType(I)Z
     .locals 2
 
-    .line 0
     const/4 v0, 0x1
 
     if-lt p0, v0, :cond_0
@@ -277,7 +271,6 @@
 .method public static isSystemWindowType(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x7d0
 
     if-lt p0, v0, :cond_0

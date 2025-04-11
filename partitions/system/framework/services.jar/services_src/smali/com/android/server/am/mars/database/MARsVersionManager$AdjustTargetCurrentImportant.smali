@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/am/mars/database/MARsVersionManager;II)V
     .locals 0
 
-    .line 175
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetCurrentImportant;->this$0:Lcom/android/server/am/mars/database/MARsVersionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 176
     iput p2, p0, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetCurrentImportant;->policyNum:I
 
-    .line 177
     iput p3, p0, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetCurrentImportant;->importantValue:I
 
     return-void
@@ -34,7 +31,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 181
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

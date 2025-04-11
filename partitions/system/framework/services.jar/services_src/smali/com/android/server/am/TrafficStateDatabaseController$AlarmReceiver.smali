@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$TVvdkAqGqHf3zu89pMst8zlM2AM(Landroid/content/BroadcastReceiver$PendingResult;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController$AlarmReceiver;->lambda$onReceive$0(Landroid/content/BroadcastReceiver$PendingResult;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 259
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -25,10 +23,8 @@
 .method public static synthetic lambda$onReceive$0(Landroid/content/BroadcastReceiver$PendingResult;)V
     .locals 0
 
-    .line 267
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->-$$Nest$smdeleteValues()V
 
-    .line 268
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver$PendingResult;->finish()V
 
     return-void
@@ -41,14 +37,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 262
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 263
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -63,15 +57,12 @@
 
     const-string/jumbo p1, "onReceive(): ACTION_DELETE_TRAFFIC_STATE_DB"
 
-    .line 264
     invoke-static {p1}, Lcom/android/server/am/TrafficStateDatabaseController;->-$$Nest$smlog(Ljava/lang/String;)V
 
-    .line 265
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->goAsync()Landroid/content/BroadcastReceiver$PendingResult;
 
     move-result-object p0
 
-    .line 266
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->getAsyncHandler()Landroid/os/Handler;
 
     move-result-object p1

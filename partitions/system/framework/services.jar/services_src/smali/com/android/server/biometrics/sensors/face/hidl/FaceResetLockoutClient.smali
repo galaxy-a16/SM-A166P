@@ -37,10 +37,8 @@
 
     move-object/from16 v10, p7
 
-    .line 51
     invoke-direct/range {v0 .. v10}, Lcom/android/server/biometrics/sensors/HalClientMonitor;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;IILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
-    .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,7 +49,6 @@
 
     return-void
 
-    .line 62
     :cond_0
     array-length v0, v12
 
@@ -62,7 +59,6 @@
 
     aget-byte v2, v12, v1
 
-    .line 63
     iget-object v3, v11, Lcom/android/server/biometrics/sensors/face/hidl/FaceResetLockoutClient;->mHardwareAuthToken:Ljava/util/ArrayList;
 
     invoke-static {v2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -87,7 +83,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xc
 
     return p0
@@ -96,7 +91,6 @@
 .method public interruptsPrecedingClients()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -105,10 +99,8 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 0
 
-    .line 74
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 75
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/hidl/FaceResetLockoutClient;->startHalOperation()V
 
     return-void
@@ -117,13 +109,11 @@
 .method public startHalOperation()V
     .locals 3
 
-    .line 91
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceResetLockoutClient;->mHardwareAuthToken:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/face/hidl/FaceResetLockoutClient;->daemonResetLockout(Ljava/util/ArrayList;)V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x1
@@ -141,10 +131,8 @@
 
     const-string v2, "Unable to reset lockout"
 
-    .line 98
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0
@@ -158,6 +146,5 @@
 .method public unableToStart()V
     .locals 0
 
-    .line 0
     return-void
 .end method

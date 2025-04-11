@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 6038
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$10;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,14 +25,12 @@
 
     const-string p1, "android.intent.extra.PACKAGES"
 
-    .line 6041
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 6043
     array-length p2, p1
 
     const/4 v0, 0x0
@@ -43,14 +40,12 @@
 
     aget-object v2, p1, v0
 
-    .line 6044
     iget-object v11, p0, Lcom/android/server/am/ActivityManagerService$10;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v11
 
-    .line 6045
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$10;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -78,10 +73,8 @@
 
     const/4 p1, -0x1
 
-    .line 6047
     invoke-virtual {p0, p1}, Landroid/content/BroadcastReceiver;->setResultCode(I)V
 
-    .line 6048
     monitor-exit v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -90,7 +83,6 @@
 
     return-void
 
-    .line 6050
     :cond_0
     :try_start_1
     monitor-exit v11

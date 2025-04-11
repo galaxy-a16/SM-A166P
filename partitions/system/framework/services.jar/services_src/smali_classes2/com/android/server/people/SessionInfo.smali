@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$BHDphiQRKvNjJy_7CeO73fjfGP0(Lcom/android/server/people/SessionInfo;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/people/SessionInfo;->updatePredictions(Ljava/util/List;)V
 
     return-void
@@ -22,17 +21,14 @@
 .method public constructor <init>(Landroid/app/prediction/AppPredictionContext;Lcom/android/server/people/data/DataManager;ILandroid/content/Context;)V
     .locals 1
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/people/SessionInfo;->mCallbacks:Landroid/os/RemoteCallbackList;
 
-    .line 45
     new-instance v0, Lcom/android/server/people/SessionInfo$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/people/SessionInfo$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/people/SessionInfo;)V
@@ -51,7 +47,6 @@
 .method public addCallback(Landroid/app/prediction/IPredictionCallback;)V
     .locals 0
 
-    .line 50
     iget-object p0, p0, Lcom/android/server/people/SessionInfo;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
@@ -62,7 +57,6 @@
 .method public getPredictor()Lcom/android/server/people/prediction/AppTargetPredictor;
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/people/SessionInfo;->mAppTargetPredictor:Lcom/android/server/people/prediction/AppTargetPredictor;
 
     return-object p0
@@ -71,7 +65,6 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/people/SessionInfo;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p0}, Landroid/os/RemoteCallbackList;->kill()V
@@ -82,7 +75,6 @@
 .method public removeCallback(Landroid/app/prediction/IPredictionCallback;)V
     .locals 0
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/people/SessionInfo;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
@@ -93,7 +85,6 @@
 .method public final updatePredictions(Ljava/util/List;)V
     .locals 5
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/people/SessionInfo;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
@@ -105,7 +96,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 69
     :try_start_0
     iget-object v2, p0, Lcom/android/server/people/SessionInfo;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -128,7 +118,6 @@
     :catch_0
     move-exception v2
 
-    .line 71
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,7 +141,6 @@
 
     goto :goto_0
 
-    .line 74
     :cond_0
     iget-object p0, p0, Lcom/android/server/people/SessionInfo;->mCallbacks:Landroid/os/RemoteCallbackList;
 

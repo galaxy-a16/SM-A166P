@@ -20,7 +20,6 @@
 .method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->$r8$lambda$f23CNwEFl3lgNi6fO2AeNyydUdg(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result p0

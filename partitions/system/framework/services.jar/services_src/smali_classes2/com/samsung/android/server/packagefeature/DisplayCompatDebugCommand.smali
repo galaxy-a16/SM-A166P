@@ -9,7 +9,6 @@
 
     const-string v0, "-setForceDisplayCompatMode"
 
-    .line 92
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -26,7 +25,6 @@
 
     const-string p0, "blocklist"
 
-    .line 111
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -47,7 +45,6 @@
 .method public assertValidOptions(Ljava/io/PrintWriter;[Ljava/lang/String;Ljava/lang/String;)Z
     .locals 4
 
-    .line 97
     array-length v0, p2
 
     const/4 v1, 0x2
@@ -73,7 +70,6 @@
     :cond_0
     const-string v1, "allowlist"
 
-    .line 102
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -88,7 +84,6 @@
 
     if-nez p2, :cond_1
 
-    .line 103
     invoke-virtual {p0, p1, p3, v2}, Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;->printOptions(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
@@ -96,7 +91,6 @@
     :cond_1
     return v0
 
-    .line 98
     :cond_2
     :goto_0
     invoke-virtual {p0, p1, p3, v2}, Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;->printOptions(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)V

@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/android/server/autofill/Session;)V
     .locals 1
 
-    .line 5100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5101
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -32,7 +30,6 @@
 .method public run()V
     .locals 1
 
-    .line 5106
     iget-object p0, p0, Lcom/android/server/autofill/Session$AugmentedAutofillErrorCallback;->mSessionWeakRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -43,7 +40,6 @@
 
     const-string v0, "AugmentedAutofillErrorCallback:"
 
-    .line 5108
     invoke-static {p0, v0}, Lcom/android/server/autofill/Session;->-$$Nest$smlogIfSessionNull(Lcom/android/server/autofill/Session;Ljava/lang/String;)Z
 
     move-result v0
@@ -52,7 +48,6 @@
 
     return-void
 
-    .line 5111
     :cond_0
     invoke-static {p0}, Lcom/android/server/autofill/Session;->-$$Nest$monAugmentedAutofillErrorCallback(Lcom/android/server/autofill/Session;)V
 

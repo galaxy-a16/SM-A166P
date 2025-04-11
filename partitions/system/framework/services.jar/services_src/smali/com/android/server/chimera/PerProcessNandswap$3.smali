@@ -20,7 +20,6 @@
 .method public compare(Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;)I
     .locals 2
 
-    .line 760
     iget-wide p0, p1, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;->writeback:J
 
     iget-wide v0, p2, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;->writeback:J
@@ -51,7 +50,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 757
     check-cast p1, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;
 
     check-cast p2, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;

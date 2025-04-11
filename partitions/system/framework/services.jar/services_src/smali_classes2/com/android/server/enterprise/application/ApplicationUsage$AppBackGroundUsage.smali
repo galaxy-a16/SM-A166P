@@ -13,15 +13,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 152
     iput-wide v0, p0, Lcom/android/server/enterprise/application/ApplicationUsage$AppBackGroundUsage;->appLastServiceStartTime:J
 
-    .line 153
     iput-wide v0, p0, Lcom/android/server/enterprise/application/ApplicationUsage$AppBackGroundUsage;->appLastServiceStopTime:J
 
     return-void
@@ -30,7 +27,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/enterprise/application/ApplicationUsage$AppBackGroundUsage-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/enterprise/application/ApplicationUsage$AppBackGroundUsage;-><init>()V
 
     return-void

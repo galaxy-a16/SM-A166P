@@ -11,7 +11,6 @@
 .method public onRegistration(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 3
 
-    .line 2525
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -40,14 +39,12 @@
 
     const-string p2, "android.hardware.usb.gadget@1.0::IUsbGadget"
 
-    .line 2526
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 2527
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -58,7 +55,6 @@
 
     return-void
 
-    .line 2531
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandlerHal$ServiceNotification;->this$0:Lcom/android/server/usb/UsbDeviceManager$UsbHandlerHal;
 

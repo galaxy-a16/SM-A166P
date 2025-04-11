@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)V
     .locals 0
 
-    .line 3531
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
-    .line 3532
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -25,21 +23,17 @@
 .method public final exit()V
     .locals 1
 
-    .line 3551
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v0
 
-    .line 3552
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$VpnRunner;->exitVpnRunner()V
 
-    .line 3553
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$VpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {p0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mcleanupVpnStateLocked(Lcom/android/server/connectivity/Vpn;)V
 
-    .line 3554
     monitor-exit v0
 
     return-void

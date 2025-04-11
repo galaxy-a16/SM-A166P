@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$smbackgroundAllowlist(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/shealth/SamsungHealthService;->backgroundAllowlist(Landroid/content/Context;)V
 
     return-void
@@ -24,7 +23,6 @@
 
     const-string v1, "c88c9048f6d0fe9d8561926240f2ccc1982e24721150929350384659aa54aef6"
 
-    .line 28
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -41,52 +39,42 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 30
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 32
     new-instance p0, Landroid/content/IntentFilter;
 
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string/jumbo v0, "package"
 
-    .line 33
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     const-string v0, "com.sec.android.app.shealth"
 
     const/4 v1, 0x0
 
-    .line 34
     invoke-virtual {p0, v0, v1}, Landroid/content/IntentFilter;->addDataSchemeSpecificPart(Ljava/lang/String;I)V
 
     const-string v0, "android.intent.action.PACKAGE_REPLACED"
 
-    .line 35
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
-    .line 36
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const/16 v0, 0x3e8
 
-    .line 37
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 39
     new-instance v0, Lcom/android/server/shealth/SamsungHealthService$UpdateReceiver;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/shealth/SamsungHealthService$UpdateReceiver;-><init>(Lcom/android/server/shealth/SamsungHealthService$UpdateReceiver-IA;)V
 
-    .line 40
     invoke-virtual {p1, v0, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 42
     invoke-static {p1}, Lcom/android/server/shealth/SamsungHealthService;->backgroundAllowlist(Landroid/content/Context;)V
 
     return-void
@@ -97,7 +85,6 @@
 
     const-string v0, "SamsungHealthService"
 
-    .line 74
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -113,7 +100,6 @@
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 75
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -126,7 +112,6 @@
 
     goto :goto_0
 
-    .line 81
     :cond_0
     invoke-static {p0}, Lcom/android/server/shealth/SamsungHealthService;->hasValidSignature(Landroid/content/Context;)Z
 
@@ -136,28 +121,23 @@
 
     const-string p0, "backgroundAllowlist: invalied signature"
 
-    .line 82
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 86
     :cond_1
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object p0
 
-    .line 87
     invoke-interface {p0, v1}, Landroid/app/IActivityManager;->backgroundAllowlistUid(I)V
 
     const-string p0, "backgroundAllowlist successfully called"
 
-    .line 88
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 77
     :cond_2
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -191,7 +171,6 @@
 
     const-string v1, "backgroundAllowlist exception "
 
-    .line 90
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -203,7 +182,6 @@
 
     const-string v0, "SamsungHealthService"
 
-    .line 95
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -213,12 +191,10 @@
     :try_start_0
     const-string v3, "SHA-256"
 
-    .line 98
     invoke-static {v3}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v3
 
-    .line 99
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -231,7 +207,6 @@
 
     move-result-object p0
 
-    .line 101
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     array-length v4, p0
@@ -243,12 +218,10 @@
 
     aget-object v6, p0, v5
 
-    .line 102
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 103
     invoke-virtual {v6}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v6
@@ -290,7 +263,6 @@
     :goto_2
     int-to-char v11, v11
 
-    .line 105
     invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     and-int/lit8 v10, v10, 0xf
@@ -309,14 +281,12 @@
     :goto_3
     int-to-char v10, v10
 
-    .line 107
     invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 110
     :cond_2
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -333,7 +303,6 @@
     :catch_0
     move-exception p0
 
-    .line 113
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -350,7 +319,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     :cond_3
     sget-object p0, Lcom/android/server/shealth/SamsungHealthService;->HEALTH_KEY_LIST:Ljava/util/List;
 
@@ -371,7 +339,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 117
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -380,7 +347,6 @@
 
     const-string p0, "key matched"
 
-    .line 118
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1

@@ -15,10 +15,8 @@
 
     new-array v0, v0, [Ljava/lang/Class;
 
-    .line 105
     invoke-direct {p0, v0}, Lorg/apache/commons/compress/archivers/sevenz/CoderBase;-><init>([Ljava/lang/Class;)V
 
-    .line 106
     iput-object p1, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$BCJDecoder;->opts:Lorg/tukaani/xz/FilterOptions;
 
     return-void
@@ -29,7 +27,6 @@
 .method public decode(Ljava/lang/String;Ljava/io/InputStream;JLorg/apache/commons/compress/archivers/sevenz/Coder;[B)Ljava/io/InputStream;
     .locals 0
 
-    .line 113
     :try_start_0
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$BCJDecoder;->opts:Lorg/tukaani/xz/FilterOptions;
 
@@ -44,7 +41,6 @@
     :catch_0
     move-exception p0
 
-    .line 115
     new-instance p2, Ljava/io/IOException;
 
     new-instance p3, Ljava/lang/StringBuilder;

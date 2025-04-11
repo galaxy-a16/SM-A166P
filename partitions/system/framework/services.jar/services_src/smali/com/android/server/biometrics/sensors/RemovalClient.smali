@@ -45,22 +45,18 @@
 
     move-object/from16 v10, p10
 
-    .line 51
     invoke-direct/range {v0 .. v10}, Lcom/android/server/biometrics/sensors/HalClientMonitor;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;IILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
-    .line 53
     iput-object v12, v11, Lcom/android/server/biometrics/sensors/RemovalClient;->mBiometricUtils:Lcom/android/server/biometrics/sensors/BiometricUtils;
 
     move-object/from16 v0, p11
 
-    .line 54
     iput-object v0, v11, Lcom/android/server/biometrics/sensors/RemovalClient;->mAuthenticatorIds:Ljava/util/Map;
 
     move-object v0, p1
 
     move/from16 v1, p5
 
-    .line 55
     invoke-interface {v12, p1, v1}, Lcom/android/server/biometrics/sensors/BiometricUtils;->getBiometricsForUser(Landroid/content/Context;I)Ljava/util/List;
 
     move-result-object v0
@@ -81,7 +77,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x4
 
     return p0
@@ -90,10 +85,8 @@
 .method public hasEnrollmentStateChanged()Z
     .locals 3
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/RemovalClient;->mBiometricUtils:Lcom/android/server/biometrics/sensors/BiometricUtils;
 
-    .line 118
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -114,7 +107,6 @@
 
     xor-int/2addr v0, v1
 
-    .line 119
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/RemovalClient;->mHasEnrollmentsBeforeStarting:Z
 
     if-eq v0, p0, :cond_0
@@ -131,7 +123,6 @@
 .method public hasEnrollments()Z
     .locals 2
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/RemovalClient;->mBiometricUtils:Lcom/android/server/biometrics/sensors/BiometricUtils;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
@@ -158,7 +149,6 @@
 .method public interruptsPrecedingClients()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -173,12 +163,10 @@
 
     const-string p1, "identifier was null, skipping onRemove()"
 
-    .line 75
     invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
-    .line 77
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
@@ -186,7 +174,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object p2
@@ -208,7 +195,6 @@
     :cond_0
     const-string p2, "Error, listener was null, not sending onError callback"
 
-    .line 82
     invoke-static {v0, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -220,10 +206,8 @@
 
     const-string v1, "Failed to send error to client for onRemoved"
 
-    .line 85
     invoke-static {v0, v1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 87
     :goto_0
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
@@ -231,7 +215,6 @@
 
     return-void
 
-    .line 91
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -259,7 +242,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/RemovalClient;->mBiometricUtils:Lcom/android/server/biometrics/sensors/BiometricUtils;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
@@ -270,15 +252,12 @@
 
     move-result v3
 
-    .line 93
     invoke-virtual {p1}, Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;->getBiometricId()I
 
     move-result v4
 
-    .line 92
     invoke-interface {v1, v2, v3, v4}, Lcom/android/server/biometrics/sensors/BiometricUtils;->removeBiometricForUser(Landroid/content/Context;II)V
 
-    .line 96
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
@@ -286,7 +265,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 97
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object v1
@@ -302,14 +280,12 @@
 
     const-string v1, "Failed to notify Removed:"
 
-    .line 100
     invoke-static {v0, v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
     :goto_1
     if-nez p2, :cond_4
 
-    .line 104
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/RemovalClient;->mBiometricUtils:Lcom/android/server/biometrics/sensors/BiometricUtils;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
@@ -330,7 +306,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 105
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,7 +326,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/RemovalClient;->mAuthenticatorIds:Ljava/util/Map;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
@@ -370,7 +344,6 @@
 
     invoke-interface {p1, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
     :cond_3
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
@@ -385,10 +358,8 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 0
 
-    .line 65
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->startHalOperation()V
 
     return-void
@@ -397,6 +368,5 @@
 .method public unableToStart()V
     .locals 0
 
-    .line 0
     return-void
 .end method

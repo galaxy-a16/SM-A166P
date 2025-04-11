@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$uTDXXK7LAghXlWdHurzqFV6CRsE(Lcom/android/server/autofill/RemoteFieldClassificationService;Landroid/service/assist/classification/FieldClassificationRequest;JLjava/lang/ref/WeakReference;Landroid/service/assist/classification/IFieldClassificationService;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/autofill/RemoteFieldClassificationService;->lambda$onFieldClassificationRequest$0(Landroid/service/assist/classification/FieldClassificationRequest;JLjava/lang/ref/WeakReference;Landroid/service/assist/classification/IFieldClassificationService;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$mlogLatency(Lcom/android/server/autofill/RemoteFieldClassificationService;J)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/autofill/RemoteFieldClassificationService;->logLatency(J)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/autofill/RemoteFieldClassificationService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -42,7 +39,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,7 +49,6 @@
 
     const-class v1, Lcom/android/server/autofill/RemoteFieldClassificationService;
 
-    .line 60
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
@@ -72,14 +67,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;II)V
     .locals 7
 
-    .line 76
     new-instance p3, Landroid/content/Intent;
 
     const-string v0, "android.service.assist.classification.FieldClassificationService"
 
     invoke-direct {p3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 78
     invoke-virtual {p3, p2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v3
@@ -96,18 +89,14 @@
 
     move v5, p4
 
-    .line 76
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/infra/ServiceConnector$Impl;-><init>(Landroid/content/Context;Landroid/content/Intent;IILjava/util/function/Function;)V
 
-    .line 80
     iput-object p2, p0, Lcom/android/server/autofill/RemoteFieldClassificationService;->mComponentName:Landroid/content/ComponentName;
 
-    .line 81
     sget-boolean p1, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz p1, :cond_0
 
-    .line 82
     sget-object p1, Lcom/android/server/autofill/RemoteFieldClassificationService;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -126,7 +115,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/infra/ServiceConnector$Impl;->connect()Lcom/android/internal/infra/AndroidFuture;
 
@@ -148,13 +136,11 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 99
     :try_start_0
     invoke-static {p0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 100
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
@@ -167,7 +153,6 @@
 
     if-nez p1, :cond_1
 
-    .line 103
     sget-object p1, Lcom/android/server/autofill/RemoteFieldClassificationService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -196,7 +181,6 @@
 
     return-object v0
 
-    .line 110
     :cond_1
     new-instance p0, Landroid/util/Pair;
 
@@ -207,7 +191,6 @@
     :catch_0
     move-exception p1
 
-    .line 107
     sget-object p2, Lcom/android/server/autofill/RemoteFieldClassificationService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -238,7 +221,6 @@
 .method private synthetic lambda$onFieldClassificationRequest$0(Landroid/service/assist/classification/FieldClassificationRequest;JLjava/lang/ref/WeakReference;Landroid/service/assist/classification/IFieldClassificationService;)V
     .locals 1
 
-    .line 147
     new-instance v0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;
 
     invoke-direct {v0, p0, p2, p3, p4}, Lcom/android/server/autofill/RemoteFieldClassificationService$1;-><init>(Lcom/android/server/autofill/RemoteFieldClassificationService;JLjava/lang/ref/WeakReference;)V
@@ -253,7 +235,6 @@
 .method public getAutoDisconnectTimeoutMs()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -262,25 +243,20 @@
 .method public final logLatency(J)V
     .locals 2
 
-    .line 219
     invoke-static {}, Lcom/android/server/autofill/FieldClassificationEventLogger;->createLogger()Lcom/android/server/autofill/FieldClassificationEventLogger;
 
     move-result-object p0
 
-    .line 220
     invoke-virtual {p0}, Lcom/android/server/autofill/FieldClassificationEventLogger;->startNewLogForRequest()V
 
-    .line 222
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     sub-long/2addr v0, p1
 
-    .line 221
     invoke-virtual {p0, v0, v1}, Lcom/android/server/autofill/FieldClassificationEventLogger;->maybeSetLatencyMillis(J)V
 
-    .line 223
     invoke-virtual {p0}, Lcom/android/server/autofill/FieldClassificationEventLogger;->logAndEndEvent()V
 
     return-void
@@ -289,17 +265,14 @@
 .method public onFieldClassificationRequest(Landroid/service/assist/classification/FieldClassificationRequest;Ljava/lang/ref/WeakReference;)V
     .locals 7
 
-    .line 140
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
 
-    .line 141
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sVerbose:Z
 
     if-eqz v0, :cond_0
 
-    .line 142
     sget-object v0, Lcom/android/server/autofill/RemoteFieldClassificationService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -318,7 +291,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     :cond_0
     new-instance v6, Lcom/android/server/autofill/RemoteFieldClassificationService$$ExternalSyntheticLambda1;
 
@@ -340,7 +312,6 @@
 .method public bridge synthetic onServiceConnectionStatusChanged(Landroid/os/IInterface;Z)V
     .locals 0
 
-    .line 56
     check-cast p1, Landroid/service/assist/classification/IFieldClassificationService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/autofill/RemoteFieldClassificationService;->onServiceConnectionStatusChanged(Landroid/service/assist/classification/IFieldClassificationService;Z)V
@@ -355,13 +326,11 @@
 
     const/4 p0, 0x0
 
-    .line 122
     :try_start_0
     invoke-interface {p1, p0, p0}, Landroid/service/assist/classification/IFieldClassificationService;->onConnected(ZZ)V
 
     goto :goto_0
 
-    .line 124
     :cond_0
     invoke-interface {p1}, Landroid/service/assist/classification/IFieldClassificationService;->onDisconnected()V
     :try_end_0
@@ -372,7 +341,6 @@
     :catch_0
     move-exception p0
 
-    .line 127
     sget-object p1, Lcom/android/server/autofill/RemoteFieldClassificationService;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;

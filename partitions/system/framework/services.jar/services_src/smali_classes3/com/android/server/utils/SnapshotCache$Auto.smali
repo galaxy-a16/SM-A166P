@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/server/utils/Snappable;Lcom/android/server/utils/Watchable;Ljava/lang/String;)V
     .locals 0
 
-    .line 181
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/utils/SnapshotCache;-><init>(Ljava/lang/Object;Lcom/android/server/utils/Watchable;Ljava/lang/String;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public createSnapshot()Lcom/android/server/utils/Snappable;
     .locals 0
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/utils/SnapshotCache;->mSource:Ljava/lang/Object;
 
     check-cast p0, Lcom/android/server/utils/Snappable;
@@ -35,7 +33,6 @@
 .method public bridge synthetic createSnapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 179
     invoke-virtual {p0}, Lcom/android/server/utils/SnapshotCache$Auto;->createSnapshot()Lcom/android/server/utils/Snappable;
 
     move-result-object p0

@@ -13,25 +13,21 @@
 
     return-object p0
 
-    .line 42
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 43
     invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 44
     invoke-virtual {v0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 45
     new-instance v2, Ljava/util/StringJoiner;
 
     const-string v3, "["
@@ -42,7 +38,6 @@
 
     invoke-direct {v2, v5, v3, v4}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    .line 46
     invoke-virtual {v1}, Ljava/lang/Class;->isArray()Z
 
     move-result v1
@@ -51,7 +46,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 47
     :goto_0
     invoke-static {p0}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -59,7 +53,6 @@
 
     if-ge v3, v0, :cond_2
 
-    .line 48
     invoke-static {p0, v3}, Ljava/lang/reflect/Array;->get(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -74,13 +67,11 @@
 
     goto :goto_0
 
-    .line 51
     :cond_1
     const-class v1, [I
 
     if-ne v0, v1, :cond_3
 
-    .line 52
     check-cast p0, [I
 
     array-length v0, p0
@@ -90,7 +81,6 @@
 
     aget v1, p0, v3
 
-    .line 53
     invoke-static {v1}, Landroid/hardware/broadcastradio/IdentifierType$$;->toString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -101,7 +91,6 @@
 
     goto :goto_1
 
-    .line 56
     :cond_2
     invoke-virtual {v2}, Ljava/util/StringJoiner;->toString()Ljava/lang/String;
 
@@ -109,7 +98,6 @@
 
     return-object p0
 
-    .line 51
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -131,7 +119,6 @@
 
     throw p0
 
-    .line 43
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -289,7 +276,6 @@
 
     return-object p0
 
-    .line 38
     :cond_e
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 

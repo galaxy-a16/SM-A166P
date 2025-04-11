@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 151
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public onBootPhase(I)V
     .locals 0
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/content/ContentService$Lifecycle;->mService:Lcom/android/server/content/ContentService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/content/ContentService;->onBootPhase(I)V
@@ -33,7 +31,6 @@
 .method public onStart()V
     .locals 3
 
-    .line 157
     invoke-static {}, Landroid/os/FactoryTest;->getMode()I
 
     move-result v0
@@ -47,7 +44,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 158
     :goto_0
     new-instance v0, Lcom/android/server/content/ContentService;
 
@@ -61,7 +57,6 @@
 
     const-string v1, "content"
 
-    .line 159
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -70,7 +65,6 @@
 .method public onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 169
     iget-object p0, p0, Lcom/android/server/content/ContentService$Lifecycle;->mService:Lcom/android/server/content/ContentService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -85,7 +79,6 @@
 .method public onUserStopped(Lcom/android/server/SystemService$TargetUser;)V
     .locals 1
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/content/ContentService$Lifecycle;->mService:Lcom/android/server/content/ContentService;
 
     invoke-static {v0}, Lcom/android/server/content/ContentService;->-$$Nest$fgetmCache(Lcom/android/server/content/ContentService;)Landroid/util/SparseArray;
@@ -94,7 +87,6 @@
 
     monitor-enter v0
 
-    .line 185
     :try_start_0
     iget-object p0, p0, Lcom/android/server/content/ContentService$Lifecycle;->mService:Lcom/android/server/content/ContentService;
 
@@ -108,7 +100,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 186
     monitor-exit v0
 
     return-void
@@ -126,7 +117,6 @@
 .method public onUserStopping(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 179
     iget-object p0, p0, Lcom/android/server/content/ContentService$Lifecycle;->mService:Lcom/android/server/content/ContentService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -141,7 +131,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 174
     iget-object p0, p0, Lcom/android/server/content/ContentService$Lifecycle;->mService:Lcom/android/server/content/ContentService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I

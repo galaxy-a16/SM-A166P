@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$smisWritebackEnabled()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->isWritebackEnabled()Z
 
     move-result v0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$smisWritebackLimitEnabled()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->isWritebackLimitEnabled()Z
 
     move-result v0
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$smreadZramBdstat()[J
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->readZramBdstat()[J
 
     move-result-object v0
@@ -48,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$smreadZramWritebackLimit()J
     .locals 2
 
-    .line 0
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->readZramWritebackLimit()J
 
     move-result-wide v0
@@ -59,7 +55,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 2494
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -68,10 +63,8 @@
 
     const/4 v0, -0x1
 
-    .line 2495
     sput v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackEnabled:I
 
-    .line 2496
     sput v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackLimitEnabled:I
 
     return-void
@@ -80,7 +73,6 @@
 .method public static isWritebackEnabled()Z
     .locals 5
 
-    .line 2514
     sget v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackEnabled:I
 
     const/4 v1, -0x1
@@ -91,40 +83,34 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 2515
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sys/block/zram0/writeback_limit"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2516
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2517
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/per_boot/zram_swap"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2518
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2519
     sput v3, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackEnabled:I
 
     goto :goto_0
 
-    .line 2521
     :cond_0
     sget-object v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->TAG:Ljava/lang/String;
 
@@ -132,12 +118,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2522
     sput v2, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackEnabled:I
 
     goto :goto_0
 
-    .line 2525
     :cond_1
     sget-object v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->TAG:Ljava/lang/String;
 
@@ -145,10 +129,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2526
     sput v2, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackEnabled:I
 
-    .line 2528
     :goto_0
     sget-object v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->TAG:Ljava/lang/String;
 
@@ -170,7 +152,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2531
     :cond_2
     sget v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackEnabled:I
 
@@ -185,7 +166,6 @@
 .method public static isWritebackLimitEnabled()Z
     .locals 4
 
-    .line 2535
     sget v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackLimitEnabled:I
 
     const/4 v1, -0x1
@@ -194,7 +174,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2536
     :try_start_0
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -208,7 +187,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2537
     :try_start_1
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -222,7 +200,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2538
     :try_start_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -233,7 +210,6 @@
     :catchall_0
     move-exception v1
 
-    .line 2536
     :try_start_3
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -252,18 +228,15 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 2539
     :catch_0
     sput v2, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackLimitEnabled:I
 
-    .line 2540
     sget-object v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->TAG:Ljava/lang/String;
 
     const-string v1, "failed to read /sys/block/zram0/writeback_limit_enable"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2542
     :goto_1
     sget-object v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->TAG:Ljava/lang/String;
 
@@ -285,7 +258,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2545
     :cond_0
     sget v0, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->mWritebackLimitEnabled:I
 
@@ -302,7 +274,6 @@
 .method public static isWritebackQuotaAvailable()Z
     .locals 4
 
-    .line 2561
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->isWritebackEnabled()Z
 
     move-result v0
@@ -345,7 +316,6 @@
 
     const/4 v0, 0x0
 
-    .line 2570
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -359,7 +329,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2571
     :try_start_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -371,7 +340,6 @@
 
     const-string v3, "\\s+"
 
-    .line 2572
     invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
@@ -392,7 +360,6 @@
 
     move-result-object v2
 
-    .line 2579
     array-length v3, v2
 
     const/16 v4, 0xa
@@ -412,7 +379,6 @@
 
     if-ge v5, v6, :cond_0
 
-    .line 2583
     aget-wide v6, v2, v5
 
     aput-wide v6, v4, v5
@@ -422,7 +388,6 @@
     :cond_0
     add-int/lit8 v6, v5, 0x4
 
-    .line 2585
     aget-wide v6, v2, v6
 
     aput-wide v6, v4, v5
@@ -434,7 +399,6 @@
 
     goto :goto_0
 
-    .line 2593
     :cond_1
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
@@ -443,7 +407,6 @@
 
     return-object v4
 
-    .line 2591
     :cond_2
     :try_start_3
     array-length v3, v2
@@ -456,7 +419,6 @@
 
     move-object v2, v0
 
-    .line 2593
     :cond_3
     :try_start_4
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
@@ -470,7 +432,6 @@
     :catchall_0
     move-exception v2
 
-    .line 2570
     :try_start_5
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -489,7 +450,6 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 2595
     :catch_0
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -497,14 +457,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 2596
     sget-object v1, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->TAG:Ljava/lang/String;
 
     const-string v2, "failed to read /sys/block/zram0/bd_stat"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2600
     :cond_4
     :goto_3
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
@@ -513,7 +471,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 2601
     sget-object v1, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -545,7 +502,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 2550
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -559,7 +515,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2551
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -571,7 +526,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2552
     :try_start_2
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -582,7 +536,6 @@
     :catchall_0
     move-exception v3
 
-    .line 2550
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -601,7 +554,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 2553
     :catch_0
     sget-object v2, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->TAG:Ljava/lang/String;
 

@@ -15,7 +15,6 @@
 
     const-string v0, "\n\\s*total\\s*(\\d+)\\s*\n"
 
-    .line 44
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -24,7 +23,6 @@
 
     const-string v0, "\n\\s+\\S+\\s+(\\d+)\\s+(\\d+)"
 
-    .line 46
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -37,7 +35,6 @@
 .method public static parseIonHeapSizeFromDebugfs(Ljava/lang/String;)J
     .locals 4
 
-    .line 66
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -48,7 +45,6 @@
 
     return-wide v1
 
-    .line 69
     :cond_0
     sget-object v0, Lcom/android/server/stats/pull/IonMemoryUtil;->ION_HEAP_SIZE_IN_BYTES:Ljava/util/regex/Pattern;
 
@@ -56,7 +52,6 @@
 
     move-result-object p0
 
-    .line 71
     :try_start_0
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -86,7 +81,6 @@
 
     const-string v3, "Failed to parse value"
 
-    .line 73
     invoke-static {v0, v3, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-wide v1
@@ -95,21 +89,18 @@
 .method public static parseProcessIonHeapSizesFromDebugfs(Ljava/lang/String;)Ljava/util/List;
     .locals 8
 
-    .line 94
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 95
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 98
     :cond_0
     sget-object v0, Lcom/android/server/stats/pull/IonMemoryUtil;->PROCESS_ION_HEAP_SIZE_IN_BYTES:Ljava/util/regex/Pattern;
 
@@ -117,12 +108,10 @@
 
     move-result-object p0
 
-    .line 99
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 100
     :goto_0
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -132,7 +121,6 @@
 
     const/4 v1, 0x1
 
-    .line 102
     :try_start_0
     invoke-virtual {p0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -144,7 +132,6 @@
 
     const/4 v3, 0x2
 
-    .line 103
     invoke-virtual {p0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -153,7 +140,6 @@
 
     move-result-wide v3
 
-    .line 104
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -162,33 +148,27 @@
 
     if-nez v5, :cond_1
 
-    .line 106
     new-instance v5, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;
 
     invoke-direct {v5}, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;-><init>()V
 
-    .line 107
     invoke-virtual {v0, v2, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 109
     :cond_1
     iput v2, v5, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->pid:I
 
-    .line 110
     iget-wide v6, v5, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->totalSizeInBytes:J
 
     add-long/2addr v6, v3
 
     iput-wide v6, v5, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->totalSizeInBytes:J
 
-    .line 111
     iget v2, v5, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->count:I
 
     add-int/2addr v2, v1
 
     iput v2, v5, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->count:I
 
-    .line 112
     iget-wide v1, v5, Lcom/android/server/stats/pull/IonMemoryUtil$IonAllocations;->maxSizeInBytes:J
 
     invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->max(JJ)J
@@ -208,12 +188,10 @@
 
     const-string v3, "Failed to parse value"
 
-    .line 114
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 118
     :cond_2
     new-instance p0, Ljava/util/ArrayList;
 
@@ -225,7 +203,6 @@
 
     const/4 v1, 0x0
 
-    .line 119
     :goto_1
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -233,7 +210,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 120
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -253,7 +229,6 @@
 .method public static readFile(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 127
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -263,7 +238,6 @@
 
     const/4 v1, 0x0
 
-    .line 128
     invoke-static {v0, p0, v1}, Landroid/os/FileUtils;->readTextFile(Ljava/io/File;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -279,7 +253,6 @@
 
     const-string v1, "Failed to read file"
 
-    .line 130
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const-string p0, ""
@@ -292,7 +265,6 @@
 
     const-string v0, "/sys/kernel/debug/ion/heaps/system"
 
-    .line 85
     invoke-static {v0}, Lcom/android/server/stats/pull/IonMemoryUtil;->readFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -309,7 +281,6 @@
 
     const-string v0, "/sys/kernel/debug/ion/heaps/system"
 
-    .line 57
     invoke-static {v0}, Lcom/android/server/stats/pull/IonMemoryUtil;->readFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

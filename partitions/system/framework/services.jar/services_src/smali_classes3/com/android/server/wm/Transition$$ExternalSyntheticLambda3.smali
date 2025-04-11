@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/os/IRemoteCallback;
 
     invoke-static {p1}, Lcom/android/server/wm/Transition;->$r8$lambda$txI6IxC0E9YeSJEpkYEdIvVflsg(Landroid/os/IRemoteCallback;)V

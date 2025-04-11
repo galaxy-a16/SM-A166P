@@ -17,7 +17,6 @@
 .method public static synthetic $values()[Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
     .locals 3
 
-    .line 217
     sget-object v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;->INIT:Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
     sget-object v1, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;->LOADED:Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
@@ -34,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 219
     new-instance v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
     const-string v1, "INIT"
@@ -45,7 +43,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;->INIT:Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
-    .line 221
     new-instance v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
     const-string v1, "LOADED"
@@ -56,7 +53,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;->LOADED:Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
-    .line 223
     new-instance v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
     const-string v1, "ACTIVE"
@@ -67,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;->ACTIVE:Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
-    .line 217
     invoke-static {}, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;->$values()[Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
     move-result-object v0
@@ -80,7 +75,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 217
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -89,7 +83,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
     .locals 1
 
-    .line 217
     const-class v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -104,7 +97,6 @@
 .method public static values()[Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
     .locals 1
 
-    .line 217
     sget-object v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;->$VALUES:[Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;
 
     invoke-virtual {v0}, [Lcom/android/server/soundtrigger_middleware/SoundTriggerModule$ModelState;->clone()Ljava/lang/Object;

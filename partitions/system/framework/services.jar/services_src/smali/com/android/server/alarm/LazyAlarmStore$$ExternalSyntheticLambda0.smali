@@ -20,7 +20,6 @@
 .method public final applyAsLong(Ljava/lang/Object;)J
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/alarm/Alarm;
 
     invoke-virtual {p1}, Lcom/android/server/alarm/Alarm;->getWhenElapsed()J

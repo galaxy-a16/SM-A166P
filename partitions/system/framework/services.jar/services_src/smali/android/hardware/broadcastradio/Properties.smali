@@ -28,7 +28,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 15
     new-instance v0, Landroid/hardware/broadcastradio/Properties$1;
 
     invoke-direct {v0}, Landroid/hardware/broadcastradio/Properties$1;-><init>()V
@@ -51,7 +50,6 @@
 .method public describeContents()I
     .locals 1
 
-    .line 100
     iget-object v0, p0, Landroid/hardware/broadcastradio/Properties;->vendorInfo:[Landroid/hardware/broadcastradio/VendorKeyValue;
 
     invoke-virtual {p0, v0}, Landroid/hardware/broadcastradio/Properties;->describeContents(Ljava/lang/Object;)I
@@ -72,13 +70,11 @@
 
     return v0
 
-    .line 105
     :cond_0
     instance-of v1, p1, [Ljava/lang/Object;
 
     if-eqz v1, :cond_2
 
-    .line 107
     check-cast p1, [Ljava/lang/Object;
 
     array-length v1, p1
@@ -90,7 +86,6 @@
 
     aget-object v3, p1, v0
 
-    .line 108
     invoke-virtual {p0, v3}, Landroid/hardware/broadcastradio/Properties;->describeContents(Ljava/lang/Object;)I
 
     move-result v3
@@ -104,13 +99,11 @@
     :cond_1
     return v2
 
-    .line 112
     :cond_2
     instance-of p0, p1, Landroid/os/Parcelable;
 
     if-eqz p0, :cond_3
 
-    .line 113
     check-cast p1, Landroid/os/Parcelable;
 
     invoke-interface {p1}, Landroid/os/Parcelable;->describeContents()I
@@ -139,7 +132,6 @@
 
     return v1
 
-    .line 82
     :cond_1
     instance-of v2, p1, Landroid/hardware/broadcastradio/Properties;
 
@@ -147,11 +139,9 @@
 
     return v1
 
-    .line 83
     :cond_2
     check-cast p1, Landroid/hardware/broadcastradio/Properties;
 
-    .line 84
     iget-object v2, p0, Landroid/hardware/broadcastradio/Properties;->maker:Ljava/lang/String;
 
     iget-object v3, p1, Landroid/hardware/broadcastradio/Properties;->maker:Ljava/lang/String;
@@ -164,7 +154,6 @@
 
     return v1
 
-    .line 85
     :cond_3
     iget-object v2, p0, Landroid/hardware/broadcastradio/Properties;->product:Ljava/lang/String;
 
@@ -178,7 +167,6 @@
 
     return v1
 
-    .line 86
     :cond_4
     iget-object v2, p0, Landroid/hardware/broadcastradio/Properties;->version:Ljava/lang/String;
 
@@ -192,7 +180,6 @@
 
     return v1
 
-    .line 87
     :cond_5
     iget-object v2, p0, Landroid/hardware/broadcastradio/Properties;->serial:Ljava/lang/String;
 
@@ -206,7 +193,6 @@
 
     return v1
 
-    .line 88
     :cond_6
     iget-object v2, p0, Landroid/hardware/broadcastradio/Properties;->supportedIdentifierTypes:[I
 
@@ -220,7 +206,6 @@
 
     return v1
 
-    .line 89
     :cond_7
     iget-object p0, p0, Landroid/hardware/broadcastradio/Properties;->vendorInfo:[Landroid/hardware/broadcastradio/VendorKeyValue;
 
@@ -241,7 +226,6 @@
 .method public final getStability()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -256,7 +240,6 @@
 
     const/4 v1, 0x0
 
-    .line 95
     iget-object v2, p0, Landroid/hardware/broadcastradio/Properties;->maker:Ljava/lang/String;
 
     aput-object v2, v0, v1
@@ -309,12 +292,10 @@
 .method public final readFromParcel(Landroid/os/Parcel;)V
     .locals 5
 
-    .line 44
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
-    .line 45
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -327,7 +308,6 @@
 
     if-lt v1, v2, :cond_d
 
-    .line 48
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -346,12 +326,10 @@
     :goto_0
     add-int/2addr v0, v1
 
-    .line 64
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 62
     :cond_0
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -359,7 +337,6 @@
 
     throw p0
 
-    .line 49
     :cond_1
     :try_start_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -368,7 +345,6 @@
 
     iput-object v2, p0, Landroid/hardware/broadcastradio/Properties;->maker:Ljava/lang/String;
 
-    .line 50
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -385,7 +361,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_2
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -393,7 +368,6 @@
 
     throw p0
 
-    .line 51
     :cond_3
     :try_start_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -402,7 +376,6 @@
 
     iput-object v2, p0, Landroid/hardware/broadcastradio/Properties;->product:Ljava/lang/String;
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -419,7 +392,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_4
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -427,7 +399,6 @@
 
     throw p0
 
-    .line 53
     :cond_5
     :try_start_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -436,7 +407,6 @@
 
     iput-object v2, p0, Landroid/hardware/broadcastradio/Properties;->version:Ljava/lang/String;
 
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -453,7 +423,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_6
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -461,7 +430,6 @@
 
     throw p0
 
-    .line 55
     :cond_7
     :try_start_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -470,7 +438,6 @@
 
     iput-object v2, p0, Landroid/hardware/broadcastradio/Properties;->serial:Ljava/lang/String;
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -487,7 +454,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_8
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -495,7 +461,6 @@
 
     throw p0
 
-    .line 57
     :cond_9
     :try_start_5
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
@@ -504,7 +469,6 @@
 
     iput-object v2, p0, Landroid/hardware/broadcastradio/Properties;->supportedIdentifierTypes:[I
 
-    .line 58
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -521,7 +485,6 @@
 
     goto :goto_0
 
-    .line 62
     :cond_a
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -529,7 +492,6 @@
 
     throw p0
 
-    .line 59
     :cond_b
     :try_start_6
     sget-object v2, Landroid/hardware/broadcastradio/VendorKeyValue;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -550,12 +512,10 @@
 
     add-int/2addr v0, v1
 
-    .line 64
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 62
     :cond_c
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -568,7 +528,6 @@
 
     goto :goto_1
 
-    .line 47
     :cond_d
     :try_start_7
     new-instance p0, Landroid/os/BadParcelableException;
@@ -586,7 +545,6 @@
 
     if-le v0, v4, :cond_e
 
-    .line 62
     new-instance p0, Landroid/os/BadParcelableException;
 
     invoke-direct {p0, v3}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
@@ -596,17 +554,14 @@
     :cond_e
     add-int/2addr v0, v1
 
-    .line 64
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 65
     throw p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 69
     new-instance v0, Ljava/util/StringJoiner;
 
     const-string/jumbo v1, "{"
@@ -617,7 +572,6 @@
 
     invoke-direct {v0, v3, v1, v2}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    .line 70
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -640,7 +594,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 71
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -663,7 +616,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 72
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -686,7 +638,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 73
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -709,7 +660,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 74
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -732,7 +682,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 75
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -755,7 +704,6 @@
 
     invoke-virtual {v0, p0}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 76
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -780,60 +728,48 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 29
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 30
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 31
     iget-object v1, p0, Landroid/hardware/broadcastradio/Properties;->maker:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 32
     iget-object v1, p0, Landroid/hardware/broadcastradio/Properties;->product:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 33
     iget-object v1, p0, Landroid/hardware/broadcastradio/Properties;->version:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 34
     iget-object v1, p0, Landroid/hardware/broadcastradio/Properties;->serial:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 35
     iget-object v1, p0, Landroid/hardware/broadcastradio/Properties;->supportedIdentifierTypes:[I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 36
     iget-object p0, p0, Landroid/hardware/broadcastradio/Properties;->vendorInfo:[Landroid/hardware/broadcastradio/VendorKeyValue;
 
     invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 37
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p0
 
-    .line 38
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     sub-int p2, p0, v0
 
-    .line 39
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 40
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void

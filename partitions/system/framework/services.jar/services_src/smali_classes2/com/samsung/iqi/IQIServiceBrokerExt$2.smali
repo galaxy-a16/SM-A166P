@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/iqi/IQIServiceBrokerExt;Landroid/os/Handler;)V
     .locals 0
 
-    .line 64
     iput-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,14 +23,12 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 1
 
-    .line 67
     iget-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p1}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$mgetOpt(Lcom/samsung/iqi/IQIServiceBrokerExt;)I
 
     move-result p1
 
-    .line 68
     iget-object p2, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p2}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$fgetDEBUG(Lcom/samsung/iqi/IQIServiceBrokerExt;)Z
@@ -85,7 +82,6 @@
 
     if-nez p1, :cond_2
 
-    .line 70
     iget-object p3, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p3}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$fgetmServiceRunning(Lcom/samsung/iqi/IQIServiceBrokerExt;)Z
@@ -94,7 +90,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 72
     iget-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p1}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$fgetmLock(Lcom/samsung/iqi/IQIServiceBrokerExt;)Ljava/lang/Object;
@@ -103,18 +98,15 @@
 
     monitor-enter p3
 
-    .line 73
     :try_start_0
     iget-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p1, p2}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$fputmIsOptOutTriggered(Lcom/samsung/iqi/IQIServiceBrokerExt;Z)V
 
-    .line 74
     monitor-exit p3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 75
     iget-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p1}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$fgetmContext(Lcom/samsung/iqi/IQIServiceBrokerExt;)Landroid/content/Context;
@@ -135,10 +127,8 @@
 
     const/4 p1, 0x0
 
-    .line 76
     invoke-static {p1}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$smsubmitSS2S(Z)V
 
-    .line 77
     iget-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p1}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$fgetmHandler(Lcom/samsung/iqi/IQIServiceBrokerExt;)Landroid/os/Handler;
@@ -160,7 +150,6 @@
     :catchall_0
     move-exception p0
 
-    .line 74
     :try_start_1
     monitor-exit p3
     :try_end_1
@@ -171,7 +160,6 @@
     :cond_2
     if-ne p1, p2, :cond_4
 
-    .line 79
     iget-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p1}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$fgetmServiceRunning(Lcom/samsung/iqi/IQIServiceBrokerExt;)Z
@@ -180,7 +168,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 80
     iget-object p1, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 
     invoke-static {p1}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$fgetmHandler(Lcom/samsung/iqi/IQIServiceBrokerExt;)Landroid/os/Handler;
@@ -195,12 +182,10 @@
 
     invoke-virtual {p1, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 81
     invoke-static {p2}, Lcom/samsung/iqi/IQIServiceBrokerExt;->-$$Nest$smsubmitSS2S(Z)V
 
     goto :goto_1
 
-    .line 83
     :cond_3
     iget-object p0, p0, Lcom/samsung/iqi/IQIServiceBrokerExt$2;->this$0:Lcom/samsung/iqi/IQIServiceBrokerExt;
 

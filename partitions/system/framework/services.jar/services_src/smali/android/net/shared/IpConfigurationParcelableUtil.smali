@@ -21,7 +21,6 @@
 
     return-object p0
 
-    .line 37
     :cond_0
     invoke-virtual {p0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -39,7 +38,6 @@
 
     return-object p0
 
-    .line 46
     :cond_0
     invoke-static {p0}, Landroid/net/InetAddresses;->parseNumericAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 

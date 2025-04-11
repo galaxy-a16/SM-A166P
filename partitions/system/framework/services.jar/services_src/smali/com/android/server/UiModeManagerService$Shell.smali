@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$smnightModeToStr(II)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/UiModeManagerService$Shell;->nightModeToStr(II)Ljava/lang/String;
 
     move-result-object p0
@@ -22,10 +21,8 @@
 .method public constructor <init>(Landroid/app/IUiModeManager;)V
     .locals 0
 
-    .line 2586
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 2587
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     return-void
@@ -34,7 +31,6 @@
 .method public static nightModeToStr(II)Ljava/lang/String;
     .locals 2
 
-    .line 0
     if-eqz p0, :cond_5
 
     const/4 v0, 0x1
@@ -90,7 +86,6 @@
 .method public static strToNightMode(Ljava/lang/String;)I
     .locals 6
 
-    .line 2731
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -233,7 +228,6 @@
 .method public static strToNightModeCustomType(Ljava/lang/String;)I
     .locals 1
 
-    .line 2747
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     const-string v0, "custom_bedtime"
@@ -272,12 +266,10 @@
 .method public final handleCarMode()I
     .locals 4
 
-    .line 2758
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 2759
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v1
@@ -286,7 +278,6 @@
 
     if-nez v1, :cond_0
 
-    .line 2761
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->printCurrentCarMode()V
 
     return v2
@@ -294,21 +285,18 @@
     :cond_0
     const-string/jumbo v3, "yes"
 
-    .line 2765
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 2766
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     const-string v1, ""
 
     invoke-interface {v0, v2, v2, v1}, Landroid/app/IUiModeManager;->enableCarMode(IILjava/lang/String;)V
 
-    .line 2767
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->printCurrentCarMode()V
 
     return v2
@@ -316,19 +304,16 @@
     :cond_1
     const-string/jumbo v3, "no"
 
-    .line 2769
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 2770
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-interface {v0, v2}, Landroid/app/IUiModeManager;->disableCarMode(I)V
 
-    .line 2771
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->printCurrentCarMode()V
 
     return v2
@@ -336,7 +321,6 @@
     :cond_2
     const-string p0, "Error: mode must be \'yes\', or \'no\'"
 
-    .line 2774
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, -0x1
@@ -347,7 +331,6 @@
 .method public final handleCustomTime()I
     .locals 4
 
-    .line 2630
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
@@ -356,7 +339,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2632
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->printCustomTime()V
 
     return v1
@@ -364,7 +346,6 @@
     :cond_0
     const-string v2, "end"
 
-    .line 2635
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -379,7 +360,6 @@
 
     if-nez v0, :cond_1
 
-    .line 2645
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -392,13 +372,11 @@
 
     return p0
 
-    .line 2637
     :cond_1
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2638
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-static {v0}, Ljava/time/LocalTime;->parse(Ljava/lang/CharSequence;)Ljava/time/LocalTime;
@@ -413,13 +391,11 @@
 
     return v1
 
-    .line 2641
     :cond_2
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2642
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-static {v0}, Ljava/time/LocalTime;->parse(Ljava/lang/CharSequence;)Ljava/time/LocalTime;
@@ -438,12 +414,10 @@
 .method public final handleNightMode()I
     .locals 5
 
-    .line 2658
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 2659
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v1
@@ -452,42 +426,35 @@
 
     if-nez v1, :cond_0
 
-    .line 2661
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->printCurrentNightMode()V
 
     return v2
 
-    .line 2665
     :cond_0
     invoke-static {v1}, Lcom/android/server/UiModeManagerService$Shell;->strToNightMode(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 2666
     invoke-static {v1}, Lcom/android/server/UiModeManagerService$Shell;->strToNightModeCustomType(Ljava/lang/String;)I
 
     move-result v4
 
     if-ltz v3, :cond_3
 
-    .line 2669
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2670
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 2671
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 2672
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
@@ -498,7 +465,6 @@
 
     return v2
 
-    .line 2677
     :cond_1
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
@@ -508,18 +474,15 @@
 
     if-ne v3, v0, :cond_2
 
-    .line 2679
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-interface {v0, v4}, Landroid/app/IUiModeManager;->setNightModeCustomType(I)V
 
-    .line 2681
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->printCurrentNightMode()V
 
     return v2
 
-    .line 2684
     :cond_3
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
@@ -527,14 +490,12 @@
 
     const-string v3, "add"
 
-    .line 2685
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 2686
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
@@ -545,7 +506,6 @@
 
     return v2
 
-    .line 2688
     :cond_4
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
@@ -553,14 +513,12 @@
 
     const-string/jumbo v3, "reset"
 
-    .line 2689
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 2690
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
@@ -578,7 +536,6 @@
     :cond_5
     const-string p0, "Error: mode must be \'yes\', \'no\', or \'auto\', or \'custom_schedule\', or \'custom_bedtime\'"
 
-    .line 2694
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, -0x1
@@ -591,7 +548,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2608
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
@@ -601,7 +557,6 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 2612
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -675,14 +630,12 @@
 
     if-eq v1, v3, :cond_5
 
-    .line 2620
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 2618
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->handleCustomTime()I
 
@@ -690,7 +643,6 @@
 
     return p0
 
-    .line 2616
     :cond_6
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->handleCarMode()I
 
@@ -698,7 +650,6 @@
 
     return p0
 
-    .line 2614
     :cond_7
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$Shell;->handleNightMode()I
 
@@ -711,12 +662,10 @@
     :catch_0
     move-exception p1
 
-    .line 2623
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
-    .line 2624
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -739,54 +688,44 @@
 .method public onHelp()V
     .locals 1
 
-    .line 2592
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "UiModeManager service (uimode) commands:"
 
-    .line 2593
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 2594
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 2595
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  night [yes|no|auto|custom_schedule|custom_bedtime]"
 
-    .line 2596
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Set or read night mode."
 
-    .line 2597
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  car [yes|no]"
 
-    .line 2598
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Set or read car mode."
 
-    .line 2599
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  time [start|end] <ISO time>"
 
-    .line 2600
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Set custom start/end schedule time (night mode must be set to custom to apply)."
 
-    .line 2601
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -795,19 +734,16 @@
 .method public final printCurrentCarMode()V
     .locals 3
 
-    .line 2780
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 2781
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-interface {p0}, Landroid/app/IUiModeManager;->getCurrentModeType()I
 
     move-result p0
 
-    .line 2782
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -842,31 +778,26 @@
 .method public final printCurrentNightMode()V
     .locals 3
 
-    .line 2703
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 2704
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-interface {v1}, Landroid/app/IUiModeManager;->getNightMode()I
 
     move-result v1
 
-    .line 2705
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
     invoke-interface {p0}, Landroid/app/IUiModeManager;->getNightModeCustomType()I
 
     move-result p0
 
-    .line 2706
     invoke-static {v1, p0}, Lcom/android/server/UiModeManagerService$Shell;->nightModeToStr(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2707
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -889,7 +820,6 @@
 .method public final printCustomTime()V
     .locals 4
 
-    .line 2651
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -904,17 +834,14 @@
 
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
-    .line 2652
     invoke-interface {v2}, Landroid/app/IUiModeManager;->getCustomNightModeStart()J
 
     move-result-wide v2
 
-    .line 2651
     invoke-static {v2, v3}, Lcom/android/server/UiModeManagerService;->-$$Nest$smfromMilliseconds(J)Ljava/time/LocalTime;
 
     move-result-object v2
 
-    .line 2652
     invoke-virtual {v2}, Ljava/time/LocalTime;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -925,10 +852,8 @@
 
     move-result-object v1
 
-    .line 2651
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2653
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -943,17 +868,14 @@
 
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$Shell;->mInterface:Landroid/app/IUiModeManager;
 
-    .line 2654
     invoke-interface {p0}, Landroid/app/IUiModeManager;->getCustomNightModeEnd()J
 
     move-result-wide v2
 
-    .line 2653
     invoke-static {v2, v3}, Lcom/android/server/UiModeManagerService;->-$$Nest$smfromMilliseconds(J)Ljava/time/LocalTime;
 
     move-result-object p0
 
-    .line 2654
     invoke-virtual {p0}, Ljava/time/LocalTime;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -964,7 +886,6 @@
 
     move-result-object p0
 
-    .line 2653
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void

@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayArea$Dimmable;->$r8$lambda$HtkkoZkIXcEGrDXi5mCl8NOjNNQ(Lcom/android/server/wm/Task;)Z

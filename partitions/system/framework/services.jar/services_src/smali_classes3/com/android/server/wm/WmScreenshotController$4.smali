@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WmScreenshotController;)V
     .locals 0
 
-    .line 509
     iput-object p1, p0, Lcom/android/server/wm/WmScreenshotController$4;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 11
 
-    .line 511
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "com.samsung.android.capture.ScreenshotExecutor"
 
-    .line 512
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -42,12 +39,10 @@
 
     const/4 v1, -0x1
 
-    .line 513
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    .line 515
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
@@ -88,7 +83,6 @@
 
     if-eq v6, v1, :cond_0
 
-    .line 585
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,12 +108,10 @@
     :cond_0
     const-string v1, "callingPackageName"
 
-    .line 562
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 563
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -128,18 +120,15 @@
 
     const-string p0, "Can not take a screenshot, callingPackageName is empty."
 
-    .line 564
     invoke-static {v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 568
     :cond_1
     invoke-virtual {p2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 569
     invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -148,7 +137,6 @@
 
     goto :goto_0
 
-    .line 571
     :cond_2
     invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -165,24 +153,20 @@
     :goto_1
     const-string v7, "displayId"
 
-    .line 575
     invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 576
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-nez v7, :cond_4
 
-    .line 577
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 580
     :cond_4
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -223,7 +207,6 @@
 
     const-string p0, "Error. bundle is null"
 
-    .line 549
     invoke-static {v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -231,7 +214,6 @@
     :cond_6
     const-string/jumbo p2, "rect"
 
-    .line 552
     invoke-virtual {v0, p2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p2
@@ -240,7 +222,6 @@
 
     if-eqz p2, :cond_8
 
-    .line 553
     invoke-virtual {p2}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v1
@@ -256,7 +237,6 @@
 
     goto :goto_5
 
-    .line 554
     :cond_8
     :goto_2
     new-instance p0, Ljava/lang/StringBuilder;
@@ -282,13 +262,11 @@
 
     goto :goto_4
 
-    .line 525
     :cond_a
     invoke-virtual {p2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 526
     invoke-virtual {v8, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -299,7 +277,6 @@
 
     goto :goto_3
 
-    .line 528
     :cond_b
     invoke-virtual {v7, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -309,7 +286,6 @@
 
     move p2, v10
 
-    .line 534
     :goto_3
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController$4;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
@@ -326,7 +302,6 @@
 
     goto :goto_5
 
-    .line 531
     :cond_d
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -352,7 +327,6 @@
     :goto_4
     move p2, v3
 
-    .line 590
     :goto_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -388,7 +362,6 @@
 
     iget-object p1, p0, Lcom/android/server/wm/WmScreenshotController$4;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
-    .line 592
     invoke-static {p1, v6}, Lcom/android/server/wm/WmScreenshotController;->-$$Nest$mfromToString(Lcom/android/server/wm/WmScreenshotController;I)Ljava/lang/String;
 
     move-result-object p1
@@ -399,10 +372,8 @@
 
     move-result-object p1
 
-    .line 590
     invoke-static {v4, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 593
     iget-object v2, p0, Lcom/android/server/wm/WmScreenshotController$4;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
     const/4 v4, 0x1

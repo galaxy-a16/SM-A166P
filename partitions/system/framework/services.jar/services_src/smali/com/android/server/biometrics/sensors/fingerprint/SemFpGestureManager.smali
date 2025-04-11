@@ -47,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmH(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mH:Landroid/os/Handler;
 
     return-object p0
@@ -56,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsEnabledGestureMainSetting(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
     return p0
@@ -65,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$mhandleOnChangeSettingValue(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->handleOnChangeSettingValue()V
 
     return-void
@@ -74,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$mhandleScreenOffBroadcast(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->handleScreenOffBroadcast()V
 
     return-void
@@ -83,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$mhandleScreenOnBroadcast(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->handleScreenOnBroadcast()V
 
     return-void
@@ -92,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$mturnOffGestureMode(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->turnOffGestureMode()V
 
     return-void
@@ -101,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$mturnOnGestureMode(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->turnOnGestureMode()V
 
     return-void
@@ -110,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$mupdateGestureSettingValue(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->updateGestureSettingValue()V
 
     return-void
@@ -119,7 +111,6 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 1
 
-    .line 177
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;-><init>()V
@@ -132,19 +123,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;)V
     .locals 0
 
-    .line 182
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
 
-    .line 184
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
-    .line 185
     iput-object p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
-    .line 186
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object p1
@@ -163,7 +149,6 @@
 .method public final canHandleGestureEvent(I)Z
     .locals 4
 
-    .line 232
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mCalibrator:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     const/4 v1, 0x0
@@ -178,7 +163,6 @@
 
     return v1
 
-    .line 235
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
@@ -186,7 +170,6 @@
 
     return v1
 
-    .line 239
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
@@ -202,12 +185,10 @@
 
     const-string p0, "handleGestureAction: SKIP gesture action because of interactive status"
 
-    .line 240
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 243
     :cond_2
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
@@ -221,7 +202,6 @@
 
     const-string p0, "handleGestureAction: SKIP gesture action because of DeX Mode"
 
-    .line 244
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -231,12 +211,10 @@
 
     if-ne p1, v0, :cond_4
 
-    .line 247
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
 
-    .line 248
     invoke-virtual {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->isFoldedInFlipType(Landroid/content/Context;)Z
 
     move-result p0
@@ -245,7 +223,6 @@
 
     const-string p0, "handleGestureAction: SKIP gesture action because of flip folded status"
 
-    .line 249
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -259,7 +236,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 386
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -284,7 +260,6 @@
 .method public final handleOnChangeSettingValue()V
     .locals 1
 
-    .line 346
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mCalibrator:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     if-eqz v0, :cond_0
@@ -299,21 +274,17 @@
 
     const-string v0, "calibration in progress.."
 
-    .line 347
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 350
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->updateGestureSettingValue()V
 
-    .line 351
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SUPPORT_GESTURE_CALIBRATION:Z
 
     if-eqz v0, :cond_1
 
-    .line 352
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
     if-eqz v0, :cond_1
@@ -322,30 +293,25 @@
 
     if-eqz v0, :cond_1
 
-    .line 353
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;->hasCalibrationData()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 354
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->startCalibration()V
 
     return-void
 
-    .line 358
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
     if-eqz v0, :cond_2
 
-    .line 359
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->turnOnGestureMode()V
 
     goto :goto_0
 
-    .line 361
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->turnOffGestureMode()V
 
@@ -356,14 +322,12 @@
 .method public final handleScreenOffBroadcast()V
     .locals 7
 
-    .line 447
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 450
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
@@ -383,7 +347,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 451
     :cond_1
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
@@ -418,14 +381,12 @@
 .method public final handleScreenOnBroadcast()V
     .locals 7
 
-    .line 457
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 460
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
@@ -445,7 +406,6 @@
 
     if-nez v0, :cond_1
 
-    .line 461
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-interface {v1}, Lcom/android/server/biometrics/sensors/BiometricServiceProvider;->getSensorProperties()Ljava/util/List;
@@ -479,14 +439,12 @@
 .method public final handleSwipeDownEvent()V
     .locals 2
 
-    .line 273
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureForStatusBar:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 276
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
@@ -496,28 +454,23 @@
 
     move-result-object v0
 
-    .line 277
     invoke-virtual {v0}, Landroid/app/SemStatusBarManager;->isPanelExpanded()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 278
     invoke-virtual {v0}, Landroid/app/SemStatusBarManager;->expandQuickSettingsPanel()V
 
-    .line 279
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->sendBigDataForExpandQuickSetting()V
 
     goto :goto_0
 
-    .line 281
     :cond_1
     invoke-virtual {v0}, Landroid/app/SemStatusBarManager;->expandNotificationsPanel()V
 
-    .line 282
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->sendBigDataForExpandStatusBar()V
@@ -529,7 +482,6 @@
 .method public final handleSwipeUpEvent()V
     .locals 4
 
-    .line 256
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
@@ -538,7 +490,6 @@
 
     move-result-object v0
 
-    .line 257
     iget-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureForStatusBar:Z
 
     if-eqz v1, :cond_1
@@ -549,7 +500,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 258
     sget-boolean v1, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -558,42 +508,34 @@
 
     const-string v2, "handleGestureAction: QuickPanel Expanded"
 
-    .line 259
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     :cond_0
     invoke-virtual {v0}, Landroid/app/SemStatusBarManager;->collapsePanels()V
 
-    .line 262
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->sendBigDataForCollapseStatusBar()V
 
     goto :goto_0
 
-    .line 263
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureForSamsungPay:Z
 
     if-eqz v0, :cond_2
 
-    .line 264
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string v1, "com.samsung.android.spay.gesture.fingerprint"
 
-    .line 265
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const/16 v1, 0x20
 
-    .line 266
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 267
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -602,7 +544,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 268
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->sendBigDataForSamsungPay()V
@@ -615,7 +556,6 @@
 .method public onGestureEvent(II)V
     .locals 4
 
-    .line 202
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mCalibrator:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     const-string v0, "FingerprintService.Gesture"
@@ -634,7 +574,6 @@
 
     const-string p1, "inverse action"
 
-    .line 203
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-ne p2, v2, :cond_0
@@ -648,7 +587,6 @@
 
     move p2, v2
 
-    .line 211
     :cond_1
     :goto_0
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->canHandleGestureEvent(I)Z
@@ -659,7 +597,6 @@
 
     return-void
 
-    .line 215
     :cond_2
     :try_start_0
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
@@ -674,13 +611,11 @@
 
     goto :goto_1
 
-    .line 221
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->handleSwipeDownEvent()V
 
     goto :goto_1
 
-    .line 218
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->handleSwipeUpEvent()V
     :try_end_0
@@ -691,7 +626,6 @@
     :catch_0
     move-exception p0
 
-    .line 227
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -719,12 +653,10 @@
 .method public onHalStarted(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 0
 
-    .line 191
     iget-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
     if-eqz p1, :cond_0
 
-    .line 192
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->turnOnGestureMode()V
 
     :cond_0
@@ -734,14 +666,12 @@
 .method public final registerBroadcast()V
     .locals 4
 
-    .line 421
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mBroadCastReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 424
     :cond_0
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$4;
 
@@ -749,32 +679,26 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mBroadCastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 437
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.SCREEN_ON"
 
-    .line 438
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.SCREEN_OFF"
 
-    .line 439
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.ACTION_SCREEN_ON_BY_PROXIMITY"
 
-    .line 440
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.ACTION_SCREEN_OFF_BY_PROXIMITY"
 
-    .line 441
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 442
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mBroadCastReceiver:Landroid/content/BroadcastReceiver;
@@ -791,14 +715,12 @@
 .method public final registerContentObserver()V
     .locals 4
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContentObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 326
     :cond_0
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$2;
 
@@ -808,7 +730,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContentObserver:Landroid/database/ContentObserver;
 
-    .line 333
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
 
@@ -816,7 +737,6 @@
 
     move-result-object v0
 
-    .line 334
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     const-string v2, "fingerprint_gesture_quick"
@@ -829,7 +749,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->registerContentObserveForAllUser(Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 337
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     const-string v2, "fingerprint_gesture_spay"
@@ -849,7 +768,6 @@
     :catch_0
     move-exception p0
 
-    .line 341
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -879,14 +797,12 @@
 .method public final registerUserSwitchObserver()V
     .locals 1
 
-    .line 299
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mUserSwitchObserver:Landroid/app/SynchronousUserSwitchObserver;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 302
     :cond_0
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;
 
@@ -894,7 +810,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mUserSwitchObserver:Landroid/app/SynchronousUserSwitchObserver;
 
-    .line 319
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->registerUserSwitchObserver(Landroid/app/SynchronousUserSwitchObserver;)V
@@ -905,31 +820,24 @@
 .method public start()V
     .locals 3
 
-    .line 287
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-interface {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semAddHalLifecycleListener(Lcom/android/server/biometrics/sensors/fingerprint/SemFpHalLifecycleListener;)V
 
-    .line 288
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-interface {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semAddEventListener(Lcom/android/server/biometrics/sensors/fingerprint/SemFpEventListener;)V
 
-    .line 289
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->updateGestureSettingValue()V
 
-    .line 290
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->registerUserSwitchObserver()V
 
-    .line 291
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->registerContentObserver()V
 
-    .line 292
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SUPPORT_GESTURE_CALIBRATION:Z
 
     if-eqz v0, :cond_0
 
-    .line 293
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
@@ -942,7 +850,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mCalibrator:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
-    .line 294
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
     invoke-virtual {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;->onBootCompleted(Z)V
@@ -954,14 +861,12 @@
 .method public final startCalibration()V
     .locals 2
 
-    .line 367
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mCalibrator:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 370
     :cond_0
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$3;
 
@@ -969,7 +874,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;->setCallback(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator$Callback;)V
 
-    .line 381
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mCalibrator:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureForSamsungPay:Z
@@ -982,14 +886,12 @@
 .method public final turnOffGestureMode()V
     .locals 7
 
-    .line 412
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_FINGERPRINT_JDM_HAL:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 415
     :cond_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
@@ -1017,7 +919,6 @@
 
     invoke-interface/range {v1 .. v6}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semRequest(III[B[B)I
 
-    .line 417
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->unregisterBroadcast()V
 
     return-void
@@ -1026,14 +927,12 @@
 .method public final turnOnGestureMode()V
     .locals 7
 
-    .line 403
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_FINGERPRINT_JDM_HAL:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 406
     :cond_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mServiceProvider:Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
@@ -1061,7 +960,6 @@
 
     invoke-interface/range {v1 .. v6}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semRequest(III[B[B)I
 
-    .line 408
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->registerBroadcast()V
 
     return-void
@@ -1070,14 +968,12 @@
 .method public final unregisterBroadcast()V
     .locals 2
 
-    .line 467
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mBroadCastReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 470
     :cond_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
 
@@ -1085,7 +981,6 @@
 
     const/4 v0, 0x0
 
-    .line 471
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mBroadCastReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
@@ -1094,14 +989,12 @@
 .method public final updateGestureSettingValue()V
     .locals 2
 
-    .line 390
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 391
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     invoke-virtual {v1, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->isEnabledGestureSettingForStatusBar(Landroid/content/ContentResolver;)Z
@@ -1110,7 +1003,6 @@
 
     iput-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureForStatusBar:Z
 
-    .line 392
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;
 
     invoke-virtual {v1, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$Injector;->isEnabledGestureSettingForSamsungPay(Landroid/content/ContentResolver;)Z
@@ -1119,7 +1011,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureForSamsungPay:Z
 
-    .line 393
     iget-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureForStatusBar:Z
 
     if-nez v1, :cond_1
@@ -1140,15 +1031,12 @@
     :goto_1
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mIsEnabledGestureMainSetting:Z
 
-    .line 395
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->mCalibrator:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     if-eqz v1, :cond_2
 
-    .line 396
     invoke-virtual {v1, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;->onGestureSettingChanged(Z)V
 
-    .line 398
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 

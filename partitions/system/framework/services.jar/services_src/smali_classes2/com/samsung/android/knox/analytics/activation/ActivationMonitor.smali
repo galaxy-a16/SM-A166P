@@ -56,7 +56,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTriggers(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;)Ljava/util/BitSet;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mTriggers:Ljava/util/BitSet;
 
     return-object p0
@@ -65,7 +64,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsOnBootCheckings(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnBootCheckings:Z
 
     return-void
@@ -74,7 +72,6 @@
 .method public static bridge synthetic -$$Nest$mcheckB2COnBoot(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkB2COnBoot()V
 
     return-void
@@ -83,7 +80,6 @@
 .method public static bridge synthetic -$$Nest$mcheckConditionsToStart(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkConditionsToStart()V
 
     return-void
@@ -92,7 +88,6 @@
 .method public static bridge synthetic -$$Nest$mcheckDOOnBoot(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkDOOnBoot()V
 
     return-void
@@ -101,7 +96,6 @@
 .method public static bridge synthetic -$$Nest$mcheckELMOnBoot(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkELMOnBoot()V
 
     return-void
@@ -110,7 +104,6 @@
 .method public static bridge synthetic -$$Nest$mcheckKLMOnBoot(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkKLMOnBoot()V
 
     return-void
@@ -119,7 +112,6 @@
 .method public static bridge synthetic -$$Nest$mcheckKesOnBoot(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkKesOnBoot()V
 
     return-void
@@ -128,7 +120,6 @@
 .method public static bridge synthetic -$$Nest$mcheckPOOnBoot(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkPOOnBoot()V
 
     return-void
@@ -137,7 +128,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -146,7 +136,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,7 +160,6 @@
 
     const-string v0, "com.sec.android.app.shealth"
 
-    .line 49
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -180,7 +168,6 @@
 
     const-string v0, "com.samsung.knox.securefolder"
 
-    .line 50
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -193,20 +180,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;->OFF:Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mActivationStatus:Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
     const/4 v0, 0x0
 
-    .line 54
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mLicenseService:Lcom/android/server/enterprise/license/EnterpriseLicenseService;
 
-    .line 55
     new-instance v0, Ljava/util/BitSet;
 
     invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
@@ -215,35 +198,28 @@
 
     const/4 v0, 0x1
 
-    .line 56
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnBootCheckings:Z
 
     const/4 v0, 0x0
 
-    .line 59
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnPremiseActivated:Z
 
-    .line 60
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsChinaDevice:Z
 
-    .line 68
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mObservers:Ljava/util/List;
 
-    .line 105
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "constructor()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
 
-    .line 107
     new-instance p1, Lcom/samsung/android/knox/analytics/util/UserManagerHelper;
 
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
@@ -258,14 +234,12 @@
 .method public static filterOutBlacklistedElm([Lcom/samsung/android/knox/license/LicenseInfo;)Ljava/util/List;
     .locals 5
 
-    .line 252
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "filterOutBlacklistedElm()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 253
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -274,12 +248,10 @@
 
     const-string p0, "filterOutBlacklistedElm(): empty LicenseInfo array"
 
-    .line 255
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
-    .line 258
     :cond_0
     array-length v0, p0
 
@@ -290,7 +262,6 @@
 
     aget-object v3, p0, v2
 
-    .line 259
     invoke-virtual {v3}, Lcom/samsung/android/knox/license/LicenseInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -301,7 +272,6 @@
 
     if-nez v4, :cond_1
 
-    .line 260
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -316,7 +286,6 @@
 .method public static isPackageAllowedToRunAnalytics(Ljava/lang/String;)Z
     .locals 5
 
-    .line 267
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -339,7 +308,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 268
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->PACKAGE_TRIGGER_BLACKLISTED:[Ljava/lang/String;
 
     array-length v1, v0
@@ -353,14 +321,12 @@
 
     aget-object v4, v0, v3
 
-    .line 269
     invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 270
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v0, "isPackageAllowedToRunAnalytics(): Not allowed"
@@ -383,7 +349,6 @@
 .method public static isPackageBlacklisted(Ljava/lang/String;)Z
     .locals 5
 
-    .line 278
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -412,7 +377,6 @@
 
     return v0
 
-    .line 282
     :cond_0
     sget-object v1, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->ELM_PACKAGE_BLACKLIST:[Ljava/lang/String;
 
@@ -425,14 +389,12 @@
 
     aget-object v4, v1, v3
 
-    .line 283
     invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 284
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v0, "isPackageBlacklisted(): blacklisted"
@@ -457,12 +419,10 @@
 .method public final bootChecking()V
     .locals 2
 
-    .line 162
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsChinaDevice:Z
 
     if-eqz v0, :cond_0
 
-    .line 163
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v0, "bootChecking() - Device country is china, returning ..."
@@ -471,7 +431,6 @@
 
     return-void
 
-    .line 171
     :cond_0
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -479,7 +438,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 173
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$1;
@@ -488,7 +446,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 194
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -497,7 +454,6 @@
 .method public checkB2C(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 3
 
-    .line 516
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -530,12 +486,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 518
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/util/B2CFeatures;->addOrRemoveB2CFeature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 520
     :cond_0
     sget-object p2, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->B2C:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
@@ -553,7 +507,6 @@
 .method public final checkB2COnBoot()V
     .locals 2
 
-    .line 511
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkB2ConBoot()"
@@ -564,7 +517,6 @@
 
     const/4 v1, 0x0
 
-    .line 512
     invoke-virtual {p0, v0, v0, v1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkB2C(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
@@ -573,14 +525,12 @@
 .method public final checkB2COnlyAndApplyFeatureWhitelist()V
     .locals 2
 
-    .line 524
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkB2COnlyAndApplyFeatureWhitelist()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 526
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->B2C:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->isTriggerSet(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;)Z
@@ -589,21 +539,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 527
     invoke-virtual {p0, v0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->isOnlyB2CTriggerSet(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 529
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/knox/analytics/util/B2CFeatures;->applyWhitelistForB2CFeatures(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 533
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
 
@@ -611,7 +558,6 @@
 
     goto :goto_0
 
-    .line 537
     :cond_1
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
 
@@ -626,7 +572,6 @@
 
     const-string/jumbo v0, "ro.csc.country_code"
 
-    .line 335
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -635,7 +580,6 @@
 
     const-string v1, "China"
 
-    .line 336
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -652,7 +596,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsChinaDevice:Z
 
-    .line 337
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -681,7 +624,6 @@
 
     monitor-enter p0
 
-    .line 416
     :try_start_0
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -689,15 +631,12 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 417
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkNewStatus()Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
     move-result-object v1
 
-    .line 419
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkB2COnlyAndApplyFeatureWhitelist()V
 
-    .line 421
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mActivationStatus:Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
     invoke-virtual {v1, v2}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
@@ -708,22 +647,18 @@
 
     const-string v1, "checkConditionsToStart() - already in the correct state"
 
-    .line 422
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 423
     monitor-exit p0
 
     return-void
 
-    .line 426
     :cond_0
     :try_start_1
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mActivationStatus:Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
-    .line 427
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$2;->$SwitchMap$com$samsung$android$knox$analytics$activation$model$ActivationInfo$ActivationStatus:[I
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
@@ -748,19 +683,16 @@
 
     goto :goto_0
 
-    .line 437
     :cond_1
     invoke-virtual {p0, v2}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->notifyKnoxAnalyticsDeactivation(Z)V
 
     goto :goto_0
 
-    .line 434
     :cond_2
     invoke-virtual {p0, v1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->notifyKnoxAnalyticsDeactivation(Z)V
 
     goto :goto_0
 
-    .line 430
     :cond_3
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnBootCheckings:Z
 
@@ -768,13 +700,11 @@
 
     move v1, v2
 
-    .line 431
     :cond_4
     invoke-virtual {p0, v1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->notifyKnoxAnalyticsActivation(Z)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 443
     :goto_0
     monitor-exit p0
 
@@ -791,14 +721,12 @@
 .method public checkDO(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 203
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkDO()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 204
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->DO:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mUserManagerHelper:Lcom/samsung/android/knox/analytics/util/UserManagerHelper;
@@ -815,14 +743,12 @@
 .method public final checkDOOnBoot()V
     .locals 4
 
-    .line 198
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkDOOnBoot()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 199
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->DO:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mUserManagerHelper:Lcom/samsung/android/knox/analytics/util/UserManagerHelper;
@@ -843,14 +769,12 @@
 .method public final checkELM(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 229
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkELM()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 230
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->ELM:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->isElmActive()Z
@@ -865,7 +789,6 @@
 .method public final checkELMOnBoot()V
     .locals 2
 
-    .line 224
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkELMOnBoot()"
@@ -876,7 +799,6 @@
 
     const/4 v1, 0x0
 
-    .line 225
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkELM(Ljava/lang/String;Z)V
 
     return-void
@@ -885,17 +807,14 @@
 .method public checkKLM(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 304
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkKLM()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 305
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkOnPremise()V
 
-    .line 306
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->KLM:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->isKlmActive()Z
@@ -910,7 +829,6 @@
 .method public final checkKLMOnBoot()V
     .locals 2
 
-    .line 299
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkKLMOnBoot()"
@@ -921,7 +839,6 @@
 
     const/4 v1, 0x0
 
-    .line 300
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkKLM(Ljava/lang/String;Z)V
 
     return-void
@@ -930,14 +847,12 @@
 .method public checkKes(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 346
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkKes()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->KME:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->isKesActive()Z
@@ -952,7 +867,6 @@
 .method public final checkKesOnBoot()V
     .locals 2
 
-    .line 341
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkKesOnBoot"
@@ -963,7 +877,6 @@
 
     const/4 v1, 0x0
 
-    .line 342
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkKes(Ljava/lang/String;Z)V
 
     return-void
@@ -972,17 +885,14 @@
 .method public final checkNewStatus()Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
     .locals 3
 
-    .line 446
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnPremiseActivated:Z
 
     if-eqz v0, :cond_0
 
-    .line 448
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;->OFF_FORCEFUL:Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
     return-object p0
 
-    .line 450
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mTriggers:Ljava/util/BitSet;
 
@@ -999,7 +909,6 @@
     :cond_1
     const/4 p0, 0x0
 
-    .line 451
     :goto_0
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -1025,12 +934,10 @@
 
     if-eqz p0, :cond_2
 
-    .line 454
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;->ON:Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
     return-object p0
 
-    .line 456
     :cond_2
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;->OFF:Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
@@ -1040,10 +947,8 @@
 .method public final checkOnPremise()V
     .locals 5
 
-    .line 320
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
 
-    .line 321
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -1052,7 +957,6 @@
 
     const/4 v2, 0x0
 
-    .line 320
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -1063,7 +967,6 @@
 
     move v2, v1
 
-    .line 325
     :cond_0
     sget-object v1, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -1083,19 +986,16 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 326
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnPremiseActivated:Z
 
     if-ne v2, v0, :cond_1
 
     const-string p0, "checkOnPremise(): Didn\'t change, returning"
 
-    .line 328
     invoke-static {v1, p0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 331
     :cond_1
     iput-boolean v2, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnPremiseActivated:Z
 
@@ -1105,14 +1005,12 @@
 .method public final checkPOOnBoot()V
     .locals 4
 
-    .line 208
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "checkPOOnBoot()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 209
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->PO:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mUserManagerHelper:Lcom/samsung/android/knox/analytics/util/UserManagerHelper;
@@ -1133,14 +1031,12 @@
 .method public final getElmLicenseList()Ljava/util/List;
     .locals 1
 
-    .line 243
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->getLicenseService()Lcom/android/server/enterprise/license/EnterpriseLicenseService;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 245
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v0, "getElmLicenseList(): Error getting ELS"
@@ -1151,7 +1047,6 @@
 
     return-object p0
 
-    .line 248
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getAllLicenseInfo()[Lcom/samsung/android/knox/license/LicenseInfo;
 
@@ -1167,14 +1062,12 @@
 .method public final getLicenseService()Lcom/android/server/enterprise/license/EnterpriseLicenseService;
     .locals 1
 
-    .line 292
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mLicenseService:Lcom/android/server/enterprise/license/EnterpriseLicenseService;
 
     if-nez v0, :cond_0
 
     const-string v0, "enterprise_license_policy"
 
-    .line 293
     invoke-static {v0}, Lcom/android/server/enterprise/EnterpriseService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1183,7 +1076,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mLicenseService:Lcom/android/server/enterprise/license/EnterpriseLicenseService;
 
-    .line 295
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mLicenseService:Lcom/android/server/enterprise/license/EnterpriseLicenseService;
 
@@ -1193,21 +1085,18 @@
 .method public final isElmActive()Z
     .locals 3
 
-    .line 234
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string v1, "isElmActive()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->getElmLicenseList()Ljava/util/List;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 237
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -1221,7 +1110,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 238
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1249,10 +1137,8 @@
 .method public final isKesActive()Z
     .locals 3
 
-    .line 351
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
 
-    .line 352
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1261,7 +1147,6 @@
 
     const/4 v1, 0x0
 
-    .line 351
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -1270,7 +1155,6 @@
 
     const/4 v1, 0x1
 
-    .line 356
     :cond_0
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -1300,10 +1184,8 @@
 .method public final isKlmActive()Z
     .locals 3
 
-    .line 310
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
 
-    .line 311
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1312,7 +1194,6 @@
 
     const/4 v1, 0x0
 
-    .line 310
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -1321,7 +1202,6 @@
 
     const/4 v1, 0x1
 
-    .line 315
     :cond_0
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -1351,7 +1231,6 @@
 .method public final isOnlyB2CTriggerSet(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;)Z
     .locals 0
 
-    .line 410
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mTriggers:Ljava/util/BitSet;
 
     invoke-virtual {p0}, Ljava/util/BitSet;->clone()Ljava/lang/Object;
@@ -1360,7 +1239,6 @@
 
     check-cast p0, Ljava/util/BitSet;
 
-    .line 411
     sget-object p1, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->B2C:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->getValue()I
@@ -1369,7 +1247,6 @@
 
     invoke-virtual {p0, p1}, Ljava/util/BitSet;->flip(I)V
 
-    .line 412
     invoke-virtual {p0}, Ljava/util/BitSet;->cardinality()I
 
     move-result p0
@@ -1390,7 +1267,6 @@
 .method public final isTriggerSet(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;)Z
     .locals 0
 
-    .line 406
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mTriggers:Ljava/util/BitSet;
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->getValue()I
@@ -1407,14 +1283,12 @@
 .method public final notifyKnoxAnalyticsActivation(Z)V
     .locals 2
 
-    .line 469
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifyKnoxAnalyticsActivation()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 470
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mObservers:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1434,7 +1308,6 @@
 
     check-cast v0, Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;
 
-    .line 471
     invoke-interface {v0, p1}, Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;->onKnoxAnalyticsActivation(Z)V
 
     goto :goto_0
@@ -1446,14 +1319,12 @@
 .method public final notifyKnoxAnalyticsDeactivation(Z)V
     .locals 2
 
-    .line 476
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifyKnoxAnalyticsDeactivation()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 477
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mObservers:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1473,7 +1344,6 @@
 
     check-cast v0, Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;
 
-    .line 478
     invoke-interface {v0, p1}, Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;->onKnoxAnalyticsDeactivation(Z)V
 
     goto :goto_0
@@ -1485,7 +1355,6 @@
 .method public final notifyStatusChanged(IZLjava/lang/String;)V
     .locals 3
 
-    .line 490
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1516,7 +1385,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 491
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mObservers:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1536,7 +1404,6 @@
 
     check-cast v0, Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;
 
-    .line 492
     invoke-interface {v0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;->onStatusChanged(IZLjava/lang/String;)V
 
     goto :goto_0
@@ -1548,7 +1415,6 @@
 .method public final notifyTriggerChanged(IZLjava/lang/String;)V
     .locals 3
 
-    .line 483
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1579,7 +1445,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 484
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mObservers:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1599,7 +1464,6 @@
 
     check-cast v0, Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;
 
-    .line 485
     invoke-interface {v0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;->onTriggerChanged(IZLjava/lang/String;)V
 
     goto :goto_0
@@ -1611,12 +1475,10 @@
 .method public onBootPhase(I)V
     .locals 2
 
-    .line 111
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsChinaDevice:Z
 
     if-eqz v0, :cond_0
 
-    .line 112
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string/jumbo p1, "onBootPhase() - Device country is china, returning ..."
@@ -1646,7 +1508,6 @@
 
     goto :goto_0
 
-    .line 135
     :cond_1
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -1656,24 +1517,19 @@
 
     goto :goto_0
 
-    .line 129
     :cond_2
     sget-object p1, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     invoke-static {p1, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkChina()V
 
-    .line 131
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->bootChecking()V
 
-    .line 132
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->registerListenersObservers()V
 
     goto :goto_0
 
-    .line 126
     :cond_3
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -1681,7 +1537,6 @@
 
     goto :goto_0
 
-    .line 123
     :cond_4
     sget-object p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
@@ -1696,7 +1551,6 @@
 .method public onPoAdded(I)V
     .locals 3
 
-    .line 213
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mUserManagerHelper:Lcom/samsung/android/knox/analytics/util/UserManagerHelper;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/knox/analytics/util/UserManagerHelper;->getPoPackageName(I)Ljava/lang/String;
@@ -1705,7 +1559,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 215
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->PO:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mUserManagerHelper:Lcom/samsung/android/knox/analytics/util/UserManagerHelper;
@@ -1725,7 +1578,6 @@
 .method public onPoRemoved(Ljava/lang/String;)V
     .locals 3
 
-    .line 220
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->PO:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mUserManagerHelper:Lcom/samsung/android/knox/analytics/util/UserManagerHelper;
@@ -1744,7 +1596,6 @@
 .method public bridge synthetic onUpdateContainerLicenseStatus(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-super {p0, p1}, Lcom/android/server/enterprise/license/IActivationKlmElmObserver;->onUpdateContainerLicenseStatus(Ljava/lang/String;)V
 
     return-void
@@ -1753,7 +1604,6 @@
 .method public onUpdateElm(Ljava/lang/String;Lcom/samsung/android/knox/license/LicenseResult;)V
     .locals 2
 
-    .line 505
     invoke-virtual {p2}, Lcom/samsung/android/knox/license/LicenseResult;->isSuccess()Z
 
     move-result v0
@@ -1768,7 +1618,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 506
     invoke-virtual {p2}, Lcom/samsung/android/knox/license/LicenseResult;->isActivation()Z
 
     move-result p2
@@ -1782,7 +1631,6 @@
 .method public onUpdateKlm(Ljava/lang/String;Lcom/samsung/android/knox/license/LicenseResult;)V
     .locals 2
 
-    .line 498
     invoke-virtual {p2}, Lcom/samsung/android/knox/license/LicenseResult;->isSuccess()Z
 
     move-result v0
@@ -1797,7 +1645,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 499
     invoke-virtual {p2}, Lcom/samsung/android/knox/license/LicenseResult;->isActivation()Z
 
     move-result p2
@@ -1811,14 +1658,12 @@
 .method public final registerListenersObservers()V
     .locals 3
 
-    .line 143
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "registerListenersObservers()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 144
     new-instance v1, Lcom/samsung/android/knox/analytics/activation/DevicePolicyListener;
 
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
@@ -1827,10 +1672,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mDevicePolicyListener:Lcom/samsung/android/knox/analytics/activation/DevicePolicyListener;
 
-    .line 145
     invoke-virtual {v1}, Lcom/samsung/android/knox/analytics/activation/DevicePolicyListener;->register()V
 
-    .line 147
     new-instance v1, Lcom/samsung/android/knox/analytics/activation/KESListener;
 
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
@@ -1839,10 +1682,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mKESListener:Lcom/samsung/android/knox/analytics/activation/KESListener;
 
-    .line 148
     invoke-virtual {v1}, Lcom/samsung/android/knox/analytics/activation/KESListener;->register()V
 
-    .line 150
     new-instance v1, Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mContext:Landroid/content/Context;
@@ -1851,17 +1692,14 @@
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mB2CListener:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
-    .line 151
     invoke-virtual {v1}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->register()V
 
-    .line 153
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->getLicenseService()Lcom/android/server/enterprise/license/EnterpriseLicenseService;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 155
     invoke-virtual {v1, p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->addElmKlmObserver(Lcom/android/server/enterprise/license/IActivationKlmElmObserver;)V
 
     goto :goto_0
@@ -1869,7 +1707,6 @@
     :cond_0
     const-string/jumbo p0, "registerListenersObservers() - EnterpriseLicenseService is null, can\'t observe license"
 
-    .line 157
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
@@ -1879,14 +1716,12 @@
 .method public registerObserver(Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;)V
     .locals 2
 
-    .line 460
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "registerObserver()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 461
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mObservers:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1897,7 +1732,6 @@
 .method public final setTrigger(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;ZLjava/lang/String;Z)V
     .locals 4
 
-    .line 369
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1936,7 +1770,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 370
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mTriggers:Ljava/util/BitSet;
 
     invoke-virtual {v1}, Ljava/util/BitSet;->clone()Ljava/lang/Object;
@@ -1945,7 +1778,6 @@
 
     check-cast v1, Ljava/util/BitSet;
 
-    .line 372
     invoke-static {p3}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->isPackageAllowedToRunAnalytics(Ljava/lang/String;)Z
 
     move-result v2
@@ -1954,7 +1786,6 @@
 
     return-void
 
-    .line 376
     :cond_0
     iget-boolean v2, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnBootCheckings:Z
 
@@ -1970,7 +1801,6 @@
 
     if-nez v2, :cond_1
 
-    .line 378
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->getId()I
 
     move-result v2
@@ -1980,7 +1810,6 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 383
     iget-object p4, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mTriggers:Ljava/util/BitSet;
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->getValue()I
@@ -1991,7 +1820,6 @@
 
     goto :goto_0
 
-    .line 386
     :cond_2
     iget-object p4, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mTriggers:Ljava/util/BitSet;
 
@@ -2003,7 +1831,6 @@
 
     invoke-virtual {p4, v2, v3}, Ljava/util/BitSet;->set(IZ)V
 
-    .line 388
     :goto_0
     iget-object p4, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mTriggers:Ljava/util/BitSet;
 
@@ -2015,18 +1842,15 @@
 
     const-string/jumbo p0, "setTrigger(): didn\'t change, returning"
 
-    .line 389
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 394
     :cond_3
     iget-boolean p4, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnBootCheckings:Z
 
     if-nez p4, :cond_5
 
-    .line 396
     iget-boolean p4, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mIsOnPremiseActivated:Z
 
     if-nez p4, :cond_4
@@ -2037,14 +1861,12 @@
 
     if-nez p4, :cond_4
 
-    .line 397
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor$TRIGGERS;->getId()I
 
     move-result p1
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->notifyTriggerChanged(IZLjava/lang/String;)V
 
-    .line 401
     :cond_4
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkConditionsToStart()V
 
@@ -2055,7 +1877,6 @@
 .method public unregisterObserver(Lcom/samsung/android/knox/analytics/activation/model/IActivationObserver;)Z
     .locals 0
 
-    .line 465
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->mObservers:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z

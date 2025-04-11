@@ -20,7 +20,6 @@
 .method public final accept(Ljava/io/File;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/pm/ShortcutDumpFiles;->$r8$lambda$6zzwCxGtb3essvELzzOC7K7h-Gc(Ljava/io/File;)Z
 
     move-result p0

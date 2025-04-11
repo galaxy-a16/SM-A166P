@@ -23,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/TaskDisplayArea$LaunchRootTaskDef-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/TaskDisplayArea$LaunchRootTaskDef;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
 .method public contains(II)Z
     .locals 1
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea$LaunchRootTaskDef;->windowingModes:[I
 
     invoke-static {v0, p1}, Lcom/android/internal/util/ArrayUtils;->contains([II)Z
@@ -45,7 +43,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/TaskDisplayArea$LaunchRootTaskDef;->activityTypes:[I
 
-    .line 182
     invoke-static {p0, p2}, Lcom/android/internal/util/ArrayUtils;->contains([II)Z
 
     move-result p0

@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -29,7 +27,6 @@
 .method public final addListener(Lcom/android/server/location/injector/UserInfoHelper$UserListener;)V
     .locals 0
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/location/injector/UserInfoHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -40,17 +37,14 @@
 .method public final dispatchOnCurrentUserChanged(II)V
     .locals 6
 
-    .line 106
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/UserInfoHelper;->getProfileIds(I)[I
 
     move-result-object v0
 
-    .line 107
     invoke-virtual {p0, p2}, Lcom/android/server/location/injector/UserInfoHelper;->getProfileIds(I)[I
 
     move-result-object v1
 
-    .line 109
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +63,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 110
     invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v3
@@ -82,15 +75,12 @@
 
     const-string v3, "LocationManagerService"
 
-    .line 109
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     sget-object v2, Lcom/android/server/location/eventlog/LocationEventLog;->EVENT_LOG:Lcom/android/server/location/eventlog/LocationEventLog;
 
     invoke-virtual {v2, p1, p2}, Lcom/android/server/location/eventlog/LocationEventLog;->logUserSwitched(II)V
 
-    .line 114
     iget-object p1, p0, Lcom/android/server/location/injector/UserInfoHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -114,7 +104,6 @@
 
     check-cast p2, Lcom/android/server/location/injector/UserInfoHelper$UserListener;
 
-    .line 115
     array-length v4, v0
 
     :goto_0
@@ -122,14 +111,12 @@
 
     aget v5, v0, v2
 
-    .line 116
     invoke-interface {p2, v5, v3}, Lcom/android/server/location/injector/UserInfoHelper$UserListener;->onUserChanged(II)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 120
     :cond_1
     iget-object p0, p0, Lcom/android/server/location/injector/UserInfoHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -150,7 +137,6 @@
 
     check-cast p1, Lcom/android/server/location/injector/UserInfoHelper$UserListener;
 
-    .line 121
     array-length p2, v1
 
     move v0, v2
@@ -160,7 +146,6 @@
 
     aget v4, v1, v0
 
-    .line 122
     invoke-interface {p1, v4, v3}, Lcom/android/server/location/injector/UserInfoHelper$UserListener;->onUserChanged(II)V
 
     add-int/lit8 v0, v0, 0x1
@@ -174,7 +159,6 @@
 .method public final dispatchOnUserStarted(I)V
     .locals 2
 
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,7 +181,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     iget-object p0, p0, Lcom/android/server/location/injector/UserInfoHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -219,7 +202,6 @@
 
     const/4 v1, 0x2
 
-    .line 90
     invoke-interface {v0, p1, v1}, Lcom/android/server/location/injector/UserInfoHelper$UserListener;->onUserChanged(II)V
 
     goto :goto_0
@@ -231,7 +213,6 @@
 .method public final dispatchOnUserStopped(I)V
     .locals 2
 
-    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -254,7 +235,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     iget-object p0, p0, Lcom/android/server/location/injector/UserInfoHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -276,7 +256,6 @@
 
     const/4 v1, 0x3
 
-    .line 100
     invoke-interface {v0, p1, v1}, Lcom/android/server/location/injector/UserInfoHelper$UserListener;->onUserChanged(II)V
 
     goto :goto_0
@@ -288,7 +267,6 @@
 .method public final dispatchOnVisibleUserChanged(IZ)V
     .locals 2
 
-    .line 129
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -312,7 +290,6 @@
     :cond_0
     const-string v1, "invisible"
 
-    .line 130
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -322,15 +299,12 @@
 
     const-string v1, "LocationManagerService"
 
-    .line 129
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     sget-object v0, Lcom/android/server/location/eventlog/LocationEventLog;->EVENT_LOG:Lcom/android/server/location/eventlog/LocationEventLog;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/location/eventlog/LocationEventLog;->logUserVisibilityChanged(IZ)V
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/location/injector/UserInfoHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -352,7 +326,6 @@
 
     const/4 v0, 0x4
 
-    .line 135
     invoke-interface {p2, p1, v0}, Lcom/android/server/location/injector/UserInfoHelper$UserListener;->onUserChanged(II)V
 
     goto :goto_1
@@ -385,7 +358,6 @@
 .method public final removeListener(Lcom/android/server/location/injector/UserInfoHelper$UserListener;)V
     .locals 0
 
-    .line 81
     iget-object p0, p0, Lcom/android/server/location/injector/UserInfoHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z

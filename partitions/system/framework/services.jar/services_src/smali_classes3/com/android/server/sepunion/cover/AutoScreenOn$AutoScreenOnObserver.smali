@@ -11,13 +11,10 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/AutoScreenOn;Landroid/os/Handler;)V
     .locals 0
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/sepunion/cover/AutoScreenOn$AutoScreenOnObserver;->this$0:Lcom/android/server/sepunion/cover/AutoScreenOn;
 
-    .line 78
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 79
     invoke-static {}, Lcom/android/server/sepunion/cover/AutoScreenOn;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -34,10 +31,8 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 84
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 85
     invoke-static {}, Lcom/android/server/sepunion/cover/AutoScreenOn;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -62,7 +57,6 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn$AutoScreenOnObserver;->this$0:Lcom/android/server/sepunion/cover/AutoScreenOn;
 
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/AutoScreenOn;->update()V

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/OverlayDisplayWindow;)V
     .locals 0
 
-    .line 390
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$5;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-direct {p0}, Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onScale(Landroid/view/ScaleGestureDetector;)Z
     .locals 2
 
-    .line 393
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$5;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {v0}, Lcom/android/server/display/OverlayDisplayWindow;->-$$Nest$fgetmLiveScale(Lcom/android/server/display/OverlayDisplayWindow;)F
@@ -39,7 +37,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/OverlayDisplayWindow;->-$$Nest$fputmLiveScale(Lcom/android/server/display/OverlayDisplayWindow;F)V
 
-    .line 394
     iget-object p0, p0, Lcom/android/server/display/OverlayDisplayWindow$5;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-virtual {p0}, Lcom/android/server/display/OverlayDisplayWindow;->relayout()V

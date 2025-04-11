@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/service/contentcapture/ActivityEvent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/contentcapture/RemoteContentCaptureService$$ExternalSyntheticLambda5;->f$0:Landroid/service/contentcapture/ActivityEvent;
@@ -27,7 +26,6 @@
 .method public final run(Landroid/os/IInterface;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/contentcapture/RemoteContentCaptureService$$ExternalSyntheticLambda5;->f$0:Landroid/service/contentcapture/ActivityEvent;
 
     check-cast p1, Landroid/service/contentcapture/IContentCaptureService;

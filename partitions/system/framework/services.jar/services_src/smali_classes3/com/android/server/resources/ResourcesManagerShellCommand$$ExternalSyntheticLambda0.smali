@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/os/ConditionVariable;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/resources/ResourcesManagerShellCommand$$ExternalSyntheticLambda0;->f$0:Landroid/os/ConditionVariable;
@@ -27,7 +26,6 @@
 .method public final onResult(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/resources/ResourcesManagerShellCommand$$ExternalSyntheticLambda0;->f$0:Landroid/os/ConditionVariable;
 
     invoke-static {p0, p1}, Lcom/android/server/resources/ResourcesManagerShellCommand;->$r8$lambda$uAdpj2cV3MrG5KYt0hTIrksJ6vc(Landroid/os/ConditionVariable;Landroid/os/Bundle;)V

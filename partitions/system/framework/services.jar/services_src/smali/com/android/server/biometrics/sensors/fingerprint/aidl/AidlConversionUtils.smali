@@ -7,7 +7,6 @@
 .method public static toAidlAcquiredInfo(I)B
     .locals 3
 
-    .line 0
     const/16 v0, 0x8
 
     if-ne p0, v0, :cond_0
@@ -93,7 +92,6 @@
 .method public static toAidlError(I)B
     .locals 3
 
-    .line 0
     const/16 v0, 0x11
 
     const/4 v1, 0x0
@@ -167,7 +165,6 @@
 .method public static toFrameworkAcquiredInfo(B)I
     .locals 3
 
-    .line 0
     const/16 v0, 0x8
 
     if-nez p0, :cond_0
@@ -272,7 +269,6 @@
 .method public static toFrameworkError(B)I
     .locals 3
 
-    .line 0
     const/16 v0, 0x11
 
     if-nez p0, :cond_0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;)V
     .locals 0
 
-    .line 902
     iput-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager$1;->this$0:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 905
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 906
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,7 +45,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 907
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     const-string p2, "com.sec.android.intent.action.HQM_UPDATE_REQ"
@@ -69,13 +65,11 @@
 
     goto :goto_0
 
-    .line 913
     :cond_0
     sget-boolean p1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SUPPORT_FINGERPRINT:Z
 
     if-eqz p1, :cond_1
 
-    .line 914
     iget-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager$1;->this$0:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
     const-string/jumbo p2, "settings_fingerprint_ext_bigdata.xml"
@@ -86,7 +80,6 @@
 
     invoke-static {p1, p2, v0}, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;->-$$Nest$mwriteDqaDataToFile(Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 916
     :cond_1
     iget-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager$1;->this$0:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
@@ -96,7 +89,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 917
     iget-object p0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager$1;->this$0:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
     const-string/jumbo p1, "settings_face_ext_bigdata.xml"
@@ -109,13 +101,11 @@
 
     goto :goto_0
 
-    .line 909
     :cond_2
     iget-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager$1;->this$0:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
     invoke-static {p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;->-$$Nest$msend(Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;)V
 
-    .line 910
     iget-object p0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager$1;->this$0:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
     invoke-static {p0}, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;->-$$Nest$mfpSendDaemonVersion(Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;)V

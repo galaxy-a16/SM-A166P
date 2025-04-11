@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/battery/sleepcharging/SleepChargingManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 285
     iput-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$4;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     iput-object p2, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$4;->val$weekType:Ljava/lang/String;
@@ -43,7 +42,6 @@
 .method public run()V
     .locals 4
 
-    .line 288
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$4;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     invoke-static {v0}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$fgetmSleepChargingTimeController(Lcom/android/server/battery/sleepcharging/SleepChargingManager;)Lcom/android/server/battery/sleepcharging/SleepChargingTimeController;

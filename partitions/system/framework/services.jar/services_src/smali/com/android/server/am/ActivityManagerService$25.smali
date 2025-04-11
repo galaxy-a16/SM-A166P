@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Landroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 19985
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$25;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$25;->val$finishCallback:Landroid/os/RemoteCallback;
@@ -31,12 +30,10 @@
 .method public onResult(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 19988
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$25;->val$finishCallback:Landroid/os/RemoteCallback;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallback;->sendResult(Landroid/os/Bundle;)V
 
-    .line 19989
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$25;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService;->mOomAdjuster:Lcom/android/server/am/OomAdjuster;

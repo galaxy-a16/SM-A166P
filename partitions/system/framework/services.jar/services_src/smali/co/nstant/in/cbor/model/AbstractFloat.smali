@@ -11,10 +11,8 @@
 .method public constructor <init>(Lco/nstant/in/cbor/model/SpecialType;F)V
     .locals 0
 
-    .line 10
     invoke-direct {p0, p1}, Lco/nstant/in/cbor/model/Special;-><init>(Lco/nstant/in/cbor/model/SpecialType;)V
 
-    .line 11
     iput p2, p0, Lco/nstant/in/cbor/model/AbstractFloat;->value:F
 
     return-void
@@ -25,19 +23,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 20
     instance-of v0, p1, Lco/nstant/in/cbor/model/AbstractFloat;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 21
     move-object v0, p1
 
     check-cast v0, Lco/nstant/in/cbor/model/AbstractFloat;
 
-    .line 22
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/Special;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -61,7 +56,6 @@
 .method public getValue()F
     .locals 0
 
-    .line 15
     iget p0, p0, Lco/nstant/in/cbor/model/AbstractFloat;->value:F
 
     return p0
@@ -70,7 +64,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 29
     invoke-super {p0}, Lco/nstant/in/cbor/model/Special;->hashCode()I
 
     move-result v0

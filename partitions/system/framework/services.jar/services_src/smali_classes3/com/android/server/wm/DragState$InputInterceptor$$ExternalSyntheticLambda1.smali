@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/DisplayContent;
 
     invoke-static {p1}, Lcom/android/server/wm/DragState$InputInterceptor;->$r8$lambda$qDPyYnZZ5GoaPliHRK1rLphRAA4(Lcom/android/server/wm/DisplayContent;)V

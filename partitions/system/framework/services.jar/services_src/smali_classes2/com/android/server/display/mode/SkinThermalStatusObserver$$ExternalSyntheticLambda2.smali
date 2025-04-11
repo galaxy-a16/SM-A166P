@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/mode/SkinThermalStatusObserver;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/display/mode/SkinThermalStatusObserver$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/display/mode/SkinThermalStatusObserver;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/SkinThermalStatusObserver$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/display/mode/SkinThermalStatusObserver;
 
     invoke-static {p0}, Lcom/android/server/display/mode/SkinThermalStatusObserver;->$r8$lambda$Ds_GjerjmO-jeSZUTgZ_zRvMr2U(Lcom/android/server/display/mode/SkinThermalStatusObserver;)V

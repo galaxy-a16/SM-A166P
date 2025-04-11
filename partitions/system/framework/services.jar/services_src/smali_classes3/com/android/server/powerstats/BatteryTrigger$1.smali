@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/powerstats/BatteryTrigger;)V
     .locals 0
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/powerstats/BatteryTrigger$1;->this$0:Lcom/android/server/powerstats/BatteryTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 40
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -46,12 +44,10 @@
 
     const/4 v0, 0x0
 
-    .line 42
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 44
     iget-object p2, p0, Lcom/android/server/powerstats/BatteryTrigger$1;->this$0:Lcom/android/server/powerstats/BatteryTrigger;
 
     invoke-static {p2}, Lcom/android/server/powerstats/BatteryTrigger;->-$$Nest$fgetmBatteryLevel(Lcom/android/server/powerstats/BatteryTrigger;)I
@@ -60,12 +56,10 @@
 
     if-ge p1, p2, :cond_1
 
-    .line 46
     iget-object p2, p0, Lcom/android/server/powerstats/BatteryTrigger$1;->this$0:Lcom/android/server/powerstats/BatteryTrigger;
 
     invoke-virtual {p2, v0}, Lcom/android/server/powerstats/PowerStatsLogTrigger;->logPowerStatsData(I)V
 
-    .line 49
     :cond_1
     iget-object p0, p0, Lcom/android/server/powerstats/BatteryTrigger$1;->this$0:Lcom/android/server/powerstats/BatteryTrigger;
 

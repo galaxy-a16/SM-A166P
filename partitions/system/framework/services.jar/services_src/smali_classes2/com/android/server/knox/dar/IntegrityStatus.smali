@@ -21,40 +21,30 @@
 .method public constructor <init>(Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;)V
     .locals 3
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 27
     iput v0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mTrustBoot:I
 
-    .line 28
     iput v0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mWarranty:I
 
-    .line 29
     iput v0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mIcd:I
 
-    .line 30
     iput v0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mKernelStatus:I
 
-    .line 31
     iput v0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mSystemStatus:I
 
     const/4 v0, 0x0
 
-    .line 32
     iput-object v0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mAuthResult:Lcom/android/server/knox/dar/AuthResult;
 
-    .line 35
     check-cast p1, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;
 
-    .line 36
     invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object p1
 
-    .line 38
     :goto_0
     invoke-interface {p1}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -62,14 +52,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 39
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;
 
-    .line 40
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getTagNo()I
 
     move-result v1
@@ -96,7 +84,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 60
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +108,6 @@
 
     goto :goto_0
 
-    .line 57
     :cond_0
     new-instance v1, Lcom/android/server/knox/dar/AuthResult;
 
@@ -135,7 +121,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_1
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -155,7 +140,6 @@
 
     goto :goto_0
 
-    .line 51
     :cond_2
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -175,7 +159,6 @@
 
     goto :goto_0
 
-    .line 48
     :cond_3
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -195,7 +178,6 @@
 
     goto :goto_0
 
-    .line 45
     :cond_4
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -215,7 +197,6 @@
 
     goto/16 :goto_0
 
-    .line 42
     :cond_5
     invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;->getObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -244,7 +225,6 @@
 .method public getTrustBoot()I
     .locals 0
 
-    .line 67
     iget p0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mTrustBoot:I
 
     return p0
@@ -253,7 +233,6 @@
 .method public getWarranty()I
     .locals 0
 
-    .line 71
     iget p0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mWarranty:I
 
     return p0
@@ -272,7 +251,6 @@
 
     if-eq p1, p0, :cond_0
 
-    .line 103
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -298,7 +276,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "    TrustBoot : "
@@ -307,7 +284,6 @@
 
     iget v1, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mTrustBoot:I
 
-    .line 110
     invoke-virtual {p0, v1}, Lcom/android/server/knox/dar/IntegrityStatus;->statusToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -316,12 +292,10 @@
 
     const-string v1, "\n    Warranty : "
 
-    .line 111
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mWarranty:I
 
-    .line 112
     invoke-virtual {p0, v1}, Lcom/android/server/knox/dar/IntegrityStatus;->statusToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -330,12 +304,10 @@
 
     const-string v1, "\n    ICD : "
 
-    .line 113
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mIcd:I
 
-    .line 114
     invoke-virtual {p0, v1}, Lcom/android/server/knox/dar/IntegrityStatus;->statusToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -344,12 +316,10 @@
 
     const-string v1, "\n    Kernel Status : "
 
-    .line 115
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mKernelStatus:I
 
-    .line 116
     invoke-virtual {p0, v1}, Lcom/android/server/knox/dar/IntegrityStatus;->statusToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -358,12 +328,10 @@
 
     const-string v1, "\n    System Status : "
 
-    .line 117
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mSystemStatus:I
 
-    .line 118
     invoke-virtual {p0, v1}, Lcom/android/server/knox/dar/IntegrityStatus;->statusToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -372,10 +340,8 @@
 
     const-string v1, "\n    Caller auth(with PROCA) Status : \n"
 
-    .line 119
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/knox/dar/IntegrityStatus;->mAuthResult:Lcom/android/server/knox/dar/AuthResult;
 
     if-nez p0, :cond_0
@@ -392,7 +358,6 @@
     :goto_0
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 121
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

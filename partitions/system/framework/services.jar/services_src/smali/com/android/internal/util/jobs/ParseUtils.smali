@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 
     const-string/jumbo v0, "true"
 
-    .line 90
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -32,7 +30,6 @@
     :cond_0
     const-string v0, "false"
 
-    .line 93
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -43,7 +40,6 @@
 
     return v2
 
-    .line 96
     :cond_1
     invoke-static {p0, p1}, Lcom/android/internal/util/jobs/ParseUtils;->parseInt(Ljava/lang/String;I)I
 
@@ -67,7 +63,6 @@
 
     return-wide p1
 
-    .line 82
     :cond_0
     :try_start_0
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
@@ -89,7 +84,6 @@
 
     return p1
 
-    .line 70
     :cond_0
     :try_start_0
     invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -109,7 +103,6 @@
 
     const/16 v0, 0xa
 
-    .line 32
     invoke-static {p0, v0, p1}, Lcom/android/internal/util/jobs/ParseUtils;->parseIntWithBase(Ljava/lang/String;II)I
 
     move-result p0
@@ -124,7 +117,6 @@
 
     return p2
 
-    .line 41
     :cond_0
     :try_start_0
     invoke-static {p0, p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
@@ -144,7 +136,6 @@
 
     const/16 v0, 0xa
 
-    .line 49
     invoke-static {p0, v0, p1, p2}, Lcom/android/internal/util/jobs/ParseUtils;->parseLongWithBase(Ljava/lang/String;IJ)J
 
     move-result-wide p0
@@ -159,7 +150,6 @@
 
     return-wide p2
 
-    .line 58
     :cond_0
     :try_start_0
     invoke-static {p0, p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J

@@ -22,7 +22,6 @@
 .method public static bridge synthetic -$$Nest$smmaybeLoadAndInstantiate(Ljava/lang/String;Landroid/os/Parcel;)Lcom/att/iqi/lib/Metric;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/att/iqi/lib/Metric;->maybeLoadAndInstantiate(Ljava/lang/String;Landroid/os/Parcel;)Lcom/att/iqi/lib/Metric;
 
     move-result-object p0
@@ -33,14 +32,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 41
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/att/iqi/lib/Metric;->sLoadedClasses:Ljava/util/Map;
 
-    .line 126
     new-instance v0, Lcom/att/iqi/lib/Metric$1;
 
     invoke-direct {v0}, Lcom/att/iqi/lib/Metric$1;-><init>()V
@@ -53,10 +50,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -67,7 +62,6 @@
 
     iput-object v0, p0, Lcom/att/iqi/lib/Metric;->mClassName:Ljava/lang/String;
 
-    .line 46
     invoke-direct {p0}, Lcom/att/iqi/lib/Metric;->enforceDeclarationAndGetMetricID()I
 
     move-result v0
@@ -80,10 +74,8 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -92,25 +84,20 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 57
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/att/iqi/lib/Metric;->mClassName:Ljava/lang/String;
 
-    .line 59
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    .line 62
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 63
     invoke-direct {p0}, Lcom/att/iqi/lib/Metric;->enforceDeclarationAndGetMetricID()I
 
     move-result p1
@@ -119,7 +106,6 @@
 
     return-void
 
-    .line 54
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -133,7 +119,6 @@
 .method private enforceDeclarationAndGetMetricID()I
     .locals 1
 
-    .line 68
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -145,26 +130,22 @@
 
     move-result-object p0
 
-    .line 69
     invoke-virtual {p0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 70
     instance-of v0, p0, Lcom/att/iqi/lib/Metric$ID;
 
     if-eqz v0, :cond_0
 
     check-cast p0, Lcom/att/iqi/lib/Metric$ID;
 
-    .line 71
     invoke-virtual {p0}, Lcom/att/iqi/lib/Metric$ID;->asInt()I
 
     move-result p0
 
     return p0
 
-    .line 73
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -177,7 +158,6 @@
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 77
     :catch_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -187,7 +167,6 @@
 
     throw p0
 
-    .line 75
     :catch_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -201,7 +180,6 @@
 .method private static maybeLoadAndInstantiate(Ljava/lang/String;Landroid/os/Parcel;)Lcom/att/iqi/lib/Metric;
     .locals 6
 
-    .line 282
     :try_start_0
     sget-object v0, Lcom/att/iqi/lib/Metric;->sLoadedClasses:Ljava/util/Map;
 
@@ -213,7 +191,6 @@
 
     if-nez v1, :cond_0
 
-    .line 286
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -222,7 +199,6 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    .line 287
     const-class v4, Landroid/os/Parcel;
 
     const/4 v5, 0x0
@@ -233,13 +209,10 @@
 
     move-result-object v1
 
-    .line 289
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 290
     invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 292
     :cond_0
     filled-new-array {p1}, [Ljava/lang/Object;
 
@@ -255,7 +228,6 @@
 
     return-object p0
 
-    .line 298
     :catch_0
     new-instance p0, Lcom/att/iqi/lib/Metric$2;
 
@@ -269,7 +241,6 @@
 .method public describeContents()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -278,7 +249,6 @@
 .method public final getId()I
     .locals 0
 
-    .line 97
     iget p0, p0, Lcom/att/iqi/lib/Metric;->mMetricId:I
 
     return p0
@@ -296,12 +266,10 @@
 
     const/16 v0, 0x5f
 
-    .line 84
     invoke-virtual {p2, p0, v0}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 85
     invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -312,7 +280,6 @@
 
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 87
     :cond_0
     invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
@@ -324,44 +291,34 @@
 
     const/16 p2, 0xe
 
-    .line 107
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 109
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 110
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 111
     iget-object p0, p0, Lcom/att/iqi/lib/Metric;->mClassName:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     const-wide/16 v1, 0x0
 
-    .line 114
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 116
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p0
 
-    .line 117
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 118
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 119
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 122
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void

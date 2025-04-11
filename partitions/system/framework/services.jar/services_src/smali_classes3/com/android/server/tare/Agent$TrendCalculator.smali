@@ -38,12 +38,10 @@
 .method public accept(Lcom/android/server/tare/Agent$OngoingEvent;)V
     .locals 11
 
-    .line 944
     invoke-virtual {p1}, Lcom/android/server/tare/Agent$OngoingEvent;->getDeltaPerSec()J
 
     move-result-wide v0
 
-    .line 945
     iget-wide v2, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mCurBalance:J
 
     iget-wide v4, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mLowerThreshold:J
@@ -58,7 +56,6 @@
 
     if-gez v4, :cond_0
 
-    .line 946
     iget-wide v2, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToLowerThreshold:J
 
     add-long/2addr v2, v0
@@ -67,7 +64,6 @@
 
     goto :goto_0
 
-    .line 947
     :cond_0
     iget-wide v7, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mUpperThreshold:J
 
@@ -79,21 +75,18 @@
 
     if-lez v2, :cond_1
 
-    .line 948
     iget-wide v2, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToUpperThreshold:J
 
     add-long/2addr v2, v0
 
     iput-wide v2, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToUpperThreshold:J
 
-    .line 950
     :cond_1
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/tare/Agent$OngoingEvent;->getCtpPerSec()J
 
     move-result-wide v2
 
-    .line 951
     iget-wide v7, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mRemainingConsumableCredits:J
 
     iget-wide v9, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mCtpThreshold:J
@@ -106,7 +99,6 @@
 
     if-gez p1, :cond_2
 
-    .line 952
     iget-wide v0, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToCtpThreshold:J
 
     sub-long/2addr v0, v2
@@ -120,7 +112,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 841
     check-cast p1, Lcom/android/server/tare/Agent$OngoingEvent;
 
     invoke-virtual {p0, p1}, Lcom/android/server/tare/Agent$TrendCalculator;->accept(Lcom/android/server/tare/Agent$OngoingEvent;)V
@@ -131,7 +122,6 @@
 .method public getTimeToCrossLowerThresholdMs()J
     .locals 8
 
-    .line 905
     iget-wide v0, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToLowerThreshold:J
 
     const-wide/16 v2, 0x0
@@ -155,7 +145,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 913
     iget-wide v4, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mLowerThreshold:J
 
     iget-wide v6, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mCurBalance:J
@@ -169,7 +158,6 @@
     :cond_1
     const-wide v4, 0x7fffffffffffffffL
 
-    .line 915
     :goto_0
     iget-wide v0, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToCtpThreshold:J
 
@@ -177,7 +165,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 916
     iget-wide v2, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mCtpThreshold:J
 
     iget-wide v6, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mRemainingConsumableCredits:J
@@ -201,7 +188,6 @@
 .method public getTimeToCrossUpperThresholdMs()J
     .locals 6
 
-    .line 933
     iget-wide v0, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToUpperThreshold:J
 
     const-wide/16 v2, 0x0
@@ -214,7 +200,6 @@
 
     return-wide v0
 
-    .line 937
     :cond_0
     iget-wide v2, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mUpperThreshold:J
 
@@ -234,40 +219,32 @@
 .method public reset(JJLandroid/util/ArraySet;)V
     .locals 7
 
-    .line 871
     iput-wide p1, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mCurBalance:J
 
-    .line 872
     iput-wide p3, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mRemainingConsumableCredits:J
 
     const-wide/16 p1, 0x0
 
-    .line 873
     iput-wide p1, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToLowerThreshold:J
 
     iput-wide p1, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToUpperThreshold:J
 
-    .line 874
     iput-wide p1, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mMaxDeltaPerSecToCtpThreshold:J
 
     const-wide/high16 p3, -0x8000000000000000L
 
-    .line 875
     iput-wide p3, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mUpperThreshold:J
 
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 876
     iput-wide v0, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mLowerThreshold:J
 
-    .line 877
     iput-wide p1, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mCtpThreshold:J
 
     if-eqz p5, :cond_4
 
     const/4 p1, 0x0
 
-    .line 879
     :goto_0
     invoke-virtual {p5}, Landroid/util/ArraySet;->size()I
 
@@ -275,26 +252,22 @@
 
     if-ge p1, p2, :cond_4
 
-    .line 880
     invoke-virtual {p5, p1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lcom/android/server/tare/Agent$ActionAffordabilityNote;
 
-    .line 881
     invoke-static {p2}, Lcom/android/server/tare/Agent$ActionAffordabilityNote;->-$$Nest$mgetCachedModifiedPrice(Lcom/android/server/tare/Agent$ActionAffordabilityNote;)J
 
     move-result-wide v2
 
-    .line 882
     iget-wide v4, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mCurBalance:J
 
     cmp-long v4, v2, v4
 
     if-gtz v4, :cond_1
 
-    .line 883
     iget-wide v4, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mLowerThreshold:J
 
     cmp-long v6, v4, v0
@@ -303,7 +276,6 @@
 
     goto :goto_1
 
-    .line 884
     :cond_0
     invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->max(JJ)J
 
@@ -314,7 +286,6 @@
 
     goto :goto_3
 
-    .line 886
     :cond_1
     iget-wide v4, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mUpperThreshold:J
 
@@ -324,7 +295,6 @@
 
     goto :goto_2
 
-    .line 887
     :cond_2
     invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
@@ -333,20 +303,17 @@
     :goto_2
     iput-wide v2, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mUpperThreshold:J
 
-    .line 889
     :goto_3
     invoke-static {p2}, Lcom/android/server/tare/Agent$ActionAffordabilityNote;->-$$Nest$mgetStockLimitHonoringCtp(Lcom/android/server/tare/Agent$ActionAffordabilityNote;)J
 
     move-result-wide v2
 
-    .line 890
     iget-wide v4, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mRemainingConsumableCredits:J
 
     cmp-long p2, v2, v4
 
     if-gtz p2, :cond_3
 
-    .line 891
     iget-wide v4, p0, Lcom/android/server/tare/Agent$TrendCalculator;->mCtpThreshold:J
 
     invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->max(JJ)J

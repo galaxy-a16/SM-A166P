@@ -23,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/alarm/GmsAlarmManager$NetWorkStats$NetWorkData-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/alarm/GmsAlarmManager$NetWorkStats$NetWorkData;-><init>()V
 
     return-void
@@ -34,10 +33,8 @@
 .method public setEndTime(J)V
     .locals 2
 
-    .line 1221
     iput-wide p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetWorkStats$NetWorkData;->endTime:J
 
-    .line 1222
     iget-wide v0, p0, Lcom/android/server/alarm/GmsAlarmManager$NetWorkStats$NetWorkData;->startTime:J
 
     sub-long/2addr p1, v0

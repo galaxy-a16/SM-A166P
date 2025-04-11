@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/ui/AutoFillUI;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Lcom/android/server/autofill/PresentationStatsEventLogger;Landroid/service/autofill/FillResponse;Landroid/view/autofill/AutofillId;Landroid/metrics/LogMaker;)V
     .locals 0
 
-    .line 465
     iput-object p1, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     iput-object p2, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
@@ -47,12 +46,10 @@
 .method public final log(I)V
     .locals 1
 
-    .line 527
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$log:Landroid/metrics/LogMaker;
 
     invoke-virtual {v0, p1}, Landroid/metrics/LogMaker;->setType(I)Landroid/metrics/LogMaker;
 
-    .line 528
     iget-object p1, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     invoke-static {p1}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$fgetmMetricsLogger(Lcom/android/server/autofill/ui/AutoFillUI;)Lcom/android/internal/logging/MetricsLogger;
@@ -71,20 +68,16 @@
 
     const/4 v0, 0x2
 
-    .line 511
     invoke-virtual {p0, v0}, Lcom/android/server/autofill/ui/AutoFillUI$3;->log(I)V
 
-    .line 512
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$mPresentationStatsEventLogger:Lcom/android/server/autofill/PresentationStatsEventLogger;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    .line 513
     invoke-virtual {v0, v1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->maybeSetNegativeCtaButtonClicked(Z)V
 
-    .line 516
     :cond_0
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
@@ -92,14 +85,12 @@
 
     invoke-static {v0, v1}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$mhideFillDialogUiThread(Lcom/android/server/autofill/ui/AutoFillUI;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;)V
 
-    .line 517
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     iget-object v1, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$focusedId:Landroid/view/autofill/AutofillId;
 
     invoke-interface {v0, v1}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->requestShowSoftInput(Landroid/view/autofill/AutofillId;)V
 
-    .line 518
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     invoke-interface {p0}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->requestFallbackFromFillDialog()V
@@ -112,20 +103,16 @@
 
     const/4 v0, 0x4
 
-    .line 485
     invoke-virtual {p0, v0}, Lcom/android/server/autofill/ui/AutoFillUI$3;->log(I)V
 
-    .line 486
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$mPresentationStatsEventLogger:Lcom/android/server/autofill/PresentationStatsEventLogger;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    .line 487
     invoke-virtual {v0, v1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->maybeSetPositiveCtaButtonClicked(Z)V
 
-    .line 490
     :cond_0
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
@@ -133,7 +120,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$mhideFillDialogUiThread(Lcom/android/server/autofill/ui/AutoFillUI;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;)V
 
-    .line 491
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$fgetmCallback(Lcom/android/server/autofill/ui/AutoFillUI;)Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
@@ -142,7 +128,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 492
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$response:Landroid/service/autofill/FillResponse;
 
     invoke-virtual {v0}, Landroid/service/autofill/FillResponse;->getDatasets()Ljava/util/List;
@@ -153,7 +138,6 @@
 
     move-result v0
 
-    .line 493
     iget-object v1, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     invoke-static {v1}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$fgetmCallback(Lcom/android/server/autofill/ui/AutoFillUI;)Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
@@ -179,20 +163,16 @@
 
     const/4 v0, 0x5
 
-    .line 500
     invoke-virtual {p0, v0}, Lcom/android/server/autofill/ui/AutoFillUI$3;->log(I)V
 
-    .line 501
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$mPresentationStatsEventLogger:Lcom/android/server/autofill/PresentationStatsEventLogger;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    .line 502
     invoke-virtual {v0, v1}, Lcom/android/server/autofill/PresentationStatsEventLogger;->maybeSetDialogDismissed(Z)V
 
-    .line 504
     :cond_0
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
@@ -200,14 +180,12 @@
 
     invoke-static {v0, v1}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$mhideFillDialogUiThread(Lcom/android/server/autofill/ui/AutoFillUI;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;)V
 
-    .line 505
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     iget-object v1, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$focusedId:Landroid/view/autofill/AutofillId;
 
     invoke-interface {v0, v1}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->requestShowSoftInput(Landroid/view/autofill/AutofillId;)V
 
-    .line 506
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     invoke-interface {p0}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->requestFallbackFromFillDialog()V
@@ -220,17 +198,14 @@
 
     const/4 v0, 0x3
 
-    .line 468
     invoke-virtual {p0, v0}, Lcom/android/server/autofill/ui/AutoFillUI$3;->log(I)V
 
-    .line 469
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     iget-object v1, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     invoke-static {v0, v1}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$mhideFillDialogUiThread(Lcom/android/server/autofill/ui/AutoFillUI;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;)V
 
-    .line 470
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$fgetmCallback(Lcom/android/server/autofill/ui/AutoFillUI;)Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
@@ -239,7 +214,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 471
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     invoke-static {p0}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$fgetmCallback(Lcom/android/server/autofill/ui/AutoFillUI;)Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
@@ -252,7 +226,6 @@
 
     const v2, 0xffff
 
-    .line 473
     invoke-virtual {p1}, Landroid/service/autofill/FillResponse;->getAuthentication()Landroid/content/IntentSender;
 
     move-result-object v3
@@ -263,7 +236,6 @@
 
     const/4 v5, 0x3
 
-    .line 471
     invoke-interface/range {v0 .. v5}, Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;->authenticate(IILandroid/content/IntentSender;Landroid/os/Bundle;I)V
 
     :cond_0
@@ -273,7 +245,6 @@
 .method public onShown()V
     .locals 1
 
-    .line 480
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->val$callback:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;
 
     const/4 v0, 0x3
@@ -286,7 +257,6 @@
 .method public startIntentSender(Landroid/content/IntentSender;)V
     .locals 0
 
-    .line 523
     iget-object p0, p0, Lcom/android/server/autofill/ui/AutoFillUI$3;->this$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     invoke-static {p0}, Lcom/android/server/autofill/ui/AutoFillUI;->-$$Nest$fgetmCallback(Lcom/android/server/autofill/ui/AutoFillUI;)Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;

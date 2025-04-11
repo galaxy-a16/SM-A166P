@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/mode/DisplayModeDirector;)V
     .locals 0
 
-    .line 2826
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/mode/DisplayModeDirector;Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;-><init>(Lcom/android/server/display/mode/DisplayModeDirector;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public getDefaultPeakRefreshRate()Ljava/lang/Float;
     .locals 3
 
-    .line 2916
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDeviceConfig(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/provider/DeviceConfigInterface;
@@ -61,7 +58,6 @@
 
     return-object p0
 
-    .line 2923
     :cond_0
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -75,7 +71,6 @@
 
     const-string v0, "fixed_refresh_rate_high_ambient_brightness_thresholds"
 
-    .line 2870
     invoke-virtual {p0, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getIntArrayProperty(Ljava/lang/String;)[I
 
     move-result-object p0
@@ -88,7 +83,6 @@
 
     const-string v0, "fixed_refresh_rate_high_display_brightness_thresholds"
 
-    .line 2861
     invoke-virtual {p0, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getIntArrayProperty(Ljava/lang/String;)[I
 
     move-result-object p0
@@ -99,7 +93,6 @@
 .method public final getIntArrayProperty(Ljava/lang/String;)[I
     .locals 3
 
-    .line 2969
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDeviceConfig(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/provider/DeviceConfigInterface;
@@ -116,7 +109,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2973
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->parseIntArray(Ljava/lang/String;)[I
 
     move-result-object p0
@@ -132,7 +124,6 @@
 
     const-string/jumbo v0, "peak_refresh_rate_ambient_thresholds"
 
-    .line 2845
     invoke-virtual {p0, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getIntArrayProperty(Ljava/lang/String;)[I
 
     move-result-object p0
@@ -145,7 +136,6 @@
 
     const-string/jumbo v0, "peak_refresh_rate_brightness_thresholds"
 
-    .line 2836
     invoke-virtual {p0, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getIntArrayProperty(Ljava/lang/String;)[I
 
     move-result-object p0
@@ -158,7 +148,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2884
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmContext(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/content/Context;
@@ -177,13 +166,11 @@
 
     goto :goto_0
 
-    .line 2886
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDeviceConfig;->getDefaultRefreshRateInHbmHdr()I
 
     move-result p1
 
-    .line 2888
     :goto_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
@@ -211,34 +198,29 @@
 
     if-nez p1, :cond_0
 
-    .line 2900
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmContext(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/content/Context;
 
     move-result-object p1
 
-    .line 2899
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
     const v0, 0x10e0071
 
-    .line 2900
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result p1
 
     goto :goto_0
 
-    .line 2901
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/display/DisplayDeviceConfig;->getDefaultRefreshRateInHbmSunlight()I
 
     move-result p1
 
-    .line 2903
     :goto_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
@@ -264,7 +246,6 @@
 .method public getRefreshRateInHighZone()I
     .locals 3
 
-    .line 2876
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDeviceConfig(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/provider/DeviceConfigInterface;
@@ -287,7 +268,6 @@
 .method public getRefreshRateInLowZone()I
     .locals 3
 
-    .line 2851
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDeviceConfig(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/provider/DeviceConfigInterface;
@@ -310,12 +290,10 @@
 .method public onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 5
 
-    .line 2928
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getDefaultPeakRefreshRate()Ljava/lang/Float;
 
     move-result-object p1
 
-    .line 2929
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmHandler(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
@@ -328,25 +306,20 @@
 
     move-result-object p1
 
-    .line 2930
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2932
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getLowDisplayBrightnessThresholds()[I
 
     move-result-object p1
 
-    .line 2933
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getLowAmbientBrightnessThresholds()[I
 
     move-result-object v0
 
-    .line 2934
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getRefreshRateInLowZone()I
 
     move-result v1
 
-    .line 2936
     iget-object v2, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v2}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmHandler(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
@@ -363,10 +336,8 @@
 
     move-result-object p1
 
-    .line 2938
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2940
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmHandler(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
@@ -381,25 +352,20 @@
 
     move-result-object p1
 
-    .line 2941
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2943
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getHighDisplayBrightnessThresholds()[I
 
     move-result-object p1
 
-    .line 2944
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getHighAmbientBrightnessThresholds()[I
 
     move-result-object v0
 
-    .line 2945
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getRefreshRateInHighZone()I
 
     move-result v1
 
-    .line 2947
     iget-object v3, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v3}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmHandler(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
@@ -416,10 +382,8 @@
 
     move-result-object p1
 
-    .line 2949
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2951
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmHandler(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
@@ -432,10 +396,8 @@
 
     move-result-object p1
 
-    .line 2952
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2954
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmLock(Lcom/android/server/display/mode/DisplayModeDirector;)Ljava/lang/Object;
@@ -444,7 +406,6 @@
 
     monitor-enter p1
 
-    .line 2955
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
@@ -452,12 +413,10 @@
 
     move-result-object v0
 
-    .line 2956
     invoke-virtual {p0, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getRefreshRateInHbmSunlight(Lcom/android/server/display/DisplayDeviceConfig;)I
 
     move-result v0
 
-    .line 2957
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v1}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmHandler(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
@@ -470,22 +429,18 @@
 
     move-result-object v0
 
-    .line 2959
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2961
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDefaultDisplayDeviceConfig(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/DisplayDeviceConfig;
 
     move-result-object v0
 
-    .line 2962
     invoke-virtual {p0, v0}, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->getRefreshRateInHbmHdr(Lcom/android/server/display/DisplayDeviceConfig;)I
 
     move-result v0
 
-    .line 2963
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmHandler(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
@@ -498,10 +453,8 @@
 
     move-result-object p0
 
-    .line 2964
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2965
     monitor-exit p1
 
     return-void
@@ -521,12 +474,10 @@
 
     const-string p0, ","
 
-    .line 2980
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2981
     array-length v0, p0
 
     new-array v1, v0, [I
@@ -536,7 +487,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 2985
     :try_start_0
     aget-object v3, p0, v2
 
@@ -555,7 +505,6 @@
     :catch_0
     move-exception p0
 
-    .line 2988
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -587,7 +536,6 @@
 .method public startListening()V
     .locals 3
 
-    .line 2828
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;->this$0:Lcom/android/server/display/mode/DisplayModeDirector;
 
     invoke-static {v0}, Lcom/android/server/display/mode/DisplayModeDirector;->-$$Nest$fgetmDeviceConfig(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/provider/DeviceConfigInterface;
@@ -596,12 +544,10 @@
 
     const-string v1, "display_manager"
 
-    .line 2829
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v2
 
-    .line 2828
     invoke-interface {v0, v1, v2, p0}, Landroid/provider/DeviceConfigInterface;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     return-void

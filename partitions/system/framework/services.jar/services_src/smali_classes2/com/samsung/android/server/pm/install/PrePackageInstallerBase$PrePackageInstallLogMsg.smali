@@ -13,17 +13,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 622
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 619
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->outputContents:Ljava/lang/StringBuffer;
 
-    .line 620
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM-dd HH:mm:ss.SSS"
@@ -34,7 +31,6 @@
 
     const-string v0, ""
 
-    .line 623
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
     return-void
@@ -45,14 +41,12 @@
 .method public final flush()V
     .locals 6
 
-    .line 652
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/log/PreloadInstaller.txt"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 653
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -62,7 +56,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 654
     :try_start_1
     new-instance v3, Ljava/io/OutputStreamWriter;
 
@@ -72,7 +65,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 655
     :try_start_2
     iget-object v4, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->outputContents:Ljava/lang/StringBuffer;
 
@@ -80,7 +72,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 656
     :try_start_3
     iget-object v5, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->outputContents:Ljava/lang/StringBuffer;
 
@@ -90,25 +81,21 @@
 
     invoke-virtual {v3, v5}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 657
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->outputContents:Ljava/lang/StringBuffer;
 
     const/4 v5, 0x0
 
     invoke-virtual {p0, v5}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 658
     monitor-exit v4
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 659
     :try_start_4
     invoke-virtual {v0, v2, v5}, Ljava/io/File;->setReadable(ZZ)Z
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 660
     :try_start_5
     invoke-virtual {v3}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_5
@@ -124,7 +111,6 @@
     :catchall_0
     move-exception p0
 
-    .line 658
     :try_start_7
     monitor-exit v4
     :try_end_7
@@ -138,7 +124,6 @@
     :catchall_1
     move-exception p0
 
-    .line 653
     :try_start_9
     invoke-virtual {v3}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_9
@@ -183,7 +168,6 @@
 
     const-string v0, "PrePackageInstaller"
 
-    .line 661
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
@@ -193,12 +177,10 @@
 .method public out(Ljava/lang/String;)V
     .locals 4
 
-    .line 632
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 633
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->sdfNow:Ljava/text/SimpleDateFormat;
 
     new-instance v3, Ljava/util/Date;
@@ -211,15 +193,12 @@
 
     const-string v1, "PrePackageInstaller"
 
-    .line 635
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 636
     iget-object v1, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->outputContents:Ljava/lang/StringBuffer;
 
     monitor-enter v1
 
-    .line 637
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->outputContents:Ljava/lang/StringBuffer;
 
@@ -245,7 +224,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 638
     monitor-exit v1
 
     return-void
@@ -263,10 +241,8 @@
 .method public outAndLogPackageFile(Ljava/lang/String;)V
     .locals 0
 
-    .line 627
     invoke-static {p1}, Lcom/samsung/android/server/pm/PmLog;->logDebugInfo(Ljava/lang/String;)V
 
-    .line 628
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
     return-void
@@ -275,10 +251,8 @@
 .method public write(Ljava/lang/String;)V
     .locals 0
 
-    .line 647
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 648
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->flush()V
 
     return-void
@@ -287,10 +261,8 @@
 .method public writeAndLogPackageFile(Ljava/lang/String;)V
     .locals 0
 
-    .line 642
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->outAndLogPackageFile(Ljava/lang/String;)V
 
-    .line 643
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->flush()V
 
     return-void

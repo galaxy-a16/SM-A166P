@@ -17,23 +17,18 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 121
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 123
     iput-object v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->pattern:Ljava/lang/String;
 
-    .line 124
     iput-object v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->hashCode:Ljava/lang/String;
 
     const/4 v1, -0x1
 
-    .line 125
     iput v1, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->versionType:I
 
-    .line 127
     iput-object v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->format:Ljava/lang/String;
 
     return-void
@@ -44,7 +39,6 @@
 .method public createADPPolicy()Lcom/android/server/asks/ADPContainer$ADPPolicy;
     .locals 4
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->pattern:Ljava/lang/String;
 
     if-eqz v0, :cond_1
@@ -61,7 +55,6 @@
 
     goto :goto_0
 
-    .line 154
     :cond_0
     new-instance v3, Lcom/android/server/asks/ADPContainer$ADPPolicy;
 
@@ -83,18 +76,14 @@
 
     const/4 v0, 0x0
 
-    .line 159
     iput-object v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->pattern:Ljava/lang/String;
 
-    .line 160
     iput-object v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->hashCode:Ljava/lang/String;
 
     const/4 v1, -0x1
 
-    .line 161
     iput v1, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->versionType:I
 
-    .line 162
     iput-object v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->format:Ljava/lang/String;
 
     return-void
@@ -103,7 +92,6 @@
 .method public set_format(Ljava/lang/String;)Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;
     .locals 0
 
-    .line 135
     iput-object p1, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->format:Ljava/lang/String;
 
     return-object p0
@@ -112,7 +100,6 @@
 .method public set_hashCode(Ljava/lang/String;)Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;
     .locals 0
 
-    .line 140
     iput-object p1, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->hashCode:Ljava/lang/String;
 
     return-object p0
@@ -121,7 +108,6 @@
 .method public set_pattern(Ljava/lang/String;)Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;
     .locals 0
 
-    .line 130
     iput-object p1, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->pattern:Ljava/lang/String;
 
     return-object p0
@@ -130,7 +116,6 @@
 .method public set_versionType(I)Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;
     .locals 0
 
-    .line 145
     iput p1, p0, Lcom/android/server/asks/ADPContainer$ADPPolicyBuilder;->versionType:I
 
     return-object p0

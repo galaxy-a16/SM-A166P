@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$mpostProcessLocked(Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->postProcessLocked()V
 
     return-void
@@ -25,12 +24,10 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
-    .line 3398
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3399
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -45,7 +42,6 @@
 .method public accept(Lcom/android/server/job/controllers/JobStatus;)V
     .locals 2
 
-    .line 3403
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/job/JobSchedulerService;->isReadyToBeExecutedLocked(Lcom/android/server/job/controllers/JobStatus;)Z
@@ -54,12 +50,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 3404
     sget-boolean v0, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 3405
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +76,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3407
     :cond_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->newReadyJobs:Ljava/util/ArrayList;
 
@@ -95,7 +88,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 3398
     check-cast p1, Lcom/android/server/job/controllers/JobStatus;
 
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->accept(Lcom/android/server/job/controllers/JobStatus;)V
@@ -106,14 +98,12 @@
 .method public final postProcessLocked()V
     .locals 2
 
-    .line 3413
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->newReadyJobs:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Lcom/android/server/job/JobSchedulerService;->noteJobsPending(Ljava/util/List;)V
 
-    .line 3414
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-static {v0}, Lcom/android/server/job/JobSchedulerService;->-$$Nest$fgetmPendingJobQueue(Lcom/android/server/job/JobSchedulerService;)Lcom/android/server/job/PendingJobQueue;
@@ -124,7 +114,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/job/PendingJobQueue;->addAll(Ljava/util/List;)V
 
-    .line 3416
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$ReadyJobQueueFunctor;->newReadyJobs:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V

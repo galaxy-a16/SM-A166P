@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioDeviceInventory;)V
     .locals 0
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/audio/AudioDeviceInventory$1;->this$0:Lcom/android/server/audio/AudioDeviceInventory;
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -24,7 +23,6 @@
 .method public put(Ljava/lang/String;Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;)Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;
     .locals 3
 
-    .line 111
     invoke-super {p0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -35,7 +33,6 @@
 
     const/4 v2, 0x1
 
-    .line 112
     invoke-virtual {p0, v1, v2, p1, p2}, Lcom/android/server/audio/AudioDeviceInventory$1;->record(Ljava/lang/String;ZLjava/lang/String;Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;)V
 
     return-object v0
@@ -44,7 +41,6 @@
 .method public bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 108
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;
@@ -59,7 +55,6 @@
 .method public putIfAbsent(Ljava/lang/String;Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;)Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;
     .locals 3
 
-    .line 118
     invoke-super {p0, p1, p2}, Ljava/util/LinkedHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -72,7 +67,6 @@
 
     const/4 v2, 0x1
 
-    .line 120
     invoke-virtual {p0, v1, v2, p1, p2}, Lcom/android/server/audio/AudioDeviceInventory$1;->record(Ljava/lang/String;ZLjava/lang/String;Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;)V
 
     :cond_0
@@ -82,7 +76,6 @@
 .method public bridge synthetic putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 108
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;
@@ -97,7 +90,6 @@
 .method public final record(Ljava/lang/String;ZLjava/lang/String;Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;)V
     .locals 1
 
-    .line 155
     new-instance p0, Landroid/media/MediaMetrics$Item;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -110,7 +102,6 @@
 
     iget v0, p4, Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;->mDeviceType:I
 
-    .line 156
     invoke-static {v0}, Landroid/media/AudioSystem;->getDeviceName(I)Ljava/lang/String;
 
     move-result-object v0
@@ -127,14 +118,12 @@
 
     iget-object v0, p4, Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;->mDeviceAddress:Ljava/lang/String;
 
-    .line 157
     invoke-virtual {p0, p3, v0}, Landroid/media/MediaMetrics$Item;->set(Landroid/media/MediaMetrics$Key;Ljava/lang/Object;)Landroid/media/MediaMetrics$Item;
 
     move-result-object p0
 
     sget-object p3, Landroid/media/MediaMetrics$Property;->EVENT:Landroid/media/MediaMetrics$Key;
 
-    .line 158
     invoke-virtual {p0, p3, p1}, Landroid/media/MediaMetrics$Item;->set(Landroid/media/MediaMetrics$Key;Ljava/lang/Object;)Landroid/media/MediaMetrics$Item;
 
     move-result-object p0
@@ -143,7 +132,6 @@
 
     iget-object p3, p4, Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;->mDeviceName:Ljava/lang/String;
 
-    .line 159
     invoke-virtual {p0, p1, p3}, Landroid/media/MediaMetrics$Item;->set(Landroid/media/MediaMetrics$Key;Ljava/lang/Object;)Landroid/media/MediaMetrics$Item;
 
     move-result-object p0
@@ -159,13 +147,11 @@
     :cond_0
     const-string p2, "disconnected"
 
-    .line 160
     :goto_0
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaMetrics$Item;->set(Landroid/media/MediaMetrics$Key;Ljava/lang/Object;)Landroid/media/MediaMetrics$Item;
 
     move-result-object p0
 
-    .line 162
     invoke-virtual {p0}, Landroid/media/MediaMetrics$Item;->record()Z
 
     return-void
@@ -174,7 +160,6 @@
 .method public remove(Ljava/lang/Object;)Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;
     .locals 3
 
-    .line 127
     invoke-super {p0, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -185,7 +170,6 @@
 
     const/4 v1, 0x0
 
-    .line 129
     check-cast p1, Ljava/lang/String;
 
     const-string/jumbo v2, "remove"
@@ -199,7 +183,6 @@
 .method public bridge synthetic remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 108
     invoke-virtual {p0, p1}, Lcom/android/server/audio/AudioDeviceInventory$1;->remove(Ljava/lang/Object;)Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;
 
     move-result-object p0
@@ -210,14 +193,12 @@
 .method public remove(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 3
 
-    .line 136
     invoke-super {p0, p1, p2}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 138
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Lcom/android/server/audio/AudioDeviceInventory$DeviceInfo;

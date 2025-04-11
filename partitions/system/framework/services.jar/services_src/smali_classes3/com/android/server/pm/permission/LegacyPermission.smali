@@ -17,19 +17,14 @@
 .method public constructor <init>(Landroid/content/pm/PermissionInfo;II[I)V
     .locals 0
 
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
     iput-object p1, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 95
     iput p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mType:I
 
-    .line 96
     iput p3, p0, Lcom/android/server/pm/permission/LegacyPermission;->mUid:I
 
-    .line 97
     iput-object p4, p0, Lcom/android/server/pm/permission/LegacyPermission;->mGids:[I
 
     return-void
@@ -38,36 +33,28 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
 
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     new-instance v0, Landroid/content/pm/PermissionInfo;
 
     invoke-direct {v0}, Landroid/content/pm/PermissionInfo;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 103
     iput-object p1, v0, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 104
     iput-object p2, v0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
     const/4 p1, 0x2
 
-    .line 106
     iput p1, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
-    .line 107
     iput p3, p0, Lcom/android/server/pm/permission/LegacyPermission;->mType:I
 
     const/4 p1, 0x0
 
-    .line 108
     iput p1, p0, Lcom/android/server/pm/permission/LegacyPermission;->mUid:I
 
-    .line 109
     sget-object p1, Llibcore/util/EmptyArray;->INT:[I
 
     iput-object p1, p0, Lcom/android/server/pm/permission/LegacyPermission;->mGids:[I
@@ -78,14 +65,12 @@
 .method public static read(Ljava/util/Map;Lcom/android/modules/utils/TypedXmlPullParser;)Z
     .locals 8
 
-    .line 136
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "item"
 
-    .line 137
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -101,21 +86,18 @@
 
     const/4 v2, 0x0
 
-    .line 140
     invoke-interface {p1, v2, v0}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v3, "package"
 
-    .line 141
     invoke-interface {p1, v2, v3}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string/jumbo v4, "type"
 
-    .line 142
     invoke-interface {p1, v2, v4}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -129,12 +111,10 @@
     :cond_1
     const-string v5, "dynamic"
 
-    .line 149
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    .line 150
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -145,12 +125,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 152
     iget v7, v5, Lcom/android/server/pm/permission/LegacyPermission;->mType:I
 
     if-eq v7, v6, :cond_4
 
-    .line 153
     :cond_2
     new-instance v5, Lcom/android/server/pm/permission/LegacyPermission;
 
@@ -167,11 +145,9 @@
     :cond_3
     move v7, v1
 
-    .line 154
     :goto_0
     invoke-direct {v5, v0, v3, v7}, Lcom/android/server/pm/permission/LegacyPermission;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 156
     :cond_4
     iget-object v0, v5, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
@@ -183,7 +159,6 @@
 
     iput v3, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
-    .line 158
     iget-object v0, v5, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget v3, v0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -196,7 +171,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 161
     iget-object v0, v5, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     const-string v3, "icon"
@@ -207,7 +181,6 @@
 
     iput v1, v0, Landroid/content/pm/PermissionInfo;->icon:I
 
-    .line 162
     iget-object v0, v5, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     const-string v1, "label"
@@ -218,7 +191,6 @@
 
     iput-object p1, v0, Landroid/content/pm/PermissionInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 164
     :cond_5
     iget-object p1, v5, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
@@ -228,7 +200,6 @@
 
     return v6
 
-    .line 144
     :cond_6
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;
@@ -239,7 +210,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 146
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object p1
@@ -252,7 +222,6 @@
 
     const/4 p1, 0x5
 
-    .line 144
     invoke-static {p1, p0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
     return v1
@@ -261,7 +230,6 @@
 .method public static readInt(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;Ljava/lang/String;I)I
     .locals 0
 
-    .line 170
     invoke-interface {p0, p1, p2, p3}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result p0
@@ -278,7 +246,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 204
     iget-object v1, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v1, v1, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
@@ -294,7 +261,6 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 207
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object p2, p2, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -310,26 +276,22 @@
     :cond_1
     if-nez p5, :cond_3
 
-    .line 211
     invoke-virtual {p6}, Lcom/android/server/pm/DumpState;->onTitlePrinted()Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 212
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     :cond_2
     const-string p2, "Permissions:"
 
-    .line 214
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_3
     const-string p2, "  Permission ["
 
-    .line 216
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
@@ -342,7 +304,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 217
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p2
@@ -355,12 +316,10 @@
 
     const-string p2, "):"
 
-    .line 218
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p2, "    sourcePackage="
 
-    .line 219
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
@@ -371,7 +330,6 @@
 
     const-string p2, "    uid="
 
-    .line 220
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mUid:I
@@ -380,7 +338,6 @@
 
     const-string p2, " gids="
 
-    .line 221
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mGids:[I
@@ -393,7 +350,6 @@
 
     const-string p2, " type="
 
-    .line 222
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mType:I
@@ -402,10 +358,8 @@
 
     const-string p2, " prot="
 
-    .line 223
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 224
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p2, p2, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -416,21 +370,18 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 225
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     if-eqz p2, :cond_5
 
     const-string p2, "    perm="
 
-    .line 226
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 227
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget p2, p2, Landroid/content/pm/PermissionInfo;->flags:I
@@ -448,7 +399,6 @@
     :cond_4
     const-string p2, "    flags=0x"
 
-    .line 229
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
@@ -461,7 +411,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 232
     :cond_5
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
@@ -477,10 +426,8 @@
 
     const-string p0, "    enforced="
 
-    .line 234
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 235
     invoke-virtual {p1, p4}, Ljava/io/PrintWriter;->println(Z)V
 
     :cond_6
@@ -492,7 +439,6 @@
 .method public getPermissionInfo()Landroid/content/pm/PermissionInfo;
     .locals 0
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     return-object p0
@@ -501,7 +447,6 @@
 .method public getType()I
     .locals 0
 
-    .line 128
     iget p0, p0, Lcom/android/server/pm/permission/LegacyPermission;->mType:I
 
     return p0
@@ -510,7 +455,6 @@
 .method public write(Lcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 4
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v0, v0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
@@ -524,10 +468,8 @@
 
     const-string v1, "item"
 
-    .line 180
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 181
     iget-object v2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v2, v2, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -536,7 +478,6 @@
 
     invoke-interface {p1, v0, v3, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 182
     iget-object v2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-object v2, v2, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
@@ -545,7 +486,6 @@
 
     invoke-interface {p1, v0, v3, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 183
     iget-object v2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget v2, v2, Landroid/content/pm/PermissionInfo;->protectionLevel:I
@@ -554,10 +494,8 @@
 
     const-string/jumbo v3, "protection"
 
-    .line 184
     invoke-interface {p1, v0, v3, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeInt(Ljava/lang/String;Ljava/lang/String;I)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 186
     :cond_1
     iget v2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mType:I
 
@@ -569,10 +507,8 @@
 
     const-string v3, "dynamic"
 
-    .line 187
     invoke-interface {p1, v0, v2, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 188
     iget-object v2, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget v2, v2, Landroid/content/pm/PermissionInfo;->icon:I
@@ -581,10 +517,8 @@
 
     const-string v3, "icon"
 
-    .line 189
     invoke-interface {p1, v0, v3, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeInt(Ljava/lang/String;Ljava/lang/String;I)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 191
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermission;->mPermissionInfo:Landroid/content/pm/PermissionInfo;
 
@@ -594,14 +528,12 @@
 
     const-string v2, "label"
 
-    .line 192
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-interface {p1, v0, v2, p0}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 195
     :cond_3
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 

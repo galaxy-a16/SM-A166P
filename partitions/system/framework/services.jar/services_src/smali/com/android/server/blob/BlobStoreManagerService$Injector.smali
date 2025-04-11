@@ -17,7 +17,6 @@
 .method public getBackgroundHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 1954
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p0
@@ -28,7 +27,6 @@
 .method public initializeMessageHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 1950
     invoke-static {}, Lcom/android/server/blob/BlobStoreManagerService;->-$$Nest$sminitializeMessageHandler()Landroid/os/Handler;
 
     move-result-object p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;)V
     .locals 0
 
-    .line 851
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$2;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUEvent(Landroid/os/UEventObserver$UEvent;)V
     .locals 1
 
-    .line 854
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager$2;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;

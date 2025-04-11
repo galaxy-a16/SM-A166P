@@ -16,10 +16,8 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 3
 
-    .line 58
     invoke-direct {p0, p1}, Lcom/android/server/wm/PackagesChange;-><init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
 
-    .line 50
     new-instance p1, Lcom/android/server/wm/FixedAspectRatioController$SystemChange;
 
     const/4 v0, 0x0
@@ -28,7 +26,6 @@
 
     iput-object p1, p0, Lcom/android/server/wm/FixedAspectRatioController;->mSystemChange:Lcom/android/server/wm/FixedAspectRatioController$SystemChange;
 
-    .line 52
     new-instance p1, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     sget-object v0, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChangePersister;->CONVENTIONAL_MODE_DIRECTORY:Ljava/lang/String;
@@ -41,7 +38,6 @@
 
     iput-object p1, p0, Lcom/android/server/wm/FixedAspectRatioController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
-    .line 59
     filled-new-array {p1}, [Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     move-result-object p1
@@ -56,7 +52,6 @@
 .method public adjustBounds(Lcom/android/server/wm/ActivityRecord;Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 95
     invoke-interface {p0}, Lcom/android/server/wm/BoundsCompatController;->getBoundsCompatUtils()Lcom/android/server/wm/BoundsCompatUtils;
 
     move-result-object p0
@@ -69,19 +64,16 @@
 .method public computeConfigResourceOverridesIfNeeded(Lcom/android/server/wm/ActivityRecord;Landroid/content/res/Configuration;Landroid/graphics/Rect;Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 76
     iget p0, p2, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
     if-eqz p0, :cond_0
 
-    .line 78
     invoke-virtual {p1}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 79
     :cond_0
     iget p0, p2, Landroid/content/res/Configuration;->densityDpi:I
 
@@ -93,7 +85,6 @@
 
     if-nez p1, :cond_1
 
-    .line 81
     iget p0, p4, Landroid/content/res/Configuration;->densityDpi:I
 
     int-to-float p0, p0
@@ -103,7 +94,6 @@
 
     mul-float/2addr p0, p1
 
-    .line 85
     invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
     move-result p1
@@ -131,7 +121,6 @@
 .method public getChangeValuesAsUser(I)Ljava/util/concurrent/ConcurrentHashMap;
     .locals 0
 
-    .line 125
     iget-object p0, p0, Lcom/android/server/wm/FixedAspectRatioController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;->getChangeValuesAsUser(I)Ljava/util/concurrent/ConcurrentHashMap;
@@ -144,14 +133,12 @@
 .method public getFixedAspectRatio(Lcom/android/server/wm/ActivityRecord;)F
     .locals 2
 
-    .line 66
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 67
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->inMultiWindowMode()Z
 
     move-result v1
@@ -166,7 +153,6 @@
 
     goto :goto_0
 
-    .line 70
     :cond_0
     iget v0, v0, Lcom/android/server/wm/Task;->mUserId:I
 
@@ -186,14 +172,12 @@
 .method public getMergedChange(ILjava/lang/String;)F
     .locals 0
 
-    .line 120
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/FixedAspectRatioController;->getUserChangeWithLegacy(ILjava/lang/String;)Ljava/lang/Float;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 121
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result p0
@@ -212,7 +196,6 @@
 .method public getSystemChange(Ljava/lang/String;)F
     .locals 0
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/wm/FixedAspectRatioController;->mSystemChange:Lcom/android/server/wm/FixedAspectRatioController$SystemChange;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/FixedAspectRatioController$SystemChange;->getAspectRatio(Ljava/lang/String;)F
@@ -225,14 +208,12 @@
 .method public getUserChange(ILjava/lang/String;)F
     .locals 0
 
-    .line 99
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/FixedAspectRatioController;->getUserChangeWithLegacy(ILjava/lang/String;)Ljava/lang/Float;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 100
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
     move-result p0
@@ -249,14 +230,12 @@
 .method public final getUserChangeWithLegacy(ILjava/lang/String;)Ljava/lang/Float;
     .locals 2
 
-    .line 105
     invoke-virtual {p0, p2}, Lcom/android/server/wm/PackagesChange;->isExcludedPackage(Ljava/lang/String;)Z
 
     move-result v0
 
     const/high16 v1, -0x40800000    # -1.0f
 
-    .line 106
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -265,7 +244,6 @@
 
     return-object v1
 
-    .line 108
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/FixedAspectRatioController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
@@ -277,7 +255,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 109
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
@@ -297,7 +274,6 @@
 .method public requestToSave(I)V
     .locals 0
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/wm/FixedAspectRatioController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;->requestToSave(I)V

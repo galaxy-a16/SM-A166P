@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/knox/KnoxForesightService;)V
     .locals 0
 
-    .line 128
     iput-object p1, p0, Lcom/android/server/knox/KnoxForesightService$1;->this$0:Lcom/android/server/knox/KnoxForesightService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -24,7 +23,6 @@
 .method public run()V
     .locals 6
 
-    .line 133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,7 +49,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Thread;->getContextClassLoader()Ljava/lang/ClassLoader;
 
@@ -59,7 +56,6 @@
 
     const-string v1, "com.samsung.android.knox.foresight.framework.system.SystemServiceEntry"
 
-    .line 139
     invoke-virtual {v0, v1}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -70,7 +66,6 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    .line 141
     const-class v4, Landroid/content/Context;
 
     const/4 v5, 0x0
@@ -83,7 +78,6 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    .line 143
     iget-object p0, p0, Lcom/android/server/knox/KnoxForesightService$1;->this$0:Lcom/android/server/knox/KnoxForesightService;
 
     invoke-static {p0}, Lcom/android/server/knox/KnoxForesightService;->-$$Nest$fgetmContext(Lcom/android/server/knox/KnoxForesightService;)Landroid/content/Context;
@@ -107,7 +101,6 @@
     :catch_0
     move-exception p0
 
-    .line 152
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -115,7 +108,6 @@
     :catch_1
     move-exception p0
 
-    .line 150
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
@@ -123,7 +115,6 @@
     :catch_2
     move-exception p0
 
-    .line 148
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
@@ -131,7 +122,6 @@
     :catch_3
     move-exception p0
 
-    .line 146
     invoke-virtual {p0}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 
     :goto_0

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda15;->f$0:Landroid/os/Handler;
@@ -27,7 +26,6 @@
 .method public final produce()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda15;->f$0:Landroid/os/Handler;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageManagerService;->$r8$lambda$kNTWQugX0uYZs5GH-3wDf39laLE(Landroid/os/Handler;)Landroid/os/Handler;

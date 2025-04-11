@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/om/OverlayManagerSettings$SettingsItem;
 
     invoke-static {p1}, Lcom/android/server/om/OverlayManagerSettings;->$r8$lambda$WIF6vsqVxaeAz1_39diqldriZHw(Lcom/android/server/om/OverlayManagerSettings$SettingsItem;)Landroid/content/om/OverlayInfo;

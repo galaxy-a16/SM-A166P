@@ -20,7 +20,6 @@
 .method public final apply(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/notification/NotificationManagerService;->$r8$lambda$udV5TjKUpYKOaeS-HFkUaqkUSfM(I)Z
 
     move-result p0

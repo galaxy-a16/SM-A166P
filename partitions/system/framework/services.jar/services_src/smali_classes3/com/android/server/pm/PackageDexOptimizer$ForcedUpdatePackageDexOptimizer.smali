@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/server/pm/Installer;Ljava/lang/Object;Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .line 1076
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/pm/PackageDexOptimizer;-><init>(Lcom/android/server/pm/Installer;Ljava/lang/Object;Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageDexOptimizer;)V
     .locals 0
 
-    .line 1080
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageDexOptimizer;-><init>(Lcom/android/server/pm/PackageDexOptimizer;)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public adjustDexoptFlags(I)I
     .locals 0
 
-    .line 0
     or-int/lit8 p0, p1, 0x40
 
     return p0
@@ -36,7 +33,6 @@
 .method public adjustDexoptNeeded(I)I
     .locals 0
 
-    .line 0
     if-nez p1, :cond_0
 
     const/4 p0, -0x3

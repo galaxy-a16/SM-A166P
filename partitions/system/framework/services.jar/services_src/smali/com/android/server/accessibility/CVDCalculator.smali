@@ -41,44 +41,36 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v1, v0, [D
 
-    .line 62
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/android/server/accessibility/CVDCalculator;->u:[D
 
     new-array v1, v0, [D
 
-    .line 63
     fill-array-data v1, :array_1
 
     iput-object v1, p0, Lcom/android/server/accessibility/CVDCalculator;->v:[D
 
     new-array v1, v0, [D
 
-    .line 66
     iput-object v1, p0, Lcom/android/server/accessibility/CVDCalculator;->SpotsU:[D
 
     new-array v0, v0, [D
 
-    .line 67
     iput-object v0, p0, Lcom/android/server/accessibility/CVDCalculator;->SpotsV:[D
 
     const/4 v0, 0x0
 
-    .line 85
     iput-object v0, p0, Lcom/android/server/accessibility/CVDCalculator;->mInputNums:[I
 
-    .line 87
     iput-object v0, p0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
-    .line 95
     new-instance v0, Lcom/android/server/accessibility/ColorTransferTable;
 
     invoke-direct {v0}, Lcom/android/server/accessibility/ColorTransferTable;-><init>()V
@@ -87,12 +79,10 @@
 
     const/4 v0, 0x0
 
-    .line 96
     iput v0, p0, Lcom/android/server/accessibility/CVDCalculator;->CVDMethod:I
 
     const/4 v0, 0x3
 
-    .line 97
     iput v0, p0, Lcom/android/server/accessibility/CVDCalculator;->CVDType:I
 
     return-void
@@ -158,7 +148,6 @@
     :goto_0
     if-ge v5, v1, :cond_0
 
-    .line 236
     iget-object v6, v0, Lcom/android/server/accessibility/CVDCalculator;->SpotsU:[D
 
     add-int/lit8 v7, v5, 0x1
@@ -171,7 +160,6 @@
 
     aput-wide v8, v2, v5
 
-    .line 237
     iget-object v6, v0, Lcom/android/server/accessibility/CVDCalculator;->SpotsV:[D
 
     aget-wide v8, v6, v7
@@ -200,7 +188,6 @@
 
     if-ge v7, v1, :cond_1
 
-    .line 243
     aget-wide v14, v2, v7
 
     mul-double v16, v14, v12
@@ -211,7 +198,6 @@
 
     add-double v8, v8, v16
 
-    .line 244
     invoke-static {v14, v15, v12, v13}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v14
@@ -241,7 +227,6 @@
 
     div-double/2addr v8, v10
 
-    .line 246
     invoke-static {v8, v9}, Ljava/lang/Math;->atan(D)D
 
     move-result-wide v1
@@ -252,7 +237,6 @@
 
     new-array v8, v7, [D
 
-    .line 248
     fill-array-data v8, :array_0
 
     cmpg-double v5, v1, v5
@@ -278,7 +262,6 @@
 
     aget-wide v14, v8, v4
 
-    .line 257
     aget-wide v18, v3, v5
 
     invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
@@ -309,7 +292,6 @@
 
     aget-wide v14, v8, v6
 
-    .line 258
     aget-wide v18, v3, v5
 
     invoke-static {v9, v10}, Ljava/lang/Math;->cos(D)D
@@ -355,7 +337,6 @@
 
     div-double v14, v14, v17
 
-    .line 261
     invoke-static {v14, v15}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v14
@@ -366,7 +347,6 @@
 
     div-double v14, v14, v17
 
-    .line 262
     invoke-static {v14, v15}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v14
@@ -383,36 +363,29 @@
 
     if-lez v3, :cond_4
 
-    .line 264
     iput-wide v5, v0, Lcom/android/server/accessibility/CVDCalculator;->majorRadius:D
 
-    .line 265
     iput-wide v14, v0, Lcom/android/server/accessibility/CVDCalculator;->minorRadius:D
 
     mul-double v9, v9, v19
 
     div-double v9, v9, v17
 
-    .line 266
     iput-wide v9, v0, Lcom/android/server/accessibility/CVDCalculator;->majorAngle:D
 
     goto :goto_4
 
-    .line 268
     :cond_4
     iput-wide v14, v0, Lcom/android/server/accessibility/CVDCalculator;->majorRadius:D
 
-    .line 269
     iput-wide v5, v0, Lcom/android/server/accessibility/CVDCalculator;->minorRadius:D
 
     mul-double v1, v1, v19
 
     div-double v1, v1, v17
 
-    .line 270
     iput-wide v1, v0, Lcom/android/server/accessibility/CVDCalculator;->majorAngle:D
 
-    .line 273
     :goto_4
     iget-wide v1, v0, Lcom/android/server/accessibility/CVDCalculator;->majorRadius:D
 
@@ -422,14 +395,12 @@
 
     iput-wide v3, v0, Lcom/android/server/accessibility/CVDCalculator;->c_index:D
 
-    .line 274
     iget-wide v3, v0, Lcom/android/server/accessibility/CVDCalculator;->minorRadius:D
 
     div-double v3, v1, v3
 
     iput-wide v3, v0, Lcom/android/server/accessibility/CVDCalculator;->s_index:D
 
-    .line 275
     invoke-static {v1, v2, v12, v13}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -448,7 +419,6 @@
 
     iput-wide v1, v0, Lcom/android/server/accessibility/CVDCalculator;->tes:D
 
-    .line 277
     iget-wide v1, v0, Lcom/android/server/accessibility/CVDCalculator;->c_index:D
 
     const-wide v3, 0x3ff999999999999aL    # 1.6
@@ -459,12 +429,10 @@
 
     const/4 v5, 0x3
 
-    .line 278
     iput v5, v0, Lcom/android/server/accessibility/CVDCalculator;->CVDType:I
 
     goto :goto_5
 
-    .line 279
     :cond_5
     iget-wide v5, v0, Lcom/android/server/accessibility/CVDCalculator;->majorAngle:D
 
@@ -476,7 +444,6 @@
 
     const/4 v7, 0x0
 
-    .line 280
     iput v7, v0, Lcom/android/server/accessibility/CVDCalculator;->CVDType:I
 
     goto :goto_5
@@ -490,7 +457,6 @@
 
     const/4 v5, 0x2
 
-    .line 282
     iput v5, v0, Lcom/android/server/accessibility/CVDCalculator;->CVDType:I
 
     goto :goto_5
@@ -498,7 +464,6 @@
     :cond_7
     const/4 v5, 0x1
 
-    .line 284
     iput v5, v0, Lcom/android/server/accessibility/CVDCalculator;->CVDType:I
 
     :goto_5
@@ -524,7 +489,6 @@
 
     div-double/2addr v1, v3
 
-    .line 291
     iput-wide v1, v0, Lcom/android/server/accessibility/CVDCalculator;->CVDStrength:D
 
     const-wide v3, 0x3fb999999999999aL    # 0.1
@@ -552,7 +516,6 @@
 
     add-double/2addr v1, v3
 
-    .line 301
     :goto_6
     iput-wide v1, v0, Lcom/android/server/accessibility/CVDCalculator;->CVDSeverity:D
 
@@ -568,7 +531,6 @@
 .method public final InitMakeUV()Z
     .locals 6
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/accessibility/CVDCalculator;->SpotsU:[D
 
     iget-object v1, p0, Lcom/android/server/accessibility/CVDCalculator;->u:[D
@@ -579,7 +541,6 @@
 
     aput-wide v3, v0, v2
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/accessibility/CVDCalculator;->SpotsV:[D
 
     iget-object v1, p0, Lcom/android/server/accessibility/CVDCalculator;->v:[D
@@ -595,13 +556,11 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 211
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accessibility/CVDCalculator;->mInputNums:[I
 
     aget v1, v1, v0
 
-    .line 212
     iget-object v3, p0, Lcom/android/server/accessibility/CVDCalculator;->SpotsU:[D
 
     add-int/lit8 v0, v0, 0x1
@@ -612,7 +571,6 @@
 
     aput-wide v4, v3, v0
 
-    .line 213
     iget-object v3, p0, Lcom/android/server/accessibility/CVDCalculator;->SpotsV:[D
 
     iget-object v4, p0, Lcom/android/server/accessibility/CVDCalculator;->v:[D
@@ -635,7 +593,6 @@
 .method public calculate()V
     .locals 0
 
-    .line 160
     invoke-virtual {p0}, Lcom/android/server/accessibility/CVDCalculator;->Calc()V
 
     return-void
@@ -644,7 +601,6 @@
 .method public getCVDSeverity()D
     .locals 2
 
-    .line 187
     iget-wide v0, p0, Lcom/android/server/accessibility/CVDCalculator;->CVDSeverity:D
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/accessibility/CVDCalculator;->roundHalfUp(D)D
@@ -657,7 +613,6 @@
 .method public getCVDType()I
     .locals 0
 
-    .line 174
     iget p0, p0, Lcom/android/server/accessibility/CVDCalculator;->CVDType:I
 
     return p0
@@ -666,7 +621,6 @@
 .method public getPredefinedServerityAndUserParameter(II)[D
     .locals 0
 
-    .line 522
     iget-object p0, p0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/accessibility/ColorTransferTable;->getPredefinedValueForEachType(II)[D
@@ -698,7 +652,6 @@
 
     new-array v12, v2, [I
 
-    .line 343
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -802,7 +755,6 @@
 
     goto/16 :goto_2
 
-    .line 350
     :cond_1
     :goto_0
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
@@ -823,7 +775,6 @@
 
     move-result v7
 
-    .line 351
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x4
@@ -842,7 +793,6 @@
 
     aput v7, v12, v20
 
-    .line 355
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x1
@@ -855,7 +805,6 @@
 
     move-result v15
 
-    .line 356
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x4
@@ -872,7 +821,6 @@
 
     aput v15, v12, v1
 
-    .line 360
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x1
@@ -883,7 +831,6 @@
 
     move-result v15
 
-    .line 361
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x4
@@ -900,7 +847,6 @@
 
     aput v15, v12, v7
 
-    .line 365
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x3
@@ -913,7 +859,6 @@
 
     move-result v15
 
-    .line 366
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x6
@@ -928,7 +873,6 @@
 
     aput v15, v12, v19
 
-    .line 370
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x3
@@ -939,7 +883,6 @@
 
     move-result v15
 
-    .line 371
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x6
@@ -954,7 +897,6 @@
 
     aput v15, v12, v18
 
-    .line 375
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x3
@@ -965,7 +907,6 @@
 
     move-result v15
 
-    .line 376
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x6
@@ -980,7 +921,6 @@
 
     aput v15, v12, v17
 
-    .line 380
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x5
@@ -991,7 +931,6 @@
 
     move-result v15
 
-    .line 381
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x2
@@ -1008,7 +947,6 @@
 
     aput v15, v12, v8
 
-    .line 385
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x5
@@ -1021,7 +959,6 @@
 
     move-result v15
 
-    .line 386
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x2
@@ -1036,7 +973,6 @@
 
     aput v15, v12, v16
 
-    .line 390
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x5
@@ -1047,7 +983,6 @@
 
     move-result v8
 
-    .line 391
     iget-object v0, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v1, 0x2
@@ -1126,7 +1061,6 @@
 
     goto/16 :goto_2
 
-    .line 422
     :cond_4
     :goto_1
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
@@ -1149,7 +1083,6 @@
 
     move-result v7
 
-    .line 423
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x4
@@ -1168,7 +1101,6 @@
 
     aput v7, v12, v20
 
-    .line 427
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x1
@@ -1181,7 +1113,6 @@
 
     move-result v15
 
-    .line 428
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x4
@@ -1198,7 +1129,6 @@
 
     aput v15, v12, v1
 
-    .line 432
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x1
@@ -1209,7 +1139,6 @@
 
     move-result v15
 
-    .line 433
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x4
@@ -1224,7 +1153,6 @@
 
     aput v15, v12, v25
 
-    .line 437
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x3
@@ -1235,7 +1163,6 @@
 
     move-result v15
 
-    .line 438
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x6
@@ -1250,7 +1177,6 @@
 
     aput v15, v12, v19
 
-    .line 442
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x3
@@ -1261,7 +1187,6 @@
 
     move-result v15
 
-    .line 443
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x6
@@ -1276,7 +1201,6 @@
 
     aput v15, v12, v18
 
-    .line 447
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x3
@@ -1287,7 +1211,6 @@
 
     move-result v15
 
-    .line 448
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x6
@@ -1302,7 +1225,6 @@
 
     aput v15, v12, v17
 
-    .line 452
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x5
@@ -1313,7 +1235,6 @@
 
     move-result v15
 
-    .line 453
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x2
@@ -1330,7 +1251,6 @@
 
     aput v15, v12, v1
 
-    .line 457
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x5
@@ -1341,7 +1261,6 @@
 
     move-result v15
 
-    .line 458
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x2
@@ -1356,7 +1275,6 @@
 
     aput v15, v12, v16
 
-    .line 462
     iget-object v1, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v2, 0x5
@@ -1367,7 +1285,6 @@
 
     move-result v8
 
-    .line 463
     iget-object v0, v0, Lcom/android/server/accessibility/CVDCalculator;->mColorTransferTable:Lcom/android/server/accessibility/ColorTransferTable;
 
     const/4 v1, 0x2
@@ -1394,7 +1311,6 @@
 
     mul-double/2addr v0, v10
 
-    .line 469
     invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
 
     move-result-wide v0
@@ -1468,7 +1384,6 @@
 
     mul-double/2addr p1, v0
 
-    .line 542
     invoke-static {p1, p2}, Ljava/lang/Math;->round(D)J
 
     move-result-wide p0
@@ -1485,10 +1400,8 @@
 .method public setNum([I)Z
     .locals 0
 
-    .line 110
     iput-object p1, p0, Lcom/android/server/accessibility/CVDCalculator;->mInputNums:[I
 
-    .line 113
     invoke-virtual {p0}, Lcom/android/server/accessibility/CVDCalculator;->InitMakeUV()Z
 
     move-result p0

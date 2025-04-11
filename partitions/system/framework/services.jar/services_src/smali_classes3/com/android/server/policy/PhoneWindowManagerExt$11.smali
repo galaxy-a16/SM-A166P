@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 5901
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$11;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0}, Lcom/android/server/wm/WindowManagerInternal$AppTransitionListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onAppTransitionCancelledLocked(Z)V
     .locals 2
 
-    .line 5911
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$11;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     const/4 v0, 0x1
@@ -39,7 +37,6 @@
 .method public onAppTransitionStartingLocked(JJ)I
     .locals 0
 
-    .line 5905
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$11;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     const/4 p1, 0x0

@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/os/IHwBinder;)V
     .locals 0
 
-    .line 214
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 215
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Landroid/os/IHwBinder;
@@ -32,17 +30,14 @@
 .method public add(Ljava/lang/String;Landroid/hidl/base/V1_0/IBase;)Z
     .locals 2
 
-    .line 268
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.0::IServiceManager"
 
-    .line 269
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 270
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
     if-nez p2, :cond_0
@@ -51,7 +46,6 @@
 
     goto :goto_0
 
-    .line 271
     :cond_0
     invoke-interface {p2}, Landroid/hidl/base/V1_0/IBase;->asBinder()Landroid/os/IHwBinder;
 
@@ -60,12 +54,10 @@
     :goto_0
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeStrongBinder(Landroid/os/IHwBinder;)V
 
-    .line 273
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 275
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -75,20 +67,16 @@
 
     invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 276
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 277
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 279
     invoke-virtual {p1}, Landroid/os/HwParcel;->readBool()Z
 
     move-result p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 282
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return p0
@@ -98,14 +86,12 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 283
     throw p0
 .end method
 
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    .line 220
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
     return-object p0
@@ -114,28 +100,22 @@
 .method public debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
     .locals 2
 
-    .line 451
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 452
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 453
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeNativeHandle(Landroid/os/NativeHandle;)V
 
-    .line 454
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeStringVector(Ljava/util/ArrayList;)V
 
-    .line 456
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 458
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -145,15 +125,12 @@
 
     invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 459
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 460
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 462
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -163,29 +140,24 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 463
     throw p0
 .end method
 
 .method public debugDump()Ljava/util/ArrayList;
     .locals 4
 
-    .line 371
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.0::IServiceManager"
 
-    .line 372
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 374
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 376
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -195,20 +167,16 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 377
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 378
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 380
     invoke-static {v1}, Landroid/hidl/manager/V1_0/IServiceManager$InstanceDebugInfo;->readVectorFromParcel(Landroid/os/HwParcel;)Ljava/util/ArrayList;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 383
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -218,14 +186,12 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 384
     throw p0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 235
     invoke-static {p0, p1}, Landroid/os/HidlSupport;->interfacesEqual(Landroid/os/IHwInterface;Ljava/lang/Object;)Z
 
     move-result p0
@@ -236,28 +202,22 @@
 .method public get(Ljava/lang/String;Ljava/lang/String;)Landroid/hidl/base/V1_0/IBase;
     .locals 2
 
-    .line 247
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.0::IServiceManager"
 
-    .line 248
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 249
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 250
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 252
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 254
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -267,13 +227,10 @@
 
     invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 255
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 256
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 258
     invoke-virtual {p1}, Landroid/os/HwParcel;->readStrongBinder()Landroid/os/IHwBinder;
 
     move-result-object p0
@@ -284,7 +241,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 261
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -294,29 +250,24 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 262
     throw p0
 .end method
 
 .method public getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
     .locals 4
 
-    .line 563
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 564
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 566
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 568
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -326,23 +277,18 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 569
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 570
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 572
     new-instance p0, Landroid/hidl/base/V1_0/DebugInfo;
 
     invoke-direct {p0}, Landroid/hidl/base/V1_0/DebugInfo;-><init>()V
 
-    .line 573
     invoke-virtual {p0, v1}, Landroid/hidl/base/V1_0/DebugInfo;->readFromParcel(Landroid/os/HwParcel;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 576
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -352,29 +298,24 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 577
     throw p0
 .end method
 
 .method public getHashChain()Ljava/util/ArrayList;
     .locals 12
 
-    .line 488
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 489
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 491
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 493
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -384,27 +325,22 @@
 
     invoke-interface {p0, v2, v0, v1, v10}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 494
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 495
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 497
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     const-wide/16 v2, 0x10
 
-    .line 499
     invoke-virtual {v1, v2, v3}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
 
     move-result-object v0
 
     const-wide/16 v2, 0x8
 
-    .line 501
     invoke-virtual {v0, v2, v3}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result v11
@@ -413,7 +349,6 @@
 
     int-to-long v3, v2
 
-    .line 503
     invoke-virtual {v0}, Landroid/os/HwBlob;->handle()J
 
     move-result-wide v5
@@ -424,12 +359,10 @@
 
     move-object v2, v1
 
-    .line 502
     invoke-virtual/range {v2 .. v9}, Landroid/os/HwParcel;->readEmbeddedBuffer(JJJZ)Landroid/os/HwBlob;
 
     move-result-object v0
 
-    .line 506
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     :goto_0
@@ -443,10 +376,8 @@
 
     int-to-long v4, v4
 
-    .line 511
     invoke-virtual {v0, v4, v5, v3, v2}, Landroid/os/HwBlob;->copyToInt8Array(J[BI)V
 
-    .line 514
     invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -455,7 +386,6 @@
 
     goto :goto_0
 
-    .line 520
     :cond_0
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
@@ -466,35 +396,28 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 521
     throw p0
 .end method
 
 .method public getTransport(Ljava/lang/String;Ljava/lang/String;)B
     .locals 2
 
-    .line 289
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.0::IServiceManager"
 
-    .line 290
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 291
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 292
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 294
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 296
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -504,20 +427,16 @@
 
     invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 297
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 298
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 300
     invoke-virtual {p1}, Landroid/os/HwParcel;->readInt8()B
 
     move-result p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 303
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return p0
@@ -527,14 +446,12 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 304
     throw p0
 .end method
 
 .method public final hashCode()I
     .locals 0
 
-    .line 240
     invoke-virtual {p0}, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->asBinder()Landroid/os/IHwBinder;
 
     move-result-object p0
@@ -549,22 +466,18 @@
 .method public interfaceChain()Ljava/util/ArrayList;
     .locals 4
 
-    .line 432
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 433
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 435
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 437
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -574,20 +487,16 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 438
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 439
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 441
     invoke-virtual {v1}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 444
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -597,29 +506,24 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 445
     throw p0
 .end method
 
 .method public interfaceDescriptor()Ljava/lang/String;
     .locals 4
 
-    .line 469
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 470
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 472
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 474
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -629,20 +533,16 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 475
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 476
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 478
     invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 481
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -652,14 +552,12 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 482
     throw p0
 .end method
 
 .method public linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
     .locals 0
 
-    .line 542
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/os/IHwBinder;->linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
@@ -672,22 +570,18 @@
 .method public list()Ljava/util/ArrayList;
     .locals 4
 
-    .line 310
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.0::IServiceManager"
 
-    .line 311
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 313
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 315
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -697,20 +591,16 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 316
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 317
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 319
     invoke-virtual {v1}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 322
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -720,32 +610,26 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 323
     throw p0
 .end method
 
 .method public listByInterface(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 3
 
-    .line 329
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.0::IServiceManager"
 
-    .line 330
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 331
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 333
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 335
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -755,20 +639,16 @@
 
     invoke-interface {p0, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 336
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 337
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 339
     invoke-virtual {p1}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 342
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -778,29 +658,24 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 343
     throw p0
 .end method
 
 .method public notifySyspropsChanged()V
     .locals 4
 
-    .line 583
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 584
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 586
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 588
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -810,12 +685,10 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 589
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 591
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -825,29 +698,24 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 592
     throw p0
 .end method
 
 .method public ping()V
     .locals 4
 
-    .line 547
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 548
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 550
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 552
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -857,15 +725,12 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 553
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 554
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 556
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -875,27 +740,22 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 557
     throw p0
 .end method
 
 .method public registerForNotifications(Ljava/lang/String;Ljava/lang/String;Landroid/hidl/manager/V1_0/IServiceNotification;)Z
     .locals 2
 
-    .line 349
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.0::IServiceManager"
 
-    .line 350
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 351
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 352
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
     if-nez p3, :cond_0
@@ -904,7 +764,6 @@
 
     goto :goto_0
 
-    .line 353
     :cond_0
     invoke-interface {p3}, Landroid/hidl/manager/V1_0/IServiceNotification;->asBinder()Landroid/os/IHwBinder;
 
@@ -913,12 +772,10 @@
     :goto_0
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeStrongBinder(Landroid/os/IHwBinder;)V
 
-    .line 355
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 357
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -928,20 +785,16 @@
 
     invoke-interface {p0, p2, v0, p1, p3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 358
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 359
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 361
     invoke-virtual {p1}, Landroid/os/HwParcel;->readBool()Z
 
     move-result p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 364
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return p0
@@ -951,35 +804,28 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 365
     throw p0
 .end method
 
 .method public registerPassthroughClient(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 390
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.0::IServiceManager"
 
-    .line 391
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 392
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 393
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 395
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 397
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -989,15 +835,12 @@
 
     invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 398
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 399
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 401
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -1007,29 +850,24 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 402
     throw p0
 .end method
 
 .method public setHALInstrumentation()V
     .locals 4
 
-    .line 527
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 528
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 530
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 532
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -1039,12 +877,10 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 533
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 535
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -1054,14 +890,12 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 536
     throw p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 226
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1094,7 +928,6 @@
 .method public unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
     .locals 0
 
-    .line 598
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
     invoke-interface {p0, p1}, Landroid/os/IHwBinder;->unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
@@ -1107,20 +940,16 @@
 .method public unregisterForNotifications(Ljava/lang/String;Ljava/lang/String;Landroid/hidl/manager/V1_0/IServiceNotification;)Z
     .locals 2
 
-    .line 409
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.manager@1.1::IServiceManager"
 
-    .line 410
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 411
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 412
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
     if-nez p3, :cond_0
@@ -1129,7 +958,6 @@
 
     goto :goto_0
 
-    .line 413
     :cond_0
     invoke-interface {p3}, Landroid/hidl/manager/V1_0/IServiceNotification;->asBinder()Landroid/os/IHwBinder;
 
@@ -1138,12 +966,10 @@
     :goto_0
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeStrongBinder(Landroid/os/IHwBinder;)V
 
-    .line 415
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 417
     :try_start_0
     iget-object p0, p0, Landroid/hidl/manager/V1_1/IServiceManager$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -1153,20 +979,16 @@
 
     invoke-interface {p0, p2, v0, p1, p3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 418
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 419
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 421
     invoke-virtual {p1}, Landroid/os/HwParcel;->readBool()Z
 
     move-result p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 424
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return p0
@@ -1176,6 +998,5 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 425
     throw p0
 .end method

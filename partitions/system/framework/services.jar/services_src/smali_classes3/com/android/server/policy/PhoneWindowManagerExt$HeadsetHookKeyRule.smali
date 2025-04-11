@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 2606
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HeadsetHookKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     const/16 p1, 0x4f
 
-    .line 2607
     invoke-direct {p0, p1}, Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;-><init>(I)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public onPress(JLandroid/view/KeyEvent;)V
     .locals 0
 
-    .line 2612
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HeadsetHookKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p1, p1, Lcom/android/server/policy/PhoneWindowManagerExt;->mKeyCustomizationPolicy:Lcom/android/server/policy/KeyCustomizationManager;
@@ -40,7 +37,6 @@
 
     return-void
 
-    .line 2615
     :cond_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -54,7 +50,6 @@
 
     return-void
 
-    .line 2618
     :cond_1
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$HeadsetHookKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 

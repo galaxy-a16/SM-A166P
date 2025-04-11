@@ -15,13 +15,10 @@
 .method public constructor <init>(ILcom/android/server/PinnerService$PinnedFile;)V
     .locals 1
 
-    .line 289
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 290
     iput p1, p0, Lcom/android/server/PinnerService$PinnedFileStats;->uid:I
 
-    .line 291
     iget-object p1, p2, Lcom/android/server/PinnerService$PinnedFile;->fileName:Ljava/lang/String;
 
     const/16 v0, 0x2f
@@ -38,7 +35,6 @@
 
     iput-object p1, p0, Lcom/android/server/PinnerService$PinnedFileStats;->filename:Ljava/lang/String;
 
-    .line 292
     iget p1, p2, Lcom/android/server/PinnerService$PinnedFile;->bytesPinned:I
 
     div-int/lit16 p1, p1, 0x400

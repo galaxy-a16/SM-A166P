@@ -15,10 +15,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 623
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 625
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -27,7 +25,6 @@
 
     const/4 v0, 0x1
 
-    .line 627
     iput v0, p0, Lcom/android/server/wm/ActivityMetricsLogger$PackageCompatStateInfo;->mLastLoggedState:I
 
     return-void
@@ -36,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/ActivityMetricsLogger$PackageCompatStateInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/ActivityMetricsLogger$PackageCompatStateInfo;-><init>()V
 
     return-void

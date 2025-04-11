@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbDeviceManager;)V
     .locals 0
 
-    .line 300
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$2;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 303
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -35,14 +33,12 @@
 
     const-string p0, "Connect"
 
-    .line 304
     invoke-virtual {p2, p0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "On"
 
-    .line 305
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -51,10 +47,8 @@
 
     const/4 p0, 0x1
 
-    .line 306
     invoke-static {p0}, Lcom/android/server/usb/UsbDeviceManager;->-$$Nest$sfputmSetNextUsbModeToDefault(Z)V
 
-    .line 307
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0

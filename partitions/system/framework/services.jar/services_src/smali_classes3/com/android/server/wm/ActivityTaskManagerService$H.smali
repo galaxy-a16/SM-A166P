@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 7133
     iput-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 7134
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    .line 7139
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -52,7 +49,6 @@
 
     goto/16 :goto_0
 
-    .line 7176
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -78,12 +74,10 @@
 
     move-result-object p0
 
-    .line 7177
     invoke-virtual {p0}, Landroid/widget/Toast;->show()V
 
     goto/16 :goto_0
 
-    .line 7167
     :cond_1
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -93,7 +87,6 @@
 
     monitor-enter p1
 
-    .line 7168
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -103,12 +96,10 @@
 
     if-nez v0, :cond_2
 
-    .line 7169
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-static {p0, v1}, Lcom/android/server/wm/ActivityTaskManagerService;->-$$Nest$fputmAppSwitchesState(Lcom/android/server/wm/ActivityTaskManagerService;I)V
 
-    .line 7171
     :cond_2
     monitor-exit p1
     :try_end_0
@@ -130,7 +121,6 @@
 
     throw p0
 
-    .line 7153
     :cond_3
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -140,18 +130,15 @@
 
     monitor-enter v0
 
-    .line 7154
     :try_start_2
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-static {p1, v4}, Lcom/android/server/wm/ActivityTaskManagerService;->-$$Nest$fputmRetainPowerModeAndTopProcessState(Lcom/android/server/wm/ActivityTaskManagerService;Z)V
 
-    .line 7155
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {p1, v3}, Lcom/android/server/wm/ActivityTaskManagerService;->endLaunchPowerMode(I)V
 
-    .line 7156
     iget-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mTopApp:Lcom/android/server/wm/WindowProcessController;
@@ -166,14 +153,12 @@
 
     if-ne p1, v2, :cond_4
 
-    .line 7159
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mTopApp:Lcom/android/server/wm/WindowProcessController;
 
     invoke-virtual {p0, v4, v4, v1, v4}, Lcom/android/server/wm/WindowProcessController;->updateProcessInfo(ZZZZ)V
 
-    .line 7163
     :cond_4
     monitor-exit v0
     :try_end_2
@@ -195,13 +180,11 @@
 
     throw p0
 
-    .line 7146
     :cond_5
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/wm/WindowProcessController;
 
-    .line 7147
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -210,11 +193,9 @@
 
     monitor-enter v0
 
-    .line 7148
     :try_start_4
     invoke-virtual {p1}, Lcom/android/server/wm/WindowProcessController;->updateRunningRemoteOrRecentsAnimation()V
 
-    .line 7149
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
@@ -235,13 +216,11 @@
 
     throw p0
 
-    .line 7141
     :cond_6
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/am/AppTimeTracker;
 
-    .line 7142
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService$H;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;

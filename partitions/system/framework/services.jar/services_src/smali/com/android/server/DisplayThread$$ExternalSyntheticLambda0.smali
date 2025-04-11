@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/DisplayThread;->$r8$lambda$cnWykA9dLLX88I-kGsOl-MHMrmk()V
 
     return-void

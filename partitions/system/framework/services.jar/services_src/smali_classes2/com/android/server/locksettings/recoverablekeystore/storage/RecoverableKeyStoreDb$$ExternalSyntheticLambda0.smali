@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Ljava/util/StringJoiner;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverableKeyStoreDb$$ExternalSyntheticLambda0;->f$0:Ljava/util/StringJoiner;
@@ -27,7 +26,6 @@
 .method public final accept(I)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverableKeyStoreDb$$ExternalSyntheticLambda0;->f$0:Ljava/util/StringJoiner;
 
     invoke-static {p0, p1}, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverableKeyStoreDb;->$r8$lambda$1xccAUVx0Qp_tc0qjY6swGsFebM(Ljava/util/StringJoiner;I)V

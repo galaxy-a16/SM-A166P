@@ -7,7 +7,6 @@
 .method public onDismissed(I[B)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -17,20 +16,17 @@
 .method public onEvent(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onTouchEvent(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onTryAgainPressed(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/audio/MediaFocusControl;->$r8$lambda$YLQhv_0omU-CauNgVKNjuQj8wAQ()V
 
     return-void

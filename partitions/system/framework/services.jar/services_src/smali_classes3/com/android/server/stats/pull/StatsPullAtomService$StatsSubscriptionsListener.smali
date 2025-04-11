@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$H7SmJSkIfanGlnLbgU8c670mrIk(Landroid/telephony/SubscriptionInfo;Lcom/android/server/stats/pull/netstats/SubInfo;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->lambda$onSubscriptionsChanged$0(Landroid/telephony/SubscriptionInfo;Lcom/android/server/stats/pull/netstats/SubInfo;)Z
 
     move-result p0
@@ -24,12 +23,10 @@
 .method public constructor <init>(Lcom/android/server/stats/pull/StatsPullAtomService;Landroid/telephony/SubscriptionManager;)V
     .locals 0
 
-    .line 5043
     iput-object p1, p0, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
 
-    .line 5044
     iput-object p2, p0, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->mSm:Landroid/telephony/SubscriptionManager;
 
     return-void
@@ -38,7 +35,6 @@
 .method public static synthetic lambda$onSubscriptionsChanged$0(Landroid/telephony/SubscriptionInfo;Lcom/android/server/stats/pull/netstats/SubInfo;)Z
     .locals 0
 
-    .line 5052
     iget p1, p1, Lcom/android/server/stats/pull/netstats/SubInfo;->subId:I
 
     invoke-virtual {p0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
@@ -63,14 +59,12 @@
 .method public onSubscriptionsChanged()V
     .locals 11
 
-    .line 5049
     iget-object v0, p0, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->mSm:Landroid/telephony/SubscriptionManager;
 
     invoke-virtual {v0}, Landroid/telephony/SubscriptionManager;->getCompleteActiveSubscriptionInfoList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 5050
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -88,7 +82,6 @@
 
     check-cast v1, Landroid/telephony/SubscriptionInfo;
 
-    .line 5051
     iget-object v2, p0, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     invoke-static {v2}, Lcom/android/server/stats/pull/StatsPullAtomService;->-$$Nest$fgetmHistoricalSubs(Lcom/android/server/stats/pull/StatsPullAtomService;)Ljava/util/ArrayList;
@@ -109,23 +102,19 @@
 
     goto :goto_0
 
-    .line 5057
     :cond_0
     invoke-virtual {v1}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
 
     move-result v2
 
-    .line 5058
     invoke-virtual {v1}, Landroid/telephony/SubscriptionInfo;->getMccString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 5059
     invoke-virtual {v1}, Landroid/telephony/SubscriptionInfo;->getMncString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 5060
     iget-object v3, p0, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     invoke-static {v3}, Lcom/android/server/stats/pull/StatsPullAtomService;->-$$Nest$fgetmTelephony(Lcom/android/server/stats/pull/StatsPullAtomService;)Landroid/telephony/TelephonyManager;
@@ -136,7 +125,6 @@
 
     move-result-object v8
 
-    .line 5061
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -149,7 +137,6 @@
 
     if-nez v3, :cond_2
 
-    .line 5062
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -166,7 +153,6 @@
 
     goto :goto_1
 
-    .line 5067
     :cond_1
     new-instance v10, Lcom/android/server/stats/pull/netstats/SubInfo;
 
@@ -174,7 +160,6 @@
 
     move-result v5
 
-    .line 5068
     invoke-virtual {v1}, Landroid/telephony/SubscriptionInfo;->isOpportunistic()Z
 
     move-result v9
@@ -187,7 +172,6 @@
 
     const-string v1, "StatsPullAtomService"
 
-    .line 5069
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -208,7 +192,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5071
     iget-object v1, p0, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     invoke-static {v1}, Lcom/android/server/stats/pull/StatsPullAtomService;->-$$Nest$fgetmDataBytesTransferLock(Lcom/android/server/stats/pull/StatsPullAtomService;)Ljava/lang/Object;
@@ -217,7 +200,6 @@
 
     monitor-enter v1
 
-    .line 5072
     :try_start_0
     iget-object v2, p0, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
@@ -227,7 +209,6 @@
 
     invoke-virtual {v2, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5075
     iget-object v2, p0, Lcom/android/server/stats/pull/StatsPullAtomService$StatsSubscriptionsListener;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     invoke-static {v2}, Lcom/android/server/stats/pull/StatsPullAtomService;->-$$Nest$fgetmNetworkStatsBaselines(Lcom/android/server/stats/pull/StatsPullAtomService;)Ljava/util/ArrayList;
@@ -242,7 +223,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 5076
     monitor-exit v1
 
     goto/16 :goto_0
@@ -260,7 +240,6 @@
     :goto_1
     const-string v1, "StatsPullAtomService"
 
-    .line 5063
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

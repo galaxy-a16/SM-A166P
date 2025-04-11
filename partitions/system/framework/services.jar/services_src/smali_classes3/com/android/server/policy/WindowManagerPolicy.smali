@@ -16,7 +16,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 1280
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -93,7 +92,6 @@
 .method public getMaxWindowLayer()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x24
 
     return p0
@@ -104,7 +102,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 725
     invoke-static {p1}, Lcom/android/server/policy/WindowManagerPolicyExt;->getSubWindowLayerFromTypeLw(I)I
 
     move-result p0
@@ -138,7 +135,6 @@
 
     return p0
 
-    .line 731
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -176,7 +172,6 @@
 .method public getWindowLayerFromTypeLw(I)I
     .locals 1
 
-    .line 516
     invoke-static {p1}, Landroid/view/WindowManager$LayoutParams;->isSystemAlertWindowType(I)Z
 
     move-result v0
@@ -185,14 +180,12 @@
 
     const/4 v0, 0x0
 
-    .line 520
     invoke-interface {p0, p1, v0}, Lcom/android/server/policy/WindowManagerPolicy;->getWindowLayerFromTypeLw(IZ)I
 
     move-result p0
 
     return p0
 
-    .line 517
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -208,7 +201,6 @@
 
     const/4 v0, 0x0
 
-    .line 538
     invoke-interface {p0, p1, p2, v0}, Lcom/android/server/policy/WindowManagerPolicy;->getWindowLayerFromTypeLw(IZZ)I
 
     move-result p0
@@ -223,7 +215,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 562
     invoke-interface {p0}, Lcom/android/server/policy/WindowManagerPolicy;->getMaxWindowLayer()I
 
     move-result p0
@@ -252,7 +243,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 675
     :pswitch_0
     invoke-static {p1, p2, p3}, Lcom/android/server/policy/WindowManagerPolicyExt;->getWindowLayerFromTypeLw(IZZ)I
 
@@ -402,7 +392,6 @@
     :goto_0
     return p0
 
-    .line 587
     :pswitch_1c
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->isEnabled()Z
 
@@ -410,7 +399,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 588
     invoke-static {}, Lcom/android/server/wm/WmCoverState;->getInstance()Lcom/android/server/wm/WmCoverState;
 
     move-result-object p0
@@ -449,7 +437,6 @@
 
     return p0
 
-    .line 682
     :cond_6
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -523,7 +510,6 @@
 .method public getWindowLayerLw(Lcom/android/server/policy/WindowManagerPolicy$WindowState;)I
     .locals 1
 
-    .line 505
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$WindowState;->getBaseType()I
 
     move-result v0

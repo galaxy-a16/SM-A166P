@@ -17,7 +17,6 @@
 .method public createClock()Lcom/android/server/display/AutomaticBrightnessController$Clock;
     .locals 0
 
-    .line 2587
     new-instance p0, Lcom/android/server/display/AutomaticBrightnessController$Injector$$ExternalSyntheticLambda0;
 
     invoke-direct {p0}, Lcom/android/server/display/AutomaticBrightnessController$Injector$$ExternalSyntheticLambda0;-><init>()V
@@ -28,7 +27,6 @@
 .method public getBackgroundThreadHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 2583
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p0

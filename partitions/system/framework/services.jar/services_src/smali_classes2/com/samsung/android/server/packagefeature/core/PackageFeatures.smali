@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$6bv703M16_wiGPpoP4Ylz8HA_bI(Lcom/samsung/android/server/packagefeature/PackageFeatureController;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->lambda$new$0(Lcom/samsung/android/server/packagefeature/PackageFeatureController;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$ArhKDwiA3pnapiVdVydhXpI4CTk(Ljava/util/function/Consumer;Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->lambda$forAllGroups$1(Ljava/util/function/Consumer;Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static synthetic $r8$lambda$GTHA5Xs1UMTsUBv61LS4hbHG-Vg(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->lambda$dump$3(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
 
     return-void
@@ -44,7 +41,6 @@
 .method public static synthetic $r8$lambda$RFjClcbGecBakUuQbBHDRkUbrfM(Lcom/samsung/android/server/packagefeature/core/PackageFeatures;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->isAllFeaturesDisabled()Z
 
     move-result p0
@@ -55,7 +51,6 @@
 .method public static synthetic $r8$lambda$adLWiRza5YvIFHXY_owka0bA_oU(Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->lambda$updateAllFeaturesDisabled$2(Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
 
     return-void
@@ -64,23 +59,18 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lcom/samsung/android/server/packagefeature/PackageFeatureController;Lcom/samsung/android/server/util/CoreLogger;)V
     .locals 10
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mGroups:Ljava/util/Map;
 
-    .line 54
     iput-object p1, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mContext:Landroid/content/Context;
 
-    .line 55
     iput-object p2, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mHandler:Landroid/os/Handler;
 
-    .line 56
     invoke-static {}, Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;->values()[Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;
 
     move-result-object p1
@@ -94,12 +84,10 @@
 
     aget-object v8, p1, v1
 
-    .line 57
     iget-boolean v2, v8, Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;->mEnabled:Z
 
     if-nez v2, :cond_0
 
-    .line 58
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,13 +114,11 @@
 
     goto :goto_2
 
-    .line 61
     :cond_0
     iget-boolean v2, v8, Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;->mUnformatted:Z
 
     if-eqz v2, :cond_1
 
-    .line 62
     new-instance v9, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;
 
     iget-object v3, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mContext:Landroid/content/Context;
@@ -153,7 +139,6 @@
 
     goto :goto_1
 
-    .line 64
     :cond_1
     new-instance v9, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;
 
@@ -173,7 +158,6 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/samsung/android/server/util/CoreLogger;Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;Ljava/util/function/Supplier;)V
 
-    .line 66
     :goto_1
     iget-object v2, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mGroups:Ljava/util/Map;
 
@@ -186,7 +170,6 @@
 
     goto :goto_0
 
-    .line 68
     :cond_2
     new-instance p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures$$ExternalSyntheticLambda3;
 
@@ -200,7 +183,6 @@
 .method public static synthetic lambda$dump$3(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
     .locals 0
 
-    .line 102
     invoke-virtual {p2, p0, p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
@@ -209,7 +191,6 @@
 .method public static synthetic lambda$forAllGroups$1(Ljava/util/function/Consumer;Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
     .locals 0
 
-    .line 76
     invoke-interface {p0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
@@ -218,7 +199,6 @@
 .method public static synthetic lambda$new$0(Lcom/samsung/android/server/packagefeature/PackageFeatureController;)V
     .locals 4
 
-    .line 69
     invoke-static {}, Lcom/samsung/android/server/packagefeature/PackageFeature;->values()[Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     move-result-object v0
@@ -232,7 +212,6 @@
 
     aget-object v3, v0, v2
 
-    .line 70
     invoke-virtual {v3, p0}, Lcom/samsung/android/server/packagefeature/PackageFeature;->setPackageFeatureController(Lcom/samsung/android/server/packagefeature/PackageFeatureController;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -246,7 +225,6 @@
 .method public static synthetic lambda$updateAllFeaturesDisabled$2(Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V
     .locals 0
 
-    .line 84
     invoke-virtual {p0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;->propagateToCallbacks()V
 
     return-void
@@ -257,7 +235,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 101
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -278,7 +255,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 102
     new-instance v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p1, p2}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures$$ExternalSyntheticLambda1;-><init>(Ljava/io/PrintWriter;Ljava/lang/String;)V
@@ -291,7 +267,6 @@
 .method public forAllGroups(Ljava/util/function/Consumer;)V
     .locals 1
 
-    .line 76
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mGroups:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -310,7 +285,6 @@
 .method public getGroup(Ljava/lang/String;)Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;
     .locals 0
 
-    .line 97
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mGroups:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -325,7 +299,6 @@
 .method public getGroupNames()Ljava/util/Set;
     .locals 0
 
-    .line 93
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mGroups:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -338,7 +311,6 @@
 .method public final isAllFeaturesDisabled()Z
     .locals 0
 
-    .line 89
     iget-boolean p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mAllFeaturesDisabled:Z
 
     return p0
@@ -347,7 +319,6 @@
 .method public updateAllFeaturesDisabled(Z)Z
     .locals 1
 
-    .line 80
     iget-boolean v0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mAllFeaturesDisabled:Z
 
     if-ne v0, p1, :cond_0
@@ -356,11 +327,9 @@
 
     return p0
 
-    .line 83
     :cond_0
     iput-boolean p1, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->mAllFeaturesDisabled:Z
 
-    .line 84
     new-instance p1, Lcom/samsung/android/server/packagefeature/core/PackageFeatures$$ExternalSyntheticLambda0;
 
     invoke-direct {p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures$$ExternalSyntheticLambda0;-><init>()V

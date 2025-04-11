@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$5IgqqBRRaURrVhBA9xD6mm8mpzY()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/pm/dex/OdsignStatsLogger;->writeStats()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static triggerStatsWrite()V
     .locals 2
 
-    .line 48
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -39,13 +37,11 @@
 
     const-string v2, "OdsignStatsLogger"
 
-    .line 53
     :try_start_0
     invoke-static {v0}, Llibcore/io/IoUtils;->readFileAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 57
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -58,13 +54,11 @@
 
     const-string v0, "Failed to delete metrics file"
 
-    .line 58
     invoke-static {v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     const-string v0, "\n"
 
-    .line 65
     invoke-virtual {v3, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -82,12 +76,10 @@
 
     const-string v7, " "
 
-    .line 66
     invoke-virtual {v6, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 68
     invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z
 
     move-result v8
@@ -102,7 +94,6 @@
 
     goto/16 :goto_3
 
-    .line 73
     :cond_1
     aget-object v8, v7, v4
 
@@ -162,7 +153,6 @@
 
     if-eq v8, v9, :cond_5
 
-    .line 105
     :try_start_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -184,7 +174,6 @@
 
     goto/16 :goto_4
 
-    .line 90
     :cond_5
     array-length v8, v7
     :try_end_1
@@ -195,7 +184,6 @@
 
     if-eq v8, v10, :cond_6
 
-    .line 91
     :try_start_2
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -218,7 +206,6 @@
 
     goto :goto_4
 
-    .line 96
     :cond_6
     :try_start_3
     aget-object v7, v7, v9
@@ -229,7 +216,6 @@
 
     const/16 v8, 0x224
 
-    .line 97
     invoke-static {v8, v7}, Lcom/android/internal/art/ArtStatsLog;->write(II)V
     :try_end_3
     .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_0
@@ -238,7 +224,6 @@
 
     goto :goto_4
 
-    .line 99
     :catch_0
     :try_start_4
     new-instance v7, Ljava/lang/StringBuilder;
@@ -259,7 +244,6 @@
 
     goto :goto_4
 
-    .line 75
     :cond_7
     array-length v8, v7
 
@@ -267,7 +251,6 @@
 
     if-eq v8, v12, :cond_8
 
-    .line 76
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -288,7 +271,6 @@
 
     goto :goto_4
 
-    .line 80
     :cond_8
     aget-object v6, v7, v9
 
@@ -296,7 +278,6 @@
 
     move-result v6
 
-    .line 81
     aget-object v8, v7, v10
 
     invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -305,7 +286,6 @@
 
     const/4 v9, 0x3
 
-    .line 82
     aget-object v7, v7, v9
 
     invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -314,7 +294,6 @@
 
     const/16 v9, 0x1a3
 
-    .line 84
     invoke-static {v9, v6, v8, v7}, Lcom/android/internal/art/ArtStatsLog;->write(IZZZ)V
 
     goto :goto_4
@@ -323,7 +302,6 @@
     :goto_3
     const-string v6, "Empty metrics line"
 
-    .line 69
     invoke-static {v2, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_4
     .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_2
@@ -339,7 +317,6 @@
 
     const-string v1, "Reading metrics file failed"
 
-    .line 111
     invoke-static {v2, v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :catch_2

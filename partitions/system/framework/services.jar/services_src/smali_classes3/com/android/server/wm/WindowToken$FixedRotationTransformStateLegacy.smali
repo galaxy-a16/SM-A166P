@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;I)V
     .locals 1
 
-    .line 179
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;-><init>(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;)V
 
-    .line 174
     new-instance p2, Ljava/util/ArrayList;
 
     const/4 p3, 0x3
@@ -25,7 +23,6 @@
 
     iput-object p2, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;->mRotatedContainers:Ljava/util/ArrayList;
 
-    .line 181
     new-instance p2, Lcom/android/server/wm/SeamlessRotator;
 
     iget p3, p1, Landroid/view/DisplayInfo;->rotation:I
@@ -44,10 +41,8 @@
 .method public disassociate(Lcom/android/server/wm/WindowToken;)V
     .locals 0
 
-    .line 206
     invoke-super {p0, p1}, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->disassociate(Lcom/android/server/wm/WindowToken;)V
 
-    .line 207
     iget-object p0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;->mRotatedContainers:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -58,7 +53,6 @@
 .method public resetTransform()V
     .locals 4
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;->mRotatedContainers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -70,7 +64,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 196
     iget-object v1, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;->mRotatedContainers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -79,14 +72,12 @@
 
     check-cast v1, Lcom/android/server/wm/WindowContainer;
 
-    .line 198
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 199
     iget-object v2, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;->mRotator:Lcom/android/server/wm/SeamlessRotator;
 
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
@@ -107,7 +98,6 @@
 .method public transform(Lcom/android/server/wm/WindowContainer;)V
     .locals 2
 
-    .line 187
     iget-object v0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;->mRotator:Lcom/android/server/wm/SeamlessRotator;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
@@ -116,7 +106,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/wm/SeamlessRotator;->unrotate(Landroid/view/SurfaceControl$Transaction;Lcom/android/server/wm/WindowContainer;)V
 
-    .line 188
     iget-object v0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;->mRotatedContainers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -125,7 +114,6 @@
 
     if-nez v0, :cond_0
 
-    .line 189
     iget-object p0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;->mRotatedContainers:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z

@@ -7,7 +7,6 @@
 .method public static getType(I)I
     .locals 2
 
-    .line 523
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_DUAL_DISPLAY:Z
 
     const/4 v1, 0x0

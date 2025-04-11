@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/location/provider/AbstractLocationProvider$State;
 
     invoke-static {p1}, Lcom/android/server/location/provider/proxy/ProxyLocationProvider$1;->$r8$lambda$mU0CCDW0ncsvRk_rG7IFlKk_Smo(Lcom/android/server/location/provider/AbstractLocationProvider$State;)Lcom/android/server/location/provider/AbstractLocationProvider$State;

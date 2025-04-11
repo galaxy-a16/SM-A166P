@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$BQUWKzwIcFldcIebrN90_1Ii5S8(Lcom/android/server/SpqrService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/SpqrService;->lambda$findSpqrNativeService$0()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fputmService(Lcom/android/server/SpqrService;Landroid/os/ISpqrService;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/SpqrService;->mService:Landroid/os/ISpqrService;
 
     return-void
@@ -31,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$mfindSpqrNativeService(Lcom/android/server/SpqrService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/SpqrService;->findSpqrNativeService()V
 
     return-void
@@ -40,12 +37,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 49
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     const-string p1, "/system/etc/spqr-package-blocklist.conf"
 
-    .line 50
     invoke-virtual {p0, p1}, Lcom/android/server/SpqrService;->initPackageBlockList(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object p1
@@ -58,7 +53,6 @@
 .method private synthetic lambda$findSpqrNativeService$0()V
     .locals 0
 
-    .line 131
     invoke-virtual {p0}, Lcom/android/server/SpqrService;->findSpqrNativeService()V
 
     return-void
@@ -69,7 +63,6 @@
 .method public final checkUserAndService(II)Z
     .locals 2
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/SpqrService;->mService:Landroid/os/ISpqrService;
 
     const/4 v0, 0x0
@@ -80,7 +73,6 @@
 
     const-string/jumbo p0, "spqr_service is not initialized"
 
-    .line 138
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -88,7 +80,6 @@
     :cond_0
     if-gez p1, :cond_1
 
-    .line 142
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,7 +101,6 @@
     :cond_1
     if-gez p2, :cond_2
 
-    .line 146
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +136,6 @@
 
     move/from16 v6, p4
 
-    .line 166
     invoke-virtual {p0, p3, v6}, Lcom/android/server/SpqrService;->checkUserAndService(II)Z
 
     move-result v2
@@ -157,7 +146,6 @@
 
     return v11
 
-    .line 170
     :cond_0
     :try_start_0
     iget-object v2, v0, Lcom/android/server/SpqrService;->mService:Landroid/os/ISpqrService;
@@ -188,7 +176,6 @@
 
     return v0
 
-    .line 174
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -216,7 +203,6 @@
     :catch_0
     move-exception v0
 
-    .line 176
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,14 +232,12 @@
 
     const-string/jumbo v0, "spqr_service"
 
-    .line 109
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 112
     :try_start_0
     new-instance v1, Lcom/android/server/SpqrService$1;
 
@@ -276,7 +260,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 126
     invoke-static {v0}, Landroid/os/ISpqrService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/ISpqrService;
 
     move-result-object v0
@@ -285,7 +268,6 @@
 
     const-string p0, "SPQR native service found successfully"
 
-    .line 127
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -293,10 +275,8 @@
     :cond_1
     const-string v0, "SPQR native service not found; trying again"
 
-    .line 129
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -316,12 +296,10 @@
 .method public final initPackageBlockList(Ljava/lang/String;)Ljava/util/Set;
     .locals 5
 
-    .line 58
     new-instance p0, Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
-    .line 59
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/system/etc/spqr-package-blocklist.conf"
@@ -336,7 +314,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 60
     :try_start_0
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -354,7 +331,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 64
     :goto_0
     :try_start_1
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -365,7 +341,6 @@
 
     const-string v3, "#"
 
-    .line 66
     invoke-virtual {v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
@@ -374,7 +349,6 @@
 
     goto :goto_0
 
-    .line 69
     :cond_0
     invoke-interface {p0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_1
@@ -382,7 +356,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_1
     :try_start_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
@@ -394,7 +367,6 @@
     :catchall_0
     move-exception v1
 
-    .line 60
     :try_start_3
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -413,7 +385,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 72
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -433,7 +404,6 @@
 
     goto :goto_2
 
-    .line 75
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -462,7 +432,6 @@
 .method public isInBlockList(Ljava/lang/String;)Z
     .locals 6
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/SpqrService;->packageBlockList:Ljava/util/Set;
 
     const/4 v1, 0x0
@@ -471,7 +440,6 @@
 
     return v1
 
-    .line 89
     :cond_0
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -483,7 +451,6 @@
 
     return v2
 
-    .line 92
     :cond_1
     iget-object p0, p0, Lcom/android/server/SpqrService;->packageBlockList:Ljava/util/Set;
 
@@ -507,7 +474,6 @@
 
     const-string v3, "*"
 
-    .line 93
     invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -519,7 +485,6 @@
     :cond_3
     const-string v4, "\\S+"
 
-    .line 96
     invoke-virtual {v0, v3, v4}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v3
@@ -532,7 +497,6 @@
 
     move-result-object v3
 
-    .line 98
     :try_start_0
     invoke-virtual {p1, v3}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
@@ -544,7 +508,6 @@
 
     return v2
 
-    .line 102
     :catch_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -573,7 +536,6 @@
 .method public onStart()V
     .locals 0
 
-    .line 154
     invoke-virtual {p0}, Lcom/android/server/SpqrService;->findSpqrNativeService()V
 
     return-void

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/UserController;)V
     .locals 0
 
-    .line 460
     iput-object p1, p0, Lcom/android/server/am/UserController$1;->this$0:Lcom/android/server/am/UserController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onUserCreated(Landroid/content/pm/UserInfo;Ljava/lang/Object;)V
     .locals 0
 
-    .line 463
     iget-object p0, p0, Lcom/android/server/am/UserController$1;->this$0:Lcom/android/server/am/UserController;
 
     invoke-static {p0, p1}, Lcom/android/server/am/UserController;->-$$Nest$monUserAdded(Lcom/android/server/am/UserController;Landroid/content/pm/UserInfo;)V
@@ -38,7 +36,6 @@
 .method public onUserRemoved(Landroid/content/pm/UserInfo;)V
     .locals 0
 
-    .line 468
     iget-object p0, p0, Lcom/android/server/am/UserController$1;->this$0:Lcom/android/server/am/UserController;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I

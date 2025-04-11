@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 8198
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$DexOnPCStateChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
-    .line 8199
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,7 +27,6 @@
 .method public onChange(Z)V
     .locals 4
 
-    .line 8205
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$DexOnPCStateChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object v0, v0, Lcom/android/server/inputmethod/InputMethodManagerService;->mContext:Landroid/content/Context;
@@ -42,7 +39,6 @@
 
     iget-object v1, v1, Lcom/android/server/inputmethod/InputMethodManagerService;->mSettings:Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;
 
-    .line 8206
     invoke-virtual {v1}, Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;->getCurrentUserId()I
 
     move-result v1
@@ -51,12 +47,10 @@
 
     const/4 v3, 0x0
 
-    .line 8205
     invoke-static {v0, v2, v3, v1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 
-    .line 8207
     iget-object v1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$DexOnPCStateChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {v1}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$fgetmSamsungIMMSHWKeyboard(Lcom/android/server/inputmethod/InputMethodManagerService;)Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;
@@ -65,7 +59,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/inputmethod/SamsungIMMSHWKeyboard;->updateKeyboardStateForDEXOnPC(I)V
 
-    .line 8208
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,7 +93,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8209
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
     return-void

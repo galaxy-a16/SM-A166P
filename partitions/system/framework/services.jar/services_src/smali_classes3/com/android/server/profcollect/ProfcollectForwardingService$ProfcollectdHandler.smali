@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/profcollect/ProfcollectForwardingService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 174
     iput-object p1, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$ProfcollectdHandler;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
-    .line 175
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 183
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_1
@@ -34,12 +31,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 188
     iget-object p1, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$ProfcollectdHandler;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-static {p1}, Lcom/android/server/profcollect/ProfcollectForwardingService;->-$$Nest$mregisterObservers(Lcom/android/server/profcollect/ProfcollectForwardingService;)V
 
-    .line 189
     iget-object p0, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$ProfcollectdHandler;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -50,7 +45,6 @@
 
     goto :goto_0
 
-    .line 192
     :cond_0
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -72,7 +66,6 @@
 
     throw p0
 
-    .line 185
     :cond_1
     iget-object p0, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$ProfcollectdHandler;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 

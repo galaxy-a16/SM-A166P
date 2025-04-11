@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/midi/MidiService$Device;)V
     .locals 0
 
-    .line 493
     iput-object p1, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
 
-    .line 496
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +50,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
     iget-object p1, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
     invoke-static {p1}, Lcom/android/server/midi/MidiService$Device;->-$$Nest$fgetmBluetoothDevice(Lcom/android/server/midi/MidiService$Device;)Landroid/bluetooth/BluetoothDevice;
@@ -61,12 +58,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 501
     invoke-static {p2}, Landroid/media/midi/IBluetoothMidiService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/midi/IBluetoothMidiService;
 
     move-result-object p1
 
-    .line 502
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +80,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 507
     :try_start_0
     iget-object p2, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
@@ -93,12 +87,10 @@
 
     move-result-object p2
 
-    .line 508
     invoke-interface {p1, p2}, Landroid/media/midi/IBluetoothMidiService;->addBluetoothDevice(Landroid/bluetooth/BluetoothDevice;)Landroid/os/IBinder;
 
     move-result-object p1
 
-    .line 510
     invoke-static {p1}, Landroid/media/midi/IMidiDeviceServer$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/midi/IMidiDeviceServer;
 
     move-result-object p1
@@ -112,7 +104,6 @@
 
     const-string p2, "Could not call addBluetoothDevice()"
 
-    .line 512
     invoke-static {v0, p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -120,13 +111,11 @@
 
     goto :goto_0
 
-    .line 516
     :cond_1
     invoke-static {p2}, Landroid/media/midi/IMidiDeviceServer$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/midi/IMidiDeviceServer;
 
     move-result-object p1
 
-    .line 518
     :goto_0
     iget-object p0, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
@@ -138,14 +127,12 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 523
     iget-object p1, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/midi/MidiService$Device;->-$$Nest$msetDeviceServer(Lcom/android/server/midi/MidiService$Device;Landroid/media/midi/IMidiDeviceServer;)V
 
-    .line 524
     iget-object p0, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
     invoke-static {p0, v0}, Lcom/android/server/midi/MidiService$Device;->-$$Nest$fputmServiceConnection(Lcom/android/server/midi/MidiService$Device;Landroid/content/ServiceConnection;)V

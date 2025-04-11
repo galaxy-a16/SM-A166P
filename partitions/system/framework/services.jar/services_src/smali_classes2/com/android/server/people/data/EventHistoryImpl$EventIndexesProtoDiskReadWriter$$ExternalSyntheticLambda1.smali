@@ -20,7 +20,6 @@
 .method public final read(Landroid/util/proto/ProtoInputStream;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;->$r8$lambda$ktzQOopF-l7iJzHwxPqdapZm8UI(Landroid/util/proto/ProtoInputStream;)Landroid/util/SparseArray;
 
     move-result-object p0

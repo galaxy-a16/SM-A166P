@@ -10,7 +10,6 @@
 .method public getAnimationLeash()Landroid/view/SurfaceControl;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -46,14 +45,12 @@
 .method public onLeashAnimationStarting(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public shouldDeferAnimationFinish(Ljava/lang/Runnable;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

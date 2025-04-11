@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 56
     invoke-direct {p0, p1}, Lcom/android/server/firewall/FilterFactory;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -22,14 +21,12 @@
 
     const/4 v0, 0x0
 
-    .line 63
     invoke-interface {p1, v0, p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 67
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -39,7 +36,6 @@
 
     goto :goto_0
 
-    .line 69
     :catch_0
     new-instance v1, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -69,14 +65,12 @@
 
     const-string/jumbo v3, "min"
 
-    .line 76
     invoke-interface {p1, v0, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string/jumbo v4, "max"
 
-    .line 77
     invoke-interface {p1, v0, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -90,7 +84,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 87
     :try_start_1
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -100,7 +93,6 @@
 
     goto :goto_1
 
-    .line 89
     :catch_1
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -126,7 +118,6 @@
     :goto_1
     if-eqz v4, :cond_3
 
-    .line 97
     :try_start_2
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -136,7 +127,6 @@
 
     goto :goto_2
 
-    .line 99
     :catch_2
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -158,7 +148,6 @@
 
     throw p0
 
-    .line 107
     :cond_3
     :goto_2
     new-instance p0, Lcom/android/server/firewall/PortFilter;
@@ -167,7 +156,6 @@
 
     return-object p0
 
-    .line 80
     :cond_4
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 

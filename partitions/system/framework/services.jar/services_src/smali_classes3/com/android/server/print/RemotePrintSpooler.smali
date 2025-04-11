@@ -51,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallbacks(Lcom/android/server/print/RemotePrintSpooler;)Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCallbacks:Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;
 
     return-object p0
@@ -60,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/print/RemotePrintSpooler;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -69,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRemoteInstance(Lcom/android/server/print/RemotePrintSpooler;)Landroid/print/IPrintSpooler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
     return-object p0
@@ -78,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fputmRemoteInstance(Lcom/android/server/print/RemotePrintSpooler;Landroid/print/IPrintSpooler;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
     return-void
@@ -87,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$mclearClientLocked(Lcom/android/server/print/RemotePrintSpooler;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->clearClientLocked()V
 
     return-void
@@ -96,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$monAllPrintJobsHandled(Lcom/android/server/print/RemotePrintSpooler;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->onAllPrintJobsHandled()V
 
     return-void
@@ -105,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$monPrintJobStateChanged(Lcom/android/server/print/RemotePrintSpooler;Landroid/print/PrintJobInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/print/RemotePrintSpooler;->onPrintJobStateChanged(Landroid/print/PrintJobInfo;)V
 
     return-void
@@ -114,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$msetClientLocked(Lcom/android/server/print/RemotePrintSpooler;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->setClientLocked()V
 
     return-void
@@ -123,7 +115,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 75
     sget-boolean v0, Landroid/os/Build;->IS_ENG:Z
 
     if-eqz v0, :cond_0
@@ -144,66 +135,56 @@
 .method public constructor <init>(Landroid/content/Context;IZLcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;)V
     .locals 2
 
-    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
-    .line 79
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller;
 
     invoke-direct {v0}, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mGetPrintJobInfosCaller:Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller;
 
-    .line 81
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;
 
     invoke-direct {v0}, Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mGetPrintJobInfoCaller:Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;
 
-    .line 83
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;
 
     invoke-direct {v0}, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mSetPrintJobStatusCaller:Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;
 
-    .line 85
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobTagCaller;
 
     invoke-direct {v0}, Lcom/android/server/print/RemotePrintSpooler$SetPrintJobTagCaller;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mSetPrintJobTagCaller:Lcom/android/server/print/RemotePrintSpooler$SetPrintJobTagCaller;
 
-    .line 87
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller;
 
     invoke-direct {v0}, Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCustomPrinterIconLoadedCaller:Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller;
 
-    .line 90
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller;
 
     invoke-direct {v0}, Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mClearCustomPrinterIconCache:Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller;
 
-    .line 93
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;
 
     invoke-direct {v0}, Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mGetCustomPrinterIconCaller:Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;
 
-    .line 96
     new-instance v0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;
 
     const/4 v1, 0x0
@@ -212,37 +193,30 @@
 
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 128
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mContext:Landroid/content/Context;
 
-    .line 129
     new-instance p1, Landroid/os/UserHandle;
 
     invoke-direct {p1, p2}, Landroid/os/UserHandle;-><init>(I)V
 
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mUserHandle:Landroid/os/UserHandle;
 
-    .line 130
     iput-object p4, p0, Lcom/android/server/print/RemotePrintSpooler;->mCallbacks:Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;
 
-    .line 131
     iput-boolean p3, p0, Lcom/android/server/print/RemotePrintSpooler;->mIsLowPriority:Z
 
-    .line 132
     new-instance p1, Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerClient;
 
     invoke-direct {p1, p0}, Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerClient;-><init>(Lcom/android/server/print/RemotePrintSpooler;)V
 
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mClient:Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerClient;
 
-    .line 133
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mIntent:Landroid/content/Intent;
 
-    .line 134
     new-instance p0, Landroid/content/ComponentName;
 
     const-string p2, "com.android.printspooler"
@@ -261,20 +235,17 @@
 .method public final bindLocked()V
     .locals 8
 
-    .line 601
     :goto_0
     iget-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mIsBinding:Z
 
     if-eqz v0, :cond_0
 
-    .line 602
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
 
     goto :goto_0
 
-    .line 605
     :cond_0
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
@@ -285,12 +256,10 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 609
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mIsBinding:Z
 
     const/4 v1, 0x0
 
-    .line 618
     :try_start_0
     iget-boolean v2, p0, Lcom/android/server/print/RemotePrintSpooler;->mIsLowPriority:Z
 
@@ -303,7 +272,6 @@
     :cond_2
     const v2, 0x4000001
 
-    .line 624
     :goto_1
     iget-object v3, p0, Lcom/android/server/print/RemotePrintSpooler;->mContext:Landroid/content/Context;
 
@@ -315,33 +283,27 @@
 
     invoke-virtual {v3, v4, v5, v2, v6}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
-    .line 626
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 628
     :goto_2
     iget-object v4, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
     if-eqz v4, :cond_3
 
-    .line 639
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 641
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mIsBinding:Z
 
-    .line 642
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
     return-void
 
-    .line 631
     :cond_3
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -350,7 +312,6 @@
 
     sub-long/2addr v4, v2
 
-    .line 632
     sget-wide v6, Lcom/android/server/print/RemotePrintSpooler;->BIND_SPOOLER_SERVICE_TIMEOUT:J
 
     sub-long/2addr v6, v4
@@ -361,14 +322,12 @@
 
     if-lez v4, :cond_4
 
-    .line 636
     iget-object v4, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v4, v6, v7}, Ljava/lang/Object;->wait(J)V
 
     goto :goto_2
 
-    .line 634
     :cond_4
     new-instance v0, Ljava/util/concurrent/TimeoutException;
 
@@ -383,22 +342,18 @@
     :catchall_0
     move-exception v0
 
-    .line 641
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mIsBinding:Z
 
-    .line 642
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 643
     throw v0
 .end method
 
 .method public final clearClientLocked()V
     .locals 2
 
-    .line 679
     :try_start_0
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
@@ -417,7 +372,6 @@
 
     const-string v1, "Error clearing print spooler client"
 
-    .line 681
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -427,31 +381,25 @@
 .method public clearCustomPrinterIconCache()V
     .locals 4
 
-    .line 429
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 430
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 431
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 432
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 433
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 435
     :try_start_1
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mClearCustomPrinterIconCache:Lcom/android/server/print/RemotePrintSpooler$ClearCustomPrinterIconCacheCaller;
 
@@ -466,21 +414,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 444
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 445
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 446
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 447
     monitor-exit v1
 
     goto :goto_0
@@ -507,26 +451,21 @@
 
     const-string v3, "Error clearing custom printer icon cache."
 
-    .line 437
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 444
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 445
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 446
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 447
     monitor-exit v1
 
     :goto_0
@@ -541,33 +480,27 @@
 
     throw p0
 
-    .line 444
     :goto_1
     iget-object v2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 445
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 446
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 447
     monitor-exit v2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 448
     throw v1
 
     :catchall_3
     move-exception p0
 
-    .line 447
     :try_start_6
     monitor-exit v2
     :try_end_6
@@ -578,7 +511,6 @@
     :catchall_4
     move-exception p0
 
-    .line 433
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -590,32 +522,25 @@
 .method public final destroy()V
     .locals 2
 
-    .line 547
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 551
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 552
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
-    .line 553
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->unbindLocked()V
 
     const/4 v1, 0x1
 
-    .line 554
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mDestroyed:Z
 
     const/4 v1, 0x0
 
-    .line 555
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 556
     monitor-exit v0
 
     return-void
@@ -633,7 +558,6 @@
 .method public dump(Lcom/android/internal/util/dump/DualDumpOutputStream;)V
     .locals 7
 
-    .line 560
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -641,7 +565,6 @@
     :try_start_0
     const-string v1, "is_destroyed"
 
-    .line 561
     iget-boolean v2, p0, Lcom/android/server/print/RemotePrintSpooler;->mDestroyed:Z
 
     const-wide v3, 0x10800000001L
@@ -650,7 +573,6 @@
 
     const-string v1, "is_bound"
 
-    .line 562
     iget-object v2, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
     const/4 v3, 0x1
@@ -671,12 +593,10 @@
 
     invoke-virtual {p1, v1, v5, v6, v2}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JZ)V
 
-    .line 563
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 566
     :try_start_1
     invoke-virtual {p1}, Lcom/android/internal/util/dump/DualDumpOutputStream;->isProto()Z
 
@@ -684,7 +604,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 568
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
     move-result-object p0
@@ -707,7 +626,6 @@
 
     const-wide v1, 0x10b00000003L
 
-    .line 567
     invoke-virtual {p1, v0, v1, v2, p0}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;J[B)V
 
     goto :goto_1
@@ -715,7 +633,6 @@
     :cond_1
     const-string v0, "internal_state"
 
-    .line 571
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
     move-result-object p0
@@ -726,7 +643,6 @@
 
     new-array v1, v4, [Ljava/lang/String;
 
-    .line 570
     invoke-static {p0, v1}, Lcom/android/internal/os/TransferPipe;->dumpAsync(Landroid/os/IBinder;[Ljava/lang/String;)[B
 
     move-result-object p0
@@ -747,7 +663,6 @@
 
     const-string v0, "Failed to dump remote instance"
 
-    .line 574
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -756,7 +671,6 @@
     :catchall_0
     move-exception p0
 
-    .line 563
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -768,31 +682,25 @@
 .method public final getCustomPrinterIcon(Landroid/print/PrinterId;)Landroid/graphics/drawable/Icon;
     .locals 3
 
-    .line 402
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 403
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 404
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 405
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 406
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 408
     :try_start_1
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mGetCustomPrinterIconCaller:Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;
 
@@ -809,21 +717,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 418
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 419
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 420
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 421
     monitor-exit v1
 
     return-object p1
@@ -850,26 +754,21 @@
 
     const-string v2, "Error getting custom printer icon."
 
-    .line 411
     invoke-static {v1, v2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 418
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 419
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 420
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 421
     monitor-exit p1
 
     const/4 p0, 0x0
@@ -885,33 +784,27 @@
 
     throw p0
 
-    .line 418
     :goto_0
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 419
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 420
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 421
     monitor-exit v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 422
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 421
     :try_start_6
     monitor-exit v1
     :try_end_6
@@ -922,7 +815,6 @@
     :catchall_4
     move-exception p0
 
-    .line 406
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -934,31 +826,25 @@
 .method public final getPrintJobInfo(Landroid/print/PrintJobId;I)Landroid/print/PrintJobInfo;
     .locals 3
 
-    .line 232
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 233
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 234
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 235
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 236
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 238
     :try_start_1
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mGetPrintJobInfoCaller:Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfoCaller;
 
@@ -975,21 +861,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 246
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 247
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 249
     monitor-exit p2
 
     return-object p1
@@ -1016,26 +898,21 @@
 
     const-string v1, "Error getting print job info."
 
-    .line 241
     invoke-static {p2, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 246
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 247
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 249
     monitor-exit p1
 
     const/4 p0, 0x0
@@ -1051,33 +928,27 @@
 
     throw p0
 
-    .line 246
     :goto_0
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 247
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 249
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 250
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 249
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -1088,7 +959,6 @@
     :catchall_4
     move-exception p0
 
-    .line 236
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -1100,31 +970,25 @@
 .method public final getPrintJobInfos(Landroid/content/ComponentName;II)Ljava/util/List;
     .locals 3
 
-    .line 164
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 166
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 167
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 168
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 170
     :try_start_1
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mGetPrintJobInfosCaller:Lcom/android/server/print/RemotePrintSpooler$GetPrintJobInfosCaller;
 
@@ -1141,21 +1005,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 178
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 179
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 181
     monitor-exit p2
 
     return-object p1
@@ -1182,26 +1042,21 @@
 
     const-string p3, "Error getting print jobs."
 
-    .line 173
     invoke-static {p2, p3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 178
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 179
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 181
     monitor-exit p1
 
     const/4 p0, 0x0
@@ -1217,33 +1072,27 @@
 
     throw p0
 
-    .line 178
     :goto_0
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 179
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 181
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 182
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 181
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -1254,7 +1103,6 @@
     :catchall_4
     move-exception p0
 
-    .line 168
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -1266,27 +1114,22 @@
 .method public final getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
     .locals 2
 
-    .line 590
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 591
     :try_start_0
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
     if-eqz v1, :cond_0
 
-    .line 592
     monitor-exit v0
 
     return-object v1
 
-    .line 594
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->bindLocked()V
 
-    .line 595
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
     monitor-exit v0
@@ -1296,7 +1139,6 @@
     :catchall_0
     move-exception p0
 
-    .line 596
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1307,26 +1149,21 @@
 .method public increasePriority()V
     .locals 3
 
-    .line 139
     iget-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mIsLowPriority:Z
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 140
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mIsLowPriority:Z
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 143
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
-    .line 145
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
     :try_end_0
@@ -1334,7 +1171,6 @@
 
     if-nez v1, :cond_0
 
-    .line 147
     :try_start_1
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
@@ -1351,16 +1187,13 @@
 
     const-string v2, "Interrupted while waiting for operation to complete"
 
-    .line 149
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 157
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->unbindLocked()V
 
-    .line 158
     monitor-exit v0
 
     goto :goto_1
@@ -1382,19 +1215,15 @@
 .method public final onAllPrintJobsHandled()V
     .locals 1
 
-    .line 579
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 580
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
-    .line 581
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->unbindLocked()V
 
-    .line 582
     monitor-exit v0
 
     return-void
@@ -1412,31 +1241,25 @@
 .method public final onCustomPrinterIconLoaded(Landroid/print/PrinterId;Landroid/graphics/drawable/Icon;)V
     .locals 3
 
-    .line 370
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 371
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 372
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 373
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 374
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 376
     :try_start_1
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCustomPrinterIconLoadedCaller:Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller;
 
@@ -1451,21 +1274,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 385
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 386
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 387
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 388
     monitor-exit p1
 
     goto :goto_0
@@ -1492,26 +1311,21 @@
 
     const-string v1, "Error loading new custom printer icon."
 
-    .line 379
     invoke-static {p2, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 385
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 386
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 387
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 388
     monitor-exit p1
 
     :goto_0
@@ -1526,33 +1340,27 @@
 
     throw p0
 
-    .line 385
     :goto_1
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 386
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 387
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 388
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 389
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 388
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -1563,7 +1371,6 @@
     :catchall_4
     move-exception p0
 
-    .line 374
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -1575,7 +1382,6 @@
 .method public final onPrintJobStateChanged(Landroid/print/PrintJobInfo;)V
     .locals 0
 
-    .line 586
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCallbacks:Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;
 
     invoke-interface {p0, p1}, Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;->onPrintJobStateChanged(Landroid/print/PrintJobInfo;)V
@@ -1586,31 +1392,25 @@
 .method public final pruneApprovedPrintServices(Ljava/util/List;)V
     .locals 3
 
-    .line 503
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 504
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 505
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 506
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 507
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 509
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
@@ -1623,21 +1423,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 517
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 518
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 519
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 520
     monitor-exit p1
 
     goto :goto_0
@@ -1664,26 +1460,21 @@
 
     const-string v2, "Error pruning approved print services."
 
-    .line 511
     invoke-static {v1, v2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 517
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 518
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 519
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 520
     monitor-exit p1
 
     :goto_0
@@ -1698,33 +1489,27 @@
 
     throw p0
 
-    .line 517
     :goto_1
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 518
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 519
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 520
     monitor-exit v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 521
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 520
     :try_start_6
     monitor-exit v1
     :try_end_6
@@ -1735,7 +1520,6 @@
     :catchall_4
     move-exception p0
 
-    .line 507
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -1747,31 +1531,25 @@
 .method public final removeObsoletePrintJobs()V
     .locals 4
 
-    .line 525
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 526
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 527
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 528
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 529
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 531
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
@@ -1784,21 +1562,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 539
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 540
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 541
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 542
     monitor-exit v1
 
     goto :goto_0
@@ -1825,26 +1599,21 @@
 
     const-string v3, "Error removing obsolete print jobs ."
 
-    .line 533
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 539
     iget-object v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 540
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 541
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 542
     monitor-exit v1
 
     :goto_0
@@ -1859,33 +1628,27 @@
 
     throw p0
 
-    .line 539
     :goto_1
     iget-object v2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 540
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 541
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 542
     monitor-exit v2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 543
     throw v1
 
     :catchall_3
     move-exception p0
 
-    .line 542
     :try_start_6
     monitor-exit v2
     :try_end_6
@@ -1896,7 +1659,6 @@
     :catchall_4
     move-exception p0
 
-    .line 529
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -1908,7 +1670,6 @@
 .method public final setClientLocked()V
     .locals 2
 
-    .line 671
     :try_start_0
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
@@ -1927,7 +1688,6 @@
 
     const-string v1, "Error setting print spooler client"
 
-    .line 673
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1937,31 +1697,25 @@
 .method public final setPrintJobCancelling(Landroid/print/PrintJobId;Z)V
     .locals 2
 
-    .line 475
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 476
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 477
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 478
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 479
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 481
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
@@ -1974,21 +1728,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 490
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 491
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 492
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 493
     monitor-exit p1
 
     goto :goto_0
@@ -2015,26 +1765,21 @@
 
     const-string v1, "Error setting print job cancelling."
 
-    .line 484
     invoke-static {p2, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 490
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 491
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 492
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 493
     monitor-exit p1
 
     :goto_0
@@ -2049,33 +1794,27 @@
 
     throw p0
 
-    .line 490
     :goto_1
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 491
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 492
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 493
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 494
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 493
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -2086,7 +1825,6 @@
     :catchall_4
     move-exception p0
 
-    .line 479
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -2098,31 +1836,25 @@
 .method public final setPrintJobState(Landroid/print/PrintJobId;ILjava/lang/String;)Z
     .locals 4
 
-    .line 255
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 256
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 257
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 258
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 259
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 261
     :try_start_1
     iget-object v2, p0, Lcom/android/server/print/RemotePrintSpooler;->mSetPrintJobStatusCaller:Lcom/android/server/print/RemotePrintSpooler$SetPrintJobStateCaller;
 
@@ -2139,21 +1871,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 269
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 270
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 271
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 272
     monitor-exit p2
 
     return p1
@@ -2180,26 +1908,21 @@
 
     const-string p3, "Error setting print job state."
 
-    .line 264
     invoke-static {p2, p3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 269
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 270
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 271
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 272
     monitor-exit p1
 
     return v1
@@ -2213,33 +1936,27 @@
 
     throw p0
 
-    .line 269
     :goto_0
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 270
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 271
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 272
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 273
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 272
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -2250,7 +1967,6 @@
     :catchall_4
     move-exception p0
 
-    .line 259
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -2262,31 +1978,25 @@
 .method public final setPrintJobTag(Landroid/print/PrintJobId;Ljava/lang/String;)Z
     .locals 4
 
-    .line 452
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 453
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 454
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 455
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 456
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 458
     :try_start_1
     iget-object v2, p0, Lcom/android/server/print/RemotePrintSpooler;->mSetPrintJobTagCaller:Lcom/android/server/print/RemotePrintSpooler$SetPrintJobTagCaller;
 
@@ -2303,21 +2013,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 466
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 467
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 468
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 469
     monitor-exit p2
 
     return p1
@@ -2344,26 +2050,21 @@
 
     const-string v2, "Error setting print job tag."
 
-    .line 461
     invoke-static {p2, v2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 466
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 467
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 468
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 469
     monitor-exit p1
 
     return v1
@@ -2377,33 +2078,27 @@
 
     throw p0
 
-    .line 466
     :goto_0
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 467
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 468
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 469
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 470
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 469
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -2414,7 +2109,6 @@
     :catchall_4
     move-exception p0
 
-    .line 456
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -2426,31 +2120,25 @@
 .method public final setProgress(Landroid/print/PrintJobId;F)V
     .locals 2
 
-    .line 285
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 286
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 287
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 288
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 289
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 291
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
@@ -2463,21 +2151,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 298
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 299
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 301
     monitor-exit p1
 
     goto :goto_0
@@ -2504,26 +2188,21 @@
 
     const-string v1, "Error setting progress."
 
-    .line 293
     invoke-static {p2, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 298
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 299
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 301
     monitor-exit p1
 
     :goto_0
@@ -2538,33 +2217,27 @@
 
     throw p0
 
-    .line 298
     :goto_1
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 299
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 301
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 302
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 301
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -2575,7 +2248,6 @@
     :catchall_4
     move-exception p0
 
-    .line 289
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -2587,31 +2259,25 @@
 .method public final setStatus(Landroid/print/PrintJobId;ILjava/lang/CharSequence;)V
     .locals 2
 
-    .line 341
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 342
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 343
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 344
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 345
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 347
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
@@ -2624,21 +2290,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 354
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 355
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 356
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 357
     monitor-exit p1
 
     goto :goto_0
@@ -2665,26 +2327,21 @@
 
     const-string p3, "Error setting status."
 
-    .line 349
     invoke-static {p2, p3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 354
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 355
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 356
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 357
     monitor-exit p1
 
     :goto_0
@@ -2699,33 +2356,27 @@
 
     throw p0
 
-    .line 354
     :goto_1
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 355
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 356
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 357
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 358
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 357
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -2736,7 +2387,6 @@
     :catchall_4
     move-exception p0
 
-    .line 345
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -2748,31 +2398,25 @@
 .method public final setStatus(Landroid/print/PrintJobId;Ljava/lang/CharSequence;)V
     .locals 2
 
-    .line 312
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 313
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 314
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 315
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 316
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 318
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
@@ -2785,21 +2429,17 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 325
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 326
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 327
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 328
     monitor-exit p1
 
     goto :goto_0
@@ -2826,26 +2466,21 @@
 
     const-string v1, "Error setting status."
 
-    .line 320
     invoke-static {p2, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 325
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 326
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 327
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 328
     monitor-exit p1
 
     :goto_0
@@ -2860,33 +2495,27 @@
 
     throw p0
 
-    .line 325
     :goto_1
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 326
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 327
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 328
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 329
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 328
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -2897,7 +2526,6 @@
     :catchall_4
     move-exception p0
 
-    .line 316
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -2909,7 +2537,6 @@
 .method public final throwIfCalledOnMainThread()V
     .locals 1
 
-    .line 693
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -2928,7 +2555,6 @@
 
     return-void
 
-    .line 694
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -2942,14 +2568,12 @@
 .method public final throwIfDestroyedLocked()V
     .locals 1
 
-    .line 687
     iget-boolean p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mDestroyed:Z
 
     if-nez p0, :cond_0
 
     return-void
 
-    .line 688
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2963,14 +2587,12 @@
 .method public final unbindLocked()V
     .locals 1
 
-    .line 647
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 651
     :catch_0
     :cond_0
     :goto_0
@@ -2978,15 +2600,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 655
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->clearClientLocked()V
 
     const/4 v0, 0x0
 
-    .line 656
     iput-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mRemoteInstance:Landroid/print/IPrintSpooler;
 
-    .line 657
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mServiceConnection:Landroid/content/ServiceConnection;
@@ -2995,7 +2614,6 @@
 
     return-void
 
-    .line 661
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
@@ -3010,31 +2628,25 @@
 .method public final writePrintJobData(Landroid/os/ParcelFileDescriptor;Landroid/print/PrintJobId;)V
     .locals 3
 
-    .line 208
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfCalledOnMainThread()V
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 210
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->throwIfDestroyedLocked()V
 
     const/4 v1, 0x0
 
-    .line 211
     iput-boolean v1, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 212
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x1
 
-    .line 214
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/print/RemotePrintSpooler;->getRemoteInstanceLazy()Landroid/print/IPrintSpooler;
 
@@ -3047,24 +2659,19 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 223
     invoke-static {p1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 224
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 225
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 226
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 227
     monitor-exit p2
 
     goto :goto_0
@@ -3091,29 +2698,23 @@
 
     const-string v2, "Error writing print job data."
 
-    .line 216
     invoke-static {v1, v2, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 223
     invoke-static {p1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 224
     iget-object p2, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 225
     :try_start_4
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 226
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 227
     monitor-exit p2
 
     :goto_0
@@ -3128,36 +2729,29 @@
 
     throw p0
 
-    .line 223
     :goto_1
     invoke-static {p1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 224
     iget-object p1, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 225
     :try_start_5
     iput-boolean v0, p0, Lcom/android/server/print/RemotePrintSpooler;->mCanUnbind:Z
 
-    .line 226
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 227
     monitor-exit p1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 228
     throw p2
 
     :catchall_3
     move-exception p0
 
-    .line 227
     :try_start_6
     monitor-exit p1
     :try_end_6
@@ -3168,7 +2762,6 @@
     :catchall_4
     move-exception p0
 
-    .line 212
     :try_start_7
     monitor-exit v0
     :try_end_7

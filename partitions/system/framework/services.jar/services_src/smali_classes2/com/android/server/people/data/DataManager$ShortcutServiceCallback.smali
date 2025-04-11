@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$KrYsFIqJkUox4eZgEIWHPX3_A9Q(Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;Ljava/util/List;Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->lambda$onShortcutsRemoved$1(Ljava/util/List;Ljava/lang/String;Landroid/os/UserHandle;)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public static synthetic $r8$lambda$QKokxr1FQRowrz7TyI87TRZTrow(Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;Ljava/lang/String;Landroid/os/UserHandle;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->lambda$onShortcutsAddedOrUpdated$0(Ljava/lang/String;Landroid/os/UserHandle;Ljava/util/List;)V
 
     return-void
@@ -32,7 +30,6 @@
 .method public constructor <init>(Lcom/android/server/people/data/DataManager;)V
     .locals 0
 
-    .line 1111
     iput-object p1, p0, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +40,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/people/data/DataManager;Lcom/android/server/people/data/DataManager$ShortcutServiceCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;-><init>(Lcom/android/server/people/data/DataManager;)V
 
     return-void
@@ -52,7 +48,6 @@
 .method private synthetic lambda$onShortcutsAddedOrUpdated$0(Ljava/lang/String;Landroid/os/UserHandle;Ljava/util/List;)V
     .locals 4
 
-    .line 1117
     iget-object v0, p0, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
@@ -63,7 +58,6 @@
 
     move-result-object p1
 
-    .line 1119
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -84,26 +78,22 @@
 
     check-cast v1, Landroid/content/pm/ShortcutInfo;
 
-    .line 1120
     iget-object v2, p0, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-static {v2}, Lcom/android/server/people/data/DataManager;->-$$Nest$fgetmShortcutServiceInternal(Lcom/android/server/people/data/DataManager;)Landroid/content/pm/ShortcutServiceInternal;
 
     move-result-object v2
 
-    .line 1121
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v3
 
-    .line 1120
     invoke-static {v1, v2, v3}, Lcom/android/server/notification/ShortcutHelper;->isConversationShortcut(Landroid/content/pm/ShortcutInfo;Landroid/content/pm/ShortcutServiceInternal;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1122
     invoke-virtual {v1}, Landroid/content/pm/ShortcutInfo;->isCached()Z
 
     move-result v2
@@ -112,7 +102,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1124
     invoke-virtual {v1}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -129,7 +118,6 @@
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 1126
     invoke-virtual {v2}, Lcom/android/server/people/data/ConversationInfo;->isShortcutCachedForNotification()Z
 
     move-result v2
@@ -139,7 +127,6 @@
     :cond_2
     const/4 v0, 0x1
 
-    .line 1130
     :cond_3
     iget-object v2, p0, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->this$0:Lcom/android/server/people/data/DataManager;
 
@@ -150,7 +137,6 @@
     :cond_4
     if-eqz v0, :cond_5
 
-    .line 1136
     iget-object p0, p0, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
@@ -168,12 +154,10 @@
 .method private synthetic lambda$onShortcutsRemoved$1(Ljava/util/List;Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 1146
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 1147
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -191,7 +175,6 @@
 
     check-cast v1, Landroid/content/pm/ShortcutInfo;
 
-    .line 1148
     invoke-virtual {v1}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v1
@@ -200,7 +183,6 @@
 
     goto :goto_0
 
-    .line 1150
     :cond_0
     iget-object p0, p0, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->this$0:Lcom/android/server/people/data/DataManager;
 
@@ -218,7 +200,6 @@
 .method public onShortcutsAddedOrUpdated(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 1116
     iget-object v0, p0, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-static {v0}, Lcom/android/server/people/data/DataManager;->-$$Nest$fgetmInjector(Lcom/android/server/people/data/DataManager;)Lcom/android/server/people/data/DataManager$Injector;
@@ -241,7 +222,6 @@
 .method public onShortcutsRemoved(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 1145
     iget-object v0, p0, Lcom/android/server/people/data/DataManager$ShortcutServiceCallback;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-static {v0}, Lcom/android/server/people/data/DataManager;->-$$Nest$fgetmInjector(Lcom/android/server/people/data/DataManager;)Lcom/android/server/people/data/DataManager$Injector;

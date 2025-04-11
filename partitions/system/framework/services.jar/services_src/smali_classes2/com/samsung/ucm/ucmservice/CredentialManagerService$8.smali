@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/ucm/ucmservice/CredentialManagerService;)V
     .locals 0
 
-    .line 728
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$8;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -24,35 +23,30 @@
 .method public onKnoxContainerLaunch(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPersonaActive(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onRemovePersona(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onResetPersona(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStateChange(ILcom/samsung/android/knox/SemPersonaState;Lcom/samsung/android/knox/SemPersonaState;)V
     .locals 2
 
-    .line 747
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,7 +77,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 749
     :try_start_0
     sget-object p2, Lcom/samsung/android/knox/SemPersonaState;->DELETING:Lcom/samsung/android/knox/SemPersonaState;
 
@@ -93,7 +86,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 750
     iget-object p0, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$8;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-static {p0, p1}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->-$$Nest$mupdateMDMPolicies(Lcom/samsung/ucm/ucmservice/CredentialManagerService;I)V
@@ -105,7 +97,6 @@
     :catch_0
     move-exception p0
 
-    .line 753
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

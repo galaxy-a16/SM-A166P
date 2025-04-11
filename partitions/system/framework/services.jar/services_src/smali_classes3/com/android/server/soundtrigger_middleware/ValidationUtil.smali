@@ -9,7 +9,6 @@
 
     const/4 v0, 0x1
 
-    .line 52
     invoke-static {p0, v0}, Lcom/android/server/soundtrigger_middleware/ValidationUtil;->validateModel(Landroid/media/soundtrigger/SoundModel;I)V
 
     return-void
@@ -18,30 +17,24 @@
 .method public static validateModel(Landroid/media/soundtrigger/SoundModel;I)V
     .locals 1
 
-    .line 56
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     iget v0, p0, Landroid/media/soundtrigger/SoundModel;->type:I
 
     if-ne v0, p1, :cond_1
 
-    .line 60
     iget-object p1, p0, Landroid/media/soundtrigger/SoundModel;->uuid:Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/soundtrigger_middleware/ValidationUtil;->validateUuid(Ljava/lang/String;)V
 
-    .line 61
     iget-object p1, p0, Landroid/media/soundtrigger/SoundModel;->vendorUuid:Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/soundtrigger_middleware/ValidationUtil;->validateUuid(Ljava/lang/String;)V
 
-    .line 62
     iget p1, p0, Landroid/media/soundtrigger/SoundModel;->dataSize:I
 
     if-lez p1, :cond_0
 
-    .line 63
     iget-object p0, p0, Landroid/media/soundtrigger/SoundModel;->data:Landroid/os/ParcelFileDescriptor;
 
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -49,7 +42,6 @@
     :cond_0
     return-void
 
-    .line 58
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -67,7 +59,6 @@
 
     return-void
 
-    .line 114
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -81,22 +72,18 @@
 .method public static validatePhraseModel(Landroid/media/soundtrigger/PhraseSoundModel;)V
     .locals 4
 
-    .line 68
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     iget-object v0, p0, Landroid/media/soundtrigger/PhraseSoundModel;->common:Landroid/media/soundtrigger/SoundModel;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/server/soundtrigger_middleware/ValidationUtil;->validateModel(Landroid/media/soundtrigger/SoundModel;I)V
 
-    .line 70
     iget-object v0, p0, Landroid/media/soundtrigger/PhraseSoundModel;->phrases:[Landroid/media/soundtrigger/Phrase;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
     iget-object p0, p0, Landroid/media/soundtrigger/PhraseSoundModel;->phrases:[Landroid/media/soundtrigger/Phrase;
 
     array-length v0, p0
@@ -106,27 +93,22 @@
 
     aget-object v2, p0, v1
 
-    .line 72
     invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     iget v3, v2, Landroid/media/soundtrigger/Phrase;->recognitionModes:I
 
     and-int/lit8 v3, v3, -0x10
 
     if-nez v3, :cond_0
 
-    .line 78
     iget-object v3, v2, Landroid/media/soundtrigger/Phrase;->users:[I
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
     iget-object v3, v2, Landroid/media/soundtrigger/Phrase;->locale:Ljava/lang/String;
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 80
     iget-object v2, v2, Landroid/media/soundtrigger/Phrase;->text:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -135,7 +117,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -152,15 +133,12 @@
 .method public static validateRecognitionConfig(Landroid/media/soundtrigger/RecognitionConfig;)V
     .locals 10
 
-    .line 85
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 86
     iget-object v0, p0, Landroid/media/soundtrigger/RecognitionConfig;->phraseRecognitionExtras:[Landroid/media/soundtrigger/PhraseRecognitionExtra;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
     iget-object v0, p0, Landroid/media/soundtrigger/RecognitionConfig;->phraseRecognitionExtras:[Landroid/media/soundtrigger/PhraseRecognitionExtra;
 
     array-length v1, v0
@@ -174,17 +152,14 @@
 
     aget-object v4, v0, v3
 
-    .line 88
     invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
     iget v5, v4, Landroid/media/soundtrigger/PhraseRecognitionExtra;->recognitionModes:I
 
     and-int/lit8 v5, v5, -0x10
 
     if-nez v5, :cond_3
 
-    .line 94
     iget v5, v4, Landroid/media/soundtrigger/PhraseRecognitionExtra;->confidenceLevel:I
 
     const-string v6, "Invalid confidenceLevel"
@@ -195,12 +170,10 @@
 
     if-gt v5, v7, :cond_2
 
-    .line 97
     iget-object v5, v4, Landroid/media/soundtrigger/PhraseRecognitionExtra;->levels:[Landroid/media/soundtrigger/ConfidenceLevel;
 
     invoke-static {v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
     iget-object v4, v4, Landroid/media/soundtrigger/PhraseRecognitionExtra;->levels:[Landroid/media/soundtrigger/ConfidenceLevel;
 
     array-length v5, v4
@@ -212,10 +185,8 @@
 
     aget-object v9, v4, v8
 
-    .line 99
     invoke-static {v9}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
     iget v9, v9, Landroid/media/soundtrigger/ConfidenceLevel;->levelPercent:I
 
     if-ltz v9, :cond_0
@@ -226,7 +197,6 @@
 
     goto :goto_1
 
-    .line 101
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -239,7 +209,6 @@
 
     goto :goto_0
 
-    .line 95
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -247,7 +216,6 @@
 
     throw p0
 
-    .line 92
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -257,7 +225,6 @@
 
     throw p0
 
-    .line 105
     :cond_4
     iget-object p0, p0, Landroid/media/soundtrigger/RecognitionConfig;->data:[B
 
@@ -269,17 +236,14 @@
 .method public static validateUuid(Ljava/lang/String;)V
     .locals 3
 
-    .line 43
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     sget-object v0, Lcom/android/server/soundtrigger_middleware/UuidUtil;->PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 45
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
@@ -288,7 +252,6 @@
 
     return-void
 
-    .line 46
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 217
     iput-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$3;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public onPointerEvent(Landroid/view/MotionEvent;)V
     .locals 5
 
-    .line 220
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 221
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
@@ -68,7 +65,6 @@
     :cond_0
     const/16 v0, 0x2002
 
-    .line 227
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->isFromSource(I)Z
 
     move-result v0
@@ -77,14 +73,12 @@
 
     const/16 v0, 0x4002
 
-    .line 228
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->isFromSource(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 229
     :cond_1
     iget-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$3;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
@@ -94,7 +88,6 @@
 
     invoke-static {p1, v0, v1}, Lcom/android/server/desktopmode/WirelessDexManager;->-$$Nest$fputmMotionEventStartTime(Lcom/android/server/desktopmode/WirelessDexManager;J)V
 
-    .line 230
     iget-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$3;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/WirelessDexManager;->-$$Nest$fgetmIsLowLatencyMode(Lcom/android/server/desktopmode/WirelessDexManager;)Z
@@ -103,7 +96,6 @@
 
     if-nez p1, :cond_2
 
-    .line 231
     iget-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$3;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/WirelessDexManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/os/Handler;
@@ -118,7 +110,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 233
     :cond_2
     iget-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$3;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
@@ -134,7 +125,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 234
     iget-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager$3;->this$0:Lcom/android/server/desktopmode/WirelessDexManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/WirelessDexManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/os/Handler;

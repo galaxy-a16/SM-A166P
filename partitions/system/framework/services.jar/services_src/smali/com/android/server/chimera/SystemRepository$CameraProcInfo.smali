@@ -17,10 +17,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     iput-object p1, p0, Lcom/android/server/chimera/SystemRepository$CameraProcInfo;->name:Ljava/lang/String;
 
     return-void

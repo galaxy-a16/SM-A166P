@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/CustomizedBinderCallsStatsInternal;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/CustomizedBinderCallsStatsInternal;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/CustomizedBinderCallsStatsInternal$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/CustomizedBinderCallsStatsInternal;
 
     invoke-static {p0}, Lcom/android/server/CustomizedBinderCallsStatsInternal;->$r8$lambda$Foe7-rwGsSWCpYsNgGYM2NVszYw(Lcom/android/server/CustomizedBinderCallsStatsInternal;)V

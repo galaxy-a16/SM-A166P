@@ -15,24 +15,20 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
 
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissions:Landroid/util/ArrayMap;
 
-    .line 58
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissionTrees:Landroid/util/ArrayMap;
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     return-void
@@ -43,7 +39,6 @@
 
     move-object v7, p0
 
-    .line 158
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v8
@@ -59,7 +54,6 @@
 
     move-object v11, p3
 
-    .line 160
     invoke-interface {p3, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -76,7 +70,6 @@
 
     move-object/from16 v6, p6
 
-    .line 161
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/pm/permission/LegacyPermission;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/util/Set;ZZLcom/android/server/pm/DumpState;)Z
 
     move-result v5
@@ -90,7 +83,6 @@
 
     if-nez p2, :cond_4
 
-    .line 166
     invoke-interface/range {p4 .. p4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -116,20 +108,17 @@
 
     if-eqz v1, :cond_3
 
-    .line 169
     invoke-virtual/range {p6 .. p6}, Lcom/android/server/pm/DumpState;->onTitlePrinted()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 170
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     :cond_2
     const-string v1, "AppOp Permissions:"
 
-    .line 172
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     move v1, v9
@@ -137,10 +126,8 @@
     :cond_3
     const-string v3, "  AppOp Permission "
 
-    .line 174
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 175
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -151,10 +138,8 @@
 
     const-string v3, ":"
 
-    .line 176
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 177
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -180,10 +165,8 @@
 
     const-string v4, "    "
 
-    .line 178
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 179
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_1
@@ -195,12 +178,10 @@
 .method public static readPermissions(Landroid/util/ArrayMap;Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 4
 
-    .line 120
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 122
     :cond_0
     :goto_0
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -215,7 +196,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 123
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v3
@@ -231,7 +211,6 @@
 
     goto :goto_0
 
-    .line 128
     :cond_2
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/LegacyPermission;->read(Ljava/util/Map;Lcom/android/modules/utils/TypedXmlPullParser;)Z
 
@@ -239,7 +218,6 @@
 
     if-nez v1, :cond_3
 
-    .line 129
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,7 +226,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 130
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -259,7 +236,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 131
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v2
@@ -272,10 +248,8 @@
 
     const/4 v2, 0x5
 
-    .line 129
     invoke-static {v2, v1}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 133
     :cond_3
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
@@ -290,12 +264,10 @@
 .method public getPermissionTrees()Ljava/util/List;
     .locals 2
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 78
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -314,7 +286,6 @@
     :catchall_0
     move-exception p0
 
-    .line 79
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -325,12 +296,10 @@
 .method public getPermissions()Ljava/util/List;
     .locals 2
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 71
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -349,7 +318,6 @@
     :catchall_0
     move-exception p0
 
-    .line 72
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -360,18 +328,15 @@
 .method public readPermissionTrees(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 1
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 114
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissionTrees:Landroid/util/ArrayMap;
 
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/LegacyPermissionSettings;->readPermissions(Landroid/util/ArrayMap;Lcom/android/modules/utils/TypedXmlPullParser;)V
 
-    .line 115
     monitor-exit v0
 
     return-void
@@ -389,18 +354,15 @@
 .method public readPermissions(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 1
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 107
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissions:Landroid/util/ArrayMap;
 
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/LegacyPermissionSettings;->readPermissions(Landroid/util/ArrayMap;Lcom/android/modules/utils/TypedXmlPullParser;)V
 
-    .line 108
     monitor-exit v0
 
     return-void
@@ -418,18 +380,15 @@
 .method public replacePermissionTrees(Ljava/util/List;)V
     .locals 6
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 95
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissionTrees:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->clear()V
 
-    .line 96
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -439,14 +398,12 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 98
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/pm/permission/LegacyPermission;
 
-    .line 99
     iget-object v4, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissionTrees:Landroid/util/ArrayMap;
 
     invoke-virtual {v3}, Lcom/android/server/pm/permission/LegacyPermission;->getPermissionInfo()Landroid/content/pm/PermissionInfo;
@@ -461,7 +418,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_0
     monitor-exit v0
 
@@ -480,18 +436,15 @@
 .method public replacePermissions(Ljava/util/List;)V
     .locals 6
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 84
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissions:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->clear()V
 
-    .line 85
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -501,14 +454,12 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 87
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/pm/permission/LegacyPermission;
 
-    .line 88
     iget-object v4, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissions:Landroid/util/ArrayMap;
 
     invoke-virtual {v3}, Lcom/android/server/pm/permission/LegacyPermission;->getPermissionInfo()Landroid/content/pm/PermissionInfo;
@@ -523,7 +474,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_0
     monitor-exit v0
 
@@ -542,12 +492,10 @@
 .method public writePermissionTrees(Lcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 2
 
-    .line 146
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 147
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissionTrees:Landroid/util/ArrayMap;
 
@@ -572,12 +520,10 @@
 
     check-cast v1, Lcom/android/server/pm/permission/LegacyPermission;
 
-    .line 148
     invoke-virtual {v1, p1}, Lcom/android/server/pm/permission/LegacyPermission;->write(Lcom/android/modules/utils/TypedXmlSerializer;)V
 
     goto :goto_0
 
-    .line 150
     :cond_0
     monitor-exit v0
 
@@ -596,12 +542,10 @@
 .method public writePermissions(Lcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 2
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 139
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionSettings;->mPermissions:Landroid/util/ArrayMap;
 
@@ -626,12 +570,10 @@
 
     check-cast v1, Lcom/android/server/pm/permission/LegacyPermission;
 
-    .line 140
     invoke-virtual {v1, p1}, Lcom/android/server/pm/permission/LegacyPermission;->write(Lcom/android/modules/utils/TypedXmlSerializer;)V
 
     goto :goto_0
 
-    .line 142
     :cond_0
     monitor-exit v0
 

@@ -15,16 +15,12 @@
 .method public constructor <init>([Lcom/android/server/pm/ShareTargetInfo$TargetData;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 0
 
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 107
     iput-object p1, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
-    .line 108
     iput-object p2, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetClass:Ljava/lang/String;
 
-    .line 109
     iput-object p3, p0, Lcom/android/server/pm/ShareTargetInfo;->mCategories:[Ljava/lang/String;
 
     return-void
@@ -35,22 +31,18 @@
 
     const-string/jumbo v0, "targetClass"
 
-    .line 156
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 157
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 158
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 161
     :cond_0
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -65,7 +57,6 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 163
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -93,7 +84,6 @@
     :cond_1
     const-string/jumbo v3, "name"
 
-    .line 168
     invoke-static {p0, v3}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -102,7 +92,6 @@
 
     goto :goto_0
 
-    .line 165
     :cond_2
     invoke-static {p0}, Lcom/android/server/pm/ShareTargetInfo;->parseTargetData(Lcom/android/modules/utils/TypedXmlPullParser;)Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
@@ -117,7 +106,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 171
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -130,7 +118,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 175
     :cond_4
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -148,11 +135,9 @@
 
     goto :goto_1
 
-    .line 178
     :cond_5
     new-instance p0, Lcom/android/server/pm/ShareTargetInfo;
 
-    .line 179
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -165,7 +150,6 @@
 
     check-cast v1, [Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
-    .line 180
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -194,54 +178,46 @@
 
     const-string/jumbo v0, "scheme"
 
-    .line 184
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v0, "host"
 
-    .line 185
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string/jumbo v0, "port"
 
-    .line 186
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string/jumbo v0, "path"
 
-    .line 187
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string/jumbo v0, "pathPattern"
 
-    .line 188
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     const-string/jumbo v0, "pathPrefix"
 
-    .line 189
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
     const-string/jumbo v0, "mimeType"
 
-    .line 190
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseStringAttribute(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 192
     new-instance p0, Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     move-object v1, p0
@@ -260,12 +236,10 @@
 
     const-string/jumbo v1, "share-target"
 
-    .line 129
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v2, "targetClass"
 
-    .line 131
     iget-object v3, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetClass:Ljava/lang/String;
 
     invoke-static {p1, v2, v3}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
@@ -274,7 +248,6 @@
 
     move v3, v2
 
-    .line 133
     :goto_0
     iget-object v4, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
@@ -284,10 +257,8 @@
 
     const-string v4, "data"
 
-    .line 134
     invoke-interface {p1, v0, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 135
     iget-object v5, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     aget-object v5, v5, v3
@@ -298,7 +269,6 @@
 
     invoke-static {p1, v6, v5}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 136
     iget-object v5, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     aget-object v5, v5, v3
@@ -309,7 +279,6 @@
 
     invoke-static {p1, v6, v5}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 137
     iget-object v5, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     aget-object v5, v5, v3
@@ -320,7 +289,6 @@
 
     invoke-static {p1, v6, v5}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 138
     iget-object v5, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     aget-object v5, v5, v3
@@ -331,7 +299,6 @@
 
     invoke-static {p1, v6, v5}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 139
     iget-object v5, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     aget-object v5, v5, v3
@@ -342,7 +309,6 @@
 
     invoke-static {p1, v6, v5}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 140
     iget-object v5, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     aget-object v5, v5, v3
@@ -353,7 +319,6 @@
 
     invoke-static {p1, v6, v5}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 141
     iget-object v5, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     aget-object v5, v5, v3
@@ -364,14 +329,12 @@
 
     invoke-static {p1, v6, v5}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 142
     invoke-interface {p1, v0, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 145
     :cond_0
     :goto_1
     iget-object v3, p0, Lcom/android/server/pm/ShareTargetInfo;->mCategories:[Ljava/lang/String;
@@ -382,10 +345,8 @@
 
     const-string v3, "category"
 
-    .line 146
     invoke-interface {p1, v0, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 147
     iget-object v4, p0, Lcom/android/server/pm/ShareTargetInfo;->mCategories:[Ljava/lang/String;
 
     aget-object v4, v4, v2
@@ -394,14 +355,12 @@
 
     invoke-static {p1, v5, v4}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 148
     invoke-interface {p1, v0, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 151
     :cond_1
     invoke-interface {p1, v0, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -411,14 +370,12 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "targetClass="
 
-    .line 115
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetClass:Ljava/lang/String;
@@ -429,7 +386,6 @@
 
     move v2, v1
 
-    .line 116
     :goto_0
     iget-object v3, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
@@ -439,10 +395,8 @@
 
     const-string v3, " data={"
 
-    .line 117
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 118
     iget-object v3, p0, Lcom/android/server/pm/ShareTargetInfo;->mTargetData:[Lcom/android/server/pm/ShareTargetInfo$TargetData;
 
     aget-object v3, v3, v2
@@ -451,14 +405,12 @@
 
     const-string/jumbo v3, "}"
 
-    .line 119
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 121
     :cond_0
     :goto_1
     iget-object v2, p0, Lcom/android/server/pm/ShareTargetInfo;->mCategories:[Ljava/lang/String;
@@ -469,7 +421,6 @@
 
     const-string v2, " category="
 
-    .line 122
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/android/server/pm/ShareTargetInfo;->mCategories:[Ljava/lang/String;
@@ -482,7 +433,6 @@
 
     goto :goto_1
 
-    .line 125
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

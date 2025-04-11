@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 806
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 807
     new-instance v0, Landroid/util/AtomicFile;
 
     new-instance v1, Ljava/io/File;
@@ -39,14 +37,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 821
     iget-object p0, p0, Lcom/android/server/input/PersistentDataStore$Injector;->mAtomicFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p0, p1}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
     goto :goto_0
 
-    .line 823
     :cond_0
     iget-object p0, p0, Lcom/android/server/input/PersistentDataStore$Injector;->mAtomicFile:Landroid/util/AtomicFile;
 
@@ -59,7 +55,6 @@
 .method public openRead()Ljava/io/InputStream;
     .locals 0
 
-    .line 812
     iget-object p0, p0, Lcom/android/server/input/PersistentDataStore$Injector;->mAtomicFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p0}, Landroid/util/AtomicFile;->openRead()Ljava/io/FileInputStream;
@@ -72,7 +67,6 @@
 .method public startWrite()Ljava/io/FileOutputStream;
     .locals 0
 
-    .line 816
     iget-object p0, p0, Lcom/android/server/input/PersistentDataStore$Injector;->mAtomicFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p0}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;

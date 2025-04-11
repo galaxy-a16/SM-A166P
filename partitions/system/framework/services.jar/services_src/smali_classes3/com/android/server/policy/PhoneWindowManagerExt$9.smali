@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 5613
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$9;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onMultiFingerGesture(II)V
     .locals 0
 
-    .line 5616
     iget-object p2, p0, Lcom/android/server/policy/PhoneWindowManagerExt$9;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-virtual {p2}, Lcom/android/server/policy/PhoneWindowManagerExt;->isInDexMode()Z
@@ -40,12 +38,10 @@
 
     const-string p1, "Skip multi finger gesture in DeX mode."
 
-    .line 5617
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 5620
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$9;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 

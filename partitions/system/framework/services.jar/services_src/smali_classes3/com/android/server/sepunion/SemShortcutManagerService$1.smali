@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemShortcutManagerService;)V
     .locals 0
 
-    .line 184
     iput-object p1, p0, Lcom/android/server/sepunion/SemShortcutManagerService$1;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onShortcutChanged(Ljava/lang/String;I)V
     .locals 10
 
-    .line 188
     invoke-static {}, Lcom/android/server/sepunion/SemShortcutManagerService;->-$$Nest$sfgetmLock()Ljava/lang/Object;
 
     move-result-object v0
@@ -37,7 +35,6 @@
     :try_start_0
     const-string v1, "SemExecuteManagerService"
 
-    .line 189
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +53,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     iget-object v1, p0, Lcom/android/server/sepunion/SemShortcutManagerService$1;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
     invoke-static {v1}, Lcom/android/server/sepunion/SemShortcutManagerService;->-$$Nest$fgetmShortcutChangedCallbackMap(Lcom/android/server/sepunion/SemShortcutManagerService;)Ljava/util/HashMap;
@@ -75,14 +71,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 192
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
     const-string v3, "SemExecuteManagerService"
 
-    .line 193
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -106,14 +100,12 @@
     :goto_0
     if-ge v4, v2, :cond_0
 
-    .line 195
     iget-object v5, p0, Lcom/android/server/sepunion/SemShortcutManagerService$1;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
     invoke-static {v5, p1, p2}, Lcom/android/server/sepunion/SemShortcutManagerService;->-$$Nest$mmakeIntent(Lcom/android/server/sepunion/SemShortcutManagerService;Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object v5
 
-    .line 196
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -122,7 +114,6 @@
 
     const-string v7, "SemExecuteManagerService"
 
-    .line 197
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -151,7 +142,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 199
     :try_start_1
     iget-object v7, p0, Lcom/android/server/sepunion/SemShortcutManagerService$1;->this$0:Lcom/android/server/sepunion/SemShortcutManagerService;
 
@@ -169,7 +159,6 @@
     :catch_0
     move-exception v5
 
-    .line 201
     :try_start_2
     invoke-virtual {v5}, Landroid/app/PendingIntent$CanceledException;->printStackTrace()V
 
@@ -178,7 +167,6 @@
 
     goto :goto_0
 
-    .line 205
     :cond_0
     monitor-exit v0
 

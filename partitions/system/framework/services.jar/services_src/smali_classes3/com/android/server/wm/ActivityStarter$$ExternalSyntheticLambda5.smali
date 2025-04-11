@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/ActivityStarter;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/ActivityStarter$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/wm/ActivityStarter;
@@ -35,7 +34,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/wm/ActivityStarter$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/wm/ActivityStarter;
 
     iget-object v1, p0, Lcom/android/server/wm/ActivityStarter$$ExternalSyntheticLambda5;->f$1:Lcom/android/server/wm/ActivityRecord;

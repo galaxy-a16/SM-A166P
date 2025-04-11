@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetAUTHORITY_URI()Landroid/net/Uri;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/battery/sleepcharging/SleepPatternContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     return-object v0
@@ -22,7 +21,6 @@
 
     const-string v0, "content://com.samsung.android.rubin.persona.sleeppattern"
 
-    .line 31
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

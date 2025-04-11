@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/IAccountManagerResponse;Ljava/lang/String;ZZLjava/lang/String;ZLandroid/accounts/Account;Ljava/lang/String;)V
     .locals 0
 
-    .line 4255
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$15;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p9, p0, Lcom/android/server/accounts/AccountManagerService$15;->val$account:Landroid/accounts/Account;
@@ -34,10 +33,8 @@
 
     const/4 v0, 0x1
 
-    .line 4271
     invoke-static {p1, v0}, Landroid/os/Bundle;->setDefusable(Landroid/os/Bundle;Z)Landroid/os/Bundle;
 
-    .line 4272
     invoke-virtual {p0}, Lcom/android/server/accounts/AccountManagerService$Session;->getResponseAndClose()Landroid/accounts/IAccountManagerResponse;
 
     move-result-object v0
@@ -51,7 +48,6 @@
 
     if-nez p1, :cond_1
 
-    .line 4278
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$15;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     const-string/jumbo p1, "null bundle"
@@ -65,14 +61,12 @@
 
     const-string v3, "AccountManagerService"
 
-    .line 4285
     invoke-static {v3, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 4286
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,29 +98,24 @@
 
     const-string v3, "errorCode"
 
-    .line 4291
     invoke-virtual {p1, v3, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 
     if-lez v2, :cond_3
 
-    .line 4292
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$15;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
-    .line 4293
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v2, "errorMessage"
 
-    .line 4294
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 4292
     invoke-static {p0, v0, v1, p1}, Lcom/android/server/accounts/AccountManagerService;->-$$Nest$msendErrorResponse(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/IAccountManagerResponse;ILjava/lang/String;)V
 
     return-void
@@ -134,14 +123,12 @@
     :cond_3
     const-string v2, "booleanResult"
 
-    .line 4297
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
-    .line 4298
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$15;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     const-string/jumbo p1, "no result in response"
@@ -150,7 +137,6 @@
 
     return-void
 
-    .line 4304
     :cond_4
     new-instance v1, Landroid/os/Bundle;
 
@@ -158,15 +144,12 @@
 
     const/4 v3, 0x0
 
-    .line 4306
     invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 4305
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 4307
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$15;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     invoke-static {p0, v0, v1}, Lcom/android/server/accounts/AccountManagerService;->-$$Nest$msendResponse(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/IAccountManagerResponse;Landroid/os/Bundle;)V
@@ -177,12 +160,10 @@
 .method public run()V
     .locals 3
 
-    .line 4264
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$Session;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     if-eqz v0, :cond_0
 
-    .line 4265
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$15;->val$account:Landroid/accounts/Account;
 
     iget-object v2, p0, Lcom/android/server/accounts/AccountManagerService$15;->val$statusToken:Ljava/lang/String;
@@ -196,7 +177,6 @@
 .method public toDebugString(J)Ljava/lang/String;
     .locals 1
 
-    .line 4258
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,7 +193,6 @@
 
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$15;->val$account:Landroid/accounts/Account;
 
-    .line 4259
     invoke-virtual {p0}, Landroid/accounts/Account;->toSafeString()Ljava/lang/String;
 
     move-result-object p0

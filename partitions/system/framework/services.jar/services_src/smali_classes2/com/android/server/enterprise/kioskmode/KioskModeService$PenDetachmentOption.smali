@@ -21,7 +21,6 @@
 .method public static synthetic $values()[Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
     .locals 3
 
-    .line 2684
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->NONE:Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     sget-object v1, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->ACTION_MEMO:Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 2685
     new-instance v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     const-string v1, "NONE"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->AIR_COMMAND:Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
-    .line 2684
     invoke-static {}, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->$values()[Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     move-result-object v0
@@ -82,10 +79,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 2689
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2690
     iput p3, p0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->option:I
 
     return-void
@@ -94,7 +89,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
     .locals 1
 
-    .line 2684
     const-class v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -109,7 +103,6 @@
 .method public static values()[Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
     .locals 1
 
-    .line 2684
     sget-object v0, Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->$VALUES:[Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/kioskmode/KioskModeService$PenDetachmentOption;->clone()Ljava/lang/Object;

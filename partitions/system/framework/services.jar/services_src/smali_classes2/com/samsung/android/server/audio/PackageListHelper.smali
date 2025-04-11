@@ -19,22 +19,18 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     invoke-static {p1}, Lcom/samsung/android/server/audio/AudioSettingsHelper;->getInstance(Landroid/content/Context;)Lcom/samsung/android/server/audio/AudioSettingsHelper;
 
     move-result-object p1
 
-    .line 50
     new-instance v0, Lcom/samsung/android/server/audio/AppCategorizer;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/server/audio/AppCategorizer;-><init>(Lcom/samsung/android/server/audio/AudioSettingsHelper;)V
 
     sput-object v0, Lcom/samsung/android/server/audio/PackageListHelper;->sCategorizer:Lcom/samsung/android/server/audio/AppCategorizer;
 
-    .line 52
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -45,14 +41,12 @@
 
     move-result-object p1
 
-    .line 54
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/server/audio/PackageListHelper;->mAllowedPackageList:Ljava/util/List;
 
-    .line 56
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -63,7 +57,6 @@
 
     move-result-object p1
 
-    .line 58
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -78,10 +71,8 @@
 
     const/4 v0, 0x0
 
-    .line 70
     sput-object v0, Lcom/samsung/android/server/audio/PackageListHelper;->sInstance:Lcom/samsung/android/server/audio/PackageListHelper;
 
-    .line 71
     invoke-static {}, Lcom/samsung/android/server/audio/AudioSettingsHelper;->destroy()V
 
     return-void
@@ -90,19 +81,16 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/samsung/android/server/audio/PackageListHelper;
     .locals 1
 
-    .line 62
     sget-object v0, Lcom/samsung/android/server/audio/PackageListHelper;->sInstance:Lcom/samsung/android/server/audio/PackageListHelper;
 
     if-nez v0, :cond_0
 
-    .line 63
     new-instance v0, Lcom/samsung/android/server/audio/PackageListHelper;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/audio/PackageListHelper;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/samsung/android/server/audio/PackageListHelper;->sInstance:Lcom/samsung/android/server/audio/PackageListHelper;
 
-    .line 65
     :cond_0
     sget-object p0, Lcom/samsung/android/server/audio/PackageListHelper;->sInstance:Lcom/samsung/android/server/audio/PackageListHelper;
 
@@ -116,14 +104,12 @@
 
     const-string p0, "android.permission.MODIFY_PHONE_STATE"
 
-    .line 122
     invoke-virtual {p1, p0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 125
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,7 +118,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 126
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p1
@@ -155,12 +140,10 @@
 
     const-string p1, "PackageListHelper"
 
-    .line 125
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 131
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -173,7 +156,6 @@
 
     move-result-object p0
 
-    .line 133
     sget-object p1, Lcom/samsung/android/server/audio/PackageListHelper;->sCategorizer:Lcom/samsung/android/server/audio/AppCategorizer;
 
     iget p2, p0, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -193,7 +175,6 @@
 
     const-string p0, "android.permission.MODIFY_AUDIO_SETTINGS"
 
-    .line 140
     invoke-virtual {p1, p0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -204,7 +185,6 @@
 
     return p0
 
-    .line 144
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -220,7 +200,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 145
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p1
@@ -231,7 +210,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 146
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p1
@@ -244,7 +222,6 @@
 
     const-string p1, "PackageListHelper"
 
-    .line 147
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -255,7 +232,6 @@
 .method public getSelectedAppList()[Ljava/lang/String;
     .locals 0
 
-    .line 118
     sget-object p0, Lcom/samsung/android/server/audio/PackageListHelper;->sCategorizer:Lcom/samsung/android/server/audio/AppCategorizer;
 
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/AppCategorizer;->getSelectedPackages()[Ljava/lang/String;
@@ -272,12 +248,10 @@
 
     const-string v1, "initPackageList"
 
-    .line 75
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 77
     :goto_0
     iget-object v1, p0, Lcom/samsung/android/server/audio/PackageListHelper;->mAllowedPackageList:Ljava/util/List;
 
@@ -287,7 +261,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 78
     iget-object v1, p0, Lcom/samsung/android/server/audio/PackageListHelper;->mAllowedPackageList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -302,7 +275,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 80
     sget-object v2, Lcom/samsung/android/server/audio/PackageListHelper;->sCategorizer:Lcom/samsung/android/server/audio/AppCategorizer;
 
     iget-object v3, p0, Lcom/samsung/android/server/audio/PackageListHelper;->mAllowedPackageList:Ljava/util/List;
@@ -327,7 +299,6 @@
 .method public isAlreadyInDB(Ljava/lang/String;)Z
     .locals 0
 
-    .line 94
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/PackageListHelper;->isRestrictedPackage(Ljava/lang/String;)Z
 
     move-result p0
@@ -338,7 +309,6 @@
 
     return p0
 
-    .line 96
     :cond_0
     sget-object p0, Lcom/samsung/android/server/audio/PackageListHelper;->sCategorizer:Lcom/samsung/android/server/audio/AppCategorizer;
 
@@ -356,7 +326,6 @@
 
     move v1, v0
 
-    .line 100
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/PackageListHelper;->mAllowedPackageList:Ljava/util/List;
 
@@ -366,7 +335,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 101
     iget-object v2, p0, Lcom/samsung/android/server/audio/PackageListHelper;->mAllowedPackageList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -401,7 +369,6 @@
 
     move v1, v0
 
-    .line 109
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/PackageListHelper;->mRestrictedPackageList:Ljava/util/List;
 
@@ -411,7 +378,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 110
     iget-object v2, p0, Lcom/samsung/android/server/audio/PackageListHelper;->mRestrictedPackageList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -444,7 +410,6 @@
 
     const-string/jumbo v0, "removePackageForName"
 
-    .line 86
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/server/audio/PackageListHelper;->checkAudioSettingsPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -453,7 +418,6 @@
 
     return-void
 
-    .line 89
     :cond_0
     sget-object p0, Lcom/samsung/android/server/audio/PackageListHelper;->sCategorizer:Lcom/samsung/android/server/audio/AppCategorizer;
 

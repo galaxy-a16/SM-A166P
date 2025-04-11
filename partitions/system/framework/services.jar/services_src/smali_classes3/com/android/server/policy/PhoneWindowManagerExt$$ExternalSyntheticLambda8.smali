@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/policy/PhoneWindowManagerExt;->$r8$lambda$T8or4XiUMA3Ti-ZHy71pzzhdtaw()V
 
     return-void

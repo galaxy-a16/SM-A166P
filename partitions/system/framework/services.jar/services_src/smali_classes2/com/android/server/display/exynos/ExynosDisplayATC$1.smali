@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/exynos/ExynosDisplayATC;)V
     .locals 0
 
-    .line 375
     iput-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$1;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,17 +23,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 378
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 379
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 396
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$1;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
@@ -46,12 +42,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 397
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$1;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-virtual {p1, v0}, Lcom/android/server/display/exynos/ExynosDisplayATC;->sysfsWriteOnOff(Z)V
 
-    .line 398
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$1;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
@@ -59,7 +53,6 @@
 
     goto :goto_0
 
-    .line 393
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$1;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
@@ -75,7 +68,6 @@
 
     goto :goto_0
 
-    .line 390
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$1;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
@@ -89,7 +81,6 @@
 
     goto :goto_0
 
-    .line 387
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$1;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
@@ -105,7 +96,6 @@
 
     goto :goto_0
 
-    .line 384
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$1;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 381
     :pswitch_5
     invoke-static {}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sendEmptyUpdate()V
 

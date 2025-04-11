@@ -13,7 +13,6 @@
 .method public constructor <init>(Lorg/tukaani/xz/lzma/LZMACoder$LiteralCoder;)V
     .locals 0
 
-    .line 108
     iput-object p1, p0, Lorg/tukaani/xz/lzma/LZMACoder$LiteralCoder$LiteralSubcoder;->this$1:Lorg/tukaani/xz/lzma/LZMACoder$LiteralCoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -22,7 +21,6 @@
 
     new-array p1, p1, [S
 
-    .line 109
     iput-object p1, p0, Lorg/tukaani/xz/lzma/LZMACoder$LiteralCoder$LiteralSubcoder;->probs:[S
 
     return-void
@@ -33,7 +31,6 @@
 .method public reset()V
     .locals 0
 
-    .line 112
     iget-object p0, p0, Lorg/tukaani/xz/lzma/LZMACoder$LiteralCoder$LiteralSubcoder;->probs:[S
 
     invoke-static {p0}, Lorg/tukaani/xz/rangecoder/RangeCoder;->initProbs([S)V

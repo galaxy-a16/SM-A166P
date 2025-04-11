@@ -18,15 +18,12 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;ILandroid/hardware/input/IInputSensorEventListener;)V
     .locals 0
 
-    .line 4749
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4750
     iput p2, p0, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->mPid:I
 
-    .line 4751
     iput-object p3, p0, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->mListener:Landroid/hardware/input/IInputSensorEventListener;
 
     return-void
@@ -37,14 +34,12 @@
 .method public binderDied()V
     .locals 2
 
-    .line 4756
     invoke-static {}, Lcom/android/server/input/InputManagerService;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4757
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +64,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4759
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -83,7 +77,6 @@
 .method public getListener()Landroid/hardware/input/IInputSensorEventListener;
     .locals 0
 
-    .line 4763
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->mListener:Landroid/hardware/input/IInputSensorEventListener;
 
     return-object p0
@@ -92,7 +85,6 @@
 .method public notifySensorAccuracy(III)V
     .locals 1
 
-    .line 4780
     :try_start_0
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->mListener:Landroid/hardware/input/IInputSensorEventListener;
 
@@ -105,7 +97,6 @@
     :catch_0
     move-exception p1
 
-    .line 4782
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,7 +121,6 @@
 
     invoke-static {p3, p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4784
     invoke-virtual {p0}, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->binderDied()V
 
     :goto_0
@@ -140,7 +130,6 @@
 .method public notifySensorEvent(IIIJ[F)V
     .locals 7
 
-    .line 4769
     :try_start_0
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->mListener:Landroid/hardware/input/IInputSensorEventListener;
 
@@ -163,7 +152,6 @@
     :catch_0
     move-exception p1
 
-    .line 4772
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -188,7 +176,6 @@
 
     invoke-static {p3, p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4774
     invoke-virtual {p0}, Lcom/android/server/input/InputManagerService$SensorEventListenerRecord;->binderDied()V
 
     :goto_0

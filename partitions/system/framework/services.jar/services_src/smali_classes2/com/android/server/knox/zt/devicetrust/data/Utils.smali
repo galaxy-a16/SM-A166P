@@ -15,10 +15,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/data/Utils;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
@@ -31,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/knox/zt/devicetrust/data/Utils-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/knox/zt/devicetrust/data/Utils;-><init>()V
 
     return-void
@@ -40,7 +37,6 @@
 .method public static getInstance()Lcom/android/server/knox/zt/devicetrust/data/Utils;
     .locals 1
 
-    .line 59
     invoke-static {}, Lcom/android/server/knox/zt/devicetrust/data/Utils$InstanceHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/knox/zt/devicetrust/data/Utils;
 
     move-result-object v0
@@ -51,7 +47,6 @@
 .method public static nullSafe(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p0, :cond_0
 
     goto :goto_0
@@ -70,7 +65,6 @@
 
     const-string/jumbo p0, "package"
 
-    .line 20
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -85,12 +79,10 @@
 .method public getPackageNameForUid(I)Ljava/lang/String;
     .locals 0
 
-    .line 45
     iget-object p0, p0, Lcom/android/server/knox/zt/devicetrust/data/Utils;->mPm:Landroid/content/pm/IPackageManager;
 
     if-eqz p0, :cond_0
 
-    .line 47
     :try_start_0
     invoke-interface {p0, p1}, Landroid/content/pm/IPackageManager;->getNameForUid(I)Ljava/lang/String;
 
@@ -104,7 +96,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 52
     :goto_0
     invoke-static {p0}, Lcom/android/server/knox/zt/devicetrust/data/Utils;->nullSafe(Ljava/lang/String;)Ljava/lang/String;
 
@@ -116,7 +107,6 @@
 .method public getProcessNameForPid(I)Ljava/lang/String;
     .locals 0
 
-    .line 36
     :try_start_0
     invoke-static {p1}, Lcom/samsung/android/server/pm/PmServerUtils;->getProcessNameForPid(I)Ljava/lang/String;
 
@@ -129,7 +119,6 @@
     :catchall_0
     const/4 p0, 0x0
 
-    .line 40
     :goto_0
     invoke-static {p0}, Lcom/android/server/knox/zt/devicetrust/data/Utils;->nullSafe(Ljava/lang/String;)Ljava/lang/String;
 
@@ -141,7 +130,6 @@
 .method public getSecurityContextForPid(I)Ljava/lang/String;
     .locals 0
 
-    .line 26
     :try_start_0
     invoke-static {p1}, Landroid/os/SELinux;->getPidContext(I)Ljava/lang/String;
 
@@ -154,7 +142,6 @@
     :catchall_0
     const/4 p0, 0x0
 
-    .line 30
     :goto_0
     invoke-static {p0}, Lcom/android/server/knox/zt/devicetrust/data/Utils;->nullSafe(Ljava/lang/String;)Ljava/lang/String;
 

@@ -17,20 +17,16 @@
 .method public constructor <init>([FLcom/android/server/display/BrightnessMappingStrategy;)V
     .locals 3
 
-    .line 664
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 660
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
-    .line 665
     iput-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
-    .line 667
     array-length p1, p1
 
     new-array p1, p1, [Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;
@@ -39,7 +35,6 @@
 
     const/4 p1, 0x0
 
-    .line 668
     :goto_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTimeStats:[Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;
 
@@ -47,7 +42,6 @@
 
     if-ge p1, v1, :cond_0
 
-    .line 669
     new-instance v1, Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;
 
     const/4 v2, 0x0
@@ -60,7 +54,6 @@
 
     goto :goto_0
 
-    .line 672
     :cond_0
     iput-object p2, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
 
@@ -72,7 +65,6 @@
 .method public getStats()[Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;
     .locals 0
 
-    .line 767
     iget-object p0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTimeStats:[Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;
 
     return-object p0
@@ -81,14 +73,12 @@
 .method public initTransientStats()V
     .locals 3
 
-    .line 678
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     const/4 v0, 0x0
 
-    .line 680
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
@@ -96,12 +86,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 681
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 682
     iget-object v2, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -119,7 +107,6 @@
 
     const/4 v0, 0x0
 
-    .line 747
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
@@ -129,7 +116,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 754
     iget-object v1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -159,14 +145,12 @@
 
     check-cast v4, Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;
 
-    .line 755
     invoke-virtual {v4}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;->getWeight()F
 
     move-result v5
 
     add-float/2addr v3, v5
 
-    .line 756
     invoke-virtual {v4}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;->getBrightness()F
 
     move-result v5
@@ -184,7 +168,6 @@
     :cond_0
     div-float/2addr v2, v3
 
-    .line 762
     iget-object v1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTimeStats:[Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;
 
     aget-object v1, v1, v0
@@ -202,12 +185,10 @@
 .method public toString()Ljava/lang/String;
     .locals 9
 
-    .line 773
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 774
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +197,6 @@
 
     move v3, v2
 
-    .line 775
     :goto_0
     iget-object v4, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
@@ -224,7 +204,6 @@
 
     if-ge v3, v5, :cond_0
 
-    .line 776
     aget v4, v4, v3
 
     float-to-int v4, v4
@@ -254,7 +233,6 @@
 
     move v4, v3
 
-    .line 780
     :goto_1
     iget-object v5, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
@@ -264,7 +242,6 @@
 
     if-ge v3, v5, :cond_2
 
-    .line 781
     iget-object v5, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -294,7 +271,6 @@
 
     move v5, v2
 
-    .line 788
     :goto_3
     iget-object v6, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
@@ -304,7 +280,6 @@
 
     if-ge v5, v6, :cond_4
 
-    .line 789
     iget-object v6, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -313,7 +288,6 @@
 
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 790
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v7
@@ -322,7 +296,6 @@
 
     if-ge v3, v7, :cond_3
 
-    .line 792
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -342,7 +315,6 @@
     :cond_3
     const-string v6, "-"
 
-    .line 794
     filled-new-array {v6}, [Ljava/lang/Object;
 
     move-result-object v6
@@ -358,7 +330,6 @@
 
     goto :goto_3
 
-    .line 797
     :cond_4
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
 
@@ -370,33 +341,27 @@
 
     goto :goto_2
 
-    .line 800
     :cond_5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 801
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 802
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 803
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 804
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 805
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -415,32 +380,26 @@
 
     move/from16 v3, p3
 
-    .line 688
     iget-object v4, v0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
     invoke-static {v1, v4}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->-$$Nest$smgetBucketIndex(F[F)I
 
     move-result v4
 
-    .line 689
     iget-object v5, v0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
     aget v5, v5, v4
 
-    .line 692
     invoke-static {v5}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->-$$Nest$smgetLowerBoundary(F)F
 
     move-result v6
 
-    .line 693
     invoke-static {v5}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->-$$Nest$smgetUpperBoundary(F)F
 
     move-result v7
 
-    .line 696
     iget-object v8, v0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
-    .line 697
     invoke-static {v6, v8}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->-$$Nest$smgetBucketIndex(F[F)I
 
     move-result v8
@@ -453,15 +412,12 @@
 
     const/4 v10, 0x0
 
-    .line 696
     invoke-static {v8, v10, v9}, Landroid/util/MathUtils;->constrain(III)I
 
     move-result v8
 
-    .line 698
     iget-object v9, v0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
-    .line 699
     invoke-static {v7, v9}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->-$$Nest$smgetBucketIndex(F[F)I
 
     move-result v9
@@ -472,12 +428,10 @@
 
     add-int/lit8 v11, v11, -0x1
 
-    .line 698
     invoke-static {v9, v10, v11}, Landroid/util/MathUtils;->constrain(III)I
 
     move-result v9
 
-    .line 701
     iget-object v10, v0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
     aget v11, v10, v8
@@ -486,7 +440,6 @@
 
     if-gez v11, :cond_0
 
-    .line 702
     array-length v11, v10
 
     add-int/lit8 v11, v11, -0x2
@@ -495,7 +448,6 @@
 
     add-int/lit8 v8, v8, 0x1
 
-    .line 706
     :cond_0
     aget v10, v10, v9
 
@@ -507,7 +459,6 @@
 
     add-int/lit8 v9, v9, -0x1
 
-    .line 712
     :cond_1
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -556,7 +507,6 @@
     :goto_0
     if-gt v8, v9, :cond_5
 
-    .line 717
     iget-object v10, v0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mTransientStats:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -565,26 +515,22 @@
 
     check-cast v10, Ljava/util/ArrayList;
 
-    .line 718
     iget-object v12, v0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
 
     if-eqz v12, :cond_4
 
-    .line 719
     iget-object v13, v0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$TimeStatsCollector;->mBucketBoundaries:[F
 
     aget v13, v13, v8
 
     move-object/from16 v14, p4
 
-    .line 720
     invoke-static {v13, v14, v12}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->-$$Nest$smgetBrightnessForSpline(FLandroid/util/Spline;Lcom/android/server/display/BrightnessMappingStrategy;)F
 
     move-result v12
 
     if-ne v4, v8, :cond_2
 
-    .line 723
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -619,20 +565,17 @@
 
     invoke-static {v11, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 728
     :cond_2
     invoke-static {v13, v6, v5, v7}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->-$$Nest$smgetDistributionRatio(FFFF)F
 
     move-result v0
 
-    .line 730
     invoke-static {v12, v10}, Lcom/android/server/display/AdaptiveBrightnessWeightStats;->-$$Nest$smfindBrightnessIndex(FLjava/util/ArrayList;)I
 
     move-result v13
 
     if-ltz v13, :cond_3
 
-    .line 733
     invoke-virtual {v10, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v10
@@ -645,7 +588,6 @@
 
     goto :goto_1
 
-    .line 735
     :cond_3
     new-instance v13, Lcom/android/server/display/AdaptiveBrightnessWeightStats$WeightStat;
 

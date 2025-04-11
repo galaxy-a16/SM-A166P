@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/media/projection/MediaProjectionManagerService;)V
     .locals 0
 
-    .line 631
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$3;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 5
 
-    .line 634
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$3;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-static {v0}, Lcom/android/server/media/projection/MediaProjectionManagerService;->-$$Nest$fgetmContext(Lcom/android/server/media/projection/MediaProjectionManagerService;)Landroid/content/Context;
@@ -42,14 +40,12 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    .line 635
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->semGetWifiDisplayStatus()Landroid/hardware/display/SemWifiDisplayStatus;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 636
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->semGetWifiDisplayStatus()Landroid/hardware/display/SemWifiDisplayStatus;
 
     move-result-object v1
@@ -62,7 +58,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 637
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->semGetWifiDisplayStatus()Landroid/hardware/display/SemWifiDisplayStatus;
 
     move-result-object v0
@@ -77,7 +72,6 @@
 
     const-string/jumbo v2, "phone"
 
-    .line 639
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -94,7 +88,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 640
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
     iget-object v4, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$3;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
@@ -111,7 +104,6 @@
 
     move-result-object p0
 
-    .line 641
     invoke-virtual {v0}, Landroid/hardware/display/SemWifiDisplay;->getDeviceName()Ljava/lang/String;
 
     move-result-object v0
@@ -126,17 +118,14 @@
 
     move-result-object p0
 
-    .line 640
     invoke-static {v1, p0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object p0
 
-    .line 641
     invoke-virtual {p0}, Landroid/widget/Toast;->show()V
 
     goto :goto_0
 
-    .line 643
     :cond_0
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
@@ -154,7 +143,6 @@
 
     move-result-object p0
 
-    .line 644
     invoke-virtual {v0}, Landroid/hardware/display/SemWifiDisplay;->getDeviceName()Ljava/lang/String;
 
     move-result-object v0
@@ -169,12 +157,10 @@
 
     move-result-object p0
 
-    .line 643
     invoke-static {v1, p0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object p0
 
-    .line 644
     invoke-virtual {p0}, Landroid/widget/Toast;->show()V
 
     :cond_1

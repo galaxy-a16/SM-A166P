@@ -22,26 +22,20 @@
 .method public constructor <init>(Lcom/android/server/backup/UserBackupManagerService;Lcom/android/server/backup/transport/TransportConnection;Landroid/content/pm/PackageInfo;Lcom/android/server/backup/internal/OnTaskFinishedListener;)V
     .locals 0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/backup/internal/PerformClearTask;->mBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
-    .line 42
     invoke-virtual {p1}, Lcom/android/server/backup/UserBackupManagerService;->getTransportManager()Lcom/android/server/backup/TransportManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/backup/internal/PerformClearTask;->mTransportManager:Lcom/android/server/backup/TransportManager;
 
-    .line 43
     iput-object p2, p0, Lcom/android/server/backup/internal/PerformClearTask;->mTransportConnection:Lcom/android/server/backup/transport/TransportConnection;
 
-    .line 44
     iput-object p3, p0, Lcom/android/server/backup/internal/PerformClearTask;->mPackage:Landroid/content/pm/PackageInfo;
 
-    .line 45
     iput-object p4, p0, Lcom/android/server/backup/internal/PerformClearTask;->mListener:Lcom/android/server/backup/internal/OnTaskFinishedListener;
 
     return-void
@@ -60,23 +54,19 @@
 
     const/4 v3, 0x0
 
-    .line 53
     :try_start_0
     iget-object v4, p0, Lcom/android/server/backup/internal/PerformClearTask;->mTransportManager:Lcom/android/server/backup/TransportManager;
 
     iget-object v5, p0, Lcom/android/server/backup/internal/PerformClearTask;->mTransportConnection:Lcom/android/server/backup/transport/TransportConnection;
 
-    .line 55
     invoke-virtual {v5}, Lcom/android/server/backup/transport/TransportConnection;->getTransportComponent()Landroid/content/ComponentName;
 
     move-result-object v5
 
-    .line 54
     invoke-virtual {v4, v5}, Lcom/android/server/backup/TransportManager;->getTransportDirName(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 56
     new-instance v5, Ljava/io/File;
 
     iget-object v6, p0, Lcom/android/server/backup/internal/PerformClearTask;->mBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
@@ -87,7 +77,6 @@
 
     invoke-direct {v5, v6, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 57
     new-instance v4, Ljava/io/File;
 
     iget-object v6, p0, Lcom/android/server/backup/internal/PerformClearTask;->mPackage:Landroid/content/pm/PackageInfo;
@@ -96,17 +85,14 @@
 
     invoke-direct {v4, v5, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 58
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 60
     iget-object v4, p0, Lcom/android/server/backup/internal/PerformClearTask;->mTransportConnection:Lcom/android/server/backup/transport/TransportConnection;
 
     invoke-virtual {v4, v2}, Lcom/android/server/backup/transport/TransportConnection;->connectOrThrow(Ljava/lang/String;)Lcom/android/server/backup/transport/BackupTransportClient;
 
     move-result-object v3
 
-    .line 63
     iget-object v4, p0, Lcom/android/server/backup/internal/PerformClearTask;->mPackage:Landroid/content/pm/PackageInfo;
 
     invoke-virtual {v3, v4}, Lcom/android/server/backup/transport/BackupTransportClient;->clearBackupData(Landroid/content/pm/PackageInfo;)I
@@ -114,7 +100,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 70
     :try_start_1
     invoke-virtual {v3}, Lcom/android/server/backup/transport/BackupTransportClient;->finishBackup()I
     :try_end_1
@@ -125,7 +110,6 @@
     :catch_0
     move-exception v3
 
-    .line 73
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,7 +124,6 @@
     :catch_1
     move-exception v4
 
-    .line 65
     :try_start_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -174,7 +157,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 70
     :try_start_3
     invoke-virtual {v3}, Lcom/android/server/backup/transport/BackupTransportClient;->finishBackup()I
     :try_end_3
@@ -185,7 +167,6 @@
     :catch_2
     move-exception v3
 
-    .line 73
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,14 +186,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_0
     :goto_1
     iget-object v0, p0, Lcom/android/server/backup/internal/PerformClearTask;->mListener:Lcom/android/server/backup/internal/OnTaskFinishedListener;
 
     invoke-interface {v0, v2}, Lcom/android/server/backup/internal/OnTaskFinishedListener;->onFinished(Ljava/lang/String;)V
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/backup/internal/PerformClearTask;->mBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/backup/UserBackupManagerService;->getWakelock()Lcom/android/server/backup/UserBackupManagerService$BackupWakeLock;
@@ -226,7 +205,6 @@
     :goto_2
     if-eqz v3, :cond_1
 
-    .line 70
     :try_start_4
     invoke-virtual {v3}, Lcom/android/server/backup/transport/BackupTransportClient;->finishBackup()I
     :try_end_4
@@ -237,7 +215,6 @@
     :catch_3
     move-exception v3
 
-    .line 73
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -256,14 +233,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_1
     :goto_3
     iget-object v0, p0, Lcom/android/server/backup/internal/PerformClearTask;->mListener:Lcom/android/server/backup/internal/OnTaskFinishedListener;
 
     invoke-interface {v0, v2}, Lcom/android/server/backup/internal/OnTaskFinishedListener;->onFinished(Ljava/lang/String;)V
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/backup/internal/PerformClearTask;->mBackupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/backup/UserBackupManagerService;->getWakelock()Lcom/android/server/backup/UserBackupManagerService$BackupWakeLock;
@@ -272,6 +247,5 @@
 
     invoke-virtual {p0}, Lcom/android/server/backup/UserBackupManagerService$BackupWakeLock;->release()V
 
-    .line 79
     throw v4
 .end method

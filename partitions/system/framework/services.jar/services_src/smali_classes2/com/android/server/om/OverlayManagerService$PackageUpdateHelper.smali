@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/om/OverlayManagerService;)V
     .locals 0
 
-    .line 2056
     iput-object p1, p0, Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;->this$0:Lcom/android/server/om/OverlayManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +23,6 @@
 .method public persistSettings()V
     .locals 1
 
-    .line 2060
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;->this$0:Lcom/android/server/om/OverlayManagerService;
 
     invoke-static {v0}, Lcom/android/server/om/OverlayManagerService;->-$$Nest$fgetmLock(Lcom/android/server/om/OverlayManagerService;)Ljava/lang/Object;
@@ -33,13 +31,11 @@
 
     monitor-enter v0
 
-    .line 2061
     :try_start_0
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;->this$0:Lcom/android/server/om/OverlayManagerService;
 
     invoke-static {p0}, Lcom/android/server/om/OverlayManagerService;->-$$Nest$mpersistSettingsLocked(Lcom/android/server/om/OverlayManagerService;)V
 
-    .line 2062
     monitor-exit v0
 
     return-void
@@ -57,7 +53,6 @@
 .method public updatePackageManager(Ljava/util/Collection;IZ)Ljava/util/List;
     .locals 1
 
-    .line 2068
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;->this$0:Lcom/android/server/om/OverlayManagerService;
 
     invoke-static {v0}, Lcom/android/server/om/OverlayManagerService;->-$$Nest$fgetmLock(Lcom/android/server/om/OverlayManagerService;)Ljava/lang/Object;
@@ -66,7 +61,6 @@
 
     monitor-enter v0
 
-    .line 2069
     :try_start_0
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;->this$0:Lcom/android/server/om/OverlayManagerService;
 
@@ -81,7 +75,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2070
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

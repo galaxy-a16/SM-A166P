@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCurrentUserHandle(Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;)Landroid/os/UserHandle;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;->mCurrentUserHandle:Landroid/os/UserHandle;
 
     return-object p0
@@ -22,17 +21,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)V
     .locals 0
 
-    .line 29
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/server/continuity/AbstractSemContinuityServiceImpl;-><init>(Landroid/content/Context;Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)V
 
-    .line 65
     new-instance p2, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl$1;
 
     invoke-direct {p2, p0}, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl$1;-><init>(Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;)V
 
     iput-object p2, p0, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;->mBrReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 30
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;->registerReceiver(Landroid/content/Context;)V
 
     return-void
@@ -41,22 +37,18 @@
 .method public static createInstance(Landroid/content/Context;)Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;
     .locals 3
 
-    .line 36
     new-instance v0, Lcom/samsung/android/server/continuity/PreconditionObserver;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/continuity/PreconditionObserver;-><init>(Landroid/content/Context;)V
 
-    .line 37
     new-instance v1, Lcom/samsung/android/mcfds/lib/DeviceSyncManager;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/mcfds/lib/DeviceSyncManager;-><init>(Landroid/content/Context;)V
 
-    .line 38
     new-instance v2, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-direct {v2, v0, v1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;-><init>(Lcom/samsung/android/server/continuity/PreconditionObserver;Lcom/samsung/android/mcfds/lib/DeviceSyncManager;)V
 
-    .line 39
     new-instance v0, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;
 
     invoke-direct {v0, p0, v2}, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;-><init>(Landroid/content/Context;Lcom/samsung/android/server/continuity/McfDeviceSyncManager;)V
@@ -69,7 +61,6 @@
 .method public cancelDownload(Ljava/lang/String;I)V
     .locals 0
 
-    .line 115
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -80,7 +71,6 @@
 .method public clearLocalClip(I)V
     .locals 0
 
-    .line 95
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -91,7 +81,6 @@
 .method public getBroadcastReceiver()Landroid/content/BroadcastReceiver;
     .locals 0
 
-    .line 124
     iget-object p0, p0, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;->mBrReceiver:Landroid/content/BroadcastReceiver;
 
     return-object p0
@@ -100,19 +89,16 @@
 .method public onUserUnlocking(Landroid/os/UserHandle;)V
     .locals 4
 
-    .line 49
     invoke-virtual {p1}, Landroid/os/UserHandle;->semGetIdentifier()I
 
     move-result v0
 
-    .line 50
     iget-object v1, p0, Lcom/samsung/android/server/continuity/AbstractSemContinuityServiceImpl;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v1}, Landroid/os/UserManager;->isManagedProfile()Z
 
     move-result v1
 
-    .line 51
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +123,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     invoke-static {}, Landroid/app/ActivityManager;->semGetCurrentUser()I
 
     move-result v2
@@ -146,13 +131,10 @@
 
     if-nez v1, :cond_0
 
-    .line 53
     iput v0, p0, Lcom/samsung/android/server/continuity/AbstractSemContinuityServiceImpl;->mCurrentUserId:I
 
-    .line 54
     iput-object p1, p0, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;->mCurrentUserHandle:Landroid/os/UserHandle;
 
-    .line 55
     iget-object p0, p0, Lcom/samsung/android/server/continuity/AbstractSemContinuityServiceImpl;->mMcfDsManager:Lcom/samsung/android/server/continuity/McfDeviceSyncManager;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/continuity/McfDeviceSyncManager;->startUser(Landroid/os/UserHandle;)V
@@ -164,7 +146,6 @@
 .method public registerContinuityCopyListener(Lcom/samsung/android/continuity/ISemContinuitySimpleListener;I)V
     .locals 0
 
-    .line 100
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -175,17 +156,14 @@
 .method public final registerReceiver(Landroid/content/Context;)V
     .locals 6
 
-    .line 60
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
-    .line 61
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 62
     iget-object v1, p0, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;->mBrReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v2, Landroid/os/UserHandle;->SEM_ALL:Landroid/os/UserHandle;
@@ -204,7 +182,6 @@
 .method public requestDownload(Ljava/lang/String;Lcom/samsung/android/continuity/ISemContinuitySimpleListener;I)Z
     .locals 0
 
-    .line 110
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -215,7 +192,6 @@
 .method public setCurrentUserHandle(Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 44
     iput-object p1, p0, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;->mCurrentUserHandle:Landroid/os/UserHandle;
 
     return-void
@@ -224,7 +200,6 @@
 .method public setLocalClip(Landroid/os/Bundle;I)V
     .locals 0
 
-    .line 90
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -235,7 +210,6 @@
 .method public unregisterContinuityCopyListener(I)V
     .locals 0
 
-    .line 105
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;
 
     invoke-static {p1}, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->$r8$lambda$Eje67zAi1BIi2isim37pA87VnKA(Lcom/android/server/knox/zt/devicetrust/data/EndpointData;)Z

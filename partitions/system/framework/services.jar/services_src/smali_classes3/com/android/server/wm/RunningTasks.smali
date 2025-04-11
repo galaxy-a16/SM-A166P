@@ -36,7 +36,6 @@
 .method public static synthetic $r8$lambda$6331bFE-7bSQf9mJTIrPmEPzrpc(Lcom/android/server/wm/RunningTasks;Lcom/android/server/wm/DisplayContent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/RunningTasks;->lambda$getTasks$0(Lcom/android/server/wm/DisplayContent;)V
 
     return-void
@@ -45,31 +44,26 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/RunningTasks;->mTmpSortedTasks:Ljava/util/ArrayList;
 
-    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/RunningTasks;->mTmpVisibleTasks:Ljava/util/ArrayList;
 
-    .line 50
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/RunningTasks;->mTmpInvisibleTasks:Ljava/util/ArrayList;
 
-    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -82,7 +76,6 @@
 .method private synthetic lambda$getTasks$0(Lcom/android/server/wm/DisplayContent;)V
     .locals 2
 
-    .line 88
     iget-object v0, p1, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v0, :cond_0
@@ -99,12 +92,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 90
     iget-object v1, p0, Lcom/android/server/wm/RunningTasks;->mTmpFocusedTasks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 92
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/wm/RunningTasks;->processTaskInWindowContainer(Lcom/android/server/wm/WindowContainer;)V
 
@@ -116,7 +107,6 @@
 .method public accept(Lcom/android/server/wm/Task;)V
     .locals 2
 
-    .line 153
     invoke-virtual {p1}, Lcom/android/server/wm/TaskFragment;->getTopNonFinishingActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
@@ -125,7 +115,6 @@
 
     return-void
 
-    .line 157
     :cond_0
     iget v0, p1, Lcom/android/server/wm/Task;->effectiveUid:I
 
@@ -133,7 +122,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 158
     iget v0, p1, Lcom/android/server/wm/Task;->mUserId:I
 
     iget v1, p0, Lcom/android/server/wm/RunningTasks;->mUserId:I
@@ -158,7 +146,6 @@
 
     return-void
 
-    .line 163
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/wm/RunningTasks;->mAllowed:Z
 
@@ -166,13 +153,11 @@
 
     return-void
 
-    .line 168
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/wm/RunningTasks;->mFilterOnlyVisibleRecents:Z
 
     if-eqz v0, :cond_3
 
-    .line 169
     invoke-virtual {p1}, Lcom/android/server/wm/TaskFragment;->getActivityType()I
 
     move-result v0
@@ -181,7 +166,6 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 170
     invoke-virtual {p1}, Lcom/android/server/wm/TaskFragment;->getActivityType()I
 
     move-result v0
@@ -192,7 +176,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/RunningTasks;->mRecentTasks:Lcom/android/server/wm/RecentTasks;
 
-    .line 171
     invoke-virtual {v0, p1}, Lcom/android/server/wm/RecentTasks;->isVisibleRecentTask(Lcom/android/server/wm/Task;)Z
 
     move-result v0
@@ -201,7 +184,6 @@
 
     return-void
 
-    .line 176
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->isVisible()Z
 
@@ -209,7 +191,6 @@
 
     if-nez v0, :cond_5
 
-    .line 180
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->isVisibleRequested()Z
 
     move-result v0
@@ -218,7 +199,6 @@
 
     goto :goto_0
 
-    .line 184
     :cond_4
     iget-object p0, p0, Lcom/android/server/wm/RunningTasks;->mTmpInvisibleTasks:Ljava/util/ArrayList;
 
@@ -226,7 +206,6 @@
 
     goto :goto_1
 
-    .line 182
     :cond_5
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/RunningTasks;->mTmpVisibleTasks:Ljava/util/ArrayList;
@@ -240,7 +219,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 38
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/RunningTasks;->accept(Lcom/android/server/wm/Task;)V
@@ -251,12 +229,10 @@
 .method public final createRunningTaskInfo(Lcom/android/server/wm/Task;J)Landroid/app/ActivityManager$RunningTaskInfo;
     .locals 3
 
-    .line 190
     new-instance v0, Landroid/app/ActivityManager$RunningTaskInfo;
 
     invoke-direct {v0}, Landroid/app/ActivityManager$RunningTaskInfo;-><init>()V
 
-    .line 191
     iget-boolean v1, p0, Lcom/android/server/wm/RunningTasks;->mKeepIntentExtra:Z
 
     xor-int/lit8 v1, v1, 0x1
@@ -269,21 +245,17 @@
 
     if-lez v1, :cond_0
 
-    .line 193
     iput-wide p2, v0, Landroid/app/ActivityManager$RunningTaskInfo;->lastActiveTime:J
 
-    .line 196
     :cond_0
     iget p2, v0, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     iput p2, v0, Landroid/app/ActivityManager$RunningTaskInfo;->id:I
 
-    .line 198
     iget-boolean p0, p0, Lcom/android/server/wm/RunningTasks;->mAllowed:Z
 
     if-nez p0, :cond_1
 
-    .line 199
     invoke-static {p1, v0}, Lcom/android/server/wm/Task;->trimIneffectiveInfo(Lcom/android/server/wm/Task;Landroid/app/TaskInfo;)V
 
     :cond_1
@@ -311,7 +283,6 @@
 
     move-object/from16 v7, p7
 
-    .line 65
     invoke-virtual/range {v0 .. v8}, Lcom/android/server/wm/RunningTasks;->getTasks(ILjava/util/List;ILcom/android/server/wm/RecentTasks;Lcom/android/server/wm/WindowContainer;ILandroid/util/ArraySet;Z)V
 
     return-void
@@ -324,11 +295,9 @@
 
     return-void
 
-    .line 76
     :cond_0
     iput p6, p0, Lcom/android/server/wm/RunningTasks;->mCallingUid:I
 
-    .line 77
     invoke-static {p6}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p6
@@ -352,11 +321,9 @@
     :cond_1
     move p6, v1
 
-    .line 78
     :goto_0
     iput-boolean p6, p0, Lcom/android/server/wm/RunningTasks;->mCrossUser:Z
 
-    .line 79
     iput-object p7, p0, Lcom/android/server/wm/RunningTasks;->mProfileIds:Landroid/util/ArraySet;
 
     and-int/lit8 p6, p3, 0x2
@@ -372,7 +339,6 @@
     :cond_2
     move p6, v1
 
-    .line 80
     :goto_1
     iput-boolean p6, p0, Lcom/android/server/wm/RunningTasks;->mAllowed:Z
 
@@ -387,11 +353,9 @@
     :cond_3
     move p6, v1
 
-    .line 81
     :goto_2
     iput-boolean p6, p0, Lcom/android/server/wm/RunningTasks;->mFilterOnlyVisibleRecents:Z
 
-    .line 83
     iput-object p4, p0, Lcom/android/server/wm/RunningTasks;->mRecentTasks:Lcom/android/server/wm/RecentTasks;
 
     const/16 p4, 0x8
@@ -407,16 +371,13 @@
     :cond_4
     move p3, v1
 
-    .line 84
     :goto_3
     iput-boolean p3, p0, Lcom/android/server/wm/RunningTasks;->mKeepIntentExtra:Z
 
-    .line 86
     instance-of p3, p5, Lcom/android/server/wm/RootWindowContainer;
 
     if-eqz p3, :cond_5
 
-    .line 87
     check-cast p5, Lcom/android/server/wm/RootWindowContainer;
 
     new-instance p3, Lcom/android/server/wm/RunningTasks$$ExternalSyntheticLambda0;
@@ -427,7 +388,6 @@
 
     goto :goto_5
 
-    .line 95
     :cond_5
     invoke-virtual {p5}, Lcom/android/server/wm/WindowContainer;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
@@ -437,7 +397,6 @@
 
     if-eqz p3, :cond_6
 
-    .line 97
     iget-object p3, p3, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz p3, :cond_6
@@ -449,7 +408,6 @@
     :cond_6
     if-eqz p4, :cond_7
 
-    .line 101
     invoke-virtual {p4, p5}, Lcom/android/server/wm/WindowContainer;->isDescendantOf(Lcom/android/server/wm/WindowContainer;)Z
 
     move-result p3
@@ -464,16 +422,13 @@
     :goto_4
     if-eqz v2, :cond_8
 
-    .line 103
     iget-object p3, p0, Lcom/android/server/wm/RunningTasks;->mTmpFocusedTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p3, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 105
     :cond_8
     invoke-virtual {p0, p5}, Lcom/android/server/wm/RunningTasks;->processTaskInWindowContainer(Lcom/android/server/wm/WindowContainer;)V
 
-    .line 108
     :goto_5
     iget-object p3, p0, Lcom/android/server/wm/RunningTasks;->mTmpVisibleTasks:Ljava/util/ArrayList;
 
@@ -483,7 +438,6 @@
 
     move p4, v1
 
-    .line 109
     :goto_6
     iget-object p5, p0, Lcom/android/server/wm/RunningTasks;->mTmpFocusedTasks:Ljava/util/ArrayList;
 
@@ -493,7 +447,6 @@
 
     if-ge p4, p5, :cond_a
 
-    .line 110
     iget-object p5, p0, Lcom/android/server/wm/RunningTasks;->mTmpFocusedTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p5, p4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -502,7 +455,6 @@
 
     check-cast p5, Lcom/android/server/wm/Task;
 
-    .line 111
     iget-object p6, p0, Lcom/android/server/wm/RunningTasks;->mTmpVisibleTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p6, p5}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -511,7 +463,6 @@
 
     if-eqz p6, :cond_9
 
-    .line 114
     iget-object p6, p0, Lcom/android/server/wm/RunningTasks;->mTmpSortedTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p6, p5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -521,7 +472,6 @@
 
     goto :goto_6
 
-    .line 117
     :cond_a
     iget-object p4, p0, Lcom/android/server/wm/RunningTasks;->mTmpVisibleTasks:Ljava/util/ArrayList;
 
@@ -531,14 +481,12 @@
 
     if-nez p4, :cond_b
 
-    .line 118
     iget-object p4, p0, Lcom/android/server/wm/RunningTasks;->mTmpSortedTasks:Ljava/util/ArrayList;
 
     iget-object p5, p0, Lcom/android/server/wm/RunningTasks;->mTmpVisibleTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p4, p5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 120
     :cond_b
     iget-object p4, p0, Lcom/android/server/wm/RunningTasks;->mTmpInvisibleTasks:Ljava/util/ArrayList;
 
@@ -548,14 +496,12 @@
 
     if-nez p4, :cond_c
 
-    .line 121
     iget-object p4, p0, Lcom/android/server/wm/RunningTasks;->mTmpSortedTasks:Ljava/util/ArrayList;
 
     iget-object p5, p0, Lcom/android/server/wm/RunningTasks;->mTmpInvisibleTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p4, p5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 125
     :cond_c
     iget-object p4, p0, Lcom/android/server/wm/RunningTasks;->mTmpSortedTasks:Ljava/util/ArrayList;
 
@@ -567,7 +513,6 @@
 
     move-result p1
 
-    .line 126
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p4
@@ -575,7 +520,6 @@
     :goto_7
     if-ge v1, p1, :cond_f
 
-    .line 128
     iget-object p6, p0, Lcom/android/server/wm/RunningTasks;->mTmpSortedTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -586,7 +530,6 @@
 
     if-eqz p8, :cond_d
 
-    .line 130
     invoke-virtual {p6}, Lcom/android/server/wm/WindowContainer;->isVisible()Z
 
     move-result p7
@@ -611,7 +554,6 @@
     :cond_e
     const-wide/16 v2, -0x1
 
-    .line 138
     :goto_8
     invoke-virtual {p0, p6, v2, v3}, Lcom/android/server/wm/RunningTasks;->createRunningTaskInfo(Lcom/android/server/wm/Task;J)Landroid/app/ActivityManager$RunningTaskInfo;
 
@@ -624,23 +566,19 @@
 
     goto :goto_7
 
-    .line 141
     :cond_f
     iget-object p1, p0, Lcom/android/server/wm/RunningTasks;->mTmpFocusedTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 142
     iget-object p1, p0, Lcom/android/server/wm/RunningTasks;->mTmpVisibleTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 143
     iget-object p1, p0, Lcom/android/server/wm/RunningTasks;->mTmpInvisibleTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 144
     iget-object p0, p0, Lcom/android/server/wm/RunningTasks;->mTmpSortedTasks:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -653,7 +591,6 @@
 
     const/4 v0, 0x1
 
-    .line 148
     invoke-virtual {p1, p0, v0}, Lcom/android/server/wm/WindowContainer;->forAllLeafTasks(Ljava/util/function/Consumer;Z)V
 
     return-void

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayRotation$FoldController;)V
     .locals 0
 
-    .line 2128
     iput-object p1, p0, Lcom/android/server/wm/DisplayRotation$FoldController$2;->this$1:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 1
 
-    .line 2131
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotation$FoldController$2;->this$1:Lcom/android/server/wm/DisplayRotation$FoldController;
 
     iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F

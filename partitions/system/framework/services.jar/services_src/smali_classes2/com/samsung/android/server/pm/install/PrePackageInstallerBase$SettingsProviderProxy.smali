@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 584
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 585
     sput-object p1, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$SettingsProviderProxy;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getFingerprint()Ljava/lang/String;
     .locals 1
 
-    .line 589
     sget-object p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$SettingsProviderProxy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -44,7 +41,6 @@
 .method public getInstallHistory()Ljava/lang/String;
     .locals 1
 
-    .line 599
     sget-object p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$SettingsProviderProxy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -63,7 +59,6 @@
 .method public setFingerprint(Ljava/lang/String;)V
     .locals 1
 
-    .line 594
     sget-object p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$SettingsProviderProxy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -80,7 +75,6 @@
 .method public setInstallHistory(Ljava/lang/String;)V
     .locals 1
 
-    .line 603
     sget-object p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$SettingsProviderProxy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;

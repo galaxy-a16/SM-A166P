@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
     .locals 0
 
-    .line 35
     iput-object p1, p0, Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener$1;->val$listener:Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;
 
     invoke-direct {p0}, Landroid/net/ipmemorystore/IOnNetworkAttributesRetrievedListener$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "d5ea5eb3ddbdaa9a986ce6ba70b0804ca3e39b0c"
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/16 p0, 0xa
 
     return p0
@@ -42,12 +39,10 @@
 .method public onNetworkAttributesRetrieved(Landroid/net/ipmemorystore/StatusParcelable;Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributesParcelable;)V
     .locals 1
 
-    .line 41
     iget-object p0, p0, Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener$1;->val$listener:Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;
 
     if-eqz p0, :cond_1
 
-    .line 42
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     invoke-direct {v0, p1}, Landroid/net/ipmemorystore/Status;-><init>(Landroid/net/ipmemorystore/StatusParcelable;)V
@@ -58,13 +53,11 @@
 
     goto :goto_0
 
-    .line 44
     :cond_0
     new-instance p1, Landroid/net/ipmemorystore/NetworkAttributes;
 
     invoke-direct {p1, p3}, Landroid/net/ipmemorystore/NetworkAttributes;-><init>(Landroid/net/ipmemorystore/NetworkAttributesParcelable;)V
 
-    .line 42
     :goto_0
     invoke-interface {p0, v0, p2, p1}, Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;->onNetworkAttributesRetrieved(Landroid/net/ipmemorystore/Status;Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;)V
 

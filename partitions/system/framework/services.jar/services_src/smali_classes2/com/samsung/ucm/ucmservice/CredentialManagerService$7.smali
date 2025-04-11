@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/ucm/ucmservice/CredentialManagerService;)V
     .locals 0
 
-    .line 649
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,12 +25,10 @@
 
     const-string p1, "The exception occurs "
 
-    .line 652
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 653
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +49,6 @@
 
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
-    .line 654
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -61,10 +57,8 @@
 
     const-string/jumbo p2, "onReceive : ACTION_BOOT_COMPLETED"
 
-    .line 655
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 657
     :try_start_0
     iget-object p2, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
@@ -77,7 +71,6 @@
     :catch_0
     move-exception p2
 
-    .line 659
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,14 +89,12 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 662
     :goto_0
     :try_start_1
     invoke-static {}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->registerHALService()I
 
     move-result p2
 
-    .line 663
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,7 +118,6 @@
     :catch_1
     move-exception p2
 
-    .line 665
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +136,6 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 668
     :goto_1
     :try_start_2
     iget-object p2, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
@@ -155,7 +144,6 @@
 
     const-string/jumbo p2, "runSefTestForEseCommTA executed."
 
-    .line 669
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
@@ -165,7 +153,6 @@
     :catch_2
     move-exception p2
 
-    .line 671
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -184,7 +171,6 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 674
     :goto_2
     :try_start_3
     iget-object p2, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
@@ -203,7 +189,6 @@
 
     if-nez p2, :cond_3
 
-    .line 675
     iget-object p0, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-static {p0}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->-$$Nest$mrunLccmScript(Lcom/samsung/ucm/ucmservice/CredentialManagerService;)V
@@ -215,7 +200,6 @@
     :catch_3
     move-exception p0
 
-    .line 678
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -236,7 +220,6 @@
 
     goto :goto_3
 
-    .line 681
     :cond_0
     iget-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
@@ -250,7 +233,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 682
     iget-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-static {p1}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->-$$Nest$fgetmEmergencyEnabled(Lcom/samsung/ucm/ucmservice/CredentialManagerService;)Z
@@ -261,12 +243,10 @@
 
     const-string p0, "Already UPSM is enabled nothing to do"
 
-    .line 683
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 685
     :cond_1
     iget-object p0, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
@@ -276,12 +256,10 @@
 
     const-string p0, "Already UPSM disabled -> enabled"
 
-    .line 686
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 689
     :cond_2
     iget-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
@@ -293,17 +271,14 @@
 
     const-string p1, "Already UPSM enabled -> disabled"
 
-    .line 690
     invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 691
     iget-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->-$$Nest$mrefreshAgentList(Lcom/samsung/ucm/ucmservice/CredentialManagerService;Landroid/os/Bundle;)V
 
-    .line 692
     iget-object p0, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$7;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     const/4 p1, 0x0

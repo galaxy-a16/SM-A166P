@@ -20,7 +20,6 @@
 .method public accept(Ljava/io/File;)Z
     .locals 2
 
-    .line 800
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result p0
@@ -31,7 +30,6 @@
 
     return v0
 
-    .line 801
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -47,7 +45,6 @@
 
     return v0
 
-    .line 802
     :cond_1
     invoke-static {p1}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$smisAppMetadata(Ljava/io/File;)Z
 
@@ -57,7 +54,6 @@
 
     return v0
 
-    .line 803
     :cond_2
     invoke-static {p1}, Landroid/content/pm/dex/DexMetadataHelper;->isDexMetadataFile(Ljava/io/File;)Z
 
@@ -67,7 +63,6 @@
 
     return v0
 
-    .line 804
     :cond_3
     invoke-static {p1}, Lcom/android/internal/security/VerityUtils;->isFsveritySignatureFile(Ljava/io/File;)Z
 
@@ -77,7 +72,6 @@
 
     return v0
 
-    .line 805
     :cond_4
     invoke-static {p1}, Lcom/android/server/pm/ApkChecksums;->isDigestOrDigestSignatureFile(Ljava/io/File;)Z
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/accessory/manager/SAccessoryManager;)V
     .locals 0
 
-    .line 172
     iput-object p1, p0, Lcom/samsung/accessory/manager/SAccessoryManager$2;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -65,7 +64,6 @@
     :cond_3
     const/16 p1, 0xa
 
-    .line 190
     :goto_0
     iget-object p0, p0, Lcom/samsung/accessory/manager/SAccessoryManager$2;->this$0:Lcom/samsung/accessory/manager/SAccessoryManager;
 

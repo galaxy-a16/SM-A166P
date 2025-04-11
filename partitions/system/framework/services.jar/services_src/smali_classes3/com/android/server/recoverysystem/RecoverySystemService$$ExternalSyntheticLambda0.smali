@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/ota/nano/OtaPackageMetadata$ApexInfo;
 
     invoke-static {p1}, Lcom/android/server/recoverysystem/RecoverySystemService;->$r8$lambda$k5b6zfb-HxA0U0GmwgX7Mgx7kQk(Landroid/ota/nano/OtaPackageMetadata$ApexInfo;)Z

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/policy/GlobalActions;)V
     .locals 0
 
-    .line 145
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$1;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public run()V
     .locals 1
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$1;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->-$$Nest$mensureLegacyCreated(Lcom/android/server/policy/GlobalActions;)V
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$1;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->-$$Nest$fgetmLegacyGlobalActions(Lcom/android/server/policy/GlobalActions;)Lcom/android/server/policy/LegacyGlobalActions;

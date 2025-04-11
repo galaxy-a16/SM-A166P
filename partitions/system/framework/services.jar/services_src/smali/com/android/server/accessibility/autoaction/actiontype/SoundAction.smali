@@ -15,15 +15,12 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .line 36
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mContext:Landroid/content/Context;
 
     const-string v0, "audio"
 
-    .line 38
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -32,7 +29,6 @@
 
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 39
     iput-object p2, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mType:Ljava/lang/String;
 
     return-void
@@ -41,7 +37,6 @@
 .method public static createAction(Landroid/content/Context;Ljava/lang/String;)Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;
     .locals 1
 
-    .line 43
     new-instance v0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;-><init>(Landroid/content/Context;Ljava/lang/String;)V
@@ -52,7 +47,6 @@
 .method public static getStringResId(Ljava/lang/String;)I
     .locals 2
 
-    .line 47
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -146,7 +140,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 59
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string v0, "Wrong Sound Action Type"
@@ -204,12 +197,10 @@
 .method public performCornerAction(I)V
     .locals 7
 
-    .line 65
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     if-eqz p1, :cond_6
 
-    .line 66
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mType:Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -320,7 +311,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 97
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "Wrong Sound Action Type"
@@ -329,46 +319,39 @@
 
     throw p0
 
-    .line 86
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p1, v4, v3, v0}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
-    .line 88
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, v4, v1, v6}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
     goto :goto_3
 
-    .line 68
     :pswitch_1
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p1, v2, v3, v5}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, v2, v5, v6}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
     goto :goto_3
 
-    .line 74
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p1, v2, v3, v5}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
-    .line 76
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, v2, v1, v6}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
     goto :goto_3
 
-    .line 92
     :pswitch_3
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
@@ -385,7 +368,6 @@
     :cond_5
     move v4, p1
 
-    .line 94
     :goto_2
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
@@ -393,13 +375,11 @@
 
     goto :goto_3
 
-    .line 80
     :pswitch_4
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p1, v4, v3, v0}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/SoundAction;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, v4, v5, v6}, Landroid/media/AudioManager;->adjustStreamVolume(III)V

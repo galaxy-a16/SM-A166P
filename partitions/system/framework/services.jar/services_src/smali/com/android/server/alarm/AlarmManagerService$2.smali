@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/AlarmManagerService;)V
     .locals 0
 
-    .line 2191
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$2;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,26 +26,22 @@
 .method public binderDied()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public binderDied(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 2198
     invoke-static {p1}, Landroid/app/IAlarmListener$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IAlarmListener;
 
     move-result-object p1
 
-    .line 2199
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$2;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v0, v0, Lcom/android/server/alarm/AlarmManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2200
     :try_start_0
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$2;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -56,7 +51,6 @@
 
     invoke-virtual {p0, v1, p1, v2}, Lcom/android/server/alarm/AlarmManagerService;->removeLocked(Landroid/app/PendingIntent;Landroid/app/IAlarmListener;I)V
 
-    .line 2201
     monitor-exit v0
 
     return-void

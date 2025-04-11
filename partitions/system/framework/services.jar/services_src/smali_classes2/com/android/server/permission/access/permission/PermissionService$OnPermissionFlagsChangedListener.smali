@@ -23,34 +23,28 @@
 .method public constructor <init>(Lcom/android/server/permission/access/permission/PermissionService;)V
     .locals 0
 
-    .line 2128
     iput-object p1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
-    .line 2129
     invoke-direct {p0}, Lcom/android/server/permission/access/permission/UidPermissionPolicy$OnPermissionFlagsChangedListener;-><init>()V
 
-    .line 2132
     new-instance p1, Lcom/android/server/permission/access/collection/IntSet;
 
     invoke-direct {p1}, Lcom/android/server/permission/access/collection/IntSet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionChangedUids:Lcom/android/server/permission/access/collection/IntSet;
 
-    .line 2134
     new-instance p1, Landroid/util/SparseBooleanArray;
 
     invoke-direct {p1}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionRevokedUids:Landroid/util/SparseBooleanArray;
 
-    .line 2135
     new-instance p1, Lcom/android/server/permission/access/collection/IntSet;
 
     invoke-direct {p1}, Lcom/android/server/permission/access/collection/IntSet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->gidsChangedUids:Lcom/android/server/permission/access/collection/IntSet;
 
-    .line 2138
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
@@ -63,7 +57,6 @@
 .method public static final synthetic access$isAppBackupAndRestoreRunning(Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;I)Z
     .locals 0
 
-    .line 2128
     invoke-virtual {p0, p1}, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->isAppBackupAndRestoreRunning(I)Z
 
     move-result p0
@@ -76,10 +69,8 @@
 .method public final addKillRuntimePermissionRevokedUidsReason(Lcom/android/server/permission/access/MutateStateScope;Ljava/lang/String;)V
     .locals 0
 
-    .line 2145
     iget-object p0, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->killRuntimePermissionRevokedUidsReasons:Landroid/util/ArraySet;
 
-    .line 86
     invoke-virtual {p0, p2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -88,7 +79,6 @@
 .method public final isAppBackupAndRestoreRunning(I)Z
     .locals 4
 
-    .line 2223
     iget-object v0, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
     const-string v1, "android.permission.BACKUP"
@@ -103,7 +93,6 @@
 
     return v1
 
-    .line 2228
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
@@ -116,14 +105,12 @@
 
     move-result-object p0
 
-    .line 2229
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
 
     const-string/jumbo v0, "user_setup_complete"
 
-    .line 2230
     invoke-static {p0, v0, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -142,7 +129,6 @@
     :goto_0
     const-string/jumbo v3, "user_setup_personalization_state"
 
-    .line 2233
     invoke-static {p0, v3, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -171,7 +157,6 @@
     :catch_0
     move-exception p0
 
-    .line 2238
     invoke-static {}, Lcom/android/server/permission/access/permission/PermissionService;->access$getLOG_TAG$cp()Ljava/lang/String;
 
     move-result-object p1
@@ -202,15 +187,12 @@
 
     const/4 v0, 0x1
 
-    .line 2155
     iput-boolean v0, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->isPermissionFlagsChanged:Z
 
-    .line 2157
     invoke-static {p2, p1}, Landroid/os/UserHandle;->getUid(II)I
 
     move-result p1
 
-    .line 2158
     iget-object p2, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
     invoke-static {p2}, Lcom/android/server/permission/access/permission/PermissionService;->access$getService$p(Lcom/android/server/permission/access/permission/PermissionService;)Lcom/android/server/permission/access/AccessCheckingService;
@@ -219,7 +201,6 @@
 
     iget-object v1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
-    .line 264
     new-instance v2, Lcom/android/server/permission/access/GetStateScope;
 
     invoke-static {p2}, Lcom/android/server/permission/access/AccessCheckingService;->access$getState$p(Lcom/android/server/permission/access/AccessCheckingService;)Lcom/android/server/permission/access/AccessState;
@@ -237,7 +218,6 @@
     :cond_0
     invoke-direct {v2, p2}, Lcom/android/server/permission/access/GetStateScope;-><init>(Lcom/android/server/permission/access/AccessState;)V
 
-    .line 2159
     invoke-static {v1}, Lcom/android/server/permission/access/permission/PermissionService;->access$getPolicy$p(Lcom/android/server/permission/access/permission/PermissionService;)Lcom/android/server/permission/access/permission/UidPermissionPolicy;
 
     move-result-object p2
@@ -256,7 +236,6 @@
 
     return-void
 
-    .line 2161
     :cond_1
     sget-object v1, Lcom/android/server/permission/access/permission/PermissionFlags;->INSTANCE:Lcom/android/server/permission/access/permission/PermissionFlags;
 
@@ -264,12 +243,10 @@
 
     move-result p4
 
-    .line 2162
     invoke-virtual {v1, p5}, Lcom/android/server/permission/access/permission/PermissionFlags;->isPermissionGranted(I)Z
 
     move-result p5
 
-    .line 50
     invoke-virtual {p2}, Lcom/android/server/permission/access/permission/Permission;->getPermissionInfo()Landroid/content/pm/PermissionInfo;
 
     move-result-object v1
@@ -292,20 +269,16 @@
     :goto_0
     if-eqz v1, :cond_5
 
-    .line 2169
     iget-object v1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionChangedUids:Lcom/android/server/permission/access/collection/IntSet;
 
-    .line 111
     invoke-virtual {v1, p1}, Lcom/android/server/permission/access/collection/IntSet;->add(I)V
 
     if-eqz p4, :cond_5
 
     if-nez p5, :cond_5
 
-    .line 2171
     iget-object v1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionRevokedUids:Landroid/util/SparseBooleanArray;
 
-    .line 2172
     invoke-static {}, Lcom/android/server/permission/access/permission/PermissionService;->access$getNOTIFICATIONS_PERMISSIONS$cp()Landroid/util/ArraySet;
 
     move-result-object v3
@@ -316,7 +289,6 @@
 
     if-eqz p3, :cond_4
 
-    .line 2173
     iget-object p3, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionRevokedUids:Landroid/util/SparseBooleanArray;
 
     if-nez p3, :cond_3
@@ -325,7 +297,6 @@
 
     goto :goto_1
 
-    .line 87
     :cond_3
     invoke-virtual {p3, p1, v0}, Landroid/util/SparseBooleanArray;->get(IZ)Z
 
@@ -341,11 +312,9 @@
     :cond_4
     move p3, v2
 
-    .line 167
     :goto_2
     invoke-virtual {v1, p1, p3}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 154
     :cond_5
     invoke-virtual {p2}, Lcom/android/server/permission/access/permission/Permission;->getGids()[I
 
@@ -366,10 +335,8 @@
 
     if-eqz p5, :cond_7
 
-    .line 2178
     iget-object p0, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->gidsChangedUids:Lcom/android/server/permission/access/collection/IntSet;
 
-    .line 111
     invoke-virtual {p0, p1}, Lcom/android/server/permission/access/collection/IntSet;->add(I)V
 
     :cond_7
@@ -381,26 +348,21 @@
 
     move-object/from16 v6, p0
 
-    .line 2183
     iget-boolean v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->isPermissionFlagsChanged:Z
 
     const/4 v7, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2184
     invoke-static {}, Landroid/content/pm/PackageManager;->invalidatePackageInfoCache()V
 
-    .line 2185
     iput-boolean v7, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->isPermissionFlagsChanged:Z
 
-    .line 2188
     :cond_0
     iget-object v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionChangedUids:Lcom/android/server/permission/access/collection/IntSet;
 
     iget-object v1, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
-    .line 75
     invoke-virtual {v0}, Lcom/android/server/permission/access/collection/IntSet;->getSize()I
 
     move-result v2
@@ -410,12 +372,10 @@
     :goto_0
     if-ge v3, v2, :cond_2
 
-    .line 76
     invoke-virtual {v0, v3}, Lcom/android/server/permission/access/collection/IntSet;->elementAt(I)I
 
     move-result v4
 
-    .line 2189
     invoke-static {v1}, Lcom/android/server/permission/access/permission/PermissionService;->access$getOnPermissionsChangeListeners$p(Lcom/android/server/permission/access/permission/PermissionService;)Lcom/android/server/permission/access/permission/PermissionService$OnPermissionsChangeListeners;
 
     move-result-object v5
@@ -440,20 +400,17 @@
 
     goto :goto_0
 
-    .line 2191
     :cond_2
     iget-object v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionChangedUids:Lcom/android/server/permission/access/collection/IntSet;
 
     invoke-virtual {v0}, Lcom/android/server/permission/access/collection/IntSet;->clear()V
 
-    .line 2193
     iget-boolean v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->isKillRuntimePermissionRevokedUidsSkipped:Z
 
     const-string v9, "handler"
 
     if-nez v0, :cond_5
 
-    .line 2194
     iget-object v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->killRuntimePermissionRevokedUidsReasons:Landroid/util/ArraySet;
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
@@ -464,7 +421,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2195
     iget-object v10, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->killRuntimePermissionRevokedUidsReasons:Landroid/util/ArraySet;
 
     const-string v11, ", "
@@ -495,12 +451,10 @@
     :goto_2
     move-object v10, v0
 
-    .line 2199
     iget-object v11, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionRevokedUids:Landroid/util/SparseBooleanArray;
 
     iget-object v12, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
-    .line 171
     invoke-virtual {v11}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v13
@@ -510,7 +464,6 @@
     :goto_3
     if-ge v14, v13, :cond_5
 
-    .line 53
     invoke-virtual {v11, v14}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v3
@@ -519,7 +472,6 @@
 
     move-result v1
 
-    .line 2201
     invoke-static {v12}, Lcom/android/server/permission/access/permission/PermissionService;->access$getHandler$p(Lcom/android/server/permission/access/permission/PermissionService;)Landroid/os/Handler;
 
     move-result-object v0
@@ -556,18 +508,15 @@
 
     goto :goto_3
 
-    .line 2211
     :cond_5
     iget-object v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->runtimePermissionRevokedUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 2213
     iget-object v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->gidsChangedUids:Lcom/android/server/permission/access/collection/IntSet;
 
     iget-object v1, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
-    .line 75
     invoke-virtual {v0}, Lcom/android/server/permission/access/collection/IntSet;->getSize()I
 
     move-result v2
@@ -577,12 +526,10 @@
     :goto_5
     if-ge v3, v2, :cond_7
 
-    .line 76
     invoke-virtual {v0, v3}, Lcom/android/server/permission/access/collection/IntSet;->elementAt(I)I
 
     move-result v4
 
-    .line 2214
     invoke-static {v1}, Lcom/android/server/permission/access/permission/PermissionService;->access$getHandler$p(Lcom/android/server/permission/access/permission/PermissionService;)Landroid/os/Handler;
 
     move-result-object v5
@@ -604,16 +551,13 @@
 
     goto :goto_5
 
-    .line 2216
     :cond_7
     iget-object v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->gidsChangedUids:Lcom/android/server/permission/access/collection/IntSet;
 
     invoke-virtual {v0}, Lcom/android/server/permission/access/collection/IntSet;->clear()V
 
-    .line 2218
     iput-boolean v7, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->isKillRuntimePermissionRevokedUidsSkipped:Z
 
-    .line 2219
     iget-object v0, v6, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->killRuntimePermissionRevokedUidsReasons:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->clear()V
@@ -626,7 +570,6 @@
 
     const/4 p1, 0x1
 
-    .line 2141
     iput-boolean p1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener;->isKillRuntimePermissionRevokedUidsSkipped:Z
 
     return-void

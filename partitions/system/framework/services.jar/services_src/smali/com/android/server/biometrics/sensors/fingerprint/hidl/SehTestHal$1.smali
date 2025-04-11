@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;)V
     .locals 0
 
-    .line 74
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public deliverAcquiredEvent(II)V
     .locals 0
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;->deliverAcquiredEvent(II)V
@@ -38,7 +36,6 @@
 .method public deliverAuthenticationResult(I)V
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;->deliverAuthenticationResult(I)V
@@ -49,7 +46,6 @@
 .method public deliverEnrollResult(I)V
     .locals 0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;->deliverEnrollResult(I)V
@@ -60,7 +56,6 @@
 .method public deliverErrorEvent(II)V
     .locals 0
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;->deliverErrorEvent(II)V
@@ -71,7 +66,6 @@
 .method public deliverTspEvent(I)V
     .locals 0
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/hidl/SehTestHal;->deliverTspEvent(I)V

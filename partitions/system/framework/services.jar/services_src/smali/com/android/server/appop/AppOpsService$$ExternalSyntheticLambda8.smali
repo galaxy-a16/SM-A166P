@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/appop/AppOpsService;
 
     invoke-static {p1}, Lcom/android/server/appop/AppOpsService;->$r8$lambda$DNvjaFjPwdhpuO41nBqr9-FXnlE(Lcom/android/server/appop/AppOpsService;)Ljava/util/List;

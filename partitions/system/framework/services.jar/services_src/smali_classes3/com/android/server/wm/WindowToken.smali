@@ -39,7 +39,6 @@
 .method public static synthetic $r8$lambda$Kh2rWCBl1-QBTyEJ54P0TXjqMiA(Lcom/android/server/wm/WindowToken;ZLcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/WindowToken;->lambda$setInsetsFrozen$1(ZLcom/android/server/wm/WindowState;)V
 
     return-void
@@ -48,7 +47,6 @@
 .method public static synthetic $r8$lambda$oUAeGr0vXbPRTBkeU-Zg_sbj_cg(Lcom/android/server/wm/WindowToken;Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;)I
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/WindowToken;->lambda$new$0(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;)I
 
     move-result p0
@@ -79,7 +77,6 @@
 
     move/from16 v6, p6
 
-    .line 233
     invoke-direct/range {v0 .. v9}, Lcom/android/server/wm/WindowToken;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;IZLcom/android/server/wm/DisplayContent;ZZZLandroid/os/Bundle;)V
 
     return-void
@@ -88,45 +85,34 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;IZLcom/android/server/wm/DisplayContent;ZZZLandroid/os/Bundle;)V
     .locals 0
 
-    .line 240
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowContainer;-><init>(Lcom/android/server/wm/WindowManagerService;)V
 
     const/4 p1, 0x0
 
-    .line 102
     iput-boolean p1, p0, Lcom/android/server/wm/WindowToken;->paused:Z
 
-    .line 215
     new-instance p1, Lcom/android/server/wm/WindowToken$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/wm/WindowToken$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/WindowToken;)V
 
     iput-object p1, p0, Lcom/android/server/wm/WindowToken;->mWindowComparator:Ljava/util/Comparator;
 
-    .line 241
     iput-object p2, p0, Lcom/android/server/wm/WindowToken;->token:Landroid/os/IBinder;
 
-    .line 242
     iput p3, p0, Lcom/android/server/wm/WindowToken;->windowType:I
 
-    .line 243
     iput-object p9, p0, Lcom/android/server/wm/WindowToken;->mOptions:Landroid/os/Bundle;
 
-    .line 244
     iput-boolean p4, p0, Lcom/android/server/wm/WindowToken;->mPersistOnEmpty:Z
 
-    .line 245
     iput-boolean p6, p0, Lcom/android/server/wm/WindowToken;->mOwnerCanManageAppTokens:Z
 
-    .line 246
     iput-boolean p7, p0, Lcom/android/server/wm/WindowToken;->mRoundedCornerOverlay:Z
 
-    .line 247
     iput-boolean p8, p0, Lcom/android/server/wm/WindowToken;->mFromClientToken:Z
 
     if-eqz p5, :cond_0
 
-    .line 249
     invoke-virtual {p5, p2, p0}, Lcom/android/server/wm/DisplayContent;->addWindowToken(Landroid/os/IBinder;Lcom/android/server/wm/WindowToken;)V
 
     :cond_0
@@ -136,19 +122,16 @@
 .method private synthetic lambda$new$0(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;)I
     .locals 3
 
-    .line 218
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     const-string v1, " is not a child of token="
 
     if-ne v0, p0, :cond_2
 
-    .line 223
     iget-object v0, p2, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     if-ne v0, p0, :cond_1
 
-    .line 228
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/WindowToken;->isFirstChildWindowGreaterThanSecond(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;)Z
 
     move-result p0
@@ -165,7 +148,6 @@
     :goto_0
     return p0
 
-    .line 224
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -191,7 +173,6 @@
 
     throw p1
 
-    .line 219
     :cond_2
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
@@ -221,19 +202,16 @@
 .method private synthetic lambda$setInsetsFrozen$1(ZLcom/android/server/wm/WindowState;)V
     .locals 1
 
-    .line 873
     iget-object v0, p2, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     if-ne v0, p0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 875
     invoke-virtual {p2}, Lcom/android/server/wm/WindowState;->freezeInsetsState()V
 
     goto :goto_0
 
-    .line 877
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/wm/WindowState;->clearFrozenInsetsState()V
 
@@ -247,7 +225,6 @@
 .method public addWindow(Lcom/android/server/wm/WindowState;)V
     .locals 7
 
-    .line 320
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_FOCUS_enabled:Z
 
     const/4 v1, 0x0
@@ -280,7 +257,6 @@
 
     invoke-static {v4, v5, v2, v1, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 323
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isChildWindow()Z
 
@@ -290,7 +266,6 @@
 
     return-void
 
-    .line 329
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
@@ -298,17 +273,14 @@
 
     if-nez v0, :cond_2
 
-    .line 330
     invoke-virtual {p0, v3}, Lcom/android/server/wm/WindowToken;->createSurfaceControl(Z)V
 
-    .line 333
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getSyncTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowContainer;->reassignLayer(Landroid/view/SurfaceControl$Transaction;)V
 
-    .line 342
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
@@ -318,7 +290,6 @@
 
     if-nez v0, :cond_4
 
-    .line 343
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ADD_REMOVE_enabled:Z
 
     if-eqz v0, :cond_3
@@ -341,13 +312,11 @@
 
     invoke-static {v5, v6, v2, v1, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 344
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mWindowComparator:Ljava/util/Comparator;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/WindowContainer;->addChild(Lcom/android/server/wm/WindowContainer;Ljava/util/Comparator;)V
 
-    .line 345
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iput-boolean v3, p0, Lcom/android/server/wm/WindowManagerService;->mWindowsChanged:Z
@@ -359,21 +328,17 @@
 .method public applyFixedRotationTransform(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;)V
     .locals 2
 
-    .line 510
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-eqz v0, :cond_0
 
-    .line 511
     invoke-virtual {v0, p0}, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->disassociate(Lcom/android/server/wm/WindowToken;)V
 
-    .line 513
     :cond_0
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0, p3}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
-    .line 514
     iget-object p3, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
     invoke-virtual {p3}, Lcom/android/server/wm/TransitionController;->isShellTransitionsEnabled()Z
@@ -382,20 +347,17 @@
 
     if-eqz p3, :cond_1
 
-    .line 515
     new-instance p3, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     invoke-direct {p3, p1, p2, v0}, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;-><init>(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;)V
 
     goto :goto_0
 
-    .line 516
     :cond_1
     new-instance p3, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;
 
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 517
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getRotation()I
 
     move-result v1
@@ -405,12 +367,10 @@
     :goto_0
     iput-object p3, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
-    .line 518
     iget-object p1, p3, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 519
     iget-object p1, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
@@ -419,7 +379,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/wm/DisplayPolicy;->simulateLayoutDisplay(Lcom/android/server/wm/DisplayFrames;)V
 
-    .line 520
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->onFixedRotationStatePrepared()V
 
     return-void
@@ -428,26 +387,22 @@
 .method public asWindowToken()Lcom/android/server/wm/WindowToken;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
     .locals 1
 
-    .line 411
     iget-boolean v0, p0, Lcom/android/server/wm/WindowToken;->mRoundedCornerOverlay:Z
 
     if-eqz v0, :cond_0
 
     const p2, 0x40000002    # 2.0000005f
 
-    .line 412
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/WindowContainer;->assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
 
     goto :goto_0
 
-    .line 414
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/WindowContainer;->assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
 
@@ -458,7 +413,6 @@
 .method public final cancelFixedRotationTransform()V
     .locals 3
 
-    .line 627
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
@@ -467,7 +421,6 @@
 
     return-void
 
-    .line 632
     :cond_0
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
@@ -477,7 +430,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 633
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v1
@@ -490,19 +442,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 635
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
     const/4 v2, 0x6
 
     invoke-virtual {v1, v2, p0}, Lcom/android/server/wm/TransitionController;->requestTransitionIfNeeded(ILcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/Transition;
 
-    .line 636
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
     invoke-virtual {v1, p0}, Lcom/android/server/wm/TransitionController;->setReady(Lcom/android/server/wm/WindowContainer;)V
 
-    .line 638
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowConfiguration()Landroid/app/WindowConfiguration;
 
@@ -512,14 +461,12 @@
 
     move-result v1
 
-    .line 639
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowContainer;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 640
     invoke-virtual {p0, v1}, Lcom/android/server/wm/WindowToken;->onCancelFixedRotationTransform(I)V
 
     return-void
@@ -528,14 +475,12 @@
 .method public createSurfaceControl(Z)V
     .locals 1
 
-    .line 352
     iget-boolean v0, p0, Lcom/android/server/wm/WindowToken;->mFromClientToken:Z
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_1
 
-    .line 353
     :cond_0
     invoke-super {p0, p1}, Lcom/android/server/wm/WindowContainer;->createSurfaceControl(Z)V
 
@@ -546,10 +491,8 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 805
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/wm/WindowContainer;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Z)V
 
-    .line 806
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo p3, "windows="
@@ -560,7 +503,6 @@
 
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 807
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo p3, "windowType="
@@ -571,57 +513,47 @@
 
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 808
     iget-boolean p3, p0, Lcom/android/server/wm/WindowToken;->waitingToShow:Z
 
     if-eqz p3, :cond_0
 
     const-string p3, " waitingToShow=true"
 
-    .line 809
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 811
     :cond_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 812
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->hasFixedRotationTransform()Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
-    .line 813
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p3, "fixedRotationConfig="
 
-    .line 814
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 815
     iget-object p3, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     iget-object p3, p3, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mRotatedOverrideConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 817
     iget-object p3, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     instance-of p3, p3, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;
 
     if-eqz p3, :cond_1
 
-    .line 819
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p3, "fixedSeamlessRotator="
 
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 820
     iget-object p3, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     check-cast p3, Lcom/android/server/wm/WindowToken$FixedRotationTransformStateLegacy;
@@ -630,13 +562,11 @@
 
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 825
     :cond_1
     iget-boolean p0, p0, Lcom/android/server/wm/WindowToken;->mIsPortraitWindowToken:Z
 
     if-eqz p0, :cond_2
 
-    .line 826
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, "mIsPortraitWindowToken=true"
@@ -654,7 +584,6 @@
 
     if-ne p4, v0, :cond_0
 
-    .line 765
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->isVisible()Z
 
     move-result v0
@@ -663,7 +592,6 @@
 
     return-void
 
-    .line 769
     :cond_0
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
@@ -671,12 +599,10 @@
 
     const-wide v0, 0x10b00000001L
 
-    .line 770
     invoke-super {p0, p1, v0, v1, p4}, Lcom/android/server/wm/WindowContainer;->dumpDebug(Landroid/util/proto/ProtoOutputStream;JI)V
 
     const-wide v0, 0x10500000002L
 
-    .line 771
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p4
@@ -685,19 +611,16 @@
 
     const-wide v0, 0x10800000005L
 
-    .line 772
     iget-boolean p4, p0, Lcom/android/server/wm/WindowToken;->waitingToShow:Z
 
     invoke-virtual {p1, v0, v1, p4}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
     const-wide v0, 0x10800000006L
 
-    .line 773
     iget-boolean p0, p0, Lcom/android/server/wm/WindowToken;->paused:Z
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
-    .line 774
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -708,7 +631,6 @@
 
     const/4 v0, 0x0
 
-    .line 593
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowToken;->finishFixedRotationTransform(Ljava/lang/Runnable;)V
 
     return-void
@@ -717,28 +639,23 @@
 .method public finishFixedRotationTransform(Ljava/lang/Runnable;)V
     .locals 3
 
-    .line 601
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-nez p0, :cond_0
 
     return-void
 
-    .line 606
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->resetTransform()V
 
     const/4 v0, 0x0
 
-    .line 609
     iput-boolean v0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mIsTransforming:Z
 
     if-eqz p1, :cond_1
 
-    .line 611
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 615
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
@@ -751,7 +668,6 @@
     :goto_0
     if-ltz v0, :cond_3
 
-    .line 616
     iget-object v1, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -762,12 +678,10 @@
 
     const/4 v2, 0x0
 
-    .line 617
     iput-object v2, v1, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-nez p1, :cond_2
 
-    .line 620
     invoke-virtual {v1}, Lcom/android/server/wm/WindowToken;->cancelFixedRotationTransform()V
 
     :cond_2
@@ -782,7 +696,6 @@
 .method public getCompatScale()F
     .locals 0
 
-    .line 299
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget p0, p0, Lcom/android/server/wm/DisplayContent;->mCompatibleScreenScale:F
@@ -793,7 +706,6 @@
 .method public getFixedRotationLeash()Landroid/view/SurfaceControl;
     .locals 0
 
-    .line 676
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformLeash:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -802,14 +714,12 @@
 .method public getFixedRotationTransformDisplayBounds()Landroid/graphics/Rect;
     .locals 1
 
-    .line 487
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 489
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mRotatedOverrideConfiguration:Landroid/content/res/Configuration;
@@ -832,7 +742,6 @@
 .method public getFixedRotationTransformDisplayFrames()Lcom/android/server/wm/DisplayFrames;
     .locals 1
 
-    .line 476
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result v0
@@ -855,7 +764,6 @@
 .method public getFixedRotationTransformDisplayInfo()Landroid/view/DisplayInfo;
     .locals 1
 
-    .line 472
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result v0
@@ -878,14 +786,12 @@
 .method public getFixedRotationTransformInsetsState()Landroid/view/InsetsState;
     .locals 1
 
-    .line 494
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 495
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mDisplayFrames:Lcom/android/server/wm/DisplayFrames;
@@ -904,14 +810,12 @@
 .method public getFixedRotationTransformMaxBounds()Landroid/graphics/Rect;
     .locals 1
 
-    .line 480
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 482
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mRotatedOverrideConfiguration:Landroid/content/res/Configuration;
@@ -934,14 +838,12 @@
 .method public getFixedRotationTransformRotatedConfiguration()Landroid/content/res/Configuration;
     .locals 1
 
-    .line 502
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 503
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mRotatedOverrideConfiguration:Landroid/content/res/Configuration;
@@ -958,7 +860,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 842
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -969,7 +870,6 @@
 .method public getOrCreateFixedRotationLeash(Landroid/view/SurfaceControl$Transaction;)Landroid/view/SurfaceControl;
     .locals 4
 
-    .line 650
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
     invoke-virtual {v0}, Lcom/android/server/wm/TransitionController;->isShellTransitionsEnabled()Z
@@ -982,7 +882,6 @@
 
     return-object p0
 
-    .line 651
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getRelativeDisplayRotation()I
 
@@ -990,12 +889,10 @@
 
     if-nez v0, :cond_1
 
-    .line 652
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformLeash:Landroid/view/SurfaceControl;
 
     return-object p0
 
-    .line 653
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformLeash:Landroid/view/SurfaceControl;
 
@@ -1003,7 +900,6 @@
 
     return-object v1
 
-    .line 655
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->makeSurface()Landroid/view/SurfaceControl$Builder;
 
@@ -1013,7 +909,6 @@
 
     move-result-object v1
 
-    .line 656
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getParentSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v2
@@ -1026,7 +921,6 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 657
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v3
@@ -1047,24 +941,20 @@
 
     const/4 v2, 0x0
 
-    .line 658
     invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setHidden(Z)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v1
 
     const-string v2, "WindowToken.getOrCreateFixedRotationLeash"
 
-    .line 659
     invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v1
 
-    .line 660
     invoke-virtual {v1}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v1
 
-    .line 661
     iget-object v2, p0, Lcom/android/server/wm/WindowContainer;->mLastSurfacePosition:Landroid/graphics/Point;
 
     iget v3, v2, Landroid/graphics/Point;->x:I
@@ -1077,19 +967,16 @@
 
     invoke-virtual {p1, v1, v3, v2}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 662
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v2
 
     invoke-virtual {p1, v2, v1}, Landroid/view/SurfaceControl$Transaction;->reparent(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 663
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v2
 
-    .line 664
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowConfiguration()Landroid/app/WindowConfiguration;
 
     move-result-object v3
@@ -1098,16 +985,12 @@
 
     move-result v3
 
-    .line 663
     invoke-virtual {v2, v1, v3}, Landroid/view/SurfaceControl$Transaction;->setFixedTransformHint(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    .line 665
     iput-object v1, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformLeash:Landroid/view/SurfaceControl;
 
-    .line 666
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/wm/WindowToken;->updateSurfaceRotation(Landroid/view/SurfaceControl$Transaction;ILandroid/view/SurfaceControl;)V
 
-    .line 667
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformLeash:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -1116,7 +999,6 @@
 .method public getProtoFieldId()J
     .locals 2
 
-    .line 0
     const-wide v0, 0x10b00000007L
 
     return-wide v0
@@ -1125,7 +1007,6 @@
 .method public getWindowLayerFromType()I
     .locals 3
 
-    .line 862
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
@@ -1146,7 +1027,6 @@
 .method public getWindowType()I
     .locals 0
 
-    .line 885
     iget p0, p0, Lcom/android/server/wm/WindowToken;->windowType:I
 
     return p0
@@ -1155,7 +1035,6 @@
 .method public hasAnimatingFixedRotationTransition()Z
     .locals 6
 
-    .line 560
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     const/4 v1, 0x0
@@ -1164,7 +1043,6 @@
 
     return v1
 
-    .line 564
     :cond_0
     iget-object v0, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
@@ -1179,12 +1057,10 @@
     :goto_0
     if-ltz v0, :cond_4
 
-    .line 565
     iget-object v3, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
-    .line 566
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1195,7 +1071,6 @@
 
     move-result-object v3
 
-    .line 570
     sget-boolean v4, Lcom/samsung/android/rune/CoreRune;->MW_PIP_SHELL_TRANSITION:Z
 
     if-eqz v4, :cond_1
@@ -1208,7 +1083,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 571
     invoke-virtual {v3}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v4
@@ -1221,7 +1095,6 @@
 
     iget-object v4, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
-    .line 572
     invoke-virtual {v4, v3}, Lcom/android/server/wm/TransitionController;->inPlayingPipTransition(Lcom/android/server/wm/WindowContainer;)Z
 
     move-result v4
@@ -1233,21 +1106,18 @@
     :cond_1
     if-eqz v3, :cond_3
 
-    .line 577
     invoke-virtual {v3}, Lcom/android/server/wm/ActivityRecord;->isInTransition()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 579
     sget-boolean v4, Lcom/samsung/android/rune/CoreRune;->MW_PIP_SHELL_TRANSITION:Z
 
     if-eqz v4, :cond_2
 
     iget-object v4, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
-    .line 580
     invoke-virtual {v4, v3}, Lcom/android/server/wm/TransitionController;->inCollectingTransition(Lcom/android/server/wm/WindowContainer;)Z
 
     move-result v4
@@ -1256,14 +1126,12 @@
 
     iget-object v4, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
-    .line 581
     invoke-virtual {v4, v3, v2}, Lcom/android/server/wm/TransitionController;->inPlayingTransition(Lcom/android/server/wm/WindowContainer;Z)Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    .line 582
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1300,7 +1168,6 @@
 .method public hasFixedRotationTransform()Z
     .locals 0
 
-    .line 450
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-eqz p0, :cond_0
@@ -1319,7 +1186,6 @@
 .method public hasFixedRotationTransform(Lcom/android/server/wm/WindowToken;)Z
     .locals 2
 
-    .line 455
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     const/4 v1, 0x0
@@ -1333,7 +1199,6 @@
     :cond_0
     if-eq p0, p1, :cond_1
 
-    .line 458
     iget-object p0, p1, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-ne v0, p0, :cond_2
@@ -1349,7 +1214,6 @@
 .method public hasSizeCompatBounds()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1358,7 +1222,6 @@
 .method public isClientVisible()Z
     .locals 0
 
-    .line 435
     iget-boolean p0, p0, Lcom/android/server/wm/WindowToken;->mClientVisible:Z
 
     return p0
@@ -1367,7 +1230,6 @@
 .method public isEmpty()Z
     .locals 0
 
-    .line 359
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1380,7 +1242,6 @@
 .method public isFinishingFixedRotationTransform()Z
     .locals 0
 
-    .line 462
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-eqz p0, :cond_0
@@ -1403,7 +1264,6 @@
 .method public isFirstChildWindowGreaterThanSecond(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;)Z
     .locals 0
 
-    .line 316
     iget p0, p1, Lcom/android/server/wm/WindowState;->mBaseLayer:I
 
     iget p1, p2, Lcom/android/server/wm/WindowState;->mBaseLayer:I
@@ -1424,7 +1284,6 @@
 .method public isFixedRotationTransforming()Z
     .locals 0
 
-    .line 467
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-eqz p0, :cond_0
@@ -1447,7 +1306,6 @@
 .method public isFromClient()Z
     .locals 0
 
-    .line 867
     iget-boolean p0, p0, Lcom/android/server/wm/WindowToken;->mFromClientToken:Z
 
     return p0
@@ -1456,12 +1314,10 @@
 .method public linkFixedRotationTransform(Lcom/android/server/wm/WindowToken;)V
     .locals 1
 
-    .line 528
     iget-object p1, p1, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-eqz p1, :cond_2
 
-    .line 529
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     if-ne v0, p1, :cond_0
@@ -1471,19 +1327,15 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 533
     invoke-virtual {v0, p0}, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->disassociate(Lcom/android/server/wm/WindowToken;)V
 
-    .line 535
     :cond_1
     iput-object p1, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
-    .line 536
     iget-object p1, p1, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 537
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->onFixedRotationStatePrepared()V
 
     :cond_2
@@ -1494,19 +1346,16 @@
 .method public makeSurface()Landroid/view/SurfaceControl$Builder;
     .locals 1
 
-    .line 427
     invoke-super {p0}, Lcom/android/server/wm/WindowContainer;->makeSurface()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
-    .line 428
     iget-boolean p0, p0, Lcom/android/server/wm/WindowToken;->mRoundedCornerOverlay:Z
 
     if-eqz p0, :cond_0
 
     const/4 p0, 0x0
 
-    .line 429
     invoke-virtual {v0, p0}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
 
     :cond_0
@@ -1516,20 +1365,16 @@
 .method public onCancelFixedRotationTransform(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayChanged(Lcom/android/server/wm/DisplayContent;)V
     .locals 4
 
-    .line 386
     invoke-virtual {p1, p0}, Lcom/android/server/wm/DisplayContent;->reParentWindowToken(Lcom/android/server/wm/WindowToken;)V
 
-    .line 392
     invoke-super {p0, p1}, Lcom/android/server/wm/WindowContainer;->onDisplayChanged(Lcom/android/server/wm/DisplayContent;)V
 
-    .line 395
     iget-boolean v0, p0, Lcom/android/server/wm/WindowToken;->mIsPortraitWindowToken:Z
 
     if-eqz v0, :cond_1
@@ -1538,17 +1383,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 397
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object v0
 
-    .line 398
     iget-object v1, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 400
     invoke-virtual {v0}, Landroid/view/DisplayInfo;->getNaturalWidth()I
 
     move-result v2
@@ -1559,7 +1401,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 401
     invoke-virtual {v0}, Landroid/view/DisplayInfo;->getNaturalHeight()I
 
     move-result v0
@@ -1573,12 +1414,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 402
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowToken;->finishFixedRotationTransform(Ljava/lang/Runnable;)V
 
     const/4 v0, 0x0
 
-    .line 403
     invoke-virtual {p1, p0, v0}, Lcom/android/server/wm/DisplayContent;->startFixedRotationTransform(Lcom/android/server/wm/WindowToken;I)V
 
     :cond_1
@@ -1588,7 +1427,6 @@
 .method public final onFixedRotationStatePrepared()V
     .locals 1
 
-    .line 546
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
@@ -1599,21 +1437,18 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowContainer;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 547
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 548
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->hasProcess()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 551
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
 
     invoke-virtual {v0, p0}, Lcom/android/server/wm/WindowProcessController;->registerActivityConfigurationListener(Lcom/android/server/wm/ActivityRecord;)V
@@ -1625,19 +1460,16 @@
 .method public prepareSync()Z
     .locals 1
 
-    .line 750
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     if-eqz v0, :cond_0
 
-    .line 754
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->isRotationChanging()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 755
     invoke-static {p0}, Lcom/android/server/wm/AsyncRotationController;->canBeAsync(Lcom/android/server/wm/WindowToken;)Z
 
     move-result v0
@@ -1648,7 +1480,6 @@
 
     return p0
 
-    .line 758
     :cond_0
     invoke-super {p0}, Lcom/android/server/wm/WindowContainer;->prepareSync()Z
 
@@ -1660,7 +1491,6 @@
 .method public removeAllWindowsIfPossible()V
     .locals 7
 
-    .line 254
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1672,7 +1502,6 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 255
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1681,7 +1510,6 @@
 
     check-cast v1, Lcom/android/server/wm/WindowState;
 
-    .line 256
     sget-boolean v2, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_MOVEMENT_enabled:Z
 
     if-eqz v2, :cond_0
@@ -1704,11 +1532,9 @@
 
     invoke-static {v3, v5, v6, v4, v2}, Lcom/android/internal/protolog/ProtoLogImpl;->w(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 258
     :cond_0
     invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->removeIfPossible()V
 
-    .line 259
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1717,7 +1543,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1736,32 +1561,27 @@
 .method public removeFixedRotationLeash()V
     .locals 3
 
-    .line 680
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformLeash:Landroid/view/SurfaceControl;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 681
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getSyncTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v0
 
-    .line 682
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-eqz v1, :cond_1
 
-    .line 683
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getParentSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/view/SurfaceControl$Transaction;->reparent(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 685
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformLeash:Landroid/view/SurfaceControl;
 
@@ -1769,7 +1589,6 @@
 
     const/4 v0, 0x0
 
-    .line 686
     iput-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformLeash:Landroid/view/SurfaceControl;
 
     return-void
@@ -1778,19 +1597,16 @@
 .method public removeImmediately()V
     .locals 3
 
-    .line 376
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     if-eqz v0, :cond_0
 
-    .line 377
     iget-object v1, p0, Lcom/android/server/wm/WindowToken;->token:Landroid/os/IBinder;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/wm/DisplayContent;->removeWindowToken(Landroid/os/IBinder;Z)Lcom/android/server/wm/WindowToken;
 
-    .line 381
     :cond_0
     invoke-super {p0}, Lcom/android/server/wm/WindowContainer;->removeImmediately()V
 
@@ -1800,14 +1616,12 @@
 .method public resetSurfacePositionForAnimationLeash(Landroid/view/SurfaceControl$Transaction;)V
     .locals 1
 
-    .line 743
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 744
     invoke-super {p0, p1}, Lcom/android/server/wm/WindowContainer;->resetSurfacePositionForAnimationLeash(Landroid/view/SurfaceControl$Transaction;)V
 
     :cond_0
@@ -1817,17 +1631,14 @@
 .method public resolveOverrideConfiguration(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 699
     invoke-super {p0, p1}, Lcom/android/server/wm/WindowContainer;->resolveOverrideConfiguration(Landroid/content/res/Configuration;)V
 
-    .line 700
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isFixedRotationTransforming()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 703
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getResolvedOverrideConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p1
@@ -1845,14 +1656,12 @@
 .method public setClientVisible(Z)V
     .locals 5
 
-    .line 439
     iget-boolean v0, p0, Lcom/android/server/wm/WindowToken;->mClientVisible:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 442
     :cond_0
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_APP_TRANSITIONS_enabled:Z
 
@@ -1890,11 +1699,9 @@
 
     invoke-static {v2, v1, v3, v4, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 445
     :cond_1
     iput-boolean p1, p0, Lcom/android/server/wm/WindowToken;->mClientVisible:Z
 
-    .line 446
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->sendAppVisibilityToClients()V
 
     return-void
@@ -1903,14 +1710,12 @@
 .method public setExiting(Z)V
     .locals 5
 
-    .line 269
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 270
     invoke-super {p0}, Lcom/android/server/wm/WindowContainer;->removeImmediately()V
 
     return-void
@@ -1918,10 +1723,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 275
     iput-boolean v0, p0, Lcom/android/server/wm/WindowToken;->mPersistOnEmpty:Z
 
-    .line 277
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->isVisible()Z
 
     move-result v1
@@ -1930,7 +1733,6 @@
 
     return-void
 
-    .line 281
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
@@ -1945,7 +1747,6 @@
     :goto_0
     if-ge v2, v1, :cond_2
 
-    .line 284
     iget-object v4, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1954,7 +1755,6 @@
 
     check-cast v4, Lcom/android/server/wm/WindowState;
 
-    .line 285
     invoke-virtual {v4, p1}, Lcom/android/server/wm/WindowState;->onSetAppExiting(Z)Z
 
     move-result v4
@@ -1968,14 +1768,12 @@
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 289
     iget-object p1, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mWindowPlacerLocked:Lcom/android/server/wm/WindowSurfacePlacer;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowSurfacePlacer;->performSurfacePlacement()V
 
-    .line 290
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {p0, v0, v0}, Lcom/android/server/wm/WindowManagerService;->updateFocusedWindowLocked(IZ)Z
@@ -1987,7 +1785,6 @@
 .method public setInsetsFrozen(Z)V
     .locals 1
 
-    .line 872
     new-instance v0, Lcom/android/server/wm/WindowToken$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/wm/WindowToken$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/wm/WindowToken;Z)V
@@ -2002,17 +1799,14 @@
 .method public setPortraitWindowToken(Z)V
     .locals 2
 
-    .line 786
     iget-boolean v0, p0, Lcom/android/server/wm/WindowToken;->mIsPortraitWindowToken:Z
 
     if-eq v0, p1, :cond_2
 
-    .line 787
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 788
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2035,7 +1829,6 @@
 
     const/4 v1, 0x3
 
-    .line 789
     invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object v1
@@ -2048,23 +1841,19 @@
 
     const-string v1, "WindowManager"
 
-    .line 788
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 792
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/wm/WindowToken;->mIsPortraitWindowToken:Z
 
     if-eqz p1, :cond_1
 
-    .line 794
     iget-object p1, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     if-eqz p1, :cond_2
 
     const/4 v0, 0x0
 
-    .line 795
     invoke-virtual {p1, p0, v0}, Lcom/android/server/wm/DisplayContent;->startFixedRotationTransform(Lcom/android/server/wm/WindowToken;I)V
 
     goto :goto_0
@@ -2072,7 +1861,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 798
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowToken;->finishFixedRotationTransform(Ljava/lang/Runnable;)V
 
     :cond_2
@@ -2083,12 +1871,10 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 833
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->stringName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 834
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2133,7 +1919,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/WindowToken;->stringName:Ljava/lang/String;
 
-    .line 837
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/WindowToken;->stringName:Ljava/lang/String;
 
@@ -2143,10 +1928,8 @@
 .method public updateSurfacePosition(Landroid/view/SurfaceControl$Transaction;)V
     .locals 0
 
-    .line 710
     invoke-super {p0, p1}, Lcom/android/server/wm/WindowContainer;->updateSurfacePosition(Landroid/view/SurfaceControl$Transaction;)V
 
-    .line 711
     iget-object p1, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
     invoke-virtual {p1}, Lcom/android/server/wm/TransitionController;->isShellTransitionsEnabled()Z
@@ -2161,14 +1944,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 712
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 713
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
@@ -2181,14 +1962,12 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 715
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inPinnedWindowingMode()Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 718
     :cond_1
     iget-object p1, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
@@ -2201,21 +1980,18 @@
 .method public updateSurfaceRotation(Landroid/view/SurfaceControl$Transaction;ILandroid/view/SurfaceControl;)V
     .locals 2
 
-    .line 726
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 728
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 731
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
     invoke-virtual {v1, v0}, Lcom/android/server/wm/TransitionController;->getWindowingModeAtStart(Lcom/android/server/wm/WindowContainer;)I
@@ -2228,7 +2004,6 @@
 
     return-void
 
-    .line 736
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/wm/WindowContainer;->updateSurfaceRotation(Landroid/view/SurfaceControl$Transaction;ILandroid/view/SurfaceControl;)V
 
@@ -2238,7 +2013,6 @@
 .method public windowsCanBeWallpaperTarget()Z
     .locals 3
 
-    .line 364
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -2252,7 +2026,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 365
     iget-object v2, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2261,7 +2034,6 @@
 
     check-cast v2, Lcom/android/server/wm/WindowState;
 
-    .line 366
     invoke-virtual {v2}, Lcom/android/server/wm/WindowState;->hasWallpaper()Z
 
     move-result v2

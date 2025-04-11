@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;Lcom/android/server/devicepolicy/PolicyPathProvider;)V
     .locals 0
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mProvider:Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;
 
-    .line 63
     iput-object p2, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mPathProvider:Lcom/android/server/devicepolicy/PolicyPathProvider;
 
     return-void
@@ -30,7 +27,6 @@
 .method public final getOwnerForUser(Lcom/android/server/devicepolicy/OwnersData;I)Landroid/content/ComponentName;
     .locals 1
 
-    .line 286
     iget p0, p1, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerUserId:I
 
     if-ne p0, p2, :cond_0
@@ -39,12 +35,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 287
     iget-object p0, p0, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;->admin:Landroid/content/ComponentName;
 
     goto :goto_0
 
-    .line 288
     :cond_0
     iget-object p0, p1, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
 
@@ -58,7 +52,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 289
     iget-object p0, p1, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -85,7 +78,6 @@
 .method public final getVersionFile()Lcom/android/internal/util/JournaledFile;
     .locals 1
 
-    .line 313
     iget-object p0, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mProvider:Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;
 
     const/4 v0, 0x0
@@ -102,7 +94,6 @@
 
     const/4 p0, 0x0
 
-    .line 238
     invoke-virtual {p1, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -113,7 +104,6 @@
 
     return-void
 
-    .line 242
     :cond_0
     iput-boolean p0, p1, Lcom/android/server/devicepolicy/DevicePolicyData;->mEffectiveKeepProfilesRunning:Z
 
@@ -121,7 +111,6 @@
 
     const-string p1, "Keep profile running effective state set to false"
 
-    .line 243
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -130,12 +119,10 @@
 .method public final loadAllUsersData([IILcom/android/server/devicepolicy/OwnersData;)Landroid/util/SparseArray;
     .locals 5
 
-    .line 275
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 276
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -145,12 +132,10 @@
 
     aget v3, p1, v2
 
-    .line 277
     invoke-virtual {p0, p3, v3}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->getOwnerForUser(Lcom/android/server/devicepolicy/OwnersData;I)Landroid/content/ComponentName;
 
     move-result-object v4
 
-    .line 278
     invoke-virtual {p0, v3, p2, v4}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->loadDataForUser(IILandroid/content/ComponentName;)Lcom/android/server/devicepolicy/DevicePolicyData;
 
     move-result-object v4
@@ -168,7 +153,6 @@
 .method public final loadDataForUser(IILandroid/content/ComponentName;)Lcom/android/server/devicepolicy/DevicePolicyData;
     .locals 2
 
-    .line 296
     new-instance v0, Lcom/android/server/devicepolicy/DevicePolicyData;
 
     invoke-direct {v0, p1}, Lcom/android/server/devicepolicy/DevicePolicyData;-><init>(I)V
@@ -181,26 +165,21 @@
 
     const/4 p2, 0x1
 
-    .line 299
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyData;->mEffectiveKeepProfilesRunning:Z
 
-    .line 301
     :cond_0
     iget-object p2, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mProvider:Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;
 
-    .line 302
     invoke-interface {p2, p1}, Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;->makeDevicePoliciesJournaledFile(I)Lcom/android/internal/util/JournaledFile;
 
     move-result-object p2
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mProvider:Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;
 
-    .line 303
     invoke-interface {p0, p1}, Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;->getAdminInfoSupplier(I)Ljava/util/function/Function;
 
     move-result-object p0
 
-    .line 301
     invoke-static {v0, p2, p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyData;->load(Lcom/android/server/devicepolicy/DevicePolicyData;Lcom/android/internal/util/JournaledFile;Ljava/util/function/Function;Landroid/content/ComponentName;)V
 
     return-object v0
@@ -209,14 +188,12 @@
 .method public final loadOwners([I)Lcom/android/server/devicepolicy/OwnersData;
     .locals 1
 
-    .line 247
     new-instance v0, Lcom/android/server/devicepolicy/OwnersData;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mPathProvider:Lcom/android/server/devicepolicy/PolicyPathProvider;
 
     invoke-direct {v0, p0}, Lcom/android/server/devicepolicy/OwnersData;-><init>(Lcom/android/server/devicepolicy/PolicyPathProvider;)V
 
-    .line 248
     invoke-virtual {v0, p1}, Lcom/android/server/devicepolicy/OwnersData;->load([I)V
 
     return-object v0
@@ -225,19 +202,16 @@
 .method public final readVersion()I
     .locals 3
 
-    .line 317
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->getVersionFile()Lcom/android/internal/util/JournaledFile;
 
     move-result-object p0
 
-    .line 319
     invoke-virtual {p0}, Lcom/android/internal/util/JournaledFile;->chooseForRead()Ljava/io/File;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 325
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
 
@@ -247,19 +221,16 @@
 
     move-result-object v1
 
-    .line 324
     invoke-static {p0, v1}, Ljava/nio/file/Files;->readAllLines(Ljava/nio/file/Path;Ljava/nio/charset/Charset;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 325
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Ljava/lang/String;
 
-    .line 326
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
@@ -277,7 +248,6 @@
 
     const-string v2, "Error reading version"
 
-    .line 328
     invoke-static {v1, v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -286,7 +256,6 @@
 .method public final saveSuspendedPackages(Landroid/util/SparseArray;ILandroid/content/ComponentName;)V
     .locals 1
 
-    .line 219
     invoke-virtual {p1, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -299,12 +268,10 @@
 
     const-string p0, "No policy data for owner user, cannot migrate suspended packages"
 
-    .line 221
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 225
     :cond_0
     iget-object p1, p1, Lcom/android/server/devicepolicy/DevicePolicyData;->mAdminMap:Landroid/util/ArrayMap;
 
@@ -318,12 +285,10 @@
 
     const-string p0, "No admin for owner, cannot migrate suspended packages"
 
-    .line 227
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 231
     :cond_1
     iget-object p0, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mProvider:Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;
 
@@ -333,7 +298,6 @@
 
     iput-object p0, p1, Lcom/android/server/devicepolicy/ActiveAdmin;->suspendedPackages:Ljava/util/List;
 
-    .line 233
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -352,7 +316,6 @@
 
     const-string p1, "Saved %d packages suspended by %s in user %d"
 
-    .line 232
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -365,12 +328,10 @@
 .method public final upgradePackageSuspension([ILcom/android/server/devicepolicy/OwnersData;Landroid/util/SparseArray;)V
     .locals 2
 
-    .line 205
     iget-object p1, p2, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwner:Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;
 
     if-eqz p1, :cond_0
 
-    .line 206
     iget v0, p2, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerUserId:I
 
     iget-object p1, p1, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;->admin:Landroid/content/ComponentName;
@@ -380,7 +341,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 210
     :goto_0
     iget-object v0, p2, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
 
@@ -390,7 +350,6 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 211
     iget-object v0, p2, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -403,7 +362,6 @@
 
     move-result v0
 
-    .line 212
     iget-object v1, p2, Lcom/android/server/devicepolicy/OwnersData;->mProfileOwners:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -412,7 +370,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;
 
-    .line 213
     iget-object v1, v1, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;->admin:Landroid/content/ComponentName;
 
     invoke-virtual {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->saveSuspendedPackages(Landroid/util/SparseArray;ILandroid/content/ComponentName;)V
@@ -428,7 +385,6 @@
 .method public upgradePolicy(I)V
     .locals 7
 
-    .line 71
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->readVersion()I
 
     move-result v0
@@ -437,7 +393,6 @@
 
     if-lt v0, p1, :cond_0
 
-    .line 74
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -452,7 +407,6 @@
 
     const-string p1, "Current version %d, latest version %d, not upgrading."
 
-    .line 73
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -461,7 +415,6 @@
 
     return-void
 
-    .line 78
     :cond_0
     iget-object p1, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mProvider:Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;
 
@@ -469,12 +422,10 @@
 
     move-result-object p1
 
-    .line 79
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->loadOwners([I)Lcom/android/server/devicepolicy/OwnersData;
 
     move-result-object v2
 
-    .line 85
     invoke-virtual {p0, p1, v0, v2}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->loadAllUsersData([IILcom/android/server/devicepolicy/OwnersData;)Landroid/util/SparseArray;
 
     move-result-object v3
@@ -485,7 +436,6 @@
 
     if-nez v0, :cond_1
 
-    .line 89
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -507,7 +457,6 @@
 
     if-ne v0, v4, :cond_2
 
-    .line 96
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -522,7 +471,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     invoke-virtual {p0, p1, v2, v3}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->upgradeSensorPermissionsAccess([ILcom/android/server/devicepolicy/OwnersData;Landroid/util/SparseArray;)V
 
     move v0, v6
@@ -532,7 +480,6 @@
 
     if-ne v0, v6, :cond_3
 
-    .line 102
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -547,7 +494,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     invoke-virtual {p0, v2, v3}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->upgradeProtectedPackages(Lcom/android/server/devicepolicy/OwnersData;Landroid/util/SparseArray;)V
 
     move v0, v4
@@ -557,7 +503,6 @@
 
     if-ne v0, v4, :cond_4
 
-    .line 108
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -572,7 +517,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     invoke-virtual {p0, p1, v2, v3}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->upgradePackageSuspension([ILcom/android/server/devicepolicy/OwnersData;Landroid/util/SparseArray;)V
 
     move v0, v6
@@ -582,7 +526,6 @@
 
     if-ne v0, v6, :cond_5
 
-    .line 114
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -597,7 +540,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     invoke-virtual {p0, v3}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->initializeEffectiveKeepProfilesRunning(Landroid/util/SparseArray;)V
 
     move v0, v4
@@ -605,7 +547,6 @@
     :cond_5
     if-ne v0, v4, :cond_6
 
-    .line 120
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -622,7 +563,6 @@
 
     const/4 v0, 0x6
 
-    .line 132
     :cond_6
     invoke-virtual {p0, p1, v3, v2, v0}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->writePoliciesAndVersion([ILandroid/util/SparseArray;Lcom/android/server/devicepolicy/OwnersData;I)V
 
@@ -632,14 +572,12 @@
 .method public final upgradeProtectedPackages(Lcom/android/server/devicepolicy/OwnersData;Landroid/util/SparseArray;)V
     .locals 3
 
-    .line 165
     iget-object p0, p1, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwner:Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;
 
     if-nez p0, :cond_0
 
     return-void
 
-    .line 169
     :cond_0
     iget p0, p1, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerUserId:I
 
@@ -655,12 +593,10 @@
 
     const-string p0, "No policy data for do user"
 
-    .line 171
     invoke-static {p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 174
     :cond_1
     iget-object v0, p1, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerProtectedPackages:Landroid/util/ArrayMap;
 
@@ -668,12 +604,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 175
     iget-object v2, p1, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwner:Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;
 
     iget-object v2, v2, Lcom/android/server/devicepolicy/OwnersData$OwnerInfo;->packageName:Ljava/lang/String;
 
-    .line 176
     invoke-virtual {v0, v2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -684,16 +618,13 @@
 
     const-string v2, "Found protected packages in Owners"
 
-    .line 178
     invoke-static {p2, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     :cond_2
     iput-object v1, p1, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerProtectedPackages:Landroid/util/ArrayMap;
 
     goto :goto_0
 
-    .line 181
     :cond_3
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyData;->mUserControlDisabledPackages:Ljava/util/List;
 
@@ -701,19 +632,15 @@
 
     const-string v0, "Found protected packages in DevicePolicyData"
 
-    .line 182
     invoke-static {p2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyData;->mUserControlDisabledPackages:Ljava/util/List;
 
-    .line 184
     iput-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyData;->mUserControlDisabledPackages:Ljava/util/List;
 
     :goto_0
     move-object v1, v0
 
-    .line 187
     :cond_4
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyData;->mAdminMap:Landroid/util/ArrayMap;
 
@@ -731,7 +658,6 @@
 
     const-string p0, "DO admin not found in DO user"
 
-    .line 189
     invoke-static {p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -739,7 +665,6 @@
     :cond_5
     if-eqz v1, :cond_6
 
-    .line 194
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -753,7 +678,6 @@
 .method public final upgradeSensorPermissionsAccess([ILcom/android/server/devicepolicy/OwnersData;Landroid/util/SparseArray;)V
     .locals 6
 
-    .line 141
     array-length p0, p1
 
     const/4 v0, 0x0
@@ -763,7 +687,6 @@
 
     aget v1, p1, v0
 
-    .line 142
     invoke-virtual {p3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -774,7 +697,6 @@
 
     goto :goto_2
 
-    .line 146
     :cond_0
     iget-object v2, v2, Lcom/android/server/devicepolicy/DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -796,7 +718,6 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/ActiveAdmin;
 
-    .line 147
     iget v4, p2, Lcom/android/server/devicepolicy/OwnersData;->mDeviceOwnerUserId:I
 
     if-ne v4, v1, :cond_1
@@ -809,7 +730,6 @@
 
     iget-object v5, v3, Lcom/android/server/devicepolicy/ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
-    .line 149
     invoke-virtual {v5}, Landroid/app/admin/DeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v5
@@ -820,7 +740,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 151
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -831,7 +750,6 @@
 
     const-string v5, "Marking Device Owner in user %d for permission grant "
 
-    .line 150
     invoke-static {v5, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -842,7 +760,6 @@
 
     const/4 v4, 0x1
 
-    .line 152
     iput-boolean v4, v3, Lcom/android/server/devicepolicy/ActiveAdmin;->mAdminCanGrantSensorsPermissions:Z
 
     goto :goto_1
@@ -860,7 +777,6 @@
 .method public final writeDataForUser(ILcom/android/server/devicepolicy/DevicePolicyData;)Z
     .locals 0
 
-    .line 309
     iget-object p0, p0, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->mProvider:Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;
 
     invoke-interface {p0, p1}, Lcom/android/server/devicepolicy/PolicyUpgraderDataProvider;->makeDevicePoliciesJournaledFile(I)Lcom/android/internal/util/JournaledFile;
@@ -877,7 +793,6 @@
 .method public final writePoliciesAndVersion([ILandroid/util/SparseArray;Lcom/android/server/devicepolicy/OwnersData;I)V
     .locals 6
 
-    .line 255
     array-length v0, p1
 
     const/4 v1, 0x1
@@ -895,7 +810,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 257
     invoke-virtual {p2, v5}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -923,7 +837,6 @@
     :cond_1
     if-eqz v4, :cond_2
 
-    .line 260
     invoke-virtual {p3}, Lcom/android/server/devicepolicy/OwnersData;->writeDeviceOwner()Z
 
     move-result p2
@@ -937,7 +850,6 @@
     :cond_2
     move p2, v2
 
-    .line 261
     :goto_2
     array-length v0, p1
 
@@ -950,7 +862,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 262
     invoke-virtual {p3, v4}, Lcom/android/server/devicepolicy/OwnersData;->writeProfileOwner(I)Z
 
     move-result p2
@@ -972,12 +883,10 @@
     :cond_4
     if-eqz p2, :cond_5
 
-    .line 266
     invoke-virtual {p0, p4}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->writeVersion(I)V
 
     goto :goto_5
 
-    .line 269
     :cond_5
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -989,7 +898,6 @@
 
     const-string p1, "Error: Failed upgrading policies to version %d"
 
-    .line 268
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1005,12 +913,10 @@
 .method public final writeVersion(I)V
     .locals 5
 
-    .line 334
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/PolicyVersionUpgrader;->getVersionFile()Lcom/android/internal/util/JournaledFile;
 
     move-result-object p0
 
-    .line 336
     invoke-virtual {p0}, Lcom/android/internal/util/JournaledFile;->chooseForWrite()Ljava/io/File;
 
     move-result-object v0
@@ -1022,7 +928,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 342
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1039,7 +944,6 @@
 
     move-result-object v1
 
-    .line 343
     invoke-virtual {v0}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
 
     move-result-object v0
@@ -1048,7 +952,6 @@
 
     invoke-static {v0, v1, v2}, Ljava/nio/file/Files;->write(Ljava/nio/file/Path;[B[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;
 
-    .line 344
     invoke-virtual {p0}, Lcom/android/internal/util/JournaledFile;->commit()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1058,7 +961,6 @@
     :catch_0
     move-exception v0
 
-    .line 346
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -1077,7 +979,6 @@
 
     invoke-static {v1, p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 347
     invoke-virtual {p0}, Lcom/android/internal/util/JournaledFile;->rollback()V
 
     :goto_0

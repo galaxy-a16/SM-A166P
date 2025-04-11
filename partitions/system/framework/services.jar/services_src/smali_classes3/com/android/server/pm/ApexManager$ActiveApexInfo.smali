@@ -21,7 +21,6 @@
 .method public constructor <init>(Landroid/apex/ApexInfo;)V
     .locals 7
 
-    .line 142
     iget-object v1, p1, Landroid/apex/ApexInfo;->moduleName:Ljava/lang/String;
 
     new-instance v2, Ljava/io/File;
@@ -30,7 +29,6 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 144
     invoke-static {}, Landroid/os/Environment;->getApexDirectory()Ljava/io/File;
 
     move-result-object v3
@@ -69,7 +67,6 @@
 
     move-object v0, p0
 
-    .line 142
     invoke-direct/range {v0 .. v6}, Lcom/android/server/pm/ApexManager$ActiveApexInfo;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/io/File;ZLjava/io/File;Z)V
 
     return-void
@@ -92,7 +89,6 @@
 
     move-object v5, p3
 
-    .line 127
     invoke-direct/range {v0 .. v6}, Lcom/android/server/pm/ApexManager$ActiveApexInfo;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/io/File;ZLjava/io/File;Z)V
 
     return-void
@@ -101,7 +97,6 @@
 .method public synthetic constructor <init>(Ljava/io/File;Ljava/io/File;Ljava/io/File;Lcom/android/server/pm/ApexManager$ActiveApexInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/ApexManager$ActiveApexInfo;-><init>(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
 
     return-void
@@ -110,25 +105,18 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/io/File;Ljava/io/File;ZLjava/io/File;Z)V
     .locals 0
 
-    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 133
     iput-object p1, p0, Lcom/android/server/pm/ApexManager$ActiveApexInfo;->apexModuleName:Ljava/lang/String;
 
-    .line 134
     iput-object p2, p0, Lcom/android/server/pm/ApexManager$ActiveApexInfo;->apexDirectory:Ljava/io/File;
 
-    .line 135
     iput-object p3, p0, Lcom/android/server/pm/ApexManager$ActiveApexInfo;->preInstalledApexPath:Ljava/io/File;
 
-    .line 136
     iput-boolean p4, p0, Lcom/android/server/pm/ApexManager$ActiveApexInfo;->isFactory:Z
 
-    .line 137
     iput-object p5, p0, Lcom/android/server/pm/ApexManager$ActiveApexInfo;->apexFile:Ljava/io/File;
 
-    .line 138
     iput-boolean p6, p0, Lcom/android/server/pm/ApexManager$ActiveApexInfo;->activeApexChanged:Z
 
     return-void

@@ -17,21 +17,16 @@
 .method public constructor <init>(Landroid/os/IBinder;ILandroid/view/autofill/IAutoFillManagerClient;)V
     .locals 0
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Lcom/android/server/autofill/ui/PendingUi;->mToken:Landroid/os/IBinder;
 
     const/4 p1, 0x1
 
-    .line 49
     iput p1, p0, Lcom/android/server/autofill/ui/PendingUi;->mState:I
 
-    .line 50
     iput p2, p0, Lcom/android/server/autofill/ui/PendingUi;->sessionId:I
 
-    .line 51
     iput-object p3, p0, Lcom/android/server/autofill/ui/PendingUi;->client:Landroid/view/autofill/IAutoFillManagerClient;
 
     return-void
@@ -42,7 +37,6 @@
 .method public getState()I
     .locals 0
 
-    .line 73
     iget p0, p0, Lcom/android/server/autofill/ui/PendingUi;->mState:I
 
     return p0
@@ -51,7 +45,6 @@
 .method public getToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/autofill/ui/PendingUi;->mToken:Landroid/os/IBinder;
 
     return-object p0
@@ -60,7 +53,6 @@
 .method public matches(Landroid/os/IBinder;)Z
     .locals 0
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/autofill/ui/PendingUi;->mToken:Landroid/os/IBinder;
 
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -73,7 +65,6 @@
 .method public setState(I)V
     .locals 0
 
-    .line 66
     iput p1, p0, Lcom/android/server/autofill/ui/PendingUi;->mState:I
 
     return-void
@@ -82,7 +73,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 85
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,7 +101,6 @@
 
     int-to-long v1, p0
 
-    .line 86
     const-class p0, Lcom/android/server/autofill/ui/PendingUi;
 
     const-string v3, "STATE_"

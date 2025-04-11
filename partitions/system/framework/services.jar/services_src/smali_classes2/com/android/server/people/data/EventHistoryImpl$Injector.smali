@@ -17,7 +17,6 @@
 .method public createEventIndex()Lcom/android/server/people/data/EventIndex;
     .locals 0
 
-    .line 220
     new-instance p0, Lcom/android/server/people/data/EventIndex;
 
     invoke-direct {p0}, Lcom/android/server/people/data/EventIndex;-><init>()V
@@ -28,7 +27,6 @@
 .method public currentTimeMillis()J
     .locals 2
 
-    .line 224
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

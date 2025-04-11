@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/connectivity/MultipathPolicyTracker;Landroid/os/Handler;)V
     .locals 0
 
-    .line 540
     iput-object p1, p0, Lcom/android/server/connectivity/MultipathPolicyTracker$SettingsObserver;->this$0:Lcom/android/server/connectivity/MultipathPolicyTracker;
 
-    .line 541
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 546
     invoke-static {}, Lcom/android/server/connectivity/MultipathPolicyTracker;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -42,19 +39,16 @@
 
     const-string/jumbo p1, "network_default_daily_multipath_quota_bytes"
 
-    .line 551
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 552
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 553
     invoke-static {}, Lcom/android/server/connectivity/MultipathPolicyTracker;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -75,7 +69,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
     :cond_0
     iget-object p0, p0, Lcom/android/server/connectivity/MultipathPolicyTracker$SettingsObserver;->this$0:Lcom/android/server/connectivity/MultipathPolicyTracker;
 

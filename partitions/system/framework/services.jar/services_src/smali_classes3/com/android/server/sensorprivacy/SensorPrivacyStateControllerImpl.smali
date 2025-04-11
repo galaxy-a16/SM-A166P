@@ -19,19 +19,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 44
     invoke-direct {p0}, Lcom/android/server/sensorprivacy/SensorPrivacyStateController;-><init>()V
 
     const-string/jumbo v0, "sensor_privacy_impl.xml"
 
-    .line 45
     invoke-static {v0}, Lcom/android/server/sensorprivacy/PersistedState;->fromFile(Ljava/lang/String;)Lcom/android/server/sensorprivacy/PersistedState;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mPersistedState:Lcom/android/server/sensorprivacy/PersistedState;
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/sensorprivacy/SensorPrivacyStateController;->persistAll()V
 
     return-void
@@ -40,7 +37,6 @@
 .method public static getDefaultSensorState()Lcom/android/server/sensorprivacy/SensorState;
     .locals 2
 
-    .line 59
     new-instance v0, Lcom/android/server/sensorprivacy/SensorState;
 
     const/4 v1, 0x0
@@ -53,19 +49,16 @@
 .method public static getInstance()Lcom/android/server/sensorprivacy/SensorPrivacyStateController;
     .locals 1
 
-    .line 38
     sget-object v0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->sInstance:Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;
 
     if-nez v0, :cond_0
 
-    .line 39
     new-instance v0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;
 
     invoke-direct {v0}, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;-><init>()V
 
     sput-object v0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->sInstance:Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;
 
-    .line 41
     :cond_0
     sget-object v0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->sInstance:Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;
 
@@ -77,7 +70,6 @@
 .method public dumpLocked(Lcom/android/internal/util/dump/DualDumpOutputStream;)V
     .locals 0
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mPersistedState:Lcom/android/server/sensorprivacy/PersistedState;
 
     invoke-virtual {p0, p1}, Lcom/android/server/sensorprivacy/PersistedState;->dump(Lcom/android/internal/util/dump/DualDumpOutputStream;)V
@@ -88,7 +80,6 @@
 .method public forEachStateLocked(Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SensorPrivacyStateConsumer;)V
     .locals 1
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mPersistedState:Lcom/android/server/sensorprivacy/PersistedState;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -105,7 +96,6 @@
 .method public getStateLocked(III)Lcom/android/server/sensorprivacy/SensorState;
     .locals 0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mPersistedState:Lcom/android/server/sensorprivacy/PersistedState;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/sensorprivacy/PersistedState;->getState(III)Lcom/android/server/sensorprivacy/SensorState;
@@ -114,14 +104,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 53
     new-instance p1, Lcom/android/server/sensorprivacy/SensorState;
 
     invoke-direct {p1, p0}, Lcom/android/server/sensorprivacy/SensorState;-><init>(Lcom/android/server/sensorprivacy/SensorState;)V
 
     return-object p1
 
-    .line 55
     :cond_0
     invoke-static {}, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->getDefaultSensorState()Lcom/android/server/sensorprivacy/SensorState;
 
@@ -133,7 +121,6 @@
 .method public final notifyStateChangeLocked(IIILcom/android/server/sensorprivacy/SensorState;)V
     .locals 8
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mListenerHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -142,14 +129,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 91
     new-instance v2, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl$$ExternalSyntheticLambda1;
 
     invoke-direct {v2}, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl$$ExternalSyntheticLambda1;-><init>()V
 
     iget-object v3, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mListener:Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SensorPrivacyListener;
 
-    .line 93
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -166,14 +151,12 @@
 
     invoke-direct {v7, p4}, Lcom/android/server/sensorprivacy/SensorState;-><init>(Lcom/android/server/sensorprivacy/SensorState;)V
 
-    .line 91
     invoke-static/range {v2 .. v7}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/QuintConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 95
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->schedulePersistLocked()V
 
@@ -183,7 +166,6 @@
 .method public schedulePersistLocked()V
     .locals 0
 
-    .line 111
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mPersistedState:Lcom/android/server/sensorprivacy/PersistedState;
 
     invoke-virtual {p0}, Lcom/android/server/sensorprivacy/PersistedState;->schedulePersist()V
@@ -194,26 +176,20 @@
 .method public setSensorPrivacyListenerLocked(Landroid/os/Handler;Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SensorPrivacyListener;)V
     .locals 1
 
-    .line 100
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 101
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mListener:Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SensorPrivacyListener;
 
     if-nez v0, :cond_0
 
-    .line 105
     iput-object p2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mListener:Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SensorPrivacyListener;
 
-    .line 106
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mListenerHandler:Landroid/os/Handler;
 
     return-void
 
-    .line 103
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -227,7 +203,6 @@
 .method public setStateLocked(IIIZLandroid/os/Handler;Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SetStateResultCallback;)V
     .locals 3
 
-    .line 67
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mPersistedState:Lcom/android/server/sensorprivacy/PersistedState;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/sensorprivacy/PersistedState;->getState(III)Lcom/android/server/sensorprivacy/SensorState;
@@ -242,7 +217,6 @@
 
     if-nez p4, :cond_0
 
-    .line 70
     invoke-static {p5, p6, v1}, Lcom/android/server/sensorprivacy/SensorPrivacyStateController;->sendSetStateCallback(Landroid/os/Handler;Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SetStateResultCallback;Z)V
 
     return-void
@@ -250,25 +224,20 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 73
     new-instance p4, Lcom/android/server/sensorprivacy/SensorState;
 
     invoke-direct {p4, v2}, Lcom/android/server/sensorprivacy/SensorState;-><init>(Z)V
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->mPersistedState:Lcom/android/server/sensorprivacy/PersistedState;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/sensorprivacy/PersistedState;->setState(IIILcom/android/server/sensorprivacy/SensorState;)Lcom/android/server/sensorprivacy/SensorState;
 
-    .line 75
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->notifyStateChangeLocked(IIILcom/android/server/sensorprivacy/SensorState;)V
 
-    .line 76
     invoke-static {p5, p6, v2}, Lcom/android/server/sensorprivacy/SensorPrivacyStateController;->sendSetStateCallback(Landroid/os/Handler;Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SetStateResultCallback;Z)V
 
     return-void
 
-    .line 80
     :cond_1
     invoke-virtual {v0, p4}, Lcom/android/server/sensorprivacy/SensorState;->setEnabled(Z)Z
 
@@ -276,15 +245,12 @@
 
     if-eqz p4, :cond_2
 
-    .line 81
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/sensorprivacy/SensorPrivacyStateControllerImpl;->notifyStateChangeLocked(IIILcom/android/server/sensorprivacy/SensorState;)V
 
-    .line 82
     invoke-static {p5, p6, v2}, Lcom/android/server/sensorprivacy/SensorPrivacyStateController;->sendSetStateCallback(Landroid/os/Handler;Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SetStateResultCallback;Z)V
 
     return-void
 
-    .line 85
     :cond_2
     invoke-static {p5, p6, v1}, Lcom/android/server/sensorprivacy/SensorPrivacyStateController;->sendSetStateCallback(Landroid/os/Handler;Lcom/android/server/sensorprivacy/SensorPrivacyStateController$SetStateResultCallback;Z)V
 

@@ -7,7 +7,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 120
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p0
@@ -26,7 +25,6 @@
 
     return-void
 
-    .line 124
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -47,7 +45,6 @@
     :cond_1
     const/4 p0, 0x0
 
-    .line 126
     invoke-static {p0}, Lcom/android/server/usb/MtpNotificationManager;->-$$Nest$fgetmListener(Lcom/android/server/usb/MtpNotificationManager;)Lcom/android/server/usb/MtpNotificationManager$OnOpenInAppListener;
 
     throw p0

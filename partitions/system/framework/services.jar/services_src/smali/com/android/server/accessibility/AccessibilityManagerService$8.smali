@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/AccessibilityManagerService;Lcom/android/server/accessibility/AccessibilityUserState;Lcom/android/server/accessibility/AccessibilityServiceConnection;)V
     .locals 0
 
-    .line 3190
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     iput-object p2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->val$userState:Lcom/android/server/accessibility/AccessibilityUserState;
@@ -35,7 +34,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
 
-    .line 3194
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->val$userState:Lcom/android/server/accessibility/AccessibilityUserState;
 
     iget-object p1, p1, Lcom/android/server/accessibility/AccessibilityUserState;->mTouchExplorationGrantedServices:Ljava/util/Set;
@@ -46,7 +44,6 @@
 
     invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3195
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     iget-object p2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->val$userState:Lcom/android/server/accessibility/AccessibilityUserState;
@@ -59,19 +56,16 @@
 
     invoke-virtual {p1, v1, v0, p2}, Lcom/android/server/accessibility/AccessibilityManagerService;->persistComponentNamesToSettingLocked(Ljava/lang/String;Ljava/util/Set;I)V
 
-    .line 3199
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->val$userState:Lcom/android/server/accessibility/AccessibilityUserState;
 
     const/4 p2, 0x1
 
     invoke-virtual {p1, p2}, Lcom/android/server/accessibility/AccessibilityUserState;->setTouchExplorationEnabledLocked(Z)V
 
-    .line 3200
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3202
     :try_start_0
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -93,10 +87,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3206
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3208
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$8;->val$userState:Lcom/android/server/accessibility/AccessibilityUserState;
@@ -108,9 +100,7 @@
     :catchall_0
     move-exception p0
 
-    .line 3206
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3207
     throw p0
 .end method

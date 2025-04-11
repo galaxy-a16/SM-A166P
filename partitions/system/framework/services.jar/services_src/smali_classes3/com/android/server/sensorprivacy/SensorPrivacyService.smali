@@ -55,7 +55,6 @@
 .method public static synthetic $r8$lambda$9M3fW8uG80DXYZX5yFl2m0VHI0k(Lcom/android/server/sensorprivacy/SensorPrivacyService;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->lambda$onBootPhase$0(Ljava/lang/Boolean;)V
 
     return-void
@@ -64,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActivityManager(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/app/ActivityManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mActivityManager:Landroid/app/ActivityManager;
 
     return-object p0
@@ -73,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActivityManagerInternal(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/app/ActivityManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
     return-object p0
@@ -82,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActivityTaskManager(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/app/ActivityTaskManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mActivityTaskManager:Landroid/app/ActivityTaskManager;
 
     return-object p0
@@ -91,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAppOpsManager(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/app/AppOpsManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     return-object p0
@@ -100,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAppOpsManagerInternal(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/app/AppOpsManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mAppOpsManagerInternal:Landroid/app/AppOpsManagerInternal;
 
     return-object p0
@@ -109,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAppOpsRestrictionToken(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mAppOpsRestrictionToken:Landroid/os/IBinder;
 
     return-object p0
@@ -118,7 +111,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallStateHelper(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mCallStateHelper:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
 
     return-object p0
@@ -127,7 +119,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -136,7 +127,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCurrentUser(Lcom/android/server/sensorprivacy/SensorPrivacyService;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mCurrentUser:I
 
     return p0
@@ -145,7 +135,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsFlipModel(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mIsFlipModel:Z
 
     return p0
@@ -154,7 +143,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsFolded(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mIsFolded:Z
 
     return p0
@@ -163,7 +151,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsLargeCoverScreen(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mIsLargeCoverScreen:Z
 
     return p0
@@ -172,7 +159,6 @@
 .method public static bridge synthetic -$$Nest$fgetmKeyguardManager(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/app/KeyguardManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     return-object p0
@@ -181,7 +167,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPackageManagerInternal(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/content/pm/PackageManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
     return-object p0
@@ -190,7 +175,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSensorPrivacyManagerInternal(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyManagerInternalImpl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mSensorPrivacyManagerInternal:Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyManagerInternalImpl;
 
     return-object p0
@@ -199,7 +183,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSensorPrivacyServiceImpl(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mSensorPrivacyServiceImpl:Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
 
     return-object p0
@@ -208,7 +191,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTelephonyManager(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/telephony/TelephonyManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     return-object p0
@@ -217,7 +199,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserManagerInternal(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/pm/UserManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
     return-object p0
@@ -226,7 +207,6 @@
 .method public static bridge synthetic -$$Nest$mforAllUsers(Lcom/android/server/sensorprivacy/SensorPrivacyService;Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->forAllUsers(Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
 
     return-void
@@ -235,7 +215,6 @@
 .method public static bridge synthetic -$$Nest$sfgetACTION_DISABLE_TOGGLE_SENSOR_PRIVACY()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->ACTION_DISABLE_TOGGLE_SENSOR_PRIVACY:Ljava/lang/String;
 
     return-object v0
@@ -244,7 +223,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -253,14 +231,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 171
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-class v1, Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
-    .line 172
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -283,10 +259,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 206
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 189
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
@@ -295,13 +269,10 @@
 
     const/16 v0, -0x2710
 
-    .line 196
     iput v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mCurrentUser:I
 
-    .line 208
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mContext:Landroid/content/Context;
 
-    .line 209
     const-class v0, Landroid/app/AppOpsManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -312,7 +283,6 @@
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mAppOpsManager:Landroid/app/AppOpsManager;
 
-    .line 210
     const-class v0, Landroid/app/AppOpsManagerInternal;
 
     invoke-virtual {p0, v0}, Lcom/android/server/SystemService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -323,7 +293,6 @@
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mAppOpsManagerInternal:Landroid/app/AppOpsManagerInternal;
 
-    .line 211
     const-class v0, Lcom/android/server/pm/UserManagerInternal;
 
     invoke-virtual {p0, v0}, Lcom/android/server/SystemService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -334,7 +303,6 @@
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
-    .line 212
     const-class v0, Landroid/app/ActivityManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -345,7 +313,6 @@
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 213
     const-class v0, Landroid/app/ActivityManagerInternal;
 
     invoke-virtual {p0, v0}, Lcom/android/server/SystemService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -356,7 +323,6 @@
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
-    .line 214
     const-class v0, Landroid/app/ActivityTaskManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -367,7 +333,6 @@
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mActivityTaskManager:Landroid/app/ActivityTaskManager;
 
-    .line 215
     const-class v0, Landroid/telephony/TelephonyManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -378,7 +343,6 @@
 
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 216
     const-class p1, Landroid/content/pm/PackageManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/SystemService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -389,14 +353,12 @@
 
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
-    .line 217
     new-instance p1, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
 
     invoke-direct {p1, p0}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;-><init>(Lcom/android/server/sensorprivacy/SensorPrivacyService;)V
 
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mSensorPrivacyServiceImpl:Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
 
-    .line 219
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object p1
@@ -409,7 +371,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mIsFlipModel:Z
 
-    .line 220
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object p1
@@ -428,7 +389,6 @@
 .method public static getCurrentTimeMillis()J
     .locals 2
 
-    .line 2065
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -439,7 +399,6 @@
 .method private synthetic lambda$onBootPhase$0(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 242
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -454,7 +413,6 @@
 .method public final forAllUsers(Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
     .locals 2
 
-    .line 1786
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerInternal;->getUserIds()[I
@@ -463,13 +421,11 @@
 
     const/4 v0, 0x0
 
-    .line 1787
     :goto_0
     array-length v1, p0
 
     if-ge v0, v1, :cond_0
 
-    .line 1788
     aget v1, p0, v0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -493,7 +449,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 235
     iget-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/KeyguardManager;
@@ -506,7 +461,6 @@
 
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 237
     iget-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/hardware/devicestate/DeviceStateManager;
@@ -519,14 +473,12 @@
 
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mDeviceStateManager:Landroid/hardware/devicestate/DeviceStateManager;
 
-    .line 238
     iget-boolean v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mIsLargeCoverScreen:Z
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 240
     invoke-static {}, Lcom/android/server/FgThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -543,7 +495,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/hardware/devicestate/DeviceStateManager;->registerCallback(Ljava/util/concurrent/Executor;Landroid/hardware/devicestate/DeviceStateManager$DeviceStateCallback;)V
 
-    .line 247
     :cond_0
     new-instance p1, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
 
@@ -551,7 +502,6 @@
 
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mCallStateHelper:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mSensorPrivacyServiceImpl:Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;->-$$Nest$mregisterSettingsObserver(Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;)V
@@ -563,7 +513,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 250
     new-instance p1, Lcom/android/server/sensorprivacy/CameraPrivacyLightController;
 
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mContext:Landroid/content/Context;
@@ -582,12 +531,10 @@
 
     const-string/jumbo v0, "sensor_privacy"
 
-    .line 226
     iget-object v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mSensorPrivacyServiceImpl:Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 227
     new-instance v0, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyManagerInternalImpl;
 
     const/4 v1, 0x0
@@ -596,7 +543,6 @@
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mSensorPrivacyManagerInternal:Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyManagerInternalImpl;
 
-    .line 228
     const-class v1, Landroid/hardware/SensorPrivacyManagerInternal;
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishLocalService(Ljava/lang/Class;Ljava/lang/Object;)V
@@ -607,21 +553,18 @@
 .method public onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
     .locals 2
 
-    .line 256
     iget v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mCurrentUser:I
 
     const/16 v1, -0x2710
 
     if-ne v0, v1, :cond_0
 
-    .line 257
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mCurrentUser:I
 
-    .line 258
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mSensorPrivacyServiceImpl:Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
@@ -637,14 +580,12 @@
 .method public onUserSwitching(Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$TargetUser;)V
     .locals 1
 
-    .line 264
     invoke-virtual {p2}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mCurrentUser:I
 
-    .line 265
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService;->mSensorPrivacyServiceImpl:Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I

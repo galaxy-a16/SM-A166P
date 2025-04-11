@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG_DATE_FORMAT()Ljava/text/SimpleDateFormat;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/vibrator/Vibration;->DEBUG_DATE_FORMAT:Ljava/text/SimpleDateFormat;
 
     return-object v0
@@ -32,7 +31,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 45
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM-dd HH:mm:ss.SSS"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration;->DEBUG_DATE_FORMAT:Ljava/text/SimpleDateFormat;
 
-    .line 48
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -56,23 +53,18 @@
 .method public constructor <init>(Landroid/os/IBinder;Lcom/android/server/vibrator/Vibration$CallerInfo;)V
     .locals 2
 
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Lcom/android/server/vibrator/VibrationStats;
 
     invoke-direct {v0}, Lcom/android/server/vibrator/VibrationStats;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/vibrator/Vibration;->stats:Lcom/android/server/vibrator/VibrationStats;
 
-    .line 104
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
     sget-object v0, Lcom/android/server/vibrator/Vibration;->sNextVibrationId:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -83,10 +75,8 @@
 
     iput-wide v0, p0, Lcom/android/server/vibrator/Vibration;->id:J
 
-    .line 107
     iput-object p1, p0, Lcom/android/server/vibrator/Vibration;->callerToken:Landroid/os/IBinder;
 
-    .line 108
     iput-object p2, p0, Lcom/android/server/vibrator/Vibration;->callerInfo:Lcom/android/server/vibrator/Vibration$CallerInfo;
 
     return-void

@@ -33,7 +33,6 @@
 .method public static synthetic $r8$lambda$OqgHCz5FFgt1wXF4vLBeDTODpnM(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->checkInterruptAndDelay(Z)V
 
     return-void
@@ -42,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetipAddresses(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/util/List;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
     return-object p0
@@ -51,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fgetmOuterConnection(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/util/concurrent/atomic/AtomicInteger;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mOuterConnection:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-object p0
@@ -60,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$fgetmOuterInterface(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mOuterInterface:Ljava/lang/String;
 
     return-object p0
@@ -69,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$fputipAddresses(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
     return-void
@@ -78,15 +73,12 @@
 .method public constructor <init>(Lcom/android/server/connectivity/Vpn;Lcom/android/internal/net/VpnConfig;[Ljava/lang/String;[Ljava/lang/String;Lcom/android/internal/net/VpnProfile;)V
     .locals 3
 
-    .line 4961
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const-string v0, "LegacyVpnRunner"
 
-    .line 4962
     invoke-direct {p0, p1, v0}, Lcom/android/server/connectivity/Vpn$VpnRunner;-><init>(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)V
 
-    .line 4894
     new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v2, -0x1
@@ -97,22 +89,18 @@
 
     const-wide/16 v1, -0x1
 
-    .line 4898
     iput-wide v1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mBringupStartTime:J
 
     const/4 v1, 0x0
 
-    .line 4901
     iput-object v1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
-    .line 4907
     new-instance v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;-><init>(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)V
 
     iput-object v1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 4928
     new-instance v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;-><init>(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)V
@@ -125,7 +113,6 @@
 
     goto :goto_0
 
-    .line 4964
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -135,7 +122,6 @@
 
     throw p0
 
-    .line 4967
     :cond_1
     :goto_0
     iput-object p2, p1, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -146,7 +132,6 @@
 
     const/4 v1, 0x2
 
-    .line 4969
     aget-object v1, p3, v1
 
     const-string v2, "hybridrsa"
@@ -159,7 +144,6 @@
 
     const-string v1, "charon"
 
-    .line 4970
     filled-new-array {v1, p2}, [Ljava/lang/String;
 
     move-result-object p2
@@ -171,14 +155,12 @@
     :cond_2
     const-string/jumbo v1, "racoon"
 
-    .line 4972
     filled-new-array {v1, p2}, [Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
-    .line 4974
     :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -202,14 +184,12 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4977
     filled-new-array {p3, p4}, [[Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
-    .line 4978
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
     array-length p2, p2
@@ -218,24 +198,20 @@
 
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mSockets:[Landroid/net/LocalSocket;
 
-    .line 4986
     iget-object p2, p1, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iget-object p2, p2, Lcom/android/internal/net/VpnConfig;->interfaze:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mOuterInterface:Ljava/lang/String;
 
-    .line 4988
     iput-object p5, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mProfile:Lcom/android/internal/net/VpnProfile;
 
-    .line 4990
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-nez p2, :cond_4
 
-    .line 4991
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmConnectivityManager(Lcom/android/server/connectivity/Vpn;)Landroid/net/ConnectivityManager;
 
     move-result-object p2
@@ -251,7 +227,6 @@
 
     aget-object p4, p2, v2
 
-    .line 4992
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmConnectivityManager(Lcom/android/server/connectivity/Vpn;)Landroid/net/ConnectivityManager;
 
     move-result-object p5
@@ -262,7 +237,6 @@
 
     if-eqz p5, :cond_3
 
-    .line 4993
     invoke-virtual {p5}, Landroid/net/LinkProperties;->getAllInterfaceNames()Ljava/util/List;
 
     move-result-object p5
@@ -275,7 +249,6 @@
 
     if-eqz p5, :cond_3
 
-    .line 4994
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmConnectivityManager(Lcom/android/server/connectivity/Vpn;)Landroid/net/ConnectivityManager;
 
     move-result-object p5
@@ -286,7 +259,6 @@
 
     if-eqz p4, :cond_3
 
-    .line 4996
     iget-object p2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mOuterConnection:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p4}, Landroid/net/NetworkInfo;->getType()I
@@ -302,7 +274,6 @@
 
     goto :goto_2
 
-    .line 5003
     :cond_4
     :goto_3
     new-instance p2, Landroid/content/IntentFilter;
@@ -311,10 +282,8 @@
 
     const-string p3, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    .line 5004
     invoke-virtual {p2, p3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 5005
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmContext(Lcom/android/server/connectivity/Vpn;)Landroid/content/Context;
 
     move-result-object p3
@@ -323,17 +292,14 @@
 
     invoke-virtual {p3, p4, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 5008
     new-instance p2, Landroid/content/IntentFilter;
 
     invoke-direct {p2}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p3, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
-    .line 5009
     invoke-virtual {p2, p3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 5010
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmContext(Lcom/android/server/connectivity/Vpn;)Landroid/content/Context;
 
     move-result-object p1
@@ -356,7 +322,6 @@
 
     const-string v2, ""
 
-    .line 5219
     iget-object v3, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     array-length v4, v3
@@ -371,15 +336,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 5221
     array-length v4, v3
 
     if-le v4, v5, :cond_0
 
-    .line 5222
     aget-object v0, v3, v6
 
-    .line 5223
     aget-object v2, v3, v5
 
     :cond_0
@@ -393,7 +355,6 @@
 
     if-nez p1, :cond_1
 
-    .line 5235
     :try_start_0
     iget-object v7, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -407,10 +368,8 @@
 
     move-result-object v7
 
-    .line 5238
     invoke-virtual {v1, v7}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->checkAndFixupArguments(Ljava/net/InetAddress;)V
 
-    .line 5244
     invoke-virtual {v7}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v8
@@ -422,7 +381,6 @@
     :cond_1
     move-object v7, v0
 
-    .line 5250
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -430,7 +388,6 @@
 
     iput-wide v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mBringupStartTime:J
 
-    .line 5253
     iget-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
     array-length v9, v8
@@ -442,7 +399,6 @@
 
     aget-object v11, v8, v10
 
-    .line 5254
     :goto_2
     iget-object v12, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -454,7 +410,6 @@
 
     if-nez v12, :cond_2
 
-    .line 5255
     invoke-virtual {v1, v6}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->checkInterruptAndDelay(Z)V
 
     goto :goto_2
@@ -464,7 +419,6 @@
 
     goto :goto_1
 
-    .line 5260
     :cond_3
     iget-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -474,34 +428,28 @@
 
     move-result-object v8
 
-    .line 5261
     invoke-virtual {v8}, Ljava/io/File;->delete()Z
 
-    .line 5262
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
     move-result v9
 
     if-nez v9, :cond_1f
 
-    .line 5266
     new-instance v9, Ljava/io/File;
 
     const-string v10, "/data/misc/vpn/abort"
 
     invoke-direct {v9, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5267
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 5268
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
     move-result v10
 
     if-nez v10, :cond_1e
 
-    .line 5273
     iget-object v10, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     sget-object v11, Landroid/net/NetworkInfo$DetailedState;->CONNECTING:Landroid/net/NetworkInfo$DetailedState;
@@ -512,7 +460,6 @@
 
     move v10, v4
 
-    .line 5276
     :goto_3
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
@@ -520,7 +467,6 @@
 
     if-ge v10, v12, :cond_6
 
-    .line 5277
     iget-object v12, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     aget-object v12, v12, v10
@@ -529,18 +475,15 @@
 
     goto :goto_5
 
-    .line 5283
     :cond_4
     aget-object v11, v11, v10
 
-    .line 5284
     iget-object v13, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v13, v13, Lcom/android/server/connectivity/Vpn;->mDeps:Lcom/android/server/connectivity/Vpn$Dependencies;
 
     invoke-virtual {v13, v11}, Lcom/android/server/connectivity/Vpn$Dependencies;->startService(Ljava/lang/String;)V
 
-    .line 5287
     :goto_4
     iget-object v13, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -552,12 +495,10 @@
 
     if-nez v13, :cond_5
 
-    .line 5288
     invoke-virtual {v1, v6}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->checkInterruptAndDelay(Z)V
 
     goto :goto_4
 
-    .line 5292
     :cond_5
     iget-object v13, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mSockets:[Landroid/net/LocalSocket;
 
@@ -567,7 +508,6 @@
 
     aput-object v14, v13, v10
 
-    .line 5295
     iget-object v13, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v13, v13, Lcom/android/server/connectivity/Vpn;->mDeps:Lcom/android/server/connectivity/Vpn$Dependencies;
@@ -587,7 +527,6 @@
 
     goto :goto_3
 
-    .line 5300
     :cond_6
     :goto_6
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
@@ -598,7 +537,6 @@
 
     move v10, v4
 
-    .line 5302
     :goto_7
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
@@ -606,10 +544,8 @@
 
     if-ge v10, v12, :cond_b
 
-    .line 5303
     aget-object v11, v11, v10
 
-    .line 5304
     iget-object v12, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     aget-object v12, v12, v10
@@ -628,7 +564,6 @@
 
     goto :goto_8
 
-    .line 5305
     :cond_7
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -654,7 +589,6 @@
     :goto_8
     const-string v12, "charon"
 
-    .line 5308
     invoke-virtual {v12, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
@@ -669,7 +603,6 @@
 
     goto :goto_9
 
-    .line 5309
     :cond_9
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -697,13 +630,11 @@
 
     goto :goto_7
 
-    .line 5313
     :cond_b
     invoke-virtual {v1, v6}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->checkInterruptAndDelay(Z)V
 
     goto :goto_6
 
-    .line 5317
     :cond_c
     invoke-static {v8, v4, v0}, Landroid/os/FileUtils;->readTextFile(Ljava/io/File;ILjava/lang/String;)Ljava/lang/String;
 
@@ -717,14 +648,12 @@
 
     move-result-object v8
 
-    .line 5318
     array-length v9, v8
 
     const/4 v10, 0x7
 
     if-ne v9, v10, :cond_1d
 
-    .line 5324
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v9, v9, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -737,7 +666,6 @@
 
     iput-object v10, v9, Lcom/android/internal/net/VpnConfig;->interfaze:Ljava/lang/String;
 
-    .line 5326
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v9, v9, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -746,7 +674,6 @@
 
     invoke-virtual {v9, v10}, Lcom/android/internal/net/VpnConfig;->addLegacyAddresses(Ljava/lang/String;)V
 
-    .line 5328
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     aget-object v10, v8, v6
@@ -761,7 +688,6 @@
 
     invoke-static {v9, v10}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fputmLegacyAddress(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)V
 
-    .line 5331
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v9, v9, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -776,7 +702,6 @@
 
     if-eqz v9, :cond_e
 
-    .line 5332
     :cond_d
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -789,7 +714,6 @@
     :cond_e
     if-nez p1, :cond_10
 
-    .line 5337
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v9, v9, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -804,7 +728,6 @@
 
     if-eqz v9, :cond_10
 
-    .line 5339
     :cond_f
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -814,7 +737,6 @@
 
     invoke-virtual {v9, v10}, Lcom/android/internal/net/VpnConfig;->addLegacyRoutes(Ljava/lang/String;)V
 
-    .line 5345
     :cond_10
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -833,21 +755,18 @@
     :cond_11
     const/4 v9, 0x3
 
-    .line 5346
     aget-object v9, v8, v9
 
     invoke-virtual {v9}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 5347
     invoke-virtual {v9}, Ljava/lang/String;->isEmpty()Z
 
     move-result v10
 
     if-nez v10, :cond_12
 
-    .line 5348
     iget-object v10, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v10, v10, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -864,7 +783,6 @@
 
     iput-object v9, v10, Lcom/android/internal/net/VpnConfig;->dnsServers:Ljava/util/List;
 
-    .line 5353
     :cond_12
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -883,21 +801,18 @@
     :cond_13
     const/4 v9, 0x4
 
-    .line 5354
     aget-object v8, v8, v9
 
     invoke-virtual {v8}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 5355
     invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
 
     move-result v9
 
     if-nez v9, :cond_14
 
-    .line 5356
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v9, v9, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -917,14 +832,12 @@
     :cond_14
     if-nez p1, :cond_17
 
-    .line 5364
     instance-of v8, v7, Ljava/net/Inet4Address;
 
     const/16 v9, 0x9
 
     if-eqz v8, :cond_15
 
-    .line 5365
     iget-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v8, v8, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -945,13 +858,11 @@
 
     goto :goto_a
 
-    .line 5368
     :cond_15
     instance-of v8, v7, Ljava/net/Inet6Address;
 
     if-eqz v8, :cond_16
 
-    .line 5369
     iget-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v8, v8, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -975,7 +886,6 @@
     :cond_16
     const-string v0, "LegacyVpnRunner"
 
-    .line 5373
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -992,7 +902,6 @@
 
     invoke-static {v0, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5377
     :goto_a
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1000,12 +909,10 @@
 
     if-nez v7, :cond_17
 
-    .line 5379
     iget-object v7, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mServerIP:Ljava/lang/String;
 
     invoke-static {v0, v7, v6}, Lcom/android/server/connectivity/Vpn;->-$$Nest$msetupIpRulesForCcMode(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;Z)V
 
-    .line 5386
     :cond_17
     iget-object v6, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1013,7 +920,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5388
     :try_start_1
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1025,10 +931,8 @@
 
     iput-wide v7, v0, Lcom/android/internal/net/VpnConfig;->startTime:J
 
-    .line 5391
     invoke-virtual {v1, v4}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->checkInterruptAndDelay(Z)V
 
-    .line 5394
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v7, v0, Lcom/android/server/connectivity/Vpn;->mDeps:Lcom/android/server/connectivity/Vpn$Dependencies;
@@ -1043,7 +947,6 @@
 
     if-eqz v0, :cond_1c
 
-    .line 5398
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-object v7, v0, Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
@@ -1052,19 +955,16 @@
 
     iput-object v7, v0, Lcom/android/server/connectivity/Vpn;->mInterface:Ljava/lang/String;
 
-    .line 5399
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mprepareStatusIntent(Lcom/android/server/connectivity/Vpn;)V
 
     if-eqz p1, :cond_18
 
-    .line 5404
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$magentConnectForKnoxInterface(Lcom/android/server/connectivity/Vpn;)V
 
     goto :goto_b
 
-    .line 5409
     :cond_18
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1075,12 +975,10 @@
 
     const-string v7, "Connected!"
 
-    .line 5413
     invoke-static {v0, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-nez p1, :cond_19
 
-    .line 5420
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mshowNotification(Lcom/android/server/connectivity/Vpn;)V
@@ -1089,10 +987,8 @@
 
     const-string v7, "add vpn rules"
 
-    .line 5421
     invoke-static {v0, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5422
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -1101,7 +997,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/VpnRules;->createVpnPostroutingChain()V
 
-    .line 5423
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -1110,7 +1005,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/VpnRules;->addTcpmssClampRule()V
 
-    .line 5425
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     sget-object v7, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
@@ -1119,7 +1013,6 @@
 
     invoke-static {v0, v7, v8}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mbroadcastVpnState(Lcom/android/server/connectivity/Vpn;Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;)V
 
-    .line 5432
     :cond_19
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1133,19 +1026,16 @@
 
     if-eqz v0, :cond_1b
 
-    .line 5433
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
     if-nez v0, :cond_1a
 
-    .line 5434
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
-    .line 5436
     :cond_1a
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1172,7 +1062,6 @@
 
     const-string v8, "LegacyVpnRunner"
 
-    .line 5437
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1193,7 +1082,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5438
     iget-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v8}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -1206,7 +1094,6 @@
 
     invoke-virtual {v8, v9}, Lcom/android/server/connectivity/VpnRules;->addVpnRuleForTethering(Ljava/lang/String;)V
 
-    .line 5439
     iget-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
     invoke-virtual {v7}, Landroid/net/LinkAddress;->toString()Ljava/lang/String;
@@ -1217,7 +1104,6 @@
 
     goto :goto_c
 
-    .line 5443
     :cond_1b
     monitor-exit v6
     :try_end_1
@@ -1229,7 +1115,6 @@
 
     const/4 v11, 0x1
 
-    .line 5448
     :try_start_2
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -1243,14 +1128,12 @@
 
     move-result-object v6
 
-    .line 5449
     invoke-static {v0, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v14
 
     const-string v15, ""
 
-    .line 5452
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -1259,14 +1142,12 @@
 
     move-result v16
 
-    .line 5447
     invoke-static/range {v9 .. v16}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto/16 :goto_d
 
-    .line 5395
     :cond_1c
     :try_start_3
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -1298,7 +1179,6 @@
     :catchall_0
     move-exception v0
 
-    .line 5443
     monitor-exit v6
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -1306,7 +1186,6 @@
     :try_start_4
     throw v0
 
-    .line 5319
     :cond_1d
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1320,7 +1199,6 @@
 
     const-string v7, "\', \'"
 
-    .line 5320
     invoke-static {v7, v8}, Ljava/lang/String;->join(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v7
@@ -1339,7 +1217,6 @@
 
     throw v0
 
-    .line 5269
     :cond_1e
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1349,7 +1226,6 @@
 
     throw v0
 
-    .line 5263
     :cond_1f
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1368,7 +1244,6 @@
 
     const-string v7, "Aborting"
 
-    .line 5456
     invoke-static {v6, v7, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v8, 0x5
@@ -1377,7 +1252,6 @@
 
     const/4 v10, 0x0
 
-    .line 5460
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v11
@@ -1390,14 +1264,12 @@
 
     move-result-object v2
 
-    .line 5461
     invoke-static {v6, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v13
 
     const-string v14, ""
 
-    .line 5464
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
@@ -1406,26 +1278,21 @@
 
     move-result v15
 
-    .line 5459
     invoke-static/range {v8 .. v15}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 5468
     iget-object v2, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     iget-boolean v3, v2, Lcom/android/server/connectivity/Vpn;->mLockdown:Z
 
     if-nez v3, :cond_20
 
-    .line 5469
     iget-object v3, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mServerIP:Ljava/lang/String;
 
     invoke-static {v2, v3, v4}, Lcom/android/server/connectivity/Vpn;->-$$Nest$msetupIpRulesForCcMode(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;Z)V
 
-    .line 5472
     :cond_20
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->stopLegacyDaemons()V
 
-    .line 5474
     iget-object v2, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     sget-object v3, Landroid/net/NetworkInfo$DetailedState;->FAILED:Landroid/net/NetworkInfo$DetailedState;
@@ -1436,12 +1303,10 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/connectivity/Vpn;->updateState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;)V
 
-    .line 5475
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->exitVpnRunner()V
 
     if-nez p1, :cond_21
 
-    .line 5478
     iget-object v2, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     sget-object v3, Landroid/net/NetworkInfo$DetailedState;->FAILED:Landroid/net/NetworkInfo$DetailedState;
@@ -1459,10 +1324,8 @@
 
     const-string v2, "Sending message to clear connecting notification due to some connection error"
 
-    .line 5486
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5487
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0, v5}, Lcom/android/server/connectivity/Vpn;->-$$Nest$msendBroadcastToClearConnectingNotification(Lcom/android/server/connectivity/Vpn;I)V
@@ -1475,12 +1338,10 @@
 .method public final checkAndFixupArguments(Ljava/net/InetAddress;)V
     .locals 4
 
-    .line 5173
     invoke-virtual {p1}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 5175
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1495,14 +1356,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 5176
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     aget-object v0, v0, v1
 
     if-eqz v0, :cond_1
 
-    .line 5177
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mProfile:Lcom/android/internal/net/VpnProfile;
 
     iget-object v2, v2, Lcom/android/internal/net/VpnProfile;->server:Ljava/lang/String;
@@ -1515,7 +1374,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5180
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     aget-object p0, p0, v1
@@ -1524,7 +1382,6 @@
 
     goto :goto_0
 
-    .line 5178
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1538,7 +1395,6 @@
     :goto_0
     return-void
 
-    .line 5188
     :cond_2
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
@@ -1566,14 +1422,12 @@
 
     if-eqz v0, :cond_7
 
-    .line 5195
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     aget-object v0, v0, v1
 
     if-eqz v0, :cond_4
 
-    .line 5196
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mProfile:Lcom/android/internal/net/VpnProfile;
 
     iget-object v3, v3, Lcom/android/internal/net/VpnProfile;->server:Ljava/lang/String;
@@ -1586,7 +1440,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 5199
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     aget-object v0, v0, v1
@@ -1595,7 +1448,6 @@
 
     goto :goto_1
 
-    .line 5197
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1605,7 +1457,6 @@
 
     throw p0
 
-    .line 5202
     :cond_4
     :goto_1
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
@@ -1614,7 +1465,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 5203
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mProfile:Lcom/android/internal/net/VpnProfile;
 
     iget-object v1, v1, Lcom/android/internal/net/VpnProfile;->server:Ljava/lang/String;
@@ -1629,7 +1479,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 5206
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     aget-object p0, p0, v2
@@ -1638,7 +1487,6 @@
 
     goto :goto_2
 
-    .line 5204
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1652,7 +1500,6 @@
     :goto_2
     return-void
 
-    .line 5189
     :cond_7
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1666,12 +1513,10 @@
 .method public final checkInterruptAndDelay(Z)V
     .locals 4
 
-    .line 5163
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 5164
     iget-wide v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mBringupStartTime:J
 
     sub-long/2addr v0, v2
@@ -1691,13 +1536,11 @@
     :cond_0
     const-wide/16 p0, 0x1
 
-    .line 5165
     :goto_0
     invoke-static {p0, p1}, Ljava/lang/Thread;->sleep(J)V
 
     return-void
 
-    .line 5167
     :cond_1
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1707,7 +1550,6 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/connectivity/Vpn;->updateState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;)V
 
-    .line 5168
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "VPN bringup took too long"
@@ -1720,7 +1562,6 @@
 .method public exitIfOuterInterfaceIs(Ljava/lang/String;)V
     .locals 2
 
-    .line 5021
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mOuterInterface:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1729,7 +1570,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5022
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1748,7 +1588,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5023
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->exitVpnRunner()V
 
     :cond_0
@@ -1758,15 +1597,12 @@
 .method public exitVpnRunner()V
     .locals 2
 
-    .line 5031
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 5035
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$magentDisconnect(Lcom/android/server/connectivity/Vpn;)V
 
-    .line 5037
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1778,7 +1614,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 5039
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmContext(Lcom/android/server/connectivity/Vpn;)Landroid/content/Context;
@@ -1801,7 +1636,6 @@
     :try_start_0
     const-string p0, "ipsec0"
 
-    .line 5543
     invoke-static {p0}, Ljava/net/NetworkInterface;->getByName(Ljava/lang/String;)Ljava/net/NetworkInterface;
 
     move-result-object p0
@@ -1819,7 +1653,6 @@
 
     const-string v0, "charon Iface doesn\'t exist"
 
-    .line 5547
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -1836,7 +1669,6 @@
 
     const/4 v2, 0x0
 
-    .line 5576
     :try_start_0
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -1852,7 +1684,6 @@
 
     move-result-object v3
 
-    .line 5577
     invoke-static {v3}, Ljava/util/Collections;->list(Ljava/util/Enumeration;)Ljava/util/ArrayList;
 
     move-result-object v3
@@ -1885,7 +1716,6 @@
     :cond_0
     if-nez v4, :cond_1
 
-    .line 5581
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1917,7 +1747,6 @@
     :cond_1
     return v6
 
-    .line 5587
     :catch_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1952,14 +1781,12 @@
     :try_start_0
     const-string/jumbo p0, "wifi"
 
-    .line 5526
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/net/wifi/WifiManager;
 
-    .line 5528
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->getWifiApState()I
 
     move-result p0
@@ -1981,10 +1808,8 @@
 
     const-string v0, "Failed to get hotspot status, assume hotpost disabled"
 
-    .line 5533
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5534
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -2002,12 +1827,10 @@
 
     const-string v2, "Waiting"
 
-    .line 5047
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v2, "LegacyVpnRunner"
 
-    .line 5051
     monitor-enter v2
 
     :try_start_0
@@ -2015,7 +1838,6 @@
 
     const-string v3, "Executing"
 
-    .line 5052
     invoke-static {v0, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
@@ -2034,7 +1856,6 @@
 
     const/4 v11, 0x0
 
-    .line 5055
     :try_start_1
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2047,7 +1868,6 @@
 
     if-lt v0, v10, :cond_1
 
-    .line 5057
     :try_start_2
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2060,13 +1880,11 @@
 
     if-nez v0, :cond_0
 
-    .line 5060
     :try_start_3
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0, v10}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fputmKnoxAlwaysOn(Lcom/android/server/connectivity/Vpn;Z)V
 
-    .line 5061
     invoke-virtual {v1, v10}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->bringup(Z)V
     :try_end_3
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
@@ -2088,7 +1906,6 @@
 
     goto/16 :goto_b
 
-    .line 5065
     :cond_0
     :try_start_4
     invoke-virtual {v1, v11}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->bringup(Z)V
@@ -2110,7 +1927,6 @@
 
     goto/16 :goto_b
 
-    .line 5070
     :cond_1
     :try_start_5
     invoke-virtual {v1, v11}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->bringup(Z)V
@@ -2121,18 +1937,15 @@
     :goto_0
     move v12, v11
 
-    .line 5073
     :goto_1
     :try_start_6
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->waitForDaemonsToStop()V
 
-    .line 5074
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
     :try_end_6
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_7
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 5078
     :try_start_7
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2140,7 +1953,6 @@
 
     if-nez v13, :cond_2
 
-    .line 5079
     iget-object v13, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mServerIP:Ljava/lang/String;
 
     invoke-static {v0, v13, v11}, Lcom/android/server/connectivity/Vpn;->-$$Nest$msetupIpRulesForCcMode(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;Z)V
@@ -2152,10 +1964,8 @@
 
     const-string v13, "delete vpn rules"
 
-    .line 5085
     invoke-static {v0, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5086
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -2164,13 +1974,11 @@
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/VpnRules;->deleteVpnPostroutingChain()V
 
-    .line 5093
     :cond_3
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
     if-eqz v0, :cond_5
 
-    .line 5094
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2190,7 +1998,6 @@
 
     const-string v14, "LegacyVpnRunner"
 
-    .line 5095
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -2207,7 +2014,6 @@
 
     invoke-static {v14, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5096
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v11}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -2220,11 +2026,9 @@
 
     goto :goto_2
 
-    .line 5098
     :cond_4
     iput-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
-    .line 5100
     :cond_5
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->stopLegacyDaemons()V
 
@@ -2232,7 +2036,6 @@
 
     const-string v8, ""
 
-    .line 5107
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     array-length v13, v11
@@ -2243,15 +2046,12 @@
 
     if-eqz v11, :cond_6
 
-    .line 5109
     array-length v13, v11
 
     if-le v13, v9, :cond_6
 
-    .line 5110
     aget-object v0, v11, v10
 
-    .line 5111
     aget-object v8, v11, v9
 
     :cond_6
@@ -2261,7 +2061,6 @@
 
     const/16 v18, 0x1
 
-    .line 5115
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v19
@@ -2274,14 +2073,12 @@
 
     move-result-object v0
 
-    .line 5116
     invoke-static {v9, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v21
 
     const-string v22, ""
 
-    .line 5119
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -2290,10 +2087,8 @@
 
     move-result v23
 
-    .line 5114
     invoke-static/range {v16 .. v23}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 5123
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mSockets:[Landroid/net/LocalSocket;
 
     array-length v8, v0
@@ -2305,7 +2100,6 @@
 
     aget-object v10, v0, v9
 
-    .line 5124
     invoke-static {v10}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_4
@@ -2314,7 +2108,6 @@
 
     goto :goto_3
 
-    .line 5129
     :cond_7
     :try_start_8
     invoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V
@@ -2322,7 +2115,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_8} :catch_2
     .catchall {:try_start_8 .. :try_end_8} :catchall_4
 
-    .line 5132
     :catch_2
     :try_start_9
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
@@ -2338,7 +2130,6 @@
 
     const-string v9, "charon"
 
-    .line 5134
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
@@ -2350,7 +2141,6 @@
     :goto_5
     if-ge v9, v5, :cond_8
 
-    .line 5135
     invoke-static {v8}, Landroid/os/SystemService;->isRunning(Ljava/lang/String;)Z
 
     move-result v10
@@ -2359,7 +2149,6 @@
 
     if-eqz v10, :cond_8
 
-    .line 5137
     :try_start_a
     invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
     :try_end_a
@@ -2371,7 +2160,6 @@
 
     goto :goto_5
 
-    .line 5142
     :cond_8
     :try_start_b
     iget-object v9, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -2394,7 +2182,6 @@
 
     const/4 v12, 0x0
 
-    .line 5078
     :goto_6
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2402,7 +2189,6 @@
 
     if-nez v13, :cond_9
 
-    .line 5079
     iget-object v13, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mServerIP:Ljava/lang/String;
 
     const/4 v14, 0x0
@@ -2416,10 +2202,8 @@
 
     const-string v12, "delete vpn rules"
 
-    .line 5085
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5086
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v11}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -2428,13 +2212,11 @@
 
     invoke-virtual {v11}, Lcom/android/server/connectivity/VpnRules;->deleteVpnPostroutingChain()V
 
-    .line 5093
     :cond_a
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
     if-eqz v11, :cond_c
 
-    .line 5094
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -2454,7 +2236,6 @@
 
     const-string v13, "LegacyVpnRunner"
 
-    .line 5095
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -2471,7 +2252,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5096
     iget-object v13, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v13}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -2482,11 +2262,9 @@
 
     goto :goto_7
 
-    .line 5098
     :cond_b
     iput-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
-    .line 5100
     :cond_c
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->stopLegacyDaemons()V
 
@@ -2494,7 +2272,6 @@
 
     const-string v11, ""
 
-    .line 5107
     iget-object v12, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     array-length v13, v12
@@ -2505,15 +2282,12 @@
 
     if-eqz v12, :cond_d
 
-    .line 5109
     array-length v13, v12
 
     if-le v13, v9, :cond_d
 
-    .line 5110
     aget-object v8, v12, v10
 
-    .line 5111
     aget-object v11, v12, v9
 
     :cond_d
@@ -2523,7 +2297,6 @@
 
     const/16 v18, 0x1
 
-    .line 5115
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v19
@@ -2536,14 +2309,12 @@
 
     move-result-object v8
 
-    .line 5116
     invoke-static {v9, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v21
 
     const-string v22, ""
 
-    .line 5119
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
@@ -2552,10 +2323,8 @@
 
     move-result v23
 
-    .line 5114
     invoke-static/range {v16 .. v23}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 5123
     iget-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mSockets:[Landroid/net/LocalSocket;
 
     array-length v9, v8
@@ -2567,7 +2336,6 @@
 
     aget-object v11, v8, v10
 
-    .line 5124
     invoke-static {v11}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_4
@@ -2576,7 +2344,6 @@
 
     goto :goto_8
 
-    .line 5129
     :cond_e
     :try_start_c
     invoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V
@@ -2584,7 +2351,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_c .. :try_end_c} :catch_4
     .catchall {:try_start_c .. :try_end_c} :catchall_4
 
-    .line 5132
     :catch_4
     :try_start_d
     iget-object v6, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
@@ -2600,7 +2366,6 @@
 
     const-string v10, "charon"
 
-    .line 5134
     invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v10
@@ -2612,7 +2377,6 @@
     :goto_a
     if-ge v10, v5, :cond_f
 
-    .line 5135
     invoke-static {v9}, Landroid/os/SystemService;->isRunning(Ljava/lang/String;)Z
 
     move-result v11
@@ -2621,7 +2385,6 @@
 
     if-eqz v11, :cond_f
 
-    .line 5137
     :try_start_e
     invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
     :try_end_e
@@ -2633,7 +2396,6 @@
 
     goto :goto_a
 
-    .line 5142
     :cond_f
     :try_start_f
     iget-object v10, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -2646,14 +2408,12 @@
 
     goto :goto_9
 
-    .line 5144
     :cond_10
     throw v0
 
     :catch_6
     const/4 v12, 0x0
 
-    .line 5078
     :catch_7
     :goto_b
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -2662,7 +2422,6 @@
 
     if-nez v11, :cond_11
 
-    .line 5079
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mServerIP:Ljava/lang/String;
 
     const/4 v13, 0x0
@@ -2676,10 +2435,8 @@
 
     const-string v11, "delete vpn rules"
 
-    .line 5085
     invoke-static {v0, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5086
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -2688,13 +2445,11 @@
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/VpnRules;->deleteVpnPostroutingChain()V
 
-    .line 5093
     :cond_12
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
     if-eqz v0, :cond_14
 
-    .line 5094
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2714,7 +2469,6 @@
 
     const-string v13, "LegacyVpnRunner"
 
-    .line 5095
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -2731,7 +2485,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5096
     iget-object v13, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v13}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmVpnRules(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/VpnRules;
@@ -2742,11 +2495,9 @@
 
     goto :goto_c
 
-    .line 5098
     :cond_13
     iput-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->ipAddresses:Ljava/util/List;
 
-    .line 5100
     :cond_14
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->stopLegacyDaemons()V
 
@@ -2754,7 +2505,6 @@
 
     const-string v8, ""
 
-    .line 5107
     iget-object v11, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     array-length v13, v11
@@ -2765,15 +2515,12 @@
 
     if-eqz v11, :cond_15
 
-    .line 5109
     array-length v13, v11
 
     if-le v13, v9, :cond_15
 
-    .line 5110
     aget-object v0, v11, v10
 
-    .line 5111
     aget-object v8, v11, v9
 
     :cond_15
@@ -2783,7 +2530,6 @@
 
     const/16 v18, 0x1
 
-    .line 5115
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v19
@@ -2796,14 +2542,12 @@
 
     move-result-object v0
 
-    .line 5116
     invoke-static {v9, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v21
 
     const-string v22, ""
 
-    .line 5119
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -2812,10 +2556,8 @@
 
     move-result v23
 
-    .line 5114
     invoke-static/range {v16 .. v23}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 5123
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mSockets:[Landroid/net/LocalSocket;
 
     array-length v8, v0
@@ -2827,7 +2569,6 @@
 
     aget-object v9, v0, v14
 
-    .line 5124
     invoke-static {v9}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_4
@@ -2836,7 +2577,6 @@
 
     goto :goto_d
 
-    .line 5129
     :cond_16
     :try_start_10
     invoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V
@@ -2844,7 +2584,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_10 .. :try_end_10} :catch_8
     .catchall {:try_start_10 .. :try_end_10} :catchall_4
 
-    .line 5132
     :catch_8
     :try_start_11
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
@@ -2860,7 +2599,6 @@
 
     const-string v8, "charon"
 
-    .line 5134
     invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -2872,7 +2610,6 @@
     :goto_f
     if-ge v8, v5, :cond_17
 
-    .line 5135
     invoke-static {v7}, Landroid/os/SystemService;->isRunning(Ljava/lang/String;)Z
 
     move-result v9
@@ -2881,7 +2618,6 @@
 
     if-eqz v9, :cond_17
 
-    .line 5137
     :try_start_12
     invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
     :try_end_12
@@ -2893,7 +2629,6 @@
 
     goto :goto_f
 
-    .line 5142
     :cond_17
     :try_start_13
     iget-object v8, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -2906,25 +2641,21 @@
 
     goto :goto_e
 
-    .line 5145
     :cond_18
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$magentDisconnect(Lcom/android/server/connectivity/Vpn;)V
 
-    .line 5147
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$mhideNotification(Lcom/android/server/connectivity/Vpn;)V
 
-    .line 5149
     monitor-exit v2
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_4
 
     if-eqz v12, :cond_19
 
-    .line 5153
     :try_start_14
     iget-object v0, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -2932,7 +2663,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fputmKnoxAlwaysOn(Lcom/android/server/connectivity/Vpn;Z)V
 
-    .line 5154
     invoke-static {}, Lcom/android/server/connectivity/Vpn;->-$$Nest$smgetKnoxVpnService()Lcom/samsung/android/knox/net/vpn/IKnoxVpnPolicy;
 
     move-result-object v0
@@ -2954,7 +2684,6 @@
     :catchall_4
     move-exception v0
 
-    .line 5149
     :try_start_15
     monitor-exit v2
     :try_end_15
@@ -2970,14 +2699,12 @@
 
     const-string/jumbo v1, "stopLegacyDaemons: begin"
 
-    .line 5553
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 5554
     :goto_0
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
@@ -2985,19 +2712,16 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 5555
     aget-object v2, v2, v1
 
     const-string v3, "charon"
 
-    .line 5556
     invoke-virtual {v2, v3}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 5559
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mSockets:[Landroid/net/LocalSocket;
 
     aget-object v3, v3, v1
@@ -3011,7 +2735,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 5561
     invoke-static {v2}, Landroid/os/SystemService;->isRunning(Ljava/lang/String;)Z
 
     move-result v4
@@ -3020,7 +2743,6 @@
 
     const-wide/16 v4, 0xc8
 
-    .line 5563
     :try_start_0
     invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -3031,7 +2753,6 @@
 
     goto :goto_1
 
-    .line 5567
     :cond_0
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mSockets:[Landroid/net/LocalSocket;
 
@@ -3039,7 +2760,6 @@
 
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 5569
     :cond_1
     invoke-static {v2}, Landroid/os/SystemService;->stop(Ljava/lang/String;)V
 
@@ -3054,7 +2774,6 @@
 .method public final waitForDaemonsToStop()V
     .locals 3
 
-    .line 5500
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->-$$Nest$fgetmNetworkInfo(Lcom/android/server/connectivity/Vpn;)Landroid/net/NetworkInfo;
@@ -3072,10 +2791,8 @@
     :cond_0
     const-wide/16 v0, 0x7d0
 
-    .line 5504
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 5506
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -3090,7 +2807,6 @@
 
     if-nez v0, :cond_1
 
-    .line 5507
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->isEgressActivated()Z
 
     move-result v0
@@ -3099,7 +2815,6 @@
 
     goto :goto_0
 
-    .line 5509
     :cond_1
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
 
@@ -3113,7 +2828,6 @@
 
     if-nez v0, :cond_3
 
-    .line 5510
     invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->isCharonActivated()Z
 
     move-result v0
@@ -3130,7 +2844,6 @@
     :goto_0
     return-void
 
-    .line 5514
     :cond_3
     :goto_1
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mDaemons:[Ljava/lang/String;
@@ -3139,7 +2852,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 5515
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mArguments:[[Ljava/lang/String;
 
     aget-object v2, v2, v1

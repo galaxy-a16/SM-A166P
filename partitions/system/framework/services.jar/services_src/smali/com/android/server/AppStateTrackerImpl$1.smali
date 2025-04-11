@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/AppStateTrackerImpl;Lcom/android/server/AppStateTracker$BackgroundRestrictedAppListener;)V
     .locals 0
 
-    .line 176
     iput-object p1, p0, Lcom/android/server/AppStateTrackerImpl$1;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     iput-object p2, p0, Lcom/android/server/AppStateTrackerImpl$1;->val$listener:Lcom/android/server/AppStateTracker$BackgroundRestrictedAppListener;
@@ -28,7 +27,6 @@
 .method public updateBackgroundRestrictedForUidPackage(ILjava/lang/String;Z)V
     .locals 0
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/AppStateTrackerImpl$1;->val$listener:Lcom/android/server/AppStateTracker$BackgroundRestrictedAppListener;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/android/server/AppStateTracker$BackgroundRestrictedAppListener;->updateBackgroundRestrictedForUidPackage(ILjava/lang/String;Z)V

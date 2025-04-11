@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/FactoryResetter;)V
     .locals 0
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/devicepolicy/FactoryResetter$1;->this$0:Lcom/android/server/devicepolicy/FactoryResetter;
 
     invoke-direct {p0}, Lcom/android/internal/os/IResultReceiver$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public send(ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 78
     invoke-static {}, Lcom/android/server/devicepolicy/FactoryResetter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -43,7 +41,6 @@
 
     invoke-static {p1, v0, p2}, Lcom/android/server/utils/Slogf;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 80
     :try_start_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/FactoryResetter$1;->this$0:Lcom/android/server/devicepolicy/FactoryResetter;
 
@@ -56,7 +53,6 @@
     :catch_0
     move-exception p0
 
-    .line 83
     invoke-static {}, Lcom/android/server/devicepolicy/FactoryResetter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

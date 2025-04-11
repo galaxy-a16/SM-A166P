@@ -30,7 +30,6 @@
 .method public static bridge synthetic -$$Nest$fputmAppCastPackage(Lcom/android/server/am/mars/filter/filter/AppCastFilter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackage:Ljava/lang/String;
 
     return-void
@@ -39,7 +38,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsAppCastEnabled(Lcom/android/server/am/mars/filter/filter/AppCastFilter;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mIsAppCastEnabled:Z
 
     return-void
@@ -48,7 +46,6 @@
 .method public static bridge synthetic -$$Nest$mgetValueFromSmartMirroring(Lcom/android/server/am/mars/filter/filter/AppCastFilter;Landroid/net/Uri;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->getValueFromSmartMirroring(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p0
@@ -59,7 +56,6 @@
 .method public static bridge synthetic -$$Nest$sfgetURI_APP_CAST_ENABLED()Landroid/net/Uri;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->URI_APP_CAST_ENABLED:Landroid/net/Uri;
 
     return-object v0
@@ -68,7 +64,6 @@
 .method public static bridge synthetic -$$Nest$sfgetURI_APP_CAST_PACKAGE()Landroid/net/Uri;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->URI_APP_CAST_PACKAGE:Landroid/net/Uri;
 
     return-object v0
@@ -77,7 +72,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,7 +96,6 @@
 
     const-string v0, "content://com.samsung.android.smartmirroring/app_cast_sent_result"
 
-    .line 18
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -111,7 +104,6 @@
 
     const-string v0, "content://com.samsung.android.smartmirroring/app_cast_sent_top_package"
 
-    .line 19
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -124,26 +116,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 21
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastEnabledObserver:Landroid/database/ContentObserver;
 
-    .line 22
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackageObserver:Landroid/database/ContentObserver;
 
-    .line 23
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
-    .line 24
     iput-boolean v1, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mIsAppCastEnabled:Z
 
-    .line 25
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackage:Ljava/lang/String;
 
     return-void
@@ -152,7 +138,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/AppCastFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/AppCastFilter;-><init>()V
 
     return-void
@@ -161,7 +146,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/AppCastFilter;
     .locals 1
 
-    .line 34
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/AppCastFilter$AppCastFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/AppCastFilter;
 
     move-result-object v0
@@ -174,7 +158,6 @@
 .method public deInit()V
     .locals 0
 
-    .line 45
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->unregisterContentObserver()V
 
     return-void
@@ -183,12 +166,10 @@
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 50
     iget-boolean p2, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mIsAppCastEnabled:Z
 
     if-eqz p2, :cond_0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackage:Ljava/lang/String;
 
     if-eqz p0, :cond_0
@@ -212,14 +193,12 @@
 .method public final getValueFromSmartMirroring(Landroid/net/Uri;)Ljava/lang/String;
     .locals 0
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mContext:Landroid/content/Context;
 
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 106
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -239,10 +218,8 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mContext:Landroid/content/Context;
 
-    .line 40
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->registerContentObserver()V
 
     return-void
@@ -251,12 +228,10 @@
 .method public final registerContentObserver()V
     .locals 4
 
-    .line 59
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_1
 
-    .line 61
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastEnabledObserver:Landroid/database/ContentObserver;
 
@@ -264,7 +239,6 @@
 
     if-nez v0, :cond_0
 
-    .line 62
     new-instance v0, Lcom/android/server/am/mars/filter/filter/AppCastFilter$1;
 
     new-instance v2, Landroid/os/Handler;
@@ -275,7 +249,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastEnabledObserver:Landroid/database/ContentObserver;
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -288,13 +261,11 @@
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 74
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackageObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_1
 
-    .line 75
     new-instance v0, Lcom/android/server/am/mars/filter/filter/AppCastFilter$2;
 
     new-instance v2, Landroid/os/Handler;
@@ -305,7 +276,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackageObserver:Landroid/database/ContentObserver;
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -325,7 +295,6 @@
     :catch_0
     move-exception p0
 
-    .line 84
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -336,19 +305,16 @@
 .method public final unregisterContentObserver()V
     .locals 3
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_1
 
-    .line 92
     iget-object v1, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastEnabledObserver:Landroid/database/ContentObserver;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 93
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -357,16 +323,13 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 94
     iput-object v2, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastEnabledObserver:Landroid/database/ContentObserver;
 
-    .line 96
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackageObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_1
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -377,7 +340,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 98
     iput-object v2, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackageObserver:Landroid/database/ContentObserver;
 
     :cond_1

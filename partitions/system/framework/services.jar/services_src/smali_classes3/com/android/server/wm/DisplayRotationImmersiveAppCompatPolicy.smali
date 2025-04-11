@@ -15,16 +15,12 @@
 .method public constructor <init>(Lcom/android/server/wm/LetterboxConfiguration;Lcom/android/server/wm/DisplayRotation;Lcom/android/server/wm/DisplayContent;)V
     .locals 0
 
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     iput-object p2, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mDisplayRotation:Lcom/android/server/wm/DisplayRotation;
 
-    .line 64
     iput-object p1, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
-    .line 65
     iput-object p3, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     return-void
@@ -35,7 +31,6 @@
 
     const/4 v0, 0x0
 
-    .line 47
     invoke-virtual {p0, v0}, Lcom/android/server/wm/LetterboxConfiguration;->isDisplayRotationImmersiveAppCompatPolicyEnabled(Z)Z
 
     move-result v0
@@ -46,7 +41,6 @@
 
     return-object p0
 
-    .line 51
     :cond_0
     new-instance v0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;
 
@@ -60,7 +54,6 @@
 .method public final hasRequestedToHideStatusAndNavBars(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 2
 
-    .line 140
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->findMainWindow()Lcom/android/server/wm/WindowState;
 
     move-result-object p0
@@ -71,13 +64,11 @@
 
     return p1
 
-    .line 144
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->getRequestedVisibleTypes()I
 
     move-result p0
 
-    .line 145
     invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
 
     move-result v0
@@ -101,7 +92,6 @@
 .method public isRotationLockEnforced(I)Z
     .locals 2
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mLetterboxConfiguration:Lcom/android/server/wm/LetterboxConfiguration;
 
     const/4 v1, 0x1
@@ -116,7 +106,6 @@
 
     return p0
 
-    .line 94
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -128,7 +117,6 @@
 
     monitor-enter v0
 
-    .line 95
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->isRotationLockEnforcedLocked(I)Z
 
@@ -145,7 +133,6 @@
     :catchall_0
     move-exception p0
 
-    .line 96
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -159,7 +146,6 @@
 .method public final isRotationLockEnforcedLocked(I)Z
     .locals 4
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayArea;->getIgnoreOrientationRequest()Z
@@ -172,7 +158,6 @@
 
     return v1
 
-    .line 104
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -184,7 +169,6 @@
 
     return v1
 
-    .line 110
     :cond_1
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->hasRequestedToHideStatusAndNavBars(Lcom/android/server/wm/ActivityRecord;)Z
 
@@ -194,7 +178,6 @@
 
     return v1
 
-    .line 116
     :cond_2
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
@@ -202,7 +185,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 117
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v2
@@ -217,7 +199,6 @@
 
     goto :goto_0
 
-    .line 122
     :cond_3
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->areBoundsLetterboxed()Z
 
@@ -227,7 +208,6 @@
 
     return v1
 
-    .line 126
     :cond_4
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getRequestedConfigurationOrientation()I
 
@@ -237,13 +217,11 @@
 
     return v1
 
-    .line 132
     :cond_5
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getRequestedConfigurationOrientation()I
 
     move-result v0
 
-    .line 133
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->surfaceRotationToConfigurationOrientation(I)I
 
     move-result p0
@@ -260,7 +238,6 @@
 .method public final surfaceRotationToConfigurationOrientation(I)I
     .locals 1
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mDisplayRotation:Lcom/android/server/wm/DisplayRotation;
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
@@ -273,7 +250,6 @@
 
     return p0
 
-    .line 152
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayRotationImmersiveAppCompatPolicy;->mDisplayRotation:Lcom/android/server/wm/DisplayRotation;
 

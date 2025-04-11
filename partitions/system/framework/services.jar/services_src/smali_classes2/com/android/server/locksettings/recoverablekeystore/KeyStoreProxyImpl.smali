@@ -14,10 +14,8 @@
 .method public constructor <init>(Ljava/security/KeyStore;)V
     .locals 0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxyImpl;->mKeyStore:Ljava/security/KeyStore;
 
     return-void
@@ -28,14 +26,12 @@
 
     const-string v0, "AndroidKeyStore"
 
-    .line 72
     invoke-static {v0}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 74
     :try_start_0
     invoke-virtual {v0, v1}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
     :try_end_0
@@ -48,7 +44,6 @@
     :catch_0
     move-exception v0
 
-    .line 77
     new-instance v1, Ljava/security/KeyStoreException;
 
     const-string v2, "Unable to load keystore."
@@ -63,7 +58,6 @@
 .method public containsAlias(Ljava/lang/String;)Z
     .locals 0
 
-    .line 45
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxyImpl;->mKeyStore:Ljava/security/KeyStore;
 
     invoke-virtual {p0, p1}, Ljava/security/KeyStore;->containsAlias(Ljava/lang/String;)Z
@@ -76,7 +70,6 @@
 .method public deleteEntry(Ljava/lang/String;)V
     .locals 0
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxyImpl;->mKeyStore:Ljava/security/KeyStore;
 
     invoke-virtual {p0, p1}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
@@ -87,7 +80,6 @@
 .method public getKey(Ljava/lang/String;[C)Ljava/security/Key;
     .locals 0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxyImpl;->mKeyStore:Ljava/security/KeyStore;
 
     invoke-virtual {p0, p1, p2}, Ljava/security/KeyStore;->getKey(Ljava/lang/String;[C)Ljava/security/Key;
@@ -100,7 +92,6 @@
 .method public setEntry(Ljava/lang/String;Ljava/security/KeyStore$Entry;Ljava/security/KeyStore$ProtectionParameter;)V
     .locals 0
 
-    .line 57
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxyImpl;->mKeyStore:Ljava/security/KeyStore;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/security/KeyStore;->setEntry(Ljava/lang/String;Ljava/security/KeyStore$Entry;Ljava/security/KeyStore$ProtectionParameter;)V

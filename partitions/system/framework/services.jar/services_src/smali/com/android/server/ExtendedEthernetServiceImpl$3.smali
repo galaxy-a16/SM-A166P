@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/ExtendedEthernetServiceImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 125
     iput-object p1, p0, Lcom/android/server/ExtendedEthernetServiceImpl$3;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 128
     iget-object p1, p0, Lcom/android/server/ExtendedEthernetServiceImpl$3;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/ExtendedEthernetServiceImpl;->-$$Nest$fgetmContext(Lcom/android/server/ExtendedEthernetServiceImpl;)Landroid/content/Context;
@@ -49,7 +47,6 @@
 
     move v1, v0
 
-    .line 130
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -73,7 +70,6 @@
 
     return-void
 
-    .line 133
     :cond_1
     iget-object p0, p0, Lcom/android/server/ExtendedEthernetServiceImpl$3;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 

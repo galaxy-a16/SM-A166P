@@ -17,7 +17,6 @@
 .method public createCallLogQueryHelper(Landroid/content/Context;Ljava/util/function/BiConsumer;)Lcom/android/server/people/data/CallLogQueryHelper;
     .locals 0
 
-    .line 1464
     new-instance p0, Lcom/android/server/people/data/CallLogQueryHelper;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/people/data/CallLogQueryHelper;-><init>(Landroid/content/Context;Ljava/util/function/BiConsumer;)V
@@ -28,7 +27,6 @@
 .method public createContactsQueryHelper(Landroid/content/Context;)Lcom/android/server/people/data/ContactsQueryHelper;
     .locals 0
 
-    .line 1459
     new-instance p0, Lcom/android/server/people/data/ContactsQueryHelper;
 
     invoke-direct {p0, p1}, Lcom/android/server/people/data/ContactsQueryHelper;-><init>(Landroid/content/Context;)V
@@ -39,7 +37,6 @@
 .method public createMmsQueryHelper(Landroid/content/Context;Ljava/util/function/BiConsumer;)Lcom/android/server/people/data/MmsQueryHelper;
     .locals 0
 
-    .line 1469
     new-instance p0, Lcom/android/server/people/data/MmsQueryHelper;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/people/data/MmsQueryHelper;-><init>(Landroid/content/Context;Ljava/util/function/BiConsumer;)V
@@ -50,7 +47,6 @@
 .method public createScheduledExecutor()Ljava/util/concurrent/ScheduledExecutorService;
     .locals 0
 
-    .line 1451
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadScheduledExecutor()Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object p0
@@ -61,7 +57,6 @@
 .method public createSmsQueryHelper(Landroid/content/Context;Ljava/util/function/BiConsumer;)Lcom/android/server/people/data/SmsQueryHelper;
     .locals 0
 
-    .line 1474
     new-instance p0, Lcom/android/server/people/data/SmsQueryHelper;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/people/data/SmsQueryHelper;-><init>(Landroid/content/Context;Ljava/util/function/BiConsumer;)V
@@ -72,7 +67,6 @@
 .method public createUsageStatsQueryHelper(ILjava/util/function/Function;Lcom/android/server/people/data/UsageStatsQueryHelper$EventListener;)Lcom/android/server/people/data/UsageStatsQueryHelper;
     .locals 0
 
-    .line 1480
     new-instance p0, Lcom/android/server/people/data/UsageStatsQueryHelper;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/people/data/UsageStatsQueryHelper;-><init>(ILjava/util/function/Function;Lcom/android/server/people/data/UsageStatsQueryHelper$EventListener;)V
@@ -83,7 +77,6 @@
 .method public getBackgroundExecutor()Ljava/util/concurrent/Executor;
     .locals 0
 
-    .line 1455
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p0

@@ -20,12 +20,10 @@
 .method public constructor <init>(Lcom/android/server/accessibility/AccessibilityManagerService;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 2
 
-    .line 5369
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5366
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -34,12 +32,10 @@
 
     const/4 v0, 0x0
 
-    .line 5367
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mSystemUiUid:I
 
     const-string v0, "display"
 
-    .line 5370
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p2
@@ -48,16 +44,12 @@
 
     iput-object p2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 5371
     invoke-virtual {p2, p0, p3}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    .line 5372
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->initializeDisplayList()V
 
-    .line 5374
     const-class p2, Landroid/content/pm/PackageManagerInternal;
 
-    .line 5375
     invoke-static {p2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p2
@@ -66,7 +58,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 5377
     invoke-virtual {p2}, Landroid/content/pm/PackageManagerInternal;->getSystemUiServiceComponent()Landroid/content/ComponentName;
 
     move-result-object p3
@@ -98,10 +89,8 @@
 
     const-string p1, "Accessibility Display Listener:"
 
-    .line 5489
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5490
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,7 +109,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5491
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -131,7 +119,6 @@
 
     new-array p3, p3, [Ljava/lang/Object;
 
-    .line 5492
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -161,7 +148,6 @@
     :goto_1
     if-ge v1, p1, :cond_2
 
-    .line 5494
     iget-object p3, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
     invoke-virtual {p3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -182,7 +168,6 @@
 
     const-string p3, ", "
 
-    .line 5496
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     :cond_1
@@ -190,7 +175,6 @@
 
     goto :goto_1
 
-    .line 5499
     :cond_2
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
@@ -200,7 +184,6 @@
 .method public getValidDisplayList()Ljava/util/ArrayList;
     .locals 1
 
-    .line 5388
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/AccessibilityManagerService;)Ljava/lang/Object;
@@ -209,7 +192,6 @@
 
     monitor-enter v0
 
-    .line 5389
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
@@ -220,7 +202,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5390
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -231,7 +212,6 @@
 .method public final initializeDisplayList()V
     .locals 5
 
-    .line 5398
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     const-string v1, "com.samsung.android.hardware.display.category.BUILTIN"
@@ -240,7 +220,6 @@
 
     move-result-object v0
 
-    .line 5405
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/AccessibilityManagerService;)Ljava/lang/Object;
@@ -249,7 +228,6 @@
 
     monitor-enter v1
 
-    .line 5406
     :try_start_0
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
@@ -257,23 +235,19 @@
 
     const/4 v2, 0x0
 
-    .line 5407
     :goto_0
     array-length v3, v0
 
     if-ge v2, v3, :cond_1
 
-    .line 5411
     aget-object v3, v0, v2
 
-    .line 5412
     invoke-virtual {p0, v3}, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->isValidDisplay(Landroid/view/Display;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 5413
     iget-object v4, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -283,7 +257,6 @@
 
     goto :goto_0
 
-    .line 5416
     :cond_1
     monitor-exit v1
 
@@ -306,7 +279,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 5503
     invoke-virtual {p1}, Landroid/view/Display;->getType()I
 
     move-result v1
@@ -317,7 +289,6 @@
 
     goto :goto_0
 
-    .line 5512
     :cond_0
     invoke-virtual {p1}, Landroid/view/Display;->getType()I
 
@@ -327,7 +298,6 @@
 
     if-ne v1, v3, :cond_1
 
-    .line 5513
     invoke-virtual {p1}, Landroid/view/Display;->getFlags()I
 
     move-result v1
@@ -336,7 +306,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5514
     invoke-virtual {p1}, Landroid/view/Display;->getOwnerUid()I
 
     move-result p1
@@ -360,14 +329,12 @@
 .method public onDisplayAdded(I)V
     .locals 5
 
-    .line 5421
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v0
 
-    .line 5422
     invoke-virtual {p0, v0}, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->isValidDisplay(Landroid/view/Display;)Z
 
     move-result v1
@@ -376,7 +343,6 @@
 
     return-void
 
-    .line 5426
     :cond_0
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -386,13 +352,11 @@
 
     monitor-enter v1
 
-    .line 5427
     :try_start_0
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5428
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v2}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmA11yOverlayLayers(Lcom/android/server/accessibility/AccessibilityManagerService;)Landroid/util/SparseArray;
@@ -405,15 +369,12 @@
 
     move-result-object v3
 
-    .line 5429
     invoke-virtual {v3, p1}, Lcom/android/server/wm/WindowManagerInternal;->getA11yOverlayLayer(I)Landroid/view/SurfaceControl;
 
     move-result-object v3
 
-    .line 5428
     invoke-virtual {v2, p1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 5430
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v2}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmInputFilter(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/AccessibilityInputFilter;
@@ -422,7 +383,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 5431
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v2}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmInputFilter(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/AccessibilityInputFilter;
@@ -431,7 +391,6 @@
 
     invoke-virtual {v2, v0}, Lcom/android/server/accessibility/AccessibilityInputFilter;->onDisplayAdded(Landroid/view/Display;)V
 
-    .line 5433
     :cond_1
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -441,12 +400,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 5435
     iget-object v2, v0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     const/4 v3, 0x0
 
-    .line 5436
     :goto_0
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -454,37 +411,31 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 5437
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/server/accessibility/AccessibilityServiceConnection;
 
-    .line 5438
     invoke-virtual {v4, p1}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->onDisplayAdded(I)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 5441
     :cond_2
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {p1, v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$mupdateMagnificationLocked(Lcom/android/server/accessibility/AccessibilityManagerService;Lcom/android/server/accessibility/AccessibilityUserState;)V
 
-    .line 5442
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {p1, v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$mupdateWindowsForAccessibilityCallbackLocked(Lcom/android/server/accessibility/AccessibilityManagerService;Lcom/android/server/accessibility/AccessibilityUserState;)V
 
-    .line 5443
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityManagerService;->notifyClearAccessibilityCacheLocked()V
 
-    .line 5444
     monitor-exit v1
 
     return-void
@@ -502,7 +453,6 @@
 .method public onDisplayChanged(I)V
     .locals 0
 
-    .line 5484
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {p0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$mapplyColorinversion(Lcom/android/server/accessibility/AccessibilityManagerService;)V
@@ -513,7 +463,6 @@
 .method public onDisplayRemoved(I)V
     .locals 4
 
-    .line 5449
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/AccessibilityManagerService;)Ljava/lang/Object;
@@ -522,7 +471,6 @@
 
     monitor-enter v0
 
-    .line 5450
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->removeDisplayFromList(I)Z
 
@@ -530,12 +478,10 @@
 
     if-nez v1, :cond_0
 
-    .line 5451
     monitor-exit v0
 
     return-void
 
-    .line 5453
     :cond_0
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -545,7 +491,6 @@
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 5454
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmInputFilter(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/AccessibilityInputFilter;
@@ -554,7 +499,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5455
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmInputFilter(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/AccessibilityInputFilter;
@@ -563,7 +507,6 @@
 
     invoke-virtual {v1, p1}, Lcom/android/server/accessibility/AccessibilityInputFilter;->onDisplayRemoved(I)V
 
-    .line 5457
     :cond_1
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -573,12 +516,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 5459
     iget-object v1, v1, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
 
-    .line 5460
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -586,27 +527,23 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 5461
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/accessibility/AccessibilityServiceConnection;
 
-    .line 5462
     invoke-virtual {v3, p1}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->onDisplayRemoved(I)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 5465
     :cond_2
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5466
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmMagnificationController(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/magnification/MagnificationController;
@@ -615,7 +552,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/accessibility/magnification/MagnificationController;->onDisplayRemoved(I)V
 
-    .line 5467
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {p0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmA11yWindowManager(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/AccessibilityWindowManager;
@@ -629,7 +565,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5465
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -645,7 +580,6 @@
 
     move v1, v0
 
-    .line 5472
     :goto_0
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
@@ -655,7 +589,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 5473
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -670,7 +603,6 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 5474
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityDisplayListener;->mDisplaysList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;

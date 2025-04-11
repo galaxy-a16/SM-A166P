@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
-    .line 289
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 292
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getResultCode()I
 
     move-result p1
@@ -40,19 +38,16 @@
 
     const/4 v0, 0x0
 
-    .line 300
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string v1, "disableFlags"
 
-    .line 301
     invoke-virtual {p2, v1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 302
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-static {v1}, Lcom/android/server/UiModeManagerService;->-$$Nest$fgetmLock(Lcom/android/server/UiModeManagerService;)Ljava/lang/Object;
@@ -61,7 +56,6 @@
 
     monitor-enter v1
 
-    .line 303
     :try_start_0
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -71,7 +65,6 @@
 
     invoke-static {p0, p2, p1, v0}, Lcom/android/server/UiModeManagerService;->-$$Nest$mupdateAfterBroadcastLocked(Lcom/android/server/UiModeManagerService;Ljava/lang/String;II)V
 
-    .line 304
     monitor-exit v1
 
     return-void

@@ -20,7 +20,6 @@
 .method public final write(Landroid/util/proto/ProtoOutputStream;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p2, Landroid/util/SparseArray;
 
     invoke-static {p1, p2}, Lcom/android/server/people/data/EventHistoryImpl$EventIndexesProtoDiskReadWriter;->$r8$lambda$4FpKD3JqD7oPh5oF-wfPRKifF50(Landroid/util/proto/ProtoOutputStream;Landroid/util/SparseArray;)V

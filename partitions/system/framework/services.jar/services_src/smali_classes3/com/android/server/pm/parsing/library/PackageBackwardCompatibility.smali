@@ -19,57 +19,48 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 50
     new-instance v1, Lcom/android/server/pm/parsing/library/AndroidNetIpSecIkeUpdater;
 
     invoke-direct {v1}, Lcom/android/server/pm/parsing/library/AndroidNetIpSecIkeUpdater;-><init>()V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 53
     new-instance v1, Lcom/android/server/pm/parsing/library/ComGoogleAndroidMapsUpdater;
 
     invoke-direct {v1}, Lcom/android/server/pm/parsing/library/ComGoogleAndroidMapsUpdater;-><init>()V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 57
     new-instance v1, Lcom/android/server/pm/parsing/library/OrgApacheHttpLegacyUpdater;
 
     invoke-direct {v1}, Lcom/android/server/pm/parsing/library/OrgApacheHttpLegacyUpdater;-><init>()V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 59
     new-instance v1, Lcom/android/server/pm/parsing/library/AndroidHidlUpdater;
 
     invoke-direct {v1}, Lcom/android/server/pm/parsing/library/AndroidHidlUpdater;-><init>()V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 63
     new-instance v1, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility$AndroidTestRunnerSplitUpdater;
 
     invoke-direct {v1}, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility$AndroidTestRunnerSplitUpdater;-><init>()V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 65
     invoke-static {v0}, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->addUpdaterForAndroidTestBase(Ljava/util/List;)Z
 
     move-result v1
 
     xor-int/lit8 v1, v1, 0x1
 
-    .line 69
     new-instance v2, Lcom/android/server/pm/parsing/library/ApexSharedLibraryUpdater;
 
-    .line 70
     invoke-static {}, Lcom/android/server/SystemConfig;->getInstance()Lcom/android/server/SystemConfig;
 
     move-result-object v3
@@ -80,21 +71,18 @@
 
     invoke-direct {v2, v3}, Lcom/android/server/pm/parsing/library/ApexSharedLibraryUpdater;-><init>(Landroid/util/ArrayMap;)V
 
-    .line 69
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const/4 v2, 0x0
 
     new-array v2, v2, [Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;
 
-    .line 73
     invoke-interface {v0, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;
 
-    .line 74
     new-instance v2, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;
 
     invoke-direct {v2, v1, v0}, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;-><init>(Z[Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;)V
@@ -107,13 +95,10 @@
 .method public constructor <init>(Z[Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;)V
     .locals 0
 
-    .line 121
     invoke-direct {p0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;-><init>()V
 
-    .line 122
     iput-boolean p1, p0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->mBootClassPathContainsATB:Z
 
-    .line 123
     iput-object p2, p0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->mPackageUpdaters:[Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;
 
     return-void
@@ -126,7 +111,6 @@
 
     const/4 v1, 0x0
 
-    .line 91
     :try_start_0
     const-class v2, Lcom/android/server/pm/pkg/parsing/ParsingPackage;
 
@@ -142,7 +126,6 @@
 
     const/4 v1, 0x1
 
-    .line 93
     :cond_0
     sget-object v2, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->TAG:Ljava/lang/String;
 
@@ -166,7 +149,6 @@
 
     goto :goto_0
 
-    .line 95
     :catch_0
     sget-object v2, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->TAG:Ljava/lang/String;
 
@@ -193,7 +175,6 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 99
     new-instance v0, Lcom/android/server/pm/parsing/library/AndroidTestBaseUpdater;
 
     invoke-direct {v0}, Lcom/android/server/pm/parsing/library/AndroidTestBaseUpdater;-><init>()V
@@ -202,7 +183,6 @@
 
     goto :goto_1
 
-    .line 101
     :cond_1
     new-instance v0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility$RemoveUnnecessaryAndroidTestBaseLibrary;
 
@@ -217,7 +197,6 @@
 .method public static bootClassPathContainsATB()Z
     .locals 1
 
-    .line 151
     sget-object v0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->INSTANCE:Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;
 
     iget-boolean v0, v0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->mBootClassPathContainsATB:Z
@@ -228,7 +207,6 @@
 .method public static getInstance()Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;
     .locals 1
 
-    .line 108
     sget-object v0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->INSTANCE:Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;
 
     return-object v0
@@ -237,7 +215,6 @@
 .method public static modifySharedLibraries(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ZZ)V
     .locals 1
 
-    .line 135
     sget-object v0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->INSTANCE:Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->updatePackage(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ZZ)V
@@ -250,7 +227,6 @@
 .method public getPackageUpdaters()[Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;
     .locals 0
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->mPackageUpdaters:[Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;
 
     return-object p0
@@ -259,7 +235,6 @@
 .method public updatePackage(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ZZ)V
     .locals 3
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/pm/parsing/library/PackageBackwardCompatibility;->mPackageUpdaters:[Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;
 
     array-length v0, p0
@@ -271,7 +246,6 @@
 
     aget-object v2, p0, v1
 
-    .line 142
     invoke-virtual {v2, p1, p2, p3}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->updatePackage(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ZZ)V
 
     add-int/lit8 v1, v1, 0x1

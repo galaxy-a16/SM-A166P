@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
-    .line 4235
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$CloudProviderChangeListener;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/JobSchedulerService$CloudProviderChangeListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/job/JobSchedulerService$CloudProviderChangeListener;-><init>(Lcom/android/server/job/JobSchedulerService;)V
 
     return-void
@@ -36,14 +34,12 @@
 .method public onCloudProviderChanged(ILjava/lang/String;)V
     .locals 5
 
-    .line 4240
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$CloudProviderChangeListener;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 4241
     invoke-static {p1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v1
@@ -54,19 +50,16 @@
 
     move-result-object v0
 
-    .line 4242
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     const-wide/16 v1, 0x0
 
-    .line 4244
     invoke-static {v1, v2}, Landroid/content/pm/PackageManager$ComponentInfoFlags;->of(J)Landroid/content/pm/PackageManager$ComponentInfoFlags;
 
     move-result-object v1
 
-    .line 4243
     invoke-virtual {v0, p2, v1}, Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;Landroid/content/pm/PackageManager$ComponentInfoFlags;)Landroid/content/pm/ProviderInfo;
 
     move-result-object p2
@@ -77,11 +70,9 @@
 
     goto :goto_0
 
-    .line 4245
     :cond_0
     iget-object p2, p2, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
-    .line 4246
     :goto_0
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$CloudProviderChangeListener;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -89,7 +80,6 @@
 
     monitor-enter v0
 
-    .line 4247
     :try_start_0
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$CloudProviderChangeListener;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -103,21 +93,18 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 4248
     invoke-static {v1, p2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 4249
     sget-boolean v2, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     if-eqz v2, :cond_1
 
     const-string v2, "JobScheduler"
 
-    .line 4250
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +133,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4253
     :cond_1
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerService$CloudProviderChangeListener;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -156,21 +142,16 @@
 
     invoke-virtual {v2, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 4254
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v2
 
-    .line 4255
     iput p1, v2, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 4256
     iput-object v1, v2, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 4257
     iput-object p2, v2, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 4258
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$CloudProviderChangeListener;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService;->mHandler:Lcom/android/server/job/JobSchedulerService$JobHandler;
@@ -183,7 +164,6 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4260
     :cond_2
     monitor-exit v0
 

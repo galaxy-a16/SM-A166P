@@ -13,15 +13,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 8
     iput v0, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->userId:I
 
-    .line 18
     iput v0, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->levelPercent:I
 
     return-void
@@ -45,7 +42,6 @@
 
     return v1
 
-    .line 28
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -57,11 +53,9 @@
 
     return v1
 
-    .line 31
     :cond_2
     check-cast p1, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;
 
-    .line 32
     iget v2, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->userId:I
 
     iget v3, p1, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->userId:I
@@ -70,7 +64,6 @@
 
     return v1
 
-    .line 35
     :cond_3
     iget p0, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->levelPercent:I
 
@@ -87,10 +80,8 @@
 .method public final hashCode()I
     .locals 1
 
-    .line 43
     iget v0, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->userId:I
 
-    .line 44
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -105,7 +96,6 @@
 
     iget p0, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->levelPercent:I
 
-    .line 45
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -122,7 +112,6 @@
 
     move-result-object p0
 
-    .line 43
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -137,7 +126,6 @@
 
     add-long/2addr v0, p3
 
-    .line 88
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -148,7 +136,6 @@
 
     add-long/2addr p3, v0
 
-    .line 89
     invoke-virtual {p2, p3, p4}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -161,42 +148,34 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "{"
 
-    .line 51
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ".userId = "
 
-    .line 52
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 53
     iget v1, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->userId:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .levelPercent = "
 
-    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 55
     iget p0, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->levelPercent:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string/jumbo p0, "}"
 
-    .line 56
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 57
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -211,7 +190,6 @@
 
     add-long/2addr v0, p2
 
-    .line 117
     iget v2, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->userId:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/HwBlob;->putInt32(JI)V
@@ -220,7 +198,6 @@
 
     add-long/2addr p2, v0
 
-    .line 118
     iget p0, p0, Landroid/hardware/soundtrigger/V2_0/ConfidenceLevel;->levelPercent:I
 
     invoke-virtual {p1, p2, p3, p0}, Landroid/os/HwBlob;->putInt32(JI)V

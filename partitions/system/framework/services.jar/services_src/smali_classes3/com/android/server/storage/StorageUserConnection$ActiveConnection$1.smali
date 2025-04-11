@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/storage/StorageUserConnection$ActiveConnection;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 473
     iput-object p1, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->this$1:Lcom/android/server/storage/StorageUserConnection$ActiveConnection;
 
     iput-object p2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->val$future:Ljava/util/concurrent/CompletableFuture;
@@ -31,7 +30,6 @@
 .method public final handleConnection(Landroid/os/IBinder;)V
     .locals 1
 
-    .line 503
     iget-object v0, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->this$1:Lcom/android/server/storage/StorageUserConnection$ActiveConnection;
 
     invoke-static {v0}, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->-$$Nest$fgetmLock(Lcom/android/server/storage/StorageUserConnection$ActiveConnection;)Ljava/lang/Object;
@@ -40,19 +38,15 @@
 
     monitor-enter v0
 
-    .line 504
     :try_start_0
     iget-object p0, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->val$future:Ljava/util/concurrent/CompletableFuture;
 
-    .line 505
     invoke-static {p1}, Landroid/service/storage/IExternalStorageService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/storage/IExternalStorageService;
 
     move-result-object p1
 
-    .line 504
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
 
-    .line 506
     monitor-exit v0
 
     return-void
@@ -70,12 +64,10 @@
 .method public final handleDisconnection()V
     .locals 1
 
-    .line 514
     iget-object v0, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->this$1:Lcom/android/server/storage/StorageUserConnection$ActiveConnection;
 
     invoke-virtual {v0}, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->close()V
 
-    .line 515
     iget-object p0, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->this$1:Lcom/android/server/storage/StorageUserConnection$ActiveConnection;
 
     iget-object p0, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
@@ -88,7 +80,6 @@
 .method public onBindingDied(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 493
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +116,6 @@
 
     invoke-static {v0, p1}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     invoke-virtual {p0}, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->handleDisconnection()V
 
     return-void
@@ -134,7 +124,6 @@
 .method public onNullBinding(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 499
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -177,7 +166,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
 
-    .line 476
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -214,7 +202,6 @@
 
     invoke-static {v0, p1}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     invoke-virtual {p0, p2}, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->handleConnection(Landroid/os/IBinder;)V
 
     return-void
@@ -223,7 +210,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 485
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -260,7 +246,6 @@
 
     invoke-static {v0, p1}, Landroid/util/sysfwutil/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 486
     invoke-virtual {p0}, Lcom/android/server/storage/StorageUserConnection$ActiveConnection$1;->handleDisconnection()V
 
     return-void

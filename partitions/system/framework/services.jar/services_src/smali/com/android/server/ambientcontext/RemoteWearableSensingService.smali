@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$GgycVg3FmPrTyhNb-349u6k_X_4([ILjava/lang/String;Landroid/os/RemoteCallback;Landroid/service/wearable/IWearableSensingService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/ambientcontext/RemoteWearableSensingService;->lambda$queryServiceStatus$2([ILjava/lang/String;Landroid/os/RemoteCallback;Landroid/service/wearable/IWearableSensingService;)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public static synthetic $r8$lambda$sEJVV8e1UG9GVeJVRwMvbebcbG0(Ljava/lang/String;Landroid/service/wearable/IWearableSensingService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/ambientcontext/RemoteWearableSensingService;->lambda$stopDetection$1(Ljava/lang/String;Landroid/service/wearable/IWearableSensingService;)V
 
     return-void
@@ -32,7 +30,6 @@
 .method public static synthetic $r8$lambda$xImiXCbrnCrskCRMdmPbskYRFHg(Landroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/os/RemoteCallback;Landroid/os/RemoteCallback;Landroid/service/wearable/IWearableSensingService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/ambientcontext/RemoteWearableSensingService;->lambda$startDetection$0(Landroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/os/RemoteCallback;Landroid/os/RemoteCallback;Landroid/service/wearable/IWearableSensingService;)V
 
     return-void
@@ -41,10 +38,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 41
     const-class v0, Lcom/android/server/ambientcontext/RemoteWearableSensingService;
 
-    .line 42
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
@@ -57,14 +52,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
     .locals 8
 
-    .line 46
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.service.wearable.WearableSensingService"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 47
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v4
@@ -81,10 +74,8 @@
 
     move v6, p3
 
-    .line 46
     invoke-direct/range {v2 .. v7}, Lcom/android/internal/infra/ServiceConnector$Impl;-><init>(Landroid/content/Context;Landroid/content/Intent;IILjava/util/function/Function;)V
 
-    .line 52
     invoke-virtual {p0}, Lcom/android/internal/infra/ServiceConnector$Impl;->connect()Lcom/android/internal/infra/AndroidFuture;
 
     return-void
@@ -93,7 +84,6 @@
 .method public static synthetic lambda$queryServiceStatus$2([ILjava/lang/String;Landroid/os/RemoteCallback;Landroid/service/wearable/IWearableSensingService;)V
     .locals 0
 
-    .line 82
     invoke-interface {p3, p0, p1, p2}, Landroid/service/wearable/IWearableSensingService;->queryServiceStatus([ILjava/lang/String;Landroid/os/RemoteCallback;)V
 
     return-void
@@ -102,7 +92,6 @@
 .method public static synthetic lambda$startDetection$0(Landroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/os/RemoteCallback;Landroid/os/RemoteCallback;Landroid/service/wearable/IWearableSensingService;)V
     .locals 0
 
-    .line 66
     invoke-interface {p4, p0, p1, p2, p3}, Landroid/service/wearable/IWearableSensingService;->startDetection(Landroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/os/RemoteCallback;Landroid/os/RemoteCallback;)V
 
     return-void
@@ -111,7 +100,6 @@
 .method public static synthetic lambda$stopDetection$1(Ljava/lang/String;Landroid/service/wearable/IWearableSensingService;)V
     .locals 0
 
-    .line 73
     invoke-interface {p1, p0}, Landroid/service/wearable/IWearableSensingService;->stopDetection(Ljava/lang/String;)V
 
     return-void
@@ -122,7 +110,6 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 87
     invoke-super {p0, p1, p2}, Lcom/android/internal/infra/ServiceConnector$Impl;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
     return-void
@@ -131,7 +118,6 @@
 .method public getAutoDisconnectTimeoutMs()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, -0x1
 
     return-wide v0
@@ -140,7 +126,6 @@
 .method public queryServiceStatus([ILjava/lang/String;Landroid/os/RemoteCallback;)V
     .locals 3
 
-    .line 81
     sget-object v0, Lcom/android/server/ambientcontext/RemoteWearableSensingService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -159,7 +144,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     new-instance v0, Lcom/android/server/ambientcontext/RemoteWearableSensingService$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/android/server/ambientcontext/RemoteWearableSensingService$$ExternalSyntheticLambda3;-><init>([ILjava/lang/String;Landroid/os/RemoteCallback;)V
@@ -172,7 +156,6 @@
 .method public startDetection(Landroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/os/RemoteCallback;Landroid/os/RemoteCallback;)V
     .locals 3
 
-    .line 65
     sget-object v0, Lcom/android/server/ambientcontext/RemoteWearableSensingService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -195,7 +178,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     new-instance v0, Lcom/android/server/ambientcontext/RemoteWearableSensingService$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/android/server/ambientcontext/RemoteWearableSensingService$$ExternalSyntheticLambda2;-><init>(Landroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/os/RemoteCallback;Landroid/os/RemoteCallback;)V
@@ -208,7 +190,6 @@
 .method public stopDetection(Ljava/lang/String;)V
     .locals 3
 
-    .line 72
     sget-object v0, Lcom/android/server/ambientcontext/RemoteWearableSensingService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -227,7 +208,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     new-instance v0, Lcom/android/server/ambientcontext/RemoteWearableSensingService$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p1}, Lcom/android/server/ambientcontext/RemoteWearableSensingService$$ExternalSyntheticLambda0;-><init>(Ljava/lang/String;)V
@@ -240,7 +220,6 @@
 .method public unbind()V
     .locals 0
 
-    .line 92
     invoke-super {p0}, Lcom/android/internal/infra/ServiceConnector$Impl;->unbind()V
 
     return-void

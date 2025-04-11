@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/PackageInstallerService;)V
     .locals 0
 
-    .line 299
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 300
     iput-object p2, p0, Lcom/android/server/pm/PackageInstallerService$Lifecycle;->mPackageInstallerService:Lcom/android/server/pm/PackageInstallerService;
 
     return-void
@@ -29,7 +27,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 311
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$Lifecycle;->mPackageInstallerService:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$monBroadcastReady(Lcom/android/server/pm/PackageInstallerService;)V
@@ -41,6 +38,5 @@
 .method public onStart()V
     .locals 0
 
-    .line 0
     return-void
 .end method

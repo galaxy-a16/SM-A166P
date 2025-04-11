@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 3804
     invoke-direct {p0}, Landroid/os/IProgressListener$Stub;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/UserController$UserProgressListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/UserController$UserProgressListener;-><init>()V
 
     return-void
@@ -31,7 +29,6 @@
 .method public onFinished(ILandroid/os/Bundle;)V
     .locals 4
 
-    .line 3819
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -42,7 +39,6 @@
 
     if-nez p1, :cond_0
 
-    .line 3823
     new-instance p0, Lcom/android/server/utils/TimingsTraceAndSlog;
 
     invoke-direct {p0}, Lcom/android/server/utils/TimingsTraceAndSlog;-><init>()V
@@ -53,7 +49,6 @@
 
     goto :goto_0
 
-    .line 3825
     :cond_0
     new-instance p0, Lcom/android/server/utils/TimingsTraceAndSlog;
 
@@ -86,7 +81,6 @@
 .method public onProgress(IILandroid/os/Bundle;)V
     .locals 0
 
-    .line 3814
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,7 +111,6 @@
 .method public onStarted(ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 3808
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,7 +129,6 @@
 
     invoke-static {p2, p1}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3809
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1

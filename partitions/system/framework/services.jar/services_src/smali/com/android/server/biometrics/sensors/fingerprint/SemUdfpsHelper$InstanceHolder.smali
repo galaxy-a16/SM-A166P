@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetINSTANCE()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper$InstanceHolder;->INSTANCE:Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
 
     return-object v0
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 91
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper$Injector;

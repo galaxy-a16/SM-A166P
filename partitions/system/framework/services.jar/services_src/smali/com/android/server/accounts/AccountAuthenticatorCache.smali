@@ -14,7 +14,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 49
     new-instance v0, Lcom/android/server/accounts/AccountAuthenticatorCache$MySerializer;
 
     const/4 v1, 0x0
@@ -35,7 +34,6 @@
 
     const-string v4, "account-authenticator"
 
-    .line 52
     sget-object v5, Lcom/android/server/accounts/AccountAuthenticatorCache;->sSerializer:Lcom/android/server/accounts/AccountAuthenticatorCache$MySerializer;
 
     move-object v0, p0
@@ -52,7 +50,6 @@
 .method public bridge synthetic getServiceInfo(Landroid/accounts/AuthenticatorDescription;I)Landroid/content/pm/RegisteredServicesCache$ServiceInfo;
     .locals 0
 
-    .line 45
     invoke-super {p0, p1, p2}, Landroid/content/pm/RegisteredServicesCache;->getServiceInfo(Ljava/lang/Object;I)Landroid/content/pm/RegisteredServicesCache$ServiceInfo;
 
     move-result-object p0
@@ -63,7 +60,6 @@
 .method public parseServiceAttributes(Landroid/content/res/Resources;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/accounts/AuthenticatorDescription;
     .locals 8
 
-    .line 60
     sget-object p0, Lcom/android/internal/R$styleable;->AccountAuthenticator:[I
 
     invoke-virtual {p1, p3, p0}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -72,7 +68,6 @@
 
     const/4 p1, 0x2
 
-    .line 64
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -80,40 +75,34 @@
 
     const/4 p1, 0x0
 
-    .line 65
     invoke-virtual {p0, p1, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v3
 
     const/4 p3, 0x1
 
-    .line 67
     invoke-virtual {p0, p3, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v4
 
     const/4 p3, 0x3
 
-    .line 69
     invoke-virtual {p0, p3, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v5
 
     const/4 p3, 0x4
 
-    .line 71
     invoke-virtual {p0, p3, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v6
 
     const/4 p3, 0x5
 
-    .line 73
     invoke-virtual {p0, p3, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v7
 
-    .line 75
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -122,14 +111,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 81
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 78
     :cond_0
     :try_start_1
     new-instance p1, Landroid/accounts/AuthenticatorDescription;
@@ -142,7 +129,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 81
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object p1
@@ -152,14 +138,12 @@
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 82
     throw p1
 .end method
 
 .method public bridge synthetic parseServiceAttributes(Landroid/content/res/Resources;Ljava/lang/String;Landroid/util/AttributeSet;)Ljava/lang/Object;
     .locals 0
 
-    .line 45
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accounts/AccountAuthenticatorCache;->parseServiceAttributes(Landroid/content/res/Resources;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/accounts/AuthenticatorDescription;
 
     move-result-object p0

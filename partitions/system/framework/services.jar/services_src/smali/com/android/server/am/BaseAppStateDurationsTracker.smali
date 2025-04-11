@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
     .locals 0
 
-    .line 49
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/am/BaseAppStateEventsTracker;-><init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
 
-    .line 44
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -29,7 +27,6 @@
 .method public dumpEventLocked(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/am/BaseAppStateDurations;J)V
     .locals 4
 
-    .line 208
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     iget v1, p3, Lcom/android/server/am/BaseAppStateEvents;->mUid:I
@@ -40,7 +37,6 @@
 
     check-cast v0, Lcom/android/server/am/BaseAppStateDurationsTracker$UidStateDurations;
 
-    .line 209
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,14 +55,12 @@
 
     const-string v1, "(bg only)"
 
-    .line 210
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    "
 
     if-eqz v0, :cond_1
 
-    .line 211
     invoke-virtual {v0}, Lcom/android/server/am/BaseAppStateEvents;->isEmpty()Z
 
     move-result v3
@@ -75,7 +69,6 @@
 
     goto :goto_0
 
-    .line 215
     :cond_0
     invoke-interface {p0, p3}, Lcom/android/server/am/BaseAppStateEvents$Factory;->createAppStateEvents(Lcom/android/server/am/BaseAppStateEvents;)Lcom/android/server/am/BaseAppStateEvents;
 
@@ -85,10 +78,8 @@
 
     const/4 v3, 0x0
 
-    .line 216
     invoke-virtual {p0, v0, v3}, Lcom/android/server/am/BaseAppStateDurations;->subtract(Lcom/android/server/am/BaseAppStateDurations;I)V
 
-    .line 217
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,7 +94,6 @@
 
     invoke-virtual {p0, p1, v0, p4, p5}, Lcom/android/server/am/BaseAppStateEvents;->dump(Ljava/io/PrintWriter;Ljava/lang/String;J)V
 
-    .line 218
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,10 +110,8 @@
 
     const-string p0, "(fg + bg)"
 
-    .line 219
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 220
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,7 +128,6 @@
 
     return-void
 
-    .line 212
     :cond_1
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -163,7 +150,6 @@
 .method public bridge synthetic dumpEventLocked(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/am/BaseAppStateEvents;J)V
     .locals 0
 
-    .line 39
     check-cast p3, Lcom/android/server/am/BaseAppStateDurations;
 
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/am/BaseAppStateDurationsTracker;->dumpEventLocked(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/am/BaseAppStateDurations;J)V
@@ -184,7 +170,6 @@
 
     move v4, p4
 
-    .line 137
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/BaseAppStateDurationsTracker;->getTotalDurations(IJIZ)J
 
     move-result-wide p0
@@ -195,12 +180,10 @@
 .method public getTotalDurations(IJIZ)J
     .locals 2
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 122
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/am/BaseAppStateEventsTracker;->getUidEventsLocked(I)Lcom/android/server/am/BaseAppStateEvents;
 
@@ -210,7 +193,6 @@
 
     if-nez v1, :cond_0
 
-    .line 124
     monitor-exit v0
 
     const-wide/16 p0, 0x0
@@ -220,7 +202,6 @@
     :cond_0
     if-eqz p5, :cond_1
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -231,7 +212,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 128
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateEvents;->isEmpty()Z
 
     move-result p1
@@ -240,10 +220,8 @@
 
     const/4 p1, 0x0
 
-    .line 129
     invoke-virtual {v1, p0, p4, p1}, Lcom/android/server/am/BaseAppStateDurations;->subtract(Lcom/android/server/am/BaseAppStateDurations;II)V
 
-    .line 132
     :cond_1
     invoke-virtual {v1, p2, p3, p4}, Lcom/android/server/am/BaseAppStateDurations;->getTotalDurations(JI)J
 
@@ -256,7 +234,6 @@
     :catchall_0
     move-exception p0
 
-    .line 133
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -279,7 +256,6 @@
 
     move v5, p5
 
-    .line 113
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/am/BaseAppStateDurationsTracker;->getTotalDurations(Ljava/lang/String;IJIZ)J
 
     move-result-wide p0
@@ -290,12 +266,10 @@
 .method public getTotalDurations(Ljava/lang/String;IJIZ)J
     .locals 2
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 96
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
@@ -307,7 +281,6 @@
 
     if-nez p1, :cond_0
 
-    .line 98
     monitor-exit v0
 
     const-wide/16 p0, 0x0
@@ -317,7 +290,6 @@
     :cond_0
     if-eqz p6, :cond_1
 
-    .line 101
     iget-object p6, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {p6, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -328,14 +300,12 @@
 
     if-eqz p2, :cond_1
 
-    .line 102
     invoke-virtual {p2}, Lcom/android/server/am/BaseAppStateEvents;->isEmpty()Z
 
     move-result p6
 
     if-nez p6, :cond_1
 
-    .line 103
     invoke-interface {p0, p1}, Lcom/android/server/am/BaseAppStateEvents$Factory;->createAppStateEvents(Lcom/android/server/am/BaseAppStateEvents;)Lcom/android/server/am/BaseAppStateEvents;
 
     move-result-object p0
@@ -344,10 +314,8 @@
 
     const/4 p1, 0x0
 
-    .line 104
     invoke-virtual {p0, p2, p5, p1}, Lcom/android/server/am/BaseAppStateDurations;->subtract(Lcom/android/server/am/BaseAppStateDurations;II)V
 
-    .line 105
     invoke-virtual {p0, p3, p4, p5}, Lcom/android/server/am/BaseAppStateDurations;->getTotalDurations(JI)J
 
     move-result-wide p0
@@ -356,7 +324,6 @@
 
     return-wide p0
 
-    .line 108
     :cond_1
     invoke-virtual {p1, p3, p4, p5}, Lcom/android/server/am/BaseAppStateDurations;->getTotalDurations(JI)J
 
@@ -369,7 +336,6 @@
     :catchall_0
     move-exception p0
 
-    .line 109
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -390,7 +356,6 @@
 
     move-wide v4, p4
 
-    .line 193
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/am/BaseAppStateDurationsTracker;->getTotalDurationsSince(IJJI)J
 
     move-result-wide p0
@@ -413,7 +378,6 @@
 
     move v6, p6
 
-    .line 189
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/am/BaseAppStateDurationsTracker;->getTotalDurationsSince(IJJIZ)J
 
     move-result-wide p0
@@ -424,12 +388,10 @@
 .method public getTotalDurationsSince(IJJIZ)J
     .locals 8
 
-    .line 173
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 174
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/am/BaseAppStateEventsTracker;->getUidEventsLocked(I)Lcom/android/server/am/BaseAppStateEvents;
 
@@ -441,7 +403,6 @@
 
     if-nez v2, :cond_0
 
-    .line 176
     monitor-exit v0
 
     const-wide/16 p0, 0x0
@@ -451,7 +412,6 @@
     :cond_0
     if-eqz p7, :cond_1
 
-    .line 179
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -462,7 +422,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 180
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateEvents;->isEmpty()Z
 
     move-result p1
@@ -471,7 +430,6 @@
 
     const/4 p1, 0x0
 
-    .line 181
     invoke-virtual {v2, p0, p6, p1}, Lcom/android/server/am/BaseAppStateDurations;->subtract(Lcom/android/server/am/BaseAppStateDurations;II)V
 
     :cond_1
@@ -481,7 +439,6 @@
 
     move v7, p6
 
-    .line 184
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/am/BaseAppStateDurations;->getTotalDurationsSince(JJI)J
 
     move-result-wide p0
@@ -493,7 +450,6 @@
     :catchall_0
     move-exception p0
 
-    .line 185
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -516,7 +472,6 @@
 
     move-wide v5, p5
 
-    .line 168
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/am/BaseAppStateDurationsTracker;->getTotalDurationsSince(Ljava/lang/String;IJJI)J
 
     move-result-wide p0
@@ -541,7 +496,6 @@
 
     move/from16 v7, p7
 
-    .line 164
     invoke-virtual/range {v0 .. v8}, Lcom/android/server/am/BaseAppStateDurationsTracker;->getTotalDurationsSince(Ljava/lang/String;IJJIZ)J
 
     move-result-wide v0
@@ -552,12 +506,10 @@
 .method public getTotalDurationsSince(Ljava/lang/String;IJJIZ)J
     .locals 7
 
-    .line 146
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 147
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
@@ -571,7 +523,6 @@
 
     if-nez v1, :cond_0
 
-    .line 149
     monitor-exit v0
 
     const-wide/16 p0, 0x0
@@ -581,7 +532,6 @@
     :cond_0
     if-eqz p8, :cond_1
 
-    .line 152
     iget-object p1, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {p1, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -592,14 +542,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 153
     invoke-virtual {p1}, Lcom/android/server/am/BaseAppStateEvents;->isEmpty()Z
 
     move-result p2
 
     if-nez p2, :cond_1
 
-    .line 154
     invoke-interface {p0, v1}, Lcom/android/server/am/BaseAppStateEvents$Factory;->createAppStateEvents(Lcom/android/server/am/BaseAppStateEvents;)Lcom/android/server/am/BaseAppStateEvents;
 
     move-result-object p0
@@ -610,7 +558,6 @@
 
     const/4 p0, 0x0
 
-    .line 155
     invoke-virtual {v1, p1, p7, p0}, Lcom/android/server/am/BaseAppStateDurations;->subtract(Lcom/android/server/am/BaseAppStateDurations;II)V
 
     move-wide v2, p3
@@ -619,7 +566,6 @@
 
     move v6, p7
 
-    .line 156
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/BaseAppStateDurations;->getTotalDurationsSince(JJI)J
 
     move-result-wide p0
@@ -635,7 +581,6 @@
 
     move v6, p7
 
-    .line 159
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/BaseAppStateDurations;->getTotalDurationsSince(JJI)J
 
     move-result-wide p0
@@ -647,7 +592,6 @@
     :catchall_0
     move-exception p0
 
-    .line 160
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -660,7 +604,6 @@
 
     const/16 v0, 0x14
 
-    .line 72
     invoke-virtual {p0, p1, v0}, Lcom/android/server/am/BaseAppStateDurationsTracker;->onUidProcStateChanged(II)V
 
     return-void
@@ -669,12 +612,10 @@
 .method public onUidProcStateChanged(II)V
     .locals 3
 
-    .line 54
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 55
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
@@ -688,16 +629,13 @@
 
     if-gez v1, :cond_0
 
-    .line 57
     monitor-exit v0
 
     return-void
 
-    .line 59
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/BaseAppStateEventsTracker;->onUidProcStateChangedUncheckedLocked(II)V
 
-    .line 60
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -708,7 +646,6 @@
 
     if-nez v1, :cond_1
 
-    .line 62
     new-instance v1, Lcom/android/server/am/BaseAppStateDurationsTracker$UidStateDurations;
 
     iget-object v2, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
@@ -721,7 +658,6 @@
 
     invoke-direct {v1, p1, v2}, Lcom/android/server/am/BaseAppStateDurationsTracker$UidStateDurations;-><init>(ILcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -738,16 +674,13 @@
     :cond_2
     const/4 p0, 0x0
 
-    .line 66
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p1
 
-    .line 65
     invoke-virtual {v1, p0, p1, p2}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;->addEvent(ZJ)V
 
-    .line 67
     monitor-exit v0
 
     return-void
@@ -765,7 +698,6 @@
 .method public onUntrackingUidLocked(I)V
     .locals 0
 
-    .line 91
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
@@ -776,21 +708,17 @@
 .method public reset()V
     .locals 1
 
-    .line 199
     invoke-super {p0}, Lcom/android/server/am/BaseAppStateEventsTracker;->reset()V
 
-    .line 200
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 201
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->clear()V
 
-    .line 202
     monitor-exit v0
 
     return-void
@@ -808,10 +736,8 @@
 .method public trimLocked(J)V
     .locals 2
 
-    .line 78
     invoke-super {p0, p1, p2}, Lcom/android/server/am/BaseAppStateEventsTracker;->trimLocked(J)V
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -823,7 +749,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 80
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -832,17 +757,14 @@
 
     check-cast v1, Lcom/android/server/am/BaseAppStateDurationsTracker$UidStateDurations;
 
-    .line 81
     invoke-virtual {v1, p1, p2}, Lcom/android/server/am/BaseAppStateEvents;->trim(J)V
 
-    .line 82
     invoke-virtual {v1}, Lcom/android/server/am/BaseAppStateEvents;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 83
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateDurationsTracker;->mUidStateDurations:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->removeAt(I)V

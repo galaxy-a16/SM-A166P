@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/net/TetherOffloadRuleParcel;
     .locals 0
 
-    .line 18
     new-instance p0, Landroid/net/TetherOffloadRuleParcel;
 
     invoke-direct {p0}, Landroid/net/TetherOffloadRuleParcel;-><init>()V
 
-    .line 19
     invoke-virtual {p0, p1}, Landroid/net/TetherOffloadRuleParcel;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 15
     invoke-virtual {p0, p1}, Landroid/net/TetherOffloadRuleParcel$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/TetherOffloadRuleParcel;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/net/TetherOffloadRuleParcel;
     .locals 0
 
-    .line 24
     new-array p0, p1, [Landroid/net/TetherOffloadRuleParcel;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 15
     invoke-virtual {p0, p1}, Landroid/net/TetherOffloadRuleParcel$1;->newArray(I)[Landroid/net/TetherOffloadRuleParcel;
 
     move-result-object p0

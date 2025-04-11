@@ -20,7 +20,6 @@
 .method public final onTransportRegistered(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/backup/TransportManager;->$r8$lambda$5g_dfIVb9lfyI5p99HUM3jALNS4(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

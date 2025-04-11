@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/BoundsCompatStatusLogger;)V
     .locals 0
 
-    .line 266
     iput-object p1, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/BoundsCompatStatusLogger;Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector;-><init>(Lcom/android/server/wm/BoundsCompatStatusLogger;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public initializeLocked()V
     .locals 5
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     invoke-static {v0}, Lcom/android/server/wm/BoundsCompatStatusLogger;->-$$Nest$fgetmAtmService(Lcom/android/server/wm/BoundsCompatStatusLogger;)Lcom/android/server/wm/ActivityTaskManagerService;
@@ -49,7 +46,6 @@
 
     and-int/lit8 v1, v0, 0x70
 
-    .line 271
     iget-object v2, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     const/16 v3, 0x30
@@ -81,7 +77,6 @@
 
     and-int/lit8 v0, v0, 0x7
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     const/4 v1, 0x3

@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/om/OverlayInfo;
 
     invoke-static {p1}, Lcom/samsung/android/localeoverlaymanager/OMSHelper;->$r8$lambda$gUoA5GXYCx2LkgWW7P5Ip_s82N8(Landroid/content/om/OverlayInfo;)Z

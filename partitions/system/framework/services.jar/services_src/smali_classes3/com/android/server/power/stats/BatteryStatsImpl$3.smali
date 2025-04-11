@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;)V
     .locals 0
 
-    .line 6991
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$3;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,17 +27,14 @@
 
     const/4 v0, 0x0
 
-    .line 6994
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 6995
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$3;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     monitor-enter p1
 
-    .line 6996
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$3;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
@@ -52,15 +48,12 @@
 
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl;->mClock:Lcom/android/internal/os/Clock;
 
-    .line 6997
     invoke-virtual {p0}, Lcom/android/internal/os/Clock;->uptimeMillis()J
 
     move-result-wide v5
 
-    .line 6996
     invoke-static/range {v1 .. v6}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$mnoteUsbConnectionStateLocked(Lcom/android/server/power/stats/BatteryStatsImpl;ZJJ)V
 
-    .line 6998
     monitor-exit p1
 
     return-void

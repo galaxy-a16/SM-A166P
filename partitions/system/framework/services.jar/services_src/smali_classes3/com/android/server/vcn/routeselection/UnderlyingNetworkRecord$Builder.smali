@@ -19,10 +19,8 @@
 .method public constructor <init>(Landroid/net/Network;)V
     .locals 0
 
-    .line 190
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 191
     iput-object p1, p0, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord$Builder;->mNetwork:Landroid/net/Network;
 
     return-void
@@ -35,14 +33,12 @@
 
     move-object v0, p0
 
-    .line 228
     invoke-virtual {p0}, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord$Builder;->isValid()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 233
     new-instance v1, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;
 
     iget-object v3, v0, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord$Builder;->mNetwork:Landroid/net/Network;
@@ -71,7 +67,6 @@
 
     return-object v1
 
-    .line 229
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -85,7 +80,6 @@
 .method public isValid()Z
     .locals 1
 
-    .line 218
     iget-object v0, p0, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord$Builder;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     if-eqz v0, :cond_0
@@ -112,12 +106,10 @@
 .method public setIsBlocked(Z)V
     .locals 0
 
-    .line 213
     iput-boolean p1, p0, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord$Builder;->mIsBlocked:Z
 
     const/4 p1, 0x1
 
-    .line 214
     iput-boolean p1, p0, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord$Builder;->mWasIsBlockedSet:Z
 
     return-void
@@ -126,7 +118,6 @@
 .method public setLinkProperties(Landroid/net/LinkProperties;)V
     .locals 0
 
-    .line 209
     iput-object p1, p0, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord$Builder;->mLinkProperties:Landroid/net/LinkProperties;
 
     return-void
@@ -135,7 +126,6 @@
 .method public setNetworkCapabilities(Landroid/net/NetworkCapabilities;)V
     .locals 0
 
-    .line 200
     iput-object p1, p0, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord$Builder;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     return-void

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/wm/BlurController;Landroid/os/PowerManager;)V
     .locals 0
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/wm/BlurController$2;->this$0:Lcom/android/server/wm/BlurController;
 
     iput-object p2, p0, Lcom/android/server/wm/BlurController$2;->val$powerManager:Landroid/os/PowerManager;
@@ -30,7 +29,6 @@
 
     const-string p1, "android.os.action.POWER_SAVE_MODE_CHANGED"
 
-    .line 70
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -41,7 +39,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 73
     iget-object p1, p0, Lcom/android/server/wm/BlurController$2;->this$0:Lcom/android/server/wm/BlurController;
 
     iget-object p2, p0, Lcom/android/server/wm/BlurController$2;->val$powerManager:Landroid/os/PowerManager;
@@ -52,7 +49,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/wm/BlurController;->-$$Nest$fputmInPowerSaveMode(Lcom/android/server/wm/BlurController;Z)V
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/wm/BlurController$2;->this$0:Lcom/android/server/wm/BlurController;
 
     invoke-static {p0}, Lcom/android/server/wm/BlurController;->-$$Nest$mupdateBlurEnabled(Lcom/android/server/wm/BlurController;)V

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService$BinderService;III[B)V
     .locals 0
 
-    .line 2667
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$21;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$21;->val$portId:I
@@ -43,7 +42,6 @@
 .method public run()V
     .locals 3
 
-    .line 2670
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$21;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -58,12 +56,10 @@
 
     const-string p0, "Hdmi control is disabled."
 
-    .line 2671
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2674
     :cond_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$21;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
@@ -77,7 +73,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/hdmi/HdmiMhlControllerStub;->getLocalDevice(I)Lcom/android/server/hdmi/HdmiMhlLocalDeviceStub;
 
-    .line 2676
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

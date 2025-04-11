@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/view/SurfaceControl$Transaction;
 
     invoke-static {p1}, Lcom/android/server/wm/AsyncRotationController;->$r8$lambda$FwZt4XS_Tmjft095bASPMEGxAXQ(Landroid/view/SurfaceControl$Transaction;)V

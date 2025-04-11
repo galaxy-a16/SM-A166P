@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/connectivity/PacProxyService;)V
     .locals 0
 
-    .line 381
     iput-object p1, p0, Lcom/android/server/connectivity/PacProxyService$3;->this$0:Lcom/android/server/connectivity/PacProxyService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 388
     invoke-static {p2}, Lcom/android/net/IProxyCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/net/IProxyCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 391
     :try_start_0
     new-instance p2, Lcom/android/server/connectivity/PacProxyService$3$1;
 
@@ -49,7 +46,6 @@
     :catch_0
     move-exception p0
 
-    .line 412
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
@@ -60,6 +56,5 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

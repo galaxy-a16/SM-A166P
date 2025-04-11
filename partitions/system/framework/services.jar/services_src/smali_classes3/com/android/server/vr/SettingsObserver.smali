@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$msendSettingChanged(Lcom/android/server/vr/SettingsObserver;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/vr/SettingsObserver;->sendSettingChanged()V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$msendSettingRestored(Lcom/android/server/vr/SettingsObserver;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/vr/SettingsObserver;->sendSettingRestored(Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
@@ -35,34 +33,28 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Landroid/net/Uri;Ljava/lang/String;)V
     .locals 1
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/vr/SettingsObserver;->mSettingsListeners:Ljava/util/Set;
 
-    .line 69
     iput-object p4, p0, Lcom/android/server/vr/SettingsObserver;->mSecureSettingName:Ljava/lang/String;
 
-    .line 70
     new-instance v0, Lcom/android/server/vr/SettingsObserver$1;
 
     invoke-direct {v0, p0, p4}, Lcom/android/server/vr/SettingsObserver$1;-><init>(Lcom/android/server/vr/SettingsObserver;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/server/vr/SettingsObserver;->mSettingRestoreReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 84
     new-instance p4, Lcom/android/server/vr/SettingsObserver$2;
 
     invoke-direct {p4, p0, p2, p3}, Lcom/android/server/vr/SettingsObserver$2;-><init>(Lcom/android/server/vr/SettingsObserver;Landroid/os/Handler;Landroid/net/Uri;)V
 
     iput-object p4, p0, Lcom/android/server/vr/SettingsObserver;->mContentObserver:Landroid/database/ContentObserver;
 
-    .line 93
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -71,7 +63,6 @@
 
     const/4 p2, -0x1
 
-    .line 94
     invoke-virtual {p0, p3, p1, p4, p2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     return-void
@@ -80,12 +71,10 @@
 .method public static build(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)Lcom/android/server/vr/SettingsObserver;
     .locals 2
 
-    .line 108
     invoke-static {p2}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 110
     new-instance v1, Lcom/android/server/vr/SettingsObserver;
 
     invoke-direct {v1, p0, p1, v0, p2}, Lcom/android/server/vr/SettingsObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Landroid/net/Uri;Ljava/lang/String;)V
@@ -98,7 +87,6 @@
 .method public addListener(Lcom/android/server/vr/SettingsObserver$SettingChangeListener;)V
     .locals 0
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/vr/SettingsObserver;->mSettingsListeners:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -109,7 +97,6 @@
 .method public final sendSettingChanged()V
     .locals 1
 
-    .line 133
     iget-object p0, p0, Lcom/android/server/vr/SettingsObserver;->mSettingsListeners:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -129,7 +116,6 @@
 
     check-cast v0, Lcom/android/server/vr/SettingsObserver$SettingChangeListener;
 
-    .line 134
     invoke-interface {v0}, Lcom/android/server/vr/SettingsObserver$SettingChangeListener;->onSettingChanged()V
 
     goto :goto_0
@@ -141,7 +127,6 @@
 .method public final sendSettingRestored(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/vr/SettingsObserver;->mSettingsListeners:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -161,7 +146,6 @@
 
     check-cast v0, Lcom/android/server/vr/SettingsObserver$SettingChangeListener;
 
-    .line 140
     invoke-interface {v0, p1, p2, p3}, Lcom/android/server/vr/SettingsObserver$SettingChangeListener;->onSettingRestored(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/companion/CompanionApplicationController;)V
     .locals 0
 
-    .line 377
     iput-object p1, p0, Lcom/android/server/companion/CompanionApplicationController$CompanionServicesRegister;->this$0:Lcom/android/server/companion/CompanionApplicationController;
 
     invoke-direct {p0}, Lcom/android/internal/infra/PerUser;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/companion/CompanionApplicationController;Lcom/android/server/companion/CompanionApplicationController$CompanionServicesRegister-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/companion/CompanionApplicationController$CompanionServicesRegister;-><init>(Lcom/android/server/companion/CompanionApplicationController;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public bridge synthetic create(I)Ljava/lang/Object;
     .locals 0
 
-    .line 377
     invoke-virtual {p0, p1}, Lcom/android/server/companion/CompanionApplicationController$CompanionServicesRegister;->create(I)Ljava/util/Map;
 
     move-result-object p0
@@ -44,7 +41,6 @@
 .method public final create(I)Ljava/util/Map;
     .locals 0
 
-    .line 395
     iget-object p0, p0, Lcom/android/server/companion/CompanionApplicationController$CompanionServicesRegister;->this$0:Lcom/android/server/companion/CompanionApplicationController;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionApplicationController;->-$$Nest$fgetmContext(Lcom/android/server/companion/CompanionApplicationController;)Landroid/content/Context;
@@ -63,7 +59,6 @@
 
     monitor-enter p0
 
-    .line 386
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/companion/CompanionApplicationController$CompanionServicesRegister;->forUser(I)Ljava/util/Map;
 
@@ -96,7 +91,6 @@
 .method public bridge synthetic forUser(I)Ljava/lang/Object;
     .locals 0
 
-    .line 377
     invoke-virtual {p0, p1}, Lcom/android/server/companion/CompanionApplicationController$CompanionServicesRegister;->forUser(I)Ljava/util/Map;
 
     move-result-object p0
@@ -109,7 +103,6 @@
 
     monitor-enter p0
 
-    .line 381
     :try_start_0
     invoke-super {p0, p1}, Lcom/android/internal/infra/PerUser;->forUser(I)Ljava/lang/Object;
 
@@ -136,13 +129,11 @@
 
     monitor-enter p0
 
-    .line 390
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/infra/PerUser;->remove(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 391
     monitor-exit p0
 
     return-void

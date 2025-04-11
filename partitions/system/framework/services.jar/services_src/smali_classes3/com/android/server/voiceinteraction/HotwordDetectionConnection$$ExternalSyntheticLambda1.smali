@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/voiceinteraction/HotwordDetectionConnection$$ExternalSyntheticLambda1;->f$0:I
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/voiceinteraction/HotwordDetectionConnection$$ExternalSyntheticLambda1;->f$0:I
 
     invoke-static {p0}, Lcom/android/server/voiceinteraction/HotwordDetectionConnection;->$r8$lambda$VKIZnsm4_UZrDn5qYvxVnfXj_OU(I)V

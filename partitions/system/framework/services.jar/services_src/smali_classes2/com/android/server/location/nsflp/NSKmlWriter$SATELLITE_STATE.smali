@@ -27,7 +27,6 @@
 .method public static synthetic $values()[Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
     .locals 6
 
-    .line 616
     sget-object v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->INIT:Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     sget-object v1, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->NO_SATELLITE:Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
@@ -50,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 617
     new-instance v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     const/4 v1, 0x0
@@ -63,7 +61,6 @@
 
     sput-object v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->INIT:Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
-    .line 618
     new-instance v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     const/4 v1, 0x1
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->NO_SATELLITE:Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
-    .line 619
     new-instance v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     const/4 v1, 0x2
@@ -89,7 +85,6 @@
 
     sput-object v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->SHADOW:Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
-    .line 620
     new-instance v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     const/4 v1, 0x3
@@ -102,7 +97,6 @@
 
     sput-object v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->DEEP_INDOOR:Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
-    .line 621
     new-instance v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     const/4 v1, 0x4
@@ -115,7 +109,6 @@
 
     sput-object v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->MILD_INDOOR:Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
-    .line 622
     new-instance v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     const/4 v1, 0x5
@@ -128,7 +121,6 @@
 
     sput-object v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->OUTDOOR:Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
-    .line 616
     invoke-static {}, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->$values()[Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     move-result-object v0
@@ -141,10 +133,8 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 626
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 627
     iput-object p3, p0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->simpleKeyword:Ljava/lang/String;
 
     return-void
@@ -153,7 +143,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
     .locals 1
 
-    .line 616
     const-class v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -168,7 +157,6 @@
 .method public static values()[Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
     .locals 1
 
-    .line 616
     sget-object v0, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->$VALUES:[Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     invoke-virtual {v0}, [Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;->clone()Ljava/lang/Object;

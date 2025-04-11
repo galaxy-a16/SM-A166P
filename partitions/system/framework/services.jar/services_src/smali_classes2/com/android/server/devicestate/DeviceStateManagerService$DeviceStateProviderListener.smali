@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/devicestate/DeviceStateManagerService;)V
     .locals 0
 
-    .line 1126
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$DeviceStateProviderListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/devicestate/DeviceStateManagerService;Lcom/android/server/devicestate/DeviceStateManagerService$DeviceStateProviderListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/devicestate/DeviceStateManagerService$DeviceStateProviderListener;-><init>(Lcom/android/server/devicestate/DeviceStateManagerService;)V
 
     return-void
@@ -44,17 +42,14 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 1151
     iput p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$DeviceStateProviderListener;->mCurrentBaseState:I
 
-    .line 1152
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateManagerService$DeviceStateProviderListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/devicestate/DeviceStateManagerService;->-$$Nest$msetBaseState(Lcom/android/server/devicestate/DeviceStateManagerService;I)V
 
     return-void
 
-    .line 1142
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -80,19 +75,16 @@
 .method public onSupportedDeviceStatesChanged([Lcom/android/server/devicestate/DeviceState;I)V
     .locals 1
 
-    .line 1132
     array-length v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 1135
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateManagerService$DeviceStateProviderListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/devicestate/DeviceStateManagerService;->-$$Nest$mupdateSupportedStates(Lcom/android/server/devicestate/DeviceStateManagerService;[Lcom/android/server/devicestate/DeviceState;I)V
 
     return-void
 
-    .line 1133
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

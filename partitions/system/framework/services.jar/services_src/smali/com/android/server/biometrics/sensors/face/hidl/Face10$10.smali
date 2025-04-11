@@ -15,7 +15,6 @@
 
     move-object v1, p1
 
-    .line 1421
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$10;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     move-object v1, p2
@@ -46,7 +45,6 @@
 .method public daemonSetActiveUser(I)I
     .locals 0
 
-    .line 1424
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$sfgetmProviderExtImpl()Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;
 
     move-result-object p0

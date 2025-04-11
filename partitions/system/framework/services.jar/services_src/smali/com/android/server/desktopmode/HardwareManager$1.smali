@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/HardwareManager;)V
     .locals 0
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/desktopmode/HardwareManager$1;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDisplayAdded(I)V
     .locals 3
 
-    .line 124
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -52,7 +50,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$1;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
@@ -66,7 +63,6 @@
 .method public onDisplayChanged(I)V
     .locals 5
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$1;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/HardwareManager;)Lcom/android/server/desktopmode/IStateManager;
@@ -83,7 +79,6 @@
 
     if-ne v0, p1, :cond_1
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$1;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmDisplayManager(Lcom/android/server/desktopmode/HardwareManager;)Landroid/hardware/display/DisplayManager;
@@ -96,12 +91,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 139
     new-instance v1, Lcom/android/server/desktopmode/DisplayInfo;
 
     invoke-direct {v1, v0}, Lcom/android/server/desktopmode/DisplayInfo;-><init>(Landroid/view/Display;)V
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$1;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmLock(Lcom/android/server/desktopmode/HardwareManager;)Ljava/lang/Object;
@@ -110,7 +103,6 @@
 
     monitor-enter v0
 
-    .line 141
     :try_start_0
     iget-object v2, p0, Lcom/android/server/desktopmode/HardwareManager$1;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
@@ -128,7 +120,6 @@
 
     if-nez v2, :cond_0
 
-    .line 142
     invoke-static {}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -149,7 +140,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$1;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmDisplays(Lcom/android/server/desktopmode/HardwareManager;)Landroid/util/SparseArray;
@@ -158,7 +148,6 @@
 
     invoke-virtual {p0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 145
     :cond_0
     monitor-exit v0
 
@@ -181,7 +170,6 @@
 .method public onDisplayRemoved(I)V
     .locals 3
 
-    .line 130
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -206,7 +194,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$1;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 

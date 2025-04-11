@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$GRFnpsOKKi6TsdVEV7-sGBt1ebo(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver;->lambda$onReceive$0(Landroid/content/Context;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,7 +47,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 21
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -60,7 +57,6 @@
 
     const-string v0, "Locked"
 
-    .line 60
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/utils/Utils;->getRlcState(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -71,7 +67,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 62
     :try_start_0
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardService;->getKGVM()Lcom/samsung/android/service/RemoteLockControl/KnoxGuard/KnoxGuardVaultManager;
 
@@ -79,7 +74,6 @@
 
     invoke-virtual {p0}, Lcom/samsung/android/service/RemoteLockControl/KnoxGuard/KnoxGuardVaultManager;->bindToLockScreen()V
 
-    .line 63
     sget-object p0, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver;->TAG:Ljava/lang/String;
 
     const-string v0, "KGVM bindToLockScreen"
@@ -93,7 +87,6 @@
     :catchall_0
     move-exception p0
 
-    .line 65
     sget-object v0, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
@@ -114,7 +107,6 @@
 
     if-eqz p2, :cond_11
 
-    .line 29
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -123,13 +115,11 @@
 
     goto/16 :goto_5
 
-    .line 34
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 35
     sget-object v0, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -148,7 +138,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardService;->getActionList()Ljava/util/List;
 
     move-result-object v1
@@ -165,7 +154,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 38
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,7 +181,6 @@
     :cond_1
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
-    .line 41
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -212,7 +199,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 42
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -227,17 +213,14 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->getRlcState(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 44
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->isSetupWizardFinished(Landroid/content/Context;)Z
 
     move-result p2
 
-    .line 45
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -254,24 +237,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     invoke-static {p1, p0}, Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil;->checkKGClientIntegrity(Landroid/content/Context;Ljava/lang/String;)Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil$IntegrityResult;
 
     move-result-object v1
 
-    .line 47
     iget-boolean v6, v1, Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil$IntegrityResult;->isOk:Z
 
     if-eqz v6, :cond_3
 
     const-string v1, "checkKGClientIntegrity true. "
 
-    .line 48
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p0, :cond_7
 
-    .line 49
     invoke-virtual {v7, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v1
@@ -280,7 +259,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 52
     :try_start_0
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardService;->getKGVM()Lcom/samsung/android/service/RemoteLockControl/KnoxGuard/KnoxGuardVaultManager;
 
@@ -288,7 +266,6 @@
 
     invoke-virtual {p2}, Lcom/samsung/android/service/RemoteLockControl/KnoxGuard/KnoxGuardVaultManager;->bindToLockScreen()V
 
-    .line 53
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -298,7 +275,6 @@
     :catchall_0
     move-exception p2
 
-    .line 55
     sget-object v0, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver;->TAG:Ljava/lang/String;
 
     invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
@@ -309,7 +285,6 @@
 
     goto :goto_1
 
-    .line 58
     :cond_2
     new-instance p2, Landroid/os/Handler;
 
@@ -319,7 +294,6 @@
 
     invoke-direct {p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 59
     new-instance v0, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver$$ExternalSyntheticLambda0;-><init>(Landroid/content/Context;)V
@@ -330,7 +304,6 @@
 
     goto :goto_1
 
-    .line 72
     :cond_3
     invoke-static {}, Lcom/samsung/android/knoxguard/service/utils/Utils;->isChinaDevice()Z
 
@@ -342,7 +315,6 @@
 
     const-string v1, "Prenormal"
 
-    .line 73
     invoke-virtual {v1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v1
@@ -351,10 +323,8 @@
 
     const-string p0, "Device country is China"
 
-    .line 74
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->setCheckingStateToRlc(Landroid/content/Context;)V
 
     goto :goto_0
@@ -362,24 +332,20 @@
     :cond_4
     if-eqz p2, :cond_5
 
-    .line 76
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/utils/Utils;->isStateForEnrolledDevice(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_5
 
-    .line 78
     invoke-static {v0, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     invoke-static {p1, v3}, Lcom/samsung/android/knoxguard/service/utils/Utils;->autoLockDevice(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_5
     :goto_0
     return-void
 
-    .line 84
     :cond_6
     invoke-static {v1}, Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil;->toErrorCode(Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil$IntegrityResult;)I
 
@@ -391,10 +357,8 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/knoxguard/service/utils/Utils;->lockDevice(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 85
     invoke-static {v0, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     :cond_7
     :goto_1
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/utils/Utils;->isStateForEnrolledDevice(Ljava/lang/String;)Z
@@ -403,7 +367,6 @@
 
     if-eqz p0, :cond_10
 
-    .line 88
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil;->checkSystemUiIntegrity(Landroid/content/Context;)V
 
     goto/16 :goto_4
@@ -411,14 +374,12 @@
     :cond_8
     const-string v1, "android.intent.action.USER_PRESENT"
 
-    .line 90
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 91
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -433,21 +394,18 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->getRlcState(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_10
 
-    .line 93
     invoke-virtual {v7, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_10
 
-    .line 95
     :try_start_1
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardService;->getKGVM()Lcom/samsung/android/service/RemoteLockControl/KnoxGuard/KnoxGuardVaultManager;
 
@@ -455,7 +413,6 @@
 
     invoke-virtual {p0}, Lcom/samsung/android/service/RemoteLockControl/KnoxGuard/KnoxGuardVaultManager;->bindToLockScreen()V
 
-    .line 96
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -465,7 +422,6 @@
     :catchall_1
     move-exception p0
 
-    .line 98
     sget-object p1, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
@@ -479,7 +435,6 @@
     :cond_9
     const-string v1, "android.intent.action.PACKAGE_REPLACED"
 
-    .line 101
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -509,7 +464,6 @@
     :cond_a
     const-string v1, "com.sec.android.app.secsetupwizard.SETUPWIZARD_COMPLETE"
 
-    .line 121
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -529,21 +483,18 @@
     :cond_b
     const-string v1, "android.intent.action.PACKAGE_DATA_CLEARED"
 
-    .line 128
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_10
 
-    .line 129
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p0
 
     if-eqz p0, :cond_10
 
-    .line 130
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p0
@@ -558,12 +509,10 @@
 
     if-eqz p0, :cond_10
 
-    .line 131
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->getRlcState(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 132
     invoke-virtual {v7, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p0
@@ -572,24 +521,20 @@
 
     const-string p0, "3001"
 
-    .line 133
     invoke-static {p1, p0}, Lcom/samsung/android/knoxguard/service/utils/Utils;->lockDevice(Landroid/content/Context;Ljava/lang/String;)V
 
     const-string p0, "Client data was cleared. Lock device"
 
-    .line 134
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 122
     :cond_c
     :goto_2
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->getRlcState(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 123
     invoke-static {}, Lcom/samsung/android/knoxguard/service/utils/Utils;->isChinaDevice()Z
 
     move-result p2
@@ -602,15 +547,12 @@
 
     if-eqz p0, :cond_10
 
-    .line 125
     invoke-static {v0, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     invoke-static {p1, v3}, Lcom/samsung/android/knoxguard/service/utils/Utils;->autoLockDevice(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_4
 
-    .line 102
     :cond_d
     :goto_3
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -619,7 +561,6 @@
 
     if-eqz p0, :cond_10
 
-    .line 103
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p0
@@ -634,29 +575,24 @@
 
     if-eqz p0, :cond_f
 
-    .line 105
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->getRlcState(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 106
     invoke-static {p1, p0}, Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil;->checkKGClientIntegrity(Landroid/content/Context;Ljava/lang/String;)Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil$IntegrityResult;
 
     move-result-object p0
 
-    .line 107
     iget-boolean p2, p0, Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil$IntegrityResult;->isOk:Z
 
     if-eqz p2, :cond_e
 
     const-string p0, "checkKGClientIntegrity true. Do nothing."
 
-    .line 108
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 110
     :cond_e
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil;->toErrorCode(Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil$IntegrityResult;)I
 
@@ -668,12 +604,10 @@
 
     invoke-static {p1, p0}, Lcom/samsung/android/knoxguard/service/utils/Utils;->lockDevice(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 111
     invoke-static {v0, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 113
     :cond_f
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -691,26 +625,22 @@
 
     if-eqz p0, :cond_10
 
-    .line 115
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/Utils;->getRlcState(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 116
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/utils/Utils;->isStateForEnrolledDevice(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_10
 
-    .line 117
     invoke-static {p1}, Lcom/samsung/android/knoxguard/service/utils/IntegrityUtil;->checkSystemUiIntegrity(Landroid/content/Context;)V
 
     :cond_10
     :goto_4
     return-void
 
-    .line 30
     :cond_11
     :goto_5
     sget-object p0, Lcom/samsung/android/knoxguard/service/receiver/SystemReceiver;->TAG:Ljava/lang/String;

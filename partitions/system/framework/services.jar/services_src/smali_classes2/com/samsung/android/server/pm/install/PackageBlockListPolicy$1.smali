@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/os/Handler;Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 43
     iput-object p2, p0, Lcom/samsung/android/server/pm/install/PackageBlockListPolicy$1;->val$cr:Landroid/content/ContentResolver;
 
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 46
     invoke-static {}, Lcom/samsung/android/server/pm/install/PackageBlockListPolicy;->-$$Nest$sfgetsIsRduDevice()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object p1

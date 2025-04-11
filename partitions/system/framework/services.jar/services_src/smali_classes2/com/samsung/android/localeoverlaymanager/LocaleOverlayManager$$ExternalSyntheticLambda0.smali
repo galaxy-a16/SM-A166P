@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;
 
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;->$r8$lambda$ypbQsB8WB5oAzXZOaNaz43WTjWQ(Lcom/samsung/android/localeoverlaymanager/LocaleOverlayManager;)V

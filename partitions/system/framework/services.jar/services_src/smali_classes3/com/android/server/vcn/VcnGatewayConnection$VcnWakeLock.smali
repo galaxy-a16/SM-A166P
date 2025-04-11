@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;ILjava/lang/String;)V
     .locals 1
 
-    .line 2880
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2881
     const-class v0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -23,7 +21,6 @@
 
     check-cast p1, Landroid/os/PowerManager;
 
-    .line 2882
     invoke-virtual {p1, p2, p3}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
@@ -32,7 +29,6 @@
 
     const/4 p0, 0x0
 
-    .line 2883
     invoke-virtual {p1, p0}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
     return-void
@@ -45,7 +41,6 @@
 
     monitor-enter p0
 
-    .line 2892
     :try_start_0
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnWakeLock;->mImpl:Landroid/os/PowerManager$WakeLock;
 
@@ -53,7 +48,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2893
     monitor-exit p0
 
     return-void
@@ -71,7 +65,6 @@
 
     monitor-enter p0
 
-    .line 2901
     :try_start_0
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnWakeLock;->mImpl:Landroid/os/PowerManager$WakeLock;
 
@@ -79,7 +72,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2902
     monitor-exit p0
 
     return-void

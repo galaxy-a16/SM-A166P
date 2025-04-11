@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 338
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 339
     iput-object p1, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -27,7 +25,6 @@
 
     const-string p0, "application_policy"
 
-    .line 351
     invoke-static {p0}, Lcom/android/server/enterprise/EnterpriseService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -40,7 +37,6 @@
 .method public getPackageManager()Landroid/content/pm/PackageManager;
     .locals 0
 
-    .line 347
     iget-object p0, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -53,7 +49,6 @@
 .method public getStorageProvider()Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .locals 1
 
-    .line 343
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object p0, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$Injector;->mContext:Landroid/content/Context;

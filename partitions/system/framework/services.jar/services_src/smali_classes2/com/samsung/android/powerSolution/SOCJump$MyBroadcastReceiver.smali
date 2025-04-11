@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 51
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -20,14 +19,12 @@
 
     const-string p0, "/data/log/eSOC.txt"
 
-    .line 66
     new-instance v0, Lcom/samsung/android/powerSolution/SOCJump$SOC;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/powerSolution/SOCJump$SOC;-><init>(I)V
 
     sput-object v0, Lcom/samsung/android/powerSolution/SOCJump;->mCurrentSoc:Lcom/samsung/android/powerSolution/SOCJump$SOC;
 
-    .line 68
     sget-object p1, Lcom/samsung/android/powerSolution/SOCJump;->mPreviousSoc:Lcom/samsung/android/powerSolution/SOCJump$SOC;
 
     iget p1, p1, Lcom/samsung/android/powerSolution/SOCJump$SOC;->battery:I
@@ -46,14 +43,12 @@
 
     if-eqz p1, :cond_7
 
-    .line 69
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     const/4 p1, 0x0
 
-    .line 75
     :try_start_0
     new-instance v2, Ljava/io/File;
 
@@ -61,7 +56,6 @@
 
     sput-object v2, Lcom/samsung/android/powerSolution/SOCJump;->mFileObject:Ljava/io/File;
 
-    .line 77
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -73,7 +67,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 78
     :try_start_1
     sget-object v2, Lcom/samsung/android/powerSolution/SOCJump;->mFileObject:Ljava/io/File;
 
@@ -87,7 +80,6 @@
 
     if-lez v2, :cond_0
 
-    .line 82
     new-instance v2, Ljava/io/FileOutputStream;
 
     const/4 v4, 0x0
@@ -97,7 +89,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_5
 
-    .line 83
     :try_start_2
     new-instance v4, Ljava/io/OutputStreamWriter;
 
@@ -108,7 +99,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 84
     :try_start_3
     new-instance v5, Ljava/io/BufferedWriter;
 
@@ -117,17 +107,13 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_6
 
-    .line 85
     :try_start_4
     invoke-virtual {v5, v3}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual {v5}, Ljava/io/BufferedWriter;->close()V
 
-    .line 87
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
 
-    .line 88
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
@@ -161,7 +147,6 @@
 
     move-object v5, v4
 
-    .line 92
     :goto_0
     :try_start_5
     sget-object v2, Lcom/samsung/android/powerSolution/SOCJump;->mFileObject:Ljava/io/File;
@@ -183,7 +168,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 93
     :try_start_6
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -192,7 +176,6 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_5
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 94
     :try_start_7
     new-instance p1, Ljava/io/OutputStreamWriter;
 
@@ -203,7 +186,6 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 95
     :try_start_8
     new-instance p0, Ljava/io/BufferedWriter;
 
@@ -212,7 +194,6 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_3
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 97
     :try_start_9
     sget-object v4, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -238,10 +219,8 @@
 
     invoke-virtual {v4, v5}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 98
     invoke-virtual {p0, v3}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 99
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,35 +255,27 @@
 
     invoke-virtual {p0, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 100
     sget-object v0, Lcom/samsung/android/powerSolution/SOCJump;->mCurrentSoc:Lcom/samsung/android/powerSolution/SOCJump$SOC;
 
     sput-object v0, Lcom/samsung/android/powerSolution/SOCJump;->mPreviousSoc:Lcom/samsung/android/powerSolution/SOCJump$SOC;
 
-    .line 101
     invoke-virtual {p0}, Ljava/io/BufferedWriter;->close()V
 
-    .line 102
     invoke-virtual {p1}, Ljava/io/OutputStreamWriter;->close()V
 
-    .line 103
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 117
     invoke-virtual {p0}, Ljava/io/BufferedWriter;->close()V
 
-    .line 120
     invoke-virtual {p1}, Ljava/io/OutputStreamWriter;->close()V
 
-    .line 123
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
     return-void
 
-    .line 106
     :cond_1
     :try_start_a
     new-instance v2, Ljava/io/FileOutputStream;
@@ -314,7 +285,6 @@
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_5
     .catchall {:try_start_a .. :try_end_a} :catchall_4
 
-    .line 107
     :try_start_b
     new-instance p1, Ljava/io/OutputStreamWriter;
 
@@ -325,7 +295,6 @@
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_4
     .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    .line 108
     :try_start_c
     new-instance p0, Ljava/io/BufferedWriter;
 
@@ -334,7 +303,6 @@
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_3
     .catchall {:try_start_c .. :try_end_c} :catchall_2
 
-    .line 109
     :try_start_d
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -373,10 +341,8 @@
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_2
     .catchall {:try_start_d .. :try_end_d} :catchall_1
 
-    .line 117
     invoke-virtual {p0}, Ljava/io/BufferedWriter;->close()V
 
-    .line 120
     invoke-virtual {p1}, Ljava/io/OutputStreamWriter;->close()V
 
     goto :goto_4
@@ -463,7 +429,6 @@
 
     move-object v4, v2
 
-    .line 113
     :goto_3
     :try_start_e
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -472,26 +437,22 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 114
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_6
 
     if-eqz p1, :cond_2
 
-    .line 117
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->close()V
 
     :cond_2
     if-eqz v4, :cond_3
 
-    .line 120
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
 
     :cond_3
     if-eqz v2, :cond_7
 
-    .line 123
     :goto_4
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
@@ -503,26 +464,21 @@
     :goto_5
     if-eqz p1, :cond_4
 
-    .line 117
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->close()V
 
     :cond_4
     if-eqz v4, :cond_5
 
-    .line 120
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
 
     :cond_5
     if-eqz v2, :cond_6
 
-    .line 123
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
-    .line 125
     :cond_6
     throw p0
 
-    .line 127
     :cond_7
     :goto_6
     sget-object p0, Lcom/samsung/android/powerSolution/SOCJump;->mCurrentSoc:Lcom/samsung/android/powerSolution/SOCJump$SOC;
@@ -539,12 +495,10 @@
 
     const/4 v0, -0x1
 
-    .line 56
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 58
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/powerSolution/SOCJump$MyBroadcastReceiver;->onEventRun(I)V
     :try_end_0
@@ -555,7 +509,6 @@
     :catch_0
     move-exception p0
 
-    .line 60
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0

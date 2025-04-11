@@ -27,7 +27,6 @@
 
     const-string v5, "android:record_audio"
 
-    .line 526
     filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
 
     move-result-object v0
@@ -44,10 +43,8 @@
 
     const/4 v1, 0x1
 
-    .line 538
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/server/am/BaseAppStatePolicy;-><init>(Lcom/android/server/am/BaseAppStateTracker$Injector;Lcom/android/server/am/BaseAppStateTracker;Ljava/lang/String;Z)V
 
-    .line 540
     sget-object p1, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->DEFAULT_BG_PERMISSIONS_IN_MONITOR:[Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->parsePermissionConfig([Ljava/lang/String;)[Landroid/util/Pair;
@@ -64,15 +61,12 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 3
 
-    .line 602
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "APP PERMISSION TRACKER POLICY SETTINGS:"
 
-    .line 603
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 604
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,30 +81,24 @@
 
     move-result-object p2
 
-    .line 605
     invoke-super {p0, p1, p2}, Lcom/android/server/am/BaseAppStatePolicy;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 606
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p2, "bg_permission_in_monitor"
 
-    .line 607
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const/16 p2, 0x3d
 
-    .line 608
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(C)V
 
     const/16 p2, 0x5b
 
-    .line 609
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(C)V
 
     const/4 p2, 0x0
 
-    .line 610
     :goto_0
     iget-object v0, p0, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->mBgPermissionsInMonitor:[Landroid/util/Pair;
 
@@ -122,30 +110,24 @@
 
     if-lez p2, :cond_0
 
-    .line 612
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 614
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->mBgPermissionsInMonitor:[Landroid/util/Pair;
 
     aget-object v1, v1, p2
 
-    .line 615
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     if-eqz v2, :cond_1
 
-    .line 616
     check-cast v2, Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 618
     :cond_1
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 619
     iget-object v0, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -158,7 +140,6 @@
 
     if-eq v0, v2, :cond_2
 
-    .line 620
     iget-object v0, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -181,7 +162,6 @@
     :cond_3
     const/16 p0, 0x5d
 
-    .line 623
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(C)V
 
     return-void
@@ -190,7 +170,6 @@
 .method public getBgPermissionsInMonitor()[Landroid/util/Pair;
     .locals 0
 
-    .line 562
     iget-object p0, p0, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->mBgPermissionsInMonitor:[Landroid/util/Pair;
 
     return-object p0
@@ -199,7 +178,6 @@
 .method public onPropertiesChanged(Ljava/lang/String;)V
     .locals 1
 
-    .line 551
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     const-string v0, "bg_permission_in_monitor"
@@ -210,12 +188,10 @@
 
     if-nez v0, :cond_0
 
-    .line 556
     invoke-super {p0, p1}, Lcom/android/server/am/BaseAppStatePolicy;->onPropertiesChanged(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 553
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->updateBgPermissionsInMonitor()V
 
@@ -226,10 +202,8 @@
 .method public onSystemReady()V
     .locals 0
 
-    .line 545
     invoke-super {p0}, Lcom/android/server/am/BaseAppStatePolicy;->onSystemReady()V
 
-    .line 546
     invoke-virtual {p0}, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->updateBgPermissionsInMonitor()V
 
     return-void
@@ -238,7 +212,6 @@
 .method public onTrackerEnabled(Z)V
     .locals 0
 
-    .line 597
     iget-object p0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast p0, Lcom/android/server/am/AppPermissionTracker;
@@ -251,7 +224,6 @@
 .method public final parsePermissionConfig([Ljava/lang/String;)[Landroid/util/Pair;
     .locals 5
 
-    .line 566
     array-length p0, p1
 
     div-int/lit8 p0, p0, 0x2
@@ -262,13 +234,11 @@
 
     move v1, v0
 
-    .line 567
     :goto_0
     array-length v2, p1
 
     if-ge v0, v2, :cond_2
 
-    .line 569
     :try_start_0
     aget-object v2, p1, v0
 
@@ -288,7 +258,6 @@
     :goto_1
     add-int/lit8 v3, v0, 0x1
 
-    .line 570
     aget-object v4, p1, v3
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -313,7 +282,6 @@
 
     move-result-object v3
 
-    .line 569
     invoke-static {v2, v3}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v2
@@ -342,7 +310,6 @@
 
     const-string v2, "activity_manager"
 
-    .line 579
     invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->getString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -351,7 +318,6 @@
 
     const-string v1, ","
 
-    .line 584
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -361,13 +327,11 @@
     :cond_0
     sget-object v0, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->DEFAULT_BG_PERMISSIONS_IN_MONITOR:[Ljava/lang/String;
 
-    .line 583
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->parsePermissionConfig([Ljava/lang/String;)[Landroid/util/Pair;
 
     move-result-object v0
 
-    .line 585
     iget-object v1, p0, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->mBgPermissionsInMonitor:[Landroid/util/Pair;
 
     invoke-static {v1, v0}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
@@ -376,10 +340,8 @@
 
     if-nez v1, :cond_1
 
-    .line 586
     iput-object v0, p0, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->mBgPermissionsInMonitor:[Landroid/util/Pair;
 
-    .line 587
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStatePolicy;->isEnabled()Z
 
     move-result v0
@@ -388,12 +350,10 @@
 
     const/4 v0, 0x0
 
-    .line 589
     invoke-virtual {p0, v0}, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->onTrackerEnabled(Z)V
 
     const/4 v0, 0x1
 
-    .line 590
     invoke-virtual {p0, v0}, Lcom/android/server/am/AppPermissionTracker$AppPermissionPolicy;->onTrackerEnabled(Z)V
 
     :cond_1

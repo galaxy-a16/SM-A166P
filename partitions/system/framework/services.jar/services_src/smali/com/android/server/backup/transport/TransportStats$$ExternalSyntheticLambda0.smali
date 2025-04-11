@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/backup/transport/TransportStats$Stats;
 
     check-cast p2, Lcom/android/server/backup/transport/TransportStats$Stats;

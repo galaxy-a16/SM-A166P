@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationReminder$1;)V
     .locals 0
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/notification/NotificationReminder$1$1;->this$1:Lcom/android/server/notification/NotificationReminder$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 3
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/notification/NotificationReminder$1$1;->this$1:Lcom/android/server/notification/NotificationReminder$1;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationReminder$1;->this$0:Lcom/android/server/notification/NotificationReminder;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 125
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationReminder$1$1;->this$1:Lcom/android/server/notification/NotificationReminder$1;
 
@@ -50,21 +47,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 126
     iget-object v1, p0, Lcom/android/server/notification/NotificationReminder$1$1;->this$1:Lcom/android/server/notification/NotificationReminder$1;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationReminder$1;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$mplaySoundVibration(Lcom/android/server/notification/NotificationReminder;)V
 
-    .line 127
     iget-object v1, p0, Lcom/android/server/notification/NotificationReminder$1$1;->this$1:Lcom/android/server/notification/NotificationReminder$1;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationReminder$1;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$mcancelAlarm(Lcom/android/server/notification/NotificationReminder;)V
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/notification/NotificationReminder$1$1;->this$1:Lcom/android/server/notification/NotificationReminder$1;
 
     iget-object p0, p0, Lcom/android/server/notification/NotificationReminder$1;->this$0:Lcom/android/server/notification/NotificationReminder;
@@ -73,7 +67,6 @@
 
     goto :goto_0
 
-    .line 130
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationReminder$1$1;->this$1:Lcom/android/server/notification/NotificationReminder$1;
 
@@ -81,7 +74,6 @@
 
     invoke-static {p0}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$mcancelAlarm(Lcom/android/server/notification/NotificationReminder;)V
 
-    .line 132
     :goto_0
     monitor-exit v0
 

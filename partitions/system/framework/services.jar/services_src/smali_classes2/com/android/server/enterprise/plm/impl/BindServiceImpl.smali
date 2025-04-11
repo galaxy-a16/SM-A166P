@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAliveEvent(Lcom/android/server/enterprise/plm/impl/BindServiceImpl;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mAliveEvent:I
 
     return p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeathEvent(Lcom/android/server/enterprise/plm/impl/BindServiceImpl;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mDeathEvent:I
 
     return p0
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmObserver(Lcom/android/server/enterprise/plm/impl/BindServiceImpl;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mObserver:Landroid/os/Handler;
 
     return-object p0
@@ -48,22 +45,18 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/enterprise/plm/context/ProcessContext;)V
     .locals 0
 
-    .line 23
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/plm/impl/KeepAliveImpl;-><init>(Landroid/content/Context;Lcom/android/server/enterprise/plm/context/ProcessContext;)V
 
     const/4 p1, 0x0
 
-    .line 24
     iput-object p1, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mConnectionHelper:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
-    .line 25
     iput-object p1, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mObserver:Landroid/os/Handler;
 
     return-void
@@ -74,17 +67,14 @@
 .method public final clearConnectionHelper()V
     .locals 1
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mConnectionHelper:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     if-eqz v0, :cond_0
 
-    .line 88
     invoke-virtual {v0}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->clear()V
 
     const/4 v0, 0x0
 
-    .line 89
     iput-object v0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mConnectionHelper:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     :cond_0
@@ -94,7 +84,6 @@
 .method public getBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 30
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->getConnectionHelper()Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     move-result-object p0
@@ -109,19 +98,16 @@
 .method public final getConnectionHelper()Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
     .locals 5
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mConnectionHelper:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     if-nez v0, :cond_0
 
-    .line 95
     new-instance v0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     iget-object v1, p0, Lcom/android/server/enterprise/plm/impl/KeepAliveImpl;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/enterprise/plm/impl/KeepAliveImpl;->mProcessContext:Lcom/android/server/enterprise/plm/context/ProcessContext;
 
-    .line 97
     invoke-virtual {v2}, Lcom/android/server/enterprise/plm/context/ProcessContext;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -140,7 +126,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mConnectionHelper:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
-    .line 110
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mConnectionHelper:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
@@ -150,7 +135,6 @@
 .method public getProcessId()I
     .locals 0
 
-    .line 35
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->getConnectionHelper()Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     move-result-object p0
@@ -165,7 +149,6 @@
 .method public isAlive()Z
     .locals 0
 
-    .line 40
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->getConnectionHelper()Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     move-result-object p0
@@ -180,7 +163,6 @@
 .method public needToCleanUpOnConditionNotMet()Z
     .locals 0
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/enterprise/plm/impl/KeepAliveImpl;->mProcessContext:Lcom/android/server/enterprise/plm/context/ProcessContext;
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/context/ProcessContext;->needToCleanUpOnConditionNotMet()Z
@@ -193,7 +175,6 @@
 .method public needToKeepAlive(Lcom/android/server/enterprise/plm/IStateDelegate;)Z
     .locals 0
 
-    .line 46
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/plm/impl/KeepAliveImpl;->mProcessContext:Lcom/android/server/enterprise/plm/context/ProcessContext;
 
@@ -208,7 +189,6 @@
     :catchall_0
     move-exception p0
 
-    .line 48
     sget-object p1, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
@@ -225,13 +205,10 @@
 .method public registerObserver(Landroid/os/Handler;II)V
     .locals 0
 
-    .line 76
     iput-object p1, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mObserver:Landroid/os/Handler;
 
-    .line 77
     iput p2, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mAliveEvent:I
 
-    .line 78
     iput p3, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mDeathEvent:I
 
     return-void
@@ -240,12 +217,10 @@
 .method public start()Z
     .locals 3
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/enterprise/plm/impl/KeepAliveImpl;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/plm/impl/KeepAliveImpl;->mProcessContext:Lcom/android/server/enterprise/plm/context/ProcessContext;
 
-    .line 61
     invoke-virtual {v1}, Lcom/android/server/enterprise/plm/context/ProcessContext;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -256,14 +231,12 @@
 
     move-result-object v2
 
-    .line 60
     invoke-static {v0, v1, v2}, Lcom/android/server/enterprise/plm/common/Utils;->hasService(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 62
     sget-object v0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -292,7 +265,6 @@
 
     return p0
 
-    .line 65
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->getConnectionHelper()Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
@@ -308,7 +280,6 @@
 .method public stop()Z
     .locals 0
 
-    .line 70
     invoke-virtual {p0}, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->clearConnectionHelper()V
 
     const/4 p0, 0x1
@@ -321,7 +292,6 @@
 
     const/4 p1, 0x0
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/enterprise/plm/impl/BindServiceImpl;->mObserver:Landroid/os/Handler;
 
     return-void

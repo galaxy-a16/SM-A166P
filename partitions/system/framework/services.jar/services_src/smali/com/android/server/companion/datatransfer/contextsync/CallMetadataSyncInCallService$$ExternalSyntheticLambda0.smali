@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/telecom/Call;
 
     invoke-static {p1}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncInCallService;->$r8$lambda$r_MWcySFQi8rZYfPzXRVNacsPtc(Landroid/telecom/Call;)Landroid/telecom/Call;

@@ -7,13 +7,11 @@
 .method public static finallyEnd(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static finallyStart(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 17
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v1, "eng"
@@ -50,7 +49,6 @@
 .method public static getCurTime()J
     .locals 2
 
-    .line 134
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
@@ -67,14 +65,12 @@
 
     const-string v0, ":"
 
-    .line 127
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 128
     aget-object v0, p0, v0
 
     invoke-static {v0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
@@ -87,7 +83,6 @@
 
     const/4 v2, 0x1
 
-    .line 129
     aget-object p0, p0, v2
 
     invoke-static {p0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
@@ -124,7 +119,6 @@
     :cond_0
     const-string/jumbo p1, "psm_turn_off"
 
-    .line 95
     :goto_0
     new-instance v2, Landroid/os/Bundle;
 
@@ -134,10 +128,8 @@
 
     const-string/jumbo v4, "sleepmode"
 
-    .line 96
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 98
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -154,7 +146,6 @@
 
     const-string/jumbo p0, "wrong result"
 
-    .line 101
     invoke-static {v0, p0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -162,7 +153,6 @@
     :cond_1
     const-string/jumbo v2, "result"
 
-    .line 103
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
@@ -173,7 +163,6 @@
 
     const-string v4, "error_id"
 
-    .line 105
     invoke-virtual {p0, v4, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v4
@@ -182,12 +171,10 @@
 
     const-string v6, ""
 
-    .line 106
     invoke-virtual {p0, v5, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 107
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,12 +206,10 @@
     :cond_2
     const-string/jumbo v4, "version"
 
-    .line 109
     invoke-virtual {p0, v4, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 110
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -259,7 +244,6 @@
     :catch_0
     move-exception p0
 
-    .line 114
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -285,7 +269,6 @@
 
     const-string/jumbo v0, "power"
 
-    .line 33
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -294,7 +277,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 36
     invoke-virtual {p0}, Landroid/os/PowerManager;->isDeviceIdleMode()Z
 
     move-result p0
@@ -304,7 +286,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 39
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -330,7 +311,6 @@
 .method public static isEmergencyModeEnabled(Landroid/content/Context;)Z
     .locals 2
 
-    .line 24
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -356,7 +336,6 @@
 .method public static isLimitAppsAndHome(Landroid/content/Context;)Z
     .locals 2
 
-    .line 121
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -382,7 +361,6 @@
 .method public static isPowerConnected(Landroid/content/Context;)Z
     .locals 4
 
-    .line 54
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.BATTERY_CHANGED"
@@ -406,12 +384,10 @@
 
     const/4 v2, -0x1
 
-    .line 59
     invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 61
     sget-boolean v1, Lcom/android/server/ibs/sleepmode/SleepModeUtil;->DEBUG:Z
 
     const/4 v2, 0x4
@@ -439,7 +415,6 @@
     :goto_0
     move v0, v3
 
-    .line 75
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -465,7 +440,6 @@
 .method public static isPsmEnabled(Landroid/content/Context;)Z
     .locals 2
 
-    .line 20
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -493,7 +467,6 @@
 
     const-string/jumbo v0, "power"
 
-    .line 44
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -502,7 +475,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 47
     invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
 
     move-result p0
@@ -512,7 +484,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 49
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -538,7 +509,6 @@
 .method public static isUpsmEnabled(Landroid/content/Context;)Z
     .locals 2
 
-    .line 29
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

@@ -9,12 +9,10 @@
 
     const-string v0, "Error closing InputStream"
 
-    .line 23
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 26
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -35,7 +33,6 @@
 
     const/4 p0, 0x0
 
-    .line 29
     :try_start_0
     new-instance v3, Ljava/io/FileInputStream;
 
@@ -44,7 +41,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 30
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -66,7 +62,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     invoke-virtual {v1}, Ljava/io/File;->length()J
 
     move-result-wide v4
@@ -78,7 +73,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 33
     :try_start_2
     invoke-virtual {v3, v4}, Ljava/io/FileInputStream;->read([B)I
 
@@ -88,7 +82,6 @@
 
     const-string v1, "File Read Failed"
 
-    .line 34
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
@@ -99,7 +92,6 @@
     :cond_0
     move-object p0, v4
 
-    .line 42
     :goto_0
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
@@ -108,7 +100,6 @@
 
     goto :goto_4
 
-    .line 45
     :catch_0
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -145,7 +136,6 @@
     :goto_1
     move-object p0, v1
 
-    .line 38
     :goto_2
     :try_start_4
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -154,7 +144,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 42
     :try_start_5
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -162,7 +151,6 @@
 
     goto :goto_3
 
-    .line 45
     :catch_4
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -179,7 +167,6 @@
     :goto_5
     if-eqz v3, :cond_2
 
-    .line 42
     :try_start_6
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_6
@@ -187,11 +174,9 @@
 
     goto :goto_6
 
-    .line 45
     :catch_5
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     :cond_2
     :goto_6
     throw p0
@@ -204,25 +189,20 @@
 
     const-string/jumbo v1, "sendSecureUIAbortIntent"
 
-    .line 94
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string v1, "com.qualcomm.qti.services.secureui.action.ACTION_SUI_ABORT_MSG"
 
-    .line 96
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "com.qualcomm.qti.services.secureui"
 
-    .line 97
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 98
     sget-object v1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V

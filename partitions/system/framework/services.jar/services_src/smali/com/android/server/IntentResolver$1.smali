@@ -20,14 +20,12 @@
 .method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 816
     check-cast p1, Landroid/content/IntentFilter;
 
     invoke-virtual {p1}, Landroid/content/IntentFilter;->getPriority()I
 
     move-result p0
 
-    .line 817
     check-cast p2, Landroid/content/IntentFilter;
 
     invoke-virtual {p2}, Landroid/content/IntentFilter;->getPriority()I

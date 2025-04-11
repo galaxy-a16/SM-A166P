@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/NoAppIconFilter;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/am/mars/filter/filter/NoAppIconFilter$NoAppIconFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/NoAppIconFilter;
 
     return-object v0
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 24
     new-instance v0, Lcom/android/server/am/mars/filter/filter/NoAppIconFilter;
 
     const/4 v1, 0x0

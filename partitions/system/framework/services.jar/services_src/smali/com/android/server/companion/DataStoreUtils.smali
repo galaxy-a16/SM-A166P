@@ -7,7 +7,6 @@
 .method public static createStorageFileForUser(ILjava/lang/String;)Landroid/util/AtomicFile;
     .locals 1
 
-    .line 70
     new-instance v0, Landroid/util/AtomicFile;
 
     invoke-static {p0, p1}, Lcom/android/server/companion/DataStoreUtils;->getBaseStorageFileForUser(ILjava/lang/String;)Ljava/io/File;
@@ -22,7 +21,6 @@
 .method public static getBaseStorageFileForUser(ILjava/lang/String;)Ljava/io/File;
     .locals 1
 
-    .line 75
     new-instance v0, Ljava/io/File;
 
     invoke-static {p0}, Landroid/os/Environment;->getDataSystemDeDirectory(I)Ljava/io/File;
@@ -37,7 +35,6 @@
 .method public static isEndOfTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
     .locals 2
 
-    .line 55
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -70,7 +67,6 @@
 .method public static isStartOfTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
     .locals 2
 
-    .line 47
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -103,7 +99,6 @@
 .method public static writeToFileSafely(Landroid/util/AtomicFile;Lcom/android/internal/util/FunctionalUtils$ThrowingConsumer;)V
     .locals 2
 
-    .line 85
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/util/AtomicFile;->write(Ljava/util/function/Consumer;)V
     :try_end_0
@@ -114,7 +109,6 @@
     :catch_0
     move-exception p1
 
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

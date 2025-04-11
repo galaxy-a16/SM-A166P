@@ -20,13 +20,10 @@
 .method public constructor <init>(ILandroid/os/IBinder;)V
     .locals 0
 
-    .line 601
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 602
     iput p1, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecorderDeathHandler;->mRiid:I
 
-    .line 603
     iput-object p2, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecorderDeathHandler;->mRecorderToken:Landroid/os/IBinder;
 
     return-void
@@ -37,7 +34,6 @@
 .method public binderDied()V
     .locals 1
 
-    .line 607
     sget-object v0, Lcom/android/server/audio/RecordingActivityMonitor$RecorderDeathHandler;->sMonitor:Lcom/android/server/audio/RecordingActivityMonitor;
 
     iget p0, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecorderDeathHandler;->mRiid:I
@@ -52,7 +48,6 @@
 
     const/4 v0, 0x0
 
-    .line 612
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecorderDeathHandler;->mRecorderToken:Landroid/os/IBinder;
 
@@ -71,7 +66,6 @@
 
     const-string v2, "Could not link to recorder death"
 
-    .line 615
     invoke-static {v1, v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -80,7 +74,6 @@
 .method public release()V
     .locals 2
 
-    .line 621
     iget-object v0, p0, Lcom/android/server/audio/RecordingActivityMonitor$RecorderDeathHandler;->mRecorderToken:Landroid/os/IBinder;
 
     const/4 v1, 0x0

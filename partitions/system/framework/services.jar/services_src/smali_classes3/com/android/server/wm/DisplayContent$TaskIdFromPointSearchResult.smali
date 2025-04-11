@@ -23,7 +23,6 @@
 
     const/4 v0, 0x0
 
-    .line 9125
     iput-object v0, p0, Lcom/android/server/wm/DisplayContent$TaskIdFromPointSearchResult;->mTask:Lcom/android/server/wm/Task;
 
     return-void

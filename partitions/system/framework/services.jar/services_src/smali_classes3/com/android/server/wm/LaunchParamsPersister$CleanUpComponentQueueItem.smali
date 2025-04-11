@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/wm/LaunchParamsPersister;Ljava/util/List;)V
     .locals 0
 
-    .line 612
     iput-object p1, p0, Lcom/android/server/wm/LaunchParamsPersister$CleanUpComponentQueueItem;->this$0:Lcom/android/server/wm/LaunchParamsPersister;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 613
     iput-object p2, p0, Lcom/android/server/wm/LaunchParamsPersister$CleanUpComponentQueueItem;->mComponentFiles:Ljava/util/List;
 
     return-void
@@ -30,7 +28,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/LaunchParamsPersister;Ljava/util/List;Lcom/android/server/wm/LaunchParamsPersister$CleanUpComponentQueueItem-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/LaunchParamsPersister$CleanUpComponentQueueItem;-><init>(Lcom/android/server/wm/LaunchParamsPersister;Ljava/util/List;)V
 
     return-void
@@ -41,7 +38,6 @@
 .method public process()V
     .locals 3
 
-    .line 618
     iget-object p0, p0, Lcom/android/server/wm/LaunchParamsPersister$CleanUpComponentQueueItem;->mComponentFiles:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -62,14 +58,12 @@
 
     check-cast v0, Ljava/io/File;
 
-    .line 619
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 620
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

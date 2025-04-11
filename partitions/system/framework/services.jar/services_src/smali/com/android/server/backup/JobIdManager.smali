@@ -13,7 +13,6 @@
 
     return p0
 
-    .line 25
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 

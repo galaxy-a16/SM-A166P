@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 37
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -26,7 +25,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/rollback/RollbackManagerService;->mService:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->onBootCompleted()V
@@ -38,7 +36,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 42
     new-instance v0, Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -51,10 +48,8 @@
 
     const-string/jumbo v1, "rollback"
 
-    .line 43
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 44
     const-class v0, Lcom/android/server/rollback/RollbackManagerInternal;
 
     iget-object p0, p0, Lcom/android/server/rollback/RollbackManagerService;->mService:Lcom/android/server/rollback/RollbackManagerServiceImpl;
@@ -67,7 +62,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 49
     iget-object p0, p0, Lcom/android/server/rollback/RollbackManagerService;->mService:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I

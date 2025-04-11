@@ -17,7 +17,6 @@
 .method public createJobServiceContext(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/JobConcurrencyManager;Lcom/android/server/job/JobNotificationCoordinator;Lcom/android/internal/app/IBatteryStats;Lcom/android/server/job/JobPackageTracker;Landroid/os/Looper;)Lcom/android/server/job/JobServiceContext;
     .locals 7
 
-    .line 3006
     new-instance p0, Lcom/android/server/job/JobServiceContext;
 
     move-object v0, p0

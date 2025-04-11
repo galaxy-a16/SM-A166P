@@ -13,17 +13,14 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepository;)V
     .locals 1
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/WakeLockManager;->mWakeLockPackages:Ljava/util/Set;
 
-    .line 16
     iput-object p1, p0, Lcom/android/server/chimera/WakeLockManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     return-void
@@ -34,7 +31,6 @@
 .method public contains(Ljava/lang/String;)Z
     .locals 0
 
-    .line 36
     iget-object p0, p0, Lcom/android/server/chimera/WakeLockManager;->mWakeLockPackages:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -47,12 +43,10 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 28
     iget-object p0, p0, Lcom/android/server/chimera/WakeLockManager;->mWakeLockPackages:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -72,17 +66,14 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 29
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, " "
 
-    .line 30
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 32
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -94,12 +85,10 @@
 .method public update()V
     .locals 1
 
-    .line 20
     iget-object v0, p0, Lcom/android/server/chimera/WakeLockManager;->mWakeLockPackages:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 21
     iget-object v0, p0, Lcom/android/server/chimera/WakeLockManager;->mWakeLockPackages:Ljava/util/Set;
 
     iget-object p0, p0, Lcom/android/server/chimera/WakeLockManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;

@@ -24,24 +24,18 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/NfcLedCoverController;Landroid/os/IBinder;Landroid/content/ComponentName;III)V
     .locals 0
 
-    .line 1566
     iput-object p1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1567
     iput-object p2, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->token:Landroid/os/IBinder;
 
-    .line 1568
     iput-object p3, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->component:Landroid/content/ComponentName;
 
-    .line 1569
     iput p4, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->pid:I
 
-    .line 1570
     iput p5, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->uid:I
 
-    .line 1571
     iput p6, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->type:I
 
     return-void
@@ -52,7 +46,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 1576
     invoke-static {}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -75,7 +68,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1577
     iget-object v0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$fgetmListeners(Lcom/android/server/sepunion/cover/NfcLedCoverController;)Ljava/util/ArrayList;
@@ -84,7 +76,6 @@
 
     monitor-enter v0
 
-    .line 1578
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->this$0:Lcom/android/server/sepunion/cover/NfcLedCoverController;
 
@@ -94,12 +85,10 @@
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1579
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1580
     iget-object v0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
@@ -111,7 +100,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1579
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -123,12 +111,10 @@
 .method public onCoverTouchAccept()V
     .locals 2
 
-    .line 1584
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez p0, :cond_0
 
-    .line 1585
     invoke-static {}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -139,7 +125,6 @@
 
     return-void
 
-    .line 1590
     :cond_0
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback;
@@ -148,7 +133,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1592
     invoke-interface {p0}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback;->onCoverTouchAccept()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -158,7 +142,6 @@
     :catch_0
     move-exception p0
 
-    .line 1595
     invoke-static {}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -175,12 +158,10 @@
 .method public onCoverTouchReject()V
     .locals 2
 
-    .line 1600
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez p0, :cond_0
 
-    .line 1601
     invoke-static {}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -191,7 +172,6 @@
 
     return-void
 
-    .line 1606
     :cond_0
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback;
@@ -200,7 +180,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1608
     invoke-interface {p0}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback;->onCoverTouchReject()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -210,7 +189,6 @@
     :catch_0
     move-exception p0
 
-    .line 1611
     invoke-static {}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -227,12 +205,10 @@
 .method public onSystemCoverEvent(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 1616
     iget-object p0, p0, Lcom/android/server/sepunion/cover/NfcLedCoverController$NfcLedTouchListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez p0, :cond_0
 
-    .line 1617
     invoke-static {}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -243,7 +219,6 @@
 
     return-void
 
-    .line 1622
     :cond_0
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback;
@@ -252,7 +227,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1624
     invoke-interface {p0, p1, p2}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback;->onSystemCoverEvent(ILandroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -262,7 +236,6 @@
     :catch_0
     move-exception p0
 
-    .line 1627
     invoke-static {}, Lcom/android/server/sepunion/cover/NfcLedCoverController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;)V
     .locals 0
 
-    .line 39
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity$1;->this$0:Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 42
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 43
     invoke-static {}, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -88,7 +85,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -109,7 +105,6 @@
 
     if-ne p1, v3, :cond_0
 
-    .line 46
     invoke-static {}, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -118,7 +113,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity$1;->this$0:Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;
 
     const/4 p1, 0x2
@@ -127,7 +121,6 @@
 
     goto :goto_0
 
-    .line 49
     :cond_0
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -137,7 +130,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 51
     invoke-static {}, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -146,7 +138,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity$1;->this$0:Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;
 
     invoke-static {p0, v3}, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->-$$Nest$fputmsgState(Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;I)V

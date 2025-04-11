@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayController;I)V
     .locals 0
 
-    .line 1801
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     iput p2, p0, Lcom/android/server/display/WifiDisplayController$21;->val$state:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 6
 
-    .line 1804
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +86,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1807
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.intent.action.WIFI_DISPLAY_SOURCE_STATE"
@@ -97,17 +94,14 @@
 
     const/high16 v1, 0x4000000
 
-    .line 1808
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string/jumbo v1, "state"
 
-    .line 1809
     iget v3, p0, Lcom/android/server/display/WifiDisplayController$21;->val$state:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1810
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmIsDisplayVolumeControlSupported(Lcom/android/server/display/WifiDisplayController;)Z
@@ -118,7 +112,6 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1811
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmDisconnectByUser(Lcom/android/server/display/WifiDisplayController;)Z
@@ -129,7 +122,6 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1812
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmIsPortraitDisplay(Lcom/android/server/display/WifiDisplayController;)Z
@@ -140,7 +132,6 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1813
     iget v1, p0, Lcom/android/server/display/WifiDisplayController$21;->val$state:I
 
     if-ne v1, v2, :cond_1
@@ -153,7 +144,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1814
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmAdvertisedDisplay(Lcom/android/server/display/WifiDisplayController;)Landroid/hardware/display/WifiDisplay;
@@ -168,7 +158,6 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1816
     :cond_1
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -180,7 +169,6 @@
 
     invoke-virtual {v1, v0, v3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1818
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmIsDisplayVolumeControlSupported(Lcom/android/server/display/WifiDisplayController;)Z
@@ -191,7 +179,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1819
     iget v0, p0, Lcom/android/server/display/WifiDisplayController$21;->val$state:I
 
     const/16 v3, 0xf
@@ -202,7 +189,6 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 1820
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmAudioManager(Lcom/android/server/display/WifiDisplayController;)Landroid/media/AudioManager;
@@ -215,7 +201,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fputmPrevMusicStreamVolume(Lcom/android/server/display/WifiDisplayController;I)V
 
-    .line 1821
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmAudioManager(Lcom/android/server/display/WifiDisplayController;)Landroid/media/AudioManager;
@@ -226,7 +211,6 @@
 
     goto :goto_1
 
-    .line 1823
     :cond_2
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -238,7 +222,6 @@
 
     move-result v0
 
-    .line 1824
     iget-object v2, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v2}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmAudioManager(Lcom/android/server/display/WifiDisplayController;)Landroid/media/AudioManager;
@@ -256,7 +239,6 @@
     :cond_3
     invoke-virtual {v2, v5, v0, v1, v4}, Landroid/media/AudioManager;->semSetStreamVolume(IIII)V
 
-    .line 1828
     :cond_4
     :goto_1
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$21;->this$0:Lcom/android/server/display/WifiDisplayController;

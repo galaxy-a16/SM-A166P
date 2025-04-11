@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/DefaultWallpaper;Landroid/os/Looper;)V
     .locals 0
 
-    .line 82
     iput-object p1, p0, Lcom/samsung/server/wallpaper/DefaultWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/DefaultWallpaper;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 85
     iget v0, p1, Landroid/os/Message;->what:I
 
     const-string v1, "DefaultWallpaper"
@@ -36,10 +34,8 @@
     :pswitch_0
     const-string/jumbo p1, "msg MSG_UPDATE_DEFAULT_WALLPAPER"
 
-    .line 128
     invoke-static {v1, p1}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     iget-object p0, p0, Lcom/samsung/server/wallpaper/DefaultWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/DefaultWallpaper;
 
     invoke-static {p0}, Lcom/samsung/server/wallpaper/DefaultWallpaper;->-$$Nest$fgetmCallback(Lcom/samsung/server/wallpaper/DefaultWallpaper;)Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
@@ -50,7 +46,6 @@
 
     goto/16 :goto_2
 
-    .line 120
     :pswitch_1
     new-instance p1, Landroid/content/Intent;
 
@@ -58,15 +53,12 @@
 
     const-string v0, "com.sec.android.intent.action.WALLPAPER_CHANGED"
 
-    .line 121
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v0, 0x1000000
 
-    .line 122
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 123
     iget-object v0, p0, Lcom/samsung/server/wallpaper/DefaultWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/DefaultWallpaper;
 
     invoke-static {v0}, Lcom/samsung/server/wallpaper/DefaultWallpaper;->-$$Nest$fgetmContext(Lcom/samsung/server/wallpaper/DefaultWallpaper;)Landroid/content/Context;
@@ -91,16 +83,13 @@
 
     const-string/jumbo p0, "send wallpaperChangedIntent"
 
-    .line 124
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_2
 
-    .line 109
     :pswitch_2
     iget v0, p1, Landroid/os/Message;->arg2:I
 
-    .line 111
     invoke-static {v0}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isDex(I)Z
 
     move-result v1
@@ -111,7 +100,6 @@
 
     goto :goto_0
 
-    .line 113
     :cond_0
     invoke-static {v0}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isSubDisplay(I)Z
 
@@ -126,7 +114,6 @@
     :cond_1
     const-string v0, "lockscreen_wallpaper_transparent"
 
-    .line 116
     :goto_0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/DefaultWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/DefaultWallpaper;
 
@@ -136,11 +123,9 @@
 
     goto :goto_2
 
-    .line 98
     :pswitch_3
     iget v0, p1, Landroid/os/Message;->arg2:I
 
-    .line 99
     sget-boolean v1, Lcom/samsung/android/wallpaper/Rune;->SUPPORT_SUB_DISPLAY_MODE:Z
 
     const/4 v2, -0x2
@@ -153,7 +138,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 100
     iget-object p0, p0, Lcom/samsung/server/wallpaper/DefaultWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/DefaultWallpaper;
 
     invoke-static {p0}, Lcom/samsung/server/wallpaper/DefaultWallpaper;->-$$Nest$fgetmContext(Lcom/samsung/server/wallpaper/DefaultWallpaper;)Landroid/content/Context;
@@ -172,7 +156,6 @@
 
     goto :goto_2
 
-    .line 103
     :cond_2
     iget-object p0, p0, Lcom/samsung/server/wallpaper/DefaultWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/DefaultWallpaper;
 
@@ -192,11 +175,9 @@
 
     goto :goto_2
 
-    .line 87
     :pswitch_4
     iget v0, p1, Landroid/os/Message;->arg2:I
 
-    .line 89
     invoke-static {v0}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isDex(I)Z
 
     move-result v1
@@ -207,7 +188,6 @@
 
     goto :goto_1
 
-    .line 91
     :cond_3
     invoke-static {v0}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isSubDisplay(I)Z
 
@@ -222,7 +202,6 @@
     :cond_4
     const-string v0, "android.wallpaper.settings_systemui_transparency"
 
-    .line 94
     :goto_1
     iget-object p0, p0, Lcom/samsung/server/wallpaper/DefaultWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/DefaultWallpaper;
 

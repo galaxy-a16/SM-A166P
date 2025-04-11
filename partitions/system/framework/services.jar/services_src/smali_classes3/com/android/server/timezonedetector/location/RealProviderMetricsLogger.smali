@@ -14,10 +14,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput p1, p0, Lcom/android/server/timezonedetector/location/RealProviderMetricsLogger;->mProviderIndex:I
 
     return-void
@@ -26,7 +24,6 @@
 .method public static metricsProviderState(I)I
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const/4 p0, 0x0
@@ -81,17 +78,14 @@
 .method public onProviderStateChanged(I)V
     .locals 1
 
-    .line 55
     iget p0, p0, Lcom/android/server/timezonedetector/location/RealProviderMetricsLogger;->mProviderIndex:I
 
-    .line 57
     invoke-static {p1}, Lcom/android/server/timezonedetector/location/RealProviderMetricsLogger;->metricsProviderState(I)I
 
     move-result p1
 
     const/16 v0, 0x167
 
-    .line 55
     invoke-static {v0, p0, p1}, Lcom/android/internal/util/FrameworkStatsLog;->write(III)V
 
     return-void

@@ -13,13 +13,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
     iput p1, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode1:I
 
-    .line 97
     iput p2, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode2:I
 
     return-void
@@ -33,7 +30,6 @@
 .method public cancel(Landroid/view/KeyEvent;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -46,7 +42,6 @@
 
     return v0
 
-    .line 142
     :cond_0
     instance-of v1, p1, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;
 
@@ -54,10 +49,8 @@
 
     if-eqz v1, :cond_4
 
-    .line 143
     check-cast p1, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;
 
-    .line 144
     iget v1, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode1:I
 
     iget v3, p1, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode1:I
@@ -98,7 +91,6 @@
 .method public getKeyInterceptDelayMs()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x96
 
     return-wide v0
@@ -107,12 +99,10 @@
 .method public hashCode()I
     .locals 1
 
-    .line 152
     iget v0, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode1:I
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 153
     iget p0, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode2:I
 
     add-int/2addr v0, p0
@@ -123,7 +113,6 @@
 .method public preCondition()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -132,7 +121,6 @@
 .method public shouldInterceptKey(I)Z
     .locals 1
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->preCondition()Z
 
     move-result v0
@@ -162,12 +150,10 @@
 .method public shouldInterceptKeys(Landroid/util/SparseLongArray;)Z
     .locals 6
 
-    .line 109
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 110
     iget v2, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode1:I
 
     invoke-virtual {p1, v2}, Landroid/util/SparseLongArray;->get(I)J
@@ -182,7 +168,6 @@
 
     iget v2, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode2:I
 
-    .line 111
     invoke-virtual {p1, v2}, Landroid/util/SparseLongArray;->get(I)J
 
     move-result-wide v2
@@ -193,7 +178,6 @@
 
     iget v2, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode1:I
 
-    .line 112
     invoke-virtual {p1, v2}, Landroid/util/SparseLongArray;->get(I)J
 
     move-result-wide v2
@@ -208,7 +192,6 @@
 
     iget p0, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode2:I
 
-    .line 113
     invoke-virtual {p1, p0}, Landroid/util/SparseLongArray;->get(I)J
 
     move-result-wide p0
@@ -232,7 +215,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,7 +233,6 @@
 
     iget p0, p0, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->mKeyCode2:I
 
-    .line 134
     invoke-static {p0}, Landroid/view/KeyEvent;->keyCodeToString(I)Ljava/lang/String;
 
     move-result-object p0

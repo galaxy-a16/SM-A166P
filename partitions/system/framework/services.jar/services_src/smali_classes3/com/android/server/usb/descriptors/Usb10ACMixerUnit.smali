@@ -20,7 +20,6 @@
 .method public constructor <init>(IBBI)V
     .locals 0
 
-    .line 34
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/usb/descriptors/UsbACMixerUnit;-><init>(IBBI)V
 
     return-void
@@ -31,7 +30,6 @@
 .method public getChannelConfig()I
     .locals 0
 
-    .line 44
     iget p0, p0, Lcom/android/server/usb/descriptors/Usb10ACMixerUnit;->mChannelConfig:I
 
     return p0
@@ -40,7 +38,6 @@
 .method public getChannelCount()B
     .locals 0
 
-    .line 39
     iget-byte p0, p0, Lcom/android/server/usb/descriptors/UsbACMixerUnit;->mNumOutputs:B
 
     return p0
@@ -49,7 +46,6 @@
 .method public getControls()[B
     .locals 0
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/usb/descriptors/Usb10ACMixerUnit;->mControls:[B
 
     return-object p0
@@ -58,24 +54,20 @@
 .method public parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
     .locals 4
 
-    .line 62
     invoke-super {p0, p1}, Lcom/android/server/usb/descriptors/UsbACMixerUnit;->parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
 
-    .line 64
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->unpackUsbShort()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/Usb10ACMixerUnit;->mChannelConfig:I
 
-    .line 65
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lcom/android/server/usb/descriptors/Usb10ACMixerUnit;->mChanNameID:B
 
-    .line 67
     iget-byte v0, p0, Lcom/android/server/usb/descriptors/UsbACMixerUnit;->mNumInputs:B
 
     iget-byte v1, p0, Lcom/android/server/usb/descriptors/UsbACMixerUnit;->mNumOutputs:B
@@ -84,7 +76,6 @@
 
     move-result v0
 
-    .line 68
     new-array v1, v0, [B
 
     iput-object v1, p0, Lcom/android/server/usb/descriptors/Usb10ACMixerUnit;->mControls:[B
@@ -94,7 +85,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 70
     iget-object v2, p0, Lcom/android/server/usb/descriptors/Usb10ACMixerUnit;->mControls:[B
 
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getByte()B
@@ -107,7 +97,6 @@
 
     goto :goto_0
 
-    .line 73
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getByte()B
 
@@ -115,7 +104,6 @@
 
     iput-byte p1, p0, Lcom/android/server/usb/descriptors/Usb10ACMixerUnit;->mNameID:B
 
-    .line 75
     iget p0, p0, Lcom/android/server/usb/descriptors/UsbDescriptor;->mLength:I
 
     return p0
@@ -124,20 +112,16 @@
 .method public report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
     .locals 8
 
-    .line 80
     invoke-super {p0, p1}, Lcom/android/server/usb/descriptors/UsbACInterface;->report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
 
     const-string v0, "Mixer Unit"
 
     const/4 v1, 0x0
 
-    .line 82
     invoke-virtual {p1, v0, v1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeParagraph(Ljava/lang/String;Z)V
 
-    .line 83
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->openList()V
 
-    .line 85
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,20 +146,16 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbACMixerUnit;->getNumInputs()B
 
     move-result v0
 
-    .line 87
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbACMixerUnit;->getInputIDs()[B
 
     move-result-object v2
 
-    .line 88
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->openListItem()V
 
-    .line 89
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,7 +185,6 @@
 
     if-ge v3, v0, :cond_1
 
-    .line 91
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -230,7 +209,6 @@
 
     if-ge v3, v6, :cond_0
 
-    .line 93
     invoke-virtual {p1, v5}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->write(Ljava/lang/String;)V
 
     :cond_0
@@ -241,13 +219,10 @@
     :cond_1
     const-string v0, "]"
 
-    .line 96
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->write(Ljava/lang/String;)V
 
-    .line 97
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->closeListItem()V
 
-    .line 99
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,7 +243,6 @@
 
     invoke-virtual {p1, v2}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 100
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -293,15 +267,12 @@
 
     invoke-virtual {p1, v2}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 102
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/Usb10ACMixerUnit;->getControls()[B
 
     move-result-object p0
 
-    .line 103
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->openListItem()V
 
-    .line 104
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -322,13 +293,11 @@
 
     invoke-virtual {p1, v2}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->write(Ljava/lang/String;)V
 
-    .line 105
     :goto_1
     array-length v2, p0
 
     if-ge v1, v2, :cond_3
 
-    .line 106
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -345,14 +314,12 @@
 
     invoke-virtual {p1, v2}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->write(Ljava/lang/String;)V
 
-    .line 107
     array-length v2, p0
 
     add-int/lit8 v2, v2, -0x1
 
     if-ge v1, v2, :cond_2
 
-    .line 108
     invoke-virtual {p1, v5}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->write(Ljava/lang/String;)V
 
     :cond_2
@@ -360,14 +327,11 @@
 
     goto :goto_1
 
-    .line 111
     :cond_3
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->write(Ljava/lang/String;)V
 
-    .line 112
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->closeListItem()V
 
-    .line 113
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->closeList()V
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/voiceinteraction/VoiceInteractionManagerService;)V
     .locals 0
 
-    .line 2687
     iput-object p1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerService$3;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/app/IVoiceInteractionSessionListener$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 2711
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerService$3;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionManagerService;
 
     invoke-static {p0}, Lcom/android/server/voiceinteraction/VoiceInteractionManagerService;->-$$Nest$fgetmServiceStub(Lcom/android/server/voiceinteraction/VoiceInteractionManagerService;)Lcom/android/server/voiceinteraction/VoiceInteractionManagerService$VoiceInteractionManagerServiceStub;
@@ -37,21 +35,18 @@
 .method public onSetUiHints(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onVoiceSessionHidden()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onVoiceSessionShown()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -60,7 +55,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2702
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerService$3;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionManagerService;
 
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerService;->mContext:Landroid/content/Context;

@@ -11,26 +11,22 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static getDumpFile(Ljava/lang/String;)Ljava/io/File;
     .locals 3
 
-    .line 79
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    .line 80
     new-instance v1, Ljava/io/File;
 
     const-string v2, "log"
 
     invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 81
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -41,12 +37,10 @@
 .method public static logDebugInfoAndLogcat(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 33
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, "lom_log.txt"
 
-    .line 34
     invoke-static {p0, p1}, Lcom/samsung/android/localeoverlaymanager/LogWriter;->logToFile(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -55,7 +49,6 @@
 .method public static logToFile(Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
 
-    .line 38
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LogWriter;->getDumpFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
@@ -64,7 +57,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 39
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v2
@@ -75,7 +67,6 @@
 
     if-lez v2, :cond_4
 
-    .line 40
     new-instance v2, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -98,27 +89,23 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 41
     invoke-virtual {v0, v2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 43
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/LogWriter;->TAG:Ljava/lang/String;
 
     const-string v3, "Error in renaming to temp log file."
 
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :cond_0
     invoke-static {p0}, Lcom/samsung/android/localeoverlaymanager/LogWriter;->getDumpFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 47
     :try_start_0
     new-instance p0, Lcom/android/internal/util/FastPrintWriter;
 
@@ -130,7 +117,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 48
     :try_start_1
     new-instance v3, Ljava/io/BufferedReader;
 
@@ -146,7 +132,6 @@
 
     const-wide/32 v4, 0x3d090
 
-    .line 49
     :try_start_2
     invoke-virtual {v3, v4, v5}, Ljava/io/BufferedReader;->skip(J)J
 
@@ -158,10 +143,8 @@
 
     const-string v4, "Error in skipping file contents."
 
-    .line 51
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 54
     :cond_1
     :goto_0
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -170,12 +153,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 55
     invoke-virtual {p0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 57
     :cond_2
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
@@ -183,7 +164,6 @@
 
     if-nez v2, :cond_3
 
-    .line 59
     sget-object v2, Lcom/samsung/android/localeoverlaymanager/LogWriter;->TAG:Ljava/lang/String;
 
     const-string v4, "Error in deleting temp log file."
@@ -192,7 +172,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 61
     :cond_3
     :try_start_3
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
@@ -209,7 +188,6 @@
     :catchall_0
     move-exception v2
 
-    .line 47
     :try_start_5
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -249,7 +227,6 @@
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_0
 
-    .line 67
     :catch_0
     :cond_4
     :goto_3
@@ -264,7 +241,6 @@
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_1
 
-    .line 68
     :try_start_a
     new-instance v1, Ljava/text/SimpleDateFormat;
 
@@ -272,7 +248,6 @@
 
     invoke-direct {v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 69
     new-instance v2, Ljava/util/Date;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -285,7 +260,6 @@
 
     move-result-object v1
 
-    .line 70
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -304,7 +278,6 @@
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 71
     invoke-virtual {v0}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -317,7 +290,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_4
 
-    .line 73
     :try_start_b
     invoke-virtual {p0}, Ljava/io/PrintWriter;->close()V
     :try_end_b
@@ -328,7 +300,6 @@
     :catchall_4
     move-exception p1
 
-    .line 67
     :try_start_c
     invoke-virtual {p0}, Ljava/io/PrintWriter;->close()V
     :try_end_c

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/tracing/TracingServiceProxy;Landroid/content/Context;Landroid/content/Intent;IILjava/util/function/Function;)V
     .locals 6
 
-    .line 232
     iput-object p1, p0, Lcom/android/server/tracing/TracingServiceProxy$2;->this$0:Lcom/android/server/tracing/TracingServiceProxy;
 
     move-object v0, p0
@@ -36,7 +35,6 @@
 .method public getAutoDisconnectTimeoutMs()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x3a98
 
     return-wide v0
@@ -45,7 +43,6 @@
 .method public getRequestTimeoutMs()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x2710
 
     return-wide v0

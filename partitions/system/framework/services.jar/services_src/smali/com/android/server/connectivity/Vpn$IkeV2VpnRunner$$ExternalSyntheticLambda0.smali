@@ -20,7 +20,6 @@
 .method public final rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/connectivity/Vpn$IkeV2VpnRunner;->$r8$lambda$0qOTYjZ0z9pcwAyTwQYTjVj7WPc(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
 
     return-void

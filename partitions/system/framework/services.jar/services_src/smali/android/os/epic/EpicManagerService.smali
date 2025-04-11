@@ -35,24 +35,18 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 62
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 53
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mChromeDetector:Landroid/os/epic/EpicChromeDetector;
 
-    .line 56
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mUidObserver:Landroid/os/epic/EpicUidObserver;
 
-    .line 57
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mDisplayListener:Landroid/hardware/display/DisplayManager$DisplayListener;
 
-    .line 58
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mDisplayHandlerThread:Landroid/os/HandlerThread;
 
-    .line 63
     iput-object p1, p0, Landroid/os/epic/EpicManagerService;->mContext:Landroid/content/Context;
 
     return-void
@@ -63,14 +57,12 @@
 .method public onBootPhase(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStart()V
     .locals 2
 
-    .line 69
     new-instance v0, Landroid/os/epic/EpicManagerService$BinderService;
 
     const/4 v1, 0x0
@@ -92,7 +84,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 80
     invoke-static {v0, v1, v2}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -105,14 +96,12 @@
 
     if-nez v2, :cond_1
 
-    .line 83
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/os/epic/EpicManagerService;->mActivityManager:Landroid/app/IActivityManager;
 
-    .line 84
     iget-object v2, p0, Landroid/os/epic/EpicManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -129,14 +118,12 @@
 
     if-nez v0, :cond_0
 
-    .line 87
     new-instance v0, Landroid/os/epic/EpicChromeDetector;
 
     invoke-direct {v0}, Landroid/os/epic/EpicChromeDetector;-><init>()V
 
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mChromeDetector:Landroid/os/epic/EpicChromeDetector;
 
-    .line 89
     iget-object v0, p0, Landroid/os/epic/EpicManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "display"
@@ -149,7 +136,6 @@
 
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 90
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "DisplayChange"
@@ -158,10 +144,8 @@
 
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mDisplayHandlerThread:Landroid/os/HandlerThread;
 
-    .line 91
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 93
     new-instance v0, Landroid/os/epic/EpicDisplayListener;
 
     iget-object v1, p0, Landroid/os/epic/EpicManagerService;->mDisplayManager:Landroid/hardware/display/DisplayManager;
@@ -170,7 +154,6 @@
 
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mDisplayListener:Landroid/hardware/display/DisplayManager$DisplayListener;
 
-    .line 94
     iget-object v1, p0, Landroid/os/epic/EpicManagerService;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     new-instance v2, Landroid/os/Handler;
@@ -185,7 +168,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    .line 97
     :cond_0
     new-instance v0, Landroid/os/epic/EpicUidObserver;
 
@@ -201,7 +183,6 @@
 
     iput-object v0, p0, Landroid/os/epic/EpicManagerService;->mUidObserver:Landroid/os/epic/EpicUidObserver;
 
-    .line 98
     iget-object p0, p0, Landroid/os/epic/EpicManagerService;->mActivityManager:Landroid/app/IActivityManager;
 
     const/4 v1, 0x0
@@ -219,7 +200,6 @@
 
     const-string v0, "EPICSVC"
 
-    .line 103
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0

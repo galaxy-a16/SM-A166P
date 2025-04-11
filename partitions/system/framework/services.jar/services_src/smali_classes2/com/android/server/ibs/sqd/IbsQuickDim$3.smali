@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/ibs/sqd/IbsQuickDim;)V
     .locals 0
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onForegroundActivitiesChanged(IIZ)V
     .locals 2
 
-    .line 124
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p1}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmQuickdimEnable(Lcom/android/server/ibs/sqd/IbsQuickDim;)Z
@@ -59,7 +57,6 @@
 
     goto/16 :goto_1
 
-    .line 126
     :cond_0
     iget-object p1, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -69,7 +66,6 @@
 
     monitor-enter p1
 
-    .line 127
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -81,7 +77,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 128
     monitor-exit p1
 
     return-void
@@ -89,7 +84,6 @@
     :cond_1
     if-eqz p3, :cond_5
 
-    .line 130
     iget-object p3, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     iget-object p3, p3, Lcom/android/server/ibs/sqd/IbsQuickDim;->mBlockUnDimUidList:Ljava/util/List;
@@ -108,7 +102,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 131
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p2}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmQuickDimMode(Lcom/android/server/ibs/sqd/IbsQuickDim;)I
@@ -117,12 +110,10 @@
 
     if-eq p2, v0, :cond_5
 
-    .line 132
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p2, v0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmQuickDimMode(Lcom/android/server/ibs/sqd/IbsQuickDim;I)V
 
-    .line 133
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p2}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetDEBUG(Lcom/android/server/ibs/sqd/IbsQuickDim;)Z
@@ -155,7 +146,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     :cond_2
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -167,7 +157,6 @@
 
     goto :goto_0
 
-    .line 137
     :cond_3
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -185,7 +174,6 @@
 
     if-ne p2, p3, :cond_5
 
-    .line 138
     :cond_4
     iget-object p2, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
@@ -193,7 +181,6 @@
 
     invoke-static {p2, p3}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fputmQuickDimMode(Lcom/android/server/ibs/sqd/IbsQuickDim;I)V
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/ibs/sqd/IbsQuickDim$3;->this$0:Lcom/android/server/ibs/sqd/IbsQuickDim;
 
     invoke-static {p0}, Lcom/android/server/ibs/sqd/IbsQuickDim;->-$$Nest$fgetmQkDimHandler(Lcom/android/server/ibs/sqd/IbsQuickDim;)Lcom/android/server/ibs/sqd/IbsQuickDim$qkDimHandler;
@@ -202,7 +189,6 @@
 
     invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 143
     :cond_5
     :goto_0
     monitor-exit p1
@@ -226,13 +212,11 @@
 .method public onForegroundServicesChanged(III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onProcessDied(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method

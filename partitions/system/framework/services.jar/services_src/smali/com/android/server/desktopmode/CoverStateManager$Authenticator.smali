@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$idsFflCywhKq6t1LHFZPTTBIrFs(Lcom/android/server/desktopmode/CoverStateManager$Authenticator;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->lambda$initialize$0()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/CoverStateManager;)V
     .locals 0
 
-    .line 138
     iput-object p1, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/CoverStateManager;Lcom/android/server/desktopmode/CoverStateManager$Authenticator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;-><init>(Lcom/android/server/desktopmode/CoverStateManager;)V
 
     return-void
@@ -40,7 +37,6 @@
 .method private synthetic lambda$initialize$0()V
     .locals 3
 
-    .line 163
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -71,7 +67,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
@@ -81,7 +76,6 @@
 
     if-nez v0, :cond_1
 
-    .line 165
     invoke-virtual {p0}, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->setAuthCompleteAndResetCallbacksReceiver()V
 
     :cond_1
@@ -93,14 +87,12 @@
 .method public initialize()V
     .locals 7
 
-    .line 141
     invoke-virtual {p0}, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->isAuthNeeded()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/CoverStateManager;)Landroid/content/Context;
@@ -123,7 +115,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 146
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmInputManagerService(Lcom/android/server/desktopmode/CoverStateManager;)Lcom/android/server/input/InputManagerService;
@@ -132,7 +123,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmInputManagerService(Lcom/android/server/desktopmode/CoverStateManager;)Lcom/android/server/input/InputManagerService;
@@ -145,7 +135,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/input/InputManagerService;->setDesktopModeServiceCallbacks(Lcom/android/server/input/InputManagerService$DesktopModeServiceCallbacks;)V
 
-    .line 161
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
@@ -157,7 +146,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 162
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/CoverStateManager;)Landroid/os/Handler;
@@ -174,7 +162,6 @@
 
     goto :goto_0
 
-    .line 169
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->setAuthComplete()V
 
@@ -185,7 +172,6 @@
 .method public isAuthNeeded()Z
     .locals 3
 
-    .line 174
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmIsNfcAuthSystemFeatureEnabled(Lcom/android/server/desktopmode/CoverStateManager;)Z
@@ -214,7 +200,6 @@
 
     const/4 v2, -0x1
 
-    .line 175
     invoke-virtual {p0, v2, v0, v1}, Lcom/android/server/input/InputManagerService;->getSwitchState(III)I
 
     move-result p0
@@ -235,7 +220,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 200
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_0
@@ -264,7 +248,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
@@ -276,7 +259,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 202
     invoke-virtual {p0}, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->setAuthCompleteAndResetCallbacksReceiver()V
 
     return-void
@@ -285,7 +267,6 @@
 .method public setAuthComplete()V
     .locals 3
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmLock(Lcom/android/server/desktopmode/CoverStateManager;)Ljava/lang/Object;
@@ -294,7 +275,6 @@
 
     monitor-enter v0
 
-    .line 182
     :try_start_0
     iget-object v1, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
@@ -304,14 +284,12 @@
 
     if-nez v1, :cond_0
 
-    .line 183
     iget-object v1, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     const/4 v2, 0x1
 
     invoke-static {v1, v2}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fputmAuthComplete(Lcom/android/server/desktopmode/CoverStateManager;Z)V
 
-    .line 184
     iget-object v1, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v1}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$minitializeCoverState(Lcom/android/server/desktopmode/CoverStateManager;)Z
@@ -320,7 +298,6 @@
 
     if-nez v1, :cond_0
 
-    .line 186
     iget-object p0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/CoverStateManager;)Lcom/android/server/desktopmode/IStateManager;
@@ -329,7 +306,6 @@
 
     invoke-interface {p0, v2}, Lcom/android/server/desktopmode/IStateManager;->notifyScheduleUpdateDesktopMode(Z)V
 
-    .line 189
     :cond_0
     monitor-exit v0
 
@@ -348,10 +324,8 @@
 .method public setAuthCompleteAndResetCallbacksReceiver()V
     .locals 2
 
-    .line 193
     invoke-virtual {p0}, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->setAuthComplete()V
 
-    .line 194
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmInputManagerService(Lcom/android/server/desktopmode/CoverStateManager;)Lcom/android/server/input/InputManagerService;
@@ -362,7 +336,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/input/InputManagerService;->setDesktopModeServiceCallbacks(Lcom/android/server/input/InputManagerService$DesktopModeServiceCallbacks;)V
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/desktopmode/CoverStateManager$Authenticator;->this$0:Lcom/android/server/desktopmode/CoverStateManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/CoverStateManager;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/CoverStateManager;)Landroid/content/Context;

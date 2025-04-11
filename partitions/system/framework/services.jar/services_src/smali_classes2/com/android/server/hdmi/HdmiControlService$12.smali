@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;)V
     .locals 0
 
-    .line 903
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$12;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 2
 
-    .line 906
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$12;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     const-string/jumbo v0, "transition_arc_to_earc_tx"

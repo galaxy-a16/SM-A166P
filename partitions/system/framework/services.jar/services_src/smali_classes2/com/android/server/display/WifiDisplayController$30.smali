@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayController;Z)V
     .locals 0
 
-    .line 2219
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$30;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     iput-boolean p2, p0, Lcom/android/server/display/WifiDisplayController$30;->val$allow:Z
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 2
 
-    .line 2222
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$30;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmContext(Lcom/android/server/display/WifiDisplayController;)Landroid/content/Context;
@@ -48,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2224
     iget-boolean p0, p0, Lcom/android/server/display/WifiDisplayController$30;->val$allow:Z
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/wifi/SemWifiManager;->setAllowWifiScan(Z)V

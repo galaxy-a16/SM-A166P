@@ -7,7 +7,6 @@
 .method public static getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 1
 
-    .line 86
     sget-object v0, Lcom/samsung/android/server/util/SafetySystemService$LazyHolder;->sSingleton:Lcom/samsung/android/server/util/SafetySystemService$Manager;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/server/util/SafetySystemService$Manager;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -20,7 +19,6 @@
 .method public static onSystemReady(Lcom/android/server/wm/ActivityTaskManagerService;Landroid/content/Context;)V
     .locals 1
 
-    .line 67
     sget-object v0, Lcom/samsung/android/server/util/SafetySystemService$LazyHolder;->sSingleton:Lcom/samsung/android/server/util/SafetySystemService$Manager;
 
     invoke-virtual {v0, p0, p1}, Lcom/samsung/android/server/util/SafetySystemService$Manager;->onSystemReady(Lcom/android/server/wm/ActivityTaskManagerService;Landroid/content/Context;)V
@@ -31,7 +29,6 @@
 .method public static registerForSystemReady(Lcom/samsung/android/server/util/SafetySystemService$Callback;)V
     .locals 1
 
-    .line 72
     sget-object v0, Lcom/samsung/android/server/util/SafetySystemService$LazyHolder;->sSingleton:Lcom/samsung/android/server/util/SafetySystemService$Manager;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/server/util/SafetySystemService$Manager;->registerCallback(Lcom/samsung/android/server/util/SafetySystemService$Callback;)V
@@ -46,12 +43,10 @@
 
     const-string p1, "Should be called after system ready."
 
-    .line 95
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 98
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

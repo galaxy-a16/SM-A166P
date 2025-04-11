@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationReminder;)V
     .locals 0
 
-    .line 267
     iput-object p1, p0, Lcom/android/server/notification/NotificationReminder$6;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 2
 
-    .line 270
     new-instance v0, Lcom/android/server/notification/NotificationReminder$UpdateEnablePackageTask;
 
     iget-object p0, p0, Lcom/android/server/notification/NotificationReminder$6;->this$0:Lcom/android/server/notification/NotificationReminder;
@@ -40,7 +38,6 @@
 
     new-array p0, p0, [Ljava/lang/Void;
 
-    .line 271
     invoke-virtual {v0, p0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void

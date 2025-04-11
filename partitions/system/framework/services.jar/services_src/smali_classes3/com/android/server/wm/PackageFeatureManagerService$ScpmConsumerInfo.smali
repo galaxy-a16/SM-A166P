@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 50
     sget v0, Landroid/os/Build$VERSION;->SEM_PLATFORM_INT:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -28,7 +27,6 @@
 
     const-string v0, "hz6wdikdtw"
 
-    .line 53
     sget-object v1, Lcom/android/server/wm/PackageFeatureManagerService$ScpmConsumerInfo;->VERSION:Ljava/lang/String;
 
     const-string v2, "android"
@@ -41,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/PackageFeatureManagerService$ScpmConsumerInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/PackageFeatureManagerService$ScpmConsumerInfo;-><init>()V
 
     return-void

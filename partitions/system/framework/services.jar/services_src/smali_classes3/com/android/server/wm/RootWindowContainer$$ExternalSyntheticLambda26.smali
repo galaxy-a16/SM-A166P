@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>([Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/RootWindowContainer$$ExternalSyntheticLambda26;->f$0:[Z
@@ -27,7 +26,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/RootWindowContainer$$ExternalSyntheticLambda26;->f$0:[Z
 
     check-cast p1, Lcom/android/server/wm/Task;

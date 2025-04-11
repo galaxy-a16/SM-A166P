@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/ResourcePressureUtil;->$r8$lambda$Tace-lqpX3BpL0RMatGKVDmL32E(Ljava/lang/String;)Ljava/lang/String;

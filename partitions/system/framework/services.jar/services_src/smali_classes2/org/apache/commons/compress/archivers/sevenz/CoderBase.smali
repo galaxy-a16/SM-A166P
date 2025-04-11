@@ -19,7 +19,6 @@
 
     new-array v0, v0, [B
 
-    .line 29
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/CoderBase;->NONE:[B
 
     return-void
@@ -28,10 +27,8 @@
 .method public varargs constructor <init>([Ljava/lang/Class;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lorg/apache/commons/compress/archivers/sevenz/CoderBase;->acceptableOptions:[Ljava/lang/Class;
 
     return-void
@@ -42,7 +39,6 @@
 .method public canAcceptOptions(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 42
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/CoderBase;->acceptableOptions:[Ljava/lang/Class;
 
     array-length v0, p0
@@ -56,7 +52,6 @@
 
     aget-object v3, p0, v2
 
-    .line 43
     invoke-virtual {v3, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v3
@@ -82,7 +77,6 @@
 .method public getOptionsFromCoder(Lorg/apache/commons/compress/archivers/sevenz/Coder;Ljava/io/InputStream;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0

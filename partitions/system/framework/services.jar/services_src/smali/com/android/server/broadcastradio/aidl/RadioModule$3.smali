@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/broadcastradio/aidl/RadioModule;[Landroid/hardware/broadcastradio/ICloseHandle;)V
     .locals 0
 
-    .line 488
     iput-object p1, p0, Lcom/android/server/broadcastradio/aidl/RadioModule$3;->this$0:Lcom/android/server/broadcastradio/aidl/RadioModule;
 
     iput-object p2, p0, Lcom/android/server/broadcastradio/aidl/RadioModule$3;->val$hwCloseHandle:[Landroid/hardware/broadcastradio/ICloseHandle;
@@ -30,7 +29,6 @@
 
     const/4 v0, 0x0
 
-    .line 491
     :try_start_0
     iget-object v1, p0, Lcom/android/server/broadcastradio/aidl/RadioModule$3;->val$hwCloseHandle:[Landroid/hardware/broadcastradio/ICloseHandle;
 
@@ -51,10 +49,8 @@
 
     const-string v4, "BcRadioAidlSrv.module"
 
-    .line 493
     invoke-static {v4, v1, v2, v3}, Lcom/android/server/utils/Slogf;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 495
     :goto_0
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/RadioModule$3;->val$hwCloseHandle:[Landroid/hardware/broadcastradio/ICloseHandle;
 

@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -32,7 +31,6 @@
 
     const-wide/16 v0, -0x1
 
-    .line 114
     invoke-static {v0, v1}, Landroid/net/util/NetdService;->get(J)Landroid/net/INetd;
 
     move-result-object v0
@@ -49,7 +47,6 @@
 
     if-nez v2, :cond_0
 
-    .line 76
     invoke-static {}, Landroid/net/util/NetdService;->getInstance()Landroid/net/INetd;
 
     move-result-object p0
@@ -59,7 +56,6 @@
     :cond_0
     if-lez v2, :cond_1
 
-    .line 79
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -74,7 +70,6 @@
     :goto_0
     move-wide p0, v0
 
-    .line 84
     :catch_0
     :goto_1
     invoke-static {}, Landroid/net/util/NetdService;->getInstance()Landroid/net/INetd;
@@ -85,7 +80,6 @@
 
     return-object v4
 
-    .line 89
     :cond_2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -108,17 +102,14 @@
 
     const-wide/16 v6, 0x3e8
 
-    .line 93
     invoke-static {p0, p1, v6, v7}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p0
 
-    .line 94
     invoke-static {p0, p1, v4, v5}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p0
 
-    .line 96
     :try_start_0
     invoke-static {p0, p1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -132,19 +123,16 @@
 
     const-string/jumbo v0, "netd"
 
-    .line 51
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 50
     invoke-static {v0}, Landroid/net/INetd$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/INetd;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 53
     sget-object v1, Landroid/net/util/NetdService;->TAG:Ljava/lang/String;
 
     const-string v2, "WARNING: returning null INetd instance."
@@ -158,7 +146,6 @@
 .method public static run(Landroid/net/util/NetdService$NetdCommand;)V
     .locals 4
 
-    .line 128
     :goto_0
     :try_start_0
     invoke-static {}, Landroid/net/util/NetdService;->get()Landroid/net/INetd;
@@ -174,7 +161,6 @@
     :catch_0
     move-exception v0
 
-    .line 131
     sget-object v1, Landroid/net/util/NetdService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;

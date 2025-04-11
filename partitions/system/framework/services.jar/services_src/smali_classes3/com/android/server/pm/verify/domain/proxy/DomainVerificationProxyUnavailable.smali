@@ -20,7 +20,6 @@
 .method public getComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public isCallerVerifier(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -38,7 +36,6 @@
 .method public runMessage(ILjava/lang/Object;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -47,6 +44,5 @@
 .method public sendBroadcastForPackages(Ljava/util/Set;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

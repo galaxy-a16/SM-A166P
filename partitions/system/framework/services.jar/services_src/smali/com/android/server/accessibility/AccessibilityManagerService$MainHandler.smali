@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/accessibility/AccessibilityManagerService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 5095
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$MainHandler;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
-    .line 5096
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,22 +23,18 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 5101
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x8
 
     if-ne v0, v1, :cond_1
 
-    .line 5102
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/KeyEvent;
 
-    .line 5103
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 5104
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$MainHandler;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/AccessibilityManagerService;)Ljava/lang/Object;
@@ -49,7 +43,6 @@
 
     monitor-enter v1
 
-    .line 5105
     :try_start_0
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$MainHandler;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -67,7 +60,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 5106
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$MainHandler;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {p0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmInputFilter(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/AccessibilityInputFilter;
@@ -76,13 +68,11 @@
 
     invoke-virtual {p0, v0, p1}, Landroid/view/InputFilter;->sendInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 5108
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5109
     invoke-virtual {v0}, Landroid/view/KeyEvent;->recycle()V
 
     goto :goto_0
@@ -90,7 +80,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5108
     :try_start_1
     monitor-exit v1
     :try_end_1

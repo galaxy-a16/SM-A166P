@@ -26,49 +26,42 @@
 .method public onAppIdAdded(Lcom/android/server/permission/access/MutateStateScope;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAppIdRemoved(Lcom/android/server/permission/access/MutateStateScope;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onInitialized(Lcom/android/server/permission/access/MutateStateScope;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackageAdded(Lcom/android/server/permission/access/MutateStateScope;Lcom/android/server/pm/pkg/PackageState;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackageInstalled(Lcom/android/server/permission/access/MutateStateScope;Lcom/android/server/pm/pkg/PackageState;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackageRemoved(Lcom/android/server/permission/access/MutateStateScope;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackageUninstalled(Lcom/android/server/permission/access/MutateStateScope;Ljava/lang/String;II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -78,35 +71,30 @@
 .method public onStorageVolumeMounted(Lcom/android/server/permission/access/MutateStateScope;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSystemReady(Lcom/android/server/permission/access/MutateStateScope;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserAdded(Lcom/android/server/permission/access/MutateStateScope;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserRemoved(Lcom/android/server/permission/access/MutateStateScope;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public parseSystemState(Lcom/android/modules/utils/BinaryXmlPullParser;Lcom/android/server/permission/access/AccessState;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -116,7 +104,6 @@
 .method public serializeSystemState(Lcom/android/modules/utils/BinaryXmlSerializer;Lcom/android/server/permission/access/AccessState;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

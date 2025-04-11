@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/ComponentName$WithComponentName;
 
     invoke-static {p1}, Lcom/android/internal/util/jobs/DumpUtils;->$r8$lambda$RQ001XcLCiz5AgjQDz2-s62L4_s(Landroid/content/ComponentName$WithComponentName;)Z

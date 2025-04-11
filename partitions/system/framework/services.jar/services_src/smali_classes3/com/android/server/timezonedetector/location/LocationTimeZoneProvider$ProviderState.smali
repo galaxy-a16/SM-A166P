@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$smprettyPrintStateEnum(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->prettyPrintStateEnum(I)Ljava/lang/String;
 
     move-result-object p0
@@ -32,31 +31,24 @@
 .method public constructor <init>(Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;ILandroid/service/timezone/TimeZoneProviderEvent;Lcom/android/server/timezonedetector/ConfigurationInternal;Ljava/lang/String;)V
     .locals 0
 
-    .line 194
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 195
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->provider:Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;
 
-    .line 196
     iput p2, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
-    .line 197
     iput-object p3, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->event:Landroid/service/timezone/TimeZoneProviderEvent;
 
-    .line 198
     iput-object p4, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->currentUserConfiguration:Lcom/android/server/timezonedetector/ConfigurationInternal;
 
-    .line 199
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->mStateEntryTimeMillis:J
 
-    .line 200
     iput-object p5, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->mDebugInfo:Ljava/lang/String;
 
     return-void
@@ -65,7 +57,6 @@
 .method public static createStartingState(Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;)Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;
     .locals 7
 
-    .line 206
     new-instance v6, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;
 
     const/4 v2, 0x0
@@ -90,7 +81,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 385
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +158,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 355
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -181,11 +170,9 @@
 
     goto :goto_1
 
-    .line 358
     :cond_1
     check-cast p1, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;
 
-    .line 359
     iget v2, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
     iget v3, p1, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
@@ -196,7 +183,6 @@
 
     iget-object v3, p1, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->event:Landroid/service/timezone/TimeZoneProviderEvent;
 
-    .line 360
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -207,7 +193,6 @@
 
     iget-object p1, p1, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->currentUserConfiguration:Lcom/android/server/timezonedetector/ConfigurationInternal;
 
-    .line 361
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -230,14 +215,12 @@
 .method public getProviderStatus()I
     .locals 3
 
-    .line 308
     iget v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
     const/4 v1, 0x2
 
     packed-switch v0, :pswitch_data_0
 
-    .line 326
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -250,7 +233,6 @@
 
     iget p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
-    .line 327
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->prettyPrintStateEnum(I)Ljava/lang/String;
 
     move-result-object p0
@@ -302,7 +284,6 @@
 .method public getReportedStatus()Landroid/service/timezone/TimeZoneProviderStatus;
     .locals 0
 
-    .line 334
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->event:Landroid/service/timezone/TimeZoneProviderEvent;
 
     if-nez p0, :cond_0
@@ -323,7 +304,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 366
     iget v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -348,7 +328,6 @@
 .method public isStarted()Z
     .locals 2
 
-    .line 292
     iget p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
     const/4 v0, 0x1
@@ -376,7 +355,6 @@
 .method public isTerminated()Z
     .locals 1
 
-    .line 299
     iget p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
     const/4 v0, 0x5
@@ -405,14 +383,12 @@
 .method public newState(ILandroid/service/timezone/TimeZoneProviderEvent;Lcom/android/server/timezonedetector/ConfigurationInternal;Ljava/lang/String;)Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;
     .locals 7
 
-    .line 220
     iget v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
     const/4 v1, 0x0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 244
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -435,7 +411,6 @@
 
     throw p1
 
-    .line 240
     :pswitch_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -449,7 +424,6 @@
 
     iget p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
-    .line 241
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->prettyPrintStateEnum(I)Ljava/lang/String;
 
     move-result-object p0
@@ -474,7 +448,6 @@
 
     packed-switch p1, :pswitch_data_1
 
-    .line 284
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -502,7 +475,6 @@
 
     goto :goto_0
 
-    .line 275
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -541,7 +513,6 @@
 
     goto :goto_0
 
-    .line 256
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -570,7 +541,6 @@
     :pswitch_5
     if-eqz p3, :cond_2
 
-    .line 287
     :goto_0
     new-instance v6, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;
 
@@ -590,7 +560,6 @@
 
     return-object v6
 
-    .line 267
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -600,7 +569,6 @@
 
     throw p0
 
-    .line 251
     :pswitch_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -612,7 +580,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 252
     invoke-static {v1}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->prettyPrintStateEnum(I)Ljava/lang/String;
 
     move-result-object p2
@@ -627,7 +594,6 @@
 
     throw p0
 
-    .line 223
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -639,7 +605,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 224
     invoke-static {v1}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->prettyPrintStateEnum(I)Ljava/lang/String;
 
     move-result-object p2
@@ -650,7 +615,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 226
     invoke-static {v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->prettyPrintStateEnum(I)Ljava/lang/String;
 
     move-result-object p2
@@ -691,7 +655,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 341
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -702,7 +665,6 @@
 
     iget v1, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
-    .line 342
     invoke-static {v1}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->prettyPrintStateEnum(I)Ljava/lang/String;
 
     move-result-object v1

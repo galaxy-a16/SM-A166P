@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$oeBgztBFhkLstOt5uU4vzRLgDig(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/backup/internal/OnTaskFinishedListener;->lambda$static$0(Ljava/lang/String;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 24
     new-instance v0, Lcom/android/server/backup/internal/OnTaskFinishedListener$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/backup/internal/OnTaskFinishedListener$$ExternalSyntheticLambda0;-><init>()V
@@ -33,7 +31,6 @@
 .method public static synthetic lambda$static$0(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeathRecipient(Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;)Landroid/os/IBinder$DeathRecipient;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
     return-object p0
@@ -24,17 +23,14 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 2
 
-    .line 711
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 678
     new-instance v0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache$1;-><init>(Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;)V
 
     iput-object v0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 693
     new-instance v0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache$2;
 
     const/16 v1, 0x64
@@ -43,7 +39,6 @@
 
     iput-object v0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mCache:Landroid/util/LruCache;
 
-    .line 712
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mLock:Ljava/lang/Object;
@@ -56,15 +51,12 @@
 .method public get(Landroid/os/IBinder;)Lcom/android/server/textclassifier/TextClassificationManagerService$StrippedTextClassificationContext;
     .locals 1
 
-    .line 730
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 731
     iget-object v0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 732
     :try_start_0
     iget-object p0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mCache:Landroid/util/LruCache;
 
@@ -81,7 +73,6 @@
     :catchall_0
     move-exception p0
 
-    .line 733
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -92,12 +83,10 @@
 .method public put(Landroid/view/textclassifier/TextClassificationSessionId;Landroid/view/textclassifier/TextClassificationContext;)V
     .locals 4
 
-    .line 717
     iget-object v0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 718
     :try_start_0
     iget-object v1, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mCache:Landroid/util/LruCache;
 
@@ -113,7 +102,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 721
     :try_start_1
     invoke-virtual {p1}, Landroid/view/textclassifier/TextClassificationSessionId;->getToken()Landroid/os/IBinder;
 
@@ -138,10 +126,8 @@
 
     const-string p2, "SessionCache: Failed to link to death"
 
-    .line 723
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 725
     :goto_0
     monitor-exit v0
 
@@ -160,15 +146,12 @@
 .method public remove(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 737
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 738
     iget-object v0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 744
     :try_start_0
     iget-object v1, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
@@ -179,14 +162,12 @@
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 751
     :catch_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mCache:Landroid/util/LruCache;
 
     invoke-virtual {p0, p1}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 752
     monitor-exit v0
 
     return-void
@@ -204,12 +185,10 @@
 .method public size()I
     .locals 1
 
-    .line 756
     iget-object v0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 757
     :try_start_0
     iget-object p0, p0, Lcom/android/server/textclassifier/TextClassificationManagerService$SessionCache;->mCache:Landroid/util/LruCache;
 
@@ -224,7 +203,6 @@
     :catchall_0
     move-exception p0
 
-    .line 758
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

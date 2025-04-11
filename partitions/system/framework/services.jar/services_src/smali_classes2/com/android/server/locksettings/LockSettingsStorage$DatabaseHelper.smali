@@ -17,17 +17,14 @@
 
     const-string v2, "locksettings.db"
 
-    .line 752
     invoke-direct {p0, p1, v2, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     const/4 p1, 0x0
 
-    .line 753
     invoke-virtual {p0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->setWriteAheadLoggingEnabled(Z)V
 
     const-wide/16 v0, 0x7530
 
-    .line 755
     invoke-virtual {p0, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;->setIdleConnectionTimeout(J)V
 
     return-void
@@ -40,7 +37,6 @@
 
     const-string p0, "CREATE TABLE locksettings (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,user INTEGER,value TEXT);"
 
-    .line 763
     invoke-virtual {p1, p0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     return-void
@@ -49,15 +45,12 @@
 .method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 0
 
-    .line 773
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/LockSettingsStorage$DatabaseHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 774
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStorage$DatabaseHelper;->mCallback:Lcom/android/server/locksettings/LockSettingsStorage$Callback;
 
     if-eqz p0, :cond_0
 
-    .line 775
     invoke-interface {p0, p1}, Lcom/android/server/locksettings/LockSettingsStorage$Callback;->initialize(Landroid/database/sqlite/SQLiteDatabase;)V
 
     :cond_0
@@ -82,7 +75,6 @@
 
     const-string p1, "Failed to upgrade database!"
 
-    .line 788
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -92,7 +84,6 @@
 .method public setCallback(Lcom/android/server/locksettings/LockSettingsStorage$Callback;)V
     .locals 0
 
-    .line 759
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsStorage$DatabaseHelper;->mCallback:Lcom/android/server/locksettings/LockSettingsStorage$Callback;
 
     return-void

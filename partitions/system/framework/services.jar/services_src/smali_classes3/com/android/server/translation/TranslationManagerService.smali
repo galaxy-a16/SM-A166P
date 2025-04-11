@@ -7,7 +7,6 @@
 .method public static bridge synthetic -$$Nest$menforceCallerHasPermission(Lcom/android/server/translation/TranslationManagerService;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/translation/TranslationManagerService;->enforceCallerHasPermission(Ljava/lang/String;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$misCalledByServiceAppLocked(Lcom/android/server/translation/TranslationManagerService;ILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/translation/TranslationManagerService;->isCalledByServiceAppLocked(ILjava/lang/String;)Z
 
     move-result p0
@@ -27,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$misDefaultServiceLocked(Lcom/android/server/translation/TranslationManagerService;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/translation/TranslationManagerService;->isDefaultServiceLocked(I)Z
 
     move-result p0
@@ -38,7 +35,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 76
     new-instance v0, Lcom/android/server/infra/FrameworkResourcesServiceNameResolver;
 
     const v1, 0x1040316
@@ -57,7 +53,6 @@
 .method public static synthetic access$000(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -66,7 +61,6 @@
 .method public static synthetic access$100(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -77,7 +71,6 @@
 .method public static synthetic access$1000(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -86,7 +79,6 @@
 .method public static synthetic access$1100(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -97,7 +89,6 @@
 .method public static synthetic access$1200(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -106,7 +97,6 @@
 .method public static synthetic access$1300(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -117,7 +107,6 @@
 .method public static synthetic access$1400(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -126,7 +115,6 @@
 .method public static synthetic access$1500(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -137,7 +125,6 @@
 .method public static synthetic access$1600(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -146,7 +133,6 @@
 .method public static synthetic access$1700(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -157,7 +143,6 @@
 .method public static synthetic access$1800(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -166,7 +151,6 @@
 .method public static synthetic access$1900(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -177,7 +161,6 @@
 .method public static synthetic access$200(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -186,7 +169,6 @@
 .method public static synthetic access$300(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -197,7 +179,6 @@
 .method public static synthetic access$400(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -206,7 +187,6 @@
 .method public static synthetic access$500(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -217,7 +197,6 @@
 .method public static synthetic access$600(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -226,7 +205,6 @@
 .method public static synthetic access$700(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -237,7 +215,6 @@
 .method public static synthetic access$800(Lcom/android/server/translation/TranslationManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -246,7 +223,6 @@
 .method public static synthetic access$900(Lcom/android/server/translation/TranslationManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -259,7 +235,6 @@
 .method public dumpLocked(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 98
     invoke-super {p0, p1, p2}, Lcom/android/server/infra/AbstractMasterSystemService;->dumpLocked(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
     return-void
@@ -268,7 +243,6 @@
 .method public final enforceCallerHasPermission(Ljava/lang/String;)V
     .locals 2
 
-    .line 102
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,7 +261,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 103
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -304,7 +277,6 @@
 
     move-result-object v0
 
-    .line 104
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -317,7 +289,6 @@
 .method public enforceCallingPermissionForManagement()V
     .locals 2
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -334,7 +305,6 @@
 .method public getMaximumTemporaryServiceDurationMs()I
     .locals 0
 
-    .line 0
     const p0, 0x1d4c0
 
     return p0
@@ -343,12 +313,10 @@
 .method public final isCalledByServiceAppLocked(ILjava/lang/String;)Z
     .locals 6
 
-    .line 122
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 124
     iget-object v1, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mServiceNameResolver:Lcom/android/server/infra/ServiceNameResolver;
 
     invoke-interface {v1, p1}, Lcom/android/server/infra/ServiceNameResolver;->getServiceName(I)Ljava/lang/String;
@@ -363,7 +331,6 @@
 
     if-nez v1, :cond_0
 
-    .line 126
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -388,7 +355,6 @@
 
     return v3
 
-    .line 131
     :cond_0
     invoke-static {v1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -396,7 +362,6 @@
 
     if-nez v5, :cond_1
 
-    .line 133
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -417,13 +382,11 @@
 
     return v3
 
-    .line 137
     :cond_1
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 138
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -432,7 +395,6 @@
 
     move-result-object p0
 
-    .line 141
     :try_start_0
     invoke-virtual {p0, v5, p1}, Landroid/content/pm/PackageManager;->getPackageUidAsUser(Ljava/lang/String;I)I
 
@@ -442,7 +404,6 @@
 
     if-eq v0, p0, :cond_2
 
-    .line 147
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -472,7 +433,6 @@
 
     return p0
 
-    .line 143
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -498,7 +458,6 @@
 .method public final isDefaultServiceLocked(I)Z
     .locals 1
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mServiceNameResolver:Lcom/android/server/infra/ServiceNameResolver;
 
     invoke-interface {v0, p1}, Lcom/android/server/infra/ServiceNameResolver;->getDefaultServiceName(I)Ljava/lang/String;
@@ -511,7 +470,6 @@
 
     return p0
 
-    .line 115
     :cond_0
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mServiceNameResolver:Lcom/android/server/infra/ServiceNameResolver;
 
@@ -519,7 +477,6 @@
 
     move-result-object p0
 
-    .line 116
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -530,7 +487,6 @@
 .method public bridge synthetic newServiceLocked(IZ)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1, p2}, Lcom/android/server/translation/TranslationManagerService;->newServiceLocked(IZ)Lcom/android/server/translation/TranslationManagerServiceImpl;
 
     move-result-object p0
@@ -541,7 +497,6 @@
 .method public newServiceLocked(IZ)Lcom/android/server/translation/TranslationManagerServiceImpl;
     .locals 2
 
-    .line 83
     new-instance v0, Lcom/android/server/translation/TranslationManagerServiceImpl;
 
     iget-object v1, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
@@ -554,7 +509,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 330
     new-instance v0, Lcom/android/server/translation/TranslationManagerService$TranslationManagerServiceStub;
 
     invoke-direct {v0, p0}, Lcom/android/server/translation/TranslationManagerService$TranslationManagerServiceStub;-><init>(Lcom/android/server/translation/TranslationManagerService;)V

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 6912
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 6913
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     return-void
@@ -25,12 +23,10 @@
 .method public onCommand(Ljava/lang/String;)I
     .locals 2
 
-    .line 6920
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 6922
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->onCommandWithSystemIdentity(Ljava/lang/String;)I
 
@@ -38,7 +34,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6924
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -48,14 +43,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6925
     throw p0
 .end method
 
 .method public final onCommandWithSystemIdentity(Ljava/lang/String;)I
     .locals 7
 
-    .line 6931
     invoke-static {p1}, Landroid/text/TextUtils;->emptyIfNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -130,14 +123,12 @@
     :goto_1
     packed-switch v0, :pswitch_data_0
 
-    .line 6961
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 6937
     :pswitch_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
@@ -147,7 +138,6 @@
 
     move-result-object p1
 
-    .line 6938
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -300,7 +290,6 @@
     :goto_3
     packed-switch v2, :pswitch_data_1
 
-    .line 6956
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -323,7 +312,6 @@
 
     return v6
 
-    .line 6948
     :pswitch_1
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -333,7 +321,6 @@
 
     return p0
 
-    .line 6952
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -343,7 +330,6 @@
 
     return p0
 
-    .line 6944
     :pswitch_3
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -353,7 +339,6 @@
 
     return p0
 
-    .line 6950
     :pswitch_4
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -363,7 +348,6 @@
 
     return p0
 
-    .line 6942
     :pswitch_5
     invoke-virtual {p0}, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->onImeCommandHelp()I
 
@@ -371,7 +355,6 @@
 
     return p0
 
-    .line 6954
     :pswitch_6
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -381,7 +364,6 @@
 
     return p0
 
-    .line 6946
     :pswitch_7
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -391,7 +373,6 @@
 
     return p0
 
-    .line 6935
     :pswitch_8
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -401,7 +382,6 @@
 
     return p0
 
-    .line 6933
     :pswitch_9
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ShellCommandImpl;->mService:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -455,7 +435,6 @@
 .method public onHelp()V
     .locals 1
 
-    .line 6968
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -463,62 +442,50 @@
     :try_start_0
     const-string v0, "InputMethodManagerService commands:"
 
-    .line 6969
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 6970
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Prints this help text."
 
-    .line 6971
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  dump [options]"
 
-    .line 6972
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Synonym of dumpsys."
 
-    .line 6973
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  ime <command> [options]"
 
-    .line 6974
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Manipulate IMEs.  Run \"ime help\" for details."
 
-    .line 6975
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  tracing <command>"
 
-    .line 6976
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    start: Start tracing."
 
-    .line 6977
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    stop : Stop tracing."
 
-    .line 6978
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    help : Show help."
 
-    .line 6979
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6980
     invoke-virtual {p0}, Ljava/io/PrintWriter;->close()V
 
     return-void
@@ -528,7 +495,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 6968
     :try_start_1
     invoke-virtual {p0}, Ljava/io/PrintWriter;->close()V
     :try_end_1
@@ -553,10 +519,8 @@
 
     const-string v1, " Assumes the current user if not specified."
 
-    .line 6986
     new-instance v2, Landroid/util/IndentingPrintWriter;
 
-    .line 6987
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -570,166 +534,122 @@
     :try_start_0
     const-string p0, "ime <command>:"
 
-    .line 6988
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6989
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "list [-a] [-s]"
 
-    .line 6991
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6992
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string/jumbo p0, "prints all enabled input methods."
 
-    .line 6993
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6994
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "-a: see all input methods"
 
-    .line 6995
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "-s: only a single summary line of each"
 
-    .line 6996
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6997
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 6998
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "enable [--user <USER_ID>] <ID>"
 
-    .line 7000
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7001
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "allows the given input method ID to be used."
 
-    .line 7002
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7003
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 7004
     invoke-virtual {v2, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 7005
     invoke-virtual {v2, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7006
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 7007
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "disable [--user <USER_ID>] <ID>"
 
-    .line 7009
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7010
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "disallows the given input method ID to be used."
 
-    .line 7011
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7012
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "--user <USER_ID>: Specify which user to disable."
 
-    .line 7013
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 7014
     invoke-virtual {v2, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7015
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 7016
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string/jumbo p0, "set [--user <USER_ID>] <ID>"
 
-    .line 7018
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7019
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string/jumbo p0, "switches to the given input method ID."
 
-    .line 7020
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7021
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 7022
     invoke-virtual {v2, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 7023
     invoke-virtual {v2, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7024
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 7025
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string/jumbo p0, "reset [--user <USER_ID>]"
 
-    .line 7027
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7028
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string/jumbo p0, "reset currently selected/enabled IMEs to the default ones as if the device is initially booted with the current locale."
 
-    .line 7029
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7031
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "--user <USER_ID>: Specify which user to reset."
 
-    .line 7032
     invoke-virtual {v2, p0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 7033
     invoke-virtual {v2, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7034
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 7036
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 7038
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7039
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->close()V
 
     const/4 p0, 0x0
@@ -739,7 +659,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6986
     :try_start_1
     invoke-virtual {v2}, Landroid/util/IndentingPrintWriter;->close()V
     :try_end_1

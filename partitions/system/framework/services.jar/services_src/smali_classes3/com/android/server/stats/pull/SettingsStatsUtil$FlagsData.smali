@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 215
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
     iput-object p1, p0, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;->mFlagName:Ljava/lang/String;
 
-    .line 217
     iput p2, p0, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;->mDataType:I
 
     return-void

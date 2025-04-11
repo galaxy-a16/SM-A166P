@@ -15,18 +15,14 @@
 .method public constructor <init>(Lcom/android/server/bgslotmanager/CustomEFKManager;JJI)V
     .locals 0
 
-    .line 167
     iput-object p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
-    .line 168
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
     const/4 p1, 0x0
 
-    .line 169
     iput p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->count:I
 
-    .line 170
     iput p6, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->reserve:I
 
     return-void
@@ -37,7 +33,6 @@
 .method public onFinish()V
     .locals 1
 
-    .line 206
     iget-object p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     const/4 v0, 0x0
@@ -50,14 +45,12 @@
 .method public onTick(J)V
     .locals 4
 
-    .line 174
     iget-object p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     invoke-static {p1}, Lcom/android/server/bgslotmanager/CustomEFKManager;->-$$Nest$fgetv_watermark_scale(Lcom/android/server/bgslotmanager/CustomEFKManager;)I
 
     move-result p1
 
-    .line 175
     iget p2, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->count:I
 
     const/4 v0, 0x1
@@ -72,7 +65,6 @@
 
     goto :goto_1
 
-    .line 180
     :cond_0
     iget-object p2, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
@@ -82,7 +74,6 @@
 
     if-nez p2, :cond_5
 
-    .line 181
     invoke-static {}, Lcom/android/server/bgslotmanager/CustomEFKManager;->getWatermarkScaleInfo()I
 
     move-result p2
@@ -91,7 +82,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 184
     iget-object v2, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     invoke-static {v2}, Lcom/android/server/bgslotmanager/CustomEFKManager;->-$$Nest$fgetlast_Watermark_EFK(Lcom/android/server/bgslotmanager/CustomEFKManager;)I
@@ -107,7 +97,6 @@
     :cond_1
     if-le p1, p2, :cond_2
 
-    .line 186
     iget-object v2, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     invoke-static {v2}, Lcom/android/server/bgslotmanager/CustomEFKManager;->-$$Nest$fgetlast_Watermark_EFK(Lcom/android/server/bgslotmanager/CustomEFKManager;)I
@@ -123,7 +112,6 @@
     :cond_2
     if-ge p1, p2, :cond_3
 
-    .line 189
     iget-object p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     invoke-static {p1}, Lcom/android/server/bgslotmanager/CustomEFKManager;->-$$Nest$fgetlast_Watermark_EFK(Lcom/android/server/bgslotmanager/CustomEFKManager;)I
@@ -143,12 +131,10 @@
     :goto_0
     if-eqz v0, :cond_5
 
-    .line 195
     iget-object p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     invoke-static {p1, p2}, Lcom/android/server/bgslotmanager/CustomEFKManager;->-$$Nest$fputv_watermark_scale(Lcom/android/server/bgslotmanager/CustomEFKManager;I)V
 
-    .line 196
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -173,19 +159,16 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     iget-object p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     iget p2, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->reserve:I
 
     invoke-static {p1, p2}, Lcom/android/server/bgslotmanager/CustomEFKManager;->-$$Nest$fputlast_Watermark_EFK(Lcom/android/server/bgslotmanager/CustomEFKManager;I)V
 
-    .line 198
     iget-object p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;->this$0:Lcom/android/server/bgslotmanager/CustomEFKManager;
 
     invoke-static {p1, v1}, Lcom/android/server/bgslotmanager/CustomEFKManager;->-$$Nest$fputisBlockDecEFK(Lcom/android/server/bgslotmanager/CustomEFKManager;Z)V
 
-    .line 199
     invoke-virtual {p0}, Landroid/os/CountDownTimer;->cancel()V
 
     :cond_5

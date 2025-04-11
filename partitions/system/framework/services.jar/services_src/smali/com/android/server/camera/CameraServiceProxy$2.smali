@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/camera/CameraServiceProxy;)V
     .locals 0
 
-    .line 514
     iput-object p1, p0, Lcom/android/server/camera/CameraServiceProxy$2;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     invoke-direct {p0}, Landroid/hardware/ICameraServiceProxy$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public getAutoframingOverride(Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -33,7 +31,6 @@
 .method public getRotateAndCropOverride(Ljava/lang/String;II)I
     .locals 10
 
-    .line 517
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -46,7 +43,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 518
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +69,6 @@
 
     return v3
 
-    .line 528
     :cond_0
     :try_start_0
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
@@ -90,7 +85,6 @@
 
     if-eqz p3, :cond_9
 
-    .line 535
     invoke-virtual {p3}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object v0
@@ -101,7 +95,6 @@
 
     if-nez v0, :cond_9
 
-    .line 536
     invoke-virtual {p3}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object p3
@@ -125,7 +118,6 @@
 
     check-cast v0, Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 537
     iget-object v4, v0, Landroid/app/ActivityManager$RecentTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v4, :cond_1
@@ -138,17 +130,14 @@
 
     if-eqz v4, :cond_1
 
-    .line 539
     new-instance p3, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;
 
     invoke-direct {p3}, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;-><init>()V
 
-    .line 540
     iget v4, v0, Landroid/app/ActivityManager$RecentTaskInfo;->taskId:I
 
     iput v4, p3, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;->frontTaskId:I
 
-    .line 541
     iget-object v4, v0, Landroid/app/ActivityManager$RecentTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
 
     iget v5, v4, Landroid/content/pm/ActivityInfo;->resizeMode:I
@@ -165,32 +154,26 @@
     :goto_0
     iput-boolean v5, p3, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;->isResizeable:Z
 
-    .line 543
     iget v5, v0, Landroid/app/ActivityManager$RecentTaskInfo;->displayId:I
 
     iput v5, p3, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;->displayId:I
 
-    .line 544
     iget v5, v0, Landroid/app/ActivityManager$RecentTaskInfo;->userId:I
 
     iput v5, p3, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;->userId:I
 
-    .line 545
     iget v4, v4, Landroid/content/pm/ActivityInfo;->screenOrientation:I
 
-    .line 546
     invoke-static {v4}, Landroid/content/pm/ActivityInfo;->isFixedOrientationLandscape(I)Z
 
     move-result v4
 
     iput-boolean v4, p3, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;->isFixedOrientationLandscape:Z
 
-    .line 548
     iget-object v0, v0, Landroid/app/ActivityManager$RecentTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
 
     iget v0, v0, Landroid/content/pm/ActivityInfo;->screenOrientation:I
 
-    .line 549
     invoke-static {v0}, Landroid/content/pm/ActivityInfo;->isFixedOrientationPortrait(I)Z
 
     move-result v0
@@ -207,7 +190,6 @@
 
     if-nez v6, :cond_4
 
-    .line 556
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,18 +208,15 @@
 
     return v3
 
-    .line 569
     :cond_4
     iget p3, v6, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;->userId:I
 
-    .line 571
     invoke-static {p3}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
     move-result-object p3
 
     const-wide/32 v4, 0xb476b84
 
-    .line 569
     invoke-static {v4, v5, p1, p3}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p3
@@ -246,23 +225,19 @@
 
     const-string p0, "OVERRIDE_CAMERA_ROTATE_AND_CROP_DEFAULTS enabled!"
 
-    .line 572
     invoke-static {v2, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
 
-    .line 576
     :cond_5
     iget p3, v6, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;->userId:I
 
-    .line 578
     invoke-static {p3}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
     move-result-object p3
 
     const-wide/32 v4, 0xb6a427e
 
-    .line 576
     invoke-static {v4, v5, p1, p3}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p3
@@ -271,7 +246,6 @@
 
     const-string p3, "OVERRIDE_CAMERA_RESIZABLE_AND_SDK_CHECK enabled!"
 
-    .line 579
     invoke-static {v2, p3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     move v9, v1
@@ -281,7 +255,6 @@
     :cond_6
     move v9, v3
 
-    .line 583
     :goto_2
     iget-object p3, p0, Lcom/android/server/camera/CameraServiceProxy$2;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
@@ -299,7 +272,6 @@
 
     if-eqz p3, :cond_8
 
-    .line 586
     iget v0, v6, Lcom/android/server/camera/CameraServiceProxy$TaskInfo;->displayId:I
 
     invoke-virtual {p3, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
@@ -308,7 +280,6 @@
 
     if-nez p3, :cond_7
 
-    .line 588
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -329,13 +300,11 @@
 
     return v3
 
-    .line 592
     :cond_7
     invoke-virtual {p3}, Landroid/view/Display;->getRotation()I
 
     move-result v7
 
-    .line 598
     iget-object p0, p0, Lcom/android/server/camera/CameraServiceProxy$2;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     invoke-static {p0}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$fgetmContext(Lcom/android/server/camera/CameraServiceProxy;)Landroid/content/Context;
@@ -355,7 +324,6 @@
     :cond_8
     const-string p0, "Failed to query display manager!"
 
-    .line 594
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -363,7 +331,6 @@
     :cond_9
     const-string p0, "Recent task list is empty!"
 
-    .line 561
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -371,7 +338,6 @@
     :catch_0
     const-string p0, "Failed to query recent tasks!"
 
-    .line 531
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -380,7 +346,6 @@
 .method public isCameraDisabled(I)Z
     .locals 5
 
-    .line 643
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -393,7 +358,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 644
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -420,13 +384,11 @@
 
     return v3
 
-    .line 649
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 651
     :try_start_0
     iget-object p0, p0, Lcom/android/server/camera/CameraServiceProxy$2;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
@@ -446,12 +408,10 @@
 
     const-string p0, "Failed to get the device policy manager service"
 
-    .line 653
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 663
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v3
@@ -459,7 +419,6 @@
     :cond_1
     const/4 v2, 0x0
 
-    .line 657
     :try_start_1
     invoke-virtual {p0, v2, p1}, Landroid/app/admin/DevicePolicyManager;->getCameraDisabled(Landroid/content/ComponentName;I)Z
 
@@ -468,7 +427,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 663
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -476,13 +434,11 @@
     :catch_0
     move-exception p0
 
-    .line 659
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 663
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v3
@@ -492,14 +448,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 664
     throw p0
 .end method
 
 .method public notifyCameraState(Landroid/hardware/CameraSessionStats;)V
     .locals 2
 
-    .line 624
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -508,7 +462,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 625
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -537,7 +490,6 @@
 
     return-void
 
-    .line 629
     :cond_0
     invoke-virtual {p1}, Landroid/hardware/CameraSessionStats;->getNewCameraState()I
 
@@ -545,14 +497,12 @@
 
     invoke-static {v0}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$smcameraStateToString(I)Ljava/lang/String;
 
-    .line 630
     invoke-virtual {p1}, Landroid/hardware/CameraSessionStats;->getFacing()I
 
     move-result v0
 
     invoke-static {v0}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$smcameraFacingToString(I)Ljava/lang/String;
 
-    .line 638
     iget-object p0, p0, Lcom/android/server/camera/CameraServiceProxy$2;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     invoke-static {p0, p1}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$mupdateActivityCount(Lcom/android/server/camera/CameraServiceProxy;Landroid/hardware/CameraSessionStats;)V
@@ -563,7 +513,6 @@
 .method public pingForUserUpdate()V
     .locals 2
 
-    .line 613
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -572,7 +521,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 614
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -601,7 +549,6 @@
 
     return-void
 
-    .line 618
     :cond_0
     iget-object v0, p0, Lcom/android/server/camera/CameraServiceProxy$2;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
@@ -609,7 +556,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$mnotifySwitchWithRetries(Lcom/android/server/camera/CameraServiceProxy;I)V
 
-    .line 619
     iget-object p0, p0, Lcom/android/server/camera/CameraServiceProxy$2;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     invoke-static {p0, v1}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$mnotifyDeviceStateWithRetries(Lcom/android/server/camera/CameraServiceProxy;I)V

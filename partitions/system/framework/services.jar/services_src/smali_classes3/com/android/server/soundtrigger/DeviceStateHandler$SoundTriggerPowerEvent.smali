@@ -11,10 +11,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 248
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 249
     iput p1, p0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerPowerEvent;->mSoundTriggerPowerState:I
 
     return-void
@@ -25,7 +23,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 254
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +47,6 @@
 .method public final stateToString()Ljava/lang/String;
     .locals 2
 
-    .line 258
     iget v0, p0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerPowerEvent;->mSoundTriggerPowerState:I
 
     if-eqz v0, :cond_2
@@ -63,7 +59,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 262
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

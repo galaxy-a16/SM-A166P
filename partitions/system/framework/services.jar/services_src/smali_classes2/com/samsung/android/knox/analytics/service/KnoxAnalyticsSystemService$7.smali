@@ -11,7 +11,6 @@
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 398
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$7;->val$r:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -24,7 +23,6 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 398
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$7;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -37,7 +35,6 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 0
 
-    .line 401
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$7;->val$r:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V

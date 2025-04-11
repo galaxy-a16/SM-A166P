@@ -7,7 +7,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

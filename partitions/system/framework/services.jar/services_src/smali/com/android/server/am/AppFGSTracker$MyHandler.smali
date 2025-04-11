@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppFGSTracker;)V
     .locals 1
 
-    .line 141
     iget-object v0, p1, Lcom/android/server/am/BaseAppStateTracker;->mBgHandler:Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -20,7 +19,6 @@
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 142
     iput-object p1, p0, Lcom/android/server/am/AppFGSTracker$MyHandler;->mTracker:Lcom/android/server/am/AppFGSTracker;
 
     return-void
@@ -31,14 +29,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 147
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 173
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/am/AppFGSTracker$MyHandler;->mTracker:Lcom/android/server/am/AppFGSTracker;
 
@@ -54,7 +50,6 @@
 
     goto :goto_0
 
-    .line 170
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/am/AppFGSTracker$MyHandler;->mTracker:Lcom/android/server/am/AppFGSTracker;
 
@@ -70,7 +65,6 @@
 
     goto :goto_0
 
-    .line 167
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/am/AppFGSTracker$MyHandler;->mTracker:Lcom/android/server/am/AppFGSTracker;
 
@@ -78,13 +72,11 @@
 
     goto :goto_0
 
-    .line 161
     :pswitch_3
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/internal/os/SomeArgs;
 
-    .line 162
     iget-object p0, p0, Lcom/android/server/am/AppFGSTracker$MyHandler;->mTracker:Lcom/android/server/am/AppFGSTracker;
 
     iget-object v0, p1, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -99,20 +91,16 @@
 
     check-cast v3, Ljava/lang/Boolean;
 
-    .line 163
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v3
 
-    .line 162
     invoke-static {p0, v0, v1, v2, v3}, Lcom/android/server/am/AppFGSTracker;->-$$Nest$mhandleForegroundServiceNotificationUpdated(Lcom/android/server/am/AppFGSTracker;Ljava/lang/String;IIZ)V
 
-    .line 164
     invoke-virtual {p1}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
 
-    .line 157
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/am/AppFGSTracker$MyHandler;->mTracker:Lcom/android/server/am/AppFGSTracker;
 
@@ -128,7 +116,6 @@
 
     goto :goto_0
 
-    .line 153
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/am/AppFGSTracker$MyHandler;->mTracker:Lcom/android/server/am/AppFGSTracker;
 
@@ -146,7 +133,6 @@
 
     goto :goto_0
 
-    .line 149
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/am/AppFGSTracker$MyHandler;->mTracker:Lcom/android/server/am/AppFGSTracker;
 

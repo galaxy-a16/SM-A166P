@@ -13,13 +13,10 @@
 .method public constructor <init>([Ljava/lang/String;[I)V
     .locals 0
 
-    .line 316
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 317
     iput-object p1, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIds:[Ljava/lang/String;
 
-    .line 318
     iput-object p2, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIdOrdinals:[I
 
     return-void
@@ -28,7 +25,6 @@
 .method public static createCertain([Ljava/lang/String;[I)Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;
     .locals 1
 
-    .line 329
     new-instance v0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;-><init>([Ljava/lang/String;[I)V
@@ -39,7 +35,6 @@
 .method public static createUncertain()Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;
     .locals 2
 
-    .line 323
     new-instance v0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;
 
     const/4 v1, 0x0
@@ -65,7 +60,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 360
     const-class v2, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -76,11 +70,9 @@
 
     goto :goto_1
 
-    .line 363
     :cond_1
     check-cast p1, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;
 
-    .line 364
     iget-object v2, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIdOrdinals:[I
 
     iget-object v3, p1, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIdOrdinals:[I
@@ -95,7 +87,6 @@
 
     iget-object p1, p1, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIds:[Ljava/lang/String;
 
-    .line 365
     invoke-static {p0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
     move-result p0
@@ -118,7 +109,6 @@
 .method public getZoneIdOrdinals()[I
     .locals 0
 
-    .line 342
     iget-object p0, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIdOrdinals:[I
 
     return-object p0
@@ -127,7 +117,6 @@
 .method public getZoneIds()[Ljava/lang/String;
     .locals 0
 
-    .line 352
     iget-object p0, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIds:[Ljava/lang/String;
 
     return-object p0
@@ -136,7 +125,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 370
     iget-object v0, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIds:[Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -145,7 +133,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 371
     iget-object p0, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIdOrdinals:[I
 
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([I)I
@@ -160,7 +147,6 @@
 .method public isCertain()Z
     .locals 0
 
-    .line 333
     iget-object p0, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIdOrdinals:[I
 
     if-eqz p0, :cond_0
@@ -179,7 +165,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 377
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +175,6 @@
 
     iget-object v1, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIdOrdinals:[I
 
-    .line 378
     invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v1
@@ -203,7 +187,6 @@
 
     iget-object p0, p0, Lcom/android/server/timezonedetector/MetricsTimeZoneDetectorState$MetricsTimeZoneSuggestion;->mZoneIds:[Ljava/lang/String;
 
-    .line 379
     invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

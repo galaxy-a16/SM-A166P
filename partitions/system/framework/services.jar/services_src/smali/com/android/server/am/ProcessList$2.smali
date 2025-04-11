@@ -20,7 +20,6 @@
 .method public compare(Landroid/util/Pair;Landroid/util/Pair;)I
     .locals 1
 
-    .line 5321
     iget-object p0, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p0, Lcom/android/server/am/ProcessRecord;
@@ -47,7 +46,6 @@
 
     return p0
 
-    .line 5325
     :cond_0
     iget-object p0, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -65,7 +63,6 @@
 
     iget-object v0, v0, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
 
-    .line 5326
     invoke-virtual {v0}, Lcom/android/server/am/ProcessStateRecord;->getSetProcState()I
 
     move-result v0
@@ -76,7 +73,6 @@
 
     return p0
 
-    .line 5330
     :cond_1
     iget-object p0, p2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -109,7 +105,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 5317
     check-cast p1, Landroid/util/Pair;
 
     check-cast p2, Landroid/util/Pair;

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/view/InputDevice;
 
     invoke-static {p1}, Lcom/android/server/input/BatteryController;->$r8$lambda$Q70_7MRO-uqJenPzVqP4wCdNXEM(Landroid/view/InputDevice;)Ljava/lang/Boolean;

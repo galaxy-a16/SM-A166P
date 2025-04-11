@@ -20,7 +20,6 @@
 .method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/people/data/EventHistoryImpl;->$r8$lambda$yXjfGHzynQfgnIsUXtecuuxtr3M(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result p0

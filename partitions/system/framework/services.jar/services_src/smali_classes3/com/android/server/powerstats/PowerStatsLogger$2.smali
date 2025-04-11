@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/powerstats/PowerStatsLogger;Landroid/util/proto/ProtoOutputStream;)V
     .locals 0
 
-    .line 189
     iput-object p1, p0, Lcom/android/server/powerstats/PowerStatsLogger$2;->this$0:Lcom/android/server/powerstats/PowerStatsLogger;
 
     iput-object p2, p0, Lcom/android/server/powerstats/PowerStatsLogger$2;->val$pos:Landroid/util/proto/ProtoOutputStream;
@@ -31,7 +30,6 @@
 .method public onReadDataElement([B)V
     .locals 2
 
-    .line 193
     :try_start_0
     new-instance v0, Landroid/util/proto/ProtoInputStream;
 
@@ -41,12 +39,10 @@
 
     invoke-direct {v0, v1}, Landroid/util/proto/ProtoInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 199
     invoke-static {p1}, Lcom/android/server/powerstats/ProtoStreamUtils$EnergyConsumerResultUtils;->unpackProtoMessage([B)[Landroid/hardware/power/stats/EnergyConsumerResult;
 
     move-result-object p1
 
-    .line 200
     iget-object p0, p0, Lcom/android/server/powerstats/PowerStatsLogger$2;->val$pos:Landroid/util/proto/ProtoOutputStream;
 
     const/4 v0, 0x1
@@ -60,7 +56,6 @@
     :catch_0
     move-exception p0
 
-    .line 203
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsLogger;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

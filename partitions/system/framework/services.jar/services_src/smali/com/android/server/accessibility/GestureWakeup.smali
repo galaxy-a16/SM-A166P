@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/accessibility/GestureWakeup;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$mlaunchGestureWakeup(Lcom/android/server/accessibility/GestureWakeup;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/accessibility/GestureWakeup;->launchGestureWakeup()V
 
     return-void
@@ -43,37 +41,30 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 29
     iput-boolean v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mIsSettingGestureWakeUp:Z
 
     const/4 v0, 0x0
 
-    .line 31
     iput-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
-    .line 33
     iput-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextManager:Lcom/samsung/android/hardware/context/SemContextManager;
 
-    .line 123
     new-instance v0, Lcom/android/server/accessibility/GestureWakeup$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/GestureWakeup$1;-><init>(Lcom/android/server/accessibility/GestureWakeup;)V
 
     iput-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextListener:Lcom/samsung/android/hardware/context/SemContextListener;
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     return-void
@@ -86,20 +77,17 @@
 
     monitor-enter v0
 
-    .line 36
     :try_start_0
     sget-object v1, Lcom/android/server/accessibility/GestureWakeup;->sGesturewakeup:Lcom/android/server/accessibility/GestureWakeup;
 
     if-nez v1, :cond_0
 
-    .line 37
     new-instance v1, Lcom/android/server/accessibility/GestureWakeup;
 
     invoke-direct {v1, p0}, Lcom/android/server/accessibility/GestureWakeup;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/android/server/accessibility/GestureWakeup;->sGesturewakeup:Lcom/android/server/accessibility/GestureWakeup;
 
-    .line 39
     :cond_0
     sget-object p0, Lcom/android/server/accessibility/GestureWakeup;->sGesturewakeup:Lcom/android/server/accessibility/GestureWakeup;
     :try_end_0
@@ -120,7 +108,6 @@
 .method public static insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 175
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -133,42 +120,34 @@
 
     if-eqz v0, :cond_0
 
-    .line 176
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "app_id"
 
-    .line 177
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "feature"
 
-    .line 178
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 182
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
     const-string p2, "com.samsung.android.providers.context.log.action.USE_APP_FEATURE_SURVEY"
 
-    .line 184
     invoke-virtual {p1, p2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p2, "data"
 
-    .line 185
     invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     const-string p2, "com.samsung.android.providers.context"
 
-    .line 186
     invoke-virtual {p1, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 187
     invoke-virtual {p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     :cond_0
@@ -184,10 +163,8 @@
 
     const-string v1, "GestureWakeup"
 
-    .line 47
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v0}, Lcom/android/server/accessibility/GestureWakeup;->checkSettingCondition(Landroid/content/Context;)Z
@@ -196,7 +173,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mIsSettingGestureWakeUp:Z
 
-    .line 49
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     const-string/jumbo v2, "power"
@@ -209,12 +185,10 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mPM:Landroid/os/PowerManager;
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
     if-nez v0, :cond_0
 
-    .line 51
     new-instance v0, Lcom/samsung/android/cover/CoverManager;
 
     iget-object v2, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
@@ -225,10 +199,8 @@
 
     const-string v0, "StartGestureWakeup() create mCoverManager instance"
 
-    .line 52
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/GestureWakeup;->registerApproachListener()Z
 
@@ -238,14 +210,12 @@
 
     const-string p0, "StartGestureWakeup() Can\'t use proximity sensor in sensor hub"
 
-    .line 55
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 59
     :cond_1
     iget-object p0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
@@ -263,7 +233,6 @@
 
     const-string p0, "GestureWakeup start success"
 
-    .line 60
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -276,10 +245,8 @@
 
     const-string v1, "GestureWakeup"
 
-    .line 65
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v0}, Lcom/android/server/accessibility/GestureWakeup;->checkSettingCondition(Landroid/content/Context;)Z
@@ -290,12 +257,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/accessibility/GestureWakeup;->finishGestureWakeup()V
 
     const-string p0, "GestureWakeup stop success"
 
-    .line 69
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
@@ -305,7 +270,6 @@
     :cond_0
     const-string p0, "GestureWakeup is aleady stopped"
 
-    .line 72
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -316,7 +280,6 @@
 .method public final UnregisterApproachListener()V
     .locals 2
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -331,12 +294,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextManager:Lcom/samsung/android/hardware/context/SemContextManager;
 
     if-eqz v0, :cond_0
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextListener:Lcom/samsung/android/hardware/context/SemContextListener;
 
     const/4 v1, 0x1
@@ -347,7 +308,6 @@
 
     const-string v0, "GestureWakeupService : UnregisterApproachListener"
 
-    .line 159
     invoke-static {p0, v0}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -357,10 +317,8 @@
 .method public checkSettingCondition(Landroid/content/Context;)Z
     .locals 3
 
-    .line 165
     monitor-enter p0
 
-    .line 166
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -387,7 +345,6 @@
 
     const-string p1, "GestureWakeup"
 
-    .line 168
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -412,7 +369,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     iget-boolean p1, p0, Lcom/android/server/accessibility/GestureWakeup;->mIsSettingGestureWakeUp:Z
 
     monitor-exit p0
@@ -422,7 +378,6 @@
     :catchall_0
     move-exception p1
 
-    .line 170
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -433,7 +388,6 @@
 .method public final finishGestureWakeup()V
     .locals 4
 
-    .line 79
     :try_start_0
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
@@ -449,22 +403,18 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/server/accessibility/GestureWakeup;->UnregisterApproachListener()V
 
     const/4 v0, 0x0
 
-    .line 81
     iput-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextManager:Lcom/samsung/android/hardware/context/SemContextManager;
 
-    .line 82
     iput-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mPM:Landroid/os/PowerManager;
 
     const-string p0, "GestureWakeup"
 
     const-string v0, "finish"
 
-    .line 83
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -474,7 +424,6 @@
     :catchall_0
     move-exception p0
 
-    .line 85
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :goto_0
@@ -488,10 +437,8 @@
 
     const-string v1, "GestureWakeup"
 
-    .line 90
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     const-string v2, "desktopmode"
@@ -504,7 +451,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     invoke-static {}, Lcom/samsung/android/desktopmode/SemDesktopModeManager;->isDesktopMode()Z
 
     move-result v0
@@ -513,12 +459,10 @@
 
     const-string/jumbo p0, "launchGestureWakeup() :: No action in Desktop mode+"
 
-    .line 94
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 98
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
@@ -530,7 +474,6 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 99
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCallState()I
 
     move-result v2
@@ -539,7 +482,6 @@
 
     if-eq v2, v3, :cond_4
 
-    .line 100
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCallState()I
 
     move-result v2
@@ -550,7 +492,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_1
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mCoverManager:Lcom/samsung/android/cover/CoverManager;
 
@@ -560,7 +501,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 106
     :try_start_0
     invoke-virtual {v0}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
 
@@ -570,7 +510,6 @@
 
     const-string v0, "..Cover is closed .."
 
-    .line 107
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -580,16 +519,13 @@
     :catch_0
     move-exception v0
 
-    .line 111
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 114
     :cond_2
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mPM:Landroid/os/PowerManager;
 
     if-nez v0, :cond_3
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "power"
@@ -602,7 +538,6 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mPM:Landroid/os/PowerManager;
 
-    .line 118
     :cond_3
     iget-object v0, p0, Lcom/android/server/accessibility/GestureWakeup;->mPM:Landroid/os/PowerManager;
 
@@ -616,7 +551,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/os/PowerManager;->semWakeUp(JILjava/lang/String;)V
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.app.airwakeupview"
@@ -627,7 +561,6 @@
 
     return-void
 
-    .line 101
     :cond_4
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -656,12 +589,10 @@
 .method public final registerApproachListener()Z
     .locals 5
 
-    .line 139
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
 
-    .line 140
     iget-object v1, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -678,17 +609,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 141
     iget-object v1, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextManager:Lcom/samsung/android/hardware/context/SemContextManager;
 
     if-nez v1, :cond_0
 
     const-string/jumbo v1, "registerApproachListener, mSemContextManager is null, create again "
 
-    .line 142
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     iget-object v1, p0, Lcom/android/server/accessibility/GestureWakeup;->mContext:Landroid/content/Context;
 
     const-string/jumbo v3, "scontext"
@@ -701,13 +629,11 @@
 
     iput-object v1, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextManager:Lcom/samsung/android/hardware/context/SemContextManager;
 
-    .line 145
     :cond_0
     new-instance v1, Lcom/samsung/android/hardware/context/SemContextApproachAttribute;
 
     invoke-direct {v1, v0}, Lcom/samsung/android/hardware/context/SemContextApproachAttribute;-><init>(I)V
 
-    .line 146
     iget-object v3, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextManager:Lcom/samsung/android/hardware/context/SemContextManager;
 
     iget-object p0, p0, Lcom/android/server/accessibility/GestureWakeup;->mSemContextListener:Lcom/samsung/android/hardware/context/SemContextListener;
@@ -716,7 +642,6 @@
 
     invoke-virtual {v3, p0, v4, v1}, Lcom/samsung/android/hardware/context/SemContextManager;->registerListener(Lcom/samsung/android/hardware/context/SemContextListener;ILcom/samsung/android/hardware/context/SemContextAttribute;)Z
 
-    .line 147
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -738,7 +663,6 @@
     :cond_1
     const-string p0, "GestureWakeup: registerApproachListener fail"
 
-    .line 150
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0

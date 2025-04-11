@@ -7,7 +7,6 @@
 .method public static getPackageResources(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/content/res/Resources;
     .locals 21
 
-    .line 41
     new-instance v15, Landroid/content/res/AssetManager;
 
     move-object v0, v15
@@ -52,12 +51,10 @@
 
     const/16 v18, 0x0
 
-    .line 42
     sget v19, Landroid/os/Build$VERSION;->RESOURCES_SDK_INT:I
 
     invoke-virtual/range {v0 .. v19}, Landroid/content/res/AssetManager;->setConfiguration(IILjava/lang/String;IIIIIIIIIIIIIIII)V
 
-    .line 44
     invoke-interface/range {p0 .. p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getBaseApkPath()Ljava/lang/String;
 
     move-result-object v0
@@ -72,7 +69,6 @@
 
     if-nez v0, :cond_0
 
-    .line 46
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,16 +93,13 @@
 
     return-object v2
 
-    .line 49
     :cond_0
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 50
     invoke-virtual {v0}, Landroid/util/DisplayMetrics;->setToDefaults()V
 
-    .line 51
     new-instance v3, Landroid/content/res/Resources;
 
     invoke-direct {v3, v1, v0, v2}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
@@ -119,7 +112,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 25
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -153,14 +145,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 16
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 18
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object p0
@@ -173,7 +163,6 @@
 
     const-string v0, "NOT_SUPPORT_COLORTHEME"
 
-    .line 17
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -195,7 +184,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 33
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v0

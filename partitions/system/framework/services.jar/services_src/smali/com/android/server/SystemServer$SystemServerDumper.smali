@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$maddDumpable(Lcom/android/server/SystemServer$SystemServerDumper;Landroid/util/Dumpable;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/SystemServer$SystemServerDumper;->addDumpable(Landroid/util/Dumpable;)V
 
     return-void
@@ -22,12 +21,10 @@
 .method public constructor <init>(Lcom/android/server/SystemServer;)V
     .locals 1
 
-    .line 1056
     iput-object p1, p0, Lcom/android/server/SystemServer$SystemServerDumper;->this$0:Lcom/android/server/SystemServer;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 1058
     new-instance p1, Landroid/util/ArrayMap;
 
     const/4 v0, 0x4
@@ -42,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/SystemServer;Lcom/android/server/SystemServer$SystemServerDumper-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/SystemServer$SystemServerDumper;-><init>(Lcom/android/server/SystemServer;)V
 
     return-void
@@ -53,12 +49,10 @@
 .method public final addDumpable(Landroid/util/Dumpable;)V
     .locals 2
 
-    .line 1109
     iget-object v0, p0, Lcom/android/server/SystemServer$SystemServerDumper;->mDumpables:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1110
     :try_start_0
     iget-object p0, p0, Lcom/android/server/SystemServer$SystemServerDumper;->mDumpables:Landroid/util/ArrayMap;
 
@@ -68,7 +62,6 @@
 
     invoke-virtual {p0, v1, p1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1111
     monitor-exit v0
 
     return-void
@@ -92,7 +85,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 1063
     array-length v1, p3
 
     if-lez v1, :cond_0
@@ -104,7 +96,6 @@
     :cond_0
     move v1, v0
 
-    .line 1065
     :goto_0
     iget-object v2, p0, Lcom/android/server/SystemServer$SystemServerDumper;->mDumpables:Landroid/util/ArrayMap;
 
@@ -115,7 +106,6 @@
     :try_start_0
     const-string v3, "--list"
 
-    .line 1066
     aget-object v4, p3, v0
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -124,7 +114,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1067
     iget-object p1, p0, Lcom/android/server/SystemServer$SystemServerDumper;->mDumpables:Landroid/util/ArrayMap;
 
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
@@ -134,7 +123,6 @@
     :goto_1
     if-ge v0, p1, :cond_1
 
-    .line 1069
     iget-object p3, p0, Lcom/android/server/SystemServer$SystemServerDumper;->mDumpables:Landroid/util/ArrayMap;
 
     invoke-virtual {p3, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -149,7 +137,6 @@
 
     goto :goto_1
 
-    .line 1071
     :cond_1
     monitor-exit v2
 
@@ -165,7 +152,6 @@
 
     const-string v1, "--name"
 
-    .line 1074
     aget-object v3, p3, v0
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -174,7 +160,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 1075
     array-length v0, p3
 
     const/4 v1, 0x2
@@ -183,19 +168,15 @@
 
     const-string p0, "Must pass at least one argument to --name"
 
-    .line 1076
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1077
     monitor-exit v2
 
     return-void
 
-    .line 1079
     :cond_3
     aget-object p1, p3, p1
 
-    .line 1080
     iget-object p0, p0, Lcom/android/server/SystemServer$SystemServerDumper;->mDumpables:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -208,19 +189,16 @@
 
     const-string p0, "No dumpable named %s\n"
 
-    .line 1082
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
 
     invoke-virtual {p2, p0, p1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 1083
     monitor-exit v2
 
     return-void
 
-    .line 1086
     :cond_4
     new-instance p1, Landroid/util/IndentingPrintWriter;
 
@@ -230,7 +208,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1088
     :try_start_1
     array-length p2, p3
 
@@ -240,16 +217,13 @@
 
     check-cast p2, [Ljava/lang/String;
 
-    .line 1089
     invoke-interface {p0, p1, p2}, Landroid/util/Dumpable;->dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1090
     :try_start_2
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->close()V
 
-    .line 1091
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -259,7 +233,6 @@
     :catchall_1
     move-exception p0
 
-    .line 1086
     :try_start_3
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->close()V
     :try_end_3
@@ -276,7 +249,6 @@
     :goto_2
     throw p0
 
-    .line 1094
     :cond_5
     iget-object v1, p0, Lcom/android/server/SystemServer$SystemServerDumper;->mDumpables:Landroid/util/ArrayMap;
 
@@ -284,7 +256,6 @@
 
     move-result v1
 
-    .line 1095
     new-instance v3, Landroid/util/IndentingPrintWriter;
 
     const-string v4, "  "
@@ -298,7 +269,6 @@
     :goto_3
     if-ge p2, v1, :cond_6
 
-    .line 1097
     :try_start_5
     iget-object v4, p0, Lcom/android/server/SystemServer$SystemServerDumper;->mDumpables:Landroid/util/ArrayMap;
 
@@ -312,7 +282,6 @@
 
     new-array v6, p1, [Ljava/lang/Object;
 
-    .line 1098
     invoke-interface {v4}, Landroid/util/Dumpable;->getDumpableName()Ljava/lang/String;
 
     move-result-object v7
@@ -321,16 +290,12 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 1099
     invoke-virtual {v3}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 1100
     invoke-interface {v4, v3, p3}, Landroid/util/Dumpable;->dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 1101
     invoke-virtual {v3}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 1102
     invoke-virtual {v3}, Landroid/util/IndentingPrintWriter;->println()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
@@ -342,7 +307,6 @@
     :catchall_3
     move-exception p0
 
-    .line 1095
     :try_start_6
     invoke-virtual {v3}, Landroid/util/IndentingPrintWriter;->close()V
     :try_end_6
@@ -359,11 +323,9 @@
     :goto_4
     throw p0
 
-    .line 1104
     :cond_6
     invoke-virtual {v3}, Landroid/util/IndentingPrintWriter;->close()V
 
-    .line 1105
     monitor-exit v2
 
     return-void

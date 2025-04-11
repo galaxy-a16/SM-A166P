@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/print/UserState;)V
     .locals 0
 
-    .line 468
     iput-object p1, p0, Lcom/android/server/print/UserState$1;->this$0:Lcom/android/server/print/UserState;
 
     invoke-direct {p0, p1}, Lcom/android/server/print/UserState$PrinterDiscoverySessionMediator;-><init>(Lcom/android/server/print/UserState;)V
@@ -24,7 +23,6 @@
 .method public onDestroyed()V
     .locals 1
 
-    .line 471
     iget-object p0, p0, Lcom/android/server/print/UserState$1;->this$0:Lcom/android/server/print/UserState;
 
     const/4 v0, 0x0

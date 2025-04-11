@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$mtrimEvents(Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->trimEvents()V
 
     return-void
@@ -22,17 +21,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
     .locals 0
 
-    .line 73
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/am/BaseAppStateEventsTracker;-><init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
 
-    .line 67
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->mTmpPkgs:Landroid/util/ArrayMap;
 
-    .line 74
     new-instance p1, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$H;
 
     invoke-direct {p1, p0}, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$H;-><init>(Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;)V
@@ -47,7 +43,6 @@
 .method public getTotalEventsLocked(IJ)I
     .locals 0
 
-    .line 138
     invoke-virtual {p0, p1}, Lcom/android/server/am/BaseAppStateEventsTracker;->getUidEventsLocked(I)Lcom/android/server/am/BaseAppStateEvents;
 
     move-result-object p0
@@ -60,7 +55,6 @@
 
     return p1
 
-    .line 142
     :cond_0
     invoke-virtual {p0, p2, p3, p1}, Lcom/android/server/am/BaseAppStateEvents;->getTotalEvents(JI)I
 
@@ -72,7 +66,6 @@
 .method public handleNewEvent(Ljava/lang/String;I)V
     .locals 8
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
@@ -91,18 +84,15 @@
 
     return-void
 
-    .line 85
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 89
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
@@ -114,14 +104,12 @@
 
     if-nez v1, :cond_1
 
-    .line 91
     invoke-interface {p0, p2, p1}, Lcom/android/server/am/BaseAppStateEvents$Factory;->createAppStateEvents(ILjava/lang/String;)Lcom/android/server/am/BaseAppStateEvents;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$SimpleAppStateTimeslotEvents;
 
-    .line 92
     iget-object v2, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
     invoke-virtual {v2, p2, p1, v1}, Lcom/android/server/am/UidProcessMap;->put(ILjava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -129,15 +117,12 @@
     :cond_1
     const/4 v2, 0x0
 
-    .line 94
     invoke-virtual {v1, v6, v7, v2}, Lcom/android/server/am/BaseAppStateTimeSlotEvents;->addEvent(JI)V
 
-    .line 95
     invoke-virtual {v1, v6, v7, v2}, Lcom/android/server/am/BaseAppStateEvents;->getTotalEvents(JI)I
 
     move-result v5
 
-    .line 96
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {v1}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
@@ -154,7 +139,6 @@
 
     const/4 v2, 0x1
 
-    .line 97
     :cond_2
     monitor-exit v0
     :try_end_0
@@ -162,7 +146,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 99
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
@@ -185,7 +168,6 @@
     :catchall_0
     move-exception p0
 
-    .line 97
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -199,18 +181,15 @@
 
     if-nez p1, :cond_0
 
-    .line 106
     iget-object p1, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 107
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
     invoke-virtual {p0}, Lcom/android/server/am/UidProcessMap;->clear()V
 
-    .line 108
     monitor-exit p1
 
     goto :goto_0
@@ -232,7 +211,6 @@
 .method public onNewEvent(Ljava/lang/String;I)V
     .locals 1
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->mHandler:Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$H;
 
     const/4 v0, 0x0
@@ -249,17 +227,14 @@
 .method public onNumOfEventsThresholdChanged(I)V
     .locals 10
 
-    .line 113
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 115
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
@@ -267,7 +242,6 @@
 
     move-result-object v1
 
-    .line 116
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
     move-result v2
@@ -277,14 +251,12 @@
     :goto_0
     if-ltz v2, :cond_2
 
-    .line 117
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/util/ArrayMap;
 
-    .line 118
     invoke-virtual {v3}, Landroid/util/ArrayMap;->size()I
 
     move-result v4
@@ -294,7 +266,6 @@
     :goto_1
     if-ltz v4, :cond_1
 
-    .line 119
     invoke-virtual {v3, v4}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -303,14 +274,12 @@
 
     const/4 v8, 0x0
 
-    .line 120
     invoke-virtual {v5, v6, v7, v8}, Lcom/android/server/am/BaseAppStateEvents;->getTotalEvents(JI)I
 
     move-result v8
 
     if-lt v8, p1, :cond_0
 
-    .line 123
     iget-object v9, p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->mTmpPkgs:Landroid/util/ArrayMap;
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -329,13 +298,11 @@
 
     goto :goto_0
 
-    .line 127
     :cond_2
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 128
     iget-object p1, p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->mTmpPkgs:Landroid/util/ArrayMap;
 
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
@@ -347,7 +314,6 @@
     :goto_2
     if-ltz p1, :cond_3
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->mTmpPkgs:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -356,7 +322,6 @@
 
     check-cast v0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$SimpleAppStateTimeslotEvents;
 
-    .line 130
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {v1}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
@@ -371,7 +336,6 @@
 
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->mTmpPkgs:Landroid/util/ArrayMap;
 
-    .line 131
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -392,14 +356,12 @@
 
     move-wide v4, v6
 
-    .line 130
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$BaseAppStateTimeSlotEventsPolicy;->onExcessiveEvents(Ljava/lang/String;IIJ)V
 
     add-int/lit8 p1, p1, -0x1
 
     goto :goto_2
 
-    .line 133
     :cond_3
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->mTmpPkgs:Landroid/util/ArrayMap;
 
@@ -410,7 +372,6 @@
     :catchall_0
     move-exception p0
 
-    .line 127
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -422,7 +383,6 @@
 .method public onUserInteractionStarted(Ljava/lang/String;I)V
     .locals 0
 
-    .line 152
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
@@ -439,12 +399,10 @@
 .method public final trimEvents()V
     .locals 4
 
-    .line 146
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 147
     iget-object v2, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;

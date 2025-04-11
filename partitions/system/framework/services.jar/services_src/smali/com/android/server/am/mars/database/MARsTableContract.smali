@@ -25,7 +25,6 @@
 
     const-string v0, "content://com.samsung.android.sm.mars/MARs_Policy"
 
-    .line 8
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -34,7 +33,6 @@
 
     const-string v0, "content://com.samsung.android.sm.mars/MARs_AutoRunParameter"
 
-    .line 9
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -43,7 +41,6 @@
 
     const-string v0, "content://com.samsung.android.sm.mars/MARs_ExcludeTarget"
 
-    .line 10
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -52,7 +49,6 @@
 
     const-string v0, "content://com.samsung.android.sm.mars/MARs_IsCurrentImportant"
 
-    .line 11
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -61,7 +57,6 @@
 
     const-string v0, "content://com.samsung.android.sm.mars/MARs_AdjustRestriction"
 
-    .line 12
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -70,7 +65,6 @@
 
     const-string v0, "content://com.samsung.android.sm.mars/MARs_Settings"
 
-    .line 13
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -79,7 +73,6 @@
 
     const-string v0, "content://com.samsung.android.sm.dcapi"
 
-    .line 59
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

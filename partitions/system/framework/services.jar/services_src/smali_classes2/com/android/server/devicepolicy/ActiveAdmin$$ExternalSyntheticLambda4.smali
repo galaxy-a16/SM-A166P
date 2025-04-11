@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/ActiveAdmin;->$r8$lambda$2XePpiIoAzKc-_NpndsGc0Rkhp8(Ljava/lang/String;)Landroid/net/wifi/WifiSsid;

@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;Lcom/android/server/wm/WindowState;I)V
     .locals 0
 
-    .line 8158
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent$4;->this$0:Lcom/android/server/wm/DisplayContent;
 
     iput-object p2, p0, Lcom/android/server/wm/DisplayContent$4;->val$searchBehind:Lcom/android/server/wm/WindowState;
@@ -38,7 +37,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 8159
     :goto_0
     iput-boolean p1, p0, Lcom/android/server/wm/DisplayContent$4;->behindTopWindow:Z
 
@@ -50,7 +48,6 @@
 .method public test(Lcom/android/server/wm/WindowState;)Z
     .locals 4
 
-    .line 8163
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayContent$4;->behindTopWindow:Z
 
     const/4 v1, 0x1
@@ -59,18 +56,15 @@
 
     if-nez v0, :cond_1
 
-    .line 8164
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent$4;->val$searchBehind:Lcom/android/server/wm/WindowState;
 
     if-ne p1, v0, :cond_0
 
-    .line 8165
     iput-boolean v1, p0, Lcom/android/server/wm/DisplayContent$4;->behindTopWindow:Z
 
     :cond_0
     return v2
 
-    .line 8169
     :cond_1
     iget v0, p0, Lcom/android/server/wm/DisplayContent$4;->val$taskId:I
 
@@ -78,7 +72,6 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 8170
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->canReceiveKeys()Z
 
     move-result p0
@@ -87,7 +80,6 @@
 
     return v2
 
-    .line 8174
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getTask()Lcom/android/server/wm/Task;
 
@@ -95,7 +87,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 8175
     iget p0, p0, Lcom/android/server/wm/DisplayContent$4;->val$taskId:I
 
     invoke-virtual {v0, p0}, Lcom/android/server/wm/Task;->isTaskId(I)Z
@@ -106,7 +97,6 @@
 
     goto :goto_0
 
-    .line 8179
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isSecureLocked()Z
 
@@ -127,7 +117,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 8158
     check-cast p1, Lcom/android/server/wm/WindowState;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayContent$4;->test(Lcom/android/server/wm/WindowState;)Z

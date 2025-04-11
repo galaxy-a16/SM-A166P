@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPolicyHandler(Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;)Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     return-object p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$mgetSystemStatus(Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->getSystemStatus()I
 
     move-result p0
@@ -41,7 +39,6 @@
 .method public constructor <init>(Lcom/android/server/chimera/umr/DamonReclaimer;)V
     .locals 2
 
-    .line 688
     iput-object p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->this$0:Lcom/android/server/chimera/umr/DamonReclaimer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -50,7 +47,6 @@
 
     const/16 v0, 0x46
 
-    .line 656
     invoke-static {p1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p1
@@ -61,7 +57,6 @@
 
     const v0, 0x2bf20
 
-    .line 658
     invoke-static {p1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p1
@@ -70,22 +65,18 @@
 
     const/4 p1, 0x0
 
-    .line 686
     iput-object p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     const/4 p1, 0x0
 
-    .line 690
     iput p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
-    .line 691
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mLastCheckTime:J
 
-    .line 692
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->initDamonPolicyHandler()V
 
     return-void
@@ -96,7 +87,6 @@
 .method public final destroyDamonPolicyHandler()V
     .locals 2
 
-    .line 722
     iget-object v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     if-nez v0, :cond_0
@@ -106,10 +96,8 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 726
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 727
     iget-object v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -118,7 +106,6 @@
 
     invoke-virtual {v0}, Landroid/os/Looper;->quit()V
 
-    .line 728
     iput-object v1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     return-void
@@ -127,13 +114,11 @@
 .method public finalize()V
     .locals 1
 
-    .line 698
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->destroyDamonPolicyHandler()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 700
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -143,7 +128,6 @@
 
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 701
     throw v0
 .end method
 
@@ -152,7 +136,6 @@
 
     monitor-enter p0
 
-    .line 751
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -172,7 +155,6 @@
 
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 753
     iget-object v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->this$0:Lcom/android/server/chimera/umr/DamonReclaimer;
 
     invoke-virtual {v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;->isProactive()Z
@@ -185,7 +167,6 @@
 
     const-string v0, "getDamonEnableTimeout: it is not proactive"
 
-    .line 754
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->isDebugEnabled()Z
 
     move-result v2
@@ -194,12 +175,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 755
     monitor-exit p0
 
     return v1
 
-    .line 760
     :cond_0
     :try_start_1
     iget v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
@@ -218,7 +197,6 @@
 
     const/4 v0, 0x5
 
-    .line 771
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->unsetBitsToCheck(I)I
 
     move-result v0
@@ -235,7 +213,6 @@
     :cond_2
     const v1, 0x15f90
 
-    .line 776
     :cond_3
     :goto_0
     monitor-exit p0
@@ -253,7 +230,6 @@
 .method public getStartReason()Ljava/lang/String;
     .locals 2
 
-    .line 786
     iget p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
     const-string v0, "HOME_SCREEN"
@@ -283,7 +259,6 @@
 .method public final getSystemStatus()I
     .locals 0
 
-    .line 819
     iget p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
     return p0
@@ -294,10 +269,8 @@
 
     const-string v0, "handleDamonDisable: sending stop message"
 
-    .line 740
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 741
     iget-object p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     const/4 v0, 0x3
@@ -316,10 +289,8 @@
 
     const-string v0, "handleDamonEnable: sending start message"
 
-    .line 733
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 734
     iget-object p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     const/16 v0, 0x7d0
@@ -334,14 +305,12 @@
 .method public final initDamonPolicyHandler()V
     .locals 4
 
-    .line 708
     iget-object v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 712
     :cond_0
     new-instance v0, Lcom/android/server/ServiceThread;
 
@@ -353,10 +322,8 @@
 
     invoke-direct {v0, v3, v1, v2}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
-    .line 714
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 715
     new-instance v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -373,10 +340,8 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 9
 
-    .line 838
     iget v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
-    .line 839
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -505,7 +470,6 @@
 
     goto :goto_2
 
-    .line 841
     :pswitch_0
     const-class p2, Landroid/os/PowerManager;
 
@@ -521,30 +485,25 @@
 
     if-eqz p1, :cond_6
 
-    .line 842
     invoke-virtual {p0, v5}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->setBits(I)V
 
     goto :goto_2
 
-    .line 844
     :cond_6
     invoke-virtual {p0, v5}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->unsetBits(I)V
 
     goto :goto_2
 
-    .line 870
     :pswitch_1
     invoke-virtual {p0, v4}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->setBits(I)V
 
     goto :goto_2
 
-    .line 867
     :pswitch_2
     invoke-virtual {p0, v6}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->unsetBits(I)V
 
     goto :goto_2
 
-    .line 850
     :pswitch_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -562,7 +521,6 @@
 
     goto :goto_2
 
-    .line 853
     :cond_7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -572,14 +530,12 @@
 
     const-string/jumbo p1, "level"
 
-    .line 854
     invoke-virtual {p2, p1, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string/jumbo v1, "scale"
 
-    .line 855
     invoke-virtual {p2, v1, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -594,7 +550,6 @@
 
     mul-float/2addr p1, p2
 
-    .line 857
     iget p2, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->PROACTIVE_RECLAIM_BATTERY_THRESHOLD:I
 
     int-to-float p2, p2
@@ -603,34 +558,28 @@
 
     if-gez p1, :cond_8
 
-    .line 858
     invoke-virtual {p0, v7}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->setBits(I)V
 
     goto :goto_2
 
-    .line 860
     :cond_8
     invoke-virtual {p0, v7}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->unsetBits(I)V
 
     goto :goto_2
 
-    .line 873
     :pswitch_4
     invoke-virtual {p0, v4}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->unsetBits(I)V
 
     goto :goto_2
 
-    .line 864
     :pswitch_5
     invoke-virtual {p0, v6}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->setBits(I)V
 
-    .line 877
     :goto_2
     iget p1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
     if-eq v0, p1, :cond_9
 
-    .line 878
     iget-object p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     invoke-static {p0, v7, v3}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;->_sendMessage(Landroid/os/Handler;II)V
@@ -662,33 +611,28 @@
 .method public setAppStart(Z)V
     .locals 2
 
-    .line 803
     iget v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
     const/4 v1, 0x5
 
     if-eqz p1, :cond_0
 
-    .line 806
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->setBits(I)V
 
     const/4 p1, 0x0
 
     goto :goto_0
 
-    .line 808
     :cond_0
     invoke-virtual {p0, v1}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->unsetBits(I)V
 
     const/16 p1, 0x7d0
 
-    .line 813
     :goto_0
     iget v1, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
     if-eq v0, v1, :cond_1
 
-    .line 814
     iget-object p0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mPolicyHandler:Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager$DamonPolicyHandler;
 
     const/4 v0, 0x1
@@ -704,7 +648,6 @@
 
     monitor-enter p0
 
-    .line 823
     :try_start_0
     iget v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
@@ -718,7 +661,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 824
     monitor-exit p0
 
     return-void
@@ -736,7 +678,6 @@
 
     monitor-enter p0
 
-    .line 827
     :try_start_0
     iget v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
 
@@ -752,7 +693,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 828
     monitor-exit p0
 
     return-void
@@ -770,7 +710,6 @@
 
     monitor-enter p0
 
-    .line 831
     :try_start_0
     iget v0, p0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonPolicyManager;->mSystemStatus:I
     :try_end_0
@@ -784,7 +723,6 @@
 
     and-int/2addr p1, v0
 
-    .line 833
     monitor-exit p0
 
     return p1

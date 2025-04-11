@@ -15,24 +15,20 @@
 .method public constructor <init>(Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;)V
     .locals 1
 
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/TunerResourceBasic;-><init>(Lcom/android/server/tv/tunerresourcemanager/TunerResourceBasic$Builder;)V
 
-    .line 45
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;->mExclusiveGroupMemberHandles:Ljava/util/Set;
 
-    .line 49
     invoke-static {p1}, Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;->-$$Nest$fgetmType(Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;->mType:I
 
-    .line 50
     invoke-static {p1}, Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;->-$$Nest$fgetmExclusiveGroupId(Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;)I
 
     move-result p1
@@ -45,7 +41,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;Lcom/android/server/tv/tunerresourcemanager/FrontendResource-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;-><init>(Lcom/android/server/tv/tunerresourcemanager/FrontendResource$Builder;)V
 
     return-void
@@ -56,7 +51,6 @@
 .method public addExclusiveGroupMemberFeHandle(I)V
     .locals 0
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;->mExclusiveGroupMemberHandles:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -71,7 +65,6 @@
 .method public addExclusiveGroupMemberFeHandles(Ljava/util/Collection;)V
     .locals 0
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;->mExclusiveGroupMemberHandles:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
@@ -82,7 +75,6 @@
 .method public getExclusiveGroupId()I
     .locals 0
 
-    .line 58
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;->mExclusiveGroupId:I
 
     return p0
@@ -91,7 +83,6 @@
 .method public getExclusiveGroupMemberFeHandles()Ljava/util/Set;
     .locals 0
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;->mExclusiveGroupMemberHandles:Ljava/util/Set;
 
     return-object p0
@@ -100,7 +91,6 @@
 .method public getType()I
     .locals 0
 
-    .line 54
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;->mType:I
 
     return p0
@@ -109,7 +99,6 @@
 .method public removeExclusiveGroupMemberFeId(I)V
     .locals 0
 
-    .line 89
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/FrontendResource;->mExclusiveGroupMemberHandles:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -124,7 +113,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 94
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

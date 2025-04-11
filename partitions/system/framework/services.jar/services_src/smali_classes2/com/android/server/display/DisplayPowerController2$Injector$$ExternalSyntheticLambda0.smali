@@ -20,7 +20,6 @@
 .method public final uptimeMillis()J
     .locals 2
 
-    .line 0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0

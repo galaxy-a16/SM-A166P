@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/CacheOomRanker$LastRssComparator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/CacheOomRanker$LastRssComparator;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public compare(Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;)I
     .locals 2
 
-    .line 478
     iget-object p0, p2, Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->mProfile:Lcom/android/server/am/ProcessProfileRecord;
@@ -56,7 +54,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 474
     check-cast p1, Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;
 
     check-cast p2, Lcom/android/server/am/CacheOomRanker$RankedProcessRecord;

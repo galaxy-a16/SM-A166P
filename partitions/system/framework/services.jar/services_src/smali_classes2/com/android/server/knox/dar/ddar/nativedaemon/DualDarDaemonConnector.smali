@@ -29,15 +29,12 @@
 .method public constructor <init>(Landroid/os/Looper;Lcom/android/server/knox/dar/ddar/nativedaemon/INativeDaemonConnectorCallbacks;)V
     .locals 1
 
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 64
     iput-boolean v0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mIsListening:Z
 
-    .line 67
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -46,13 +43,10 @@
 
     const-string v0, "ddar"
 
-    .line 70
     iput-object v0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mSocket:Ljava/lang/String;
 
-    .line 71
     iput-object p2, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mCallback:Lcom/android/server/knox/dar/ddar/nativedaemon/INativeDaemonConnectorCallbacks;
 
-    .line 72
     new-instance p2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;
 
     const/16 v0, 0xa
@@ -61,7 +55,6 @@
 
     iput-object p2, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mResponseQueue:Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;
 
-    .line 73
     new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v0, 0x0
@@ -70,7 +63,6 @@
 
     iput-object p2, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mSequenceNumber:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 74
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mLooper:Landroid/os/Looper;
 
     return-void
@@ -81,7 +73,6 @@
 
     const/16 v0, 0x20
 
-    .line 195
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -102,10 +93,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 197
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 200
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -114,7 +103,6 @@
     :goto_1
     if-ge v1, v3, :cond_4
 
-    .line 202
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -123,7 +111,6 @@
 
     const-string v4, "\\\""
 
-    .line 205
     invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -135,12 +122,10 @@
 
     const-string v4, "\\\\"
 
-    .line 207
     invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 209
     :cond_3
     invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -152,7 +137,6 @@
     :cond_4
     if-eqz v0, :cond_5
 
-    .line 214
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_5
@@ -164,7 +148,6 @@
 
     const/4 v0, 0x0
 
-    .line 170
     invoke-virtual {p3, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
@@ -173,14 +156,12 @@
 
     const/16 v1, 0x20
 
-    .line 173
     invoke-virtual {p3, v1}, Ljava/lang/String;->indexOf(I)I
 
     move-result v2
 
     if-gez v2, :cond_2
 
-    .line 177
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -191,7 +172,6 @@
 
     invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 179
     array-length p1, p4
 
     move p2, v0
@@ -201,29 +181,24 @@
 
     aget-object p3, p4, p2
 
-    .line 180
     invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 181
     invoke-virtual {p3, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v2
 
     if-gez v2, :cond_0
 
-    .line 184
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 185
     invoke-static {p0, p3}, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->appendEscaped(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
-    .line 182
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -245,13 +220,11 @@
 
     throw p0
 
-    .line 187
     :cond_1
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return-void
 
-    .line 174
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -261,7 +234,6 @@
 
     throw p0
 
-    .line 171
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -291,7 +263,6 @@
 
     monitor-enter p0
 
-    .line 93
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -299,31 +270,26 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 96
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mSequenceNumber:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
     move-result v1
 
-    .line 98
     invoke-static {v0, v1, p1, p2, p3}, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->makeCommand(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p3, 0x0
 
-    .line 100
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 102
     iget-object v3, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mDaemonLock:Ljava/lang/Object;
 
     monitor-enter v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 103
     :try_start_1
     iget-object v4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
 
@@ -335,14 +301,12 @@
 
     new-array v5, p3, [Ljava/lang/Object;
 
-    .line 104
     invoke-static {v2, v4, v5}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 107
     :cond_0
     :try_start_2
     sget-object v4, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
@@ -351,12 +315,10 @@
 
     move-result-object v2
 
-    .line 108
     iget-object v4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v4, v2}, Ljava/io/OutputStream;->write([B)V
 
-    .line 109
     invoke-static {v2, p3}, Ljava/util/Arrays;->fill([BB)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
@@ -367,7 +329,6 @@
     :catch_0
     move-exception v2
 
-    .line 111
     :try_start_3
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
@@ -375,7 +336,6 @@
     :goto_0
     const-string v2, "DualDarDaemonConnector"
 
-    .line 117
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -406,7 +366,6 @@
 
     invoke-static {v2, v4, v5}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 118
     iget-object v2, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mResponseQueue:Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;
 
     const v4, 0xea60
@@ -419,7 +378,6 @@
 
     const-string p1, "DualDarDaemonConnector"
 
-    .line 120
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -440,7 +398,6 @@
 
     goto :goto_1
 
-    .line 123
     :cond_2
     invoke-virtual {v2}, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->isClassContinue()Z
 
@@ -451,7 +408,6 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 128
     invoke-virtual {v2}, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->isClassClientError()Z
 
     move-result p1
@@ -464,10 +420,8 @@
 
     new-array v1, p3, [Ljava/lang/Object;
 
-    .line 129
     invoke-static {p1, p2, v1}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 132
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -475,7 +429,6 @@
 
     invoke-virtual {v0, p3, p1}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 134
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -487,7 +440,6 @@
     :catchall_0
     move-exception p1
 
-    .line 135
     :try_start_4
     monitor-exit v3
     :try_end_4
@@ -511,14 +463,12 @@
 
     const-string v0, "DualDarDaemonConnector"
 
-    .line 331
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    .line 333
     :try_start_0
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mCallback:Lcom/android/server/knox/dar/ddar/nativedaemon/INativeDaemonConnectorCallbacks;
 
@@ -536,7 +486,6 @@
 
     const-string p0, "Unhandled event \'%s\'"
 
-    .line 334
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object p1
@@ -556,7 +505,6 @@
     :catch_0
     move-exception p0
 
-    .line 337
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -595,7 +543,6 @@
 
     const/4 v1, 0x0
 
-    .line 225
     :try_start_0
     new-instance v2, Landroid/net/LocalSocket;
 
@@ -604,7 +551,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 226
     :try_start_1
     new-instance v3, Landroid/net/LocalSocketAddress;
 
@@ -614,15 +560,12 @@
 
     invoke-direct {v3, v4, v5}, Landroid/net/LocalSocketAddress;-><init>(Ljava/lang/String;Landroid/net/LocalSocketAddress$Namespace;)V
 
-    .line 229
     invoke-virtual {v2, v3}, Landroid/net/LocalSocket;->connect(Landroid/net/LocalSocketAddress;)V
 
-    .line 231
     invoke-virtual {v2}, Landroid/net/LocalSocket;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v3
 
-    .line 232
     iget-object v4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mDaemonLock:Ljava/lang/Object;
 
     monitor-enter v4
@@ -630,7 +573,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 233
     :try_start_2
     invoke-virtual {v2}, Landroid/net/LocalSocket;->getOutputStream()Ljava/io/OutputStream;
 
@@ -638,12 +580,10 @@
 
     iput-object v5, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 234
     monitor-exit v4
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 236
     :try_start_3
     iget-object v4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mCallback:Lcom/android/server/knox/dar/ddar/nativedaemon/INativeDaemonConnectorCallbacks;
 
@@ -659,7 +599,6 @@
     :goto_0
     rsub-int v7, v6, 0x1000
 
-    .line 242
     invoke-virtual {v3, v5, v6, v7}, Ljava/io/InputStream;->read([BII)I
 
     move-result v7
@@ -668,7 +607,6 @@
 
     const-string v3, "DualDarDaemonConnector"
 
-    .line 244
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -698,7 +636,6 @@
     :goto_1
     if-ge v3, v4, :cond_1
 
-    .line 303
     aput-byte v0, v5, v3
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
@@ -708,13 +645,11 @@
 
     goto :goto_1
 
-    .line 307
     :cond_1
     iget-object v3, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mDaemonLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 308
     :try_start_4
     iget-object v4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
     :try_end_4
@@ -725,7 +660,6 @@
     :try_start_5
     const-string v4, "DualDarDaemonConnector"
 
-    .line 310
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -746,7 +680,6 @@
 
     invoke-static {v4, v5, v6}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 311
     iget-object v4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
@@ -762,7 +695,6 @@
     :try_start_6
     const-string v5, "DualDarDaemonConnector"
 
-    .line 313
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -781,17 +713,14 @@
 
     invoke-static {v5, v4, v6}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 315
     :goto_2
     iput-object v1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 317
     :cond_2
     monitor-exit v3
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 321
     :try_start_7
     invoke-virtual {v2}, Landroid/net/LocalSocket;->close()V
     :try_end_7
@@ -804,7 +733,6 @@
 
     const-string v1, "DualDarDaemonConnector"
 
-    .line 324
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -829,7 +757,6 @@
     :catchall_0
     move-exception p0
 
-    .line 317
     :try_start_8
     monitor-exit v3
     :try_end_8
@@ -847,13 +774,11 @@
     :goto_4
     if-ge v6, v7, :cond_6
 
-    .line 253
     :try_start_9
     aget-byte v9, v5, v6
 
     if-nez v9, :cond_5
 
-    .line 256
     new-instance v9, Ljava/lang/String;
 
     sub-int v10, v6, v8
@@ -864,7 +789,6 @@
 
     const-string v8, "DualDarDaemonConnector"
 
-    .line 259
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -886,13 +810,11 @@
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 261
     :try_start_a
     invoke-static {v9, v1}, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->parseRawEvent(Ljava/lang/String;[Ljava/io/FileDescriptor;)Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;
 
     move-result-object v8
 
-    .line 264
     invoke-virtual {v8}, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->isClassUnsolicited()Z
 
     move-result v9
@@ -901,7 +823,6 @@
 
     goto :goto_5
 
-    .line 278
     :cond_4
     iget-object v9, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mResponseQueue:Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;
 
@@ -923,7 +844,6 @@
     :try_start_b
     const-string v9, "DualDarDaemonConnector"
 
-    .line 281
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -959,7 +879,6 @@
 
     new-array v10, v0, [Ljava/lang/Object;
 
-    .line 289
     invoke-static {v6, v9, v10}, Lcom/android/server/knox/dar/ddar/DDLog;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     :cond_7
@@ -967,7 +886,6 @@
 
     rsub-int v6, v8, 0x1000
 
-    .line 296
     invoke-static {v5, v8, v5, v0, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_3
@@ -978,7 +896,6 @@
     :catchall_1
     move-exception v3
 
-    .line 234
     :try_start_c
     monitor-exit v4
     :try_end_c
@@ -1007,7 +924,6 @@
 
     move-object v2, v1
 
-    .line 305
     :goto_6
     :try_start_e
     throw v3
@@ -1017,13 +933,11 @@
     :catchall_3
     move-exception v3
 
-    .line 307
     :goto_7
     iget-object v4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mDaemonLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 308
     :try_start_f
     iget-object v5, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
     :try_end_f
@@ -1034,7 +948,6 @@
     :try_start_10
     const-string v5, "DualDarDaemonConnector"
 
-    .line 310
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1055,7 +968,6 @@
 
     invoke-static {v5, v6, v7}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 311
     iget-object v5, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v5}, Ljava/io/OutputStream;->close()V
@@ -1071,7 +983,6 @@
     :try_start_11
     const-string v6, "DualDarDaemonConnector"
 
-    .line 313
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1090,11 +1001,9 @@
 
     invoke-static {v6, v5, v7}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 315
     :goto_8
     iput-object v1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 317
     :cond_8
     monitor-exit v4
     :try_end_11
@@ -1102,7 +1011,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 321
     :try_start_12
     invoke-virtual {v2}, Landroid/net/LocalSocket;->close()V
     :try_end_12
@@ -1115,7 +1023,6 @@
 
     const-string v1, "DualDarDaemonConnector"
 
-    .line 324
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1134,7 +1041,6 @@
 
     invoke-static {v1, p0, v0}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 326
     :cond_9
     :goto_9
     throw v3
@@ -1142,7 +1048,6 @@
     :catchall_4
     move-exception p0
 
-    .line 317
     :try_start_13
     monitor-exit v4
     :try_end_13
@@ -1154,13 +1059,11 @@
 .method public run()V
     .locals 3
 
-    .line 80
     :goto_0
     iget-boolean v0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mIsListening:Z
 
     if-eqz v0, :cond_0
 
-    .line 82
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->listenToSocket()V
     :try_end_0
@@ -1171,7 +1074,6 @@
     :catch_0
     move-exception v0
 
-    .line 84
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1196,10 +1098,8 @@
 
     const-wide/16 v0, 0x4b
 
-    .line 85
     invoke-static {v0, v1}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mCallback:Lcom/android/server/knox/dar/ddar/nativedaemon/INativeDaemonConnectorCallbacks;
 
     invoke-interface {v0}, Lcom/android/server/knox/dar/ddar/nativedaemon/INativeDaemonConnectorCallbacks;->onDaemonDisconnected()Z
@@ -1213,7 +1113,6 @@
 .method public setIsListening(Z)V
     .locals 0
 
-    .line 219
     iput-boolean p1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector;->mIsListening:Z
 
     return-void

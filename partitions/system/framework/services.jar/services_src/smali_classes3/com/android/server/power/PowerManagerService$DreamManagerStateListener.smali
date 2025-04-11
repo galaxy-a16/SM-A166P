@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;)V
     .locals 0
 
-    .line 858
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$DreamManagerStateListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/PowerManagerService;Lcom/android/server/power/PowerManagerService$DreamManagerStateListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/PowerManagerService$DreamManagerStateListener;-><init>(Lcom/android/server/power/PowerManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onKeepDreamingWhenUnpluggingChanged(Z)V
     .locals 1
 
-    .line 862
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$DreamManagerStateListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/PowerManagerService;)Ljava/lang/Object;
@@ -45,13 +42,11 @@
 
     monitor-enter v0
 
-    .line 863
     :try_start_0
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$DreamManagerStateListener;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fputmKeepDreamingWhenUnplugging(Lcom/android/server/power/PowerManagerService;Z)V
 
-    .line 864
     monitor-exit v0
 
     return-void

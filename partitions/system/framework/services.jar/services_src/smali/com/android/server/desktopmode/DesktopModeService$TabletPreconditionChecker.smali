@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/DesktopModeService;)V
     .locals 0
 
-    .line 678
     iput-object p1, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/DesktopModeService;Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;-><init>(Lcom/android/server/desktopmode/DesktopModeService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public isAllowed(Lcom/android/server/desktopmode/State;ZZ)Z
     .locals 1
 
-    .line 681
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misSystemReady(Lcom/android/server/desktopmode/DesktopModeService;)Z
@@ -49,7 +46,6 @@
 
     return v0
 
-    .line 686
     :cond_0
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->isExternalDisplayConnected()Z
 
@@ -63,14 +59,12 @@
 
     if-eqz p2, :cond_1
 
-    .line 687
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p0, p1, p3}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$misBlockerRegistered(Lcom/android/server/desktopmode/DesktopModeService;Lcom/android/server/desktopmode/State;Z)Z
 
     return v0
 
-    .line 690
     :cond_1
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
@@ -80,7 +74,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 691
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->isPackagesAvailable()Z
 
     move-result p0
@@ -96,7 +89,6 @@
 .method public isDesktopModeAvailableEx(ZZ)Z
     .locals 3
 
-    .line 697
     iget-object v0, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/IStateManager;
@@ -109,12 +101,10 @@
 
     const/4 v1, 0x0
 
-    .line 698
     invoke-virtual {p0, v0, v1, v1}, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->isAllowed(Lcom/android/server/desktopmode/State;ZZ)Z
 
     move-result p0
 
-    .line 699
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -158,7 +148,6 @@
 .method public updateDesktopMode(Lcom/android/server/desktopmode/State;ZZ)Z
     .locals 10
 
-    .line 709
     sget-boolean p3, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p3, :cond_0
@@ -181,7 +170,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 710
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->isModeChangeLocked()Z
 
     move-result v1
@@ -192,10 +180,8 @@
 
     move-result-object v0
 
-    .line 709
     invoke-static {p3, v0}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 712
     :cond_0
     iget-object p3, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
@@ -215,20 +201,17 @@
 
     goto/16 :goto_6
 
-    .line 716
     :cond_1
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
 
     move-result-object p3
 
-    .line 717
     iget-object v1, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {v1}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/DesktopModeService;)Landroid/content/Context;
 
     move-result-object v1
 
-    .line 718
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -237,12 +220,10 @@
 
     const-string v3, "dual"
 
-    .line 717
     invoke-static {v1, v2, v3}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettings(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 719
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -261,7 +242,6 @@
 
     if-nez p2, :cond_5
 
-    .line 720
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmUserRequest(Lcom/android/server/desktopmode/DesktopModeService;)I
@@ -282,7 +262,6 @@
 
     if-nez p2, :cond_5
 
-    .line 723
     :cond_2
     invoke-virtual {p3, v4, v0, v2}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->compareTo(III)Z
 
@@ -290,7 +269,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 724
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmStandaloneModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/StandaloneModeChanger;
@@ -305,7 +283,6 @@
 
     goto/16 :goto_5
 
-    .line 726
     :cond_4
     invoke-virtual {p3, v4, v0, v3}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->compareTo(III)Z
 
@@ -313,7 +290,6 @@
 
     if-eqz p2, :cond_13
 
-    .line 728
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmDualModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/DualModeChanger;
@@ -324,7 +300,6 @@
 
     goto :goto_0
 
-    .line 733
     :cond_5
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
@@ -338,7 +313,6 @@
 
     move-result p2
 
-    .line 735
     sget-boolean v8, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_WIRELESS_DEX:Z
 
     if-eqz v8, :cond_6
@@ -349,12 +323,10 @@
 
     if-eqz v8, :cond_6
 
-    .line 736
     iget-object v8, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {v8, v6}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fputmEnteredViaWirelessDex(Lcom/android/server/desktopmode/DesktopModeService;Z)V
 
-    .line 738
     :cond_6
     iget-object v8, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
@@ -392,7 +364,6 @@
 
     if-nez p2, :cond_9
 
-    .line 739
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmUserRequest(Lcom/android/server/desktopmode/DesktopModeService;)I
@@ -401,14 +372,12 @@
 
     if-ne p2, v6, :cond_9
 
-    .line 740
     iget-object p1, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$mstartWelcomeActivity(Lcom/android/server/desktopmode/DesktopModeService;)V
 
     goto/16 :goto_5
 
-    .line 741
     :cond_9
     invoke-static {p1}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$smisExternalDisplayConnectedOrForced(Lcom/android/server/desktopmode/State;)Z
 
@@ -416,7 +385,6 @@
 
     if-eqz p2, :cond_11
 
-    .line 742
     invoke-virtual {p3, v4, v0, v2}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->compareTo(III)Z
 
     move-result p2
@@ -437,7 +405,6 @@
 
     if-eqz p2, :cond_b
 
-    .line 749
     :cond_a
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
@@ -447,7 +414,6 @@
 
     invoke-virtual {p2, v8, v2}, Lcom/android/server/desktopmode/UiManager;->showOverlay(II)V
 
-    .line 751
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmStandaloneModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/StandaloneModeChanger;
@@ -470,7 +436,6 @@
 
     goto/16 :goto_0
 
-    .line 755
     :cond_b
     invoke-virtual {p3, v5, v0, v0}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->compareTo(III)Z
 
@@ -480,7 +445,6 @@
 
     const/16 p2, 0xa
 
-    .line 757
     invoke-virtual {p3, v5, p2, v3}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->compareTo(III)Z
 
     move-result p2
@@ -489,7 +453,6 @@
 
     goto :goto_3
 
-    .line 776
     :cond_c
     invoke-virtual {p3, v4, v0, v3}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->compareTo(III)Z
 
@@ -507,7 +470,6 @@
 
     if-nez p2, :cond_13
 
-    .line 780
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmUiManager(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/UiManager;
@@ -516,7 +478,6 @@
 
     invoke-virtual {p2, v8, v2}, Lcom/android/server/desktopmode/UiManager;->showOverlay(II)V
 
-    .line 783
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmDualModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/DualModeChanger;
@@ -539,7 +500,6 @@
 
     goto/16 :goto_0
 
-    .line 759
     :cond_d
     :goto_3
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
@@ -575,7 +535,6 @@
 
     move-result-object p2
 
-    .line 762
     invoke-virtual {p2}, Lcom/android/server/desktopmode/ModeChanger$ModeToModeChangeInfo;->getModeToMode()I
 
     move-result p2
@@ -584,7 +543,6 @@
 
     goto :goto_4
 
-    .line 769
     :cond_f
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
@@ -594,7 +552,6 @@
 
     if-ne p2, v6, :cond_3
 
-    .line 770
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmStandaloneModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/StandaloneModeChanger;
@@ -603,7 +560,6 @@
 
     invoke-static {p2, p3}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fputmModeChanger(Lcom/android/server/desktopmode/DesktopModeService;Lcom/android/server/desktopmode/ModeChanger;)V
 
-    .line 771
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmStandaloneModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/StandaloneModeChanger;
@@ -620,7 +576,6 @@
 
     goto/16 :goto_0
 
-    .line 765
     :cond_10
     :goto_4
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
@@ -631,7 +586,6 @@
 
     invoke-static {p2, p3}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fputmModeChanger(Lcom/android/server/desktopmode/DesktopModeService;Lcom/android/server/desktopmode/ModeChanger;)V
 
-    .line 766
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmDualModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/DualModeChanger;
@@ -648,7 +602,6 @@
 
     goto/16 :goto_0
 
-    .line 788
     :cond_11
     iget p2, p3, Lcom/samsung/android/desktopmode/SemDesktopModeState;->enabled:I
 
@@ -662,7 +615,6 @@
 
     if-ne p2, v6, :cond_12
 
-    .line 791
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmStandaloneModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/StandaloneModeChanger;
@@ -671,7 +623,6 @@
 
     invoke-static {p2, p3}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fputmModeChanger(Lcom/android/server/desktopmode/DesktopModeService;Lcom/android/server/desktopmode/ModeChanger;)V
 
-    .line 792
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmStandaloneModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/StandaloneModeChanger;
@@ -688,7 +639,6 @@
 
     goto/16 :goto_0
 
-    .line 794
     :cond_12
     invoke-virtual {p3, v4, v0, v3}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->compareTo(III)Z
 
@@ -696,12 +646,10 @@
 
     if-eqz p2, :cond_13
 
-    .line 797
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-virtual {p2, v0}, Lcom/android/server/desktopmode/DesktopModeService;->scheduleUpdateDesktopMode(Z)V
 
-    .line 798
     iget-object p2, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmDualModeChanger(Lcom/android/server/desktopmode/DesktopModeService;)Lcom/android/server/desktopmode/DualModeChanger;
@@ -712,7 +660,6 @@
 
     goto/16 :goto_0
 
-    .line 803
     :cond_13
     :goto_5
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$TabletPreconditionChecker;->this$0:Lcom/android/server/desktopmode/DesktopModeService;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService;)V
     .locals 0
 
-    .line 648
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$2;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,17 +23,14 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 651
     const-class p1, Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 652
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 653
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -53,12 +49,10 @@
 
     const-string p1, "android.intent.extra.DOCK_STATE"
 
-    .line 654
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 656
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$2;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     if-eq p1, v0, :cond_1
@@ -88,7 +82,6 @@
     :cond_2
     const-string p1, "android.intent.action.DREAMING_STARTED"
 
-    .line 660
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -99,7 +92,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 661
     iget-object p1, p0, Lcom/android/server/display/DisplayManagerService$2;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {p1, v0}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fputmIsDreaming(Lcom/android/server/display/DisplayManagerService;Z)V
@@ -109,7 +101,6 @@
     :cond_3
     const-string p1, "android.intent.action.DREAMING_STOPPED"
 
-    .line 662
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -120,12 +111,10 @@
 
     if-eqz p1, :cond_4
 
-    .line 663
     iget-object p1, p0, Lcom/android/server/display/DisplayManagerService$2;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {p1, v1}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fputmIsDreaming(Lcom/android/server/display/DisplayManagerService;Z)V
 
-    .line 665
     :cond_4
     :goto_2
     iget-object p1, p0, Lcom/android/server/display/DisplayManagerService$2;->this$0:Lcom/android/server/display/DisplayManagerService;

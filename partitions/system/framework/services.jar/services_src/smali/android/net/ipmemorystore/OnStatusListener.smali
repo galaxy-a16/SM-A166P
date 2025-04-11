@@ -7,7 +7,6 @@
 .method public static toAIDL(Landroid/net/ipmemorystore/OnStatusListener;)Landroid/net/ipmemorystore/IOnStatusListener;
     .locals 1
 
-    .line 35
     new-instance v0, Landroid/net/ipmemorystore/OnStatusListener$1;
 
     invoke-direct {v0, p0}, Landroid/net/ipmemorystore/OnStatusListener$1;-><init>(Landroid/net/ipmemorystore/OnStatusListener;)V

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/os/NativeTombstoneManager;)V
     .locals 0
 
-    .line 248
     iput-object p1, p0, Lcom/android/server/os/NativeTombstoneManager$2;->this$0:Lcom/android/server/os/NativeTombstoneManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     const/4 v0, -0x1
 
-    .line 251
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -39,7 +37,6 @@
 
     return-void
 
-    .line 254
     :cond_0
     iget-object p0, p0, Lcom/android/server/os/NativeTombstoneManager$2;->this$0:Lcom/android/server/os/NativeTombstoneManager;
 

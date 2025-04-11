@@ -77,7 +77,6 @@
 .method public static synthetic $r8$lambda$IuuUKPS6JlMN-YCRTHR7r26ILKY(Lcom/android/server/wm/TspStateController;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->clearDeadzoneHole()V
 
     return-void
@@ -86,7 +85,6 @@
 .method public static synthetic $r8$lambda$_bb05S_jBDOzXyPKfr-cmoT-y5k(Lcom/android/server/wm/TspStateController;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/TspStateController;->lambda$writeTspCommandToSysfs$0(ILjava/lang/String;)V
 
     return-void
@@ -95,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/wm/TspStateController;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -104,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$fputmTspDebugSetting(Lcom/android/server/wm/TspStateController;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/wm/TspStateController;->mTspDebugSetting:I
 
     return-void
@@ -113,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$fputmTspThresholdSetting(Lcom/android/server/wm/TspStateController;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mTspThresholdSetting:Ljava/lang/String;
 
     return-void
@@ -122,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$mfinishScreenTurningOnInner(Lcom/android/server/wm/TspStateController;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->finishScreenTurningOnInner()V
 
     return-void
@@ -131,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$mupdateImePolicyInner(Lcom/android/server/wm/TspStateController;Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TspStateController;->updateImePolicyInner(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -140,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$mupdateWindowPolicyInner(Lcom/android/server/wm/TspStateController;Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TspStateController;->updateWindowPolicyInner(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -149,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$sfgetURI_SETTING_TSP_DEBUG()Landroid/net/Uri;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/wm/TspStateController;->URI_SETTING_TSP_DEBUG:Landroid/net/Uri;
 
     return-object v0
@@ -158,7 +149,6 @@
 .method public static bridge synthetic -$$Nest$sfgetURI_SETTING_TSP_THRESHOLD()Landroid/net/Uri;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/wm/TspStateController;->URI_SETTING_TSP_THRESHOLD:Landroid/net/Uri;
 
     return-object v0
@@ -169,7 +159,6 @@
 
     const-string/jumbo v0, "setting_tsp_threshold"
 
-    .line 81
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -178,7 +167,6 @@
 
     const-string/jumbo v0, "setting_tsp_debug"
 
-    .line 83
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -191,13 +179,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
 
-    .line 182
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     new-instance v0, Lcom/android/server/wm/TspGripCommand;
 
-    .line 96
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->IS_TABLET_DEVICE:Z
 
     const/4 v2, 0x3
@@ -213,16 +198,13 @@
     :cond_0
     move v1, v3
 
-    .line 97
     :goto_0
     invoke-direct {v0, v1}, Lcom/android/server/wm/TspGripCommand;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mDeviceDefaultTspCommand:Lcom/android/server/wm/TspGripCommand;
 
-    .line 99
     new-instance v0, Lcom/android/server/wm/TspGripCommand;
 
-    .line 100
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->IS_TABLET_DEVICE:Z
 
     if-eqz v1, :cond_1
@@ -234,16 +216,13 @@
     :cond_1
     const/4 v1, 0x4
 
-    .line 101
     :goto_1
     invoke-direct {v0, v1}, Lcom/android/server/wm/TspGripCommand;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyTspCommand:Lcom/android/server/wm/TspGripCommand;
 
-    .line 103
     new-instance v0, Lcom/android/server/wm/TspGripCommand;
 
-    .line 104
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->IS_TABLET_DEVICE:Z
 
     if-eqz v1, :cond_2
@@ -255,13 +234,11 @@
     :cond_2
     const/4 v1, 0x7
 
-    .line 106
     :goto_2
     invoke-direct {v0, v1}, Lcom/android/server/wm/TspGripCommand;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyTspCommandForIme:Lcom/android/server/wm/TspGripCommand;
 
-    .line 108
     new-instance v0, Lcom/android/server/wm/TspGripCommand;
 
     const/16 v1, 0xa
@@ -270,7 +247,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyGameTspCommand:Lcom/android/server/wm/TspGripCommand;
 
-    .line 111
     new-instance v0, Lcom/android/server/wm/TspGripCommand;
 
     const/16 v1, 0xd
@@ -279,25 +255,20 @@
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mCustomTspCommand:Lcom/android/server/wm/TspGripCommand;
 
-    .line 112
     new-instance v0, Lcom/android/server/wm/TspGripCommand;
 
     invoke-direct {v0, v1}, Lcom/android/server/wm/TspGripCommand;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
-    .line 115
     iput-boolean v3, p0, Lcom/android/server/wm/TspStateController;->mLastNoteMode:Z
 
-    .line 116
     iput-boolean v3, p0, Lcom/android/server/wm/TspStateController;->mIsPortrait:Z
 
     const/4 v0, 0x0
 
-    .line 117
     iput-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mIsEnabledCustomSetting:Z
 
-    .line 127
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
@@ -306,13 +277,10 @@
 
     const-string v1, ""
 
-    .line 146
     iput-object v1, p0, Lcom/android/server/wm/TspStateController;->mTspThresholdSetting:Ljava/lang/String;
 
-    .line 147
     iput v0, p0, Lcom/android/server/wm/TspStateController;->mTspDebugSetting:I
 
-    .line 159
     new-instance v0, Lcom/android/server/wm/TspStateController$H;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/TspStateController$H;-><init>(Lcom/android/server/wm/TspStateController;)V
@@ -321,46 +289,36 @@
 
     const/4 v1, 0x0
 
-    .line 161
     iput-object v1, p0, Lcom/android/server/wm/TspStateController;->mSemInputDeviceManager:Lcom/samsung/android/hardware/secinputdev/SemInputDeviceManager;
 
-    .line 748
     new-instance v4, Lcom/android/server/wm/TspStateController$$ExternalSyntheticLambda1;
 
     invoke-direct {v4, p0}, Lcom/android/server/wm/TspStateController$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/wm/TspStateController;)V
 
     iput-object v4, p0, Lcom/android/server/wm/TspStateController;->clearDeadzoneHole:Ljava/lang/Runnable;
 
-    .line 753
     iput-boolean v3, p0, Lcom/android/server/wm/TspStateController;->mAwake:Z
 
-    .line 183
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mContext:Landroid/content/Context;
 
-    .line 185
     new-instance p1, Lcom/android/server/wm/TspStateController$SettingsObserver;
 
     invoke-direct {p1, p0, v0}, Lcom/android/server/wm/TspStateController$SettingsObserver;-><init>(Lcom/android/server/wm/TspStateController;Landroid/os/Handler;)V
 
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mSettingsObserver:Lcom/android/server/wm/TspStateController$SettingsObserver;
 
-    .line 186
     invoke-virtual {p1}, Lcom/android/server/wm/TspStateController$SettingsObserver;->observe()V
 
-    .line 188
     new-instance p1, Lcom/android/server/wm/TspStateController$DeviceSize;
 
     invoke-direct {p1}, Lcom/android/server/wm/TspStateController$DeviceSize;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
-    .line 189
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->initDefaultValues()V
 
-    .line 190
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->updateCustomValue()V
 
-    .line 192
     new-instance v0, Lcom/android/server/wm/TspStateController$TspDebug;
 
     iget v3, p1, Lcom/android/server/wm/TspStateController$DeviceSize;->initWidth:I
@@ -371,34 +329,28 @@
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mTspDebug:Lcom/android/server/wm/TspStateController$TspDebug;
 
-    .line 193
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->toggleTspDebug()V
 
     const-string p1, "init"
 
     const-string/jumbo v0, "tspstatemanager"
 
-    .line 195
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "0,0,0,0"
 
-    .line 196
     invoke-virtual {p0, p1, v2}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 198
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mContext:Landroid/content/Context;
 
     const-string/jumbo p1, "semcustomdump"
 
-    .line 199
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/samsung/android/sepunion/SemCustomDumpManager;
 
-    .line 200
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/sepunion/SemCustomDumpManager;->setDumpState(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -407,14 +359,12 @@
 .method private synthetic lambda$writeTspCommandToSysfs$0(ILjava/lang/String;)V
     .locals 6
 
-    .line 662
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mSemInputDeviceManager:Lcom/samsung/android/hardware/secinputdev/SemInputDeviceManager;
 
     const-string v1, "TspStateManager"
 
     if-eqz v0, :cond_3
 
-    .line 663
     iget-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mAwake:Z
 
     if-eqz v0, :cond_4
@@ -433,12 +383,10 @@
 
     if-eq p1, v5, :cond_1
 
-    .line 676
     iget-object v5, p0, Lcom/android/server/wm/TspStateController;->mFocusedWindow:Ljava/lang/String;
 
     if-eqz v5, :cond_0
 
-    .line 677
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -469,12 +417,10 @@
 
     const/4 v2, 0x0
 
-    .line 680
     iput-object v2, p0, Lcom/android/server/wm/TspStateController;->mFocusedWindow:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 682
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -494,7 +440,6 @@
 
     invoke-static {v4, v2}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 684
     :goto_0
     iget-object v2, p0, Lcom/android/server/wm/TspStateController;->mSemInputDeviceManager:Lcom/samsung/android/hardware/secinputdev/SemInputDeviceManager;
 
@@ -502,7 +447,6 @@
 
     goto :goto_1
 
-    .line 671
     :cond_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -522,7 +466,6 @@
 
     invoke-static {v4, v2}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 672
     iget-object v2, p0, Lcom/android/server/wm/TspStateController;->mSemInputDeviceManager:Lcom/samsung/android/hardware/secinputdev/SemInputDeviceManager;
 
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -533,7 +476,6 @@
 
     goto :goto_1
 
-    .line 666
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -553,7 +495,6 @@
 
     invoke-static {v4, v2}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 667
     iget-object v2, p0, Lcom/android/server/wm/TspStateController;->mSemInputDeviceManager:Lcom/samsung/android/hardware/secinputdev/SemInputDeviceManager;
 
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -562,7 +503,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/hardware/secinputdev/SemInputDeviceManager;->setSipMode(I)I
 
-    .line 688
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -588,7 +528,6 @@
 
     if-eq p1, v0, :cond_4
 
-    .line 691
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mTspDebug:Lcom/android/server/wm/TspStateController$TspDebug;
 
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mContext:Landroid/content/Context;
@@ -600,7 +539,6 @@
     :cond_3
     const-string/jumbo p0, "mSemInputDeviceManager is null"
 
-    .line 695
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
@@ -613,12 +551,10 @@
 .method public final adjustToDisplaySize(Landroid/util/ArrayMap;)V
     .locals 7
 
-    .line 618
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
 
     move-result v0
 
-    .line 619
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     iget-object v2, p0, Lcom/android/server/wm/TspStateController;->clearDeadzoneHole:Ljava/lang/Runnable;
@@ -627,7 +563,6 @@
 
     if-nez v0, :cond_0
 
-    .line 622
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->clearDeadzoneHole()V
 
     return-void
@@ -638,7 +573,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 627
     invoke-virtual {p1, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -649,7 +583,6 @@
 
     move-result v2
 
-    .line 628
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -660,7 +593,6 @@
 
     check-cast v3, Landroid/graphics/Rect;
 
-    .line 630
     iget-object v4, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
     iget v5, v4, Lcom/android/server/wm/TspStateController$DeviceSize;->height:I
@@ -673,7 +605,6 @@
 
     move-result v4
 
-    .line 632
     iget-object v5, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
     iget v6, v5, Lcom/android/server/wm/TspStateController$DeviceSize;->height:I
@@ -686,7 +617,6 @@
 
     move-result v3
 
-    .line 634
     invoke-virtual {p0, v2, v4, v3}, Lcom/android/server/wm/TspStateController;->writeDeadzoneHoleCmd(III)V
 
     add-int/lit8 v1, v1, 0x1
@@ -702,7 +632,6 @@
 
     const/4 v0, 0x0
 
-    .line 750
     invoke-virtual {p0, v0, v0, v0}, Lcom/android/server/wm/TspStateController;->writeDeadzoneHoleCmd(III)V
 
     return-void
@@ -711,7 +640,6 @@
 .method public finishScreenTurningOn()V
     .locals 2
 
-    .line 334
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     const/4 v1, 0x3
@@ -722,12 +650,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 335
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 337
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
@@ -735,7 +661,6 @@
 
     move-result-object v0
 
-    .line 338
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -746,7 +671,6 @@
 .method public final finishScreenTurningOnInner()V
     .locals 2
 
-    .line 544
     iget-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mIsPortrait:Z
 
     const-string/jumbo v1, "tspstatemanager"
@@ -759,24 +683,20 @@
 
     const-string v0, "finishScreenTurningOn TSP_COMMAND_TYPE_PORT"
 
-    .line 545
     invoke-static {v1, v0}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 546
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mReservePortCmd:Ljava/lang/String;
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 547
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mReservePortCmd:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mLastPortCmd:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 548
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mReserveLandCmd:Ljava/lang/String;
 
@@ -784,17 +704,14 @@
 
     const-string v0, "finishScreenTurningOn TSP_COMMAND_TYPE_LAND"
 
-    .line 549
     invoke-static {v1, v0}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 550
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mReserveLandCmd:Ljava/lang/String;
 
     const/4 v1, 0x2
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 551
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mReserveLandCmd:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mLastLandCmd:Ljava/lang/String;
@@ -807,7 +724,6 @@
 .method public final initDefaultValues()V
     .locals 4
 
-    .line 204
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mDeviceDefaultTspCommand:Lcom/android/server/wm/TspGripCommand;
 
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
@@ -818,26 +734,22 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/wm/TspGripCommand;->parse(Lcom/android/server/wm/TspStateController$DeviceSize;Ljava/lang/String;Z)Z
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyTspCommand:Lcom/android/server/wm/TspGripCommand;
 
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/wm/TspGripCommand;->parse(Lcom/android/server/wm/TspStateController$DeviceSize;Ljava/lang/String;Z)Z
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyTspCommandForIme:Lcom/android/server/wm/TspGripCommand;
 
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/wm/TspGripCommand;->parse(Lcom/android/server/wm/TspStateController$DeviceSize;Ljava/lang/String;Z)Z
 
-    .line 208
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_USE_SMALLER_GRIPZONE_ON_GAME:Z
 
     if-eqz v0, :cond_0
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyGameTspCommand:Lcom/android/server/wm/TspGripCommand;
 
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
@@ -851,26 +763,22 @@
 .method public final isForegroundGame()Z
     .locals 2
 
-    .line 425
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mGameManager:Lcom/samsung/android/game/SemGameManager;
 
     if-nez v0, :cond_0
 
-    .line 426
     new-instance v0, Lcom/samsung/android/game/SemGameManager;
 
     invoke-direct {v0}, Lcom/samsung/android/game/SemGameManager;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mGameManager:Lcom/samsung/android/game/SemGameManager;
 
-    .line 429
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mGameManager:Lcom/samsung/android/game/SemGameManager;
 
     if-eqz p0, :cond_1
 
-    .line 430
     invoke-virtual {p0}, Lcom/samsung/android/game/SemGameManager;->isForegroundGame()Z
 
     move-result p0
@@ -882,7 +790,6 @@
     :catch_0
     move-exception p0
 
-    .line 433
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -914,7 +821,6 @@
 .method public final isSystemWindow(Lcom/android/server/wm/WindowState;)Z
     .locals 1
 
-    .line 420
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object p0
@@ -925,7 +831,6 @@
 
     if-lt p0, v0, :cond_0
 
-    .line 421
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object p0
@@ -950,64 +855,50 @@
 .method public final makeLandCommand(Lcom/android/server/wm/TspGripCommand;)Ljava/lang/String;
     .locals 2
 
-    .line 486
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v0, "2,1,"
 
-    .line 487
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 488
     iget v0, p1, Lcom/android/server/wm/TspGripCommand;->mLandEdgeZone:I
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const/16 v0, 0x2c
 
-    .line 489
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 490
     iget v1, p1, Lcom/android/server/wm/TspGripCommand;->mLandX1:I
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 491
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 492
     iget v1, p1, Lcom/android/server/wm/TspGripCommand;->mLandTopRejectWidth:I
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 493
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 494
     iget v1, p1, Lcom/android/server/wm/TspGripCommand;->mLandBottomRejectWidth:I
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 495
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 496
     iget v1, p1, Lcom/android/server/wm/TspGripCommand;->mLandTopGripWidth:I
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 497
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 498
     iget p1, p1, Lcom/android/server/wm/TspGripCommand;->mLandBottomGripWidth:I
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 499
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1018,69 +909,54 @@
 .method public final makePortCommand(Lcom/android/server/wm/TspGripCommand;)Ljava/lang/String;
     .locals 2
 
-    .line 464
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v0, "1,"
 
-    .line 465
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 466
     iget v0, p1, Lcom/android/server/wm/TspGripCommand;->mPortEdgeZone:I
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const/16 v0, 0x2c
 
-    .line 467
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 468
     iget v1, p1, Lcom/android/server/wm/TspGripCommand;->mPortX1:I
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 469
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 470
     iget v1, p1, Lcom/android/server/wm/TspGripCommand;->mPortX2:I
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 471
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 472
     iget v1, p1, Lcom/android/server/wm/TspGripCommand;->mPortY1:I
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 474
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_TSP_DEADZONE_V3:Z
 
     if-eqz v1, :cond_0
 
-    .line 475
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 476
     iget v1, p1, Lcom/android/server/wm/TspGripCommand;->mPortX3:I
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 477
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 478
     iget p1, p1, Lcom/android/server/wm/TspGripCommand;->mPortY2:I
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 481
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1092,7 +968,6 @@
 .method public final parseCommand(ILjava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 236
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -1106,19 +981,16 @@
     :cond_0
     const-string p0, ";"
 
-    .line 239
     invoke-virtual {p2, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 240
     array-length p2, p0
 
     if-gt p2, p1, :cond_1
 
     return-object v0
 
-    .line 243
     :cond_1
     aget-object p0, p0, p1
 
@@ -1128,7 +1000,6 @@
 .method public printLastGripCmd()V
     .locals 2
 
-    .line 841
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1163,7 +1034,6 @@
 .method public final removeAllMessages()V
     .locals 2
 
-    .line 342
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     const/4 v1, 0x1
@@ -1174,12 +1044,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 343
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 345
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
@@ -1191,12 +1059,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 346
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 348
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
@@ -1208,7 +1074,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 349
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     invoke-virtual {p0, v1}, Landroid/os/Handler;->removeMessages(I)V
@@ -1220,7 +1085,6 @@
 .method public setDeadzoneHole(Landroid/os/Bundle;)V
     .locals 8
 
-    .line 556
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1229,7 +1093,6 @@
 
     const-string/jumbo v1, "setDeadzoneHole "
 
-    .line 557
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -1239,7 +1102,6 @@
 
     const-string/jumbo p1, "setDeadzoneHole hole is null"
 
-    .line 561
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1249,7 +1111,6 @@
 
     const/4 v1, 0x0
 
-    .line 565
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1260,7 +1121,6 @@
 
     const-string/jumbo p1, "setDeadzoneHole invalid name key"
 
-    .line 567
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1270,28 +1130,24 @@
 
     const/4 v2, 0x0
 
-    .line 571
     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
     const-string v3, "dead_zone_port_y1"
 
-    .line 572
     invoke-virtual {p1, v3, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
     const-string v4, "dead_zone_port_y2"
 
-    .line 573
     invoke-virtual {p1, v4, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string v4, "TspStateManager"
 
-    .line 575
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1326,7 +1182,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     sget-boolean v4, Lcom/samsung/android/rune/CoreRune;->FW_TSP_DEADZONEHOLE_LAND:Z
 
     if-nez v4, :cond_3
@@ -1339,18 +1194,15 @@
 
     const-string p1, "does not support top/bottom deadzone hole!"
 
-    .line 579
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 583
     :cond_3
     new-instance v4, Landroid/util/ArrayMap;
 
     invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 585
     iget-object v5, p0, Lcom/android/server/wm/TspStateController;->mDeadzoneHoleMap:Landroid/util/ArrayMap;
 
     monitor-enter v5
@@ -1368,7 +1220,6 @@
     :cond_4
     if-ge v3, p1, :cond_5
 
-    .line 591
     :try_start_0
     new-instance v6, Lcom/android/server/wm/TspStateController$HoleInfo;
 
@@ -1376,13 +1227,11 @@
 
     goto :goto_0
 
-    .line 592
     :cond_5
     new-instance v6, Lcom/android/server/wm/TspStateController$HoleInfo;
 
     invoke-direct {v6, p0, v1, p1, v3}, Lcom/android/server/wm/TspStateController$HoleInfo;-><init>(Lcom/android/server/wm/TspStateController;III)V
 
-    .line 593
     :goto_0
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mDeadzoneHoleMap:Landroid/util/ArrayMap;
 
@@ -1390,7 +1239,6 @@
 
     goto :goto_2
 
-    .line 587
     :cond_6
     :goto_1
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mDeadzoneHoleMap:Landroid/util/ArrayMap;
@@ -1401,12 +1249,10 @@
 
     if-eqz p1, :cond_7
 
-    .line 588
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mDeadzoneHoleMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p1, v0}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 596
     :cond_7
     :goto_2
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mDeadzoneHoleMap:Landroid/util/ArrayMap;
@@ -1420,7 +1266,6 @@
     :goto_3
     if-ge v0, p1, :cond_a
 
-    .line 598
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->mDeadzoneHoleMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -1437,7 +1282,6 @@
 
     goto :goto_5
 
-    .line 601
     :cond_8
     iget v3, v1, Lcom/android/server/wm/TspStateController$HoleInfo;->direction:I
 
@@ -1453,7 +1297,6 @@
 
     if-nez v3, :cond_9
 
-    .line 604
     new-instance v3, Landroid/graphics/Rect;
 
     iget v6, v1, Lcom/android/server/wm/TspStateController$HoleInfo;->startY:I
@@ -1464,7 +1307,6 @@
 
     goto :goto_4
 
-    .line 606
     :cond_9
     iget v6, v3, Landroid/graphics/Rect;->top:I
 
@@ -1476,7 +1318,6 @@
 
     iput v6, v3, Landroid/graphics/Rect;->top:I
 
-    .line 607
     iget v6, v3, Landroid/graphics/Rect;->bottom:I
 
     iget v7, v1, Lcom/android/server/wm/TspStateController$HoleInfo;->endY:I
@@ -1487,7 +1328,6 @@
 
     iput v6, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 610
     :goto_4
     iget v1, v1, Lcom/android/server/wm/TspStateController$HoleInfo;->direction:I
 
@@ -1502,13 +1342,11 @@
 
     goto :goto_3
 
-    .line 612
     :cond_a
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 614
     invoke-virtual {p0, v4}, Lcom/android/server/wm/TspStateController;->adjustToDisplaySize(Landroid/util/ArrayMap;)V
 
     return-void
@@ -1516,7 +1354,6 @@
     :catchall_0
     move-exception p0
 
-    .line 612
     :try_start_1
     monitor-exit v5
     :try_end_1
@@ -1528,12 +1365,10 @@
 .method public setDefaultDisplaySizeDensity(IIII)V
     .locals 2
 
-    .line 267
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 268
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1570,19 +1405,15 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/wm/TspStateController$DeviceSize;->set(IIII)V
 
-    .line 273
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->initDefaultValues()V
 
-    .line 274
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->updateCustomValue()V
 
-    .line 276
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mTspDebug:Lcom/android/server/wm/TspStateController$TspDebug;
 
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
@@ -1599,7 +1430,6 @@
 .method public setOrientation(Z)V
     .locals 1
 
-    .line 702
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TSP_DEADZONE:Z
 
     if-nez v0, :cond_0
@@ -1609,7 +1439,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 706
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/TspStateController;->setOrientation(ZZ)V
 
     return-void
@@ -1618,34 +1447,28 @@
 .method public setOrientation(ZZ)V
     .locals 2
 
-    .line 710
     iget-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mIsPortrait:Z
 
     if-ne v0, p1, :cond_0
 
     if-eqz p2, :cond_6
 
-    .line 711
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/wm/TspStateController;->mIsPortrait:Z
 
-    .line 714
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mDeadzoneHoleMap:Landroid/util/ArrayMap;
 
     monitor-enter p1
 
-    .line 715
     :try_start_0
     iget-object p2, p0, Lcom/android/server/wm/TspStateController;->mDeadzoneHoleMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p2}, Landroid/util/ArrayMap;->clear()V
 
-    .line 716
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 717
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     iget-object p2, p0, Lcom/android/server/wm/TspStateController;->clearDeadzoneHole:Ljava/lang/Runnable;
@@ -1656,7 +1479,6 @@
 
     if-nez p1, :cond_1
 
-    .line 718
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     iget-object p2, p0, Lcom/android/server/wm/TspStateController;->clearDeadzoneHole:Ljava/lang/Runnable;
@@ -1665,13 +1487,11 @@
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 721
     :cond_1
     iget-boolean p1, p0, Lcom/android/server/wm/TspStateController;->mIsPortrait:Z
 
     if-eqz p1, :cond_4
 
-    .line 722
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mReservePortCmd:Ljava/lang/String;
 
     if-nez p1, :cond_2
@@ -1680,12 +1500,10 @@
 
     const-string/jumbo p1, "setOrientation mReservePortCmd is null."
 
-    .line 723
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 726
     :cond_2
     iget-object p2, p0, Lcom/android/server/wm/TspStateController;->mLastPortCmd:Ljava/lang/String;
 
@@ -1697,7 +1515,6 @@
 
     const-string/jumbo p1, "tspstatemanager"
 
-    .line 727
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1716,14 +1533,12 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 729
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mReservePortCmd:Ljava/lang/String;
 
     const/4 p2, 0x1
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 730
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mReservePortCmd:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mLastPortCmd:Ljava/lang/String;
@@ -1735,19 +1550,16 @@
 
     const-string/jumbo p2, "setOrientation TSP_COMMAND_TYPE_SAME"
 
-    .line 732
     invoke-static {p1, p2}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "2,0"
 
     const/4 p2, 0x4
 
-    .line 733
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 736
     :cond_4
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mReserveLandCmd:Ljava/lang/String;
 
@@ -1757,7 +1569,6 @@
 
     const-string/jumbo p1, "setOrientation mReserveLandCmd is null."
 
-    .line 737
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1765,7 +1576,6 @@
     :cond_5
     const-string/jumbo p1, "tspstatemanager"
 
-    .line 740
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1784,14 +1594,12 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 742
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mReserveLandCmd:Ljava/lang/String;
 
     const/4 p2, 0x2
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 743
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mReserveLandCmd:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mLastLandCmd:Ljava/lang/String;
@@ -1803,7 +1611,6 @@
     :catchall_0
     move-exception p0
 
-    .line 716
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -1817,7 +1624,6 @@
 
     const/4 v0, 0x0
 
-    .line 770
     iput-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mAwake:Z
 
     return-void
@@ -1828,10 +1634,8 @@
 
     const/4 v0, 0x1
 
-    .line 756
     iput-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mAwake:Z
 
-    .line 757
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_TSP_SIP_MODE:Z
 
     const-string v2, "1"
@@ -1840,7 +1644,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 758
     iget-boolean v1, p0, Lcom/android/server/wm/TspStateController;->mImeWindowVisible:Z
 
     if-eqz v1, :cond_0
@@ -1857,7 +1660,6 @@
 
     invoke-virtual {p0, v1, v4}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 760
     :cond_1
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_TSP_NOTE_MODE:Z
 
@@ -1867,7 +1669,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 761
     iget-boolean v1, p0, Lcom/android/server/wm/TspStateController;->mLastNoteMode:Z
 
     if-eqz v1, :cond_2
@@ -1882,13 +1683,11 @@
 
     invoke-virtual {p0, v2, v1}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 764
     :cond_3
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_TSP_DEADZONE:Z
 
     if-eqz v1, :cond_4
 
-    .line 765
     iget-boolean v1, p0, Lcom/android/server/wm/TspStateController;->mIsPortrait:Z
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/wm/TspStateController;->setOrientation(ZZ)V
@@ -1900,7 +1699,6 @@
 .method public systemReady()V
     .locals 2
 
-    .line 259
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mContext:Landroid/content/Context;
 
     const-string v1, "SemInputDeviceManagerService"
@@ -1919,7 +1717,6 @@
 
     const-string/jumbo v0, "systemReady: failed to get the service"
 
-    .line 262
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -1929,7 +1726,6 @@
 .method public toggleTspDebug()V
     .locals 3
 
-    .line 247
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mTspDebug:Lcom/android/server/wm/TspStateController$TspDebug;
 
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mContext:Landroid/content/Context;
@@ -1961,17 +1757,14 @@
 .method public final updateCustomValue()V
     .locals 5
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mTspThresholdSetting:Ljava/lang/String;
 
-    .line 216
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 217
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1984,7 +1777,6 @@
 
     move-result-object v0
 
-    .line 220
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2006,10 +1798,8 @@
 
     const/4 v1, 0x0
 
-    .line 222
     iput-boolean v1, p0, Lcom/android/server/wm/TspStateController;->mIsEnabledCustomSetting:Z
 
-    .line 223
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -2018,13 +1808,11 @@
 
     return-void
 
-    .line 227
     :cond_1
     invoke-virtual {p0, v1, v0}, Lcom/android/server/wm/TspStateController;->parseCommand(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 228
     iget-object v3, p0, Lcom/android/server/wm/TspStateController;->mCustomTspCommand:Lcom/android/server/wm/TspGripCommand;
 
     iget-object v4, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
@@ -2037,19 +1825,16 @@
 
     const/4 v2, 0x1
 
-    .line 230
     invoke-virtual {p0, v2, v0}, Lcom/android/server/wm/TspStateController;->parseCommand(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 231
     iget-object v2, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyTspCommand:Lcom/android/server/wm/TspGripCommand;
 
     iget-object v3, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/server/wm/TspGripCommand;->parse(Lcom/android/server/wm/TspStateController$DeviceSize;Ljava/lang/String;Z)Z
 
-    .line 232
     iget-object v2, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyTspCommandForIme:Lcom/android/server/wm/TspGripCommand;
 
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
@@ -2062,10 +1847,8 @@
 .method public updateImePolicy(Lcom/android/server/wm/WindowState;)V
     .locals 2
 
-    .line 328
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->removeAllMessages()V
 
-    .line 329
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     const/4 v1, 0x2
@@ -2074,7 +1857,6 @@
 
     move-result-object p1
 
-    .line 330
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -2085,7 +1867,6 @@
 .method public final updateImePolicyInner(Lcom/android/server/wm/WindowState;)V
     .locals 3
 
-    .line 503
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TSP_SIP_MODE:Z
 
     if-eqz v0, :cond_0
@@ -2096,49 +1877,40 @@
 
     const/4 v0, 0x1
 
-    .line 504
     iput-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mIsImmShowing:Z
 
     const-string v0, "1"
 
     const/4 v1, 0x5
 
-    .line 505
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 508
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TSP_DEADZONE:Z
 
     if-eqz v0, :cond_6
 
-    .line 514
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->IS_TABLET_DEVICE:Z
 
     if-nez v0, :cond_1
 
-    .line 515
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
     invoke-virtual {v0}, Lcom/android/server/wm/TspGripCommand;->reset()V
 
-    .line 518
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mContext:Landroid/content/Context;
 
-    .line 519
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     const-string v1, "default_input_method"
 
-    .line 518
     invoke-static {v0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 521
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2147,7 +1919,6 @@
 
     const-string v1, "SamsungKeypad"
 
-    .line 522
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2156,14 +1927,12 @@
 
     const-string v1, "honeyboard"
 
-    .line 523
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 524
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
@@ -2174,27 +1943,23 @@
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 528
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getTspDeadzone()Landroid/os/Bundle;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 530
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
     iget-object v2, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/wm/TspGripCommand;->parse(Lcom/android/server/wm/TspStateController$DeviceSize;Landroid/os/Bundle;)Z
 
-    .line 534
     :cond_4
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_5
 
-    .line 535
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2221,11 +1986,9 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 539
     :cond_5
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mImeWindow:Lcom/android/server/wm/WindowState;
 
-    .line 540
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TspStateController;->updateTspCommand(Lcom/android/server/wm/TspGripCommand;)V
@@ -2237,7 +2000,6 @@
 .method public updateImeTargetWindow(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 280
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mImeTargetWindow:Lcom/android/server/wm/WindowState;
 
     return-void
@@ -2246,14 +2008,12 @@
 .method public updateImeWindowVisibility(Z)V
     .locals 0
 
-    .line 284
     iput-boolean p1, p0, Lcom/android/server/wm/TspStateController;->mImeWindowVisible:Z
 
     if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
-    .line 286
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mImeWindow:Lcom/android/server/wm/WindowState;
 
     :cond_0
@@ -2263,23 +2023,19 @@
 .method public final updateTspCommand(Lcom/android/server/wm/TspGripCommand;)V
     .locals 2
 
-    .line 439
     iget-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mIsEnabledCustomSetting:Z
 
     if-eqz v0, :cond_0
 
-    .line 440
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mCustomTspCommand:Lcom/android/server/wm/TspGripCommand;
 
     invoke-virtual {p1, v0}, Lcom/android/server/wm/TspGripCommand;->set(Lcom/android/server/wm/TspGripCommand;)V
 
-    .line 443
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TspStateController;->makePortCommand(Lcom/android/server/wm/TspGripCommand;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 445
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->mLastPortCmd:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2288,29 +2044,23 @@
 
     if-nez v1, :cond_1
 
-    .line 446
     iget-boolean v1, p0, Lcom/android/server/wm/TspStateController;->mIsPortrait:Z
 
     if-eqz v1, :cond_1
 
     const/4 v1, 0x1
 
-    .line 447
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 448
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mLastPortCmd:Ljava/lang/String;
 
-    .line 451
     :cond_1
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mReservePortCmd:Ljava/lang/String;
 
-    .line 453
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TspStateController;->makeLandCommand(Lcom/android/server/wm/TspGripCommand;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 454
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mLastLandCmd:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2319,20 +2069,16 @@
 
     if-nez v0, :cond_2
 
-    .line 455
     iget-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mIsPortrait:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x2
 
-    .line 456
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 457
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mLastLandCmd:Ljava/lang/String;
 
-    .line 460
     :cond_2
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mReserveLandCmd:Ljava/lang/String;
 
@@ -2342,13 +2088,10 @@
 .method public updateTspCustomCommand()V
     .locals 2
 
-    .line 252
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->initDefaultValues()V
 
-    .line 253
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->updateCustomValue()V
 
-    .line 254
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2371,7 +2114,6 @@
 
     const/4 v0, 0x0
 
-    .line 255
     invoke-virtual {p0, v0}, Lcom/android/server/wm/TspStateController;->updateWindowPolicy(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -2380,10 +2122,8 @@
 .method public updateWindowPolicy(Lcom/android/server/wm/WindowState;)V
     .locals 2
 
-    .line 317
     invoke-virtual {p0}, Lcom/android/server/wm/TspStateController;->removeAllMessages()V
 
-    .line 318
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     const/4 v1, 0x1
@@ -2392,7 +2132,6 @@
 
     move-result-object p1
 
-    .line 319
     iget-object p0, p0, Lcom/android/server/wm/TspStateController;->mH:Lcom/android/server/wm/TspStateController$H;
 
     const-wide/16 v0, 0x1f4
@@ -2405,7 +2144,6 @@
 .method public final updateWindowPolicyInner(Lcom/android/server/wm/WindowState;)V
     .locals 7
 
-    .line 354
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TSP_SIP_MODE:Z
 
     const/4 v1, 0x1
@@ -2418,7 +2156,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 355
     iget-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mIsImmShowing:Z
 
     const/4 v5, 0x5
@@ -2433,11 +2170,9 @@
 
     if-nez v6, :cond_1
 
-    .line 356
     :cond_0
     iput-boolean v4, p0, Lcom/android/server/wm/TspStateController;->mIsImmShowing:Z
 
-    .line 357
     invoke-virtual {p0, v3, v5}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
     goto :goto_0
@@ -2445,7 +2180,6 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 358
     iget-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mImeWindowVisible:Z
 
     if-eqz v0, :cond_2
@@ -2454,13 +2188,10 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 359
     iput-boolean v1, p0, Lcom/android/server/wm/TspStateController;->mIsImmShowing:Z
 
-    .line 360
     invoke-virtual {p0, v2, v5}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 364
     :cond_2
     :goto_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TSP_NOTE_MODE:Z
@@ -2469,17 +2200,14 @@
 
     if-eqz p1, :cond_4
 
-    .line 365
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isTspNoteMode()Z
 
     move-result v0
 
-    .line 367
     iget-boolean v5, p0, Lcom/android/server/wm/TspStateController;->mLastNoteMode:Z
 
     if-eq v5, v0, :cond_4
 
-    .line 368
     iput-boolean v0, p0, Lcom/android/server/wm/TspStateController;->mLastNoteMode:Z
 
     if-eqz v0, :cond_3
@@ -2492,10 +2220,8 @@
     :goto_1
     const/4 v0, 0x6
 
-    .line 369
     invoke-virtual {p0, v2, v0}, Lcom/android/server/wm/TspStateController;->writeTspCommandToSysfs(Ljava/lang/String;I)V
 
-    .line 373
     :cond_4
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TSP_DEADZONE:Z
 
@@ -2503,7 +2229,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 378
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mImeTargetWindow:Lcom/android/server/wm/WindowState;
 
     if-ne v0, p1, :cond_5
@@ -2516,12 +2241,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 380
     invoke-virtual {p0, v0}, Lcom/android/server/wm/TspStateController;->updateImePolicy(Lcom/android/server/wm/WindowState;)V
 
     return-void
 
-    .line 384
     :cond_5
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
@@ -2531,14 +2254,12 @@
 
     if-eqz p1, :cond_b
 
-    .line 388
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TspStateController;->isSystemWindow(Lcom/android/server/wm/WindowState;)Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
-    .line 391
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
@@ -2549,7 +2270,6 @@
 
     const-string v2, "com.sec.android."
 
-    .line 393
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -2558,7 +2278,6 @@
 
     const-string v2, "com.samsung."
 
-    .line 394
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -2582,7 +2301,6 @@
     :goto_3
     if-nez v4, :cond_a
 
-    .line 398
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_USE_SMALLER_GRIPZONE_ON_GAME:Z
 
     if-eqz v0, :cond_9
@@ -2593,7 +2311,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 399
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->m3rdPartyGameTspCommand:Lcom/android/server/wm/TspGripCommand;
@@ -2602,7 +2319,6 @@
 
     goto :goto_4
 
-    .line 401
     :cond_9
     iget-object v0, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
@@ -2610,7 +2326,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/TspGripCommand;->set(Lcom/android/server/wm/TspGripCommand;)V
 
-    .line 405
     :cond_a
     :goto_4
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->toString()Ljava/lang/String;
@@ -2619,25 +2334,21 @@
 
     iput-object v0, p0, Lcom/android/server/wm/TspStateController;->mFocusedWindow:Ljava/lang/String;
 
-    .line 407
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getTspDeadzone()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 408
     iget-object v1, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
     iget-object v2, p0, Lcom/android/server/wm/TspStateController;->mDeviceSize:Lcom/android/server/wm/TspStateController$DeviceSize;
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/wm/TspGripCommand;->parse(Lcom/android/server/wm/TspStateController$DeviceSize;Landroid/os/Bundle;)Z
 
-    .line 411
     :cond_b
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_c
 
-    .line 412
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2670,7 +2381,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 416
     :cond_c
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mCurrentCommand:Lcom/android/server/wm/TspGripCommand;
 
@@ -2692,12 +2402,10 @@
     :cond_0
     if-ne p2, p1, :cond_3
 
-    .line 307
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TspStateController;->updateWindowPolicy(Lcom/android/server/wm/WindowState;)V
 
     goto :goto_1
 
-    .line 301
     :cond_1
     :goto_0
     iget-boolean p2, p0, Lcom/android/server/wm/TspStateController;->mImeWindowVisible:Z
@@ -2708,7 +2416,6 @@
 
     if-ne p2, p1, :cond_2
 
-    .line 302
     invoke-virtual {p0, p3}, Lcom/android/server/wm/TspStateController;->updateImePolicy(Lcom/android/server/wm/WindowState;)V
 
     goto :goto_1
@@ -2716,7 +2423,6 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 304
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TspStateController;->updateWindowPolicy(Lcom/android/server/wm/WindowState;)V
 
     :cond_3
@@ -2727,44 +2433,34 @@
 .method public final writeDeadzoneHoleCmd(III)V
     .locals 2
 
-    .line 639
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "0,"
 
-    .line 640
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 641
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const/16 p1, 0x2c
 
-    .line 642
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 643
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 644
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 645
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 647
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 648
     sget-boolean p2, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz p2, :cond_0
 
-    .line 649
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2791,7 +2487,6 @@
 
     invoke-static {p3, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 652
     :cond_0
     iget-object p2, p0, Lcom/android/server/wm/TspStateController;->mLastDeadzoneHole:Ljava/lang/String;
 
@@ -2803,7 +2498,6 @@
 
     return-void
 
-    .line 655
     :cond_1
     iput-object p1, p0, Lcom/android/server/wm/TspStateController;->mLastDeadzoneHole:Ljava/lang/String;
 
@@ -2811,10 +2505,8 @@
 
     const-string/jumbo p2, "setDeadzoneHole"
 
-    .line 656
     invoke-static {p1, p2}, Lcom/samsung/android/sepunion/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 657
     iget-object p1, p0, Lcom/android/server/wm/TspStateController;->mLastDeadzoneHole:Ljava/lang/String;
 
     const/4 p2, 0x3
@@ -2827,7 +2519,6 @@
 .method public final writeTspCommandToSysfs(Ljava/lang/String;I)V
     .locals 2
 
-    .line 661
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/wm/TspStateController$$ExternalSyntheticLambda0;
@@ -2838,7 +2529,6 @@
 
     invoke-direct {v0, v1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 698
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void

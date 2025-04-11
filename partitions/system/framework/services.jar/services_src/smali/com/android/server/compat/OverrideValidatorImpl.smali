@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/compat/OverrideValidatorImpl;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fputmForceNonDebuggableFinalBuild(Lcom/android/server/compat/OverrideValidatorImpl;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mForceNonDebuggableFinalBuild:Z
 
     return-void
@@ -35,21 +33,16 @@
 .method public constructor <init>(Lcom/android/internal/compat/AndroidBuildClassifier;Landroid/content/Context;Lcom/android/server/compat/CompatConfig;)V
     .locals 0
 
-    .line 70
     invoke-direct {p0}, Lcom/android/internal/compat/IOverrideValidator$Stub;-><init>()V
 
-    .line 71
     iput-object p1, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mAndroidBuildClassifier:Lcom/android/internal/compat/AndroidBuildClassifier;
 
-    .line 72
     iput-object p2, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mContext:Landroid/content/Context;
 
-    .line 73
     iput-object p3, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mCompatConfig:Lcom/android/server/compat/CompatConfig;
 
     const/4 p1, 0x0
 
-    .line 74
     iput-boolean p1, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mForceNonDebuggableFinalBuild:Z
 
     return-void
@@ -60,7 +53,6 @@
 .method public forceNonDebuggableFinalForTest(Z)V
     .locals 0
 
-    .line 163
     iput-boolean p1, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mForceNonDebuggableFinalBuild:Z
 
     return-void
@@ -71,7 +63,6 @@
 
     const/4 v0, 0x0
 
-    .line 91
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/compat/OverrideValidatorImpl;->getOverrideAllowedStateInternal(JLjava/lang/String;Z)Lcom/android/internal/compat/OverrideAllowedState;
 
     move-result-object p0
@@ -84,7 +75,6 @@
 
     const/4 v0, 0x1
 
-    .line 86
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/compat/OverrideValidatorImpl;->getOverrideAllowedStateInternal(JLjava/lang/String;Z)Lcom/android/internal/compat/OverrideAllowedState;
 
     move-result-object p0
@@ -95,7 +85,6 @@
 .method public final getOverrideAllowedStateInternal(JLjava/lang/String;Z)Lcom/android/internal/compat/OverrideAllowedState;
     .locals 8
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mCompatConfig:Lcom/android/server/compat/CompatConfig;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/compat/CompatConfig;->isLoggingOnly(J)Z
@@ -106,7 +95,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 97
     new-instance p0, Lcom/android/internal/compat/OverrideAllowedState;
 
     const/4 p1, 0x5
@@ -115,7 +103,6 @@
 
     return-object p0
 
-    .line 100
     :cond_0
     iget-object v0, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mAndroidBuildClassifier:Lcom/android/internal/compat/AndroidBuildClassifier;
 
@@ -140,7 +127,6 @@
     :cond_1
     move v0, v3
 
-    .line 102
     :goto_0
     iget-object v4, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mAndroidBuildClassifier:Lcom/android/internal/compat/AndroidBuildClassifier;
 
@@ -165,7 +151,6 @@
     :goto_1
     move v4, v2
 
-    .line 104
     :goto_2
     iget-object v5, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mCompatConfig:Lcom/android/server/compat/CompatConfig;
 
@@ -173,7 +158,6 @@
 
     move-result v5
 
-    .line 105
     iget-object v6, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mCompatConfig:Lcom/android/server/compat/CompatConfig;
 
     invoke-virtual {v6, p1, p2}, Lcom/android/server/compat/CompatConfig;->isDisabled(J)Z
@@ -182,14 +166,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 109
     new-instance p0, Lcom/android/internal/compat/OverrideAllowedState;
 
     invoke-direct {p0, v3, v1, v1}, Lcom/android/internal/compat/OverrideAllowedState;-><init>(III)V
 
     return-object p0
 
-    .line 111
     :cond_4
     iget-object v0, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mAndroidBuildClassifier:Lcom/android/internal/compat/AndroidBuildClassifier;
 
@@ -199,7 +181,6 @@
 
     if-lt v5, v0, :cond_5
 
-    .line 112
     new-instance p0, Lcom/android/internal/compat/OverrideAllowedState;
 
     const/4 p1, 0x6
@@ -208,7 +189,6 @@
 
     return-object p0
 
-    .line 114
     :cond_5
     iget-object v0, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mContext:Landroid/content/Context;
 
@@ -220,7 +200,6 @@
 
     const/high16 v7, 0x400000
 
-    .line 120
     :try_start_0
     invoke-virtual {v0, p3, v7}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
@@ -228,7 +207,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mCompatConfig:Lcom/android/server/compat/CompatConfig;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/compat/CompatConfig;->isOverridable(J)Z
@@ -243,14 +221,12 @@
 
     const-string p1, "android.permission.OVERRIDE_COMPAT_CHANGE_CONFIG_ON_RELEASE_BUILD"
 
-    .line 129
     invoke-virtual {p0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
 
     if-nez p0, :cond_7
 
-    .line 132
     :cond_6
     new-instance p0, Lcom/android/internal/compat/OverrideAllowedState;
 
@@ -258,11 +234,9 @@
 
     return-object p0
 
-    .line 134
     :cond_7
     iget p0, p3, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 136
     iget p1, p3, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const/4 p2, 0x2
@@ -271,7 +245,6 @@
 
     if-nez p1, :cond_8
 
-    .line 137
     new-instance p0, Lcom/android/internal/compat/OverrideAllowedState;
 
     invoke-direct {p0, v2, v1, v1}, Lcom/android/internal/compat/OverrideAllowedState;-><init>(III)V
@@ -281,7 +254,6 @@
     :cond_8
     if-nez v4, :cond_9
 
-    .line 141
     new-instance p1, Lcom/android/internal/compat/OverrideAllowedState;
 
     invoke-direct {p1, v3, p0, v5}, Lcom/android/internal/compat/OverrideAllowedState;-><init>(III)V
@@ -293,7 +265,6 @@
 
     if-nez v6, :cond_a
 
-    .line 145
     new-instance p1, Lcom/android/internal/compat/OverrideAllowedState;
 
     invoke-direct {p1, p2, p0, v5}, Lcom/android/internal/compat/OverrideAllowedState;-><init>(III)V
@@ -307,7 +278,6 @@
 
     goto :goto_3
 
-    .line 151
     :cond_b
     new-instance p1, Lcom/android/internal/compat/OverrideAllowedState;
 
@@ -317,7 +287,6 @@
 
     return-object p1
 
-    .line 149
     :cond_c
     :goto_3
     new-instance p1, Lcom/android/internal/compat/OverrideAllowedState;
@@ -326,7 +295,6 @@
 
     return-object p1
 
-    .line 122
     :catch_0
     new-instance p0, Lcom/android/internal/compat/OverrideAllowedState;
 
@@ -336,7 +304,6 @@
 
     return-object p0
 
-    .line 116
     :cond_d
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -350,7 +317,6 @@
 .method public registerContentObserver()V
     .locals 3
 
-    .line 155
     iget-object v0, p0, Lcom/android/server/compat/OverrideValidatorImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -359,7 +325,6 @@
 
     const-string v1, "force_non_debuggable_final_build_for_compat"
 
-    .line 156
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -370,7 +335,6 @@
 
     const/4 p0, 0x0
 
-    .line 155
     invoke-virtual {v0, v1, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     return-void

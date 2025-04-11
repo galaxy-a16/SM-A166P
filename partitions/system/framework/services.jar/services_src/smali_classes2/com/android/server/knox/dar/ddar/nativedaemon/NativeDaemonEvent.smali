@@ -25,33 +25,24 @@
 .method public constructor <init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/io/FileDescriptor;)V
     .locals 0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput p1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mCmdNumber:I
 
-    .line 41
     iput p2, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mCode:I
 
-    .line 42
     iput p3, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mResponseCode:I
 
-    .line 43
     iput-object p4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mMessage:Ljava/lang/String;
 
-    .line 44
     iput-object p5, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mRawEvent:Ljava/lang/String;
 
-    .line 45
     iput-object p6, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mLogMessage:Ljava/lang/String;
 
     const/4 p1, 0x0
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mParsed:[Ljava/lang/String;
 
-    .line 47
     iput-object p7, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mFdList:[Ljava/io/FileDescriptor;
 
     return-void
@@ -60,7 +51,6 @@
 .method public static isClassUnsolicited(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x258
 
     if-lt p0, v0, :cond_0
@@ -85,12 +75,10 @@
 
     const-string v0, " "
 
-    .line 138
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 139
     array-length v2, v1
 
     const/4 v3, 0x2
@@ -99,7 +87,6 @@
 
     const/4 v2, 0x0
 
-    .line 147
     :try_start_0
     aget-object v4, v1, v2
 
@@ -107,7 +94,6 @@
 
     move-result v7
 
-    .line 148
     aget-object v4, v1, v2
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
@@ -120,7 +106,6 @@
 
     add-int/2addr v4, v5
 
-    .line 155
     invoke-static {v7}, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->isClassUnsolicited(I)Z
 
     move-result v6
@@ -129,14 +114,12 @@
 
     if-nez v6, :cond_2
 
-    .line 156
     array-length v6, v1
 
     const-string v9, "Insufficient arguemnts"
 
     if-lt v6, v3, :cond_1
 
-    .line 160
     :try_start_1
     aget-object v6, v1, v5
 
@@ -144,7 +127,6 @@
 
     move-result v6
 
-    .line 161
     aget-object v10, v1, v5
 
     invoke-virtual {v10}, Ljava/lang/String;->length()I
@@ -157,12 +139,10 @@
 
     add-int/2addr v4, v10
 
-    .line 166
     array-length v10, v1
 
     if-lt v10, v8, :cond_0
 
-    .line 170
     :try_start_2
     aget-object v9, v1, v3
 
@@ -170,7 +150,6 @@
 
     move-result v9
 
-    .line 171
     aget-object v3, v1, v3
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -190,7 +169,6 @@
     :catch_0
     move-exception p0
 
-    .line 173
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v0, "problem parsing responseCode"
@@ -199,7 +177,6 @@
 
     throw p1
 
-    .line 167
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -210,7 +187,6 @@
     :catch_1
     move-exception p0
 
-    .line 163
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v0, "problem parsing cmdNumber"
@@ -219,7 +195,6 @@
 
     throw p1
 
-    .line 157
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -232,7 +207,6 @@
 
     move v6, v3
 
-    .line 178
     :goto_0
     array-length v9, v1
 
@@ -248,7 +222,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 179
     aget-object v8, v1, v8
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
@@ -259,7 +232,6 @@
 
     add-int/2addr v4, v8
 
-    .line 180
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,13 +261,11 @@
     :cond_3
     move-object v11, p0
 
-    .line 183
     :goto_1
     invoke-virtual {p0, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 185
     new-instance v0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;
 
     move-object v5, v0
@@ -313,7 +283,6 @@
     :catch_2
     move-exception p0
 
-    .line 150
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v0, "problem parsing code"
@@ -322,7 +291,6 @@
 
     throw p1
 
-    .line 140
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -336,19 +304,16 @@
 .method public static unescapeArgs(Ljava/lang/String;)[Ljava/lang/String;
     .locals 12
 
-    .line 220
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 221
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     const/4 v2, 0x0
 
-    .line 227
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -389,14 +354,12 @@
     :goto_3
     if-ge v9, v1, :cond_3
 
-    .line 235
     invoke-virtual {p0, v9}, Ljava/lang/String;->charAt(I)C
 
     move-result v10
 
     if-eq v10, v8, :cond_3
 
-    .line 236
     invoke-virtual {p0, v9}, Ljava/lang/String;->charAt(I)C
 
     move-result v10
@@ -417,13 +380,11 @@
 
     move v9, v1
 
-    .line 243
     :cond_4
     invoke-virtual {p0, v3, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 244
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
     move-result v9
@@ -432,7 +393,6 @@
 
     if-nez v6, :cond_5
 
-    .line 246
     invoke-virtual {v8}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v8
@@ -447,7 +407,6 @@
 
     const-string v9, "\\"
 
-    .line 251
     invoke-virtual {v8, v6, v9}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v6
@@ -456,22 +415,18 @@
 
     const-string v9, "\""
 
-    .line 252
     invoke-virtual {v6, v8, v9}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 255
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 258
     invoke-virtual {p0, v7, v3}, Ljava/lang/String;->indexOf(II)I
 
     move-result v6
 
     const-string v7, " \""
 
-    .line 259
     invoke-virtual {p0, v7, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v7
@@ -502,7 +457,6 @@
 
     goto :goto_1
 
-    .line 277
     :cond_8
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -524,7 +478,6 @@
 .method public getCmdNumber()I
     .locals 0
 
-    .line 53
     iget p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mCmdNumber:I
 
     return p0
@@ -533,7 +486,6 @@
 .method public getCode()I
     .locals 0
 
-    .line 57
     iget p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mCode:I
 
     return p0
@@ -542,7 +494,6 @@
 .method public getMessage()Ljava/lang/String;
     .locals 0
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mMessage:Ljava/lang/String;
 
     return-object p0
@@ -551,7 +502,6 @@
 .method public getResponseCode()I
     .locals 0
 
-    .line 60
     iget p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mResponseCode:I
 
     return p0
@@ -560,7 +510,6 @@
 .method public isClassClientError()Z
     .locals 1
 
-    .line 106
     iget p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mCode:I
 
     const/16 v0, 0x1f4
@@ -585,7 +534,6 @@
 .method public isClassContinue()Z
     .locals 1
 
-    .line 85
     iget p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mCode:I
 
     const/16 v0, 0x64
@@ -610,7 +558,6 @@
 .method public isClassOk()Z
     .locals 1
 
-    .line 92
     iget p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mCode:I
 
     const/16 v0, 0xc8
@@ -635,7 +582,6 @@
 .method public isClassUnsolicited()Z
     .locals 0
 
-    .line 113
     iget p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mCode:I
 
     invoke-static {p0}, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->isClassUnsolicited(I)Z
@@ -648,7 +594,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;->mLogMessage:Ljava/lang/String;
 
     return-object p0

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/power/ShutdownCheckPoints$FileDumperThread;Ljava/lang/String;)V
     .locals 0
 
-    .line 378
     iput-object p1, p0, Lcom/android/server/power/ShutdownCheckPoints$FileDumperThread$1;->this$0:Lcom/android/server/power/ShutdownCheckPoints$FileDumperThread;
 
     iput-object p2, p0, Lcom/android/server/power/ShutdownCheckPoints$FileDumperThread$1;->val$filePrefix:Ljava/lang/String;
@@ -31,7 +30,6 @@
 .method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 1
 
-    .line 381
     iget-object p1, p0, Lcom/android/server/power/ShutdownCheckPoints$FileDumperThread$1;->val$filePrefix:Ljava/lang/String;
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -44,7 +42,6 @@
 
     return v0
 
-    .line 385
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/power/ShutdownCheckPoints$FileDumperThread$1;->val$filePrefix:Ljava/lang/String;

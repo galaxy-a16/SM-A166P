@@ -7,7 +7,6 @@
 .method public static actionToString(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)Ljava/lang/String;
     .locals 2
 
-    .line 241
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getId()I
 
     move-result v0
@@ -134,7 +133,6 @@
     :cond_1
     const-string v0, "F"
 
-    .line 311
     :goto_0
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getLabel()Ljava/lang/CharSequence;
 
@@ -142,7 +140,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 312
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -208,7 +205,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 81
     array-length v2, p0
 
     if-ge v2, v1, :cond_0
@@ -226,7 +222,6 @@
     :goto_1
     if-ge v3, v2, :cond_1
 
-    .line 83
     aget-object v4, p0, v3
 
     aput-object v4, v0, v3
@@ -235,7 +230,6 @@
 
     goto :goto_1
 
-    .line 86
     :cond_1
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -253,7 +247,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 67
     array-length v1, p0
 
     const/4 v2, 0x4
@@ -262,7 +255,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_0
     :try_start_0
     aget-object p0, p0, v2
@@ -292,7 +284,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 55
     array-length v1, p0
 
     const/4 v2, 0x3
@@ -301,7 +292,6 @@
 
     goto :goto_0
 
-    .line 59
     :cond_0
     :try_start_0
     aget-object p0, p0, v2
@@ -327,7 +317,6 @@
 .method public static hasMatchedArgument(Ljava/lang/String;[Ljava/lang/String;)Z
     .locals 4
 
-    .line 30
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -339,7 +328,6 @@
 
     aget-object v3, p1, v2
 
-    .line 31
     invoke-virtual {p0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -362,7 +350,6 @@
 .method public static isCustomDumpCommands([Ljava/lang/String;)Z
     .locals 2
 
-    .line 23
     invoke-static {}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->isDebuggableBinary()Z
 
     move-result v0
@@ -373,7 +360,6 @@
 
     return v1
 
-    .line 26
     :cond_0
     invoke-static {p0}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->isPrintWindows([Ljava/lang/String;)Z
 
@@ -397,12 +383,10 @@
 .method public static isDebuggableBinary()Z
     .locals 2
 
-    .line 18
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v1, "eng"
 
-    .line 19
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -437,7 +421,6 @@
 
     const-string/jumbo v0, "simple"
 
-    .line 47
     invoke-static {v0, p0}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->hasMatchedArgument(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result p0
@@ -450,7 +433,6 @@
 
     const-string/jumbo v0, "visibleOnly"
 
-    .line 51
     invoke-static {v0, p0}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->hasMatchedArgument(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result p0
@@ -463,7 +445,6 @@
 
     const-string/jumbo v0, "print-accessibilitynodeinfo"
 
-    .line 43
     invoke-static {v0, p0}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->hasMatchedArgument(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result p0
@@ -476,7 +457,6 @@
 
     const-string/jumbo v0, "print-accessibilitywindowinfo"
 
-    .line 39
     invoke-static {v0, p0}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->hasMatchedArgument(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result p0
@@ -487,12 +467,10 @@
 .method public static nodeToSimpleString(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/String;
     .locals 4
 
-    .line 134
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 135
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getClassName()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -501,7 +479,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 136
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getClassName()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -510,21 +487,17 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
     :cond_0
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 139
     invoke-virtual {p0, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
 
-    .line 140
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -533,7 +506,6 @@
 
     const-string v1, "T:"
 
-    .line 142
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getText()Ljava/lang/CharSequence;
@@ -544,7 +516,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 144
     :cond_1
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getError()Ljava/lang/CharSequence;
 
@@ -554,7 +525,6 @@
 
     const-string v1, "Err:"
 
-    .line 145
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getError()Ljava/lang/CharSequence;
@@ -565,7 +535,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 147
     :cond_2
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getMaxTextLength()I
 
@@ -577,7 +546,6 @@
 
     const-string v1, "MTL:"
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getMaxTextLength()I
@@ -588,7 +556,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 150
     :cond_3
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getStateDescription()Ljava/lang/CharSequence;
 
@@ -598,7 +565,6 @@
 
     const-string v1, "SD:"
 
-    .line 151
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getStateDescription()Ljava/lang/CharSequence;
@@ -609,7 +575,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 153
     :cond_4
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContentDescription()Ljava/lang/CharSequence;
 
@@ -619,7 +584,6 @@
 
     const-string v1, "CD:"
 
-    .line 154
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContentDescription()Ljava/lang/CharSequence;
@@ -630,7 +594,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 156
     :cond_5
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getTooltipText()Ljava/lang/CharSequence;
 
@@ -640,7 +603,6 @@
 
     const-string v1, "TTT:"
 
-    .line 157
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getTooltipText()Ljava/lang/CharSequence;
@@ -651,7 +613,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 159
     :cond_6
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getViewIdResourceName()Ljava/lang/String;
 
@@ -661,7 +622,6 @@
 
     const-string v1, "VID:"
 
-    .line 160
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getViewIdResourceName()Ljava/lang/String;
@@ -672,7 +632,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 162
     :cond_7
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isVisibleToUser()Z
 
@@ -682,12 +641,10 @@
 
     const-string v1, "V"
 
-    .line 163
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 165
     :cond_8
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isAccessibilityFocused()Z
 
@@ -697,12 +654,10 @@
 
     const-string v1, "AFd"
 
-    .line 166
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 168
     :cond_9
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isEnabled()Z
 
@@ -712,12 +667,10 @@
 
     const-string v1, "E"
 
-    .line 169
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 171
     :cond_a
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isCheckable()Z
 
@@ -727,12 +680,10 @@
 
     const-string v1, "Ck"
 
-    .line 172
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 174
     :cond_b
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isChecked()Z
 
@@ -742,12 +693,10 @@
 
     const-string v1, "Ckd"
 
-    .line 175
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 177
     :cond_c
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isFocusable()Z
 
@@ -757,12 +706,10 @@
 
     const-string v1, "F"
 
-    .line 178
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 180
     :cond_d
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isFocused()Z
 
@@ -772,12 +719,10 @@
 
     const-string v1, "Fd"
 
-    .line 181
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     :cond_e
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isSelected()Z
 
@@ -787,12 +732,10 @@
 
     const-string v1, "Sd"
 
-    .line 184
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 186
     :cond_f
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isClickable()Z
 
@@ -802,12 +745,10 @@
 
     const-string v1, "C"
 
-    .line 187
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 189
     :cond_10
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isLongClickable()Z
 
@@ -817,12 +758,10 @@
 
     const-string v1, "LC"
 
-    .line 190
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
     :cond_11
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isContextClickable()Z
 
@@ -832,12 +771,10 @@
 
     const-string v1, "CC"
 
-    .line 193
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 195
     :cond_12
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isPassword()Z
 
@@ -847,12 +784,10 @@
 
     const-string v1, "PWD"
 
-    .line 196
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 198
     :cond_13
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isScrollable()Z
 
@@ -862,7 +797,6 @@
 
     const-string v1, "S"
 
-    .line 199
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -870,10 +804,8 @@
     :cond_14
     const-string v1, "Actions={"
 
-    .line 201
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 202
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getActionList()Ljava/util/List;
 
     move-result-object p0
@@ -895,7 +827,6 @@
 
     check-cast v1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    .line 203
     invoke-static {v1}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->actionToString(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)Ljava/lang/String;
 
     move-result-object v1
@@ -909,10 +840,8 @@
     :cond_15
     const-string/jumbo p0, "}"
 
-    .line 205
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 206
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -925,7 +854,6 @@
 
     if-nez p1, :cond_0
 
-    .line 212
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -933,14 +861,12 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 216
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->isVisibleToUser()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 217
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -948,7 +874,6 @@
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 223
     invoke-static {p1}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->nodeToSimpleString(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/String;
 
     move-result-object v0
@@ -957,7 +882,6 @@
 
     goto :goto_0
 
-    .line 225
     :cond_2
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->toString()Ljava/lang/String;
 
@@ -973,7 +897,6 @@
     :goto_1
     if-ge v1, p2, :cond_3
 
-    .line 230
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -992,7 +915,6 @@
 
     goto :goto_1
 
-    .line 233
     :cond_3
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChildCount()I
 
@@ -1003,7 +925,6 @@
     :goto_2
     if-ge v2, v1, :cond_4
 
-    .line 235
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1026,7 +947,6 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 236
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChild(I)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v3
@@ -1046,14 +966,12 @@
 .method public static printNodeTreeOfWindow(Ljava/io/PrintWriter;Landroid/view/accessibility/AccessibilityWindowInfo;ZZ)V
     .locals 4
 
-    .line 93
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "<window id:"
 
-    .line 94
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->getId()I
@@ -1066,14 +984,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 96
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v2
@@ -1082,7 +998,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 98
     :cond_0
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->getRoot()Landroid/view/accessibility/AccessibilityNodeInfo;
 
@@ -1090,14 +1005,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 99
     invoke-virtual {v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getPackageName()Ljava/lang/CharSequence;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 100
     invoke-virtual {v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getPackageName()Ljava/lang/CharSequence;
 
     move-result-object v3
@@ -1106,7 +1019,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 102
     :cond_1
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->getType()I
 
@@ -1120,7 +1032,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 103
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->isActive()Z
 
     move-result v3
@@ -1129,12 +1040,10 @@
 
     const-string v3, "Active"
 
-    .line 104
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     :cond_2
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->isFocused()Z
 
@@ -1144,7 +1053,6 @@
 
     const-string p1, "Focused"
 
-    .line 107
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1152,10 +1060,8 @@
     :cond_3
     const/16 p1, 0x3e
 
-    .line 109
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 110
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1164,12 +1070,10 @@
 
     const-string p1, "[root] "
 
-    .line 111
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     const/4 p1, 0x0
 
-    .line 113
     invoke-static {p0, v2, p1, p2, p3}, Lcom/android/server/accessibility/SamsungWindowDumpUtils;->printNode(Ljava/io/PrintWriter;Landroid/view/accessibility/AccessibilityNodeInfo;IZZ)V
 
     return-void
@@ -1178,7 +1082,6 @@
 .method public static windowTypeToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_4

@@ -24,7 +24,6 @@
 .method public static synthetic $r8$lambda$kVNEv3PIU2Cx6f3mJFWXuV_PtjM(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;ILjava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->lambda$startHidlHalOperation$0(ILjava/util/ArrayList;)V
 
     return-void
@@ -39,7 +38,6 @@
 
     const/4 v7, 0x0
 
-    .line 141
     new-instance v9, Lcom/android/server/biometrics/log/BiometricLogger;
 
     const/4 v0, 0x1
@@ -70,39 +68,32 @@
 
     move/from16 v0, p9
 
-    .line 146
     iput-boolean v0, v11, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mUseScheduler:Z
 
     move/from16 v0, p10
 
-    .line 147
     iput v0, v11, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mCommand:I
 
     move/from16 v0, p11
 
-    .line 148
     iput v0, v11, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mParam:I
 
     const/4 v0, -0x1
 
-    .line 149
     iput v0, v11, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
     move-object/from16 v0, p13
 
-    .line 150
     iput-object v0, v11, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mOutputBuffer:[B
 
     if-eqz v12, :cond_1
 
-    .line 151
     array-length v0, v12
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 154
     :cond_0
     invoke-virtual/range {p12 .. p12}, [B->clone()Ljava/lang/Object;
 
@@ -118,7 +109,6 @@
     :goto_0
     new-array v0, v13, [B
 
-    .line 152
     iput-object v0, v11, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mInputBuffer:[B
 
     :goto_1
@@ -128,12 +118,10 @@
 .method private synthetic lambda$startHidlHalOperation$0(ILjava/util/ArrayList;)V
     .locals 0
 
-    .line 234
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
     if-nez p1, :cond_0
 
-    .line 236
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->listToByteArray(Ljava/util/ArrayList;)[B
 
     move-result-object p1
@@ -151,14 +139,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 325
     array-length v0, p1
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 328
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mOutputBuffer:[B
 
@@ -170,7 +156,6 @@
 
     goto :goto_0
 
-    .line 331
     :cond_1
     array-length v1, p1
 
@@ -180,14 +165,12 @@
 
     move-result v0
 
-    .line 332
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mOutputBuffer:[B
 
     const/4 v2, 0x0
 
     invoke-static {p1, v2, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 333
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
     :cond_2
@@ -198,7 +181,6 @@
 .method public getCommand()I
     .locals 0
 
-    .line 304
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mCommand:I
 
     return p0
@@ -207,7 +189,6 @@
 .method public getInputBuffer()[B
     .locals 0
 
-    .line 312
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mInputBuffer:[B
 
     return-object p0
@@ -216,12 +197,10 @@
 .method public final getInputBufferAsList()Ljava/util/ArrayList;
     .locals 4
 
-    .line 253
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 254
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mInputBuffer:[B
 
     if-eqz p0, :cond_0
@@ -230,7 +209,6 @@
 
     if-lez v1, :cond_0
 
-    .line 255
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -240,7 +218,6 @@
 
     aget-byte v3, p0, v2
 
-    .line 256
     invoke-static {v3}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v3
@@ -258,7 +235,6 @@
 .method public getParam()I
     .locals 0
 
-    .line 308
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mParam:I
 
     return p0
@@ -267,7 +243,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -276,7 +251,6 @@
 .method public getRequestResult()I
     .locals 0
 
-    .line 316
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
     return p0
@@ -285,7 +259,6 @@
 .method public interruptsPrecedingClients()Z
     .locals 1
 
-    .line 160
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->getCommand()I
 
     move-result p0
@@ -323,7 +296,6 @@
 .method public final isAsyncOperation()Z
     .locals 0
 
-    .line 187
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object p0
@@ -344,7 +316,6 @@
 .method public final listToByteArray(Ljava/util/ArrayList;)[B
     .locals 2
 
-    .line 245
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -353,7 +324,6 @@
 
     const/4 v0, 0x0
 
-    .line 246
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -361,7 +331,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 247
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -385,7 +354,6 @@
 .method public onRequestResult(I)V
     .locals 2
 
-    .line 292
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object v0
@@ -394,7 +362,6 @@
 
     return-void
 
-    .line 296
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
@@ -414,10 +381,8 @@
 
     const-string v1, "Failed to invoke sendEvent with onRequestResult"
 
-    .line 298
     invoke-static {v0, v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 299
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v0, 0x0
@@ -431,7 +396,6 @@
 .method public setRequestResultForTest(I)V
     .locals 0
 
-    .line 321
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
     return-void
@@ -440,18 +404,14 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 4
 
-    .line 174
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 175
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 176
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->startHalOperation()V
 
-    .line 177
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -492,7 +452,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     iget p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
     const/4 v0, 0x1
@@ -508,7 +467,6 @@
     :cond_0
     move p1, v1
 
-    .line 180
     :goto_0
     iget-boolean v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mUseScheduler:Z
 
@@ -531,7 +489,6 @@
     :goto_1
     if-eqz v0, :cond_3
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     invoke-interface {v0, p0, p1}, Lcom/android/server/biometrics/sensors/ClientMonitorCallback;->onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
@@ -543,7 +500,6 @@
 .method public final startAidlHalOperation(Lvendor/samsung/hardware/biometrics/fingerprint/ISehFingerprint;)V
     .locals 4
 
-    .line 215
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
@@ -557,7 +513,6 @@
 
     move-result v2
 
-    .line 216
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->getInputBuffer()[B
 
     move-result-object v3
@@ -575,7 +530,6 @@
 
     new-array v3, v3, [B
 
-    .line 215
     :goto_0
     invoke-interface {p1, v0, v1, v2, v3}, Lvendor/samsung/hardware/biometrics/fingerprint/ISehFingerprint;->sehRequest(III[B)Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
 
@@ -585,16 +539,13 @@
 
     return-void
 
-    .line 220
     :cond_1
     iget v0, p1, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;->retValue:I
 
-    .line 221
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
     if-nez v0, :cond_2
 
-    .line 223
     iget-object p1, p1, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;->data:[B
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->fillOutputBuffer([B)V
@@ -610,7 +561,6 @@
 
     const-string v0, "Remote exception"
 
-    .line 226
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -621,39 +571,33 @@
 .method public startHalOperation()V
     .locals 2
 
-    .line 203
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/HalClientMonitor;->mLazyDaemon:Ljava/util/function/Supplier;
 
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 204
     instance-of v1, v0, Lvendor/samsung/hardware/biometrics/fingerprint/ISehFingerprint;
 
     if-eqz v1, :cond_0
 
-    .line 205
     check-cast v0, Lvendor/samsung/hardware/biometrics/fingerprint/ISehFingerprint;
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->startAidlHalOperation(Lvendor/samsung/hardware/biometrics/fingerprint/ISehFingerprint;)V
 
     goto :goto_0
 
-    .line 206
     :cond_0
     instance-of v1, v0, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;
 
     if-eqz v1, :cond_1
 
-    .line 207
     check-cast v0, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->startHidlHalOperation(Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;)V
 
     goto :goto_0
 
-    .line 209
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->unableToStart()V
 
@@ -664,7 +608,6 @@
 .method public final startHidlHalOperation(Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;)V
     .locals 4
 
-    .line 232
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->getCommand()I
 
@@ -695,7 +638,6 @@
 
     const-string v0, "Remote exception"
 
-    .line 240
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -705,19 +647,16 @@
 .method public startWithoutScheduler()I
     .locals 1
 
-    .line 263
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mUseScheduler:Z
 
     if-nez v0, :cond_0
 
-    .line 267
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$1;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;)V
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 276
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
     return p0
@@ -727,10 +666,8 @@
 
     const-string/jumbo v0, "startWithoutScheduler: It must be started by the scheduler!!"
 
-    .line 264
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v0, "useScheduler option is set"
@@ -743,19 +680,16 @@
 .method public stopHalOperation()V
     .locals 2
 
-    .line 191
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/HalClientMonitor;->mLazyDaemon:Ljava/util/function/Supplier;
 
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 192
     instance-of v0, p0, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;
 
     if-eqz v0, :cond_0
 
-    .line 194
     :try_start_0
     check-cast p0, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint;
 
@@ -772,7 +706,6 @@
 
     const-string v1, "Remote exception when requesting cancel"
 
-    .line 196
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -785,10 +718,8 @@
 
     const/4 v0, -0x1
 
-    .line 281
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->mRequestResult:I
 
-    .line 282
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0

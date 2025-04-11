@@ -15,7 +15,6 @@
 
     move-object v1, p1
 
-    .line 549
     iput-object v1, v9, Lcom/android/server/usage/AppTimeLimitController$AppUsageLimitGroup;->this$0:Lcom/android/server/usage/AppTimeLimitController;
 
     move-object v0, p0
@@ -32,12 +31,10 @@
 
     move-object/from16 v8, p10
 
-    .line 550
     invoke-direct/range {v0 .. v8}, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;-><init>(Lcom/android/server/usage/AppTimeLimitController;Lcom/android/server/usage/AppTimeLimitController$UserData;Lcom/android/server/usage/AppTimeLimitController$ObserverAppData;I[Ljava/lang/String;JLandroid/app/PendingIntent;)V
 
     move-wide/from16 v0, p8
 
-    .line 551
     iput-wide v0, v9, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->mUsageTimeMs:J
 
     return-void
@@ -48,7 +45,6 @@
 .method public getTotaUsageLimit()J
     .locals 2
 
-    .line 566
     iget-wide v0, p0, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->mTimeLimitMs:J
 
     return-wide v0
@@ -57,12 +53,10 @@
 .method public getUsageRemaining()J
     .locals 6
 
-    .line 572
     iget v0, p0, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->mActives:I
 
     if-lez v0, :cond_0
 
-    .line 573
     iget-wide v0, p0, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->mTimeLimitMs:J
 
     iget-wide v2, p0, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->mUsageTimeMs:J
@@ -84,7 +78,6 @@
 
     return-wide v0
 
-    .line 575
     :cond_0
     iget-wide v0, p0, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->mTimeLimitMs:J
 
@@ -96,10 +89,8 @@
 .method public remove()V
     .locals 1
 
-    .line 557
     invoke-super {p0}, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->remove()V
 
-    .line 558
     iget-object v0, p0, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->mObserverAppRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -110,7 +101,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 560
     iget p0, p0, Lcom/android/server/usage/AppTimeLimitController$UsageGroup;->mObserverId:I
 
     invoke-virtual {v0, p0}, Lcom/android/server/usage/AppTimeLimitController$ObserverAppData;->removeAppUsageLimitGroup(I)V

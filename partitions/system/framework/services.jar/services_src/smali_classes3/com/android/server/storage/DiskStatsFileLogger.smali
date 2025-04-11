@@ -17,23 +17,18 @@
 .method public constructor <init>(Lcom/android/server/storage/FileCollector$MeasurementResult;Lcom/android/server/storage/FileCollector$MeasurementResult;Ljava/util/List;J)V
     .locals 0
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mResult:Lcom/android/server/storage/FileCollector$MeasurementResult;
 
-    .line 78
     invoke-virtual {p2}, Lcom/android/server/storage/FileCollector$MeasurementResult;->totalAccountedSize()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mDownloadsSize:J
 
-    .line 79
     iput-wide p4, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mSystemSize:J
 
-    .line 80
     iput-object p3, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mPackageStats:Ljava/util/List;
 
     return-void
@@ -46,32 +41,26 @@
 
     move-object/from16 v0, p1
 
-    .line 117
     new-instance v1, Lorg/json/JSONArray;
 
     invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
 
-    .line 118
     new-instance v2, Lorg/json/JSONArray;
 
     invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
 
-    .line 119
     new-instance v3, Lorg/json/JSONArray;
 
     invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
 
-    .line 120
     new-instance v4, Lorg/json/JSONArray;
 
     invoke-direct {v4}, Lorg/json/JSONArray;-><init>()V
 
-    .line 125
     invoke-static {}, Landroid/os/Environment;->isExternalStorageEmulated()Z
 
     move-result v5
 
-    .line 126
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/storage/DiskStatsFileLogger;->filterOnlyPrimaryUser()Landroid/util/ArrayMap;
 
     move-result-object v6
@@ -103,26 +92,22 @@
 
     check-cast v13, Ljava/util/Map$Entry;
 
-    .line 127
     invoke-interface {v13}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v13
 
     check-cast v13, Landroid/content/pm/PackageStats;
 
-    .line 128
     iget-wide v14, v13, Landroid/content/pm/PackageStats;->codeSize:J
 
     move-object/from16 v16, v3
 
     move-object/from16 v17, v4
 
-    .line 129
     iget-wide v3, v13, Landroid/content/pm/PackageStats;->dataSize:J
 
     move-object/from16 v18, v1
 
-    .line 130
     iget-wide v0, v13, Landroid/content/pm/PackageStats;->cacheSize:J
 
     move/from16 v19, v5
@@ -131,17 +116,14 @@
 
     if-eqz v5, :cond_0
 
-    .line 132
     iget-wide v5, v13, Landroid/content/pm/PackageStats;->externalCodeSize:J
 
     add-long/2addr v14, v5
 
-    .line 133
     iget-wide v5, v13, Landroid/content/pm/PackageStats;->externalDataSize:J
 
     add-long/2addr v3, v5
 
-    .line 134
     iget-wide v5, v13, Landroid/content/pm/PackageStats;->externalCacheSize:J
 
     add-long/2addr v0, v5
@@ -153,24 +135,20 @@
 
     add-long/2addr v9, v0
 
-    .line 140
     iget-object v5, v13, Landroid/content/pm/PackageStats;->packageName:Ljava/lang/String;
 
     move-object/from16 v6, v18
 
     invoke-virtual {v6, v5}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    .line 141
     invoke-virtual {v2, v14, v15}, Lorg/json/JSONArray;->put(J)Lorg/json/JSONArray;
 
     move-object/from16 v5, v16
 
-    .line 142
     invoke-virtual {v5, v3, v4}, Lorg/json/JSONArray;->put(J)Lorg/json/JSONArray;
 
     move-object/from16 v3, v17
 
-    .line 143
     invoke-virtual {v3, v0, v1}, Lorg/json/JSONArray;->put(J)Lorg/json/JSONArray;
 
     move-object/from16 v0, p1
@@ -198,37 +176,30 @@
 
     move-object/from16 v1, p1
 
-    .line 145
     invoke-virtual {v1, v0, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "appSizes"
 
-    .line 146
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "cacheSizes"
 
-    .line 147
     invoke-virtual {v1, v0, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "appDataSizes"
 
-    .line 148
     invoke-virtual {v1, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "appSize"
 
-    .line 149
     invoke-virtual {v1, v0, v7, v8}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v0, "cacheSize"
 
-    .line 150
     invoke-virtual {v1, v0, v9, v10}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v0, "appDataSize"
 
-    .line 151
     invoke-virtual {v1, v0, v11, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     return-void
@@ -237,22 +208,18 @@
 .method public dumpToFile(Ljava/io/File;)V
     .locals 1
 
-    .line 89
     new-instance v0, Ljava/io/PrintWriter;
 
     invoke-direct {v0, p1}, Ljava/io/PrintWriter;-><init>(Ljava/io/File;)V
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/storage/DiskStatsFileLogger;->getJsonRepresentation()Lorg/json/JSONObject;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 92
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 94
     :cond_0
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
@@ -262,12 +229,10 @@
 .method public final filterOnlyPrimaryUser()Landroid/util/ArrayMap;
     .locals 7
 
-    .line 160
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mPackageStats:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -287,14 +252,12 @@
 
     check-cast v1, Landroid/content/pm/PackageStats;
 
-    .line 162
     iget v2, v1, Landroid/content/pm/PackageStats;->userHandle:I
 
     if-eqz v2, :cond_0
 
     goto :goto_0
 
-    .line 166
     :cond_0
     iget-object v2, v1, Landroid/content/pm/PackageStats;->packageName:Ljava/lang/String;
 
@@ -306,7 +269,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 168
     iget-wide v3, v2, Landroid/content/pm/PackageStats;->cacheSize:J
 
     iget-wide v5, v1, Landroid/content/pm/PackageStats;->cacheSize:J
@@ -315,7 +277,6 @@
 
     iput-wide v3, v2, Landroid/content/pm/PackageStats;->cacheSize:J
 
-    .line 169
     iget-wide v3, v2, Landroid/content/pm/PackageStats;->codeSize:J
 
     iget-wide v5, v1, Landroid/content/pm/PackageStats;->codeSize:J
@@ -324,7 +285,6 @@
 
     iput-wide v3, v2, Landroid/content/pm/PackageStats;->codeSize:J
 
-    .line 170
     iget-wide v3, v2, Landroid/content/pm/PackageStats;->dataSize:J
 
     iget-wide v5, v1, Landroid/content/pm/PackageStats;->dataSize:J
@@ -333,7 +293,6 @@
 
     iput-wide v3, v2, Landroid/content/pm/PackageStats;->dataSize:J
 
-    .line 171
     iget-wide v3, v2, Landroid/content/pm/PackageStats;->externalCacheSize:J
 
     iget-wide v5, v1, Landroid/content/pm/PackageStats;->externalCacheSize:J
@@ -342,7 +301,6 @@
 
     iput-wide v3, v2, Landroid/content/pm/PackageStats;->externalCacheSize:J
 
-    .line 172
     iget-wide v3, v2, Landroid/content/pm/PackageStats;->externalCodeSize:J
 
     iget-wide v5, v1, Landroid/content/pm/PackageStats;->externalCodeSize:J
@@ -351,7 +309,6 @@
 
     iput-wide v3, v2, Landroid/content/pm/PackageStats;->externalCodeSize:J
 
-    .line 173
     iget-wide v3, v2, Landroid/content/pm/PackageStats;->externalDataSize:J
 
     iget-wide v5, v1, Landroid/content/pm/PackageStats;->externalDataSize:J
@@ -362,7 +319,6 @@
 
     goto :goto_0
 
-    .line 175
     :cond_1
     iget-object v2, v1, Landroid/content/pm/PackageStats;->packageName:Ljava/lang/String;
 
@@ -381,7 +337,6 @@
 .method public final getJsonRepresentation()Lorg/json/JSONObject;
     .locals 4
 
-    .line 98
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -389,7 +344,6 @@
     :try_start_0
     const-string/jumbo v1, "queryTime"
 
-    .line 100
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -398,7 +352,6 @@
 
     const-string/jumbo v1, "photosSize"
 
-    .line 101
     iget-object v2, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mResult:Lcom/android/server/storage/FileCollector$MeasurementResult;
 
     iget-wide v2, v2, Lcom/android/server/storage/FileCollector$MeasurementResult;->imagesSize:J
@@ -407,7 +360,6 @@
 
     const-string/jumbo v1, "videosSize"
 
-    .line 102
     iget-object v2, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mResult:Lcom/android/server/storage/FileCollector$MeasurementResult;
 
     iget-wide v2, v2, Lcom/android/server/storage/FileCollector$MeasurementResult;->videosSize:J
@@ -416,7 +368,6 @@
 
     const-string v1, "audioSize"
 
-    .line 103
     iget-object v2, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mResult:Lcom/android/server/storage/FileCollector$MeasurementResult;
 
     iget-wide v2, v2, Lcom/android/server/storage/FileCollector$MeasurementResult;->audioSize:J
@@ -425,28 +376,24 @@
 
     const-string v1, "downloadsSize"
 
-    .line 104
     iget-wide v2, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mDownloadsSize:J
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string/jumbo v1, "systemSize"
 
-    .line 105
     iget-wide v2, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mSystemSize:J
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string/jumbo v1, "otherSize"
 
-    .line 106
     iget-object v2, p0, Lcom/android/server/storage/DiskStatsFileLogger;->mResult:Lcom/android/server/storage/FileCollector$MeasurementResult;
 
     iget-wide v2, v2, Lcom/android/server/storage/FileCollector$MeasurementResult;->miscSize:J
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 107
     invoke-virtual {p0, v0}, Lcom/android/server/storage/DiskStatsFileLogger;->addAppsToJson(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -458,7 +405,6 @@
 
     const-string v0, "DiskStatsLogger"
 
-    .line 109
     invoke-virtual {p0}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p0

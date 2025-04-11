@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppFGSTracker;)V
     .locals 0
 
-    .line 91
     iput-object p1, p0, Lcom/android/server/am/AppFGSTracker$1;->this$0:Lcom/android/server/am/AppFGSTracker;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -24,14 +23,12 @@
 .method public onForegroundActivitiesChanged(IIZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onForegroundServicesChanged(III)V
     .locals 1
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/am/AppFGSTracker$1;->this$0:Lcom/android/server/am/AppFGSTracker;
 
     iget-object v0, v0, Lcom/android/server/am/BaseAppStateTracker;->mAppRestrictionController:Lcom/android/server/am/AppRestrictionController;
@@ -42,7 +39,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/am/AppFGSTracker$1;->this$0:Lcom/android/server/am/AppFGSTracker;
 
     invoke-static {p0}, Lcom/android/server/am/AppFGSTracker;->-$$Nest$fgetmHandler(Lcom/android/server/am/AppFGSTracker;)Lcom/android/server/am/AppFGSTracker$MyHandler;
@@ -55,7 +51,6 @@
 
     move-result-object p0
 
-    .line 101
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_0
@@ -65,6 +60,5 @@
 .method public onProcessDied(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method

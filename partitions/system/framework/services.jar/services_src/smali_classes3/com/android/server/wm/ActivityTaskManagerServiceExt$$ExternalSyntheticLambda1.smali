@@ -20,7 +20,6 @@
 .method public final onSystemReady(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/wm/ActivityTaskManagerServiceExt;->$r8$lambda$yOGN86l8MxEPFhWMRHVQWteobEA(Lcom/android/server/wm/ActivityTaskManagerService;)V
 
     return-void

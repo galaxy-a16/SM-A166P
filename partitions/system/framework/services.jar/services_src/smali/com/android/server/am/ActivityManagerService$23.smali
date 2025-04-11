@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessRecord;)V
     .locals 0
 
-    .line 15672
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$23;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$23;->val$app:Lcom/android/server/am/ProcessRecord;
@@ -34,17 +33,14 @@
     :try_start_0
     const-string v0, "backup"
 
-    .line 15677
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 15676
     invoke-static {v0}, Landroid/app/backup/IBackupManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/backup/IBackupManager;
 
     move-result-object v0
 
-    .line 15678
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$23;->val$app:Lcom/android/server/am/ProcessRecord;
 
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->userId:I

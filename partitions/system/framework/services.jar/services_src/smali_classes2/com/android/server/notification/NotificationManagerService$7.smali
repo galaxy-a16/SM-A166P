@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;)V
     .locals 0
 
-    .line 2747
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -30,14 +29,12 @@
 
     move-object/from16 v2, p2
 
-    .line 2750
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "android.intent.action.SCREEN_ON"
 
-    .line 2752
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -46,15 +43,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 2755
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iput-boolean v5, v1, Lcom/android/server/notification/NotificationManagerService;->mScreenOn:Z
 
-    .line 2756
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mupdateNotificationPulse(Lcom/android/server/notification/NotificationManagerService;)V
 
-    .line 2759
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mclearDelayedWakelock(Lcom/android/server/notification/NotificationManagerService;)V
@@ -64,21 +58,18 @@
     :cond_0
     const-string v4, "android.intent.action.SCREEN_OFF"
 
-    .line 2761
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 2762
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/android/server/notification/NotificationManagerService;->mScreenOn:Z
 
-    .line 2763
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mupdateNotificationPulse(Lcom/android/server/notification/NotificationManagerService;)V
 
     goto/16 :goto_0
@@ -86,7 +77,6 @@
     :cond_1
     const-string v4, "android.intent.action.PHONE_STATE"
 
-    .line 2764
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -95,12 +85,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 2765
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     sget-object v3, Landroid/telephony/TelephonyManager;->EXTRA_STATE_OFFHOOK:Ljava/lang/String;
 
-    .line 2766
     invoke-virtual {v2, v6}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -111,7 +99,6 @@
 
     iput-boolean v2, v1, Lcom/android/server/notification/NotificationManagerService;->mInCallStateOffHook:Z
 
-    .line 2767
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mupdateNotificationPulse(Lcom/android/server/notification/NotificationManagerService;)V
@@ -121,7 +108,6 @@
     :cond_2
     const-string v4, "android.intent.action.USER_STOPPED"
 
-    .line 2768
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -132,14 +118,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 2769
     invoke-virtual {v2, v8, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v17
 
     if-ltz v17, :cond_10
 
-    .line 2771
     iget-object v9, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$sfgetMY_UID()I
@@ -171,21 +155,18 @@
     :cond_3
     const-string v4, "android.intent.action.MANAGED_PROFILE_UNAVAILABLE"
 
-    .line 2774
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 2775
     invoke-virtual {v2, v8, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
     if-ltz v1, :cond_10
 
-    .line 2776
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v2}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmDpm(Lcom/android/server/notification/NotificationManagerService;)Landroid/app/admin/DevicePolicyManagerInternal;
@@ -198,7 +179,6 @@
 
     if-nez v2, :cond_10
 
-    .line 2777
     iget-object v9, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$sfgetMY_UID()I
@@ -227,7 +207,6 @@
 
     invoke-virtual/range {v9 .. v19}, Lcom/android/server/notification/NotificationManagerService;->cancelAllNotificationsInt(IILjava/lang/String;Ljava/lang/String;IIZIILcom/android/server/notification/ManagedServices$ManagedServiceInfo;)V
 
-    .line 2779
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService;->mSnoozeHelper:Lcom/android/server/notification/SnoozeHelper;
@@ -239,14 +218,12 @@
     :cond_4
     const-string v4, "android.intent.action.USER_PRESENT"
 
-    .line 2781
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_5
 
-    .line 2783
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmNotificationLight(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/lights/LogicalLight;
@@ -255,7 +232,6 @@
 
     if-eqz v1, :cond_10
 
-    .line 2784
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmNotificationLight(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/lights/LogicalLight;
@@ -269,7 +245,6 @@
     :cond_5
     const-string v4, "android.intent.action.USER_SWITCHED"
 
-    .line 2786
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -278,12 +253,10 @@
 
     if-eqz v4, :cond_7
 
-    .line 2787
     invoke-virtual {v2, v8, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 2788
     iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmUserProfiles(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
@@ -292,7 +265,6 @@
 
     invoke-virtual {v3, v1}, Lcom/android/server/notification/ManagedServices$UserProfiles;->updateCache(Landroid/content/Context;)V
 
-    .line 2789
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmUserProfiles(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
@@ -305,7 +277,6 @@
 
     if-nez v1, :cond_6
 
-    .line 2791
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmSettingsObserver(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$SettingsObserver;
@@ -316,7 +287,6 @@
 
     invoke-virtual {v1, v3}, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 2793
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmConditionProviders(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ConditionProviders;
@@ -325,7 +295,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/ConditionProviders;->onUserSwitched(I)V
 
-    .line 2794
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmListeners(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
@@ -334,14 +303,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/ManagedServices;->onUserSwitched(I)V
 
-    .line 2795
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationManagerService;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/ZenModeHelper;->onUserSwitched(I)V
 
-    .line 2798
     :cond_6
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -356,21 +323,18 @@
     :cond_7
     const-string v4, "android.intent.action.USER_ADDED"
 
-    .line 2799
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_a
 
-    .line 2800
     invoke-virtual {v2, v8, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
     if-eq v2, v7, :cond_9
 
-    .line 2802
     iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmUserProfiles(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
@@ -379,7 +343,6 @@
 
     invoke-virtual {v3, v1}, Lcom/android/server/notification/ManagedServices$UserProfiles;->updateCache(Landroid/content/Context;)V
 
-    .line 2803
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmUserProfiles(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
@@ -392,12 +355,10 @@
 
     if-nez v1, :cond_8
 
-    .line 2804
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/NotificationManagerService;->allowDefaultApprovedServices(I)V
 
-    .line 2807
     :cond_8
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -407,7 +368,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/NotificationHistoryManager;->onUserAdded(I)V
 
-    .line 2808
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmArchive(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$Archive;
@@ -416,7 +376,6 @@
 
     invoke-virtual {v1, v2, v5}, Lcom/android/server/notification/NotificationManagerService$Archive;->updateHistoryEnabled(IZ)V
 
-    .line 2812
     :cond_9
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -431,19 +390,16 @@
     :cond_a
     const-string v4, "android.intent.action.USER_REMOVED"
 
-    .line 2814
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_b
 
-    .line 2815
     invoke-virtual {v2, v8, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 2816
     iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmUserProfiles(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
@@ -452,21 +408,18 @@
 
     invoke-virtual {v3, v1}, Lcom/android/server/notification/ManagedServices$UserProfiles;->updateCache(Landroid/content/Context;)V
 
-    .line 2817
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationManagerService;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/ZenModeHelper;->onUserRemoved(I)V
 
-    .line 2818
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationManagerService;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/PreferencesHelper;->onUserRemoved(I)V
 
-    .line 2819
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmListeners(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
@@ -475,7 +428,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->onUserRemoved(I)V
 
-    .line 2820
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmConditionProviders(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ConditionProviders;
@@ -484,7 +436,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/ManagedServices;->onUserRemoved(I)V
 
-    .line 2821
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmAssistants(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$NotificationAssistants;
@@ -493,7 +444,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/ManagedServices;->onUserRemoved(I)V
 
-    .line 2822
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmHistoryManager(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationHistoryManager;
@@ -502,12 +452,10 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/NotificationHistoryManager;->onUserRemoved(I)V
 
-    .line 2823
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->handleSavePolicyFile()V
 
-    .line 2825
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmEdgeLightingManager(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/edgelighting/EdgeLightingManager;
@@ -521,19 +469,16 @@
     :cond_b
     const-string v4, "android.intent.action.USER_UNLOCKED"
 
-    .line 2827
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_c
 
-    .line 2828
     invoke-virtual {v2, v8, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 2829
     iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmUserProfiles(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
@@ -542,7 +487,6 @@
 
     invoke-virtual {v3, v1}, Lcom/android/server/notification/ManagedServices$UserProfiles;->updateCache(Landroid/content/Context;)V
 
-    .line 2830
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmAssistants(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$NotificationAssistants;
@@ -551,7 +495,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/NotificationManagerService$NotificationAssistants;->onUserUnlocked(I)V
 
-    .line 2831
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmUserProfiles(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
@@ -564,7 +507,6 @@
 
     if-nez v1, :cond_10
 
-    .line 2832
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmConditionProviders(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ConditionProviders;
@@ -573,7 +515,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/ManagedServices;->onUserUnlocked(I)V
 
-    .line 2833
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmListeners(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
@@ -582,7 +523,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/notification/ManagedServices;->onUserUnlocked(I)V
 
-    .line 2834
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -594,14 +534,12 @@
     :cond_c
     const-string v1, "com.android.server.sepunion.semgoodcatchservice.GOOD_CATCH_STATE_CHANGED"
 
-    .line 2836
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_f
 
-    .line 2837
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmSemGoodCatchManager(Lcom/android/server/notification/NotificationManagerService;)Lcom/samsung/android/sepunion/SemGoodCatchManager;
@@ -612,14 +550,12 @@
 
     if-nez v1, :cond_d
 
-    .line 2838
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     new-instance v3, Lcom/samsung/android/sepunion/SemGoodCatchManager;
 
     iget-object v4, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 2839
     invoke-virtual {v4}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -644,10 +580,8 @@
 
     const-string v1, "SemGoodCatchManager is created"
 
-    .line 2840
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2842
     :cond_d
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -659,14 +593,12 @@
 
     if-nez v1, :cond_e
 
-    .line 2843
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     new-instance v4, Lcom/samsung/android/sepunion/SemGoodCatchManager;
 
     iget-object v5, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 2844
     invoke-virtual {v5}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -691,16 +623,13 @@
 
     const-string/jumbo v1, "mNotiSemGoodCatchManager is created"
 
-    .line 2845
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2847
     :cond_e
     sget-object v1, Lcom/android/server/notification/NotificationManagerService;->mSemAudioGoodCatchManager:Lcom/samsung/android/sepunion/SemGoodCatchManager;
 
     if-nez v1, :cond_10
 
-    .line 2848
     new-instance v1, Lcom/samsung/android/sepunion/SemGoodCatchManager;
 
     iget-object v4, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -727,7 +656,6 @@
 
     const-string v0, "SemAudioGoodCatchManager is created"
 
-    .line 2849
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -735,14 +663,12 @@
     :cond_f
     const-string/jumbo v1, "samsung.intent.action.PHONE_STATE"
 
-    .line 2851
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_10
 
-    .line 2852
     sget-object v1, Landroid/telephony/TelephonyManager;->EXTRA_STATE_IDLE:Ljava/lang/String;
 
     invoke-virtual {v2, v6}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -751,7 +677,6 @@
 
     if-eq v1, v2, :cond_10
 
-    .line 2853
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0, v5}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fputmCMCinCallState(Lcom/android/server/notification/NotificationManagerService;Z)V

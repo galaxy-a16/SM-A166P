@@ -14,7 +14,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -33,7 +32,6 @@
 
     monitor-enter p0
 
-    .line 34
     :try_start_0
     new-instance v0, Lorg/apache/commons/compress/utils/SeekableInMemoryByteChannel;
 
@@ -51,7 +49,6 @@
 
     move-result-object p2
 
-    .line 35
     invoke-virtual {p1, p2}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object p1
@@ -64,13 +61,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
-    .line 36
     :try_start_1
     new-instance p1, Lorg/apache/commons/compress/archivers/sevenz/SevenZFile;
 
     invoke-direct {p1, v0}, Lorg/apache/commons/compress/archivers/sevenz/SevenZFile;-><init>(Ljava/nio/channels/SeekableByteChannel;)V
 
-    .line 37
     invoke-virtual {p1}, Lorg/apache/commons/compress/archivers/sevenz/SevenZFile;->getNextEntry()Lorg/apache/commons/compress/archivers/sevenz/SevenZArchiveEntry;
 
     move-result-object p2
@@ -78,7 +73,6 @@
     :goto_0
     if-eqz p2, :cond_0
 
-    .line 38
     invoke-virtual {p2}, Lorg/apache/commons/compress/archivers/sevenz/SevenZArchiveEntry;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -103,7 +97,6 @@
 
     if-nez v1, :cond_0
 
-    .line 39
     invoke-virtual {p1}, Lorg/apache/commons/compress/archivers/sevenz/SevenZFile;->getNextEntry()Lorg/apache/commons/compress/archivers/sevenz/SevenZArchiveEntry;
 
     move-result-object p2
@@ -115,7 +108,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 42
     sget-object v1, Lcom/samsung/android/localeoverlaymanager/SevenZFileCopier;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -136,7 +128,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 43
     invoke-virtual {p2}, Lorg/apache/commons/compress/archivers/sevenz/SevenZArchiveEntry;->getSize()J
 
     move-result-wide v3
@@ -147,17 +138,14 @@
 
     move-result-object v2
 
-    .line 42
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     new-instance v2, Ljava/io/FileOutputStream;
 
     invoke-direct {v2, p4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 45
     :try_start_2
     invoke-virtual {p2}, Lorg/apache/commons/compress/archivers/sevenz/SevenZArchiveEntry;->getSize()J
 
@@ -169,14 +157,12 @@
 
     const/4 v4, 0x0
 
-    .line 47
     invoke-virtual {p1, v3, v4, p2}, Lorg/apache/commons/compress/archivers/sevenz/SevenZFile;->read([BII)I
 
     move-result p2
 
     if-ne p2, p3, :cond_1
 
-    .line 50
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,13 +179,11 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     :cond_1
     invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 54
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -210,7 +194,6 @@
     :catchall_0
     move-exception p1
 
-    .line 44
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -229,7 +212,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 56
     :cond_2
     :goto_2
     :try_start_6
@@ -239,12 +221,10 @@
 
     const/16 p2, 0x3e8
 
-    .line 58
     invoke-static {p4, p1, p3, p2}, Landroid/os/FileUtils;->setPermissions(Ljava/io/File;III)I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 60
     monitor-exit p0
 
     return-void
@@ -252,7 +232,6 @@
     :catchall_2
     move-exception p1
 
-    .line 34
     :try_start_7
     invoke-virtual {v0}, Lorg/apache/commons/compress/utils/SeekableInMemoryByteChannel;->close()V
     :try_end_7

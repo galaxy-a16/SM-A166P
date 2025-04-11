@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1209
     invoke-static {}, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->values()[Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
     move-result-object v0

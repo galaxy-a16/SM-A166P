@@ -7,14 +7,12 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 1
 
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/wm/FreeformContainerServiceBinder;-><init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
 
     const-string p1, "com.android.systemui"
 
     const-string v0, "com.android.wm.shell.freeform.SmartPopupViewService"
 
-    .line 34
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/FreeformContainerServiceBinder;->setServiceComponent(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public final hasSmartPopupViewPackage()Z
     .locals 0
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/wm/FreeformContainerServiceBinder;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -36,7 +33,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 57
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -59,7 +55,6 @@
 
     const/4 v0, 0x0
 
-    .line 62
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/FreeformContainerServiceBinder;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -67,7 +62,6 @@
 
     move-result v1
 
-    .line 63
     iget-object v2, p0, Lcom/android/server/wm/FreeformContainerServiceBinder;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -93,7 +87,6 @@
     :cond_0
     move v2, v0
 
-    .line 65
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/FreeformContainerServiceBinder;->TAG:Ljava/lang/String;
 
@@ -126,7 +119,6 @@
     :catch_0
     move-exception p0
 
-    .line 68
     invoke-virtual {p0}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     return v0
@@ -135,14 +127,12 @@
 .method public okToBind()Z
     .locals 2
 
-    .line 40
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_SMART_POPUP_VIEW:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 41
     invoke-super {p0}, Lcom/android/server/wm/FreeformContainerServiceBinder;->okToBind()Z
 
     move-result v0
@@ -170,14 +160,12 @@
 .method public okToUnbind()Z
     .locals 2
 
-    .line 48
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_SMART_POPUP_VIEW:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 49
     invoke-super {p0}, Lcom/android/server/wm/FreeformContainerServiceBinder;->okToUnbind()Z
 
     move-result v0

@@ -33,7 +33,6 @@
 .method public static synthetic $values()[Lcom/android/server/wm/ActivityRecord$State;
     .locals 11
 
-    .line 704
     sget-object v0, Lcom/android/server/wm/ActivityRecord$State;->INITIALIZING:Lcom/android/server/wm/ActivityRecord$State;
 
     sget-object v1, Lcom/android/server/wm/ActivityRecord$State;->STARTED:Lcom/android/server/wm/ActivityRecord$State;
@@ -66,7 +65,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 705
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "INITIALIZING"
@@ -77,7 +75,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->INITIALIZING:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 706
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "STARTED"
@@ -88,7 +85,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->STARTED:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 707
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "RESUMED"
@@ -99,7 +95,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->RESUMED:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 708
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "PAUSING"
@@ -110,7 +105,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->PAUSING:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 709
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "PAUSED"
@@ -121,7 +115,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->PAUSED:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 710
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "STOPPING"
@@ -132,7 +125,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->STOPPING:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 711
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "STOPPED"
@@ -143,7 +135,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->STOPPED:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 712
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "FINISHING"
@@ -154,7 +145,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->FINISHING:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 713
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "DESTROYING"
@@ -165,7 +155,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->DESTROYING:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 714
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "DESTROYED"
@@ -176,7 +165,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->DESTROYED:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 715
     new-instance v0, Lcom/android/server/wm/ActivityRecord$State;
 
     const-string v1, "RESTARTING_PROCESS"
@@ -187,7 +175,6 @@
 
     sput-object v0, Lcom/android/server/wm/ActivityRecord$State;->RESTARTING_PROCESS:Lcom/android/server/wm/ActivityRecord$State;
 
-    .line 704
     invoke-static {}, Lcom/android/server/wm/ActivityRecord$State;->$values()[Lcom/android/server/wm/ActivityRecord$State;
 
     move-result-object v0
@@ -200,7 +187,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 704
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -209,7 +195,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/wm/ActivityRecord$State;
     .locals 1
 
-    .line 704
     const-class v0, Lcom/android/server/wm/ActivityRecord$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -224,7 +209,6 @@
 .method public static values()[Lcom/android/server/wm/ActivityRecord$State;
     .locals 1
 
-    .line 704
     sget-object v0, Lcom/android/server/wm/ActivityRecord$State;->$VALUES:[Lcom/android/server/wm/ActivityRecord$State;
 
     invoke-virtual {v0}, [Lcom/android/server/wm/ActivityRecord$State;->clone()Ljava/lang/Object;

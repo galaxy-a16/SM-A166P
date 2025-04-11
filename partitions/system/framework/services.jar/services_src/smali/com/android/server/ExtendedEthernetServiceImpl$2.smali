@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/ExtendedEthernetServiceImpl;)V
     .locals 0
 
-    .line 112
     iput-object p1, p0, Lcom/android/server/ExtendedEthernetServiceImpl$2;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onInterfaceStateChanged(Ljava/lang/String;IILandroid/net/IpConfiguration;)V
     .locals 1
 
-    .line 115
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -58,12 +56,10 @@
 
     invoke-static {p4, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     iget-object p1, p0, Lcom/android/server/ExtendedEthernetServiceImpl$2;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     invoke-static {p1, p3}, Lcom/android/server/ExtendedEthernetServiceImpl;->-$$Nest$fputmInterfaceMode(Lcom/android/server/ExtendedEthernetServiceImpl;I)V
 
-    .line 117
     iget-object p1, p0, Lcom/android/server/ExtendedEthernetServiceImpl$2;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/ExtendedEthernetServiceImpl;->-$$Nest$fgetmInterfaceMode(Lcom/android/server/ExtendedEthernetServiceImpl;)I
@@ -76,7 +72,6 @@
 
     if-ne p1, p4, :cond_1
 
-    .line 118
     iget-object p0, p0, Lcom/android/server/ExtendedEthernetServiceImpl$2;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 
     const/4 p1, 0x2
@@ -90,7 +85,6 @@
 
     goto :goto_0
 
-    .line 120
     :cond_1
     iget-object p0, p0, Lcom/android/server/ExtendedEthernetServiceImpl$2;->this$0:Lcom/android/server/ExtendedEthernetServiceImpl;
 

@@ -23,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 944
     instance-of v0, p1, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;
 
     const/4 v1, 0x0
@@ -43,11 +41,9 @@
 
     return v1
 
-    .line 946
     :cond_0
     check-cast p1, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;
 
-    .line 947
     iget v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->userId:I
 
     iget v2, p1, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->userId:I
@@ -79,7 +75,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 952
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->key:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -88,14 +83,12 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 953
     iget v1, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->userId:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 954
     iget p0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->type:I
 
     add-int/2addr v0, p0
@@ -106,13 +99,10 @@
 .method public set(ILjava/lang/String;I)Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;
     .locals 0
 
-    .line 936
     iput p1, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->type:I
 
-    .line 937
     iput-object p2, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->key:Ljava/lang/String;
 
-    .line 938
     iput p3, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->userId:I
 
     return-object p0

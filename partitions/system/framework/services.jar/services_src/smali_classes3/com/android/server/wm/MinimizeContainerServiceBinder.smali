@@ -7,14 +7,12 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 1
 
-    .line 27
     invoke-direct {p0, p1}, Lcom/android/server/wm/FreeformContainerServiceBinder;-><init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
 
     const-string p1, "com.android.systemui"
 
     const-string v0, "com.android.wm.shell.freeform.MinimizeContainerService"
 
-    .line 28
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/FreeformContainerServiceBinder;->setServiceComponent(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public final hasFreeformTask()Z
     .locals 2
 
-    .line 49
     iget-object v0, p0, Lcom/android/server/wm/FreeformContainerServiceBinder;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->getGlobalLock()Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -36,7 +33,6 @@
 
     monitor-enter v0
 
-    .line 50
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/FreeformContainerServiceBinder;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -48,7 +44,6 @@
 
     const/4 v1, 0x5
 
-    .line 51
     invoke-virtual {p0, v1}, Lcom/android/server/wm/TaskDisplayArea;->getTopRootTaskInWindowingMode(I)Lcom/android/server/wm/Task;
 
     move-result-object p0
@@ -62,7 +57,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 52
     :goto_0
     monitor-exit v0
     :try_end_0
@@ -75,7 +69,6 @@
     :catchall_0
     move-exception p0
 
-    .line 53
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -89,14 +82,12 @@
 .method public okToBind()Z
     .locals 2
 
-    .line 34
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_MINIMIZE_CONTAINER:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 35
     invoke-super {p0}, Lcom/android/server/wm/FreeformContainerServiceBinder;->okToBind()Z
 
     move-result v0
@@ -118,14 +109,12 @@
 .method public okToUnbind()Z
     .locals 2
 
-    .line 42
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_MINIMIZE_CONTAINER:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 43
     invoke-super {p0}, Lcom/android/server/wm/FreeformContainerServiceBinder;->okToUnbind()Z
 
     move-result v0

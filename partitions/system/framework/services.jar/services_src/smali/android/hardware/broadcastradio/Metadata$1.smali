@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/broadcastradio/Metadata;
     .locals 1
 
-    .line 294
     new-instance p0, Landroid/hardware/broadcastradio/Metadata;
 
     const/4 v0, 0x0
@@ -33,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 291
     invoke-virtual {p0, p1}, Landroid/hardware/broadcastradio/Metadata$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/broadcastradio/Metadata;
 
     move-result-object p0
@@ -44,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/broadcastradio/Metadata;
     .locals 0
 
-    .line 298
     new-array p0, p1, [Landroid/hardware/broadcastradio/Metadata;
 
     return-object p0
@@ -53,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 291
     invoke-virtual {p0, p1}, Landroid/hardware/broadcastradio/Metadata$1;->newArray(I)[Landroid/hardware/broadcastradio/Metadata;
 
     move-result-object p0

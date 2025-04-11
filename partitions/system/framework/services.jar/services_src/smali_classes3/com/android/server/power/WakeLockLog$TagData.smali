@@ -17,13 +17,10 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 1257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1258
     iput-object p1, p0, Lcom/android/server/power/WakeLockLog$TagData;->tag:Ljava/lang/String;
 
-    .line 1259
     iput p2, p0, Lcom/android/server/power/WakeLockLog$TagData;->ownerUid:I
 
     return-void
@@ -40,7 +37,6 @@
 
     return v0
 
-    .line 1267
     :cond_0
     instance-of v1, p1, Lcom/android/server/power/WakeLockLog$TagData;
 
@@ -48,10 +44,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 1268
     check-cast p1, Lcom/android/server/power/WakeLockLog$TagData;
 
-    .line 1269
     iget-object v1, p0, Lcom/android/server/power/WakeLockLog$TagData;->tag:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/android/server/power/WakeLockLog$TagData;->tag:Ljava/lang/String;
@@ -83,7 +77,6 @@
 .method public getByteSize()I
     .locals 1
 
-    .line 1288
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$TagData;->tag:Ljava/lang/String;
 
     if-nez p0, :cond_0
@@ -116,7 +109,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1276
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

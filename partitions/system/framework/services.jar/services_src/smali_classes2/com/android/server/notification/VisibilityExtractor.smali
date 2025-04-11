@@ -36,7 +36,6 @@
 
     return v1
 
-    .line 120
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/VisibilityExtractor;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
@@ -62,7 +61,6 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 38
     const-class p2, Landroid/app/admin/DevicePolicyManager;
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -83,7 +81,6 @@
 
     if-eqz p1, :cond_b
 
-    .line 42
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
@@ -92,7 +89,6 @@
 
     goto/16 :goto_6
 
-    .line 47
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/VisibilityExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
@@ -100,7 +96,6 @@
 
     return-object v0
 
-    .line 52
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getUserId()I
 
@@ -110,7 +105,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 55
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getChannel()Landroid/app/NotificationChannel;
 
     move-result-object p0
@@ -123,23 +117,19 @@
 
     goto/16 :goto_6
 
-    .line 57
     :cond_2
     iget-object v3, p0, Lcom/android/server/notification/VisibilityExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
-    .line 58
     invoke-interface {v3, v1}, Lcom/android/server/notification/RankingConfig;->canShowNotificationsOnLockscreen(I)Z
 
     move-result v3
 
     const/4 v4, 0x4
 
-    .line 59
     invoke-virtual {p0, v1, v4}, Lcom/android/server/notification/VisibilityExtractor;->adminAllowsKeyguardFeature(II)Z
 
     move-result v4
 
-    .line 61
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getChannel()Landroid/app/NotificationChannel;
 
     move-result-object v5
@@ -161,11 +151,9 @@
     :cond_3
     move v5, v7
 
-    .line 64
     :goto_0
     iget-object v8, p0, Lcom/android/server/notification/VisibilityExtractor;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
 
-    .line 66
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v9
@@ -178,7 +166,6 @@
 
     move-result v10
 
-    .line 65
     invoke-virtual {v8, v9, v10}, Lcom/android/server/notification/PreferencesHelper;->getLockScreenNotificationVisibilityForPackage(Ljava/lang/String;I)I
 
     move-result v8
@@ -203,23 +190,19 @@
 
     goto :goto_5
 
-    .line 76
     :cond_5
     iget-object v2, p0, Lcom/android/server/notification/VisibilityExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
-    .line 77
     invoke-interface {v2, v1}, Lcom/android/server/notification/RankingConfig;->canShowPrivateNotificationsOnLockScreen(I)Z
 
     move-result v2
 
     const/16 v3, 0x8
 
-    .line 78
     invoke-virtual {p0, v1, v3}, Lcom/android/server/notification/VisibilityExtractor;->adminAllowsKeyguardFeature(II)Z
 
     move-result v1
 
-    .line 80
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getChannel()Landroid/app/NotificationChannel;
 
     move-result-object v3
@@ -237,11 +220,9 @@
     :cond_6
     move v3, v7
 
-    .line 83
     :goto_2
     iget-object p0, p0, Lcom/android/server/notification/VisibilityExtractor;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
 
-    .line 85
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v4
@@ -254,7 +235,6 @@
 
     move-result v5
 
-    .line 84
     invoke-virtual {p0, v4, v5}, Lcom/android/server/notification/PreferencesHelper;->getLockScreenNotificationVisibilityForPackage(Ljava/lang/String;I)I
 
     move-result p0
@@ -280,19 +260,16 @@
     :cond_8
     const/16 p0, -0x3e8
 
-    .line 92
     invoke-virtual {p1, p0}, Lcom/android/server/notification/NotificationRecord;->setPackageVisibilityOverride(I)V
 
     goto :goto_6
 
-    .line 90
     :cond_9
     :goto_4
     invoke-virtual {p1, v7}, Lcom/android/server/notification/NotificationRecord;->setPackageVisibilityOverride(I)V
 
     goto :goto_6
 
-    .line 72
     :cond_a
     :goto_5
     invoke-virtual {p1, v2}, Lcom/android/server/notification/NotificationRecord;->setPackageVisibilityOverride(I)V
@@ -305,7 +282,6 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/notification/VisibilityExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
     return-void
@@ -314,7 +290,6 @@
 .method public setPreferenceHelper(Lcom/android/server/notification/PreferencesHelper;)V
     .locals 0
 
-    .line 102
     iput-object p1, p0, Lcom/android/server/notification/VisibilityExtractor;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
 
     return-void
@@ -323,6 +298,5 @@
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-static {p1}, Lcom/android/server/wm/WindowOrganizerController;->$r8$lambda$G7L5bwEKvq2wiq-RWlfn7afFOic(Lcom/android/server/wm/ActivityRecord;)V

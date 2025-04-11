@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;)V
     .locals 0
 
-    .line 4811
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Lcom/android/server/input/InputManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/input/InputManagerService;Lcom/android/server/input/InputManagerService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/input/InputManagerService$LocalService;-><init>(Lcom/android/server/input/InputManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public addKeyboardLayoutAssociation(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 4997
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/input/InputManagerService;->-$$Nest$maddKeyboardLayoutAssociation(Lcom/android/server/input/InputManagerService;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -44,7 +41,6 @@
 .method public createInputChannel(Ljava/lang/String;)Landroid/view/InputChannel;
     .locals 0
 
-    .line 4954
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/input/InputManagerService;->createInputChannel(Ljava/lang/String;)Landroid/view/InputChannel;
@@ -57,7 +53,6 @@
 .method public decrementKeyboardBacklight(I)V
     .locals 0
 
-    .line 4981
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmKeyboardBacklightController(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/InputManagerService$KeyboardBacklightControllerInterface;
@@ -72,7 +67,6 @@
 .method public forceHideCursor(Z)V
     .locals 0
 
-    .line 4849
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -87,7 +81,6 @@
 .method public getCursorPosition()Landroid/graphics/PointF;
     .locals 3
 
-    .line 4920
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -100,14 +93,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 4921
     array-length v0, p0
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 4924
     new-instance v0, Landroid/graphics/PointF;
 
     const/4 v1, 0x0
@@ -122,7 +113,6 @@
 
     return-object v0
 
-    .line 4922
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -136,7 +126,6 @@
 .method public getKeyCodeState(III)I
     .locals 0
 
-    .line 5014
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/input/InputManagerService;->getKeyCodeState(III)I
@@ -149,7 +138,6 @@
 .method public getVirtualMousePointerDisplayId()I
     .locals 0
 
-    .line 4915
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$mgetVirtualMousePointerDisplayId(Lcom/android/server/input/InputManagerService;)I
@@ -162,7 +150,6 @@
 .method public incrementKeyboardBacklight(I)V
     .locals 0
 
-    .line 4976
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmKeyboardBacklightController(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/InputManagerService$KeyboardBacklightControllerInterface;
@@ -177,7 +164,6 @@
 .method public notifyUserActivity()V
     .locals 0
 
-    .line 4971
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmKeyboardBacklightController(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/InputManagerService$KeyboardBacklightControllerInterface;
@@ -192,14 +178,12 @@
 .method public onInputMethodSubtypeChanged(ILandroid/view/inputmethod/InputMethodInfo;Landroid/view/inputmethod/InputMethodSubtype;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onInputMethodSubtypeChangedForKeyboardLayoutMapping(ILcom/android/internal/inputmethod/InputMethodSubtypeHandle;Landroid/view/inputmethod/InputMethodSubtype;)V
     .locals 0
 
-    .line 4966
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmKeyboardLayoutManager(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/KeyboardLayoutManager;
@@ -214,7 +198,6 @@
 .method public registerLidSwitchCallback(Lcom/android/server/input/InputManagerInternal$LidSwitchCallback;)V
     .locals 0
 
-    .line 4944
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/input/InputManagerService;->registerLidSwitchCallbackInternal(Lcom/android/server/input/InputManagerInternal$LidSwitchCallback;)V
@@ -225,7 +208,6 @@
 .method public removeKeyboardLayoutAssociation(Ljava/lang/String;)V
     .locals 0
 
-    .line 5003
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/input/InputManagerService;->-$$Nest$mremoveKeyboardLayoutAssociation(Lcom/android/server/input/InputManagerService;Ljava/lang/String;)V
@@ -236,7 +218,6 @@
 .method public setCursorPosition(III)V
     .locals 0
 
-    .line 4863
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -251,7 +232,6 @@
 .method public setDisplayEligibilityForPointerCapture(IZ)V
     .locals 0
 
-    .line 4934
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/input/InputManagerService;->-$$Nest$msetDisplayEligibilityForPointerCapture(Lcom/android/server/input/InputManagerService;IZ)V
@@ -262,7 +242,6 @@
 .method public setDisplayViewports(Ljava/util/List;)V
     .locals 0
 
-    .line 4814
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/input/InputManagerService;->-$$Nest$msetDisplayViewportsInternal(Lcom/android/server/input/InputManagerService;Ljava/util/List;)V
@@ -273,7 +252,6 @@
 .method public setInteractive(Z)V
     .locals 1
 
-    .line 4819
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {v0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -282,7 +260,6 @@
 
     invoke-interface {v0, p1}, Lcom/android/server/input/NativeInputManagerService;->setInteractive(Z)V
 
-    .line 4820
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {v0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmBatteryController(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/BatteryController;
@@ -291,7 +268,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/input/BatteryController;->onInteractiveChanged(Z)V
 
-    .line 4821
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {v0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmKeyboardBacklightController(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/InputManagerService$KeyboardBacklightControllerInterface;
@@ -300,14 +276,12 @@
 
     invoke-interface {v0, p1}, Lcom/android/server/input/InputManagerService$KeyboardBacklightControllerInterface;->onInteractiveChanged(Z)V
 
-    .line 4828
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->IFW_WIRELESS_KEYBOARD_SA_LOGGING:Z
 
     if-eqz v0, :cond_1
 
     if-nez p1, :cond_1
 
-    .line 4829
     iget-object p1, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p1}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmInputWirelessKeyboardMouseShareLock(Lcom/android/server/input/InputManagerService;)Ljava/lang/Object;
@@ -316,7 +290,6 @@
 
     monitor-enter p1
 
-    .line 4830
     :try_start_0
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -326,7 +299,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4831
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmWirelessKeyboardMouseShare(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/WirelessKeyboardMouseShare;
@@ -335,7 +307,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->notifySALogging()V
 
-    .line 4833
     :cond_0
     monitor-exit p1
 
@@ -358,7 +329,6 @@
 .method public setInteractiveForInternalDisplay(Z)V
     .locals 0
 
-    .line 4842
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -373,7 +343,6 @@
 .method public setMultiControlOutOfFocus(Z)V
     .locals 0
 
-    .line 4870
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -388,7 +357,6 @@
 .method public setPointerAcceleration(FI)V
     .locals 0
 
-    .line 4929
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/input/InputManagerService;->-$$Nest$msetPointerAcceleration(Lcom/android/server/input/InputManagerService;FI)V
@@ -399,7 +367,6 @@
 .method public setPointerIconVisible(ZI)V
     .locals 0
 
-    .line 4939
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/input/InputManagerService;->-$$Nest$msetPointerIconVisible(Lcom/android/server/input/InputManagerService;ZI)V
@@ -410,7 +377,6 @@
 .method public setPulseGestureEnabled(Z)V
     .locals 2
 
-    .line 4888
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {v0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmDoubleTouchGestureEnableFile(Lcom/android/server/input/InputManagerService;)Ljava/io/File;
@@ -421,7 +387,6 @@
 
     const/4 v0, 0x0
 
-    .line 4891
     :try_start_0
     new-instance v1, Ljava/io/FileWriter;
 
@@ -446,14 +411,12 @@
     :cond_0
     const-string p0, "0"
 
-    .line 4892
     :goto_0
     invoke-virtual {v1, p0}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4896
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_3
@@ -486,12 +449,10 @@
 
     const-string v1, "Unable to setPulseGestureEnabled"
 
-    .line 4894
     invoke-static {p1, v1, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 4896
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_3
@@ -499,7 +460,6 @@
     :goto_2
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 4897
     throw p0
 
     :cond_1
@@ -510,7 +470,6 @@
 .method public setStylusButtonMotionEventsEnabled(Z)V
     .locals 0
 
-    .line 5008
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -525,7 +484,6 @@
 .method public setTypeAssociation(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 4986
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/input/InputManagerService;->setTypeAssociationInternal(Ljava/lang/String;Ljava/lang/String;)V
@@ -536,10 +494,8 @@
 .method public setVirtualMousePointerDisplayId(I)Z
     .locals 0
 
-    .line 4909
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
-    .line 4910
     invoke-static {p0, p1}, Lcom/android/server/input/InputManagerService;->-$$Nest$msetVirtualMousePointerDisplayIdBlocking(Lcom/android/server/input/InputManagerService;I)Z
 
     move-result p0
@@ -550,7 +506,6 @@
 .method public toggleCapsLock(I)V
     .locals 0
 
-    .line 4883
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {p0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;
@@ -565,7 +520,6 @@
 .method public transferTouchFocus(Landroid/os/IBinder;Landroid/os/IBinder;)Z
     .locals 0
 
-    .line 4904
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/input/InputManagerService;->transferTouchFocus(Landroid/os/IBinder;Landroid/os/IBinder;)Z
@@ -578,7 +532,6 @@
 .method public unsetTypeAssociation(Ljava/lang/String;)V
     .locals 0
 
-    .line 4991
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/input/InputManagerService;->unsetTypeAssociationInternal(Ljava/lang/String;)V

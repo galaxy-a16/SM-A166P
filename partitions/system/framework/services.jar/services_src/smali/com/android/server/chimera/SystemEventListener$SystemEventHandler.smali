@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemEventListener;Landroid/os/Looper;)V
     .locals 0
 
-    .line 433
     iput-object p1, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
-    .line 434
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -27,7 +25,6 @@
 
     const-string v0, "SystemEventListener"
 
-    .line 440
     :try_start_0
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -35,7 +32,6 @@
 
     goto/16 :goto_f
 
-    .line 519
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -60,7 +56,6 @@
 
     check-cast v1, Lcom/android/server/chimera/SystemEventListener$AlwaysRunningQuotaExceedListener;
 
-    .line 520
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/server/chimera/ChimeraQuotaMonitor$QuotaReclaimTarget;
@@ -69,7 +64,6 @@
 
     goto :goto_0
 
-    .line 507
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -94,7 +88,6 @@
 
     check-cast v1, Lcom/android/server/chimera/SystemEventListener$TimeOrTimeZoneChangedListener;
 
-    .line 508
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
@@ -103,7 +96,6 @@
 
     goto :goto_1
 
-    .line 512
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -115,7 +107,6 @@
 
     invoke-interface {p1, v0, v1}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 513
     iget-object p1, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
     invoke-static {p1}, Lcom/android/server/chimera/SystemEventListener;->-$$Nest$fgetmOneHourTimerListeners(Lcom/android/server/chimera/SystemEventListener;)Ljava/util/List;
@@ -139,12 +130,10 @@
 
     check-cast v1, Lcom/android/server/chimera/SystemEventListener$OneHourTimerListener;
 
-    .line 514
     invoke-interface {v1}, Lcom/android/server/chimera/SystemEventListener$OneHourTimerListener;->onOneHourTimer()V
 
     goto :goto_2
 
-    .line 516
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -152,7 +141,6 @@
 
     goto/16 :goto_f
 
-    .line 502
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -177,12 +165,10 @@
 
     check-cast p1, Lcom/android/server/chimera/SystemEventListener$CameraStateListener;
 
-    .line 503
     invoke-interface {p1}, Lcom/android/server/chimera/SystemEventListener$CameraStateListener;->onCameraClose()V
 
     goto :goto_3
 
-    .line 497
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -207,12 +193,10 @@
 
     check-cast p1, Lcom/android/server/chimera/SystemEventListener$CameraStateListener;
 
-    .line 498
     invoke-interface {p1}, Lcom/android/server/chimera/SystemEventListener$CameraStateListener;->onCameraOpen()V
 
     goto :goto_4
 
-    .line 487
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -237,7 +221,6 @@
 
     check-cast v1, Lcom/android/server/chimera/SystemEventListener$AppLaunchIntentListener;
 
-    .line 488
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
@@ -246,7 +229,6 @@
 
     goto :goto_5
 
-    .line 492
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -271,12 +253,10 @@
 
     check-cast p1, Lcom/android/server/chimera/SystemEventListener$DeviceIdleListener;
 
-    .line 493
     invoke-interface {p1}, Lcom/android/server/chimera/SystemEventListener$DeviceIdleListener;->onDeviceIdle()V
 
     goto :goto_6
 
-    .line 467
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -303,7 +283,6 @@
 
     invoke-static {p0}, Lcom/android/server/audio/CurrentDeviceManager$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
-    .line 468
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/String;
@@ -312,7 +291,6 @@
 
     throw p0
 
-    .line 482
     :pswitch_8
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -337,12 +315,10 @@
 
     check-cast p1, Lcom/android/server/chimera/SystemEventListener$MediaScanFinishedListener;
 
-    .line 483
     invoke-interface {p1}, Lcom/android/server/chimera/SystemEventListener$MediaScanFinishedListener;->onMediaScanFinished()V
 
     goto :goto_7
 
-    .line 477
     :pswitch_9
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -369,12 +345,10 @@
 
     const/4 v1, 0x0
 
-    .line 478
     invoke-interface {p1, v1}, Lcom/android/server/chimera/SystemEventListener$CarModeChangeListener;->onCarModeChanged(Z)V
 
     goto :goto_8
 
-    .line 472
     :pswitch_a
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -401,12 +375,10 @@
 
     const/4 v1, 0x1
 
-    .line 473
     invoke-interface {p1, v1}, Lcom/android/server/chimera/SystemEventListener$CarModeChangeListener;->onCarModeChanged(Z)V
 
     goto :goto_9
 
-    .line 462
     :pswitch_b
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -431,12 +403,10 @@
 
     check-cast p1, Lcom/android/server/chimera/SystemEventListener$HomeLaunchListener;
 
-    .line 463
     invoke-interface {p1}, Lcom/android/server/chimera/SystemEventListener$HomeLaunchListener;->onHomeLaunched()V
 
     goto :goto_a
 
-    .line 457
     :pswitch_c
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -461,7 +431,6 @@
 
     check-cast v1, Lcom/android/server/chimera/SystemEventListener$LmkdEventListener;
 
-    .line 458
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     iget v3, p1, Landroid/os/Message;->arg2:I
@@ -478,7 +447,6 @@
 
     goto :goto_b
 
-    .line 447
     :pswitch_d
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -503,7 +471,6 @@
 
     check-cast v1, Lcom/android/server/chimera/SystemEventListener$PmmStateChangeListener;
 
-    .line 448
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -516,7 +483,6 @@
 
     goto :goto_c
 
-    .line 442
     :pswitch_e
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -541,12 +507,10 @@
 
     check-cast p1, Lcom/android/server/chimera/SystemEventListener$BottleNeckHintListener;
 
-    .line 443
     invoke-interface {p1}, Lcom/android/server/chimera/SystemEventListener$BottleNeckHintListener;->onBottleNeckHintTriggered()V
 
     goto :goto_d
 
-    .line 452
     :pswitch_f
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -571,7 +535,6 @@
 
     check-cast p1, Lcom/android/server/chimera/SystemEventListener$PmmCriticalListener;
 
-    .line 453
     invoke-interface {p1}, Lcom/android/server/chimera/SystemEventListener$PmmCriticalListener;->onPmmCriticalTriggered()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -581,7 +544,6 @@
     :catch_0
     move-exception p0
 
-    .line 525
     invoke-static {v0}, Lcom/android/server/chimera/SystemRepositoryDefault;->convertToChimeraTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1

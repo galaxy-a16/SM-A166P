@@ -55,30 +55,24 @@
 
     move-object v0, p0
 
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     move-object v1, p1
 
-    .line 80
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mOriginInfo:Lcom/android/server/pm/OriginInfo;
 
     move-object v1, p2
 
-    .line 81
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mMoveInfo:Lcom/android/server/pm/MoveInfo;
 
     move v1, p4
 
-    .line 82
     iput v1, v0, Lcom/android/server/pm/InstallArgs;->mInstallFlags:I
 
     move-object v1, p3
 
-    .line 83
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mObserver:Landroid/content/pm/IPackageInstallObserver2;
 
-    .line 84
     invoke-static {p5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -89,82 +83,66 @@
 
     move-object v1, p6
 
-    .line 85
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mVolumeUuid:Ljava/lang/String;
 
     move-object v1, p7
 
-    .line 86
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mUser:Landroid/os/UserHandle;
 
     move-object v1, p8
 
-    .line 87
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mInstructionSets:[Ljava/lang/String;
 
     move-object v1, p9
 
-    .line 88
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mAbiOverride:Ljava/lang/String;
 
     move-object v1, p10
 
-    .line 89
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mPermissionStates:Landroid/util/ArrayMap;
 
     move-object v1, p11
 
-    .line 90
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mAllowlistedRestrictedPermissions:Ljava/util/List;
 
     move v1, p12
 
-    .line 91
     iput v1, v0, Lcom/android/server/pm/InstallArgs;->mAutoRevokePermissionsMode:I
 
     move-object v1, p13
 
-    .line 92
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mTraceMethod:Ljava/lang/String;
 
     move/from16 v1, p14
 
-    .line 93
     iput v1, v0, Lcom/android/server/pm/InstallArgs;->mTraceCookie:I
 
     move-object/from16 v1, p15
 
-    .line 94
     iput-object v1, v0, Lcom/android/server/pm/InstallArgs;->mSigningDetails:Landroid/content/pm/SigningDetails;
 
     move/from16 v1, p16
 
-    .line 95
     iput v1, v0, Lcom/android/server/pm/InstallArgs;->mInstallReason:I
 
     move/from16 v1, p17
 
-    .line 96
     iput v1, v0, Lcom/android/server/pm/InstallArgs;->mInstallScenario:I
 
     move/from16 v1, p18
 
-    .line 97
     iput-boolean v1, v0, Lcom/android/server/pm/InstallArgs;->mForceQueryableOverride:Z
 
     move/from16 v1, p19
 
-    .line 98
     iput v1, v0, Lcom/android/server/pm/InstallArgs;->mDataLoaderType:I
 
     move/from16 v1, p20
 
-    .line 99
     iput v1, v0, Lcom/android/server/pm/InstallArgs;->mPackageSource:I
 
     move/from16 v1, p21
 
-    .line 100
     iput-boolean v1, v0, Lcom/android/server/pm/InstallArgs;->mApplicationEnabledSettingPersistent:Z
 
     return-void
@@ -179,7 +157,6 @@
 
     move-object/from16 v9, p2
 
-    .line 108
     invoke-static {}, Lcom/android/server/pm/OriginInfo;->fromNothing()Lcom/android/server/pm/OriginInfo;
 
     move-result-object v2
@@ -230,7 +207,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 113
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;)V
     .locals 0
 
-    .line 130
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDeviceDiscoveryDone(Ljava/util/List;)V
     .locals 2
 
-    .line 133
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -45,7 +43,6 @@
 
     check-cast v0, Landroid/hardware/hdmi/HdmiDeviceInfo;
 
-    .line 134
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     iget-object v1, v1, Lcom/android/server/hdmi/HdmiLocalDevice;->mService:Lcom/android/server/hdmi/HdmiControlService;
@@ -58,7 +55,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_0
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
@@ -85,7 +81,6 @@
 
     check-cast v0, Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
-    .line 141
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     iget-object v1, v1, Lcom/android/server/hdmi/HdmiLocalDevice;->mService:Lcom/android/server/hdmi/HdmiControlService;
@@ -102,25 +97,21 @@
 
     goto :goto_1
 
-    .line 144
     :cond_1
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     const-class v0, Lcom/android/server/hdmi/HotplugDetectionAction;
 
-    .line 145
     invoke-virtual {p1, v0}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->getActions(Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 146
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 147
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     new-instance p1, Lcom/android/server/hdmi/HotplugDetectionAction;

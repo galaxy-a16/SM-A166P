@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/soundtrigger/SoundTriggerService;Landroid/os/PowerManager;)V
     .locals 0
 
-    .line 270
     iput-object p1, p0, Lcom/android/server/soundtrigger/SoundTriggerService$1;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
     iput-object p2, p0, Lcom/android/server/soundtrigger/SoundTriggerService$1;->val$powerManager:Landroid/os/PowerManager;
@@ -30,7 +29,6 @@
 
     const-string p1, "android.os.action.POWER_SAVE_MODE_CHANGED"
 
-    .line 274
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -43,7 +41,6 @@
 
     return-void
 
-    .line 277
     :cond_0
     iget-object p1, p0, Lcom/android/server/soundtrigger/SoundTriggerService$1;->this$0:Lcom/android/server/soundtrigger/SoundTriggerService;
 
@@ -53,12 +50,10 @@
 
     iget-object p0, p0, Lcom/android/server/soundtrigger/SoundTriggerService$1;->val$powerManager:Landroid/os/PowerManager;
 
-    .line 278
     invoke-virtual {p0}, Landroid/os/PowerManager;->getSoundTriggerPowerSaveMode()I
 
     move-result p0
 
-    .line 277
     invoke-virtual {p1, p0}, Lcom/android/server/soundtrigger/DeviceStateHandler;->onPowerModeChanged(I)V
 
     return-void

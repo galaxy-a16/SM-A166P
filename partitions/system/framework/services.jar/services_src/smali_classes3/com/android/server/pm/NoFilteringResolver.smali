@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/server/pm/resolution/ComponentResolverApi;Lcom/android/server/pm/UserManagerService;)V
     .locals 0
 
-    .line 70
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/CrossProfileResolver;-><init>(Lcom/android/server/pm/resolution/ComponentResolverApi;Lcom/android/server/pm/UserManagerService;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static hasPermission(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 140
     invoke-virtual {p0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -37,12 +35,10 @@
 .method public static isAppCloningBuildingBlocksEnabled(Landroid/content/Context;Lcom/android/internal/config/appcloning/AppCloningDeviceConfigHelper;)Z
     .locals 3
 
-    .line 149
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 151
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -56,7 +52,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 152
     invoke-virtual {p1}, Lcom/android/internal/config/appcloning/AppCloningDeviceConfigHelper;->getEnableAppCloningBuildingBlocks()Z
 
     move-result p0
@@ -72,7 +67,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 154
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -83,14 +77,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 155
     throw p0
 .end method
 
 .method public static isIntentRedirectionAllowed(Landroid/content/Context;Lcom/android/internal/config/appcloning/AppCloningDeviceConfigHelper;ZJ)Z
     .locals 0
 
-    .line 63
     invoke-static {p0, p1}, Lcom/android/server/pm/NoFilteringResolver;->isAppCloningBuildingBlocksEnabled(Landroid/content/Context;Lcom/android/internal/config/appcloning/AppCloningDeviceConfigHelper;)Z
 
     move-result p1
@@ -111,7 +103,6 @@
 
     const-string p1, "android.permission.QUERY_CLONED_APPS"
 
-    .line 65
     invoke-static {p0, p1}, Lcom/android/server/pm/NoFilteringResolver;->hasPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -135,7 +126,6 @@
 .method public filterResolveInfoWithDomainPreferredActivity(Landroid/content/Intent;Ljava/util/List;JIII)Ljava/util/List;
     .locals 0
 
-    .line 0
     return-object p2
 .end method
 
@@ -144,7 +134,6 @@
 
     move-object v0, p0
 
-    .line 100
     iget-object v1, v0, Lcom/android/server/pm/CrossProfileResolver;->mComponentResolver:Lcom/android/server/pm/resolution/ComponentResolverApi;
 
     move-object v2, p1
@@ -161,7 +150,6 @@
 
     move-result-object v1
 
-    .line 102
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -172,7 +160,6 @@
 
     move v4, v3
 
-    .line 105
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -180,7 +167,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 106
     new-instance v5, Lcom/android/server/pm/CrossProfileDomainInfo;
 
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -202,7 +188,6 @@
     :cond_0
     move v1, p4
 
-    .line 111
     invoke-virtual {p0, v2, p4}, Lcom/android/server/pm/CrossProfileResolver;->filterIfNotSystemUser(Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v0

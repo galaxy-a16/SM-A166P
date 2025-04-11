@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/resolution/ComponentResolver;Lcom/android/server/pm/resolution/ComponentResolverApi;Lcom/android/server/utils/Watchable;Lcom/android/server/pm/UserNeedsBadgingCache;)V
     .locals 0
 
-    .line 181
     iput-object p1, p0, Lcom/android/server/pm/resolution/ComponentResolver$1;->this$0:Lcom/android/server/pm/resolution/ComponentResolver;
 
     iput-object p4, p0, Lcom/android/server/pm/resolution/ComponentResolver$1;->val$userNeedsBadgingCache:Lcom/android/server/pm/UserNeedsBadgingCache;
@@ -28,14 +27,12 @@
 .method public createSnapshot()Lcom/android/server/pm/resolution/ComponentResolverApi;
     .locals 3
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolver$1;->this$0:Lcom/android/server/pm/resolution/ComponentResolver;
 
     iget-object v0, v0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 185
     :try_start_0
     new-instance v1, Lcom/android/server/pm/resolution/ComponentResolverSnapshot;
 
@@ -52,7 +49,6 @@
     :catchall_0
     move-exception p0
 
-    .line 187
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -63,7 +59,6 @@
 .method public bridge synthetic createSnapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 181
     invoke-virtual {p0}, Lcom/android/server/pm/resolution/ComponentResolver$1;->createSnapshot()Lcom/android/server/pm/resolution/ComponentResolverApi;
 
     move-result-object p0

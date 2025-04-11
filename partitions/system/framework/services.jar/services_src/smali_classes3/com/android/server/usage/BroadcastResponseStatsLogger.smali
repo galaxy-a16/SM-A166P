@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 45
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
     move-result v0
@@ -42,17 +41,14 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mLock:Ljava/lang/Object;
 
-    .line 49
     new-instance v0, Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;
 
     sget v1, Lcom/android/server/usage/BroadcastResponseStatsLogger;->MAX_LOG_SIZE:I
@@ -63,7 +59,6 @@
 
     iput-object v0, p0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mBroadcastEventsBuffer:Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;
 
-    .line 52
     new-instance v0, Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;
 
     const-class v2, Lcom/android/server/usage/BroadcastResponseStatsLogger$NotificationEvent;
@@ -78,7 +73,6 @@
 .method public static getBroadcastDispatchEventLog(ILjava/lang/String;IJJI)Ljava/lang/String;
     .locals 1
 
-    .line 154
     invoke-static {p5, p6}, Landroid/util/TimeUtils;->formatDuration(J)Ljava/lang/String;
 
     move-result-object p5
@@ -91,7 +85,6 @@
 
     move-result-object p6
 
-    .line 155
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -116,7 +109,6 @@
 
     const-string p1, "broadcast:%s; srcUid=%d, tgtPkg=%s, tgtUsr=%d, id=%d, state=%s"
 
-    .line 152
     invoke-static {p1, p0}, Landroid/text/TextUtils;->formatSimple(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -127,7 +119,6 @@
 .method public static getNotificationEventLog(ILjava/lang/String;IJ)Ljava/lang/String;
     .locals 0
 
-    .line 163
     invoke-static {p3, p4}, Landroid/util/TimeUtils;->formatDuration(J)Ljava/lang/String;
 
     move-result-object p3
@@ -136,7 +127,6 @@
 
     move-result-object p0
 
-    .line 164
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -147,7 +137,6 @@
 
     const-string/jumbo p1, "notification:%s; event=<%s>, pkg=%s, usr=%d"
 
-    .line 162
     invoke-static {p1, p0}, Landroid/text/TextUtils;->formatSimple(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -168,7 +157,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 177
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -196,7 +184,6 @@
 .method public dumpLogs(Lcom/android/internal/util/IndentingPrintWriter;)V
     .locals 2
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -204,40 +191,30 @@
     :try_start_0
     const-string v1, "Broadcast events (most recent first):"
 
-    .line 83
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 85
     iget-object v1, p0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mBroadcastEventsBuffer:Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;
 
     invoke-virtual {v1, p1}, Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;->reverseDump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 86
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 88
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     const-string v1, "Notification events (most recent first):"
 
-    .line 89
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 90
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 91
     iget-object p0, p0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mNotificationEventsBuffer:Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;
 
     invoke-virtual {p0, p1}, Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;->reverseDump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 92
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 93
     monitor-exit v0
 
     return-void
@@ -257,12 +234,10 @@
 
     move-object v0, p0
 
-    .line 59
     iget-object v1, v0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 60
     :try_start_0
     sget-boolean v2, Lcom/android/server/usage/UsageStatsService;->DEBUG_RESPONSE_STATS:Z
 
@@ -270,7 +245,6 @@
 
     const-string v2, "ResponseStatsTracker"
 
-    .line 62
     invoke-virtual/range {p3 .. p3}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v5
@@ -285,14 +259,12 @@
 
     move/from16 v10, p8
 
-    .line 61
     invoke-static/range {v3 .. v10}, Lcom/android/server/usage/BroadcastResponseStatsLogger;->getBroadcastDispatchEventLog(ILjava/lang/String;IJJI)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     :cond_0
     iget-object v4, v0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mBroadcastEventsBuffer:Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;
 
@@ -310,7 +282,6 @@
 
     invoke-virtual/range {v4 .. v12}, Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;->logBroadcastDispatchEvent(ILjava/lang/String;Landroid/os/UserHandle;JJI)V
 
-    .line 67
     monitor-exit v1
 
     return-void
@@ -328,12 +299,10 @@
 .method public logNotificationEvent(ILjava/lang/String;Landroid/os/UserHandle;J)V
     .locals 7
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 73
     :try_start_0
     sget-boolean v1, Lcom/android/server/usage/UsageStatsService;->DEBUG_RESPONSE_STATS:Z
 
@@ -341,7 +310,6 @@
 
     const-string v1, "ResponseStatsTracker"
 
-    .line 74
     invoke-virtual {p3}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v2
@@ -352,7 +320,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     :cond_0
     iget-object v1, p0, Lcom/android/server/usage/BroadcastResponseStatsLogger;->mNotificationEventsBuffer:Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;
 
@@ -366,7 +333,6 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/usage/BroadcastResponseStatsLogger$LogBuffer;->logNotificationEvent(ILjava/lang/String;Landroid/os/UserHandle;J)V
 
-    .line 78
     monitor-exit v0
 
     return-void

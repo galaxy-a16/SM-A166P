@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$CPb219_E1poMeXEeifyfYHv3cN0(Lcom/android/server/backup/BackupManagerService$1;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/backup/BackupManagerService$1;->lambda$onReceive$0(I)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/backup/BackupManagerService;)V
     .locals 0
 
-    .line 149
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$1;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onReceive$0(I)V
     .locals 0
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/backup/BackupManagerService$1;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/backup/BackupManagerService;->-$$Nest$monRemovedNonSystemUser(Lcom/android/server/backup/BackupManagerService;I)V
@@ -44,7 +41,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 152
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -61,14 +57,12 @@
 
     const/16 v0, -0x2710
 
-    .line 153
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     if-lez p1, :cond_0
 
-    .line 155
     iget-object p2, p0, Lcom/android/server/backup/BackupManagerService$1;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-static {p2}, Lcom/android/server/backup/BackupManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/backup/BackupManagerService;)Landroid/os/Handler;

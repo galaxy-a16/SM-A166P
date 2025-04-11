@@ -28,14 +28,12 @@
 
     new-array v1, v0, [Z
 
-    .line 14
     fill-array-data v1, :array_0
 
     sput-object v1, Lorg/tukaani/xz/simple/X86;->MASK_TO_ALLOWED_STATUS:[Z
 
     new-array v0, v0, [I
 
-    .line 17
     fill-array-data v0, :array_1
 
     sput-object v0, Lorg/tukaani/xz/simple/X86;->MASK_TO_BIT_NUMBER:[I
@@ -72,20 +70,16 @@
 .method public constructor <init>(ZI)V
     .locals 1
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 21
     iput v0, p0, Lorg/tukaani/xz/simple/X86;->prevMask:I
 
-    .line 29
     iput-boolean p1, p0, Lorg/tukaani/xz/simple/X86;->isEncoder:Z
 
     add-int/lit8 p2, p2, 0x5
 
-    .line 30
     iput p2, p0, Lorg/tukaani/xz/simple/X86;->pos:I
 
     return-void
@@ -94,7 +88,6 @@
 .method public static test86MSByte(B)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0xff
 
     and-int/2addr p0, v0
@@ -138,7 +131,6 @@
 
     if-gt v1, p3, :cond_8
 
-    .line 39
     aget-byte v4, p1, v1
 
     and-int/lit16 v4, v4, 0xfe
@@ -156,12 +148,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 44
     iput v2, p0, Lorg/tukaani/xz/simple/X86;->prevMask:I
 
     goto :goto_1
 
-    .line 46
     :cond_1
     iget v2, p0, Lorg/tukaani/xz/simple/X86;->prevMask:I
 
@@ -175,7 +165,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 48
     sget-object v2, Lorg/tukaani/xz/simple/X86;->MASK_TO_ALLOWED_STATUS:[Z
 
     aget-boolean v2, v2, v0
@@ -198,7 +187,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 51
     :cond_2
     iget v0, p0, Lorg/tukaani/xz/simple/X86;->prevMask:I
 
@@ -214,7 +202,6 @@
     :goto_1
     add-int/lit8 v0, v1, 0x4
 
-    .line 59
     aget-byte v2, p1, v0
 
     invoke-static {v2}, Lorg/tukaani/xz/simple/X86;->test86MSByte(B)Z
@@ -225,7 +212,6 @@
 
     add-int/lit8 v2, v1, 0x1
 
-    .line 60
     aget-byte v4, p1, v2
 
     and-int/lit16 v4, v4, 0xff
@@ -258,13 +244,11 @@
 
     or-int/2addr v4, v7
 
-    .line 66
     :goto_2
     iget-boolean v7, p0, Lorg/tukaani/xz/simple/X86;->isEncoder:Z
 
     if-eqz v7, :cond_4
 
-    .line 67
     iget v7, p0, Lorg/tukaani/xz/simple/X86;->pos:I
 
     add-int/2addr v7, v1
@@ -275,7 +259,6 @@
 
     goto :goto_3
 
-    .line 69
     :cond_4
     iget v7, p0, Lorg/tukaani/xz/simple/X86;->pos:I
 
@@ -285,7 +268,6 @@
 
     sub-int/2addr v4, v7
 
-    .line 71
     :goto_3
     iget v7, p0, Lorg/tukaani/xz/simple/X86;->prevMask:I
 
@@ -293,7 +275,6 @@
 
     goto :goto_4
 
-    .line 74
     :cond_5
     sget-object v8, Lorg/tukaani/xz/simple/X86;->MASK_TO_BIT_NUMBER:[I
 
@@ -307,7 +288,6 @@
 
     int-to-byte v8, v8
 
-    .line 75
     invoke-static {v8}, Lorg/tukaani/xz/simple/X86;->test86MSByte(B)Z
 
     move-result v8
@@ -317,21 +297,18 @@
     :goto_4
     int-to-byte v7, v4
 
-    .line 81
     aput-byte v7, p1, v2
 
     ushr-int/lit8 v2, v4, 0x8
 
     int-to-byte v2, v2
 
-    .line 82
     aput-byte v2, p1, v5
 
     ushr-int/lit8 v2, v4, 0x10
 
     int-to-byte v2, v2
 
-    .line 83
     aput-byte v2, p1, v6
 
     ushr-int/lit8 v2, v4, 0x18
@@ -344,7 +321,6 @@
 
     int-to-byte v2, v2
 
-    .line 84
     aput-byte v2, p1, v0
 
     move v9, v1
@@ -366,7 +342,6 @@
 
     goto :goto_2
 
-    .line 87
     :cond_7
     iget v0, p0, Lorg/tukaani/xz/simple/X86;->prevMask:I
 
@@ -393,7 +368,6 @@
 
     goto :goto_7
 
-    .line 92
     :cond_9
     iget p3, p0, Lorg/tukaani/xz/simple/X86;->prevMask:I
 
@@ -406,7 +380,6 @@
 
     sub-int/2addr v1, p2
 
-    .line 95
     iget p1, p0, Lorg/tukaani/xz/simple/X86;->pos:I
 
     add-int/2addr p1, v1

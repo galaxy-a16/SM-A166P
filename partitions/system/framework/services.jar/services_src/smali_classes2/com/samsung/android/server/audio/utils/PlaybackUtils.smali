@@ -7,7 +7,6 @@
 .method public static isMusicActive(Landroid/media/AudioPlaybackConfiguration;)Z
     .locals 3
 
-    .line 26
     invoke-virtual {p0}, Landroid/media/AudioPlaybackConfiguration;->isActive()Z
 
     move-result v0
@@ -18,7 +17,6 @@
 
     return v1
 
-    .line 28
     :cond_0
     invoke-virtual {p0}, Landroid/media/AudioPlaybackConfiguration;->getAudioAttributes()Landroid/media/AudioAttributes;
 

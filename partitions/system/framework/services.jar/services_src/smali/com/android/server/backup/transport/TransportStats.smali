@@ -13,17 +13,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/transport/TransportStats;->mStatsLock:Ljava/lang/Object;
 
-    .line 31
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -36,12 +33,10 @@
 .method public static dumpStats(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/backup/transport/TransportStats$Stats;)V
     .locals 3
 
-    .line 75
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     iget-wide v1, p2, Lcom/android/server/backup/transport/TransportStats$Stats;->average:D
 
-    .line 77
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
@@ -52,15 +47,12 @@
 
     const-string v2, "%sAverage connection time: %.2f ms"
 
-    .line 76
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 75
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 78
     iget-wide v1, p2, Lcom/android/server/backup/transport/TransportStats$Stats;->max:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -79,7 +71,6 @@
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 79
     iget-wide v1, p2, Lcom/android/server/backup/transport/TransportStats$Stats;->min:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -98,7 +89,6 @@
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 80
     iget p2, p2, Lcom/android/server/backup/transport/TransportStats$Stats;->n:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -125,16 +115,13 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 6
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/backup/transport/TransportStats;->mStatsLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 58
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/transport/TransportStats;->mTransportStats:Ljava/util/Map;
 
-    .line 59
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v1
@@ -151,7 +138,6 @@
 
     move-result-object v1
 
-    .line 60
     invoke-virtual {v1}, Ljava/util/Optional;->isPresent()Z
 
     move-result v2
@@ -160,7 +146,6 @@
 
     const-string v2, ""
 
-    .line 61
     invoke-virtual {v1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v1
@@ -169,7 +154,6 @@
 
     invoke-static {p1, v2, v1}, Lcom/android/server/backup/transport/TransportStats;->dumpStats(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/backup/transport/TransportStats$Stats;)V
 
-    .line 63
     :cond_0
     iget-object v1, p0, Lcom/android/server/backup/transport/TransportStats;->mTransportStats:Ljava/util/Map;
 
@@ -181,10 +165,8 @@
 
     const-string v1, "Per transport:"
 
-    .line 64
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 65
     iget-object v1, p0, Lcom/android/server/backup/transport/TransportStats;->mTransportStats:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -208,7 +190,6 @@
 
     check-cast v2, Landroid/content/ComponentName;
 
-    .line 66
     iget-object v3, p0, Lcom/android/server/backup/transport/TransportStats;->mTransportStats:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -217,7 +198,6 @@
 
     check-cast v3, Lcom/android/server/backup/transport/TransportStats$Stats;
 
-    .line 67
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -240,12 +220,10 @@
 
     const-string v2, "        "
 
-    .line 68
     invoke-static {p1, v2, v3}, Lcom/android/server/backup/transport/TransportStats;->dumpStats(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/backup/transport/TransportStats$Stats;)V
 
     goto :goto_0
 
-    .line 71
     :cond_1
     monitor-exit v0
 
@@ -264,12 +242,10 @@
 .method public registerConnectionTime(Landroid/content/ComponentName;J)V
     .locals 2
 
-    .line 34
     iget-object v0, p0, Lcom/android/server/backup/transport/TransportStats;->mStatsLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 35
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/transport/TransportStats;->mTransportStats:Ljava/util/Map;
 
@@ -281,21 +257,17 @@
 
     if-nez v1, :cond_0
 
-    .line 37
     new-instance v1, Lcom/android/server/backup/transport/TransportStats$Stats;
 
     invoke-direct {v1}, Lcom/android/server/backup/transport/TransportStats$Stats;-><init>()V
 
-    .line 38
     iget-object p0, p0, Lcom/android/server/backup/transport/TransportStats;->mTransportStats:Ljava/util/Map;
 
     invoke-interface {p0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     :cond_0
     invoke-static {v1, p2, p3}, Lcom/android/server/backup/transport/TransportStats$Stats;->-$$Nest$mregister(Lcom/android/server/backup/transport/TransportStats$Stats;J)V
 
-    .line 41
     monitor-exit v0
 
     return-void

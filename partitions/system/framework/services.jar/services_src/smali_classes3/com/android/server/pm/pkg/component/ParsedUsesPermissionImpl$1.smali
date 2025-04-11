@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl;
     .locals 0
 
-    .line 155
     new-instance p0, Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl;
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl;-><init>(Landroid/os/Parcel;)V
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 147
     invoke-virtual {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl;
     .locals 0
 
-    .line 150
     new-array p0, p1, [Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 147
     invoke-virtual {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl$1;->newArray(I)[Lcom/android/server/pm/pkg/component/ParsedUsesPermissionImpl;
 
     move-result-object p0

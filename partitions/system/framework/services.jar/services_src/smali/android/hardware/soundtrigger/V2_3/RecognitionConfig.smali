@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     new-instance v0, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;-><init>()V
@@ -31,7 +29,6 @@
 .method public final readEmbeddedFromParcel(Landroid/os/HwParcel;Landroid/os/HwBlob;J)V
     .locals 3
 
-    .line 53
     iget-object v0, p0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->base:Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;
 
     const-wide/16 v1, 0x0
@@ -44,7 +41,6 @@
 
     add-long/2addr p3, v0
 
-    .line 54
     invoke-virtual {p2, p3, p4}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -59,14 +55,12 @@
 
     const-wide/16 v0, 0x60
 
-    .line 26
     invoke-virtual {p1, v0, v1}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
 
     move-result-object v0
 
     const-wide/16 v1, 0x0
 
-    .line 27
     invoke-virtual {p0, p1, v0, v1, v2}, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->readEmbeddedFromParcel(Landroid/os/HwParcel;Landroid/os/HwBlob;J)V
 
     return-void
@@ -75,32 +69,26 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "{"
 
-    .line 16
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ".base = "
 
-    .line 17
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 18
     iget-object v1, p0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->base:Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ", .audioCapabilities = "
 
-    .line 19
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 20
     iget p0, p0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->audioCapabilities:I
 
     invoke-static {p0}, Landroid/hardware/soundtrigger/V2_3/AudioCapabilities;->dumpBitfield(I)Ljava/lang/String;
@@ -111,10 +99,8 @@
 
     const-string/jumbo p0, "}"
 
-    .line 21
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 22
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -125,7 +111,6 @@
 .method public final writeEmbeddedToBlob(Landroid/os/HwBlob;J)V
     .locals 3
 
-    .line 82
     iget-object v0, p0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->base:Landroid/hardware/soundtrigger/V2_1/ISoundTriggerHw$RecognitionConfig;
 
     const-wide/16 v1, 0x0
@@ -138,7 +123,6 @@
 
     add-long/2addr p2, v0
 
-    .line 83
     iget p0, p0, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->audioCapabilities:I
 
     invoke-virtual {p1, p2, p3, p0}, Landroid/os/HwBlob;->putInt32(JI)V
@@ -149,7 +133,6 @@
 .method public final writeToParcel(Landroid/os/HwParcel;)V
     .locals 3
 
-    .line 58
     new-instance v0, Landroid/os/HwBlob;
 
     const/16 v1, 0x60
@@ -158,10 +141,8 @@
 
     const-wide/16 v1, 0x0
 
-    .line 59
     invoke-virtual {p0, v0, v1, v2}, Landroid/hardware/soundtrigger/V2_3/RecognitionConfig;->writeEmbeddedToBlob(Landroid/os/HwBlob;J)V
 
-    .line 60
     invoke-virtual {p1, v0}, Landroid/os/HwParcel;->writeBuffer(Landroid/os/HwBlob;)V
 
     return-void

@@ -7,7 +7,6 @@
 .method public static retrieveBackupDevices(Landroid/content/Context;)Ljava/util/ArrayList;
     .locals 8
 
-    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x5
@@ -16,12 +15,10 @@
 
     const-string v1, "content://com.samsung.bt.btservice.btsettingsprovider/bonddevice"
 
-    .line 33
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 35
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -33,7 +30,6 @@
     :cond_0
     const-string v5, "bond_state == 2 OR bond_state == 1 OR bond_state == 4"
 
-    .line 43
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -54,11 +50,9 @@
 
     if-eqz p0, :cond_2
 
-    .line 45
     :try_start_1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 46
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -68,7 +62,6 @@
 
     const-string v1, "address"
 
-    .line 47
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
@@ -84,7 +77,6 @@
     :cond_1
     const-string/jumbo v2, "name"
 
-    .line 51
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -93,14 +85,12 @@
 
     move-result-object v2
 
-    .line 52
     new-instance v3, Lcom/samsung/android/server/continuity/autoswitch/BluetoothDeviceDb$DeviceProperty;
 
     invoke-direct {v3, v1, v2}, Lcom/samsung/android/server/continuity/autoswitch/BluetoothDeviceDb$DeviceProperty;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 53
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -110,7 +100,6 @@
     :catchall_0
     move-exception v1
 
-    .line 43
     :try_start_2
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_2
@@ -130,7 +119,6 @@
     :cond_2
     if-eqz p0, :cond_3
 
-    .line 56
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_3
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_0
@@ -141,7 +129,6 @@
     :catch_0
     move-exception p0
 
-    .line 57
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

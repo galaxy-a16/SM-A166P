@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 537
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 538
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$StopwatchLogger;->resetStartTime()V
 
     return-void
@@ -23,7 +21,6 @@
 .method public static start()Lcom/android/server/power/PowerManagerUtil$StopwatchLogger;
     .locals 1
 
-    .line 532
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$StopwatchLogger;
 
     invoke-direct {v0}, Lcom/android/server/power/PowerManagerUtil$StopwatchLogger;-><init>()V
@@ -36,7 +33,6 @@
 .method public d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 562
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$StopwatchLogger;->elapsedTimeMillis()J
 
     move-result-wide v0
@@ -53,7 +49,6 @@
 .method public dk(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 550
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerUtil$StopwatchLogger;->elapsedTimeMillis()J
 
     move-result-wide v0
@@ -70,7 +65,6 @@
 .method public elapsedTimeMillis()J
     .locals 4
 
-    .line 575
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -85,7 +79,6 @@
 .method public final formatTookTime(Ljava/lang/String;J)Ljava/lang/String;
     .locals 0
 
-    .line 571
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,7 +105,6 @@
 .method public resetStartTime()V
     .locals 2
 
-    .line 542
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 4185
     iput-object p1, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 10
 
-    .line 4191
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmLock(Lcom/android/server/BatteryService;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 4193
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
@@ -44,14 +41,12 @@
 
     move-result-wide v1
 
-    .line 4194
     iget-object v3, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     const-wide/16 v4, 0x0
 
     invoke-static {v3, v4, v5}, Lcom/android/server/BatteryService;->-$$Nest$fputmCurrentBatteryUsage(Lcom/android/server/BatteryService;J)V
 
-    .line 4195
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -62,7 +57,6 @@
 
     return-void
 
-    .line 4199
     :cond_0
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
@@ -72,7 +66,6 @@
 
     monitor-enter v3
 
-    .line 4200
     :try_start_1
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
@@ -86,7 +79,6 @@
 
     invoke-static {v0, v4, v5}, Lcom/android/server/BatteryService;->-$$Nest$fputmSavedBatteryUsage(Lcom/android/server/BatteryService;J)V
 
-    .line 4203
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmBatteryType(Lcom/android/server/BatteryService;)I
@@ -101,7 +93,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4204
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     const-string v1, "/sys/class/power_supply/sec_auth/batt_discharge_level"
@@ -112,7 +103,6 @@
 
     invoke-static {v0, v1, v6, v7}, Lcom/android/server/BatteryService;->-$$Nest$msaveBatteryInfo(Lcom/android/server/BatteryService;Ljava/lang/String;J)I
 
-    .line 4205
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     const-string v1, "/efs/FactoryApp/batt_discharge_level"
@@ -125,7 +115,6 @@
 
     goto :goto_0
 
-    .line 4206
     :cond_1
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
@@ -135,7 +124,6 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 4207
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     const-string v1, "/sys/class/power_supply/sbp-fg/cycle"
@@ -144,7 +132,6 @@
 
     move-result-wide v0
 
-    .line 4208
     iget-object v6, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     const-string v7, "/efs/FactoryApp/batt_discharge_level"
@@ -155,7 +142,6 @@
 
     goto :goto_1
 
-    .line 4210
     :cond_2
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
@@ -170,7 +156,6 @@
     :goto_0
     const-wide/16 v0, -0x1
 
-    .line 4212
     :goto_1
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetFEATURE_SAVE_BATTERY_CYCLE()Z
 
@@ -178,7 +163,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 4213
     iget-object v6, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v6}, Lcom/android/server/BatteryService;->-$$Nest$fgetmBatteryType(Lcom/android/server/BatteryService;)I
@@ -187,7 +171,6 @@
 
     if-ne v6, v2, :cond_3
 
-    .line 4214
     iget-object p0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     const-string v2, "/sys/class/power_supply/battery/battery_cycle"
@@ -196,13 +179,11 @@
 
     goto :goto_2
 
-    .line 4216
     :cond_3
     sget-boolean v0, Lcom/android/server/BatteryService;->FEATURE_FULL_BATTERY_CYCLE:Z
 
     if-eqz v0, :cond_4
 
-    .line 4217
     iget-object v0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
     const-string v1, "/sys/class/power_supply/battery/battery_cycle"
@@ -245,7 +226,6 @@
 
     goto :goto_2
 
-    .line 4220
     :cond_4
     iget-object p0, p0, Lcom/android/server/BatteryService$37;->this$0:Lcom/android/server/BatteryService;
 
@@ -259,7 +239,6 @@
 
     invoke-static {p0, v0, v1, v2}, Lcom/android/server/BatteryService;->-$$Nest$msaveBatteryInfo(Lcom/android/server/BatteryService;Ljava/lang/String;J)I
 
-    .line 4224
     :cond_5
     :goto_2
     monitor-exit v3
@@ -278,7 +257,6 @@
     :catchall_1
     move-exception p0
 
-    .line 4195
     :try_start_2
     monitor-exit v0
     :try_end_2

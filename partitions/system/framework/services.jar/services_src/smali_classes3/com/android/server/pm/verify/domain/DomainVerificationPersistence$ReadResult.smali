@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/util/ArrayMap;Landroid/util/ArrayMap;)V
     .locals 0
 
-    .line 346
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 347
     iput-object p1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence$ReadResult;->active:Landroid/util/ArrayMap;
 
-    .line 348
     iput-object p2, p0, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence$ReadResult;->restored:Landroid/util/ArrayMap;
 
     return-void

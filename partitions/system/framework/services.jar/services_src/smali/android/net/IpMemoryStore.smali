@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$Ihnw6-MHVZh3ixG4czqjUNYGbco(Ljava/util/function/Consumer;Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletableFuture;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Landroid/net/IpMemoryStore;->lambda$runWhenServiceReady$1(Ljava/util/function/Consumer;Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletableFuture;
 
     move-result-object p0
@@ -28,7 +27,6 @@
 .method public static synthetic $r8$lambda$iCgaOGIxfRBHVC8JuA-R4fwU96Q(Ljava/util/function/Consumer;Landroid/net/IIpMemoryStore;Ljava/lang/Throwable;)Landroid/net/IIpMemoryStore;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Landroid/net/IpMemoryStore;->lambda$runWhenServiceReady$0(Ljava/util/function/Consumer;Landroid/net/IIpMemoryStore;Ljava/lang/Throwable;)Landroid/net/IIpMemoryStore;
 
     move-result-object p0
@@ -39,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Landroid/net/IpMemoryStore;)Ljava/util/concurrent/CompletableFuture;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Landroid/net/IpMemoryStore;->mService:Ljava/util/concurrent/CompletableFuture;
 
     return-object p0
@@ -48,31 +45,26 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 42
     invoke-direct {p0, p1}, Landroid/net/IpMemoryStoreClient;-><init>(Landroid/content/Context;)V
 
-    .line 43
     new-instance v0, Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {v0}, Ljava/util/concurrent/CompletableFuture;-><init>()V
 
     iput-object v0, p0, Landroid/net/IpMemoryStore;->mService:Ljava/util/concurrent/CompletableFuture;
 
-    .line 44
     new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v1, p0, Landroid/net/IpMemoryStore;->mTailNode:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 45
     invoke-virtual {p0, p1}, Landroid/net/IpMemoryStore;->getModuleNetworkStackClient(Landroid/content/Context;)Landroid/net/networkstack/ModuleNetworkStackClient;
 
     move-result-object p1
@@ -89,7 +81,6 @@
 .method public static getMemoryStore(Landroid/content/Context;)Landroid/net/IpMemoryStore;
     .locals 1
 
-    .line 96
     new-instance v0, Landroid/net/IpMemoryStore;
 
     invoke-direct {v0, p0}, Landroid/net/IpMemoryStore;-><init>(Landroid/content/Context;)V
@@ -102,7 +93,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 75
     sget-object p0, Landroid/net/IpMemoryStore;->TAG:Ljava/lang/String;
 
     const-string v0, "Error fetching IpMemoryStore"
@@ -111,7 +101,6 @@
 
     return-object p1
 
-    .line 80
     :cond_0
     :try_start_0
     invoke-interface {p0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
@@ -123,7 +112,6 @@
     :catch_0
     move-exception p0
 
-    .line 82
     sget-object p2, Landroid/net/IpMemoryStore;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -153,7 +141,6 @@
 .method private static synthetic lambda$runWhenServiceReady$1(Ljava/util/function/Consumer;Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletableFuture;
     .locals 1
 
-    .line 72
     new-instance v0, Landroid/net/IpMemoryStore$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Landroid/net/IpMemoryStore$$ExternalSyntheticLambda0;-><init>(Ljava/util/function/Consumer;)V
@@ -170,7 +157,6 @@
 .method public getModuleNetworkStackClient(Landroid/content/Context;)Landroid/net/networkstack/ModuleNetworkStackClient;
     .locals 0
 
-    .line 90
     invoke-static {p1}, Landroid/net/networkstack/ModuleNetworkStackClient;->getInstance(Landroid/content/Context;)Landroid/net/networkstack/ModuleNetworkStackClient;
 
     move-result-object p0
@@ -181,7 +167,6 @@
 .method public runWhenServiceReady(Ljava/util/function/Consumer;)V
     .locals 1
 
-    .line 72
     iget-object p0, p0, Landroid/net/IpMemoryStore;->mTailNode:Ljava/util/concurrent/atomic/AtomicReference;
 
     new-instance v0, Landroid/net/IpMemoryStore$$ExternalSyntheticLambda1;

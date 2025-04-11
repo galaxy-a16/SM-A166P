@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;)V
     .locals 0
 
-    .line 63
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$SemCameraDeviceStateCallback;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.system"
 
-    .line 67
     invoke-virtual {p1, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -48,7 +46,6 @@
 
     if-ne p3, p1, :cond_1
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;
 
     invoke-static {p0}, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;->-$$Nest$fgetmCameraUsingList(Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;)Ljava/util/Set;
@@ -64,7 +61,6 @@
 
     if-ne p3, p1, :cond_2
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;
 
     invoke-static {p0}, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;->-$$Nest$fgetmCameraUsingList(Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;)Ljava/util/Set;

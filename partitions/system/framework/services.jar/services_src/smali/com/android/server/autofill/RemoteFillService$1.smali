@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/RemoteFillService;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 150
     iput-object p1, p0, Lcom/android/server/autofill/RemoteFillService$1;->this$0:Lcom/android/server/autofill/RemoteFillService;
 
     iput-object p2, p0, Lcom/android/server/autofill/RemoteFillService$1;->val$futureRef:Ljava/util/concurrent/atomic/AtomicReference;
@@ -36,7 +35,6 @@
 .method public onCancellable(Landroid/os/ICancellationSignal;)V
     .locals 1
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/autofill/RemoteFillService$1;->val$futureRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -47,21 +45,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 154
     invoke-virtual {v0}, Ljava/util/concurrent/CompletableFuture;->isCancelled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/autofill/RemoteFillService$1;->this$0:Lcom/android/server/autofill/RemoteFillService;
 
     invoke-static {p0, p1}, Lcom/android/server/autofill/RemoteFillService;->-$$Nest$mdispatchCancellationSignal(Lcom/android/server/autofill/RemoteFillService;Landroid/os/ICancellationSignal;)V
 
     goto :goto_0
 
-    .line 157
     :cond_0
     iget-object p0, p0, Lcom/android/server/autofill/RemoteFillService$1;->val$cancellationSink:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -80,13 +75,11 @@
 
     goto :goto_0
 
-    .line 168
     :cond_0
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 169
     :goto_0
     iget-object p0, p0, Lcom/android/server/autofill/RemoteFillService$1;->val$fillRequest:Ljava/util/concurrent/CompletableFuture;
 
@@ -102,7 +95,6 @@
 .method public onSuccess(Landroid/service/autofill/FillResponse;)V
     .locals 0
 
-    .line 163
     iget-object p0, p0, Lcom/android/server/autofill/RemoteFillService$1;->val$fillRequest:Ljava/util/concurrent/CompletableFuture;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z

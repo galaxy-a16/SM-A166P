@@ -23,7 +23,6 @@
 .method public static synthetic $r8$lambda$IKzgZCfeAEjRmzsllaOOd6Z8MC4(Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;)I
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->lambda$instantiateChildren$0(Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;)I
 
     move-result p0
@@ -34,10 +33,8 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayAreaPolicyBuilder$Feature;ILcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;)V
     .locals 1
 
-    .line 900
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 882
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -46,16 +43,12 @@
 
     const/4 v0, 0x0
 
-    .line 898
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mSkipTokens:Z
 
-    .line 901
     iput p2, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mMinLayer:I
 
-    .line 902
     iput-object p1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mFeature:Lcom/android/server/wm/DisplayAreaPolicyBuilder$Feature;
 
-    .line 903
     iput-object p3, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mParent:Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;
 
     return-void
@@ -64,7 +57,6 @@
 .method public static synthetic lambda$instantiateChildren$0(Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;)I
     .locals 0
 
-    .line 915
     iget p0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mMinLayer:I
 
     return p0
@@ -77,7 +69,6 @@
 
     const/4 v0, 0x0
 
-    .line 907
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mChildren:Ljava/util/ArrayList;
 
@@ -87,7 +78,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 908
     iget v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mMaxLayer:I
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mChildren:Ljava/util/ArrayList;
@@ -112,7 +102,6 @@
 
     goto :goto_0
 
-    .line 910
     :cond_0
     iget p0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mMaxLayer:I
 
@@ -122,19 +111,16 @@
 .method public final createArea(Lcom/android/server/wm/DisplayArea;[Lcom/android/server/wm/DisplayArea$Tokens;)Lcom/android/server/wm/DisplayArea;
     .locals 5
 
-    .line 935
     iget-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mExisting:Lcom/android/server/wm/DisplayArea;
 
     if-eqz v0, :cond_1
 
-    .line 936
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayArea;->asTokens()Lcom/android/server/wm/DisplayArea$Tokens;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 938
     iget-object p1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mExisting:Lcom/android/server/wm/DisplayArea;
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayArea;->asTokens()Lcom/android/server/wm/DisplayArea$Tokens;
@@ -143,13 +129,11 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->fillAreaForLayers(Lcom/android/server/wm/DisplayArea$Tokens;[Lcom/android/server/wm/DisplayArea$Tokens;)V
 
-    .line 940
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mExisting:Lcom/android/server/wm/DisplayArea;
 
     return-object p0
 
-    .line 942
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mSkipTokens:Z
 
@@ -159,7 +143,6 @@
 
     return-object p0
 
-    .line 946
     :cond_2
     iget v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mMinLayer:I
 
@@ -167,27 +150,22 @@
 
     if-le v0, v1, :cond_3
 
-    .line 947
     sget-object v0, Lcom/android/server/wm/DisplayArea$Type;->ABOVE_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
     goto :goto_0
 
-    .line 948
     :cond_3
     iget v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mMaxLayer:I
 
     if-ge v0, v1, :cond_4
 
-    .line 949
     sget-object v0, Lcom/android/server/wm/DisplayArea$Type;->BELOW_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
     goto :goto_0
 
-    .line 951
     :cond_4
     sget-object v0, Lcom/android/server/wm/DisplayArea$Type;->ANY:Lcom/android/server/wm/DisplayArea$Type;
 
-    .line 953
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mFeature:Lcom/android/server/wm/DisplayAreaPolicyBuilder$Feature;
 
@@ -195,7 +173,6 @@
 
     if-nez v1, :cond_5
 
-    .line 954
     new-instance v1, Lcom/android/server/wm/DisplayArea$Tokens;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
@@ -224,12 +201,10 @@
 
     invoke-direct {v1, p1, v0, v2}, Lcom/android/server/wm/DisplayArea$Tokens;-><init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/DisplayArea$Type;Ljava/lang/String;)V
 
-    .line 956
     invoke-virtual {p0, v1, p2}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->fillAreaForLayers(Lcom/android/server/wm/DisplayArea$Tokens;[Lcom/android/server/wm/DisplayArea$Tokens;)V
 
     return-object v1
 
-    .line 959
     :cond_5
     invoke-static {v1}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$Feature;->-$$Nest$fgetmNewDisplayAreaSupplier(Lcom/android/server/wm/DisplayAreaPolicyBuilder$Feature;)Lcom/android/server/wm/DisplayAreaPolicyBuilder$NewDisplayAreaSupplier;
 
@@ -281,7 +256,6 @@
 .method public final fillAreaForLayers(Lcom/android/server/wm/DisplayArea$Tokens;[Lcom/android/server/wm/DisplayArea$Tokens;)V
     .locals 2
 
-    .line 965
     iget v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mMinLayer:I
 
     :goto_0
@@ -289,7 +263,6 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 966
     aput-object p1, p2, v0
 
     add-int/lit8 v0, v0, 0x1
@@ -303,7 +276,6 @@
 .method public instantiateChildren(Lcom/android/server/wm/DisplayArea;[Lcom/android/server/wm/DisplayArea$Tokens;ILjava/util/Map;)V
     .locals 4
 
-    .line 915
     iget-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mChildren:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea$$ExternalSyntheticLambda0;
@@ -318,7 +290,6 @@
 
     const/4 v0, 0x0
 
-    .line 916
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mChildren:Ljava/util/ArrayList;
 
@@ -328,7 +299,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 917
     iget-object v1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mChildren:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -337,7 +307,6 @@
 
     check-cast v1, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;
 
-    .line 918
     invoke-virtual {v1, p1, p2}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->createArea(Lcom/android/server/wm/DisplayArea;[Lcom/android/server/wm/DisplayArea$Tokens;)Lcom/android/server/wm/DisplayArea;
 
     move-result-object v2
@@ -349,15 +318,12 @@
     :cond_0
     const v3, 0x7fffffff
 
-    .line 924
     invoke-virtual {p1, v2, v3}, Lcom/android/server/wm/WindowContainer;->addChild(Lcom/android/server/wm/WindowContainer;I)V
 
-    .line 925
     iget-object v3, v1, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->mFeature:Lcom/android/server/wm/DisplayAreaPolicyBuilder$Feature;
 
     if-eqz v3, :cond_1
 
-    .line 926
     invoke-interface {p4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -369,7 +335,6 @@
     :cond_1
     add-int/lit8 v3, p3, 0x1
 
-    .line 928
     invoke-virtual {v1, v2, p2, v3, p4}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->instantiateChildren(Lcom/android/server/wm/DisplayArea;[Lcom/android/server/wm/DisplayArea$Tokens;ILjava/util/Map;)V
 
     :goto_1

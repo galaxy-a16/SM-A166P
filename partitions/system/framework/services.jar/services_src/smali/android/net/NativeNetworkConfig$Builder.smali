@@ -21,29 +21,22 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 16
     iput v0, p0, Landroid/net/NativeNetworkConfig$Builder;->netId:I
 
-    .line 21
     iput v0, p0, Landroid/net/NativeNetworkConfig$Builder;->networkType:I
 
-    .line 26
     iput v0, p0, Landroid/net/NativeNetworkConfig$Builder;->permission:I
 
-    .line 31
     iput-boolean v0, p0, Landroid/net/NativeNetworkConfig$Builder;->secure:Z
 
     const/4 v1, 0x2
 
-    .line 36
     iput v1, p0, Landroid/net/NativeNetworkConfig$Builder;->vpnType:I
 
-    .line 41
     iput-boolean v0, p0, Landroid/net/NativeNetworkConfig$Builder;->excludeLocalRoutes:Z
 
     return-void
@@ -54,7 +47,6 @@
 .method public build()Landroid/net/NativeNetworkConfig;
     .locals 8
 
-    .line 47
     new-instance v7, Landroid/net/NativeNetworkConfig;
 
     iget v1, p0, Landroid/net/NativeNetworkConfig$Builder;->netId:I
@@ -79,7 +71,6 @@
 .method public setExcludeLocalRoutes(Z)Landroid/net/NativeNetworkConfig$Builder;
     .locals 0
 
-    .line 43
     iput-boolean p1, p0, Landroid/net/NativeNetworkConfig$Builder;->excludeLocalRoutes:Z
 
     return-object p0
@@ -88,7 +79,6 @@
 .method public setNetId(I)Landroid/net/NativeNetworkConfig$Builder;
     .locals 0
 
-    .line 18
     iput p1, p0, Landroid/net/NativeNetworkConfig$Builder;->netId:I
 
     return-object p0
@@ -97,7 +87,6 @@
 .method public setNetworkType(I)Landroid/net/NativeNetworkConfig$Builder;
     .locals 0
 
-    .line 23
     iput p1, p0, Landroid/net/NativeNetworkConfig$Builder;->networkType:I
 
     return-object p0
@@ -106,7 +95,6 @@
 .method public setPermission(I)Landroid/net/NativeNetworkConfig$Builder;
     .locals 0
 
-    .line 28
     iput p1, p0, Landroid/net/NativeNetworkConfig$Builder;->permission:I
 
     return-object p0
@@ -115,7 +103,6 @@
 .method public setSecure(Z)Landroid/net/NativeNetworkConfig$Builder;
     .locals 0
 
-    .line 33
     iput-boolean p1, p0, Landroid/net/NativeNetworkConfig$Builder;->secure:Z
 
     return-object p0
@@ -124,7 +111,6 @@
 .method public setVpnType(I)Landroid/net/NativeNetworkConfig$Builder;
     .locals 0
 
-    .line 38
     iput p1, p0, Landroid/net/NativeNetworkConfig$Builder;->vpnType:I
 
     return-object p0

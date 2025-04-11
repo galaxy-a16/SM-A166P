@@ -17,19 +17,14 @@
 .method public constructor <init>(ILandroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
     .locals 0
 
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     iput p1, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mUserId:I
 
-    .line 91
     iput-object p2, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mRequest:Landroid/app/ambientcontext/AmbientContextEventRequest;
 
-    .line 92
     iput-object p3, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mPackageName:Ljava/lang/String;
 
-    .line 93
     iput-object p4, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mObserver:Landroid/app/ambientcontext/IAmbientContextObserver;
 
     return-void
@@ -40,7 +35,6 @@
 .method public getObserver()Landroid/app/ambientcontext/IAmbientContextObserver;
     .locals 0
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mObserver:Landroid/app/ambientcontext/IAmbientContextObserver;
 
     return-object p0
@@ -49,7 +43,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -58,7 +51,6 @@
 .method public getRequest()Landroid/app/ambientcontext/AmbientContextEventRequest;
     .locals 0
 
-    .line 101
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mRequest:Landroid/app/ambientcontext/AmbientContextEventRequest;
 
     return-object p0
@@ -67,7 +59,6 @@
 .method public hasUserId(I)Z
     .locals 0
 
-    .line 109
     iget p0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mUserId:I
 
     if-ne p0, p1, :cond_0
@@ -86,7 +77,6 @@
 .method public hasUserIdAndPackageName(ILjava/lang/String;)Z
     .locals 1
 
-    .line 113
     iget v0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$ClientRequest;->mUserId:I
 
     if-ne p1, v0, :cond_0

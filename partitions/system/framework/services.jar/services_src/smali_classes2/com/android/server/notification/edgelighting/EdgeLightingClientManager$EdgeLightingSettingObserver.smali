@@ -23,20 +23,16 @@
 .method public constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;Landroid/os/Handler;)V
     .locals 7
 
-    .line 633
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
-    .line 634
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const/4 p2, 0x0
 
-    .line 623
     iput-boolean p2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mLastEnabled:Z
 
     const-string v0, "edge_lighting"
 
-    .line 626
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -45,14 +41,12 @@
 
     const-string v2, "edge_lighting_show_condition"
 
-    .line 627
     invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->EDGE_LIGHTING_SHOW_CONDITION:Landroid/net/Uri;
 
-    .line 629
     invoke-static {}, Lcom/samsung/android/feature/SemCscFeature;->getInstance()Lcom/samsung/android/feature/SemCscFeature;
 
     move-result-object v3
@@ -65,7 +59,6 @@
 
     iput-object v3, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->defaultEdgeLighting:Ljava/lang/String;
 
-    .line 630
     invoke-static {}, Lcom/samsung/android/feature/SemCarrierFeature;->getInstance()Lcom/samsung/android/feature/SemCarrierFeature;
 
     move-result-object v4
@@ -86,7 +79,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 635
     invoke-virtual {v3, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -96,7 +88,6 @@
     :cond_0
     if-eqz v4, :cond_2
 
-    .line 636
     invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -114,7 +105,6 @@
     :goto_0
     iput v3, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mDefaultValue:I
 
-    .line 638
     invoke-static {p1}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$fgetmContext(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;)Landroid/content/Context;
 
     move-result-object v3
@@ -141,7 +131,6 @@
     :goto_1
     iput-boolean v6, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mLastEnabled:Z
 
-    .line 639
     invoke-static {p1}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$fgetmContext(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;)Landroid/content/Context;
 
     move-result-object p1
@@ -152,13 +141,10 @@
 
     const/4 v0, -0x1
 
-    .line 640
     invoke-virtual {p1, v1, p2, p0, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 641
     invoke-virtual {p1, v2, p2, p0, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 642
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -197,7 +183,6 @@
 .method public isEdgeLightingEnabled()Z
     .locals 0
 
-    .line 686
     iget-boolean p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mLastEnabled:Z
 
     return p0
@@ -214,7 +199,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 647
     iget-object v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->EDGE_LIGHTING_SETTING:Landroid/net/Uri;
 
     invoke-virtual {v2, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -223,7 +207,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 648
     :cond_0
     iget-object v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
@@ -252,7 +235,6 @@
     :cond_1
     move v2, v0
 
-    .line 649
     :goto_0
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -282,17 +264,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 650
     iget-boolean v3, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mLastEnabled:Z
 
     if-eq v2, v3, :cond_2
 
-    .line 651
     iput-boolean v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mLastEnabled:Z
 
     if-eqz v2, :cond_2
 
-    .line 653
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
@@ -301,10 +280,8 @@
 
     const-string v4, "com.android.systemui.edgelighting.EdgeLightingService"
 
-    .line 654
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 656
     :try_start_0
     iget-object v3, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
@@ -323,14 +300,12 @@
     :catch_0
     move-exception v2
 
-    .line 658
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
     :goto_1
     if-eqz p2, :cond_3
 
-    .line 664
     iget-object v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->EDGE_LIGHTING_SHOW_CONDITION:Landroid/net/Uri;
 
     invoke-virtual {v2, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -339,7 +314,6 @@
 
     if-eqz p2, :cond_6
 
-    .line 665
     :cond_3
     iget-object p2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
@@ -365,14 +339,12 @@
 
     if-eq p1, p2, :cond_5
 
-    .line 678
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
     invoke-static {p1, v0}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$fputmCondition(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;I)V
 
     goto :goto_2
 
-    .line 672
     :cond_4
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
@@ -380,7 +352,6 @@
 
     goto :goto_2
 
-    .line 669
     :cond_5
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
@@ -388,7 +359,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$fputmCondition(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;I)V
 
-    .line 681
     :goto_2
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -425,7 +395,6 @@
 
     const-string v0, "edge_lighting"
 
-    .line 694
     iget-object v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->defaultEdgeLighting:Ljava/lang/String;
 
     const-string v2, "-defaulton"
@@ -447,7 +416,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 695
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -465,7 +433,6 @@
     :goto_0
     iput v1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mDefaultValue:I
 
-    .line 696
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -490,7 +457,6 @@
 
     const/4 v1, -0x2
 
-    .line 698
     :try_start_0
     iget-object v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
@@ -518,7 +484,6 @@
     :goto_1
     iput-boolean v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mLastEnabled:Z
 
-    .line 699
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -545,7 +510,6 @@
 
     goto :goto_2
 
-    .line 701
     :catch_0
     iget v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mDefaultValue:I
 
@@ -556,7 +520,6 @@
     :cond_4
     iput-boolean v3, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->mLastEnabled:Z
 
-    .line 702
     iget-object v2, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
     invoke-static {v2}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$fgetmContext(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;)Landroid/content/Context;
@@ -571,7 +534,6 @@
 
     invoke-static {v2, v0, v3, v1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 703
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -601,7 +563,6 @@
 .method public resetEdgeLightingEnabled()V
     .locals 4
 
-    .line 690
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingSettingObserver;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;
 
     invoke-static {v0}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;->-$$Nest$fgetmContext(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager;)Landroid/content/Context;

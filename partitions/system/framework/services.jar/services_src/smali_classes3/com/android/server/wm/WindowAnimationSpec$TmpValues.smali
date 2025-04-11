@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 300
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 301
     new-instance v0, Landroid/view/animation/Transformation;
 
     invoke-direct {v0}, Landroid/view/animation/Transformation;-><init>()V
@@ -27,7 +25,6 @@
 
     new-array v0, v0, [F
 
-    .line 302
     iput-object v0, p0, Lcom/android/server/wm/WindowAnimationSpec$TmpValues;->floats:[F
 
     return-void
@@ -36,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowAnimationSpec$TmpValues-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/WindowAnimationSpec$TmpValues;-><init>()V
 
     return-void

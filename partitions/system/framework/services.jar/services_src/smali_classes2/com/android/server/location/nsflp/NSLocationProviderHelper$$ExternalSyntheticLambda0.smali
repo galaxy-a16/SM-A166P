@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSLocationProviderHelper;->$r8$lambda$J8H7JWwcJzK7hZqOYbRF7ZwsrAI(Ljava/lang/String;)Ljava/util/Set;

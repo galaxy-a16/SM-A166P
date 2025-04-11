@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/power/Notifier;I)V
     .locals 0
 
-    .line 530
     iput-object p1, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
     iput p2, p0, Lcom/android/server/power/Notifier$2;->val$wakefulness:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 1
 
-    .line 533
     iget-object v0, p0, Lcom/android/server/power/Notifier$2;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-static {v0}, Lcom/android/server/power/Notifier;->-$$Nest$fgetmActivityManagerInternal(Lcom/android/server/power/Notifier;)Landroid/app/ActivityManagerInternal;

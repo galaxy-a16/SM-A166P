@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/PredownloadFilter;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/PredownloadFilter;
 
     return-object v0
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 31
     new-instance v0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;
 
     const/4 v1, 0x0

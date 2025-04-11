@@ -13,7 +13,6 @@
 
     return-void
 
-    .line 258
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -27,7 +26,6 @@
 .method public static fromLittleEndian([BII)J
     .locals 7
 
-    .line 80
     invoke-static {p2}, Lorg/apache/commons/compress/utils/ByteUtils;->checkReadLength(I)V
 
     const-wide/16 v0, 0x0
@@ -39,7 +37,6 @@
 
     add-int v3, p1, v2
 
-    .line 83
     aget-byte v3, p0, v3
 
     int-to-long v3, v3

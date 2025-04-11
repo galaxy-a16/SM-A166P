@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/integrity/AppIntegrityManagerService;->mContext:Landroid/content/Context;
 
     return-void
@@ -27,7 +25,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 40
     iget-object v0, p0, Lcom/android/server/integrity/AppIntegrityManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/integrity/AppIntegrityManagerServiceImpl;->create(Landroid/content/Context;)Lcom/android/server/integrity/AppIntegrityManagerServiceImpl;
@@ -38,7 +35,6 @@
 
     const-string v1, "app_integrity"
 
-    .line 41
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void

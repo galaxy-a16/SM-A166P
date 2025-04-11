@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$S8I3ScKJD4Y8S_XAESQN5Vb6Bfc(Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;Landroid/os/Bundle;Ljava/util/ArrayList;Lcom/android/server/pm/pkg/PackageStateInternal;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->lambda$collectAllUpdatedPreloadInfo$0(Landroid/os/Bundle;Ljava/util/ArrayList;Lcom/android/server/pm/pkg/PackageStateInternal;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$mcomputeApkContentDigest(Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;Ljava/lang/String;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->computeApkContentDigest(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object p0
@@ -31,7 +29,6 @@
 .method public constructor <init>(Lcom/android/server/BinaryTransparencyService;)V
     .locals 0
 
-    .line 166
     iput-object p1, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-direct {p0}, Lcom/android/internal/os/IBinaryTransparencyService$Stub;-><init>()V
@@ -42,7 +39,6 @@
 .method private synthetic lambda$collectAllUpdatedPreloadInfo$0(Landroid/os/Bundle;Ljava/util/ArrayList;Lcom/android/server/pm/pkg/PackageStateInternal;)V
     .locals 1
 
-    .line 416
     invoke-interface {p3}, Lcom/android/server/pm/pkg/PackageState;->isUpdatedSystemApp()Z
 
     move-result v0
@@ -51,7 +47,6 @@
 
     return-void
 
-    .line 419
     :cond_0
     invoke-interface {p3}, Lcom/android/server/pm/pkg/PackageState;->getPackageName()Ljava/lang/String;
 
@@ -65,7 +60,6 @@
 
     return-void
 
-    .line 423
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -85,7 +79,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 424
     invoke-interface {p3}, Lcom/android/server/pm/pkg/PackageState;->getPath()Ljava/io/File;
 
     move-result-object v0
@@ -102,17 +95,14 @@
 
     const-string v0, "TransparencyService"
 
-    .line 423
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x2
 
-    .line 426
     invoke-virtual {p0, p3, p1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->collectAppInfo(Lcom/android/server/pm/pkg/PackageState;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 428
     invoke-virtual {p2, p0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     return-void
@@ -123,12 +113,10 @@
 .method public collectAllApexInfo(Z)Ljava/util/List;
     .locals 8
 
-    .line 370
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 371
     iget-object v1, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {v1}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$mgetCurrentInstalledApexs(Lcom/android/server/BinaryTransparencyService;)Ljava/util/List;
@@ -152,7 +140,6 @@
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 372
     iget-object v3, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {v3}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$fgetmPackageManagerInternal(Lcom/android/server/BinaryTransparencyService;)Landroid/content/pm/PackageManagerInternal;
@@ -169,7 +156,6 @@
 
     if-nez v3, :cond_0
 
-    .line 375
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +176,6 @@
 
     goto :goto_0
 
-    .line 380
     :cond_0
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageState;->getAndroidPackage()Lcom/android/server/pm/pkg/AndroidPackage;
 
@@ -198,7 +183,6 @@
 
     if-nez v2, :cond_1
 
-    .line 382
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,7 +205,6 @@
 
     goto :goto_0
 
-    .line 385
     :cond_1
     invoke-interface {v2}, Lcom/android/server/pm/pkg/AndroidPackage;->getPath()Ljava/lang/String;
 
@@ -233,7 +216,6 @@
 
     if-nez v5, :cond_2
 
-    .line 387
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -256,37 +238,31 @@
 
     goto :goto_0
 
-    .line 391
     :cond_2
     new-instance v2, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;
 
     invoke-direct {v2}, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;-><init>()V
 
-    .line 392
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageState;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, v2, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->packageName:Ljava/lang/String;
 
-    .line 393
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageState;->getVersionCode()J
 
     move-result-wide v6
 
     iput-wide v6, v2, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->longVersion:J
 
-    .line 394
     iget-object v4, v5, Lcom/android/server/BinaryTransparencyService$Digest;->value:[B
 
     iput-object v4, v2, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->digest:[B
 
-    .line 395
     iget v4, v5, Lcom/android/server/BinaryTransparencyService$Digest;->algorithm:I
 
     iput v4, v2, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->digestAlgorithm:I
 
-    .line 397
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageState;->getSigningInfo()Landroid/content/pm/SigningInfo;
 
     move-result-object v4
@@ -299,22 +275,18 @@
 
     if-eqz p1, :cond_3
 
-    .line 400
     iget-object v4, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
-    .line 401
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageState;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 400
     invoke-static {v4, v3}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$mapexPackageNameToModuleName(Lcom/android/server/BinaryTransparencyService;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v2, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->moduleName:Ljava/lang/String;
 
-    .line 404
     :cond_3
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -327,12 +299,10 @@
 .method public collectAllSilentInstalledMbaInfo(Landroid/os/Bundle;)Ljava/util/List;
     .locals 5
 
-    .line 436
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 437
     iget-object v1, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {v1}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$mgetNewlyInstalledMbas(Lcom/android/server/BinaryTransparencyService;)Ljava/util/List;
@@ -356,7 +326,6 @@
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 438
     iget-object v3, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -367,7 +336,6 @@
 
     goto :goto_0
 
-    .line 441
     :cond_0
     iget-object v3, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
@@ -383,7 +351,6 @@
 
     if-nez v3, :cond_1
 
-    .line 444
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -409,12 +376,10 @@
     :cond_1
     const/4 v2, 0x3
 
-    .line 449
     invoke-virtual {p0, v3, v2}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->collectAppInfo(Lcom/android/server/pm/pkg/PackageState;I)Ljava/util/List;
 
     move-result-object v2
 
-    .line 451
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
@@ -426,12 +391,10 @@
 .method public collectAllUpdatedPreloadInfo(Landroid/os/Bundle;)Ljava/util/List;
     .locals 3
 
-    .line 412
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 414
     iget-object v1, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {v1}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$fgetmContext(Lcom/android/server/BinaryTransparencyService;)Landroid/content/Context;
@@ -440,7 +403,6 @@
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    .line 415
     iget-object v1, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {v1}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$fgetmPackageManagerInternal(Lcom/android/server/BinaryTransparencyService;)Landroid/content/pm/PackageManagerInternal;
@@ -459,22 +421,18 @@
 .method public final collectAppInfo(Lcom/android/server/pm/pkg/PackageState;I)Ljava/util/List;
     .locals 9
 
-    .line 212
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 215
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 216
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getVersionCode()J
 
     move-result-wide v2
 
-    .line 218
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getSigningInfo()Landroid/content/pm/SigningInfo;
 
     move-result-object v4
@@ -483,12 +441,10 @@
 
     move-result-object v4
 
-    .line 220
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getAndroidPackage()Lcom/android/server/pm/pkg/AndroidPackage;
 
     move-result-object v5
 
-    .line 221
     invoke-interface {v5}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplits()Ljava/util/List;
 
     move-result-object v5
@@ -510,31 +466,24 @@
 
     check-cast v6, Lcom/android/server/pm/pkg/AndroidPackageSplit;
 
-    .line 222
     new-instance v7, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;
 
     invoke-direct {v7}, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;-><init>()V
 
-    .line 223
     iput-object v1, v7, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->packageName:Ljava/lang/String;
 
-    .line 224
     iput-wide v2, v7, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->longVersion:J
 
-    .line 225
     invoke-interface {v6}, Lcom/android/server/pm/pkg/AndroidPackageSplit;->getName()Ljava/lang/String;
 
     move-result-object v8
 
     iput-object v8, v7, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->splitName:Ljava/lang/String;
 
-    .line 227
     iput-object v4, v7, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->signerDigests:[Ljava/lang/String;
 
-    .line 228
     iput p2, v7, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->mbaStatus:I
 
-    .line 231
     invoke-interface {v6}, Lcom/android/server/pm/pkg/AndroidPackageSplit;->getPath()Ljava/lang/String;
 
     move-result-object v6
@@ -543,17 +492,14 @@
 
     move-result-object v6
 
-    .line 232
     iget-object v8, v6, Lcom/android/server/BinaryTransparencyService$Digest;->value:[B
 
     iput-object v8, v7, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->digest:[B
 
-    .line 233
     iget v6, v6, Lcom/android/server/BinaryTransparencyService$Digest;->algorithm:I
 
     iput v6, v7, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->digestAlgorithm:I
 
-    .line 235
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -561,50 +507,42 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 243
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;
 
-    .line 244
     iget-object v1, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
-    .line 245
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 244
     invoke-static {v1, p1}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$mgetInstallSourceInfo(Lcom/android/server/BinaryTransparencyService;Ljava/lang/String;)Landroid/content/pm/InstallSourceInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 247
     invoke-virtual {p1}, Landroid/content/pm/InstallSourceInfo;->getInitiatingPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p2, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->initiator:Ljava/lang/String;
 
-    .line 249
     invoke-virtual {p1}, Landroid/content/pm/InstallSourceInfo;->getInitiatingPackageSigningInfo()Landroid/content/pm/SigningInfo;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 252
     invoke-virtual {p0, v1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->computePackageSignerSha256Digests(Landroid/content/pm/SigningInfo;)[Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, p2, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->initiatorSignerDigests:[Ljava/lang/String;
 
-    .line 254
     :cond_1
     invoke-virtual {p1}, Landroid/content/pm/InstallSourceInfo;->getInstallingPackageName()Ljava/lang/String;
 
@@ -612,7 +550,6 @@
 
     iput-object p0, p2, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->installer:Ljava/lang/String;
 
-    .line 255
     invoke-virtual {p1}, Landroid/content/pm/InstallSourceInfo;->getOriginatingPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -626,7 +563,6 @@
 .method public final computeApkContentDigest(Ljava/lang/String;)Ljava/util/Map;
     .locals 2
 
-    .line 493
     invoke-static {}, Landroid/content/pm/parsing/result/ParseTypeImpl;->forDefaultParsing()Landroid/content/pm/parsing/result/ParseTypeImpl;
 
     move-result-object p0
@@ -635,19 +571,16 @@
 
     const/4 v1, 0x0
 
-    .line 495
     invoke-static {p0, p1, v0, v1}, Landroid/util/apk/ApkSignatureVerifier;->verifySignaturesInternal(Landroid/content/pm/parsing/result/ParseInput;Ljava/lang/String;IZ)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object p0
 
-    .line 498
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->isError()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 499
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -662,7 +595,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 501
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->getErrorMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -675,14 +607,12 @@
 
     const-string p1, "TransparencyService"
 
-    .line 499
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 504
     :cond_0
     invoke-interface {p0}, Landroid/content/pm/parsing/result/ParseResult;->getResult()Ljava/lang/Object;
 
@@ -704,25 +634,21 @@
 
     const-string/jumbo p1, "signingInfo is null"
 
-    .line 183
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 187
     :cond_0
     invoke-virtual {p1}, Landroid/content/pm/SigningInfo;->getApkContentsSigners()[Landroid/content/pm/Signature;
 
     move-result-object p0
 
-    .line 188
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 189
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -734,7 +660,6 @@
 
     aget-object v3, p0, v2
 
-    .line 190
     invoke-virtual {v3}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object v3
@@ -743,12 +668,10 @@
 
     move-result-object v3
 
-    .line 191
     invoke-static {v3, v1}, Llibcore/util/HexEncoding;->encodeToString([BZ)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 192
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
@@ -760,7 +683,6 @@
 
     new-array p0, p0, [Ljava/lang/String;
 
-    .line 194
     invoke-interface {p1, p0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -773,7 +695,6 @@
 .method public getSignedImageInfo()Ljava/lang/String;
     .locals 0
 
-    .line 170
     iget-object p0, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {p0}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$fgetmVbmetaDigest(Lcom/android/server/BinaryTransparencyService;)Ljava/lang/String;
@@ -786,14 +707,12 @@
 .method public final measureApk(Ljava/lang/String;)Lcom/android/server/BinaryTransparencyService$Digest;
     .locals 2
 
-    .line 269
     invoke-virtual {p0, p1}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->computeApkContentDigest(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 271
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -817,22 +736,18 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 277
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 276
     invoke-interface {p0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 278
     new-instance p1, Lcom/android/server/BinaryTransparencyService$Digest;
 
-    .line 280
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -850,22 +765,18 @@
     :cond_1
     const/4 v0, 0x2
 
-    .line 282
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 281
     invoke-interface {p0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 283
     new-instance p1, Lcom/android/server/BinaryTransparencyService$Digest;
 
-    .line 285
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -880,19 +791,16 @@
 
     return-object p1
 
-    .line 290
     :cond_2
     :goto_0
     invoke-static {}, Landroid/util/PackageUtils;->createLargeFileBuffer()[B
 
     move-result-object p0
 
-    .line 289
     invoke-static {p1, p0}, Landroid/util/PackageUtils;->computeSha256DigestForLargeFileAsBytes(Ljava/lang/String;[B)[B
 
     move-result-object p0
 
-    .line 291
     new-instance p1, Lcom/android/server/BinaryTransparencyService$Digest;
 
     const/4 v0, 0x4
@@ -905,7 +813,6 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 8
 
-    .line 514
     new-instance v0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl$1;-><init>(Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;)V
@@ -924,7 +831,6 @@
 
     move-object v7, p6
 
-    .line 1103
     invoke-virtual/range {v0 .. v7}, Landroid/os/ShellCommand;->exec(Landroid/os/Binder;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)I
 
     return-void
@@ -935,12 +841,10 @@
 
     const/16 v0, 0x1a5
 
-    .line 458
     iget-object v1, p1, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->packageName:Ljava/lang/String;
 
     iget-wide v2, p1, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->longVersion:J
 
-    .line 461
     iget-object p0, p1, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->digest:[B
 
     if-eqz p0, :cond_0
@@ -959,12 +863,10 @@
     :goto_0
     move-object v4, p0
 
-    .line 462
     iget v5, p1, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->digestAlgorithm:I
 
     iget-object v6, p1, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->signerDigests:[Ljava/lang/String;
 
-    .line 458
     invoke-static/range {v0 .. v6}, Lcom/android/internal/util/FrameworkStatsLog;->write(ILjava/lang/String;JLjava/lang/String;I[Ljava/lang/String;)V
 
     return-void
@@ -973,12 +875,10 @@
 .method public recordMeasurementsForAllPackages()V
     .locals 7
 
-    .line 310
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 311
     iget-object v2, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {v2}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$fgetmMeasurementsLastRecordedMs(Lcom/android/server/BinaryTransparencyService;)J
@@ -995,7 +895,6 @@
 
     if-gez v2, :cond_0
 
-    .line 312
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1024,7 +923,6 @@
 
     return-void
 
-    .line 316
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1054,24 +952,20 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     iget-object v2, p0, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {v2, v0, v1}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$fputmMeasurementsLastRecordedMs(Lcom/android/server/BinaryTransparencyService;J)V
 
-    .line 320
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     const/4 v3, 0x0
 
-    .line 326
     invoke-virtual {p0, v3}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->collectAllApexInfo(Z)Ljava/util/List;
 
     move-result-object v3
 
-    .line 328
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1091,23 +985,19 @@
 
     check-cast v4, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;
 
-    .line 329
     iget-object v6, v4, Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v6, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 331
     invoke-virtual {p0, v4}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->recordApexInfo(Lcom/android/internal/os/IBinaryTransparencyService$ApexInfo;)V
 
     goto :goto_0
 
-    .line 340
     :cond_1
     invoke-virtual {p0, v2}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->collectAllUpdatedPreloadInfo(Landroid/os/Bundle;)Ljava/util/List;
 
     move-result-object v3
 
-    .line 341
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1125,12 +1015,10 @@
 
     check-cast v4, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;
 
-    .line 342
     iget-object v6, v4, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v6, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 343
     invoke-virtual {p0, v4}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->writeAppInfoToLog(Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;)V
 
     goto :goto_1
@@ -1138,19 +1026,16 @@
     :cond_2
     const-wide/32 v3, 0xea4f847
 
-    .line 350
     invoke-static {v3, v4}, Landroid/app/compat/CompatChanges;->isChangeEnabled(J)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 353
     invoke-virtual {p0, v2}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->collectAllSilentInstalledMbaInfo(Landroid/os/Bundle;)Ljava/util/List;
 
     move-result-object v3
 
-    .line 354
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1168,17 +1053,14 @@
 
     check-cast v4, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;
 
-    .line 355
     iget-object v6, v4, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v6, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 356
     invoke-virtual {p0, v4}, Lcom/android/server/BinaryTransparencyService$BinaryTransparencyServiceImpl;->writeAppInfoToLog(Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;)V
 
     goto :goto_2
 
-    .line 359
     :cond_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1186,7 +1068,6 @@
 
     sub-long/2addr v2, v0
 
-    .line 360
     invoke-static {}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$sfgetdigestAllPackagesLatency()Lcom/android/modules/expresslog/Histogram;
 
     move-result-object p0
@@ -1203,12 +1084,10 @@
 
     const/16 v0, 0x236
 
-    .line 469
     iget-object v1, p1, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->packageName:Ljava/lang/String;
 
     iget-wide v2, p1, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->longVersion:J
 
-    .line 472
     iget-object p0, p1, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->digest:[B
 
     if-eqz p0, :cond_0
@@ -1227,7 +1106,6 @@
     :goto_0
     move-object v4, p0
 
-    .line 473
     iget v5, p1, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->digestAlgorithm:I
 
     iget-object v6, p1, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->signerDigests:[Ljava/lang/String;
@@ -1244,7 +1122,6 @@
 
     iget-object v12, p1, Lcom/android/internal/os/IBinaryTransparencyService$AppInfo;->splitName:Ljava/lang/String;
 
-    .line 469
     invoke-static/range {v0 .. v12}, Lcom/android/internal/util/FrameworkStatsLog;->write(ILjava/lang/String;JLjava/lang/String;I[Ljava/lang/String;ILjava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

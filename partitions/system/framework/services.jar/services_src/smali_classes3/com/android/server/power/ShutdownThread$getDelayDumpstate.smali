@@ -13,14 +13,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
-    .line 1392
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public static startState()V
     .locals 4
 
-    .line 1396
     sget-object v0, Lcom/android/server/power/ShutdownThread$getDelayDumpstate;->delayhandler:Lcom/android/server/power/ShutdownThread$getDelayDumpstate;
 
     if-nez v0, :cond_0
@@ -38,10 +35,8 @@
 
     const-string v1, "Start handler"
 
-    .line 1397
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1398
     new-instance v0, Lcom/android/server/power/ShutdownThread$getDelayDumpstate;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -52,7 +47,6 @@
 
     sput-object v0, Lcom/android/server/power/ShutdownThread$getDelayDumpstate;->delayhandler:Lcom/android/server/power/ShutdownThread$getDelayDumpstate;
 
-    .line 1400
     :cond_0
     new-instance v0, Lcom/android/server/power/ShutdownThread$getDelayDumpstate$1;
 
@@ -62,7 +56,6 @@
 
     const-string/jumbo v0, "recovery"
 
-    .line 1415
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$sfgetmReason()Ljava/lang/String;
 
     move-result-object v1
@@ -87,7 +80,6 @@
 
     goto :goto_0
 
-    .line 1418
     :cond_1
     sget-object v0, Lcom/android/server/power/ShutdownThread$getDelayDumpstate;->delayhandler:Lcom/android/server/power/ShutdownThread$getDelayDumpstate;
 
@@ -99,7 +91,6 @@
 
     goto :goto_1
 
-    .line 1416
     :cond_2
     :goto_0
     sget-object v0, Lcom/android/server/power/ShutdownThread$getDelayDumpstate;->delayhandler:Lcom/android/server/power/ShutdownThread$getDelayDumpstate;

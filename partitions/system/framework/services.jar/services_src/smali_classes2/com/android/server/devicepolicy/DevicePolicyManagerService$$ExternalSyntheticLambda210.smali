@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/app/admin/DevicePolicyStringResource;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->$r8$lambda$LKuTWRDLNu2R4D655-P3MnV4PAY(Landroid/app/admin/DevicePolicyStringResource;)Ljava/lang/String;

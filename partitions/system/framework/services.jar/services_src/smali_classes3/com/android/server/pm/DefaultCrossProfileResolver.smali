@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/pm/resolution/ComponentResolverApi;Lcom/android/server/pm/UserManagerService;Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;)V
     .locals 0
 
-    .line 51
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/CrossProfileResolver;-><init>(Lcom/android/server/pm/resolution/ComponentResolverApi;Lcom/android/server/pm/UserManagerService;)V
 
-    .line 52
     iput-object p3, p0, Lcom/android/server/pm/DefaultCrossProfileResolver;->mDomainVerificationManager:Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;
 
     return-void
@@ -27,12 +25,10 @@
 
     move-object v0, p0
 
-    .line 275
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/pm/CrossProfileIntentFilter;->getTargetUserId()I
 
     move-result v8
 
-    .line 276
     invoke-virtual {p0, v8}, Lcom/android/server/pm/CrossProfileResolver;->isUserEnabled(I)Z
 
     move-result v1
@@ -43,7 +39,6 @@
 
     return-object v9
 
-    .line 280
     :cond_0
     iget-object v1, v0, Lcom/android/server/pm/CrossProfileResolver;->mComponentResolver:Lcom/android/server/pm/resolution/ComponentResolverApi;
 
@@ -61,7 +56,6 @@
 
     move-result-object v7
 
-    .line 282
     invoke-static {v7}, Lcom/android/internal/util/CollectionUtils;->isEmpty(Ljava/util/Collection;)Z
 
     move-result v1
@@ -70,7 +64,6 @@
 
     return-object v9
 
-    .line 287
     :cond_1
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -81,14 +74,12 @@
     :goto_0
     if-ltz v1, :cond_3
 
-    .line 288
     invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/pm/ResolveInfo;
 
-    .line 289
     iget-object v2, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v2, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -107,7 +98,6 @@
 
     move/from16 v4, p7
 
-    .line 291
     invoke-interface {p1, v3, v4, v8}, Lcom/android/server/pm/Computer;->createForwardingResolveInfoUnchecked(Lcom/android/server/pm/WatchedIntentFilter;II)Landroid/content/pm/ResolveInfo;
 
     move-result-object v1
@@ -135,7 +125,6 @@
 
     return-object v9
 
-    .line 304
     :cond_4
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -150,14 +139,12 @@
     :goto_2
     if-ge v11, v9, :cond_7
 
-    .line 306
     invoke-interface {v7, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/content/pm/ResolveInfo;
 
-    .line 307
     iget-boolean v2, v1, Landroid/content/pm/ResolveInfo;->handleAllWebDataURI:Z
 
     if-eqz v2, :cond_5
@@ -166,7 +153,6 @@
 
     goto :goto_3
 
-    .line 310
     :cond_5
     iget-object v1, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -174,7 +160,6 @@
 
     move-object/from16 v13, p8
 
-    .line 311
     invoke-interface {v13, v1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -187,7 +172,6 @@
 
     goto :goto_3
 
-    .line 315
     :cond_6
     iget-object v1, v0, Lcom/android/server/pm/DefaultCrossProfileResolver;->mDomainVerificationManager:Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;
 
@@ -197,12 +181,10 @@
 
     move v6, v8
 
-    .line 316
     invoke-interface/range {v1 .. v6}, Lcom/android/server/pm/verify/domain/DomainVerificationManagerInternal;->approvalLevelForDomain(Lcom/android/server/pm/pkg/PackageStateInternal;Landroid/content/Intent;JI)I
 
     move-result v1
 
-    .line 315
     invoke-static {v12, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
@@ -214,7 +196,6 @@
 
     goto :goto_2
 
-    .line 319
     :cond_7
     new-instance v0, Lcom/android/server/pm/CrossProfileDomainInfo;
 
@@ -226,14 +207,12 @@
 .method public filterResolveInfoWithDomainPreferredActivity(Landroid/content/Intent;Ljava/util/List;JIII)Ljava/util/List;
     .locals 0
 
-    .line 133
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz p2, :cond_1
 
-    .line 135
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
@@ -242,7 +221,6 @@
 
     const/4 p1, 0x0
 
-    .line 136
     :goto_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -250,19 +228,16 @@
 
     if-ge p1, p3, :cond_1
 
-    .line 137
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Lcom/android/server/pm/CrossProfileDomainInfo;
 
-    .line 138
     iget p4, p3, Lcom/android/server/pm/CrossProfileDomainInfo;->mHighestApprovalLevel:I
 
     if-le p4, p7, :cond_0
 
-    .line 139
     invoke-interface {p0, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -287,13 +262,11 @@
 
     return-object v11
 
-    .line 213
     :cond_0
     new-instance v12, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v12}, Landroid/util/SparseBooleanArray;-><init>()V
 
-    .line 217
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->size()I
 
     move-result v13
@@ -303,7 +276,6 @@
     :goto_0
     if-ge v15, v13, :cond_6
 
-    .line 219
     invoke-interface {v10, v15}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -312,12 +284,10 @@
 
     check-cast v2, Lcom/android/server/pm/CrossProfileIntentFilter;
 
-    .line 220
     invoke-virtual {v2}, Lcom/android/server/pm/CrossProfileIntentFilter;->getTargetUserId()I
 
     move-result v8
 
-    .line 222
     invoke-virtual {v2}, Lcom/android/server/pm/CrossProfileIntentFilter;->getFlags()I
 
     move-result v0
@@ -335,7 +305,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 224
     :goto_1
     invoke-virtual {v2}, Lcom/android/server/pm/CrossProfileIntentFilter;->getFlags()I
 
@@ -355,7 +324,6 @@
     :goto_2
     if-nez v0, :cond_5
 
-    .line 225
     invoke-virtual {v12, v8}, Landroid/util/SparseBooleanArray;->get(I)Z
 
     move-result v0
@@ -385,7 +353,6 @@
 
     move-object/from16 v8, p9
 
-    .line 229
     invoke-virtual/range {v0 .. v8}, Lcom/android/server/pm/DefaultCrossProfileResolver;->createForwardingResolveInfo(Lcom/android/server/pm/Computer;Lcom/android/server/pm/CrossProfileIntentFilter;Landroid/content/Intent;Ljava/lang/String;JILjava/util/function/Function;)Lcom/android/server/pm/CrossProfileDomainInfo;
 
     move-result-object v0
@@ -394,7 +361,6 @@
 
     goto :goto_3
 
-    .line 235
     :cond_4
     invoke-virtual {v12, v11, v14}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
@@ -418,10 +384,8 @@
     :cond_7
     const/4 v1, 0x0
 
-    .line 243
     iget-object v2, v0, Lcom/android/server/pm/CrossProfileDomainInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 244
     iget v2, v2, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
     invoke-virtual {v9, v2}, Lcom/android/server/pm/CrossProfileResolver;->isUserEnabled(I)Z
@@ -432,7 +396,6 @@
 
     return-object v1
 
-    .line 249
     :cond_8
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -444,7 +407,6 @@
 
     move-result-object v2
 
-    .line 250
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -464,7 +426,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 167
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v1
@@ -474,7 +435,6 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 169
     invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -483,7 +443,6 @@
 
     check-cast v6, Lcom/android/server/pm/CrossProfileIntentFilter;
 
-    .line 170
     invoke-virtual {v6}, Lcom/android/server/pm/CrossProfileIntentFilter;->getFlags()I
 
     move-result v3
@@ -506,7 +465,6 @@
 
     move-object/from16 v12, p8
 
-    .line 173
     invoke-virtual/range {v4 .. v12}, Lcom/android/server/pm/DefaultCrossProfileResolver;->createForwardingResolveInfo(Lcom/android/server/pm/Computer;Lcom/android/server/pm/CrossProfileIntentFilter;Landroid/content/Intent;Ljava/lang/String;JILjava/util/function/Function;)Lcom/android/server/pm/CrossProfileDomainInfo;
 
     move-result-object v3
@@ -533,7 +491,6 @@
 
     move/from16 v11, p4
 
-    .line 84
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
@@ -559,17 +516,14 @@
 
     move-object/from16 v8, p11
 
-    .line 86
     invoke-virtual/range {v0 .. v8}, Lcom/android/server/pm/DefaultCrossProfileResolver;->querySkipCurrentProfileIntents(Lcom/android/server/pm/Computer;Ljava/util/List;Landroid/content/Intent;Ljava/lang/String;JILjava/util/function/Function;)Lcom/android/server/pm/CrossProfileDomainInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 90
     invoke-interface {v12, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 91
     invoke-virtual {p0, v12, v11}, Lcom/android/server/pm/CrossProfileResolver;->filterIfNotSystemUser(Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v0
@@ -595,26 +549,22 @@
 
     move-object/from16 v9, p11
 
-    .line 94
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/pm/DefaultCrossProfileResolver;->queryCrossProfileIntents(Lcom/android/server/pm/Computer;Ljava/util/List;Landroid/content/Intent;Ljava/lang/String;JIZLjava/util/function/Function;)Lcom/android/server/pm/CrossProfileDomainInfo;
 
     move-result-object v7
 
-    .line 98
     invoke-virtual {p2}, Landroid/content/Intent;->hasWebURI()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 100
     invoke-virtual {p0, v11}, Lcom/android/server/pm/CrossProfileResolver;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 102
     iget v6, v0, Landroid/content/pm/UserInfo;->id:I
 
     move-object v0, p1
@@ -644,7 +594,6 @@
     :cond_3
     if-eqz v7, :cond_5
 
-    .line 108
     invoke-interface {v12, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -652,7 +601,6 @@
     :cond_4
     if-eqz v7, :cond_5
 
-    .line 111
     invoke-interface {v12, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_5

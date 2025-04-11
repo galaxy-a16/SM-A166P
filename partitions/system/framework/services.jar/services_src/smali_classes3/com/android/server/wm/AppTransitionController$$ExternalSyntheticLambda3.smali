@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/TaskFragment;
 
     invoke-static {p1}, Lcom/android/server/wm/AppTransitionController;->$r8$lambda$cnwl4wGT-Ghj3gMXdHXJcS7uEjY(Lcom/android/server/wm/TaskFragment;)Z

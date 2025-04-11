@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 170
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp;
 
     const/4 v1, 0x0
@@ -24,7 +23,6 @@
 
     const/4 v0, 0x0
 
-    .line 171
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp$DhaClassLazyHolder;->isinitClass:Z
 
     return-void

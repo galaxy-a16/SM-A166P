@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/PhantomProcessRecord;)V
     .locals 0
 
-    .line 135
     iput-object p1, p0, Lcom/android/server/am/PhantomProcessRecord$1;->this$0:Lcom/android/server/am/PhantomProcessRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 5
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/am/PhantomProcessRecord$1;->this$0:Lcom/android/server/am/PhantomProcessRecord;
 
     iget-object v0, v0, Lcom/android/server/am/PhantomProcessRecord;->mLock:Ljava/lang/Object;
@@ -37,7 +35,6 @@
     :try_start_0
     const-string v1, "ActivityManager"
 
-    .line 140
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,7 +73,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     iget-object p0, p0, Lcom/android/server/am/PhantomProcessRecord$1;->this$0:Lcom/android/server/am/PhantomProcessRecord;
 
     const/4 v1, 0x1
@@ -85,10 +81,8 @@
 
     const/4 v1, 0x0
 
-    .line 144
     invoke-virtual {p0, v1}, Lcom/android/server/am/PhantomProcessRecord;->onProcDied(Z)V
 
-    .line 146
     monitor-exit v0
 
     return-void

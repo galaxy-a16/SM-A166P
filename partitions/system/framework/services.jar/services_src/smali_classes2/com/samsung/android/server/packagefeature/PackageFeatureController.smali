@@ -10,7 +10,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 47
     check-cast p1, Ljava/lang/String;
 
     invoke-interface {p0, p1}, Lcom/samsung/android/server/packagefeature/PackageFeatureController;->accept(Ljava/lang/String;)V
@@ -21,7 +20,6 @@
 .method public accept(Ljava/lang/String;)V
     .locals 0
 
-    .line 59
     invoke-interface {p0, p1}, Lcom/samsung/android/server/packagefeature/PackageFeatureController;->updateGroupData(Ljava/lang/String;)V
 
     return-void

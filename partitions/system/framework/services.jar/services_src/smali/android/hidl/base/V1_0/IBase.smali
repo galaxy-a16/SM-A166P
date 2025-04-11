@@ -23,30 +23,25 @@
     :cond_0
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 29
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 31
     instance-of v3, v2, Landroid/hidl/base/V1_0/IBase;
 
     if-eqz v3, :cond_1
 
-    .line 32
     check-cast v2, Landroid/hidl/base/V1_0/IBase;
 
     return-object v2
 
-    .line 35
     :cond_1
     new-instance v2, Landroid/hidl/base/V1_0/IBase$Proxy;
 
     invoke-direct {v2, p0}, Landroid/hidl/base/V1_0/IBase$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 38
     :try_start_0
     invoke-interface {v2}, Landroid/hidl/base/V1_0/IBase;->interfaceChain()Ljava/util/ArrayList;
 
@@ -69,7 +64,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 39
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -94,7 +88,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_0
     invoke-interface {p0}, Landroid/os/IHwInterface;->asBinder()Landroid/os/IHwBinder;
 
@@ -115,7 +108,6 @@
 
     const-string v0, "default"
 
-    .line 95
     invoke-static {v0}, Landroid/hidl/base/V1_0/IBase;->getService(Ljava/lang/String;)Landroid/hidl/base/V1_0/IBase;
 
     move-result-object v0
@@ -130,7 +122,6 @@
 
     const-string v0, "android.hidl.base@1.0::IBase"
 
-    .line 85
     invoke-static {v0, p0}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;)Landroid/os/IHwBinder;
 
     move-result-object p0
@@ -147,7 +138,6 @@
 
     const-string v0, "android.hidl.base@1.0::IBase"
 
-    .line 68
     invoke-static {v0, p0, p1}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;Z)Landroid/os/IHwBinder;
 
     move-result-object p0
@@ -164,7 +154,6 @@
 
     const-string v0, "default"
 
-    .line 75
     invoke-static {v0, p0}, Landroid/hidl/base/V1_0/IBase;->getService(Ljava/lang/String;Z)Landroid/hidl/base/V1_0/IBase;
 
     move-result-object p0

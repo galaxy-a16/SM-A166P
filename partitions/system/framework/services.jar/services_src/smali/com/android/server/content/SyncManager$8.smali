@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/content/SyncManager;)V
     .locals 0
 
-    .line 652
     iput-object p1, p0, Lcom/android/server/content/SyncManager$8;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onPeriodicSyncAdded(Lcom/android/server/content/SyncStorageEngine$EndPoint;Landroid/os/Bundle;JJ)V
     .locals 7
 
-    .line 656
     iget-object v0, p0, Lcom/android/server/content/SyncManager$8;->this$0:Lcom/android/server/content/SyncManager;
 
     move-object v1, p1

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/tv/TvRemoteServiceInput;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 105
     iput-object p1, p0, Lcom/android/server/tv/TvRemoteServiceInput$2;->this$0:Lcom/android/server/tv/TvRemoteServiceInput;
 
     iput-object p2, p0, Lcom/android/server/tv/TvRemoteServiceInput$2;->val$token:Landroid/os/IBinder;
@@ -31,7 +30,6 @@
 .method public binderDied()V
     .locals 1
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/tv/TvRemoteServiceInput$2;->this$0:Lcom/android/server/tv/TvRemoteServiceInput;
 
     iget-object p0, p0, Lcom/android/server/tv/TvRemoteServiceInput$2;->val$token:Landroid/os/IBinder;

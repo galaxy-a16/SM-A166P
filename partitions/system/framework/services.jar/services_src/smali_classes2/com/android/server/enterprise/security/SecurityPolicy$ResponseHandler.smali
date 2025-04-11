@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/security/SecurityPolicy;)V
     .locals 0
 
-    .line 607
     iput-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$ResponseHandler;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/enterprise/security/SecurityPolicy;Lcom/android/server/enterprise/security/SecurityPolicy$ResponseHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/security/SecurityPolicy$ResponseHandler;-><init>(Lcom/android/server/enterprise/security/SecurityPolicy;)V
 
     return-void
@@ -33,10 +31,8 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 610
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 611
     iget v0, p1, Landroid/os/Message;->what:I
 
     const-string v1, "SecurityPolicy"
@@ -45,7 +41,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 628
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -66,7 +61,6 @@
 
     goto :goto_0
 
-    .line 615
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -78,7 +72,6 @@
 
     if-ne p1, v2, :cond_1
 
-    .line 619
     iget-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$ResponseHandler;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/security/SecurityPolicy;->-$$Nest$mgetFactoryReceiver(Lcom/android/server/enterprise/security/SecurityPolicy;)Lcom/android/server/enterprise/security/SecurityPolicy$FactoryWipeReceiver;
@@ -87,7 +80,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/enterprise/security/SecurityPolicy;->-$$Nest$fputfactoryReceiver(Lcom/android/server/enterprise/security/SecurityPolicy;Lcom/android/server/enterprise/security/SecurityPolicy$FactoryWipeReceiver;)V
 
-    .line 620
     iget-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$ResponseHandler;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/security/SecurityPolicy;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/security/SecurityPolicy;)Landroid/content/Context;
@@ -104,7 +96,6 @@
 
     const-string/jumbo p0, "successful unregister of Broadcast Receiver "
 
-    .line 621
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -112,7 +103,6 @@
     :cond_1
     const-string/jumbo p0, "message not send from Broadcast Receiver "
 
-    .line 624
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 17
     sget-boolean v0, Lcom/android/server/spay/PaymentManagerService;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/spay/PaymentTZNative;->DEBUG:Z
@@ -40,10 +39,8 @@
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
     .locals 2
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     sget-boolean v0, Lcom/android/server/spay/PaymentTZNative;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -66,33 +63,25 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 30
     :cond_0
     iput p1, p0, Lcom/android/server/spay/PaymentTZNative;->mTAId:I
 
     const-wide/16 v0, 0x0
 
-    .line 31
     iput-wide v0, p0, Lcom/android/server/spay/PaymentTZNative;->mMOPTZNativePtr_:J
 
-    .line 32
     iput p5, p0, Lcom/android/server/spay/PaymentTZNative;->mSendBufSize:I
 
-    .line 33
     iput p6, p0, Lcom/android/server/spay/PaymentTZNative;->mRecvBufSize:I
 
-    .line 34
     iput-object p2, p0, Lcom/android/server/spay/PaymentTZNative;->mTATechnology:Ljava/lang/String;
 
-    .line 35
     iput-object p3, p0, Lcom/android/server/spay/PaymentTZNative;->mRootName:Ljava/lang/String;
 
-    .line 36
     iput-object p4, p0, Lcom/android/server/spay/PaymentTZNative;->mProcessName:Ljava/lang/String;
 
     const/4 p1, 0x0
 
-    .line 37
     iput-boolean p1, p0, Lcom/android/server/spay/PaymentTZNative;->mIsLoaded:Z
 
     return-void
@@ -112,7 +101,6 @@
 
     move-wide/from16 v3, p5
 
-    .line 41
     iget-wide v5, v0, Lcom/android/server/spay/PaymentTZNative;->mMOPTZNativePtr_:J
 
     const-wide/16 v12, 0x0
@@ -127,7 +115,6 @@
 
     const-string v1, "PaymentTZNative::loadTA called for TA that is already loaded. Call Ignored"
 
-    .line 42
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v14
@@ -152,7 +139,6 @@
 
     long-to-int v6, v3
 
-    .line 51
     iget v7, v0, Lcom/android/server/spay/PaymentTZNative;->mTAId:I
 
     iget v8, v0, Lcom/android/server/spay/PaymentTZNative;->mSendBufSize:I
@@ -203,27 +189,22 @@
 
     const-string v1, "Error: nativeCreateTLCommunicationContext failed"
 
-    .line 54
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v15
 
-    .line 58
     :cond_2
     const-class v1, Lcom/android/server/spay/PaymentTZNative;
 
     monitor-enter v1
 
-    .line 59
     :try_start_0
     iput-boolean v14, v0, Lcom/android/server/spay/PaymentTZNative;->mIsLoaded:Z
 
-    .line 60
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 61
     sget-boolean v1, Lcom/android/server/spay/PaymentTZNative;->DEBUG:Z
 
     if-eqz v1, :cond_3
@@ -254,7 +235,6 @@
     :catchall_0
     move-exception v0
 
-    .line 60
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -268,7 +248,6 @@
 
     const-string v1, "SpayFw_loadTA: cannot get ta offset or size"
 
-    .line 47
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v15
@@ -283,7 +262,6 @@
 .method public processTACommand(Landroid/spay/TACommandRequest;)Landroid/spay/TACommandResponse;
     .locals 4
 
-    .line 80
     sget-boolean v0, Lcom/android/server/spay/PaymentTZNative;->DEBUG:Z
 
     const-string v1, "PaymentManagerService"
@@ -314,13 +292,11 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :cond_0
     new-instance v0, Landroid/spay/TACommandResponse;
 
     invoke-direct {v0}, Landroid/spay/TACommandResponse;-><init>()V
 
-    .line 82
     invoke-direct {p0, p1, v0}, Lcom/android/server/spay/PaymentTZNative;->nativeProcessTACommand(Landroid/spay/TACommandRequest;Landroid/spay/TACommandResponse;)Z
 
     move-result p0
@@ -329,7 +305,6 @@
 
     const-string p0, "PaymentTZNative::processTACommand: Error: nativeProcessTACommand returned failure"
 
-    .line 84
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -343,12 +318,10 @@
 .method public unloadTA()V
     .locals 5
 
-    .line 66
     const-class v0, Lcom/android/server/spay/PaymentTZNative;
 
     monitor-enter v0
 
-    .line 67
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/spay/PaymentTZNative;->mMOPTZNativePtr_:J
 
@@ -367,21 +340,16 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 71
     iput-boolean v1, p0, Lcom/android/server/spay/PaymentTZNative;->mIsLoaded:Z
 
-    .line 72
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
     invoke-virtual {p0}, Lcom/android/server/spay/PaymentTZNative;->nativeDestroyTLCommunicationContext()V
 
-    .line 75
     iput-wide v3, p0, Lcom/android/server/spay/PaymentTZNative;->mMOPTZNativePtr_:J
 
-    .line 76
     sget-boolean p0, Lcom/android/server/spay/PaymentTZNative;->DEBUG:Z
 
     if-eqz p0, :cond_1
@@ -400,7 +368,6 @@
     :try_start_1
     const-string v1, "PaymentManagerService"
 
-    .line 68
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -419,7 +386,6 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     monitor-exit v0
 
     return-void
@@ -427,7 +393,6 @@
     :catchall_0
     move-exception p0
 
-    .line 72
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

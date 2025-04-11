@@ -58,7 +58,6 @@
 .method public bridge synthetic getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserState;
     .locals 0
 
-    .line 36
     invoke-interface {p0, p1}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
@@ -69,7 +68,6 @@
 .method public getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
     .locals 0
 
-    .line 67
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStates()Landroid/util/SparseArray;
 
     move-result-object p0
@@ -82,7 +80,6 @@
 
     if-nez p0, :cond_0
 
-    .line 68
     sget-object p0, Lcom/android/server/pm/pkg/PackageUserStateInternal;->DEFAULT:Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     :cond_0

@@ -19,20 +19,16 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mContext:Landroid/content/Context;
 
-    .line 47
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-direct {v0, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
@@ -45,19 +41,16 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/restriction/SimDBProxy;
     .locals 1
 
-    .line 51
     sget-object v0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mSimDBProxy:Lcom/android/server/enterprise/restriction/SimDBProxy;
 
     if-nez v0, :cond_0
 
-    .line 52
     new-instance v0, Lcom/android/server/enterprise/restriction/SimDBProxy;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/restriction/SimDBProxy;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mSimDBProxy:Lcom/android/server/enterprise/restriction/SimDBProxy;
 
-    .line 54
     :cond_0
     sget-object p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mSimDBProxy:Lcom/android/server/enterprise/restriction/SimDBProxy;
 
@@ -69,7 +62,6 @@
 .method public addSimcard(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 4
 
-    .line 59
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "SimTable"
@@ -91,29 +83,24 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 66
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v3, "adminUid"
 
-    .line 67
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v0, v3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 68
     invoke-virtual {v0, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "SimPinCode"
 
-    .line 69
     invoke-virtual {v0, p1, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putValuesNoUpdate(Ljava/lang/String;Landroid/content/ContentValues;)Z
@@ -131,7 +118,6 @@
 .method public getAdminBySimcard(Ljava/lang/String;)I
     .locals 2
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v0, "SimTable"
@@ -150,12 +136,10 @@
 
     const-string v0, "SimIccId"
 
-    .line 132
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v1
 
-    .line 135
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     new-instance v2, Landroid/content/ContentValues;
@@ -168,7 +152,6 @@
 
     move-result-object p0
 
-    .line 137
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -180,7 +163,6 @@
     :goto_0
     if-ge v3, v1, :cond_0
 
-    .line 139
     invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -204,7 +186,6 @@
 .method public getPincode(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v0, "SimIccId"
@@ -217,14 +198,12 @@
 
     move-result-object p0
 
-    .line 97
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 98
     sget-object v0, Lcom/android/server/enterprise/restriction/SimDBProxy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -245,7 +224,6 @@
 
     goto :goto_0
 
-    .line 100
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/restriction/SimDBProxy;->TAG:Ljava/lang/String;
 
@@ -272,7 +250,6 @@
 .method public hasAnySimcard()Z
     .locals 2
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v0, "SimTable"
@@ -298,7 +275,6 @@
 .method public removeSimcard(ILjava/lang/String;)Z
     .locals 2
 
-    .line 76
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v0, "SimTable"
@@ -315,7 +291,6 @@
 .method public removeSimcardsByAdmin(I)Z
     .locals 1
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v0, "SimTable"
@@ -330,17 +305,14 @@
 .method public setPincode(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 6
 
-    .line 86
     new-instance v5, Landroid/content/ContentValues;
 
     invoke-direct {v5}, Landroid/content/ContentValues;-><init>()V
 
     const-string v0, "SimPinCode"
 
-    .line 87
     invoke-virtual {v5, v0, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 89
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/SimDBProxy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "SimTable"

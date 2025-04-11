@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/camera/CameraServiceProxy;)V
     .locals 0
 
-    .line 330
     iput-object p1, p0, Lcom/android/server/camera/CameraServiceProxy$DisplayWindowListener;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     invoke-direct {p0}, Landroid/view/IDisplayWindowListener$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/camera/CameraServiceProxy;Lcom/android/server/camera/CameraServiceProxy$DisplayWindowListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/camera/CameraServiceProxy$DisplayWindowListener;-><init>(Lcom/android/server/camera/CameraServiceProxy;)V
 
     return-void
@@ -33,14 +31,12 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayConfigurationChanged(ILandroid/content/res/Configuration;)V
     .locals 0
 
-    .line 334
     iget-object p0, p0, Lcom/android/server/camera/CameraServiceProxy$DisplayWindowListener;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     invoke-static {p0}, Lcom/android/server/camera/CameraServiceProxy;->-$$Nest$mgetCameraServiceRawLocked(Lcom/android/server/camera/CameraServiceProxy;)Landroid/hardware/ICameraService;
@@ -51,7 +47,6 @@
 
     return-void
 
-    .line 338
     :cond_0
     :try_start_0
     invoke-interface {p0}, Landroid/hardware/ICameraService;->notifyDisplayConfigurationChange()V
@@ -63,7 +58,6 @@
     :catch_0
     move-exception p0
 
-    .line 340
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,27 +83,23 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onFixedRotationFinished(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onFixedRotationStarted(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onKeepClearAreasChanged(ILjava/util/List;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

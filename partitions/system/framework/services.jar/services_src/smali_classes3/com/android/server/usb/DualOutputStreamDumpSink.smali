@@ -16,13 +16,10 @@
 .method public constructor <init>(Lcom/android/internal/util/dump/DualDumpOutputStream;J)V
     .locals 0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/usb/DualOutputStreamDumpSink;->mDumpOutputStream:Lcom/android/internal/util/dump/DualDumpOutputStream;
 
-    .line 37
     iput-wide p2, p0, Lcom/android/server/usb/DualOutputStreamDumpSink;->mId:J
 
     return-void
@@ -33,7 +30,6 @@
 .method public sink(Ljava/lang/String;Ljava/util/List;)V
     .locals 4
 
-    .line 45
     iget-object v0, p0, Lcom/android/server/usb/DualOutputStreamDumpSink;->mDumpOutputStream:Lcom/android/internal/util/dump/DualDumpOutputStream;
 
     const-string v1, "USB Event Log"
@@ -42,7 +38,6 @@
 
     invoke-virtual {v0, v1, v2, v3, p1}, Lcom/android/internal/util/dump/DualDumpOutputStream;->write(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 46
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -60,7 +55,6 @@
 
     check-cast p2, Lcom/android/server/utils/EventLogger$Event;
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/usb/DualOutputStreamDumpSink;->mDumpOutputStream:Lcom/android/internal/util/dump/DualDumpOutputStream;
 
     iget-wide v1, p0, Lcom/android/server/usb/DualOutputStreamDumpSink;->mId:J

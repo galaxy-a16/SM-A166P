@@ -17,7 +17,6 @@
 .method public static synthetic $values()[Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
     .locals 3
 
-    .line 1212
     sget-object v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->PACKAGE_INSTALL:Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
     sget-object v1, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->PACKAGE_UNINSTALL_UPDATES:Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
@@ -34,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1213
     new-instance v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
     const-string v1, "PACKAGE_INSTALL"
@@ -45,7 +43,6 @@
 
     sput-object v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->PACKAGE_INSTALL:Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
-    .line 1214
     new-instance v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
     const-string v1, "PACKAGE_UNINSTALL_UPDATES"
@@ -56,7 +53,6 @@
 
     sput-object v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->PACKAGE_UNINSTALL_UPDATES:Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
-    .line 1215
     new-instance v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
     const-string v1, "PACKAGE_ENABLE"
@@ -67,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->PACKAGE_ENABLE:Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
-    .line 1212
     invoke-static {}, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->$values()[Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
     move-result-object v0
@@ -80,7 +75,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 1212
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -89,7 +83,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
     .locals 1
 
-    .line 1212
     const-class v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -104,7 +97,6 @@
 .method public static values()[Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
     .locals 1
 
-    .line 1212
     sget-object v0, Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->$VALUES:[Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;
 
     invoke-virtual {v0}, [Lcom/android/server/pm/PackageManagerService$InstallLocaleOverlaysType;->clone()Ljava/lang/Object;

@@ -13,7 +13,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 84
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -22,7 +21,6 @@
 
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 85
     invoke-static {p1}, Lcom/android/server/timezonedetector/ServiceConfigAccessorImpl;->getInstance(Landroid/content/Context;)Lcom/android/server/timezonedetector/ServiceConfigAccessor;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 .method public onBootPhase(I)V
     .locals 1
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$Lifecycle;->mServiceConfigAccessor:Lcom/android/server/timezonedetector/ServiceConfigAccessor;
 
     invoke-interface {v0}, Lcom/android/server/timezonedetector/ServiceConfigAccessor;->isGeoTimeZoneDetectionFeatureSupportedInConfig()Z
@@ -50,7 +47,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$Lifecycle;->mService:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;->onSystemReady()V
@@ -62,7 +58,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 111
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$Lifecycle;->mService:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;->onSystemThirdPartyAppsCanStart()V
@@ -75,12 +70,10 @@
 .method public onStart()V
     .locals 3
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 91
     iget-object v1, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$Lifecycle;->mServiceConfigAccessor:Lcom/android/server/timezonedetector/ServiceConfigAccessor;
 
     invoke-interface {v1}, Lcom/android/server/timezonedetector/ServiceConfigAccessor;->isGeoTimeZoneDetectionFeatureSupportedInConfig()Z
@@ -89,7 +82,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 92
     new-instance v1, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
     iget-object v2, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$Lifecycle;->mServiceConfigAccessor:Lcom/android/server/timezonedetector/ServiceConfigAccessor;
@@ -100,7 +92,6 @@
 
     const-string v0, "location_time_zone_manager"
 
-    .line 96
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     goto :goto_0
@@ -110,7 +101,6 @@
 
     const-string v0, "Geo time zone detection feature is disabled in config"
 
-    .line 98
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

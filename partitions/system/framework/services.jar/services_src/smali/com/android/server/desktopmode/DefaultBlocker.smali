@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/desktopmode/DefaultBlocker;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -26,10 +25,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/app/ActivityManager;Landroid/hardware/display/DisplayManager;)V
     .locals 2
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
     const/4 v1, 0x0
@@ -38,13 +35,10 @@
 
     iput-object v0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
-    .line 66
     iput-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mContext:Landroid/content/Context;
 
-    .line 67
     iput-object p2, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 68
     iput-object p3, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     return-void
@@ -55,7 +49,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,14 +125,12 @@
 .method public getBlocker(Lcom/android/server/desktopmode/State;)Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
     .locals 1
 
-    .line 72
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DefaultBlocker;->isLockTaskMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 73
     iget-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
     const/4 v0, 0x1
@@ -148,7 +139,6 @@
 
     goto :goto_0
 
-    .line 74
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DefaultBlocker;->isProKioskMode()Z
 
@@ -156,7 +146,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 75
     iget-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
     const/4 v0, 0x2
@@ -165,7 +154,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_1
     iget-object v0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mContext:Landroid/content/Context;
 
@@ -179,7 +167,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 77
     iget-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
     const/4 v0, 0x3
@@ -188,7 +175,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/DefaultBlocker;->isUnavailableUser(Lcom/android/server/desktopmode/State;)Z
 
@@ -196,7 +182,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 79
     iget-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
     const/4 v0, 0x4
@@ -205,7 +190,6 @@
 
     goto :goto_0
 
-    .line 80
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DefaultBlocker;->isKidsLauncherMode()Z
 
@@ -213,7 +197,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 81
     iget-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
     const/4 v0, 0x5
@@ -222,7 +205,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DefaultBlocker;->isSmartViewConnected()Z
 
@@ -230,7 +212,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 83
     iget-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
     const/4 v0, 0x6
@@ -239,7 +220,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DefaultBlocker;->isNewDeXEnabled()Z
 
@@ -247,14 +227,12 @@
 
     if-eqz p1, :cond_6
 
-    .line 85
     iget-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
     const/4 v0, 0x7
 
     iput v0, p1, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;->reasonCode:I
 
-    .line 91
     :goto_0
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mBlocker:Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;
 
@@ -269,7 +247,6 @@
 .method public final isKidsLauncherMode()Z
     .locals 2
 
-    .line 108
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -282,7 +259,6 @@
 
     move-result-object v0
 
-    .line 109
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -297,7 +273,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 111
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object p0, p0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
@@ -324,7 +299,6 @@
 .method public final isLeboCastConnectionEnabled()Z
     .locals 2
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -352,7 +326,6 @@
 .method public final isLockTaskMode()Z
     .locals 1
 
-    .line 95
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mActivityManager:Landroid/app/ActivityManager;
 
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getLockTaskModeState()I
@@ -375,7 +348,6 @@
 .method public final isNewDeXEnabled()Z
     .locals 2
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -390,12 +362,10 @@
 
     move-result-object p0
 
-    .line 133
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    .line 134
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_NEW_DEX:Z
 
     if-eqz v0, :cond_0
@@ -416,14 +386,12 @@
 .method public final isProKioskMode()Z
     .locals 0
 
-    .line 99
     invoke-static {}, Lcom/samsung/android/knox/custom/ProKioskManager;->getInstance()Lcom/samsung/android/knox/custom/ProKioskManager;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 100
     invoke-virtual {p0}, Lcom/samsung/android/knox/custom/ProKioskManager;->getProKioskState()Z
 
     move-result p0
@@ -444,7 +412,6 @@
 .method public final isSmartViewConnected()Z
     .locals 5
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/desktopmode/DefaultBlocker;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->semGetWifiDisplayStatus()Landroid/hardware/display/SemWifiDisplayStatus;
@@ -455,7 +422,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 117
     invoke-virtual {v0}, Landroid/hardware/display/SemWifiDisplayStatus;->getActiveDisplayState()I
 
     move-result v2
@@ -464,7 +430,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 118
     invoke-virtual {v0}, Landroid/hardware/display/SemWifiDisplayStatus;->getConnectedState()I
 
     move-result v2
@@ -477,14 +442,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 119
     invoke-virtual {v0}, Landroid/hardware/display/SemWifiDisplayStatus;->getConnectedState()I
 
     move-result v0
 
     if-ne v0, v3, :cond_1
 
-    .line 120
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/DefaultBlocker;->isLeboCastConnectionEnabled()Z
 
@@ -502,7 +465,6 @@
 .method public final isUnavailableUser(Lcom/android/server/desktopmode/State;)Z
     .locals 0
 
-    .line 104
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getCurrentUserId()I
 
     move-result p0

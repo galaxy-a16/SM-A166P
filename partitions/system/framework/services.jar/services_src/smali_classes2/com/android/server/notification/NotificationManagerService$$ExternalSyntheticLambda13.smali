@@ -24,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/NotificationManagerService;ZLandroid/app/Notification;ILjava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$$ExternalSyntheticLambda13;->f$0:Lcom/android/server/notification/NotificationManagerService;
@@ -47,7 +46,6 @@
 .method public final run()V
     .locals 6
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$$ExternalSyntheticLambda13;->f$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-boolean v1, p0, Lcom/android/server/notification/NotificationManagerService$$ExternalSyntheticLambda13;->f$1:Z

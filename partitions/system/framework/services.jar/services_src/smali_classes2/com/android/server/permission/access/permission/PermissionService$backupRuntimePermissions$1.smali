@@ -14,7 +14,6 @@
 .method public constructor <init>(Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/permission/access/permission/PermissionService$backupRuntimePermissions$1;->$tmp0:Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1720
     check-cast p1, [B
 
     invoke-virtual {p0, p1}, Lcom/android/server/permission/access/permission/PermissionService$backupRuntimePermissions$1;->accept([B)V
@@ -38,7 +36,6 @@
 .method public final accept([B)V
     .locals 0
 
-    .line 1720
     iget-object p0, p0, Lcom/android/server/permission/access/permission/PermissionService$backupRuntimePermissions$1;->$tmp0:Ljava/util/concurrent/CompletableFuture;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z

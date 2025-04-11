@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/usage/UserUsageStatsService;JJILandroid/util/ArraySet;)V
     .locals 0
 
-    .line 646
     iput-object p1, p0, Lcom/android/server/usage/UserUsageStatsService$4;->this$0:Lcom/android/server/usage/UserUsageStatsService;
 
     iput-wide p2, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$beginTime:J
@@ -43,7 +42,6 @@
 .method public combine(Lcom/android/server/usage/IntervalStats;ZLjava/util/List;)Z
     .locals 7
 
-    .line 650
     iget-object p2, p1, Lcom/android/server/usage/IntervalStats;->events:Landroid/app/usage/EventList;
 
     iget-wide v0, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$beginTime:J
@@ -52,7 +50,6 @@
 
     move-result p2
 
-    .line 651
     iget-object v0, p1, Lcom/android/server/usage/IntervalStats;->events:Landroid/app/usage/EventList;
 
     invoke-virtual {v0}, Landroid/app/usage/EventList;->size()I
@@ -64,14 +61,12 @@
 
     if-ge p2, v0, :cond_a
 
-    .line 653
     iget-object v2, p1, Lcom/android/server/usage/IntervalStats;->events:Landroid/app/usage/EventList;
 
     invoke-virtual {v2, p2}, Landroid/app/usage/EventList;->get(I)Landroid/app/usage/UsageEvents$Event;
 
     move-result-object v2
 
-    .line 654
     iget-wide v3, v2, Landroid/app/usage/UsageEvents$Event;->mTimeStamp:J
 
     iget-wide v5, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$endTime:J
@@ -84,7 +79,6 @@
 
     return p0
 
-    .line 658
     :cond_0
     iget v3, v2, Landroid/app/usage/UsageEvents$Event;->mEventType:I
 
@@ -92,7 +86,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 659
     iget v5, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$flags:I
 
     const/4 v6, 0x2
@@ -108,7 +101,6 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 663
     iget v5, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$flags:I
 
     and-int/2addr v5, v4
@@ -126,7 +118,6 @@
 
     if-ne v3, v4, :cond_4
 
-    .line 667
     :cond_3
     iget v3, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$flags:I
 
@@ -136,12 +127,10 @@
 
     if-ne v3, v4, :cond_4
 
-    .line 671
     invoke-virtual {v2}, Landroid/app/usage/UsageEvents$Event;->getObfuscatedNotificationEvent()Landroid/app/usage/UsageEvents$Event;
 
     move-result-object v2
 
-    .line 673
     :cond_4
     iget v3, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$flags:I
 
@@ -149,56 +138,46 @@
 
     if-ne v3, v1, :cond_5
 
-    .line 674
     invoke-virtual {v2}, Landroid/app/usage/UsageEvents$Event;->getObfuscatedIfInstantApp()Landroid/app/usage/UsageEvents$Event;
 
     move-result-object v2
 
-    .line 676
     :cond_5
     iget-object v1, v2, Landroid/app/usage/UsageEvents$Event;->mPackage:Ljava/lang/String;
 
     if-eqz v1, :cond_6
 
-    .line 677
     iget-object v3, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$names:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 679
     :cond_6
     iget-object v1, v2, Landroid/app/usage/UsageEvents$Event;->mClass:Ljava/lang/String;
 
     if-eqz v1, :cond_7
 
-    .line 680
     iget-object v3, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$names:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 682
     :cond_7
     iget-object v1, v2, Landroid/app/usage/UsageEvents$Event;->mTaskRootPackage:Ljava/lang/String;
 
     if-eqz v1, :cond_8
 
-    .line 683
     iget-object v3, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$names:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 685
     :cond_8
     iget-object v1, v2, Landroid/app/usage/UsageEvents$Event;->mTaskRootClass:Ljava/lang/String;
 
     if-eqz v1, :cond_9
 
-    .line 686
     iget-object v3, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$names:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 688
     :cond_9
     invoke-interface {p3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

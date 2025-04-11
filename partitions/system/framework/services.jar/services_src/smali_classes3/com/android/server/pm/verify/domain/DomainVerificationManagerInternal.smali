@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 56
     new-instance v0, Ljava/util/UUID;
 
     const-wide/16 v1, 0x0
@@ -26,7 +25,6 @@
 .method public static approvalLevelToDebugString(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const-string p0, "UNKNOWN"

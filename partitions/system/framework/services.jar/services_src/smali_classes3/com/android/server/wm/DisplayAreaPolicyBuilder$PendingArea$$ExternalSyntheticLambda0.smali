@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;
 
     invoke-static {p1}, Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;->$r8$lambda$IKzgZCfeAEjRmzsllaOOd6Z8MC4(Lcom/android/server/wm/DisplayAreaPolicyBuilder$PendingArea;)I

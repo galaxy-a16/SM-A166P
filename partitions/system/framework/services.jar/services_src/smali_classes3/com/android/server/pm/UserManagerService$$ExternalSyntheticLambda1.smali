@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/os/IUserRestrictionsListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$$ExternalSyntheticLambda1;->f$0:Landroid/os/IUserRestrictionsListener;
@@ -27,7 +26,6 @@
 .method public final onUserRestrictionsChanged(ILandroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/UserManagerService$$ExternalSyntheticLambda1;->f$0:Landroid/os/IUserRestrictionsListener;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/pm/UserManagerService;->$r8$lambda$hPdZ8-Ct7kHCRyTr5N6b2BdpAEI(Landroid/os/IUserRestrictionsListener;ILandroid/os/Bundle;Landroid/os/Bundle;)V

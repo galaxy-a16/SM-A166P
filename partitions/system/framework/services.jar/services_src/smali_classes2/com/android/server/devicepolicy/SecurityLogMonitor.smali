@@ -54,7 +54,6 @@
 .method public static synthetic $r8$lambda$W1a2usl-BX-p0jlarezXSbQ64rY(Landroid/app/admin/SecurityLog$SecurityEvent;Landroid/app/admin/SecurityLog$SecurityEvent;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->lambda$getNextBatch$0(Landroid/app/admin/SecurityLog$SecurityEvent;Landroid/app/admin/SecurityLog$SecurityEvent;)I
 
     move-result p0
@@ -65,7 +64,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 87
     sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x2
@@ -76,7 +74,6 @@
 
     sput-wide v0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->RATE_LIMIT_INTERVAL_MS:J
 
-    .line 91
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x1e
@@ -89,14 +86,12 @@
 
     const-wide/16 v1, 0x1
 
-    .line 95
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->POLLING_INTERVAL_MS:J
 
-    .line 99
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x3
@@ -109,7 +104,6 @@
 
     const-wide/16 v1, 0xa
 
-    .line 102
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide v0
@@ -124,7 +118,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 57
     invoke-direct {p0, p1, v0, v1}, Lcom/android/server/devicepolicy/SecurityLogMonitor;-><init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;J)V
 
     return-void
@@ -133,10 +126,8 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;J)V
     .locals 3
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
@@ -145,10 +136,8 @@
 
     const/4 v0, 0x0
 
-    .line 104
     iput-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mMonitorThread:Ljava/lang/Thread;
 
-    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -157,13 +146,10 @@
 
     const/4 v0, 0x0
 
-    .line 110
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
-    .line 114
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mCriticalLevelLogged:Z
 
-    .line 121
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -172,16 +158,12 @@
 
     const-wide/16 v1, -0x1
 
-    .line 123
     iput-wide v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEventNanos:J
 
-    .line 129
     iput-wide v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mNextAllowedRetrievalTimeMillis:J
 
-    .line 131
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPaused:Z
 
-    .line 135
     new-instance v1, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/Semaphore;-><init>(I)V
@@ -190,16 +172,12 @@
 
     const-wide/16 v0, 0x0
 
-    .line 138
     iput-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastForceNanos:J
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 63
     iput-wide p2, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mId:J
 
-    .line 64
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide p1
@@ -212,7 +190,6 @@
 .method public static synthetic lambda$getNextBatch$0(Landroid/app/admin/SecurityLog$SecurityEvent;Landroid/app/admin/SecurityLog$SecurityEvent;)I
     .locals 2
 
-    .line 294
     invoke-virtual {p0}, Landroid/app/admin/SecurityLog$SecurityEvent;->getTimeNanos()J
 
     move-result-wide v0
@@ -235,12 +212,10 @@
 .method public final assignLogId(Landroid/app/admin/SecurityLog$SecurityEvent;)V
     .locals 4
 
-    .line 419
     iget-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mId:J
 
     invoke-virtual {p1, v0, v1}, Landroid/app/admin/SecurityLog$SecurityEvent;->setId(J)V
 
-    .line 420
     iget-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mId:J
 
     const-wide v2, 0x7fffffffffffffffL
@@ -253,12 +228,10 @@
 
     const-string v0, "Reached maximum id value; wrapping around."
 
-    .line 421
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-wide/16 v0, 0x0
 
-    .line 422
     iput-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mId:J
 
     goto :goto_0
@@ -268,7 +241,6 @@
 
     add-long/2addr v0, v2
 
-    .line 424
     iput-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mId:J
 
     :goto_0
@@ -278,7 +250,6 @@
 .method public final checkCriticalLevel()V
     .locals 2
 
-    .line 405
     invoke-static {}, Landroid/app/admin/SecurityLog;->isLoggingEnabled()Z
 
     move-result v0
@@ -287,7 +258,6 @@
 
     return-void
 
-    .line 409
     :cond_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
@@ -299,14 +269,12 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 410
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mCriticalLevelLogged:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    .line 411
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mCriticalLevelLogged:Z
 
     const/4 p0, 0x0
@@ -315,7 +283,6 @@
 
     const v0, 0x3345f
 
-    .line 412
     invoke-static {v0, p0}, Landroid/app/admin/SecurityLog;->writeEvent(I[Ljava/lang/Object;)I
 
     :cond_1
@@ -325,27 +292,22 @@
 .method public discardLogs()V
     .locals 2
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     const/4 v0, 0x0
 
-    .line 240
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
-    .line 241
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
-    .line 242
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mCriticalLevelLogged:Z
 
-    .line 243
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
@@ -354,7 +316,6 @@
 
     const-string v0, "Discarded all logs."
 
-    .line 244
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -363,17 +324,14 @@
 .method public forceLogs()J
     .locals 8
 
-    .line 511
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
-    .line 513
     iget-object v2, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mForceSemaphore:Ljava/util/concurrent/Semaphore;
 
     monitor-enter v2
 
-    .line 514
     :try_start_0
     iget-wide v3, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastForceNanos:J
 
@@ -389,7 +347,6 @@
 
     if-lez v7, :cond_0
 
-    .line 516
     sget-object p0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {p0, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
@@ -404,11 +361,9 @@
 
     return-wide v0
 
-    .line 518
     :cond_0
     iput-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastForceNanos:J
 
-    .line 521
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mForceSemaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->availablePermits()I
@@ -417,12 +372,10 @@
 
     if-nez v0, :cond_1
 
-    .line 522
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mForceSemaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {p0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 524
     :cond_1
     monitor-exit v2
 
@@ -431,7 +384,6 @@
     :catchall_0
     move-exception p0
 
-    .line 525
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -442,7 +394,6 @@
 .method public final getNextBatch(Ljava/util/ArrayList;)V
     .locals 6
 
-    .line 274
     iget-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEventNanos:J
 
     const-wide/16 v2, 0x0
@@ -451,12 +402,10 @@
 
     if-gez v0, :cond_0
 
-    .line 277
     invoke-static {p1}, Landroid/app/admin/SecurityLog;->readEvents(Ljava/util/Collection;)V
 
     goto :goto_1
 
-    .line 281
     :cond_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEvents:Ljava/util/ArrayList;
 
@@ -466,7 +415,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 282
     iget-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEventNanos:J
 
     goto :goto_0
@@ -482,14 +430,12 @@
 
     move-result-wide v0
 
-    .line 285
     :goto_0
     invoke-static {v0, v1, p1}, Landroid/app/admin/SecurityLog;->readEventsSince(JLjava/util/Collection;)V
 
     :goto_1
     const/4 v0, 0x0
 
-    .line 290
     :cond_2
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -499,7 +445,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 291
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -526,14 +471,12 @@
 
     if-lez v1, :cond_2
 
-    .line 294
     new-instance v0, Lcom/android/server/devicepolicy/SecurityLogMonitor$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/devicepolicy/SecurityLogMonitor$$ExternalSyntheticLambda0;-><init>()V
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->sort(Ljava/util/Comparator;)V
 
-    .line 298
     :cond_3
     iget p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mEnabledUser:I
 
@@ -545,7 +488,6 @@
 .method public final mergeBatchLocked(Ljava/util/ArrayList;)V
     .locals 9
 
-    .line 334
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -566,7 +508,6 @@
 
     move v2, v1
 
-    .line 341
     :goto_0
     iget-object v3, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEvents:Ljava/util/ArrayList;
 
@@ -582,19 +523,16 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 342
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/app/admin/SecurityLog$SecurityEvent;
 
-    .line 343
     invoke-virtual {v3}, Landroid/app/admin/SecurityLog$SecurityEvent;->getTimeNanos()J
 
     move-result-wide v4
 
-    .line 344
     iget-wide v6, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEventNanos:J
 
     cmp-long v6, v4, v6
@@ -603,7 +541,6 @@
 
     goto :goto_3
 
-    .line 348
     :cond_0
     iget-object v6, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEvents:Ljava/util/ArrayList;
 
@@ -613,7 +550,6 @@
 
     check-cast v6, Landroid/app/admin/SecurityLog$SecurityEvent;
 
-    .line 349
     invoke-virtual {v6}, Landroid/app/admin/SecurityLog$SecurityEvent;->getTimeNanos()J
 
     move-result-wide v7
@@ -622,10 +558,8 @@
 
     if-lez v4, :cond_1
 
-    .line 353
     invoke-virtual {p0, v3}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->assignLogId(Landroid/app/admin/SecurityLog$SecurityEvent;)V
 
-    .line 354
     iget-object v4, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -642,7 +576,6 @@
 
     goto :goto_0
 
-    .line 361
     :cond_2
     invoke-virtual {v6, v3}, Landroid/app/admin/SecurityLog$SecurityEvent;->eventEquals(Landroid/app/admin/SecurityLog$SecurityEvent;)Z
 
@@ -652,11 +585,9 @@
 
     goto :goto_2
 
-    .line 366
     :cond_3
     invoke-virtual {p0, v3}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->assignLogId(Landroid/app/admin/SecurityLog$SecurityEvent;)V
 
-    .line 367
     iget-object v4, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -666,7 +597,6 @@
 
     goto :goto_1
 
-    .line 375
     :cond_4
     :goto_3
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -677,7 +607,6 @@
 
     move-result-object p1
 
-    .line 376
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -695,21 +624,17 @@
 
     check-cast v2, Landroid/app/admin/SecurityLog$SecurityEvent;
 
-    .line 377
     invoke-virtual {p0, v2}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->assignLogId(Landroid/app/admin/SecurityLog$SecurityEvent;)V
 
     goto :goto_4
 
-    .line 380
     :cond_5
     iget-object v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 382
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->checkCriticalLevel()V
 
-    .line 384
     iget-object p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -720,12 +645,10 @@
 
     if-le p1, v1, :cond_6
 
-    .line 386
     new-instance p1, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
-    .line 387
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -734,12 +657,10 @@
 
     iget-object v3, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
-    .line 388
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    .line 386
     invoke-virtual {v1, v2, v3}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
 
     move-result-object v1
@@ -748,14 +669,12 @@
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
-    .line 389
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mCriticalLevelLogged:Z
 
     const-string p0, "SecurityLogMonitor"
 
     const-string p1, "Pending logs buffer full. Discarding old logs."
 
-    .line 390
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
@@ -765,12 +684,10 @@
 .method public final notifyDeviceOwnerOrProfileOwnerIfNeeded(Z)V
     .locals 5
 
-    .line 472
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lockInterruptibly()V
 
-    .line 474
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPaused:Z
     :try_end_0
@@ -778,14 +695,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 497
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
-    .line 477
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
@@ -804,7 +719,6 @@
 
     if-lez v0, :cond_2
 
-    .line 480
     :cond_1
     iget-boolean p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
@@ -820,7 +734,6 @@
     :goto_0
     if-lez v0, :cond_3
 
-    .line 485
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -836,10 +749,8 @@
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 491
     iput-boolean v2, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
-    .line 493
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -852,7 +763,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 497
     :cond_4
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
@@ -864,10 +774,8 @@
 
     const-string/jumbo v0, "notify DO or PO"
 
-    .line 500
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
     iget-object p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     const/4 v0, 0x0
@@ -884,12 +792,10 @@
     :catchall_0
     move-exception p1
 
-    .line 497
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 498
     throw p1
 .end method
 
@@ -900,25 +806,20 @@
 
     const-string v1, "Paused."
 
-    .line 199
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     const/4 v0, 0x1
 
-    .line 202
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPaused:Z
 
     const/4 v0, 0x0
 
-    .line 203
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
-    .line 204
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
@@ -929,12 +830,10 @@
 .method public resume()V
     .locals 3
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 217
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPaused:Z
     :try_end_0
@@ -947,12 +846,10 @@
     :try_start_1
     const-string v0, "Attempted to resume, but logging is not paused."
 
-    .line 218
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
@@ -962,26 +859,21 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 221
     :try_start_2
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPaused:Z
 
-    .line 222
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 224
     iget-object v2, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     const-string v2, "Resumed."
 
-    .line 227
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     :try_start_3
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->notifyDeviceOwnerOrProfileOwnerIfNeeded(Z)V
     :try_end_3
@@ -994,7 +886,6 @@
 
     const-string v0, "Thread interrupted."
 
-    .line 231
     invoke-static {v1, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1003,24 +894,20 @@
     :catchall_0
     move-exception v0
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 225
     throw v0
 .end method
 
 .method public retrieveLogs()Ljava/util/List;
     .locals 5
 
-    .line 252
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 254
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
@@ -1028,10 +915,8 @@
 
     const/4 v0, 0x0
 
-    .line 255
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
-    .line 256
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
@@ -1042,22 +927,18 @@
 
     iput-wide v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mNextAllowedRetrievalTimeMillis:J
 
-    .line 258
     iget-object v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
-    .line 259
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
-    .line 260
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mCriticalLevelLogged:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 266
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
@@ -1080,7 +961,6 @@
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 267
     throw v0
 .end method
 
@@ -1089,15 +969,12 @@
 
     const/16 v0, 0xa
 
-    .line 430
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 432
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 433
     :goto_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -1111,7 +988,6 @@
 
     if-nez v1, :cond_0
 
-    .line 435
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mForceSemaphore:Ljava/util/concurrent/Semaphore;
 
@@ -1123,10 +999,8 @@
 
     move-result v1
 
-    .line 437
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->getNextBatch(Ljava/util/ArrayList;)V
 
-    .line 439
     iget-object v3, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->lockInterruptibly()V
@@ -1134,25 +1008,20 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 441
     :try_start_1
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mergeBatchLocked(Ljava/util/ArrayList;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 443
     :try_start_2
     iget-object v3, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 446
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->saveLastEvents(Ljava/util/ArrayList;)V
 
-    .line 447
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 448
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/SecurityLogMonitor;->notifyDeviceOwnerOrProfileOwnerIfNeeded(Z)V
 
     goto :goto_0
@@ -1160,12 +1029,10 @@
     :catchall_0
     move-exception v1
 
-    .line 443
     iget-object v3, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 444
     throw v1
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
@@ -1176,7 +1043,6 @@
 
     const-string v1, "Thread interrupted, exiting."
 
-    .line 452
     invoke-static {v2, v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
@@ -1186,19 +1052,16 @@
 
     const-string v3, "Failed to read security log"
 
-    .line 450
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 459
     :cond_0
     :goto_1
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 460
     iget-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEventNanos:J
 
     const-wide/16 v3, -0x1
@@ -1211,13 +1074,11 @@
 
     add-long/2addr v0, v3
 
-    .line 463
     iput-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEventNanos:J
 
     :cond_1
     const-string p0, "MonitorThread exit."
 
-    .line 466
     invoke-static {v2, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1226,12 +1087,10 @@
 .method public final saveLastEvents(Ljava/util/ArrayList;)V
     .locals 5
 
-    .line 306
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 307
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1240,7 +1099,6 @@
 
     return-void
 
-    .line 314
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -1260,7 +1118,6 @@
 
     iput-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEventNanos:J
 
-    .line 317
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -1270,7 +1127,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 318
     iget-wide v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEventNanos:J
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1298,7 +1154,6 @@
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
-    .line 323
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLastEvents:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -1317,7 +1172,6 @@
 .method public start(I)V
     .locals 2
 
-    .line 148
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1336,7 +1190,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
     iput p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mEnabledUser:I
 
     const/4 p1, 0x0
@@ -1345,59 +1198,47 @@
 
     const v1, 0x3345b
 
-    .line 150
     invoke-static {v1, v0}, Landroid/app/admin/SecurityLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 153
     :try_start_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mMonitorThread:Ljava/lang/Thread;
 
     if-nez v0, :cond_0
 
-    .line 154
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPendingLogs:Ljava/util/ArrayList;
 
-    .line 155
     iput-boolean p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mCriticalLevelLogged:Z
 
     const-wide/16 v0, 0x0
 
-    .line 156
     iput-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mId:J
 
-    .line 157
     iput-boolean p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
     const-wide/16 v0, -0x1
 
-    .line 158
     iput-wide v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mNextAllowedRetrievalTimeMillis:J
 
-    .line 159
     iput-boolean p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPaused:Z
 
-    .line 161
     new-instance p1, Ljava/lang/Thread;
 
     invoke-direct {p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mMonitorThread:Ljava/lang/Thread;
 
-    .line 162
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 165
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
@@ -1412,7 +1253,6 @@
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 166
     throw p1
 .end method
 
@@ -1423,7 +1263,6 @@
 
     const-string v1, "SecurityLogMonitor"
 
-    .line 170
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -1432,26 +1271,21 @@
 
     const v3, 0x3345c
 
-    .line 171
     invoke-static {v3, v2}, Landroid/app/admin/SecurityLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 172
     iget-object v2, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 174
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mMonitorThread:Ljava/lang/Thread;
 
     if-eqz v2, :cond_0
 
-    .line 175
     invoke-virtual {v2}, Ljava/lang/Thread;->interrupt()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 177
     :try_start_1
     iget-object v2, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mMonitorThread:Ljava/lang/Thread;
 
@@ -1476,10 +1310,8 @@
     :try_start_2
     const-string v3, "Interrupted while waiting for thread to stop"
 
-    .line 179
     invoke-static {v1, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 182
     :goto_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1489,28 +1321,22 @@
 
     const-wide/16 v1, 0x0
 
-    .line 183
     iput-wide v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mId:J
 
-    .line 184
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mAllowedToRetrieve:Z
 
     const-wide/16 v1, -0x1
 
-    .line 185
     iput-wide v1, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mNextAllowedRetrievalTimeMillis:J
 
-    .line 186
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mPaused:Z
 
     const/4 v0, 0x0
 
-    .line 187
     iput-object v0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mMonitorThread:Ljava/lang/Thread;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 190
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/SecurityLogMonitor;->mLock:Ljava/util/concurrent/locks/Lock;
 
@@ -1525,6 +1351,5 @@
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 191
     throw v0
 .end method

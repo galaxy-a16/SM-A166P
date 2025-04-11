@@ -43,7 +43,6 @@
 .method public static synthetic $r8$lambda$Nv1b0nNa9riE7eEUTNthROFRo1s(Lcom/android/server/wm/Task;ZIZI)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/wm/PersonaActivityHelper;->isKnoxWindowVisible(Lcom/android/server/wm/Task;ZIZI)Z
 
     move-result p0
@@ -54,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastPIPModeActivityUserId(Lcom/android/server/wm/PersonaActivityHelper;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLastPIPModeActivityUserId:I
 
     return p0
@@ -63,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastReceivedResumedActivity(Lcom/android/server/wm/PersonaActivityHelper;)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLastReceivedResumedActivity:Lcom/android/server/wm/ActivityRecord;
 
     return-object p0
@@ -72,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastResumedSFActivity(Lcom/android/server/wm/PersonaActivityHelper;)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLastResumedSFActivity:Lcom/android/server/wm/ActivityRecord;
 
     return-object p0
@@ -81,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fputmLastPIPModeActivityUserId(Lcom/android/server/wm/PersonaActivityHelper;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLastPIPModeActivityUserId:I
 
     return-void
@@ -90,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$mcheckAndLockSecureFolder(Lcom/android/server/wm/PersonaActivityHelper;Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->checkAndLockSecureFolder(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -99,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$mremoveMinimizedFreeformTaskExplicitly(Lcom/android/server/wm/PersonaActivityHelper;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->removeMinimizedFreeformTaskExplicitly(I)V
 
     return-void
@@ -108,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$msetFocusIfNecessary(Lcom/android/server/wm/PersonaActivityHelper;Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->setFocusIfNecessary(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -117,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$smisActivityNeedtoFinish(Lcom/android/server/wm/ActivityRecord;I)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->isActivityNeedtoFinish(Lcom/android/server/wm/ActivityRecord;I)Z
 
     move-result p0
@@ -128,66 +119,52 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;Landroid/os/Looper;Lcom/android/server/wm/RootWindowContainer;)V
     .locals 0
 
-    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p3, 0x0
 
-    .line 101
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mDesktopModeManager:Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
-    .line 111
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mWms:Lcom/android/server/wallpaper/WallpaperManagerService;
 
-    .line 113
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLastReceivedResumedActivity:Lcom/android/server/wm/ActivityRecord;
 
-    .line 114
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLastResumedSFActivity:Lcom/android/server/wm/ActivityRecord;
 
-    .line 440
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
-    .line 118
     iput-object p1, p0, Lcom/android/server/wm/PersonaActivityHelper;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 119
     iget-object p3, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
 
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mContext:Landroid/content/Context;
 
-    .line 120
     iput-object p2, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLooper:Landroid/os/Looper;
 
-    .line 121
     invoke-virtual {p3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 122
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
-    .line 123
     new-instance p3, Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     invoke-direct {p3, p0, p2}, Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;-><init>(Lcom/android/server/wm/PersonaActivityHelper;Landroid/os/Looper;)V
 
     iput-object p3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
-    .line 125
     new-instance p2, Lcom/android/server/wm/PersonaActivityHelper$1;
 
     invoke-direct {p2, p0}, Lcom/android/server/wm/PersonaActivityHelper$1;-><init>(Lcom/android/server/wm/PersonaActivityHelper;)V
 
     invoke-virtual {p1, p2}, Lcom/android/server/wm/ActivityTaskManagerService;->registerTaskStackListener(Landroid/app/ITaskStackListener;)V
 
-    .line 139
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityTaskManagerService;->getTransitionController()Lcom/android/server/wm/TransitionController;
 
     move-result-object p1
@@ -206,7 +183,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 627
     iget p0, p0, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
     if-ne p0, p1, :cond_0
@@ -226,7 +202,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 299
     invoke-virtual {p0}, Lcom/android/server/wm/Task;->topRunningActivityLocked()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
@@ -235,7 +210,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 301
     iget p1, p0, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
@@ -252,7 +226,6 @@
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 303
     iget-boolean p1, p0, Lcom/android/server/wm/ActivityRecord;->nowVisible:Z
 
     if-nez p1, :cond_3
@@ -260,7 +233,6 @@
     :cond_2
     if-nez p3, :cond_6
 
-    .line 304
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->isVisible()Z
 
     move-result p1
@@ -272,7 +244,6 @@
 
     if-eq p4, p1, :cond_4
 
-    .line 305
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result p0
@@ -298,7 +269,6 @@
 .method public final LockSecureFolderTask(Lcom/android/server/wm/ActivityRecord;)V
     .locals 2
 
-    .line 368
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->isActivityInResumedState(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v0
@@ -307,7 +277,6 @@
 
     return-void
 
-    .line 372
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mContext:Landroid/content/Context;
 
@@ -317,7 +286,6 @@
 
     if-lez v0, :cond_2
 
-    .line 373
     iget v1, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
     invoke-static {v1}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
@@ -326,7 +294,6 @@
 
     if-nez v1, :cond_2
 
-    .line 374
     invoke-virtual {p0, v0}, Lcom/android/server/wm/PersonaActivityHelper;->isImmediateLockSet(I)Z
 
     move-result v1
@@ -356,7 +323,6 @@
     :cond_1
     return-void
 
-    .line 379
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->sendLockSecureFolderMessage(Lcom/android/server/wm/ActivityRecord;)V
 
@@ -366,14 +332,12 @@
 .method public final canShowWhenLocked(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 1
 
-    .line 597
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->canShowWhenLocked()Z
 
     move-result p0
 
     if-nez p0, :cond_2
 
-    .line 599
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
     const-string v0, "com.samsung.android.incallui"
@@ -398,7 +362,6 @@
 
     const-string v0, "com.android.calendar/.alerts.PopUpActivity"
 
-    .line 600
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -409,7 +372,6 @@
 
     const-string v0, "com.samsung.android.calendar/com.samsung.android.app.calendarnotification.AlertPopupActivity"
 
-    .line 601
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -420,7 +382,6 @@
 
     const-string v0, "com.microsoft.teams/com.microsoft.skype.teams.views.activities.PreCallActivity"
 
-    .line 602
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -431,7 +392,6 @@
 
     const-string p1, "com.microsoft.teams/com.microsoft.skype.teams.views.activities.InCallActivity"
 
-    .line 603
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -459,7 +419,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 242
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->resultTo:Lcom/android/server/wm/ActivityRecord;
 
     goto :goto_0
@@ -470,7 +429,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 243
     iget v1, v0, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
     invoke-static {v1}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
@@ -495,7 +453,6 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 247
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->LockSecureFolderTask(Lcom/android/server/wm/ActivityRecord;)V
 
     :cond_2
@@ -507,7 +464,6 @@
 
     const-string/jumbo v0, "persist.sys.knox.userinfo"
 
-    .line 557
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -518,7 +474,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 559
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -536,20 +491,17 @@
     :goto_0
     move v0, v1
 
-    .line 562
     :goto_1
     iget-object v3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaManager:Lcom/android/server/pm/PersonaManagerService;
 
     if-nez v3, :cond_2
 
-    .line 563
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->getPersonaManager()Lcom/android/server/pm/PersonaManagerService;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaManager:Lcom/android/server/pm/PersonaManagerService;
 
-    .line 565
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaManager:Lcom/android/server/pm/PersonaManagerService;
 
@@ -559,13 +511,11 @@
 
     return v2
 
-    .line 568
     :cond_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v3
 
-    .line 570
     :try_start_0
     invoke-static {v1}, Lcom/samsung/android/knox/SemPersonaManager;->isDoEnabled(I)Z
 
@@ -576,7 +526,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 576
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -595,7 +544,6 @@
     :catch_0
     move-exception p0
 
-    .line 574
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
@@ -606,23 +554,19 @@
     :goto_3
     return v1
 
-    .line 576
     :goto_4
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 577
     throw p0
 .end method
 
 .method public final createLockSecureFolderMessageBundle(Lcom/android/server/wm/ActivityRecord;)Landroid/os/Bundle;
     .locals 2
 
-    .line 516
     new-instance p0, Landroid/os/Bundle;
 
     invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
 
-    .line 517
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->isActivityTypeHome()Z
 
     move-result v0
@@ -633,7 +577,6 @@
 
     const-string v0, "componentName"
 
-    .line 518
     iget-object p1, p1, Lcom/android/server/wm/ActivityRecord;->shortComponentName:Ljava/lang/String;
 
     invoke-virtual {p0, v0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -644,27 +587,22 @@
 .method public exitAndLockSecureFolder(I)V
     .locals 2
 
-    .line 731
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->notifyKillForegroundAppsForUser(I)Z
 
-    .line 732
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     const/16 v1, 0x25c
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 733
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 734
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 735
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -675,21 +613,18 @@
 .method public getCurrentScreenUserId(Landroid/os/UserHandle;)Landroid/os/UserHandle;
     .locals 3
 
-    .line 530
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->checkKnoxFeatureEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 531
     invoke-static {}, Lcom/samsung/android/knox/SemPersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
     const-string/jumbo v1, "version"
 
-    .line 532
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -702,7 +637,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 533
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->getSemPersonaManager()Lcom/samsung/android/knox/SemPersonaManager;
 
     move-result-object v0
@@ -711,7 +645,6 @@
 
     move-result v0
 
-    .line 534
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -730,7 +663,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->getUserManager()Lcom/android/server/pm/UserManagerService;
 
     move-result-object p0
@@ -741,7 +673,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 537
     invoke-virtual {p0}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
     move-result v1
@@ -754,13 +685,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 538
     :cond_0
     new-instance p0, Landroid/os/UserHandle;
 
     invoke-direct {p0, v0}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 539
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -782,19 +711,16 @@
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 543
     invoke-virtual {p0}, Landroid/content/pm/UserInfo;->isUserTypeAppSeparation()Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 544
     new-instance p0, Landroid/os/UserHandle;
 
     invoke-direct {p0, v0}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 545
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -813,7 +739,6 @@
 
     return-object p0
 
-    .line 549
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -838,12 +763,10 @@
 .method public final getDesktopModeManager()Lcom/samsung/android/desktopmode/SemDesktopModeManager;
     .locals 2
 
-    .line 496
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mDesktopModeManager:Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
     if-nez v0, :cond_0
 
-    .line 497
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mContext:Landroid/content/Context;
 
     const-string v1, "desktopmode"
@@ -856,7 +779,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mDesktopModeManager:Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
-    .line 499
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mDesktopModeManager:Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
@@ -866,12 +788,10 @@
 .method public final getKeyguardManager()Landroid/app/KeyguardManager;
     .locals 2
 
-    .line 590
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     if-nez v0, :cond_0
 
-    .line 591
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mContext:Landroid/content/Context;
 
     const-string v1, "keyguard"
@@ -884,7 +804,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 593
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mKeyguardManager:Landroid/app/KeyguardManager;
 
@@ -894,19 +813,16 @@
 .method public getPersonaManager()Lcom/android/server/pm/PersonaManagerService;
     .locals 1
 
-    .line 610
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaManager:Lcom/android/server/pm/PersonaManagerService;
 
     if-nez v0, :cond_0
 
     const-string/jumbo v0, "persona"
 
-    .line 611
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 613
     invoke-static {v0}, Lcom/samsung/android/knox/ISemPersonaManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/knox/ISemPersonaManager;
 
     move-result-object v0
@@ -915,7 +831,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaManager:Lcom/android/server/pm/PersonaManagerService;
 
-    .line 616
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaManager:Lcom/android/server/pm/PersonaManagerService;
 
@@ -925,12 +840,10 @@
 .method public getRecentExcludedUsers()Ljava/util/Set;
     .locals 8
 
-    .line 341
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 342
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->checkKnoxFeatureEnabled()Z
 
     move-result v1
@@ -947,7 +860,6 @@
 
     goto :goto_3
 
-    .line 343
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->getUserManager()Lcom/android/server/pm/UserManagerService;
 
@@ -959,7 +871,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 345
     array-length v2, v1
 
     const/4 v3, 0x0
@@ -971,14 +882,12 @@
 
     aget v5, v1, v4
 
-    .line 346
     invoke-static {v5}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 347
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->getUserManager()Lcom/android/server/pm/UserManagerService;
 
     move-result-object v6
@@ -989,7 +898,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 348
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -998,7 +906,6 @@
 
     goto :goto_2
 
-    .line 349
     :cond_1
     invoke-static {v5}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
 
@@ -1006,7 +913,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 350
     iget-object v6, p0, Lcom/android/server/wm/PersonaActivityHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1031,7 +937,6 @@
     :goto_1
     if-nez v6, :cond_3
 
-    .line 353
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -1052,12 +957,10 @@
 .method public final getSemPersonaManager()Lcom/samsung/android/knox/SemPersonaManager;
     .locals 2
 
-    .line 583
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mSemPersonaManager:Lcom/samsung/android/knox/SemPersonaManager;
 
     if-nez v0, :cond_0
 
-    .line 584
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "persona"
@@ -1070,7 +973,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mSemPersonaManager:Lcom/samsung/android/knox/SemPersonaManager;
 
-    .line 586
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mSemPersonaManager:Lcom/samsung/android/knox/SemPersonaManager;
 
@@ -1080,19 +982,16 @@
 .method public final getUserManager()Lcom/android/server/pm/UserManagerService;
     .locals 1
 
-    .line 620
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
     if-nez v0, :cond_0
 
-    .line 621
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
-    .line 623
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
@@ -1108,7 +1007,6 @@
 
     return p0
 
-    .line 393
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getState()Lcom/android/server/wm/ActivityRecord$State;
 
@@ -1122,7 +1020,6 @@
 
     const-string v0, "Activity not in resumed state, do not run immediate lock"
 
-    .line 394
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return p0
@@ -1136,7 +1033,6 @@
 .method public final isDesktopMode()Z
     .locals 2
 
-    .line 487
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->getDesktopModeManager()Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
     move-result-object v0
@@ -1145,7 +1041,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 488
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->getDesktopModeManager()Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
     move-result-object p0
@@ -1154,7 +1049,6 @@
 
     move-result-object p0
 
-    .line 489
     invoke-virtual {p0}, Lcom/samsung/android/desktopmode/SemDesktopModeState;->getEnabled()I
 
     move-result p0
@@ -1179,7 +1073,6 @@
 
     const/4 v0, 0x0
 
-    .line 405
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mContext:Landroid/content/Context;
 
@@ -1221,7 +1114,6 @@
     :catch_0
     move-exception p0
 
-    .line 415
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v0
@@ -1230,7 +1122,6 @@
 .method public isKnoxWindowVisibleLocked(ZIZII)Z
     .locals 10
 
-    .line 321
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->checkKnoxFeatureEnabled()Z
 
     move-result p4
@@ -1245,7 +1136,6 @@
 
     goto :goto_1
 
-    .line 322
     :cond_0
     iget-object p4, p0, Lcom/android/server/wm/PersonaActivityHelper;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -1255,7 +1145,6 @@
 
     monitor-enter p4
 
-    .line 323
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/PersonaActivityHelper;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
@@ -1270,7 +1159,6 @@
     :goto_0
     if-ltz v1, :cond_2
 
-    .line 324
     iget-object v3, p0, Lcom/android/server/wm/PersonaActivityHelper;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
     invoke-virtual {v3, v1}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
@@ -1281,14 +1169,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 327
     new-instance v4, Lcom/android/server/wm/PersonaActivityHelper$$ExternalSyntheticLambda0;
 
     invoke-direct {v4}, Lcom/android/server/wm/PersonaActivityHelper$$ExternalSyntheticLambda0;-><init>()V
 
     const-class v5, Lcom/android/server/wm/Task;
 
-    .line 328
     invoke-static {v5}, Lcom/android/internal/util/function/pooled/PooledLambda;->__(Ljava/lang/Class;)Lcom/android/internal/util/function/pooled/ArgumentPlaceholder;
 
     move-result-object v5
@@ -1309,22 +1195,18 @@
 
     move-result-object v9
 
-    .line 327
     invoke-static/range {v4 .. v9}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainPredicate(Lcom/android/internal/util/function/QuintPredicate;Lcom/android/internal/util/function/pooled/ArgumentPlaceholder;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/android/internal/util/function/pooled/PooledPredicate;
 
     move-result-object v4
 
-    .line 329
     invoke-virtual {v3, v4, v2}, Lcom/android/server/wm/DisplayArea;->getTask(Ljava/util/function/Predicate;Z)Lcom/android/server/wm/Task;
 
     move-result-object v3
 
-    .line 330
     invoke-interface {v4}, Lcom/android/internal/util/function/pooled/PooledPredicate;->recycle()V
 
     if-eqz v3, :cond_1
 
-    .line 332
     monitor-exit p4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1338,7 +1220,6 @@
 
     goto :goto_0
 
-    .line 336
     :cond_2
     :try_start_1
     monitor-exit p4
@@ -1369,12 +1250,10 @@
 .method public final isLockSecureFolderExceptionalCase(Ljava/lang/String;)Z
     .locals 2
 
-    .line 443
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 444
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -1383,143 +1262,122 @@
 
     const-string v1, "com.android.systemui/.keyguard.WorkLockActivity"
 
-    .line 445
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 447
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "android/com.android.internal.app.ForwardIntentToManagedProfile"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 448
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "android/com.android.internal.app.ForwardIntentToManagedProfile4"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 450
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.android.intentresolver/.ChooserActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 451
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.android.allshare.service.fileshare/.client.DeviceSelectActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 452
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.sec.android.app.myfiles/.external.ui.PermissionActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 453
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 454
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.ManagePermissionsActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 455
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.google.android.permissioncontroller/com.android.permissioncontroller.role.ui.RequestRoleActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 456
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.android.messaging/.ui.view.main.WithActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 457
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.android.messaging/.ui.view.recipientspicker.PickerActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 458
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.android.messaging/.ui.view.firstlaunch.GoogleFirstLaunchActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 459
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.google.android.gms/.constellation.ui.ApiConsentActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 460
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.android.messaging/com.android.mms.ui.ConversationComposer"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 461
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.android.messaging/.ui.view.permission.CheckDefaultSmsAppsActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 465
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.android.biometrics.app.setting/.fingerprint.enroll.FingerprintEnrollActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 466
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.android.settings.notification.SecRedactionInterstitial"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 467
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.wssyncmldm/com.idm.fotaagent.enabler.ui.downloadconfirm.DownloadConfirmActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 470
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->isRunningDexOnPc()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 471
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
     const-string v1, "com.samsung.knox.securefolder/.presentation.switcher.view.SecureFolderShortcutActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 475
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLockSecureFolderExceptionalList:Ljava/util/List;
 
@@ -1557,7 +1415,6 @@
 
     const/4 v0, 0x0
 
-    .line 744
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/PersonaActivityHelper;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -1569,7 +1426,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 745
     :try_start_1
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
@@ -1579,7 +1435,6 @@
 
     if-nez p0, :cond_0
 
-    .line 747
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1588,7 +1443,6 @@
 
     return v0
 
-    .line 749
     :cond_0
     :try_start_2
     invoke-virtual {p0}, Lcom/android/server/wm/TaskFragment;->getTopNonFinishingActivity()Lcom/android/server/wm/ActivityRecord;
@@ -1597,7 +1451,6 @@
 
     if-nez p0, :cond_1
 
-    .line 751
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -1606,7 +1459,6 @@
 
     return v0
 
-    .line 753
     :cond_1
     :try_start_3
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
@@ -1625,7 +1477,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 754
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -1636,7 +1487,6 @@
 
     return p0
 
-    .line 756
     :cond_2
     :try_start_4
     monitor-exit v1
@@ -1670,7 +1520,6 @@
 
     const-string p1, "PersonaActivityHelper"
 
-    .line 758
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1698,7 +1547,6 @@
 .method public final isRunningDexOnPc()Z
     .locals 2
 
-    .line 479
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->isDesktopMode()Z
 
     move-result v0
@@ -1727,7 +1575,6 @@
 
     const-string v0, "DeX on PC is running"
 
-    .line 480
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
@@ -1745,7 +1592,6 @@
 
     const/4 p1, 0x1
 
-    .line 385
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -1758,7 +1604,6 @@
 
     const/4 v0, 0x0
 
-    .line 428
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->getKeyguardManager()Landroid/app/KeyguardManager;
 
@@ -1788,7 +1633,6 @@
     :catch_0
     move-exception p0
 
-    .line 432
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v0
@@ -1797,7 +1641,6 @@
 .method public notifyActivityResumedLocked(Lcom/android/server/wm/ActivityRecord;Z)V
     .locals 11
 
-    .line 258
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->checkKnoxFeatureEnabled()Z
 
     move-result v0
@@ -1819,23 +1662,19 @@
 
     return-void
 
-    .line 263
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getState()Lcom/android/server/wm/ActivityRecord$State;
 
     move-result-object v0
 
-    .line 264
     iget v3, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
-    .line 265
     iget-object v2, p1, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     invoke-virtual {v2}, Landroid/content/pm/ActivityInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v4
 
-    .line 266
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v2
@@ -1844,7 +1683,6 @@
 
     move-result v6
 
-    .line 267
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v2
@@ -1853,7 +1691,6 @@
 
     move-result v7
 
-    .line 268
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->occludesParent()Z
 
     move-result v8
@@ -1862,7 +1699,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 269
     iget-boolean p2, p1, Lcom/android/server/wm/ActivityRecord;->nowVisible:Z
 
     if-nez p2, :cond_2
@@ -1881,28 +1717,23 @@
     :cond_3
     move v9, v1
 
-    .line 270
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->canShowWhenLocked(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result p2
 
-    .line 271
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->isDexMode()Z
 
     move-result v10
 
-    .line 273
     sget-object p1, Lcom/android/server/wm/ActivityRecord$State;->RESUMED:Lcom/android/server/wm/ActivityRecord$State;
 
     if-ne v0, p1, :cond_5
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaManager:Lcom/android/server/pm/PersonaManagerService;
 
     if-eqz p2, :cond_4
 
-    .line 277
     invoke-static {v3}, Lcom/samsung/android/app/SemDualAppManager;->isDualAppId(I)Z
 
     move-result p1
@@ -1919,7 +1750,6 @@
     :goto_1
     move-object v2, p0
 
-    .line 274
     invoke-virtual/range {v2 .. v10}, Lcom/android/server/pm/PersonaManagerService;->postActiveUserChange(ILandroid/content/ComponentName;ZIIZZZ)V
 
     :cond_5
@@ -1929,7 +1759,6 @@
 .method public notifyKillForegroundAppsForUser(I)Z
     .locals 2
 
-    .line 287
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->checkKnoxFeatureEnabled()Z
 
     move-result v0
@@ -1940,7 +1769,6 @@
 
     return v1
 
-    .line 288
     :cond_0
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
@@ -1948,7 +1776,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 289
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     const/16 v1, 0x25a
@@ -1957,10 +1784,8 @@
 
     move-result-object v0
 
-    .line 290
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 291
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -1976,7 +1801,6 @@
 .method public notifySetResumedActivityUncheckLocked(Lcom/android/server/wm/ActivityRecord;)V
     .locals 2
 
-    .line 221
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->checkKnoxFeatureEnabled()Z
 
     move-result v0
@@ -1990,11 +1814,9 @@
 
     return-void
 
-    .line 224
     :cond_1
     iput-object p1, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLastReceivedResumedActivity:Lcom/android/server/wm/ActivityRecord;
 
-    .line 227
     iget v0, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
     invoke-static {v0}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
@@ -2014,7 +1836,6 @@
     :cond_2
     iput-object p1, p0, Lcom/android/server/wm/PersonaActivityHelper;->mLastResumedSFActivity:Lcom/android/server/wm/ActivityRecord;
 
-    .line 229
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
@@ -2022,17 +1843,14 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 230
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 231
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 232
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -2045,7 +1863,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 181
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -2054,7 +1871,6 @@
 
     const-string p2, "android.app.action.PROVISION_MANAGED_PROFILE"
 
-    .line 182
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p3
@@ -2067,7 +1883,6 @@
 
     const-string p2, "android.app.action.PROVISION_MANAGED_USER"
 
-    .line 183
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p3
@@ -2080,7 +1895,6 @@
 
     const-string p2, "android.app.action.PROVISION_MANAGED_DEVICE"
 
-    .line 184
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p3
@@ -2093,7 +1907,6 @@
 
     const-string p2, "android.app.action.PROVISION_MANAGED_SHAREABLE_DEVICE"
 
-    .line 185
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p3
@@ -2106,7 +1919,6 @@
 
     const-string p2, "com.android.managedprovisioning.action.RESUME_PROVISIONING"
 
-    .line 186
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p3
@@ -2122,17 +1934,14 @@
 
     const/4 p3, -0x1
 
-    .line 188
     invoke-virtual {p1, p2, p3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p4
 
-    .line 189
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 190
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2171,13 +1980,11 @@
 
     return-object p1
 
-    .line 195
     :cond_1
     invoke-virtual {p1, p2}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
 
     return-object p1
 
-    .line 201
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->checkKnoxFeatureEnabled()Z
 
@@ -2187,7 +1994,6 @@
 .method public notifyTaskStackChanged()V
     .locals 0
 
-    .line 739
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityTaskManagerService;->getTaskChangeNotificationController()Lcom/android/server/wm/TaskChangeNotificationController;
@@ -2202,17 +2008,14 @@
 .method public onSystemReady()V
     .locals 2
 
-    .line 175
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.MANAGED_PROFILE_REMOVED"
 
-    .line 176
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 177
     invoke-virtual {p0}, Lcom/android/server/wm/PersonaActivityHelper;->checkKnoxFeatureEnabled()Z
 
     return-void
@@ -2221,7 +2024,6 @@
 .method public final removeMinimizedFreeformTaskExplicitly(I)V
     .locals 4
 
-    .line 717
     :try_start_0
     invoke-static {}, Lcom/samsung/android/multiwindow/MultiWindowManager;->getInstance()Lcom/samsung/android/multiwindow/MultiWindowManager;
 
@@ -2233,14 +2035,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 718
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 719
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2259,12 +2059,10 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 720
     iget v2, v1, Landroid/app/ActivityManager$RunningTaskInfo;->userId:I
 
     if-ne v2, p1, :cond_0
 
-    .line 721
     iget-object v2, p0, Lcom/android/server/wm/PersonaActivityHelper;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
@@ -2280,7 +2078,6 @@
     :catch_0
     move-exception p0
 
-    .line 726
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2306,33 +2103,28 @@
 .method public final sendLockSecureFolderMessage(Lcom/android/server/wm/ActivityRecord;)V
     .locals 2
 
-    .line 505
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     const/16 v1, 0x25b
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 506
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 508
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PersonaActivityHelper;->createLockSecureFolderMessageBundle(Lcom/android/server/wm/ActivityRecord;)Landroid/os/Bundle;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 509
     iget p1, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 510
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaActivityHandler:Lcom/android/server/wm/PersonaActivityHelper$PersonaActivityHandler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -2343,7 +2135,6 @@
 .method public final setFocusIfNecessary(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 237
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mPersonaManager:Lcom/android/server/pm/PersonaManagerService;
 
     iget p1, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
@@ -2356,21 +2147,17 @@
 .method public setWindowManager(Lcom/android/server/wm/WindowManagerService;)V
     .locals 1
 
-    .line 168
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     monitor-enter v0
 
-    .line 169
     :try_start_0
     iput-object p1, p0, Lcom/android/server/wm/PersonaActivityHelper;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 170
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
 
     iput-object p1, p0, Lcom/android/server/wm/PersonaActivityHelper;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 171
     monitor-exit v0
 
     return-void

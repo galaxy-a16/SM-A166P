@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/WindowState;
 
     invoke-static {p1}, Lcom/android/server/wm/InsetsStateController;->$r8$lambda$ysCnX7fS-2tUJY5jK31WLy-O5oc(Lcom/android/server/wm/WindowState;)V

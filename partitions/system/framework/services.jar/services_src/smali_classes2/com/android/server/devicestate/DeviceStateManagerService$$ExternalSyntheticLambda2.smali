@@ -20,7 +20,6 @@
 .method public final setDebugTracingDeviceStateProperty(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/devicestate/DeviceStateManagerService;->$r8$lambda$VHF1mjP7kFymPK8JcO5GRKQJO8E(Ljava/lang/String;)V
 
     return-void

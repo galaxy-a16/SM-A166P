@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetchangeOffReason(Lcom/android/server/power/Notifier$Interactivity;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/power/Notifier$Interactivity;->changeOffReason:I
 
     return p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetchangeOnReason(Lcom/android/server/power/Notifier$Interactivity;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/power/Notifier$Interactivity;->changeOnReason:I
 
     return p0
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fputchangeOffReason(Lcom/android/server/power/Notifier$Interactivity;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/power/Notifier$Interactivity;->changeOffReason:I
 
     return-void
@@ -46,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$fputchangeOnReason(Lcom/android/server/power/Notifier$Interactivity;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/power/Notifier$Interactivity;->changeOnReason:I
 
     return-void
@@ -55,12 +51,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 165
     iput-boolean v0, p0, Lcom/android/server/power/Notifier$Interactivity;->isInteractive:Z
 
     return-void
@@ -69,7 +63,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/Notifier$Interactivity-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/power/Notifier$Interactivity;-><init>()V
 
     return-void

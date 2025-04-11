@@ -14,32 +14,26 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 150
     new-instance p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache;-><init>(Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache-IA;)V
 
-    .line 151
     sput-object v0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
-    .line 153
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 155
     sput-object v0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
     goto :goto_0
 
-    .line 157
     :cond_0
     sput-object p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
@@ -52,12 +46,10 @@
 .method public getEnergyConsumed([I)[Landroid/hardware/power/stats/EnergyConsumerResult;
     .locals 1
 
-    .line 213
     sget-object p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
     if-eqz p0, :cond_0
 
-    .line 216
     :try_start_0
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -76,7 +68,6 @@
     :catch_0
     move-exception p0
 
-    .line 218
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsHALWrapper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -95,12 +86,10 @@
 .method public getEnergyConsumerInfo()[Landroid/hardware/power/stats/EnergyConsumer;
     .locals 2
 
-    .line 197
     sget-object p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
     if-eqz p0, :cond_0
 
-    .line 199
     :try_start_0
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -119,7 +108,6 @@
     :catch_0
     move-exception p0
 
-    .line 201
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsHALWrapper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -138,12 +126,10 @@
 .method public getEnergyMeterInfo()[Landroid/hardware/power/stats/Channel;
     .locals 2
 
-    .line 229
     sget-object p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
     if-eqz p0, :cond_0
 
-    .line 231
     :try_start_0
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -162,7 +148,6 @@
     :catch_0
     move-exception p0
 
-    .line 233
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsHALWrapper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -181,12 +166,10 @@
 .method public getPowerEntityInfo()[Landroid/hardware/power/stats/PowerEntity;
     .locals 2
 
-    .line 165
     sget-object p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
     if-eqz p0, :cond_0
 
-    .line 167
     :try_start_0
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -205,7 +188,6 @@
     :catch_0
     move-exception p0
 
-    .line 169
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsHALWrapper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -224,12 +206,10 @@
 .method public getStateResidency([I)[Landroid/hardware/power/stats/StateResidencyResult;
     .locals 1
 
-    .line 181
     sget-object p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
     if-eqz p0, :cond_0
 
-    .line 184
     :try_start_0
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -248,7 +228,6 @@
     :catch_0
     move-exception p0
 
-    .line 186
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsHALWrapper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -267,7 +246,6 @@
 .method public isInitialized()Z
     .locals 0
 
-    .line 258
     sget-object p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
     if-eqz p0, :cond_0
@@ -286,12 +264,10 @@
 .method public readEnergyMeter([I)[Landroid/hardware/power/stats/EnergyMeasurement;
     .locals 1
 
-    .line 244
     sget-object p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$PowerStatsHAL20WrapperImpl;->sVintfPowerStats:Ljava/util/function/Supplier;
 
     if-eqz p0, :cond_0
 
-    .line 247
     :try_start_0
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -310,7 +286,6 @@
     :catch_0
     move-exception p0
 
-    .line 249
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsHALWrapper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

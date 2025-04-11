@@ -40,7 +40,6 @@
 .method public static synthetic $values()[Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
     .locals 11
 
-    .line 149
     sget-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_CREATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     sget-object v1, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_UPDATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
@@ -73,7 +72,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 150
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/4 v1, 0x0
@@ -86,7 +84,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_CREATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 152
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/4 v1, 0x1
@@ -99,7 +96,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_UPDATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 154
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/4 v1, 0x2
@@ -112,7 +108,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_UPDATED_BY_USER:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 156
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/4 v1, 0x3
@@ -125,7 +120,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_DELETED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 158
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/4 v1, 0x4
@@ -138,7 +132,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_GROUP_CREATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 160
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/4 v1, 0x5
@@ -151,7 +144,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_GROUP_UPDATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 162
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/4 v1, 0x6
@@ -164,7 +156,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_GROUP_DELETED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 164
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/4 v1, 0x7
@@ -177,7 +168,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_CONVERSATION_CREATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 166
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/16 v1, 0x8
@@ -190,7 +180,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_CONVERSATION_DELETED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 168
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/16 v1, 0x9
@@ -203,7 +192,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->APP_NOTIFICATIONS_BLOCKED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 170
     new-instance v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     const/16 v1, 0xa
@@ -216,7 +204,6 @@
 
     sput-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->APP_NOTIFICATIONS_UNBLOCKED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
-    .line 149
     invoke-static {}, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->$values()[Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     move-result-object v0
@@ -229,10 +216,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 174
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 175
     iput p3, p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->mId:I
 
     return-void
@@ -243,7 +228,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 206
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->APP_NOTIFICATIONS_UNBLOCKED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     goto :goto_0
@@ -258,19 +242,16 @@
 .method public static getCreated(Landroid/app/NotificationChannel;)Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
     .locals 0
 
-    .line 188
     invoke-virtual {p0}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 189
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_CONVERSATION_CREATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     goto :goto_0
 
-    .line 190
     :cond_0
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_CREATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
@@ -281,19 +262,16 @@
 .method public static getDeleted(Landroid/app/NotificationChannel;)Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
     .locals 0
 
-    .line 194
     invoke-virtual {p0}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 195
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_CONVERSATION_DELETED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     goto :goto_0
 
-    .line 196
     :cond_0
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_DELETED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
@@ -306,12 +284,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 201
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_GROUP_CREATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     goto :goto_0
 
-    .line 202
     :cond_0
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_GROUP_DELETED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
@@ -324,12 +300,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 183
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_UPDATED_BY_USER:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     goto :goto_0
 
-    .line 184
     :cond_0
     sget-object p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->NOTIFICATION_CHANNEL_UPDATED:Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
@@ -340,7 +314,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
     .locals 1
 
-    .line 149
     const-class v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -355,7 +328,6 @@
 .method public static values()[Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
     .locals 1
 
-    .line 149
     sget-object v0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->$VALUES:[Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;
 
     invoke-virtual {v0}, [Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->clone()Ljava/lang/Object;
@@ -372,7 +344,6 @@
 .method public getId()I
     .locals 0
 
-    .line 178
     iget p0, p0, Lcom/android/server/notification/NotificationChannelLogger$NotificationChannelEvent;->mId:I
 
     return p0

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/devicepolicy/UpdateInstaller;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/UpdateInstaller$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/devicepolicy/UpdateInstaller;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/devicepolicy/UpdateInstaller$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/devicepolicy/UpdateInstaller;
 
     invoke-static {p0}, Lcom/android/server/devicepolicy/UpdateInstaller;->$r8$lambda$-emZQM-jbZiY37U1iiTwtTim7fo(Lcom/android/server/devicepolicy/UpdateInstaller;)V

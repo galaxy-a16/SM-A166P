@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;)V
     .locals 0
 
-    .line 4617
     iput-object p1, p0, Lcom/android/server/audio/AudioService$4;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Landroid/media/IPlaybackConfigDispatcher$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public dispatchPlaybackConfigChange(Ljava/util/List;Z)V
     .locals 7
 
-    .line 4621
     iget-object p0, p0, Lcom/android/server/audio/AudioService$4;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {p0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmAudioHandler(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/AudioService$AudioHandler;

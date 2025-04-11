@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;)V
     .locals 0
 
-    .line 434
     iput-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayChanged(I)V
     .locals 6
 
-    .line 445
     iget-object v0, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {v0, p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fputmDisplayId(Lcom/samsung/android/camera/CameraServiceWorker;I)V
@@ -45,7 +42,6 @@
 
     return-void
 
-    .line 451
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -61,7 +57,6 @@
 
     move-result p1
 
-    .line 452
     iget-object v0, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {v0}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmLock(Lcom/samsung/android/camera/CameraServiceWorker;)Ljava/lang/Object;
@@ -73,7 +68,6 @@
     :try_start_0
     const-string v1, "CameraService_worker"
 
-    .line 453
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,7 +96,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     iget-object v1, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {v1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmLastDisplayRotation(Lcom/samsung/android/camera/CameraServiceWorker;)I
@@ -115,7 +108,6 @@
 
     if-ne v1, p1, :cond_1
 
-    .line 455
     iget-object v1, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {v1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmDeviceState(Lcom/samsung/android/camera/CameraServiceWorker;)J
@@ -134,14 +126,12 @@
 
     iget-object v1, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
-    .line 457
     invoke-virtual {v1}, Lcom/samsung/android/camera/CameraServiceWorker;->isCoverFlexRotateApp()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 458
     iget-object v1, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {v1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmDeviceState(Lcom/samsung/android/camera/CameraServiceWorker;)J
@@ -156,7 +146,6 @@
 
     goto :goto_0
 
-    .line 460
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -170,13 +159,11 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/camera/CameraServiceWorker;->notifyDeviceChange(J)V
 
-    .line 462
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$2;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p0, p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fputmLastDisplayRotation(Lcom/samsung/android/camera/CameraServiceWorker;I)V
 
-    .line 464
     :cond_2
     monitor-exit v0
 
@@ -195,6 +182,5 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

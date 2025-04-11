@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 441
     iput-object p1, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,19 +35,15 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 442
     :goto_0
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 443
     iput p2, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->mIndex:I
 
-    .line 444
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p3, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->mName:Ljava/lang/String;
 
-    .line 445
     invoke-static {p4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p4, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->mServiceAction:Ljava/lang/String;
@@ -61,20 +56,16 @@
 .method public final createBinderProxy()Lcom/android/server/timezonedetector/location/RealLocationTimeZoneProviderProxy;
     .locals 8
 
-    .line 482
     iget-object v4, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->mServiceAction:Ljava/lang/String;
 
-    .line 483
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->isTestProvider()Z
 
     move-result v6
 
-    .line 484
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 485
     new-instance v7, Lcom/android/server/timezonedetector/location/RealLocationTimeZoneProviderProxy;
 
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
@@ -105,28 +96,24 @@
 .method public createProvider()Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;
     .locals 7
 
-    .line 450
     new-instance v1, Lcom/android/server/timezonedetector/location/RealProviderMetricsLogger;
 
     iget v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->mIndex:I
 
     invoke-direct {v1, v0}, Lcom/android/server/timezonedetector/location/RealProviderMetricsLogger;-><init>(I)V
 
-    .line 452
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->getMode()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "disabled"
 
-    .line 453
     invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 454
     new-instance v0, Lcom/android/server/timezonedetector/location/DisabledLocationTimeZoneProvider;
 
     iget-object v2, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
@@ -143,7 +130,6 @@
 
     move-result-object p0
 
-    .line 455
     invoke-interface {p0}, Lcom/android/server/timezonedetector/ServiceConfigAccessor;->getRecordStateChangesForTests()Z
 
     move-result p0
@@ -152,13 +138,11 @@
 
     return-object v0
 
-    .line 457
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->createBinderProxy()Lcom/android/server/timezonedetector/location/RealLocationTimeZoneProviderProxy;
 
     move-result-object v4
 
-    .line 458
     new-instance v6, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;
 
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
@@ -175,7 +159,6 @@
 
     move-result-object p0
 
-    .line 460
     invoke-interface {p0}, Lcom/android/server/timezonedetector/ServiceConfigAccessor;->getRecordStateChangesForTests()Z
 
     move-result v5
@@ -190,7 +173,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;[Ljava/lang/String;)V
     .locals 1
 
-    .line 466
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->getMode()Ljava/lang/String;
 
     move-result-object p2
@@ -203,7 +185,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 467
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -222,12 +203,10 @@
 .method public final getMode()Ljava/lang/String;
     .locals 1
 
-    .line 473
     iget v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->mIndex:I
 
     if-nez v0, :cond_0
 
-    .line 474
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;->-$$Nest$fgetmServiceConfigAccessor(Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;)Lcom/android/server/timezonedetector/ServiceConfigAccessor;
@@ -240,7 +219,6 @@
 
     return-object p0
 
-    .line 476
     :cond_0
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
@@ -258,12 +236,10 @@
 .method public final getPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 500
     iget v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->mIndex:I
 
     if-nez v0, :cond_0
 
-    .line 501
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;->-$$Nest$fgetmServiceConfigAccessor(Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;)Lcom/android/server/timezonedetector/ServiceConfigAccessor;
@@ -276,7 +252,6 @@
 
     return-object p0
 
-    .line 503
     :cond_0
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
@@ -294,12 +269,10 @@
 .method public final isTestProvider()Z
     .locals 1
 
-    .line 491
     iget v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->mIndex:I
 
     if-nez v0, :cond_0
 
-    .line 492
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;->-$$Nest$fgetmServiceConfigAccessor(Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;)Lcom/android/server/timezonedetector/ServiceConfigAccessor;
@@ -312,7 +285,6 @@
 
     return p0
 
-    .line 494
     :cond_0
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService$ProviderConfig;->this$0:Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;
 

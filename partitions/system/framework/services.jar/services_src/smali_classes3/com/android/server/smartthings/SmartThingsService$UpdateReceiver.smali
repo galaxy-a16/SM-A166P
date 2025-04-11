@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/smartthings/SmartThingsService;)V
     .locals 0
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/smartthings/SmartThingsService$UpdateReceiver;->this$0:Lcom/android/server/smartthings/SmartThingsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/smartthings/SmartThingsService;Lcom/android/server/smartthings/SmartThingsService$UpdateReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/smartthings/SmartThingsService$UpdateReceiver;-><init>(Lcom/android/server/smartthings/SmartThingsService;)V
 
     return-void
@@ -37,13 +35,11 @@
 
     return-void
 
-    .line 45
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 46
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     const-string v0, "android.intent.action.PACKAGE_REPLACED"
@@ -64,7 +60,6 @@
 
     goto :goto_0
 
-    .line 49
     :cond_1
     iget-object p0, p0, Lcom/android/server/smartthings/SmartThingsService$UpdateReceiver;->this$0:Lcom/android/server/smartthings/SmartThingsService;
 

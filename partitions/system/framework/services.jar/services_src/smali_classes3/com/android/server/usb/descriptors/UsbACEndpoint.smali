@@ -13,13 +13,10 @@
 .method public constructor <init>(IBIB)V
     .locals 0
 
-    .line 36
     invoke-direct {p0, p1, p2}, Lcom/android/server/usb/descriptors/UsbDescriptor;-><init>(IB)V
 
-    .line 37
     iput p3, p0, Lcom/android/server/usb/descriptors/UsbACEndpoint;->mSubclass:I
 
-    .line 38
     iput-byte p4, p0, Lcom/android/server/usb/descriptors/UsbACEndpoint;->mSubtype:B
 
     return-void
@@ -28,12 +25,10 @@
 .method public static allocDescriptor(Lcom/android/server/usb/descriptors/UsbDescriptorParser;IBB)Lcom/android/server/usb/descriptors/UsbDescriptor;
     .locals 5
 
-    .line 56
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbDescriptorParser;->getCurInterface()Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;
 
     move-result-object p0
 
-    .line 57
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;->getUsbSubclass()I
 
     move-result p0
@@ -54,7 +49,6 @@
 
     if-eq p0, v2, :cond_0
 
-    .line 86
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +76,6 @@
 
     if-eq p3, v1, :cond_1
 
-    .line 81
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +98,6 @@
 
     return-object v3
 
-    .line 79
     :cond_1
     new-instance v0, Lcom/android/server/usb/descriptors/UsbACMidi20Endpoint;
 
@@ -113,7 +105,6 @@
 
     return-object v0
 
-    .line 77
     :cond_2
     new-instance v0, Lcom/android/server/usb/descriptors/UsbACMidi10Endpoint;
 
@@ -121,7 +112,6 @@
 
     return-object v0
 
-    .line 69
     :cond_3
     new-instance v0, Lcom/android/server/usb/descriptors/UsbACAudioStreamEndpoint;
 
@@ -129,7 +119,6 @@
 
     return-object v0
 
-    .line 63
     :cond_4
     new-instance v0, Lcom/android/server/usb/descriptors/UsbACAudioControlEndpoint;
 
@@ -143,7 +132,6 @@
 .method public parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
     .locals 0
 
-    .line 51
     iget p0, p0, Lcom/android/server/usb/descriptors/UsbDescriptor;->mLength:I
 
     return p0

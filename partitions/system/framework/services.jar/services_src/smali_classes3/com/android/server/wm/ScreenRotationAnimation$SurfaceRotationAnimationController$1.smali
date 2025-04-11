@@ -26,7 +26,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;JLandroid/animation/ArgbEvaluator;II[FI)V
     .locals 0
 
-    .line 788
     iput-object p1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->this$1:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
     iput-wide p2, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$duration:J
@@ -53,12 +52,10 @@
 
     long-to-float p3, p3
 
-    .line 797
     invoke-interface {p0, p3}, Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;->getFraction(F)F
 
     move-result p3
 
-    .line 798
     iget-object p4, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$va:Landroid/animation/ArgbEvaluator;
 
     iget v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$startColor:I
@@ -83,12 +80,10 @@
 
     move-result p3
 
-    .line 799
     invoke-static {p3}, Landroid/graphics/Color;->valueOf(I)Landroid/graphics/Color;
 
     move-result-object p3
 
-    .line 800
     iget-object p4, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$rgbTmpFloat:[F
 
     invoke-virtual {p3}, Landroid/graphics/Color;->red()F
@@ -99,7 +94,6 @@
 
     aput v0, p4, v1
 
-    .line 801
     iget-object p4, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$rgbTmpFloat:[F
 
     const/4 v0, 0x1
@@ -110,7 +104,6 @@
 
     aput v1, p4, v0
 
-    .line 802
     iget-object p4, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$rgbTmpFloat:[F
 
     const/4 v0, 0x2
@@ -121,14 +114,12 @@
 
     aput p3, p4, v0
 
-    .line 803
     invoke-virtual {p2}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
-    .line 804
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$rgbTmpFloat:[F
 
     invoke-virtual {p1, p2, p0}, Landroid/view/SurfaceControl$Transaction;->setColor(Landroid/view/SurfaceControl;[F)Landroid/view/SurfaceControl$Transaction;
@@ -140,7 +131,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 1
 
-    .line 810
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,12 +187,10 @@
 
     const-wide v0, 0x10b00000004L
 
-    .line 817
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v0
 
-    .line 818
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->this$1:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
     iget-object v2, v2, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
@@ -215,7 +203,6 @@
 
     invoke-virtual {p1, v3, v4, v2}, Landroid/util/proto/ProtoOutputStream;->write(JF)V
 
-    .line 819
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->this$1:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
     iget-object v2, v2, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
@@ -230,12 +217,10 @@
 
     const-wide v2, 0x10300000003L
 
-    .line 820
     iget p0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$colorTransitionMs:I
 
     invoke-virtual {p1, v2, v3, p0}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
-    .line 821
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -244,7 +229,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 791
     iget-wide v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;->val$duration:J
 
     return-wide v0

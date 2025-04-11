@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/GentleUpdateHelper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/GentleUpdateHelper$Service$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/pm/GentleUpdateHelper;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/GentleUpdateHelper$Service$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/pm/GentleUpdateHelper;
 
     invoke-static {p0}, Lcom/android/server/pm/GentleUpdateHelper$Service;->$r8$lambda$umU9MdrmQnrLypjsm-AUuX71YXI(Lcom/android/server/pm/GentleUpdateHelper;)V

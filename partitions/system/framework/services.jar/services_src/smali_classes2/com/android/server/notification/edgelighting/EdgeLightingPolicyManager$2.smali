@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 141
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$2;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,10 +23,8 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 144
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 146
     invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p1
@@ -36,14 +33,12 @@
 
     const-string/jumbo p2, "touchpad_enabled"
 
-    .line 147
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 148
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager$2;->this$0:Lcom/android/server/notification/edgelighting/EdgeLightingPolicyManager;
 
     const-string p2, "false"

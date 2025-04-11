@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 35
     new-instance v0, Lcom/android/server/utils/quota/Category;
 
     const-string v1, "SINGLE"
@@ -32,13 +31,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/utils/quota/Category;->mName:Ljava/lang/String;
 
-    .line 45
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p1
@@ -53,19 +49,16 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 2
 
-    .line 73
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10900000001L
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/utils/quota/Category;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 75
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -80,13 +73,11 @@
 
     return p0
 
-    .line 54
     :cond_0
     instance-of v0, p1, Lcom/android/server/utils/quota/Category;
 
     if-eqz v0, :cond_1
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/utils/quota/Category;->mName:Ljava/lang/String;
 
     check-cast p1, Lcom/android/server/utils/quota/Category;
@@ -108,7 +99,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 63
     iget p0, p0, Lcom/android/server/utils/quota/Category;->mHash:I
 
     return p0
@@ -117,7 +107,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

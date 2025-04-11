@@ -7,7 +7,6 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 46
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/CasResource$Builder;-><init>(I)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public bridge synthetic build()Lcom/android/server/tv/tunerresourcemanager/CasResource;
     .locals 0
 
-    .line 44
     invoke-virtual {p0}, Lcom/android/server/tv/tunerresourcemanager/CiCamResource$Builder;->build()Lcom/android/server/tv/tunerresourcemanager/CiCamResource;
 
     move-result-object p0
@@ -29,7 +27,6 @@
 .method public build()Lcom/android/server/tv/tunerresourcemanager/CiCamResource;
     .locals 2
 
-    .line 66
     new-instance v0, Lcom/android/server/tv/tunerresourcemanager/CiCamResource;
 
     const/4 v1, 0x0
@@ -42,7 +39,6 @@
 .method public bridge synthetic maxSessionNum(I)Lcom/android/server/tv/tunerresourcemanager/CasResource$Builder;
     .locals 0
 
-    .line 44
     invoke-virtual {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/CiCamResource$Builder;->maxSessionNum(I)Lcom/android/server/tv/tunerresourcemanager/CiCamResource$Builder;
 
     move-result-object p0
@@ -53,7 +49,6 @@
 .method public maxSessionNum(I)Lcom/android/server/tv/tunerresourcemanager/CiCamResource$Builder;
     .locals 0
 
-    .line 55
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/CasResource$Builder;->mMaxSessionNum:I
 
     return-object p0

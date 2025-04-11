@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;Landroid/os/Looper;)V
     .locals 0
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,10 +23,8 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 47
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 48
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +53,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_3
@@ -83,12 +79,10 @@
 
     const-string p0, " ****** Error in received message "
 
-    .line 91
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 85
     :cond_0
     iget-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
@@ -98,7 +92,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
     invoke-static {p0}, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;->-$$Nest$fgetmCallback(Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;)Lcom/android/server/remoteappmode/TaskChangeNotifier;
@@ -109,14 +102,11 @@
 
     goto :goto_0
 
-    .line 76
     :cond_1
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 77
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    .line 79
     iget-object v1, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
     invoke-static {v1}, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;->-$$Nest$fgetmCallback(Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;)Lcom/android/server/remoteappmode/TaskChangeNotifier;
@@ -125,7 +115,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
     invoke-static {p0}, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;->-$$Nest$fgetmCallback(Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;)Lcom/android/server/remoteappmode/TaskChangeNotifier;
@@ -136,11 +125,9 @@
 
     goto :goto_0
 
-    .line 67
     :cond_2
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
     invoke-static {v0}, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;->-$$Nest$fgetmCallback(Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;)Lcom/android/server/remoteappmode/TaskChangeNotifier;
@@ -149,7 +136,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
     invoke-static {p0}, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;->-$$Nest$fgetmCallback(Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;)Lcom/android/server/remoteappmode/TaskChangeNotifier;
@@ -160,7 +146,6 @@
 
     goto :goto_0
 
-    .line 56
     :cond_3
     iget-object v0, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
@@ -170,10 +155,8 @@
 
     if-eqz v0, :cond_4
 
-    .line 57
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher$1;->this$0:Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;
 
     invoke-static {p0}, Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;->-$$Nest$fgetmCallback(Lcom/android/server/remoteappmode/RemoteAppTaskWatcher;)Lcom/android/server/remoteappmode/TaskChangeNotifier;

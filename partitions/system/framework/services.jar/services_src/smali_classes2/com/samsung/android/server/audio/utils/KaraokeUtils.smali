@@ -9,7 +9,6 @@
 
     const-string v0, "karaoke_allow"
 
-    .line 36
     invoke-virtual {p1, p2, v0}, Lcom/samsung/android/server/audio/AudioSettingsHelper;->checkAppCategory(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
@@ -18,7 +17,6 @@
 
     return-void
 
-    .line 39
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -50,27 +48,22 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     new-instance p1, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.intent.karaoke"
 
     invoke-direct {p1, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 41
     invoke-virtual {p1, v0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo p3, "package"
 
-    .line 42
     invoke-virtual {p1, p3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p2, "com.sec.android.app.soundalive"
 
-    .line 43
     invoke-virtual {p1, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 44
     sget-object p2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     const/4 p3, 0x0
@@ -83,7 +76,6 @@
 .method public static setKaraokeListenback(I)V
     .locals 2
 
-    .line 48
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

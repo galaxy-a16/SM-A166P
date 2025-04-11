@@ -19,15 +19,12 @@
 .method public constructor <init>(Lcom/android/server/accessibility/SamsungTapDuration;ILandroid/os/Handler;)V
     .locals 0
 
-    .line 279
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->this$0:Lcom/android/server/accessibility/SamsungTapDuration;
 
-    .line 280
     invoke-direct {p0, p3}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const-string/jumbo p1, "tap_duration_threshold"
 
-    .line 272
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -36,14 +33,12 @@
 
     const-string/jumbo p1, "remove_animations"
 
-    .line 274
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mRemoveAnimationSettingUri:Landroid/net/Uri;
 
-    .line 281
     iput p2, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mUserId:I
 
     return-void
@@ -54,7 +49,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 3
 
-    .line 326
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mTapDurationSettingUri:Landroid/net/Uri;
 
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -63,7 +57,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 327
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->this$0:Lcom/android/server/accessibility/SamsungTapDuration;
 
     iget-object p2, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mContentResolver:Landroid/content/ContentResolver;
@@ -80,7 +73,6 @@
 
     iput p2, p1, Lcom/android/server/accessibility/SamsungTapDuration;->mTapDurationThreshold:F
 
-    .line 330
     iget-object p0, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->this$0:Lcom/android/server/accessibility/SamsungTapDuration;
 
     iget p1, p0, Lcom/android/server/accessibility/SamsungTapDuration;->mTapDurationThreshold:F
@@ -95,7 +87,6 @@
 
     goto :goto_1
 
-    .line 331
     :cond_0
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mRemoveAnimationSettingUri:Landroid/net/Uri;
 
@@ -105,7 +96,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 332
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo p2, "remove_animations"
@@ -130,7 +120,6 @@
 
     if-ge v0, p1, :cond_3
 
-    .line 335
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->this$0:Lcom/android/server/accessibility/SamsungTapDuration;
 
     invoke-static {p1}, Lcom/android/server/accessibility/SamsungTapDuration;->-$$Nest$fgetmDurationProgress(Lcom/android/server/accessibility/SamsungTapDuration;)[Lcom/android/server/accessibility/SamsungTapDurationProgressUI;
@@ -141,7 +130,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 336
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->this$0:Lcom/android/server/accessibility/SamsungTapDuration;
 
     invoke-static {p1}, Lcom/android/server/accessibility/SamsungTapDuration;->-$$Nest$fgetmDurationProgress(Lcom/android/server/accessibility/SamsungTapDuration;)[Lcom/android/server/accessibility/SamsungTapDurationProgressUI;
@@ -165,17 +153,14 @@
 .method public start(Landroid/content/ContentResolver;)V
     .locals 3
 
-    .line 294
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 301
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mTapDurationSettingUri:Landroid/net/Uri;
 
     iget v1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mUserId:I
@@ -184,7 +169,6 @@
 
     invoke-virtual {p1, v0, v2, p0, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 304
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mRemoveAnimationSettingUri:Landroid/net/Uri;
@@ -193,21 +177,18 @@
 
     invoke-virtual {p1, v0, v2, p0, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 307
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mTapDurationSettingUri:Landroid/net/Uri;
 
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 308
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mRemoveAnimationSettingUri:Landroid/net/Uri;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->onChange(ZLandroid/net/Uri;)V
 
     return-void
 
-    .line 298
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -217,7 +198,6 @@
 
     throw p0
 
-    .line 295
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -231,17 +211,14 @@
 .method public stop()V
     .locals 1
 
-    .line 318
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungTapDuration$TapDurationObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     if-eqz v0, :cond_0
 
-    .line 321
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     return-void
 
-    .line 319
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

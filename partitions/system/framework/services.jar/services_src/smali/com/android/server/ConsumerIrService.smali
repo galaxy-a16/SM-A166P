@@ -19,10 +19,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 48
     invoke-direct {p0}, Landroid/hardware/IConsumerIrService$Stub;-><init>()V
 
-    .line 45
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -31,15 +29,12 @@
 
     const/4 v0, 0x0
 
-    .line 46
     iput-object v0, p0, Lcom/android/server/ConsumerIrService;->mAidlService:Landroid/hardware/ir/IConsumerIr;
 
-    .line 49
     iput-object p1, p0, Lcom/android/server/ConsumerIrService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "power"
 
-    .line 50
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -50,24 +45,20 @@
 
     const/4 v2, 0x1
 
-    .line 52
     invoke-virtual {v0, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/ConsumerIrService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 53
     invoke-virtual {v0, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 55
     invoke-virtual {p0}, Lcom/android/server/ConsumerIrService;->getHalService()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/ConsumerIrService;->mHasNativeHal:Z
 
-    .line 57
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -84,7 +75,6 @@
 
     goto :goto_0
 
-    .line 59
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -100,7 +90,6 @@
     :goto_0
     return-void
 
-    .line 62
     :cond_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -125,18 +114,14 @@
 .method public getCarrierFrequencies()[I
     .locals 6
 
-    .line 133
     invoke-super {p0}, Landroid/hardware/IConsumerIrService$Stub;->getCarrierFrequencies_enforcePermission()V
 
-    .line 135
     invoke-virtual {p0}, Lcom/android/server/ConsumerIrService;->throwIfNoIrEmitter()V
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/ConsumerIrService;->mHalLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 138
     :try_start_0
     iget-object p0, p0, Lcom/android/server/ConsumerIrService;->mAidlService:Landroid/hardware/ir/IConsumerIr;
     :try_end_0
@@ -144,13 +129,11 @@
 
     if-eqz p0, :cond_2
 
-    .line 140
     :try_start_1
     invoke-interface {p0}, Landroid/hardware/ir/IConsumerIr;->getCarrierFreqs()[Landroid/hardware/ir/ConsumerIrFreqRange;
 
     move-result-object p0
 
-    .line 141
     array-length v1, p0
 
     if-gtz v1, :cond_0
@@ -159,10 +142,8 @@
 
     const-string v2, "Error getting carrier frequencies."
 
-    .line 142
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     :cond_0
     array-length v1, p0
 
@@ -172,7 +153,6 @@
 
     const/4 v2, 0x0
 
-    .line 145
     :goto_0
     array-length v3, p0
 
@@ -180,7 +160,6 @@
 
     mul-int/lit8 v3, v2, 0x2
 
-    .line 146
     aget-object v4, p0, v2
 
     iget v5, v4, Landroid/hardware/ir/ConsumerIrFreqRange;->minHz:I
@@ -189,7 +168,6 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 147
     iget v4, v4, Landroid/hardware/ir/ConsumerIrFreqRange;->maxHz:I
 
     aput v4, v1, v3
@@ -201,14 +179,12 @@
 
     goto :goto_0
 
-    .line 149
     :cond_1
     :try_start_2
     monitor-exit v0
 
     return-object v1
 
-    .line 151
     :catch_0
     monitor-exit v0
 
@@ -216,7 +192,6 @@
 
     return-object p0
 
-    .line 154
     :cond_2
     invoke-static {}, Lcom/android/server/ConsumerIrService;->halGetCarrierFrequencies()[I
 
@@ -229,7 +204,6 @@
     :catchall_0
     move-exception p0
 
-    .line 156
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -240,7 +214,6 @@
 .method public final getHalService()Z
     .locals 2
 
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -257,12 +230,10 @@
 
     move-result-object v0
 
-    .line 76
     invoke-static {v0}, Landroid/os/ServiceManager;->waitForDeclaredService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 75
     invoke-static {v0}, Landroid/hardware/ir/IConsumerIr$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/ir/IConsumerIr;
 
     move-result-object v0
@@ -275,7 +246,6 @@
 
     return p0
 
-    .line 82
     :cond_0
     invoke-static {}, Lcom/android/server/ConsumerIrService;->getHidlHalService()Z
 
@@ -287,7 +257,6 @@
 .method public hasIrEmitter()Z
     .locals 0
 
-    .line 69
     iget-boolean p0, p0, Lcom/android/server/ConsumerIrService;->mHasNativeHal:Z
 
     return p0
@@ -296,14 +265,12 @@
 .method public final throwIfNoIrEmitter()V
     .locals 1
 
-    .line 86
     iget-boolean p0, p0, Lcom/android/server/ConsumerIrService;->mHasNativeHal:Z
 
     if-eqz p0, :cond_0
 
     return-void
 
-    .line 87
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -317,10 +284,8 @@
 .method public transmit(Ljava/lang/String;I[I)V
     .locals 5
 
-    .line 95
     invoke-super {p0}, Landroid/hardware/IConsumerIrService$Stub;->transmit_enforcePermission()V
 
-    .line 99
     array-length p1, p3
 
     const-wide/16 v0, 0x0
@@ -342,7 +307,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -359,15 +323,12 @@
 
     if-gtz p1, :cond_4
 
-    .line 110
     invoke-virtual {p0}, Lcom/android/server/ConsumerIrService;->throwIfNoIrEmitter()V
 
-    .line 113
     iget-object p1, p0, Lcom/android/server/ConsumerIrService;->mHalLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 114
     :try_start_0
     iget-object p0, p0, Lcom/android/server/ConsumerIrService;->mAidlService:Landroid/hardware/ir/IConsumerIr;
     :try_end_0
@@ -375,7 +336,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 116
     :try_start_1
     invoke-interface {p0, p2, p3}, Landroid/hardware/ir/IConsumerIr;->transmit(I[I)V
     :try_end_1
@@ -388,7 +348,6 @@
     :try_start_2
     const-string p0, "ConsumerIrService"
 
-    .line 118
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -407,7 +366,6 @@
 
     goto :goto_1
 
-    .line 121
     :cond_2
     invoke-static {p2, p3}, Lcom/android/server/ConsumerIrService;->halTransmit(I[I)I
 
@@ -417,7 +375,6 @@
 
     const-string p2, "ConsumerIrService"
 
-    .line 124
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -434,7 +391,6 @@
 
     invoke-static {p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_3
     :goto_1
     monitor-exit p1
@@ -450,7 +406,6 @@
 
     throw p0
 
-    .line 107
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

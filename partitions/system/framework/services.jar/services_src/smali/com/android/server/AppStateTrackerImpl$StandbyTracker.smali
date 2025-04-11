@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 765
     iput-object p1, p0, Lcom/android/server/AppStateTrackerImpl$StandbyTracker;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     invoke-direct {p0}, Lcom/android/server/usage/AppStandbyInternal$AppIdleStateChangeListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onAppIdleStateChanged(Ljava/lang/String;IZII)V
     .locals 0
 
-    .line 773
     iget-object p3, p0, Lcom/android/server/AppStateTrackerImpl$StandbyTracker;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     invoke-static {p3}, Lcom/android/server/AppStateTrackerImpl;->-$$Nest$fgetmLock(Lcom/android/server/AppStateTrackerImpl;)Ljava/lang/Object;
@@ -37,7 +35,6 @@
 
     if-ne p4, p5, :cond_0
 
-    .line 776
     :try_start_0
     iget-object p4, p0, Lcom/android/server/AppStateTrackerImpl$StandbyTracker;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
@@ -49,7 +46,6 @@
 
     goto :goto_0
 
-    .line 778
     :cond_0
     iget-object p4, p0, Lcom/android/server/AppStateTrackerImpl$StandbyTracker;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
@@ -62,7 +58,6 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 781
     iget-object p0, p0, Lcom/android/server/AppStateTrackerImpl$StandbyTracker;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     invoke-static {p0}, Lcom/android/server/AppStateTrackerImpl;->-$$Nest$fgetmHandler(Lcom/android/server/AppStateTrackerImpl;)Lcom/android/server/AppStateTrackerImpl$MyHandler;
@@ -71,7 +66,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$MyHandler;->notifyExemptedBucketChanged()V
 
-    .line 783
     :cond_1
     monitor-exit p3
 

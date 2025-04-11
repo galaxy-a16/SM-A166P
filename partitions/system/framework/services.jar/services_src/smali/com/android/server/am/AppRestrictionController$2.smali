@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppRestrictionController;)V
     .locals 0
 
-    .line 432
     iput-object p1, p0, Lcom/android/server/am/AppRestrictionController$2;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,10 +23,8 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 435
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    .line 436
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -44,7 +41,6 @@
 
     goto :goto_0
 
-    .line 438
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$2;->this$0:Lcom/android/server/am/AppRestrictionController;
 

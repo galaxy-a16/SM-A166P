@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$gDxxbRfkcs4k_MOGW2Iy-aH9_lI(Ljava/util/ArrayList;Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->lambda$dump$1(Ljava/util/ArrayList;Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$vVkvGrzzeOXCioeXQUrD3M_GgSs(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->lambda$resetToDefault$0(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$mgetLastRestrictionLevel(Lcom/android/server/am/AppRestrictionController$RestrictionSettings;ILjava/lang/String;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getLastRestrictionLevel(ILjava/lang/String;)I
 
     move-result p0
@@ -42,12 +39,10 @@
 .method public constructor <init>(Lcom/android/server/am/AppRestrictionController;)V
     .locals 0
 
-    .line 448
     iput-object p1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 449
     new-instance p1, Landroid/util/SparseArrayMap;
 
     invoke-direct {p1}, Landroid/util/SparseArrayMap;-><init>()V
@@ -60,7 +55,6 @@
 .method public static synthetic lambda$dump$1(Ljava/util/ArrayList;Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)V
     .locals 0
 
-    .line 811
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -71,30 +65,24 @@
 
     const/4 v0, 0x0
 
-    .line 795
     invoke-static {p0, v0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fputmCurrentRestrictionLevel(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;I)V
 
-    .line 796
     invoke-static {p0, v0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fputmLastRestrictionLevel(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;I)V
 
     const-wide/16 v1, 0x0
 
-    .line 797
     invoke-static {p0, v1, v2}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fputmLevelChangeTime(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;J)V
 
     const/16 v3, 0x100
 
-    .line 798
     invoke-static {p0, v3}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fputmReason(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;I)V
 
-    .line 799
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fgetmLastNotificationShownTime(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)[J
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 800
     :goto_0
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fgetmLastNotificationShownTime(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)[J
 
@@ -104,7 +92,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 801
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fgetmLastNotificationShownTime(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)[J
 
     move-result-object v3
@@ -124,14 +111,12 @@
 .method public clone()Ljava/lang/Object;
     .locals 8
 
-    .line 1044
     new-instance v0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;
 
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-direct {v0, v1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;-><init>(Lcom/android/server/am/AppRestrictionController;)V
 
-    .line 1045
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v1}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -140,7 +125,6 @@
 
     monitor-enter v1
 
-    .line 1046
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -153,7 +137,6 @@
     :goto_0
     if-ltz v2, :cond_1
 
-    .line 1047
     iget-object v3, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArrayMap;->numElementsForKeyAt(I)I
@@ -165,7 +148,6 @@
     :goto_1
     if-ltz v3, :cond_0
 
-    .line 1048
     iget-object v4, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v4, v2, v3}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
@@ -174,7 +156,6 @@
 
     check-cast v4, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
-    .line 1049
     iget-object v5, v0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     iget-object v6, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
@@ -185,7 +166,6 @@
 
     iget-object v7, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
-    .line 1050
     invoke-virtual {v7, v2, v3}, Landroid/util/SparseArrayMap;->keyAt(II)Ljava/lang/Object;
 
     move-result-object v7
@@ -198,7 +178,6 @@
 
     check-cast v4, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
-    .line 1049
     invoke-virtual {v5, v6, v7, v4}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v3, v3, -0x1
@@ -210,7 +189,6 @@
 
     goto :goto_0
 
-    .line 1053
     :cond_1
     monitor-exit v1
 
@@ -229,12 +207,10 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 5
 
-    .line 809
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 810
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v1}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -243,7 +219,6 @@
 
     monitor-enter v1
 
-    .line 811
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -253,12 +228,10 @@
 
     invoke-virtual {v2, v3}, Landroid/util/SparseArrayMap;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 812
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 813
     new-instance v1, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$$ExternalSyntheticLambda2;
 
     invoke-direct {v1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$$ExternalSyntheticLambda2;-><init>()V
@@ -269,7 +242,6 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 814
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmInjector(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$Injector;
@@ -280,7 +252,6 @@
 
     move-result-wide v1
 
-    .line 815
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -290,23 +261,18 @@
     :goto_0
     if-ge v3, p0, :cond_0
 
-    .line 816
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const/16 v4, 0x23
 
-    .line 817
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 818
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(I)V
 
     const/16 v4, 0x20
 
-    .line 819
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 820
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -315,7 +281,6 @@
 
     invoke-virtual {v4, p1, v1, v2}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->dump(Ljava/io/PrintWriter;J)V
 
-    .line 821
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     add-int/lit8 v3, v3, 0x1
@@ -328,7 +293,6 @@
     :catchall_0
     move-exception p0
 
-    .line 812
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -351,20 +315,17 @@
 
     if-eqz p1, :cond_7
 
-    .line 1062
     instance-of v2, p1, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;
 
     if-nez v2, :cond_1
 
     goto :goto_2
 
-    .line 1065
     :cond_1
     check-cast p1, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;
 
     iget-object p1, p1, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
-    .line 1067
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v2}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -373,7 +334,6 @@
 
     monitor-enter v2
 
-    .line 1068
     :try_start_0
     invoke-virtual {p1}, Landroid/util/SparseArrayMap;->numMaps()I
 
@@ -387,12 +347,10 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 1069
     monitor-exit v2
 
     return v1
 
-    .line 1071
     :cond_2
     iget-object v3, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -405,33 +363,28 @@
     :goto_0
     if-ltz v3, :cond_6
 
-    .line 1072
     iget-object v4, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseArrayMap;->keyAt(I)I
 
     move-result v4
 
-    .line 1073
     invoke-virtual {p1, v4}, Landroid/util/SparseArrayMap;->numElementsForKey(I)I
 
     move-result v5
 
     iget-object v6, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
-    .line 1074
     invoke-virtual {v6, v3}, Landroid/util/SparseArrayMap;->numElementsForKeyAt(I)I
 
     move-result v6
 
     if-eq v5, v6, :cond_3
 
-    .line 1075
     monitor-exit v2
 
     return v1
 
-    .line 1077
     :cond_3
     iget-object v5, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -444,7 +397,6 @@
     :goto_1
     if-ltz v5, :cond_5
 
-    .line 1078
     iget-object v6, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v6, v3, v5}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
@@ -453,7 +405,6 @@
 
     check-cast v6, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
-    .line 1079
     invoke-virtual {v6}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getPackageName()Ljava/lang/String;
 
     move-result-object v7
@@ -468,7 +419,6 @@
 
     if-nez v6, :cond_4
 
-    .line 1080
     monitor-exit v2
 
     return v1
@@ -483,7 +433,6 @@
 
     goto :goto_0
 
-    .line 1084
     :cond_6
     monitor-exit v2
 
@@ -506,7 +455,6 @@
 .method public forEachPackageInUidLocked(ILcom/android/internal/util/function/TriConsumer;)V
     .locals 5
 
-    .line 716
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArrayMap;->indexOfKey(I)I
@@ -517,7 +465,6 @@
 
     return-void
 
-    .line 720
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -530,7 +477,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 722
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v2, p1, v1}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
@@ -539,7 +485,6 @@
 
     check-cast v2, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
-    .line 723
     iget-object v3, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v3, p1, v1}, Landroid/util/SparseArrayMap;->keyAt(II)Ljava/lang/Object;
@@ -548,7 +493,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 724
     invoke-virtual {v2}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getCurrentRestrictionLevel()I
 
     move-result v4
@@ -565,7 +509,6 @@
 
     move-result-object v2
 
-    .line 723
     invoke-interface {p2, v3, v4, v2}, Lcom/android/internal/util/function/TriConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -579,7 +522,6 @@
 .method public forEachUidLocked(Ljava/util/function/Consumer;)V
     .locals 2
 
-    .line 730
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0}, Landroid/util/SparseArrayMap;->numMaps()I
@@ -591,7 +533,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 731
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArrayMap;->keyAt(I)I
@@ -615,7 +556,6 @@
 .method public final getLastRestrictionLevel(ILjava/lang/String;)I
     .locals 1
 
-    .line 706
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -624,7 +564,6 @@
 
     monitor-enter v0
 
-    .line 707
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -640,7 +579,6 @@
 
     goto :goto_0
 
-    .line 709
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getLastRestrictionLevel()I
 
@@ -654,7 +592,6 @@
     :catchall_0
     move-exception p0
 
-    .line 710
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -665,7 +602,6 @@
 .method public getReason(Ljava/lang/String;I)I
     .locals 1
 
-    .line 662
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -674,7 +610,6 @@
 
     monitor-enter v0
 
-    .line 663
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -686,7 +621,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 664
     invoke-virtual {p0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getReason()I
 
     move-result p0
@@ -696,7 +630,6 @@
     :cond_0
     const/16 p0, 0x100
 
-    .line 665
     :goto_0
     monitor-exit v0
 
@@ -705,7 +638,6 @@
     :catchall_0
     move-exception p0
 
-    .line 666
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -716,7 +648,6 @@
 .method public getRestrictionLevel(I)I
     .locals 5
 
-    .line 670
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -725,7 +656,6 @@
 
     monitor-enter v0
 
-    .line 671
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -737,12 +667,10 @@
 
     if-gez p1, :cond_0
 
-    .line 673
     monitor-exit v0
 
     return v1
 
-    .line 675
     :cond_0
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -752,7 +680,6 @@
 
     if-nez v2, :cond_1
 
-    .line 677
     monitor-exit v0
 
     return v1
@@ -763,7 +690,6 @@
     :goto_0
     if-ge v1, v2, :cond_4
 
-    .line 681
     iget-object v4, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v4, p1, v1}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
@@ -774,7 +700,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 683
     invoke-virtual {v4}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getCurrentRestrictionLevel()I
 
     move-result v4
@@ -783,7 +708,6 @@
 
     goto :goto_1
 
-    .line 684
     :cond_2
     invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
@@ -797,7 +721,6 @@
 
     goto :goto_0
 
-    .line 687
     :cond_4
     monitor-exit v0
 
@@ -806,7 +729,6 @@
     :catchall_0
     move-exception p0
 
-    .line 688
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -817,7 +739,6 @@
 .method public getRestrictionLevel(ILjava/lang/String;)I
     .locals 1
 
-    .line 692
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -826,7 +747,6 @@
 
     monitor-enter v0
 
-    .line 693
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getRestrictionSettingsLocked(ILjava/lang/String;)Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
@@ -834,7 +754,6 @@
 
     if-nez p2, :cond_0
 
-    .line 695
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getRestrictionLevel(I)I
 
     move-result p0
@@ -854,7 +773,6 @@
     :catchall_0
     move-exception p0
 
-    .line 696
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -865,7 +783,6 @@
 .method public getRestrictionLevel(Ljava/lang/String;I)I
     .locals 3
 
-    .line 700
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmInjector(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$Injector;
@@ -878,12 +795,10 @@
 
     const-wide/32 v1, 0xc8000
 
-    .line 701
     invoke-virtual {v0, p1, v1, v2, p2}, Landroid/content/pm/PackageManagerInternal;->getPackageUid(Ljava/lang/String;JI)I
 
     move-result p2
 
-    .line 702
     invoke-virtual {p0, p2, p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getRestrictionLevel(ILjava/lang/String;)I
 
     move-result p0
@@ -894,7 +809,6 @@
 .method public getRestrictionSettingsLocked(ILjava/lang/String;)Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
     .locals 0
 
-    .line 737
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -909,7 +823,6 @@
 .method public getXmlFileNameForUser(I)Ljava/io/File;
     .locals 1
 
-    .line 838
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
@@ -926,7 +839,6 @@
 
     invoke-direct {v0, p0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 840
     new-instance p0, Ljava/io/File;
 
     const-string/jumbo p1, "settings.xml"
@@ -941,12 +853,10 @@
 
     const-string v0, "ActivityManager"
 
-    .line 853
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getXmlFileNameForUser(I)Ljava/io/File;
 
     move-result-object p1
 
-    .line 854
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -960,7 +870,6 @@
 
     new-array v8, v1, [J
 
-    .line 858
     :try_start_0
     new-instance v9, Ljava/io/FileInputStream;
 
@@ -970,18 +879,15 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 859
     :try_start_1
     invoke-static {v9}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object v10
 
-    .line 860
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v11
 
-    .line 862
     :goto_0
     invoke-interface {v10}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
@@ -995,7 +901,6 @@
 
     goto :goto_0
 
-    .line 866
     :cond_1
     invoke-interface {v10}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
@@ -1003,14 +908,12 @@
 
     const-string/jumbo v3, "settings"
 
-    .line 867
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 868
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1040,14 +943,12 @@
 
     move v7, p2
 
-    .line 871
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->loadOneFromXml(Lcom/android/modules/utils/TypedXmlPullParser;J[JZ)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 876
     :cond_3
     :try_start_2
     invoke-virtual {v9}, Ljava/io/InputStream;->close()V
@@ -1061,7 +962,6 @@
     :catchall_0
     move-exception p2
 
-    .line 858
     :try_start_3
     invoke-virtual {v9}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -1085,7 +985,6 @@
     :catch_0
     move-exception p2
 
-    .line 881
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1102,7 +1001,6 @@
 
     invoke-static {v0, p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 882
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-virtual {p2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -1119,7 +1017,6 @@
 .method public loadFromXml(Z)V
     .locals 4
 
-    .line 845
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmInjector(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$Injector;
@@ -1134,7 +1031,6 @@
 
     move-result-object v0
 
-    .line 846
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -1144,14 +1040,12 @@
 
     aget v3, v0, v2
 
-    .line 847
     invoke-virtual {p0, v3, p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->loadFromXml(IZ)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 849
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
@@ -1177,7 +1071,6 @@
 
     const/4 v4, 0x0
 
-    .line 890
     :goto_0
     array-length v5, v2
 
@@ -1185,7 +1078,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 891
     aput-wide v6, v2, v4
 
     add-int/lit8 v4, v4, 0x1
@@ -1205,7 +1097,6 @@
 
     const/4 v15, 0x0
 
-    .line 899
     :goto_1
     invoke-interface/range {p1 .. p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeCount()I
 
@@ -1213,18 +1104,15 @@
 
     if-ge v8, v9, :cond_7
 
-    .line 901
     :try_start_0
     invoke-interface {v1, v8}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 902
     invoke-interface {v1, v8}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 903
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
     move-result v13
@@ -1321,12 +1209,10 @@
 
     if-eq v13, v3, :cond_2
 
-    .line 921
     invoke-static {v9}, Lcom/android/server/am/AppRestrictionController$NotificationHelper;->notificationTimeAttrToType(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 922
     invoke-static {v10}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v6
@@ -1335,7 +1221,6 @@
 
     goto :goto_4
 
-    .line 917
     :cond_2
     invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1343,7 +1228,6 @@
 
     goto :goto_4
 
-    .line 914
     :cond_3
     invoke-static {v10}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -1351,7 +1235,6 @@
 
     goto :goto_4
 
-    .line 911
     :cond_4
     invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1364,7 +1247,6 @@
 
     goto :goto_4
 
-    .line 905
     :cond_6
     invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1385,7 +1267,6 @@
     :cond_7
     if-eqz v14, :cond_d
 
-    .line 935
     iget-object v1, v0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v1}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -1394,7 +1275,6 @@
 
     monitor-enter v1
 
-    .line 936
     :try_start_1
     invoke-virtual {v0, v14, v4}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getRestrictionSettingsLocked(ILjava/lang/String;)Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
@@ -1402,7 +1282,6 @@
 
     if-nez v3, :cond_8
 
-    .line 938
     monitor-exit v1
 
     return-void
@@ -1410,13 +1289,11 @@
     :cond_8
     const/4 v6, 0x0
 
-    .line 940
     :goto_5
     array-length v7, v2
 
     if-ge v6, v7, :cond_a
 
-    .line 941
     invoke-virtual {v3, v6}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getLastNotificationTime(I)J
 
     move-result-wide v7
@@ -1435,7 +1312,6 @@
 
     const/4 v13, 0x0
 
-    .line 942
     invoke-virtual {v3, v6, v7, v8, v13}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->setLastNotificationTime(IJZ)V
 
     goto :goto_6
@@ -1448,7 +1324,6 @@
 
     goto :goto_5
 
-    .line 945
     :cond_a
     invoke-static {v3}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fgetmCurrentRestrictionLevel(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)I
 
@@ -1456,18 +1331,15 @@
 
     if-lt v2, v15, :cond_b
 
-    .line 948
     monitor-exit v1
 
     return-void
 
-    .line 950
     :cond_b
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 951
     iget-object v1, v0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v1}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmInjector(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$Injector;
@@ -1478,7 +1350,6 @@
 
     move-result-object v8
 
-    .line 952
     invoke-static {v14}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v10
@@ -1491,7 +1362,6 @@
 
     move-wide/from16 v11, p2
 
-    .line 951
     invoke-interface/range {v8 .. v13}, Lcom/android/server/usage/AppStandbyInternal;->getAppStandbyBucket(Ljava/lang/String;IJZ)I
 
     move-result v13
@@ -1500,7 +1370,6 @@
 
     if-eqz p5, :cond_c
 
-    .line 954
     iget-object v8, v0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v8}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmEmptyTrackerInfo(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$TrackerInfo;
@@ -1534,10 +1403,8 @@
 
     and-int/lit16 v2, v5, 0xff
 
-    .line 957
     invoke-virtual {v3, v15, v1, v2}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->update(III)I
 
-    .line 960
     :goto_7
     iget-object v0, v0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
@@ -1547,11 +1414,9 @@
 
     monitor-enter v2
 
-    .line 962
     :try_start_2
     invoke-virtual {v3, v6, v7}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->setLevelChangeTime(J)V
 
-    .line 963
     monitor-exit v2
 
     goto :goto_8
@@ -1568,7 +1433,6 @@
     :catchall_1
     move-exception v0
 
-    .line 950
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -1593,17 +1457,14 @@
 .method public persistToXml(I)V
     .locals 5
 
-    .line 969
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getXmlFileNameForUser(I)Ljava/io/File;
 
     move-result-object v0
 
-    .line 970
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v1
 
-    .line 971
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v2
@@ -1618,7 +1479,6 @@
 
     if-nez v1, :cond_0
 
-    .line 972
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1637,13 +1497,11 @@
 
     return-void
 
-    .line 975
     :cond_0
     new-instance v1, Landroid/util/AtomicFile;
 
     invoke-direct {v1, v0}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
 
-    .line 978
     :try_start_0
     invoke-virtual {v1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
@@ -1651,7 +1509,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 979
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->toXmlByteArray(I)[B
 
@@ -1661,7 +1518,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 987
     invoke-virtual {v1, v2}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
     return-void
@@ -1676,7 +1532,6 @@
 
     const/4 v2, 0x0
 
-    .line 981
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1696,7 +1551,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 983
     invoke-virtual {v1, v2}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
     :cond_1
@@ -1708,7 +1562,6 @@
 
     const/4 v0, 0x1
 
-    .line 753
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->removePackage(Ljava/lang/String;IZ)V
 
     return-void
@@ -1717,7 +1570,6 @@
 .method public removePackage(Ljava/lang/String;IZ)V
     .locals 3
 
-    .line 757
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -1726,7 +1578,6 @@
 
     monitor-enter v0
 
-    .line 758
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -1734,14 +1585,12 @@
 
     move-result v1
 
-    .line 759
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v2, p2, p1}, Landroid/util/SparseArrayMap;->delete(ILjava/lang/Object;)Ljava/lang/Object;
 
     if-ltz v1, :cond_0
 
-    .line 760
     iget-object p1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArrayMap;->numElementsForKeyAt(I)I
@@ -1750,12 +1599,10 @@
 
     if-nez p1, :cond_0
 
-    .line 761
     iget-object p1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p1, v1}, Landroid/util/SparseArrayMap;->deleteAt(I)V
 
-    .line 763
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -1763,7 +1610,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 764
     iget-object p1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p1}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmRestrictionSettingsXmlLoaded(Lcom/android/server/am/AppRestrictionController;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -1776,7 +1622,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 765
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
@@ -1789,7 +1634,6 @@
     :catchall_0
     move-exception p0
 
-    .line 763
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1803,7 +1647,6 @@
 
     const/4 v0, 0x1
 
-    .line 770
     invoke-virtual {p0, p1, v0}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->removeUid(IZ)V
 
     return-void
@@ -1812,7 +1655,6 @@
 .method public removeUid(IZ)V
     .locals 2
 
-    .line 774
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -1821,20 +1663,17 @@
 
     monitor-enter v0
 
-    .line 775
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArrayMap;->delete(I)V
 
-    .line 776
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p2, :cond_0
 
-    .line 777
     iget-object p2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p2}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmRestrictionSettingsXmlLoaded(Lcom/android/server/am/AppRestrictionController;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -1847,7 +1686,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 778
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
@@ -1860,7 +1698,6 @@
     :catchall_0
     move-exception p0
 
-    .line 776
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1872,7 +1709,6 @@
 .method public removeUser(I)V
     .locals 3
 
-    .line 741
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -1881,7 +1717,6 @@
 
     monitor-enter v0
 
-    .line 742
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -1894,14 +1729,12 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 743
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArrayMap;->keyAt(I)I
 
     move-result v2
 
-    .line 744
     invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
@@ -1910,7 +1743,6 @@
 
     goto :goto_1
 
-    .line 747
     :cond_0
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -1921,7 +1753,6 @@
 
     goto :goto_0
 
-    .line 749
     :cond_1
     monitor-exit v0
 
@@ -1940,7 +1771,6 @@
 .method public removeXml()V
     .locals 4
 
-    .line 1036
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmInjector(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$Injector;
@@ -1955,7 +1785,6 @@
 
     move-result-object v0
 
-    .line 1037
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -1965,7 +1794,6 @@
 
     aget v3, v0, v2
 
-    .line 1038
     invoke-virtual {p0, v3}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getXmlFileNameForUser(I)Ljava/io/File;
 
     move-result-object v3
@@ -1983,7 +1811,6 @@
 .method public reset()V
     .locals 3
 
-    .line 784
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -1992,7 +1819,6 @@
 
     monitor-enter v0
 
-    .line 785
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -2005,7 +1831,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 786
     iget-object v2, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArrayMap;->deleteAt(I)V
@@ -2014,7 +1839,6 @@
 
     goto :goto_0
 
-    .line 788
     :cond_0
     monitor-exit v0
 
@@ -2033,7 +1857,6 @@
 .method public resetToDefault()V
     .locals 2
 
-    .line 793
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -2042,7 +1865,6 @@
 
     monitor-enter v0
 
-    .line 794
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -2052,7 +1874,6 @@
 
     invoke-virtual {p0, v1}, Landroid/util/SparseArrayMap;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 805
     monitor-exit v0
 
     return-void
@@ -2070,7 +1891,6 @@
 .method public scheduleLoadFromXml()V
     .locals 1
 
-    .line 833
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -2087,7 +1907,6 @@
 .method public schedulePersistToXml(I)V
     .locals 2
 
-    .line 827
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmBgHandler(Lcom/android/server/am/AppRestrictionController;)Lcom/android/server/am/AppRestrictionController$BgHandler;
@@ -2102,7 +1921,6 @@
 
     move-result-object p0
 
-    .line 828
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -2113,7 +1931,6 @@
 
     const/4 v0, 0x0
 
-    .line 994
     :try_start_0
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
@@ -2121,18 +1938,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 995
     :try_start_1
     invoke-static {v1}, Landroid/util/Xml;->resolveSerializer(Ljava/io/OutputStream;)Lcom/android/modules/utils/TypedXmlSerializer;
 
     move-result-object v2
 
-    .line 997
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-interface {v2, v0, v3}, Lcom/android/modules/utils/TypedXmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 999
     iget-object v3, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v3}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -2143,7 +1957,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1000
     :try_start_2
     iget-object v4, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
@@ -2156,7 +1969,6 @@
     :goto_0
     if-ltz v4, :cond_3
 
-    .line 1001
     iget-object v5, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v5, v4}, Landroid/util/SparseArrayMap;->numElementsForKeyAt(I)I
@@ -2168,7 +1980,6 @@
     :goto_1
     if-ltz v5, :cond_2
 
-    .line 1002
     iget-object v6, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v6, v4, v5}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
@@ -2177,12 +1988,10 @@
 
     check-cast v6, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
-    .line 1003
     invoke-virtual {v6}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getUid()I
 
     move-result v7
 
-    .line 1004
     invoke-static {v7}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v8
@@ -2194,17 +2003,14 @@
     :cond_0
     const-string/jumbo v8, "settings"
 
-    .line 1007
     invoke-interface {v2, v0, v8}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v8, "uid"
 
-    .line 1008
     invoke-interface {v2, v0, v8, v7}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeInt(Ljava/lang/String;Ljava/lang/String;I)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v7, "package"
 
-    .line 1009
     invoke-virtual {v6}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
@@ -2213,7 +2019,6 @@
 
     const-string v7, "curlevel"
 
-    .line 1010
     invoke-static {v6}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fgetmCurrentRestrictionLevel(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)I
 
     move-result v8
@@ -2222,7 +2027,6 @@
 
     const-string/jumbo v7, "levelts"
 
-    .line 1012
     invoke-static {v6}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fgetmLevelChangeTime(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)J
 
     move-result-wide v8
@@ -2231,7 +2035,6 @@
 
     const-string/jumbo v7, "reason"
 
-    .line 1014
     invoke-static {v6}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->-$$Nest$fgetmReason(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)I
 
     move-result v8
@@ -2245,17 +2048,14 @@
 
     if-ge v7, v8, :cond_1
 
-    .line 1017
     invoke-static {v7}, Lcom/android/server/am/AppRestrictionController$NotificationHelper;->notificationTypeToTimeAttr(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1018
     invoke-virtual {v6, v7}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->getLastNotificationTime(I)J
 
     move-result-wide v9
 
-    .line 1016
     invoke-interface {v2, v0, v8, v9, v10}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeLong(Ljava/lang/String;Ljava/lang/String;J)Lorg/xmlpull/v1/XmlSerializer;
 
     add-int/lit8 v7, v7, 0x1
@@ -2265,7 +2065,6 @@
     :cond_1
     const-string/jumbo v6, "settings"
 
-    .line 1020
     invoke-interface {v2, v0, v6}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     :goto_3
@@ -2278,27 +2077,22 @@
 
     goto :goto_0
 
-    .line 1023
     :cond_3
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1025
     :try_start_3
     invoke-interface {v2}, Lcom/android/modules/utils/TypedXmlSerializer;->endDocument()V
 
-    .line 1026
     invoke-interface {v2}, Lcom/android/modules/utils/TypedXmlSerializer;->flush()V
 
-    .line 1028
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1029
     :try_start_4
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_4
@@ -2309,7 +2103,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1023
     :try_start_5
     monitor-exit v3
     :try_end_5
@@ -2323,7 +2116,6 @@
     :catchall_1
     move-exception p0
 
-    .line 994
     :try_start_7
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_7
@@ -2349,7 +2141,6 @@
 .method public update(Ljava/lang/String;IIII)I
     .locals 2
 
-    .line 648
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->this$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {v0}, Lcom/android/server/am/AppRestrictionController;->-$$Nest$fgetmSettingsLock(Lcom/android/server/am/AppRestrictionController;)Ljava/lang/Object;
@@ -2358,7 +2149,6 @@
 
     monitor-enter v0
 
-    .line 649
     :try_start_0
     invoke-virtual {p0, p2, p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->getRestrictionSettingsLocked(ILjava/lang/String;)Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
@@ -2366,17 +2156,14 @@
 
     if-nez v1, :cond_0
 
-    .line 651
     new-instance v1, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;-><init>(Lcom/android/server/am/AppRestrictionController$RestrictionSettings;Ljava/lang/String;I)V
 
-    .line 652
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->mRestrictionLevels:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p2, p1, v1}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 654
     :cond_0
     invoke-virtual {v1, p3, p4, p5}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;->update(III)I
 
@@ -2389,7 +2176,6 @@
     :catchall_0
     move-exception p0
 
-    .line 655
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

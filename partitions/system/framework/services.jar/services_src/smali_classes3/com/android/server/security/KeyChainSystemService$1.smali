@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/security/KeyChainSystemService;)V
     .locals 0
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/security/KeyChainSystemService$1;->this$0:Lcom/android/server/security/KeyChainSystemService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 78
     invoke-virtual {p2}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 
     return-void
 
-    .line 83
     :cond_0
     :try_start_0
     new-instance p1, Landroid/content/Intent;
@@ -46,10 +43,8 @@
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/security/KeyChainSystemService$1;->this$0:Lcom/android/server/security/KeyChainSystemService;
 
-    .line 85
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -68,18 +63,15 @@
 
     return-void
 
-    .line 89
     :cond_1
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 90
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 91
     iget-object p2, p0, Lcom/android/server/security/KeyChainSystemService$1;->this$0:Lcom/android/server/security/KeyChainSystemService;
 
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getSendingUserId()I
@@ -103,7 +95,6 @@
 
     const-string p2, "Unable to forward package removed broadcast to KeyChain"
 
-    .line 93
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

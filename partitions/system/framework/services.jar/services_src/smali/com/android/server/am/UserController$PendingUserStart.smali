@@ -15,16 +15,12 @@
 .method public constructor <init>(IILandroid/os/IProgressListener;)V
     .locals 0
 
-    .line 3840
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3841
     iput p1, p0, Lcom/android/server/am/UserController$PendingUserStart;->userId:I
 
-    .line 3842
     iput p2, p0, Lcom/android/server/am/UserController$PendingUserStart;->userStartMode:I
 
-    .line 3843
     iput-object p3, p0, Lcom/android/server/am/UserController$PendingUserStart;->unlockListener:Landroid/os/IProgressListener;
 
     return-void
@@ -35,7 +31,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 3848
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,7 +49,6 @@
 
     iget v1, p0, Lcom/android/server/am/UserController$PendingUserStart;->userStartMode:I
 
-    .line 3850
     invoke-static {v1}, Lcom/android/server/pm/UserManagerInternal;->userStartModeToString(I)Ljava/lang/String;
 
     move-result-object v1

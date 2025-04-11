@@ -14,7 +14,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 302
     iget-object p0, p0, Lvendor/samsung/hardware/khdm/ISehKhdm$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0

@@ -19,7 +19,6 @@
 
     const/4 v0, 0x0
 
-    .line 986
     invoke-direct {p0, p1, v0}, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;-><init>(ILjava/lang/Integer;)V
 
     return-void
@@ -28,23 +27,18 @@
 .method public constructor <init>(ILjava/lang/Integer;)V
     .locals 0
 
-    .line 989
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 990
     iput p1, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;->mEventId:I
 
-    .line 991
     iput-object p2, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;->mUserId:Ljava/lang/Integer;
 
-    .line 992
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;->mTimestamp:J
 
-    .line 993
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -59,12 +53,10 @@
 .method public getEventDescription()Ljava/lang/String;
     .locals 2
 
-    .line 997
     iget v0, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;->mEventId:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1013
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

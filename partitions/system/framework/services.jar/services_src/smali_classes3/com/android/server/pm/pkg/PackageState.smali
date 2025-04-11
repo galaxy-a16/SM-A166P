@@ -70,7 +70,6 @@
 .method public getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserState;
     .locals 0
 
-    .line 300
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageState;->getUserStates()Landroid/util/SparseArray;
 
     move-result-object p0
@@ -83,7 +82,6 @@
 
     if-nez p0, :cond_0
 
-    .line 301
     sget-object p0, Lcom/android/server/pm/pkg/PackageUserState;->DEFAULT:Lcom/android/server/pm/pkg/PackageUserState;
 
     :cond_0

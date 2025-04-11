@@ -15,16 +15,12 @@
 .method public constructor <init>(ZZI)V
     .locals 0
 
-    .line 5455
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5456
     iput-boolean p1, p0, Lcom/android/server/autofill/Session$SaveResult;->mLogSaveShown:Z
 
-    .line 5457
     iput-boolean p2, p0, Lcom/android/server/autofill/Session$SaveResult;->mRemoveSession:Z
 
-    .line 5458
     iput p3, p0, Lcom/android/server/autofill/Session$SaveResult;->mSaveDialogNotShowReason:I
 
     return-void
@@ -35,7 +31,6 @@
 .method public getNoSaveUiReason()I
     .locals 0
 
-    .line 5504
     iget p0, p0, Lcom/android/server/autofill/Session$SaveResult;->mSaveDialogNotShowReason:I
 
     return p0
@@ -44,7 +39,6 @@
 .method public isLogSaveShown()Z
     .locals 0
 
-    .line 5467
     iget-boolean p0, p0, Lcom/android/server/autofill/Session$SaveResult;->mLogSaveShown:Z
 
     return p0
@@ -53,7 +47,6 @@
 .method public isRemoveSession()Z
     .locals 0
 
-    .line 5485
     iget-boolean p0, p0, Lcom/android/server/autofill/Session$SaveResult;->mRemoveSession:Z
 
     return p0
@@ -62,7 +55,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 5518
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -29,17 +29,14 @@
 
     move-wide/from16 v7, p7
 
-    .line 34
     invoke-direct/range {v0 .. v8}, Lcom/android/server/vibrator/AbstractVibratorStep;-><init>(Lcom/android/server/vibrator/VibrationStepConductor;JLcom/android/server/vibrator/VibratorController;Landroid/os/VibrationEffect$Composed;IJ)V
 
     move v0, p4
 
-    .line 36
     iput v0, v9, Lcom/android/server/vibrator/RampOffVibratorStep;->mAmplitudeTarget:F
 
     move v0, p5
 
-    .line 37
     iput v0, v9, Lcom/android/server/vibrator/RampOffVibratorStep;->mAmplitudeDelta:F
 
     return-void
@@ -50,12 +47,10 @@
 .method public cancel()Ljava/util/List;
     .locals 4
 
-    .line 47
     new-instance v0, Lcom/android/server/vibrator/TurnOffVibratorStep;
 
     iget-object v1, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
 
-    .line 48
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -68,7 +63,6 @@
 
     move-result-object p0
 
-    .line 47
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -79,7 +73,6 @@
 .method public isCleanUp()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -92,36 +85,29 @@
 
     const-wide/32 v1, 0x800000
 
-    .line 53
     invoke-static {v1, v2, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 60
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mVibratorCompleteCallbackReceived:Z
 
     if-eqz v0, :cond_0
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/vibrator/AbstractVibratorStep;->stopVibrating()V
 
-    .line 64
     sget-object p0, Lcom/android/server/vibrator/VibrationStepConductor;->EMPTY_STEP_LIST:Ljava/util/List;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 83
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
 
-    .line 67
     :cond_0
     :try_start_1
     iget v0, p0, Lcom/android/server/vibrator/RampOffVibratorStep;->mAmplitudeTarget:F
 
     invoke-virtual {p0, v0}, Lcom/android/server/vibrator/AbstractVibratorStep;->changeAmplitude(F)V
 
-    .line 69
     iget v0, p0, Lcom/android/server/vibrator/RampOffVibratorStep;->mAmplitudeTarget:F
 
     iget v3, p0, Lcom/android/server/vibrator/RampOffVibratorStep;->mAmplitudeDelta:F
@@ -140,7 +126,6 @@
 
     new-array v0, v4, [Lcom/android/server/vibrator/Step;
 
-    .line 74
     new-instance v4, Lcom/android/server/vibrator/TurnOffVibratorStep;
 
     iget-object v5, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
@@ -159,7 +144,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 83
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
@@ -168,7 +152,6 @@
     :try_start_2
     new-array v0, v4, [Lcom/android/server/vibrator/Step;
 
-    .line 77
     new-instance v13, Lcom/android/server/vibrator/RampOffVibratorStep;
 
     iget-object v5, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
@@ -177,7 +160,6 @@
 
     iget-object v4, v5, Lcom/android/server/vibrator/VibrationStepConductor;->vibrationSettings:Lcom/android/server/vibrator/VibrationSettings;
 
-    .line 79
     invoke-virtual {v4}, Lcom/android/server/vibrator/VibrationSettings;->getRampStepDuration()I
 
     move-result v4
@@ -198,14 +180,12 @@
 
     aput-object v13, v0, v3
 
-    .line 77
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 83
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
@@ -215,6 +195,5 @@
 
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 84
     throw p0
 .end method

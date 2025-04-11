@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 192
     invoke-direct {p0}, Lcom/android/server/power/PowerHistorian$Record;-><init>()V
 
-    .line 193
     iput-object p1, p0, Lcom/android/server/power/PowerHistorian$MessageRecord;->mMessage:Ljava/lang/String;
 
     return-void
@@ -25,7 +23,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 198
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

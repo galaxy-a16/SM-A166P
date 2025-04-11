@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/MultiWindowPointerEventListener;)V
     .locals 0
 
-    .line 140
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowPointerEventListener$1;->this$0:Lcom/android/server/wm/MultiWindowPointerEventListener;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 143
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 145
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p2
@@ -97,7 +94,6 @@
 
     goto :goto_1
 
-    .line 151
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener$1;->this$0:Lcom/android/server/wm/MultiWindowPointerEventListener;
 
@@ -105,7 +101,6 @@
 
     goto :goto_1
 
-    .line 148
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowPointerEventListener$1;->this$0:Lcom/android/server/wm/MultiWindowPointerEventListener;
 

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/companion/virtual/InputController$WaitForDevice;Lcom/android/server/companion/virtual/InputController;Ljava/lang/String;II)V
     .locals 0
 
-    .line 698
     iput-object p1, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice$1;->this$1:Lcom/android/server/companion/virtual/InputController$WaitForDevice;
 
     iput-object p2, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice$1;->val$this$0:Lcom/android/server/companion/virtual/InputController;
@@ -43,7 +42,6 @@
 .method public onInputDeviceAdded(I)V
     .locals 3
 
-    .line 701
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object v0
@@ -54,10 +52,8 @@
 
     const-string v1, "Newly added input device was null."
 
-    .line 703
     invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 704
     invoke-virtual {v0}, Landroid/view/InputDevice;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -72,13 +68,11 @@
 
     return-void
 
-    .line 707
     :cond_0
     invoke-virtual {v0}, Landroid/view/InputDevice;->getIdentifier()Landroid/hardware/input/InputDeviceIdentifier;
 
     move-result-object v0
 
-    .line 708
     invoke-virtual {v0}, Landroid/hardware/input/InputDeviceIdentifier;->getVendorId()I
 
     move-result v1
@@ -97,13 +91,11 @@
 
     goto :goto_0
 
-    .line 711
     :cond_1
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice$1;->this$1:Lcom/android/server/companion/virtual/InputController$WaitForDevice;
 
     invoke-static {v0, p1}, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->-$$Nest$fputmInputDeviceId(Lcom/android/server/companion/virtual/InputController$WaitForDevice;I)V
 
-    .line 712
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice$1;->this$1:Lcom/android/server/companion/virtual/InputController$WaitForDevice;
 
     invoke-static {p0}, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->-$$Nest$fgetmDeviceAddedLatch(Lcom/android/server/companion/virtual/InputController$WaitForDevice;)Ljava/util/concurrent/CountDownLatch;
@@ -120,13 +112,11 @@
 .method public onInputDeviceChanged(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onInputDeviceRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

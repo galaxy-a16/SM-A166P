@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsStrongAuth;Landroid/os/Looper;)V
     .locals 0
 
-    .line 652
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,14 +23,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 655
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 672
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -41,7 +38,6 @@
 
     goto :goto_0
 
-    .line 684
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -51,7 +47,6 @@
 
     goto :goto_0
 
-    .line 681
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -61,7 +56,6 @@
 
     goto :goto_0
 
-    .line 678
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -71,7 +65,6 @@
 
     goto :goto_0
 
-    .line 675
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -83,7 +76,6 @@
 
     goto :goto_0
 
-    .line 669
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -93,7 +85,6 @@
 
     goto :goto_0
 
-    .line 666
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -103,7 +94,6 @@
 
     goto :goto_0
 
-    .line 660
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 657
     :pswitch_8
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
@@ -127,7 +116,6 @@
 
     goto :goto_0
 
-    .line 663
     :pswitch_9
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;)V
     .locals 0
 
-    .line 859
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$9;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onChange(Ljava/lang/String;)V
     .locals 2
 
-    .line 862
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$9;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiControlService;->isTvDevice()Z
@@ -38,7 +36,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 863
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$9;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmHdmiCecConfig(Lcom/android/server/hdmi/HdmiControlService;)Lcom/android/server/hdmi/HdmiCecConfig;
@@ -62,7 +59,6 @@
     :cond_0
     move p1, v0
 
-    .line 866
     :goto_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$9;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -81,7 +77,6 @@
 
     goto :goto_1
 
-    .line 869
     :cond_2
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$9;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 

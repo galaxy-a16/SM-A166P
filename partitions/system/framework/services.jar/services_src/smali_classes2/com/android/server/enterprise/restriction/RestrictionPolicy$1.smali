@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
     .locals 0
 
-    .line 436
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,17 +27,14 @@
 
     const-string v0, "RestrictionPolicy"
 
-    .line 440
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string/jumbo v1, "sec.fota.intent.MDM_REGISTER_RESULT"
 
-    .line 443
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -49,7 +45,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 445
     invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -60,7 +55,6 @@
 
     if-eq p1, p2, :cond_0
 
-    .line 452
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,7 +75,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 453
     iget-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->-$$Nest$mclearSelectiveFota(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)Z
@@ -93,10 +86,8 @@
     :cond_0
     const-string p1, "action:sec.fota.intent.MDM_REGISTER_RESULT success"
 
-    .line 456
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
     :goto_0
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
@@ -107,14 +98,12 @@
     :cond_1
     const-string v1, "com.xdm.intent.UPDATE_RESULT"
 
-    .line 460
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 468
     iget-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     const/4 v1, 0x0
@@ -127,12 +116,10 @@
 
     const-string p0, "action:com.xdm.intent.UPDATE_RESULT ignore"
 
-    .line 470
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 473
     :cond_2
     invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -142,7 +129,6 @@
 
     add-int/2addr p1, p2
 
-    .line 476
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,7 +153,6 @@
 
     goto :goto_1
 
-    .line 480
     :cond_3
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
@@ -182,7 +167,6 @@
     :cond_5
     const-string/jumbo p2, "sec.fota.intent.MDM_UNREGISTER"
 
-    .line 482
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -191,10 +175,8 @@
 
     const-string p1, "FOTAReceiver: action:sec.fota.intent.MDM_UNREGISTER"
 
-    .line 483
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     iget-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->-$$Nest$mclearSelectiveFota(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)Z
@@ -203,7 +185,6 @@
 
     const-string p2, "com.samsung.utagent"
 
-    .line 485
     filled-new-array {p1, p2}, [Ljava/lang/String;
 
     move-result-object p1
@@ -213,19 +194,16 @@
 
     if-ge v3, p2, :cond_6
 
-    .line 488
     new-instance p2, Landroid/content/Intent;
 
     const-string/jumbo v0, "sec.fota.intent.MDM_REGISTER"
 
     invoke-direct {p2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 489
     aget-object v0, p1, v3
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 490
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-static {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)Landroid/content/Context;

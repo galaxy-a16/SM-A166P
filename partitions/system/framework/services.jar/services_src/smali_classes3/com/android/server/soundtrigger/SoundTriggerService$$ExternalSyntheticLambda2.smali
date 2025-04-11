@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/media/soundtrigger_middleware/SoundTriggerModuleDescriptor;
 
     invoke-static {p1}, Lcom/android/server/soundtrigger/SoundTriggerService;->$r8$lambda$UVGbEE0qiClgfYoE0zcbOydPA2w(Landroid/media/soundtrigger_middleware/SoundTriggerModuleDescriptor;)Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;

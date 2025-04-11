@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/asks/ASKSManagerService;)V
     .locals 0
 
-    .line 4361
     iput-object p1, p0, Lcom/android/server/asks/ASKSManagerService$1;->this$0:Lcom/android/server/asks/ASKSManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     const-string p0, "ASKS"
 
-    .line 4363
     invoke-virtual {p2, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0

@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 824
     invoke-static {}, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->values()[Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     move-result-object v0

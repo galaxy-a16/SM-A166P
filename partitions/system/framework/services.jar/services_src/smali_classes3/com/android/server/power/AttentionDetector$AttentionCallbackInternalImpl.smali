@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/power/AttentionDetector;I)V
     .locals 0
 
-    .line 397
     iput-object p1, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->this$0:Lcom/android/server/power/AttentionDetector;
 
     invoke-direct {p0}, Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;-><init>()V
 
-    .line 398
     iput p2, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->mId:I
 
     return-void
@@ -29,7 +27,6 @@
 .method public onFailure(I)V
     .locals 2
 
-    .line 424
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +53,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->this$0:Lcom/android/server/power/AttentionDetector;
 
     invoke-static {p0}, Lcom/android/server/power/AttentionDetector;->-$$Nest$fgetmRequested(Lcom/android/server/power/AttentionDetector;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -75,7 +71,6 @@
 
     const-string p2, "AttentionDetector"
 
-    .line 403
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,7 +95,6 @@
 
     invoke-static {p2, p3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 407
     iget p2, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->mId:I
 
     iget-object p3, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->this$0:Lcom/android/server/power/AttentionDetector;
@@ -121,7 +115,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 408
     iget-object p2, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->this$0:Lcom/android/server/power/AttentionDetector;
 
     invoke-static {p2}, Lcom/android/server/power/AttentionDetector;->-$$Nest$fgetmLock(Lcom/android/server/power/AttentionDetector;)Ljava/lang/Object;
@@ -130,7 +123,6 @@
 
     monitor-enter p2
 
-    .line 409
     :try_start_0
     iget-object p3, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->this$0:Lcom/android/server/power/AttentionDetector;
 
@@ -142,7 +134,6 @@
 
     if-eq p3, v0, :cond_0
 
-    .line 411
     monitor-exit p2
 
     return-void
@@ -150,7 +141,6 @@
     :cond_0
     if-ne p1, v0, :cond_1
 
-    .line 414
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->this$0:Lcom/android/server/power/AttentionDetector;
 
     invoke-static {p0}, Lcom/android/server/power/AttentionDetector;->-$$Nest$fgetmOnUserAttention(Lcom/android/server/power/AttentionDetector;)Ljava/lang/Runnable;
@@ -161,13 +151,11 @@
 
     goto :goto_0
 
-    .line 416
     :cond_1
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;->this$0:Lcom/android/server/power/AttentionDetector;
 
     invoke-static {p0}, Lcom/android/server/power/AttentionDetector;->-$$Nest$mresetConsecutiveExtensionCount(Lcom/android/server/power/AttentionDetector;)V
 
-    .line 418
     :goto_0
     monitor-exit p2
 

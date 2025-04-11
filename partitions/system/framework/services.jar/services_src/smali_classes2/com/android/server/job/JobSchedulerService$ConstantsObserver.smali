@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
-    .line 488
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/JobSchedulerService$ConstantsObserver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;-><init>(Lcom/android/server/job/JobSchedulerService;)V
 
     return-void
@@ -41,7 +39,6 @@
 
     move v1, v0
 
-    .line 512
     :goto_0
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -53,7 +50,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 513
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v2, v2, Lcom/android/server/job/JobSchedulerService;->mControllers:Ljava/util/List;
@@ -64,14 +60,12 @@
 
     check-cast v2, Lcom/android/server/job/controllers/StateController;
 
-    .line 514
     invoke-virtual {v2}, Lcom/android/server/job/controllers/StateController;->prepareForUpdatedConstantsLocked()V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 517
     :cond_0
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -79,7 +73,6 @@
 
     monitor-enter v1
 
-    .line 518
     :try_start_0
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
@@ -115,7 +108,6 @@
 
     goto :goto_1
 
-    .line 522
     :cond_2
     invoke-virtual {v7}, Ljava/lang/String;->hashCode()I
 
@@ -622,14 +614,12 @@
     :pswitch_0
     if-nez v4, :cond_1
 
-    .line 582
     iget-object v4, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v4, v4, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
     invoke-static {v4}, Lcom/android/server/job/JobSchedulerService$Constants;->-$$Nest$mupdatePersistingConstantsLocked(Lcom/android/server/job/JobSchedulerService$Constants;)V
 
-    .line 583
     iget-object v4, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v7, v4, Lcom/android/server/job/JobSchedulerService;->mJobs:Lcom/android/server/job/JobStore;
@@ -647,7 +637,6 @@
     :pswitch_1
     if-nez v5, :cond_1
 
-    .line 575
     iget-object v5, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v5, v5, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
@@ -658,7 +647,6 @@
 
     goto/16 :goto_1
 
-    .line 563
     :pswitch_2
     iget-object v7, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -668,7 +656,6 @@
 
     goto/16 :goto_1
 
-    .line 560
     :pswitch_3
     iget-object v7, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -678,7 +665,6 @@
 
     goto/16 :goto_1
 
-    .line 553
     :pswitch_4
     iget-object v7, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -688,7 +674,6 @@
 
     goto/16 :goto_1
 
-    .line 548
     :pswitch_5
     iget-object v7, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -698,7 +683,6 @@
 
     goto/16 :goto_1
 
-    .line 544
     :pswitch_6
     iget-object v7, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -711,14 +695,12 @@
     :pswitch_7
     if-nez v3, :cond_1
 
-    .line 537
     iget-object v3, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v3, v3, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
     invoke-static {v3}, Lcom/android/server/job/JobSchedulerService$Constants;->-$$Nest$mupdateApiQuotaConstantsLocked(Lcom/android/server/job/JobSchedulerService$Constants;)V
 
-    .line 538
     iget-object v3, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v3}, Lcom/android/server/job/JobSchedulerService;->updateQuotaTracker()V
@@ -727,7 +709,6 @@
 
     goto/16 :goto_1
 
-    .line 588
     :goto_4
     invoke-virtual {v7, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -737,7 +718,6 @@
 
     if-nez v6, :cond_4
 
-    .line 590
     iget-object v6, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v6, v6, Lcom/android/server/job/JobSchedulerService;->mConcurrencyManager:Lcom/android/server/job/JobConcurrencyManager;
@@ -751,7 +731,6 @@
     :cond_4
     move v8, v0
 
-    .line 593
     :goto_5
     iget-object v9, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -763,7 +742,6 @@
 
     if-ge v8, v9, :cond_1
 
-    .line 594
     iget-object v9, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v9, v9, Lcom/android/server/job/JobSchedulerService;->mControllers:Ljava/util/List;
@@ -774,14 +752,12 @@
 
     check-cast v9, Lcom/android/server/job/controllers/StateController;
 
-    .line 595
     invoke-virtual {v9, p1, v7}, Lcom/android/server/job/controllers/StateController;->processConstantLocked(Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;)V
 
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_5
 
-    .line 601
     :cond_5
     :goto_6
     iget-object p1, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
@@ -794,7 +770,6 @@
 
     if-ge v0, p1, :cond_6
 
-    .line 602
     iget-object p1, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object p1, p1, Lcom/android/server/job/JobSchedulerService;->mControllers:Ljava/util/List;
@@ -805,14 +780,12 @@
 
     check-cast p1, Lcom/android/server/job/controllers/StateController;
 
-    .line 603
     invoke-virtual {p1}, Lcom/android/server/job/controllers/StateController;->onConstantsUpdatedLocked()V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    .line 605
     :cond_6
     monitor-exit v1
 
@@ -915,7 +888,6 @@
 .method public onTareEnabledModeChanged(I)V
     .locals 1
 
-    .line 610
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v0, v0, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
@@ -928,7 +900,6 @@
 
     const/4 p1, 0x0
 
-    .line 611
     :goto_0
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -940,7 +911,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 612
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v0, v0, Lcom/android/server/job/JobSchedulerService;->mControllers:Ljava/util/List;
@@ -951,14 +921,12 @@
 
     check-cast v0, Lcom/android/server/job/controllers/StateController;
 
-    .line 613
     invoke-virtual {v0}, Lcom/android/server/job/controllers/StateController;->onConstantsUpdatedLocked()V
 
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
-    .line 615
     :cond_0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -975,18 +943,14 @@
 
     const-string v0, "jobscheduler"
 
-    .line 492
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
 
-    .line 491
     invoke-static {v0, v1, p0}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
-    .line 493
     const-class v0, Lcom/android/server/tare/EconomyManagerInternal;
 
-    .line 494
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -995,31 +959,25 @@
 
     const/high16 v1, 0x20000000
 
-    .line 496
     invoke-interface {v0, p0, v1}, Lcom/android/server/tare/EconomyManagerInternal;->registerTareStateChangeListener(Lcom/android/server/tare/EconomyManagerInternal$TareStateChangeListener;I)V
 
-    .line 498
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v2, v2, Lcom/android/server/job/JobSchedulerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 499
     :try_start_0
     iget-object v3, p0, Lcom/android/server/job/JobSchedulerService$ConstantsObserver;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v3, v3, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
-    .line 500
     invoke-interface {v0, v1}, Lcom/android/server/tare/EconomyManagerInternal;->getEnabledMode(I)I
 
     move-result v0
 
-    .line 499
     invoke-static {v3, v0}, Lcom/android/server/job/JobSchedulerService$Constants;->-$$Nest$mupdateTareSettingsLocked(Lcom/android/server/job/JobSchedulerService$Constants;I)Z
 
-    .line 502
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1030,7 +988,6 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 503
     invoke-static {v0, v1}, Landroid/provider/DeviceConfig;->getProperties(Ljava/lang/String;[Ljava/lang/String;)Landroid/provider/DeviceConfig$Properties;
 
     move-result-object v0
@@ -1042,7 +999,6 @@
     :catchall_0
     move-exception p0
 
-    .line 502
     :try_start_1
     monitor-exit v2
     :try_end_1

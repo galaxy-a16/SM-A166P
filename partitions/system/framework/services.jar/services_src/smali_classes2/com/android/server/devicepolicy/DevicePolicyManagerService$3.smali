@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Ljava/lang/String;I)V
     .locals 0
 
-    .line 2842
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$3;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$3;->val$packageName:Ljava/lang/String;
@@ -36,7 +35,6 @@
 
     const/4 p3, 0x1
 
-    .line 2846
     invoke-virtual {p2, p1, p3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -45,7 +43,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2849
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$3;->val$packageName:Ljava/lang/String;
 
     iget p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$3;->val$userId:I
@@ -64,7 +61,6 @@
 
     goto :goto_0
 
-    .line 2851
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$3;->val$packageName:Ljava/lang/String;
 

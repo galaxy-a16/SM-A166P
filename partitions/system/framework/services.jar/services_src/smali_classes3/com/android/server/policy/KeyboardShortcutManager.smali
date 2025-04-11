@@ -35,7 +35,6 @@
 
     const/4 v4, 0x2
 
-    .line 79
     filled-new-array {v2, v3, v4, v0, v1}, [I
 
     move-result-object v0
@@ -48,17 +47,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 1
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
-    .line 97
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -67,16 +63,12 @@
 
     const/4 v0, 0x0
 
-    .line 104
     iput-boolean v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsTriggeredMeta:Z
 
-    .line 105
     iput-boolean v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsConsumedMeta:Z
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mContext:Landroid/content/Context;
 
-    .line 109
     iput-object p2, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     return-void
@@ -103,7 +95,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 486
     new-instance p1, Lcom/android/server/policy/KeyboardShortcutManager$DefaultBehavior;
 
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mContext:Landroid/content/Context;
@@ -114,7 +105,6 @@
 
     return-object p1
 
-    .line 483
     :cond_0
     new-instance p1, Lcom/android/server/policy/KeyboardShortcutManager$SettingsBehavior;
 
@@ -126,7 +116,6 @@
 
     return-object p1
 
-    .line 480
     :cond_1
     new-instance p1, Lcom/android/server/policy/KeyboardShortcutManager$A11ySettingsBehavior;
 
@@ -138,7 +127,6 @@
 
     return-object p1
 
-    .line 477
     :cond_2
     new-instance p1, Lcom/android/server/policy/KeyboardShortcutManager$GameBoosterToggleMenuBehavior;
 
@@ -150,7 +138,6 @@
 
     return-object p1
 
-    .line 474
     :cond_3
     new-instance p1, Lcom/android/server/policy/KeyboardShortcutManager$SFinderBehavior;
 
@@ -172,14 +159,12 @@
 
     const-string p1, "com.android.settings"
 
-    .line 498
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 499
     new-instance p1, Lcom/android/server/policy/KeyboardShortcutManager$SettingsBehavior;
 
     iget-object p2, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mContext:Landroid/content/Context;
@@ -190,7 +175,6 @@
 
     return-object p1
 
-    .line 501
     :cond_0
     new-instance p1, Lcom/android/server/policy/KeyboardShortcutManager$DefaultBehavior;
 
@@ -202,7 +186,6 @@
 
     return-object p1
 
-    .line 495
     :cond_1
     new-instance p1, Lcom/android/server/policy/KeyboardShortcutManager$SFinderBehavior;
 
@@ -226,7 +209,6 @@
 
     const-string p0, "Intent is null"
 
-    .line 312
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -240,7 +222,6 @@
 
     goto :goto_0
 
-    .line 318
     :cond_1
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -252,12 +233,10 @@
 
     const-string p0, "META_F, Unknown top activity!"
 
-    .line 320
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 323
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -281,7 +260,6 @@
 
     const-string p1, "componentname"
 
-    .line 324
     invoke-virtual {p0}, Landroid/content/ComponentName;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -290,7 +268,6 @@
 
     goto :goto_0
 
-    .line 328
     :cond_3
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -300,7 +277,6 @@
 
     return-object v0
 
-    .line 331
     :cond_4
     invoke-static {p3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -315,7 +291,6 @@
 .method public final getPreloadBehaviorMap(I)Lcom/android/server/policy/KeyboardShortcutManager$Behavior;
     .locals 1
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mPreloadBehaviorMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -326,7 +301,6 @@
 
     if-nez v0, :cond_0
 
-    .line 304
     invoke-virtual {p0, p1}, Lcom/android/server/policy/KeyboardShortcutManager;->getBehavior(I)Lcom/android/server/policy/KeyboardShortcutManager$Behavior;
 
     move-result-object p0
@@ -340,7 +314,6 @@
 .method public getSaLoggerEventId(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     const/16 p0, 0x29
 
     if-eq p1, p0, :cond_4
@@ -468,7 +441,6 @@
 .method public getShortcutSettingsValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -477,7 +449,6 @@
 
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
-    .line 101
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -490,7 +461,6 @@
 
     const/4 p1, -0x2
 
-    .line 100
     invoke-static {v0, p0, p1}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -505,13 +475,10 @@
 
     const-string v1, "init()"
 
-    .line 113
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     invoke-virtual {p0}, Lcom/android/server/policy/KeyboardShortcutManager;->preloadBehavior()V
 
-    .line 115
     invoke-virtual {p0}, Lcom/android/server/policy/KeyboardShortcutManager;->preloadSettings()V
 
     return-void
@@ -520,12 +487,10 @@
 .method public interceptKeyBeforeDispatching(Landroid/view/KeyEvent;ZI)Z
     .locals 6
 
-    .line 144
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
-    .line 145
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -543,13 +508,11 @@
     :cond_0
     move v1, v3
 
-    .line 146
     :goto_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v4
 
-    .line 147
     invoke-virtual {p0, v0}, Lcom/android/server/policy/KeyboardShortcutManager;->isSupportShortcut(I)Z
 
     move-result v5
@@ -560,13 +523,11 @@
 
     if-nez v4, :cond_1
 
-    .line 149
     invoke-virtual {p0}, Lcom/android/server/policy/KeyboardShortcutManager;->reset()V
 
     :cond_1
     return v3
 
-    .line 153
     :cond_2
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getModifiers()I
 
@@ -578,24 +539,20 @@
 
     const/high16 p2, 0x10000
 
-    .line 154
     invoke-static {p1, p2}, Landroid/view/KeyEvent;->metaStateHasModifiers(II)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 155
     iput-boolean v2, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsTriggeredMeta:Z
 
     const-string p1, "interceptKeyTi, triggered"
 
-    .line 156
     invoke-static {v5, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 157
     :cond_3
     iget-boolean p1, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsTriggeredMeta:Z
 
@@ -607,7 +564,6 @@
     :goto_1
     if-eqz v4, :cond_5
 
-    .line 162
     iget-boolean p0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsConsumedMeta:Z
 
     return p0
@@ -615,14 +571,12 @@
     :cond_5
     if-nez v1, :cond_8
 
-    .line 164
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 165
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -649,16 +603,13 @@
 
     invoke-static {v5, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     :cond_6
     iput-boolean v3, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsTriggeredMeta:Z
 
-    .line 169
     iget-boolean p1, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsConsumedMeta:Z
 
     if-eqz p1, :cond_7
 
-    .line 170
     iput-boolean v3, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsConsumedMeta:Z
 
     return v2
@@ -666,13 +617,11 @@
     :cond_7
     return v3
 
-    .line 176
     :cond_8
     invoke-virtual {p0, v0}, Lcom/android/server/policy/KeyboardShortcutManager;->getShortcutSettingsValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 178
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -681,14 +630,12 @@
 
     if-eqz p2, :cond_a
 
-    .line 179
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result p0
 
     if-eqz p0, :cond_9
 
-    .line 180
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -713,21 +660,18 @@
     :cond_a
     const-string p2, "None"
 
-    .line 183
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_c
 
-    .line 184
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result p0
 
     if-eqz p0, :cond_b
 
-    .line 185
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -752,7 +696,6 @@
     :cond_c
     const-string p2, "android.intent.category."
 
-    .line 189
     invoke-virtual {p1, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -764,7 +707,6 @@
     :cond_d
     const-string p2, "android.app.role."
 
-    .line 191
     invoke-virtual {p1, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -778,7 +720,6 @@
     :cond_e
     const-string p2, "com.sec.android.app.launcher/com.sec.android.app.launcher.search.SearchActivity"
 
-    .line 193
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -792,7 +733,6 @@
     :cond_f
     const-string p2, "com.android.settings"
 
-    .line 195
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -810,7 +750,6 @@
     :cond_10
     move v2, v3
 
-    .line 199
     :goto_2
     invoke-virtual {p0, p3, v2, p1, v0}, Lcom/android/server/policy/KeyboardShortcutManager;->launchCustomizationShortcut(IILjava/lang/String;I)Z
 
@@ -822,7 +761,6 @@
 .method public final isSupportShortcut(I)Z
     .locals 0
 
-    .line 462
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -851,7 +789,6 @@
 
     const/4 v0, 0x0
 
-    .line 243
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/policy/KeyboardShortcutManager;->launch(IILjava/lang/String;)Z
 
     move-result p0
@@ -862,12 +799,10 @@
 .method public final launch(IILjava/lang/String;)Z
     .locals 3
 
-    .line 251
     invoke-virtual {p0, p2}, Lcom/android/server/policy/KeyboardShortcutManager;->getPreloadBehaviorMap(I)Lcom/android/server/policy/KeyboardShortcutManager$Behavior;
 
     move-result-object v0
 
-    .line 252
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -902,7 +837,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     invoke-virtual {v0}, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -915,14 +849,12 @@
 
     const-string p0, "Can not launch app, intent is null"
 
-    .line 256
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 259
     :cond_0
     invoke-virtual {v0, p1}, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->launch(I)Z
 
@@ -936,7 +868,6 @@
 
     const/4 v0, 0x0
 
-    .line 247
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/policy/KeyboardShortcutManager;->launch(IILjava/lang/String;)Z
 
     move-result p0
@@ -955,7 +886,6 @@
 
     if-ne p2, v2, :cond_0
 
-    .line 265
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -979,7 +909,6 @@
 
     if-ne p2, v3, :cond_1
 
-    .line 269
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1003,7 +932,6 @@
 
     if-ne p2, v3, :cond_2
 
-    .line 274
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1028,13 +956,11 @@
 
     return v0
 
-    .line 281
     :cond_2
     invoke-virtual {p0, p2, p3}, Lcom/android/server/policy/KeyboardShortcutManager;->getBehavior(ILjava/lang/String;)Lcom/android/server/policy/KeyboardShortcutManager$Behavior;
 
     move-result-object v3
 
-    .line 282
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1067,50 +993,41 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     invoke-virtual {v3, p1}, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->launch(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 286
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_KEY_SA_LOGGING:Z
 
     if-eqz p1, :cond_3
 
-    .line 287
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     const-string p2, "det"
 
-    .line 288
     invoke-virtual {p1, p2, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 289
     invoke-virtual {p0, p4}, Lcom/android/server/policy/KeyboardShortcutManager;->getSaLoggerEventId(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 290
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p3
 
     if-nez p3, :cond_3
 
-    .line 291
     invoke-static {p2, p1}, Lcom/samsung/android/core/CoreSaLogger;->logForBasic(Ljava/lang/String;Ljava/util/HashMap;)V
 
-    .line 294
     :cond_3
     iput-boolean v2, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsConsumedMeta:Z
 
     const-string p0, "consumed"
 
-    .line 295
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -1122,7 +1039,6 @@
 .method public final preloadBehavior()V
     .locals 6
 
-    .line 119
     sget-object v0, Lcom/android/server/policy/KeyboardShortcutManager;->SHORT_TYPE_LIST:[I
 
     array-length v1, v0
@@ -1134,7 +1050,6 @@
 
     aget v3, v0, v2
 
-    .line 120
     iget-object v4, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mPreloadBehaviorMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v3}, Lcom/android/server/policy/KeyboardShortcutManager;->getBehavior(I)Lcom/android/server/policy/KeyboardShortcutManager$Behavior;
@@ -1154,7 +1069,6 @@
 .method public final preloadSettings()V
     .locals 3
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x1d
@@ -1167,7 +1081,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x1e
@@ -1180,7 +1093,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x1f
@@ -1193,7 +1105,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x20
@@ -1206,7 +1117,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x21
@@ -1219,7 +1129,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x22
@@ -1232,7 +1141,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x24
@@ -1245,7 +1153,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x25
@@ -1258,7 +1165,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x26
@@ -1271,7 +1177,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x27
@@ -1284,7 +1189,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x29
@@ -1297,7 +1201,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x2c
@@ -1310,7 +1213,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x2e
@@ -1323,7 +1225,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v1, 0x2f
@@ -1336,7 +1237,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mShortcutMap:Ljava/util/HashMap;
 
     const/16 v0, 0x36
@@ -1357,10 +1257,8 @@
 
     const/4 v0, 0x0
 
-    .line 466
     iput-boolean v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsTriggeredMeta:Z
 
-    .line 467
     iput-boolean v0, p0, Lcom/android/server/policy/KeyboardShortcutManager;->mIsConsumedMeta:Z
 
     return-void
@@ -1387,7 +1285,6 @@
 
     if-eq p1, p0, :cond_0
 
-    .line 519
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0

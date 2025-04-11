@@ -18,20 +18,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 992
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 993
     iput-object p1, p0, Lcom/android/server/apphibernation/AppHibernationService$InjectorImpl;->mContext:Landroid/content/Context;
 
-    .line 994
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadScheduledExecutor()Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/apphibernation/AppHibernationService$InjectorImpl;->mScheduledExecutorService:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 995
     new-instance p1, Lcom/android/server/apphibernation/UserLevelHibernationProto;
 
     invoke-direct {p1}, Lcom/android/server/apphibernation/UserLevelHibernationProto;-><init>()V
@@ -46,7 +42,6 @@
 .method public getActivityManager()Landroid/app/IActivityManager;
     .locals 0
 
-    .line 1015
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object p0
@@ -57,7 +52,6 @@
 .method public getBackgroundExecutor()Ljava/util/concurrent/Executor;
     .locals 0
 
-    .line 1030
     iget-object p0, p0, Lcom/android/server/apphibernation/AppHibernationService$InjectorImpl;->mScheduledExecutorService:Ljava/util/concurrent/ScheduledExecutorService;
 
     return-object p0
@@ -66,7 +60,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 1000
     iget-object p0, p0, Lcom/android/server/apphibernation/AppHibernationService$InjectorImpl;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -75,7 +68,6 @@
 .method public getGlobalLevelDiskStore()Lcom/android/server/apphibernation/HibernationStateDiskStore;
     .locals 3
 
-    .line 1040
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getDataSystemDirectory()Ljava/io/File;
@@ -86,7 +78,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1041
     new-instance v1, Lcom/android/server/apphibernation/HibernationStateDiskStore;
 
     new-instance v2, Lcom/android/server/apphibernation/GlobalLevelHibernationProto;
@@ -105,7 +96,6 @@
 
     const-string/jumbo p0, "package"
 
-    .line 1005
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -120,7 +110,6 @@
 .method public getPackageManagerInternal()Landroid/content/pm/PackageManagerInternal;
     .locals 0
 
-    .line 1010
     const-class p0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -135,7 +124,6 @@
 .method public getStorageStatsManager()Landroid/app/usage/StorageStatsManager;
     .locals 1
 
-    .line 1025
     iget-object p0, p0, Lcom/android/server/apphibernation/AppHibernationService$InjectorImpl;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/usage/StorageStatsManager;
@@ -152,7 +140,6 @@
 .method public getUsageStatsManagerInternal()Landroid/app/usage/UsageStatsManagerInternal;
     .locals 0
 
-    .line 1035
     const-class p0, Landroid/app/usage/UsageStatsManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -167,7 +154,6 @@
 .method public getUserLevelDiskStore(I)Lcom/android/server/apphibernation/HibernationStateDiskStore;
     .locals 2
 
-    .line 1047
     new-instance v0, Ljava/io/File;
 
     invoke-static {p1}, Landroid/os/Environment;->getDataSystemCeDirectory(I)Ljava/io/File;
@@ -178,7 +164,6 @@
 
     invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1048
     new-instance p1, Lcom/android/server/apphibernation/HibernationStateDiskStore;
 
     iget-object v1, p0, Lcom/android/server/apphibernation/AppHibernationService$InjectorImpl;->mUserLevelHibernationProto:Lcom/android/server/apphibernation/UserLevelHibernationProto;
@@ -193,7 +178,6 @@
 .method public getUserManager()Landroid/os/UserManager;
     .locals 1
 
-    .line 1020
     iget-object p0, p0, Lcom/android/server/apphibernation/AppHibernationService$InjectorImpl;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/os/UserManager;
@@ -210,7 +194,6 @@
 .method public isOatArtifactDeletionEnabled()Z
     .locals 1
 
-    .line 1054
     iget-object p0, p0, Lcom/android/server/apphibernation/AppHibernationService$InjectorImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

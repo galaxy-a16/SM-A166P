@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;)V
     .locals 0
 
-    .line 1821
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SaveOngoingDismissExceptionPolicyFileRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationManagerService$SaveOngoingDismissExceptionPolicyFileRunnable-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationManagerService$SaveOngoingDismissExceptionPolicyFileRunnable;-><init>(Lcom/android/server/notification/NotificationManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public run()V
     .locals 5
 
-    .line 1824
     sget-boolean v0, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -47,7 +44,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1825
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SaveOngoingDismissExceptionPolicyFileRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -57,7 +53,6 @@
 
     monitor-enter v0
 
-    .line 1828
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SaveOngoingDismissExceptionPolicyFileRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -72,13 +67,11 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1835
     :try_start_1
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$SaveOngoingDismissExceptionPolicyFileRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v2, v1}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mwriteOngoingDismissExceptionPolicyJson(Lcom/android/server/notification/NotificationManagerService;Ljava/io/FileOutputStream;)V
 
-    .line 1836
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$SaveOngoingDismissExceptionPolicyFileRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v2}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmOngoingDismissExceptionPolicyFile(Lcom/android/server/notification/NotificationManagerService;)Landroid/util/AtomicFile;
@@ -100,10 +93,8 @@
 
     const-string v4, "Failed to save ongoing dismiss exception policy file, restoring backup"
 
-    .line 1838
     invoke-static {v3, v4, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1839
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$SaveOngoingDismissExceptionPolicyFileRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {p0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmOngoingDismissExceptionPolicyFile(Lcom/android/server/notification/NotificationManagerService;)Landroid/util/AtomicFile;
@@ -112,7 +103,6 @@
 
     invoke-virtual {p0, v1}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 1841
     :goto_0
     monitor-exit v0
 
@@ -130,15 +120,12 @@
 
     const-string v2, "Failed to save ongoing dismiss exception policy file"
 
-    .line 1830
     invoke-static {v1, v2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1831
     monitor-exit v0
 
     return-void
 
-    .line 1841
     :goto_1
     monitor-exit v0
     :try_end_2

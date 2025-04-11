@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Landroid/util/MutableInt;Landroid/os/BatteryProperty;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/health/HealthServiceWrapperHidl$$ExternalSyntheticLambda3;->f$0:Landroid/util/MutableInt;
@@ -31,7 +30,6 @@
 .method public final onValues(II)V
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/health/HealthServiceWrapperHidl$$ExternalSyntheticLambda3;->f$0:Landroid/util/MutableInt;
 
     iget-object p0, p0, Lcom/android/server/health/HealthServiceWrapperHidl$$ExternalSyntheticLambda3;->f$1:Landroid/os/BatteryProperty;

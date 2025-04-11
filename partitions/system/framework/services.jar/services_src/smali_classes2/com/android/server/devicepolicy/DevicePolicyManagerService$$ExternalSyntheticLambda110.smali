@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$$ExternalSyntheticLambda110;->f$0:Landroid/content/ContentResolver;
@@ -27,7 +26,6 @@
 .method public final getOrThrow()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$$ExternalSyntheticLambda110;->f$0:Landroid/content/ContentResolver;
 
     invoke-static {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->$r8$lambda$BV-dIP-hISFRONrjFB_dl3UZIRQ(Landroid/content/ContentResolver;)Ljava/lang/Boolean;

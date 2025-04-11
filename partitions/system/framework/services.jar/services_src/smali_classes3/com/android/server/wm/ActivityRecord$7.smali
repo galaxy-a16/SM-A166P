@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 3981
     invoke-static {}, Lcom/android/server/wm/ActivityRecord$State;->values()[Lcom/android/server/wm/ActivityRecord$State;
 
     move-result-object v0

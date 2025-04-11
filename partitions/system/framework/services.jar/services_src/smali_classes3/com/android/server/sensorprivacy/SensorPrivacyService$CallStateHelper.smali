@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTts(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;)Landroid/speech/tts/TextToSpeech;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mTts:Landroid/speech/tts/TextToSpeech;
 
     return-object p0
@@ -40,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTtsHashForTTSPath(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;)Ljava/util/HashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mTtsHashForTTSPath:Ljava/util/HashMap;
 
     return-object p0
@@ -49,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTtsHashForVoiceCallPath(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;)Ljava/util/HashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mTtsHashForVoiceCallPath:Ljava/util/HashMap;
 
     return-object p0
@@ -58,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$mgetLocaleStringResource(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;Ljava/util/Locale;ILandroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->getLocaleStringResource(Ljava/util/Locale;ILandroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -69,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$monCall(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->onCall()V
 
     return-void
@@ -78,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$monCallOver(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->onCallOver()V
 
     return-void
@@ -87,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$monEmergencyCall(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->onEmergencyCall()V
 
     return-void
@@ -96,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$mreadGuideString(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->readGuideString(I)V
 
     return-void
@@ -105,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$mrunTTS(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->runTTS(I)V
 
     return-void
@@ -114,33 +105,28 @@
 .method public constructor <init>(Lcom/android/server/sensorprivacy/SensorPrivacyService;)V
     .locals 3
 
-    .line 1912
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1903
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mTtsHashForVoiceCallPath:Ljava/util/HashMap;
 
-    .line 1904
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mTtsHashForTTSPath:Ljava/util/HashMap;
 
-    .line 1910
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCallStateLock:Ljava/lang/Object;
 
-    .line 1913
     new-instance v0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$OutgoingEmergencyStateCallback;
 
     const/4 v1, 0x0
@@ -149,14 +135,12 @@
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mEmergencyStateCallback:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$OutgoingEmergencyStateCallback;
 
-    .line 1914
     new-instance v0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$CallStateCallback;
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$CallStateCallback;-><init>(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$CallStateCallback-IA;)V
 
     iput-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCallStateCallback:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$CallStateCallback;
 
-    .line 1916
     invoke-static {p1}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$fgetmTelephonyManager(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -169,7 +153,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->registerTelephonyCallback(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyCallback;)V
 
-    .line 1918
     invoke-static {p1}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$fgetmTelephonyManager(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Landroid/telephony/TelephonyManager;
 
     move-result-object p1
@@ -182,35 +165,28 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/telephony/TelephonyManager;->registerTelephonyCallback(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyCallback;)V
 
-    .line 1921
     iget-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mTtsHashForVoiceCallPath:Ljava/util/HashMap;
 
     const/4 v0, 0x0
 
-    .line 1922
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v1, "streamType"
 
-    .line 1921
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1923
     iget-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mTtsHashForTTSPath:Ljava/util/HashMap;
 
     const/4 v0, 0x2
 
-    .line 1924
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1923
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1925
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -229,7 +205,6 @@
 .method public final getLocaleStringResource(Ljava/util/Locale;ILandroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 2057
     new-instance p0, Landroid/content/res/Configuration;
 
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -242,10 +217,8 @@
 
     invoke-direct {p0, v0}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
-    .line 2058
     invoke-virtual {p0, p1}, Landroid/content/res/Configuration;->setLocale(Ljava/util/Locale;)V
 
-    .line 2059
     invoke-virtual {p3, p0}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
 
     move-result-object p0
@@ -264,12 +237,10 @@
 .method public isInEmergencyCall()Z
     .locals 1
 
-    .line 1930
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCallStateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1931
     :try_start_0
     iget-boolean p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mIsInEmergencyCall:Z
 
@@ -280,7 +251,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1932
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -291,7 +261,6 @@
 .method public final onCall()V
     .locals 4
 
-    .line 1990
     invoke-static {}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -300,12 +269,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1991
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1993
     :try_start_0
     iget-object v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCallStateLock:Ljava/lang/Object;
 
@@ -313,7 +280,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1994
     :try_start_1
     iget-object p0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
@@ -325,12 +291,10 @@
 
     invoke-virtual {p0, v3}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;->showSensorUseDialog(I)V
 
-    .line 1995
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1997
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -338,7 +302,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1995
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -352,22 +315,18 @@
     :catchall_1
     move-exception p0
 
-    .line 1997
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1998
     throw p0
 .end method
 
 .method public final onCallOver()V
     .locals 9
 
-    .line 2002
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCallStateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2003
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mIsInEmergencyCall:Z
 
@@ -375,15 +334,12 @@
 
     const/4 v1, 0x0
 
-    .line 2004
     iput-boolean v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mIsInEmergencyCall:Z
 
-    .line 2005
     iget-boolean v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mMicUnmutedForEmergencyCall:Z
 
     if-eqz v2, :cond_0
 
-    .line 2006
     iget-object v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
     invoke-static {v2}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$fgetmSensorPrivacyServiceImpl(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
@@ -406,16 +362,13 @@
 
     invoke-static/range {v3 .. v8}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;->-$$Nest$msetToggleSensorPrivacyUnchecked(Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;IIIIZ)V
 
-    .line 2008
     iput-boolean v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mMicUnmutedForEmergencyCall:Z
 
-    .line 2011
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCameraBlockedForEmergencyCall:Z
 
     if-eqz v2, :cond_1
 
-    .line 2012
     iget-object v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
     invoke-static {v2}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$fgetmSensorPrivacyServiceImpl(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
@@ -438,10 +391,8 @@
 
     invoke-static/range {v3 .. v8}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;->-$$Nest$msetToggleSensorPrivacyUnchecked(Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;IIIIZ)V
 
-    .line 2014
     iput-boolean v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCameraBlockedForEmergencyCall:Z
 
-    .line 2018
     :cond_1
     monitor-exit v0
 
@@ -460,12 +411,10 @@
 .method public final onEmergencyCall()V
     .locals 10
 
-    .line 1963
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCallStateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1964
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mIsInEmergencyCall:Z
 
@@ -473,17 +422,14 @@
 
     const/4 v1, 0x1
 
-    .line 1965
     iput-boolean v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mIsInEmergencyCall:Z
 
-    .line 1966
     iget-object v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
     invoke-static {v2}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$fgetmSensorPrivacyServiceImpl(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
 
     move-result-object v2
 
-    .line 1967
     invoke-virtual {v2, v1, v1}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;->isToggleSensorPrivacyEnabled(II)Z
 
     move-result v2
@@ -492,7 +438,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1968
     iget-object v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
     invoke-static {v2}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$fgetmSensorPrivacyServiceImpl(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
@@ -515,16 +460,13 @@
 
     invoke-static/range {v4 .. v9}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;->-$$Nest$msetToggleSensorPrivacyUnchecked(Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;IIIIZ)V
 
-    .line 1970
     iput-boolean v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mMicUnmutedForEmergencyCall:Z
 
     goto :goto_0
 
-    .line 1972
     :cond_0
     iput-boolean v3, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mMicUnmutedForEmergencyCall:Z
 
-    .line 1976
     :goto_0
     iget-object v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
@@ -540,14 +482,12 @@
 
     const/4 v5, 0x2
 
-    .line 1977
     invoke-virtual {v2, v4, v5}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;->isToggleSensorPrivacyEnabled(II)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1978
     iget-object v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
 
     invoke-static {v2}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$fgetmSensorPrivacyServiceImpl(Lcom/android/server/sensorprivacy/SensorPrivacyService;)Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;
@@ -570,16 +510,13 @@
 
     invoke-static/range {v3 .. v8}, Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;->-$$Nest$msetToggleSensorPrivacyUnchecked(Lcom/android/server/sensorprivacy/SensorPrivacyService$SensorPrivacyServiceImpl;IIIIZ)V
 
-    .line 1980
     iput-boolean v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCameraBlockedForEmergencyCall:Z
 
     goto :goto_1
 
-    .line 1982
     :cond_1
     iput-boolean v3, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mCameraBlockedForEmergencyCall:Z
 
-    .line 1986
     :cond_2
     :goto_1
     monitor-exit v0
@@ -599,7 +536,6 @@
 .method public final readGuideString(I)V
     .locals 2
 
-    .line 2036
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$2;
@@ -616,12 +552,10 @@
 .method public final runTTS(I)V
     .locals 3
 
-    .line 2023
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->mTts:Landroid/speech/tts/TextToSpeech;
 
     if-nez v0, :cond_0
 
-    .line 2024
     new-instance v0, Landroid/speech/tts/TextToSpeech;
 
     iget-object v1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->this$0:Lcom/android/server/sensorprivacy/SensorPrivacyService;
@@ -640,7 +574,6 @@
 
     goto :goto_0
 
-    .line 2031
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->readGuideString(I)V
 

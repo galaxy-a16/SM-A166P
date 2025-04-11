@@ -15,16 +15,12 @@
 .method public constructor <init>(Landroid/content/pm/ServiceInfo;ZLjava/lang/String;)V
     .locals 0
 
-    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     iput-object p1, p0, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;->mServiceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 131
     iput-boolean p2, p0, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;->mSelectableAsDefault:Z
 
-    .line 132
     iput-object p3, p0, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;->mParseError:Ljava/lang/String;
 
     return-void
@@ -33,12 +29,10 @@
 .method public static getAvailableServices(Landroid/content/Context;I)Ljava/util/List;
     .locals 4
 
-    .line 61
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 64
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -55,7 +49,6 @@
 
     move-result-object p1
 
-    .line 69
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -73,7 +66,6 @@
 
     check-cast v1, Landroid/content/pm/ResolveInfo;
 
-    .line 71
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -84,7 +76,6 @@
 
     move-result-object v1
 
-    .line 72
     iget-object v2, v1, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;->mParseError:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -93,7 +84,6 @@
 
     if-nez v2, :cond_0
 
-    .line 73
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +104,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :cond_0
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -132,7 +121,6 @@
     :try_start_0
     const-string v1, "android.speech"
 
-    .line 92
     invoke-virtual {p1, p0, v1}, Landroid/content/pm/ServiceInfo;->loadXmlMetaData(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;
 
     move-result-object v1
@@ -143,7 +131,6 @@
 
     if-nez v1, :cond_1
 
-    .line 96
     :try_start_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -161,7 +148,6 @@
 
     move-result-object p0
 
-    .line 98
     new-instance v2, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;
 
     invoke-direct {v2, p1, v0, p0}, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;-><init>(Landroid/content/pm/ServiceInfo;ZLjava/lang/String;)V
@@ -170,7 +156,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 122
     :try_start_2
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->close()V
     :try_end_2
@@ -181,7 +166,6 @@
     :cond_0
     return-object v2
 
-    .line 100
     :cond_1
     :try_start_3
     iget-object v2, p1, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -190,7 +174,6 @@
 
     move-result-object p0
 
-    .line 101
     invoke-static {v1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v2
@@ -204,14 +187,12 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 105
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->next()I
 
     move-result v3
 
     goto :goto_0
 
-    .line 108
     :cond_2
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
@@ -219,32 +200,26 @@
 
     const-string/jumbo v4, "recognition-service"
 
-    .line 109
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 114
     sget-object v3, Lcom/android/internal/R$styleable;->RecognitionService:[I
 
-    .line 115
     invoke-virtual {p0, v2, v3}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
-    .line 118
     invoke-virtual {p0, v0, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
 
-    .line 121
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 122
     :try_start_4
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->close()V
     :try_end_4
@@ -256,7 +231,6 @@
 
     goto :goto_2
 
-    .line 110
     :cond_3
     :try_start_5
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
@@ -274,7 +248,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 92
     :try_start_6
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->close()V
     :try_end_6
@@ -299,7 +272,6 @@
     :catch_0
     move-exception p0
 
-    .line 123
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -314,7 +286,6 @@
 
     move-result-object p0
 
-    .line 125
     :goto_2
     new-instance v1, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;
 
@@ -328,7 +299,6 @@
 .method public getParseError()Ljava/lang/String;
     .locals 0
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;->mParseError:Ljava/lang/String;
 
     return-object p0
@@ -337,7 +307,6 @@
 .method public getServiceInfo()Landroid/content/pm/ServiceInfo;
     .locals 0
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;->mServiceInfo:Landroid/content/pm/ServiceInfo;
 
     return-object p0
@@ -346,7 +315,6 @@
 .method public isSelectableAsDefault()Z
     .locals 0
 
-    .line 146
     iget-boolean p0, p0, Lcom/android/server/voiceinteraction/RecognitionServiceInfo;->mSelectableAsDefault:Z
 
     return p0

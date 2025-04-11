@@ -16,17 +16,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;->mClientCallbacks:Ljava/util/List;
 
-    .line 88
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;->mContext:Landroid/content/Context;
 
     return-void
@@ -44,7 +41,6 @@
     :try_start_0
     const-string p1, "LockoutResetTracker"
 
-    .line 93
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,12 +63,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 94
     monitor-exit p0
 
     return-void
 
-    .line 97
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;->mClientCallbacks:Ljava/util/List;
@@ -87,7 +81,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 99
     :try_start_2
     invoke-interface {p1}, Landroid/hardware/biometrics/IBiometricServiceLockoutResetCallback;->asBinder()Landroid/os/IBinder;
 
@@ -110,12 +103,10 @@
 
     const-string v0, "Failed to link to death"
 
-    .line 101
     invoke-static {p2, v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 103
     :goto_0
     monitor-exit p0
 
@@ -132,7 +123,6 @@
 .method public binderDied()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -144,7 +134,6 @@
     :try_start_0
     const-string v0, "LockoutResetTracker"
 
-    .line 112
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,14 +150,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;->mClientCallbacks:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 114
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -177,14 +164,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 115
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher$ClientCallback;
 
-    .line 116
     invoke-static {v1}, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher$ClientCallback;->-$$Nest$fgetmCallback(Lcom/android/server/biometrics/sensors/LockoutResetDispatcher$ClientCallback;)Landroid/hardware/biometrics/IBiometricServiceLockoutResetCallback;
 
     move-result-object v2
@@ -201,7 +186,6 @@
 
     const-string v2, "LockoutResetTracker"
 
-    .line 117
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,17 +206,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     invoke-static {v1}, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher$ClientCallback;->-$$Nest$mreleaseWakelock(Lcom/android/server/biometrics/sensors/LockoutResetDispatcher$ClientCallback;)V
 
-    .line 119
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 122
     :cond_1
     monitor-exit p0
 
@@ -251,7 +232,6 @@
 
     monitor-enter p0
 
-    .line 125
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;->mClientCallbacks:Ljava/util/List;
 
@@ -272,14 +252,12 @@
 
     check-cast v1, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher$ClientCallback;
 
-    .line 126
     invoke-virtual {v1, p1}, Lcom/android/server/biometrics/sensors/LockoutResetDispatcher$ClientCallback;->sendLockoutReset(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 128
     :cond_0
     monitor-exit p0
 

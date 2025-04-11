@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$CEe5P1gLU-tWCH12AKgRPwErweQ(Lcom/android/server/autofill/ui/FillUi$AutofillWindowPresenter;Landroid/view/WindowManager$LayoutParams;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/autofill/ui/FillUi$AutofillWindowPresenter;->lambda$show$0(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/ui/FillUi;)V
     .locals 0
 
-    .line 665
     iput-object p1, p0, Lcom/android/server/autofill/ui/FillUi$AutofillWindowPresenter;->this$0:Lcom/android/server/autofill/ui/FillUi;
 
     invoke-direct {p0}, Landroid/view/autofill/IAutofillWindowPresenter$Stub;-><init>()V
@@ -31,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/ui/FillUi;Lcom/android/server/autofill/ui/FillUi$AutofillWindowPresenter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/autofill/ui/FillUi$AutofillWindowPresenter;-><init>(Lcom/android/server/autofill/ui/FillUi;)V
 
     return-void
@@ -40,7 +37,6 @@
 .method private synthetic lambda$show$0(Landroid/view/WindowManager$LayoutParams;)V
     .locals 0
 
-    .line 673
     iget-object p0, p0, Lcom/android/server/autofill/ui/FillUi$AutofillWindowPresenter;->this$0:Lcom/android/server/autofill/ui/FillUi;
 
     invoke-static {p0}, Lcom/android/server/autofill/ui/FillUi;->-$$Nest$fgetmWindow(Lcom/android/server/autofill/ui/FillUi;)Lcom/android/server/autofill/ui/FillUi$AnchoredWindow;
@@ -57,7 +53,6 @@
 .method public hide(Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 678
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -82,12 +77,10 @@
 .method public show(Landroid/view/WindowManager$LayoutParams;Landroid/graphics/Rect;ZI)V
     .locals 0
 
-    .line 669
     sget-boolean p2, Lcom/android/server/autofill/Helper;->sVerbose:Z
 
     if-eqz p2, :cond_0
 
-    .line 670
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,7 +95,6 @@
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 671
     invoke-static {p1}, Lcom/android/server/autofill/Helper;->paramsToString(Landroid/view/WindowManager$LayoutParams;)Ljava/lang/String;
 
     move-result-object p3
@@ -115,10 +107,8 @@
 
     const-string p3, "FillUi"
 
-    .line 670
     invoke-static {p3, p2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 673
     :cond_0
     invoke-static {}, Lcom/android/server/UiThread;->getHandler()Landroid/os/Handler;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)V
     .locals 0
 
-    .line 10271
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,7 +35,6 @@
 
     const-string v4, "KNOX_CUSTOM"
 
-    .line 10275
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -49,7 +47,6 @@
 
     if-eqz p2, :cond_7
 
-    .line 10278
     iget-object p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p2}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$mgetMultiWindowState(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Z
@@ -58,14 +55,12 @@
 
     if-nez p2, :cond_0
 
-    .line 10279
     iget-object p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     const/4 v5, 0x0
 
     invoke-virtual {p2, v5}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->setMultiWindowState(Z)I
 
-    .line 10283
     :cond_0
     iget-object p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
@@ -77,12 +72,10 @@
 
     if-eqz p2, :cond_1
 
-    .line 10284
     iget-object p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-virtual {p2, v5}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->setDeviceSpeakerEnabledState(Z)I
 
-    .line 10287
     :cond_1
     iget-object p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
@@ -92,7 +85,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 10288
     iget-object p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-virtual {p2}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->getUsbMassStorageState()Z
@@ -101,7 +93,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 10289
     iget-object p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-virtual {p2, v5}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->setUsbMassStorageState(Z)I
@@ -113,7 +104,6 @@
 
     const/16 v7, 0x3e8
 
-    .line 10295
     :try_start_0
     iget-object v8, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
@@ -129,7 +119,6 @@
 
     if-ne v8, v9, :cond_3
 
-    .line 10296
     iget-object v8, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v8}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -140,7 +129,6 @@
 
     invoke-virtual {v8, v7, v4, v9, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 10297
     iget-object v8, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v8}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -151,7 +139,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10303
     :catch_0
     :cond_3
     :try_start_1
@@ -167,7 +154,6 @@
 
     if-nez v3, :cond_4
 
-    .line 10304
     iget-object v3, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v3}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -178,7 +164,6 @@
 
     invoke-virtual {v3, v7, v4, v8, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 10305
     iget-object v3, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v3}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -189,7 +174,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 10311
     :catch_1
     :cond_4
     :try_start_2
@@ -205,7 +189,6 @@
 
     if-nez v2, :cond_5
 
-    .line 10312
     iget-object v2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v2}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -216,7 +199,6 @@
 
     invoke-virtual {v2, v7, v4, v3, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 10313
     iget-object v2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v2}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -227,7 +209,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 10320
     :catch_2
     :cond_5
     :try_start_3
@@ -243,7 +224,6 @@
 
     if-ne v1, v5, :cond_6
 
-    .line 10321
     iget-object v1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -254,7 +234,6 @@
 
     invoke-virtual {v1, v7, v4, v2, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 10322
     iget-object v1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -265,7 +244,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 10329
     :catch_3
     :cond_6
     :try_start_4
@@ -286,10 +264,8 @@
 
     const-string v0, "initializing KNOX_CUSTOM with default values"
 
-    .line 10331
     invoke-static {p2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10332
     iget-object p2, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p2}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmEdmStorageProvider(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -298,7 +274,6 @@
 
     invoke-virtual {p2, v7, v4, p1, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 10336
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$3;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 

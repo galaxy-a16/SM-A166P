@@ -19,10 +19,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 379
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 380
     iput p1, p0, Lcom/android/server/content/SyncStorageEngine$DayStats;->day:I
 
     return-void

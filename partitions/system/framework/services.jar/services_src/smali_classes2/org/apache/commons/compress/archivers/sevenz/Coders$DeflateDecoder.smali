@@ -15,7 +15,6 @@
 
     new-array v0, v0, [B
 
-    .line 130
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder;->ONE_ZERO_BYTE:[B
 
     return-void
@@ -24,7 +23,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 132
     const-class v0, Ljava/lang/Number;
 
     filled-new-array {v0}, [Ljava/lang/Class;
@@ -41,14 +39,12 @@
 .method public decode(Ljava/lang/String;Ljava/io/InputStream;JLorg/apache/commons/compress/archivers/sevenz/Coder;[B)Ljava/io/InputStream;
     .locals 0
 
-    .line 140
     new-instance p0, Ljava/util/zip/Inflater;
 
     const/4 p1, 0x1
 
     invoke-direct {p0, p1}, Ljava/util/zip/Inflater;-><init>(Z)V
 
-    .line 146
     new-instance p1, Ljava/util/zip/InflaterInputStream;
 
     new-instance p3, Ljava/io/SequenceInputStream;
@@ -63,7 +59,6 @@
 
     invoke-direct {p1, p3, p0}, Ljava/util/zip/InflaterInputStream;-><init>(Ljava/io/InputStream;Ljava/util/zip/Inflater;)V
 
-    .line 148
     new-instance p2, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;
 
     invoke-direct {p2, p1, p0}, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;-><init>(Ljava/util/zip/InflaterInputStream;Ljava/util/zip/Inflater;)V

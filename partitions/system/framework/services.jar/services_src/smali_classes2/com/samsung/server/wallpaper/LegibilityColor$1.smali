@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/LegibilityColor;Landroid/os/Looper;)V
     .locals 0
 
-    .line 85
     iput-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor$1;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 11
 
-    .line 88
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x3f7
@@ -40,20 +38,16 @@
 
     const-string/jumbo v2, "need_dark_statusbar"
 
-    .line 91
     filled-new-array {v2, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 94
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, [I
 
-    .line 96
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 97
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,17 +74,14 @@
 
     move v6, v5
 
-    .line 100
     :goto_0
     :try_start_0
     array-length v7, v1
 
     if-ge v5, v7, :cond_2
 
-    .line 101
     aget v7, v1, v5
 
-    .line 102
     iget-object v8, p0, Lcom/samsung/server/wallpaper/LegibilityColor$1;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     invoke-static {v8}, Lcom/samsung/server/wallpaper/LegibilityColor;->-$$Nest$fgetmContext(Lcom/samsung/server/wallpaper/LegibilityColor;)Landroid/content/Context;
@@ -107,7 +98,6 @@
 
     move-result v8
 
-    .line 105
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +128,6 @@
 
     if-eq v8, v7, :cond_1
 
-    .line 108
     iget-object v8, p0, Lcom/samsung/server/wallpaper/LegibilityColor$1;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     invoke-static {v8}, Lcom/samsung/server/wallpaper/LegibilityColor;->-$$Nest$fgetmContext(Lcom/samsung/server/wallpaper/LegibilityColor;)Landroid/content/Context;
@@ -153,7 +142,6 @@
 
     invoke-static {v8, v9, v7, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 110
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +178,6 @@
     :catch_0
     move-exception p1
 
-    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,13 +194,11 @@
 
     invoke-static {v3, p1}, Lcom/samsung/server/wallpaper/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 118
     :cond_2
     invoke-static {v3, v4}, Lcom/samsung/server/wallpaper/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v6, :cond_3
 
-    .line 120
     iget-object p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor$1;->this$0:Lcom/samsung/server/wallpaper/LegibilityColor;
 
     invoke-static {p0}, Lcom/samsung/server/wallpaper/LegibilityColor;->-$$Nest$fgetmService(Lcom/samsung/server/wallpaper/LegibilityColor;)Lcom/samsung/server/wallpaper/SemWallpaperManagerService;

@@ -7,7 +7,6 @@
 .method public static final to(Ljava/lang/Object;Ljava/lang/Object;)Lcom/android/server/permission/jarjar/kotlin/Pair;
     .locals 1
 
-    .line 43
     new-instance v0, Lcom/android/server/permission/jarjar/kotlin/Pair;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/permission/jarjar/kotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V

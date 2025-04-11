@@ -23,10 +23,8 @@
 
     move-object v4, p3
 
-    .line 31
     invoke-direct/range {v0 .. v5}, Lcom/android/server/hdmi/HdmiCecMessage;-><init>(III[BI)V
 
-    .line 32
     iput p4, p0, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;->mAudioVolumeLevel:I
 
     return-void
@@ -47,21 +45,18 @@
 
     aput-byte v0, v5, v1
 
-    .line 48
     invoke-static {p0, p1}, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;->validateAddress(II)I
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 50
     new-instance v0, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;
 
     invoke-direct {v0, p0, p1, v5, p2}, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;-><init>(II[BI)V
 
     return-object v0
 
-    .line 52
     :cond_0
     new-instance p2, Lcom/android/server/hdmi/HdmiCecMessage;
 
@@ -81,12 +76,10 @@
 .method public static build(II[B)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 7
 
-    .line 69
     array-length v0, p2
 
     if-nez v0, :cond_0
 
-    .line 70
     new-instance v0, Lcom/android/server/hdmi/HdmiCecMessage;
 
     const/16 v4, 0x73
@@ -108,24 +101,20 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 74
     aget-byte v0, p2, v0
 
-    .line 77
     invoke-static {p0, p1}, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;->validateAddress(II)I
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 79
     new-instance v1, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;
 
     invoke-direct {v1, p0, p1, p2, v0}, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;-><init>(II[BI)V
 
     return-object v1
 
-    .line 81
     :cond_1
     new-instance v0, Lcom/android/server/hdmi/HdmiCecMessage;
 
@@ -149,7 +138,6 @@
 
     const/16 v0, 0x7fff
 
-    .line 90
     invoke-static {p0, p1, v0, v0}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->validateAddress(IIII)I
 
     move-result p0
@@ -162,7 +150,6 @@
 .method public getAudioVolumeLevel()I
     .locals 0
 
-    .line 100
     iget p0, p0, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;->mAudioVolumeLevel:I
 
     return p0

@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$zIAYGfBmsgidkQwx6aJYILFmUIU(Lcom/android/server/pm/UserManagerService$6;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/UserManagerService$6;->lambda$performReceive$0(I)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;I)V
     .locals 0
 
-    .line 6238
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$6;->this$0:Lcom/android/server/pm/UserManagerService;
 
     iput p2, p0, Lcom/android/server/pm/UserManagerService$6;->val$userId:I
@@ -35,7 +33,6 @@
 .method private synthetic lambda$performReceive$0(I)V
     .locals 1
 
-    .line 6248
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$6;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/UserManagerService;->-$$Nest$mgetActivityManagerInternal(Lcom/android/server/pm/UserManagerService;)Landroid/app/ActivityManagerInternal;
@@ -44,7 +41,6 @@
 
     invoke-virtual {v0, p1}, Landroid/app/ActivityManagerInternal;->onUserRemoved(I)V
 
-    .line 6249
     iget-object p0, p0, Lcom/android/server/pm/UserManagerService$6;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/pm/UserManagerService;->-$$Nest$mremoveUserState(Lcom/android/server/pm/UserManagerService;I)V
@@ -57,7 +53,6 @@
 .method public performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZI)V
     .locals 0
 
-    .line 6247
     new-instance p1, Ljava/lang/Thread;
 
     iget p2, p0, Lcom/android/server/pm/UserManagerService$6;->val$userId:I
@@ -68,7 +63,6 @@
 
     invoke-direct {p1, p3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 6250
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     return-void

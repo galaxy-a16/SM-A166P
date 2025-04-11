@@ -24,7 +24,6 @@
 
     new-array v0, v0, [I
 
-    .line 14
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/tukaani/xz/simple/IA64;->BRANCH_TABLE:[I
@@ -71,13 +70,10 @@
 .method public constructor <init>(ZI)V
     .locals 0
 
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     iput-boolean p1, p0, Lorg/tukaani/xz/simple/IA64;->isEncoder:Z
 
-    .line 25
     iput p2, p0, Lorg/tukaani/xz/simple/IA64;->pos:I
 
     return-void
@@ -101,12 +97,10 @@
     :goto_0
     if-gt v3, v1, :cond_7
 
-    .line 33
     aget-byte v4, p1, v3
 
     and-int/lit8 v4, v4, 0x1f
 
-    .line 34
     sget-object v5, Lorg/tukaani/xz/simple/IA64;->BRANCH_TABLE:[I
 
     aget v4, v5, v4
@@ -156,7 +150,6 @@
 
     add-int/2addr v5, v13
 
-    .line 45
     aget-byte v5, p1, v5
 
     move/from16 v16, v3
@@ -241,12 +234,10 @@
 
     shl-int/lit8 v5, v5, 0x4
 
-    .line 58
     iget-boolean v6, v0, Lorg/tukaani/xz/simple/IA64;->isEncoder:Z
 
     if-eqz v6, :cond_3
 
-    .line 59
     iget v6, v0, Lorg/tukaani/xz/simple/IA64;->pos:I
 
     add-int v6, v6, v16
@@ -257,7 +248,6 @@
 
     goto :goto_3
 
-    .line 61
     :cond_3
     iget v6, v0, Lorg/tukaani/xz/simple/IA64;->pos:I
 
@@ -323,7 +313,6 @@
 
     int-to-byte v10, v10
 
-    .line 73
     aput-byte v10, p1, v9
 
     add-int/lit8 v5, v5, 0x1
@@ -362,7 +351,6 @@
 
     sub-int v3, v16, p2
 
-    .line 78
     iget v1, v0, Lorg/tukaani/xz/simple/IA64;->pos:I
 
     add-int/2addr v1, v3

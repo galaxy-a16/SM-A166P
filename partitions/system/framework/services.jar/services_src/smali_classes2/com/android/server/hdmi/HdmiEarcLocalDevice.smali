@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;I)V
     .locals 0
 
-    .line 37
     invoke-direct {p0, p1, p2}, Lcom/android/server/hdmi/HdmiLocalDevice;-><init>(Lcom/android/server/hdmi/HdmiControlService;I)V
 
     return-void
@@ -26,7 +25,6 @@
 
     return-object p0
 
-    .line 44
     :cond_0
     new-instance p1, Lcom/android/server/hdmi/HdmiEarcLocalDeviceTx;
 
@@ -40,7 +38,6 @@
 .method public disableDevice()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

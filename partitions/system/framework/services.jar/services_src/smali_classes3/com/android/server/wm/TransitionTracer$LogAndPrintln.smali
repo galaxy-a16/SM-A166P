@@ -7,7 +7,6 @@
 .method public static bridge synthetic -$$Nest$sme(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/TransitionTracer$LogAndPrintln;->e(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$sme(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/wm/TransitionTracer$LogAndPrintln;->e(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/Exception;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$smi(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/TransitionTracer$LogAndPrintln;->i(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
@@ -36,12 +33,10 @@
 
     const-string v0, "TransitionTracer"
 
-    .line 287
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p0, :cond_0
 
-    .line 289
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -58,7 +53,6 @@
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 290
     invoke-virtual {p0}, Ljava/io/PrintWriter;->flush()V
 
     :cond_0
@@ -70,12 +64,10 @@
 
     const-string v0, "TransitionTracer"
 
-    .line 295
     invoke-static {v0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     if-eqz p0, :cond_0
 
-    .line 297
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,7 +90,6 @@
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 298
     invoke-virtual {p0}, Ljava/io/PrintWriter;->flush()V
 
     :cond_0
@@ -110,15 +101,12 @@
 
     const-string v0, "TransitionTracer"
 
-    .line 279
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p0, :cond_0
 
-    .line 281
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 282
     invoke-virtual {p0}, Ljava/io/PrintWriter;->flush()V
 
     :cond_0

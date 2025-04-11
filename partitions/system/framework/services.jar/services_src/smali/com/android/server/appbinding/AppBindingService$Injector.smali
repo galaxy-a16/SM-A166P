@@ -17,7 +17,6 @@
 .method public getGlobalSettingString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 99
     invoke-static {p1, p2}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -28,7 +27,6 @@
 .method public getIPackageManager()Landroid/content/pm/IPackageManager;
     .locals 0
 
-    .line 95
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object p0

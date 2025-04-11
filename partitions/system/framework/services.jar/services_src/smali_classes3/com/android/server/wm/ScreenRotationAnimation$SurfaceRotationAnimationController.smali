@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$953esEamEY0ik0NmGjvt-Rb-kZo(Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;ILcom/android/server/wm/AnimationAdapter;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->onAnimationEnd(ILcom/android/server/wm/AnimationAdapter;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ScreenRotationAnimation;)V
     .locals 0
 
-    .line 676
     iput-object p1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,42 +39,33 @@
 .method public cancel()V
     .locals 1
 
-    .line 896
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mEnterBlackFrameAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 897
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimator;->cancelAnimation()V
 
-    .line 899
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mScreenshotRotationAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
     if-eqz v0, :cond_1
 
-    .line 900
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimator;->cancelAnimation()V
 
-    .line 903
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mRotateScreenAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
     if-eqz v0, :cond_2
 
-    .line 904
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimator;->cancelAnimation()V
 
-    .line 907
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mDisplayAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
     if-eqz v0, :cond_3
 
-    .line 908
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimator;->cancelAnimation()V
 
-    .line 911
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
@@ -86,7 +75,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 912
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {v0}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmService(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/WindowManagerService;
@@ -110,7 +98,6 @@
 .method public final createWindowAnimationSpec(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
     .locals 3
 
-    .line 828
     new-instance p0, Lcom/android/server/wm/WindowAnimationSpec;
 
     new-instance v0, Landroid/graphics/Point;
@@ -129,7 +116,6 @@
 .method public final initializeBuilder()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
     .locals 3
 
-    .line 711
     new-instance v0, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     invoke-direct {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;-><init>()V
@@ -140,7 +126,6 @@
 
     move-result-object v1
 
-    .line 712
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$$ExternalSyntheticLambda1;
@@ -157,7 +142,6 @@
 
     move-result-object v1
 
-    .line 713
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$$ExternalSyntheticLambda2;
@@ -174,7 +158,6 @@
 
     move-result-object v1
 
-    .line 714
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$$ExternalSyntheticLambda3;
@@ -191,7 +174,6 @@
 
     move-result-object p0
 
-    .line 715
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v1, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$$ExternalSyntheticLambda4;
@@ -208,7 +190,6 @@
 .method public isAnimating()Z
     .locals 1
 
-    .line 917
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mDisplayAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
     if-eqz v0, :cond_0
@@ -224,7 +205,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 918
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimator;->isAnimating()Z
 
     move-result v0
@@ -236,7 +216,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 919
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimator;->isAnimating()Z
 
     move-result v0
@@ -248,7 +227,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 921
     invoke-virtual {p0}, Lcom/android/server/wm/SurfaceAnimator;->isAnimating()Z
 
     move-result p0
@@ -270,7 +248,6 @@
 .method public final onAnimationEnd(ILcom/android/server/wm/AnimationAdapter;)V
     .locals 9
 
-    .line 856
     iget-object p2, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {p2}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmService(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/WindowManagerService;
@@ -283,7 +260,6 @@
 
     monitor-enter p2
 
-    .line 857
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->isAnimating()Z
 
@@ -297,7 +273,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 858
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
     if-eqz v0, :cond_4
@@ -422,7 +397,6 @@
 
     invoke-static {v7, p0, v1, v3, v8}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 874
     :cond_4
     monitor-exit p2
     :try_end_0
@@ -432,7 +406,6 @@
 
     return-void
 
-    .line 876
     :cond_5
     :try_start_1
     sget-boolean p1, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
@@ -445,17 +418,13 @@
 
     invoke-static {p1, v0, v2, v3, v3}, Lcom/android/internal/protolog/ProtoLogImpl;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 877
     :cond_6
     iput-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mEnterBlackFrameAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
-    .line 878
     iput-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mScreenshotRotationAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
-    .line 879
     iput-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mRotateScreenAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
-    .line 880
     iget-object p1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {p1}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmService(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/WindowManagerService;
@@ -470,7 +439,6 @@
 
     iput v0, p1, Lcom/android/server/wm/WindowAnimator;->mBulkUpdateParams:I
 
-    .line 881
     iget-object p1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {p1}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/DisplayContent;
@@ -485,14 +453,12 @@
 
     if-ne p1, v0, :cond_7
 
-    .line 883
     invoke-static {v0}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object p1
 
     invoke-virtual {p1, v3}, Lcom/android/server/wm/DisplayContent;->setRotationAnimation(Lcom/android/server/wm/ScreenRotationAnimation;)V
 
-    .line 884
     iget-object p1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {p1}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/DisplayContent;
@@ -503,7 +469,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 885
     iget-object p1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {p1}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/DisplayContent;
@@ -512,16 +477,13 @@
 
     iget-object p1, p1, Lcom/android/server/wm/DisplayContent;->mDisplayRotationCompatPolicy:Lcom/android/server/wm/DisplayRotationCompatPolicy;
 
-    .line 886
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayRotationCompatPolicy;->onScreenRotationAnimationFinished()V
 
     goto :goto_4
 
-    .line 889
     :cond_7
     invoke-virtual {v0}, Lcom/android/server/wm/ScreenRotationAnimation;->kill()V
 
-    .line 891
     :cond_8
     :goto_4
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
@@ -532,7 +494,6 @@
 
     invoke-virtual {p0, v2, v2}, Lcom/android/server/wm/WindowManagerService;->updateRotation(ZZ)V
 
-    .line 892
     monitor-exit p2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -557,7 +518,6 @@
 .method public final startAnimation(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
     .locals 2
 
-    .line 845
     new-instance v0, Lcom/android/server/wm/SurfaceAnimator;
 
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
@@ -568,7 +528,6 @@
 
     invoke-direct {v0, p1, p3, v1}, Lcom/android/server/wm/SurfaceAnimator;-><init>(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;Lcom/android/server/wm/WindowManagerService;)V
 
-    .line 848
     new-instance p1, Lcom/android/server/wm/LocalAnimationAdapter;
 
     iget-object p3, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
@@ -581,7 +540,6 @@
 
     invoke-direct {p1, p2, p3}, Lcom/android/server/wm/LocalAnimationAdapter;-><init>(Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimationRunner;)V
 
-    .line 850
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {p0}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/DisplayContent;
@@ -604,7 +562,6 @@
 .method public final startColorAnimation()V
     .locals 11
 
-    .line 773
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_BLACK_SNAPSHOT_TRANSITION:Z
 
     if-nez v0, :cond_0
@@ -622,7 +579,6 @@
 
     return-void
 
-    .line 779
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
@@ -641,7 +597,6 @@
 
     move-result v10
 
-    .line 781
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {v0}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmService(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/WindowManagerService;
@@ -654,7 +609,6 @@
 
     new-array v9, v1, [F
 
-    .line 783
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {v1}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmStartLuma(Lcom/android/server/wm/ScreenRotationAnimation;)F
@@ -677,7 +631,6 @@
 
     move-result v7
 
-    .line 784
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {v1}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmEndLuma(Lcom/android/server/wm/ScreenRotationAnimation;)F
@@ -702,7 +655,6 @@
 
     int-to-long v1, v10
 
-    .line 785
     iget-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {v3}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmService(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/WindowManagerService;
@@ -717,12 +669,10 @@
 
     mul-long v4, v1, v3
 
-    .line 786
     invoke-static {}, Landroid/animation/ArgbEvaluator;->getInstance()Landroid/animation/ArgbEvaluator;
 
     move-result-object v6
 
-    .line 787
     new-instance v1, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$1;
 
     move-object v2, v1
@@ -743,14 +693,12 @@
 
     move-result-object p0
 
-    .line 824
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayArea;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object p0
 
     const/4 v3, 0x0
 
-    .line 787
     invoke-virtual {v0, v1, v2, p0, v3}, Lcom/android/server/wm/SurfaceAnimationRunner;->startAnimation(Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;Ljava/lang/Runnable;)V
 
     return-void
@@ -759,7 +707,6 @@
 .method public startCustomAnimation()V
     .locals 1
 
-    .line 684
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
@@ -771,21 +718,18 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimationRunner;->deferStartingAnimations()V
 
-    .line 685
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startScreenshotAlphaAnimation()Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mRotateScreenAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
-    .line 686
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startDisplayRotation()Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mDisplayAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
-    .line 687
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {v0}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmEnteringBlackFrame(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/BlackFrame;
@@ -794,7 +738,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 688
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startEnterBlackFrameAnimation()Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
@@ -803,7 +746,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 691
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
@@ -830,14 +772,12 @@
 
     invoke-virtual {p0}, Lcom/android/server/wm/SurfaceAnimationRunner;->continueStartingAnimations()V
 
-    .line 692
     throw v0
 .end method
 
 .method public final startDisplayRotation()Lcom/android/server/wm/SurfaceAnimator;
     .locals 4
 
-    .line 719
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->initializeBuilder()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     move-result-object v0
@@ -848,7 +788,6 @@
 
     move-result-object v1
 
-    .line 720
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayArea;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v1
@@ -863,7 +802,6 @@
 
     move-result-object v1
 
-    .line 721
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getWindowingLayer()Landroid/view/SurfaceControl;
 
     move-result-object v1
@@ -878,7 +816,6 @@
 
     move-result-object v1
 
-    .line 722
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayArea;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v1
@@ -893,7 +830,6 @@
 
     move-result-object v1
 
-    .line 723
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayArea;->getSurfaceWidth()I
 
     move-result v1
@@ -908,7 +844,6 @@
 
     move-result-object v1
 
-    .line 724
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayArea;->getSurfaceHeight()I
 
     move-result v1
@@ -917,7 +852,6 @@
 
     move-result-object v0
 
-    .line 725
     invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
 
     move-result-object v0
@@ -928,7 +862,6 @@
 
     move-result-object v1
 
-    .line 726
     invoke-virtual {p0, v1}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->createWindowAnimationSpec(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
 
     move-result-object v1
@@ -937,12 +870,10 @@
 
     invoke-direct {v2, p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;)V
 
-    .line 719
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startAnimation(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
 
-    .line 731
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {v1}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/DisplayContent;
@@ -953,7 +884,6 @@
 
     move-result-object v1
 
-    .line 732
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {p0}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/DisplayContent;
@@ -966,7 +896,6 @@
 
     iget-object v2, v0, Lcom/android/server/wm/SurfaceAnimator;->mLeash:Landroid/view/SurfaceControl;
 
-    .line 733
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -983,7 +912,6 @@
 .method public final startEnterBlackFrameAnimation()Lcom/android/server/wm/SurfaceAnimator;
     .locals 3
 
-    .line 749
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->initializeBuilder()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     move-result-object v0
@@ -994,7 +922,6 @@
 
     move-result-object v1
 
-    .line 750
     invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     move-result-object v0
@@ -1005,7 +932,6 @@
 
     move-result-object v1
 
-    .line 751
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getOverlayLayer()Landroid/view/SurfaceControl;
 
     move-result-object v1
@@ -1014,7 +940,6 @@
 
     move-result-object v0
 
-    .line 752
     invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
 
     move-result-object v0
@@ -1025,7 +950,6 @@
 
     move-result-object v1
 
-    .line 753
     invoke-virtual {p0, v1}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->createWindowAnimationSpec(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
 
     move-result-object v1
@@ -1034,7 +958,6 @@
 
     invoke-direct {v2, p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;)V
 
-    .line 749
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startAnimation(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object p0
@@ -1045,7 +968,6 @@
 .method public startScreenRotationAnimation()V
     .locals 1
 
-    .line 701
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
@@ -1057,26 +979,22 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimationRunner;->deferStartingAnimations()V
 
-    .line 702
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startDisplayRotation()Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mDisplayAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
-    .line 703
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startScreenshotRotationAnimation()Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->mScreenshotRotationAnimator:Lcom/android/server/wm/SurfaceAnimator;
 
-    .line 704
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startColorAnimation()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 706
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->this$0:Lcom/android/server/wm/ScreenRotationAnimation;
 
     invoke-static {p0}, Lcom/android/server/wm/ScreenRotationAnimation;->-$$Nest$fgetmService(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/WindowManagerService;
@@ -1102,14 +1020,12 @@
 
     invoke-virtual {p0}, Lcom/android/server/wm/SurfaceAnimationRunner;->continueStartingAnimations()V
 
-    .line 707
     throw v0
 .end method
 
 .method public final startScreenshotAlphaAnimation()Lcom/android/server/wm/SurfaceAnimator;
     .locals 3
 
-    .line 738
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->initializeBuilder()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     move-result-object v0
@@ -1120,7 +1036,6 @@
 
     move-result-object v1
 
-    .line 739
     invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     move-result-object v0
@@ -1131,7 +1046,6 @@
 
     move-result-object v1
 
-    .line 740
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getOverlayLayer()Landroid/view/SurfaceControl;
 
     move-result-object v1
@@ -1146,7 +1060,6 @@
 
     move-result-object v1
 
-    .line 741
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayArea;->getSurfaceWidth()I
 
     move-result v1
@@ -1161,7 +1074,6 @@
 
     move-result-object v1
 
-    .line 742
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayArea;->getSurfaceHeight()I
 
     move-result v1
@@ -1170,7 +1082,6 @@
 
     move-result-object v0
 
-    .line 743
     invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
 
     move-result-object v0
@@ -1181,7 +1092,6 @@
 
     move-result-object v1
 
-    .line 744
     invoke-virtual {p0, v1}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->createWindowAnimationSpec(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
 
     move-result-object v1
@@ -1190,7 +1100,6 @@
 
     invoke-direct {v2, p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;)V
 
-    .line 738
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startAnimation(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object p0
@@ -1201,7 +1110,6 @@
 .method public final startScreenshotRotationAnimation()Lcom/android/server/wm/SurfaceAnimator;
     .locals 3
 
-    .line 758
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->initializeBuilder()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     move-result-object v0
@@ -1212,7 +1120,6 @@
 
     move-result-object v1
 
-    .line 759
     invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     move-result-object v0
@@ -1223,7 +1130,6 @@
 
     move-result-object v1
 
-    .line 760
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getOverlayLayer()Landroid/view/SurfaceControl;
 
     move-result-object v1
@@ -1232,7 +1138,6 @@
 
     move-result-object v0
 
-    .line 761
     invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
 
     move-result-object v0
@@ -1243,7 +1148,6 @@
 
     move-result-object v1
 
-    .line 762
     invoke-virtual {p0, v1}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->createWindowAnimationSpec(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
 
     move-result-object v1
@@ -1252,7 +1156,6 @@
 
     invoke-direct {v2, p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;)V
 
-    .line 758
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startAnimation(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object p0

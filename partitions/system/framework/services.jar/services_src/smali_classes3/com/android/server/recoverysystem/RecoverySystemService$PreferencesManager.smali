@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 222
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 223
     new-instance v0, Ljava/io/File;
 
     const/4 v1, 0x0
@@ -29,7 +27,6 @@
 
     invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 225
     new-instance v2, Ljava/io/File;
 
     const-string v3, "RecoverySystemMetricsPrefs.xml"
@@ -38,7 +35,6 @@
 
     iput-object v2, p0, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->mMetricsPrefsFile:Ljava/io/File;
 
-    .line 226
     invoke-virtual {p1, v2, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/io/File;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
@@ -53,7 +49,6 @@
 .method public deletePrefsFile()V
     .locals 1
 
-    .line 257
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->mMetricsPrefsFile:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
@@ -66,7 +61,6 @@
 
     const-string v0, "Failed to delete metrics prefs"
 
-    .line 258
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -76,7 +70,6 @@
 .method public getInt(Ljava/lang/String;I)I
     .locals 0
 
-    .line 236
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -89,7 +82,6 @@
 .method public getLong(Ljava/lang/String;J)J
     .locals 0
 
-    .line 231
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
@@ -104,7 +96,6 @@
 
     monitor-enter p0
 
-    .line 251
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->getInt(Ljava/lang/String;I)I
 
@@ -112,12 +103,10 @@
 
     add-int/lit8 p2, p2, 0x1
 
-    .line 252
     invoke-virtual {p0, p1, p2}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->putInt(Ljava/lang/String;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 253
     monitor-exit p0
 
     return-void
@@ -133,7 +122,6 @@
 .method public putInt(Ljava/lang/String;I)V
     .locals 0
 
-    .line 246
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -152,7 +140,6 @@
 .method public putLong(Ljava/lang/String;J)V
     .locals 0
 
-    .line 241
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 211
     invoke-direct {p0}, Lcom/android/server/tare/EconomicPolicy$Injector;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
 
     if-eq p1, p0, :cond_0
 
-    .line 226
     invoke-static {}, Lcom/android/server/tare/CompleteEconomicPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -66,7 +64,6 @@
 
     return p1
 
-    .line 232
     :cond_2
     invoke-virtual {p2, p0, p1}, Landroid/provider/DeviceConfig$Properties;->getBoolean(Ljava/lang/String;Z)Z
 

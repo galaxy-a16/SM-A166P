@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$msyncPackages(Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->syncPackages()V
 
     return-void
@@ -38,50 +37,42 @@
 .method public constructor <init>(Lcom/android/server/policy/PermissionPolicyService;Landroid/content/Context;)V
     .locals 7
 
-    .line 854
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 827
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToAllow:Ljava/util/ArrayList;
 
-    .line 834
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnore:Ljava/util/ArrayList;
 
-    .line 843
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnoreIfNotAllowed:Ljava/util/ArrayList;
 
-    .line 852
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToForeground:Ljava/util/ArrayList;
 
-    .line 855
     iput-object p2, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mContext:Landroid/content/Context;
 
-    .line 856
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 857
     const-class p1, Landroid/app/AppOpsManager;
 
     invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -92,7 +83,6 @@
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mAppOpsManager:Landroid/app/AppOpsManager;
 
-    .line 858
     const-class p1, Landroid/app/AppOpsManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -103,14 +93,12 @@
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mAppOpsManagerInternal:Landroid/app/AppOpsManagerInternal;
 
-    .line 860
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mRuntimeAndTheirBgPermissionInfos:Landroid/util/ArrayMap;
 
-    .line 861
     const-class p1, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -121,12 +109,10 @@
 
     const/4 p2, 0x1
 
-    .line 864
     invoke-interface {p1, p2}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;->getAllPermissionsWithProtection(I)Ljava/util/List;
 
     move-result-object p1
 
-    .line 866
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
@@ -138,21 +124,18 @@
     :goto_0
     if-ge v1, p2, :cond_3
 
-    .line 868
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/pm/PermissionInfo;
 
-    .line 869
     iget-object v3, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mRuntimeAndTheirBgPermissionInfos:Landroid/util/ArrayMap;
 
     iget-object v4, v2, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v3, v4, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 871
     iget-object v3, v2, Landroid/content/pm/PermissionInfo;->backgroundPermission:Ljava/lang/String;
 
     if-eqz v3, :cond_2
@@ -162,14 +145,12 @@
     :goto_1
     if-ge v4, p2, :cond_1
 
-    .line 874
     invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/content/pm/PermissionInfo;
 
-    .line 875
     iget-object v6, v2, Landroid/content/pm/PermissionInfo;->backgroundPermission:Ljava/lang/String;
 
     iget-object v5, v5, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -193,16 +174,13 @@
     :goto_2
     if-eqz v3, :cond_2
 
-    .line 883
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 884
     invoke-virtual {v2, v3, v0}, Landroid/content/pm/PackageManager;->getPermissionInfo(Ljava/lang/String;I)Landroid/content/pm/PermissionInfo;
 
     move-result-object v2
 
-    .line 885
     iget-object v4, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mRuntimeAndTheirBgPermissionInfos:Landroid/util/ArrayMap;
 
     iget-object v5, v2, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
@@ -213,7 +191,6 @@
 
     goto :goto_3
 
-    .line 888
     :catch_0
     invoke-static {}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
@@ -250,7 +227,6 @@
 .method public final addAppOps(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Ljava/lang/String;)V
     .locals 1
 
-    .line 956
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mRuntimeAndTheirBgPermissionInfos:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -263,11 +239,9 @@
 
     return-void
 
-    .line 960
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->addPermissionAppOp(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/pm/PermissionInfo;)V
 
-    .line 961
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->addExtraAppOp(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/pm/PermissionInfo;)V
 
     return-void
@@ -276,7 +250,6 @@
 .method public final addExtraAppOp(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/pm/PermissionInfo;)V
     .locals 3
 
-    .line 1065
     invoke-virtual {p3}, Landroid/content/pm/PermissionInfo;->isSoftRestricted()Z
 
     move-result v0
@@ -285,26 +258,21 @@
 
     return-void
 
-    .line 1069
     :cond_0
     iget-object p3, p3, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 1070
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mContext:Landroid/content/Context;
 
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 1072
     invoke-virtual {v0}, Landroid/content/Context;->getUser()Landroid/os/UserHandle;
 
     move-result-object v2
 
-    .line 1071
     invoke-static {v0, v1, p2, v2, p3}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->forPermission(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/os/UserHandle;Ljava/lang/String;)Lcom/android/server/policy/SoftRestrictedPermissionPolicy;
 
     move-result-object p2
 
-    .line 1073
     invoke-virtual {p2}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->getExtraAppOpCode()I
 
     move-result p3
@@ -315,35 +283,29 @@
 
     return-void
 
-    .line 1078
     :cond_1
     iget-object v0, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 1079
     iget-object p1, p1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 1080
     new-instance v1, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;
 
     invoke-direct {v1, p0, v0, p1, p3}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;-><init>(Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;ILjava/lang/String;I)V
 
-    .line 1081
     invoke-virtual {p2}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->mayAllowExtraAppOp()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 1082
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToAllow:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1084
     :cond_2
     invoke-virtual {p2}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->mayDenyExtraAppOpIfGranted()Z
 
@@ -351,14 +313,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 1085
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnore:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1087
     :cond_3
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnoreIfNotAllowed:Ljava/util/ArrayList;
 
@@ -371,17 +331,14 @@
 .method public addPackage(Ljava/lang/String;)V
     .locals 5
 
-    .line 1100
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
-    .line 1101
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/PackageManagerInternal;
 
-    .line 1105
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -391,7 +348,6 @@
 
     move-result-object v1
 
-    .line 1106
     invoke-virtual {v0, p1}, Landroid/content/pm/PackageManagerInternal;->getPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/AndroidPackage;
 
     move-result-object p1
@@ -402,7 +358,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1111
     iget-object v0, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_2
@@ -413,7 +368,6 @@
 
     goto :goto_1
 
-    .line 1117
     :cond_0
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
@@ -429,7 +383,6 @@
 
     goto :goto_1
 
-    .line 1132
     :cond_1
     iget-object v0, v1, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
@@ -442,7 +395,6 @@
 
     aget-object v4, v0, v3
 
-    .line 1133
     invoke-virtual {p0, v1, p1, v4}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->addAppOps(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Ljava/lang/String;)V
 
     add-int/lit8 v3, v3, 0x1
@@ -458,7 +410,6 @@
 .method public final addPermissionAppOp(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/pm/PermissionInfo;)V
     .locals 7
 
-    .line 966
     invoke-virtual {p3}, Landroid/content/pm/PermissionInfo;->isRuntime()Z
 
     move-result v0
@@ -467,31 +418,25 @@
 
     return-void
 
-    .line 970
     :cond_0
     iget-object v0, p3, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 971
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 972
     iget-object v2, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->uid:I
 
     invoke-static {v2}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
-    .line 973
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mPackageManager:Landroid/content/pm/PackageManager;
 
     iget-object v3, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mContext:Landroid/content/Context;
 
-    .line 974
     invoke-virtual {v3}, Landroid/content/Context;->getUser()Landroid/os/UserHandle;
 
     move-result-object v3
 
-    .line 973
     invoke-virtual {v2, v0, v1, v3}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
 
     move-result v2
@@ -516,7 +461,6 @@
 
     return-void
 
-    .line 982
     :cond_2
     invoke-static {v0}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$smgetSwitchOp(Ljava/lang/String;)I
 
@@ -528,7 +472,6 @@
 
     return-void
 
-    .line 989
     :cond_3
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->shouldGrantAppOp(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/pm/PermissionInfo;)Z
 
@@ -538,12 +481,10 @@
 
     if-eqz v2, :cond_9
 
-    .line 991
     iget-object v2, p3, Landroid/content/pm/PermissionInfo;->backgroundPermission:Ljava/lang/String;
 
     if-eqz v2, :cond_6
 
-    .line 992
     iget-object v6, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mRuntimeAndTheirBgPermissionInfos:Landroid/util/ArrayMap;
 
     invoke-virtual {v6, v2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -554,7 +495,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 995
     invoke-virtual {p0, p1, p2, v2}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->shouldGrantAppOp(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/pm/PermissionInfo;)Z
 
     move-result p2
@@ -582,7 +522,6 @@
     :goto_2
     move p2, v3
 
-    .line 1001
     :goto_3
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -596,7 +535,6 @@
 
     iget-object v6, p1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 1002
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -605,7 +543,6 @@
 
     const-string v2, "android.permission.ACCESS_FINE_LOCATION"
 
-    .line 1003
     iget-object v6, p3, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -618,7 +555,6 @@
 
     iget-object v6, p3, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 1004
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -631,7 +567,6 @@
     :cond_8
     if-eqz v3, :cond_a
 
-    .line 1006
     invoke-static {}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
     move-result-object p2
@@ -665,13 +600,11 @@
     :cond_9
     move p2, v4
 
-    .line 1014
     :cond_a
     iget-object p1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget p1, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 1015
     new-instance p3, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;
 
     invoke-direct {p3, p0, p1, v1, v0}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;-><init>(Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;ILjava/lang/String;I)V
@@ -684,7 +617,6 @@
 
     goto :goto_4
 
-    .line 1021
     :cond_b
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToForeground:Ljava/util/ArrayList;
 
@@ -692,7 +624,6 @@
 
     goto :goto_4
 
-    .line 1024
     :cond_c
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnore:Ljava/util/ArrayList;
 
@@ -700,7 +631,6 @@
 
     goto :goto_4
 
-    .line 1018
     :cond_d
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToAllow:Ljava/util/ArrayList;
 
@@ -713,7 +643,6 @@
 .method public final setUidMode(IIILjava/lang/String;)V
     .locals 7
 
-    .line 1165
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     invoke-static {p1}, Landroid/app/AppOpsManager;->opToPublicName(I)Ljava/lang/String;
@@ -726,7 +655,6 @@
 
     if-eq v0, p3, :cond_0
 
-    .line 1168
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mAppOpsManagerInternal:Landroid/app/AppOpsManagerInternal;
 
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->this$0:Lcom/android/server/policy/PermissionPolicyService;
@@ -737,7 +665,6 @@
 
     invoke-virtual {v0, p1, p2, p3, v1}, Landroid/app/AppOpsManagerInternal;->setUidModeFromPermissionPolicy(IIILcom/android/internal/app/IAppOpsCallback;)V
 
-    .line 1170
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     invoke-static {p1}, Landroid/app/AppOpsManager;->opToPublicName(I)Ljava/lang/String;
@@ -750,10 +677,8 @@
 
     if-eq v0, p3, :cond_0
 
-    .line 1176
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mAppOpsManagerInternal:Landroid/app/AppOpsManagerInternal;
 
-    .line 1177
     invoke-static {p1}, Landroid/app/AppOpsManager;->opToDefaultMode(I)I
 
     move-result v5
@@ -770,7 +695,6 @@
 
     move-object v4, p4
 
-    .line 1176
     invoke-virtual/range {v1 .. v6}, Landroid/app/AppOpsManagerInternal;->setModeFromPermissionPolicy(IILjava/lang/String;ILcom/android/internal/app/IAppOpsCallback;)V
 
     :cond_0
@@ -782,7 +706,6 @@
 
     const/4 v0, 0x0
 
-    .line 1138
     invoke-virtual {p0, p1, p2, v0, p3}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->setUidMode(IIILjava/lang/String;)V
 
     return-void
@@ -793,7 +716,6 @@
 
     const/4 v0, 0x4
 
-    .line 1142
     invoke-virtual {p0, p1, p2, v0, p3}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->setUidMode(IIILjava/lang/String;)V
 
     return-void
@@ -804,7 +726,6 @@
 
     const/4 v0, 0x1
 
-    .line 1146
     invoke-virtual {p0, p1, p2, v0, p3}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->setUidMode(IIILjava/lang/String;)V
 
     return-void
@@ -813,7 +734,6 @@
 .method public final setUidModeIgnoredIfNotAllowed(IILjava/lang/String;)Z
     .locals 2
 
-    .line 1151
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     invoke-static {p1}, Landroid/app/AppOpsManager;->opToPublicName(I)Ljava/lang/String;
@@ -830,7 +750,6 @@
 
     if-eq p3, v0, :cond_0
 
-    .line 1155
     iget-object p3, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mAppOpsManagerInternal:Landroid/app/AppOpsManagerInternal;
 
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->this$0:Lcom/android/server/policy/PermissionPolicyService;
@@ -853,13 +772,10 @@
 .method public final shouldGrantAppOp(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/pm/PermissionInfo;)Z
     .locals 6
 
-    .line 1031
     iget-object v0, p3, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
 
-    .line 1032
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 1033
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v2, v0, v1}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
@@ -884,18 +800,15 @@
 
     return v4
 
-    .line 1039
     :cond_1
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mPackageManager:Landroid/content/pm/PackageManager;
 
     iget-object v5, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mContext:Landroid/content/Context;
 
-    .line 1040
     invoke-virtual {v5}, Landroid/content/Context;->getUser()Landroid/os/UserHandle;
 
     move-result-object v5
 
-    .line 1039
     invoke-virtual {v2, v0, v1, v5}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
 
     move-result v1
@@ -918,7 +831,6 @@
 
     return v4
 
-    .line 1047
     :cond_3
     invoke-virtual {p3}, Landroid/content/pm/PermissionInfo;->isHardRestricted()Z
 
@@ -939,7 +851,6 @@
 
     return p0
 
-    .line 1052
     :cond_5
     invoke-virtual {p3}, Landroid/content/pm/PermissionInfo;->isSoftRestricted()Z
 
@@ -947,22 +858,18 @@
 
     if-eqz p3, :cond_6
 
-    .line 1053
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mContext:Landroid/content/Context;
 
     iget-object p1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 1055
     invoke-virtual {p0}, Landroid/content/Context;->getUser()Landroid/os/UserHandle;
 
     move-result-object p3
 
-    .line 1054
     invoke-static {p0, p1, p2, p3, v0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->forPermission(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/os/UserHandle;Ljava/lang/String;)Lcom/android/server/policy/SoftRestrictedPermissionPolicy;
 
     move-result-object p0
 
-    .line 1057
     invoke-virtual {p0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->mayGrantPermission()Z
 
     move-result p0
@@ -976,12 +883,10 @@
 .method public final syncPackages()V
     .locals 10
 
-    .line 905
     new-instance v0, Landroid/util/LongSparseLongArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseLongArray;-><init>()V
 
-    .line 907
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToAllow:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -997,7 +902,6 @@
 
     if-ge v3, v1, :cond_0
 
-    .line 909
     iget-object v6, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToAllow:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1006,7 +910,6 @@
 
     check-cast v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;
 
-    .line 911
     iget v7, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
 
     iget v8, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->uid:I
@@ -1015,7 +918,6 @@
 
     invoke-virtual {p0, v7, v8, v9}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->setUidModeAllowed(IILjava/lang/String;)V
 
-    .line 912
     iget v7, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->uid:I
 
     iget v6, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
@@ -1030,7 +932,6 @@
 
     goto :goto_0
 
-    .line 915
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToForeground:Ljava/util/ArrayList;
 
@@ -1043,7 +944,6 @@
     :goto_1
     if-ge v3, v1, :cond_2
 
-    .line 917
     iget-object v6, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToForeground:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1052,7 +952,6 @@
 
     check-cast v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;
 
-    .line 918
     iget v7, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->uid:I
 
     iget v8, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
@@ -1069,7 +968,6 @@
 
     goto :goto_2
 
-    .line 922
     :cond_1
     iget v7, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
 
@@ -1079,7 +977,6 @@
 
     invoke-virtual {p0, v7, v8, v9}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->setUidModeForeground(IILjava/lang/String;)V
 
-    .line 923
     iget v7, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->uid:I
 
     iget v6, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
@@ -1095,7 +992,6 @@
 
     goto :goto_1
 
-    .line 926
     :cond_2
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnore:Ljava/util/ArrayList;
 
@@ -1108,7 +1004,6 @@
     :goto_3
     if-ge v3, v1, :cond_4
 
-    .line 928
     iget-object v6, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnore:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1117,7 +1012,6 @@
 
     check-cast v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;
 
-    .line 929
     iget v7, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->uid:I
 
     iget v8, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
@@ -1134,7 +1028,6 @@
 
     goto :goto_4
 
-    .line 933
     :cond_3
     iget v7, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
 
@@ -1144,7 +1037,6 @@
 
     invoke-virtual {p0, v7, v8, v9}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->setUidModeIgnored(IILjava/lang/String;)V
 
-    .line 934
     iget v7, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->uid:I
 
     iget v6, v6, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
@@ -1160,7 +1052,6 @@
 
     goto :goto_3
 
-    .line 937
     :cond_4
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnoreIfNotAllowed:Ljava/util/ArrayList;
 
@@ -1171,7 +1062,6 @@
     :goto_5
     if-ge v2, v1, :cond_7
 
-    .line 939
     iget-object v3, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mOpsToIgnoreIfNotAllowed:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1180,7 +1070,6 @@
 
     check-cast v3, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;
 
-    .line 940
     iget v6, v3, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->uid:I
 
     iget v7, v3, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
@@ -1197,7 +1086,6 @@
 
     goto :goto_6
 
-    .line 944
     :cond_5
     iget v6, v3, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I
 
@@ -1211,7 +1099,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 946
     iget v6, v3, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->uid:I
 
     iget v3, v3, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser$OpToChange;->code:I

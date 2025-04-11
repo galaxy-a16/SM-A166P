@@ -17,19 +17,14 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/pm/IPackageManager;Landroid/permission/IPermissionManager;)V
     .locals 0
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/notification/PermissionHelper;->mContext:Landroid/content/Context;
 
-    .line 68
     iput-object p2, p0, Lcom/android/server/notification/PermissionHelper;->mPackageManager:Landroid/content/pm/IPackageManager;
 
-    .line 69
     iput-object p3, p0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
-    .line 70
     const-class p1, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -48,12 +43,10 @@
 .method public getAppsGrantedPermission(I)Ljava/util/Set;
     .locals 4
 
-    .line 157
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 160
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/PermissionHelper;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -84,7 +77,6 @@
 
     const-string v1, "Could not reach system server"
 
-    .line 163
     invoke-static {p1, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -94,7 +86,6 @@
 
     return-object v0
 
-    .line 168
     :cond_0
     invoke-virtual {p0}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
@@ -117,7 +108,6 @@
 
     check-cast p1, Landroid/content/pm/PackageInfo;
 
-    .line 169
     new-instance v1, Landroid/util/Pair;
 
     iget-object v2, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -143,17 +133,14 @@
 .method public getAppsRequestingPermission(I)Ljava/util/Set;
     .locals 6
 
-    .line 120
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 121
     invoke-virtual {p0, p1}, Lcom/android/server/notification/PermissionHelper;->getInstalledPackages(I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 122
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -172,14 +159,12 @@
 
     check-cast p1, Landroid/content/pm/PackageInfo;
 
-    .line 126
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     if-nez v1, :cond_1
 
     goto :goto_0
 
-    .line 129
     :cond_1
     array-length v2, v1
 
@@ -192,14 +177,12 @@
 
     const-string v5, "android.permission.POST_NOTIFICATIONS"
 
-    .line 130
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 131
     new-instance v1, Landroid/util/Pair;
 
     iget-object v2, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -230,7 +213,6 @@
 .method public final getInstalledPackages(I)Ljava/util/List;
     .locals 2
 
-    .line 142
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/PermissionHelper;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -251,7 +233,6 @@
 
     const-string v0, "Could not reach system server"
 
-    .line 144
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -259,14 +240,12 @@
     :goto_0
     if-nez p0, :cond_0
 
-    .line 147
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 149
     :cond_0
     invoke-virtual {p0}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
@@ -278,22 +257,18 @@
 .method public getNotificationPermissionValues(I)Landroid/util/ArrayMap;
     .locals 7
 
-    .line 178
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 179
     invoke-virtual {p0, p1}, Lcom/android/server/notification/PermissionHelper;->getAppsRequestingPermission(I)Ljava/util/Set;
 
     move-result-object v1
 
-    .line 180
     invoke-virtual {p0, p1}, Lcom/android/server/notification/PermissionHelper;->getAppsGrantedPermission(I)Ljava/util/Set;
 
     move-result-object v2
 
-    .line 181
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -311,7 +286,6 @@
 
     check-cast v3, Landroid/util/Pair;
 
-    .line 182
     new-instance v4, Landroid/util/Pair;
 
     invoke-interface {v2, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -326,7 +300,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 183
     invoke-virtual {p0, v6, p1}, Lcom/android/server/notification/PermissionHelper;->isPermissionUserSet(Ljava/lang/String;I)Z
 
     move-result v6
@@ -337,7 +310,6 @@
 
     invoke-direct {v4, v5, v6}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 182
     invoke-virtual {v0, v3, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -349,12 +321,10 @@
 .method public hasPermission(I)Z
     .locals 2
 
-    .line 78
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 81
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/PermissionHelper;->mPmi:Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
@@ -373,7 +343,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 87
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -384,21 +353,18 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 88
     throw p0
 .end method
 
 .method public hasRequestedPermission(Ljava/lang/String;Ljava/lang/String;I)Z
     .locals 5
 
-    .line 96
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
     const/4 v2, 0x0
 
-    .line 98
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/PermissionHelper;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -410,14 +376,12 @@
 
     if-eqz p0, :cond_2
 
-    .line 99
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     if-nez p0, :cond_0
 
     goto :goto_1
 
-    .line 102
     :cond_0
     array-length p2, p0
 
@@ -428,7 +392,6 @@
 
     aget-object v3, p0, p3
 
-    .line 103
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -438,7 +401,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 110
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x1
@@ -469,12 +431,10 @@
 
     const-string p2, "Could not reach system server"
 
-    .line 108
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 110
     :cond_3
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -483,21 +443,18 @@
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 111
     throw p0
 .end method
 
 .method public isPermissionFixed(Ljava/lang/String;I)Z
     .locals 4
 
-    .line 298
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
     const/4 v2, 0x0
 
-    .line 301
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
@@ -521,7 +478,6 @@
     :cond_0
     const/4 v2, 0x1
 
-    .line 310
     :cond_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -540,12 +496,10 @@
 
     const-string p2, "Could not reach system server"
 
-    .line 306
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 310
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -553,21 +507,18 @@
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 311
     throw p0
 .end method
 
 .method public isPermissionGrantedByDefaultOrRole(Ljava/lang/String;I)Z
     .locals 4
 
-    .line 332
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
     const/4 v2, 0x0
 
-    .line 335
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
@@ -588,7 +539,6 @@
 
     const/4 v2, 0x1
 
-    .line 344
     :cond_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -607,12 +557,10 @@
 
     const-string p2, "Could not reach system server"
 
-    .line 340
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 344
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -620,21 +568,18 @@
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 345
     throw p0
 .end method
 
 .method public isPermissionUserSet(Ljava/lang/String;I)Z
     .locals 4
 
-    .line 315
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
     const/4 v2, 0x0
 
-    .line 318
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
@@ -653,7 +598,6 @@
 
     const/4 v2, 0x1
 
-    .line 327
     :cond_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -672,12 +616,10 @@
 
     const-string p2, "Could not reach system server"
 
-    .line 323
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 327
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -685,14 +627,12 @@
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 328
     throw p0
 .end method
 
 .method public final packageRequestsNotificationPermission(Ljava/lang/String;I)Z
     .locals 2
 
-    .line 351
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/PermissionHelper;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -704,12 +644,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 353
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     const-string p1, "android.permission.POST_NOTIFICATIONS"
 
-    .line 354
     invoke-static {p0, p1}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -725,7 +663,6 @@
 
     const-string p2, "Could not reach system server"
 
-    .line 357
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -739,14 +676,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 287
     iget-object v0, p1, Lcom/android/server/notification/PermissionHelper$PackagePermission;->packageName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 290
     :cond_0
     iget v1, p1, Lcom/android/server/notification/PermissionHelper$PackagePermission;->userId:I
 
@@ -756,7 +691,6 @@
 
     if-nez v0, :cond_1
 
-    .line 291
     iget-object v2, p1, Lcom/android/server/notification/PermissionHelper$PackagePermission;->packageName:Ljava/lang/String;
 
     iget v3, p1, Lcom/android/server/notification/PermissionHelper$PackagePermission;->userId:I
@@ -791,7 +725,6 @@
 
     move v4, p4
 
-    .line 197
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/notification/PermissionHelper;->setNotificationPermission(Ljava/lang/String;IZZZ)V
 
     return-void
@@ -812,12 +745,10 @@
 
     const-string v10, "PermissionHelper"
 
-    .line 203
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v11
 
-    .line 208
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/notification/PermissionHelper;->packageRequestsNotificationPermission(Ljava/lang/String;I)Z
 
@@ -830,7 +761,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 209
     :try_start_1
     invoke-virtual {p0, p1, p2}, Lcom/android/server/notification/PermissionHelper;->isPermissionFixed(Ljava/lang/String;I)Z
 
@@ -838,7 +768,6 @@
 
     if-nez v3, :cond_7
 
-    .line 210
     invoke-virtual {p0, p1, p2}, Lcom/android/server/notification/PermissionHelper;->isPermissionGrantedByDefaultOrRole(Ljava/lang/String;I)Z
 
     move-result v3
@@ -849,7 +778,6 @@
 
     goto/16 :goto_2
 
-    .line 217
     :cond_0
     iget-object v3, v0, Lcom/android/server/notification/PermissionHelper;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -859,12 +787,10 @@
 
     move-result v3
 
-    .line 218
     invoke-virtual {p0, v3}, Lcom/android/server/notification/PermissionHelper;->hasPermission(I)Z
 
     move-result v3
 
-    .line 220
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -885,7 +811,6 @@
 
     invoke-static {v10, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -919,7 +844,6 @@
 
     if-nez v3, :cond_1
 
-    .line 224
     :try_start_2
     iget-object v1, v0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
@@ -932,7 +856,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 226
     iget-object v1, v0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
     invoke-interface {v1, p1, v4, p2, v10}, Landroid/permission/IPermissionManager;->revokeRuntimePermission(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
@@ -943,7 +866,6 @@
 
     if-eqz p4, :cond_3
 
-    .line 236
     iget-object v1, v0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
     const-string v3, "android.permission.POST_NOTIFICATIONS"
@@ -960,7 +882,6 @@
 
     goto :goto_1
 
-    .line 239
     :cond_3
     iget-object v1, v0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
@@ -978,7 +899,6 @@
 
     invoke-interface/range {v1 .. v7}, Landroid/permission/IPermissionManager;->updatePermissionFlags(Ljava/lang/String;Ljava/lang/String;IIZI)V
 
-    .line 243
     :goto_1
     iget-object v0, v0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
@@ -1001,7 +921,6 @@
     :cond_4
     const-string v2, "com.sec.android.easyMover"
 
-    .line 246
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1011,7 +930,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 278
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1021,7 +939,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 248
     :try_start_3
     iget-object v2, v0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
@@ -1032,7 +949,6 @@
 
     if-nez v3, :cond_8
 
-    .line 252
     iget-object v1, v0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
     const-string v3, "android.permission.POST_NOTIFICATIONS"
@@ -1049,7 +965,6 @@
 
     invoke-interface/range {v1 .. v7}, Landroid/permission/IPermissionManager;->updatePermissionFlags(Ljava/lang/String;Ljava/lang/String;IIZI)V
 
-    .line 254
     iget-object v0, v0, Lcom/android/server/notification/PermissionHelper;->mPermManager:Landroid/permission/IPermissionManager;
 
     const-string v2, "android.permission.POST_NOTIFICATIONS"
@@ -1068,7 +983,6 @@
 
     goto :goto_3
 
-    .line 212
     :cond_7
     :goto_2
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1092,7 +1006,6 @@
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 278
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1108,12 +1021,10 @@
     :try_start_4
     const-string v1, "Could not reach system server"
 
-    .line 276
     invoke-static {v10, v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 278
     :cond_8
     :goto_3
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -1123,6 +1034,5 @@
     :goto_4
     invoke-static {v11, v12}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 279
     throw v0
 .end method

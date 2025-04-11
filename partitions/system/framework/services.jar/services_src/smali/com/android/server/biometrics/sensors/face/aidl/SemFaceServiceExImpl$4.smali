@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$a5Cd0sPT4UjIy96JKXn-PrNYXGU(Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl$4;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl$4;->lambda$onReceive$0()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;)V
     .locals 0
 
-    .line 635
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl$4;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onReceive$0()V
     .locals 0
 
-    .line 643
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl$4;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;->-$$Nest$mdaemonCancelInternal(Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;)V
@@ -44,12 +41,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 638
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 639
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +63,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 640
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     const-string p2, "android.intent.action.ACTION_SHUTDOWN"
@@ -81,7 +75,6 @@
 
     goto :goto_0
 
-    .line 642
     :cond_0
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl$4;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 

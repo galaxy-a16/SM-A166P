@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/ScreenCurtainController;)V
     .locals 0
 
-    .line 472
     iput-object p1, p0, Lcom/android/server/power/ScreenCurtainController$3;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .line 476
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -114,7 +112,6 @@
 
     goto :goto_1
 
-    .line 481
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/power/ScreenCurtainController$3;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
@@ -124,7 +121,6 @@
 
     if-nez p1, :cond_4
 
-    .line 482
     iget-object p1, p0, Lcom/android/server/power/ScreenCurtainController$3;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
     invoke-static {p1, v2}, Lcom/android/server/power/ScreenCurtainController;->-$$Nest$fputmPenInsertStateInitialized(Lcom/android/server/power/ScreenCurtainController;Z)V
@@ -134,7 +130,6 @@
     :cond_4
     const-string/jumbo p1, "penInsert"
 
-    .line 483
     invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -153,7 +148,6 @@
     :pswitch_2
     const-string p1, "android.samsung.media.extra.AUDIO_MODE"
 
-    .line 488
     invoke-virtual {p2, p1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -174,7 +168,6 @@
     :goto_2
     if-eqz v1, :cond_6
 
-    .line 501
     iget-object p1, p0, Lcom/android/server/power/ScreenCurtainController$3;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
     invoke-static {p1}, Lcom/android/server/power/ScreenCurtainController;->-$$Nest$fgetmHandler(Lcom/android/server/power/ScreenCurtainController;)Landroid/os/Handler;
@@ -187,22 +180,18 @@
 
     move-result-object p0
 
-    .line 503
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    .line 502
     invoke-virtual {p0, v2, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 503
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 501
     invoke-virtual {p1, p0, v0, v1}, Landroid/os/Handler;->sendMessageAtTime(Landroid/os/Message;J)Z
 
     :cond_6

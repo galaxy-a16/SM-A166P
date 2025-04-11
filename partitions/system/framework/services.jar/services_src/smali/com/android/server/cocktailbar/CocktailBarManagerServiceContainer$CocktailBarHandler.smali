@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1126
     iput-object p1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
-    .line 1127
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1131
     invoke-static {}, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -48,14 +45,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1132
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_1
 
-    .line 1149
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
@@ -67,7 +62,6 @@
 
     goto :goto_1
 
-    .line 1146
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
@@ -79,7 +73,6 @@
 
     goto :goto_1
 
-    .line 1143
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
@@ -89,7 +82,6 @@
 
     goto :goto_1
 
-    .line 1140
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
@@ -97,7 +89,6 @@
 
     goto :goto_1
 
-    .line 1137
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 
@@ -109,7 +100,6 @@
 
     goto :goto_1
 
-    .line 1134
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer$CocktailBarHandler;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceContainer;
 

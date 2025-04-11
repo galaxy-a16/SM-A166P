@@ -14,7 +14,6 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionsChangeListeners$handleOnPermissionsChanged$1;->$uid:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public final accept(Landroid/permission/IOnPermissionsChangeListener;)V
     .locals 1
 
-    .line 2259
     :try_start_0
     iget p0, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionsChangeListeners$handleOnPermissionsChanged$1;->$uid:I
 
@@ -40,7 +38,6 @@
     :catch_0
     move-exception p0
 
-    .line 2261
     invoke-static {}, Lcom/android/server/permission/access/permission/PermissionService;->access$getLOG_TAG$cp()Ljava/lang/String;
 
     move-result-object p1
@@ -56,7 +53,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 2257
     check-cast p1, Landroid/permission/IOnPermissionsChangeListener;
 
     invoke-virtual {p0, p1}, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionsChangeListeners$handleOnPermissionsChanged$1;->accept(Landroid/permission/IOnPermissionsChangeListener;)V

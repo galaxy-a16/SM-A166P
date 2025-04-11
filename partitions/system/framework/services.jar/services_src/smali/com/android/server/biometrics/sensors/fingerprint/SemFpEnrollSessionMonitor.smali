@@ -17,17 +17,14 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;)V
     .locals 1
 
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
-    .line 19
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
     return-void
@@ -38,12 +35,10 @@
 .method public isEnrollSession(I)Z
     .locals 1
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 77
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
@@ -68,7 +63,6 @@
     :catchall_0
     move-exception p0
 
-    .line 78
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -79,12 +73,10 @@
 .method public onChallengeGenerated(IJLjava/lang/Runnable;)V
     .locals 3
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 49
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
@@ -98,7 +90,6 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 50
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
@@ -109,12 +100,10 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 51
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
     invoke-virtual {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->registerCallback(Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;)V
 
-    .line 53
     :cond_0
     monitor-exit v0
 
@@ -133,18 +122,15 @@
 .method public onChallengeRevoked(I)V
     .locals 2
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 59
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 60
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
@@ -153,12 +139,10 @@
 
     if-nez p1, :cond_0
 
-    .line 61
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
     invoke-virtual {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->unregisterCallback(Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;)V
 
-    .line 63
     :cond_0
     monitor-exit v0
 
@@ -177,14 +161,12 @@
 .method public onDisplayOff()V
     .locals 1
 
-    .line 28
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_SUPPORT_FOLDABLE_TYPE_FOLD:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 32
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->revokeChallengeInternally()V
 
@@ -194,7 +176,6 @@
 .method public onProviderRegistered(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 0
 
-    .line 23
     invoke-interface {p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semAddChallengeListener(Lcom/android/server/biometrics/sensors/fingerprint/SemFpChallengeListener;)V
 
     return-void
@@ -203,12 +184,10 @@
 .method public revokeChallenge(I)V
     .locals 1
 
-    .line 67
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 68
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
@@ -220,14 +199,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 70
     iget-object p0, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
-    .line 72
     :cond_0
     monitor-exit v0
 
@@ -246,14 +223,12 @@
 .method public final revokeChallengeInternally()V
     .locals 6
 
-    .line 36
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 37
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
@@ -264,7 +239,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 38
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->mEnrollSessions:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -275,7 +249,6 @@
 
     const-string v3, "FingerprintService"
 
-    .line 39
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -298,7 +271,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     iget-object v2, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Runnable;
@@ -309,7 +281,6 @@
 
     goto :goto_0
 
-    .line 42
     :cond_0
     monitor-exit v0
 

@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBugreportFiles(Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mBugreportFiles:Landroid/util/ArrayMap;
 
     return-object p0
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -31,17 +29,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mLock:Ljava/lang/Object;
 
-    .line 103
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -56,12 +51,10 @@
 .method public addBugreportFileForCaller(Landroid/util/Pair;Ljava/lang/String;)V
     .locals 3
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 144
     :try_start_0
     iget-object v1, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mBugreportFiles:Landroid/util/ArrayMap;
 
@@ -71,7 +64,6 @@
 
     if-nez v1, :cond_0
 
-    .line 145
     iget-object v1, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mBugreportFiles:Landroid/util/ArrayMap;
 
     new-instance v2, Landroid/util/ArraySet;
@@ -80,7 +72,6 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 147
     :cond_0
     iget-object p0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mBugreportFiles:Landroid/util/ArrayMap;
 
@@ -90,10 +81,8 @@
 
     check-cast p0, Landroid/util/ArraySet;
 
-    .line 148
     invoke-virtual {p0, p2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 149
     monitor-exit v0
 
     return-void
@@ -111,12 +100,10 @@
 .method public ensureCallerPreviouslyGeneratedFile(Landroid/util/Pair;Ljava/lang/String;)V
     .locals 3
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 123
     :try_start_0
     iget-object v1, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mBugreportFiles:Landroid/util/ArrayMap;
 
@@ -128,35 +115,29 @@
 
     if-eqz v1, :cond_1
 
-    .line 125
     invoke-virtual {v1, p2}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 126
     invoke-virtual {v1, p2}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 127
     invoke-virtual {v1}, Landroid/util/ArraySet;->isEmpty()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$BugreportFileManager;->mBugreportFiles:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
     :cond_0
     monitor-exit v0
 
     return-void
 
-    .line 131
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -191,7 +172,6 @@
     :catchall_0
     move-exception p0
 
-    .line 135
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

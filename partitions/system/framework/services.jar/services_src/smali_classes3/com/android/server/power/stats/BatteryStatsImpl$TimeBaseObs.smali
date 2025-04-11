@@ -16,7 +16,6 @@
 .method public reset(Z)Z
     .locals 4
 
-    .line 2004
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

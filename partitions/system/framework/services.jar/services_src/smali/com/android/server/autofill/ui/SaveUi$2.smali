@@ -20,7 +20,6 @@
 .method public static synthetic $r8$lambda$JiJqxcuhDNYVFDQ5qLgqH_9qnQs(Lcom/android/server/autofill/ui/SaveUi$2;Landroid/view/View;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/autofill/ui/SaveUi$2;->lambda$onCheckedChanged$1(Landroid/view/View;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public static synthetic $r8$lambda$aPmrgUuE7IT3E1EmK3lIrUKG4Z4(Lcom/android/server/autofill/ui/SaveUi$2;Landroid/service/autofill/SaveInfo;Landroid/view/View;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/autofill/ui/SaveUi$2;->lambda$onCheckedChanged$0(Landroid/service/autofill/SaveInfo;Landroid/view/View;)V
 
     return-void
@@ -38,7 +36,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/ui/SaveUi;Landroid/widget/TextView;Landroid/service/autofill/SaveInfo;Z)V
     .locals 0
 
-    .line 392
     iput-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$2;->this$0:Lcom/android/server/autofill/ui/SaveUi;
 
     iput-object p2, p0, Lcom/android/server/autofill/ui/SaveUi$2;->val$yesButton:Landroid/widget/TextView;
@@ -55,7 +52,6 @@
 .method private synthetic lambda$onCheckedChanged$0(Landroid/service/autofill/SaveInfo;Landroid/view/View;)V
     .locals 0
 
-    .line 397
     iget-object p0, p0, Lcom/android/server/autofill/ui/SaveUi$2;->this$0:Lcom/android/server/autofill/ui/SaveUi;
 
     invoke-static {p0}, Lcom/android/server/autofill/ui/SaveUi;->-$$Nest$fgetmListener(Lcom/android/server/autofill/ui/SaveUi;)Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;
@@ -74,7 +70,6 @@
 .method private synthetic lambda$onCheckedChanged$1(Landroid/view/View;)V
     .locals 0
 
-    .line 404
     iget-object p0, p0, Lcom/android/server/autofill/ui/SaveUi$2;->this$0:Lcom/android/server/autofill/ui/SaveUi;
 
     invoke-static {p0}, Lcom/android/server/autofill/ui/SaveUi;->-$$Nest$fgetmListener(Lcom/android/server/autofill/ui/SaveUi;)Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;
@@ -91,21 +86,18 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 1
 
-    .line 395
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 396
     iget-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$2;->val$yesButton:Landroid/widget/TextView;
 
     const p2, 0x10401f7
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
 
-    .line 397
     iget-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$2;->val$yesButton:Landroid/widget/TextView;
 
     iget-object p2, p0, Lcom/android/server/autofill/ui/SaveUi$2;->val$info:Landroid/service/autofill/SaveInfo;
@@ -118,13 +110,11 @@
 
     goto :goto_1
 
-    .line 399
     :cond_0
     iget-boolean p1, p0, Lcom/android/server/autofill/ui/SaveUi$2;->val$isUpdate:Z
 
     if-eqz p1, :cond_1
 
-    .line 400
     iget-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$2;->val$yesButton:Landroid/widget/TextView;
 
     const p2, 0x104020d
@@ -133,7 +123,6 @@
 
     goto :goto_0
 
-    .line 402
     :cond_1
     iget-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$2;->val$yesButton:Landroid/widget/TextView;
 
@@ -141,7 +130,6 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
 
-    .line 404
     :goto_0
     iget-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$2;->val$yesButton:Landroid/widget/TextView;
 

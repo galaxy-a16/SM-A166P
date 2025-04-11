@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerServiceExt;)V
     .locals 0
 
-    .line 1528
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerServiceExt$2;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 5
 
-    .line 1531
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$2;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerServiceExt;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 1532
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerServiceExt$2;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
@@ -46,7 +43,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1533
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerServiceExt$2;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     invoke-static {v1}, Lcom/android/server/am/ActivityManagerServiceExt;->-$$Nest$fgetmDeXKillProcesses(Lcom/android/server/am/ActivityManagerServiceExt;)Ljava/util/ArrayList;
@@ -62,7 +58,6 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 1535
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerServiceExt$2;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     invoke-static {v3}, Lcom/android/server/am/ActivityManagerServiceExt;->-$$Nest$fgetmDeXKillProcesses(Lcom/android/server/am/ActivityManagerServiceExt;)Ljava/util/ArrayList;
@@ -81,7 +76,6 @@
 
     goto :goto_0
 
-    .line 1538
     :cond_0
     monitor-exit v0
     :try_end_0

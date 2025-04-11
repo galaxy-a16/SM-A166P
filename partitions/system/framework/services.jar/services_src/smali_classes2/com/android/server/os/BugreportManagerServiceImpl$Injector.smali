@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/ArraySet;)V
     .locals 0
 
-    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     iput-object p1, p0, Lcom/android/server/os/BugreportManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
-    .line 159
     iput-object p2, p0, Lcom/android/server/os/BugreportManagerServiceImpl$Injector;->mAllowlistedPackages:Landroid/util/ArraySet;
 
     return-void
@@ -30,7 +27,6 @@
 .method public getAllowlistedPackages()Landroid/util/ArraySet;
     .locals 0
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$Injector;->mAllowlistedPackages:Landroid/util/ArraySet;
 
     return-object p0
@@ -39,7 +35,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 163
     iget-object p0, p0, Lcom/android/server/os/BugreportManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     return-object p0

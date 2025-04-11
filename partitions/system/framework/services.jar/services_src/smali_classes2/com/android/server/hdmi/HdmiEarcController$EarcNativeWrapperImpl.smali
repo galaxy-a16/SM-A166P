@@ -25,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 56
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->mEarc:Landroid/hardware/tv/hdmi/earc/IEArc;
 
     invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
@@ -47,15 +45,12 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 57
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->connectToHal()Z
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->mEarcCallback:Lcom/android/server/hdmi/HdmiEarcController$EarcAidlCallback;
 
     if-eqz v0, :cond_0
 
-    .line 59
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->nativeSetCallback(Lcom/android/server/hdmi/HdmiEarcController$EarcAidlCallback;)V
 
     :cond_0
@@ -65,7 +60,6 @@
 .method public connectToHal()Z
     .locals 2
 
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,12 +76,10 @@
 
     move-result-object v0
 
-    .line 66
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 65
     invoke-static {v0}, Landroid/hardware/tv/hdmi/earc/IEArc$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/tv/hdmi/earc/IEArc;
 
     move-result-object v0
@@ -100,7 +92,6 @@
 
     return v1
 
-    .line 71
     :cond_0
     :try_start_0
     invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
@@ -120,7 +111,6 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 73
     invoke-static {v0, p0, v1}, Lcom/android/server/hdmi/HdmiLogger;->error(Ljava/lang/String;Ljava/lang/Exception;[Ljava/lang/Object;)V
 
     :goto_0
@@ -132,7 +122,6 @@
 .method public nativeGetLastReportedAudioCapabilities(I)[B
     .locals 1
 
-    .line 128
     :try_start_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->mEarc:Landroid/hardware/tv/hdmi/earc/IEArc;
 
@@ -153,7 +142,6 @@
 
     const-string v0, "Could not read last reported audio capabilities. Exception: "
 
-    .line 130
     invoke-static {v0, p0, p1}, Lcom/android/server/hdmi/HdmiLogger;->error(Ljava/lang/String;Ljava/lang/Exception;[Ljava/lang/Object;)V
 
     const/4 p0, 0x0
@@ -164,7 +152,6 @@
 .method public nativeGetState(I)B
     .locals 1
 
-    .line 118
     :try_start_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->mEarc:Landroid/hardware/tv/hdmi/earc/IEArc;
 
@@ -185,7 +172,6 @@
 
     const-string v0, "Could not get eARC state. Exception: "
 
-    .line 120
     invoke-static {v0, p0, p1}, Lcom/android/server/hdmi/HdmiLogger;->error(Ljava/lang/String;Ljava/lang/Exception;[Ljava/lang/Object;)V
 
     const/4 p0, -0x1
@@ -196,7 +182,6 @@
 .method public nativeInit()Z
     .locals 0
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->connectToHal()Z
 
     move-result p0
@@ -207,7 +192,6 @@
 .method public nativeIsEarcEnabled()Z
     .locals 3
 
-    .line 98
     :try_start_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->mEarc:Landroid/hardware/tv/hdmi/earc/IEArc;
 
@@ -228,7 +212,6 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
-    .line 100
     invoke-static {v0, p0, v2}, Lcom/android/server/hdmi/HdmiLogger;->error(Ljava/lang/String;Ljava/lang/Exception;[Ljava/lang/Object;)V
 
     return v1
@@ -237,10 +220,8 @@
 .method public nativeSetCallback(Lcom/android/server/hdmi/HdmiEarcController$EarcAidlCallback;)V
     .locals 1
 
-    .line 107
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->mEarcCallback:Lcom/android/server/hdmi/HdmiEarcController$EarcAidlCallback;
 
-    .line 109
     :try_start_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->mEarc:Landroid/hardware/tv/hdmi/earc/IEArc;
 
@@ -259,7 +240,6 @@
 
     const-string v0, "Could not set callback. Exception: "
 
-    .line 111
     invoke-static {v0, p0, p1}, Lcom/android/server/hdmi/HdmiLogger;->error(Ljava/lang/String;Ljava/lang/Exception;[Ljava/lang/Object;)V
 
     :goto_0
@@ -271,7 +251,6 @@
 
     const-string v0, "Could not set eARC enabled to "
 
-    .line 86
     :try_start_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiEarcController$EarcNativeWrapperImpl;->mEarc:Landroid/hardware/tv/hdmi/earc/IEArc;
 
@@ -285,7 +264,6 @@
     :catch_0
     move-exception p0
 
-    .line 91
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,7 +291,6 @@
     :catch_1
     move-exception p0
 
-    .line 88
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,7 +309,6 @@
 
     iget p0, p0, Landroid/os/ServiceSpecificException;->errorCode:I
 
-    .line 89
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -341,7 +317,6 @@
 
     move-result-object p0
 
-    .line 88
     invoke-static {p1, p0}, Lcom/android/server/hdmi/HdmiLogger;->error(Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0

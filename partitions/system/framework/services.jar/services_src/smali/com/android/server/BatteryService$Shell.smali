@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 4538
     iput-object p1, p0, Lcom/android/server/BatteryService$Shell;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCommand(Ljava/lang/String;)I
     .locals 1
 
-    .line 4541
     iget-object v0, p0, Lcom/android/server/BatteryService$Shell;->this$0:Lcom/android/server/BatteryService;
 
     invoke-virtual {v0, p0, p1}, Lcom/android/server/BatteryService;->onShellCommand(Lcom/android/server/BatteryService$Shell;Ljava/lang/String;)I
@@ -37,12 +35,10 @@
 .method public onHelp()V
     .locals 0
 
-    .line 4546
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
-    .line 4547
     invoke-static {p0}, Lcom/android/server/BatteryService;->dumpHelp(Ljava/io/PrintWriter;)V
 
     return-void

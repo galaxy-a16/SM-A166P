@@ -7,7 +7,6 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 14
     invoke-direct {p0, p1}, Lorg/tukaani/xz/delta/DeltaCoder;-><init>(I)V
 
     return-void
@@ -23,7 +22,6 @@
     :goto_0
     if-ge p2, p3, :cond_0
 
-    .line 20
     aget-byte v0, p1, p2
 
     iget-object v1, p0, Lorg/tukaani/xz/delta/DeltaCoder;->history:[B
@@ -46,7 +44,6 @@
 
     add-int/lit8 v2, v3, -0x1
 
-    .line 21
     iput v2, p0, Lorg/tukaani/xz/delta/DeltaCoder;->pos:I
 
     and-int/lit16 v2, v3, 0xff

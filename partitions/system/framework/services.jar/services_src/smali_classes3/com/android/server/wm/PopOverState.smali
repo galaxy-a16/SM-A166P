@@ -23,7 +23,6 @@
 .method public static synthetic $r8$lambda$PBf3BvkD9Gxar15r8zlX9o4UuNE(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/PopOverState;->lambda$inactivate$0(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -32,7 +31,6 @@
 .method public static synthetic $r8$lambda$Rod534WbSL4eHcZTroaZBfRH4DA(Landroid/graphics/Rect;Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/PopOverState;->lambda$isBelowAnotherOpaquePopOver$2(Landroid/graphics/Rect;Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result p0
@@ -43,7 +41,6 @@
 .method public static synthetic $r8$lambda$ZEVkCUbZh2qRtBvFPc0iAaSFzWw(Lcom/android/server/wm/PopOverState;Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/PopOverState;->lambda$isAboveAnotherOpaquePopOver$1(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result p0
@@ -54,18 +51,14 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityRecord;)V
     .locals 1
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 48
     iput v0, p0, Lcom/android/server/wm/PopOverState;->mOriginTaskId:I
 
-    .line 51
     iput v0, p0, Lcom/android/server/wm/PopOverState;->mOriginTaskIdInherited:I
 
-    .line 57
     iput-object p1, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     return-void
@@ -74,7 +67,6 @@
 .method public static synthetic lambda$inactivate$0(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 224
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->clearPopOverDimmer()V
 
     return-void
@@ -83,7 +75,6 @@
 .method private synthetic lambda$isAboveAnotherOpaquePopOver$1(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 1
 
-    .line 250
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->mPopOverState:Lcom/android/server/wm/PopOverState;
 
     invoke-virtual {v0}, Lcom/android/server/wm/PopOverState;->isActivated()Z
@@ -122,7 +113,6 @@
 .method public static synthetic lambda$isBelowAnotherOpaquePopOver$2(Landroid/graphics/Rect;Lcom/android/server/wm/ActivityRecord;)Z
     .locals 1
 
-    .line 264
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->mPopOverState:Lcom/android/server/wm/PopOverState;
 
     invoke-virtual {v0}, Lcom/android/server/wm/PopOverState;->isActivated()Z
@@ -135,7 +125,6 @@
 
     if-nez v0, :cond_0
 
-    .line 265
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -166,7 +155,6 @@
 .method public static supportsPopOver(Landroid/content/pm/ActivityInfo;)Z
     .locals 3
 
-    .line 306
     iget-object v0, p0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     const/4 v1, 0x1
@@ -175,14 +163,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 307
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 308
     iget-object p0, p0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     invoke-virtual {p0, v2, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
@@ -191,7 +177,6 @@
 
     return p0
 
-    .line 310
     :cond_0
     iget-object v0, p0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -199,14 +184,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 311
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 312
     iget-object p0, p0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
@@ -226,7 +209,6 @@
 .method public final activate()V
     .locals 3
 
-    .line 175
     iget-boolean v0, p0, Lcom/android/server/wm/PopOverState;->mIsActivated:Z
 
     if-nez v0, :cond_4
@@ -237,7 +219,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 177
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -246,7 +227,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 178
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -259,7 +239,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 179
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->isRootOfTask()Z
 
     move-result v0
@@ -277,15 +256,12 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 184
     iput-boolean v1, p0, Lcom/android/server/wm/PopOverState;->mIsActivated:Z
 
     const/4 v2, 0x0
 
-    .line 185
     iput-boolean v2, v0, Lcom/android/server/wm/ActivityRecord;->mOccludesParent:Z
 
-    .line 187
     sget-boolean v2, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_OCCLUDES_PARENT_CHANGE_CALLBACK:Z
 
     if-eqz v2, :cond_1
@@ -294,24 +270,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 188
     iget-object v2, v0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mExt:Lcom/android/server/wm/WindowManagerServiceExt;
 
-    .line 189
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
     move-result-object v0
 
-    .line 188
     invoke-virtual {v2, v0}, Lcom/android/server/wm/WindowManagerServiceExt;->updateOccludeTargetIfNeeded(Lcom/android/server/wm/DisplayContent;)V
 
-    .line 192
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 193
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -322,7 +293,6 @@
 
     if-nez v0, :cond_2
 
-    .line 194
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -331,7 +301,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->updateWindowFocusInTask()V
 
-    .line 199
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
@@ -345,7 +314,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 200
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->isVisible()Z
 
     move-result v0
@@ -354,7 +322,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 201
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -367,7 +334,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -380,7 +346,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 203
     iget-object p0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
@@ -399,7 +364,6 @@
 
     goto :goto_0
 
-    .line 205
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
@@ -413,7 +377,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 206
     iget-object p0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -430,7 +393,6 @@
 .method public adjustOptions([I[I[Landroid/graphics/Point;[I)V
     .locals 2
 
-    .line 102
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->hasOptions()Z
 
     move-result v0
@@ -447,7 +409,6 @@
 
     goto/16 :goto_2
 
-    .line 105
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
@@ -463,12 +424,10 @@
 
     if-nez p4, :cond_1
 
-    .line 107
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->clearOptions()V
 
     goto :goto_1
 
-    .line 109
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/PopOverState;->mOptions:Landroid/app/ActivityOptions;
 
@@ -482,7 +441,6 @@
     :goto_0
     if-eqz p1, :cond_3
 
-    .line 111
     invoke-virtual {p1}, [I->clone()Ljava/lang/Object;
 
     move-result-object p1
@@ -494,7 +452,6 @@
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 114
     invoke-virtual {p2}, [I->clone()Ljava/lang/Object;
 
     move-result-object p1
@@ -506,7 +463,6 @@
     :cond_4
     if-eqz p3, :cond_5
 
-    .line 117
     invoke-virtual {p3}, [Landroid/graphics/Point;->clone()Ljava/lang/Object;
 
     move-result-object p1
@@ -518,17 +474,14 @@
     :cond_5
     if-eqz p4, :cond_6
 
-    .line 120
     iget-object p1, v1, Landroid/app/ActivityOptions;->mPopOverAnchorPosition:[I
 
-    .line 121
     invoke-virtual {p4}, [I->clone()Ljava/lang/Object;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 124
     invoke-virtual {p4}, [I->clone()Ljava/lang/Object;
 
     move-result-object p1
@@ -537,14 +490,12 @@
 
     iput-object p1, v1, Landroid/app/ActivityOptions;->mPopOverAnchorPosition:[I
 
-    .line 127
     :cond_6
     :goto_1
     iget-object p1, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->recomputeConfiguration()V
 
-    .line 128
     iget-object p1, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     const/4 p2, 0x0
@@ -553,14 +504,12 @@
 
     invoke-virtual {p1, p2, p3, p3}, Lcom/android/server/wm/ActivityRecord;->ensureActivityConfiguration(IZZ)Z
 
-    .line 129
     iget-object p1, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-static {p1}, Lcom/android/server/wm/PopOverBoundsCalculator;->getBounds(Lcom/android/server/wm/ActivityRecord;)Landroid/graphics/Rect;
 
     move-result-object p1
 
-    .line 130
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result p2
@@ -571,7 +520,6 @@
 
     if-ne p2, p3, :cond_7
 
-    .line 131
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result p2
@@ -582,7 +530,6 @@
 
     if-eq p2, p1, :cond_8
 
-    .line 132
     :cond_7
     iget-object p0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
@@ -590,7 +537,6 @@
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mChangeTransitController:Lcom/android/server/wm/ChangeTransitionController;
 
-    .line 133
     invoke-virtual {p1, p0, v0}, Lcom/android/server/wm/ChangeTransitionController;->handlePopOverChangeTransitionRequest(Lcom/android/server/wm/ActivityRecord;Landroid/graphics/Rect;)V
 
     :cond_8
@@ -601,14 +547,12 @@
 .method public applyOptionsInherited()V
     .locals 2
 
-    .line 89
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mOptionsInherited:Landroid/app/ActivityOptions;
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 90
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -617,7 +561,6 @@
 
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 91
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -630,7 +573,6 @@
 
     goto :goto_0
 
-    .line 95
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mOptionsInherited:Landroid/app/ActivityOptions;
 
@@ -638,15 +580,12 @@
 
     const/4 v0, 0x0
 
-    .line 96
     iput-object v0, p0, Lcom/android/server/wm/PopOverState;->mOptionsInherited:Landroid/app/ActivityOptions;
 
-    .line 97
     iput v1, p0, Lcom/android/server/wm/PopOverState;->mOriginTaskId:I
 
     const/4 v0, -0x1
 
-    .line 98
     iput v0, p0, Lcom/android/server/wm/PopOverState;->mOriginTaskIdInherited:I
 
     :cond_1
@@ -659,18 +598,14 @@
 
     const/4 v0, 0x0
 
-    .line 146
     iput-object v0, p0, Lcom/android/server/wm/PopOverState;->mOptions:Landroid/app/ActivityOptions;
 
-    .line 147
     iput-object v0, p0, Lcom/android/server/wm/PopOverState;->mOptionsInherited:Landroid/app/ActivityOptions;
 
     const/4 v0, -0x1
 
-    .line 148
     iput v0, p0, Lcom/android/server/wm/PopOverState;->mOriginTaskId:I
 
-    .line 149
     iput v0, p0, Lcom/android/server/wm/PopOverState;->mOriginTaskIdInherited:I
 
     return-void
@@ -679,14 +614,12 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 6
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mOptions:Landroid/app/ActivityOptions;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 276
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -708,7 +641,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 277
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -775,7 +707,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 281
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -812,7 +743,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 283
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -829,7 +759,6 @@
 
     aget v2, v3, v2
 
-    .line 284
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -846,7 +775,6 @@
 
     aget v2, v2, v5
 
-    .line 285
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -859,31 +787,25 @@
 
     move-result-object v0
 
-    .line 283
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 287
     iget-boolean v0, p0, Lcom/android/server/wm/PopOverState;->mIsActivated:Z
 
     if-nez v0, :cond_1
 
     return-void
 
-    .line 291
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 292
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p2, " inherit="
 
-    .line 293
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 294
     iget-object p2, p0, Lcom/android/server/wm/PopOverState;->mOptions:Landroid/app/ActivityOptions;
 
     iget-boolean p2, p2, Landroid/app/ActivityOptions;->mPopOverInheritOptions:Z
@@ -892,20 +814,16 @@
 
     const-string p2, ", mLastOccludesParent="
 
-    .line 295
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 296
     iget-boolean p2, p0, Lcom/android/server/wm/PopOverState;->mLastOccludesParent:Z
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p2, ", isBelowAnotherOpaquePopOver="
 
-    .line 297
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 298
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->isBelowAnotherOpaquePopOver()Z
 
     move-result p2
@@ -914,17 +832,14 @@
 
     const-string p2, ", isAboveAnotherOpaquePopOver="
 
-    .line 299
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 300
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->isAboveAnotherOpaquePopOver()Z
 
     move-result p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 302
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -937,7 +852,6 @@
 .method public getOptions()Landroid/app/ActivityOptions;
     .locals 0
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/wm/PopOverState;->mOptions:Landroid/app/ActivityOptions;
 
     return-object p0
@@ -946,7 +860,6 @@
 .method public getState()I
     .locals 1
 
-    .line 233
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->isActivated()Z
 
     move-result v0
@@ -957,7 +870,6 @@
 
     return p0
 
-    .line 236
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->shouldRemoveOutlineEffect()Z
 
@@ -978,7 +890,6 @@
 .method public hasOptions()Z
     .locals 1
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mOptions:Landroid/app/ActivityOptions;
 
     if-nez v0, :cond_1
@@ -1005,7 +916,6 @@
 .method public final inactivate()V
     .locals 3
 
-    .line 213
     iget-boolean v0, p0, Lcom/android/server/wm/PopOverState;->mIsActivated:Z
 
     if-nez v0, :cond_0
@@ -1015,37 +925,30 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 215
     iput-boolean v0, p0, Lcom/android/server/wm/PopOverState;->mIsActivated:Z
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     iget-boolean v1, p0, Lcom/android/server/wm/PopOverState;->mLastOccludesParent:Z
 
     iput-boolean v1, v0, Lcom/android/server/wm/ActivityRecord;->mOccludesParent:Z
 
-    .line 218
     sget-boolean v2, Lcom/samsung/android/rune/CoreRune;->FW_SUPPORT_OCCLUDES_PARENT_CHANGE_CALLBACK:Z
 
     if-eqz v2, :cond_1
 
     if-eqz v1, :cond_1
 
-    .line 219
     iget-object v1, v0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mExt:Lcom/android/server/wm/WindowManagerServiceExt;
 
-    .line 220
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
     move-result-object v0
 
-    .line 219
     invoke-virtual {v1, v0}, Lcom/android/server/wm/WindowManagerServiceExt;->updateOccludeTargetIfNeeded(Lcom/android/server/wm/DisplayContent;)V
 
-    .line 223
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
@@ -1063,7 +966,6 @@
 .method public isAboveAnotherOpaquePopOver()Z
     .locals 4
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -1103,7 +1005,6 @@
 .method public isActivated()Z
     .locals 0
 
-    .line 229
     iget-boolean p0, p0, Lcom/android/server/wm/PopOverState;->mIsActivated:Z
 
     return p0
@@ -1112,14 +1013,12 @@
 .method public isBelowAnotherOpaquePopOver()Z
     .locals 4
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 263
     iget-object v1, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -1157,7 +1056,6 @@
 .method public isInLargeSizeTask()Z
     .locals 1
 
-    .line 170
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
@@ -1172,7 +1070,6 @@
 
     move-result-object p0
 
-    .line 171
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p0
@@ -1197,7 +1094,6 @@
 .method public setLastOccludesParent(Z)V
     .locals 0
 
-    .line 153
     iput-boolean p1, p0, Lcom/android/server/wm/PopOverState;->mLastOccludesParent:Z
 
     return-void
@@ -1206,7 +1102,6 @@
 .method public setupOptions(Landroid/app/ActivityOptions;Lcom/android/server/wm/ActivityRecord;)V
     .locals 1
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
@@ -1219,7 +1114,6 @@
 
     return-void
 
-    .line 66
     :cond_0
     invoke-virtual {p1}, Landroid/app/ActivityOptions;->isPopOver()Z
 
@@ -1227,7 +1121,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 67
     new-instance v0, Landroid/app/ActivityOptions;
 
     invoke-virtual {p1}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
@@ -1240,14 +1133,12 @@
 
     if-eqz p2, :cond_1
 
-    .line 68
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 69
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
@@ -1259,7 +1150,6 @@
     :cond_1
     return-void
 
-    .line 74
     :cond_2
     iget-boolean p1, p1, Landroid/app/ActivityOptions;->mPopOverInheritOptions:Z
 
@@ -1270,14 +1160,12 @@
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 79
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    .line 80
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
@@ -1298,10 +1186,8 @@
 
     if-eqz v0, :cond_4
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/wm/PopOverState;->mOptionsInherited:Landroid/app/ActivityOptions;
 
-    .line 84
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
@@ -1317,7 +1203,6 @@
 .method public shouldRemoveOutlineEffect()Z
     .locals 1
 
-    .line 244
     iget-boolean v0, p0, Lcom/android/server/wm/PopOverState;->mLastOccludesParent:Z
 
     if-nez v0, :cond_0
@@ -1342,7 +1227,6 @@
 .method public toggle()V
     .locals 1
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/wm/PopOverState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->isEmbedded()Z
@@ -1351,12 +1235,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 158
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->inactivate()V
 
     return-void
 
-    .line 161
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->isInLargeSizeTask()Z
 
@@ -1364,12 +1246,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 162
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->activate()V
 
     goto :goto_0
 
-    .line 164
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/wm/PopOverState;->inactivate()V
 

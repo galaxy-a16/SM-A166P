@@ -24,7 +24,6 @@
 .method public static synthetic $r8$lambda$5ClyKhMhsZTkz3WFlzBdIJ9icbQ(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/chimera/AbnormalFgsDetector;->lambda$addAbnormalHeavyApp$2(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
 
     move-result p0
@@ -35,7 +34,6 @@
 .method public static synthetic $r8$lambda$GVkh7helwGPTrPW-aDMfe3Sglbs(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/chimera/AbnormalFgsDetector;->lambda$putKillableHeavyApp$0(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
 
     move-result p0
@@ -46,7 +44,6 @@
 .method public static synthetic $r8$lambda$cDOIdn07SkEIrHCjbGckE9y_xiU(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/chimera/AbnormalFgsDetector;->lambda$addAbnormalHeavyApp$1(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
 
     move-result p0
@@ -57,43 +54,36 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepository;)V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mHeavyApps:Ljava/util/List;
 
-    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mKillableHeavyApps:Ljava/util/List;
 
-    .line 32
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mReportedAbnormalHeavyApps:Ljava/util/List;
 
-    .line 36
     sget-object p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     if-nez p0, :cond_0
 
-    .line 37
     sput-object p1, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     :cond_0
@@ -113,24 +103,20 @@
 
     if-ne p1, v3, :cond_0
 
-    .line 42
     sget-object v4, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     if-eqz v4, :cond_0
 
-    .line 44
     filled-new-array {p0}, [I
 
     move-result-object p0
 
-    .line 46
     invoke-interface {v4, p0}, Lcom/android/server/chimera/SystemRepository;->getProcessStatesAndOomScoresForPIDs([I)Landroid/util/Pair;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 47
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     if-eqz p0, :cond_0
@@ -183,7 +169,6 @@
 .method public static synthetic lambda$addAbnormalHeavyApp$1(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
     .locals 0
 
-    .line 131
     iget-object p1, p1, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->processName:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -196,7 +181,6 @@
 .method public static synthetic lambda$addAbnormalHeavyApp$2(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
     .locals 0
 
-    .line 134
     iget-object p1, p1, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->processName:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -209,7 +193,6 @@
 .method public static synthetic lambda$putKillableHeavyApp$0(Ljava/lang/String;Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;)Z
     .locals 0
 
-    .line 110
     iget-object p1, p1, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->processName:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -224,7 +207,6 @@
 .method public addAbnormalHeavyApp(Ljava/lang/String;IJ)V
     .locals 9
 
-    .line 129
     sget-object v0, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string v1, "AbnormalFgsDetector"
@@ -245,10 +227,8 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
     monitor-enter p0
 
-    .line 131
     :try_start_0
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
@@ -268,7 +248,6 @@
 
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mReportedAbnormalHeavyApps:Ljava/util/List;
 
-    .line 133
     invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
@@ -283,7 +262,6 @@
 
     if-nez v0, :cond_0
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
     new-instance v8, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;
@@ -306,10 +284,8 @@
 
     const/4 p2, 0x0
 
-    .line 137
     invoke-virtual {p0, p1, p3, p4, p2}, Lcom/android/server/chimera/AbnormalFgsDetector;->sendDetectionHqmBigData(Ljava/lang/String;JI)V
 
-    .line 139
     sget-object p2, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string p3, "AbnormalFgsDetector"
@@ -330,7 +306,6 @@
 
     invoke-interface {p2, p3, p1}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 141
     :cond_0
     monitor-exit p0
 
@@ -351,7 +326,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 224
     array-length p2, p2
 
     if-nez p2, :cond_0
@@ -361,58 +335,46 @@
     :cond_0
     const-string p2, "AbnormalFgsDetector"
 
-    .line 228
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p2, "HeavyApps : ["
 
-    .line 230
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 231
     iget-object p2, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mHeavyApps:Ljava/util/List;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/chimera/AbnormalFgsDetector;->printHeavyAppItems(Ljava/io/PrintWriter;Ljava/util/List;)V
 
     const-string p2, "]"
 
-    .line 232
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "KillableHeavyApps : ["
 
-    .line 234
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mKillableHeavyApps:Ljava/util/List;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/chimera/AbnormalFgsDetector;->printHeavyAppItems(Ljava/io/PrintWriter;Ljava/util/List;)V
 
-    .line 236
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "AbnormalHeavyApps : [Current "
 
-    .line 238
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/chimera/AbnormalFgsDetector;->printHeavyAppItems(Ljava/io/PrintWriter;Ljava/util/List;)V
 
     const-string v0, " Reported "
 
-    .line 240
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 242
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mReportedAbnormalHeavyApps:Ljava/util/List;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/chimera/AbnormalFgsDetector;->printHeavyAppItems(Ljava/io/PrintWriter;Ljava/util/List;)V
 
-    .line 243
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_1
@@ -429,7 +391,6 @@
 
     if-lez p0, :cond_0
 
-    .line 105
     invoke-static {p1, p4}, Lcom/android/server/chimera/AbnormalFgsDetector;->isForegroundService(II)Z
 
     move-result p0
@@ -450,17 +411,14 @@
 .method public onOneHourTimer()V
     .locals 14
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mHeavyApps:Ljava/util/List;
 
-    .line 64
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mHeavyApps:Ljava/util/List;
 
-    .line 66
     sget-object v1, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string/jumbo v2, "onOneHourTimer"
@@ -469,7 +427,6 @@
 
     invoke-interface {v1, v3, v2}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
     sget-object v1, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v1}, Lcom/android/server/chimera/SystemRepository;->getRunningAppProcesses()Ljava/util/List;
@@ -494,7 +451,6 @@
 
     check-cast v2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;
 
-    .line 71
     iget-wide v4, v2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->lastPss:J
 
     const-wide/32 v6, 0x12c000
@@ -503,7 +459,6 @@
 
     if-lez v4, :cond_0
 
-    .line 72
     sget-object v4, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v5, v2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
@@ -512,7 +467,6 @@
 
     move-result-object v5
 
-    .line 73
     invoke-interface {v4, v5}, Lcom/android/server/chimera/SystemRepository;->getProcessStatesAndOomScoresForPIDs([I)Landroid/util/Pair;
 
     move-result-object v4
@@ -523,12 +477,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 77
     iget-object v4, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     if-eqz v4, :cond_2
 
-    .line 78
     move-object v7, v4
 
     check-cast v7, [I
@@ -556,7 +508,6 @@
     :cond_1
     move v7, v6
 
-    .line 82
     :goto_1
     check-cast v4, [I
 
@@ -569,7 +520,6 @@
     :cond_2
     const/4 v4, -0x1
 
-    .line 86
     :goto_2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -588,7 +538,6 @@
 
     check-cast v8, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;
 
-    .line 87
     iget-object v9, v8, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->processName:Ljava/lang/String;
 
     iget-object v10, v2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processName:Ljava/lang/String;
@@ -601,12 +550,10 @@
 
     if-eqz v6, :cond_3
 
-    .line 88
     iget v6, v8, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->count:I
 
     add-int/2addr v5, v6
 
-    .line 93
     :cond_4
     sget-object v6, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -656,7 +603,6 @@
 
     invoke-interface {v6, v3, v4}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 95
     iget-object v4, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mHeavyApps:Ljava/util/List;
 
     new-instance v13, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;
@@ -681,7 +627,6 @@
 
     if-lt v5, v4, :cond_0
 
-    .line 98
     iget-object v4, v2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     iget v5, v2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
@@ -699,7 +644,6 @@
 .method public final printHeavyAppItems(Ljava/io/PrintWriter;Ljava/util/List;)V
     .locals 3
 
-    .line 247
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -717,7 +661,6 @@
 
     check-cast p2, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;
 
-    .line 248
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -757,10 +700,8 @@
 .method public putKillableHeavyApp(Ljava/lang/String;IJ)V
     .locals 10
 
-    .line 109
     monitor-enter p0
 
-    .line 110
     :try_start_0
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mHeavyApps:Ljava/util/List;
 
@@ -770,7 +711,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->removeIf(Ljava/util/function/Predicate;)Z
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mKillableHeavyApps:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -792,7 +732,6 @@
 
     check-cast v1, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;
 
-    .line 114
     iget-object v3, v1, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->processName:Ljava/lang/String;
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -801,7 +740,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 115
     iget v0, v1, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->count:I
 
     add-int/2addr v2, v0
@@ -809,7 +747,6 @@
     :cond_1
     move v7, v2
 
-    .line 120
     iget-object v8, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mKillableHeavyApps:Ljava/util/List;
 
     new-instance v9, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;
@@ -834,10 +771,8 @@
 
     if-lt v7, v0, :cond_2
 
-    .line 123
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/chimera/AbnormalFgsDetector;->addAbnormalHeavyApp(Ljava/lang/String;IJ)V
 
-    .line 125
     :cond_2
     monitor-exit p0
 
@@ -856,7 +791,6 @@
 .method public reportAbnormalHeavyAppIfExist()V
     .locals 8
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -865,22 +799,18 @@
 
     if-lez v0, :cond_1
 
-    .line 193
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 194
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 195
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 197
     iget-object v3, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -900,12 +830,10 @@
 
     check-cast v4, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;
 
-    .line 198
     iget-object v5, v4, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->processName:Ljava/lang/String;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 199
     iget v5, v4, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->uid:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -916,14 +844,12 @@
 
     const/16 v5, 0x1388
 
-    .line 200
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 202
     iget-object v5, v4, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->processName:Ljava/lang/String;
 
     iget-wide v6, v4, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->detectPss:J
@@ -932,7 +858,6 @@
 
     goto :goto_0
 
-    .line 205
     :cond_0
     new-instance v3, Landroid/content/Intent;
 
@@ -940,35 +865,28 @@
 
     const-string v4, "com.samsung.sdhms.MEMORY_ABNORMAL_APP_DETECTION"
 
-    .line 206
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo v4, "package_name"
 
-    .line 207
     invoke-virtual {v3, v4, v0}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
     const-string/jumbo v0, "uid"
 
-    .line 208
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putIntegerArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
     const-string v0, "anomaly_type"
 
-    .line 209
     invoke-virtual {v3, v0, v2}, Landroid/content/Intent;->putIntegerArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
     const-string v0, "com.sec.android.sdhms"
 
-    .line 210
     invoke-virtual {v3, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 212
     sget-object v0, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v0, v3}, Lcom/android/server/chimera/SystemRepository;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 214
     sget-object v0, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -981,7 +899,6 @@
 
     iget-object v2, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
-    .line 215
     invoke-interface {v2}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object v2
@@ -990,7 +907,6 @@
 
     move-result-object v2
 
-    .line 214
     invoke-static {v2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -1005,14 +921,12 @@
 
     invoke-interface {v0, v2, v1}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 217
     iget-object v0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mReportedAbnormalHeavyApps:Ljava/util/List;
 
     iget-object v1, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 218
     iget-object p0, p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mAbnormalHeavyApps:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
@@ -1024,7 +938,6 @@
 .method public sendDetectionHqmBigData(Ljava/lang/String;JI)V
     .locals 2
 
-    .line 151
     :try_start_0
     new-instance p0, Lorg/json/JSONObject;
 
@@ -1034,30 +947,24 @@
 
     const/16 v1, 0x66
 
-    .line 152
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v0, "PNAME"
 
-    .line 153
     invoke-virtual {p0, v0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p1, "PSS"
 
-    .line 154
     invoke-virtual {p0, p1, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string p1, "ADJ"
 
-    .line 155
     invoke-virtual {p0, p1, p4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 156
     invoke-virtual {p0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 157
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p1
@@ -1072,14 +979,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 163
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 164
     sget-object p1, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string p2, "KPUT"
@@ -1089,7 +994,6 @@
     :cond_0
     return-void
 
-    .line 159
     :catch_0
     sget-object p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -1105,7 +1009,6 @@
 .method public sendReportHqmBigData(Ljava/lang/String;J)V
     .locals 2
 
-    .line 175
     :try_start_0
     new-instance p0, Lorg/json/JSONObject;
 
@@ -1115,25 +1018,20 @@
 
     const/16 v1, 0x67
 
-    .line 176
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v0, "PNAME"
 
-    .line 177
     invoke-virtual {p0, v0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p1, "PSS"
 
-    .line 178
     invoke-virtual {p0, p1, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 179
     invoke-virtual {p0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 180
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p1
@@ -1148,14 +1046,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 186
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 187
     sget-object p1, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string p2, "KPUT"
@@ -1165,7 +1061,6 @@
     :cond_0
     return-void
 
-    .line 182
     :catch_0
     sget-object p0, Lcom/android/server/chimera/AbnormalFgsDetector;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 

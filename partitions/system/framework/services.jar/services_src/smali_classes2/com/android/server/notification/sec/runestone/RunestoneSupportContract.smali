@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$smgetPackageSignatureHexInfo(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->getPackageSignatureHexInfo(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$smisPlatformKeySigned(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->isPlatformKeySigned(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -39,7 +37,6 @@
 
     const-string/jumbo v0, "ro.build.type"
 
-    .line 16
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -52,7 +49,6 @@
 
     sput-boolean v0, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->IS_ENG:Z
 
-    .line 17
     new-instance v0, Landroid/content/pm/Signature;
 
     const-string v1, "308204d4308203bca003020102020900d20995a79c0daad6300d06092a864886f70d01010505003081a2310b3009060355040613024b52311430120603550408130b536f757468204b6f726561311330110603550407130a5375776f6e2043697479311c301a060355040a131353616d73756e6720436f72706f726174696f6e310c300a060355040b1303444d43311530130603550403130c53616d73756e6720436572743125302306092a864886f70d0109011616616e64726f69642e6f734073616d73756e672e636f6d301e170d3131303632323132323531325a170d3338313130373132323531325a3081a2310b3009060355040613024b52311430120603550408130b536f757468204b6f726561311330110603550407130a5375776f6e2043697479311c301a060355040a131353616d73756e6720436f72706f726174696f6e310c300a060355040b1303444d43311530130603550403130c53616d73756e6720436572743125302306092a864886f70d0109011616616e64726f69642e6f734073616d73756e672e636f6d30820120300d06092a864886f70d01010105000382010d00308201080282010100c986384a3e1f2fb206670e78ef232215c0d26f45a22728db99a44da11c35ac33a71fe071c4a2d6825a9b4c88b333ed96f3c5e6c666d60f3ee94c490885abcf8dc660f707aabc77ead3e2d0d8aee8108c15cd260f2e85042c28d2f292daa3c6da0c7bf2391db7841aade8fdf0c9d0defcf77124e6d2de0a9e0d2da746c3670e4ffcdc85b701bb4744861b96ff7311da3603c5a10336e55ffa34b4353eedc85f51015e1518c67e309e39f87639ff178107f109cd18411a6077f26964b6e63f8a70b9619db04306a323c1a1d23af867e19f14f570ffe573d0e3a0c2b30632aaec3173380994be1e341e3a90bd2e4b615481f46db39ea83816448ec35feb1735c1f3020103a382010b30820107301d0603551d0e04160414932c3af70b627a0c7610b5a0e7427d6cfaea3f1e3081d70603551d230481cf3081cc8014932c3af70b627a0c7610b5a0e7427d6cfaea3f1ea181a8a481a53081a2310b3009060355040613024b52311430120603550408130b536f757468204b6f726561311330110603550407130a5375776f6e2043697479311c301a060355040a131353616d73756e6720436f72706f726174696f6e310c300a060355040b1303444d43311530130603550403130c53616d73756e6720436572743125302306092a864886f70d0109011616616e64726f69642e6f734073616d73756e672e636f6d820900d20995a79c0daad6300c0603551d13040530030101ff300d06092a864886f70d01010505000382010100329601fe40e036a4a86cc5d49dd8c1b5415998e72637538b0d430369ac51530f63aace8c019a1a66616a2f1bb2c5fabd6f313261f380e3471623f053d9e3c53f5fd6d1965d7b000e4dc244c1b27e2fe9a323ff077f52c4675e86247aa801187137e30c9bbf01c567a4299db4bf0b25b7d7107a7b81ee102f72ff47950164e26752e114c42f8b9d2a42e7308897ec640ea1924ed13abbe9d120912b62f4926493a86db94c0b46f44c6161d58c2f648164890c512dfb28d42c855bf470dbee2dab6960cad04e81f71525ded46cdd0f359f99c460db9f007d96ce83b4b218ac2d82c48f12608d469733f05a3375594669ccbf8a495544d6c5701e9369c08c810158"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->SIG:[Landroid/content/pm/Signature;
 
-    .line 27
     new-instance v0, Landroid/content/pm/Signature;
 
     const-string v1, "308204a830820390a003020102020900b3998086d056cffa300d06092a864886f70d0101040500308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d301e170d3038303431353232343035305a170d3335303930313232343035305a308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d30820120300d06092a864886f70d01010105000382010d003082010802820101009c780592ac0d5d381cdeaa65ecc8a6006e36480c6d7207b12011be50863aabe2b55d009adf7146d6f2202280c7cd4d7bdb26243b8a806c26b34b137523a49268224904dc01493e7c0acf1a05c874f69b037b60309d9074d24280e16bad2a8734361951eaf72a482d09b204b1875e12ac98c1aa773d6800b9eafde56d58bed8e8da16f9a360099c37a834a6dfedb7b6b44a049e07a269fccf2c5496f2cf36d64df90a3b8d8f34a3baab4cf53371ab27719b3ba58754ad0c53fc14e1db45d51e234fbbe93c9ba4edf9ce54261350ec535607bf69a2ff4aa07db5f7ea200d09a6c1b49e21402f89ed1190893aab5a9180f152e82f85a45753cf5fc19071c5eec827020103a381fc3081f9301d0603551d0e041604144fe4a0b3dd9cba29f71d7287c4e7c38f2086c2993081c90603551d230481c13081be80144fe4a0b3dd9cba29f71d7287c4e7c38f2086c299a1819aa48197308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d820900b3998086d056cffa300c0603551d13040530030101ff300d06092a864886f70d01010405000382010100572551b8d93a1f73de0f6d469f86dad6701400293c88a0cd7cd778b73dafcc197fab76e6212e56c1c761cfc42fd733de52c50ae08814cefc0a3b5a1a4346054d829f1d82b42b2048bf88b5d14929ef85f60edd12d72d55657e22e3e85d04c831d613d19938bb8982247fa321256ba12d1d6a8f92ea1db1c373317ba0c037f0d1aff645aef224979fba6e7a14bc025c71b98138cef3ddfc059617cf24845cf7b40d6382f7275ed738495ab6e5931b9421765c491b72fb68e080dbdb58c2029d347c8b328ce43ef6a8b15533edfbe989bd6a48dd4b202eda94c6ab8dd5b8399203daae2ed446232e4fe9bd961394c6300e5138e3cfd285e6e4e483538cb8b1b357"
@@ -98,20 +93,16 @@
 .method public static getHashEncodedString([BLjava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 140
     invoke-static {p1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p1
 
-    .line 141
     invoke-virtual {p1, p0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 142
     invoke-virtual {p1}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
 
-    .line 144
     invoke-static {p0}, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->toHex([B)Ljava/lang/String;
 
     move-result-object p0
@@ -124,7 +115,6 @@
 
     const/4 v0, 0x0
 
-    .line 108
     :try_start_0
     invoke-static {p0, p1}, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->getPackageSignatureInfo(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/Signature;
 
@@ -132,7 +122,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 110
     invoke-virtual {p0}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object p0
@@ -153,7 +142,6 @@
     :catch_0
     move-exception p0
 
-    .line 115
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object v0
@@ -170,7 +158,6 @@
 
     goto :goto_0
 
-    .line 126
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -183,7 +170,6 @@
     :cond_1
     const/16 v1, 0x40
 
-    .line 132
     :try_start_0
     invoke-virtual {p0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -202,7 +188,6 @@
     :catch_0
     move-exception p0
 
-    .line 134
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
@@ -215,7 +200,6 @@
 
     const-string v0, "android"
 
-    .line 103
     invoke-static {p0, v0}, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->getPackageSignatureHexInfo(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -226,14 +210,12 @@
 .method public static isPlatformKeySigned(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 92
     invoke-static {p0}, Lcom/android/server/notification/sec/runestone/RunestoneSupportContract;->getPlatformSignatureHex(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 94
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -250,12 +232,10 @@
 .method public static toHex([B)Ljava/lang/String;
     .locals 5
 
-    .line 148
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 150
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -271,7 +251,6 @@
 
     const/16 v4, 0x10
 
-    .line 151
     invoke-static {v3, v4}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object v3
@@ -292,7 +271,6 @@
 
     goto :goto_0
 
-    .line 154
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

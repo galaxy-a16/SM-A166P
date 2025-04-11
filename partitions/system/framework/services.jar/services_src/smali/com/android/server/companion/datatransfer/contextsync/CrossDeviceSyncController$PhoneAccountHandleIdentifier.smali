@@ -13,13 +13,10 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .line 918
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 919
     iput p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;->mAssociationId:I
 
-    .line 920
     iput-object p2, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;->mAppIdentifier:Ljava/lang/String;
 
     return-void
@@ -30,14 +27,12 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 938
     instance-of v0, p1, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 939
     check-cast p1, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;
 
     invoke-virtual {p1}, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;->getAssociationId()I
@@ -52,12 +47,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 942
     invoke-virtual {p1}, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;->getAppIdentifier()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 941
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -73,7 +66,6 @@
 .method public getAppIdentifier()Ljava/lang/String;
     .locals 0
 
-    .line 928
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;->mAppIdentifier:Ljava/lang/String;
 
     return-object p0
@@ -82,7 +74,6 @@
 .method public getAssociationId()I
     .locals 0
 
-    .line 924
     iget p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;->mAssociationId:I
 
     return p0
@@ -91,7 +82,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 933
     iget v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountHandleIdentifier;->mAssociationId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

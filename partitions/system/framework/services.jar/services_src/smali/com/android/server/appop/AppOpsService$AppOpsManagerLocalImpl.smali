@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;)V
     .locals 0
 
-    .line 6248
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$AppOpsManagerLocalImpl;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/appop/AppOpsService;Lcom/android/server/appop/AppOpsService$AppOpsManagerLocalImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/appop/AppOpsService$AppOpsManagerLocalImpl;-><init>(Lcom/android/server/appop/AppOpsService;)V
 
     return-void
@@ -36,12 +34,10 @@
 .method public isUidInForeground(I)Z
     .locals 1
 
-    .line 6251
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$AppOpsManagerLocalImpl;->this$0:Lcom/android/server/appop/AppOpsService;
 
     monitor-enter v0
 
-    .line 6252
     :try_start_0
     iget-object p0, p0, Lcom/android/server/appop/AppOpsService$AppOpsManagerLocalImpl;->this$0:Lcom/android/server/appop/AppOpsService;
 
@@ -60,7 +56,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6253
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

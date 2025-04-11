@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/PersonaActivityHelper;)V
     .locals 0
 
-    .line 125
     iput-object p1, p0, Lcom/android/server/wm/PersonaActivityHelper$1;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-direct {p0}, Landroid/app/TaskStackListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onActivityPinned(Ljava/lang/String;III)V
     .locals 0
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper$1;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-static {p0, p2}, Lcom/android/server/wm/PersonaActivityHelper;->-$$Nest$fputmLastPIPModeActivityUserId(Lcom/android/server/wm/PersonaActivityHelper;I)V
@@ -35,7 +33,6 @@
 .method public onActivityUnpinned()V
     .locals 1
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/wm/PersonaActivityHelper$1;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-static {v0}, Lcom/android/server/wm/PersonaActivityHelper;->-$$Nest$fgetmLastPIPModeActivityUserId(Lcom/android/server/wm/PersonaActivityHelper;)I
@@ -48,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/wm/PersonaActivityHelper$1;->this$0:Lcom/android/server/wm/PersonaActivityHelper;
 
     invoke-static {p0}, Lcom/android/server/wm/PersonaActivityHelper;->-$$Nest$fgetmLastReceivedResumedActivity(Lcom/android/server/wm/PersonaActivityHelper;)Lcom/android/server/wm/ActivityRecord;

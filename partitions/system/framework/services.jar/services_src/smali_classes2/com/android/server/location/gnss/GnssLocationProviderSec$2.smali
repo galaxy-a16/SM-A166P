@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssLocationProviderSec;)V
     .locals 0
 
-    .line 481
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$2;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 
     invoke-direct {p0}, Landroid/telephony/TelephonyManager$CellInfoCallback;-><init>()V
@@ -28,7 +27,6 @@
 
     return-void
 
-    .line 485
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -52,7 +50,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 486
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$2;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 
     invoke-static {v0}, Lcom/android/server/location/gnss/GnssLocationProviderSec;->-$$Nest$mgetTypeFromNetworkType(Lcom/android/server/location/gnss/GnssLocationProviderSec;)I
@@ -63,7 +60,6 @@
 
     return-void
 
-    .line 488
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -82,7 +78,6 @@
 
     check-cast v2, Landroid/telephony/CellInfo;
 
-    .line 489
     invoke-virtual {v2}, Landroid/telephony/CellInfo;->isRegistered()Z
 
     move-result v3
@@ -94,10 +89,8 @@
     :cond_2
     const-string/jumbo p1, "registered cell found"
 
-    .line 490
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     invoke-virtual {v2}, Landroid/telephony/CellInfo;->getCellIdentity()Landroid/telephony/CellIdentity;
 
     move-result-object p1
@@ -108,7 +101,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 492
     invoke-virtual {v2}, Landroid/telephony/CellInfo;->getCellIdentity()Landroid/telephony/CellIdentity;
 
     move-result-object p1
@@ -121,7 +113,6 @@
 
     goto :goto_1
 
-    .line 495
     :cond_3
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$2;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 

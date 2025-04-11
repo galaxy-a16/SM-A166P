@@ -35,7 +35,6 @@
 
     const-string v1, "NONE"
 
-    .line 554
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -52,7 +51,6 @@
 
     const-string v1, "VZW"
 
-    .line 556
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -61,7 +59,6 @@
 
     const-string v2, "ATT"
 
-    .line 558
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -104,7 +101,6 @@
 
     const-string v5, "TMB"
 
-    .line 560
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -113,7 +109,6 @@
 
     const-string v6, "TMK"
 
-    .line 562
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -122,7 +117,6 @@
 
     const-string v6, "SPR"
 
-    .line 564
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -147,7 +141,6 @@
 
     const-string v6, "XAS"
 
-    .line 565
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -170,7 +163,6 @@
 
     const-string v7, "USC"
 
-    .line 567
     invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -209,7 +201,6 @@
 
     const-string v8, "RWC"
 
-    .line 569
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -234,7 +225,6 @@
 
     const-string v8, "CHR"
 
-    .line 570
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -267,7 +257,6 @@
 
     const-string v8, "SPC"
 
-    .line 571
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -300,7 +289,6 @@
 
     const-string v8, "PCM"
 
-    .line 572
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -333,7 +321,6 @@
 
     const-string v8, "VTR"
 
-    .line 573
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -380,7 +367,6 @@
 
     const-string v8, "CHN"
 
-    .line 575
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -405,7 +391,6 @@
 
     const-string v8, "CHM"
 
-    .line 576
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -436,7 +421,6 @@
 
     const-string v8, "DCM"
 
-    .line 578
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -455,7 +439,6 @@
 
     const-string v1, "XAR"
 
-    .line 581
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -480,7 +463,6 @@
 
     const-string v1, "CSP"
 
-    .line 582
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1

@@ -7,7 +7,6 @@
 .method public static getVersion()Ljava/lang/String;
     .locals 1
 
-    .line 0
     const-string v0, "2.3.0"
 
     return-object v0
@@ -16,12 +15,10 @@
 .method public static getVersionByKnox()Ljava/lang/String;
     .locals 2
 
-    .line 57
     invoke-static {}, Lcom/samsung/android/knox/EdmConstants;->getEnterpriseKnoxSdkVersion()Lcom/samsung/android/knox/EdmConstants$EnterpriseKnoxSdkVersion;
 
     move-result-object v0
 
-    .line 58
     sget-object v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnVersion$1;->$SwitchMap$com$samsung$android$knox$EdmConstants$EnterpriseKnoxSdkVersion:[I
 
     invoke-virtual {v0}, Lcom/samsung/android/knox/EdmConstants$EnterpriseKnoxSdkVersion;->ordinal()I
@@ -91,7 +88,6 @@
 .method public static writeVersionInProperties()V
     .locals 2
 
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +112,6 @@
 
     const-string/jumbo v0, "net.knoxvpn.version"
 
-    .line 52
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnVersion;->getVersionByKnox()Ljava/lang/String;
 
     move-result-object v1

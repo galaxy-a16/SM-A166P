@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/print/RemotePrintService;Ljava/util/List;)V
     .locals 0
 
-    .line 399
     iput-object p1, p0, Lcom/android/server/print/RemotePrintService$8;->this$0:Lcom/android/server/print/RemotePrintService;
 
     iput-object p2, p0, Lcom/android/server/print/RemotePrintService$8;->val$printerIds:Ljava/util/List;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 1
 
-    .line 402
     iget-object v0, p0, Lcom/android/server/print/RemotePrintService$8;->this$0:Lcom/android/server/print/RemotePrintService;
 
     iget-object p0, p0, Lcom/android/server/print/RemotePrintService$8;->val$printerIds:Ljava/util/List;

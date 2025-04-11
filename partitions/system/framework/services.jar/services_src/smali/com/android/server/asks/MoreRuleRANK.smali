@@ -17,7 +17,6 @@
 .method public final getASKSDataFromXML(ILjava/util/HashMap;)V
     .locals 8
 
-    .line 89
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -31,22 +30,18 @@
     :cond_0
     const-string p1, "TARGET"
 
-    .line 95
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string p1, "VALUE"
 
-    .line 96
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 103
     new-instance p1, Ljava/io/File;
 
     const-string v0, "/data/system/.aasa/AASApolicy/ASKS_UNKNOWN_RANK.xml"
 
     invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 105
     invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
@@ -67,21 +62,18 @@
 
     if-nez v0, :cond_1
 
-    .line 106
     invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 107
     invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
     invoke-virtual {v0, v1, v2}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 109
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
@@ -91,7 +83,6 @@
 
     return-void
 
-    .line 117
     :cond_2
     :try_start_0
     new-instance v0, Ljava/io/FileReader;
@@ -100,18 +91,15 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 125
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object p1
 
-    .line 126
     invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
     const-string v3, ""
 
-    .line 134
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v4
@@ -121,7 +109,6 @@
     :goto_0
     if-eq v4, v1, :cond_8
 
-    .line 136
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -136,7 +123,6 @@
 
     goto :goto_1
 
-    .line 175
     :cond_3
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -152,12 +138,10 @@
 
     if-eqz p2, :cond_7
 
-    .line 182
     invoke-virtual {p2, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 139
     :cond_4
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -171,19 +155,16 @@
 
     if-eqz v4, :cond_6
 
-    .line 143
     invoke-interface {p1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_5
 
-    .line 144
     invoke-interface {p1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 147
     :cond_5
     new-instance v4, Ljava/util/ArrayList;
 
@@ -193,7 +174,6 @@
 
     goto :goto_1
 
-    .line 148
     :cond_6
     invoke-virtual {p0, v6}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -201,7 +181,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 157
     invoke-interface {p1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v4
@@ -210,14 +189,12 @@
 
     if-eqz v5, :cond_7
 
-    .line 159
     invoke-interface {p1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 188
     :cond_7
     :goto_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -226,7 +203,6 @@
 
     goto :goto_0
 
-    .line 190
     :cond_8
     invoke-virtual {v0}, Ljava/io/FileReader;->close()V
     :try_end_1
@@ -238,13 +214,11 @@
     :catch_0
     move-exception p0
 
-    .line 203
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileReader;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 207
     :catch_1
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
@@ -253,13 +227,11 @@
     :catch_2
     move-exception p0
 
-    .line 194
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 198
     :catch_3
     invoke-virtual {p0}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
 
@@ -268,7 +240,6 @@
     :catch_4
     move-exception p0
 
-    .line 120
     invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     return-void
@@ -277,7 +248,6 @@
 .method public getResult(Ljava/lang/String;Ljava/lang/String;)I
     .locals 3
 
-    .line 216
     invoke-virtual {p0}, Lcom/android/server/asks/MoreRuleRANK;->isDevDevice()Z
 
     move-result v0
@@ -308,7 +278,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
@@ -316,10 +285,8 @@
 
     const v1, 0xd2a1
 
-    .line 219
     invoke-virtual {p0, v1, v0}, Lcom/android/server/asks/MoreRuleRANK;->getASKSDataFromXML(ILjava/util/HashMap;)V
 
-    .line 222
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result p0
@@ -333,14 +300,12 @@
     :cond_1
     const-string p0, "SIG"
 
-    .line 224
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 225
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -349,7 +314,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 226
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -361,14 +325,12 @@
     :cond_2
     const-string p0, "SIGHASH"
 
-    .line 230
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 231
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -377,7 +339,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 232
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -397,7 +358,6 @@
 
     const-string/jumbo p0, "ro.boot.em.status"
 
-    .line 242
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

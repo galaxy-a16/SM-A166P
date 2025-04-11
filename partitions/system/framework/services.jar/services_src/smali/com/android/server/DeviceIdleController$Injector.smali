@@ -17,12 +17,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 2485
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "DeviceIdleController"
 
-    .line 2486
     invoke-virtual {p1, v0}, Landroid/content/Context;->createAttributionContext(Ljava/lang/String;)Landroid/content/Context;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 .method public getAlarmManager()Landroid/app/AlarmManager;
     .locals 1
 
-    .line 2490
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/AlarmManager;
@@ -54,7 +51,6 @@
 .method public getAnyMotionDetector(Landroid/os/Handler;Landroid/hardware/SensorManager;Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;F)Lcom/android/server/AnyMotionDetector;
     .locals 7
 
-    .line 2495
     new-instance v6, Lcom/android/server/AnyMotionDetector;
 
     invoke-virtual {p0}, Lcom/android/server/DeviceIdleController$Injector;->getPowerManager()Landroid/os/PowerManager;
@@ -79,7 +75,6 @@
 .method public getAppStateTracker(Landroid/content/Context;Landroid/os/Looper;)Lcom/android/server/AppStateTrackerImpl;
     .locals 0
 
-    .line 2499
     new-instance p0, Lcom/android/server/AppStateTrackerImpl;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/AppStateTrackerImpl;-><init>(Landroid/content/Context;Landroid/os/Looper;)V
@@ -90,12 +85,10 @@
 .method public getConnectivityManager()Landroid/net/ConnectivityManager;
     .locals 2
 
-    .line 2503
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$Injector;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     if-nez v0, :cond_0
 
-    .line 2504
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/net/ConnectivityManager;
@@ -108,7 +101,6 @@
 
     iput-object v0, p0, Lcom/android/server/DeviceIdleController$Injector;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    .line 2506
     :cond_0
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
@@ -118,12 +110,10 @@
 .method public getConstants(Lcom/android/server/DeviceIdleController;)Lcom/android/server/DeviceIdleController$Constants;
     .locals 1
 
-    .line 2510
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$Injector;->mConstants:Lcom/android/server/DeviceIdleController$Constants;
 
     if-nez v0, :cond_0
 
-    .line 2511
     new-instance v0, Lcom/android/server/DeviceIdleController$Constants;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -132,7 +122,6 @@
 
     iput-object v0, p0, Lcom/android/server/DeviceIdleController$Injector;->mConstants:Lcom/android/server/DeviceIdleController$Constants;
 
-    .line 2513
     :cond_0
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mConstants:Lcom/android/server/DeviceIdleController$Constants;
 
@@ -142,7 +131,6 @@
 .method public getConstraintController(Landroid/os/Handler;Lcom/android/server/DeviceIdleInternal;)Lcom/android/server/deviceidle/ConstraintController;
     .locals 1
 
-    .line 2567
     iget-object p2, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -151,14 +139,12 @@
 
     const-string v0, "android.software.leanback_only"
 
-    .line 2568
     invoke-virtual {p2, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 2569
     new-instance p2, Lcom/android/server/deviceidle/TvConstraintController;
 
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
@@ -176,7 +162,6 @@
 .method public getElapsedRealtime()J
     .locals 2
 
-    .line 2518
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -187,7 +172,6 @@
 .method public getHandler(Lcom/android/server/DeviceIdleController;)Lcom/android/server/DeviceIdleController$MyHandler;
     .locals 1
 
-    .line 2529
     new-instance p0, Lcom/android/server/DeviceIdleController$MyHandler;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -208,12 +192,10 @@
 .method public getLocationManager()Landroid/location/LocationManager;
     .locals 2
 
-    .line 2522
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$Injector;->mLocationManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
-    .line 2523
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/location/LocationManager;
@@ -226,7 +208,6 @@
 
     iput-object v0, p0, Lcom/android/server/DeviceIdleController$Injector;->mLocationManager:Landroid/location/LocationManager;
 
-    .line 2525
     :cond_0
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mLocationManager:Landroid/location/LocationManager;
 
@@ -236,12 +217,10 @@
 .method public getMotionSensor()Landroid/hardware/Sensor;
     .locals 4
 
-    .line 2533
     invoke-virtual {p0}, Lcom/android/server/DeviceIdleController$Injector;->getSensorManager()Landroid/hardware/SensorManager;
 
     move-result-object v0
 
-    .line 2535
     iget-object v1, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -258,7 +237,6 @@
 
     if-lez v1, :cond_0
 
-    .line 2538
     invoke-virtual {v0, v1, v2}, Landroid/hardware/SensorManager;->getDefaultSensor(IZ)Landroid/hardware/Sensor;
 
     move-result-object v1
@@ -271,7 +249,6 @@
     :goto_0
     if-nez v1, :cond_1
 
-    .line 2540
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -288,7 +265,6 @@
 
     const/16 p0, 0x1a
 
-    .line 2542
     invoke-virtual {v0, p0, v2}, Landroid/hardware/SensorManager;->getDefaultSensor(IZ)Landroid/hardware/Sensor;
 
     move-result-object v1
@@ -298,7 +274,6 @@
 
     const/16 p0, 0x11
 
-    .line 2547
     invoke-virtual {v0, p0, v2}, Landroid/hardware/SensorManager;->getDefaultSensor(IZ)Landroid/hardware/Sensor;
 
     move-result-object v1
@@ -310,7 +285,6 @@
 .method public getPowerManager()Landroid/os/PowerManager;
     .locals 1
 
-    .line 2554
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/os/PowerManager;
@@ -327,7 +301,6 @@
 .method public getSensorManager()Landroid/hardware/SensorManager;
     .locals 1
 
-    .line 2558
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/hardware/SensorManager;
@@ -344,7 +317,6 @@
 .method public getTelephonyManager()Landroid/telephony/TelephonyManager;
     .locals 1
 
-    .line 2562
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/telephony/TelephonyManager;
@@ -361,7 +333,6 @@
 .method public isLocationPrefetchEnabled()Z
     .locals 1
 
-    .line 2575
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -380,7 +351,6 @@
 .method public useMotionSensor()Z
     .locals 1
 
-    .line 2580
     iget-object p0, p0, Lcom/android/server/DeviceIdleController$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

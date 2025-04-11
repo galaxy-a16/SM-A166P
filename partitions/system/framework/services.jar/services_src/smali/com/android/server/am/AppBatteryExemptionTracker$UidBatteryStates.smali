@@ -19,7 +19,6 @@
 
     move-object v5, p3
 
-    .line 230
     invoke-direct/range {v0 .. v5}, Lcom/android/server/am/BaseAppStateDurations;-><init>(ILjava/lang/String;ILjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppBatteryExemptionTracker$UidBatteryStates;)V
     .locals 0
 
-    .line 234
     invoke-direct {p0, p1}, Lcom/android/server/am/BaseAppStateDurations;-><init>(Lcom/android/server/am/BaseAppStateDurations;)V
 
     return-void
@@ -41,7 +39,6 @@
 
     if-eqz p2, :cond_1d
 
-    .line 310
     invoke-virtual/range {p2 .. p2}, Ljava/util/LinkedList;->size()I
 
     move-result v0
@@ -53,7 +50,6 @@
     :cond_0
     if-eqz p1, :cond_1c
 
-    .line 313
     invoke-virtual/range {p1 .. p1}, Ljava/util/LinkedList;->size()I
 
     move-result v0
@@ -62,18 +58,15 @@
 
     goto/16 :goto_11
 
-    .line 316
     :cond_1
     invoke-virtual/range {p1 .. p1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 317
     invoke-virtual/range {p2 .. p2}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 318
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -86,17 +79,14 @@
 
     check-cast v3, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
-    .line 319
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
 
-    .line 321
     new-instance v5, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     invoke-direct {v5}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;-><init>()V
 
-    .line 323
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v6
@@ -157,7 +147,6 @@
 
     if-eqz v13, :cond_6
 
-    .line 330
     invoke-virtual {v2}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->getBatteryUsage()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     move-result-object v8
@@ -167,7 +156,6 @@
     :cond_6
     if-eqz v14, :cond_7
 
-    .line 331
     invoke-virtual {v3}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->getBatteryUsage()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     move-result-object v8
@@ -196,7 +184,6 @@
 
     xor-int/lit8 v14, v14, 0x1
 
-    .line 336
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
@@ -220,7 +207,6 @@
 
     move-wide/from16 v7, v20
 
-    .line 337
     :goto_5
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -248,7 +234,6 @@
 
     if-eqz v13, :cond_d
 
-    .line 340
     invoke-virtual {v2}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->getBatteryUsage()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     move-result-object v11
@@ -272,7 +257,6 @@
 
     xor-int/lit8 v13, v13, 0x1
 
-    .line 343
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
@@ -299,7 +283,6 @@
     :cond_10
     if-eqz v14, :cond_11
 
-    .line 346
     invoke-virtual {v3}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->getBatteryUsage()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     move-result-object v11
@@ -323,7 +306,6 @@
 
     xor-int/lit8 v14, v14, 0x1
 
-    .line 349
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v8
@@ -376,7 +358,6 @@
 
     if-eqz v14, :cond_16
 
-    .line 353
     :cond_15
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
@@ -401,7 +382,6 @@
     :goto_d
     if-eq v10, v7, :cond_1b
 
-    .line 357
     invoke-virtual {v2}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->clone()Ljava/lang/Object;
 
     move-result-object v2
@@ -410,19 +390,16 @@
 
     if-eqz v10, :cond_1a
 
-    .line 360
     invoke-virtual {v4}, Ljava/util/LinkedList;->peekLast()Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
-    .line 361
     invoke-virtual {v7}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v10
 
-    .line 362
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v24
@@ -451,10 +428,8 @@
 
     div-double/2addr v10, v0
 
-    .line 366
     invoke-virtual {v5, v10, v11}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->scale(D)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
-    .line 367
     new-instance v0, Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     invoke-direct {v0, v5}, Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;-><init>(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)V
@@ -463,13 +438,11 @@
 
     goto :goto_e
 
-    .line 369
     :cond_19
     sget-object v0, Lcom/android/server/am/AppBatteryTracker;->BATTERY_USAGE_NONE:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     invoke-virtual {v2, v7, v0}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->update(Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;)V
 
-    .line 371
     :goto_e
     sget-object v0, Lcom/android/server/am/AppBatteryTracker;->BATTERY_USAGE_NONE:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
@@ -486,7 +459,6 @@
 
     const-wide/16 v22, 0x0
 
-    .line 374
     :goto_f
     invoke-virtual {v4, v2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -510,7 +482,6 @@
 
     goto/16 :goto_0
 
-    .line 314
     :cond_1c
     :goto_11
     invoke-virtual/range {p2 .. p2}, Ljava/util/LinkedList;->clone()Ljava/lang/Object;
@@ -531,7 +502,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 245
     new-instance v6, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
     const/4 v5, 0x0
@@ -550,7 +520,6 @@
 
     goto :goto_0
 
-    .line 248
     :cond_0
     invoke-virtual {p0, p5}, Lcom/android/server/am/AppBatteryExemptionTracker$UidBatteryStates;->getLastEvent(I)Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
@@ -558,7 +527,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 249
     invoke-virtual {v5}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->isStart()Z
 
     move-result v0
@@ -567,11 +535,9 @@
 
     goto :goto_0
 
-    .line 255
     :cond_1
     new-instance v6, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
-    .line 256
     invoke-virtual {p4}, Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;->mutate()Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     move-result-object v0
@@ -596,7 +562,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;-><init>(ZJLcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;)V
 
-    .line 255
     invoke-virtual {p0, p1, v6, p5}, Lcom/android/server/am/BaseAppStateDurations;->addEvent(ZLcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;I)V
 
     :cond_2
@@ -607,7 +572,6 @@
 .method public getBatteryUsageSince(JJI)Landroid/util/Pair;
     .locals 8
 
-    .line 294
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
@@ -616,7 +580,6 @@
 
     move-object v7, v0
 
-    .line 295
     :goto_0
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
@@ -624,7 +587,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 296
     invoke-static {v1}, Lcom/android/server/am/BaseAppStateTracker;->stateIndexToType(I)I
 
     move-result v0
@@ -633,7 +595,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object v0, v0, v1
@@ -656,7 +617,6 @@
 
     move-wide v5, p3
 
-    .line 300
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/am/AppBatteryExemptionTracker$UidBatteryStates;->getBatteryUsageSince(JJLjava/util/LinkedList;)Landroid/util/Pair;
 
     move-result-object p0
@@ -669,7 +629,6 @@
 
     if-eqz p5, :cond_5
 
-    .line 267
     invoke-virtual {p5}, Ljava/util/LinkedList;->size()I
 
     move-result p0
@@ -678,13 +637,11 @@
 
     goto :goto_2
 
-    .line 270
     :cond_0
     new-instance p0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
     invoke-direct {p0}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;-><init>()V
 
-    .line 272
     invoke-virtual {p5}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object p5
@@ -705,7 +662,6 @@
 
     check-cast v0, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
 
-    .line 274
     invoke-virtual {v0}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v1
@@ -722,7 +678,6 @@
 
     goto :goto_0
 
-    .line 277
     :cond_2
     invoke-virtual {v0}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
@@ -738,7 +693,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->add(Lcom/android/server/am/AppBatteryTracker$BatteryUsage;)Lcom/android/server/am/AppBatteryTracker$BatteryUsage;
 
-    .line 278
     invoke-virtual {v0}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v1
@@ -747,7 +701,6 @@
 
     if-gtz v1, :cond_1
 
-    .line 282
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->unmutate()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
@@ -759,7 +712,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 283
     invoke-virtual {v0}, Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;->getBatteryUsage()Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
     move-result-object p1
@@ -769,7 +721,6 @@
     :cond_4
     sget-object p1, Lcom/android/server/am/AppBatteryTracker;->BATTERY_USAGE_NONE:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 282
     :goto_1
     invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
@@ -777,7 +728,6 @@
 
     return-object p0
 
-    .line 268
     :cond_5
     :goto_2
     sget-object p0, Lcom/android/server/am/AppBatteryTracker;->BATTERY_USAGE_NONE:Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
@@ -792,7 +742,6 @@
 .method public getLastEvent(I)Lcom/android/server/am/AppBatteryExemptionTracker$UidStateEventWithBattery;
     .locals 0
 
-    .line 262
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object p0, p0, p1

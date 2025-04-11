@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/job/JobSchedulerService;
@@ -27,7 +26,6 @@
 .method public final getCategory(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/job/JobSchedulerService;->$r8$lambda$95k5ieYKaRr8XC3GW_a_cl9oQyE(Lcom/android/server/job/JobSchedulerService;ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;

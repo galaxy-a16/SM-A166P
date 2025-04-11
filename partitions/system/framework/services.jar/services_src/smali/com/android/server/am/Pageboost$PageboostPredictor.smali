@@ -11,17 +11,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .line 1113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1115
     new-instance p0, Lcom/android/server/am/Pageboost$LRUPolicy;
 
     invoke-direct {p0}, Lcom/android/server/am/Pageboost$LRUPolicy;-><init>()V
@@ -34,14 +31,12 @@
 .method public static haltPredict()V
     .locals 2
 
-    .line 1159
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetPAGEBOOST_ACTIVE_LAUNCH_ENABLED()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1160
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetsHandler()Lcom/android/server/am/Pageboost$PageboostHandler;
 
     move-result-object v0
@@ -50,7 +45,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1164
     :cond_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetsHandler()Lcom/android/server/am/Pageboost$PageboostHandler;
 
@@ -64,7 +58,6 @@
 
     const/4 v1, 0x0
 
-    .line 1166
     invoke-static {v0, v1}, Lcom/android/server/am/Pageboost$PageboostdProxy;->executeCmd(ILjava/lang/String;)V
 
     return-void
@@ -81,7 +74,6 @@
 
     return p0
 
-    .line 1151
     :cond_0
     sget-object p0, Lcom/android/server/am/Pageboost$PageboostPredictor;->mAppSelection:Lcom/android/server/am/Pageboost$PageboostAppSelectionPolicy;
 
@@ -95,7 +87,6 @@
 .method public finalizePredict()V
     .locals 0
 
-    .line 1155
     sget-object p0, Lcom/android/server/am/Pageboost$PageboostPredictor;->mAppSelection:Lcom/android/server/am/Pageboost$PageboostAppSelectionPolicy;
 
     invoke-virtual {p0}, Lcom/android/server/am/Pageboost$PageboostAppSelectionPolicy;->finalizePredict()V
@@ -106,7 +97,6 @@
 .method public predict(Lcom/android/server/am/Pageboost$PageboostAppList;)V
     .locals 5
 
-    .line 1123
     sget-object p0, Lcom/android/server/am/Pageboost$PageboostPredictor;->mAppSelection:Lcom/android/server/am/Pageboost$PageboostAppSelectionPolicy;
 
     const/4 v0, 0x1
@@ -117,12 +107,10 @@
 
     const-string p1, ""
 
-    .line 1127
     iget-object v0, p0, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 1128
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/am/Pageboost$PageboostAppList;->iterator()Ljava/util/Iterator;
 
@@ -146,14 +134,12 @@
 
     check-cast v3, Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
-    .line 1129
     invoke-virtual {v3}, Lcom/android/server/am/Pageboost$PageboostAppInfo;->execute()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 1130
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +158,6 @@
 
     move-result-object p1
 
-    .line 1132
     :cond_1
     invoke-virtual {v3}, Lcom/android/server/am/Pageboost$PageboostAppInfo;->getMemUsage()Lcom/android/server/am/Pageboost$MemUsage;
 
@@ -190,7 +175,6 @@
 
     goto :goto_0
 
-    .line 1138
     :cond_2
     monitor-exit v0
     :try_end_0
@@ -198,10 +182,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 1141
     invoke-static {v1}, Lcom/android/server/am/Pageboost$MemReclaimer;->reclaimMem(Lcom/android/server/am/Pageboost$PageboostAppInfo;)Z
 
-    .line 1144
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -240,7 +222,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1138
     :try_start_1
     monitor-exit v0
     :try_end_1

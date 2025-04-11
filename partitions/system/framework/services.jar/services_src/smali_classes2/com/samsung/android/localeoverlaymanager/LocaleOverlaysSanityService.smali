@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 9
     const-class v0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlaysSanityService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -26,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 8
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
     return-void
@@ -37,14 +35,12 @@
 .method public onStartJob(Landroid/app/job/JobParameters;)Z
     .locals 5
 
-    .line 13
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlaysSanityService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onStartJob called: Calling ResourceOverlayService"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     invoke-virtual {p0}, Landroid/app/job/JobService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -55,7 +51,6 @@
 
     const/4 v1, 0x0
 
-    .line 16
     :try_start_0
     invoke-interface {v0, v1}, Lcom/samsung/android/localeoverlaymanager/ILocaleOverlayManager;->checkSanityOfOverlays(I)V
     :try_end_0
@@ -66,7 +61,6 @@
     :catch_0
     move-exception v0
 
-    .line 18
     sget-object v2, Lcom/samsung/android/localeoverlaymanager/LocaleOverlaysSanityService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -88,7 +82,6 @@
     :goto_0
     if-nez p1, :cond_0
 
-    .line 21
     sget-object p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlaysSanityService;->TAG:Ljava/lang/String;
 
     const-string p1, "JobParameters are null"
@@ -97,7 +90,6 @@
 
     goto :goto_1
 
-    .line 23
     :cond_0
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlaysSanityService;->TAG:Ljava/lang/String;
 
@@ -107,7 +99,6 @@
 
     const/4 v0, 0x1
 
-    .line 24
     invoke-virtual {p0, p1, v0}, Landroid/app/job/JobService;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
     :goto_1
@@ -117,7 +108,6 @@
 .method public onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 2
 
-    .line 31
     sget-object p0, Lcom/samsung/android/localeoverlaymanager/LocaleOverlaysSanityService;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;

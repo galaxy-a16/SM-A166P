@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLiveEntries(Lcom/android/server/inputmethod/ImeTrackerService$History;)Ljava/util/WeakHashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mLiveEntries:Ljava/util/WeakHashMap;
 
     return-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$maddEntry(Lcom/android/server/inputmethod/ImeTrackerService$History;Landroid/os/IBinder;Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/inputmethod/ImeTrackerService$History;->addEntry(Landroid/os/IBinder;Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$mdump(Lcom/android/server/inputmethod/ImeTrackerService$History;Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/inputmethod/ImeTrackerService$History;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$mgetEntry(Lcom/android/server/inputmethod/ImeTrackerService$History;Landroid/os/IBinder;)Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/inputmethod/ImeTrackerService$History;->getEntry(Landroid/os/IBinder;)Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;
 
     move-result-object p0
@@ -55,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$msetFinished(Lcom/android/server/inputmethod/ImeTrackerService$History;Landroid/view/inputmethod/ImeTracker$Token;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/inputmethod/ImeTrackerService$History;->setFinished(Landroid/view/inputmethod/ImeTracker$Token;II)V
 
     return-void
@@ -64,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsSequenceNumber()Ljava/util/concurrent/atomic/AtomicInteger;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/inputmethod/ImeTrackerService$History;->sSequenceNumber:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-object v0
@@ -73,7 +67,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 187
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -88,10 +81,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 173
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 179
     new-instance v0, Ljava/util/ArrayDeque;
 
     const/16 v1, 0x64
@@ -100,7 +91,6 @@
 
     iput-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mEntries:Ljava/util/ArrayDeque;
 
-    .line 183
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
@@ -113,7 +103,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/inputmethod/ImeTrackerService$History-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/inputmethod/ImeTrackerService$History;-><init>()V
 
     return-void
@@ -124,7 +113,6 @@
 .method public final addEntry(Landroid/os/IBinder;Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;)V
     .locals 0
 
-    .line 192
     iget-object p0, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mLiveEntries:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -137,14 +125,12 @@
 
     const-string/jumbo v0, "yyyy-MM-dd HH:mm:ss.SSS"
 
-    .line 258
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {v0, v1}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;Ljava/util/Locale;)Ljava/time/format/DateTimeFormatter;
 
     move-result-object v0
 
-    .line 259
     invoke-static {}, Ljava/time/ZoneId;->systemDefault()Ljava/time/ZoneId;
 
     move-result-object v1
@@ -153,10 +139,8 @@
 
     move-result-object v0
 
-    .line 261
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 262
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,7 +151,6 @@
 
     iget-object v2, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mLiveEntries:Ljava/util/WeakHashMap;
 
-    .line 263
     invoke-virtual {v2}, Ljava/util/WeakHashMap;->size()I
 
     move-result v2
@@ -182,10 +165,8 @@
 
     move-result-object v1
 
-    .line 262
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 265
     iget-object v1, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mLiveEntries:Ljava/util/WeakHashMap;
 
     invoke-virtual {v1}, Ljava/util/WeakHashMap;->values()Ljava/util/Collection;
@@ -209,16 +190,13 @@
 
     check-cast v3, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;
 
-    .line 266
     invoke-virtual {p0, v3, p1, p2, v0}, Lcom/android/server/inputmethod/ImeTrackerService$History;->dumpEntry(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;Ljava/io/PrintWriter;Ljava/lang/String;Ljava/time/format/DateTimeFormatter;)V
 
     goto :goto_0
 
-    .line 269
     :cond_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 270
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -229,7 +207,6 @@
 
     iget-object v3, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mEntries:Ljava/util/ArrayDeque;
 
-    .line 271
     invoke-virtual {v3}, Ljava/util/ArrayDeque;->size()I
 
     move-result v3
@@ -242,10 +219,8 @@
 
     move-result-object v1
 
-    .line 270
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 273
     iget-object v1, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mEntries:Ljava/util/ArrayDeque;
 
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
@@ -265,7 +240,6 @@
 
     check-cast v2, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;
 
-    .line 274
     invoke-virtual {p0, v2, p1, p2, v0}, Lcom/android/server/inputmethod/ImeTrackerService$History;->dumpEntry(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;Ljava/io/PrintWriter;Ljava/lang/String;Ljava/time/format/DateTimeFormatter;)V
 
     goto :goto_1
@@ -277,10 +251,8 @@
 .method public final dumpEntry(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;Ljava/io/PrintWriter;Ljava/lang/String;Ljava/time/format/DateTimeFormatter;)V
     .locals 3
 
-    .line 281
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 282
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -301,7 +273,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 283
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -326,7 +297,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 284
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,7 +321,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 285
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -370,7 +339,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 286
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -395,10 +363,8 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 288
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 289
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -427,7 +393,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 290
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -450,10 +415,8 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 292
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 293
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -478,7 +441,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 294
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -501,10 +463,8 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 296
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 297
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -531,7 +491,6 @@
 .method public final getEntry(Landroid/os/IBinder;)Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;
     .locals 0
 
-    .line 199
     iget-object p0, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mLiveEntries:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -546,7 +505,6 @@
 .method public final setFinished(Landroid/view/inputmethod/ImeTracker$Token;II)V
     .locals 10
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mLiveEntries:Ljava/util/WeakHashMap;
 
     invoke-virtual {p1}, Landroid/view/inputmethod/ImeTracker$Token;->getBinder()Landroid/os/IBinder;
@@ -569,7 +527,6 @@
 
     if-eq p2, v3, :cond_0
 
-    .line 220
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -584,7 +541,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 222
     invoke-static {p3}, Landroid/view/inputmethod/ImeTracker$Debug;->phaseToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -593,7 +549,6 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 223
     invoke-static {p2}, Landroid/view/inputmethod/ImeTracker$Debug;->statusToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -604,13 +559,11 @@
 
     move-result-object p0
 
-    .line 220
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     return-void
 
-    .line 228
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -624,18 +577,15 @@
 
     invoke-static {v0, v4, v5}, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;->-$$Nest$fputmDuration(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;J)V
 
-    .line 229
     invoke-static {v0, p2}, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;->-$$Nest$fputmStatus(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;I)V
 
     if-eqz p3, :cond_2
 
-    .line 232
     invoke-static {v0, p3}, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;->-$$Nest$fputmPhase(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;I)V
 
     :cond_2
     if-ne p2, v3, :cond_3
 
-    .line 237
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -654,7 +604,6 @@
 
     move-result p1
 
-    .line 238
     invoke-static {p1}, Landroid/view/inputmethod/ImeTracker$Debug;->phaseToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -663,7 +612,6 @@
 
     invoke-virtual {p3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 239
     invoke-static {p2}, Landroid/view/inputmethod/ImeTracker$Debug;->statusToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -674,10 +622,8 @@
 
     move-result-object p1
 
-    .line 237
     invoke-static {v2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mEntries:Ljava/util/ArrayDeque;
@@ -690,14 +636,12 @@
 
     if-lt p1, p2, :cond_4
 
-    .line 244
     iget-object p1, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mEntries:Ljava/util/ArrayDeque;
 
     invoke-virtual {p1}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 247
     :cond_4
     iget-object p0, p0, Lcom/android/server/inputmethod/ImeTrackerService$History;->mEntries:Ljava/util/ArrayDeque;
 
@@ -705,7 +649,6 @@
 
     const/16 v1, 0x245
 
-    .line 250
     invoke-static {v0}, Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;->-$$Nest$fgetmUid(Lcom/android/server/inputmethod/ImeTrackerService$History$Entry;)I
 
     move-result v2

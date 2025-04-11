@@ -21,17 +21,14 @@
 
     sput-object v0, Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations$ReflectThrowable;->INSTANCE:Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations$ReflectThrowable;
 
-    .line 21
     const-class v0, Ljava/lang/Throwable;
 
-    .line 23
     invoke-virtual {v0}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v1
 
     const-string/jumbo v2, "throwableMethods"
 
-    .line 24
     invoke-static {v1, v2}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     array-length v2, v1
@@ -47,7 +44,6 @@
 
     aget-object v6, v1, v4
 
-    .line 25
     invoke-virtual {v6}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v7
@@ -98,11 +94,9 @@
     :cond_2
     move-object v6, v5
 
-    .line 24
     :goto_2
     sput-object v6, Lcom/android/server/permission/jarjar/kotlin/internal/PlatformImplementations$ReflectThrowable;->addSuppressed:Ljava/lang/reflect/Method;
 
-    .line 27
     array-length v0, v1
 
     :goto_3

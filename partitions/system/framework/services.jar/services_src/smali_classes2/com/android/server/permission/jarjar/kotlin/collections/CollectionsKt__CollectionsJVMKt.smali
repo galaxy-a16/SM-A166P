@@ -7,7 +7,6 @@
 .method public static final listOf(Ljava/lang/Object;)Ljava/util/List;
     .locals 1
 
-    .line 20
     invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0

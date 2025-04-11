@@ -17,7 +17,6 @@
 .method public getElapsedRealtime()J
     .locals 2
 
-    .line 76
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -28,7 +27,6 @@
 .method public isAlarmManagerReady()Z
     .locals 0
 
-    .line 80
     const-class p0, Lcom/android/server/SystemServiceManager;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;

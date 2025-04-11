@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 89
     new-instance v0, Lcom/android/server/wm/BoundsCompatUtils;
 
     const/4 v1, 0x0

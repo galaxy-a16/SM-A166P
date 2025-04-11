@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)V
     .locals 0
 
-    .line 179
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$5;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onCoverTestModeChanged(IZ)V
     .locals 8
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$5;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->-$$Nest$fgetmSystemReady(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)Z
@@ -40,7 +38,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 185
     new-instance p1, Lcom/samsung/android/cover/CoverState;
 
     const/4 v2, 0x1
@@ -59,14 +56,12 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/samsung/android/cover/CoverState;-><init>(ZIIIIZ)V
 
-    .line 187
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$5;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {p0, p2, p1}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->-$$Nest$mnotifySmartCoverAttachStateChangedInternal(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;ZLcom/samsung/android/cover/CoverState;)V
 
     goto :goto_0
 
-    .line 189
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$5;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 

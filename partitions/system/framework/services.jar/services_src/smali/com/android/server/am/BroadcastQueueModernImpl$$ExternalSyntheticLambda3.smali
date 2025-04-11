@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/util/Pair;
 
     invoke-static {p1}, Lcom/android/server/am/BroadcastQueueModernImpl;->$r8$lambda$14R2t6CNhaw4TXUXx092krgDYT4(Landroid/util/Pair;)Z

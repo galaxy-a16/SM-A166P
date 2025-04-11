@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;
 
     invoke-static {p0}, Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;->$r8$lambda$qeFwYOuzKjCxrNNLpqTN5zuy85I(Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;)V

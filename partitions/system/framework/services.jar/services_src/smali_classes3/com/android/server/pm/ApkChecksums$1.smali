@@ -20,7 +20,6 @@
 .method public create(I)Ljava/nio/ByteBuffer;
     .locals 0
 
-    .line 582
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p0

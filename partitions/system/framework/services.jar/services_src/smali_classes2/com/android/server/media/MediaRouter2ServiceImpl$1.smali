@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$r-22U2E8-1kfyvlLX-kEx9VyYyI(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->-$$Nest$mupdateDiscoveryPreferenceOnHandler(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRouter2ServiceImpl;)V
     .locals 0
 
-    .line 145
     iput-object p1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$1;->this$0:Lcom/android/server/media/MediaRouter2ServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -33,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 148
     iget-object p1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$1;->this$0:Lcom/android/server/media/MediaRouter2ServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->-$$Nest$fgetmLock(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
@@ -42,7 +39,6 @@
 
     monitor-enter p1
 
-    .line 149
     :try_start_0
     iget-object p2, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$1;->this$0:Lcom/android/server/media/MediaRouter2ServiceImpl;
 
@@ -59,7 +55,6 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
-    .line 151
     iget-object v1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$1;->this$0:Lcom/android/server/media/MediaRouter2ServiceImpl;
 
     invoke-static {v1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->-$$Nest$fgetmUserRecords(Lcom/android/server/media/MediaRouter2ServiceImpl;)Landroid/util/SparseArray;
@@ -74,7 +69,6 @@
 
     iget-object v1, v1, Lcom/android/server/media/MediaRouter2ServiceImpl$UserRecord;->mHandler:Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;
 
-    .line 152
     new-instance v2, Lcom/android/server/media/MediaRouter2ServiceImpl$1$$ExternalSyntheticLambda0;
 
     invoke-direct {v2}, Lcom/android/server/media/MediaRouter2ServiceImpl$1$$ExternalSyntheticLambda0;-><init>()V
@@ -89,7 +83,6 @@
 
     goto :goto_0
 
-    .line 155
     :cond_0
     monitor-exit p1
 

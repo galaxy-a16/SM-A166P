@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;)V
     .locals 0
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/pm/local/PackageManagerLocalImpl;->mService:Lcom/android/server/pm/PackageManagerService;
 
     return-void
@@ -30,7 +28,6 @@
 
     move-object v0, p0
 
-    .line 51
     iget-object v0, v0, Lcom/android/server/pm/local/PackageManagerLocalImpl;->mService:Lcom/android/server/pm/PackageManagerService;
 
     move-object v1, p1
@@ -57,7 +54,6 @@
 .method public bridge synthetic withFilteredSnapshot()Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;
     .locals 0
 
-    .line 39
     invoke-virtual {p0}, Lcom/android/server/pm/local/PackageManagerLocalImpl;->withFilteredSnapshot()Lcom/android/server/pm/local/PackageManagerLocalImpl$FilteredSnapshotImpl;
 
     move-result-object p0
@@ -68,7 +64,6 @@
 .method public bridge synthetic withFilteredSnapshot(ILandroid/os/UserHandle;)Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;
     .locals 0
 
-    .line 39
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/local/PackageManagerLocalImpl;->withFilteredSnapshot(ILandroid/os/UserHandle;)Lcom/android/server/pm/local/PackageManagerLocalImpl$FilteredSnapshotImpl;
 
     move-result-object p0
@@ -79,7 +74,6 @@
 .method public withFilteredSnapshot()Lcom/android/server/pm/local/PackageManagerLocalImpl$FilteredSnapshotImpl;
     .locals 2
 
-    .line 64
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -98,14 +92,12 @@
 .method public withFilteredSnapshot(ILandroid/os/UserHandle;)Lcom/android/server/pm/local/PackageManagerLocalImpl$FilteredSnapshotImpl;
     .locals 7
 
-    .line 70
     new-instance v6, Lcom/android/server/pm/local/PackageManagerLocalImpl$FilteredSnapshotImpl;
 
     iget-object p0, p0, Lcom/android/server/pm/local/PackageManagerLocalImpl;->mService:Lcom/android/server/pm/PackageManagerService;
 
     const/4 v0, 0x0
 
-    .line 71
     invoke-virtual {p0, v0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer(Z)Lcom/android/server/pm/Computer;
 
     move-result-object v3
@@ -128,7 +120,6 @@
 .method public bridge synthetic withUnfilteredSnapshot()Lcom/android/server/pm/PackageManagerLocal$UnfilteredSnapshot;
     .locals 0
 
-    .line 39
     invoke-virtual {p0}, Lcom/android/server/pm/local/PackageManagerLocalImpl;->withUnfilteredSnapshot()Lcom/android/server/pm/local/PackageManagerLocalImpl$UnfilteredSnapshotImpl;
 
     move-result-object p0
@@ -139,7 +130,6 @@
 .method public withUnfilteredSnapshot()Lcom/android/server/pm/local/PackageManagerLocalImpl$UnfilteredSnapshotImpl;
     .locals 2
 
-    .line 58
     new-instance v0, Lcom/android/server/pm/local/PackageManagerLocalImpl$UnfilteredSnapshotImpl;
 
     iget-object p0, p0, Lcom/android/server/pm/local/PackageManagerLocalImpl;->mService:Lcom/android/server/pm/PackageManagerService;

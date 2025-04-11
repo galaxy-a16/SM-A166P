@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/am/mars/database/MARsComponentTracker;Ljava/lang/String;I)V
     .locals 0
 
-    .line 153
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsComponentTracker$MARsCTThread;->this$0:Lcom/android/server/am/mars/database/MARsComponentTracker;
 
-    .line 154
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 155
     iput p3, p0, Lcom/android/server/am/mars/database/MARsComponentTracker$MARsCTThread;->mPriority:I
 
     return-void
@@ -30,15 +27,12 @@
 .method public run()V
     .locals 2
 
-    .line 160
     iget v0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker$MARsCTThread;->mPriority:I
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 161
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 162
     iget-object v0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker$MARsCTThread;->this$0:Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     new-instance v1, Lcom/android/server/am/mars/database/MARsComponentTracker$CTHandler;
@@ -49,7 +43,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/am/mars/database/MARsComponentTracker;->-$$Nest$fputmCTHandler(Lcom/android/server/am/mars/database/MARsComponentTracker;Lcom/android/server/am/mars/database/MARsComponentTracker$CTHandler;)V
 
-    .line 163
     invoke-static {}, Landroid/os/Looper;->loop()V
 
     return-void

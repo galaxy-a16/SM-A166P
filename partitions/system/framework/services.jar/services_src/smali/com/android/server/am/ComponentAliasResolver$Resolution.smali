@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 377
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 378
     iput-object p1, p0, Lcom/android/server/am/ComponentAliasResolver$Resolution;->source:Ljava/lang/Object;
 
-    .line 379
     iput-object p2, p0, Lcom/android/server/am/ComponentAliasResolver$Resolution;->resolved:Ljava/lang/Object;
 
     return-void
@@ -30,7 +27,6 @@
 .method public getAlias()Ljava/lang/Object;
     .locals 1
 
-    .line 389
     invoke-virtual {p0}, Lcom/android/server/am/ComponentAliasResolver$Resolution;->isAlias()Z
 
     move-result v0
@@ -51,7 +47,6 @@
 .method public getTarget()Ljava/lang/Object;
     .locals 1
 
-    .line 394
     invoke-virtual {p0}, Lcom/android/server/am/ComponentAliasResolver$Resolution;->isAlias()Z
 
     move-result v0
@@ -72,7 +67,6 @@
 .method public isAlias()Z
     .locals 0
 
-    .line 384
     iget-object p0, p0, Lcom/android/server/am/ComponentAliasResolver$Resolution;->resolved:Ljava/lang/Object;
 
     if-eqz p0, :cond_0

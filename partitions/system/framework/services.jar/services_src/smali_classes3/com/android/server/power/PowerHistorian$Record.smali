@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 170
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM-dd HH:mm:ss.SSS"
@@ -30,10 +29,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 175
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 176
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -48,7 +45,6 @@
 .method public getRecordedTimeMillis()J
     .locals 2
 
-    .line 180
     iget-wide v0, p0, Lcom/android/server/power/PowerHistorian$Record;->mRecordedTimeMillis:J
 
     return-wide v0
@@ -57,7 +53,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 185
     sget-object v0, Lcom/android/server/power/PowerHistorian$Record;->sDumpDateFormat:Ljava/text/SimpleDateFormat;
 
     new-instance v1, Ljava/util/Date;

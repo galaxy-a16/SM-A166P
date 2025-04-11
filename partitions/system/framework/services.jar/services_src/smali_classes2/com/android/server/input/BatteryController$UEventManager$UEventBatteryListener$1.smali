@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/input/BatteryController$UEventManager$UEventBatteryListener;)V
     .locals 0
 
-    .line 907
     iput-object p1, p0, Lcom/android/server/input/BatteryController$UEventManager$UEventBatteryListener$1;->this$0:Lcom/android/server/input/BatteryController$UEventManager$UEventBatteryListener;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -24,19 +23,16 @@
 .method public onUEvent(Landroid/os/UEventObserver$UEvent;)V
     .locals 5
 
-    .line 910
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 911
     invoke-static {}, Lcom/android/server/input/BatteryController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 912
     invoke-static {}, Lcom/android/server/input/BatteryController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -66,7 +62,6 @@
     :cond_0
     const-string v2, "ACTION"
 
-    .line 916
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -81,7 +76,6 @@
 
     const-string v2, "SUBSYSTEM"
 
-    .line 917
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -96,7 +90,6 @@
 
     goto :goto_0
 
-    .line 921
     :cond_1
     iget-object p0, p0, Lcom/android/server/input/BatteryController$UEventManager$UEventBatteryListener$1;->this$0:Lcom/android/server/input/BatteryController$UEventManager$UEventBatteryListener;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(D)V
     .locals 0
 
-    .line 1127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/ibm/icu/impl/CalendarAstronomer$MoonAge;->value:D

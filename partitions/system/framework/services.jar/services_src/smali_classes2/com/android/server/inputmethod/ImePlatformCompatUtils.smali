@@ -11,17 +11,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string/jumbo v0, "platform_compat"
 
-    .line 34
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 33
     invoke-static {v0}, Lcom/android/internal/compat/IPlatformCompat$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/compat/IPlatformCompat;
 
     move-result-object v0
@@ -36,7 +33,6 @@
 .method public final isChangeEnabledByUid(JI)Z
     .locals 0
 
-    .line 59
     :try_start_0
     iget-object p0, p0, Lcom/android/server/inputmethod/ImePlatformCompatUtils;->mPlatformCompat:Lcom/android/internal/compat/IPlatformCompat;
 
@@ -60,7 +56,6 @@
 
     const-wide/32 v0, 0xcc1a029
 
-    .line 53
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/inputmethod/ImePlatformCompatUtils;->isChangeEnabledByUid(JI)Z
 
     move-result p0
@@ -73,7 +68,6 @@
 
     const-wide/32 v0, 0x94fa793
 
-    .line 43
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/inputmethod/ImePlatformCompatUtils;->isChangeEnabledByUid(JI)Z
 
     move-result p0

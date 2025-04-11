@@ -18,17 +18,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/om/wallpapertheme/SemWallpaperThemeManager;)V
     .locals 0
 
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-object p1, p0, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeOverlayPolicy;->mWallpaperThemeManager:Lcom/android/server/om/wallpapertheme/SemWallpaperThemeManager;
 
     return-void
@@ -41,7 +38,6 @@
 
     const-string p0, "/data/resource-cache/android-SemWT_G_MonetPalette"
 
-    .line 67
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -54,7 +50,6 @@
 
     const-string p0, "/data/resource-cache/android-SemWT"
 
-    .line 63
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -65,7 +60,6 @@
 .method public retainOverlay(Ljava/lang/String;Landroid/content/pm/overlay/OverlayPaths;Ljava/lang/String;I)Z
     .locals 3
 
-    .line 23
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeOverlayPolicy;->isSemWallpaperThemeOverlay(Ljava/lang/String;)Z
 
     move-result p4
@@ -76,7 +70,6 @@
 
     return v0
 
-    .line 31
     :cond_0
     sget-object p4, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeOverlayPolicy;->TAG:Ljava/lang/String;
 
@@ -110,7 +103,6 @@
 
     const-string p2, "android"
 
-    .line 33
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -119,7 +111,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 35
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeOverlayPolicy;->isGoogleWallpaperThemeOverlay(Ljava/lang/String;)Z
 
     move-result p0
@@ -128,7 +119,6 @@
 
     return p4
 
-    .line 38
     :cond_1
     sget-object p2, Landroid/content/om/WallpaperThemeConstants;->colorThemingDisableList:Ljava/util/ArrayList;
 
@@ -140,7 +130,6 @@
 
     return p4
 
-    .line 42
     :cond_2
     iget-object p2, p0, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeOverlayPolicy;->mWallpaperThemeManager:Lcom/android/server/om/wallpapertheme/SemWallpaperThemeManager;
 
@@ -152,7 +141,6 @@
 
     return v0
 
-    .line 47
     :cond_3
     invoke-virtual {p2, p3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -160,7 +148,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 49
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeOverlayPolicy;->isGoogleWallpaperThemeOverlay(Ljava/lang/String;)Z
 
     move-result p0
@@ -169,7 +156,6 @@
 
     return p4
 
-    .line 54
     :cond_4
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/SemWallpaperThemeOverlayPolicy;->isGoogleWallpaperThemeOverlay(Ljava/lang/String;)Z
 

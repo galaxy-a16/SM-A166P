@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;)V
     .locals 0
 
-    .line 11826
     iput-object p1, p0, Lcom/android/server/audio/AudioService$MyHdmiCecVolumeControlFeatureListener;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/audio/AudioService;Lcom/android/server/audio/AudioService$MyHdmiCecVolumeControlFeatureListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/audio/AudioService$MyHdmiCecVolumeControlFeatureListener;-><init>(Lcom/android/server/audio/AudioService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onHdmiCecVolumeControlFeature(I)V
     .locals 2
 
-    .line 11830
     iget-object v0, p0, Lcom/android/server/audio/AudioService$MyHdmiCecVolumeControlFeatureListener;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {v0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmHdmiClientLock(Lcom/android/server/audio/AudioService;)Ljava/lang/Object;
@@ -45,7 +42,6 @@
 
     monitor-enter v0
 
-    .line 11831
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/AudioService$MyHdmiCecVolumeControlFeatureListener;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -59,7 +55,6 @@
 
     return-void
 
-    .line 11832
     :cond_0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$MyHdmiCecVolumeControlFeatureListener;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -75,7 +70,6 @@
     :goto_0
     invoke-static {p0, v1}, Lcom/android/server/audio/AudioService;->-$$Nest$fputmHdmiCecVolumeControlEnabled(Lcom/android/server/audio/AudioService;Z)V
 
-    .line 11834
     monitor-exit v0
 
     return-void

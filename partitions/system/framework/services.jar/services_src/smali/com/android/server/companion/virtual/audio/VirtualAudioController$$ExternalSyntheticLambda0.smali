@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/companion/virtual/audio/VirtualAudioController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/companion/virtual/audio/VirtualAudioController$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/companion/virtual/audio/VirtualAudioController;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/companion/virtual/audio/VirtualAudioController$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/companion/virtual/audio/VirtualAudioController;
 
     invoke-static {p0}, Lcom/android/server/companion/virtual/audio/VirtualAudioController;->$r8$lambda$AFDqFk8em5ctEplA3zv-JO4DQGw(Lcom/android/server/companion/virtual/audio/VirtualAudioController;)V

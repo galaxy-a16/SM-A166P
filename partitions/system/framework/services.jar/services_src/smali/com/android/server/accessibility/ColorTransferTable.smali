@@ -25,42 +25,36 @@
 
     new-array v1, v0, [D
 
-    .line 78
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/android/server/accessibility/ColorTransferTable;->Protan_severity:[D
 
     new-array v1, v0, [D
 
-    .line 79
     fill-array-data v1, :array_1
 
     sput-object v1, Lcom/android/server/accessibility/ColorTransferTable;->Protan_userParameter:[D
 
     new-array v1, v0, [D
 
-    .line 81
     fill-array-data v1, :array_2
 
     sput-object v1, Lcom/android/server/accessibility/ColorTransferTable;->Deutan_severity:[D
 
     new-array v1, v0, [D
 
-    .line 82
     fill-array-data v1, :array_3
 
     sput-object v1, Lcom/android/server/accessibility/ColorTransferTable;->Deutan_userParameter:[D
 
     new-array v1, v0, [D
 
-    .line 85
     fill-array-data v1, :array_4
 
     sput-object v1, Lcom/android/server/accessibility/ColorTransferTable;->Tritan_severity:[D
 
     new-array v0, v0, [D
 
-    .line 86
     fill-array-data v0, :array_5
 
     sput-object v0, Lcom/android/server/accessibility/ColorTransferTable;->Tritan_userParameter:[D
@@ -247,7 +241,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -282,7 +275,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 121
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_RR_DMC(IDD)[I
 
     move-result-object v0
@@ -300,7 +292,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 124
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_RG_DMC(IDD)[I
 
     move-result-object v0
@@ -318,7 +309,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 127
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_RB_DMC(IDD)[I
 
     move-result-object v0
@@ -340,7 +330,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 133
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_YR_DMC(IDD)[I
 
     move-result-object v0
@@ -358,7 +347,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 136
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_YG_DMC(IDD)[I
 
     move-result-object v0
@@ -376,7 +364,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 139
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_YB_DMC(IDD)[I
 
     move-result-object v0
@@ -396,7 +383,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 145
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_GR_DMC(IDD)[I
 
     move-result-object v0
@@ -414,7 +400,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 148
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_GG_DMC(IDD)[I
 
     move-result-object v0
@@ -432,7 +417,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 151
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_GB_DMC(IDD)[I
 
     move-result-object v0
@@ -454,7 +438,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 157
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_CR_DMC(IDD)[I
 
     move-result-object v0
@@ -472,7 +455,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 160
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_CG_DMC(IDD)[I
 
     move-result-object v0
@@ -490,7 +472,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 163
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_CB_DMC(IDD)[I
 
     move-result-object v0
@@ -510,7 +491,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 169
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_BR_DMC(IDD)[I
 
     move-result-object v0
@@ -528,7 +508,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 172
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_BG_DMC(IDD)[I
 
     move-result-object v0
@@ -546,7 +525,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 175
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_BB_DMC(IDD)[I
 
     move-result-object v0
@@ -568,7 +546,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 181
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_MR_DMC(IDD)[I
 
     move-result-object v0
@@ -586,7 +563,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 184
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_MG_DMC(IDD)[I
 
     move-result-object v0
@@ -604,7 +580,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 187
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_MB_DMC(IDD)[I
 
     move-result-object v0
@@ -616,7 +591,6 @@
 
     goto :goto_0
 
-    .line 194
     :cond_12
     filled-new-array {v2, v2}, [I
 
@@ -627,7 +601,6 @@
 
     const/4 v1, 0x0
 
-    .line 198
     aget v1, v0, v1
 
     if-ne v1, v2, :cond_13
@@ -638,7 +611,6 @@
 
     goto :goto_1
 
-    .line 203
     :cond_13
     aget v2, v0, v5
 
@@ -648,7 +620,6 @@
 
     move-wide/from16 v3, p6
 
-    .line 206
     invoke-virtual {p0, v3, v4}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result v2
@@ -663,7 +634,6 @@
 
     mul-double/2addr v3, v1
 
-    .line 210
     aget v0, v0, v5
 
     int-to-double v0, v0
@@ -706,7 +676,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3351
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_RR_Hybrid(IDD)[I
 
     move-result-object v0
@@ -724,7 +693,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3354
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_RG_Hybrid(IDD)[I
 
     move-result-object v0
@@ -742,7 +710,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3357
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_RB_Hybrid(IDD)[I
 
     move-result-object v0
@@ -764,7 +731,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3363
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_YR_Hybrid(IDD)[I
 
     move-result-object v0
@@ -782,7 +748,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3366
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_YG_Hybrid(IDD)[I
 
     move-result-object v0
@@ -800,7 +765,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3369
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_YB_Hybrid(IDD)[I
 
     move-result-object v0
@@ -820,7 +784,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3375
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_GR_Hybrid(IDD)[I
 
     move-result-object v0
@@ -838,7 +801,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3378
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_GG_Hybrid(IDD)[I
 
     move-result-object v0
@@ -856,7 +818,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3381
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_GB_Hybrid(IDD)[I
 
     move-result-object v0
@@ -878,7 +839,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3387
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_CR_Hybrid(IDD)[I
 
     move-result-object v0
@@ -896,7 +856,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3390
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_CG_Hybrid(IDD)[I
 
     move-result-object v0
@@ -914,7 +873,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3393
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_CB_Hybrid(IDD)[I
 
     move-result-object v0
@@ -934,7 +892,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3399
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_BR_Hybrid(IDD)[I
 
     move-result-object v0
@@ -952,7 +909,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3402
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_BG_Hybrid(IDD)[I
 
     move-result-object v0
@@ -970,7 +926,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3405
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_BB_Hybrid(IDD)[I
 
     move-result-object v0
@@ -992,7 +947,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3411
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_MR_Hybrid(IDD)[I
 
     move-result-object v0
@@ -1010,7 +964,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3414
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_MG_Hybrid(IDD)[I
 
     move-result-object v0
@@ -1028,7 +981,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 3417
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/accessibility/ColorTransferTable;->getMaxMinColorTrnasferValue_MB_Hybrid(IDD)[I
 
     move-result-object v0
@@ -1040,7 +992,6 @@
 
     goto :goto_0
 
-    .line 3424
     :cond_12
     filled-new-array {v2, v2}, [I
 
@@ -1051,7 +1002,6 @@
 
     const/4 v1, 0x0
 
-    .line 3428
     aget v1, v0, v1
 
     if-ne v1, v2, :cond_13
@@ -1062,7 +1012,6 @@
 
     goto :goto_1
 
-    .line 3433
     :cond_13
     aget v2, v0, v5
 
@@ -1072,7 +1021,6 @@
 
     move-wide/from16 v3, p6
 
-    .line 3436
     invoke-virtual {p0, v3, v4}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result v2
@@ -1087,7 +1035,6 @@
 
     mul-double/2addr v3, v1
 
-    .line 3440
     aget v0, v0, v5
 
     int-to-double v0, v0
@@ -1110,7 +1057,6 @@
 
     new-array p5, p4, [I
 
-    .line 3162
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -1230,7 +1176,6 @@
 
     new-array p5, p4, [I
 
-    .line 6392
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -1425,7 +1370,6 @@
 
     new-array p5, p4, [I
 
-    .line 2990
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -1575,7 +1519,6 @@
 
     new-array p5, p4, [I
 
-    .line 6220
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -1700,7 +1643,6 @@
 
     new-array p5, p4, [I
 
-    .line 2818
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -1858,7 +1800,6 @@
 
     new-array p5, p4, [I
 
-    .line 6048
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -2080,7 +2021,6 @@
 
     new-array p5, p4, [I
 
-    .line 2646
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -2182,7 +2122,6 @@
 
     new-array p5, p4, [I
 
-    .line 5876
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -2335,7 +2274,6 @@
 
     new-array p5, p4, [I
 
-    .line 2474
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -2454,7 +2392,6 @@
 
     new-array p5, p4, [I
 
-    .line 5704
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -2636,7 +2573,6 @@
 
     new-array p5, p4, [I
 
-    .line 2302
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -2707,7 +2643,6 @@
 
     new-array p5, p4, [I
 
-    .line 5532
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -2778,7 +2713,6 @@
 
     new-array p5, p4, [I
 
-    .line 1097
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -2950,7 +2884,6 @@
 
     new-array p5, p4, [I
 
-    .line 4327
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -3079,7 +3012,6 @@
 
     new-array p5, p4, [I
 
-    .line 925
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -3203,7 +3135,6 @@
 
     new-array p5, p4, [I
 
-    .line 4155
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -3398,7 +3329,6 @@
 
     new-array p5, p4, [I
 
-    .line 753
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -3533,7 +3463,6 @@
 
     new-array p5, p4, [I
 
-    .line 3983
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -3667,7 +3596,6 @@
 
     move-wide/from16 v4, p2
 
-    .line 1613
     invoke-virtual {v3, v4, v5}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result v3
@@ -3890,7 +3818,6 @@
 
     move-wide/from16 v4, p2
 
-    .line 4843
     invoke-virtual {v3, v4, v5}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result v3
@@ -4122,7 +4049,6 @@
 
     new-array p5, p4, [I
 
-    .line 1441
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -4272,7 +4198,6 @@
 
     new-array p5, p4, [I
 
-    .line 4671
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -4370,7 +4295,6 @@
 
     new-array p5, p4, [I
 
-    .line 1269
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -4529,7 +4453,6 @@
 
     new-array p5, p4, [I
 
-    .line 4499
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -4713,7 +4636,6 @@
 
     new-array p5, p4, [I
 
-    .line 580
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -4870,7 +4792,6 @@
 
     new-array p5, p4, [I
 
-    .line 3810
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -5037,7 +4958,6 @@
 
     new-array p5, p4, [I
 
-    .line 408
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -5135,7 +5055,6 @@
 
     new-array p5, p4, [I
 
-    .line 3638
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -5233,7 +5152,6 @@
 
     new-array p5, p4, [I
 
-    .line 235
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -5358,7 +5276,6 @@
 
     new-array p5, p4, [I
 
-    .line 3465
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -5521,7 +5438,6 @@
 
     new-array p5, p4, [I
 
-    .line 2130
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     const/4 p0, 0x1
@@ -5568,7 +5484,6 @@
 
     new-array p5, p4, [I
 
-    .line 5360
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -5645,7 +5560,6 @@
 
     new-array p5, p4, [I
 
-    .line 1958
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -5769,7 +5683,6 @@
 
     new-array p5, p4, [I
 
-    .line 5188
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -5950,7 +5863,6 @@
 
     new-array p5, p4, [I
 
-    .line 1786
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -6069,7 +5981,6 @@
 
     new-array p5, p4, [I
 
-    .line 5016
     invoke-virtual {p0, p2, p3}, Lcom/android/server/accessibility/ColorTransferTable;->roundHalfUp(D)I
 
     move-result p0
@@ -6281,7 +6192,6 @@
 
     return-object p0
 
-    .line 6569
     :cond_0
     sget-object p0, Lcom/android/server/accessibility/ColorTransferTable;->Tritan_severity:[D
 
@@ -6289,7 +6199,6 @@
 
     aput-wide p0, v0, v2
 
-    .line 6570
     sget-object p0, Lcom/android/server/accessibility/ColorTransferTable;->Tritan_userParameter:[D
 
     aget-wide p0, p0, p2
@@ -6298,7 +6207,6 @@
 
     goto :goto_0
 
-    .line 6565
     :cond_1
     sget-object p0, Lcom/android/server/accessibility/ColorTransferTable;->Deutan_severity:[D
 
@@ -6306,7 +6214,6 @@
 
     aput-wide p0, v0, v2
 
-    .line 6566
     sget-object p0, Lcom/android/server/accessibility/ColorTransferTable;->Deutan_userParameter:[D
 
     aget-wide p0, p0, p2
@@ -6315,7 +6222,6 @@
 
     goto :goto_0
 
-    .line 6561
     :cond_2
     sget-object p0, Lcom/android/server/accessibility/ColorTransferTable;->Protan_severity:[D
 
@@ -6323,7 +6229,6 @@
 
     aput-wide p0, v0, v2
 
-    .line 6562
     sget-object p0, Lcom/android/server/accessibility/ColorTransferTable;->Protan_userParameter:[D
 
     aget-wide p0, p0, p2
@@ -6341,7 +6246,6 @@
 
     mul-double/2addr p1, v0
 
-    .line 6589
     invoke-static {p1, p2}, Ljava/lang/Math;->round(D)J
 
     move-result-wide p0

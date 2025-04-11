@@ -13,7 +13,6 @@
 
     const/4 v0, 0x0
 
-    .line 52
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/hdmi/RequestArcAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;ILandroid/hardware/hdmi/IHdmiControlCallback;)V
 
     return-void
@@ -22,10 +21,8 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;ILandroid/hardware/hdmi/IHdmiControlCallback;)V
     .locals 0
 
-    .line 45
     invoke-direct {p0, p1, p3}, Lcom/android/server/hdmi/HdmiCecFeatureAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->getSourceAddress()I
 
     move-result p1
@@ -36,10 +33,8 @@
 
     const/4 p1, 0x5
 
-    .line 47
     invoke-static {p2, p1}, Lcom/android/server/hdmi/HdmiUtils;->verifyAddressType(II)V
 
-    .line 48
     iput p2, p0, Lcom/android/server/hdmi/RequestArcAction;->mAvrAddress:I
 
     return-void
@@ -50,7 +45,6 @@
 .method public final disableArcTransmission()V
     .locals 4
 
-    .line 57
     new-instance v0, Lcom/android/server/hdmi/SetArcTransmissionStateAction;
 
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->localDevice()Lcom/android/server/hdmi/HdmiCecLocalDevice;
@@ -63,7 +57,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/hdmi/SetArcTransmissionStateAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;IZ)V
 
-    .line 59
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->addAndStartAction(Lcom/android/server/hdmi/HdmiCecFeatureAction;)V
 
     return-void
@@ -72,7 +65,6 @@
 .method public final handleTimerEvent(I)V
     .locals 2
 
-    .line 64
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction;->mState:I
 
     if-ne v0, p1, :cond_1
@@ -90,13 +82,10 @@
 
     const-string v1, "[T] RequestArcAction."
 
-    .line 67
     invoke-static {v1, p1}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/hdmi/RequestArcAction;->disableArcTransmission()V
 
-    .line 69
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finishWithCallback(I)V
 
     :cond_1

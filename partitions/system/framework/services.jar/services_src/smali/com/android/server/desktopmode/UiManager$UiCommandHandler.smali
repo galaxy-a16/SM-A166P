@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 1
 
-    .line 726
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 722
     new-instance p1, Lcom/android/server/desktopmode/UiManager$DockTaWarningDialogMessage;
 
     const/4 v0, 0x0
@@ -29,7 +27,6 @@
 .method public static getDelayedUiCommandMessageId(I)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x3
 
     if-ne p0, v0, :cond_0
@@ -51,7 +48,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 767
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +75,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 731
     sget-boolean p0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -110,7 +105,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 732
     :cond_0
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -124,7 +118,6 @@
 .method public schedule(ILjava/lang/Runnable;)V
     .locals 4
 
-    .line 744
     invoke-static {p1}, Lcom/android/server/desktopmode/UiManager$UiCommandHandler;->getDelayedUiCommandMessageId(I)I
 
     move-result v0
@@ -133,12 +126,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 746
     invoke-virtual {p0, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 748
     :cond_0
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -166,7 +157,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 749
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager$UiCommandHandler;->messageIdToString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -177,7 +167,6 @@
 
     move-result-object v2
 
-    .line 748
     invoke-static {v1, v2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -185,21 +174,17 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 752
     iget-object v1, p0, Lcom/android/server/desktopmode/UiManager$UiCommandHandler;->mDockTaWarningDialogMessage:Lcom/android/server/desktopmode/UiManager$DockTaWarningDialogMessage;
 
     invoke-virtual {v1, p1, p2}, Lcom/android/server/desktopmode/UiManager$DockTaWarningDialogMessage;->setCommand(ILjava/lang/Runnable;)V
 
-    .line 753
     iget-object p2, p0, Lcom/android/server/desktopmode/UiManager$UiCommandHandler;->mDockTaWarningDialogMessage:Lcom/android/server/desktopmode/UiManager$DockTaWarningDialogMessage;
 
-    .line 757
     :cond_2
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
     const/4 v1, 0x0
 
-    .line 758
     invoke-virtual {p0, v0, p1, v1, p2}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1

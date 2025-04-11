@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(ILandroid/content/ComponentName;Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda5;->f$0:I
@@ -39,7 +38,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 3
 
-    .line 0
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda5;->f$0:I
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda5;->f$1:Landroid/content/ComponentName;

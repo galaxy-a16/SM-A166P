@@ -8831,18 +8831,14 @@
 .method public static buildStatsEvent(II)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10776
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10777
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10778
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10780
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -8853,15 +8849,12 @@
 .method public static buildStatsEvent(III)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10884
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10885
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10886
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x27a4
@@ -8870,14 +8863,11 @@
 
     const/4 p0, 0x1
 
-    .line 10888
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10890
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10892
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -8888,15 +8878,12 @@
 .method public static buildStatsEvent(IIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10919
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10920
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10921
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x27a7
@@ -8905,17 +8892,13 @@
 
     const/4 p0, 0x1
 
-    .line 10923
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10925
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10926
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10928
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -8926,15 +8909,12 @@
 .method public static buildStatsEvent(IIIIF)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11066
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11067
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11068
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x27b6
@@ -8943,20 +8923,15 @@
 
     const/4 p0, 0x1
 
-    .line 11070
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11072
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11073
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11074
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 11076
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -8967,27 +8942,20 @@
 .method public static buildStatsEvent(IIIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10932
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10933
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10934
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10935
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10936
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10937
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10939
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -8998,30 +8966,22 @@
 .method public static buildStatsEvent(IIIIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10958
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10959
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10960
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10961
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10962
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10963
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10964
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10966
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9032,33 +8992,24 @@
 .method public static buildStatsEvent(IIIIIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10984
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10985
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10986
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10987
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10988
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10989
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10990
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10991
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10993
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9069,51 +9020,36 @@
 .method public static buildStatsEvent(IIIIIIIIIIIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10997
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10998
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10999
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11000
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11001
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11002
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11003
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11004
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11005
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11006
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11007
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11008
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11009
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11010
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11012
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9124,54 +9060,38 @@
 .method public static buildStatsEvent(IIIIIIIIIIIIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11016
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11017
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11018
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11019
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11020
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11021
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11022
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11023
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11024
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11025
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11026
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11027
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11028
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11029
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11030
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11032
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9182,132 +9102,106 @@
 .method public static buildStatsEvent(IIIIIIIIIIIIIIIIIIIIIIII)Landroid/util/StatsEvent;
     .locals 2
 
-    .line 11036
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 11037
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 11038
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 11039
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 11040
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 11041
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 11042
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 11043
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p7
 
-    .line 11044
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p8
 
-    .line 11045
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p9
 
-    .line 11046
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 11047
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 11048
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 11049
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p13
 
-    .line 11050
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 11051
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 11052
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 11053
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 11054
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p18
 
-    .line 11055
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p19
 
-    .line 11056
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p20
 
-    .line 11057
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p21
 
-    .line 11058
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p22
 
-    .line 11059
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p23
 
-    .line 11060
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11062
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -9318,36 +9212,26 @@
 .method public static buildStatsEvent(IIIIIIZI)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10970
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10971
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10972
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10973
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10974
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10975
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10976
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10977
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10978
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10980
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9358,15 +9242,12 @@
 .method public static buildStatsEvent(IIIIIZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10943
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10944
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10945
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2757
@@ -9375,23 +9256,17 @@
 
     const/4 p0, 0x1
 
-    .line 10947
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10949
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10950
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10951
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10952
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10954
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9404,17 +9279,14 @@
 
     move v0, p0
 
-    .line 11080
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11081
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 11082
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x2735
@@ -9423,111 +9295,89 @@
 
     const/4 v0, 0x1
 
-    .line 11084
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move v0, p2
 
-    .line 11086
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p3
 
-    .line 11087
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p4
 
-    .line 11088
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p5
 
-    .line 11089
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 11090
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p7
 
-    .line 11091
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 11092
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 11093
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 11094
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 11095
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p12
 
-    .line 11096
     invoke-virtual {v1, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 11097
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 11098
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 11099
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 11100
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 11101
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 11102
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p19
 
-    .line 11103
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 11104
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 11105
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11107
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -9538,15 +9388,12 @@
 .method public static buildStatsEvent(IIIJ)Landroid/util/StatsEvent;
     .locals 2
 
-    .line 11111
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11112
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11113
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x271a
@@ -9555,7 +9402,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 11115
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -9563,17 +9409,13 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 11118
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11120
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11121
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11123
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9584,27 +9426,20 @@
 .method public static buildStatsEvent(IIIJJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11127
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11128
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11129
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11130
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11131
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11132
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11134
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9615,15 +9450,12 @@
 .method public static buildStatsEvent(IIIJJJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11138
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11139
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11140
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2770
@@ -9632,23 +9464,17 @@
 
     const/4 p0, 0x1
 
-    .line 11142
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11144
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11145
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11146
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11147
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11149
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9659,36 +9485,26 @@
 .method public static buildStatsEvent(IIILjava/lang/String;IJJZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11153
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11154
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11155
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11156
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11157
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11158
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11159
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11160
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11161
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11163
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9699,27 +9515,20 @@
 .method public static buildStatsEvent(IIIZF)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10908
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10909
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10910
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10911
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10912
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10913
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 10915
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9730,30 +9539,22 @@
 .method public static buildStatsEvent(IIIZII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10896
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10897
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10898
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10899
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10900
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10901
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10902
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10904
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9764,15 +9565,12 @@
 .method public static buildStatsEvent(IIJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11167
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11168
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11169
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2720
@@ -9781,14 +9579,11 @@
 
     const/4 p0, 0x1
 
-    .line 11171
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11173
     :cond_0
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11175
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9799,15 +9594,12 @@
 .method public static buildStatsEvent(IIJJ)Landroid/util/StatsEvent;
     .locals 2
 
-    .line 11179
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11180
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11181
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2716
@@ -9816,7 +9608,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 11183
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -9824,17 +9615,13 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 11186
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11188
     :cond_1
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11189
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11191
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9845,12 +9632,10 @@
 .method public static buildStatsEvent(IIJJJJ)Landroid/util/StatsEvent;
     .locals 4
 
-    .line 11195
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11196
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x1
@@ -9861,10 +9646,8 @@
 
     const/4 v3, 0x2
 
-    .line 11198
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11200
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -9872,29 +9655,22 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 11202
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
     if-ne v2, p0, :cond_2
 
-    .line 11205
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11207
     :cond_2
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11208
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11209
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11210
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11212
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -9907,12 +9683,10 @@
 
     move v0, p0
 
-    .line 11216
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11217
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x2762
@@ -9923,66 +9697,53 @@
 
     const/4 v2, 0x1
 
-    .line 11219
     invoke-virtual {v1, v0, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move v0, p1
 
-    .line 11221
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p2
 
-    .line 11222
     invoke-virtual {v1, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p4
 
-    .line 11223
     invoke-virtual {v1, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 11224
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p8
 
-    .line 11225
     invoke-virtual {v1, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 11226
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p11
 
-    .line 11227
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v0, p12
 
-    .line 11228
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 11229
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 11230
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 11231
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11233
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -9995,12 +9756,10 @@
 
     move v0, p0
 
-    .line 11237
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11238
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x2791
@@ -10011,71 +9770,57 @@
 
     const/4 v2, 0x1
 
-    .line 11240
     invoke-virtual {v1, v0, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move v0, p1
 
-    .line 11242
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p2
 
-    .line 11243
     invoke-virtual {v1, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p4
 
-    .line 11244
     invoke-virtual {v1, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 11245
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p8
 
-    .line 11246
     invoke-virtual {v1, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 11247
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p11
 
-    .line 11248
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v0, p12
 
-    .line 11249
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 11250
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 11251
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 11252
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 11253
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11255
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -10088,17 +9833,14 @@
 
     move v0, p0
 
-    .line 11259
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11260
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 11261
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x2730
@@ -10107,61 +9849,49 @@
 
     const/4 v0, 0x1
 
-    .line 11263
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-wide v2, p2
 
-    .line 11265
     invoke-virtual {v1, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p4
 
-    .line 11266
     invoke-virtual {v1, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 11267
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p8
 
-    .line 11268
     invoke-virtual {v1, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p10
 
-    .line 11269
     invoke-virtual {v1, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p12
 
-    .line 11270
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p14
 
-    .line 11271
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p16
 
-    .line 11272
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p18
 
-    .line 11273
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p20
 
-    .line 11274
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11276
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -10172,21 +9902,16 @@
 .method public static buildStatsEvent(IILjava/lang/String;)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11280
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11281
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11282
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11283
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11285
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10197,15 +9922,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;I)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11289
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11290
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11291
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x27a6
@@ -10214,17 +9936,13 @@
 
     const/4 p0, 0x1
 
-    .line 11293
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11295
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11296
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11298
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10235,27 +9953,20 @@
 .method public static buildStatsEvent(IILjava/lang/String;II)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11302
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11303
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11304
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11305
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11306
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11307
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11309
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10266,15 +9977,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;III)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11313
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11314
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11315
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x274d
@@ -10283,23 +9991,17 @@
 
     const/4 p0, 0x1
 
-    .line 11317
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11319
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11320
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11321
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11322
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11324
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10310,15 +10012,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;IIIIIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11328
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11329
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11330
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2779
@@ -10327,35 +10026,25 @@
 
     const/4 p0, 0x1
 
-    .line 11332
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11334
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11335
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11336
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11337
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11338
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11339
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11340
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11341
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11343
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10366,15 +10055,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;IIIIIIIIIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11370
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11371
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11372
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x27bb
@@ -10383,47 +10069,33 @@
 
     const/4 p0, 0x1
 
-    .line 11374
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11376
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11377
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11378
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11379
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11380
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11381
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11382
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11383
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11384
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11385
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11386
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11387
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11389
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10434,15 +10106,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;IIIIIIIZIII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11347
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11348
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11349
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2750
@@ -10451,47 +10120,33 @@
 
     const/4 p0, 0x1
 
-    .line 11351
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11353
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11354
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11355
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11356
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11357
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11358
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11359
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11360
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11361
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11362
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11363
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11364
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11366
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10504,17 +10159,14 @@
 
     move v0, p0
 
-    .line 11393
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11394
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 11395
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const v2, 0x24b80
@@ -10523,61 +10175,49 @@
 
     const/4 v0, 0x1
 
-    .line 11397
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 11399
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p3
 
-    .line 11400
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p4
 
-    .line 11401
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 11402
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 11403
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p7
 
-    .line 11404
     invoke-virtual {v1, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p9
 
-    .line 11405
     invoke-virtual {v1, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p11
 
-    .line 11406
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p13
 
-    .line 11407
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p15
 
-    .line 11408
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11410
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -10590,17 +10230,14 @@
 
     move v0, p0
 
-    .line 11434
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11435
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 11436
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x271d
@@ -10609,61 +10246,49 @@
 
     const/4 v0, 0x1
 
-    .line 11438
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 11440
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p3
 
-    .line 11441
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p4
 
-    .line 11442
     invoke-virtual {v1, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 11443
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p8
 
-    .line 11444
     invoke-virtual {v1, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p10
 
-    .line 11445
     invoke-virtual {v1, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p12
 
-    .line 11446
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p14
 
-    .line 11447
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p16
 
-    .line 11448
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 11449
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11451
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -10676,17 +10301,14 @@
 
     move v0, p0
 
-    .line 11414
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11415
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 11416
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x274c
@@ -10695,56 +10317,45 @@
 
     const/4 v0, 0x1
 
-    .line 11418
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 11420
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p3
 
-    .line 11421
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p4
 
-    .line 11422
     invoke-virtual {v1, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 11423
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p8
 
-    .line 11424
     invoke-virtual {v1, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p10
 
-    .line 11425
     invoke-virtual {v1, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p12
 
-    .line 11426
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p14
 
-    .line 11427
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 11428
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11430
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -10755,15 +10366,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;ILjava/lang/String;IIIIILjava/lang/String;)Landroid/util/StatsEvent;
     .locals 2
 
-    .line 11455
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11456
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11457
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -10772,44 +10380,32 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 11459
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11461
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11462
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 11464
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11466
     :cond_1
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11467
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11468
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11469
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11470
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11471
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11472
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11474
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10820,15 +10416,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;JI)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11478
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11479
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11480
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x273a
@@ -10837,20 +10430,15 @@
 
     const/4 p0, 0x1
 
-    .line 11482
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11484
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11485
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11486
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11488
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10861,15 +10449,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;JJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11492
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11493
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11494
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2733
@@ -10878,20 +10463,15 @@
 
     const/4 p0, 0x1
 
-    .line 11496
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11498
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11499
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11500
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11502
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10902,15 +10482,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;Ljava/lang/String;)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11506
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11507
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11508
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2741
@@ -10919,17 +10496,13 @@
 
     const/4 p0, 0x1
 
-    .line 11510
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11512
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11513
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11515
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -10942,17 +10515,14 @@
 
     move v0, p0
 
-    .line 11519
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11520
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 11521
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x275b
@@ -10961,66 +10531,53 @@
 
     const/4 v0, 0x1
 
-    .line 11523
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 11525
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p3
 
-    .line 11526
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p4
 
-    .line 11527
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p5
 
-    .line 11528
     invoke-virtual {v1, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p7
 
-    .line 11529
     invoke-virtual {v1, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p9
 
-    .line 11530
     invoke-virtual {v1, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p11
 
-    .line 11531
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p13
 
-    .line 11532
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p15
 
-    .line 11533
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 11534
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 11535
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11537
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -11033,17 +10590,14 @@
 
     move v0, p0
 
-    .line 11541
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11542
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 11543
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x2726
@@ -11052,76 +10606,61 @@
 
     const/4 v0, 0x1
 
-    .line 11545
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 11547
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p3
 
-    .line 11548
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p4
 
-    .line 11549
     invoke-virtual {v1, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 11550
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p8
 
-    .line 11551
     invoke-virtual {v1, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p10
 
-    .line 11552
     invoke-virtual {v1, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p12
 
-    .line 11553
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p14
 
-    .line 11554
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p16
 
-    .line 11555
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p18
 
-    .line 11556
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p20
 
-    .line 11557
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 11558
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p23
 
-    .line 11559
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11561
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -11132,15 +10671,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZZZZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11581
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11582
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11583
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2758
@@ -11149,38 +10685,27 @@
 
     const/4 p0, 0x1
 
-    .line 11585
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11587
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11588
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11589
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11590
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11591
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11592
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11593
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11594
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11595
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11597
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11193,17 +10718,14 @@
 
     move v0, p0
 
-    .line 11601
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 11602
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 11603
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x2728
@@ -11212,81 +10734,65 @@
 
     const/4 v0, 0x1
 
-    .line 11605
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 11607
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p3
 
-    .line 11608
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p4
 
-    .line 11609
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p5
 
-    .line 11610
     invoke-virtual {v1, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p7
 
-    .line 11611
     invoke-virtual {v1, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p9
 
-    .line 11612
     invoke-virtual {v1, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p11
 
-    .line 11613
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p13
 
-    .line 11614
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 11615
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p16
 
-    .line 11616
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p18
 
-    .line 11617
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p20
 
-    .line 11618
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p22
 
-    .line 11619
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p24
 
-    .line 11620
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11622
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -11297,15 +10803,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11626
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11627
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11628
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2755
@@ -11314,29 +10817,21 @@
 
     const/4 p0, 0x1
 
-    .line 11630
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11632
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11633
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11634
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11635
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11636
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11637
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11639
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11347,15 +10842,12 @@
 .method public static buildStatsEvent(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZI)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11565
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11566
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11567
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2759
@@ -11364,26 +10856,19 @@
 
     const/4 p0, 0x1
 
-    .line 11569
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11571
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11572
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11573
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11574
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11575
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11577
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11394,15 +10879,12 @@
 .method public static buildStatsEvent(IIZIIJJJJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10811
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10812
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10813
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2774
@@ -11411,32 +10893,23 @@
 
     const/4 p0, 0x1
 
-    .line 10815
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10817
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10818
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10819
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10820
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10821
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10822
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10823
     invoke-virtual {v0, p11, p12}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10825
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11447,12 +10920,10 @@
 .method public static buildStatsEvent(IIZIJJJJ)Landroid/util/StatsEvent;
     .locals 4
 
-    .line 10829
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10830
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x1
@@ -11463,38 +10934,28 @@
 
     const/4 v3, 0x2
 
-    .line 10832
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10834
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v2, p0, :cond_1
 
-    .line 10836
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10838
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10839
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10840
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10841
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10842
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10843
     invoke-virtual {v0, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10845
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11505,15 +10966,12 @@
 .method public static buildStatsEvent(IIZJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10849
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10850
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10851
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2782
@@ -11522,17 +10980,13 @@
 
     const/4 p0, 0x1
 
-    .line 10853
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10855
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10856
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10858
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11543,12 +10997,10 @@
 .method public static buildStatsEvent(IIZJJJJ)Landroid/util/StatsEvent;
     .locals 4
 
-    .line 10862
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10863
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x1
@@ -11559,10 +11011,8 @@
 
     const/4 v3, 0x2
 
-    .line 10865
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10867
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -11570,32 +11020,24 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 10869
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
     if-ne v2, p0, :cond_2
 
-    .line 10872
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10874
     :cond_2
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10875
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10876
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10877
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10878
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10880
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11606,24 +11048,18 @@
 .method public static buildStatsEvent(IIZZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10784
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10785
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10786
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10787
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10788
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10790
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11634,30 +11070,22 @@
 .method public static buildStatsEvent(IIZZILjava/lang/String;I[B)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10794
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10795
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10796
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10797
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10798
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10799
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10800
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10801
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2764
@@ -11666,7 +11094,6 @@
 
     const/4 p0, 0x1
 
-    .line 10803
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -11676,11 +11103,9 @@
 
     new-array p7, p0, [B
 
-    .line 10805
     :cond_1
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 10807
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11691,15 +11116,12 @@
 .method public static buildStatsEvent(II[I[I)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11643
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11644
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11645
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x27b5
@@ -11708,7 +11130,6 @@
 
     const/4 p0, 0x1
 
-    .line 11647
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -11718,7 +11139,6 @@
 
     new-array p2, p0, [I
 
-    .line 11649
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -11726,11 +11146,9 @@
 
     new-array p3, p0, [I
 
-    .line 11650
     :cond_2
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 11652
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11741,18 +11159,14 @@
 .method public static buildStatsEvent(IJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11656
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11657
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11658
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11660
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11763,33 +11177,24 @@
 .method public static buildStatsEvent(IJIJJJJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11674
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11675
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11676
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11677
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11678
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11679
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11680
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11681
     invoke-virtual {v0, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11683
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11800,27 +11205,20 @@
 .method public static buildStatsEvent(IJJJJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11699
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11700
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11701
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11702
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11703
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11704
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11706
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11831,30 +11229,22 @@
 .method public static buildStatsEvent(IJJJJI)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11710
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11711
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11712
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11713
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11714
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11715
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11716
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11718
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -11865,67 +11255,54 @@
 .method public static buildStatsEvent(IJJJJJJJJJJ)Landroid/util/StatsEvent;
     .locals 3
 
-    .line 11722
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 11723
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p1
 
-    .line 11724
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p3
 
-    .line 11725
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p5
 
-    .line 11726
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p7
 
-    .line 11727
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p9
 
-    .line 11728
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p11
 
-    .line 11729
     invoke-virtual {v0, p11, p12}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p13
 
-    .line 11730
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p15
 
-    .line 11731
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p17
 
-    .line 11732
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p19
 
-    .line 11733
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11735
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -11936,87 +11313,70 @@
 .method public static buildStatsEvent(IJJJJJJJJJJJJJJ)Landroid/util/StatsEvent;
     .locals 3
 
-    .line 11739
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 11740
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p1
 
-    .line 11741
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p3
 
-    .line 11742
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p5
 
-    .line 11743
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p7
 
-    .line 11744
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p9
 
-    .line 11745
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p11
 
-    .line 11746
     invoke-virtual {v0, p11, p12}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p13
 
-    .line 11747
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p15
 
-    .line 11748
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p17
 
-    .line 11749
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p19
 
-    .line 11750
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p21
 
-    .line 11751
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p23
 
-    .line 11752
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p25
 
-    .line 11753
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p27
 
-    .line 11754
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11756
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -12027,97 +11387,78 @@
 .method public static buildStatsEvent(IJJJJJJJJJJJJJJJJ)Landroid/util/StatsEvent;
     .locals 3
 
-    .line 11760
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 11761
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p1
 
-    .line 11762
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p3
 
-    .line 11763
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p5
 
-    .line 11764
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p7
 
-    .line 11765
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p9
 
-    .line 11766
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p11
 
-    .line 11767
     invoke-virtual {v0, p11, p12}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p13
 
-    .line 11768
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p15
 
-    .line 11769
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p17
 
-    .line 11770
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p19
 
-    .line 11771
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p21
 
-    .line 11772
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p23
 
-    .line 11773
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p25
 
-    .line 11774
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p27
 
-    .line 11775
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p29
 
-    .line 11776
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p31
 
-    .line 11777
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11779
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -12128,21 +11469,16 @@
 .method public static buildStatsEvent(IJJJ[B[B)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11687
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11688
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11689
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11690
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11691
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -12151,7 +11487,6 @@
 
     new-array p7, p0, [B
 
-    .line 11692
     :cond_0
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -12159,11 +11494,9 @@
 
     new-array p8, p0, [B
 
-    .line 11693
     :cond_1
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 11695
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12174,24 +11507,18 @@
 .method public static buildStatsEvent(IJZI)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11664
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11665
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11666
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11667
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11668
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11670
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12202,18 +11529,14 @@
 .method public static buildStatsEvent(ILjava/lang/String;)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11783
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11784
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11785
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11787
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12224,27 +11547,20 @@
 .method public static buildStatsEvent(ILjava/lang/String;IIJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11820
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11821
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11822
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11823
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11824
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11825
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11827
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12255,18 +11571,14 @@
 .method public static buildStatsEvent(ILjava/lang/String;ILjava/lang/String;ZII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11831
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11832
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11833
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11834
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2742
@@ -12275,23 +11587,17 @@
 
     const/4 p0, 0x1
 
-    .line 11836
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11838
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11839
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11840
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11841
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11843
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12302,36 +11608,26 @@
 .method public static buildStatsEvent(ILjava/lang/String;IZIFLjava/lang/String;I)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11806
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11807
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11808
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11809
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11810
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11811
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11812
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 11813
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11814
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11816
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12342,18 +11638,14 @@
 .method public static buildStatsEvent(ILjava/lang/String;IZII)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11791
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11792
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11793
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11794
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2753
@@ -12362,20 +11654,15 @@
 
     const/4 p0, 0x1
 
-    .line 11796
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 11798
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 11799
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11800
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11802
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12386,21 +11673,16 @@
 .method public static buildStatsEvent(ILjava/lang/String;J)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11847
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11848
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11849
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11850
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11852
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12411,30 +11693,22 @@
 .method public static buildStatsEvent(ILjava/lang/String;JJJJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11856
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11857
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11858
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11859
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11860
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11861
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11862
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11864
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12445,21 +11719,16 @@
 .method public static buildStatsEvent(ILjava/lang/String;Ljava/lang/String;)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11868
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11869
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11870
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11871
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11873
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12470,27 +11739,20 @@
 .method public static buildStatsEvent(ILjava/lang/String;Ljava/lang/String;JJ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11877
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11878
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11879
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11880
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11881
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11882
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 11884
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12501,33 +11763,24 @@
 .method public static buildStatsEvent(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11888
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11889
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11890
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11891
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11892
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11893
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11894
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11895
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11897
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12538,42 +11791,30 @@
 .method public static buildStatsEvent(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 11901
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 11902
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 11903
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11904
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11905
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11906
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11907
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11908
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11909
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11910
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11911
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 11913
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12584,21 +11825,16 @@
 .method public static buildStatsEvent(IZZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10733
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10734
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10735
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10736
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10738
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12609,33 +11845,24 @@
 .method public static buildStatsEvent(IZZZZZII[B[B[BZLjava/lang/String;ZZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10755
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10756
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10757
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10758
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10759
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10760
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10761
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10762
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10763
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -12644,7 +11871,6 @@
 
     new-array p8, p0, [B
 
-    .line 10764
     :cond_0
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -12652,7 +11878,6 @@
 
     new-array p9, p0, [B
 
-    .line 10765
     :cond_1
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -12660,23 +11885,17 @@
 
     new-array p10, p0, [B
 
-    .line 10766
     :cond_2
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 10767
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10768
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10769
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10770
     invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10772
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12687,33 +11906,24 @@
 .method public static buildStatsEvent(IZZZZZZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10742
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10743
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10744
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10745
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10746
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10747
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10748
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10749
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10751
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12724,12 +11934,10 @@
 .method public static buildStatsEvent(I[B)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10683
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10684
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p1, :cond_0
@@ -12738,11 +11946,9 @@
 
     new-array p1, p0, [B
 
-    .line 10685
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 10687
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12753,12 +11959,10 @@
 .method public static buildStatsEvent(I[BI)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10724
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10725
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p1, :cond_0
@@ -12767,14 +11971,11 @@
 
     new-array p1, p0, [B
 
-    .line 10726
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 10727
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10729
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12785,12 +11986,10 @@
 .method public static buildStatsEvent(I[BZIZZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10712
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10713
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p1, :cond_0
@@ -12799,23 +11998,17 @@
 
     new-array p1, p0, [B
 
-    .line 10714
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 10715
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10716
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10717
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10718
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10720
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12826,12 +12019,10 @@
 .method public static buildStatsEvent(I[B[B[B[BI[B[BII[BIIFZ)Landroid/util/StatsEvent;
     .locals 1
 
-    .line 10691
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10692
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -12840,7 +12031,6 @@
 
     new-array p1, p0, [B
 
-    .line 10693
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -12848,7 +12038,6 @@
 
     new-array p2, p0, [B
 
-    .line 10694
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -12856,7 +12045,6 @@
 
     new-array p3, p0, [B
 
-    .line 10695
     :cond_2
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -12864,18 +12052,15 @@
 
     new-array p4, p0, [B
 
-    .line 10696
     :cond_3
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 10697
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p6, :cond_4
 
     new-array p6, p0, [B
 
-    .line 10698
     :cond_4
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -12883,37 +12068,28 @@
 
     new-array p7, p0, [B
 
-    .line 10699
     :cond_5
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 10700
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10701
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p10, :cond_6
 
     new-array p10, p0, [B
 
-    .line 10702
     :cond_6
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 10703
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10704
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10705
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 10706
     invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10708
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12924,18 +12100,14 @@
 .method public static write(I)V
     .locals 1
 
-    .line 7263
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7264
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7266
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7267
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -12948,145 +12120,116 @@
 .method public static write(IFFFLjava/lang/String;ZFIFFZIIIZZZZIZZZZZZZ)V
     .locals 2
 
-    .line 10247
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 10248
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 10249
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 10250
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 10251
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p4
 
-    .line 10252
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 10253
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 10254
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move v1, p7
 
-    .line 10255
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p8
 
-    .line 10256
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move v1, p9
 
-    .line 10257
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 10258
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 10259
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 10260
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p13
 
-    .line 10261
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 10262
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 10263
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 10264
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 10265
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p18
 
-    .line 10266
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p19
 
-    .line 10267
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p20
 
-    .line 10268
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p21
 
-    .line 10269
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p22
 
-    .line 10270
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p23
 
-    .line 10271
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p24
 
-    .line 10272
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p25
 
-    .line 10273
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10275
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10276
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -13099,12 +12242,10 @@
 .method public static write(II)V
     .locals 5
 
-    .line 7609
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7610
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v1, 0x28
@@ -13115,10 +12256,8 @@
 
     const/4 v1, 0x2
 
-    .line 7612
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7614
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -13132,10 +12271,8 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 7616
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7617
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
@@ -13143,7 +12280,6 @@
 
     if-ne p1, p0, :cond_2
 
-    .line 7620
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_2
@@ -13151,10 +12287,8 @@
 
     if-ne p1, p0, :cond_3
 
-    .line 7623
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7624
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_3
@@ -13162,10 +12296,8 @@
 
     if-ne p1, p0, :cond_4
 
-    .line 7627
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7628
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_4
@@ -13173,10 +12305,8 @@
 
     if-ne p1, p0, :cond_5
 
-    .line 7631
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7632
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_5
@@ -13184,10 +12314,8 @@
 
     if-ne p1, p0, :cond_6
 
-    .line 7635
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7636
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_6
@@ -13195,10 +12323,8 @@
 
     if-ne p1, p0, :cond_7
 
-    .line 7639
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7640
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_7
@@ -13206,10 +12332,8 @@
 
     if-ne p1, p0, :cond_8
 
-    .line 7643
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7644
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_8
@@ -13217,17 +12341,13 @@
 
     if-ne p1, p0, :cond_9
 
-    .line 7647
     invoke-virtual {v0, v4, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7648
     invoke-virtual {v0, v3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7651
     :cond_9
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7652
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13240,24 +12360,18 @@
 .method public static write(IIF)V
     .locals 1
 
-    .line 9289
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9290
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9291
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9292
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 9294
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9295
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13270,15 +12384,12 @@
 .method public static write(III)V
     .locals 10
 
-    .line 7704
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7705
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7706
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x3
@@ -13289,10 +12400,8 @@
 
     if-ne v2, p0, :cond_0
 
-    .line 7708
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7709
     invoke-virtual {v0, p1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -13300,7 +12409,6 @@
 
     if-ne v3, p0, :cond_1
 
-    .line 7712
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
@@ -13308,7 +12416,6 @@
 
     if-ne v3, p0, :cond_2
 
-    .line 7715
     invoke-virtual {v0, p1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_2
@@ -13316,7 +12423,6 @@
 
     if-ne v4, p0, :cond_3
 
-    .line 7718
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_3
@@ -13324,7 +12430,6 @@
 
     if-ne v4, p0, :cond_4
 
-    .line 7721
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_4
@@ -13332,7 +12437,6 @@
 
     if-ne v4, p0, :cond_5
 
-    .line 7724
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_5
@@ -13340,7 +12444,6 @@
 
     if-ne v4, p0, :cond_6
 
-    .line 7727
     invoke-virtual {v0, p1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_6
@@ -13354,10 +12457,8 @@
 
     if-ne v5, p0, :cond_7
 
-    .line 7730
     invoke-virtual {v0, v8, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7731
     invoke-virtual {v0, v7, v6}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_7
@@ -13365,19 +12466,15 @@
 
     if-ne v9, p0, :cond_8
 
-    .line 7734
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7736
     :cond_8
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v2, p0, :cond_9
 
-    .line 7738
     invoke-virtual {v0, v8, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7739
     invoke-virtual {v0, v7, v6}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_9
@@ -13385,35 +12482,28 @@
 
     if-ne p2, p0, :cond_a
 
-    .line 7742
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_a
     if-ne v3, p0, :cond_b
 
-    .line 7745
     invoke-virtual {v0, v8, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_b
     if-ne v4, p0, :cond_c
 
-    .line 7748
     invoke-virtual {v0, v8, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7749
     invoke-virtual {v0, v7, v6}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_c
     if-ne v5, p0, :cond_d
 
-    .line 7752
     invoke-virtual {v0, p1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7755
     :cond_d
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7756
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13426,105 +12516,84 @@
 .method public static write(IIIFIIIIIIIIIIIIII)V
     .locals 2
 
-    .line 8717
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 8718
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 8719
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 8720
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 8721
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 8722
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 8723
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 8724
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p7
 
-    .line 8725
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p8
 
-    .line 8726
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p9
 
-    .line 8727
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 8728
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 8729
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 8730
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p13
 
-    .line 8731
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 8732
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 8733
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 8734
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 8735
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8737
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8738
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -13537,15 +12606,12 @@
 .method public static write(IIII)V
     .locals 3
 
-    .line 8029
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8030
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8031
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x118
@@ -13554,7 +12620,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 8033
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -13562,7 +12627,6 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 8036
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
@@ -13570,7 +12634,6 @@
 
     if-ne p1, p0, :cond_2
 
-    .line 8039
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_2
@@ -13578,15 +12641,12 @@
 
     if-ne p1, p0, :cond_3
 
-    .line 8042
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     const/4 v2, 0x3
 
-    .line 8043
     invoke-virtual {v0, v2, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8045
     :cond_3
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -13594,14 +12654,12 @@
 
     const/4 p1, 0x4
 
-    .line 8047
     invoke-virtual {v0, p1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x8
 
     const/4 p2, 0x0
 
-    .line 8048
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_4
@@ -13609,7 +12667,6 @@
 
     if-ne p1, p0, :cond_5
 
-    .line 8051
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_5
@@ -13617,10 +12674,8 @@
 
     if-ne p2, p0, :cond_6
 
-    .line 8054
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8056
     :cond_6
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -13628,7 +12683,6 @@
 
     if-ne p2, p0, :cond_7
 
-    .line 8058
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_7
@@ -13636,7 +12690,6 @@
 
     if-ne p2, p0, :cond_8
 
-    .line 8061
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_8
@@ -13644,7 +12697,6 @@
 
     if-ne p2, p0, :cond_9
 
-    .line 8064
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_9
@@ -13652,20 +12704,16 @@
 
     if-ne p2, p0, :cond_a
 
-    .line 8067
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_a
     if-ne p1, p0, :cond_b
 
-    .line 8070
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8073
     :cond_b
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8074
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13678,15 +12726,12 @@
 .method public static write(IIIIFFII)V
     .locals 2
 
-    .line 8514
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8515
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8516
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -13695,38 +12740,28 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 8518
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8520
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 8522
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8524
     :cond_1
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8525
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 8526
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 8527
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8528
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8530
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8531
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13739,30 +12774,22 @@
 .method public static write(IIIIFIIIIII)V
     .locals 1
 
-    .line 8490
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8491
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8492
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8493
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8494
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8495
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 8496
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8497
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -13771,32 +12798,24 @@
 
     if-ne p2, p0, :cond_0
 
-    .line 8499
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8501
     :cond_0
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8502
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne p2, p0, :cond_1
 
-    .line 8504
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8506
     :cond_1
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8507
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8509
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8510
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13809,15 +12828,12 @@
 .method public static write(IIIII)V
     .locals 2
 
-    .line 8122
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8123
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8124
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -13826,29 +12842,22 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 8126
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8128
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 8130
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8132
     :cond_1
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8133
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8135
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8136
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13861,15 +12870,12 @@
 .method public static write(IIIIII)V
     .locals 2
 
-    .line 8211
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8212
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8213
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x100
@@ -13878,7 +12884,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 8215
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -13886,26 +12891,19 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 8218
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8220
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8221
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8222
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8223
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8225
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8226
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13918,21 +12916,16 @@
 .method public static write(IIIIIII)V
     .locals 1
 
-    .line 8250
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8251
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8252
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8253
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8254
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x242
@@ -13941,23 +12934,17 @@
 
     const/4 p0, 0x1
 
-    .line 8256
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8258
     :cond_0
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8259
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8260
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8262
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8263
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -13970,39 +12957,28 @@
 .method public static write(IIIIIIII)V
     .locals 1
 
-    .line 8267
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8268
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8269
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8270
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8271
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8272
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8273
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8274
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8275
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8277
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8278
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14015,15 +12991,12 @@
 .method public static write(IIIIIIIIII)V
     .locals 1
 
-    .line 8282
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8283
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8284
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x136
@@ -14032,38 +13005,27 @@
 
     const/4 p0, 0x1
 
-    .line 8286
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8288
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8289
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8290
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8291
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8292
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8293
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8294
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8295
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8297
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8298
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14078,62 +13040,50 @@
 
     move v0, p0
 
-    .line 8302
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 8303
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 8304
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p2
 
-    .line 8305
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p3
 
-    .line 8306
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p4
 
-    .line 8307
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p5
 
-    .line 8308
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p6
 
-    .line 8309
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p7
 
-    .line 8310
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p8
 
-    .line 8311
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p9
 
-    .line 8312
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p10
 
-    .line 8313
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v2, 0x1
@@ -14142,110 +13092,88 @@
 
     if-ne v3, v0, :cond_0
 
-    .line 8315
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move/from16 v4, p11
 
-    .line 8317
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v3, v0, :cond_1
 
-    .line 8319
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
     move/from16 v0, p12
 
-    .line 8321
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 8322
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 8323
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 8324
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 8325
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 8326
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 8327
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p19
 
-    .line 8328
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 8329
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 8330
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 8331
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p23
 
-    .line 8332
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p25
 
-    .line 8333
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p27
 
-    .line 8334
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p28
 
-    .line 8335
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p29
 
-    .line 8336
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p30
 
-    .line 8337
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8339
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8340
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -14260,27 +13188,22 @@
 
     move v0, p0
 
-    .line 8344
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 8345
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 8346
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p2
 
-    .line 8347
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p3
 
-    .line 8348
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x25d
@@ -14289,89 +13212,71 @@
 
     const/4 v0, 0x1
 
-    .line 8350
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move v0, p4
 
-    .line 8352
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 8353
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 8354
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 8355
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 8356
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 8357
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p11
 
-    .line 8358
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p13
 
-    .line 8359
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p15
 
-    .line 8360
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 8361
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p18
 
-    .line 8362
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 8363
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 8364
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 8365
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p23
 
-    .line 8366
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8368
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8369
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -14384,33 +13289,24 @@
 .method public static write(IIIIIIZI[BZ)V
     .locals 1
 
-    .line 8230
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8231
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8232
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8233
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8234
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8235
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8236
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8237
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8238
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x291
@@ -14419,7 +13315,6 @@
 
     const/4 p0, 0x1
 
-    .line 8240
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -14429,17 +13324,13 @@
 
     new-array p8, p0, [B
 
-    .line 8242
     :cond_1
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 8243
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8245
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8246
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14452,18 +13343,14 @@
 .method public static write(IIIIIJI[Ljava/lang/String;[IZ)V
     .locals 1
 
-    .line 8373
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8374
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8375
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8376
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x28b
@@ -14472,20 +13359,15 @@
 
     const/4 p0, 0x1
 
-    .line 8378
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8380
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8381
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8382
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8383
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -14494,7 +13376,6 @@
 
     new-array p8, p0, [Ljava/lang/String;
 
-    .line 8384
     :cond_1
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -14502,17 +13383,13 @@
 
     new-array p9, p0, [I
 
-    .line 8385
     :cond_2
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 8386
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8388
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8389
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14525,15 +13402,12 @@
 .method public static write(IIIIILjava/lang/String;Ljava/lang/String;II)V
     .locals 2
 
-    .line 8393
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8394
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8395
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -14542,41 +13416,30 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 8397
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8399
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 8401
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8403
     :cond_1
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8404
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8405
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8406
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8407
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8408
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8410
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8411
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14589,45 +13452,32 @@
 .method public static write(IIIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 8415
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8416
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8417
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8418
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8419
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8420
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8421
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8422
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8423
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8424
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8425
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8427
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8428
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14640,18 +13490,14 @@
 .method public static write(IIIIIZZII)V
     .locals 1
 
-    .line 8192
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8193
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8194
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8195
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x155
@@ -14660,32 +13506,23 @@
 
     const/4 p0, 0x1
 
-    .line 8197
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8199
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8200
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8201
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8202
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8203
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8204
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8206
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8207
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14698,21 +13535,16 @@
 .method public static write(IIIIIZZZIJII)V
     .locals 1
 
-    .line 8164
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8165
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8166
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8167
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8168
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -14721,50 +13553,37 @@
 
     if-ne p2, p0, :cond_0
 
-    .line 8170
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8172
     :cond_0
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne p2, p0, :cond_1
 
-    .line 8174
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8176
     :cond_1
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8177
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8178
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8179
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8180
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8181
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8182
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne p2, p0, :cond_2
 
-    .line 8184
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8187
     :cond_2
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8188
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14777,15 +13596,12 @@
 .method public static write(IIIII[B[B[B[BIIIZI)V
     .locals 1
 
-    .line 8140
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8141
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8142
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x1b9
@@ -14794,17 +13610,13 @@
 
     const/4 p0, 0x1
 
-    .line 8144
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8146
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8147
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8148
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -14813,7 +13625,6 @@
 
     new-array p5, p0, [B
 
-    .line 8149
     :cond_1
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -14821,7 +13632,6 @@
 
     new-array p6, p0, [B
 
-    .line 8150
     :cond_2
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -14829,7 +13639,6 @@
 
     new-array p7, p0, [B
 
-    .line 8151
     :cond_3
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -14837,29 +13646,21 @@
 
     new-array p8, p0, [B
 
-    .line 8152
     :cond_4
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 8153
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8154
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8155
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8156
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8157
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8159
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8160
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14872,30 +13673,22 @@
 .method public static write(IIIIJ)V
     .locals 1
 
-    .line 8432
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8433
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8434
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8435
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8436
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8437
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8439
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8440
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14908,15 +13701,12 @@
 .method public static write(IIIIJJFJI)V
     .locals 1
 
-    .line 8471
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8472
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8473
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x1eb
@@ -14925,35 +13715,25 @@
 
     const/4 p0, 0x1
 
-    .line 8475
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8477
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8478
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8479
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8480
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8481
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 8482
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8483
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8485
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8486
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -14968,27 +13748,22 @@
 
     move v0, p0
 
-    .line 8444
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 8445
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 8446
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p2
 
-    .line 8447
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p3
 
-    .line 8448
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x25e
@@ -14997,79 +13772,63 @@
 
     const/4 v0, 0x1
 
-    .line 8450
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-wide v2, p4
 
-    .line 8452
     invoke-virtual {v1, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 8453
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 8454
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 8455
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 8456
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 8457
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p12
 
-    .line 8458
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 8459
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 8460
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p15
 
-    .line 8461
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p17
 
-    .line 8462
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p19
 
-    .line 8463
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 8464
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8466
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8467
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -15082,15 +13841,12 @@
 .method public static write(IIIILjava/lang/String;)V
     .locals 1
 
-    .line 8535
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8536
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8537
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x1c1
@@ -15099,23 +13855,17 @@
 
     const/4 p0, 0x1
 
-    .line 8539
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8541
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8542
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8543
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8545
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8546
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15128,33 +13878,24 @@
 .method public static write(IIIILjava/lang/String;I)V
     .locals 1
 
-    .line 8550
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8551
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8552
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8553
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8554
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8555
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8556
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8558
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8559
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15167,36 +13908,26 @@
 .method public static write(IIIILjava/lang/String;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 8563
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8564
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8565
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8566
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8567
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8568
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8569
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8570
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8572
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8573
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15209,15 +13940,12 @@
 .method public static write(IIIIZZZI)V
     .locals 2
 
-    .line 8078
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8079
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8080
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -15226,38 +13954,28 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 8082
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8084
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 8086
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8088
     :cond_1
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8089
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8090
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8091
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8092
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8094
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8095
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15270,95 +13988,76 @@
 .method public static write(IIIIZZZIILjava/lang/String;Ljava/lang/String;IIZZI)V
     .locals 2
 
-    .line 8099
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 8100
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 8101
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 8102
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 8103
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 8104
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 8105
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 8106
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p7
 
-    .line 8107
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p8
 
-    .line 8108
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p9
 
-    .line 8109
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p10
 
-    .line 8110
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 8111
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 8112
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p13
 
-    .line 8113
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 8114
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 8115
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8117
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8118
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -15371,18 +14070,14 @@
 .method public static write(IIII[I[I[IIIII)V
     .locals 1
 
-    .line 8577
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8578
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8579
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8580
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -15391,10 +14086,8 @@
 
     if-ne p2, p0, :cond_0
 
-    .line 8582
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8584
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -15404,13 +14097,11 @@
 
     new-array p4, p3, [I
 
-    .line 8585
     :cond_1
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     if-ne p2, p0, :cond_2
 
-    .line 8587
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_2
@@ -15418,7 +14109,6 @@
 
     new-array p5, p3, [I
 
-    .line 8589
     :cond_3
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -15426,32 +14116,24 @@
 
     new-array p6, p3, [I
 
-    .line 8590
     :cond_4
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 8591
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne p2, p0, :cond_5
 
-    .line 8593
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8595
     :cond_5
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8596
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8597
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8599
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8600
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15464,21 +14146,16 @@
 .method public static write(IIII[Ljava/lang/String;[I)V
     .locals 1
 
-    .line 8604
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8605
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8606
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8607
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8608
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x29d
@@ -15487,7 +14164,6 @@
 
     const/4 p0, 0x1
 
-    .line 8610
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -15497,7 +14173,6 @@
 
     new-array p4, p0, [Ljava/lang/String;
 
-    .line 8612
     :cond_1
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -15505,14 +14180,11 @@
 
     new-array p5, p0, [I
 
-    .line 8613
     :cond_2
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 8615
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8616
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15525,21 +14197,16 @@
 .method public static write(IIII[Ljava/lang/String;[I[I[ILjava/lang/String;ZIZ)V
     .locals 1
 
-    .line 8620
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8621
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8622
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8623
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8624
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x29e
@@ -15548,7 +14215,6 @@
 
     const/4 p0, 0x1
 
-    .line 8626
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -15558,7 +14224,6 @@
 
     new-array p4, p0, [Ljava/lang/String;
 
-    .line 8628
     :cond_1
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -15566,7 +14231,6 @@
 
     new-array p5, p0, [I
 
-    .line 8629
     :cond_2
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -15574,7 +14238,6 @@
 
     new-array p6, p0, [I
 
-    .line 8630
     :cond_3
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -15582,26 +14245,19 @@
 
     new-array p7, p0, [I
 
-    .line 8631
     :cond_4
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 8632
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8633
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8634
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8635
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8637
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8638
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15614,27 +14270,20 @@
 .method public static write(IIIJ)V
     .locals 1
 
-    .line 8642
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8643
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8644
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8645
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8646
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8648
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8649
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15647,18 +14296,14 @@
 .method public static write(IIIJIII)V
     .locals 1
 
-    .line 8667
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8668
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8669
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8670
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x222
@@ -15667,26 +14312,19 @@
 
     const/4 p0, 0x1
 
-    .line 8672
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8674
     :cond_0
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8675
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8676
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8677
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8679
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8680
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15699,54 +14337,38 @@
 .method public static write(IIIJIIIIIIIII)V
     .locals 1
 
-    .line 8684
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8685
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8686
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8687
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8688
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8689
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8690
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8691
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8692
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8693
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8694
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8695
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8696
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8697
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8699
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8700
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15759,33 +14381,24 @@
 .method public static write(IIIJIJ)V
     .locals 1
 
-    .line 8704
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8705
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8706
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8707
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8708
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8709
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8710
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8712
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8713
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15798,36 +14411,26 @@
 .method public static write(IIIJZIF)V
     .locals 1
 
-    .line 8653
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8654
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8655
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8656
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8657
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8658
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8659
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8660
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 8662
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8663
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15840,27 +14443,20 @@
 .method public static write(IIILjava/lang/String;)V
     .locals 1
 
-    .line 8742
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8743
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8744
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8745
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8746
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8748
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8749
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15873,18 +14469,14 @@
 .method public static write(IIILjava/lang/String;I)V
     .locals 1
 
-    .line 8753
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8754
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8755
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8756
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x5a
@@ -15893,20 +14485,15 @@
 
     const/4 p0, 0x1
 
-    .line 8758
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8760
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8761
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8763
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8764
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15919,15 +14506,12 @@
 .method public static write(IIILjava/lang/String;IIIIII)V
     .locals 2
 
-    .line 8870
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8871
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8872
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -15936,44 +14520,32 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 8874
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8876
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8877
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8878
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8879
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8880
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8881
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8882
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 8884
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8886
     :cond_1
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8888
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8889
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -15988,22 +14560,18 @@
 
     move v0, p0
 
-    .line 8833
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 8834
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 8835
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p2
 
-    .line 8836
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0xf4
@@ -16012,134 +14580,107 @@
 
     const/4 v0, 0x1
 
-    .line 8838
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p3
 
-    .line 8840
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p4
 
-    .line 8841
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 8842
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 8843
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p7
 
-    .line 8844
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 8845
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 8846
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p10
 
-    .line 8847
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 8848
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p12
 
-    .line 8849
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 8850
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 8851
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 8852
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 8853
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 8854
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 8855
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p19
 
-    .line 8856
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 8857
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 8858
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 8859
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p23
 
-    .line 8860
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p24
 
-    .line 8861
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p26
 
-    .line 8862
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p27
 
-    .line 8863
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8865
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8866
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -16152,57 +14693,40 @@
 .method public static write(IIILjava/lang/String;IIIIJIIIILjava/lang/String;)V
     .locals 1
 
-    .line 8893
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8894
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8895
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8896
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8897
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8898
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8899
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8900
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8901
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8902
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8903
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8904
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8905
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8906
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8907
     invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8909
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8910
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16215,18 +14739,14 @@
 .method public static write(IIILjava/lang/String;IIIZIZZ)V
     .locals 1
 
-    .line 8812
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8813
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8814
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8815
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0xf6
@@ -16235,38 +14755,27 @@
 
     const/4 p0, 0x1
 
-    .line 8817
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8819
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8820
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8821
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8822
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8823
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8824
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8825
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8826
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8828
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8829
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16281,17 +14790,14 @@
 
     move v0, p0
 
-    .line 8914
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 8915
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 8916
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v2, 0x1
@@ -16300,100 +14806,80 @@
 
     if-ne v3, v0, :cond_0
 
-    .line 8918
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move v4, p2
 
-    .line 8920
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v3, v0, :cond_1
 
-    .line 8922
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
     move-object v0, p3
 
-    .line 8924
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p4
 
-    .line 8925
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 8926
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 8927
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p8
 
-    .line 8928
     invoke-virtual {v1, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p10
 
-    .line 8929
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p12
 
-    .line 8930
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v0, p13
 
-    .line 8931
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v0, p14
 
-    .line 8932
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 8933
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 8934
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 8935
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 8936
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p19
 
-    .line 8937
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 8938
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8940
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8941
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -16406,18 +14892,14 @@
 .method public static write(IIILjava/lang/String;IIZ)V
     .locals 1
 
-    .line 8795
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8796
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8797
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8798
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x119
@@ -16426,26 +14908,19 @@
 
     const/4 p0, 0x1
 
-    .line 8800
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8802
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8803
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8804
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8805
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8807
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8808
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16458,15 +14933,12 @@
 .method public static write(IIILjava/lang/String;IJIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
     .locals 1
 
-    .line 8945
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8946
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8947
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0xa9
@@ -16475,47 +14947,33 @@
 
     const/4 p0, 0x1
 
-    .line 8949
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8951
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8952
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8953
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8954
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8955
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8956
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8957
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8958
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8959
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8960
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8961
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8963
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8964
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16528,15 +14986,12 @@
 .method public static write(IIILjava/lang/String;IZILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;II)V
     .locals 2
 
-    .line 8768
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8769
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8770
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -16545,56 +15000,40 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 8772
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8774
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 8776
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8778
     :cond_1
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8779
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8780
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8781
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8782
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8783
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8784
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8785
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8786
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8787
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8788
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8790
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8791
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16607,36 +15046,26 @@
 .method public static write(IIILjava/lang/String;JII)V
     .locals 1
 
-    .line 8968
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8969
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8970
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8971
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8972
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8973
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 8974
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8975
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8977
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8978
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16649,18 +15078,14 @@
 .method public static write(IIILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 8982
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8983
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8984
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8985
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x234
@@ -16669,20 +15094,15 @@
 
     const/4 p0, 0x1
 
-    .line 8987
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 8989
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8990
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 8992
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8993
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16695,15 +15115,12 @@
 .method public static write(IIILjava/lang/String;Ljava/lang/String;II)V
     .locals 2
 
-    .line 8997
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 8998
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 8999
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -16712,35 +15129,26 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 9001
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9003
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 9005
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9007
     :cond_1
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9008
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9009
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9010
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9012
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9013
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16753,27 +15161,20 @@
 .method public static write(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 9017
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9018
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9019
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9020
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9021
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9022
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9023
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     if-nez p6, :cond_0
@@ -16782,23 +15183,17 @@
 
     new-array p6, p0, [Ljava/lang/String;
 
-    .line 9024
     :cond_0
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9025
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9026
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9027
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9029
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9030
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16811,15 +15206,12 @@
 .method public static write(IIIZI)V
     .locals 1
 
-    .line 7790
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7791
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7792
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x1d4
@@ -16828,23 +15220,17 @@
 
     const/4 p0, 0x1
 
-    .line 7794
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7796
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7797
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7798
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7800
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7801
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -16859,32 +15245,26 @@
 
     move v0, p0
 
-    .line 7914
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 7915
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 7916
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p2
 
-    .line 7917
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p3
 
-    .line 7918
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v2, p4
 
-    .line 7919
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x28d
@@ -16893,43 +15273,35 @@
 
     const/4 v0, 0x1
 
-    .line 7921
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move v0, p5
 
-    .line 7923
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 7924
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p7
 
-    .line 7925
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 7926
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 7927
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 7928
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 7929
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     const/4 v0, 0x0
@@ -16943,33 +15315,27 @@
     :cond_1
     move-object v2, p12
 
-    .line 7930
     :goto_0
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p13
 
-    .line 7931
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p14
 
-    .line 7932
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p15
 
-    .line 7933
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p16
 
-    .line 7934
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p17
 
-    .line 7935
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p18, :cond_2
@@ -16981,7 +15347,6 @@
     :cond_2
     move-object/from16 v2, p18
 
-    .line 7936
     :goto_1
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -16994,13 +15359,11 @@
     :cond_3
     move-object/from16 v2, p19
 
-    .line 7937
     :goto_2
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p20
 
-    .line 7938
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p21, :cond_4
@@ -17012,7 +15375,6 @@
     :cond_4
     move-object/from16 v2, p21
 
-    .line 7939
     :goto_3
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17025,7 +15387,6 @@
     :cond_5
     move-object/from16 v2, p22
 
-    .line 7940
     :goto_4
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17038,7 +15399,6 @@
     :cond_6
     move-object/from16 v2, p23
 
-    .line 7941
     :goto_5
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -17051,24 +15411,19 @@
     :cond_7
     move-object/from16 v0, p24
 
-    .line 7942
     :goto_6
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v0, p25
 
-    .line 7943
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p26
 
-    .line 7944
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7946
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7947
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -17081,64 +15436,52 @@
 .method public static write(IIIZIIIIIIZ[I[I[Ljava/lang/String;[ILjava/lang/String;[I[IIZ)V
     .locals 3
 
-    .line 7887
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 7888
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 7889
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 7890
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 7891
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 7892
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 7893
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 7894
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p7
 
-    .line 7895
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p8
 
-    .line 7896
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p9
 
-    .line 7897
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 7898
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x0
@@ -17152,7 +15495,6 @@
     :cond_0
     move-object v2, p11
 
-    .line 7899
     :goto_0
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17165,7 +15507,6 @@
     :cond_1
     move-object v2, p12
 
-    .line 7900
     :goto_1
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17178,7 +15519,6 @@
     :cond_2
     move-object/from16 v2, p13
 
-    .line 7901
     :goto_2
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -17191,13 +15531,11 @@
     :cond_3
     move-object/from16 v2, p14
 
-    .line 7902
     :goto_3
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v2, p15
 
-    .line 7903
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     if-nez p16, :cond_4
@@ -17209,7 +15547,6 @@
     :cond_4
     move-object/from16 v2, p16
 
-    .line 7904
     :goto_4
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17222,24 +15559,19 @@
     :cond_5
     move-object/from16 v1, p17
 
-    .line 7905
     :goto_5
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p18
 
-    .line 7906
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p19
 
-    .line 7907
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7909
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7910
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -17252,110 +15584,88 @@
 .method public static write(IIIZIIIIZIIIZZIIIII)V
     .locals 2
 
-    .line 7833
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 7834
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 7835
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 7836
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 7837
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 7838
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 7839
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 7840
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p7
 
-    .line 7841
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p8
 
-    .line 7842
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p9
 
-    .line 7843
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 7844
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 7845
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 7846
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p13
 
-    .line 7847
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 7848
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 7849
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 7850
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 7851
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p18
 
-    .line 7852
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7854
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7855
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -17368,109 +15678,88 @@
 .method public static write(IIIZIIIIZJIIIZZIIIII[I)V
     .locals 3
 
-    .line 7859
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 7860
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 7861
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 7862
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 7863
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 7864
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 7865
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 7866
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p7
 
-    .line 7867
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p8
 
-    .line 7868
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p9
 
-    .line 7869
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 7870
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 7871
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p13
 
-    .line 7872
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 7873
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 7874
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 7875
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 7876
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p18
 
-    .line 7877
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p19
 
-    .line 7878
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p20
 
-    .line 7879
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p21, :cond_0
@@ -17484,14 +15773,11 @@
     :cond_0
     move-object/from16 v1, p21
 
-    .line 7880
     :goto_0
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 7882
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7883
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -17504,44 +15790,36 @@
 .method public static write(IIIZIII[Ljava/lang/String;[I[I[II[Ljava/lang/String;[I[Ljava/lang/String;[I[I[II[Ljava/lang/String;[IIZ)V
     .locals 3
 
-    .line 7951
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 7952
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 7953
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 7954
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 7955
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 7956
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 7957
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 7958
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x0
@@ -17555,7 +15833,6 @@
     :cond_0
     move-object v2, p7
 
-    .line 7959
     :goto_0
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -17568,7 +15845,6 @@
     :cond_1
     move-object v2, p8
 
-    .line 7960
     :goto_1
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17581,7 +15857,6 @@
     :cond_2
     move-object v2, p9
 
-    .line 7961
     :goto_2
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17594,13 +15869,11 @@
     :cond_3
     move-object v2, p10
 
-    .line 7962
     :goto_3
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move v2, p11
 
-    .line 7963
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p12, :cond_4
@@ -17612,7 +15885,6 @@
     :cond_4
     move-object v2, p12
 
-    .line 7964
     :goto_4
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -17625,7 +15897,6 @@
     :cond_5
     move-object/from16 v2, p13
 
-    .line 7965
     :goto_5
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17638,7 +15909,6 @@
     :cond_6
     move-object/from16 v2, p14
 
-    .line 7966
     :goto_6
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -17651,7 +15921,6 @@
     :cond_7
     move-object/from16 v2, p15
 
-    .line 7967
     :goto_7
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17664,7 +15933,6 @@
     :cond_8
     move-object/from16 v2, p16
 
-    .line 7968
     :goto_8
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -17677,13 +15945,11 @@
     :cond_9
     move-object/from16 v2, p17
 
-    .line 7969
     :goto_9
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p18
 
-    .line 7970
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p19, :cond_a
@@ -17695,7 +15961,6 @@
     :cond_a
     move-object/from16 v2, p19
 
-    .line 7971
     :goto_a
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -17708,24 +15973,19 @@
     :cond_b
     move-object/from16 v1, p20
 
-    .line 7972
     :goto_b
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p21
 
-    .line 7973
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p22
 
-    .line 7974
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7976
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7977
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -17738,15 +15998,12 @@
 .method public static write(IIIZIIJ)V
     .locals 1
 
-    .line 7981
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7982
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7983
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2ad
@@ -17755,29 +16012,21 @@
 
     const/4 p0, 0x1
 
-    .line 7985
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7987
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7988
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7989
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7990
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7991
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 7993
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7994
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -17790,109 +16039,88 @@
 .method public static write(IIIZIZIJZIFIIZZIIIII[I)V
     .locals 3
 
-    .line 7805
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 7806
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 7807
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p2
 
-    .line 7808
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 7809
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 7810
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 7811
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 7812
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p7
 
-    .line 7813
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v1, p9
 
-    .line 7814
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 7815
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 7816
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 7817
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p13
 
-    .line 7818
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 7819
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 7820
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 7821
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 7822
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p18
 
-    .line 7823
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p19
 
-    .line 7824
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p20
 
-    .line 7825
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p21, :cond_0
@@ -17906,14 +16134,11 @@
     :cond_0
     move-object/from16 v1, p21
 
-    .line 7826
     :goto_0
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 7828
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7829
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -17926,18 +16151,14 @@
 .method public static write(IIIZZ)V
     .locals 1
 
-    .line 7760
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7761
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7762
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7763
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x248
@@ -17946,20 +16167,15 @@
 
     const/4 p0, 0x1
 
-    .line 7765
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7767
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7768
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7770
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7771
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -17972,39 +16188,28 @@
 .method public static write(IIIZZZIJ)V
     .locals 1
 
-    .line 7775
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7776
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7777
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7778
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7779
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7780
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7781
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7782
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7783
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 7785
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7786
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18019,27 +16224,22 @@
 
     move v0, p0
 
-    .line 7998
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 7999
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 8000
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p2
 
-    .line 8001
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p3
 
-    .line 8002
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     const/4 v2, 0x0
@@ -18053,7 +16253,6 @@
     :cond_0
     move-object v3, p4
 
-    .line 8003
     :goto_0
     invoke-virtual {v1, v3}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18063,7 +16262,6 @@
 
     const/4 v0, 0x1
 
-    .line 8005
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
@@ -18076,7 +16274,6 @@
     :cond_2
     move-object v0, p5
 
-    .line 8007
     :goto_1
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18089,7 +16286,6 @@
     :cond_3
     move-object v0, p6
 
-    .line 8008
     :goto_2
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18102,7 +16298,6 @@
     :cond_4
     move-object v0, p7
 
-    .line 8009
     :goto_3
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18115,7 +16310,6 @@
     :cond_5
     move-object v0, p8
 
-    .line 8010
     :goto_4
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBooleanArray([Z)Landroid/util/StatsEvent$Builder;
 
@@ -18128,7 +16322,6 @@
     :cond_6
     move-object v0, p9
 
-    .line 8011
     :goto_5
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18141,7 +16334,6 @@
     :cond_7
     move-object v0, p10
 
-    .line 8012
     :goto_6
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18154,7 +16346,6 @@
     :cond_8
     move-object v0, p11
 
-    .line 8013
     :goto_7
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18167,7 +16358,6 @@
     :cond_9
     move-object/from16 v0, p12
 
-    .line 8014
     :goto_8
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18180,7 +16370,6 @@
     :cond_a
     move-object/from16 v0, p13
 
-    .line 8015
     :goto_9
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18193,7 +16382,6 @@
     :cond_b
     move-object/from16 v0, p14
 
-    .line 8016
     :goto_a
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18206,13 +16394,11 @@
     :cond_c
     move-object/from16 v0, p15
 
-    .line 8017
     :goto_b
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 8018
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     if-nez p17, :cond_d
@@ -18224,7 +16410,6 @@
     :cond_d
     move-object/from16 v0, p17
 
-    .line 8019
     :goto_c
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -18237,13 +16422,11 @@
     :cond_e
     move-object/from16 v0, p18
 
-    .line 8020
     :goto_d
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p19
 
-    .line 8021
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p20, :cond_f
@@ -18255,14 +16438,11 @@
     :cond_f
     move-object/from16 v0, p20
 
-    .line 8022
     :goto_e
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBooleanArray([Z)Landroid/util/StatsEvent$Builder;
 
-    .line 8024
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 8025
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -18275,18 +16455,14 @@
 .method public static write(III[IJ[I)V
     .locals 1
 
-    .line 9034
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9035
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9036
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9037
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x0
@@ -18295,7 +16471,6 @@
 
     new-array p3, p1, [I
 
-    .line 9038
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18305,10 +16480,8 @@
 
     const/4 p0, 0x1
 
-    .line 9040
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9042
     :cond_1
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
@@ -18316,14 +16489,11 @@
 
     new-array p6, p1, [I
 
-    .line 9043
     :cond_2
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 9045
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9046
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18336,18 +16506,14 @@
 .method public static write(III[I[I[I)V
     .locals 1
 
-    .line 9050
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9051
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9052
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9053
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x0
@@ -18356,7 +16522,6 @@
 
     new-array p3, p1, [I
 
-    .line 9054
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18366,7 +16531,6 @@
 
     const/4 p0, 0x1
 
-    .line 9056
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
@@ -18374,7 +16538,6 @@
 
     new-array p4, p1, [I
 
-    .line 9058
     :cond_2
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18382,14 +16545,11 @@
 
     new-array p5, p1, [I
 
-    .line 9059
     :cond_3
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 9061
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9062
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18402,24 +16562,18 @@
 .method public static write(IIJ)V
     .locals 1
 
-    .line 9066
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9067
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9068
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9069
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9071
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9072
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18432,27 +16586,20 @@
 .method public static write(IIJI)V
     .locals 1
 
-    .line 9076
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9077
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9078
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9079
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9080
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9082
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9083
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18465,15 +16612,12 @@
 .method public static write(IIJII)V
     .locals 1
 
-    .line 9087
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9088
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9089
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0xe4
@@ -18482,23 +16626,17 @@
 
     const/4 p0, 0x1
 
-    .line 9091
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9093
     :cond_0
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9094
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9095
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9097
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9098
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18511,33 +16649,24 @@
 .method public static write(IIJIII)V
     .locals 1
 
-    .line 9102
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9103
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9104
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9105
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9106
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9107
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9108
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9110
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9111
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18550,15 +16679,12 @@
 .method public static write(IIJIIIII)V
     .locals 1
 
-    .line 9115
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9116
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9117
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x245
@@ -18567,32 +16693,23 @@
 
     const/4 p0, 0x1
 
-    .line 9119
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9121
     :cond_0
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9122
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9123
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9124
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9125
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9126
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9128
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9129
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18605,27 +16722,20 @@
 .method public static write(IIJJ)V
     .locals 1
 
-    .line 9133
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9134
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9135
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9136
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9137
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9139
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9140
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18638,15 +16748,12 @@
 .method public static write(IIJJI)V
     .locals 2
 
-    .line 9144
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9145
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9146
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x12a
@@ -18655,7 +16762,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 9148
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -18663,7 +16769,6 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 9151
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
@@ -18671,7 +16776,6 @@
 
     if-ne p1, p0, :cond_2
 
-    .line 9154
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_2
@@ -18679,23 +16783,17 @@
 
     if-ne p1, p0, :cond_3
 
-    .line 9157
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9159
     :cond_3
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9160
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9161
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9163
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9164
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18708,30 +16806,22 @@
 .method public static write(IIJJJ)V
     .locals 1
 
-    .line 9168
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9169
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9170
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9171
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9172
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9173
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9175
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9176
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18744,42 +16834,30 @@
 .method public static write(IIJJJJJJI)V
     .locals 1
 
-    .line 9180
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9181
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9182
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9183
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9184
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9185
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9186
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9187
     invoke-virtual {v0, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9188
     invoke-virtual {v0, p12, p13}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9189
     invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9191
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9192
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -18794,17 +16872,14 @@
 
     move v0, p0
 
-    .line 9246
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9247
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9248
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x2ac
@@ -18813,123 +16888,99 @@
 
     const/4 v0, 0x1
 
-    .line 9250
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-wide v2, p2
 
-    .line 9252
     invoke-virtual {v1, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p4
 
-    .line 9253
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 9254
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 9255
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p7
 
-    .line 9256
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 9257
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 9258
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 9259
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 9260
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p12
 
-    .line 9261
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 9262
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p14
 
-    .line 9263
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p16
 
-    .line 9264
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p18
 
-    .line 9265
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p20
 
-    .line 9266
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p22
 
-    .line 9267
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p24
 
-    .line 9268
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p26
 
-    .line 9269
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p28
 
-    .line 9270
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p29
 
-    .line 9271
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p30
 
-    .line 9272
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p31
 
-    .line 9273
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p33
 
-    .line 9274
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     const/4 v0, 0x0
@@ -18943,7 +16994,6 @@
     :cond_1
     move-object/from16 v2, p34
 
-    .line 9275
     :goto_0
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18956,7 +17006,6 @@
     :cond_2
     move-object/from16 v2, p35
 
-    .line 9276
     :goto_1
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18969,7 +17018,6 @@
     :cond_3
     move-object/from16 v2, p36
 
-    .line 9277
     :goto_2
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -18982,18 +17030,15 @@
     :cond_4
     move-object/from16 v2, p37
 
-    .line 9278
     :goto_3
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p38
 
-    .line 9279
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p40
 
-    .line 9280
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     if-nez p41, :cond_5
@@ -19005,7 +17050,6 @@
     :cond_5
     move-object/from16 v2, p41
 
-    .line 9281
     :goto_4
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -19018,14 +17062,11 @@
     :cond_6
     move-object/from16 v0, p42
 
-    .line 9282
     :goto_5
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 9284
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9285
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -19040,17 +17081,14 @@
 
     move v0, p0
 
-    .line 9196
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9197
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9198
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x281
@@ -19059,89 +17097,71 @@
 
     const/4 v0, 0x1
 
-    .line 9200
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-wide v2, p2
 
-    .line 9202
     invoke-virtual {v1, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p4
 
-    .line 9203
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 9204
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 9205
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v0, p7
 
-    .line 9206
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 9207
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 9208
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 9209
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 9210
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p12
 
-    .line 9211
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 9212
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 9213
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 9214
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 9215
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 9216
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9218
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9219
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -19156,17 +17176,14 @@
 
     move v0, p0
 
-    .line 9223
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9224
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9225
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x282
@@ -19175,69 +17192,55 @@
 
     const/4 v0, 0x1
 
-    .line 9227
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-wide v2, p2
 
-    .line 9229
     invoke-virtual {v1, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p4
 
-    .line 9230
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 9231
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 9232
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v0, p7
 
-    .line 9233
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 9234
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 9235
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 9236
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 9237
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p12
 
-    .line 9238
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p14
 
-    .line 9239
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9241
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9242
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -19250,15 +17253,12 @@
 .method public static write(IILjava/lang/String;)V
     .locals 1
 
-    .line 9299
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9300
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9301
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x277
@@ -19267,17 +17267,13 @@
 
     const/4 p0, 0x1
 
-    .line 9303
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9305
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9307
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9308
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19290,15 +17286,12 @@
 .method public static write(IILjava/lang/String;I)V
     .locals 2
 
-    .line 9335
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9336
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9337
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x1c
@@ -19307,7 +17300,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 9339
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -19315,20 +17307,15 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 9342
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9344
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9345
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9347
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9348
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19341,30 +17328,22 @@
 .method public static write(IILjava/lang/String;II)V
     .locals 1
 
-    .line 9424
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9425
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9426
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9427
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9428
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9429
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9431
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9432
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19377,15 +17356,12 @@
 .method public static write(IILjava/lang/String;IIIIIZ)V
     .locals 1
 
-    .line 9449
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9450
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9451
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x175
@@ -19394,35 +17370,25 @@
 
     const/4 p0, 0x1
 
-    .line 9453
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9455
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9456
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9457
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9458
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9459
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9460
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9461
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9463
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9464
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19435,27 +17401,20 @@
 .method public static write(IILjava/lang/String;IILjava/lang/String;[B)V
     .locals 1
 
-    .line 9468
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9469
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9470
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9471
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9472
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9473
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9474
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     if-nez p6, :cond_0
@@ -19464,14 +17423,11 @@
 
     new-array p6, p0, [B
 
-    .line 9475
     :cond_0
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 9477
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9478
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19484,33 +17440,24 @@
 .method public static write(IILjava/lang/String;IIZ)V
     .locals 1
 
-    .line 9436
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9437
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9438
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9439
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9440
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9441
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9442
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9444
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9445
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19525,17 +17472,14 @@
 
     move v0, p0
 
-    .line 9482
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9483
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9484
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x33
@@ -19544,94 +17488,75 @@
 
     const/4 v0, 0x1
 
-    .line 9486
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 9488
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p3
 
-    .line 9489
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p4
 
-    .line 9490
     invoke-virtual {v1, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 9491
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p8
 
-    .line 9492
     invoke-virtual {v1, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p10
 
-    .line 9493
     invoke-virtual {v1, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p12
 
-    .line 9494
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p14
 
-    .line 9495
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 9496
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 9497
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 9498
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p19
 
-    .line 9499
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 9500
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 9501
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 9502
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p23
 
-    .line 9503
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9505
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9506
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -19644,110 +17569,88 @@
 .method public static write(IILjava/lang/String;IJJJJJJJJJIJIIJJ)V
     .locals 3
 
-    .line 9510
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 9511
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 9512
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p2
 
-    .line 9513
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 9514
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p4
 
-    .line 9515
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p6
 
-    .line 9516
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p8
 
-    .line 9517
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p10
 
-    .line 9518
     invoke-virtual {v0, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p12
 
-    .line 9519
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p14
 
-    .line 9520
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p16
 
-    .line 9521
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p18
 
-    .line 9522
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p20
 
-    .line 9523
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p22
 
-    .line 9524
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p23
 
-    .line 9525
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p25
 
-    .line 9526
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p26
 
-    .line 9527
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p27
 
-    .line 9528
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p29
 
-    .line 9529
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9531
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9532
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -19760,15 +17663,12 @@
 .method public static write(IILjava/lang/String;ILjava/lang/String;)V
     .locals 1
 
-    .line 9536
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9537
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9538
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x31
@@ -19777,23 +17677,17 @@
 
     const/4 p0, 0x1
 
-    .line 9540
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9542
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9543
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9544
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9546
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9547
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19806,51 +17700,36 @@
 .method public static write(IILjava/lang/String;ILjava/lang/String;IIZIIIZ)V
     .locals 1
 
-    .line 9606
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9607
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9608
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9609
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9610
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9611
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9612
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9613
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9614
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9615
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9616
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9617
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9618
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9620
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9621
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19863,15 +17742,12 @@
 .method public static write(IILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
     .locals 1
 
-    .line 9661
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9662
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9663
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2c
@@ -19880,38 +17756,27 @@
 
     const/4 p0, 0x1
 
-    .line 9665
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9667
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9668
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9669
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9670
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9671
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9672
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9673
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9674
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9676
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9677
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -19926,17 +17791,14 @@
 
     move v0, p0
 
-    .line 9625
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9626
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9627
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x30
@@ -19945,134 +17807,107 @@
 
     const/4 v0, 0x1
 
-    .line 9629
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 9631
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p3
 
-    .line 9632
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p4
 
-    .line 9633
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p5
 
-    .line 9634
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 9635
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p7
 
-    .line 9636
     invoke-virtual {v1, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 9637
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 9638
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 9639
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p12
 
-    .line 9640
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 9641
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v0, p14
 
-    .line 9642
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 9643
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p16
 
-    .line 9644
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p17
 
-    .line 9645
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p18
 
-    .line 9646
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p19
 
-    .line 9647
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 9648
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 9649
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 9650
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p23
 
-    .line 9651
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p25
 
-    .line 9652
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p26
 
-    .line 9653
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p27
 
-    .line 9654
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9656
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9657
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -20085,15 +17920,12 @@
 .method public static write(IILjava/lang/String;ILjava/lang/String;ZILjava/lang/String;Ljava/lang/String;IIIZI)V
     .locals 2
 
-    .line 9551
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9552
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9553
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -20102,62 +17934,45 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 9555
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9557
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9558
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_1
 
-    .line 9560
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9562
     :cond_1
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9563
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9564
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v1, p0, :cond_2
 
-    .line 9566
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9568
     :cond_2
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9569
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9570
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9571
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9572
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9573
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9574
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9576
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9577
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -20172,17 +17987,14 @@
 
     move v0, p0
 
-    .line 9581
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9582
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9583
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x32
@@ -20191,79 +18003,63 @@
 
     const/4 v0, 0x1
 
-    .line 9585
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 9587
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p3
 
-    .line 9588
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p4
 
-    .line 9589
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 9590
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p6
 
-    .line 9591
     invoke-virtual {v1, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 9592
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 9593
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 9594
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p11
 
-    .line 9595
     invoke-virtual {v1, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p12
 
-    .line 9596
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 9597
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 9598
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p15
 
-    .line 9599
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9601
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9602
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -20276,15 +18072,12 @@
 .method public static write(IILjava/lang/String;IZ)V
     .locals 1
 
-    .line 9352
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9353
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9354
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0xb2
@@ -20293,23 +18086,17 @@
 
     const/4 p0, 0x1
 
-    .line 9356
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9358
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9359
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9360
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9362
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9363
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -20324,17 +18111,14 @@
 
     move v0, p0
 
-    .line 9367
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9368
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9369
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v2, 0x1
@@ -20343,114 +18127,92 @@
 
     if-ne v3, v0, :cond_0
 
-    .line 9371
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v4, p2
 
-    .line 9373
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v4, p3
 
-    .line 9374
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v4, p4
 
-    .line 9375
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v4, p5
 
-    .line 9376
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v4, p6
 
-    .line 9377
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v4, p7
 
-    .line 9378
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v4, p8
 
-    .line 9379
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v4, p9
 
-    .line 9380
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v4, p10
 
-    .line 9381
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p11
 
-    .line 9382
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p12
 
-    .line 9383
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p13
 
-    .line 9384
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p14
 
-    .line 9385
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p15
 
-    .line 9386
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p16
 
-    .line 9387
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p17
 
-    .line 9388
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p18
 
-    .line 9389
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p19
 
-    .line 9390
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v3, v0, :cond_1
 
-    .line 9392
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
     move/from16 v0, p20
 
-    .line 9394
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 9395
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v0, 0x0
@@ -20464,7 +18226,6 @@
     :cond_2
     move-object/from16 v2, p22
 
-    .line 9396
     :goto_0
     invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -20477,44 +18238,35 @@
     :cond_3
     move-object/from16 v0, p23
 
-    .line 9397
     :goto_1
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeLongArray([J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p24
 
-    .line 9398
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p25
 
-    .line 9399
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p26
 
-    .line 9400
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p27
 
-    .line 9401
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p28
 
-    .line 9402
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p30
 
-    .line 9403
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9405
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9406
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -20527,27 +18279,20 @@
 .method public static write(IILjava/lang/String;IZJ[B)V
     .locals 1
 
-    .line 9410
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9411
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9412
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9413
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9414
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9415
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9416
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     if-nez p7, :cond_0
@@ -20556,14 +18301,11 @@
 
     new-array p7, p0, [B
 
-    .line 9417
     :cond_0
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 9419
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9420
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -20578,27 +18320,22 @@
 
     move v0, p0
 
-    .line 9681
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9682
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9683
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v2, p2
 
-    .line 9684
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v2, p3
 
-    .line 9685
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v2, 0x1
@@ -20607,7 +18344,6 @@
 
     if-ne v3, v0, :cond_0
 
-    .line 9687
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -20622,7 +18358,6 @@
     :cond_1
     move-object v5, p4
 
-    .line 9689
     :goto_0
     invoke-virtual {v1, v5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -20635,7 +18370,6 @@
     :cond_2
     move-object v5, p5
 
-    .line 9690
     :goto_1
     invoke-virtual {v1, v5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -20648,7 +18382,6 @@
     :cond_3
     move-object v5, p6
 
-    .line 9691
     :goto_2
     invoke-virtual {v1, v5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -20661,28 +18394,23 @@
     :cond_4
     move-object v5, p7
 
-    .line 9692
     :goto_3
     invoke-virtual {v1, v5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move v5, p8
 
-    .line 9693
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v5, p9
 
-    .line 9694
     invoke-virtual {v1, v5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v5, p10
 
-    .line 9695
     invoke-virtual {v1, v5, v6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v5, p12
 
-    .line 9696
     invoke-virtual {v1, v5, v6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     if-nez p14, :cond_5
@@ -20694,7 +18422,6 @@
     :cond_5
     move-object/from16 v5, p14
 
-    .line 9697
     :goto_4
     invoke-virtual {v1, v5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -20707,91 +18434,73 @@
     :cond_6
     move-object/from16 v4, p15
 
-    .line 9698
     :goto_5
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeLongArray([J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v4, p16
 
-    .line 9699
     invoke-virtual {v1, v4, v5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p18
 
-    .line 9700
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v4, p19
 
-    .line 9701
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v3, v0, :cond_7
 
-    .line 9703
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_7
     move/from16 v4, p20
 
-    .line 9705
     invoke-virtual {v1, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v3, v0, :cond_8
 
-    .line 9707
     invoke-virtual {v1, v2, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_8
     move/from16 v0, p21
 
-    .line 9709
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 9710
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p23
 
-    .line 9711
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p24
 
-    .line 9712
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p25
 
-    .line 9713
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p26
 
-    .line 9714
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p27
 
-    .line 9715
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p28
 
-    .line 9716
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p29
 
-    .line 9717
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9719
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9720
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -20804,15 +18513,12 @@
 .method public static write(IILjava/lang/String;J)V
     .locals 4
 
-    .line 9724
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9725
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9726
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -20823,17 +18529,14 @@
 
     const/4 v2, 0x4
 
-    .line 9728
     invoke-virtual {v0, v2, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x8
 
     const/4 v3, 0x0
 
-    .line 9729
     invoke-virtual {v0, v2, v3}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9731
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -20841,17 +18544,13 @@
 
     const/4 p0, 0x3
 
-    .line 9733
     invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9735
     :cond_1
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9737
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9738
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -20864,15 +18563,12 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 9742
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9743
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9744
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x64
@@ -20881,20 +18577,15 @@
 
     const/4 p0, 0x1
 
-    .line 9746
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9748
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9749
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9751
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9752
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -20907,15 +18598,12 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;I)V
     .locals 2
 
-    .line 9756
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9757
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9758
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x2a
@@ -20924,7 +18612,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 9760
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -20932,7 +18619,6 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 9763
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
@@ -20940,23 +18626,17 @@
 
     if-ne p1, p0, :cond_2
 
-    .line 9766
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9768
     :cond_2
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9769
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9770
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9772
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9773
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -20969,15 +18649,12 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;II)V
     .locals 1
 
-    .line 9777
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9778
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9779
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x50
@@ -20986,26 +18663,19 @@
 
     const/4 p0, 0x1
 
-    .line 9781
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9783
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9784
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9785
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9786
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9788
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9789
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21018,54 +18688,38 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;IIIIIIIII)V
     .locals 1
 
-    .line 9793
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9794
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9795
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9796
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9797
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9798
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9799
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9800
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9801
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9802
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9803
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9804
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9805
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9806
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9808
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9809
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21078,33 +18732,24 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;IJ)V
     .locals 1
 
-    .line 9813
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9814
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9815
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9816
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9817
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9818
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9819
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9821
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9822
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21119,17 +18764,14 @@
 
     move v0, p0
 
-    .line 9826
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9827
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9828
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x4e
@@ -21138,119 +18780,95 @@
 
     const/4 v0, 0x1
 
-    .line 9830
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 9832
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p3
 
-    .line 9833
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p4
 
-    .line 9834
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p5
 
-    .line 9835
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 9836
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p7
 
-    .line 9837
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p8
 
-    .line 9838
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 9839
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 9840
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p11
 
-    .line 9841
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 9842
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 9843
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 9844
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p16
 
-    .line 9845
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p18
 
-    .line 9846
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 9847
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 9848
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 9849
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p23
 
-    .line 9850
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p25
 
-    .line 9851
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p26
 
-    .line 9852
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9854
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9855
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -21263,30 +18881,22 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;J)V
     .locals 1
 
-    .line 9859
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9860
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9861
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9862
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9863
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9864
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9866
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9867
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21299,33 +18909,24 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;JJ)V
     .locals 1
 
-    .line 9871
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9872
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9873
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9874
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9875
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9876
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9877
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9879
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9880
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21338,75 +18939,60 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;JJJIJJII)V
     .locals 3
 
-    .line 9884
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 9885
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p1
 
-    .line 9886
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p2
 
-    .line 9887
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p3
 
-    .line 9888
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p4
 
-    .line 9889
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p6
 
-    .line 9890
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p8
 
-    .line 9891
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 9892
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p11
 
-    .line 9893
     invoke-virtual {v0, p11, p12}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p13
 
-    .line 9894
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 9895
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 9896
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9898
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9899
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -21419,15 +19005,12 @@
 .method public static write(IILjava/lang/String;Ljava/lang/String;JJJJJ)V
     .locals 1
 
-    .line 9903
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9904
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9905
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x37
@@ -21436,35 +19019,25 @@
 
     const/4 p0, 0x1
 
-    .line 9907
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9909
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9910
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 9911
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9912
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9913
     invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9914
     invoke-virtual {v0, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9915
     invoke-virtual {v0, p12, p13}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9917
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9918
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21479,17 +19052,14 @@
 
     move v0, p0
 
-    .line 9922
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v1
 
-    .line 9923
     invoke-virtual {v1, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p1
 
-    .line 9924
     invoke-virtual {v1, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v2, 0x4f
@@ -21498,119 +19068,95 @@
 
     const/4 v0, 0x1
 
-    .line 9926
     invoke-virtual {v1, v0, v0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
     move-object v0, p2
 
-    .line 9928
     invoke-virtual {v1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p3
 
-    .line 9929
     invoke-virtual {v1, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p4
 
-    .line 9930
     invoke-virtual {v1, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p5
 
-    .line 9931
     invoke-virtual {v1, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p6
 
-    .line 9932
     invoke-virtual {v1, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v0, p7
 
-    .line 9933
     invoke-virtual {v1, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v0, p8
 
-    .line 9934
     invoke-virtual {v1, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v0, p9
 
-    .line 9935
     invoke-virtual {v1, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v0, p10
 
-    .line 9936
     invoke-virtual {v1, p10}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p11
 
-    .line 9937
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p13
 
-    .line 9938
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p14
 
-    .line 9939
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p15
 
-    .line 9940
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p16
 
-    .line 9941
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p18
 
-    .line 9942
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p20
 
-    .line 9943
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p21
 
-    .line 9944
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p22
 
-    .line 9945
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p23
 
-    .line 9946
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v0, p25
 
-    .line 9947
     invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p26
 
-    .line 9948
     invoke-virtual {v1, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9950
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9951
     invoke-virtual {v1}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -21623,15 +19169,12 @@
 .method public static write(IILjava/lang/String;ZI)V
     .locals 3
 
-    .line 9312
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9313
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9314
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x3
@@ -21642,47 +19185,37 @@
 
     if-ne v2, p0, :cond_0
 
-    .line 9316
     invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9317
     invoke-virtual {v0, p1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9319
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     if-ne v2, p0, :cond_1
 
-    .line 9321
     invoke-virtual {v0, p1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9323
     :cond_1
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9324
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne v2, p0, :cond_2
 
     const/4 p0, 0x4
 
-    .line 9326
     invoke-virtual {v0, p0, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     const/16 p0, 0x8
 
     const/4 p1, 0x0
 
-    .line 9327
     invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9330
     :cond_2
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9331
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21695,15 +19228,12 @@
 .method public static write(IIZ)V
     .locals 1
 
-    .line 7656
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7657
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7658
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x15e
@@ -21714,24 +19244,19 @@
 
     const/4 p1, 0x1
 
-    .line 7660
     invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     const/16 p0, 0x8
 
     const/4 p1, 0x0
 
-    .line 7661
     invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7663
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7665
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7666
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21744,21 +19269,16 @@
 .method public static write(IIZI)V
     .locals 1
 
-    .line 7690
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7691
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7692
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7693
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7694
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x1ae
@@ -21767,14 +19287,11 @@
 
     const/4 p0, 0x1
 
-    .line 7696
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7699
     :cond_0
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7700
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21787,15 +19304,12 @@
 .method public static write(IIZZZZZIZI)V
     .locals 1
 
-    .line 7670
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7671
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7672
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x170
@@ -21804,38 +19318,27 @@
 
     const/4 p0, 0x1
 
-    .line 7674
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7676
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7677
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7678
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7679
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7680
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7681
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7682
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7683
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7685
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7686
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21848,15 +19351,12 @@
 .method public static write(II[I[I[I[IIIZZ)V
     .locals 1
 
-    .line 9955
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9956
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9957
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x22a
@@ -21865,7 +19365,6 @@
 
     const/4 p0, 0x1
 
-    .line 9959
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -21875,7 +19374,6 @@
 
     new-array p2, p0, [I
 
-    .line 9961
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -21883,7 +19381,6 @@
 
     new-array p3, p0, [I
 
-    .line 9962
     :cond_2
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -21891,7 +19388,6 @@
 
     new-array p4, p0, [I
 
-    .line 9963
     :cond_3
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -21899,26 +19395,19 @@
 
     new-array p5, p0, [I
 
-    .line 9964
     :cond_4
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 9965
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9966
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9967
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9968
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 9970
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9971
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21931,15 +19420,12 @@
 .method public static write(IJ)V
     .locals 1
 
-    .line 9975
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9976
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9977
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x41
@@ -21950,14 +19436,11 @@
 
     const/4 p1, 0x1
 
-    .line 9979
     invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 9982
     :cond_0
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9983
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -21970,24 +19453,18 @@
 .method public static write(IJI)V
     .locals 1
 
-    .line 9987
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9988
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9989
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 9990
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9992
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 9993
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22000,27 +19477,20 @@
 .method public static write(IJII)V
     .locals 1
 
-    .line 9997
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 9998
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 9999
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10000
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10001
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10003
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10004
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22033,33 +19503,24 @@
 .method public static write(IJIIII)V
     .locals 1
 
-    .line 10008
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10009
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10010
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10011
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10012
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10013
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10014
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10016
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10017
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22072,36 +19533,26 @@
 .method public static write(IJIIIII)V
     .locals 1
 
-    .line 10021
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10022
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10023
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10024
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10025
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10026
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10027
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10028
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10030
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10031
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22114,42 +19565,30 @@
 .method public static write(IJIIIIIIJ)V
     .locals 1
 
-    .line 10035
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10036
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10037
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10038
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10039
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10040
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10041
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10042
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10043
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10044
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10046
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10047
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22162,84 +19601,68 @@
 .method public static write(IJILjava/lang/String;ILjava/lang/String;IZIIIJJZI[B[B[B[B[BLjava/lang/String;IJIIZ)V
     .locals 3
 
-    .line 10051
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 10052
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p1
 
-    .line 10053
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v1, p3
 
-    .line 10054
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p4
 
-    .line 10055
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 10056
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p6
 
-    .line 10057
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v1, p7
 
-    .line 10058
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p8
 
-    .line 10059
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p9
 
-    .line 10060
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 10061
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 10062
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p12
 
-    .line 10063
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p14
 
-    .line 10064
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 10065
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 10066
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x0
@@ -22253,7 +19676,6 @@
     :cond_0
     move-object/from16 v2, p18
 
-    .line 10067
     :goto_0
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -22266,7 +19688,6 @@
     :cond_1
     move-object/from16 v2, p19
 
-    .line 10068
     :goto_1
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -22279,7 +19700,6 @@
     :cond_2
     move-object/from16 v2, p20
 
-    .line 10069
     :goto_2
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -22292,7 +19712,6 @@
     :cond_3
     move-object/from16 v2, p21
 
-    .line 10070
     :goto_3
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
@@ -22305,44 +19724,35 @@
     :cond_4
     move-object/from16 v1, p22
 
-    .line 10071
     :goto_4
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v1, p23
 
-    .line 10072
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p24
 
-    .line 10073
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p25
 
-    .line 10074
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p27
 
-    .line 10075
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p28
 
-    .line 10076
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p29
 
-    .line 10077
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10079
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10080
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -22355,24 +19765,18 @@
 .method public static write(IJJ)V
     .locals 1
 
-    .line 10084
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10085
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10086
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10087
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10089
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10090
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22385,21 +19789,16 @@
 .method public static write(IJJI)V
     .locals 1
 
-    .line 10094
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10095
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10096
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10097
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10098
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x284
@@ -22408,14 +19807,11 @@
 
     const/4 p0, 0x1
 
-    .line 10100
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10103
     :cond_0
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10104
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22428,24 +19824,18 @@
 .method public static write(IJJII)V
     .locals 1
 
-    .line 10120
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10121
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10122
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10123
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10124
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10125
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x292
@@ -22454,14 +19844,11 @@
 
     const/4 p0, 0x1
 
-    .line 10127
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10130
     :cond_0
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10131
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22474,30 +19861,22 @@
 .method public static write(IJJIZ)V
     .locals 1
 
-    .line 10108
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10109
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10110
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10111
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10112
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10113
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10115
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10116
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -22510,115 +19889,92 @@
 .method public static write(IJJJJJJJJJJJJJJJJIII)V
     .locals 3
 
-    .line 10135
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 10136
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p1
 
-    .line 10137
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p3
 
-    .line 10138
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p5
 
-    .line 10139
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p7
 
-    .line 10140
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p9
 
-    .line 10141
     invoke-virtual {v0, p9, p10}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p11
 
-    .line 10142
     invoke-virtual {v0, p11, p12}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p13
 
-    .line 10143
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p15
 
-    .line 10144
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p17
 
-    .line 10145
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p19
 
-    .line 10146
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p21
 
-    .line 10147
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p23
 
-    .line 10148
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p25
 
-    .line 10149
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p27
 
-    .line 10150
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p29
 
-    .line 10151
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p31
 
-    .line 10152
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p33
 
-    .line 10153
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p34
 
-    .line 10154
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p35
 
-    .line 10155
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10157
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10158
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -22631,405 +19987,324 @@
 .method public static write(IJLjava/lang/String;JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIIIIIILjava/lang/String;JJJJJIILjava/lang/String;IJJLjava/lang/String;IIJJJJJIFFFIIIIIIIIIIIIIIIIIIIIIIIIJIIIIIIIIII)V
     .locals 3
 
-    .line 10162
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 10163
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p1
 
-    .line 10164
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p3
 
-    .line 10165
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p4
 
-    .line 10166
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p6
 
-    .line 10167
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p8
 
-    .line 10168
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p9
 
-    .line 10169
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p10
 
-    .line 10170
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 10171
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 10172
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p13
 
-    .line 10173
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 10174
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 10175
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 10176
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 10177
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p18
 
-    .line 10178
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p19
 
-    .line 10179
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p20
 
-    .line 10180
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p21
 
-    .line 10181
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v1, p22
 
-    .line 10182
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p23
 
-    .line 10183
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p25
 
-    .line 10184
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p27
 
-    .line 10185
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p29
 
-    .line 10186
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p31
 
-    .line 10187
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p33
 
-    .line 10188
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p34
 
-    .line 10189
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v1, p35
 
-    .line 10190
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p36
 
-    .line 10191
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p37
 
-    .line 10192
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p39
 
-    .line 10193
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v1, p41
 
-    .line 10194
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p42
 
-    .line 10195
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p43
 
-    .line 10196
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p44
 
-    .line 10197
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p46
 
-    .line 10198
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p48
 
-    .line 10199
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p50
 
-    .line 10200
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p52
 
-    .line 10201
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p54
 
-    .line 10202
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p55
 
-    .line 10203
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p56
 
-    .line 10204
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p57
 
-    .line 10205
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p58
 
-    .line 10206
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p59
 
-    .line 10207
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p60
 
-    .line 10208
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p61
 
-    .line 10209
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p62
 
-    .line 10210
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p63
 
-    .line 10211
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p64
 
-    .line 10212
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p65
 
-    .line 10213
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p66
 
-    .line 10214
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p67
 
-    .line 10215
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p68
 
-    .line 10216
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p69
 
-    .line 10217
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p70
 
-    .line 10218
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p71
 
-    .line 10219
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p72
 
-    .line 10220
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p73
 
-    .line 10221
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p74
 
-    .line 10222
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p75
 
-    .line 10223
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p76
 
-    .line 10224
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p77
 
-    .line 10225
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p78
 
-    .line 10226
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p79
 
-    .line 10227
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p80
 
-    .line 10228
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p81
 
-    .line 10229
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p82
 
-    .line 10230
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p84
 
-    .line 10231
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p85
 
-    .line 10232
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p86
 
-    .line 10233
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p87
 
-    .line 10234
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p88
 
-    .line 10235
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p89
 
-    .line 10236
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p90
 
-    .line 10237
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p91
 
-    .line 10238
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p92
 
-    .line 10239
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p93
 
-    .line 10240
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10242
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10243
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -23044,7 +20319,6 @@
 
     const/4 v0, 0x0
 
-    .line 11919
     :goto_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
@@ -23052,7 +20326,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 11920
     invoke-virtual {p1, v0}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v1
@@ -23067,7 +20340,6 @@
 
     goto :goto_0
 
-    .line 11922
     :cond_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23075,7 +20347,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 11924
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -23093,7 +20364,6 @@
 
     check-cast v0, Landroid/os/WorkSource$WorkChain;
 
-    .line 11925
     invoke-virtual {v0}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v1
@@ -23115,7 +20385,6 @@
 
     const/4 v0, 0x0
 
-    .line 11931
     :goto_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
@@ -23123,7 +20392,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 11932
     invoke-virtual {p1, v0}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v1
@@ -23138,7 +20406,6 @@
 
     goto :goto_0
 
-    .line 11934
     :cond_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23146,7 +20413,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 11936
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -23164,7 +20430,6 @@
 
     check-cast v0, Landroid/os/WorkSource$WorkChain;
 
-    .line 11937
     invoke-virtual {v0}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v1
@@ -23188,7 +20453,6 @@
 
     const/4 v1, 0x0
 
-    .line 11943
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/WorkSource;->size()I
 
@@ -23196,7 +20460,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 11944
     invoke-virtual {v0, v1}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v4
@@ -23261,7 +20524,6 @@
 
     goto :goto_0
 
-    .line 11946
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23269,7 +20531,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11948
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -23287,7 +20548,6 @@
 
     check-cast v1, Landroid/os/WorkSource$WorkChain;
 
-    .line 11949
     invoke-virtual {v1}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v3
@@ -23359,7 +20619,6 @@
 
     const/4 v0, 0x0
 
-    .line 11955
     :goto_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
@@ -23367,7 +20626,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 11956
     invoke-virtual {p1, v0}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v3
@@ -23388,7 +20646,6 @@
 
     goto :goto_0
 
-    .line 11958
     :cond_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23396,7 +20653,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 11960
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -23414,7 +20670,6 @@
 
     check-cast v0, Landroid/os/WorkSource$WorkChain;
 
-    .line 11961
     invoke-virtual {v0}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v2
@@ -23442,7 +20697,6 @@
 
     const/4 v0, 0x0
 
-    .line 11967
     :goto_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
@@ -23450,7 +20704,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 11968
     invoke-virtual {p1, v0}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v3
@@ -23475,7 +20728,6 @@
 
     goto :goto_0
 
-    .line 11970
     :cond_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23483,7 +20735,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 11972
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -23501,7 +20752,6 @@
 
     check-cast v0, Landroid/os/WorkSource$WorkChain;
 
-    .line 11973
     invoke-virtual {v0}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v2
@@ -23535,7 +20785,6 @@
 
     const/4 v1, 0x0
 
-    .line 11979
     :goto_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
@@ -23543,7 +20792,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 11980
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v4
@@ -23570,7 +20818,6 @@
 
     goto :goto_0
 
-    .line 11982
     :cond_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23578,7 +20825,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11984
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -23596,7 +20842,6 @@
 
     check-cast v1, Landroid/os/WorkSource$WorkChain;
 
-    .line 11985
     invoke-virtual {v1}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v3
@@ -23630,7 +20875,6 @@
 
     const/4 v0, 0x0
 
-    .line 11991
     :goto_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
@@ -23638,7 +20882,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 11992
     invoke-virtual {p1, v0}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v1
@@ -23653,7 +20896,6 @@
 
     goto :goto_0
 
-    .line 11994
     :cond_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23661,7 +20903,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 11996
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -23679,7 +20920,6 @@
 
     check-cast v0, Landroid/os/WorkSource$WorkChain;
 
-    .line 11997
     invoke-virtual {v0}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v1
@@ -23701,7 +20941,6 @@
 
     const/4 v0, 0x0
 
-    .line 12003
     :goto_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
@@ -23709,7 +20948,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 12004
     invoke-virtual {p1, v0}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v3
@@ -23732,7 +20970,6 @@
 
     goto :goto_0
 
-    .line 12006
     :cond_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23740,7 +20977,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 12008
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -23758,7 +20994,6 @@
 
     check-cast v0, Landroid/os/WorkSource$WorkChain;
 
-    .line 12009
     invoke-virtual {v0}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v2
@@ -23790,7 +21025,6 @@
 
     const/4 v1, 0x0
 
-    .line 12015
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/WorkSource;->size()I
 
@@ -23798,7 +21032,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 12016
     invoke-virtual {v0, v1}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v4
@@ -23893,7 +21126,6 @@
 
     goto :goto_0
 
-    .line 12018
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -23901,7 +21133,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 12020
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -23919,7 +21150,6 @@
 
     check-cast v1, Landroid/os/WorkSource$WorkChain;
 
-    .line 12021
     invoke-virtual {v1}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v3
@@ -24021,7 +21251,6 @@
 
     const/4 v0, 0x0
 
-    .line 12027
     :goto_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
@@ -24029,7 +21258,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 12028
     invoke-virtual {p1, v0}, Landroid/os/WorkSource;->getUid(I)I
 
     move-result v3
@@ -24052,7 +21280,6 @@
 
     goto :goto_0
 
-    .line 12030
     :cond_0
     invoke-virtual {p1}, Landroid/os/WorkSource;->getWorkChains()Ljava/util/List;
 
@@ -24060,7 +21287,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 12032
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -24078,7 +21304,6 @@
 
     check-cast v0, Landroid/os/WorkSource$WorkChain;
 
-    .line 12033
     invoke-virtual {v0}, Landroid/os/WorkSource$WorkChain;->getUids()[I
 
     move-result-object v2
@@ -24106,21 +21331,16 @@
 .method public static write(ILjava/lang/String;)V
     .locals 1
 
-    .line 10280
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10281
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10282
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10284
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10285
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24133,24 +21353,18 @@
 .method public static write(ILjava/lang/String;I)V
     .locals 1
 
-    .line 10289
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10290
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10291
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10292
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10294
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10295
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24163,27 +21377,20 @@
 .method public static write(ILjava/lang/String;II)V
     .locals 1
 
-    .line 10328
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10329
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10330
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10331
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10332
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10334
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10335
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24196,30 +21403,22 @@
 .method public static write(ILjava/lang/String;IIF)V
     .locals 1
 
-    .line 10400
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10401
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10402
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10403
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10404
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10405
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 10407
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10408
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24232,21 +21431,16 @@
 .method public static write(ILjava/lang/String;III)V
     .locals 1
 
-    .line 10339
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10340
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10341
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10342
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10343
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p1, 0x1
@@ -24255,23 +21449,18 @@
 
     if-ne p2, p0, :cond_0
 
-    .line 10345
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10347
     :cond_0
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne p2, p0, :cond_1
 
-    .line 10349
     invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10352
     :cond_1
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10353
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24284,33 +21473,24 @@
 .method public static write(ILjava/lang/String;IIII)V
     .locals 1
 
-    .line 10372
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10373
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10374
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10375
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10376
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10377
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10378
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10380
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10381
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24323,39 +21503,28 @@
 .method public static write(ILjava/lang/String;IIIILjava/lang/String;I)V
     .locals 1
 
-    .line 10385
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10386
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10387
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10388
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10389
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10390
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10391
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10392
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10393
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10395
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10396
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24368,39 +21537,28 @@
 .method public static write(ILjava/lang/String;IIIZZI)V
     .locals 1
 
-    .line 10357
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10358
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10359
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10360
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10361
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10362
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10363
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10364
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10365
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10367
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10368
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24413,27 +21571,20 @@
 .method public static write(ILjava/lang/String;IJ)V
     .locals 1
 
-    .line 10412
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10413
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10414
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10415
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10416
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10418
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10419
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24446,57 +21597,40 @@
 .method public static write(ILjava/lang/String;ILjava/lang/String;IIIZIIZIILjava/lang/String;)V
     .locals 1
 
-    .line 10423
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10424
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10425
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10426
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10427
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10428
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10429
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10430
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10431
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10432
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10433
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10434
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10435
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10436
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10437
     invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10439
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10440
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24509,45 +21643,32 @@
 .method public static write(ILjava/lang/String;ILjava/lang/String;ILjava/lang/String;IZZZ)V
     .locals 1
 
-    .line 10444
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10445
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10446
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10447
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10448
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10449
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10450
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10451
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10452
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10453
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10454
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10456
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10457
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24560,27 +21681,20 @@
 .method public static write(ILjava/lang/String;IZ)V
     .locals 1
 
-    .line 10299
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10300
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10301
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10302
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10303
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10305
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10306
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24593,18 +21707,14 @@
 .method public static write(ILjava/lang/String;IZIZII)V
     .locals 1
 
-    .line 10310
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10311
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10312
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10313
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x1ad
@@ -24613,29 +21723,21 @@
 
     const/4 p0, 0x1
 
-    .line 10315
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 10317
     :cond_0
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10318
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10319
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10320
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10321
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10323
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10324
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24648,24 +21750,18 @@
 .method public static write(ILjava/lang/String;J)V
     .locals 1
 
-    .line 10461
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10462
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10463
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10464
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10466
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10467
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24678,27 +21774,20 @@
 .method public static write(ILjava/lang/String;JJ)V
     .locals 1
 
-    .line 10471
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10472
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10473
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10474
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10475
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10477
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10478
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24711,30 +21800,22 @@
 .method public static write(ILjava/lang/String;JJZ)V
     .locals 1
 
-    .line 10482
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10483
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10484
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10485
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10486
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10487
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10489
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10490
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24747,27 +21828,20 @@
 .method public static write(ILjava/lang/String;JLjava/lang/String;)V
     .locals 1
 
-    .line 10494
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10495
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10496
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10497
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10498
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10500
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10501
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24780,24 +21854,18 @@
 .method public static write(ILjava/lang/String;JLjava/lang/String;I[Ljava/lang/String;)V
     .locals 1
 
-    .line 10505
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10506
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10507
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10508
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10509
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10510
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p6, :cond_0
@@ -24806,14 +21874,11 @@
 
     new-array p6, p0, [Ljava/lang/String;
 
-    .line 10511
     :cond_0
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10513
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10514
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24826,24 +21891,18 @@
 .method public static write(ILjava/lang/String;JLjava/lang/String;I[Ljava/lang/String;ILjava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 10518
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10519
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10520
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10521
     invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10522
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10523
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -24852,37 +21911,28 @@
 
     new-array p6, p0, [Ljava/lang/String;
 
-    .line 10524
     :cond_0
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10525
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10526
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     if-nez p9, :cond_1
 
     new-array p9, p0, [Ljava/lang/String;
 
-    .line 10527
     :cond_1
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10528
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10529
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10530
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10532
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10533
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24895,24 +21945,18 @@
 .method public static write(ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 10537
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10538
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10539
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10540
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10542
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10543
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24925,51 +21969,36 @@
 .method public static write(ILjava/lang/String;Ljava/lang/String;IIIIFFZZZ)V
     .locals 1
 
-    .line 10547
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10548
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10549
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10550
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10551
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10552
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10553
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10554
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10555
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 10556
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 10557
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10558
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10559
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10561
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10562
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -24982,39 +22011,28 @@
 .method public static write(ILjava/lang/String;Ljava/lang/String;JLjava/lang/String;IZZ)V
     .locals 1
 
-    .line 10566
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10567
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10568
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10569
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10570
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10571
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10572
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10573
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10574
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10576
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10577
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25027,42 +22045,30 @@
 .method public static write(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZII)V
     .locals 1
 
-    .line 10581
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10582
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10583
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10584
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10585
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10586
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10587
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10588
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 10589
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10590
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10592
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10593
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25075,15 +22081,12 @@
 .method public static write(ILjava/lang/String;[I)V
     .locals 1
 
-    .line 10597
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10598
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10599
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     if-nez p2, :cond_0
@@ -25092,14 +22095,11 @@
 
     new-array p2, p0, [I
 
-    .line 10600
     :cond_0
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 10602
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10603
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25112,15 +22112,12 @@
 .method public static write(IZ)V
     .locals 3
 
-    .line 7515
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7516
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7517
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x244
@@ -25131,7 +22128,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 7519
     invoke-virtual {v0, v2, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -25139,14 +22135,11 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 7522
     invoke-virtual {v0, v2, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7525
     :cond_1
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7526
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25159,27 +22152,20 @@
 .method public static write(IZII)V
     .locals 1
 
-    .line 7543
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7544
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7545
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7546
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7547
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7549
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7550
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25192,39 +22178,28 @@
 .method public static write(IZIIIIII)V
     .locals 1
 
-    .line 7554
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7555
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7556
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7557
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7558
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7559
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7560
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7561
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7562
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7564
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7565
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25237,30 +22212,22 @@
 .method public static write(IZLjava/lang/String;JIJI)V
     .locals 1
 
-    .line 7569
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7570
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7571
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7572
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7573
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 7574
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7575
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 7576
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     const/16 p1, 0x107
@@ -25269,14 +22236,11 @@
 
     const/4 p0, 0x1
 
-    .line 7578
     invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7581
     :cond_0
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7582
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25289,30 +22253,22 @@
 .method public static write(IZLjava/lang/String;JJ)V
     .locals 1
 
-    .line 7586
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7587
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7588
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7589
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7590
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 7591
     invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 7593
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7594
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25325,27 +22281,20 @@
 .method public static write(IZLjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 7598
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7599
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7600
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7601
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7602
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7604
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7605
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25358,33 +22307,24 @@
 .method public static write(IZZZZI)V
     .locals 1
 
-    .line 7530
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7531
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7532
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7533
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7534
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7535
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
-    .line 7536
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7538
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7539
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25397,12 +22337,10 @@
 .method public static write(I[BFIIIF)V
     .locals 1
 
-    .line 7271
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7272
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p1, :cond_0
@@ -25411,29 +22349,21 @@
 
     new-array p1, p0, [B
 
-    .line 7273
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    .line 7274
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 7275
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7276
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7277
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7278
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
-    .line 7280
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7281
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25446,12 +22376,10 @@
 .method public static write(I[F[F)V
     .locals 1
 
-    .line 10622
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10623
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -25460,7 +22388,6 @@
 
     new-array p1, p0, [F
 
-    .line 10624
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeFloatArray([F)Landroid/util/StatsEvent$Builder;
 
@@ -25468,14 +22395,11 @@
 
     new-array p2, p0, [F
 
-    .line 10625
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeFloatArray([F)Landroid/util/StatsEvent$Builder;
 
-    .line 10627
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10628
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25488,12 +22412,10 @@
 .method public static write(I[F[FLjava/lang/String;)V
     .locals 1
 
-    .line 10632
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10633
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -25502,7 +22424,6 @@
 
     new-array p1, p0, [F
 
-    .line 10634
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeFloatArray([F)Landroid/util/StatsEvent$Builder;
 
@@ -25510,17 +22431,13 @@
 
     new-array p2, p0, [F
 
-    .line 10635
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeFloatArray([F)Landroid/util/StatsEvent$Builder;
 
-    .line 10636
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 10638
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10639
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25533,12 +22450,10 @@
 .method public static write(I[I[IJIJII)V
     .locals 1
 
-    .line 10607
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 10608
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -25547,7 +22462,6 @@
 
     new-array p1, p0, [I
 
-    .line 10609
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -25555,29 +22469,21 @@
 
     new-array p2, p0, [I
 
-    .line 10610
     :cond_1
     invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
-    .line 10611
     invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10612
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10613
     invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 10614
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10615
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 10617
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 10618
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25590,12 +22496,10 @@
 .method public static write(I[I[Ljava/lang/String;I)V
     .locals 4
 
-    .line 7285
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7286
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/16 v1, 0xc
@@ -25606,7 +22510,6 @@
 
     if-ne v1, p0, :cond_0
 
-    .line 7288
     invoke-virtual {v0, v3, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_0
@@ -25614,7 +22517,6 @@
 
     if-ne v1, p0, :cond_1
 
-    .line 7291
     invoke-virtual {v0, v3, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     :cond_1
@@ -25629,17 +22531,13 @@
 
     new-array p2, p0, [Ljava/lang/String;
 
-    .line 7293
     :cond_3
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7296
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7298
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7299
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25652,12 +22550,10 @@
 .method public static write(I[I[Ljava/lang/String;II)V
     .locals 1
 
-    .line 7303
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7304
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -25671,20 +22567,15 @@
 
     new-array p2, p0, [Ljava/lang/String;
 
-    .line 7305
     :cond_1
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7308
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7309
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7311
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7312
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25697,14 +22588,12 @@
 .method public static write(I[I[Ljava/lang/String;IIIZIIIJJJJIIIIIII[I[I[I[III)V
     .locals 4
 
-    .line 7316
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 7317
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x0
@@ -25728,98 +22617,79 @@
     :cond_1
     move-object v3, p2
 
-    .line 7318
     :goto_1
     invoke-virtual {v0, v2, v3}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v2, p3
 
-    .line 7321
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p4
 
-    .line 7322
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p5
 
-    .line 7323
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p6
 
-    .line 7324
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v2, p7
 
-    .line 7325
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p8
 
-    .line 7326
     invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v2, p9
 
-    .line 7327
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v2, p10
 
-    .line 7328
     invoke-virtual {v0, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p12
 
-    .line 7329
     invoke-virtual {v0, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p14
 
-    .line 7330
     invoke-virtual {v0, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v2, p16
 
-    .line 7331
     invoke-virtual {v0, v2, v3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p18
 
-    .line 7332
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p19
 
-    .line 7333
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p20
 
-    .line 7334
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p21
 
-    .line 7335
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p22
 
-    .line 7336
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p23
 
-    .line 7337
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v2, p24
 
-    .line 7338
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-nez p25, :cond_2
@@ -25831,7 +22701,6 @@
     :cond_2
     move-object/from16 v2, p25
 
-    .line 7339
     :goto_2
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -25844,7 +22713,6 @@
     :cond_3
     move-object/from16 v2, p26
 
-    .line 7340
     :goto_3
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -25857,7 +22725,6 @@
     :cond_4
     move-object/from16 v2, p27
 
-    .line 7341
     :goto_4
     invoke-virtual {v0, v2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
@@ -25870,24 +22737,19 @@
     :cond_5
     move-object/from16 v1, p28
 
-    .line 7342
     :goto_5
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p29
 
-    .line 7343
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p30
 
-    .line 7344
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7346
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7347
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -25900,12 +22762,10 @@
 .method public static write(I[I[Ljava/lang/String;IJ)V
     .locals 1
 
-    .line 7351
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7352
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -25919,20 +22779,15 @@
 
     new-array p2, p0, [Ljava/lang/String;
 
-    .line 7353
     :cond_1
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7356
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7357
     invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
-    .line 7359
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7360
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -25945,12 +22800,10 @@
 .method public static write(I[I[Ljava/lang/String;ILjava/lang/String;II)V
     .locals 2
 
-    .line 7364
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7365
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x0
@@ -25964,7 +22817,6 @@
 
     new-array p2, v1, [Ljava/lang/String;
 
-    .line 7366
     :cond_1
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -25976,10 +22828,8 @@
 
     const/4 v1, 0x5
 
-    .line 7370
     invoke-virtual {v0, v1, p2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7372
     :cond_2
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -25987,19 +22837,15 @@
 
     if-ne p1, p0, :cond_3
 
-    .line 7374
     invoke-virtual {v0, p3, p2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7376
     :cond_3
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     if-ne p1, p0, :cond_4
 
-    .line 7378
     invoke-virtual {v0, p3, p2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7380
     :cond_4
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -26007,22 +22853,17 @@
 
     const/4 p0, 0x4
 
-    .line 7382
     invoke-virtual {v0, p0, p2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     const/16 p0, 0x8
 
-    .line 7383
     invoke-virtual {v0, p0, p2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7385
     :cond_5
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7387
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7388
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -26035,12 +22876,10 @@
 .method public static write(I[I[Ljava/lang/String;ILjava/lang/String;III)V
     .locals 3
 
-    .line 7392
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7393
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x0
@@ -26054,7 +22893,6 @@
 
     new-array p2, v1, [Ljava/lang/String;
 
-    .line 7394
     :cond_1
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -26066,10 +22904,8 @@
 
     const/4 v2, 0x5
 
-    .line 7398
     invoke-virtual {v0, v2, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7400
     :cond_2
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
@@ -26077,15 +22913,12 @@
 
     const/4 p3, 0x4
 
-    .line 7402
     invoke-virtual {v0, p3, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
     const/16 p3, 0x8
 
-    .line 7403
     invoke-virtual {v0, p3, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7405
     :cond_3
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
@@ -26093,35 +22926,27 @@
 
     if-ne p2, p0, :cond_4
 
-    .line 7407
     invoke-virtual {v0, p3, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7409
     :cond_4
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7410
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne p2, p0, :cond_5
 
-    .line 7412
     invoke-virtual {v0, p3, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7414
     :cond_5
     invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     if-ne p2, p0, :cond_6
 
-    .line 7416
     invoke-virtual {v0, p3, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
 
-    .line 7419
     :cond_6
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7420
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -26134,12 +22959,10 @@
 .method public static write(I[I[Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
 
-    .line 7424
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7425
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -26153,20 +22976,15 @@
 
     new-array p2, p0, [Ljava/lang/String;
 
-    .line 7426
     :cond_1
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7429
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7430
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7432
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7433
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -26179,12 +22997,10 @@
 .method public static write(I[I[Ljava/lang/String;Ljava/lang/String;II)V
     .locals 1
 
-    .line 7437
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7438
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -26198,23 +23014,17 @@
 
     new-array p2, p0, [Ljava/lang/String;
 
-    .line 7439
     :cond_1
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7442
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7443
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7444
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7446
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7447
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -26227,14 +23037,12 @@
 .method public static write(I[I[Ljava/lang/String;Ljava/lang/String;IIIJZZZZZZZZZZIZIIIJZZZZZZZZJZZZJJJIILjava/lang/String;)V
     .locals 3
 
-    .line 7451
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
     move v1, p0
 
-    .line 7452
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 v1, 0x0
@@ -26258,209 +23066,167 @@
     :cond_1
     move-object v1, p2
 
-    .line 7453
     :goto_1
     invoke-virtual {v0, v2, v1}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-object v1, p3
 
-    .line 7456
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move v1, p4
 
-    .line 7457
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p5
 
-    .line 7458
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move v1, p6
 
-    .line 7459
     invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide v1, p7
 
-    .line 7460
     invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move v1, p9
 
-    .line 7461
     invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p10
 
-    .line 7462
     invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p11
 
-    .line 7463
     invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move v1, p12
 
-    .line 7464
     invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p13
 
-    .line 7465
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p14
 
-    .line 7466
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p15
 
-    .line 7467
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p16
 
-    .line 7468
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p17
 
-    .line 7469
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p18
 
-    .line 7470
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p19
 
-    .line 7471
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p20
 
-    .line 7472
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p21
 
-    .line 7473
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p22
 
-    .line 7474
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p23
 
-    .line 7475
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p24
 
-    .line 7476
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p26
 
-    .line 7477
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p27
 
-    .line 7478
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p28
 
-    .line 7479
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p29
 
-    .line 7480
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p30
 
-    .line 7481
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p31
 
-    .line 7482
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p32
 
-    .line 7483
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p33
 
-    .line 7484
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p34
 
-    .line 7485
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p36
 
-    .line 7486
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p37
 
-    .line 7487
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p38
 
-    .line 7488
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p39
 
-    .line 7489
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p41
 
-    .line 7490
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move-wide/from16 v1, p43
 
-    .line 7491
     invoke-virtual {v0, v1, v2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p45
 
-    .line 7492
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move/from16 v1, p46
 
-    .line 7493
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-object/from16 v1, p47
 
-    .line 7494
     invoke-virtual {v0, v1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7496
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7497
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -26473,12 +23239,10 @@
 .method public static write(I[I[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
 
-    .line 7501
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 7502
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     const/4 p0, 0x0
@@ -26492,23 +23256,17 @@
 
     new-array p2, p0, [Ljava/lang/String;
 
-    .line 7503
     :cond_1
     invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeAttributionChain([I[Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7506
     invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7507
     invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
-    .line 7508
     invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 7510
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
-    .line 7511
     invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
     move-result-object p0
@@ -26521,7 +23279,6 @@
 .method public static write_non_chained(IILjava/lang/String;I)V
     .locals 0
 
-    .line 10643
     filled-new-array {p1}, [I
 
     move-result-object p1
@@ -26538,7 +23295,6 @@
 .method public static write_non_chained(IILjava/lang/String;II)V
     .locals 0
 
-    .line 10647
     filled-new-array {p1}, [I
 
     move-result-object p1
@@ -26605,7 +23361,6 @@
 
     move/from16 v30, p30
 
-    .line 10651
     filled-new-array/range {p1 .. p1}, [I
 
     move-result-object v1
@@ -26622,7 +23377,6 @@
 .method public static write_non_chained(IILjava/lang/String;IJ)V
     .locals 6
 
-    .line 10655
     filled-new-array {p1}, [I
 
     move-result-object v1
@@ -26645,7 +23399,6 @@
 .method public static write_non_chained(IILjava/lang/String;ILjava/lang/String;II)V
     .locals 7
 
-    .line 10659
     filled-new-array {p1}, [I
 
     move-result-object v1
@@ -26672,7 +23425,6 @@
 .method public static write_non_chained(IILjava/lang/String;ILjava/lang/String;III)V
     .locals 8
 
-    .line 10663
     filled-new-array {p1}, [I
 
     move-result-object v1
@@ -26701,7 +23453,6 @@
 .method public static write_non_chained(IILjava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 10667
     filled-new-array {p1}, [I
 
     move-result-object p1
@@ -26718,7 +23469,6 @@
 .method public static write_non_chained(IILjava/lang/String;Ljava/lang/String;II)V
     .locals 6
 
-    .line 10671
     filled-new-array {p1}, [I
 
     move-result-object v1
@@ -26823,7 +23573,6 @@
 
     move-object/from16 v47, p47
 
-    .line 10675
     filled-new-array/range {p1 .. p1}, [I
 
     move-result-object v1
@@ -26840,7 +23589,6 @@
 .method public static write_non_chained(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 6
 
-    .line 10679
     filled-new-array {p1}, [I
 
     move-result-object v1

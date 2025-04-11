@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;)V
     .locals 0
 
-    .line 653
     iput-object p1, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +32,6 @@
 
     goto :goto_0
 
-    .line 658
     :cond_0
     iget-object p1, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -43,7 +41,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 659
     iget-object p1, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {p1}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmRecordMonitor(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/RecordingActivityMonitor;
@@ -52,7 +49,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/audio/RecordingActivityMonitor;->onAudioServerDied()V
 
-    .line 662
     :cond_1
     iget-object p1, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -62,7 +58,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 663
     iget-object p1, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {p1}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmPlaybackMonitor(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/PlaybackActivityMonitor;
@@ -71,7 +66,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/audio/PlaybackActivityMonitor;->onAudioServerDied()V
 
-    .line 665
     :cond_2
     iget-object p1, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -93,7 +87,6 @@
 
     invoke-static/range {v0 .. v6}, Lcom/android/server/audio/AudioService;->-$$Nest$smsendMsg(Landroid/os/Handler;IIIILjava/lang/Object;I)V
 
-    .line 667
     iget-object p0, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {p0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmAudioHandler(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/AudioService$AudioHandler;

@@ -33,17 +33,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 585
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 565
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mFastestIntervalMs:J
 
     const-wide/16 v0, 0x0
 
-    .line 567
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mSlowestIntervalMs:J
 
     return-void
@@ -62,7 +59,6 @@
 
     return-object p0
 
-    .line 667
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -94,7 +90,6 @@
 
     monitor-enter p0
 
-    .line 632
     :try_start_0
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mDeliveredLocationCount:I
 
@@ -104,7 +99,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 633
     monitor-exit p0
 
     return-void
@@ -122,7 +116,6 @@
 
     monitor-enter p0
 
-    .line 606
     :try_start_0
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedRequestCount:I
 
@@ -138,7 +131,6 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 607
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveRequestCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -147,7 +139,6 @@
 
     if-nez v0, :cond_1
 
-    .line 608
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -156,7 +147,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 610
     :cond_1
     monitor-exit p0
 
@@ -175,7 +165,6 @@
 
     monitor-enter p0
 
-    .line 588
     :try_start_0
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedRequestCount:I
 
@@ -185,14 +174,12 @@
 
     if-nez v0, :cond_0
 
-    .line 589
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedTimeLastUpdateRealtimeMs:J
 
-    .line 592
     :cond_0
     iget-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mFastestIntervalMs:J
 
@@ -202,7 +189,6 @@
 
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mFastestIntervalMs:J
 
-    .line 593
     iget-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mSlowestIntervalMs:J
 
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->max(JJ)J
@@ -213,7 +199,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 594
     monitor-exit p0
 
     return-void
@@ -231,11 +216,9 @@
 
     monitor-enter p0
 
-    .line 626
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->updateTotals()V
 
-    .line 627
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundRequestCount:I
 
     const/4 v1, 0x1
@@ -251,13 +234,11 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 628
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 629
     monitor-exit p0
 
     return-void
@@ -275,7 +256,6 @@
 
     monitor-enter p0
 
-    .line 619
     :try_start_0
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedRequestCount:I
 
@@ -291,7 +271,6 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 620
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundRequestCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -300,7 +279,6 @@
 
     if-nez v0, :cond_1
 
-    .line 621
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -309,7 +287,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 623
     :cond_1
     monitor-exit p0
 
@@ -328,11 +305,9 @@
 
     monitor-enter p0
 
-    .line 613
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->updateTotals()V
 
-    .line 614
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveRequestCount:I
 
     const/4 v1, 0x1
@@ -348,13 +323,11 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 615
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 616
     monitor-exit p0
 
     return-void
@@ -372,11 +345,9 @@
 
     monitor-enter p0
 
-    .line 597
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->updateTotals()V
 
-    .line 598
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedRequestCount:I
 
     const/4 v1, 0x1
@@ -392,11 +363,9 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 599
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 601
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedRequestCount:I
 
     iget v1, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveRequestCount:I
@@ -407,7 +376,6 @@
 
     iput v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveRequestCount:I
 
-    .line 602
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedRequestCount:I
 
     iget v1, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundRequestCount:I
@@ -420,7 +388,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 603
     monitor-exit p0
 
     return-void
@@ -438,7 +405,6 @@
 
     monitor-enter p0
 
-    .line 655
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -462,7 +428,6 @@
 
     iget-wide v1, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mSlowestIntervalMs:J
 
-    .line 656
     invoke-static {v1, v2}, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->intervalToString(J)Ljava/lang/String;
 
     move-result-object v1
@@ -475,7 +440,6 @@
 
     iget-wide v1, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedTimeTotalMs:J
 
-    .line 657
     invoke-static {v1, v2}, Landroid/util/TimeUtils;->formatDuration(J)Ljava/lang/String;
 
     move-result-object v1
@@ -488,7 +452,6 @@
 
     iget-wide v1, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveTimeTotalMs:J
 
-    .line 658
     invoke-static {v1, v2}, Landroid/util/TimeUtils;->formatDuration(J)Ljava/lang/String;
 
     move-result-object v1
@@ -501,7 +464,6 @@
 
     iget-wide v1, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundTimeTotalMs:J
 
-    .line 659
     invoke-static {v1, v2}, Landroid/util/TimeUtils;->formatDuration(J)Ljava/lang/String;
 
     move-result-object v1
@@ -522,7 +484,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 655
     monitor-exit p0
 
     return-object v0
@@ -540,18 +501,15 @@
 
     monitor-enter p0
 
-    .line 636
     :try_start_0
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedRequestCount:I
 
     if-lez v0, :cond_0
 
-    .line 637
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 638
     iget-wide v2, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedTimeTotalMs:J
 
     iget-wide v4, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedTimeLastUpdateRealtimeMs:J
@@ -562,21 +520,17 @@
 
     iput-wide v2, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedTimeTotalMs:J
 
-    .line 639
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mAddedTimeLastUpdateRealtimeMs:J
 
-    .line 641
     :cond_0
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveRequestCount:I
 
     if-lez v0, :cond_1
 
-    .line 642
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 643
     iget-wide v2, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveTimeTotalMs:J
 
     iget-wide v4, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveTimeLastUpdateRealtimeMs:J
@@ -587,21 +541,17 @@
 
     iput-wide v2, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveTimeTotalMs:J
 
-    .line 644
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mActiveTimeLastUpdateRealtimeMs:J
 
-    .line 646
     :cond_1
     iget v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundRequestCount:I
 
     if-lez v0, :cond_2
 
-    .line 647
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 648
     iget-wide v2, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundTimeTotalMs:J
 
     iget-wide v4, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundTimeLastUpdateRealtimeMs:J
@@ -612,12 +562,10 @@
 
     iput-wide v2, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundTimeTotalMs:J
 
-    .line 649
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$AggregateStats;->mForegroundTimeLastUpdateRealtimeMs:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 651
     :cond_2
     monitor-exit p0
 

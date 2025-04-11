@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 17
     new-instance v0, Lcom/android/server/enterprise/security/PasswordPolicyCache;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/security/PasswordPolicyCache;-><init>()V
@@ -30,17 +29,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/security/PasswordPolicyCache;->mLock:Ljava/lang/Object;
 
-    .line 28
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -53,7 +49,6 @@
 .method public static getInstance()Lcom/android/server/enterprise/security/PasswordPolicyCache;
     .locals 1
 
-    .line 25
     sget-object v0, Lcom/android/server/enterprise/security/PasswordPolicyCache;->INSTANCE:Lcom/android/server/enterprise/security/PasswordPolicyCache;
 
     return-object v0
@@ -64,12 +59,10 @@
 .method public isChangeRequestedAsUser(I)I
     .locals 3
 
-    .line 44
     iget-object v0, p0, Lcom/android/server/enterprise/security/PasswordPolicyCache;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 45
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/security/PasswordPolicyCache;->mChangeRequested:Ljava/util/Map;
 
@@ -112,7 +105,6 @@
     :catchall_0
     move-exception p0
 
-    .line 46
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -123,12 +115,10 @@
 .method public setChangeRequestedAsUser(II)V
     .locals 1
 
-    .line 35
     iget-object v0, p0, Lcom/android/server/enterprise/security/PasswordPolicyCache;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 36
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/security/PasswordPolicyCache;->mChangeRequested:Ljava/util/Map;
 
@@ -142,7 +132,6 @@
 
     invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
     monitor-exit v0
 
     return-void

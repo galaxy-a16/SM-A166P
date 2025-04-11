@@ -7,7 +7,6 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 2
 
-    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -30,7 +29,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerException;)V
     .locals 1
 
-    .line 35
     iget v0, p1, Lcom/android/server/pm/PackageManagerException;->error:I
 
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -45,7 +43,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 2
 
-    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,7 +67,6 @@
 .method public static ofInternalError(Ljava/lang/String;I)Lcom/android/server/pm/ReconcileFailure;
     .locals 1
 
-    .line 23
     new-instance v0, Lcom/android/server/pm/ReconcileFailure;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/pm/ReconcileFailure;-><init>(Ljava/lang/String;I)V

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/LaunchObserverRegistryImpl;
 
     check-cast p2, Lcom/android/server/wm/ActivityMetricsLaunchObserver;

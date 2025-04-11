@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 103
     iput-object p1, p0, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$1;->this$0:Lcom/android/server/musicrecognition/RemoteMusicRecognitionService;
 
     iput-object p2, p0, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$1;->val$attributionTagFuture:Ljava/util/concurrent/CompletableFuture;
@@ -28,7 +27,6 @@
 .method public onAttributionTag(Ljava/lang/String;)V
     .locals 0
 
-    .line 106
     iget-object p0, p0, Lcom/android/server/musicrecognition/RemoteMusicRecognitionService$1;->val$attributionTagFuture:Ljava/util/concurrent/CompletableFuture;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z

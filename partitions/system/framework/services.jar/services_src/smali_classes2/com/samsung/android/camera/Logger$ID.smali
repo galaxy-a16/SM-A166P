@@ -27,7 +27,6 @@
 .method public static synthetic $values()[Lcom/samsung/android/camera/Logger$ID;
     .locals 8
 
-    .line 30
     sget-object v0, Lcom/samsung/android/camera/Logger$ID;->CAMERA_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
     sget-object v1, Lcom/samsung/android/camera/Logger$ID;->SHAKE_EVENT_LISTENER:Lcom/samsung/android/camera/Logger$ID;
@@ -54,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 31
     new-instance v0, Lcom/samsung/android/camera/Logger$ID;
 
     const-string v1, "CAMERA_EVENT"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/samsung/android/camera/Logger$ID;->CAMERA_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
-    .line 32
     new-instance v0, Lcom/samsung/android/camera/Logger$ID;
 
     const-string v1, "SHAKE_EVENT_LISTENER"
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/samsung/android/camera/Logger$ID;->SHAKE_EVENT_LISTENER:Lcom/samsung/android/camera/Logger$ID;
 
-    .line 33
     new-instance v0, Lcom/samsung/android/camera/Logger$ID;
 
     const-string v1, "REQUEST_INJECTOR_SERVICE"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
-    .line 34
     new-instance v0, Lcom/samsung/android/camera/Logger$ID;
 
     const-string v1, "VISION_SERVER_RECEIVER"
@@ -98,7 +93,6 @@
 
     sput-object v0, Lcom/samsung/android/camera/Logger$ID;->VISION_SERVER_RECEIVER:Lcom/samsung/android/camera/Logger$ID;
 
-    .line 35
     new-instance v0, Lcom/samsung/android/camera/Logger$ID;
 
     const-string v1, "FOLD_EVENT"
@@ -109,7 +103,6 @@
 
     sput-object v0, Lcom/samsung/android/camera/Logger$ID;->FOLD_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
-    .line 36
     new-instance v0, Lcom/samsung/android/camera/Logger$ID;
 
     const-string v1, "POST_PROCESS_EVENT"
@@ -120,7 +113,6 @@
 
     sput-object v0, Lcom/samsung/android/camera/Logger$ID;->POST_PROCESS_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
-    .line 37
     new-instance v0, Lcom/samsung/android/camera/Logger$ID;
 
     const-string v1, "CAMERA_APPLICATION_EVENT"
@@ -131,7 +123,6 @@
 
     sput-object v0, Lcom/samsung/android/camera/Logger$ID;->CAMERA_APPLICATION_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
-    .line 38
     new-instance v0, Lcom/samsung/android/camera/Logger$ID;
 
     const-string v1, "DATABASE_EVENT"
@@ -142,7 +133,6 @@
 
     sput-object v0, Lcom/samsung/android/camera/Logger$ID;->DATABASE_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
-    .line 30
     invoke-static {}, Lcom/samsung/android/camera/Logger$ID;->$values()[Lcom/samsung/android/camera/Logger$ID;
 
     move-result-object v0
@@ -155,7 +145,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 30
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -164,7 +153,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/samsung/android/camera/Logger$ID;
     .locals 1
 
-    .line 30
     const-class v0, Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -179,7 +167,6 @@
 .method public static values()[Lcom/samsung/android/camera/Logger$ID;
     .locals 1
 
-    .line 30
     sget-object v0, Lcom/samsung/android/camera/Logger$ID;->$VALUES:[Lcom/samsung/android/camera/Logger$ID;
 
     invoke-virtual {v0}, [Lcom/samsung/android/camera/Logger$ID;->clone()Ljava/lang/Object;

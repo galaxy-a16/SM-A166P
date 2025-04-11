@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/storage/DeviceStorageMonitorService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 536
     iput-object p1, p0, Lcom/android/server/storage/DeviceStorageMonitorService$1;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 539
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -37,7 +35,6 @@
 
     return-void
 
-    .line 544
     :cond_0
     iget-object p0, p0, Lcom/android/server/storage/DeviceStorageMonitorService$1;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
@@ -45,7 +42,6 @@
 
     return-void
 
-    .line 541
     :cond_1
     iget-object p0, p0, Lcom/android/server/storage/DeviceStorageMonitorService$1;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 

@@ -13,7 +13,6 @@
 
     const/4 v4, 0x7
 
-    .line 2856
     new-instance v5, Lcom/android/server/am/Pageboost$PageboostAppDBHelper$AppDBErrorHandler;
 
     invoke-direct {v5}, Lcom/android/server/am/Pageboost$PageboostAppDBHelper$AppDBErrorHandler;-><init>()V
@@ -36,14 +35,12 @@
 
     const-string v2, "AppLRU"
 
-    .line 2914
     invoke-virtual {p0, v2, v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
 
     int-to-long v0, p0
 
-    .line 2915
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -70,7 +67,6 @@
 .method public static restoreAppLRU(Landroid/database/sqlite/SQLiteDatabase;)Lcom/android/server/am/Pageboost$PageboostAppList;
     .locals 20
 
-    .line 2976
     new-instance v1, Lcom/android/server/am/Pageboost$PageboostAppList;
 
     invoke-direct {v1}, Lcom/android/server/am/Pageboost$PageboostAppList;-><init>()V
@@ -91,14 +87,12 @@
 
     move-object/from16 v2, p0
 
-    .line 2978
     invoke-virtual/range {v2 .. v9}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 2981
     :goto_0
     :try_start_0
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
@@ -107,12 +101,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2982
     new-instance v0, Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
     const-string v3, "APPNAME"
 
-    .line 2983
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -123,7 +115,6 @@
 
     const-string v3, "CAPTURED"
 
-    .line 2984
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -134,7 +125,6 @@
 
     const-string v3, "ANON"
 
-    .line 2985
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -145,7 +135,6 @@
 
     const-string v3, "ION"
 
-    .line 2986
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -156,7 +145,6 @@
 
     const-string v3, "GPU"
 
-    .line 2987
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -167,7 +155,6 @@
 
     const-string v3, "SIZE_PR"
 
-    .line 2988
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -178,7 +165,6 @@
 
     const-string v3, "SIZE_MAP_PR"
 
-    .line 2989
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -189,7 +175,6 @@
 
     const-string v3, "SCORE"
 
-    .line 2990
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -200,7 +185,6 @@
 
     const-string v3, "EXEC_CNT"
 
-    .line 2991
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -211,7 +195,6 @@
 
     const-string v3, "ACC_ETIME"
 
-    .line 2992
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -222,7 +205,6 @@
 
     const-string v3, "PREFETCH_CNT"
 
-    .line 2993
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -233,7 +215,6 @@
 
     const-string v3, "HIT_CNT"
 
-    .line 2994
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -244,7 +225,6 @@
 
     const-string v3, "APK_PATH"
 
-    .line 2995
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
@@ -259,7 +239,6 @@
 
     const/4 v3, 0x0
 
-    .line 2997
     invoke-virtual {v1, v0, v3}, Lcom/android/server/am/Pageboost$PageboostAppList;->add(Lcom/android/server/am/Pageboost$PageboostAppInfo;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -269,10 +248,8 @@
     :catch_0
     move-exception v0
 
-    .line 3000
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 3002
     :cond_0
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
@@ -283,28 +260,24 @@
 .method public static setContentValue(Lcom/android/server/am/Pageboost$PageboostAppInfo;I)Landroid/content/ContentValues;
     .locals 3
 
-    .line 2919
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "ID"
 
-    .line 2920
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2921
     iget-object p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mName:Ljava/lang/String;
 
     const-string v1, "APPNAME"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2922
     iget p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mCaptured:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -315,7 +288,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2923
     iget p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mAnon:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -326,7 +298,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2924
     iget p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mION:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -337,7 +308,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2925
     iget p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mGPU:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -348,7 +318,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2926
     iget-wide v1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mSizeForPrefetch:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -359,7 +328,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2927
     iget-wide v1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mMapCaptureSizeForPrefetch:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -370,7 +338,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2928
     iget p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mScore:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -381,7 +348,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2929
     iget p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mExecCnt:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -392,7 +358,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2930
     iget-wide v1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mAccExecTime:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -403,7 +368,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2931
     iget p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mPrefetchCnt:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -414,7 +378,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2932
     iget p1, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mHitCnt:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -427,7 +390,6 @@
 
     const-string p1, "APK_PATH"
 
-    .line 2933
     iget-object p0, p0, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mApkPath:Ljava/lang/String;
 
     invoke-virtual {v0, p1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
@@ -444,7 +406,6 @@
 
     goto :goto_0
 
-    .line 2942
     :cond_0
     iget-object p1, p1, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -452,7 +413,6 @@
 
     const/4 v0, 0x0
 
-    .line 2944
     :try_start_0
     invoke-static {p2, v0}, Lcom/android/server/am/Pageboost$PageboostAppDBHelper;->setContentValue(Lcom/android/server/am/Pageboost$PageboostAppInfo;I)Landroid/content/ContentValues;
 
@@ -466,7 +426,6 @@
 
     new-array v4, v4, [Ljava/lang/String;
 
-    .line 2945
     iget-object v5, p2, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mName:Ljava/lang/String;
 
     aput-object v5, v4, v0
@@ -489,12 +448,10 @@
 
     const/4 v3, 0x4
 
-    .line 2947
     invoke-virtual {p0, v0, v2, v1, v3}, Landroid/database/sqlite/SQLiteDatabase;->insertWithOnConflict(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;I)J
 
     move-result-wide v2
 
-    .line 2949
     :cond_1
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -524,7 +481,6 @@
 
     invoke-static {p0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2950
     monitor-exit p1
 
     return-void
@@ -553,14 +509,12 @@
 
     const/4 v2, 0x0
 
-    .line 2958
     invoke-virtual {p0, v0, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
     int-to-long v0, v0
 
-    .line 2959
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -585,7 +539,6 @@
 
     return-void
 
-    .line 2963
     :cond_0
     iget-object v0, p1, Lcom/android/server/am/Pageboost$PageboostAppList;->mPageboostApps:Ljava/util/LinkedList;
 
@@ -593,7 +546,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2964
     :try_start_1
     invoke-virtual {p1}, Lcom/android/server/am/Pageboost$PageboostAppList;->iterator()Ljava/util/Iterator;
 
@@ -616,19 +568,16 @@
 
     add-int/lit8 v4, v1, 0x1
 
-    .line 2965
     invoke-static {v3, v1}, Lcom/android/server/am/Pageboost$PageboostAppDBHelper;->setContentValue(Lcom/android/server/am/Pageboost$PageboostAppInfo;I)Landroid/content/ContentValues;
 
     move-result-object v1
 
     const-string v5, "AppLRU"
 
-    .line 2966
     invoke-virtual {p0, v5, v2, v1}, Landroid/database/sqlite/SQLiteDatabase;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v5
 
-    .line 2967
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -661,7 +610,6 @@
 
     goto :goto_0
 
-    .line 2969
     :cond_1
     monitor-exit v0
 
@@ -679,7 +627,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 2971
     :catch_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -700,11 +647,9 @@
 
     const-string p0, "CREATE TABLE IF NOT EXISTS AppLRU (ID INTEGER, APPNAME TEXT NOT NULL UNIQUE, CAPTURED INTEGER, ANON INTEGER, ION INTEGER, GPU INTEGER, SIZE_PR INTEGER, SIZE_MAP_PR INTEGER, SCORE INTEGER, EXEC_CNT INTEGER, ACC_ETIME INTEGER, PREFETCH_CNT INTEGER, HIT_CNT INTEGER, APK_PATH TEXT NOT NULL );"
 
-    .line 2888
     :try_start_0
     invoke-virtual {p1, p0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 2889
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -720,7 +665,6 @@
     :catch_0
     move-exception p0
 
-    .line 2891
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -729,7 +673,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2892
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -739,7 +682,6 @@
 .method public onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 0
 
-    .line 2910
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/Pageboost$PageboostAppDBHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
     return-void
@@ -750,11 +692,9 @@
 
     const-string v0, "DROP TABLE IF EXISTS AppLRU"
 
-    .line 2900
     :try_start_0
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 2901
     invoke-virtual {p0, p1}, Lcom/android/server/am/Pageboost$PageboostAppDBHelper;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -764,7 +704,6 @@
     :catch_0
     move-exception p0
 
-    .line 2903
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -791,7 +730,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2904
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

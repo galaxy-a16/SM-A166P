@@ -33,7 +33,6 @@
 
     const v0, 0xea60
 
-    .line 34
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
@@ -46,84 +45,70 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepository;)V
     .locals 2
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 28
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
-    .line 29
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mStandbyInfoMap:Ljava/util/Map;
 
-    .line 37
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mReclaimApps:Ljava/util/Map;
 
-    .line 38
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mGcApps:Ljava/util/Map;
 
-    .line 40
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mForegroundG3ProcList:Ljava/util/Set;
 
-    .line 53
     new-instance v0, Lcom/android/server/chimera/ChimeraAppManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/chimera/ChimeraAppManager$1;-><init>(Lcom/android/server/chimera/ChimeraAppManager;)V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mDeviceIdleKillAllowList:Ljava/util/List;
 
-    .line 58
     new-instance v0, Lcom/android/server/chimera/ChimeraAppManager$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/chimera/ChimeraAppManager$2;-><init>(Lcom/android/server/chimera/ChimeraAppManager;)V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mDeviceIdleKillProtectedList:Ljava/util/List;
 
-    .line 64
     new-instance v0, Lcom/android/server/chimera/ChimeraAppClassifier;
 
     invoke-direct {v0, p1}, Lcom/android/server/chimera/ChimeraAppClassifier;-><init>(Lcom/android/server/chimera/SystemRepository;)V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string/jumbo v0, "persist.sys.chimera_cem_pkg_protected_interval_ms"
 
-    .line 67
     sget-object v1, Lcom/android/server/chimera/ChimeraAppManager;->CEM_PKG_PROTECTED_INTERVAL_DEFAULT:Ljava/lang/String;
 
-    .line 68
     invoke-interface {p1, v0, v1}, Lcom/android/server/chimera/SystemRepository;->getSystemProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 67
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/chimera/ChimeraAppManager;->mCemPkgProtectedIntervalMs:I
 
-    .line 70
     invoke-virtual {p0}, Lcom/android/server/chimera/ChimeraAppManager;->collectStandbyBucketList()V
 
     return-void
@@ -138,7 +123,6 @@
 
     move-object/from16 v1, p1
 
-    .line 83
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraAppManager;->mGcApps:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -149,14 +133,12 @@
 
     if-nez v2, :cond_0
 
-    .line 85
     new-instance v2, Lcom/android/server/chimera/ChimeraAppInfo;
 
     move/from16 v3, p2
 
     invoke-direct {v2, v3, v1}, Lcom/android/server/chimera/ChimeraAppInfo;-><init>(ILjava/lang/String;)V
 
-    .line 86
     iget-object v0, v0, Lcom/android/server/chimera/ChimeraAppManager;->mGcApps:Ljava/util/Map;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -178,7 +160,6 @@
 
     move/from16 v4, p3
 
-    .line 88
     invoke-virtual/range {v3 .. v14}, Lcom/android/server/chimera/ChimeraAppInfo;->addProcess(ILjava/lang/String;JJJJI)Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
     return-void
@@ -191,7 +172,6 @@
 
     move-object/from16 v1, p1
 
-    .line 74
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraAppManager;->mReclaimApps:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -202,14 +182,12 @@
 
     if-nez v2, :cond_0
 
-    .line 76
     new-instance v2, Lcom/android/server/chimera/ChimeraAppInfo;
 
     move/from16 v3, p2
 
     invoke-direct {v2, v3, v1}, Lcom/android/server/chimera/ChimeraAppInfo;-><init>(ILjava/lang/String;)V
 
-    .line 77
     iget-object v0, v0, Lcom/android/server/chimera/ChimeraAppManager;->mReclaimApps:Ljava/util/Map;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -231,7 +209,6 @@
 
     move/from16 v4, p3
 
-    .line 79
     invoke-virtual/range {v3 .. v14}, Lcom/android/server/chimera/ChimeraAppInfo;->addProcess(ILjava/lang/String;JJJJI)Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
     return-void
@@ -240,7 +217,6 @@
 .method public addToReclaimGcAppList(Ljava/lang/String;Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)V
     .locals 2
 
-    .line 92
     invoke-static {}, Lcom/android/server/chimera/RepositoryFactory;->getInstance()Lcom/android/server/chimera/RepositoryFactory;
 
     move-result-object v0
@@ -257,14 +233,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     iget v0, p2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
 
     iget v1, p2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/chimera/ChimeraAppManager;->addToGcAppList(Ljava/lang/String;II)V
 
-    .line 95
     :cond_0
     invoke-static {}, Lcom/android/server/chimera/RepositoryFactory;->getInstance()Lcom/android/server/chimera/RepositoryFactory;
 
@@ -282,7 +256,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 96
     iget v0, p2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
 
     iget p2, p2, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
@@ -296,7 +269,6 @@
 .method public collectStandbyBucketList()V
     .locals 1
 
-    .line 626
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v0}, Lcom/android/server/chimera/SystemRepository;->getAppStandbyBuckets()Ljava/util/Map;
@@ -311,12 +283,10 @@
 .method public dumpStandbyBucket()Ljava/lang/String;
     .locals 5
 
-    .line 632
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 633
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,7 +309,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 634
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraAppManager;->mStandbyInfoMap:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -363,7 +332,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 635
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,7 +348,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 636
     iget-object v3, p0, Lcom/android/server/chimera/ChimeraAppManager;->mStandbyInfoMap:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -391,12 +358,10 @@
 
     const-string v2, "\n"
 
-    .line 637
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 639
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -408,22 +373,18 @@
 .method public getAppStandbyBucket(Ljava/lang/String;I)I
     .locals 2
 
-    .line 607
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v0, p2}, Lcom/android/server/chimera/SystemRepository;->getUserId(I)I
 
     move-result p2
 
-    .line 608
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
-    .line 609
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 608
     invoke-interface {p0, p1, p2, v0, v1}, Lcom/android/server/chimera/SystemRepository;->getAppStandbyBucket(Ljava/lang/String;IJ)I
 
     move-result p0
@@ -434,7 +395,6 @@
 .method public getAppStandbyBucket(Lcom/android/server/chimera/ChimeraAppInfo;)V
     .locals 5
 
-    .line 613
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mStandbyInfoMap:Ljava/util/Map;
 
     iget-object v1, p1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
@@ -447,7 +407,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 615
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -456,7 +415,6 @@
 
     goto :goto_0
 
-    .line 617
     :cond_0
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -466,24 +424,20 @@
 
     move-result v0
 
-    .line 618
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object v2, p1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
 
-    .line 619
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
 
-    .line 618
     invoke-interface {v1, v2, v0, v3, v4}, Lcom/android/server/chimera/SystemRepository;->getAppStandbyBucket(Ljava/lang/String;IJ)I
 
     move-result v0
 
     iput v0, p1, Lcom/android/server/chimera/ChimeraAppInfo;->cacStandbyBucket:I
 
-    .line 620
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mStandbyInfoMap:Ljava/util/Map;
 
     iget-object p1, p1, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
@@ -517,7 +471,6 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 303
     iget-object v3, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v3}, Lcom/android/server/chimera/SystemRepository;->getRunningAppProcesses()Ljava/util/List;
@@ -529,32 +482,27 @@
     :cond_1
     move-object/from16 v3, p1
 
-    .line 306
     :goto_1
     new-instance v4, Landroid/util/ArrayMap;
 
     invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 307
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 308
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v6}, Lcom/android/server/chimera/SystemRepository;->getAccessibilityServicePackages()Ljava/util/List;
 
     move-result-object v6
 
-    .line 309
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v7}, Lcom/android/server/chimera/SystemRepository;->getCurrentHomePackageName()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 311
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -574,7 +522,6 @@
 
     check-cast v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;
 
-    .line 313
     iget v10, v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processState:I
 
     const/16 v11, 0x11
@@ -583,7 +530,6 @@
 
     goto :goto_2
 
-    .line 317
     :cond_2
     iget-object v10, v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
@@ -593,10 +539,8 @@
 
     if-lez v11, :cond_9
 
-    .line 318
     aget-object v10, v10, v1
 
-    .line 319
     invoke-static {v10, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v11
@@ -605,7 +549,6 @@
 
     goto :goto_2
 
-    .line 323
     :cond_3
     iget-object v11, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -617,7 +560,6 @@
 
     if-nez v11, :cond_4
 
-    .line 324
     iget-object v10, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -640,7 +582,6 @@
 
     goto :goto_2
 
-    .line 329
     :cond_4
     invoke-interface {v6, v10}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -650,7 +591,6 @@
 
     goto :goto_2
 
-    .line 334
     :cond_5
     iget-object v11, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -664,7 +604,6 @@
 
     goto :goto_2
 
-    .line 338
     :cond_6
     invoke-virtual {v4, v10}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -674,17 +613,14 @@
 
     if-nez v11, :cond_7
 
-    .line 340
     new-instance v11, Lcom/android/server/chimera/ChimeraAppInfo;
 
     iget v12, v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
 
     invoke-direct {v11, v12, v10}, Lcom/android/server/chimera/ChimeraAppInfo;-><init>(ILjava/lang/String;)V
 
-    .line 341
     invoke-virtual {v4, v10, v11}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 342
     iget-object v12, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v13, v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
@@ -693,7 +629,6 @@
 
     move-result v12
 
-    .line 343
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -721,7 +656,6 @@
     :cond_7
     move-object v12, v11
 
-    .line 346
     iget-wide v10, v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->lastPss:J
 
     if-eqz v2, :cond_8
@@ -732,7 +666,6 @@
 
     if-gtz v13, :cond_8
 
-    .line 348
     iget-object v10, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -753,7 +686,6 @@
 
     invoke-interface {v10, v9, v11}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 349
     iget-object v9, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v10, v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
@@ -769,7 +701,6 @@
     :cond_8
     move-wide v15, v10
 
-    .line 352
     :goto_3
     iget v13, v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
@@ -801,7 +732,6 @@
 
     move-result-object v1
 
-    .line 354
     iget-wide v6, v8, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->DRAMUsed:J
 
     iput-wide v6, v1, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->DRAMUsed:J
@@ -826,7 +756,6 @@
 
     goto/16 :goto_2
 
-    .line 358
     :cond_a
     invoke-virtual {v4}, Landroid/util/ArrayMap;->size()I
 
@@ -834,29 +763,24 @@
 
     if-lez v1, :cond_e
 
-    .line 361
     iget-object v1, v0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
     sget-object v2, Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;->TRIGGER_SOURCE_PMM_CRITICAL:Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;
 
     invoke-virtual {v1, v2}, Lcom/android/server/chimera/ChimeraAppClassifier;->prepare(Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;)V
 
-    .line 362
     iget-object v1, v0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
     invoke-virtual {v1, v5}, Lcom/android/server/chimera/ChimeraAppClassifier;->updatePackagesType(Ljava/util/List;)V
 
-    .line 364
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 365
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 366
     invoke-virtual {v4}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v3
@@ -878,7 +802,6 @@
 
     check-cast v4, Lcom/android/server/chimera/ChimeraAppInfo;
 
-    .line 367
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v6, v4, Lcom/android/server/chimera/ChimeraAppInfo;->uid:I
@@ -887,7 +810,6 @@
 
     move-result v5
 
-    .line 368
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
     iget-object v7, v4, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
@@ -904,21 +826,18 @@
 
     iput v5, v4, Lcom/android/server/chimera/ChimeraAppInfo;->appType:I
 
-    .line 369
     invoke-static {v5}, Lcom/android/server/chimera/ChimeraAppInfo;->appType2group(I)I
 
     move-result v5
 
     iput v5, v4, Lcom/android/server/chimera/ChimeraAppInfo;->group:I
 
-    .line 371
     invoke-virtual {v4}, Lcom/android/server/chimera/ChimeraAppInfo;->isInPMMCriticalProtectedGroup()Z
 
     move-result v5
 
     if-eqz v5, :cond_b
 
-    .line 372
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -941,7 +860,6 @@
 
     goto :goto_5
 
-    .line 376
     :cond_b
     iget v5, v4, Lcom/android/server/chimera/ChimeraAppInfo;->appType:I
 
@@ -951,18 +869,15 @@
 
     if-eqz v5, :cond_c
 
-    .line 377
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
 
-    .line 379
     :cond_c
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
 
-    .line 383
     :cond_d
     new-instance v0, Landroid/util/Pair;
 
@@ -981,7 +896,6 @@
 
     move-object/from16 v0, p0
 
-    .line 477
     iget-object v1, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string v2, "getAppsToDeviceIdle()"
@@ -990,22 +904,18 @@
 
     invoke-interface {v1, v3, v2}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 478
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 479
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 480
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 483
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v5}, Lcom/android/server/chimera/SystemRepository;->getSystemPid()I
@@ -1018,7 +928,6 @@
 
     if-lez v6, :cond_c
 
-    .line 486
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v6}, Lcom/android/server/chimera/SystemRepository;->getRunningAppProcesses()Ljava/util/List;
@@ -1046,7 +955,6 @@
 
     add-int/lit8 v8, v8, 0x1
 
-    .line 488
     iget-object v10, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     if-eqz v10, :cond_9
@@ -1057,7 +965,6 @@
 
     goto/16 :goto_1
 
-    .line 492
     :cond_0
     iget v11, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
@@ -1065,11 +972,9 @@
 
     goto/16 :goto_1
 
-    .line 496
     :cond_1
     aget-object v10, v10, v7
 
-    .line 498
     iget-object v11, v0, Lcom/android/server/chimera/ChimeraAppManager;->mDeviceIdleKillProtectedList:Ljava/util/List;
 
     invoke-interface {v11, v10}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -1080,7 +985,6 @@
 
     goto/16 :goto_1
 
-    .line 502
     :cond_2
     iget-wide v11, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->lastPss:J
 
@@ -1098,7 +1002,6 @@
 
     goto/16 :goto_1
 
-    .line 507
     :cond_3
     iget v11, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
@@ -1106,7 +1009,6 @@
 
     move-result-object v11
 
-    .line 509
     iget-object v12, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v12, v11}, Lcom/android/server/chimera/SystemRepository;->getProcessStatesAndOomScoresForPIDs([I)Landroid/util/Pair;
@@ -1117,7 +1019,6 @@
 
     goto/16 :goto_1
 
-    .line 513
     :cond_4
     iget-object v11, v11, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -1129,7 +1030,6 @@
 
     goto/16 :goto_1
 
-    .line 519
     :cond_5
     invoke-virtual {v0, v10}, Lcom/android/server/chimera/ChimeraAppManager;->samsungApp(Ljava/lang/String;)Z
 
@@ -1143,7 +1043,6 @@
 
     if-eqz v12, :cond_9
 
-    .line 520
     :cond_6
     iget-wide v13, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->lastPss:J
 
@@ -1151,7 +1050,6 @@
 
     if-lez v12, :cond_9
 
-    .line 521
     invoke-virtual {v1, v10}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v12
@@ -1160,20 +1058,16 @@
 
     if-nez v12, :cond_7
 
-    .line 523
     new-instance v12, Lcom/android/server/chimera/ChimeraAppInfo;
 
     iget v13, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
 
     invoke-direct {v12, v13, v10}, Lcom/android/server/chimera/ChimeraAppInfo;-><init>(ILjava/lang/String;)V
 
-    .line 524
     iput v8, v12, Lcom/android/server/chimera/ChimeraAppInfo;->lruIdx:I
 
-    .line 525
     invoke-virtual {v1, v10, v12}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 526
     iget-object v13, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v14, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
@@ -1182,7 +1076,6 @@
 
     move-result v13
 
-    .line 527
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1207,7 +1100,6 @@
 
     invoke-interface {v2, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 530
     :cond_7
     iget-wide v13, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->lastPss:J
 
@@ -1217,7 +1109,6 @@
 
     if-gtz v10, :cond_8
 
-    .line 532
     iget-object v10, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v13, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
@@ -1229,7 +1120,6 @@
     :cond_8
     move-wide/from16 v20, v13
 
-    .line 535
     iget v10, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     iget-object v13, v9, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processName:Ljava/lang/String;
@@ -1264,7 +1154,6 @@
 
     invoke-virtual/range {v17 .. v28}, Lcom/android/server/chimera/ChimeraAppInfo;->addProcess(ILjava/lang/String;JJJJI)Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 536
     iput v11, v12, Lcom/android/server/chimera/ChimeraAppInfo;->idleKillAdj:I
 
     goto :goto_2
@@ -1288,7 +1177,6 @@
 
     goto/16 :goto_0
 
-    .line 541
     :cond_a
     invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
 
@@ -1296,12 +1184,10 @@
 
     if-lez v5, :cond_c
 
-    .line 543
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
     invoke-virtual {v5, v2}, Lcom/android/server/chimera/ChimeraAppClassifier;->updatePackagesType(Ljava/util/List;)V
 
-    .line 545
     invoke-virtual {v1}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v1
@@ -1323,7 +1209,6 @@
 
     check-cast v2, Lcom/android/server/chimera/ChimeraAppInfo;
 
-    .line 546
     iget-wide v5, v2, Lcom/android/server/chimera/ChimeraAppInfo;->pss:J
 
     iget-wide v7, v2, Lcom/android/server/chimera/ChimeraAppInfo;->swapPss:J
@@ -1332,7 +1217,6 @@
 
     iput-wide v5, v2, Lcom/android/server/chimera/ChimeraAppInfo;->reclaimGain:J
 
-    .line 547
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v6, v2, Lcom/android/server/chimera/ChimeraAppInfo;->uid:I
@@ -1341,7 +1225,6 @@
 
     move-result v5
 
-    .line 549
     iget-object v6, v2, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v6}, Lcom/android/server/chimera/ChimeraAppManager;->samsungApp(Ljava/lang/String;)Z
@@ -1350,7 +1233,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 550
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
     iget-object v7, v2, Lcom/android/server/chimera/ChimeraAppInfo;->packageName:Ljava/lang/String;
@@ -1367,14 +1249,12 @@
 
     iput v5, v2, Lcom/android/server/chimera/ChimeraAppInfo;->appType:I
 
-    .line 551
     invoke-static {v5}, Lcom/android/server/chimera/ChimeraAppInfo;->appType2group(I)I
 
     move-result v5
 
     iput v5, v2, Lcom/android/server/chimera/ChimeraAppInfo;->group:I
 
-    .line 552
     invoke-virtual {v2}, Lcom/android/server/chimera/ChimeraAppInfo;->isInDeviceIdleKillProtectedGroup()Z
 
     move-result v5
@@ -1391,7 +1271,6 @@
 
     if-nez v5, :cond_b
 
-    .line 553
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1414,7 +1293,6 @@
 
     goto :goto_3
 
-    .line 558
     :cond_b
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1425,7 +1303,6 @@
 
     if-lez v1, :cond_f
 
-    .line 564
     iget-object v1, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const/4 v2, 0x0
@@ -1434,7 +1311,6 @@
 
     move-result-object v1
 
-    .line 566
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1452,7 +1328,6 @@
 
     check-cast v3, Lcom/android/internal/os/ProcessCpuTracker$Stats;
 
-    .line 567
     iget v5, v3, Lcom/android/internal/os/ProcessCpuTracker$Stats;->uid:I
 
     invoke-virtual {v0, v5}, Lcom/android/server/chimera/ChimeraAppManager;->isThirdPartyApp(I)Z
@@ -1461,7 +1336,6 @@
 
     if-eqz v5, :cond_e
 
-    .line 568
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v6, v3, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
@@ -1474,7 +1348,6 @@
 
     if-lez v5, :cond_e
 
-    .line 570
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v6, v3, Lcom/android/internal/os/ProcessCpuTracker$Stats;->uid:I
@@ -1483,12 +1356,10 @@
 
     move-result-object v5
 
-    .line 572
     array-length v6, v5
 
     if-lez v6, :cond_d
 
-    .line 573
     new-instance v6, Lcom/android/server/chimera/ChimeraAppInfo;
 
     iget v7, v3, Lcom/android/internal/os/ProcessCpuTracker$Stats;->uid:I
@@ -1504,7 +1375,6 @@
     :cond_d
     const/4 v8, 0x0
 
-    .line 575
     new-instance v6, Lcom/android/server/chimera/ChimeraAppInfo;
 
     iget v5, v3, Lcom/android/internal/os/ProcessCpuTracker$Stats;->uid:I
@@ -1513,7 +1383,6 @@
 
     invoke-direct {v6, v5, v7}, Lcom/android/server/chimera/ChimeraAppInfo;-><init>(ILjava/lang/String;)V
 
-    .line 577
     :goto_5
     iget v5, v3, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
 
@@ -1537,10 +1406,8 @@
 
     const/16 v3, -0x3e8
 
-    .line 578
     iput v3, v6, Lcom/android/server/chimera/ChimeraAppInfo;->idleKillAdj:I
 
-    .line 579
     invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_4
@@ -1557,12 +1424,10 @@
 .method public getAppsToGc()Ljava/util/List;
     .locals 4
 
-    .line 110
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 111
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mGcApps:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1586,10 +1451,8 @@
 
     check-cast v1, Lcom/android/server/chimera/ChimeraAppInfo;
 
-    .line 112
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 113
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1623,7 +1486,6 @@
 
     move-object/from16 v1, p1
 
-    .line 120
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1646,58 +1508,48 @@
 
     invoke-interface {v2, v5, v3}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 121
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 122
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 123
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 125
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v7}, Lcom/android/server/chimera/SystemRepository;->getAccessibilityServicePackages()Ljava/util/List;
 
     move-result-object v7
 
-    .line 128
     iget-object v8, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-static {v8}, Lcom/android/server/chimera/ChimeraCommonUtil;->isBubEnabled(Lcom/android/server/chimera/SystemRepository;)Z
 
     move-result v8
 
-    .line 129
     iget-object v9, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v9}, Lcom/android/server/chimera/SystemRepository;->getCurrentHomePackageName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 131
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 132
     iget-object v11, v0, Lcom/android/server/chimera/ChimeraAppManager;->mReclaimApps:Ljava/util/Map;
 
     invoke-interface {v11}, Ljava/util/Map;->clear()V
 
-    .line 133
     iget-object v11, v0, Lcom/android/server/chimera/ChimeraAppManager;->mGcApps:Ljava/util/Map;
 
     invoke-interface {v11}, Ljava/util/Map;->clear()V
 
-    .line 135
     iget-object v11, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v11}, Lcom/android/server/chimera/SystemRepository;->getRunningAppProcesses()Ljava/util/List;
@@ -1727,7 +1579,6 @@
 
     add-int/2addr v12, v15
 
-    .line 137
     iget v15, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1736,7 +1587,6 @@
 
     invoke-interface {v10, v15}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 139
     iget-object v15, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     if-eqz v15, :cond_10
@@ -1750,10 +1600,8 @@
     :cond_0
     const/4 v14, 0x0
 
-    .line 143
     aget-object v14, v15, v14
 
-    .line 146
     iget v15, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processState:I
 
     move-object/from16 v16, v11
@@ -1762,7 +1610,6 @@
 
     if-ne v15, v11, :cond_1
 
-    .line 147
     iget v11, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     sget-object v13, Lcom/android/server/chimera/SkipReasonLogger$Reason;->CACC:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -1786,7 +1633,6 @@
 
     goto/16 :goto_6
 
-    .line 152
     :cond_1
     invoke-static {v14, v9}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -1797,7 +1643,6 @@
     :goto_2
     goto :goto_1
 
-    .line 157
     :cond_2
     invoke-interface {v7, v14}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1807,7 +1652,6 @@
 
     goto :goto_2
 
-    .line 162
     :cond_3
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -1845,7 +1689,6 @@
 
     goto/16 :goto_7
 
-    .line 167
     :cond_4
     iget v9, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processState:I
 
@@ -1853,7 +1696,6 @@
 
     if-ne v9, v10, :cond_5
 
-    .line 168
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v9
@@ -1874,10 +1716,8 @@
 
     if-gez v6, :cond_6
 
-    .line 169
     invoke-interface {v3, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 170
     iget v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     sget-object v7, Lcom/android/server/chimera/SkipReasonLogger$Reason;->CACHED_EMPTY:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -1906,7 +1746,6 @@
 
     move-object/from16 v18, v7
 
-    .line 175
     :cond_6
     iget v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processState:I
 
@@ -1914,7 +1753,6 @@
 
     if-ne v6, v7, :cond_7
 
-    .line 176
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
@@ -1931,10 +1769,8 @@
 
     if-gez v6, :cond_7
 
-    .line 177
     invoke-interface {v3, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 178
     iget v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     sget-object v7, Lcom/android/server/chimera/SkipReasonLogger$Reason;->SERVICE:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -1943,7 +1779,6 @@
 
     goto :goto_3
 
-    .line 182
     :cond_7
     invoke-interface {v3, v14}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -1951,12 +1786,10 @@
 
     if-eqz v6, :cond_8
 
-    .line 183
     invoke-virtual {v0, v14, v13}, Lcom/android/server/chimera/ChimeraAppManager;->addToReclaimGcAppList(Ljava/lang/String;Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)V
 
     goto :goto_3
 
-    .line 187
     :cond_8
     iget v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->flags:I
 
@@ -1970,13 +1803,11 @@
 
     if-ne v6, v7, :cond_a
 
-    .line 189
     :cond_9
     invoke-virtual {v0, v14, v13}, Lcom/android/server/chimera/ChimeraAppManager;->addToReclaimGcAppList(Ljava/lang/String;Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)V
 
     if-lez v4, :cond_a
 
-    .line 192
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1997,10 +1828,8 @@
 
     add-int/lit8 v4, v4, -0x1
 
-    .line 194
     invoke-interface {v3, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 195
     iget v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     sget-object v7, Lcom/android/server/chimera/SkipReasonLogger$Reason;->LRU:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -2019,7 +1848,6 @@
 
     goto/16 :goto_0
 
-    .line 200
     :cond_a
     iget v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processState:I
 
@@ -2027,10 +1855,8 @@
 
     if-gt v6, v7, :cond_b
 
-    .line 201
     invoke-interface {v3, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 202
     iget v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     sget-object v7, Lcom/android/server/chimera/SkipReasonLogger$Reason;->PERSISTENT_OR_PROTECTED:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -2042,12 +1868,10 @@
     :cond_b
     if-nez v8, :cond_c
 
-    .line 206
     iget-boolean v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->isProtectedInPicked:Z
 
     if-eqz v6, :cond_c
 
-    .line 207
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2066,10 +1890,8 @@
 
     invoke-interface {v6, v5, v7}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 208
     invoke-interface {v3, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 209
     iget v6, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     sget-object v7, Lcom/android/server/chimera/SkipReasonLogger$Reason;->PICKED:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -2078,7 +1900,6 @@
 
     goto/16 :goto_3
 
-    .line 213
     :cond_c
     invoke-virtual {v2, v14}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2088,20 +1909,16 @@
 
     if-nez v6, :cond_d
 
-    .line 215
     new-instance v6, Lcom/android/server/chimera/ChimeraAppInfo;
 
     iget v7, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
 
     invoke-direct {v6, v7, v14}, Lcom/android/server/chimera/ChimeraAppInfo;-><init>(ILjava/lang/String;)V
 
-    .line 216
     iput v12, v6, Lcom/android/server/chimera/ChimeraAppInfo;->lruIdx:I
 
-    .line 217
     invoke-virtual {v0, v6}, Lcom/android/server/chimera/ChimeraAppManager;->getAppStandbyBucket(Lcom/android/server/chimera/ChimeraAppInfo;)V
 
-    .line 218
     iget v7, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
 
     invoke-virtual {v0, v14, v7}, Lcom/android/server/chimera/ChimeraAppManager;->getAppStandbyBucket(Ljava/lang/String;I)I
@@ -2110,10 +1927,8 @@
 
     iput v7, v6, Lcom/android/server/chimera/ChimeraAppInfo;->curStandbyBucket:I
 
-    .line 219
     invoke-virtual {v2, v14, v6}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 220
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v9, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->uid:I
@@ -2122,7 +1937,6 @@
 
     move-result v7
 
-    .line 221
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2159,7 +1973,6 @@
 
     move/from16 p2, v4
 
-    .line 224
     iget-wide v3, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->lastPss:J
 
     const-wide/16 v19, 0x0
@@ -2168,7 +1981,6 @@
 
     if-gtz v7, :cond_e
 
-    .line 226
     iget-object v3, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2189,7 +2001,6 @@
 
     invoke-interface {v3, v5, v4}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 227
     iget-object v3, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v4, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
@@ -2201,7 +2012,6 @@
     :cond_e
     move-wide/from16 v22, v3
 
-    .line 231
     iget v3, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     iget-object v4, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processName:Ljava/lang/String;
@@ -2240,14 +2050,12 @@
 
     invoke-virtual/range {v19 .. v30}, Lcom/android/server/chimera/ChimeraAppInfo;->addProcess(ILjava/lang/String;JJJJI)Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 233
     iget v3, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->flags:I
 
     and-int/lit8 v4, v3, 0x8
 
     if-lez v4, :cond_f
 
-    .line 234
     iget v4, v6, Lcom/android/server/chimera/ChimeraAppInfo;->appType:I
 
     const/high16 v5, 0x20000
@@ -2261,7 +2069,6 @@
 
     if-lez v3, :cond_11
 
-    .line 238
     iget v3, v6, Lcom/android/server/chimera/ChimeraAppInfo;->appType:I
 
     const/high16 v4, 0x1000000
@@ -2324,31 +2131,26 @@
 
     const/4 v14, 0x0
 
-    .line 242
     invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
 
     move-result v3
 
     if-lez v3, :cond_19
 
-    .line 244
     iget-object v3, v0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
     move-object/from16 v4, p3
 
     invoke-virtual {v3, v4}, Lcom/android/server/chimera/ChimeraAppClassifier;->prepare(Lcom/android/server/chimera/ChimeraCommonUtil$TriggerSource;)V
 
-    .line 245
     iget-object v3, v0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
 
     invoke-virtual {v3, v9}, Lcom/android/server/chimera/ChimeraAppClassifier;->updatePackagesType(Ljava/util/List;)V
 
-    .line 247
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 248
     invoke-virtual {v2}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v2
@@ -2371,12 +2173,10 @@
 
     check-cast v4, Lcom/android/server/chimera/ChimeraAppInfo;
 
-    .line 249
     iget-wide v5, v4, Lcom/android/server/chimera/ChimeraAppInfo;->pss:J
 
     iput-wide v5, v4, Lcom/android/server/chimera/ChimeraAppInfo;->reclaimGain:J
 
-    .line 250
     iget-object v5, v0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget v6, v4, Lcom/android/server/chimera/ChimeraAppInfo;->uid:I
@@ -2385,7 +2185,6 @@
 
     move-result v5
 
-    .line 251
     iget v6, v4, Lcom/android/server/chimera/ChimeraAppInfo;->appType:I
 
     iget-object v8, v0, Lcom/android/server/chimera/ChimeraAppManager;->mAppClassifier:Lcom/android/server/chimera/ChimeraAppClassifier;
@@ -2406,7 +2205,6 @@
 
     iput v5, v4, Lcom/android/server/chimera/ChimeraAppInfo;->appType:I
 
-    .line 252
     invoke-static {v5}, Lcom/android/server/chimera/ChimeraAppInfo;->appType2group(I)I
 
     move-result v5
@@ -2417,7 +2215,6 @@
 
     if-ne v5, v6, :cond_14
 
-    .line 255
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object v5
@@ -2430,7 +2227,6 @@
 
     if-eqz v5, :cond_14
 
-    .line 257
     iget-object v4, v4, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2450,14 +2246,12 @@
 
     check-cast v5, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 258
     iget v6, v5, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
 
     sget-object v8, Lcom/android/server/chimera/SkipReasonLogger$Reason;->PERSISTENT_OR_PROTECTED:Lcom/android/server/chimera/SkipReasonLogger$Reason;
 
     invoke-virtual {v1, v6, v8}, Lcom/android/server/chimera/SkipReasonLogger;->mark(ILcom/android/server/chimera/SkipReasonLogger$Reason;)V
 
-    .line 259
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraAppManager;->mForegroundG3ProcList:Ljava/util/Set;
 
     iget v5, v5, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
@@ -2470,7 +2264,6 @@
 
     goto :goto_9
 
-    .line 265
     :cond_14
     invoke-virtual {v4}, Lcom/android/server/chimera/ChimeraAppInfo;->isInfoNotFeteched()Z
 
@@ -2486,7 +2279,6 @@
 
     goto :goto_b
 
-    .line 273
     :cond_15
     iget-object v5, v4, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
 
@@ -2507,7 +2299,6 @@
 
     check-cast v6, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 274
     iget-object v8, v0, Lcom/android/server/chimera/ChimeraAppManager;->mForegroundG3ProcList:Ljava/util/Set;
 
     iget v9, v6, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
@@ -2522,7 +2313,6 @@
 
     if-eqz v8, :cond_16
 
-    .line 275
     iget v5, v6, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
 
     sget-object v6, Lcom/android/server/chimera/SkipReasonLogger$Reason;->PERSISTENT_OR_PROTECTED:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -2539,12 +2329,10 @@
     :goto_a
     if-nez v5, :cond_13
 
-    .line 282
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_8
 
-    .line 266
     :cond_18
     :goto_b
     iget-object v4, v4, Lcom/android/server/chimera/ChimeraAppInfo;->procList:Ljava/util/List;
@@ -2566,7 +2354,6 @@
 
     check-cast v5, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;
 
-    .line 267
     iget v5, v5, Lcom/android/server/chimera/ChimeraAppInfo$ProcessInfo;->pid:I
 
     sget-object v6, Lcom/android/server/chimera/SkipReasonLogger$Reason;->PERSISTENT_OR_PROTECTED:Lcom/android/server/chimera/SkipReasonLogger$Reason;
@@ -2578,13 +2365,11 @@
     :cond_19
     const/4 v3, 0x0
 
-    .line 287
     :cond_1a
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 289
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraAppManager;->mForegroundG3ProcList:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -2608,7 +2393,6 @@
 
     move-result v4
 
-    .line 290
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -2621,7 +2405,6 @@
 
     if-nez v5, :cond_1b
 
-    .line 291
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -2633,7 +2416,6 @@
 
     goto :goto_d
 
-    .line 295
     :cond_1c
     iget-object v0, v0, Lcom/android/server/chimera/ChimeraAppManager;->mForegroundG3ProcList:Ljava/util/Set;
 
@@ -2645,12 +2427,10 @@
 .method public getAppsToReclaim()Ljava/util/List;
     .locals 4
 
-    .line 101
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mReclaimApps:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -2674,10 +2454,8 @@
 
     check-cast v1, Lcom/android/server/chimera/ChimeraAppInfo;
 
-    .line 103
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 104
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2707,7 +2485,6 @@
 .method public final isThirdPartyApp(I)Z
     .locals 0
 
-    .line 589
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {p0, p1}, Lcom/android/server/chimera/SystemRepository;->isApp(I)Z
@@ -2720,7 +2497,6 @@
 .method public final persistentApp(I)Z
     .locals 0
 
-    .line 0
     const/16 p0, -0x2bc
 
     if-eq p1, p0, :cond_1
@@ -2748,7 +2524,6 @@
 
     const-string p0, "com.sec"
 
-    .line 593
     invoke-virtual {p1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p0

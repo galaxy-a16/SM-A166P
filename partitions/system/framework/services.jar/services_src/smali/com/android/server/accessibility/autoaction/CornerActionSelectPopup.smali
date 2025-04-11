@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPopup(Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)Landroid/widget/PopupMenu;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mPopup:Landroid/widget/PopupMenu;
 
     return-object p0
@@ -32,7 +31,6 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 4
 
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x53
@@ -43,37 +41,30 @@
 
     const/16 v3, 0x35
 
-    .line 43
     filled-new-array {v2, v3, v0, v1}, [I
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->POPUP_GRAVITY:[I
 
-    .line 48
     new-instance v0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$1;-><init>(Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)V
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mContext:Landroid/content/Context;
 
-    .line 61
     invoke-virtual {p0, p2}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->makeView(I)V
 
-    .line 63
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p2, "android.intent.action.SCREEN_OFF"
 
-    .line 64
     invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
@@ -86,14 +77,12 @@
 .method public destroy()V
     .locals 2
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mAnchorView:Landroid/view/View;
@@ -102,7 +91,6 @@
 
     const/4 v0, 0x0
 
-    .line 122
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mContext:Landroid/content/Context;
 
     return-void
@@ -111,7 +99,6 @@
 .method public dismiss()V
     .locals 0
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mPopup:Landroid/widget/PopupMenu;
 
     invoke-virtual {p0}, Landroid/widget/PopupMenu;->dismiss()V
@@ -122,7 +109,6 @@
 .method public final isNightMode()Z
     .locals 1
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -155,7 +141,6 @@
 .method public final makeView(I)V
     .locals 3
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "window"
@@ -168,7 +153,6 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 70
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
@@ -177,17 +161,14 @@
 
     const/4 v1, 0x0
 
-    .line 71
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
     const/16 v1, 0x7d9
 
-    .line 72
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 73
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->POPUP_GRAVITY:[I
 
     aget p1, v1, p1
@@ -196,10 +177,8 @@
 
     const/16 p1, 0x120
 
-    .line 74
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 76
     iget p1, v0, Landroid/view/WindowManager$LayoutParams;->samsungFlags:I
 
     const/high16 v1, 0x20000
@@ -210,10 +189,8 @@
 
     const/4 p1, 0x3
 
-    .line 77
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
-    .line 79
     new-instance p1, Landroid/view/View;
 
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mContext:Landroid/content/Context;
@@ -222,14 +199,12 @@
 
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mAnchorView:Landroid/view/View;
 
-    .line 80
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-interface {v0, p1, v1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 81
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->isNightMode()Z
 
     move-result p1
@@ -243,7 +218,6 @@
     :cond_0
     const p1, 0x103012b
 
-    .line 83
     :goto_0
     new-instance v0, Landroid/widget/PopupMenu;
 
@@ -269,7 +243,6 @@
 
     move v1, v0
 
-    .line 92
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -277,7 +250,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 93
     iget-object v2, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mPopup:Landroid/widget/PopupMenu;
 
     invoke-virtual {v2}, Landroid/widget/PopupMenu;->getMenu()Landroid/view/Menu;
@@ -303,7 +275,6 @@
 .method public setOnDismissListener(Landroid/widget/PopupMenu$OnDismissListener;)V
     .locals 0
 
-    .line 112
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mPopup:Landroid/widget/PopupMenu;
 
     invoke-virtual {p0, p1}, Landroid/widget/PopupMenu;->setOnDismissListener(Landroid/widget/PopupMenu$OnDismissListener;)V
@@ -314,7 +285,6 @@
 .method public setOnMenuItemClickListener(Landroid/widget/PopupMenu$OnMenuItemClickListener;)V
     .locals 0
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->mPopup:Landroid/widget/PopupMenu;
 
     invoke-virtual {p0, p1}, Landroid/widget/PopupMenu;->setOnMenuItemClickListener(Landroid/widget/PopupMenu$OnMenuItemClickListener;)V
@@ -325,7 +295,6 @@
 .method public show()V
     .locals 2
 
-    .line 98
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -334,7 +303,6 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 99
     new-instance v1, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$2;-><init>(Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)V

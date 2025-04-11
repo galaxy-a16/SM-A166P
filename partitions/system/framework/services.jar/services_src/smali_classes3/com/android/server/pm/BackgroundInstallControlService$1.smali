@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/pm/BackgroundInstallControlService;)V
     .locals 0
 
-    .line 451
     iput-object p1, p0, Lcom/android/server/pm/BackgroundInstallControlService$1;->this$0:Lcom/android/server/pm/BackgroundInstallControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 2
 
-    .line 454
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 455
     iget-object p0, p0, Lcom/android/server/pm/BackgroundInstallControlService$1;->this$0:Lcom/android/server/pm/BackgroundInstallControlService;
 
     invoke-static {p0}, Lcom/android/server/pm/BackgroundInstallControlService;->-$$Nest$fgetmHandler(Lcom/android/server/pm/BackgroundInstallControlService;)Landroid/os/Handler;
@@ -47,7 +44,6 @@
 
     move-result-object p0
 
-    .line 456
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -56,12 +52,10 @@
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 2
 
-    .line 461
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 462
     iget-object p0, p0, Lcom/android/server/pm/BackgroundInstallControlService$1;->this$0:Lcom/android/server/pm/BackgroundInstallControlService;
 
     invoke-static {p0}, Lcom/android/server/pm/BackgroundInstallControlService;->-$$Nest$fgetmHandler(Lcom/android/server/pm/BackgroundInstallControlService;)Landroid/os/Handler;
@@ -76,7 +70,6 @@
 
     move-result-object p0
 
-    .line 463
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

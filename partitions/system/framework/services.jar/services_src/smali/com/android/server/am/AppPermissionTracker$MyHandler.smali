@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppPermissionTracker;)V
     .locals 1
 
-    .line 410
     iget-object v0, p1, Lcom/android/server/am/BaseAppStateTracker;->mBgHandler:Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -20,7 +19,6 @@
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 411
     iput-object p1, p0, Lcom/android/server/am/AppPermissionTracker$MyHandler;->mTracker:Lcom/android/server/am/AppPermissionTracker;
 
     return-void
@@ -31,7 +29,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 416
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_3
@@ -50,7 +47,6 @@
 
     goto :goto_0
 
-    .line 429
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/AppPermissionTracker$MyHandler;->mTracker:Lcom/android/server/am/AppPermissionTracker;
 
@@ -66,7 +62,6 @@
 
     goto :goto_0
 
-    .line 426
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/AppPermissionTracker$MyHandler;->mTracker:Lcom/android/server/am/AppPermissionTracker;
 
@@ -76,26 +71,22 @@
 
     goto :goto_0
 
-    .line 422
     :cond_2
     iget-object p1, p0, Lcom/android/server/am/AppPermissionTracker$MyHandler;->mTracker:Lcom/android/server/am/AppPermissionTracker;
 
     invoke-static {p1}, Lcom/android/server/am/AppPermissionTracker;->-$$Nest$mhandlePermissionsDestroy(Lcom/android/server/am/AppPermissionTracker;)V
 
-    .line 423
     iget-object p0, p0, Lcom/android/server/am/AppPermissionTracker$MyHandler;->mTracker:Lcom/android/server/am/AppPermissionTracker;
 
     invoke-static {p0}, Lcom/android/server/am/AppPermissionTracker;->-$$Nest$mhandleAppOpsDestroy(Lcom/android/server/am/AppPermissionTracker;)V
 
     goto :goto_0
 
-    .line 418
     :cond_3
     iget-object p1, p0, Lcom/android/server/am/AppPermissionTracker$MyHandler;->mTracker:Lcom/android/server/am/AppPermissionTracker;
 
     invoke-static {p1}, Lcom/android/server/am/AppPermissionTracker;->-$$Nest$mhandleAppOpsInit(Lcom/android/server/am/AppPermissionTracker;)V
 
-    .line 419
     iget-object p0, p0, Lcom/android/server/am/AppPermissionTracker$MyHandler;->mTracker:Lcom/android/server/am/AppPermissionTracker;
 
     invoke-static {p0}, Lcom/android/server/am/AppPermissionTracker;->-$$Nest$mhandlePermissionsInit(Lcom/android/server/am/AppPermissionTracker;)V

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/om/wallpapertheme/TemplateManager;)V
     .locals 0
 
-    .line 404
     iput-object p1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager$3;->this$0:Lcom/android/server/om/wallpapertheme/TemplateManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public apply(Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;)Ljava/lang/Integer;
     .locals 2
 
-    .line 408
     :try_start_0
     iget-object p1, p1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->theme:Ljava/lang/String;
 
@@ -46,7 +44,6 @@
     :catch_0
     move-exception p1
 
-    .line 411
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager$3;->this$0:Lcom/android/server/om/wallpapertheme/TemplateManager;
 
     invoke-static {p0}, Lcom/android/server/om/wallpapertheme/TemplateManager;->-$$Nest$fgetTAG(Lcom/android/server/om/wallpapertheme/TemplateManager;)Ljava/lang/String;
@@ -77,7 +74,6 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 404
     check-cast p1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;
 
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/TemplateManager$3;->apply(Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;)Ljava/lang/Integer;

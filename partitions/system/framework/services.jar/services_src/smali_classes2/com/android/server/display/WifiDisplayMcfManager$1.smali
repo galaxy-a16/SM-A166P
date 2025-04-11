@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayMcfManager;)V
     .locals 0
 
-    .line 353
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$1;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 355
     invoke-static {}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -36,7 +34,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 356
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$1;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     new-instance v0, Landroid/os/Messenger;
@@ -45,14 +42,12 @@
 
     invoke-static {p1, v0}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fputmService(Lcom/android/server/display/WifiDisplayMcfManager;Landroid/os/Messenger;)V
 
-    .line 357
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$1;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fputmIsBounded(Lcom/android/server/display/WifiDisplayMcfManager;Z)V
 
-    .line 359
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$1;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -79,7 +74,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 365
     invoke-static {}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -88,14 +82,12 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$1;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fputmService(Lcom/android/server/display/WifiDisplayMcfManager;Landroid/os/Messenger;)V
 
-    .line 367
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayMcfManager$1;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     const/4 p1, 0x0

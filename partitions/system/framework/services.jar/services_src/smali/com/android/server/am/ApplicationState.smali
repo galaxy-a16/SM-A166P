@@ -13,15 +13,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 437
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 438
     iput v0, p0, Lcom/android/server/am/ApplicationState;->mStopReason:I
 
-    .line 439
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -36,7 +33,6 @@
 .method public addProcess(I)V
     .locals 0
 
-    .line 447
     iget-object p0, p0, Lcom/android/server/am/ApplicationState;->mProcessIds:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -51,7 +47,6 @@
 .method public getTermReason()Ljava/lang/String;
     .locals 1
 
-    .line 443
     sget-object v0, Lcom/android/server/am/AppStateBroadcaster;->APP_TERM_REASONS:[Ljava/lang/String;
 
     iget p0, p0, Lcom/android/server/am/ApplicationState;->mStopReason:I
@@ -64,7 +59,6 @@
 .method public removeProcess(II)Z
     .locals 1
 
-    .line 451
     iget v0, p0, Lcom/android/server/am/ApplicationState;->mStopReason:I
 
     invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
@@ -73,7 +67,6 @@
 
     iput p2, p0, Lcom/android/server/am/ApplicationState;->mStopReason:I
 
-    .line 452
     iget-object p2, p0, Lcom/android/server/am/ApplicationState;->mProcessIds:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -82,7 +75,6 @@
 
     invoke-virtual {p2, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 453
     iget-object p0, p0, Lcom/android/server/am/ApplicationState;->mProcessIds:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->isEmpty()Z

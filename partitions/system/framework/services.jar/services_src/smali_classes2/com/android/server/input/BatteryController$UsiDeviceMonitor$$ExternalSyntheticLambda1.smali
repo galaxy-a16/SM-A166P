@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/input/BatteryController$UsiDeviceMonitor;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/input/BatteryController$UsiDeviceMonitor$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/input/BatteryController$UsiDeviceMonitor;
@@ -27,7 +26,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/input/BatteryController$UsiDeviceMonitor$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/input/BatteryController$UsiDeviceMonitor;
 
     invoke-static {p0}, Lcom/android/server/input/BatteryController$UsiDeviceMonitor;->$r8$lambda$UwULtvqCEa65GDAED1OeKN7yQyU(Lcom/android/server/input/BatteryController$UsiDeviceMonitor;)Lcom/android/server/input/BatteryController$State;

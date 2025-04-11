@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;ILandroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 3175
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$3;->this$0:Lcom/android/server/pm/UserManagerService;
 
     iput p2, p0, Lcom/android/server/pm/UserManagerService$3;->val$userId:I
@@ -39,7 +38,6 @@
 .method public run()V
     .locals 7
 
-    .line 3178
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$3;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/UserManagerService;->-$$Nest$fgetmContext(Lcom/android/server/pm/UserManagerService;)Landroid/content/Context;
@@ -54,7 +52,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/UserRestrictionsUtils;->applyUserRestrictions(Landroid/content/Context;ILandroid/os/Bundle;Landroid/os/Bundle;)V
 
-    .line 3182
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$3;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/UserManagerService;->-$$Nest$fgetmUserRestrictionsListeners(Lcom/android/server/pm/UserManagerService;)Ljava/util/ArrayList;
@@ -63,7 +60,6 @@
 
     monitor-enter v0
 
-    .line 3183
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/UserManagerService$3;->this$0:Lcom/android/server/pm/UserManagerService;
 
@@ -77,7 +73,6 @@
 
     new-array v2, v1, [Lcom/android/server/pm/UserManagerInternal$UserRestrictionsListener;
 
-    .line 3184
     iget-object v3, p0, Lcom/android/server/pm/UserManagerService$3;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {v3}, Lcom/android/server/pm/UserManagerService;->-$$Nest$fgetmUserRestrictionsListeners(Lcom/android/server/pm/UserManagerService;)Ljava/util/ArrayList;
@@ -86,7 +81,6 @@
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 3185
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -96,7 +90,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 3187
     aget-object v3, v2, v0
 
     iget v4, p0, Lcom/android/server/pm/UserManagerService$3;->val$userId:I
@@ -111,7 +104,6 @@
 
     goto :goto_0
 
-    .line 3191
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -121,29 +113,24 @@
 
     const/high16 v1, 0x40000000    # 2.0f
 
-    .line 3192
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 3195
     invoke-static {}, Landroid/app/BroadcastOptions;->makeBasic()Landroid/app/BroadcastOptions;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    .line 3196
     invoke-virtual {v1, v2}, Landroid/app/BroadcastOptions;->setDeliveryGroupPolicy(I)Landroid/app/BroadcastOptions;
 
     move-result-object v1
 
-    .line 3197
     invoke-virtual {v1}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 3198
     iget-object v2, p0, Lcom/android/server/pm/UserManagerService$3;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {v2}, Lcom/android/server/pm/UserManagerService;->-$$Nest$fgetmContext(Lcom/android/server/pm/UserManagerService;)Landroid/content/Context;
@@ -165,7 +152,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3185
     :try_start_1
     monitor-exit v0
     :try_end_1

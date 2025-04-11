@@ -21,19 +21,14 @@
 .method public constructor <init>(Lcom/android/server/vibrator/VibrationStepConductor;JLcom/android/server/vibrator/VibratorController;Landroid/os/VibrationEffect$Composed;IJ)V
     .locals 0
 
-    .line 54
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/vibrator/Step;-><init>(Lcom/android/server/vibrator/VibrationStepConductor;J)V
 
-    .line 55
     iput-object p4, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
-    .line 56
     iput-object p5, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
-    .line 57
     iput p6, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->segmentIndex:I
 
-    .line 58
     iput-wide p7, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mPendingVibratorOffDeadline:J
 
     return-void
@@ -44,7 +39,6 @@
 .method public acceptVibratorCompleteCallback(I)Z
     .locals 6
 
-    .line 72
     invoke-virtual {p0}, Lcom/android/server/vibrator/AbstractVibratorStep;->getVibratorId()I
 
     move-result v0
@@ -55,7 +49,6 @@
 
     return v1
 
-    .line 78
     :cond_0
     iget-wide v2, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mPendingVibratorOffDeadline:J
 
@@ -74,10 +67,8 @@
     :cond_1
     const-wide/16 v2, 0x0
 
-    .line 86
     iput-wide v2, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mPendingVibratorOffDeadline:J
 
-    .line 87
     iput-boolean v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mVibratorCompleteCallbackReceived:Z
 
     return v1
@@ -86,7 +77,6 @@
 .method public cancel()Ljava/util/List;
     .locals 9
 
-    .line 93
     new-instance v8, Lcom/android/server/vibrator/CompleteEffectVibratorStep;
 
     iget-object v1, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
@@ -119,7 +109,6 @@
 .method public cancelImmediately()V
     .locals 4
 
-    .line 99
     iget-wide v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mPendingVibratorOffDeadline:J
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -130,7 +119,6 @@
 
     if-lez v0, :cond_0
 
-    .line 101
     invoke-virtual {p0}, Lcom/android/server/vibrator/AbstractVibratorStep;->stopVibrating()V
 
     :cond_0
@@ -140,12 +128,10 @@
 .method public changeAmplitude(F)V
     .locals 1
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
     invoke-virtual {v0, p1}, Lcom/android/server/vibrator/VibratorController;->setAmplitude(F)V
 
-    .line 139
     invoke-virtual {p0}, Lcom/android/server/vibrator/Step;->getVibration()Lcom/android/server/vibrator/HalVibration;
 
     move-result-object p0
@@ -160,7 +146,6 @@
 .method public getVibratorId()I
     .locals 0
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
     invoke-virtual {p0}, Lcom/android/server/vibrator/VibratorController;->getVibratorInfo()Landroid/os/VibratorInfo;
@@ -177,7 +162,6 @@
 .method public getVibratorOnDuration()J
     .locals 2
 
-    .line 67
     iget-wide v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mVibratorOnResult:J
 
     return-wide v0
@@ -186,7 +170,6 @@
 .method public handleVibratorOnResult(J)J
     .locals 2
 
-    .line 106
     iput-wide p1, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mVibratorOnResult:J
 
     const-wide/16 v0, 0x0
@@ -195,7 +178,6 @@
 
     if-lez p1, :cond_0
 
-    .line 114
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
@@ -212,11 +194,9 @@
 
     goto :goto_0
 
-    .line 118
     :cond_0
     iput-wide v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mPendingVibratorOffDeadline:J
 
-    .line 120
     :goto_0
     iget-wide p0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mVibratorOnResult:J
 
@@ -226,12 +206,10 @@
 .method public nextSteps(I)Ljava/util/List;
     .locals 6
 
-    .line 149
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 150
     iget-wide v2, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mVibratorOnResult:J
 
     const-wide/16 v4, 0x0
@@ -242,7 +220,6 @@
 
     add-long/2addr v0, v2
 
-    .line 155
     :cond_0
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/vibrator/AbstractVibratorStep;->nextSteps(JI)Ljava/util/List;
 
@@ -254,12 +231,10 @@
 .method public nextSteps(JI)Ljava/util/List;
     .locals 9
 
-    .line 166
     iget v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->segmentIndex:I
 
     add-int/2addr v0, p3
 
-    .line 167
     iget-object p3, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
     invoke-virtual {p3}, Landroid/os/VibrationEffect$Composed;->getSegments()Ljava/util/List;
@@ -270,7 +245,6 @@
 
     move-result p3
 
-    .line 168
     iget-object v1, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
     invoke-virtual {v1}, Landroid/os/VibrationEffect$Composed;->getRepeatIndex()I
@@ -285,7 +259,6 @@
 
     sub-int v3, v0, v1
 
-    .line 173
     invoke-virtual {p0}, Lcom/android/server/vibrator/Step;->getVibration()Lcom/android/server/vibrator/HalVibration;
 
     move-result-object v4
@@ -298,7 +271,6 @@
 
     sub-int/2addr v0, p3
 
-    .line 174
     rem-int/2addr v0, v2
 
     add-int/2addr v0, v1
@@ -306,7 +278,6 @@
     :cond_0
     move v6, v0
 
-    .line 176
     iget-object v1, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
 
     iget-object v4, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
@@ -323,7 +294,6 @@
 
     if-nez p0, :cond_1
 
-    .line 178
     sget-object p0, Lcom/android/server/vibrator/VibrationStepConductor;->EMPTY_STEP_LIST:Ljava/util/List;
 
     goto :goto_0
@@ -344,12 +314,10 @@
 .method public stopVibrating()V
     .locals 2
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
     invoke-virtual {v0}, Lcom/android/server/vibrator/VibratorController;->off()V
 
-    .line 129
     invoke-virtual {p0}, Lcom/android/server/vibrator/Step;->getVibration()Lcom/android/server/vibrator/HalVibration;
 
     move-result-object v0
@@ -360,7 +328,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 130
     iput-wide v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->mPendingVibratorOffDeadline:J
 
     return-void

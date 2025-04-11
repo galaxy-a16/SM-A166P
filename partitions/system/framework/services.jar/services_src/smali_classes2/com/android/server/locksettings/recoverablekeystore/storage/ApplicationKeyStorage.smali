@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxy;)V
     .locals 0
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     iput-object p1, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/ApplicationKeyStorage;->mKeyStore:Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxy;
 
     return-void
@@ -23,12 +21,10 @@
 .method public static getInstance()Lcom/android/server/locksettings/recoverablekeystore/storage/ApplicationKeyStorage;
     .locals 3
 
-    .line 62
     new-instance v0, Lcom/android/server/locksettings/recoverablekeystore/storage/ApplicationKeyStorage;
 
     new-instance v1, Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxyImpl;
 
-    .line 63
     invoke-static {}, Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxyImpl;->getAndLoadAndroidKeyStore()Ljava/security/KeyStore;
 
     move-result-object v2
@@ -45,7 +41,6 @@
 .method public deleteEntry(IILjava/lang/String;)V
     .locals 3
 
-    .line 100
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -70,7 +65,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/ApplicationKeyStorage;->mKeyStore:Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxy;
 
@@ -87,7 +81,6 @@
     :catch_0
     move-exception p0
 
-    .line 104
     new-instance p1, Landroid/os/ServiceSpecificException;
 
     const/16 p2, 0x16
@@ -104,7 +97,6 @@
 .method public getGrantAlias(IILjava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 75
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -129,12 +121,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/locksettings/recoverablekeystore/storage/ApplicationKeyStorage;->getInternalAlias(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 77
     invoke-virtual {p0, p2, p1}, Lcom/android/server/locksettings/recoverablekeystore/storage/ApplicationKeyStorage;->makeKeystoreEngineGrantString(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -145,7 +135,6 @@
 .method public final getInternalAlias(IILjava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 120
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -182,7 +171,6 @@
 
     return-object p0
 
-    .line 128
     :cond_0
     new-instance v0, Landroid/system/keystore2/KeyDescriptor;
 
@@ -190,21 +178,16 @@
 
     const/4 v1, 0x0
 
-    .line 129
     iput v1, v0, Landroid/system/keystore2/KeyDescriptor;->domain:I
 
     const-wide/16 v1, -0x1
 
-    .line 130
     iput-wide v1, v0, Landroid/system/keystore2/KeyDescriptor;->nspace:J
 
-    .line 131
     iput-object p2, v0, Landroid/system/keystore2/KeyDescriptor;->alias:Ljava/lang/String;
 
-    .line 132
     iput-object p0, v0, Landroid/system/keystore2/KeyDescriptor;->blob:[B
 
-    .line 137
     :try_start_0
     invoke-static {}, Landroid/security/KeyStore2;->getInstance()Landroid/security/KeyStore2;
 
@@ -218,7 +201,6 @@
     :try_end_0
     .catch Landroid/security/KeyStoreException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 147
     iget-wide p0, p0, Landroid/system/keystore2/KeyDescriptor;->nspace:J
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -242,7 +224,6 @@
     :catch_0
     move-exception p0
 
-    .line 139
     invoke-virtual {p0}, Landroid/security/KeyStoreException;->getNumericErrorCode()I
 
     move-result p1
@@ -255,10 +236,8 @@
 
     const-string p1, "Failed to get grant for KeyStore key - key not found"
 
-    .line 141
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 142
     new-instance p1, Landroid/os/ServiceSpecificException;
 
     const/16 p2, 0x1e
@@ -274,10 +253,8 @@
     :cond_1
     const-string p1, "Failed to get grant for KeyStore key."
 
-    .line 144
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 145
     new-instance p1, Landroid/os/ServiceSpecificException;
 
     const/16 p2, 0x16
@@ -294,10 +271,8 @@
 .method public setSymmetricKeyEntry(IILjava/lang/String;[B)V
     .locals 4
 
-    .line 82
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 83
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -318,7 +293,6 @@
 
     const-string v2, "Set %d/%d/%s: %d bytes of key material"
 
-    .line 82
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -327,11 +301,9 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/ApplicationKeyStorage;->mKeyStore:Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxy;
 
-    .line 86
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/locksettings/recoverablekeystore/storage/ApplicationKeyStorage;->getInternalAlias(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -362,7 +334,6 @@
 
     aput-object v1, p4, v2
 
-    .line 91
     invoke-virtual {p2, p4}, Landroid/security/keystore/KeyProtection$Builder;->setBlockModes([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
     move-result-object p2
@@ -373,17 +344,14 @@
 
     aput-object p4, p3, v2
 
-    .line 92
     invoke-virtual {p2, p3}, Landroid/security/keystore/KeyProtection$Builder;->setEncryptionPaddings([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
     move-result-object p2
 
-    .line 93
     invoke-virtual {p2}, Landroid/security/keystore/KeyProtection$Builder;->build()Landroid/security/keystore/KeyProtection;
 
     move-result-object p2
 
-    .line 85
     invoke-interface {v0, p0, p1, p2}, Lcom/android/server/locksettings/recoverablekeystore/KeyStoreProxy;->setEntry(Ljava/lang/String;Ljava/security/KeyStore$Entry;Ljava/security/KeyStore$ProtectionParameter;)V
     :try_end_0
     .catch Ljava/security/KeyStoreException; {:try_start_0 .. :try_end_0} :catch_0
@@ -393,7 +361,6 @@
     :catch_0
     move-exception p0
 
-    .line 95
     new-instance p1, Landroid/os/ServiceSpecificException;
 
     const/16 p2, 0x16

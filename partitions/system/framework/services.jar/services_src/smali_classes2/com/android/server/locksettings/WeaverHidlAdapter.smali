@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$ANgLbwlrvQh2SJ398yoY8qSAD_U([Landroid/hardware/weaver/WeaverConfig;ILandroid/hardware/weaver/V1_0/WeaverConfig;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/locksettings/WeaverHidlAdapter;->lambda$getConfig$0([Landroid/hardware/weaver/WeaverConfig;ILandroid/hardware/weaver/V1_0/WeaverConfig;)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public static synthetic $r8$lambda$QTI4PBQQJ1534oH6xS1dXJlxJ1k([Landroid/hardware/weaver/WeaverReadResponse;ILandroid/hardware/weaver/V1_0/WeaverReadResponse;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/locksettings/WeaverHidlAdapter;->lambda$read$1([Landroid/hardware/weaver/WeaverReadResponse;ILandroid/hardware/weaver/V1_0/WeaverReadResponse;)V
 
     return-void
@@ -32,10 +30,8 @@
 .method public constructor <init>(Landroid/hardware/weaver/V1_0/IWeaver;)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/locksettings/WeaverHidlAdapter;->mImpl:Landroid/hardware/weaver/V1_0/IWeaver;
 
     return-void
@@ -44,7 +40,6 @@
 .method public static fromByteArrayList(Ljava/util/ArrayList;)[B
     .locals 3
 
-    .line 135
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -53,7 +48,6 @@
 
     const/4 v1, 0x0
 
-    .line 136
     :goto_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -61,7 +55,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 137
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -87,34 +80,28 @@
 
     if-nez p1, :cond_0
 
-    .line 50
     new-instance p1, Landroid/hardware/weaver/WeaverConfig;
 
     invoke-direct {p1}, Landroid/hardware/weaver/WeaverConfig;-><init>()V
 
-    .line 51
     iget v0, p2, Landroid/hardware/weaver/V1_0/WeaverConfig;->slots:I
 
     iput v0, p1, Landroid/hardware/weaver/WeaverConfig;->slots:I
 
-    .line 52
     iget v0, p2, Landroid/hardware/weaver/V1_0/WeaverConfig;->keySize:I
 
     iput v0, p1, Landroid/hardware/weaver/WeaverConfig;->keySize:I
 
-    .line 53
     iget p2, p2, Landroid/hardware/weaver/V1_0/WeaverConfig;->valueSize:I
 
     iput p2, p1, Landroid/hardware/weaver/WeaverConfig;->valueSize:I
 
     const/4 p2, 0x0
 
-    .line 54
     aput-object p1, p0, p2
 
     goto :goto_0
 
-    .line 56
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -149,7 +136,6 @@
 .method public static synthetic lambda$read$1([Landroid/hardware/weaver/WeaverReadResponse;ILandroid/hardware/weaver/V1_0/WeaverReadResponse;)V
     .locals 5
 
-    .line 71
     new-instance v0, Landroid/hardware/weaver/WeaverReadResponse;
 
     invoke-direct {v0}, Landroid/hardware/weaver/WeaverReadResponse;-><init>()V
@@ -170,7 +156,6 @@
 
     if-eq p1, v3, :cond_0
 
-    .line 87
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,34 +174,28 @@
 
     invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     iput v2, v0, Landroid/hardware/weaver/WeaverReadResponse;->status:I
 
     goto :goto_0
 
-    .line 78
     :cond_0
     iput v3, v0, Landroid/hardware/weaver/WeaverReadResponse;->status:I
 
     goto :goto_0
 
-    .line 81
     :cond_1
     iput v3, v0, Landroid/hardware/weaver/WeaverReadResponse;->status:I
 
     goto :goto_0
 
-    .line 84
     :cond_2
     iput v2, v0, Landroid/hardware/weaver/WeaverReadResponse;->status:I
 
     goto :goto_0
 
-    .line 75
     :cond_3
     iput v1, v0, Landroid/hardware/weaver/WeaverReadResponse;->status:I
 
-    .line 91
     :goto_0
     iget p1, p2, Landroid/hardware/weaver/V1_0/WeaverReadResponse;->timeout:I
 
@@ -224,7 +203,6 @@
 
     iput-wide v2, v0, Landroid/hardware/weaver/WeaverReadResponse;->timeout:J
 
-    .line 92
     iget-object p1, p2, Landroid/hardware/weaver/V1_0/WeaverReadResponse;->value:Ljava/util/ArrayList;
 
     invoke-static {p1}, Lcom/android/server/locksettings/WeaverHidlAdapter;->fromByteArrayList(Ljava/util/ArrayList;)[B
@@ -233,7 +211,6 @@
 
     iput-object p1, v0, Landroid/hardware/weaver/WeaverReadResponse;->value:[B
 
-    .line 93
     aput-object v0, p0, v1
 
     return-void
@@ -242,7 +219,6 @@
 .method public static toByteArrayList([B)Ljava/util/ArrayList;
     .locals 3
 
-    .line 127
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p0
@@ -251,13 +227,11 @@
 
     const/4 v1, 0x0
 
-    .line 128
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 129
     aget-byte v2, p0, v1
 
     invoke-static {v2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -279,7 +253,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 1
 
-    .line 123
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "WeaverHidlAdapter does not support asBinder"
@@ -296,7 +269,6 @@
 
     new-array v0, v0, [Landroid/hardware/weaver/WeaverConfig;
 
-    .line 48
     iget-object p0, p0, Lcom/android/server/locksettings/WeaverHidlAdapter;->mImpl:Landroid/hardware/weaver/V1_0/IWeaver;
 
     new-instance v1, Lcom/android/server/locksettings/WeaverHidlAdapter$$ExternalSyntheticLambda1;
@@ -315,7 +287,6 @@
 .method public getHidlService()Landroid/hardware/weaver/V1_0/IWeaver;
     .locals 0
 
-    .line 42
     iget-object p0, p0, Lcom/android/server/locksettings/WeaverHidlAdapter;->mImpl:Landroid/hardware/weaver/V1_0/IWeaver;
 
     return-object p0
@@ -328,10 +299,8 @@
 
     new-array v0, v0, [Landroid/hardware/weaver/WeaverReadResponse;
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/locksettings/WeaverHidlAdapter;->mImpl:Landroid/hardware/weaver/V1_0/IWeaver;
 
-    .line 69
     invoke-static {p2}, Lcom/android/server/locksettings/WeaverHidlAdapter;->toByteArrayList([B)Ljava/util/ArrayList;
 
     move-result-object p2
@@ -340,7 +309,6 @@
 
     invoke-direct {v1, v0}, Lcom/android/server/locksettings/WeaverHidlAdapter$$ExternalSyntheticLambda0;-><init>([Landroid/hardware/weaver/WeaverReadResponse;)V
 
-    .line 68
     invoke-interface {p0, p1, p2, v1}, Landroid/hardware/weaver/V1_0/IWeaver;->read(ILjava/util/ArrayList;Landroid/hardware/weaver/V1_0/IWeaver$readCallback;)V
 
     const/4 p0, 0x0
@@ -353,7 +321,6 @@
 .method public write(I[B[B)V
     .locals 0
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/locksettings/WeaverHidlAdapter;->mImpl:Landroid/hardware/weaver/V1_0/IWeaver;
 
     invoke-static {p2}, Lcom/android/server/locksettings/WeaverHidlAdapter;->toByteArrayList([B)Ljava/util/ArrayList;
@@ -372,7 +339,6 @@
 
     return-void
 
-    .line 102
     :cond_0
     new-instance p1, Landroid/os/ServiceSpecificException;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRouterService;)V
     .locals 0
 
-    .line 191
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$1;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-direct {p0}, Landroid/app/UserSwitchObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUserSwitchComplete(I)V
     .locals 0
 
-    .line 194
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$1;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-static {p0, p1}, Lcom/android/server/media/MediaRouterService;->-$$Nest$mupdateRunningUserAndProfiles(Lcom/android/server/media/MediaRouterService;I)V

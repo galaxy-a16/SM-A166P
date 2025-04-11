@@ -17,17 +17,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "SWT_ThemePalette"
 
-    .line 16
     iput-object v0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 20
     iput-boolean v0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mIsGray:Z
 
     return-void
@@ -38,7 +35,6 @@
 .method public getMonetColorGG(I)I
     .locals 0
 
-    .line 41
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mMonetPaletteGG:Ljava/util/List;
 
     if-nez p0, :cond_0
@@ -47,7 +43,6 @@
 
     return p0
 
-    .line 45
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -69,7 +64,6 @@
 
     add-int/2addr p1, p2
 
-    .line 37
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/ThemePalette;->getMonetColorGG(I)I
 
     move-result p0
@@ -80,7 +74,6 @@
 .method public getMonetColorSS(I)I
     .locals 0
 
-    .line 28
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mMonetPaletteSS:Ljava/util/List;
 
     if-nez p0, :cond_0
@@ -89,7 +82,6 @@
 
     return p0
 
-    .line 32
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -111,7 +103,6 @@
 
     add-int/2addr p1, p2
 
-    .line 24
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/ThemePalette;->getMonetColorSS(I)I
 
     move-result p0
@@ -122,7 +113,6 @@
 .method public getPaletteGG()Ljava/util/List;
     .locals 0
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mMonetPaletteGG:Ljava/util/List;
 
     return-object p0
@@ -131,7 +121,6 @@
 .method public getPaletteSS()Ljava/util/List;
     .locals 0
 
-    .line 57
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mMonetPaletteSS:Ljava/util/List;
 
     return-object p0
@@ -140,16 +129,12 @@
 .method public setPalette(Ljava/util/List;Ljava/util/List;Z)V
     .locals 0
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mMonetPaletteSS:Ljava/util/List;
 
-    .line 51
     iput-object p2, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mMonetPaletteGG:Ljava/util/List;
 
-    .line 52
     iput-boolean p3, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mIsGray:Z
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->TAG:Ljava/lang/String;
 
     const-string/jumbo p1, "palette updated"
@@ -164,7 +149,6 @@
 
     const/4 v0, 0x0
 
-    .line 66
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -172,24 +156,20 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 67
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 68
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
     const/16 v2, 0x1ff
 
     const/4 v3, -0x1
 
-    .line 69
     invoke-static {v1, v2, v3, v3}, Landroid/os/FileUtils;->setPermissions(Ljava/io/File;III)I
 
-    .line 71
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -197,7 +177,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 72
     new-instance v2, Ljava/io/OutputStreamWriter;
 
     new-instance v3, Ljava/io/FileOutputStream;
@@ -211,7 +190,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 73
     :try_start_1
     iget-object v0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mMonetPaletteSS:Ljava/util/List;
 
@@ -236,7 +214,6 @@
 
     move-result v3
 
-    .line 74
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -257,7 +234,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_1
     iget-object v0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mMonetPaletteGG:Ljava/util/List;
 
@@ -282,7 +258,6 @@
 
     move-result v3
 
-    .line 77
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,7 +278,6 @@
 
     goto :goto_1
 
-    .line 79
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->mIsGray:Z
 
@@ -323,13 +297,11 @@
 
     const/4 v3, 0x0
 
-    .line 80
     invoke-virtual {v1, v0, v3}, Ljava/io/File;->setReadable(ZZ)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 85
     :try_start_2
     invoke-virtual {v2}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_2
@@ -359,7 +331,6 @@
     :catch_1
     move-exception v1
 
-    .line 82
     :goto_3
     :try_start_3
     iget-object v2, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->TAG:Ljava/lang/String;
@@ -370,7 +341,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 85
     :try_start_4
     invoke-virtual {v0}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_4
@@ -381,7 +351,6 @@
     :catch_2
     move-exception v0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->TAG:Ljava/lang/String;
 
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -393,7 +362,6 @@
     :goto_5
     if-eqz v0, :cond_5
 
-    .line 85
     :try_start_5
     invoke-virtual {v0}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_5
@@ -404,12 +372,10 @@
     :catch_3
     move-exception v0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/ThemePalette;->TAG:Ljava/lang/String;
 
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 89
     :cond_5
     :goto_6
     throw v1

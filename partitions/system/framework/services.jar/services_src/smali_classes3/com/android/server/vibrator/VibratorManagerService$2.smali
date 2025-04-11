@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 6
 
-    .line 2827
     invoke-static {}, Landroid/os/VibrationEffect$SemMagnitudeType;->values()[Landroid/os/VibrationEffect$SemMagnitudeType;
 
     move-result-object v0
@@ -85,7 +84,6 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 933
     :catch_3
     invoke-static {}, Lcom/android/server/vibrator/Vibration$Status;->values()[Lcom/android/server/vibrator/Vibration$Status;
 

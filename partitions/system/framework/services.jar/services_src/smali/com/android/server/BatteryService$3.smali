@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 796
     iput-object p1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 799
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 800
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 
     move-result-object p2
@@ -52,21 +49,18 @@
 
     const-string p2, "android.intent.action.BOOT_COMPLETED"
 
-    .line 801
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 802
     iget-object p1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/BatteryService;->-$$Nest$fputmIsUnlockedBootCompleted(Lcom/android/server/BatteryService;Z)V
 
-    .line 803
     iget-object p1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmProtectBatteryMode(Lcom/android/server/BatteryService;)I
@@ -77,7 +71,6 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 804
     iget-object p1, p0, Lcom/android/server/BatteryService$3;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmHandler(Lcom/android/server/BatteryService;)Landroid/os/Handler;
@@ -92,7 +85,6 @@
 
     goto :goto_0
 
-    .line 811
     :cond_0
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 

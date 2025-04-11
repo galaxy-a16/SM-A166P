@@ -33,14 +33,12 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 24
     const-class v0, Lorg/tukaani/xz/LZMA2Options;
 
     const/16 v0, 0xa
 
     new-array v0, v0, [I
 
-    .line 126
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/tukaani/xz/LZMA2Options;->presetToDictSize:[I
@@ -53,7 +51,6 @@
 
     const/16 v3, 0x8
 
-    .line 130
     filled-new-array {v2, v3, v0, v1}, [I
 
     move-result-object v0
@@ -82,17 +79,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 146
     invoke-direct {p0}, Lorg/tukaani/xz/FilterOptions;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 133
     iput-object v0, p0, Lorg/tukaani/xz/LZMA2Options;->presetDict:[B
 
     const/4 v0, 0x6
 
-    .line 148
     :try_start_0
     invoke-virtual {p0, v0}, Lorg/tukaani/xz/LZMA2Options;->setPreset(I)V
     :try_end_0
@@ -100,7 +94,6 @@
 
     return-void
 
-    .line 151
     :catch_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -114,7 +107,6 @@
 .method public clone()Ljava/lang/Object;
     .locals 0
 
-    .line 577
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -124,7 +116,6 @@
 
     return-object p0
 
-    .line 580
     :catch_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -136,7 +127,6 @@
 .method public getInputStream(Ljava/io/InputStream;Lorg/tukaani/xz/ArrayCache;)Ljava/io/InputStream;
     .locals 2
 
-    .line 568
     new-instance v0, Lorg/tukaani/xz/LZMA2InputStream;
 
     iget v1, p0, Lorg/tukaani/xz/LZMA2Options;->dictSize:I
@@ -161,12 +151,10 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 248
     iput p1, p0, Lorg/tukaani/xz/LZMA2Options;->dictSize:I
 
     return-void
 
-    .line 244
     :cond_0
     new-instance p0, Lorg/tukaani/xz/UnsupportedOptionsException;
 
@@ -190,7 +178,6 @@
 
     throw p0
 
-    .line 239
     :cond_1
     new-instance p0, Lorg/tukaani/xz/UnsupportedOptionsException;
 
@@ -232,15 +219,12 @@
 
     if-gt v1, v0, :cond_0
 
-    .line 301
     iput p1, p0, Lorg/tukaani/xz/LZMA2Options;->lc:I
 
-    .line 302
     iput p2, p0, Lorg/tukaani/xz/LZMA2Options;->lp:I
 
     return-void
 
-    .line 297
     :cond_0
     new-instance p0, Lorg/tukaani/xz/UnsupportedOptionsException;
 
@@ -278,12 +262,10 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 394
     iput p1, p0, Lorg/tukaani/xz/LZMA2Options;->pb:I
 
     return-void
 
-    .line 391
     :cond_0
     new-instance p0, Lorg/tukaani/xz/UnsupportedOptionsException;
 
@@ -317,20 +299,16 @@
 
     const/4 v0, 0x3
 
-    .line 204
     iput v0, p0, Lorg/tukaani/xz/LZMA2Options;->lc:I
 
     const/4 v1, 0x0
 
-    .line 205
     iput v1, p0, Lorg/tukaani/xz/LZMA2Options;->lp:I
 
     const/4 v2, 0x2
 
-    .line 206
     iput v2, p0, Lorg/tukaani/xz/LZMA2Options;->pb:I
 
-    .line 207
     sget-object v3, Lorg/tukaani/xz/LZMA2Options;->presetToDictSize:[I
 
     aget v3, v3, p1
@@ -343,10 +321,8 @@
 
     const/4 v0, 0x1
 
-    .line 210
     iput v0, p0, Lorg/tukaani/xz/LZMA2Options;->mode:I
 
-    .line 211
     iput v3, p0, Lorg/tukaani/xz/LZMA2Options;->mf:I
 
     if-gt p1, v0, :cond_0
@@ -358,11 +334,9 @@
     :cond_0
     const/16 v0, 0x111
 
-    .line 212
     :goto_0
     iput v0, p0, Lorg/tukaani/xz/LZMA2Options;->niceLen:I
 
-    .line 213
     sget-object v0, Lorg/tukaani/xz/LZMA2Options;->presetToDepthLimit:[I
 
     aget p1, v0, p1
@@ -371,13 +345,11 @@
 
     goto :goto_2
 
-    .line 215
     :cond_1
     iput v2, p0, Lorg/tukaani/xz/LZMA2Options;->mode:I
 
     const/16 v0, 0x14
 
-    .line 216
     iput v0, p0, Lorg/tukaani/xz/LZMA2Options;->mf:I
 
     if-ne p1, v3, :cond_2
@@ -398,17 +370,14 @@
     :cond_3
     const/16 p1, 0x40
 
-    .line 217
     :goto_1
     iput p1, p0, Lorg/tukaani/xz/LZMA2Options;->niceLen:I
 
-    .line 218
     iput v1, p0, Lorg/tukaani/xz/LZMA2Options;->depthLimit:I
 
     :goto_2
     return-void
 
-    .line 201
     :cond_4
     new-instance p0, Lorg/tukaani/xz/UnsupportedOptionsException;
 

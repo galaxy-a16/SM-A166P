@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -31,7 +29,6 @@
 
     monitor-enter p0
 
-    .line 49
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PendingStartActivityUids;->mPendingUids:Landroid/util/SparseArray;
 
@@ -41,7 +38,6 @@
 
     if-nez v0, :cond_0
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/am/PendingStartActivityUids;->mPendingUids:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/util/Pair;
@@ -64,14 +60,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 51
     monitor-exit p0
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 53
     :cond_0
     monitor-exit p0
 
@@ -92,7 +86,6 @@
 
     monitor-enter p0
 
-    .line 57
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PendingStartActivityUids;->mPendingUids:Landroid/util/SparseArray;
 
@@ -104,7 +97,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 59
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Long;
@@ -121,17 +113,14 @@
 
     const-string/jumbo p2, "updateOomAdj start time is before than pendingPid added, don\'t delete it"
 
-    .line 60
     invoke-static {p1, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
     monitor-exit p0
 
     return-void
 
-    .line 65
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -156,7 +145,6 @@
 
     const-string v0, "ActivityManager"
 
-    .line 67
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,7 +167,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     :cond_1
     iget-object p2, p0, Lcom/android/server/am/PendingStartActivityUids;->mPendingUids:Landroid/util/SparseArray;
 
@@ -187,7 +174,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 73
     :cond_2
     monitor-exit p0
 
@@ -206,7 +192,6 @@
 
     monitor-enter p0
 
-    .line 84
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PendingStartActivityUids;->mPendingUids:Landroid/util/SparseArray;
 
@@ -218,7 +203,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 85
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -229,7 +213,6 @@
 
     if-ne v0, p2, :cond_0
 
-    .line 86
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Long;
@@ -245,7 +228,6 @@
     :cond_0
     const-wide/16 p1, 0x0
 
-    .line 88
     :goto_0
     monitor-exit p0
 
@@ -264,7 +246,6 @@
 
     monitor-enter p0
 
-    .line 92
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PendingStartActivityUids;->mPendingUids:Landroid/util/SparseArray;
 

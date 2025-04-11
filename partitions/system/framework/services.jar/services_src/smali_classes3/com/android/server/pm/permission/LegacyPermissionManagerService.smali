@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$-aWwU1owjk7KOdLeITDm6CjqtYU(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->lambda$grantDefaultPermissionsToEnabledImsServices$3([Ljava/lang/String;I)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static synthetic $r8$lambda$0_bNm4EqOvDoyzB1gIQAq_RXFYk(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->lambda$revokeDefaultPermissionsFromDisabledTelephonyDataServices$5([Ljava/lang/String;I)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static synthetic $r8$lambda$JAKyiva-GyLkA3X4PWffTiE9ojc(Lcom/android/server/pm/permission/LegacyPermissionManagerService;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->lambda$grantDefaultPermissionsToActiveLuiApp$1(Ljava/lang/String;I)V
 
     return-void
@@ -42,7 +39,6 @@
 .method public static synthetic $r8$lambda$S82vq-IQ7y7MC3oUIkzPRVgF6fw(Lcom/android/server/pm/permission/LegacyPermissionManagerService;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->lambda$grantDefaultPermissionsToCarrierServiceApp$0(Ljava/lang/String;I)V
 
     return-void
@@ -51,7 +47,6 @@
 .method public static synthetic $r8$lambda$UV4fjZFs5oCtcy8XghzvdTBIqpA(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->lambda$grantDefaultPermissionsToEnabledTelephonyDataServices$4([Ljava/lang/String;I)V
 
     return-void
@@ -60,7 +55,6 @@
 .method public static synthetic $r8$lambda$cSsNoRJieGF6sBAHGMs_UO1CCdQ(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->lambda$revokeDefaultPermissionsFromLuiApps$2([Ljava/lang/String;I)V
 
     return-void
@@ -69,7 +63,6 @@
 .method public static synthetic $r8$lambda$dFGc7T-ZZgu7EcBj3lhTLuMlGAc(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->lambda$grantDefaultPermissionsToEnabledCarrierApps$6([Ljava/lang/String;I)V
 
     return-void
@@ -78,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -87,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
     return-object p0
@@ -96,14 +87,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 81
     new-instance v0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     invoke-direct {v0, p1}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;-><init>(Landroid/content/Context;)V
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;-><init>(Landroid/content/Context;Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;)V
 
-    .line 83
     new-instance p1, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;
 
     const/4 v0, 0x0
@@ -116,7 +105,6 @@
 
     const-string p1, "legacy_permission"
 
-    .line 84
     invoke-static {p1, p0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -125,16 +113,12 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;)V
     .locals 0
 
-    .line 88
     invoke-direct {p0}, Landroid/permission/ILegacyPermissionManager$Stub;-><init>()V
 
-    .line 89
     iput-object p1, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mContext:Landroid/content/Context;
 
-    .line 90
     iput-object p2, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
-    .line 91
     new-instance p2, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
     invoke-direct {p2, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;-><init>(Landroid/content/Context;)V
@@ -147,7 +131,6 @@
 .method public static create(Landroid/content/Context;)Lcom/android/server/pm/permission/LegacyPermissionManagerInternal;
     .locals 2
 
-    .line 70
     const-class v0, Lcom/android/server/pm/permission/LegacyPermissionManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -158,12 +141,10 @@
 
     if-nez v1, :cond_0
 
-    .line 73
     new-instance v1, Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-direct {v1, p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;-><init>(Landroid/content/Context;)V
 
-    .line 74
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -179,10 +160,8 @@
 .method private synthetic lambda$grantDefaultPermissionsToActiveLuiApp$1(Ljava/lang/String;I)V
     .locals 0
 
-    .line 268
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    .line 269
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToActiveLuiApp(Ljava/lang/String;I)V
 
     return-void
@@ -191,10 +170,8 @@
 .method private synthetic lambda$grantDefaultPermissionsToCarrierServiceApp$0(Ljava/lang/String;I)V
     .locals 0
 
-    .line 259
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    .line 260
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToCarrierServiceApp(Ljava/lang/String;I)V
 
     return-void
@@ -203,10 +180,8 @@
 .method private synthetic lambda$grantDefaultPermissionsToEnabledCarrierApps$6([Ljava/lang/String;I)V
     .locals 0
 
-    .line 316
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    .line 317
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToEnabledCarrierApps([Ljava/lang/String;I)V
 
     return-void
@@ -215,10 +190,8 @@
 .method private synthetic lambda$grantDefaultPermissionsToEnabledImsServices$3([Ljava/lang/String;I)V
     .locals 0
 
-    .line 286
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    .line 287
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToEnabledImsServices([Ljava/lang/String;I)V
 
     return-void
@@ -227,10 +200,8 @@
 .method private synthetic lambda$grantDefaultPermissionsToEnabledTelephonyDataServices$4([Ljava/lang/String;I)V
     .locals 0
 
-    .line 296
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    .line 297
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToEnabledTelephonyDataServices([Ljava/lang/String;I)V
 
     return-void
@@ -239,10 +210,8 @@
 .method private synthetic lambda$revokeDefaultPermissionsFromDisabledTelephonyDataServices$5([Ljava/lang/String;I)V
     .locals 0
 
-    .line 306
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    .line 307
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->revokeDefaultPermissionsFromDisabledTelephonyDataServices([Ljava/lang/String;I)V
 
     return-void
@@ -251,10 +220,8 @@
 .method private synthetic lambda$revokeDefaultPermissionsFromLuiApps$2([Ljava/lang/String;I)V
     .locals 0
 
-    .line 277
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    .line 278
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->revokeDefaultPermissionsFromLuiApps([Ljava/lang/String;I)V
 
     return-void
@@ -265,10 +232,8 @@
 .method public checkDeviceIdentifierAccess(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)I
     .locals 10
 
-    .line 97
     invoke-virtual {p0, p1, p2, p4, p5}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->verifyCallerCanCheckAccess(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 99
     invoke-static {p5}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
@@ -283,7 +248,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
@@ -300,14 +264,12 @@
     :cond_1
     if-eqz p1, :cond_3
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 113
     iget-object v3, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     const-string v4, "appops"
@@ -331,7 +293,6 @@
 
     move-object v9, p2
 
-    .line 116
     invoke-virtual/range {v4 .. v9}, Landroid/app/AppOpsManager;->noteOpNoThrow(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p2
@@ -340,7 +301,6 @@
 
     if-nez p2, :cond_2
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;->restoreCallingIdentity(J)V
@@ -352,12 +312,10 @@
 
     invoke-virtual {p2, v0, v1}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;->restoreCallingIdentity(J)V
 
-    .line 125
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     const-string p2, "device_policy"
 
-    .line 126
     invoke-virtual {p0, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -366,7 +324,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 127
     invoke-virtual {p0, p1, p4, p5}, Landroid/app/admin/DevicePolicyManager;->hasDeviceIdentifierAccess(Ljava/lang/String;II)Z
 
     move-result p0
@@ -378,12 +335,10 @@
     :catchall_0
     move-exception p1
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;->restoreCallingIdentity(J)V
 
-    .line 122
     throw p1
 
     :cond_3
@@ -401,7 +356,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 240
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     invoke-virtual {v0, p2, p6, p7}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;->checkPermission(Ljava/lang/String;II)I
@@ -414,7 +368,6 @@
 
     return p0
 
-    .line 245
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
@@ -438,7 +391,6 @@
 
     move-object v5, p5
 
-    .line 247
     invoke-virtual/range {v0 .. v5}, Landroid/app/AppOpsManager;->noteOpNoThrow(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -468,10 +420,8 @@
 
     move/from16 v12, p5
 
-    .line 138
     invoke-virtual {p0, v9, v11, v10, v12}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->verifyCallerCanCheckAccess(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 139
     iget-object v0, v8, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     const-string v1, "android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -493,7 +443,6 @@
 
     return v0
 
-    .line 154
     :cond_1
     :try_start_0
     iget-object v1, v8, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
@@ -502,7 +451,6 @@
 
     move-result-object v1
 
-    .line 155
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -538,7 +486,6 @@
 
     move/from16 v7, p5
 
-    .line 165
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->checkPermissionAndAppop(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v0
@@ -566,7 +513,6 @@
 
     move/from16 v7, p5
 
-    .line 173
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->checkPermissionAndAppop(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v0
@@ -592,7 +538,6 @@
 
     move/from16 v7, p5
 
-    .line 178
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->checkPermissionAndAppop(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v0
@@ -618,7 +563,6 @@
 
     move/from16 v7, p5
 
-    .line 184
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->checkPermissionAndAppop(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v0
@@ -634,17 +578,14 @@
 .method public grantDefaultPermissionsToActiveLuiApp(Ljava/lang/String;I)V
     .locals 2
 
-    .line 265
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     const-string v1, "grantDefaultPermissionsToActiveLuiApp"
 
-    .line 266
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->enforceSystemOrPhoneCaller(Ljava/lang/String;I)V
 
-    .line 268
     new-instance v0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda6;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda6;-><init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;Ljava/lang/String;I)V
@@ -659,10 +600,8 @@
 
     const-string v0, "grantDefaultPermissionsForCarrierServiceApp"
 
-    .line 257
     invoke-static {v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->enforceSystemOrRoot(Ljava/lang/String;)V
 
-    .line 259
     new-instance v0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;Ljava/lang/String;I)V
@@ -675,17 +614,14 @@
 .method public grantDefaultPermissionsToEnabledCarrierApps([Ljava/lang/String;I)V
     .locals 2
 
-    .line 313
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     const-string v1, "grantPermissionsToEnabledCarrierApps"
 
-    .line 314
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->enforceSystemOrPhoneCaller(Ljava/lang/String;I)V
 
-    .line 316
     new-instance v0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
@@ -698,17 +634,14 @@
 .method public grantDefaultPermissionsToEnabledImsServices([Ljava/lang/String;I)V
     .locals 2
 
-    .line 283
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     const-string v1, "grantDefaultPermissionsToEnabledImsServices"
 
-    .line 284
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->enforceSystemOrPhoneCaller(Ljava/lang/String;I)V
 
-    .line 286
     new-instance v0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
@@ -721,17 +654,14 @@
 .method public grantDefaultPermissionsToEnabledTelephonyDataServices([Ljava/lang/String;I)V
     .locals 2
 
-    .line 293
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     const-string v1, "grantDefaultPermissionsToEnabledTelephonyDataServices"
 
-    .line 294
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->enforceSystemOrPhoneCaller(Ljava/lang/String;I)V
 
-    .line 296
     new-instance v0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda5;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda5;-><init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
@@ -744,17 +674,14 @@
 .method public revokeDefaultPermissionsFromDisabledTelephonyDataServices([Ljava/lang/String;I)V
     .locals 2
 
-    .line 303
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     const-string/jumbo v1, "revokeDefaultPermissionsFromDisabledTelephonyDataServices"
 
-    .line 304
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->enforceSystemOrPhoneCaller(Ljava/lang/String;I)V
 
-    .line 306
     new-instance v0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
@@ -767,17 +694,14 @@
 .method public revokeDefaultPermissionsFromLuiApps([Ljava/lang/String;I)V
     .locals 2
 
-    .line 274
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     const-string/jumbo v1, "revokeDefaultPermissionsFromLuiApps"
 
-    .line 275
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->enforceSystemOrPhoneCaller(Ljava/lang/String;I)V
 
-    .line 277
     new-instance v0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda4;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$$ExternalSyntheticLambda4;-><init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;[Ljava/lang/String;I)V
@@ -790,21 +714,18 @@
 .method public final verifyCallerCanCheckAccess(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 10
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;->getCallingUid()I
 
     move-result v0
 
-    .line 197
     iget-object v1, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     invoke-virtual {v1}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;->getCallingPid()I
 
     move-result v1
 
-    .line 198
     invoke-static {v0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v2
@@ -832,14 +753,12 @@
     :goto_0
     if-eqz p1, :cond_3
 
-    .line 204
     invoke-static {p4}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v6
 
     if-lt v6, v5, :cond_3
 
-    .line 205
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->mInjector:Lcom/android/server/pm/permission/LegacyPermissionManagerService$Injector;
 
     invoke-static {p4}, Landroid/os/UserHandle;->getUserId(I)I
@@ -860,7 +779,6 @@
 
     aput-object v2, p0, v4
 
-    .line 208
     invoke-static {v0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v2
@@ -889,7 +807,6 @@
 
     const v2, 0x534e4554
 
-    .line 207
     invoke-static {v2, p0}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
     goto :goto_2
@@ -902,7 +819,6 @@
 
     return-void
 
-    .line 216
     :cond_4
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -930,17 +846,14 @@
 
     const-string p1, "Calling uid %d, pid %d cannot access for package %s (uid=%d, pid=%d): %s"
 
-    .line 214
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "PermissionManager"
 
-    .line 217
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     new-instance p1, Ljava/lang/SecurityException;
 
     invoke-direct {p1, p0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V

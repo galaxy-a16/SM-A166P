@@ -7,12 +7,10 @@
 .method public static union(Landroid/util/SparseArray;)Ljava/util/HashSet;
     .locals 4
 
-    .line 39
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 40
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result v1
@@ -22,7 +20,6 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 42
     invoke-virtual {p0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -31,7 +28,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 44
     invoke-virtual {v0, v3}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
     :cond_0

@@ -21,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/pm/MovePackageHelper;Lcom/android/server/pm/PackageFreezer;Ljava/util/concurrent/CountDownLatch;ILjava/lang/String;Z)V
     .locals 0
 
-    .line 285
     iput-object p1, p0, Lcom/android/server/pm/MovePackageHelper$1;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     iput-object p2, p0, Lcom/android/server/pm/MovePackageHelper$1;->val$freezer:Lcom/android/server/pm/PackageFreezer;
@@ -44,29 +43,24 @@
 .method public onPackageInstalled(Ljava/lang/String;ILjava/lang/String;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 300
     iget-object p1, p0, Lcom/android/server/pm/MovePackageHelper$1;->val$installedLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 301
     iget-object p1, p0, Lcom/android/server/pm/MovePackageHelper$1;->val$freezer:Lcom/android/server/pm/PackageFreezer;
 
     invoke-virtual {p1}, Lcom/android/server/pm/PackageFreezer;->close()V
 
-    .line 303
     sget-boolean p1, Lcom/samsung/android/rune/PMRune;->PM_INSTALL_TO_SDCARD:Z
 
     const/4 p3, -0x6
 
     if-eqz p1, :cond_3
 
-    .line 304
     sget-object p1, Lcom/android/server/pm/MovePackageHelper;->sMoveIdMapForSd:Ljava/util/Map;
 
     monitor-enter p1
 
-    .line 305
     :try_start_0
     invoke-static {}, Lcom/android/server/pm/AsecInstallHelper;->getPreMountState()Z
 
@@ -76,7 +70,6 @@
 
     if-nez p4, :cond_1
 
-    .line 306
     sget-object p4, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {p4}, Ljava/util/ArrayList;->size()I
@@ -85,7 +78,6 @@
 
     if-lez p4, :cond_0
 
-    .line 307
     iget-object p4, p0, Lcom/android/server/pm/MovePackageHelper$1;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     iget-object p4, p4, Lcom/android/server/pm/MovePackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
@@ -104,20 +96,17 @@
 
     invoke-virtual {p4, v0, p3}, Lcom/android/server/pm/MovePackageHelper$MoveCallbacks;->notifyStatusChanged(II)V
 
-    .line 310
     :cond_0
     sget-object p4, Lcom/android/server/pm/MovePackageHelper;->sMoveIdMapForSd:Ljava/util/Map;
 
     invoke-interface {p4}, Ljava/util/Map;->clear()V
 
-    .line 311
     sget-object p4, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {p4}, Ljava/util/ArrayList;->clear()V
 
     goto :goto_0
 
-    .line 312
     :cond_1
     sget-object p4, Lcom/android/server/pm/MovePackageHelper;->sMoveIdMapForSd:Ljava/util/Map;
 
@@ -133,12 +122,10 @@
 
     if-eqz p4, :cond_2
 
-    .line 313
     sget-object p4, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {p4, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 314
     sget-object p4, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {p4}, Ljava/util/ArrayList;->size()I
@@ -147,7 +134,6 @@
 
     if-lez p4, :cond_2
 
-    .line 315
     sget-object p4, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {p4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -156,12 +142,10 @@
 
     check-cast p4, Lcom/android/server/pm/MovePackageHelper$SdcardParams;
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/pm/MovePackageHelper$1;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     invoke-static {v0, p4}, Lcom/android/server/pm/MovePackageHelper;->-$$Nest$mstartMovePackage(Lcom/android/server/pm/MovePackageHelper;Lcom/android/server/pm/MovePackageHelper$SdcardParams;)V
 
-    .line 319
     :cond_2
     :goto_0
     monitor-exit p1
@@ -177,7 +161,6 @@
 
     throw p0
 
-    .line 322
     :cond_3
     :goto_1
     invoke-static {p2}, Landroid/content/pm/PackageManager;->installStatusToPublicStatus(I)I
@@ -190,7 +173,6 @@
 
     if-eq p1, p2, :cond_4
 
-    .line 337
     iget-object p1, p0, Lcom/android/server/pm/MovePackageHelper$1;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     iget-object p1, p1, Lcom/android/server/pm/MovePackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
@@ -203,7 +185,6 @@
 
     goto :goto_2
 
-    .line 333
     :cond_4
     iget-object p1, p0, Lcom/android/server/pm/MovePackageHelper$1;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
@@ -219,7 +200,6 @@
 
     goto :goto_2
 
-    .line 326
     :cond_5
     iget-object p1, p0, Lcom/android/server/pm/MovePackageHelper$1;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
@@ -233,7 +213,6 @@
 
     invoke-virtual {p1, p2, p3}, Lcom/android/server/pm/MovePackageHelper$MoveCallbacks;->notifyStatusChanged(II)V
 
-    .line 328
     iget-object p1, p0, Lcom/android/server/pm/MovePackageHelper$1;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     iget-object p1, p1, Lcom/android/server/pm/MovePackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
@@ -246,7 +225,6 @@
 
     invoke-virtual {p1, p2, p3}, Lcom/android/server/pm/MovePackageHelper$MoveCallbacks;->notifyStatusChanged(II)V
 
-    .line 330
     iget-object p1, p0, Lcom/android/server/pm/MovePackageHelper$1;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     iget-object p2, p0, Lcom/android/server/pm/MovePackageHelper$1;->val$packageName:Ljava/lang/String;
@@ -262,12 +240,10 @@
 .method public onUserActionRequired(Landroid/content/Intent;)V
     .locals 0
 
-    .line 288
     iget-object p0, p0, Lcom/android/server/pm/MovePackageHelper$1;->val$freezer:Lcom/android/server/pm/PackageFreezer;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageFreezer;->close()V
 
-    .line 289
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V

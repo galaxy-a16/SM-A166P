@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/media/tv/interactive/AppLinkInfo;
 
     invoke-virtual {p1}, Landroid/media/tv/interactive/AppLinkInfo;->getComponentName()Landroid/content/ComponentName;

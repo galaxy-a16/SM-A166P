@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/net/watchlist/NetworkWatchlistService;Landroid/content/Context;)V
     .locals 0
 
-    .line 38
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 39
     iput-object p2, p0, Lcom/android/server/net/watchlist/NetworkWatchlistShellCommand;->mContext:Landroid/content/Context;
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/net/watchlist/NetworkWatchlistShellCommand;->mService:Lcom/android/server/net/watchlist/NetworkWatchlistService;
 
     return-void
@@ -32,14 +29,12 @@
 
     if-nez p1, :cond_0
 
-    .line 46
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 49
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -47,7 +42,6 @@
 
     const/4 v1, -0x1
 
-    .line 51
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -100,14 +94,12 @@
 
     if-eq v2, v4, :cond_4
 
-    .line 57
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 55
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/net/watchlist/NetworkWatchlistShellCommand;->runForceGenerateReport()I
 
@@ -115,7 +107,6 @@
 
     return p0
 
-    .line 53
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/net/watchlist/NetworkWatchlistShellCommand;->runSetTestConfig()I
 
@@ -128,7 +119,6 @@
     :catch_0
     move-exception p0
 
-    .line 60
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -151,44 +141,36 @@
 .method public onHelp()V
     .locals 1
 
-    .line 112
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Network watchlist manager commands:"
 
-    .line 113
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 114
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 115
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  set-test-config your_watchlist_config.xml"
 
-    .line 116
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Set network watchlist test config file."
 
-    .line 117
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  force-generate-report"
 
-    .line 118
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Force generate watchlist test report."
 
-    .line 119
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -197,19 +179,16 @@
 .method public final runForceGenerateReport()I
     .locals 8
 
-    .line 89
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 90
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
     const/4 v3, -0x1
 
-    .line 93
     :try_start_0
     invoke-static {}, Lcom/android/server/net/watchlist/WatchlistConfig;->getInstance()Lcom/android/server/net/watchlist/WatchlistConfig;
 
@@ -223,18 +202,15 @@
 
     const-string p0, "Error: Cannot force generate report under production config"
 
-    .line 94
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 105
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v3
 
-    .line 97
     :cond_0
     :try_start_1
     iget-object v4, p0, Lcom/android/server/net/watchlist/NetworkWatchlistShellCommand;->mContext:Landroid/content/Context;
@@ -249,7 +225,6 @@
 
     invoke-static {v4, v5, v6, v7}, Landroid/provider/Settings$Global;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    .line 99
     iget-object p0, p0, Lcom/android/server/net/watchlist/NetworkWatchlistShellCommand;->mService:Lcom/android/server/net/watchlist/NetworkWatchlistService;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -260,13 +235,11 @@
 
     const-string p0, "Success!"
 
-    .line 100
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 105
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x0
@@ -281,7 +254,6 @@
     :catch_0
     move-exception p0
 
-    .line 102
     :try_start_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -301,7 +273,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 105
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v3
@@ -309,21 +280,18 @@
     :goto_0
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 106
     throw p0
 .end method
 
 .method public final runSetTestConfig()I
     .locals 4
 
-    .line 69
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
     const/4 v1, -0x1
 
-    .line 71
     :try_start_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -331,14 +299,12 @@
 
     const-string/jumbo v3, "r"
 
-    .line 72
     invoke-virtual {p0, v2, v3}, Landroid/os/ShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 74
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -357,7 +323,6 @@
 
     return v1
 
-    .line 77
     :cond_0
     new-instance v2, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
@@ -365,7 +330,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 78
     :try_start_1
     invoke-static {}, Lcom/android/server/net/watchlist/WatchlistConfig;->getInstance()Lcom/android/server/net/watchlist/WatchlistConfig;
 
@@ -375,13 +339,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 79
     :try_start_2
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
     const-string p0, "Success!"
 
-    .line 80
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -393,7 +355,6 @@
     :catchall_0
     move-exception p0
 
-    .line 77
     :try_start_3
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -415,7 +376,6 @@
     :catch_0
     move-exception p0
 
-    .line 82
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

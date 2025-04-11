@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pdp/PdpService;Ljava/lang/String;)V
     .locals 0
 
-    .line 188
     iput-object p1, p0, Lcom/android/server/pdp/PdpService$1;->this$0:Lcom/android/server/pdp/PdpService;
 
     invoke-direct {p0, p2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
@@ -24,7 +23,6 @@
 .method public onLooperPrepared()V
     .locals 3
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/pdp/PdpService$1;->this$0:Lcom/android/server/pdp/PdpService;
 
     new-instance v1, Lcom/android/server/pdp/PdpService$SvcPdpHandler;

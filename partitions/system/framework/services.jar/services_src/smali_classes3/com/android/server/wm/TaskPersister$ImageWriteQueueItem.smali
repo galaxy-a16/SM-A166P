@@ -16,13 +16,10 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 825
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 826
     iput-object p1, p0, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mFilePath:Ljava/lang/String;
 
-    .line 827
     iput-object p2, p0, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
     return-void
@@ -33,7 +30,6 @@
 .method public bridge synthetic matches(Lcom/android/server/wm/PersisterQueue$WriteQueueItem;)Z
     .locals 0
 
-    .line 820
     check-cast p1, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->matches(Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;)Z
@@ -46,7 +42,6 @@
 .method public matches(Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;)Z
     .locals 0
 
-    .line 852
     iget-object p0, p0, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mFilePath:Ljava/lang/String;
 
     iget-object p1, p1, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mFilePath:Ljava/lang/String;
@@ -61,10 +56,8 @@
 .method public process()V
     .locals 5
 
-    .line 832
     iget-object v0, p0, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mFilePath:Ljava/lang/String;
 
-    .line 833
     invoke-static {v0}, Lcom/android/server/wm/TaskPersister;->-$$Nest$smcreateParentDirectory(Ljava/lang/String;)Z
 
     move-result v1
@@ -73,7 +66,6 @@
 
     if-nez v1, :cond_0
 
-    .line 834
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,13 +84,11 @@
 
     return-void
 
-    .line 837
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
     const/4 v1, 0x0
 
-    .line 841
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -111,7 +101,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 842
     :try_start_1
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -122,7 +111,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 846
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_1
@@ -149,7 +137,6 @@
     :catch_1
     move-exception p0
 
-    .line 844
     :goto_0
     :try_start_2
     new-instance v3, Ljava/lang/StringBuilder;
@@ -170,7 +157,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 846
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     :goto_1
@@ -179,14 +165,12 @@
     :goto_2
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 847
     throw p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 862
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,7 +189,6 @@
 
     iget-object v1, p0, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
-    .line 863
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -238,7 +221,6 @@
 .method public bridge synthetic updateFrom(Lcom/android/server/wm/PersisterQueue$WriteQueueItem;)V
     .locals 0
 
-    .line 820
     check-cast p1, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->updateFrom(Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;)V
@@ -249,7 +231,6 @@
 .method public updateFrom(Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;)V
     .locals 0
 
-    .line 857
     iget-object p1, p1, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
     iput-object p1, p0, Lcom/android/server/wm/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;

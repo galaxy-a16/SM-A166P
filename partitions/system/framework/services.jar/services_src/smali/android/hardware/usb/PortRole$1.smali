@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/usb/PortRole;
     .locals 1
 
-    .line 86
     new-instance p0, Landroid/hardware/usb/PortRole;
 
     const/4 v0, 0x0
@@ -33,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 83
     invoke-virtual {p0, p1}, Landroid/hardware/usb/PortRole$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/usb/PortRole;
 
     move-result-object p0
@@ -44,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/usb/PortRole;
     .locals 0
 
-    .line 90
     new-array p0, p1, [Landroid/hardware/usb/PortRole;
 
     return-object p0
@@ -53,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 83
     invoke-virtual {p0, p1}, Landroid/hardware/usb/PortRole$1;->newArray(I)[Landroid/hardware/usb/PortRole;
 
     move-result-object p0

@@ -19,7 +19,6 @@
 
     new-array v0, v0, [I
 
-    .line 27
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/apache/commons/compress/compressors/bzip2/CRC;->crc32Table:[I
@@ -290,10 +289,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     invoke-virtual {p0}, Lorg/apache/commons/compress/compressors/bzip2/CRC;->initialiseCRC()V
 
     return-void
@@ -304,7 +301,6 @@
 .method public getFinalCRC()I
     .locals 0
 
-    .line 103
     iget p0, p0, Lorg/apache/commons/compress/compressors/bzip2/CRC;->globalCrc:I
 
     not-int p0, p0
@@ -317,7 +313,6 @@
 
     const/4 v0, -0x1
 
-    .line 99
     iput v0, p0, Lorg/apache/commons/compress/compressors/bzip2/CRC;->globalCrc:I
 
     return-void
@@ -326,7 +321,6 @@
 .method public updateCRC(I)V
     .locals 2
 
-    .line 115
     iget v0, p0, Lorg/apache/commons/compress/compressors/bzip2/CRC;->globalCrc:I
 
     shr-int/lit8 v1, v0, 0x18
@@ -340,7 +334,6 @@
     :cond_0
     shl-int/lit8 v0, v0, 0x8
 
-    .line 119
     sget-object v1, Lorg/apache/commons/compress/compressors/bzip2/CRC;->crc32Table:[I
 
     aget p1, v1, p1

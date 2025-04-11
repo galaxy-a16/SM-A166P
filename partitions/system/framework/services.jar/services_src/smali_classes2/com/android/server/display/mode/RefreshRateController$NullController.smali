@@ -9,7 +9,6 @@
 
     const/4 v0, 0x0
 
-    .line 587
     invoke-direct {p0, p1, v0}, Lcom/android/server/display/mode/RefreshRateController;-><init>(Landroid/os/IBinder;Lcom/android/server/display/mode/RefreshRateController-IA;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public getControllerType()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "NullController"
 
     return-object p0
@@ -33,7 +31,6 @@
 
     const-string p1, "NullController-updatePassiveLocked controller is not ready!"
 
-    .line 597
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

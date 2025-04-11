@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-boolean p1, p0, Lcom/android/server/broadcastradio/aidl/RadioModule$1$$ExternalSyntheticLambda10;->f$0:Z
@@ -27,7 +26,6 @@
 .method public final run(Landroid/hardware/radio/ITunerCallback;I)V
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/broadcastradio/aidl/RadioModule$1$$ExternalSyntheticLambda10;->f$0:Z
 
     invoke-static {p0, p1, p2}, Lcom/android/server/broadcastradio/aidl/RadioModule$1;->$r8$lambda$MbShUEQJlfeCYaF5yHyHgMY36jY(ZLandroid/hardware/radio/ITunerCallback;I)V

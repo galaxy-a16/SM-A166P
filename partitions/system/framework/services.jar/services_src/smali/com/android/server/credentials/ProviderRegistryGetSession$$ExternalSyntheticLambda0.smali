@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/credentials/CredentialDescriptionRegistry$FilterResult;
 
     invoke-static {p1}, Lcom/android/server/credentials/ProviderRegistryGetSession;->$r8$lambda$PUZ9a4i9ep9dFRY8el13azF27yI(Lcom/android/server/credentials/CredentialDescriptionRegistry$FilterResult;)Ljava/util/stream/Stream;

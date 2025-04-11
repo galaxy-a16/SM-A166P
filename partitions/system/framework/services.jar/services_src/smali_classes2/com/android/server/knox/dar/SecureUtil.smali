@@ -15,7 +15,6 @@
 .method public static clear(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -26,7 +25,6 @@
 
     return-void
 
-    .line 67
     :cond_0
     array-length v0, p0
 
@@ -42,14 +40,12 @@
 
     if-eqz p0, :cond_3
 
-    .line 49
     array-length v0, p0
 
     if-nez v0, :cond_0
 
     goto :goto_2
 
-    .line 53
     :cond_0
     array-length v0, p0
 
@@ -60,25 +56,21 @@
 
     aget-object v2, p0, v1
 
-    .line 54
     instance-of v3, v2, [B
 
     if-eqz v3, :cond_1
 
-    .line 55
     check-cast v2, [B
 
     invoke-static {v2}, Lcom/android/server/knox/dar/SecureUtil;->clear([B)V
 
     goto :goto_1
 
-    .line 58
     :cond_1
     instance-of v3, v2, Ljava/lang/String;
 
     if-eqz v3, :cond_2
 
-    .line 59
     check-cast v2, Ljava/lang/String;
 
     invoke-static {v2}, Lcom/android/server/knox/dar/SecureUtil;->clear(Ljava/lang/String;)V
@@ -97,7 +89,6 @@
 .method public static generateRandomBytes(I)[B
     .locals 1
 
-    .line 88
     new-instance v0, Ljava/security/SecureRandom;
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
@@ -116,14 +107,12 @@
 
     if-eqz p0, :cond_3
 
-    .line 37
     array-length v1, p0
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 40
     :cond_0
     array-length v1, p0
 
@@ -136,7 +125,6 @@
 
     aget-object v4, p0, v3
 
-    .line 41
     invoke-static {v4}, Lcom/android/server/knox/dar/SecureUtil;->isEmpty(Ljava/lang/Object;)Z
 
     move-result v4
@@ -163,7 +151,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 31
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_0
@@ -183,7 +170,6 @@
 
     check-cast p0, Ljava/lang/String;
 
-    .line 33
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p0
@@ -208,7 +194,6 @@
 .method public static isFailed(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 26
     instance-of v0, p0, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
@@ -230,7 +215,6 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 27
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -254,7 +238,6 @@
 
     if-nez p0, :cond_0
 
-    .line 95
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -263,7 +246,6 @@
 
     move-result-object v0
 
-    .line 96
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
@@ -278,12 +260,10 @@
 
     const-string v1, "Unexpected failure with a process [ UID : %d, PID : %d ]"
 
-    .line 93
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 97
     new-instance v1, Ljava/lang/Exception;
 
     invoke-direct {v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V

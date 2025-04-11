@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     invoke-static {p0}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->$r8$lambda$r1N4q_1mKG8oyTmkg95SyTauhx0(Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;)V

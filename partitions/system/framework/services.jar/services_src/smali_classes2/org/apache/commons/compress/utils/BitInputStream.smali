@@ -28,7 +28,6 @@
 
     new-array v0, v0, [J
 
-    .line 33
     sput-object v0, Lorg/apache/commons/compress/utils/BitInputStream;->MASKS:[J
 
     const/4 v0, 0x1
@@ -40,7 +39,6 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 37
     sget-object v2, Lorg/apache/commons/compress/utils/BitInputStream;->MASKS:[J
 
     add-int/lit8 v3, v1, -0x1
@@ -66,27 +64,22 @@
 .method public constructor <init>(Ljava/io/InputStream;Ljava/nio/ByteOrder;)V
     .locals 2
 
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 43
     iput-wide v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
     const/4 v0, 0x0
 
-    .line 44
     iput v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
-    .line 53
     new-instance v0, Lorg/apache/commons/compress/utils/CountingInputStream;
 
     invoke-direct {v0, p1}, Lorg/apache/commons/compress/utils/CountingInputStream;-><init>(Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->in:Lorg/apache/commons/compress/utils/CountingInputStream;
 
-    .line 54
     iput-object p2, p0, Lorg/apache/commons/compress/utils/BitInputStream;->byteOrder:Ljava/nio/ByteOrder;
 
     return-void
@@ -97,14 +90,12 @@
 .method public alignWithByteBoundary()V
     .locals 1
 
-    .line 122
     iget v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
     rem-int/lit8 v0, v0, 0x8
 
     if-lez v0, :cond_0
 
-    .line 124
     invoke-virtual {p0, v0}, Lorg/apache/commons/compress/utils/BitInputStream;->readCachedBits(I)J
 
     :cond_0
@@ -114,7 +105,6 @@
 .method public bitsAvailable()J
     .locals 6
 
-    .line 114
     iget v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
     int-to-long v0, v0
@@ -139,7 +129,6 @@
 .method public bitsCached()I
     .locals 0
 
-    .line 102
     iget p0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
     return p0
@@ -150,12 +139,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 67
     iput-wide v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
     const/4 v0, 0x0
 
-    .line 68
     iput v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
     return-void
@@ -164,7 +151,6 @@
 .method public close()V
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->in:Lorg/apache/commons/compress/utils/CountingInputStream;
 
     invoke-virtual {p0}, Ljava/io/FilterInputStream;->close()V
@@ -175,7 +161,6 @@
 .method public final ensureCache(I)Z
     .locals 6
 
-    .line 187
     :goto_0
     iget v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
@@ -185,7 +170,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 188
     iget-object v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->in:Lorg/apache/commons/compress/utils/CountingInputStream;
 
     invoke-virtual {v0}, Lorg/apache/commons/compress/utils/CountingInputStream;->read()I
@@ -204,7 +188,6 @@
 
     return p0
 
-    .line 192
     :cond_0
     iget-object v2, p0, Lorg/apache/commons/compress/utils/BitInputStream;->byteOrder:Ljava/nio/ByteOrder;
 
@@ -214,7 +197,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 193
     iget-wide v2, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
     iget v5, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
@@ -227,7 +209,6 @@
 
     goto :goto_1
 
-    .line 195
     :cond_1
     iget-wide v2, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
@@ -235,10 +216,8 @@
 
     or-long/2addr v0, v2
 
-    .line 196
     iput-wide v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
-    .line 198
     :goto_1
     iget v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
@@ -257,7 +236,6 @@
 .method public getBytesRead()J
     .locals 2
 
-    .line 137
     iget-object p0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->in:Lorg/apache/commons/compress/utils/CountingInputStream;
 
     invoke-virtual {p0}, Lorg/apache/commons/compress/utils/CountingInputStream;->getBytesRead()J
@@ -270,14 +248,12 @@
 .method public final processBitsGreater57(I)J
     .locals 11
 
-    .line 146
     iget v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
     sub-int v0, p1, v0
 
     rsub-int/lit8 v1, v0, 0x8
 
-    .line 148
     iget-object v2, p0, Lorg/apache/commons/compress/utils/BitInputStream;->in:Lorg/apache/commons/compress/utils/CountingInputStream;
 
     invoke-virtual {v2}, Lorg/apache/commons/compress/utils/CountingInputStream;->read()I
@@ -294,7 +270,6 @@
 
     return-wide v2
 
-    .line 152
     :cond_0
     iget-object v4, p0, Lorg/apache/commons/compress/utils/BitInputStream;->byteOrder:Ljava/nio/ByteOrder;
 
@@ -302,14 +277,12 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 153
     sget-object v4, Lorg/apache/commons/compress/utils/BitInputStream;->MASKS:[J
 
     aget-wide v5, v4, v0
 
     and-long/2addr v5, v2
 
-    .line 154
     iget-wide v7, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
     iget v9, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
@@ -322,12 +295,10 @@
 
     ushr-long/2addr v2, v0
 
-    .line 155
     aget-wide v4, v4, v1
 
     goto :goto_0
 
-    .line 157
     :cond_1
     iget-wide v4, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
@@ -335,7 +306,6 @@
 
     ushr-long v6, v2, v1
 
-    .line 158
     sget-object v8, Lorg/apache/commons/compress/utils/BitInputStream;->MASKS:[J
 
     aget-wide v9, v8, v0
@@ -344,16 +314,13 @@
 
     or-long/2addr v4, v6
 
-    .line 159
     iput-wide v4, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
-    .line 160
     aget-wide v4, v8, v1
 
     :goto_0
     and-long/2addr v2, v4
 
-    .line 162
     iget-wide v4, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
     sget-object v0, Lorg/apache/commons/compress/utils/BitInputStream;->MASKS:[J
@@ -362,10 +329,8 @@
 
     and-long/2addr v4, v6
 
-    .line 163
     iput-wide v2, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
-    .line 164
     iput v1, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
     return-wide v4
@@ -380,7 +345,6 @@
 
     if-gt p1, v0, :cond_2
 
-    .line 85
     invoke-virtual {p0, p1}, Lorg/apache/commons/compress/utils/BitInputStream;->ensureCache(I)Z
 
     move-result v0
@@ -391,20 +355,17 @@
 
     return-wide p0
 
-    .line 89
     :cond_0
     iget v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 
     if-ge v0, p1, :cond_1
 
-    .line 90
     invoke-virtual {p0, p1}, Lorg/apache/commons/compress/utils/BitInputStream;->processBitsGreater57(I)J
 
     move-result-wide p0
 
     return-wide p0
 
-    .line 92
     :cond_1
     invoke-virtual {p0, p1}, Lorg/apache/commons/compress/utils/BitInputStream;->readCachedBits(I)J
 
@@ -412,7 +373,6 @@
 
     return-wide p0
 
-    .line 83
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -426,14 +386,12 @@
 .method public final readCachedBits(I)J
     .locals 4
 
-    .line 170
     iget-object v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->byteOrder:Ljava/nio/ByteOrder;
 
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     if-ne v0, v1, :cond_0
 
-    .line 171
     iget-wide v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
     sget-object v2, Lorg/apache/commons/compress/utils/BitInputStream;->MASKS:[J
@@ -444,12 +402,10 @@
 
     ushr-long/2addr v0, p1
 
-    .line 172
     iput-wide v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
     goto :goto_0
 
-    .line 174
     :cond_0
     iget-wide v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCached:J
 
@@ -465,7 +421,6 @@
 
     and-long/2addr v2, v0
 
-    .line 176
     :goto_0
     iget v0, p0, Lorg/apache/commons/compress/utils/BitInputStream;->bitsCachedSize:I
 

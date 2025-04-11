@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->$r8$lambda$M_FBNyhGLet1pNbzg5-DZ_P2kKU(I)Ljava/lang/Integer;
 
     move-result-object p0

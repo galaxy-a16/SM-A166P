@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRecorderAddress(Lcom/android/server/hdmi/TimerRecordingAction;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/hdmi/TimerRecordingAction;->mRecorderAddress:I
 
     return p0
@@ -24,16 +23,12 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;II[B)V
     .locals 0
 
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
 
-    .line 49
     iput p2, p0, Lcom/android/server/hdmi/TimerRecordingAction;->mRecorderAddress:I
 
-    .line 50
     iput p3, p0, Lcom/android/server/hdmi/TimerRecordingAction;->mSourceType:I
 
-    .line 51
     iput-object p4, p0, Lcom/android/server/hdmi/TimerRecordingAction;->mRecordSource:[B
 
     return-void
@@ -42,7 +37,6 @@
 .method public static bytesToInt([B)I
     .locals 4
 
-    .line 148
     array-length v0, p0
 
     const/4 v1, 0x4
@@ -53,7 +47,6 @@
 
     move v1, v0
 
-    .line 152
     :goto_0
     array-length v2, p0
 
@@ -63,7 +56,6 @@
 
     mul-int/lit8 v2, v2, 0x8
 
-    .line 154
     aget-byte v3, p0, v0
 
     and-int/lit16 v3, v3, 0xff
@@ -79,7 +71,6 @@
     :cond_0
     return v1
 
-    .line 149
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -111,7 +102,6 @@
 .method public bridge synthetic addCallback(Landroid/hardware/hdmi/IHdmiControlCallback;)V
     .locals 0
 
-    .line 33
     invoke-super {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->addCallback(Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
     return-void
@@ -120,14 +110,12 @@
 .method public final handleFeatureAbort(Lcom/android/server/hdmi/HdmiCecMessage;)Z
     .locals 4
 
-    .line 128
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 129
     aget-byte v1, p1, v0
 
     and-int/lit16 v1, v1, 0xff
@@ -149,12 +137,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 138
     aget-byte p1, p1, v0
 
     and-int/lit16 p1, p1, 0xff
 
-    .line 139
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,7 +165,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object p1
@@ -188,7 +173,6 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->announceTimerRecordingResult(II)V
 
-    .line 142
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finish()V
 
     return v0
@@ -197,12 +181,10 @@
 .method public handleTimerEvent(I)V
     .locals 2
 
-    .line 161
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction;->mState:I
 
     if-eq v0, p1, :cond_0
 
-    .line 162
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,7 +217,6 @@
 
     return-void
 
-    .line 166
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
@@ -247,7 +228,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->announceTimerRecordingResult(II)V
 
-    .line 168
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finish()V
 
     return-void
@@ -256,12 +236,10 @@
 .method public final handleTimerStatus(Lcom/android/server/hdmi/HdmiCecMessage;)Z
     .locals 5
 
-    .line 113
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object p1
 
-    .line 115
     array-length v0, p1
 
     const-string v1, "TimerRecordingAction"
@@ -278,7 +256,6 @@
 
     goto :goto_0
 
-    .line 119
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -302,7 +279,6 @@
 
     goto :goto_1
 
-    .line 116
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
@@ -317,7 +293,6 @@
 
     invoke-virtual {v0, v3, v4}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->announceTimerRecordingResult(II)V
 
-    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -338,7 +313,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finish()V
 
@@ -348,7 +322,6 @@
 .method public processCommand(Lcom/android/server/hdmi/HdmiCecMessage;)Z
     .locals 3
 
-    .line 98
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction;->mState:I
 
     const/4 v1, 0x1
@@ -357,7 +330,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 99
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getSource()I
 
     move-result v0
@@ -368,7 +340,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -382,7 +353,6 @@
 
     return v2
 
-    .line 105
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/hdmi/TimerRecordingAction;->handleTimerStatus(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
@@ -390,7 +360,6 @@
 
     return p0
 
-    .line 107
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/hdmi/TimerRecordingAction;->handleFeatureAbort(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
@@ -406,7 +375,6 @@
 .method public final sendTimerMessage()V
     .locals 3
 
-    .line 62
     iget v0, p0, Lcom/android/server/hdmi/TimerRecordingAction;->mSourceType:I
 
     const/4 v1, 0x1
@@ -421,7 +389,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v0
@@ -430,12 +397,10 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->announceTimerRecordingResult(II)V
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finish()V
 
     return-void
 
-    .line 72
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->getSourceAddress()I
 
@@ -451,7 +416,6 @@
 
     goto :goto_0
 
-    .line 68
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->getSourceAddress()I
 
@@ -467,7 +431,6 @@
 
     goto :goto_0
 
-    .line 64
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->getSourceAddress()I
 
@@ -481,7 +444,6 @@
 
     move-result-object v0
 
-    .line 81
     :goto_0
     new-instance v1, Lcom/android/server/hdmi/TimerRecordingAction$1;
 
@@ -495,7 +457,6 @@
 .method public start()Z
     .locals 0
 
-    .line 56
     invoke-virtual {p0}, Lcom/android/server/hdmi/TimerRecordingAction;->sendTimerMessage()V
 
     const/4 p0, 0x1

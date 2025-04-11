@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/display/VirtualDisplayAdapter;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 816
     iput-object p1, p0, Lcom/android/server/display/VirtualDisplayAdapter$MediaProjectionCallback;->this$0:Lcom/android/server/display/VirtualDisplayAdapter;
 
     invoke-direct {p0}, Landroid/media/projection/IMediaProjectionCallback$Stub;-><init>()V
 
-    .line 817
     iput-object p2, p0, Lcom/android/server/display/VirtualDisplayAdapter$MediaProjectionCallback;->mAppToken:Landroid/os/IBinder;
 
     return-void
@@ -29,21 +27,18 @@
 .method public onCapturedContentResize(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onCapturedContentVisibilityChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStop()V
     .locals 2
 
-    .line 822
     iget-object v0, p0, Lcom/android/server/display/VirtualDisplayAdapter$MediaProjectionCallback;->this$0:Lcom/android/server/display/VirtualDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/DisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -52,7 +47,6 @@
 
     monitor-enter v0
 
-    .line 823
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/VirtualDisplayAdapter$MediaProjectionCallback;->this$0:Lcom/android/server/display/VirtualDisplayAdapter;
 
@@ -60,7 +54,6 @@
 
     invoke-static {v1, p0}, Lcom/android/server/display/VirtualDisplayAdapter;->-$$Nest$mhandleMediaProjectionStoppedLocked(Lcom/android/server/display/VirtualDisplayAdapter;Landroid/os/IBinder;)V
 
-    .line 824
     monitor-exit v0
 
     return-void

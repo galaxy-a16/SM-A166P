@@ -33,7 +33,6 @@
 .method public static read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/display/config/layout/Display;
     .locals 4
 
-    .line 140
     new-instance v0, Lcom/android/server/display/config/layout/Display;
 
     invoke-direct {v0}, Lcom/android/server/display/config/layout/Display;-><init>()V
@@ -42,70 +41,58 @@
 
     const/4 v2, 0x0
 
-    .line 142
     invoke-interface {p0, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 144
     invoke-static {v1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 145
     invoke-virtual {v0, v1}, Lcom/android/server/display/config/layout/Display;->setEnabled(Z)V
 
     :cond_0
     const-string v1, "defaultDisplay"
 
-    .line 147
     invoke-interface {p0, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 149
     invoke-static {v1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 150
     invoke-virtual {v0, v1}, Lcom/android/server/display/config/layout/Display;->setDefaultDisplay(Z)V
 
     :cond_1
     const-string/jumbo v1, "refreshRateZoneId"
 
-    .line 152
     invoke-interface {p0, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 155
     invoke-virtual {v0, v1}, Lcom/android/server/display/config/layout/Display;->setRefreshRateZoneId(Ljava/lang/String;)V
 
     :cond_2
     const-string v1, "displayGroup"
 
-    .line 157
     invoke-interface {p0, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    .line 160
     invoke-virtual {v0, v1}, Lcom/android/server/display/config/layout/Display;->setDisplayGroup(Ljava/lang/String;)V
 
-    .line 162
     :cond_3
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    .line 164
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -119,7 +106,6 @@
 
     if-eq v1, v3, :cond_9
 
-    .line 166
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -130,7 +116,6 @@
 
     goto :goto_0
 
-    .line 167
     :cond_4
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -138,24 +123,20 @@
 
     const-string v2, "address"
 
-    .line 168
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 169
     invoke-static {p0}, Lcom/android/server/display/config/layout/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 170
     new-instance v2, Ljava/math/BigInteger;
 
     invoke-direct {v2, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
 
-    .line 171
     invoke-virtual {v0, v2}, Lcom/android/server/display/config/layout/Display;->setAddress(Ljava/math/BigInteger;)V
 
     goto :goto_0
@@ -163,19 +144,16 @@
     :cond_5
     const-string/jumbo v2, "position"
 
-    .line 172
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_6
 
-    .line 173
     invoke-static {p0}, Lcom/android/server/display/config/layout/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 175
     invoke-virtual {v0, v1}, Lcom/android/server/display/config/layout/Display;->setPosition(Ljava/lang/String;)V
 
     goto :goto_0
@@ -183,19 +161,16 @@
     :cond_6
     const-string v2, "brightnessThrottlingMapId"
 
-    .line 176
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    .line 177
     invoke-static {p0}, Lcom/android/server/display/config/layout/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 179
     invoke-virtual {v0, v1}, Lcom/android/server/display/config/layout/Display;->setBrightnessThrottlingMapId(Ljava/lang/String;)V
 
     goto :goto_0
@@ -203,24 +178,20 @@
     :cond_7
     const-string/jumbo v2, "refreshRateThermalThrottlingMapId"
 
-    .line 180
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    .line 181
     invoke-static {p0}, Lcom/android/server/display/config/layout/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 183
     invoke-virtual {v0, v1}, Lcom/android/server/display/config/layout/Display;->setRefreshRateThermalThrottlingMapId(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 185
     :cond_8
     invoke-static {p0}, Lcom/android/server/display/config/layout/XmlParser;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
@@ -231,7 +202,6 @@
 
     return-object v0
 
-    .line 189
     :cond_a
     new-instance p0, Ljavax/xml/datatype/DatatypeConfigurationException;
 
@@ -247,7 +217,6 @@
 .method public getAddress()Ljava/math/BigInteger;
     .locals 0
 
-    .line 14
     iget-object p0, p0, Lcom/android/server/display/config/layout/Display;->address:Ljava/math/BigInteger;
 
     return-object p0
@@ -256,7 +225,6 @@
 .method public getBrightnessThrottlingMapId()Ljava/lang/String;
     .locals 0
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/display/config/layout/Display;->brightnessThrottlingMapId:Ljava/lang/String;
 
     return-object p0
@@ -265,7 +233,6 @@
 .method public getDisplayGroup()Ljava/lang/String;
     .locals 0
 
-    .line 125
     iget-object p0, p0, Lcom/android/server/display/config/layout/Display;->displayGroup:Ljava/lang/String;
 
     return-object p0
@@ -274,7 +241,6 @@
 .method public getPosition()Ljava/lang/String;
     .locals 0
 
-    .line 29
     iget-object p0, p0, Lcom/android/server/display/config/layout/Display;->position:Ljava/lang/String;
 
     return-object p0
@@ -283,7 +249,6 @@
 .method public getRefreshRateThermalThrottlingMapId()Ljava/lang/String;
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/display/config/layout/Display;->refreshRateThermalThrottlingMapId:Ljava/lang/String;
 
     return-object p0
@@ -292,7 +257,6 @@
 .method public getRefreshRateZoneId()Ljava/lang/String;
     .locals 0
 
-    .line 110
     iget-object p0, p0, Lcom/android/server/display/config/layout/Display;->refreshRateZoneId:Ljava/lang/String;
 
     return-object p0
@@ -301,7 +265,6 @@
 .method public isDefaultDisplay()Z
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/display/config/layout/Display;->defaultDisplay:Ljava/lang/Boolean;
 
     if-nez p0, :cond_0
@@ -310,7 +273,6 @@
 
     return p0
 
-    .line 95
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -322,7 +284,6 @@
 .method public isEnabled()Z
     .locals 0
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/display/config/layout/Display;->enabled:Ljava/lang/Boolean;
 
     if-nez p0, :cond_0
@@ -331,7 +292,6 @@
 
     return p0
 
-    .line 77
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -343,7 +303,6 @@
 .method public setAddress(Ljava/math/BigInteger;)V
     .locals 0
 
-    .line 25
     iput-object p1, p0, Lcom/android/server/display/config/layout/Display;->address:Ljava/math/BigInteger;
 
     return-void
@@ -352,7 +311,6 @@
 .method public setBrightnessThrottlingMapId(Ljava/lang/String;)V
     .locals 0
 
-    .line 55
     iput-object p1, p0, Lcom/android/server/display/config/layout/Display;->brightnessThrottlingMapId:Ljava/lang/String;
 
     return-void
@@ -361,7 +319,6 @@
 .method public setDefaultDisplay(Z)V
     .locals 0
 
-    .line 106
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -374,7 +331,6 @@
 .method public setDisplayGroup(Ljava/lang/String;)V
     .locals 0
 
-    .line 136
     iput-object p1, p0, Lcom/android/server/display/config/layout/Display;->displayGroup:Ljava/lang/String;
 
     return-void
@@ -383,7 +339,6 @@
 .method public setEnabled(Z)V
     .locals 0
 
-    .line 88
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -396,7 +351,6 @@
 .method public setPosition(Ljava/lang/String;)V
     .locals 0
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/display/config/layout/Display;->position:Ljava/lang/String;
 
     return-void
@@ -405,7 +359,6 @@
 .method public setRefreshRateThermalThrottlingMapId(Ljava/lang/String;)V
     .locals 0
 
-    .line 70
     iput-object p1, p0, Lcom/android/server/display/config/layout/Display;->refreshRateThermalThrottlingMapId:Ljava/lang/String;
 
     return-void
@@ -414,7 +367,6 @@
 .method public setRefreshRateZoneId(Ljava/lang/String;)V
     .locals 0
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/display/config/layout/Display;->refreshRateZoneId:Ljava/lang/String;
 
     return-void

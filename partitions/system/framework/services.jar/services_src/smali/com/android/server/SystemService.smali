@@ -37,10 +37,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 333
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 334
     iput-object p1, p0, Lcom/android/server/SystemService;->mContext:Landroid/content/Context;
 
     return-void
@@ -51,7 +49,6 @@
 .method public dumpSupportedUsers(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 5
 
-    .line 397
     iget-object v0, p0, Lcom/android/server/SystemService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
@@ -62,7 +59,6 @@
 
     move-result-object v0
 
-    .line 398
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -73,7 +69,6 @@
 
     const/4 v2, 0x0
 
-    .line 399
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -81,14 +76,12 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 400
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 401
     new-instance v4, Lcom/android/server/SystemService$TargetUser;
 
     invoke-direct {v4, v3}, Lcom/android/server/SystemService$TargetUser;-><init>(Landroid/content/pm/UserInfo;)V
@@ -99,7 +92,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 402
     iget v3, v3, Landroid/content/pm/UserInfo;->id:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -113,7 +105,6 @@
 
     goto :goto_0
 
-    .line 405
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -121,7 +112,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 406
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, "No supported users"
@@ -130,13 +120,11 @@
 
     return-void
 
-    .line 409
     :cond_2
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result p0
 
-    .line 410
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(I)V
@@ -151,13 +139,11 @@
 
     const-string/jumbo p0, "s"
 
-    .line 411
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     :cond_3
     const-string p0, ": "
 
-    .line 412
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
@@ -168,7 +154,6 @@
 .method public final getBinderService(Ljava/lang/String;)Landroid/os/IBinder;
     .locals 0
 
-    .line 576
     invoke-static {p1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -179,7 +164,6 @@
 .method public final getContext()Landroid/content/Context;
     .locals 0
 
-    .line 342
     iget-object p0, p0, Lcom/android/server/SystemService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -188,7 +172,6 @@
 .method public final getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 0
 
-    .line 594
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -199,7 +182,6 @@
 .method public final getManager()Lcom/android/server/SystemServiceManager;
     .locals 0
 
-    .line 598
     const-class p0, Lcom/android/server/SystemServiceManager;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -214,7 +196,6 @@
 .method public final getUiContext()Landroid/content/Context;
     .locals 0
 
-    .line 354
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object p0
@@ -229,7 +210,6 @@
 .method public final isSafeMode()Z
     .locals 0
 
-    .line 364
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getManager()Lcom/android/server/SystemServiceManager;
 
     move-result-object p0
@@ -244,7 +224,6 @@
 .method public isUserSupported(Lcom/android/server/SystemService$TargetUser;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -253,7 +232,6 @@
 .method public onBootPhase(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -263,49 +241,42 @@
 .method public onUserCompletedEvent(Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$UserCompletedEventType;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserStopped(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserStopping(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserSwitching(Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserUnlocked(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -314,7 +285,6 @@
 
     const/4 v0, 0x0
 
-    .line 538
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;Z)V
 
     return-void
@@ -325,7 +295,6 @@
 
     const/16 v0, 0x8
 
-    .line 551
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;ZI)V
 
     return-void
@@ -334,7 +303,6 @@
 .method public final publishBinderService(Ljava/lang/String;Landroid/os/IBinder;ZI)V
     .locals 0
 
-    .line 567
     invoke-static {p1, p2, p3, p4}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;ZI)V
 
     return-void
@@ -343,7 +311,6 @@
 .method public final publishLocalService(Ljava/lang/Class;Ljava/lang/Object;)V
     .locals 0
 
-    .line 585
     invoke-static {p1, p2}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
 
     return-void

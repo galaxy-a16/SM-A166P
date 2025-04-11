@@ -10,7 +10,6 @@
 .method public static bridge synthetic -$$Nest$fputmInteractive(Lcom/android/server/power/FaceDownDetector;Z)V
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     throw p0
@@ -19,7 +18,6 @@
 .method public static bridge synthetic -$$Nest$mupdateActiveState(Lcom/android/server/power/FaceDownDetector;)V
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     throw p0

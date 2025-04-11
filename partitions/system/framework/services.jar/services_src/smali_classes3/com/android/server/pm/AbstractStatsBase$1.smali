@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/AbstractStatsBase;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/pm/AbstractStatsBase$1;->this$0:Lcom/android/server/pm/AbstractStatsBase;
 
     iput-object p3, p0, Lcom/android/server/pm/AbstractStatsBase$1;->val$data:Ljava/lang/Object;
@@ -30,7 +29,6 @@
 
     const/4 v0, 0x0
 
-    .line 79
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/AbstractStatsBase$1;->this$0:Lcom/android/server/pm/AbstractStatsBase;
 
@@ -38,7 +36,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/pm/AbstractStatsBase;->-$$Nest$mwriteImpl(Lcom/android/server/pm/AbstractStatsBase;Ljava/lang/Object;)V
 
-    .line 80
     iget-object v1, p0, Lcom/android/server/pm/AbstractStatsBase$1;->this$0:Lcom/android/server/pm/AbstractStatsBase;
 
     invoke-static {v1}, Lcom/android/server/pm/AbstractStatsBase;->-$$Nest$fgetmLastTimeWritten(Lcom/android/server/pm/AbstractStatsBase;)Ljava/util/concurrent/atomic/AtomicLong;
@@ -53,7 +50,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/pm/AbstractStatsBase$1;->this$0:Lcom/android/server/pm/AbstractStatsBase;
 
     invoke-static {p0}, Lcom/android/server/pm/AbstractStatsBase;->-$$Nest$fgetmBackgroundWriteRunning(Lcom/android/server/pm/AbstractStatsBase;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -75,6 +71,5 @@
 
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 83
     throw v1
 .end method

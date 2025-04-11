@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Ljava/util/List;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/stats/pull/StatsPullAtomService$$ExternalSyntheticLambda9;->f$0:Ljava/util/List;
@@ -31,7 +30,6 @@
 .method public final onUidStorageStats(IJJJJJJJJJJ)V
     .locals 24
 
-    .line 0
     move-object/from16 v0, p0
 
     move/from16 v3, p1

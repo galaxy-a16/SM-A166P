@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPendingReports(Lcom/android/server/incident/IncidentCompanionService;)Lcom/android/server/incident/PendingReports;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/incident/IncidentCompanionService;->mPendingReports:Lcom/android/server/incident/PendingReports;
 
     return-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$mgetIIncidentManager(Lcom/android/server/incident/IncidentCompanionService;)Landroid/os/IIncidentManager;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/incident/IncidentCompanionService;->getIIncidentManager()Landroid/os/IIncidentManager;
 
     move-result-object p0
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDUMP_AND_USAGE_STATS_PERMISSIONS()[Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/incident/IncidentCompanionService;->DUMP_AND_USAGE_STATS_PERMISSIONS:[Ljava/lang/String;
 
     return-object v0
@@ -46,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$sfgetRESTRICTED_IMAGE_DUMP_ARGS()[Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/incident/IncidentCompanionService;->RESTRICTED_IMAGE_DUMP_ARGS:[Ljava/lang/String;
 
     return-object v0
@@ -59,7 +55,6 @@
 
     const-string v1, "--restricted_image"
 
-    .line 57
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -70,7 +65,6 @@
 
     const-string v1, "android.permission.PACKAGE_USAGE_STATS"
 
-    .line 63
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -83,10 +77,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 379
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 380
     new-instance v0, Lcom/android/server/incident/PendingReports;
 
     invoke-direct {v0, p1}, Lcom/android/server/incident/PendingReports;-><init>(Landroid/content/Context;)V
@@ -99,7 +91,6 @@
 .method public static getCurrentUserIfAdmin()I
     .locals 4
 
-    .line 423
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -119,12 +110,10 @@
 
     const-string v0, "No current user.  Nobody to approve the report. The report will be denied."
 
-    .line 431
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 436
     :cond_0
     invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isAdmin()Z
 
@@ -134,12 +123,10 @@
 
     const-string v0, "Only an admin user running in foreground can approve bugreports, but the current foreground user is not an admin user. The report will be denied."
 
-    .line 437
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 443
     :cond_1
     iget v0, v0, Landroid/content/pm/UserInfo;->id:I
 
@@ -148,7 +135,6 @@
     :catch_0
     move-exception v0
 
-    .line 426
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -163,12 +149,10 @@
 
     const-string p0, "incident"
 
-    .line 412
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 411
     invoke-static {p0}, Landroid/os/IIncidentManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IIncidentManager;
 
     move-result-object p0
@@ -179,7 +163,6 @@
 .method public onBootPhase(I)V
     .locals 1
 
-    .line 398
     invoke-super {p0, p1}, Lcom/android/server/SystemService;->onBootPhase(I)V
 
     const/16 v0, 0x3e8
@@ -188,7 +171,6 @@
 
     goto :goto_0
 
-    .line 401
     :cond_0
     iget-object p0, p0, Lcom/android/server/incident/IncidentCompanionService;->mPendingReports:Lcom/android/server/incident/PendingReports;
 
@@ -201,7 +183,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 389
     new-instance v0, Lcom/android/server/incident/IncidentCompanionService$BinderService;
 
     const/4 v1, 0x0

@@ -20,7 +20,6 @@
 .method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/am/AppNotRespondingDialog;->$r8$lambda$roBtzWJvYSno9qiIuqbObNTiZ4Q(Landroid/content/DialogInterface;)V
 
     return-void

@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/wm/TaskFragment;)V
     .locals 0
 
-    .line 383
     iput-object p1, p0, Lcom/android/server/wm/TaskFragment$EnsureVisibleActivitiesConfigHelper;->this$0:Lcom/android/server/wm/TaskFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/TaskFragment;Lcom/android/server/wm/TaskFragment$EnsureVisibleActivitiesConfigHelper-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/TaskFragment$EnsureVisibleActivitiesConfigHelper;-><init>(Lcom/android/server/wm/TaskFragment;)V
 
     return-void
@@ -42,7 +40,6 @@
 .method public test(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 3
 
-    .line 411
     iget-boolean v0, p0, Lcom/android/server/wm/TaskFragment$EnsureVisibleActivitiesConfigHelper;->mUpdateConfig:Z
 
     const/4 v1, 0x0
@@ -57,7 +54,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/TaskFragment$EnsureVisibleActivitiesConfigHelper;->mUpdateConfig:Z
 
-    .line 412
     iget-boolean v0, p0, Lcom/android/server/wm/TaskFragment$EnsureVisibleActivitiesConfigHelper;->mBehindFullscreen:Z
 
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->occludesParent()Z
@@ -74,7 +70,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 383
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskFragment$EnsureVisibleActivitiesConfigHelper;->test(Lcom/android/server/wm/ActivityRecord;)Z

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService;)V
     .locals 0
 
-    .line 471
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService;Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;-><init>(Lcom/android/server/sepunion/SemGoodCatchService;)V
 
     return-void
@@ -37,7 +35,6 @@
 
     move-object/from16 v1, p1
 
-    .line 474
     iget v2, v1, Landroid/os/Message;->what:I
 
     if-eqz v2, :cond_5
@@ -66,7 +63,6 @@
 
     goto :goto_0
 
-    .line 492
     :cond_0
     iget-object v0, v0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -78,7 +74,6 @@
 
     goto :goto_0
 
-    .line 489
     :cond_1
     iget-object v0, v0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -90,7 +85,6 @@
 
     goto :goto_0
 
-    .line 486
     :cond_2
     iget-object v0, v0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -98,13 +92,11 @@
 
     goto :goto_0
 
-    .line 482
     :cond_3
     iget-object v1, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, [Ljava/lang/String;
 
-    .line 483
     iget-object v0, v0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$fgetmFeatureEvent(Lcom/android/server/sepunion/SemGoodCatchService;)Lcom/android/server/sepunion/SemGoodCatchService$FeatureEvent;
@@ -131,7 +123,6 @@
 
     goto :goto_0
 
-    .line 479
     :cond_4
     iget-object v0, v0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -143,7 +134,6 @@
 
     goto :goto_0
 
-    .line 476
     :cond_5
     iget-object v0, v0, Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 

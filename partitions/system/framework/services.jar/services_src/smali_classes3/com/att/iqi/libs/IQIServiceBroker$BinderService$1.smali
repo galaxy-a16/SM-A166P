@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/att/iqi/libs/IQIServiceBroker$BinderService;Landroid/os/Message;)V
     .locals 0
 
-    .line 518
     iput-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker$BinderService$1;->this$1:Lcom/att/iqi/libs/IQIServiceBroker$BinderService;
 
     iput-object p2, p0, Lcom/att/iqi/libs/IQIServiceBroker$BinderService$1;->val$msg:Landroid/os/Message;
@@ -28,7 +27,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 521
     iget-object p2, p0, Lcom/att/iqi/libs/IQIServiceBroker$BinderService$1;->this$1:Lcom/att/iqi/libs/IQIServiceBroker$BinderService;
 
     iget-object p2, p2, Lcom/att/iqi/libs/IQIServiceBroker$BinderService;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
@@ -43,14 +41,12 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 522
     iget-object p2, p0, Lcom/att/iqi/libs/IQIServiceBroker$BinderService$1;->this$1:Lcom/att/iqi/libs/IQIServiceBroker$BinderService;
 
     iget-object p2, p2, Lcom/att/iqi/libs/IQIServiceBroker$BinderService;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
 
     invoke-static {p2}, Lcom/att/iqi/libs/IQIServiceBroker;->-$$Nest$mdisablePackage(Lcom/att/iqi/libs/IQIServiceBroker;)V
 
-    .line 523
     invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     return-void

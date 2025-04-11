@@ -30,7 +30,6 @@
 
     return p0
 
-    .line 14
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -42,7 +41,6 @@
 
     return p0
 
-    .line 17
     :cond_2
     check-cast p1, Landroid/hidl/safe_union/V1_0/Monostate;
 
@@ -56,7 +54,6 @@
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    .line 23
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -67,29 +64,24 @@
 .method public final readEmbeddedFromParcel(Landroid/os/HwParcel;Landroid/os/HwBlob;J)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .line 29
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v0, "{"
 
-    .line 30
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string/jumbo v0, "}"
 
-    .line 31
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 32
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -100,6 +92,5 @@
 .method public final writeEmbeddedToBlob(Landroid/os/HwBlob;J)V
     .locals 0
 
-    .line 0
     return-void
 .end method

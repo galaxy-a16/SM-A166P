@@ -17,7 +17,6 @@
 .method public request(IIZLandroid/graphics/Rect;IIZ)Lcom/android/server/smartclip/SpenGestureScreenShotManager$FutureScreenShot;
     .locals 11
 
-    .line 2238
     new-instance v0, Lcom/android/server/smartclip/SpenGestureScreenShotManager$FutureScreenShot;
 
     new-instance v10, Lcom/android/server/smartclip/SpenGestureScreenShotManager$Host$1;
@@ -44,7 +43,6 @@
 
     invoke-direct {v0, v10}, Lcom/android/server/smartclip/SpenGestureScreenShotManager$FutureScreenShot;-><init>(Ljava/util/concurrent/Callable;)V
 
-    .line 2244
     new-instance v1, Ljava/lang/Thread;
 
     invoke-direct {v1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V

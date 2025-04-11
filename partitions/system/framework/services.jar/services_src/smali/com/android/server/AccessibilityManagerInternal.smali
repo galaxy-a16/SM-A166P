@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 65
     new-instance v0, Lcom/android/server/AccessibilityManagerInternal$1;
 
     invoke-direct {v0}, Lcom/android/server/AccessibilityManagerInternal$1;-><init>()V
@@ -32,10 +31,8 @@
 .method public static get()Lcom/android/server/AccessibilityManagerInternal;
     .locals 1
 
-    .line 103
     const-class v0, Lcom/android/server/AccessibilityManagerInternal;
 
-    .line 104
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -46,7 +43,6 @@
 
     goto :goto_0
 
-    .line 105
     :cond_0
     sget-object v0, Lcom/android/server/AccessibilityManagerInternal;->NOP:Lcom/android/server/AccessibilityManagerInternal;
 

@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetdisplayId(Lcom/android/server/display/DisplayManagerService$PresentationDisplay;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->displayId:I
 
     return p0
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetpackageName(Lcom/android/server/display/DisplayManagerService$PresentationDisplay;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->packageName:Ljava/lang/String;
 
     return-object p0
@@ -31,13 +29,10 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .line 7270
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7271
     iput p1, p0, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->displayId:I
 
-    .line 7272
     iput-object p2, p0, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->packageName:Ljava/lang/String;
 
     return-void
@@ -50,7 +45,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 7282
     check-cast p1, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;
 
     iget v0, p1, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->displayId:I
@@ -83,7 +77,6 @@
 .method public getDisplayId()I
     .locals 0
 
-    .line 7286
     iget p0, p0, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->displayId:I
 
     return p0
@@ -92,7 +85,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 7290
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->packageName:Ljava/lang/String;
 
     return-object p0
@@ -101,7 +93,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 7277
     iget v0, p0, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->displayId:I
 
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$PresentationDisplay;->packageName:Ljava/lang/String;

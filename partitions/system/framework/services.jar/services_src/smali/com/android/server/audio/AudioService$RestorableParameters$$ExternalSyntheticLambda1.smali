@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/util/function/BooleanSupplier;
 
     invoke-static {p1}, Lcom/android/server/audio/AudioService$RestorableParameters;->$r8$lambda$tcryFOhh04D1NMhDdtoHy2JkFc0(Ljava/util/function/BooleanSupplier;)Z

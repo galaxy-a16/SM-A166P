@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$Xp6X7buV33vTgyY9NQlNY_Y_ylc(Ljava/lang/String;Lcom/android/server/devicepolicy/EnforcingAdmin;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/devicepolicy/TopPriority;->lambda$resolve$0(Ljava/lang/String;Lcom/android/server/devicepolicy/EnforcingAdmin;)Z
 
     move-result p0
@@ -22,13 +21,10 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Lcom/android/server/devicepolicy/ResolutionMechanism;-><init>()V
 
-    .line 35
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/devicepolicy/TopPriority;->mHighestToLowestPriorityAuthorities:Ljava/util/List;
 
     return-void
@@ -37,7 +33,6 @@
 .method public static synthetic lambda$resolve$0(Ljava/lang/String;Lcom/android/server/devicepolicy/EnforcingAdmin;)Z
     .locals 0
 
-    .line 46
     invoke-virtual {p1, p0}, Lcom/android/server/devicepolicy/EnforcingAdmin;->hasAuthority(Ljava/lang/String;)Z
 
     move-result p0
@@ -50,12 +45,10 @@
 .method public final getParcelableAuthorities()Ljava/util/List;
     .locals 2
 
-    .line 63
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/devicepolicy/TopPriority;->mHighestToLowestPriorityAuthorities:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -75,7 +68,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 65
     invoke-static {v1}, Lcom/android/server/devicepolicy/EnforcingAdmin;->getParcelableAuthority(Ljava/lang/String;)Landroid/app/admin/Authority;
 
     move-result-object v1
@@ -91,7 +83,6 @@
 .method public bridge synthetic getParcelableResolutionMechanism()Landroid/app/admin/ResolutionMechanism;
     .locals 0
 
-    .line 30
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/TopPriority;->getParcelableResolutionMechanism()Landroid/app/admin/TopPriority;
 
     move-result-object p0
@@ -102,7 +93,6 @@
 .method public getParcelableResolutionMechanism()Landroid/app/admin/TopPriority;
     .locals 1
 
-    .line 59
     new-instance v0, Landroid/app/admin/TopPriority;
 
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/TopPriority;->getParcelableAuthorities()Ljava/util/List;
@@ -117,7 +107,6 @@
 .method public resolve(Ljava/util/LinkedHashMap;)Landroid/app/admin/PolicyValue;
     .locals 3
 
-    .line 41
     invoke-virtual {p1}, Ljava/util/LinkedHashMap;->isEmpty()Z
 
     move-result v0
@@ -128,7 +117,6 @@
 
     return-object p0
 
-    .line 44
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/TopPriority;->mHighestToLowestPriorityAuthorities:Ljava/util/List;
 
@@ -149,7 +137,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 45
     invoke-virtual {p1}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -162,7 +149,6 @@
 
     invoke-direct {v2, v0}, Lcom/android/server/devicepolicy/TopPriority$$ExternalSyntheticLambda0;-><init>(Ljava/lang/String;)V
 
-    .line 46
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
@@ -171,14 +157,12 @@
 
     move-result-object v0
 
-    .line 47
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 48
     invoke-virtual {v0}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -191,7 +175,6 @@
 
     return-object p0
 
-    .line 53
     :cond_2
     invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
 
@@ -211,7 +194,6 @@
 
     check-cast p0, Ljava/util/Map$Entry;
 
-    .line 54
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -224,7 +206,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

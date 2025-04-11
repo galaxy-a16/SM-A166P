@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
 .method public filtering(Ljava/lang/String;)Z
     .locals 1
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/enterprise/auditlog/Filter;->mPattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -33,7 +31,6 @@
 
     iput-object p1, p0, Lcom/android/server/enterprise/auditlog/Filter;->mMatcher:Ljava/util/regex/Matcher;
 
-    .line 51
     invoke-virtual {p1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result p0
@@ -44,7 +41,6 @@
 .method public setFilter(Ljava/lang/String;)Z
     .locals 0
 
-    .line 42
     :try_start_0
     invoke-static {p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 

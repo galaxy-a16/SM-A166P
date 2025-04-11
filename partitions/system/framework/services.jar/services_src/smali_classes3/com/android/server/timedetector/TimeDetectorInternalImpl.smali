@@ -22,7 +22,6 @@
 .method public static synthetic $r8$lambda$cJ1obtnNJ-X3de_lSMy_Biap34k(Lcom/android/server/timedetector/TimeDetectorInternalImpl;Lcom/android/server/timedetector/GnssTimeSuggestion;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->lambda$suggestGnssTime$1(Lcom/android/server/timedetector/GnssTimeSuggestion;)V
 
     return-void
@@ -31,7 +30,6 @@
 .method public static synthetic $r8$lambda$i_bY-cYaOWr1U99VfGrEI33C7n4(Lcom/android/server/timedetector/TimeDetectorInternalImpl;Lcom/android/server/timedetector/NetworkTimeSuggestion;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->lambda$suggestNetworkTime$0(Lcom/android/server/timedetector/NetworkTimeSuggestion;)V
 
     return-void
@@ -40,10 +38,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/timezonedetector/CurrentUserIdentityInjector;Lcom/android/server/timedetector/ServiceConfigAccessor;Lcom/android/server/timedetector/TimeDetectorStrategy;)V
     .locals 1
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -52,7 +48,6 @@
 
     iput-object p1, p0, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->mContext:Landroid/content/Context;
 
-    .line 49
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -61,21 +56,18 @@
 
     iput-object p2, p0, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->mHandler:Landroid/os/Handler;
 
-    .line 50
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p3, Lcom/android/server/timezonedetector/CurrentUserIdentityInjector;
 
     iput-object p3, p0, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->mCurrentUserIdentityInjector:Lcom/android/server/timezonedetector/CurrentUserIdentityInjector;
 
-    .line 51
     invoke-static {p4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p4, Lcom/android/server/timedetector/ServiceConfigAccessor;
 
     iput-object p4, p0, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->mServiceConfigAccessor:Lcom/android/server/timedetector/ServiceConfigAccessor;
 
-    .line 52
     invoke-static {p5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p5, Lcom/android/server/timedetector/TimeDetectorStrategy;
@@ -88,7 +80,6 @@
 .method private synthetic lambda$suggestGnssTime$1(Lcom/android/server/timedetector/GnssTimeSuggestion;)V
     .locals 0
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->mTimeDetectorStrategy:Lcom/android/server/timedetector/TimeDetectorStrategy;
 
     invoke-interface {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategy;->suggestGnssTime(Lcom/android/server/timedetector/GnssTimeSuggestion;)V
@@ -99,7 +90,6 @@
 .method private synthetic lambda$suggestNetworkTime$0(Lcom/android/server/timedetector/NetworkTimeSuggestion;)V
     .locals 0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->mTimeDetectorStrategy:Lcom/android/server/timedetector/TimeDetectorStrategy;
 
     invoke-interface {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategy;->suggestNetworkTime(Lcom/android/server/timedetector/NetworkTimeSuggestion;)V
@@ -112,10 +102,8 @@
 .method public suggestGnssTime(Lcom/android/server/timedetector/GnssTimeSuggestion;)V
     .locals 2
 
-    .line 105
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/timedetector/TimeDetectorInternalImpl$$ExternalSyntheticLambda0;
@@ -130,10 +118,8 @@
 .method public suggestNetworkTime(Lcom/android/server/timedetector/NetworkTimeSuggestion;)V
     .locals 2
 
-    .line 85
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorInternalImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/timedetector/TimeDetectorInternalImpl$$ExternalSyntheticLambda1;

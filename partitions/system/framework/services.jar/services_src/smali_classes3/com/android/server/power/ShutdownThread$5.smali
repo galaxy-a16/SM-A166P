@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/power/ShutdownThread;JI[Z)V
     .locals 0
 
-    .line 1035
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$5;->this$0:Lcom/android/server/power/ShutdownThread;
 
     iput-wide p2, p0, Lcom/android/server/power/ShutdownThread$5;->val$endTime:J
@@ -40,15 +39,12 @@
 
     const-string v1, "ShutdownThread"
 
-    .line 1037
     invoke-static {v1, v0}, Lcom/android/server/power/ShutdownThread$MYLOG;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1038
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$smnewTimingsLog()Landroid/util/TimingsTraceLog;
 
     move-result-object v0
 
-    .line 1041
     iget-object v2, p0, Lcom/android/server/power/ShutdownThread$5;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-static {v2}, Lcom/android/server/power/ShutdownThread;->-$$Nest$fgetmContext(Lcom/android/server/power/ShutdownThread;)Landroid/content/Context;
@@ -69,7 +65,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1045
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->isAnyRadioPoweredOn()Z
 
     move-result v5
@@ -92,26 +87,21 @@
 
     const-string v6, "Turning off cellular radios..."
 
-    .line 1047
     invoke-static {v1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1048
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$sfgetMETRIC_RADIO()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-static {v6}, Lcom/android/server/power/ShutdownThread;->-$$Nest$smmetricStarted(Ljava/lang/String;)V
 
-    .line 1049
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->shutdownAllRadios()V
 
     :cond_2
     const-string v6, "Waiting for Radio..."
 
-    .line 1052
     invoke-static {v1, v6}, Lcom/android/server/power/ShutdownThread$MYLOG;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1054
     iget-wide v6, p0, Lcom/android/server/power/ShutdownThread$5;->val$endTime:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -127,14 +117,12 @@
 
     if-lez v8, :cond_6
 
-    .line 1056
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$sfgetmRebootHasProgressBar()Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
-    .line 1057
     iget v8, p0, Lcom/android/server/power/ShutdownThread$5;->val$timeout:I
 
     int-to-long v9, v8
@@ -159,7 +147,6 @@
 
     add-int/lit8 v6, v6, 0x6
 
-    .line 1060
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$sfgetsInstance()Lcom/android/server/power/ShutdownThread;
 
     move-result-object v7
@@ -171,7 +158,6 @@
     :cond_3
     if-nez v5, :cond_4
 
-    .line 1064
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->isAnyRadioPoweredOn()Z
 
     move-result v5
@@ -182,17 +168,14 @@
 
     const-string v6, "!@Radio turned off."
 
-    .line 1066
     invoke-static {v1, v6}, Lcom/android/server/power/ShutdownThread$MYLOG;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1067
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$sfgetMETRIC_RADIO()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-static {v6}, Lcom/android/server/power/ShutdownThread;->-$$Nest$smmetricEnded(Ljava/lang/String;)V
 
-    .line 1068
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-$$Nest$sfgetTRON_METRICS()Landroid/util/ArrayMap;
 
     move-result-object v6
@@ -201,7 +184,6 @@
 
     move-result-object v7
 
-    .line 1069
     invoke-virtual {v6, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
@@ -221,10 +203,8 @@
 
     const-string v0, "!@Radio shutdown complete."
 
-    .line 1074
     invoke-static {v1, v0}, Lcom/android/server/power/ShutdownThread$MYLOG;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1075
     iget-object p0, p0, Lcom/android/server/power/ShutdownThread$5;->val$done:[Z
 
     aput-boolean v4, p0, v3
@@ -234,20 +214,16 @@
     :cond_5
     const-string v6, "!@before sleep"
 
-    .line 1078
     invoke-static {v1, v6}, Lcom/android/server/power/ShutdownThread$MYLOG;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-wide/16 v6, 0x64
 
-    .line 1079
     invoke-static {v6, v7}, Landroid/os/SystemClock;->sleep(J)V
 
     const-string v6, "!@after sleep"
 
-    .line 1080
     invoke-static {v1, v6}, Lcom/android/server/power/ShutdownThread$MYLOG;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1081
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -282,7 +258,6 @@
 
     invoke-static {v1, v6}, Lcom/android/server/power/ShutdownThread$MYLOG;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1083
     iget-wide v6, p0, Lcom/android/server/power/ShutdownThread$5;->val$endTime:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J

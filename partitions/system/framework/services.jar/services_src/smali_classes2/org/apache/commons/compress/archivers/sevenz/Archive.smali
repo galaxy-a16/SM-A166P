@@ -39,7 +39,6 @@
 
     goto :goto_0
 
-    .line 49
     :cond_0
     array-length p0, p0
 
@@ -60,7 +59,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_0
     array-length p0, p0
 
@@ -77,7 +75,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +93,6 @@
 
     iget-object v1, p0, Lorg/apache/commons/compress/archivers/sevenz/Archive;->packSizes:[J
 
-    .line 43
     invoke-static {v1}, Lorg/apache/commons/compress/archivers/sevenz/Archive;->lengthOf([J)Ljava/lang/String;
 
     move-result-object v1
@@ -121,7 +117,6 @@
 
     iget-object v1, p0, Lorg/apache/commons/compress/archivers/sevenz/Archive;->folders:[Lorg/apache/commons/compress/archivers/sevenz/Folder;
 
-    .line 44
     invoke-static {v1}, Lorg/apache/commons/compress/archivers/sevenz/Archive;->lengthOf([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1

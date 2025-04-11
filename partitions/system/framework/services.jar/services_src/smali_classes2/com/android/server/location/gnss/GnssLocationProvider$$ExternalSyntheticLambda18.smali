@@ -20,7 +20,6 @@
 .method public final onLocationChanged(Landroid/location/Location;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/location/gnss/GnssLocationProvider;->$r8$lambda$kM57fFuDWVVItPquyafBLS1cnmI(Landroid/location/Location;)V
 
     return-void

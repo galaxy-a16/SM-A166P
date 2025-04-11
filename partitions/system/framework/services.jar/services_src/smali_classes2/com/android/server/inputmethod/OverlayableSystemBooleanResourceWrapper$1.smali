@@ -19,7 +19,6 @@
 .method public constructor <init>(Landroid/content/Context;ILjava/util/concurrent/atomic/AtomicBoolean;Ljava/util/function/Consumer;Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper;)V
     .locals 0
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper$1;->val$userContext:Landroid/content/Context;
 
     iput p2, p0, Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper$1;->val$boolResId:I
@@ -40,7 +39,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 96
     iget-object p1, p0, Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper$1;->val$userContext:Landroid/content/Context;
 
     iget p2, p0, Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper$1;->val$boolResId:I
@@ -49,7 +47,6 @@
 
     move-result p1
 
-    .line 97
     iget-object p2, p0, Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper$1;->val$valueRef:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p2, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
@@ -58,7 +55,6 @@
 
     if-eq p1, p2, :cond_0
 
-    .line 98
     iget-object p1, p0, Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper$1;->val$callback:Ljava/util/function/Consumer;
 
     iget-object p0, p0, Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper$1;->val$object:Lcom/android/server/inputmethod/OverlayableSystemBooleanResourceWrapper;

@@ -29,25 +29,20 @@
 .method public constructor <init>(Lcom/android/server/alarm/Alarm;JJ)V
     .locals 2
 
-    .line 779
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 780
     iget-object v0, p1, Lcom/android/server/alarm/Alarm;->statsTag:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mTag:Ljava/lang/String;
 
-    .line 781
     iget v0, p1, Lcom/android/server/alarm/Alarm;->type:I
 
     iput v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mType:I
 
-    .line 782
     iget v0, p1, Lcom/android/server/alarm/Alarm;->flags:I
 
     iput v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mFlags:I
 
-    .line 783
     iget-object v0, p1, Lcom/android/server/alarm/Alarm;->alarmClock:Landroid/app/AlarmManager$AlarmClockInfo;
 
     if-eqz v0, :cond_0
@@ -62,7 +57,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mAlarmClock:Z
 
-    .line 784
     iget-object v0, p1, Lcom/android/server/alarm/Alarm;->operation:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_1
@@ -115,25 +109,20 @@
 
     iput-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mHash:Ljava/lang/String;
 
-    .line 785
     iget-wide v0, p1, Lcom/android/server/alarm/Alarm;->origWhen:J
 
     iput-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mOrigWhen:J
 
-    .line 786
     iget-wide v0, p1, Lcom/android/server/alarm/Alarm;->windowLength:J
 
     iput-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mWindowLength:J
 
-    .line 787
     iget-wide v0, p1, Lcom/android/server/alarm/Alarm;->repeatInterval:J
 
     iput-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mInterval:J
 
-    .line 788
     iput-wide p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mWhenAddedRtc:J
 
-    .line 789
     iput-wide p4, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mWhenAddedElapsed:J
 
     return-void
@@ -146,12 +135,10 @@
 
     const-string p2, "[tag"
 
-    .line 793
     iget-object p3, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mTag:Ljava/lang/String;
 
     invoke-virtual {p1, p2, p3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 794
     iget p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mType:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -162,7 +149,6 @@
 
     invoke-virtual {p1, p3, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 795
     iget p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mFlags:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -173,7 +159,6 @@
 
     invoke-virtual {p1, p3, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 796
     iget-boolean p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mAlarmClock:Z
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -186,12 +171,10 @@
 
     const-string p2, "H"
 
-    .line 797
     iget-object p3, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mHash:Ljava/lang/String;
 
     invoke-virtual {p1, p2, p3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 798
     iget p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mType:I
 
     invoke-static {p2}, Lcom/android/server/alarm/AlarmManagerService;->isRtc(I)Z
@@ -202,10 +185,8 @@
 
     const-string p2, "OW="
 
-    .line 799
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 800
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -234,7 +215,6 @@
 
     goto :goto_0
 
-    .line 802
     :cond_0
     iget-wide p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mOrigWhen:J
 
@@ -246,7 +226,6 @@
 
     invoke-virtual {p1, p3, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 804
     :goto_0
     iget-wide p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mWindowLength:J
 
@@ -264,7 +243,6 @@
 
     invoke-virtual {p1, v2, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 805
     :cond_1
     iget-wide p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mInterval:J
 
@@ -280,7 +258,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;Ljava/lang/Object;)Landroid/util/IndentingPrintWriter;
 
-    .line 806
     :cond_2
     iget-wide p2, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mWhenAddedElapsed:J
 
@@ -294,10 +271,8 @@
 
     const-string/jumbo p2, "rtc="
 
-    .line 807
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 808
     new-instance p2, Ljava/util/Date;
 
     iget-wide v0, p0, Lcom/android/server/alarm/AlarmManagerService$AddedAlarm;->mWhenAddedRtc:J
@@ -312,7 +287,6 @@
 
     const-string p0, "]"
 
-    .line 809
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     return-void

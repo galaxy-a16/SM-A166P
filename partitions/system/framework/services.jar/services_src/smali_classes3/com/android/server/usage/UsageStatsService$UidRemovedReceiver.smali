@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usage/UsageStatsService;)V
     .locals 0
 
-    .line 602
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$UidRemovedReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usage/UsageStatsService;Lcom/android/server/usage/UsageStatsService$UidRemovedReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/usage/UsageStatsService$UidRemovedReceiver;-><init>(Lcom/android/server/usage/UsageStatsService;)V
 
     return-void
@@ -37,7 +35,6 @@
 
     const/4 v0, -0x1
 
-    .line 605
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -46,7 +43,6 @@
 
     return-void
 
-    .line 610
     :cond_0
     iget-object p2, p0, Lcom/android/server/usage/UsageStatsService$UidRemovedReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -56,7 +52,6 @@
 
     monitor-enter p2
 
-    .line 611
     :try_start_0
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$UidRemovedReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -66,7 +61,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/usage/BroadcastResponseStatsTracker;->onUidRemoved(I)V
 
-    .line 612
     monitor-exit p2
 
     return-void

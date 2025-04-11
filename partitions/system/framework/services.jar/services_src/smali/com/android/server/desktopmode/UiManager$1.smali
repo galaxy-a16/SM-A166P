@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$M94TpujJVGAcUNj6kGdNIAeHEow(Lcom/android/server/desktopmode/UiManager$1;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/UiManager$1;->lambda$onNullBinding$1(Landroid/content/ComponentName;)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public static synthetic $r8$lambda$jTv9TGBQ5vNjPG1SK5Onefcim8g(Lcom/android/server/desktopmode/UiManager$1;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/UiManager$1;->lambda$onServiceConnected$0(Landroid/os/IBinder;)V
 
     return-void
@@ -32,7 +30,6 @@
 .method public static synthetic $r8$lambda$lPtsAY4BQ9VwnSYQeVUxazQJ3xI(Lcom/android/server/desktopmode/UiManager$1;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/UiManager$1;->lambda$onBindingDied$2(Landroid/content/ComponentName;)V
 
     return-void
@@ -41,7 +38,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/UiManager;)V
     .locals 0
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +48,6 @@
 .method private synthetic lambda$onBindingDied$2(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 99
     invoke-static {}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -77,7 +72,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$mretryConnectionWithBackoff(Lcom/android/server/desktopmode/UiManager;)V
@@ -88,7 +82,6 @@
 .method private synthetic lambda$onNullBinding$1(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 91
     invoke-static {}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -113,7 +106,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$mretryConnectionWithBackoff(Lcom/android/server/desktopmode/UiManager;)V
@@ -124,7 +116,6 @@
 .method private synthetic lambda$onServiceConnected$0(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmService(Lcom/android/server/desktopmode/UiManager;)Lcom/samsung/android/desktopmode/IDesktopModeUiService;
@@ -135,7 +126,6 @@
 
     return-void
 
-    .line 69
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
@@ -143,7 +133,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fputmConnectionBackoffAttempts(Lcom/android/server/desktopmode/UiManager;I)V
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;
@@ -158,7 +147,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;
@@ -173,7 +161,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 73
     :try_start_0
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
@@ -185,7 +172,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {p1}, Lcom/samsung/android/desktopmode/IDesktopModeUiService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/desktopmode/IDesktopModeUiService;
@@ -194,7 +180,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fputmService(Lcom/android/server/desktopmode/UiManager;Lcom/samsung/android/desktopmode/IDesktopModeUiService;)V
 
-    .line 83
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_1
@@ -225,7 +210,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :cond_1
     iget-object p0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
@@ -240,7 +224,6 @@
     :catch_0
     move-exception p1
 
-    .line 77
     invoke-static {}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -249,12 +232,10 @@
 
     invoke-static {v0, v1, p1}, Lcom/android/server/desktopmode/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 78
     iget-object p1, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$munbindService(Lcom/android/server/desktopmode/UiManager;)V
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$mretryConnectionWithBackoff(Lcom/android/server/desktopmode/UiManager;)V
@@ -267,7 +248,6 @@
 .method public onBindingDied(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;
@@ -286,7 +266,6 @@
 .method public onNullBinding(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;
@@ -305,7 +284,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 65
     iget-object p1, p0, Lcom/android/server/desktopmode/UiManager$1;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;
@@ -324,6 +302,5 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

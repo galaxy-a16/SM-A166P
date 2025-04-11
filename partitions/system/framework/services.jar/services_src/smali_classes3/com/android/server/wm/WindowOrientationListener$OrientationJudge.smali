@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowOrientationListener;)V
     .locals 0
 
-    .line 378
     iput-object p1, p0, Lcom/android/server/wm/WindowOrientationListener$OrientationJudge;->this$0:Lcom/android/server/wm/WindowOrientationListener;
 
     invoke-direct {p0}, Landroid/hardware/SensorEventCallback;-><init>()V
@@ -30,7 +29,6 @@
 .method public onFlushCompleted(Landroid/hardware/Sensor;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

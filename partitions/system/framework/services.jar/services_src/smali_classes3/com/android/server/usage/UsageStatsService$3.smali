@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usage/UsageStatsService;)V
     .locals 0
 
-    .line 616
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$3;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
@@ -34,7 +33,6 @@
 
     move v1, p1
 
-    .line 624
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/usage/UsageStatsService$3;->onUidStateChanged(IIJI)V
 
     return-void
@@ -43,7 +41,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 619
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$3;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService;->mHandler:Landroid/os/Handler;

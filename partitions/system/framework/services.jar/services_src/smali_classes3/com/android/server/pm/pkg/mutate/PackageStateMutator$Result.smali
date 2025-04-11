@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 142
     new-instance v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
     const/4 v1, 0x1
@@ -40,28 +39,24 @@
 
     sput-object v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->SUCCESS:Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
-    .line 143
     new-instance v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
     invoke-direct {v0, v2, v1, v2, v2}, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;-><init>(ZZZZ)V
 
     sput-object v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->PACKAGES_CHANGED:Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
-    .line 144
     new-instance v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
     invoke-direct {v0, v2, v2, v1, v2}, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;-><init>(ZZZZ)V
 
     sput-object v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->STATE_CHANGED:Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
-    .line 145
     new-instance v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
     invoke-direct {v0, v2, v1, v1, v2}, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;-><init>(ZZZZ)V
 
     sput-object v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->PACKAGES_AND_STATE_CHANGED:Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
-    .line 146
     new-instance v0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;
 
     invoke-direct {v0, v2, v2, v1, v1}, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;-><init>(ZZZZ)V
@@ -74,19 +69,14 @@
 .method public constructor <init>(ZZZZ)V
     .locals 0
 
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     iput-boolean p1, p0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->mCommitted:Z
 
-    .line 156
     iput-boolean p2, p0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->mPackagesChanged:Z
 
-    .line 157
     iput-boolean p3, p0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->mStateChanged:Z
 
-    .line 158
     iput-boolean p4, p0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->mSpecificPackageNull:Z
 
     return-void
@@ -97,7 +87,6 @@
 .method public isCommitted()Z
     .locals 0
 
-    .line 162
     iget-boolean p0, p0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->mCommitted:Z
 
     return p0
@@ -106,7 +95,6 @@
 .method public isPackagesChanged()Z
     .locals 0
 
-    .line 166
     iget-boolean p0, p0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->mPackagesChanged:Z
 
     return p0
@@ -115,7 +103,6 @@
 .method public isSpecificPackageNull()Z
     .locals 0
 
-    .line 174
     iget-boolean p0, p0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->mSpecificPackageNull:Z
 
     return p0
@@ -124,7 +111,6 @@
 .method public isStateChanged()Z
     .locals 0
 
-    .line 170
     iget-boolean p0, p0, Lcom/android/server/pm/pkg/mutate/PackageStateMutator$Result;->mStateChanged:Z
 
     return p0

@@ -19,22 +19,16 @@
 .method public constructor <init>(Landroid/database/IContentObserver;IZII)V
     .locals 0
 
-    .line 575
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 576
     iput-object p1, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->observer:Landroid/database/IContentObserver;
 
-    .line 577
     iput p2, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->uid:I
 
-    .line 578
     iput-boolean p3, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->selfChange:Z
 
-    .line 579
     iput p4, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->flags:I
 
-    .line 580
     iput p5, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->userId:I
 
     return-void
@@ -45,7 +39,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 585
     instance-of v0, p1, Lcom/android/server/content/ContentService$ObserverCollector$Key;
 
     const/4 v1, 0x0
@@ -54,11 +47,9 @@
 
     return v1
 
-    .line 588
     :cond_0
     check-cast p1, Lcom/android/server/content/ContentService$ObserverCollector$Key;
 
-    .line 589
     iget-object v0, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->observer:Landroid/database/IContentObserver;
 
     iget-object v2, p1, Lcom/android/server/content/ContentService$ObserverCollector$Key;->observer:Landroid/database/IContentObserver;
@@ -102,7 +93,6 @@
 .method public hashCode()I
     .locals 4
 
-    .line 598
     iget-object v0, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->observer:Landroid/database/IContentObserver;
 
     iget v1, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->uid:I

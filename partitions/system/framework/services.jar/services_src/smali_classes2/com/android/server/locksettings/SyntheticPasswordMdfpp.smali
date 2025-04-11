@@ -13,14 +13,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 18
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lcom/android/server/locksettings/SyntheticPasswordMdfpp;->mSecureModeCache:Landroid/util/SparseArray;
 
-    .line 19
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -33,12 +31,10 @@
 .method public static cacheSecureMode(II)V
     .locals 1
 
-    .line 168
     sget-object v0, Lcom/android/server/locksettings/SyntheticPasswordMdfpp;->mSecureModeCache:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 169
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -46,7 +42,6 @@
 
     invoke-virtual {v0, p0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 170
     monitor-exit v0
 
     return-void
@@ -64,12 +59,10 @@
 .method public static getSecureMode(I)I
     .locals 4
 
-    .line 158
     sget-object v0, Lcom/android/server/locksettings/SyntheticPasswordMdfpp;->mSecureModeCache:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 159
     :try_start_0
     invoke-virtual {v0, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -79,7 +72,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 163
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -88,7 +80,6 @@
 
     return p0
 
-    .line 161
     :cond_0
     new-instance v1, Lcom/android/server/locksettings/SyntheticPasswordMdfpp$EmptySlotException;
 
@@ -113,7 +104,6 @@
     :catchall_0
     move-exception p0
 
-    .line 164
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

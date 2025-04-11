@@ -7,13 +7,11 @@
 .method public onMergedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

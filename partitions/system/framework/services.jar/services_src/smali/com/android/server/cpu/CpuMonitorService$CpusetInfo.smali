@@ -15,13 +15,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 526
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 527
     iput p1, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->cpuset:I
 
-    .line 528
     new-instance p1, Landroid/util/LongSparseArray;
 
     invoke-direct {p1}, Landroid/util/LongSparseArray;-><init>()V
@@ -36,7 +33,6 @@
 .method public appendCpuInfo(JLcom/android/server/cpu/CpuInfoReader$CpuInfo;)V
     .locals 5
 
-    .line 532
     iget v0, p3, Lcom/android/server/cpu/CpuInfoReader$CpuInfo;->cpusetCategories:I
 
     iget v1, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->cpuset:I
@@ -49,7 +45,6 @@
 
     return-void
 
-    .line 535
     :cond_0
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
@@ -61,17 +56,14 @@
 
     if-nez v0, :cond_1
 
-    .line 537
     new-instance v0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;-><init>(J)V
 
-    .line 538
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
     invoke-virtual {v1, p1, p2, v0}, Landroid/util/LongSparseArray;->append(JLjava/lang/Object;)V
 
-    .line 539
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
     invoke-virtual {v1}, Landroid/util/LongSparseArray;->size()I
@@ -84,7 +76,6 @@
 
     const/4 v2, 0x0
 
-    .line 540
     invoke-virtual {v1, v2}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -103,12 +94,10 @@
 
     if-lez p1, :cond_1
 
-    .line 542
     iget-object p0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
     invoke-virtual {p0, v2}, Landroid/util/LongSparseArray;->removeAt(I)V
 
-    .line 545
     :cond_1
     invoke-virtual {v0, p3}, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;->appendCpuInfo(Lcom/android/server/cpu/CpuInfoReader$CpuInfo;)V
 
@@ -120,10 +109,8 @@
 
     const/4 v0, 0x0
 
-    .line 621
     iput-object v0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mLatestCpuAvailabilityInfo:Lcom/android/server/cpu/CpuAvailabilityInfo;
 
-    .line 622
     iget-object p0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
     invoke-virtual {p0}, Landroid/util/LongSparseArray;->clear()V
@@ -134,7 +121,6 @@
 .method public final getCumulativeAvgAvailabilityPercent(J)I
     .locals 11
 
-    .line 598
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->size()I
@@ -158,7 +144,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 599
     iget-object v6, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
     invoke-virtual {v6, v0}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
@@ -167,7 +152,6 @@
 
     check-cast v6, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;
 
-    .line 600
     iget-wide v7, v6, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;->uptimeMillis:J
 
     cmp-long v9, v7, p1
@@ -181,12 +165,10 @@
     :cond_0
     add-int/lit8 v5, v5, 0x1
 
-    .line 605
     iget-wide v9, v6, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;->totalNormalizedAvailableCpuFreqKHz:J
 
     add-long/2addr v1, v9
 
-    .line 606
     iget-wide v9, v6, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;->totalOnlineMaxCpuFreqKHz:J
 
     add-long/2addr v3, v9
@@ -234,7 +216,6 @@
 .method public getLatestCpuAvailabilityInfo()Lcom/android/server/cpu/CpuAvailabilityInfo;
     .locals 0
 
-    .line 550
     iget-object p0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mLatestCpuAvailabilityInfo:Lcom/android/server/cpu/CpuAvailabilityInfo;
 
     return-object p0
@@ -243,7 +224,6 @@
 .method public getPrevCpuAvailabilityPercent()I
     .locals 2
 
-    .line 586
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->size()I
@@ -258,7 +238,6 @@
 
     return p0
 
-    .line 590
     :cond_0
     iget-object p0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
@@ -280,7 +259,6 @@
 .method public populateLatestCpuAvailabilityInfo(JJ)V
     .locals 10
 
-    .line 555
     iget-object v0, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->size()I
@@ -291,12 +269,10 @@
 
     if-nez v0, :cond_0
 
-    .line 557
     iput-object v1, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mLatestCpuAvailabilityInfo:Lcom/android/server/cpu/CpuAvailabilityInfo;
 
     return-void
 
-    .line 560
     :cond_0
     iget-object v2, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mSnapshotsByUptime:Landroid/util/LongSparseArray;
 
@@ -308,24 +284,20 @@
 
     check-cast v0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;
 
-    .line 561
     iget-wide v4, v0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;->uptimeMillis:J
 
     cmp-long v2, v4, p1
 
     if-eqz v2, :cond_2
 
-    .line 565
     sget-boolean p1, Lcom/android/server/cpu/CpuMonitorService;->DEBUG:Z
 
     if-eqz p1, :cond_1
 
-    .line 566
     sget-object p1, Lcom/android/server/cpu/CpuMonitorService;->TAG:Ljava/lang/String;
 
     iget p2, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->cpuset:I
 
-    .line 567
     invoke-static {p2}, Lcom/android/server/cpu/CpuAvailabilityMonitoringConfig;->toCpusetString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -336,16 +308,13 @@
 
     const-string p3, "Skipping stale CPU availability information for cpuset %s"
 
-    .line 566
     invoke-static {p1, p3, p2}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 569
     :cond_1
     iput-object v1, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mLatestCpuAvailabilityInfo:Lcom/android/server/cpu/CpuAvailabilityInfo;
 
     return-void
 
-    .line 573
     :cond_2
     iget-object v1, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->mLatestCpuAvailabilityInfo:Lcom/android/server/cpu/CpuAvailabilityInfo;
 
@@ -362,17 +331,14 @@
     :cond_3
     sub-long/2addr p1, p3
 
-    .line 579
     new-instance v1, Lcom/android/server/cpu/CpuAvailabilityInfo;
 
     iget v3, p0, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->cpuset:I
 
-    .line 580
     invoke-virtual {v0}, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo$Snapshot;->getAverageAvailableCpuFreqPercent()I
 
     move-result v6
 
-    .line 581
     invoke-virtual {p0, p1, p2}, Lcom/android/server/cpu/CpuMonitorService$CpusetInfo;->getCumulativeAvgAvailabilityPercent(J)I
 
     move-result v7
@@ -391,7 +357,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 627
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

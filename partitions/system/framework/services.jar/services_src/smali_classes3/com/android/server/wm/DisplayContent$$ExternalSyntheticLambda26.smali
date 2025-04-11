@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent$$ExternalSyntheticLambda26;->f$0:Lcom/android/server/wm/WindowState;
@@ -27,7 +26,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/DisplayContent$$ExternalSyntheticLambda26;->f$0:Lcom/android/server/wm/WindowState;
 
     invoke-static {p0, p1}, Lcom/android/server/wm/DisplayContent;->$r8$lambda$d29JiK8Pl0HR0Sr3QIlil1NB9pE(Lcom/android/server/wm/WindowState;Ljava/lang/Object;)Z

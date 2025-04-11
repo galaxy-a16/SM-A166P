@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-static {p1}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->$r8$lambda$S5-E2LpxnHThPiTf9kmiFp568m8(Ljava/util/Map$Entry;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;

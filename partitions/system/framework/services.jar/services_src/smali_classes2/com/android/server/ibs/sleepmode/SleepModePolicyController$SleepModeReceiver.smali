@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/ibs/sleepmode/SleepModePolicyController;)V
     .locals 0
 
-    .line 536
     iput-object p1, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeReceiver;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p2, :cond_9
 
-    .line 539
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -35,7 +33,6 @@
 
     goto/16 :goto_1
 
-    .line 541
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -59,7 +56,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -207,7 +203,6 @@
 
     goto :goto_1
 
-    .line 548
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeReceiver;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
 
@@ -215,7 +210,6 @@
 
     goto :goto_1
 
-    .line 557
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeReceiver;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
 
@@ -223,7 +217,6 @@
 
     goto :goto_1
 
-    .line 554
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeReceiver;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
 
@@ -231,7 +224,6 @@
 
     goto :goto_1
 
-    .line 551
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeReceiver;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
 
@@ -239,7 +231,6 @@
 
     goto :goto_1
 
-    .line 544
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeReceiver;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
 
@@ -247,7 +238,6 @@
 
     goto :goto_1
 
-    .line 561
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeReceiver;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
 

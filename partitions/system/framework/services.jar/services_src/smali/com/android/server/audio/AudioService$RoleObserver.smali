@@ -18,12 +18,10 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;)V
     .locals 0
 
-    .line 1696
     iput-object p1, p0, Lcom/android/server/audio/AudioService$RoleObserver;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1697
     iget-object p1, p1, Lcom/android/server/audio/AudioService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
@@ -40,7 +38,6 @@
 .method public getAssistantRoleHolder()Ljava/lang/String;
     .locals 2
 
-    .line 1721
     iget-object p0, p0, Lcom/android/server/audio/AudioService$RoleObserver;->mRm:Landroid/app/role/RoleManager;
 
     const-string v0, ""
@@ -49,12 +46,10 @@
 
     const-string v1, "android.app.role.ASSISTANT"
 
-    .line 1722
     invoke-virtual {p0, v1}, Landroid/app/role/RoleManager;->getRoleHolders(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 1723
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -84,14 +79,12 @@
 
     const-string p2, "android.app.role.ASSISTANT"
 
-    .line 1712
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 1713
     iget-object p1, p0, Lcom/android/server/audio/AudioService$RoleObserver;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {p1}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmSettingsLock(Lcom/android/server/audio/AudioService;)Ljava/lang/Object;
@@ -100,7 +93,6 @@
 
     monitor-enter p1
 
-    .line 1714
     :try_start_0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$RoleObserver;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -108,7 +100,6 @@
 
     invoke-static {p0, p2}, Lcom/android/server/audio/AudioService;->-$$Nest$mupdateAssistantUIdLocked(Lcom/android/server/audio/AudioService;Z)V
 
-    .line 1715
     monitor-exit p1
 
     goto :goto_0
@@ -130,7 +121,6 @@
 .method public register()V
     .locals 3
 
-    .line 1701
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RoleObserver;->this$0:Lcom/android/server/audio/AudioService;
 
     iget-object v0, v0, Lcom/android/server/audio/AudioService;->mContext:Landroid/content/Context;
@@ -147,14 +137,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1703
     iget-object v1, p0, Lcom/android/server/audio/AudioService$RoleObserver;->mExecutor:Ljava/util/concurrent/Executor;
 
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/app/role/RoleManager;->addOnRoleHoldersChangedListenerAsUser(Ljava/util/concurrent/Executor;Landroid/app/role/OnRoleHoldersChangedListener;Landroid/os/UserHandle;)V
 
-    .line 1704
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RoleObserver;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {v0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmSettingsLock(Lcom/android/server/audio/AudioService;)Ljava/lang/Object;
@@ -163,7 +151,6 @@
 
     monitor-enter v0
 
-    .line 1705
     :try_start_0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$RoleObserver;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -171,7 +158,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/audio/AudioService;->-$$Nest$mupdateAssistantUIdLocked(Lcom/android/server/audio/AudioService;Z)V
 
-    .line 1706
     monitor-exit v0
 
     goto :goto_0

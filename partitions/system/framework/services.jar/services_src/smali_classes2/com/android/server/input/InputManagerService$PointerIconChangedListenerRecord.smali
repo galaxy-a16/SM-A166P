@@ -18,15 +18,12 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;ILandroid/hardware/input/IPointerIconChangedListener;)V
     .locals 0
 
-    .line 5689
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$PointerIconChangedListenerRecord;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5690
     iput p2, p0, Lcom/android/server/input/InputManagerService$PointerIconChangedListenerRecord;->mPid:I
 
-    .line 5691
     iput-object p3, p0, Lcom/android/server/input/InputManagerService$PointerIconChangedListenerRecord;->mListener:Landroid/hardware/input/IPointerIconChangedListener;
 
     return-void
@@ -37,14 +34,12 @@
 .method public binderDied()V
     .locals 2
 
-    .line 5696
     invoke-static {}, Lcom/android/server/input/InputManagerService;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5697
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +64,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5699
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$PointerIconChangedListenerRecord;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -83,7 +77,6 @@
 .method public notifyPointerIconChanged(ILandroid/view/PointerIcon;)V
     .locals 1
 
-    .line 5704
     :try_start_0
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$PointerIconChangedListenerRecord;->mListener:Landroid/hardware/input/IPointerIconChangedListener;
 
@@ -96,7 +89,6 @@
     :catch_0
     move-exception p1
 
-    .line 5706
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +113,6 @@
 
     invoke-static {v0, p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 5708
     invoke-virtual {p0}, Lcom/android/server/input/InputManagerService$PointerIconChangedListenerRecord;->binderDied()V
 
     :goto_0

@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$qYggRhKy2S8pr20P0TTJINevHVc(Lcom/android/server/display/mode/RefreshRateToken;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/display/mode/RefreshRateController$LowRefreshRateToken;->lambda$accept$0(Lcom/android/server/display/mode/RefreshRateToken;)Z
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/display/mode/RefreshRateController;)V
     .locals 0
 
-    .line 496
     iput-object p1, p0, Lcom/android/server/display/mode/RefreshRateController$LowRefreshRateToken;->this$0:Lcom/android/server/display/mode/RefreshRateController;
 
     invoke-direct {p0}, Lcom/android/server/display/mode/RefreshRateToken;-><init>()V
@@ -33,7 +31,6 @@
 .method public static synthetic lambda$accept$0(Lcom/android/server/display/mode/RefreshRateToken;)Z
     .locals 0
 
-    .line 501
     instance-of p0, p0, Lcom/android/server/display/mode/RefreshRateController$LowRefreshRateToken;
 
     return p0
@@ -44,7 +41,6 @@
 .method public accept()V
     .locals 3
 
-    .line 500
     invoke-static {}, Lcom/android/server/display/mode/RefreshRateController;->-$$Nest$sfgetmRefreshRateTokenController()Lcom/android/server/display/mode/RefreshRateTokenController;
 
     move-result-object p0
@@ -61,7 +57,6 @@
 
     invoke-direct {v0}, Lcom/android/server/display/mode/RefreshRateController$LowRefreshRateToken$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 501
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
     move-result p0
@@ -72,7 +67,6 @@
 
     const/high16 v0, 0x42700000    # 60.0f
 
-    .line 502
     invoke-static {p0, v0}, Lcom/android/server/display/mode/Vote;->forPhysicalRefreshRates(FF)Lcom/android/server/display/mode/Vote;
 
     move-result-object p0
@@ -82,7 +76,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 504
     :goto_0
     invoke-static {}, Lcom/android/server/display/mode/RefreshRateController;->-$$Nest$sfgetmVotesStorage()Lcom/android/server/display/mode/VotesStorage;
 

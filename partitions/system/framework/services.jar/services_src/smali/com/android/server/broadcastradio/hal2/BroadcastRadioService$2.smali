@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/broadcastradio/hal2/BroadcastRadioService;)V
     .locals 0
 
-    .line 104
     iput-object p1, p0, Lcom/android/server/broadcastradio/hal2/BroadcastRadioService$2;->this$0:Lcom/android/server/broadcastradio/hal2/BroadcastRadioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     const-string v0, "BcRadio2Srv"
 
-    .line 107
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +48,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/BroadcastRadioService$2;->this$0:Lcom/android/server/broadcastradio/hal2/BroadcastRadioService;
 
     invoke-static {v0}, Lcom/android/server/broadcastradio/hal2/BroadcastRadioService;->-$$Nest$fgetmLock(Lcom/android/server/broadcastradio/hal2/BroadcastRadioService;)Ljava/lang/Object;
@@ -61,7 +58,6 @@
 
     long-to-int p1, p1
 
-    .line 110
     :try_start_0
     iget-object p2, p0, Lcom/android/server/broadcastradio/hal2/BroadcastRadioService$2;->this$0:Lcom/android/server/broadcastradio/hal2/BroadcastRadioService;
 
@@ -83,14 +79,12 @@
 
     const/4 v1, 0x0
 
-    .line 112
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {p2, v1}, Lcom/android/server/broadcastradio/hal2/RadioModule;->closeSessions(Ljava/lang/Integer;)V
 
-    .line 115
     :cond_0
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/BroadcastRadioService$2;->this$0:Lcom/android/server/broadcastradio/hal2/BroadcastRadioService;
 
@@ -119,7 +113,6 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 116
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -134,7 +127,6 @@
 
     const-string p0, "BcRadio2Srv"
 
-    .line 117
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,12 +155,10 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     monitor-exit v0
 
     return-void
 
-    .line 122
     :cond_2
     monitor-exit v0
 

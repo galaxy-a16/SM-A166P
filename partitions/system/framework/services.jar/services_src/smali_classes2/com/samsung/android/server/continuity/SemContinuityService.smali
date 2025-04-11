@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 20
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 21
     invoke-static {p1}, Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;->createInstance(Landroid/content/Context;)Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;
 
     move-result-object p1
@@ -27,7 +25,6 @@
 .method public static isSupported()Z
     .locals 1
 
-    .line 25
     invoke-static {}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->isSupported()Z
 
     move-result v0
@@ -40,7 +37,6 @@
 
     const/16 v0, 0x8
 
-    .line 29
     invoke-static {v0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->isSupported(I)Z
 
     move-result v0
@@ -53,7 +49,6 @@
 .method public onBootPhase(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -64,12 +59,10 @@
 
     const-string/jumbo v1, "onStart"
 
-    .line 38
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "SemContinuityService"
 
-    .line 39
     iget-object v1, p0, Lcom/samsung/android/server/continuity/SemContinuityService;->mSvcImpl:Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
@@ -80,7 +73,6 @@
 .method public onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
     .locals 1
 
-    .line 62
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,7 +105,6 @@
 .method public onUserStopping(Lcom/android/server/SystemService$TargetUser;)V
     .locals 1
 
-    .line 67
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,7 +139,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 49
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object p1
@@ -162,7 +152,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 50
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -196,7 +185,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     iget-object p0, p0, Lcom/samsung/android/server/continuity/SemContinuityService;->mSvcImpl:Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;
 
     invoke-virtual {p2}, Lcom/android/server/SystemService$TargetUser;->getUserHandle()Landroid/os/UserHandle;
@@ -211,7 +199,6 @@
 .method public onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
     .locals 2
 
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -238,7 +225,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     iget-object p0, p0, Lcom/samsung/android/server/continuity/SemContinuityService;->mSvcImpl:Lcom/samsung/android/server/continuity/SemContinuityServiceImpl;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserHandle()Landroid/os/UserHandle;

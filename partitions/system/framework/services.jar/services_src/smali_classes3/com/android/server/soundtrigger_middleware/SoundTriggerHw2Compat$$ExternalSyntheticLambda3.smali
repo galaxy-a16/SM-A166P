@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/os/IBinder$DeathRecipient;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHw2Compat$$ExternalSyntheticLambda3;->f$0:Landroid/os/IBinder$DeathRecipient;
@@ -27,7 +26,6 @@
 .method public final serviceDied(J)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerHw2Compat$$ExternalSyntheticLambda3;->f$0:Landroid/os/IBinder$DeathRecipient;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/soundtrigger_middleware/SoundTriggerHw2Compat;->$r8$lambda$GiWbjVDEP-qQIC2AixehoJHqp-Q(Landroid/os/IBinder$DeathRecipient;J)V

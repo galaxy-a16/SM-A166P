@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/net/IpSecMigrateInfoParcel;
     .locals 0
 
-    .line 64
     invoke-static {p1}, Landroid/net/IpSecMigrateInfoParcel;->-$$Nest$sminternalCreateFromParcel(Landroid/os/Parcel;)Landroid/net/IpSecMigrateInfoParcel;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 61
     invoke-virtual {p0, p1}, Landroid/net/IpSecMigrateInfoParcel$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/IpSecMigrateInfoParcel;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Landroid/net/IpSecMigrateInfoParcel;
     .locals 0
 
-    .line 68
     new-array p0, p1, [Landroid/net/IpSecMigrateInfoParcel;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 61
     invoke-virtual {p0, p1}, Landroid/net/IpSecMigrateInfoParcel$1;->newArray(I)[Landroid/net/IpSecMigrateInfoParcel;
 
     move-result-object p0

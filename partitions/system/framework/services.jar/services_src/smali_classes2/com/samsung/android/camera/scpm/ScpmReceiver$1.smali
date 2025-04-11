@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/scpm/ScpmReceiver;)V
     .locals 0
 
-    .line 125
     iput-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;->this$0:Lcom/samsung/android/camera/scpm/ScpmReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,17 +26,14 @@
 .method public onListReceived(Ljava/lang/String;Ljava/util/List;)V
     .locals 2
 
-    .line 128
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
     const/4 v1, 0x4
 
-    .line 129
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 130
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
@@ -48,10 +44,8 @@
 
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 131
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 133
     iget-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;->this$0:Lcom/samsung/android/camera/scpm/ScpmReceiver;
 
     invoke-static {p1}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->-$$Nest$fgetmHandler(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Landroid/os/Handler;
@@ -60,7 +54,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 134
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;->this$0:Lcom/samsung/android/camera/scpm/ScpmReceiver;
 
     invoke-static {p0}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->-$$Nest$fgetmHandler(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Landroid/os/Handler;
@@ -93,7 +86,6 @@
 
     const-string/jumbo p0, "onRegistered - not acceptable result."
 
-    .line 157
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -101,10 +93,8 @@
     :cond_0
     const-string p1, "MSG_REGISTER_FAILED - retry after 1 hour"
 
-    .line 151
     invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     iget-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;->this$0:Lcom/samsung/android/camera/scpm/ScpmReceiver;
 
     invoke-static {p1}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->-$$Nest$fgetmHandler(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Landroid/os/Handler;
@@ -113,7 +103,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 153
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;->this$0:Lcom/samsung/android/camera/scpm/ScpmReceiver;
 
     invoke-static {p0}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->-$$Nest$fgetmHandler(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Landroid/os/Handler;
@@ -129,10 +118,8 @@
     :cond_1
     const-string p1, "MSG_SCPM_UNAVAILABLE - retry after 5 min"
 
-    .line 145
     invoke-static {v0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     iget-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;->this$0:Lcom/samsung/android/camera/scpm/ScpmReceiver;
 
     invoke-static {p1}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->-$$Nest$fgetmHandler(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Landroid/os/Handler;
@@ -141,7 +128,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 147
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;->this$0:Lcom/samsung/android/camera/scpm/ScpmReceiver;
 
     invoke-static {p0}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->-$$Nest$fgetmHandler(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Landroid/os/Handler;
@@ -154,7 +140,6 @@
 
     goto :goto_0
 
-    .line 141
     :cond_2
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;->this$0:Lcom/samsung/android/camera/scpm/ScpmReceiver;
 

@@ -16,17 +16,14 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 5243
     iput-object p1, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5244
     iput-object p2, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->mICallback:Landroid/os/IBinder;
 
     const/4 p1, 0x0
 
-    .line 5246
     :try_start_0
     invoke-interface {p2, p0, p1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -41,7 +38,6 @@
 
     const-string p2, "can\'t link to death"
 
-    .line 5248
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -53,7 +49,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 5265
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,7 +69,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5266
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     const/4 v1, 0x0
@@ -89,7 +83,6 @@
 .method public forget()V
     .locals 2
 
-    .line 5258
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->mICallback:Landroid/os/IBinder;
 
@@ -108,7 +101,6 @@
 
     const-string v1, "error unlinking to death"
 
-    .line 5260
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -118,7 +110,6 @@
 .method public isHandlerFor(Landroid/os/IBinder;)Z
     .locals 0
 
-    .line 5253
     iget-object p0, p0, Lcom/android/server/audio/AudioService$RmtSbmxFullVolDeathHandler;->mICallback:Landroid/os/IBinder;
 
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z

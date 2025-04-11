@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/FreecessController;[Ljava/lang/String;)V
     .locals 0
 
-    .line 2307
     iput-object p1, p0, Lcom/android/server/am/FreecessController$1;->this$0:Lcom/android/server/am/FreecessController;
 
     iput-object p2, p0, Lcom/android/server/am/FreecessController$1;->val$mSkipReason:[Ljava/lang/String;
@@ -31,7 +30,6 @@
 .method public freezeSkipFrozen(Ljava/lang/String;)V
     .locals 2
 
-    .line 2309
     iget-object p0, p0, Lcom/android/server/am/FreecessController$1;->val$mSkipReason:[Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -52,7 +50,6 @@
 
     aput-object v0, p0, v1
 
-    .line 2310
     sget-object p0, Lcom/android/server/am/FreecessController;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;

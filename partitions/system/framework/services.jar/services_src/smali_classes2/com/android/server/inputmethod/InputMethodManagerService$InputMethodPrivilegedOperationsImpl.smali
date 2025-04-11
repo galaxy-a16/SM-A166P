@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 7462
     invoke-direct {p0}, Lcom/android/internal/inputmethod/IInputMethodPrivilegedOperations$Stub;-><init>()V
 
-    .line 7463
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
-    .line 7464
     iput-object p2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mToken:Landroid/os/IBinder;
 
     return-void
@@ -30,7 +27,6 @@
 .method public applyImeVisibilityAsync(Landroid/os/IBinder;ZLandroid/view/inputmethod/ImeTracker$Token;)V
     .locals 1
 
-    .line 7606
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mToken:Landroid/os/IBinder;
@@ -43,7 +39,6 @@
 .method public createInputContentUriToken(Landroid/net/Uri;Ljava/lang/String;Lcom/android/internal/infra/AndroidFuture;)V
     .locals 1
 
-    .line 7486
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -53,12 +48,10 @@
 
     move-result-object p0
 
-    .line 7487
     invoke-interface {p0}, Lcom/android/internal/inputmethod/IInputContentUriToken;->asBinder()Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 7486
     invoke-virtual {p3, p0}, Lcom/android/internal/infra/AndroidFuture;->complete(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -68,7 +61,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7489
     invoke-virtual {p3, p0}, Lcom/android/internal/infra/AndroidFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -78,7 +70,6 @@
 .method public hideMySoftInput(IILcom/android/internal/infra/AndroidFuture;)V
     .locals 1
 
-    .line 7533
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -88,7 +79,6 @@
 
     const/4 p0, 0x0
 
-    .line 7534
     invoke-virtual {p3, p0}, Lcom/android/internal/infra/AndroidFuture;->complete(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -98,7 +88,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7536
     invoke-virtual {p3, p0}, Lcom/android/internal/infra/AndroidFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -108,7 +97,6 @@
 .method public notifyUserActionAsync()V
     .locals 1
 
-    .line 7599
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mToken:Landroid/os/IBinder;
@@ -121,7 +109,6 @@
 .method public onStylusHandwritingReady(II)V
     .locals 0
 
-    .line 7612
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$monStylusHandwritingReady(Lcom/android/server/inputmethod/InputMethodManagerService;II)V
@@ -132,7 +119,6 @@
 .method public reportFullscreenModeAsync(Z)V
     .locals 1
 
-    .line 7496
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mToken:Landroid/os/IBinder;
@@ -145,7 +131,6 @@
 .method public reportStartInputAsync(Landroid/os/IBinder;)V
     .locals 1
 
-    .line 7476
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mToken:Landroid/os/IBinder;
@@ -158,7 +143,6 @@
 .method public resetStylusHandwriting(I)V
     .locals 0
 
-    .line 7618
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$mresetStylusHandwriting(Lcom/android/server/inputmethod/InputMethodManagerService;I)V
@@ -169,7 +153,6 @@
 .method public setImeWindowStatusAsync(II)V
     .locals 1
 
-    .line 7470
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mToken:Landroid/os/IBinder;
@@ -182,7 +165,6 @@
 .method public setInputMethod(Ljava/lang/String;Lcom/android/internal/infra/AndroidFuture;)V
     .locals 1
 
-    .line 7505
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -192,7 +174,6 @@
 
     const/4 p0, 0x0
 
-    .line 7506
     invoke-virtual {p2, p0}, Lcom/android/internal/infra/AndroidFuture;->complete(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -202,7 +183,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7508
     invoke-virtual {p2, p0}, Lcom/android/internal/infra/AndroidFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -212,7 +192,6 @@
 .method public setInputMethodAndSubtype(Ljava/lang/String;Landroid/view/inputmethod/InputMethodSubtype;Lcom/android/internal/infra/AndroidFuture;)V
     .locals 1
 
-    .line 7519
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -222,7 +201,6 @@
 
     const/4 p0, 0x0
 
-    .line 7520
     invoke-virtual {p3, p0}, Lcom/android/internal/infra/AndroidFuture;->complete(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -232,7 +210,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7522
     invoke-virtual {p3, p0}, Lcom/android/internal/infra/AndroidFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -242,7 +219,6 @@
 .method public shouldOfferSwitchingToNextInputMethod(Lcom/android/internal/infra/AndroidFuture;)V
     .locals 1
 
-    .line 7590
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -265,7 +241,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7592
     invoke-virtual {p1, p0}, Lcom/android/internal/infra/AndroidFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -275,7 +250,6 @@
 .method public showMySoftInput(ILcom/android/internal/infra/AndroidFuture;)V
     .locals 1
 
-    .line 7546
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -285,7 +259,6 @@
 
     const/4 p0, 0x0
 
-    .line 7547
     invoke-virtual {p2, p0}, Lcom/android/internal/infra/AndroidFuture;->complete(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -295,7 +268,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7549
     invoke-virtual {p2, p0}, Lcom/android/internal/infra/AndroidFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -305,7 +277,6 @@
 .method public switchToNextInputMethod(ZLcom/android/internal/infra/AndroidFuture;)V
     .locals 1
 
-    .line 7578
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -328,7 +299,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7580
     invoke-virtual {p2, p0}, Lcom/android/internal/infra/AndroidFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -338,7 +308,6 @@
 .method public switchToPreviousInputMethod(Lcom/android/internal/infra/AndroidFuture;)V
     .locals 1
 
-    .line 7565
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -361,7 +330,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7567
     invoke-virtual {p1, p0}, Lcom/android/internal/infra/AndroidFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
@@ -371,7 +339,6 @@
 .method public updateStatusIconAsync(Ljava/lang/String;I)V
     .locals 1
 
-    .line 7556
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InputMethodPrivilegedOperationsImpl;->mToken:Landroid/os/IBinder;

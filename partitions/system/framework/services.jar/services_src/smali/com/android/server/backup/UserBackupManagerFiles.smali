@@ -7,7 +7,6 @@
 .method public static getBaseDir(I)Ljava/io/File;
     .locals 0
 
-    .line 31
     invoke-static {p0}, Landroid/os/Environment;->getDataSystemCeDirectory(I)Ljava/io/File;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 36
     new-instance v1, Ljava/io/File;
 
     invoke-static {p0}, Lcom/android/server/backup/UserBackupManagerFiles;->getBaseDir(I)Ljava/io/File;
@@ -33,7 +31,6 @@
 
     return-object v1
 
-    .line 40
     :cond_0
     new-instance p0, Ljava/io/File;
 
@@ -53,7 +50,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 45
     new-instance v1, Ljava/io/File;
 
     invoke-static {p0}, Lcom/android/server/backup/UserBackupManagerFiles;->getBaseDir(I)Ljava/io/File;
@@ -64,7 +60,6 @@
 
     return-object v1
 
-    .line 49
     :cond_0
     new-instance p0, Ljava/io/File;
 
@@ -80,7 +75,6 @@
 .method public static getStateDirInSystemDir(I)Ljava/io/File;
     .locals 4
 
-    .line 54
     new-instance v0, Ljava/io/File;
 
     const/4 v1, 0x0
@@ -111,7 +105,6 @@
 .method public static getStateFileInSystemDir(Ljava/lang/String;I)Ljava/io/File;
     .locals 1
 
-    .line 59
     new-instance v0, Ljava/io/File;
 
     invoke-static {p1}, Lcom/android/server/backup/UserBackupManagerFiles;->getStateDirInSystemDir(I)Ljava/io/File;

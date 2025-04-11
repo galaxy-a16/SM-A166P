@@ -23,31 +23,26 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     new-instance v0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$1;-><init>(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mCoreInterface:Lcom/samsung/android/mcfds/lib/common/AbstractManager$CoreInterface;
 
-    .line 171
     new-instance v0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$2;-><init>(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceStateListener:Lcom/samsung/android/mcfds/lib/common/ISimpleCallback;
 
-    .line 269
     new-instance v0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$3;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$3;-><init>(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 53
     iput-object p1, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mContext:Landroid/content/Context;
 
     return-void
@@ -56,7 +51,6 @@
 .method public static synthetic access$000(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;)I
     .locals 0
 
-    .line 24
     iget p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceState:I
 
     return p0
@@ -65,7 +59,6 @@
 .method public static synthetic access$002(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;I)I
     .locals 0
 
-    .line 24
     iput p1, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceState:I
 
     return p1
@@ -74,7 +67,6 @@
 .method public static synthetic access$100(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;)Lcom/samsung/android/mcfds/lib/IMcfDeviceSyncService;
     .locals 0
 
-    .line 24
     iget-object p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mService:Lcom/samsung/android/mcfds/lib/IMcfDeviceSyncService;
 
     return-object p0
@@ -83,7 +75,6 @@
 .method public static synthetic access$102(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;Lcom/samsung/android/mcfds/lib/IMcfDeviceSyncService;)Lcom/samsung/android/mcfds/lib/IMcfDeviceSyncService;
     .locals 0
 
-    .line 24
     iput-object p1, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mService:Lcom/samsung/android/mcfds/lib/IMcfDeviceSyncService;
 
     return-object p1
@@ -92,7 +83,6 @@
 .method public static synthetic access$200(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;I)V
     .locals 0
 
-    .line 24
     invoke-virtual {p0, p1}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->notifyStateChanged(I)V
 
     return-void
@@ -101,7 +91,6 @@
 .method public static synthetic access$300(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;)V
     .locals 0
 
-    .line 24
     invoke-virtual {p0}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->registerServiceStateListener()V
 
     return-void
@@ -115,7 +104,6 @@
 .method public connectServiceAsUser(Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$StateListener;Landroid/os/UserHandle;)Z
     .locals 6
 
-    .line 205
     iget v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceState:I
 
     const-string v1, "[MCF_DS_LIB]_DeviceSyncManager"
@@ -126,7 +114,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 206
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -147,7 +134,6 @@
 
     return v2
 
-    .line 210
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -155,7 +141,6 @@
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 211
     new-instance v3, Landroid/content/ComponentName;
 
     const-string v4, "com.samsung.android.mcfds"
@@ -166,7 +151,6 @@
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 212
     iget-object v3, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -177,7 +161,6 @@
 
     invoke-virtual {v0, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 213
     iget-object v3, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {p0, p2, v0, v3}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->bindService(Landroid/os/UserHandle;Landroid/content/Intent;Landroid/content/ServiceConnection;)Z
@@ -186,7 +169,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 214
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,10 +191,8 @@
 
     const/4 p2, 0x2
 
-    .line 215
     iput p2, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceState:I
 
-    .line 216
     iput-object p1, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mListener:Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$StateListener;
 
     return v2
@@ -220,7 +200,6 @@
     :cond_1
     const-string p0, "connectService : failed"
 
-    .line 220
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -231,7 +210,6 @@
 .method public disconnectService()V
     .locals 3
 
-    .line 247
     iget v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceState:I
 
     const-string v1, "[MCF_DS_LIB]_DeviceSyncManager"
@@ -240,7 +218,6 @@
 
     const-string p0, "disconnectService : invalid request"
 
-    .line 248
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -248,16 +225,12 @@
     :cond_0
     const-string v0, "disconnectService"
 
-    .line 252
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     invoke-virtual {p0}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->unregisterServiceStateListener()V
 
-    .line 254
     invoke-virtual {p0}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->stop()V
 
-    .line 256
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mContext:Landroid/content/Context;
 
@@ -272,21 +245,17 @@
     :catch_0
     const-string v0, "disconnectService : IllegalArgumentException"
 
-    .line 258
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     const/4 v0, 0x0
 
-    .line 260
     iput v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceState:I
 
     const/4 v0, 0x0
 
-    .line 261
     iput-object v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mService:Lcom/samsung/android/mcfds/lib/IMcfDeviceSyncService;
 
-    .line 262
     iput-object v0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mListener:Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$StateListener;
 
     return-void
@@ -299,20 +268,16 @@
 
     const-string v1, "getNearbyDeviceCount"
 
-    .line 58
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "KEY_INPUT"
 
-    .line 60
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 61
     iget-object p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mCoreInterface:Lcom/samsung/android/mcfds/lib/common/AbstractManager$CoreInterface;
 
     const/16 p1, 0x3e8
@@ -331,7 +296,6 @@
 .method public getServiceState()I
     .locals 0
 
-    .line 266
     iget p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceState:I
 
     return p0
@@ -340,7 +304,6 @@
 .method public initMcfDeviceSyncMainController(ILjava/lang/String;)I
     .locals 2
 
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -375,22 +338,18 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "KEY_BIND_REASON"
 
-    .line 77
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "KEY_AUTO_SWITCH_DEVICE"
 
-    .line 78
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     iget-object p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mCoreInterface:Lcom/samsung/android/mcfds/lib/common/AbstractManager$CoreInterface;
 
     const/16 p1, 0x3ea
@@ -409,12 +368,10 @@
 .method public final notifyStateChanged(I)V
     .locals 0
 
-    .line 290
     iget-object p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mListener:Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$StateListener;
 
     if-eqz p0, :cond_0
 
-    .line 291
     invoke-interface {p0, p1}, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager$StateListener;->onStateChanged(I)V
 
     :cond_0
@@ -424,12 +381,10 @@
 .method public final registerServiceStateListener()V
     .locals 3
 
-    .line 162
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 163
     iget-object v1, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mServiceStateListener:Lcom/samsung/android/mcfds/lib/common/ISimpleCallback;
 
     invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
@@ -440,7 +395,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 164
     iget-object p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mCoreInterface:Lcom/samsung/android/mcfds/lib/common/AbstractManager$CoreInterface;
 
     const/16 v1, 0xa
@@ -457,21 +411,18 @@
 .method public start()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public stop()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final unregisterServiceStateListener()V
     .locals 2
 
-    .line 168
     iget-object p0, p0, Lcom/samsung/android/mcfds/lib/AbstractDeviceSyncManager;->mCoreInterface:Lcom/samsung/android/mcfds/lib/common/AbstractManager$CoreInterface;
 
     const/16 v0, 0xb

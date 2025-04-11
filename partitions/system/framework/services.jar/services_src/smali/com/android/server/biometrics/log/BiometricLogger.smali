@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 39
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/biometrics/log/BiometricLogger;->DEBUG:Z
@@ -38,27 +37,20 @@
 .method public constructor <init>(IIILcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;Landroid/hardware/SensorManager;)V
     .locals 1
 
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 48
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mShouldLogMetrics:Z
 
-    .line 78
     iput p1, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsModality:I
 
-    .line 79
     iput p2, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsAction:I
 
-    .line 80
     iput p3, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsClient:I
 
-    .line 81
     iput-object p4, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mSink:Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;
 
-    .line 82
     new-instance p1, Lcom/android/server/biometrics/log/ALSProbe;
 
     invoke-direct {p1, p5}, Lcom/android/server/biometrics/log/ALSProbe;-><init>(Landroid/hardware/SensorManager;)V
@@ -71,14 +63,12 @@
 .method public constructor <init>(Landroid/content/Context;III)V
     .locals 6
 
-    .line 70
     invoke-static {}, Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;->getInstance()Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;
 
     move-result-object v4
 
     const-class v0, Landroid/hardware/SensorManager;
 
-    .line 71
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
@@ -95,7 +85,6 @@
 
     move v3, p4
 
-    .line 69
     invoke-direct/range {v0 .. v5}, Lcom/android/server/biometrics/log/BiometricLogger;-><init>(IIILcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;Landroid/hardware/SensorManager;)V
 
     return-void
@@ -104,7 +93,6 @@
 .method public static ofUnknown(Landroid/content/Context;)Lcom/android/server/biometrics/log/BiometricLogger;
     .locals 2
 
-    .line 52
     new-instance v0, Lcom/android/server/biometrics/log/BiometricLogger;
 
     const/4 v1, 0x0
@@ -121,10 +109,8 @@
 
     const/4 v0, 0x0
 
-    .line 92
     iput-boolean v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mShouldLogMetrics:Z
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mALSProbe:Lcom/android/server/biometrics/log/ALSProbe;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/ALSProbe;->destroy()V
@@ -135,7 +121,6 @@
 .method public getAmbientLightProbe(Z)Lcom/android/server/biometrics/log/CallbackWithProbe;
     .locals 1
 
-    .line 297
     new-instance v0, Lcom/android/server/biometrics/log/CallbackWithProbe;
 
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mALSProbe:Lcom/android/server/biometrics/log/ALSProbe;
@@ -148,7 +133,6 @@
 .method public getStatsClient()I
     .locals 0
 
-    .line 98
     iget p0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsClient:I
 
     return p0
@@ -157,7 +141,6 @@
 .method public getStatsModality()I
     .locals 0
 
-    .line 303
     iget p0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsModality:I
 
     return p0
@@ -166,14 +149,12 @@
 .method public logOnAcquired(Landroid/content/Context;Lcom/android/server/biometrics/log/OperationContextExt;III)V
     .locals 10
 
-    .line 123
     iget-boolean v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mShouldLogMetrics:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 127
     :cond_0
     iget v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsModality:I
 
@@ -207,7 +188,6 @@
     :cond_3
     if-nez p3, :cond_7
 
-    .line 137
     iget-wide v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mFirstAcquireTimeMs:J
 
     const-wide/16 v2, 0x0
@@ -216,7 +196,6 @@
 
     if-nez v0, :cond_7
 
-    .line 138
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -244,7 +223,6 @@
 
     if-ne p3, v0, :cond_7
 
-    .line 134
     :cond_6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -252,14 +230,12 @@
 
     iput-wide v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mFirstAcquireTimeMs:J
 
-    .line 141
     :cond_7
     :goto_2
     sget-boolean v0, Lcom/android/server/biometrics/log/BiometricLogger;->DEBUG:Z
 
     if-eqz v0, :cond_8
 
-    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -282,7 +258,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 144
     invoke-virtual {p2}, Lcom/android/server/biometrics/log/OperationContextExt;->isCrypto()Z
 
     move-result v1
@@ -323,10 +298,8 @@
 
     const-string v1, "BiometricLogger"
 
-    .line 142
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     :cond_8
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/BiometricLogger;->shouldSkipLogging()Z
 
@@ -336,7 +309,6 @@
 
     return-void
 
-    .line 155
     :cond_9
     iget-object v1, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mSink:Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;
 
@@ -346,7 +318,6 @@
 
     iget v5, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsClient:I
 
-    .line 157
     invoke-static {p1, p5}, Lcom/android/server/biometrics/Utils;->isDebugEnabled(Landroid/content/Context;I)Z
 
     move-result v6
@@ -359,7 +330,6 @@
 
     move v9, p5
 
-    .line 155
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;->acquired(Lcom/android/server/biometrics/log/OperationContextExt;IIIZIII)V
 
     return-void
@@ -374,7 +344,6 @@
 
     move/from16 v10, p5
 
-    .line 198
     iget-boolean v1, v0, Lcom/android/server/biometrics/log/BiometricLogger;->mShouldLogMetrics:Z
 
     if-nez v1, :cond_0
@@ -405,7 +374,6 @@
 
     goto :goto_0
 
-    .line 215
     :goto_1
     iget-wide v1, v0, Lcom/android/server/biometrics/log/BiometricLogger;->mFirstAcquireTimeMs:J
 
@@ -415,7 +383,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 216
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -432,14 +399,12 @@
     :goto_2
     move-wide v6, v1
 
-    .line 219
     sget-boolean v1, Lcom/android/server/biometrics/log/BiometricLogger;->DEBUG:Z
 
     const-string v2, "BiometricLogger"
 
     if-eqz v1, :cond_4
 
-    .line 220
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -462,7 +427,6 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 222
     invoke-virtual {p2}, Lcom/android/server/biometrics/log/OperationContextExt;->isCrypto()Z
 
     move-result v3
@@ -501,7 +465,6 @@
 
     iget-object v3, v0, Lcom/android/server/biometrics/log/BiometricLogger;->mALSProbe:Lcom/android/server/biometrics/log/ALSProbe;
 
-    .line 227
     invoke-virtual {v3}, Lcom/android/server/biometrics/log/ALSProbe;->getMostRecentLux()F
 
     move-result v3
@@ -512,12 +475,10 @@
 
     move-result-object v1
 
-    .line 220
     invoke-static {v2, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 229
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -535,7 +496,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     :goto_3
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/BiometricLogger;->shouldSkipLogging()Z
 
@@ -545,7 +505,6 @@
 
     return-void
 
-    .line 236
     :cond_5
     iget-object v1, v0, Lcom/android/server/biometrics/log/BiometricLogger;->mSink:Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;
 
@@ -557,7 +516,6 @@
 
     move-object v5, p1
 
-    .line 238
     invoke-static {p1, v10}, Lcom/android/server/biometrics/Utils;->isDebugEnabled(Landroid/content/Context;I)Z
 
     move-result v5
@@ -572,7 +530,6 @@
 
     move/from16 v10, p5
 
-    .line 236
     invoke-virtual/range {v0 .. v11}, Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;->authenticate(Lcom/android/server/biometrics/log/OperationContextExt;IIIZJIZILcom/android/server/biometrics/log/ALSProbe;)V
 
     return-void
@@ -581,14 +538,12 @@
 .method public logOnEnrolled(IJZ)V
     .locals 10
 
-    .line 244
     iget-boolean v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mShouldLogMetrics:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 248
     :cond_0
     sget-boolean v0, Lcom/android/server/biometrics/log/BiometricLogger;->DEBUG:Z
 
@@ -596,7 +551,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 249
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -635,7 +589,6 @@
 
     iget-object v2, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mALSProbe:Lcom/android/server/biometrics/log/ALSProbe;
 
-    .line 253
     invoke-virtual {v2}, Lcom/android/server/biometrics/log/ALSProbe;->getMostRecentLux()F
 
     move-result v2
@@ -652,12 +605,10 @@
 
     move-result-object v0
 
-    .line 249
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 256
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -675,7 +626,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/BiometricLogger;->shouldSkipLogging()Z
 
@@ -685,7 +635,6 @@
 
     return-void
 
-    .line 263
     :cond_2
     iget-object v1, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mSink:Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;
 
@@ -697,7 +646,6 @@
 
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mALSProbe:Lcom/android/server/biometrics/log/ALSProbe;
 
-    .line 264
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/ALSProbe;->getMostRecentLux()F
 
     move-result v9
@@ -708,7 +656,6 @@
 
     move v8, p4
 
-    .line 263
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;->enroll(IIIIJZF)V
 
     return-void
@@ -721,14 +668,12 @@
 
     move/from16 v10, p5
 
-    .line 164
     iget-boolean v1, v0, Lcom/android/server/biometrics/log/BiometricLogger;->mShouldLogMetrics:Z
 
     if-nez v1, :cond_0
 
     return-void
 
-    .line 168
     :cond_0
     iget-wide v1, v0, Lcom/android/server/biometrics/log/BiometricLogger;->mFirstAcquireTimeMs:J
 
@@ -738,7 +683,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 169
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -755,14 +699,12 @@
     :goto_0
     move-wide v6, v1
 
-    .line 171
     sget-boolean v1, Lcom/android/server/biometrics/log/BiometricLogger;->DEBUG:Z
 
     const-string v2, "BiometricLogger"
 
     if-eqz v1, :cond_2
 
-    .line 172
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -785,7 +727,6 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 174
     invoke-virtual {p2}, Lcom/android/server/biometrics/log/OperationContextExt;->isCrypto()Z
 
     move-result v3
@@ -834,7 +775,6 @@
 
     move-result-object v1
 
-    .line 172
     invoke-static {v2, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -844,7 +784,6 @@
 
     move v9, p4
 
-    .line 181
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -861,7 +800,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/BiometricLogger;->shouldSkipLogging()Z
 
@@ -871,7 +809,6 @@
 
     return-void
 
-    .line 188
     :cond_3
     iget-object v1, v0, Lcom/android/server/biometrics/log/BiometricLogger;->mSink:Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;
 
@@ -883,7 +820,6 @@
 
     move-object v0, p1
 
-    .line 190
     invoke-static {p1, v10}, Lcom/android/server/biometrics/Utils;->isDebugEnabled(Landroid/content/Context;I)Z
 
     move-result v5
@@ -898,7 +834,6 @@
 
     move/from16 v10, p5
 
-    .line 188
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;->error(Lcom/android/server/biometrics/log/OperationContextExt;IIIZJIII)V
 
     return-void
@@ -907,7 +842,6 @@
 .method public logUnknownEnrollmentInFramework()V
     .locals 1
 
-    .line 278
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/BiometricLogger;->shouldSkipLogging()Z
 
     move-result v0
@@ -916,7 +850,6 @@
 
     return-void
 
-    .line 282
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mSink:Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;
 
@@ -930,7 +863,6 @@
 .method public logUnknownEnrollmentInHal()V
     .locals 1
 
-    .line 269
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/BiometricLogger;->shouldSkipLogging()Z
 
     move-result v0
@@ -939,7 +871,6 @@
 
     return-void
 
-    .line 273
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mSink:Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;
 
@@ -953,7 +884,6 @@
 .method public final shouldSkipLogging()Z
     .locals 3
 
-    .line 102
     iget v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsModality:I
 
     if-eqz v0, :cond_1
@@ -980,10 +910,8 @@
 
     const-string v0, "Unknown field detected: MODALITY_UNKNOWN, will not report metric"
 
-    .line 106
     invoke-static {v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     :cond_2
     iget v0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsAction:I
 
@@ -991,10 +919,8 @@
 
     const-string v0, "Unknown field detected: ACTION_UNKNOWN, will not report metric"
 
-    .line 110
     invoke-static {v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     :cond_3
     iget p0, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsClient:I
 
@@ -1002,7 +928,6 @@
 
     const-string p0, "Unknown field detected: CLIENT_UNKNOWN"
 
-    .line 114
     invoke-static {v2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
@@ -1012,7 +937,6 @@
 .method public swapAction(Landroid/content/Context;I)Lcom/android/server/biometrics/log/BiometricLogger;
     .locals 2
 
-    .line 87
     new-instance v0, Lcom/android/server/biometrics/log/BiometricLogger;
 
     iget v1, p0, Lcom/android/server/biometrics/log/BiometricLogger;->mStatsModality:I

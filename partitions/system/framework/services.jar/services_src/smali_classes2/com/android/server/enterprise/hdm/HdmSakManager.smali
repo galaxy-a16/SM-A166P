@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 24
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -40,7 +39,6 @@
 .method public static getHashedImei(Landroid/content/Context;)[B
     .locals 3
 
-    .line 78
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/hdm/HdmSakManager;->isWifiOnly()Z
 
@@ -48,14 +46,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 79
     invoke-static {p0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->getMacHash(Landroid/content/Context;)[B
 
     move-result-object p0
 
     return-object p0
 
-    .line 81
     :cond_0
     invoke-static {p0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->getImeiHash(Landroid/content/Context;)[B
 
@@ -68,7 +64,6 @@
     :catch_0
     move-exception p0
 
-    .line 83
     sget-object v0, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -97,7 +92,6 @@
 
     const/4 v0, 0x0
 
-    .line 90
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/hdm/HdmSakManager;->getUniqueNumber()Ljava/lang/String;
 
@@ -105,7 +99,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 91
     sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -117,7 +110,6 @@
     :cond_0
     move-object v1, v0
 
-    .line 92
     :goto_0
     invoke-static {v1, v0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->hash([B[B)[B
 
@@ -130,7 +122,6 @@
     :catch_0
     move-exception v1
 
-    .line 94
     sget-object v2, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -157,24 +148,20 @@
 
     const-string/jumbo v0, "phone"
 
-    .line 150
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/telephony/TelephonyManager;
 
-    .line 151
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getPrimaryImei()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 152
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getSecondaryImei()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 153
     sget-object v2, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -235,7 +222,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 156
     sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -250,14 +236,12 @@
     :goto_2
     if-eqz v1, :cond_3
 
-    .line 157
     sget-object p0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object p0
 
-    .line 158
     :cond_3
     invoke-static {v0, p0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->hash([B[B)[B
 
@@ -271,14 +255,12 @@
 
     const-string/jumbo v0, "sem_wifi"
 
-    .line 143
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/samsung/android/wifi/SemWifiManager;
 
-    .line 144
     invoke-virtual {p0}, Lcom/samsung/android/wifi/SemWifiManager;->getFactoryMacAddress()Ljava/lang/String;
 
     move-result-object p0
@@ -287,7 +269,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 145
     sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -299,7 +280,6 @@
     :cond_0
     move-object p0, v0
 
-    .line 146
     :goto_0
     invoke-static {p0, v0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->hash([B[B)[B
 
@@ -313,7 +293,6 @@
 
     const-string v0, "/sys/class/sec/ufs/un"
 
-    .line 177
     invoke-static {v0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->isExistFile(Ljava/lang/String;)Z
 
     move-result v1
@@ -324,7 +303,6 @@
 
     const-string v1, "UFS_UN_R"
 
-    .line 178
     invoke-static {v0, v1}, Lcom/android/server/enterprise/hdm/HdmSakManager;->read(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -334,7 +312,6 @@
     :cond_0
     const-string v0, "/sys/class/scsi_host/host0/unique_number"
 
-    .line 179
     invoke-static {v0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->isExistFile(Ljava/lang/String;)Z
 
     move-result v1
@@ -343,7 +320,6 @@
 
     const-string v1, "UFS_UN"
 
-    .line 180
     invoke-static {v0, v1}, Lcom/android/server/enterprise/hdm/HdmSakManager;->read(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -353,7 +329,6 @@
     :cond_1
     const-string v0, "/sys/class/sec/mmc/un"
 
-    .line 182
     invoke-static {v0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->isExistFile(Ljava/lang/String;)Z
 
     move-result v1
@@ -362,7 +337,6 @@
 
     const-string v1, "EMMC_UN_R"
 
-    .line 183
     invoke-static {v0, v1}, Lcom/android/server/enterprise/hdm/HdmSakManager;->read(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -372,7 +346,6 @@
     :cond_2
     const-string v0, "/sys/block/mmcblk0/device/unique_number"
 
-    .line 184
     invoke-static {v0}, Lcom/android/server/enterprise/hdm/HdmSakManager;->isExistFile(Ljava/lang/String;)Z
 
     move-result v1
@@ -381,7 +354,6 @@
 
     const-string v1, "EMMC_UN"
 
-    .line 185
     invoke-static {v0, v1}, Lcom/android/server/enterprise/hdm/HdmSakManager;->read(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -394,14 +366,12 @@
     :goto_0
     if-eqz v0, :cond_4
 
-    .line 190
     invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 192
     :cond_4
     sget-object v0, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
@@ -417,7 +387,6 @@
 
     if-nez p0, :cond_0
 
-    .line 163
     sget-object p0, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
     const-string p1, "input1 null is not allowed"
@@ -431,12 +400,10 @@
     :cond_0
     const-string v0, "SHA-256"
 
-    .line 167
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    .line 168
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -445,12 +412,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 170
     array-length p0, p1
 
     invoke-virtual {v0, p1, v2, p0}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 172
     :cond_1
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
@@ -462,12 +427,10 @@
 .method public static isExistFile(Ljava/lang/String;)Z
     .locals 1
 
-    .line 197
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 198
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -478,7 +441,6 @@
 .method public static isSupported(Landroid/content/Context;)Z
     .locals 3
 
-    .line 46
     :try_start_0
     new-instance v0, Lcom/samsung/security/securekeyblob/SecureKeyGenerator;
 
@@ -488,7 +450,6 @@
 
     move-result p0
 
-    .line 47
     sget-object v0, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -514,7 +475,6 @@
     :catch_0
     move-exception p0
 
-    .line 49
     sget-object v0, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -546,7 +506,6 @@
 
     const-string v1, ""
 
-    .line 215
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -565,7 +524,6 @@
 
     const-string/jumbo v0, "ro.radio.noril"
 
-    .line 216
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -600,7 +558,6 @@
 .method public static read(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 202
     sget-object v0, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -619,7 +576,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     :try_start_0
     new-instance p1, Ljava/io/BufferedReader;
 
@@ -633,7 +589,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 204
     :try_start_1
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -641,14 +596,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 206
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 208
     :try_start_2
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
 
@@ -664,7 +617,6 @@
     :catchall_0
     move-exception p0
 
-    .line 203
     :try_start_3
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -686,7 +638,6 @@
     :catch_0
     move-exception p0
 
-    .line 209
     sget-object p1, Lcom/android/server/enterprise/hdm/HdmSakManager;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;

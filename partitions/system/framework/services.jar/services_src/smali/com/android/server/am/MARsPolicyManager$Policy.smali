@@ -21,24 +21,18 @@
 .method public constructor <init>(Lcom/android/server/am/MARsPolicyManager;Ljava/lang/String;IZIII)V
     .locals 0
 
-    .line 4119
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$Policy;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4120
     iput-object p2, p0, Lcom/android/server/am/MARsPolicyManager$Policy;->name:Ljava/lang/String;
 
-    .line 4121
     iput p3, p0, Lcom/android/server/am/MARsPolicyManager$Policy;->num:I
 
-    .line 4122
     iput-boolean p4, p0, Lcom/android/server/am/MARsPolicyManager$Policy;->enabled:Z
 
-    .line 4124
     iput p6, p0, Lcom/android/server/am/MARsPolicyManager$Policy;->restriction:I
 
-    .line 4125
     iput p7, p0, Lcom/android/server/am/MARsPolicyManager$Policy;->action:I
 
     return-void
@@ -49,7 +43,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 4129
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

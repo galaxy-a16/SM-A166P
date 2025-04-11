@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 549
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public throwAsRecoverableException()Lcom/android/server/soundtrigger_middleware/RecoverableException;
     .locals 2
 
-    .line 559
     new-instance v0, Lcom/android/server/soundtrigger_middleware/RecoverableException;
 
     const/4 v1, 0x2

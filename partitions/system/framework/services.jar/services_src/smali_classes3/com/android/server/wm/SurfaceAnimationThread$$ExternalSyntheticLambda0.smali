@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/wm/SurfaceAnimationThread;->$r8$lambda$B5iU5IYYJoh8uxV9fdpQwjRHAkY()V
 
     return-void

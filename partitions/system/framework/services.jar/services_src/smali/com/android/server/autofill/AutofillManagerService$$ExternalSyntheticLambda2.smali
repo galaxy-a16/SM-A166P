@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/AutofillManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/AutofillManagerService$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/autofill/AutofillManagerService;
@@ -27,7 +26,6 @@
 .method public final onNameResolved(ILjava/lang/String;Z)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/autofill/AutofillManagerService$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/autofill/AutofillManagerService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/autofill/AutofillManagerService;->$r8$lambda$7A_XTkwygMnz88QmVPEzCfTzRsk(Lcom/android/server/autofill/AutofillManagerService;ILjava/lang/String;Z)V

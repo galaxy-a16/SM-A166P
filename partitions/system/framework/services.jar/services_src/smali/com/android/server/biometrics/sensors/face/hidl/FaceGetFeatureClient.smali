@@ -39,17 +39,14 @@
 
     move-object/from16 v10, p9
 
-    .line 58
     invoke-direct/range {v0 .. v10}, Lcom/android/server/biometrics/sensors/HalClientMonitor;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;IILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
     move/from16 v0, p10
 
-    .line 60
     iput v0, v11, Lcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;->mFeature:I
 
     move/from16 v0, p11
 
-    .line 61
     iput v0, v11, Lcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;->mFaceId:I
 
     return-void
@@ -60,7 +57,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x9
 
     return p0
@@ -69,7 +65,6 @@
 .method public getValue()Z
     .locals 0
 
-    .line 109
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;->mValue:Z
 
     return p0
@@ -78,10 +73,8 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 0
 
-    .line 77
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;->startHalOperation()V
 
     return-void
@@ -94,13 +87,11 @@
 
     const/4 v1, 0x0
 
-    .line 86
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 87
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getFreshDaemon()Ljava/lang/Object;
 
     move-result-object v4
@@ -115,7 +106,6 @@
 
     move-result-object v4
 
-    .line 88
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,27 +140,22 @@
 
     new-array v5, v2, [Z
 
-    .line 94
     iget v6, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;->mFeature:I
 
     aput v6, v3, v1
 
-    .line 95
     iget-boolean v6, v4, Landroid/hardware/biometrics/face/V1_0/OptionalBool;->value:Z
 
     aput-boolean v6, v5, v1
 
-    .line 96
     iput-boolean v6, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;->mValue:Z
 
-    .line 98
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object v6
 
     if-eqz v6, :cond_1
 
-    .line 99
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object v6
@@ -189,7 +174,6 @@
     :goto_0
     invoke-virtual {v6, v4, v3, v5}, Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;->onFeatureGet(Z[I[Z)V
 
-    .line 101
     :cond_1
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
@@ -204,10 +188,8 @@
 
     const-string v3, "Unable to getFeature"
 
-    .line 103
     invoke-static {v0, v3, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     invoke-interface {v0, p0, v1}, Lcom/android/server/biometrics/sensors/ClientMonitorCallback;->onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
@@ -219,7 +201,6 @@
 .method public unableToStart()V
     .locals 3
 
-    .line 67
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
@@ -227,7 +208,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object p0
@@ -251,7 +231,6 @@
 
     const-string v1, "Unable to send error"
 
-    .line 71
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0

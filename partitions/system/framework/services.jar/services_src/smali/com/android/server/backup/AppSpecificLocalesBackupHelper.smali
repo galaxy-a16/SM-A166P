@@ -15,7 +15,6 @@
 
     const-string v0, "app_locales"
 
-    .line 47
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -24,10 +23,8 @@
 
     invoke-direct {p0, v1, v0}, Landroid/app/backup/BlobBackupHelper;-><init>(I[Ljava/lang/String;)V
 
-    .line 48
     iput p1, p0, Lcom/android/server/backup/AppSpecificLocalesBackupHelper;->mUserId:I
 
-    .line 49
     const-class p1, Lcom/android/server/locales/LocaleManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -48,7 +45,6 @@
 
     const-string v0, "app_locales"
 
-    .line 79
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -57,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 81
     :try_start_0
     iget-object p1, p0, Lcom/android/server/backup/AppSpecificLocalesBackupHelper;->mLocaleManagerInternal:Lcom/android/server/locales/LocaleManagerInternal;
 
@@ -74,12 +69,10 @@
 
     const-string p1, "Couldn\'t communicate with locale manager"
 
-    .line 83
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 86
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -106,7 +99,6 @@
 
     const-string v0, "app_locales"
 
-    .line 59
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -117,7 +109,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
     :try_start_0
     iget-object p1, p0, Lcom/android/server/backup/AppSpecificLocalesBackupHelper;->mLocaleManagerInternal:Lcom/android/server/locales/LocaleManagerInternal;
 
@@ -136,12 +127,10 @@
 
     const-string p1, "Couldn\'t communicate with locale manager"
 
-    .line 64
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 68
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 

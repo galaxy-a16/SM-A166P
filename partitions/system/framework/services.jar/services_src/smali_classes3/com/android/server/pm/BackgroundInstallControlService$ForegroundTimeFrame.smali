@@ -18,18 +18,14 @@
 .method public constructor <init>(J)V
     .locals 0
 
-    .line 491
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 492
     iput-wide p1, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->startTimeStampMillis:J
 
     const-wide/16 p1, 0x0
 
-    .line 493
     iput-wide p1, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->endTimeStampMillis:J
 
-    .line 494
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
@@ -44,7 +40,6 @@
 .method public addEvent(Landroid/app/usage/UsageEvents$Event;)V
     .locals 2
 
-    .line 502
     iget v0, p1, Landroid/app/usage/UsageEvents$Event;->mEventType:I
 
     const/4 v1, 0x1
@@ -61,7 +56,6 @@
 
     goto :goto_0
 
-    .line 508
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->activities:Ljava/util/Set;
 
@@ -77,7 +71,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 509
     iget-object v0, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->activities:Ljava/util/Set;
 
     iget v1, p1, Landroid/app/usage/UsageEvents$Event;->mInstanceId:I
@@ -88,7 +81,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 510
     iget-object v0, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->activities:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
@@ -97,14 +89,12 @@
 
     if-nez v0, :cond_2
 
-    .line 511
     iget-wide v0, p1, Landroid/app/usage/UsageEvents$Event;->mTimeStamp:J
 
     iput-wide v0, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->endTimeStampMillis:J
 
     goto :goto_0
 
-    .line 504
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->activities:Ljava/util/Set;
 
@@ -124,7 +114,6 @@
 .method public compareTo(Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;)I
     .locals 4
 
-    .line 485
     iget-wide v0, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->startTimeStampMillis:J
 
     iget-wide v2, p1, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->startTimeStampMillis:J
@@ -137,7 +126,6 @@
 
     return v0
 
-    .line 488
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -157,7 +145,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 479
     check-cast p1, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->compareTo(Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;)I
@@ -170,7 +157,6 @@
 .method public isDone()Z
     .locals 4
 
-    .line 498
     iget-wide v0, p0, Lcom/android/server/pm/BackgroundInstallControlService$ForegroundTimeFrame;->endTimeStampMillis:J
 
     const-wide/16 v2, 0x0

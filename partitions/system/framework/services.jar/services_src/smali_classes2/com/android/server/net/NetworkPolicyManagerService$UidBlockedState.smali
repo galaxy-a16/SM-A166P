@@ -25,14 +25,12 @@
 
     new-array v1, v0, [I
 
-    .line 6984
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->BLOCKED_REASONS:[I
 
     new-array v0, v0, [I
 
-    .line 6999
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->ALLOWED_REASONS:[I
@@ -75,7 +73,6 @@
 
     const/4 v0, 0x0
 
-    .line 6895
     invoke-direct {p0, v0, v0, v0}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;-><init>(III)V
 
     return-void
@@ -84,16 +81,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 6888
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6889
     iput p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasons:I
 
-    .line 6890
     iput p2, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->allowedReasons:I
 
-    .line 6891
     iput p3, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->effectiveBlockedReasons:I
 
     return-void
@@ -144,7 +137,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 7069
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,7 +155,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->wtfStack(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7070
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -233,20 +224,17 @@
 
     if-nez p0, :cond_0
 
-    .line 7096
     invoke-static {v0}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->allowedReasonToString(I)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 7098
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 7099
     sget-object v2, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->ALLOWED_REASONS:[I
 
     array-length v3, v2
@@ -264,7 +252,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 7101
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
@@ -279,7 +266,6 @@
     :goto_1
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7102
     invoke-static {v6}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->allowedReasonToString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -298,7 +284,6 @@
     :cond_3
     if-eqz p0, :cond_5
 
-    .line 7107
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -313,14 +298,12 @@
     :goto_2
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7108
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,7 +322,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->wtfStack(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7111
     :cond_5
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -393,7 +375,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 7039
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -412,7 +393,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->wtfStack(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7040
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -482,20 +462,17 @@
 
     if-nez p0, :cond_0
 
-    .line 7076
     invoke-static {v0}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasonToString(I)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 7078
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 7079
     sget-object v2, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->BLOCKED_REASONS:[I
 
     array-length v3, v2
@@ -513,7 +490,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 7081
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
@@ -528,7 +504,6 @@
     :goto_1
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7082
     invoke-static {v6}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasonToString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -547,7 +522,6 @@
     :cond_3
     if-eqz p0, :cond_5
 
-    .line 7087
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -562,14 +536,12 @@
     :goto_2
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7088
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7089
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -588,7 +560,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->wtfStack(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7091
     :cond_5
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -600,7 +571,6 @@
 .method public static getAllowedReasonsForProcState(I)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x5
 
     if-le p0, v0, :cond_0
@@ -627,7 +597,6 @@
 .method public static getEffectiveBlockedReasons(II)I
     .locals 2
 
-    .line 0
     if-nez p0, :cond_0
 
     return p0
@@ -735,19 +704,16 @@
 .method public static toString(III)Ljava/lang/String;
     .locals 2
 
-    .line 6975
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "{"
 
-    .line 6976
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "blocked="
 
-    .line 6977
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {p0}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasonsToString(I)Ljava/lang/String;
@@ -762,7 +728,6 @@
 
     const-string v1, "allowed="
 
-    .line 6978
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->allowedReasonsToString(I)Ljava/lang/String;
@@ -775,7 +740,6 @@
 
     const-string p0, "effective="
 
-    .line 6979
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {p2}, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasonsToString(I)Ljava/lang/String;
@@ -786,10 +750,8 @@
 
     const-string/jumbo p0, "}"
 
-    .line 6980
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6981
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -802,17 +764,14 @@
 .method public copyFrom(Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;)V
     .locals 1
 
-    .line 7115
     iget v0, p1, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasons:I
 
     iput v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasons:I
 
-    .line 7116
     iget v0, p1, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->allowedReasons:I
 
     iput v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->allowedReasons:I
 
-    .line 7117
     iget p1, p1, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->effectiveBlockedReasons:I
 
     iput p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->effectiveBlockedReasons:I
@@ -823,7 +782,6 @@
 .method public deriveUidRules()I
     .locals 4
 
-    .line 7122
     iget v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->effectiveBlockedReasons:I
 
     and-int/lit8 v1, v0, 0x8
@@ -846,7 +804,6 @@
 
     goto :goto_1
 
-    .line 7132
     :cond_1
     iget v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasons:I
 
@@ -882,7 +839,6 @@
 
     goto :goto_3
 
-    .line 7149
     :cond_5
     iget v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasons:I
 
@@ -912,7 +868,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 7153
     iget v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->allowedReasons:I
 
     and-int/2addr v2, v0
@@ -930,7 +885,6 @@
 
     goto :goto_2
 
-    .line 7159
     :cond_8
     :goto_3
     invoke-static {}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$sfgetLOGV()Z
@@ -939,7 +893,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 7160
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -954,7 +907,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7161
     invoke-static {v1}, Landroid/net/NetworkPolicyManager;->uidRulesToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -967,7 +919,6 @@
 
     const-string v0, "NetworkPolicy"
 
-    .line 7160
     invoke-static {v0, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_9
@@ -977,7 +928,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 6970
     iget v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasons:I
 
     iget v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->allowedReasons:I
@@ -994,7 +944,6 @@
 .method public updateEffectiveBlockedReasons()V
     .locals 3
 
-    .line 6899
     invoke-static {}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$sfgetLOGV()Z
 
     move-result v0
@@ -1009,10 +958,8 @@
 
     const-string/jumbo v0, "updateEffectiveBlockedReasons(): no blocked reasons"
 
-    .line 6900
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6902
     :cond_0
     iget v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasons:I
 
@@ -1024,14 +971,12 @@
 
     iput v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->effectiveBlockedReasons:I
 
-    .line 6903
     invoke-static {}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$sfgetLOGV()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 6904
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1042,7 +987,6 @@
 
     iget v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->blockedReasons:I
 
-    .line 6905
     invoke-static {v2}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1055,7 +999,6 @@
 
     iget p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$UidBlockedState;->effectiveBlockedReasons:I
 
-    .line 6906
     invoke-static {p0}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1066,7 +1009,6 @@
 
     move-result-object p0
 
-    .line 6904
     invoke-static {v1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1

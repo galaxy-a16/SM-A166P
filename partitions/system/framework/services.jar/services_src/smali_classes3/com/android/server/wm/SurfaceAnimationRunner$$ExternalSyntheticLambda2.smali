@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/SurfaceAnimationRunner;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/SurfaceAnimationRunner$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/wm/SurfaceAnimationRunner;
@@ -27,7 +26,6 @@
 .method public final makeAnimator()Landroid/animation/ValueAnimator;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/SurfaceAnimationRunner$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     invoke-static {p0}, Lcom/android/server/wm/SurfaceAnimationRunner;->$r8$lambda$tIVB561A-SW4OyecFdCo86qAUSQ(Lcom/android/server/wm/SurfaceAnimationRunner;)Landroid/animation/ValueAnimator;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/McfManager;)V
     .locals 0
 
-    .line 213
     iput-object p1, p0, Lcom/android/server/desktopmode/McfManager$5;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-direct {p0}, Lcom/samsung/android/mcf/ble/BleScanCallback;-><init>()V
@@ -24,12 +23,10 @@
 .method public onScanFailed(I)V
     .locals 2
 
-    .line 228
     iget-object p0, p0, Lcom/android/server/desktopmode/McfManager$5;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fputmLastBleScanFailedErrorCode(Lcom/android/server/desktopmode/McfManager;I)V
 
-    .line 229
     invoke-static {}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -56,7 +53,6 @@
 .method public onScanResult(Landroid/bluetooth/le/ScanResult;)V
     .locals 4
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/desktopmode/McfManager$5;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-virtual {p1}, Landroid/bluetooth/le/ScanResult;->toString()Ljava/lang/String;
@@ -65,7 +61,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fputmLastBleScanResult(Lcom/android/server/desktopmode/McfManager;Ljava/lang/String;)V
 
-    .line 217
     iget-object v0, p0, Lcom/android/server/desktopmode/McfManager$5;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmBleAdvertiserServiceTimeout(Lcom/android/server/desktopmode/McfManager;)J
@@ -78,7 +73,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 218
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -107,7 +101,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/McfManager$5;->this$0:Lcom/android/server/desktopmode/McfManager;
 
@@ -119,7 +112,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 222
     iget-object p1, p0, Lcom/android/server/desktopmode/McfManager$5;->this$0:Lcom/android/server/desktopmode/McfManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/McfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/desktopmode/McfManager;)Lcom/android/server/desktopmode/McfManager$McfHandler;
@@ -132,12 +124,10 @@
 
     move-result-object p0
 
-    .line 223
     invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 222
     invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void

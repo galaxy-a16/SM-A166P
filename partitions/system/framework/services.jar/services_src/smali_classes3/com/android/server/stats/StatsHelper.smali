@@ -13,7 +13,6 @@
 .method public static sendStatsdReadyBroadcast(Landroid/content/Context;)V
     .locals 3
 
-    .line 41
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.app.action.STATSD_STARTED"
@@ -22,7 +21,6 @@
 
     const/high16 v1, 0x1000000
 
-    .line 42
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-result-object v0
@@ -31,7 +29,6 @@
 
     const-string v2, "android.permission.DUMP"
 
-    .line 41
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
     return-void

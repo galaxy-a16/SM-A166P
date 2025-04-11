@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetinfo(Lcom/android/server/tv/TvInputManagerService$TvInputState;)Landroid/media/tv/TvInputInfo;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->info:Landroid/media/tv/TvInputInfo;
 
     return-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetinputNumber(Lcom/android/server/tv/TvInputManagerService$TvInputState;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->inputNumber:I
 
     return p0
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetstate(Lcom/android/server/tv/TvInputManagerService$TvInputState;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->state:I
 
     return p0
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetuid(Lcom/android/server/tv/TvInputManagerService$TvInputState;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->uid:I
 
     return p0
@@ -53,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fputinfo(Lcom/android/server/tv/TvInputManagerService$TvInputState;Landroid/media/tv/TvInputInfo;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->info:Landroid/media/tv/TvInputInfo;
 
     return-void
@@ -62,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$fputinputNumber(Lcom/android/server/tv/TvInputManagerService$TvInputState;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->inputNumber:I
 
     return-void
@@ -71,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$fputstate(Lcom/android/server/tv/TvInputManagerService$TvInputState;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->state:I
 
     return-void
@@ -80,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$fputuid(Lcom/android/server/tv/TvInputManagerService$TvInputState;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->uid:I
 
     return-void
@@ -89,12 +81,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 3092
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 3117
     iput v0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->state:I
 
     return-void
@@ -103,7 +93,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/tv/TvInputManagerService$TvInputState-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/tv/TvInputManagerService$TvInputState;-><init>()V
 
     return-void
@@ -114,7 +103,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 3121
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

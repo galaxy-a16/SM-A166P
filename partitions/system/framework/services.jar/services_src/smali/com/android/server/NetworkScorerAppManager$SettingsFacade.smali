@@ -17,7 +17,6 @@
 .method public getInt(Landroid/content/Context;Ljava/lang/String;I)I
     .locals 0
 
-    .line 404
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -32,12 +31,10 @@
 .method public getSecureInt(Landroid/content/Context;Ljava/lang/String;I)I
     .locals 0
 
-    .line 408
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 409
     invoke-virtual {p0}, Landroid/content/ContentResolver;->getUserId()I
 
     move-result p1
@@ -52,7 +49,6 @@
 .method public getString(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 396
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -67,7 +63,6 @@
 .method public putInt(Landroid/content/Context;Ljava/lang/String;I)Z
     .locals 0
 
-    .line 400
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -82,7 +77,6 @@
 .method public putString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 392
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

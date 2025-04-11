@@ -7,7 +7,6 @@
 .method public constructor <init>(ILandroid/os/ParcelFileDescriptor;Landroid/content/Context;)V
     .locals 0
 
-    .line 263
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/companion/transport/RawTransport;-><init>(ILandroid/os/ParcelFileDescriptor;Landroid/content/Context;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public processMessage(II[B)V
     .locals 0
 
-    .line 268
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/companion/transport/Transport;->handleMessage(II[B)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public sendMessage(II[B)V
     .locals 2
 
-    .line 274
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

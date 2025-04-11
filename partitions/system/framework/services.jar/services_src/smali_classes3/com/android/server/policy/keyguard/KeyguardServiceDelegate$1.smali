@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;)V
     .locals 0
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$1;->this$0:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDreamingStarted()V
     .locals 0
 
-    .line 81
     iget-object p0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$1;->this$0:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     invoke-virtual {p0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->onDreamingStarted()V
@@ -38,7 +36,6 @@
 .method public onDreamingStopped()V
     .locals 0
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$1;->this$0:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     invoke-virtual {p0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->onDreamingStopped()V

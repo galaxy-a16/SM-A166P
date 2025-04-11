@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 31
     invoke-direct {p0}, Landroid/service/notification/ConditionProviderService;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 
     const-string v0, "      "
 
-    .line 55
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -33,7 +31,6 @@
 
     if-lez p1, :cond_0
 
-    .line 57
     invoke-static {p2, p3}, Lcom/android/server/notification/SystemConditionProviderService;->ts(J)Ljava/lang/String;
 
     move-result-object p1
@@ -58,11 +55,9 @@
 
     goto :goto_0
 
-    .line 59
     :cond_0
     invoke-virtual {p0, p2, p3}, Ljava/io/PrintWriter;->print(J)V
 
-    .line 61
     :goto_0
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
@@ -72,15 +67,12 @@
 .method public static formatDuration(J)Ljava/lang/String;
     .locals 1
 
-    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 50
     invoke-static {p0, p1, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 51
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -91,7 +83,6 @@
 .method public static ts(J)Ljava/lang/String;
     .locals 2
 
-    .line 45
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

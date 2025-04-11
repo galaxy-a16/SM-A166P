@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 0
 
-    .line 251
     iput-object p1, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public final getPackageName(Landroid/content/Intent;)Ljava/lang/String;
     .locals 0
 
-    .line 254
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 255
     invoke-virtual {p0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p0
@@ -48,7 +45,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 260
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -205,18 +201,15 @@
 
     goto/16 :goto_2
 
-    .line 274
     :pswitch_0
     invoke-virtual {p0, p2}, Lcom/android/server/tare/InternalResourceService$2;->getPackageName(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 275
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 276
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/tare/InternalResourceService;->onPackageRemoved(ILjava/lang/String;)V
@@ -226,44 +219,37 @@
     :pswitch_1
     const-string p1, "android.intent.extra.REPLACING"
 
-    .line 280
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     if-nez p1, :cond_8
 
-    .line 281
     invoke-virtual {p0, p2}, Lcom/android/server/tare/InternalResourceService$2;->getPackageName(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 282
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 283
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/tare/InternalResourceService;->onPackageAdded(ILjava/lang/String;)V
 
     goto :goto_2
 
-    .line 295
     :pswitch_2
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 296
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/tare/InternalResourceService;->onUserAdded(I)V
 
     goto :goto_2
 
-    .line 305
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
@@ -271,7 +257,6 @@
 
     goto :goto_2
 
-    .line 271
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
@@ -279,30 +264,25 @@
 
     goto :goto_2
 
-    .line 288
     :pswitch_5
     invoke-virtual {p0, p2}, Lcom/android/server/tare/InternalResourceService$2;->getPackageName(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 289
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 290
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 291
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/tare/InternalResourceService;->onPackageForceStopped(ILjava/lang/String;)V
 
     goto :goto_2
 
-    .line 262
     :pswitch_6
     iget-object p1, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
@@ -312,12 +292,10 @@
 
     const-string/jumbo v0, "present"
 
-    .line 263
     invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 264
     iget-object p2, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {p2}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fgetmHasBattery(Lcom/android/server/tare/InternalResourceService;)Z
@@ -326,12 +304,10 @@
 
     if-eq p2, p1, :cond_8
 
-    .line 265
     iget-object p2, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {p2, p1}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fputmHasBattery(Lcom/android/server/tare/InternalResourceService;Z)V
 
-    .line 266
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {p0}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fgetmConfigObserver(Lcom/android/server/tare/InternalResourceService;)Lcom/android/server/tare/InternalResourceService$ConfigObserver;
@@ -342,13 +318,11 @@
 
     goto :goto_2
 
-    .line 300
     :pswitch_7
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 301
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$2;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/tare/InternalResourceService;->onUserRemoved(I)V

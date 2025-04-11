@@ -24,24 +24,18 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/StateNotifier;Landroid/os/IBinder;Landroid/content/ComponentName;III)V
     .locals 0
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->this$0:Lcom/android/server/sepunion/cover/StateNotifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
     iput-object p2, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
-    .line 123
     iput-object p3, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->component:Landroid/content/ComponentName;
 
-    .line 124
     iput p4, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->pid:I
 
-    .line 125
     iput p5, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->uid:I
 
-    .line 126
     iput p6, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
     return-void
@@ -52,7 +46,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 131
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -75,7 +68,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->this$0:Lcom/android/server/sepunion/cover/StateNotifier;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$fgetmListeners(Lcom/android/server/sepunion/cover/StateNotifier;)Ljava/util/ArrayList;
@@ -84,7 +76,6 @@
 
     monitor-enter v0
 
-    .line 133
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->this$0:Lcom/android/server/sepunion/cover/StateNotifier;
 
@@ -94,12 +85,10 @@
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 134
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->this$0:Lcom/android/server/sepunion/cover/StateNotifier;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$fgetmHighPriorityListeners(Lcom/android/server/sepunion/cover/StateNotifier;)Ljava/util/ArrayList;
@@ -108,7 +97,6 @@
 
     monitor-enter v1
 
-    .line 136
     :try_start_1
     iget-object v0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->this$0:Lcom/android/server/sepunion/cover/StateNotifier;
 
@@ -118,12 +106,10 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 137
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
@@ -135,7 +121,6 @@
     :catchall_0
     move-exception p0
 
-    .line 137
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -146,7 +131,6 @@
     :catchall_1
     move-exception p0
 
-    .line 134
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -158,12 +142,10 @@
 .method public onCoverAppStateChanged(Z)V
     .locals 1
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v0, :cond_0
 
-    .line 197
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -174,7 +156,6 @@
 
     return-void
 
-    .line 200
     :cond_0
     iget p0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
@@ -182,7 +163,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 203
     :try_start_0
     invoke-static {v0}, Lcom/samsung/android/cover/ICoverWindowStateListenerCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cover/ICoverWindowStateListenerCallback;
 
@@ -190,7 +170,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 205
     invoke-interface {p0, p1}, Lcom/samsung/android/cover/ICoverWindowStateListenerCallback;->onCoverAppCovered(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -200,7 +179,6 @@
     :catch_0
     move-exception p0
 
-    .line 208
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -217,12 +195,10 @@
 .method public onCoverAttachStateChanged(Z)V
     .locals 1
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v0, :cond_0
 
-    .line 179
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -233,7 +209,6 @@
 
     return-void
 
-    .line 182
     :cond_0
     iget p0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
@@ -241,7 +216,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 185
     :try_start_0
     invoke-static {v0}, Lcom/samsung/android/cover/ICoverStateListenerCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cover/ICoverStateListenerCallback;
 
@@ -249,7 +223,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 187
     invoke-interface {p0, p1}, Lcom/samsung/android/cover/ICoverStateListenerCallback;->onCoverAttachStateChanged(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -259,7 +232,6 @@
     :catch_0
     move-exception p0
 
-    .line 190
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -276,12 +248,10 @@
 .method public onCoverSwitchStateChanged(Lcom/samsung/android/cover/CoverState;)V
     .locals 2
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v0, :cond_0
 
-    .line 143
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -292,7 +262,6 @@
 
     return-void
 
-    .line 146
     :cond_0
     iget p0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
@@ -300,7 +269,6 @@
 
     if-ne p0, v1, :cond_1
 
-    .line 149
     :try_start_0
     invoke-static {v0}, Lcom/samsung/android/cover/ICoverManagerCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cover/ICoverManagerCallback;
 
@@ -308,7 +276,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 151
     invoke-interface {p0, p1}, Lcom/samsung/android/cover/ICoverManagerCallback;->coverCallback(Lcom/samsung/android/cover/CoverState;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -318,7 +285,6 @@
     :catch_0
     move-exception p0
 
-    .line 154
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -335,12 +301,10 @@
 .method public onCoverSwitchStateChanged(Z)V
     .locals 1
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v0, :cond_0
 
-    .line 161
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -351,7 +315,6 @@
 
     return-void
 
-    .line 164
     :cond_0
     iget p0, p0, Lcom/android/server/sepunion/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
@@ -359,7 +322,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 167
     :try_start_0
     invoke-static {v0}, Lcom/samsung/android/cover/ICoverStateListenerCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/cover/ICoverStateListenerCallback;
 
@@ -367,7 +329,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 169
     invoke-interface {p0, p1}, Lcom/samsung/android/cover/ICoverStateListenerCallback;->onCoverSwitchStateChanged(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -377,7 +338,6 @@
     :catch_0
     move-exception p0
 
-    .line 172
     invoke-static {}, Lcom/android/server/sepunion/cover/StateNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

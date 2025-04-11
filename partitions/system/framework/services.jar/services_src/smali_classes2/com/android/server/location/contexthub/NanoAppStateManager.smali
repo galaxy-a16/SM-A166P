@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -25,7 +23,6 @@
 
     const/4 v0, 0x0
 
-    .line 59
     iput v0, p0, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNextHandle:I
 
     return-void
@@ -40,11 +37,9 @@
 
     monitor-enter p0
 
-    .line 112
     :try_start_0
     invoke-virtual/range {p0 .. p3}, Lcom/android/server/location/contexthub/NanoAppStateManager;->removeNanoAppInstance(IJ)V
 
-    .line 113
     iget-object v0, v1, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -59,17 +54,14 @@
 
     const-string v2, "Error adding nanoapp instance: max limit exceeded"
 
-    .line 114
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 115
     monitor-exit p0
 
     return-void
 
-    .line 118
     :cond_0
     :try_start_1
     iget v0, v1, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNextHandle:I
@@ -81,7 +73,6 @@
     :goto_0
     if-gt v4, v2, :cond_4
 
-    .line 120
     iget-object v5, v1, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -94,7 +85,6 @@
 
     if-nez v5, :cond_2
 
-    .line 121
     iget-object v10, v1, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -124,7 +114,6 @@
     :cond_1
     add-int/lit8 v3, v0, 0x1
 
-    .line 123
     :goto_1
     iput v3, v1, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNextHandle:I
 
@@ -149,7 +138,6 @@
     :goto_3
     const-string v2, "NanoAppStateManager"
 
-    .line 130
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +160,6 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 131
     invoke-static/range {p2 .. p3}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
 
     move-result-object v0
@@ -183,7 +170,6 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 132
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -194,12 +180,10 @@
 
     move-result-object v0
 
-    .line 130
     invoke-static {v2, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 134
     monitor-exit p0
 
     return-void
@@ -217,7 +201,6 @@
 
     monitor-enter p0
 
-    .line 79
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
@@ -242,14 +225,12 @@
 
     check-cast v1, Landroid/hardware/location/NanoAppInstanceInfo;
 
-    .line 80
     invoke-interface {p1, v1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 82
     :cond_0
     monitor-exit p0
 
@@ -268,7 +249,6 @@
 
     monitor-enter p0
 
-    .line 91
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
@@ -293,7 +273,6 @@
 
     check-cast v1, Landroid/hardware/location/NanoAppInstanceInfo;
 
-    .line 92
     invoke-virtual {v1}, Landroid/hardware/location/NanoAppInstanceInfo;->getContexthubId()I
 
     move-result v2
@@ -308,7 +287,6 @@
 
     if-nez v2, :cond_0
 
-    .line 93
     invoke-virtual {v1}, Landroid/hardware/location/NanoAppInstanceInfo;->getHandle()I
 
     move-result p1
@@ -319,7 +297,6 @@
 
     return p1
 
-    .line 97
     :cond_1
     monitor-exit p0
 
@@ -340,7 +317,6 @@
 
     monitor-enter p0
 
-    .line 69
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
@@ -371,7 +347,6 @@
 .method public final handleQueryAppEntry(IJI)V
     .locals 9
 
-    .line 182
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/location/contexthub/NanoAppStateManager;->getNanoAppHandle(IJ)I
 
     move-result v6
@@ -380,12 +355,10 @@
 
     if-ne v6, v0, :cond_0
 
-    .line 184
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/location/contexthub/NanoAppStateManager;->addNanoAppInstance(IJI)V
 
     goto :goto_0
 
-    .line 186
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
@@ -399,14 +372,12 @@
 
     check-cast v0, Landroid/hardware/location/NanoAppInstanceInfo;
 
-    .line 187
     invoke-virtual {v0}, Landroid/hardware/location/NanoAppInstanceInfo;->getAppVersion()I
 
     move-result v0
 
     if-eq v0, p4, :cond_1
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -429,7 +400,6 @@
 
     invoke-virtual {p0, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 191
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -450,7 +420,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
     invoke-static {p2, p3}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
 
     move-result-object p1
@@ -461,7 +430,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 193
     invoke-static {p4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -474,7 +442,6 @@
 
     const-string p1, "NanoAppStateManager"
 
-    .line 191
     invoke-static {p1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -487,13 +454,11 @@
 
     monitor-enter p0
 
-    .line 143
     :try_start_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/location/contexthub/NanoAppStateManager;->getNanoAppHandle(IJ)I
 
     move-result p1
 
-    .line 144
     iget-object p2, p0, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -504,7 +469,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 145
     monitor-exit p0
 
     return-void
@@ -522,13 +486,11 @@
 
     monitor-enter p0
 
-    .line 155
     :try_start_0
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 156
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -546,22 +508,18 @@
 
     check-cast v1, Landroid/hardware/location/NanoAppState;
 
-    .line 158
     invoke-virtual {v1}, Landroid/hardware/location/NanoAppState;->getNanoAppId()J
 
     move-result-wide v2
 
-    .line 159
     invoke-virtual {v1}, Landroid/hardware/location/NanoAppState;->getNanoAppVersion()J
 
     move-result-wide v4
 
     long-to-int v4, v4
 
-    .line 157
     invoke-virtual {p0, p1, v2, v3, v4}, Lcom/android/server/location/contexthub/NanoAppStateManager;->handleQueryAppEntry(IJI)V
 
-    .line 160
     invoke-virtual {v1}, Landroid/hardware/location/NanoAppState;->getNanoAppId()J
 
     move-result-wide v1
@@ -574,7 +532,6 @@
 
     goto :goto_0
 
-    .line 163
     :cond_0
     iget-object p2, p0, Lcom/android/server/location/contexthub/NanoAppStateManager;->mNanoAppHash:Ljava/util/HashMap;
 
@@ -586,7 +543,6 @@
 
     move-result-object p2
 
-    .line 164
     :cond_1
     :goto_1
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
@@ -595,21 +551,18 @@
 
     if-eqz v1, :cond_2
 
-    .line 165
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/hardware/location/NanoAppInstanceInfo;
 
-    .line 166
     invoke-virtual {v1}, Landroid/hardware/location/NanoAppInstanceInfo;->getContexthubId()I
 
     move-result v2
 
     if-ne v2, p1, :cond_1
 
-    .line 167
     invoke-virtual {v1}, Landroid/hardware/location/NanoAppInstanceInfo;->getAppId()J
 
     move-result-wide v1
@@ -624,14 +577,12 @@
 
     if-nez v1, :cond_1
 
-    .line 168
     invoke-interface {p2}, Ljava/util/Iterator;->remove()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
-    .line 171
     :cond_2
     monitor-exit p0
 

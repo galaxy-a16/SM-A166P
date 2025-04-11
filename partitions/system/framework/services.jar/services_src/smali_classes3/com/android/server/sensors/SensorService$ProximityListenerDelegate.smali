@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sensors/SensorService;)V
     .locals 0
 
-    .line 179
     iput-object p1, p0, Lcom/android/server/sensors/SensorService$ProximityListenerDelegate;->this$0:Lcom/android/server/sensors/SensorService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/sensors/SensorService;Lcom/android/server/sensors/SensorService$ProximityListenerDelegate-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sensors/SensorService$ProximityListenerDelegate;-><init>(Lcom/android/server/sensors/SensorService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onProximityActive(Z)V
     .locals 3
 
-    .line 187
     iget-object v0, p0, Lcom/android/server/sensors/SensorService$ProximityListenerDelegate;->this$0:Lcom/android/server/sensors/SensorService;
 
     invoke-static {v0}, Lcom/android/server/sensors/SensorService;->-$$Nest$fgetmLock(Lcom/android/server/sensors/SensorService;)Ljava/lang/Object;
@@ -45,7 +42,6 @@
 
     monitor-enter v0
 
-    .line 188
     :try_start_0
     iget-object p0, p0, Lcom/android/server/sensors/SensorService$ProximityListenerDelegate;->this$0:Lcom/android/server/sensors/SensorService;
 
@@ -67,12 +63,10 @@
 
     check-cast p0, [Lcom/android/server/sensors/SensorService$ProximityListenerProxy;
 
-    .line 189
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 190
     array-length v0, p0
 
     :goto_0
@@ -80,7 +74,6 @@
 
     aget-object v2, p0, v1
 
-    .line 191
     invoke-virtual {v2, p1}, Lcom/android/server/sensors/SensorService$ProximityListenerProxy;->onProximityActive(Z)V
 
     add-int/lit8 v1, v1, 0x1
@@ -93,7 +86,6 @@
     :catchall_0
     move-exception p0
 
-    .line 189
     :try_start_1
     monitor-exit v0
     :try_end_1

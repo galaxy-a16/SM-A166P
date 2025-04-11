@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/appwidget/AppWidgetServiceImpl;)V
     .locals 0
 
-    .line 6668
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-direct {p0}, Landroid/appwidget/AppWidgetManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/appwidget/AppWidgetServiceImpl;Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal;-><init>(Lcom/android/server/appwidget/AppWidgetServiceImpl;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public applyResourceOverlaysToWidgets(Ljava/util/Set;IZ)V
     .locals 2
 
-    .line 6695
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$fgetmLock(Lcom/android/server/appwidget/AppWidgetServiceImpl;)Ljava/lang/Object;
@@ -42,7 +39,6 @@
 
     monitor-enter v0
 
-    .line 6696
     :try_start_0
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
@@ -52,7 +48,6 @@
 
     invoke-static {p0, v1, p2, p3}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$mapplyResourceOverlaysToWidgetsLocked(Lcom/android/server/appwidget/AppWidgetServiceImpl;Ljava/util/Set;IZ)V
 
-    .line 6698
     monitor-exit v0
 
     return-void
@@ -70,7 +65,6 @@
 .method public getHostedWidgetPackages(I)Landroid/util/ArraySet;
     .locals 6
 
-    .line 6671
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$fgetmLock(Lcom/android/server/appwidget/AppWidgetServiceImpl;)Ljava/lang/Object;
@@ -79,7 +73,6 @@
 
     monitor-enter v0
 
-    .line 6673
     :try_start_0
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
@@ -98,7 +91,6 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 6675
     iget-object v4, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {v4}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$fgetmWidgets(Lcom/android/server/appwidget/AppWidgetServiceImpl;)Ljava/util/ArrayList;
@@ -111,7 +103,6 @@
 
     check-cast v4, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;
 
-    .line 6676
     iget-object v5, v4, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->host:Lcom/android/server/appwidget/AppWidgetServiceImpl$Host;
 
     iget-object v5, v5, Lcom/android/server/appwidget/AppWidgetServiceImpl$Host;->id:Lcom/android/server/appwidget/AppWidgetServiceImpl$HostId;
@@ -126,12 +117,10 @@
 
     if-nez v2, :cond_0
 
-    .line 6678
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 6680
     :cond_0
     iget-object v4, v4, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->provider:Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;
 
@@ -150,7 +139,6 @@
 
     goto :goto_0
 
-    .line 6683
     :cond_2
     monitor-exit v0
 
@@ -159,7 +147,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6684
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -170,7 +157,6 @@
 .method public unlockUser(I)V
     .locals 0
 
-    .line 6689
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$AppWidgetManagerLocal;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->handleUserUnlocked(I)V

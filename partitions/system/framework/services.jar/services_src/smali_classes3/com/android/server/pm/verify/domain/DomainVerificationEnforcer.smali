@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
     return-void
@@ -37,7 +35,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 72
     invoke-interface {p2, p1}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxy;->isCallerVerifier(I)Z
 
     move-result p2
@@ -46,10 +43,8 @@
 
     if-nez p2, :cond_0
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
-    .line 74
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p2
@@ -72,16 +67,13 @@
 
     const-string v1, "android.permission.DUMP"
 
-    .line 73
     invoke-virtual {p0, v1, p2, p1, v0}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 80
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
-    .line 81
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p2
@@ -106,7 +98,6 @@
 
     move-result-object v1
 
-    .line 80
     invoke-virtual {p0, v0, p2, p1, v1}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
     :cond_1
@@ -119,10 +110,8 @@
 
     if-eq p2, p4, :cond_0
 
-    .line 159
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
-    .line 161
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
@@ -131,14 +120,11 @@
 
     const-string v3, "android.permission.INTERACT_ACROSS_USERS"
 
-    .line 159
     invoke-virtual {v0, v3, v1, p1, v2}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 165
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
-    .line 167
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
@@ -147,10 +133,8 @@
 
     const-string v3, "android.permission.UPDATE_DOMAIN_VERIFICATION_USER_SELECTION"
 
-    .line 165
     invoke-virtual {v0, v3, v1, p1, v2}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 170
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {v0, p2}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->doesUserExist(I)Z
@@ -163,7 +147,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 172
     iget-object p2, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p2, p4}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->doesUserExist(I)Z
@@ -178,7 +161,6 @@
 
     return p2
 
-    .line 180
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
@@ -190,7 +172,6 @@
 
     return p0
 
-    .line 173
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -212,7 +193,6 @@
 
     throw p0
 
-    .line 171
     :cond_3
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -240,10 +220,8 @@
 
     if-eq p2, p4, :cond_0
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
-    .line 140
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
@@ -252,10 +230,8 @@
 
     const-string v3, "android.permission.INTERACT_ACROSS_USERS"
 
-    .line 138
     invoke-virtual {v0, v3, v1, p1, v2}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 144
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
@@ -269,7 +245,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 146
     iget-object p2, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p2, p4}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->doesUserExist(I)Z
@@ -278,7 +253,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 150
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p0, p3, p1, p4}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->filterAppAccess(Ljava/lang/String;II)Z
@@ -289,7 +263,6 @@
 
     return p0
 
-    .line 147
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -311,7 +284,6 @@
 
     throw p0
 
-    .line 145
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -351,12 +323,10 @@
 
     if-eq p1, v2, :cond_4
 
-    .line 101
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 103
     iget-object v3, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.DOMAIN_VERIFICATION_AGENT"
@@ -371,7 +341,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 106
     iget-object v3, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
     const-string v7, "android.permission.INTENT_FILTER_VERIFICATION_AGENT"
@@ -394,7 +363,6 @@
 
     goto :goto_1
 
-    .line 110
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -422,7 +390,6 @@
     :goto_1
     if-nez v6, :cond_3
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -445,7 +412,6 @@
 
     invoke-virtual {p0, v3, v2, p1, v0}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 122
     :cond_3
     invoke-interface {p2, p1}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxy;->isCallerVerifier(I)Z
 
@@ -456,7 +422,6 @@
 
     return-void
 
-    .line 127
     :cond_5
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -496,7 +461,6 @@
 
     goto :goto_0
 
-    .line 56
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -530,14 +494,12 @@
 .method public assertOwnerQuerent(III)V
     .locals 4
 
-    .line 235
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
     if-eq p2, p3, :cond_0
 
-    .line 237
     iget-object v1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.INTERACT_ACROSS_USERS"
@@ -546,7 +508,6 @@
 
     invoke-virtual {v1, v2, v0, p1, v3}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 241
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
@@ -574,7 +535,6 @@
 
     invoke-virtual {v1, v3, v0, p1, v2}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 245
     iget-object v1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.UPDATE_DOMAIN_VERIFICATION_USER_SELECTION"
@@ -583,7 +543,6 @@
 
     invoke-virtual {v1, v2, v0, p1, v3}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 249
     iget-object p1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p1, p2}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->doesUserExist(I)Z
@@ -596,7 +555,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 251
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p0, p3}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->doesUserExist(I)Z
@@ -607,7 +565,6 @@
 
     return-void
 
-    .line 252
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -629,7 +586,6 @@
 
     throw p0
 
-    .line 250
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -657,10 +613,8 @@
 
     if-eq p2, p4, :cond_0
 
-    .line 212
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
-    .line 214
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
@@ -669,10 +623,8 @@
 
     const-string v3, "android.permission.INTERACT_ACROSS_USERS_FULL"
 
-    .line 212
     invoke-virtual {v0, v3, v1, p1, v2}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 218
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
@@ -686,7 +638,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 220
     iget-object p2, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p2, p4}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->doesUserExist(I)Z
@@ -695,7 +646,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p0, p3, p1, p4}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->filterAppAccess(Ljava/lang/String;II)Z
@@ -706,7 +656,6 @@
 
     return p0
 
-    .line 221
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -728,7 +677,6 @@
 
     throw p0
 
-    .line 219
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -754,10 +702,8 @@
 .method public callerIsLegacyUserSelector(IILjava/lang/String;I)Z
     .locals 4
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
-    .line 187
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
@@ -766,22 +712,18 @@
 
     const-string v3, "android.permission.SET_PREFERRED_APPLICATIONS"
 
-    .line 185
     invoke-virtual {v0, v3, v1, p1, v2}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
     if-eq p2, p4, :cond_0
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.INTERACT_ACROSS_USERS"
 
-    .line 193
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 191
     invoke-virtual {v0, v1, v2, p1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result v0
@@ -792,7 +734,6 @@
 
     return p0
 
-    .line 199
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
@@ -806,7 +747,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 201
     iget-object p2, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p2, p4}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->doesUserExist(I)Z
@@ -815,7 +755,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 205
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     invoke-interface {p0, p3, p1, p4}, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;->filterAppAccess(Ljava/lang/String;II)Z
@@ -826,7 +765,6 @@
 
     return p0
 
-    .line 202
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -848,7 +786,6 @@
 
     throw p0
 
-    .line 200
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -874,7 +811,6 @@
 .method public setCallback(Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;)V
     .locals 0
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer;->mCallback:Lcom/android/server/pm/verify/domain/DomainVerificationEnforcer$Callback;
 
     return-void

@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;Ljava/util/List;I)V
     .locals 0
 
-    .line 3674
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$20;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$20;->val$devices:Ljava/util/List;
@@ -35,7 +34,6 @@
 .method public onCleared(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
     .locals 2
 
-    .line 3677
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,12 +54,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3678
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$20;->val$devices:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 3679
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$20;->val$devices:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -70,7 +66,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3680
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$20;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iget p0, p0, Lcom/android/server/hdmi/HdmiControlService$20;->val$standbyAction:I

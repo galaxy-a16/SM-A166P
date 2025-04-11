@@ -49,7 +49,6 @@
 .method public static synthetic $r8$lambda$QmUx20-6nzzVppI96roWno1dGrA(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->lambda$sendCommand$0(I)V
 
     return-void
@@ -58,7 +57,6 @@
 .method public static synthetic $r8$lambda$Zp2dGQGaEL6NvbOUE1dyTrCbWZQ(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->lambda$getInputDeviceManager$1(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V
 
     return-void
@@ -67,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$misEnableWOF(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;Landroid/content/Context;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->isEnableWOF(Landroid/content/Context;)Z
 
     move-result p0
@@ -78,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$msetLpMode(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->setLpMode(Z)V
 
     return-void
@@ -87,17 +83,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mEnableClient:Landroid/util/SparseBooleanArray;
 
-    .line 57
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -114,7 +107,6 @@
 
     monitor-enter v0
 
-    .line 67
     :try_start_0
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager$InstanceHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
 
@@ -139,7 +131,6 @@
 
     const-string v0, "SemInputDeviceManagerService"
 
-    .line 269
     invoke-static {v0}, Landroid/os/ServiceManager;->waitForService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -148,10 +139,8 @@
 
     move-result-object v0
 
-    .line 268
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 270
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
@@ -160,7 +149,6 @@
 .method private synthetic lambda$sendCommand$0(I)V
     .locals 5
 
-    .line 213
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->getInputDeviceManager()Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;
 
     move-result-object v0
@@ -171,12 +159,10 @@
 
     const-string/jumbo p0, "sendCommand fail : InputDeviceManager is null"
 
-    .line 215
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 218
     :cond_0
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mLastCmd:I
 
@@ -188,14 +174,12 @@
 
     goto :goto_0
 
-    .line 246
     :pswitch_0
     :try_start_0
     invoke-interface {v0, v3}, Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;->setTemperature(I)I
 
     goto :goto_0
 
-    .line 243
     :pswitch_1
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsLpMode:Z
 
@@ -208,7 +192,6 @@
 
     goto :goto_0
 
-    .line 238
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mFodRect:Landroid/graphics/Rect;
 
@@ -220,7 +203,6 @@
 
     if-nez v2, :cond_2
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mFodRect:Landroid/graphics/Rect;
 
     iget v2, p0, Landroid/graphics/Rect;->left:I
@@ -235,31 +217,26 @@
 
     goto :goto_0
 
-    .line 235
     :pswitch_3
     invoke-interface {v0, v2, v2, v2}, Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;->setFodEnable(III)I
 
     goto :goto_0
 
-    .line 232
     :pswitch_4
     invoke-interface {v0, v3, v2, v3}, Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;->setFodEnable(III)I
 
     goto :goto_0
 
-    .line 229
     :pswitch_5
     invoke-interface {v0, v3, v3, v3}, Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;->setFodEnable(III)I
 
     goto :goto_0
 
-    .line 226
     :pswitch_6
     invoke-interface {v0, v3, v2, v2}, Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;->setFodEnable(III)I
 
     goto :goto_0
 
-    .line 223
     :pswitch_7
     invoke-interface {v0, v3, v3, v2}, Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;->setFodEnable(III)I
     :try_end_0
@@ -270,7 +247,6 @@
     :catch_0
     move-exception p0
 
-    .line 250
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -291,7 +267,6 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     :cond_2
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -338,13 +313,11 @@
 
     monitor-enter p0
 
-    .line 127
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mEnableClient:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 128
     iget-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsEnable:Z
 
     if-eqz p1, :cond_0
@@ -359,17 +332,14 @@
 
     const/4 p1, 0x6
 
-    .line 129
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->sendCommand(I)V
 
     const/4 p1, 0x0
 
-    .line 130
     iput-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsEnable:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 132
     :cond_0
     monitor-exit p0
 
@@ -390,13 +360,11 @@
 
     const/4 v0, 0x1
 
-    .line 143
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsHalfModeBlocked:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 144
     monitor-exit p0
 
     return-void
@@ -414,7 +382,6 @@
 
     monitor-enter p0
 
-    .line 118
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mEnableClient:Landroid/util/SparseBooleanArray;
 
@@ -422,29 +389,24 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 119
     iget-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsEnable:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p1, :cond_0
 
-    .line 120
     monitor-exit p0
 
     return-void
 
-    .line 122
     :cond_0
     :try_start_1
     iput-boolean v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsEnable:Z
 
-    .line 123
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->setFodEnable()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 124
     monitor-exit p0
 
     return-void
@@ -460,31 +422,26 @@
 .method public getInputDeviceManager()Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;
     .locals 6
 
-    .line 259
     new-instance p0, Ljava/util/concurrent/atomic/AtomicReference;
 
     const-string v0, "SemInputDeviceManagerService"
 
-    .line 261
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 260
     invoke-static {v0}, Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/hardware/secinputdev/ISemInputDeviceManager;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    .line 262
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 263
     new-instance v0, Lcom/android/server/ServiceThread;
 
     const/16 v1, 0xa
@@ -495,15 +452,12 @@
 
     invoke-direct {v0, v2, v1, v3}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
-    .line 265
     new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {v1, v3}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 266
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 267
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -514,7 +468,6 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 273
     :try_start_0
     sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -524,7 +477,6 @@
 
     move-result v1
 
-    .line 274
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -548,14 +500,11 @@
     :catch_0
     move-exception v1
 
-    .line 276
     invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 278
     :goto_0
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
-    .line 280
     :cond_0
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
@@ -575,7 +524,6 @@
 
     const/4 v1, 0x0
 
-    .line 104
     invoke-static {p1, p0, v0, v1}, Lcom/android/server/biometrics/Utils;->getIntDb(Landroid/content/Context;Ljava/lang/String;ZI)I
 
     move-result p0
@@ -584,7 +532,6 @@
 
     return v1
 
-    .line 110
     :cond_0
     invoke-static {}, Lcom/android/server/biometrics/Utils;->isFirstApiLevel31orGreater()Z
 
@@ -594,7 +541,6 @@
 
     const-string p0, "fingerprint_always_on"
 
-    .line 111
     invoke-static {p1, p0, v0, v1}, Lcom/android/server/biometrics/Utils;->getIntDb(Landroid/content/Context;Ljava/lang/String;ZI)I
 
     move-result p0
@@ -610,12 +556,10 @@
 .method public onBootActivityManagerReady(Landroid/content/Context;)V
     .locals 5
 
-    .line 80
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_1
 
-    .line 81
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager$1;
 
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
@@ -628,7 +572,6 @@
 
     invoke-direct {v0, p0, v1, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager$1;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;Landroid/os/Handler;Landroid/content/Context;)V
 
-    .line 88
     :try_start_0
     invoke-static {}, Lcom/android/server/biometrics/Utils;->isFirstApiLevel31orGreater()Z
 
@@ -640,22 +583,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 89
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
     const-string v4, "fingerprint_always_on"
 
-    .line 90
     invoke-static {v4}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 89
     invoke-virtual {v1, v4, v3, v0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 93
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -663,12 +602,10 @@
 
     const-string v4, "fingerprint_screen_lock"
 
-    .line 94
     invoke-static {v4}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 93
     invoke-virtual {v1, v4, v3, v0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -678,7 +615,6 @@
     :catch_0
     move-exception v0
 
-    .line 97
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -701,7 +637,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->isEnableWOF(Landroid/content/Context;)Z
 
@@ -720,13 +655,11 @@
 
     const/16 v0, 0x9
 
-    .line 171
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->sendCommand(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 172
     monitor-exit p0
 
     return-void
@@ -744,7 +677,6 @@
 
     monitor-enter p0
 
-    .line 155
     :try_start_0
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
@@ -752,7 +684,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 156
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_SUPPORT_AOD:Z
 
     if-nez v0, :cond_0
@@ -761,33 +692,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 157
     :cond_0
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->setHalfMode(Z)V
 
-    .line 160
     :cond_1
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-eqz v0, :cond_3
 
-    .line 163
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsHalfModeBlocked:Z
 
     if-nez v0, :cond_2
 
-    .line 164
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->setHalfMode(Z)V
 
     :cond_2
     const/4 v0, 0x0
 
-    .line 166
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsHalfModeBlocked:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 168
     :cond_3
     monitor-exit p0
 
@@ -808,24 +733,19 @@
 
     const/4 v0, 0x0
 
-    .line 147
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->setHalfMode(Z)V
 
-    .line 148
     sget-boolean v1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-eqz v1, :cond_0
 
-    .line 149
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->enable(I)V
 
-    .line 150
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsHalfModeBlocked:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 152
     :cond_0
     monitor-exit p0
 
@@ -842,7 +762,6 @@
 .method public final sendCommand(I)V
     .locals 2
 
-    .line 212
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
     move-result-object v0
@@ -863,12 +782,10 @@
 .method public final setFodEnable()V
     .locals 1
 
-    .line 197
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsEnable:Z
 
     if-eqz v0, :cond_3
 
-    .line 198
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsStrictMode:Z
 
     if-eqz v0, :cond_1
@@ -886,7 +803,6 @@
 
     goto :goto_0
 
-    .line 199
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsHalfMode:Z
 
@@ -899,7 +815,6 @@
     :cond_2
     const/4 v0, 0x2
 
-    .line 198
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->sendCommand(I)V
 
@@ -912,11 +827,9 @@
 
     monitor-enter p0
 
-    .line 183
     :try_start_0
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mFodRect:Landroid/graphics/Rect;
 
-    .line 184
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const-string/jumbo v1, "set_fod_rect,%d,%d,%d,%d"
@@ -927,7 +840,6 @@
 
     iget v3, p1, Landroid/graphics/Rect;->left:I
 
-    .line 185
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -966,24 +878,20 @@
 
     aput-object p1, v2, v3
 
-    .line 184
     invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 186
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mCommands:Landroid/util/SparseArray;
 
     const/4 v1, 0x7
 
     invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 187
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->sendCommand(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 188
     monitor-exit p0
 
     return-void
@@ -1001,7 +909,6 @@
 
     monitor-enter p0
 
-    .line 135
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsHalfMode:Z
     :try_end_0
@@ -1009,22 +916,18 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 136
     monitor-exit p0
 
     return-void
 
-    .line 138
     :cond_0
     :try_start_1
     iput-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsHalfMode:Z
 
-    .line 139
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->setFodEnable()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 140
     monitor-exit p0
 
     return-void
@@ -1040,20 +943,17 @@
 .method public final setLpMode(Z)V
     .locals 1
 
-    .line 204
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsLpMode:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 207
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsLpMode:Z
 
     const/16 p1, 0x8
 
-    .line 208
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->sendCommand(I)V
 
     return-void
@@ -1064,7 +964,6 @@
 
     monitor-enter p0
 
-    .line 175
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsStrictMode:Z
     :try_end_0
@@ -1072,22 +971,18 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 176
     monitor-exit p0
 
     return-void
 
-    .line 178
     :cond_0
     :try_start_1
     iput-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->mIsStrictMode:Z
 
-    .line 179
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->setFodEnable()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 180
     monitor-exit p0
 
     return-void
@@ -1103,7 +998,6 @@
 .method public toDumpString()Ljava/lang/String;
     .locals 3
 
-    .line 191
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

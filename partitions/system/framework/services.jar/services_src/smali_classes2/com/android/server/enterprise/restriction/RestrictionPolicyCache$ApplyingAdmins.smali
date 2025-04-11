@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$8clxwJwex3Y4Ghgvyht6BZMh1h4(ILjava/util/Map$Entry;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->lambda$remove$1(ILjava/util/Map$Entry;)Z
 
     move-result p0
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$mKCqgBoXk4zrMjnKYq1H51stoMU(ILjava/util/Map$Entry;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->lambda$init$0(ILjava/util/Map$Entry;)Z
 
     move-result p0
@@ -37,19 +35,16 @@
 .method public constructor <init>(Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;)V
     .locals 0
 
-    .line 550
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 552
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
-    .line 554
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -62,7 +57,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;-><init>(Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;)V
 
     return-void
@@ -71,7 +65,6 @@
 .method public static synthetic lambda$init$0(ILjava/util/Map$Entry;)Z
     .locals 1
 
-    .line 559
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
@@ -102,7 +95,6 @@
 .method public static synthetic lambda$remove$1(ILjava/util/Map$Entry;)Z
     .locals 1
 
-    .line 565
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
@@ -135,7 +127,6 @@
 .method public dump(IJ)Ljava/lang/String;
     .locals 3
 
-    .line 621
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -152,7 +143,6 @@
 
     return-object v1
 
-    .line 622
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
@@ -178,7 +168,6 @@
 
     return-object v1
 
-    .line 623
     :cond_1
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
@@ -212,12 +201,10 @@
 .method public getAdminInfo()Ljava/lang/String;
     .locals 2
 
-    .line 627
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 628
     iget-object v1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->adminInfoMap:Ljava/util/Map;
 
     if-eqz v1, :cond_0
@@ -228,7 +215,6 @@
 
     if-nez v1, :cond_0
 
-    .line 629
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->adminInfoMap:Ljava/util/Map;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -237,7 +223,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 631
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -249,7 +234,6 @@
 .method public init(I)V
     .locals 3
 
-    .line 557
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -262,7 +246,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 559
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->adminInfoMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -281,7 +264,6 @@
 .method public isAdminInfoPresent(I)Z
     .locals 1
 
-    .line 591
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->adminInfoMap:Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -292,7 +274,6 @@
 
     if-nez v0, :cond_0
 
-    .line 592
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->adminInfoMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -318,7 +299,6 @@
 
     if-ne p4, v0, :cond_0
 
-    .line 569
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;
 
     invoke-static {v0, p3}, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;->-$$Nest$misDefaultValueZero(Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;Ljava/lang/Long;)Z
@@ -327,7 +307,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 570
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -339,7 +318,6 @@
     :cond_0
     if-nez p4, :cond_1
 
-    .line 571
     iget-object p4, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;
 
     invoke-static {p4, p3}, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;->-$$Nest$misDefaultValueOne(Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;Ljava/lang/Long;)Z
@@ -348,7 +326,6 @@
 
     if-eqz p4, :cond_1
 
-    .line 572
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -363,7 +340,6 @@
 .method public loadAdminInfo(ILjava/lang/String;)V
     .locals 2
 
-    .line 585
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->adminInfoMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -384,7 +360,6 @@
 
     if-nez v0, :cond_0
 
-    .line 586
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->adminInfoMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -400,7 +375,6 @@
 .method public final put(ILjava/lang/Long;Ljava/lang/Integer;)V
     .locals 2
 
-    .line 598
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -419,7 +393,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 599
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -440,13 +413,11 @@
 
     goto :goto_0
 
-    .line 601
     :cond_0
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 602
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -463,7 +434,6 @@
 
     move-object p0, v0
 
-    .line 604
     :goto_0
     invoke-interface {p0, p3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -473,7 +443,6 @@
 .method public remove(I)V
     .locals 2
 
-    .line 563
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -482,7 +451,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 565
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->adminInfoMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -501,7 +469,6 @@
 .method public final remove(IJLjava/lang/Integer;)V
     .locals 2
 
-    .line 608
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -524,7 +491,6 @@
 
     if-nez v0, :cond_0
 
-    .line 609
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -535,7 +501,6 @@
 
     sget-object p1, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache;->MASK_AND_COLUMN_NAME:Ljava/util/Map;
 
-    .line 610
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
@@ -564,12 +529,10 @@
 
     const-string p1, "RestrictionPolicy"
 
-    .line 609
     invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 613
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
@@ -593,17 +556,14 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 614
     invoke-interface {v0, p4}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 615
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
 
     move-result p4
 
     if-eqz p4, :cond_1
 
-    .line 616
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicyCache$ApplyingAdmins;->admins:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -631,7 +591,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 578
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -644,7 +603,6 @@
 
     goto :goto_0
 
-    .line 580
     :cond_0
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

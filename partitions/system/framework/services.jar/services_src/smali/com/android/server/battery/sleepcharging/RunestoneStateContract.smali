@@ -15,7 +15,6 @@
 
     const-string v0, "content://com.samsung.android.rubin.state"
 
-    .line 38
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -24,7 +23,6 @@
 
     const-string v1, "enabled"
 
-    .line 39
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

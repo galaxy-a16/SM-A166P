@@ -18,12 +18,10 @@
 .method public constructor <init>(Lcom/android/server/IntentResolver;Ljava/util/Iterator;)V
     .locals 0
 
-    .line 318
     iput-object p1, p0, Lcom/android/server/IntentResolver$IteratorWrapper;->this$0:Lcom/android/server/IntentResolver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 319
     iput-object p2, p0, Lcom/android/server/IntentResolver$IteratorWrapper;->mI:Ljava/util/Iterator;
 
     return-void
@@ -34,7 +32,6 @@
 .method public hasNext()Z
     .locals 0
 
-    .line 323
     iget-object p0, p0, Lcom/android/server/IntentResolver$IteratorWrapper;->mI:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -47,7 +44,6 @@
 .method public next()Ljava/lang/Object;
     .locals 1
 
-    .line 327
     iget-object v0, p0, Lcom/android/server/IntentResolver$IteratorWrapper;->mI:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -62,17 +58,14 @@
 .method public remove()V
     .locals 2
 
-    .line 331
     iget-object v0, p0, Lcom/android/server/IntentResolver$IteratorWrapper;->mCur:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 332
     iget-object v1, p0, Lcom/android/server/IntentResolver$IteratorWrapper;->this$0:Lcom/android/server/IntentResolver;
 
     invoke-virtual {v1, v0}, Lcom/android/server/IntentResolver;->removeFilterInternal(Ljava/lang/Object;)V
 
-    .line 334
     :cond_0
     iget-object p0, p0, Lcom/android/server/IntentResolver$IteratorWrapper;->mI:Ljava/util/Iterator;
 

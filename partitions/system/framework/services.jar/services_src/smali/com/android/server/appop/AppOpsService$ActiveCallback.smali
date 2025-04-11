@@ -22,24 +22,18 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;Lcom/android/internal/app/IAppOpsActiveCallback;III)V
     .locals 0
 
-    .line 780
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 781
     iput-object p2, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mCallback:Lcom/android/internal/app/IAppOpsActiveCallback;
 
-    .line 782
     iput p3, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mWatchingUid:I
 
-    .line 783
     iput p4, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mCallingUid:I
 
-    .line 784
     iput p5, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mCallingPid:I
 
-    .line 786
     :try_start_0
     invoke-interface {p2}, Lcom/android/internal/app/IAppOpsActiveCallback;->asBinder()Landroid/os/IBinder;
 
@@ -60,7 +54,6 @@
 .method public binderDied()V
     .locals 1
 
-    .line 813
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object p0, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mCallback:Lcom/android/internal/app/IAppOpsActiveCallback;
@@ -73,7 +66,6 @@
 .method public destroy()V
     .locals 2
 
-    .line 808
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mCallback:Lcom/android/internal/app/IAppOpsActiveCallback;
 
     invoke-interface {v0}, Lcom/android/internal/app/IAppOpsActiveCallback;->asBinder()Landroid/os/IBinder;
@@ -90,7 +82,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 794
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
@@ -99,10 +90,8 @@
 
     const-string v1, "ActiveCallback{"
 
-    .line 795
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 796
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -115,40 +104,32 @@
 
     const-string v1, " watchinguid="
 
-    .line 797
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 798
     iget v1, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mWatchingUid:I
 
     invoke-static {v0, v1}, Landroid/os/UserHandle;->formatUid(Ljava/lang/StringBuilder;I)V
 
     const-string v1, " from uid="
 
-    .line 799
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 800
     iget v1, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mCallingUid:I
 
     invoke-static {v0, v1}, Landroid/os/UserHandle;->formatUid(Ljava/lang/StringBuilder;I)V
 
     const-string v1, " pid="
 
-    .line 801
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 802
     iget p0, p0, Lcom/android/server/appop/AppOpsService$ActiveCallback;->mCallingPid:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const/16 p0, 0x7d
 
-    .line 803
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 804
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

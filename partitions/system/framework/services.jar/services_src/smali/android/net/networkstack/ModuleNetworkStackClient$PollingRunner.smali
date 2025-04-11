@@ -14,7 +14,6 @@
 .method public constructor <init>(Landroid/net/networkstack/ModuleNetworkStackClient;)V
     .locals 0
 
-    .line 81
     iput-object p1, p0, Landroid/net/networkstack/ModuleNetworkStackClient$PollingRunner;->this$0:Landroid/net/networkstack/ModuleNetworkStackClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Landroid/net/networkstack/ModuleNetworkStackClient;Landroid/net/networkstack/ModuleNetworkStackClient$PollingRunner-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Landroid/net/networkstack/ModuleNetworkStackClient$PollingRunner;-><init>(Landroid/net/networkstack/ModuleNetworkStackClient;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 87
     :goto_0
     invoke-static {}, Landroid/net/NetworkStack;->getService()Landroid/os/IBinder;
 
@@ -46,7 +43,6 @@
 
     const-wide/16 v0, 0xc8
 
-    .line 89
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -57,7 +53,6 @@
     :catch_0
     move-exception v0
 
-    .line 91
     invoke-static {}, Landroid/net/networkstack/ModuleNetworkStackClient;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -68,7 +63,6 @@
 
     goto :goto_0
 
-    .line 96
     :cond_0
     iget-object p0, p0, Landroid/net/networkstack/ModuleNetworkStackClient$PollingRunner;->this$0:Landroid/net/networkstack/ModuleNetworkStackClient;
 

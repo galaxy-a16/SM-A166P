@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$j_G6d3-GpoSH2ttbbZ-8MJyERbk(Lcom/android/server/location/injector/SystemAppOpsHelper$1;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/injector/SystemAppOpsHelper$1;->lambda$onOpChanged$0(Ljava/lang/String;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/location/injector/SystemAppOpsHelper;)V
     .locals 0
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/location/injector/SystemAppOpsHelper$1;->this$0:Lcom/android/server/location/injector/SystemAppOpsHelper;
 
     invoke-direct {p0}, Landroid/app/AppOpsManager$OnOpChangedInternalListener;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onOpChanged$0(Ljava/lang/String;)V
     .locals 0
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/location/injector/SystemAppOpsHelper$1;->this$0:Lcom/android/server/location/injector/SystemAppOpsHelper;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/injector/AppOpsHelper;->notifyMockLocationAppOpChanged(Ljava/lang/String;)V
@@ -44,7 +41,6 @@
 .method public onOpChanged(ILjava/lang/String;)V
     .locals 1
 
-    .line 65
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1

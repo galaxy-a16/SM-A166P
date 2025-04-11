@@ -25,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 0
     new-instance v0, Lcom/android/server/permission/access/permission/Permission$Companion;
 
     const/4 v1, 0x0
@@ -40,25 +39,18 @@
 .method public constructor <init>(Landroid/content/pm/PermissionInfo;ZII[IZ)V
     .locals 0
 
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-object p1, p0, Lcom/android/server/permission/access/permission/Permission;->permissionInfo:Landroid/content/pm/PermissionInfo;
 
-    .line 26
     iput-boolean p2, p0, Lcom/android/server/permission/access/permission/Permission;->isReconciled:Z
 
-    .line 27
     iput p3, p0, Lcom/android/server/permission/access/permission/Permission;->type:I
 
-    .line 28
     iput p4, p0, Lcom/android/server/permission/access/permission/Permission;->appId:I
 
-    .line 29
     iput-object p5, p0, Lcom/android/server/permission/access/permission/Permission;->gids:[I
 
-    .line 31
     iput-boolean p6, p0, Lcom/android/server/permission/access/permission/Permission;->areGidsPerUser:Z
 
     return-void
@@ -71,7 +63,6 @@
 
     if-eqz p8, :cond_0
 
-    .line 30
     sget-object p5, Llibcore/util/EmptyArray;->INT:[I
 
     :cond_0
@@ -96,7 +87,6 @@
 
     move v4, p4
 
-    .line 24
     invoke-direct/range {v0 .. v6}, Lcom/android/server/permission/access/permission/Permission;-><init>(Landroid/content/pm/PermissionInfo;ZII[IZ)V
 
     return-void
@@ -105,7 +95,6 @@
 .method public static synthetic copy$default(Lcom/android/server/permission/access/permission/Permission;Landroid/content/pm/PermissionInfo;ZII[IZILjava/lang/Object;)Lcom/android/server/permission/access/permission/Permission;
     .locals 4
 
-    .line 0
     and-int/lit8 p8, p7, 0x1
 
     if-eqz p8, :cond_0
@@ -184,7 +173,6 @@
 .method public final copy(Landroid/content/pm/PermissionInfo;ZII[IZ)Lcom/android/server/permission/access/permission/Permission;
     .locals 7
 
-    .line 0
     new-instance p0, Lcom/android/server/permission/access/permission/Permission;
 
     move-object v0, p0
@@ -209,7 +197,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 0
     const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
@@ -296,7 +283,6 @@
 .method public final getAppId()I
     .locals 0
 
-    .line 28
     iget p0, p0, Lcom/android/server/permission/access/permission/Permission;->appId:I
 
     return p0
@@ -305,7 +291,6 @@
 .method public final getAreGidsPerUser()Z
     .locals 0
 
-    .line 31
     iget-boolean p0, p0, Lcom/android/server/permission/access/permission/Permission;->areGidsPerUser:Z
 
     return p0
@@ -314,7 +299,6 @@
 .method public final getGids()[I
     .locals 0
 
-    .line 30
     iget-object p0, p0, Lcom/android/server/permission/access/permission/Permission;->gids:[I
 
     return-object p0
@@ -323,12 +307,10 @@
 .method public final getGidsForUser(I)[I
     .locals 4
 
-    .line 160
     iget-boolean v0, p0, Lcom/android/server/permission/access/permission/Permission;->areGidsPerUser:Z
 
     if-eqz v0, :cond_0
 
-    .line 161
     iget-object v0, p0, Lcom/android/server/permission/access/permission/Permission;->gids:[I
 
     array-length v0, v0
@@ -354,7 +336,6 @@
 
     goto :goto_0
 
-    .line 163
     :cond_0
     iget-object p0, p0, Lcom/android/server/permission/access/permission/Permission;->gids:[I
 
@@ -375,7 +356,6 @@
 .method public final getPermissionInfo()Landroid/content/pm/PermissionInfo;
     .locals 0
 
-    .line 25
     iget-object p0, p0, Lcom/android/server/permission/access/permission/Permission;->permissionInfo:Landroid/content/pm/PermissionInfo;
 
     return-object p0
@@ -384,7 +364,6 @@
 .method public final getType()I
     .locals 0
 
-    .line 27
     iget p0, p0, Lcom/android/server/permission/access/permission/Permission;->type:I
 
     return p0
@@ -393,7 +372,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/permission/access/permission/Permission;->permissionInfo:Landroid/content/pm/PermissionInfo;
 
     invoke-virtual {v0}, Landroid/content/pm/PermissionInfo;->hashCode()I
@@ -463,7 +441,6 @@
 .method public final isReconciled()Z
     .locals 0
 
-    .line 26
     iget-boolean p0, p0, Lcom/android/server/permission/access/permission/Permission;->isReconciled:Z
 
     return p0
@@ -472,7 +449,6 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/permission/access/permission/Permission;->permissionInfo:Landroid/content/pm/PermissionInfo;
 
     iget-boolean v1, p0, Lcom/android/server/permission/access/permission/Permission;->isReconciled:Z

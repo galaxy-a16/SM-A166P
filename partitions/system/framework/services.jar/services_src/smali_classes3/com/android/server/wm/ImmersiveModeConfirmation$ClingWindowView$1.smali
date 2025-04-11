@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;)V
     .locals 0
 
-    .line 354
     iput-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$1;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 1
 
-    .line 357
     iget-object v0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$1;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-static {v0}, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;->-$$Nest$fgetmClingLayout(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;)Landroid/view/ViewGroup;
@@ -48,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 358
     iget-object v0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$1;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-static {v0}, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;->-$$Nest$fgetmClingLayout(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;)Landroid/view/ViewGroup;

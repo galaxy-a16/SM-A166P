@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;)V
     .locals 0
 
-    .line 112
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     invoke-direct {p0}, Landroid/media/tv/TvInputManager$TvInputCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onInputAdded(Ljava/lang/String;)V
     .locals 3
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiLocalDevice;->mService:Lcom/android/server/hdmi/HdmiControlService;
@@ -41,7 +39,6 @@
 
     return-void
 
-    .line 117
     :cond_0
     invoke-virtual {v0}, Landroid/media/tv/TvInputInfo;->getHdmiDeviceInfo()Landroid/hardware/hdmi/HdmiDeviceInfo;
 
@@ -51,7 +48,6 @@
 
     return-void
 
-    .line 119
     :cond_1
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
@@ -61,14 +57,12 @@
 
     invoke-static {v1, p1, v2}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->-$$Nest$maddTvInput(Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;Ljava/lang/String;I)V
 
-    .line 120
     invoke-virtual {v0}, Landroid/hardware/hdmi/HdmiDeviceInfo;->isCecDevice()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     invoke-virtual {v0}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getLogicalAddress()I
@@ -84,7 +78,6 @@
 .method public onInputRemoved(Ljava/lang/String;)V
     .locals 0
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->-$$Nest$mremoveTvInput(Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;Ljava/lang/String;)V

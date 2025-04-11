@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/GestureWakeup;)V
     .locals 0
 
-    .line 123
     iput-object p1, p0, Lcom/android/server/accessibility/GestureWakeup$1;->this$0:Lcom/android/server/accessibility/GestureWakeup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,22 +26,18 @@
 .method public onSemContextChanged(Lcom/samsung/android/hardware/context/SemContextEvent;)V
     .locals 4
 
-    .line 125
     invoke-virtual {p1}, Lcom/samsung/android/hardware/context/SemContextEvent;->getApproachContext()Lcom/samsung/android/hardware/context/SemContextApproach;
 
     move-result-object v0
 
-    .line 126
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
 
-    .line 127
     invoke-virtual {v0}, Lcom/samsung/android/hardware/context/SemContextApproach;->getUserID()I
 
     move-result v0
 
-    .line 128
     iget-object p1, p1, Lcom/samsung/android/hardware/context/SemContextEvent;->semContext:Lcom/samsung/android/hardware/context/SemContext;
 
     invoke-virtual {p1}, Lcom/samsung/android/hardware/context/SemContext;->getType()I
@@ -53,7 +48,6 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 129
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +74,6 @@
 
     move-result-object v3
 
-    .line 130
     invoke-virtual {v2, v3}, Lcom/android/server/accessibility/GestureWakeup;->checkSettingCondition(Landroid/content/Context;)Z
 
     move-result v2
@@ -93,10 +86,8 @@
 
     const-string v2, "GestureWakeup"
 
-    .line 129
     invoke-static {v2, p1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     iget-object p1, p0, Lcom/android/server/accessibility/GestureWakeup$1;->this$0:Lcom/android/server/accessibility/GestureWakeup;
 
     invoke-static {p1}, Lcom/android/server/accessibility/GestureWakeup;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/GestureWakeup;)Landroid/content/Context;
@@ -111,7 +102,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 132
     iget-object p0, p0, Lcom/android/server/accessibility/GestureWakeup$1;->this$0:Lcom/android/server/accessibility/GestureWakeup;
 
     invoke-static {p0}, Lcom/android/server/accessibility/GestureWakeup;->-$$Nest$mlaunchGestureWakeup(Lcom/android/server/accessibility/GestureWakeup;)V

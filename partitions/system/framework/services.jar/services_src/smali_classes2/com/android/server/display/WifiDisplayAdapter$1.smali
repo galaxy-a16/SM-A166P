@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayAdapter;)V
     .locals 0
 
-    .line 175
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public run()V
     .locals 11
 
-    .line 180
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     new-instance v1, Lcom/android/server/display/WifiDisplayController;
 
-    .line 181
     invoke-virtual {v0}, Lcom/android/server/display/DisplayAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -59,7 +56,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->-$$Nest$fputmDisplayController(Lcom/android/server/display/WifiDisplayAdapter;Lcom/android/server/display/WifiDisplayController;)V
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     new-instance v1, Lcom/android/server/display/DlnaController;
@@ -78,7 +74,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->-$$Nest$fputmDlnaController(Lcom/android/server/display/WifiDisplayAdapter;Lcom/android/server/display/DlnaController;)V
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     new-instance v1, Lcom/android/server/display/VolumeController;
@@ -103,7 +98,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/WifiDisplayAdapter;->-$$Nest$fputmVolumeController(Lcom/android/server/display/WifiDisplayAdapter;Lcom/android/server/display/VolumeController;)V
 
-    .line 187
     new-instance v8, Landroid/content/IntentFilter;
 
     const-string v0, "android.server.display.wfd.DISCONNECT"
@@ -112,25 +106,20 @@
 
     const-string v0, "com.samsung.intent.action.ROTATION_CHANGED"
 
-    .line 188
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_START"
 
-    .line 189
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
 
-    .line 190
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.USER_SWITCHED"
 
-    .line 191
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/DisplayAdapter;->getContext()Landroid/content/Context;

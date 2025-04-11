@@ -22,18 +22,14 @@
 .method public constructor <init>(FFF)V
     .locals 2
 
-    .line 1002
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1003
     iput p1, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLux:F
 
-    .line 1004
     iput p2, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mBrightness:F
 
     sub-float/2addr p2, p3
 
-    .line 1006
     iput p2, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mBrightnessOffset:F
 
     const/high16 p2, 0x40200000    # 2.5f
@@ -44,7 +40,6 @@
 
     sub-float v1, p1, v0
 
-    .line 1008
     invoke-static {p3, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result p3
@@ -55,7 +50,6 @@
 
     add-float/2addr p1, v0
 
-    .line 1010
     invoke-static {p2, p1}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
@@ -70,7 +64,6 @@
 .method public compareTo(Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;)I
     .locals 1
 
-    .line 1032
     iget p0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLux:F
 
     iget p1, p1, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLux:F
@@ -101,7 +94,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 993
     check-cast p1, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->compareTo(Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;)I
@@ -114,7 +106,6 @@
 .method public isInSameBoundary(F)Z
     .locals 1
 
-    .line 1015
     iget v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLowerBoundary:F
 
     cmpg-float v0, v0, p1
@@ -140,7 +131,6 @@
 .method public isInSameBoundary(Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;)Z
     .locals 1
 
-    .line 1023
     iget v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLowerBoundary:F
 
     iget p1, p1, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLux:F
@@ -168,7 +158,6 @@
 .method public toString()Ljava/lang/String;
     .locals 8
 
-    .line 1052
     iget v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mBrightness:F
 
     iget v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mBrightnessOffset:F
@@ -179,7 +168,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 1055
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
@@ -188,7 +176,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 1056
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
@@ -197,28 +184,24 @@
 
     mul-float/2addr v0, v1
 
-    .line 1057
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v4
 
     iget v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLowerBoundary:F
 
-    .line 1058
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v5
 
     iget v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLux:F
 
-    .line 1059
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v6
 
     iget p0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mUpperBoundary:F
 
-    .line 1060
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v7
@@ -229,7 +212,6 @@
 
     const-string v0, "%5.1f -> %5.1f (%+6.1f) @ %6.1f < %6.1f < %6.1f"
 
-    .line 1054
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

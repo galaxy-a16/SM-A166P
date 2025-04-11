@@ -25,7 +25,6 @@
 .method public constructor <init>(Landroid/content/Context;IILcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
     .locals 2
 
-    .line 47
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -36,10 +35,8 @@
 
     invoke-direct {p0, p3, v0, p4}, Lcom/android/server/accessibility/gestures/GestureMatcher;-><init>(ILandroid/os/Handler;Lcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
 
-    .line 48
     iput p2, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mTargetTaps:I
 
-    .line 49
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object p2
@@ -50,7 +47,6 @@
 
     iput p2, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mDoubleTapSlop:I
 
-    .line 52
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object p1
@@ -63,21 +59,18 @@
 
     iput p1, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mTouchSlop:I
 
-    .line 56
     invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mTapTimeout:I
 
-    .line 57
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mDoubleTapTimeout:I
 
-    .line 58
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/MultiTap;->clear()V
 
     return-void
@@ -90,18 +83,14 @@
 
     const/4 v0, 0x0
 
-    .line 63
     iput v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mCurrentTaps:I
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 64
     iput v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseX:F
 
-    .line 65
     iput v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseY:F
 
-    .line 66
     invoke-super {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->clear()V
 
     return-void
@@ -110,7 +99,6 @@
 .method public getGestureName()Ljava/lang/String;
     .locals 2
 
-    .line 130
     iget v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mTargetTaps:I
 
     const/4 v1, 0x2
@@ -121,7 +109,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 136
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -158,7 +145,6 @@
 .method public final isInsideSlop(Landroid/view/MotionEvent;I)Z
     .locals 3
 
-    .line 141
     iget v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseX:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -167,7 +153,6 @@
 
     sub-float/2addr v0, v1
 
-    .line 142
     iget p0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseY:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
@@ -195,7 +180,6 @@
 
     float-to-double p0, p0
 
-    .line 146
     invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide p0
@@ -218,10 +202,8 @@
 .method public onDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 2
 
-    .line 71
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelAfterTapTimeout(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
-    .line 72
     iget v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseX:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
@@ -238,21 +220,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 73
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseX:F
 
-    .line 74
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseY:F
 
-    .line 76
     :cond_0
     iget v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mDoubleTapSlop:I
 
@@ -262,10 +241,8 @@
 
     if-nez v0, :cond_1
 
-    .line 77
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
-    .line 79
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -273,14 +250,12 @@
 
     iput v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseX:F
 
-    .line 80
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseY:F
 
-    .line 81
     iget v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mCurrentTaps:I
 
     add-int/lit8 v0, v0, 0x1
@@ -289,7 +264,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 86
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->startGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     :cond_2
@@ -299,7 +273,6 @@
 .method public onMove(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 1
 
-    .line 113
     iget v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mTouchSlop:I
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/accessibility/gestures/MultiTap;->isInsideSlop(Landroid/view/MotionEvent;I)Z
@@ -308,7 +281,6 @@
 
     if-nez v0, :cond_0
 
-    .line 114
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     :cond_0
@@ -318,7 +290,6 @@
 .method public onPointerDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 120
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -327,7 +298,6 @@
 .method public onPointerUp(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 125
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -336,10 +306,8 @@
 .method public onUp(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 2
 
-    .line 92
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelAfterDoubleTapTimeout(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
-    .line 93
     iget v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mTouchSlop:I
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/accessibility/gestures/MultiTap;->isInsideSlop(Landroid/view/MotionEvent;I)Z
@@ -348,10 +316,8 @@
 
     if-nez v0, :cond_0
 
-    .line 94
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
-    .line 96
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->getState()I
 
@@ -369,13 +335,11 @@
 
     goto :goto_0
 
-    .line 107
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     goto :goto_1
 
-    .line 97
     :cond_2
     :goto_0
     iget v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mCurrentTaps:I
@@ -384,17 +348,14 @@
 
     iput v0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mCurrentTaps:I
 
-    .line 98
     iget v1, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mTargetTaps:I
 
     if-ne v0, v1, :cond_3
 
-    .line 100
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->completeGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
 
-    .line 104
     :cond_3
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelAfterDoubleTapTimeout(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
@@ -405,7 +366,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 152
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,7 +390,6 @@
 
     iget v1, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseX:F
 
-    .line 156
     invoke-static {v1}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object v1
@@ -443,7 +402,6 @@
 
     iget p0, p0, Lcom/android/server/accessibility/gestures/MultiTap;->mBaseY:F
 
-    .line 158
     invoke-static {p0}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object p0

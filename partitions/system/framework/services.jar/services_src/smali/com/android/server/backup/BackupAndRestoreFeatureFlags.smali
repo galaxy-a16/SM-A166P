@@ -13,7 +13,6 @@
 
     const-string v3, "backup_and_restore"
 
-    .line 50
     invoke-static {v3, v0, v1, v2}, Landroid/provider/DeviceConfig;->getLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -30,7 +29,6 @@
 
     const-string v3, "backup_and_restore"
 
-    .line 41
     invoke-static {v3, v0, v1, v2}, Landroid/provider/DeviceConfig;->getLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -47,7 +45,6 @@
 
     const-string v2, "backup_and_restore"
 
-    .line 75
     invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
@@ -64,7 +61,6 @@
 
     const-string v2, "backup_and_restore"
 
-    .line 62
     invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
@@ -81,7 +77,6 @@
 
     const-string v2, "backup_and_restore"
 
-    .line 89
     invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0

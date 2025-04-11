@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/telecom/InternalServiceRepository;)V
     .locals 0
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/telecom/InternalServiceRepository$1;->this$0:Lcom/android/server/telecom/InternalServiceRepository;
 
     invoke-direct {p0}, Lcom/android/internal/telecom/IDeviceIdleControllerAdapter$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public exemptAppTemporarilyForEvent(Ljava/lang/String;JILjava/lang/String;)V
     .locals 9
 
-    .line 42
     iget-object p0, p0, Lcom/android/server/telecom/InternalServiceRepository$1;->this$0:Lcom/android/server/telecom/InternalServiceRepository;
 
     invoke-static {p0}, Lcom/android/server/telecom/InternalServiceRepository;->-$$Nest$fgetmDeviceIdleController(Lcom/android/server/telecom/InternalServiceRepository;)Lcom/android/server/DeviceIdleInternal;

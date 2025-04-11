@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/android/server/location/nsflp/LocationRequestInfo;
     .locals 0
 
-    .line 410
     new-instance p0, Lcom/android/server/location/nsflp/LocationRequestInfo;
 
     invoke-direct {p0, p1}, Lcom/android/server/location/nsflp/LocationRequestInfo;-><init>(Landroid/os/Parcel;)V
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 407
     invoke-virtual {p0, p1}, Lcom/android/server/location/nsflp/LocationRequestInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/server/location/nsflp/LocationRequestInfo;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Lcom/android/server/location/nsflp/LocationRequestInfo;
     .locals 0
 
-    .line 415
     new-array p0, p1, [Lcom/android/server/location/nsflp/LocationRequestInfo;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 407
     invoke-virtual {p0, p1}, Lcom/android/server/location/nsflp/LocationRequestInfo$1;->newArray(I)[Lcom/android/server/location/nsflp/LocationRequestInfo;
 
     move-result-object p0

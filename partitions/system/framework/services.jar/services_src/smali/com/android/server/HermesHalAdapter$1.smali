@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/HermesHalAdapter;)V
     .locals 0
 
-    .line 82
     iput-object p1, p0, Lcom/android/server/HermesHalAdapter$1;->this$0:Lcom/android/server/HermesHalAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/HermesHalAdapter$1;->this$0:Lcom/android/server/HermesHalAdapter;
 
     invoke-static {v0}, Lcom/android/server/HermesHalAdapter;->-$$Nest$fgethc(Lcom/android/server/HermesHalAdapter;)Lvendor/samsung/hardware/security/hermes/ISehHermesCommand;

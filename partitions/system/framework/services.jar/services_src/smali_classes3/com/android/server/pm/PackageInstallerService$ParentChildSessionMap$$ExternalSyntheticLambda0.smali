@@ -20,7 +20,6 @@
 .method public final applyAsLong(Ljava/lang/Object;)J
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {p1}, Lcom/android/server/pm/PackageInstallerService$ParentChildSessionMap;->$r8$lambda$QYLURLl7_-3kKJrb46t4_FpjdQg(Lcom/android/server/pm/PackageInstallerSession;)J

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/am/PhantomProcessRecord;
 
     invoke-static {p1}, Lcom/android/server/am/PhantomProcessList;->$r8$lambda$TSwelukdwFuHqPH3F_JONI95Vcc(Lcom/android/server/am/PhantomProcessRecord;)V

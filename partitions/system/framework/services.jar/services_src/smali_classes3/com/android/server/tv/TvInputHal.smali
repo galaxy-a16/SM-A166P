@@ -48,7 +48,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 36
     const-class v0, Lcom/android/server/tv/TvInputHal;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -63,10 +62,8 @@
 .method public constructor <init>(Lcom/android/server/tv/TvInputHal$Callback;)V
     .locals 2
 
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -75,27 +72,22 @@
 
     const-wide/16 v0, 0x0
 
-    .line 72
     iput-wide v0, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
-    .line 75
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigGenerations:Landroid/util/SparseIntArray;
 
-    .line 76
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigs:Landroid/util/SparseArray;
 
-    .line 79
     iput-object p1, p0, Lcom/android/server/tv/TvInputHal;->mCallback:Lcom/android/server/tv/TvInputHal$Callback;
 
-    .line 80
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1, p0}, Landroid/os/Handler;-><init>(Landroid/os/Handler$Callback;)V
@@ -128,12 +120,10 @@
 .method public addOrUpdateStream(ILandroid/view/Surface;Landroid/media/tv/TvStreamConfig;)I
     .locals 5
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/tv/TvInputHal;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 91
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
@@ -143,14 +133,12 @@
 
     if-nez v1, :cond_0
 
-    .line 92
     monitor-exit v0
 
     const/4 p0, -0x1
 
     return p0
 
-    .line 94
     :cond_0
     iget-object v1, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigGenerations:Landroid/util/SparseIntArray;
 
@@ -160,21 +148,18 @@
 
     move-result v1
 
-    .line 95
     invoke-virtual {p3}, Landroid/media/tv/TvStreamConfig;->getGeneration()I
 
     move-result v3
 
     if-eq v1, v3, :cond_1
 
-    .line 96
     monitor-exit v0
 
     const/4 p0, -0x2
 
     return p0
 
-    .line 98
     :cond_1
     iget-wide v3, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
@@ -188,12 +173,10 @@
 
     if-nez p0, :cond_2
 
-    .line 99
     monitor-exit v0
 
     return v2
 
-    .line 101
     :cond_2
     monitor-exit v0
 
@@ -204,7 +187,6 @@
     :catchall_0
     move-exception p0
 
-    .line 103
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -215,12 +197,10 @@
 .method public close()V
     .locals 5
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/tv/TvInputHal;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 144
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
@@ -230,10 +210,8 @@
 
     if-eqz p0, :cond_0
 
-    .line 145
     invoke-static {v1, v2}, Lcom/android/server/tv/TvInputHal;->nativeClose(J)V
 
-    .line 147
     :cond_0
     monitor-exit v0
 
@@ -252,7 +230,6 @@
 .method public final deviceAvailableFromNative(Landroid/media/tv/TvInputHardwareInfo;)V
     .locals 1
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mHandler:Landroid/os/Handler;
 
     const/4 v0, 0x1
@@ -269,7 +246,6 @@
 .method public final deviceUnavailableFromNative(I)V
     .locals 2
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mHandler:Landroid/os/Handler;
 
     const/4 v0, 0x2
@@ -288,17 +264,14 @@
 .method public final firstFrameCapturedFromNative(II)V
     .locals 1
 
-    .line 174
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mHandler:Landroid/os/Handler;
 
     const/4 v0, 0x3
 
-    .line 175
     invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 174
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
@@ -307,7 +280,6 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 4
 
-    .line 186
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -330,7 +302,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 241
     sget-object p0, Lcom/android/server/tv/TvInputHal;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -353,56 +324,44 @@
 
     return p0
 
-    .line 233
     :cond_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 234
     iget v2, p1, Landroid/os/Message;->arg2:I
 
-    .line 235
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/os/Bundle;
 
-    .line 236
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mCallback:Lcom/android/server/tv/TvInputHal$Callback;
 
     invoke-interface {p0, v0, v2, p1}, Lcom/android/server/tv/TvInputHal$Callback;->onTvMessage(IILandroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 226
     :cond_1
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 227
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    .line 228
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mCallback:Lcom/android/server/tv/TvInputHal$Callback;
 
     invoke-interface {p0, v0, p1}, Lcom/android/server/tv/TvInputHal$Callback;->onFirstFrameCaptured(II)V
 
     goto :goto_0
 
-    .line 212
     :cond_2
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 213
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    .line 214
     iget-object v2, p0, Lcom/android/server/tv/TvInputHal;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 218
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/tv/TvInputHal;->retrieveStreamConfigsLocked(I)V
 
-    .line 219
     iget-object v3, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigs:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -411,12 +370,10 @@
 
     check-cast v3, [Landroid/media/tv/TvStreamConfig;
 
-    .line 220
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 221
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mCallback:Lcom/android/server/tv/TvInputHal$Callback;
 
     invoke-interface {p0, v0, v3, p1}, Lcom/android/server/tv/TvInputHal$Callback;->onStreamConfigurationChanged(I[Landroid/media/tv/TvStreamConfig;I)V
@@ -426,7 +383,6 @@
     :catchall_0
     move-exception p0
 
-    .line 220
     :try_start_1
     monitor-exit v2
     :try_end_1
@@ -434,29 +390,24 @@
 
     throw p0
 
-    .line 202
     :cond_3
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 206
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mCallback:Lcom/android/server/tv/TvInputHal$Callback;
 
     invoke-interface {p0, p1}, Lcom/android/server/tv/TvInputHal$Callback;->onDeviceUnavailable(I)V
 
     goto :goto_0
 
-    .line 189
     :cond_4
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/media/tv/TvInputHardwareInfo;
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/tv/TvInputHal;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 191
     :try_start_2
     invoke-virtual {p1}, Landroid/media/tv/TvInputHardwareInfo;->getDeviceId()I
 
@@ -464,7 +415,6 @@
 
     invoke-virtual {p0, v2}, Lcom/android/server/tv/TvInputHal;->retrieveStreamConfigsLocked(I)V
 
-    .line 195
     iget-object v2, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigs:Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Landroid/media/tv/TvInputHardwareInfo;->getDeviceId()I
@@ -477,12 +427,10 @@
 
     check-cast v2, [Landroid/media/tv/TvStreamConfig;
 
-    .line 196
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 197
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mCallback:Lcom/android/server/tv/TvInputHal$Callback;
 
     invoke-interface {p0, p1, v2}, Lcom/android/server/tv/TvInputHal$Callback;->onDeviceAvailable(Landroid/media/tv/TvInputHardwareInfo;[Landroid/media/tv/TvStreamConfig;)V
@@ -493,7 +441,6 @@
     :catchall_1
     move-exception p0
 
-    .line 196
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -505,12 +452,10 @@
 .method public init()V
     .locals 3
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/tv/TvInputHal;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 85
     :try_start_0
     iget-object v1, p0, Lcom/android/server/tv/TvInputHal;->mHandler:Landroid/os/Handler;
 
@@ -528,7 +473,6 @@
 
     iput-wide v1, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
-    .line 86
     monitor-exit v0
 
     return-void
@@ -546,12 +490,10 @@
 .method public removeStream(ILandroid/media/tv/TvStreamConfig;)I
     .locals 5
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/tv/TvInputHal;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 127
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
@@ -561,14 +503,12 @@
 
     if-nez v1, :cond_0
 
-    .line 128
     monitor-exit v0
 
     const/4 p0, -0x1
 
     return p0
 
-    .line 130
     :cond_0
     iget-object v1, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigGenerations:Landroid/util/SparseIntArray;
 
@@ -578,21 +518,18 @@
 
     move-result v1
 
-    .line 131
     invoke-virtual {p2}, Landroid/media/tv/TvStreamConfig;->getGeneration()I
 
     move-result v3
 
     if-eq v1, v3, :cond_1
 
-    .line 132
     monitor-exit v0
 
     const/4 p0, -0x2
 
     return p0
 
-    .line 134
     :cond_1
     iget-wide v3, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
@@ -606,12 +543,10 @@
 
     if-nez p0, :cond_2
 
-    .line 135
     monitor-exit v0
 
     return v2
 
-    .line 137
     :cond_2
     monitor-exit v0
 
@@ -622,7 +557,6 @@
     :catchall_0
     move-exception p0
 
-    .line 139
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -633,7 +567,6 @@
 .method public final retrieveStreamConfigsLocked(I)V
     .locals 4
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigGenerations:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x0
@@ -644,7 +577,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigs:Landroid/util/SparseArray;
 
     iget-wide v2, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
@@ -655,7 +587,6 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigGenerations:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
@@ -666,12 +597,10 @@
 .method public setTvMessageEnabled(ILandroid/media/tv/TvStreamConfig;IZ)I
     .locals 9
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/tv/TvInputHal;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 109
     :try_start_0
     iget-wide v1, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
@@ -681,14 +610,12 @@
 
     if-nez v1, :cond_0
 
-    .line 110
     monitor-exit v0
 
     const/4 p0, -0x1
 
     return p0
 
-    .line 112
     :cond_0
     iget-object v1, p0, Lcom/android/server/tv/TvInputHal;->mStreamConfigGenerations:Landroid/util/SparseIntArray;
 
@@ -698,21 +625,18 @@
 
     move-result v1
 
-    .line 113
     invoke-virtual {p2}, Landroid/media/tv/TvStreamConfig;->getGeneration()I
 
     move-result v3
 
     if-eq v1, v3, :cond_1
 
-    .line 114
     monitor-exit v0
 
     const/4 p0, -0x2
 
     return p0
 
-    .line 116
     :cond_1
     iget-wide v3, p0, Lcom/android/server/tv/TvInputHal;->mPtr:J
 
@@ -732,12 +656,10 @@
 
     if-nez p0, :cond_2
 
-    .line 118
     monitor-exit v0
 
     return v2
 
-    .line 120
     :cond_2
     monitor-exit v0
 
@@ -748,7 +670,6 @@
     :catchall_0
     move-exception p0
 
-    .line 122
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -759,7 +680,6 @@
 .method public final streamConfigsChangedFromNative(II)V
     .locals 1
 
-    .line 169
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mHandler:Landroid/os/Handler;
 
     const/4 v0, 0x3
@@ -768,7 +688,6 @@
 
     move-result-object p0
 
-    .line 170
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -777,7 +696,6 @@
 .method public final tvMessageReceivedFromNative(IILandroid/os/Bundle;)V
     .locals 1
 
-    .line 179
     iget-object p0, p0, Lcom/android/server/tv/TvInputHal;->mHandler:Landroid/os/Handler;
 
     const/4 v0, 0x5

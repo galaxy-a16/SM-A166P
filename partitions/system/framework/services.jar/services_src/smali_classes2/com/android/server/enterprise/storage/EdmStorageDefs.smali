@@ -17,12 +17,10 @@
 .method public static constructor <clinit>()V
     .locals 17
 
-    .line 170
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageDefs$1;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/storage/EdmStorageDefs$1;-><init>()V
 
-    .line 171
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -61,7 +59,6 @@
 
     const-string/jumbo v16, "status"
 
-    .line 1920
     filled-new-array/range {v1 .. v16}, [Ljava/lang/String;
 
     move-result-object v0
@@ -72,7 +69,6 @@
 
     const-string v1, "adminUid"
 
-    .line 1939
     filled-new-array {v1, v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -83,7 +79,6 @@
 
     const-string v2, "hostName"
 
-    .line 1944
     filled-new-array {v1, v0, v2}, [Ljava/lang/String;
 
     move-result-object v0

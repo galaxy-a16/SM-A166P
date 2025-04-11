@@ -16,14 +16,12 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService;)V
     .locals 0
 
-    .line 7158
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 7160
     iput p1, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->mBaseState:I
 
     return-void
@@ -34,7 +32,6 @@
 .method public onBaseStateChanged(I)V
     .locals 0
 
-    .line 7198
     iput p1, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->mBaseState:I
 
     return-void
@@ -43,7 +40,6 @@
 .method public onStateChanged(I)V
     .locals 6
 
-    .line 7164
     iget v0, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->mBaseState:I
 
     const/4 v1, 0x1
@@ -57,7 +53,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 7165
     :goto_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -67,7 +62,6 @@
 
     monitor-enter v2
 
-    .line 7174
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -81,10 +75,8 @@
 
     move-result-object v3
 
-    .line 7175
     iput p1, v3, Landroid/os/Message;->arg1:I
 
-    .line 7176
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {v4}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/display/DisplayManagerService;)Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;
@@ -93,19 +85,16 @@
 
     invoke-virtual {v4, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 7180
     sget-boolean v3, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_DUAL_DISPLAY:Z
 
     if-eqz v3, :cond_1
 
-    .line 7181
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {v3}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fgetmDualScreenPolicy(Lcom/android/server/display/DisplayManagerService;)I
 
     move-result v3
 
-    .line 7182
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {p1}, Lcom/android/server/power/PowerManagerUtil;->getDualScreenPolicy(I)I
@@ -114,7 +103,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fputmDualScreenPolicy(Lcom/android/server/display/DisplayManagerService;I)V
 
-    .line 7183
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {v4}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fgetmDualScreenPolicy(Lcom/android/server/display/DisplayManagerService;)I
@@ -135,12 +123,10 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 7186
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {v3, v1}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fputmNeedSkipDozeState(Lcom/android/server/display/DisplayManagerService;Z)V
 
-    .line 7191
     :cond_1
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$DeviceStateListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -148,10 +134,8 @@
 
     move-result-object p0
 
-    .line 7192
     invoke-virtual {p0, p1, v0}, Lcom/android/server/display/LogicalDisplayMapper;->setDeviceStateLocked(IZ)V
 
-    .line 7193
     monitor-exit v2
 
     return-void

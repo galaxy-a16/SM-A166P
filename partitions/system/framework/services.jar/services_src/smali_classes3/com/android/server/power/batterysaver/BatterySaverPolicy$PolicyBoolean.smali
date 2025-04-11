@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$mget(Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->get()Z
 
     move-result p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$minitialize(Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->initialize(Z)V
 
     return-void
@@ -35,12 +33,10 @@
 .method public constructor <init>(Lcom/android/server/power/batterysaver/BatterySaverPolicy;Ljava/lang/String;)V
     .locals 0
 
-    .line 1271
     iput-object p1, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->this$0:Lcom/android/server/power/batterysaver/BatterySaverPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1272
     iput-object p2, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->mDebugName:Ljava/lang/String;
 
     return-void
@@ -49,7 +45,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/batterysaver/BatterySaverPolicy;Ljava/lang/String;Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;-><init>(Lcom/android/server/power/batterysaver/BatterySaverPolicy;Ljava/lang/String;)V
 
     return-void
@@ -60,7 +55,6 @@
 .method public final get()Z
     .locals 1
 
-    .line 1283
     iget-object v0, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->this$0:Lcom/android/server/power/batterysaver/BatterySaverPolicy;
 
     invoke-static {v0}, Lcom/android/server/power/batterysaver/BatterySaverPolicy;->-$$Nest$fgetmLock(Lcom/android/server/power/batterysaver/BatterySaverPolicy;)Ljava/lang/Object;
@@ -69,7 +63,6 @@
 
     monitor-enter v0
 
-    .line 1284
     :try_start_0
     iget-boolean p0, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->mValue:Z
 
@@ -80,7 +73,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1285
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -91,7 +83,6 @@
 .method public final initialize(Z)V
     .locals 1
 
-    .line 1277
     iget-object v0, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->this$0:Lcom/android/server/power/batterysaver/BatterySaverPolicy;
 
     invoke-static {v0}, Lcom/android/server/power/batterysaver/BatterySaverPolicy;->-$$Nest$fgetmLock(Lcom/android/server/power/batterysaver/BatterySaverPolicy;)Ljava/lang/Object;
@@ -100,11 +91,9 @@
 
     monitor-enter v0
 
-    .line 1278
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->mValue:Z
 
-    .line 1279
     monitor-exit v0
 
     return-void
@@ -122,7 +111,6 @@
 .method public update(Z)V
     .locals 4
 
-    .line 1291
     iget-object v0, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->this$0:Lcom/android/server/power/batterysaver/BatterySaverPolicy;
 
     invoke-static {v0}, Lcom/android/server/power/batterysaver/BatterySaverPolicy;->-$$Nest$fgetmLock(Lcom/android/server/power/batterysaver/BatterySaverPolicy;)Ljava/lang/Object;
@@ -131,7 +119,6 @@
 
     monitor-enter v0
 
-    .line 1292
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->mValue:Z
 
@@ -139,7 +126,6 @@
 
     const-string v1, "BatterySaverPolicy"
 
-    .line 1293
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,20 +150,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1294
     iput-boolean p1, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->mValue:Z
 
-    .line 1295
     iget-object p1, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->this$0:Lcom/android/server/power/batterysaver/BatterySaverPolicy;
 
     invoke-static {p1}, Lcom/android/server/power/batterysaver/BatterySaverPolicy;->-$$Nest$mupdatePolicyDependenciesLocked(Lcom/android/server/power/batterysaver/BatterySaverPolicy;)V
 
-    .line 1296
     iget-object p0, p0, Lcom/android/server/power/batterysaver/BatterySaverPolicy$PolicyBoolean;->this$0:Lcom/android/server/power/batterysaver/BatterySaverPolicy;
 
     invoke-static {p0}, Lcom/android/server/power/batterysaver/BatterySaverPolicy;->-$$Nest$mmaybeNotifyListenersOfPolicyChange(Lcom/android/server/power/batterysaver/BatterySaverPolicy;)V
 
-    .line 1298
     :cond_0
     monitor-exit v0
 

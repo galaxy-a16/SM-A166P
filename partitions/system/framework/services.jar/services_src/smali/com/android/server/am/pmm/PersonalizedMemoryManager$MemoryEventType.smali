@@ -23,7 +23,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
     .locals 4
 
-    .line 71
     sget-object v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->LMKD_KILL:Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     sget-object v1, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->PREV_PROC_DIED:Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
@@ -42,7 +41,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 72
     new-instance v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     const-string v1, "LMKD_KILL"
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->LMKD_KILL:Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
-    .line 73
     new-instance v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     const-string v1, "PREV_PROC_DIED"
@@ -64,7 +61,6 @@
 
     sput-object v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->PREV_PROC_DIED:Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
-    .line 74
     new-instance v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     const-string v1, "DEVICE_IDLE"
@@ -75,7 +71,6 @@
 
     sput-object v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->DEVICE_IDLE:Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
-    .line 75
     new-instance v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     const-string v1, "APP_LAUNCHED"
@@ -86,7 +81,6 @@
 
     sput-object v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->APP_LAUNCHED:Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
-    .line 71
     invoke-static {}, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->$values()[Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     move-result-object v0
@@ -99,10 +93,8 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 78
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 79
     iput-object p3, p0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->mTypeName:Ljava/lang/String;
 
     return-void
@@ -111,7 +103,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
     .locals 1
 
-    .line 71
     const-class v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,7 +117,6 @@
 .method public static values()[Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
     .locals 1
 
-    .line 71
     sget-object v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->$VALUES:[Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;
 
     invoke-virtual {v0}, [Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->clone()Ljava/lang/Object;
@@ -143,7 +133,6 @@
 .method public getTypeName()Ljava/lang/String;
     .locals 0
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->mTypeName:Ljava/lang/String;
 
     return-object p0
@@ -152,7 +141,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/am/pmm/PersonalizedMemoryManager$MemoryEventType;->getTypeName()Ljava/lang/String;
 
     move-result-object p0

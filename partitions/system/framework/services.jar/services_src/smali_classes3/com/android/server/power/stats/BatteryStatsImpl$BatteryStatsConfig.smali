@@ -11,15 +11,12 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig$Builder;)V
     .locals 1
 
-    .line 505
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 507
     invoke-static {p1}, Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig$Builder;->-$$Nest$fgetmResetOnUnplugHighBatteryLevel(Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig$Builder;)Z
 
     move-result v0
 
-    .line 510
     invoke-static {p1}, Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig$Builder;->-$$Nest$fgetmResetOnUnplugAfterSignificantCharge(Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig$Builder;)Z
 
     move-result p1
@@ -28,7 +25,6 @@
 
     or-int/lit8 v0, v0, 0x2
 
-    .line 513
     :cond_0
     iput v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig;->mFlags:I
 
@@ -38,7 +34,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig$Builder;Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig;-><init>(Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig$Builder;)V
 
     return-void
@@ -49,7 +44,6 @@
 .method public shouldResetOnUnplugAfterSignificantCharge()Z
     .locals 1
 
-    .line 530
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig;->mFlags:I
 
     const/4 v0, 0x2
@@ -72,7 +66,6 @@
 .method public shouldResetOnUnplugHighBatteryLevel()Z
     .locals 1
 
-    .line 521
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$BatteryStatsConfig;->mFlags:I
 
     const/4 v0, 0x1

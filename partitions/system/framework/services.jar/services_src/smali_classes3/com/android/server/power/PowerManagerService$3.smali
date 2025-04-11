@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;Ljava/lang/String;IZ)V
     .locals 0
 
-    .line 5971
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-object p2, p0, Lcom/android/server/power/PowerManagerService$3;->val$reason:Ljava/lang/String;
@@ -39,13 +38,11 @@
 .method public run()V
     .locals 3
 
-    .line 5974
     monitor-enter p0
 
     :try_start_0
     const-string/jumbo v0, "silent.sec"
 
-    .line 5976
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$3;->val$reason:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -54,7 +51,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5978
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5979
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
     move-result-object v0
@@ -78,7 +73,6 @@
 
     const-wide/16 v0, 0x7d0
 
-    .line 5981
     :try_start_1
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_1
@@ -95,13 +89,10 @@
 
     const-string v2, "Failed to sleep"
 
-    .line 5983
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5984
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 5988
     :cond_0
     :goto_0
     new-instance v0, Ljava/lang/NullPointerException;
@@ -112,7 +103,6 @@
 
     throw v0
 
-    .line 5990
     :cond_1
     iget v0, p0, Lcom/android/server/power/PowerManagerService$3;->val$haltMode:I
 
@@ -120,7 +110,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 5991
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getUiContext()Landroid/content/Context;
@@ -138,7 +127,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 5993
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getUiContext()Landroid/content/Context;
@@ -153,7 +141,6 @@
 
     goto :goto_1
 
-    .line 5995
     :cond_3
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -167,7 +154,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/power/ShutdownThread;->shutdown(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 5997
     :goto_1
     monitor-exit p0
 

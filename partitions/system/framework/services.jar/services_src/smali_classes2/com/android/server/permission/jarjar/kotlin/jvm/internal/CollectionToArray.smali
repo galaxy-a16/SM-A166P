@@ -15,7 +15,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 14
     sput-object v0, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/CollectionToArray;->EMPTY:[Ljava/lang/Object;
 
     return-void
@@ -28,26 +27,22 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 83
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 21
     :goto_0
     sget-object p0, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/CollectionToArray;->EMPTY:[Ljava/lang/Object;
 
     goto :goto_3
 
-    .line 85
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    .line 86
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
@@ -56,7 +51,6 @@
 
     goto :goto_0
 
-    .line 22
     :cond_1
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -65,19 +59,16 @@
     :goto_1
     add-int/lit8 v2, v1, 0x1
 
-    .line 91
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     aput-object v3, v0, v1
 
-    .line 92
     array-length v1, v0
 
     if-lt v2, v1, :cond_5
 
-    .line 93
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
@@ -103,7 +94,6 @@
 
     goto :goto_2
 
-    .line 99
     :cond_3
     new-instance p0, Ljava/lang/OutOfMemoryError;
 
@@ -111,7 +101,6 @@
 
     throw p0
 
-    .line 102
     :cond_4
     :goto_2
     invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
@@ -124,7 +113,6 @@
 
     goto :goto_4
 
-    .line 104
     :cond_5
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -132,7 +120,6 @@
 
     if-nez v1, :cond_6
 
-    .line 23
     invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p0
@@ -158,10 +145,8 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 30
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 105
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
     move-result v0
@@ -172,7 +157,6 @@
 
     if-nez v0, :cond_0
 
-    .line 34
     array-length p0, p1
 
     if-lez p0, :cond_8
@@ -181,20 +165,17 @@
 
     goto/16 :goto_2
 
-    .line 107
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    .line 108
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 34
     array-length p0, p1
 
     if-lez p0, :cond_8
@@ -203,7 +184,6 @@
 
     goto :goto_2
 
-    .line 39
     :cond_1
     array-length v3, p1
 
@@ -235,19 +215,16 @@
     :goto_0
     add-int/lit8 v3, v2, 0x1
 
-    .line 113
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     aput-object v4, v0, v2
 
-    .line 114
     array-length v2, v0
 
     if-lt v3, v2, :cond_6
 
-    .line 115
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -273,7 +250,6 @@
 
     goto :goto_1
 
-    .line 121
     :cond_4
     new-instance p0, Ljava/lang/OutOfMemoryError;
 
@@ -281,7 +257,6 @@
 
     throw p0
 
-    .line 124
     :cond_5
     :goto_1
     invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
@@ -294,7 +269,6 @@
 
     goto :goto_3
 
-    .line 126
     :cond_6
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -304,12 +278,10 @@
 
     if-ne v0, p1, :cond_7
 
-    .line 43
     aput-object v1, p1, v3
 
     goto :goto_2
 
-    .line 46
     :cond_7
     invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 

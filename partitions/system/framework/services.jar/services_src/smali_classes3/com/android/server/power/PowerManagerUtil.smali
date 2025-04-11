@@ -153,7 +153,6 @@
 
     const-string v1, "NONE"
 
-    .line 78
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -166,7 +165,6 @@
 
     const-string/jumbo v1, "o1"
 
-    .line 79
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -207,7 +205,6 @@
 
     const-string/jumbo v4, "r0"
 
-    .line 80
     invoke-virtual {v0, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -246,7 +243,6 @@
 
     const-string v7, "a53x"
 
-    .line 81
     invoke-virtual {v0, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v7
@@ -255,7 +251,6 @@
 
     const-string v8, "a23xq"
 
-    .line 82
     invoke-virtual {v0, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v8
@@ -264,7 +259,6 @@
 
     const-string v8, "dm1"
 
-    .line 83
     invoke-virtual {v0, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v9
@@ -303,7 +297,6 @@
 
     const-string v11, "e1"
 
-    .line 84
     invoke-virtual {v0, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v11
@@ -342,7 +335,6 @@
 
     const-string v12, "5"
 
-    .line 88
     invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v12
@@ -360,7 +352,6 @@
     :cond_8
     move v13, v2
 
-    .line 89
     :goto_8
     sput-boolean v13, Lcom/android/server/power/PowerManagerUtil;->USE_PERSONAL_AUTO_BRIGHTNESS:Z
 
@@ -375,7 +366,6 @@
     :cond_9
     move v14, v2
 
-    .line 90
     :goto_9
     sput-boolean v14, Lcom/android/server/power/PowerManagerUtil;->USE_PERSONAL_AUTO_BRIGHTNESS_V3:Z
 
@@ -390,23 +380,19 @@
     :cond_a
     move v12, v2
 
-    .line 91
     :goto_a
     sput-boolean v12, Lcom/android/server/power/PowerManagerUtil;->USE_PERSONAL_AUTO_BRIGHTNESS_V4:Z
 
-    .line 92
     sput-boolean v13, Lcom/android/server/power/PowerManagerUtil;->USE_SLOW_AUTO_BRIGHTNESS_CHANGE:Z
 
     xor-int/lit8 v12, v5, 0x1
 
-    .line 94
     sput-boolean v12, Lcom/android/server/power/PowerManagerUtil;->USE_PERMISSIBLE_RATIO_FOR_LONGTERM_MODEL:Z
 
     const-string v12, "Unknown"
 
     const-string/jumbo v13, "ro.boot.debug_level"
 
-    .line 98
     invoke-static {v13}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
@@ -419,7 +405,6 @@
 
     const-string v14, "0x4f4c"
 
-    .line 99
     invoke-static {v13}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
@@ -434,7 +419,6 @@
 
     const-string/jumbo v15, "true"
 
-    .line 100
     invoke-static {v14, v15}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
@@ -460,7 +444,6 @@
     :cond_b
     move v15, v2
 
-    .line 101
     :goto_b
     sput-boolean v15, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
@@ -477,7 +460,6 @@
     :cond_c
     move v15, v2
 
-    .line 102
     :goto_c
     sput-boolean v15, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_BATTERY_SIMULATION:Z
 
@@ -494,13 +476,11 @@
     :cond_d
     move v12, v2
 
-    .line 103
     :goto_d
     sput-boolean v12, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_RESTRICTED_DEBUG_LEVEL:Z
 
     const-string/jumbo v12, "ro.product.first_api_level"
 
-    .line 108
     invoke-static {v12, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v13
@@ -519,7 +499,6 @@
     :goto_e
     sput-boolean v13, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SUPPORT_LEGACY_PERFORMANCE_MODE:Z
 
-    .line 114
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v13
@@ -540,7 +519,6 @@
 
     sput-boolean v13, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_FLICKERING_PANEL_WHEN_WAKINGUP_FROM_DOZE:Z
 
-    .line 117
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v3
@@ -557,7 +535,6 @@
 
     move-object/from16 v16, v12
 
-    .line 120
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v12
@@ -578,7 +555,6 @@
 
     sput-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SEAMLESS_AOD:Z
 
-    .line 123
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v2
@@ -607,13 +583,10 @@
     :goto_f
     sput-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_FULLSCREEN_AOD:Z
 
-    .line 126
     sput-boolean v3, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_WAKEUP_WHEN_PLUG_CHANGED:Z
 
-    .line 128
     sput-boolean v13, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_WA_WAITING_AOD_WHEN_WAKINGUP_FROM_DOZE:Z
 
-    .line 132
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v2
@@ -626,14 +599,12 @@
 
     const-string v3, "clockpackversion"
 
-    .line 133
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     sput-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_AOD_LOOK_CHARGING_UI:Z
 
-    .line 135
     sget-boolean v2, Lcom/android/server/aod/AODConfig;->SUPPORT_SUB_DISPLAY_COVER:Z
 
     if-eqz v2, :cond_10
@@ -652,7 +623,6 @@
     :goto_10
     sput-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_AOD_LOOK_CHARGING_UI_ON_SUB_DISPLAY:Z
 
-    .line 139
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v2
@@ -677,7 +647,6 @@
     :goto_11
     sput-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_AOD_BRIGHTNESS_ANIM:Z
 
-    .line 144
     invoke-virtual {v0, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -690,7 +659,6 @@
 
     if-nez v2, :cond_13
 
-    .line 145
     invoke-virtual {v0, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -717,7 +685,6 @@
     :goto_13
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_WA_LCD_FLICKERING_WITH_VRR:Z
 
-    .line 150
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -730,7 +697,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_LCD_SUPPORT_AMOLED_DISPLAY:Z
 
-    .line 158
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -743,7 +709,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_AFC:Z
 
-    .line 162
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -756,7 +721,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_SFC:Z
 
-    .line 167
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -769,7 +733,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_WIRELESS_AFC:Z
 
-    .line 172
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -782,7 +745,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_WIRELESS_POWER_SHARING:Z
 
-    .line 177
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -795,7 +757,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_BATTERY_LIFE_EXTENDER:Z
 
-    .line 182
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -808,7 +769,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_BATTERY_FULL_CAPACITY:Z
 
-    .line 187
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -821,7 +781,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SUPPORT_WIRELESS_NIGHT_MODE:Z
 
-    .line 192
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -834,7 +793,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FLOATING_FEATURE_BATTERY_SUPPORT_PASS_THROUGH:Z
 
-    .line 198
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -847,7 +805,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_DEX_DUAL_VIEW:Z
 
-    .line 204
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -860,7 +817,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_FOLD_COVER_DISPLAY:Z
 
-    .line 210
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v2
@@ -873,7 +829,6 @@
 
     sput-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_FLIP_COVER_DISPLAY:Z
 
-    .line 213
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v3
@@ -901,7 +856,6 @@
     :goto_14
     const/4 v0, 0x1
 
-    .line 218
     :goto_15
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_DUAL_DISPLAY:Z
 
@@ -926,19 +880,15 @@
     :goto_16
     const/4 v0, 0x1
 
-    .line 223
     :goto_17
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_HQM_SEND_DPUC:Z
 
-    .line 225
     sput-boolean v11, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_HQM_SEND_LBHD_HIGHEST:Z
 
     const/4 v0, 0x0
 
-    .line 232
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SECURITY_FINGERPRINT_IN_DISPLAY:Z
 
-    .line 234
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -957,7 +907,6 @@
 
     if-nez v0, :cond_18
 
-    .line 241
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -986,17 +935,14 @@
 
     const-string v0, "ADAPTIVE_BRIGHTNESS"
 
-    .line 246
     sput-object v0, Lcom/android/server/power/PowerManagerUtil;->YUVA_FEATURE_ADAPTIVE_BRIGHTNESS_NAME:Ljava/lang/CharSequence;
 
     const/4 v0, 0x0
 
-    .line 247
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->CAMERA_ADAPTIVE_BRIGHTNESS_SUPPORTED:Z
 
     const-string/jumbo v0, "ro.build.characteristics"
 
-    .line 251
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1007,7 +953,6 @@
 
     const-string/jumbo v1, "tablet"
 
-    .line 252
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1024,7 +969,6 @@
     :goto_19
     sput-boolean v12, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_TABLET:Z
 
-    .line 257
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -1037,10 +981,8 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_LIGHT_SENSOR_BLOCKING_PREVENTION_MULTI:Z
 
-    .line 261
     sput-boolean v18, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_ENSURE_TRANSITION_TO_DOZING:Z
 
-    .line 265
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1053,12 +995,10 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_PAPAYA_DQE:Z
 
-    .line 267
     sget-boolean v0, Lcom/samsung/android/displayquality/SemDisplayQualityFeature;->ENABLED:Z
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_DISPLAY_QUALITY:Z
 
-    .line 271
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -1073,7 +1013,6 @@
 
     if-eqz v0, :cond_1a
 
-    .line 272
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -1092,7 +1031,6 @@
 
     const-string v0, "34"
 
-    .line 285
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -1111,26 +1049,22 @@
     :goto_1b
     sput-boolean v12, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_BATTERY_NOTIFY_SCREEN_STATE:Z
 
-    .line 294
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
 
     const-string v1, "SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_SCREEN_CURTAIN"
 
-    .line 295
     invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SCREEN_CURTAIN:Z
 
-    .line 297
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
 
-    .line 298
     invoke-virtual {v0, v14, v15}, Lcom/samsung/android/feature/SemFloatingFeature;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1147,7 +1081,6 @@
 
     const/4 v12, 0x0
 
-    .line 301
     invoke-static {v0, v12}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -1166,7 +1099,6 @@
     :goto_1c
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SUPPORT_LEGACY_MISC_POWER_HAL:Z
 
-    .line 305
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1189,7 +1121,6 @@
     :goto_1d
     sput-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SUPPORT_HBM:Z
 
-    .line 308
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1202,10 +1133,8 @@
 
     const/4 v0, 0x1
 
-    .line 321
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->USE_SEC_LONG_TERM_MODEL:Z
 
-    .line 652
     new-instance v0, Lcom/android/internal/util/RingBuffer;
 
     const-class v1, Lcom/android/server/power/PowerManagerUtil$ScreenOffProfiler;
@@ -1216,14 +1145,12 @@
 
     sput-object v0, Lcom/android/server/power/PowerManagerUtil;->sScreenOffProfilers:Lcom/android/internal/util/RingBuffer;
 
-    .line 654
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$ScreenOffProfiler;
 
     invoke-direct {v0}, Lcom/android/server/power/PowerManagerUtil$ScreenOffProfiler;-><init>()V
 
     sput-object v0, Lcom/android/server/power/PowerManagerUtil;->sCurrentScreenOffProfiler:Lcom/android/server/power/PowerManagerUtil$ScreenOffProfiler;
 
-    .line 828
     new-instance v0, Lcom/android/internal/util/RingBuffer;
 
     const-class v1, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;
@@ -1232,7 +1159,6 @@
 
     sput-object v0, Lcom/android/server/power/PowerManagerUtil;->sScreenOnProfilers:Lcom/android/internal/util/RingBuffer;
 
-    .line 830
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;
 
     invoke-direct {v0}, Lcom/android/server/power/PowerManagerUtil$ScreenOnProfiler;-><init>()V
@@ -1245,10 +1171,8 @@
 .method public static brightnessToString(F)Ljava/lang/String;
     .locals 2
 
-    .line 449
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 450
     invoke-static {p0}, Lcom/android/internal/display/BrightnessSynchronizer;->brightnessFloatToInt(F)I
 
     move-result v1
@@ -1257,7 +1181,6 @@
 
     move-result-object v1
 
-    .line 451
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
@@ -1268,7 +1191,6 @@
 
     const-string v1, "%d(%.2f)"
 
-    .line 449
     invoke-static {v0, v1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1279,7 +1201,6 @@
 .method public static brightnessToString(IF)Ljava/lang/String;
     .locals 1
 
-    .line 455
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1308,7 +1229,6 @@
 
     const/4 v0, 0x0
 
-    .line 418
     invoke-static {v0}, Lcom/android/server/power/PowerManagerUtil;->callerInfoToString(Z)Ljava/lang/String;
 
     move-result-object v0
@@ -1319,22 +1239,18 @@
 .method public static callerInfoToString(Z)Ljava/lang/String;
     .locals 5
 
-    .line 381
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 383
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 384
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 386
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1363,7 +1279,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 389
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p0
@@ -1376,7 +1291,6 @@
 
     goto/16 :goto_3
 
-    .line 393
     :cond_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -1388,13 +1302,11 @@
 
     const/4 v1, 0x0
 
-    .line 398
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_3
 
-    .line 399
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
@@ -1411,7 +1323,6 @@
 
     aget-object v2, p0, v1
 
-    .line 400
     invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v2
@@ -1426,7 +1337,6 @@
 
     aget-object v2, p0, v1
 
-    .line 401
     invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v2
@@ -1441,7 +1351,6 @@
 
     aget-object v2, p0, v1
 
-    .line 402
     invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v2
@@ -1456,7 +1365,6 @@
 
     aget-object v2, p0, v1
 
-    .line 403
     invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v2
@@ -1471,7 +1379,6 @@
 
     goto :goto_1
 
-    .line 407
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1527,7 +1434,6 @@
 
     goto/16 :goto_0
 
-    .line 414
     :cond_3
     :goto_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1536,7 +1442,6 @@
 
     return-object p0
 
-    .line 390
     :cond_4
     :goto_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1549,7 +1454,6 @@
 .method public static displayTypeToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, -0x1
 
     if-eq p0, v0, :cond_2
@@ -1585,7 +1489,6 @@
 .method public static displayTypeToString(Z)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p0, :cond_0
 
     const-string/jumbo p0, "main"
@@ -1602,7 +1505,6 @@
 .method public static fileExist(Ljava/lang/String;)Z
     .locals 3
 
-    .line 330
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -1619,12 +1521,10 @@
     :catch_0
     move-exception v0
 
-    .line 333
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 v0, 0x0
 
-    .line 336
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1656,7 +1556,6 @@
 .method public static fileWriteInt(Ljava/lang/String;I)V
     .locals 2
 
-    .line 342
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1681,7 +1580,6 @@
 
     invoke-static {v1, v0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -1693,7 +1591,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 344
     :try_start_1
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1707,7 +1604,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 345
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -1718,7 +1614,6 @@
     :catchall_0
     move-exception p0
 
-    .line 343
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -1740,7 +1635,6 @@
     :catch_0
     move-exception p0
 
-    .line 346
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_1
@@ -1750,7 +1644,6 @@
 .method public static fileWriteString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 351
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1775,7 +1668,6 @@
 
     invoke-static {v1, v0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -1787,7 +1679,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 353
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
@@ -1797,7 +1688,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 354
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -1808,7 +1698,6 @@
     :catchall_0
     move-exception p0
 
-    .line 352
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -1830,7 +1719,6 @@
     :catch_0
     move-exception p0
 
-    .line 355
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_1
@@ -1844,7 +1732,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 504
     array-length v0, p0
 
     array-length v1, p1
@@ -1857,17 +1744,14 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 509
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 510
     array-length v1, p0
 
     const-string/jumbo v2, "{["
 
-    .line 511
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v2, 0x0
@@ -1879,20 +1763,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 514
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
     const-string v4, "("
 
-    .line 516
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     aget v4, p0, v2
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 517
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     aget v3, p1, v2
@@ -1901,7 +1782,6 @@
 
     const-string v3, ")"
 
-    .line 518
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
@@ -1911,17 +1791,14 @@
     :cond_1
     const-string p0, "]}"
 
-    .line 520
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 521
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 505
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1935,7 +1812,6 @@
 .method public static getCurrentTimeAsString()Ljava/lang/String;
     .locals 3
 
-    .line 374
     new-instance v0, Ljava/util/Date;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1944,7 +1820,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
-    .line 375
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string v2, "MM-dd HH:mm:ss.SSS"
@@ -1961,7 +1836,6 @@
 .method public static getDualScreenPolicy(I)I
     .locals 2
 
-    .line 0
     const/4 v0, 0x1
 
     if-eqz p0, :cond_2
@@ -2000,7 +1874,6 @@
 .method public static isFakeAodAvailable(I)Z
     .locals 2
 
-    .line 465
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_AOD_LOOK_CHARGING_UI:Z
 
     const/4 v1, 0x1
@@ -2028,7 +1901,6 @@
 
     const/4 v0, 0x0
 
-    .line 361
     :try_start_0
     new-instance v1, Ljava/io/RandomAccessFile;
 
@@ -2042,7 +1914,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 363
     :try_start_1
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->readLine()Ljava/lang/String;
 
@@ -2050,7 +1921,6 @@
 
     const-string v2, "PowerManagerUtil"
 
-    .line 364
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2075,7 +1945,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 366
     :try_start_2
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
     :try_end_2
@@ -2086,7 +1955,6 @@
     :catchall_0
     move-exception p0
 
-    .line 361
     :try_start_3
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
     :try_end_3
@@ -2108,7 +1976,6 @@
     :catch_0
     move-exception p0
 
-    .line 367
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_1

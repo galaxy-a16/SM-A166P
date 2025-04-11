@@ -17,7 +17,6 @@
 .method public cancelIdleJob(Landroid/content/Context;)V
     .locals 0
 
-    .line 1556
     invoke-static {p1}, Lcom/android/server/display/BrightnessIdleJob;->cancelJob(Landroid/content/Context;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public currentTimeMillis()J
     .locals 2
 
-    .line 1524
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -37,10 +35,8 @@
 .method public enableColorSampling(ZI)Z
     .locals 2
 
-    .line 1608
     const-class p0, Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 1609
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -51,7 +47,6 @@
 
     const/4 v1, 0x4
 
-    .line 1610
     invoke-virtual {p0, v0, p1, v1, p2}, Landroid/hardware/display/DisplayManagerInternal;->setDisplayedContentSamplingEnabled(IZII)Z
 
     move-result p0
@@ -62,7 +57,6 @@
 .method public getBackgroundHandler()Landroid/os/Handler;
     .locals 0
 
-    .line 1501
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p0
@@ -73,7 +67,6 @@
 .method public getFile(Ljava/lang/String;)Landroid/util/AtomicFile;
     .locals 2
 
-    .line 1516
     new-instance p0, Landroid/util/AtomicFile;
 
     new-instance v0, Ljava/io/File;
@@ -92,7 +85,6 @@
 .method public getFocusedStack()Landroid/app/ActivityTaskManager$RootTaskInfo;
     .locals 0
 
-    .line 1548
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
     move-result-object p0
@@ -107,7 +99,6 @@
 .method public getFrameRate(Landroid/content/Context;)F
     .locals 0
 
-    .line 1595
     const-class p0, Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -118,12 +109,10 @@
 
     const/4 p1, 0x0
 
-    .line 1596
     invoke-virtual {p0, p1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object p0
 
-    .line 1597
     invoke-virtual {p0}, Landroid/view/Display;->getRefreshRate()F
 
     move-result p0
@@ -134,7 +123,6 @@
 .method public getLegacyFile(Ljava/lang/String;)Landroid/util/AtomicFile;
     .locals 2
 
-    .line 1520
     new-instance p0, Landroid/util/AtomicFile;
 
     new-instance v0, Ljava/io/File;
@@ -153,7 +141,6 @@
 .method public getNightDisplayColorTemperature(Landroid/content/Context;)I
     .locals 0
 
-    .line 1564
     const-class p0, Landroid/hardware/display/ColorDisplayManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -162,7 +149,6 @@
 
     check-cast p0, Landroid/hardware/display/ColorDisplayManager;
 
-    .line 1565
     invoke-virtual {p0}, Landroid/hardware/display/ColorDisplayManager;->getNightDisplayColorTemperature()I
 
     move-result p0
@@ -173,7 +159,6 @@
 .method public getReduceBrightColorsOffsetFactor(Landroid/content/Context;)F
     .locals 0
 
-    .line 1578
     const-class p0, Landroid/hardware/display/ColorDisplayManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -182,7 +167,6 @@
 
     check-cast p0, Landroid/hardware/display/ColorDisplayManager;
 
-    .line 1579
     invoke-virtual {p0}, Landroid/hardware/display/ColorDisplayManager;->getReduceBrightColorsOffsetFactor()F
 
     move-result p0
@@ -193,7 +177,6 @@
 .method public getReduceBrightColorsStrength(Landroid/content/Context;)I
     .locals 0
 
-    .line 1573
     const-class p0, Landroid/hardware/display/ColorDisplayManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -202,7 +185,6 @@
 
     check-cast p0, Landroid/hardware/display/ColorDisplayManager;
 
-    .line 1574
     invoke-virtual {p0}, Landroid/hardware/display/ColorDisplayManager;->getReduceBrightColorsStrength()I
 
     move-result p0
@@ -213,10 +195,8 @@
 .method public getSamplingAttributes()Landroid/hardware/display/DisplayedContentSamplingAttributes;
     .locals 1
 
-    .line 1601
     const-class p0, Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 1602
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -225,7 +205,6 @@
 
     const/4 v0, 0x0
 
-    .line 1603
     invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManagerInternal;->getDisplayedContentSamplingAttributes(I)Landroid/hardware/display/DisplayedContentSamplingAttributes;
 
     move-result-object p0
@@ -236,7 +215,6 @@
 .method public getUserId(Landroid/os/UserManager;I)I
     .locals 0
 
-    .line 1536
     invoke-virtual {p1, p2}, Landroid/os/UserManager;->getUserHandle(I)I
 
     move-result p0
@@ -247,7 +225,6 @@
 .method public getUserSerialNumber(Landroid/os/UserManager;I)I
     .locals 0
 
-    .line 1532
     invoke-virtual {p1, p2}, Landroid/os/UserManager;->getUserSerialNumber(I)I
 
     move-result p0
@@ -264,7 +241,6 @@
 
     const/4 v1, 0x0
 
-    .line 1505
     invoke-static {p1, v0, v1, p0}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
@@ -282,7 +258,6 @@
 .method public isInteractive(Landroid/content/Context;)Z
     .locals 0
 
-    .line 1560
     const-class p0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -301,7 +276,6 @@
 .method public isNightDisplayActivated(Landroid/content/Context;)Z
     .locals 0
 
-    .line 1569
     const-class p0, Landroid/hardware/display/ColorDisplayManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -320,7 +294,6 @@
 .method public isReduceBrightColorsActivated(Landroid/content/Context;)Z
     .locals 0
 
-    .line 1583
     const-class p0, Landroid/hardware/display/ColorDisplayManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -329,7 +302,6 @@
 
     check-cast p0, Landroid/hardware/display/ColorDisplayManager;
 
-    .line 1584
     invoke-virtual {p0}, Landroid/hardware/display/ColorDisplayManager;->isReduceBrightColorsActivated()Z
 
     move-result p0
@@ -342,7 +314,6 @@
 
     const-string/jumbo p0, "screen_brightness_mode"
 
-    .line 1480
     invoke-static {p0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -359,7 +330,6 @@
 .method public registerDisplayListener(Landroid/content/Context;Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1616
     const-class p0, Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -368,7 +338,6 @@
 
     check-cast p0, Landroid/hardware/display/DisplayManager;
 
-    .line 1617
     invoke-virtual {p0, p2, p3}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
     return-void
@@ -377,7 +346,6 @@
 .method public registerReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
     .locals 0
 
-    .line 1492
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
@@ -386,10 +354,8 @@
 .method public sampleColor(I)Landroid/hardware/display/DisplayedContentSample;
     .locals 6
 
-    .line 1588
     const-class p0, Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 1589
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -404,7 +370,6 @@
 
     const-wide/16 v4, 0x0
 
-    .line 1590
     invoke-virtual/range {v0 .. v5}, Landroid/hardware/display/DisplayManagerInternal;->getDisplayedContentSample(IJJ)Landroid/hardware/display/DisplayedContentSample;
 
     move-result-object p0
@@ -415,7 +380,6 @@
 .method public scheduleIdleJob(Landroid/content/Context;)V
     .locals 0
 
-    .line 1552
     invoke-static {p1}, Lcom/android/server/display/BrightnessIdleJob;->scheduleJob(Landroid/content/Context;)V
 
     return-void
@@ -424,7 +388,6 @@
 .method public unRegisterDisplayListener(Landroid/content/Context;Landroid/hardware/display/DisplayManager$DisplayListener;)V
     .locals 0
 
-    .line 1622
     const-class p0, Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -433,7 +396,6 @@
 
     check-cast p0, Landroid/hardware/display/DisplayManager;
 
-    .line 1623
     invoke-virtual {p0, p2}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
 
     return-void
@@ -442,7 +404,6 @@
 .method public unregisterBrightnessModeObserver(Landroid/content/Context;Landroid/database/ContentObserver;)V
     .locals 0
 
-    .line 1487
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -455,7 +416,6 @@
 .method public unregisterReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
     .locals 0
 
-    .line 1497
     invoke-virtual {p1, p2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     return-void

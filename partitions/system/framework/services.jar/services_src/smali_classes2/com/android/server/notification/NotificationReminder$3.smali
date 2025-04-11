@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationReminder;Lcom/android/server/notification/NotificationRecord;)V
     .locals 0
 
-    .line 195
     iput-object p1, p0, Lcom/android/server/notification/NotificationReminder$3;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationReminder$3;->val$record:Lcom/android/server/notification/NotificationRecord;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 4
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/notification/NotificationReminder$3;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationReminder;->mActiveNotiList:Ljava/util/ArrayList;
@@ -41,7 +39,6 @@
     :try_start_0
     const-string v1, "NotificationReminder"
 
-    .line 199
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +65,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     iget-object v1, p0, Lcom/android/server/notification/NotificationReminder$3;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationReminder;->mActiveNotiList:Ljava/util/ArrayList;
@@ -77,14 +73,12 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 201
     iget-object p0, p0, Lcom/android/server/notification/NotificationReminder$3;->this$0:Lcom/android/server/notification/NotificationReminder;
 
     const/16 v1, 0x3e8
 
     invoke-static {p0, v1}, Lcom/android/server/notification/NotificationReminder;->-$$Nest$msendMessage(Lcom/android/server/notification/NotificationReminder;I)V
 
-    .line 202
     monitor-exit v0
 
     return-void

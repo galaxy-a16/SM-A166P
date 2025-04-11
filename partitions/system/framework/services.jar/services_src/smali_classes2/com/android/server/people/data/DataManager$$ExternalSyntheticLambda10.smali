@@ -20,7 +20,6 @@
 .method public final applyAsLong(Ljava/lang/Object;)J
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/util/Pair;
 
     invoke-static {p1}, Lcom/android/server/people/data/DataManager;->$r8$lambda$qNKaon_1tWug1_MGPhymNbWcwss(Landroid/util/Pair;)J

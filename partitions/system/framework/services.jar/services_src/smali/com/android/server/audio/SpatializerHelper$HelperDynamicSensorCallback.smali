@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/SpatializerHelper;)V
     .locals 0
 
-    .line 503
     iput-object p1, p0, Lcom/android/server/audio/SpatializerHelper$HelperDynamicSensorCallback;->this$0:Lcom/android/server/audio/SpatializerHelper;
 
     invoke-direct {p0}, Landroid/hardware/SensorManager$DynamicSensorCallback;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/audio/SpatializerHelper;Lcom/android/server/audio/SpatializerHelper$HelperDynamicSensorCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/audio/SpatializerHelper$HelperDynamicSensorCallback;-><init>(Lcom/android/server/audio/SpatializerHelper;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onDynamicSensorConnected(Landroid/hardware/Sensor;)V
     .locals 0
 
-    .line 506
     iget-object p0, p0, Lcom/android/server/audio/SpatializerHelper$HelperDynamicSensorCallback;->this$0:Lcom/android/server/audio/SpatializerHelper;
 
     invoke-static {p0}, Lcom/android/server/audio/SpatializerHelper;->-$$Nest$mpostInitSensors(Lcom/android/server/audio/SpatializerHelper;)V
@@ -44,7 +41,6 @@
 .method public onDynamicSensorDisconnected(Landroid/hardware/Sensor;)V
     .locals 0
 
-    .line 511
     iget-object p0, p0, Lcom/android/server/audio/SpatializerHelper$HelperDynamicSensorCallback;->this$0:Lcom/android/server/audio/SpatializerHelper;
 
     invoke-static {p0}, Lcom/android/server/audio/SpatializerHelper;->-$$Nest$mpostInitSensors(Lcom/android/server/audio/SpatializerHelper;)V

@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;Lcom/android/server/pm/PersonaManagerService;JI)V
     .locals 0
 
-    .line 2234
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector$1;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
 
     iput-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector$1;->val$personaService:Lcom/android/server/pm/PersonaManagerService;
@@ -43,10 +42,8 @@
 
     const-string/jumbo v1, "notify persona to may log analytics"
 
-    .line 2237
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2238
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector$1;->val$personaService:Lcom/android/server/pm/PersonaManagerService;
 
     iget-wide v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector$1;->val$timeMs:J

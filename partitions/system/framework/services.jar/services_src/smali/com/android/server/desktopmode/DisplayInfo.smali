@@ -17,25 +17,20 @@
 .method public constructor <init>(Landroid/view/Display;)V
     .locals 3
 
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     new-instance v0, Landroid/view/DisplayInfo;
 
     invoke-direct {v0}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 25
     invoke-virtual {p1, v0}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 27
     invoke-virtual {p1}, Landroid/view/Display;->getDisplayId()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/desktopmode/DisplayInfo;->mDisplayId:I
 
-    .line 28
     new-instance p1, Landroid/graphics/Point;
 
     iget v1, v0, Landroid/view/DisplayInfo;->logicalWidth:I
@@ -46,15 +41,12 @@
 
     iput-object p1, p0, Lcom/android/server/desktopmode/DisplayInfo;->mRealSize:Landroid/graphics/Point;
 
-    .line 29
     iget p1, v0, Landroid/view/DisplayInfo;->rotation:I
 
     iput p1, p0, Lcom/android/server/desktopmode/DisplayInfo;->mRotation:I
 
-    .line 31
     iget p1, v0, Landroid/view/DisplayInfo;->flags:I
 
-    .line 32
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_DEX_ON_PC:Z
 
     if-eqz v1, :cond_0
@@ -67,12 +59,10 @@
 
     const/16 p1, 0x3e8
 
-    .line 34
     iput p1, p0, Lcom/android/server/desktopmode/DisplayInfo;->mType:I
 
     goto :goto_0
 
-    .line 35
     :cond_0
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_WIRELESS_DEX:Z
 
@@ -86,12 +76,10 @@
 
     const/16 p1, 0x3e9
 
-    .line 37
     iput p1, p0, Lcom/android/server/desktopmode/DisplayInfo;->mType:I
 
     goto :goto_0
 
-    .line 39
     :cond_1
     iget p1, v0, Landroid/view/DisplayInfo;->type:I
 
@@ -112,7 +100,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 66
     invoke-static {p0}, Landroid/view/Display;->typeToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -146,7 +133,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 73
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -159,11 +145,9 @@
 
     goto :goto_1
 
-    .line 75
     :cond_1
     check-cast p1, Lcom/android/server/desktopmode/DisplayInfo;
 
-    .line 77
     iget v2, p0, Lcom/android/server/desktopmode/DisplayInfo;->mDisplayId:I
 
     iget v3, p1, Lcom/android/server/desktopmode/DisplayInfo;->mDisplayId:I
@@ -186,7 +170,6 @@
 
     iget-object p1, p1, Lcom/android/server/desktopmode/DisplayInfo;->mRealSize:Landroid/graphics/Point;
 
-    .line 80
     invoke-virtual {p0, p1}, Landroid/graphics/Point;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -209,7 +192,6 @@
 .method public getDisplayId()I
     .locals 0
 
-    .line 44
     iget p0, p0, Lcom/android/server/desktopmode/DisplayInfo;->mDisplayId:I
 
     return p0
@@ -218,7 +200,6 @@
 .method public getRealSize()Landroid/graphics/Point;
     .locals 1
 
-    .line 52
     new-instance v0, Landroid/graphics/Point;
 
     iget-object p0, p0, Lcom/android/server/desktopmode/DisplayInfo;->mRealSize:Landroid/graphics/Point;
@@ -231,7 +212,6 @@
 .method public getRotation()I
     .locals 0
 
-    .line 56
     iget p0, p0, Lcom/android/server/desktopmode/DisplayInfo;->mRotation:I
 
     return p0
@@ -240,7 +220,6 @@
 .method public getType()I
     .locals 0
 
-    .line 48
     iget p0, p0, Lcom/android/server/desktopmode/DisplayInfo;->mType:I
 
     return p0
@@ -249,7 +228,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 85
     iget v0, p0, Lcom/android/server/desktopmode/DisplayInfo;->mDisplayId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -284,7 +262,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,7 +280,6 @@
 
     iget v1, p0, Lcom/android/server/desktopmode/DisplayInfo;->mType:I
 
-    .line 92
     invoke-static {v1}, Lcom/android/server/desktopmode/DisplayInfo;->typeToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -336,7 +312,6 @@
 
     iget p0, p0, Lcom/android/server/desktopmode/DisplayInfo;->mRotation:I
 
-    .line 94
     invoke-static {p0}, Landroid/view/Surface;->rotationToString(I)Ljava/lang/String;
 
     move-result-object p0

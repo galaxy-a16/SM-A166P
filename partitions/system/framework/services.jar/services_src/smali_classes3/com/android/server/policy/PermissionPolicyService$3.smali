@@ -15,12 +15,10 @@
 .method public constructor <init>(Lcom/android/server/policy/PermissionPolicyService;)V
     .locals 1
 
-    .line 317
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$3;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 318
     new-instance p1, Ljava/util/ArrayList;
 
     const/16 v0, 0xc8
@@ -29,7 +27,6 @@
 
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
-    .line 319
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -46,7 +43,6 @@
 
     const/4 p1, 0x1
 
-    .line 326
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$3;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -60,12 +56,10 @@
 
     const-string/jumbo v1, "user_setup_complete"
 
-    .line 328
     invoke-virtual {v0}, Landroid/content/ContentResolver;->getUserId()I
 
     move-result v2
 
-    .line 327
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -90,12 +84,10 @@
 
     const/4 v2, -0x1
 
-    .line 332
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 334
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$3;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {v1}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fgetmPackageManagerInternal(Lcom/android/server/policy/PermissionPolicyService;)Landroid/content/pm/PackageManagerInternal;
@@ -113,7 +105,6 @@
     :cond_1
     if-eqz v0, :cond_4
 
-    .line 339
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -122,12 +113,10 @@
 
     if-nez v0, :cond_3
 
-    .line 340
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
     monitor-enter v0
 
-    .line 341
     :try_start_1
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
@@ -140,7 +129,6 @@
     :goto_2
     if-ltz v1, :cond_2
 
-    .line 342
     iget-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -159,13 +147,11 @@
 
     goto :goto_2
 
-    .line 344
     :cond_2
     iget-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
-    .line 345
     monitor-exit v0
 
     goto :goto_3
@@ -179,20 +165,17 @@
 
     throw p0
 
-    .line 347
     :cond_3
     :goto_3
     invoke-virtual {p0, p2}, Lcom/android/server/policy/PermissionPolicyService$3;->updateUid(I)V
 
     goto :goto_4
 
-    .line 349
     :cond_4
     iget-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
     monitor-enter p1
 
-    .line 350
     :try_start_2
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
@@ -206,7 +189,6 @@
 
     if-nez v0, :cond_5
 
-    .line 351
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mUserSetupUids:Ljava/util/List;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -215,7 +197,6 @@
 
     invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 353
     :cond_5
     monitor-exit p1
 
@@ -235,12 +216,10 @@
 .method public final updateUid(I)V
     .locals 4
 
-    .line 358
     invoke-static {p1}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 359
     iget-object v1, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mPermControllerManagers:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -251,12 +230,10 @@
 
     if-nez v1, :cond_0
 
-    .line 361
     new-instance v1, Landroid/permission/PermissionControllerManager;
 
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$3;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
-    .line 362
     invoke-virtual {v2}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -271,12 +248,10 @@
 
     invoke-direct {v1, v2, v3}, Landroid/permission/PermissionControllerManager;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 363
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$3;->mPermControllerManagers:Ljava/util/Map;
 
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 365
     :cond_0
     invoke-virtual {v1, p1}, Landroid/permission/PermissionControllerManager;->updateUserSensitiveForApp(I)V
 

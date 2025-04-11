@@ -39,20 +39,16 @@
 
     move-object/from16 v10, p13
 
-    .line 50
     invoke-direct/range {v0 .. v10}, Lcom/android/server/notification/toast/ToastRecord;-><init>(Lcom/android/server/notification/NotificationManagerService;IILjava/lang/String;ZLandroid/os/IBinder;ILandroid/os/Binder;ILjava/lang/String;)V
 
     move-object v0, p2
 
-    .line 52
     iput-object v0, v11, Lcom/android/server/notification/toast/TextToastRecord;->mStatusBar:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     move-object/from16 v0, p12
 
-    .line 53
     iput-object v0, v11, Lcom/android/server/notification/toast/TextToastRecord;->mCallback:Landroid/app/ITransientNotificationCallback;
 
-    .line 54
     invoke-static/range {p8 .. p8}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -69,14 +65,12 @@
 .method public hide()V
     .locals 2
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/notification/toast/TextToastRecord;->mStatusBar:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     const-string v1, "Cannot hide toast that wasn\'t shown"
 
     invoke-static {v0, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/notification/toast/TextToastRecord;->mStatusBar:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     iget-object v1, p0, Lcom/android/server/notification/toast/ToastRecord;->pkg:Ljava/lang/String;
@@ -91,7 +85,6 @@
 .method public isAppRendered()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -100,14 +93,12 @@
 .method public show()Z
     .locals 11
 
-    .line 59
     sget-boolean v0, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
 
     const-string v1, "NotificationService"
 
     if-eqz v0, :cond_0
 
-    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,13 +125,11 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     :cond_0
     iget-object v2, p0, Lcom/android/server/notification/toast/TextToastRecord;->mStatusBar:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     if-nez v2, :cond_1
 
-    .line 63
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,7 +152,6 @@
 
     return p0
 
-    .line 66
     :cond_1
     iget v3, p0, Lcom/android/server/notification/toast/ToastRecord;->uid:I
 
@@ -193,7 +181,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,7 +189,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 87
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -235,7 +221,6 @@
 
     iget v1, p0, Lcom/android/server/notification/toast/ToastRecord;->uid:I
 
-    .line 88
     invoke-static {v1}, Landroid/os/UserHandle;->formatUid(I)Ljava/lang/String;
 
     move-result-object v1
@@ -270,7 +255,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 92
     invoke-virtual {p0}, Lcom/android/server/notification/toast/ToastRecord;->getDuration()I
 
     move-result p0

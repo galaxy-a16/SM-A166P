@@ -19,26 +19,20 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/enterprise/storage/Table;->mTableName:Ljava/lang/String;
 
-    .line 47
     iput-object p2, p0, Lcom/android/server/enterprise/storage/Table;->mForeignReferTable:Ljava/lang/String;
 
-    .line 48
     iput-object p3, p0, Lcom/android/server/enterprise/storage/Table;->mForeignReferKey:Ljava/lang/String;
 
-    .line 49
     iput-object p4, p0, Lcom/android/server/enterprise/storage/Table;->mForeignKeyName:Ljava/lang/String;
 
     return-void
@@ -49,7 +43,6 @@
 .method public addColumn(Lcom/android/server/enterprise/storage/Column;)V
     .locals 0
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -60,7 +53,6 @@
 .method public buildPrimaryKeys()Ljava/lang/String;
     .locals 3
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -83,12 +75,10 @@
 
     check-cast v1, Lcom/android/server/enterprise/storage/Column;
 
-    .line 72
     iget-boolean v2, v1, Lcom/android/server/enterprise/storage/Column;->mIsPrimaryKey:Z
 
     if-eqz v2, :cond_0
 
-    .line 73
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,7 +99,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_1
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -117,7 +106,6 @@
 
     if-lez p0, :cond_2
 
-    .line 79
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -126,7 +114,6 @@
 
     const/4 v1, 0x0
 
-    .line 78
     invoke-virtual {v0, v1, p0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -143,7 +130,6 @@
 .method public buildTableColumns()Ljava/lang/String;
     .locals 4
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -167,7 +153,6 @@
 
     check-cast v2, Lcom/android/server/enterprise/storage/Column;
 
-    .line 60
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +175,6 @@
 
     goto :goto_0
 
-    .line 64
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -198,7 +182,6 @@
 
     if-lez p0, :cond_1
 
-    .line 65
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -207,7 +190,6 @@
 
     const/4 v0, 0x0
 
-    .line 64
     invoke-virtual {v1, v0, p0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
@@ -219,12 +201,10 @@
 .method public getMissingColumns(Ljava/util/List;)Ljava/util/ArrayList;
     .locals 3
 
-    .line 83
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 85
     iget-object p0, p0, Lcom/android/server/enterprise/storage/Table;->mColumns:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -245,7 +225,6 @@
 
     check-cast v1, Lcom/android/server/enterprise/storage/Column;
 
-    .line 86
     iget-object v2, v1, Lcom/android/server/enterprise/storage/Column;->mColumnName:Ljava/lang/String;
 
     invoke-interface {p1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -254,7 +233,6 @@
 
     if-nez v2, :cond_0
 
-    .line 87
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0

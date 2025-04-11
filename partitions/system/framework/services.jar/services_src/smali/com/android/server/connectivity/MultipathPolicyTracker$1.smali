@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/connectivity/MultipathPolicyTracker;)V
     .locals 0
 
-    .line 476
     iput-object p1, p0, Lcom/android/server/connectivity/MultipathPolicyTracker$1;->this$0:Lcom/android/server/connectivity/MultipathPolicyTracker;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
     .locals 2
 
-    .line 479
     iget-object v0, p0, Lcom/android/server/connectivity/MultipathPolicyTracker$1;->this$0:Lcom/android/server/connectivity/MultipathPolicyTracker;
 
     invoke-static {v0}, Lcom/android/server/connectivity/MultipathPolicyTracker;->-$$Nest$fgetmMultipathTrackers(Lcom/android/server/connectivity/MultipathPolicyTracker;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -39,15 +37,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 481
     invoke-virtual {v0, p2}, Lcom/android/server/connectivity/MultipathPolicyTracker$MultipathTracker;->setNetworkCapabilities(Landroid/net/NetworkCapabilities;)V
 
-    .line 482
     invoke-virtual {v0}, Lcom/android/server/connectivity/MultipathPolicyTracker$MultipathTracker;->updateMultipathBudget()V
 
     return-void
 
-    .line 487
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/MultipathPolicyTracker$1;->this$0:Lcom/android/server/connectivity/MultipathPolicyTracker;
@@ -71,7 +66,6 @@
     :catch_0
     move-exception p0
 
-    .line 489
     invoke-static {}, Lcom/android/server/connectivity/MultipathPolicyTracker;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -109,7 +103,6 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 1
 
-    .line 496
     iget-object v0, p0, Lcom/android/server/connectivity/MultipathPolicyTracker$1;->this$0:Lcom/android/server/connectivity/MultipathPolicyTracker;
 
     invoke-static {v0}, Lcom/android/server/connectivity/MultipathPolicyTracker;->-$$Nest$fgetmMultipathTrackers(Lcom/android/server/connectivity/MultipathPolicyTracker;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -124,10 +117,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 498
     invoke-virtual {v0}, Lcom/android/server/connectivity/MultipathPolicyTracker$MultipathTracker;->shutdown()V
 
-    .line 499
     iget-object p0, p0, Lcom/android/server/connectivity/MultipathPolicyTracker$1;->this$0:Lcom/android/server/connectivity/MultipathPolicyTracker;
 
     invoke-static {p0}, Lcom/android/server/connectivity/MultipathPolicyTracker;->-$$Nest$fgetmMultipathTrackers(Lcom/android/server/connectivity/MultipathPolicyTracker;)Ljava/util/concurrent/ConcurrentHashMap;

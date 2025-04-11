@@ -53,7 +53,6 @@
 .method public static synthetic $r8$lambda$-xfvARMgvzF4-gPbXyqdvq5lLRY(Lcom/samsung/android/server/audio/MultiSoundManager;Lcom/samsung/android/media/AudioParameter;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->lambda$setStateToNative$0(Lcom/samsung/android/media/AudioParameter;)V
 
     return-void
@@ -62,7 +61,6 @@
 .method public static synthetic $r8$lambda$ZMDBQ3vj4USAj3Zkc2O2lOa6ceo(Lcom/samsung/android/server/audio/MultiSoundManager;Lcom/samsung/android/media/AudioParameter;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->lambda$setDeviceToNative$1(Lcom/samsung/android/media/AudioParameter;)V
 
     return-void
@@ -71,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAudioSystem(Lcom/samsung/android/server/audio/MultiSoundManager;)Lcom/android/server/audio/AudioSystemAdapter;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioSystem:Lcom/android/server/audio/AudioSystemAdapter;
 
     return-object p0
@@ -80,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInterface(Lcom/samsung/android/server/audio/MultiSoundManager;)Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     return-object p0
@@ -89,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTaskStack(Lcom/samsung/android/server/audio/MultiSoundManager;)Ljava/util/HashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mTaskStack:Ljava/util/HashMap;
 
     return-object p0
@@ -98,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$mgetUidByTaskId(Lcom/samsung/android/server/audio/MultiSoundManager;I)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->getUidByTaskId(I)I
 
     move-result p0
@@ -109,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$mupdateForegroundAppUid(Lcom/samsung/android/server/audio/MultiSoundManager;IZ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/server/audio/MultiSoundManager;->updateForegroundAppUid(IZ)V
 
     return-void
@@ -118,7 +111,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 77
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -127,7 +119,6 @@
 
     const/4 v1, 0x2
 
-    .line 78
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -136,7 +127,6 @@
 
     const/4 v1, 0x4
 
-    .line 79
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -145,7 +135,6 @@
 
     const/16 v1, 0x8
 
-    .line 80
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -154,7 +143,6 @@
 
     const/16 v1, 0x80
 
-    .line 81
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -163,7 +151,6 @@
 
     const/16 v1, 0x100
 
-    .line 82
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -172,7 +159,6 @@
 
     const/16 v1, 0x200
 
-    .line 83
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -181,7 +167,6 @@
 
     const/16 v1, 0x4000
 
-    .line 84
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -190,7 +175,6 @@
 
     const/high16 v1, 0x4000000
 
-    .line 85
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -199,14 +183,12 @@
 
     const v1, 0x8000
 
-    .line 86
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 93
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -215,7 +197,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 101
     sput-wide v0, Lcom/samsung/android/server/audio/MultiSoundManager;->sLastSetDeviceToNativeTime:J
 
     return-void
@@ -224,31 +205,26 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;Landroid/os/Handler;Lcom/android/server/audio/AudioSystemAdapter;)V
     .locals 4
 
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mTaskStack:Ljava/util/HashMap;
 
-    .line 113
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
-    .line 115
     new-instance v0, Lcom/samsung/android/server/audio/MultiSoundManager$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/audio/MultiSoundManager$1;-><init>(Lcom/samsung/android/server/audio/MultiSoundManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mTaskStackListener:Landroid/app/TaskStackListener;
 
-    .line 132
     new-instance v1, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;
 
     const/4 v2, -0x1
@@ -257,14 +233,12 @@
 
     iput-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mSetVolumeRunnable:Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;
 
-    .line 133
     new-instance v1, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;
 
     invoke-direct {v1, p0, v2}, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;-><init>(Lcom/samsung/android/server/audio/MultiSoundManager;I)V
 
     iput-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mUpdateFocusedAppRunnable:Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;
 
-    .line 134
     new-instance v1, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
 
     const/4 v3, 0x0
@@ -273,38 +247,30 @@
 
     iput-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPreventOverheatState:Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
 
-    .line 1301
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
-    .line 138
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
-    .line 139
     iput-boolean v3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
-    .line 140
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->makeVolumeTable()V
 
-    .line 141
     iput-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
-    .line 142
     iput-object p3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 
-    .line 143
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
     const-string p2, "activity"
 
-    .line 144
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -313,7 +279,6 @@
 
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 145
     iget-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
     const-string/jumbo p2, "notification"
@@ -326,7 +291,6 @@
 
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
-    .line 146
     iget-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -335,17 +299,14 @@
 
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 147
     iput-object p4, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioSystem:Lcom/android/server/audio/AudioSystemAdapter;
 
-    .line 148
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mActivityTaskManager:Landroid/app/IActivityTaskManager;
 
-    .line 151
     :try_start_0
     invoke-interface {p1, v0}, Landroid/app/IActivityTaskManager;->registerTaskStackListener(Landroid/app/ITaskStackListener;)V
     :try_end_0
@@ -360,10 +321,8 @@
 
     const-string p2, "Exception - registerTaskStackListener"
 
-    .line 153
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -373,7 +332,6 @@
 .method private synthetic lambda$setDeviceToNative$1(Lcom/samsung/android/media/AudioParameter;)V
     .locals 0
 
-    .line 746
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioSystem:Lcom/android/server/audio/AudioSystemAdapter;
 
     invoke-virtual {p1}, Lcom/samsung/android/media/AudioParameter;->toString()Ljava/lang/String;
@@ -388,7 +346,6 @@
 .method private synthetic lambda$setStateToNative$0(Lcom/samsung/android/media/AudioParameter;)V
     .locals 0
 
-    .line 728
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioSystem:Lcom/android/server/audio/AudioSystemAdapter;
 
     invoke-virtual {p1}, Lcom/samsung/android/media/AudioParameter;->toString()Ljava/lang/String;
@@ -405,7 +362,6 @@
 .method public clearHeadUpNotification()V
     .locals 1
 
-    .line 972
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
     const/16 v0, 0x3ed
@@ -418,7 +374,6 @@
 .method public clearNotification()V
     .locals 1
 
-    .line 912
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
     const/16 v0, 0x3ec
@@ -431,7 +386,6 @@
 .method public disable()V
     .locals 2
 
-    .line 188
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
     if-nez v0, :cond_0
@@ -443,18 +397,14 @@
 
     const-string v1, "disable"
 
-    .line 192
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 193
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
-    .line 194
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->resetByEnableDisable()V
 
-    .line 195
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->clearNotification()V
@@ -465,12 +415,10 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 5
 
-    .line 681
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 682
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -502,19 +450,16 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 684
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 686
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 687
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -532,14 +477,12 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 688
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
-    .line 689
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-virtual {v1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getUid()I
@@ -554,7 +497,6 @@
 
     aget-object v2, v2, v3
 
-    .line 690
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -579,7 +521,6 @@
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 691
     invoke-virtual {v1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result v2
@@ -598,10 +539,8 @@
 
     move-result-object v2
 
-    .line 690
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 692
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -624,7 +563,6 @@
 
     goto :goto_0
 
-    .line 694
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -636,12 +574,10 @@
 
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
-    .line 695
     invoke-interface {v1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->getCurrentMediaDevice()I
 
     move-result v1
 
-    .line 694
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -654,7 +590,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 696
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -679,7 +614,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 697
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -706,10 +640,8 @@
 
     const-string v0, "  SEC_AUDIO_MULTI_SOUND=true"
 
-    .line 698
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 699
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     const-string v1, "com.samsung.android.oneconnect"
@@ -722,13 +654,11 @@
 
     const-string v0, "  Smart Things=install"
 
-    .line 700
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_1
     const-string v0, "  mPreventOverheatState="
 
-    .line 703
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPreventOverheatState:Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
@@ -737,15 +667,12 @@
 
     const-string v0, "  Dual App : "
 
-    .line 705
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 706
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     monitor-enter v1
 
-    .line 707
     :try_start_1
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -766,7 +693,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 708
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -785,7 +711,6 @@
 
     goto :goto_1
 
-    .line 710
     :cond_2
     monitor-exit v1
     :try_end_1
@@ -793,7 +718,6 @@
 
     const-string p0, ""
 
-    .line 711
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -801,7 +725,6 @@
     :catchall_0
     move-exception p0
 
-    .line 710
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -812,7 +735,6 @@
     :catchall_1
     move-exception p0
 
-    .line 684
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -824,7 +746,6 @@
 .method public enable(Z)V
     .locals 2
 
-    .line 170
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
     if-eqz v0, :cond_0
@@ -836,20 +757,16 @@
 
     const-string v1, "enable"
 
-    .line 173
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 174
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
-    .line 175
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->resetByEnableDisable()V
 
     if-eqz p1, :cond_1
 
-    .line 177
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->showNotification()V
@@ -863,7 +780,6 @@
 
     const/4 v0, -0x1
 
-    .line 1319
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->enableSeparateRemoteSubmix(ZI)V
 
     return-void
@@ -872,35 +788,30 @@
 .method public final enableSeparateRemoteSubmix(ZI)V
     .locals 3
 
-    .line 1304
     new-instance v0, Lcom/samsung/android/media/AudioParameter$Builder;
 
     invoke-direct {v0}, Lcom/samsung/android/media/AudioParameter$Builder;-><init>()V
 
     const-string v1, "audioParam"
 
-    .line 1305
     invoke-virtual {v0, v1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
     const-string v1, "l_multi_sound_key"
 
-    .line 1306
     invoke-virtual {v0, v1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
     const-string v1, "enable"
 
-    .line 1307
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;Z)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
     const-string v1, "exclusive"
 
-    .line 1308
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;Z)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
@@ -909,7 +820,6 @@
 
     const v2, 0x8000
 
-    .line 1309
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
@@ -918,17 +828,14 @@
 
     const/4 v2, 0x2
 
-    .line 1311
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
-    .line 1312
     invoke-virtual {v0}, Lcom/samsung/android/media/AudioParameter$Builder;->build()Lcom/samsung/android/media/AudioParameter;
 
     move-result-object v0
 
-    .line 1313
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioSystem:Lcom/android/server/audio/AudioSystemAdapter;
 
     invoke-virtual {v0}, Lcom/samsung/android/media/AudioParameter;->toString()Ljava/lang/String;
@@ -937,7 +844,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/audio/AudioSystemAdapter;->setParameters(Ljava/lang/String;)I
 
-    .line 1315
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {p0, p1, p2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->setAppCastingState(ZI)V
@@ -948,7 +854,6 @@
 .method public getAppDevice(I)I
     .locals 4
 
-    .line 342
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {v0}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->isLeBroadcasting()Z
@@ -961,13 +866,11 @@
 
     return v1
 
-    .line 345
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 347
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -983,18 +886,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 348
     monitor-exit v0
 
     return v3
 
-    .line 350
     :cond_1
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 352
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1011,13 +911,11 @@
 
     return v1
 
-    .line 357
     :cond_2
     invoke-virtual {p1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result p1
 
-    .line 358
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->isDeviceConnected(I)Z
 
     move-result v0
@@ -1034,7 +932,6 @@
 
     return p1
 
-    .line 363
     :cond_4
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
@@ -1049,13 +946,11 @@
 
     return p1
 
-    .line 371
     :cond_6
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->getCurrentMediaDevice()I
 
     move-result p1
 
-    .line 372
     sget-object v1, Lcom/samsung/android/media/SemAudioSystem;->MULTI_SOUND_PRIMARY_DEVICE_SET:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1070,7 +965,6 @@
 
     return p1
 
-    .line 377
     :cond_7
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
@@ -1132,7 +1026,6 @@
     :catchall_0
     move-exception p0
 
-    .line 350
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1146,7 +1039,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 307
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1161,7 +1053,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 308
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result p0
@@ -1174,7 +1065,6 @@
     :goto_0
     return p0
 
-    .line 310
     :cond_1
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->getAppDevice(I)I
 
@@ -1186,12 +1076,10 @@
 .method public getAppVolume(I)I
     .locals 1
 
-    .line 433
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 434
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -1207,7 +1095,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 436
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppVolume()I
 
     move-result p0
@@ -1216,7 +1103,6 @@
 
     return p0
 
-    .line 439
     :cond_0
     monitor-exit v0
 
@@ -1227,7 +1113,6 @@
     :catchall_0
     move-exception p0
 
-    .line 440
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1238,12 +1123,10 @@
 .method public getAppVolumeFloat(I)F
     .locals 4
 
-    .line 444
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 445
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -1259,7 +1142,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 448
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mVolumeTable:[F
 
     invoke-virtual {v1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppVolume()I
@@ -1273,25 +1155,21 @@
     :cond_0
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 451
     :goto_0
     iget-object v3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPreventOverheatState:Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
 
-    .line 452
     invoke-virtual {v3, p1}, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->needLimitVolumeForApp(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 453
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->isSpeakerOut(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 454
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPreventOverheatState:Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
 
     invoke-static {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->-$$Nest$fgetmLimitedVolumeForOverheat(Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;)F
@@ -1303,7 +1181,6 @@
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 457
     invoke-virtual {v1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->isShouldMute()Z
 
     move-result p0
@@ -1312,7 +1189,6 @@
 
     const/4 v2, 0x0
 
-    .line 461
     :cond_2
     monitor-exit v0
 
@@ -1321,7 +1197,6 @@
     :catchall_0
     move-exception p0
 
-    .line 462
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1332,7 +1207,6 @@
 .method public final getCurrentMediaDevice()I
     .locals 3
 
-    .line 314
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->getCurrentMediaDevice()I
@@ -1383,7 +1257,6 @@
 
     goto :goto_0
 
-    .line 331
     :cond_3
     sget-object v0, Landroid/media/AudioSystem;->DEVICE_OUT_ALL_A2DP_SET:Ljava/util/Set;
 
@@ -1422,12 +1295,10 @@
 .method public final getCurrentUserId()I
     .locals 2
 
-    .line 1168
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1170
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -1437,13 +1308,11 @@
 
     move-result-object p0
 
-    .line 1171
     iget p0, p0, Landroid/content/pm/UserInfo;->id:I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1175
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -1453,10 +1322,8 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1176
     throw p0
 
-    .line 1175
     :catch_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1468,12 +1335,10 @@
 .method public getDeviceMultiSoundUsingActually()I
     .locals 4
 
-    .line 605
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 607
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -1494,7 +1359,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 608
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -1505,20 +1369,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 609
     monitor-exit v0
 
     const p0, 0x8000
 
     return p0
 
-    .line 612
     :cond_1
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 614
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
     const/4 v1, 0x0
@@ -1527,7 +1388,6 @@
 
     return v1
 
-    .line 618
     :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1539,7 +1399,6 @@
 
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 619
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1558,7 +1417,6 @@
 
     check-cast v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
-    .line 620
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result v3
@@ -1567,7 +1425,6 @@
 
     goto :goto_0
 
-    .line 624
     :cond_4
     iget v3, v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->mUid:I
 
@@ -1577,7 +1434,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 625
     iget v0, v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->mUid:I
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->getAppDevice(I)I
@@ -1592,7 +1448,6 @@
     :catchall_0
     move-exception p0
 
-    .line 612
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1604,12 +1459,10 @@
 .method public getPinAppInfo(I)Ljava/lang/String;
     .locals 10
 
-    .line 539
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 540
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->isRemoteSubmixAppExist()Z
 
@@ -1623,7 +1476,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 541
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1646,7 +1498,6 @@
 
     move-result p1
 
-    .line 542
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {v1, p1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->getPackageName(I)[Ljava/lang/String;
@@ -1657,7 +1508,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 544
     :try_start_1
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
@@ -1676,23 +1526,19 @@
     :catch_0
     const-string p0, ""
 
-    .line 547
     monitor-exit v0
 
     return-object p0
 
-    .line 550
     :cond_0
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 552
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 553
     :try_start_3
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
@@ -1700,12 +1546,10 @@
 
     const-string p0, ""
 
-    .line 554
     monitor-exit v1
 
     return-object p0
 
-    .line 556
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -1713,7 +1557,6 @@
 
     move-result-object v0
 
-    .line 557
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1731,7 +1574,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 558
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -1742,7 +1584,6 @@
 
     move-result v3
 
-    .line 559
     invoke-virtual {p0, v3}, Lcom/samsung/android/server/audio/MultiSoundManager;->getAppDevice(I)I
 
     move-result v4
@@ -1751,7 +1592,6 @@
 
     goto :goto_0
 
-    .line 563
     :cond_2
     iget-object v4, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
@@ -1759,17 +1599,14 @@
 
     move-result-object v3
 
-    .line 564
     aget-object v4, v3, v2
 
-    .line 565
     iget-object v5, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {v5}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->getMultiSoundAppFromSetting()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 568
     array-length v6, v3
 
     move v7, v2
@@ -1779,7 +1616,6 @@
 
     aget-object v8, v3, v7
 
-    .line 569
     invoke-virtual {v8, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
@@ -1797,7 +1633,6 @@
 
     goto :goto_1
 
-    .line 576
     :cond_4
     :goto_2
     :try_start_4
@@ -1820,7 +1655,6 @@
 
     const-string/jumbo v4, "not found"
 
-    .line 578
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -1828,7 +1662,6 @@
     :cond_5
     const-string p0, ""
 
-    .line 581
     monitor-exit v1
 
     return-object p0
@@ -1836,7 +1669,6 @@
     :catchall_0
     move-exception p0
 
-    .line 582
     monitor-exit v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -1846,7 +1678,6 @@
     :catchall_1
     move-exception p0
 
-    .line 550
     :try_start_6
     monitor-exit v0
     :try_end_6
@@ -1858,7 +1689,6 @@
 .method public getPinDevice()I
     .locals 4
 
-    .line 519
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
     const/4 v1, 0x0
@@ -1867,7 +1697,6 @@
 
     return v1
 
-    .line 521
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1879,7 +1708,6 @@
 
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 522
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1898,7 +1726,6 @@
 
     check-cast v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
-    .line 523
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result v3
@@ -1907,7 +1734,6 @@
 
     goto :goto_0
 
-    .line 527
     :cond_2
     iget v2, v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->mUid:I
 
@@ -1930,12 +1756,10 @@
 .method public getPinPackageName(I)[Ljava/lang/String;
     .locals 4
 
-    .line 632
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 633
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1947,7 +1771,6 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 634
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1965,14 +1788,12 @@
 
     check-cast v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
-    .line 635
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result v3
 
     if-ne v3, p1, :cond_0
 
-    .line 636
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getUid()I
@@ -1998,7 +1819,6 @@
 
     aput-object p1, p0, v1
 
-    .line 639
     monitor-exit v0
 
     return-object p0
@@ -2006,7 +1826,6 @@
     :catchall_0
     move-exception p0
 
-    .line 640
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2017,7 +1836,6 @@
 .method public getPreventOverheatState()Z
     .locals 0
 
-    .line 797
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPreventOverheatState:Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
 
     invoke-static {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->-$$Nest$fgetmState(Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;)Z
@@ -2030,7 +1848,6 @@
 .method public getRemoteSubmixApps()Ljava/util/Set;
     .locals 0
 
-    .line 1396
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     return-object p0
@@ -2039,17 +1856,14 @@
 .method public final getRemoteSubmixPacakageNames()[Ljava/lang/String;
     .locals 5
 
-    .line 1340
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1341
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     monitor-enter v1
 
-    .line 1342
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -2070,7 +1884,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 1343
     iget-object v4, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -2089,20 +1902,17 @@
 
     goto :goto_0
 
-    .line 1345
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1346
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
 
     new-array p0, p0, [Ljava/lang/String;
 
-    .line 1347
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -2114,7 +1924,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1345
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -2126,7 +1935,6 @@
 .method public final getUidByTaskId(I)I
     .locals 6
 
-    .line 763
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mActivityManager:Landroid/app/ActivityManager;
 
     const/4 v1, -0x1
@@ -2137,7 +1945,6 @@
 
     const-string p0, "ActivityManager is null."
 
-    .line 764
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -2145,14 +1952,12 @@
     :cond_0
     const v3, 0x7fffffff
 
-    .line 770
     invoke-virtual {v0, v3}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 772
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2171,7 +1976,6 @@
 
     check-cast v3, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 773
     iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     if-ne v4, p1, :cond_1
@@ -2180,12 +1984,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 774
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 776
     :try_start_0
     iget-object v4, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -2195,14 +1997,12 @@
 
     move-result-object v4
 
-    .line 777
     iget p0, v4, Landroid/content/pm/ApplicationInfo;->uid:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     return p0
 
-    .line 780
     :catch_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2229,12 +2029,10 @@
 .method public isAppMute(I)Z
     .locals 1
 
-    .line 483
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 484
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -2260,7 +2058,6 @@
 
     move-result-object p0
 
-    .line 485
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2280,7 +2077,6 @@
     :catchall_0
     move-exception p0
 
-    .line 486
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2302,7 +2098,6 @@
     :cond_0
     const-string v0, ""
 
-    .line 1182
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioSystem:Lcom/android/server/audio/AudioSystemAdapter;
 
@@ -2326,7 +2121,6 @@
 .method public isEnabled()Z
     .locals 0
 
-    .line 199
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
     return p0
@@ -2335,7 +2129,6 @@
 .method public final isFold()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -2344,12 +2137,10 @@
 .method public isRemoteSubmixAppExist()Z
     .locals 1
 
-    .line 1334
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 1335
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -2374,7 +2165,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1336
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2385,7 +2175,6 @@
 .method public final isSpeakerOut(I)Z
     .locals 5
 
-    .line 490
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->getCurrentMediaDevice()I
 
     move-result v0
@@ -2407,7 +2196,6 @@
     :cond_0
     move v0, v3
 
-    .line 493
     :goto_0
     iget-boolean v4, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
@@ -2415,7 +2203,6 @@
 
     return v0
 
-    .line 498
     :cond_1
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->getAppDevice(I)I
 
@@ -2440,7 +2227,6 @@
 .method public final isSupportMultiPane()Z
     .locals 1
 
-    .line 1382
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->isTablet()Z
 
     move-result v0
@@ -2473,7 +2259,6 @@
 
     const-string/jumbo p0, "ro.build.characteristics"
 
-    .line 1386
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -2482,7 +2267,6 @@
 
     const-string/jumbo v0, "tablet"
 
-    .line 1387
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -2507,7 +2291,6 @@
 
     new-array v0, v0, [F
 
-    .line 159
     iput-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mVolumeTable:[F
 
     const/4 v1, 0x0
@@ -2527,7 +2310,6 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 165
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mVolumeTable:[F
 
     int-to-double v3, v0
@@ -2569,12 +2351,10 @@
 .method public removeItem(I)Z
     .locals 5
 
-    .line 669
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 670
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -2592,7 +2372,6 @@
 
     const-string v1, "AS.MultiSoundManager"
 
-    .line 671
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2609,7 +2388,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 672
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2618,17 +2396,14 @@
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 673
     invoke-virtual {p0, p1, v2, v2}, Lcom/samsung/android/server/audio/MultiSoundManager;->setDeviceToNative(III)V
 
-    .line 674
     monitor-exit v0
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 676
     :cond_0
     monitor-exit v0
 
@@ -2637,7 +2412,6 @@
     :catchall_0
     move-exception p0
 
-    .line 677
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2648,7 +2422,6 @@
 .method public resetByAudioServerDied()V
     .locals 6
 
-    .line 644
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -2658,17 +2431,14 @@
 
     const-string/jumbo v2, "resetByAudioServerDied"
 
-    .line 645
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 647
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 648
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -2686,14 +2456,12 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 649
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
-    .line 650
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getUid()I
 
     move-result v3
@@ -2706,7 +2474,6 @@
 
     invoke-virtual {p0, v3, v4, v5}, Lcom/samsung/android/server/audio/MultiSoundManager;->setDeviceToNative(III)V
 
-    .line 651
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getUid()I
 
     move-result v2
@@ -2715,21 +2482,17 @@
 
     goto :goto_0
 
-    .line 653
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->setStateToNative()V
 
-    .line 654
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 656
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     monitor-enter v1
 
-    .line 658
     :try_start_1
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -2758,12 +2521,10 @@
 
     const v3, 0x8000
 
-    .line 659
     invoke-virtual {p0, v2, v3}, Lcom/samsung/android/server/audio/MultiSoundManager;->setRemoteSubmixAppToNative(II)V
 
     goto :goto_1
 
-    .line 662
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -2775,10 +2536,8 @@
 
     const/4 v0, 0x1
 
-    .line 663
     invoke-virtual {p0, v0, v2}, Lcom/samsung/android/server/audio/MultiSoundManager;->enableSeparateRemoteSubmix(ZI)V
 
-    .line 665
     :cond_2
     monitor-exit v1
 
@@ -2796,7 +2555,6 @@
     :catchall_1
     move-exception p0
 
-    .line 654
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -2812,17 +2570,14 @@
 
     const-string/jumbo v1, "resetByEnableDisable"
 
-    .line 203
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x3
 
-    .line 205
     invoke-static {v0}, Landroid/media/AudioSystem;->getDevicesForStream(I)I
 
     move-result v0
 
-    .line 208
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
@@ -2833,7 +2588,6 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 209
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -2851,7 +2605,6 @@
 
     check-cast v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
-    .line 210
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result v3
@@ -2860,7 +2613,6 @@
 
     goto :goto_0
 
-    .line 214
     :cond_0
     iget-boolean v3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
@@ -2874,7 +2626,6 @@
 
     if-eq v0, v3, :cond_1
 
-    .line 218
     iget v3, v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->mUid:I
 
     invoke-virtual {p0, v3}, Lcom/samsung/android/server/audio/MultiSoundManager;->getAppDevice(I)I
@@ -2883,14 +2634,12 @@
 
     if-eq v0, v3, :cond_1
 
-    .line 220
     iget-object v3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     iget v4, v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->mUid:I
 
     invoke-interface {v3, v4}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->sendBecomingNoisyIntent(I)V
 
-    .line 224
     :cond_1
     iget-object v3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
@@ -2900,7 +2649,6 @@
 
     goto :goto_0
 
-    .line 227
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->setStateToNative()V
 
@@ -2910,7 +2658,6 @@
 .method public resetPinDevice()V
     .locals 4
 
-    .line 589
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
@@ -2921,7 +2668,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 590
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2939,7 +2685,6 @@
 
     check-cast v1, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
-    .line 591
     invoke-virtual {v1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result v2
@@ -2948,7 +2693,6 @@
 
     goto :goto_0
 
-    .line 594
     :cond_0
     iget v1, v1, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->mUid:I
 
@@ -2960,7 +2704,6 @@
 
     goto :goto_0
 
-    .line 596
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->disable()V
 
@@ -2970,7 +2713,6 @@
 .method public sendBecomingNoisyIntentToUnpinApps(I)V
     .locals 3
 
-    .line 1072
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2991,7 +2733,6 @@
 
     const v0, 0x8000
 
-    .line 1075
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->isDeviceConnected(I)Z
 
     move-result v1
@@ -3000,21 +2741,18 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 1077
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->isRemoteSubmixAppExist()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1079
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->getRemoteSubmixPacakageNames()[Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1081
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->getPinDevice()I
 
@@ -3024,7 +2762,6 @@
 
     move-result-object v0
 
-    .line 1084
     :goto_0
     new-instance v1, Landroid/content/Intent;
 
@@ -3032,10 +2769,8 @@
 
     const-string v2, "android.media.AUDIO_BECOMING_NOISY_SEC"
 
-    .line 1085
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1086
     sget-object v2, Landroid/media/AudioSystem;->DEVICE_OUT_ALL_A2DP_SET:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3052,19 +2787,15 @@
 
     const/4 v2, 0x1
 
-    .line 1087
     invoke-virtual {v1, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1089
     :cond_1
     invoke-virtual {p0, v1, v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->sendIntentToSpecificPackage(Landroid/content/Intent;[Ljava/lang/String;)V
 
     const-string p1, "android.media.AUDIO_BECOMING_NOISY"
 
-    .line 1091
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1092
     invoke-virtual {v1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object p1
@@ -3073,10 +2804,8 @@
 
     const/4 p1, 0x0
 
-    .line 1093
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1095
     :cond_2
     invoke-virtual {p0, v1, v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->sendIntentToSpecificPackage(Landroid/content/Intent;[Ljava/lang/String;)V
 
@@ -3086,14 +2815,12 @@
 .method public sendBecomingNoisyToPinnedApp(I)V
     .locals 3
 
-    .line 507
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 509
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -3105,7 +2832,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 510
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -3124,7 +2850,6 @@
 
     check-cast v1, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
-    .line 511
     iget v2, v1, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->mUid:I
 
     invoke-virtual {p0, v2}, Lcom/samsung/android/server/audio/MultiSoundManager;->getAppDevice(I)I
@@ -3133,7 +2858,6 @@
 
     if-ne v2, p1, :cond_1
 
-    .line 512
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     iget v1, v1, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->mUid:I
@@ -3151,20 +2875,16 @@
 
     const/high16 v0, 0x4000000
 
-    .line 1157
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const/high16 v0, 0x10000000
 
-    .line 1158
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1159
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1161
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
@@ -3174,7 +2894,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1163
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -3184,25 +2903,21 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1164
     throw p0
 .end method
 
 .method public final sendIntentToSpecificPackage(Landroid/content/Intent;[Ljava/lang/String;)V
     .locals 13
 
-    .line 1102
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1104
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const-wide/16 v3, 0x0
 
-    .line 1105
     invoke-static {v3, v4}, Landroid/content/pm/PackageManager$ResolveInfoFlags;->of(J)Landroid/content/pm/PackageManager$ResolveInfoFlags;
 
     move-result-object v3
@@ -3211,24 +2926,20 @@
 
     move-result v4
 
-    .line 1104
     invoke-virtual {v2, p1, v3, v4}, Landroid/content/pm/PackageManager;->queryBroadcastReceiversAsUser(Landroid/content/Intent;Landroid/content/pm/PackageManager$ResolveInfoFlags;I)Ljava/util/List;
 
     move-result-object v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1107
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1109
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mActivityManager:Landroid/app/ActivityManager;
 
     invoke-virtual {v0, p1}, Landroid/app/ActivityManager;->queryRegisteredReceiverPackages(Landroid/content/Intent;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1111
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -3256,18 +2967,15 @@
 
     check-cast v2, Landroid/content/pm/ResolveInfo;
 
-    .line 1113
     iget-object v8, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-nez v8, :cond_0
 
     goto :goto_0
 
-    .line 1115
     :cond_0
     iget-object v8, v8, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 1116
     invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
 
     move-result v9
@@ -3276,7 +2984,6 @@
 
     goto :goto_0
 
-    .line 1118
     :cond_1
     array-length v9, p2
 
@@ -3287,14 +2994,12 @@
 
     aget-object v11, p2, v10
 
-    .line 1119
     invoke-virtual {v8, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
 
     if-eqz v12, :cond_2
 
-    .line 1120
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3324,7 +3029,6 @@
 
     goto :goto_0
 
-    .line 1128
     :cond_4
     iget-object v3, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -3332,10 +3036,8 @@
 
     invoke-virtual {p1, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1129
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->sendBroadcastToAll(Landroid/content/Intent;)V
 
-    .line 1130
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3356,7 +3058,6 @@
 
     goto :goto_0
 
-    .line 1136
     :cond_5
     array-length v1, v0
 
@@ -3369,7 +3070,6 @@
 
     if-eqz v8, :cond_a
 
-    .line 1138
     invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
 
     move-result v9
@@ -3378,7 +3078,6 @@
 
     goto :goto_6
 
-    .line 1140
     :cond_6
     array-length v9, p2
 
@@ -3389,14 +3088,12 @@
 
     aget-object v11, p2, v10
 
-    .line 1141
     invoke-virtual {v8, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
 
     if-eqz v12, :cond_7
 
-    .line 1142
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -3428,14 +3125,11 @@
 
     goto :goto_6
 
-    .line 1150
     :cond_9
     invoke-virtual {p1, v8}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1151
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->sendBroadcastToAll(Landroid/content/Intent;)V
 
-    .line 1152
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -3462,10 +3156,8 @@
     :catchall_0
     move-exception p0
 
-    .line 1107
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1108
     throw p0
 .end method
 
@@ -3474,17 +3166,14 @@
 
     const/4 v0, 0x3
 
-    .line 231
     invoke-static {v0}, Landroid/media/AudioSystem;->getDevicesForStream(I)I
 
     move-result v0
 
-    .line 232
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 233
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
@@ -3500,15 +3189,12 @@
 
     const-string/jumbo p1, "setAppDevice: permission error"
 
-    .line 234
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     monitor-exit v1
 
     return-void
 
-    .line 237
     :cond_0
     sget-object v2, Lcom/samsung/android/server/audio/MultiSoundManager;->MULTI_SOUND_SUPPORTED_DEVICE_SET:Ljava/util/Set;
 
@@ -3528,15 +3214,12 @@
 
     const-string/jumbo p1, "setAppDevice: unsupported device"
 
-    .line 240
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     monitor-exit v1
 
     return-void
 
-    .line 244
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -3552,7 +3235,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 246
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->getAppDevice()I
 
     move-result v2
@@ -3563,15 +3245,12 @@
 
     const-string/jumbo p1, "same device pin."
 
-    .line 247
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
     monitor-exit v1
 
     return-void
 
-    .line 250
     :cond_2
     sget-object v2, Lcom/samsung/android/media/SemAudioSystem;->MULTI_SOUND_PRIMARY_DEVICE_SET:Ljava/util/Set;
 
@@ -3587,7 +3266,6 @@
 
     const/4 v0, 0x2
 
-    .line 285
     :cond_3
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -3603,7 +3281,6 @@
 
     if-nez v2, :cond_4
 
-    .line 287
     new-instance v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
     const/16 v3, 0x64
@@ -3612,11 +3289,9 @@
 
     goto :goto_0
 
-    .line 289
     :cond_4
     invoke-virtual {v2, p2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->setAppDevice(I)V
 
-    .line 292
     :goto_0
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->removable()Z
 
@@ -3624,7 +3299,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 293
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3635,7 +3309,6 @@
 
     goto :goto_1
 
-    .line 295
     :cond_5
     iget-object v3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -3648,15 +3321,12 @@
     :goto_1
     const/4 v2, 0x0
 
-    .line 297
     invoke-virtual {p0, p1, p2, v2}, Lcom/samsung/android/server/audio/MultiSoundManager;->setDeviceToNative(III)V
 
-    .line 298
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 299
     iget-boolean p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
     if-eqz p1, :cond_6
@@ -3665,7 +3335,6 @@
 
     if-eqz p3, :cond_6
 
-    .line 300
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {p0, v0}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->showHeadUpNotification(I)V
@@ -3676,7 +3345,6 @@
     :catchall_0
     move-exception p0
 
-    .line 298
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -3688,12 +3356,10 @@
 .method public setAppMute(IZ)V
     .locals 4
 
-    .line 466
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 467
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -3709,7 +3375,6 @@
 
     if-nez v1, :cond_0
 
-    .line 469
     new-instance v1, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
     const/4 v2, 0x0
@@ -3718,18 +3383,15 @@
 
     invoke-direct {v1, p1, v2, v3}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;-><init>(III)V
 
-    .line 471
     :cond_0
     invoke-virtual {v1, p2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->setShouldMute(Z)V
 
-    .line 473
     invoke-virtual {v1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->removable()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 474
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3740,7 +3402,6 @@
 
     goto :goto_0
 
-    .line 476
     :cond_1
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -3750,13 +3411,11 @@
 
     invoke-virtual {p2, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 478
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 479
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->setAppVolumeToNative(I)V
 
     return-void
@@ -3764,7 +3423,6 @@
     :catchall_0
     move-exception p0
 
-    .line 478
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -3776,7 +3434,6 @@
 .method public setAppToRemoteSubmix(II)V
     .locals 4
 
-    .line 1352
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     monitor-enter v0
@@ -3789,7 +3446,6 @@
 
     if-ne p2, v1, :cond_2
 
-    .line 1354
     :try_start_0
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -3805,7 +3461,6 @@
 
     const-string p0, "AS.MultiSoundManager"
 
-    .line 1355
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3822,7 +3477,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1356
     monitor-exit v0
 
     return-void
@@ -3830,10 +3484,8 @@
     :cond_0
     const p2, 0x8000
 
-    .line 1359
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/server/audio/MultiSoundManager;->setRemoteSubmixAppToNative(II)V
 
-    .line 1360
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     invoke-interface {p2}, Ljava/util/Set;->size()I
@@ -3842,10 +3494,8 @@
 
     if-nez p2, :cond_1
 
-    .line 1361
     invoke-virtual {p0, v2, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->enableSeparateRemoteSubmix(ZI)V
 
-    .line 1363
     :cond_1
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -3872,7 +3522,6 @@
     :cond_3
     move v2, v3
 
-    .line 1366
     :goto_0
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -3888,7 +3537,6 @@
 
     const-string p0, "AS.MultiSoundManager"
 
-    .line 1367
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3905,12 +3553,10 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1368
     monitor-exit v0
 
     return-void
 
-    .line 1371
     :cond_4
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
@@ -3920,7 +3566,6 @@
 
     invoke-interface {p2, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 1372
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mRemoteSubmixApps:Ljava/util/Set;
 
     invoke-interface {p2}, Ljava/util/Set;->size()I
@@ -3929,29 +3574,24 @@
 
     if-nez p2, :cond_5
 
-    .line 1373
     invoke-virtual {p0, v3}, Lcom/samsung/android/server/audio/MultiSoundManager;->enableSeparateRemoteSubmix(Z)V
 
-    .line 1375
     :cond_5
     invoke-virtual {p0, p1, v3}, Lcom/samsung/android/server/audio/MultiSoundManager;->setRemoteSubmixAppToNative(II)V
 
     move v3, v2
 
-    .line 1377
     :goto_1
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1378
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {p0, p1, v3}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->updateFocusRequester(IZ)V
 
     return-void
 
-    .line 1377
     :goto_2
     :try_start_1
     monitor-exit v0
@@ -3972,13 +3612,11 @@
 
     goto :goto_2
 
-    .line 400
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mMultiSoundLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 401
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -3996,12 +3634,10 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 406
     monitor-exit v1
 
     return-void
 
-    .line 408
     :cond_1
     new-instance v2, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;
 
@@ -4011,11 +3647,9 @@
 
     goto :goto_0
 
-    .line 410
     :cond_2
     invoke-virtual {v2, p2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->setAppVolume(I)V
 
-    .line 411
     invoke-virtual {v2}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundItem;->removable()Z
 
     move-result v0
@@ -4023,7 +3657,6 @@
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 415
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4034,7 +3667,6 @@
 
     goto :goto_1
 
-    .line 417
     :cond_3
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPinAppInfoList:Ljava/util/HashMap;
 
@@ -4044,13 +3676,11 @@
 
     invoke-virtual {p2, v0, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 419
     :goto_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 420
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager;->setAppVolumeToNative(I)V
 
     return-void
@@ -4058,7 +3688,6 @@
     :catchall_0
     move-exception p0
 
-    .line 419
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -4072,7 +3701,6 @@
 
     const-string/jumbo p1, "setAppVolume: Invalid volume"
 
-    .line 396
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -4081,7 +3709,6 @@
 .method public setAppVolumeToNative(I)V
     .locals 1
 
-    .line 424
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mSetVolumeRunnable:Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;
 
     invoke-static {v0}, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;->-$$Nest$fgetmUid(Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;)I
@@ -4090,7 +3717,6 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 425
     iget-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mSetVolumeRunnable:Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;
@@ -4099,7 +3725,6 @@
 
     goto :goto_0
 
-    .line 427
     :cond_0
     new-instance v0, Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;
 
@@ -4107,7 +3732,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mSetVolumeRunnable:Lcom/samsung/android/server/audio/MultiSoundManager$SetVolumeRunnable;
 
-    .line 429
     :goto_0
     iget-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 
@@ -4121,35 +3745,30 @@
 .method public final setDeviceToNative(III)V
     .locals 4
 
-    .line 732
     new-instance v0, Lcom/samsung/android/media/AudioParameter$Builder;
 
     invoke-direct {v0}, Lcom/samsung/android/media/AudioParameter$Builder;-><init>()V
 
     const-string v1, "audioParam"
 
-    .line 733
     invoke-virtual {v0, v1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
     const-string v1, "l_multi_sound_key"
 
-    .line 734
     invoke-virtual {v0, v1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
     const-string/jumbo v1, "uid"
 
-    .line 735
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object p1
 
     const-string v0, "device"
 
-    .line 736
     invoke-virtual {p1, v0, p2}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object p1
@@ -4158,22 +3777,18 @@
 
     const/4 v0, 0x1
 
-    .line 737
     invoke-virtual {p1, p2, v0}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object p1
 
-    .line 738
     invoke-virtual {p1}, Lcom/samsung/android/media/AudioParameter$Builder;->build()Lcom/samsung/android/media/AudioParameter;
 
     move-result-object p1
 
-    .line 740
     sget-object p2, Lcom/samsung/android/server/audio/MultiSoundManager;->sLastSetDeviceToNativeLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 741
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -4183,7 +3798,6 @@
 
     add-long/2addr v0, v2
 
-    .line 742
     sget-wide v2, Lcom/samsung/android/server/audio/MultiSoundManager;->sLastSetDeviceToNativeTime:J
 
     cmp-long p3, v2, v0
@@ -4194,11 +3808,9 @@
 
     add-long/2addr v0, v2
 
-    .line 745
     :cond_0
     sput-wide v0, Lcom/samsung/android/server/audio/MultiSoundManager;->sLastSetDeviceToNativeTime:J
 
-    .line 746
     iget-object p3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/samsung/android/server/audio/MultiSoundManager$$ExternalSyntheticLambda1;
@@ -4207,7 +3819,6 @@
 
     invoke-virtual {p3, v2, v0, v1}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
 
-    .line 747
     monitor-exit p2
 
     return-void
@@ -4225,7 +3836,6 @@
 .method public setLimitedVolumeForOverheat()V
     .locals 0
 
-    .line 793
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPreventOverheatState:Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
 
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->setLimitedVolumeForOverheat()V
@@ -4236,7 +3846,6 @@
 .method public setPreventOverheatState(I)V
     .locals 0
 
-    .line 801
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPreventOverheatState:Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->setDevice(I)V
@@ -4247,7 +3856,6 @@
 .method public setPreventOverheatState(IZ)V
     .locals 0
 
-    .line 789
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mPreventOverheatState:Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->setState(IZ)V
@@ -4258,35 +3866,30 @@
 .method public final setRemoteSubmixAppToNative(II)V
     .locals 2
 
-    .line 1323
     new-instance v0, Lcom/samsung/android/media/AudioParameter$Builder;
 
     invoke-direct {v0}, Lcom/samsung/android/media/AudioParameter$Builder;-><init>()V
 
     const-string v1, "audioParam"
 
-    .line 1324
     invoke-virtual {v0, v1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
     const-string v1, "l_multi_sound_key"
 
-    .line 1325
     invoke-virtual {v0, v1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
     const-string/jumbo v1, "uid"
 
-    .line 1326
     invoke-virtual {v0, v1, p1}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object p1
 
     const-string v0, "device"
 
-    .line 1327
     invoke-virtual {p1, v0, p2}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object p1
@@ -4295,17 +3898,14 @@
 
     const/4 v0, 0x2
 
-    .line 1328
     invoke-virtual {p1, p2, v0}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object p1
 
-    .line 1329
     invoke-virtual {p1}, Lcom/samsung/android/media/AudioParameter$Builder;->build()Lcom/samsung/android/media/AudioParameter;
 
     move-result-object p1
 
-    .line 1330
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioSystem:Lcom/android/server/audio/AudioSystemAdapter;
 
     invoke-virtual {p1}, Lcom/samsung/android/media/AudioParameter;->toString()Ljava/lang/String;
@@ -4320,10 +3920,8 @@
 .method public final setStateToNative()V
     .locals 5
 
-    .line 715
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
-    .line 716
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mInterface:Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;
 
     invoke-interface {v1}, Lcom/samsung/android/server/audio/MultiSoundManager$MultiSoundInterface;->isLeBroadcasting()Z
@@ -4336,12 +3934,10 @@
 
     const-string/jumbo v1, "send multisound off during le broadcasting"
 
-    .line 719
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 721
     :cond_0
     new-instance v1, Lcom/samsung/android/media/AudioParameter$Builder;
 
@@ -4349,21 +3945,18 @@
 
     const-string v2, "audioParam"
 
-    .line 722
     invoke-virtual {v1, v2}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v1
 
     const-string v2, "l_multi_sound_key"
 
-    .line 723
     invoke-virtual {v1, v2}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v1
 
     const-string v2, "enable"
 
-    .line 724
     invoke-virtual {v1, v2, v0}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;Z)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
@@ -4372,17 +3965,14 @@
 
     const/4 v2, 0x1
 
-    .line 725
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/media/AudioParameter$Builder;->setParam(Ljava/lang/String;I)Lcom/samsung/android/media/AudioParameter$Builder;
 
     move-result-object v0
 
-    .line 726
     invoke-virtual {v0}, Lcom/samsung/android/media/AudioParameter$Builder;->build()Lcom/samsung/android/media/AudioParameter;
 
     move-result-object v0
 
-    .line 728
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/samsung/android/server/audio/MultiSoundManager$$ExternalSyntheticLambda0;
@@ -4403,15 +3993,12 @@
 
     const-string/jumbo v1, "shouldEnable"
 
-    .line 182
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 183
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mEnabled:Z
 
-    .line 184
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->resetByEnableDisable()V
 
     return-void
@@ -4422,24 +4009,20 @@
 
     const/4 v0, 0x2
 
-    .line 916
     invoke-static {v0}, Landroid/media/AudioManager;->getDevicesStatic(I)[Landroid/media/AudioDeviceInfo;
 
     move-result-object v1
 
     const-string v2, ""
 
-    .line 917
     filled-new-array {v2, v2}, [Ljava/lang/String;
 
     move-result-object v2
 
-    .line 918
     filled-new-array {p1, p2}, [I
 
     move-result-object p1
 
-    .line 920
     sget-object p2, Lcom/samsung/android/media/SemAudioSystem;->MULTI_SOUND_PRIMARY_DEVICE_SET:Ljava/util/Set;
 
     const/4 v3, 0x0
@@ -4462,7 +4045,6 @@
 
     aget v5, p1, v4
 
-    .line 921
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -4481,7 +4063,6 @@
     :goto_0
     if-ge p2, v0, :cond_5
 
-    .line 926
     aget v5, p1, p2
 
     if-eq v5, v0, :cond_3
@@ -4494,7 +4075,6 @@
 
     if-eq v5, v6, :cond_2
 
-    .line 935
     array-length v5, v1
 
     move v6, v3
@@ -4504,7 +4084,6 @@
 
     aget-object v7, v1, v6
 
-    .line 936
     invoke-virtual {v7}, Landroid/media/AudioDeviceInfo;->semGetInternalType()I
 
     move-result v8
@@ -4513,7 +4092,6 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 937
     invoke-virtual {v7}, Landroid/media/AudioDeviceInfo;->getProductName()Ljava/lang/CharSequence;
 
     move-result-object v5
@@ -4531,7 +4109,6 @@
 
     goto :goto_1
 
-    .line 932
     :cond_2
     iget-object v5, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
@@ -4549,7 +4126,6 @@
 
     goto :goto_2
 
-    .line 928
     :cond_3
     iget-object v5, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
@@ -4571,13 +4147,11 @@
 
     goto :goto_0
 
-    .line 945
     :cond_5
     iget-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
     const p2, 0x104082d
 
-    .line 946
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -4590,12 +4164,10 @@
 
     move-result-object p2
 
-    .line 945
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 952
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
@@ -4610,7 +4182,6 @@
 
     move-result-object p2
 
-    .line 956
     new-instance v1, Landroid/app/Notification$Builder;
 
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
@@ -4619,19 +4190,16 @@
 
     invoke-direct {v1, v2, v5}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 957
     invoke-virtual {v1, v4}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
 
     move-result-object v1
 
-    .line 958
     invoke-virtual {v1, v4}, Landroid/app/Notification$Builder;->setShowWhen(Z)Landroid/app/Notification$Builder;
 
     move-result-object v1
 
     const v2, 0x1080a88
 
-    .line 959
     invoke-virtual {v1, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     move-result-object v1
@@ -4640,7 +4208,6 @@
 
     const v5, 0x104082e
 
-    .line 960
     invoke-virtual {v2, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -4649,7 +4216,6 @@
 
     move-result-object v1
 
-    .line 961
     invoke-virtual {v1, p1}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v1
@@ -4658,7 +4224,6 @@
 
     invoke-direct {v2}, Landroid/app/Notification$BigTextStyle;-><init>()V
 
-    .line 962
     invoke-virtual {v2, p1}, Landroid/app/Notification$BigTextStyle;->bigText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
 
     move-result-object p1
@@ -4667,12 +4232,10 @@
 
     move-result-object p1
 
-    .line 963
     invoke-virtual {p1, v0}, Landroid/app/Notification$Builder;->setPriority(I)Landroid/app/Notification$Builder;
 
     move-result-object p1
 
-    .line 964
     invoke-virtual {p1, v4}, Landroid/app/Notification$Builder;->setDefaults(I)Landroid/app/Notification$Builder;
 
     move-result-object p1
@@ -4681,7 +4244,6 @@
 
     const v1, 0x104082a
 
-    .line 965
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -4690,12 +4252,10 @@
 
     move-result-object p1
 
-    .line 966
     invoke-virtual {p1, p2}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
     move-result-object p1
 
-    .line 968
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
     const/16 p2, 0x3ed
@@ -4712,7 +4272,6 @@
 .method public showNotification()V
     .locals 8
 
-    .line 817
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
     if-nez v0, :cond_0
@@ -4722,12 +4281,10 @@
     :cond_0
     const/4 v0, 0x3
 
-    .line 820
     invoke-static {v0}, Landroid/media/AudioSystem;->getDevicesForStream(I)I
 
     move-result v0
 
-    .line 821
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->getPinDevice()I
 
     move-result v1
@@ -4738,13 +4295,11 @@
 
     goto/16 :goto_2
 
-    .line 827
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 829
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager;->isSupportMultiPane()Z
 
     move-result v2
@@ -4757,34 +4312,28 @@
 
     const-string v2, "android.settings.SETTINGS_EMBED_DEEP_LINK_ACTIVITY"
 
-    .line 830
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 831
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 832
     invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v3, 0x1
 
-    .line 835
     invoke-virtual {v2, v3}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "android.provider.extra.SETTINGS_EMBEDDED_DEEP_LINK_INTENT_URI"
 
-    .line 834
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "android.provider.extra.SETTINGS_EMBEDDED_DEEP_LINK_HIGHLIGHT_MENU_KEY"
 
     const-string/jumbo v3, "top_level_sounds"
 
-    .line 836
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_0
@@ -4792,13 +4341,10 @@
     :cond_2
     const-string v2, "android.intent.action.Launch_Setting"
 
-    .line 840
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 841
     invoke-virtual {v0, v4, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 845
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
@@ -4810,14 +4356,12 @@
 
     move-result-object v0
 
-    .line 847
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.TurnOff_MultiSound"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 848
     iget-object v3, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
     const/high16 v5, 0x4000000
@@ -4826,7 +4370,6 @@
 
     move-result-object v2
 
-    .line 851
     new-instance v3, Landroid/app/Notification$Builder;
 
     iget-object v6, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
@@ -4855,7 +4398,6 @@
 
     if-eq v1, v5, :cond_3
 
-    .line 886
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
     const v5, 0x1040835
@@ -4866,7 +4408,6 @@
 
     goto :goto_1
 
-    .line 877
     :cond_3
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
@@ -4876,7 +4417,6 @@
 
     goto :goto_1
 
-    .line 867
     :cond_4
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
@@ -4888,7 +4428,6 @@
 
     goto :goto_1
 
-    .line 858
     :cond_5
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
@@ -4896,7 +4435,6 @@
 
     move-result-object v1
 
-    .line 894
     :goto_1
     new-instance v5, Landroid/app/Notification$BigTextStyle;
 
@@ -4914,7 +4452,6 @@
 
     const v7, 0x1040838
 
-    .line 895
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -4925,36 +4462,30 @@
 
     const v6, 0x1080a88
 
-    .line 896
     invoke-virtual {v5, v6}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     move-result-object v5
 
-    .line 897
     invoke-virtual {v5, v1}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v1
 
-    .line 898
     invoke-virtual {v1, v4}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
 
     move-result-object v1
 
     const/4 v4, 0x0
 
-    .line 899
     invoke-virtual {v1, v4}, Landroid/app/Notification$Builder;->setVibrate([J)Landroid/app/Notification$Builder;
 
     move-result-object v1
 
-    .line 900
     invoke-virtual {v1, v0}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
     move-result-object v1
 
     iget-object v4, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
-    .line 902
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -4967,14 +4498,12 @@
 
     const v5, 0x1080078
 
-    .line 901
     invoke-virtual {v1, v5, v4, v0}, Landroid/app/Notification$Builder;->addAction(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
-    .line 905
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -4985,10 +4514,8 @@
 
     move-result-object v1
 
-    .line 904
     invoke-virtual {v0, v5, v1, v2}, Landroid/app/Notification$Builder;->addAction(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
-    .line 908
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
     const/16 v0, 0x3ec
@@ -5007,7 +4534,6 @@
 .method public showToast()V
     .locals 3
 
-    .line 976
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     iget-object v1, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
@@ -5016,10 +4542,8 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 978
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
-    .line 979
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -5036,14 +4560,12 @@
 
     const v2, 0x1040826
 
-    .line 978
     invoke-virtual {p0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 980
     invoke-static {v0, p0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object p0
@@ -5056,17 +4578,14 @@
 .method public updateAudioServiceNotificationChannel()V
     .locals 4
 
-    .line 805
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
     const-string v1, "AudioCore_Notification"
 
     if-eqz v0, :cond_0
 
-    .line 806
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->deleteNotificationChannel(Ljava/lang/String;)V
 
-    .line 809
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
@@ -5080,12 +4599,10 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
-    .line 810
     new-instance v0, Landroid/app/NotificationChannel;
 
     iget-object v2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mContext:Landroid/content/Context;
 
-    .line 811
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -5100,7 +4617,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    .line 813
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mNm:Landroid/app/NotificationManager;
 
     invoke-virtual {p0, v0}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
@@ -5113,7 +4629,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 752
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mUpdateFocusedAppRunnable:Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;
@@ -5124,14 +4639,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 753
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mUpdateFocusedAppRunnable:Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 755
     :cond_0
     new-instance p2, Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;
 
@@ -5139,14 +4652,12 @@
 
     iput-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mUpdateFocusedAppRunnable:Lcom/samsung/android/server/audio/MultiSoundManager$UpdateFocusedAppRunnable;
 
-    .line 756
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 758
     :cond_1
     iget-object p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager;->mAudioHandler:Landroid/os/Handler;
 

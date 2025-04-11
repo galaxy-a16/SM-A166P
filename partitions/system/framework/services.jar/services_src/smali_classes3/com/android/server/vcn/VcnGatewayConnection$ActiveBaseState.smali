@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;)V
     .locals 1
 
-    .line 1558
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$ActiveBaseState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     const/4 v0, 0x0
@@ -24,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;Lcom/android/server/vcn/VcnGatewayConnection$ActiveBaseState-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/vcn/VcnGatewayConnection$ActiveBaseState;-><init>(Lcom/android/server/vcn/VcnGatewayConnection;)V
 
     return-void
@@ -39,7 +37,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 1561
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$ActiveBaseState;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-static {p0}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$fgetmCurrentToken(Lcom/android/server/vcn/VcnGatewayConnection;)I

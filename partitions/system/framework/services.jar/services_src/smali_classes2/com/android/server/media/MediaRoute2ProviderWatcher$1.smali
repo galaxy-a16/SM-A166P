@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRoute2ProviderWatcher;)V
     .locals 0
 
-    .line 184
     iput-object p1, p0, Lcom/android/server/media/MediaRoute2ProviderWatcher$1;->this$0:Lcom/android/server/media/MediaRoute2ProviderWatcher;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 187
     invoke-static {}, Lcom/android/server/media/MediaRoute2ProviderWatcher;->-$$Nest$sfgetDEBUG()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 188
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +47,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     :cond_0
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderWatcher$1;->this$0:Lcom/android/server/media/MediaRoute2ProviderWatcher;
 

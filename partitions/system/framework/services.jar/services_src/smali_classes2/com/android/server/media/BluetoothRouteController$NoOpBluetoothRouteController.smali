@@ -20,7 +20,6 @@
 .method public getAllBluetoothRoutes()Ljava/util/List;
     .locals 0
 
-    .line 193
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public getSelectedRoute()Landroid/media/MediaRoute2Info;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -40,7 +38,6 @@
 .method public getTransferableRoutes()Ljava/util/List;
     .locals 0
 
-    .line 187
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -51,7 +48,6 @@
 .method public selectRoute(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -60,28 +56,24 @@
 .method public start(Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public stop()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public transferTo(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateVolumeForDevices(II)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

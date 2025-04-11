@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -32,12 +30,10 @@
 .method public final createAppidTrustlist(Landroid/content/Context;)Landroid/util/ArraySet;
     .locals 8
 
-    .line 117
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 120
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -52,26 +48,22 @@
 
     invoke-virtual {p0, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 122
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
 
     const-string v0, "android.permission.UPDATE_DEVICE_STATS"
 
-    .line 123
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
     const/high16 v1, 0xc0000
 
-    .line 126
     invoke-virtual {p1, v0, v1}, Landroid/content/pm/PackageManager;->getPackagesHoldingPermissions([Ljava/lang/String;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 127
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -81,14 +73,12 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 129
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/content/pm/PackageInfo;
 
-    .line 131
     :try_start_0
     iget-object v5, v4, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -96,12 +86,10 @@
 
     move-result v5
 
-    .line 132
     invoke-static {v5}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v5
 
-    .line 133
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -115,7 +103,6 @@
     :catch_0
     move-exception v5
 
-    .line 135
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,13 +137,10 @@
 
     const-string v0, "AppIds of apps that can set the work source:"
 
-    .line 104
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;->mAppIdTrustlist:Landroid/util/ArraySet;
 
-    .line 106
     invoke-virtual {p0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -174,7 +158,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 107
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -208,7 +191,6 @@
 .method public getCallingUid()I
     .locals 0
 
-    .line 112
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -219,17 +201,14 @@
 .method public resolveWorkSourceUid(I)I
     .locals 2
 
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;->getCallingUid()I
 
     move-result v0
 
-    .line 90
     invoke-static {v0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v1
 
-    .line 91
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;->mAppIdTrustlist:Landroid/util/ArraySet;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -271,7 +250,6 @@
 .method public systemReady(Landroid/content/Context;)V
     .locals 0
 
-    .line 100
     invoke-virtual {p0, p1}, Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;->createAppidTrustlist(Landroid/content/Context;)Landroid/util/ArraySet;
 
     move-result-object p1

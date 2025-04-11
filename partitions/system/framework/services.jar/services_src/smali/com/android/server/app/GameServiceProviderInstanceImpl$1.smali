@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/app/GameServiceProviderInstanceImpl;)V
     .locals 0
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$1;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public bridge synthetic onConnected(Landroid/os/IInterface;)V
     .locals 0
 
-    .line 81
     check-cast p1, Landroid/service/games/IGameService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/app/GameServiceProviderInstanceImpl$1;->onConnected(Landroid/service/games/IGameService;)V
@@ -38,7 +36,6 @@
 .method public onConnected(Landroid/service/games/IGameService;)V
     .locals 1
 
-    .line 85
     :try_start_0
     iget-object p0, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$1;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
@@ -59,7 +56,6 @@
 
     const-string v0, "Failed to send connected event"
 
-    .line 87
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

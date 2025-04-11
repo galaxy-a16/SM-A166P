@@ -15,15 +15,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 413
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 414
     iput-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams$Builder;->mPermissionStates:Landroid/util/ArrayMap;
 
-    .line 417
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -32,7 +29,6 @@
 
     const/4 v0, 0x3
 
-    .line 418
     iput v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams$Builder;->mAutoRevokePermissionsMode:I
 
     return-void
@@ -43,10 +39,8 @@
 .method public build()Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;
     .locals 4
 
-    .line 474
     new-instance v0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;
 
-    .line 475
     iget-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams$Builder;->mPermissionStates:Landroid/util/ArrayMap;
 
     if-nez v1, :cond_0
@@ -70,10 +64,8 @@
 .method public setAllowlistedRestrictedPermissions(Ljava/util/List;)V
     .locals 1
 
-    .line 445
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 446
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -86,7 +78,6 @@
 .method public setAutoRevokePermissionsMode(I)V
     .locals 0
 
-    .line 464
     iput p1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams$Builder;->mAutoRevokePermissionsMode:I
 
     return-void
@@ -95,10 +86,8 @@
 .method public setPermissionStates(Landroid/util/ArrayMap;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams$Builder;
     .locals 0
 
-    .line 428
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 429
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams$Builder;->mPermissionStates:Landroid/util/ArrayMap;
 
     return-object p0

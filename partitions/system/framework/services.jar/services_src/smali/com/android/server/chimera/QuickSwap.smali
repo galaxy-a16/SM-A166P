@@ -63,7 +63,6 @@
 .method public static synthetic $r8$lambda$1WKEqdsZl9b5P8BXN4F_k4Pv-qk(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/chimera/QuickSwap;->lambda$getReclaimSet$2(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -74,7 +73,6 @@
 .method public static synthetic $r8$lambda$WhASt5lTX99SE06CriYFF1hb--M(Landroid/util/Pair;Landroid/util/Pair;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/chimera/QuickSwap;->lambda$getReclaimSet$1(Landroid/util/Pair;Landroid/util/Pair;)I
 
     move-result p0
@@ -85,7 +83,6 @@
 .method public static synthetic $r8$lambda$q4YDhG_wdSeY1DQX1rKMrEHBXhQ(Lcom/android/server/chimera/QuickSwap;ILcom/android/server/chimera/PerProcessNandswap$NandswapRecord;J)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/chimera/QuickSwap;->lambda$doQuickSwap$0(ILcom/android/server/chimera/PerProcessNandswap$NandswapRecord;J)Ljava/lang/Integer;
 
     move-result-object p0
@@ -96,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$fgetmQuickSwapThread(Lcom/android/server/chimera/QuickSwap;)Lcom/android/server/ServiceThread;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/QuickSwap;->mQuickSwapThread:Lcom/android/server/ServiceThread;
 
     return-object p0
@@ -105,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/QuickSwap;)Lcom/android/server/chimera/SystemRepository;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/QuickSwap;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     return-object p0
@@ -120,7 +115,6 @@
 
     const-string v2, "com.google.android.aicore"
 
-    .line 92
     filled-new-array {v2, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -137,18 +131,14 @@
 .method public constructor <init>(Lcom/android/server/chimera/PerProcessNandswap;Lcom/android/server/chimera/SystemRepository;)V
     .locals 3
 
-    .line 102
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
-    .line 56
     iput v0, p0, Lcom/android/server/chimera/QuickSwap;->DEFAULT_THREAD_POOL_SIZE:I
 
-    .line 57
     iput v0, p0, Lcom/android/server/chimera/QuickSwap;->mThreadPoolSize:I
 
-    .line 62
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -157,57 +147,42 @@
 
     const/4 v0, 0x0
 
-    .line 68
     iput v0, p0, Lcom/android/server/chimera/QuickSwap;->mTriggeredCnt:I
 
-    .line 69
     iput v0, p0, Lcom/android/server/chimera/QuickSwap;->mPageoutCnt:I
 
-    .line 70
     iput v0, p0, Lcom/android/server/chimera/QuickSwap;->mWritebackCnt:I
 
-    .line 72
     iput v0, p0, Lcom/android/server/chimera/QuickSwap;->mLatestQuickSwapType:I
 
     const-string v1, "N/A"
 
-    .line 73
     iput-object v1, p0, Lcom/android/server/chimera/QuickSwap;->mLatestResult:Ljava/lang/String;
 
     const-wide/16 v1, 0x0
 
-    .line 74
     iput-wide v1, p0, Lcom/android/server/chimera/QuickSwap;->mLatestTimestampMS:J
 
-    .line 75
     iput v0, p0, Lcom/android/server/chimera/QuickSwap;->mLatestPageoutCnt:I
 
-    .line 76
     iput v0, p0, Lcom/android/server/chimera/QuickSwap;->mLatestWritebackCnt:I
 
-    .line 77
     iput-wide v1, p0, Lcom/android/server/chimera/QuickSwap;->mLatestAnonZramDiff:J
 
-    .line 78
     iput-wide v1, p0, Lcom/android/server/chimera/QuickSwap;->mLatestLatency:J
 
-    .line 131
     iput-boolean v0, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwap:Z
 
-    .line 132
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwapLock:Ljava/lang/Object;
 
-    .line 103
     iput-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
-    .line 104
     iput-object p2, p0, Lcom/android/server/chimera/QuickSwap;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
-    .line 105
     new-instance p1, Lcom/android/server/chimera/QuickSwap$GenAIReceiver;
 
     invoke-direct {p1, p0}, Lcom/android/server/chimera/QuickSwap$GenAIReceiver;-><init>(Lcom/android/server/chimera/QuickSwap;)V
@@ -218,7 +193,6 @@
 
     const/4 p2, 0x1
 
-    .line 107
     invoke-static {p1, p2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -229,7 +203,6 @@
 
     const-wide/32 v0, 0x100000
 
-    .line 110
     invoke-static {p1, v0, v1}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -240,14 +213,12 @@
 
     const-wide/32 v0, 0x96000
 
-    .line 111
     invoke-static {p1, v0, v1}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/chimera/QuickSwap;->mThresholdLmkd:J
 
-    .line 113
     iget p1, p0, Lcom/android/server/chimera/QuickSwap;->mThreadPoolSize:I
 
     invoke-static {p1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
@@ -258,7 +229,6 @@
 
     iput-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    .line 114
     sget-object p1, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -279,7 +249,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mNativeProcPssMap:Ljava/util/Map;
 
     const-wide/16 v0, 0x12c
@@ -292,7 +261,6 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 117
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mNativeProcPssMap:Ljava/util/Map;
 
     const-wide/16 v0, 0x96
@@ -305,7 +273,6 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mNativeProcPssMap:Ljava/util/Map;
 
     const-wide/16 v0, 0x8c
@@ -318,7 +285,6 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 119
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mNativeProcPssMap:Ljava/util/Map;
 
     const-wide/16 v0, 0x3c
@@ -331,7 +297,6 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 120
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mNativeProcPssMap:Ljava/util/Map;
 
     const-wide/16 v0, 0x1e
@@ -344,7 +309,6 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 121
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mNativeProcPssMap:Ljava/util/Map;
 
     const-wide/16 v0, 0xc8
@@ -357,7 +321,6 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 123
     new-instance p1, Lcom/android/server/ServiceThread;
 
     const-string v0, "QuickSwapThread"
@@ -368,19 +331,16 @@
 
     iput-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mQuickSwapThread:Lcom/android/server/ServiceThread;
 
-    .line 125
     invoke-virtual {p1}, Landroid/os/HandlerThread;->isAlive()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 126
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->mQuickSwapThread:Lcom/android/server/ServiceThread;
 
     invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
-    .line 128
     :cond_0
     new-instance p1, Lcom/android/server/chimera/QuickSwap$QuickSwapHandler;
 
@@ -400,7 +360,6 @@
 
     const-wide/16 v1, 0x40
 
-    .line 264
     :try_start_0
     iget-object p0, p0, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -410,14 +369,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 265
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 266
     sget-object p0, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -436,7 +393,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     :cond_0
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -445,23 +401,18 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 295
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
 
-    .line 271
     :cond_1
     :try_start_1
     iget-object p0, p2, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->processName:Ljava/lang/String;
 
-    .line 272
     iget v3, p2, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->procState:I
 
-    .line 273
     iget p2, p2, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->adj:I
 
-    .line 275
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -478,7 +429,6 @@
 
     invoke-static {v1, v2, v4}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 277
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v4
@@ -490,7 +440,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 278
     :try_start_2
     sget-object v4, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
@@ -526,7 +475,6 @@
 
     invoke-static {v4, p3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     :cond_2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -534,26 +482,22 @@
 
     const/4 v4, 0x1
 
-    .line 282
     invoke-static {p1, v4}, Lcom/android/server/chimera/PerProcessNandswap;->compactProcessForWriteback(II)J
 
     move-result-wide v6
 
-    .line 283
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v8
 
     sub-long/2addr v8, p3
 
-    .line 285
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result p3
 
     if-eqz p3, :cond_3
 
-    .line 286
     sget-object p3, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance p4, Ljava/lang/StringBuilder;
@@ -604,7 +548,6 @@
 
     invoke-static {p3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     :cond_3
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -613,7 +556,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 295
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
@@ -626,18 +568,15 @@
     :catch_0
     move-exception p0
 
-    .line 292
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 293
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 295
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
@@ -645,14 +584,12 @@
     :goto_0
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 296
     throw p0
 .end method
 
 .method public static synthetic lambda$getReclaimSet$1(Landroid/util/Pair;Landroid/util/Pair;)I
     .locals 4
 
-    .line 466
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Long;
@@ -677,7 +614,6 @@
 
     if-nez v0, :cond_1
 
-    .line 467
     iget-object p1, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Integer;
@@ -706,7 +642,6 @@
     :goto_0
     return p0
 
-    .line 469
     :cond_1
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -734,7 +669,6 @@
 .method public static synthetic lambda$getReclaimSet$2(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)Ljava/lang/Integer;
     .locals 0
 
-    .line 475
     iget p0, p0, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -753,7 +687,6 @@
 
     const/4 v1, 0x0
 
-    .line 176
     filled-new-array {v1, v0}, [I
 
     move-result-object v0
@@ -762,23 +695,19 @@
 
     const/16 v3, 0xfa
 
-    .line 178
     :try_start_0
     invoke-virtual {p0, p1, v2, v3, v0}, Lcom/android/server/chimera/QuickSwap;->doQuickSwap(III[I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 182
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwapLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 183
     :try_start_1
     iput-boolean v1, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwap:Z
 
-    .line 184
     monitor-exit p1
 
     goto :goto_0
@@ -800,7 +729,6 @@
     :catch_0
     move-exception p1
 
-    .line 180
     :try_start_2
     sget-object v0, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
@@ -826,16 +754,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 182
     iget-object p1, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwapLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 183
     :try_start_3
     iput-boolean v1, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwap:Z
 
-    .line 184
     monitor-exit p1
 
     :goto_0
@@ -850,28 +775,23 @@
 
     throw p0
 
-    .line 182
     :goto_1
     iget-object v0, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwapLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 183
     :try_start_4
     iput-boolean v1, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwap:Z
 
-    .line 184
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 185
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 184
     :try_start_5
     monitor-exit v0
     :try_end_5
@@ -887,20 +807,16 @@
 
     move/from16 v8, p1
 
-    .line 196
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v9
 
-    .line 199
     new-instance v0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 200
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 202
     invoke-virtual {v7, v8, v0}, Lcom/android/server/chimera/QuickSwap;->isLowMemory(ILcom/android/internal/util/MemInfoReader;)Z
 
     move-result v1
@@ -914,7 +830,6 @@
 
     const/4 v12, 0x1
 
-    .line 208
     :try_start_0
     new-instance v1, Landroid/os/StatFs;
 
@@ -922,7 +837,6 @@
 
     invoke-direct {v1, v2}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 209
     invoke-virtual {v1}, Landroid/os/StatFs;->getFreeBytes()J
 
     move-result-wide v2
@@ -943,7 +857,6 @@
 
     if-gez v1, :cond_1
 
-    .line 211
     sget-object v1, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -996,7 +909,6 @@
 
     goto :goto_1
 
-    .line 215
     :catch_0
     sget-object v1, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
@@ -1006,20 +918,17 @@
 
     move v13, v12
 
-    .line 220
     :goto_1
     invoke-virtual {v7, v0}, Lcom/android/server/chimera/QuickSwap;->getTotalAnonDRAMUsedKb(Lcom/android/internal/util/MemInfoReader;)J
 
     move-result-wide v14
 
-    .line 222
     sget-object v1, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     const-string v2, "QuickSwap start"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     iget v2, v7, Lcom/android/server/chimera/QuickSwap;->mTriggeredCnt:I
 
     add-int/2addr v2, v12
@@ -1032,12 +941,10 @@
 
     move-object/from16 v4, p4
 
-    .line 226
     invoke-virtual {v7, v2, v3, v4}, Lcom/android/server/chimera/QuickSwap;->getReclaimSet(II[I)Ljava/util/Set;
 
     move-result-object v16
 
-    .line 227
     invoke-interface/range {v16 .. v16}, Ljava/util/Set;->size()I
 
     move-result v2
@@ -1046,12 +953,10 @@
 
     const-string/jumbo v0, "reclaimSet size 0!!"
 
-    .line 228
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 237
     :cond_2
     iget-object v2, v7, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1071,12 +976,10 @@
 
     if-lt v2, v3, :cond_b
 
-    .line 238
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 241
     invoke-interface/range {v16 .. v16}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v17
@@ -1096,7 +999,6 @@
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 242
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -1105,7 +1007,6 @@
 
     move-result v3
 
-    .line 243
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Long;
@@ -1114,7 +1015,6 @@
 
     move-result-wide v19
 
-    .line 245
     iget-object v1, v7, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-virtual {v1}, Lcom/android/server/chimera/PerProcessNandswap;->isAppLaunch()Z
@@ -1123,14 +1023,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 246
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 247
     sget-object v1, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1152,7 +1050,6 @@
 
     goto :goto_2
 
-    .line 253
     :cond_4
     iget-object v1, v7, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1172,14 +1069,12 @@
 
     if-nez v21, :cond_6
 
-    .line 255
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 256
     sget-object v1, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1207,7 +1102,6 @@
 
     goto :goto_3
 
-    .line 262
     :cond_6
     :try_start_1
     iget-object v2, v7, Lcom/android/server/chimera/QuickSwap;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
@@ -1245,7 +1139,6 @@
 
     move-result-object v1
 
-    .line 298
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_2 .. :try_end_2} :catch_2
@@ -1263,7 +1156,6 @@
 
     move-object v10, v6
 
-    .line 300
     :catch_2
     sget-object v1, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
@@ -1309,7 +1201,6 @@
 
     move-object v10, v6
 
-    .line 305
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1329,7 +1220,6 @@
 
     check-cast v0, Ljava/util/concurrent/Future;
 
-    .line 307
     :try_start_3
     sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -1356,7 +1246,6 @@
     :catch_3
     move-exception v0
 
-    .line 309
     sget-object v3, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1381,7 +1270,6 @@
 
     goto :goto_4
 
-    .line 313
     :cond_8
     invoke-interface/range {v16 .. v16}, Ljava/util/Set;->size()I
 
@@ -1389,7 +1277,6 @@
 
     if-ne v0, v2, :cond_9
 
-    .line 314
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1409,7 +1296,6 @@
     :cond_9
     if-eqz v18, :cond_a
 
-    .line 316
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1426,7 +1312,6 @@
 
     goto :goto_5
 
-    .line 318
     :cond_a
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1458,7 +1343,6 @@
 
     move-object v10, v6
 
-    .line 320
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1485,7 +1369,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1509,7 +1392,6 @@
 
     if-eqz v13, :cond_16
 
-    .line 326
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap$ZramInfo;->isWritebackQuotaAvailable()Z
 
     move-result v0
@@ -1520,7 +1402,6 @@
 
     if-eqz v0, :cond_16
 
-    .line 328
     invoke-interface/range {v16 .. v16}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -1543,7 +1424,6 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 329
     iget-object v12, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v12, Ljava/lang/Integer;
@@ -1552,7 +1432,6 @@
 
     move-result v12
 
-    .line 330
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Long;
@@ -1561,7 +1440,6 @@
 
     move-result-wide v3
 
-    .line 332
     iget-object v0, v7, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-virtual {v0}, Lcom/android/server/chimera/PerProcessNandswap;->isAppLaunch()Z
@@ -1570,14 +1448,12 @@
 
     if-eqz v0, :cond_e
 
-    .line 333
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_d
 
-    .line 334
     sget-object v0, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1599,7 +1475,6 @@
 
     goto :goto_7
 
-    .line 340
     :cond_e
     iget-object v0, v7, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1617,14 +1492,12 @@
 
     if-nez v0, :cond_f
 
-    .line 342
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    .line 343
     sget-object v0, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1648,11 +1521,9 @@
 
     move-object/from16 v17, v10
 
-    .line 349
     :try_start_4
     iget-object v9, v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->processName:Ljava/lang/String;
 
-    .line 350
     iget v10, v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->procState:I
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_8
@@ -1660,7 +1531,6 @@
 
     move-object/from16 p4, v5
 
-    .line 351
     :try_start_5
     iget v5, v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->adj:I
     :try_end_5
@@ -1669,7 +1539,6 @@
 
     move-object/from16 v20, v13
 
-    .line 353
     :try_start_6
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -1704,7 +1573,6 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_4
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 354
     :try_start_9
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -1717,7 +1585,6 @@
 
     if-eqz v6, :cond_10
 
-    .line 355
     :try_start_a
     sget-object v6, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
@@ -1753,7 +1620,6 @@
 
     invoke-static {v6, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     :cond_10
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -1761,12 +1627,10 @@
 
     const/4 v6, 0x2
 
-    .line 359
     invoke-static {v12, v6}, Lcom/android/server/chimera/PerProcessNandswap;->compactProcessForWriteback(II)J
 
     move-result-wide v14
 
-    .line 360
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v27
@@ -1779,12 +1643,10 @@
 
     if-lez v29, :cond_11
 
-    .line 365
     iget-object v8, v7, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-virtual {v8, v0, v6}, Lcom/android/server/chimera/PerProcessNandswap;->requestChangePPRState(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;I)V
 
-    .line 368
     :cond_11
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -1792,7 +1654,6 @@
 
     if-eqz v0, :cond_12
 
-    .line 369
     sget-object v0, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1900,7 +1761,6 @@
     :goto_9
     move-wide/from16 v25, v14
 
-    .line 375
     :goto_a
     :try_start_b
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -1909,7 +1769,6 @@
 
     const-wide/16 v3, 0x40
 
-    .line 377
     :goto_b
     invoke-static {v3, v4}, Landroid/os/Trace;->traceEnd(J)V
 
@@ -1930,7 +1789,6 @@
     :goto_c
     invoke-static {v3, v4}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 378
     throw v0
 
     :cond_13
@@ -1938,14 +1796,12 @@
 
     move-wide/from16 v25, v14
 
-    .line 381
     invoke-interface/range {v16 .. v16}, Ljava/util/Set;->size()I
 
     move-result v0
 
     if-ne v0, v11, :cond_14
 
-    .line 382
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1965,7 +1821,6 @@
     :cond_14
     if-eqz v22, :cond_15
 
-    .line 384
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1982,7 +1837,6 @@
 
     goto :goto_d
 
-    .line 386
     :cond_15
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2008,14 +1862,12 @@
 
     move-wide/from16 v25, v14
 
-    .line 388
     sget-object v0, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     const-string v3, "QuickSwap Skip: writeback_limit is over"
 
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 389
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2037,7 +1889,6 @@
     :goto_e
     const/4 v0, 0x0
 
-    .line 393
     invoke-virtual {v7, v0}, Lcom/android/server/chimera/QuickSwap;->getTotalAnonDRAMUsedKb(Lcom/android/internal/util/MemInfoReader;)J
 
     move-result-wide v0
@@ -2057,13 +1908,11 @@
     :cond_17
     move-wide v8, v14
 
-    .line 398
     :goto_f
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 399
     sget-object v4, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2130,7 +1979,6 @@
 
     move-wide v10, v12
 
-    .line 402
     invoke-virtual/range {v1 .. v11}, Lcom/android/server/chimera/QuickSwap;->finishQuickSwap(ILjava/lang/String;JIIJJ)V
 
     return-void
@@ -2141,10 +1989,8 @@
 
     const-string v0, "    configs"
 
-    .line 567
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 568
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2163,7 +2009,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 569
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2182,7 +2027,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 570
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2201,7 +2045,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 571
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2222,10 +2065,8 @@
 
     const-string v0, "    stats"
 
-    .line 572
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 573
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2244,7 +2085,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 574
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2263,7 +2103,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 575
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2284,10 +2123,8 @@
 
     const-string v0, "    latest"
 
-    .line 576
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 577
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2306,7 +2143,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 578
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2325,7 +2161,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 579
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2342,7 +2177,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 580
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2359,7 +2193,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 581
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2378,7 +2211,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 582
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2397,7 +2229,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 583
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2434,12 +2265,10 @@
 
     move/from16 v2, p6
 
-    .line 517
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
-    .line 519
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -2460,7 +2289,6 @@
 
     move-result-object v7
 
-    .line 520
     invoke-static/range {p5 .. p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -2481,17 +2309,14 @@
 
     const v4, 0x13d6ea
 
-    .line 518
     invoke-static {v4, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 521
     iget v3, v0, Lcom/android/server/chimera/QuickSwap;->mPageoutCnt:I
 
     add-int/2addr v3, v1
 
     iput v3, v0, Lcom/android/server/chimera/QuickSwap;->mPageoutCnt:I
 
-    .line 522
     iget v3, v0, Lcom/android/server/chimera/QuickSwap;->mWritebackCnt:I
 
     add-int/2addr v3, v2
@@ -2500,35 +2325,28 @@
 
     move v3, p1
 
-    .line 524
     iput v3, v0, Lcom/android/server/chimera/QuickSwap;->mLatestQuickSwapType:I
 
     move-object v3, p2
 
-    .line 525
     iput-object v3, v0, Lcom/android/server/chimera/QuickSwap;->mLatestResult:Ljava/lang/String;
 
-    .line 526
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
     iput-wide v3, v0, Lcom/android/server/chimera/QuickSwap;->mLatestTimestampMS:J
 
-    .line 527
     iput v1, v0, Lcom/android/server/chimera/QuickSwap;->mLatestPageoutCnt:I
 
-    .line 528
     iput v2, v0, Lcom/android/server/chimera/QuickSwap;->mLatestWritebackCnt:I
 
     move-wide/from16 v1, p7
 
-    .line 529
     iput-wide v1, v0, Lcom/android/server/chimera/QuickSwap;->mLatestAnonZramDiff:J
 
     move-wide/from16 v1, p9
 
-    .line 530
     iput-wide v1, v0, Lcom/android/server/chimera/QuickSwap;->mLatestLatency:J
 
     return-void
@@ -2537,24 +2355,20 @@
 .method public final getReclaimSet(II[I)Ljava/util/Set;
     .locals 12
 
-    .line 465
     new-instance v0, Lcom/android/server/chimera/QuickSwap$$ExternalSyntheticLambda1;
 
     invoke-direct {v0}, Lcom/android/server/chimera/QuickSwap$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 472
     new-instance v1, Ljava/util/TreeSet;
 
     invoke-direct {v1, v0}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
 
-    .line 474
     iget-object v0, p0, Lcom/android/server/chimera/QuickSwap;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v0}, Lcom/android/server/chimera/SystemRepository;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v0
 
-    .line 475
     invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object v2
@@ -2577,14 +2391,12 @@
 
     check-cast v2, Ljava/util/Set;
 
-    .line 476
     iget-object v3, p0, Lcom/android/server/chimera/QuickSwap;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v3, v2}, Lcom/android/server/chimera/SystemRepository;->getNativeProcesses(Ljava/util/Set;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 478
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2605,7 +2417,6 @@
 
     check-cast v3, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;
 
-    .line 479
     sget-object v6, Lcom/android/server/chimera/QuickSwap;->GENAI_PROCESSES_LIST:Ljava/util/List;
 
     iget-object v7, v3, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processName:Ljava/lang/String;
@@ -2618,7 +2429,6 @@
 
     goto :goto_0
 
-    .line 482
     :cond_1
     iget-object v6, p0, Lcom/android/server/chimera/QuickSwap;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -2638,7 +2448,6 @@
 
     goto :goto_0
 
-    .line 486
     :cond_2
     array-length v8, p3
 
@@ -2665,7 +2474,6 @@
 
     goto :goto_0
 
-    .line 491
     :cond_5
     new-instance v7, Landroid/util/Pair;
 
@@ -2695,7 +2503,6 @@
 
     invoke-interface {v1, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 492
     iget-object v4, p0, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
     iget-object v5, v3, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->processName:Ljava/lang/String;
@@ -2706,7 +2513,6 @@
 
     goto :goto_0
 
-    .line 495
     :cond_7
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2726,7 +2532,6 @@
 
     check-cast p2, Lcom/android/internal/os/ProcessCpuTracker$Stats;
 
-    .line 497
     new-instance p3, Ljava/io/File;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2753,14 +2558,12 @@
 
     if-nez p3, :cond_9
 
-    .line 498
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result p3
 
     if-eqz p3, :cond_8
 
-    .line 499
     sget-object p3, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2783,7 +2586,6 @@
 
     goto :goto_3
 
-    .line 504
     :cond_9
     iget-object p3, p0, Lcom/android/server/chimera/QuickSwap;->mNativeProcPssMap:Ljava/util/Map;
 
@@ -2797,7 +2599,6 @@
 
     if-eqz p3, :cond_a
 
-    .line 506
     new-instance v0, Landroid/util/Pair;
 
     iget v2, p2, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
@@ -2824,7 +2625,6 @@
 
     goto :goto_4
 
-    .line 508
     :cond_a
     new-instance p3, Landroid/util/Pair;
 
@@ -2842,7 +2642,6 @@
 
     invoke-interface {v1, p3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 510
     :goto_4
     iget-object p3, p0, Lcom/android/server/chimera/QuickSwap;->mPPN:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -2865,15 +2664,12 @@
 
     if-nez p1, :cond_0
 
-    .line 448
     new-instance p1, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {p1}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 449
     invoke-virtual {p1}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 453
     :cond_0
     invoke-virtual {p1}, Lcom/android/internal/util/MemInfoReader;->getRawInfo()[J
 
@@ -2881,15 +2677,12 @@
 
     const/16 v0, 0x18
 
-    .line 454
     aget-wide v0, p0, v0
 
     const/16 v2, 0x19
 
-    .line 455
     aget-wide v2, p0, v2
 
-    .line 456
     invoke-virtual {p1}, Lcom/android/internal/util/MemInfoReader;->getZramTotalSizeKb()J
 
     move-result-wide p0
@@ -2898,7 +2691,6 @@
 
     add-long/2addr v4, p0
 
-    .line 458
     sget-object v6, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2945,12 +2737,10 @@
 
     const-string v0, "0"
 
-    .line 407
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 408
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2979,17 +2769,14 @@
 
     goto :goto_0
 
-    .line 418
     :cond_0
     iget-wide v2, v0, Lcom/android/server/chimera/QuickSwap;->mThresholdLmkd:J
 
     goto :goto_0
 
-    .line 415
     :cond_1
     iget-wide v2, v0, Lcom/android/server/chimera/QuickSwap;->mThresholdBroadcast:J
 
-    .line 422
     :goto_0
     invoke-virtual/range {p2 .. p2}, Lcom/android/internal/util/MemInfoReader;->getRawInfo()[J
 
@@ -2997,17 +2784,14 @@
 
     const/4 v5, 0x1
 
-    .line 424
     aget-wide v6, v4, v5
 
     const/16 v8, 0x1d
 
-    .line 425
     aget-wide v8, v4, v8
 
     const/4 v10, 0x6
 
-    .line 426
     aget-wide v10, v4, v10
 
     sub-long v12, v6, v8
@@ -3016,14 +2800,12 @@
 
     const/16 v14, 0x1a
 
-    .line 429
     aget-wide v14, v4, v14
 
     const/16 v16, 0x1b
 
     move-wide/from16 v17, v6
 
-    .line 430
     aget-wide v5, v4, v16
 
     move-wide/from16 v19, v10
@@ -3045,13 +2827,11 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 436
     :goto_1
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/chimera/QuickSwap;->isCameraRunning()Z
 
     move-result v0
 
-    .line 438
     sget-object v6, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3154,7 +2934,6 @@
 
     const-string/jumbo v0, "nandswap"
 
-    .line 553
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3163,7 +2942,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 554
     invoke-static {p2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -3175,14 +2953,12 @@
     :cond_0
     const-string/jumbo v0, "threshold.broadcast"
 
-    .line 556
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 557
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -3196,14 +2972,12 @@
     :cond_1
     const-string/jumbo v0, "threshold.lmkd"
 
-    .line 559
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 560
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -3223,7 +2997,6 @@
 .method public tryQuickSwap(I)Z
     .locals 3
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/chimera/QuickSwap;->mQuickSwapHandler:Lcom/android/server/chimera/QuickSwap$QuickSwapHandler;
 
     const/4 v1, 0x0
@@ -3232,26 +3005,22 @@
 
     return v1
 
-    .line 137
     :cond_0
     iget-object v0, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwapLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 138
     :try_start_0
     iget-boolean v2, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwap:Z
 
     if-eqz v2, :cond_1
 
-    .line 139
     sget-object p0, Lcom/android/server/chimera/QuickSwap;->TAG:Ljava/lang/String;
 
     const-string p1, "QuickSwap is skipped because QuickSwap is already running."
 
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     monitor-exit v0
 
     return v1
@@ -3259,15 +3028,12 @@
     :cond_1
     const/4 v1, 0x1
 
-    .line 142
     iput-boolean v1, p0, Lcom/android/server/chimera/QuickSwap;->isDoingQuickSwap:Z
 
-    .line 143
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/chimera/QuickSwap;->mQuickSwapHandler:Lcom/android/server/chimera/QuickSwap$QuickSwapHandler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
@@ -3277,7 +3043,6 @@
     :catchall_0
     move-exception p0
 
-    .line 143
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -3289,7 +3054,6 @@
 .method public unRegisterBroadcast()V
     .locals 1
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/chimera/QuickSwap;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object p0, p0, Lcom/android/server/chimera/QuickSwap;->mGenAIReceiver:Lcom/android/server/chimera/QuickSwap$GenAIReceiver;

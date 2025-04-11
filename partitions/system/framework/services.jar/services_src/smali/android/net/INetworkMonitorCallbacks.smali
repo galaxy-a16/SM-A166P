@@ -24,7 +24,6 @@
 
     const-string v2, "android$net$INetworkMonitorCallbacks"
 
-    .line 389
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v0

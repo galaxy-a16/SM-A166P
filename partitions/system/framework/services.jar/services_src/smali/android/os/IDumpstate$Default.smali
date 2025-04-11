@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,27 +28,23 @@
 .method public cancelBugreport(ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public preDumpUiData(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public retrieveBugreport(ILjava/lang/String;Ljava/io/FileDescriptor;Ljava/lang/String;Landroid/os/IDumpstateListener;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public startBugreport(ILjava/lang/String;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;IILandroid/os/IDumpstateListener;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method

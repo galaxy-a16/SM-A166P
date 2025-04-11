@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/chimera/AggressivePolicyHandler;->$r8$lambda$u2EBYXoe2jDGiw8HL4YS_4g6Tbk(Ljava/lang/String;)Z

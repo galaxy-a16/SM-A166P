@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$6s9bmR3YmUCSyADFPYyuxk3VF4A(Lcom/android/server/display/mode/RefreshRateToken;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMinLimitToken;->lambda$accept$0(Lcom/android/server/display/mode/RefreshRateToken;)Z
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$ZldwwcfEF5rvfHTCaVvRIfUiAWU(Ljava/lang/Integer;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMinLimitToken;->lambda$accept$2(Ljava/lang/Integer;)Z
 
     move-result p0
@@ -33,7 +31,6 @@
 .method public static synthetic $r8$lambda$mgpB-y6JT5OX7xafbzN8Yg7MN10(Lcom/android/server/display/mode/RefreshRateToken;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMinLimitToken;->lambda$accept$1(Lcom/android/server/display/mode/RefreshRateToken;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -44,7 +41,6 @@
 .method public constructor <init>(Lcom/android/server/display/mode/RefreshRateController;)V
     .locals 0
 
-    .line 547
     iput-object p1, p0, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMinLimitToken;->this$0:Lcom/android/server/display/mode/RefreshRateController;
 
     invoke-direct {p0}, Lcom/android/server/display/mode/RefreshRateToken;-><init>()V
@@ -55,7 +51,6 @@
 .method public static synthetic lambda$accept$0(Lcom/android/server/display/mode/RefreshRateToken;)Z
     .locals 0
 
-    .line 555
     instance-of p0, p0, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMinLimitToken;
 
     return p0
@@ -64,7 +59,6 @@
 .method public static synthetic lambda$accept$1(Lcom/android/server/display/mode/RefreshRateToken;)Ljava/lang/Integer;
     .locals 0
 
-    .line 556
     iget-object p0, p0, Lcom/android/server/display/mode/RefreshRateToken;->mInfo:Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;
 
     iget p0, p0, Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;->mRefreshRate:I
@@ -79,7 +73,6 @@
 .method public static synthetic lambda$accept$2(Ljava/lang/Integer;)Z
     .locals 1
 
-    .line 556
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -104,7 +97,6 @@
 .method public accept()V
     .locals 3
 
-    .line 550
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->FW_VRR_SEAMLESS:Z
 
     if-eqz p0, :cond_2
@@ -121,7 +113,6 @@
 
     goto :goto_1
 
-    .line 554
     :cond_0
     invoke-static {}, Lcom/android/server/display/mode/RefreshRateController;->-$$Nest$sfgetmRefreshRateTokenController()Lcom/android/server/display/mode/RefreshRateTokenController;
 
@@ -139,7 +130,6 @@
 
     invoke-direct {v0}, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMinLimitToken$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 555
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -148,7 +138,6 @@
 
     invoke-direct {v0}, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMinLimitToken$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 556
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -165,7 +154,6 @@
 
     invoke-direct {v0}, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMaxLimitToken$$ExternalSyntheticLambda2;-><init>()V
 
-    .line 557
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->max(Ljava/util/Comparator;)Ljava/util/Optional;
 
     move-result-object p0
@@ -192,7 +180,6 @@
 
     const/high16 v0, 0x7f800000    # Float.POSITIVE_INFINITY
 
-    .line 560
     invoke-static {p0, v0}, Lcom/android/server/display/mode/Vote;->forPhysicalRefreshRates(FF)Lcom/android/server/display/mode/Vote;
 
     move-result-object p0
@@ -202,7 +189,6 @@
     :cond_1
     const/4 p0, 0x0
 
-    .line 561
     :goto_0
     invoke-static {}, Lcom/android/server/display/mode/RefreshRateController;->-$$Nest$sfgetmVotesStorage()Lcom/android/server/display/mode/VotesStorage;
 

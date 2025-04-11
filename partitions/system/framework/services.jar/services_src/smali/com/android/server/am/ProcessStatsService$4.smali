@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessStatsService;Ljava/lang/String;[Landroid/os/ParcelFileDescriptor;[B)V
     .locals 0
 
-    .line 777
     iput-object p1, p0, Lcom/android/server/am/ProcessStatsService$4;->this$0:Lcom/android/server/am/ProcessStatsService;
 
     iput-object p3, p0, Lcom/android/server/am/ProcessStatsService$4;->val$fds:[Landroid/os/ParcelFileDescriptor;
@@ -32,7 +31,6 @@
 .method public run()V
     .locals 3
 
-    .line 779
     new-instance v0, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     iget-object v1, p0, Lcom/android/server/am/ProcessStatsService$4;->val$fds:[Landroid/os/ParcelFileDescriptor;
@@ -43,13 +41,11 @@
 
     invoke-direct {v0, v1}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 781
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/ProcessStatsService$4;->val$outData:[B
 
     invoke-virtual {v0, p0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 782
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -63,7 +59,6 @@
 
     const-string v1, "Failure writing pipe"
 
-    .line 784
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

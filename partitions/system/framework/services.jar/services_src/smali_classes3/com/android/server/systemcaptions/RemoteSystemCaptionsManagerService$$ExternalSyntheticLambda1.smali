@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/systemcaptions/RemoteSystemCaptionsManagerService;
 
     invoke-static {p1}, Lcom/android/server/systemcaptions/RemoteSystemCaptionsManagerService;->$r8$lambda$Ed8VwKXCcolgRqgI491eWrbuiTU(Lcom/android/server/systemcaptions/RemoteSystemCaptionsManagerService;)V

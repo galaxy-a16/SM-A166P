@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$Jd5earzWHdN_zH9XzFrYYo0TB94(Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;Lcom/android/server/location/settings/LocationUserSettings;Lcom/android/server/location/settings/LocationUserSettings;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->lambda$onChange$1(Lcom/android/server/location/settings/LocationUserSettings;Lcom/android/server/location/settings/LocationUserSettings;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$YRRVkxI9CQqv6Y1_YFxOGIophcI(Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;Ljava/util/function/Function;Lcom/android/server/location/settings/LocationUserSettings;)Lcom/android/server/location/settings/LocationUserSettings;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->lambda$update$0(Ljava/util/function/Function;Lcom/android/server/location/settings/LocationUserSettings;)Lcom/android/server/location/settings/LocationUserSettings;
 
     move-result-object p0
@@ -33,13 +31,10 @@
 .method public constructor <init>(Lcom/android/server/location/settings/LocationSettings;ILjava/io/File;)V
     .locals 0
 
-    .line 169
     iput-object p1, p0, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->this$0:Lcom/android/server/location/settings/LocationSettings;
 
-    .line 170
     invoke-direct {p0, p3}, Lcom/android/server/location/settings/SettingsStore;-><init>(Ljava/io/File;)V
 
-    .line 171
     iput p2, p0, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->mUserId:I
 
     return-void
@@ -48,7 +43,6 @@
 .method private synthetic lambda$onChange$1(Lcom/android/server/location/settings/LocationUserSettings;Lcom/android/server/location/settings/LocationUserSettings;)V
     .locals 1
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->this$0:Lcom/android/server/location/settings/LocationSettings;
 
     iget p0, p0, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->mUserId:I
@@ -61,7 +55,6 @@
 .method private synthetic lambda$update$0(Ljava/util/function/Function;Lcom/android/server/location/settings/LocationUserSettings;)Lcom/android/server/location/settings/LocationUserSettings;
     .locals 0
 
-    .line 186
     invoke-interface {p1, p2}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -80,7 +73,6 @@
 .method public final filterSettings(Lcom/android/server/location/settings/LocationUserSettings;)Lcom/android/server/location/settings/LocationUserSettings;
     .locals 1
 
-    .line 196
     invoke-virtual {p1}, Lcom/android/server/location/settings/LocationUserSettings;->isAdasGnssLocationEnabled()Z
 
     move-result v0
@@ -91,7 +83,6 @@
 
     iget-object p0, p0, Lcom/android/server/location/settings/LocationSettings;->mContext:Landroid/content/Context;
 
-    .line 197
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -106,7 +97,6 @@
 
     const/4 p0, 0x0
 
-    .line 199
     invoke-virtual {p1, p0}, Lcom/android/server/location/settings/LocationUserSettings;->withAdasGnssLocationEnabled(Z)Lcom/android/server/location/settings/LocationUserSettings;
 
     move-result-object p1
@@ -118,7 +108,6 @@
 .method public onChange(Lcom/android/server/location/settings/LocationUserSettings;Lcom/android/server/location/settings/LocationUserSettings;)V
     .locals 2
 
-    .line 192
     invoke-static {}, Lcom/android/server/FgThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -135,7 +124,6 @@
 .method public bridge synthetic onChange(Lcom/android/server/location/settings/SettingsStore$VersionedSettings;Lcom/android/server/location/settings/SettingsStore$VersionedSettings;)V
     .locals 0
 
-    .line 165
     check-cast p1, Lcom/android/server/location/settings/LocationUserSettings;
 
     check-cast p2, Lcom/android/server/location/settings/LocationUserSettings;
@@ -148,7 +136,6 @@
 .method public read(ILjava/io/DataInput;)Lcom/android/server/location/settings/LocationUserSettings;
     .locals 1
 
-    .line 176
     iget-object v0, p0, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->this$0:Lcom/android/server/location/settings/LocationSettings;
 
     iget-object v0, v0, Lcom/android/server/location/settings/LocationSettings;->mContext:Landroid/content/Context;
@@ -171,7 +158,6 @@
 .method public bridge synthetic read(ILjava/io/DataInput;)Lcom/android/server/location/settings/SettingsStore$VersionedSettings;
     .locals 0
 
-    .line 165
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->read(ILjava/io/DataInput;)Lcom/android/server/location/settings/LocationUserSettings;
 
     move-result-object p0
@@ -182,7 +168,6 @@
 .method public update(Ljava/util/function/Function;)V
     .locals 1
 
-    .line 186
     new-instance v0, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;Ljava/util/function/Function;)V
@@ -195,7 +180,6 @@
 .method public write(Ljava/io/DataOutput;Lcom/android/server/location/settings/LocationUserSettings;)V
     .locals 0
 
-    .line 181
     invoke-virtual {p2, p1}, Lcom/android/server/location/settings/LocationUserSettings;->write(Ljava/io/DataOutput;)V
 
     return-void
@@ -204,7 +188,6 @@
 .method public bridge synthetic write(Ljava/io/DataOutput;Lcom/android/server/location/settings/SettingsStore$VersionedSettings;)V
     .locals 0
 
-    .line 165
     check-cast p2, Lcom/android/server/location/settings/LocationUserSettings;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/settings/LocationSettings$LocationUserSettingsStore;->write(Ljava/io/DataOutput;Lcom/android/server/location/settings/LocationUserSettings;)V

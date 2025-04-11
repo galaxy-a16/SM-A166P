@@ -16,13 +16,10 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/security/rkp/IGetRegistrationCallback;)V
     .locals 0
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningService$RegistrationReceiver;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 56
     iput-object p2, p0, Lcom/android/server/security/rkp/RemoteProvisioningService$RegistrationReceiver;->mCallback:Landroid/security/rkp/IGetRegistrationCallback;
 
     return-void
@@ -33,7 +30,6 @@
 .method public onError(Ljava/lang/Exception;)V
     .locals 2
 
-    .line 71
     :try_start_0
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningService$RegistrationReceiver;->mCallback:Landroid/security/rkp/IGetRegistrationCallback;
 
@@ -50,7 +46,6 @@
     :catch_0
     move-exception p1
 
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,7 +81,6 @@
 .method public bridge synthetic onError(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 49
     check-cast p1, Ljava/lang/Exception;
 
     invoke-virtual {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningService$RegistrationReceiver;->onError(Ljava/lang/Exception;)V
@@ -97,7 +91,6 @@
 .method public onResult(Landroid/security/rkp/service/RegistrationProxy;)V
     .locals 3
 
-    .line 62
     :try_start_0
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningService$RegistrationReceiver;->mCallback:Landroid/security/rkp/IGetRegistrationCallback;
 
@@ -116,7 +109,6 @@
     :catch_0
     move-exception p1
 
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,7 +144,6 @@
 .method public bridge synthetic onResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 49
     check-cast p1, Landroid/security/rkp/service/RegistrationProxy;
 
     invoke-virtual {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningService$RegistrationReceiver;->onResult(Landroid/security/rkp/service/RegistrationProxy;)V

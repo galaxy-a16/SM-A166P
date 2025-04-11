@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/SubDisplayMode;)V
     .locals 0
 
-    .line 91
     iput-object p1, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$2;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     invoke-direct {p0}, Landroid/view/IDisplayFoldListener$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onDisplayFoldChanged(IZ)V
     .locals 2
 
-    .line 94
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,21 +47,18 @@
 
     invoke-static {v0, p1}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     iget-object p1, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$2;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     invoke-virtual {p1}, Lcom/samsung/server/wallpaper/SubDisplayMode;->getLidState()I
 
     move-result p1
 
-    .line 97
     iget-object v0, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$2;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     xor-int/lit8 v1, p2, 0x1
 
     invoke-virtual {v0, v1}, Lcom/samsung/server/wallpaper/SubDisplayMode;->setLidState(I)V
 
-    .line 98
     iget-object v0, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$2;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/SubDisplayMode;->getLidState()I
@@ -76,7 +71,6 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 101
     iget-object v1, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$2;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     invoke-static {v1}, Lcom/samsung/server/wallpaper/SubDisplayMode;->-$$Nest$fgetmCallback(Lcom/samsung/server/wallpaper/SubDisplayMode;)Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
@@ -85,12 +79,10 @@
 
     invoke-virtual {v1}, Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;->updateDisplayData()V
 
-    .line 102
     sget-boolean v1, Lcom/samsung/android/wallpaper/Rune;->SUPPORT_COVER_DISPLAY_WATCHFACE:Z
 
     if-nez v1, :cond_0
 
-    .line 106
     iget-object p0, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$2;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     invoke-virtual {p0, p1, v0}, Lcom/samsung/server/wallpaper/SubDisplayMode;->setFolderState(II)V
@@ -100,7 +92,6 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 108
     iget-object p1, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$2;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     invoke-static {p1}, Lcom/samsung/server/wallpaper/SubDisplayMode;->-$$Nest$fgetmCallback(Lcom/samsung/server/wallpaper/SubDisplayMode;)Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
@@ -111,7 +102,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;->notifySemWallpaperColors(I)V
 
-    .line 109
     iget-object p0, p0, Lcom/samsung/server/wallpaper/SubDisplayMode$2;->this$0:Lcom/samsung/server/wallpaper/SubDisplayMode;
 
     invoke-static {p0}, Lcom/samsung/server/wallpaper/SubDisplayMode;->-$$Nest$fgetmCallback(Lcom/samsung/server/wallpaper/SubDisplayMode;)Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;

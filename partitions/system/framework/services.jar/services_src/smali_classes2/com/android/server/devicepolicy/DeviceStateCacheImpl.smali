@@ -19,17 +19,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 34
     invoke-direct {p0}, Landroid/app/admin/DeviceStateCache;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mLock:Ljava/lang/Object;
 
-    .line 43
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, -0x1
@@ -38,14 +35,12 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mDeviceOwnerType:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 44
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mHasProfileOwner:Ljava/util/Map;
 
-    .line 45
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -54,7 +49,6 @@
 
     const/4 v0, 0x0
 
-    .line 48
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mIsDeviceProvisioned:Z
 
     return-void
@@ -67,13 +61,10 @@
 
     const-string v0, "Device state cache:"
 
-    .line 105
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +83,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,10 +107,8 @@
 
     const-string v0, "Has PO:"
 
-    .line 109
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mHasProfileOwner:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -144,7 +132,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 111
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,7 +162,6 @@
 
     goto :goto_0
 
-    .line 113
     :cond_0
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -185,7 +171,6 @@
 .method public hasAffiliationWithDevice(I)Z
     .locals 1
 
-    .line 85
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mAffiliationWithDevice:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -210,7 +195,6 @@
 .method public final hasEnterpriseDeviceOwner()Z
     .locals 0
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mDeviceOwnerType:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -233,7 +217,6 @@
 .method public isDeviceProvisioned()Z
     .locals 0
 
-    .line 53
     iget-boolean p0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mIsDeviceProvisioned:Z
 
     return p0
@@ -242,7 +225,6 @@
 .method public isUserOrganizationManaged(I)Z
     .locals 2
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mHasProfileOwner:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -263,7 +245,6 @@
 
     if-nez p1, :cond_1
 
-    .line 91
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->hasEnterpriseDeviceOwner()Z
 
     move-result p0
@@ -287,7 +268,6 @@
 .method public setDeviceOwnerType(I)V
     .locals 0
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mDeviceOwnerType:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
@@ -298,16 +278,13 @@
 .method public setDeviceProvisioned(Z)V
     .locals 1
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 59
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mIsDeviceProvisioned:Z
 
-    .line 60
     monitor-exit v0
 
     return-void
@@ -325,14 +302,12 @@
 .method public setHasAffiliationWithDevice(ILjava/lang/Boolean;)V
     .locals 0
 
-    .line 76
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mAffiliationWithDevice:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -345,7 +320,6 @@
 
     goto :goto_0
 
-    .line 79
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mAffiliationWithDevice:Ljava/util/Map;
 
@@ -364,7 +338,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mHasProfileOwner:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -377,7 +350,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceStateCacheImpl;->mHasProfileOwner:Ljava/util/Map;
 

@@ -20,7 +20,6 @@
 .method public final binderDied()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/om/IdmapDaemon;->$r8$lambda$wyb_JoLINnN88MwZR5i08xkzqwc()V
 
     return-void

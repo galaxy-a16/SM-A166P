@@ -15,12 +15,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 876
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 877
     iput-object v0, p0, Lcom/android/server/lights/LightsService$VintfHalCache;->mInstance:Landroid/hardware/light/ILights;
 
     return-void
@@ -29,7 +27,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/lights/LightsService$VintfHalCache-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/lights/LightsService$VintfHalCache;-><init>()V
 
     return-void
@@ -44,13 +41,11 @@
 
     const/4 v0, 0x0
 
-    .line 899
     :try_start_0
     iput-object v0, p0, Lcom/android/server/lights/LightsService$VintfHalCache;->mInstance:Landroid/hardware/light/ILights;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 900
     monitor-exit p0
 
     return-void
@@ -68,13 +63,11 @@
 
     monitor-enter p0
 
-    .line 882
     :try_start_0
     iget-object v0, p0, Lcom/android/server/lights/LightsService$VintfHalCache;->mInstance:Landroid/hardware/light/ILights;
 
     if-nez v0, :cond_0
 
-    .line 883
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,19 +84,16 @@
 
     move-result-object v0
 
-    .line 884
     invoke-static {v0}, Landroid/os/ServiceManager;->waitForDeclaredService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 883
     invoke-static {v0}, Landroid/os/Binder;->allowBlocking(Landroid/os/IBinder;)Landroid/os/IBinder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 886
     invoke-static {v0}, Landroid/hardware/light/ILights$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/light/ILights;
 
     move-result-object v1
@@ -114,7 +104,6 @@
 
     const/4 v1, 0x0
 
-    .line 888
     :try_start_1
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_1
@@ -127,7 +116,6 @@
     :try_start_2
     const-string v0, "LightsService"
 
-    .line 890
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +134,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 894
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/lights/LightsService$VintfHalCache;->mInstance:Landroid/hardware/light/ILights;
@@ -168,7 +155,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
-    .line 876
     invoke-virtual {p0}, Lcom/android/server/lights/LightsService$VintfHalCache;->get()Landroid/hardware/light/ILights;
 
     move-result-object p0

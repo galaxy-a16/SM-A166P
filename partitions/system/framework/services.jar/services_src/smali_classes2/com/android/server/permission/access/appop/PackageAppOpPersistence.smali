@@ -21,7 +21,6 @@
 
     sput-object v0, Lcom/android/server/permission/access/appop/PackageAppOpPersistence;->Companion:Lcom/android/server/permission/access/appop/PackageAppOpPersistence$Companion;
 
-    .line 86
     const-class v0, Lcom/android/server/permission/access/appop/PackageAppOpPersistence;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -36,7 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 31
     invoke-direct {p0}, Lcom/android/server/permission/access/appop/BaseAppOpPersistence;-><init>()V
 
     return-void
@@ -51,17 +49,14 @@
 
     const/4 v1, 0x0
 
-    .line 141
     invoke-virtual {p1, v1, v0}, Lcom/android/modules/utils/BinaryXmlPullParser;->getAttributeIndexOrThrow(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 157
     invoke-virtual {p1, v0}, Lcom/android/modules/utils/BinaryXmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 57
     invoke-virtual {v0}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object v0
@@ -70,20 +65,16 @@
 
     invoke-static {v0, v1}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 58
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 59
     invoke-virtual {p2}, Lcom/android/server/permission/access/UserState;->getPackageAppOpModes()Landroid/util/ArrayMap;
 
     move-result-object p2
 
-    .line 178
     invoke-virtual {p2, v0, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 60
     invoke-virtual {p0, p1, v1}, Lcom/android/server/permission/access/appop/BaseAppOpPersistence;->parseAppOps(Lcom/android/modules/utils/BinaryXmlPullParser;Landroid/util/ArrayMap;)V
 
     return-void
@@ -92,7 +83,6 @@
 .method public final parsePackageAppOps(Lcom/android/modules/utils/BinaryXmlPullParser;Lcom/android/server/permission/access/AccessState;I)V
     .locals 10
 
-    .line 40
     invoke-virtual {p2}, Lcom/android/server/permission/access/AccessState;->getUserStates()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -103,7 +93,6 @@
 
     check-cast p3, Lcom/android/server/permission/access/UserState;
 
-    .line 51
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->getEventType()I
 
     move-result v0
@@ -118,7 +107,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_0
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -138,7 +126,6 @@
 
     throw p0
 
-    .line 109
     :cond_1
     :goto_0
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->next()I
@@ -157,7 +144,6 @@
 
     goto :goto_0
 
-    .line 57
     :cond_2
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->getEventType()I
 
@@ -173,7 +159,6 @@
 
     goto/16 :goto_5
 
-    .line 94
     :cond_3
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -193,20 +178,17 @@
 
     throw p0
 
-    .line 60
     :cond_4
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 121
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
     const-string/jumbo v7, "package"
 
-    .line 43
     invoke-static {v6, v7}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
@@ -217,7 +199,6 @@
 
     goto :goto_1
 
-    .line 44
     :cond_5
     sget-object v6, Lcom/android/server/permission/access/appop/PackageAppOpPersistence;->LOG_TAG:Ljava/lang/String;
 
@@ -243,7 +224,6 @@
 
     invoke-static {v6, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     :goto_1
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->getDepth()I
 
@@ -251,7 +231,6 @@
 
     if-ne v5, v0, :cond_a
 
-    .line 73
     :cond_6
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->getEventType()I
 
@@ -261,14 +240,12 @@
 
     if-ne v5, v3, :cond_8
 
-    .line 77
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->getDepth()I
 
     move-result v5
 
     if-le v5, v0, :cond_7
 
-    .line 109
     :goto_2
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->next()I
 
@@ -282,7 +259,6 @@
 
     goto :goto_2
 
-    .line 109
     :cond_7
     :goto_3
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->next()I
@@ -297,7 +273,6 @@
 
     goto :goto_3
 
-    .line 86
     :cond_8
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -317,7 +292,6 @@
 
     throw p0
 
-    .line 109
     :cond_9
     :goto_4
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->next()I
@@ -332,11 +306,9 @@
 
     goto :goto_4
 
-    .line 67
     :cond_a
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
-    .line 68
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -357,19 +329,16 @@
 
     move-result-object p1
 
-    .line 67
     invoke-direct {p0, p1}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    .line 47
     :cond_b
     :goto_5
     invoke-virtual {p3}, Lcom/android/server/permission/access/UserState;->getPackageAppOpModes()Landroid/util/ArrayMap;
 
     move-result-object p0
 
-    .line 92
     invoke-virtual {p0}, Landroid/util/ArrayMap;->size()I
 
     move-result p1
@@ -381,7 +350,6 @@
 
     if-ge p3, p1, :cond_e
 
-    .line 69
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -390,12 +358,10 @@
 
     move-result-object v0
 
-    .line 143
     check-cast v0, Landroid/util/ArrayMap;
 
     check-cast p3, Ljava/lang/String;
 
-    .line 48
     invoke-virtual {p2}, Lcom/android/server/permission/access/AccessState;->getSystemState()Lcom/android/server/permission/access/SystemState;
 
     move-result-object v0
@@ -410,7 +376,6 @@
 
     if-nez v0, :cond_c
 
-    .line 50
     sget-object v1, Lcom/android/server/permission/access/appop/PackageAppOpPersistence;->LOG_TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -434,7 +399,6 @@
     :cond_c
     if-nez v0, :cond_d
 
-    .line 144
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
     :cond_d
@@ -449,14 +413,12 @@
 .method public parseUserState(Lcom/android/modules/utils/BinaryXmlPullParser;Lcom/android/server/permission/access/AccessState;I)V
     .locals 2
 
-    .line 121
     invoke-virtual {p1}, Lcom/android/modules/utils/BinaryXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v1, "package-app-ops"
 
-    .line 34
     invoke-static {v0, v1}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -476,18 +438,14 @@
 
     const-string/jumbo v1, "package"
 
-    .line 55
     invoke-virtual {p1, v0, v1}, Lcom/android/modules/utils/BinaryXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v2, "name"
 
-    .line 75
     invoke-virtual {p1, v0, v2, p2}, Lcom/android/modules/utils/BinaryXmlSerializer;->attributeInterned(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 81
     invoke-virtual {p0, p1, p3}, Lcom/android/server/permission/access/appop/BaseAppOpPersistence;->serializeAppOps(Lcom/android/modules/utils/BinaryXmlSerializer;Landroid/util/ArrayMap;)V
 
-    .line 57
     invoke-virtual {p1, v0, v1}, Lcom/android/modules/utils/BinaryXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     return-void
@@ -500,15 +458,12 @@
 
     const-string/jumbo v1, "package-app-ops"
 
-    .line 55
     invoke-virtual {p1, v0, v1}, Lcom/android/modules/utils/BinaryXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 69
     invoke-virtual {p2}, Lcom/android/server/permission/access/UserState;->getPackageAppOpModes()Landroid/util/ArrayMap;
 
     move-result-object p2
 
-    .line 56
     invoke-virtual {p2}, Landroid/util/ArrayMap;->size()I
 
     move-result v2
@@ -518,7 +473,6 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 57
     invoke-virtual {p2, v3}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -531,14 +485,12 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 70
     invoke-virtual {p0, p1, v4, v5}, Lcom/android/server/permission/access/appop/PackageAppOpPersistence;->serializePackage(Lcom/android/modules/utils/BinaryXmlSerializer;Ljava/lang/String;Landroid/util/ArrayMap;)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 57
     :cond_0
     invoke-virtual {p1, v0, v1}, Lcom/android/modules/utils/BinaryXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -548,7 +500,6 @@
 .method public serializeUserState(Lcom/android/modules/utils/BinaryXmlSerializer;Lcom/android/server/permission/access/AccessState;I)V
     .locals 0
 
-    .line 64
     invoke-virtual {p2}, Lcom/android/server/permission/access/AccessState;->getUserStates()Landroid/util/SparseArray;
 
     move-result-object p2

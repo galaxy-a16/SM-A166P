@@ -20,7 +20,6 @@
 .method public final applyAsLong(Ljava/lang/Object;)J
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/am/KillPolicyManager$MemoryDumpItem;
 
     invoke-static {p1}, Lcom/android/server/am/KillPolicyManager$MemoryFloodDetector;->$r8$lambda$9WT-xITj2FcpBiGMhFGRM7Tw9p0(Lcom/android/server/am/KillPolicyManager$MemoryDumpItem;)J

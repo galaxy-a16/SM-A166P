@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/BroadcastQueueImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/BroadcastQueueImpl$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/am/BroadcastQueueImpl;
@@ -27,7 +26,6 @@
 .method public final getAsBoolean()Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/BroadcastQueueImpl$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/am/BroadcastQueueImpl;
 
     invoke-static {p0}, Lcom/android/server/am/BroadcastQueueImpl;->$r8$lambda$2EVjtWr7LjNlNk7HkovDZ6cphMw(Lcom/android/server/am/BroadcastQueueImpl;)Z

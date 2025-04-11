@@ -15,22 +15,18 @@
 .method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x1000
 
     new-array v0, v0, [B
 
-    .line 36
     iput-object v0, p0, Lcom/android/server/integrity/model/BitOutputStream;->mBuffer:[B
 
     const/4 v0, 0x0
 
-    .line 37
     iput v0, p0, Lcom/android/server/integrity/model/BitOutputStream;->mNextBitIndex:I
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/integrity/model/BitOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     return-void
@@ -41,19 +37,16 @@
 .method public flush()V
     .locals 4
 
-    .line 89
     iget v0, p0, Lcom/android/server/integrity/model/BitOutputStream;->mNextBitIndex:I
 
     div-int/lit8 v1, v0, 0x8
 
-    .line 90
     rem-int/lit8 v0, v0, 0x8
 
     if-eqz v0, :cond_0
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 96
     :cond_0
     iget-object v0, p0, Lcom/android/server/integrity/model/BitOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
@@ -63,7 +56,6 @@
 
     invoke-virtual {v0, v2, v3, v1}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 97
     invoke-virtual {p0}, Lcom/android/server/integrity/model/BitOutputStream;->reset()V
 
     return-void
@@ -74,10 +66,8 @@
 
     const/4 v0, 0x0
 
-    .line 102
     iput v0, p0, Lcom/android/server/integrity/model/BitOutputStream;->mNextBitIndex:I
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/integrity/model/BitOutputStream;->mBuffer:[B
 
     invoke-static {p0, v0}, Ljava/util/Arrays;->fill([BB)V
@@ -90,7 +80,6 @@
 
     const/4 v0, 0x1
 
-    .line 81
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/model/BitOutputStream;->setNext(Z)V
 
     return-void
@@ -126,7 +115,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 56
     :goto_1
     invoke-virtual {p0, p1}, Lcom/android/server/integrity/model/BitOutputStream;->setNext(Z)V
 
@@ -143,7 +131,6 @@
 .method public setNext(Z)V
     .locals 4
 
-    .line 67
     iget v0, p0, Lcom/android/server/integrity/model/BitOutputStream;->mNextBitIndex:I
 
     div-int/lit8 v0, v0, 0x8
@@ -152,14 +139,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/integrity/model/BitOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     iget-object v1, p0, Lcom/android/server/integrity/model/BitOutputStream;->mBuffer:[B
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write([B)V
 
-    .line 70
     invoke-virtual {p0}, Lcom/android/server/integrity/model/BitOutputStream;->reset()V
 
     const/4 v0, 0x0
@@ -169,7 +154,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 74
     iget-object p1, p0, Lcom/android/server/integrity/model/BitOutputStream;->mBuffer:[B
 
     aget-byte v2, p1, v0
@@ -188,7 +172,6 @@
 
     aput-byte v2, p1, v0
 
-    .line 76
     :cond_1
     iget p1, p0, Lcom/android/server/integrity/model/BitOutputStream;->mNextBitIndex:I
 

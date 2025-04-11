@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/EmergencyModePackageHandler$EMPackageHandler;)V
     .locals 0
 
-    .line 110
     iput-object p1, p0, Lcom/android/server/pm/EmergencyModePackageHandler$EMPackageHandler$1;->this$1:Lcom/android/server/pm/EmergencyModePackageHandler$EMPackageHandler;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -32,7 +31,6 @@
 
     const-string p1, "intent is null!"
 
-    .line 114
     invoke-static {p2, p1}, Lcom/samsung/android/emergencymode/Elog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -40,12 +38,10 @@
     :cond_0
     const-string p4, "EM_PKG_HADNLER_ID"
 
-    .line 116
     invoke-virtual {p1, p4, p3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p3
 
-    .line 118
     :goto_0
     iget-object p1, p0, Lcom/android/server/pm/EmergencyModePackageHandler$EMPackageHandler$1;->this$1:Lcom/android/server/pm/EmergencyModePackageHandler$EMPackageHandler;
 
@@ -55,7 +51,6 @@
 
     if-ne p1, p3, :cond_1
 
-    .line 119
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,7 +69,6 @@
 
     invoke-static {p2, p1}, Lcom/samsung/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$EMPackageHandler$1;->this$1:Lcom/android/server/pm/EmergencyModePackageHandler$EMPackageHandler;
 
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$EMPackageHandler;->this$0:Lcom/android/server/pm/EmergencyModePackageHandler;
@@ -87,7 +81,6 @@
 
     goto :goto_1
 
-    .line 122
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 

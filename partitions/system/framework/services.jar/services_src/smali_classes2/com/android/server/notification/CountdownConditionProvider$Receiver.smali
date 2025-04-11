@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/CountdownConditionProvider;)V
     .locals 0
 
-    .line 166
     iput-object p1, p0, Lcom/android/server/notification/CountdownConditionProvider$Receiver;->this$0:Lcom/android/server/notification/CountdownConditionProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/CountdownConditionProvider;Lcom/android/server/notification/CountdownConditionProvider$Receiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/notification/CountdownConditionProvider$Receiver;-><init>(Lcom/android/server/notification/CountdownConditionProvider;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 169
     invoke-static {}, Lcom/android/server/notification/CountdownConditionProvider;->-$$Nest$sfgetACTION()Ljava/lang/String;
 
     move-result-object p1
@@ -50,7 +47,6 @@
 
     const-string p1, "condition_id"
 
-    .line 170
     const-class v0, Landroid/net/Uri;
 
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -59,17 +55,14 @@
 
     check-cast p1, Landroid/net/Uri;
 
-    .line 171
     invoke-static {p1}, Landroid/service/notification/ZenModeConfig;->isValidCountdownToAlarmConditionId(Landroid/net/Uri;)Z
 
     move-result p2
 
-    .line 172
     invoke-static {p1}, Landroid/service/notification/ZenModeConfig;->tryParseCountdownConditionId(Landroid/net/Uri;)J
 
     move-result-wide v0
 
-    .line 173
     invoke-static {}, Lcom/android/server/notification/CountdownConditionProvider;->-$$Nest$sfgetDEBUG()Z
 
     move-result v2
@@ -101,7 +94,6 @@
 
     if-lez p1, :cond_1
 
-    .line 175
     iget-object p0, p0, Lcom/android/server/notification/CountdownConditionProvider$Receiver;->this$0:Lcom/android/server/notification/CountdownConditionProvider;
 
     const/4 p1, 0x0

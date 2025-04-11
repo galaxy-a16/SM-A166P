@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetHOST_NAME(Lcom/samsung/android/sec_platform_library/FactoryPhone;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->HOST_NAME:Ljava/lang/String;
 
     return-object p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetLOG_TAG(Lcom/samsung/android/sec_platform_library/FactoryPhone;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
     return-object p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fputmServiceMessenger(Lcom/samsung/android/sec_platform_library/FactoryPhone;Landroid/os/Messenger;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mServiceMessenger:Landroid/os/Messenger;
 
     return-void
@@ -52,55 +49,44 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 1
 
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "F_PHONE"
 
-    .line 21
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
     const-string v0, "com.sec.phone.SecPhoneService"
 
-    .line 25
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->BIND_CLASS_NAME:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 26
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->HOST_NAME:Ljava/lang/String;
 
-    .line 27
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mContext:Landroid/content/Context;
 
-    .line 28
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mServiceMessenger:Landroid/os/Messenger;
 
-    .line 29
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mPendingMessage:Ljava/util/LinkedList;
 
-    .line 31
     new-instance v0, Lcom/samsung/android/sec_platform_library/FactoryPhone$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/sec_platform_library/FactoryPhone$1;-><init>(Lcom/samsung/android/sec_platform_library/FactoryPhone;)V
 
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mSecPhoneServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 46
     new-instance v0, Lcom/samsung/android/sec_platform_library/FactoryPhone$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/sec_platform_library/FactoryPhone$2;-><init>(Lcom/samsung/android/sec_platform_library/FactoryPhone;)V
 
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mDummyHandler:Landroid/os/Handler;
 
-    .line 87
     iput-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mContext:Landroid/content/Context;
 
-    .line 88
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,10 +113,8 @@
 
     iput-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->HOST_NAME:Ljava/lang/String;
 
-    .line 89
     invoke-virtual {p0, p2}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->setMultiRilSupport(I)V
 
-    .line 90
     invoke-virtual {p0}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->connectToRilService()V
 
     return-void
@@ -143,7 +127,6 @@
 
     if-nez p2, :cond_0
 
-    .line 143
     iget-object p2, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mDummyHandler:Landroid/os/Handler;
 
     const/16 v0, 0x3e8
@@ -152,7 +135,6 @@
 
     move-result-object p2
 
-    .line 145
     :cond_0
     invoke-virtual {p2}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -162,7 +144,6 @@
 
     const-string p3, "Action"
 
-    .line 148
     invoke-virtual {p0, p1}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->convertByteToString([B)Ljava/lang/String;
 
     move-result-object p1
@@ -174,14 +155,11 @@
     :cond_1
     const-string/jumbo p3, "request"
 
-    .line 150
     invoke-virtual {v0, p3, p1}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 152
     :goto_0
     invoke-virtual {p2, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 153
     new-instance p1, Landroid/os/Messenger;
 
     invoke-virtual {p2}, Landroid/os/Message;->getTarget()Landroid/os/Handler;
@@ -192,12 +170,10 @@
 
     iput-object p1, p2, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 155
     iget-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mServiceMessenger:Landroid/os/Messenger;
 
     if-nez p1, :cond_2
 
-    .line 156
     iget-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -218,12 +194,10 @@
 
     invoke-static {p1, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     invoke-virtual {p0, p2}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->addMessageToPendingQueue(Landroid/os/Message;)V
 
     return-void
 
-    .line 162
     :cond_2
     :try_start_0
     invoke-virtual {p1, p2}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
@@ -239,7 +213,6 @@
 
     monitor-enter p0
 
-    .line 176
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
@@ -261,22 +234,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mPendingMessage:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
 
-    .line 178
     iget-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mServiceMessenger:Landroid/os/Messenger;
 
     if-eqz p1, :cond_0
 
-    .line 179
     invoke-virtual {p0}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->sendPendingMessage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 181
     :cond_0
     monitor-exit p0
 
@@ -293,7 +262,6 @@
 .method public connectToRilService()V
     .locals 7
 
-    .line 94
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -321,7 +289,6 @@
     :try_start_0
     const-string v2, "android.os.UserHandle"
 
-    .line 98
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -330,7 +297,6 @@
 
     new-array v4, v0, [Ljava/lang/Class;
 
-    .line 99
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const/4 v6, 0x0
@@ -343,7 +309,6 @@
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 100
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -365,10 +330,8 @@
     :catch_0
     move-exception v2
 
-    .line 102
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 105
     :goto_0
     new-instance v2, Landroid/content/Intent;
 
@@ -376,12 +339,10 @@
 
     const-string v3, "com.sec.phone"
 
-    .line 106
     iget-object v4, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->BIND_CLASS_NAME:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 107
     iget-object v3, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mSecPhoneServiceConnection:Landroid/content/ServiceConnection;
@@ -394,20 +355,17 @@
 .method public final convertByteToString([B)Ljava/lang/String;
     .locals 2
 
-    .line 169
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 170
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_0
 
-    .line 171
     aget-byte v1, p1, v0
 
     int-to-char v1, v1
@@ -418,7 +376,6 @@
 
     goto :goto_0
 
-    .line 172
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -430,7 +387,6 @@
 .method public disconnectFromRilService()V
     .locals 3
 
-    .line 121
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -451,7 +407,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
@@ -464,12 +419,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 123
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     const/4 v0, 0x0
 
-    .line 124
     iput-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mServiceMessenger:Landroid/os/Messenger;
 
     :cond_0
@@ -479,7 +432,6 @@
 .method public invokeOemRilRequestRaw([BLandroid/os/Message;)V
     .locals 3
 
-    .line 137
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -502,7 +454,6 @@
 
     const/4 v0, 0x0
 
-    .line 138
     invoke-virtual {p0, p1, p2, v0}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->_invokeOemRilRequestRaw([BLandroid/os/Message;Z)V
 
     return-void
@@ -511,7 +462,6 @@
 .method public registerAction()V
     .locals 1
 
-    .line 195
     iget-object p0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
     const-string v0, "default registerAction()"
@@ -526,7 +476,6 @@
 
     monitor-enter p0
 
-    .line 184
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
@@ -548,7 +497,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :catch_0
     :goto_0
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mPendingMessage:Ljava/util/LinkedList;
@@ -561,7 +509,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 187
     :try_start_1
     iget-object v0, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->mServiceMessenger:Landroid/os/Messenger;
 
@@ -580,7 +527,6 @@
 
     goto :goto_0
 
-    .line 192
     :cond_0
     monitor-exit p0
 
@@ -597,14 +543,12 @@
 .method public final setMultiRilSupport(I)V
     .locals 3
 
-    .line 73
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     if-lez p1, :cond_0
 
-    .line 76
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -621,7 +565,6 @@
 
     iput-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->BIND_CLASS_NAME:Ljava/lang/String;
 
-    .line 77
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -638,7 +581,6 @@
 
     iput-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -659,7 +601,6 @@
 
     goto :goto_0
 
-    .line 81
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/sec_platform_library/FactoryPhone;->LOG_TAG:Ljava/lang/String;
 

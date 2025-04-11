@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 1420
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ImmsBroadcastReceiverForSystemUser;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;Lcom/android/server/inputmethod/InputMethodManagerService$ImmsBroadcastReceiverForSystemUser-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/inputmethod/InputMethodManagerService$ImmsBroadcastReceiverForSystemUser;-><init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
 
     return-void
@@ -33,14 +31,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
 
-    .line 1423
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "android.intent.action.USER_ADDED"
 
-    .line 1424
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -49,7 +45,6 @@
 
     const-string v0, "android.intent.action.USER_REMOVED"
 
-    .line 1425
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -61,14 +56,12 @@
     :cond_0
     const-string v0, "android.intent.action.LOCALE_CHANGED"
 
-    .line 1428
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1429
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ImmsBroadcastReceiverForSystemUser;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/inputmethod/InputMethodManagerService;->onActionLocaleChanged()V
@@ -78,7 +71,6 @@
     :cond_1
     const-string v0, "com.samsung.systemui.statusbar.ANIMATING"
 
-    .line 1431
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -87,7 +79,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1432
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ImmsBroadcastReceiverForSystemUser;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/inputmethod/InputMethodManagerService;->isDeskTopMode()Z
@@ -106,10 +97,8 @@
 
     const-string p1, "Status-bar Animating : Hide Keyboard"
 
-    .line 1433
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1434
     iget-object v1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ImmsBroadcastReceiverForSystemUser;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object v2, v1, Lcom/android/server/inputmethod/InputMethodManagerService;->mCurFocusedWindow:Landroid/os/IBinder;
@@ -126,7 +115,6 @@
 
     goto :goto_0
 
-    .line 1439
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -148,7 +136,6 @@
     :goto_0
     return-void
 
-    .line 1426
     :cond_4
     :goto_1
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ImmsBroadcastReceiverForSystemUser;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;

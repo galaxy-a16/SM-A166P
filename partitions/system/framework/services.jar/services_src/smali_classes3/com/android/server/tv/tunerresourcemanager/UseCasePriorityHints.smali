@@ -27,7 +27,6 @@
 
     const/4 v1, 0x3
 
-    .line 46
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -36,7 +35,6 @@
 
     const/4 v0, 0x0
 
-    .line 112
     sput-object v0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->NS:Ljava/lang/String;
 
     return-void
@@ -45,17 +43,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
-    .line 60
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -64,12 +59,10 @@
 
     const/16 v0, 0x96
 
-    .line 62
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mDefaultForeground:I
 
     const/16 v0, 0x32
 
-    .line 63
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mDefaultBackground:I
 
     return-void
@@ -80,12 +73,10 @@
 
     const/4 v0, 0x0
 
-    .line 207
     invoke-interface {p1, v0, p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 208
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -233,7 +224,6 @@
 .method public static isPredefinedUseCase(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x64
 
     if-eq p0, v0, :cond_0
@@ -269,12 +259,10 @@
 .method public final addNewUseCasePriority(III)V
     .locals 0
 
-    .line 201
     filled-new-array {p2, p3}, [I
 
     move-result-object p2
 
-    .line 202
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
@@ -285,7 +273,6 @@
 .method public getBackgroundPriority(I)I
     .locals 2
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -308,7 +295,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -323,7 +309,6 @@
 
     return p0
 
-    .line 76
     :cond_0
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mDefaultBackground:I
 
@@ -333,7 +318,6 @@
 .method public getForegroundPriority(I)I
     .locals 2
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -356,7 +340,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 67
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -371,7 +354,6 @@
 
     return p0
 
-    .line 69
     :cond_0
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mDefaultForeground:I
 
@@ -381,7 +363,6 @@
 .method public isDefinedUseCase(I)Z
     .locals 1
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mVendorDefinedUseCase:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -418,14 +399,12 @@
 .method public parse()V
     .locals 4
 
-    .line 88
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/vendor/etc/tunerResourceManagerUseCaseConfig.xml"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 89
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -434,13 +413,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 91
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 92
     invoke-virtual {p0, v1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->parseInternal(Ljava/io/InputStream;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
@@ -451,7 +428,6 @@
     :catch_0
     move-exception p0
 
-    .line 97
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -473,7 +449,6 @@
     :catch_1
     move-exception p0
 
-    .line 95
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -492,7 +467,6 @@
 
     goto :goto_0
 
-    .line 100
     :cond_0
     sget-boolean v0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->DEBUG:Z
 
@@ -500,7 +474,6 @@
 
     const-string/jumbo v0, "no vendor priority configuration available. Using default priority"
 
-    .line 101
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -508,35 +481,30 @@
 
     const/16 v1, 0x64
 
-    .line 103
     invoke-virtual {p0, v1, v0, v1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->addNewUseCasePriority(III)V
 
     const/16 v0, 0x1c2
 
     const/16 v1, 0xc8
 
-    .line 104
     invoke-virtual {p0, v1, v0, v1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->addNewUseCasePriority(III)V
 
     const/16 v0, 0x1e0
 
     const/16 v1, 0x12c
 
-    .line 105
     invoke-virtual {p0, v1, v0, v1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->addNewUseCasePriority(III)V
 
     const/16 v0, 0x1ea
 
     const/16 v1, 0x190
 
-    .line 106
     invoke-virtual {p0, v1, v0, v1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->addNewUseCasePriority(III)V
 
     const/16 v0, 0x258
 
     const/16 v1, 0x1f4
 
-    .line 107
     invoke-virtual {p0, v1, v0, v1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->addNewUseCasePriority(III)V
 
     :goto_0
@@ -546,25 +514,20 @@
 .method public parseInternal(Ljava/io/InputStream;)V
     .locals 7
 
-    .line 118
     invoke-static {p1}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object v0
 
-    .line 119
     invoke-interface {v0}, Lcom/android/modules/utils/TypedXmlPullParser;->nextTag()I
 
-    .line 120
     invoke-virtual {p0, v0}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->readUseCase(Lcom/android/modules/utils/TypedXmlPullParser;)V
 
-    .line 121
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
     const/4 p1, 0x0
 
     move v0, p1
 
-    .line 125
     :goto_0
     iget-object v1, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
@@ -574,14 +537,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 126
     iget-object v1, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v1
 
-    .line 127
     iget-object v2, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mPriorityHints:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -590,12 +551,10 @@
 
     check-cast v2, [I
 
-    .line 128
     sget-boolean v3, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 129
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -628,7 +587,6 @@
 
     invoke-static {v5, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -679,7 +637,6 @@
 
     const/4 p0, 0x0
 
-    .line 197
     invoke-interface {p2, p0, p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -690,7 +647,6 @@
 .method public final readUseCase(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 7
 
-    .line 141
     sget-object v0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->NS:Ljava/lang/String;
 
     const-string v1, "config"
@@ -699,7 +655,6 @@
 
     invoke-interface {p1, v2, v0, v1}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 142
     :goto_0
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
@@ -709,7 +664,6 @@
 
     if-eq v0, v1, :cond_5
 
-    .line 143
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v0
@@ -718,7 +672,6 @@
 
     goto :goto_0
 
-    .line 146
     :cond_0
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
@@ -726,7 +679,6 @@
 
     const-string/jumbo v3, "useCaseDefault"
 
-    .line 148
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -737,24 +689,20 @@
 
     if-eqz v3, :cond_1
 
-    .line 149
     invoke-virtual {p0, v5, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->readAttributeToInt(Ljava/lang/String;Lcom/android/modules/utils/TypedXmlPullParser;)I
 
     move-result v3
 
     iput v3, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mDefaultForeground:I
 
-    .line 150
     invoke-virtual {p0, v4, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->readAttributeToInt(Ljava/lang/String;Lcom/android/modules/utils/TypedXmlPullParser;)I
 
     move-result v3
 
     iput v3, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mDefaultBackground:I
 
-    .line 151
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->nextTag()I
 
-    .line 152
     sget-object v3, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->NS:Ljava/lang/String;
 
     invoke-interface {p1, v1, v3, v0}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
@@ -764,7 +712,6 @@
     :cond_1
     const-string/jumbo v3, "useCasePreDefined"
 
-    .line 153
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -773,7 +720,6 @@
 
     const-string/jumbo v3, "type"
 
-    .line 154
     invoke-static {v3, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->formatTypeToNum(Ljava/lang/String;Lcom/android/modules/utils/TypedXmlPullParser;)I
 
     move-result v3
@@ -786,29 +732,23 @@
 
     const-string v1, "Wrong predefined use case name given in the vendor config."
 
-    .line 156
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 160
     :cond_2
     invoke-virtual {p0, v5, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->readAttributeToInt(Ljava/lang/String;Lcom/android/modules/utils/TypedXmlPullParser;)I
 
     move-result v5
 
-    .line 161
     invoke-virtual {p0, v4, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->readAttributeToInt(Ljava/lang/String;Lcom/android/modules/utils/TypedXmlPullParser;)I
 
     move-result v4
 
-    .line 159
     invoke-virtual {p0, v3, v5, v4}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->addNewUseCasePriority(III)V
 
-    .line 162
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->nextTag()I
 
-    .line 163
     sget-object v3, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->NS:Ljava/lang/String;
 
     invoke-interface {p1, v1, v3, v0}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
@@ -818,7 +758,6 @@
     :cond_3
     const-string/jumbo v3, "useCaseVendor"
 
-    .line 164
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -827,25 +766,20 @@
 
     const-string v3, "id"
 
-    .line 165
     invoke-virtual {p0, v3, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->readAttributeToInt(Ljava/lang/String;Lcom/android/modules/utils/TypedXmlPullParser;)I
 
     move-result v3
 
-    .line 167
     invoke-virtual {p0, v5, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->readAttributeToInt(Ljava/lang/String;Lcom/android/modules/utils/TypedXmlPullParser;)I
 
     move-result v5
 
-    .line 168
     invoke-virtual {p0, v4, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->readAttributeToInt(Ljava/lang/String;Lcom/android/modules/utils/TypedXmlPullParser;)I
 
     move-result v4
 
-    .line 166
     invoke-virtual {p0, v3, v5, v4}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->addNewUseCasePriority(III)V
 
-    .line 169
     iget-object v4, p0, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->mVendorDefinedUseCase:Ljava/util/Set;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -854,17 +788,14 @@
 
     invoke-interface {v4, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 170
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->nextTag()I
 
-    .line 171
     sget-object v3, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->NS:Ljava/lang/String;
 
     invoke-interface {p1, v1, v3, v0}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 173
     :cond_4
     invoke-virtual {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/UseCasePriorityHints;->skip(Lcom/android/modules/utils/TypedXmlPullParser;)V
 
@@ -877,7 +808,6 @@
 .method public final skip(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 3
 
-    .line 179
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result p0
@@ -891,7 +821,6 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 184
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
     move-result v1
@@ -917,7 +846,6 @@
     :cond_2
     return-void
 
-    .line 180
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 

@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,20 +50,16 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 17
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;->mContext:Landroid/content/Context;
 
     const-wide/32 v0, 0xdbba0
 
-    .line 18
     iput-wide v0, p0, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;->mUnUsedTime:J
 
-    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     const-string v1, "com.codoon.gps"
@@ -89,7 +84,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;-><init>()V
 
     return-void
@@ -98,7 +92,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;
     .locals 1
 
-    .line 28
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter$RecentUsedPackageFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;
 
     move-result-object v0
@@ -111,7 +104,6 @@
 .method public deInit()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -124,12 +116,10 @@
 
     const-wide/32 p3, 0xea60
 
-    .line 48
     iput-wide p3, p0, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;->mUnUsedTime:J
 
     goto :goto_0
 
-    .line 49
     :cond_0
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -151,7 +141,6 @@
 
     const-wide/32 p3, 0x493e0
 
-    .line 50
     iput-wide p3, p0, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;->mUnUsedTime:J
 
     goto :goto_0
@@ -159,10 +148,8 @@
     :cond_1
     const-wide/32 p3, 0xdbba0
 
-    .line 52
     iput-wide p3, p0, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;->mUnUsedTime:J
 
-    .line 55
     :goto_0
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -172,7 +159,6 @@
 
     move-result-wide p1
 
-    .line 56
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p3
@@ -208,7 +194,6 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 40
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;->setContext(Landroid/content/Context;)V
 
     return-void
@@ -217,7 +202,6 @@
 .method public final setContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/RecentUsedPackageFilter;->mContext:Landroid/content/Context;
 
     return-void

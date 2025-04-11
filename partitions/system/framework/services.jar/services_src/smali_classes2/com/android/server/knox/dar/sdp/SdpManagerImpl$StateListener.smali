@@ -20,7 +20,6 @@
 .method public static synthetic $r8$lambda$iBSbJWQLwq3JYmaZ6ZT8RTUv7MI(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->lambda$dispose$1(Landroid/os/IBinder;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public static synthetic $r8$lambda$revdvajFGxo6ogu3_sk4yRoajK0(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->lambda$new$0(Landroid/os/IBinder;)V
 
     return-void
@@ -38,27 +36,22 @@
 .method public constructor <init>(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;ILcom/samsung/android/knox/dar/sdp/ISdpListener;)V
     .locals 0
 
-    .line 1945
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 1946
     iput-boolean p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mIsValid:Z
 
-    .line 1947
     iput p2, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mEngineId:I
 
-    .line 1948
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mWeakListener:Ljava/lang/ref/WeakReference;
 
-    .line 1950
     invoke-virtual {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->asBinder()Landroid/os/IBinder;
 
     move-result-object p1
@@ -83,7 +76,6 @@
 
     const/4 v1, 0x0
 
-    .line 1999
     :try_start_0
     invoke-interface {p1, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
     :try_end_0
@@ -97,10 +89,8 @@
 
     const-string p1, "Failed to unlink death listener"
 
-    .line 2003
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2004
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -108,7 +98,6 @@
     :catch_1
     const-string p0, "Listener might be already finalized..."
 
-    .line 2001
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -120,13 +109,11 @@
 
     const/4 v0, 0x0
 
-    .line 1952
     :try_start_0
     invoke-interface {p1, p0, v0}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
     const/4 p1, 0x1
 
-    .line 1953
     iput-boolean p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mIsValid:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -140,13 +127,10 @@
 
     const-string v1, "Failed to link death listener..."
 
-    .line 1955
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1956
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1957
     invoke-virtual {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->releaseReferences()V
 
     :goto_0
@@ -158,7 +142,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 1967
     invoke-virtual {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->get()Lcom/samsung/android/knox/dar/sdp/ISdpListener;
 
     move-result-object p0
@@ -169,7 +152,6 @@
 
     goto :goto_0
 
-    .line 1968
     :cond_0
     invoke-interface {p0}, Lcom/samsung/android/knox/dar/sdp/ISdpListener;->asBinder()Landroid/os/IBinder;
 
@@ -182,7 +164,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 2012
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$fgetmListenerMap(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;)Ljava/util/Map;
@@ -191,18 +172,15 @@
 
     monitor-enter v0
 
-    .line 2013
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->dispose()V
 
-    .line 2014
     iget-object v1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     iget p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mEngineId:I
 
     invoke-static {v1, p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$mhandleEmptyListenerRoll(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)V
 
-    .line 2015
     monitor-exit v0
 
     return-void
@@ -220,14 +198,12 @@
 .method public dispose()V
     .locals 2
 
-    .line 1989
     iget-boolean v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mIsValid:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1993
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->getParent()Lcom/android/server/knox/dar/sdp/SdpManagerImpl$ListenerRoll;
 
@@ -235,14 +211,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1994
     invoke-virtual {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->getParent()Lcom/android/server/knox/dar/sdp/SdpManagerImpl$ListenerRoll;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$ListenerRoll;->disenroll(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;)Z
 
-    .line 1997
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->asBinder()Landroid/os/IBinder;
 
@@ -258,7 +232,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 2007
     invoke-virtual {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->releaseReferences()V
 
     return-void
@@ -267,7 +240,6 @@
 .method public get()Lcom/samsung/android/knox/dar/sdp/ISdpListener;
     .locals 0
 
-    .line 1963
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mWeakListener:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -282,7 +254,6 @@
 .method public getParent()Lcom/android/server/knox/dar/sdp/SdpManagerImpl$ListenerRoll;
     .locals 1
 
-    .line 1972
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {v0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$fgetmListenerMap(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;)Ljava/util/Map;
@@ -307,7 +278,6 @@
 .method public isValid()Z
     .locals 0
 
-    .line 1976
     iget-boolean p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mIsValid:Z
 
     return p0
@@ -316,14 +286,12 @@
 .method public releaseReferences()V
     .locals 1
 
-    .line 1980
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mWeakListener:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
 
     const/4 v0, 0x0
 
-    .line 1981
     iput-boolean v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$StateListener;->mIsValid:Z
 
     return-void

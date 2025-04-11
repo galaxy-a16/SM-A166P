@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/content/SyncOperation;J)V
     .locals 0
 
-    .line 1479
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1480
     iput-object p1, p0, Lcom/android/server/content/SyncManager$ScheduleSyncMessagePayload;->syncOperation:Lcom/android/server/content/SyncOperation;
 
-    .line 1481
     iput-wide p2, p0, Lcom/android/server/content/SyncManager$ScheduleSyncMessagePayload;->minDelayMillis:J
 
     return-void

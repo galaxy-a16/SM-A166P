@@ -7,12 +7,10 @@
 .method public static runAndLogSelfTest()V
     .locals 2
 
-    .line 26
     invoke-static {}, Lcom/android/server/devicepolicy/CryptoTestHelper;->runSelfTest()I
 
     move-result v0
 
-    .line 27
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0

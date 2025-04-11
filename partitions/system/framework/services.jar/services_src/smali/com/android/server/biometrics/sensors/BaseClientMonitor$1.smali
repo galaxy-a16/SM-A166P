@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/BaseClientMonitor;)V
     .locals 0
 
-    .line 70
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor$1;->this$0:Lcom/android/server/biometrics/sensors/BaseClientMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,7 +30,6 @@
 
     const-string/jumbo p1, "mCallback onClientFinished: called before set (should not happen)"
 
-    .line 79
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -44,7 +42,6 @@
 
     const-string/jumbo p1, "mCallback onClientStarted: called before set (should not happen)"
 
-    .line 73
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

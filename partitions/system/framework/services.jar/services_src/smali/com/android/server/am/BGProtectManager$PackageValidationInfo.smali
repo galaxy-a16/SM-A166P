@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/am/BGProtectManager;Ljava/lang/String;I)V
     .locals 0
 
-    .line 1074
     iput-object p1, p0, Lcom/android/server/am/BGProtectManager$PackageValidationInfo;->this$0:Lcom/android/server/am/BGProtectManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1075
     iput-object p2, p0, Lcom/android/server/am/BGProtectManager$PackageValidationInfo;->packageName:Ljava/lang/String;
 
-    .line 1076
     iput p3, p0, Lcom/android/server/am/BGProtectManager$PackageValidationInfo;->privateFlagsMask:I
 
     return-void
@@ -38,14 +35,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 1080
     iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
-    .line 1083
     :cond_0
     iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -59,7 +54,6 @@
 
     return v0
 
-    .line 1086
     :cond_1
     iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 

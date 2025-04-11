@@ -17,15 +17,12 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;)V
     .locals 1
 
-    .line 55
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 51
     iput v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mUserId:I
 
-    .line 56
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -40,7 +37,6 @@
 .method public static safeToString(Z)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p0, :cond_0
 
     const-string p0, "SAFE"
@@ -61,20 +57,17 @@
 
     if-nez p1, :cond_0
 
-    .line 70
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 72
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 73
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -260,14 +253,12 @@
     :goto_1
     packed-switch v1, :pswitch_data_0
 
-    .line 101
     invoke-virtual {p0, v0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->onInvalidCommand(Ljava/io/PrintWriter;Ljava/lang/String;)I
 
     move-result p0
 
     goto/16 :goto_2
 
-    .line 99
     :pswitch_0
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runMarkProfileOwnerOnOrganizationOwnedDevice(Ljava/io/PrintWriter;)I
 
@@ -277,13 +268,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_2
     return p0
 
-    .line 97
     :pswitch_1
     :try_start_1
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runForceSecurityLogs(Ljava/io/PrintWriter;)I
@@ -294,13 +283,11 @@
 
     if-eqz v0, :cond_3
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_3
     return p0
 
-    .line 95
     :pswitch_2
     :try_start_2
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runForceNetworkLogs(Ljava/io/PrintWriter;)I
@@ -311,13 +298,11 @@
 
     if-eqz v0, :cond_4
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_4
     return p0
 
-    .line 93
     :pswitch_3
     :try_start_3
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runClearFreezePeriodRecord(Ljava/io/PrintWriter;)I
@@ -328,13 +313,11 @@
 
     if-eqz v0, :cond_5
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_5
     return p0
 
-    .line 91
     :pswitch_4
     :try_start_4
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runRemoveActiveAdmin(Ljava/io/PrintWriter;)I
@@ -345,13 +328,11 @@
 
     if-eqz v0, :cond_6
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_6
     return p0
 
-    .line 89
     :pswitch_5
     :try_start_5
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runSetProfileOwner(Ljava/io/PrintWriter;)I
@@ -362,13 +343,11 @@
 
     if-eqz v0, :cond_7
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_7
     return p0
 
-    .line 87
     :pswitch_6
     :try_start_6
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runSetDeviceOwner(Ljava/io/PrintWriter;)I
@@ -379,13 +358,11 @@
 
     if-eqz v0, :cond_8
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_8
     return p0
 
-    .line 85
     :pswitch_7
     :try_start_7
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runSetActiveAdmin(Ljava/io/PrintWriter;)I
@@ -396,13 +373,11 @@
 
     if-eqz v0, :cond_9
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_9
     return p0
 
-    .line 83
     :pswitch_8
     :try_start_8
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runListPolicyExemptApps(Ljava/io/PrintWriter;)I
@@ -413,13 +388,11 @@
 
     if-eqz v0, :cond_a
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_a
     return p0
 
-    .line 81
     :pswitch_9
     :try_start_9
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runListOwners(Ljava/io/PrintWriter;)I
@@ -430,13 +403,11 @@
 
     if-eqz v0, :cond_b
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_b
     return p0
 
-    .line 79
     :pswitch_a
     :try_start_a
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runSetSafeOperation(Ljava/io/PrintWriter;)I
@@ -447,13 +418,11 @@
 
     if-eqz v0, :cond_c
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_c
     return p0
 
-    .line 77
     :pswitch_b
     :try_start_b
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runIsSafeOperationByReason(Ljava/io/PrintWriter;)I
@@ -464,13 +433,11 @@
 
     if-eqz v0, :cond_d
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_d
     return p0
 
-    .line 75
     :pswitch_c
     :try_start_c
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->runIsSafeOperation(Ljava/io/PrintWriter;)I
@@ -481,7 +448,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 103
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     :cond_e
@@ -500,7 +466,6 @@
 
     if-eqz v0, :cond_10
 
-    .line 72
     :try_start_d
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
     :try_end_d
@@ -555,7 +520,6 @@
 .method public onHelp()V
     .locals 3
 
-    .line 61
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -567,15 +531,12 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 62
     invoke-virtual {v0, v1, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 63
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->showHelp(Ljava/io/PrintWriter;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 64
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
 
     return-void
@@ -585,7 +546,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
     :try_start_1
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
     :try_end_1
@@ -606,7 +566,6 @@
 .method public final onInvalidCommand(Ljava/io/PrintWriter;Ljava/lang/String;)I
     .locals 1
 
-    .line 107
     invoke-super {p0, p2}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p2
@@ -622,10 +581,8 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 111
     invoke-virtual {p1, p2, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 112
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->showHelp(Ljava/io/PrintWriter;)V
 
     const/4 p0, -0x1
@@ -636,7 +593,6 @@
 .method public final parseArgs()V
     .locals 3
 
-    .line 348
     :cond_0
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
@@ -647,19 +603,16 @@
 
     const-string v1, "--user"
 
-    .line 349
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 350
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 351
     invoke-static {v0}, Landroid/os/UserHandle;->parseUserArg(Ljava/lang/String;)I
 
     move-result v0
@@ -670,7 +623,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 353
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
@@ -682,7 +634,6 @@
     :cond_1
     const-string v1, "--device-owner-only"
 
-    .line 355
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -691,12 +642,10 @@
 
     const/4 v0, 0x1
 
-    .line 356
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mSetDoOnly:Z
 
     goto :goto_0
 
-    .line 358
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -718,7 +667,6 @@
 
     throw p0
 
-    .line 361
     :cond_3
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -736,7 +684,6 @@
 .method public final parseComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
     .locals 2
 
-    .line 365
     invoke-static {p1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object p0
@@ -745,7 +692,6 @@
 
     return-object p0
 
-    .line 367
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -771,7 +717,6 @@
 .method public final printAndGetSize(Ljava/io/PrintWriter;Ljava/util/Collection;Ljava/lang/String;)I
     .locals 2
 
-    .line 196
     invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
     move-result p0
@@ -782,7 +727,6 @@
 
     const-string/jumbo p0, "no %ss\n"
 
-    .line 197
     filled-new-array {p3}, [Ljava/lang/Object;
 
     move-result-object p2
@@ -791,7 +735,6 @@
 
     return v0
 
-    .line 200
     :cond_0
     invoke-interface {p2}, Ljava/util/Collection;->size()I
 
@@ -801,7 +744,6 @@
 
     new-array p2, p2, [Ljava/lang/Object;
 
-    .line 201
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -836,7 +778,6 @@
 .method public final runClearFreezePeriodRecord(Ljava/io/PrintWriter;)I
     .locals 2
 
-    .line 308
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->clearSystemUpdatePolicyFreezePeriodRecord()V
@@ -847,7 +788,6 @@
 
     const-string v1, "Success\n"
 
-    .line 309
     invoke-virtual {p1, v1, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     return p0
@@ -856,7 +796,6 @@
 .method public final runForceNetworkLogs(Ljava/io/PrintWriter;)I
     .locals 4
 
-    .line 315
     :goto_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -876,12 +815,10 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 322
     invoke-virtual {p1, p0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     return v0
 
-    .line 319
     :cond_0
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -895,7 +832,6 @@
 
     invoke-virtual {p1, v3, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 320
     invoke-static {v0, v1}, Landroid/os/SystemClock;->sleep(J)V
 
     goto :goto_0
@@ -904,7 +840,6 @@
 .method public final runForceSecurityLogs(Ljava/io/PrintWriter;)I
     .locals 4
 
-    .line 328
     :goto_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -924,12 +859,10 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 335
     invoke-virtual {p1, p0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     return v0
 
-    .line 332
     :cond_0
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -943,7 +876,6 @@
 
     invoke-virtual {p1, v3, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 333
     invoke-static {v0, v1}, Landroid/os/SystemClock;->sleep(J)V
 
     goto :goto_0
@@ -952,7 +884,6 @@
 .method public final runIsSafeOperation(Ljava/io/PrintWriter;)I
     .locals 3
 
-    .line 164
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -961,7 +892,6 @@
 
     move-result v0
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUnsafeOperationReason(I)I
@@ -981,7 +911,6 @@
     :cond_0
     move v1, v2
 
-    .line 168
     :goto_0
     invoke-static {v0}, Landroid/app/admin/DevicePolicyManager;->operationToString(I)Ljava/lang/String;
 
@@ -991,7 +920,6 @@
 
     move-result-object v1
 
-    .line 169
     invoke-static {p0}, Landroid/app/admin/DevicePolicyManager;->operationSafetyReasonToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1002,7 +930,6 @@
 
     const-string v0, "Operation %s is %s. Reason: %s\n"
 
-    .line 167
     invoke-virtual {p1, v0, p0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     return v2
@@ -1011,7 +938,6 @@
 .method public final runIsSafeOperationByReason(Ljava/io/PrintWriter;)I
     .locals 1
 
-    .line 174
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1020,14 +946,12 @@
 
     move-result v0
 
-    .line 175
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isSafeOperation(I)Z
 
     move-result p0
 
-    .line 177
     invoke-static {v0}, Landroid/app/admin/DevicePolicyManager;->operationSafetyReasonToString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1042,7 +966,6 @@
 
     const-string v0, "Operations affected by %s are %s\n"
 
-    .line 176
     invoke-virtual {p1, v0, p0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const/4 p0, 0x0
@@ -1053,7 +976,6 @@
 .method public final runListOwners(Ljava/io/PrintWriter;)I
     .locals 6
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->listAllOwners()Ljava/util/List;
@@ -1062,7 +984,6 @@
 
     const-string/jumbo v1, "owner"
 
-    .line 207
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->printAndGetSize(Ljava/io/PrintWriter;Ljava/util/Collection;Ljava/lang/String;)I
 
     move-result p0
@@ -1079,14 +1000,12 @@
     :goto_0
     if-ge v2, p0, :cond_5
 
-    .line 211
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/devicepolicy/OwnerShellData;
 
-    .line 212
     iget v4, v3, Lcom/android/server/devicepolicy/OwnerShellData;->userId:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1107,17 +1026,14 @@
 
     invoke-virtual {p1, v5, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 213
     iget-boolean v4, v3, Lcom/android/server/devicepolicy/OwnerShellData;->isDeviceOwner:Z
 
     if-eqz v4, :cond_1
 
     const-string v4, ",DeviceOwner"
 
-    .line 214
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 216
     :cond_1
     iget-boolean v4, v3, Lcom/android/server/devicepolicy/OwnerShellData;->isProfileOwner:Z
 
@@ -1125,16 +1041,13 @@
 
     const-string v4, ",ProfileOwner"
 
-    .line 217
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 219
     :cond_2
     iget-boolean v4, v3, Lcom/android/server/devicepolicy/OwnerShellData;->isManagedProfileOwner:Z
 
     if-eqz v4, :cond_3
 
-    .line 220
     iget v4, v3, Lcom/android/server/devicepolicy/OwnerShellData;->parentUserId:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1149,7 +1062,6 @@
 
     invoke-virtual {p1, v5, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 222
     :cond_3
     iget-boolean v3, v3, Lcom/android/server/devicepolicy/OwnerShellData;->isAffiliated:Z
 
@@ -1157,10 +1069,8 @@
 
     const-string v3, ",Affiliated"
 
-    .line 223
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 225
     :cond_4
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
@@ -1175,7 +1085,6 @@
 .method public final runListPolicyExemptApps(Ljava/io/PrintWriter;)I
     .locals 5
 
-    .line 232
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->listPolicyExemptApps()Ljava/util/List;
@@ -1184,7 +1093,6 @@
 
     const-string/jumbo v1, "policy exempt app"
 
-    .line 233
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->printAndGetSize(Ljava/io/PrintWriter;Ljava/util/Collection;Ljava/lang/String;)I
 
     move-result p0
@@ -1201,14 +1109,12 @@
     :goto_0
     if-ge v2, p0, :cond_1
 
-    .line 238
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 239
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1232,10 +1138,8 @@
 .method public final runMarkProfileOwnerOnOrganizationOwnedDevice(Ljava/io/PrintWriter;)I
     .locals 3
 
-    .line 340
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->parseArgs()V
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
@@ -1252,7 +1156,6 @@
 
     const-string v1, "Success\n"
 
-    .line 342
     invoke-virtual {p1, v1, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     return p0
@@ -1261,10 +1164,8 @@
 .method public final runRemoveActiveAdmin(Ljava/io/PrintWriter;)I
     .locals 3
 
-    .line 277
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->parseArgs()V
 
-    .line 278
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
@@ -1273,7 +1174,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->forceRemoveActiveAdmin(Landroid/content/ComponentName;I)V
 
-    .line 279
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
 
     filled-new-array {p0}, [Ljava/lang/Object;
@@ -1292,10 +1192,8 @@
 .method public final runSetActiveAdmin(Ljava/io/PrintWriter;)I
     .locals 4
 
-    .line 245
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->parseArgs()V
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
@@ -1306,7 +1204,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setActiveAdmin(Landroid/content/ComponentName;ZI)V
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
 
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
@@ -1329,10 +1226,8 @@
 .method public final runSetDeviceOwner(Ljava/io/PrintWriter;)I
     .locals 6
 
-    .line 253
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->parseArgs()V
 
-    .line 254
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
@@ -1345,7 +1240,6 @@
 
     const/4 v0, 0x0
 
-    .line 257
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -1371,7 +1265,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 268
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     const/4 v2, 0x3
@@ -1380,7 +1273,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setUserProvisioningState(II)V
 
-    .line 271
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
@@ -1395,7 +1287,6 @@
 
     invoke-virtual {p1, v2, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 272
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
 
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
@@ -1412,7 +1303,6 @@
 
     return v0
 
-    .line 259
     :cond_1
     :try_start_1
     new-instance p1, Ljava/lang/RuntimeException;
@@ -1446,24 +1336,20 @@
     :catch_0
     move-exception p1
 
-    .line 264
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
 
     invoke-virtual {v1, p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removeActiveAdmin(Landroid/content/ComponentName;I)V
 
-    .line 265
     throw p1
 .end method
 
 .method public final runSetProfileOwner(Ljava/io/PrintWriter;)I
     .locals 4
 
-    .line 284
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->parseArgs()V
 
-    .line 285
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
@@ -1474,7 +1360,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setActiveAdmin(Landroid/content/ComponentName;ZI)V
 
-    .line 288
     :try_start_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -1490,7 +1375,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 299
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     const/4 v1, 0x3
@@ -1499,10 +1383,8 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setUserProvisioningState(II)V
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
 
-    .line 303
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
     move-result-object v0
@@ -1519,14 +1401,12 @@
 
     const-string v0, "Success: Active admin and profile owner set to %s for user %d\n"
 
-    .line 302
     invoke-virtual {p1, v0, p0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 289
     :cond_0
     :try_start_1
     new-instance p1, Ljava/lang/RuntimeException;
@@ -1541,7 +1421,6 @@
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
 
-    .line 290
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
     move-result-object v1
@@ -1569,7 +1448,6 @@
     :catch_0
     move-exception p1
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mComponent:Landroid/content/ComponentName;
@@ -1578,14 +1456,12 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removeActiveAdmin(Landroid/content/ComponentName;I)V
 
-    .line 296
     throw p1
 .end method
 
 .method public final runSetSafeOperation(Ljava/io/PrintWriter;)I
     .locals 2
 
-    .line 186
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1594,7 +1470,6 @@
 
     move-result v0
 
-    .line 187
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -1603,17 +1478,14 @@
 
     move-result v1
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerServiceShellCommand;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setNextOperationSafety(II)V
 
-    .line 190
     invoke-static {v0}, Landroid/app/admin/DevicePolicyManager;->operationToString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 191
     invoke-static {v1}, Landroid/app/admin/DevicePolicyManager;->operationSafetyReasonToString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1624,7 +1496,6 @@
 
     const-string v0, "Next call to check operation %s will return %s\n"
 
-    .line 189
     invoke-virtual {p1, v0, p0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const/4 p0, 0x0
@@ -1641,19 +1512,16 @@
 
     const-string v1, "  help\n"
 
-    .line 117
     invoke-virtual {p1, v1, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v0, "    Prints this help text.\n\n"
 
     new-array v1, p0, [Ljava/lang/Object;
 
-    .line 118
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v0, "is-operation-safe"
 
-    .line 119
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1666,12 +1534,10 @@
 
     new-array v1, p0, [Ljava/lang/Object;
 
-    .line 120
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v0, "is-operation-safe-by-reason"
 
-    .line 121
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1684,12 +1550,10 @@
 
     new-array v1, p0, [Ljava/lang/Object;
 
-    .line 122
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v0, "set-operation-safe"
 
-    .line 123
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1702,12 +1566,10 @@
 
     new-array v1, p0, [Ljava/lang/Object;
 
-    .line 124
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v0, "list-owners"
 
-    .line 126
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1720,12 +1582,10 @@
 
     new-array v2, p0, [Ljava/lang/Object;
 
-    .line 127
     invoke-virtual {p1, v0, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v0, "list-policy-exempt-apps"
 
-    .line 128
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1736,14 +1596,12 @@
 
     new-array v2, p0, [Ljava/lang/Object;
 
-    .line 129
     invoke-virtual {p1, v0, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v0, "set-active-admin"
 
     const-string v2, "--user"
 
-    .line 130
     filled-new-array {v0, v2}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1756,14 +1614,12 @@
 
     new-array v4, p0, [Ljava/lang/Object;
 
-    .line 132
     invoke-virtual {p1, v0, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v0, "set-device-owner"
 
     const-string v4, "--device-owner-only"
 
-    .line 133
     filled-new-array {v0, v2, v4}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1776,12 +1632,10 @@
 
     new-array v4, p0, [Ljava/lang/Object;
 
-    .line 135
     invoke-virtual {p1, v0, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v0, "set-profile-owner"
 
-    .line 137
     filled-new-array {v0, v2}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1792,12 +1646,10 @@
 
     new-array v4, p0, [Ljava/lang/Object;
 
-    .line 139
     invoke-virtual {p1, v0, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v0, "remove-active-admin"
 
-    .line 141
     filled-new-array {v0, v2}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1808,12 +1660,10 @@
 
     new-array v4, p0, [Ljava/lang/Object;
 
-    .line 143
     invoke-virtual {p1, v0, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v0, "clear-freeze-period-record"
 
-    .line 146
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1824,12 +1674,10 @@
 
     new-array v4, p0, [Ljava/lang/Object;
 
-    .line 147
     invoke-virtual {p1, v0, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v0, "force-network-logs"
 
-    .line 150
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1840,12 +1688,10 @@
 
     new-array v4, p0, [Ljava/lang/Object;
 
-    .line 151
     invoke-virtual {p1, v0, v4}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string v0, "force-security-logs"
 
-    .line 153
     filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1856,12 +1702,10 @@
 
     new-array v1, p0, [Ljava/lang/Object;
 
-    .line 154
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     const-string/jumbo v0, "mark-profile-owner-on-organization-owned-device"
 
-    .line 156
     filled-new-array {v0, v2}, [Ljava/lang/Object;
 
     move-result-object v0
@@ -1872,7 +1716,6 @@
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    .line 158
     invoke-virtual {p1, v0, p0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     return-void

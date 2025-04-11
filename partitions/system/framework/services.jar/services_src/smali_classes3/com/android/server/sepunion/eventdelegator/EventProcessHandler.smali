@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;)Lcom/android/server/sepunion/SemDeviceInfoManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mService:Lcom/android/server/sepunion/SemDeviceInfoManagerService;
 
     return-object p0
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -39,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 29
     sget-object v0, Lcom/android/server/sepunion/SemDeviceInfoManagerService;->TAG:Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->TAG:Ljava/lang/String;
@@ -50,27 +47,22 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/sepunion/SemDeviceInfoManagerService;Landroid/os/HandlerThread;)V
     .locals 1
 
-    .line 45
     invoke-virtual {p3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 120
     new-instance v0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler$2;-><init>(Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mPackagesMonitor:Lcom/android/internal/content/PackageMonitor;
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mContext:Landroid/content/Context;
 
-    .line 47
     iput-object p2, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mService:Lcom/android/server/sepunion/SemDeviceInfoManagerService;
 
-    .line 49
     new-instance p1, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler$1;
 
     invoke-virtual {p3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -89,7 +81,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 67
     sget-object v0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -110,7 +101,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     iget v1, p1, Landroid/os/Message;->what:I
 
     const/4 v2, 0x1
@@ -129,7 +119,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 109
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,7 +139,6 @@
 
     goto/16 :goto_0
 
-    .line 95
     :cond_0
     iget-object p1, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mService:Lcom/android/server/sepunion/SemDeviceInfoManagerService;
 
@@ -158,7 +146,6 @@
 
     monitor-enter p1
 
-    .line 96
     :try_start_0
     iget-object v0, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mService:Lcom/android/server/sepunion/SemDeviceInfoManagerService;
 
@@ -166,14 +153,12 @@
 
     move-result-object v0
 
-    .line 97
     iget-object v0, v0, Lcom/android/server/sepunion/eventdelegator/ListenerContainer;->mCustomEventMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 98
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -193,32 +178,27 @@
 
     const-string/jumbo v2, "monitor_package_state"
 
-    .line 99
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 100
     sget-object p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->TAG:Ljava/lang/String;
 
     const-string v0, "PackageMonitor is still in use! DO NOT UNREGISTER!"
 
     invoke-static {p0, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     monitor-exit p1
 
     return-void
 
-    .line 104
     :cond_2
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mPackagesMonitor:Lcom/android/internal/content/PackageMonitor;
 
     invoke-virtual {p0}, Lcom/android/internal/content/PackageMonitor;->unregister()V
@@ -228,7 +208,6 @@
     :catchall_0
     move-exception p0
 
-    .line 104
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -236,7 +215,6 @@
 
     throw p0
 
-    .line 87
     :cond_3
     :try_start_2
     iget-object p1, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mPackagesMonitor:Lcom/android/internal/content/PackageMonitor;
@@ -256,7 +234,6 @@
     :catch_0
     move-exception p0
 
-    .line 89
     sget-object p1, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -277,7 +254,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_4
     iget-object p1, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mContext:Landroid/content/Context;
 
@@ -289,7 +265,6 @@
 
     check-cast p1, Landroid/telephony/TelephonyManager;
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     const/4 v0, 0x0
@@ -298,7 +273,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_5
     iget-object p1, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mContext:Landroid/content/Context;
 
@@ -310,7 +284,6 @@
 
     check-cast p1, Landroid/telephony/TelephonyManager;
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/sepunion/eventdelegator/EventProcessHandler;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     const/16 v0, 0x20
@@ -324,15 +297,12 @@
 .method public notifyToHandler(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 115
     invoke-virtual {p0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 116
     invoke-virtual {p1, p2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 117
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void

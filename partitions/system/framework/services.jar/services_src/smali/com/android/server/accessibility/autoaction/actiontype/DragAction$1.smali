@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;I)V
     .locals 0
 
-    .line 82
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     iput p2, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->val$displayId:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 5
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmSecondEvent(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Landroid/view/MotionEvent;
@@ -44,7 +42,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmSecondEvent(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Landroid/view/MotionEvent;
@@ -55,14 +52,12 @@
 
     move-result v0
 
-    .line 87
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     new-array v4, v1, [Landroid/view/MotionEvent$PointerCoords;
 
     invoke-static {v3, v4}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fputmSecondPointerCoords(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;[Landroid/view/MotionEvent$PointerCoords;)V
 
-    .line 88
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v3}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmSecondPointerCoords(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)[Landroid/view/MotionEvent$PointerCoords;
@@ -75,7 +70,6 @@
 
     aput-object v4, v3, v2
 
-    .line 89
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v3}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmSecondEvent(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Landroid/view/MotionEvent;
@@ -92,7 +86,6 @@
 
     invoke-virtual {v3, v0, v4}, Landroid/view/MotionEvent;->getPointerCoords(ILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmSecondPoint(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
@@ -121,7 +114,6 @@
 
     invoke-virtual {v0, v3, v2}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->updateView(FF)V
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmSecondPoint(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
@@ -130,14 +122,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->setViewOnOff(Z)V
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     iget v1, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->val$displayId:I
 
     invoke-static {v0, v1}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$mdragAndDrop(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;I)V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmFirstPoint(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
@@ -146,7 +136,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->destroy()V
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmSecondPoint(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
@@ -157,7 +146,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
@@ -165,7 +153,6 @@
 
     invoke-static {v0, v3}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fputmFirstPointerCoords(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;[Landroid/view/MotionEvent$PointerCoords;)V
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmFirstPointerCoords(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)[Landroid/view/MotionEvent$PointerCoords;
@@ -178,7 +165,6 @@
 
     aput-object v3, v0, v2
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmFirstEvent(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Landroid/view/MotionEvent;
@@ -205,7 +191,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/view/MotionEvent;->getPointerCoords(ILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmFirstPoint(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;
@@ -234,7 +219,6 @@
 
     invoke-virtual {v0, v3, v2}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->updateView(FF)V
 
-    .line 104
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/DragAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/DragAction;
 
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/actiontype/DragAction;->-$$Nest$fgetmFirstPoint(Lcom/android/server/accessibility/autoaction/actiontype/DragAction;)Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsService;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 4441
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$6;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     iput-object p2, p0, Lcom/android/server/locksettings/LockSettingsService$6;->val$latch:Ljava/util/concurrent/CountDownLatch;
@@ -28,7 +27,6 @@
 .method public onRemovalError(Landroid/hardware/face/Face;ILjava/lang/CharSequence;)V
     .locals 0
 
-    .line 4444
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +45,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4445
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$6;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -60,7 +57,6 @@
 
     if-nez p2, :cond_0
 
-    .line 4451
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$6;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V

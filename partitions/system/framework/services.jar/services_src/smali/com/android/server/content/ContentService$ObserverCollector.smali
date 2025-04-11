@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$20N4P_9I3I81aCYQxFWUsglq_-U(Lcom/android/server/content/ContentService$ObserverCollector$Key;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/content/ContentService$ObserverCollector;->lambda$dispatch$0(Lcom/android/server/content/ContentService$ObserverCollector$Key;Ljava/util/List;)V
 
     return-void
@@ -20,10 +19,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 565
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 566
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -36,13 +33,11 @@
 .method public static synthetic lambda$dispatch$0(Lcom/android/server/content/ContentService$ObserverCollector$Key;Ljava/util/List;)V
     .locals 3
 
-    .line 620
     :try_start_0
     iget-object v0, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->observer:Landroid/database/IContentObserver;
 
     iget-boolean v1, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->selfChange:Z
 
-    .line 621
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -59,7 +54,6 @@
 
     iget p0, p0, Lcom/android/server/content/ContentService$ObserverCollector$Key;->userId:I
 
-    .line 620
     invoke-interface {v0, v1, p1, v2, p0}, Landroid/database/IContentObserver;->onChangeEtc(Z[Landroid/net/Uri;II)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -73,7 +67,6 @@
 .method public collect(Landroid/database/IContentObserver;IZLandroid/net/Uri;II)V
     .locals 7
 
-    .line 604
     new-instance v6, Lcom/android/server/content/ContentService$ObserverCollector$Key;
 
     move-object v0, v6
@@ -90,7 +83,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/content/ContentService$ObserverCollector$Key;-><init>(Landroid/database/IContentObserver;IZII)V
 
-    .line 605
     iget-object p1, p0, Lcom/android/server/content/ContentService$ObserverCollector;->collected:Landroid/util/ArrayMap;
 
     invoke-virtual {p1, v6}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -101,17 +93,14 @@
 
     if-nez p1, :cond_0
 
-    .line 607
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 608
     iget-object p0, p0, Lcom/android/server/content/ContentService$ObserverCollector;->collected:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, v6, p1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 610
     :cond_0
     invoke-interface {p1, p4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -125,7 +114,6 @@
 
     move v1, v0
 
-    .line 614
     :goto_0
     iget-object v2, p0, Lcom/android/server/content/ContentService$ObserverCollector;->collected:Landroid/util/ArrayMap;
 
@@ -135,7 +123,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 615
     iget-object v2, p0, Lcom/android/server/content/ContentService$ObserverCollector;->collected:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -144,7 +131,6 @@
 
     check-cast v2, Lcom/android/server/content/ContentService$ObserverCollector$Key;
 
-    .line 616
     iget-object v3, p0, Lcom/android/server/content/ContentService$ObserverCollector;->collected:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -153,12 +139,10 @@
 
     check-cast v3, Ljava/util/List;
 
-    .line 618
     new-instance v4, Lcom/android/server/content/ContentService$ObserverCollector$$ExternalSyntheticLambda0;
 
     invoke-direct {v4, v2, v3}, Lcom/android/server/content/ContentService$ObserverCollector$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/content/ContentService$ObserverCollector$Key;Ljava/util/List;)V
 
-    .line 629
     iget v3, v2, Lcom/android/server/content/ContentService$ObserverCollector$Key;->flags:I
 
     const v5, 0x8000
@@ -174,7 +158,6 @@
     :cond_0
     move v3, v0
 
-    .line 630
     :goto_1
     const-class v5, Landroid/app/ActivityManagerInternal;
 
@@ -186,7 +169,6 @@
 
     iget v2, v2, Lcom/android/server/content/ContentService$ObserverCollector$Key;->uid:I
 
-    .line 631
     invoke-virtual {v5, v2}, Landroid/app/ActivityManagerInternal;->getUidProcessState(I)I
 
     move-result v2
@@ -199,7 +181,6 @@
 
     goto :goto_2
 
-    .line 635
     :cond_1
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
@@ -211,7 +192,6 @@
 
     goto :goto_3
 
-    .line 633
     :cond_2
     :goto_2
     invoke-interface {v4}, Ljava/lang/Runnable;->run()V

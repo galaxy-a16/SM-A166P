@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;)V
     .locals 0
 
-    .line 1084
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$3;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onUserCreated(Landroid/content/pm/UserInfo;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1087
     iget-object p0, p0, Lcom/android/server/appop/AppOpsService$3;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I

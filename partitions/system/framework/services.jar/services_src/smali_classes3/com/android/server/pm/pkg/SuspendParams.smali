@@ -15,16 +15,12 @@
 .method public constructor <init>(Landroid/content/pm/SuspendDialogInfo;Landroid/os/PersistableBundle;Landroid/os/PersistableBundle;)V
     .locals 0
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput-object p1, p0, Lcom/android/server/pm/pkg/SuspendParams;->dialogInfo:Landroid/content/pm/SuspendDialogInfo;
 
-    .line 53
     iput-object p2, p0, Lcom/android/server/pm/pkg/SuspendParams;->appExtras:Landroid/os/PersistableBundle;
 
-    .line 54
     iput-object p3, p0, Lcom/android/server/pm/pkg/SuspendParams;->launcherExtras:Landroid/os/PersistableBundle;
 
     return-void
@@ -35,7 +31,6 @@
 
     const-string v0, "FrameworkPackageUserState"
 
-    .line 130
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v1
@@ -46,7 +41,6 @@
 
     move-object v4, v3
 
-    .line 133
     :cond_0
     :goto_0
     :try_start_0
@@ -62,7 +56,6 @@
 
     if-ne v5, v7, :cond_1
 
-    .line 135
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v8
@@ -78,7 +71,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_2
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
@@ -154,7 +146,6 @@
 
     if-eq v5, v9, :cond_7
 
-    .line 151
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,7 +172,6 @@
 
     goto :goto_0
 
-    .line 148
     :cond_7
     invoke-static {p0}, Landroid/os/PersistableBundle;->restoreFromXml(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/os/PersistableBundle;
 
@@ -189,7 +179,6 @@
 
     goto :goto_0
 
-    .line 145
     :cond_8
     invoke-static {p0}, Landroid/os/PersistableBundle;->restoreFromXml(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/os/PersistableBundle;
 
@@ -197,7 +186,6 @@
 
     goto :goto_0
 
-    .line 142
     :cond_9
     invoke-static {p0}, Landroid/content/pm/SuspendDialogInfo;->restoreFromXml(Lcom/android/modules/utils/TypedXmlPullParser;)Landroid/content/pm/SuspendDialogInfo;
 
@@ -212,10 +200,8 @@
 
     const-string v1, "Exception while trying to parse SuspendParams, some fields may default"
 
-    .line 157
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 160
     :cond_a
     new-instance p0, Lcom/android/server/pm/pkg/SuspendParams;
 
@@ -235,7 +221,6 @@
 
     return v0
 
-    .line 62
     :cond_0
     instance-of v1, p1, Lcom/android/server/pm/pkg/SuspendParams;
 
@@ -245,11 +230,9 @@
 
     return v2
 
-    .line 65
     :cond_1
     check-cast p1, Lcom/android/server/pm/pkg/SuspendParams;
 
-    .line 66
     iget-object v1, p0, Lcom/android/server/pm/pkg/SuspendParams;->dialogInfo:Landroid/content/pm/SuspendDialogInfo;
 
     iget-object v3, p1, Lcom/android/server/pm/pkg/SuspendParams;->dialogInfo:Landroid/content/pm/SuspendDialogInfo;
@@ -262,7 +245,6 @@
 
     return v2
 
-    .line 69
     :cond_2
     iget-object v1, p0, Lcom/android/server/pm/pkg/SuspendParams;->appExtras:Landroid/os/PersistableBundle;
 
@@ -276,7 +258,6 @@
 
     return v2
 
-    .line 72
     :cond_3
     iget-object p0, p0, Lcom/android/server/pm/pkg/SuspendParams;->launcherExtras:Landroid/os/PersistableBundle;
 
@@ -297,7 +278,6 @@
 .method public getAppExtras()Landroid/os/PersistableBundle;
     .locals 0
 
-    .line 168
     iget-object p0, p0, Lcom/android/server/pm/pkg/SuspendParams;->appExtras:Landroid/os/PersistableBundle;
 
     return-object p0
@@ -306,7 +286,6 @@
 .method public getDialogInfo()Landroid/content/pm/SuspendDialogInfo;
     .locals 0
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/pm/pkg/SuspendParams;->dialogInfo:Landroid/content/pm/SuspendDialogInfo;
 
     return-object p0
@@ -315,7 +294,6 @@
 .method public getLauncherExtras()Landroid/os/PersistableBundle;
     .locals 0
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/pm/pkg/SuspendParams;->launcherExtras:Landroid/os/PersistableBundle;
 
     return-object p0
@@ -324,7 +302,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 80
     iget-object v0, p0, Lcom/android/server/pm/pkg/SuspendParams;->dialogInfo:Landroid/content/pm/SuspendDialogInfo;
 
     invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -333,7 +310,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 81
     iget-object v1, p0, Lcom/android/server/pm/pkg/SuspendParams;->appExtras:Landroid/os/PersistableBundle;
 
     const/4 v2, 0x0
@@ -354,7 +330,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/pm/pkg/SuspendParams;->launcherExtras:Landroid/os/PersistableBundle;
 
     if-eqz p0, :cond_1
@@ -372,7 +347,6 @@
 .method public saveToXml(Lcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 5
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/pm/pkg/SuspendParams;->dialogInfo:Landroid/content/pm/SuspendDialogInfo;
 
     const/4 v1, 0x0
@@ -381,18 +355,14 @@
 
     const-string v0, "dialog-info"
 
-    .line 93
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 94
     iget-object v2, p0, Lcom/android/server/pm/pkg/SuspendParams;->dialogInfo:Landroid/content/pm/SuspendDialogInfo;
 
     invoke-virtual {v2, p1}, Landroid/content/pm/SuspendDialogInfo;->saveToXml(Lcom/android/modules/utils/TypedXmlSerializer;)V
 
-    .line 95
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/pkg/SuspendParams;->appExtras:Landroid/os/PersistableBundle;
 
@@ -402,10 +372,8 @@
 
     const-string v0, "app-extras"
 
-    .line 98
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 100
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/pkg/SuspendParams;->appExtras:Landroid/os/PersistableBundle;
 
@@ -420,14 +388,11 @@
 
     const-string v4, "Exception while trying to write appExtras. Will be lost on reboot"
 
-    .line 102
     invoke-static {v2, v4, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 105
     :goto_0
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 107
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/pkg/SuspendParams;->launcherExtras:Landroid/os/PersistableBundle;
 
@@ -435,10 +400,8 @@
 
     const-string v0, "launcher-extras"
 
-    .line 108
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 110
     :try_start_1
     iget-object p0, p0, Lcom/android/server/pm/pkg/SuspendParams;->launcherExtras:Landroid/os/PersistableBundle;
 
@@ -453,10 +416,8 @@
 
     const-string v3, "Exception while trying to write launcherExtras. Will be lost on reboot"
 
-    .line 112
     invoke-static {v2, v3, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 115
     :goto_1
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 

@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 664
     invoke-direct {p0}, Landroid/os/HwBinder;-><init>()V
 
     return-void
@@ -21,26 +20,22 @@
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
     .locals 2
 
-    .line 719
     new-instance p0, Landroid/hidl/base/V1_0/DebugInfo;
 
     invoke-direct {p0}, Landroid/hidl/base/V1_0/DebugInfo;-><init>()V
 
-    .line 720
     invoke-static {}, Landroid/os/HidlSupport;->getPidIfSharable()I
 
     move-result v0
@@ -49,12 +44,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 721
     iput-wide v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->ptr:J
 
     const/4 v0, 0x0
 
-    .line 722
     iput v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->arch:I
 
     return-object p0
@@ -63,7 +56,6 @@
 .method public final getHashChain()Ljava/util/ArrayList;
     .locals 3
 
-    .line 693
     new-instance p0, Ljava/util/ArrayList;
 
     const/16 v0, 0x20
@@ -206,7 +198,6 @@
 .method public final interfaceChain()Ljava/util/ArrayList;
     .locals 3
 
-    .line 672
     new-instance p0, Ljava/util/ArrayList;
 
     const-string v0, "android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint"
@@ -231,7 +222,6 @@
 .method public final interfaceDescriptor()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string/jumbo p0, "vendor.samsung.hardware.biometrics.fingerprint@3.0::ISehBiometricsFingerprint"
 
     return-object p0
@@ -240,7 +230,6 @@
 .method public final linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -249,7 +238,6 @@
 .method public final notifySyspropsChanged()V
     .locals 0
 
-    .line 729
     invoke-static {}, Landroid/os/HwBinder;->enableInstrumentation()V
 
     return-void
@@ -272,94 +260,73 @@
 
     goto/16 :goto_1
 
-    .line 1010
     :sswitch_0
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1012
     invoke-virtual {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;->notifySyspropsChanged()V
 
     goto/16 :goto_1
 
-    .line 999
     :sswitch_1
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1001
     invoke-virtual {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
 
     move-result-object p0
 
-    .line 1002
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1003
     invoke-virtual {p0, p3}, Landroid/hidl/base/V1_0/DebugInfo;->writeToParcel(Landroid/os/HwParcel;)V
 
-    .line 1004
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 989
     :sswitch_2
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 991
     invoke-virtual {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;->ping()V
 
-    .line 992
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 993
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 976
     :sswitch_3
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 978
     invoke-virtual {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;->setHALInstrumentation()V
 
     goto/16 :goto_1
 
-    .line 942
     :sswitch_4
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 944
     invoke-virtual {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;->getHashChain()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 945
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 947
     new-instance p1, Landroid/os/HwBlob;
 
     const/16 p2, 0x10
 
     invoke-direct {p1, p2}, Landroid/os/HwBlob;-><init>(I)V
 
-    .line 949
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p2
 
     const-wide/16 v3, 0x8
 
-    .line 950
     invoke-virtual {p1, v3, v4, p2}, Landroid/os/HwBlob;->putInt32(JI)V
 
     const-wide/16 v3, 0xc
 
-    .line 951
     invoke-virtual {p1, v3, v4, v2}, Landroid/os/HwBlob;->putBool(JZ)V
 
-    .line 952
     new-instance p4, Landroid/os/HwBlob;
 
     mul-int/lit8 v3, p2, 0x20
@@ -373,7 +340,6 @@
 
     int-to-long v3, v3
 
-    .line 956
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -382,21 +348,18 @@
 
     if-eqz v5, :cond_0
 
-    .line 958
     array-length v6, v5
 
     const/16 v7, 0x20
 
     if-ne v6, v7, :cond_0
 
-    .line 962
     invoke-virtual {p4, v3, v4, v5}, Landroid/os/HwBlob;->putInt8Array(J[B)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 959
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -406,79 +369,60 @@
 
     throw p0
 
-    .line 966
     :cond_1
     invoke-virtual {p1, v0, v1, p4}, Landroid/os/HwBlob;->putBlob(JLandroid/os/HwBlob;)V
 
-    .line 968
     invoke-virtual {p3, p1}, Landroid/os/HwParcel;->writeBuffer(Landroid/os/HwBlob;)V
 
-    .line 970
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 931
     :sswitch_5
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 933
     invoke-virtual {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;->interfaceDescriptor()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 934
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 935
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 936
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 919
     :sswitch_6
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 921
     invoke-virtual {p2}, Landroid/os/HwParcel;->readNativeHandle()Landroid/os/NativeHandle;
 
     move-result-object p1
 
-    .line 922
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 923
     invoke-virtual {p0, p1, p2}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;->debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
 
-    .line 924
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 925
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 908
     :sswitch_7
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 910
     invoke-virtual {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;->interfaceChain()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 911
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 912
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeStringVector(Ljava/util/ArrayList;)V
 
-    .line 913
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
@@ -486,25 +430,20 @@
     :pswitch_0
     const-string/jumbo p1, "vendor.samsung.hardware.biometrics.fingerprint@3.0::ISehBiometricsFingerprint"
 
-    .line 890
     invoke-virtual {p2, p1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 892
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p1
 
-    .line 893
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p4
 
-    .line 894
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 895
     new-instance v0, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub$1;
 
     invoke-direct {v0, p0, p3}, Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub$1;-><init>(Lvendor/samsung/hardware/biometrics/fingerprint/V3_0/ISehBiometricsFingerprint$Stub;Landroid/os/HwParcel;)V
@@ -513,177 +452,135 @@
 
     goto/16 :goto_1
 
-    .line 877
     :pswitch_1
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 879
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt64()J
 
     move-result-wide v0
 
-    .line 880
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p1
 
-    .line 881
     invoke-interface {p0, v0, v1, p1}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->authenticate(JI)I
 
     move-result p0
 
-    .line 882
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 883
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 884
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 864
     :pswitch_2
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 866
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p1
 
-    .line 867
     invoke-virtual {p2}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 868
     invoke-interface {p0, p1, p2}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->setActiveGroup(ILjava/lang/String;)I
 
     move-result p0
 
-    .line 869
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 870
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 871
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 851
     :pswitch_3
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 853
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p1
 
-    .line 854
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p2
 
-    .line 855
     invoke-interface {p0, p1, p2}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->remove(II)I
 
     move-result p0
 
-    .line 856
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 857
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 858
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 840
     :pswitch_4
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 842
     invoke-interface {p0}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->enumerate()I
 
     move-result p0
 
-    .line 843
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 844
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 845
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 829
     :pswitch_5
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 831
     invoke-interface {p0}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->cancel()I
 
     move-result p0
 
-    .line 832
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 833
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 834
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 818
     :pswitch_6
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 820
     invoke-interface {p0}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->getAuthenticatorId()J
 
     move-result-wide p0
 
-    .line 821
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 822
     invoke-virtual {p3, p0, p1}, Landroid/os/HwParcel;->writeInt64(J)V
 
-    .line 823
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 807
     :pswitch_7
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 809
     invoke-interface {p0}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->postEnroll()I
 
     move-result p0
 
-    .line 810
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 811
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 812
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 785
     :pswitch_8
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
@@ -693,65 +590,50 @@
 
     const-wide/16 v3, 0x45
 
-    .line 789
     invoke-virtual {p2, v3, v4}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
 
     move-result-object v3
 
-    .line 792
     invoke-virtual {v3, v0, v1, p4, p1}, Landroid/os/HwBlob;->copyToInt8Array(J[BI)V
 
-    .line 796
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p1
 
-    .line 797
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p2
 
-    .line 798
     invoke-interface {p0, p4, p1, p2}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->enroll([BII)I
 
     move-result p0
 
-    .line 799
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 800
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 801
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 774
     :pswitch_9
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 776
     invoke-interface {p0}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->preEnroll()J
 
     move-result-wide p0
 
-    .line 777
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 778
     invoke-virtual {p3, p0, p1}, Landroid/os/HwParcel;->writeInt64(J)V
 
-    .line 779
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 762
     :pswitch_a
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 764
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStrongBinder()Landroid/os/IHwBinder;
 
     move-result-object p1
@@ -760,18 +642,14 @@
 
     move-result-object p1
 
-    .line 765
     invoke-interface {p0, p1}, Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;->setNotify(Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprintClientCallback;)J
 
     move-result-wide p0
 
-    .line 766
     invoke-virtual {p3, v2}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 767
     invoke-virtual {p3, p0, p1}, Landroid/os/HwParcel;->writeInt64(J)V
 
-    .line 768
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     :goto_1
@@ -810,7 +688,6 @@
 .method public final ping()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -819,7 +696,6 @@
 
     const-string/jumbo v0, "vendor.samsung.hardware.biometrics.fingerprint@3.0::ISehBiometricsFingerprint"
 
-    .line 741
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -837,14 +713,12 @@
 .method public final setHALInstrumentation()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 753
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -869,7 +743,6 @@
 .method public final unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

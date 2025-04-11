@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;I)V
     .locals 0
 
-    .line 2036
     iput-object p1, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$2;->this$1:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
 
     iput p2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$2;->val$callState:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 6
 
-    .line 2039
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$2;->this$1:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
 
     invoke-static {v0}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->-$$Nest$fgetmTts(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;)Landroid/speech/tts/TextToSpeech;
@@ -42,12 +40,10 @@
 
     move-result-object v0
 
-    .line 2040
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     if-eqz v0, :cond_0
 
-    .line 2042
     invoke-static {v0}, Landroid/speech/tts/TtsEngines;->normalizeTTSLocale(Ljava/util/Locale;)Ljava/util/Locale;
 
     move-result-object v0
@@ -57,7 +53,6 @@
     :cond_0
     move-object v0, v1
 
-    .line 2044
     :goto_0
     iget-object v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$2;->this$1:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
 
@@ -69,7 +64,6 @@
 
     move-result v2
 
-    .line 2045
     invoke-static {}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -108,7 +102,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 2048
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$2;->this$1:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
 
     invoke-static {v0}, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;->-$$Nest$fgetmTts(Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;)Landroid/speech/tts/TextToSpeech;
@@ -122,7 +115,6 @@
     :cond_1
     move-object v1, v0
 
-    .line 2050
     :goto_1
     iget-object v0, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$2;->this$1:Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper;
 
@@ -144,7 +136,6 @@
 
     move-result-object v1
 
-    .line 2051
     iget v2, p0, Lcom/android/server/sensorprivacy/SensorPrivacyService$CallStateHelper$2;->val$callState:I
 
     const/4 v3, 0x1
@@ -167,7 +158,6 @@
     :goto_2
     const/4 v2, 0x0
 
-    .line 2050
     invoke-virtual {v0, v1, v2, p0}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
     return-void

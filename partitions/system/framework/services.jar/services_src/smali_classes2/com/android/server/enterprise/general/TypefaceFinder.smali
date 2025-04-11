@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -29,14 +27,12 @@
 .method public final deleteWhiteSpace(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 233
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 235
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -44,7 +40,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 236
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -53,7 +48,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 237
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -65,7 +59,6 @@
 
     goto :goto_0
 
-    .line 239
     :cond_1
     invoke-virtual {p0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -77,7 +70,6 @@
 .method public findMatchingTypefaceByName(Ljava/lang/String;)Lcom/android/server/enterprise/general/Typeface;
     .locals 5
 
-    .line 461
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,7 +90,6 @@
 
     const/4 v0, 0x0
 
-    .line 464
     :goto_0
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
@@ -108,7 +99,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 468
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -117,7 +107,6 @@
 
     check-cast v2, Lcom/android/server/enterprise/general/Typeface;
 
-    .line 469
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +127,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 470
     invoke-virtual {v2}, Lcom/android/server/enterprise/general/Typeface;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -171,20 +159,17 @@
     :try_start_0
     const-string/jumbo v1, "xml"
 
-    .line 123
     invoke-virtual {p1, v1}, Landroid/content/res/AssetManager;->list(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 139
     :goto_0
     array-length v2, v1
 
     if-ge v0, v2, :cond_0
 
-    .line 143
     :try_start_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -206,7 +191,6 @@
 
     move-result-object v2
 
-    .line 145
     aget-object v3, v1, v0
 
     invoke-virtual {p0, v3, v2, p2}, Lcom/android/server/enterprise/general/TypefaceFinder;->parseTypefaceXml(Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V
@@ -234,18 +218,14 @@
 
     const-string v1, "default"
 
-    .line 244
     invoke-virtual {p2, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 245
     invoke-virtual {p3, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     const-string v1, ""
 
-    .line 246
     invoke-virtual {p4, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 250
     iget-object v2, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     new-instance v3, Lcom/android/server/enterprise/general/TypefaceFinder$TypefaceSortByName;
@@ -258,7 +238,6 @@
 
     move v3, v2
 
-    .line 252
     :goto_0
     iget-object v4, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
@@ -268,7 +247,6 @@
 
     if-ge v3, v4, :cond_8
 
-    .line 255
     iget-object v4, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -283,7 +261,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 261
     iget-object v5, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -298,21 +275,18 @@
 
     const/16 v6, 0x2f
 
-    .line 262
     invoke-virtual {v5, v6}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v6
 
     const/16 v7, 0x2e
 
-    .line 263
     invoke-virtual {v5, v7}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v7
 
     if-gez v7, :cond_0
 
-    .line 266
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -322,19 +296,16 @@
 
     add-int/2addr v6, v8
 
-    .line 269
     invoke-virtual {v5, v6, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v6, " "
 
-    .line 270
     invoke-virtual {v5, v6, v1}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 271
     iget-object v6, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -349,28 +320,23 @@
 
     const/16 v7, 0x80
 
-    .line 274
     :try_start_0
     invoke-virtual {p1, v6, v7}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v6
 
-    .line 275
     iget-object v7, v6, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     iput-object v7, v6, Landroid/content/pm/ApplicationInfo;->publicSourceDir:Ljava/lang/String;
 
-    .line 276
     invoke-virtual {p1, v6}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Landroid/content/pm/ApplicationInfo;)Landroid/content/res/Resources;
 
     move-result-object v6
 
-    .line 277
     invoke-virtual {v6}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v6
 
-    .line 278
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -387,10 +353,8 @@
 
     move-result-object v7
 
-    .line 279
     invoke-static {v6, v7}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
 
-    .line 283
     iget-object v6, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -409,7 +373,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 284
     :try_start_1
     iget-object v6, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
@@ -433,7 +396,6 @@
 
     goto/16 :goto_2
 
-    .line 288
     :cond_1
     iget-object v6, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
@@ -455,7 +417,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 290
     iget-object v6, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -475,7 +436,6 @@
 
     check-cast v9, Lcom/android/server/enterprise/general/Typeface;
 
-    .line 291
     invoke-virtual {v9}, Lcom/android/server/enterprise/general/Typeface;->getFontPackageName()Ljava/lang/String;
 
     move-result-object v9
@@ -498,7 +458,6 @@
 
     goto/16 :goto_2
 
-    .line 301
     :cond_4
     iget-object v6, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
@@ -520,14 +479,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 302
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/general/TypefaceFinder;->deleteWhiteSpace(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {p2, v8, v4}, Ljava/util/Vector;->add(ILjava/lang/Object;)V
 
-    .line 303
     iget-object v4, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -542,7 +499,6 @@
 
     invoke-virtual {p3, v8, v4}, Ljava/util/Vector;->add(ILjava/lang/Object;)V
 
-    .line 304
     iget-object v4, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -559,7 +515,6 @@
 
     goto :goto_2
 
-    .line 307
     :cond_5
     iget-object v6, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
@@ -579,14 +534,12 @@
 
     if-eqz v6, :cond_6
 
-    .line 308
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/general/TypefaceFinder;->deleteWhiteSpace(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {p2, v8, v4}, Ljava/util/Vector;->add(ILjava/lang/Object;)V
 
-    .line 309
     iget-object v4, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -601,7 +554,6 @@
 
     invoke-virtual {p3, v8, v4}, Ljava/util/Vector;->add(ILjava/lang/Object;)V
 
-    .line 310
     iget-object v4, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -618,11 +570,9 @@
 
     goto :goto_2
 
-    .line 313
     :cond_6
     invoke-virtual {p2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 314
     iget-object v4, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -637,7 +587,6 @@
 
     invoke-virtual {p3, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 315
     iget-object v4, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -659,7 +608,6 @@
     :catch_0
     move-exception v4
 
-    .line 317
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -680,7 +628,6 @@
 
     invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_7
@@ -696,45 +643,37 @@
 .method public parseTypefaceXml(Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V
     .locals 3
 
-    .line 177
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/SAXParserFactory;->newInstance()Ljavax/xml/parsers/SAXParserFactory;
 
     move-result-object v0
 
-    .line 178
     invoke-virtual {v0}, Ljavax/xml/parsers/SAXParserFactory;->newSAXParser()Ljavax/xml/parsers/SAXParser;
 
     move-result-object v0
 
-    .line 179
     invoke-virtual {v0}, Ljavax/xml/parsers/SAXParser;->getXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object v0
 
-    .line 180
     new-instance v1, Lcom/android/server/enterprise/general/TypefaceParser;
 
     invoke-direct {v1}, Lcom/android/server/enterprise/general/TypefaceParser;-><init>()V
 
-    .line 181
     invoke-interface {v0, v1}, Lorg/xml/sax/XMLReader;->setContentHandler(Lorg/xml/sax/ContentHandler;)V
 
-    .line 182
     new-instance v2, Lorg/xml/sax/InputSource;
 
     invoke-direct {v2, p2}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/InputStream;)V
 
     invoke-interface {v0, v2}, Lorg/xml/sax/XMLReader;->parse(Lorg/xml/sax/InputSource;)V
 
-    .line 183
     invoke-virtual {v1}, Lcom/android/server/enterprise/general/TypefaceParser;->getParsedData()Lcom/android/server/enterprise/general/Typeface;
 
     move-result-object p2
 
     const-string v0, "com.monotype.android.font.samsungone"
 
-    .line 184
     invoke-virtual {p3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -743,20 +682,16 @@
 
     const-string p1, "SamsungOneUI-Regular.xml"
 
-    .line 185
     invoke-virtual {p2, p1}, Lcom/android/server/enterprise/general/Typeface;->setTypefaceFilename(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 187
     :cond_0
     invoke-virtual {p2, p1}, Lcom/android/server/enterprise/general/Typeface;->setTypefaceFilename(Ljava/lang/String;)V
 
-    .line 189
     :goto_0
     invoke-virtual {p2, p3}, Lcom/android/server/enterprise/general/Typeface;->setFontPackageName(Ljava/lang/String;)V
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/enterprise/general/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z

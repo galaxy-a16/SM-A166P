@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 2369
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$4;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/app/IAppOpsCallback$Stub;-><init>()V
@@ -30,7 +29,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 2372
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$4;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/am/ActivityManagerService;->getAppOpsManager()Landroid/app/AppOpsManager;
@@ -43,7 +41,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2374
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$4;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {p0, p2}, Lcom/android/server/am/ActivityManagerService;->runInBackgroundDisabled(I)V

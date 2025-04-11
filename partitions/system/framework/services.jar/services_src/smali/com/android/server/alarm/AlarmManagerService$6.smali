@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/AlarmManagerService;)V
     .locals 0
 
-    .line 4159
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$6;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public compare(Lcom/android/server/alarm/AlarmManagerService$FilterStats;Lcom/android/server/alarm/AlarmManagerService$FilterStats;)I
     .locals 2
 
-    .line 4162
     iget-wide p0, p1, Lcom/android/server/alarm/AlarmManagerService$FilterStats;->aggregateTime:J
 
     iget-wide v0, p2, Lcom/android/server/alarm/AlarmManagerService$FilterStats;->aggregateTime:J
@@ -58,7 +56,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 4159
     check-cast p1, Lcom/android/server/alarm/AlarmManagerService$FilterStats;
 
     check-cast p2, Lcom/android/server/alarm/AlarmManagerService$FilterStats;

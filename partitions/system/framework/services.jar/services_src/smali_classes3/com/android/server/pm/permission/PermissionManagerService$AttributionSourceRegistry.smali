@@ -15,24 +15,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1023
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1019
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->mLock:Ljava/lang/Object;
 
-    .line 1027
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->mAttributions:Ljava/util/WeakHashMap;
 
-    .line 1024
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->mContext:Landroid/content/Context;
 
     return-void
@@ -43,12 +39,10 @@
 .method public isRegisteredAttributionSource(Landroid/content/AttributionSource;)Z
     .locals 2
 
-    .line 1088
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1089
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->mAttributions:Ljava/util/WeakHashMap;
 
@@ -64,7 +58,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1091
     invoke-virtual {p0, p1}, Landroid/content/AttributionSource;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -73,7 +66,6 @@
 
     return p0
 
-    .line 1093
     :cond_0
     monitor-exit v0
 
@@ -84,7 +76,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1094
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -95,7 +86,6 @@
 .method public registerAttributionSource(Landroid/content/AttributionSource;)V
     .locals 7
 
-    .line 1052
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -104,7 +94,6 @@
 
     move-result v0
 
-    .line 1053
     invoke-virtual {p1}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v1
@@ -115,7 +104,6 @@
 
     if-eq v1, v0, :cond_1
 
-    .line 1054
     iget-object v2, p0, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.UPDATE_APP_OPS_STATS"
@@ -130,7 +118,6 @@
 
     goto :goto_0
 
-    .line 1057
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -158,7 +145,6 @@
 
     throw p0
 
-    .line 1061
     :cond_1
     :goto_0
     const-class v2, Landroid/content/pm/PackageManagerInternal;
@@ -180,13 +166,11 @@
     :cond_2
     move v3, v0
 
-    .line 1067
     :goto_1
     invoke-static {v3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 1069
     invoke-virtual {p1}, Landroid/content/AttributionSource;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -199,21 +183,18 @@
 
     if-ne v2, v1, :cond_5
 
-    .line 1075
     invoke-virtual {p1}, Landroid/content/AttributionSource;->getNext()Landroid/content/AttributionSource;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 1076
     invoke-virtual {v0}, Landroid/content/AttributionSource;->getNext()Landroid/content/AttributionSource;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
-    .line 1077
     invoke-virtual {p0, v0}, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->isRegisteredAttributionSource(Landroid/content/AttributionSource;)Z
 
     move-result v0
@@ -222,7 +203,6 @@
 
     goto :goto_2
 
-    .line 1078
     :cond_3
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -244,14 +224,12 @@
 
     throw p0
 
-    .line 1082
     :cond_4
     :goto_2
     iget-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1083
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerService$AttributionSourceRegistry;->mAttributions:Ljava/util/WeakHashMap;
 
@@ -261,7 +239,6 @@
 
     invoke-virtual {p0, v0, p1}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1084
     monitor-exit v1
 
     return-void
@@ -275,7 +252,6 @@
 
     throw p0
 
-    .line 1071
     :cond_5
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -287,7 +263,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1072
     invoke-virtual {p1}, Landroid/content/AttributionSource;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -312,10 +287,8 @@
 .method public final resolveUid(I)I
     .locals 1
 
-    .line 1098
     const-class p0, Landroid/service/voice/VoiceInteractionManagerInternal;
 
-    .line 1099
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -326,7 +299,6 @@
 
     return p1
 
-    .line 1104
     :cond_0
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal;->getHotwordDetectionServiceIdentity()Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;
 
@@ -334,14 +306,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 1106
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;->getIsolatedUid()I
 
     move-result v0
 
     if-ne p1, v0, :cond_1
 
-    .line 1107
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;->getOwnerUid()I
 
     move-result p0

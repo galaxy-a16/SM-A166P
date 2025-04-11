@@ -39,7 +39,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRouterService;Lcom/android/server/media/MediaRouterService$UserRecord;)V
     .locals 3
 
-    .line 1181
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -50,14 +49,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 1163
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
-    .line 1165
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -66,21 +63,16 @@
 
     const/4 v0, 0x0
 
-    .line 1169
     iput v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mDiscoveryMode:I
 
     const/4 v0, -0x1
 
-    .line 1171
     iput v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionPhase:I
 
-    .line 1182
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mService:Lcom/android/server/media/MediaRouterService;
 
-    .line 1183
     iput-object p2, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mUserRecord:Lcom/android/server/media/MediaRouterService$UserRecord;
 
-    .line 1184
     new-instance v0, Lcom/android/server/media/RemoteDisplayProviderWatcher;
 
     invoke-static {p1}, Lcom/android/server/media/MediaRouterService;->-$$Nest$fgetmContext(Lcom/android/server/media/MediaRouterService;)Landroid/content/Context;
@@ -99,7 +91,6 @@
 .method public static getConnectionPhase(I)I
     .locals 2
 
-    .line 0
     const/4 v0, 0x2
 
     if-eqz p0, :cond_2
@@ -139,37 +130,30 @@
 .method public addProvider(Lcom/android/server/media/RemoteDisplayProviderProxy;)V
     .locals 2
 
-    .line 1364
     invoke-virtual {p1, p0}, Lcom/android/server/media/RemoteDisplayProviderProxy;->setCallback(Lcom/android/server/media/RemoteDisplayProviderProxy$Callback;)V
 
-    .line 1365
     iget v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mDiscoveryMode:I
 
     invoke-virtual {p1, v0}, Lcom/android/server/media/RemoteDisplayProviderProxy;->setDiscoveryMode(I)V
 
     const/4 v0, 0x0
 
-    .line 1366
     invoke-virtual {p1, v0}, Lcom/android/server/media/RemoteDisplayProviderProxy;->setSelectedDisplay(Ljava/lang/String;)V
 
-    .line 1368
     new-instance v0, Lcom/android/server/media/MediaRouterService$UserHandler$ProviderRecord;
 
     invoke-direct {v0, p1}, Lcom/android/server/media/MediaRouterService$UserHandler$ProviderRecord;-><init>(Lcom/android/server/media/RemoteDisplayProviderProxy;)V
 
-    .line 1369
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1370
     invoke-virtual {p1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->getDisplayState()Landroid/media/RemoteDisplayState;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Lcom/android/server/media/MediaRouterService$UserHandler$ProviderRecord;->updateDescriptor(Landroid/media/RemoteDisplayState;)Z
 
-    .line 1372
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->scheduleUpdateClientState()V
 
     return-void
@@ -178,7 +162,6 @@
 .method public final checkSelectedRouteState()V
     .locals 6
 
-    .line 1413
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     const/4 v1, 0x0
@@ -187,15 +170,12 @@
 
     const/4 v0, -0x1
 
-    .line 1414
     iput v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionPhase:I
 
-    .line 1415
     invoke-virtual {p0, v1}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateConnectionTimeout(I)V
 
     return-void
 
-    .line 1420
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->isValid()Z
 
@@ -207,7 +187,6 @@
 
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
-    .line 1421
     invoke-virtual {v0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->isEnabled()Z
 
     move-result v0
@@ -216,11 +195,9 @@
 
     goto/16 :goto_1
 
-    .line 1427
     :cond_1
     iget v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionPhase:I
 
-    .line 1428
     iget-object v3, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     invoke-virtual {v3}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getStatus()I
@@ -239,12 +216,10 @@
 
     if-ge v3, v2, :cond_2
 
-    .line 1430
     invoke-virtual {p0, v4}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateConnectionTimeout(I)V
 
     return-void
 
-    .line 1435
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -266,14 +241,12 @@
 
     invoke-static {v5, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1436
     iget-boolean v3, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTriggeredBySmartView:Z
 
     if-eqz v3, :cond_3
 
     return-void
 
-    .line 1442
     :cond_3
     iget v3, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionPhase:I
 
@@ -283,7 +256,6 @@
 
     if-eq v3, v4, :cond_4
 
-    .line 1460
     invoke-virtual {p0, v2}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateConnectionTimeout(I)V
 
     goto :goto_0
@@ -291,7 +263,6 @@
     :cond_4
     if-eq v0, v4, :cond_5
 
-    .line 1445
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,7 +281,6 @@
 
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1447
     :cond_5
     invoke-virtual {p0, v1}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateConnectionTimeout(I)V
 
@@ -319,7 +289,6 @@
     :cond_6
     if-eq v0, v2, :cond_7
 
-    .line 1451
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,7 +310,6 @@
     :cond_7
     const/4 v0, 0x4
 
-    .line 1453
     invoke-virtual {p0, v0}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateConnectionTimeout(I)V
 
     goto :goto_0
@@ -349,13 +317,11 @@
     :cond_8
     const/4 v0, 0x3
 
-    .line 1456
     invoke-virtual {p0, v0}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateConnectionTimeout(I)V
 
     :goto_0
     return-void
 
-    .line 1422
     :cond_9
     :goto_1
     invoke-virtual {p0, v2}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateConnectionTimeout(I)V
@@ -366,7 +332,6 @@
 .method public final connectionTimedOut()V
     .locals 8
 
-    .line 1492
     iget v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionTimeoutReason:I
 
     const-string v1, "MediaRouterService"
@@ -400,7 +365,6 @@
 
     goto :goto_0
 
-    .line 1514
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -410,7 +374,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1515
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
@@ -431,12 +394,10 @@
 
     move-result-object v0
 
-    .line 1514
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1508
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -446,7 +407,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1510
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
@@ -467,12 +427,10 @@
 
     move-result-object v0
 
-    .line 1508
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1504
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -494,7 +452,6 @@
 
     goto :goto_0
 
-    .line 1500
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -517,10 +474,8 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 1519
     iput v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionTimeoutReason:I
 
-    .line 1521
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->unselectSelectedRoute()V
 
     return-void
@@ -529,7 +484,6 @@
     :goto_1
     const-string p0, "Handled connection timeout for no reason."
 
-    .line 1494
     invoke-static {v1, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -538,7 +492,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 4
 
-    .line 1241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -555,7 +508,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -570,7 +522,6 @@
 
     move-result-object v0
 
-    .line 1244
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -591,7 +542,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1245
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -612,7 +562,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1246
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -633,7 +582,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1247
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -654,7 +602,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1248
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -675,7 +622,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1249
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -690,7 +636,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1250
     iget-wide v2, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionTimeoutStartTime:J
 
     invoke-static {v2, v3}, Landroid/util/TimeUtils;->formatUptime(J)Ljava/lang/String;
@@ -709,15 +654,12 @@
 
     move-result-object v1
 
-    .line 1249
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1252
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mWatcher:Lcom/android/server/media/RemoteDisplayProviderWatcher;
 
     invoke-virtual {v1, p1, p2}, Lcom/android/server/media/RemoteDisplayProviderWatcher;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 1254
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -731,7 +673,6 @@
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 1257
     iget-object v2, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -746,7 +687,6 @@
 
     goto :goto_1
 
-    .line 1260
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -771,7 +711,6 @@
 .method public final findProviderRecord(Lcom/android/server/media/RemoteDisplayProviderProxy;)I
     .locals 3
 
-    .line 1599
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -783,7 +722,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 1601
     iget-object v2, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -792,7 +730,6 @@
 
     check-cast v2, Lcom/android/server/media/MediaRouterService$UserHandler$ProviderRecord;
 
-    .line 1602
     invoke-virtual {v2}, Lcom/android/server/media/MediaRouterService$UserHandler$ProviderRecord;->getProvider()Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     move-result-object v2
@@ -815,7 +752,6 @@
 .method public final findRouteRecord(Ljava/lang/String;)Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
     .locals 3
 
-    .line 1610
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -827,7 +763,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 1612
     iget-object v2, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -858,7 +793,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1190
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x14
@@ -869,7 +803,6 @@
 
     goto :goto_0
 
-    .line 1228
     :pswitch_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -879,19 +812,16 @@
 
     goto :goto_0
 
-    .line 1224
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->connectionTimedOut()V
 
     goto :goto_0
 
-    .line 1220
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateClientState()V
 
     goto :goto_0
 
-    .line 1216
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -903,7 +833,6 @@
 
     goto :goto_0
 
-    .line 1212
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -915,7 +844,6 @@
 
     goto :goto_0
 
-    .line 1208
     :pswitch_5
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -925,7 +853,6 @@
 
     goto :goto_0
 
-    .line 1204
     :pswitch_6
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -935,25 +862,21 @@
 
     goto :goto_0
 
-    .line 1200
     :pswitch_7
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateDiscoveryRequest()V
 
     goto :goto_0
 
-    .line 1196
     :pswitch_8
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->stop()V
 
     goto :goto_0
 
-    .line 1192
     :pswitch_9
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->start()V
 
     goto :goto_0
 
-    .line 1233
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -988,7 +911,6 @@
 .method public final notifyGroupRouteSelected(Ljava/lang/String;)V
     .locals 7
 
-    .line 1570
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mService:Lcom/android/server/media/MediaRouterService;
 
@@ -1000,7 +922,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1571
     :try_start_1
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mUserRecord:Lcom/android/server/media/MediaRouterService$UserRecord;
 
@@ -1016,24 +937,20 @@
 
     if-nez p1, :cond_0
 
-    .line 1573
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1594
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     return-void
 
-    .line 1575
     :cond_0
     :try_start_2
     iget-object v1, p1, Lcom/android/server/media/MediaRouterService$ClientGroup;->mSelectedRouteId:Ljava/lang/String;
 
-    .line 1576
     iget-object v2, p1, Lcom/android/server/media/MediaRouterService$ClientGroup;->mClientRecords:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -1047,7 +964,6 @@
     :goto_0
     if-ge v4, v2, :cond_2
 
-    .line 1578
     iget-object v5, p1, Lcom/android/server/media/MediaRouterService$ClientGroup;->mClientRecords:Ljava/util/List;
 
     invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1056,7 +972,6 @@
 
     check-cast v5, Lcom/android/server/media/MediaRouterService$ClientRecord;
 
-    .line 1579
     iget-object v6, v5, Lcom/android/server/media/MediaRouterService$ClientRecord;->mSelectedRouteId:Ljava/lang/String;
 
     invoke-static {v1, v6}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -1065,7 +980,6 @@
 
     if-nez v6, :cond_1
 
-    .line 1580
     iget-object v6, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
     iget-object v5, v5, Lcom/android/server/media/MediaRouterService$ClientRecord;->mClient:Landroid/media/IMediaRouterClient;
@@ -1077,13 +991,11 @@
 
     goto :goto_0
 
-    .line 1583
     :cond_2
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1585
     :try_start_3
     iget-object p1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
@@ -1096,7 +1008,6 @@
     :goto_1
     if-ge v3, p1, :cond_3
 
-    .line 1588
     :try_start_4
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
@@ -1119,7 +1030,6 @@
 
     const-string v2, "Failed to call onSelectedRouteChanged. Client probably died."
 
-    .line 1590
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -1129,7 +1039,6 @@
 
     goto :goto_1
 
-    .line 1594
     :cond_3
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
@@ -1140,7 +1049,6 @@
     :catchall_0
     move-exception p1
 
-    .line 1583
     :try_start_6
     monitor-exit v0
     :try_end_6
@@ -1154,19 +1062,16 @@
     :catchall_1
     move-exception p1
 
-    .line 1594
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1595
     throw p1
 .end method
 
 .method public onDisplayStateChanged(Lcom/android/server/media/RemoteDisplayProviderProxy;Landroid/media/RemoteDisplayState;)V
     .locals 0
 
-    .line 1392
     invoke-virtual {p0, p1, p2}, Lcom/android/server/media/MediaRouterService$UserHandler;->updateProvider(Lcom/android/server/media/RemoteDisplayProviderProxy;Landroid/media/RemoteDisplayState;)V
 
     return-void
@@ -1175,14 +1080,12 @@
 .method public removeProvider(Lcom/android/server/media/RemoteDisplayProviderProxy;)V
     .locals 2
 
-    .line 1377
     invoke-virtual {p0, p1}, Lcom/android/server/media/MediaRouterService$UserHandler;->findProviderRecord(Lcom/android/server/media/RemoteDisplayProviderProxy;)I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 1379
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1193,21 +1096,16 @@
 
     const/4 v1, 0x0
 
-    .line 1380
     invoke-virtual {v0, v1}, Lcom/android/server/media/MediaRouterService$UserHandler$ProviderRecord;->updateDescriptor(Landroid/media/RemoteDisplayState;)Z
 
-    .line 1381
     invoke-virtual {p1, v1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->setCallback(Lcom/android/server/media/RemoteDisplayProviderProxy$Callback;)V
 
     const/4 v0, 0x0
 
-    .line 1382
     invoke-virtual {p1, v0}, Lcom/android/server/media/RemoteDisplayProviderProxy;->setDiscoveryMode(I)V
 
-    .line 1384
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->checkSelectedRouteState()V
 
-    .line 1385
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->scheduleUpdateClientState()V
 
     :cond_0
@@ -1217,12 +1115,10 @@
 .method public final requestSetVolume(Ljava/lang/String;I)V
     .locals 1
 
-    .line 1349
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     if-eqz v0, :cond_0
 
-    .line 1350
     invoke-virtual {v0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getUniqueId()Ljava/lang/String;
 
     move-result-object v0
@@ -1233,7 +1129,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1351
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getProvider()Lcom/android/server/media/RemoteDisplayProviderProxy;
@@ -1249,12 +1144,10 @@
 .method public final requestUpdateVolume(Ljava/lang/String;I)V
     .locals 1
 
-    .line 1356
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     if-eqz v0, :cond_0
 
-    .line 1357
     invoke-virtual {v0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getUniqueId()Ljava/lang/String;
 
     move-result-object v0
@@ -1265,7 +1158,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1358
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getProvider()Lcom/android/server/media/RemoteDisplayProviderProxy;
@@ -1281,19 +1173,16 @@
 .method public final scheduleUpdateClientState()V
     .locals 1
 
-    .line 1525
     iget-boolean v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mClientStateUpdateScheduled:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 1526
     iput-boolean v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mClientStateUpdateScheduled:Z
 
     const/16 v0, 0x8
 
-    .line 1527
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_0
@@ -1305,12 +1194,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 1312
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     if-eqz v0, :cond_0
 
-    .line 1314
     invoke-virtual {v0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getUniqueId()Ljava/lang/String;
 
     move-result-object v0
@@ -1321,7 +1208,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1315
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/media/MediaRouterService$UserHandler;->findRouteRecord(Ljava/lang/String;)Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
@@ -1329,10 +1215,8 @@
 
     if-eqz p1, :cond_1
 
-    .line 1317
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->unselectSelectedRoute()V
 
-    .line 1319
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1351,13 +1235,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1320
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
-    .line 1321
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->checkSelectedRouteState()V
 
-    .line 1322
     invoke-virtual {p1}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getProvider()Lcom/android/server/media/RemoteDisplayProviderProxy;
 
     move-result-object v0
@@ -1368,7 +1249,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->setSelectedDisplay(Ljava/lang/String;)V
 
-    .line 1324
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->scheduleUpdateClientState()V
 
     :cond_1
@@ -1378,17 +1258,14 @@
 .method public final start()V
     .locals 1
 
-    .line 1265
     iget-boolean v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mRunning:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 1266
     iput-boolean v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mRunning:Z
 
-    .line 1267
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mWatcher:Lcom/android/server/media/RemoteDisplayProviderWatcher;
 
     invoke-virtual {p0}, Lcom/android/server/media/RemoteDisplayProviderWatcher;->start()V
@@ -1400,20 +1277,16 @@
 .method public final stop()V
     .locals 1
 
-    .line 1272
     iget-boolean v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mRunning:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 1273
     iput-boolean v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mRunning:Z
 
-    .line 1274
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->unselectSelectedRoute()V
 
-    .line 1275
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mWatcher:Lcom/android/server/media/RemoteDisplayProviderWatcher;
 
     invoke-virtual {p0}, Lcom/android/server/media/RemoteDisplayProviderWatcher;->stop()V
@@ -1427,12 +1300,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1330
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     if-eqz v0, :cond_0
 
-    .line 1332
     invoke-virtual {v0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getUniqueId()Ljava/lang/String;
 
     move-result-object v0
@@ -1443,7 +1314,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1333
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->unselectSelectedRoute()V
 
     :cond_0
@@ -1453,12 +1323,10 @@
 .method public final unselectSelectedRoute()V
     .locals 2
 
-    .line 1338
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     if-eqz v0, :cond_0
 
-    .line 1339
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1479,7 +1347,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1340
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
     invoke-virtual {v0}, Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;->getProvider()Lcom/android/server/media/RemoteDisplayProviderProxy;
@@ -1490,13 +1357,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/media/RemoteDisplayProviderProxy;->setSelectedDisplay(Ljava/lang/String;)V
 
-    .line 1341
     iput-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mSelectedRouteRecord:Lcom/android/server/media/MediaRouterService$UserHandler$RouteRecord;
 
-    .line 1342
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->checkSelectedRouteState()V
 
-    .line 1344
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->scheduleUpdateClientState()V
 
     :cond_0
@@ -1508,15 +1372,12 @@
 
     const/4 v0, 0x0
 
-    .line 1532
     iput-boolean v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mClientStateUpdateScheduled:Z
 
-    .line 1535
     new-instance v1, Landroid/media/MediaRouterClientState;
 
     invoke-direct {v1}, Landroid/media/MediaRouterClientState;-><init>()V
 
-    .line 1536
     iget-object v2, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -1528,7 +1389,6 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 1538
     iget-object v4, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1543,7 +1403,6 @@
 
     goto :goto_0
 
-    .line 1541
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mService:Lcom/android/server/media/MediaRouterService;
@@ -1556,13 +1415,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1543
     :try_start_1
     iget-object v3, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mUserRecord:Lcom/android/server/media/MediaRouterService$UserRecord;
 
     iput-object v1, v3, Lcom/android/server/media/MediaRouterService$UserRecord;->mRouterState:Landroid/media/MediaRouterClientState;
 
-    .line 1546
     iget-object v1, v3, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1574,7 +1431,6 @@
     :goto_1
     if-ge v3, v1, :cond_1
 
-    .line 1548
     iget-object v4, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
     iget-object v5, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mUserRecord:Lcom/android/server/media/MediaRouterService$UserRecord;
@@ -1595,13 +1451,11 @@
 
     goto :goto_1
 
-    .line 1550
     :cond_1
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1553
     :try_start_2
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
@@ -1614,7 +1468,6 @@
     :goto_2
     if-ge v0, v1, :cond_2
 
-    .line 1556
     :try_start_3
     iget-object v2, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
@@ -1637,7 +1490,6 @@
 
     const-string v3, "Failed to call onStateChanged. Client probably died."
 
-    .line 1558
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -1647,7 +1499,6 @@
 
     goto :goto_2
 
-    .line 1563
     :cond_2
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
@@ -1658,7 +1509,6 @@
     :catchall_0
     move-exception v0
 
-    .line 1550
     :try_start_5
     monitor-exit v2
     :try_end_5
@@ -1672,19 +1522,16 @@
     :catchall_1
     move-exception v0
 
-    .line 1563
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mTempClients:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1564
     throw v0
 .end method
 
 .method public final updateConnectionTimeout(I)V
     .locals 4
 
-    .line 1466
     iget v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionTimeoutReason:I
 
     if-eq p1, v0, :cond_4
@@ -1693,14 +1540,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 1468
     invoke-virtual {p0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1470
     :cond_0
     iput p1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mConnectionTimeoutReason:I
 
-    .line 1471
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -1728,7 +1572,6 @@
     :cond_1
     const-wide/32 v2, 0xea60
 
-    .line 1485
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
@@ -1736,12 +1579,10 @@
     :cond_2
     const-wide/16 v2, 0x1388
 
-    .line 1481
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 
-    .line 1477
     :cond_3
     invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
@@ -1753,7 +1594,6 @@
 .method public final updateDiscoveryRequest()V
     .locals 8
 
-    .line 1282
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mService:Lcom/android/server/media/MediaRouterService;
 
     invoke-static {v0}, Lcom/android/server/media/MediaRouterService;->-$$Nest$fgetmLock(Lcom/android/server/media/MediaRouterService;)Ljava/lang/Object;
@@ -1762,7 +1602,6 @@
 
     monitor-enter v0
 
-    .line 1283
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mUserRecord:Lcom/android/server/media/MediaRouterService$UserRecord;
 
@@ -1783,7 +1622,6 @@
     :goto_0
     if-ge v3, v1, :cond_0
 
-    .line 1285
     iget-object v6, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mUserRecord:Lcom/android/server/media/MediaRouterService$UserRecord;
 
     iget-object v6, v6, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientRecords:Ljava/util/ArrayList;
@@ -1794,12 +1632,10 @@
 
     check-cast v6, Lcom/android/server/media/MediaRouterService$ClientRecord;
 
-    .line 1286
     iget v7, v6, Lcom/android/server/media/MediaRouterService$ClientRecord;->mRouteTypes:I
 
     or-int/2addr v4, v7
 
-    .line 1287
     iget-boolean v6, v6, Lcom/android/server/media/MediaRouterService$ClientRecord;->mActiveScan:Z
 
     or-int/2addr v5, v6
@@ -1808,7 +1644,6 @@
 
     goto :goto_0
 
-    .line 1289
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -1832,16 +1667,13 @@
     :cond_2
     move v0, v2
 
-    .line 1302
     :goto_1
     iget v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mDiscoveryMode:I
 
     if-eq v1, v0, :cond_3
 
-    .line 1303
     iput v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mDiscoveryMode:I
 
-    .line 1304
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1851,7 +1683,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 1306
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1878,7 +1709,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1289
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1890,14 +1720,12 @@
 .method public final updateProvider(Lcom/android/server/media/RemoteDisplayProviderProxy;Landroid/media/RemoteDisplayState;)V
     .locals 1
 
-    .line 1397
     invoke-virtual {p0, p1}, Lcom/android/server/media/MediaRouterService$UserHandler;->findProviderRecord(Lcom/android/server/media/RemoteDisplayProviderProxy;)I
 
     move-result p1
 
     if-ltz p1, :cond_0
 
-    .line 1399
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserHandler;->mProviderRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1906,17 +1734,14 @@
 
     check-cast p1, Lcom/android/server/media/MediaRouterService$UserHandler$ProviderRecord;
 
-    .line 1400
     invoke-virtual {p1, p2}, Lcom/android/server/media/MediaRouterService$UserHandler$ProviderRecord;->updateDescriptor(Landroid/media/RemoteDisplayState;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 1401
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->checkSelectedRouteState()V
 
-    .line 1402
     invoke-virtual {p0}, Lcom/android/server/media/MediaRouterService$UserHandler;->scheduleUpdateClientState()V
 
     :cond_0

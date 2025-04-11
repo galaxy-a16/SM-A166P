@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;)V
     .locals 0
 
-    .line 74
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 77
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -41,7 +39,6 @@
 
     const/4 v0, -0x1
 
-    .line 78
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -52,7 +49,6 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 79
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;
 
     invoke-static {p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;->-$$Nest$fgetmIsTspBlocked(Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;)Z
@@ -61,14 +57,12 @@
 
     if-nez p2, :cond_0
 
-    .line 80
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;->-$$Nest$fputmIsTspBlocked(Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;Z)V
 
-    .line 81
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;->handleTspBlockAction(I)V
@@ -80,7 +74,6 @@
 
     if-ne p1, p2, :cond_1
 
-    .line 82
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;->-$$Nest$fgetmIsTspBlocked(Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;)Z
@@ -89,14 +82,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 83
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;->-$$Nest$fputmIsTspBlocked(Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;Z)V
 
-    .line 84
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;->handleTspBlockAction(I)V

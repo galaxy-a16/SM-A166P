@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/AnimationThread;->$r8$lambda$aBvmCmZNSjM-oaRArFNC1yN46u8()V
 
     return-void

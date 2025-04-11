@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 41
     invoke-direct {p0, p1}, Lcom/android/server/firewall/FilterFactory;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public newFilter(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/firewall/Filter;
     .locals 3
 
-    .line 46
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result p0
@@ -27,7 +25,6 @@
 
     move-object v1, v0
 
-    .line 47
     :goto_0
     invoke-static {p1, p0}, Lcom/android/internal/util/XmlUtils;->nextElementWithin(Lorg/xmlpull/v1/XmlPullParser;I)Z
 
@@ -35,7 +32,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 48
     invoke-static {p1}, Lcom/android/server/firewall/IntentFirewall;->parseFilter(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/firewall/Filter;
 
     move-result-object v2
@@ -46,7 +42,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_0
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -56,7 +51,6 @@
 
     throw p0
 
-    .line 56
     :cond_1
     new-instance p0, Lcom/android/server/firewall/NotFilter;
 

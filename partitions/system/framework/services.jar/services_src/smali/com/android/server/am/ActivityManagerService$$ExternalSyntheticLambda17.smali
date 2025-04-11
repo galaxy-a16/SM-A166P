@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Ljava/lang/StringBuilder;Landroid/content/pm/IPackageManager;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$$ExternalSyntheticLambda17;->f$0:Ljava/lang/StringBuilder;
@@ -35,7 +34,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 2
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$$ExternalSyntheticLambda17;->f$0:Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$$ExternalSyntheticLambda17;->f$1:Landroid/content/pm/IPackageManager;

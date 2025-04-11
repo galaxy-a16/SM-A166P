@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
@@ -31,7 +29,6 @@
 .method public contains(Landroid/view/DisplayAddress;)Z
     .locals 4
 
-    .line 171
     iget-object v0, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -45,7 +42,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 180
     iget-object v3, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -102,7 +98,6 @@
 
     move-object v5, p2
 
-    .line 87
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/display/layout/Layout;->createDisplayLocked(Landroid/view/DisplayAddress;ZZLjava/lang/String;Lcom/android/server/display/layout/DisplayIdProducer;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -117,7 +112,6 @@
 
     move v1, p2
 
-    .line 116
     invoke-virtual {p0, p1}, Lcom/android/server/display/layout/Layout;->contains(Landroid/view/DisplayAddress;)Z
 
     move-result v3
@@ -126,7 +120,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,14 +143,12 @@
 
     const/4 v3, 0x0
 
-    .line 122
     invoke-virtual {p0, v3}, Lcom/android/server/display/layout/Layout;->getById(I)Lcom/android/server/display/layout/Layout$Display;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 123
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,7 +182,6 @@
     :goto_0
     if-eqz v1, :cond_4
 
-    .line 134
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -200,7 +190,6 @@
 
     goto :goto_1
 
-    .line 135
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -227,7 +216,6 @@
     :cond_5
     move-object/from16 v4, p5
 
-    .line 144
     invoke-interface {v4, p2}, Lcom/android/server/display/layout/DisplayIdProducer;->getId(Z)I
 
     move-result v4
@@ -244,7 +232,6 @@
 
     move v3, v4
 
-    .line 148
     :goto_3
     new-instance v12, Lcom/android/server/display/layout/Layout$Display;
 
@@ -266,7 +253,6 @@
 
     invoke-direct/range {v1 .. v11}, Lcom/android/server/display/layout/Layout$Display;-><init>(Landroid/view/DisplayAddress;IZLjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Lcom/android/server/display/layout/Layout$Display-IA;)V
 
-    .line 152
     iget-object v0, v0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {v0, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -277,7 +263,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 66
     instance-of v0, p1, Lcom/android/server/display/layout/Layout;
 
     if-nez v0, :cond_0
@@ -286,11 +271,9 @@
 
     return p0
 
-    .line 70
     :cond_0
     check-cast p1, Lcom/android/server/display/layout/Layout;
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     iget-object p1, p1, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
@@ -305,7 +288,6 @@
 .method public getAt(I)Lcom/android/server/display/layout/Layout$Display;
     .locals 0
 
-    .line 232
     iget-object p0, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -322,7 +304,6 @@
 
     const/4 v0, 0x0
 
-    .line 210
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
@@ -332,7 +313,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 211
     iget-object v1, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -341,7 +321,6 @@
 
     check-cast v1, Lcom/android/server/display/layout/Layout$Display;
 
-    .line 219
     invoke-virtual {v1}, Lcom/android/server/display/layout/Layout$Display;->getAddress()Landroid/view/DisplayAddress;
 
     move-result-object v2
@@ -370,7 +349,6 @@
 
     const/4 v0, 0x0
 
-    .line 194
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
@@ -380,7 +358,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 195
     iget-object v1, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -389,7 +366,6 @@
 
     check-cast v1, Lcom/android/server/display/layout/Layout$Display;
 
-    .line 196
     invoke-virtual {v1}, Lcom/android/server/display/layout/Layout$Display;->getLogicalDisplayId()I
 
     move-result v2
@@ -412,7 +388,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 76
     iget-object p0, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->hashCode()I
@@ -425,14 +400,12 @@
 .method public removeDisplayLocked(I)V
     .locals 0
 
-    .line 159
     invoke-virtual {p0, p1}, Lcom/android/server/display/layout/Layout;->getById(I)Lcom/android/server/display/layout/Layout$Display;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -444,7 +417,6 @@
 .method public size()I
     .locals 0
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -457,7 +429,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/display/layout/Layout;->mDisplays:Ljava/util/List;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

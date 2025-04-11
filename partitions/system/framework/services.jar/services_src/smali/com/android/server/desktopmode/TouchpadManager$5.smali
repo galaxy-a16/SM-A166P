@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/TouchpadManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 104
     iput-object p1, p0, Lcom/android/server/desktopmode/TouchpadManager$5;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 107
     iget-object p1, p0, Lcom/android/server/desktopmode/TouchpadManager$5;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/TouchpadManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/TouchpadManager;)Lcom/android/server/desktopmode/IStateManager;

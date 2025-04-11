@@ -21,19 +21,16 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "content://com.samsung.android.scpm.policy/"
 
-    .line 36
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -42,10 +39,8 @@
 
     const/4 v0, 0x3
 
-    .line 37
     iput v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPolicyControlSwitch:I
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
     return-void
@@ -58,20 +53,17 @@
 
     monitor-enter v0
 
-    .line 45
     :try_start_0
     sget-object v1, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->sInstance:Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;
 
     if-nez v1, :cond_0
 
-    .line 46
     new-instance v1, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;
 
     invoke-direct {v1, p0}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->sInstance:Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;
 
-    .line 48
     :cond_0
     sget-object p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->sInstance:Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;
     :try_end_0
@@ -96,15 +88,12 @@
 
     const-string p2, ""
 
-    .line 248
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p2, "IntelligentBatterySaverScpmManager adapt to scpm v2 "
 
-    .line 249
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 250
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -133,7 +122,6 @@
 .method public final getCachedToken()Ljava/lang/String;
     .locals 4
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
     const-string v1, "ibs_prefs"
@@ -146,7 +134,6 @@
 
     iput-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPref:Landroid/content/SharedPreferences;
 
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,7 +162,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPref:Landroid/content/SharedPreferences;
 
     invoke-interface {p0, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -192,17 +178,14 @@
 
     const-string v1, "IntelligentBatterySaverScpmManager"
 
-    .line 115
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     invoke-virtual {p0}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->isAvailable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 120
     invoke-virtual {p0}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->getCachedToken()Ljava/lang/String;
 
     move-result-object v0
@@ -211,7 +194,6 @@
 
     const/4 v3, 0x0
 
-    .line 124
     :try_start_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -240,7 +222,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 125
     :try_start_1
     iget-object v4, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
@@ -254,7 +235,6 @@
 
     move-result-object v3
 
-    .line 126
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -294,10 +274,8 @@
     :goto_0
     const-string v5, "Open file fail!"
 
-    .line 131
     invoke-static {v1, v5, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 132
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
@@ -310,13 +288,10 @@
     :goto_1
     const-string v5, "File not found!"
 
-    .line 128
     invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     invoke-virtual {v4}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
-    .line 135
     :goto_2
     new-instance v4, Landroid/os/Bundle;
 
@@ -324,14 +299,12 @@
 
     const-string/jumbo v5, "token"
 
-    .line 136
     invoke-virtual {v4, v5, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "android"
 
     if-nez v3, :cond_0
 
-    .line 141
     :try_start_2
     iget-object p0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
@@ -347,19 +320,16 @@
 
     const-string/jumbo v0, "rcode"
 
-    .line 142
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
     const-string/jumbo v2, "rmsg"
 
-    .line 143
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 144
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -384,7 +354,6 @@
 
     goto :goto_3
 
-    .line 146
     :cond_0
     iget-object v5, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
@@ -400,12 +369,10 @@
 
     const-string v2, "filterId"
 
-    .line 147
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 148
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -422,7 +389,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     invoke-virtual {p0, v3}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->parseData(Landroid/os/ParcelFileDescriptor;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
@@ -431,7 +397,6 @@
     :goto_3
     if-eqz v3, :cond_2
 
-    .line 158
     :try_start_3
     invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_3
@@ -450,17 +415,14 @@
     :try_start_4
     const-string v0, "getData fail because of exception!"
 
-    .line 153
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 154
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     if-eqz v3, :cond_2
 
-    .line 158
     :try_start_5
     invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_5
@@ -471,7 +433,6 @@
     :catch_5
     move-exception p0
 
-    .line 161
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_6
@@ -479,7 +440,6 @@
     :goto_4
     if-eqz v3, :cond_1
 
-    .line 158
     :try_start_6
     invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_6
@@ -490,10 +450,8 @@
     :catch_6
     move-exception v0
 
-    .line 161
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 163
     :cond_1
     :goto_5
     throw p0
@@ -506,7 +464,6 @@
 .method public final getScpmFeatures(Ljava/lang/String;)I
     .locals 3
 
-    .line 59
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
     const-string v1, "ibs_prefs"
@@ -521,7 +478,6 @@
 
     const/4 p0, 0x1
 
-    .line 61
     invoke-interface {v0, p1, p0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -532,7 +488,6 @@
 .method public final isAvailable()Z
     .locals 2
 
-    .line 110
     iget-object p0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -543,7 +498,6 @@
 
     const/4 v1, 0x0
 
-    .line 111
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
 
     move-result-object p0
@@ -559,7 +513,6 @@
 .method public isGoogleAppPolicyDisabled()Z
     .locals 0
 
-    .line 244
     iget p0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPolicyControlSwitch:I
 
     and-int/lit8 p0, p0, 0x2
@@ -588,12 +541,10 @@
 
     const-string v3, "IntelligentBatterySaverScpmManager"
 
-    .line 168
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v2, 0x0
 
-    .line 172
     :try_start_0
     new-instance v4, Ljava/io/FileReader;
 
@@ -606,7 +557,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 173
     :try_start_1
     new-instance p1, Ljava/io/BufferedReader;
 
@@ -615,13 +565,11 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 174
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 176
     :goto_0
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -629,12 +577,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 177
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 180
     :cond_0
     new-instance v5, Lorg/json/JSONTokener;
 
@@ -644,22 +590,18 @@
 
     invoke-direct {v5, v2}, Lorg/json/JSONTokener;-><init>(Ljava/lang/String;)V
 
-    .line 181
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2, v5}, Lorg/json/JSONObject;-><init>(Lorg/json/JSONTokener;)V
 
-    .line 182
     invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 183
     invoke-virtual {v2, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 184
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -688,31 +630,26 @@
 
     if-eqz v5, :cond_1
 
-    .line 187
     invoke-virtual {p0, v1, v6}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->saveScpmFeatures(Ljava/lang/String;I)V
 
     goto :goto_1
 
-    .line 189
     :cond_1
     invoke-virtual {p0, v1, v7}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->saveScpmFeatures(Ljava/lang/String;I)V
 
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 193
     invoke-virtual {p0, v0, v6}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->saveScpmFeatures(Ljava/lang/String;I)V
 
     goto :goto_2
 
-    .line 195
     :cond_2
     invoke-virtual {p0, v0, v7}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->saveScpmFeatures(Ljava/lang/String;I)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 203
     :goto_2
     :try_start_3
     invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
@@ -724,10 +661,8 @@
     :catch_0
     move-exception p0
 
-    .line 206
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 211
     :goto_3
     :try_start_4
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
@@ -767,7 +702,6 @@
 
     move-object v4, v2
 
-    .line 199
     :goto_4
     :try_start_5
     new-instance p1, Ljava/lang/StringBuilder;
@@ -794,7 +728,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 203
     :try_start_6
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_6
@@ -805,14 +738,12 @@
     :catch_4
     move-exception p0
 
-    .line 206
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_3
     :goto_5
     if-eqz v4, :cond_4
 
-    .line 211
     :try_start_7
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
     :try_end_7
@@ -823,7 +754,6 @@
     :catch_5
     move-exception p0
 
-    .line 214
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_4
@@ -836,7 +766,6 @@
     :goto_7
     if-eqz v2, :cond_5
 
-    .line 203
     :try_start_8
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_8
@@ -847,14 +776,12 @@
     :catch_6
     move-exception p1
 
-    .line 206
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_5
     :goto_8
     if-eqz v4, :cond_6
 
-    .line 211
     :try_start_9
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
     :try_end_9
@@ -865,10 +792,8 @@
     :catch_7
     move-exception p1
 
-    .line 214
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 216
     :cond_6
     :goto_9
     throw p0
@@ -883,17 +808,14 @@
 
     const-string v2, "IntelligentBatterySaverScpmManager"
 
-    .line 79
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->isAvailable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 82
     :try_start_0
     new-instance v1, Landroid/os/Bundle;
 
@@ -901,29 +823,24 @@
 
     const-string/jumbo v3, "packageName"
 
-    .line 83
     invoke-virtual {v1, v3, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "appId"
 
     const-string/jumbo v4, "r8namobmbc"
 
-    .line 84
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v3, "version"
 
     const-string v4, "1.0.0"
 
-    .line 85
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v3, "receiverPackageName"
 
-    .line 86
     invoke-virtual {v1, v3, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 88
     iget-object v3, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -944,7 +861,6 @@
 
     const/4 v3, 0x1
 
-    .line 91
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v1
@@ -953,7 +869,6 @@
 
     const/4 v5, 0x0
 
-    .line 92
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -962,7 +877,6 @@
 
     const/4 v6, -0x1
 
-    .line 93
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v5
@@ -971,19 +885,16 @@
 
     const-string v7, ""
 
-    .line 94
     invoke-virtual {v0, v6, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-ne v1, v3, :cond_0
 
-    .line 97
     invoke-virtual {p0, v4}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->saveCachedToken(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 99
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1014,7 +925,6 @@
     :catch_0
     move-exception p0
 
-    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1043,7 +953,6 @@
 .method public final saveCachedToken(Ljava/lang/String;)V
     .locals 3
 
-    .line 65
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
     const-string v1, "ibs_prefs"
@@ -1056,17 +965,14 @@
 
     iput-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPref:Landroid/content/SharedPreferences;
 
-    .line 66
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     const-string v0, "SCPMToken"
 
-    .line 67
     invoke-interface {p0, v0, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 68
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
@@ -1075,7 +981,6 @@
 .method public final saveScpmFeatures(Ljava/lang/String;I)V
     .locals 3
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mContext:Landroid/content/Context;
 
     const-string v1, "ibs_prefs"
@@ -1088,15 +993,12 @@
 
     iput-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPref:Landroid/content/SharedPreferences;
 
-    .line 53
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 54
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 55
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
@@ -1109,15 +1011,12 @@
 
     const-string v1, "IntelligentBatterySaverScpmManager"
 
-    .line 220
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     invoke-virtual {p0}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->getData()V
 
     const-string v0, "fast_drain_policy"
 
-    .line 223
     invoke-virtual {p0, v0}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->getScpmFeatures(Ljava/lang/String;)I
 
     move-result v0
@@ -1128,17 +1027,14 @@
 
     const-string v0, "Enable fast drain policy!"
 
-    .line 224
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     iget v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPolicyControlSwitch:I
 
     or-int/2addr v0, v2
 
     iput v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPolicyControlSwitch:I
 
-    .line 226
     invoke-virtual {p1, v2}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;->setIBSFastDrainPolicyEnable(Z)V
 
     goto :goto_0
@@ -1146,10 +1042,8 @@
     :cond_0
     const-string v0, "Disable fast drain policy!"
 
-    .line 228
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     iget v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPolicyControlSwitch:I
 
     and-int/lit8 v0, v0, -0x2
@@ -1158,13 +1052,11 @@
 
     const/4 v0, 0x0
 
-    .line 230
     invoke-virtual {p1, v0}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;->setIBSFastDrainPolicyEnable(Z)V
 
     :goto_0
     const-string p1, "google_app_policy"
 
-    .line 233
     invoke-virtual {p0, p1}, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->getScpmFeatures(Ljava/lang/String;)I
 
     move-result p1
@@ -1173,10 +1065,8 @@
 
     const-string p1, "Enable google app policy!"
 
-    .line 234
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     iget p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPolicyControlSwitch:I
 
     or-int/lit8 p1, p1, 0x2
@@ -1188,10 +1078,8 @@
     :cond_1
     const-string p1, "Disable google app policy!"
 
-    .line 237
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     iget p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverScpmManager;->mPolicyControlSwitch:I
 
     and-int/lit8 p1, p1, -0x3

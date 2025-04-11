@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -40,7 +39,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 11
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -53,7 +51,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 17
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -62,13 +59,11 @@
 
     goto :goto_0
 
-    .line 22
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 23
     sget-object v0, Lcom/samsung/android/knoxguard/service/receiver/IntentRelayReceiver;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -87,7 +82,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     sget-object v0, Lcom/samsung/android/knoxguard/service/KnoxGuardSeService;->mActionList:Ljava/util/List;
 
     if-eqz v0, :cond_1
@@ -98,7 +92,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,7 +119,6 @@
     :cond_1
     return-void
 
-    .line 18
     :cond_2
     :goto_0
     sget-object p0, Lcom/samsung/android/knoxguard/service/receiver/IntentRelayReceiver;->TAG:Ljava/lang/String;

@@ -13,13 +13,10 @@
 .method public constructor <init>(IZ)V
     .locals 0
 
-    .line 1763
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiCecController$Dumpable;-><init>()V
 
-    .line 1764
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecController$HotplugHistoryRecord;->mPort:I
 
-    .line 1765
     iput-boolean p2, p0, Lcom/android/server/hdmi/HdmiCecController$HotplugHistoryRecord;->mConnected:Z
 
     return-void
@@ -32,15 +29,12 @@
 
     const-string v0, "[H]"
 
-    .line 1770
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, " time="
 
-    .line 1771
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1772
     new-instance v0, Ljava/util/Date;
 
     iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController$Dumpable;->mTime:J
@@ -55,20 +49,16 @@
 
     const-string p2, " hotplug port="
 
-    .line 1773
     invoke-virtual {p1, p2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1774
     iget p2, p0, Lcom/android/server/hdmi/HdmiCecController$HotplugHistoryRecord;->mPort:I
 
     invoke-virtual {p1, p2}, Lcom/android/internal/util/IndentingPrintWriter;->print(I)V
 
     const-string p2, " connected="
 
-    .line 1775
     invoke-virtual {p1, p2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1776
     iget-boolean p0, p0, Lcom/android/server/hdmi/HdmiCecController$HotplugHistoryRecord;->mConnected:Z
 
     invoke-virtual {p1, p0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Z)V

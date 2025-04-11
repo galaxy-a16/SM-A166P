@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usage/StorageStatsService;)V
     .locals 0
 
-    .line 154
     iput-object p1, p0, Lcom/android/server/usage/StorageStatsService$1;->this$0:Lcom/android/server/usage/StorageStatsService;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onVolumeStateChanged(Landroid/os/storage/VolumeInfo;II)V
     .locals 1
 
-    .line 157
     iget p1, p1, Landroid/os/storage/VolumeInfo;->type:I
 
     const/4 p2, 0x2
@@ -42,7 +40,6 @@
     :cond_0
     if-ne p3, p2, :cond_1
 
-    .line 162
     iget-object p0, p0, Lcom/android/server/usage/StorageStatsService$1;->this$0:Lcom/android/server/usage/StorageStatsService;
 
     invoke-static {p0}, Lcom/android/server/usage/StorageStatsService;->-$$Nest$minvalidateMounts(Lcom/android/server/usage/StorageStatsService;)V

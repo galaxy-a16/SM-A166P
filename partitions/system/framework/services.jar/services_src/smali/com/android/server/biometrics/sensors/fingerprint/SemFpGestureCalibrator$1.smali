@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;)V
     .locals 0
 
-    .line 99
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDismissed(I[B)V
     .locals 0
 
-    .line 114
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     invoke-static {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;->-$$Nest$mhandleOnDismissed(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;I)V
@@ -38,7 +36,6 @@
 .method public onError(II)V
     .locals 0
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;->-$$Nest$mhandleOnError(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;II)V
@@ -49,7 +46,6 @@
 .method public onEvent(II)V
     .locals 0
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;->-$$Nest$mhandleOnSysUiEvent(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;II)V

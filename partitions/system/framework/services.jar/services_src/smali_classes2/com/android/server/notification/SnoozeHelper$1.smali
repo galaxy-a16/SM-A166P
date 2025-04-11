@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/SnoozeHelper;)V
     .locals 0
 
-    .line 563
     iput-object p1, p0, Lcom/android/server/notification/SnoozeHelper$1;->this$0:Lcom/android/server/notification/SnoozeHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 566
     invoke-static {}, Lcom/android/server/notification/SnoozeHelper;->-$$Nest$sfgetDEBUG()Z
 
     move-result p1
@@ -35,10 +33,8 @@
 
     const-string v0, "Reposting notification"
 
-    .line 567
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 569
     :cond_0
     invoke-static {}, Lcom/android/server/notification/SnoozeHelper;->-$$Nest$sfgetREPOST_ACTION()Ljava/lang/String;
 
@@ -54,7 +50,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 570
     iget-object p0, p0, Lcom/android/server/notification/SnoozeHelper$1;->this$0:Lcom/android/server/notification/SnoozeHelper;
 
     const-string p1, "key"

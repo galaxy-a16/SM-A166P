@@ -25,45 +25,38 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mProcessHistory:Ljava/util/ArrayList;
 
-    .line 18
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mCocktailBarManagerCommandHistory:Ljava/util/ArrayList;
 
-    .line 20
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mSemCocktailProviderBrHistory:Ljava/util/ArrayList;
 
-    .line 22
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPanelUpdateHistory:Ljava/util/HashMap;
 
-    .line 24
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPowerWhitelistHistory:Ljava/util/HashMap;
 
-    .line 26
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -80,7 +73,6 @@
 
     monitor-enter v0
 
-    .line 31
     :try_start_0
     sget-object v1, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mInstance:Lcom/android/server/cocktailbar/utils/CocktailBarHistory;
 
@@ -115,12 +107,10 @@
 .method public recordCocktailBarManagerCommand(Ljava/lang/String;)V
     .locals 3
 
-    .line 54
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 56
     :try_start_0
     new-instance v1, Landroid/icu/text/SimpleDateFormat;
 
@@ -128,7 +118,6 @@
 
     invoke-direct {v1, v2}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 57
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
@@ -146,10 +135,8 @@
     :catch_0
     move-exception v1
 
-    .line 59
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 60
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -159,17 +146,14 @@
     :goto_0
     const-string v1, ": "
 
-    .line 62
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 64
     iget-object p1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 65
     :try_start_1
     iget-object v1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mCocktailBarManagerCommandHistory:Ljava/util/ArrayList;
 
@@ -179,7 +163,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 66
     :goto_1
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mCocktailBarManagerCommandHistory:Ljava/util/ArrayList;
 
@@ -191,7 +174,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 67
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mCocktailBarManagerCommandHistory:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -200,7 +182,6 @@
 
     goto :goto_1
 
-    .line 69
     :cond_0
     monitor-exit p1
 
@@ -219,12 +200,10 @@
 .method public recordPanelUpdateHistory(ILjava/lang/String;)V
     .locals 3
 
-    .line 92
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 94
     :try_start_0
     new-instance v1, Landroid/icu/text/SimpleDateFormat;
 
@@ -232,7 +211,6 @@
 
     invoke-direct {v1, v2}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 95
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
@@ -250,10 +228,8 @@
     :catch_0
     move-exception v1
 
-    .line 97
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 98
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -263,17 +239,14 @@
     :goto_0
     const-string v1, ": "
 
-    .line 100
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 102
     iget-object p2, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 103
     :try_start_1
     iget-object v1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPanelUpdateHistory:Ljava/util/HashMap;
 
@@ -287,7 +260,6 @@
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 104
     :cond_0
     :goto_1
     iget-object p1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPanelUpdateHistory:Ljava/util/HashMap;
@@ -300,7 +272,6 @@
 
     if-le p1, v0, :cond_1
 
-    .line 105
     iget-object p1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPanelUpdateHistory:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -311,22 +282,18 @@
 
     move-result-object p1
 
-    .line 106
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 107
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 108
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_1
 
-    .line 111
     :cond_1
     monitor-exit p2
 
@@ -345,12 +312,10 @@
 .method public recordPowerWhitelistHistory(ILjava/lang/String;)V
     .locals 3
 
-    .line 115
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 117
     :try_start_0
     new-instance v1, Landroid/icu/text/SimpleDateFormat;
 
@@ -358,7 +323,6 @@
 
     invoke-direct {v1, v2}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 118
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
@@ -376,10 +340,8 @@
     :catch_0
     move-exception v1
 
-    .line 120
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 121
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -389,17 +351,14 @@
     :goto_0
     const-string v1, ": "
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 125
     iget-object p2, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 126
     :try_start_1
     iget-object v1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPowerWhitelistHistory:Ljava/util/HashMap;
 
@@ -413,7 +372,6 @@
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
     :cond_0
     :goto_1
     iget-object p1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPowerWhitelistHistory:Ljava/util/HashMap;
@@ -426,7 +384,6 @@
 
     if-le p1, v0, :cond_1
 
-    .line 128
     iget-object p1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPowerWhitelistHistory:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -437,22 +394,18 @@
 
     move-result-object p1
 
-    .line 129
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 130
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 131
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_1
 
-    .line 134
     :cond_1
     monitor-exit p2
 
@@ -471,12 +424,10 @@
 .method public recordSemCocktailProviderBr(Ljava/lang/String;)V
     .locals 3
 
-    .line 73
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 75
     :try_start_0
     new-instance v1, Landroid/icu/text/SimpleDateFormat;
 
@@ -484,7 +435,6 @@
 
     invoke-direct {v1, v2}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 76
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
@@ -502,10 +452,8 @@
     :catch_0
     move-exception v1
 
-    .line 78
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 79
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -515,17 +463,14 @@
     :goto_0
     const-string v1, ": "
 
-    .line 81
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 83
     iget-object p1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 84
     :try_start_1
     iget-object v1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mSemCocktailProviderBrHistory:Ljava/util/ArrayList;
 
@@ -535,7 +480,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 85
     :goto_1
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mSemCocktailProviderBrHistory:Ljava/util/ArrayList;
 
@@ -547,7 +491,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mSemCocktailProviderBrHistory:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -556,7 +499,6 @@
 
     goto :goto_1
 
-    .line 88
     :cond_0
     monitor-exit p1
 
@@ -575,12 +517,10 @@
 .method public recordServiceProcess(Ljava/lang/String;)V
     .locals 3
 
-    .line 35
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 37
     :try_start_0
     new-instance v1, Landroid/icu/text/SimpleDateFormat;
 
@@ -588,7 +528,6 @@
 
     invoke-direct {v1, v2}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 38
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
@@ -606,10 +545,8 @@
     :catch_0
     move-exception v1
 
-    .line 40
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 41
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -619,17 +556,14 @@
     :goto_0
     const-string v1, ": "
 
-    .line 43
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 45
     iget-object p1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 46
     :try_start_1
     iget-object v1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mProcessHistory:Ljava/util/ArrayList;
 
@@ -639,7 +573,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 47
     :goto_1
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mProcessHistory:Ljava/util/ArrayList;
 
@@ -651,7 +584,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mProcessHistory:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -660,7 +592,6 @@
 
     goto :goto_1
 
-    .line 50
     :cond_0
     monitor-exit p1
 
@@ -679,12 +610,10 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .line 139
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 140
     iget-object v1, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
@@ -692,15 +621,12 @@
     :try_start_0
     const-string v2, "-CocktailBar History\n"
 
-    .line 141
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     const-string v2, "  [Process History] :\n"
 
-    .line 142
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 143
     iget-object v2, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mProcessHistory:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -723,7 +649,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 145
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -749,15 +674,12 @@
     :cond_1
     const-string v2, "\n"
 
-    .line 148
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     const-string v2, "  [CocktailBarManager Command History] :\n"
 
-    .line 149
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 150
     iget-object v2, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mCocktailBarManagerCommandHistory:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -780,7 +702,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 152
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -806,15 +727,12 @@
     :cond_3
     const-string v2, "\n"
 
-    .line 155
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     const-string v2, "  [SemCocktailProvider BR History] :\n"
 
-    .line 156
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 157
     iget-object v2, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mSemCocktailProviderBrHistory:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -837,7 +755,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 159
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -863,15 +780,12 @@
     :cond_5
     const-string v2, "\n"
 
-    .line 162
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     const-string v2, "  [Panel update history] :\n"
 
-    .line 163
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 164
     iget-object v2, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPanelUpdateHistory:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -895,7 +809,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 165
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -937,15 +850,12 @@
     :cond_6
     const-string v2, "\n"
 
-    .line 168
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     const-string v2, "  [Power whitelist history] :\n"
 
-    .line 169
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 170
     iget-object p0, p0, Lcom/android/server/cocktailbar/utils/CocktailBarHistory;->mPowerWhitelistHistory:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -969,7 +879,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 171
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1011,15 +920,12 @@
     :cond_7
     const-string p0, "\n"
 
-    .line 174
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 175
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 177
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1029,7 +935,6 @@
     :catchall_0
     move-exception p0
 
-    .line 175
     :try_start_1
     monitor-exit v1
     :try_end_1

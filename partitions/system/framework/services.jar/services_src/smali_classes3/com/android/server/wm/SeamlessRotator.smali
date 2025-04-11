@@ -21,10 +21,8 @@
 .method public constructor <init>(IILandroid/view/DisplayInfo;Z)V
     .locals 2
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -35,22 +33,16 @@
 
     new-array v1, v1, [F
 
-    .line 41
     iput-object v1, p0, Lcom/android/server/wm/SeamlessRotator;->mFloat9:[F
 
-    .line 56
     iput p1, p0, Lcom/android/server/wm/SeamlessRotator;->mOldRotation:I
 
-    .line 57
     iput p2, p0, Lcom/android/server/wm/SeamlessRotator;->mNewRotation:I
 
-    .line 58
     iput-boolean p4, p0, Lcom/android/server/wm/SeamlessRotator;->mApplyFixedTransformHint:Z
 
-    .line 59
     iput p1, p0, Lcom/android/server/wm/SeamlessRotator;->mFixedTransformHint:I
 
-    .line 60
     iget p0, p3, Landroid/view/DisplayInfo;->rotation:I
 
     const/4 p4, 0x1
@@ -70,7 +62,6 @@
     :goto_0
     if-eqz p4, :cond_2
 
-    .line 61
     iget p0, p3, Landroid/view/DisplayInfo;->logicalWidth:I
 
     goto :goto_1
@@ -81,7 +72,6 @@
     :goto_1
     if-eqz p4, :cond_3
 
-    .line 62
     iget p3, p3, Landroid/view/DisplayInfo;->logicalHeight:I
 
     goto :goto_2
@@ -89,19 +79,15 @@
     :cond_3
     iget p3, p3, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    .line 64
     :goto_2
     new-instance p4, Landroid/graphics/Matrix;
 
     invoke-direct {p4}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 65
     invoke-static {p1, p3, p0, v0}, Lcom/android/server/wm/utils/CoordinateTransforms;->transformLogicalToPhysicalCoordinates(IIILandroid/graphics/Matrix;)V
 
-    .line 66
     invoke-static {p2, p3, p0, p4}, Lcom/android/server/wm/utils/CoordinateTransforms;->transformPhysicalToLogicalCoordinates(IIILandroid/graphics/Matrix;)V
 
-    .line 67
     invoke-virtual {v0, p4}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
 
     return-void
@@ -112,7 +98,6 @@
 .method public applyTransform(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
     .locals 1
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/wm/SeamlessRotator;->mTransform:Landroid/graphics/Matrix;
 
     iget-object p0, p0, Lcom/android/server/wm/SeamlessRotator;->mFloat9:[F
@@ -127,7 +112,6 @@
 
     const-string/jumbo v0, "{old="
 
-    .line 124
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/wm/SeamlessRotator;->mOldRotation:I
@@ -144,7 +128,6 @@
 
     const-string/jumbo p0, "}"
 
-    .line 125
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     return-void
@@ -153,7 +136,6 @@
 .method public finish(Landroid/view/SurfaceControl$Transaction;Lcom/android/server/wm/WindowContainer;)V
     .locals 3
 
-    .line 108
     iget-object v0, p2, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_1
@@ -166,13 +148,11 @@
 
     goto :goto_0
 
-    .line 112
     :cond_0
     iget-object v0, p2, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/SeamlessRotator;->setIdentityMatrix(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
 
-    .line 113
     iget-object v0, p2, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     iget-object v1, p2, Lcom/android/server/wm/WindowContainer;->mLastSurfacePosition:Landroid/graphics/Point;
@@ -187,12 +167,10 @@
 
     invoke-virtual {p1, v0, v2, v1}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 114
     iget-boolean p0, p0, Lcom/android/server/wm/SeamlessRotator;->mApplyFixedTransformHint:Z
 
     if-eqz p0, :cond_1
 
-    .line 115
     iget-object p0, p2, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, p0}, Landroid/view/SurfaceControl$Transaction;->unsetFixedTransformHint(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
@@ -205,7 +183,6 @@
 .method public getOldRotation()I
     .locals 0
 
-    .line 96
     iget p0, p0, Lcom/android/server/wm/SeamlessRotator;->mOldRotation:I
 
     return p0
@@ -214,7 +191,6 @@
 .method public setIdentityMatrix(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
     .locals 1
 
-    .line 120
     sget-object v0, Landroid/graphics/Matrix;->IDENTITY_MATRIX:Landroid/graphics/Matrix;
 
     iget-object p0, p0, Lcom/android/server/wm/SeamlessRotator;->mFloat9:[F
@@ -227,19 +203,16 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 130
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 131
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/SeamlessRotator;->dump(Ljava/io/PrintWriter;)V
 
-    .line 132
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,7 +237,6 @@
 .method public unrotate(Landroid/view/SurfaceControl$Transaction;Lcom/android/server/wm/WindowContainer;)V
     .locals 4
 
-    .line 75
     invoke-virtual {p2}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v0
@@ -275,7 +247,6 @@
 
     new-array v0, v0, [F
 
-    .line 77
     iget-object v1, p2, Lcom/android/server/wm/WindowContainer;->mLastSurfacePosition:Landroid/graphics/Point;
 
     iget v2, v1, Landroid/graphics/Point;->x:I
@@ -294,12 +265,10 @@
 
     aput v1, v0, v2
 
-    .line 78
     iget-object v1, p0, Lcom/android/server/wm/SeamlessRotator;->mTransform:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->mapPoints([F)V
 
-    .line 79
     invoke-virtual {p2}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v1
@@ -310,12 +279,10 @@
 
     invoke-virtual {p1, v1, v3, v0}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 80
     iget-boolean v0, p0, Lcom/android/server/wm/SeamlessRotator;->mApplyFixedTransformHint:Z
 
     if-eqz v0, :cond_0
 
-    .line 81
     iget-object p2, p2, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     iget p0, p0, Lcom/android/server/wm/SeamlessRotator;->mFixedTransformHint:I

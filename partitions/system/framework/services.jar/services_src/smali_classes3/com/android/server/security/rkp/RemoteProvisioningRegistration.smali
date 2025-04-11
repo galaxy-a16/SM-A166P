@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$4fZ7ek8tRaSiQnoA6Yd9uPbkBs8(Landroid/security/rkp/IGetKeyCallback;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->lambda$getKey$0(Landroid/security/rkp/IGetKeyCallback;Ljava/lang/Exception;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$x9bdPUKH_8XwKV9hy_EtVXxuayc(Landroid/security/rkp/IStoreUpgradedKeyCallback;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->lambda$storeUpgradedKeyAsync$1(Landroid/security/rkp/IStoreUpgradedKeyCallback;Ljava/lang/Exception;)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmGetKeyOperations(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;)Ljava/util/concurrent/ConcurrentHashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mGetKeyOperations:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStoreUpgradedKeyOperations(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;)Ljava/util/Set;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mStoreUpgradedKeyOperations:Ljava/util/Set;
 
     return-object p0
@@ -53,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$mtoGetKeyError(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;Landroid/security/rkp/service/RkpProxyException;)B
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->toGetKeyError(Landroid/security/rkp/service/RkpProxyException;)B
 
     move-result p0
@@ -64,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$mwrapCallback(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;Lcom/android/server/security/rkp/RemoteProvisioningRegistration$CallbackRunner;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->wrapCallback(Lcom/android/server/security/rkp/RemoteProvisioningRegistration$CallbackRunner;)V
 
     return-void
@@ -73,27 +67,22 @@
 .method public constructor <init>(Landroid/security/rkp/service/RegistrationProxy;Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    .line 106
     invoke-direct {p0}, Landroid/security/rkp/IRegistration$Stub;-><init>()V
 
-    .line 43
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mGetKeyOperations:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 45
     invoke-static {}, Ljava/util/concurrent/ConcurrentHashMap;->newKeySet()Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mStoreUpgradedKeyOperations:Ljava/util/Set;
 
-    .line 107
     iput-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mRegistration:Landroid/security/rkp/service/RegistrationProxy;
 
-    .line 108
     iput-object p2, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -104,12 +93,10 @@
 
     const/4 v0, 0x1
 
-    .line 132
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 131
     invoke-interface {p0, v0, p1}, Landroid/security/rkp/IGetKeyCallback;->onError(BLjava/lang/String;)V
 
     return-void
@@ -118,7 +105,6 @@
 .method public static synthetic lambda$storeUpgradedKeyAsync$1(Landroid/security/rkp/IStoreUpgradedKeyCallback;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 176
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -133,7 +119,6 @@
 .method public cancelGetKey(Landroid/security/rkp/IGetKeyCallback;)V
     .locals 2
 
-    .line 138
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mGetKeyOperations:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-interface {p1}, Landroid/security/rkp/IGetKeyCallback;->asBinder()Landroid/os/IBinder;
@@ -148,7 +133,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 144
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,12 +159,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     invoke-virtual {p0}, Landroid/os/CancellationSignal;->cancel()V
 
     return-void
 
-    .line 140
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -192,7 +174,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
     invoke-interface {p1}, Landroid/security/rkp/IGetKeyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object p1
@@ -215,12 +196,10 @@
 .method public getKey(ILandroid/security/rkp/IGetKeyCallback;)V
     .locals 5
 
-    .line 113
     new-instance v0, Landroid/os/CancellationSignal;
 
     invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
 
-    .line 114
     iget-object v1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mGetKeyOperations:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-interface {p2}, Landroid/security/rkp/IGetKeyCallback;->asBinder()Landroid/os/IBinder;
@@ -235,7 +214,6 @@
 
     if-nez v1, :cond_0
 
-    .line 123
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -267,7 +245,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     iget-object v1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mRegistration:Landroid/security/rkp/service/RegistrationProxy;
 
     iget-object v3, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mExecutor:Ljava/util/concurrent/Executor;
@@ -285,7 +262,6 @@
     :catch_0
     move-exception p1
 
-    .line 127
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -294,7 +270,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 128
     invoke-interface {p2}, Landroid/security/rkp/IGetKeyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object v1
@@ -309,10 +284,8 @@
 
     move-result-object v0
 
-    .line 127
     invoke-static {v2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mGetKeyOperations:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-interface {p2}, Landroid/security/rkp/IGetKeyCallback;->asBinder()Landroid/os/IBinder;
@@ -321,7 +294,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     new-instance v0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p2, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$$ExternalSyntheticLambda0;-><init>(Landroid/security/rkp/IGetKeyCallback;Ljava/lang/Exception;)V
@@ -331,7 +303,6 @@
     :goto_0
     return-void
 
-    .line 115
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -341,7 +312,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 116
     invoke-interface {p2}, Landroid/security/rkp/IGetKeyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object p1
@@ -356,10 +326,8 @@
 
     move-result-object p0
 
-    .line 115
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -370,7 +338,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 119
     invoke-interface {p2}, Landroid/security/rkp/IGetKeyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -393,7 +360,6 @@
 .method public storeUpgradedKeyAsync([B[BLandroid/security/rkp/IStoreUpgradedKeyCallback;)V
     .locals 3
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mStoreUpgradedKeyOperations:Ljava/util/Set;
 
     invoke-interface {p3}, Landroid/security/rkp/IStoreUpgradedKeyCallback;->asBinder()Landroid/os/IBinder;
@@ -406,7 +372,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 158
     :try_start_0
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mRegistration:Landroid/security/rkp/service/RegistrationProxy;
 
@@ -425,7 +390,6 @@
     :catch_0
     move-exception p1
 
-    .line 173
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -434,7 +398,6 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 174
     invoke-interface {p3}, Landroid/security/rkp/IStoreUpgradedKeyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -451,10 +414,8 @@
 
     const-string v0, "RemoteProvisionSysSvc"
 
-    .line 173
     invoke-static {v0, p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 175
     iget-object p2, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->mStoreUpgradedKeyOperations:Ljava/util/Set;
 
     invoke-interface {p3}, Landroid/security/rkp/IStoreUpgradedKeyCallback;->asBinder()Landroid/os/IBinder;
@@ -463,7 +424,6 @@
 
     invoke-interface {p2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 176
     new-instance p2, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$$ExternalSyntheticLambda1;
 
     invoke-direct {p2, p3, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$$ExternalSyntheticLambda1;-><init>(Landroid/security/rkp/IStoreUpgradedKeyCallback;Ljava/lang/Exception;)V
@@ -473,7 +433,6 @@
     :goto_0
     return-void
 
-    .line 152
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -485,7 +444,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 154
     invoke-interface {p3}, Landroid/security/rkp/IStoreUpgradedKeyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -508,7 +466,6 @@
 .method public final toGetKeyError(Landroid/security/rkp/service/RkpProxyException;)B
     .locals 3
 
-    .line 91
     invoke-virtual {p1}, Landroid/security/rkp/service/RkpProxyException;->getError()I
 
     move-result p0
@@ -531,7 +488,6 @@
 
     const-string v1, "Unexpected error code in RkpProxyException"
 
-    .line 101
     invoke-static {p0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -554,7 +510,6 @@
 .method public final wrapCallback(Lcom/android/server/security/rkp/RemoteProvisioningRegistration$CallbackRunner;)V
     .locals 1
 
-    .line 189
     :try_start_0
     invoke-interface {p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$CallbackRunner;->run()V
     :try_end_0
@@ -569,7 +524,6 @@
 
     const-string v0, "Error invoking callback on client binder"
 
-    .line 191
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

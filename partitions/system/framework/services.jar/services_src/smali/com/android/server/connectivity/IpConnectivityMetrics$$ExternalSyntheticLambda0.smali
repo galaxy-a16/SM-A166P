@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/Context;
 
     invoke-static {p1}, Lcom/android/server/connectivity/IpConnectivityMetrics;->$r8$lambda$OKNCsjwIrvBXUvgBaJ9UFwHLUKs(Landroid/content/Context;)I

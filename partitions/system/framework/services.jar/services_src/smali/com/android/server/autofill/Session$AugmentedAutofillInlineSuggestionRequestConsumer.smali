@@ -22,26 +22,20 @@
 .method public constructor <init>(Lcom/android/server/autofill/Session;Landroid/view/autofill/AutofillId;ZILandroid/view/autofill/AutofillValue;)V
     .locals 1
 
-    .line 5050
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5051
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRequestConsumer;->mSessionWeakRef:Ljava/lang/ref/WeakReference;
 
-    .line 5052
     iput-object p2, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRequestConsumer;->mFocusedId:Landroid/view/autofill/AutofillId;
 
-    .line 5053
     iput-boolean p3, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRequestConsumer;->mIsAllowlisted:Z
 
-    .line 5054
     iput p4, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRequestConsumer;->mMode:I
 
-    .line 5055
     iput-object p5, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRequestConsumer;->mCurrentValue:Landroid/view/autofill/AutofillValue;
 
     return-void
@@ -52,7 +46,6 @@
 .method public accept(Landroid/view/inputmethod/InlineSuggestionsRequest;)V
     .locals 7
 
-    .line 5060
     iget-object v0, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRequestConsumer;->mSessionWeakRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -65,7 +58,6 @@
 
     const-string v0, "AugmentedAutofillInlineSuggestionRequestConsumer:"
 
-    .line 5062
     invoke-static {v1, v0}, Lcom/android/server/autofill/Session;->-$$Nest$smlogIfSessionNull(Lcom/android/server/autofill/Session;Ljava/lang/String;)Z
 
     move-result v0
@@ -74,7 +66,6 @@
 
     return-void
 
-    .line 5066
     :cond_0
     iget-object v3, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRequestConsumer;->mFocusedId:Landroid/view/autofill/AutofillId;
 
@@ -94,7 +85,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 5036
     check-cast p1, Landroid/view/inputmethod/InlineSuggestionsRequest;
 
     invoke-virtual {p0, p1}, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRequestConsumer;->accept(Landroid/view/inputmethod/InlineSuggestionsRequest;)V

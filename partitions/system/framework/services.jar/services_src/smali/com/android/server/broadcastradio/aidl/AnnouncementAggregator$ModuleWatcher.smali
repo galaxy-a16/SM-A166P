@@ -15,12 +15,10 @@
 .method public constructor <init>(Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;)V
     .locals 0
 
-    .line 68
     iput-object p1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;->this$0:Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;
 
     invoke-direct {p0}, Landroid/hardware/radio/IAnnouncementListener$Stub;-><init>()V
 
-    .line 73
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -33,7 +31,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;-><init>(Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;)V
 
     return-void
@@ -44,7 +41,6 @@
 .method public close()V
     .locals 2
 
-    .line 91
     invoke-static {}, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -55,10 +51,8 @@
 
     const-string v1, "Close module watcher."
 
-    .line 92
     invoke-static {v0, v1}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     :cond_0
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;->mCloseHandle:Landroid/hardware/radio/ICloseHandle;
 
@@ -79,13 +73,10 @@
 
     const-string v1, "ModuleWatcher:\n"
 
-    .line 98
     invoke-virtual {p1, v1, v0}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 100
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;->mCloseHandle:Landroid/hardware/radio/ICloseHandle;
 
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -96,7 +87,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;->mCurrentList:Ljava/util/List;
 
     filled-new-array {p0}, [Ljava/lang/Object;
@@ -107,7 +97,6 @@
 
     invoke-virtual {p1, v0, p0}, Landroid/util/IndentingPrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 103
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -116,7 +105,6 @@
 .method public onListUpdated(Ljava/util/List;)V
     .locals 3
 
-    .line 76
     invoke-static {}, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -125,7 +113,6 @@
 
     const-string/jumbo v0, "onListUpdate for %s"
 
-    .line 77
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -137,14 +124,12 @@
     :cond_0
     const-string v0, "active cannot be null"
 
-    .line 79
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     check-cast p1, Ljava/util/List;
 
     iput-object p1, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;->mCurrentList:Ljava/util/List;
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator$ModuleWatcher;->this$0:Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;
 
     invoke-static {p0}, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->-$$Nest$monListUpdated(Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;)V
@@ -155,7 +140,6 @@
 .method public setCloseHandle(Landroid/hardware/radio/ICloseHandle;)V
     .locals 3
 
-    .line 84
     invoke-static {}, Lcom/android/server/broadcastradio/aidl/AnnouncementAggregator;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -164,7 +148,6 @@
 
     const-string v0, "Set close handle %s"
 
-    .line 85
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -176,7 +159,6 @@
     :cond_0
     const-string v0, "closeHandle cannot be null"
 
-    .line 87
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     check-cast p1, Landroid/hardware/radio/ICloseHandle;

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/os/IBinder;
 
     invoke-static {p1}, Landroid/service/games/IGameSessionService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/games/IGameSessionService;

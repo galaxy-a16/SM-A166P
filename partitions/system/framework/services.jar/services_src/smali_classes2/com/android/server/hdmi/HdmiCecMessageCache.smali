@@ -15,33 +15,28 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 30
     new-instance v0, Landroid/util/FastImmutableArraySet;
 
     const/16 v1, 0x47
 
-    .line 32
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     const/16 v2, 0x84
 
-    .line 33
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     const/16 v3, 0x87
 
-    .line 34
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     const/16 v4, 0x9e
 
-    .line 35
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -60,10 +55,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -78,12 +71,10 @@
 .method public cacheMessage(Lcom/android/server/hdmi/HdmiCecMessage;)V
     .locals 3
 
-    .line 85
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
     move-result v0
 
-    .line 86
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/HdmiCecMessageCache;->isCacheable(I)Z
 
     move-result v1
@@ -92,13 +83,11 @@
 
     return-void
 
-    .line 90
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getSource()I
 
     move-result v1
 
-    .line 91
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiCecMessageCache;->mCache:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -109,17 +98,14 @@
 
     if-nez v2, :cond_1
 
-    .line 93
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecMessageCache;->mCache:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 96
     :cond_1
     invoke-virtual {v2, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -129,7 +115,6 @@
 .method public flushAll()V
     .locals 0
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecMessageCache;->mCache:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->clear()V
@@ -140,7 +125,6 @@
 .method public flushMessagesFrom(I)V
     .locals 0
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecMessageCache;->mCache:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
@@ -151,7 +135,6 @@
 .method public getMessage(II)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 0
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecMessageCache;->mCache:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -166,7 +149,6 @@
 
     return-object p0
 
-    .line 59
     :cond_0
     invoke-virtual {p0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -180,7 +162,6 @@
 .method public final isCacheable(I)Z
     .locals 0
 
-    .line 100
     sget-object p0, Lcom/android/server/hdmi/HdmiCecMessageCache;->CACHEABLE_OPCODES:Landroid/util/FastImmutableArraySet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

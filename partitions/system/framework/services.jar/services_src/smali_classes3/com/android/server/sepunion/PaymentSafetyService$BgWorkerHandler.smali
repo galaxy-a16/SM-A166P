@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/sepunion/PaymentSafetyService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
-    .line 122
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 127
     invoke-static {}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -48,7 +45,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0xa
@@ -77,7 +73,6 @@
 
     goto :goto_0
 
-    .line 147
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
@@ -85,7 +80,6 @@
 
     goto :goto_0
 
-    .line 144
     :cond_1
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
@@ -97,7 +91,6 @@
 
     goto :goto_0
 
-    .line 141
     :cond_2
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
@@ -109,7 +102,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_3
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
@@ -121,7 +113,6 @@
 
     goto :goto_0
 
-    .line 135
     :cond_4
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
@@ -133,18 +124,15 @@
 
     goto :goto_0
 
-    .line 130
     :cond_5
     iget-object p1, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$mloadProctedAppSet(Lcom/android/server/sepunion/PaymentSafetyService;)V
 
-    .line 131
     iget-object p1, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$mloadImportantAppComponentList(Lcom/android/server/sepunion/PaymentSafetyService;)V
 
-    .line 132
     iget-object p0, p0, Lcom/android/server/sepunion/PaymentSafetyService$BgWorkerHandler;->this$0:Lcom/android/server/sepunion/PaymentSafetyService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/PaymentSafetyService;->-$$Nest$mregisterWatcherForImportantComponentList(Lcom/android/server/sepunion/PaymentSafetyService;)V

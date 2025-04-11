@@ -26,7 +26,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 129
     new-instance v0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData$1;
 
     invoke-direct {v0}, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData$1;-><init>()V
@@ -39,24 +38,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 122
     iput v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->partnerSinkStatus:I
 
-    .line 123
     iput v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->cableStatus:I
 
-    .line 124
     iput v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->pinAssignment:I
 
-    .line 125
     iput-boolean v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->hpd:Z
 
-    .line 126
     iput v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->linkTrainingStatus:I
 
     return-void
@@ -67,7 +60,6 @@
 .method public describeContents()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -76,7 +68,6 @@
 .method public final getStability()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -85,12 +76,10 @@
 .method public final readFromParcel(Landroid/os/Parcel;)V
     .locals 5
 
-    .line 157
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
-    .line 158
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -103,7 +92,6 @@
 
     if-lt v1, v2, :cond_b
 
-    .line 161
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -122,12 +110,10 @@
     :goto_0
     add-int/2addr v0, v1
 
-    .line 175
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 173
     :cond_0
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -135,7 +121,6 @@
 
     throw p0
 
-    .line 162
     :cond_1
     :try_start_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -144,7 +129,6 @@
 
     iput v2, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->partnerSinkStatus:I
 
-    .line 163
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -161,7 +145,6 @@
 
     goto :goto_0
 
-    .line 173
     :cond_2
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -169,7 +152,6 @@
 
     throw p0
 
-    .line 164
     :cond_3
     :try_start_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -178,7 +160,6 @@
 
     iput v2, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->cableStatus:I
 
-    .line 165
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -195,7 +176,6 @@
 
     goto :goto_0
 
-    .line 173
     :cond_4
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -203,7 +183,6 @@
 
     throw p0
 
-    .line 166
     :cond_5
     :try_start_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -212,7 +191,6 @@
 
     iput v2, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->pinAssignment:I
 
-    .line 167
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -229,7 +207,6 @@
 
     goto :goto_0
 
-    .line 173
     :cond_6
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -237,7 +214,6 @@
 
     throw p0
 
-    .line 168
     :cond_7
     :try_start_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readBoolean()Z
@@ -246,7 +222,6 @@
 
     iput-boolean v2, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->hpd:Z
 
-    .line 169
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -263,7 +238,6 @@
 
     goto :goto_0
 
-    .line 173
     :cond_8
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -271,7 +245,6 @@
 
     throw p0
 
-    .line 170
     :cond_9
     :try_start_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -288,12 +261,10 @@
 
     add-int/2addr v0, v1
 
-    .line 175
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 173
     :cond_a
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -306,7 +277,6 @@
 
     goto :goto_1
 
-    .line 160
     :cond_b
     :try_start_6
     new-instance p0, Landroid/os/BadParcelableException;
@@ -324,7 +294,6 @@
 
     if-le v0, v4, :cond_c
 
-    .line 173
     new-instance p0, Landroid/os/BadParcelableException;
 
     invoke-direct {p0, v3}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
@@ -334,65 +303,52 @@
     :cond_c
     add-int/2addr v0, v1
 
-    .line 175
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 176
     throw p0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 143
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p2
 
     const/4 v0, 0x0
 
-    .line 144
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 145
     iget v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->partnerSinkStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 146
     iget v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->cableStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 147
     iget v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->pinAssignment:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 148
     iget-boolean v0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->hpd:Z
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBoolean(Z)V
 
-    .line 149
     iget p0, p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->linkTrainingStatus:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 150
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p0
 
-    .line 151
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->setDataPosition(I)V
 
     sub-int p2, p0, p2
 
-    .line 152
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 153
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void

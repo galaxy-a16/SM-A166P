@@ -17,26 +17,20 @@
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput p1, p0, Lcom/android/server/utils/quota/Uptc;->userId:I
 
-    .line 42
     iput-object p2, p0, Lcom/android/server/utils/quota/Uptc;->packageName:Ljava/lang/String;
 
-    .line 43
     iput-object p3, p0, Lcom/android/server/utils/quota/Uptc;->tag:Ljava/lang/String;
 
-    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     mul-int/lit8 p1, p1, 0x1f
 
-    .line 46
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result p2
@@ -59,7 +53,6 @@
 
     goto :goto_0
 
-    .line 47
     :cond_0
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
@@ -76,7 +69,6 @@
 .method public static string(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,33 +121,28 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 3
 
-    .line 56
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10500000001L
 
-    .line 58
     iget v2, p0, Lcom/android/server/utils/quota/Uptc;->userId:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
     const-wide v0, 0x10900000002L
 
-    .line 59
     iget-object v2, p0, Lcom/android/server/utils/quota/Uptc;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
     const-wide v0, 0x10900000003L
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/utils/quota/Uptc;->tag:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 62
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -170,7 +157,6 @@
 
     return v0
 
-    .line 70
     :cond_0
     instance-of v1, p1, Lcom/android/server/utils/quota/Uptc;
 
@@ -178,10 +164,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 71
     check-cast p1, Lcom/android/server/utils/quota/Uptc;
 
-    .line 72
     iget v1, p0, Lcom/android/server/utils/quota/Uptc;->userId:I
 
     iget v3, p1, Lcom/android/server/utils/quota/Uptc;->userId:I
@@ -192,7 +176,6 @@
 
     iget-object v3, p1, Lcom/android/server/utils/quota/Uptc;->packageName:Ljava/lang/String;
 
-    .line 73
     invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -203,7 +186,6 @@
 
     iget-object p1, p1, Lcom/android/server/utils/quota/Uptc;->tag:Ljava/lang/String;
 
-    .line 74
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -225,7 +207,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 81
     iget p0, p0, Lcom/android/server/utils/quota/Uptc;->mHash:I
 
     return p0
@@ -234,7 +215,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 52
     iget v0, p0, Lcom/android/server/utils/quota/Uptc;->userId:I
 
     iget-object v1, p0, Lcom/android/server/utils/quota/Uptc;->packageName:Ljava/lang/String;

@@ -17,7 +17,6 @@
 
     const-string v1, "cnc_domain"
 
-    .line 65
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -30,7 +29,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 99
     invoke-static {}, Lcom/android/server/net/watchlist/WatchlistReportDbHelper;->getSystemWatchlistDbFile()Ljava/io/File;
 
     move-result-object v0
@@ -47,7 +45,6 @@
 
     const-wide/16 v0, 0x7530
 
-    .line 101
     invoke-virtual {p0, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;->setIdleConnectionTimeout(J)V
 
     return-void
@@ -60,7 +57,6 @@
 
     monitor-enter v0
 
-    .line 105
     :try_start_0
     sget-object v1, Lcom/android/server/net/watchlist/WatchlistReportDbHelper;->sInstance:Lcom/android/server/net/watchlist/WatchlistReportDbHelper;
     :try_end_0
@@ -68,12 +64,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 106
     monitor-exit v0
 
     return-object v1
 
-    .line 108
     :cond_0
     :try_start_1
     new-instance v1, Lcom/android/server/net/watchlist/WatchlistReportDbHelper;
@@ -84,7 +78,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 109
     monitor-exit v0
 
     return-object v1
@@ -100,7 +93,6 @@
 .method public static getSystemWatchlistDbFile()Ljava/io/File;
     .locals 3
 
-    .line 95
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getDataSystemDirectory()Ljava/io/File;
@@ -121,7 +113,6 @@
 
     const/4 v0, 0x0
 
-    .line 201
     :try_start_0
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -129,7 +120,6 @@
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 206
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,7 +138,6 @@
 
     const/4 v1, 0x0
 
-    .line 207
     invoke-virtual {p0, p2, p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
@@ -167,7 +156,6 @@
 
     const-string p2, "Error opening the database to cleanup"
 
-    .line 203
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -178,7 +166,6 @@
 
     const/4 v0, 0x0
 
-    .line 157
     :try_start_0
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -191,7 +178,6 @@
     :try_start_1
     const-string/jumbo v3, "records"
 
-    .line 164
     sget-object v4, Lcom/android/server/net/watchlist/WatchlistReportDbHelper;->DIGEST_DOMAIN_PROJECTION:[Ljava/lang/String;
 
     const-string/jumbo v5, "timestamp < ?"
@@ -200,7 +186,6 @@
 
     new-array v6, p0, [Ljava/lang/String;
 
-    .line 166
     invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p1
@@ -217,7 +202,6 @@
 
     const/4 v10, 0x0
 
-    .line 164
     invoke-virtual/range {v1 .. v10}, Landroid/database/sqlite/SQLiteDatabase;->query(ZLjava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
@@ -228,25 +212,21 @@
 
     if-eqz p1, :cond_0
 
-    .line 188
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     :cond_0
     return-object v0
 
-    .line 171
     :cond_1
     :try_start_2
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 172
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 174
     :goto_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -254,7 +234,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 176
     invoke-interface {p1, p2}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v3
@@ -263,20 +242,16 @@
 
     move-result-object v3
 
-    .line 177
     invoke-interface {p1, p0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 179
     invoke-virtual {v1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 183
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 185
     :cond_2
     new-instance p0, Lcom/android/server/net/watchlist/WatchlistReportDbHelper$AggregatedResult;
 
@@ -284,7 +259,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 188
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     return-object p0
@@ -304,7 +278,6 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 190
     :cond_3
     throw p0
 
@@ -315,7 +288,6 @@
 
     const-string p2, "Error opening the database"
 
-    .line 159
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -326,7 +298,6 @@
 
     const/4 v0, 0x0
 
-    .line 135
     :try_start_0
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -334,24 +305,20 @@
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 140
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     const-string v2, "app_digest"
 
-    .line 141
     invoke-virtual {v1, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
     const-string p1, "cnc_domain"
 
-    .line 142
     invoke-virtual {v1, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p1, "timestamp"
 
-    .line 143
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
@@ -362,7 +329,6 @@
 
     const/4 p2, 0x0
 
-    .line 144
     invoke-virtual {p0, p1, p2, v1}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide p0
@@ -385,7 +351,6 @@
 
     const-string p2, "Error opening the database to insert a new record"
 
-    .line 137
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -396,7 +361,6 @@
 
     const-string p0, "CREATE TABLE records(app_digest BLOB,cnc_domain TEXT,timestamp INTEGER DEFAULT 0 )"
 
-    .line 114
     invoke-virtual {p1, p0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     return-void
@@ -407,10 +371,8 @@
 
     const-string p2, "DROP TABLE IF EXISTS records"
 
-    .line 120
     invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 121
     invoke-virtual {p0, p1}, Lcom/android/server/net/watchlist/WatchlistReportDbHelper;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
     return-void

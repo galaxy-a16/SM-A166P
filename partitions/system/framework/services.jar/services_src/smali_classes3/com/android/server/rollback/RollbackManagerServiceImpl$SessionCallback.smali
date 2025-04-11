@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
     .locals 0
 
-    .line 1129
     iput-object p1, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$SessionCallback;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-direct {p0}, Landroid/content/pm/PackageInstaller$SessionCallback;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/rollback/RollbackManagerServiceImpl;Lcom/android/server/rollback/RollbackManagerServiceImpl$SessionCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/rollback/RollbackManagerServiceImpl$SessionCallback;-><init>(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
 
     return-void
@@ -33,33 +31,28 @@
 .method public onActiveChanged(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onBadgingChanged(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onCreated(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onFinished(IZ)V
     .locals 3
 
-    .line 1145
     iget-object v0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$SessionCallback;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$massertInWorkerThread(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
 
-    .line 1146
     invoke-static {}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$sfgetLOCAL_LOGV()Z
 
     move-result v0
@@ -68,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +83,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1150
     :cond_0
     iget-object v0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$SessionCallback;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
@@ -101,14 +92,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 1151
     invoke-virtual {v0}, Lcom/android/server/rollback/Rollback;->isEnabling()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 1152
     invoke-virtual {v0}, Lcom/android/server/rollback/Rollback;->getOriginalSessionId()I
 
     move-result v2
@@ -120,7 +109,6 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 1158
     invoke-virtual {v0}, Lcom/android/server/rollback/Rollback;->isStaged()Z
 
     move-result p1
@@ -135,14 +123,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 1162
     iget-object p0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$SessionCallback;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {p0, v0}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$mmakeRollbackAvailable(Lcom/android/server/rollback/RollbackManagerServiceImpl;Lcom/android/server/rollback/Rollback;)V
 
     goto :goto_0
 
-    .line 1165
     :cond_2
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -172,7 +158,6 @@
 
     invoke-static {v1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1167
     iget-object p2, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$SessionCallback;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {p2}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$fgetmRollbacks(Lcom/android/server/rollback/RollbackManagerServiceImpl;)Ljava/util/List;
@@ -181,7 +166,6 @@
 
     invoke-interface {p2, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 1168
     iget-object p0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$SessionCallback;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -212,6 +196,5 @@
 .method public onProgressChanged(IF)V
     .locals 0
 
-    .line 0
     return-void
 .end method

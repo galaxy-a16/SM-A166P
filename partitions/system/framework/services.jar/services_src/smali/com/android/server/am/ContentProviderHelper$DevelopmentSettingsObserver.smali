@@ -15,10 +15,8 @@
 .method public constructor <init>(Lcom/android/server/am/ContentProviderHelper;)V
     .locals 4
 
-    .line 1442
     iput-object p1, p0, Lcom/android/server/am/ContentProviderHelper$DevelopmentSettingsObserver;->this$0:Lcom/android/server/am/ContentProviderHelper;
 
-    .line 1443
     invoke-static {p1}, Lcom/android/server/am/ContentProviderHelper;->-$$Nest$fgetmService(Lcom/android/server/am/ContentProviderHelper;)Lcom/android/server/am/ActivityManagerService;
 
     move-result-object v0
@@ -29,14 +27,12 @@
 
     const-string v0, "development_settings_enabled"
 
-    .line 1436
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/am/ContentProviderHelper$DevelopmentSettingsObserver;->mUri:Landroid/net/Uri;
 
-    .line 1439
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.android.shell"
@@ -47,7 +43,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/ContentProviderHelper$DevelopmentSettingsObserver;->mBugreportStorageProvider:Landroid/content/ComponentName;
 
-    .line 1444
     invoke-static {p1}, Lcom/android/server/am/ContentProviderHelper;->-$$Nest$fgetmService(Lcom/android/server/am/ContentProviderHelper;)Lcom/android/server/am/ActivityManagerService;
 
     move-result-object p1
@@ -64,7 +59,6 @@
 
     invoke-virtual {p1, v0, v1, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1447
     invoke-virtual {p0}, Lcom/android/server/am/ContentProviderHelper$DevelopmentSettingsObserver;->onChange()V
 
     return-void
@@ -75,7 +69,6 @@
 .method public final onChange()V
     .locals 3
 
-    .line 1458
     iget-object v0, p0, Lcom/android/server/am/ContentProviderHelper$DevelopmentSettingsObserver;->this$0:Lcom/android/server/am/ContentProviderHelper;
 
     invoke-static {v0}, Lcom/android/server/am/ContentProviderHelper;->-$$Nest$fgetmService(Lcom/android/server/am/ContentProviderHelper;)Lcom/android/server/am/ActivityManagerService;
@@ -88,12 +81,10 @@
 
     move-result-object v0
 
-    .line 1459
     sget-boolean v1, Landroid/os/Build;->IS_ENG:Z
 
     const-string v2, "development_settings_enabled"
 
-    .line 1458
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -109,7 +100,6 @@
     :cond_0
     move v0, v1
 
-    .line 1460
     :goto_0
     iget-object v2, p0, Lcom/android/server/am/ContentProviderHelper$DevelopmentSettingsObserver;->this$0:Lcom/android/server/am/ContentProviderHelper;
 
@@ -133,7 +123,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 0
 
-    .line 1452
     iget-object p1, p0, Lcom/android/server/am/ContentProviderHelper$DevelopmentSettingsObserver;->mUri:Landroid/net/Uri;
 
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -142,7 +131,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1453
     invoke-virtual {p0}, Lcom/android/server/am/ContentProviderHelper$DevelopmentSettingsObserver;->onChange()V
 
     :cond_0

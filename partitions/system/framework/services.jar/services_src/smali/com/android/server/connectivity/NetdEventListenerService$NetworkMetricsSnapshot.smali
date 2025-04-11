@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 667
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 670
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -29,17 +27,14 @@
 .method public static collect(JLandroid/util/SparseArray;)Lcom/android/server/connectivity/NetdEventListenerService$NetworkMetricsSnapshot;
     .locals 2
 
-    .line 673
     new-instance v0, Lcom/android/server/connectivity/NetdEventListenerService$NetworkMetricsSnapshot;
 
     invoke-direct {v0}, Lcom/android/server/connectivity/NetdEventListenerService$NetworkMetricsSnapshot;-><init>()V
 
-    .line 674
     iput-wide p0, v0, Lcom/android/server/connectivity/NetdEventListenerService$NetworkMetricsSnapshot;->timeMs:J
 
     const/4 p0, 0x0
 
-    .line 675
     :goto_0
     invoke-virtual {p2}, Landroid/util/SparseArray;->size()I
 
@@ -47,7 +42,6 @@
 
     if-ge p0, p1, :cond_1
 
-    .line 676
     invoke-virtual {p2, p0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -60,7 +54,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 678
     iget-object v1, v0, Lcom/android/server/connectivity/NetdEventListenerService$NetworkMetricsSnapshot;->stats:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -79,14 +72,12 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 686
     new-instance v0, Ljava/util/StringJoiner;
 
     const-string v1, ", "
 
     invoke-direct {v0, v1}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 687
     iget-object v1, p0, Lcom/android/server/connectivity/NetdEventListenerService$NetworkMetricsSnapshot;->stats:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -106,7 +97,6 @@
 
     check-cast v2, Landroid/net/metrics/NetworkMetrics$Summary;
 
-    .line 688
     invoke-virtual {v2}, Landroid/net/metrics/NetworkMetrics$Summary;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 690
     :cond_0
     iget-wide v1, p0, Lcom/android/server/connectivity/NetdEventListenerService$NetworkMetricsSnapshot;->timeMs:J
 

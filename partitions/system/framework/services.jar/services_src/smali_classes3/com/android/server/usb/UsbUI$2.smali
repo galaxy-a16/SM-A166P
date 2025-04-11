@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbUI;)V
     .locals 0
 
-    .line 201
     iput-object p1, p0, Lcom/android/server/usb/UsbUI$2;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 204
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +45,6 @@
 
     invoke-static {p2, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$2;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmContext(Lcom/android/server/usb/UsbUI;)Landroid/content/Context;
@@ -64,7 +61,6 @@
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 210
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$2;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmContext(Lcom/android/server/usb/UsbUI;)Landroid/content/Context;
@@ -77,7 +73,6 @@
 
     move-result-object p1
 
-    .line 211
     iget-object p2, p0, Lcom/android/server/usb/UsbUI$2;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p2}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmContext(Lcom/android/server/usb/UsbUI;)Landroid/content/Context;
@@ -90,7 +85,6 @@
 
     move-result-object p2
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/usb/UsbUI$2;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {v0}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetisSupportWirelessCharging(Lcom/android/server/usb/UsbUI;)Z
@@ -99,7 +93,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/usb/UsbUI$2;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {v0}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmContext(Lcom/android/server/usb/UsbUI;)Landroid/content/Context;
@@ -114,7 +107,6 @@
 
     goto :goto_0
 
-    .line 217
     :cond_0
     iget-object v0, p0, Lcom/android/server/usb/UsbUI$2;->this$0:Lcom/android/server/usb/UsbUI;
 
@@ -133,12 +125,10 @@
 
     const-string v2, "\n"
 
-    .line 219
     invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 221
     iget-object v1, p0, Lcom/android/server/usb/UsbUI$2;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {v1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmContext(Lcom/android/server/usb/UsbUI;)Landroid/content/Context;
@@ -168,7 +158,6 @@
     :cond_1
     const/4 v1, 0x5
 
-    .line 227
     :goto_1
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
@@ -182,28 +171,22 @@
 
     const/4 v1, 0x0
 
-    .line 228
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 229
     invoke-virtual {v2, p1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 230
     invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 231
     new-instance p1, Lcom/android/server/usb/UsbUI$2$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/usb/UsbUI$2$1;-><init>(Lcom/android/server/usb/UsbUI$2;)V
 
     invoke-virtual {v2, p2, p1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 239
     invoke-virtual {v2}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object p0
 
-    .line 240
     invoke-virtual {p0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -212,7 +195,6 @@
 
     invoke-virtual {p1, p2}, Landroid/view/Window;->setType(I)V
 
-    .line 241
     invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
 
     return-void

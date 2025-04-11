@@ -17,19 +17,14 @@
 .method public constructor <init>(Ljava/util/function/Supplier;Lcom/android/internal/util/function/TriConsumer;Lcom/android/internal/util/function/TriConsumer;Lcom/android/internal/util/function/TriConsumer;)V
     .locals 0
 
-    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 297
     iput-object p1, p0, Lcom/samsung/android/server/pm/install/MultiUserInstallPolicy$PackageSettingsDelegator;->mGetPackagesLocked:Ljava/util/function/Supplier;
 
-    .line 298
     iput-object p2, p0, Lcom/samsung/android/server/pm/install/MultiUserInstallPolicy$PackageSettingsDelegator;->mSetInstalled:Lcom/android/internal/util/function/TriConsumer;
 
-    .line 299
     iput-object p3, p0, Lcom/samsung/android/server/pm/install/MultiUserInstallPolicy$PackageSettingsDelegator;->mSetEnabled:Lcom/android/internal/util/function/TriConsumer;
 
-    .line 300
     iput-object p4, p0, Lcom/samsung/android/server/pm/install/MultiUserInstallPolicy$PackageSettingsDelegator;->mAddDisabledComponent:Lcom/android/internal/util/function/TriConsumer;
 
     return-void
@@ -40,7 +35,6 @@
 .method public addDisabledComponent(Lcom/android/server/pm/PackageSetting;Ljava/lang/String;I)V
     .locals 0
 
-    .line 316
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/MultiUserInstallPolicy$PackageSettingsDelegator;->mAddDisabledComponent:Lcom/android/internal/util/function/TriConsumer;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -55,7 +49,6 @@
 .method public getPackagesLocked()Lcom/android/server/utils/WatchedArrayMap;
     .locals 0
 
-    .line 304
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/MultiUserInstallPolicy$PackageSettingsDelegator;->mGetPackagesLocked:Ljava/util/function/Supplier;
 
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
@@ -70,7 +63,6 @@
 .method public setEnabled(Lcom/android/server/pm/PackageSetting;II)V
     .locals 0
 
-    .line 312
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/MultiUserInstallPolicy$PackageSettingsDelegator;->mSetEnabled:Lcom/android/internal/util/function/TriConsumer;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -89,7 +81,6 @@
 .method public setInstalled(Lcom/android/server/pm/PackageSetting;ZI)V
     .locals 0
 
-    .line 308
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/MultiUserInstallPolicy$PackageSettingsDelegator;->mSetInstalled:Lcom/android/internal/util/function/TriConsumer;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

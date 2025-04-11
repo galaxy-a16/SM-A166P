@@ -23,7 +23,6 @@
 
     const-string v0, "a49eb41e-cb06-495c-9f4f-bb80a90cdf00"
 
-    .line 44
     invoke-static {v0}, Landroid/os/ParcelUuid;->fromString(Ljava/lang/String;)Landroid/os/ParcelUuid;
 
     move-result-object v0
@@ -32,17 +31,14 @@
 
     const-wide/16 v0, -0x1
 
-    .line 127
     sput-wide v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppPackageListVersion:J
 
-    .line 128
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppPackageList:Ljava/util/List;
 
-    .line 129
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,10 +47,8 @@
 
     const/4 v0, 0x0
 
-    .line 130
     sput v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sSetParamCnt:I
 
-    .line 132
     new-instance v0, Lcom/android/server/utils/EventLogger;
 
     const/16 v1, 0x32
@@ -71,14 +65,12 @@
 .method public static checkAndUpdateAuracastApp(ILjava/lang/String;I)V
     .locals 6
 
-    .line 190
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "l_auracast_app_key;"
 
-    .line 191
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v1, 0x1
@@ -87,7 +79,6 @@
 
     if-ne p2, v1, :cond_1
 
-    .line 193
     sget-object p2, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppPackageList:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -108,14 +99,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 194
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 195
     sget-object v1, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppUidList:Ljava/util/ArrayList;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -124,7 +113,6 @@
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 196
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,14 +129,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 197
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 198
     sget-object v1, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v3, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -184,7 +170,6 @@
     :cond_1
     if-nez p2, :cond_3
 
-    .line 202
     sget-object p2, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppUidList:Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -210,7 +195,6 @@
 
     if-ne v1, p0, :cond_2
 
-    .line 204
     sget-object p2, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppUidList:Ljava/util/ArrayList;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -219,7 +203,6 @@
 
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 205
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -236,14 +219,12 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 206
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-static {p0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 207
     sget-object p0, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance p2, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -277,7 +258,6 @@
 .method public static getAuracastAppLogger()Lcom/android/server/utils/EventLogger;
     .locals 1
 
-    .line 215
     sget-object v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
     return-object v0
@@ -286,7 +266,6 @@
 .method public static getAuracastUids()Ljava/lang/String;
     .locals 4
 
-    .line 219
     sget-object v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppUidList:Ljava/util/ArrayList;
 
     const-string v1, ""
@@ -295,7 +274,6 @@
 
     return-object v1
 
-    .line 223
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -318,7 +296,6 @@
 
     move-result v2
 
-    .line 224
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -344,7 +321,6 @@
 .method public static intToBytes(I)[B
     .locals 3
 
-    .line 0
     const/4 v0, 0x2
 
     new-array v0, v0, [B
@@ -378,7 +354,6 @@
     :cond_0
     const/16 v1, 0x206
 
-    .line 79
     :try_start_0
     invoke-static {v1}, Lcom/samsung/android/server/audio/utils/BtUtils;->intToBytes(I)[B
 
@@ -390,7 +365,6 @@
 
     const/16 v2, 0x207
 
-    .line 80
     invoke-static {v2}, Lcom/samsung/android/server/audio/utils/BtUtils;->intToBytes(I)[B
 
     move-result-object v2
@@ -405,7 +379,6 @@
 
     const/4 v2, 0x3
 
-    .line 81
     aget-byte v1, v1, v2
 
     const/4 v3, 0x1
@@ -425,7 +398,6 @@
     :catch_0
     move-exception p0
 
-    .line 85
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -456,7 +428,6 @@
 .method public static isSamsungWatch(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHeadset;)Z
     .locals 0
 
-    .line 98
     invoke-static {p0, p1}, Lcom/samsung/android/server/audio/utils/BtUtils;->isSamsungWatchType(Landroid/bluetooth/BluetoothDevice;Landroid/bluetooth/BluetoothHeadset;)Z
 
     move-result p1
@@ -493,7 +464,6 @@
 
     goto :goto_0
 
-    .line 106
     :cond_0
     invoke-virtual {p1, p0}, Landroid/bluetooth/BluetoothHeadset;->getSamsungHandsfreeDeviceType(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
@@ -501,7 +471,6 @@
 
     const-string p1, "WA"
 
-    .line 107
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -524,7 +493,6 @@
 
     return v0
 
-    .line 115
     :cond_0
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getUuids()[Landroid/os/ParcelUuid;
 
@@ -549,7 +517,6 @@
 .method public static recoveryAuracastAppListToNative()V
     .locals 8
 
-    .line 230
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -574,7 +541,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     sget-object v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v1, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -589,7 +555,6 @@
 
     sget-object v3, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppUidList:Ljava/util/ArrayList;
 
-    .line 232
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -602,15 +567,12 @@
 
     invoke-direct {v1, v2}, Lcom/android/server/utils/EventLogger$StringEvent;-><init>(Ljava/lang/String;)V
 
-    .line 231
     invoke-virtual {v0, v1}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
     const/4 v0, 0x0
 
-    .line 235
     sput v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sSetParamCnt:I
 
-    .line 236
     sget-object v1, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppUidList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -643,7 +605,6 @@
 
     move-result v5
 
-    .line 237
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -664,7 +625,6 @@
 
     if-ne v3, v6, :cond_0
 
-    .line 240
     sget v3, Lcom/samsung/android/server/audio/utils/BtUtils;->sSetParamCnt:I
 
     invoke-static {v3, v4}, Lcom/samsung/android/server/audio/utils/BtUtils;->sendAuracastAppListToNative(ILjava/lang/String;)V
@@ -676,12 +636,10 @@
 
     if-ge v3, v6, :cond_2
 
-    .line 246
     sget v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sSetParamCnt:I
 
     invoke-static {v0, v4}, Lcom/samsung/android/server/audio/utils/BtUtils;->sendAuracastAppListToNative(ILjava/lang/String;)V
 
-    .line 248
     :cond_2
     sget-object v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
@@ -699,24 +657,20 @@
 .method public static sendAuracastAppListToNative(ILjava/lang/String;)V
     .locals 2
 
-    .line 136
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "l_auracast_app_key;"
 
-    .line 137
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     if-nez p0, :cond_0
 
     const-string/jumbo p0, "uid_reset;"
 
-    .line 139
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -734,14 +688,12 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 142
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-static {p0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 143
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -764,7 +716,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     sget-object p0, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance p1, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -777,7 +728,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 145
     sget p0, Lcom/samsung/android/server/audio/utils/BtUtils;->sSetParamCnt:I
 
     add-int/lit8 p0, p0, 0x1
@@ -790,14 +740,12 @@
 .method public static setAuracast(Z)V
     .locals 2
 
-    .line 253
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "l_auracast_enable="
 
-    .line 254
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     if-eqz p0, :cond_0
@@ -809,18 +757,15 @@
     :cond_0
     const-string p0, "false"
 
-    .line 255
     :goto_0
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 256
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-static {p0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 257
     sget-object p0, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v1, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -843,7 +788,6 @@
 
     return-void
 
-    .line 58
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -867,7 +811,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->semGetAudioType()I
 
     move-result p0
@@ -878,7 +821,6 @@
 
     const-string p0, "l_bt_type_headset=true"
 
-    .line 61
     invoke-static {p0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
     goto :goto_0
@@ -886,7 +828,6 @@
     :cond_1
     const-string p0, "l_bt_type_headset=false"
 
-    .line 64
     invoke-static {p0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
     :goto_0
@@ -896,7 +837,6 @@
 .method public static setBtVolumeMonitor(Z)V
     .locals 2
 
-    .line 48
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -924,7 +864,6 @@
     :cond_0
     const-string p0, "false"
 
-    .line 50
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -948,7 +887,6 @@
 .method public static updateBtAppList(Landroid/content/Context;Ljava/util/List;J)V
     .locals 11
 
-    .line 149
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -977,27 +915,22 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     sput-object p1, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppPackageList:Ljava/util/List;
 
-    .line 151
     sget-object v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppUidList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 152
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 155
     sput v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sSetParamCnt:I
 
     if-eqz p0, :cond_4
 
-    .line 158
     sget-object v2, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppPackageList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1028,7 +961,6 @@
 
     const-wide/16 v8, 0x0
 
-    .line 161
     :try_start_0
     invoke-static {v8, v9}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
 
@@ -1048,7 +980,6 @@
     :goto_1
     if-eqz v8, :cond_1
 
-    .line 166
     sget-object v9, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppUidList:Ljava/util/ArrayList;
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1057,7 +988,6 @@
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1080,7 +1010,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1102,7 +1031,6 @@
     :cond_1
     if-ne v4, v7, :cond_0
 
-    .line 172
     sget v4, Lcom/samsung/android/server/audio/utils/BtUtils;->sSetParamCnt:I
 
     invoke-static {v4, v5}, Lcom/samsung/android/server/audio/utils/BtUtils;->sendAuracastAppListToNative(ILjava/lang/String;)V
@@ -1114,21 +1042,17 @@
 
     if-ge v4, v7, :cond_3
 
-    .line 178
     sget p0, Lcom/samsung/android/server/audio/utils/BtUtils;->sSetParamCnt:I
 
     invoke-static {p0, v5}, Lcom/samsung/android/server/audio/utils/BtUtils;->sendAuracastAppListToNative(ILjava/lang/String;)V
 
-    .line 180
     :cond_3
     sput-wide p2, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppPackageListVersion:J
 
     const-string/jumbo p0, "updateBtAppList done"
 
-    .line 181
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     sget-object p0, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance p2, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -1149,7 +1073,6 @@
 
     invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -1162,7 +1085,6 @@
 
     invoke-direct {p2, p1}, Lcom/android/server/utils/EventLogger$StringEvent;-><init>(Ljava/lang/String;)V
 
-    .line 182
     invoke-virtual {p0, p2}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
     goto :goto_2
@@ -1170,7 +1092,6 @@
     :cond_4
     const-string/jumbo p0, "updateBtAppList PackageManager is null"
 
-    .line 185
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2

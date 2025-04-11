@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/NetworkScoreService;)V
     .locals 0
 
-    .line 103
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$1;->this$0:Lcom/android/server/NetworkScoreService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 106
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,12 +31,10 @@
 
     const/16 v1, -0x2710
 
-    .line 107
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 108
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
     move-result v0
@@ -77,14 +73,12 @@
     :cond_1
     const-string v0, "android.intent.action.USER_UNLOCKED"
 
-    .line 111
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 112
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$1;->this$0:Lcom/android/server/NetworkScoreService;
 
     invoke-virtual {p0, p2}, Lcom/android/server/NetworkScoreService;->onUserUnlocked(I)V

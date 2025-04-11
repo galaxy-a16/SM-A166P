@@ -7,7 +7,6 @@
 .method public static bridge synthetic -$$Nest$smOn()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/power/ShutdownThread$Led;->On()V
 
     return-void
@@ -18,7 +17,6 @@
 
     const/4 v0, 0x6
 
-    .line 997
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread$Led;->fileWriteInt(I)V
 
     return-void
@@ -31,14 +29,12 @@
 
     const-string v1, "ShutdownThread"
 
-    .line 1005
     new-instance v2, Ljava/io/File;
 
     const-string v3, "/sys/class/sec/led/led_pattern"
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1006
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
     move-result v3
@@ -49,7 +45,6 @@
 
     const-string p0, "!@LED File is not exist"
 
-    .line 1007
     invoke-static {v4, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -57,7 +52,6 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 1013
     :try_start_0
     new-instance v5, Ljava/io/FileOutputStream;
 
@@ -66,7 +60,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1014
     :try_start_1
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -81,7 +74,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1021
     :try_start_2
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -92,7 +84,6 @@
     :catch_0
     move-exception p0
 
-    .line 1024
     invoke-static {v1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
@@ -119,14 +110,12 @@
     :try_start_3
     const-string p0, "!@Exception has raised while file write"
 
-    .line 1016
     invoke-static {v4, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     if-eqz v3, :cond_1
 
-    .line 1021
     :try_start_4
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -149,10 +138,8 @@
     :catch_3
     move-exception v2
 
-    .line 1024
     invoke-static {v1, v0, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1026
     :cond_2
     :goto_3
     throw p0

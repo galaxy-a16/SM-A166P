@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$XF4nIDP0fnmSvuwZq5GkC1yfvfU(Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/people/prediction/ShareTargetPredictor;->lambda$predictTargets$0(Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -28,7 +27,6 @@
 .method public static synthetic $r8$lambda$ewGrTUEllLOZ4_Iuac1rViJBtSE(Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/people/prediction/ShareTargetPredictor;->lambda$sortTargets$1(Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;)I
 
     move-result p0
@@ -43,7 +41,6 @@
 
     const/4 v1, 0x3
 
-    .line 62
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -56,10 +53,8 @@
 .method public constructor <init>(Landroid/app/prediction/AppPredictionContext;Ljava/util/function/Consumer;Lcom/android/server/people/data/DataManager;ILandroid/content/Context;)V
     .locals 2
 
-    .line 71
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/people/prediction/AppTargetPredictor;-><init>(Landroid/app/prediction/AppPredictionContext;Ljava/util/function/Consumer;Lcom/android/server/people/data/DataManager;I)V
 
-    .line 72
     invoke-virtual {p1}, Landroid/app/prediction/AppPredictionContext;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
@@ -82,14 +77,12 @@
 
     const/4 v0, 0x0
 
-    .line 74
     invoke-static {p2, p3, v0}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 77
     invoke-virtual {p1}, Landroid/app/prediction/AppPredictionContext;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
@@ -100,7 +93,6 @@
 
     invoke-virtual {p2, p3, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 78
     invoke-static {p4}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object p2
@@ -111,14 +103,12 @@
 
     const-class p3, Landroid/app/prediction/AppPredictionManager;
 
-    .line 79
     invoke-virtual {p2, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Landroid/app/prediction/AppPredictionManager;
 
-    .line 80
     invoke-virtual {p2, p1}, Landroid/app/prediction/AppPredictionManager;->createAppPredictionSession(Landroid/app/prediction/AppPredictionContext;)Landroid/app/prediction/AppPredictor;
 
     move-result-object p1
@@ -130,7 +120,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 82
     iput-object p1, p0, Lcom/android/server/people/prediction/ShareTargetPredictor;->mRemoteAppPredictor:Landroid/app/prediction/AppPredictor;
 
     :goto_0
@@ -140,7 +129,6 @@
 .method public static synthetic lambda$predictTargets$0(Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;)Ljava/lang/Integer;
     .locals 0
 
-    .line 117
     invoke-virtual {p0}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getAppTarget()Landroid/app/prediction/AppTarget;
 
     move-result-object p0
@@ -159,7 +147,6 @@
 .method public static synthetic lambda$sortTargets$1(Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;)I
     .locals 0
 
-    .line 142
     invoke-virtual {p0}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getScore()F
 
     move-result p0
@@ -182,12 +169,10 @@
 .method public final getAppShareTargets(Ljava/util/List;)Ljava/util/List;
     .locals 6
 
-    .line 198
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 199
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -205,7 +190,6 @@
 
     check-cast v1, Landroid/app/prediction/AppTarget;
 
-    .line 200
     invoke-virtual {p0}, Lcom/android/server/people/prediction/AppTargetPredictor;->getDataManager()Lcom/android/server/people/data/DataManager;
 
     move-result-object v2
@@ -214,7 +198,6 @@
 
     move-result-object v3
 
-    .line 201
     invoke-virtual {v1}, Landroid/app/prediction/AppTarget;->getUser()Landroid/os/UserHandle;
 
     move-result-object v4
@@ -223,12 +206,10 @@
 
     move-result v4
 
-    .line 200
     invoke-virtual {v2, v3, v4}, Lcom/android/server/people/data/DataManager;->getPackage(Ljava/lang/String;I)Lcom/android/server/people/data/PackageData;
 
     move-result-object v2
 
-    .line 202
     new-instance v3, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
     const/4 v4, 0x0
@@ -239,7 +220,6 @@
 
     goto :goto_1
 
-    .line 204
     :cond_0
     invoke-virtual {v1}, Landroid/app/prediction/AppTarget;->getClassName()Ljava/lang/String;
 
@@ -252,7 +232,6 @@
     :goto_1
     invoke-direct {v3, v1, v2, v4}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;-><init>(Landroid/app/prediction/AppTarget;Lcom/android/server/people/data/EventHistory;Lcom/android/server/people/data/ConversationInfo;)V
 
-    .line 202
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -264,12 +243,10 @@
 .method public final getDirectShareTargets()Ljava/util/List;
     .locals 7
 
-    .line 166
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 168
     invoke-virtual {p0}, Lcom/android/server/people/prediction/AppTargetPredictor;->getDataManager()Lcom/android/server/people/data/DataManager;
 
     move-result-object v1
@@ -282,7 +259,6 @@
 
     move-result-object v1
 
-    .line 170
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -300,17 +276,14 @@
 
     check-cast v2, Landroid/content/pm/ShortcutManager$ShareShortcutInfo;
 
-    .line 171
     invoke-virtual {v2}, Landroid/content/pm/ShortcutManager$ShareShortcutInfo;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
 
     move-result-object v3
 
-    .line 172
     new-instance v4, Landroid/app/prediction/AppTarget$Builder;
 
     new-instance v5, Landroid/app/prediction/AppTargetId;
 
-    .line 173
     invoke-virtual {v3}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v6
@@ -319,7 +292,6 @@
 
     invoke-direct {v4, v5, v3}, Landroid/app/prediction/AppTarget$Builder;-><init>(Landroid/app/prediction/AppTargetId;Landroid/content/pm/ShortcutInfo;)V
 
-    .line 175
     invoke-virtual {v2}, Landroid/content/pm/ShortcutManager$ShareShortcutInfo;->getTargetComponent()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -332,7 +304,6 @@
 
     move-result-object v2
 
-    .line 176
     invoke-virtual {v3}, Landroid/content/pm/ShortcutInfo;->getRank()I
 
     move-result v4
@@ -341,22 +312,18 @@
 
     move-result-object v2
 
-    .line 177
     invoke-virtual {v2}, Landroid/app/prediction/AppTarget$Builder;->build()Landroid/app/prediction/AppTarget;
 
     move-result-object v2
 
-    .line 178
     invoke-virtual {v3}, Landroid/content/pm/ShortcutInfo;->getPackage()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 179
     invoke-virtual {v3}, Landroid/content/pm/ShortcutInfo;->getUserId()I
 
     move-result v5
 
-    .line 180
     invoke-virtual {p0}, Lcom/android/server/people/prediction/AppTargetPredictor;->getDataManager()Lcom/android/server/people/data/DataManager;
 
     move-result-object v6
@@ -369,19 +336,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 185
     invoke-virtual {v3}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 186
     invoke-virtual {v4, v3}, Lcom/android/server/people/data/PackageData;->getConversationInfo(Ljava/lang/String;)Lcom/android/server/people/data/ConversationInfo;
 
     move-result-object v6
 
     if-eqz v6, :cond_1
 
-    .line 188
     invoke-virtual {v4, v3}, Lcom/android/server/people/data/PackageData;->getEventHistory(Ljava/lang/String;)Lcom/android/server/people/data/EventHistory;
 
     move-result-object v5
@@ -391,7 +355,6 @@
     :cond_0
     move-object v6, v5
 
-    .line 191
     :cond_1
     :goto_1
     new-instance v3, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
@@ -413,7 +376,6 @@
 
     const/4 v0, 0x0
 
-    .line 210
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->getDataType(I)Ljava/lang/String;
 
     move-result-object p1
@@ -423,7 +385,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 211
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/people/prediction/AppTargetPredictor;->getDataManager()Lcom/android/server/people/data/DataManager;
 
@@ -439,7 +400,6 @@
 .method public predictTargets()V
     .locals 5
 
-    .line 105
     sget-boolean v0, Lcom/android/server/people/prediction/ShareTargetPredictor;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -448,16 +408,13 @@
 
     const-string/jumbo v1, "predictTargets"
 
-    .line 106
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     :cond_0
     iget-object v0, p0, Lcom/android/server/people/prediction/ShareTargetPredictor;->mIntentFilter:Landroid/content/IntentFilter;
 
     if-nez v0, :cond_1
 
-    .line 109
     invoke-static {}, Ljava/util/List;->of()Ljava/util/List;
 
     move-result-object v0
@@ -466,33 +423,27 @@
 
     return-void
 
-    .line 112
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/people/prediction/ShareTargetPredictor;->getDirectShareTargets()Ljava/util/List;
 
     move-result-object v0
 
-    .line 113
     iget-object v1, p0, Lcom/android/server/people/prediction/ShareTargetPredictor;->mIntentFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {p0, v1}, Lcom/android/server/people/prediction/ShareTargetPredictor;->getShareEventType(Landroid/content/IntentFilter;)I
 
     move-result v1
 
-    .line 114
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 113
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/people/prediction/SharesheetModelScorer;->computeScore(Ljava/util/List;IJ)V
 
-    .line 115
     new-instance v1, Lcom/android/server/people/prediction/ShareTargetPredictor$$ExternalSyntheticLambda0;
 
     invoke-direct {v1}, Lcom/android/server/people/prediction/ShareTargetPredictor$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 116
     invoke-static {}, Ljava/util/Collections;->reverseOrder()Ljava/util/Comparator;
 
     move-result-object v2
@@ -505,22 +456,18 @@
 
     invoke-direct {v2}, Lcom/android/server/people/prediction/ShareTargetPredictor$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 117
     invoke-interface {v1, v2}, Ljava/util/Comparator;->thenComparing(Ljava/util/function/Function;)Ljava/util/Comparator;
 
     move-result-object v1
 
-    .line 115
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 118
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v2, 0x0
 
-    .line 119
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/people/prediction/AppTargetPredictor;->getPredictionContext()Landroid/app/prediction/AppPredictionContext;
 
@@ -530,19 +477,16 @@
 
     move-result v3
 
-    .line 120
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 119
     invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
     if-ge v2, v3, :cond_2
 
-    .line 121
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -559,7 +503,6 @@
 
     goto :goto_0
 
-    .line 123
     :cond_2
     invoke-virtual {p0, v1}, Lcom/android/server/people/prediction/AppTargetPredictor;->updatePredictions(Ljava/util/List;)V
 
@@ -569,7 +512,6 @@
 .method public reportAppTargetEvent(Landroid/app/prediction/AppTargetEvent;)V
     .locals 2
 
-    .line 90
     sget-boolean v0, Lcom/android/server/people/prediction/ShareTargetPredictor;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -578,16 +520,13 @@
 
     const-string/jumbo v1, "reportAppTargetEvent"
 
-    .line 91
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     :cond_0
     iget-object v0, p0, Lcom/android/server/people/prediction/ShareTargetPredictor;->mIntentFilter:Landroid/content/IntentFilter;
 
     if-eqz v0, :cond_1
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/server/people/prediction/AppTargetPredictor;->getDataManager()Lcom/android/server/people/data/DataManager;
 
     move-result-object v0
@@ -596,13 +535,11 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/server/people/data/DataManager;->reportShareTargetEvent(Landroid/app/prediction/AppTargetEvent;Landroid/content/IntentFilter;)V
 
-    .line 96
     :cond_1
     iget-object p0, p0, Lcom/android/server/people/prediction/ShareTargetPredictor;->mRemoteAppPredictor:Landroid/app/prediction/AppPredictor;
 
     if-eqz p0, :cond_2
 
-    .line 97
     invoke-virtual {p0, p1}, Landroid/app/prediction/AppPredictor;->notifyAppTargetEvent(Landroid/app/prediction/AppTargetEvent;)V
 
     :cond_2
@@ -612,7 +549,6 @@
 .method public sortTargets(Ljava/util/List;Ljava/util/function/Consumer;)V
     .locals 8
 
-    .line 130
     sget-boolean v0, Lcom/android/server/people/prediction/ShareTargetPredictor;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -621,30 +557,24 @@
 
     const-string/jumbo v1, "sortTargets"
 
-    .line 131
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     :cond_0
     iget-object v0, p0, Lcom/android/server/people/prediction/ShareTargetPredictor;->mIntentFilter:Landroid/content/IntentFilter;
 
     if-nez v0, :cond_1
 
-    .line 134
     invoke-interface {p2, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
 
-    .line 137
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/people/prediction/ShareTargetPredictor;->getAppShareTargets(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/people/prediction/ShareTargetPredictor;->mIntentFilter:Landroid/content/IntentFilter;
 
-    .line 139
     invoke-virtual {p0, v0}, Lcom/android/server/people/prediction/ShareTargetPredictor;->getShareEventType(Landroid/content/IntentFilter;)I
 
     move-result v2
@@ -657,7 +587,6 @@
 
     move-result v3
 
-    .line 140
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -670,22 +599,18 @@
 
     move-object v1, p1
 
-    .line 138
     invoke-static/range {v1 .. v7}, Lcom/android/server/people/prediction/SharesheetModelScorer;->computeScoreForAppShare(Ljava/util/List;IIJLcom/android/server/people/data/DataManager;I)V
 
-    .line 142
     new-instance p0, Lcom/android/server/people/prediction/ShareTargetPredictor$$ExternalSyntheticLambda2;
 
     invoke-direct {p0}, Lcom/android/server/people/prediction/ShareTargetPredictor$$ExternalSyntheticLambda2;-><init>()V
 
     invoke-static {p1, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 143
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 144
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -703,12 +628,10 @@
 
     check-cast v0, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
-    .line 145
     invoke-virtual {v0}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getAppTarget()Landroid/app/prediction/AppTarget;
 
     move-result-object v1
 
-    .line 146
     new-instance v2, Landroid/app/prediction/AppTarget$Builder;
 
     invoke-virtual {v1}, Landroid/app/prediction/AppTarget;->getId()Landroid/app/prediction/AppTargetId;
@@ -719,14 +642,12 @@
 
     move-result-object v4
 
-    .line 147
     invoke-virtual {v1}, Landroid/app/prediction/AppTarget;->getUser()Landroid/os/UserHandle;
 
     move-result-object v5
 
     invoke-direct {v2, v3, v4, v5}, Landroid/app/prediction/AppTarget$Builder;-><init>(Landroid/app/prediction/AppTargetId;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 148
     invoke-virtual {v1}, Landroid/app/prediction/AppTarget;->getClassName()Ljava/lang/String;
 
     move-result-object v1
@@ -735,7 +656,6 @@
 
     move-result-object v1
 
-    .line 149
     invoke-virtual {v0}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getScore()F
 
     move-result v2
@@ -766,17 +686,14 @@
 
     move-result-object v0
 
-    .line 151
     invoke-virtual {v0}, Landroid/app/prediction/AppTarget$Builder;->build()Landroid/app/prediction/AppTarget;
 
     move-result-object v0
 
-    .line 146
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 153
     :cond_3
     invoke-interface {p2, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 

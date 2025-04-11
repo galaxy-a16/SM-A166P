@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/locales/LocaleManagerService;)V
     .locals 0
 
-    .line 167
     iput-object p1, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerInternalImpl;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     invoke-direct {p0}, Lcom/android/server/locales/LocaleManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/locales/LocaleManagerService;Lcom/android/server/locales/LocaleManagerService$LocaleManagerInternalImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/locales/LocaleManagerService$LocaleManagerInternalImpl;-><init>(Lcom/android/server/locales/LocaleManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public final checkCallerIsSystem()V
     .locals 1
 
-    .line 181
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -44,7 +41,6 @@
 
     return-void
 
-    .line 182
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -58,10 +54,8 @@
 .method public getBackupPayload(I)[B
     .locals 0
 
-    .line 171
     invoke-virtual {p0}, Lcom/android/server/locales/LocaleManagerService$LocaleManagerInternalImpl;->checkCallerIsSystem()V
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerInternalImpl;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     invoke-static {p0}, Lcom/android/server/locales/LocaleManagerService;->-$$Nest$fgetmBackupHelper(Lcom/android/server/locales/LocaleManagerService;)Lcom/android/server/locales/LocaleManagerBackupHelper;
@@ -78,7 +72,6 @@
 .method public stageAndApplyRestoredPayload([BI)V
     .locals 0
 
-    .line 177
     iget-object p0, p0, Lcom/android/server/locales/LocaleManagerService$LocaleManagerInternalImpl;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     invoke-static {p0}, Lcom/android/server/locales/LocaleManagerService;->-$$Nest$fgetmBackupHelper(Lcom/android/server/locales/LocaleManagerService;)Lcom/android/server/locales/LocaleManagerBackupHelper;

@@ -11,26 +11,22 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 1
 
-    .line 358
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;-><init>(Landroid/content/Context;Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     const-string/jumbo p1, "{com.android.phone/com.android.phone.UsimDownload}"
 
-    .line 353
     filled-new-array {p1}, [Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/policy/KeyboardShortcutManager$SFinderBehavior;->mDeniedActivities:[Ljava/lang/String;
 
-    .line 359
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
     const-string p2, "com.sec.android.app.launcher/com.sec.android.app.launcher.search.SearchActivity"
 
-    .line 360
     invoke-static {p2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object p2
@@ -41,10 +37,8 @@
 
     const/4 v0, 0x0
 
-    .line 361
     invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 362
     iput-object p1, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mIntent:Landroid/content/Intent;
 
     return-void
@@ -61,7 +55,6 @@
 
     return v0
 
-    .line 383
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mContext:Landroid/content/Context;
 
@@ -69,7 +62,6 @@
 
     move-result-object p0
 
-    .line 384
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v1
@@ -80,7 +72,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 385
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -96,7 +87,6 @@
 .method public isDeniedActivity()Z
     .locals 5
 
-    .line 389
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mPolicyExt:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManagerExt;->getTopActivity()Landroid/content/ComponentName;
@@ -109,13 +99,11 @@
 
     return v1
 
-    .line 394
     :cond_0
     invoke-virtual {v0}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 395
     iget-object p0, p0, Lcom/android/server/policy/KeyboardShortcutManager$SFinderBehavior;->mDeniedActivities:[Ljava/lang/String;
 
     array-length v2, p0
@@ -127,7 +115,6 @@
 
     aget-object v4, p0, v3
 
-    .line 396
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -150,7 +137,6 @@
 .method public preCondition()Z
     .locals 3
 
-    .line 367
     iget-object v0, p0, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/KeyboardShortcutManager$SFinderBehavior;->isActivityAvailable(Landroid/content/Intent;)Z
@@ -165,12 +151,10 @@
 
     const-string p0, "canLaunchAppByExternalKeyboard : SFinder activity is not available"
 
-    .line 368
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 372
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/KeyboardShortcutManager$SFinderBehavior;->isDeniedActivity()Z
 
@@ -180,12 +164,10 @@
 
     const-string p0, "canLaunchAppByExternalKeyboard: It is denied activity"
 
-    .line 373
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 376
     :cond_1
     invoke-super {p0}, Lcom/android/server/policy/KeyboardShortcutManager$Behavior;->preCondition()Z
 

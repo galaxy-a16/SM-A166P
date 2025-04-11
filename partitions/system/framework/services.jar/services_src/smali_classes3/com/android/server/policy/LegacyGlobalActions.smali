@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/policy/LegacyGlobalActions;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     throw p0
@@ -20,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsWaitingForEcmExit(Lcom/android/server/policy/LegacyGlobalActions;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     throw p0
@@ -29,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsWaitingForEcmExit(Lcom/android/server/policy/LegacyGlobalActions;Z)V
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     throw p0
@@ -38,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$mchangeAirplaneModeSystemSetting(Lcom/android/server/policy/LegacyGlobalActions;Z)V
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     throw p0

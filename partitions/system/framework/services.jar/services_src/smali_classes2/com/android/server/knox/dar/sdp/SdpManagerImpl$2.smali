@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;)V
     .locals 0
 
-    .line 580
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$2;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
 
-    .line 583
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 584
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +47,6 @@
 
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 586
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -61,14 +57,12 @@
 
     const/4 v2, -0x1
 
-    .line 587
     invoke-virtual {p2, v0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 589
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
@@ -78,7 +72,6 @@
 
     const/4 v4, 0x0
 
-    .line 590
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v3
@@ -87,7 +80,6 @@
 
     const-string v3, "android.intent.extra.DATA_REMOVED"
 
-    .line 591
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v3
@@ -96,7 +88,6 @@
 
     const/4 v4, 0x1
 
-    .line 594
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -120,7 +111,6 @@
 
     const-string v3, "On %s : DATA = %s, UID = %d, UserId = %d, Is replacing? %s"
 
-    .line 592
     invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -131,7 +121,6 @@
 
     const-string p0, "On %s : Skipped!"
 
-    .line 597
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
@@ -144,7 +133,6 @@
 
     goto :goto_0
 
-    .line 599
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -152,12 +140,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 601
     invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 602
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -174,22 +160,18 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 604
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v0, "userId"
 
-    .line 605
     invoke-virtual {p2, v0, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "pkgName"
 
-    .line 606
     invoke-virtual {p2, v0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 608
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$2;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     const/4 p1, 0x4

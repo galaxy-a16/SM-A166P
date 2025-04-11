@@ -17,10 +17,8 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -29,13 +27,10 @@
 
     const/4 v0, 0x0
 
-    .line 105
     iput v0, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mPointer:I
 
-    .line 108
     iput p1, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mCapacity:I
 
-    .line 109
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -50,12 +45,10 @@
 .method public add(Ljava/lang/Object;)V
     .locals 3
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 114
     :try_start_0
     iget v1, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mPointer:I
 
@@ -67,7 +60,6 @@
 
     iput v1, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mPointer:I
 
-    .line 115
     iget-object v1, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -78,7 +70,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 117
     iget-object v1, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
     iget p0, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mPointer:I
@@ -87,13 +78,11 @@
 
     goto :goto_0
 
-    .line 119
     :cond_0
     iget-object p0, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 121
     :goto_0
     monitor-exit v0
 
@@ -112,12 +101,10 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 8
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 126
     :try_start_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
@@ -125,7 +112,6 @@
 
     move-result v1
 
-    .line 127
     iget v2, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mCapacity:I
 
     const/4 v3, 0x0
@@ -144,7 +130,6 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 129
     iget-object v5, p0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_1
@@ -175,7 +160,6 @@
 
     goto :goto_0
 
-    .line 131
     :cond_2
     monitor-exit v0
 

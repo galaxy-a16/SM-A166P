@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$8EMLcC35K_oEd63Gh5dshJcjeoM(Lcom/android/server/accessibility/UiAutomationManager$UiAutomationService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/accessibility/UiAutomationManager$UiAutomationService;->lambda$connectServiceUnknownThread$0()V
 
     return-void
@@ -26,10 +25,8 @@
 
     move-object v0, p1
 
-    .line 248
     iput-object v0, v13, Lcom/android/server/accessibility/UiAutomationManager$UiAutomationService;->this$0:Lcom/android/server/accessibility/UiAutomationManager;
 
-    .line 249
     invoke-static {}, Lcom/android/server/accessibility/UiAutomationManager;->-$$Nest$sfgetCOMPONENT_NAME()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -62,12 +59,10 @@
 
     move-object/from16 v0, p5
 
-    .line 252
     iput-object v0, v13, Lcom/android/server/accessibility/UiAutomationManager$UiAutomationService;->mMainHandler:Landroid/os/Handler;
 
     const/4 v0, 0x3
 
-    .line 253
     invoke-virtual {p0, v0}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->setDisplayTypes(I)V
 
     return-void
@@ -76,7 +71,6 @@
 .method private synthetic lambda$connectServiceUnknownThread$0()V
     .locals 8
 
-    .line 261
     :try_start_0
     iget-object v0, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mLock:Ljava/lang/Object;
 
@@ -84,7 +78,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 262
     :try_start_1
     iget-object v1, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mServiceInterface:Landroid/accessibilityservice/IAccessibilityServiceClient;
 
@@ -94,12 +87,10 @@
 
     const/4 v3, 0x0
 
-    .line 264
     iput-object v3, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mService:Landroid/os/IBinder;
 
     goto :goto_0
 
-    .line 266
     :cond_0
     invoke-interface {v1}, Landroid/accessibilityservice/IAccessibilityServiceClient;->asBinder()Landroid/os/IBinder;
 
@@ -107,10 +98,8 @@
 
     iput-object v3, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mService:Landroid/os/IBinder;
 
-    .line 267
     invoke-interface {v3, p0, v2}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 269
     :goto_0
     monitor-exit v0
     :try_end_1
@@ -118,7 +107,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 273
     :try_start_2
     iget-object v0, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mTrace:Landroid/accessibilityservice/AccessibilityTrace;
 
@@ -130,7 +118,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 275
     iget-object v0, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mTrace:Landroid/accessibilityservice/AccessibilityTrace;
 
     const-string v5, "UiAutomationService.connectServiceUnknownThread"
@@ -159,7 +146,6 @@
 
     iget-object v7, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mOverlayWindowTokens:Landroid/util/SparseArray;
 
-    .line 279
     invoke-virtual {v7, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -170,23 +156,19 @@
 
     move-result-object v6
 
-    .line 275
     invoke-interface {v0, v5, v3, v4, v6}, Landroid/accessibilityservice/AccessibilityTrace;->logTrace(Ljava/lang/String;JLjava/lang/String;)V
 
-    .line 281
     :cond_1
     iget v0, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mId:I
 
     iget-object v3, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mOverlayWindowTokens:Landroid/util/SparseArray;
 
-    .line 282
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/IBinder;
 
-    .line 281
     invoke-interface {v1, p0, v0, v2}, Landroid/accessibilityservice/IAccessibilityServiceClient;->init(Landroid/accessibilityservice/IAccessibilityServiceConnection;ILandroid/os/IBinder;)V
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
@@ -196,7 +178,6 @@
     :catchall_0
     move-exception v1
 
-    .line 269
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -214,10 +195,8 @@
 
     const-string v2, "Error initialized connection"
 
-    .line 285
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 286
     iget-object p0, p0, Lcom/android/server/accessibility/UiAutomationManager$UiAutomationService;->this$0:Lcom/android/server/accessibility/UiAutomationManager;
 
     invoke-static {p0}, Lcom/android/server/accessibility/UiAutomationManager;->-$$Nest$mdestroyUiAutomationService(Lcom/android/server/accessibility/UiAutomationManager;)V
@@ -232,7 +211,6 @@
 .method public binderDied()V
     .locals 0
 
-    .line 293
     iget-object p0, p0, Lcom/android/server/accessibility/UiAutomationManager$UiAutomationService;->this$0:Lcom/android/server/accessibility/UiAutomationManager;
 
     invoke-static {p0}, Lcom/android/server/accessibility/UiAutomationManager;->-$$Nest$mdestroyUiAutomationService(Lcom/android/server/accessibility/UiAutomationManager;)V
@@ -243,7 +221,6 @@
 .method public connectServiceUnknownThread()V
     .locals 2
 
-    .line 258
     iget-object v0, p0, Lcom/android/server/accessibility/UiAutomationManager$UiAutomationService;->mMainHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/accessibility/UiAutomationManager$UiAutomationService$$ExternalSyntheticLambda0;
@@ -258,14 +235,12 @@
 .method public disableSelf()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 2
 
-    .line 309
     iget-object p1, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mContext:Landroid/content/Context;
 
     const-string p3, "UiAutomationManager"
@@ -278,13 +253,11 @@
 
     return-void
 
-    .line 310
     :cond_0
     iget-object p1, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 311
     :try_start_0
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -296,7 +269,6 @@
 
     iget v0, p0, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mEventTypes:I
 
-    .line 312
     invoke-static {v0}, Landroid/view/accessibility/AccessibilityEvent;->eventTypeToString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -307,10 +279,8 @@
 
     move-result-object p3
 
-    .line 311
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 313
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -331,10 +301,8 @@
 
     const-string p0, "]"
 
-    .line 314
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 315
     monitor-exit p1
 
     return-void
@@ -352,7 +320,6 @@
 .method public getSoftKeyboardShowMode()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -361,7 +328,6 @@
 .method public hasRightsToCurrentUserLocked()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -370,7 +336,6 @@
 .method public isAccessibilityButtonAvailable()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -379,7 +344,6 @@
 .method public isCapturingFingerprintGestures()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -388,35 +352,30 @@
 .method public onFingerprintGesture(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onFingerprintGestureDetectionActiveChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setInputMethodEnabled(Ljava/lang/String;Z)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x2
 
     return p0
@@ -425,7 +384,6 @@
 .method public setSoftKeyboardShowMode(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -434,7 +392,6 @@
 .method public supportsFlagForNotImportantViews(Landroid/accessibilityservice/AccessibilityServiceInfo;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -443,7 +400,6 @@
 .method public switchToInputMethod(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -452,6 +408,5 @@
 .method public takeScreenshot(ILandroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

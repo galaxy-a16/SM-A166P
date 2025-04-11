@@ -45,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetbackgroundTime(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->backgroundTime:J
 
     return-wide v0
@@ -54,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetinterval(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->interval:J
 
     return-wide v0
@@ -63,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fgetisAllowed(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->isAllowed:Z
 
     return p0
@@ -72,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fgetisForeground(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->isForeground:Z
 
     return p0
@@ -81,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fgetisHighPowerRequest(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->isHighPowerRequest:Z
 
     return p0
@@ -90,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fgetisListenerType(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->isListenerType:Z
 
     return p0
@@ -99,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$fgetlistenerId(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->listenerId:Ljava/lang/String;
 
     return-object p0
@@ -108,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$fgetmaxWaitTime(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->maxWaitTime:J
 
     return-wide v0
@@ -117,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$fgetminUpdateInterval(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->minUpdateInterval:J
 
     return-wide v0
@@ -126,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$fgetnumUpdates(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->numUpdates:I
 
     return p0
@@ -135,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$fgetpackageName(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->packageName:Ljava/lang/String;
 
     return-object p0
@@ -144,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$fgetpid(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->pid:I
 
     return p0
@@ -153,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$fgetprovider(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->provider:Ljava/lang/String;
 
     return-object p0
@@ -162,7 +149,6 @@
 .method public static bridge synthetic -$$Nest$fgetquality(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->quality:I
 
     return p0
@@ -171,7 +157,6 @@
 .method public static bridge synthetic -$$Nest$fgetrequestTime(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->requestTime:J
 
     return-wide v0
@@ -180,7 +165,6 @@
 .method public static bridge synthetic -$$Nest$fgetrequester(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->requester:I
 
     return p0
@@ -189,7 +173,6 @@
 .method public static bridge synthetic -$$Nest$fgetuid(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->uid:I
 
     return p0
@@ -198,7 +181,6 @@
 .method public static bridge synthetic -$$Nest$fgetversionName(Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->versionName:Ljava/lang/String;
 
     return-object p0
@@ -207,12 +189,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 136
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x7fffffff
 
-    .line 129
     iput v0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->numUpdates:I
 
     return-void
@@ -223,7 +203,6 @@
 .method public build()Lcom/android/server/location/nsflp/LocationRequestInfo;
     .locals 3
 
-    .line 220
     iget-object v0, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->provider:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -236,7 +215,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 228
     new-instance v0, Lcom/android/server/location/nsflp/LocationRequestInfo;
 
     const/4 v1, 0x0
@@ -245,7 +223,6 @@
 
     return-object v0
 
-    .line 221
     :cond_0
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -297,7 +274,6 @@
 .method public setAllowed(Z)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 210
     iput-boolean p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->isAllowed:Z
 
     return-object p0
@@ -306,7 +282,6 @@
 .method public setForeground(Z)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 195
     iput-boolean p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->isForeground:Z
 
     return-object p0
@@ -315,7 +290,6 @@
 .method public setHighPowerRequest(Z)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 215
     iput-boolean p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->isHighPowerRequest:Z
 
     return-object p0
@@ -324,7 +298,6 @@
 .method public setInterval(J)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 175
     iput-wide p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->interval:J
 
     return-object p0
@@ -333,7 +306,6 @@
 .method public setListenerId(Ljava/lang/String;)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 150
     iput-object p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->listenerId:Ljava/lang/String;
 
     return-object p0
@@ -342,7 +314,6 @@
 .method public setListenerType(Z)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 205
     iput-boolean p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->isListenerType:Z
 
     return-object p0
@@ -351,7 +322,6 @@
 .method public setMaxWaitTime(J)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 185
     iput-wide p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->maxWaitTime:J
 
     return-object p0
@@ -360,7 +330,6 @@
 .method public setMinUpdateInterval(J)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 180
     iput-wide p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->minUpdateInterval:J
 
     return-object p0
@@ -369,7 +338,6 @@
 .method public setPackageName(Ljava/lang/String;)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 140
     iput-object p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->packageName:Ljava/lang/String;
 
     return-object p0
@@ -378,7 +346,6 @@
 .method public setPid(I)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 237
     iput p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->pid:I
 
     return-object p0
@@ -387,7 +354,6 @@
 .method public setProvider(Ljava/lang/String;)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 155
     iput-object p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->provider:Ljava/lang/String;
 
     return-object p0
@@ -396,7 +362,6 @@
 .method public setQuality(I)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 160
     iput p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->quality:I
 
     return-object p0
@@ -405,7 +370,6 @@
 .method public setRequestTime(J)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 165
     iput-wide p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->requestTime:J
 
     return-object p0
@@ -414,7 +378,6 @@
 .method public setUid(I)Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;
     .locals 0
 
-    .line 232
     iput p1, p0, Lcom/android/server/location/nsflp/LocationRequestInfo$Builder;->uid:I
 
     return-object p0

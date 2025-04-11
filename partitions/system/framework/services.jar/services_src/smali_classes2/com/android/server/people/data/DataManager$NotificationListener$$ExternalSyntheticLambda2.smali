@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/util/Pair;
 
     invoke-static {p1}, Lcom/android/server/people/data/DataManager$NotificationListener;->$r8$lambda$wH0bw_hfGpfek5uLOCE3rrl_Nbs(Landroid/util/Pair;)Ljava/util/Set;

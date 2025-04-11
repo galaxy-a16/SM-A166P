@@ -15,16 +15,12 @@
 .method public constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
 
-    .line 3663
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3664
     iput-object p1, p0, Lcom/android/server/notification/PreferencesHelper$Delegate;->mPkg:Ljava/lang/String;
 
-    .line 3665
     iput p2, p0, Lcom/android/server/notification/PreferencesHelper$Delegate;->mUid:I
 
-    .line 3666
     iput-boolean p3, p0, Lcom/android/server/notification/PreferencesHelper$Delegate;->mEnabled:Z
 
     return-void
@@ -45,7 +41,6 @@
 
     goto :goto_0
 
-    .line 3673
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/PreferencesHelper$Delegate;->mPkg:Ljava/lang/String;
 

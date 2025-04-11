@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/inputmethod/InputMethodSubtypeSwitchingController$ImeSubtypeListItem;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/InputMethodMenuController;->$r8$lambda$566RWZXyoi3aMm8qvb35qeKt2B8(Lcom/android/server/inputmethod/InputMethodSubtypeSwitchingController$ImeSubtypeListItem;)Z

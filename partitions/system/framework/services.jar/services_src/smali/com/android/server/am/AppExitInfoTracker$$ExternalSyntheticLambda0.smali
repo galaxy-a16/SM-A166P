@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     new-instance p0, Landroid/util/SparseArray;
 
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V

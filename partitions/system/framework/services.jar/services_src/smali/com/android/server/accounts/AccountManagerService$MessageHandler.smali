@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 5600
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$MessageHandler;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
-    .line 5601
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 5606
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x3
@@ -36,7 +33,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 5613
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$MessageHandler;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -53,7 +49,6 @@
 
     goto :goto_0
 
-    .line 5617
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -77,13 +72,11 @@
 
     throw p0
 
-    .line 5608
     :cond_1
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Lcom/android/server/accounts/AccountManagerService$Session;
 
-    .line 5609
     invoke-virtual {p0}, Lcom/android/server/accounts/AccountManagerService$Session;->onTimedOut()V
 
     :goto_0

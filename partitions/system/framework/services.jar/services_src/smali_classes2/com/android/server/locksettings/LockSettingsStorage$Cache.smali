@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$mgetVersion(Lcom/android/server/locksettings/LockSettingsStorage$Cache;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->getVersion()I
 
     move-result p0
@@ -26,17 +25,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 812
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 813
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
-    .line 814
     new-instance v0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;
 
     const/4 v1, 0x0
@@ -47,7 +43,6 @@
 
     const/4 v0, 0x0
 
-    .line 815
     iput v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mVersion:I
 
     return-void
@@ -56,7 +51,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/locksettings/LockSettingsStorage$Cache-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;-><init>()V
 
     return-void
@@ -69,13 +63,11 @@
 
     monitor-enter p0
 
-    .line 922
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 923
     iget v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mVersion:I
 
     add-int/lit8 v0, v0, 0x1
@@ -84,7 +76,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 924
     monitor-exit p0
 
     return-void
@@ -102,7 +93,6 @@
 
     monitor-enter p0
 
-    .line 884
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
@@ -135,7 +125,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 907
     array-length p0, p1
 
     invoke-static {p1, p0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -156,7 +145,6 @@
 
     monitor-enter p0
 
-    .line 892
     :try_start_0
     iget v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mVersion:I
     :try_end_0
@@ -177,7 +165,6 @@
 .method public hasFile(Ljava/io/File;)Z
     .locals 2
 
-    .line 843
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -198,7 +185,6 @@
 
     const/4 v0, 0x0
 
-    .line 823
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->contains(ILjava/lang/String;I)Z
 
     move-result p0
@@ -213,7 +199,6 @@
 
     const-string v1, ""
 
-    .line 860
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->contains(ILjava/lang/String;I)Z
 
     move-result p0
@@ -226,7 +211,6 @@
 
     monitor-enter p0
 
-    .line 888
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
@@ -257,7 +241,6 @@
 .method public peekFile(Ljava/io/File;)[B
     .locals 2
 
-    .line 839
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -284,12 +267,10 @@
 
     const/4 v0, 0x0
 
-    .line 818
     invoke-virtual {p0, v0, p1, p3}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->peek(ILjava/lang/String;I)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 819
     invoke-static {}, Lcom/android/server/locksettings/LockSettingsStorage;->-$$Nest$sfgetDEFAULT()Ljava/lang/Object;
 
     move-result-object p1
@@ -312,13 +293,11 @@
 
     monitor-enter p0
 
-    .line 911
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 912
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -332,7 +311,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 913
     iget-object v2, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -341,7 +319,6 @@
 
     check-cast v2, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;
 
-    .line 914
     iget v3, v2, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;->type:I
 
     if-ne v3, v1, :cond_0
@@ -354,7 +331,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 915
     iget-object v2, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
@@ -364,7 +340,6 @@
 
     goto :goto_0
 
-    .line 918
     :cond_1
     iget p1, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mVersion:I
 
@@ -374,7 +349,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 919
     monitor-exit p0
 
     return-void
@@ -392,7 +366,6 @@
 
     monitor-enter p0
 
-    .line 870
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
@@ -408,7 +381,6 @@
 
     invoke-virtual {v0, p1, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 871
     iget p1, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mVersion:I
 
     add-int/lit8 p1, p1, 0x1
@@ -417,7 +389,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 872
     monitor-exit p0
 
     return-void
@@ -433,7 +404,6 @@
 .method public putFile(Ljava/io/File;[B)V
     .locals 2
 
-    .line 847
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -456,7 +426,6 @@
 
     const/4 v1, 0x1
 
-    .line 851
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -481,7 +450,6 @@
 
     monitor-enter p0
 
-    .line 876
     :try_start_0
     invoke-virtual {p0, p1, p2, p4}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->contains(ILjava/lang/String;I)Z
 
@@ -493,7 +461,6 @@
 
     if-ne v0, p5, :cond_0
 
-    .line 877
     iget-object p5, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
     new-instance v0, Lcom/android/server/locksettings/LockSettingsStorage$Cache$CacheKey;
@@ -510,7 +477,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 881
     :cond_0
     monitor-exit p0
 
@@ -529,7 +495,6 @@
 
     const/4 v0, 0x0
 
-    .line 827
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->put(ILjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
@@ -550,7 +515,6 @@
 
     move v5, p4
 
-    .line 831
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->putIfUnchanged(ILjava/lang/String;Ljava/lang/Object;II)V
 
     return-void
@@ -561,7 +525,6 @@
 
     monitor-enter p0
 
-    .line 864
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
@@ -573,7 +536,6 @@
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 865
     iget p1, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mVersion:I
 
     add-int/lit8 p1, p1, 0x1
@@ -582,7 +544,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 866
     monitor-exit p0
 
     return-void
@@ -600,7 +561,6 @@
 
     const/4 v0, 0x0
 
-    .line 835
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->remove(ILjava/lang/String;I)V
 
     return-void
@@ -611,7 +571,6 @@
 
     monitor-enter p0
 
-    .line 896
     :try_start_0
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
@@ -624,7 +583,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 897
     iget-object v1, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -637,7 +595,6 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 898
     iget-object v1, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
@@ -647,7 +604,6 @@
 
     goto :goto_0
 
-    .line 903
     :cond_1
     iget p1, p0, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->mVersion:I
 
@@ -657,7 +613,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 904
     monitor-exit p0
 
     return-void
@@ -679,7 +634,6 @@
 
     const/4 v2, 0x2
 
-    .line 856
     invoke-virtual {p0, v2, v0, v1, p1}, Lcom/android/server/locksettings/LockSettingsStorage$Cache;->put(ILjava/lang/String;Ljava/lang/Object;I)V
 
     return-void

@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/CrashDexOpt$CrashKind;
     .locals 2
 
-    .line 66
     sget-object v0, Lcom/android/server/am/CrashDexOpt$CrashKind;->JAVA:Lcom/android/server/am/CrashDexOpt$CrashKind;
 
     sget-object v1, Lcom/android/server/am/CrashDexOpt$CrashKind;->NATIVE:Lcom/android/server/am/CrashDexOpt$CrashKind;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 67
     new-instance v0, Lcom/android/server/am/CrashDexOpt$CrashKind;
 
     const-string v1, "JAVA"
@@ -51,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/am/CrashDexOpt$CrashKind;->NATIVE:Lcom/android/server/am/CrashDexOpt$CrashKind;
 
-    .line 66
     invoke-static {}, Lcom/android/server/am/CrashDexOpt$CrashKind;->$values()[Lcom/android/server/am/CrashDexOpt$CrashKind;
 
     move-result-object v0
@@ -64,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 66
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -73,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/CrashDexOpt$CrashKind;
     .locals 1
 
-    .line 66
     const-class v0, Lcom/android/server/am/CrashDexOpt$CrashKind;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -88,7 +83,6 @@
 .method public static values()[Lcom/android/server/am/CrashDexOpt$CrashKind;
     .locals 1
 
-    .line 66
     sget-object v0, Lcom/android/server/am/CrashDexOpt$CrashKind;->$VALUES:[Lcom/android/server/am/CrashDexOpt$CrashKind;
 
     invoke-virtual {v0}, [Lcom/android/server/am/CrashDexOpt$CrashKind;->clone()Ljava/lang/Object;

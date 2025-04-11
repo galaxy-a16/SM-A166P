@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    .line 0
     check-cast p1, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;
 
     check-cast p2, Lcom/android/server/media/MediaRoute2Provider;

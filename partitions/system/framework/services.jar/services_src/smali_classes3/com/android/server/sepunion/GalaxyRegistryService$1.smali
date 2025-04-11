@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/GalaxyRegistryService;)V
     .locals 0
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/sepunion/GalaxyRegistryService$1;->this$0:Lcom/android/server/sepunion/GalaxyRegistryService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     const-string p1, "android.intent.action.BOOT_COMPLETED"
 
-    .line 116
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -39,7 +37,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$1;->this$0:Lcom/android/server/sepunion/GalaxyRegistryService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$mstartService(Lcom/android/server/sepunion/GalaxyRegistryService;)V

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/proxy/LocalProxyManager;)V
     .locals 0
 
-    .line 207
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/LocalProxyManager$2;->this$0:Lcom/android/server/enterprise/proxy/LocalProxyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 214
     iget-object p1, p0, Lcom/android/server/enterprise/proxy/LocalProxyManager$2;->this$0:Lcom/android/server/enterprise/proxy/LocalProxyManager;
 
     invoke-static {p2}, Lcom/android/net/IProxyCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/net/IProxyCallback;
@@ -36,7 +34,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/enterprise/proxy/LocalProxyManager;->-$$Nest$fputmCallbackService(Lcom/android/server/enterprise/proxy/LocalProxyManager;Lcom/android/net/IProxyCallback;)V
 
-    .line 215
     iget-object p1, p0, Lcom/android/server/enterprise/proxy/LocalProxyManager$2;->this$0:Lcom/android/server/enterprise/proxy/LocalProxyManager;
 
     invoke-static {p1}, Lcom/android/server/enterprise/proxy/LocalProxyManager;->-$$Nest$fgetmCallbackService(Lcom/android/server/enterprise/proxy/LocalProxyManager;)Lcom/android/net/IProxyCallback;
@@ -45,7 +42,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 216
     iget-object p0, p0, Lcom/android/server/enterprise/proxy/LocalProxyManager$2;->this$0:Lcom/android/server/enterprise/proxy/LocalProxyManager;
 
     invoke-static {p0}, Lcom/android/server/enterprise/proxy/LocalProxyManager;->-$$Nest$mexecutePendingOperations(Lcom/android/server/enterprise/proxy/LocalProxyManager;)V
@@ -57,6 +53,5 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

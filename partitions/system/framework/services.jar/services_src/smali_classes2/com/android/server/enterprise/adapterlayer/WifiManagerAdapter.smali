@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,25 +29,21 @@
 
     monitor-enter v0
 
-    .line 62
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mInstance:Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;
 
     if-nez v1, :cond_0
 
-    .line 63
     new-instance v1, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;
 
     invoke-direct {v1}, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;-><init>()V
 
     sput-object v1, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mInstance:Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;
 
-    .line 64
     sput-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "wifi"
 
-    .line 65
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -59,7 +54,6 @@
 
     const-string/jumbo v1, "sem_wifi"
 
-    .line 66
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -68,7 +62,6 @@
 
     sput-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mSemWifiManager:Lcom/samsung/android/wifi/SemWifiManager;
 
-    .line 68
     :cond_0
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mInstance:Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;
     :try_end_0
@@ -93,22 +86,18 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 120
     new-instance p0, Landroid/content/AttributionSource$Builder;
 
     invoke-direct {p0, p1}, Landroid/content/AttributionSource$Builder;-><init>(I)V
 
-    .line 121
     invoke-virtual {p0, p2}, Landroid/content/AttributionSource$Builder;->setPackageName(Ljava/lang/String;)Landroid/content/AttributionSource$Builder;
 
     move-result-object p0
 
-    .line 122
     invoke-virtual {p0}, Landroid/content/AttributionSource$Builder;->build()Landroid/content/AttributionSource;
 
     move-result-object p0
 
-    .line 123
     sget-object p1, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mContext:Landroid/content/Context;
 
     const-class p2, Landroid/permission/PermissionManager;
@@ -119,34 +108,28 @@
 
     check-cast p1, Landroid/permission/PermissionManager;
 
-    .line 124
     invoke-virtual {p1, p0}, Landroid/permission/PermissionManager;->registerAttributionSource(Landroid/content/AttributionSource;)Landroid/content/AttributionSource;
 
     move-result-object p0
 
-    .line 125
     sget-object p1, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mContext:Landroid/content/Context;
 
     new-instance p2, Landroid/content/ContextParams$Builder;
 
     invoke-direct {p2}, Landroid/content/ContextParams$Builder;-><init>()V
 
-    .line 126
     invoke-virtual {p2, p0}, Landroid/content/ContextParams$Builder;->setNextAttributionSource(Landroid/content/AttributionSource;)Landroid/content/ContextParams$Builder;
 
     move-result-object p0
 
-    .line 127
     invoke-virtual {p0}, Landroid/content/ContextParams$Builder;->build()Landroid/content/ContextParams;
 
     move-result-object p0
 
-    .line 125
     invoke-virtual {p1, p0}, Landroid/content/Context;->createContext(Landroid/content/ContextParams;)Landroid/content/Context;
 
     move-result-object p0
 
-    .line 129
     :cond_0
     const-class p1, Landroid/net/wifi/WifiManager;
 
@@ -164,7 +147,6 @@
 .method public connect(I)V
     .locals 1
 
-    .line 134
     :try_start_0
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -172,7 +154,6 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/net/wifi/WifiManager;->connect(ILandroid/net/wifi/WifiManager$ActionListener;)V
 
-    .line 137
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "sem_wifi"
@@ -187,7 +168,6 @@
 
     const/4 v0, 0x0
 
-    .line 139
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/wifi/SemWifiManager;->setConnectionAttemptInfo(IZ)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -197,7 +177,6 @@
     :catch_0
     move-exception p0
 
-    .line 143
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -228,7 +207,6 @@
 .method public enableNetwork(IZ)V
     .locals 0
 
-    .line 165
     :try_start_0
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -241,7 +219,6 @@
     :catch_0
     move-exception p0
 
-    .line 167
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,7 +248,6 @@
 .method public forget(Landroid/net/wifi/WifiConfiguration;)Z
     .locals 0
 
-    .line 89
     :try_start_0
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -290,7 +266,6 @@
 
     const-string p1, "forget - failed to get wifi service"
 
-    .line 91
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -301,7 +276,6 @@
 .method public getConfiguredNetworks()Ljava/util/List;
     .locals 2
 
-    .line 149
     :try_start_0
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -311,7 +285,6 @@
 
     if-nez p0, :cond_0
 
-    .line 151
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -324,7 +297,6 @@
     :catch_0
     move-exception p0
 
-    .line 158
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -355,7 +327,6 @@
 .method public getSoftApConfiguration()Landroid/net/wifi/SoftApConfiguration;
     .locals 0
 
-    .line 76
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mSemWifiManager:Lcom/samsung/android/wifi/SemWifiManager;
 
     invoke-virtual {p0}, Lcom/samsung/android/wifi/SemWifiManager;->getSoftApConfiguration()Landroid/net/wifi/SoftApConfiguration;
@@ -368,7 +339,6 @@
 .method public getWifiApState()I
     .locals 0
 
-    .line 80
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mSemWifiManager:Lcom/samsung/android/wifi/SemWifiManager;
 
     invoke-virtual {p0}, Lcom/samsung/android/wifi/SemWifiManager;->getWifiApState()I
@@ -381,7 +351,6 @@
 .method public resetSoftAp()V
     .locals 1
 
-    .line 84
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mSemWifiManager:Lcom/samsung/android/wifi/SemWifiManager;
 
     new-instance v0, Landroid/os/Message;
@@ -402,7 +371,6 @@
 
     return p0
 
-    .line 101
     :cond_0
     :try_start_0
     sget-object v0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mContext:Landroid/content/Context;
@@ -411,19 +379,16 @@
 
     move-result-object p2
 
-    .line 103
     iget p3, p1, Landroid/net/wifi/WifiConfiguration;->networkId:I
 
     if-ne p3, p0, :cond_1
 
-    .line 104
     invoke-virtual {p2, p1}, Landroid/net/wifi/WifiManager;->addNetwork(Landroid/net/wifi/WifiConfiguration;)I
 
     move-result p0
 
     return p0
 
-    .line 106
     :cond_1
     invoke-virtual {p2, p1}, Landroid/net/wifi/WifiManager;->updateNetwork(Landroid/net/wifi/WifiConfiguration;)I
 
@@ -436,7 +401,6 @@
     :catch_0
     move-exception p1
 
-    .line 109
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -465,7 +429,6 @@
 .method public setSoftApConfiguration(Landroid/net/wifi/SoftApConfiguration;)V
     .locals 0
 
-    .line 72
     sget-object p0, Lcom/android/server/enterprise/adapterlayer/WifiManagerAdapter;->mSemWifiManager:Lcom/samsung/android/wifi/SemWifiManager;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/wifi/SemWifiManager;->setSoftApConfiguration(Landroid/net/wifi/SoftApConfiguration;)V

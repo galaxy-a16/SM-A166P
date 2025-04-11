@@ -36,7 +36,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 19
     new-instance v0, Landroid/hardware/biometrics/face/SensorProps$1;
 
     invoke-direct {v0}, Landroid/hardware/biometrics/face/SensorProps$1;-><init>()V
@@ -49,38 +48,28 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 8
     iput-byte v0, p0, Landroid/hardware/biometrics/face/SensorProps;->sensorType:B
 
-    .line 9
     iput-boolean v0, p0, Landroid/hardware/biometrics/face/SensorProps;->halControlsPreview:Z
 
-    .line 10
     iput v0, p0, Landroid/hardware/biometrics/face/SensorProps;->previewDisplayId:I
 
-    .line 11
     iput v0, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewWidth:I
 
-    .line 12
     iput v0, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewHeight:I
 
     const/4 v1, 0x0
 
-    .line 13
     iput v1, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollTranslationX:F
 
-    .line 14
     iput v1, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollTranslationY:F
 
-    .line 15
     iput v1, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewScale:F
 
-    .line 16
     iput-boolean v0, p0, Landroid/hardware/biometrics/face/SensorProps;->supportsDetectInteraction:Z
 
     return-void
@@ -91,7 +80,6 @@
 .method public describeContents()I
     .locals 1
 
-    .line 86
     iget-object v0, p0, Landroid/hardware/biometrics/face/SensorProps;->commonProps:Landroid/hardware/biometrics/common/CommonProps;
 
     invoke-virtual {p0, v0}, Landroid/hardware/biometrics/face/SensorProps;->describeContents(Ljava/lang/Object;)I
@@ -112,13 +100,11 @@
 
     return p0
 
-    .line 91
     :cond_0
     instance-of v0, p1, Landroid/os/Parcelable;
 
     if-eqz v0, :cond_1
 
-    .line 92
     check-cast p1, Landroid/os/Parcelable;
 
     invoke-interface {p1}, Landroid/os/Parcelable;->describeContents()I
@@ -132,7 +118,6 @@
 .method public final getStability()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -141,12 +126,10 @@
 .method public final readFromParcel(Landroid/os/Parcel;)V
     .locals 5
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
-    .line 53
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -159,7 +142,6 @@
 
     if-lt v1, v2, :cond_15
 
-    .line 56
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -178,12 +160,10 @@
     :goto_0
     add-int/2addr v0, v1
 
-    .line 80
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 78
     :cond_0
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -191,7 +171,6 @@
 
     throw p0
 
-    .line 57
     :cond_1
     :try_start_1
     sget-object v2, Landroid/hardware/biometrics/common/CommonProps;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -204,7 +183,6 @@
 
     iput-object v2, p0, Landroid/hardware/biometrics/face/SensorProps;->commonProps:Landroid/hardware/biometrics/common/CommonProps;
 
-    .line 58
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -221,7 +199,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_2
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -229,7 +206,6 @@
 
     throw p0
 
-    .line 59
     :cond_3
     :try_start_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
@@ -238,7 +214,6 @@
 
     iput-byte v2, p0, Landroid/hardware/biometrics/face/SensorProps;->sensorType:B
 
-    .line 60
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -255,7 +230,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_4
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -263,7 +237,6 @@
 
     throw p0
 
-    .line 61
     :cond_5
     :try_start_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readBoolean()Z
@@ -272,7 +245,6 @@
 
     iput-boolean v2, p0, Landroid/hardware/biometrics/face/SensorProps;->halControlsPreview:Z
 
-    .line 62
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -289,7 +261,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_6
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -297,7 +268,6 @@
 
     throw p0
 
-    .line 63
     :cond_7
     :try_start_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -306,7 +276,6 @@
 
     iput v2, p0, Landroid/hardware/biometrics/face/SensorProps;->previewDisplayId:I
 
-    .line 64
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -323,7 +292,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_8
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -331,7 +299,6 @@
 
     throw p0
 
-    .line 65
     :cond_9
     :try_start_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -340,7 +307,6 @@
 
     iput v2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewWidth:I
 
-    .line 66
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -357,7 +323,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_a
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -365,7 +330,6 @@
 
     throw p0
 
-    .line 67
     :cond_b
     :try_start_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -374,7 +338,6 @@
 
     iput v2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewHeight:I
 
-    .line 68
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -391,7 +354,6 @@
 
     goto/16 :goto_0
 
-    .line 78
     :cond_c
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -399,7 +361,6 @@
 
     throw p0
 
-    .line 69
     :cond_d
     :try_start_7
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
@@ -408,7 +369,6 @@
 
     iput v2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollTranslationX:F
 
-    .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -425,7 +385,6 @@
 
     goto/16 :goto_0
 
-    .line 78
     :cond_e
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -433,7 +392,6 @@
 
     throw p0
 
-    .line 71
     :cond_f
     :try_start_8
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
@@ -442,7 +400,6 @@
 
     iput v2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollTranslationY:F
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -459,7 +416,6 @@
 
     goto/16 :goto_0
 
-    .line 78
     :cond_10
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -467,7 +423,6 @@
 
     throw p0
 
-    .line 73
     :cond_11
     :try_start_9
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
@@ -476,7 +431,6 @@
 
     iput v2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewScale:F
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -493,7 +447,6 @@
 
     goto/16 :goto_0
 
-    .line 78
     :cond_12
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -501,7 +454,6 @@
 
     throw p0
 
-    .line 75
     :cond_13
     :try_start_a
     invoke-virtual {p1}, Landroid/os/Parcel;->readBoolean()Z
@@ -518,12 +470,10 @@
 
     add-int/2addr v0, v1
 
-    .line 80
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 78
     :cond_14
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -536,7 +486,6 @@
 
     goto :goto_1
 
-    .line 55
     :cond_15
     :try_start_b
     new-instance p0, Landroid/os/BadParcelableException;
@@ -554,7 +503,6 @@
 
     if-le v0, v4, :cond_16
 
-    .line 78
     new-instance p0, Landroid/os/BadParcelableException;
 
     invoke-direct {p0, v3}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
@@ -564,90 +512,72 @@
     :cond_16
     add-int/2addr v0, v1
 
-    .line 80
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 81
     throw p0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 33
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 34
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 35
     iget-object v1, p0, Landroid/hardware/biometrics/face/SensorProps;->commonProps:Landroid/hardware/biometrics/common/CommonProps;
 
     invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
 
-    .line 36
     iget-byte p2, p0, Landroid/hardware/biometrics/face/SensorProps;->sensorType:B
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 37
     iget-boolean p2, p0, Landroid/hardware/biometrics/face/SensorProps;->halControlsPreview:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBoolean(Z)V
 
-    .line 38
     iget p2, p0, Landroid/hardware/biometrics/face/SensorProps;->previewDisplayId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 39
     iget p2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewWidth:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 40
     iget p2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewHeight:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 41
     iget p2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollTranslationX:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 42
     iget p2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollTranslationY:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 43
     iget p2, p0, Landroid/hardware/biometrics/face/SensorProps;->enrollPreviewScale:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 44
     iget-boolean p0, p0, Landroid/hardware/biometrics/face/SensorProps;->supportsDetectInteraction:Z
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
 
-    .line 45
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p0
 
-    .line 46
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     sub-int p2, p0, v0
 
-    .line 47
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 48
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void

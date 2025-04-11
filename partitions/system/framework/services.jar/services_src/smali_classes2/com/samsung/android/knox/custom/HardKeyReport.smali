@@ -24,7 +24,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 69
     new-instance v0, Lcom/samsung/android/knox/custom/HardKeyReport$1;
 
     invoke-direct {v0}, Lcom/samsung/android/knox/custom/HardKeyReport$1;-><init>()V
@@ -37,16 +36,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput p1, p0, Lcom/samsung/android/knox/custom/HardKeyReport;->mKeyCode:I
 
-    .line 42
     iput p2, p0, Lcom/samsung/android/knox/custom/HardKeyReport;->mReportType:I
 
-    .line 43
     iput p3, p0, Lcom/samsung/android/knox/custom/HardKeyReport;->mBlock:I
 
     return-void
@@ -55,24 +50,20 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/knox/custom/HardKeyReport;->mKeyCode:I
 
-    .line 65
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/knox/custom/HardKeyReport;->mReportType:I
 
-    .line 66
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -85,7 +76,6 @@
 .method public synthetic constructor <init>(Landroid/os/Parcel;Lcom/samsung/android/knox/custom/HardKeyReport-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/knox/custom/HardKeyReport;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -96,7 +86,6 @@
 .method public describeContents()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -105,7 +94,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,17 +142,14 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 58
     iget p2, p0, Lcom/samsung/android/knox/custom/HardKeyReport;->mKeyCode:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 59
     iget p2, p0, Lcom/samsung/android/knox/custom/HardKeyReport;->mReportType:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 60
     iget p0, p0, Lcom/samsung/android/knox/custom/HardKeyReport;->mBlock:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

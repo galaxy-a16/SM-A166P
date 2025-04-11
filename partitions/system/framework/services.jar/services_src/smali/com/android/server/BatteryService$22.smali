@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;Landroid/content/Intent;)V
     .locals 0
 
-    .line 2920
     iput-object p1, p0, Lcom/android/server/BatteryService$22;->this$0:Lcom/android/server/BatteryService;
 
     iput-object p2, p0, Lcom/android/server/BatteryService$22;->val$statusIntent:Landroid/content/Intent;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 5
 
-    .line 2923
     iget-object v0, p0, Lcom/android/server/BatteryService$22;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmContext(Lcom/android/server/BatteryService;)Landroid/content/Context;
@@ -52,14 +50,12 @@
 
     invoke-virtual {v0, v1, v2, v4, v3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 2926
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetFEATURE_SUPPORTED_DAILY_BOARD()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2927
     iget-object v0, p0, Lcom/android/server/BatteryService$22;->val$statusIntent:Landroid/content/Intent;
 
     invoke-virtual {v0}, Landroid/content/Intent;->clone()Ljava/lang/Object;
@@ -70,10 +66,8 @@
 
     const/16 v1, 0x20
 
-    .line 2928
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2929
     iget-object v1, p0, Lcom/android/server/BatteryService$22;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmContext(Lcom/android/server/BatteryService;)Landroid/content/Context;
@@ -84,7 +78,6 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/server/BatteryService;->-$$Nest$smsendBroadcastToExplicitPackage(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 2933
     :cond_0
     invoke-static {}, Lcom/samsung/android/feature/SemCscFeature;->getInstance()Lcom/samsung/android/feature/SemCscFeature;
 
@@ -104,7 +97,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2934
     iget-object v0, p0, Lcom/android/server/BatteryService$22;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmContext(Lcom/android/server/BatteryService;)Landroid/content/Context;
@@ -117,7 +109,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/BatteryService;->-$$Nest$smsendBroadcastToExplicitPackage(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 2939
     :cond_1
     iget-object v0, p0, Lcom/android/server/BatteryService$22;->this$0:Lcom/android/server/BatteryService;
 
@@ -127,7 +118,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2941
     iget-object v1, p0, Lcom/android/server/BatteryService$22;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmContext(Lcom/android/server/BatteryService;)Landroid/content/Context;

@@ -15,16 +15,12 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;ILcom/android/internal/inputmethod/IAccessibilityInputMethodSession;)V
     .locals 0
 
-    .line 565
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 566
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessibilitySessionState;->mClient:Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;
 
-    .line 567
     iput p2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessibilitySessionState;->mId:I
 
-    .line 568
     iput-object p3, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessibilitySessionState;->mSession:Lcom/android/internal/inputmethod/IAccessibilityInputMethodSession;
 
     return-void
@@ -35,7 +31,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 557
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -66,7 +61,6 @@
 
     iget v1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessibilitySessionState;->mId:I
 
-    .line 558
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -79,12 +73,10 @@
 
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessibilitySessionState;->mSession:Lcom/android/internal/inputmethod/IAccessibilityInputMethodSession;
 
-    .line 560
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0
 
-    .line 559
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0

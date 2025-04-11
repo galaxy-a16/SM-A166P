@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessRecord;)V
     .locals 0
 
-    .line 15713
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$24;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$24;->val$app:Lcom/android/server/am/ProcessRecord;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 1
 
-    .line 15716
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$24;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$24;->val$app:Lcom/android/server/am/ProcessRecord;

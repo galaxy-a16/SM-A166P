@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIs2GTDMANetwork(Lcom/samsung/android/server/audio/PhoneStateHelper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mIs2GTDMANetwork:Z
 
     return p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRilState(Lcom/samsung/android/server/audio/PhoneStateHelper;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mRilState:I
 
     return p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fputmIs2GTDMANetwork(Lcom/samsung/android/server/audio/PhoneStateHelper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mIs2GTDMANetwork:Z
 
     return-void
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fputmRilState(Lcom/samsung/android/server/audio/PhoneStateHelper;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mRilState:I
 
     return-void
@@ -61,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$mis2GTDMANetwork(Lcom/samsung/android/server/audio/PhoneStateHelper;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/PhoneStateHelper;->is2GTDMANetwork(I)Z
 
     move-result p0
@@ -72,25 +67,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 38
     iput v0, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mRilState:I
 
     const/4 v0, 0x0
 
-    .line 39
     iput v0, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mSimCount:I
 
-    .line 42
     iput-boolean v0, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mIs2GTDMANetwork:Z
 
     const-string/jumbo v0, "phone"
 
-    .line 46
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -105,19 +95,16 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/samsung/android/server/audio/PhoneStateHelper;
     .locals 1
 
-    .line 50
     sget-object v0, Lcom/samsung/android/server/audio/PhoneStateHelper;->sInstance:Lcom/samsung/android/server/audio/PhoneStateHelper;
 
     if-nez v0, :cond_0
 
-    .line 51
     new-instance v0, Lcom/samsung/android/server/audio/PhoneStateHelper;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/audio/PhoneStateHelper;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/samsung/android/server/audio/PhoneStateHelper;->sInstance:Lcom/samsung/android/server/audio/PhoneStateHelper;
 
-    .line 53
     :cond_0
     sget-object p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->sInstance:Lcom/samsung/android/server/audio/PhoneStateHelper;
 
@@ -129,7 +116,6 @@
 .method public final getPhoneStateListener()Landroid/telephony/PhoneStateListener;
     .locals 1
 
-    .line 95
     new-instance v0, Lcom/samsung/android/server/audio/PhoneStateHelper$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/server/audio/PhoneStateHelper$1;-><init>(Lcom/samsung/android/server/audio/PhoneStateHelper;)V
@@ -140,7 +126,6 @@
 .method public final is2GTDMANetwork(I)Z
     .locals 1
 
-    .line 0
     const/4 p0, 0x1
 
     if-eq p1, p0, :cond_1
@@ -166,7 +151,6 @@
 .method public registerPhoneStateListener()V
     .locals 6
 
-    .line 57
     iget-object v0, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getActiveModemCount()I
@@ -181,18 +165,15 @@
 
     const-string p0, "do not register PhoneStateListener on NO_SIM state"
 
-    .line 61
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 65
     :cond_0
     new-array v2, v0, [Landroid/telephony/PhoneStateListener;
 
     iput-object v2, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
 
-    .line 66
     new-array v0, v0, [Landroid/telephony/TelephonyManager;
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mSpecifiedTm:[Landroid/telephony/TelephonyManager;
@@ -201,28 +182,23 @@
 
     move v2, v0
 
-    .line 68
     :goto_0
     iget v3, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mSimCount:I
 
     if-ge v2, v3, :cond_2
 
-    .line 69
     invoke-static {v2}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 70
     array-length v4, v3
 
     if-lez v4, :cond_1
 
-    .line 71
     aget v3, v3, v0
 
-    .line 72
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -247,7 +223,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     iget-object v4, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
 
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/PhoneStateHelper;->getPhoneStateListener()Landroid/telephony/PhoneStateListener;
@@ -256,7 +231,6 @@
 
     aput-object v5, v4, v2
 
-    .line 75
     iget-object v4, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mSpecifiedTm:[Landroid/telephony/TelephonyManager;
 
     iget-object v5, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -267,7 +241,6 @@
 
     aput-object v3, v4, v2
 
-    .line 76
     iget-object v3, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mSpecifiedTm:[Landroid/telephony/TelephonyManager;
 
     aget-object v3, v3, v2
@@ -292,7 +265,6 @@
 .method public unregisterPhoneStateListener()V
     .locals 4
 
-    .line 83
     iget-object v0, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v0, :cond_1
@@ -301,20 +273,17 @@
 
     move v1, v0
 
-    .line 84
     :goto_0
     iget v2, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mSimCount:I
 
     if-ge v1, v2, :cond_1
 
-    .line 85
     iget-object v2, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
 
     aget-object v2, v2, v1
 
     if-eqz v2, :cond_0
 
-    .line 86
     iget-object v3, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mSpecifiedTm:[Landroid/telephony/TelephonyManager;
 
     aget-object v3, v3, v1
@@ -323,10 +292,8 @@
 
     const/4 v2, -0x1
 
-    .line 87
     iput v2, p0, Lcom/samsung/android/server/audio/PhoneStateHelper;->mRilState:I
 
-    .line 88
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

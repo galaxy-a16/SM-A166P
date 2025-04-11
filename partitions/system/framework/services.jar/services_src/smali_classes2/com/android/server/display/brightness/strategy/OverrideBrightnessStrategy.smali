@@ -20,7 +20,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "OverrideBrightnessStrategy"
 
     return-object p0
@@ -29,17 +28,14 @@
 .method public updateBrightness(Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;)Lcom/android/server/display/DisplayBrightnessState;
     .locals 1
 
-    .line 34
     iget p1, p1, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;->screenBrightnessOverride:F
 
-    .line 36
     invoke-virtual {p0}, Lcom/android/server/display/brightness/strategy/OverrideBrightnessStrategy;->getName()Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x6
 
-    .line 34
     invoke-static {v0, p1, p1, p0}, Lcom/android/server/display/brightness/BrightnessUtils;->constructDisplayBrightnessState(IFFLjava/lang/String;)Lcom/android/server/display/DisplayBrightnessState;
 
     move-result-object p0

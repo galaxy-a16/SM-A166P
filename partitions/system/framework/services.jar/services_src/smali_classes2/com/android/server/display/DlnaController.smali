@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/display/DlnaController;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/DlnaController;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDevice(Lcom/android/server/display/DlnaController;)Landroid/hardware/display/SemDlnaDevice;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/DlnaController;->mDevice:Landroid/hardware/display/SemDlnaDevice;
 
     return-object p0
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDlnaMonitor(Lcom/android/server/display/DlnaController;)Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/DlnaController;->mDlnaMonitor:Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;
 
     return-object p0
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/display/DlnaController;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/DlnaController;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -53,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fputmDlnaMonitor(Lcom/android/server/display/DlnaController;Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/display/DlnaController;->mDlnaMonitor:Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;
 
     return-void
@@ -62,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$mdlnaPlayerTypeToString(Lcom/android/server/display/DlnaController;I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/display/DlnaController;->dlnaPlayerTypeToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -73,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$msendStatusChangedBroadcast(Lcom/android/server/display/DlnaController;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/display/DlnaController;->sendStatusChangedBroadcast()V
 
     return-void
@@ -82,16 +75,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/display/DlnaController;->mContext:Landroid/content/Context;
 
-    .line 42
     iput-object p2, p0, Lcom/android/server/display/DlnaController;->mHandler:Landroid/os/Handler;
 
-    .line 43
     new-instance p1, Landroid/hardware/display/SemDlnaDevice;
 
     invoke-direct {p1}, Landroid/hardware/display/SemDlnaDevice;-><init>()V
@@ -106,7 +95,6 @@
 .method public final dlnaConnectionStateToString(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p1, :cond_3
 
     const/4 p0, 0x1
@@ -149,7 +137,6 @@
 .method public final dlnaPlayerTypeToString(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p1, :cond_3
 
     const/4 p0, 0x1
@@ -192,7 +179,6 @@
 .method public getDlnaDevice()Landroid/hardware/display/SemDlnaDevice;
     .locals 0
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/display/DlnaController;->mDevice:Landroid/hardware/display/SemDlnaDevice;
 
     return-object p0
@@ -201,7 +187,6 @@
 .method public isConnected()Z
     .locals 0
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/display/DlnaController;->mDevice:Landroid/hardware/display/SemDlnaDevice;
 
     invoke-virtual {p0}, Landroid/hardware/display/SemDlnaDevice;->isConnected()Z
@@ -214,14 +199,12 @@
 .method public sendDisconnectionRequestBroadcast()V
     .locals 2
 
-    .line 77
     invoke-virtual {p0}, Lcom/android/server/display/DlnaController;->isConnected()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/display/DlnaController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/display/DlnaController$1;
@@ -237,7 +220,6 @@
 .method public final sendStatusChangedBroadcast()V
     .locals 2
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/display/DlnaController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/display/DlnaController$2;
@@ -252,7 +234,6 @@
 .method public setDlnaDevice(Landroid/hardware/display/SemDlnaDevice;Landroid/os/IBinder;)Z
     .locals 3
 
-    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -261,7 +242,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 48
     invoke-virtual {p1}, Landroid/hardware/display/SemDlnaDevice;->getDlnaType()I
 
     move-result v1
@@ -276,7 +256,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 49
     invoke-virtual {p1}, Landroid/hardware/display/SemDlnaDevice;->getConnectionState()I
 
     move-result v1
@@ -291,7 +270,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 50
     invoke-virtual {p1}, Landroid/hardware/display/SemDlnaDevice;->getDeviceName()Ljava/lang/String;
 
     move-result-object v1
@@ -304,10 +282,8 @@
 
     const-string v1, "DlnaController"
 
-    .line 47
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     invoke-virtual {p1}, Landroid/hardware/display/SemDlnaDevice;->getDlnaType()I
 
     move-result v0
@@ -318,7 +294,6 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 53
     invoke-virtual {p1}, Landroid/hardware/display/SemDlnaDevice;->getDlnaType()I
 
     move-result v0
@@ -329,7 +304,6 @@
 
     goto :goto_0
 
-    .line 57
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DlnaController;->mDevice:Landroid/hardware/display/SemDlnaDevice;
 
@@ -348,12 +322,10 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/display/DlnaController;->mDlnaMonitor:Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;
 
     if-nez v0, :cond_2
 
-    .line 61
     new-instance v0, Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;
 
     invoke-virtual {p1}, Landroid/hardware/display/SemDlnaDevice;->getDlnaType()I
@@ -364,11 +336,9 @@
 
     iput-object v0, p0, Lcom/android/server/display/DlnaController;->mDlnaMonitor:Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;
 
-    .line 63
     :cond_2
     iput-object p1, p0, Lcom/android/server/display/DlnaController;->mDevice:Landroid/hardware/display/SemDlnaDevice;
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/server/display/DlnaController;->sendStatusChangedBroadcast()V
 
     :cond_3

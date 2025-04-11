@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallback(Lcom/android/server/sepunion/cover/CoverTestModeUtils;)Lcom/android/server/sepunion/cover/CoverTestModeUtils$OnCoverTestModeChanged;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mCallback:Lcom/android/server/sepunion/cover/CoverTestModeUtils$OnCoverTestModeChanged;
 
     return-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$mgetTestModeFromSetting(Lcom/android/server/sepunion/cover/CoverTestModeUtils;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->getTestModeFromSetting()I
 
     move-result p0
@@ -49,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$mgetTestVisibleRectFromSetting(Lcom/android/server/sepunion/cover/CoverTestModeUtils;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->getTestVisibleRectFromSetting()Landroid/graphics/Rect;
 
     move-result-object p0
@@ -60,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$mupdateCoverTestMode(Lcom/android/server/sepunion/cover/CoverTestModeUtils;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->updateCoverTestMode(I)V
 
     return-void
@@ -69,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsCurrentTestMode()I
     .locals 1
 
-    .line 0
     sget v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
     return v0
@@ -78,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$sfputsCurrentTestVisibleRect(Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 0
     sput-object p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestVisibleRect:Landroid/graphics/Rect;
 
     return-void
@@ -87,7 +81,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,7 +103,6 @@
 
     sput-object v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->TAG:Ljava/lang/String;
 
-    .line 23
     invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
 
     move-result v0
@@ -121,10 +113,8 @@
 
     const/4 v0, -0x1
 
-    .line 28
     sput v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
-    .line 29
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -137,22 +127,18 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/sepunion/cover/CoverTestModeUtils$OnCoverTestModeChanged;)V
     .locals 2
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     new-instance v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/cover/CoverTestModeUtils$1;-><init>(Lcom/android/server/sepunion/cover/CoverTestModeUtils;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mTestModeChangeHandler:Landroid/os/Handler;
 
-    .line 49
     sget-boolean v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->SHIPPED:Z
 
     if-eqz v0, :cond_0
 
-    .line 50
     sget-object p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->TAG:Ljava/lang/String;
 
     const-string p1, "This version has been shipped!! Then cover test mode is not available"
@@ -161,14 +147,11 @@
 
     return-void
 
-    .line 54
     :cond_0
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
-    .line 55
     iput-object p2, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mCallback:Lcom/android/server/sepunion/cover/CoverTestModeUtils$OnCoverTestModeChanged;
 
-    .line 57
     new-instance p1, Lcom/android/server/sepunion/cover/CoverTestModeUtils$2;
 
     new-instance p2, Landroid/os/Handler;
@@ -181,12 +164,10 @@
 
     const-string p1, "cover_test_mode"
 
-    .line 64
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 65
     iget-object p2, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -199,14 +180,12 @@
 
     invoke-virtual {p2, p1, v1, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 67
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->getTestModeFromSetting()I
 
     move-result p1
 
     sput p1, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
-    .line 69
     new-instance p1, Lcom/android/server/sepunion/cover/CoverTestModeUtils$3;
 
     new-instance p2, Landroid/os/Handler;
@@ -219,12 +198,10 @@
 
     const-string p1, "cover_test_visible_rect"
 
-    .line 75
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 76
     iget-object p2, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -235,7 +212,6 @@
 
     invoke-virtual {p2, p1, v1, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->getTestVisibleRectFromSetting()Landroid/graphics/Rect;
 
     move-result-object p0
@@ -248,7 +224,6 @@
 .method public static getTestCoverType()I
     .locals 1
 
-    .line 137
     sget-boolean v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->SHIPPED:Z
 
     if-eqz v0, :cond_0
@@ -257,7 +232,6 @@
 
     return v0
 
-    .line 140
     :cond_0
     sget v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
@@ -267,7 +241,6 @@
 .method public static getTestVisibleRect()Landroid/graphics/Rect;
     .locals 1
 
-    .line 144
     sget-object v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestVisibleRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -276,7 +249,6 @@
 .method public static isTestMode()Z
     .locals 2
 
-    .line 133
     sget-boolean v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->SHIPPED:Z
 
     if-nez v0, :cond_0
@@ -305,12 +277,10 @@
 
     const-string p0, " Current CoverTestModeUtils state:"
 
-    .line 160
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  SHIPPED="
 
-    .line 161
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget-boolean p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->SHIPPED:Z
@@ -319,7 +289,6 @@
 
     const-string p0, "  sCurrentTestMode="
 
-    .line 162
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestMode:I
@@ -328,7 +297,6 @@
 
     const-string p0, "  sCurrentTestVisibleRect="
 
-    .line 163
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget-object p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestVisibleRect:Landroid/graphics/Rect;
@@ -337,7 +305,6 @@
 
     const-string p0, "  "
 
-    .line 164
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -346,7 +313,6 @@
 .method public final getTestModeFromSetting()I
     .locals 2
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -367,12 +333,10 @@
 .method public final getTestVisibleRectFromSetting()Landroid/graphics/Rect;
     .locals 2
 
-    .line 90
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 91
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -390,14 +354,12 @@
     :try_start_0
     const-string v1, ","
 
-    .line 94
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 95
     aget-object v1, p0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -408,7 +370,6 @@
 
     const/4 v1, 0x1
 
-    .line 96
     aget-object v1, p0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -419,7 +380,6 @@
 
     const/4 v1, 0x2
 
-    .line 97
     aget-object v1, p0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -430,7 +390,6 @@
 
     const/4 v1, 0x3
 
-    .line 98
     aget-object p0, p0, v1
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -446,7 +405,6 @@
     :catch_0
     move-exception p0
 
-    .line 100
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -457,7 +415,6 @@
 .method public setTestModeToSetting(I)V
     .locals 1
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -474,7 +431,6 @@
 .method public setTestVisibleRectToSetting(Landroid/graphics/Rect;)V
     .locals 3
 
-    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,7 +463,6 @@
 
     move-result-object p1
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -524,7 +479,6 @@
 .method public final updateCoverTestMode(I)V
     .locals 4
 
-    .line 112
     sget-object v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -551,14 +505,12 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     sget v0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 119
     :cond_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mCallback:Lcom/android/server/sepunion/cover/CoverTestModeUtils$OnCoverTestModeChanged;
 
@@ -573,14 +525,11 @@
 
     if-eq v0, v2, :cond_2
 
-    .line 124
     invoke-interface {v1, v0, v3}, Lcom/android/server/sepunion/cover/CoverTestModeUtils$OnCoverTestModeChanged;->onCoverTestModeChanged(IZ)V
 
-    .line 127
     :cond_2
     sput p1, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->sCurrentTestMode:I
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->mTestModeChangeHandler:Landroid/os/Handler;
 
     const-wide/16 v0, 0x1f4

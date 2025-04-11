@@ -31,7 +31,6 @@
 .method public static synthetic $r8$lambda$98LGh6qmVtiWfun_vsMJwLoVCCk(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/UdcCutoutPolicy;->lambda$updateUseForceLayoutInUdcCutoutIfNeeded$1(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -40,7 +39,6 @@
 .method public static synthetic $r8$lambda$NETqUPrTKDbMqGBkpzBpvbVYB6U(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/UdcCutoutPolicy;->lambda$updateUseForceLayoutInUdcCutoutIfNeeded$0(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -49,7 +47,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 266
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     const/4 v1, 0x0
@@ -68,7 +65,6 @@
     :goto_0
     sput-object v0, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutApplications:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 268
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -85,7 +81,6 @@
     :goto_1
     sput-object v0, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutActivities:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 270
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_2
@@ -103,20 +98,16 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;Lcom/android/server/wm/utils/RotationCache;)V
     .locals 0
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iput-object p1, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 73
     iget-object p1, p1, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     iput-object p1, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mContext:Landroid/content/Context;
 
-    .line 74
     iput-object p2, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mDisplayCutoutCache:Lcom/android/server/wm/utils/RotationCache;
 
     return-void
@@ -127,7 +118,6 @@
 
     const-string v0, "-udc_reset"
 
-    .line 282
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -136,27 +126,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 283
     sget-object p0, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutApplications:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 284
     sget-object p0, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutActivities:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 285
     sget-object p0, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutWindows:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 286
     invoke-static {p3}, Lcom/android/server/wm/UdcCutoutPolicy;->updateUseForceLayoutInUdcCutoutIfNeeded(Lcom/android/server/wm/WindowManagerService;)V
 
     const-string p0, "Reset"
 
-    .line 287
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v1
@@ -164,7 +149,6 @@
     :cond_0
     const-string v0, "-udc"
 
-    .line 291
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -177,14 +161,12 @@
 
     if-nez v2, :cond_1
 
-    .line 292
     invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 293
     invoke-virtual {v3, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -193,7 +175,6 @@
 
     return v5
 
-    .line 297
     :cond_1
     array-length v2, p1
 
@@ -214,12 +195,10 @@
 
     if-nez v2, :cond_7
 
-    .line 299
     array-length v2, p1
 
     if-ne v2, v6, :cond_3
 
-    .line 301
     :try_start_0
     aget-object v2, p1, v1
 
@@ -239,7 +218,6 @@
     :cond_3
     move v2, v1
 
-    .line 305
     :goto_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -259,7 +237,6 @@
 
     invoke-virtual {p2, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 306
     aget-object p1, p1, v5
 
     const-string v6, ":"
@@ -268,14 +245,12 @@
 
     move-result-object p1
 
-    .line 307
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 308
     array-length p0, p1
 
     :goto_1
@@ -283,7 +258,6 @@
 
     aget-object v0, p1, v5
 
-    .line 309
     sget-object v3, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutApplications:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -292,14 +266,12 @@
 
     invoke-virtual {v3, v0, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 310
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 312
     :cond_4
     invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -307,7 +279,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 313
     array-length p0, p1
 
     :goto_2
@@ -315,7 +286,6 @@
 
     aget-object v0, p1, v5
 
-    .line 314
     sget-object v3, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutActivities:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -324,14 +294,12 @@
 
     invoke-virtual {v3, v0, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 315
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 317
     :cond_5
     invoke-virtual {v3, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -339,7 +307,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 318
     array-length p0, p1
 
     :goto_3
@@ -347,7 +314,6 @@
 
     aget-object v0, p1, v5
 
-    .line 319
     sget-object v3, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutWindows:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -356,14 +322,12 @@
 
     invoke-virtual {v3, v0, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 320
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3
 
-    .line 323
     :cond_6
     invoke-static {p3}, Lcom/android/server/wm/UdcCutoutPolicy;->updateUseForceLayoutInUdcCutoutIfNeeded(Lcom/android/server/wm/WindowManagerService;)V
 
@@ -372,17 +336,14 @@
     :cond_7
     const-string p0, "Error: -udc requires [packageName | packageName:packageName:...] [true/false]"
 
-    .line 327
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "Error: -udc_a requires [ComponentName | ComponentName:ComponentName:...] [true/false]"
 
-    .line 329
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "Error: -udc_w requires [WindowTitle | WindowTitle:WindowTitle:...] [true/false]"
 
-    .line 331
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v1
@@ -391,7 +352,6 @@
 .method public static getApplicationInfo(Lcom/android/server/wm/WindowState;)Landroid/content/pm/ApplicationInfo;
     .locals 7
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
@@ -404,12 +364,10 @@
 
     iget v5, p0, Lcom/android/server/wm/WindowState;->mOwnerUid:I
 
-    .line 166
     invoke-static {v5}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v6
 
-    .line 164
     invoke-virtual/range {v1 .. v6}, Landroid/content/pm/PackageManagerInternal;->getApplicationInfo(Ljava/lang/String;JII)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
@@ -420,7 +378,6 @@
 .method public static synthetic lambda$updateUseForceLayoutInUdcCutoutIfNeeded$0(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 342
     invoke-static {p0}, Lcom/android/server/wm/UdcCutoutPolicy;->updateUseForceLayoutInUdcCutoutIfNeeded(Lcom/android/server/wm/WindowContainer;)Z
 
     return-void
@@ -429,7 +386,6 @@
 .method public static synthetic lambda$updateUseForceLayoutInUdcCutoutIfNeeded$1(Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 345
     invoke-static {p0}, Lcom/android/server/wm/UdcCutoutPolicy;->updateUseForceLayoutInUdcCutoutIfNeeded(Lcom/android/server/wm/WindowContainer;)Z
 
     return-void
@@ -440,7 +396,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 159
     iget-object p0, p0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz p0, :cond_0
@@ -449,7 +404,6 @@
 
     const/4 v1, 0x1
 
-    .line 160
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -468,7 +422,6 @@
 .method public static updateUseForceLayoutInUdcCutoutIfNeeded(Lcom/android/server/wm/WindowManagerService;)V
     .locals 2
 
-    .line 337
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->getDefaultDisplayContentLocked()Lcom/android/server/wm/DisplayContent;
 
     move-result-object p0
@@ -477,7 +430,6 @@
 
     return-void
 
-    .line 341
     :cond_0
     new-instance v0, Lcom/android/server/wm/UdcCutoutPolicy$$ExternalSyntheticLambda0;
 
@@ -485,7 +437,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowContainer;->forAllActivities(Ljava/util/function/Consumer;)V
 
-    .line 344
     new-instance v0, Lcom/android/server/wm/UdcCutoutPolicy$$ExternalSyntheticLambda1;
 
     invoke-direct {v0}, Lcom/android/server/wm/UdcCutoutPolicy$$ExternalSyntheticLambda1;-><init>()V
@@ -500,7 +451,6 @@
 .method public static updateUseForceLayoutInUdcCutoutIfNeeded(Lcom/android/server/wm/WindowContainer;)Z
     .locals 4
 
-    .line 350
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asWindowState()Lcom/android/server/wm/WindowState;
 
     move-result-object v0
@@ -511,17 +461,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 352
     iget-object p0, v0, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     if-nez p0, :cond_3
 
-    .line 353
     iget-object p0, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget-object p0, p0, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
-    .line 354
     sget-object v3, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutApplications:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, p0}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -530,7 +477,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 355
     sget-object v3, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutApplications:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -545,12 +491,10 @@
 
     iput-boolean p0, v0, Lcom/android/server/wm/WindowContainer;->mUseLayoutInUdcCutout:Z
 
-    .line 356
     iput-boolean v1, v0, Lcom/android/server/wm/WindowContainer;->mUseConfigurationInUdcCutout:Z
 
     return v2
 
-    .line 359
     :cond_0
     iget-object p0, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -562,7 +506,6 @@
 
     move-result-object p0
 
-    .line 360
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -577,7 +520,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 361
     sget-object v3, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutWindows:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -592,12 +534,10 @@
 
     iput-boolean p0, v0, Lcom/android/server/wm/WindowContainer;->mUseLayoutInUdcCutout:Z
 
-    .line 362
     iput-boolean v1, v0, Lcom/android/server/wm/WindowContainer;->mUseConfigurationInUdcCutout:Z
 
     return v2
 
-    .line 367
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
@@ -605,10 +545,8 @@
 
     if-eqz p0, :cond_3
 
-    .line 369
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
-    .line 370
     sget-object v3, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutApplications:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -617,10 +555,8 @@
 
     if-eqz v3, :cond_2
 
-    .line 371
     sget-object v1, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutApplications:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 372
     invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -637,7 +573,6 @@
 
     return v2
 
-    .line 375
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
@@ -649,7 +584,6 @@
 
     move-result-object v0
 
-    .line 376
     sget-object v3, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutActivities:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -658,10 +592,8 @@
 
     if-eqz v3, :cond_3
 
-    .line 377
     sget-object v1, Lcom/android/server/wm/UdcCutoutPolicy;->sUseLayoutInUdcCutoutActivities:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 378
     invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -685,7 +617,6 @@
 .method public static updateUseLayoutInUdcCutoutIfNeeded(Lcom/android/server/wm/WindowContainer;)V
     .locals 4
 
-    .line 134
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -698,7 +629,6 @@
 
     return-void
 
-    .line 139
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asWindowState()Lcom/android/server/wm/WindowState;
 
@@ -710,12 +640,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 141
     iget-object v3, v0, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v3, :cond_2
 
-    .line 142
     iget-boolean v1, v3, Lcom/android/server/wm/WindowContainer;->mUseLayoutInUdcCutout:Z
 
     :cond_1
@@ -724,7 +652,6 @@
 
     goto :goto_1
 
-    .line 143
     :cond_2
     iget-object v3, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -734,7 +661,6 @@
 
     if-nez v3, :cond_5
 
-    .line 144
     invoke-static {v0}, Lcom/android/server/wm/UdcCutoutPolicy;->getApplicationInfo(Lcom/android/server/wm/WindowState;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -747,7 +673,6 @@
 
     goto :goto_1
 
-    .line 148
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
@@ -755,7 +680,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 149
     iget-object v3, v0, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     invoke-static {v3}, Lcom/android/server/wm/UdcCutoutPolicy;->supportsUdcCutout(Landroid/content/pm/PackageItemInfo;)Z
@@ -768,7 +692,6 @@
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 150
     invoke-static {v0}, Lcom/android/server/wm/UdcCutoutPolicy;->supportsUdcCutout(Landroid/content/pm/PackageItemInfo;)Z
 
     move-result v0
@@ -780,12 +703,10 @@
     :cond_4
     move v1, v2
 
-    .line 154
     :cond_5
     :goto_1
     iput-boolean v1, p0, Lcom/android/server/wm/WindowContainer;->mUseLayoutInUdcCutout:Z
 
-    .line 155
     iput-boolean v2, p0, Lcom/android/server/wm/WindowContainer;->mUseConfigurationInUdcCutout:Z
 
     return-void
@@ -796,7 +717,6 @@
 .method public adjustInsetsForUdc(Lcom/android/server/wm/WindowContainer;Landroid/view/InsetsState;)V
     .locals 0
 
-    .line 198
     invoke-virtual {p0, p1}, Lcom/android/server/wm/UdcCutoutPolicy;->getFixedRotationTransformDisplayFrames(Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/DisplayFrames;
 
     move-result-object p1
@@ -809,7 +729,6 @@
 .method public calculateDisplayCutoutForRotation(I)Landroid/view/DisplayCutout;
     .locals 1
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mDisplayCutoutCache:Lcom/android/server/wm/utils/RotationCache;
 
     iget-object p0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcCutout:Landroid/view/DisplayCutout;
@@ -830,7 +749,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 1
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcCutout:Landroid/view/DisplayCutout;
 
     if-eqz v0, :cond_2
@@ -843,21 +761,17 @@
 
     goto :goto_0
 
-    .line 123
     :cond_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p2, " udcCutout="
 
-    .line 124
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 125
     iget-object p2, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcCutout:Landroid/view/DisplayCutout;
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 126
     iget-object p2, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcConfiguration:Landroid/content/res/Configuration;
 
     if-eqz p2, :cond_1
@@ -872,15 +786,12 @@
 
     const-string p2, ", config="
 
-    .line 127
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 130
     :cond_1
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
@@ -892,12 +803,10 @@
 .method public final getFixedRotationTransformDisplayFrames(Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/DisplayFrames;
     .locals 2
 
-    .line 237
     instance-of v0, p1, Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v0, :cond_0
 
-    .line 238
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p1
@@ -908,7 +817,6 @@
 
     goto :goto_1
 
-    .line 239
     :cond_0
     instance-of v0, p1, Lcom/android/server/wm/WindowState;
 
@@ -916,17 +824,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 240
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asWindowState()Lcom/android/server/wm/WindowState;
 
     move-result-object p1
 
-    .line 241
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v0, :cond_1
 
-    .line 242
     invoke-virtual {v0}, Lcom/android/server/wm/WindowToken;->getFixedRotationTransformDisplayFrames()Lcom/android/server/wm/DisplayFrames;
 
     move-result-object v0
@@ -939,7 +844,6 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 245
     iget-object p1, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowToken;->getFixedRotationTransformDisplayFrames()Lcom/android/server/wm/DisplayFrames;
@@ -961,7 +865,6 @@
 
     goto :goto_2
 
-    .line 248
     :cond_4
     iget-object p1, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcDisplayFrames:Lcom/android/server/wm/DisplayFrames;
 
@@ -972,25 +875,21 @@
 .method public getIntersectedCutout(Landroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 1
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mTmpBarContentFrame:Landroid/graphics/Rect;
 
     if-nez v0, :cond_0
 
-    .line 190
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mTmpBarContentFrame:Landroid/graphics/Rect;
 
-    .line 192
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mTmpBarContentFrame:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 193
     iget-object p1, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mTmpBarContentFrame:Landroid/graphics/Rect;
 
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcDisplayFrames:Lcom/android/server/wm/DisplayFrames;
@@ -999,7 +898,6 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
 
-    .line 194
     iget-object p0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mTmpBarContentFrame:Landroid/graphics/Rect;
 
     return-object p0
@@ -1008,7 +906,6 @@
 .method public hasUdcCutout()Z
     .locals 0
 
-    .line 112
     iget-object p0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcCutout:Landroid/view/DisplayCutout;
 
     if-eqz p0, :cond_0
@@ -1027,33 +924,26 @@
 .method public onDisplayInfoUpdated(Landroid/view/InsetsState;IIILandroid/view/RoundedCorners;Landroid/view/PrivacyIndicatorBounds;Landroid/view/DisplayShape;)V
     .locals 8
 
-    .line 172
     invoke-virtual {p0, p2}, Lcom/android/server/wm/UdcCutoutPolicy;->calculateDisplayCutoutForRotation(I)Landroid/view/DisplayCutout;
 
     move-result-object v4
 
-    .line 173
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcDisplayFrames:Lcom/android/server/wm/DisplayFrames;
 
     const/4 v1, 0x1
 
     if-nez v0, :cond_0
 
-    .line 174
     new-instance v2, Landroid/view/DisplayInfo;
 
     invoke-direct {v2}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 175
     iput p2, v2, Landroid/view/DisplayInfo;->rotation:I
 
-    .line 176
     iput p3, v2, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    .line 177
     iput p4, v2, Landroid/view/DisplayInfo;->logicalHeight:I
 
-    .line 178
     new-instance p2, Lcom/android/server/wm/DisplayFrames;
 
     new-instance p3, Landroid/view/InsetsState;
@@ -1078,13 +968,11 @@
 
     return-void
 
-    .line 183
     :cond_0
     iget-object v0, v0, Lcom/android/server/wm/DisplayFrames;->mInsetsState:Landroid/view/InsetsState;
 
     invoke-virtual {v0, p1, v1}, Landroid/view/InsetsState;->set(Landroid/view/InsetsState;Z)V
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcDisplayFrames:Lcom/android/server/wm/DisplayFrames;
 
     move v1, p2
@@ -1107,7 +995,6 @@
 .method public onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 2
 
-    .line 252
     iget-object p1, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {p1}, Landroid/app/WindowConfiguration;->getRotation()I
@@ -1120,13 +1007,11 @@
 
     return-void
 
-    .line 256
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mUdcConfiguration:Landroid/content/res/Configuration;
 
     if-nez v0, :cond_1
 
-    .line 257
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
@@ -1135,11 +1020,9 @@
 
     goto :goto_0
 
-    .line 259
     :cond_1
     invoke-virtual {v0}, Landroid/content/res/Configuration;->unset()V
 
-    .line 261
     :goto_0
     iget-object v0, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1155,24 +1038,20 @@
 .method public final updateInsetsStateForDisplayCutout(Lcom/android/server/wm/DisplayFrames;Landroid/view/InsetsState;)V
     .locals 4
 
-    .line 203
     iget-object p0, p1, Lcom/android/server/wm/DisplayFrames;->mInsetsState:Landroid/view/InsetsState;
 
     invoke-virtual {p0}, Landroid/view/InsetsState;->getDisplayCutout()Landroid/view/DisplayCutout;
 
     move-result-object p0
 
-    .line 204
     invoke-virtual {p2, p0}, Landroid/view/InsetsState;->setDisplayCutout(Landroid/view/DisplayCutout;)V
 
-    .line 205
     invoke-virtual {p0}, Landroid/view/DisplayCutout;->isEmpty()Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 206
     invoke-virtual {p2}, Landroid/view/InsetsState;->sourceSize()I
 
     move-result p0
@@ -1182,12 +1061,10 @@
     :goto_0
     if-ltz p0, :cond_1
 
-    .line 207
     invoke-virtual {p2, p0}, Landroid/view/InsetsState;->sourceAt(I)Landroid/view/InsetsSource;
 
     move-result-object p1
 
-    .line 208
     invoke-virtual {p1}, Landroid/view/InsetsSource;->getType()I
 
     move-result p1
@@ -1198,7 +1075,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 209
     invoke-virtual {p2, p0}, Landroid/view/InsetsState;->removeSourceAt(I)V
 
     :cond_0
@@ -1209,14 +1085,11 @@
     :cond_1
     return-void
 
-    .line 214
     :cond_2
     iget-object p0, p1, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    .line 215
     iget-object p1, p1, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
 
-    .line 216
     invoke-virtual {p2}, Landroid/view/InsetsState;->sourceSize()I
 
     move-result v0
@@ -1226,12 +1099,10 @@
     :goto_1
     if-ltz v0, :cond_7
 
-    .line 217
     invoke-virtual {p2, v0}, Landroid/view/InsetsState;->sourceAt(I)Landroid/view/InsetsSource;
 
     move-result-object v1
 
-    .line 220
     invoke-virtual {v1}, Landroid/view/InsetsSource;->getType()I
 
     move-result v2
@@ -1242,12 +1113,10 @@
 
     if-ne v2, v3, :cond_6
 
-    .line 221
     iget p2, p1, Landroid/graphics/Rect;->left:I
 
     if-eqz p2, :cond_3
 
-    .line 222
     iget p1, p0, Landroid/graphics/Rect;->left:I
 
     iget v0, p0, Landroid/graphics/Rect;->top:I
@@ -1258,13 +1127,11 @@
 
     goto :goto_2
 
-    .line 223
     :cond_3
     iget p2, p1, Landroid/graphics/Rect;->top:I
 
     if-eqz p2, :cond_4
 
-    .line 224
     iget p1, p0, Landroid/graphics/Rect;->left:I
 
     iget v0, p0, Landroid/graphics/Rect;->top:I
@@ -1275,13 +1142,11 @@
 
     goto :goto_2
 
-    .line 225
     :cond_4
     iget p2, p1, Landroid/graphics/Rect;->right:I
 
     if-eqz p2, :cond_5
 
-    .line 226
     iget p1, p0, Landroid/graphics/Rect;->top:I
 
     iget v0, p0, Landroid/graphics/Rect;->right:I
@@ -1292,13 +1157,11 @@
 
     goto :goto_2
 
-    .line 227
     :cond_5
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
     if-eqz p1, :cond_7
 
-    .line 228
     iget p2, p0, Landroid/graphics/Rect;->left:I
 
     iget v0, p0, Landroid/graphics/Rect;->right:I
@@ -1322,19 +1185,16 @@
 .method public updateUdcCutout(Landroid/view/DisplayInfo;II)V
     .locals 8
 
-    .line 79
     invoke-virtual {p1}, Landroid/view/DisplayInfo;->getNaturalWidth()I
 
     move-result v0
 
     iget p1, p1, Landroid/view/DisplayInfo;->logicalDensityDpi:I
 
-    .line 78
     invoke-static {v0, p2, p1}, Lcom/android/server/wm/DisplayContent;->getProportionalDensity(III)I
 
     move-result v6
 
-    .line 84
     iget-object p1, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mContext:Landroid/content/Context;
 
     const v0, 0x104034c
@@ -1343,7 +1203,6 @@
 
     move-result-object v7
 
-    .line 91
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -1354,7 +1213,6 @@
 
     goto :goto_0
 
-    .line 92
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/UdcCutoutPolicy;->mContext:Landroid/content/Context;
 
@@ -1381,7 +1239,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 104
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1402,7 +1259,6 @@
 
     goto :goto_1
 
-    .line 105
     :cond_1
     invoke-static {}, Lcom/samsung/android/rune/CoreRune;->isSamsungLogEnabled()Z
 
@@ -1410,7 +1266,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 106
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

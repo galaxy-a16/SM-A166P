@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/io/InputStream;JJ)V
     .locals 7
 
-    .line 47
     new-instance v1, Ljava/util/zip/CRC32;
 
     invoke-direct {v1}, Ljava/util/zip/CRC32;-><init>()V

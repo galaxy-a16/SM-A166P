@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/credentials/CredentialManagerService;Ljava/lang/Object;ILandroid/credentials/CredentialProviderInfo;)V
     .locals 0
 
-    .line 64
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/infra/AbstractPerUserSystemService;-><init>(Lcom/android/server/infra/AbstractMasterSystemService;Ljava/lang/Object;I)V
 
-    .line 65
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -23,7 +21,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 66
     invoke-virtual {p4}, Landroid/credentials/CredentialProviderInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object p2
@@ -44,10 +41,8 @@
 
     const-string p2, "CredManSysServiceImpl"
 
-    .line 65
     invoke-static {p2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iput-object p4, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
     return-void
@@ -56,12 +51,10 @@
 .method public constructor <init>(Lcom/android/server/credentials/CredentialManagerService;Ljava/lang/Object;ILjava/lang/String;)V
     .locals 0
 
-    .line 49
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/infra/AbstractPerUserSystemService;-><init>(Lcom/android/server/infra/AbstractMasterSystemService;Ljava/lang/Object;I)V
 
     const-string p1, "CredManSysServiceImpl"
 
-    .line 50
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,12 +71,10 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     iget-object p1, p0, Lcom/android/server/infra/AbstractPerUserSystemService;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 52
     :try_start_0
     invoke-static {p4}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -91,7 +82,6 @@
 
     invoke-virtual {p0, p2}, Lcom/android/server/credentials/CredentialManagerServiceImpl;->newServiceInfoLocked(Landroid/content/ComponentName;)Landroid/content/pm/ServiceInfo;
 
-    .line 53
     monitor-exit p1
 
     return-void
@@ -111,7 +101,6 @@
 .method public getComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
     invoke-virtual {p0}, Landroid/credentials/CredentialProviderInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
@@ -128,7 +117,6 @@
 .method public getCredentialProviderInfo()Landroid/credentials/CredentialProviderInfo;
     .locals 0
 
-    .line 125
     iget-object p0, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
     return-object p0
@@ -137,7 +125,6 @@
 .method public handlePackageUpdateLocked(Ljava/lang/String;)V
     .locals 1
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
     if-eqz v0, :cond_0
@@ -150,7 +137,6 @@
 
     iget-object v0, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
-    .line 136
     invoke-virtual {v0}, Landroid/credentials/CredentialProviderInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v0
@@ -159,7 +145,6 @@
 
     move-result-object v0
 
-    .line 137
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -170,7 +155,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 139
     :try_start_0
     iget-object p1, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
@@ -191,7 +175,6 @@
     :catch_0
     move-exception p0
 
-    .line 141
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,7 +205,6 @@
 .method public initiateProviderSessionForRequestLocked(Lcom/android/server/credentials/RequestSession;Ljava/util/List;)Lcom/android/server/credentials/ProviderSession;
     .locals 3
 
-    .line 95
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -241,12 +223,10 @@
 
     const-string p0, "Service does not have the required capabilities"
 
-    .line 96
     invoke-static {v2, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 99
     :cond_0
     iget-object p2, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
@@ -254,16 +234,13 @@
 
     const-string p0, "Initiating provider session for request but mInfo is null. This shouldn\'t happen"
 
-    .line 100
     invoke-static {v2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 104
     :cond_1
     new-instance p2, Lcom/android/server/credentials/RemoteCredentialService;
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -282,7 +259,6 @@
 
     invoke-direct {p2, v0, v1, v2}, Lcom/android/server/credentials/RemoteCredentialService;-><init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
 
-    .line 106
     iget-object p0, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
     invoke-virtual {p1, p0, p2}, Lcom/android/server/credentials/RequestSession;->initiateProviderSession(Landroid/credentials/CredentialProviderInfo;Lcom/android/server/credentials/RemoteCredentialService;)Lcom/android/server/credentials/ProviderSession;
@@ -295,7 +271,6 @@
 .method public isServiceCapableLocked(Ljava/util/List;)Z
     .locals 3
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
     const/4 v1, 0x0
@@ -304,7 +279,6 @@
 
     return v1
 
-    .line 115
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -323,7 +297,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 116
     iget-object v2, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
     invoke-virtual {v2, v0}, Landroid/credentials/CredentialProviderInfo;->hasCapability(Ljava/lang/String;)Z
@@ -343,14 +316,12 @@
 .method public newServiceInfoLocked(Landroid/content/ComponentName;)Landroid/content/pm/ServiceInfo;
     .locals 3
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
     const-string v1, "CredManSysServiceImpl"
 
     if-eqz v0, :cond_0
 
-    .line 75
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,7 +332,6 @@
 
     iget-object v2, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
-    .line 76
     invoke-virtual {v2}, Landroid/credentials/CredentialProviderInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v2
@@ -380,7 +350,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 77
     invoke-virtual {p1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v2
@@ -391,12 +360,10 @@
 
     move-result-object v0
 
-    .line 75
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 79
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -406,7 +373,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
     invoke-virtual {p1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v2
@@ -417,10 +383,8 @@
 
     move-result-object v0
 
-    .line 79
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getContext()Landroid/content/Context;
 
@@ -430,14 +394,12 @@
 
     const/4 v2, 0x0
 
-    .line 82
     invoke-static {v0, p1, v1, v2}, Landroid/service/credentials/CredentialProviderInfoFactory;->create(Landroid/content/Context;Landroid/content/ComponentName;IZ)Landroid/credentials/CredentialProviderInfo;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/credentials/CredentialManagerServiceImpl;->mInfo:Landroid/credentials/CredentialProviderInfo;
 
-    .line 85
     invoke-virtual {p1}, Landroid/credentials/CredentialProviderInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object p0

@@ -26,7 +26,6 @@
 .method public constructor <init>(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;IIILjava/lang/String;ZZ)V
     .locals 0
 
-    .line 2438
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     iput p2, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$userId:I
@@ -51,7 +50,6 @@
 .method public run()V
     .locals 5
 
-    .line 2441
     iget v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$userId:I
 
     iget v1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$appId:I
@@ -60,7 +58,6 @@
 
     move-result v0
 
-    .line 2442
     iget-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {v1}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmContext(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/Context;
@@ -75,7 +72,6 @@
 
     check-cast v1, Landroid/app/AppOpsManager;
 
-    .line 2443
     iget v2, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$appOp:I
 
     const/4 v3, -0x1
@@ -86,7 +82,6 @@
 
     iget-object v3, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$pkgName:Ljava/lang/String;
 
-    .line 2444
     invoke-virtual {v1, v2, v0, v3}, Landroid/app/AppOpsManager;->checkOp(IILjava/lang/String;)I
 
     move-result v2
@@ -100,7 +95,6 @@
     :cond_0
     move v2, v4
 
-    .line 2446
     :goto_0
     iget-boolean v3, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$checkAppOpsAllowed:Z
 
@@ -108,18 +102,15 @@
 
     if-nez v2, :cond_2
 
-    .line 2447
     :cond_1
     iget v2, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$appOp:I
 
     invoke-virtual {v1, v2, v0, v4}, Landroid/app/AppOpsManager;->setUidMode(III)V
 
-    .line 2448
     iget-boolean v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$killUid:Z
 
     if-eqz v0, :cond_2
 
-    .line 2449
     iget v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$appId:I
 
     iget p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$3;->val$userId:I

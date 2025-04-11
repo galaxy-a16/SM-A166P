@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;I)V
     .locals 0
 
-    .line 1588
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$3;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$3;->val$recorderAddress:I
@@ -33,7 +32,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1592
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$3;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     iget p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$3;->val$recorderAddress:I

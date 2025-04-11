@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ComponentAliasResolver;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/ComponentAliasResolver$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/ComponentAliasResolver;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/ComponentAliasResolver$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/ComponentAliasResolver;
 
     invoke-static {p0}, Lcom/android/server/am/ComponentAliasResolver;->$r8$lambda$fgsAF0v4cDLQDL0gG6Hm1MhgNoU(Lcom/android/server/am/ComponentAliasResolver;)V

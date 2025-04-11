@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;)V
     .locals 0
 
-    .line 1697
     invoke-direct {p0}, Landroid/hardware/tv/hdmi/connection/IHdmiConnectionCallback$Stub;-><init>()V
 
-    .line 1698
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$HdmiConnectionCallbackAidl;->mHdmiCecCallback:Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
 
     return-void
@@ -32,7 +30,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1708
     monitor-exit p0
 
     return-object v0
@@ -48,7 +45,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -57,7 +53,6 @@
 .method public onHotplugEvent(ZI)V
     .locals 0
 
-    .line 1703
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecController$HdmiConnectionCallbackAidl;->mHdmiCecCallback:Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;->onHotplugEvent(IZ)V

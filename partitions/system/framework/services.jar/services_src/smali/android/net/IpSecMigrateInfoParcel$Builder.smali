@@ -25,21 +25,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 17
     iput v0, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->requestId:I
 
-    .line 22
     iput v0, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->selAddrFamily:I
 
-    .line 27
     iput v0, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->direction:I
 
-    .line 52
     iput v0, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->interfaceId:I
 
     return-void
@@ -50,7 +45,6 @@
 .method public build()Landroid/net/IpSecMigrateInfoParcel;
     .locals 10
 
-    .line 58
     new-instance v9, Landroid/net/IpSecMigrateInfoParcel;
 
     iget v1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->requestId:I
@@ -79,7 +73,6 @@
 .method public setDirection(I)Landroid/net/IpSecMigrateInfoParcel$Builder;
     .locals 0
 
-    .line 29
     iput p1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->direction:I
 
     return-object p0
@@ -88,7 +81,6 @@
 .method public setInterfaceId(I)Landroid/net/IpSecMigrateInfoParcel$Builder;
     .locals 0
 
-    .line 54
     iput p1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->interfaceId:I
 
     return-object p0
@@ -97,7 +89,6 @@
 .method public setNewDestinationAddress(Ljava/lang/String;)Landroid/net/IpSecMigrateInfoParcel$Builder;
     .locals 0
 
-    .line 49
     iput-object p1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->newDestinationAddress:Ljava/lang/String;
 
     return-object p0
@@ -106,7 +97,6 @@
 .method public setNewSourceAddress(Ljava/lang/String;)Landroid/net/IpSecMigrateInfoParcel$Builder;
     .locals 0
 
-    .line 44
     iput-object p1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->newSourceAddress:Ljava/lang/String;
 
     return-object p0
@@ -115,7 +105,6 @@
 .method public setOldDestinationAddress(Ljava/lang/String;)Landroid/net/IpSecMigrateInfoParcel$Builder;
     .locals 0
 
-    .line 39
     iput-object p1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->oldDestinationAddress:Ljava/lang/String;
 
     return-object p0
@@ -124,7 +113,6 @@
 .method public setOldSourceAddress(Ljava/lang/String;)Landroid/net/IpSecMigrateInfoParcel$Builder;
     .locals 0
 
-    .line 34
     iput-object p1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->oldSourceAddress:Ljava/lang/String;
 
     return-object p0
@@ -133,7 +121,6 @@
 .method public setRequestId(I)Landroid/net/IpSecMigrateInfoParcel$Builder;
     .locals 0
 
-    .line 19
     iput p1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->requestId:I
 
     return-object p0
@@ -142,7 +129,6 @@
 .method public setSelAddrFamily(I)Landroid/net/IpSecMigrateInfoParcel$Builder;
     .locals 0
 
-    .line 24
     iput p1, p0, Landroid/net/IpSecMigrateInfoParcel$Builder;->selAddrFamily:I
 
     return-object p0

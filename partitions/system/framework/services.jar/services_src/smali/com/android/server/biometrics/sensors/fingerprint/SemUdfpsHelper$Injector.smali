@@ -20,7 +20,6 @@
 .method public getTspManager()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
     .locals 0
 
-    .line 71
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public readSysFs(Ljava/lang/String;)[B
     .locals 0
 
-    .line 77
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -46,7 +44,6 @@
 .method public writeSysFs(Ljava/lang/String;[B)V
     .locals 0
 
-    .line 82
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V

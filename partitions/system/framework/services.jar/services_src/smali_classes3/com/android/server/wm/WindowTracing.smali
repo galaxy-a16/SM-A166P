@@ -33,7 +33,6 @@
 .method public static synthetic $r8$lambda$oVv07gS4Gaz4xN480OkUKi18eVA(Lcom/android/server/wm/WindowTracing;J)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/WindowTracing;->lambda$new$0(J)V
 
     return-void
@@ -42,7 +41,6 @@
 .method public constructor <init>(Ljava/io/File;Lcom/android/server/wm/WindowManagerService;Landroid/view/Choreographer;I)V
     .locals 6
 
-    .line 88
     iget-object v4, p2, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
     move-object v0, p0
@@ -63,17 +61,14 @@
 .method public constructor <init>(Ljava/io/File;Lcom/android/server/wm/WindowManagerService;Landroid/view/Choreographer;Lcom/android/server/wm/WindowManagerGlobalLock;I)V
     .locals 2
 
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLock:Ljava/lang/Object;
 
-    .line 71
     new-instance v0, Lcom/android/server/wm/WindowTracing$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/WindowTracing$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/WindowTracing;)V
@@ -82,27 +77,20 @@
 
     const/4 v0, 0x1
 
-    .line 74
     iput v0, p0, Lcom/android/server/wm/WindowTracing;->mLogLevel:I
 
     const/4 v1, 0x0
 
-    .line 75
     iput-boolean v1, p0, Lcom/android/server/wm/WindowTracing;->mLogOnFrame:Z
 
-    .line 93
     iput-object p3, p0, Lcom/android/server/wm/WindowTracing;->mChoreographer:Landroid/view/Choreographer;
 
-    .line 94
     iput-object p2, p0, Lcom/android/server/wm/WindowTracing;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 95
     iput-object p4, p0, Lcom/android/server/wm/WindowTracing;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
-    .line 96
     iput-object p1, p0, Lcom/android/server/wm/WindowTracing;->mTraceFile:Ljava/io/File;
 
-    .line 97
     new-instance p1, Lcom/android/internal/util/TraceBuffer;
 
     invoke-direct {p1, p5}, Lcom/android/internal/util/TraceBuffer;-><init>(I)V
@@ -111,7 +99,6 @@
 
     const/4 p1, 0x0
 
-    .line 98
     invoke-virtual {p0, v0, p1}, Lcom/android/server/wm/WindowTracing;->setLogLevel(ILjava/io/PrintWriter;)V
 
     return-void
@@ -120,14 +107,12 @@
 .method public static createDefaultAndStartLooper(Lcom/android/server/wm/WindowManagerService;Landroid/view/Choreographer;)Lcom/android/server/wm/WindowTracing;
     .locals 3
 
-    .line 82
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/misc/wmtrace/wm_trace.winscope"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 83
     new-instance v1, Lcom/android/server/wm/WindowTracing;
 
     const/high16 v2, 0xa00000
@@ -142,7 +127,6 @@
 
     const-string/jumbo p1, "onFrame"
 
-    .line 72
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowTracing;->log(Ljava/lang/String;)V
 
     return-void
@@ -153,7 +137,6 @@
 .method public getStatus()Ljava/lang/String;
     .locals 2
 
-    .line 268
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,7 +145,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 269
     invoke-virtual {p0}, Lcom/android/server/wm/WindowTracing;->isEnabled()Z
 
     move-result v1
@@ -193,7 +175,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
-    .line 274
     invoke-virtual {p0}, Lcom/android/internal/util/TraceBuffer;->getStatus()Ljava/lang/String;
 
     move-result-object p0
@@ -210,7 +191,6 @@
 .method public isEnabled()Z
     .locals 0
 
-    .line 195
     iget-boolean p0, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLockFree:Z
 
     return p0
@@ -223,10 +203,8 @@
 
     const-wide/16 v1, 0x20
 
-    .line 313
     invoke-static {v1, v2, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 315
     :try_start_0
     new-instance v0, Landroid/util/proto/ProtoOutputStream;
 
@@ -234,12 +212,10 @@
 
     const-wide v3, 0x20b00000002L
 
-    .line 316
     invoke-virtual {v0, v3, v4}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v3
 
-    .line 317
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v5
@@ -250,17 +226,14 @@
 
     const-wide v5, 0x10900000002L
 
-    .line 318
     invoke-virtual {v0, v5, v6, p1}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
     const-wide v5, 0x10b00000003L
 
-    .line 320
     invoke-virtual {v0, v5, v6}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v5
 
-    .line 321
     iget-object p1, p0, Lcom/android/server/wm/WindowTracing;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->boostPriorityForLockedSection()V
@@ -273,12 +246,10 @@
     :try_start_1
     const-string v7, "dumpDebugLocked"
 
-    .line 322
     invoke-static {v1, v2, v7}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 324
     :try_start_2
     iget-object v7, p0, Lcom/android/server/wm/WindowTracing;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -288,11 +259,9 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 326
     :try_start_3
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 328
     monitor-exit p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -300,20 +269,16 @@
     :try_start_4
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 329
     invoke-virtual {v0, v5, v6}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
-    .line 330
     invoke-virtual {v0, v3, v4}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
-    .line 331
     iget-object p1, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
     invoke-virtual {p1, v0}, Lcom/android/internal/util/TraceBuffer;->add(Ljava/lang/Object;)V
 
     const/4 p1, 0x0
 
-    .line 332
     iput-boolean p1, p0, Lcom/android/server/wm/WindowTracing;->mScheduled:Z
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
@@ -324,17 +289,14 @@
     :catchall_0
     move-exception p0
 
-    .line 326
     :try_start_5
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 327
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 328
     monitor-exit p1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -360,12 +322,10 @@
 
     const-string v0, "Exception while tracing state"
 
-    .line 334
     invoke-static {p1, v0, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 336
     :goto_0
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
@@ -374,7 +334,6 @@
     :goto_1
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 337
     throw p0
 .end method
 
@@ -383,15 +342,12 @@
 
     const-string p0, "WindowTracing"
 
-    .line 341
     invoke-static {p0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_0
 
-    .line 343
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 344
     invoke-virtual {p1}, Ljava/io/PrintWriter;->flush()V
 
     :cond_0
@@ -401,7 +357,6 @@
 .method public logState(Ljava/lang/String;)V
     .locals 1
 
-    .line 284
     invoke-virtual {p0}, Lcom/android/server/wm/WindowTracing;->isEnabled()Z
 
     move-result v0
@@ -410,18 +365,15 @@
 
     return-void
 
-    .line 288
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/wm/WindowTracing;->mLogOnFrame:Z
 
     if-eqz v0, :cond_1
 
-    .line 289
     invoke-virtual {p0}, Lcom/android/server/wm/WindowTracing;->schedule()V
 
     goto :goto_0
 
-    .line 291
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowTracing;->log(Ljava/lang/String;)V
 
@@ -432,17 +384,14 @@
 .method public onShellCommand(Landroid/os/ShellCommand;)I
     .locals 7
 
-    .line 199
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 200
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 201
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -593,7 +542,6 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
-    .line 249
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -612,89 +560,72 @@
 
     const-string p0, "Window manager trace options:"
 
-    .line 250
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  start: Start logging"
 
-    .line 251
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  stop: Stop logging"
 
-    .line 252
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  save-for-bugreport: Save logging data to file if it\'s running."
 
-    .line 253
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  frame: Log trace once per frame"
 
-    .line 254
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  transaction: Log each transaction"
 
-    .line 255
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  size: Set the maximum log size (in KB)"
 
-    .line 256
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  status: Print trace status"
 
-    .line 257
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  level [lvl]: Set the log level between"
 
-    .line 258
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "    lvl may be one of:"
 
-    .line 259
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "      critical: Only visible windows with reduced information"
 
-    .line 260
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "      trim: All windows with reduced"
 
-    .line 261
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "      all: All window and information"
 
-    .line 262
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v6
 
-    .line 219
     :pswitch_0
     invoke-virtual {p0, v5, v0}, Lcom/android/server/wm/WindowTracing;->setLogFrequency(ZLjava/io/PrintWriter;)V
 
-    .line 220
     iget-object p0, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
     invoke-virtual {p0}, Lcom/android/internal/util/TraceBuffer;->resetBuffer()V
 
     return v5
 
-    .line 203
     :pswitch_1
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowTracing;->startTrace(Ljava/io/PrintWriter;)V
 
     return v5
 
-    .line 223
     :pswitch_2
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -704,7 +635,6 @@
 
     move-result-object p1
 
-    .line 224
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -764,28 +694,23 @@
     :goto_2
     packed-switch v6, :pswitch_data_1
 
-    .line 238
     invoke-virtual {p0, v4, v0}, Lcom/android/server/wm/WindowTracing;->setLogLevel(ILjava/io/PrintWriter;)V
 
     goto :goto_3
 
-    .line 234
     :pswitch_3
     invoke-virtual {p0, v3, v0}, Lcom/android/server/wm/WindowTracing;->setLogLevel(ILjava/io/PrintWriter;)V
 
     goto :goto_3
 
-    .line 230
     :pswitch_4
     invoke-virtual {p0, v4, v0}, Lcom/android/server/wm/WindowTracing;->setLogLevel(ILjava/io/PrintWriter;)V
 
     goto :goto_3
 
-    .line 226
     :pswitch_5
     invoke-virtual {p0, v5, v0}, Lcom/android/server/wm/WindowTracing;->setLogLevel(ILjava/io/PrintWriter;)V
 
-    .line 242
     :goto_3
     iget-object p0, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
@@ -793,24 +718,20 @@
 
     return v5
 
-    .line 215
     :pswitch_6
     invoke-virtual {p0, v4, v0}, Lcom/android/server/wm/WindowTracing;->setLogFrequency(ZLjava/io/PrintWriter;)V
 
-    .line 216
     iget-object p0, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
     invoke-virtual {p0}, Lcom/android/internal/util/TraceBuffer;->resetBuffer()V
 
     return v5
 
-    .line 206
     :pswitch_7
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowTracing;->stopTrace(Ljava/io/PrintWriter;)V
 
     return v5
 
-    .line 245
     :pswitch_8
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -824,20 +745,17 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/WindowTracing;->setBufferCapacity(ILjava/io/PrintWriter;)V
 
-    .line 246
     iget-object p0, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
     invoke-virtual {p0}, Lcom/android/internal/util/TraceBuffer;->resetBuffer()V
 
     return v5
 
-    .line 209
     :pswitch_9
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowTracing;->saveForBugreport(Ljava/io/PrintWriter;)V
 
     return v5
 
-    .line 212
     :pswitch_a
     invoke-virtual {p0}, Lcom/android/server/wm/WindowTracing;->getStatus()Ljava/lang/String;
 
@@ -889,31 +807,26 @@
 .method public saveForBugreport(Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 143
     sget-boolean v0, Landroid/os/Build;->IS_USER:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "Error: Tracing is not supported on user builds."
 
-    .line 144
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
 
-    .line 147
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 148
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/wm/WindowTracing;->mEnabled:Z
 
     if-nez v1, :cond_1
 
-    .line 149
     monitor-exit v0
 
     return-void
@@ -921,12 +834,10 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 151
     iput-boolean v1, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLockFree:Z
 
     iput-boolean v1, p0, Lcom/android/server/wm/WindowTracing;->mEnabled:Z
 
-    .line 152
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -949,10 +860,8 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 153
     invoke-virtual {p0}, Lcom/android/server/wm/WindowTracing;->writeTraceToFileLocked()V
 
-    .line 154
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -975,7 +884,6 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 155
     invoke-static {}, Lcom/android/internal/protolog/ProtoLogImpl;->getSingleInstance()Lcom/android/internal/protolog/ProtoLogImpl;
 
     move-result-object v1
@@ -984,7 +892,6 @@
 
     invoke-virtual {v1, p1, v2}, Lcom/android/internal/protolog/ProtoLogImpl;->stopProtoLog(Ljava/io/PrintWriter;Z)V
 
-    .line 156
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1007,24 +914,20 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 157
     iget-object v1, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
     invoke-virtual {v1}, Lcom/android/internal/util/TraceBuffer;->resetBuffer()V
 
-    .line 158
     iput-boolean v2, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLockFree:Z
 
     iput-boolean v2, p0, Lcom/android/server/wm/WindowTracing;->mEnabled:Z
 
-    .line 159
     invoke-static {}, Lcom/android/internal/protolog/ProtoLogImpl;->getSingleInstance()Lcom/android/internal/protolog/ProtoLogImpl;
 
     move-result-object p0
 
     invoke-virtual {p0, p1}, Lcom/android/internal/protolog/ProtoLogImpl;->startProtoLog(Ljava/io/PrintWriter;)V
 
-    .line 160
     monitor-exit v0
 
     return-void
@@ -1042,7 +945,6 @@
 .method public final schedule()V
     .locals 1
 
-    .line 299
     iget-boolean v0, p0, Lcom/android/server/wm/WindowTracing;->mScheduled:Z
 
     if-eqz v0, :cond_0
@@ -1052,10 +954,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 303
     iput-boolean v0, p0, Lcom/android/server/wm/WindowTracing;->mScheduled:Z
 
-    .line 304
     iget-object v0, p0, Lcom/android/server/wm/WindowTracing;->mChoreographer:Landroid/view/Choreographer;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowTracing;->mFrameCallback:Landroid/view/Choreographer$FrameCallback;
@@ -1068,7 +968,6 @@
 .method public final setBufferCapacity(ILjava/io/PrintWriter;)V
     .locals 2
 
-    .line 190
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1089,7 +988,6 @@
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 191
     iget-object p0, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/util/TraceBuffer;->setCapacity(I)V
@@ -1100,7 +998,6 @@
 .method public final setLogFrequency(ZLjava/io/PrintWriter;)V
     .locals 2
 
-    .line 184
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1118,7 +1015,6 @@
     :cond_0
     const-string/jumbo v1, "transaction"
 
-    .line 185
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1126,10 +1022,8 @@
 
     move-result-object v0
 
-    .line 184
     invoke-virtual {p0, p2, v0}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 186
     iput-boolean p1, p0, Lcom/android/server/wm/WindowTracing;->mLogOnFrame:Z
 
     return-void
@@ -1138,7 +1032,6 @@
 .method public final setLogLevel(ILjava/io/PrintWriter;)V
     .locals 2
 
-    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1155,7 +1048,6 @@
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 165
     iput p1, p0, Lcom/android/server/wm/WindowTracing;->mLogLevel:I
 
     if-eqz p1, :cond_2
@@ -1173,7 +1065,6 @@
     :cond_0
     const/high16 p1, 0x500000
 
-    .line 177
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/WindowTracing;->setBufferCapacity(ILjava/io/PrintWriter;)V
 
     goto :goto_0
@@ -1181,7 +1072,6 @@
     :cond_1
     const/high16 p1, 0xa00000
 
-    .line 173
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/WindowTracing;->setBufferCapacity(ILjava/io/PrintWriter;)V
 
     goto :goto_0
@@ -1189,7 +1079,6 @@
     :cond_2
     const/high16 p1, 0x1400000
 
-    .line 169
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/WindowTracing;->setBufferCapacity(ILjava/io/PrintWriter;)V
 
     :goto_0
@@ -1199,25 +1088,21 @@
 .method public startTrace(Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 102
     sget-boolean v0, Landroid/os/Build;->IS_USER:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "Error: Tracing is not supported on user builds."
 
-    .line 103
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
 
-    .line 106
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 107
     :try_start_0
     invoke-static {}, Lcom/android/internal/protolog/ProtoLogImpl;->getSingleInstance()Lcom/android/internal/protolog/ProtoLogImpl;
 
@@ -1225,7 +1110,6 @@
 
     invoke-virtual {v1, p1}, Lcom/android/internal/protolog/ProtoLogImpl;->startProtoLog(Ljava/io/PrintWriter;)V
 
-    .line 108
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1248,26 +1132,22 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 109
     iget-object p1, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
     invoke-virtual {p1}, Lcom/android/internal/util/TraceBuffer;->resetBuffer()V
 
     const/4 p1, 0x1
 
-    .line 110
     iput-boolean p1, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLockFree:Z
 
     iput-boolean p1, p0, Lcom/android/server/wm/WindowTracing;->mEnabled:Z
 
-    .line 111
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const-string/jumbo p1, "trace.enable"
 
-    .line 112
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowTracing;->log(Ljava/lang/String;)V
 
     return-void
@@ -1275,7 +1155,6 @@
     :catchall_0
     move-exception p0
 
-    .line 111
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1287,25 +1166,21 @@
 .method public stopTrace(Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 120
     sget-boolean v0, Landroid/os/Build;->IS_USER:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "Error: Tracing is not supported on user builds."
 
-    .line 121
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     return-void
 
-    .line 124
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 125
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1331,15 +1206,12 @@
 
     const/4 v1, 0x0
 
-    .line 126
     iput-boolean v1, p0, Lcom/android/server/wm/WindowTracing;->mEnabledLockFree:Z
 
     iput-boolean v1, p0, Lcom/android/server/wm/WindowTracing;->mEnabled:Z
 
-    .line 132
     invoke-virtual {p0}, Lcom/android/server/wm/WindowTracing;->writeTraceToFileLocked()V
 
-    .line 133
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1362,12 +1234,10 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/wm/WindowTracing;->logAndPrintln(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 134
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 135
     invoke-static {}, Lcom/android/internal/protolog/ProtoLogImpl;->getSingleInstance()Lcom/android/internal/protolog/ProtoLogImpl;
 
     move-result-object p0
@@ -1381,7 +1251,6 @@
     :catchall_0
     move-exception p0
 
-    .line 134
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1398,10 +1267,8 @@
     :try_start_0
     const-string/jumbo v2, "writeTraceToFileLocked"
 
-    .line 354
     invoke-static {v0, v1, v2}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 355
     new-instance v2, Landroid/util/proto/ProtoOutputStream;
 
     invoke-direct {v2}, Landroid/util/proto/ProtoOutputStream;-><init>()V
@@ -1410,13 +1277,10 @@
 
     const-wide v5, 0x45434152544e4957L    # 4.655612620390422E25
 
-    .line 356
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    .line 357
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 358
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -1425,7 +1289,6 @@
 
     move-result-wide v3
 
-    .line 359
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v5
@@ -1434,10 +1297,8 @@
 
     const-wide v5, 0x10600000003L
 
-    .line 360
     invoke-virtual {v2, v5, v6, v3, v4}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    .line 361
     iget-object v3, p0, Lcom/android/server/wm/WindowTracing;->mBuffer:Lcom/android/internal/util/TraceBuffer;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowTracing;->mTraceFile:Ljava/io/File;
@@ -1462,12 +1323,10 @@
 
     const-string v3, "Unable to write buffer to file"
 
-    .line 363
     invoke-static {v2, v3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 365
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
@@ -1476,6 +1335,5 @@
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 366
     throw p0
 .end method

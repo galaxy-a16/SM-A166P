@@ -26,7 +26,6 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -37,7 +36,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 39
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
@@ -46,7 +44,6 @@
 
     goto :goto_1
 
-    .line 44
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/PriorityExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
@@ -54,7 +51,6 @@
 
     return-object v0
 
-    .line 50
     :cond_1
     iget-object p0, p0, Lcom/android/server/notification/PriorityExtractor;->mHelper:Lcom/android/server/notification/ZenModeHelper;
 
@@ -68,7 +64,6 @@
 
     if-eqz p0, :cond_5
 
-    .line 52
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -94,19 +89,16 @@
     :cond_3
     const-string v4, ":"
 
-    .line 54
     invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 55
     array-length v4, v3
 
     if-ge v4, v2, :cond_4
 
     goto :goto_0
 
-    .line 56
     :cond_4
     aget-object v4, v3, v1
 
@@ -128,7 +120,6 @@
 
     aget-object v3, v3, v4
 
-    .line 57
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
@@ -143,12 +134,10 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 58
     invoke-virtual {p1, v2}, Lcom/android/server/notification/NotificationRecord;->setPackagePriority(I)V
 
     goto :goto_0
 
-    .line 63
     :cond_5
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getChannel()Landroid/app/NotificationChannel;
 
@@ -173,7 +162,6 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 76
     iput-object p1, p0, Lcom/android/server/notification/PriorityExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
     return-void
@@ -182,7 +170,6 @@
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/notification/PriorityExtractor;->mHelper:Lcom/android/server/notification/ZenModeHelper;
 
     return-void

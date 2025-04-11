@@ -7,7 +7,6 @@
 .method public static toAIDL(Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)Landroid/net/ipmemorystore/IOnNetworkAttributesRetrievedListener;
     .locals 1
 
-    .line 35
     new-instance v0, Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener$1;
 
     invoke-direct {v0, p0}, Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener$1;-><init>(Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V

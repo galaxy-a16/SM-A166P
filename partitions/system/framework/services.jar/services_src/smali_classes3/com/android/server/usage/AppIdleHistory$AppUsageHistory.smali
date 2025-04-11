@@ -35,12 +35,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 168
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 178
     iput v0, p0, Lcom/android/server/usage/AppIdleHistory$AppUsageHistory;->lastPredictedBucket:I
 
     return-void

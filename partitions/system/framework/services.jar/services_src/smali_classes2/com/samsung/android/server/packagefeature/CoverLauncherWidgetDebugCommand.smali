@@ -9,7 +9,6 @@
 
     const-string v0, "-setCoverLauncherWidgetPackage"
 
-    .line 225
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -24,14 +23,12 @@
 .method public adjustExtra(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     return-object p2
 .end method
 
 .method public assertValidOptions(Ljava/io/PrintWriter;[Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
-    .line 233
     array-length v0, p2
 
     const/4 v1, 0x2
@@ -59,7 +56,6 @@
     :goto_0
     const-string p2, "Properties"
 
-    .line 234
     invoke-virtual {p0, p1, p3, p2}, Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;->printOptions(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)V
 
     return v2

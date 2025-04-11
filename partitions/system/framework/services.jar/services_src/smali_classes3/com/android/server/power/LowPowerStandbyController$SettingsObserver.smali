@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/power/LowPowerStandbyController;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1407
     iput-object p1, p0, Lcom/android/server/power/LowPowerStandbyController$SettingsObserver;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
-    .line 1408
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 1413
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$SettingsObserver;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-virtual {p0}, Lcom/android/server/power/LowPowerStandbyController;->onSettingsChanged()V

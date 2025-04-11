@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/PinnerService;
 
     invoke-static {p1}, Lcom/android/server/PinnerService;->$r8$lambda$HRPsSPKnCAX0zCBjW4zt0ulmSjs(Lcom/android/server/PinnerService;)V

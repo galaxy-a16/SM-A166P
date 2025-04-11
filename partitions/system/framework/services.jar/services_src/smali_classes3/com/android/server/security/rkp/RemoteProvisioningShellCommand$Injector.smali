@@ -17,7 +17,6 @@
 .method public getIrpcBinder(Ljava/lang/String;)Landroid/hardware/security/keymint/IRemotelyProvisionedComponent;
     .locals 2
 
-    .line 240
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -36,12 +35,10 @@
 
     move-result-object p0
 
-    .line 243
     invoke-static {p0}, Landroid/os/ServiceManager;->waitForDeclaredService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p1
 
-    .line 242
     invoke-static {p1}, Landroid/hardware/security/keymint/IRemotelyProvisionedComponent$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/security/keymint/IRemotelyProvisionedComponent;
 
     move-result-object p1
@@ -50,7 +47,6 @@
 
     return-object p1
 
-    .line 245
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -76,7 +72,6 @@
 .method public getIrpcNames()[Ljava/lang/String;
     .locals 0
 
-    .line 236
     sget-object p0, Landroid/hardware/security/keymint/IRemotelyProvisionedComponent;->DESCRIPTOR:Ljava/lang/String;
 
     invoke-static {p0}, Landroid/os/ServiceManager;->getDeclaredInstances(Ljava/lang/String;)[Ljava/lang/String;

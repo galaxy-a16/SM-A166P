@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/accessibility/CaptioningManagerImpl;->mContext:Landroid/content/Context;
 
     return-void
@@ -28,12 +26,10 @@
 .method public isSystemAudioCaptioningUiEnabled(I)Z
     .locals 4
 
-    .line 61
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 63
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/CaptioningManagerImpl;->mContext:Landroid/content/Context;
 
@@ -57,7 +53,6 @@
 
     move v3, p1
 
-    .line 67
     :cond_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -68,19 +63,16 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 68
     throw p0
 .end method
 
 .method public setSystemAudioCaptioningEnabled(ZI)V
     .locals 3
 
-    .line 44
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 46
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/CaptioningManagerImpl;->mContext:Landroid/content/Context;
 
@@ -104,7 +96,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -114,19 +105,16 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 50
     throw p0
 .end method
 
 .method public setSystemAudioCaptioningUiEnabled(ZI)V
     .locals 3
 
-    .line 79
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 81
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/CaptioningManagerImpl;->mContext:Landroid/content/Context;
 
@@ -150,7 +138,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 84
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -160,6 +147,5 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 85
     throw p0
 .end method

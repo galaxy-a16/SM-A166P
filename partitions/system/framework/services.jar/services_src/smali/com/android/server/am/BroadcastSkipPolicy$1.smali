@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/am/BroadcastSkipPolicy;Landroid/content/Intent;I)V
     .locals 0
 
-    .line 705
     iput-object p1, p0, Lcom/android/server/am/BroadcastSkipPolicy$1;->this$0:Lcom/android/server/am/BroadcastSkipPolicy;
 
     iput-object p2, p0, Lcom/android/server/am/BroadcastSkipPolicy$1;->val$intent:Landroid/content/Intent;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 708
     iget-object v0, p0, Lcom/android/server/am/BroadcastSkipPolicy$1;->this$0:Lcom/android/server/am/BroadcastSkipPolicy;
 
     invoke-static {v0}, Lcom/android/server/am/BroadcastSkipPolicy;->-$$Nest$fgetmService(Lcom/android/server/am/BroadcastSkipPolicy;)Lcom/android/server/am/ActivityManagerService;

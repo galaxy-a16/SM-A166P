@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/hardware/face/IFaceService;Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 49
     invoke-direct {p0, p2}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;-><init>(Ljava/util/function/Supplier;)V
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/FaceServiceRegistry;->mService:Landroid/hardware/face/IFaceService;
 
     return-void
@@ -25,7 +23,6 @@
 .method public invokeRegisteredCallback(Landroid/hardware/face/IFaceAuthenticatorsRegisteredCallback;Ljava/util/List;)V
     .locals 0
 
-    .line 69
     invoke-interface {p1, p2}, Landroid/hardware/face/IFaceAuthenticatorsRegisteredCallback;->onAllAuthenticatorsRegistered(Ljava/util/List;)V
 
     return-void
@@ -34,7 +31,6 @@
 .method public bridge synthetic invokeRegisteredCallback(Landroid/os/IInterface;Ljava/util/List;)V
     .locals 0
 
-    .line 38
     check-cast p1, Landroid/hardware/face/IFaceAuthenticatorsRegisteredCallback;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/face/FaceServiceRegistry;->invokeRegisteredCallback(Landroid/hardware/face/IFaceAuthenticatorsRegisteredCallback;Ljava/util/List;)V
@@ -45,7 +41,6 @@
 .method public bridge synthetic registerService(Landroid/hardware/biometrics/IBiometricService;Landroid/hardware/biometrics/SensorPropertiesInternal;)V
     .locals 0
 
-    .line 38
     check-cast p2, Landroid/hardware/face/FaceSensorPropertiesInternal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/face/FaceServiceRegistry;->registerService(Landroid/hardware/biometrics/IBiometricService;Landroid/hardware/face/FaceSensorPropertiesInternal;)V
@@ -56,15 +51,12 @@
 .method public registerService(Landroid/hardware/biometrics/IBiometricService;Landroid/hardware/face/FaceSensorPropertiesInternal;)V
     .locals 4
 
-    .line 56
     iget v0, p2, Landroid/hardware/face/FaceSensorPropertiesInternal;->sensorStrength:I
 
-    .line 57
     invoke-static {v0}, Lcom/android/server/biometrics/Utils;->propertyStrengthToAuthenticatorStrength(I)I
 
     move-result v0
 
-    .line 59
     :try_start_0
     iget v1, p2, Landroid/hardware/face/FaceSensorPropertiesInternal;->sensorId:I
 
@@ -84,7 +76,6 @@
 
     goto :goto_0
 
-    .line 62
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 

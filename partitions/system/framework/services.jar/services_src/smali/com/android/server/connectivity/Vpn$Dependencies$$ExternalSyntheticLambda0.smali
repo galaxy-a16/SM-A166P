@@ -20,7 +20,6 @@
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn$Dependencies;->$r8$lambda$UvGdPzVMLepJmgYf3vc_W-HxR98(Ljava/lang/Runnable;)V
 
     return-void

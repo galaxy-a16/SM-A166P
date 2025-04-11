@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;Landroid/view/View;Landroid/view/animation/AnimationSet;)V
     .locals 0
 
-    .line 630
     iput-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$6;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     iput-object p2, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$6;->val$v:Landroid/view/View;
@@ -35,14 +34,12 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 638
     iget-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$6;->val$v:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 639
     iget-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$6;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     iget-boolean p1, p1, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;->mShowOkButton:Z
@@ -57,7 +54,6 @@
 
     if-nez p1, :cond_0
 
-    .line 640
     iget-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$6;->val$v:Landroid/view/View;
 
     iget-object p0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$6;->val$animSet:Landroid/view/animation/AnimationSet;
@@ -71,14 +67,12 @@
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 633
     iget-object p0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$6;->val$v:Landroid/view/View;
 
     const/high16 p1, 0x3f800000    # 1.0f

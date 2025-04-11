@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/OneTouchRecordAction;)V
     .locals 0
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/hdmi/OneTouchRecordAction$1;->this$0:Lcom/android/server/hdmi/OneTouchRecordAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 66
     iget-object p1, p0, Lcom/android/server/hdmi/OneTouchRecordAction$1;->this$0:Lcom/android/server/hdmi/OneTouchRecordAction;
 
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
@@ -46,7 +44,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->announceOneTouchRecordResult(II)V
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/hdmi/OneTouchRecordAction$1;->this$0:Lcom/android/server/hdmi/OneTouchRecordAction;
 
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finish()V

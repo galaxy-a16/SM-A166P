@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;)V
     .locals 0
 
-    .line 852
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;
 
     const/4 p1, 0x0
@@ -26,7 +25,6 @@
 .method public onGetCustomPrinterIconResult(Landroid/graphics/drawable/Icon;I)V
     .locals 0
 
-    .line 855
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;->access$600(Lcom/android/server/print/RemotePrintSpooler$GetCustomPrinterIconCaller;Ljava/lang/Object;I)V

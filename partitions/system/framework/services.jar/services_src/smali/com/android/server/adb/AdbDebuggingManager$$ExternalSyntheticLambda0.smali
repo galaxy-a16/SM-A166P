@@ -20,7 +20,6 @@
 .method public final currentTimeMillis()J
     .locals 2
 
-    .line 0
     invoke-static {}, Lcom/android/server/adb/AdbDebuggingManager;->$r8$lambda$gZT0pLYva4rawTPaa4Vf1_8pFm8()J
 
     move-result-wide v0

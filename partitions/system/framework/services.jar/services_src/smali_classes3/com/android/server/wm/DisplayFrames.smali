@@ -35,7 +35,6 @@
 
     const/4 v0, 0x0
 
-    .line 46
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
 
     move-result v1
@@ -50,7 +49,6 @@
 
     const/4 v0, 0x1
 
-    .line 47
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
 
     move-result v1
@@ -63,7 +61,6 @@
 
     const/4 v0, 0x2
 
-    .line 48
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
 
     move-result v1
@@ -76,7 +73,6 @@
 
     const/4 v0, 0x3
 
-    .line 49
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
 
     move-result v1
@@ -93,24 +89,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    .line 62
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
 
-    .line 94
     new-instance v0, Landroid/view/InsetsState;
 
     invoke-direct {v0}, Landroid/view/InsetsState;-><init>()V
@@ -139,7 +131,6 @@
 
     move-object v6, p6
 
-    .line 78
     invoke-direct/range {v0 .. v7}, Lcom/android/server/wm/DisplayFrames;-><init>(Landroid/view/InsetsState;Landroid/view/DisplayInfo;Landroid/view/DisplayCutout;Landroid/view/RoundedCorners;Landroid/view/PrivacyIndicatorBounds;Landroid/view/DisplayShape;Lcom/android/server/wm/UdcCutoutPolicy;)V
 
     return-void
@@ -148,30 +139,24 @@
 .method public constructor <init>(Landroid/view/InsetsState;Landroid/view/DisplayInfo;Landroid/view/DisplayCutout;Landroid/view/RoundedCorners;Landroid/view/PrivacyIndicatorBounds;Landroid/view/DisplayShape;Lcom/android/server/wm/UdcCutoutPolicy;)V
     .locals 8
 
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    .line 62
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
 
-    .line 85
     iput-object p7, p0, Lcom/android/server/wm/DisplayFrames;->mUdcCutoutPolicy:Lcom/android/server/wm/UdcCutoutPolicy;
 
-    .line 88
     iput-object p1, p0, Lcom/android/server/wm/DisplayFrames;->mInsetsState:Landroid/view/InsetsState;
 
-    .line 89
     iget v2, p2, Landroid/view/DisplayInfo;->rotation:I
 
     iget v3, p2, Landroid/view/DisplayInfo;->logicalWidth:I
@@ -204,7 +189,6 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 1
 
-    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -247,12 +231,10 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 0
 
-    .line 159
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
-    .line 160
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -275,13 +257,10 @@
 
     move-object/from16 v14, p6
 
-    .line 106
     iget-object v15, v0, Lcom/android/server/wm/DisplayFrames;->mInsetsState:Landroid/view/InsetsState;
 
-    .line 107
     iget-object v8, v0, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
 
-    .line 109
     iget-object v1, v0, Lcom/android/server/wm/DisplayFrames;->mUdcCutoutPolicy:Lcom/android/server/wm/UdcCutoutPolicy;
 
     if-eqz v1, :cond_0
@@ -302,7 +281,6 @@
 
     move-object/from16 v8, p7
 
-    .line 110
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/wm/UdcCutoutPolicy;->onDisplayInfoUpdated(Landroid/view/InsetsState;IIILandroid/view/RoundedCorners;Landroid/view/PrivacyIndicatorBounds;Landroid/view/DisplayShape;)V
 
     goto :goto_0
@@ -310,7 +288,6 @@
     :cond_0
     move-object/from16 v16, v8
 
-    .line 114
     :goto_0
     iget v1, v0, Lcom/android/server/wm/DisplayFrames;->mRotation:I
 
@@ -328,7 +305,6 @@
 
     iget-object v1, v0, Lcom/android/server/wm/DisplayFrames;->mInsetsState:Landroid/view/InsetsState;
 
-    .line 115
     invoke-virtual {v1}, Landroid/view/InsetsState;->getDisplayCutout()Landroid/view/DisplayCutout;
 
     move-result-object v1
@@ -339,7 +315,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 116
     invoke-virtual {v15}, Landroid/view/InsetsState;->getRoundedCorners()Landroid/view/RoundedCorners;
 
     move-result-object v1
@@ -350,7 +325,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 117
     invoke-virtual {v15}, Landroid/view/InsetsState;->getPrivacyIndicatorBounds()Landroid/view/PrivacyIndicatorBounds;
 
     move-result-object v1
@@ -363,52 +337,39 @@
 
     return v2
 
-    .line 120
     :cond_1
     iput v9, v0, Lcom/android/server/wm/DisplayFrames;->mRotation:I
 
-    .line 121
     iput v10, v0, Lcom/android/server/wm/DisplayFrames;->mWidth:I
 
-    .line 122
     iput v11, v0, Lcom/android/server/wm/DisplayFrames;->mHeight:I
 
-    .line 123
     iget-object v0, v0, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    .line 124
     invoke-virtual {v0, v2, v2, v10, v11}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 125
     invoke-virtual {v15, v0}, Landroid/view/InsetsState;->setDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 126
     invoke-virtual {v15, v12}, Landroid/view/InsetsState;->setDisplayCutout(Landroid/view/DisplayCutout;)V
 
-    .line 127
     invoke-virtual {v15, v13}, Landroid/view/InsetsState;->setRoundedCorners(Landroid/view/RoundedCorners;)V
 
-    .line 128
     invoke-virtual {v15, v14}, Landroid/view/InsetsState;->setPrivacyIndicatorBounds(Landroid/view/PrivacyIndicatorBounds;)V
 
     move-object/from16 v1, p7
 
-    .line 129
     invoke-virtual {v15, v1}, Landroid/view/InsetsState;->setDisplayShape(Landroid/view/DisplayShape;)V
 
     move-object/from16 v1, v16
 
-    .line 130
     invoke-virtual {v15, v1}, Landroid/view/InsetsState;->getDisplayCutoutSafe(Landroid/graphics/Rect;)V
 
-    .line 131
     iget v2, v1, Landroid/graphics/Rect;->left:I
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
     if-le v2, v3, :cond_2
 
-    .line 132
     sget v2, Lcom/android/server/wm/DisplayFrames;->ID_DISPLAY_CUTOUT_LEFT:I
 
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
@@ -431,13 +392,11 @@
 
     goto :goto_1
 
-    .line 135
     :cond_2
     sget v2, Lcom/android/server/wm/DisplayFrames;->ID_DISPLAY_CUTOUT_LEFT:I
 
     invoke-virtual {v15, v2}, Landroid/view/InsetsState;->removeSource(I)V
 
-    .line 137
     :goto_1
     iget v2, v1, Landroid/graphics/Rect;->top:I
 
@@ -445,7 +404,6 @@
 
     if-le v2, v3, :cond_3
 
-    .line 138
     sget v2, Lcom/android/server/wm/DisplayFrames;->ID_DISPLAY_CUTOUT_TOP:I
 
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
@@ -468,13 +426,11 @@
 
     goto :goto_2
 
-    .line 141
     :cond_3
     sget v2, Lcom/android/server/wm/DisplayFrames;->ID_DISPLAY_CUTOUT_TOP:I
 
     invoke-virtual {v15, v2}, Landroid/view/InsetsState;->removeSource(I)V
 
-    .line 143
     :goto_2
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
@@ -482,7 +438,6 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 144
     sget v2, Lcom/android/server/wm/DisplayFrames;->ID_DISPLAY_CUTOUT_RIGHT:I
 
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
@@ -505,13 +460,11 @@
 
     goto :goto_3
 
-    .line 147
     :cond_4
     sget v2, Lcom/android/server/wm/DisplayFrames;->ID_DISPLAY_CUTOUT_RIGHT:I
 
     invoke-virtual {v15, v2}, Landroid/view/InsetsState;->removeSource(I)V
 
-    .line 149
     :goto_3
     iget v2, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -519,7 +472,6 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 150
     sget v2, Lcom/android/server/wm/DisplayFrames;->ID_DISPLAY_CUTOUT_BOTTOM:I
 
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
@@ -542,7 +494,6 @@
 
     goto :goto_4
 
-    .line 153
     :cond_5
     sget v0, Lcom/android/server/wm/DisplayFrames;->ID_DISPLAY_CUTOUT_BOTTOM:I
 

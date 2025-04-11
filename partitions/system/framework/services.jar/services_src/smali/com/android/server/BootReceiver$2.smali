@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/BootReceiver;Landroid/content/Context;)V
     .locals 0
 
-    .line 1611
     iput-object p1, p0, Lcom/android/server/BootReceiver$2;->this$0:Lcom/android/server/BootReceiver;
 
     iput-object p2, p0, Lcom/android/server/BootReceiver$2;->val$context:Landroid/content/Context;
@@ -30,7 +29,6 @@
 
     const-string v0, "BootReceiver"
 
-    .line 1615
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BootReceiver$2;->this$0:Lcom/android/server/BootReceiver;
 
@@ -47,10 +45,8 @@
 
     const-string v2, "Can\'t log boot events"
 
-    .line 1617
     invoke-static {v0, v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1620
     :goto_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/BootReceiver$2;->this$0:Lcom/android/server/BootReceiver;
@@ -68,7 +64,6 @@
 
     const-string v1, "Can\'t remove old update packages"
 
-    .line 1622
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1

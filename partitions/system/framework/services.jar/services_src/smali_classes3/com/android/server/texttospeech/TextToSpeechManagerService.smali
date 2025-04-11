@@ -7,7 +7,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -16,7 +15,6 @@
 
     const/4 v0, 0x0
 
-    .line 45
     invoke-direct {p0, p1, v0, v0}, Lcom/android/server/infra/AbstractMasterSystemService;-><init>(Landroid/content/Context;Lcom/android/server/infra/ServiceNameResolver;Ljava/lang/String;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public static synthetic access$000(Lcom/android/server/texttospeech/TextToSpeechManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 38
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -34,7 +31,6 @@
 .method public static synthetic access$100(Lcom/android/server/texttospeech/TextToSpeechManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 38
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -47,7 +43,6 @@
 .method public bridge synthetic newServiceLocked(IZ)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 38
     invoke-virtual {p0, p1, p2}, Lcom/android/server/texttospeech/TextToSpeechManagerService;->newServiceLocked(IZ)Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService;
 
     move-result-object p0
@@ -58,7 +53,6 @@
 .method public newServiceLocked(IZ)Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService;
     .locals 1
 
-    .line 58
     new-instance p2, Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService;
 
     iget-object v0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
@@ -71,7 +65,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 51
     new-instance v0, Lcom/android/server/texttospeech/TextToSpeechManagerService$TextToSpeechManagerServiceStub;
 
     const/4 v1, 0x0

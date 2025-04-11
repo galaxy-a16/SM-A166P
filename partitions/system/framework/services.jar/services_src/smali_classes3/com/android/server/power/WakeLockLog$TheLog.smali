@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBuffer(Lcom/android/server/power/WakeLockLog$TheLog;)[B
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mBuffer:[B
 
     return-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmChangeCount(Lcom/android/server/power/WakeLockLog$TheLog;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mChangeCount:J
 
     return-wide v0
@@ -47,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEnd(Lcom/android/server/power/WakeLockLog$TheLog;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
 
     return p0
@@ -56,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStart(Lcom/android/server/power/WakeLockLog$TheLog;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStart:I
 
     return p0
@@ -65,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStartTime(Lcom/android/server/power/WakeLockLog$TheLog;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStartTime:J
 
     return-wide v0
@@ -74,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTranslator(Lcom/android/server/power/WakeLockLog$TheLog;)Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTranslator:Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
 
     return-object p0
@@ -83,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$mreadEntryAt(Lcom/android/server/power/WakeLockLog$TheLog;IJLcom/android/server/power/WakeLockLog$LogEntry;)Lcom/android/server/power/WakeLockLog$LogEntry;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/power/WakeLockLog$TheLog;->readEntryAt(IJLcom/android/server/power/WakeLockLog$LogEntry;)Lcom/android/server/power/WakeLockLog$LogEntry;
 
     move-result-object p0
@@ -94,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$mremoveTagIndex(Lcom/android/server/power/WakeLockLog$TheLog;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/power/WakeLockLog$TheLog;->removeTagIndex(I)V
 
     return-void
@@ -103,41 +95,32 @@
 .method public constructor <init>(Lcom/android/server/power/WakeLockLog$Injector;Lcom/android/server/power/WakeLockLog$EntryByteTranslator;Lcom/android/server/power/WakeLockLog$TagDatabase;)V
     .locals 2
 
-    .line 747
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x9
 
     new-array v1, v0, [B
 
-    .line 702
     iput-object v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTempBuffer:[B
 
     new-array v0, v0, [B
 
-    .line 710
     iput-object v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mReadWriteTempBuffer:[B
 
     const/4 v0, 0x0
 
-    .line 720
     iput v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStart:I
 
-    .line 725
     iput v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
 
     const-wide/16 v0, 0x0
 
-    .line 731
     iput-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStartTime:J
 
-    .line 738
     iput-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mLatestTime:J
 
-    .line 743
     iput-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mChangeCount:J
 
-    .line 748
     invoke-virtual {p1}, Lcom/android/server/power/WakeLockLog$Injector;->getLogSize()I
 
     move-result p1
@@ -148,18 +131,14 @@
 
     move-result p1
 
-    .line 749
     new-array p1, p1, [B
 
     iput-object p1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mBuffer:[B
 
-    .line 751
     iput-object p2, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTranslator:Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
 
-    .line 752
     iput-object p3, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTagDatabase:Lcom/android/server/power/WakeLockLog$TagDatabase;
 
-    .line 756
     new-instance p1, Lcom/android/server/power/WakeLockLog$TheLog$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/power/WakeLockLog$TheLog$1;-><init>(Lcom/android/server/power/WakeLockLog$TheLog;)V
@@ -174,21 +153,18 @@
 .method public addEntry(Lcom/android/server/power/WakeLockLog$LogEntry;)V
     .locals 8
 
-    .line 780
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog;->isBufferEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 782
     iget-wide v0, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
 
     iput-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mLatestTime:J
 
     iput-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStartTime:J
 
-    .line 785
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTranslator:Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
 
@@ -211,7 +187,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 792
     new-instance v0, Lcom/android/server/power/WakeLockLog$LogEntry;
 
     iget-wide v3, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
@@ -228,7 +203,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/power/WakeLockLog$TheLog;->addEntry(Lcom/android/server/power/WakeLockLog$LogEntry;)V
 
-    .line 793
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTranslator:Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
 
     iget-object v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTempBuffer:[B
@@ -248,7 +222,6 @@
 
     goto :goto_0
 
-    .line 803
     :cond_3
     invoke-virtual {p0, v0}, Lcom/android/server/power/WakeLockLog$TheLog;->makeSpace(I)Z
 
@@ -258,7 +231,6 @@
 
     return-void
 
-    .line 812
     :cond_4
     iget v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
 
@@ -266,7 +238,6 @@
 
     invoke-virtual {p0, v1, v2, v0}, Lcom/android/server/power/WakeLockLog$TheLog;->writeBytesAt(I[BI)V
 
-    .line 817
     iget v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
 
     add-int/2addr v1, v0
@@ -279,17 +250,14 @@
 
     iput v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
 
-    .line 818
     iget-wide v0, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
 
     iput-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mLatestTime:J
 
-    .line 820
     iget-object p1, p1, Lcom/android/server/power/WakeLockLog$LogEntry;->tag:Lcom/android/server/power/WakeLockLog$TagData;
 
     invoke-static {p1, v0, v1}, Lcom/android/server/power/WakeLockLog$TagDatabase;->updateTagTime(Lcom/android/server/power/WakeLockLog$TagData;J)V
 
-    .line 821
     iget-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mChangeCount:J
 
     const-wide/16 v2, 0x1
@@ -300,7 +268,6 @@
 
     return-void
 
-    .line 797
     :cond_5
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -327,7 +294,6 @@
 .method public getAllItems(Lcom/android/server/power/WakeLockLog$LogEntry;)Ljava/util/Iterator;
     .locals 1
 
-    .line 834
     new-instance v0, Lcom/android/server/power/WakeLockLog$TheLog$2;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/power/WakeLockLog$TheLog$2;-><init>(Lcom/android/server/power/WakeLockLog$TheLog;Lcom/android/server/power/WakeLockLog$LogEntry;)V
@@ -338,7 +304,6 @@
 .method public final getAvailableSpace()I
     .locals 2
 
-    .line 963
     iget v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
 
     iget v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStart:I
@@ -362,7 +327,6 @@
 
     goto :goto_0
 
-    .line 965
     :cond_1
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mBuffer:[B
 
@@ -375,7 +339,6 @@
 .method public getUsedBufferSize()I
     .locals 1
 
-    .line 769
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mBuffer:[B
 
     array-length v0, v0
@@ -392,7 +355,6 @@
 .method public final isBufferEmpty()Z
     .locals 1
 
-    .line 994
     iget v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStart:I
 
     iget p0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
@@ -413,7 +375,6 @@
 .method public final makeSpace(I)Z
     .locals 2
 
-    .line 947
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mBuffer:[B
 
     array-length v0, v0
@@ -428,7 +389,6 @@
 
     return p0
 
-    .line 953
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog;->getAvailableSpace()I
@@ -437,7 +397,6 @@
 
     if-ge v0, p1, :cond_1
 
-    .line 954
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog;->removeOldestItem()V
 
     goto :goto_0
@@ -458,21 +417,18 @@
 
     add-int v1, p1, v0
 
-    .line 1007
     iget-object v2, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mBuffer:[B
 
     array-length v3, v2
 
     rem-int/2addr v1, v3
 
-    .line 1008
     iget v3, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
 
     if-ne v1, v3, :cond_0
 
     goto :goto_1
 
-    .line 1011
     :cond_0
     iget-object v3, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mReadWriteTempBuffer:[B
 
@@ -484,7 +440,6 @@
 
     goto :goto_0
 
-    .line 1013
     :cond_1
     :goto_1
     iget-object p1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTranslator:Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
@@ -501,7 +456,6 @@
 .method public final removeOldestItem()V
     .locals 6
 
-    .line 972
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog;->isBufferEmpty()Z
 
     move-result v0
@@ -510,7 +464,6 @@
 
     return-void
 
-    .line 978
     :cond_0
     iget v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStart:I
 
@@ -522,7 +475,6 @@
 
     move-result-object v0
 
-    .line 982
     iget-object v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTranslator:Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
 
     iget-wide v4, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStartTime:J
@@ -531,7 +483,6 @@
 
     move-result v1
 
-    .line 983
     iget v2, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStart:I
 
     add-int/2addr v2, v1
@@ -544,12 +495,10 @@
 
     iput v2, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStart:I
 
-    .line 984
     iget-wide v0, v0, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
 
     iput-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStartTime:J
 
-    .line 985
     iget-wide v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mChangeCount:J
 
     const-wide/16 v2, 0x1
@@ -564,7 +513,6 @@
 .method public final removeTagIndex(I)V
     .locals 9
 
-    .line 907
     invoke-virtual {p0}, Lcom/android/server/power/WakeLockLog$TheLog;->isBufferEmpty()Z
 
     move-result v0
@@ -573,32 +521,26 @@
 
     return-void
 
-    .line 911
     :cond_0
     iget v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStart:I
 
-    .line 912
     iget-wide v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mStartTime:J
 
-    .line 913
     new-instance v3, Lcom/android/server/power/WakeLockLog$LogEntry;
 
     invoke-direct {v3}, Lcom/android/server/power/WakeLockLog$LogEntry;-><init>()V
 
-    .line 914
     :goto_0
     iget v4, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mEnd:I
 
     if-eq v0, v4, :cond_3
 
-    .line 915
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/server/power/WakeLockLog$TheLog;->readEntryAt(IJLcom/android/server/power/WakeLockLog$LogEntry;)Lcom/android/server/power/WakeLockLog$LogEntry;
 
     move-result-object v4
 
     if-nez v4, :cond_1
 
-    .line 920
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -619,7 +561,6 @@
 
     goto :goto_1
 
-    .line 923
     :cond_1
     iget-object v5, v4, Lcom/android/server/power/WakeLockLog$LogEntry;->tag:Lcom/android/server/power/WakeLockLog$TagData;
 
@@ -631,17 +572,13 @@
 
     if-ne v5, p1, :cond_2
 
-    .line 926
     iput-object v6, v4, Lcom/android/server/power/WakeLockLog$LogEntry;->tag:Lcom/android/server/power/WakeLockLog$TagData;
 
-    .line 927
     invoke-virtual {p0, v0, v4, v1, v2}, Lcom/android/server/power/WakeLockLog$TheLog;->writeEntryAt(ILcom/android/server/power/WakeLockLog$LogEntry;J)V
 
-    .line 932
     :cond_2
     iget-wide v1, v4, Lcom/android/server/power/WakeLockLog$LogEntry;->time:J
 
-    .line 933
     iget-object v5, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTranslator:Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
 
     const-wide/16 v7, 0x0
@@ -652,7 +589,6 @@
 
     add-int/2addr v0, v4
 
-    .line 934
     iget-object v4, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mBuffer:[B
 
     array-length v4, v4
@@ -676,14 +612,12 @@
 
     add-int v1, p1, v0
 
-    .line 1044
     iget-object v2, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mBuffer:[B
 
     array-length v3, v2
 
     rem-int/2addr v1, v3
 
-    .line 1045
     aget-byte v3, p2, v0
 
     aput-byte v3, v2, v1
@@ -699,7 +633,6 @@
 .method public final writeEntryAt(ILcom/android/server/power/WakeLockLog$LogEntry;J)V
     .locals 2
 
-    .line 1024
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mTranslator:Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
 
     iget-object v1, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mReadWriteTempBuffer:[B
@@ -710,7 +643,6 @@
 
     if-lez p2, :cond_0
 
-    .line 1030
     iget-object p3, p0, Lcom/android/server/power/WakeLockLog$TheLog;->mReadWriteTempBuffer:[B
 
     invoke-virtual {p0, p1, p3, p2}, Lcom/android/server/power/WakeLockLog$TheLog;->writeBytesAt(I[BI)V

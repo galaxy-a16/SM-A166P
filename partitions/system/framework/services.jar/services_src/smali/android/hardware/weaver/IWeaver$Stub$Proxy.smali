@@ -18,20 +18,16 @@
 .method public constructor <init>(Landroid/os/IBinder;)V
     .locals 1
 
-    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 180
     iput v0, p0, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->mCachedVersion:I
 
     const-string v0, "-1"
 
-    .line 181
     iput-object v0, p0, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->mCachedHash:Ljava/lang/String;
 
-    .line 178
     iput-object p1, p0, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -42,7 +38,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 184
     iget-object p0, p0, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0
@@ -51,7 +46,6 @@
 .method public getConfig()Landroid/hardware/weaver/WeaverConfig;
     .locals 4
 
-    .line 192
     invoke-virtual {p0}, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -60,18 +54,15 @@
 
     move-result-object v0
 
-    .line 193
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 196
     :try_start_0
     sget-object v2, Landroid/hardware/weaver/IWeaver;->DESCRIPTOR:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 197
     iget-object p0, p0, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -84,10 +75,8 @@
 
     if-eqz p0, :cond_0
 
-    .line 201
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 202
     sget-object p0, Landroid/hardware/weaver/WeaverConfig;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {v1, p0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
@@ -98,15 +87,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 205
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 206
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
 
-    .line 199
     :cond_0
     :try_start_1
     new-instance p0, Landroid/os/RemoteException;
@@ -122,20 +108,16 @@
     :catchall_0
     move-exception p0
 
-    .line 205
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 206
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 207
     throw p0
 .end method
 
 .method public read(I[B)Landroid/hardware/weaver/WeaverReadResponse;
     .locals 3
 
-    .line 212
     invoke-virtual {p0}, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -144,24 +126,19 @@
 
     move-result-object v0
 
-    .line 213
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 216
     :try_start_0
     sget-object v2, Landroid/hardware/weaver/IWeaver;->DESCRIPTOR:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 217
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 218
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 219
     iget-object p0, p0, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 p1, 0x2
@@ -174,10 +151,8 @@
 
     if-eqz p0, :cond_0
 
-    .line 223
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 224
     sget-object p0, Landroid/hardware/weaver/WeaverReadResponse;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {v1, p0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
@@ -188,15 +163,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 227
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 228
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
 
-    .line 221
     :cond_0
     :try_start_1
     new-instance p0, Landroid/os/RemoteException;
@@ -212,20 +184,16 @@
     :catchall_0
     move-exception p0
 
-    .line 227
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 228
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 229
     throw p0
 .end method
 
 .method public write(I[B[B)V
     .locals 3
 
-    .line 234
     invoke-virtual {p0}, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -234,27 +202,21 @@
 
     move-result-object v0
 
-    .line 235
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 237
     :try_start_0
     sget-object v2, Landroid/hardware/weaver/IWeaver;->DESCRIPTOR:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 238
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 239
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 240
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 241
     iget-object p0, p0, Landroid/hardware/weaver/IWeaver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 p1, 0x3
@@ -267,20 +229,16 @@
 
     if-eqz p0, :cond_0
 
-    .line 245
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 248
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 249
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
-    .line 243
     :cond_0
     :try_start_1
     new-instance p0, Landroid/os/RemoteException;
@@ -296,12 +254,9 @@
     :catchall_0
     move-exception p0
 
-    .line 248
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 249
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 250
     throw p0
 .end method

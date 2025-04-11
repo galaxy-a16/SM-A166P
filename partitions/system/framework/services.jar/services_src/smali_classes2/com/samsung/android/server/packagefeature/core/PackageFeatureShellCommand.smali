@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;)V
     .locals 0
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object p1, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand;->mImpl:Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     return-void
@@ -25,7 +23,6 @@
 .method public executeShellCommand(Ljava/io/PrintWriter;[Ljava/lang/String;Ljava/lang/String;)Z
     .locals 12
 
-    .line 54
     sget-object v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand$Command;->PACKAGE_FEATURE:Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand$Command;
 
     iget-object v0, v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand$Command;->mCommand:Ljava/lang/String;
@@ -42,26 +39,21 @@
 
     if-eqz v0, :cond_3
 
-    .line 55
     iget-object p3, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand;->mImpl:Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     invoke-virtual {p3, p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;->dump(Ljava/io/PrintWriter;)V
 
-    .line 56
     array-length p3, p2
 
     if-eq p3, v3, :cond_0
 
     return v3
 
-    .line 57
     :cond_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 58
     aget-object p2, p2, v2
 
-    .line 59
     sget-object p3, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand$Command;->PACKAGE_FEATURE_OPTION_FORCE_UPDATE:Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand$Command;
 
     iget-object p3, p3, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand$Command;->mCommand:Ljava/lang/String;
@@ -74,22 +66,18 @@
 
     const-string p2, "Started update."
 
-    .line 60
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 61
     iget-object p1, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand;->mImpl:Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     invoke-virtual {p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;->initializeGroups()V
 
-    .line 62
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand;->mImpl:Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;->updateGroupData(Ljava/lang/String;)V
 
     return v3
 
-    .line 65
     :cond_1
     sget-object p3, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand$Command;->PACKAGE_FEATURE_OPTION_POLICY_RESET:Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand$Command;
 
@@ -103,10 +91,8 @@
 
     const-string p2, "Started reset."
 
-    .line 66
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 67
     iget-object p2, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand;->mImpl:Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     invoke-virtual {p2}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;->deleteCacheFiles()Ljava/lang/String;
@@ -115,12 +101,10 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 68
     iget-object p1, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand;->mImpl:Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     invoke-virtual {p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;->initializeGroups()V
 
-    .line 69
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand;->mImpl:Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;->updateGroupData(Ljava/lang/String;)V
@@ -128,7 +112,6 @@
     :cond_2
     return v3
 
-    .line 75
     :cond_3
     invoke-static {}, Lcom/samsung/android/server/packagefeature/PackageFeature;->values()[Lcom/samsung/android/server/packagefeature/PackageFeature;
 
@@ -143,7 +126,6 @@
 
     aget-object v6, v0, v5
 
-    .line 76
     iget-boolean v7, v6, Lcom/samsung/android/server/packagefeature/PackageFeature;->mEnabled:Z
 
     if-eqz v7, :cond_8
@@ -154,7 +136,6 @@
 
     goto :goto_2
 
-    .line 80
     :cond_4
     iget-object v8, v7, Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;->mCommands:[Ljava/lang/String;
 
@@ -167,7 +148,6 @@
 
     aget-object v11, v8, v10
 
-    .line 81
     invoke-virtual {v11, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -178,7 +158,6 @@
 
     goto :goto_1
 
-    .line 84
     :cond_5
     invoke-virtual {v7, p1, p2, p3}, Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;->assertValidOptions(Ljava/io/PrintWriter;[Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -188,7 +167,6 @@
 
     return v3
 
-    .line 87
     :cond_6
     aget-object v0, p2, v2
 
@@ -198,27 +176,23 @@
 
     move-result-object v0
 
-    .line 89
     array-length v2, p2
 
     if-le v2, v3, :cond_7
 
     aget-object v1, p2, v3
 
-    .line 88
     :cond_7
     invoke-virtual {v7, p3, v1}, Lcom/samsung/android/server/packagefeature/PackageFeatureDebugCommand;->adjustExtra(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 90
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureShellCommand;->mImpl:Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;
 
     invoke-virtual {p0, v6, v0, p2}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureControllerImpl;->executeDebugMode(Lcom/samsung/android/server/packagefeature/PackageFeature;[Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 91
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v3

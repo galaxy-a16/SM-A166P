@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActivityManagerInternal(Lcom/android/server/pm/permission/OneTimePermissionUserManager;)Landroid/app/ActivityManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
     return-object p0
@@ -40,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAlarmManager(Lcom/android/server/pm/permission/OneTimePermissionUserManager;)Landroid/app/AlarmManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mAlarmManager:Landroid/app/AlarmManager;
 
     return-object p0
@@ -49,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/pm/permission/OneTimePermissionUserManager;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -58,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIActivityManager(Lcom/android/server/pm/permission/OneTimePermissionUserManager;)Landroid/app/IActivityManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mIActivityManager:Landroid/app/IActivityManager;
 
     return-object p0
@@ -67,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fgetmListeners(Lcom/android/server/pm/permission/OneTimePermissionUserManager;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mListeners:Landroid/util/SparseArray;
 
     return-object p0
@@ -76,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/pm/permission/OneTimePermissionUserManager;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -85,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPermissionControllerManager(Lcom/android/server/pm/permission/OneTimePermissionUserManager;)Landroid/permission/PermissionControllerManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mPermissionControllerManager:Landroid/permission/PermissionControllerManager;
 
     return-object p0
@@ -94,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$sfgetLOG_TAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->LOG_TAG:Ljava/lang/String;
 
     return-object v0
@@ -103,48 +95,40 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mLock:Ljava/lang/Object;
 
-    .line 62
     new-instance v0, Lcom/android/server/pm/permission/OneTimePermissionUserManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/permission/OneTimePermissionUserManager$1;-><init>(Lcom/android/server/pm/permission/OneTimePermissionUserManager;)V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mUninstallListener:Landroid/content/BroadcastReceiver;
 
-    .line 80
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mListeners:Landroid/util/SparseArray;
 
-    .line 85
     iput-object p1, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mContext:Landroid/content/Context;
 
-    .line 86
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mIActivityManager:Landroid/app/IActivityManager;
 
-    .line 87
     const-class v0, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -155,7 +139,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
-    .line 88
     const-class v0, Landroid/app/AlarmManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -166,10 +149,8 @@
 
     iput-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 89
     new-instance v0, Landroid/permission/PermissionControllerManager;
 
-    .line 90
     invoke-static {}, Lcom/android/server/PermissionThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -178,7 +159,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mPermissionControllerManager:Landroid/permission/PermissionControllerManager;
 
-    .line 91
     invoke-virtual {p1}, Landroid/content/Context;->getMainThreadHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -193,7 +173,6 @@
 .method public registerUninstallListener()V
     .locals 3
 
-    .line 145
     iget-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mUninstallListener:Landroid/content/BroadcastReceiver;
@@ -216,7 +195,6 @@
 
     move-object v4, p1
 
-    .line 98
     :try_start_0
     iget-object v1, v0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mContext:Landroid/content/Context;
 
@@ -232,12 +210,10 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 104
     iget-object v11, v0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 105
     :try_start_1
     iget-object v1, v0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mListeners:Landroid/util/SparseArray;
 
@@ -253,10 +229,8 @@
 
     move-wide/from16 v7, p4
 
-    .line 107
     invoke-virtual {v1, v5, v6, v7, v8}, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;->updateSessionParameters(JJ)V
 
-    .line 108
     monitor-exit v11
 
     return-void
@@ -266,7 +240,6 @@
 
     move-wide/from16 v7, p4
 
-    .line 110
     new-instance v12, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;
 
     const/4 v9, 0x0
@@ -285,12 +258,10 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;-><init>(Lcom/android/server/pm/permission/OneTimePermissionUserManager;ILjava/lang/String;JJLcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener-IA;)V
 
-    .line 112
     iget-object v0, v0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mListeners:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v10, v12}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 113
     monitor-exit v11
 
     return-void
@@ -307,7 +278,6 @@
     :catch_0
     move-exception v0
 
-    .line 100
     sget-object v1, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->LOG_TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -332,7 +302,6 @@
 .method public stopPackageOneTimeSession(Ljava/lang/String;)V
     .locals 3
 
-    .line 125
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mContext:Landroid/content/Context;
 
@@ -348,12 +317,10 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 132
     :try_start_1
     iget-object v1, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mListeners:Landroid/util/SparseArray;
 
@@ -365,15 +332,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->mListeners:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 135
     invoke-static {v1}, Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;->-$$Nest$mcancel(Lcom/android/server/pm/permission/OneTimePermissionUserManager$PackageInactivityListener;)V
 
-    .line 137
     :cond_0
     monitor-exit v0
 
@@ -391,7 +355,6 @@
     :catch_0
     move-exception p0
 
-    .line 127
     sget-object v0, Lcom/android/server/pm/permission/OneTimePermissionUserManager;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -29,21 +29,16 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
-    .line 47
     iput-wide v0, p0, Lcom/android/server/notification/sec/runestone/CollectionContract$Notification$Log;->enqueuedTimeMs:J
 
-    .line 48
     iput-wide v0, p0, Lcom/android/server/notification/sec/runestone/CollectionContract$Notification$Log;->canceledTimeMs:J
 
-    .line 49
     iput-wide v0, p0, Lcom/android/server/notification/sec/runestone/CollectionContract$Notification$Log;->firstExpandedTimeMs:J
 
-    .line 50
     iput-wide v0, p0, Lcom/android/server/notification/sec/runestone/CollectionContract$Notification$Log;->firstShownTimeMs:J
 
     return-void
@@ -54,7 +49,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

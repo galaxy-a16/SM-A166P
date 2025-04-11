@@ -20,6 +20,5 @@
 .method public postMessage(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

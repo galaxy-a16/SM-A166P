@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     new-instance p0, Lcom/android/server/pm/ScanPartition;
 
     check-cast p1, Landroid/content/pm/PackagePartitions$SystemPartition;

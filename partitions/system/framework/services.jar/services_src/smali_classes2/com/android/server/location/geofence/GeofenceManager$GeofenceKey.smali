@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/app/PendingIntent;Landroid/location/Geofence;)V
     .locals 1
 
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -25,7 +23,6 @@
 
     iput-object p1, p0, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;->mPendingIntent:Landroid/app/PendingIntent;
 
-    .line 86
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -42,17 +39,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 95
     instance-of v0, p1, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 96
     check-cast p1, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;->mPendingIntent:Landroid/app/PendingIntent;
 
     iget-object v2, p1, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;->mPendingIntent:Landroid/app/PendingIntent;
@@ -82,7 +76,6 @@
 .method public getPendingIntent()Landroid/app/PendingIntent;
     .locals 0
 
-    .line 90
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;->mPendingIntent:Landroid/app/PendingIntent;
 
     return-object p0
@@ -91,7 +84,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 106
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;->mPendingIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {p0}, Landroid/app/PendingIntent;->hashCode()I

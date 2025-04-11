@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .line 1703
     iput-object p1, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$BluetoothDevicePolicy;->this$0:Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
 
-    .line 1704
     invoke-direct {p0, p2, p3}, Lcom/android/server/enterprise/BlackWhiteListPolicy;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public isPolicyActive(I)Z
     .locals 2
 
-    .line 1708
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$BluetoothDevicePolicy;->this$0:Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
 
@@ -50,7 +47,6 @@
 
     const-string p1, "BluetoothPolicyService"
 
-    .line 1711
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0

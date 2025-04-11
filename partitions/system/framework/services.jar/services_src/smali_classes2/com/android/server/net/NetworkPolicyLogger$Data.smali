@@ -41,7 +41,6 @@
 
     const/4 v0, 0x0
 
-    .line 737
     iput-object v0, p0, Lcom/android/server/net/NetworkPolicyLogger$Data;->sfield1:Ljava/lang/String;
 
     return-void

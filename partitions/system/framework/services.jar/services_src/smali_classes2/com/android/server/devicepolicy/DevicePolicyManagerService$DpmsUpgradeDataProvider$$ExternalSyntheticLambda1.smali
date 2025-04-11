@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/PackageInfo;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DpmsUpgradeDataProvider;->$r8$lambda$_Ra_0WU4qlM4kSi4kmOPjYkuFLk(Landroid/content/pm/PackageInfo;)Ljava/lang/String;

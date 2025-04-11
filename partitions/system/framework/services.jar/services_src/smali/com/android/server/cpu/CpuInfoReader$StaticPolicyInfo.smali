@@ -13,13 +13,10 @@
 .method public constructor <init>(JLandroid/util/IntArray;)V
     .locals 0
 
-    .line 895
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 896
     iput-wide p1, p0, Lcom/android/server/cpu/CpuInfoReader$StaticPolicyInfo;->maxCpuFreqKHz:J
 
-    .line 897
     iput-object p3, p0, Lcom/android/server/cpu/CpuInfoReader$StaticPolicyInfo;->relatedCpuCores:Landroid/util/IntArray;
 
     return-void
@@ -30,7 +27,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 902
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

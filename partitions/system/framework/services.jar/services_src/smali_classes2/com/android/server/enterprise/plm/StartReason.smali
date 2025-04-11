@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/enterprise/plm/StartReason;
     .locals 2
 
-    .line 6
     sget-object v0, Lcom/android/server/enterprise/plm/StartReason;->EDM_SYSTEM_READY:Lcom/android/server/enterprise/plm/StartReason;
 
     sget-object v1, Lcom/android/server/enterprise/plm/StartReason;->EDM_SERVICE_READY:Lcom/android/server/enterprise/plm/StartReason;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 7
     new-instance v0, Lcom/android/server/enterprise/plm/StartReason;
 
     const-string v1, "EDM_SYSTEM_READY"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/plm/StartReason;->EDM_SYSTEM_READY:Lcom/android/server/enterprise/plm/StartReason;
 
-    .line 8
     new-instance v0, Lcom/android/server/enterprise/plm/StartReason;
 
     const-string v1, "EDM_SERVICE_READY"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/plm/StartReason;->EDM_SERVICE_READY:Lcom/android/server/enterprise/plm/StartReason;
 
-    .line 6
     invoke-static {}, Lcom/android/server/enterprise/plm/StartReason;->$values()[Lcom/android/server/enterprise/plm/StartReason;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 6
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/enterprise/plm/StartReason;
     .locals 1
 
-    .line 6
     const-class v0, Lcom/android/server/enterprise/plm/StartReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/server/enterprise/plm/StartReason;
     .locals 1
 
-    .line 6
     sget-object v0, Lcom/android/server/enterprise/plm/StartReason;->$VALUES:[Lcom/android/server/enterprise/plm/StartReason;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/plm/StartReason;->clone()Ljava/lang/Object;

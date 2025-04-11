@@ -13,13 +13,10 @@
 .method public constructor <init>(JIJZ)V
     .locals 0
 
-    .line 73
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/location/contexthub/ContextHubEventLogger$ContextHubEventBase;-><init>(JI)V
 
-    .line 74
     iput-wide p4, p0, Lcom/android/server/location/contexthub/ContextHubEventLogger$NanoappEventBase;->nanoappId:J
 
-    .line 75
     iput-boolean p6, p0, Lcom/android/server/location/contexthub/ContextHubEventLogger$NanoappEventBase;->success:Z
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/MARsTrigger;)V
     .locals 0
 
-    .line 377
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p2, :cond_7
 
-    .line 380
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -35,18 +33,15 @@
 
     goto/16 :goto_0
 
-    .line 382
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 383
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     const-string p2, "android.intent.action.SCREEN_ON"
 
-    .line 385
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -55,14 +50,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 386
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Lcom/android/server/am/MARsPolicyManager;->setScreenOnState(Z)V
 
-    .line 388
     iget-object p1, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-static {p1}, Lcom/android/server/am/MARsTrigger;->-$$Nest$fgetmMARsFirstTriggerPolicyAlarmIntent(Lcom/android/server/am/MARsTrigger;)Landroid/app/PendingIntent;
@@ -71,7 +64,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 389
     iget-object p1, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-static {p1}, Lcom/android/server/am/MARsTrigger;->-$$Nest$fgetmAlarm(Lcom/android/server/am/MARsTrigger;)Landroid/app/AlarmManager;
@@ -86,7 +78,6 @@
 
     invoke-virtual {p1, p0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 391
     :cond_1
     invoke-static {}, Lcom/android/server/am/MARsHandler;->getInstance()Lcom/android/server/am/MARsHandler;
 
@@ -94,7 +85,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/MARsHandler;->removeMessages(I)V
 
-    .line 392
     invoke-static {}, Lcom/android/server/am/MARsHandler;->getInstance()Lcom/android/server/am/MARsHandler;
 
     move-result-object p0
@@ -108,14 +98,12 @@
     :cond_2
     const-string p0, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    .line 393
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_3
 
-    .line 394
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;->getInstance()Lcom/android/server/am/mars/filter/filter/ActiveTrafficFilter;
 
     move-result-object p0
@@ -124,7 +112,6 @@
 
     goto :goto_0
 
-    .line 395
     :cond_3
     sget-object p0, Landroid/app/UiModeManager;->ACTION_ENTER_CAR_MODE:Ljava/lang/String;
 
@@ -134,7 +121,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 396
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -146,14 +132,12 @@
     :cond_4
     const-string p0, "android.intent.action.SIM_STATE_CHANGED"
 
-    .line 397
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_5
 
-    .line 398
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/AllowListFilter;->getInstance()Lcom/android/server/am/mars/filter/filter/AllowListFilter;
 
     move-result-object p0
@@ -165,14 +149,12 @@
     :cond_5
     const-string p0, "MARS_REQUEST_DB_COMPLETE"
 
-    .line 399
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_6
 
-    .line 400
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -184,14 +166,12 @@
     :cond_6
     const-string p0, "com.samsung.android.sm.ACTION_SCPM_MARS_SETTINGS_UPDATED"
 
-    .line 401
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_7
 
-    .line 402
     invoke-static {}, Lcom/android/server/am/mars/database/MARsDBManager;->getInstance()Lcom/android/server/am/mars/database/MARsDBManager;
 
     move-result-object p0

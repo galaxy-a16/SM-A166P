@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/exynos/ExynosDisplayFactory;)V
     .locals 0
 
-    .line 128
     iput-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,10 +23,8 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 131
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 132
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -44,7 +41,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -58,7 +54,6 @@
 
     goto :goto_0
 
-    .line 137
     :cond_1
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -68,7 +63,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_2
     invoke-static {}, Lcom/android/server/display/exynos/ExynosDisplayUtils;->sendEmptyUpdate()V
 

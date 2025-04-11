@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 42
     new-instance v0, Lcom/android/internal/util/jobs/ConcurrentUtils$DirectExecutor;
 
     const/4 v1, 0x0
@@ -26,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static newFixedThreadPool(ILjava/lang/String;I)Ljava/util/concurrent/ExecutorService;
     .locals 1
 
-    .line 55
     new-instance v0, Lcom/android/internal/util/jobs/ConcurrentUtils$1;
 
     invoke-direct {v0, p1, p2}, Lcom/android/internal/util/jobs/ConcurrentUtils$1;-><init>(Ljava/lang/String;I)V
@@ -50,7 +47,6 @@
 .method public static waitForCountDownNoInterrupt(Ljava/util/concurrent/CountDownLatch;JLjava/lang/String;)V
     .locals 1
 
-    .line 110
     :try_start_0
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -62,7 +58,6 @@
 
     return-void
 
-    .line 111
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -86,7 +81,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 114
     :catch_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -94,7 +88,6 @@
 
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 115
     new-instance p0, Ljava/lang/IllegalStateException;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -119,7 +112,6 @@
 .method public static waitForFutureNoInterrupt(Ljava/util/concurrent/Future;Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .line 86
     :try_start_0
     invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
@@ -133,7 +125,6 @@
     :catch_0
     move-exception p0
 
-    .line 91
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -154,7 +145,6 @@
 
     throw v0
 
-    .line 88
     :catch_1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -162,7 +152,6 @@
 
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 89
     new-instance p0, Ljava/lang/IllegalStateException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -187,7 +176,6 @@
 .method public static wtfIfLockHeld(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    .line 123
     invoke-static {p1}, Ljava/lang/Thread;->holdsLock(Ljava/lang/Object;)Z
 
     move-result p1
@@ -196,7 +184,6 @@
 
     const-string p1, "Lock mustn\'t be held"
 
-    .line 124
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -206,7 +193,6 @@
 .method public static wtfIfLockNotHeld(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    .line 132
     invoke-static {p1}, Ljava/lang/Thread;->holdsLock(Ljava/lang/Object;)Z
 
     move-result p1
@@ -215,7 +201,6 @@
 
     const-string p1, "Lock must be held"
 
-    .line 133
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0

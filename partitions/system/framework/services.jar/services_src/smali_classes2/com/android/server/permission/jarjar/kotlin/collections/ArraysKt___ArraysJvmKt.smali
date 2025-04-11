@@ -11,7 +11,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 133
     invoke-static {p0}, Lcom/android/server/permission/jarjar/kotlin/collections/ArraysUtilJVM;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0

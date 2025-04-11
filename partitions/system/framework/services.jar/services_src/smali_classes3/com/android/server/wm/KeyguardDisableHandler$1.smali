@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/KeyguardDisableHandler;)V
     .locals 0
 
-    .line 126
     iput-object p1, p0, Lcom/android/server/wm/KeyguardDisableHandler$1;->this$0:Lcom/android/server/wm/KeyguardDisableHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public acquired(I)V
     .locals 0
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/wm/KeyguardDisableHandler$1;->this$0:Lcom/android/server/wm/KeyguardDisableHandler;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/KeyguardDisableHandler;->updateKeyguardEnabled(I)V
@@ -38,7 +36,6 @@
 .method public released(I)V
     .locals 0
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/wm/KeyguardDisableHandler$1;->this$0:Lcom/android/server/wm/KeyguardDisableHandler;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/KeyguardDisableHandler;->updateKeyguardEnabled(I)V

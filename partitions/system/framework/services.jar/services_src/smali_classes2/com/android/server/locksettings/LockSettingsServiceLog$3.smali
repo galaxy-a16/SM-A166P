@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsServiceLog;Ljava/lang/String;)V
     .locals 0
 
-    .line 394
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$3;->this$0:Lcom/android/server/locksettings/LockSettingsServiceLog;
 
     iput-object p2, p0, Lcom/android/server/locksettings/LockSettingsServiceLog$3;->val$debug:Ljava/lang/String;
@@ -33,7 +32,6 @@
 
     const-string p1, "LockSettingsLog"
 
-    .line 396
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -42,7 +40,6 @@
 
     const-string p1, ".zip"
 
-    .line 397
     invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result p1

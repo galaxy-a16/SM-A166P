@@ -23,7 +23,6 @@
 .method public static synthetic $r8$lambda$Dq5opYphrP030ApCrbgEA1v-DLg(Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->lambda$killProcessLocked$0(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$mhandleDeviceIdle(Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->handleDeviceIdle()V
 
     return-void
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$mhandleUidGone(Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->handleUidGone(I)V
 
     return-void
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$mhandleUidStateChanged(Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->handleUidStateChanged(II)V
 
     return-void
@@ -61,26 +57,22 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessList;Landroid/os/Looper;)V
     .locals 0
 
-    .line 6447
     iput-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
 
-    .line 6396
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
-    .line 6399
     new-instance p1, Lcom/android/internal/app/ProcessMap;
 
     invoke-direct {p1}, Lcom/android/internal/app/ProcessMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mLastProcessKillTimes:Lcom/android/internal/app/ProcessMap;
 
-    .line 6448
     new-instance p1, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$H;
 
     invoke-direct {p1, p0, p2}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$H;-><init>(Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;Landroid/os/Looper;)V
@@ -93,7 +85,6 @@
 .method private synthetic lambda$killProcessLocked$0(Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 6564
     iget-object p0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -108,7 +99,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 6566
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
@@ -124,7 +114,6 @@
 .method public enqueueLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;I)Z
     .locals 8
 
-    .line 6454
     iget-boolean v0, p1, Lcom/android/server/am/ProcessRecord;->isolated:Z
 
     const/4 v1, 0x0
@@ -151,12 +140,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 6455
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 6456
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -175,7 +162,6 @@
 
     return p0
 
-    .line 6460
     :cond_1
     new-instance v0, Landroid/os/Bundle;
 
@@ -183,7 +169,6 @@
 
     const-string/jumbo v2, "pid"
 
-    .line 6461
     invoke-virtual {p1}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
     move-result v3
@@ -192,14 +177,12 @@
 
     const-string/jumbo v2, "uid"
 
-    .line 6462
     iget v3, p1, Lcom/android/server/am/ProcessRecord;->uid:I
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v2, "timestamp"
 
-    .line 6464
     invoke-virtual {p1}, Lcom/android/server/am/ProcessRecord;->getStartTime()J
 
     move-result-wide v3
@@ -208,15 +191,12 @@
 
     const-string/jumbo v2, "reason"
 
-    .line 6465
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p2, "requester"
 
-    .line 6466
     invoke-virtual {v0, p2, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 6467
     iget-object p2, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
     iget p3, p1, Lcom/android/server/am/ProcessRecord;->uid:I
@@ -229,35 +209,29 @@
 
     if-nez p2, :cond_2
 
-    .line 6469
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6470
     iget-object p3, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
     iget p1, p1, Lcom/android/server/am/ProcessRecord;->uid:I
 
     invoke-virtual {p3, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 6472
     :cond_2
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6473
     iget-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mReceiver:Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$IdlenessReceiver;
 
     if-nez p1, :cond_3
 
-    .line 6474
     new-instance p1, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$IdlenessReceiver;
 
     invoke-direct {p1, p0, v1}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$IdlenessReceiver;-><init>(Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$IdlenessReceiver-IA;)V
 
     iput-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mReceiver:Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$IdlenessReceiver;
 
-    .line 6475
     new-instance p1, Landroid/content/IntentFilter;
 
     const-string p2, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
@@ -266,10 +240,8 @@
 
     const-string p2, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
-    .line 6477
     invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 6478
     iget-object p2, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object p2, p2, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -289,7 +261,6 @@
 .method public final handleDeviceIdle()V
     .locals 15
 
-    .line 6498
     iget-object v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -306,7 +277,6 @@
 
     const/4 v10, 0x0
 
-    .line 6502
     iget-object v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object v11, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -315,7 +285,6 @@
 
     monitor-enter v11
 
-    .line 6503
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
@@ -327,7 +296,6 @@
 
     move v12, v1
 
-    .line 6504
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mIdle:Z
 
@@ -335,7 +303,6 @@
 
     if-ltz v12, :cond_3
 
-    .line 6505
     iget-object v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v12}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -346,7 +313,6 @@
 
     check-cast v13, Ljava/util/List;
 
-    .line 6506
     invoke-interface {v13}, Ljava/util/List;->size()I
 
     move-result v1
@@ -355,7 +321,6 @@
 
     move v14, v1
 
-    .line 6507
     :goto_1
     iget-boolean v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mIdle:Z
 
@@ -363,7 +328,6 @@
 
     if-ltz v14, :cond_1
 
-    .line 6508
     invoke-interface {v13, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -372,35 +336,30 @@
 
     const-string/jumbo v2, "pid"
 
-    .line 6510
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v2
 
     const-string/jumbo v3, "uid"
 
-    .line 6511
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
     const-string/jumbo v4, "timestamp"
 
-    .line 6512
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v4
 
     const-string/jumbo v6, "reason"
 
-    .line 6513
     invoke-virtual {v1, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     const-string/jumbo v7, "requester"
 
-    .line 6514
     invoke-virtual {v1, v7}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -411,14 +370,12 @@
 
     move v9, v10
 
-    .line 6509
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->killProcessLocked(IIJLjava/lang/String;ILandroid/os/DropBoxManager;Z)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 6516
     invoke-interface {v13, v14}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_0
@@ -426,7 +383,6 @@
 
     goto :goto_1
 
-    .line 6519
     :cond_1
     invoke-interface {v13}, Ljava/util/List;->size()I
 
@@ -434,7 +390,6 @@
 
     if-nez v1, :cond_2
 
-    .line 6520
     iget-object v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v12}, Landroid/util/SparseArray;->removeAt(I)V
@@ -444,11 +399,9 @@
 
     goto :goto_0
 
-    .line 6523
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->registerUidObserverIfNecessaryLocked()V
 
-    .line 6524
     monitor-exit v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -473,7 +426,6 @@
 .method public final handleUidGone(I)V
     .locals 2
 
-    .line 6629
     iget-object v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -482,16 +434,13 @@
 
     monitor-enter v0
 
-    .line 6630
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 6631
     invoke-virtual {p0}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->registerUidObserverIfNecessaryLocked()V
 
-    .line 6632
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -516,7 +465,6 @@
 .method public final handleUidStateChanged(II)V
     .locals 13
 
-    .line 6598
     iget-object v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -537,7 +485,6 @@
 
     const-string v2, "imperceptible_app_kill"
 
-    .line 6600
     invoke-virtual {v0, v2}, Landroid/os/DropBoxManager;->isTagEnabled(Ljava/lang/String;)Z
 
     move-result v2
@@ -553,7 +500,6 @@
 
     move v10, v2
 
-    .line 6601
     :goto_0
     iget-object v2, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
@@ -563,7 +509,6 @@
 
     monitor-enter v11
 
-    .line 6602
     :try_start_0
     iget-boolean v2, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mIdle:Z
 
@@ -577,7 +522,6 @@
 
     iget-object v2, v2, Lcom/android/server/am/ActivityManagerConstants;->IMPERCEPTIBLE_KILL_EXEMPT_PROC_STATES:Landroid/util/ArraySet;
 
-    .line 6603
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -588,7 +532,6 @@
 
     if-nez p2, :cond_4
 
-    .line 6604
     iget-object p2, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
     invoke-virtual {p2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -599,7 +542,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 6606
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v2
@@ -608,7 +550,6 @@
 
     move v12, v2
 
-    .line 6607
     :goto_1
     iget-boolean v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mIdle:Z
 
@@ -616,7 +557,6 @@
 
     if-ltz v12, :cond_2
 
-    .line 6608
     invoke-interface {p2, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -625,35 +565,30 @@
 
     const-string/jumbo v2, "pid"
 
-    .line 6610
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v2
 
     const-string/jumbo v3, "uid"
 
-    .line 6611
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
     const-string/jumbo v4, "timestamp"
 
-    .line 6612
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v4
 
     const-string/jumbo v6, "reason"
 
-    .line 6613
     invoke-virtual {v1, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     const-string/jumbo v7, "requester"
 
-    .line 6614
     invoke-virtual {v1, v7}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -664,14 +599,12 @@
 
     move v9, v10
 
-    .line 6609
     invoke-virtual/range {v1 .. v9}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->killProcessLocked(IIJLjava/lang/String;ILandroid/os/DropBoxManager;Z)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 6616
     invoke-interface {p2, v12}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_1
@@ -679,7 +612,6 @@
 
     goto :goto_1
 
-    .line 6619
     :cond_2
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -687,16 +619,13 @@
 
     if-nez p2, :cond_3
 
-    .line 6620
     iget-object p2, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
     invoke-virtual {p2, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 6622
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->registerUidObserverIfNecessaryLocked()V
 
-    .line 6625
     :cond_4
     monitor-exit v11
     :try_end_0
@@ -722,7 +651,6 @@
 .method public final killProcessLocked(IIJLjava/lang/String;ILandroid/os/DropBoxManager;Z)Z
     .locals 4
 
-    .line 6552
     iget-object v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -731,7 +659,6 @@
 
     monitor-enter v0
 
-    .line 6553
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
@@ -743,7 +670,6 @@
 
     move-result-object v1
 
-    .line 6554
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -752,7 +678,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 6556
     invoke-virtual {v1}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
     move-result v2
@@ -763,7 +688,6 @@
 
     if-ne p1, p2, :cond_4
 
-    .line 6557
     invoke-virtual {v1}, Lcom/android/server/am/ProcessRecord;->getStartTime()J
 
     move-result-wide p1
@@ -774,7 +698,6 @@
 
     goto/16 :goto_0
 
-    .line 6563
     :cond_0
     invoke-virtual {v1}, Lcom/android/server/am/ProcessRecord;->getPkgList()Lcom/android/server/am/PackageList;
 
@@ -792,7 +715,6 @@
 
     return v0
 
-    .line 6573
     :cond_1
     iget-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
@@ -804,7 +726,6 @@
 
     iget-object p2, v1, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
 
-    .line 6574
     invoke-virtual {p2}, Lcom/android/server/am/ProcessStateRecord;->getReportedProcState()I
 
     move-result p2
@@ -813,7 +734,6 @@
 
     move-result-object p2
 
-    .line 6573
     invoke-virtual {p1, p2}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result p1
@@ -829,15 +749,12 @@
 
     const/16 p2, 0xf
 
-    .line 6579
     invoke-virtual {v1, p5, p1, p2, v0}, Lcom/android/server/am/ProcessRecord;->killLocked(Ljava/lang/String;IIZ)V
 
-    .line 6582
     iget-boolean p1, v1, Lcom/android/server/am/ProcessRecord;->isolated:Z
 
     if-nez p1, :cond_3
 
-    .line 6583
     iget-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mLastProcessKillTimes:Lcom/android/internal/app/ProcessMap;
 
     iget-object p2, v1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -857,15 +774,12 @@
     :cond_3
     if-eqz p8, :cond_4
 
-    .line 6587
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    .line 6588
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 6589
     iget-object p0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -874,7 +788,6 @@
 
     invoke-virtual {p0, v1, p2, p1}, Lcom/android/server/am/ActivityManagerService;->appendDropBoxProcessHeaders(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    .line 6590
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -895,7 +808,6 @@
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6591
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -918,7 +830,6 @@
 
     const-string p0, "imperceptible_app_kill"
 
-    .line 6592
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -932,7 +843,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6554
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -944,7 +854,6 @@
 .method public notifyDeviceIdleness(Z)V
     .locals 2
 
-    .line 6486
     iget-boolean v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mIdle:Z
 
     const/4 v1, 0x0
@@ -958,7 +867,6 @@
     :cond_0
     move v0, v1
 
-    .line 6487
     :goto_0
     iput-boolean p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mIdle:Z
 
@@ -966,7 +874,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 6489
     iget-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object p1, p1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -975,7 +882,6 @@
 
     monitor-enter p1
 
-    .line 6490
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mWorkItems:Landroid/util/SparseArray;
 
@@ -985,12 +891,10 @@
 
     if-lez v0, :cond_1
 
-    .line 6491
     iget-object p0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 6493
     :cond_1
     monitor-exit p1
     :try_end_0
@@ -1020,7 +924,6 @@
 .method public onUidGone(IZ)V
     .locals 1
 
-    .line 6637
     iget-object p0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mHandler:Landroid/os/Handler;
 
     const/4 p2, 0x1
@@ -1039,7 +942,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 6642
     iget-object p0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mHandler:Landroid/os/Handler;
 
     const/4 p3, 0x2
@@ -1056,7 +958,6 @@
 .method public final registerUidObserverIfNecessaryLocked()V
     .locals 4
 
-    .line 6530
     iget-boolean v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mUidObserverEnabled:Z
 
     if-nez v0, :cond_0
@@ -1071,10 +972,8 @@
 
     const/4 v0, 0x1
 
-    .line 6531
     iput-boolean v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mUidObserverEnabled:Z
 
-    .line 6532
     iget-object v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -1089,7 +988,6 @@
 
     goto :goto_0
 
-    .line 6535
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mUidObserverEnabled:Z
 
@@ -1105,10 +1003,8 @@
 
     const/4 v0, 0x0
 
-    .line 6536
     iput-boolean v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->mUidObserverEnabled:Z
 
-    .line 6537
     iget-object v0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;

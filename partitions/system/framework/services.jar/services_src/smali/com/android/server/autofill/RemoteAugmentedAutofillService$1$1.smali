@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;)V
     .locals 0
 
-    .line 174
     iput-object p1, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
     invoke-direct {p0}, Landroid/service/autofill/augmented/IFillCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public cancel()V
     .locals 1
 
-    .line 207
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->val$requestAutofill:Lcom/android/internal/infra/AndroidFuture;
@@ -39,7 +37,6 @@
 .method public isCompleted()Z
     .locals 1
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
     iget-object v0, v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->val$requestAutofill:Lcom/android/internal/infra/AndroidFuture;
@@ -54,7 +51,6 @@
 
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->val$requestAutofill:Lcom/android/internal/infra/AndroidFuture;
 
-    .line 193
     invoke-virtual {p0}, Lcom/android/internal/infra/AndroidFuture;->isCancelled()Z
 
     move-result p0
@@ -75,7 +71,6 @@
 .method public onCancellable(Landroid/os/ICancellationSignal;)V
     .locals 1
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
     iget-object v0, v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->val$requestAutofill:Lcom/android/internal/infra/AndroidFuture;
@@ -86,7 +81,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 199
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->this$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;
@@ -95,7 +89,6 @@
 
     goto :goto_0
 
-    .line 201
     :cond_0
     iget-object p0, p0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
@@ -112,7 +105,6 @@
 
     move-object/from16 v0, p0
 
-    .line 178
     iget-object v1, v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
     iget-object v1, v1, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->this$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;
@@ -123,7 +115,6 @@
 
     invoke-interface {v1}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;->resetLastResponse()V
 
-    .line 179
     iget-object v1, v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
     iget-object v2, v1, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->this$0:Lcom/android/server/autofill/RemoteAugmentedAutofillService;
@@ -158,7 +149,6 @@
 
     if-nez p3, :cond_0
 
-    .line 186
     iget-object v0, v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1$1;->this$1:Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
     iget-object v0, v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;->val$requestAutofill:Lcom/android/internal/infra/AndroidFuture;

@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 552
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 553
     new-instance v0, Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {v0, p1}, Lcom/android/server/accessibility/AccessibilityManagerService;-><init>(Landroid/content/Context;)V
@@ -29,7 +27,6 @@
 .method public onBootPhase(I)V
     .locals 0
 
-    .line 565
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Lifecycle;->mService:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$monBootPhase(Lcom/android/server/accessibility/AccessibilityManagerService;I)V
@@ -40,7 +37,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 558
     new-instance v0, Lcom/android/server/accessibility/AccessibilityManagerService$LocalServiceImpl;
 
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Lifecycle;->mService:Lcom/android/server/accessibility/AccessibilityManagerService;
@@ -53,7 +49,6 @@
 
     const-string v0, "accessibility"
 
-    .line 560
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Lifecycle;->mService:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V

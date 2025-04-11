@@ -26,32 +26,26 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;Landroid/content/Context;Landroid/app/role/RoleManager;Landroid/content/pm/IPackageManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 15396
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15388
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mTrampolineExemptUids:Landroid/util/ArraySet;
 
-    .line 15397
     iput-object p3, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mRm:Landroid/app/role/RoleManager;
 
-    .line 15398
     iput-object p4, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mPm:Landroid/content/pm/IPackageManager;
 
-    .line 15399
     invoke-virtual {p2}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 15400
     iput-object p5, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mMainLooper:Landroid/os/Looper;
 
     return-void
@@ -62,7 +56,6 @@
 .method public final getUidForPackage(Ljava/lang/String;I)I
     .locals 2
 
-    .line 15536
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mPm:Landroid/content/pm/IPackageManager;
 
@@ -76,7 +69,6 @@
 
     return p0
 
-    .line 15538
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -110,7 +102,6 @@
 .method public init()V
     .locals 12
 
-    .line 15406
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmUm(Lcom/android/server/notification/NotificationManagerService;)Landroid/os/UserManager;
@@ -123,7 +114,6 @@
 
     move-result-object v0
 
-    .line 15407
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
@@ -134,7 +124,6 @@
 
     move v2, v1
 
-    .line 15408
     :goto_0
     sget-object v3, Lcom/android/server/notification/NotificationManagerService;->NON_BLOCKABLE_DEFAULT_ROLES:[Ljava/lang/String;
 
@@ -142,12 +131,10 @@
 
     if-ge v2, v4, :cond_2
 
-    .line 15409
     new-instance v4, Landroid/util/ArrayMap;
 
     invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 15410
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mNonBlockableDefaultApps:Landroid/util/ArrayMap;
 
     aget-object v3, v3, v2
@@ -156,7 +143,6 @@
 
     move v3, v1
 
-    .line 15411
     :goto_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -164,7 +150,6 @@
 
     if-ge v3, v5, :cond_1
 
-    .line 15412
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -179,7 +164,6 @@
 
     move-result-object v5
 
-    .line 15413
     new-instance v6, Landroid/util/ArraySet;
 
     iget-object v7, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mRm:Landroid/app/role/RoleManager;
@@ -188,7 +172,6 @@
 
     aget-object v8, v8, v2
 
-    .line 15414
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v9
@@ -197,19 +180,16 @@
 
     move-result-object v9
 
-    .line 15413
     invoke-virtual {v7, v8, v9}, Landroid/app/role/RoleManager;->getRoleHoldersAsUser(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object v7
 
     invoke-direct {v6, v7}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    .line 15415
     new-instance v7, Landroid/util/ArraySet;
 
     invoke-direct {v7}, Landroid/util/ArraySet;-><init>()V
 
-    .line 15416
     invoke-virtual {v6}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -227,7 +207,6 @@
 
     check-cast v9, Ljava/lang/String;
 
-    .line 15417
     new-instance v10, Landroid/util/Pair;
 
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
@@ -248,11 +227,9 @@
 
     goto :goto_2
 
-    .line 15419
     :cond_0
     invoke-virtual {v4, v5, v6}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15420
     iget-object v6, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v6, v6, Lcom/android/server/notification/NotificationManagerService;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
@@ -277,7 +254,6 @@
     :cond_2
     new-array v1, v1, [Landroid/os/UserHandle;
 
-    .line 15423
     invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -286,7 +262,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->updateTrampolineExemptUidsForUsers([Landroid/os/UserHandle;)V
 
-    .line 15424
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mRm:Landroid/app/role/RoleManager;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mExecutor:Ljava/util/concurrent/Executor;
@@ -301,7 +276,6 @@
 .method public isApprovedPackageForRoleForUser(Ljava/lang/String;Ljava/lang/String;I)Z
     .locals 0
 
-    .line 15429
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mNonBlockableDefaultApps:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -330,7 +304,6 @@
 .method public isUidExemptFromTrampolineRestrictions(I)Z
     .locals 0
 
-    .line 15434
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mTrampolineExemptUids:Landroid/util/ArraySet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -347,10 +320,8 @@
 .method public onRoleHoldersChanged(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 15446
     invoke-virtual {p0, p1, p2}, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->onRoleHoldersChangedForNonBlockableDefaultApps(Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 15447
     invoke-virtual {p0, p1, p2}, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->onRoleHoldersChangedForTrampolines(Ljava/lang/String;Landroid/os/UserHandle;)V
 
     return-void
@@ -363,7 +334,6 @@
 
     move v1, v0
 
-    .line 15454
     :goto_0
     sget-object v2, Lcom/android/server/notification/NotificationManagerService;->NON_BLOCKABLE_DEFAULT_ROLES:[Ljava/lang/String;
 
@@ -371,7 +341,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 15455
     aget-object v2, v2, v1
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -395,7 +364,6 @@
 
     return-void
 
-    .line 15465
     :cond_2
     new-instance v0, Landroid/util/ArraySet;
 
@@ -407,21 +375,18 @@
 
     invoke-direct {v0, v1}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    .line 15468
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mNonBlockableDefaultApps:Landroid/util/ArrayMap;
 
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 15469
     invoke-virtual {v1, p1, v2}, Landroid/util/ArrayMap;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/util/ArrayMap;
 
-    .line 15471
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v2
@@ -440,17 +405,14 @@
 
     check-cast v2, Landroid/util/ArraySet;
 
-    .line 15473
     new-instance v3, Landroid/util/ArraySet;
 
     invoke-direct {v3}, Landroid/util/ArraySet;-><init>()V
 
-    .line 15474
     new-instance v4, Landroid/util/ArraySet;
 
     invoke-direct {v4}, Landroid/util/ArraySet;-><init>()V
 
-    .line 15476
     invoke-virtual {v2}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -469,19 +431,16 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 15477
     invoke-virtual {v0, v6}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-nez v7, :cond_3
 
-    .line 15478
     invoke-virtual {v3, v6}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 15481
     :cond_4
     invoke-virtual {v0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
@@ -501,17 +460,14 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 15482
     invoke-virtual {v2, v6}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-nez v7, :cond_5
 
-    .line 15483
     new-instance v7, Landroid/util/Pair;
 
-    .line 15484
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v8
@@ -526,12 +482,10 @@
 
     invoke-direct {v7, v6, v8}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 15483
     invoke-virtual {v4, v7}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 15489
     :cond_6
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
@@ -543,12 +497,10 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15490
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mNonBlockableDefaultApps:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15493
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
@@ -567,7 +519,6 @@
 
     const-string v0, "android.app.role.BROWSER"
 
-    .line 15501
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -576,7 +527,6 @@
 
     return-void
 
-    .line 15504
     :cond_0
     filled-new-array {p2}, [Landroid/os/UserHandle;
 
@@ -590,7 +540,6 @@
 .method public final varargs updateTrampolineExemptUidsForUsers([Landroid/os/UserHandle;)V
     .locals 8
 
-    .line 15508
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mMainLooper:Landroid/os/Looper;
 
     invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
@@ -599,15 +548,12 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 15509
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mTrampolineExemptUids:Landroid/util/ArraySet;
 
-    .line 15510
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 15512
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
 
     move-result v2
@@ -619,7 +565,6 @@
     :goto_0
     if-ge v4, v2, :cond_1
 
-    .line 15513
     invoke-virtual {v0, v4}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -630,7 +575,6 @@
 
     move-result v5
 
-    .line 15514
     invoke-static {v5}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v6
@@ -639,14 +583,12 @@
 
     move-result-object v6
 
-    .line 15515
     invoke-static {p1, v6}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 15516
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -658,17 +600,14 @@
 
     goto :goto_0
 
-    .line 15520
     :cond_1
     array-length v0, p1
 
     :goto_1
     if-ge v3, v0, :cond_4
 
-    .line 15521
     aget-object v2, p1, v3
 
-    .line 15522
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mRm:Landroid/app/role/RoleManager;
 
     const-string v5, "android.app.role.BROWSER"
@@ -694,7 +633,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 15523
     invoke-virtual {v2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v6
@@ -707,7 +645,6 @@
 
     if-eq v6, v7, :cond_2
 
-    .line 15525
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -716,7 +653,6 @@
 
     goto :goto_2
 
-    .line 15527
     :cond_2
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -743,7 +679,6 @@
 
     goto :goto_1
 
-    .line 15531
     :cond_4
     iput-object v1, p0, Lcom/android/server/notification/NotificationManagerService$RoleObserver;->mTrampolineExemptUids:Landroid/util/ArraySet;
 

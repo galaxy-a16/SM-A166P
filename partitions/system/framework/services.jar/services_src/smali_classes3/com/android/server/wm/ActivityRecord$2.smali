@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 1216
     iput-object p1, p0, Lcom/android/server/wm/ActivityRecord$2;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 7
 
-    .line 1219
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord$2;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -38,7 +36,6 @@
 
     monitor-enter v0
 
-    .line 1220
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/ActivityRecord$2;->this$0:Lcom/android/server/wm/ActivityRecord;
 
@@ -48,7 +45,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1221
     iget-object v1, p0, Lcom/android/server/wm/ActivityRecord$2;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v2, v1, Lcom/android/server/wm/ActivityRecord;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -75,7 +71,6 @@
 
     invoke-virtual {v2, v3, v4, v5, p0}, Lcom/android/server/wm/ActivityTaskManagerService;->logAppTooSlow(Lcom/android/server/wm/WindowProcessController;JLjava/lang/String;)V
 
-    .line 1224
     :cond_0
     monitor-exit v0
     :try_end_0

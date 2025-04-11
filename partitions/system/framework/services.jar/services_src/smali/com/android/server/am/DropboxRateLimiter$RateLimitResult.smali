@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/am/DropboxRateLimiter;ZI)V
     .locals 0
 
-    .line 153
     iput-object p1, p0, Lcom/android/server/am/DropboxRateLimiter$RateLimitResult;->this$0:Lcom/android/server/am/DropboxRateLimiter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     iput-boolean p2, p0, Lcom/android/server/am/DropboxRateLimiter$RateLimitResult;->mShouldRateLimit:Z
 
-    .line 155
     iput p3, p0, Lcom/android/server/am/DropboxRateLimiter$RateLimitResult;->mDroppedCountSinceRateLimitActivated:I
 
     return-void
@@ -34,7 +31,6 @@
 .method public createHeader()Ljava/lang/String;
     .locals 2
 
-    .line 170
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,7 +57,6 @@
 .method public droppedCountSinceRateLimitActivated()I
     .locals 0
 
-    .line 165
     iget p0, p0, Lcom/android/server/am/DropboxRateLimiter$RateLimitResult;->mDroppedCountSinceRateLimitActivated:I
 
     return p0
@@ -70,7 +65,6 @@
 .method public shouldRateLimit()Z
     .locals 0
 
-    .line 160
     iget-boolean p0, p0, Lcom/android/server/am/DropboxRateLimiter$RateLimitResult;->mShouldRateLimit:Z
 
     return p0

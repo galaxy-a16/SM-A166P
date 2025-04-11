@@ -15,16 +15,12 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;I)V
     .locals 0
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiLocalDevice;->mService:Lcom/android/server/hdmi/HdmiControlService;
 
-    .line 34
     iput p2, p0, Lcom/android/server/hdmi/HdmiLocalDevice;->mDeviceType:I
 
-    .line 35
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiControlService;->getServiceLock()Ljava/lang/Object;
 
     move-result-object p1

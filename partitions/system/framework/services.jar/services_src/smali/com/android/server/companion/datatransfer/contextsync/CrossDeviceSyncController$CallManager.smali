@@ -19,31 +19,26 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountManager;)V
     .locals 1
 
-    .line 735
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 728
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mSelfOwnedCalls:Ljava/util/Set;
 
-    .line 729
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mExternallyOwnedCalls:Ljava/util/Set;
 
-    .line 731
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mCallIds:Ljava/util/Map;
 
-    .line 736
     const-class v0, Landroid/telecom/TelecomManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -54,7 +49,6 @@
 
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mTelecomManager:Landroid/telecom/TelecomManager;
 
-    .line 737
     iput-object p2, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mPhoneAccountManager:Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountManager;
 
     return-void
@@ -65,7 +59,6 @@
 .method public addSelfOwnedCallId(Ljava/lang/String;)V
     .locals 0
 
-    .line 789
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mSelfOwnedCalls:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -76,7 +69,6 @@
 .method public clearCallIdsForAssociationId(I)Ljava/util/Set;
     .locals 0
 
-    .line 785
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mCallIds:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -95,7 +87,6 @@
 .method public isExternallyOwned(Ljava/lang/String;)Z
     .locals 0
 
-    .line 797
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mExternallyOwnedCalls:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -108,7 +99,6 @@
 .method public final isSelfOwned(Ljava/lang/String;)Z
     .locals 1
 
-    .line 801
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mSelfOwnedCalls:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -128,7 +118,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 802
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -148,7 +137,6 @@
 .method public removeSelfOwnedCallId(Ljava/lang/String;)V
     .locals 0
 
-    .line 793
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mSelfOwnedCalls:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -159,7 +147,6 @@
 .method public updateCalls(ILcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData;)V
     .locals 7
 
-    .line 742
     iget-object v0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mCallIds:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -176,7 +163,6 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 743
     invoke-virtual {p2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData;->getCalls()Ljava/util/Collection;
 
     move-result-object v1
@@ -193,7 +179,6 @@
 
     move-result-object v1
 
-    .line 744
     invoke-static {}, Ljava/util/stream/Collectors;->toSet()Ljava/util/stream/Collector;
 
     move-result-object v2
@@ -204,7 +189,6 @@
 
     check-cast v1, Ljava/util/Set;
 
-    .line 745
     invoke-interface {v0, v1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -213,7 +197,6 @@
 
     return-void
 
-    .line 749
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData;->getCalls()Ljava/util/Collection;
 
@@ -237,7 +220,6 @@
 
     check-cast v2, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;
 
-    .line 750
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getId()Ljava/lang/String;
 
     move-result-object v3
@@ -248,14 +230,12 @@
 
     if-nez v3, :cond_1
 
-    .line 751
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getFacilitator()Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 752
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getId()Ljava/lang/String;
 
     move-result-object v3
@@ -266,7 +246,6 @@
 
     if-nez v3, :cond_1
 
-    .line 753
     iget-object v3, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mExternallyOwnedCalls:Ljava/util/Set;
 
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getId()Ljava/lang/String;
@@ -275,26 +254,22 @@
 
     invoke-interface {v3, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 754
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
     const-string v4, "com.android.server.companion.datatransfer.contextsync.extra.ASSOCIATION_ID"
 
-    .line 755
     invoke-virtual {v3, v4, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v4, "com.android.companion.datatransfer.contextsync.extra.IS_REMOTE_ORIGIN"
 
     const/4 v5, 0x1
 
-    .line 756
     invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v4, "com.android.server.companion.datatransfer.contextsync.extra.CALL"
 
-    .line 757
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->writeToBundle()Landroid/os/Bundle;
 
     move-result-object v6
@@ -303,7 +278,6 @@
 
     const-string v4, "com.android.companion.datatransfer.contextsync.extra.CALL_ID"
 
-    .line 758
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getId()Ljava/lang/String;
 
     move-result-object v6
@@ -312,17 +286,14 @@
 
     const-string v4, "com.android.companion.datatransfer.contextsync.extra.FACILITATOR_ICON"
 
-    .line 759
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getAppIcon()[B
 
     move-result-object v6
 
     invoke-virtual {v3, v4, v6}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 760
     iget-object v4, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mPhoneAccountManager:Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountManager;
 
-    .line 763
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getFacilitator()Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     move-result-object v6
@@ -331,26 +302,22 @@
 
     move-result-object v6
 
-    .line 761
     invoke-virtual {v4, p1, v6}, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$PhoneAccountManager;->getPhoneAccountHandle(ILjava/lang/String;)Landroid/telecom/PhoneAccountHandle;
 
     move-result-object v4
 
-    .line 764
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getDirection()I
 
     move-result v6
 
     if-ne v6, v5, :cond_2
 
-    .line 765
     iget-object v2, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mTelecomManager:Landroid/telecom/TelecomManager;
 
     invoke-virtual {v2, v4, v3}, Landroid/telecom/TelecomManager;->addNewIncomingCall(Landroid/telecom/PhoneAccountHandle;Landroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 766
     :cond_2
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getDirection()I
 
@@ -360,29 +327,24 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 768
     new-instance v5, Landroid/os/Bundle;
 
     invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
 
     const-string v6, "android.telecom.extra.OUTGOING_CALL_EXTRAS"
 
-    .line 769
     invoke-virtual {v5, v6, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     const-string v3, "android.telecom.extra.PHONE_ACCOUNT_HANDLE"
 
-    .line 771
     invoke-virtual {v5, v3, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 773
     invoke-virtual {v2}, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$Call;->getCallerId()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 775
     iget-object v3, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mTelecomManager:Landroid/telecom/TelecomManager;
 
     const-string/jumbo v4, "sip"
@@ -397,7 +359,6 @@
 
     goto/16 :goto_0
 
-    .line 781
     :cond_3
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CrossDeviceSyncController$CallManager;->mCallIds:Ljava/util/Map;
 

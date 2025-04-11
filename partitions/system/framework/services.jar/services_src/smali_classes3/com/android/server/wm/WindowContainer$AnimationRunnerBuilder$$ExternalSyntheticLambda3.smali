@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowContainer$AnimationRunnerBuilder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/WindowContainer$AnimationRunnerBuilder$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/wm/WindowContainer$AnimationRunnerBuilder;
@@ -27,7 +26,6 @@
 .method public final onAnimationFinished(ILcom/android/server/wm/AnimationAdapter;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer$AnimationRunnerBuilder$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/wm/WindowContainer$AnimationRunnerBuilder;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/wm/WindowContainer$AnimationRunnerBuilder;->$r8$lambda$aX7qf6FDwOoPamTRfwWeZOXXSMw(Lcom/android/server/wm/WindowContainer$AnimationRunnerBuilder;ILcom/android/server/wm/AnimationAdapter;)V

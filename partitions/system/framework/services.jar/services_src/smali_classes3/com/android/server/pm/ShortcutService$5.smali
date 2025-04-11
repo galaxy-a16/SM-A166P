@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutService;)V
     .locals 0
 
-    .line 3915
     iput-object p1, p0, Lcom/android/server/pm/ShortcutService$5;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 3918
     iget-object p1, p0, Lcom/android/server/pm/ShortcutService$5;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {p1}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmBootCompleted(Lcom/android/server/pm/ShortcutService;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -43,7 +41,6 @@
     :try_start_0
     const-string p1, "android.intent.action.LOCALE_CHANGED"
 
-    .line 3922
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -54,7 +51,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3923
     iget-object p1, p0, Lcom/android/server/pm/ShortcutService$5;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p1}, Lcom/android/server/pm/ShortcutService;->handleLocaleChanged()V
@@ -66,7 +62,6 @@
     :catch_0
     move-exception p1
 
-    .line 3926
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$5;->this$0:Lcom/android/server/pm/ShortcutService;
 
     const-string p2, "Exception in mReceiver.onReceive"

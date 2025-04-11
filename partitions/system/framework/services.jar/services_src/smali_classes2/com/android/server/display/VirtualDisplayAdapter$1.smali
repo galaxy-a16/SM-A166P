@@ -20,7 +20,6 @@
 .method public createDisplay(Ljava/lang/String;ZF)Landroid/os/IBinder;
     .locals 0
 
-    .line 119
     invoke-static {p1, p2, p3}, Lcom/android/server/display/DisplayControl;->createDisplay(Ljava/lang/String;ZF)Landroid/os/IBinder;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public destroyDisplay(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 124
     invoke-static {p1}, Lcom/android/server/display/DisplayControl;->destroyDisplay(Landroid/os/IBinder;)V
 
     return-void

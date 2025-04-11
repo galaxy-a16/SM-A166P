@@ -9,7 +9,6 @@
 
     const/4 v0, 0x3
 
-    .line 26
     invoke-static {p0, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object p0

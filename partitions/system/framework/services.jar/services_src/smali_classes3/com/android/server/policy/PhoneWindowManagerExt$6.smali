@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 4203
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$6;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -30,7 +29,6 @@
 
     const-string p1, "The event of DrmEvent is null."
 
-    .line 4207
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -38,12 +36,10 @@
     :cond_0
     const-string/jumbo v0, "status"
 
-    .line 4211
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 4212
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -52,7 +48,6 @@
 
     return-void
 
-    .line 4215
     :cond_1
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$6;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 

@@ -18,20 +18,16 @@
 .method public constructor <init>(Landroid/os/IBinder;)V
     .locals 1
 
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 114
     iput v0, p0, Landroid/hardware/tv/hdmi/connection/IHdmiConnectionCallback$Stub$Proxy;->mCachedVersion:I
 
     const-string v0, "-1"
 
-    .line 115
     iput-object v0, p0, Landroid/hardware/tv/hdmi/connection/IHdmiConnectionCallback$Stub$Proxy;->mCachedHash:Ljava/lang/String;
 
-    .line 112
     iput-object p1, p0, Landroid/hardware/tv/hdmi/connection/IHdmiConnectionCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -42,7 +38,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 118
     iget-object p0, p0, Landroid/hardware/tv/hdmi/connection/IHdmiConnectionCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0

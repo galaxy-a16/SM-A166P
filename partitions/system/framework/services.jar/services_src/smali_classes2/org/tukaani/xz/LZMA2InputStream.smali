@@ -35,7 +35,6 @@
 
     const/4 v0, 0x0
 
-    .line 117
     invoke-direct {p0, p1, p2, v0}, Lorg/tukaani/xz/LZMA2InputStream;-><init>(Ljava/io/InputStream;I[B)V
 
     return-void
@@ -44,7 +43,6 @@
 .method public constructor <init>(Ljava/io/InputStream;I[B)V
     .locals 1
 
-    .line 139
     invoke-static {}, Lorg/tukaani/xz/ArrayCache;->getDefaultCache()Lorg/tukaani/xz/ArrayCache;
 
     move-result-object v0
@@ -57,52 +55,40 @@
 .method public constructor <init>(Ljava/io/InputStream;I[BLorg/tukaani/xz/ArrayCache;)V
     .locals 3
 
-    .line 164
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 53
     iput v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->uncompressedSize:I
 
-    .line 54
     iput-boolean v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->isLZMAChunk:Z
 
     const/4 v1, 0x1
 
-    .line 56
     iput-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->needDictReset:Z
 
-    .line 57
     iput-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->needProps:Z
 
-    .line 58
     iput-boolean v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->endReached:Z
 
     const/4 v2, 0x0
 
-    .line 60
     iput-object v2, p0, Lorg/tukaani/xz/LZMA2InputStream;->exception:Ljava/io/IOException;
 
     new-array v1, v1, [B
 
-    .line 62
     iput-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->tempBuf:[B
 
-    .line 168
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 170
     iput-object p4, p0, Lorg/tukaani/xz/LZMA2InputStream;->arrayCache:Lorg/tukaani/xz/ArrayCache;
 
-    .line 171
     new-instance v1, Ljava/io/DataInputStream;
 
     invoke-direct {v1, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
     iput-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
-    .line 172
     new-instance p1, Lorg/tukaani/xz/rangecoder/RangeDecoderFromBuffer;
 
     const/high16 v1, 0x10000
@@ -111,7 +97,6 @@
 
     iput-object p1, p0, Lorg/tukaani/xz/LZMA2InputStream;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoderFromBuffer;
 
-    .line 173
     new-instance p1, Lorg/tukaani/xz/lz/LZDecoder;
 
     invoke-static {p2}, Lorg/tukaani/xz/LZMA2InputStream;->getDictSize(I)I
@@ -124,12 +109,10 @@
 
     if-eqz p3, :cond_0
 
-    .line 175
     array-length p1, p3
 
     if-lez p1, :cond_0
 
-    .line 176
     iput-boolean v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->needDictReset:Z
 
     :cond_0
@@ -153,7 +136,6 @@
 
     return p0
 
-    .line 83
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -181,17 +163,14 @@
 .method public available()I
     .locals 2
 
-    .line 363
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     if-eqz v0, :cond_2
 
-    .line 366
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->exception:Ljava/io/IOException;
 
     if-nez v1, :cond_1
 
-    .line 369
     iget-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->isLZMAChunk:Z
 
     if-eqz v1, :cond_0
@@ -200,7 +179,6 @@
 
     goto :goto_0
 
-    .line 370
     :cond_0
     iget p0, p0, Lorg/tukaani/xz/LZMA2InputStream;->uncompressedSize:I
 
@@ -215,11 +193,9 @@
     :goto_0
     return p0
 
-    .line 367
     :cond_1
     throw v1
 
-    .line 364
     :cond_2
     new-instance p0, Lorg/tukaani/xz/XZIOException;
 
@@ -233,17 +209,14 @@
 .method public close()V
     .locals 2
 
-    .line 390
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     if-eqz v0, :cond_0
 
-    .line 391
     invoke-virtual {p0}, Lorg/tukaani/xz/LZMA2InputStream;->putArraysToCache()V
 
     const/4 v0, 0x0
 
-    .line 394
     :try_start_0
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
@@ -251,7 +224,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 396
     iput-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     goto :goto_0
@@ -261,7 +233,6 @@
 
     iput-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
-    .line 397
     throw v1
 
     :cond_0
@@ -272,7 +243,6 @@
 .method public final decodeChunkHeader()V
     .locals 5
 
-    .line 281
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedByte()I
@@ -283,10 +253,8 @@
 
     if-nez v0, :cond_0
 
-    .line 284
     iput-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->endReached:Z
 
-    .line 285
     invoke-virtual {p0}, Lorg/tukaani/xz/LZMA2InputStream;->putArraysToCache()V
 
     return-void
@@ -302,7 +270,6 @@
 
     goto :goto_0
 
-    .line 293
     :cond_1
     iget-boolean v2, p0, Lorg/tukaani/xz/LZMA2InputStream;->needDictReset:Z
 
@@ -310,7 +277,6 @@
 
     goto :goto_1
 
-    .line 294
     :cond_2
     new-instance p0, Lorg/tukaani/xz/CorruptedInputException;
 
@@ -318,15 +284,12 @@
 
     throw p0
 
-    .line 290
     :cond_3
     :goto_0
     iput-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->needProps:Z
 
-    .line 291
     iput-boolean v3, p0, Lorg/tukaani/xz/LZMA2InputStream;->needDictReset:Z
 
-    .line 292
     iget-object v2, p0, Lorg/tukaani/xz/LZMA2InputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     invoke-virtual {v2}, Lorg/tukaani/xz/lz/LZDecoder;->reset()V
@@ -336,17 +299,14 @@
 
     if-lt v0, v2, :cond_7
 
-    .line 298
     iput-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->isLZMAChunk:Z
 
     and-int/lit8 v2, v0, 0x1f
 
     shl-int/lit8 v2, v2, 0x10
 
-    .line 300
     iput v2, p0, Lorg/tukaani/xz/LZMA2InputStream;->uncompressedSize:I
 
-    .line 301
     iget-object v4, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     invoke-virtual {v4}, Ljava/io/DataInputStream;->readUnsignedShort()I
@@ -359,7 +319,6 @@
 
     iput v2, p0, Lorg/tukaani/xz/LZMA2InputStream;->uncompressedSize:I
 
-    .line 303
     iget-object v2, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readUnsignedShort()I
@@ -372,15 +331,12 @@
 
     if-lt v0, v1, :cond_4
 
-    .line 306
     iput-boolean v3, p0, Lorg/tukaani/xz/LZMA2InputStream;->needProps:Z
 
-    .line 307
     invoke-virtual {p0}, Lorg/tukaani/xz/LZMA2InputStream;->decodeProps()V
 
     goto :goto_2
 
-    .line 309
     :cond_4
     iget-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->needProps:Z
 
@@ -390,12 +346,10 @@
 
     if-lt v0, v1, :cond_5
 
-    .line 313
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->lzma:Lorg/tukaani/xz/lzma/LZMADecoder;
 
     invoke-virtual {v0}, Lorg/tukaani/xz/lzma/LZMADecoder;->reset()V
 
-    .line 316
     :cond_5
     :goto_2
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoderFromBuffer;
@@ -406,7 +360,6 @@
 
     goto :goto_3
 
-    .line 310
     :cond_6
     new-instance p0, Lorg/tukaani/xz/CorruptedInputException;
 
@@ -419,10 +372,8 @@
 
     if-gt v0, v2, :cond_8
 
-    .line 322
     iput-boolean v3, p0, Lorg/tukaani/xz/LZMA2InputStream;->isLZMAChunk:Z
 
-    .line 323
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedShort()I
@@ -436,7 +387,6 @@
     :goto_3
     return-void
 
-    .line 319
     :cond_8
     new-instance p0, Lorg/tukaani/xz/CorruptedInputException;
 
@@ -448,7 +398,6 @@
 .method public final decodeProps()V
     .locals 8
 
-    .line 328
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedByte()I
@@ -459,7 +408,6 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 333
     div-int/lit8 v7, v0, 0x2d
 
     mul-int/lit8 v1, v7, 0x9
@@ -468,7 +416,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 335
     div-int/lit8 v6, v0, 0x9
 
     mul-int/lit8 v1, v6, 0x9
@@ -481,7 +428,6 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 341
     new-instance v0, Lorg/tukaani/xz/lzma/LZMADecoder;
 
     iget-object v3, p0, Lorg/tukaani/xz/LZMA2InputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
@@ -496,7 +442,6 @@
 
     return-void
 
-    .line 339
     :cond_0
     new-instance p0, Lorg/tukaani/xz/CorruptedInputException;
 
@@ -504,7 +449,6 @@
 
     throw p0
 
-    .line 331
     :cond_1
     new-instance p0, Lorg/tukaani/xz/CorruptedInputException;
 
@@ -516,29 +460,24 @@
 .method public final putArraysToCache()V
     .locals 3
 
-    .line 374
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     if-eqz v0, :cond_0
 
-    .line 375
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->arrayCache:Lorg/tukaani/xz/ArrayCache;
 
     invoke-virtual {v0, v1}, Lorg/tukaani/xz/lz/LZDecoder;->putArraysToCache(Lorg/tukaani/xz/ArrayCache;)V
 
     const/4 v0, 0x0
 
-    .line 376
     iput-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
-    .line 378
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoderFromBuffer;
 
     iget-object v2, p0, Lorg/tukaani/xz/LZMA2InputStream;->arrayCache:Lorg/tukaani/xz/ArrayCache;
 
     invoke-virtual {v1, v2}, Lorg/tukaani/xz/rangecoder/RangeDecoderFromBuffer;->putArraysToCache(Lorg/tukaani/xz/ArrayCache;)V
 
-    .line 379
     iput-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoderFromBuffer;
 
     :cond_0
@@ -548,7 +487,6 @@
 .method public read()I
     .locals 3
 
-    .line 199
     iget-object v0, p0, Lorg/tukaani/xz/LZMA2InputStream;->tempBuf:[B
 
     const/4 v1, 0x1
@@ -587,7 +525,6 @@
 
     if-ltz v0, :cond_9
 
-    .line 227
     array-length v1, p1
 
     if-gt v0, v1, :cond_9
@@ -598,18 +535,15 @@
 
     return v0
 
-    .line 233
     :cond_0
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
 
     if-eqz v1, :cond_8
 
-    .line 236
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->exception:Ljava/io/IOException;
 
     if-nez v1, :cond_7
 
-    .line 239
     iget-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->endReached:Z
 
     const/4 v2, -0x1
@@ -622,16 +556,13 @@
     :goto_0
     if-lez p3, :cond_6
 
-    .line 246
     :try_start_0
     iget v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->uncompressedSize:I
 
     if-nez v1, :cond_3
 
-    .line 247
     invoke-virtual {p0}, Lorg/tukaani/xz/LZMA2InputStream;->decodeChunkHeader()V
 
-    .line 248
     iget-boolean v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->endReached:Z
 
     if-eqz v1, :cond_3
@@ -646,7 +577,6 @@
     :goto_1
     return v2
 
-    .line 252
     :cond_3
     iget v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->uncompressedSize:I
 
@@ -654,12 +584,10 @@
 
     move-result v1
 
-    .line 254
     iget-boolean v3, p0, Lorg/tukaani/xz/LZMA2InputStream;->isLZMAChunk:Z
 
     if-nez v3, :cond_4
 
-    .line 255
     iget-object v3, p0, Lorg/tukaani/xz/LZMA2InputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     iget-object v4, p0, Lorg/tukaani/xz/LZMA2InputStream;->in:Ljava/io/DataInputStream;
@@ -668,18 +596,15 @@
 
     goto :goto_2
 
-    .line 257
     :cond_4
     iget-object v3, p0, Lorg/tukaani/xz/LZMA2InputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     invoke-virtual {v3, v1}, Lorg/tukaani/xz/lz/LZDecoder;->setLimit(I)V
 
-    .line 258
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->lzma:Lorg/tukaani/xz/lzma/LZMADecoder;
 
     invoke-virtual {v1}, Lorg/tukaani/xz/lzma/LZMADecoder;->decode()V
 
-    .line 261
     :goto_2
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
@@ -693,7 +618,6 @@
 
     add-int/2addr v0, v1
 
-    .line 265
     iget v3, p0, Lorg/tukaani/xz/LZMA2InputStream;->uncompressedSize:I
 
     sub-int/2addr v3, v1
@@ -702,7 +626,6 @@
 
     if-nez v3, :cond_1
 
-    .line 268
     iget-object v1, p0, Lorg/tukaani/xz/LZMA2InputStream;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoderFromBuffer;
 
     invoke-virtual {v1}, Lorg/tukaani/xz/rangecoder/RangeDecoderFromBuffer;->isFinished()Z
@@ -721,7 +644,6 @@
 
     goto :goto_0
 
-    .line 269
     :cond_5
     new-instance p1, Lorg/tukaani/xz/CorruptedInputException;
 
@@ -734,20 +656,16 @@
     :catch_0
     move-exception p1
 
-    .line 275
     iput-object p1, p0, Lorg/tukaani/xz/LZMA2InputStream;->exception:Ljava/io/IOException;
 
-    .line 276
     throw p1
 
     :cond_6
     return v0
 
-    .line 237
     :cond_7
     throw v1
 
-    .line 234
     :cond_8
     new-instance p0, Lorg/tukaani/xz/XZIOException;
 
@@ -757,7 +675,6 @@
 
     throw p0
 
-    .line 228
     :cond_9
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 

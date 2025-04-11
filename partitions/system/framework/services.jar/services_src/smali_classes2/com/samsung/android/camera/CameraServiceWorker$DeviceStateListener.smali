@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;)V
     .locals 0
 
-    .line 468
     iput-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceStateListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onStateChanged(I)V
     .locals 4
 
-    .line 471
     iget-object v0, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceStateListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {v0}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmLock(Lcom/samsung/android/camera/CameraServiceWorker;)Ljava/lang/Object;
@@ -39,7 +37,6 @@
     :try_start_0
     const-string v1, "CameraService_worker"
 
-    .line 472
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +53,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
     sget-object v1, Lcom/samsung/android/camera/Logger$ID;->FOLD_EVENT:Lcom/samsung/android/camera/Logger$ID;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -75,7 +71,6 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 485
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -98,7 +93,6 @@
 
     goto :goto_0
 
-    .line 490
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceStateListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -108,7 +102,6 @@
 
     goto :goto_0
 
-    .line 503
     :cond_1
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceStateListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -116,7 +109,6 @@
 
     goto :goto_0
 
-    .line 493
     :cond_2
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$DeviceStateListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -128,7 +120,6 @@
     :catchall_0
     move-exception p0
 
-    .line 485
     :try_start_1
     monitor-exit v0
     :try_end_1

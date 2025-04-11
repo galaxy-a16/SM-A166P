@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/log/BiometricContextProvider;)V
     .locals 0
 
-    .line 150
     iput-object p1, p0, Lcom/android/server/biometrics/log/BiometricContextProvider$3;->this$0:Lcom/android/server/biometrics/log/BiometricContextProvider;
 
     invoke-direct {p0}, Lcom/android/internal/statusbar/ISessionListener$Stub;-><init>()V
@@ -24,14 +23,12 @@
 .method public onSessionEnded(ILcom/android/internal/logging/InstanceId;)V
     .locals 3
 
-    .line 164
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     const-string v1, "BiometricContextProvider"
 
     if-eqz v0, :cond_0
 
-    .line 165
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,7 +51,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricContextProvider$3;->this$0:Lcom/android/server/biometrics/log/BiometricContextProvider;
 
@@ -76,7 +72,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 169
     invoke-virtual {p0}, Lcom/android/server/biometrics/log/BiometricContextSessionInfo;->getId()I
 
     move-result p0
@@ -89,7 +84,6 @@
 
     const-string/jumbo p0, "session id mismatch"
 
-    .line 170
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -99,12 +93,10 @@
 .method public onSessionStarted(ILcom/android/internal/logging/InstanceId;)V
     .locals 2
 
-    .line 154
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 155
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,7 +121,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricContextProvider$3;->this$0:Lcom/android/server/biometrics/log/BiometricContextProvider;
 

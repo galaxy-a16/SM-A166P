@@ -31,44 +31,32 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 5
     iput v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->sampleRateHz:I
 
-    .line 6
     iput v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->channelMask:I
 
-    .line 7
     iput v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->format:I
 
-    .line 8
     iput v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->streamType:I
 
-    .line 9
     iput v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitRatePerSecond:I
 
     const-wide/16 v1, 0x0
 
-    .line 10
     iput-wide v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->durationMicroseconds:J
 
-    .line 11
     iput-boolean v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->hasVideo:Z
 
-    .line 12
     iput-boolean v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->isStreaming:Z
 
-    .line 13
     iput v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitWidth:I
 
-    .line 14
     iput v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bufferSize:I
 
-    .line 15
     iput v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->usage:I
 
     return-void
@@ -92,7 +80,6 @@
 
     return v1
 
-    .line 25
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -104,11 +91,9 @@
 
     return v1
 
-    .line 28
     :cond_2
     check-cast p1, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;
 
-    .line 29
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->sampleRateHz:I
 
     iget v3, p1, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->sampleRateHz:I
@@ -117,7 +102,6 @@
 
     return v1
 
-    .line 32
     :cond_3
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->channelMask:I
 
@@ -127,7 +111,6 @@
 
     return v1
 
-    .line 35
     :cond_4
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->format:I
 
@@ -137,7 +120,6 @@
 
     return v1
 
-    .line 38
     :cond_5
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->streamType:I
 
@@ -147,7 +129,6 @@
 
     return v1
 
-    .line 41
     :cond_6
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitRatePerSecond:I
 
@@ -157,7 +138,6 @@
 
     return v1
 
-    .line 44
     :cond_7
     iget-wide v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->durationMicroseconds:J
 
@@ -169,7 +149,6 @@
 
     return v1
 
-    .line 47
     :cond_8
     iget-boolean v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->hasVideo:Z
 
@@ -179,7 +158,6 @@
 
     return v1
 
-    .line 50
     :cond_9
     iget-boolean v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->isStreaming:Z
 
@@ -189,7 +167,6 @@
 
     return v1
 
-    .line 53
     :cond_a
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitWidth:I
 
@@ -199,7 +176,6 @@
 
     return v1
 
-    .line 56
     :cond_b
     iget v2, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bufferSize:I
 
@@ -209,7 +185,6 @@
 
     return v1
 
-    .line 59
     :cond_c
     iget p0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->usage:I
 
@@ -226,10 +201,8 @@
 .method public final hashCode()I
     .locals 12
 
-    .line 67
     iget v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->sampleRateHz:I
 
-    .line 68
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -244,7 +217,6 @@
 
     iget v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->channelMask:I
 
-    .line 69
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -259,7 +231,6 @@
 
     iget v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->format:I
 
-    .line 70
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -274,7 +245,6 @@
 
     iget v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->streamType:I
 
-    .line 71
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -289,7 +259,6 @@
 
     iget v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitRatePerSecond:I
 
-    .line 72
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -304,7 +273,6 @@
 
     iget-wide v6, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->durationMicroseconds:J
 
-    .line 73
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -319,7 +287,6 @@
 
     iget-boolean v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->hasVideo:Z
 
-    .line 74
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -334,7 +301,6 @@
 
     iget-boolean v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->isStreaming:Z
 
-    .line 75
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -349,7 +315,6 @@
 
     iget v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitWidth:I
 
-    .line 76
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -364,7 +329,6 @@
 
     iget v0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bufferSize:I
 
-    .line 77
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -379,7 +343,6 @@
 
     iget p0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->usage:I
 
-    .line 78
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -396,7 +359,6 @@
 
     move-result-object p0
 
-    .line 67
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -411,7 +373,6 @@
 
     add-long/2addr v0, p3
 
-    .line 139
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -422,7 +383,6 @@
 
     add-long/2addr v0, p3
 
-    .line 140
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -433,7 +393,6 @@
 
     add-long/2addr v0, p3
 
-    .line 141
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -444,7 +403,6 @@
 
     add-long/2addr v0, p3
 
-    .line 142
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -455,7 +413,6 @@
 
     add-long/2addr v0, p3
 
-    .line 143
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -466,7 +423,6 @@
 
     add-long/2addr v0, p3
 
-    .line 144
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt64(J)J
 
     move-result-wide v0
@@ -477,7 +433,6 @@
 
     add-long/2addr v0, p3
 
-    .line 145
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getBool(J)Z
 
     move-result p1
@@ -488,7 +443,6 @@
 
     add-long/2addr v0, p3
 
-    .line 146
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getBool(J)Z
 
     move-result p1
@@ -499,7 +453,6 @@
 
     add-long/2addr v0, p3
 
-    .line 147
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -510,7 +463,6 @@
 
     add-long/2addr v0, p3
 
-    .line 148
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -521,7 +473,6 @@
 
     add-long/2addr p3, v0
 
-    .line 149
     invoke-virtual {p2, p3, p4}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -534,32 +485,26 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .line 83
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "{"
 
-    .line 84
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ".sampleRateHz = "
 
-    .line 85
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 86
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->sampleRateHz:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .channelMask = "
 
-    .line 87
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 88
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->channelMask:I
 
     invoke-static {v1}, Landroid/hardware/audio/common/V2_0/AudioChannelMask;->toString(I)Ljava/lang/String;
@@ -570,10 +515,8 @@
 
     const-string v1, ", .format = "
 
-    .line 89
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 90
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->format:I
 
     invoke-static {v1}, Landroid/hardware/audio/common/V2_0/AudioFormat;->toString(I)Ljava/lang/String;
@@ -584,10 +527,8 @@
 
     const-string v1, ", .streamType = "
 
-    .line 91
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 92
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->streamType:I
 
     invoke-static {v1}, Landroid/hardware/audio/common/V2_0/AudioStreamType;->toString(I)Ljava/lang/String;
@@ -598,70 +539,56 @@
 
     const-string v1, ", .bitRatePerSecond = "
 
-    .line 93
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 94
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitRatePerSecond:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .durationMicroseconds = "
 
-    .line 95
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 96
     iget-wide v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->durationMicroseconds:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v1, ", .hasVideo = "
 
-    .line 97
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 98
     iget-boolean v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->hasVideo:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v1, ", .isStreaming = "
 
-    .line 99
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 100
     iget-boolean v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->isStreaming:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v1, ", .bitWidth = "
 
-    .line 101
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 102
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bitWidth:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .bufferSize = "
 
-    .line 103
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 104
     iget v1, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->bufferSize:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .usage = "
 
-    .line 105
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     iget p0, p0, Landroid/hardware/audio/common/V2_0/AudioOffloadInfo;->usage:I
 
     invoke-static {p0}, Landroid/hardware/audio/common/V2_0/AudioUsage;->toString(I)Ljava/lang/String;
@@ -672,10 +599,8 @@
 
     const-string/jumbo p0, "}"
 
-    .line 107
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 108
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

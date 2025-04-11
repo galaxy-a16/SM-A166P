@@ -10,7 +10,6 @@
 .method public canHaveSizeCompatBounds(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -19,7 +18,6 @@
 .method public getBoundsCompatUtils()Lcom/android/server/wm/BoundsCompatUtils;
     .locals 0
 
-    .line 83
     invoke-static {}, Lcom/android/server/wm/BoundsCompatUtils;->get()Lcom/android/server/wm/BoundsCompatUtils;
 
     move-result-object p0
@@ -30,7 +28,6 @@
 .method public shouldUpdatePosition()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -39,7 +36,6 @@
 .method public shouldUseSandboxDisplay(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -48,7 +44,6 @@
 .method public shouldUseSandboxViewBoundsAndMotionEvent(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -57,7 +52,6 @@
 .method public shouldUseSizeCompatMode(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -66,7 +60,6 @@
 .method public supportsCustomLetterbox()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

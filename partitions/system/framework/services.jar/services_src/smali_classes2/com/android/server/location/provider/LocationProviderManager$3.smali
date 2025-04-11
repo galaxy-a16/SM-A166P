@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/location/provider/LocationProviderManager;Landroid/location/ILocationListener;Lcom/android/server/location/provider/LocationProviderManager$LocationListenerRegistration;)V
     .locals 0
 
-    .line 2021
     iput-object p1, p0, Lcom/android/server/location/provider/LocationProviderManager$3;->this$0:Lcom/android/server/location/provider/LocationProviderManager;
 
     iput-object p2, p0, Lcom/android/server/location/provider/LocationProviderManager$3;->val$listener:Landroid/location/ILocationListener;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 2
 
-    .line 2023
     iget-object v0, p0, Lcom/android/server/location/provider/LocationProviderManager$3;->this$0:Lcom/android/server/location/provider/LocationProviderManager;
 
     iget-object v1, p0, Lcom/android/server/location/provider/LocationProviderManager$3;->val$listener:Landroid/location/ILocationListener;

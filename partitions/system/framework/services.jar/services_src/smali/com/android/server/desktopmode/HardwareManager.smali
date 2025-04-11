@@ -77,7 +77,6 @@
 .method public static synthetic $r8$lambda$h2grreh15uUqpbvCTN2VXCdx-W4(Lcom/android/server/desktopmode/HardwareManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/desktopmode/HardwareManager;->lambda$checkExternalDisplayConnectedLocked$0()V
 
     return-void
@@ -86,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/desktopmode/HardwareManager;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -95,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayManager(Lcom/android/server/desktopmode/HardwareManager;)Landroid/hardware/display/DisplayManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     return-object p0
@@ -104,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplays(Lcom/android/server/desktopmode/HardwareManager;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
     return-object p0
@@ -113,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsExternalDisplayConnected(Lcom/android/server/desktopmode/HardwareManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsExternalDisplayConnected:Z
 
     return p0
@@ -122,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsMouseConnected(Lcom/android/server/desktopmode/HardwareManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsMouseConnected:Z
 
     return p0
@@ -131,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/desktopmode/HardwareManager;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -140,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPowerManagerInternal(Lcom/android/server/desktopmode/HardwareManager;)Landroid/os/PowerManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
     return-object p0
@@ -149,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/HardwareManager;)Lcom/android/server/desktopmode/IStateManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     return-object p0
@@ -158,7 +149,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWindowManager(Lcom/android/server/desktopmode/HardwareManager;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -167,7 +157,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsBtMouseDeepSleep(Lcom/android/server/desktopmode/HardwareManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsBtMouseDeepSleep:Z
 
     return-void
@@ -176,7 +165,6 @@
 .method public static bridge synthetic -$$Nest$msetLowRefreshRate(Lcom/android/server/desktopmode/HardwareManager;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/HardwareManager;->setLowRefreshRate(Z)V
 
     return-void
@@ -185,7 +173,6 @@
 .method public static bridge synthetic -$$Nest$msetRawDockStateLocked(Lcom/android/server/desktopmode/HardwareManager;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/HardwareManager;->setRawDockStateLocked(I)V
 
     return-void
@@ -194,7 +181,6 @@
 .method public static bridge synthetic -$$Nest$msetRawDockUsbpdIdsLocked(Lcom/android/server/desktopmode/HardwareManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/HardwareManager;->setRawDockUsbpdIdsLocked(Ljava/lang/String;)V
 
     return-void
@@ -203,7 +189,6 @@
 .method public static bridge synthetic -$$Nest$mupdateDockStatusLocked(Lcom/android/server/desktopmode/HardwareManager;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager;->updateDockStatusLocked()Z
 
     move-result p0
@@ -214,7 +199,6 @@
 .method public static bridge synthetic -$$Nest$mupdateExternalDisplayStatus(Lcom/android/server/desktopmode/HardwareManager;ZI)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/desktopmode/HardwareManager;->updateExternalDisplayStatus(ZI)V
 
     return-void
@@ -223,7 +207,6 @@
 .method public static bridge synthetic -$$Nest$mupdateInputDeviceStatusLocked(Lcom/android/server/desktopmode/HardwareManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager;->updateInputDeviceStatusLocked()V
 
     return-void
@@ -232,7 +215,6 @@
 .method public static bridge synthetic -$$Nest$mupdatePogoKeyboardStatus(Lcom/android/server/desktopmode/HardwareManager;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/HardwareManager;->updatePogoKeyboardStatus(Z)V
 
     return-void
@@ -241,7 +223,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/desktopmode/HardwareManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -250,7 +231,6 @@
 .method public static bridge synthetic -$$Nest$smresolveDockType(Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->resolveDockType(Ljava/lang/String;)I
 
     move-result p0
@@ -261,7 +241,6 @@
 .method public static constructor <clinit>()V
     .locals 6
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -284,7 +263,6 @@
 
     sput-object v0, Lcom/android/server/desktopmode/HardwareManager;->TAG:Ljava/lang/String;
 
-    .line 72
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -293,7 +271,6 @@
 
     const/16 v1, 0x2718
 
-    .line 74
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -304,7 +281,6 @@
 
     const/16 v1, 0x2714
 
-    .line 75
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -315,7 +291,6 @@
 
     const/16 v1, 0x2719
 
-    .line 76
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -326,7 +301,6 @@
 
     const/16 v1, 0x2711
 
-    .line 77
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -337,7 +311,6 @@
 
     const/16 v1, 0x2717
 
-    .line 78
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -348,7 +321,6 @@
 
     const/16 v1, 0x2716
 
-    .line 79
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -359,7 +331,6 @@
 
     const/16 v1, 0x271a
 
-    .line 80
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -370,7 +341,6 @@
 
     const/16 v1, 0x271b
 
-    .line 81
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -381,7 +351,6 @@
 
     const/16 v1, 0x271d
 
-    .line 82
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -390,14 +359,12 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 84
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/desktopmode/HardwareManager;->sSupportedDockUsbpdIdRanges:Ljava/util/List;
 
-    .line 86
     new-instance v1, Landroid/util/Pair;
 
     new-instance v2, Landroid/util/Range;
@@ -418,7 +385,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 87
     new-instance v1, Landroid/util/Pair;
 
     new-instance v2, Landroid/util/Range;
@@ -439,7 +405,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 88
     new-instance v1, Landroid/util/Pair;
 
     new-instance v2, Landroid/util/Range;
@@ -460,7 +425,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 89
     new-instance v1, Landroid/util/Pair;
 
     new-instance v2, Landroid/util/Range;
@@ -475,7 +439,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 90
     new-instance v1, Landroid/util/Pair;
 
     new-instance v2, Landroid/util/Range;
@@ -504,10 +467,8 @@
 
     move-object/from16 v3, p5
 
-    .line 272
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     new-instance v4, Ljava/lang/Object;
 
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
@@ -516,74 +477,60 @@
 
     const/4 v4, 0x0
 
-    .line 93
     iput-boolean v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mForcedInternalScreenModeEnabled:Z
 
-    .line 95
     iput-boolean v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mIsExternalDisplayConnected:Z
 
-    .line 97
     iput-boolean v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mIsMouseConnected:Z
 
-    .line 99
     iput-boolean v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mIsPogoKeyboardConnected:Z
 
-    .line 101
     iput-boolean v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mIsBtMouseDeepSleep:Z
 
     const/4 v4, -0x1
 
-    .line 103
     iput v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mRawDockState:I
 
     const-string v4, ""
 
-    .line 105
     iput-object v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mRawDockUsbpdIds:Ljava/lang/String;
 
-    .line 107
     new-instance v4, Landroid/util/SparseArray;
 
     invoke-direct {v4}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
-    .line 113
     new-instance v4, Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     invoke-direct {v4}, Lcom/android/server/desktopmode/HardwareManager$DockState;-><init>()V
 
     iput-object v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mDockState:Lcom/android/server/desktopmode/HardwareManager$DockState;
 
-    .line 121
     new-instance v4, Lcom/android/server/desktopmode/HardwareManager$1;
 
     invoke-direct {v4, p0}, Lcom/android/server/desktopmode/HardwareManager$1;-><init>(Lcom/android/server/desktopmode/HardwareManager;)V
 
     iput-object v4, v0, Lcom/android/server/desktopmode/HardwareManager;->mDisplayListener:Landroid/hardware/display/DisplayManager$DisplayListener;
 
-    .line 150
     new-instance v5, Lcom/android/server/desktopmode/HardwareManager$2;
 
     invoke-direct {v5, p0}, Lcom/android/server/desktopmode/HardwareManager$2;-><init>(Lcom/android/server/desktopmode/HardwareManager;)V
 
     iput-object v5, v0, Lcom/android/server/desktopmode/HardwareManager;->mInputDeviceListener:Landroid/hardware/input/InputManager$InputDeviceListener;
 
-    .line 170
     new-instance v6, Lcom/android/server/desktopmode/HardwareManager$3;
 
     invoke-direct {v6, p0}, Lcom/android/server/desktopmode/HardwareManager$3;-><init>(Lcom/android/server/desktopmode/HardwareManager;)V
 
     iput-object v6, v0, Lcom/android/server/desktopmode/HardwareManager;->mUEventObserver:Landroid/os/UEventObserver;
 
-    .line 186
     new-instance v7, Lcom/android/server/desktopmode/HardwareManager$4;
 
     invoke-direct {v7, p0}, Lcom/android/server/desktopmode/HardwareManager$4;-><init>(Lcom/android/server/desktopmode/HardwareManager;)V
 
     iput-object v7, v0, Lcom/android/server/desktopmode/HardwareManager;->mUEventHostDeviceObserver:Landroid/os/UEventObserver;
 
-    .line 219
     new-instance v8, Lcom/android/server/desktopmode/HardwareManager$5;
 
     invoke-direct {v8, p0}, Lcom/android/server/desktopmode/HardwareManager$5;-><init>(Lcom/android/server/desktopmode/HardwareManager;)V
@@ -592,10 +539,8 @@
 
     move-object v9, p1
 
-    .line 273
     iput-object v9, v0, Lcom/android/server/desktopmode/HardwareManager;->mContext:Landroid/content/Context;
 
-    .line 274
     new-instance v10, Landroid/os/HandlerThread;
 
     const-string v11, "desktopmode_hw"
@@ -604,10 +549,8 @@
 
     invoke-direct {v10, v11, v12}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 276
     invoke-virtual {v10}, Landroid/os/HandlerThread;->start()V
 
-    .line 277
     new-instance v11, Landroid/os/Handler;
 
     invoke-virtual {v10}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -618,18 +561,14 @@
 
     iput-object v11, v0, Lcom/android/server/desktopmode/HardwareManager;->mHandler:Landroid/os/Handler;
 
-    .line 278
     iput-object v1, v0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
-    .line 279
     invoke-interface {p2, v8}, Lcom/android/server/desktopmode/IStateManager;->registerListener(Lcom/android/server/desktopmode/StateManager$StateListener;)V
 
     move-object/from16 v1, p6
 
-    .line 280
     iput-object v1, v0, Lcom/android/server/desktopmode/HardwareManager;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
-    .line 281
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -638,42 +577,32 @@
 
     move-object/from16 v1, p7
 
-    .line 282
     iput-object v1, v0, Lcom/android/server/desktopmode/HardwareManager;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 284
     iput-object v2, v0, Lcom/android/server/desktopmode/HardwareManager;->mInputManager:Landroid/hardware/input/InputManager;
 
-    .line 285
     invoke-virtual {v2, v5, v11}, Landroid/hardware/input/InputManager;->registerInputDeviceListener(Landroid/hardware/input/InputManager$InputDeviceListener;Landroid/os/Handler;)V
 
-    .line 287
     iput-object v3, v0, Lcom/android/server/desktopmode/HardwareManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 288
     invoke-virtual {v3, v4, v11}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
     move-object/from16 v1, p8
 
-    .line 289
     iput-object v1, v0, Lcom/android/server/desktopmode/HardwareManager;->mIDisplayManager:Landroid/hardware/display/IDisplayManager;
 
     const-string v1, "DEVPATH=/devices/virtual/sec/ccic"
 
-    .line 291
     invoke-virtual {v6, v1}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
     const-string v1, "DEVTYPE=usb_interface"
 
-    .line 292
     invoke-virtual {v7, v1}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
     move-object/from16 v1, p3
 
-    .line 294
     iput-object v1, v0, Lcom/android/server/desktopmode/HardwareManager;->mSettingsHelper:Lcom/android/server/desktopmode/SettingsHelper;
 
-    .line 296
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_STANDALONE:Z
 
     if-eqz v1, :cond_0
@@ -690,7 +619,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 298
     new-instance v1, Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;
 
     const/4 v2, 0x0
@@ -699,10 +627,8 @@
 
     iput-object v1, v0, Lcom/android/server/desktopmode/HardwareManager;->mPogoKeyboardChangedListener:Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;
 
-    .line 299
     invoke-static {v1}, Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;->-$$Nest$mregister(Lcom/android/server/desktopmode/HardwareManager$PogoKeyboardChangedListener;)V
 
-    .line 302
     :cond_0
     new-instance v1, Landroid/content/IntentFilter;
 
@@ -710,10 +636,8 @@
 
     const-string v2, "android.bluetooth.device.action.ACL_DISCONNECTED"
 
-    .line 303
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 304
     new-instance v2, Lcom/android/server/desktopmode/HardwareManager$6;
 
     invoke-direct {v2, p0}, Lcom/android/server/desktopmode/HardwareManager$6;-><init>(Lcom/android/server/desktopmode/HardwareManager;)V
@@ -744,7 +668,6 @@
 .method public static isSupportedDisplayType(I)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x2
 
     if-eq p0, v0, :cond_1
@@ -775,7 +698,6 @@
 .method private synthetic lambda$checkExternalDisplayConnectedLocked$0()V
     .locals 3
 
-    .line 605
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -787,7 +709,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 606
     iget-object v2, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -796,7 +717,6 @@
 
     check-cast v2, Lcom/android/server/desktopmode/DisplayInfo;
 
-    .line 607
     invoke-virtual {v2}, Lcom/android/server/desktopmode/DisplayInfo;->getType()I
 
     move-result v2
@@ -814,7 +734,6 @@
 
     goto :goto_0
 
-    .line 611
     :cond_1
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -826,7 +745,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 612
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager;->checkExternalDisplayConnectedLocked()V
 
@@ -836,14 +754,12 @@
 .method public static resolveDockType(Ljava/lang/String;)I
     .locals 3
 
-    .line 638
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 639
     sget-object v0, Lcom/android/server/desktopmode/HardwareManager;->sSupportedDockUsbpdIds:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -854,14 +770,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 641
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
     return p0
 
-    .line 644
     :cond_0
     sget-object v0, Lcom/android/server/desktopmode/HardwareManager;->sSupportedDockUsbpdIdRanges:Ljava/util/List;
 
@@ -882,7 +796,6 @@
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 645
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Landroid/util/Range;
@@ -893,7 +806,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 646
     iget-object p0, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Integer;
@@ -917,7 +829,6 @@
 
     const-string v0, "/sys/class/dp_sec/dex"
 
-    .line 599
     invoke-static {v0}, Lcom/android/server/desktopmode/Utils;->readFile(Ljava/lang/String;)I
 
     move-result v0
@@ -928,12 +839,10 @@
 
     const/4 v1, 0x0
 
-    .line 602
     invoke-virtual {p0, v0, v1}, Lcom/android/server/desktopmode/HardwareManager;->setExternalDisplayConnectedLocked(ZLcom/android/server/desktopmode/DisplayInfo;)V
 
     goto :goto_0
 
-    .line 604
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mHandler:Landroid/os/Handler;
 
@@ -952,7 +861,6 @@
 .method public command(Ljava/io/PrintWriter;Ljava/lang/String;)I
     .locals 4
 
-    .line 674
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -960,7 +868,6 @@
     :try_start_0
     const-string/jumbo v1, "on"
 
-    .line 675
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -971,10 +878,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 676
     invoke-virtual {p0, v2, p1}, Lcom/android/server/desktopmode/HardwareManager;->setForcedInternalScreenModeLocked(ZLjava/io/PrintWriter;)V
 
-    .line 677
     monitor-exit v0
 
     return v3
@@ -982,17 +887,14 @@
     :cond_0
     const-string/jumbo v1, "off"
 
-    .line 678
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 679
     invoke-virtual {p0, v3, p1}, Lcom/android/server/desktopmode/HardwareManager;->setForcedInternalScreenModeLocked(ZLjava/io/PrintWriter;)V
 
-    .line 680
     monitor-exit v0
 
     return v3
@@ -1000,14 +902,12 @@
     :cond_1
     const-string/jumbo v1, "toggle"
 
-    .line 681
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 682
     iget-boolean p2, p0, Lcom/android/server/desktopmode/HardwareManager;->mForcedInternalScreenModeEnabled:Z
 
     if-nez p2, :cond_2
@@ -1020,12 +920,10 @@
     :goto_0
     invoke-virtual {p0, v2, p1}, Lcom/android/server/desktopmode/HardwareManager;->setForcedInternalScreenModeLocked(ZLjava/io/PrintWriter;)V
 
-    .line 683
     monitor-exit v0
 
     return v3
 
-    .line 685
     :cond_3
     monitor-exit v0
 
@@ -1036,7 +934,6 @@
     :catchall_0
     move-exception p0
 
-    .line 686
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1047,12 +944,10 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 3
 
-    .line 655
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 656
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1080,10 +975,8 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 657
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 658
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1102,7 +995,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 659
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1121,7 +1013,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 660
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1140,7 +1031,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 661
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1159,7 +1049,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 662
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1178,7 +1067,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 663
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1197,7 +1085,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 664
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1216,7 +1103,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 665
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1235,7 +1121,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 666
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1254,7 +1139,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 667
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1277,7 +1161,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 668
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1296,10 +1179,8 @@
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 669
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 670
     monitor-exit v0
 
     return-void
@@ -1317,7 +1198,6 @@
 .method public final getCoverType(Lcom/android/server/desktopmode/State;)I
     .locals 0
 
-    .line 551
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getCoverState()Lcom/samsung/android/cover/CoverState;
 
     move-result-object p0
@@ -1326,7 +1206,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 553
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getCoverState()Lcom/samsung/android/cover/CoverState;
 
     move-result-object p0
@@ -1344,7 +1223,6 @@
 .method public initialize()V
     .locals 3
 
-    .line 341
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1355,7 +1233,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
@@ -1363,37 +1240,29 @@
 
     move-result-object v0
 
-    .line 344
     iget-object v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 345
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager;->updateDockStatusLocked()Z
 
-    .line 346
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/HardwareManager;->initializeExternalDisplayStatusLocked([Landroid/view/Display;)V
 
-    .line 347
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager;->updateInputDeviceStatusLocked()V
 
-    .line 348
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string v2, "dock_usbpd_ids"
 
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mDockState:Lcom/android/server/desktopmode/HardwareManager$DockState;
 
-    .line 349
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager$DockState;->getType()I
 
     move-result p0
 
-    .line 348
     invoke-static {v0, v2, p0}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettings(Landroid/content/ContentResolver;Ljava/lang/String;I)V
 
-    .line 350
     monitor-exit v1
 
     return-void
@@ -1411,7 +1280,6 @@
 .method public final initializeExternalDisplayStatusLocked([Landroid/view/Display;)V
     .locals 8
 
-    .line 432
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1427,12 +1295,10 @@
 
     aget-object v5, p1, v2
 
-    .line 433
     new-instance v6, Lcom/android/server/desktopmode/DisplayInfo;
 
     invoke-direct {v6, v5}, Lcom/android/server/desktopmode/DisplayInfo;-><init>(Landroid/view/Display;)V
 
-    .line 434
     iget-object v5, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v6}, Lcom/android/server/desktopmode/DisplayInfo;->getDisplayId()I
@@ -1441,7 +1307,6 @@
 
     invoke-virtual {v5, v7, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 435
     invoke-virtual {v6}, Lcom/android/server/desktopmode/DisplayInfo;->getType()I
 
     move-result v5
@@ -1464,18 +1329,14 @@
     :cond_1
     if-eqz v3, :cond_2
 
-    .line 441
     iput-boolean v4, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsExternalDisplayConnected:Z
 
-    .line 442
     iput-object v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mConnectedDisplay:Lcom/android/server/desktopmode/DisplayInfo;
 
-    .line 443
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p1, v4, v1}, Lcom/android/server/desktopmode/IStateManager;->setExternalDisplayConnected(ZLcom/android/server/desktopmode/DisplayInfo;)V
 
-    .line 445
     :cond_2
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -1508,7 +1369,6 @@
 .method public final isMouse(Landroid/view/InputDevice;)Z
     .locals 0
 
-    .line 532
     invoke-virtual {p1}, Landroid/view/InputDevice;->getSources()I
 
     move-result p0
@@ -1531,12 +1391,10 @@
 .method public logConnectedAccessoryInformationLocked(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 542
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 543
     iget-object v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mRawDockUsbpdIds:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1551,7 +1409,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 545
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_0
@@ -1574,18 +1431,15 @@
 
     invoke-static {p1, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 546
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mContext:Landroid/content/Context;
 
     const-string p1, "LCAI"
 
-    .line 547
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 546
     invoke-static {p0, p1, v0}, Lcom/android/server/desktopmode/DesktopModeLogger;->log(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1594,13 +1448,10 @@
 .method public final setExternalDisplayConnectedLocked(ZLcom/android/server/desktopmode/DisplayInfo;)V
     .locals 0
 
-    .line 593
     iput-boolean p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsExternalDisplayConnected:Z
 
-    .line 594
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager;->updateDockStatusLocked()Z
 
-    .line 595
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/desktopmode/IStateManager;->setExternalDisplayConnected(ZLcom/android/server/desktopmode/DisplayInfo;)V
@@ -1611,7 +1462,6 @@
 .method public final setForcedInternalScreenModeLocked(ZLjava/io/PrintWriter;)V
     .locals 3
 
-    .line 561
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1637,12 +1487,10 @@
     :cond_0
     if-eqz p2, :cond_4
 
-    .line 564
     iget-boolean v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mForcedInternalScreenModeEnabled:Z
 
     if-ne p1, v0, :cond_2
 
-    .line 565
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1660,7 +1508,6 @@
     :cond_1
     const-string/jumbo p1, "off!"
 
-    .line 566
     :goto_0
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1668,12 +1515,10 @@
 
     move-result-object p0
 
-    .line 565
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
 
-    .line 569
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1701,16 +1546,13 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 572
     :cond_4
     iput-boolean p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mForcedInternalScreenModeEnabled:Z
 
-    .line 573
     iget-object p2, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p2, p1}, Lcom/android/server/desktopmode/IStateManager;->setForcedInternalScreenModeEnabled(Z)V
 
-    .line 574
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager;->updateDockStatusLocked()Z
 
     return-void
@@ -1719,7 +1561,6 @@
 .method public final setLowRefreshRate(Z)V
     .locals 3
 
-    .line 618
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1747,7 +1588,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 621
     :try_start_0
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mIDisplayManager:Landroid/hardware/display/IDisplayManager;
 
@@ -1766,7 +1606,6 @@
     :catch_0
     move-exception p0
 
-    .line 623
     sget-object p1, Lcom/android/server/desktopmode/HardwareManager;->TAG:Ljava/lang/String;
 
     const-string v0, "RemoteException is occurred"
@@ -1775,17 +1614,14 @@
 
     goto :goto_0
 
-    .line 627
     :cond_1
     :try_start_1
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mRefreshRateToken:Lcom/samsung/android/hardware/display/IRefreshRateToken;
 
     if-eqz p1, :cond_2
 
-    .line 628
     invoke-interface {p1}, Lcom/samsung/android/hardware/display/IRefreshRateToken;->release()V
 
-    .line 629
     iput-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mRefreshRateToken:Lcom/samsung/android/hardware/display/IRefreshRateToken;
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -1795,7 +1631,6 @@
     :catch_1
     move-exception p0
 
-    .line 632
     sget-object p1, Lcom/android/server/desktopmode/HardwareManager;->TAG:Ljava/lang/String;
 
     const-string v0, "LowRefreshRate() release failed"
@@ -1810,7 +1645,6 @@
 .method public final setRawDockStateLocked(I)V
     .locals 3
 
-    .line 354
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1837,7 +1671,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     :cond_0
     iput p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mRawDockState:I
 
@@ -1847,7 +1680,6 @@
 .method public final setRawDockUsbpdIdsLocked(Ljava/lang/String;)V
     .locals 3
 
-    .line 359
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1870,7 +1702,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     :cond_0
     iput-object p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mRawDockUsbpdIds:Ljava/lang/String;
 
@@ -1880,7 +1711,6 @@
 .method public final updateDockStatusLocked()Z
     .locals 7
 
-    .line 364
     iget v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mRawDockState:I
 
     const/4 v1, 0x0
@@ -1891,7 +1721,6 @@
 
     const-string v0, "/sys/class/sec/ccic/usbpd_type"
 
-    .line 365
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Utils;->readFile(Ljava/lang/String;I)I
 
     move-result v0
@@ -1902,18 +1731,15 @@
 
     const-string v3, ""
 
-    .line 366
     invoke-static {v0, v3}, Lcom/android/server/desktopmode/Utils;->readFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/HardwareManager;->setRawDockUsbpdIdsLocked(Ljava/lang/String;)V
 
-    .line 369
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mDockState:Lcom/android/server/desktopmode/HardwareManager$DockState;
 
-    .line 372
     iget v3, p0, Lcom/android/server/desktopmode/HardwareManager;->mRawDockState:I
 
     if-nez v3, :cond_1
@@ -1948,7 +1774,6 @@
 
     goto :goto_1
 
-    .line 380
     :cond_2
     new-instance v2, Lcom/android/server/desktopmode/HardwareManager$DockState;
 
@@ -1958,7 +1783,6 @@
 
     goto :goto_2
 
-    .line 378
     :cond_3
     :goto_1
     new-instance v2, Lcom/android/server/desktopmode/HardwareManager$DockState;
@@ -1969,7 +1793,6 @@
 
     goto :goto_2
 
-    .line 384
     :cond_4
     iget-boolean v2, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsExternalDisplayConnected:Z
 
@@ -1983,7 +1806,6 @@
 
     if-nez v2, :cond_5
 
-    .line 385
     invoke-virtual {v0}, Lcom/android/server/desktopmode/HardwareManager$DockState;->getType()I
 
     move-result v2
@@ -1995,7 +1817,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 387
     invoke-virtual {v2}, Lcom/android/server/desktopmode/DisplayInfo;->getType()I
 
     move-result v2
@@ -2004,7 +1825,6 @@
 
     if-eq v2, v5, :cond_6
 
-    .line 388
     new-instance v2, Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     iget-object v5, p0, Lcom/android/server/desktopmode/HardwareManager;->mRawDockUsbpdIds:Ljava/lang/String;
@@ -2013,13 +1833,11 @@
 
     goto :goto_2
 
-    .line 392
     :cond_6
     new-instance v2, Lcom/android/server/desktopmode/HardwareManager$DockState;
 
     invoke-direct {v2}, Lcom/android/server/desktopmode/HardwareManager$DockState;-><init>()V
 
-    .line 394
     :goto_2
     sget-boolean v3, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -2049,7 +1867,6 @@
 
     invoke-static {v3, v5}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     :cond_7
     invoke-virtual {v0}, Lcom/android/server/desktopmode/HardwareManager$DockState;->getType()I
 
@@ -2061,20 +1878,16 @@
 
     if-eq v0, v3, :cond_b
 
-    .line 398
     iput-object v2, p0, Lcom/android/server/desktopmode/HardwareManager;->mDockState:Lcom/android/server/desktopmode/HardwareManager$DockState;
 
-    .line 399
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {v0, v2}, Lcom/android/server/desktopmode/IStateManager;->setDockState(Lcom/android/server/desktopmode/HardwareManager$DockState;)V
 
-    .line 402
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_SFC:Z
 
     if-eqz v0, :cond_8
 
-    .line 403
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {v0}, Lcom/android/server/desktopmode/IStateManager;->getState()Lcom/android/server/desktopmode/State;
@@ -2089,7 +1902,6 @@
 
     if-eq v0, v1, :cond_8
 
-    .line 405
     iget-object v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mSettingsHelper:Lcom/android/server/desktopmode/SettingsHelper;
 
     invoke-virtual {v2}, Lcom/android/server/desktopmode/HardwareManager$DockState;->isDexPad()Z
@@ -2098,7 +1910,6 @@
 
     invoke-virtual {v1, v3, v0}, Lcom/android/server/desktopmode/SettingsHelper;->backupOrRestoreSuperFastCharging(ZI)V
 
-    .line 408
     :cond_8
     invoke-virtual {v2}, Lcom/android/server/desktopmode/HardwareManager$DockState;->isUndocked()Z
 
@@ -2108,20 +1919,16 @@
 
     if-eqz v0, :cond_9
 
-    .line 409
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mBatteryChangedListener:Lcom/android/server/desktopmode/HardwareManager$BatteryChangedListener;
 
     if-eqz v0, :cond_a
 
-    .line 410
     invoke-virtual {v0}, Lcom/android/server/desktopmode/HardwareManager$BatteryChangedListener;->unregister()V
 
-    .line 411
     iput-object v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mBatteryChangedListener:Lcom/android/server/desktopmode/HardwareManager$BatteryChangedListener;
 
     goto :goto_3
 
-    .line 414
     :cond_9
     new-instance v0, Lcom/android/server/desktopmode/HardwareManager$BatteryChangedListener;
 
@@ -2129,22 +1936,18 @@
 
     iput-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mBatteryChangedListener:Lcom/android/server/desktopmode/HardwareManager$BatteryChangedListener;
 
-    .line 415
     invoke-virtual {v0}, Lcom/android/server/desktopmode/HardwareManager$BatteryChangedListener;->register()V
 
-    .line 417
     :cond_a
     :goto_3
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string v0, "dock_usbpd_ids"
 
-    .line 418
     invoke-virtual {v2}, Lcom/android/server/desktopmode/HardwareManager$DockState;->getType()I
 
     move-result v1
 
-    .line 417
     invoke-static {p0, v0, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettings(Landroid/content/ContentResolver;Ljava/lang/String;I)V
 
     move v1, v4
@@ -2160,32 +1963,27 @@
 
     if-eqz p1, :cond_2
 
-    .line 450
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {p1, p2}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object p1
 
-    .line 451
     iget-object v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
     if-eqz p1, :cond_1
 
-    .line 453
     :try_start_0
     new-instance v2, Lcom/android/server/desktopmode/DisplayInfo;
 
     invoke-direct {v2, p1}, Lcom/android/server/desktopmode/DisplayInfo;-><init>(Landroid/view/Display;)V
 
-    .line 454
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {p1, p2, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 455
     invoke-virtual {v2}, Lcom/android/server/desktopmode/DisplayInfo;->getType()I
 
     move-result p1
@@ -2196,26 +1994,21 @@
 
     if-eqz p1, :cond_1
 
-    .line 456
     iput-object v2, p0, Lcom/android/server/desktopmode/HardwareManager;->mConnectedDisplay:Lcom/android/server/desktopmode/DisplayInfo;
 
-    .line 457
     iget-boolean p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsExternalDisplayConnected:Z
 
     if-nez p1, :cond_0
 
-    .line 458
     invoke-virtual {p0, v0, v2}, Lcom/android/server/desktopmode/HardwareManager;->setExternalDisplayConnectedLocked(ZLcom/android/server/desktopmode/DisplayInfo;)V
 
     goto :goto_0
 
-    .line 460
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p1, v2}, Lcom/android/server/desktopmode/IStateManager;->setExternalDisplayUpdated(Lcom/android/server/desktopmode/DisplayInfo;)V
 
-    .line 464
     :cond_1
     :goto_0
     monitor-exit v1
@@ -2231,13 +2024,11 @@
 
     throw p0
 
-    .line 466
     :cond_2
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 467
     :try_start_1
     iget-object v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
@@ -2249,7 +2040,6 @@
 
     if-eqz p2, :cond_7
 
-    .line 469
     invoke-virtual {p2}, Lcom/android/server/desktopmode/DisplayInfo;->getType()I
 
     move-result v1
@@ -2264,7 +2054,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 474
     iget-object v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
@@ -2280,7 +2069,6 @@
 
     if-ge v3, v1, :cond_4
 
-    .line 475
     iget-object v5, p0, Lcom/android/server/desktopmode/HardwareManager;->mDisplays:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -2289,7 +2077,6 @@
 
     check-cast v5, Lcom/android/server/desktopmode/DisplayInfo;
 
-    .line 476
     invoke-virtual {v5}, Lcom/android/server/desktopmode/DisplayInfo;->getType()I
 
     move-result v6
@@ -2312,20 +2099,17 @@
 
     move-object v5, v4
 
-    .line 482
     :goto_2
     iput-object v5, p0, Lcom/android/server/desktopmode/HardwareManager;->mConnectedDisplay:Lcom/android/server/desktopmode/DisplayInfo;
 
     if-eqz v0, :cond_5
 
-    .line 484
     iget-object p2, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p2, v5}, Lcom/android/server/desktopmode/IStateManager;->setExternalDisplayUpdated(Lcom/android/server/desktopmode/DisplayInfo;)V
 
     goto :goto_3
 
-    .line 485
     :cond_5
     invoke-virtual {p2}, Lcom/android/server/desktopmode/DisplayInfo;->getType()I
 
@@ -2335,23 +2119,19 @@
 
     if-ne p2, v0, :cond_6
 
-    .line 486
     invoke-virtual {p0}, Lcom/android/server/desktopmode/HardwareManager;->checkExternalDisplayConnectedLocked()V
 
     goto :goto_3
 
-    .line 488
     :cond_6
     invoke-virtual {p0, v2, v4}, Lcom/android/server/desktopmode/HardwareManager;->setExternalDisplayConnectedLocked(ZLcom/android/server/desktopmode/DisplayInfo;)V
 
-    .line 491
     :cond_7
     :goto_3
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 493
     :goto_4
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -2383,7 +2163,6 @@
     :catchall_1
     move-exception p0
 
-    .line 491
     :try_start_2
     monitor-exit p1
     :try_end_2
@@ -2395,14 +2174,12 @@
 .method public final updateInputDeviceStatusLocked()V
     .locals 9
 
-    .line 497
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v0}, Landroid/hardware/input/InputManager;->getInputDeviceIds()[I
 
     move-result-object v0
 
-    .line 500
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -2416,7 +2193,6 @@
 
     aget v5, v0, v3
 
-    .line 501
     iget-object v6, p0, Lcom/android/server/desktopmode/HardwareManager;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v6, v5}, Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
@@ -2425,14 +2201,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 502
     invoke-virtual {v5}, Landroid/view/InputDevice;->isExternal()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 503
     invoke-virtual {p0, v5}, Lcom/android/server/desktopmode/HardwareManager;->isMouse(Landroid/view/InputDevice;)Z
 
     move-result v6
@@ -2441,7 +2215,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 507
     sget-boolean v6, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v6, :cond_0
@@ -2464,7 +2237,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 508
     :cond_0
     iput-object v5, p0, Lcom/android/server/desktopmode/HardwareManager;->mConnectedMouse:Landroid/view/InputDevice;
 
@@ -2473,7 +2245,6 @@
 
     goto :goto_0
 
-    .line 513
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsMouseConnected:Z
 
@@ -2488,19 +2259,15 @@
     :cond_3
     move v0, v2
 
-    .line 514
     :goto_1
     iput-boolean v4, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsMouseConnected:Z
 
-    .line 516
     iget-boolean v3, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsBtMouseDeepSleep:Z
 
     if-eqz v3, :cond_5
 
-    .line 517
     iput-boolean v1, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsMouseConnected:Z
 
-    .line 518
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v1, :cond_4
@@ -2511,19 +2278,16 @@
 
     invoke-static {v1, v3}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 520
     :cond_4
     iput-boolean v2, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsBtMouseDeepSleep:Z
 
     :cond_5
     if-eqz v0, :cond_6
 
-    .line 524
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {v0, v4}, Lcom/android/server/desktopmode/IStateManager;->setMouseConnected(Z)V
 
-    .line 527
     :cond_6
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -2556,10 +2320,8 @@
 .method public final updatePogoKeyboardStatus(Z)V
     .locals 0
 
-    .line 537
     iput-boolean p1, p0, Lcom/android/server/desktopmode/HardwareManager;->mIsPogoKeyboardConnected:Z
 
-    .line 538
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p0, p1}, Lcom/android/server/desktopmode/IStateManager;->setPogoKeyboardConnected(Z)V

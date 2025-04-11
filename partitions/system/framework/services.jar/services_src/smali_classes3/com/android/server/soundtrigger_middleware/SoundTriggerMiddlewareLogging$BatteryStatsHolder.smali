@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetINSTANCE()Landroid/os/BatteryStatsInternal;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareLogging$BatteryStatsHolder;->INSTANCE:Landroid/os/BatteryStatsInternal;
 
     return-object v0
@@ -20,10 +19,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 481
     const-class v0, Landroid/os/BatteryStatsInternal;
 
-    .line 482
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0

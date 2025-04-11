@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 427
     invoke-static {}, Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;->values()[Lcom/samsung/android/knox/analytics/activation/model/ActivationInfo$ActivationStatus;
 
     move-result-object v0

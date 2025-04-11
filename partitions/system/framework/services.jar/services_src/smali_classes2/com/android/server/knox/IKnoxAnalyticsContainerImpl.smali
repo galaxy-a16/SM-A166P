@@ -24,21 +24,16 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/PersonaManagerService;)V
     .locals 1
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "IFKnoxAnalyticsContainer"
 
-    .line 47
     iput-object v0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->TAG:Ljava/lang/String;
 
-    .line 72
     iput-object p2, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 73
     iput-object p3, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->personaManagerService:Lcom/android/server/pm/PersonaManagerService;
 
-    .line 74
     iput-object p1, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     return-void
@@ -49,14 +44,12 @@
 .method public getActivePasswordQuality(I)I
     .locals 1
 
-    .line 218
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 219
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/LockPatternUtils;->getActivePasswordQuality(I)I
 
     move-result p0
@@ -67,7 +60,6 @@
 .method public getCallerIdToShow(I)I
     .locals 3
 
-    .line 224
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getUserManager()Landroid/os/UserManager;
 
     move-result-object v0
@@ -76,7 +68,6 @@
 
     move-result-object v0
 
-    .line 225
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -113,12 +104,10 @@
 
     const-string p0, "device_policy"
 
-    .line 267
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 266
     invoke-static {p0}, Landroid/app/admin/IDevicePolicyManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/admin/IDevicePolicyManager;
 
     move-result-object p0
@@ -131,7 +120,6 @@
 
     const/4 v2, 0x0
 
-    .line 271
     :try_start_0
     invoke-interface {p0, v2}, Landroid/app/admin/IDevicePolicyManager;->getDeviceOwnerComponent(Z)Landroid/content/ComponentName;
 
@@ -139,7 +127,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 273
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -153,7 +140,6 @@
     :catch_0
     move-exception p0
 
-    .line 277
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -170,7 +156,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     :cond_0
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -195,12 +180,10 @@
 .method public final getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
     .locals 2
 
-    .line 64
     iget-object v0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->devicePolicyManager:Landroid/app/admin/DevicePolicyManager;
 
     if-nez v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "device_policy"
@@ -213,7 +196,6 @@
 
     iput-object v0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->devicePolicyManager:Landroid/app/admin/DevicePolicyManager;
 
-    .line 68
     :cond_0
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->devicePolicyManager:Landroid/app/admin/DevicePolicyManager;
 
@@ -223,7 +205,6 @@
 .method public getDisabledPrintServices(I)Ljava/lang/String;
     .locals 1
 
-    .line 203
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -242,7 +223,6 @@
 .method public final getIPackageManager()Landroid/content/pm/IPackageManager;
     .locals 0
 
-    .line 338
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object p0
@@ -253,7 +233,6 @@
 .method public getInstallerPackageName(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 156
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getIPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -270,7 +249,6 @@
     :catch_0
     move-exception p0
 
-    .line 158
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -281,7 +259,6 @@
 .method public getKnoxFingerprintPlus(I)I
     .locals 2
 
-    .line 198
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -302,7 +279,6 @@
 .method public getKnoxScreenTimeOut(I)I
     .locals 3
 
-    .line 187
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
 
     move-result v0
@@ -313,7 +289,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -326,7 +301,6 @@
 
     return p0
 
-    .line 191
     :cond_0
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
@@ -344,7 +318,6 @@
 .method public getLocationProvidersAllowed(I)I
     .locals 2
 
-    .line 213
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -365,7 +338,6 @@
 .method public getLockScreenAllowPrivateNotification(I)I
     .locals 2
 
-    .line 208
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -386,7 +358,6 @@
 .method public getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
     .locals 2
 
-    .line 131
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getIPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -405,7 +376,6 @@
     :catch_0
     move-exception p0
 
-    .line 133
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -416,7 +386,6 @@
 .method public getProfileOwnerPackage(I)Ljava/lang/String;
     .locals 1
 
-    .line 285
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object p0
@@ -431,7 +400,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 286
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -448,7 +416,6 @@
 .method public getSeparatedAppsConfig()Landroid/os/Bundle;
     .locals 0
 
-    .line 150
     invoke-static {}, Lcom/samsung/android/knox/container/KnoxContainerManager;->getAppSeparationConfig()Landroid/os/Bundle;
 
     move-result-object p0
@@ -459,12 +426,10 @@
 .method public getSeparatedAppsContainerId()J
     .locals 4
 
-    .line 80
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 82
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getUserManager()Landroid/os/UserManager;
 
@@ -480,13 +445,11 @@
 
     move-result-object p0
 
-    .line 83
     iget-wide v2, p0, Landroid/content/pm/UserInfo;->creationTime:J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 87
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -499,13 +462,11 @@
     :catch_0
     move-exception p0
 
-    .line 85
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 87
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const-wide/16 v2, 0x0
@@ -516,14 +477,12 @@
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 88
     throw p0
 .end method
 
 .method public getSeparatedAppsUserId()I
     .locals 0
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->personaManagerService:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PersonaManagerService;->getAppSeparationId()I
@@ -536,12 +495,10 @@
 .method public final getUserManager()Landroid/os/UserManager;
     .locals 2
 
-    .line 56
     iget-object v0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->userManager:Landroid/os/UserManager;
 
     if-nez v0, :cond_0
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "user"
@@ -554,7 +511,6 @@
 
     iput-object v0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->userManager:Landroid/os/UserManager;
 
-    .line 60
     :cond_0
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->userManager:Landroid/os/UserManager;
 
@@ -564,7 +520,6 @@
 .method public getVisibleApps(I)Ljava/util/Set;
     .locals 2
 
-    .line 324
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -573,10 +528,8 @@
 
     const-string v1, "android.intent.category.LAUNCHER"
 
-    .line 325
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 326
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -589,12 +542,10 @@
 
     move-result-object p0
 
-    .line 330
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 331
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -612,7 +563,6 @@
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 332
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -635,7 +585,6 @@
     :try_start_0
     const-string v1, "enterprise_license_policy"
 
-    .line 252
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
@@ -646,14 +595,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 254
     invoke-interface {v1, p1}, Lcom/samsung/android/knox/license/IEnterpriseLicense;->getELMPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 255
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p0
@@ -670,7 +617,6 @@
     :catch_0
     move-exception p1
 
-    .line 258
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -690,7 +636,6 @@
     :cond_1
     const-string p1, "EnterpriseLicenseService is null"
 
-    .line 260
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -699,7 +644,6 @@
 .method public hasUserRestriction(Ljava/lang/String;I)Z
     .locals 1
 
-    .line 140
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getUserManager()Landroid/os/UserManager;
 
     move-result-object p0
@@ -718,7 +662,6 @@
 .method public isAppSeparationUserId(I)Z
     .locals 0
 
-    .line 115
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isAppSeparationUserId(I)Z
 
     move-result p0
@@ -741,7 +684,6 @@
 .method public isDoEnabled(I)Z
     .locals 0
 
-    .line 175
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isDoEnabled(I)Z
 
     move-result p0
@@ -752,14 +694,12 @@
 .method public isIMPackage(Ljava/lang/String;I)I
     .locals 4
 
-    .line 301
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 302
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.view.InputMethod"
@@ -776,7 +716,6 @@
 
     move v0, p2
 
-    .line 309
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -784,17 +723,14 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 310
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/content/pm/ResolveInfo;
 
-    .line 311
     iget-object v1, v1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 312
     iget-object v2, v1, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     const-string v3, "android.permission.BIND_INPUT_METHOD"
@@ -805,7 +741,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 313
     iget-object v1, v1, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -831,7 +766,6 @@
 .method public isKnoxId(I)Z
     .locals 0
 
-    .line 125
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
     move-result p0
@@ -842,12 +776,10 @@
 .method public final isKnoxMode(I)Z
     .locals 4
 
-    .line 234
     invoke-virtual {p0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getProfileOwnerPackage(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 235
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getDeviceOwnerPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -856,7 +788,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 241
     invoke-virtual {p0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->hasKnoxPermission(Ljava/lang/String;)Z
 
     move-result v2
@@ -869,12 +800,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 244
     invoke-virtual {p0, v0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->hasKnoxPermission(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 246
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -920,7 +849,6 @@
 .method public isLegacyClId(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -929,27 +857,22 @@
 .method public isLoggingAllowedForUser(I)Z
     .locals 3
 
-    .line 291
     invoke-virtual {p0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->isKnoxId(I)Z
 
     move-result v0
 
-    .line 292
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->isOrganizationOwned()Z
 
     move-result v1
 
-    .line 293
     invoke-virtual {p0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->isSecureFolderId(I)Z
 
     move-result v2
 
-    .line 294
     invoke-virtual {p0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->isAppSeparationUserId(I)Z
 
     move-result p1
 
-    .line 295
     invoke-virtual {p0}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->getUserManager()Landroid/os/UserManager;
 
     move-result-object p0
@@ -986,14 +909,12 @@
 
     const-string/jumbo p0, "ro.organization_owned"
 
-    .line 181
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string/jumbo v0, "true"
 
-    .line 182
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1004,7 +925,6 @@
 .method public isPremiumLicenseActivated(I)Z
     .locals 0
 
-    .line 165
     invoke-virtual {p0, p1}, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->isKnoxMode(I)Z
 
     move-result p0
@@ -1015,7 +935,6 @@
 .method public isSecureFolderId(I)Z
     .locals 0
 
-    .line 110
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isSecureFolderId(I)Z
 
     move-result p0
@@ -1026,7 +945,6 @@
 .method public isSeparatedAppsIndepdentApp(Landroid/content/pm/PackageInfo;)Z
     .locals 0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/knox/IKnoxAnalyticsContainerImpl;->personaManagerService:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PersonaManagerService;->isAppSeparationIndepdentApp(Landroid/content/pm/PackageInfo;)Z
@@ -1039,7 +957,6 @@
 .method public isSystemUser(I)Z
     .locals 0
 
-    .line 0
     if-nez p1, :cond_0
 
     const/4 p0, 0x1
@@ -1058,14 +975,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 99
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getPayload()Landroid/os/Bundle;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 100
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getPayload()Landroid/os/Bundle;
 
     move-result-object p0
@@ -1082,7 +997,6 @@
 
     return-void
 
-    .line 105
     :cond_0
     invoke-static {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalytics;->log(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 

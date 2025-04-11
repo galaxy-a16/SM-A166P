@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/PersisterQueue;Ljava/lang/String;)V
     .locals 0
 
-    .line 280
     iput-object p1, p0, Lcom/android/server/wm/PersisterQueue$LazyTaskWriterThread;->this$0:Lcom/android/server/wm/PersisterQueue;
 
-    .line 281
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -23,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/PersisterQueue;Ljava/lang/String;Lcom/android/server/wm/PersisterQueue$LazyTaskWriterThread-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/PersisterQueue$LazyTaskWriterThread;-><init>(Lcom/android/server/wm/PersisterQueue;Ljava/lang/String;)V
 
     return-void
@@ -36,10 +33,8 @@
 
     const/16 v0, 0xa
 
-    .line 286
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 290
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/PersisterQueue$LazyTaskWriterThread;->this$0:Lcom/android/server/wm/PersisterQueue;
@@ -48,7 +43,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 291
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/PersisterQueue$LazyTaskWriterThread;->this$0:Lcom/android/server/wm/PersisterQueue;
 
@@ -60,12 +54,10 @@
 
     move-result v1
 
-    .line 292
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 294
     :try_start_2
     iget-object v0, p0, Lcom/android/server/wm/PersisterQueue$LazyTaskWriterThread;->this$0:Lcom/android/server/wm/PersisterQueue;
 
@@ -82,7 +74,6 @@
     :goto_1
     if-ltz v0, :cond_0
 
-    .line 295
     iget-object v2, p0, Lcom/android/server/wm/PersisterQueue$LazyTaskWriterThread;->this$0:Lcom/android/server/wm/PersisterQueue;
 
     invoke-static {v2}, Lcom/android/server/wm/PersisterQueue;->-$$Nest$fgetmListeners(Lcom/android/server/wm/PersisterQueue;)Ljava/util/ArrayList;
@@ -101,7 +92,6 @@
 
     goto :goto_1
 
-    .line 298
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/PersisterQueue$LazyTaskWriterThread;->this$0:Lcom/android/server/wm/PersisterQueue;
 
@@ -114,7 +104,6 @@
     :catchall_0
     move-exception p0
 
-    .line 292
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -130,7 +119,6 @@
 
     const-string v0, "Persister thread is exiting. Should never happen in prod, butit\'s OK in tests."
 
-    .line 301
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

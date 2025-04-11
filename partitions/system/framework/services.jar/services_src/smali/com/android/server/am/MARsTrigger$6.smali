@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/MARsTrigger;)V
     .locals 0
 
-    .line 532
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$6;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,24 +25,20 @@
 
     const-string/jumbo p0, "pid"
 
-    .line 535
     invoke-virtual {p2, p0}, Landroid/content/Intent;->getIntegerArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 536
     invoke-static {}, Lcom/android/server/am/MARsHandler;->getInstance()Lcom/android/server/am/MARsHandler;
 
     move-result-object p1
 
     invoke-virtual {p1, p0}, Lcom/android/server/am/MARsHandler;->sendTCPUMsgToMainHandler(Ljava/util/ArrayList;)V
 
-    .line 537
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 538
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

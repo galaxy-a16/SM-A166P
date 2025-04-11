@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFeaturesBlacklistCache(Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;)Ljava/util/List;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mFeaturesBlacklistCache:Ljava/util/List;
 
     return-object p0
@@ -41,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fputmFeaturesBlacklistCache(Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mFeaturesBlacklistCache:Ljava/util/List;
 
     return-void
@@ -50,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -59,7 +55,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,10 +83,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mContext:Landroid/content/Context;
 
     return-void
@@ -102,7 +95,6 @@
 .method public getFeatureBlacklist()Ljava/util/List;
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mFeaturesBlacklistCache:Ljava/util/List;
 
     return-object p0
@@ -111,14 +103,12 @@
 .method public start()V
     .locals 4
 
-    .line 62
     sget-object v0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "start()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 63
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "FeatureBlacklistObserver"
@@ -127,10 +117,8 @@
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 64
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 65
     new-instance v0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver$FeatureBlacklistContentObserver;
 
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mHandlerThread:Landroid/os/HandlerThread;
@@ -143,7 +131,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mFeatureBlacklistContentObserver:Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver$FeatureBlacklistContentObserver;
 
-    .line 66
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -166,19 +153,16 @@
 .method public stop()V
     .locals 2
 
-    .line 74
     sget-object v0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "stop()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 75
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mFeatureBlacklistContentObserver:Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver$FeatureBlacklistContentObserver;
 
     if-eqz v0, :cond_0
 
-    .line 76
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -192,18 +176,14 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 78
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mFeatureBlacklistContentObserver:Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver$FeatureBlacklistContentObserver;
 
-    .line 79
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mHandlerThread:Landroid/os/HandlerThread;
 
     if-eqz v1, :cond_1
 
-    .line 80
     invoke-virtual {v1}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    .line 82
     :cond_1
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->mHandlerThread:Landroid/os/HandlerThread;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/profcollect/ProfcollectForwardingService;)V
     .locals 0
 
-    .line 68
     iput-object p1, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$1;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-direct {p0}, Lcom/android/server/profcollect/IProviderStatusCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onProviderReady()V
     .locals 1
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$1;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-static {p0}, Lcom/android/server/profcollect/ProfcollectForwardingService;->-$$Nest$fgetmHandler(Lcom/android/server/profcollect/ProfcollectForwardingService;)Landroid/os/Handler;

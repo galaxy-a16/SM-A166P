@@ -19,30 +19,25 @@
     :cond_0
     const-string v1, "android.hardware.soundtrigger@2.0::ISoundTriggerHw"
 
-    .line 18
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 20
     instance-of v3, v2, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;
 
     if-eqz v3, :cond_1
 
-    .line 21
     check-cast v2, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;
 
     return-object v2
 
-    .line 24
     :cond_1
     new-instance v2, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Proxy;
 
     invoke-direct {v2, p0}, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 27
     :try_start_0
     invoke-interface {v2}, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 28
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -86,7 +80,6 @@
 
     const-string v0, "android.hardware.soundtrigger@2.0::ISoundTriggerHw"
 
-    .line 57
     invoke-static {v0, p0, p1}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;Z)Landroid/os/IHwBinder;
 
     move-result-object p0
@@ -103,7 +96,6 @@
 
     const-string v0, "default"
 
-    .line 64
     invoke-static {v0, p0}, Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;->getService(Ljava/lang/String;Z)Landroid/hardware/soundtrigger/V2_0/ISoundTriggerHw;
 
     move-result-object p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usage/AppStandbyController;)V
     .locals 0
 
-    .line 2275
     iput-object p1, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usage/AppStandbyController;Lcom/android/server/usage/AppStandbyController$PackageReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/usage/AppStandbyController$PackageReceiver;-><init>(Lcom/android/server/usage/AppStandbyController;)V
 
     return-void
@@ -33,12 +31,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 8
 
-    .line 2278
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2279
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -47,14 +43,12 @@
 
     move-result-object v0
 
-    .line 2280
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getSendingUserId()I
 
     move-result v7
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 2281
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -65,7 +59,6 @@
 
     const-string v1, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 2282
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -75,14 +68,12 @@
     :cond_0
     const-string v1, "android.intent.extra.changed_component_name_list"
 
-    .line 2283
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 2288
     array-length v3, v1
 
     const/4 v4, 0x1
@@ -91,20 +82,17 @@
 
     aget-object v1, v1, v2
 
-    .line 2289
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 2290
     :cond_1
     iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-virtual {v1}, Lcom/android/server/usage/AppStandbyController;->clearCarrierPrivilegedApps()V
 
-    .line 2291
     iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {v1, v0, v7}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$mevaluateSystemAppException(Lcom/android/server/usage/AppStandbyController;Ljava/lang/String;I)V
@@ -112,14 +100,12 @@
     :cond_2
     const-string v1, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 2295
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 2296
     iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {v1}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmHandler(Lcom/android/server/usage/AppStandbyController;)Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;
@@ -134,13 +120,11 @@
 
     move-result-object v1
 
-    .line 2297
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     :cond_3
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 2300
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -149,7 +133,6 @@
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 2301
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -159,14 +142,12 @@
     :cond_4
     const-string v1, "android.intent.extra.REPLACING"
 
-    .line 2302
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
 
     if-eqz p2, :cond_5
 
-    .line 2303
     iget-object p2, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-virtual {p2, v0, v7}, Lcom/android/server/usage/AppStandbyController;->maybeUnrestrictBuggyApp(Ljava/lang/String;I)V
@@ -176,21 +157,18 @@
     :cond_5
     const-string p2, "android.intent.action.PACKAGE_ADDED"
 
-    .line 2304
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-nez p2, :cond_6
 
-    .line 2305
     iget-object p2, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-virtual {p2, v0, v7}, Lcom/android/server/usage/AppStandbyController;->clearAppIdleForPackage(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 2308
     :cond_6
     iget-object p2, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -204,7 +182,6 @@
 
     if-eqz p2, :cond_7
 
-    .line 2309
     iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     iget-object p2, v1, Lcom/android/server/usage/AppStandbyController;->mInjector:Lcom/android/server/usage/AppStandbyController$Injector;
@@ -221,7 +198,6 @@
 
     invoke-static/range {v1 .. v6}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$mrestoreAppToRare(Lcom/android/server/usage/AppStandbyController;Ljava/lang/String;IJI)V
 
-    .line 2311
     iget-object p2, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {p2}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmAppsToRestoreToRare(Lcom/android/server/usage/AppStandbyController;)Landroid/util/SparseSetArray;
@@ -230,7 +206,6 @@
 
     invoke-virtual {p2, v7, v0}, Landroid/util/SparseSetArray;->remove(ILjava/lang/Object;)Z
 
-    .line 2315
     :cond_7
     :goto_0
     iget-object p2, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
@@ -244,14 +219,12 @@
     :try_start_0
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 2316
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 2317
     iget-object p1, p0, Lcom/android/server/usage/AppStandbyController$PackageReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {p1}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmSystemExemptionAppOpMode(Lcom/android/server/usage/AppStandbyController;)Landroid/util/SparseIntArray;
@@ -270,7 +243,6 @@
 
     invoke-virtual {p1, p0}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 2319
     :cond_8
     monitor-exit p2
 

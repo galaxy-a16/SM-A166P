@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/resources/ResourcesManagerService;)V
     .locals 0
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/resources/ResourcesManagerService$1;->this$0:Lcom/android/server/resources/ResourcesManagerService;
 
     invoke-direct {p0}, Landroid/content/res/IResourcesManager$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 77
     :try_start_0
     invoke-static {p1}, Landroid/os/ParcelFileDescriptor;->dup(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;
 
@@ -32,7 +30,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 78
     :try_start_1
     iget-object p0, p0, Lcom/android/server/resources/ResourcesManagerService$1;->this$0:Lcom/android/server/resources/ResourcesManagerService;
 
@@ -46,7 +43,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 79
     :try_start_2
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_2
@@ -59,7 +55,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 77
     :try_start_3
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_3
@@ -82,7 +77,6 @@
     :catch_0
     move-exception p0
 
-    .line 80
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,7 +97,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual {p0, p2}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
 
     :cond_1
@@ -114,7 +107,6 @@
 .method public dumpResources(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;Landroid/os/RemoteCallback;)Z
     .locals 2
 
-    .line 66
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -130,10 +122,8 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 68
     invoke-virtual {p3, p0}, Landroid/os/RemoteCallback;->sendResult(Landroid/os/Bundle;)V
 
-    .line 69
     new-instance p0, Ljava/lang/SecurityException;
 
     const-string p1, "dump should only be called by shell"
@@ -142,7 +132,6 @@
 
     throw p0
 
-    .line 71
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/android/server/resources/ResourcesManagerService$1;->this$0:Lcom/android/server/resources/ResourcesManagerService;
@@ -161,22 +150,18 @@
 .method public handleShellCommand(Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;[Ljava/lang/String;)I
     .locals 6
 
-    .line 90
     new-instance v0, Lcom/android/server/resources/ResourcesManagerShellCommand;
 
     invoke-direct {v0, p0}, Lcom/android/server/resources/ResourcesManagerShellCommand;-><init>(Landroid/content/res/IResourcesManager;)V
 
-    .line 92
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v2
 
-    .line 93
     invoke-virtual {p2}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v3
 
-    .line 94
     invoke-virtual {p3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v4
@@ -185,7 +170,6 @@
 
     move-object v5, p4
 
-    .line 90
     invoke-virtual/range {v0 .. v5}, Landroid/os/ShellCommand;->exec(Landroid/os/Binder;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;)I
 
     move-result p0

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;
 
     invoke-static {p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapHandler;->$r8$lambda$ytjaexRK23j39BrAh6HLkgmgoyE(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)Ljava/lang/Integer;

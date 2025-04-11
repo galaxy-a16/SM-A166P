@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;Landroid/content/Intent;)V
     .locals 0
 
-    .line 2998
     iput-object p1, p0, Lcom/android/server/BatteryService$25;->this$0:Lcom/android/server/BatteryService;
 
     iput-object p2, p0, Lcom/android/server/BatteryService$25;->val$statusIntent:Landroid/content/Intent;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 4
 
-    .line 3001
     iget-object v0, p0, Lcom/android/server/BatteryService$25;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmContext(Lcom/android/server/BatteryService;)Landroid/content/Context;

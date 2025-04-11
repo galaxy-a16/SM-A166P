@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;)V
     .locals 0
 
-    .line 1443
     iput-object p1, p0, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 6
 
-    .line 1446
     iget-object v0, p0, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -38,7 +36,6 @@
 
     monitor-enter v0
 
-    .line 1447
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;
 
@@ -50,7 +47,6 @@
 
     move-result-object v1
 
-    .line 1448
     iget-object v2, p0, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;
 
     iget-object v2, v2, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -73,7 +69,6 @@
 
     move-result v2
 
-    .line 1451
     iget-object v3, p0, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;
 
     iget-object v3, v3, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -92,7 +87,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1452
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -101,14 +95,12 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1453
     iget-object p0, p0, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;
 
     iget-object p0, p0, Lcom/android/server/BatteryService$WcParamInfoSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p0, v1}, Lcom/android/server/BatteryService;->-$$Nest$msetWcParamInfo(Lcom/android/server/BatteryService;Ljava/lang/String;)V
 
-    .line 1455
     :cond_0
     monitor-exit v0
 

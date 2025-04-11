@@ -13,20 +13,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/statusbar/SessionMonitor;->mContext:Landroid/content/Context;
 
-    .line 52
     sget-object p1, Landroid/app/StatusBarManager;->ALL_SESSIONS:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -50,7 +46,6 @@
 
     move-result v0
 
-    .line 53
     iget-object v1, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -74,7 +69,6 @@
 .method public final isValidSessionType(I)Z
     .locals 0
 
-    .line 137
     sget-object p0, Landroid/app/StatusBarManager;->ALL_SESSIONS:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -91,10 +85,8 @@
 .method public onSessionEnded(ILcom/android/internal/logging/InstanceId;)V
     .locals 6
 
-    .line 118
     invoke-virtual {p0, p1}, Lcom/android/server/statusbar/SessionMonitor;->requireSetterPermissions(I)V
 
-    .line 120
     invoke-virtual {p0, p1}, Lcom/android/server/statusbar/SessionMonitor;->isValidSessionType(I)Z
 
     move-result v0
@@ -103,7 +95,6 @@
 
     const-string p0, "SessionMonitor"
 
-    .line 121
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,13 +113,11 @@
 
     return-void
 
-    .line 125
     :cond_0
     iget-object v0, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 126
     :try_start_0
     iget-object p0, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
@@ -161,7 +150,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 128
     :try_start_1
     invoke-interface {v1, p1, p2}, Lcom/android/internal/statusbar/ISessionListener;->onSessionEnded(ILcom/android/internal/logging/InstanceId;)V
     :try_end_1
@@ -176,7 +164,6 @@
     :try_start_2
     const-string v3, "SessionMonitor"
 
-    .line 130
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -195,7 +182,6 @@
 
     goto :goto_0
 
-    .line 133
     :cond_1
     monitor-exit v0
 
@@ -214,10 +200,8 @@
 .method public onSessionStarted(ILcom/android/internal/logging/InstanceId;)V
     .locals 6
 
-    .line 93
     invoke-virtual {p0, p1}, Lcom/android/server/statusbar/SessionMonitor;->requireSetterPermissions(I)V
 
-    .line 95
     invoke-virtual {p0, p1}, Lcom/android/server/statusbar/SessionMonitor;->isValidSessionType(I)Z
 
     move-result v0
@@ -226,7 +210,6 @@
 
     const-string p0, "SessionMonitor"
 
-    .line 96
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,13 +228,11 @@
 
     return-void
 
-    .line 100
     :cond_0
     iget-object v0, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 101
     :try_start_0
     iget-object p0, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
@@ -284,7 +265,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
     :try_start_1
     invoke-interface {v1, p1, p2}, Lcom/android/internal/statusbar/ISessionListener;->onSessionStarted(ILcom/android/internal/logging/InstanceId;)V
     :try_end_1
@@ -299,7 +279,6 @@
     :try_start_2
     const-string v3, "SessionMonitor"
 
-    .line 105
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -318,7 +297,6 @@
 
     goto :goto_0
 
-    .line 108
     :cond_1
     monitor-exit v0
 
@@ -337,15 +315,12 @@
 .method public registerSessionListener(ILcom/android/internal/statusbar/ISessionListener;)V
     .locals 4
 
-    .line 62
     invoke-virtual {p0, p1}, Lcom/android/server/statusbar/SessionMonitor;->requireListenerPermissions(I)V
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 64
     :try_start_0
     sget-object v1, Landroid/app/StatusBarManager;->ALL_SESSIONS:Ljava/util/Set;
 
@@ -375,7 +350,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 66
     iget-object v3, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -392,7 +366,6 @@
 
     goto :goto_0
 
-    .line 69
     :cond_1
     monitor-exit v0
 
@@ -419,7 +392,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/statusbar/SessionMonitor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
@@ -429,7 +401,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 148
     iget-object p0, p0, Lcom/android/server/statusbar/SessionMonitor;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v2, v1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
@@ -447,7 +418,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/statusbar/SessionMonitor;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONTROL_KEYGUARD"
@@ -459,7 +429,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 162
     iget-object p0, p0, Lcom/android/server/statusbar/SessionMonitor;->mContext:Landroid/content/Context;
 
     const-string p1, "android.permission.STATUS_BAR_SERVICE"
@@ -473,12 +442,10 @@
 .method public unregisterSessionListener(ILcom/android/internal/statusbar/ISessionListener;)V
     .locals 4
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 78
     :try_start_0
     sget-object v1, Landroid/app/StatusBarManager;->ALL_SESSIONS:Ljava/util/Set;
 
@@ -508,7 +475,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 80
     iget-object v3, p0, Lcom/android/server/statusbar/SessionMonitor;->mSessionToListeners:Ljava/util/Map;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -525,7 +491,6 @@
 
     goto :goto_0
 
-    .line 83
     :cond_1
     monitor-exit v0
 

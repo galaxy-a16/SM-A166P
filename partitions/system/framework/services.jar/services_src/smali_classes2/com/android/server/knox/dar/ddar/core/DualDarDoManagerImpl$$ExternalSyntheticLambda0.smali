@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/samsung/android/knox/ddar/IDualDARPolicy;
 
     invoke-static {p1}, Lcom/android/server/knox/dar/ddar/core/DualDarDoManagerImpl;->$r8$lambda$uKOgh8hM1MpOh4h86WEP-IC581Q(Lcom/samsung/android/knox/ddar/IDualDARPolicy;)Ljava/lang/Integer;

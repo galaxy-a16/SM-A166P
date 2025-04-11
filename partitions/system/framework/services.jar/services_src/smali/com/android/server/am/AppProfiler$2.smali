@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppProfiler;)V
     .locals 0
 
-    .line 1724
     iput-object p1, p0, Lcom/android/server/am/AppProfiler$2;->this$0:Lcom/android/server/am/AppProfiler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public compare(Lcom/android/server/am/ProcessMemInfo;Lcom/android/server/am/ProcessMemInfo;)I
     .locals 5
 
-    .line 1726
     iget p0, p1, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
     iget v0, p2, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
@@ -48,7 +46,6 @@
     :goto_0
     return v1
 
-    .line 1729
     :cond_1
     iget-wide p0, p1, Lcom/android/server/am/ProcessMemInfo;->pss:J
 
@@ -76,7 +73,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1724
     check-cast p1, Lcom/android/server/am/ProcessMemInfo;
 
     check-cast p2, Lcom/android/server/am/ProcessMemInfo;

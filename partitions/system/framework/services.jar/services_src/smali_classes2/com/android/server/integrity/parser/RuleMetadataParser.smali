@@ -7,7 +7,6 @@
 .method public static parse(Ljava/io/InputStream;)Lcom/android/server/integrity/model/RuleMetadata;
     .locals 4
 
-    .line 45
     invoke-static {p0}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object p0
@@ -16,7 +15,6 @@
 
     move-object v1, v0
 
-    .line 48
     :cond_0
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -31,12 +29,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 50
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 51
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     const-string v3, "P"
@@ -55,14 +51,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 56
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 59
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -84,7 +78,6 @@
 
     throw p0
 
-    .line 53
     :cond_2
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->nextText()Ljava/lang/String;
 
@@ -92,7 +85,6 @@
 
     goto :goto_0
 
-    .line 64
     :cond_3
     new-instance p0, Lcom/android/server/integrity/model/RuleMetadata;
 

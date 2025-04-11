@@ -17,7 +17,6 @@
 .method public nativeAcquireSuspendBlocker(Ljava/lang/String;)V
     .locals 0
 
-    .line 1301
     invoke-static {p1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$smnativeAcquireSuspendBlocker(Ljava/lang/String;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public nativeForceSuspend()Z
     .locals 0
 
-    .line 1333
     invoke-static {}, Lcom/android/server/power/PowerManagerService;->-$$Nest$smnativeForceSuspend()Z
 
     move-result p0
@@ -37,7 +35,6 @@
 .method public nativeInit(Lcom/android/server/power/PowerManagerService;)V
     .locals 0
 
-    .line 1296
     invoke-static {p1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$mnativeInit(Lcom/android/server/power/PowerManagerService;)V
 
     return-void
@@ -46,7 +43,6 @@
 .method public nativeReleaseSuspendBlocker(Ljava/lang/String;)V
     .locals 0
 
-    .line 1306
     invoke-static {p1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$smnativeReleaseSuspendBlocker(Ljava/lang/String;)V
 
     return-void
@@ -55,7 +51,6 @@
 .method public nativeSetAutoSuspend(Z)V
     .locals 0
 
-    .line 1318
     invoke-static {p1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$smnativeSetAutoSuspend(Z)V
 
     return-void
@@ -64,7 +59,6 @@
 .method public nativeSetInteractiveAsync(ZI)V
     .locals 0
 
-    .line 1312
     invoke-static {p1, p2}, Lcom/android/server/power/PowerManagerService;->-$$Nest$smnativeSetInteractiveAsync(ZI)V
 
     return-void
@@ -73,7 +67,6 @@
 .method public nativeSetPowerBoost(II)V
     .locals 0
 
-    .line 1323
     invoke-static {p1, p2}, Lcom/android/server/power/PowerManagerService;->-$$Nest$smnativeSetPowerBoost(II)V
 
     return-void
@@ -82,7 +75,6 @@
 .method public nativeSetPowerMode(IZ)Z
     .locals 0
 
-    .line 1328
     invoke-static {p1, p2}, Lcom/android/server/power/PowerManagerService;->-$$Nest$smnativeSetPowerMode(IZ)Z
 
     move-result p0

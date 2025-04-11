@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/AppBatteryExemptionTracker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppBatteryExemptionTracker$AppBatteryExemptionPolicy$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/AppBatteryExemptionTracker;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/AppBatteryExemptionTracker$AppBatteryExemptionPolicy$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/AppBatteryExemptionTracker;
 
     invoke-static {p0}, Lcom/android/server/am/AppBatteryExemptionTracker$AppBatteryExemptionPolicy;->$r8$lambda$gLQCjkdQStU4ccz9MqYIcyan0CY(Lcom/android/server/am/AppBatteryExemptionTracker;)V

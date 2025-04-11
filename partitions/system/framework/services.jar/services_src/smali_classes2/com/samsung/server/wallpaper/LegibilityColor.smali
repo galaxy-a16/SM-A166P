@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallback(Lcom/samsung/server/wallpaper/LegibilityColor;)Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mCallback:Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
 
     return-object p0
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContentResolver(Lcom/samsung/server/wallpaper/LegibilityColor;)Landroid/content/ContentResolver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object p0
@@ -45,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/samsung/server/wallpaper/LegibilityColor;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -54,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Lcom/samsung/server/wallpaper/LegibilityColor;)Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mService:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     return-object p0
@@ -63,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$mallowScreenRotate(Lcom/samsung/server/wallpaper/LegibilityColor;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/LegibilityColor;->allowScreenRotate(I)Z
 
     move-result p0
@@ -74,10 +69,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;Lcom/samsung/server/wallpaper/SemWallpaperManagerService;)V
     .locals 2
 
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -86,13 +79,10 @@
 
     const/4 v0, 0x0
 
-    .line 71
     iput-boolean v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mAllowScreenRotateSystem:Z
 
-    .line 72
     iput-boolean v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mAllowScreenRotateLock:Z
 
-    .line 85
     new-instance v0, Lcom/samsung/server/wallpaper/LegibilityColor$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -105,16 +95,12 @@
 
     const-string v0, "LegibilityColor"
 
-    .line 78
     invoke-static {v0, v0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     iput-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mContext:Landroid/content/Context;
 
-    .line 81
     iput-object p2, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mCallback:Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
 
-    .line 82
     iput-object p3, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mService:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     return-void
@@ -123,7 +109,6 @@
 .method public static getWallpaperColorPath(IIZ)Ljava/lang/String;
     .locals 4
 
-    .line 275
     new-instance v0, Ljava/io/File;
 
     invoke-static {p0}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
@@ -134,7 +119,6 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 276
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -143,7 +127,6 @@
 
     if-nez p0, :cond_0
 
-    .line 277
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
     move-result p0
@@ -152,16 +135,13 @@
 
     const-string p0, "getWallpaperColorPath failed to mkdir"
 
-    .line 279
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     :cond_0
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 284
     invoke-static {p1}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->getType(I)I
 
     move-result v0
@@ -172,7 +152,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 286
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -194,7 +173,6 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 288
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,7 +189,6 @@
 
     goto :goto_0
 
-    .line 290
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -234,7 +211,6 @@
     :goto_0
     if-eqz p2, :cond_3
 
-    .line 295
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -249,7 +225,6 @@
 
     move-result-object p0
 
-    .line 298
     :cond_3
     invoke-static {p1}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->getMode(I)I
 
@@ -268,7 +243,6 @@
 
     if-ne p2, v0, :cond_5
 
-    .line 302
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -290,7 +264,6 @@
 
     if-ne p2, v0, :cond_6
 
-    .line 304
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -312,7 +285,6 @@
 
     if-ne p2, v0, :cond_7
 
-    .line 306
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -329,7 +301,6 @@
 
     goto :goto_2
 
-    .line 308
     :cond_7
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -349,7 +320,6 @@
 
     goto :goto_2
 
-    .line 300
     :cond_8
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -366,7 +336,6 @@
 
     move-result-object v3
 
-    .line 312
     :goto_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -390,7 +359,6 @@
 .method public static support()Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     return v0
@@ -401,12 +369,10 @@
 .method public final allowScreenRotate(I)Z
     .locals 4
 
-    .line 552
     invoke-static {p1}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->getType(I)I
 
     move-result v0
 
-    .line 554
     iget-object v1, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -443,7 +409,6 @@
 
     return v3
 
-    .line 558
     :cond_1
     sget-boolean v2, Lcom/samsung/android/wallpaper/Rune;->WPAPER_SUPPORT_ROTATABLE_WALLPAPER:Z
 
@@ -457,7 +422,6 @@
 
     if-nez v2, :cond_2
 
-    .line 559
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -488,7 +452,6 @@
 
     goto :goto_1
 
-    .line 567
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -513,7 +476,6 @@
 .method public final centercropBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 503
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -548,13 +510,11 @@
 
     return-object p0
 
-    .line 507
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/server/wallpaper/LegibilityColor;->resizeBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 508
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/server/wallpaper/LegibilityColor;->cropBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -565,12 +525,10 @@
 .method public final cropBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 533
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
 
-    .line 534
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
@@ -581,7 +539,6 @@
 
     sub-int/2addr p0, p2
 
-    .line 540
     div-int/lit8 p0, p0, 0x2
 
     goto :goto_0
@@ -594,10 +551,8 @@
 
     sub-int/2addr v0, p3
 
-    .line 544
     div-int/lit8 v1, v0, 0x2
 
-    .line 547
     :cond_1
     invoke-static {p1, p0, v1, p2, p3}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
@@ -609,7 +564,6 @@
 .method public doPackagesChangedLocked(Lcom/samsung/server/wallpaper/SemWallpaperData;)V
     .locals 3
 
-    .line 479
     invoke-static {}, Lcom/samsung/server/wallpaper/LegibilityColor;->support()Z
 
     move-result v0
@@ -618,7 +572,6 @@
 
     return-void
 
-    .line 483
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -640,7 +593,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 484
     invoke-virtual {p1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWpType()I
 
     move-result v0
@@ -651,17 +603,14 @@
 
     const-string v0, "external live wallpaper is removed"
 
-    .line 485
     invoke-static {v1, v0}, Lcom/samsung/server/wallpaper/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 486
     invoke-virtual {p1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWhich()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/samsung/server/wallpaper/LegibilityColor;->extractColor(I)V
 
-    .line 487
     invoke-virtual {p1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWhich()I
 
     move-result p1
@@ -670,7 +619,6 @@
 
     move-result p1
 
-    .line 488
     iget-object v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mService:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     invoke-static {p1}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isSubDisplay(I)Z
@@ -683,7 +631,6 @@
 
     if-nez v0, :cond_1
 
-    .line 489
     iget-object v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mService:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     iget-object v0, v0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService;->mDefaultWallpaper:Lcom/samsung/server/wallpaper/DefaultWallpaper;
@@ -694,7 +641,6 @@
 
     or-int/lit8 p1, p1, 0x2
 
-    .line 490
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/LegibilityColor;->extractColor(I)V
 
     :cond_1
@@ -704,7 +650,6 @@
 .method public extractColor(I)V
     .locals 1
 
-    .line 129
     invoke-static {}, Lcom/samsung/server/wallpaper/LegibilityColor;->support()Z
 
     move-result v0
@@ -716,7 +661,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 132
     invoke-virtual {p0, p1, v0}, Lcom/samsung/server/wallpaper/LegibilityColor;->extractColor(IZ)V
 
     return-void
@@ -725,7 +669,6 @@
 .method public extractColor(IZ)V
     .locals 0
 
-    .line 137
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/samsung/server/wallpaper/LegibilityColor;->getColorExtractor(IZ)Landroid/os/AsyncTask;
 
@@ -733,7 +676,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 139
     sget-object p1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     const/4 p2, 0x0
@@ -749,7 +691,6 @@
     :catch_0
     move-exception p0
 
-    .line 142
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -780,7 +721,6 @@
 .method public getAllowScreenRotateLock()Z
     .locals 0
 
-    .line 228
     iget-boolean p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mAllowScreenRotateLock:Z
 
     return p0
@@ -789,7 +729,6 @@
 .method public getAllowScreenRotateSystem()Z
     .locals 0
 
-    .line 220
     iget-boolean p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mAllowScreenRotateSystem:Z
 
     return p0
@@ -809,7 +748,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 148
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mColorExtractors:Landroid/util/SparseArray;
@@ -824,7 +762,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 150
     invoke-virtual {v1}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v2
@@ -835,33 +772,27 @@
 
     const-string v3, "getColorExtractor cancel"
 
-    .line 151
     invoke-static {v2, v3}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v2, 0x1
 
-    .line 152
     invoke-virtual {v1, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 154
     iget-object v1, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mColorExtractors:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 157
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/samsung/server/wallpaper/LegibilityColor;->makeColorExtractor(IZ)Landroid/os/AsyncTask;
 
     move-result-object p1
 
-    .line 158
     iget-object p2, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mColorExtractors:Landroid/util/SparseArray;
 
     invoke-virtual {p2, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 160
     monitor-exit p0
 
     return-object p1
@@ -883,18 +814,15 @@
 
     const-string p0, "initSemWallpaperColors wallpaper == null"
 
-    .line 233
     invoke-static {v0, p0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 237
     :cond_0
     invoke-virtual {p2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWhich()I
 
     move-result v1
 
-    .line 238
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -923,7 +851,6 @@
 
     const/4 v2, 0x0
 
-    .line 240
     invoke-static {p1, v1, v2}, Lcom/samsung/server/wallpaper/LegibilityColor;->getWallpaperColorPath(IIZ)Ljava/lang/String;
 
     move-result-object p1
@@ -932,7 +859,6 @@
 
     return-void
 
-    .line 245
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -950,13 +876,11 @@
 
     invoke-static {v0, v2}, Lcom/samsung/server/wallpaper/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 248
     :try_start_0
     invoke-static {p1}, Lcom/samsung/server/wallpaper/SemWallpaperManagerService;->getStringFromFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 249
     invoke-static {p1}, Landroid/app/SemWallpaperColors;->getXmlVersion(Ljava/lang/String;)I
 
     move-result v2
@@ -969,15 +893,12 @@
 
     const-string p1, "fota, calSemWallpaperColors"
 
-    .line 250
     invoke-static {v0, p1}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     invoke-virtual {p0, v1}, Lcom/samsung/server/wallpaper/LegibilityColor;->extractColor(I)V
 
     goto :goto_1
 
-    .line 253
     :cond_2
     invoke-static {p1}, Landroid/app/SemWallpaperColors;->fromXml(Ljava/lang/String;)Landroid/app/SemWallpaperColors;
 
@@ -985,7 +906,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 254
     invoke-virtual {p1}, Landroid/app/SemWallpaperColors;->getSeedColors()[I
 
     move-result-object v2
@@ -1002,11 +922,9 @@
 
     goto :goto_0
 
-    .line 258
     :cond_3
     invoke-virtual {p2, p1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setPrimarySemColors(Landroid/app/SemWallpaperColors;)V
 
-    .line 259
     iget-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mCallback:Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;
 
     invoke-virtual {p1, v1}, Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;->notifySemWallpaperColors(I)V
@@ -1017,10 +935,8 @@
     :goto_0
     const-string p1, "initSemWallpaperColors: SemWallpaperColor or its seed color is null. Extract color again!"
 
-    .line 255
     invoke-static {v0, p1}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     invoke-virtual {p0, v1}, Lcom/samsung/server/wallpaper/LegibilityColor;->extractColor(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1030,22 +946,18 @@
     :catch_0
     move-exception p1
 
-    .line 263
     instance-of p2, p1, Ljava/io/FileNotFoundException;
 
     if-eqz p2, :cond_5
 
     const-string p1, "fota, calcSemWallpaperColors"
 
-    .line 264
     invoke-static {v0, p1}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     invoke-virtual {p0, v1}, Lcom/samsung/server/wallpaper/LegibilityColor;->extractColor(I)V
 
     goto :goto_1
 
-    .line 267
     :cond_5
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1066,7 +978,6 @@
     :goto_1
     const-string p0, "initSemWallpaperColors done"
 
-    .line 271
     invoke-static {v0, p0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1075,7 +986,6 @@
 .method public initWallpaperLegibilityColors()V
     .locals 1
 
-    .line 387
     iget-object v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1084,19 +994,16 @@
 
     iput-object v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 388
     new-instance v0, Lcom/samsung/server/wallpaper/LegibilityColor$SettingsObserver;
 
     invoke-direct {v0, p0}, Lcom/samsung/server/wallpaper/LegibilityColor$SettingsObserver;-><init>(Lcom/samsung/server/wallpaper/LegibilityColor;)V
 
     iput-object v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mSettingsObserver:Lcom/samsung/server/wallpaper/LegibilityColor$SettingsObserver;
 
-    .line 389
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/LegibilityColor$SettingsObserver;->init()V
 
     const/4 v0, 0x1
 
-    .line 391
     invoke-virtual {p0, v0}, Lcom/samsung/server/wallpaper/LegibilityColor;->allowScreenRotate(I)Z
 
     move-result v0
@@ -1105,7 +1012,6 @@
 
     const/4 v0, 0x2
 
-    .line 392
     invoke-virtual {p0, v0}, Lcom/samsung/server/wallpaper/LegibilityColor;->allowScreenRotate(I)Z
 
     move-result v0
@@ -1118,7 +1024,6 @@
 .method public final makeColorExtractor(IZ)Landroid/os/AsyncTask;
     .locals 2
 
-    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1141,7 +1046,6 @@
 
     invoke-static {v1, v0}, Lcom/samsung/server/wallpaper/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     new-instance v0, Lcom/samsung/server/wallpaper/LegibilityColor$2;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/samsung/server/wallpaper/LegibilityColor$2;-><init>(Lcom/samsung/server/wallpaper/LegibilityColor;IZ)V
@@ -1152,7 +1056,6 @@
 .method public final resizeBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 0
 
-    .line 514
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
@@ -1170,7 +1073,6 @@
 
     int-to-float p0, p2
 
-    .line 518
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p2
@@ -1180,7 +1082,6 @@
     :cond_1
     int-to-float p0, p3
 
-    .line 520
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p2
@@ -1190,7 +1091,6 @@
 
     div-float/2addr p0, p2
 
-    .line 524
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p2
@@ -1201,7 +1101,6 @@
 
     float-to-int p2, p2
 
-    .line 525
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p3
@@ -1214,7 +1113,6 @@
 
     const/4 p3, 0x0
 
-    .line 523
     invoke-static {p1, p2, p0, p3}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object p1
@@ -1226,7 +1124,6 @@
 .method public setAllowScreenRotateLock(Z)V
     .locals 0
 
-    .line 224
     iput-boolean p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mAllowScreenRotateLock:Z
 
     return-void
@@ -1235,7 +1132,6 @@
 .method public setAllowScreenRotateSystem(Z)V
     .locals 0
 
-    .line 216
     iput-boolean p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mAllowScreenRotateSystem:Z
 
     return-void
@@ -1244,7 +1140,6 @@
 .method public setWhiteBgSettings(Landroid/app/SemWallpaperColors;IILjava/lang/Integer;)V
     .locals 5
 
-    .line 318
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1275,7 +1170,6 @@
 
     invoke-static {v1, v0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     invoke-static {p2}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isDex(I)Z
 
     move-result v0
@@ -1294,12 +1188,10 @@
 
     const-string p0, "Dex dual mode, ignore SemWallpaperColors"
 
-    .line 321
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 325
     :cond_0
     sget-boolean v0, Lcom/samsung/android/wallpaper/Rune;->DESKTOP_STANDALONE_MODE_WALLPAPER:Z
 
@@ -1323,7 +1215,6 @@
 
     const-string p0, "Dex single mode, ignore SemWallpaperColors"
 
-    .line 326
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1337,12 +1228,10 @@
 
     const-string p0, "Unsupported dex mode, ignore SemWallpaperColors"
 
-    .line 331
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 335
     :cond_2
     invoke-static {p2}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isWatchFaceDisplay(I)Z
 
@@ -1358,7 +1247,6 @@
 
     goto/16 :goto_1
 
-    .line 340
     :cond_3
     sget-boolean v0, Lcom/samsung/android/wallpaper/Rune;->SUPPORT_SUB_DISPLAY_MODE:Z
 
@@ -1384,18 +1272,15 @@
     :cond_5
     const-string p0, "Unsupported sub wallpaper, ignore SemWallpaperColors"
 
-    .line 342
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 346
     :cond_6
     sget-boolean v0, Lcom/samsung/android/wallpaper/Rune;->SUPPORT_SUB_DISPLAY_MODE:Z
 
     if-eqz v0, :cond_9
 
-    .line 347
     iget-object v0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mService:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     iget-object v0, v0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService;->mSubDisplayMode:Lcom/samsung/server/wallpaper/SubDisplayMode;
@@ -1404,7 +1289,6 @@
 
     move-result v0
 
-    .line 348
     invoke-static {p2}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isSubDisplay(I)Z
 
     move-result v2
@@ -1413,7 +1297,6 @@
 
     if-nez v0, :cond_8
 
-    .line 349
     :cond_7
     invoke-static {p2}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isSubDisplay(I)Z
 
@@ -1423,7 +1306,6 @@
 
     if-nez v0, :cond_9
 
-    .line 350
     :cond_8
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1456,14 +1338,12 @@
     :cond_9
     const/4 p2, 0x0
 
-    .line 355
     filled-new-array {p2, p2, p2}, [I
 
     move-result-object v0
 
     const-wide/16 v1, 0x20
 
-    .line 357
     invoke-virtual {p1, v1, v2}, Landroid/app/SemWallpaperColors;->get(J)Landroid/app/SemWallpaperColors$Item;
 
     move-result-object v1
@@ -1472,7 +1352,6 @@
 
     if-eqz v1, :cond_a
 
-    .line 359
     invoke-virtual {v1}, Landroid/app/SemWallpaperColors$Item;->getFontColor()I
 
     move-result v3
@@ -1481,7 +1360,6 @@
 
     if-ne v3, v2, :cond_a
 
-    .line 361
     invoke-virtual {v1}, Landroid/app/SemWallpaperColors$Item;->getFontColorRgb()I
 
     move-result v1
@@ -1493,7 +1371,6 @@
 
     if-eqz p4, :cond_b
 
-    .line 367
     invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
 
     move-result p4
@@ -1505,14 +1382,12 @@
     :cond_b
     const-wide/16 v3, 0x40
 
-    .line 369
     invoke-virtual {p1, v3, v4}, Landroid/app/SemWallpaperColors;->get(J)Landroid/app/SemWallpaperColors$Item;
 
     move-result-object p4
 
     if-eqz p4, :cond_c
 
-    .line 371
     invoke-virtual {p4}, Landroid/app/SemWallpaperColors$Item;->getFontColor()I
 
     move-result p4
@@ -1523,21 +1398,18 @@
     :goto_0
     const-wide/16 v3, 0x80
 
-    .line 375
     invoke-virtual {p1, v3, v4}, Landroid/app/SemWallpaperColors;->get(J)Landroid/app/SemWallpaperColors$Item;
 
     move-result-object p1
 
     if-eqz p1, :cond_d
 
-    .line 377
     invoke-virtual {p1}, Landroid/app/SemWallpaperColors$Item;->getFontColor()I
 
     move-result p1
 
     aput p1, v0, v2
 
-    .line 380
     :cond_d
     iget-object p1, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mHandler:Landroid/os/Handler;
 
@@ -1547,13 +1419,10 @@
 
     move-result-object p1
 
-    .line 381
     iput-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 382
     iput p3, p1, Landroid/os/Message;->arg1:I
 
-    .line 383
     iget-object p0, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -1564,7 +1433,6 @@
     :goto_1
     const-string p0, "Cover wallpaper, ignore SemWallpaperColors"
 
-    .line 336
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1573,7 +1441,6 @@
 .method public smartCropBitmap(Landroid/graphics/Bitmap;Lcom/samsung/server/wallpaper/SemWallpaperData;I)Landroid/graphics/Bitmap;
     .locals 11
 
-    .line 396
     invoke-virtual {p2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getSmartCropOriginalRect()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -1592,7 +1459,6 @@
 
     goto/16 :goto_5
 
-    .line 402
     :cond_0
     :try_start_0
     invoke-virtual {p2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getIsPreloaded()Z
@@ -1603,14 +1469,12 @@
 
     if-nez v0, :cond_2
 
-    .line 403
     invoke-virtual {p2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->isThemeContents()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 404
     invoke-virtual {p2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWpType()I
 
     move-result v0
@@ -1630,7 +1494,6 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 407
     :goto_1
     sget-boolean v4, Lcom/samsung/android/wallpaper/Rune;->WPAPER_SUPPORT_ROTATABLE_WALLPAPER:Z
 
@@ -1656,7 +1519,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 412
     new-instance v9, Landroid/graphics/Matrix;
 
     invoke-direct {v9}, Landroid/graphics/Matrix;-><init>()V
@@ -1665,14 +1527,12 @@
 
     int-to-float p0, p0
 
-    .line 413
     invoke-virtual {v9, p0}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    .line 414
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
@@ -1691,7 +1551,6 @@
 
     goto :goto_4
 
-    .line 416
     :cond_4
     invoke-virtual {p2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getOrientation()I
 
@@ -1701,14 +1560,12 @@
 
     if-ne p3, v0, :cond_7
 
-    .line 417
     iget-object p3, p0, Lcom/samsung/server/wallpaper/LegibilityColor;->mService:Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
 
     invoke-virtual {p3}, Lcom/samsung/server/wallpaper/SemWallpaperManagerService;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object p3
 
-    .line 418
     iget v0, p3, Landroid/view/DisplayInfo;->logicalWidth:I
 
     if-eqz v0, :cond_6
@@ -1719,7 +1576,6 @@
 
     goto :goto_3
 
-    .line 420
     :cond_5
     invoke-virtual {p0, p1, p3, v0}, Lcom/samsung/server/wallpaper/LegibilityColor;->centercropBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
@@ -1731,7 +1587,6 @@
     :goto_3
     return-object v2
 
-    .line 422
     :cond_7
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1749,7 +1604,6 @@
 
     div-float/2addr p0, p3
 
-    .line 423
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p3
@@ -1766,12 +1620,10 @@
 
     div-float/2addr p3, v0
 
-    .line 424
     invoke-virtual {p2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getSmartCropRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 425
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
     int-to-float v4, v3
@@ -1820,7 +1672,6 @@
     :catch_0
     move-exception p0
 
-    .line 429
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1873,7 +1724,6 @@
     :goto_5
     const-string/jumbo p0, "smartCropRect == null"
 
-    .line 397
     invoke-static {v1, p0}, Lcom/samsung/server/wallpaper/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v2

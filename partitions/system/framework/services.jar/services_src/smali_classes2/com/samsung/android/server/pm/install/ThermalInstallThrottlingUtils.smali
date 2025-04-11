@@ -18,7 +18,6 @@
     :cond_0
     const-string p0, "dev.ssrm.app.install.standby"
 
-    .line 20
     invoke-static {p0, v1, v2}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v3
@@ -27,7 +26,6 @@
 
     if-lez p0, :cond_1
 
-    .line 22
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

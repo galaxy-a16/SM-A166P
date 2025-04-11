@@ -45,63 +45,46 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 387
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 391
     iput v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mMaxAllowed:I
 
-    .line 392
     iput v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mMaxAllowedPerParent:I
 
     const/4 v0, 0x0
 
-    .line 393
     iput v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserInfoPropertyFlags:I
 
     const/4 v1, 0x0
 
-    .line 394
     iput-object v1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultRestrictions:Landroid/os/Bundle;
 
-    .line 395
     iput-object v1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultSystemSettings:Landroid/os/Bundle;
 
-    .line 396
     iput-object v1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultSecureSettings:Landroid/os/Bundle;
 
-    .line 397
     iput-object v1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultCrossProfileIntentFilters:Ljava/util/List;
 
     const/4 v2, 0x1
 
-    .line 399
     iput v2, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mEnabled:I
 
-    .line 400
     iput v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mLabel:I
 
-    .line 401
     iput-object v1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeLabels:[I
 
-    .line 402
     iput-object v1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeColors:[I
 
-    .line 403
     iput-object v1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDarkThemeBadgeColors:[I
 
-    .line 404
     iput v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mIconBadge:I
 
-    .line 405
     iput v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgePlain:I
 
-    .line 406
     iput v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeNoBackground:I
 
-    .line 409
     iput-object v1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserProperties:Landroid/content/pm/UserProperties;
 
     return-void
@@ -112,7 +95,6 @@
 .method public final checkSystemAndMainUserPreconditions()V
     .locals 6
 
-    .line 592
     iget v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBaseType:I
 
     and-int/lit16 v0, v0, 0x800
@@ -177,7 +159,6 @@
 
     invoke-static {v0, v3}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 597
     iget v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserInfoPropertyFlags:I
 
     and-int/lit16 v0, v0, 0x4000
@@ -220,7 +201,6 @@
 
     move-object/from16 v0, p0
 
-    .line 522
     iget-object v1, v0, Lcom/android/server/pm/UserTypeDetails$Builder;->mName:Ljava/lang/String;
 
     const/4 v2, 0x1
@@ -241,7 +221,6 @@
 
     invoke-static {v1, v4}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 524
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/UserTypeDetails$Builder;->hasValidBaseType()Z
 
     move-result v1
@@ -272,7 +251,6 @@
 
     invoke-static {v1, v4}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 526
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/UserTypeDetails$Builder;->hasValidPropertyFlags()Z
 
     move-result v1
@@ -293,7 +271,6 @@
 
     iget v6, v0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserInfoPropertyFlags:I
 
-    .line 528
     invoke-static {v6}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -304,20 +281,16 @@
 
     move-result-object v4
 
-    .line 526
     invoke-static {v1, v4}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 529
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/UserTypeDetails$Builder;->checkSystemAndMainUserPreconditions()V
 
-    .line 530
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/UserTypeDetails$Builder;->hasBadge()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 531
     iget-object v1, v0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeLabels:[I
 
     if-eqz v1, :cond_1
@@ -354,7 +327,6 @@
 
     invoke-static {v1, v4}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 533
     iget-object v1, v0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeColors:[I
 
     if-eqz v1, :cond_2
@@ -391,7 +363,6 @@
 
     invoke-static {v1, v4}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 536
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/UserTypeDetails$Builder;->isProfile()Z
 
@@ -399,12 +370,10 @@
 
     if-nez v1, :cond_6
 
-    .line 537
     iget-object v1, v0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultCrossProfileIntentFilters:Ljava/util/List;
 
     if-eqz v1, :cond_5
 
-    .line 538
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -431,10 +400,8 @@
 
     const-string v5, "UserTypeDetails %s has a non empty defaultCrossProfileIntentFilters"
 
-    .line 537
     invoke-static {v1, v5, v4}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 542
     :cond_6
     new-instance v1, Lcom/android/server/pm/UserTypeDetails;
 
@@ -472,7 +439,6 @@
 
     iget-object v4, v0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeColors:[I
 
-    .line 555
     iget-object v5, v0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDarkThemeBadgeColors:[I
 
     if-nez v5, :cond_8
@@ -501,7 +467,6 @@
 
     move-object/from16 v23, v5
 
-    .line 560
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/UserTypeDetails$Builder;->getDefaultUserProperties()Landroid/content/pm/UserProperties;
 
     move-result-object v24
@@ -524,7 +489,6 @@
 .method public getBaseType()I
     .locals 0
 
-    .line 518
     iget p0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBaseType:I
 
     return p0
@@ -533,12 +497,10 @@
 .method public getDefaultUserProperties()Landroid/content/pm/UserProperties;
     .locals 1
 
-    .line 511
     iget-object v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserProperties:Landroid/content/pm/UserProperties;
 
     if-nez v0, :cond_0
 
-    .line 512
     new-instance v0, Landroid/content/pm/UserProperties$Builder;
 
     invoke-direct {v0}, Landroid/content/pm/UserProperties$Builder;-><init>()V
@@ -549,7 +511,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserProperties:Landroid/content/pm/UserProperties;
 
-    .line 514
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserProperties:Landroid/content/pm/UserProperties;
 
@@ -559,7 +520,6 @@
 .method public final hasBadge()Z
     .locals 0
 
-    .line 564
     iget p0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mIconBadge:I
 
     if-eqz p0, :cond_0
@@ -578,7 +538,6 @@
 .method public final hasValidBaseType()Z
     .locals 1
 
-    .line 573
     iget p0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBaseType:I
 
     const/16 v0, 0x400
@@ -615,7 +574,6 @@
 .method public final hasValidPropertyFlags()Z
     .locals 0
 
-    .line 587
     iget p0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserInfoPropertyFlags:I
 
     and-int/lit16 p0, p0, 0x1c90
@@ -636,7 +594,6 @@
 .method public final isProfile()Z
     .locals 0
 
-    .line 568
     iget p0, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBaseType:I
 
     and-int/lit16 p0, p0, 0x1000
@@ -657,7 +614,6 @@
 .method public varargs setBadgeColors([I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 447
     iput-object p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeColors:[I
 
     return-object p0
@@ -666,7 +622,6 @@
 .method public varargs setBadgeLabels([I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 442
     iput-object p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeLabels:[I
 
     return-object p0
@@ -675,7 +630,6 @@
 .method public setBadgeNoBackground(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 470
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgeNoBackground:I
 
     return-object p0
@@ -684,7 +638,6 @@
 .method public setBadgePlain(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 465
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBadgePlain:I
 
     return-object p0
@@ -693,7 +646,6 @@
 .method public setBaseType(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 432
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mBaseType:I
 
     return-object p0
@@ -702,7 +654,6 @@
 .method public varargs setDarkThemeBadgeColors([I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 455
     iput-object p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDarkThemeBadgeColors:[I
 
     return-object p0
@@ -711,7 +662,6 @@
 .method public setDefaultCrossProfileIntentFilters(Ljava/util/List;)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 496
     iput-object p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultCrossProfileIntentFilters:Ljava/util/List;
 
     return-object p0
@@ -720,7 +670,6 @@
 .method public setDefaultRestrictions(Landroid/os/Bundle;)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 480
     iput-object p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultRestrictions:Landroid/os/Bundle;
 
     return-object p0
@@ -729,7 +678,6 @@
 .method public setDefaultSecureSettings(Landroid/os/Bundle;)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 490
     iput-object p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultSecureSettings:Landroid/os/Bundle;
 
     return-object p0
@@ -738,7 +686,6 @@
 .method public setDefaultUserInfoPropertyFlags(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 437
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mDefaultUserInfoPropertyFlags:I
 
     return-object p0
@@ -747,7 +694,6 @@
 .method public setDefaultUserProperties(Landroid/content/pm/UserProperties$Builder;)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 506
     invoke-virtual {p1}, Landroid/content/pm/UserProperties$Builder;->build()Landroid/content/pm/UserProperties;
 
     move-result-object p1
@@ -760,7 +706,6 @@
 .method public setEnabled(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 417
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mEnabled:I
 
     return-object p0
@@ -769,7 +714,6 @@
 .method public setIconBadge(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 460
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mIconBadge:I
 
     return-object p0
@@ -778,7 +722,6 @@
 .method public setLabel(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 475
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mLabel:I
 
     return-object p0
@@ -787,7 +730,6 @@
 .method public setMaxAllowed(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 422
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mMaxAllowed:I
 
     return-object p0
@@ -796,7 +738,6 @@
 .method public setMaxAllowedPerParent(I)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 427
     iput p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mMaxAllowedPerParent:I
 
     return-object p0
@@ -805,7 +746,6 @@
 .method public setName(Ljava/lang/String;)Lcom/android/server/pm/UserTypeDetails$Builder;
     .locals 0
 
-    .line 412
     iput-object p1, p0, Lcom/android/server/pm/UserTypeDetails$Builder;->mName:Ljava/lang/String;
 
     return-object p0

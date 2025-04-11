@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$_qT7V875SMd3TToGqt28pME-cIo(Lcom/android/server/wm/TaskSnapshotController;Lcom/android/server/wm/Task;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->lambda$snapshotForSleeping$1(Lcom/android/server/wm/Task;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static synthetic $r8$lambda$bgnW8POjb6bxXWHZvI-xI_xHVMM(Lcom/android/server/wm/TaskSnapshotController;ILcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/TaskSnapshotController;->lambda$screenTurningOff$0(ILcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;)V
 
     return-void
@@ -37,31 +35,26 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/SnapshotPersistQueue;)V
     .locals 2
 
-    .line 71
     invoke-direct {p0, p1}, Lcom/android/server/wm/AbsAppSnapshotController;-><init>(Lcom/android/server/wm/WindowManagerService;)V
 
-    .line 64
     new-instance v0, Landroid/util/IntArray;
 
     invoke-direct {v0}, Landroid/util/IntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mSkipClosingAppSnapshotTasks:Landroid/util/IntArray;
 
-    .line 65
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
-    .line 66
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mHandler:Landroid/os/Handler;
 
-    .line 72
     new-instance v0, Lcom/android/server/wm/ActivitySnapshotController$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/wm/ActivitySnapshotController$$ExternalSyntheticLambda0;-><init>()V
@@ -72,14 +65,12 @@
 
     iput-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
-    .line 74
     new-instance v1, Lcom/android/server/wm/TaskSnapshotPersister;
 
     invoke-direct {v1, p2, v0}, Lcom/android/server/wm/TaskSnapshotPersister;-><init>(Lcom/android/server/wm/SnapshotPersistQueue;Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;)V
 
     iput-object v1, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersister:Lcom/android/server/wm/TaskSnapshotPersister;
 
-    .line 76
     new-instance p2, Lcom/android/server/wm/TaskSnapshotCache;
 
     new-instance v1, Lcom/android/server/wm/AppSnapshotLoader;
@@ -90,24 +81,20 @@
 
     invoke-virtual {p0, p2}, Lcom/android/server/wm/AbsAppSnapshotController;->initialize(Lcom/android/server/wm/SnapshotCache;)V
 
-    .line 77
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
-    .line 79
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
     const p2, 0x1110122
 
-    .line 80
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p1
 
     xor-int/lit8 p1, p1, 0x1
 
-    .line 81
     invoke-virtual {p0, p1}, Lcom/android/server/wm/AbsAppSnapshotController;->setSnapshotEnabled(Z)V
 
     return-void
@@ -116,7 +103,6 @@
 .method public static createPersistInfoProvider(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/BaseAppSnapshotPersister$DirectoryResolver;)Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
     .locals 9
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -129,7 +115,6 @@
 
     move-result v0
 
-    .line 95
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -184,7 +169,6 @@
 
     move v7, v2
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -197,7 +181,6 @@
 
     move-result v8
 
-    .line 119
     new-instance p0, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
     const-string/jumbo v5, "snapshots"
@@ -210,7 +193,6 @@
 
     return-object p0
 
-    .line 105
     :cond_1
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -220,7 +202,6 @@
 
     throw p0
 
-    .line 102
     :cond_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -230,7 +211,6 @@
 
     throw p0
 
-    .line 99
     :cond_3
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -244,7 +224,6 @@
 .method private synthetic lambda$screenTurningOff$0(ILcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;)V
     .locals 1
 
-    .line 350
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -256,11 +235,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 351
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->snapshotForSleeping(I)V
 
-    .line 352
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -270,7 +247,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 354
     invoke-interface {p2}, Lcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;->onScreenOff()V
 
     return-void
@@ -278,7 +254,6 @@
     :catchall_0
     move-exception p0
 
-    .line 352
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -294,17 +269,14 @@
     :catchall_1
     move-exception p0
 
-    .line 354
     invoke-interface {p2}, Lcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;->onScreenOff()V
 
-    .line 355
     throw p0
 .end method
 
 .method private synthetic lambda$snapshotForSleeping$1(Lcom/android/server/wm/Task;)V
     .locals 1
 
-    .line 379
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->isVisible()Z
 
     move-result v0
@@ -317,7 +289,6 @@
 
     if-nez v0, :cond_0
 
-    .line 380
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
@@ -331,7 +302,6 @@
 .method public addSkipClosingAppSnapshotTasks(Ljava/util/Set;)V
     .locals 2
 
-    .line 147
     invoke-virtual {p0}, Lcom/android/server/wm/AbsAppSnapshotController;->shouldDisableSnapshots()Z
 
     move-result v0
@@ -340,7 +310,6 @@
 
     return-void
 
-    .line 150
     :cond_0
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -359,7 +328,6 @@
 
     check-cast v0, Lcom/android/server/wm/Task;
 
-    .line 151
     iget-object v1, p0, Lcom/android/server/wm/TaskSnapshotController;->mSkipClosingAppSnapshotTasks:Landroid/util/IntArray;
 
     iget v0, v0, Lcom/android/server/wm/Task;->mTaskId:I
@@ -375,7 +343,6 @@
 .method public clearSnapshotCache()V
     .locals 0
 
-    .line 202
     iget-object p0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mCache:Lcom/android/server/wm/SnapshotCache;
 
     check-cast p0, Lcom/android/server/wm/TaskSnapshotCache;
@@ -388,7 +355,6 @@
 .method public final createImeSnapshot(Lcom/android/server/wm/Task;I)Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;
     .locals 1
 
-    .line 223
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object p0
@@ -397,7 +363,6 @@
 
     if-nez p0, :cond_0
 
-    .line 225
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -418,7 +383,6 @@
 
     return-object v0
 
-    .line 229
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
@@ -428,34 +392,28 @@
 
     if-eqz p0, :cond_1
 
-    .line 231
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->isVisible()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 232
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->getParentFrame()Landroid/graphics/Rect;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 233
     invoke-virtual {p1, v0, v0}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 238
     new-instance v0, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;
 
-    .line 239
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object p0
 
     invoke-direct {v0, p0}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;-><init>(Landroid/view/SurfaceControl;)V
 
-    .line 240
     invoke-virtual {v0, p1}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->setSourceCrop(Landroid/graphics/Rect;)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object p0
@@ -464,14 +422,12 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 241
     invoke-virtual {p0, p1}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->setFrameScale(F)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object p0
 
     check-cast p0, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;
 
-    .line 242
     invoke-virtual {p0, p2}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->setPixelFormat(I)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object p0
@@ -480,19 +436,16 @@
 
     const/4 p1, 0x1
 
-    .line 243
     invoke-virtual {p0, p1}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->setCaptureSecureLayers(Z)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object p0
 
     check-cast p0, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;
 
-    .line 244
     invoke-virtual {p0}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->build()Landroid/window/ScreenCapture$LayerCaptureArgs;
 
     move-result-object p0
 
-    .line 245
     invoke-static {p0}, Landroid/window/ScreenCapture;->captureLayers(Landroid/window/ScreenCapture$LayerCaptureArgs;)Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;
 
     move-result-object p0
@@ -506,7 +459,6 @@
 .method public findAppTokenForSnapshot(Lcom/android/server/wm/Task;)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 211
     new-instance p0, Lcom/android/server/wm/TaskSnapshotController$$ExternalSyntheticLambda2;
 
     invoke-direct {p0}, Lcom/android/server/wm/TaskSnapshotController$$ExternalSyntheticLambda2;-><init>()V
@@ -521,7 +473,6 @@
 .method public bridge synthetic findAppTokenForSnapshot(Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 60
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->findAppTokenForSnapshot(Lcom/android/server/wm/Task;)Lcom/android/server/wm/ActivityRecord;
@@ -534,21 +485,18 @@
 .method public getClosingTasksInner(Lcom/android/server/wm/Task;Landroid/util/ArraySet;)V
     .locals 2
 
-    .line 290
     invoke-virtual {p0, p1}, Lcom/android/server/wm/AbsAppSnapshotController;->isAnimatingByRecents(Lcom/android/server/wm/Task;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 291
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mSkipClosingAppSnapshotTasks:Landroid/util/IntArray;
 
     iget v1, p1, Lcom/android/server/wm/Task;->mTaskId:I
 
     invoke-virtual {v0, v1}, Landroid/util/IntArray;->add(I)V
 
-    .line 294
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_MULTI_SPLIT_FOLDING_POLICY:Z
 
@@ -560,28 +508,24 @@
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiWindowFoldController:Lcom/android/server/wm/MultiWindowFoldController;
 
-    .line 295
     invoke-virtual {v0}, Lcom/android/server/wm/MultiWindowFoldController;->isHoldingSplitScreen()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 296
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inSplitScreenWindowingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mSkipClosingAppSnapshotTasks:Landroid/util/IntArray;
 
     iget v1, p1, Lcom/android/server/wm/Task;->mTaskId:I
 
     invoke-virtual {v0, v1}, Landroid/util/IntArray;->add(I)V
 
-    .line 302
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->isVisible()Z
 
@@ -599,7 +543,6 @@
 
     if-gez p0, :cond_2
 
-    .line 303
     invoke-virtual {p2, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     :cond_2
@@ -609,7 +552,6 @@
 .method public getSnapshot(IIZZ)Landroid/window/TaskSnapshot;
     .locals 1
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mCache:Lcom/android/server/wm/SnapshotCache;
 
     check-cast v0, Lcom/android/server/wm/TaskSnapshotCache;
@@ -618,7 +560,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
-    .line 183
     invoke-virtual {p0}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->enableLowResSnapshots()Z
 
     move-result p0
@@ -632,7 +573,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 182
     :goto_0
     invoke-virtual {v0, p1, p2, p3, p0}, Lcom/android/server/wm/TaskSnapshotCache;->getSnapshot(IIZZ)Landroid/window/TaskSnapshot;
 
@@ -644,7 +584,6 @@
 .method public getSnapshotCaptureTime(I)J
     .locals 0
 
-    .line 191
     iget-object p0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mCache:Lcom/android/server/wm/SnapshotCache;
 
     check-cast p0, Lcom/android/server/wm/TaskSnapshotCache;
@@ -659,7 +598,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 193
     invoke-virtual {p0}, Landroid/window/TaskSnapshot;->getCaptureTime()J
 
     move-result-wide p0
@@ -675,7 +613,6 @@
 .method public getTaskDescription(Lcom/android/server/wm/Task;)Landroid/app/ActivityManager$TaskDescription;
     .locals 0
 
-    .line 283
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->getTaskDescription()Landroid/app/ActivityManager$TaskDescription;
 
     move-result-object p0
@@ -686,7 +623,6 @@
 .method public bridge synthetic getTaskDescription(Lcom/android/server/wm/WindowContainer;)Landroid/app/ActivityManager$TaskDescription;
     .locals 0
 
-    .line 60
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->getTaskDescription(Lcom/android/server/wm/Task;)Landroid/app/ActivityManager$TaskDescription;
@@ -699,7 +635,6 @@
 .method public getTopActivity(Lcom/android/server/wm/Task;)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 273
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getTopMostActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
@@ -710,7 +645,6 @@
 .method public bridge synthetic getTopActivity(Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 60
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->getTopActivity(Lcom/android/server/wm/Task;)Lcom/android/server/wm/ActivityRecord;
@@ -723,7 +657,6 @@
 .method public getTopFullscreenActivity(Lcom/android/server/wm/Task;)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 278
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->getTopFullscreenActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
@@ -734,7 +667,6 @@
 .method public bridge synthetic getTopFullscreenActivity(Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 60
     check-cast p1, Lcom/android/server/wm/Task;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->getTopFullscreenActivity(Lcom/android/server/wm/Task;)Lcom/android/server/wm/ActivityRecord;
@@ -747,7 +679,6 @@
 .method public handleTaskClose(Lcom/android/server/wm/SnapshotController$TransitionState;)V
     .locals 2
 
-    .line 124
     invoke-virtual {p0}, Lcom/android/server/wm/AbsAppSnapshotController;->shouldDisableSnapshots()Z
 
     move-result v0
@@ -756,7 +687,6 @@
 
     return-void
 
-    .line 127
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
@@ -764,12 +694,10 @@
 
     const/4 v0, 0x0
 
-    .line 128
     invoke-virtual {p1, v0}, Lcom/android/server/wm/SnapshotController$TransitionState;->getParticipant(Z)Landroid/util/ArraySet;
 
     move-result-object p1
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -784,14 +712,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->addAll(Landroid/util/ArraySet;)V
 
     goto :goto_1
 
-    .line 132
     :cond_1
     invoke-virtual {p1}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
@@ -810,21 +736,18 @@
 
     check-cast v0, Lcom/android/server/wm/Task;
 
-    .line 133
     iget-object v1, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/TaskSnapshotController;->getClosingTasksInner(Lcom/android/server/wm/Task;Landroid/util/ArraySet;)V
 
     goto :goto_0
 
-    .line 136
     :cond_2
     :goto_1
     iget-object p1, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->snapshotTasks(Landroid/util/ArraySet;)V
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mSkipClosingAppSnapshotTasks:Landroid/util/IntArray;
 
     invoke-virtual {p0}, Landroid/util/IntArray;->clear()V
@@ -835,7 +758,6 @@
 .method public isInSkipClosingAppSnapshotTasks(Lcom/android/server/wm/Task;)Z
     .locals 0
 
-    .line 411
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mSkipClosingAppSnapshotTasks:Landroid/util/IntArray;
 
     iget p1, p1, Lcom/android/server/wm/Task;->mTaskId:I
@@ -862,7 +784,6 @@
 .method public notifyTaskRemovedFromRecents(II)V
     .locals 3
 
-    .line 312
     iget-object v0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mCache:Lcom/android/server/wm/SnapshotCache;
 
     check-cast v0, Lcom/android/server/wm/TaskSnapshotCache;
@@ -875,7 +796,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 314
     invoke-virtual {v0}, Landroid/window/TaskSnapshot;->getHardwareBuffer()Landroid/hardware/HardwareBuffer;
 
     move-result-object v0
@@ -885,7 +805,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 318
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mCache:Lcom/android/server/wm/SnapshotCache;
 
@@ -897,14 +816,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wm/SnapshotCache;->onIdRemoved(Ljava/lang/Integer;)V
 
-    .line 319
     iget-object v1, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersister:Lcom/android/server/wm/TaskSnapshotPersister;
 
     invoke-virtual {v1, p1, p2}, Lcom/android/server/wm/TaskSnapshotPersister;->onTaskRemovedFromRecents(II)V
 
     if-eqz v0, :cond_1
 
-    .line 322
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersister:Lcom/android/server/wm/TaskSnapshotPersister;
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/TaskSnapshotPersister;->onTaskRemovedFromRecentsBuffer(Landroid/hardware/HardwareBuffer;)V
@@ -918,7 +835,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 160
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->isActivityTypeHome()Z
 
     move-result v0
@@ -932,7 +848,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 161
     :goto_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/AbsAppSnapshotController;->recordSnapshotInner(Lcom/android/server/wm/WindowContainer;Z)Landroid/window/TaskSnapshot;
 
@@ -942,7 +857,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 163
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersister:Lcom/android/server/wm/TaskSnapshotPersister;
 
     iget v0, p1, Lcom/android/server/wm/Task;->mTaskId:I
@@ -951,7 +865,6 @@
 
     invoke-virtual {p0, v0, v1, p2}, Lcom/android/server/wm/TaskSnapshotPersister;->persistSnapshot(IILandroid/window/TaskSnapshot;)V
 
-    .line 164
     invoke-virtual {p1, p2}, Lcom/android/server/wm/Task;->onSnapshotChanged(Landroid/window/TaskSnapshot;)V
 
     :cond_1
@@ -961,7 +874,6 @@
 .method public removeObsoleteTaskFiles(Landroid/util/ArraySet;[I)V
     .locals 0
 
-    .line 335
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersister:Lcom/android/server/wm/TaskSnapshotPersister;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/TaskSnapshotPersister;->removeObsoleteFiles(Landroid/util/ArraySet;[I)V
@@ -972,7 +884,6 @@
 .method public removeSkipClosingAppSnapshotTasks(Lcom/android/server/wm/Task;)V
     .locals 1
 
-    .line 415
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mSkipClosingAppSnapshotTasks:Landroid/util/IntArray;
 
     iget p1, p1, Lcom/android/server/wm/Task;->mTaskId:I
@@ -985,7 +896,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 417
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mSkipClosingAppSnapshotTasks:Landroid/util/IntArray;
 
     invoke-virtual {p0, p1}, Landroid/util/IntArray;->remove(I)V
@@ -997,7 +907,6 @@
 .method public removeSnapshotCache(I)V
     .locals 0
 
-    .line 328
     iget-object p0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mCache:Lcom/android/server/wm/SnapshotCache;
 
     check-cast p0, Lcom/android/server/wm/TaskSnapshotCache;
@@ -1014,19 +923,16 @@
 .method public screenTurningOff(ILcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;)V
     .locals 2
 
-    .line 342
     invoke-virtual {p0}, Lcom/android/server/wm/AbsAppSnapshotController;->shouldDisableSnapshots()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 343
     invoke-interface {p2}, Lcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;->onScreenOff()V
 
     return-void
 
-    .line 348
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mHandler:Landroid/os/Handler;
 
@@ -1046,7 +952,6 @@
 
     const/4 v1, 0x1
 
-    .line 433
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/TaskSnapshotController;->snapshotForSleeping(IZ)V
 
     return-void
@@ -1057,7 +962,6 @@
 
     const/4 v0, 0x0
 
-    .line 362
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/TaskSnapshotController;->snapshotForSleeping(IZ)V
 
     return-void
@@ -1066,7 +970,6 @@
 .method public snapshotForSleeping(IZ)V
     .locals 3
 
-    .line 367
     invoke-virtual {p0}, Lcom/android/server/wm/AbsAppSnapshotController;->shouldDisableSnapshots()Z
 
     move-result v0
@@ -1081,7 +984,6 @@
 
     goto :goto_2
 
-    .line 370
     :cond_0
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
 
@@ -1093,13 +995,11 @@
 
     return-void
 
-    .line 374
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {v1}, Landroid/util/ArraySet;->clear()V
 
-    .line 375
     new-instance v1, Lcom/android/server/wm/TaskSnapshotController$$ExternalSyntheticLambda1;
 
     invoke-direct {v1, p0}, Lcom/android/server/wm/TaskSnapshotController$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/wm/TaskSnapshotController;)V
@@ -1112,14 +1012,12 @@
 
     if-nez p1, :cond_2
 
-    .line 385
     iget-object p1, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, p1, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
 
     iget p1, p1, Lcom/android/server/wm/WindowManagerService;->mCurrentUserId:I
 
-    .line 386
     invoke-interface {v2, p1}, Lcom/android/server/policy/WindowManagerPolicy;->isKeyguardSecure(I)Z
 
     move-result p1
@@ -1133,7 +1031,6 @@
     :cond_2
     move p1, v1
 
-    .line 387
     :goto_0
     iget-object v2, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
@@ -1157,7 +1054,6 @@
 .method public snapshotImeFromAttachedTask(Lcom/android/server/wm/Task;)Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;
     .locals 1
 
-    .line 262
     invoke-virtual {p0, p1}, Lcom/android/server/wm/AbsAppSnapshotController;->checkIfReadyToSnapshot(Lcom/android/server/wm/WindowContainer;)Landroid/util/Pair;
 
     move-result-object v0
@@ -1168,7 +1064,6 @@
 
     return-object p0
 
-    .line 265
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
@@ -1185,7 +1080,6 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 268
     :goto_0
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/TaskSnapshotController;->createImeSnapshot(Lcom/android/server/wm/Task;I)Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;
 
@@ -1199,7 +1093,6 @@
 
     const/4 v0, 0x0
 
-    .line 156
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/TaskSnapshotController;->snapshotTasks(Landroid/util/ArraySet;Z)V
 
     return-void
@@ -1208,7 +1101,6 @@
 .method public final snapshotTasks(Landroid/util/ArraySet;Z)V
     .locals 2
 
-    .line 170
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result v0
@@ -1218,7 +1110,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 171
     invoke-virtual {p1, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1238,14 +1129,12 @@
 .method public systemReady()V
     .locals 2
 
-    .line 85
     invoke-virtual {p0}, Lcom/android/server/wm/AbsAppSnapshotController;->shouldDisableSnapshots()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/wm/AbsAppSnapshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mSnapshotController:Lcom/android/server/wm/SnapshotController;
@@ -1267,7 +1156,6 @@
 
     const/4 v0, 0x0
 
-    .line 393
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/TaskSnapshotController;->takeSnapshotByForce(Lcom/android/server/wm/Task;Z)V
 
     return-void
@@ -1276,7 +1164,6 @@
 .method public takeSnapshotByForce(Lcom/android/server/wm/Task;Z)V
     .locals 1
 
-    .line 397
     invoke-virtual {p0}, Lcom/android/server/wm/AbsAppSnapshotController;->shouldDisableSnapshots()Z
 
     move-result v0
@@ -1293,25 +1180,21 @@
 
     goto :goto_0
 
-    .line 400
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->clear()V
 
-    .line 401
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 402
     iget-object p1, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->snapshotTasks(Landroid/util/ArraySet;)V
 
     if-eqz p2, :cond_1
 
-    .line 404
     iget-object p1, p0, Lcom/android/server/wm/TaskSnapshotController;->mTmpTasks:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/TaskSnapshotController;->addSkipClosingAppSnapshotTasks(Ljava/util/Set;)V
@@ -1324,7 +1207,6 @@
 .method public use16BitFormat()Z
     .locals 0
 
-    .line 217
     iget-object p0, p0, Lcom/android/server/wm/TaskSnapshotController;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
     invoke-virtual {p0}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->use16BitFormat()Z

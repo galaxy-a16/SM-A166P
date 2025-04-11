@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/input/InputManagerService;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 4189
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$InputMonitorHost;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/view/IInputMonitorHost$Stub;-><init>()V
 
-    .line 4190
     iput-object p2, p0, Lcom/android/server/input/InputManagerService$InputMonitorHost;->mInputChannelToken:Landroid/os/IBinder;
 
     return-void
@@ -29,7 +27,6 @@
 .method public dispose()V
     .locals 1
 
-    .line 4200
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$InputMonitorHost;->this$0:Lcom/android/server/input/InputManagerService;
 
     iget-object p0, p0, Lcom/android/server/input/InputManagerService$InputMonitorHost;->mInputChannelToken:Landroid/os/IBinder;
@@ -42,7 +39,6 @@
 .method public pilferPointers()V
     .locals 1
 
-    .line 4195
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$InputMonitorHost;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-static {v0}, Lcom/android/server/input/InputManagerService;->-$$Nest$fgetmNative(Lcom/android/server/input/InputManagerService;)Lcom/android/server/input/NativeInputManagerService;

@@ -18,7 +18,6 @@
 .method public static bridge synthetic -$$Nest$mgetWindowId(Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->getWindowId()I
 
     move-result p0
@@ -29,7 +28,6 @@
 .method public static bridge synthetic -$$Nest$msendPendingEventLocked(Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->sendPendingEventLocked()V
 
     return-void
@@ -38,15 +36,12 @@
 .method public constructor <init>(Lcom/android/server/accessibility/AccessibilityManagerService;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
 
-    .line 7368
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7369
     iput-object p2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->mPendingEvent:Landroid/view/accessibility/AccessibilityEvent;
 
-    .line 7370
     invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityEvent;->getWindowId()I
 
     move-result p1
@@ -61,7 +56,6 @@
 .method public final getWindowId()I
     .locals 0
 
-    .line 7387
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->mWindowId:I
 
     return p0
@@ -70,7 +64,6 @@
 .method public run()V
     .locals 4
 
-    .line 7375
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/AccessibilityManagerService;)Ljava/lang/Object;
@@ -82,7 +75,6 @@
     :try_start_0
     const-string v1, "AccessibilityManagerService"
 
-    .line 7376
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,10 +93,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7377
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->sendPendingEventLocked()V
 
-    .line 7378
     monitor-exit v0
 
     return-void
@@ -122,7 +112,6 @@
 .method public final sendPendingEventLocked()V
     .locals 1
 
-    .line 7382
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmSendWindowStateChangedEventRunnables(Lcom/android/server/accessibility/AccessibilityManagerService;)Ljava/util/List;
@@ -131,7 +120,6 @@
 
     invoke-interface {v0, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 7383
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$SendWindowStateChangedEventRunnable;->mPendingEvent:Landroid/view/accessibility/AccessibilityEvent;

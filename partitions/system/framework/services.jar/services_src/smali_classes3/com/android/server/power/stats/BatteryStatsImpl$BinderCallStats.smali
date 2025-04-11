@@ -31,12 +31,10 @@
 .method public ensureMethodName(Lcom/android/internal/os/BinderTransactionNameResolver;)V
     .locals 2
 
-    .line 9166
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$BinderCallStats;->methodName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 9167
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$BinderCallStats;->binderClass:Ljava/lang/Class;
 
     iget v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$BinderCallStats;->transactionCode:I
@@ -54,7 +52,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 9149
     instance-of v0, p1, Lcom/android/server/power/stats/BatteryStatsImpl$BinderCallStats;
 
     const/4 v1, 0x0
@@ -63,11 +60,9 @@
 
     return v1
 
-    .line 9152
     :cond_0
     check-cast p1, Lcom/android/server/power/stats/BatteryStatsImpl$BinderCallStats;
 
-    .line 9153
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$BinderCallStats;->binderClass:Ljava/lang/Class;
 
     iget-object v2, p1, Lcom/android/server/power/stats/BatteryStatsImpl$BinderCallStats;->binderClass:Ljava/lang/Class;
@@ -93,7 +88,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 9144
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$BinderCallStats;->binderClass:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -112,7 +106,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 9173
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

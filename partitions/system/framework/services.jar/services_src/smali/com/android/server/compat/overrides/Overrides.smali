@@ -19,15 +19,12 @@
 .method public static read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/compat/overrides/Overrides;
     .locals 4
 
-    .line 14
     new-instance v0, Lcom/android/server/compat/overrides/Overrides;
 
     invoke-direct {v0}, Lcom/android/server/compat/overrides/Overrides;-><init>()V
 
-    .line 16
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    .line 18
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -41,7 +38,6 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 20
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -52,7 +48,6 @@
 
     goto :goto_0
 
-    .line 21
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -60,19 +55,16 @@
 
     const-string v2, "change-overrides"
 
-    .line 22
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 23
     invoke-static {p0}, Lcom/android/server/compat/overrides/ChangeOverrides;->read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/compat/overrides/ChangeOverrides;
 
     move-result-object v1
 
-    .line 24
     invoke-virtual {v0}, Lcom/android/server/compat/overrides/Overrides;->getChangeOverrides()Ljava/util/List;
 
     move-result-object v2
@@ -81,7 +73,6 @@
 
     goto :goto_0
 
-    .line 26
     :cond_1
     invoke-static {p0}, Lcom/android/server/compat/overrides/XmlParser;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
@@ -92,7 +83,6 @@
 
     return-object v0
 
-    .line 30
     :cond_3
     new-instance p0, Ljavax/xml/datatype/DatatypeConfigurationException;
 
@@ -108,19 +98,16 @@
 .method public getChangeOverrides()Ljava/util/List;
     .locals 1
 
-    .line 7
     iget-object v0, p0, Lcom/android/server/compat/overrides/Overrides;->changeOverrides:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/compat/overrides/Overrides;->changeOverrides:Ljava/util/List;
 
-    .line 10
     :cond_0
     iget-object p0, p0, Lcom/android/server/compat/overrides/Overrides;->changeOverrides:Ljava/util/List;
 
@@ -130,7 +117,6 @@
 .method public write(Lcom/android/server/compat/overrides/XmlWriter;Ljava/lang/String;)V
     .locals 3
 
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,13 +135,10 @@
 
     const-string v0, ">\n"
 
-    .line 37
     invoke-virtual {p1, v0}, Lcom/android/server/compat/overrides/XmlWriter;->print(Ljava/lang/String;)V
 
-    .line 38
     invoke-virtual {p1}, Lcom/android/server/compat/overrides/XmlWriter;->increaseIndent()V
 
-    .line 39
     invoke-virtual {p0}, Lcom/android/server/compat/overrides/Overrides;->getChangeOverrides()Ljava/util/List;
 
     move-result-object p0
@@ -179,16 +162,13 @@
 
     const-string v2, "change-overrides"
 
-    .line 40
     invoke-virtual {v1, p1, v2}, Lcom/android/server/compat/overrides/ChangeOverrides;->write(Lcom/android/server/compat/overrides/XmlWriter;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 42
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/compat/overrides/XmlWriter;->decreaseIndent()V
 
-    .line 43
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

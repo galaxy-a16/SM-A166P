@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)V
     .locals 0
 
-    .line 10679
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$6;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 10682
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$6;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmTetherHandler(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Landroid/os/Handler;
@@ -36,12 +34,10 @@
 
     if-nez v0, :cond_0
 
-    .line 10683
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 10685
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$6;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 

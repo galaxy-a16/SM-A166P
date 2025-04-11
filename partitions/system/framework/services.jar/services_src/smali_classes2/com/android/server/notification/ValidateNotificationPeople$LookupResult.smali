@@ -19,32 +19,26 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 633
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 628
     iput v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/4 v0, 0x0
 
-    .line 629
     iput-boolean v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mHasPhone:Z
 
     const/4 v0, 0x0
 
-    .line 630
     iput-object v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mPhoneLookupKey:Ljava/lang/String;
 
-    .line 631
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mPhoneNumbers:Landroid/util/ArraySet;
 
-    .line 634
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -63,7 +57,6 @@
 .method public getAffinity()F
     .locals 1
 
-    .line 723
     invoke-virtual {p0}, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->isInvalid()Z
 
     move-result v0
@@ -74,7 +67,6 @@
 
     return p0
 
-    .line 726
     :cond_0
     iget p0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
@@ -84,7 +76,6 @@
 .method public getPhoneLookupKey()Ljava/lang/String;
     .locals 1
 
-    .line 685
     iget-boolean v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mHasPhone:Z
 
     if-nez v0, :cond_0
@@ -93,7 +84,6 @@
 
     return-object p0
 
-    .line 688
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mPhoneLookupKey:Ljava/lang/String;
 
@@ -103,7 +93,6 @@
 .method public getPhoneNumbers()Landroid/util/ArraySet;
     .locals 0
 
-    .line 710
     iget-object p0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mPhoneNumbers:Landroid/util/ArraySet;
 
     return-object p0
@@ -112,7 +101,6 @@
 .method public isExpired()Z
     .locals 4
 
-    .line 715
     iget-wide v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mExpireMillis:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -137,7 +125,6 @@
 .method public final isInvalid()Z
     .locals 2
 
-    .line 719
     iget v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/4 v1, 0x0
@@ -170,7 +157,6 @@
 .method public mergeContact(Landroid/database/Cursor;)V
     .locals 6
 
-    .line 638
     iget v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -183,7 +169,6 @@
 
     const-string v0, "_id"
 
-    .line 642
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
@@ -192,12 +177,10 @@
 
     if-ltz v0, :cond_0
 
-    .line 644
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    .line 645
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
     move-result v2
@@ -225,28 +208,24 @@
     :cond_0
     const-string v0, "invalid cursor: no _ID"
 
-    .line 648
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     :goto_0
     const-string v0, "lookup"
 
-    .line 652
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
     if-ltz v0, :cond_2
 
-    .line 654
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mPhoneLookupKey:Ljava/lang/String;
 
-    .line 655
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -273,7 +252,6 @@
 
     goto :goto_1
 
-    .line 657
     :cond_2
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
@@ -289,7 +267,6 @@
     :goto_1
     const-string/jumbo v0, "starred"
 
-    .line 661
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
@@ -300,7 +277,6 @@
 
     if-ltz v0, :cond_6
 
-    .line 663
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
@@ -317,7 +293,6 @@
     :goto_2
     if-eqz v0, :cond_5
 
-    .line 665
     iget v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/high16 v5, 0x3f800000    # 1.0f
@@ -328,7 +303,6 @@
 
     iput v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
-    .line 667
     :cond_5
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
@@ -354,7 +328,6 @@
 
     goto :goto_3
 
-    .line 669
     :cond_6
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
@@ -370,14 +343,12 @@
     :goto_3
     const-string v0, "has_phone_number"
 
-    .line 673
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
     if-ltz v0, :cond_9
 
-    .line 675
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p1
@@ -392,7 +363,6 @@
     :goto_4
     iput-boolean v2, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mHasPhone:Z
 
-    .line 676
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
     move-result p1
@@ -419,7 +389,6 @@
 
     goto :goto_5
 
-    .line 678
     :cond_9
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
@@ -441,7 +410,6 @@
 
     const-string v0, "data4"
 
-    .line 693
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
@@ -450,7 +418,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 696
     iget-object v2, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mPhoneNumbers:Landroid/util/ArraySet;
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -461,7 +428,6 @@
 
     goto :goto_0
 
-    .line 698
     :cond_0
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
@@ -477,14 +443,12 @@
     :goto_0
     const-string v0, "data1"
 
-    .line 701
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
     if-ltz v0, :cond_2
 
-    .line 703
     iget-object p0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mPhoneNumbers:Landroid/util/ArraySet;
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -495,7 +459,6 @@
 
     goto :goto_1
 
-    .line 705
     :cond_2
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 

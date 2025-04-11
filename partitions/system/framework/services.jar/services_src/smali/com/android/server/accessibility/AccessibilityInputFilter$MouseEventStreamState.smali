@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1039
     invoke-direct {p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$EventStreamState;-><init>()V
 
-    .line 1040
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$MouseEventStreamState;->reset()V
 
     return-void
@@ -25,12 +23,10 @@
 .method public final reset()V
     .locals 1
 
-    .line 1045
     invoke-super {p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$EventStreamState;->reset()V
 
     const/4 v0, 0x0
 
-    .line 1046
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$MouseEventStreamState;->mMotionSequenceStarted:Z
 
     return-void
@@ -39,7 +35,6 @@
 .method public final shouldProcessMotionEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 1056
     iget-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$MouseEventStreamState;->mMotionSequenceStarted:Z
 
     const/4 v1, 0x1
@@ -48,7 +43,6 @@
 
     return v1
 
-    .line 1060
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -65,7 +59,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 1061
     :cond_2
     :goto_0
     iput-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$MouseEventStreamState;->mMotionSequenceStarted:Z
@@ -76,7 +69,6 @@
 .method public final shouldProcessScroll()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

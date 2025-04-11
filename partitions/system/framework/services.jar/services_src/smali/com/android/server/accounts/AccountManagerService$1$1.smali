@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService$1;Ljava/lang/String;)V
     .locals 0
 
-    .line 364
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$1$1;->this$1:Lcom/android/server/accounts/AccountManagerService$1;
 
     iput-object p2, p0, Lcom/android/server/accounts/AccountManagerService$1$1;->val$removedPackageName:Ljava/lang/String;
@@ -31,14 +30,12 @@
 .method public run()V
     .locals 1
 
-    .line 367
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$1$1;->this$1:Lcom/android/server/accounts/AccountManagerService$1;
 
     iget-object v0, v0, Lcom/android/server/accounts/AccountManagerService$1;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     invoke-static {v0}, Lcom/android/server/accounts/AccountManagerService;->-$$Nest$mpurgeOldGrantsAll(Lcom/android/server/accounts/AccountManagerService;)V
 
-    .line 369
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$1$1;->this$1:Lcom/android/server/accounts/AccountManagerService$1;
 
     iget-object v0, v0, Lcom/android/server/accounts/AccountManagerService$1;->this$0:Lcom/android/server/accounts/AccountManagerService;

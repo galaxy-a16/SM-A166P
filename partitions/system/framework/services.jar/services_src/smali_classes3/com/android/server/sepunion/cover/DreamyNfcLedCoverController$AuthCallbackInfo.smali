@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;Landroid/os/IBinder;Landroid/content/ComponentName;III)V
     .locals 0
 
-    .line 741
     iput-object p1, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$AuthCallbackInfo;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
-    .line 742
     invoke-direct/range {p0 .. p6}, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedTouchListenerInfo;-><init>(Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;Landroid/os/IBinder;Landroid/content/ComponentName;III)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 747
     invoke-static {}, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -48,7 +45,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 748
     iget-object v0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$AuthCallbackInfo;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;->-$$Nest$fgetmCoverAuthCallbacks(Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;)Ljava/util/ArrayList;
@@ -57,7 +53,6 @@
 
     monitor-enter v0
 
-    .line 749
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$AuthCallbackInfo;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -67,12 +62,10 @@
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 750
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 751
     iget-object v0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedTouchListenerInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
@@ -84,7 +77,6 @@
     :catchall_0
     move-exception p0
 
-    .line 750
     :try_start_1
     monitor-exit v0
     :try_end_1

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;Landroid/os/Looper;)V
     .locals 0
 
-    .line 96
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,14 +23,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 99
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x64
 
     if-eq v0, v1, :cond_0
 
-    .line 104
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,7 +51,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/SehTestHal;
 

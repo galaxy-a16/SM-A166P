@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;Landroid/os/Looper;)V
     .locals 1
 
-    .line 103
     iput-object p1, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 104
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 109
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x0
@@ -41,7 +38,6 @@
     :pswitch_0
     goto/16 :goto_0
 
-    .line 146
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -56,7 +52,6 @@
 
     goto/16 :goto_0
 
-    .line 143
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -71,7 +66,6 @@
 
     goto :goto_0
 
-    .line 140
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -79,7 +73,6 @@
 
     goto :goto_0
 
-    .line 136
     :pswitch_4
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -89,14 +82,12 @@
 
     move-result-wide v0
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
     invoke-static {p0, v0, v1}, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;->-$$Nest$mhandleRequestCoverAuthentication(Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;J)V
 
     goto :goto_0
 
-    .line 132
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -108,7 +99,6 @@
 
     goto :goto_0
 
-    .line 129
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -120,7 +110,6 @@
 
     goto :goto_0
 
-    .line 126
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -132,7 +121,6 @@
 
     goto :goto_0
 
-    .line 120
     :pswitch_8
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -143,14 +131,12 @@
     :cond_2
     if-nez v1, :cond_3
 
-    .line 122
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
     invoke-static {p0}, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;->-$$Nest$mhandleCoverDetachedLocked(Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;)V
 
     goto :goto_0
 
-    .line 111
     :pswitch_9
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -158,7 +144,6 @@
 
     goto :goto_0
 
-    .line 117
     :pswitch_a
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 
@@ -170,7 +155,6 @@
 
     goto :goto_0
 
-    .line 114
     :pswitch_b
     iget-object p0, p0, Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/sepunion/cover/DreamyNfcLedCoverController;
 

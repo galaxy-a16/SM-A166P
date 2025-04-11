@@ -15,10 +15,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 38
     const-class v0, Lcom/android/server/wallpapereffectsgeneration/RemoteWallpaperEffectsGenerationService;
 
-    .line 39
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
@@ -33,7 +31,6 @@
 
     const-string v2, "android.service.wallpapereffectsgeneration.WallpaperEffectsGenerationService"
 
-    .line 54
     invoke-virtual {p1}, Landroid/content/Context;->getMainThreadHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -64,12 +61,10 @@
 
     move/from16 v8, p6
 
-    .line 52
     invoke-direct/range {v0 .. v9}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;ILcom/android/internal/infra/AbstractRemoteService$VultureCallback;Landroid/os/Handler;IZI)V
 
     move-object v1, p4
 
-    .line 57
     iput-object v1, v0, Lcom/android/server/wallpapereffectsgeneration/RemoteWallpaperEffectsGenerationService;->mCallback:Lcom/android/server/wallpapereffectsgeneration/RemoteWallpaperEffectsGenerationService$RemoteWallpaperEffectsGenerationServiceCallback;
 
     return-void
@@ -80,7 +75,6 @@
 .method public executeOnResolvedService(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
     .locals 0
 
-    .line 95
     invoke-virtual {p0, p1}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->executeAsyncRequest(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
 
     return-void
@@ -89,7 +83,6 @@
 .method public getRemoteRequestMillis()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x7d0
 
     return-wide v0
@@ -98,7 +91,6 @@
 .method public bridge synthetic getServiceInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 0
 
-    .line 34
     invoke-virtual {p0, p1}, Lcom/android/server/wallpapereffectsgeneration/RemoteWallpaperEffectsGenerationService;->getServiceInterface(Landroid/os/IBinder;)Landroid/service/wallpapereffectsgeneration/IWallpaperEffectsGenerationService;
 
     move-result-object p0
@@ -109,7 +101,6 @@
 .method public getServiceInterface(Landroid/os/IBinder;)Landroid/service/wallpapereffectsgeneration/IWallpaperEffectsGenerationService;
     .locals 0
 
-    .line 62
     invoke-static {p1}, Landroid/service/wallpapereffectsgeneration/IWallpaperEffectsGenerationService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/wallpapereffectsgeneration/IWallpaperEffectsGenerationService;
 
     move-result-object p0
@@ -120,7 +111,6 @@
 .method public getTimeoutIdleBindMillis()J
     .locals 2
 
-    .line 0
     const-wide/32 v0, 0x1d4c0
 
     return-wide v0
@@ -129,12 +119,10 @@
 .method public handleOnConnectedStateChanged(Z)V
     .locals 0
 
-    .line 111
     iget-object p0, p0, Lcom/android/server/wallpapereffectsgeneration/RemoteWallpaperEffectsGenerationService;->mCallback:Lcom/android/server/wallpapereffectsgeneration/RemoteWallpaperEffectsGenerationService$RemoteWallpaperEffectsGenerationServiceCallback;
 
     if-eqz p0, :cond_0
 
-    .line 112
     invoke-interface {p0, p1}, Lcom/android/server/wallpapereffectsgeneration/RemoteWallpaperEffectsGenerationService$RemoteWallpaperEffectsGenerationServiceCallback;->onConnectedStateChanged(Z)V
 
     :cond_0
@@ -144,7 +132,6 @@
 .method public reconnect()V
     .locals 0
 
-    .line 79
     invoke-super {p0}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->scheduleBind()V
 
     return-void

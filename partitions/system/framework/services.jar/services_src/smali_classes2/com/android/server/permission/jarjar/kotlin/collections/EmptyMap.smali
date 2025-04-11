@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 0
     new-instance v0, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;
 
     invoke-direct {v0}, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;-><init>()V
@@ -38,7 +37,6 @@
 .method private final readResolve()Ljava/lang/Object;
     .locals 0
 
-    .line 31
     sget-object p0, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;->INSTANCE:Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;
 
     return-object p0
@@ -49,7 +47,6 @@
 .method public clear()V
     .locals 1
 
-    .line 0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Operation is not supported for read-only collection"
@@ -62,7 +59,6 @@
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -71,7 +67,6 @@
 .method public final bridge containsValue(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 14
     instance-of v0, p1, Ljava/lang/Void;
 
     if-nez v0, :cond_0
@@ -93,7 +88,6 @@
 .method public containsValue(Ljava/lang/Void;)Z
     .locals 0
 
-    .line 0
     const-string/jumbo p0, "value"
 
     invoke-static {p1, p0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
@@ -106,7 +100,6 @@
 .method public final bridge entrySet()Ljava/util/Set;
     .locals 0
 
-    .line 14
     invoke-virtual {p0}, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;->getEntries()Ljava/util/Set;
 
     move-result-object p0
@@ -117,7 +110,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 17
     instance-of p0, p1, Ljava/util/Map;
 
     if-eqz p0, :cond_0
@@ -144,7 +136,6 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 14
     invoke-virtual {p0, p1}, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;->get(Ljava/lang/Object;)Ljava/lang/Void;
 
     move-result-object p0
@@ -155,7 +146,6 @@
 .method public get(Ljava/lang/Object;)Ljava/lang/Void;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -164,7 +154,6 @@
 .method public getEntries()Ljava/util/Set;
     .locals 0
 
-    .line 27
     sget-object p0, Lcom/android/server/permission/jarjar/kotlin/collections/EmptySet;->INSTANCE:Lcom/android/server/permission/jarjar/kotlin/collections/EmptySet;
 
     return-object p0
@@ -173,7 +162,6 @@
 .method public getKeys()Ljava/util/Set;
     .locals 0
 
-    .line 28
     sget-object p0, Lcom/android/server/permission/jarjar/kotlin/collections/EmptySet;->INSTANCE:Lcom/android/server/permission/jarjar/kotlin/collections/EmptySet;
 
     return-object p0
@@ -182,7 +170,6 @@
 .method public getSize()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -191,7 +178,6 @@
 .method public getValues()Ljava/util/Collection;
     .locals 0
 
-    .line 29
     sget-object p0, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyList;->INSTANCE:Lcom/android/server/permission/jarjar/kotlin/collections/EmptyList;
 
     return-object p0
@@ -200,7 +186,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -209,7 +194,6 @@
 .method public isEmpty()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -218,7 +202,6 @@
 .method public final bridge keySet()Ljava/util/Set;
     .locals 0
 
-    .line 14
     invoke-virtual {p0}, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;->getKeys()Ljava/util/Set;
 
     move-result-object p0
@@ -229,7 +212,6 @@
 .method public bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -242,7 +224,6 @@
 .method public putAll(Ljava/util/Map;)V
     .locals 0
 
-    .line 0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -255,7 +236,6 @@
 .method public bridge synthetic remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 14
     invoke-virtual {p0, p1}, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;->remove(Ljava/lang/Object;)Ljava/lang/Void;
 
     move-result-object p0
@@ -266,7 +246,6 @@
 .method public remove(Ljava/lang/Object;)Ljava/lang/Void;
     .locals 0
 
-    .line 0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -279,7 +258,6 @@
 .method public final bridge size()I
     .locals 0
 
-    .line 14
     invoke-virtual {p0}, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;->getSize()I
 
     move-result p0
@@ -290,7 +268,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string/jumbo p0, "{}"
 
     return-object p0
@@ -299,7 +276,6 @@
 .method public final bridge values()Ljava/util/Collection;
     .locals 0
 
-    .line 14
     invoke-virtual {p0}, Lcom/android/server/permission/jarjar/kotlin/collections/EmptyMap;->getValues()Ljava/util/Collection;
 
     move-result-object p0

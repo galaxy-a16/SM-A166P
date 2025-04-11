@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 51
     new-instance v0, Lcom/samsung/android/server/util/FullScreenAppsSupportUtils;
 
     const/4 v1, 0x0

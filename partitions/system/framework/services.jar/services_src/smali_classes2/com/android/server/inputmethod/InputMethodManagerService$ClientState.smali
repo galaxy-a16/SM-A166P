@@ -31,32 +31,24 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/IInputMethodClientInvoker;Lcom/android/internal/inputmethod/IRemoteInputConnection;IIILcom/android/server/inputmethod/InputMethodManagerService$ClientDeathRecipient;)V
     .locals 1
 
-    .line 611
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 599
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;->mAccessibilitySessions:Landroid/util/SparseArray;
 
-    .line 612
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;->mClient:Lcom/android/server/inputmethod/IInputMethodClientInvoker;
 
-    .line 613
     iput-object p2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;->mFallbackInputConnection:Lcom/android/internal/inputmethod/IRemoteInputConnection;
 
-    .line 614
     iput p3, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;->mUid:I
 
-    .line 615
     iput p4, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;->mPid:I
 
-    .line 616
     iput p5, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;->mSelfReportedDisplayId:I
 
-    .line 617
     new-instance p1, Landroid/view/inputmethod/InputBinding;
 
     const/4 p5, 0x0
@@ -69,7 +61,6 @@
 
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;->mBinding:Landroid/view/inputmethod/InputBinding;
 
-    .line 618
     iput-object p6, p0, Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;->mClientDeathRecipient:Lcom/android/server/inputmethod/InputMethodManagerService$ClientDeathRecipient;
 
     return-void
@@ -80,7 +71,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 603
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,12 +79,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 604
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 603
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1

@@ -7,7 +7,6 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/android/server/biometrics/log/BiometricContext;
     .locals 0
 
-    .line 42
     invoke-static {p0}, Lcom/android/server/biometrics/log/BiometricContextProvider;->defaultProvider(Landroid/content/Context;)Lcom/android/server/biometrics/log/BiometricContextProvider;
 
     move-result-object p0

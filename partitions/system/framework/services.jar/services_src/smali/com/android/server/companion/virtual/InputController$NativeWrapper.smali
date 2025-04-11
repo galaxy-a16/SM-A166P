@@ -17,7 +17,6 @@
 .method public closeUinput(J)V
     .locals 0
 
-    .line 555
     invoke-static {p1, p2}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeCloseUinput(J)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public openUinputDpad(Ljava/lang/String;IILjava/lang/String;)J
     .locals 0
 
-    .line 536
     invoke-static {p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeOpenUinputDpad(Ljava/lang/String;IILjava/lang/String;)J
 
     move-result-wide p0
@@ -37,7 +35,6 @@
 .method public openUinputKeyboard(Ljava/lang/String;IILjava/lang/String;)J
     .locals 0
 
-    .line 541
     invoke-static {p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeOpenUinputKeyboard(Ljava/lang/String;IILjava/lang/String;)J
 
     move-result-wide p0
@@ -48,7 +45,6 @@
 .method public openUinputMouse(Ljava/lang/String;IILjava/lang/String;)J
     .locals 0
 
-    .line 545
     invoke-static {p1, p2, p3, p4}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeOpenUinputMouse(Ljava/lang/String;IILjava/lang/String;)J
 
     move-result-wide p0
@@ -59,7 +55,6 @@
 .method public openUinputTouchscreen(Ljava/lang/String;IILjava/lang/String;II)J
     .locals 0
 
-    .line 550
     invoke-static/range {p1 .. p6}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeOpenUinputTouchscreen(Ljava/lang/String;IILjava/lang/String;II)J
 
     move-result-wide p0
@@ -70,7 +65,6 @@
 .method public writeButtonEvent(JIIJ)Z
     .locals 0
 
-    .line 570
     invoke-static/range {p1 .. p6}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeWriteButtonEvent(JIIJ)Z
 
     move-result p0
@@ -81,7 +75,6 @@
 .method public writeDpadKeyEvent(JIIJ)Z
     .locals 0
 
-    .line 560
     invoke-static/range {p1 .. p6}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeWriteDpadKeyEvent(JIIJ)Z
 
     move-result p0
@@ -92,7 +85,6 @@
 .method public writeKeyEvent(JIIJ)Z
     .locals 0
 
-    .line 565
     invoke-static/range {p1 .. p6}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeWriteKeyEvent(JIIJ)Z
 
     move-result p0
@@ -103,7 +95,6 @@
 .method public writeRelativeEvent(JFFJ)Z
     .locals 0
 
-    .line 583
     invoke-static/range {p1 .. p6}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeWriteRelativeEvent(JFFJ)Z
 
     move-result p0
@@ -114,7 +105,6 @@
 .method public writeScrollEvent(JFFJ)Z
     .locals 0
 
-    .line 588
     invoke-static/range {p1 .. p6}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeWriteScrollEvent(JFFJ)Z
 
     move-result p0
@@ -125,7 +115,6 @@
 .method public writeTouchEvent(JIIIFFFFJ)Z
     .locals 0
 
-    .line 576
     invoke-static/range {p1 .. p11}, Lcom/android/server/companion/virtual/InputController;->-$$Nest$smnativeWriteTouchEvent(JIIIFFFFJ)Z
 
     move-result p0

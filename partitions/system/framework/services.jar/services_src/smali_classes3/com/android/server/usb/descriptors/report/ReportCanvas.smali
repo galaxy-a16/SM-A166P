@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/usb/descriptors/UsbDescriptorParser;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/usb/descriptors/report/ReportCanvas;->mParser:Lcom/android/server/usb/descriptors/UsbDescriptorParser;
 
     return-void
@@ -33,7 +31,6 @@
 
     and-int/lit8 p0, p0, 0xf
 
-    .line 142
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,7 +59,6 @@
 .method public static getHexString(B)Ljava/lang/String;
     .locals 2
 
-    .line 130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,7 +93,6 @@
 
     and-int/2addr p0, v0
 
-    .line 153
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +132,6 @@
 .method public getParser()Lcom/android/server/usb/descriptors/UsbDescriptorParser;
     .locals 0
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/usb/descriptors/report/ReportCanvas;->mParser:Lcom/android/server/usb/descriptors/UsbDescriptorParser;
 
     return-object p0
@@ -158,13 +152,10 @@
 .method public writeHeader(ILjava/lang/String;)V
     .locals 0
 
-    .line 65
     invoke-virtual {p0, p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->openHeader(I)V
 
-    .line 66
     invoke-virtual {p0, p2}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->write(Ljava/lang/String;)V
 
-    .line 67
     invoke-virtual {p0, p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->closeHeader(I)V
 
     return-void
@@ -173,13 +164,10 @@
 .method public writeListItem(Ljava/lang/String;)V
     .locals 0
 
-    .line 115
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->openListItem()V
 
-    .line 116
     invoke-virtual {p0, p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->write(Ljava/lang/String;)V
 
-    .line 117
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->closeListItem()V
 
     return-void

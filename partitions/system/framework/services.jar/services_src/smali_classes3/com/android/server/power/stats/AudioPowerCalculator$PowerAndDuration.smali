@@ -21,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/AudioPowerCalculator$PowerAndDuration-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/power/stats/AudioPowerCalculator$PowerAndDuration;-><init>()V
 
     return-void

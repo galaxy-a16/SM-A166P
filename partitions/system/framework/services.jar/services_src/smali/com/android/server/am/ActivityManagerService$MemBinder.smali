@@ -13,17 +13,14 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
     .locals 1
 
-    .line 2463
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 2445
     new-instance v0, Lcom/android/server/am/ActivityManagerService$MemBinder$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/ActivityManagerService$MemBinder$1;-><init>(Lcom/android/server/am/ActivityManagerService$MemBinder;)V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerService$MemBinder;->mPriorityDumper:Lcom/android/server/utils/PriorityDump$PriorityDumper;
 
-    .line 2464
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$MemBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     return-void
@@ -36,7 +33,6 @@
 
     const/4 v0, 0x1
 
-    .line 2470
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$MemBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
@@ -48,7 +44,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
 
-    .line 2472
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$MemBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
@@ -63,7 +58,6 @@
 
     if-nez v1, :cond_0
 
-    .line 2476
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$MemBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService;->mOomAdjuster:Lcom/android/server/am/OomAdjuster;
@@ -74,7 +68,6 @@
 
     return-void
 
-    .line 2474
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$MemBinder;->mPriorityDumper:Lcom/android/server/utils/PriorityDump$PriorityDumper;
@@ -83,7 +76,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2476
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$MemBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService;->mOomAdjuster:Lcom/android/server/am/OomAdjuster;
@@ -105,6 +97,5 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
 
-    .line 2477
     throw p1
 .end method

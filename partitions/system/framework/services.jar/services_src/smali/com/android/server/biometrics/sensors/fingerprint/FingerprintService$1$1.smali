@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1;Landroid/hardware/fingerprint/IFingerprintServiceReceiver;Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;I)V
     .locals 0
 
-    .line 439
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->this$1:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1;
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
@@ -36,7 +35,6 @@
 .method public onAuthenticationAcquired(I)V
     .locals 1
 
-    .line 477
     :try_start_0
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->isKnownAcquiredCode(I)Z
 
@@ -44,7 +42,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 478
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
 
     const/4 v0, 0x0
@@ -53,7 +50,6 @@
 
     goto :goto_0
 
-    .line 480
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
 
@@ -72,7 +68,6 @@
 
     const-string v0, "Remote exception in onAuthenticationAcquired()"
 
-    .line 483
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -82,7 +77,6 @@
 .method public onAuthenticationError(ILjava/lang/CharSequence;)V
     .locals 0
 
-    .line 443
     :try_start_0
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->isKnownErrorCode(I)Z
 
@@ -90,7 +84,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 444
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
 
     const/4 p2, 0x0
@@ -99,7 +92,6 @@
 
     goto :goto_0
 
-    .line 446
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
 
@@ -118,7 +110,6 @@
 
     const-string p2, "Remote exception in onAuthenticationError()"
 
-    .line 449
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -128,7 +119,6 @@
 .method public onAuthenticationFailed()V
     .locals 2
 
-    .line 468
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
 
@@ -145,7 +135,6 @@
 
     const-string v1, "Remote exception in onAuthenticationFailed()"
 
-    .line 470
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -155,7 +144,6 @@
 .method public onAuthenticationHelp(ILjava/lang/CharSequence;)V
     .locals 0
 
-    .line 489
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->onAuthenticationAcquired(I)V
 
     return-void
@@ -164,7 +152,6 @@
 .method public onAuthenticationSucceeded(Landroid/hardware/biometrics/BiometricPrompt$AuthenticationResult;)V
     .locals 4
 
-    .line 456
     new-instance p1, Landroid/hardware/fingerprint/Fingerprint;
 
     const-wide/16 v0, 0x0
@@ -175,7 +162,6 @@
 
     invoke-direct {p1, v2, v3, v0, v1}, Landroid/hardware/fingerprint/Fingerprint;-><init>(Ljava/lang/CharSequence;IJ)V
 
-    .line 457
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->val$props:Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
     iget v0, v0, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorStrength:I
@@ -186,7 +172,6 @@
 
     const/4 v3, 0x1
 
-    .line 459
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$1;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
@@ -206,7 +191,6 @@
 
     const-string v0, "Remote exception in onAuthenticationSucceeded()"
 
-    .line 461
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/am/MARsPolicyManager;Ljava/util/List;)V
     .locals 0
 
-    .line 5820
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     iput-object p2, p0, Lcom/android/server/am/MARsPolicyManager$1;->val$nativePidList:Ljava/util/List;
@@ -28,13 +27,11 @@
 .method public run()V
     .locals 6
 
-    .line 5824
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5825
     iget-object v1, p0, Lcom/android/server/am/MARsPolicyManager$1;->val$nativePidList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -54,7 +51,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 5826
     iget-object v3, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     iget-object v3, v3, Lcom/android/server/am/MARsPolicyManager;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -65,7 +61,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5827
     :try_start_1
     iget-object v4, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
@@ -83,10 +78,8 @@
 
     if-nez v4, :cond_0
 
-    .line 5828
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5830
     :cond_0
     monitor-exit v3
 
@@ -102,7 +95,6 @@
     :try_start_2
     throw p0
 
-    .line 5833
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -123,7 +115,6 @@
 
     const-string v3, "MARsPolicyManager"
 
-    .line 5834
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,7 +145,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5835
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -163,7 +153,6 @@
 
     goto :goto_1
 
-    .line 5837
     :cond_2
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager$1;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
@@ -194,7 +183,6 @@
 
     const-string v0, "MARsPolicyManager"
 
-    .line 5839
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

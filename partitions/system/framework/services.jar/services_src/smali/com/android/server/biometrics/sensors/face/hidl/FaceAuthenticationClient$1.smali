@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;)V
     .locals 0
 
-    .line 411
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 414
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -39,7 +37,6 @@
 
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
-    .line 415
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object p1
@@ -60,7 +57,6 @@
 
     const/4 v0, 0x0
 
-    .line 416
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -69,7 +65,6 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 417
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;->-$$Nest$fgetmCancellationSignal(Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;)Landroid/os/CancellationSignal;
@@ -94,10 +89,8 @@
 
     const-string p2, "Cancel authentication by Notification action"
 
-    .line 418
     invoke-static {p1, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient$1;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;->-$$Nest$fgetmCancellationSignal(Lcom/android/server/biometrics/sensors/face/hidl/FaceAuthenticationClient;)Landroid/os/CancellationSignal;

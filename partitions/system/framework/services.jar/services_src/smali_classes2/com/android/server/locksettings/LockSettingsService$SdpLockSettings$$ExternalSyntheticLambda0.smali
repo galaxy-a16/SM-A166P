@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(ILcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/locksettings/LockSettingsService$SdpLockSettings$$ExternalSyntheticLambda0;->f$0:I
@@ -31,7 +30,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    .line 0
     iget v0, p0, Lcom/android/server/locksettings/LockSettingsService$SdpLockSettings$$ExternalSyntheticLambda0;->f$0:I
 
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$SdpLockSettings$$ExternalSyntheticLambda0;->f$1:Lcom/android/server/locksettings/SyntheticPasswordManager$SyntheticPassword;

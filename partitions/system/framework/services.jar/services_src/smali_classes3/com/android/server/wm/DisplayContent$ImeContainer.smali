@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;)V
     .locals 3
 
-    .line 6522
     sget-object v0, Lcom/android/server/wm/DisplayArea$Type;->ABOVE_TASKS:Lcom/android/server/wm/DisplayArea$Type;
 
     const-string v1, "ImeContainer"
@@ -22,7 +21,6 @@
 
     const/4 p1, 0x0
 
-    .line 6519
     iput-boolean p1, p0, Lcom/android/server/wm/DisplayContent$ImeContainer;->mNeedsLayer:Z
 
     return-void
@@ -31,7 +29,6 @@
 .method public static skipImeWindowsDuringTraversal(Lcom/android/server/wm/DisplayContent;)Z
     .locals 1
 
-    .line 6561
     invoke-static {p0}, Lcom/android/server/wm/DisplayContent;->-$$Nest$fgetmImeLayeringTarget(Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/WindowState;
 
     move-result-object v0
@@ -60,20 +57,17 @@
 .method public assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
     .locals 1
 
-    .line 6575
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayContent$ImeContainer;->mNeedsLayer:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 6578
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/WindowContainer;->assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
 
     const/4 p1, 0x0
 
-    .line 6579
     iput-boolean p1, p0, Lcom/android/server/wm/DisplayContent$ImeContainer;->mNeedsLayer:Z
 
     return-void
@@ -82,20 +76,17 @@
 .method public assignRelativeLayer(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;IZ)V
     .locals 1
 
-    .line 6585
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayContent$ImeContainer;->mNeedsLayer:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 6588
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/android/server/wm/WindowContainer;->assignRelativeLayer(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;IZ)V
 
     const/4 p1, 0x0
 
-    .line 6589
     iput-boolean p1, p0, Lcom/android/server/wm/DisplayContent$ImeContainer;->mNeedsLayer:Z
 
     return-void
@@ -104,7 +95,6 @@
 .method public forAllWindowForce(Lcom/android/internal/util/ToBooleanFunction;Z)Z
     .locals 0
 
-    .line 6570
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/WindowContainer;->forAllWindows(Lcom/android/internal/util/ToBooleanFunction;Z)Z
 
     move-result p0
@@ -115,10 +105,8 @@
 .method public forAllWindows(Lcom/android/internal/util/ToBooleanFunction;Z)Z
     .locals 1
 
-    .line 6550
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 6551
     invoke-static {v0}, Lcom/android/server/wm/DisplayContent$ImeContainer;->skipImeWindowsDuringTraversal(Lcom/android/server/wm/DisplayContent;)Z
 
     move-result v0
@@ -129,7 +117,6 @@
 
     return p0
 
-    .line 6554
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/WindowContainer;->forAllWindows(Lcom/android/internal/util/ToBooleanFunction;Z)Z
 
@@ -141,7 +128,6 @@
 .method public getOrientation(I)I
     .locals 0
 
-    .line 6533
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayArea;->shouldIgnoreOrientationRequest(I)Z
 
     move-result p0
@@ -159,7 +145,6 @@
 
     const/4 v0, 0x1
 
-    .line 6526
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayContent$ImeContainer;->mNeedsLayer:Z
 
     return-void
@@ -168,22 +153,18 @@
 .method public setOrganizer(Landroid/window/IDisplayAreaOrganizer;Z)V
     .locals 4
 
-    .line 6594
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/DisplayArea;->setOrganizer(Landroid/window/IDisplayAreaOrganizer;Z)V
 
-    .line 6595
     iget-object p2, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->updateImeParent()V
 
     if-eqz p1, :cond_2
 
-    .line 6601
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayArea$Tokens;->getParentSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object p1
 
-    .line 6602
     iget-object p2, p0, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     const/4 v0, 0x0
@@ -194,7 +175,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 6603
     sget-boolean p2, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_IME_enabled:Z
 
     if-eqz p2, :cond_0
@@ -213,7 +193,6 @@
 
     invoke-static {v2, v3, v1, v0, p2}, Lcom/android/internal/protolog/ProtoLogImpl;->i(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 6605
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayArea$Tokens;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
@@ -225,7 +204,6 @@
 
     goto :goto_0
 
-    .line 6607
     :cond_1
     sget-boolean p0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_IME_enabled:Z
 
@@ -257,7 +235,6 @@
 .method public updateAboveInsetsState(Landroid/view/InsetsState;Landroid/util/SparseArray;Landroid/util/ArraySet;)V
     .locals 1
 
-    .line 6540
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayContent$ImeContainer;->skipImeWindowsDuringTraversal(Lcom/android/server/wm/DisplayContent;)Z
@@ -268,7 +245,6 @@
 
     return-void
 
-    .line 6543
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/wm/WindowContainer;->updateAboveInsetsState(Landroid/view/InsetsState;Landroid/util/SparseArray;Landroid/util/ArraySet;)V
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbHostRestrictor;)V
     .locals 0
 
-    .line 830
     iput-object p1, p0, Lcom/android/server/usb/UsbHostRestrictor$6;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -26,12 +25,10 @@
 
     const-string v0, "USB_STATE"
 
-    .line 833
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 834
     invoke-static {}, Lcom/android/server/usb/UsbHostRestrictor;->-$$Nest$sfgetmIsSupportScrlckblk()Z
 
     move-result v0
@@ -40,7 +37,6 @@
 
     const-string v0, "DISCONNECTED"
 
-    .line 835
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -51,17 +47,14 @@
 
     const/4 p1, 0x0
 
-    .line 836
     invoke-static {p1}, Lcom/android/server/usb/UsbHostRestrictor;->-$$Nest$sfputmIsDeviceConnected(Z)V
 
-    .line 837
     invoke-static {}, Lcom/android/server/usb/UsbHostRestrictor;->-$$Nest$sfgetmLockStatus()I
 
     move-result p1
 
     if-ne p1, v1, :cond_3
 
-    .line 838
     iget-object p0, p0, Lcom/android/server/usb/UsbHostRestrictor$6;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     invoke-virtual {p0}, Lcom/android/server/usb/UsbHostRestrictor;->startLockTimer()V
@@ -71,24 +64,20 @@
     :cond_0
     const-string v0, "CONNECTED"
 
-    .line 840
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 841
     invoke-static {v1}, Lcom/android/server/usb/UsbHostRestrictor;->-$$Nest$sfputmIsDeviceConnected(Z)V
 
-    .line 842
     invoke-static {}, Lcom/android/server/usb/UsbHostRestrictor;->-$$Nest$sfgetmLockStatus()I
 
     move-result p1
 
     if-ne p1, v1, :cond_3
 
-    .line 843
     iget-object p1, p0, Lcom/android/server/usb/UsbHostRestrictor$6;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     invoke-virtual {p1}, Lcom/android/server/usb/UsbHostRestrictor;->isFinishLockTimer()Z
@@ -97,7 +86,6 @@
 
     if-nez p1, :cond_3
 
-    .line 844
     iget-object p0, p0, Lcom/android/server/usb/UsbHostRestrictor$6;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     invoke-virtual {p0}, Lcom/android/server/usb/UsbHostRestrictor;->stopLockTimer()V
@@ -107,19 +95,16 @@
     :cond_1
     const-string p0, "CONFIGURED"
 
-    .line 847
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 848
     invoke-static {}, Lcom/android/server/usb/UsbHostRestrictor;->-$$Nest$sfgetmLockStatus()I
 
     goto :goto_0
 
-    .line 851
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 

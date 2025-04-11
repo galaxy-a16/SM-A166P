@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/notification/EventConditionProvider;)V
     .locals 0
 
-    .line 336
     iput-object p1, p0, Lcom/android/server/notification/EventConditionProvider$2;->this$0:Lcom/android/server/notification/EventConditionProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onChanged()V
     .locals 3
 
-    .line 339
     invoke-static {}, Lcom/android/server/notification/EventConditionProvider;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -40,7 +38,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/EventConditionProvider$2;->this$0:Lcom/android/server/notification/EventConditionProvider;
 
@@ -56,7 +53,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/notification/EventConditionProvider$2;->this$0:Lcom/android/server/notification/EventConditionProvider;
 
     invoke-static {v0}, Lcom/android/server/notification/EventConditionProvider;->-$$Nest$fgetmWorker(Lcom/android/server/notification/EventConditionProvider;)Landroid/os/Handler;

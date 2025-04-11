@@ -13,7 +13,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
 .method public getSessionPoliciesForApplication(ILjava/lang/String;)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

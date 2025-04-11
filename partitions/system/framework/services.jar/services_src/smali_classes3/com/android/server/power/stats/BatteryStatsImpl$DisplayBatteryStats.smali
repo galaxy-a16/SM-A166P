@@ -23,30 +23,24 @@
 
     move-object v0, p0
 
-    .line 1093
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 1069
     iput v1, v0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenState:I
 
     const/4 v2, -0x1
 
-    .line 1081
     iput v2, v0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenBrightnessBin:I
 
     const/4 v2, 0x5
 
     new-array v3, v2, [Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
-    .line 1085
     iput-object v3, v0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenBrightnessTimers:[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
-    .line 1091
     iput v1, v0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenStateAtLastEnergyMeasurement:I
 
-    .line 1094
     new-instance v3, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -65,7 +59,6 @@
 
     iput-object v3, v0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenOnTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
-    .line 1096
     new-instance v3, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v11, 0x0
@@ -87,7 +80,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 1099
     iget-object v3, v0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenBrightnessTimers:[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     new-instance v10, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
@@ -121,12 +113,10 @@
 .method public readSummaryFromParcel(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 1130
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenOnTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 1131
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenDozeTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
@@ -138,7 +128,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1133
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenBrightnessTimers:[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v1, v1, v0
@@ -156,14 +145,12 @@
 .method public reset(J)V
     .locals 3
 
-    .line 1108
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenOnTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->reset(ZJ)Z
 
-    .line 1109
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenDozeTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->reset(ZJ)Z
@@ -175,7 +162,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1111
     iget-object v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenBrightnessTimers:[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v2, v2, v0
@@ -195,15 +181,12 @@
 
     const/4 v0, 0x1
 
-    .line 1139
     iput v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenState:I
 
-    .line 1140
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenOnTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 1141
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenDozeTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
@@ -215,7 +198,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1143
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenBrightnessTimers:[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v1, v1, v0
@@ -233,12 +215,10 @@
 .method public writeSummaryToParcel(Landroid/os/Parcel;J)V
     .locals 2
 
-    .line 1119
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenOnTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 1120
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenDozeTimer:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
@@ -250,7 +230,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1122
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DisplayBatteryStats;->screenBrightnessTimers:[Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v1, v1, v0

@@ -36,7 +36,6 @@
 .method public static synthetic $r8$lambda$9tNS5kqhXqm5dSPxqwnmbKKr9Dc(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->lambda$onLocationPermissionsChanged$6(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
 
     move-result p0
@@ -47,7 +46,6 @@
 .method public static synthetic $r8$lambda$DpRiLkMVeKHIgKV_376zSgW4Wpw(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->lambda$onUserChanged$2(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
 
     move-result p0
@@ -58,7 +56,6 @@
 .method public static synthetic $r8$lambda$TIODMciygslPEQo08vYEiGnRNY0(Landroid/app/PendingIntent;Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->lambda$removeGeofence$0(Landroid/app/PendingIntent;Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;)Z
 
     move-result p0
@@ -69,7 +66,6 @@
 .method public static synthetic $r8$lambda$kVWRJ3lF1tt7rG1-OmaqsPl4Jf8(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->lambda$onLocationEnabledChanged$3(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
 
     move-result p0
@@ -80,7 +76,6 @@
 .method public static synthetic $r8$lambda$rGvLUZXeMmt7b8HbtIcIyKLh3E4(Landroid/location/Location;Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Lcom/android/internal/listeners/ListenerExecutor$ListenerOperation;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->lambda$onLocationChanged$1(Landroid/location/Location;Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Lcom/android/internal/listeners/ListenerExecutor$ListenerOperation;
 
     move-result-object p0
@@ -91,7 +86,6 @@
 .method public static synthetic $r8$lambda$s8w7fhdEyOFTN4lmGvYcM2E-3Xw(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->lambda$onLocationPackageBlacklistChanged$4(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
 
     move-result p0
@@ -102,7 +96,6 @@
 .method public static synthetic $r8$lambda$zb_RV9tRKsVJ-aBX6lScFZ5oC4M(Ljava/lang/String;Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->lambda$onLocationPermissionsChanged$5(Ljava/lang/String;Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
 
     move-result p0
@@ -113,38 +106,32 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/location/injector/Injector;)V
     .locals 1
 
-    .line 324
     invoke-direct {p0}, Lcom/android/server/location/listeners/ListenerMultiplexer;-><init>()V
 
-    .line 289
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLock:Ljava/lang/Object;
 
-    .line 293
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/location/geofence/GeofenceManager;)V
 
     iput-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mUserChangedListener:Lcom/android/server/location/injector/UserInfoHelper$UserListener;
 
-    .line 294
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/location/geofence/GeofenceManager;)V
 
     iput-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationEnabledChangedListener:Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;
 
-    .line 296
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda4;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda4;-><init>(Lcom/android/server/location/geofence/GeofenceManager;)V
 
     iput-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationPackageBlacklistChangedListener:Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;
 
-    .line 299
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/geofence/GeofenceManager$1;-><init>(Lcom/android/server/location/geofence/GeofenceManager;)V
@@ -153,35 +140,30 @@
 
     const-string v0, "GeofencingService"
 
-    .line 325
     invoke-virtual {p1, v0}, Landroid/content/Context;->createAttributionContext(Ljava/lang/String;)Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mContext:Landroid/content/Context;
 
-    .line 326
     invoke-interface {p2}, Lcom/android/server/location/injector/Injector;->getUserInfoHelper()Lcom/android/server/location/injector/UserInfoHelper;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mUserInfoHelper:Lcom/android/server/location/injector/UserInfoHelper;
 
-    .line 327
     invoke-interface {p2}, Lcom/android/server/location/injector/Injector;->getSettingsHelper()Lcom/android/server/location/injector/SettingsHelper;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
-    .line 328
     invoke-interface {p2}, Lcom/android/server/location/injector/Injector;->getLocationPermissionsHelper()Lcom/android/server/location/injector/LocationPermissionsHelper;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationPermissionsHelper:Lcom/android/server/location/injector/LocationPermissionsHelper;
 
-    .line 329
     invoke-interface {p2}, Lcom/android/server/location/injector/Injector;->getLocationUsageLogger()Lcom/android/server/location/injector/LocationUsageLogger;
 
     move-result-object p1
@@ -194,7 +176,6 @@
 .method public static synthetic access$000(Lcom/android/server/location/geofence/GeofenceManager;Ljava/lang/Object;Lcom/android/server/location/listeners/ListenerRegistration;)V
     .locals 0
 
-    .line 61
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/listeners/ListenerMultiplexer;->removeRegistration(Ljava/lang/Object;Lcom/android/server/location/listeners/ListenerRegistration;)V
 
     return-void
@@ -203,7 +184,6 @@
 .method public static synthetic lambda$onLocationChanged$1(Landroid/location/Location;Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Lcom/android/internal/listeners/ListenerExecutor$ListenerOperation;
     .locals 0
 
-    .line 512
     invoke-virtual {p1, p0}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->onLocationChanged(Landroid/location/Location;)Lcom/android/internal/listeners/ListenerExecutor$ListenerOperation;
 
     move-result-object p0
@@ -214,7 +194,6 @@
 .method public static synthetic lambda$onLocationEnabledChanged$3(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 546
     invoke-virtual {p1}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getIdentity()Landroid/location/util/identity/CallerIdentity;
 
     move-result-object p1
@@ -239,7 +218,6 @@
 .method public static synthetic lambda$onLocationPackageBlacklistChanged$4(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 550
     invoke-virtual {p1}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getIdentity()Landroid/location/util/identity/CallerIdentity;
 
     move-result-object p1
@@ -264,7 +242,6 @@
 .method public static synthetic lambda$onLocationPermissionsChanged$5(Ljava/lang/String;Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 554
     invoke-virtual {p1, p0}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->onLocationPermissionsChanged(Ljava/lang/String;)Z
 
     move-result p0
@@ -275,7 +252,6 @@
 .method public static synthetic lambda$onLocationPermissionsChanged$6(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 558
     invoke-virtual {p1, p0}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->onLocationPermissionsChanged(I)Z
 
     move-result p0
@@ -286,7 +262,6 @@
 .method public static synthetic lambda$onUserChanged$2(ILcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 0
 
-    .line 541
     invoke-virtual {p1}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getIdentity()Landroid/location/util/identity/CallerIdentity;
 
     move-result-object p1
@@ -311,7 +286,6 @@
 .method public static synthetic lambda$removeGeofence$0(Landroid/app/PendingIntent;Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;)Z
     .locals 0
 
-    .line 370
     invoke-virtual {p1}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;->getPendingIntent()Landroid/app/PendingIntent;
 
     move-result-object p1
@@ -328,32 +302,26 @@
 .method public addGeofence(Landroid/location/Geofence;Landroid/app/PendingIntent;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 350
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x2
 
     invoke-static {v0, v1}, Lcom/android/server/location/LocationPermissions;->enforceCallingOrSelfLocationPermission(Landroid/content/Context;I)V
 
-    .line 352
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mContext:Landroid/content/Context;
 
-    .line 353
     invoke-static {p2}, Landroid/app/AppOpsManager;->toReceiverId(Landroid/app/PendingIntent;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 352
     invoke-static {v0, p3, p4, v1}, Landroid/location/util/identity/CallerIdentity;->fromBinder(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/location/util/identity/CallerIdentity;
 
     move-result-object p3
 
-    .line 355
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 357
     :try_start_0
     new-instance p4, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;
 
@@ -367,7 +335,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 360
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -377,30 +344,25 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 361
     throw p0
 .end method
 
 .method public getLastLocation()Landroid/location/Location;
     .locals 6
 
-    .line 519
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 520
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLastLocation:Landroid/location/Location;
 
-    .line 521
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v1, :cond_0
 
-    .line 524
     invoke-virtual {p0}, Lcom/android/server/location/geofence/GeofenceManager;->getLocationManager()Landroid/location/LocationManager;
 
     move-result-object p0
@@ -412,7 +374,6 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 528
     invoke-virtual {v1}, Landroid/location/Location;->getElapsedRealtimeAgeMillis()J
 
     move-result-wide v2
@@ -431,7 +392,6 @@
     :catchall_0
     move-exception p0
 
-    .line 521
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -443,30 +403,25 @@
 .method public final getLocationManager()Landroid/location/LocationManager;
     .locals 3
 
-    .line 333
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 334
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationManager:Landroid/location/LocationManager;
 
     if-nez v1, :cond_0
 
-    .line 335
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mContext:Landroid/content/Context;
 
     const-class v2, Landroid/location/LocationManager;
 
-    .line 336
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/location/LocationManager;
 
-    .line 335
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v2, v1
@@ -475,7 +430,6 @@
 
     iput-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationManager:Landroid/location/LocationManager;
 
-    .line 339
     :cond_0
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationManager:Landroid/location/LocationManager;
 
@@ -486,7 +440,6 @@
     :catchall_0
     move-exception p0
 
-    .line 340
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -497,7 +450,6 @@
 .method public final isActive(Landroid/location/util/identity/CallerIdentity;)Z
     .locals 3
 
-    .line 382
     invoke-virtual {p1}, Landroid/location/util/identity/CallerIdentity;->isSystemServer()Z
 
     move-result v0
@@ -506,7 +458,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 383
     iget-object p1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mUserInfoHelper:Lcom/android/server/location/injector/UserInfoHelper;
@@ -523,7 +474,6 @@
 
     return v1
 
-    .line 387
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
@@ -539,7 +489,6 @@
 
     return v1
 
-    .line 390
     :cond_1
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mUserInfoHelper:Lcom/android/server/location/injector/UserInfoHelper;
 
@@ -555,7 +504,6 @@
 
     return v1
 
-    .line 393
     :cond_2
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
@@ -563,12 +511,10 @@
 
     move-result v0
 
-    .line 394
     invoke-virtual {p1}, Landroid/location/util/identity/CallerIdentity;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 393
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/injector/SettingsHelper;->isLocationPackageBlacklisted(ILjava/lang/String;)Z
 
     move-result p0
@@ -586,7 +532,6 @@
 .method public isActive(Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
     .locals 1
 
-    .line 378
     invoke-virtual {p1}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->isPermitted()Z
 
     move-result v0
@@ -617,7 +562,6 @@
 .method public bridge synthetic isActive(Lcom/android/server/location/listeners/ListenerRegistration;)Z
     .locals 0
 
-    .line 61
     check-cast p1, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->isActive(Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)Z
@@ -630,17 +574,14 @@
 .method public mergeRegistrations(Ljava/util/Collection;)Landroid/location/LocationRequest;
     .locals 11
 
-    .line 466
     invoke-virtual {p0}, Lcom/android/server/location/geofence/GeofenceManager;->getLastLocation()Landroid/location/Location;
 
     move-result-object v0
 
-    .line 468
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 472
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -665,7 +606,6 @@
 
     check-cast v8, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;
 
-    .line 473
     invoke-virtual {v8}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getGeofence()Landroid/location/Geofence;
 
     move-result-object v9
@@ -678,7 +618,6 @@
 
     goto :goto_0
 
-    .line 477
     :cond_1
     invoke-virtual {v8}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getIdentity()Landroid/location/util/identity/CallerIdentity;
 
@@ -690,7 +629,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 480
     invoke-virtual {v8, v0}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getDistanceToBoundary(Landroid/location/Location;)D
 
     move-result-wide v8
@@ -703,7 +641,6 @@
 
     goto :goto_0
 
-    .line 488
     :cond_2
     invoke-static {v6, v7, v4, v5}, Ljava/lang/Double;->compare(DD)I
 
@@ -711,10 +648,8 @@
 
     if-gez p1, :cond_3
 
-    .line 489
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
-    .line 491
     invoke-virtual {p0}, Lcom/android/server/location/injector/SettingsHelper;->getBackgroundThrottleProximityAlertIntervalMs()J
 
     move-result-wide p0
@@ -729,14 +664,12 @@
 
     div-double/2addr v6, v0
 
-    .line 490
     invoke-static {p0, p1, v6, v7}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide p0
 
     const-wide v0, 0x415b774000000000L    # 7200000.0
 
-    .line 489
     invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide p0
@@ -745,7 +678,6 @@
 
     goto :goto_1
 
-    .line 494
     :cond_3
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
@@ -753,7 +685,6 @@
 
     move-result-wide p0
 
-    .line 497
     :goto_1
     new-instance v0, Landroid/location/LocationRequest$Builder;
 
@@ -761,24 +692,20 @@
 
     const-wide/16 p0, 0x0
 
-    .line 498
     invoke-virtual {v0, p0, p1}, Landroid/location/LocationRequest$Builder;->setMinUpdateIntervalMillis(J)Landroid/location/LocationRequest$Builder;
 
     move-result-object p0
 
     const/4 p1, 0x1
 
-    .line 499
     invoke-virtual {p0, p1}, Landroid/location/LocationRequest$Builder;->setHiddenFromAppOps(Z)Landroid/location/LocationRequest$Builder;
 
     move-result-object p0
 
-    .line 500
     invoke-virtual {p0, v3}, Landroid/location/LocationRequest$Builder;->setWorkSource(Landroid/os/WorkSource;)Landroid/location/LocationRequest$Builder;
 
     move-result-object p0
 
-    .line 501
     invoke-virtual {p0}, Landroid/location/LocationRequest$Builder;->build()Landroid/location/LocationRequest;
 
     move-result-object p0
@@ -789,7 +716,6 @@
 .method public bridge synthetic mergeRegistrations(Ljava/util/Collection;)Ljava/lang/Object;
     .locals 0
 
-    .line 61
     invoke-virtual {p0, p1}, Lcom/android/server/location/geofence/GeofenceManager;->mergeRegistrations(Ljava/util/Collection;)Landroid/location/LocationRequest;
 
     move-result-object p0
@@ -800,28 +726,23 @@
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 1
 
-    .line 507
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 508
     :try_start_0
     iput-object p1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLastLocation:Landroid/location/Location;
 
-    .line 509
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 511
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p1}, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda0;-><init>(Landroid/location/Location;)V
 
     invoke-virtual {p0, v0}, Lcom/android/server/location/listeners/ListenerMultiplexer;->deliverToListeners(Ljava/util/function/Function;)V
 
-    .line 514
     invoke-virtual {p0}, Lcom/android/server/location/listeners/ListenerMultiplexer;->updateService()V
 
     return-void
@@ -829,7 +750,6 @@
     :catchall_0
     move-exception p0
 
-    .line 509
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -841,7 +761,6 @@
 .method public onLocationEnabledChanged(I)V
     .locals 1
 
-    .line 546
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda6;
 
     invoke-direct {v0, p1}, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda6;-><init>(I)V
@@ -854,7 +773,6 @@
 .method public onLocationPackageBlacklistChanged(I)V
     .locals 1
 
-    .line 550
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda5;
 
     invoke-direct {v0, p1}, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda5;-><init>(I)V
@@ -867,7 +785,6 @@
 .method public onLocationPermissionsChanged(I)V
     .locals 1
 
-    .line 558
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda9;
 
     invoke-direct {v0, p1}, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda9;-><init>(I)V
@@ -880,7 +797,6 @@
 .method public onLocationPermissionsChanged(Ljava/lang/String;)V
     .locals 1
 
-    .line 554
     new-instance v0, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda7;
 
     invoke-direct {v0, p1}, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda7;-><init>(Ljava/lang/String;)V
@@ -893,28 +809,24 @@
 .method public onRegister()V
     .locals 2
 
-    .line 404
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mUserInfoHelper:Lcom/android/server/location/injector/UserInfoHelper;
 
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mUserChangedListener:Lcom/android/server/location/injector/UserInfoHelper$UserListener;
 
     invoke-virtual {v0, v1}, Lcom/android/server/location/injector/UserInfoHelper;->addListener(Lcom/android/server/location/injector/UserInfoHelper$UserListener;)V
 
-    .line 405
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationEnabledChangedListener:Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;
 
     invoke-virtual {v0, v1}, Lcom/android/server/location/injector/SettingsHelper;->addOnLocationEnabledChangedListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
 
-    .line 406
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationPackageBlacklistChangedListener:Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;
 
     invoke-virtual {v0, v1}, Lcom/android/server/location/injector/SettingsHelper;->addOnLocationPackageBlacklistChangedListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
 
-    .line 408
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationPermissionsHelper:Lcom/android/server/location/injector/LocationPermissionsHelper;
 
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationPermissionsListener:Lcom/android/server/location/injector/LocationPermissionsHelper$LocationPermissionsListener;
@@ -927,14 +839,12 @@
 .method public onRegistrationAdded(Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)V
     .locals 11
 
-    .line 422
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationUsageLogger:Lcom/android/server/location/injector/LocationUsageLogger;
 
     const/4 v1, 0x1
 
     const/4 v2, 0x4
 
-    .line 425
     invoke-virtual {p2}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getIdentity()Landroid/location/util/identity/CallerIdentity;
 
     move-result-object p0
@@ -943,7 +853,6 @@
 
     move-result-object v3
 
-    .line 426
     invoke-virtual {p2}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getIdentity()Landroid/location/util/identity/CallerIdentity;
 
     move-result-object p0
@@ -960,14 +869,12 @@
 
     const/4 v8, 0x1
 
-    .line 431
     invoke-virtual {p2}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getGeofence()Landroid/location/Geofence;
 
     move-result-object v9
 
     const/4 v10, 0x1
 
-    .line 422
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/location/injector/LocationUsageLogger;->logLocationApiUsage(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/location/LocationRequest;ZZLandroid/location/Geofence;Z)V
 
     return-void
@@ -976,7 +883,6 @@
 .method public bridge synthetic onRegistrationAdded(Ljava/lang/Object;Lcom/android/server/location/listeners/ListenerRegistration;)V
     .locals 0
 
-    .line 61
     check-cast p1, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;
 
     check-cast p2, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;
@@ -989,14 +895,12 @@
 .method public onRegistrationRemoved(Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;)V
     .locals 11
 
-    .line 436
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationUsageLogger:Lcom/android/server/location/injector/LocationUsageLogger;
 
     const/4 v1, 0x1
 
     const/4 v2, 0x4
 
-    .line 439
     invoke-virtual {p2}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getIdentity()Landroid/location/util/identity/CallerIdentity;
 
     move-result-object p0
@@ -1005,7 +909,6 @@
 
     move-result-object v3
 
-    .line 440
     invoke-virtual {p2}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getIdentity()Landroid/location/util/identity/CallerIdentity;
 
     move-result-object p0
@@ -1022,14 +925,12 @@
 
     const/4 v8, 0x1
 
-    .line 445
     invoke-virtual {p2}, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;->getGeofence()Landroid/location/Geofence;
 
     move-result-object v9
 
     const/4 v10, 0x1
 
-    .line 436
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/location/injector/LocationUsageLogger;->logLocationApiUsage(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/location/LocationRequest;ZZLandroid/location/Geofence;Z)V
 
     return-void
@@ -1038,7 +939,6 @@
 .method public bridge synthetic onRegistrationRemoved(Ljava/lang/Object;Lcom/android/server/location/listeners/ListenerRegistration;)V
     .locals 0
 
-    .line 61
     check-cast p1, Lcom/android/server/location/geofence/GeofenceManager$GeofenceKey;
 
     check-cast p2, Lcom/android/server/location/geofence/GeofenceManager$GeofenceRegistration;
@@ -1051,28 +951,24 @@
 .method public onUnregister()V
     .locals 2
 
-    .line 413
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mUserInfoHelper:Lcom/android/server/location/injector/UserInfoHelper;
 
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mUserChangedListener:Lcom/android/server/location/injector/UserInfoHelper$UserListener;
 
     invoke-virtual {v0, v1}, Lcom/android/server/location/injector/UserInfoHelper;->removeListener(Lcom/android/server/location/injector/UserInfoHelper$UserListener;)V
 
-    .line 414
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationEnabledChangedListener:Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;
 
     invoke-virtual {v0, v1}, Lcom/android/server/location/injector/SettingsHelper;->removeOnLocationEnabledChangedListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
 
-    .line 415
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mSettingsHelper:Lcom/android/server/location/injector/SettingsHelper;
 
     iget-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationPackageBlacklistChangedListener:Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;
 
     invoke-virtual {v0, v1}, Lcom/android/server/location/injector/SettingsHelper;->removeOnLocationPackageBlacklistChangedListener(Lcom/android/server/location/injector/SettingsHelper$UserSettingChangedListener;)V
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationPermissionsHelper:Lcom/android/server/location/injector/LocationPermissionsHelper;
 
     iget-object p0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLocationPermissionsListener:Lcom/android/server/location/injector/LocationPermissionsHelper$LocationPermissionsListener;
@@ -1093,7 +989,6 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 541
     :cond_0
     new-instance p2, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda8;
 
@@ -1108,19 +1003,16 @@
 .method public registerWithService(Landroid/location/LocationRequest;Ljava/util/Collection;)Z
     .locals 2
 
-    .line 451
     invoke-virtual {p0}, Lcom/android/server/location/geofence/GeofenceManager;->getLocationManager()Landroid/location/LocationManager;
 
     move-result-object p2
 
     const-string v0, "fused"
 
-    .line 452
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
 
-    .line 451
     invoke-virtual {p2, v0, p1, v1, p0}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;Landroid/location/LocationRequest;Ljava/util/concurrent/Executor;Landroid/location/LocationListener;)V
 
     const/4 p0, 0x1
@@ -1131,7 +1023,6 @@
 .method public bridge synthetic registerWithService(Ljava/lang/Object;Ljava/util/Collection;)Z
     .locals 0
 
-    .line 61
     check-cast p1, Landroid/location/LocationRequest;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/geofence/GeofenceManager;->registerWithService(Landroid/location/LocationRequest;Ljava/util/Collection;)Z
@@ -1144,12 +1035,10 @@
 .method public removeGeofence(Landroid/app/PendingIntent;)V
     .locals 3
 
-    .line 368
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 370
     :try_start_0
     new-instance v2, Lcom/android/server/location/geofence/GeofenceManager$$ExternalSyntheticLambda1;
 
@@ -1159,7 +1048,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 372
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1169,19 +1057,16 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 373
     throw p0
 .end method
 
 .method public unregisterWithService()V
     .locals 2
 
-    .line 458
     iget-object v0, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 459
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/location/geofence/GeofenceManager;->getLocationManager()Landroid/location/LocationManager;
 
@@ -1191,10 +1076,8 @@
 
     const/4 v1, 0x0
 
-    .line 460
     iput-object v1, p0, Lcom/android/server/location/geofence/GeofenceManager;->mLastLocation:Landroid/location/Location;
 
-    .line 461
     monitor-exit v0
 
     return-void

@@ -27,38 +27,28 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
-    .line 109
     iput-wide v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->bluetoothChargeUC:J
 
     const/4 v2, 0x0
 
-    .line 112
     iput-object v2, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cpuClusterChargeUC:[J
 
-    .line 115
     iput-object v2, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->displayChargeUC:[J
 
-    .line 118
     iput-wide v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->gnssChargeUC:J
 
-    .line 121
     iput-wide v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->mobileRadioChargeUC:J
 
-    .line 124
     iput-wide v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->wifiChargeUC:J
 
-    .line 127
     iput-wide v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cameraChargeUC:J
 
-    .line 130
     iput-object v2, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherTotalChargeUC:[J
 
-    .line 133
     iput-object v2, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherUidChargesUC:[Landroid/util/SparseLongArray;
 
     return-void
@@ -69,7 +59,6 @@
 .method public isEmpty()Z
     .locals 4
 
-    .line 136
     iget-wide v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->bluetoothChargeUC:J
 
     const-wide/16 v2, 0x0
@@ -80,7 +69,6 @@
 
     iget-object v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->cpuClusterChargeUC:[J
 
-    .line 137
     invoke-virtual {p0, v0}, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->isEmpty([J)Z
 
     move-result v0
@@ -89,7 +77,6 @@
 
     iget-object v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->displayChargeUC:[J
 
-    .line 138
     invoke-virtual {p0, v0}, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->isEmpty([J)Z
 
     move-result v0
@@ -116,7 +103,6 @@
 
     iget-object v0, p0, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->otherTotalChargeUC:[J
 
-    .line 142
     invoke-virtual {p0, v0}, Lcom/android/server/power/stats/EnergyConsumerSnapshot$EnergyConsumerDeltaData;->isEmpty([J)Z
 
     move-result p0
@@ -143,7 +129,6 @@
 
     return p0
 
-    .line 149
     :cond_0
     array-length v0, p1
 

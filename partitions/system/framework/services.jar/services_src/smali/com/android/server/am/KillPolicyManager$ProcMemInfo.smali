@@ -47,7 +47,6 @@
 .method public constructor <init>(Lcom/android/server/am/KillPolicyManager;)V
     .locals 0
 
-    .line 1975
     iput-object p1, p0, Lcom/android/server/am/KillPolicyManager$ProcMemInfo;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

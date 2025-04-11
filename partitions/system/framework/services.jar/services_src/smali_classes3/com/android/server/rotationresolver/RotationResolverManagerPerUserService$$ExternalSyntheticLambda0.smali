@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;
@@ -27,7 +26,6 @@
 .method public final onCancel()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;
 
     invoke-static {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->$r8$lambda$RXnawYfIOH5P2wjXR5pHPcL805c(Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;)V

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/BatteryStatsService;)V
     .locals 0
 
-    .line 212
     iput-object p1, p0, Lcom/android/server/am/BatteryStatsService$1;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
@@ -42,7 +41,6 @@
 
     if-gtz v1, :cond_1
 
-    .line 221
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide p3
@@ -52,7 +50,6 @@
 
     if-eq p1, v0, :cond_2
 
-    .line 234
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +70,6 @@
 
     goto :goto_1
 
-    .line 231
     :cond_2
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$1;->this$0:Lcom/android/server/am/BatteryStatsService;
 
@@ -81,7 +77,6 @@
 
     goto :goto_1
 
-    .line 228
     :cond_3
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$1;->this$0:Lcom/android/server/am/BatteryStatsService;
 

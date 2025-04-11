@@ -15,29 +15,24 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepository;)V
     .locals 3
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/PmmStateHistory;->mPmmStates:Ljava/util/List;
 
-    .line 13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/android/server/chimera/PmmStateHistory;->mLastUpdatedTimeMillis:J
 
-    .line 20
     iput-object p1, p0, Lcom/android/server/chimera/PmmStateHistory;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string p0, "NORMAL"
 
-    .line 21
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -58,7 +53,6 @@
 
     goto/16 :goto_1
 
-    .line 43
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -106,13 +100,11 @@
     :cond_4
     const-string p1, "LIGHT"
 
-    .line 63
     :goto_0
     iget-object v5, p0, Lcom/android/server/chimera/PmmStateHistory;->mPmmStates:Ljava/util/List;
 
     invoke-interface {v5, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 64
     iget-object p1, p0, Lcom/android/server/chimera/PmmStateHistory;->mPmmStates:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -121,14 +113,12 @@
 
     if-le p1, v1, :cond_5
 
-    .line 65
     iget-object p1, p0, Lcom/android/server/chimera/PmmStateHistory;->mPmmStates:Ljava/util/List;
 
     const/4 v1, 0x0
 
     invoke-interface {p1, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 68
     :cond_5
     iget-object p1, p0, Lcom/android/server/chimera/PmmStateHistory;->mPmmStates:Ljava/util/List;
 
@@ -138,7 +128,6 @@
 
     if-le p1, v0, :cond_6
 
-    .line 69
     iget-object p1, p0, Lcom/android/server/chimera/PmmStateHistory;->mPmmStates:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -147,7 +136,6 @@
 
     sub-int/2addr p1, v4
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/chimera/PmmStateHistory;->mPmmStates:Ljava/util/List;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -180,7 +168,6 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     :cond_6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -190,7 +177,6 @@
 
     return-void
 
-    .line 39
     :cond_7
     :goto_1
     iget-object p0, p0, Lcom/android/server/chimera/PmmStateHistory;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
@@ -207,12 +193,10 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 28
     iget-object v1, p0, Lcom/android/server/chimera/PmmStateHistory;->mPmmStates:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -234,15 +218,12 @@
 
     const-string v3, " "
 
-    .line 29
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 30
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 32
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -258,7 +239,6 @@
 
     const-string p0, "("
 
-    .line 33
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
@@ -267,7 +247,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 34
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

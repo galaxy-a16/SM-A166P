@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;)V
     .locals 0
 
-    .line 9894
     iput-object p1, p0, Lcom/android/server/audio/AudioService$AudioSystemThread;->this$0:Lcom/android/server/audio/AudioService;
 
     const-string p1, "AudioService"
 
-    .line 9895
     invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -27,15 +25,12 @@
 .method public run()V
     .locals 4
 
-    .line 9901
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 9903
     iget-object v0, p0, Lcom/android/server/audio/AudioService$AudioSystemThread;->this$0:Lcom/android/server/audio/AudioService;
 
     monitor-enter v0
 
-    .line 9904
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/AudioService$AudioSystemThread;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -47,17 +42,14 @@
 
     invoke-static {v1, v2}, Lcom/android/server/audio/AudioService;->-$$Nest$fputmAudioHandler(Lcom/android/server/audio/AudioService;Lcom/android/server/audio/AudioService$AudioHandler;)V
 
-    .line 9907
     iget-object p0, p0, Lcom/android/server/audio/AudioService$AudioSystemThread;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
-    .line 9908
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9911
     invoke-static {}, Landroid/os/Looper;->loop()V
 
     return-void
@@ -65,7 +57,6 @@
     :catchall_0
     move-exception p0
 
-    .line 9908
     :try_start_1
     monitor-exit v0
     :try_end_1

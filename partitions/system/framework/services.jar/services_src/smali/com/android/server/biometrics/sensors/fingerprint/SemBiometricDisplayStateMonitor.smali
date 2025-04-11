@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$suMUurfG3taxyT2HggfEAbXkqsw(Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;III)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;->lambda$onFinish$1(III)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$vzBgiCInm7Xi2qBQctEorTY9DUg(Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;III)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;->lambda$onStart$0(III)V
 
     return-void
@@ -29,12 +27,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
-    .line 21
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
     const/4 p1, 0x2
 
-    .line 17
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;->mDisplayState:I
 
     return-void
@@ -43,7 +39,6 @@
 .method private synthetic lambda$onFinish$1(III)V
     .locals 2
 
-    .line 68
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,10 +63,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;->mDisplayState:I
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->mCallbacks:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -91,7 +84,6 @@
 
     check-cast v0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;
 
-    .line 71
     invoke-interface {v0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;->onFinishDisplayState(III)V
 
     goto :goto_0
@@ -103,7 +95,6 @@
 .method private synthetic lambda$onStart$0(III)V
     .locals 2
 
-    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,10 +119,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;->mDisplayState:I
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->mCallbacks:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -155,7 +144,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 53
     invoke-interface {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;->onDisplayOn()V
 
     goto :goto_1
@@ -165,10 +153,8 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 55
     invoke-interface {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;->onDisplayOff()V
 
-    .line 57
     :cond_1
     :goto_1
     invoke-interface {v0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;->onStartDisplayState(III)V
@@ -184,7 +170,6 @@
 .method public getDisplayState()I
     .locals 0
 
-    .line 35
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;->mDisplayState:I
 
     return p0
@@ -193,7 +178,6 @@
 .method public isInteractive()Z
     .locals 1
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/os/PowerManager;
@@ -204,7 +188,6 @@
 
     check-cast p0, Landroid/os/PowerManager;
 
-    .line 40
     invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
 
     move-result p0
@@ -221,7 +204,6 @@
 
     return-void
 
-    .line 67
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->mHandler:Landroid/os/Handler;
 
@@ -243,7 +225,6 @@
 
     return-void
 
-    .line 48
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->mHandler:Landroid/os/Handler;
 
@@ -259,7 +240,6 @@
 .method public start()V
     .locals 1
 
-    .line 26
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-virtual {v0, p0}, Landroid/hardware/display/DisplayManagerInternal;->registerDisplayStateListener(Landroid/hardware/display/DisplayManagerInternal$DisplayStateListener;)V

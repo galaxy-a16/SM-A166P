@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;)V
     .locals 0
 
-    .line 891
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$11;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onChange(Ljava/lang/String;)V
     .locals 2
 
-    .line 894
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$11;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmHdmiCecConfig(Lcom/android/server/hdmi/HdmiControlService;)Lcom/android/server/hdmi/HdmiCecConfig;
@@ -53,7 +51,6 @@
     :cond_0
     move p1, v0
 
-    .line 897
     :goto_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$11;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 

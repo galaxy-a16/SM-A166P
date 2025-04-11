@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 29
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenOff;->mContext:Landroid/content/Context;
 
     return-void
@@ -23,7 +21,6 @@
 .method public static createAction(Landroid/content/Context;)Lcom/android/server/accessibility/autoaction/actiontype/ScreenOff;
     .locals 1
 
-    .line 34
     new-instance v0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenOff;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenOff;-><init>(Landroid/content/Context;)V
@@ -34,7 +31,6 @@
 .method public static getStringResId()I
     .locals 1
 
-    .line 0
     const v0, 0x1040125
 
     return v0
@@ -45,14 +41,12 @@
 .method public performCornerAction(I)V
     .locals 1
 
-    .line 43
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "SYSTEM_ACTION_LOCK_SCREEN"
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenOff;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V

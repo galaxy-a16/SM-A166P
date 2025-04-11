@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/CountryDetectorService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/CountryDetectorService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/CountryDetectorService;
@@ -27,7 +26,6 @@
 .method public final onCountryDetected(Landroid/location/Country;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/CountryDetectorService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/CountryDetectorService;
 
     invoke-static {p0, p1}, Lcom/android/server/CountryDetectorService;->$r8$lambda$gvWqn8Id-HNlL5cKpoM2oiIsXzU(Lcom/android/server/CountryDetectorService;Landroid/location/Country;)V

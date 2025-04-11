@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$rQLXKFtEQhNPJHvx39TTIhGe4o4(Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;)I
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->lambda$static$0(Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;)I
 
     move-result p0
@@ -28,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 82
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/tare/EconomyManagerInternal$ActionBill$$ExternalSyntheticLambda0;-><init>()V
@@ -45,20 +43,16 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 2
 
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 89
     sget-object p1, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->sAnticipatedActionComparator:Ljava/util/Comparator;
 
     invoke-interface {v0, p1}, Ljava/util/List;->sort(Ljava/util/Comparator;)V
 
-    .line 90
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -69,7 +63,6 @@
 
     move v0, p1
 
-    .line 93
     :goto_0
     iget-object v1, p0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->mAnticipatedActions:Ljava/util/List;
 
@@ -81,7 +74,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 94
     iget-object v1, p0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->mAnticipatedActions:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 96
     :cond_0
     iput v0, p0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->mHashCode:I
 
@@ -110,7 +101,6 @@
 .method public static synthetic lambda$static$0(Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;)I
     .locals 0
 
-    .line 82
     iget p0, p0, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;->actionId:I
 
     return p0
@@ -130,7 +120,6 @@
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 106
     const-class v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -141,11 +130,9 @@
 
     goto :goto_0
 
-    .line 107
     :cond_1
     check-cast p1, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->mAnticipatedActions:Ljava/util/List;
 
     iget-object p1, p1, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->mAnticipatedActions:Ljava/util/List;
@@ -166,7 +153,6 @@
 .method public getAnticipatedActions()Ljava/util/List;
     .locals 0
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->mAnticipatedActions:Ljava/util/List;
 
     return-object p0
@@ -175,7 +161,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 113
     iget p0, p0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->mHashCode:I
 
     return p0

@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$NbJIyuy0zR-QlcGbV4oF81DkTAI(Lcom/android/server/pm/ShortcutService$4;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/ShortcutService$4;->lambda$onUidGone$1(I)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$nnZhgSAwrPDrCOVREFNw2UzfG0Q(Lcom/android/server/pm/ShortcutService$4;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/ShortcutService$4;->lambda$onUidStateChanged$0(II)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutService;)V
     .locals 0
 
-    .line 687
     iput-object p1, p0, Lcom/android/server/pm/ShortcutService$4;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
@@ -40,7 +37,6 @@
 .method private synthetic lambda$onUidGone$1(I)V
     .locals 1
 
-    .line 696
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$4;->this$0:Lcom/android/server/pm/ShortcutService;
 
     const/16 v0, 0x14
@@ -53,7 +49,6 @@
 .method private synthetic lambda$onUidStateChanged$0(II)V
     .locals 0
 
-    .line 690
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$4;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/ShortcutService;->handleOnUidStateChanged(II)V
@@ -66,7 +61,6 @@
 .method public onUidGone(IZ)V
     .locals 1
 
-    .line 695
     iget-object p2, p0, Lcom/android/server/pm/ShortcutService$4;->this$0:Lcom/android/server/pm/ShortcutService;
 
     new-instance v0, Lcom/android/server/pm/ShortcutService$4$$ExternalSyntheticLambda1;
@@ -81,7 +75,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 690
     iget-object p3, p0, Lcom/android/server/pm/ShortcutService$4;->this$0:Lcom/android/server/pm/ShortcutService;
 
     new-instance p4, Lcom/android/server/pm/ShortcutService$4$$ExternalSyntheticLambda0;

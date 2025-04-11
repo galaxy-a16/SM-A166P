@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/net/NetworkPolicyManagerService;)V
     .locals 0
 
-    .line 7320
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$17;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 7323
     iget-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$17;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p1}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmPowerManagerInternal(Lcom/android/server/net/NetworkPolicyManagerService;)Landroid/os/PowerManagerInternal;
@@ -39,7 +37,6 @@
 
     iget-boolean p1, p1, Landroid/os/PowerSaveState;->batterySaverEnabled:Z
 
-    .line 7326
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -56,7 +53,6 @@
 
     goto :goto_0
 
-    .line 7328
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -68,7 +64,6 @@
 
     const/4 p2, 0x0
 
-    .line 7331
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -104,7 +99,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7332
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$17;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v0}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmChargingState(Lcom/android/server/net/NetworkPolicyManagerService;)Z
@@ -113,14 +107,12 @@
 
     if-eq p2, v0, :cond_1
 
-    .line 7333
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$17;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v0, p2}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fputmChargingState(Lcom/android/server/net/NetworkPolicyManagerService;Z)V
 
     if-eqz p1, :cond_1
 
-    .line 7335
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$17;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -131,7 +123,6 @@
 
     move-result-object p0
 
-    .line 7336
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_1

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/vr/VrManagerService;)V
     .locals 0
 
-    .line 307
     iput-object p1, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 310
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x0
@@ -39,14 +37,12 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 332
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     if-ne p1, v2, :cond_0
 
     move v1, v2
 
-    .line 333
     :cond_0
     iget-object p1, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
@@ -64,7 +60,6 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 337
     :try_start_0
     iget-object v0, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
@@ -78,14 +73,12 @@
 
     check-cast v0, Landroid/service/vr/IPersistentVrStateCallbacks;
 
-    .line 338
     invoke-interface {v0, v1}, Landroid/service/vr/IPersistentVrStateCallbacks;->onPersistentVrStateChanged(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 343
     :cond_1
     iget-object p0, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
@@ -97,7 +90,6 @@
 
     goto :goto_2
 
-    .line 346
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -121,7 +113,6 @@
 
     throw p0
 
-    .line 325
     :cond_3
     iget-object p1, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
@@ -131,7 +122,6 @@
 
     monitor-enter v0
 
-    .line 326
     :try_start_1
     iget-object p1, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
@@ -141,12 +131,10 @@
 
     if-eqz p1, :cond_4
 
-    .line 327
     iget-object p0, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
     invoke-static {p0}, Lcom/android/server/vr/VrManagerService;->-$$Nest$mconsumeAndApplyPendingStateLocked(Lcom/android/server/vr/VrManagerService;)V
 
-    .line 329
     :cond_4
     monitor-exit v0
 
@@ -161,7 +149,6 @@
 
     throw p0
 
-    .line 312
     :cond_5
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -169,7 +156,6 @@
 
     move v1, v2
 
-    .line 313
     :cond_6
     iget-object p1, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
@@ -187,7 +173,6 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 317
     :try_start_2
     iget-object v0, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 
@@ -207,7 +192,6 @@
 
     goto :goto_1
 
-    .line 322
     :cond_7
     iget-object p0, p0, Lcom/android/server/vr/VrManagerService$2;->this$0:Lcom/android/server/vr/VrManagerService;
 

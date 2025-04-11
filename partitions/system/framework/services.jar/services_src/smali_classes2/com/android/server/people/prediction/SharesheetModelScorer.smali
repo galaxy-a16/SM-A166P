@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$kAfsGyQ-98I6qKztrM2L4pvoE64(Ljava/lang/String;)Ljava/util/List;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/people/prediction/SharesheetModelScorer;->lambda$postProcess$1(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p0
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$rcY8vkT-h-QyhFNM0TVMGcgvrxM(Landroid/util/Pair;)J
     .locals 2
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/people/prediction/SharesheetModelScorer;->lambda$computeScore$0(Landroid/util/Pair;)J
 
     move-result-wide v0
@@ -43,14 +41,12 @@
 
     const/4 v0, 0x6
 
-    .line 48
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/people/prediction/SharesheetModelScorer;->RECENCY_SCORE_COUNT:Ljava/lang/Integer;
 
-    .line 52
     sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x1e
@@ -61,7 +57,6 @@
 
     sput-wide v0, Lcom/android/server/people/prediction/SharesheetModelScorer;->ONE_MONTH_WINDOW:J
 
-    .line 53
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0xa
@@ -72,7 +67,6 @@
 
     sput-wide v0, Lcom/android/server/people/prediction/SharesheetModelScorer;->FOREGROUND_APP_PROMO_TIME_WINDOW:J
 
-    .line 59
     const-class v0, Lcom/android/internal/app/ChooserActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -87,7 +81,6 @@
 .method public static computeScore(Ljava/util/List;IJ)V
     .locals 18
 
-    .line 71
     invoke-interface/range {p0 .. p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -96,13 +89,11 @@
 
     return-void
 
-    .line 79
     :cond_0
     new-instance v0, Ljava/util/PriorityQueue;
 
     sget-object v1, Lcom/android/server/people/prediction/SharesheetModelScorer;->RECENCY_SCORE_COUNT:Ljava/lang/Integer;
 
-    .line 80
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -111,14 +102,12 @@
 
     invoke-direct {v2}, Lcom/android/server/people/prediction/SharesheetModelScorer$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 81
     invoke-static {v2}, Ljava/util/Comparator;->comparingLong(Ljava/util/function/ToLongFunction;)Ljava/util/Comparator;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Ljava/util/PriorityQueue;-><init>(ILjava/util/Comparator;)V
 
-    .line 82
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface/range {p0 .. p0}, Ljava/util/List;->size()I
@@ -127,7 +116,6 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 83
     invoke-interface/range {p0 .. p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -158,17 +146,14 @@
 
     check-cast v9, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
-    .line 84
     new-instance v10, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;
 
     const/4 v11, 0x0
 
     invoke-direct {v10, v11}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;-><init>(Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore-IA;)V
 
-    .line 85
     invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 86
     invoke-virtual {v9}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getEventHistory()Lcom/android/server/people/data/EventHistory;
 
     move-result-object v11
@@ -177,7 +162,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_2
     invoke-virtual {v9}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getEventHistory()Lcom/android/server/people/data/EventHistory;
 
@@ -189,19 +173,16 @@
 
     move-result-object v11
 
-    .line 91
     invoke-virtual {v11}, Lcom/android/server/people/data/EventIndex;->getActiveTimeSlots()Ljava/util/List;
 
     move-result-object v11
 
-    .line 92
     invoke-interface {v11}, Ljava/util/List;->isEmpty()Z
 
     move-result v12
 
     if-nez v12, :cond_4
 
-    .line 93
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -219,7 +200,6 @@
 
     check-cast v12, Landroid/util/Range;
 
-    .line 95
     invoke-virtual {v12}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
     move-result-object v12
@@ -236,12 +216,10 @@
 
     move-result v12
 
-    .line 94
     invoke-virtual {v10, v12}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->incrementFrequencyScore(F)V
 
     goto :goto_1
 
-    .line 97
     :cond_3
     invoke-virtual {v10}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->getFrequencyScore()F
 
@@ -251,7 +229,6 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 101
     :cond_4
     invoke-virtual {v9}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getEventHistory()Lcom/android/server/people/data/EventHistory;
 
@@ -263,19 +240,16 @@
 
     move-result-object v11
 
-    .line 102
     invoke-virtual {v11}, Lcom/android/server/people/data/EventIndex;->getActiveTimeSlots()Ljava/util/List;
 
     move-result-object v11
 
-    .line 103
     invoke-interface {v11}, Ljava/util/List;->isEmpty()Z
 
     move-result v13
 
     if-nez v13, :cond_6
 
-    .line 104
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -293,7 +267,6 @@
 
     check-cast v13, Landroid/util/Range;
 
-    .line 106
     invoke-virtual {v13}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
     move-result-object v13
@@ -310,12 +283,10 @@
 
     move-result v13
 
-    .line 105
     invoke-virtual {v10, v13}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->incrementMimeFrequencyScore(F)V
 
     goto :goto_2
 
-    .line 108
     :cond_5
     invoke-virtual {v10}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->getMimeFrequencyScore()F
 
@@ -325,7 +296,6 @@
 
     add-int/lit8 v7, v7, 0x1
 
-    .line 112
     :cond_6
     invoke-virtual {v9}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getEventHistory()Lcom/android/server/people/data/EventHistory;
 
@@ -337,7 +307,6 @@
 
     move-result-object v9
 
-    .line 113
     invoke-virtual {v9}, Lcom/android/server/people/data/EventIndex;->getMostRecentActiveTimeSlot()Landroid/util/Range;
 
     move-result-object v9
@@ -346,7 +315,6 @@
 
     goto/16 :goto_0
 
-    .line 117
     :cond_7
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->size()I
 
@@ -360,7 +328,6 @@
 
     if-lt v11, v14, :cond_8
 
-    .line 118
     invoke-virtual {v9}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v11
@@ -395,7 +362,6 @@
 
     if-lez v11, :cond_1
 
-    .line 119
     :cond_8
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->size()I
 
@@ -407,10 +373,8 @@
 
     if-ne v11, v13, :cond_9
 
-    .line 120
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->poll()Ljava/lang/Object;
 
-    .line 122
     :cond_9
     new-instance v11, Landroid/util/Pair;
 
@@ -420,7 +384,6 @@
 
     goto/16 :goto_0
 
-    .line 126
     :cond_a
     :goto_3
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->isEmpty()Z
@@ -429,7 +392,6 @@
 
     if-nez v2, :cond_c
 
-    .line 128
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->size()I
 
     move-result v2
@@ -438,7 +400,6 @@
 
     if-le v2, v9, :cond_b
 
-    .line 130
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->size()I
 
     move-result v2
@@ -460,7 +421,6 @@
     :cond_b
     const v9, 0x3ecccccd    # 0.4f
 
-    .line 132
     :goto_4
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->poll()Ljava/lang/Object;
 
@@ -488,7 +448,6 @@
     :cond_d
     move v5, v4
 
-    .line 135
     :goto_5
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -505,13 +464,11 @@
     :cond_e
     move v8, v4
 
-    .line 136
     :goto_6
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
 
-    .line 137
     :goto_7
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -521,21 +478,18 @@
 
     move-object/from16 v5, p0
 
-    .line 138
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
-    .line 139
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;
 
-    .line 142
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v8
@@ -565,7 +519,6 @@
 
     float-to-double v11, v8
 
-    .line 141
     :goto_8
     invoke-static {v11, v12}, Lcom/android/server/people/prediction/SharesheetModelScorer;->normalizeFreqScore(D)F
 
@@ -573,7 +526,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->setFrequencyScore(F)V
 
-    .line 143
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v8
@@ -586,7 +538,6 @@
 
     goto :goto_9
 
-    .line 144
     :cond_10
     invoke-virtual {v7}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->getMimeFrequencyScore()F
 
@@ -600,7 +551,6 @@
 
     float-to-double v9, v8
 
-    .line 143
     :goto_9
     invoke-static {v9, v10}, Lcom/android/server/people/prediction/SharesheetModelScorer;->normalizeMimeFreqScore(D)F
 
@@ -608,7 +558,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->setMimeFrequencyScore(F)V
 
-    .line 147
     invoke-virtual {v7}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->getRecencyScore()F
 
     move-result v8
@@ -621,20 +570,16 @@
 
     move-result v8
 
-    .line 148
     invoke-virtual {v7}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->getMimeFrequencyScore()F
 
     move-result v9
 
-    .line 147
     invoke-static {v8, v9}, Lcom/android/server/people/prediction/SharesheetModelScorer;->probOR(FF)F
 
     move-result v8
 
-    .line 146
     invoke-virtual {v7, v8}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->setTotalScore(F)V
 
-    .line 149
     invoke-virtual {v7}, Lcom/android/server/people/prediction/SharesheetModelScorer$ShareTargetRankingScore;->getTotalScore()F
 
     move-result v7
@@ -652,10 +597,8 @@
 .method public static computeScoreForAppShare(Ljava/util/List;IIJLcom/android/server/people/data/DataManager;I)V
     .locals 0
 
-    .line 173
     invoke-static {p0, p1, p3, p4}, Lcom/android/server/people/prediction/SharesheetModelScorer;->computeScore(Ljava/util/List;IJ)V
 
-    .line 174
     invoke-static {p0, p2, p5, p6}, Lcom/android/server/people/prediction/SharesheetModelScorer;->postProcess(Ljava/util/List;ILcom/android/server/people/data/DataManager;I)V
 
     return-void
@@ -664,12 +607,10 @@
 .method public static findSharingForegroundApp(Ljava/util/Map;Lcom/android/server/people/data/DataManager;I)Ljava/lang/String;
     .locals 6
 
-    .line 302
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 303
     sget-wide v0, Lcom/android/server/people/prediction/SharesheetModelScorer;->FOREGROUND_APP_PROMO_TIME_WINDOW:J
 
     sub-long v2, v4, v0
@@ -682,7 +623,6 @@
 
     move-result-object p1
 
-    .line 306
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
@@ -696,7 +636,6 @@
     :goto_0
     if-ltz p2, :cond_4
 
-    .line 307
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -707,7 +646,6 @@
 
     move-result-object v2
 
-    .line 308
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -722,7 +660,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 309
     sget-object v4, Lcom/android/server/people/prediction/SharesheetModelScorer;->CHOOSER_ACTIVITY:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -734,7 +671,6 @@
     :cond_0
     sget-object v2, Lcom/android/server/people/prediction/SharesheetModelScorer;->CHOOSER_ACTIVITY:Ljava/lang/String;
 
-    .line 310
     invoke-virtual {v3, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -750,7 +686,6 @@
 
     goto :goto_1
 
-    .line 315
     :cond_2
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -782,14 +717,12 @@
 .method public static getFreqDecayedOnElapsedTime(J)F
     .locals 2
 
-    .line 333
     invoke-static {p0, p1}, Ljava/time/Duration;->ofMillis(J)Ljava/time/Duration;
 
     move-result-object p0
 
     const-wide/16 v0, 0x1
 
-    .line 334
     invoke-static {v0, v1}, Ljava/time/Duration;->ofDays(J)Ljava/time/Duration;
 
     move-result-object p1
@@ -807,7 +740,6 @@
     :cond_0
     const-wide/16 v0, 0x3
 
-    .line 336
     invoke-static {v0, v1}, Ljava/time/Duration;->ofDays(J)Ljava/time/Duration;
 
     move-result-object p1
@@ -825,7 +757,6 @@
     :cond_1
     const-wide/16 v0, 0x7
 
-    .line 338
     invoke-static {v0, v1}, Ljava/time/Duration;->ofDays(J)Ljava/time/Duration;
 
     move-result-object p1
@@ -843,7 +774,6 @@
     :cond_2
     const-wide/16 v0, 0xe
 
-    .line 340
     invoke-static {v0, v1}, Ljava/time/Duration;->ofDays(J)Ljava/time/Duration;
 
     move-result-object p1
@@ -867,7 +797,6 @@
 .method public static synthetic lambda$computeScore$0(Landroid/util/Pair;)J
     .locals 2
 
-    .line 81
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, Landroid/util/Range;
@@ -888,7 +817,6 @@
 .method public static synthetic lambda$postProcess$1(Ljava/lang/String;)Ljava/util/List;
     .locals 0
 
-    .line 184
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -899,7 +827,6 @@
 .method public static normalizeFreqScore(D)F
     .locals 2
 
-    .line 0
     const-wide/high16 v0, 0x4004000000000000L    # 2.5
 
     cmpl-double v0, p0, v0
@@ -952,7 +879,6 @@
 .method public static normalizeMimeFreqScore(D)F
     .locals 2
 
-    .line 0
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
     cmpl-double v0, p0, v0
@@ -994,12 +920,10 @@
 .method public static postProcess(Ljava/util/List;ILcom/android/server/people/data/DataManager;I)V
     .locals 6
 
-    .line 181
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 182
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1017,7 +941,6 @@
 
     check-cast v1, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
-    .line 183
     invoke-virtual {v1}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getAppTarget()Landroid/app/prediction/AppTarget;
 
     move-result-object v2
@@ -1026,14 +949,12 @@
 
     move-result-object v2
 
-    .line 184
     new-instance v3, Lcom/android/server/people/prediction/SharesheetModelScorer$$ExternalSyntheticLambda1;
 
     invoke-direct {v3}, Lcom/android/server/people/prediction/SharesheetModelScorer$$ExternalSyntheticLambda1;-><init>()V
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
 
-    .line 185
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -1042,7 +963,6 @@
 
     const/4 v3, 0x0
 
-    .line 187
     :goto_1
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -1050,7 +970,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 188
     invoke-virtual {v1}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getScore()F
 
     move-result v4
@@ -1076,18 +995,15 @@
 
     goto :goto_1
 
-    .line 193
     :cond_1
     :goto_2
     invoke-interface {v2, v3, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 195
     :cond_2
     invoke-static {v0, p2, p3}, Lcom/android/server/people/prediction/SharesheetModelScorer;->promoteForegroundApp(Ljava/util/Map;Lcom/android/server/people/data/DataManager;I)V
 
-    .line 196
     invoke-static {v0, p1, p2, p3}, Lcom/android/server/people/prediction/SharesheetModelScorer;->promoteMostChosenAndFrequentlyUsedApps(Ljava/util/Map;ILcom/android/server/people/data/DataManager;I)V
 
     return-void
@@ -1096,7 +1012,6 @@
 .method public static probOR(FF)F
     .locals 1
 
-    .line 0
     const/high16 v0, 0x3f800000    # 1.0f
 
     sub-float p0, v0, p0
@@ -1113,7 +1028,6 @@
 .method public static promoteApp(Ljava/util/Map;Ljava/util/Map;Ljava/util/function/Function;FF)F
     .locals 6
 
-    .line 239
     invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v0
@@ -1139,7 +1053,6 @@
 
     check-cast v3, Lcom/android/server/people/data/AppUsageStatsData;
 
-    .line 240
     invoke-interface {p2, v3}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -1159,7 +1072,6 @@
     :cond_0
     if-lez v2, :cond_4
 
-    .line 243
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -1182,7 +1094,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 244
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -1195,7 +1106,6 @@
 
     goto :goto_1
 
-    .line 247
     :cond_2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1213,7 +1123,6 @@
 
     check-cast v3, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
-    .line 248
     invoke-virtual {v3}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getScore()F
 
     move-result v4
@@ -1226,7 +1135,6 @@
 
     goto :goto_1
 
-    .line 251
     :cond_3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -1252,14 +1160,12 @@
 
     div-float/2addr v0, v4
 
-    .line 252
     invoke-virtual {v3, v0}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->setScore(F)V
 
     cmpl-float v3, v0, v5
 
     if-lez v3, :cond_1
 
-    .line 254
     invoke-static {p4, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result p4
@@ -1273,14 +1179,12 @@
 .method public static promoteForegroundApp(Ljava/util/Map;Lcom/android/server/people/data/DataManager;I)V
     .locals 0
 
-    .line 276
     invoke-static {p0, p1, p2}, Lcom/android/server/people/prediction/SharesheetModelScorer;->findSharingForegroundApp(Ljava/util/Map;Lcom/android/server/people/data/DataManager;I)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 279
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1295,7 +1199,6 @@
 
     check-cast p0, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
-    .line 281
     invoke-virtual {p0}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getScore()F
 
     move-result p1
@@ -1315,7 +1218,6 @@
 .method public static promoteMostChosenAndFrequentlyUsedApps(Ljava/util/Map;ILcom/android/server/people/data/DataManager;I)V
     .locals 11
 
-    .line 210
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v0
@@ -1341,7 +1243,6 @@
 
     check-cast v3, Ljava/util/List;
 
-    .line 211
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1360,7 +1261,6 @@
 
     check-cast v4, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
-    .line 212
     invoke-virtual {v4}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getScore()F
 
     move-result v5
@@ -1373,7 +1273,6 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 214
     invoke-virtual {v4}, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;->getScore()F
 
     move-result v4
@@ -1389,18 +1288,15 @@
 
     return-void
 
-    .line 222
     :cond_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
-    .line 223
     sget-wide v0, Lcom/android/server/people/prediction/SharesheetModelScorer;->ONE_MONTH_WINDOW:J
 
     sub-long v6, v8, v0
 
-    .line 225
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v10
@@ -1409,12 +1305,10 @@
 
     move v5, p3
 
-    .line 224
     invoke-virtual/range {v4 .. v10}, Lcom/android/server/people/data/DataManager;->queryAppUsageStats(IJJLjava/util/Set;)Ljava/util/Map;
 
     move-result-object p1
 
-    .line 227
     new-instance p2, Lcom/android/server/people/prediction/SharesheetModelScorer$$ExternalSyntheticLambda2;
 
     invoke-direct {p2}, Lcom/android/server/people/prediction/SharesheetModelScorer$$ExternalSyntheticLambda2;-><init>()V
@@ -1427,7 +1321,6 @@
 
     move-result p2
 
-    .line 230
     new-instance p3, Lcom/android/server/people/prediction/SharesheetModelScorer$$ExternalSyntheticLambda3;
 
     invoke-direct {p3}, Lcom/android/server/people/prediction/SharesheetModelScorer$$ExternalSyntheticLambda3;-><init>()V

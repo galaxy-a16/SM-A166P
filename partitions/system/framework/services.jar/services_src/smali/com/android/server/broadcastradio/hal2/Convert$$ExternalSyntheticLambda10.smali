@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/hardware/broadcastradio/V2_0/DabTableEntry;
 
     invoke-static {p1}, Lcom/android/server/broadcastradio/hal2/Convert;->$r8$lambda$021e3bsGPoIo22XMl3-LMB4HbLM(Landroid/hardware/broadcastradio/V2_0/DabTableEntry;)Ljava/lang/String;

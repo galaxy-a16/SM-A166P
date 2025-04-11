@@ -20,7 +20,6 @@
 
     goto :goto_0
 
-    .line 169
     :cond_1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -35,7 +34,6 @@
 
     if-nez p0, :cond_0
 
-    .line 25
     invoke-static {}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->throwJavaNpe()V
 
     :cond_0
@@ -47,7 +45,6 @@
 
     if-nez p0, :cond_0
 
-    .line 31
     invoke-static {p1}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->throwJavaNpe(Ljava/lang/String;)V
 
     :cond_0
@@ -61,7 +58,6 @@
 
     return-void
 
-    .line 93
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -95,7 +91,6 @@
 
     if-nez p0, :cond_0
 
-    .line 131
     invoke-static {p1}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->throwParameterIsNullNPE(Ljava/lang/String;)V
 
     :cond_0
@@ -105,7 +100,6 @@
 .method public static createParameterIsNullExceptionMessage(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 144
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -114,7 +108,6 @@
 
     move-result-object v0
 
-    .line 146
     const-class v1, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -123,7 +116,6 @@
 
     const/4 v2, 0x0
 
-    .line 149
     :goto_0
     aget-object v3, v0, v2
 
@@ -141,7 +133,6 @@
 
     goto :goto_0
 
-    .line 151
     :cond_0
     :goto_1
     aget-object v3, v0, v2
@@ -160,21 +151,17 @@
 
     goto :goto_1
 
-    .line 153
     :cond_1
     aget-object v0, v0, v2
 
-    .line 154
     invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 155
     invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 157
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +194,6 @@
 .method public static sanitizeStackTrace(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 1
 
-    .line 253
     const-class v0, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -224,12 +210,10 @@
 .method public static sanitizeStackTrace(Ljava/lang/Throwable;Ljava/lang/String;)Ljava/lang/Throwable;
     .locals 5
 
-    .line 257
     invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v0
 
-    .line 258
     array-length v1, v0
 
     const/4 v2, -0x1
@@ -239,7 +223,6 @@
     :goto_0
     if-ge v3, v1, :cond_1
 
-    .line 262
     aget-object v4, v0, v3
 
     invoke-virtual {v4}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
@@ -262,14 +245,12 @@
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
-    .line 267
     invoke-static {v0, v2, v1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;II)[Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, [Ljava/lang/StackTraceElement;
 
-    .line 268
     invoke-virtual {p0, p1}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
     return-object p0
@@ -278,7 +259,6 @@
 .method public static throwJavaNpe()V
     .locals 1
 
-    .line 45
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
@@ -295,7 +275,6 @@
 .method public static throwJavaNpe(Ljava/lang/String;)V
     .locals 1
 
-    .line 50
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0, p0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
@@ -312,7 +291,6 @@
 .method public static throwParameterIsNullNPE(Ljava/lang/String;)V
     .locals 1
 
-    .line 140
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-static {p0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->createParameterIsNullExceptionMessage(Ljava/lang/String;)Ljava/lang/String;
@@ -333,7 +311,6 @@
 .method public static throwUninitializedProperty(Ljava/lang/String;)V
     .locals 1
 
-    .line 54
     new-instance v0, Lcom/android/server/permission/jarjar/kotlin/UninitializedPropertyAccessException;
 
     invoke-direct {v0, p0}, Lcom/android/server/permission/jarjar/kotlin/UninitializedPropertyAccessException;-><init>(Ljava/lang/String;)V
@@ -350,7 +327,6 @@
 .method public static throwUninitializedPropertyAccessException(Ljava/lang/String;)V
     .locals 2
 
-    .line 58
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

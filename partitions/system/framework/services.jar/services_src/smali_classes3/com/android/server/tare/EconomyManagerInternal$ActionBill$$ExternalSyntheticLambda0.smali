@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
 
     invoke-static {p1}, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->$r8$lambda$rQLXKFtEQhNPJHvx39TTIhGe4o4(Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;)I

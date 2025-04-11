@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/storage/CacheQuotaStrategy$1;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 131
     iput-object p1, p0, Lcom/android/server/storage/CacheQuotaStrategy$1$1;->this$1:Lcom/android/server/storage/CacheQuotaStrategy$1;
 
     iput-object p2, p0, Lcom/android/server/storage/CacheQuotaStrategy$1$1;->val$service:Landroid/os/IBinder;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 4
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/storage/CacheQuotaStrategy$1$1;->this$1:Lcom/android/server/storage/CacheQuotaStrategy$1;
 
     iget-object v0, v0, Lcom/android/server/storage/CacheQuotaStrategy$1;->this$0:Lcom/android/server/storage/CacheQuotaStrategy;
@@ -42,7 +40,6 @@
 
     monitor-enter v0
 
-    .line 135
     :try_start_0
     iget-object v1, p0, Lcom/android/server/storage/CacheQuotaStrategy$1$1;->this$1:Lcom/android/server/storage/CacheQuotaStrategy$1;
 
@@ -56,7 +53,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/storage/CacheQuotaStrategy;->-$$Nest$fputmRemoteService(Lcom/android/server/storage/CacheQuotaStrategy;Landroid/app/usage/ICacheQuotaService;)V
 
-    .line 136
     iget-object v1, p0, Lcom/android/server/storage/CacheQuotaStrategy$1$1;->this$1:Lcom/android/server/storage/CacheQuotaStrategy$1;
 
     iget-object v1, v1, Lcom/android/server/storage/CacheQuotaStrategy$1;->this$0:Lcom/android/server/storage/CacheQuotaStrategy;
@@ -65,7 +61,6 @@
 
     move-result-object v1
 
-    .line 137
     new-instance v2, Landroid/os/RemoteCallback;
 
     iget-object v3, p0, Lcom/android/server/storage/CacheQuotaStrategy$1$1;->this$1:Lcom/android/server/storage/CacheQuotaStrategy$1;
@@ -76,7 +71,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 140
     :try_start_1
     iget-object p0, p0, Lcom/android/server/storage/CacheQuotaStrategy$1$1;->this$1:Lcom/android/server/storage/CacheQuotaStrategy$1;
 
@@ -101,10 +95,8 @@
 
     const-string v2, "Remote exception occurred while trying to get cache quota"
 
-    .line 142
     invoke-static {v1, v2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 146
     :goto_0
     monitor-exit v0
 

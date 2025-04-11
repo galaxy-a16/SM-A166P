@@ -20,7 +20,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 11
     invoke-virtual {p0, p1}, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult$1;->createFromParcel(Landroid/os/Parcel;)Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
 
     move-result-object p0
@@ -31,12 +30,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
     .locals 0
 
-    .line 14
     new-instance p0, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
 
     invoke-direct {p0}, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;-><init>()V
 
-    .line 15
     invoke-virtual {p0, p1}, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -45,7 +42,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 11
     invoke-virtual {p0, p1}, Lvendor/samsung/hardware/biometrics/fingerprint/SehResult$1;->newArray(I)[Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
 
     move-result-object p0
@@ -56,7 +52,6 @@
 .method public newArray(I)[Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
     .locals 0
 
-    .line 20
     new-array p0, p1, [Lvendor/samsung/hardware/biometrics/fingerprint/SehResult;
 
     return-object p0

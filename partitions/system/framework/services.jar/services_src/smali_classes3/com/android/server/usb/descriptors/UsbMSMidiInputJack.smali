@@ -7,7 +7,6 @@
 .method public constructor <init>(IBBI)V
     .locals 0
 
-    .line 29
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/usb/descriptors/UsbACInterface;-><init>(IBBI)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
     .locals 2
 
-    .line 35
     iget v0, p0, Lcom/android/server/usb/descriptors/UsbDescriptor;->mLength:I
 
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getReadCount()I
@@ -29,7 +27,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/ByteStream;->advance(I)V
 
-    .line 36
     iget p0, p0, Lcom/android/server/usb/descriptors/UsbDescriptor;->mLength:I
 
     return p0
@@ -38,10 +35,8 @@
 .method public report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
     .locals 2
 
-    .line 41
     invoke-super {p0, p1}, Lcom/android/server/usb/descriptors/UsbACInterface;->report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
 
-    .line 43
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 44
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbACInterface;->getSubclass()I
 
     move-result v1
@@ -79,7 +73,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 45
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbDescriptor;->getLength()I
 
     move-result p0
@@ -92,7 +85,6 @@
 
     const/4 v0, 0x3
 
-    .line 43
     invoke-virtual {p1, v0, p0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeHeader(ILjava/lang/String;)V
 
     return-void

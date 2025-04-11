@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;)V
     .locals 0
 
-    .line 238
     iput-object p1, p0, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper$2;->this$0:Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 241
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 
     return-void
 
-    .line 246
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -103,7 +100,6 @@
     :pswitch_0
     const-string p1, "android.bluetooth.device.extra.DEVICE"
 
-    .line 249
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -114,13 +110,10 @@
 
     const-string/jumbo p2, "mReceiver.onReceive - AUTO_SWITCH_MODE_CHANGED"
 
-    .line 251
     invoke-static {v0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     new-instance p2, Lcom/samsung/android/server/continuity/autoswitch/BluetoothDeviceDb$DeviceProperty;
 
-    .line 253
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v0
@@ -131,27 +124,23 @@
 
     invoke-direct {p2, v0, v2}, Lcom/samsung/android/server/continuity/autoswitch/BluetoothDeviceDb$DeviceProperty;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 254
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->semGetAutoSwitchMode()I
 
     move-result p1
 
     if-ne p1, v1, :cond_4
 
-    .line 255
     iget-object p1, p0, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper$2;->this$0:Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;
 
     invoke-static {p1, p2}, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;->-$$Nest$maddDevice(Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;Lcom/samsung/android/server/continuity/autoswitch/BluetoothDeviceDb$DeviceProperty;)V
 
     goto :goto_1
 
-    .line 257
     :cond_4
     iget-object p1, p0, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper$2;->this$0:Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;
 
     invoke-static {p1, p2}, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;->-$$Nest$mremoveDevice(Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;Lcom/samsung/android/server/continuity/autoswitch/BluetoothDeviceDb$DeviceProperty;)V
 
-    .line 259
     :goto_1
     iget-object p0, p0, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper$2;->this$0:Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;
 
@@ -159,7 +148,6 @@
 
     goto :goto_2
 
-    .line 264
     :pswitch_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -177,7 +165,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     iget-object p1, p0, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper$2;->this$0:Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;
 
     invoke-static {p1}, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;->-$$Nest$fgetmAutoSwitchableDevices(Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;)Ljava/util/ArrayList;
@@ -186,7 +173,6 @@
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 266
     iget-object p0, p0, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper$2;->this$0:Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;
 
     invoke-static {p0}, Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;->-$$Nest$msetAutoSwitchModeEnabled(Lcom/samsung/android/server/continuity/autoswitch/AutoSwitchSettingHelper;)V

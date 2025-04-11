@@ -29,27 +29,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/app/IActivityManager;Landroid/os/epic/EpicChromeDetector;)V
     .locals 2
 
-    .line 46
     invoke-direct {p0}, Landroid/app/IUidObserver$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 38
     iput-object v0, p0, Landroid/os/epic/EpicUidObserver;->mPrevPkgName:Ljava/lang/String;
 
-    .line 39
     iput-object v0, p0, Landroid/os/epic/EpicUidObserver;->mChromeDetector:Landroid/os/epic/EpicChromeDetector;
 
-    .line 40
     iput-object v0, p0, Landroid/os/epic/EpicUidObserver;->mBrowserTimerTask:Landroid/os/epic/EpicChromeTask;
 
-    .line 41
     iput-object v0, p0, Landroid/os/epic/EpicUidObserver;->mCheckTimer:Ljava/util/Timer;
 
-    .line 47
     iput-object p1, p0, Landroid/os/epic/EpicUidObserver;->mContext:Landroid/content/Context;
 
-    .line 49
     new-instance p1, Lcom/samsung/epic/Request;
 
     const/4 v1, 0x0
@@ -58,20 +51,16 @@
 
     iput-object p1, p0, Landroid/os/epic/EpicUidObserver;->mRequest:Lcom/samsung/epic/Request;
 
-    .line 51
     iput-object p2, p0, Landroid/os/epic/EpicUidObserver;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 52
     iput-object p3, p0, Landroid/os/epic/EpicUidObserver;->mActivityManager:Landroid/app/IActivityManager;
 
-    .line 53
     iput-object p4, p0, Landroid/os/epic/EpicUidObserver;->mChromeDetector:Landroid/os/epic/EpicChromeDetector;
 
     if-nez p4, :cond_0
 
     return-void
 
-    .line 58
     :cond_0
     invoke-virtual {p4}, Landroid/os/epic/EpicChromeDetector;->LinkLibrary()Z
 
@@ -79,18 +68,15 @@
 
     if-nez p1, :cond_1
 
-    .line 59
     iput-object v0, p0, Landroid/os/epic/EpicUidObserver;->mChromeDetector:Landroid/os/epic/EpicChromeDetector;
 
     goto :goto_0
 
-    .line 61
     :cond_1
     iget-object p1, p0, Landroid/os/epic/EpicUidObserver;->mChromeDetector:Landroid/os/epic/EpicChromeDetector;
 
     invoke-virtual {p1}, Landroid/os/epic/EpicChromeDetector;->Initialize()V
 
-    .line 62
     new-instance p1, Ljava/util/Timer;
 
     invoke-direct {p1}, Ljava/util/Timer;-><init>()V
@@ -106,21 +92,18 @@
 .method public onUidActive(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidCachedChanged(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidGone(IZ)V
     .locals 0
 
-    .line 110
     :try_start_0
     iget-object p2, p0, Landroid/os/epic/EpicUidObserver;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -130,14 +113,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 117
     iget-object p0, p0, Landroid/os/epic/EpicUidObserver;->mChromeDetector:Landroid/os/epic/EpicChromeDetector;
 
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 119
     invoke-virtual {p0, p1}, Landroid/os/epic/EpicChromeDetector;->RemoveUid(Ljava/lang/String;)V
 
     :catch_0
@@ -148,14 +129,12 @@
 .method public onUidIdle(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidProcAdjChanged(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -168,7 +147,6 @@
 
     return-void
 
-    .line 76
     :cond_0
     :try_start_0
     iget-object p2, p0, Landroid/os/epic/EpicUidObserver;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -179,51 +157,42 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 83
     iget-object p2, p0, Landroid/os/epic/EpicUidObserver;->mPrevPkgName:Ljava/lang/String;
 
     if-eq p2, p1, :cond_1
 
-    .line 84
     iget-object p3, p0, Landroid/os/epic/EpicUidObserver;->mRequest:Lcom/samsung/epic/Request;
 
     invoke-virtual {p3, p2}, Lcom/samsung/epic/Request;->hint_release(Ljava/lang/String;)Z
 
-    .line 86
     :cond_1
     iget-object p2, p0, Landroid/os/epic/EpicUidObserver;->mRequest:Lcom/samsung/epic/Request;
 
     invoke-virtual {p2, p1}, Lcom/samsung/epic/Request;->perf_hint(Ljava/lang/String;)Z
 
-    .line 87
     iput-object p1, p0, Landroid/os/epic/EpicUidObserver;->mPrevPkgName:Ljava/lang/String;
 
-    .line 89
     iget-object p2, p0, Landroid/os/epic/EpicUidObserver;->mChromeDetector:Landroid/os/epic/EpicChromeDetector;
 
     if-nez p2, :cond_2
 
     return-void
 
-    .line 92
     :cond_2
     iget-object p2, p0, Landroid/os/epic/EpicUidObserver;->mBrowserTimerTask:Landroid/os/epic/EpicChromeTask;
 
     if-eqz p2, :cond_3
 
-    .line 93
     invoke-virtual {p2}, Ljava/util/TimerTask;->cancel()Z
 
     move-result p2
 
     if-nez p2, :cond_3
 
-    .line 94
     iget-object p2, p0, Landroid/os/epic/EpicUidObserver;->mBrowserTimerTask:Landroid/os/epic/EpicChromeTask;
 
     invoke-virtual {p2}, Landroid/os/epic/EpicChromeTask;->setCancel()V
 
-    .line 97
     :cond_3
     new-instance p2, Landroid/os/epic/EpicChromeTask;
 
@@ -235,15 +204,12 @@
 
     iput-object p2, p0, Landroid/os/epic/EpicUidObserver;->mBrowserTimerTask:Landroid/os/epic/EpicChromeTask;
 
-    .line 98
     invoke-virtual {p2, p1}, Landroid/os/epic/EpicChromeTask;->setCheckPkgName(Ljava/lang/String;)V
 
-    .line 99
     iget-object p1, p0, Landroid/os/epic/EpicUidObserver;->mBrowserTimerTask:Landroid/os/epic/EpicChromeTask;
 
     invoke-virtual {p1}, Landroid/os/epic/EpicChromeTask;->reset()V
 
-    .line 100
     iget-object p1, p0, Landroid/os/epic/EpicUidObserver;->mCheckTimer:Ljava/util/Timer;
 
     iget-object p0, p0, Landroid/os/epic/EpicUidObserver;->mBrowserTimerTask:Landroid/os/epic/EpicChromeTask;

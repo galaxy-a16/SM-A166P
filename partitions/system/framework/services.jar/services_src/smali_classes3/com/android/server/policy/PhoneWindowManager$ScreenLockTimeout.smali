@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;)V
     .locals 0
 
-    .line 6935
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,10 +28,8 @@
 .method public run()V
     .locals 2
 
-    .line 6940
     monitor-enter p0
 
-    .line 6942
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -40,12 +37,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 6943
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;->options:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->doKeyguardTimeout(Landroid/os/Bundle;)V
 
-    .line 6945
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -53,15 +48,12 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mLockScreenTimerActive:Z
 
-    .line 6946
     invoke-static {v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$fputmLockNowPending(Lcom/android/server/policy/PhoneWindowManager;Z)V
 
     const/4 v0, 0x0
 
-    .line 6947
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;->options:Landroid/os/Bundle;
 
-    .line 6948
     monitor-exit p0
 
     return-void
@@ -79,7 +71,6 @@
 .method public setLockOptions(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 6952
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;->options:Landroid/os/Bundle;
 
     return-void

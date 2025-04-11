@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/AutofillManagerServiceImpl;)V
     .locals 0
 
-    .line 1696
     iput-object p1, p0, Lcom/android/server/autofill/AutofillManagerServiceImpl$InlineSuggestionRenderCallbacksImpl;->this$0:Lcom/android/server/autofill/AutofillManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/AutofillManagerServiceImpl;Lcom/android/server/autofill/AutofillManagerServiceImpl$InlineSuggestionRenderCallbacksImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/autofill/AutofillManagerServiceImpl$InlineSuggestionRenderCallbacksImpl;-><init>(Lcom/android/server/autofill/AutofillManagerServiceImpl;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onServiceDied(Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)V
     .locals 2
 
-    .line 1702
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,7 +52,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1703
     iget-object p0, p0, Lcom/android/server/autofill/AutofillManagerServiceImpl$InlineSuggestionRenderCallbacksImpl;->this$0:Lcom/android/server/autofill/AutofillManagerServiceImpl;
 
     const/4 p1, 0x0
@@ -68,7 +64,6 @@
 .method public bridge synthetic onServiceDied(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1696
     check-cast p1, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/autofill/AutofillManagerServiceImpl$InlineSuggestionRenderCallbacksImpl;->onServiceDied(Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)V

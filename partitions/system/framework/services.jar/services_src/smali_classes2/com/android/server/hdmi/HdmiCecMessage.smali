@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 38
     sget-object v0, Llibcore/util/EmptyArray;->BYTE:[B
 
     sput-object v0, Lcom/android/server/hdmi/HdmiCecMessage;->EMPTY_PARAM:[B
@@ -36,7 +35,6 @@
 
     and-int/lit16 v0, p3, 0xff
 
-    .line 63
     invoke-static {p1, p2, v0, p4}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->validate(III[B)I
 
     move-result v6
@@ -51,7 +49,6 @@
 
     move-object v5, p4
 
-    .line 62
     invoke-direct/range {v1 .. v6}, Lcom/android/server/hdmi/HdmiCecMessage;-><init>(III[BI)V
 
     return-void
@@ -60,21 +57,16 @@
 .method public constructor <init>(III[BI)V
     .locals 0
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mSource:I
 
-    .line 55
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mDestination:I
 
     and-int/lit16 p1, p3, 0xff
 
-    .line 56
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
-    .line 57
     array-length p1, p4
 
     invoke-static {p4, p1}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -83,7 +75,6 @@
 
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
-    .line 58
     iput p5, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mValidationResult:I
 
     return-void
@@ -92,7 +83,6 @@
 .method public static build(III)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 2
 
-    .line 88
     new-instance v0, Lcom/android/server/hdmi/HdmiCecMessage;
 
     sget-object v1, Lcom/android/server/hdmi/HdmiCecMessage;->EMPTY_PARAM:[B
@@ -115,14 +105,12 @@
 
     if-eq p2, v0, :cond_0
 
-    .line 83
     new-instance v0, Lcom/android/server/hdmi/HdmiCecMessage;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/hdmi/HdmiCecMessage;-><init>(III[B)V
 
     return-object v0
 
-    .line 81
     :cond_0
     invoke-static {p0, p1, p3}, Lcom/android/server/hdmi/ReportFeaturesMessage;->build(II[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
@@ -130,7 +118,6 @@
 
     return-object p0
 
-    .line 79
     :cond_1
     invoke-static {p0, p1, p3}, Lcom/android/server/hdmi/SetAudioVolumeLevelMessage;->build(II[B)Lcom/android/server/hdmi/HdmiCecMessage;
 
@@ -142,7 +129,6 @@
 .method public static filterMessageParameters(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x45
 
     if-eq p0, v0, :cond_0
@@ -184,7 +170,6 @@
 .method public static isCecTransportMessage(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0xa7
 
     if-eq p0, v0, :cond_0
@@ -210,7 +195,6 @@
 .method public static isUserControlPressedMessage(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x44
 
     if-ne v0, p0, :cond_0
@@ -269,7 +253,6 @@
 
     packed-switch p0, :pswitch_data_5
 
-    .line 358
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -769,7 +752,6 @@
 .method public static validationResultToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_4
 
     const/4 v0, 0x1
@@ -823,17 +805,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 93
     instance-of v0, p1, Lcom/android/server/hdmi/HdmiCecMessage;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 94
     check-cast p1, Lcom/android/server/hdmi/HdmiCecMessage;
 
-    .line 95
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mSource:I
 
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getSource()I
@@ -844,7 +823,6 @@
 
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mDestination:I
 
-    .line 96
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getDestination()I
 
     move-result v2
@@ -853,7 +831,6 @@
 
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
-    .line 97
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
     move-result v2
@@ -862,7 +839,6 @@
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
-    .line 98
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
     move-result-object v2
@@ -875,7 +851,6 @@
 
     iget p0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mValidationResult:I
 
-    .line 99
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getValidationResult()I
 
     move-result p1
@@ -891,7 +866,6 @@
 .method public getDestination()I
     .locals 0
 
-    .line 130
     iget p0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mDestination:I
 
     return p0
@@ -900,7 +874,6 @@
 .method public getOpcode()I
     .locals 0
 
-    .line 140
     iget p0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
     return p0
@@ -909,7 +882,6 @@
 .method public getParams()[B
     .locals 0
 
-    .line 151
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     return-object p0
@@ -918,7 +890,6 @@
 .method public getSource()I
     .locals 0
 
-    .line 120
     iget p0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mSource:I
 
     return p0
@@ -927,7 +898,6 @@
 .method public getValidationResult()I
     .locals 0
 
-    .line 158
     iget p0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mValidationResult:I
 
     return p0
@@ -936,31 +906,26 @@
 .method public hashCode()I
     .locals 3
 
-    .line 106
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mSource:I
 
-    .line 107
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mDestination:I
 
-    .line 108
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     iget v2, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
-    .line 109
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
-    .line 110
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result p0
@@ -973,7 +938,6 @@
 
     move-result-object p0
 
-    .line 106
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -984,15 +948,12 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .line 163
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 164
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
-    .line 165
     invoke-static {v1}, Lcom/android/server/hdmi/HdmiCecMessage;->opcodeToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1021,21 +982,18 @@
 
     const-string v2, "<%s> %X%X:%02X"
 
-    .line 164
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 166
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     array-length v1, v1
 
     if-lez v1, :cond_2
 
-    .line 167
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
     invoke-static {v1}, Lcom/android/server/hdmi/HdmiCecMessage;->filterMessageParameters(I)Z
@@ -1044,7 +1002,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 168
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     array-length v1, v1
@@ -1067,7 +1024,6 @@
 
     goto :goto_1
 
-    .line 169
     :cond_0
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
@@ -1079,12 +1035,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 170
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     aget-byte v1, v1, v2
 
-    .line 172
     invoke-static {v1}, Lcom/android/server/hdmi/HdmiCecKeycode;->getKeycodeType(B)Ljava/lang/String;
 
     move-result-object v1
@@ -1095,17 +1049,14 @@
 
     const-string v2, " <Keycode type = %s>"
 
-    .line 171
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 170
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 174
     :cond_1
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
@@ -1116,7 +1067,6 @@
 
     aget-byte v4, v1, v2
 
-    .line 175
     invoke-static {v4}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v4
@@ -1137,14 +1087,12 @@
 
     goto :goto_0
 
-    .line 179
     :cond_2
     :goto_1
     iget p0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mValidationResult:I
 
     if-eqz p0, :cond_3
 
-    .line 181
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiCecMessage;->validationResultToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1155,14 +1103,12 @@
 
     const-string v1, " <Validation error: %s>"
 
-    .line 180
     invoke-static {v1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

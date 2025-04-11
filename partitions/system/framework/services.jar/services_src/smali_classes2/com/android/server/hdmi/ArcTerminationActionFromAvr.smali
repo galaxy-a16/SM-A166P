@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$62CI5oa6atTA8ILKAU5AAkr59wQ(Lcom/android/server/hdmi/ArcTerminationActionFromAvr;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/ArcTerminationActionFromAvr;->lambda$sendTerminateArc$0(I)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
     .locals 0
 
-    .line 35
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;Landroid/hardware/hdmi/IHdmiControlCallback;)V
     .locals 0
 
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/android/server/hdmi/HdmiCecFeatureAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
     return-void
@@ -42,7 +39,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->audioSystem()Lcom/android/server/hdmi/HdmiCecLocalDeviceAudioSystem;
 
     move-result-object p1
@@ -54,12 +50,10 @@
 
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 96
     invoke-static {p1, v0}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p1, 0x3
 
-    .line 97
     invoke-virtual {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finishWithCallback(I)V
 
     :cond_1
@@ -71,7 +65,6 @@
 .method public bridge synthetic addCallback(Landroid/hardware/hdmi/IHdmiControlCallback;)V
     .locals 0
 
-    .line 25
     invoke-super {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->addCallback(Landroid/hardware/hdmi/IHdmiControlCallback;)V
 
     return-void
@@ -80,7 +73,6 @@
 .method public final handleTerminateArcTimeout()V
     .locals 2
 
-    .line 104
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->audioSystem()Lcom/android/server/hdmi/HdmiCecLocalDeviceAudioSystem;
 
     move-result-object v0
@@ -93,12 +85,10 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 105
     invoke-static {v0, v1}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v0, 0x1
 
-    .line 106
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finishWithCallback(I)V
 
     return-void
@@ -107,7 +97,6 @@
 .method public handleTimerEvent(I)V
     .locals 1
 
-    .line 76
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction;->mState:I
 
     if-eq v0, p1, :cond_0
@@ -121,7 +110,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/hdmi/ArcTerminationActionFromAvr;->handleTerminateArcTimeout()V
 
@@ -132,7 +120,6 @@
 .method public processCommand(Lcom/android/server/hdmi/HdmiCecMessage;)Z
     .locals 4
 
-    .line 52
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction;->mState:I
 
     const/4 v1, 0x0
@@ -143,7 +130,6 @@
 
     return v1
 
-    .line 55
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -159,23 +145,19 @@
 
     return v1
 
-    .line 66
     :cond_1
     iput v3, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction;->mState:I
 
-    .line 67
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->audioSystem()Lcom/android/server/hdmi/HdmiCecLocalDeviceAudioSystem;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecLocalDeviceAudioSystem;->processArcTermination()V
 
-    .line 68
     invoke-virtual {p0, v1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finishWithCallback(I)V
 
     return v2
 
-    .line 57
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getParams()[B
 
@@ -189,10 +171,8 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 59
     iput v3, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction;->mState:I
 
-    .line 60
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->audioSystem()Lcom/android/server/hdmi/HdmiCecLocalDeviceAudioSystem;
 
     move-result-object p1
@@ -201,7 +181,6 @@
 
     const/4 p1, 0x3
 
-    .line 61
     invoke-virtual {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finishWithCallback(I)V
 
     return v2
@@ -213,7 +192,6 @@
 .method public sendTerminateArc()V
     .locals 2
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->getSourceAddress()I
 
     move-result v0
@@ -238,15 +216,12 @@
 
     const/4 v0, 0x1
 
-    .line 44
     iput v0, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction;->mState:I
 
     const/16 v1, 0x3e8
 
-    .line 45
     invoke-virtual {p0, v0, v1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->addTimer(II)V
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/hdmi/ArcTerminationActionFromAvr;->sendTerminateArc()V
 
     return v0

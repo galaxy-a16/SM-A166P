@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/server/packagefeature/PackageFeatureController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures$$ExternalSyntheticLambda3;->f$0:Lcom/samsung/android/server/packagefeature/PackageFeatureController;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatures$$ExternalSyntheticLambda3;->f$0:Lcom/samsung/android/server/packagefeature/PackageFeatureController;
 
     invoke-static {p0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->$r8$lambda$6bv703M16_wiGPpoP4Ylz8HA_bI(Lcom/samsung/android/server/packagefeature/PackageFeatureController;)V

@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/IContentService;)V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 29
     iput-object p1, p0, Lcom/android/server/content/ContentShellCommand;->mInterface:Landroid/content/IContentService;
 
     return-void
@@ -27,14 +25,12 @@
 
     if-nez p1, :cond_0
 
-    .line 35
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 38
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -42,7 +38,6 @@
 
     const/4 v1, -0x1
 
-    .line 40
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -74,14 +69,12 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 44
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 42
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/content/ContentShellCommand;->runResetTodayStats()I
 
@@ -94,7 +87,6 @@
     :catch_0
     move-exception p0
 
-    .line 47
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,42 +109,34 @@
 .method public onHelp()V
     .locals 1
 
-    .line 59
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Content service commands:"
 
-    .line 60
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 61
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 62
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, ""
 
-    .line 63
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  reset-today-stats"
 
-    .line 64
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Reset 1-day sync stats."
 
-    .line 65
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -161,7 +145,6 @@
 .method public final runResetTodayStats()I
     .locals 0
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/content/ContentShellCommand;->mInterface:Landroid/content/IContentService;
 
     invoke-interface {p0}, Landroid/content/IContentService;->resetTodayStats()V

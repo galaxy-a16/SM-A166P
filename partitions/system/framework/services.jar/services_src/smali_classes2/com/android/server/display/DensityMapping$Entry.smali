@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 121
     new-instance v0, Lcom/android/server/display/DensityMapping$Entry;
 
     const/4 v1, 0x0
@@ -32,7 +31,6 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     mul-int/2addr p1, p1
@@ -41,10 +39,8 @@
 
     add-int/2addr p1, p2
 
-    .line 127
     iput p1, p0, Lcom/android/server/display/DensityMapping$Entry;->squaredDiagonal:I
 
-    .line 128
     iput p3, p0, Lcom/android/server/display/DensityMapping$Entry;->density:I
 
     return-void
@@ -55,7 +51,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

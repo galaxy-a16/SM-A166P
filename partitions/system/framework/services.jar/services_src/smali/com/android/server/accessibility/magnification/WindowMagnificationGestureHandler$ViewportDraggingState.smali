@@ -20,17 +20,14 @@
 .method public constructor <init>(Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;)V
     .locals 0
 
-    .line 425
     iput-object p1, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 p1, 0x7fc00000    # Float.NaN
 
-    .line 430
     iput p1, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->mLastX:F
 
-    .line 431
     iput p1, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->mLastY:F
 
     return-void
@@ -43,10 +40,8 @@
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 459
     iput v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->mLastX:F
 
-    .line 460
     iput v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->mLastY:F
 
     return-void
@@ -55,7 +50,6 @@
 .method public onExit()V
     .locals 0
 
-    .line 465
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->clear()V
 
     return-void
@@ -64,7 +58,6 @@
 .method public onMotionEvent(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 2
 
-    .line 435
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result p2
@@ -83,7 +76,6 @@
 
     goto :goto_0
 
-    .line 438
     :cond_0
     iget p2, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->mLastX:F
 
@@ -101,7 +93,6 @@
 
     if-nez p2, :cond_1
 
-    .line 439
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result p2
@@ -110,7 +101,6 @@
 
     sub-float/2addr p2, p3
 
-    .line 440
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result p3
@@ -119,7 +109,6 @@
 
     sub-float/2addr p3, v0
 
-    .line 441
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;->-$$Nest$fgetmWindowMagnificationMgr(Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;)Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
@@ -132,7 +121,6 @@
 
     invoke-virtual {v0, v1, p2, p3}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->moveWindowMagnification(IFF)V
 
-    .line 444
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -140,7 +128,6 @@
 
     iput p2, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->mLastX:F
 
-    .line 445
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
@@ -149,7 +136,6 @@
 
     goto :goto_0
 
-    .line 451
     :cond_2
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$ViewportDraggingState;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;
 
@@ -162,7 +148,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 470
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

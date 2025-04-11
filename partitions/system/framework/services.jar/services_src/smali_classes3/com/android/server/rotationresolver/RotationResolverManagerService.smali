@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$i7jNWX8Hn1XXr_YvjG0guy1wHUk(Lcom/android/server/rotationresolver/RotationResolverManagerService;Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->lambda$onBootPhase$0(Landroid/provider/DeviceConfig$Properties;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/rotationresolver/RotationResolverManagerService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPrivacyManager(Lcom/android/server/rotationresolver/RotationResolverManagerService;)Landroid/hardware/SensorPrivacyManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerService;->mPrivacyManager:Landroid/hardware/SensorPrivacyManager;
 
     return-object p0
@@ -46,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/rotationresolver/RotationResolverManagerService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -55,14 +51,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 91
     new-instance v0, Lcom/android/server/infra/FrameworkResourcesServiceNameResolver;
 
     const v1, 0x104030f
@@ -75,10 +69,8 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/server/infra/AbstractMasterSystemService;-><init>(Landroid/content/Context;Lcom/android/server/infra/ServiceNameResolver;Ljava/lang/String;I)V
 
-    .line 97
     iput-object p1, p0, Lcom/android/server/rotationresolver/RotationResolverManagerService;->mContext:Landroid/content/Context;
 
-    .line 98
     invoke-static {p1}, Landroid/hardware/SensorPrivacyManager;->getInstance(Landroid/content/Context;)Landroid/hardware/SensorPrivacyManager;
 
     move-result-object p1
@@ -91,7 +83,6 @@
 .method public static synthetic access$000(Lcom/android/server/rotationresolver/RotationResolverManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -100,7 +91,6 @@
 .method public static synthetic access$100(Lcom/android/server/rotationresolver/RotationResolverManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -109,7 +99,6 @@
 .method public static synthetic access$200(Lcom/android/server/rotationresolver/RotationResolverManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -120,7 +109,6 @@
 .method public static synthetic access$300(Lcom/android/server/rotationresolver/RotationResolverManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -129,7 +117,6 @@
 .method public static synthetic access$400(Lcom/android/server/rotationresolver/RotationResolverManagerService;Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1, p2}, Lcom/android/server/infra/AbstractMasterSystemService;->dumpLocked(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
     return-void
@@ -138,7 +125,6 @@
 .method public static errorCodeToProto(I)I
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_1
 
     const/4 v0, 0x1
@@ -171,7 +157,6 @@
 .method public static getServiceConfigPackage(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    .line 171
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -186,7 +171,6 @@
 .method public static isServiceConfigured(Landroid/content/Context;)Z
     .locals 0
 
-    .line 143
     invoke-static {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->getServiceConfigPackage(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -203,7 +187,6 @@
 .method private synthetic lambda$onBootPhase$0(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 106
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
     move-result-object p1
@@ -216,19 +199,16 @@
 .method public static logRotationStats(III)V
     .locals 1
 
-    .line 257
     invoke-static {p1}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->surfaceRotationToProto(I)I
 
     move-result p1
 
-    .line 258
     invoke-static {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->surfaceRotationToProto(I)I
 
     move-result p0
 
     const/16 v0, 0x148
 
-    .line 256
     invoke-static {v0, p1, p0, p2}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIII)V
 
     return-void
@@ -239,12 +219,10 @@
 
     const/16 v0, 0x148
 
-    .line 248
     invoke-static {p1}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->surfaceRotationToProto(I)I
 
     move-result v1
 
-    .line 249
     invoke-static {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->surfaceRotationToProto(I)I
 
     move-result v2
@@ -253,7 +231,6 @@
 
     move-wide v4, p3
 
-    .line 247
     invoke-static/range {v0 .. v5}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIIIJ)V
 
     return-void
@@ -262,7 +239,6 @@
 .method public static surfaceRotationToProto(I)I
     .locals 3
 
-    .line 0
     const/4 v0, 0x2
 
     if-eqz p0, :cond_3
@@ -303,12 +279,10 @@
 .method public getComponentNameShellCommand(I)Landroid/content/ComponentName;
     .locals 1
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 148
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
@@ -318,7 +292,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 150
     invoke-virtual {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p0
@@ -327,7 +300,6 @@
 
     return-object p0
 
-    .line 152
     :cond_0
     monitor-exit v0
 
@@ -348,7 +320,6 @@
 .method public bridge synthetic newServiceLocked(IZ)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1, p2}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->newServiceLocked(IZ)Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;
 
     move-result-object p0
@@ -359,7 +330,6 @@
 .method public newServiceLocked(IZ)Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;
     .locals 1
 
-    .line 130
     new-instance p2, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;
 
     iget-object v0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
@@ -376,7 +346,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -391,14 +360,12 @@
 
     const-string/jumbo v1, "rotation_resolver"
 
-    .line 104
     invoke-static {v1, p1, v0}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     const-string/jumbo p1, "service_enabled"
 
     const/4 v0, 0x1
 
-    .line 108
     invoke-static {v1, p1, v0}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p1
@@ -414,7 +381,6 @@
 
     const-string/jumbo v0, "service_enabled"
 
-    .line 114
     invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p1
@@ -425,7 +391,6 @@
 
     const/4 v1, 0x1
 
-    .line 115
     invoke-static {p1, v0, v1}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p1
@@ -439,7 +404,6 @@
 .method public bridge synthetic onServiceRemoved(Lcom/android/server/infra/AbstractPerUserSystemService;I)V
     .locals 0
 
-    .line 66
     check-cast p1, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/rotationresolver/RotationResolverManagerService;->onServiceRemoved(Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;I)V
@@ -450,16 +414,13 @@
 .method public onServiceRemoved(Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;I)V
     .locals 0
 
-    .line 136
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 137
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->destroyLocked()V
 
-    .line 138
     monitor-exit p0
 
     return-void
@@ -477,7 +438,6 @@
 .method public onStart()V
     .locals 3
 
-    .line 122
     new-instance v0, Lcom/android/server/rotationresolver/RotationResolverManagerService$BinderService;
 
     const/4 v1, 0x0
@@ -488,7 +448,6 @@
 
     invoke-virtual {p0, v2, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 123
     const-class v0, Landroid/rotationresolver/RotationResolverInternal;
 
     new-instance v2, Lcom/android/server/rotationresolver/RotationResolverManagerService$LocalService;
@@ -503,12 +462,10 @@
 .method public resolveRotationShellCommand(ILandroid/rotationresolver/RotationResolverInternal$RotationResolverCallbackInternal;Landroid/service/rotationresolver/RotationResolutionRequest;)V
     .locals 1
 
-    .line 159
     iget-object v0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 160
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
@@ -518,7 +475,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 162
     new-instance p1, Landroid/os/CancellationSignal;
 
     invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
@@ -527,7 +483,6 @@
 
     goto :goto_0
 
-    .line 164
     :cond_0
     sget-object p0, Lcom/android/server/rotationresolver/RotationResolverManagerService;->TAG:Ljava/lang/String;
 
@@ -547,7 +502,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     :goto_0
     monitor-exit v0
 

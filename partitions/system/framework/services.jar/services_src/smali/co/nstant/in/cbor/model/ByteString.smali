@@ -11,7 +11,6 @@
 .method public constructor <init>([B)V
     .locals 1
 
-    .line 10
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->BYTE_STRING:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-direct {p0, v0}, Lco/nstant/in/cbor/model/ChunkableDataItem;-><init>(Lco/nstant/in/cbor/model/MajorType;)V
@@ -20,12 +19,10 @@
 
     const/4 p1, 0x0
 
-    .line 12
     iput-object p1, p0, Lco/nstant/in/cbor/model/ByteString;->bytes:[B
 
     goto :goto_0
 
-    .line 14
     :cond_0
     iput-object p1, p0, Lco/nstant/in/cbor/model/ByteString;->bytes:[B
 
@@ -38,19 +35,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 28
     instance-of v0, p1, Lco/nstant/in/cbor/model/ByteString;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 29
     move-object v0, p1
 
     check-cast v0, Lco/nstant/in/cbor/model/ByteString;
 
-    .line 30
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/ChunkableDataItem;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -76,7 +70,6 @@
 .method public getBytes()[B
     .locals 0
 
-    .line 19
     iget-object p0, p0, Lco/nstant/in/cbor/model/ByteString;->bytes:[B
 
     if-nez p0, :cond_0
@@ -90,7 +83,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 37
     invoke-super {p0}, Lco/nstant/in/cbor/model/ChunkableDataItem;->hashCode()I
 
     move-result v0
@@ -109,7 +101,6 @@
 .method public bridge synthetic isChunked()Z
     .locals 0
 
-    .line 5
     invoke-super {p0}, Lco/nstant/in/cbor/model/ChunkableDataItem;->isChunked()Z
 
     move-result p0
@@ -120,7 +111,6 @@
 .method public bridge synthetic setChunked(Z)Lco/nstant/in/cbor/model/ChunkableDataItem;
     .locals 0
 
-    .line 5
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/ChunkableDataItem;->setChunked(Z)Lco/nstant/in/cbor/model/ChunkableDataItem;
 
     move-result-object p0

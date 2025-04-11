@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/permission/access/permission/PermissionService;I)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener$onStateMutated$3$1;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
     iput p2, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener$onStateMutated$3$1;->$uid:I
@@ -31,7 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .line 2214
     iget-object v0, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener$onStateMutated$3$1;->this$0:Lcom/android/server/permission/access/permission/PermissionService;
 
     iget p0, p0, Lcom/android/server/permission/access/permission/PermissionService$OnPermissionFlagsChangedListener$onStateMutated$3$1;->$uid:I

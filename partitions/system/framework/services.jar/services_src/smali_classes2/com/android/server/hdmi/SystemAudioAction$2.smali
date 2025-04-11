@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/SystemAudioAction;)V
     .locals 0
 
-    .line 91
     iput-object p1, p0, Lcom/android/server/hdmi/SystemAudioAction$2;->this$0:Lcom/android/server/hdmi/SystemAudioAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,12 +48,10 @@
 
     invoke-static {p1, v1}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 96
     iget-object p1, p0, Lcom/android/server/hdmi/SystemAudioAction$2;->this$0:Lcom/android/server/hdmi/SystemAudioAction;
 
     invoke-virtual {p1, v0}, Lcom/android/server/hdmi/SystemAudioAction;->setSystemAudioMode(Z)V
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/hdmi/SystemAudioAction$2;->this$0:Lcom/android/server/hdmi/SystemAudioAction;
 
     const/4 p1, 0x7

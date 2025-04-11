@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$js-Y9FebQDCXhe5N3-DQvkos1dE(Lcom/android/server/am/KillPolicyManager$PsiFile;Lcom/android/server/am/KillPolicyManager$PsiDataType;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/KillPolicyManager$PsiFile;->lambda$new$0(Lcom/android/server/am/KillPolicyManager$PsiDataType;Ljava/lang/String;)V
 
     return-void
@@ -28,10 +27,8 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/android/server/am/KillPolicyManager$PsiDataType;)V
     .locals 1
 
-    .line 3731
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3732
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -40,12 +37,10 @@
 
     const-string v0, "\n"
 
-    .line 3733
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3734
     invoke-static {p1}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
 
     move-result-object p1
@@ -61,7 +56,6 @@
     :cond_0
     const/4 p1, 0x1
 
-    .line 3750
     iput-boolean p1, p0, Lcom/android/server/am/KillPolicyManager$PsiFile;->mIsEmptyFile:Z
 
     :goto_0
@@ -73,7 +67,6 @@
 
     const-string/jumbo v0, "some"
 
-    .line 3735
     invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -88,12 +81,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 3736
     sget-object v0, Lcom/android/server/am/KillPolicyManager$PsiDataType;->AVG10:Lcom/android/server/am/KillPolicyManager$PsiDataType;
 
     if-ne p1, v0, :cond_0
 
-    .line 3737
     invoke-virtual {p0, p2, v4, v3}, Lcom/android/server/am/KillPolicyManager$PsiFile;->getItem(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -106,13 +97,11 @@
 
     goto :goto_0
 
-    .line 3738
     :cond_0
     sget-object v0, Lcom/android/server/am/KillPolicyManager$PsiDataType;->TOTAL:Lcom/android/server/am/KillPolicyManager$PsiDataType;
 
     if-ne p1, v0, :cond_3
 
-    .line 3739
     invoke-virtual {p0, p2, v2, v1}, Lcom/android/server/am/KillPolicyManager$PsiFile;->getItem(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -128,19 +117,16 @@
     :cond_1
     const-string v0, "full"
 
-    .line 3741
     invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 3742
     sget-object v0, Lcom/android/server/am/KillPolicyManager$PsiDataType;->AVG10:Lcom/android/server/am/KillPolicyManager$PsiDataType;
 
     if-ne p1, v0, :cond_2
 
-    .line 3743
     invoke-virtual {p0, p2, v4, v3}, Lcom/android/server/am/KillPolicyManager$PsiFile;->getItem(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -153,13 +139,11 @@
 
     goto :goto_0
 
-    .line 3744
     :cond_2
     sget-object v0, Lcom/android/server/am/KillPolicyManager$PsiDataType;->TOTAL:Lcom/android/server/am/KillPolicyManager$PsiDataType;
 
     if-ne p1, v0, :cond_3
 
-    .line 3745
     invoke-virtual {p0, p2, v2, v1}, Lcom/android/server/am/KillPolicyManager$PsiFile;->getItem(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -182,12 +166,10 @@
 
     const-string p0, " "
 
-    .line 3755
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 3756
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,7 +184,6 @@
 
     move-result-object p1
 
-    .line 3758
     array-length p2, p0
 
     if-le p2, p3, :cond_0
@@ -215,7 +196,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 3759
     aget-object p0, p0, p3
 
     const-string p2, ""
@@ -235,7 +215,6 @@
 .method public getSomeAvg10()D
     .locals 2
 
-    .line 3766
     iget-wide v0, p0, Lcom/android/server/am/KillPolicyManager$PsiFile;->mSomeAvg10:D
 
     return-wide v0
@@ -244,7 +223,6 @@
 .method public isEmpty()Z
     .locals 0
 
-    .line 3778
     iget-boolean p0, p0, Lcom/android/server/am/KillPolicyManager$PsiFile;->mIsEmptyFile:Z
 
     return p0

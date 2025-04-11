@@ -60,7 +60,6 @@
 .method public static synthetic $r8$lambda$8JoTyNErLh0kNjQHvOgBbVMQGRw(Ljava/lang/StringBuilder;Lcom/android/server/wallpaper/WallpaperManagerService$DisplayConnector;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wallpaper/WallpaperData;->lambda$toString$0(Ljava/lang/StringBuilder;Lcom/android/server/wallpaper/WallpaperManagerService$DisplayConnector;)V
 
     return-void
@@ -69,12 +68,10 @@
 .method public constructor <init>(II)V
     .locals 4
 
-    .line 199
     invoke-static {p1}, Lcom/android/server/wallpaper/WallpaperUtils;->getWallpaperDir(I)Ljava/io/File;
 
     move-result-object v0
 
-    .line 200
     invoke-static {p2}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isPhone(I)Z
 
     move-result v1
@@ -101,7 +98,6 @@
     :cond_1
     move-object v1, v2
 
-    .line 201
     :goto_0
     invoke-static {p2}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isPhone(I)Z
 
@@ -122,15 +118,12 @@
     :cond_2
     const-string/jumbo v2, "wallpaper"
 
-    .line 199
     :cond_3
     :goto_1
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/server/wallpaper/WallpaperData;-><init>(ILjava/io/File;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 203
     invoke-static {p2}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->assertModeIsPresent(I)V
 
-    .line 204
     iput p2, p0, Lcom/android/server/wallpaper/WallpaperData;->mWhich:I
 
     return-void
@@ -139,34 +132,28 @@
 .method public constructor <init>(ILjava/io/File;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
-    .line 119
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->name:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 157
     iput v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mWallpaperDimAmount:F
 
-    .line 163
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mUidToDimAmount:Landroid/util/SparseArray;
 
-    .line 174
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->callbacks:Landroid/os/RemoteCallbackList;
 
-    .line 182
     new-instance v0, Landroid/graphics/Rect;
 
     const/4 v1, 0x0
@@ -175,19 +162,16 @@
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->cropHint:Landroid/graphics/Rect;
 
-    .line 186
     new-instance v0, Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-direct {v0}, Lcom/samsung/server/wallpaper/SemWallpaperData;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
-    .line 210
     iput p1, p0, Lcom/android/server/wallpaper/WallpaperData;->userId:I
 
     if-eqz p3, :cond_1
 
-    .line 212
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p2, p3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -196,14 +180,12 @@
 
     if-eqz p4, :cond_0
 
-    .line 214
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p2, p4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
-    .line 216
     :cond_0
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -216,34 +198,28 @@
 .method public constructor <init>(Lcom/android/server/wallpaper/WallpaperData;)V
     .locals 2
 
-    .line 230
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
-    .line 119
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->name:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 157
     iput v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mWallpaperDimAmount:F
 
-    .line 163
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mUidToDimAmount:Landroid/util/SparseArray;
 
-    .line 174
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->callbacks:Landroid/os/RemoteCallbackList;
 
-    .line 182
     new-instance v0, Landroid/graphics/Rect;
 
     const/4 v1, 0x0
@@ -252,76 +228,62 @@
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->cropHint:Landroid/graphics/Rect;
 
-    .line 186
     new-instance v0, Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-direct {v0}, Lcom/samsung/server/wallpaper/SemWallpaperData;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
-    .line 231
     iget v0, p1, Lcom/android/server/wallpaper/WallpaperData;->userId:I
 
     iput v0, p0, Lcom/android/server/wallpaper/WallpaperData;->userId:I
 
-    .line 232
     iget-object v0, p1, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
-    .line 233
     iget-object v0, p1, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
-    .line 234
     iget-object v0, p1, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
-    .line 235
     iget v0, p1, Lcom/android/server/wallpaper/WallpaperData;->mWhich:I
 
     iput v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mWhich:I
 
-    .line 236
     iget v0, p1, Lcom/android/server/wallpaper/WallpaperData;->wallpaperId:I
 
     iput v0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperId:I
 
-    .line 237
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->cropHint:Landroid/graphics/Rect;
 
     iget-object v1, p1, Lcom/android/server/wallpaper/WallpaperData;->cropHint:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 238
     iget-boolean v0, p1, Lcom/android/server/wallpaper/WallpaperData;->allowBackup:Z
 
     iput-boolean v0, p0, Lcom/android/server/wallpaper/WallpaperData;->allowBackup:Z
 
-    .line 239
     iget-object v0, p1, Lcom/android/server/wallpaper/WallpaperData;->primaryColors:Landroid/app/WallpaperColors;
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->primaryColors:Landroid/app/WallpaperColors;
 
-    .line 240
     iget v0, p1, Lcom/android/server/wallpaper/WallpaperData;->mWallpaperDimAmount:F
 
     iput v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mWallpaperDimAmount:F
 
-    .line 241
     iget-object v0, p1, Lcom/android/server/wallpaper/WallpaperData;->connection:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->connection:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
 
     if-eqz v0, :cond_0
 
-    .line 243
     iput-object p0, v0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;->mWallpaper:Lcom/android/server/wallpaper/WallpaperData;
 
-    .line 246
     :cond_0
     iget-object p1, p1, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -331,7 +293,6 @@
 
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
-    .line 247
     iget p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mWhich:I
 
     invoke-static {p0}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->assertModeIsPresent(I)V
@@ -342,7 +303,6 @@
 .method public static defaultString(Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
 
-    .line 287
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -381,17 +341,14 @@
 .method public static synthetic lambda$toString$0(Ljava/lang/StringBuilder;Lcom/android/server/wallpaper/WallpaperManagerService$DisplayConnector;)V
     .locals 1
 
-    .line 267
     iget-object v0, p1, Lcom/android/server/wallpaper/WallpaperManagerService$DisplayConnector;->mEngine:Landroid/service/wallpaper/IWallpaperEngine;
 
     if-eqz v0, :cond_0
 
     const-string v0, " "
 
-    .line 268
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 269
     iget-object p1, p1, Lcom/android/server/wallpaper/WallpaperManagerService$DisplayConnector;->mEngine:Landroid/service/wallpaper/IWallpaperEngine;
 
     invoke-static {p1}, Lcom/android/server/wallpaper/WallpaperData;->defaultString(Ljava/lang/Object;)Ljava/lang/String;
@@ -405,7 +362,6 @@
     :cond_0
     const-string p1, " null"
 
-    .line 271
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_0
@@ -421,17 +377,14 @@
 
     const-string v1, "WallpaperData"
 
-    .line 472
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWpType()I
 
     move-result v0
 
-    .line 474
     sget-boolean v2, Lcom/samsung/android/wallpaper/Rune;->SUPPORT_VIDEO_WALLPAPER:Z
 
     const/16 v3, 0x8
@@ -442,7 +395,6 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 476
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -459,7 +411,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getVideoFirstFrameFile()Ljava/io/File;
@@ -480,7 +431,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 478
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,7 +457,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v2}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getVideoFirstFrameFile()Ljava/io/File;
@@ -516,17 +465,14 @@
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 480
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v2, v4}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setVideoFirstFrameFile(Ljava/io/File;)V
 
-    .line 481
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v2, v4}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setVideoPkgName(Ljava/lang/String;)V
 
-    .line 482
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v2, v4}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setVideoFileName(Ljava/lang/String;)V
@@ -534,7 +480,6 @@
     :cond_0
     if-eqz v0, :cond_3
 
-    .line 488
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -557,7 +502,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
     if-eqz v2, :cond_1
@@ -568,7 +512,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 490
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -591,16 +534,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 493
     :cond_1
     iput-object v4, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
-    .line 495
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
     if-eqz v2, :cond_2
@@ -611,7 +551,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 496
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -634,16 +573,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 497
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 499
     :cond_2
     iput-object v4, p0, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
-    .line 500
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     const/4 v5, 0x0
@@ -667,7 +603,6 @@
 
     if-eq v0, v2, :cond_4
 
-    .line 508
     iget-object v3, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v3, v4}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setExternalParams(Landroid/os/Bundle;)V
@@ -677,7 +612,6 @@
 
     if-eq v0, v3, :cond_5
 
-    .line 512
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -694,7 +628,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
     iget-object v3, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v3}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getAnimatedBackground()Ljava/io/File;
@@ -715,7 +648,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 514
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -742,7 +674,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 515
     iget-object v3, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v3}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getAnimatedBackground()Ljava/io/File;
@@ -751,12 +682,10 @@
 
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 516
     iget-object v3, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v3, v4}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setAnimatedBackground(Ljava/io/File;)V
 
-    .line 517
     iget-object v3, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v3, v4}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setAnimatedPkgName(Ljava/lang/String;)V
@@ -766,7 +695,6 @@
 
     if-eq v0, v3, :cond_6
 
-    .line 522
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -783,7 +711,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 523
     iget-object v3, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v3}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getMotionBackground()Ljava/io/File;
@@ -804,7 +731,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 524
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -831,7 +757,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getMotionBackground()Ljava/io/File;
@@ -840,23 +765,19 @@
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 526
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v1, v4}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setMotionBackground(Ljava/io/File;)V
 
-    .line 527
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v1, v4}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setMotionPkgName(Ljava/lang/String;)V
 
-    .line 531
     :cond_6
     sget-boolean v1, Lcom/samsung/android/wallpaper/Rune;->SUPPORT_PREVIEW_LOCK_ONLY_LIVE_WALLPAPER:Z
 
     if-eqz v1, :cond_7
 
-    .line 532
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWhich()I
@@ -871,10 +792,8 @@
 
     if-eq v0, v2, :cond_7
 
-    .line 534
     iput-object v4, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
-    .line 538
     :cond_7
     iput-object v4, p0, Lcom/android/server/wallpaper/WallpaperData;->primaryColors:Landroid/app/WallpaperColors;
 
@@ -884,7 +803,6 @@
 .method public clone()Lcom/android/server/wallpaper/WallpaperData;
     .locals 3
 
-    .line 566
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -892,7 +810,6 @@
 
     check-cast v0, Lcom/android/server/wallpaper/WallpaperData;
 
-    .line 567
     new-instance v1, Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperData;->cropHint:Landroid/graphics/Rect;
@@ -901,7 +818,6 @@
 
     iput-object v1, v0, Lcom/android/server/wallpaper/WallpaperData;->cropHint:Landroid/graphics/Rect;
 
-    .line 568
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {p0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->clone()Lcom/samsung/server/wallpaper/SemWallpaperData;
@@ -917,7 +833,6 @@
     :catch_0
     move-exception p0
 
-    .line 571
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -944,7 +859,6 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/server/wallpaper/WallpaperData;->clone()Lcom/android/server/wallpaper/WallpaperData;
 
     move-result-object p0
@@ -955,7 +869,6 @@
 .method public cropExists()Z
     .locals 0
 
-    .line 294
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
     if-nez p0, :cond_0
@@ -964,7 +877,6 @@
 
     return p0
 
-    .line 299
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -976,7 +888,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 577
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -995,7 +906,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 578
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1014,7 +924,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 579
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1033,7 +942,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 580
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1052,7 +960,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 583
     :try_start_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1076,7 +983,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 584
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1099,7 +1005,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 585
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1122,7 +1027,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 586
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1141,7 +1045,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 587
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1164,7 +1067,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 588
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1183,7 +1085,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 589
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1204,7 +1105,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 591
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {p1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWpType()I
@@ -1215,7 +1115,6 @@
 
     if-ne p1, p3, :cond_0
 
-    .line 592
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1238,7 +1137,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 594
     :cond_0
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1250,7 +1148,6 @@
 
     if-ne p1, p3, :cond_1
 
-    .line 595
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1273,7 +1170,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 597
     :cond_1
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1285,7 +1181,6 @@
 
     if-ne p1, p3, :cond_2
 
-    .line 598
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1308,7 +1203,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 599
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1331,7 +1225,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 600
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1354,7 +1247,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 601
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1384,7 +1276,6 @@
     :catch_0
     move-exception p0
 
-    .line 604
     invoke-virtual {p0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     :cond_2
@@ -1395,7 +1286,6 @@
 .method public getNextWallpaperComponent()Landroid/content/ComponentName;
     .locals 0
 
-    .line 338
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->nextWallpaperComponent:Landroid/content/ComponentName;
 
     return-object p0
@@ -1404,7 +1294,6 @@
 .method public getOrientation()I
     .locals 0
 
-    .line 433
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {p0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getOrientation()I
@@ -1417,7 +1306,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 3
 
-    .line 542
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWpType()I
@@ -1446,7 +1334,6 @@
 
     return-object v2
 
-    .line 550
     :cond_0
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1456,13 +1343,11 @@
 
     return-object p0
 
-    .line 552
     :cond_1
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     if-eqz p0, :cond_2
 
-    .line 553
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -1472,7 +1357,6 @@
     :cond_2
     return-object v2
 
-    .line 546
     :cond_3
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1482,7 +1366,6 @@
 
     return-object p0
 
-    .line 548
     :cond_4
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1492,7 +1375,6 @@
 
     return-object p0
 
-    .line 544
     :cond_5
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->name:Ljava/lang/String;
 
@@ -1502,7 +1384,6 @@
 .method public getSemWallpaperData()Lcom/samsung/server/wallpaper/SemWallpaperData;
     .locals 0
 
-    .line 417
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     return-object p0
@@ -1511,7 +1392,6 @@
 .method public getWallpaperComponent()Landroid/content/ComponentName;
     .locals 0
 
-    .line 330
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     return-object p0
@@ -1520,7 +1400,6 @@
 .method public getWallpaperCropFile()Ljava/io/File;
     .locals 0
 
-    .line 413
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
     return-object p0
@@ -1529,7 +1408,6 @@
 .method public getWallpaperFile()Ljava/io/File;
     .locals 2
 
-    .line 380
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWpType()I
@@ -1558,7 +1436,6 @@
 
     return-object p0
 
-    .line 382
     :cond_0
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1568,7 +1445,6 @@
 
     goto :goto_0
 
-    .line 390
     :cond_1
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1578,7 +1454,6 @@
 
     goto :goto_0
 
-    .line 386
     :cond_2
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1588,7 +1463,6 @@
 
     goto :goto_0
 
-    .line 395
     :cond_3
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
@@ -1599,7 +1473,6 @@
 .method public getWallpaperId()I
     .locals 0
 
-    .line 405
     iget p0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperId:I
 
     return p0
@@ -1608,7 +1481,6 @@
 .method public getWhich()I
     .locals 0
 
-    .line 322
     iget p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mWhich:I
 
     return p0
@@ -1617,7 +1489,6 @@
 .method public isSameWallpaperData(Lcom/android/server/wallpaper/WallpaperData;)Z
     .locals 4
 
-    .line 437
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWidth()I
@@ -1658,14 +1529,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 438
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     const/4 v0, 0x1
 
     if-nez p0, :cond_1
 
-    .line 439
     new-instance p0, Landroid/content/ComponentName;
 
     const-string v1, "com.android.systemui"
@@ -1674,7 +1543,6 @@
 
     invoke-direct {p0, v1, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 441
     iget-object v1, p1, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     invoke-virtual {p0, v1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
@@ -1690,12 +1558,10 @@
     :cond_0
     const-string p0, "Same Image Wallpaper!"
 
-    .line 443
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 447
     :cond_1
     iget-object p1, p1, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
@@ -1707,7 +1573,6 @@
 
     const-string p0, "Same Live wallpaper!"
 
-    .line 448
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -1715,7 +1580,6 @@
     :cond_2
     const-string p0, "Different wallpaper"
 
-    .line 453
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -1726,7 +1590,6 @@
 .method public semGetLastCallingPackage(Z)Ljava/lang/String;
     .locals 0
 
-    .line 319
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getLastCallingPackage(Z)Ljava/lang/String;
@@ -1739,7 +1602,6 @@
 .method public setCallingPackage(Ljava/lang/String;)V
     .locals 6
 
-    .line 458
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1748,35 +1610,29 @@
 
     const-string/jumbo v0, "null"
 
-    .line 459
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 460
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 461
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2, v0, v1}, Ljava/util/Date;-><init>(J)V
 
-    .line 462
     invoke-static {}, Ljava/text/SimpleDateFormat;->getDateTimeInstance()Ljava/text/DateFormat;
 
     move-result-object v3
 
-    .line 463
     invoke-virtual {v3, v2}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 464
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1797,7 +1653,6 @@
 
     move-result-object v0
 
-    .line 465
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1818,12 +1673,10 @@
 
     move-result-object v0
 
-    .line 466
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v1, v0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setLastClearCallstackWithNullPackage(Ljava/lang/String;)V
 
-    .line 468
     :cond_1
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1845,21 +1698,18 @@
 .method public setDefaultWallpaperData(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 342
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setWpType(I)V
 
-    .line 344
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
-    .line 345
     new-instance p2, Ljava/io/File;
 
     invoke-direct {p2, p1, p3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -1872,7 +1722,6 @@
 .method public setImageWallpaperPending(Z)V
     .locals 0
 
-    .line 421
     iput-boolean p1, p0, Lcom/android/server/wallpaper/WallpaperData;->imageWallpaperPending:Z
 
     return-void
@@ -1881,7 +1730,6 @@
 .method public setNextWallpaperComponent(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 334
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->nextWallpaperComponent:Landroid/content/ComponentName;
 
     return-void
@@ -1890,7 +1738,6 @@
 .method public setWallpaperComponent(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 326
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     return-void
@@ -1899,7 +1746,6 @@
 .method public setWallpaperCropFile(Ljava/io/File;)V
     .locals 0
 
-    .line 409
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->cropFile:Ljava/io/File;
 
     return-void
@@ -1908,7 +1754,6 @@
 .method public setWallpaperFile(Ljava/io/File;)V
     .locals 2
 
-    .line 349
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {v0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWpType()I
@@ -1927,24 +1772,20 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 363
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
-    .line 366
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {p0}, Lcom/samsung/server/wallpaper/SemWallpaperData;->getWhich()I
 
     move-result p0
 
-    .line 367
     invoke-static {p0}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isSystem(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 368
     invoke-static {p0}, Lcom/samsung/android/wallpaper/utils/WhichChecker;->isSubDisplay(I)Z
 
     move-result p0
@@ -1955,7 +1796,6 @@
 
     const-string/jumbo p0, "wallpaper_orig"
 
-    .line 370
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -1966,7 +1806,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 371
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1989,7 +1828,6 @@
 
     goto :goto_0
 
-    .line 351
     :cond_0
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -1997,7 +1835,6 @@
 
     goto :goto_0
 
-    .line 359
     :cond_1
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -2005,7 +1842,6 @@
 
     goto :goto_0
 
-    .line 355
     :cond_2
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
@@ -2019,7 +1855,6 @@
 .method public setWhich(I)V
     .locals 0
 
-    .line 425
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
 
     invoke-virtual {p0, p1}, Lcom/samsung/server/wallpaper/SemWallpaperData;->setWhich(I)V
@@ -2030,7 +1865,6 @@
 .method public setWhichPending(I)V
     .locals 0
 
-    .line 429
     iput p1, p0, Lcom/android/server/wallpaper/WallpaperData;->mWhich:I
 
     return-void
@@ -2039,7 +1873,6 @@
 .method public sourceExists()Z
     .locals 0
 
-    .line 305
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
     if-nez p0, :cond_0
@@ -2048,7 +1881,6 @@
 
     return p0
 
-    .line 310
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -2060,7 +1892,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 253
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-static {p0}, Lcom/android/server/wallpaper/WallpaperData;->defaultString(Ljava/lang/Object;)Ljava/lang/String;
@@ -2071,30 +1902,24 @@
 
     const-string v1, ", id: "
 
-    .line 254
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 255
     iget v1, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperId:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", which: "
 
-    .line 256
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 257
     iget v1, p0, Lcom/android/server/wallpaper/WallpaperData;->mWhich:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", file mod: "
 
-    .line 258
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 259
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperFile:Ljava/io/File;
 
     if-eqz v1, :cond_0
@@ -2115,14 +1940,12 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 260
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->connection:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
 
     if-nez v1, :cond_1
 
     const-string v1, ", no connection"
 
-    .line 261
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -2130,10 +1953,8 @@
     :cond_1
     const-string v1, ", info: "
 
-    .line 263
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 264
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->connection:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
 
     iget-object v1, v1, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;->mInfo:Landroid/app/WallpaperInfo;
@@ -2142,10 +1963,8 @@
 
     const-string v1, ", engine(s):"
 
-    .line 265
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 266
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->connection:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
 
     new-instance v2, Lcom/android/server/wallpaper/WallpaperData$$ExternalSyntheticLambda0;
@@ -2157,7 +1976,6 @@
     :goto_1
     const-string v1, ", type = "
 
-    .line 276
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
@@ -2170,7 +1988,6 @@
 
     const-string v1, ", userId = "
 
-    .line 277
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/wallpaper/WallpaperData;->userId:I
@@ -2179,7 +1996,6 @@
 
     const-string v1, ", uri= "
 
-    .line 278
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
@@ -2192,7 +2008,6 @@
 
     const-string v1, ", allowBackup= "
 
-    .line 279
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v1, p0, Lcom/android/server/wallpaper/WallpaperData;->allowBackup:Z
@@ -2201,7 +2016,6 @@
 
     const-string v1, ", wallpaperComponent = "
 
-    .line 280
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
@@ -2210,14 +2024,12 @@
 
     const-string v1, ", nextWallpaperComponent = "
 
-    .line 281
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperData;->nextWallpaperComponent:Landroid/content/ComponentName;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 283
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

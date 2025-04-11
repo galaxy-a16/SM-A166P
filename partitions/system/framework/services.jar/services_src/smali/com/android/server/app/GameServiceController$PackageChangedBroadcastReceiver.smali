@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$dxEVeVs-2voEKyO2JI1mJZMxiiQ(Lcom/android/server/app/GameServiceController;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/app/GameServiceController;->-$$Nest$mevaluateActiveGameServiceProvider(Lcom/android/server/app/GameServiceController;)V
 
     return-void
@@ -22,12 +21,10 @@
 .method public constructor <init>(Lcom/android/server/app/GameServiceController;Ljava/lang/String;)V
     .locals 0
 
-    .line 230
     iput-object p1, p0, Lcom/android/server/app/GameServiceController$PackageChangedBroadcastReceiver;->this$0:Lcom/android/server/app/GameServiceController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 231
     iput-object p2, p0, Lcom/android/server/app/GameServiceController$PackageChangedBroadcastReceiver;->mPackageName:Ljava/lang/String;
 
     return-void
@@ -38,7 +35,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 236
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
@@ -57,7 +53,6 @@
 
     return-void
 
-    .line 239
     :cond_0
     iget-object p1, p0, Lcom/android/server/app/GameServiceController$PackageChangedBroadcastReceiver;->this$0:Lcom/android/server/app/GameServiceController;
 

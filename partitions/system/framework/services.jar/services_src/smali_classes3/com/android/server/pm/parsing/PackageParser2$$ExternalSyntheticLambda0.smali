@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/pm/parsing/PackageParser2;->$r8$lambda$TyuePyUPnrrxyGine9B9PVPKaBM()Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0

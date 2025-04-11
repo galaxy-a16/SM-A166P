@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -25,10 +23,8 @@
 
     const/4 v0, 0x0
 
-    .line 60
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalKeyManager;->mBeganFromNonInteractive:Z
 
-    .line 63
     invoke-virtual {p0, p1}, Lcom/android/server/policy/GlobalKeyManager;->loadGlobalKeys(Landroid/content/Context;)V
 
     return-void
@@ -39,7 +35,6 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -48,7 +43,6 @@
 
     if-nez v0, :cond_0
 
-    .line 167
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, "mKeyMapping.size=0"
@@ -57,7 +51,6 @@
 
     return-void
 
-    .line 170
     :cond_0
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -72,13 +65,10 @@
 
     const-string v2, "  "
 
-    .line 172
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 173
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 174
     iget-object v2, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -93,10 +83,8 @@
 
     const-string v2, "="
 
-    .line 175
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 176
     iget-object v2, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -117,10 +105,8 @@
 
     const-string v2, ",dispatchWhenNonInteractive="
 
-    .line 177
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 178
     iget-object v2, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -139,7 +125,6 @@
 
     goto :goto_0
 
-    .line 180
     :cond_1
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -153,7 +138,6 @@
 .method public handleGlobalKey(Landroid/content/Context;ILandroid/view/KeyEvent;)Z
     .locals 3
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -164,7 +148,6 @@
 
     if-lez v0, :cond_1
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -175,7 +158,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 78
     new-instance v0, Lcom/android/server/policy/GlobalKeyIntent;
 
     invoke-static {p2}, Lcom/android/server/policy/GlobalKeyManager$GlobalKeyAction;->-$$Nest$fgetmComponentName(Lcom/android/server/policy/GlobalKeyManager$GlobalKeyAction;)Landroid/content/ComponentName;
@@ -186,19 +168,16 @@
 
     invoke-direct {v0, p2, p3, v2}, Lcom/android/server/policy/GlobalKeyIntent;-><init>(Landroid/content/ComponentName;Landroid/view/KeyEvent;Z)V
 
-    .line 79
     invoke-virtual {v0}, Lcom/android/server/policy/GlobalKeyIntent;->getIntent()Landroid/content/Intent;
 
     move-result-object p2
 
-    .line 80
     sget-object v0, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     const/4 v2, 0x0
 
     invoke-virtual {p1, p2, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
@@ -207,7 +186,6 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 83
     iput-boolean v1, p0, Lcom/android/server/policy/GlobalKeyManager;->mBeganFromNonInteractive:Z
 
     :cond_0
@@ -222,7 +200,6 @@
 
     const-string v0, "GlobalKeyManager"
 
-    .line 124
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -241,7 +218,6 @@
     :try_start_1
     const-string v1, "global_keys"
 
-    .line 126
     invoke-static {p1, v1}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
     const-string/jumbo v1, "version"
@@ -250,7 +226,6 @@
 
     const/4 v3, 0x0
 
-    .line 127
     invoke-interface {p1, v3, v1, v2}, Landroid/content/res/XmlResourceParser;->getAttributeIntValue(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v1
@@ -259,12 +234,10 @@
 
     if-ne v2, v1, :cond_5
 
-    .line 130
     :cond_0
     :goto_0
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 131
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -276,7 +249,6 @@
     :cond_1
     const-string v2, "key"
 
-    .line 135
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -285,21 +257,18 @@
 
     const-string v1, "keyCode"
 
-    .line 136
     invoke-interface {p1, v3, v1}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "component"
 
-    .line 137
     invoke-interface {p1, v3, v2}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v4, "dispatchWhenNonInteractive"
 
-    .line 139
     invoke-interface {p1, v3, v4}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -310,7 +279,6 @@
 
     goto :goto_1
 
-    .line 144
     :cond_2
     invoke-static {v1}, Landroid/view/KeyEvent;->keyCodeFromString(Ljava/lang/String;)I
 
@@ -318,7 +286,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 146
     iget-object v1, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     new-instance v6, Lcom/android/server/policy/GlobalKeyManager$GlobalKeyAction;
@@ -329,7 +296,6 @@
 
     goto :goto_0
 
-    .line 149
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -349,7 +315,6 @@
 
     goto :goto_0
 
-    .line 141
     :cond_4
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -376,7 +341,6 @@
 
     goto :goto_0
 
-    .line 155
     :cond_5
     :goto_2
     :try_start_2
@@ -393,7 +357,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 124
     :try_start_3
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
     :try_end_3
@@ -420,7 +383,6 @@
 
     const-string p1, "I/O exception reading global keys file"
 
-    .line 160
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_4
@@ -430,7 +392,6 @@
 
     const-string p1, "XML parser exception reading global keys file"
 
-    .line 158
     invoke-static {v0, p1, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_4
@@ -440,7 +401,6 @@
 
     const-string p1, "global keys file not found"
 
-    .line 156
     invoke-static {v0, p1, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_4
@@ -452,7 +412,6 @@
 
     const/4 v0, 0x1
 
-    .line 111
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalKeyManager;->mBeganFromNonInteractive:Z
 
     return-void
@@ -461,7 +420,6 @@
 .method public shouldDispatchFromNonInteractive(I)Z
     .locals 0
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -476,7 +434,6 @@
 
     return p0
 
-    .line 107
     :cond_0
     invoke-static {p0}, Lcom/android/server/policy/GlobalKeyManager$GlobalKeyAction;->-$$Nest$fgetmDispatchWhenNonInteractive(Lcom/android/server/policy/GlobalKeyManager$GlobalKeyAction;)Z
 
@@ -488,7 +445,6 @@
 .method public shouldHandleGlobalKey(I)Z
     .locals 0
 
-    .line 95
     iget-object p0, p0, Lcom/android/server/policy/GlobalKeyManager;->mKeyMapping:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;

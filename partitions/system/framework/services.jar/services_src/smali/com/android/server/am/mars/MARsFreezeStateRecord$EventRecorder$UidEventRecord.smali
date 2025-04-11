@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetfreezeEvents(Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;)Ljava/util/ArrayDeque;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->freezeEvents:Ljava/util/ArrayDeque;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetrunningEndTime(Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->runningEndTime:J
 
     return-wide v0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetrunningStartTime(Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->runningStartTime:J
 
     return-wide v0
@@ -42,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fputrunningEndTime(Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->runningEndTime:J
 
     return-void
@@ -51,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$maddEvent(Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;JLjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->addEvent(Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;JLjava/lang/String;)V
 
     return-void
@@ -60,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$mprintAllEvents(Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->printAllEvents()V
 
     return-void
@@ -69,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$mremoveOutdated(Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;J)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->removeOutdated(J)V
 
     return-void
@@ -78,18 +71,14 @@
 .method public constructor <init>(J)V
     .locals 0
 
-    .line 405
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 406
     iput-wide p1, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->runningStartTime:J
 
     const-wide p1, 0x7fffffffffffffffL
 
-    .line 407
     iput-wide p1, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->runningEndTime:J
 
-    .line 408
     new-instance p1, Ljava/util/ArrayDeque;
 
     invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
@@ -102,7 +91,6 @@
 .method public synthetic constructor <init>(JLcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;-><init>(J)V
 
     return-void
@@ -113,7 +101,6 @@
 .method public final addEvent(Lcom/android/server/am/mars/MARsFreezeStateRecord$Event;JLjava/lang/String;)V
     .locals 7
 
-    .line 412
     iget-object p0, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->freezeEvents:Ljava/util/ArrayDeque;
 
     new-instance v6, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord$FreezeEventRecord;
@@ -138,7 +125,6 @@
 .method public final printAllEvents()V
     .locals 5
 
-    .line 422
     iget-object p0, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->freezeEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
@@ -158,7 +144,6 @@
 
     check-cast v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord$FreezeEventRecord;
 
-    .line 423
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -214,7 +199,6 @@
 .method public final removeOutdated(J)V
     .locals 4
 
-    .line 416
     :goto_0
     iget-object v0, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->freezeEvents:Ljava/util/ArrayDeque;
 
@@ -244,7 +228,6 @@
 
     if-lez v0, :cond_0
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$EventRecorder$UidEventRecord;->freezeEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;

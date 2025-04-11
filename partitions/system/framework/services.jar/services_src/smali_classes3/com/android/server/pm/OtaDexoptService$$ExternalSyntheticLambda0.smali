@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/pkg/PackageStateInternal;
 
     invoke-static {p1}, Lcom/android/server/pm/OtaDexoptService;->$r8$lambda$Fia3gHi9GF8Zhk_Q6twL-iJdqvw(Lcom/android/server/pm/pkg/PackageStateInternal;)Z

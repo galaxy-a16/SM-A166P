@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;)V
     .locals 0
 
-    .line 43
     invoke-direct {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolverBase;-><init>(Lcom/android/server/pm/UserManagerService;)V
 
-    .line 40
     new-instance p1, Lcom/android/server/pm/PackageManagerTracedLock;
 
     invoke-direct {p1}, Lcom/android/server/pm/PackageManagerTracedLock;-><init>()V
@@ -29,12 +27,10 @@
 .method public componentExists(Landroid/content/ComponentName;)Z
     .locals 1
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 49
     :try_start_0
     invoke-super {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolverBase;->componentExists(Landroid/content/ComponentName;)Z
 
@@ -47,7 +43,6 @@
     :catchall_0
     move-exception p0
 
-    .line 50
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -58,16 +53,13 @@
 .method public dumpActivityResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 1
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 199
     :try_start_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/pm/resolution/ComponentResolverBase;->dumpActivityResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
 
-    .line 200
     monitor-exit v0
 
     return-void
@@ -85,16 +77,13 @@
 .method public dumpContentProviders(Lcom/android/server/pm/Computer;Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 1
 
-    .line 230
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 231
     :try_start_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/android/server/pm/resolution/ComponentResolverBase;->dumpContentProviders(Lcom/android/server/pm/Computer;Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
 
-    .line 232
     monitor-exit v0
 
     return-void
@@ -112,16 +101,13 @@
 .method public dumpProviderResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 1
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 207
     :try_start_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/pm/resolution/ComponentResolverBase;->dumpProviderResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
 
-    .line 208
     monitor-exit v0
 
     return-void
@@ -139,16 +125,13 @@
 .method public dumpReceiverResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 1
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 215
     :try_start_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/pm/resolution/ComponentResolverBase;->dumpReceiverResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
 
-    .line 216
     monitor-exit v0
 
     return-void
@@ -166,16 +149,13 @@
 .method public dumpServicePermissions(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;)V
     .locals 1
 
-    .line 237
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 238
     :try_start_0
     invoke-super {p0, p1, p2}, Lcom/android/server/pm/resolution/ComponentResolverBase;->dumpServicePermissions(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;)V
 
-    .line 239
     monitor-exit v0
 
     return-void
@@ -193,16 +173,13 @@
 .method public dumpServiceResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 1
 
-    .line 222
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 223
     :try_start_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/pm/resolution/ComponentResolverBase;->dumpServiceResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
 
-    .line 224
     monitor-exit v0
 
     return-void
@@ -220,12 +197,10 @@
 .method public getActivity(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedActivity;
     .locals 1
 
-    .line 56
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 57
     :try_start_0
     invoke-super {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolverBase;->getActivity(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedActivity;
 
@@ -238,7 +213,6 @@
     :catchall_0
     move-exception p0
 
-    .line 58
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -249,12 +223,10 @@
 .method public getProvider(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedProvider;
     .locals 1
 
-    .line 64
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 65
     :try_start_0
     invoke-super {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolverBase;->getProvider(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedProvider;
 
@@ -267,7 +239,6 @@
     :catchall_0
     move-exception p0
 
-    .line 66
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -278,12 +249,10 @@
 .method public getReceiver(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedActivity;
     .locals 1
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 73
     :try_start_0
     invoke-super {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolverBase;->getReceiver(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedActivity;
 
@@ -296,7 +265,6 @@
     :catchall_0
     move-exception p0
 
-    .line 74
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -307,12 +275,10 @@
 .method public getService(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedService;
     .locals 1
 
-    .line 80
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 81
     :try_start_0
     invoke-super {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolverBase;->getService(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedService;
 
@@ -325,7 +291,6 @@
     :catchall_0
     move-exception p0
 
-    .line 82
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -336,12 +301,10 @@
 .method public isActivityDefined(Landroid/content/ComponentName;)Z
     .locals 1
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 88
     :try_start_0
     invoke-super {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolverBase;->isActivityDefined(Landroid/content/ComponentName;)Z
 
@@ -354,7 +317,6 @@
     :catchall_0
     move-exception p0
 
-    .line 89
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -365,12 +327,10 @@
 .method public queryActivities(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
     .locals 1
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 97
     :try_start_0
     invoke-super/range {p0 .. p6}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryActivities(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
 
@@ -383,7 +343,6 @@
     :catchall_0
     move-exception p0
 
-    .line 98
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -394,12 +353,10 @@
 .method public queryActivities(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
     .locals 1
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 107
     :try_start_0
     invoke-super/range {p0 .. p7}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryActivities(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
 
@@ -412,7 +369,6 @@
     :catchall_0
     move-exception p0
 
-    .line 108
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -423,12 +379,10 @@
 .method public queryProvider(Lcom/android/server/pm/Computer;Ljava/lang/String;JI)Landroid/content/pm/ProviderInfo;
     .locals 1
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 116
     :try_start_0
     invoke-super/range {p0 .. p5}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryProvider(Lcom/android/server/pm/Computer;Ljava/lang/String;JI)Landroid/content/pm/ProviderInfo;
 
@@ -441,7 +395,6 @@
     :catchall_0
     move-exception p0
 
-    .line 117
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -452,12 +405,10 @@
 .method public queryProviders(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
     .locals 1
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 125
     :try_start_0
     invoke-super/range {p0 .. p6}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryProviders(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
 
@@ -470,7 +421,6 @@
     :catchall_0
     move-exception p0
 
-    .line 126
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -481,12 +431,10 @@
 .method public queryProviders(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
     .locals 1
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 135
     :try_start_0
     invoke-super/range {p0 .. p7}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryProviders(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
 
@@ -499,7 +447,6 @@
     :catchall_0
     move-exception p0
 
-    .line 136
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -510,12 +457,10 @@
 .method public queryProviders(Lcom/android/server/pm/Computer;Ljava/lang/String;Ljava/lang/String;IJI)Ljava/util/List;
     .locals 1
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 145
     :try_start_0
     invoke-super/range {p0 .. p7}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryProviders(Lcom/android/server/pm/Computer;Ljava/lang/String;Ljava/lang/String;IJI)Ljava/util/List;
 
@@ -528,7 +473,6 @@
     :catchall_0
     move-exception p0
 
-    .line 146
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -539,12 +483,10 @@
 .method public queryReceivers(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
     .locals 1
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 154
     :try_start_0
     invoke-super/range {p0 .. p6}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryReceivers(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
 
@@ -557,7 +499,6 @@
     :catchall_0
     move-exception p0
 
-    .line 155
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -568,12 +509,10 @@
 .method public queryReceivers(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
     .locals 1
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 164
     :try_start_0
     invoke-super/range {p0 .. p7}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryReceivers(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
 
@@ -586,7 +525,6 @@
     :catchall_0
     move-exception p0
 
-    .line 165
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -597,12 +535,10 @@
 .method public queryServices(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
     .locals 1
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 173
     :try_start_0
     invoke-super/range {p0 .. p6}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryServices(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
 
@@ -615,7 +551,6 @@
     :catchall_0
     move-exception p0
 
-    .line 174
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -626,12 +561,10 @@
 .method public queryServices(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
     .locals 1
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 183
     :try_start_0
     invoke-super/range {p0 .. p7}, Lcom/android/server/pm/resolution/ComponentResolverBase;->queryServices(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
 
@@ -644,7 +577,6 @@
     :catchall_0
     move-exception p0
 
-    .line 184
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -655,16 +587,13 @@
 .method public querySyncProviders(Lcom/android/server/pm/Computer;Ljava/util/List;Ljava/util/List;ZI)V
     .locals 1
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverLocked;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 191
     :try_start_0
     invoke-super/range {p0 .. p5}, Lcom/android/server/pm/resolution/ComponentResolverBase;->querySyncProviders(Lcom/android/server/pm/Computer;Ljava/util/List;Ljava/util/List;ZI)V
 
-    .line 192
     monitor-exit v0
 
     return-void

@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 5105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5106
     invoke-virtual {p0}, Lcom/android/server/input/InputManagerService$AdditionalDisplayInputProperties;->reset()V
 
     return-void
@@ -27,7 +25,6 @@
 .method public allDefaults()Z
     .locals 2
 
-    .line 5110
     iget v0, p0, Lcom/android/server/input/InputManagerService$AdditionalDisplayInputProperties;->pointerAcceleration:F
 
     const/high16 v1, 0x40400000    # 3.0f
@@ -58,12 +55,10 @@
 
     const/high16 v0, 0x40400000    # 3.0f
 
-    .line 5115
     iput v0, p0, Lcom/android/server/input/InputManagerService$AdditionalDisplayInputProperties;->pointerAcceleration:F
 
     const/4 v0, 0x1
 
-    .line 5116
     iput-boolean v0, p0, Lcom/android/server/input/InputManagerService$AdditionalDisplayInputProperties;->pointerIconVisible:Z
 
     return-void

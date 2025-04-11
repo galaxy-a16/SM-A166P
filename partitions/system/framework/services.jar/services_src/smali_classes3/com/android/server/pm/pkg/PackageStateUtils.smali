@@ -11,7 +11,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 85
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result v2
@@ -27,7 +26,6 @@
 
     move-wide v5, v2
 
-    .line 89
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -35,7 +33,6 @@
 
     if-ge v4, v7, :cond_2
 
-    .line 90
     invoke-virtual {p0, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -85,13 +82,11 @@
 
     return p0
 
-    .line 60
     :cond_0
     invoke-interface {p0, p4}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p0
 
-    .line 61
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->isMatch(Lcom/android/server/pm/pkg/PackageUserState;Landroid/content/pm/ComponentInfo;J)Z
 
     move-result p0
@@ -108,7 +103,6 @@
 
     return v0
 
-    .line 70
     :cond_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
@@ -118,18 +112,15 @@
 
     return v0
 
-    .line 74
     :cond_1
     invoke-interface {p0, p4}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v2
 
-    .line 75
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
     move-result v3
 
-    .line 76
     invoke-interface {v1}, Lcom/android/server/pm/pkg/AndroidPackage;->isEnabled()Z
 
     move-result v4
@@ -138,7 +129,6 @@
 
     move-wide v6, p2
 
-    .line 75
     invoke-static/range {v2 .. v7}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->isMatch(Lcom/android/server/pm/pkg/PackageUserState;ZZLcom/android/server/pm/pkg/component/ParsedMainComponent;J)Z
 
     move-result p0
@@ -159,7 +149,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 32
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
     move-result p0
@@ -175,7 +164,6 @@
 .method public static queryInstalledUsers(Lcom/android/server/pm/pkg/PackageStateInternal;[IZ)[I
     .locals 6
 
-    .line 40
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -189,7 +177,6 @@
 
     aget v4, p1, v2
 
-    .line 41
     invoke-interface {p0, v4}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v4
@@ -207,11 +194,9 @@
 
     goto :goto_0
 
-    .line 45
     :cond_1
     new-array v0, v3, [I
 
-    .line 47
     array-length v2, p1
 
     move v3, v1
@@ -221,7 +206,6 @@
 
     aget v4, p1, v1
 
-    .line 48
     invoke-interface {p0, v4}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v5
@@ -232,7 +216,6 @@
 
     if-ne v5, p2, :cond_2
 
-    .line 49
     aput v4, v0, v3
 
     add-int/lit8 v3, v3, 0x1

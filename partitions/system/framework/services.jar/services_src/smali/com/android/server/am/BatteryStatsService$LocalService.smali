@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/BatteryStatsService;)V
     .locals 0
 
-    .line 506
     iput-object p1, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     invoke-direct {p0}, Landroid/os/BatteryStatsInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/BatteryStatsService;Lcom/android/server/am/BatteryStatsService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/BatteryStatsService$LocalService;-><init>(Lcom/android/server/am/BatteryStatsService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public getBatteryUsageStats(Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .line 524
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/BatteryStatsService;->getBatteryUsageStats(Ljava/util/List;)Ljava/util/List;
@@ -46,7 +43,6 @@
 .method public getMobileIfaces()[Ljava/lang/String;
     .locals 0
 
-    .line 514
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/server/power/stats/BatteryStatsImpl;
@@ -67,7 +63,6 @@
 .method public getSystemServiceCpuThreadTimes()Lcom/android/server/power/stats/SystemServerCpuThreadReader$SystemServiceCpuThreadTimes;
     .locals 0
 
-    .line 519
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/server/power/stats/BatteryStatsImpl;
@@ -82,7 +77,6 @@
 .method public getWifiIfaces()[Ljava/lang/String;
     .locals 0
 
-    .line 509
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/server/power/stats/BatteryStatsImpl;
@@ -103,7 +97,6 @@
 .method public noteBinderCallStats(IJLjava/util/Collection;)V
     .locals 8
 
-    .line 563
     iget-object v0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     invoke-static {v0}, Lcom/android/server/am/BatteryStatsService;->-$$Nest$fgetmLock(Lcom/android/server/am/BatteryStatsService;)Ljava/lang/Object;
@@ -112,7 +105,6 @@
 
     monitor-enter v0
 
-    .line 564
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
@@ -124,7 +116,6 @@
 
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/server/power/stats/BatteryStatsImpl;
 
-    .line 565
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/android/server/am/BatteryStatsService$LocalService$$ExternalSyntheticLambda0;
@@ -139,7 +130,6 @@
 
     move-result-object v4
 
-    .line 566
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p0
@@ -158,14 +148,12 @@
 
     move-object v5, p4
 
-    .line 564
     invoke-static/range {v2 .. v7}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/QuintConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
     invoke-virtual {v1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 567
     monitor-exit v0
 
     return-void
@@ -183,7 +171,6 @@
 .method public noteBinderThreadNativeIds([I)V
     .locals 1
 
-    .line 572
     iget-object v0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     invoke-static {v0}, Lcom/android/server/am/BatteryStatsService;->-$$Nest$fgetmLock(Lcom/android/server/am/BatteryStatsService;)Ljava/lang/Object;
@@ -192,7 +179,6 @@
 
     monitor-enter v0
 
-    .line 573
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
@@ -200,7 +186,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl;->noteBinderThreadNativeIds([I)V
 
-    .line 574
     monitor-exit v0
 
     return-void
@@ -222,7 +207,6 @@
 
     if-gez p4, :cond_0
 
-    .line 545
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -241,7 +225,6 @@
 
     return-void
 
-    .line 548
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
@@ -257,12 +240,10 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 549
     invoke-virtual {v1, p1}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
 
     move-result-object v1
 
-    .line 550
     invoke-virtual {p0, v1}, Lcom/android/server/am/BatteryStatsService$LocalService;->transportToSubsystem(Landroid/net/NetworkCapabilities;)I
 
     move-result v1
@@ -271,7 +252,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 553
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -296,7 +276,6 @@
 
     return-void
 
-    .line 557
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
@@ -312,7 +291,6 @@
 .method public noteJobsDeferred(IIJ)V
     .locals 0
 
-    .line 530
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/am/BatteryStatsService;->noteJobsDeferred(IIJ)V
@@ -323,7 +301,6 @@
 .method public varargs noteWakingAlarmBatch(J[I)V
     .locals 1
 
-    .line 584
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     const/4 v0, 0x1
@@ -336,7 +313,6 @@
 .method public noteWakingSoundTrigger(JI)V
     .locals 1
 
-    .line 579
     iget-object p0, p0, Lcom/android/server/am/BatteryStatsService$LocalService;->this$0:Lcom/android/server/am/BatteryStatsService;
 
     const/4 v0, 0x3
@@ -355,7 +331,6 @@
 
     const/4 p0, 0x1
 
-    .line 534
     invoke-virtual {p1, p0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
 
     move-result p0
@@ -369,7 +344,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 536
     invoke-virtual {p1, p0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
 
     move-result p0

@@ -15,16 +15,12 @@
 .method public constructor <init>(Ljava/lang/String;ILandroid/content/ComponentName;)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mName:Ljava/lang/String;
 
-    .line 29
     iput p2, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mUserId:I
 
-    .line 30
     iput-object p3, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mCompName:Landroid/content/ComponentName;
 
     return-void
@@ -46,11 +42,9 @@
 
     if-eqz p1, :cond_2
 
-    .line 40
     :try_start_0
     check-cast p1, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;
 
-    .line 41
     iget-object v2, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mName:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mName:Ljava/lang/String;
@@ -69,7 +63,6 @@
 
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mCompName:Landroid/content/ComponentName;
 
-    .line 43
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object p0
@@ -99,7 +92,6 @@
     :catch_0
     move-exception p0
 
-    .line 46
     invoke-virtual {p0}, Ljava/lang/ClassCastException;->printStackTrace()V
 
     :cond_2
@@ -109,7 +101,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mName:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mCompName:Landroid/content/ComponentName;

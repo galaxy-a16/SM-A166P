@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;)V
     .locals 0
 
-    .line 816
     iput-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$2;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDesktopDockConnectionChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -40,10 +38,8 @@
 
     const-string p1, "Dex Mode Connected"
 
-    .line 827
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 828
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$2;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     const/4 p1, 0x1
@@ -55,10 +51,8 @@
     :cond_0
     const-string p1, "Dex Mode Disconnected"
 
-    .line 831
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 832
     iget-object p0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$2;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     const/4 p1, 0x0

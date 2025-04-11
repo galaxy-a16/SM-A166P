@@ -13,17 +13,14 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 377
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 378
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
-    .line 379
     iput p1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mMaxCount:I
 
     return-void
@@ -34,12 +31,10 @@
 .method public add(ILcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;)V
     .locals 7
 
-    .line 384
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 385
     :try_start_0
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
@@ -62,7 +57,6 @@
 
     check-cast v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;
 
-    .line 386
     iget v4, v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;->cmdNum:I
 
     if-ne v4, p1, :cond_0
@@ -75,7 +69,6 @@
     :goto_0
     if-nez v2, :cond_3
 
-    .line 393
     :goto_1
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
@@ -89,7 +82,6 @@
 
     const-string v1, "DualDarDaemonConnector"
 
-    .line 394
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,7 +92,6 @@
 
     iget-object v4, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
-    .line 395
     invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
 
     move-result v4
@@ -123,10 +114,8 @@
 
     new-array v5, v4, [Ljava/lang/Object;
 
-    .line 394
     invoke-static {v1, v2, v5}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 398
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->remove()Ljava/lang/Object;
@@ -137,7 +126,6 @@
 
     const-string v2, "DualDarDaemonConnector"
 
-    .line 399
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,18 +160,15 @@
 
     goto :goto_1
 
-    .line 403
     :cond_2
     new-instance v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;
 
     invoke-direct {v2, p1, v3}, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;-><init>(ILjava/lang/String;)V
 
-    .line 404
     iget-object p1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     invoke-virtual {p1, v2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 406
     :cond_3
     iget p1, v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;->availableResponseCount:I
 
@@ -193,18 +178,15 @@
 
     if-nez p1, :cond_4
 
-    .line 409
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     invoke-virtual {p0, v2}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 410
     :cond_4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 412
     :try_start_1
     iget-object p0, v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;->responses:Ljava/util/concurrent/BlockingQueue;
 
@@ -218,7 +200,6 @@
     :catchall_0
     move-exception p0
 
-    .line 410
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -230,12 +211,10 @@
 .method public remove(ILjava/lang/String;I)Lcom/android/server/knox/dar/ddar/nativedaemon/NativeDaemonEvent;
     .locals 5
 
-    .line 420
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 421
     :try_start_0
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
@@ -258,7 +237,6 @@
 
     check-cast v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;
 
-    .line 422
     iget v4, v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;->cmdNum:I
 
     if-ne v4, p1, :cond_0
@@ -271,17 +249,14 @@
     :goto_0
     if-nez v2, :cond_2
 
-    .line 428
     new-instance v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;
 
     invoke-direct {v2, p1, p2}, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;-><init>(ILjava/lang/String;)V
 
-    .line 429
     iget-object p1, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     invoke-virtual {p1, v2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 431
     :cond_2
     iget p1, v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;->availableResponseCount:I
 
@@ -291,18 +266,15 @@
 
     if-nez p1, :cond_3
 
-    .line 434
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     invoke-virtual {p0, v2}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 435
     :cond_3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 438
     :try_start_1
     iget-object p0, v2, Lcom/android/server/knox/dar/ddar/nativedaemon/DualDarDaemonConnector$ResponseQueue$PendingCmd;->responses:Ljava/util/concurrent/BlockingQueue;
 
@@ -331,7 +303,6 @@
 
     new-array p2, p2, [Ljava/lang/Object;
 
-    .line 441
     invoke-static {p0, p1, p2}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     :cond_4
@@ -340,7 +311,6 @@
     :catchall_0
     move-exception p0
 
-    .line 435
     :try_start_2
     monitor-exit v0
     :try_end_2

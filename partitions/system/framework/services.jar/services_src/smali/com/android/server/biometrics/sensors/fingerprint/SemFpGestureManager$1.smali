@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$bmFT2yGazmhLc4HzscyayfVegHA(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->lambda$onUserSwitchComplete$1(I)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$jxhP72EZYt6hSN5xVs5Cyb_Qmzg(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->lambda$onUserSwitching$0()V
 
     return-void
@@ -29,7 +27,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
     .locals 0
 
-    .line 302
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
     invoke-direct {p0}, Landroid/app/SynchronousUserSwitchObserver;-><init>()V
@@ -40,7 +37,6 @@
 .method private synthetic lambda$onUserSwitchComplete$1(I)V
     .locals 2
 
-    .line 311
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,12 +55,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->-$$Nest$mupdateGestureSettingValue(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
 
-    .line 313
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->-$$Nest$fgetmIsEnabledGestureMainSetting(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)Z
@@ -73,7 +67,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 314
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->-$$Nest$mturnOnGestureMode(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
@@ -85,7 +78,6 @@
 .method private synthetic lambda$onUserSwitching$0()V
     .locals 0
 
-    .line 305
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->-$$Nest$mturnOffGestureMode(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)V
@@ -98,7 +90,6 @@
 .method public onUserSwitchComplete(I)V
     .locals 2
 
-    .line 310
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->-$$Nest$fgetmH(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)Landroid/os/Handler;
@@ -117,7 +108,6 @@
 .method public onUserSwitching(I)V
     .locals 1
 
-    .line 305
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
     invoke-static {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->-$$Nest$fgetmH(Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;)Landroid/os/Handler;

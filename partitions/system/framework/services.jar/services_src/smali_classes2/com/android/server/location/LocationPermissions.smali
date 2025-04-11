@@ -17,7 +17,6 @@
 
     return v0
 
-    .line 83
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -46,7 +45,6 @@
 
     return-object p0
 
-    .line 69
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -63,12 +61,10 @@
 .method public static checkCallingOrSelfLocationPermission(Landroid/content/Context;I)Z
     .locals 0
 
-    .line 152
     invoke-static {p0}, Lcom/android/server/location/LocationPermissions;->getCallingOrSelfPermissionLevel(Landroid/content/Context;)I
 
     move-result p0
 
-    .line 151
     invoke-static {p0, p1}, Lcom/android/server/location/LocationPermissions;->checkLocationPermission(II)Z
 
     move-result p0
@@ -79,7 +75,6 @@
 .method public static checkLocationPermission(II)Z
     .locals 0
 
-    .line 0
     if-lt p0, p1, :cond_0
 
     const/4 p0, 0x1
@@ -98,7 +93,6 @@
 
     const-string v0, "android.permission.LOCATION_BYPASS"
 
-    .line 139
     invoke-virtual {p0, v0, p2, p1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result p0
@@ -107,7 +101,6 @@
 
     return-void
 
-    .line 142
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -143,7 +136,6 @@
 .method public static enforceCallingOrSelfBypassPermission(Landroid/content/Context;)V
     .locals 2
 
-    .line 131
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -160,12 +152,10 @@
 .method public static enforceCallingOrSelfLocationPermission(Landroid/content/Context;I)V
     .locals 3
 
-    .line 92
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 93
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -178,7 +168,6 @@
 
     move-result p0
 
-    .line 92
     invoke-static {v0, p0, p1}, Lcom/android/server/location/LocationPermissions;->enforceLocationPermission(III)V
 
     return-void
@@ -187,7 +176,6 @@
 .method public static enforceLocationPermission(III)V
     .locals 4
 
-    .line 114
     invoke-static {p1, p2}, Lcom/android/server/location/LocationPermissions;->checkLocationPermission(II)Z
 
     move-result p1
@@ -215,7 +203,6 @@
 
     return-void
 
-    .line 122
     :cond_1
     new-instance p1, Ljava/lang/SecurityException;
 
@@ -241,7 +228,6 @@
 
     throw p1
 
-    .line 119
     :cond_2
     new-instance p1, Ljava/lang/SecurityException;
 
@@ -279,7 +265,6 @@
 .method public static getCallingOrSelfPermissionLevel(Landroid/content/Context;)I
     .locals 2
 
-    .line 180
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -300,7 +285,6 @@
 
     const-string v0, "android.permission.ACCESS_FINE_LOCATION"
 
-    .line 188
     invoke-virtual {p0, v0, p2, p1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result v0
@@ -314,7 +298,6 @@
     :cond_0
     const-string v0, "android.permission.ACCESS_COARSE_LOCATION"
 
-    .line 191
     invoke-virtual {p0, v0, p2, p1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result p0

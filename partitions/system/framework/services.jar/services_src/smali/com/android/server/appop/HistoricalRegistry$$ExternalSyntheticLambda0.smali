@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/appop/HistoricalRegistry;
 
     invoke-virtual {p1}, Lcom/android/server/appop/HistoricalRegistry;->persistPendingHistory()V

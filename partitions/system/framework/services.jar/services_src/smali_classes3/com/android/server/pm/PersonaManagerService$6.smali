@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersonaManagerService;)V
     .locals 0
 
-    .line 2619
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 8
 
-    .line 2622
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -37,7 +35,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2623
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmAnalyticsReceiver(Lcom/android/server/pm/PersonaManagerService;)Landroid/content/BroadcastReceiver;
@@ -49,7 +46,6 @@
     :cond_0
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 2625
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -60,7 +56,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2626
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmAnalyticsReceiver(Lcom/android/server/pm/PersonaManagerService;)Landroid/content/BroadcastReceiver;
@@ -69,7 +64,6 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/content/BroadcastReceiver;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 2628
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -89,7 +83,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 2629
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
@@ -102,14 +95,12 @@
 
     const-string v5, "com.samsung.android.knox.containercore"
 
-    .line 2630
     invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_3
 
-    .line 2631
     iget-object v5, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v5}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$fgetmContext(Lcom/android/server/pm/PersonaManagerService;)Landroid/content/Context;
@@ -124,7 +115,6 @@
 
     return-void
 
-    .line 2633
     :cond_2
     invoke-virtual {v5, p1}, Landroid/content/pm/PackageManager;->getApplicationEnabledSetting(Ljava/lang/String;)I
 
@@ -136,13 +126,10 @@
 
     const-string v6, "enable container critical app !"
 
-    .line 2635
     invoke-static {v3, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2636
     invoke-virtual {v5, p1, v4, v2}, Landroid/content/pm/PackageManager;->setApplicationEnabledSetting(Ljava/lang/String;II)V
 
-    .line 2641
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -170,7 +157,6 @@
 
     goto :goto_1
 
-    .line 2662
     :cond_4
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -181,14 +167,12 @@
 
     move-result-object p1
 
-    .line 2663
     invoke-virtual {p2, v5, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
     if-nez p2, :cond_8
 
-    .line 2665
     iget-object p2, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {p2}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$mgetPersonaManager(Lcom/android/server/pm/PersonaManagerService;)Lcom/samsung/android/knox/SemPersonaManager;
@@ -199,7 +183,6 @@
 
     move-result-object p2
 
-    .line 2666
     :goto_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -207,7 +190,6 @@
 
     if-ge v2, v0, :cond_8
 
-    .line 2667
     invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -218,14 +200,12 @@
 
     move-result v0
 
-    .line 2668
     invoke-static {p1, v0}, Lcom/android/server/knox/ContainerDependencyWrapper;->isRequiredAppForKnox(Ljava/lang/String;I)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 2670
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v1, v0, p1}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$minstallExistingPackageForPersona(Lcom/android/server/pm/PersonaManagerService;ILjava/lang/String;)I
@@ -240,12 +220,10 @@
     :catch_0
     move-exception p0
 
-    .line 2675
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 2643
     :cond_6
     :goto_1
     :try_start_1
@@ -257,24 +235,20 @@
 
     move-result-object p1
 
-    .line 2644
     invoke-virtual {p2, v5, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 2645
     invoke-static {p1, p2}, Lcom/android/server/knox/ContainerDependencyWrapper;->isDisallowedAppForKnox(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 2647
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v0, p2, p1}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$mdeletePkg(Lcom/android/server/pm/PersonaManagerService;ILjava/lang/String;)Z
 
-    .line 2650
     :cond_7
     invoke-static {p2}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
@@ -290,7 +264,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 2651
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {v0, p1, p2}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$misStubApp(Lcom/android/server/pm/PersonaManagerService;Ljava/lang/String;I)Z
@@ -299,7 +272,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 2653
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -322,7 +294,6 @@
 
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2654
     iget-object p0, p0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-static {p0, p2, p1}, Lcom/android/server/pm/PersonaManagerService;->-$$Nest$mdeletePkg(Lcom/android/server/pm/PersonaManagerService;ILjava/lang/String;)Z
@@ -334,7 +305,6 @@
     :catch_1
     move-exception p0
 
-    .line 2658
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_8

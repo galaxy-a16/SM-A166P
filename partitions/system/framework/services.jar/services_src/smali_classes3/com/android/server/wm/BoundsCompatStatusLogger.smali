@@ -22,7 +22,6 @@
 .method public static bridge synthetic -$$Nest$fgetmAtmService(Lcom/android/server/wm/BoundsCompatStatusLogger;)Lcom/android/server/wm/ActivityTaskManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-object p0
@@ -31,7 +30,6 @@
 .method public static bridge synthetic -$$Nest$mcreateSettingLocked(Lcom/android/server/wm/BoundsCompatStatusLogger;Ljava/lang/String;)Ljava/lang/StringBuilder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BoundsCompatStatusLogger;->createSettingLocked(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public static bridge synthetic -$$Nest$mputSettingLocked(Lcom/android/server/wm/BoundsCompatStatusLogger;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/BoundsCompatStatusLogger;->putSettingLocked(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -51,7 +48,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 69
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/wm/BoundsCompatStatusLogger;->DEBUG:Z
@@ -62,10 +58,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -78,7 +72,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/BoundsCompatStatusLogger-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/BoundsCompatStatusLogger;-><init>()V
 
     return-void
@@ -87,7 +80,6 @@
 .method public static executeShellCommand(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)Z
     .locals 3
 
-    .line 98
     sget-boolean p2, Lcom/android/server/wm/BoundsCompatStatusLogger;->DEBUG:Z
 
     const/4 v0, 0x0
@@ -104,7 +96,6 @@
 
     goto :goto_2
 
-    .line 103
     :cond_0
     :try_start_0
     aget-object p2, p1, v0
@@ -141,7 +132,6 @@
 
     goto :goto_2
 
-    .line 105
     :cond_3
     invoke-static {}, Lcom/android/server/wm/BoundsCompatStatusLogger;->get()Lcom/android/server/wm/BoundsCompatStatusLogger;
 
@@ -155,7 +145,6 @@
 
     return p0
 
-    .line 110
     :catchall_0
     sget-object p2, Lcom/android/server/wm/BoundsCompatStatusLogger;->TAG:Ljava/lang/String;
 
@@ -191,7 +180,6 @@
 .method public static get()Lcom/android/server/wm/BoundsCompatStatusLogger;
     .locals 1
 
-    .line 93
     sget-object v0, Lcom/android/server/wm/BoundsCompatStatusLogger$LazyHolder;->sLogger:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     return-object v0
@@ -202,7 +190,6 @@
 .method public final collectAndSendStatus(Ljava/util/List;)V
     .locals 7
 
-    .line 151
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -211,7 +198,6 @@
 
     return-void
 
-    .line 152
     :cond_0
     const-class v0, Landroid/content/pm/LauncherApps;
 
@@ -225,7 +211,6 @@
 
     return-void
 
-    .line 155
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -237,30 +222,25 @@
 
     const/4 v2, 0x0
 
-    .line 157
     invoke-static {v1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v3
 
-    .line 156
     invoke-virtual {v0, v2, v3}, Landroid/content/pm/LauncherApps;->getActivityList(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 158
     iget-object v2, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLockWithoutBoost:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 159
     :try_start_0
     iget-object v3, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mSettings:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
-    .line 160
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -279,10 +259,8 @@
 
     check-cast v3, Lcom/android/server/wm/BoundsCompatStatusLogger$StatusCollector;
 
-    .line 161
     invoke-interface {v3}, Lcom/android/server/wm/BoundsCompatStatusLogger$StatusCollector;->initializeLocked()V
 
-    .line 162
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -300,12 +278,10 @@
 
     check-cast v5, Landroid/content/pm/LauncherActivityInfo;
 
-    .line 163
     invoke-virtual {v5}, Landroid/content/pm/LauncherActivityInfo;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v5
 
-    .line 164
     iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-interface {v3, v1, v5}, Lcom/android/server/wm/BoundsCompatStatusLogger$StatusCollector;->collectIfNeededLocked(ILjava/lang/String;)Z
@@ -316,7 +292,6 @@
 
     goto :goto_0
 
-    .line 169
     :cond_4
     iget-object p1, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mSettings:Ljava/util/HashMap;
 
@@ -326,12 +301,10 @@
 
     if-nez p1, :cond_7
 
-    .line 170
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    .line 171
     iget-object v0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mSettings:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -355,14 +328,12 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 172
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 173
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -373,12 +344,10 @@
 
     move-result-object v1
 
-    .line 174
     sget-boolean v4, Lcom/android/server/wm/BoundsCompatStatusLogger;->DEBUG:Z
 
     if-eqz v4, :cond_5
 
-    .line 175
     sget-object v4, Lcom/android/server/wm/BoundsCompatStatusLogger;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -403,13 +372,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     :cond_5
     invoke-virtual {p1, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 180
     :cond_6
     iget-object p0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -417,7 +384,6 @@
 
     invoke-static {p0, p1}, Lcom/samsung/android/core/CoreSaLogger;->sendSaLoggingBroadcastForBasicSetting(Landroid/content/Context;Ljava/util/HashMap;)V
 
-    .line 182
     :cond_7
     monitor-exit v2
 
@@ -436,12 +402,10 @@
 .method public final createSettingLocked(Ljava/lang/String;)Ljava/lang/StringBuilder;
     .locals 1
 
-    .line 186
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 187
     iget-object p0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mSettings:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -452,7 +416,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 128
     sget-object p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->TAG:Ljava/lang/String;
 
     return-object p0
@@ -461,7 +424,6 @@
 .method public final getSettingLocked(Ljava/lang/String;)Ljava/lang/StringBuilder;
     .locals 1
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mSettings:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -474,7 +436,6 @@
 
     goto :goto_0
 
-    .line 193
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BoundsCompatStatusLogger;->createSettingLocked(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -487,53 +448,45 @@
 .method public onStatusLogging()V
     .locals 3
 
-    .line 134
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 135
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_FIXED_ASPECT_RATIO_MODE:Z
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 136
     new-instance v1, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;-><init>(Lcom/android/server/wm/BoundsCompatStatusLogger;Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector-IA;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 138
     :cond_0
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_ASPECT_RATIO:Z
 
     if-eqz v1, :cond_1
 
-    .line 139
     new-instance v1, Lcom/android/server/wm/BoundsCompatStatusLogger$OrientationControlStatusCollector;
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/wm/BoundsCompatStatusLogger$OrientationControlStatusCollector;-><init>(Lcom/android/server/wm/BoundsCompatStatusLogger;Lcom/android/server/wm/BoundsCompatStatusLogger$OrientationControlStatusCollector-IA;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 141
     :cond_1
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_BOUNDS_COMPAT_ALIGNMENT_CONTROL:Z
 
     if-eqz v1, :cond_2
 
-    .line 142
     new-instance v1, Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector;
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector;-><init>(Lcom/android/server/wm/BoundsCompatStatusLogger;Lcom/android/server/wm/BoundsCompatStatusLogger$AlignmentStatusCollector-IA;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 144
     :cond_2
     invoke-virtual {p0, v0}, Lcom/android/server/wm/BoundsCompatStatusLogger;->collectAndSendStatus(Ljava/util/List;)V
     :try_end_0
@@ -544,7 +497,6 @@
     :catchall_0
     move-exception p0
 
-    .line 146
     sget-object v0, Lcom/android/server/wm/BoundsCompatStatusLogger;->TAG:Ljava/lang/String;
 
     const-string v1, "Failed to logBoundsCompatStatus"
@@ -558,10 +510,8 @@
 .method public onSystemReady(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 122
     iput-object p1, p0, Lcom/android/server/wm/BoundsCompatStatusLogger;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 123
     invoke-static {p0}, Lcom/android/server/wm/CoreSaStatusLoggingService;->registerCoreSaStatusLogger(Lcom/android/server/wm/CoreSaStatusLoggingService$CoreSaStatusLogger;)V
 
     return-void
@@ -570,12 +520,10 @@
 .method public final putSettingLocked(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 197
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BoundsCompatStatusLogger;->getSettingLocked(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
-    .line 198
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -588,10 +536,8 @@
 
     const-string p1, ", "
 
-    .line 199
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 201
     :cond_0
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

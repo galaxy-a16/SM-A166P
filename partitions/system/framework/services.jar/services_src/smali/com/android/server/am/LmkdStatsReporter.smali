@@ -7,85 +7,69 @@
 .method public static logKillOccurred(Ljava/io/DataInputStream;II)V
     .locals 24
 
-    .line 56
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v4
 
-    .line 57
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v6
 
-    .line 58
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v8
 
-    .line 59
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v10
 
-    .line 60
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v12
 
-    .line 61
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v14
 
-    .line 62
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v1
 
-    .line 63
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 64
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v16
 
-    .line 65
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v17
 
-    .line 66
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v18
 
-    .line 67
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v0
 
-    .line 68
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v20
 
-    .line 69
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v21
 
-    .line 70
     invoke-virtual/range {p0 .. p0}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v2
 
     const/16 v19, 0x33
 
-    .line 73
     invoke-static {v0}, Lcom/android/server/am/LmkdStatsReporter;->mapKillReason(I)I
 
     move-result v22
@@ -98,7 +82,6 @@
 
     move/from16 v23, p2
 
-    .line 71
     invoke-static/range {v0 .. v23}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;IJJJJJJIIIIIIII)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -110,7 +93,6 @@
 
     const-string v1, "Invalid buffer data. Failed to log LMK_KILL_OCCURRED"
 
-    .line 76
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -121,7 +103,6 @@
 
     const/16 v0, 0x36
 
-    .line 88
     invoke-static {v0, p0}, Lcom/android/internal/util/FrameworkStatsLog;->write(II)V
 
     return-void
@@ -130,7 +111,6 @@
 .method public static mapKillReason(I)I
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const/4 p0, 0x0

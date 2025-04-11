@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/musicrecognition/MusicRecognitionManagerService;)V
     .locals 0
 
-    .line 112
     iput-object p1, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
 
     invoke-direct {p0}, Landroid/media/musicrecognition/IMusicRecognitionManager$Stub;-><init>()V
@@ -24,14 +23,12 @@
 .method public beginRecognition(Landroid/media/musicrecognition/RecognitionRequest;Landroid/os/IBinder;)V
     .locals 3
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
 
     const-string v1, "beginRecognition"
 
     invoke-static {v0, v1}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->-$$Nest$menforceCaller(Lcom/android/server/musicrecognition/MusicRecognitionManagerService;Ljava/lang/String;)V
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
 
     invoke-static {v0}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->access$000(Lcom/android/server/musicrecognition/MusicRecognitionManagerService;)Ljava/lang/Object;
@@ -40,13 +37,11 @@
 
     monitor-enter v0
 
-    .line 120
     :try_start_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 121
     iget-object v2, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
 
     invoke-static {v2, v1}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->access$100(Lcom/android/server/musicrecognition/MusicRecognitionManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
@@ -57,7 +52,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 123
     invoke-virtual {p0, v1}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->isDefaultServiceLocked(I)Z
 
     move-result v1
@@ -66,14 +60,12 @@
 
     const-string v1, "beginRecognition"
 
-    .line 124
     invoke-virtual {p0, v1}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->isCalledByServiceAppLocked(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 125
     :cond_0
     invoke-virtual {v2, p1, p2}, Lcom/android/server/musicrecognition/MusicRecognitionManagerPerUserService;->beginRecognitionLocked(Landroid/media/musicrecognition/RecognitionRequest;Landroid/os/IBinder;)V
     :try_end_0
@@ -81,7 +73,6 @@
 
     goto :goto_0
 
-    .line 128
     :cond_1
     :try_start_1
     invoke-static {p2}, Landroid/media/musicrecognition/IMusicRecognitionManagerCallback$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/musicrecognition/IMusicRecognitionManagerCallback;
@@ -90,13 +81,11 @@
 
     const/4 p1, 0x3
 
-    .line 129
     invoke-interface {p0, p1}, Landroid/media/musicrecognition/IMusicRecognitionManagerCallback;->onRecognitionFailed(I)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 134
     :catch_0
     :goto_0
     :try_start_2
@@ -117,17 +106,14 @@
 .method public final isCalledByServiceAppLocked(Ljava/lang/String;)Z
     .locals 6
 
-    .line 164
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 165
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 166
     iget-object v2, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
 
     invoke-static {v2}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->access$400(Lcom/android/server/musicrecognition/MusicRecognitionManagerService;)Lcom/android/server/infra/ServiceNameResolver;
@@ -144,7 +130,6 @@
 
     if-nez v2, :cond_0
 
-    .line 168
     invoke-static {}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -173,7 +158,6 @@
 
     return v4
 
-    .line 173
     :cond_0
     invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -181,7 +165,6 @@
 
     if-nez v0, :cond_1
 
-    .line 175
     invoke-static {}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -206,13 +189,11 @@
 
     return v4
 
-    .line 179
     :cond_1
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 181
     iget-object p0, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -223,13 +204,11 @@
 
     move-result-object p0
 
-    .line 185
     :try_start_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v5
 
-    .line 184
     invoke-virtual {p0, v0, v5}, Landroid/content/pm/PackageManager;->getPackageUidAsUser(Ljava/lang/String;I)I
 
     move-result p0
@@ -238,7 +217,6 @@
 
     if-eq v1, p0, :cond_2
 
-    .line 191
     invoke-static {}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -272,7 +250,6 @@
 
     return p0
 
-    .line 187
     :catch_0
     invoke-static {}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -302,7 +279,6 @@
 .method public final isDefaultServiceLocked(I)Z
     .locals 1
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
 
     invoke-static {v0}, Lcom/android/server/musicrecognition/MusicRecognitionManagerService;->access$200(Lcom/android/server/musicrecognition/MusicRecognitionManagerService;)Lcom/android/server/infra/ServiceNameResolver;
@@ -319,7 +295,6 @@
 
     return p0
 
-    .line 157
     :cond_0
     iget-object p0, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
 
@@ -331,7 +306,6 @@
 
     move-result-object p0
 
-    .line 158
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -342,7 +316,6 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 8
 
-    .line 144
     new-instance v0, Lcom/android/server/musicrecognition/MusicRecognitionManagerServiceShellCommand;
 
     iget-object v1, p0, Lcom/android/server/musicrecognition/MusicRecognitionManagerService$MusicRecognitionManagerStub;->this$0:Lcom/android/server/musicrecognition/MusicRecognitionManagerService;
@@ -363,7 +336,6 @@
 
     move-object v7, p6
 
-    .line 145
     invoke-virtual/range {v0 .. v7}, Landroid/os/ShellCommand;->exec(Landroid/os/Binder;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)I
 
     return-void

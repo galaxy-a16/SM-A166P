@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, ""
 
     return-object p0
@@ -38,7 +36,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -47,27 +44,23 @@
 .method public start(Landroid/net/INetworkStackStatusCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public startWithCallbacks(Landroid/net/INetworkStackStatusCallback;Landroid/net/dhcp/IDhcpEventCallbacks;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public stop(Landroid/net/INetworkStackStatusCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateParams(Landroid/net/dhcp/DhcpServingParamsParcel;Landroid/net/INetworkStackStatusCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

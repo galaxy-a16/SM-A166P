@@ -22,10 +22,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,12 +48,10 @@
 
     const/4 v0, 0x0
 
-    .line 18
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mWallpaperPackage:Ljava/lang/String;
 
     const/4 v0, -0x1
 
-    .line 19
     iput v0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mWallpaperUid:I
 
     return-void
@@ -64,7 +60,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/WallPaperFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;-><init>()V
 
     return-void
@@ -73,7 +68,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/WallPaperFilter;
     .locals 1
 
-    .line 28
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/WallPaperFilter$WallPaperFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/WallPaperFilter;
 
     move-result-object v0
@@ -88,7 +82,6 @@
 
     const/4 v0, 0x0
 
-    .line 37
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mWallpaperPackage:Ljava/lang/String;
 
     return-void
@@ -97,7 +90,6 @@
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 42
     iget-object p3, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mContext:Landroid/content/Context;
 
     if-eqz p3, :cond_1
@@ -112,7 +104,6 @@
 
     if-ne p4, p2, :cond_0
 
-    .line 44
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object p2
@@ -128,7 +119,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 45
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -148,7 +138,6 @@
 .method public getWallpaperPackage()Ljava/lang/String;
     .locals 0
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mWallpaperPackage:Ljava/lang/String;
 
     return-object p0
@@ -157,7 +146,6 @@
 .method public getWallpaperUid()I
     .locals 0
 
-    .line 72
     iget p0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mWallpaperUid:I
 
     return p0
@@ -166,10 +154,8 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mContext:Landroid/content/Context;
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->initWallpaperPackage()V
 
     return-void
@@ -178,7 +164,6 @@
 .method public final initWallpaperPackage()V
     .locals 3
 
-    .line 54
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mContext:Landroid/content/Context;
 
@@ -192,7 +177,6 @@
 
     if-nez v0, :cond_0
 
-    .line 56
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->TAG:Ljava/lang/String;
 
     const-string v1, "ignore in case of default image wallpaper"
@@ -201,7 +185,6 @@
 
     goto :goto_0
 
-    .line 58
     :cond_0
     invoke-virtual {v0}, Landroid/app/WallpaperInfo;->getPackageName()Ljava/lang/String;
 
@@ -209,7 +192,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mWallpaperPackage:Ljava/lang/String;
 
-    .line 59
     invoke-virtual {v0}, Landroid/app/WallpaperInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v0
@@ -220,7 +202,6 @@
 
     iput v0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mWallpaperUid:I
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -248,7 +229,6 @@
     :catch_0
     move-exception v0
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -274,10 +254,8 @@
 .method public onWallPaperPkgBinded(Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 0
 
-    .line 76
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->mWallpaperPackage:Ljava/lang/String;
 
-    .line 77
     iput-object p2, p0, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->userId:Ljava/lang/Integer;
 
     return-void

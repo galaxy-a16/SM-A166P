@@ -18,14 +18,12 @@
 .method public constructor <init>(Lcom/android/server/wm/FadeAnimationController;Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 115
     iput-object p1, p0, Lcom/android/server/wm/FadeAnimationController$1;->this$0:Lcom/android/server/wm/FadeAnimationController;
 
     iput-object p2, p0, Lcom/android/server/wm/FadeAnimationController$1;->val$animation:Landroid/view/animation/Animation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 117
     new-instance p1, Landroid/view/animation/Transformation;
 
     invoke-direct {p1}, Landroid/view/animation/Transformation;-><init>()V
@@ -40,19 +38,16 @@
 .method public apply(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;J)V
     .locals 2
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController$1;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v0}, Landroid/view/animation/Transformation;->clear()V
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController$1;->val$animation:Landroid/view/animation/Animation;
 
     iget-object v1, p0, Lcom/android/server/wm/FadeAnimationController$1;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v0, p3, p4, v1}, Landroid/view/animation/Animation;->getTransformation(JLandroid/view/animation/Transformation;)Z
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController$1;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {p0}, Landroid/view/animation/Transformation;->getAlpha()F
@@ -67,10 +62,8 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 0
 
-    .line 139
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 140
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController$1;->val$animation:Landroid/view/animation/Animation;
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
@@ -83,12 +76,10 @@
 
     const-wide v0, 0x10b00000001L
 
-    .line 145
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v0
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController$1;->val$animation:Landroid/view/animation/Animation;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -99,7 +90,6 @@
 
     invoke-virtual {p1, v2, v3, p0}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 147
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -108,7 +98,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 126
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController$1;->val$animation:Landroid/view/animation/Animation;
 
     invoke-virtual {p0}, Landroid/view/animation/Animation;->getDuration()J
@@ -121,7 +110,6 @@
 .method public getShowWallpaper()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

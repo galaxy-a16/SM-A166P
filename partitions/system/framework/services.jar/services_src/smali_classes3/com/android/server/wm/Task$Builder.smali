@@ -101,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$msetAffinity(Lcom/android/server/wm/Task$Builder;Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setAffinity(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -112,7 +111,6 @@
 .method public static bridge synthetic -$$Nest$msetAffinityIntent(Lcom/android/server/wm/Task$Builder;Landroid/content/Intent;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setAffinityIntent(Landroid/content/Intent;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -123,7 +121,6 @@
 .method public static bridge synthetic -$$Nest$msetAskedCompatMode(Lcom/android/server/wm/Task$Builder;Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setAskedCompatMode(Z)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -134,7 +131,6 @@
 .method public static bridge synthetic -$$Nest$msetAutoRemoveRecents(Lcom/android/server/wm/Task$Builder;Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setAutoRemoveRecents(Z)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -145,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$msetCallingFeatureId(Lcom/android/server/wm/Task$Builder;Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setCallingFeatureId(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -156,7 +151,6 @@
 .method public static bridge synthetic -$$Nest$msetCallingPackage(Lcom/android/server/wm/Task$Builder;Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setCallingPackage(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -167,7 +161,6 @@
 .method public static bridge synthetic -$$Nest$msetCallingUid(Lcom/android/server/wm/Task$Builder;I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setCallingUid(I)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -178,7 +171,6 @@
 .method public static bridge synthetic -$$Nest$msetLastDescription(Lcom/android/server/wm/Task$Builder;Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setLastDescription(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -189,7 +181,6 @@
 .method public static bridge synthetic -$$Nest$msetLastSnapshotData(Lcom/android/server/wm/Task$Builder;Landroid/app/ActivityManager$RecentTaskInfo$PersistedTaskSnapshotData;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setLastSnapshotData(Landroid/app/ActivityManager$RecentTaskInfo$PersistedTaskSnapshotData;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -200,7 +191,6 @@
 .method public static bridge synthetic -$$Nest$msetLastTaskDescription(Lcom/android/server/wm/Task$Builder;Landroid/app/ActivityManager$TaskDescription;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setLastTaskDescription(Landroid/app/ActivityManager$TaskDescription;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -211,7 +201,6 @@
 .method public static bridge synthetic -$$Nest$msetLastTimeMoved(Lcom/android/server/wm/Task$Builder;J)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/Task$Builder;->setLastTimeMoved(J)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -222,7 +211,6 @@
 .method public static bridge synthetic -$$Nest$msetNeverRelinquishIdentity(Lcom/android/server/wm/Task$Builder;Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setNeverRelinquishIdentity(Z)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -233,7 +221,6 @@
 .method public static bridge synthetic -$$Nest$msetNextAffiliateTaskId(Lcom/android/server/wm/Task$Builder;I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setNextAffiliateTaskId(I)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -244,7 +231,6 @@
 .method public static bridge synthetic -$$Nest$msetOrigActivity(Lcom/android/server/wm/Task$Builder;Landroid/content/ComponentName;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setOrigActivity(Landroid/content/ComponentName;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -255,7 +241,6 @@
 .method public static bridge synthetic -$$Nest$msetPrevAffiliateTaskId(Lcom/android/server/wm/Task$Builder;I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setPrevAffiliateTaskId(I)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -266,7 +251,6 @@
 .method public static bridge synthetic -$$Nest$msetRealActivitySuspended(Lcom/android/server/wm/Task$Builder;Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setRealActivitySuspended(Z)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -277,7 +261,6 @@
 .method public static bridge synthetic -$$Nest$msetResizeMode(Lcom/android/server/wm/Task$Builder;I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setResizeMode(I)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -288,7 +271,6 @@
 .method public static bridge synthetic -$$Nest$msetRootAffinity(Lcom/android/server/wm/Task$Builder;Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setRootAffinity(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -299,7 +281,6 @@
 .method public static bridge synthetic -$$Nest$msetRootWasReset(Lcom/android/server/wm/Task$Builder;Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setRootWasReset(Z)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -310,7 +291,6 @@
 .method public static bridge synthetic -$$Nest$msetSupportsPictureInPicture(Lcom/android/server/wm/Task$Builder;Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setSupportsPictureInPicture(Z)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -321,7 +301,6 @@
 .method public static bridge synthetic -$$Nest$msetTaskAffiliation(Lcom/android/server/wm/Task$Builder;I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setTaskAffiliation(I)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -332,7 +311,6 @@
 .method public static bridge synthetic -$$Nest$msetUserId(Lcom/android/server/wm/Task$Builder;I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setUserId(I)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -343,7 +321,6 @@
 .method public static bridge synthetic -$$Nest$msetUserSetupComplete(Lcom/android/server/wm/Task$Builder;Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setUserSetupComplete(Z)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -354,7 +331,6 @@
 .method public static bridge synthetic -$$Nest$msetVoiceInteractor(Lcom/android/server/wm/Task$Builder;Lcom/android/internal/app/IVoiceInteractor;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$Builder;->setVoiceInteractor(Lcom/android/internal/app/IVoiceInteractor;)Lcom/android/server/wm/Task$Builder;
 
     move-result-object p0
@@ -365,29 +341,22 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 1
 
-    .line 8104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 8067
     iput v0, p0, Lcom/android/server/wm/Task$Builder;->mPrevAffiliateTaskId:I
 
-    .line 8068
     iput v0, p0, Lcom/android/server/wm/Task$Builder;->mNextAffiliateTaskId:I
 
-    .line 8076
     iput v0, p0, Lcom/android/server/wm/Task$Builder;->mMinWidth:I
 
-    .line 8077
     iput v0, p0, Lcom/android/server/wm/Task$Builder;->mMinHeight:I
 
     const/4 v0, 0x0
 
-    .line 8083
     iput v0, p0, Lcom/android/server/wm/Task$Builder;->mWindowingMode:I
 
-    .line 8105
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-void
@@ -398,7 +367,6 @@
 .method public build()Lcom/android/server/wm/Task;
     .locals 6
 
-    .line 8416
     iget-object v0, p0, Lcom/android/server/wm/Task$Builder;->mParent:Lcom/android/server/wm/WindowContainer;
 
     if-eqz v0, :cond_0
@@ -407,32 +375,27 @@
 
     if-eqz v1, :cond_0
 
-    .line 8417
     check-cast v0, Lcom/android/server/wm/TaskDisplayArea;
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/Task$Builder;->validateRootTask(Lcom/android/server/wm/TaskDisplayArea;)V
 
-    .line 8420
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/Task$Builder;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     if-nez v0, :cond_1
 
-    .line 8421
     new-instance v0, Landroid/content/pm/ActivityInfo;
 
     invoke-direct {v0}, Landroid/content/pm/ActivityInfo;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/Task$Builder;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 8422
     new-instance v1, Landroid/content/pm/ApplicationInfo;
 
     invoke-direct {v1}, Landroid/content/pm/ApplicationInfo;-><init>()V
 
     iput-object v1, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 8425
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/Task$Builder;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -446,12 +409,10 @@
 
     iput v0, p0, Lcom/android/server/wm/Task$Builder;->mUserId:I
 
-    .line 8426
     iget v0, p0, Lcom/android/server/wm/Task$Builder;->mTaskId:I
 
     iput v0, p0, Lcom/android/server/wm/Task$Builder;->mTaskAffiliation:I
 
-    .line 8427
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -460,10 +421,8 @@
 
     const/4 v0, 0x1
 
-    .line 8428
     iput-boolean v0, p0, Lcom/android/server/wm/Task$Builder;->mNeverRelinquishIdentity:Z
 
-    .line 8429
     iget-object v1, p0, Lcom/android/server/wm/Task$Builder;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v2, v1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -472,24 +431,20 @@
 
     iput v2, p0, Lcom/android/server/wm/Task$Builder;->mCallingUid:I
 
-    .line 8430
     iget-object v2, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     iput-object v2, p0, Lcom/android/server/wm/Task$Builder;->mCallingPackage:Ljava/lang/String;
 
-    .line 8431
     iget v2, v1, Landroid/content/pm/ActivityInfo;->resizeMode:I
 
     iput v2, p0, Lcom/android/server/wm/Task$Builder;->mResizeMode:I
 
-    .line 8432
     invoke-virtual {v1}, Landroid/content/pm/ActivityInfo;->supportsPictureInPicture()Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/android/server/wm/Task$Builder;->mSupportsPictureInPicture:Z
 
-    .line 8433
     iget-boolean v1, p0, Lcom/android/server/wm/Task$Builder;->mRemoveWithTaskOrganizer:Z
 
     if-nez v1, :cond_2
@@ -498,39 +453,32 @@
 
     if-eqz v1, :cond_2
 
-    .line 8434
     invoke-virtual {v1}, Landroid/app/ActivityOptions;->getRemoveWithTaskOranizer()Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/android/server/wm/Task$Builder;->mRemoveWithTaskOrganizer:Z
 
-    .line 8437
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/wm/Task$Builder;->buildInner()Lcom/android/server/wm/Task;
 
     move-result-object v1
 
-    .line 8438
     iget-boolean v2, p0, Lcom/android/server/wm/Task$Builder;->mHasBeenVisible:Z
 
     invoke-static {v1, v2}, Lcom/android/server/wm/Task;->-$$Nest$fputmHasBeenVisible(Lcom/android/server/wm/Task;Z)V
 
-    .line 8442
     iget v2, p0, Lcom/android/server/wm/Task$Builder;->mActivityType:I
 
     if-eqz v2, :cond_3
 
-    .line 8443
     invoke-virtual {v1, v2}, Lcom/android/server/wm/ConfigurationContainer;->setActivityType(I)V
 
-    .line 8446
     :cond_3
     iget-object v2, p0, Lcom/android/server/wm/Task$Builder;->mParent:Lcom/android/server/wm/WindowContainer;
 
     if-eqz v2, :cond_8
 
-    .line 8447
     instance-of v3, v2, Lcom/android/server/wm/Task;
 
     const v4, 0x7fffffff
@@ -539,10 +487,8 @@
 
     if-eqz v3, :cond_6
 
-    .line 8448
     check-cast v2, Lcom/android/server/wm/Task;
 
-    .line 8449
     iget-boolean v3, p0, Lcom/android/server/wm/Task$Builder;->mOnTop:Z
 
     if-eqz v3, :cond_4
@@ -573,7 +519,6 @@
 
     goto :goto_3
 
-    .line 8452
     :cond_6
     iget-boolean v3, p0, Lcom/android/server/wm/Task$Builder;->mOnTop:Z
 
@@ -587,23 +532,19 @@
     :goto_2
     invoke-virtual {v2, v1, v4}, Lcom/android/server/wm/WindowContainer;->addChild(Lcom/android/server/wm/WindowContainer;I)V
 
-    .line 8457
     :cond_8
     :goto_3
     iget v2, p0, Lcom/android/server/wm/Task$Builder;->mStageType:I
 
     if-eqz v2, :cond_9
 
-    .line 8459
     invoke-virtual {v1, v2}, Lcom/android/server/wm/ConfigurationContainer;->setStageType(I)V
 
-    .line 8464
     :cond_9
     iget p0, p0, Lcom/android/server/wm/Task$Builder;->mWindowingMode:I
 
     if-eqz p0, :cond_a
 
-    .line 8465
     invoke-virtual {v1, p0, v0}, Lcom/android/server/wm/Task;->setWindowingMode(IZ)V
 
     :cond_a
@@ -615,7 +556,6 @@
 
     move-object/from16 v0, p0
 
-    .line 8473
     new-instance v41, Lcom/android/server/wm/Task;
 
     move-object/from16 v1, v41
@@ -758,7 +698,6 @@
 .method public setActivityInfo(Landroid/content/pm/ActivityInfo;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8154
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     return-object p0
@@ -767,7 +706,6 @@
 .method public setActivityOptions(Landroid/app/ActivityOptions;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8159
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mActivityOptions:Landroid/app/ActivityOptions;
 
     return-object p0
@@ -776,7 +714,6 @@
 .method public setActivityType(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8169
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mActivityType:I
 
     return-object p0
@@ -785,7 +722,6 @@
 .method public final setAffinity(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8333
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mAffinity:Ljava/lang/String;
 
     return-object p0
@@ -794,7 +730,6 @@
 .method public final setAffinityIntent(Landroid/content/Intent;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8328
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mAffinityIntent:Landroid/content/Intent;
 
     return-object p0
@@ -803,7 +738,6 @@
 .method public final setAskedCompatMode(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8323
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mAskedCompatMode:Z
 
     return-object p0
@@ -812,7 +746,6 @@
 .method public final setAutoRemoveRecents(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8318
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mAutoRemoveRecents:Z
 
     return-object p0
@@ -821,7 +754,6 @@
 .method public final setCallingFeatureId(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8283
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mCallingFeatureId:Ljava/lang/String;
 
     return-object p0
@@ -830,7 +762,6 @@
 .method public final setCallingPackage(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8248
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mCallingPackage:Ljava/lang/String;
 
     return-object p0
@@ -839,7 +770,6 @@
 .method public final setCallingUid(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8243
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mCallingUid:I
 
     return-object p0
@@ -848,7 +778,6 @@
 .method public setCreatedByOrganizer(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8187
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mCreatedByOrganizer:Z
 
     return-object p0
@@ -857,7 +786,6 @@
 .method public setDeferTaskAppear(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8196
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mDeferTaskAppear:Z
 
     return-object p0
@@ -866,7 +794,6 @@
 .method public setEffectiveUid(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8139
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mEffectiveUid:I
 
     return-object p0
@@ -875,7 +802,6 @@
 .method public setHasBeenVisible(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8211
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mHasBeenVisible:Z
 
     return-object p0
@@ -884,7 +810,6 @@
 .method public setIntent(Landroid/content/Intent;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8129
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mIntent:Landroid/content/Intent;
 
     return-object p0
@@ -893,7 +818,6 @@
 .method public final setLastDescription(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8293
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mLastDescription:Ljava/lang/String;
 
     return-object p0
@@ -902,7 +826,6 @@
 .method public final setLastSnapshotData(Landroid/app/ActivityManager$RecentTaskInfo$PersistedTaskSnapshotData;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8303
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mLastSnapshotData:Landroid/app/ActivityManager$RecentTaskInfo$PersistedTaskSnapshotData;
 
     return-object p0
@@ -911,7 +834,6 @@
 .method public final setLastTaskDescription(Landroid/app/ActivityManager$TaskDescription;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8298
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mLastTaskDescription:Landroid/app/ActivityManager$TaskDescription;
 
     return-object p0
@@ -920,7 +842,6 @@
 .method public final setLastTimeMoved(J)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8233
     iput-wide p1, p0, Lcom/android/server/wm/Task$Builder;->mLastTimeMoved:J
 
     return-object p0
@@ -929,7 +850,6 @@
 .method public setLaunchCookie(Landroid/os/IBinder;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8201
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mLaunchCookie:Landroid/os/IBinder;
 
     return-object p0
@@ -938,7 +858,6 @@
 .method public setLaunchFlags(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8119
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mLaunchFlags:I
 
     return-object p0
@@ -947,7 +866,6 @@
 .method public setMinHeight(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8149
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mMinHeight:I
 
     return-object p0
@@ -956,7 +874,6 @@
 .method public setMinWidth(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8144
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mMinWidth:I
 
     return-object p0
@@ -965,7 +882,6 @@
 .method public final setNeverRelinquishIdentity(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8238
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mNeverRelinquishIdentity:Z
 
     return-object p0
@@ -974,7 +890,6 @@
 .method public final setNextAffiliateTaskId(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8278
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mNextAffiliateTaskId:I
 
     return-object p0
@@ -983,7 +898,6 @@
 .method public setOnTop(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8206
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mOnTop:Z
 
     return-object p0
@@ -992,7 +906,6 @@
 .method public final setOrigActivity(Landroid/content/ComponentName;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8308
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mOrigActivity:Landroid/content/ComponentName;
 
     return-object p0
@@ -1001,7 +914,6 @@
 .method public setParent(Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8109
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mParent:Lcom/android/server/wm/WindowContainer;
 
     return-object p0
@@ -1010,7 +922,6 @@
 .method public final setPrevAffiliateTaskId(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8273
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mPrevAffiliateTaskId:I
 
     return-object p0
@@ -1019,7 +930,6 @@
 .method public setRealActivity(Landroid/content/ComponentName;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8134
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mRealActivity:Landroid/content/ComponentName;
 
     return-object p0
@@ -1028,7 +938,6 @@
 .method public final setRealActivitySuspended(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8288
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mRealActivitySuspended:Z
 
     return-object p0
@@ -1037,7 +946,6 @@
 .method public setRemoveWithTaskOrganizer(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8223
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mRemoveWithTaskOrganizer:Z
 
     return-object p0
@@ -1046,7 +954,6 @@
 .method public final setResizeMode(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8253
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mResizeMode:I
 
     return-object p0
@@ -1055,7 +962,6 @@
 .method public final setRootAffinity(Ljava/lang/String;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8338
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mRootAffinity:Ljava/lang/String;
 
     return-object p0
@@ -1064,7 +970,6 @@
 .method public final setRootWasReset(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8313
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mRootWasReset:Z
 
     return-object p0
@@ -1073,7 +978,6 @@
 .method public setSourceTask(Lcom/android/server/wm/Task;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8114
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mSourceTask:Lcom/android/server/wm/Task;
 
     return-object p0
@@ -1082,7 +986,6 @@
 .method public setStageType(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8217
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mStageType:I
 
     return-object p0
@@ -1091,7 +994,6 @@
 .method public final setSupportsPictureInPicture(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8258
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mSupportsPictureInPicture:Z
 
     return-object p0
@@ -1100,7 +1002,6 @@
 .method public final setTaskAffiliation(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8268
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mTaskAffiliation:I
 
     return-object p0
@@ -1109,7 +1010,6 @@
 .method public setTaskId(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8124
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mTaskId:I
 
     return-object p0
@@ -1118,7 +1018,6 @@
 .method public final setUserId(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8228
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mUserId:I
 
     return-object p0
@@ -1127,7 +1026,6 @@
 .method public final setUserSetupComplete(Z)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8263
     iput-boolean p1, p0, Lcom/android/server/wm/Task$Builder;->mUserSetupComplete:Z
 
     return-object p0
@@ -1136,7 +1034,6 @@
 .method public final setVoiceInteractor(Lcom/android/internal/app/IVoiceInteractor;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8343
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mVoiceInteractor:Lcom/android/internal/app/IVoiceInteractor;
 
     return-object p0
@@ -1145,7 +1042,6 @@
 .method public setVoiceSession(Landroid/service/voice/IVoiceInteractionSession;)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8164
     iput-object p1, p0, Lcom/android/server/wm/Task$Builder;->mVoiceSession:Landroid/service/voice/IVoiceInteractionSession;
 
     return-object p0
@@ -1154,7 +1050,6 @@
 .method public setWindowingMode(I)Lcom/android/server/wm/Task$Builder;
     .locals 0
 
-    .line 8178
     iput p1, p0, Lcom/android/server/wm/Task$Builder;->mWindowingMode:I
 
     return-object p0
@@ -1163,7 +1058,6 @@
 .method public final validateRootTask(Lcom/android/server/wm/TaskDisplayArea;)V
     .locals 9
 
-    .line 8348
     iget v0, p0, Lcom/android/server/wm/Task$Builder;->mActivityType:I
 
     const/4 v1, 0x1
@@ -1174,10 +1068,8 @@
 
     if-nez v0, :cond_0
 
-    .line 8352
     iput v1, p0, Lcom/android/server/wm/Task$Builder;->mActivityType:I
 
-    .line 8355
     :cond_0
     iget v0, p0, Lcom/android/server/wm/Task$Builder;->mActivityType:I
 
@@ -1187,7 +1079,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 8360
     invoke-virtual {p1, v2, v0}, Lcom/android/server/wm/TaskDisplayArea;->getRootTask(II)Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -1196,7 +1087,6 @@
 
     goto :goto_0
 
-    .line 8362
     :cond_1
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -1236,7 +1126,6 @@
 
     throw v1
 
-    .line 8368
     :cond_2
     :goto_0
     iget v0, p0, Lcom/android/server/wm/Task$Builder;->mWindowingMode:I
@@ -1255,7 +1144,6 @@
 
     if-nez v0, :cond_4
 
-    .line 8373
     iget-boolean v0, p0, Lcom/android/server/wm/Task$Builder;->mCreatedByOrganizer:Z
 
     if-eqz v0, :cond_3
@@ -1268,7 +1156,6 @@
 
     iget v0, p0, Lcom/android/server/wm/Task$Builder;->mStageType:I
 
-    .line 8375
     invoke-static {v0}, Landroid/app/WindowConfiguration;->isSplitScreenWindowingMode(I)Z
 
     move-result v0
@@ -1279,7 +1166,6 @@
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiWindowEnableController:Lcom/android/server/wm/MultiWindowEnableController;
 
-    .line 8376
     invoke-virtual {v0}, Lcom/android/server/wm/MultiWindowEnableController;->deviceSupportsMultiWindow()Z
 
     move-result v0
@@ -1290,12 +1176,10 @@
 
     const-string/jumbo v3, "validateRootTask: force support to create root stage task!"
 
-    .line 8377
     invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 8380
     :cond_3
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1319,7 +1203,6 @@
 
     throw p1
 
-    .line 8385
     :cond_4
     :goto_1
     iget v0, p0, Lcom/android/server/wm/Task$Builder;->mWindowingMode:I
@@ -1334,7 +1217,6 @@
 
     goto :goto_2
 
-    .line 8387
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1348,27 +1230,23 @@
     :goto_2
     if-ne v0, v3, :cond_7
 
-    .line 8392
     invoke-virtual {p1}, Lcom/android/server/wm/TaskDisplayArea;->getRootPinnedTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    .line 8394
     invoke-virtual {p1}, Lcom/android/server/wm/TaskDisplayArea;->getRootPinnedTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->dismissPip()V
 
-    .line 8397
     :cond_7
     iget-object v0, p0, Lcom/android/server/wm/Task$Builder;->mIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_8
 
-    .line 8398
     iget v1, p0, Lcom/android/server/wm/Task$Builder;->mLaunchFlags:I
 
     invoke-virtual {v0}, Landroid/content/Intent;->getFlags()I
@@ -1379,7 +1257,6 @@
 
     iput v0, p0, Lcom/android/server/wm/Task$Builder;->mLaunchFlags:I
 
-    .line 8402
     :cond_8
     iget-boolean v0, p0, Lcom/android/server/wm/Task$Builder;->mCreatedByOrganizer:Z
 
@@ -1389,7 +1266,6 @@
 
     goto :goto_3
 
-    .line 8403
     :cond_9
     iget v4, p0, Lcom/android/server/wm/Task$Builder;->mWindowingMode:I
 
@@ -1410,13 +1286,10 @@
     :goto_3
     if-eqz v0, :cond_a
 
-    .line 8408
     iput v2, p0, Lcom/android/server/wm/Task$Builder;->mWindowingMode:I
 
-    .line 8409
     iput-object v0, p0, Lcom/android/server/wm/Task$Builder;->mParent:Lcom/android/server/wm/WindowContainer;
 
-    .line 8412
     :cond_a
     invoke-virtual {p1}, Lcom/android/server/wm/TaskDisplayArea;->getNextRootTaskId()I
 

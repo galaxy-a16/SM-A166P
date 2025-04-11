@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/GenericCoverServiceController;Landroid/os/Looper;)V
     .locals 1
 
-    .line 94
     iput-object p1, p0, Lcom/android/server/sepunion/cover/GenericCoverServiceController$GenericPressServiceControllerHandler;->this$0:Lcom/android/server/sepunion/cover/GenericCoverServiceController;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 95
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 100
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_1
@@ -40,7 +37,6 @@
 
     goto :goto_0
 
-    .line 105
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/GenericCoverServiceController$GenericPressServiceControllerHandler;->this$0:Lcom/android/server/sepunion/cover/GenericCoverServiceController;
 
@@ -52,7 +48,6 @@
 
     goto :goto_0
 
-    .line 102
     :cond_1
     iget-object p0, p0, Lcom/android/server/sepunion/cover/GenericCoverServiceController$GenericPressServiceControllerHandler;->this$0:Lcom/android/server/sepunion/cover/GenericCoverServiceController;
 

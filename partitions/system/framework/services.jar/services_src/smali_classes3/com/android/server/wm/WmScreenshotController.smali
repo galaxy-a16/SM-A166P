@@ -39,7 +39,6 @@
 .method public static synthetic $r8$lambda$5QrTHG1dvrQ8loOfCs7l5yP-0cc(Lcom/android/server/wm/WmScreenshotController;[ZIZLcom/android/server/wm/WindowState;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/wm/WmScreenshotController;->lambda$findVisibleTargetWindowByType$4([ZIZLcom/android/server/wm/WindowState;)Z
 
     move-result p0
@@ -50,7 +49,6 @@
 .method public static synthetic $r8$lambda$A0h86Ys2_YorF2AjXV-FaVwsvHo(Lcom/android/server/wm/WmScreenshotController;Z[ZLcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wm/WmScreenshotController;->lambda$invalidateForScreenShot$3(Z[ZLcom/android/server/wm/WindowState;)V
 
     return-void
@@ -59,7 +57,6 @@
 .method public static synthetic $r8$lambda$YbQ6EIpuo0WkIm7pyFUMdW2nlYs(Lcom/android/server/wm/WmScreenshotController;Landroid/content/ServiceConnection;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/WmScreenshotController;->lambda$takeScreenshot$0(Landroid/content/ServiceConnection;)V
 
     return-void
@@ -68,7 +65,6 @@
 .method public static synthetic $r8$lambda$YjVxJdMbYLJcxfAN3CusqUcMxIQ(Lcom/android/server/wm/WmScreenshotController;Lcom/android/server/wm/DisplayContent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/WmScreenshotController;->lambda$takeScreenshotToTargetWindow$2(Lcom/android/server/wm/DisplayContent;)V
 
     return-void
@@ -77,7 +73,6 @@
 .method public static synthetic $r8$lambda$_4C0PLNXh6xk43_gOlHG6A0trYo(Landroid/graphics/Rect;Lcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/WmScreenshotController;->lambda$unionAllVisibleWindowsInTask$1(Landroid/graphics/Rect;Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -86,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayId(Lcom/android/server/wm/WmScreenshotController;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/WmScreenshotController;->mDisplayId:I
 
     return p0
@@ -95,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIgnorePolicy(Lcom/android/server/wm/WmScreenshotController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/WmScreenshotController;->mIgnorePolicy:Z
 
     return p0
@@ -104,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Lcom/android/server/wm/WmScreenshotController;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -113,7 +105,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWindowType(Lcom/android/server/wm/WmScreenshotController;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/WmScreenshotController;->mWindowType:I
 
     return p0
@@ -122,7 +113,6 @@
 .method public static bridge synthetic -$$Nest$fputmDisplayId(Lcom/android/server/wm/WmScreenshotController;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/wm/WmScreenshotController;->mDisplayId:I
 
     return-void
@@ -131,7 +121,6 @@
 .method public static bridge synthetic -$$Nest$fputmIgnorePolicy(Lcom/android/server/wm/WmScreenshotController;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/wm/WmScreenshotController;->mIgnorePolicy:Z
 
     return-void
@@ -140,7 +129,6 @@
 .method public static bridge synthetic -$$Nest$fputmWindowType(Lcom/android/server/wm/WmScreenshotController;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/wm/WmScreenshotController;->mWindowType:I
 
     return-void
@@ -149,7 +137,6 @@
 .method public static bridge synthetic -$$Nest$mactionToDirection(Lcom/android/server/wm/WmScreenshotController;Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WmScreenshotController;->actionToDirection(Ljava/lang/String;)I
 
     move-result p0
@@ -160,7 +147,6 @@
 .method public static bridge synthetic -$$Nest$mfailedReasonToString(Lcom/android/server/wm/WmScreenshotController;I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WmScreenshotController;->failedReasonToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -171,7 +157,6 @@
 .method public static bridge synthetic -$$Nest$mfromToString(Lcom/android/server/wm/WmScreenshotController;I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WmScreenshotController;->fromToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -182,7 +167,6 @@
 .method public static bridge synthetic -$$Nest$mgetDexMode(Lcom/android/server/wm/WmScreenshotController;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wm/WmScreenshotController;->getDexMode()I
 
     move-result p0
@@ -193,7 +177,6 @@
 .method public static bridge synthetic -$$Nest$mresetConnection(Lcom/android/server/wm/WmScreenshotController;Landroid/content/ServiceConnection;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/WmScreenshotController;->resetConnection(Landroid/content/ServiceConnection;Z)V
 
     return-void
@@ -202,7 +185,6 @@
 .method public static bridge synthetic -$$Nest$msendScreenshotMessage(Lcom/android/server/wm/WmScreenshotController;Landroid/os/IBinder;Landroid/content/ServiceConnection;Lcom/android/server/wm/WmScreenshotInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/WmScreenshotController;->sendScreenshotMessage(Landroid/os/IBinder;Landroid/content/ServiceConnection;Lcom/android/server/wm/WmScreenshotInfo;)V
 
     return-void
@@ -211,7 +193,6 @@
 .method public static bridge synthetic -$$Nest$msendTakeScreenshotRunnable(Lcom/android/server/wm/WmScreenshotController;IIIILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/wm/WmScreenshotController;->sendTakeScreenshotRunnable(IIIILandroid/os/Bundle;)V
 
     return-void
@@ -220,7 +201,6 @@
 .method public static bridge synthetic -$$Nest$mtakeScreenshot(Lcom/android/server/wm/WmScreenshotController;Lcom/android/server/wm/WmScreenshotInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WmScreenshotController;->takeScreenshot(Lcom/android/server/wm/WmScreenshotInfo;)V
 
     return-void
@@ -229,10 +209,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;)V
     .locals 12
 
-    .line 151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 132
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -241,15 +219,12 @@
 
     const/16 v0, 0x7df
 
-    .line 140
     iput v0, p0, Lcom/android/server/wm/WmScreenshotController;->mWindowType:I
 
     const/4 v0, 0x0
 
-    .line 141
     iput v0, p0, Lcom/android/server/wm/WmScreenshotController;->mDisplayId:I
 
-    .line 145
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -260,21 +235,18 @@
 
     iput-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mHandler:Landroid/os/Handler;
 
-    .line 147
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotLock:Ljava/lang/Object;
 
-    .line 148
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
-    .line 149
     new-instance v0, Lcom/android/server/wm/WmScreenshotController$TakeScreenshotRunnable;
 
     const/4 v1, 0x0
@@ -283,54 +255,44 @@
 
     iput-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mTakeScreenshotRunnable:Lcom/android/server/wm/WmScreenshotController$TakeScreenshotRunnable;
 
-    .line 468
     new-instance v0, Lcom/android/server/wm/WmScreenshotController$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/WmScreenshotController$3;-><init>(Lcom/android/server/wm/WmScreenshotController;)V
 
     iput-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mPalmMotionReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 509
     new-instance v0, Lcom/android/server/wm/WmScreenshotController$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/WmScreenshotController$4;-><init>(Lcom/android/server/wm/WmScreenshotController;)V
 
     iput-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mCaptureReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 152
     iput-object p1, p0, Lcom/android/server/wm/WmScreenshotController;->mContext:Landroid/content/Context;
 
-    .line 153
     iput-object p2, p0, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 155
     new-instance p1, Lcom/android/server/wm/WmScreenshotController$WmScreenshotShellCommand;
 
     invoke-direct {p1, p0, p2}, Lcom/android/server/wm/WmScreenshotController$WmScreenshotShellCommand;-><init>(Lcom/android/server/wm/WmScreenshotController;Lcom/android/server/wm/WindowManagerService;)V
 
     iput-object p1, p0, Lcom/android/server/wm/WmScreenshotController;->mWmScreenshotShellCommand:Lcom/android/server/wm/WmScreenshotController$WmScreenshotShellCommand;
 
-    .line 158
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p1, "com.samsung.android.motion.SWEEP_LEFT"
 
-    .line 159
     invoke-virtual {v3, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p1, "com.samsung.android.motion.SWEEP_RIGHT"
 
-    .line 160
     invoke-virtual {v3, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p1, "com.samsung.android.motion.SWEEP_FULL_SCREEN"
 
-    .line 161
     invoke-virtual {v3, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 162
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mPalmMotionReceiver:Landroid/content/BroadcastReceiver;
@@ -343,17 +305,14 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 165
     new-instance v9, Landroid/content/IntentFilter;
 
     invoke-direct {v9}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p1, "com.samsung.android.capture.ScreenshotExecutor"
 
-    .line 166
     invoke-virtual {v9, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 167
     iget-object v6, p0, Lcom/android/server/wm/WmScreenshotController;->mContext:Landroid/content/Context;
 
     iget-object v7, p0, Lcom/android/server/wm/WmScreenshotController;->mCaptureReceiver:Landroid/content/BroadcastReceiver;
@@ -372,7 +331,6 @@
 .method private synthetic lambda$findVisibleTargetWindowByType$4([ZIZLcom/android/server/wm/WindowState;)Z
     .locals 2
 
-    .line 824
     invoke-virtual {p0, p4}, Lcom/android/server/wm/WmScreenshotController;->canBeScreenshotTarget(Lcom/android/server/wm/WindowState;)Z
 
     move-result p0
@@ -389,7 +347,6 @@
 
     goto :goto_0
 
-    .line 827
     :cond_0
     aget-boolean p0, p1, v0
 
@@ -399,7 +356,6 @@
 
     return v1
 
-    .line 830
     :cond_1
     iget-object p0, p4, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -411,7 +367,6 @@
 
     return v1
 
-    .line 834
     :cond_2
     aput-boolean v1, p1, v0
 
@@ -425,7 +380,6 @@
 
     const-string v0, "WindowManager"
 
-    .line 753
     invoke-virtual {p3}, Lcom/android/server/wm/WindowState;->isVisible()Z
 
     move-result v1
@@ -438,7 +392,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 755
     :try_start_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -454,7 +407,6 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 756
     invoke-virtual {p3}, Lcom/android/server/wm/WindowState;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -465,10 +417,8 @@
 
     move-result-object p0
 
-    .line 755
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 757
     iget-object p0, p3, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
 
     invoke-interface {p0, p1}, Landroid/view/IWindow;->invalidateForScreenShot(Z)V
@@ -477,7 +427,6 @@
 
     const/4 p1, 0x1
 
-    .line 758
     aput-boolean p1, p2, p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -487,7 +436,6 @@
     :catch_0
     move-exception p0
 
-    .line 760
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -518,7 +466,6 @@
 
     const/4 v0, 0x1
 
-    .line 251
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/WmScreenshotController;->resetConnection(Landroid/content/ServiceConnection;Z)V
 
     return-void
@@ -529,7 +476,6 @@
 
     const/4 v0, 0x0
 
-    .line 723
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/WmScreenshotController;->invalidateForScreenShot(Lcom/android/server/wm/DisplayContent;Z)V
 
     return-void
@@ -538,14 +484,12 @@
 .method public static synthetic lambda$unionAllVisibleWindowsInTask$1(Landroid/graphics/Rect;Lcom/android/server/wm/WindowState;)V
     .locals 1
 
-    .line 417
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isVisible()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 418
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getFrame()Landroid/graphics/Rect;
 
     move-result-object p1
@@ -563,7 +507,6 @@
 
     const-string p0, "com.samsung.android.motion.SWEEP_LEFT"
 
-    .line 487
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -577,7 +520,6 @@
     :cond_0
     const-string p0, "com.samsung.android.motion.SWEEP_RIGHT"
 
-    .line 489
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -591,7 +533,6 @@
     :cond_1
     const-string p0, "com.samsung.android.motion.SWEEP_FULL_SCREEN"
 
-    .line 491
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -611,7 +552,6 @@
 .method public final adjustCropForOneHandOp(Lcom/android/server/wm/DisplayContent;Landroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 5
 
-    .line 866
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getMagnificationSpec()Landroid/view/MagnificationSpec;
 
     move-result-object p0
@@ -620,7 +560,6 @@
 
     return-object p2
 
-    .line 870
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
@@ -628,19 +567,16 @@
 
     if-eqz p2, :cond_1
 
-    .line 871
     invoke-virtual {p2}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 872
     iget p1, p0, Landroid/view/MagnificationSpec;->scale:F
 
     invoke-virtual {p2, p1}, Landroid/graphics/Rect;->scale(F)V
 
-    .line 873
     iget p1, p0, Landroid/view/MagnificationSpec;->offsetX:F
 
     float-to-int p1, p1
@@ -661,7 +597,6 @@
 
     goto :goto_0
 
-    .line 876
     :cond_1
     new-instance p2, Landroid/graphics/Rect;
 
@@ -708,7 +643,6 @@
 .method public final canBeScreenshotTarget(Lcom/android/server/wm/WindowState;)Z
     .locals 1
 
-    .line 841
     iget-object p0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget p0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
@@ -719,7 +653,6 @@
 
     if-nez p0, :cond_0
 
-    .line 842
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->hasRelativeLayer()Z
 
     move-result p0
@@ -740,7 +673,6 @@
 .method public cancelPendingTakeScreenshotRunnable()V
     .locals 1
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mTakeScreenshotRunnable:Lcom/android/server/wm/WmScreenshotController$TakeScreenshotRunnable;
@@ -753,7 +685,6 @@
 .method public final failedReasonToString(I)Ljava/lang/String;
     .locals 2
 
-    .line 932
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -764,7 +695,6 @@
 
     const-string v1, "InvalidDisplay "
 
-    .line 934
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -774,7 +704,6 @@
 
     const-string v1, "InvalidSystemWindow "
 
-    .line 937
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
@@ -784,7 +713,6 @@
 
     const-string v1, " InvalidFocusedApp "
 
-    .line 940
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_2
@@ -794,7 +722,6 @@
 
     const-string v1, "InvalidMainAppWindow "
 
-    .line 943
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_3
@@ -804,7 +731,6 @@
 
     const-string v1, "EmptyBitmap "
 
-    .line 946
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_4
@@ -814,7 +740,6 @@
 
     const-string v1, "Secureflags:"
 
-    .line 949
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mSecuredWindowName:Ljava/lang/String;
@@ -832,14 +757,12 @@
 
     const-string p1, "Mdm:"
 
-    .line 952
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mSecuredWindowName:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 954
     :cond_6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -851,14 +774,12 @@
 .method public final findTargetSurfaceForAppWindowTarget(Lcom/android/server/wm/DisplayContent;Ljava/lang/StringBuilder;)Landroid/view/SurfaceControl;
     .locals 2
 
-    .line 850
     iget-object p1, p1, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
 
     const/4 v0, 0x0
 
     if-nez p1, :cond_0
 
-    .line 852
     iget p1, p0, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
     or-int/lit8 p1, p1, 0x4
@@ -867,7 +788,6 @@
 
     return-object v0
 
-    .line 855
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->findMainWindow()Lcom/android/server/wm/WindowState;
 
@@ -875,7 +795,6 @@
 
     if-nez v1, :cond_1
 
-    .line 857
     iget p1, p0, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
     or-int/lit8 p1, p1, 0x8
@@ -884,7 +803,6 @@
 
     return-object v0
 
-    .line 860
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -910,7 +828,6 @@
 
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 861
     iget-object p0, p1, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -919,14 +836,12 @@
 .method public final findTargetSurfaceForSystemWindowTarget(Lcom/android/server/wm/DisplayContent;IZLjava/lang/StringBuilder;)Landroid/view/SurfaceControl;
     .locals 0
 
-    .line 810
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/WmScreenshotController;->findVisibleTargetWindowByType(Lcom/android/server/wm/DisplayContent;IZ)Lcom/android/server/wm/WindowState;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
-    .line 813
     iget p1, p0, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
     or-int/lit8 p1, p1, 0x2
@@ -937,7 +852,6 @@
 
     return-object p0
 
-    .line 816
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -963,7 +877,6 @@
 
     invoke-virtual {p4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 817
     iget-object p0, p1, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -980,7 +893,6 @@
 
     aput-boolean v1, v0, v1
 
-    .line 823
     new-instance v1, Lcom/android/server/wm/WmScreenshotController$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, p0, v0, p2, p3}, Lcom/android/server/wm/WmScreenshotController$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/wm/WmScreenshotController;[ZIZ)V
@@ -997,7 +909,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 624
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1048,7 +959,6 @@
 .method public final getDexMode()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -1069,7 +979,6 @@
     :goto_0
     const-string v1, "debug.sf.hdr_capture"
 
-    .line 748
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
@@ -1082,7 +991,6 @@
 
     aput-boolean v2, v1, v2
 
-    .line 751
     iget-object v3, p0, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -1091,7 +999,6 @@
 
     monitor-enter v3
 
-    .line 752
     :try_start_0
     new-instance v4, Lcom/android/server/wm/WmScreenshotController$$ExternalSyntheticLambda1;
 
@@ -1099,7 +1006,6 @@
 
     invoke-virtual {p1, v4, v0}, Lcom/android/server/wm/WindowContainer;->forAllWindows(Ljava/util/function/Consumer;Z)V
 
-    .line 764
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1112,13 +1018,11 @@
 
     if-eqz p2, :cond_1
 
-    .line 768
     :try_start_1
     new-instance p0, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {p0, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 769
     sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v0, 0x32
@@ -1134,7 +1038,6 @@
 
     const-string p1, "WindowManager"
 
-    .line 771
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1160,7 +1063,6 @@
     :catchall_0
     move-exception p0
 
-    .line 764
     :try_start_2
     monitor-exit v3
     :try_end_2
@@ -1178,7 +1080,6 @@
 .method public final isHdrColorMode(Lcom/android/server/wm/WindowState;)Z
     .locals 5
 
-    .line 779
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object p0
@@ -1191,7 +1092,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 780
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object p0
@@ -1204,7 +1104,6 @@
 
     if-ne p0, v0, :cond_2
 
-    .line 783
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1255,7 +1154,6 @@
 .method public final isScreenshotAllowedByPolicy(Lcom/android/server/wm/DisplayContent;)Z
     .locals 3
 
-    .line 794
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getSecureWindowOnScreen()Lcom/android/server/wm/WindowState;
 
     move-result-object p1
@@ -1264,7 +1162,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 796
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -1283,7 +1180,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 798
     iget v0, p0, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
     or-int/lit8 v0, v0, 0x20
@@ -1292,7 +1188,6 @@
 
     goto :goto_1
 
-    .line 800
     :cond_1
     iget v0, p0, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
@@ -1300,7 +1195,6 @@
 
     iput v0, p0, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
-    .line 802
     :goto_1
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getWindowTag()Ljava/lang/CharSequence;
 
@@ -1321,40 +1215,34 @@
 .method public final printScreenshotLog(IIZLandroid/graphics/Rect;IIZZ)V
     .locals 1
 
-    .line 915
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v0, "takeScreenshotToTargetWindow:"
 
-    .line 916
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, " display="
 
-    .line 917
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", target="
 
-    .line 918
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", containsTarget="
 
-    .line 919
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p1, ", crop="
 
-    .line 920
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p4}, Landroid/graphics/Rect;->toString()Ljava/lang/String;
@@ -1365,35 +1253,30 @@
 
     const-string p1, ", w="
 
-    .line 921
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", h="
 
-    .line 922
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", useIdentityTransform="
 
-    .line 923
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p1, ", ignorePolicy="
 
-    .line 924
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p1, ", caller="
 
-    .line 925
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 p1, 0x3
@@ -1406,7 +1289,6 @@
 
     const-string p1, "WindowManager"
 
-    .line 927
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1419,7 +1301,6 @@
 .method public final putCutoutSafeInsets(Landroid/os/Bundle;Lcom/android/server/wm/DisplayContent;)V
     .locals 1
 
-    .line 370
     iget-object p0, p2, Lcom/android/server/wm/DisplayContent;->mCurrentFocus:Lcom/android/server/wm/WindowState;
 
     if-eqz p0, :cond_3
@@ -1430,7 +1311,6 @@
 
     goto :goto_0
 
-    .line 374
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->findMainWindow()Lcom/android/server/wm/WindowState;
 
@@ -1438,7 +1318,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 375
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->isLetterboxedForDisplayCutout()Z
 
     move-result p0
@@ -1447,18 +1326,15 @@
 
     goto :goto_0
 
-    .line 381
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getRotation()I
 
     move-result p0
 
-    .line 380
     invoke-virtual {p2, p0}, Lcom/android/server/wm/DisplayContent;->calculateDisplayCutoutForRotation(I)Landroid/view/DisplayCutout;
 
     move-result-object p0
 
-    .line 382
     invoke-virtual {p0}, Landroid/view/DisplayCutout;->isEmpty()Z
 
     move-result p2
@@ -1467,13 +1343,11 @@
 
     return-void
 
-    .line 386
     :cond_2
     invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsets()Landroid/graphics/Rect;
 
     move-result-object p0
 
-    .line 387
     iget p2, p0, Landroid/graphics/Rect;->left:I
 
     const-string/jumbo v0, "safeInsetLeft"
@@ -1482,21 +1356,18 @@
 
     const-string/jumbo p2, "safeInsetTop"
 
-    .line 388
     iget v0, p0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1, p2, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo p2, "safeInsetRight"
 
-    .line 389
     iget v0, p0, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p1, p2, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo p2, "safeInsetBottom"
 
-    .line 390
     iget p0, p0, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p1, p2, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -1509,7 +1380,6 @@
 .method public final putFocusedWindowInfo(Landroid/os/Bundle;Lcom/android/server/wm/DisplayContent;)Z
     .locals 2
 
-    .line 394
     iget-object p2, p2, Lcom/android/server/wm/DisplayContent;->mCurrentFocus:Lcom/android/server/wm/WindowState;
 
     if-eqz p2, :cond_0
@@ -1530,18 +1400,15 @@
 
     return v0
 
-    .line 399
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 400
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p2, v1}, Lcom/android/server/wm/WmScreenshotController;->unionAllVisibleWindowsInTask(Lcom/android/server/wm/Task;Landroid/graphics/Rect;)V
 
-    .line 401
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->isEmpty()Z
@@ -1552,13 +1419,11 @@
 
     return v0
 
-    .line 405
     :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 406
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
@@ -1569,7 +1434,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 407
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
@@ -1580,7 +1444,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 408
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
@@ -1591,7 +1454,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 409
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     iget p0, p0, Landroid/graphics/Rect;->bottom:I
@@ -1602,7 +1464,6 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 410
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result p0
@@ -1615,7 +1476,6 @@
 
     const-string/jumbo p0, "windowCapture"
 
-    .line 411
     invoke-virtual {p1, p0, v0}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     const/4 p0, 0x1
@@ -1626,7 +1486,6 @@
 .method public final putStackBounds(Landroid/os/Bundle;Lcom/android/server/wm/DisplayContent;)V
     .locals 1
 
-    .line 352
     iget-object p2, p2, Lcom/android/server/wm/DisplayContent;->mCurrentFocus:Lcom/android/server/wm/WindowState;
 
     if-eqz p2, :cond_0
@@ -1643,7 +1502,6 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 353
     invoke-virtual {p2}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
@@ -1652,7 +1510,6 @@
 
     goto :goto_1
 
-    .line 357
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
@@ -1664,7 +1521,6 @@
 
     const-string/jumbo p2, "stackBounds"
 
-    .line 358
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p2, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
@@ -1677,12 +1533,10 @@
 .method public final putSystemBarHeight(Landroid/os/Bundle;Lcom/android/server/wm/DisplayContent;)V
     .locals 5
 
-    .line 325
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object v0
 
-    .line 326
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
@@ -1703,7 +1557,6 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 328
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -1712,7 +1565,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 329
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object p2
@@ -1731,7 +1583,6 @@
 
     if-eq p2, v0, :cond_0
 
-    .line 346
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
     iget p0, p0, Landroid/graphics/Rect;->bottom:I
@@ -1740,7 +1591,6 @@
 
     goto :goto_0
 
-    .line 331
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
@@ -1750,7 +1600,6 @@
 
     goto :goto_0
 
-    .line 334
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mTmpRect:Landroid/graphics/Rect;
 
@@ -1765,7 +1614,6 @@
 .method public final putSystemBarVisible(Landroid/os/Message;Lcom/android/server/wm/DisplayContent;)V
     .locals 0
 
-    .line 320
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object p0
@@ -1776,7 +1624,6 @@
 
     iput p0, p1, Landroid/os/Message;->arg1:I
 
-    .line 321
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object p0
@@ -1793,12 +1640,10 @@
 .method public final resetConnection(Landroid/content/ServiceConnection;Z)V
     .locals 3
 
-    .line 427
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 428
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
@@ -1810,12 +1655,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 430
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, p1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 431
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
@@ -1830,12 +1673,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 434
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 438
     :cond_0
     monitor-exit v0
 
@@ -1854,12 +1695,10 @@
 .method public resetScreenshotConnections()V
     .locals 4
 
-    .line 442
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 443
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
@@ -1869,7 +1708,6 @@
 
     if-nez v1, :cond_1
 
-    .line 444
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1895,18 +1733,15 @@
 
     const/4 v3, 0x0
 
-    .line 445
     invoke-virtual {p0, v2, v3}, Lcom/android/server/wm/WmScreenshotController;->resetConnection(Landroid/content/ServiceConnection;Z)V
 
     goto :goto_0
 
-    .line 447
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
 
-    .line 449
     :cond_1
     monitor-exit v0
 
@@ -1927,46 +1762,38 @@
 
     if-eqz p1, :cond_3
 
-    .line 889
     new-instance p0, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
     invoke-direct {p0, p1}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;-><init>(Landroid/os/IBinder;)V
 
-    .line 891
     invoke-virtual {p0, p6}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setUseIdentityTransform(Z)Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
     move-result-object p0
 
-    .line 892
     invoke-virtual {p0, p2}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setSourceCrop(Landroid/graphics/Rect;)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object p0
 
     check-cast p0, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
-    .line 893
     invoke-virtual {p0, p3, p4}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setSize(II)Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
     move-result-object p0
 
-    .line 894
     invoke-virtual {p0, p5}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setLayer(Landroid/view/SurfaceControl;)Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
     move-result-object p0
 
-    .line 895
     invoke-virtual {p0, p7}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setCaptureSecureLayers(Z)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object p0
 
     check-cast p0, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
-    .line 896
     invoke-virtual {p0}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->build()Landroid/window/ScreenCapture$DisplayCaptureArgs;
 
     move-result-object p0
 
-    .line 899
     invoke-static {p0}, Landroid/window/ScreenCapture;->captureDisplay(Landroid/window/ScreenCapture$DisplayCaptureArgs;)Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;
 
     move-result-object p0
@@ -1979,7 +1806,6 @@
 
     goto :goto_0
 
-    .line 900
     :cond_0
     invoke-virtual {p0}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->asBitmap()Landroid/graphics/Bitmap;
 
@@ -1992,7 +1818,6 @@
 
     const-string p0, "Failed to take screenshot with sourceCrop"
 
-    .line 902
     invoke-static {p3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p1
@@ -2000,7 +1825,6 @@
     :cond_1
     if-nez p7, :cond_2
 
-    .line 906
     invoke-virtual {p0}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->containsSecureLayers()Z
 
     move-result p0
@@ -2009,13 +1833,11 @@
 
     const-string p0, "Take screenshot with contains secure layers"
 
-    .line 907
     invoke-static {p3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return-object p2
 
-    .line 887
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2029,12 +1851,10 @@
 .method public final sendScreenshotMessage(Landroid/os/IBinder;Landroid/content/ServiceConnection;Lcom/android/server/wm/WmScreenshotInfo;)V
     .locals 5
 
-    .line 260
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 261
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
@@ -2044,25 +1864,21 @@
 
     if-nez v1, :cond_0
 
-    .line 262
     monitor-exit v0
 
     return-void
 
-    .line 265
     :cond_0
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 266
     invoke-virtual {p3}, Lcom/android/server/wm/WmScreenshotInfo;->getType()I
 
     move-result v2
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 267
     new-instance v2, Landroid/os/Messenger;
 
     new-instance v3, Lcom/android/server/wm/WmScreenshotController$2;
@@ -2079,7 +1895,6 @@
 
     iput-object v2, v1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 285
     new-instance p2, Lcom/android/internal/util/ScreenshotRequest$Builder;
 
     invoke-virtual {p3}, Lcom/android/server/wm/WmScreenshotInfo;->getType()I
@@ -2090,22 +1905,18 @@
 
     invoke-direct {p2, v2, v3}, Lcom/android/internal/util/ScreenshotRequest$Builder;-><init>(II)V
 
-    .line 286
     invoke-virtual {p2}, Lcom/android/internal/util/ScreenshotRequest$Builder;->build()Lcom/android/internal/util/ScreenshotRequest;
 
     move-result-object p2
 
-    .line 287
     iput-object p2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 289
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v2, "sweepDirection"
 
-    .line 290
     invoke-virtual {p3}, Lcom/android/server/wm/WmScreenshotInfo;->getSweepDirection()I
 
     move-result v3
@@ -2114,7 +1925,6 @@
 
     const-string v2, "capturedDisplay"
 
-    .line 291
     invoke-virtual {p3}, Lcom/android/server/wm/WmScreenshotInfo;->getDisplayId()I
 
     move-result v3
@@ -2123,7 +1933,6 @@
 
     const-string v2, "capturedOrigin"
 
-    .line 292
     invoke-virtual {p3}, Lcom/android/server/wm/WmScreenshotInfo;->getOrigin()I
 
     move-result v3
@@ -2132,14 +1941,12 @@
 
     const-string v2, "captureSharedBundle"
 
-    .line 293
     invoke-virtual {p3}, Lcom/android/server/wm/WmScreenshotInfo;->getBundle()Landroid/os/Bundle;
 
     move-result-object v3
 
     invoke-virtual {p2, v2, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 295
     iget-object v2, p0, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -2150,7 +1957,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 296
     :try_start_1
     iget-object v3, p0, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -2166,19 +1972,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 298
     invoke-virtual {p0, v1, v3}, Lcom/android/server/wm/WmScreenshotController;->putSystemBarVisible(Landroid/os/Message;Lcom/android/server/wm/DisplayContent;)V
 
-    .line 299
     invoke-virtual {p0, p2, v3}, Lcom/android/server/wm/WmScreenshotController;->putSystemBarHeight(Landroid/os/Bundle;Lcom/android/server/wm/DisplayContent;)V
 
-    .line 300
     invoke-virtual {p0, p2, v3}, Lcom/android/server/wm/WmScreenshotController;->putStackBounds(Landroid/os/Bundle;Lcom/android/server/wm/DisplayContent;)V
 
-    .line 301
     invoke-virtual {p0, p2, v3}, Lcom/android/server/wm/WmScreenshotController;->putCutoutSafeInsets(Landroid/os/Bundle;Lcom/android/server/wm/DisplayContent;)V
 
-    .line 302
     invoke-virtual {p3}, Lcom/android/server/wm/WmScreenshotInfo;->getType()I
 
     move-result p3
@@ -2195,7 +1996,6 @@
 
     const/4 p0, 0x1
 
-    .line 303
     iput p0, v1, Landroid/os/Message;->what:I
 
     goto :goto_0
@@ -2203,7 +2003,6 @@
     :cond_1
     const-string p0, "WindowManager"
 
-    .line 306
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2224,7 +2023,6 @@
 
     invoke-static {p0, p3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     :cond_2
     :goto_0
     monitor-exit v2
@@ -2234,12 +2032,10 @@
     :try_start_2
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 309
     invoke-virtual {v1, p2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 312
     :try_start_3
     new-instance p0, Landroid/os/Messenger;
 
@@ -2258,7 +2054,6 @@
     :try_start_4
     const-string p1, "WindowManager"
 
-    .line 314
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2275,7 +2070,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     :goto_1
     monitor-exit v0
     :try_end_4
@@ -2286,7 +2080,6 @@
     :catchall_0
     move-exception p0
 
-    .line 308
     :try_start_5
     monitor-exit v2
     :try_end_5
@@ -2300,7 +2093,6 @@
     :catchall_1
     move-exception p0
 
-    .line 316
     monitor-exit v0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
@@ -2323,7 +2115,6 @@
 
     move v3, p2
 
-    .line 172
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/wm/WmScreenshotController;->sendTakeScreenshotRunnable(IIIILandroid/os/Bundle;)V
 
     return-void
@@ -2332,14 +2123,12 @@
 .method public final sendTakeScreenshotRunnable(IIIILandroid/os/Bundle;)V
     .locals 7
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mTakeScreenshotRunnable:Lcom/android/server/wm/WmScreenshotController$TakeScreenshotRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 179
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController;->mTakeScreenshotRunnable:Lcom/android/server/wm/WmScreenshotController$TakeScreenshotRunnable;
 
     iget-object v1, v0, Lcom/android/server/wm/WmScreenshotController$TakeScreenshotRunnable;->info:Lcom/android/server/wm/WmScreenshotInfo;
@@ -2356,7 +2145,6 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/wm/WmScreenshotInfo;->set(IIIILandroid/os/Bundle;)V
 
-    .line 180
     iget-object p1, p0, Lcom/android/server/wm/WmScreenshotController;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mTakeScreenshotRunnable:Lcom/android/server/wm/WmScreenshotController$TakeScreenshotRunnable;
@@ -2369,15 +2157,12 @@
 .method public final takeScreenshot(Lcom/android/server/wm/WmScreenshotInfo;)V
     .locals 7
 
-    .line 189
     sget-object v0, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    .line 202
     iget-object v1, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 203
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
@@ -2391,7 +2176,6 @@
 
     const-string p1, "WindowManager"
 
-    .line 204
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2402,7 +2186,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
-    .line 205
     invoke-virtual {p0}, Ljava/util/HashMap;->size()I
 
     move-result p0
@@ -2413,15 +2196,12 @@
 
     move-result-object p0
 
-    .line 204
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     monitor-exit v1
 
     return-void
 
-    .line 210
     :cond_0
     iget-object v2, p0, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -2433,7 +2213,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 211
     iget-object v2, p0, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -2446,7 +2225,6 @@
 
     move-result-object v2
 
-    .line 213
     invoke-virtual {v2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v3
@@ -2457,7 +2235,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 214
     iget-object v3, p0, Lcom/android/server/wm/WmScreenshotController;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/EnterpriseDeviceManager;
@@ -2466,7 +2243,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 216
     :try_start_1
     invoke-virtual {v3}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getProfilePolicy()Lcom/samsung/android/knox/profile/ProfilePolicy;
 
@@ -2489,7 +2265,6 @@
     :try_start_2
     const-string v4, "WindowManager"
 
-    .line 218
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2512,7 +2287,6 @@
     :goto_0
     if-eqz v3, :cond_2
 
-    .line 221
     invoke-virtual {v2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v3
@@ -2529,7 +2303,6 @@
     :cond_3
     const-string v2, "WindowManager"
 
-    .line 227
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2544,7 +2317,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 228
     invoke-virtual {v0}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v4
@@ -2555,7 +2327,6 @@
 
     move-result-object v3
 
-    .line 227
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v2, "TakeScreenshot"
@@ -2564,15 +2335,12 @@
 
     const/16 v4, 0xa
 
-    .line 232
     invoke-static {v3, v4, v2}, Landroid/util/PerfLog;->d(ISLjava/lang/String;)V
 
-    .line 236
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 237
     new-instance v3, Landroid/content/ComponentName;
 
     const-string v4, "com.android.systemui"
@@ -2583,12 +2351,10 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 239
     new-instance v3, Lcom/android/server/wm/WmScreenshotController$1;
 
     invoke-direct {v3, p0, p1}, Lcom/android/server/wm/WmScreenshotController$1;-><init>(Lcom/android/server/wm/WmScreenshotController;Lcom/android/server/wm/WmScreenshotInfo;)V
 
-    .line 250
     iget-object p1, p0, Lcom/android/server/wm/WmScreenshotController;->mContext:Landroid/content/Context;
 
     const/4 v4, 0x1
@@ -2599,7 +2365,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 251
     iget-object p1, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
 
     new-instance v0, Lcom/android/server/wm/WmScreenshotController$$ExternalSyntheticLambda3;
@@ -2608,7 +2373,6 @@
 
     invoke-virtual {p1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 252
     iget-object p1, p0, Lcom/android/server/wm/WmScreenshotController;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/wm/WmScreenshotController;->mScreenshotConnections:Ljava/util/HashMap;
@@ -2623,7 +2387,6 @@
 
     invoke-virtual {p1, p0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 255
     :cond_4
     monitor-exit v1
 
@@ -2662,7 +2425,6 @@
 
     move/from16 v8, p8
 
-    .line 645
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/wm/WmScreenshotController;->takeScreenshotToTargetWindow(IIZLandroid/graphics/Rect;IIZZZ)Lcom/samsung/android/view/ScreenshotResult;
 
     move-result-object v0
@@ -2677,34 +2439,28 @@
 
     move/from16 v0, p1
 
-    .line 652
     invoke-virtual/range {p0 .. p8}, Lcom/android/server/wm/WmScreenshotController;->printScreenshotLog(IIZLandroid/graphics/Rect;IIZZ)V
 
-    .line 657
     new-instance v10, Lcom/samsung/android/view/ScreenshotResult$Builder;
 
     invoke-direct {v10}, Lcom/samsung/android/view/ScreenshotResult$Builder;-><init>()V
 
-    .line 658
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 662
     iput v1, v9, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
     const-string v1, ""
 
-    .line 663
     iput-object v1, v9, Lcom/android/server/wm/WmScreenshotController;->mSecuredWindowName:Ljava/lang/String;
 
     const/4 v12, 0x6
 
     const/4 v13, 0x0
 
-    .line 666
     :try_start_0
     iget-object v1, v9, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -2716,7 +2472,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 667
     :try_start_1
     iget-object v2, v9, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -2730,19 +2485,16 @@
 
     if-nez v2, :cond_0
 
-    .line 669
     iget v0, v9, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
     or-int/2addr v0, v3
 
     iput v0, v9, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
-    .line 670
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 733
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
     const-string v0, "WindowManager"
@@ -2764,7 +2516,6 @@
 
     iget v2, v9, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
-    .line 734
     invoke-virtual {p0, v2}, Lcom/android/server/wm/WmScreenshotController;->failedReasonToString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -2775,7 +2526,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 735
     invoke-static {v12}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object v2
@@ -2786,22 +2536,18 @@
 
     move-result-object v1
 
-    .line 733
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 737
     invoke-virtual {v10, v13}, Lcom/samsung/android/view/ScreenshotResult$Builder;->setCapturedBitmap(Landroid/graphics/Bitmap;)Lcom/samsung/android/view/ScreenshotResult$Builder;
 
     move-result-object v0
 
     iget v1, v9, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
-    .line 738
     invoke-virtual {v0, v1}, Lcom/samsung/android/view/ScreenshotResult$Builder;->setFailedReason(I)Lcom/samsung/android/view/ScreenshotResult$Builder;
 
     move-result-object v0
 
-    .line 739
     invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -2812,10 +2558,8 @@
 
     iget-object v1, v9, Lcom/android/server/wm/WmScreenshotController;->mSecuredWindowName:Ljava/lang/String;
 
-    .line 740
     invoke-virtual {v0, v1}, Lcom/samsung/android/view/ScreenshotResult$Builder;->setSecuredWindowName(Ljava/lang/String;)Lcom/samsung/android/view/ScreenshotResult$Builder;
 
-    .line 741
     invoke-virtual {v10}, Lcom/samsung/android/view/ScreenshotResult$Builder;->build()Lcom/samsung/android/view/ScreenshotResult;
 
     move-result-object v0
@@ -2825,7 +2569,6 @@
     :cond_0
     if-nez p8, :cond_1
 
-    .line 673
     :try_start_2
     invoke-virtual {p0, v2}, Lcom/android/server/wm/WmScreenshotController;->isScreenshotAllowedByPolicy(Lcom/android/server/wm/DisplayContent;)Z
 
@@ -2833,12 +2576,10 @@
 
     if-nez v4, :cond_1
 
-    .line 674
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 733
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
     const-string v0, "WindowManager"
@@ -2849,7 +2590,6 @@
 
     goto :goto_0
 
-    .line 677
     :cond_1
     :try_start_3
     invoke-static/range {p2 .. p2}, Lcom/android/server/policy/WindowManagerPolicyExt;->isSystemWindowType(I)Z
@@ -2862,7 +2602,6 @@
 
     move/from16 v5, p3
 
-    .line 678
     invoke-virtual {p0, v2, v4, v5, v11}, Lcom/android/server/wm/WmScreenshotController;->findTargetSurfaceForSystemWindowTarget(Lcom/android/server/wm/DisplayContent;IZLjava/lang/StringBuilder;)Landroid/view/SurfaceControl;
 
     move-result-object v4
@@ -2875,14 +2614,12 @@
     :cond_2
     move/from16 v4, p2
 
-    .line 680
     invoke-static/range {p2 .. p2}, Lcom/android/server/policy/WindowManagerPolicyExt;->isAppWindowType(I)Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 681
     invoke-virtual {p0, v2, v11}, Lcom/android/server/wm/WmScreenshotController;->findTargetSurfaceForAppWindowTarget(Lcom/android/server/wm/DisplayContent;Ljava/lang/StringBuilder;)Landroid/view/SurfaceControl;
 
     move-result-object v4
@@ -2895,7 +2632,6 @@
     :goto_2
     if-eqz p8, :cond_4
 
-    .line 686
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->hasOneHandOpSpec()Z
 
     move-result v4
@@ -2904,7 +2640,6 @@
 
     move-object/from16 v4, p4
 
-    .line 687
     invoke-virtual {p0, v2, v4}, Lcom/android/server/wm/WmScreenshotController;->adjustCropForOneHandOp(Lcom/android/server/wm/DisplayContent;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v4
@@ -2917,7 +2652,6 @@
     :goto_3
     const-string v5, "WindowManager"
 
-    .line 690
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2940,7 +2674,6 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 694
     sget-boolean v5, Lcom/samsung/android/rune/CoreRune;->FW_SCREENSHOT_FOR_HDR:Z
 
     if-eqz v5, :cond_5
@@ -2952,7 +2685,6 @@
     :cond_5
     move-object v14, v13
 
-    .line 698
     :goto_4
     monitor-exit v1
     :try_end_3
@@ -2961,7 +2693,6 @@
     :try_start_4
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 700
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
     move-result-object v1
@@ -2972,14 +2703,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 702
     iget v2, v1, Landroid/view/DisplayInfo;->type:I
 
     const/4 v5, 0x5
 
     if-ne v2, v5, :cond_6
 
-    .line 704
     iget-object v1, v9, Lcom/android/server/wm/WmScreenshotController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
@@ -2993,13 +2722,11 @@
 
     goto :goto_6
 
-    .line 705
     :cond_6
     iget-object v0, v1, Landroid/view/DisplayInfo;->address:Landroid/view/DisplayAddress;
 
     if-eqz v0, :cond_7
 
-    .line 706
     invoke-static {v0}, Landroid/view/SurfaceControl;->getDisplayToken(Landroid/view/DisplayAddress;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -3009,7 +2736,6 @@
     :cond_7
     move-object v2, v13
 
-    .line 711
     :goto_6
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SCREENSHOT_FOR_HDR:Z
 
@@ -3017,7 +2743,6 @@
 
     if-eqz p9, :cond_8
 
-    .line 712
     invoke-virtual {p0, v14, v3}, Lcom/android/server/wm/WmScreenshotController;->invalidateForScreenShot(Lcom/android/server/wm/DisplayContent;Z)V
 
     :cond_8
@@ -3033,19 +2758,16 @@
 
     move/from16 v8, p8
 
-    .line 716
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/wm/WmScreenshotController;->screenshot(Landroid/os/IBinder;Landroid/graphics/Rect;IILandroid/view/SurfaceControl;ZZ)Landroid/graphics/Bitmap;
 
     move-result-object v13
 
-    .line 720
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_SCREENSHOT_FOR_HDR:Z
 
     if-eqz v0, :cond_9
 
     if-eqz p9, :cond_9
 
-    .line 722
     iget-object v0, v9, Lcom/android/server/wm/WmScreenshotController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/wm/WmScreenshotController$$ExternalSyntheticLambda0;
@@ -3059,7 +2781,6 @@
     :cond_9
     if-nez v13, :cond_a
 
-    .line 730
     iget v0, v9, Lcom/android/server/wm/WmScreenshotController;->mReasonForFailure:I
 
     or-int/lit8 v0, v0, 0x10
@@ -3071,7 +2792,6 @@
     :cond_a
     const-string v0, "WindowManager"
 
-    .line 733
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3081,7 +2801,6 @@
     :catchall_0
     move-exception v0
 
-    .line 698
     :try_start_5
     monitor-exit v1
     :try_end_5
@@ -3097,7 +2816,6 @@
     :catchall_1
     const-string v0, "WindowManager"
 
-    .line 733
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3108,7 +2826,6 @@
 .method public final unionAllVisibleWindowsInTask(Lcom/android/server/wm/Task;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 416
     new-instance p0, Lcom/android/server/wm/WmScreenshotController$$ExternalSyntheticLambda4;
 
     invoke-direct {p0, p2}, Lcom/android/server/wm/WmScreenshotController$$ExternalSyntheticLambda4;-><init>(Landroid/graphics/Rect;)V

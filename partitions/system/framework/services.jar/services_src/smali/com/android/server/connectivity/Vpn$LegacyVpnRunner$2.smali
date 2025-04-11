@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)V
     .locals 0
 
-    .line 4928
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 4931
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -36,7 +34,6 @@
     :cond_0
     const-string p1, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
-    .line 4933
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -51,7 +48,6 @@
 
     const/16 v0, 0xe
 
-    .line 4934
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -70,7 +66,6 @@
 
     goto/16 :goto_1
 
-    .line 4937
     :cond_1
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
@@ -100,14 +95,12 @@
 
     if-eqz p2, :cond_4
 
-    .line 4939
     invoke-static {p1}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->-$$Nest$fgetipAddresses(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/util/List;
 
     move-result-object p1
 
     if-nez p1, :cond_2
 
-    .line 4940
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     new-instance p2, Ljava/util/ArrayList;
@@ -116,7 +109,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->-$$Nest$fputipAddresses(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;Ljava/util/List;)V
 
-    .line 4942
     :cond_2
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
@@ -143,7 +135,6 @@
 
     check-cast p2, Landroid/net/LinkAddress;
 
-    .line 4943
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,7 +155,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4944
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     iget-object v0, v0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -179,7 +169,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/connectivity/VpnRules;->addVpnRuleForTethering(Ljava/lang/String;)V
 
-    .line 4945
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->-$$Nest$fgetipAddresses(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/util/List;
@@ -194,7 +183,6 @@
 
     goto :goto_0
 
-    .line 4952
     :cond_3
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
@@ -204,7 +192,6 @@
 
     const-string p0, "WIFI_AP_STATE_DISABLED or WIFI_AP_STATE_FAILED"
 
-    .line 4953
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4

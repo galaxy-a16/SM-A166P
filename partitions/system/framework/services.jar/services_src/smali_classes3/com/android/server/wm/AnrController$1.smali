@@ -21,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/wm/AnrController;Ljava/lang/Runnable;Ljava/util/concurrent/CountDownLatch;JLjava/lang/String;[Z)V
     .locals 0
 
-    .line 315
     iput-object p1, p0, Lcom/android/server/wm/AnrController$1;->this$0:Lcom/android/server/wm/AnrController;
 
     iput-object p2, p0, Lcom/android/server/wm/AnrController$1;->val$monitor:Ljava/lang/Runnable;
@@ -44,17 +43,14 @@
 .method public run()V
     .locals 5
 
-    .line 318
     iget-object v0, p0, Lcom/android/server/wm/AnrController$1;->val$monitor:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 319
     iget-object v0, p0, Lcom/android/server/wm/AnrController$1;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 320
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -63,7 +59,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 321
     invoke-static {}, Lcom/android/server/wm/AnrController;->-$$Nest$sfgetPRE_DUMP_MONITOR_TIMEOUT_MS()J
 
     move-result-wide v2
@@ -74,7 +69,6 @@
 
     if-lez v2, :cond_0
 
-    .line 322
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +99,6 @@
 
     goto :goto_0
 
-    .line 323
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AnrController$1;->val$name:Ljava/lang/String;
 
@@ -115,7 +108,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 327
     iget-object p0, p0, Lcom/android/server/wm/AnrController$1;->val$shouldDumpSf:[Z
 
     const/4 v0, 0x0

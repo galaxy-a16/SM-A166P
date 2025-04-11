@@ -42,7 +42,6 @@
 
     move/from16 v6, p6
 
-    .line 30
     invoke-direct/range {v0 .. v13}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;-><init>(Landroid/content/Context;Lcom/android/server/biometrics/log/BiometricContext;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;IILjava/lang/String;ZII[B[B)V
 
     return-void
@@ -53,7 +52,6 @@
 .method public cancel()V
     .locals 1
 
-    .line 43
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSensorTestClient;->mAlreadyCancelled:Z
 
     if-eqz v0, :cond_0
@@ -62,18 +60,15 @@
 
     const-string v0, "Cancel was already requested"
 
-    .line 44
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 47
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->stopHalOperation()V
 
     const/4 v0, 0x1
 
-    .line 48
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSensorTestClient;->mAlreadyCancelled:Z
 
     return-void
@@ -82,7 +77,6 @@
 .method public cancelWithoutStarting(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 1
 
-    .line 53
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,7 +95,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSensorTestClient;->handleOnError()V
 
     return-void
@@ -112,10 +105,8 @@
 
     const/16 v0, 0x2719
 
-    .line 71
     invoke-super {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->onRequestResult(I)V
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0
@@ -128,7 +119,6 @@
 .method public interruptsPrecedingClients()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -137,7 +127,6 @@
 .method public onError(II)V
     .locals 0
 
-    .line 67
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSensorTestClient;->handleOnError()V
 
     return-void
@@ -146,14 +135,12 @@
 .method public onRequestResult(I)V
     .locals 1
 
-    .line 59
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;->onRequestResult(I)V
 
     const/16 v0, 0x2719
 
     if-ne p1, v0, :cond_0
 
-    .line 61
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v0, 0x1

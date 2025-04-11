@@ -9,7 +9,6 @@
 
     const-string v0, "Transport not available"
 
-    .line 32
     invoke-direct {p0, v0}, Landroid/util/AndroidException;-><init>(Ljava/lang/String;)V
 
     return-void

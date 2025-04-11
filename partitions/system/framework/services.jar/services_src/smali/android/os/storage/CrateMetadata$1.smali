@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/os/storage/CrateMetadata;
     .locals 0
 
-    .line 30
     new-instance p0, Landroid/os/storage/CrateMetadata;
 
     invoke-direct {p0}, Landroid/os/storage/CrateMetadata;-><init>()V
 
-    .line 31
     invoke-virtual {p0, p1}, Landroid/os/storage/CrateMetadata;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 27
     invoke-virtual {p0, p1}, Landroid/os/storage/CrateMetadata$1;->createFromParcel(Landroid/os/Parcel;)Landroid/os/storage/CrateMetadata;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/os/storage/CrateMetadata;
     .locals 0
 
-    .line 36
     new-array p0, p1, [Landroid/os/storage/CrateMetadata;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 27
     invoke-virtual {p0, p1}, Landroid/os/storage/CrateMetadata$1;->newArray(I)[Landroid/os/storage/CrateMetadata;
 
     move-result-object p0

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     new-instance p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;
 
     check-cast p1, Landroid/net/NetworkScorerAppData;

@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/companion/virtual/SensorController;Landroid/companion/virtual/sensor/IVirtualSensorCallback;)V
     .locals 0
 
-    .line 173
     iput-object p1, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->this$0:Lcom/android/server/companion/virtual/SensorController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 174
     iput-object p2, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->mCallback:Landroid/companion/virtual/sensor/IVirtualSensorCallback;
 
     return-void
@@ -32,7 +30,6 @@
 .method public onConfigurationChanged(IZII)I
     .locals 4
 
-    .line 180
     iget-object v0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->mCallback:Landroid/companion/virtual/sensor/IVirtualSensorCallback;
 
     const/16 v1, -0x16
@@ -41,7 +38,6 @@
 
     if-nez v0, :cond_0
 
-    .line 181
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +56,6 @@
 
     return v1
 
-    .line 184
     :cond_0
     iget-object v0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->this$0:Lcom/android/server/companion/virtual/SensorController;
 
@@ -80,7 +75,6 @@
 
     if-nez v0, :cond_1
 
-    .line 186
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,7 +105,6 @@
 
     return v1
 
-    .line 191
     :cond_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->mCallback:Landroid/companion/virtual/sensor/IVirtualSensorCallback;
@@ -127,7 +120,6 @@
     :catch_0
     move-exception p0
 
-    .line 194
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,7 +144,6 @@
 .method public onDirectChannelConfigured(III)I
     .locals 4
 
-    .line 236
     iget-object v0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->mCallback:Landroid/companion/virtual/sensor/IVirtualSensorCallback;
 
     const/16 v1, -0x16
@@ -163,12 +154,10 @@
 
     const-string p0, "No runtime sensor callback configured."
 
-    .line 237
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 240
     :cond_0
     iget-object v0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->this$0:Lcom/android/server/companion/virtual/SensorController;
 
@@ -188,7 +177,6 @@
 
     if-nez v0, :cond_1
 
-    .line 242
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,7 +207,6 @@
 
     return v1
 
-    .line 247
     :cond_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->mCallback:Landroid/companion/virtual/sensor/IVirtualSensorCallback;
@@ -240,7 +227,6 @@
     :catch_0
     move-exception p0
 
-    .line 249
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -265,7 +251,6 @@
 .method public onDirectChannelCreated(Landroid/os/ParcelFileDescriptor;)I
     .locals 3
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->mCallback:Landroid/companion/virtual/sensor/IVirtualSensorCallback;
 
     const/16 v1, -0x16
@@ -274,7 +259,6 @@
 
     if-nez v0, :cond_0
 
-    .line 203
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -304,12 +288,10 @@
 
     const-string p0, "Received invalid ParcelFileDescriptor"
 
-    .line 206
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 209
     :cond_1
     invoke-static {}, Lcom/android/server/companion/virtual/SensorController;->-$$Nest$sfgetsNextDirectChannelHandle()Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -319,12 +301,10 @@
 
     move-result v0
 
-    .line 210
     invoke-static {p1}, Landroid/os/SharedMemory;->fromFileDescriptor(Landroid/os/ParcelFileDescriptor;)Landroid/os/SharedMemory;
 
     move-result-object p1
 
-    .line 212
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->mCallback:Landroid/companion/virtual/sensor/IVirtualSensorCallback;
 
@@ -337,7 +317,6 @@
     :catch_0
     move-exception p0
 
-    .line 214
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -362,14 +341,12 @@
 .method public onDirectChannelDestroyed(I)V
     .locals 2
 
-    .line 222
     iget-object v0, p0, Lcom/android/server/companion/virtual/SensorController$RuntimeSensorCallbackWrapper;->mCallback:Landroid/companion/virtual/sensor/IVirtualSensorCallback;
 
     const-string v1, "SensorController"
 
     if-nez v0, :cond_0
 
-    .line 223
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -394,7 +371,6 @@
 
     return-void
 
-    .line 227
     :cond_0
     :try_start_0
     invoke-interface {v0, p1}, Landroid/companion/virtual/sensor/IVirtualSensorCallback;->onDirectChannelDestroyed(I)V
@@ -406,7 +382,6 @@
     :catch_0
     move-exception p0
 
-    .line 229
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

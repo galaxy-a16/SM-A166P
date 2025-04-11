@@ -13,16 +13,12 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/app/GameServiceConfiguration;->mPackageName:Ljava/lang/String;
 
-    .line 41
     iput-object p2, p0, Lcom/android/server/app/GameServiceConfiguration;->mGameServiceComponentConfiguration:Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;
 
     return-void
@@ -39,7 +35,6 @@
 
     return v0
 
-    .line 60
     :cond_0
     instance-of v1, p1, Lcom/android/server/app/GameServiceConfiguration;
 
@@ -49,11 +44,9 @@
 
     return v2
 
-    .line 64
     :cond_1
     check-cast p1, Lcom/android/server/app/GameServiceConfiguration;
 
-    .line 65
     iget-object v1, p0, Lcom/android/server/app/GameServiceConfiguration;->mPackageName:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/android/server/app/GameServiceConfiguration;->mPackageName:Ljava/lang/String;
@@ -68,7 +61,6 @@
 
     iget-object p1, p1, Lcom/android/server/app/GameServiceConfiguration;->mGameServiceComponentConfiguration:Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;
 
-    .line 66
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -87,7 +79,6 @@
 .method public getGameServiceComponentConfiguration()Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;
     .locals 0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/app/GameServiceConfiguration;->mGameServiceComponentConfiguration:Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;
 
     return-object p0
@@ -96,7 +87,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 46
     iget-object p0, p0, Lcom/android/server/app/GameServiceConfiguration;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -105,7 +95,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/app/GameServiceConfiguration;->mPackageName:Ljava/lang/String;
 
     iget-object p0, p0, Lcom/android/server/app/GameServiceConfiguration;->mGameServiceComponentConfiguration:Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;
@@ -124,7 +113,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

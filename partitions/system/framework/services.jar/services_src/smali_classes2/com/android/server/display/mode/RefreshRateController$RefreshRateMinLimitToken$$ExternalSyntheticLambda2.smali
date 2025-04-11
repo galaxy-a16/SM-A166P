@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/display/mode/RefreshRateController$RefreshRateMinLimitToken;->$r8$lambda$ZldwwcfEF5rvfHTCaVvRIfUiAWU(Ljava/lang/Integer;)Z

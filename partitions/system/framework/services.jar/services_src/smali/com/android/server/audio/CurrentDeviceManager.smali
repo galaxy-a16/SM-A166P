@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$rngbZUyjzjDkgDr58UMaXpDFczc(Ljava/util/Set;Lcom/android/server/audio/CurrentDeviceManager$CallbackRecord;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/audio/CurrentDeviceManager;->lambda$changedCurrentDevice$0(Ljava/util/Set;Lcom/android/server/audio/CurrentDeviceManager$CallbackRecord;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 8
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -37,10 +35,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -55,7 +51,6 @@
 
     const/4 p0, 0x0
 
-    .line 19
     throw p0
 .end method
 
@@ -64,12 +59,10 @@
 .method public changedCurrentDevice(Ljava/util/Set;)V
     .locals 2
 
-    .line 16
     sget-object v0, Lcom/android/server/audio/CurrentDeviceManager;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 17
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/CurrentDeviceManager;->callbacks:Ljava/util/Set;
 
@@ -83,7 +76,6 @@
 
     return-void
 
-    .line 19
     :cond_0
     iget-object p0, p0, Lcom/android/server/audio/CurrentDeviceManager;->callbacks:Ljava/util/Set;
 
@@ -93,7 +85,6 @@
 
     invoke-interface {p0, v1}, Ljava/util/Set;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 20
     monitor-exit v0
 
     return-void

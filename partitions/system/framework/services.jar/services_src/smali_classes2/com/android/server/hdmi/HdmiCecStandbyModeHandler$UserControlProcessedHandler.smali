@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;)V
     .locals 0
 
-    .line 69
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$UserControlProcessedHandler;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$UserControlProcessedHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$UserControlProcessedHandler;-><init>(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public handle(Lcom/android/server/hdmi/HdmiCecMessage;)Z
     .locals 1
 
-    .line 73
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->isPowerOnOrToggleCommand(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
     move-result v0
@@ -47,7 +44,6 @@
 
     return p0
 
-    .line 75
     :cond_0
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->isPowerOffOrToggleCommand(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
@@ -59,7 +55,6 @@
 
     return p0
 
-    .line 78
     :cond_1
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$UserControlProcessedHandler;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 

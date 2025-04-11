@@ -31,7 +31,6 @@
 .method public static synthetic $values()[Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
     .locals 10
 
-    .line 1250
     sget-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->APPSYNC3P_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     sget-object v1, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->SUSPICIOUS_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
@@ -62,7 +61,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1251
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "APPSYNC3P_PACKAGES"
@@ -73,7 +71,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->APPSYNC3P_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1252
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "SUSPICIOUS_PACKAGES"
@@ -84,7 +81,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->SUSPICIOUS_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1253
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "CSC_PACKAGES"
@@ -95,7 +91,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->CSC_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1254
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "ALLOWLIST_PACKAGES"
@@ -106,7 +101,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->ALLOWLIST_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1255
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "ALLOWLIST3P_PACKAGES"
@@ -117,7 +111,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->ALLOWLIST3P_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1256
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "PRELOADED_PACKAGES"
@@ -128,7 +121,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->PRELOADED_PACKAGES:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1258
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "SUSPICIOUS_PACKAGES_FROM_CONFIG"
@@ -139,7 +131,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->SUSPICIOUS_PACKAGES_FROM_CONFIG:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1259
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "ALLOWLIST_PACKAGES_FROM_CONFIG"
@@ -150,7 +141,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->ALLOWLIST_PACKAGES_FROM_CONFIG:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1260
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "ALLOWLIST3P_PACKAGES_FROM_CONFIG"
@@ -161,7 +151,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->ALLOWLIST3P_PACKAGES_FROM_CONFIG:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1261
     new-instance v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     const-string v1, "NONE"
@@ -172,7 +161,6 @@
 
     sput-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->NONE:Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
-    .line 1250
     invoke-static {}, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->$values()[Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     move-result-object v0
@@ -185,7 +173,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 1250
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -194,7 +181,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
     .locals 1
 
-    .line 1250
     const-class v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -209,7 +195,6 @@
 .method public static values()[Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
     .locals 1
 
-    .line 1250
     sget-object v0, Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->$VALUES:[Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;
 
     invoke-virtual {v0}, [Lcom/android/server/alarm/AppSyncWrapper$SET_TYPE;->clone()Ljava/lang/Object;

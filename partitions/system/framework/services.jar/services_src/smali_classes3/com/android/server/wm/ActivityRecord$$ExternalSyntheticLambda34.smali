@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-static {p1}, Lcom/android/server/wm/ActivityRecord;->$r8$lambda$nLfrz_C_ftkwwk0QR0A8AiMwm7w(Lcom/android/server/wm/ActivityRecord;)Ljava/lang/Float;

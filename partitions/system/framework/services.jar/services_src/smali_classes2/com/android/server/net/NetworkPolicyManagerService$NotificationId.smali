@@ -13,17 +13,14 @@
 .method public constructor <init>(Landroid/net/NetworkPolicy;I)V
     .locals 0
 
-    .line 7171
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7172
     invoke-virtual {p0, p1, p2}, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;->buildNotificationTag(Landroid/net/NetworkPolicy;I)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;->mTag:Ljava/lang/String;
 
-    .line 7173
     iput p2, p0, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;->mId:I
 
     return-void
@@ -34,7 +31,6 @@
 .method public final buildNotificationTag(Landroid/net/NetworkPolicy;I)Ljava/lang/String;
     .locals 1
 
-    .line 7194
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +69,6 @@
 
     return p0
 
-    .line 7179
     :cond_0
     instance-of v0, p1, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;
 
@@ -83,11 +78,9 @@
 
     return p0
 
-    .line 7180
     :cond_1
     check-cast p1, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;
 
-    .line 7181
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;->mTag:Ljava/lang/String;
 
     iget-object p1, p1, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;->mTag:Ljava/lang/String;
@@ -102,7 +95,6 @@
 .method public getId()I
     .locals 0
 
-    .line 7202
     iget p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;->mId:I
 
     return p0
@@ -111,7 +103,6 @@
 .method public getTag()Ljava/lang/String;
     .locals 0
 
-    .line 7198
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;->mTag:Ljava/lang/String;
 
     return-object p0
@@ -120,7 +111,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 7186
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NotificationId;->mTag:Ljava/lang/String;
 
     filled-new-array {p0}, [Ljava/lang/Object;

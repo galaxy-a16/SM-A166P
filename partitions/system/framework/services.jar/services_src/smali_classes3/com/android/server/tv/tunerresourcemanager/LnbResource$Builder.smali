@@ -7,7 +7,6 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 42
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/TunerResourceBasic$Builder;-><init>(I)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public build()Lcom/android/server/tv/tunerresourcemanager/LnbResource;
     .locals 2
 
-    .line 52
     new-instance v0, Lcom/android/server/tv/tunerresourcemanager/LnbResource;
 
     const/4 v1, 0x0

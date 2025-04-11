@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;Landroid/util/ArraySet;)V
     .locals 0
 
-    .line 6034
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$9;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iput-object p2, p0, Lcom/android/server/appop/AppOpsService$9;->val$candidates:Landroid/util/ArraySet;
@@ -31,7 +30,6 @@
 .method public accept(Landroid/app/AppOpsManager$HistoricalOps;)V
     .locals 8
 
-    .line 6037
     invoke-virtual {p1}, Landroid/app/AppOpsManager$HistoricalOps;->getUidCount()I
 
     move-result v0
@@ -43,12 +41,10 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
-    .line 6039
     invoke-virtual {p1, v2}, Landroid/app/AppOpsManager$HistoricalOps;->getUidOpsAt(I)Landroid/app/AppOpsManager$HistoricalUidOps;
 
     move-result-object v3
 
-    .line 6041
     invoke-virtual {v3}, Landroid/app/AppOpsManager$HistoricalUidOps;->getPackageCount()I
 
     move-result v4
@@ -58,17 +54,14 @@
     :goto_1
     if-ge v5, v4, :cond_2
 
-    .line 6043
     invoke-virtual {v3, v5}, Landroid/app/AppOpsManager$HistoricalUidOps;->getPackageOpsAt(I)Landroid/app/AppOpsManager$HistoricalPackageOps;
 
     move-result-object v6
 
-    .line 6044
     invoke-virtual {v6}, Landroid/app/AppOpsManager$HistoricalPackageOps;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 6045
     iget-object v7, p0, Lcom/android/server/appop/AppOpsService$9;->val$candidates:Landroid/util/ArraySet;
 
     invoke-virtual {v7, v6}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -79,20 +72,17 @@
 
     goto :goto_2
 
-    .line 6049
     :cond_0
     invoke-virtual {v3, v5}, Landroid/app/AppOpsManager$HistoricalUidOps;->getPackageOpsAt(I)Landroid/app/AppOpsManager$HistoricalPackageOps;
 
     move-result-object v7
 
-    .line 6050
     invoke-virtual {v7}, Landroid/app/AppOpsManager$HistoricalPackageOps;->getOpCount()I
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 6051
     iget-object v7, p0, Lcom/android/server/appop/AppOpsService$9;->val$candidates:Landroid/util/ArraySet;
 
     invoke-virtual {v7, v6}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
@@ -108,11 +98,9 @@
 
     goto :goto_0
 
-    .line 6055
     :cond_3
     monitor-enter p0
 
-    .line 6056
     :try_start_0
     iget-object p1, p0, Lcom/android/server/appop/AppOpsService$9;->this$0:Lcom/android/server/appop/AppOpsService;
 
@@ -127,7 +115,6 @@
     :goto_3
     if-ge v1, p1, :cond_4
 
-    .line 6058
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$9;->val$candidates:Landroid/util/ArraySet;
 
     iget-object v2, p0, Lcom/android/server/appop/AppOpsService$9;->this$0:Lcom/android/server/appop/AppOpsService;
@@ -148,7 +135,6 @@
 
     goto :goto_3
 
-    .line 6060
     :cond_4
     iget-object p1, p0, Lcom/android/server/appop/AppOpsService$9;->this$0:Lcom/android/server/appop/AppOpsService;
 
@@ -156,7 +142,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/appop/AppOpsService;->-$$Nest$fputmRarelyUsedPackages(Lcom/android/server/appop/AppOpsService;Landroid/util/ArraySet;)V
 
-    .line 6061
     monitor-exit p0
 
     return-void
@@ -174,7 +159,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 6034
     check-cast p1, Landroid/app/AppOpsManager$HistoricalOps;
 
     invoke-virtual {p0, p1}, Lcom/android/server/appop/AppOpsService$9;->accept(Landroid/app/AppOpsManager$HistoricalOps;)V

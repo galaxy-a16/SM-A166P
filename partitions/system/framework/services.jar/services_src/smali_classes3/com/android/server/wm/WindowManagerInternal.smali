@@ -169,7 +169,6 @@
 
     const/4 v0, 0x1
 
-    .line 579
     invoke-virtual {p0, p1, p2, v0, p3}, Lcom/android/server/wm/WindowManagerInternal;->removeWindowToken(Landroid/os/IBinder;ZZI)V
 
     return-void

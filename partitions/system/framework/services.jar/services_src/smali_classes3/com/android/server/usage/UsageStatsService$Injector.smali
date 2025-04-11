@@ -17,15 +17,12 @@
 .method public getAppStandbyController(Landroid/content/Context;)Lcom/android/server/usage/AppStandbyInternal;
     .locals 0
 
-    .line 292
     const-class p0, Lcom/android/server/usage/UsageStatsService;
 
-    .line 293
     invoke-virtual {p0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p0
 
-    .line 292
     invoke-static {p0, p1}, Lcom/android/server/usage/AppStandbyInternal;->newAppStandbyController(Ljava/lang/ClassLoader;Landroid/content/Context;)Lcom/android/server/usage/AppStandbyInternal;
 
     move-result-object p0

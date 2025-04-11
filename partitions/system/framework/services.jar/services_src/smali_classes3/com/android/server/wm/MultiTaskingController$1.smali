@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/MultiTaskingController;)V
     .locals 0
 
-    .line 250
     iput-object p1, p0, Lcom/android/server/wm/MultiTaskingController$1;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 253
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 254
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
@@ -40,7 +37,6 @@
 
     const-string v1, "displayId"
 
-    .line 257
     invoke-virtual {p2, v1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -48,7 +44,6 @@
     :cond_0
     const-string p2, "com.samsung.android.multiwindow.MINIMIZE_ALL"
 
-    .line 259
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -63,7 +58,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 260
     :cond_1
     iget-object p1, p0, Lcom/android/server/wm/MultiTaskingController$1;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -77,7 +71,6 @@
 
     monitor-enter p1
 
-    .line 261
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingController$1;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -85,7 +78,6 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/android/server/wm/MultiTaskingController;->minimizeAllTasksLocked(IZ)V
 
-    .line 262
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/VDCObserverService;)V
     .locals 0
 
-    .line 220
     iput-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$3;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-direct {p0}, Lcom/samsung/android/app/usage/IUsageStatsWatcher$Stub;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 233
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$3;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     const/4 p2, 0x2
@@ -42,7 +40,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 225
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$3;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     const/4 p2, 0x1
@@ -58,7 +55,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 241
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$3;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     const/16 p2, 0x17

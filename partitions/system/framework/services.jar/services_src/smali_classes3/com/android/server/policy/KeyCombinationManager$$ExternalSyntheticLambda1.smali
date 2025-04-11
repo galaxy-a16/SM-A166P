@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;
 
     invoke-static {p1}, Lcom/android/server/policy/KeyCombinationManager;->$r8$lambda$fpSaWTHZ4cQpSAt6l1OzR1WxCf4(Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;)Z

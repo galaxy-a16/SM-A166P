@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/PackageInfo;
 
     invoke-static {p1}, Lcom/android/server/app/GameManagerService;->$r8$lambda$wgqYQNoL-2QODCO-Ua3uUIK_K3A(Landroid/content/pm/PackageInfo;)Z

@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayAdapter;IZLjava/lang/String;)V
     .locals 0
 
-    .line 674
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$10;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     iput p2, p0, Lcom/android/server/display/WifiDisplayAdapter$10;->val$displayId:I
@@ -39,7 +38,6 @@
 .method public run()V
     .locals 5
 
-    .line 677
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$10;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/DisplayAdapter;->getHandler()Landroid/os/Handler;
@@ -58,7 +56,6 @@
 
     move-result-object v0
 
-    .line 678
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayAdapter$10;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {p0}, Lcom/android/server/display/DisplayAdapter;->getHandler()Landroid/os/Handler;

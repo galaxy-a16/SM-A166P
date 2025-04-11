@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;Landroid/os/Looper;)V
     .locals 0
 
-    .line 590
     iput-object p1, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$InternalHandler;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;
 
-    .line 591
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 596
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +57,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 598
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v2, 0x2
@@ -69,11 +65,9 @@
 
     goto :goto_0
 
-    .line 600
     :cond_0
     iget v0, p1, Landroid/os/Message;->arg2:I
 
-    .line 601
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,7 +88,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 602
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$InternalHandler;->this$0:Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;

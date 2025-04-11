@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/devicestate/DeviceState;
 
     invoke-virtual {p1}, Lcom/android/server/devicestate/DeviceState;->getIdentifier()I

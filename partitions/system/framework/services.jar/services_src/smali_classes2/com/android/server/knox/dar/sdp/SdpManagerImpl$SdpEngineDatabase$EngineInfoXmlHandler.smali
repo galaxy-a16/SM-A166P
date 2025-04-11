@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$mgetEngineInfoLocked(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;I)Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;->getEngineInfoLocked(I)Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$mremoveEngineInfoLocked(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;->removeEngineInfoLocked(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$mupdateEngineInfoLocked(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;->updateEngineInfoLocked(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)I
 
     move-result p0
@@ -42,7 +39,6 @@
 .method public constructor <init>(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;)V
     .locals 0
 
-    .line 3929
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;->this$1:Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +49,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;-><init>(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;)V
 
     return-void
@@ -77,33 +72,27 @@
 
     if-lez v0, :cond_a
 
-    .line 4031
     :try_start_0
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;->getEngineInfoXmlFile(I)Landroid/util/AtomicFile;
 
     move-result-object v4
 
-    .line 4032
     invoke-virtual {v4}, Landroid/util/AtomicFile;->openRead()Ljava/io/FileInputStream;
 
     move-result-object v5
 
-    .line 4034
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object v0
 
-    .line 4035
     invoke-virtual {v0}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v0
 
     const-string v7, "UTF-8"
 
-    .line 4036
     invoke-interface {v0, v5, v7}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 4046
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v7
@@ -145,7 +134,6 @@
 
     goto/16 :goto_4
 
-    .line 4052
     :cond_1
     :try_start_1
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -154,7 +142,6 @@
 
     const-string/jumbo v2, "user"
 
-    .line 4053
     invoke-virtual {v2, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
@@ -163,7 +150,6 @@
 
     const-string v2, "alias"
 
-    .line 4054
     invoke-interface {v0, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v7
@@ -176,7 +162,6 @@
 
     const-string/jumbo v2, "pkgName"
 
-    .line 4055
     invoke-interface {v0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v7
@@ -191,7 +176,6 @@
 
     const/4 v7, 0x2
 
-    .line 4056
     invoke-interface {v0, v7}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v1
@@ -209,7 +193,6 @@
 
     const/4 v2, 0x3
 
-    .line 4057
     :try_start_2
     invoke-interface {v0, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
@@ -229,7 +212,6 @@
 
     const/4 v2, 0x4
 
-    .line 4058
     invoke-interface {v0, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v7
@@ -244,7 +226,6 @@
 
     const/4 v7, 0x5
 
-    .line 4059
     invoke-interface {v0, v7}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v2
@@ -259,7 +240,6 @@
 
     const/4 v2, 0x6
 
-    .line 4060
     invoke-interface {v0, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v7
@@ -270,26 +250,22 @@
 
     if-eqz v1, :cond_3
 
-    .line 4062
     invoke-interface {v0, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v8
 
     const/4 v1, 0x1
 
-    .line 4063
     invoke-interface {v0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v10
 
     const/4 v7, 0x2
 
-    .line 4065
     invoke-interface {v0, v7}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 4064
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v7
@@ -303,13 +279,11 @@
 
     const/4 v7, 0x3
 
-    .line 4067
     :try_start_4
     invoke-interface {v0, v7}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 4066
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v12
@@ -320,12 +294,10 @@
 
     const/4 v13, 0x4
 
-    .line 4069
     invoke-interface {v0, v13}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 4068
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v13
@@ -336,12 +308,10 @@
 
     const/4 v14, 0x5
 
-    .line 4071
     invoke-interface {v0, v14}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 4070
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v14
@@ -350,12 +320,10 @@
 
     move-result v14
 
-    .line 4073
     invoke-interface {v0, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4072
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -364,7 +332,6 @@
 
     move-result v2
 
-    .line 4074
     invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
 
     move-result v15
@@ -404,7 +371,6 @@
     :goto_3
     if-eqz v15, :cond_4
 
-    .line 4079
     new-instance v1, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;
 
     const/16 v21, 0x1
@@ -428,7 +394,6 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 4083
     :try_start_5
     invoke-virtual {v1, v10}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->setPackageName(Ljava/lang/String;)V
     :try_end_5
@@ -446,7 +411,6 @@
 
     goto :goto_5
 
-    .line 4085
     :cond_4
     :try_start_6
     new-instance v0, Ljava/lang/Exception;
@@ -457,7 +421,6 @@
 
     throw v0
 
-    .line 4094
     :goto_4
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -478,7 +441,6 @@
     :cond_5
     if-eqz v5, :cond_6
 
-    .line 4106
     :try_start_7
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_7
@@ -501,7 +463,6 @@
     :goto_5
     move-object/from16 v1, p0
 
-    .line 4098
     :try_start_8
     iget-object v2, v1, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;->this$1:Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;
 
@@ -534,7 +495,6 @@
     :cond_7
     if-eqz v5, :cond_8
 
-    .line 4106
     :try_start_9
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_9
@@ -554,7 +514,6 @@
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_6
 
-    .line 4109
     :catch_6
     :cond_9
     throw v0
@@ -568,7 +527,6 @@
 .method public final getEngineInfoXmlFile(I)Landroid/util/AtomicFile;
     .locals 4
 
-    .line 3951
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -587,7 +545,6 @@
 
     move-result-object p0
 
-    .line 3952
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -610,7 +567,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3953
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -625,7 +581,6 @@
 
     goto :goto_0
 
-    .line 3954
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -649,14 +604,12 @@
 
     invoke-static {p1, p0}, Lcom/android/server/knox/dar/sdp/SDPLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3955
     new-instance p0, Ljava/io/IOException;
 
     invoke-direct {p0}, Ljava/io/IOException;-><init>()V
 
     throw p0
 
-    .line 3957
     :cond_1
     :goto_0
     new-instance v0, Ljava/io/File;
@@ -679,7 +632,6 @@
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3958
     new-instance p0, Landroid/util/AtomicFile;
 
     invoke-direct {p0, v0}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
@@ -690,7 +642,6 @@
 .method public final removeEngineInfoLocked(Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)V
     .locals 1
 
-    .line 4116
     :try_start_0
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getId()I
 
@@ -700,7 +651,6 @@
 
     move-result-object p0
 
-    .line 4117
     invoke-virtual {p0}, Landroid/util/AtomicFile;->delete()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -710,10 +660,8 @@
     :catch_0
     move-exception p0
 
-    .line 4119
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 4120
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -745,14 +693,12 @@
 
     const-string/jumbo v0, "user"
 
-    .line 3965
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getId()I
 
     move-result v1
 
     const/16 v2, -0x63
 
-    .line 3968
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;->getEngineInfoXmlFile(I)Landroid/util/AtomicFile;
 
@@ -764,7 +710,6 @@
 
     const/4 v4, 0x0
 
-    .line 3976
     :try_start_1
     invoke-virtual {v1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
@@ -773,7 +718,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3977
     :try_start_2
     new-instance v6, Ljava/io/BufferedOutputStream;
 
@@ -782,7 +726,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3979
     :try_start_3
     new-instance v7, Lcom/android/internal/util/FastXmlSerializer;
 
@@ -790,10 +733,8 @@
 
     const-string v8, "UTF-8"
 
-    .line 3980
     invoke-interface {v7, v6, v8}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 3981
     sget-object v8, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-interface {v7, v4, v8}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
@@ -802,15 +743,12 @@
 
     const/4 v9, 0x1
 
-    .line 3982
     invoke-interface {v7, v8, v9}, Lorg/xmlpull/v1/XmlSerializer;->setFeature(Ljava/lang/String;Z)V
 
-    .line 3986
     invoke-interface {v7, v4, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v8, "alias"
 
-    .line 3988
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
     move-result-object v10
@@ -819,7 +757,6 @@
 
     const-string/jumbo v8, "pkgName"
 
-    .line 3989
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v10
@@ -828,7 +765,6 @@
 
     const-string v8, "id"
 
-    .line 3990
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getId()I
 
     move-result v10
@@ -841,7 +777,6 @@
 
     const-string/jumbo v8, "userid"
 
-    .line 3991
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getUserId()I
 
     move-result v10
@@ -854,7 +789,6 @@
 
     const-string v8, "flags"
 
-    .line 3992
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getFlag()I
 
     move-result v10
@@ -867,7 +801,6 @@
 
     const-string/jumbo v8, "version"
 
-    .line 3993
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getVersion()I
 
     move-result v10
@@ -880,7 +813,6 @@
 
     const-string v8, "isMigrating"
 
-    .line 3994
     invoke-virtual {p1}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->isMigrating()Z
 
     move-result p1
@@ -891,19 +823,15 @@
 
     invoke-interface {v7, v4, v8, p1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 3998
     invoke-interface {v7, v4, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 3999
     invoke-interface {v7}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 4000
     invoke-virtual {v1, v5}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 4013
     :try_start_4
     invoke-virtual {v6}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_4
@@ -936,7 +864,6 @@
 
     move-object v6, v4
 
-    .line 4002
     :goto_1
     :try_start_5
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase$EngineInfoXmlHandler;->this$1:Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;
@@ -949,12 +876,10 @@
 
     invoke-static {p0, v0, p1, v5}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$mrecordException(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 4004
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     if-eqz v4, :cond_0
 
-    .line 4007
     invoke-virtual {v1, v4}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -962,7 +887,6 @@
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 4013
     :try_start_6
     invoke-virtual {v6}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_6
@@ -994,7 +918,6 @@
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 4016
     :catch_5
     :cond_3
     throw p0
@@ -1002,7 +925,6 @@
     :catch_6
     move-exception p0
 
-    .line 3970
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     return v2

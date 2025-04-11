@@ -31,7 +31,6 @@
 .method public constructor <init>(Landroid/content/Context;IIILcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
     .locals 0
 
-    .line 106
     filled-new-array {p2, p3}, [I
 
     move-result-object p2
@@ -44,7 +43,6 @@
 .method public constructor <init>(Landroid/content/Context;IILcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
     .locals 0
 
-    .line 97
     filled-new-array {p2}, [I
 
     move-result-object p2
@@ -57,7 +55,6 @@
 .method public constructor <init>(Landroid/content/Context;[IILcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
     .locals 2
 
-    .line 114
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -68,7 +65,6 @@
 
     invoke-direct {p0, p3, v0, p4}, Lcom/android/server/accessibility/gestures/GestureMatcher;-><init>(ILandroid/os/Handler;Lcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
 
-    .line 50
     new-instance p3, Ljava/util/ArrayList;
 
     const/16 p4, 0x64
@@ -77,10 +73,8 @@
 
     iput-object p3, p0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
-    .line 115
     iput-object p2, p0, Lcom/android/server/accessibility/gestures/Swipe;->mDirections:[I
 
-    .line 116
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -89,14 +83,12 @@
 
     move-result-object p2
 
-    .line 117
     sget p3, Lcom/android/server/accessibility/gestures/GestureUtils;->MM_PER_CM:I
 
     int-to-float p3, p3
 
     const/4 p4, 0x5
 
-    .line 118
     invoke-static {p4, p3, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result p3
@@ -107,14 +99,12 @@
 
     iput p3, p0, Lcom/android/server/accessibility/gestures/Swipe;->mGestureDetectionThresholdPixels:F
 
-    .line 121
     iget p3, p2, Landroid/util/DisplayMetrics;->xdpi:F
 
     const p4, 0x40228f5c    # 2.54f
 
     div-float/2addr p3, p4
 
-    .line 122
     iget p2, p2, Landroid/util/DisplayMetrics;->ydpi:F
 
     div-float/2addr p2, p4
@@ -123,15 +113,12 @@
 
     mul-float/2addr p3, p4
 
-    .line 123
     iput p3, p0, Lcom/android/server/accessibility/gestures/Swipe;->mMinPixelsBetweenSamplesX:F
 
     mul-float/2addr p2, p4
 
-    .line 124
     iput p2, p0, Lcom/android/server/accessibility/gestures/Swipe;->mMinPixelsBetweenSamplesY:F
 
-    .line 125
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object p1
@@ -142,7 +129,6 @@
 
     iput p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mTouchSlop:I
 
-    .line 126
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/Swipe;->clear()V
 
     return-void
@@ -151,7 +137,6 @@
 .method public static directionToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_3
 
     const/4 v0, 0x1
@@ -194,7 +179,6 @@
 .method public static toDirection(FF)I
     .locals 2
 
-    .line 368
     invoke-static {p0}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -246,29 +230,22 @@
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 131
     iput v0, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseX:F
 
-    .line 132
     iput v0, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseY:F
 
     const-wide/16 v1, 0x0
 
-    .line 133
     iput-wide v1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseTime:J
 
-    .line 134
     iput v0, p0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureX:F
 
-    .line 135
     iput v0, p0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureY:F
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 137
     invoke-super {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->clear()V
 
     return-void
@@ -277,14 +254,12 @@
 .method public getGestureName()Ljava/lang/String;
     .locals 3
 
-    .line 394
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "Swipe "
 
-    .line 395
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mDirections:[I
@@ -301,7 +276,6 @@
 
     const/4 v1, 0x1
 
-    .line 396
     :goto_0
     iget-object v2, p0, Lcom/android/server/accessibility/gestures/Swipe;->mDirections:[I
 
@@ -311,7 +285,6 @@
 
     const-string v2, " and "
 
-    .line 397
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/android/server/accessibility/gestures/Swipe;->mDirections:[I
@@ -328,7 +301,6 @@
 
     goto :goto_0
 
-    .line 399
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -340,7 +312,6 @@
 .method public onDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 142
     iget p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseX:F
 
     invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
@@ -357,33 +328,28 @@
 
     if-eqz p1, :cond_0
 
-    .line 143
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseX:F
 
-    .line 144
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseY:F
 
-    .line 145
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseTime:J
 
-    .line 146
     iget p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseX:F
 
     iput p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureX:F
 
-    .line 147
     iget p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseY:F
 
     iput p1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureY:F
@@ -397,22 +363,18 @@
 
     move-object v0, p0
 
-    .line 154
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
 
-    .line 155
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
 
-    .line 156
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v3
 
-    .line 157
     iget v5, v0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureX:F
 
     sub-float v5, v1, v5
@@ -421,7 +383,6 @@
 
     move-result v5
 
-    .line 158
     iget v6, v0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureY:F
 
     sub-float v6, v2, v6
@@ -430,7 +391,6 @@
 
     move-result v6
 
-    .line 159
     iget v7, v0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseX:F
 
     sub-float v7, v1, v7
@@ -455,17 +415,14 @@
 
     move-result-wide v7
 
-    .line 160
     iget-wide v9, v0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseTime:J
 
     sub-long v9, v3, v9
 
-    .line 161
     sget-boolean v11, Lcom/android/server/accessibility/gestures/TouchExplorer;->DEBUG:Z
 
     if-eqz v11, :cond_0
 
-    .line 163
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/Swipe;->getGestureName()Ljava/lang/String;
 
     move-result-object v11
@@ -478,7 +435,6 @@
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 165
     invoke-static {v7, v8}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
 
     move-result-object v13
@@ -491,7 +447,6 @@
 
     iget v13, v0, Lcom/android/server/accessibility/gestures/Swipe;->mGestureDetectionThresholdPixels:F
 
-    .line 167
     invoke-static {v13}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object v13
@@ -502,10 +457,8 @@
 
     move-result-object v12
 
-    .line 162
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->getState()I
 
@@ -513,7 +466,6 @@
 
     if-nez v11, :cond_3
 
-    .line 170
     iget v11, v0, Lcom/android/server/accessibility/gestures/Swipe;->mTouchSlop:I
 
     int-to-double v11, v11
@@ -524,7 +476,6 @@
 
     return-void
 
-    .line 173
     :cond_1
     iget-object v11, v0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
@@ -534,7 +485,6 @@
 
     if-nez v11, :cond_3
 
-    .line 175
     iget v11, v0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseX:F
 
     sub-float v11, v1, v11
@@ -547,7 +497,6 @@
 
     move-result v11
 
-    .line 176
     iget-object v12, v0, Lcom/android/server/accessibility/gestures/Swipe;->mDirections:[I
 
     const/4 v13, 0x0
@@ -556,12 +505,10 @@
 
     if-eq v11, v12, :cond_2
 
-    .line 177
     invoke-virtual/range {p0 .. p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
 
-    .line 181
     :cond_2
     iget-object v11, v0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
@@ -575,7 +522,6 @@
 
     invoke-virtual {v11, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 184
     :cond_3
     iget v11, v0, Lcom/android/server/accessibility/gestures/Swipe;->mGestureDetectionThresholdPixels:F
 
@@ -585,21 +531,16 @@
 
     if-lez v7, :cond_4
 
-    .line 186
     iput v1, v0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseX:F
 
-    .line 187
     iput v2, v0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseY:F
 
-    .line 188
     iput-wide v3, v0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseTime:J
 
-    .line 189
     invoke-virtual/range {p0 .. p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->startGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     goto :goto_0
 
-    .line 190
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->getState()I
 
@@ -613,12 +554,10 @@
 
     if-lez v3, :cond_6
 
-    .line 193
     invoke-virtual/range {p0 .. p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
 
-    .line 196
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->getState()I
 
@@ -634,12 +573,10 @@
 
     if-lez v3, :cond_6
 
-    .line 198
     invoke-virtual/range {p0 .. p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
 
-    .line 202
     :cond_6
     :goto_0
     iget v3, v0, Lcom/android/server/accessibility/gestures/Swipe;->mMinPixelsBetweenSamplesX:F
@@ -654,14 +591,11 @@
 
     if-ltz v3, :cond_8
 
-    .line 204
     :cond_7
     iput v1, v0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureX:F
 
-    .line 205
     iput v2, v0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureY:F
 
-    .line 206
     iget-object v0, v0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -677,7 +611,6 @@
 .method public onPointerDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 229
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -686,7 +619,6 @@
 .method public onPointerUp(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 234
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -695,7 +627,6 @@
 .method public onUp(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 5
 
-    .line 212
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->getState()I
 
     move-result v0
@@ -704,23 +635,19 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 213
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
 
-    .line 217
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 218
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    .line 219
     iget v2, p0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureX:F
 
     sub-float v2, v0, v2
@@ -729,7 +656,6 @@
 
     move-result v2
 
-    .line 220
     iget v3, p0, Lcom/android/server/accessibility/gestures/Swipe;->mPreviousGestureY:F
 
     sub-float v3, v1, v3
@@ -738,7 +664,6 @@
 
     move-result v3
 
-    .line 221
     iget v4, p0, Lcom/android/server/accessibility/gestures/Swipe;->mMinPixelsBetweenSamplesX:F
 
     cmpl-float v2, v2, v4
@@ -751,7 +676,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 222
     :cond_1
     iget-object v2, p0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
@@ -761,7 +685,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 224
     :cond_2
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/Swipe;->recognizeGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
@@ -773,7 +696,6 @@
 
     move-object/from16 v0, p0
 
-    .line 246
     iget-object v1, v0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -784,18 +706,15 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 247
     invoke-virtual/range {p0 .. p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
 
-    .line 257
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 258
     iget-object v2, v0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
     const/4 v3, 0x0
@@ -806,7 +725,6 @@
 
     check-cast v2, Landroid/graphics/PointF;
 
-    .line 259
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 v6, 0x0
@@ -821,7 +739,6 @@
 
     const/4 v11, 0x0
 
-    .line 267
     :goto_0
     iget-object v12, v0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
@@ -831,7 +748,6 @@
 
     if-ge v7, v12, :cond_3
 
-    .line 268
     iget-object v6, v0, Lcom/android/server/accessibility/gestures/Swipe;->mStrokeBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -848,7 +764,6 @@
 
     div-float v12, v10, v12
 
-    .line 281
     new-instance v14, Landroid/graphics/PointF;
 
     mul-float v15, v11, v13
@@ -865,14 +780,12 @@
 
     invoke-direct {v14, v15, v11}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 287
     iget v3, v6, Landroid/graphics/PointF;->x:F
 
     iget v11, v14, Landroid/graphics/PointF;->x:F
 
     sub-float/2addr v3, v11
 
-    .line 288
     iget v11, v6, Landroid/graphics/PointF;->y:F
 
     iget v15, v14, Landroid/graphics/PointF;->y:F
@@ -887,7 +800,6 @@
 
     float-to-double v4, v15
 
-    .line 289
     invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v4
@@ -910,7 +822,6 @@
 
     if-gez v4, :cond_2
 
-    .line 297
     invoke-virtual {v1, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v9, v3
@@ -926,7 +837,6 @@
     :cond_1
     const/4 v3, 0x0
 
-    .line 306
     :cond_2
     :goto_1
     iget v4, v6, Landroid/graphics/PointF;->x:F
@@ -935,7 +845,6 @@
 
     sub-float/2addr v4, v5
 
-    .line 307
     iget v5, v6, Landroid/graphics/PointF;->y:F
 
     iget v11, v2, Landroid/graphics/PointF;->y:F
@@ -950,7 +859,6 @@
 
     float-to-double v11, v11
 
-    .line 308
     invoke-static {v11, v12}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v11
@@ -975,16 +883,13 @@
 
     goto :goto_0
 
-    .line 316
     :cond_3
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 317
     sget-boolean v2, Lcom/android/server/accessibility/gestures/TouchExplorer;->DEBUG:Z
 
     if-eqz v2, :cond_4
 
-    .line 318
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/accessibility/gestures/Swipe;->getGestureName()Ljava/lang/String;
 
     move-result-object v2
@@ -1016,7 +921,6 @@
 
     move/from16 v4, p3
 
-    .line 321
     invoke-virtual {v0, v2, v3, v4, v1}, Lcom/android/server/accessibility/gestures/Swipe;->recognizeGesturePath(Landroid/view/MotionEvent;Landroid/view/MotionEvent;ILjava/util/ArrayList;)V
 
     return-void
@@ -1025,10 +929,8 @@
 .method public final recognizeGesturePath(Landroid/view/MotionEvent;Landroid/view/MotionEvent;ILjava/util/ArrayList;)V
     .locals 6
 
-    .line 336
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDisplayId()I
 
-    .line 337
     invoke-virtual {p4}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -1041,7 +943,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 338
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -1049,7 +950,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 341
     :goto_0
     invoke-virtual {p4}, Ljava/util/ArrayList;->size()I
 
@@ -1059,7 +959,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 342
     invoke-virtual {p4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1068,45 +967,38 @@
 
     add-int/lit8 v2, v0, 0x1
 
-    .line 343
     invoke-virtual {p4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/graphics/PointF;
 
-    .line 345
     iget v4, v3, Landroid/graphics/PointF;->x:F
 
     iget v5, v1, Landroid/graphics/PointF;->x:F
 
     sub-float/2addr v4, v5
 
-    .line 346
     iget v3, v3, Landroid/graphics/PointF;->y:F
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     sub-float/2addr v3, v1
 
-    .line 347
     invoke-static {v4, v3}, Lcom/android/server/accessibility/gestures/Swipe;->toDirection(FF)I
 
     move-result v1
 
-    .line 348
     iget-object v3, p0, Lcom/android/server/accessibility/gestures/Swipe;->mDirections:[I
 
     aget v3, v3, v0
 
     if-eq v1, v3, :cond_2
 
-    .line 349
     sget-boolean p4, Lcom/android/server/accessibility/gestures/TouchExplorer;->DEBUG:Z
 
     if-eqz p4, :cond_1
 
-    .line 351
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/Swipe;->getGestureName()Ljava/lang/String;
 
     move-result-object p4
@@ -1119,7 +1011,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 353
     invoke-static {v1}, Lcom/android/server/accessibility/gestures/Swipe;->directionToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1134,7 +1025,6 @@
 
     aget v0, v1, v0
 
-    .line 355
     invoke-static {v0}, Lcom/android/server/accessibility/gestures/Swipe;->directionToString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1145,10 +1035,8 @@
 
     move-result-object v0
 
-    .line 350
     invoke-static {p4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
@@ -1159,13 +1047,11 @@
 
     goto :goto_0
 
-    .line 361
     :cond_3
     sget-boolean p4, Lcom/android/server/accessibility/gestures/TouchExplorer;->DEBUG:Z
 
     if-eqz p4, :cond_4
 
-    .line 362
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/Swipe;->getGestureName()Ljava/lang/String;
 
     move-result-object p4
@@ -1174,7 +1060,6 @@
 
     invoke-static {p4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
     :cond_4
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->completeGesture(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
@@ -1184,7 +1069,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 404
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-super {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->toString()Ljava/lang/String;
@@ -1193,7 +1077,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 405
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->getState()I
 
     move-result v1
@@ -1204,55 +1087,44 @@
 
     const-string v1, ", mBaseX: "
 
-    .line 406
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseX:F
 
-    .line 407
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v1, ", mBaseY: "
 
-    .line 408
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mBaseY:F
 
-    .line 409
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v1, ", mGestureDetectionThreshold:"
 
-    .line 410
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mGestureDetectionThresholdPixels:F
 
-    .line 411
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v1, ", mMinPixelsBetweenSamplesX:"
 
-    .line 412
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/accessibility/gestures/Swipe;->mMinPixelsBetweenSamplesX:F
 
-    .line 413
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v1, ", mMinPixelsBetweenSamplesY:"
 
-    .line 414
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p0, p0, Lcom/android/server/accessibility/gestures/Swipe;->mMinPixelsBetweenSamplesY:F
 
-    .line 415
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 417
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

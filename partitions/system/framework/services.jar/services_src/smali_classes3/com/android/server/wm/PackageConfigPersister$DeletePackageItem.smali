@@ -16,13 +16,10 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .line 413
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 414
     iput p1, p0, Lcom/android/server/wm/PackageConfigPersister$DeletePackageItem;->mUserId:I
 
-    .line 415
     iput-object p2, p0, Lcom/android/server/wm/PackageConfigPersister$DeletePackageItem;->mPackageName:Ljava/lang/String;
 
     return-void
@@ -33,14 +30,12 @@
 .method public process()V
     .locals 4
 
-    .line 420
     iget v0, p0, Lcom/android/server/wm/PackageConfigPersister$DeletePackageItem;->mUserId:I
 
     invoke-static {v0}, Lcom/android/server/wm/PackageConfigPersister;->-$$Nest$smgetUserConfigsDir(I)Ljava/io/File;
 
     move-result-object v0
 
-    .line 421
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
     move-result v1
@@ -49,7 +44,6 @@
 
     return-void
 
-    .line 424
     :cond_0
     new-instance v1, Landroid/util/AtomicFile;
 
@@ -75,14 +69,12 @@
 
     invoke-direct {v1, v2}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
 
-    .line 426
     invoke-virtual {v1}, Landroid/util/AtomicFile;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 427
     invoke-virtual {v1}, Landroid/util/AtomicFile;->delete()V
 
     :cond_1

@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$U3mk_ysLJGtmhHUmCMujG12VDEs(Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->lambda$onServiceConnected$0(Landroid/os/IBinder;)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public static synthetic $r8$lambda$jLt8TxFIIloJuFNDsshOMUur7bg(Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->lambda$onBindingDied$2(Landroid/content/ComponentName;)V
 
     return-void
@@ -32,7 +30,6 @@
 .method public static synthetic $r8$lambda$xVUH5XB-FtpwDEzhjJcWFv59pQo(Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->lambda$onNullBinding$1(Landroid/content/ComponentName;)V
 
     return-void
@@ -41,7 +38,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)V
     .locals 0
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +48,6 @@
 .method private synthetic lambda$onBindingDied$2(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 79
     invoke-static {}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -77,7 +72,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$mretryConnectionWithBackoff(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)V
@@ -88,7 +82,6 @@
 .method private synthetic lambda$onNullBinding$1(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 71
     invoke-static {}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -113,7 +106,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     iget-object p0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$mretryConnectionWithBackoff(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)V
@@ -124,7 +116,6 @@
 .method private synthetic lambda$onServiceConnected$0(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$fgetmService(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)Lcom/samsung/android/desktopmode/IBleAdvertiserService;
@@ -135,7 +126,6 @@
 
     return-void
 
-    .line 50
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
@@ -143,7 +133,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$fputmConnectionBackoffAttempts(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;I)V
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)Landroid/os/Handler;
@@ -158,7 +147,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)Landroid/os/Handler;
@@ -173,7 +161,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 54
     :try_start_0
     iget-object v0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
@@ -185,7 +172,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {p1}, Lcom/samsung/android/desktopmode/IBleAdvertiserService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/desktopmode/IBleAdvertiserService;
@@ -194,7 +180,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$fputmService(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;Lcom/samsung/android/desktopmode/IBleAdvertiserService;)V
 
-    .line 64
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_1
@@ -231,7 +216,6 @@
     :catch_0
     move-exception p1
 
-    .line 58
     invoke-static {}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -240,12 +224,10 @@
 
     invoke-static {v0, v1, p1}, Lcom/android/server/desktopmode/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 59
     iget-object p1, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-virtual {p1}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->unbindService()V
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$mretryConnectionWithBackoff(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)V
@@ -258,7 +240,6 @@
 .method public onBindingDied(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)Landroid/os/Handler;
@@ -277,7 +258,6 @@
 .method public onNullBinding(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)Landroid/os/Handler;
@@ -296,7 +276,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 46
     iget-object p1, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$1;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/BleAdvertiserServiceManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)Landroid/os/Handler;
@@ -315,6 +294,5 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

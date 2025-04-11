@@ -15,13 +15,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/vibrator/VibrationSettings;)V
     .locals 0
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput-object p2, p0, Lcom/android/server/vibrator/VibrationScaler;->mSettingsController:Lcom/android/server/vibrator/VibrationSettings;
 
-    .line 57
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -34,14 +31,12 @@
 
     iput p1, p0, Lcom/android/server/vibrator/VibrationScaler;->mDefaultVibrationAmplitude:I
 
-    .line 60
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/vibrator/VibrationScaler;->mScaleLevels:Landroid/util/SparseArray;
 
-    .line 61
     new-instance p0, Lcom/android/server/vibrator/VibrationScaler$ScaleLevel;
 
     const p2, 0x3f19999a    # 0.6f
@@ -52,7 +47,6 @@
 
     invoke-virtual {p1, p2, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 62
     new-instance p0, Lcom/android/server/vibrator/VibrationScaler$ScaleLevel;
 
     const p2, 0x3f4ccccd    # 0.8f
@@ -63,7 +57,6 @@
 
     invoke-virtual {p1, p2, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 63
     new-instance p0, Lcom/android/server/vibrator/VibrationScaler$ScaleLevel;
 
     const/high16 p2, 0x3f800000    # 1.0f
@@ -74,7 +67,6 @@
 
     invoke-virtual {p1, p2, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 64
     new-instance p0, Lcom/android/server/vibrator/VibrationScaler$ScaleLevel;
 
     const p2, 0x3f99999a    # 1.2f
@@ -85,7 +77,6 @@
 
     invoke-virtual {p1, p2, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 65
     new-instance p0, Lcom/android/server/vibrator/VibrationScaler$ScaleLevel;
 
     const p2, 0x3fb33333    # 1.4f
@@ -116,7 +107,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,14 +142,12 @@
 .method public getExternalVibrationScale(I)I
     .locals 3
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/vibrator/VibrationScaler;->mSettingsController:Lcom/android/server/vibrator/VibrationSettings;
 
     invoke-virtual {v0, p1}, Lcom/android/server/vibrator/VibrationSettings;->getDefaultIntensity(I)I
 
     move-result v0
 
-    .line 76
     iget-object p0, p0, Lcom/android/server/vibrator/VibrationScaler;->mSettingsController:Lcom/android/server/vibrator/VibrationSettings;
 
     invoke-virtual {p0, p1}, Lcom/android/server/vibrator/VibrationSettings;->getCurrentIntensity(I)I
@@ -185,7 +173,6 @@
 
     return p0
 
-    .line 89
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -217,7 +204,6 @@
 .method public scale(Landroid/os/vibrator/PrebakedSegment;I)Landroid/os/vibrator/PrebakedSegment;
     .locals 1
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/vibrator/VibrationScaler;->mSettingsController:Lcom/android/server/vibrator/VibrationSettings;
 
     invoke-virtual {v0, p2}, Lcom/android/server/vibrator/VibrationSettings;->getCurrentIntensity(I)I
@@ -226,20 +212,17 @@
 
     if-nez v0, :cond_0
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/vibrator/VibrationScaler;->mSettingsController:Lcom/android/server/vibrator/VibrationSettings;
 
     invoke-virtual {p0, p2}, Lcom/android/server/vibrator/VibrationSettings;->getDefaultIntensity(I)I
 
     move-result v0
 
-    .line 142
     :cond_0
     invoke-static {v0}, Lcom/android/server/vibrator/VibrationScaler;->intensityToEffectStrength(I)I
 
     move-result p0
 
-    .line 143
     invoke-virtual {p1, p0}, Landroid/os/vibrator/PrebakedSegment;->applyEffectStrength(I)Landroid/os/vibrator/PrebakedSegment;
 
     move-result-object p0

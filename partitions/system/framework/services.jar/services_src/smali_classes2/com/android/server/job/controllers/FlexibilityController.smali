@@ -53,7 +53,6 @@
 .method public static synthetic $r8$lambda$BjqYCzljQIa4rM9lbVC-x15-4X4(Lcom/android/server/job/controllers/FlexibilityController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/job/controllers/FlexibilityController;->lambda$onConstantsUpdatedLocked$0()V
 
     return-void
@@ -62,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeadlineProximityLimitMs(Lcom/android/server/job/controllers/FlexibilityController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mDeadlineProximityLimitMs:J
 
     return-wide v0
@@ -71,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFallbackFlexibilityDeadlineMs(Lcom/android/server/job/controllers/FlexibilityController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFallbackFlexibilityDeadlineMs:J
 
     return-wide v0
@@ -80,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMaxRescheduledDeadline(Lcom/android/server/job/controllers/FlexibilityController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mMaxRescheduledDeadline:J
 
     return-wide v0
@@ -89,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMinTimeBetweenFlexibilityAlarmsMs(Lcom/android/server/job/controllers/FlexibilityController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mMinTimeBetweenFlexibilityAlarmsMs:J
 
     return-wide v0
@@ -98,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPercentToDropConstraints(Lcom/android/server/job/controllers/FlexibilityController;)[I
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPercentToDropConstraints:[I
 
     return-object p0
@@ -107,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRescheduledJobDeadline(Lcom/android/server/job/controllers/FlexibilityController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mRescheduledJobDeadline:J
 
     return-wide v0
@@ -116,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$fputmDeadlineProximityLimitMs(Lcom/android/server/job/controllers/FlexibilityController;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mDeadlineProximityLimitMs:J
 
     return-void
@@ -125,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$fputmFallbackFlexibilityDeadlineMs(Lcom/android/server/job/controllers/FlexibilityController;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFallbackFlexibilityDeadlineMs:J
 
     return-void
@@ -134,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$fputmMaxRescheduledDeadline(Lcom/android/server/job/controllers/FlexibilityController;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mMaxRescheduledDeadline:J
 
     return-void
@@ -143,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$fputmMinTimeBetweenFlexibilityAlarmsMs(Lcom/android/server/job/controllers/FlexibilityController;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mMinTimeBetweenFlexibilityAlarmsMs:J
 
     return-void
@@ -152,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$fputmPercentToDropConstraints(Lcom/android/server/job/controllers/FlexibilityController;[I)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPercentToDropConstraints:[I
 
     return-void
@@ -161,7 +149,6 @@
 .method public static bridge synthetic -$$Nest$fputmRescheduledJobDeadline(Lcom/android/server/job/controllers/FlexibilityController;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mRescheduledJobDeadline:J
 
     return-void
@@ -170,7 +157,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/job/controllers/FlexibilityController;->DEBUG:Z
 
     return v0
@@ -179,7 +165,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 63
     sget-boolean v0, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     if-nez v0, :cond_1
@@ -188,7 +173,6 @@
 
     const/4 v1, 0x3
 
-    .line 64
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -211,7 +195,6 @@
 
     const/high16 v0, 0x10000000
 
-    .line 84
     invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v0
@@ -220,14 +203,12 @@
 
     const/4 v0, 0x7
 
-    .line 87
     invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v1
 
     sput v1, Lcom/android/server/job/controllers/FlexibilityController;->NUM_OPTIONAL_FLEXIBLE_CONSTRAINTS:I
 
-    .line 90
     invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v0
@@ -236,7 +217,6 @@
 
     const v0, 0x10000007
 
-    .line 92
     invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v0
@@ -249,54 +229,44 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/controllers/PrefetchController;)V
     .locals 5
 
-    .line 192
     invoke-direct {p0, p1}, Lcom/android/server/job/controllers/StateController;-><init>(Lcom/android/server/job/JobSchedulerService;)V
 
     const-wide/32 v0, 0xf731400
 
-    .line 100
     iput-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFallbackFlexibilityDeadlineMs:J
 
     const-wide/32 v0, 0x36ee80
 
-    .line 103
     iput-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mRescheduledJobDeadline:J
 
     const-wide/32 v0, 0x19bfcc00
 
-    .line 104
     iput-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mMaxRescheduledDeadline:J
 
     const/4 p1, 0x0
 
-    .line 106
     iput-boolean p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityEnabled:Z
 
     const-wide/32 v0, 0xea60
 
-    .line 110
     iput-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mMinTimeBetweenFlexibilityAlarmsMs:J
 
     const-wide/32 v0, 0xdbba0
 
-    .line 114
     iput-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mDeadlineProximityLimitMs:J
 
-    .line 151
     new-instance p1, Landroid/util/SparseArrayMap;
 
     invoke-direct {p1}, Landroid/util/SparseArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchLifeCycleStart:Landroid/util/SparseArrayMap;
 
-    .line 155
     new-instance p1, Lcom/android/server/job/controllers/FlexibilityController$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/job/controllers/FlexibilityController$1;-><init>(Lcom/android/server/job/controllers/FlexibilityController;)V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchChangedListener:Lcom/android/server/job/controllers/PrefetchController$PrefetchChangedListener;
 
-    .line 193
     new-instance v0, Lcom/android/server/job/controllers/FlexibilityController$FcHandler;
 
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->get()Lcom/android/server/AppSchedulingModuleThread;
@@ -311,7 +281,6 @@
 
     iput-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mHandler:Lcom/android/server/job/controllers/FlexibilityController$FcHandler;
 
-    .line 194
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -328,14 +297,12 @@
 
     iput-boolean v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mDeviceSupportsFlexConstraints:Z
 
-    .line 196
     iget-boolean v1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityEnabled:Z
 
     and-int/2addr v0, v1
 
     iput-boolean v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityEnabled:Z
 
-    .line 197
     new-instance v0, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;
 
     sget v1, Lcom/android/server/job/controllers/FlexibilityController;->NUM_FLEXIBLE_CONSTRAINTS:I
@@ -344,19 +311,16 @@
 
     iput-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityTracker:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;
 
-    .line 198
     new-instance v0, Lcom/android/server/job/controllers/FlexibilityController$FcConfig;
 
     invoke-direct {v0, p0}, Lcom/android/server/job/controllers/FlexibilityController$FcConfig;-><init>(Lcom/android/server/job/controllers/FlexibilityController;)V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFcConfig:Lcom/android/server/job/controllers/FlexibilityController$FcConfig;
 
-    .line 199
     new-instance v1, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityAlarmQueue;
 
     iget-object v2, p0, Lcom/android/server/job/controllers/StateController;->mContext:Landroid/content/Context;
 
-    .line 200
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->get()Lcom/android/server/AppSchedulingModuleThread;
 
     move-result-object v3
@@ -371,20 +335,16 @@
 
     iput-object v1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityAlarmQueue:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityAlarmQueue;
 
-    .line 201
     iget-object v0, v0, Lcom/android/server/job/controllers/FlexibilityController$FcConfig;->DEFAULT_PERCENT_TO_DROP_FLEXIBLE_CONSTRAINTS:[I
 
     iput-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPercentToDropConstraints:[I
 
-    .line 203
     iput-object p2, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchController:Lcom/android/server/job/controllers/PrefetchController;
 
-    .line 204
     iget-boolean p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityEnabled:Z
 
     if-eqz p0, :cond_0
 
-    .line 205
     invoke-virtual {p2, p1}, Lcom/android/server/job/controllers/PrefetchController;->registerPrefetchChangedListener(Lcom/android/server/job/controllers/PrefetchController$PrefetchChangedListener;)V
 
     :cond_0
@@ -394,17 +354,14 @@
 .method private synthetic lambda$onConstantsUpdatedLocked$0()V
     .locals 10
 
-    .line 424
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 425
     iget-object v1, p0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 426
     :try_start_0
     sget-object v2, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
@@ -416,7 +373,6 @@
 
     move v5, v4
 
-    .line 427
     :goto_0
     iget-object v6, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityTracker:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;
 
@@ -426,17 +382,14 @@
 
     if-ge v5, v6, :cond_2
 
-    .line 428
     iget-object v6, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityTracker:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;
 
-    .line 429
     invoke-virtual {v6, v5}, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;->getJobsByNumRequiredConstraints(I)Landroid/util/ArraySet;
 
     move-result-object v6
 
     move v7, v4
 
-    .line 430
     :goto_1
     invoke-virtual {v6}, Landroid/util/ArraySet;->size()I
 
@@ -444,36 +397,30 @@
 
     if-ge v7, v8, :cond_1
 
-    .line 431
     invoke-virtual {v6, v7}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lcom/android/server/job/controllers/JobStatus;
 
-    .line 432
     iget-object v9, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityTracker:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;
 
     invoke-virtual {v9, v8, v2, v3}, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;->resetJobNumDroppedConstraints(Lcom/android/server/job/controllers/JobStatus;J)V
 
-    .line 433
     iget-object v9, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityAlarmQueue:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityAlarmQueue;
 
     invoke-virtual {v9, v8, v2, v3}, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityAlarmQueue;->scheduleDropNumConstraintsAlarm(Lcom/android/server/job/controllers/JobStatus;J)V
 
-    .line 435
     invoke-virtual {p0, v8}, Lcom/android/server/job/controllers/FlexibilityController;->isFlexibilitySatisfiedLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v9
 
-    .line 434
     invoke-virtual {v8, v2, v3, v9}, Lcom/android/server/job/controllers/JobStatus;->setFlexibilityConstraintSatisfied(JZ)Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    .line 436
     invoke-virtual {v0, v8}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -486,20 +433,17 @@
 
     goto :goto_0
 
-    .line 440
     :cond_2
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 441
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
 
     move-result v1
 
     if-lez v1, :cond_3
 
-    .line 442
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {p0, v0}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
@@ -510,7 +454,6 @@
     :catchall_0
     move-exception p0
 
-    .line 440
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -524,7 +467,6 @@
 .method public dumpConstants(Landroid/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 845
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFcConfig:Lcom/android/server/job/controllers/FlexibilityController$FcConfig;
 
     invoke-static {p0, p1}, Lcom/android/server/job/controllers/FlexibilityController$FcConfig;->-$$Nest$mdump(Lcom/android/server/job/controllers/FlexibilityController$FcConfig;Landroid/util/IndentingPrintWriter;)V
@@ -535,7 +477,6 @@
 .method public dumpControllerStateLocked(Landroid/util/IndentingPrintWriter;Ljava/util/function/Predicate;)V
     .locals 2
 
-    .line 851
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -560,29 +501,22 @@
 
     const-string v0, "Satisfied Flexible Constraints: "
 
-    .line 852
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 853
     iget v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mSatisfiedFlexibleConstraints:I
 
     invoke-static {p1, v0}, Lcom/android/server/job/controllers/JobStatus;->dumpConstraints(Ljava/io/PrintWriter;I)V
 
-    .line 854
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 855
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 857
     iget-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityTracker:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;->dump(Landroid/util/IndentingPrintWriter;Ljava/util/function/Predicate;)V
 
-    .line 858
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 859
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityAlarmQueue:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityAlarmQueue;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/AlarmQueue;->dump(Landroid/util/IndentingPrintWriter;)V
@@ -593,12 +527,10 @@
 .method public getCurPercentOfLifecycleLocked(Lcom/android/server/job/controllers/JobStatus;J)I
     .locals 4
 
-    .line 351
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/FlexibilityController;->getLifeCycleBeginningElapsedLocked(Lcom/android/server/job/controllers/JobStatus;)J
 
     move-result-wide v0
 
-    .line 352
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/job/controllers/FlexibilityController;->getLifeCycleEndElapsedLocked(Lcom/android/server/job/controllers/JobStatus;J)J
 
     move-result-wide p0
@@ -635,7 +567,6 @@
 
     sub-long/2addr p0, v0
 
-    .line 359
     div-long/2addr p2, p0
 
     long-to-int p0, p2
@@ -658,7 +589,6 @@
 .method public getFcConfig()Lcom/android/server/job/controllers/FlexibilityController$FcConfig;
     .locals 0
 
-    .line 839
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFcConfig:Lcom/android/server/job/controllers/FlexibilityController$FcConfig;
 
     return-object p0
@@ -667,7 +597,6 @@
 .method public getLifeCycleBeginningElapsedLocked(Lcom/android/server/job/controllers/JobStatus;)J
     .locals 9
 
-    .line 302
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
     move-result-object v0
@@ -680,7 +609,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 303
     iget-wide v3, p1, Lcom/android/server/job/controllers/JobStatus;->enqueueTime:J
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
@@ -691,18 +619,14 @@
 
     move-result-wide v3
 
-    .line 304
     iget-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchController:Lcom/android/server/job/controllers/PrefetchController;
 
-    .line 305
     invoke-virtual {v0, p1}, Lcom/android/server/job/controllers/PrefetchController;->getNextEstimatedLaunchTimeLocked(Lcom/android/server/job/controllers/JobStatus;)J
 
     move-result-wide v5
 
-    .line 306
     iget-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchLifeCycleStart:Landroid/util/SparseArrayMap;
 
-    .line 307
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v7
@@ -715,7 +639,6 @@
 
     move-result-object v1
 
-    .line 306
     invoke-virtual {v0, v7, p1, v1}, Landroid/util/SparseArrayMap;->getOrDefault(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -732,22 +655,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 309
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchController:Lcom/android/server/job/controllers/PrefetchController;
 
-    .line 310
     invoke-virtual {p0}, Lcom/android/server/job/controllers/PrefetchController;->getLaunchTimeThresholdMs()J
 
     move-result-wide p0
 
     sub-long/2addr v5, p0
 
-    .line 309
     invoke-static {v0, v1, v5, v6}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
 
-    .line 312
     :cond_0
     invoke-static {v0, v1, v3, v4}, Ljava/lang/Math;->max(JJ)J
 
@@ -755,7 +674,6 @@
 
     return-wide p0
 
-    .line 314
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
 
@@ -765,7 +683,6 @@
 
     if-nez p0, :cond_2
 
-    .line 315
     iget-wide p0, p1, Lcom/android/server/job/controllers/JobStatus;->enqueueTime:J
 
     goto :goto_0
@@ -782,7 +699,6 @@
 .method public getLifeCycleEndElapsedLocked(Lcom/android/server/job/controllers/JobStatus;J)J
     .locals 5
 
-    .line 321
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
     move-result-object v0
@@ -795,15 +711,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 322
     iget-object p2, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchController:Lcom/android/server/job/controllers/PrefetchController;
 
-    .line 323
     invoke-virtual {p2, p1}, Lcom/android/server/job/controllers/PrefetchController;->getNextEstimatedLaunchTimeLocked(Lcom/android/server/job/controllers/JobStatus;)J
 
     move-result-wide p2
 
-    .line 326
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
     move-result-wide v3
@@ -812,19 +725,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 328
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
     iget-wide v0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->PREFETCH_FORCE_BATCH_RELAX_THRESHOLD_MS:J
 
     sub-long/2addr p2, v0
 
-    .line 330
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
     move-result-wide p0
 
-    .line 328
     invoke-static {p2, p3, p0, p1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p0
@@ -836,7 +746,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 333
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
     iget-wide p0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->PREFETCH_FORCE_BATCH_RELAX_THRESHOLD_MS:J
@@ -848,7 +757,6 @@
     :cond_1
     return-wide v1
 
-    .line 339
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getNumPreviousAttempts()I
 
@@ -858,12 +766,10 @@
 
     if-le v0, v3, :cond_3
 
-    .line 340
     iget-wide v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mRescheduledJobDeadline:J
 
     long-to-float v0, v0
 
-    .line 341
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getNumPreviousAttempts()I
 
     move-result p1
@@ -878,7 +784,6 @@
 
     iget-wide p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mMaxRescheduledDeadline:J
 
-    .line 340
     invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p0
@@ -887,7 +792,6 @@
 
     return-wide p2
 
-    .line 344
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
@@ -897,7 +801,6 @@
 
     if-nez v0, :cond_4
 
-    .line 345
     iget-wide p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFallbackFlexibilityDeadlineMs:J
 
     add-long/2addr p2, p0
@@ -916,12 +819,10 @@
 .method public getNextConstraintDropTimeElapsedLocked(Lcom/android/server/job/controllers/JobStatus;)J
     .locals 6
 
-    .line 367
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/FlexibilityController;->getLifeCycleBeginningElapsedLocked(Lcom/android/server/job/controllers/JobStatus;)J
 
     move-result-wide v2
 
-    .line 368
     invoke-virtual {p0, p1, v2, v3}, Lcom/android/server/job/controllers/FlexibilityController;->getLifeCycleEndElapsedLocked(Lcom/android/server/job/controllers/JobStatus;J)J
 
     move-result-wide v4
@@ -930,7 +831,6 @@
 
     move-object v1, p1
 
-    .line 369
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/job/controllers/FlexibilityController;->getNextConstraintDropTimeElapsedLocked(Lcom/android/server/job/controllers/JobStatus;JJ)J
 
     move-result-wide p0
@@ -947,7 +847,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 377
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getNumDroppedFlexibleConstraints()I
 
     move-result v2
@@ -960,7 +859,6 @@
 
     goto :goto_0
 
-    .line 380
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getNumDroppedFlexibleConstraints()I
 
@@ -976,7 +874,6 @@
 
     const-wide/16 p0, 0x64
 
-    .line 381
     div-long/2addr p4, p0
 
     add-long/2addr p2, p4
@@ -991,7 +888,6 @@
 .method public getNumSatisfiedFlexibleConstraintsLocked(Lcom/android/server/job/controllers/JobStatus;)I
     .locals 1
 
-    .line 263
     iget p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mSatisfiedFlexibleConstraints:I
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getPreferredConstraintFlags()I
@@ -1004,7 +900,6 @@
 
     move-result p0
 
-    .line 265
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getHasAccessToUnmetered()Z
 
     move-result p1
@@ -1017,7 +912,6 @@
 .method public isConstraintSatisfied(I)Z
     .locals 0
 
-    .line 296
     iget p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mSatisfiedFlexibleConstraints:I
 
     and-int/2addr p0, p1
@@ -1038,14 +932,12 @@
 .method public isFlexibilitySatisfiedLocked(Lcom/android/server/job/controllers/JobStatus;)Z
     .locals 2
 
-    .line 253
     iget-boolean v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityEnabled:Z
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 254
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
 
     move-result v1
@@ -1058,12 +950,10 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 255
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/FlexibilityController;->getNumSatisfiedFlexibleConstraintsLocked(Lcom/android/server/job/controllers/JobStatus;)I
 
     move-result v0
 
-    .line 256
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getNumRequiredFlexibleConstraints()I
 
     move-result v1
@@ -1072,7 +962,6 @@
 
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 257
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobSchedulerService;->isCurrentlyRunningLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result p0
@@ -1097,33 +986,28 @@
 .method public maybeStartTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)V
     .locals 2
 
-    .line 215
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->hasFlexibilityConstraint()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 216
     sget-object p2, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {p2}, Ljava/time/Clock;->millis()J
 
     move-result-wide v0
 
-    .line 217
     iget-boolean p2, p0, Lcom/android/server/job/controllers/FlexibilityController;->mDeviceSupportsFlexConstraints:Z
 
     if-nez p2, :cond_0
 
     const/4 p0, 0x1
 
-    .line 218
     invoke-virtual {p1, v0, v1, p0}, Lcom/android/server/job/controllers/JobStatus;->setFlexibilityConstraintSatisfied(JZ)Z
 
     return-void
 
-    .line 221
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/FlexibilityController;->isFlexibilitySatisfiedLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
@@ -1131,17 +1015,14 @@
 
     invoke-virtual {p1, v0, v1, p2}, Lcom/android/server/job/controllers/JobStatus;->setFlexibilityConstraintSatisfied(JZ)Z
 
-    .line 222
     iget-object p2, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityTracker:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;
 
     invoke-virtual {p2, p1}, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;->add(Lcom/android/server/job/controllers/JobStatus;)V
 
     const/16 p2, 0x80
 
-    .line 223
     invoke-virtual {p1, p2}, Lcom/android/server/job/controllers/JobStatus;->setTrackingController(I)V
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityAlarmQueue:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityAlarmQueue;
 
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityAlarmQueue;->scheduleDropNumConstraintsAlarm(Lcom/android/server/job/controllers/JobStatus;J)V
@@ -1155,19 +1036,16 @@
 
     const/16 p2, 0x80
 
-    .line 231
     invoke-virtual {p1, p2}, Lcom/android/server/job/controllers/JobStatus;->clearTrackingController(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 232
     iget-object p2, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityAlarmQueue:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityAlarmQueue;
 
     invoke-virtual {p2, p1}, Lcom/android/server/utils/AlarmQueue;->removeAlarmForKey(Ljava/lang/Object;)V
 
-    .line 233
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFlexibilityTracker:Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;
 
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/FlexibilityController$FlexibilityTracker;->remove(Lcom/android/server/job/controllers/JobStatus;)V
@@ -1179,12 +1057,10 @@
 .method public onAppRemovedLocked(Ljava/lang/String;I)V
     .locals 0
 
-    .line 240
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 241
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchLifeCycleStart:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p2, p1}, Landroid/util/SparseArrayMap;->delete(ILjava/lang/Object;)Ljava/lang/Object;
@@ -1195,7 +1071,6 @@
 .method public onConstantsUpdatedLocked()V
     .locals 2
 
-    .line 422
     iget-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFcConfig:Lcom/android/server/job/controllers/FlexibilityController$FcConfig;
 
     invoke-static {v0}, Lcom/android/server/job/controllers/FlexibilityController$FcConfig;->-$$Nest$fgetmShouldReevaluateConstraints(Lcom/android/server/job/controllers/FlexibilityController$FcConfig;)Z
@@ -1204,7 +1079,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 423
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1230,7 +1104,6 @@
 
     return-void
 
-    .line 391
     :cond_0
     sget-object p3, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
@@ -1238,7 +1111,6 @@
 
     move-result-wide v1
 
-    .line 392
     iget-object p3, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {p3}, Lcom/android/server/job/JobSchedulerService;->getJobStore()Lcom/android/server/job/JobStore;
@@ -1255,7 +1127,6 @@
 
     move v5, v4
 
-    .line 394
     :goto_0
     invoke-virtual {p3}, Landroid/util/ArraySet;->size()I
 
@@ -1263,28 +1134,24 @@
 
     if-ge v4, v6, :cond_2
 
-    .line 395
     invoke-virtual {p3, v4}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/server/job/controllers/JobStatus;
 
-    .line 396
     invoke-virtual {v6}, Lcom/android/server/job/controllers/JobStatus;->hasFlexibilityConstraint()Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 397
     invoke-virtual {p0, v6}, Lcom/android/server/job/controllers/FlexibilityController;->isFlexibilitySatisfiedLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v7
 
     invoke-virtual {v6, v1, v2, v7}, Lcom/android/server/job/controllers/JobStatus;->setFlexibilityConstraintSatisfied(JZ)Z
 
-    .line 398
     invoke-virtual {v6}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
     move-result-object v6
@@ -1305,12 +1172,10 @@
 
     if-ne p2, v0, :cond_4
 
-    .line 405
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 406
     iget-object p3, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {p3, p1}, Lcom/android/server/job/JobSchedulerService;->getPackagesForUidLocked(I)Landroid/util/ArraySet;
@@ -1321,7 +1186,6 @@
 
     return-void
 
-    .line 410
     :cond_3
     :goto_1
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
@@ -1330,19 +1194,16 @@
 
     if-ge v3, p3, :cond_4
 
-    .line 411
     invoke-virtual {p1, v3}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Ljava/lang/String;
 
-    .line 412
     iget-object v0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchLifeCycleStart:Landroid/util/SparseArrayMap;
 
     const-wide/16 v4, 0x0
 
-    .line 413
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
@@ -1365,7 +1226,6 @@
 
     move-result-object v4
 
-    .line 412
     invoke-virtual {v0, p2, p3, v4}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v3, v3, 0x1
@@ -1379,7 +1239,6 @@
 .method public onUserRemovedLocked(I)V
     .locals 0
 
-    .line 247
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mPrefetchLifeCycleStart:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArrayMap;->delete(I)V
@@ -1390,7 +1249,6 @@
 .method public prepareForUpdatedConstantsLocked()V
     .locals 1
 
-    .line 451
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFcConfig:Lcom/android/server/job/controllers/FlexibilityController$FcConfig;
 
     const/4 v0, 0x0
@@ -1403,7 +1261,6 @@
 .method public processConstantLocked(Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;)V
     .locals 0
 
-    .line 457
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mFcConfig:Lcom/android/server/job/controllers/FlexibilityController$FcConfig;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/job/controllers/FlexibilityController$FcConfig;->processConstantLocked(Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;)V
@@ -1414,12 +1271,10 @@
 .method public setConstraintSatisfied(IZJ)V
     .locals 3
 
-    .line 274
     iget-object p3, p0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter p3
 
-    .line 275
     :try_start_0
     iget p4, p0, Lcom/android/server/job/controllers/FlexibilityController;->mSatisfiedFlexibleConstraints:I
 
@@ -1439,12 +1294,10 @@
     :goto_0
     if-ne p4, p2, :cond_1
 
-    .line 277
     monitor-exit p3
 
     return-void
 
-    .line 280
     :cond_1
     sget-boolean p4, Lcom/android/server/job/controllers/FlexibilityController;->DEBUG:Z
 
@@ -1452,7 +1305,6 @@
 
     const-string p4, "JobScheduler.Flex"
 
-    .line 281
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1475,7 +1327,6 @@
 
     invoke-static {p4, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     :cond_2
     iget p4, p0, Lcom/android/server/job/controllers/FlexibilityController;->mSatisfiedFlexibleConstraints:I
 
@@ -1493,10 +1344,8 @@
     :goto_1
     or-int/2addr p1, p4
 
-    .line 286
     iput p1, p0, Lcom/android/server/job/controllers/FlexibilityController;->mSatisfiedFlexibleConstraints:I
 
-    .line 289
     iget-object p0, p0, Lcom/android/server/job/controllers/FlexibilityController;->mHandler:Lcom/android/server/job/controllers/FlexibilityController$FcHandler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -1505,7 +1354,6 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 290
     monitor-exit p3
 
     return-void

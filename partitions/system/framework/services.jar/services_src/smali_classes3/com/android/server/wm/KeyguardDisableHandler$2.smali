@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/policy/WindowManagerPolicy;Lcom/android/server/pm/UserManagerInternal;)V
     .locals 0
 
-    .line 141
     iput-object p1, p0, Lcom/android/server/wm/KeyguardDisableHandler$2;->val$policy:Lcom/android/server/policy/WindowManagerPolicy;
 
     iput-object p2, p0, Lcom/android/server/wm/KeyguardDisableHandler$2;->val$userManager:Lcom/android/server/pm/UserManagerInternal;
@@ -31,7 +30,6 @@
 .method public dpmRequiresPassword(I)Z
     .locals 0
 
-    .line 144
     invoke-static {}, Landroid/app/admin/DevicePolicyCache;->getInstance()Landroid/app/admin/DevicePolicyCache;
 
     move-result-object p0
@@ -56,7 +54,6 @@
 .method public enableKeyguard(Z)V
     .locals 0
 
-    .line 160
     iget-object p0, p0, Lcom/android/server/wm/KeyguardDisableHandler$2;->val$policy:Lcom/android/server/policy/WindowManagerPolicy;
 
     invoke-interface {p0, p1}, Lcom/android/server/policy/WindowManagerPolicy;->enableKeyguard(Z)V
@@ -67,7 +64,6 @@
 .method public getProfileParentId(I)I
     .locals 0
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/wm/KeyguardDisableHandler$2;->val$userManager:Lcom/android/server/pm/UserManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/UserManagerInternal;->getProfileParentId(I)I
@@ -80,7 +76,6 @@
 .method public isKeyguardSecure(I)Z
     .locals 0
 
-    .line 150
     iget-object p0, p0, Lcom/android/server/wm/KeyguardDisableHandler$2;->val$policy:Lcom/android/server/policy/WindowManagerPolicy;
 
     invoke-interface {p0, p1}, Lcom/android/server/policy/WindowManagerPolicy;->isKeyguardSecure(I)Z

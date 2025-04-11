@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/speech/SpeechRecognitionManagerService;)V
     .locals 0
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/speech/SpeechRecognitionManagerService$SpeechRecognitionManagerServiceStub;->this$0:Lcom/android/server/speech/SpeechRecognitionManagerService;
 
     invoke-direct {p0}, Landroid/speech/IRecognitionServiceManager$Stub;-><init>()V
@@ -24,12 +23,10 @@
 .method public createSession(Landroid/content/ComponentName;Landroid/os/IBinder;ZLandroid/speech/IRecognitionServiceManagerCallback;)V
     .locals 2
 
-    .line 89
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 90
     iget-object v1, p0, Lcom/android/server/speech/SpeechRecognitionManagerService$SpeechRecognitionManagerServiceStub;->this$0:Lcom/android/server/speech/SpeechRecognitionManagerService;
 
     invoke-static {v1}, Lcom/android/server/speech/SpeechRecognitionManagerService;->access$000(Lcom/android/server/speech/SpeechRecognitionManagerService;)Ljava/lang/Object;
@@ -38,7 +35,6 @@
 
     monitor-enter v1
 
-    .line 91
     :try_start_0
     iget-object p0, p0, Lcom/android/server/speech/SpeechRecognitionManagerService$SpeechRecognitionManagerServiceStub;->this$0:Lcom/android/server/speech/SpeechRecognitionManagerService;
 
@@ -48,10 +44,8 @@
 
     check-cast p0, Lcom/android/server/speech/SpeechRecognitionManagerServiceImpl;
 
-    .line 92
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/speech/SpeechRecognitionManagerServiceImpl;->createSessionLocked(Landroid/content/ComponentName;Landroid/os/IBinder;ZLandroid/speech/IRecognitionServiceManagerCallback;)V
 
-    .line 93
     monitor-exit v1
 
     return-void
@@ -69,19 +63,16 @@
 .method public setTemporaryComponent(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 98
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
     if-nez p1, :cond_0
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/speech/SpeechRecognitionManagerService$SpeechRecognitionManagerServiceStub;->this$0:Lcom/android/server/speech/SpeechRecognitionManagerService;
 
     invoke-virtual {p0, v0}, Lcom/android/server/infra/AbstractMasterSystemService;->resetTemporaryService(I)V
 
-    .line 101
     invoke-static {}, Lcom/android/server/speech/SpeechRecognitionManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -104,21 +95,17 @@
 
     return-void
 
-    .line 104
     :cond_0
     iget-object p0, p0, Lcom/android/server/speech/SpeechRecognitionManagerService$SpeechRecognitionManagerServiceStub;->this$0:Lcom/android/server/speech/SpeechRecognitionManagerService;
 
-    .line 106
     invoke-virtual {p1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v1
 
     const v2, 0xea60
 
-    .line 104
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/infra/AbstractMasterSystemService;->setTemporaryService(ILjava/lang/String;I)V
 
-    .line 108
     invoke-static {}, Lcom/android/server/speech/SpeechRecognitionManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0

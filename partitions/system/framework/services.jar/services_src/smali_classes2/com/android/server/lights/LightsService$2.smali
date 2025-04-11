@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/lights/LightsService;)V
     .locals 0
 
-    .line 865
     iput-object p1, p0, Lcom/android/server/lights/LightsService$2;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-direct {p0}, Lcom/android/server/lights/LightsManager;-><init>()V
@@ -24,7 +23,6 @@
 .method public getLight(I)Lcom/android/server/lights/LogicalLight;
     .locals 1
 
-    .line 868
     iget-object v0, p0, Lcom/android/server/lights/LightsService$2;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-static {v0}, Lcom/android/server/lights/LightsService;->-$$Nest$fgetmLightsByType(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
@@ -45,7 +43,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 869
     iget-object p0, p0, Lcom/android/server/lights/LightsService$2;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-static {p0}, Lcom/android/server/lights/LightsService;->-$$Nest$fgetmLightsByType(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;

@@ -17,7 +17,6 @@
 .method public getCallingUid()I
     .locals 0
 
-    .line 2901
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -28,7 +27,6 @@
 .method public startDreamWhenDockedIfAppropriate(Landroid/content/Context;)V
     .locals 0
 
-    .line 2905
     invoke-static {p1}, Landroid/service/dreams/Sandman;->startDreamWhenDockedIfAppropriate(Landroid/content/Context;)V
 
     return-void

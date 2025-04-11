@@ -19,7 +19,6 @@
 
     move-object v1, p1
 
-    .line 2929
     iput-object v1, v0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent$1;->this$0:Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;
 
     move-object/from16 v1, p10
@@ -56,7 +55,6 @@
 .method public onNetworkUnwanted()V
     .locals 1
 
-    .line 2932
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent$1;->val$networkUnwantedCallback:Ljava/util/function/Consumer;
 
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent$1;->this$0:Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;
@@ -69,7 +67,6 @@
 .method public onValidationStatus(ILandroid/net/Uri;)V
     .locals 0
 
-    .line 2937
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent$1;->val$validationStatusCallback:Ljava/util/function/Consumer;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

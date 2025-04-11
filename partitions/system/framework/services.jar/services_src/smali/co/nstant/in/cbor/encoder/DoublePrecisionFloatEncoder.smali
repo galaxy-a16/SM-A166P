@@ -7,7 +7,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 12
     invoke-direct {p0, p1, p2}, Lco/nstant/in/cbor/encoder/AbstractEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     return-void
@@ -20,10 +19,8 @@
 
     const/16 v0, 0xfb
 
-    .line 17
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 18
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/DoublePrecisionFloat;->getValue()D
 
     move-result-wide v0
@@ -42,7 +39,6 @@
 
     long-to-int p1, v2
 
-    .line 19
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x30
@@ -53,7 +49,6 @@
 
     long-to-int p1, v2
 
-    .line 20
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x28
@@ -64,7 +59,6 @@
 
     long-to-int p1, v2
 
-    .line 21
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x20
@@ -75,7 +69,6 @@
 
     long-to-int p1, v2
 
-    .line 22
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x18
@@ -86,7 +79,6 @@
 
     long-to-int p1, v2
 
-    .line 23
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x10
@@ -97,7 +89,6 @@
 
     long-to-int p1, v2
 
-    .line 24
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/16 p1, 0x8
@@ -108,7 +99,6 @@
 
     long-to-int p1, v2
 
-    .line 25
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     const/4 p1, 0x0
@@ -119,7 +109,6 @@
 
     long-to-int p1, v0
 
-    .line 26
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     return-void

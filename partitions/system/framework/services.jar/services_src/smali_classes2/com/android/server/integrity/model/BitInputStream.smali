@@ -15,10 +15,8 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/integrity/model/BitInputStream;->mInputStream:Ljava/io/InputStream;
 
     return-void
@@ -38,7 +36,6 @@
 
     if-ge v0, p1, :cond_1
 
-    .line 50
     iget-wide v3, p0, Lcom/android/server/integrity/model/BitInputStream;->mBitsRead:J
 
     const-wide/16 v5, 0x8
@@ -51,14 +48,12 @@
 
     if-nez v0, :cond_0
 
-    .line 51
     invoke-virtual {p0}, Lcom/android/server/integrity/model/BitInputStream;->getNextByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lcom/android/server/integrity/model/BitInputStream;->mCurrentByte:B
 
-    .line 53
     :cond_0
     iget-wide v3, p0, Lcom/android/server/integrity/model/BitInputStream;->mBitsRead:J
 
@@ -70,7 +65,6 @@
 
     shl-int/lit8 v1, v1, 0x1
 
-    .line 56
     iget-byte v5, p0, Lcom/android/server/integrity/model/BitInputStream;->mCurrentByte:B
 
     ushr-int v0, v5, v0
@@ -83,7 +77,6 @@
 
     add-long/2addr v3, v5
 
-    .line 58
     iput-wide v3, p0, Lcom/android/server/integrity/model/BitInputStream;->mBitsRead:J
 
     move v0, v2
@@ -97,7 +90,6 @@
 .method public final getNextByte()B
     .locals 0
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/integrity/model/BitInputStream;->mInputStream:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
@@ -112,7 +104,6 @@
 .method public hasNext()Z
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/integrity/model/BitInputStream;->mInputStream:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->available()I

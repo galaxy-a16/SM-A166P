@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$$ExternalSyntheticLambda10;->f$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$$ExternalSyntheticLambda10;->f$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->$r8$lambda$pt-ifSbkLyt83DCW_BJ94qjCHgE(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V

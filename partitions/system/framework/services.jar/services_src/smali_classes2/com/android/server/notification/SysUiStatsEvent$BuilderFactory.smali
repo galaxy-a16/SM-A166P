@@ -17,7 +17,6 @@
 .method public newBuilder()Lcom/android/server/notification/SysUiStatsEvent$Builder;
     .locals 1
 
-    .line 70
     new-instance p0, Lcom/android/server/notification/SysUiStatsEvent$Builder;
 
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;

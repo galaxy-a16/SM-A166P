@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/Face10;ILcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;I)V
     .locals 0
 
-    .line 1250
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$9;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     iput p2, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$9;->val$feature:I
@@ -41,21 +40,18 @@
 
     if-eqz p2, :cond_0
 
-    .line 1254
     iget p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$9;->val$feature:I
 
     const/4 p2, 0x1
 
     if-ne p1, p2, :cond_0
 
-    .line 1255
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$9;->val$client:Lcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;
 
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/face/hidl/FaceGetFeatureClient;->getValue()Z
 
     move-result p1
 
-    .line 1256
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +78,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1258
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$9;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     invoke-static {p2}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$fgetmContext(Lcom/android/server/biometrics/sensors/face/hidl/Face10;)Landroid/content/Context;

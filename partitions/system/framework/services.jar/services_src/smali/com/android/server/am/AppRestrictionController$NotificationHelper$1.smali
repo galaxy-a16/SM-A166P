@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/AppRestrictionController$NotificationHelper;)V
     .locals 0
 
-    .line 2417
     iput-object p1, p0, Lcom/android/server/am/AppRestrictionController$NotificationHelper$1;->this$0:Lcom/android/server/am/AppRestrictionController$NotificationHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,10 +23,8 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 2420
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    .line 2421
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -47,7 +44,6 @@
     :cond_0
     const-string p1, "android.intent.extra.PACKAGE_NAME"
 
-    .line 2423
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -56,17 +52,14 @@
 
     const/4 v1, 0x0
 
-    .line 2424
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 2425
     iget-object v0, p0, Lcom/android/server/am/AppRestrictionController$NotificationHelper$1;->this$0:Lcom/android/server/am/AppRestrictionController$NotificationHelper;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/AppRestrictionController$NotificationHelper;->cancelRequestBgRestrictedIfNecessary(Ljava/lang/String;I)V
 
-    .line 2426
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "android.intent.action.SHOW_FOREGROUND_SERVICE_MANAGER"
@@ -75,10 +68,8 @@
 
     const/high16 p2, 0x1000000
 
-    .line 2427
     invoke-virtual {p1, p2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2429
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$NotificationHelper$1;->this$0:Lcom/android/server/am/AppRestrictionController$NotificationHelper;
 
     invoke-static {p0}, Lcom/android/server/am/AppRestrictionController$NotificationHelper;->-$$Nest$fgetmContext(Lcom/android/server/am/AppRestrictionController$NotificationHelper;)Landroid/content/Context;

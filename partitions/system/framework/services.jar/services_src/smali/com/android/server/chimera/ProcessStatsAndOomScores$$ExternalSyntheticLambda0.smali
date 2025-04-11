@@ -20,7 +20,6 @@
 .method public final test(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/chimera/ProcessStatsAndOomScores;->$r8$lambda$k0tO76VJ7wVYbq4_J0M8GtavSDU(I)Z
 
     move-result p0

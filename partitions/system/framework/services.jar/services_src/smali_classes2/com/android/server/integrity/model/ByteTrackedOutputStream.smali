@@ -13,15 +13,12 @@
 .method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 1
 
-    .line 33
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 34
     iput v0, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mWrittenBytesCount:I
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     return-void
@@ -32,7 +29,6 @@
 .method public getWrittenBytesCount()I
     .locals 0
 
-    .line 61
     iget p0, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mWrittenBytesCount:I
 
     return p0
@@ -41,14 +37,12 @@
 .method public write(I)V
     .locals 1
 
-    .line 40
     iget v0, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mWrittenBytesCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mWrittenBytesCount:I
 
-    .line 41
     iget-object p0, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write(I)V
@@ -59,7 +53,6 @@
 .method public write([B)V
     .locals 2
 
-    .line 50
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -72,14 +65,12 @@
 .method public write([BII)V
     .locals 1
 
-    .line 55
     iget v0, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mWrittenBytesCount:I
 
     add-int/2addr v0, p3
 
     iput v0, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mWrittenBytesCount:I
 
-    .line 56
     iget-object p0, p0, Lcom/android/server/integrity/model/ByteTrackedOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V

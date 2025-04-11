@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsService;)V
     .locals 0
 
-    .line 5107
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-direct {p0}, Lcom/android/internal/widget/LockSettingsInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/locksettings/LockSettingsService;Lcom/android/server/locksettings/LockSettingsService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/locksettings/LockSettingsService$LocalService;-><init>(Lcom/android/server/locksettings/LockSettingsService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public addEscrowToken([BILcom/android/internal/widget/LockPatternUtils$EscrowTokenStateChangeCallback;)J
     .locals 1
 
-    .line 5132
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     const/4 v0, 0x0
@@ -48,7 +45,6 @@
 .method public armRebootEscrow()I
     .locals 0
 
-    .line 5222
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmRebootEscrowManager(Lcom/android/server/locksettings/LockSettingsService;)Lcom/android/server/locksettings/RebootEscrowManager;
@@ -65,7 +61,6 @@
 .method public clearRebootEscrow()Z
     .locals 2
 
-    .line 5212
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {v0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmRebootEscrowManager(Lcom/android/server/locksettings/LockSettingsService;)Lcom/android/server/locksettings/RebootEscrowManager;
@@ -82,7 +77,6 @@
 
     return p0
 
-    .line 5215
     :cond_0
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
@@ -104,7 +98,6 @@
 .method public clearStorageForUser(I)V
     .locals 0
 
-    .line 5243
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmDarLockSettings(Lcom/android/server/locksettings/LockSettingsService;)Lcom/android/server/locksettings/LockSettingsService$DarLockSettings;
@@ -119,7 +112,6 @@
 .method public createNewUser(II)V
     .locals 0
 
-    .line 5121
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$mcreateNewUser(Lcom/android/server/locksettings/LockSettingsService;II)V
@@ -130,7 +122,6 @@
 .method public getCredentialType(I)I
     .locals 0
 
-    .line 5233
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/LockSettingsService;->getCredentialType(I)I
@@ -143,7 +134,6 @@
 .method public getSecureMode(I)I
     .locals 0
 
-    .line 5238
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmDarLockSettings(Lcom/android/server/locksettings/LockSettingsService;)Lcom/android/server/locksettings/LockSettingsService$DarLockSettings;
@@ -160,12 +150,10 @@
 .method public getUserPasswordMetrics(I)Landroid/app/admin/PasswordMetrics;
     .locals 5
 
-    .line 5180
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 5182
     :try_start_0
     iget-object v2, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
@@ -177,7 +165,6 @@
 
     const-string v2, "LockSettingsService"
 
-    .line 5187
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -194,7 +181,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5190
     :cond_0
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
@@ -204,7 +190,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5192
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -214,14 +199,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5193
     throw p0
 .end method
 
 .method public isEscrowTokenActive(JI)Z
     .locals 0
 
-    .line 5143
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$misEscrowTokenActive(Lcom/android/server/locksettings/LockSettingsService;JI)Z
@@ -234,7 +217,6 @@
 .method public onThirdPartyAppsStarted()V
     .locals 0
 
-    .line 5111
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$monThirdPartyAppsStarted(Lcom/android/server/locksettings/LockSettingsService;)V
@@ -245,7 +227,6 @@
 .method public prepareRebootEscrow()Z
     .locals 2
 
-    .line 5198
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {v0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmRebootEscrowManager(Lcom/android/server/locksettings/LockSettingsService;)Lcom/android/server/locksettings/RebootEscrowManager;
@@ -262,7 +243,6 @@
 
     return p0
 
-    .line 5201
     :cond_0
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
@@ -284,7 +264,6 @@
 .method public refreshStrongAuthTimeout(I)V
     .locals 0
 
-    .line 5227
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmStrongAuth(Lcom/android/server/locksettings/LockSettingsService;)Lcom/android/server/locksettings/LockSettingsStrongAuth;
@@ -299,7 +278,6 @@
 .method public removeEscrowToken(JI)Z
     .locals 0
 
-    .line 5138
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$mremoveEscrowToken(Lcom/android/server/locksettings/LockSettingsService;JI)Z
@@ -312,7 +290,6 @@
 .method public removeUser(I)V
     .locals 0
 
-    .line 5126
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0, p1}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$mremoveUser(Lcom/android/server/locksettings/LockSettingsService;I)V
@@ -323,7 +300,6 @@
 .method public setLockCredentialWithToken(Lcom/android/internal/widget/LockscreenCredential;J[BI)Z
     .locals 9
 
-    .line 5149
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     iget-boolean v0, v0, Lcom/android/server/locksettings/LockSettingsService;->mHasSecureLockScreen:Z
@@ -332,7 +308,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5150
     invoke-virtual {p1}, Lcom/android/internal/widget/LockscreenCredential;->getType()I
 
     move-result v0
@@ -343,7 +318,6 @@
 
     goto :goto_0
 
-    .line 5151
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -353,7 +327,6 @@
 
     throw p0
 
-    .line 5156
     :cond_1
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
@@ -362,7 +335,6 @@
 
     const/4 v2, 0x0
 
-    .line 5158
     :try_start_0
     iget-object v3, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
@@ -386,18 +358,14 @@
     :catchall_0
     move-exception p0
 
-    .line 5161
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5162
     throw p0
 
-    .line 5161
     :catch_0
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5165
     iget-object v3, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     move-object v4, p1
@@ -416,7 +384,6 @@
 
     return v2
 
-    .line 5169
     :cond_2
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
@@ -430,7 +397,6 @@
 .method public setRebootEscrowListener(Lcom/android/internal/widget/RebootEscrowListener;)V
     .locals 0
 
-    .line 5207
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$fgetmRebootEscrowManager(Lcom/android/server/locksettings/LockSettingsService;)Lcom/android/server/locksettings/RebootEscrowManager;
@@ -445,7 +411,6 @@
 .method public unlockUserKeyIfUnsecured(I)V
     .locals 0
 
-    .line 5116
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0, p1}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$munlockUserKeyIfUnsecured(Lcom/android/server/locksettings/LockSettingsService;I)V
@@ -456,7 +421,6 @@
 .method public unlockUserWithToken(J[BI)Z
     .locals 0
 
-    .line 5175
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$LocalService;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/locksettings/LockSettingsService;->-$$Nest$munlockUserWithToken(Lcom/android/server/locksettings/LockSettingsService;J[BI)Z

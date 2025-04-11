@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 2044
     iput-object p1, p0, Lcom/android/server/BatteryService$18;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 4
 
-    .line 2047
     iget-object v0, p0, Lcom/android/server/BatteryService$18;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmLock(Lcom/android/server/BatteryService;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 2048
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BatteryService$18;->this$0:Lcom/android/server/BatteryService;
 
@@ -50,12 +47,10 @@
 
     invoke-static {v1, v2}, Lcom/android/server/BatteryService;->-$$Nest$fputmLongBatteryRetryCnt(Lcom/android/server/BatteryService;I)V
 
-    .line 2049
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2051
     iget-object v0, p0, Lcom/android/server/BatteryService$18;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$mcheckLongLifeBatteryInternal(Lcom/android/server/BatteryService;)I
@@ -74,7 +69,6 @@
 
     goto :goto_0
 
-    .line 2060
     :cond_0
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -102,7 +96,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2061
     iget-object v0, p0, Lcom/android/server/BatteryService$18;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmLongBatteryRetryCnt(Lcom/android/server/BatteryService;)I
@@ -125,7 +118,6 @@
 
     goto :goto_0
 
-    .line 2062
     :cond_1
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -137,7 +129,6 @@
 
     goto :goto_0
 
-    .line 2057
     :cond_2
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -149,7 +140,6 @@
 
     goto :goto_0
 
-    .line 2054
     :cond_3
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -165,7 +155,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2049
     :try_start_1
     monitor-exit v0
     :try_end_1

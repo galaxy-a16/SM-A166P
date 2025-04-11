@@ -43,7 +43,6 @@
 .method public static synthetic $r8$lambda$B6eQAWg8buuKI5MeNX_-D7e5_g0(Lcom/android/server/am/ProcessErrorStateRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/ProcessErrorStateRecord;->lambda$appNotResponding$5()V
 
     return-void
@@ -52,7 +51,6 @@
 .method public static synthetic $r8$lambda$DVtoONvXPApOjc-wfcvxSRT_cSA(Lcom/android/server/am/ProcessErrorStateRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/ProcessErrorStateRecord;->lambda$appNotResponding$4()V
 
     return-void
@@ -61,7 +59,6 @@
 .method public static synthetic $r8$lambda$InRrpgCdQOHKuez6yDO4PtKtQz8(Lcom/android/server/am/ProcessErrorStateRecord;Lcom/android/internal/os/anr/AnrLatencyTracker;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/ProcessErrorStateRecord;->lambda$appNotResponding$0(Lcom/android/internal/os/anr/AnrLatencyTracker;Ljava/lang/String;)V
 
     return-void
@@ -70,7 +67,6 @@
 .method public static synthetic $r8$lambda$XX6LFogJ4k2TqM8QPNURkMr-I1E(IILjava/util/ArrayList;Landroid/util/SparseBooleanArray;Lcom/android/server/am/ProcessRecord;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/am/ProcessErrorStateRecord;->lambda$appNotResponding$2(IILjava/util/ArrayList;Landroid/util/SparseBooleanArray;Lcom/android/server/am/ProcessRecord;)V
 
     return-void
@@ -79,7 +75,6 @@
 .method public static synthetic $r8$lambda$vxfFfJ-fs-VghYihAMzmEeHozsE(Lcom/android/server/am/ProcessErrorStateRecord;Lcom/android/internal/os/anr/AnrLatencyTracker;ZZ)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/am/ProcessErrorStateRecord;->lambda$appNotResponding$3(Lcom/android/internal/os/anr/AnrLatencyTracker;ZZ)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -90,7 +85,6 @@
 .method public static synthetic $r8$lambda$ym4yxcSufD1I52m635rLEqKUb40(Lcom/android/server/am/ProcessErrorStateRecord;Lcom/android/internal/os/anr/AnrLatencyTracker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/ProcessErrorStateRecord;->lambda$appNotResponding$1(Lcom/android/internal/os/anr/AnrLatencyTracker;)V
 
     return-void
@@ -99,17 +93,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/am/ProcessRecord;)V
     .locals 1
 
-    .line 287
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 108
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->IS_DEBUG_LEVEL_MID:Z
 
     if-nez v0, :cond_1
@@ -132,20 +123,16 @@
     :goto_1
     iput-boolean v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->DEBUG_ATRACE:Z
 
-    .line 288
     iput-object p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 289
     iget-object v0, p1, Lcom/android/server/am/ProcessRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iput-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 290
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
 
     iput-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
 
-    .line 291
     new-instance v0, Lcom/android/server/am/ErrorDialogController;
 
     invoke-direct {v0, p1}, Lcom/android/server/am/ErrorDialogController;-><init>(Lcom/android/server/am/ProcessRecord;)V
@@ -158,24 +145,19 @@
 .method private synthetic lambda$appNotResponding$0(Lcom/android/internal/os/anr/AnrLatencyTracker;Ljava/lang/String;)V
     .locals 2
 
-    .line 354
     invoke-virtual {p1}, Lcom/android/internal/os/anr/AnrLatencyTracker;->waitingOnAMSLockStarted()V
 
-    .line 355
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v0
 
-    .line 356
     :try_start_0
     invoke-virtual {p1}, Lcom/android/internal/os/anr/AnrLatencyTracker;->waitingOnAMSLockEnded()V
 
-    .line 358
     invoke-virtual {p0, p2}, Lcom/android/server/am/ProcessErrorStateRecord;->setAnrAnnotation(Ljava/lang/String;)V
 
-    .line 359
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     const-string p1, "anr"
@@ -186,7 +168,6 @@
 
     invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/am/ProcessRecord;->killLocked(Ljava/lang/String;IZ)V
 
-    .line 360
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -211,15 +192,12 @@
 .method private synthetic lambda$appNotResponding$1(Lcom/android/internal/os/anr/AnrLatencyTracker;)V
     .locals 0
 
-    .line 368
     invoke-virtual {p1}, Lcom/android/internal/os/anr/AnrLatencyTracker;->updateCpuStatsNowCalled()V
 
-    .line 369
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/am/ActivityManagerService;->updateCpuStatsNow()V
 
-    .line 370
     invoke-virtual {p1}, Lcom/android/internal/os/anr/AnrLatencyTracker;->updateCpuStatsNowReturned()V
 
     return-void
@@ -230,14 +208,12 @@
 
     if-eqz p4, :cond_2
 
-    .line 449
     invoke-virtual {p4}, Lcom/android/server/am/ProcessRecord;->getThread()Landroid/app/IApplicationThread;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 450
     invoke-virtual {p4}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
     move-result v0
@@ -248,19 +224,16 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 451
     sget p0, Lcom/android/server/am/ActivityManagerService;->MY_PID:I
 
     if-eq v0, p0, :cond_2
 
-    .line 452
     invoke-virtual {p4}, Lcom/android/server/am/ProcessRecord;->isPersistent()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 453
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -269,7 +242,6 @@
 
     goto :goto_0
 
-    .line 455
     :cond_0
     iget-object p0, p4, Lcom/android/server/am/ProcessRecord;->mServices:Lcom/android/server/am/ProcessServiceRecord;
 
@@ -279,7 +251,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 456
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -291,7 +262,6 @@
     :cond_1
     const/4 p0, 0x1
 
-    .line 459
     invoke-virtual {p3, v0, p0}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
     :cond_2
@@ -302,10 +272,8 @@
 .method private synthetic lambda$appNotResponding$3(Lcom/android/internal/os/anr/AnrLatencyTracker;ZZ)Ljava/util/ArrayList;
     .locals 3
 
-    .line 536
     invoke-virtual {p1}, Lcom/android/internal/os/anr/AnrLatencyTracker;->nativePidCollectionStarted()V
 
-    .line 540
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -350,7 +318,6 @@
 
     goto :goto_2
 
-    .line 551
     :cond_2
     sget-object p0, Lcom/android/server/Watchdog;->NATIVE_STACKS_OF_INTEREST:[Ljava/lang/String;
 
@@ -360,7 +327,6 @@
     :goto_2
     move p2, v1
 
-    .line 544
     :goto_3
     sget-object p3, Lcom/android/server/Watchdog;->NATIVE_STACKS_OF_INTEREST:[Ljava/lang/String;
 
@@ -368,7 +334,6 @@
 
     if-ge p2, v0, :cond_5
 
-    .line 545
     aget-object p3, p3, p2
 
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -381,7 +346,6 @@
 
     if-eqz p3, :cond_4
 
-    .line 546
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -407,7 +371,6 @@
 
     goto :goto_5
 
-    .line 555
     :cond_6
     invoke-static {p0}, Landroid/os/Process;->getPidsForCommands([Ljava/lang/String;)[I
 
@@ -416,14 +379,12 @@
     :goto_5
     if-eqz p0, :cond_7
 
-    .line 559
     new-instance v2, Ljava/util/ArrayList;
 
     array-length p2, p0
 
     invoke-direct {v2, p2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 560
     array-length p2, p0
 
     :goto_6
@@ -431,7 +392,6 @@
 
     aget p3, p0, v1
 
-    .line 561
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -442,7 +402,6 @@
 
     goto :goto_6
 
-    .line 564
     :cond_7
     invoke-virtual {p1}, Lcom/android/internal/os/anr/AnrLatencyTracker;->nativePidCollectionEnded()V
 
@@ -452,14 +411,12 @@
 .method private synthetic lambda$appNotResponding$4()V
     .locals 4
 
-    .line 695
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v0
 
-    .line 696
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -471,7 +428,6 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/server/am/ProcessRecord;->killLocked(Ljava/lang/String;IZ)V
 
-    .line 697
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -496,14 +452,12 @@
 .method private synthetic lambda$appNotResponding$5()V
     .locals 2
 
-    .line 700
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v0
 
-    .line 701
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -513,7 +467,6 @@
 
     invoke-virtual {v1, p0}, Lcom/android/server/am/ActiveServices;->scheduleServiceTimeoutLocked(Lcom/android/server/am/ProcessRecord;)V
 
-    .line 702
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -556,30 +509,24 @@
 
     move/from16 v4, p8
 
-    .line 342
     iget-object v6, v0, Lcom/android/internal/os/TimeoutRecord;->mReason:Ljava/lang/String;
 
-    .line 343
     iget-object v0, v0, Lcom/android/internal/os/TimeoutRecord;->mLatencyTracker:Lcom/android/internal/os/anr/AnrLatencyTracker;
 
-    .line 346
     new-instance v5, Ljava/util/ArrayList;
 
     const/4 v8, 0x5
 
     invoke-direct {v5, v8}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 347
     new-instance v13, Landroid/util/SparseBooleanArray;
 
     const/16 v9, 0x14
 
     invoke-direct {v13, v9}, Landroid/util/SparseBooleanArray;-><init>(I)V
 
-    .line 350
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/ProcessErrorStateRecord;->captureAtraceLog()V
 
-    .line 353
     iget-object v9, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v9}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -592,12 +539,10 @@
 
     invoke-virtual {v9, v6, v10}, Lcom/android/server/wm/WindowProcessController;->appEarlyNotResponding(Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    .line 363
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v11
 
-    .line 365
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/ProcessErrorStateRecord;->isMonitorCpuUsage()Z
 
     move-result v9
@@ -606,7 +551,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 366
     new-instance v9, Lcom/android/server/am/ProcessErrorStateRecord$$ExternalSyntheticLambda1;
 
     invoke-direct {v9, v1, v0}, Lcom/android/server/am/ProcessErrorStateRecord$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/am/ProcessErrorStateRecord;Lcom/android/internal/os/anr/AnrLatencyTracker;)V
@@ -627,54 +571,43 @@
 
     const/4 v10, 0x0
 
-    .line 377
     invoke-static {v9, v10}, Lcom/samsung/android/core/SystemDumpWriter;->saveDumpsysFiles(Ljava/lang/String;Z)V
 
-    .line 382
     iget-object v9, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v9}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
     move-result v9
 
-    .line 384
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->waitingOnAMSLockStarted()V
 
-    .line 385
     iget-object v10, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v10
 
-    .line 386
     :try_start_0
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->waitingOnAMSLockEnded()V
 
-    .line 388
     invoke-virtual {v1, v6}, Lcom/android/server/am/ProcessErrorStateRecord;->setAnrAnnotation(Ljava/lang/String;)V
 
     const-string/jumbo v16, "stability_anr.value_total_anrs"
 
-    .line 390
     invoke-static/range {v16 .. v16}, Lcom/android/modules/expresslog/Counter;->logIncrement(Ljava/lang/String;)V
 
-    .line 391
     invoke-virtual {v1, v6}, Lcom/android/server/am/ProcessErrorStateRecord;->skipAnrLocked(Ljava/lang/String;)Z
 
     move-result v16
 
     if-eqz v16, :cond_1
 
-    .line 392
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->anrSkippedProcessErrorStateRecordAppNotResponding()V
 
     const-string/jumbo v0, "stability_anr.value_skipped_anrs"
 
-    .line 393
     invoke-static {v0}, Lcom/android/modules/expresslog/Counter;->logIncrement(Ljava/lang/String;)V
 
-    .line 394
     monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
@@ -683,12 +616,10 @@
 
     return-void
 
-    .line 398
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->waitingOnProcLockStarted()V
 
-    .line 399
     iget-object v8, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForProcLockedSection()V
@@ -697,16 +628,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 400
     :try_start_2
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->waitingOnProcLockEnded()V
 
     const/4 v3, 0x1
 
-    .line 401
     invoke-virtual {v1, v3}, Lcom/android/server/am/ProcessErrorStateRecord;->setNotResponding(Z)V
 
-    .line 402
     monitor-exit v8
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -718,7 +646,6 @@
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    .line 405
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget v3, v3, Lcom/android/server/am/ProcessRecord;->userId:I
@@ -753,7 +680,6 @@
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 406
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -768,24 +694,20 @@
 
     const/16 v3, 0x7538
 
-    .line 405
     invoke-static {v3, v8}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 408
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mTraceErrorLogger:Lcom/android/server/am/TraceErrorLogger;
 
     if-eqz v3, :cond_2
 
-    .line 409
     invoke-virtual {v3}, Lcom/android/server/am/TraceErrorLogger;->isAddErrorIdEnabled()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 410
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mTraceErrorLogger:Lcom/android/server/am/TraceErrorLogger;
@@ -794,7 +716,6 @@
 
     move-result-object v3
 
-    .line 411
     iget-object v8, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mTraceErrorLogger:Lcom/android/server/am/TraceErrorLogger;
@@ -805,7 +726,6 @@
 
     invoke-virtual {v8, v11, v9, v3}, Lcom/android/server/am/TraceErrorLogger;->addProcessInfoAndErrorIdToTrace(Ljava/lang/String;ILjava/util/UUID;)V
 
-    .line 413
     iget-object v8, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mTraceErrorLogger:Lcom/android/server/am/TraceErrorLogger;
@@ -819,7 +739,6 @@
     :cond_2
     move-object/from16 v45, v44
 
-    .line 422
     :goto_1
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -829,14 +748,12 @@
 
     invoke-static {v8, v3}, Lcom/android/internal/util/FrameworkStatsLog;->write(ILjava/lang/String;)V
 
-    .line 426
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 432
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/ProcessErrorStateRecord;->isSilentAnr()Z
 
     move-result v3
@@ -847,14 +764,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 435
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/WindowProcessController;->getPid()I
 
     move-result v8
 
     if-lez v8, :cond_3
 
-    .line 436
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/wm/WindowProcessController;->getPid()I
 
     move-result v8
@@ -867,14 +782,12 @@
     :goto_2
     if-eq v8, v9, :cond_4
 
-    .line 438
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v11
 
     invoke-virtual {v5, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 440
     :cond_4
     sget v11, Lcom/android/server/am/ActivityManagerService;->MY_PID:I
 
@@ -893,7 +806,6 @@
 
     if-eq v11, v8, :cond_6
 
-    .line 443
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v12
@@ -906,10 +818,8 @@
 
     const/4 v12, 0x1
 
-    .line 444
     invoke-virtual {v13, v11, v12}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 448
     :cond_6
     iget-object v11, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -928,7 +838,6 @@
     :cond_7
     const/4 v8, 0x0
 
-    .line 466
     :goto_3
     monitor-exit v10
     :try_end_3
@@ -936,22 +845,18 @@
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 468
     invoke-virtual {v1, v9}, Lcom/android/server/am/ProcessErrorStateRecord;->buildMemoryHeadersFor(I)Ljava/lang/String;
 
     move-result-object v24
 
-    .line 471
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->criticalEventLogStarted()V
 
-    .line 473
     invoke-static {}, Lcom/android/server/criticalevents/CriticalEventLog;->getInstance()Lcom/android/server/criticalevents/CriticalEventLog;
 
     move-result-object v10
 
     iget-object v11, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 474
     invoke-virtual {v11}, Lcom/android/server/am/ProcessRecord;->getProcessClassEnum()I
 
     move-result v11
@@ -962,15 +867,12 @@
 
     iget v12, v12, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    .line 473
     invoke-virtual {v10, v11, v8, v12}, Lcom/android/server/criticalevents/CriticalEventLog;->logLinesForTraceFile(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v23
 
-    .line 475
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->criticalEventLogEnded()V
 
-    .line 476
     invoke-static {}, Lcom/android/server/criticalevents/CriticalEventLog;->getInstance()Lcom/android/server/criticalevents/CriticalEventLog;
 
     move-result-object v8
@@ -1015,17 +917,14 @@
 
     invoke-virtual/range {v8 .. v13}, Lcom/android/server/criticalevents/CriticalEventLog;->logAnr(Ljava/lang/String;ILjava/lang/String;II)V
 
-    .line 480
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 481
     invoke-virtual {v13, v5}, Ljava/lang/StringBuilder;->setLength(I)V
 
     const-string v8, "ANR in "
 
-    .line 482
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v8, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -1038,7 +937,6 @@
 
     const-string v8, " ("
 
-    .line 484
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1050,12 +948,10 @@
     :cond_8
     const-string v8, "\n"
 
-    .line 486
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v8, "PID: "
 
-    .line 487
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v13, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -1068,7 +964,6 @@
 
     const-string v8, "Reason: "
 
-    .line 489
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v13, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1080,7 +975,6 @@
     :cond_9
     if-eqz v7, :cond_a
 
-    .line 492
     invoke-virtual {v7, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -1089,7 +983,6 @@
 
     const-string v8, "Parent: "
 
-    .line 493
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v13, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1103,7 +996,6 @@
 
     const-string v8, "ErrorId: "
 
-    .line 496
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {v45 .. v45}, Ljava/util/UUID;->toString()Ljava/lang/String;
@@ -1119,7 +1011,6 @@
     :cond_b
     const-string v8, "Frozen: s["
 
-    .line 500
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Landroid/os/Process;->isFrozenState(I)Z
@@ -1136,7 +1027,6 @@
 
     iget-object v8, v8, Lcom/android/server/am/ProcessRecord;->mOptRecord:Lcom/android/server/am/ProcessCachedOptimizerRecord;
 
-    .line 501
     invoke-virtual {v8}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->isFrozen()Z
 
     move-result v8
@@ -1151,7 +1041,6 @@
 
     invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 511
     iget-object v8, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mActivityTaskManager:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -1162,23 +1051,18 @@
 
     if-eqz v12, :cond_c
 
-    .line 514
     iget-object v10, v14, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 515
     iget v11, v14, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 516
     invoke-interface {v12, v10, v11}, Landroid/app/AnrController;->getAnrDelayMillis(Ljava/lang/String;I)J
 
     move-result-wide v8
 
-    .line 519
     invoke-interface {v12, v10, v11}, Landroid/app/AnrController;->onAnrDelayStarted(Ljava/lang/String;I)V
 
     const-string v11, "ActivityManager"
 
-    .line 520
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1208,51 +1092,41 @@
     :cond_c
     const-wide/16 v10, 0x0
 
-    .line 523
     :goto_4
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 525
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->currentPsiStateCalled()V
 
-    .line 526
     invoke-static {}, Lcom/android/server/ResourcePressureUtil;->currentPsiState()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 527
     invoke-virtual {v0}, Lcom/android/internal/os/anr/AnrLatencyTracker;->currentPsiStateReturned()V
 
-    .line 528
     invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 529
     new-instance v7, Lcom/android/internal/os/ProcessCpuTracker;
 
     const/4 v8, 0x1
 
     invoke-direct {v7, v8}, Lcom/android/internal/os/ProcessCpuTracker;-><init>(Z)V
 
-    .line 533
     new-instance v9, Lcom/android/server/am/ProcessErrorStateRecord$$ExternalSyntheticLambda3;
 
     invoke-direct {v9, v1, v0, v3, v4}, Lcom/android/server/am/ProcessErrorStateRecord$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/am/ProcessErrorStateRecord;Lcom/android/internal/os/anr/AnrLatencyTracker;ZZ)V
 
     move-object/from16 v4, p7
 
-    .line 534
     invoke-interface {v4, v9}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object v19
 
-    .line 570
     new-instance v9, Ljava/io/StringWriter;
 
     invoke-direct {v9}, Ljava/io/StringWriter;-><init>()V
 
-    .line 572
     new-instance v8, Ljava/util/concurrent/atomic/AtomicLong;
 
     move-wide/from16 v48, v10
@@ -1290,19 +1164,16 @@
 
     move-object/from16 v27, v0
 
-    .line 573
     invoke-static/range {v16 .. v27}, Lcom/android/server/am/StackTracesDumpHelper;->dumpStackTraces(Ljava/util/ArrayList;Lcom/android/internal/os/ProcessCpuTracker;Landroid/util/SparseBooleanArray;Ljava/util/concurrent/Future;Ljava/io/StringWriter;Ljava/util/concurrent/atomic/AtomicLong;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Future;Lcom/android/internal/os/anr/AnrLatencyTracker;)Ljava/io/File;
 
     move-result-object v50
 
-    .line 579
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/ProcessErrorStateRecord;->isMonitorCpuUsage()Z
 
     move-result v0
 
     if-eqz v0, :cond_f
 
-    .line 582
     :try_start_4
     invoke-interface/range {v28 .. v28}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
     :try_end_4
@@ -1320,7 +1191,6 @@
 
     const-string v4, "Interrupted while updating the CPU stats"
 
-    .line 586
     invoke-static {v0, v4, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_6
@@ -1334,20 +1204,17 @@
 
     const-string v4, "Failed to update the CPU stats"
 
-    .line 584
     invoke-virtual {v3}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v3
 
     invoke-static {v0, v4, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 588
     :goto_6
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/am/ActivityManagerService;->updateCpuStatsNow()V
 
-    .line 589
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mAppProfiler:Lcom/android/server/am/AppProfiler;
@@ -1356,21 +1223,18 @@
 
     invoke-virtual {v0, v5, v3, v4}, Lcom/android/server/am/AppProfiler;->printCurrentCpuState(Ljava/lang/StringBuilder;J)V
 
-    .line 590
     invoke-virtual {v7}, Lcom/android/internal/os/ProcessCpuTracker;->printCurrentLoad()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 592
     invoke-virtual {v7}, Lcom/android/internal/os/ProcessCpuTracker;->printCpuCoreInfo()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 594
     invoke-virtual {v13, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_7
@@ -1378,7 +1242,6 @@
     :cond_f
     move-wide/from16 v3, v46
 
-    .line 596
     :goto_7
     invoke-virtual {v9}, Ljava/io/StringWriter;->getBuffer()Ljava/lang/StringBuffer;
 
@@ -1386,7 +1249,6 @@
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/StringBuffer;)Ljava/lang/StringBuilder;
 
-    .line 598
     invoke-virtual {v7, v3, v4}, Lcom/android/internal/os/ProcessCpuTracker;->printCurrentState(J)Ljava/lang/String;
 
     move-result-object v0
@@ -1395,7 +1257,6 @@
 
     const-string v0, "ActivityManager"
 
-    .line 600
     invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1406,12 +1267,10 @@
 
     const/4 v3, 0x3
 
-    .line 603
     invoke-static {v2, v3}, Landroid/os/Process;->sendSignal(II)V
 
     goto :goto_8
 
-    .line 604
     :cond_10
     invoke-virtual {v8}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
@@ -1423,12 +1282,10 @@
 
     if-lez v0, :cond_11
 
-    .line 609
     invoke-virtual {v8}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
     move-result-wide v23
 
-    .line 610
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
@@ -1439,7 +1296,6 @@
 
     iget v4, v3, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    .line 611
     invoke-virtual {v3}, Lcom/android/server/am/ProcessRecord;->getPackageList()[Ljava/lang/String;
 
     move-result-object v19
@@ -1454,10 +1310,8 @@
 
     move-object/from16 v20, v50
 
-    .line 610
     invoke-virtual/range {v16 .. v24}, Lcom/android/server/am/AppExitInfoTracker;->scheduleLogAnrTrace(II[Ljava/lang/String;Ljava/io/File;JJ)V
 
-    .line 617
     :cond_11
     :goto_8
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -1466,7 +1320,6 @@
 
     move-result-object v0
 
-    .line 618
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v3, v3, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -1487,7 +1340,6 @@
 
     if-eqz v0, :cond_13
 
-    .line 619
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v3, v3, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -1500,19 +1352,16 @@
 
     const/16 v9, 0x3e8
 
-    .line 620
     invoke-virtual {v0, v3, v9, v8}, Landroid/content/pm/PackageManagerInternal;->getIncrementalStatesInfo(Ljava/lang/String;II)Landroid/content/pm/IncrementalStatesInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_12
 
-    .line 623
     invoke-virtual {v0}, Landroid/content/pm/IncrementalStatesInfo;->getProgress()F
 
     move-result v7
 
-    .line 625
     :cond_12
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -1524,14 +1373,12 @@
 
     if-eqz v0, :cond_13
 
-    .line 626
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_13
 
-    .line 627
     invoke-static {v0}, Landroid/os/incremental/IncrementalManager;->isIncrementalPath(Ljava/lang/String;)Z
 
     move-result v3
@@ -1540,7 +1387,6 @@
 
     const-string v3, "ActivityManager"
 
-    .line 629
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1579,24 +1425,20 @@
 
     const-string v3, "incremental"
 
-    .line 631
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v3
 
     if-eqz v3, :cond_13
 
-    .line 634
     new-instance v8, Landroid/os/incremental/IncrementalManager;
 
-    .line 635
     invoke-static {v3}, Landroid/os/incremental/IIncrementalService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/incremental/IIncrementalService;
 
     move-result-object v3
 
     invoke-direct {v8, v3}, Landroid/os/incremental/IncrementalManager;-><init>(Landroid/os/incremental/IIncrementalService;)V
 
-    .line 636
     invoke-virtual {v8, v0}, Landroid/os/incremental/IncrementalManager;->getMetrics(Ljava/lang/String;)Landroid/os/incremental/IncrementalMetrics;
 
     move-result-object v0
@@ -1611,7 +1453,6 @@
 
     const-string v3, "Package is "
 
-    .line 642
     invoke-virtual {v13, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     mul-float/2addr v4, v7
@@ -1627,7 +1468,6 @@
     :cond_14
     const/16 v16, 0x4f
 
-    .line 645
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget v4, v3, Lcom/android/server/am/ProcessRecord;->uid:I
@@ -1645,7 +1485,6 @@
     :cond_15
     move-object/from16 v19, v15
 
-    .line 648
     :goto_a
     iget-object v3, v3, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -1673,7 +1512,6 @@
     :cond_17
     const/16 v21, 0x0
 
-    .line 652
     :goto_b
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -1690,16 +1528,13 @@
     :cond_18
     const/16 v22, 0x1
 
-    .line 654
     :goto_c
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 655
     invoke-virtual {v3}, Lcom/android/server/am/ProcessRecord;->getProcessClassEnum()I
 
     move-result v23
 
-    .line 656
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v3, v3, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -1732,7 +1567,6 @@
     :goto_e
     if-eqz v0, :cond_1b
 
-    .line 658
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getMillisSinceOldestPendingRead()J
 
     move-result-wide v17
@@ -1749,7 +1583,6 @@
 
     if-eqz v0, :cond_1c
 
-    .line 660
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getStorageHealthStatusCode()I
 
     move-result v9
@@ -1764,7 +1597,6 @@
     :goto_10
     if-eqz v0, :cond_1d
 
-    .line 662
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getDataLoaderStatusCode()I
 
     move-result v9
@@ -1779,7 +1611,6 @@
     :goto_11
     if-eqz v0, :cond_1e
 
-    .line 664
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getReadLogsEnabled()Z
 
     move-result v9
@@ -1796,7 +1627,6 @@
     :goto_12
     if-eqz v0, :cond_1f
 
-    .line 665
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getMillisSinceLastDataLoaderBind()J
 
     move-result-wide v17
@@ -1811,7 +1641,6 @@
     :goto_13
     if-eqz v0, :cond_20
 
-    .line 667
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getDataLoaderBindDelayMillis()J
 
     move-result-wide v17
@@ -1826,7 +1655,6 @@
     :goto_14
     if-eqz v0, :cond_21
 
-    .line 669
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getTotalDelayedReads()I
 
     move-result v17
@@ -1841,7 +1669,6 @@
     :goto_15
     if-eqz v0, :cond_22
 
-    .line 671
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getTotalFailedReads()I
 
     move-result v17
@@ -1856,7 +1683,6 @@
     :goto_16
     if-eqz v0, :cond_23
 
-    .line 673
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getLastReadErrorUid()I
 
     move-result v3
@@ -1866,7 +1692,6 @@
 
     if-eqz v0, :cond_24
 
-    .line 675
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getMillisSinceLastReadError()J
 
     move-result-wide v17
@@ -1881,7 +1706,6 @@
     :goto_17
     if-eqz v0, :cond_25
 
-    .line 677
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getLastReadErrorNumber()I
 
     move-result v3
@@ -1896,7 +1720,6 @@
     :goto_18
     if-eqz v0, :cond_26
 
-    .line 679
     invoke-virtual {v0}, Landroid/os/incremental/IncrementalMetrics;->getTotalDelayedReadsDurationMillis()J
 
     move-result-wide v10
@@ -1914,7 +1737,6 @@
 
     move/from16 v31, v9
 
-    .line 645
     invoke-static/range {v16 .. v43}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;ZFJIIZJJIIIJIJ)V
 
     move v3, v2
@@ -1923,7 +1745,6 @@
 
     if-eqz v2, :cond_27
 
-    .line 682
     iget-object v2, v2, Lcom/android/server/wm/WindowProcessController;->mOwner:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/server/am/ProcessRecord;
@@ -1935,7 +1756,6 @@
     :cond_27
     move-object/from16 v8, v44
 
-    .line 685
     :goto_19
     sget-boolean v2, Lcom/android/server/am/ActivityManagerService;->DEBUG_LEVEL_LOW:Z
 
@@ -1945,7 +1765,6 @@
 
     goto :goto_1a
 
-    .line 686
     :cond_28
     invoke-static {v3}, Lcom/android/server/am/StackTracesDumpHelper;->getBinderTransactionInfo(I)Lcom/android/server/am/BinderTransaction$BinderProcsInfo;
 
@@ -1953,7 +1772,6 @@
 
     move-object/from16 v16, v2
 
-    .line 689
     :goto_1a
     iget-object v2, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -1965,7 +1783,6 @@
 
     const/4 v10, 0x0
 
-    .line 690
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v11
@@ -2008,10 +1825,8 @@
 
     move-object/from16 v15, v45
 
-    .line 689
     invoke-virtual/range {v2 .. v16}, Lcom/android/server/am/ActivityManagerService;->addErrorToDropBox(Ljava/lang/String;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Landroid/app/ApplicationErrorReport$CrashInfo;Ljava/lang/Float;Landroid/os/incremental/IncrementalMetrics;Ljava/util/UUID;Lcom/android/server/am/BinderTransaction$BinderProcsInfo;)V
 
-    .line 693
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -2038,7 +1853,6 @@
 
     return-void
 
-    .line 707
     :cond_29
     iget-object v2, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -2046,7 +1860,6 @@
 
     monitor-enter v2
 
-    .line 710
     :try_start_5
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -2054,7 +1867,6 @@
 
     if-eqz v0, :cond_2a
 
-    .line 711
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v4, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -2063,7 +1875,6 @@
 
     invoke-virtual {v0, v4, v3}, Lcom/android/server/am/BatteryStatsService;->noteProcessAnr(Ljava/lang/String;I)V
 
-    .line 714
     :cond_2a
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/ProcessErrorStateRecord;->isSilentAnr()Z
 
@@ -2079,7 +1890,6 @@
 
     if-nez v0, :cond_2b
 
-    .line 715
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     const-string v1, "bg anr"
@@ -2090,7 +1900,6 @@
 
     invoke-virtual {v0, v1, v3, v4}, Lcom/android/server/am/ProcessRecord;->killLocked(Ljava/lang/String;IZ)V
 
-    .line 716
     monitor-exit v2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -2099,7 +1908,6 @@
 
     return-void
 
-    .line 719
     :cond_2b
     :try_start_6
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
@@ -2114,7 +1922,6 @@
 
     if-eqz v4, :cond_2c
 
-    .line 722
     :try_start_7
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2142,17 +1949,14 @@
 
     move-object/from16 v5, p1
 
-    .line 721
     invoke-virtual {v1, v5, v0, v4}, Lcom/android/server/am/ProcessErrorStateRecord;->makeAppNotRespondingLSP(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 723
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mDialogController:Lcom/android/server/am/ErrorDialogController;
 
     move-object/from16 v4, v54
 
     invoke-virtual {v0, v4}, Lcom/android/server/am/ErrorDialogController;->setAnrController(Landroid/app/AnrController;)V
 
-    .line 724
     monitor-exit v3
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
@@ -2160,24 +1964,20 @@
     :try_start_8
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterProcLockedSection()V
 
-    .line 728
     iget-object v0, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_2d
 
-    .line 730
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
     const/4 v3, 0x2
 
-    .line 731
     iput v3, v0, Landroid/os/Message;->what:I
 
-    .line 732
     new-instance v3, Lcom/android/server/am/AppNotRespondingDialog$Data;
 
     iget-object v4, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -2192,7 +1992,6 @@
 
     iput-object v3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 735
     iget-object v3, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mUiHandler:Landroid/os/Handler;
@@ -2201,7 +2000,6 @@
 
     invoke-virtual {v3, v0, v8, v9}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 737
     :cond_2d
     monitor-exit v2
     :try_end_8
@@ -2209,14 +2007,12 @@
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 739
     new-instance v0, Landroid/os/BugreportParams;
 
     const/16 v2, 0xf
 
     invoke-direct {v0, v2}, Landroid/os/BugreportParams;-><init>(I)V
 
-    .line 740
     iget-object v1, v1, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v1, v1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -2228,7 +2024,6 @@
     :catchall_0
     move-exception v0
 
-    .line 724
     :try_start_9
     monitor-exit v3
     :try_end_9
@@ -2242,7 +2037,6 @@
     :catchall_1
     move-exception v0
 
-    .line 737
     monitor-exit v2
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
@@ -2254,7 +2048,6 @@
     :catchall_2
     move-exception v0
 
-    .line 402
     :try_start_b
     monitor-exit v8
     :try_end_b
@@ -2268,7 +2061,6 @@
     :catchall_3
     move-exception v0
 
-    .line 466
     monitor-exit v10
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_3
@@ -2287,7 +2079,6 @@
 
     if-gtz p1, :cond_0
 
-    .line 806
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2306,7 +2097,6 @@
 
     return-object p0
 
-    .line 809
     :cond_0
     invoke-static {p1}, Lcom/android/server/stats/pull/ProcfsMemoryUtil;->readMemorySnapshotFromProcfs(I)Lcom/android/server/stats/pull/ProcfsMemoryUtil$MemorySnapshot;
 
@@ -2314,7 +2104,6 @@
 
     if-nez v1, :cond_1
 
-    .line 811
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2333,7 +2122,6 @@
 
     return-object p0
 
-    .line 815
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2341,22 +2129,18 @@
 
     const-string p1, "RssHwmKb: "
 
-    .line 816
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p1, v1, Lcom/android/server/stats/pull/ProcfsMemoryUtil$MemorySnapshot;->rssHighWaterMarkInKilobytes:I
 
-    .line 817
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, "\n"
 
-    .line 818
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, "RssKb: "
 
-    .line 819
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v0, v1, Lcom/android/server/stats/pull/ProcfsMemoryUtil$MemorySnapshot;->rssInKilobytes:I
@@ -2367,7 +2151,6 @@
 
     const-string v0, "RssAnonKb: "
 
-    .line 820
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v0, v1, Lcom/android/server/stats/pull/ProcfsMemoryUtil$MemorySnapshot;->anonRssInKilobytes:I
@@ -2378,7 +2161,6 @@
 
     const-string v0, "RssShmemKb: "
 
-    .line 821
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v0, v1, Lcom/android/server/stats/pull/ProcfsMemoryUtil$MemorySnapshot;->rssShmemKilobytes:I
@@ -2389,7 +2171,6 @@
 
     const-string v0, "VmSwapKb: "
 
-    .line 822
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v0, v1, Lcom/android/server/stats/pull/ProcfsMemoryUtil$MemorySnapshot;->swapInKilobytes:I
@@ -2398,7 +2179,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 823
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -2409,7 +2189,6 @@
 .method public captureAtraceLog()V
     .locals 3
 
-    .line 324
     iget-boolean v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->DEBUG_ATRACE:Z
 
     if-eqz v0, :cond_0
@@ -2418,7 +2197,6 @@
 
     const-string v1, "false"
 
-    .line 325
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2429,7 +2207,6 @@
 
     move-result v0
 
-    .line 326
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2450,7 +2227,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 328
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -2459,12 +2235,10 @@
 
     move-result-object p0
 
-    .line 329
     sget-object v0, Lcom/android/server/am/ProcessErrorStateRecord;->SYSTEM_PROPERTY_ATRACE_NAME:Ljava/lang/String;
 
     invoke-static {v0, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 330
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2485,7 +2259,6 @@
 
     const-string v0, "3"
 
-    .line 331
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -2495,19 +2268,16 @@
 .method public createAtraceName(J)Ljava/lang/String;
     .locals 1
 
-    .line 318
     new-instance p0, Ljava/util/Date;
 
     invoke-direct {p0, p1, p2}, Ljava/util/Date;-><init>(J)V
 
-    .line 319
     new-instance p1, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo p2, "yyyy-MM-dd_HH-mm-ss"
 
     invoke-direct {p1, p2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 320
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2536,14 +2306,12 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;J)V
     .locals 0
 
-    .line 851
     iget-object p3, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForProcLockedSection()V
 
     monitor-enter p3
 
-    .line 852
     :try_start_0
     iget-boolean p4, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mCrashing:Z
 
@@ -2563,7 +2331,6 @@
 
     iget-object p4, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mDialogController:Lcom/android/server/am/ErrorDialogController;
 
-    .line 853
     invoke-virtual {p4}, Lcom/android/server/am/ErrorDialogController;->hasAnrDialogs()Z
 
     move-result p4
@@ -2574,11 +2341,9 @@
 
     if-eqz p4, :cond_2
 
-    .line 854
     :cond_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 855
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2597,7 +2362,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 856
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2620,7 +2384,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 857
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2639,7 +2402,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 858
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2662,7 +2424,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 859
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2681,17 +2442,14 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 862
     iget-object p2, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mErrorReportReceiver:Landroid/content/ComponentName;
 
     if-eqz p2, :cond_1
 
     const-string p2, " errorReportReceiver="
 
-    .line 863
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 864
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mErrorReportReceiver:Landroid/content/ComponentName;
 
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
@@ -2700,11 +2458,9 @@
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 866
     :cond_1
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 868
     :cond_2
     monitor-exit p3
     :try_end_0
@@ -2730,7 +2486,6 @@
 .method public getAnrAnnotation()Ljava/lang/String;
     .locals 0
 
-    .line 244
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mAnrAnnotation:Ljava/lang/String;
 
     return-object p0
@@ -2739,7 +2494,6 @@
 .method public getAnrData()Lcom/android/server/am/AppNotRespondingDialog$Data;
     .locals 0
 
-    .line 284
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mAnrData:Lcom/android/server/am/AppNotRespondingDialog$Data;
 
     return-object p0
@@ -2748,7 +2502,6 @@
 .method public getCrashHandler()Ljava/lang/Runnable;
     .locals 0
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mCrashHandler:Ljava/lang/Runnable;
 
     return-object p0
@@ -2757,7 +2510,6 @@
 .method public getCrashingReport()Landroid/app/ActivityManager$ProcessErrorStateInfo;
     .locals 0
 
-    .line 234
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mCrashingReport:Landroid/app/ActivityManager$ProcessErrorStateInfo;
 
     return-object p0
@@ -2766,7 +2518,6 @@
 .method public getDialogController()Lcom/android/server/am/ErrorDialogController;
     .locals 0
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mDialogController:Lcom/android/server/am/ErrorDialogController;
 
     return-object p0
@@ -2775,7 +2526,6 @@
 .method public getErrorReportReceiver()Landroid/content/ComponentName;
     .locals 0
 
-    .line 264
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mErrorReportReceiver:Landroid/content/ComponentName;
 
     return-object p0
@@ -2784,7 +2534,6 @@
 .method public getNotRespondingReport()Landroid/app/ActivityManager$ProcessErrorStateInfo;
     .locals 0
 
-    .line 254
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mNotRespondingReport:Landroid/app/ActivityManager$ProcessErrorStateInfo;
 
     return-object p0
@@ -2793,7 +2542,6 @@
 .method public final getShowBackground()Z
     .locals 3
 
-    .line 797
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
@@ -2802,7 +2550,6 @@
 
     move-result-object p0
 
-    .line 801
     invoke-virtual {p0}, Landroid/content/ContentResolver;->getUserId()I
 
     move-result v0
@@ -2811,7 +2558,6 @@
 
     const/4 v2, 0x0
 
-    .line 798
     invoke-static {p0, v1, v2, v0}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
@@ -2827,7 +2573,6 @@
 .method public isBad()Z
     .locals 0
 
-    .line 182
     iget-boolean p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mBad:Z
 
     return p0
@@ -2836,7 +2581,6 @@
 .method public isCrashing()Z
     .locals 0
 
-    .line 192
     iget-boolean p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mCrashing:Z
 
     return p0
@@ -2845,7 +2589,6 @@
 .method public isForceCrashReport()Z
     .locals 0
 
-    .line 203
     iget-boolean p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mForceCrashReport:Z
 
     return p0
@@ -2854,7 +2597,6 @@
 .method public final isInterestingForBackgroundTraces()Z
     .locals 3
 
-    .line 778
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getPid()I
@@ -2869,7 +2611,6 @@
 
     return v2
 
-    .line 791
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -2893,7 +2634,6 @@
 
     const-string v1, "com.android.systemui"
 
-    .line 792
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2905,7 +2645,6 @@
 
     iget-object v0, v0, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
 
-    .line 793
     invoke-virtual {v0}, Lcom/android/server/am/ProcessStateRecord;->hasTopUi()Z
 
     move-result v0
@@ -2935,7 +2674,6 @@
 .method public isMonitorCpuUsage()Z
     .locals 0
 
-    .line 838
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService;->mAppProfiler:Lcom/android/server/am/AppProfiler;
@@ -2948,7 +2686,6 @@
 .method public isNotResponding()Z
     .locals 0
 
-    .line 213
     iget-boolean p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mNotResponding:Z
 
     return p0
@@ -2957,7 +2694,6 @@
 .method public isSilentAnr()Z
     .locals 1
 
-    .line 832
     invoke-virtual {p0}, Lcom/android/server/am/ProcessErrorStateRecord;->getShowBackground()Z
 
     move-result v0
@@ -2986,17 +2722,14 @@
 
     const/4 v0, 0x1
 
-    .line 746
     invoke-virtual {p0, v0}, Lcom/android/server/am/ProcessErrorStateRecord;->setNotResponding(Z)V
 
-    .line 749
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService;->mAppErrors:Lcom/android/server/am/AppErrors;
 
     if-eqz v1, :cond_0
 
-    .line 750
     iget-object v2, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     const/4 v3, 0x2
@@ -3015,11 +2748,9 @@
 
     iput-object p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mNotRespondingReport:Landroid/app/ActivityManager$ProcessErrorStateInfo;
 
-    .line 754
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/am/ProcessErrorStateRecord;->startAppProblemLSP()V
 
-    .line 755
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -3034,7 +2765,6 @@
 .method public onCleanupApplicationRecordLSP()V
     .locals 1
 
-    .line 844
     invoke-virtual {p0}, Lcom/android/server/am/ProcessErrorStateRecord;->getDialogController()Lcom/android/server/am/ErrorDialogController;
 
     move-result-object v0
@@ -3043,10 +2773,8 @@
 
     const/4 v0, 0x0
 
-    .line 846
     invoke-virtual {p0, v0}, Lcom/android/server/am/ProcessErrorStateRecord;->setCrashing(Z)V
 
-    .line 847
     invoke-virtual {p0, v0}, Lcom/android/server/am/ProcessErrorStateRecord;->setNotResponding(Z)V
 
     return-void
@@ -3055,7 +2783,6 @@
 .method public setAnrAnnotation(Ljava/lang/String;)V
     .locals 0
 
-    .line 249
     iput-object p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mAnrAnnotation:Ljava/lang/String;
 
     return-void
@@ -3064,7 +2791,6 @@
 .method public setAnrData(Lcom/android/server/am/AppNotRespondingDialog$Data;)V
     .locals 0
 
-    .line 279
     iput-object p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mAnrData:Lcom/android/server/am/AppNotRespondingDialog$Data;
 
     return-void
@@ -3073,7 +2799,6 @@
 .method public setBad(Z)V
     .locals 0
 
-    .line 187
     iput-boolean p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mBad:Z
 
     return-void
@@ -3082,7 +2807,6 @@
 .method public setCrashHandler(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 229
     iput-object p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mCrashHandler:Ljava/lang/Runnable;
 
     return-void
@@ -3091,10 +2815,8 @@
 .method public setCrashing(Z)V
     .locals 0
 
-    .line 197
     iput-boolean p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mCrashing:Z
 
-    .line 198
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -3109,7 +2831,6 @@
 .method public setCrashingReport(Landroid/app/ActivityManager$ProcessErrorStateInfo;)V
     .locals 0
 
-    .line 239
     iput-object p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mCrashingReport:Landroid/app/ActivityManager$ProcessErrorStateInfo;
 
     return-void
@@ -3118,7 +2839,6 @@
 .method public setForceCrashReport(Z)V
     .locals 0
 
-    .line 208
     iput-boolean p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mForceCrashReport:Z
 
     return-void
@@ -3127,10 +2847,8 @@
 .method public setNotResponding(Z)V
     .locals 0
 
-    .line 218
     iput-boolean p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mNotResponding:Z
 
-    .line 219
     iget-object p0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -3145,7 +2863,6 @@
 .method public setNotRespondingReport(Landroid/app/ActivityManager$ProcessErrorStateInfo;)V
     .locals 0
 
-    .line 259
     iput-object p1, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mNotRespondingReport:Landroid/app/ActivityManager$ProcessErrorStateInfo;
 
     return-void
@@ -3154,7 +2871,6 @@
 .method public skipAnrLocked(Ljava/lang/String;)Z
     .locals 5
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
@@ -3171,7 +2887,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3194,7 +2909,6 @@
 
     return v1
 
-    .line 300
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/am/ProcessErrorStateRecord;->isNotResponding()Z
 
@@ -3202,7 +2916,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 301
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3225,7 +2938,6 @@
 
     return v1
 
-    .line 303
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/am/ProcessErrorStateRecord;->isCrashing()Z
 
@@ -3233,7 +2945,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 304
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3256,7 +2967,6 @@
 
     return v1
 
-    .line 306
     :cond_2
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -3266,7 +2976,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 307
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3289,7 +2998,6 @@
 
     return v1
 
-    .line 309
     :cond_3
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
@@ -3299,7 +3007,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 310
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3333,10 +3040,8 @@
 
     const/4 v0, 0x0
 
-    .line 762
     iput-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mErrorReportReceiver:Landroid/content/ComponentName;
 
-    .line 764
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mUserController:Lcom/android/server/am/UserController;
@@ -3356,14 +3061,12 @@
 
     aget v4, v0, v3
 
-    .line 765
     iget-object v5, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     iget v6, v5, Lcom/android/server/am/ProcessRecord;->userId:I
 
     if-ne v6, v4, :cond_0
 
-    .line 766
     iget-object v4, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v4, v4, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
@@ -3389,7 +3092,6 @@
 
     goto :goto_0
 
-    .line 770
     :cond_1
     iget-object v0, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -3402,7 +3104,6 @@
 
     aget-object v3, v0, v2
 
-    .line 771
     iget-object v4, p0, Lcom/android/server/am/ProcessErrorStateRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v3, v4}, Lcom/android/server/am/BroadcastQueue;->onApplicationProblemLocked(Lcom/android/server/am/ProcessRecord;)V

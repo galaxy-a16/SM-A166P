@@ -15,7 +15,6 @@
 
     new-array v0, v0, [B
 
-    .line 88
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/input/HidKeycodes;->ScancodeToHidKeycode:[B
@@ -263,7 +262,6 @@
 
     if-gt p0, v0, :cond_0
 
-    .line 51
     sget-object v0, Lcom/android/server/input/HidKeycodes;->ScancodeToHidKeycode:[B
 
     aget-byte p0, v0, p0

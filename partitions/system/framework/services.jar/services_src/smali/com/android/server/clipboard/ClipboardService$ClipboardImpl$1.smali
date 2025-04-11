@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;)V
     .locals 0
 
-    .line 621
     iput-object p1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl$1;->this$1:Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 2
 
-    .line 624
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     iget-object p0, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl$1;->this$1:Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;
@@ -50,7 +48,6 @@
 
     move-result-object p0
 
-    .line 625
     invoke-virtual {p0}, Landroid/widget/Toast;->show()V
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/trust/TrustAgentWrapper;)V
     .locals 0
 
-    .line 321
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-direct {p0}, Landroid/service/trust/ITrustAgentServiceCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public addEscrowToken([BI)V
     .locals 2
 
-    .line 366
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-static {v0}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$fgetmContext(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/content/Context;
@@ -37,14 +35,12 @@
 
     const v1, 0x111001d
 
-    .line 367
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 371
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -69,7 +65,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -83,7 +78,6 @@
 
     move-result-object p0
 
-    .line 373
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -92,7 +86,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 374
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
@@ -101,12 +94,10 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 375
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
 
-    .line 368
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -120,14 +111,12 @@
 .method public grantTrust(Ljava/lang/CharSequence;JILcom/android/internal/infra/AndroidFuture;)V
     .locals 2
 
-    .line 329
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 330
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,7 +151,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -172,19 +160,16 @@
 
     const/4 v0, 0x0
 
-    .line 335
     invoke-static {p1, p5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p1
 
     const/4 p5, 0x1
 
-    .line 334
     invoke-virtual {p0, p5, p4, v0, p1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 336
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
@@ -193,7 +178,6 @@
 
     invoke-virtual {p1, p4, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 337
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -202,7 +186,6 @@
 .method public isEscrowTokenActive(JI)V
     .locals 2
 
-    .line 380
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-static {v0}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$fgetmContext(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/content/Context;
@@ -215,14 +198,12 @@
 
     const v1, 0x111001d
 
-    .line 381
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 385
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -247,7 +228,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 386
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -261,7 +241,6 @@
 
     move-result-object p0
 
-    .line 387
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -270,7 +249,6 @@
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 388
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
@@ -279,12 +257,10 @@
 
     invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 389
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
 
-    .line 382
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -298,7 +274,6 @@
 .method public lockUser()V
     .locals 1
 
-    .line 348
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-static {p0}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$fgetmHandler(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/os/Handler;
@@ -315,7 +290,6 @@
 .method public onConfigureCompleted(ZLandroid/os/IBinder;)V
     .locals 2
 
-    .line 359
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -340,7 +314,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -356,7 +329,6 @@
 
     move-result-object p0
 
-    .line 361
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -365,7 +337,6 @@
 .method public removeEscrowToken(JI)V
     .locals 2
 
-    .line 394
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-static {v0}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$fgetmContext(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/content/Context;
@@ -378,14 +349,12 @@
 
     const v1, 0x111001d
 
-    .line 395
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 399
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -410,7 +379,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -424,7 +392,6 @@
 
     move-result-object p0
 
-    .line 401
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -433,7 +400,6 @@
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 402
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
@@ -442,12 +408,10 @@
 
     invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 403
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
 
-    .line 396
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -461,7 +425,6 @@
 .method public revokeTrust()V
     .locals 2
 
-    .line 342
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -474,7 +437,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -492,7 +454,6 @@
 .method public setManagingTrust(Z)V
     .locals 2
 
-    .line 353
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -505,7 +466,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -529,7 +489,6 @@
 .method public showKeyguardErrorMessage(Ljava/lang/CharSequence;)V
     .locals 2
 
-    .line 423
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -554,7 +513,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -568,7 +526,6 @@
 
     move-result-object p0
 
-    .line 425
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -577,7 +534,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 426
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -586,7 +542,6 @@
 .method public unlockUserWithToken(J[BI)V
     .locals 2
 
-    .line 408
     iget-object v0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-static {v0}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$fgetmContext(Lcom/android/server/trust/TrustAgentWrapper;)Landroid/content/Context;
@@ -599,14 +554,12 @@
 
     const v1, 0x111001d
 
-    .line 409
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 413
     invoke-static {}, Lcom/android/server/trust/TrustAgentWrapper;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
@@ -631,7 +584,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     :cond_0
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$4;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
@@ -645,7 +597,6 @@
 
     move-result-object p0
 
-    .line 415
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -654,7 +605,6 @@
 
     invoke-virtual {v0, v1, p4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 416
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p4
@@ -663,7 +613,6 @@
 
     invoke-virtual {p4, v0, p1, p2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 417
     invoke-virtual {p0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
@@ -672,12 +621,10 @@
 
     invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 418
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
 
-    .line 410
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 

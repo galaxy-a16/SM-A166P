@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
     .locals 1
 
-    .line 192
     new-instance p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats;
 
     const/4 v0, 0x0
@@ -33,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 188
     invoke-virtual {p0, p1}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/server/display/AdaptiveBrightnessWeightStats;
 
     move-result-object p0
@@ -44,7 +42,6 @@
 .method public newArray(I)[Lcom/android/server/display/AdaptiveBrightnessWeightStats;
     .locals 0
 
-    .line 197
     new-array p0, p1, [Lcom/android/server/display/AdaptiveBrightnessWeightStats;
 
     return-object p0
@@ -53,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 188
     invoke-virtual {p0, p1}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$1;->newArray(I)[Lcom/android/server/display/AdaptiveBrightnessWeightStats;
 
     move-result-object p0

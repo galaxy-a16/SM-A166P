@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 347
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 348
     new-instance v0, Landroid/util/SparseArray;
 
     const/4 v1, 0x2
@@ -25,7 +23,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
-    .line 349
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
@@ -40,12 +37,10 @@
 .method public clear()V
     .locals 1
 
-    .line 414
     iget-object v0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 415
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMapOfNewPkgState:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->clear()V
@@ -56,12 +51,10 @@
 .method public get(ILjava/lang/String;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 353
     invoke-virtual {p0, p1}, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->getOrAllocate(I)Ljava/util/LinkedHashMap;
 
     move-result-object p0
 
-    .line 354
     invoke-virtual {p0, p2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -74,7 +67,6 @@
 .method public final getOrAllocate(I)Ljava/util/LinkedHashMap;
     .locals 1
 
-    .line 419
     iget-object v0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -85,12 +77,10 @@
 
     if-nez v0, :cond_0
 
-    .line 421
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 422
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -102,7 +92,6 @@
 .method public final getOrAllocateNewState(I)Ljava/util/LinkedHashMap;
     .locals 1
 
-    .line 428
     iget-object v0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMapOfNewPkgState:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -113,12 +102,10 @@
 
     if-nez v0, :cond_0
 
-    .line 430
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 431
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMapOfNewPkgState:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -130,7 +117,6 @@
 .method public packagesForUserId(I)Ljava/util/LinkedHashMap;
     .locals 0
 
-    .line 389
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -145,7 +131,6 @@
 .method public packagesNewStateForUserId(I)Ljava/util/LinkedHashMap;
     .locals 0
 
-    .line 393
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMapOfNewPkgState:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -160,12 +145,10 @@
 .method public put(ILjava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 358
     invoke-virtual {p0, p1}, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->getOrAllocate(I)Ljava/util/LinkedHashMap;
 
     move-result-object p0
 
-    .line 359
     invoke-virtual {p0, p2, p3}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -174,12 +157,10 @@
 .method public putNewState(ILjava/lang/String;I)V
     .locals 0
 
-    .line 368
     invoke-virtual {p0, p1}, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->getOrAllocateNewState(I)Ljava/util/LinkedHashMap;
 
     move-result-object p0
 
-    .line 369
     new-instance p1, Ljava/lang/Integer;
 
     invoke-direct {p1, p3}, Ljava/lang/Integer;-><init>(I)V
@@ -192,12 +173,10 @@
 .method public remove(I)V
     .locals 1
 
-    .line 384
     iget-object v0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 385
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMapOfNewPkgState:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
@@ -212,7 +191,6 @@
 
     move v1, v0
 
-    .line 407
     :goto_0
     iget-object v2, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
@@ -222,7 +200,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 408
     iget-object v2, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -248,7 +225,6 @@
 .method public userIdAt(I)I
     .locals 0
 
-    .line 401
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -261,7 +237,6 @@
 .method public userIdCount()I
     .locals 0
 
-    .line 397
     iget-object p0, p0, Lcom/android/server/pm/EmergencyModePackageHandler$PendingPackageBroadcastsWithList;->mUidMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I

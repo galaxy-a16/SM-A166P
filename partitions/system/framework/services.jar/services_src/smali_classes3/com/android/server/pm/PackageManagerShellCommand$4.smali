@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerShellCommand;)V
     .locals 0
 
-    .line 1361
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerShellCommand$4;->this$0:Lcom/android/server/pm/PackageManagerShellCommand;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     const-string v0, "--user"
 
-    .line 1364
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -38,7 +36,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1365
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerShellCommand$4;->this$0:Lcom/android/server/pm/PackageManagerShellCommand;
 
     invoke-virtual {p2}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
@@ -56,14 +53,12 @@
     :cond_0
     const-string v0, "--brief"
 
-    .line 1367
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1368
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerShellCommand$4;->this$0:Lcom/android/server/pm/PackageManagerShellCommand;
 
     iput-boolean v1, p0, Lcom/android/server/pm/PackageManagerShellCommand;->mBrief:Z
@@ -73,14 +68,12 @@
     :cond_1
     const-string v0, "--components"
 
-    .line 1370
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 1371
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerShellCommand$4;->this$0:Lcom/android/server/pm/PackageManagerShellCommand;
 
     iput-boolean v1, p0, Lcom/android/server/pm/PackageManagerShellCommand;->mComponents:Z
@@ -90,14 +83,12 @@
     :cond_2
     const-string v0, "--query-flags"
 
-    .line 1373
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 1374
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerShellCommand$4;->this$0:Lcom/android/server/pm/PackageManagerShellCommand;
 
     invoke-virtual {p2}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;

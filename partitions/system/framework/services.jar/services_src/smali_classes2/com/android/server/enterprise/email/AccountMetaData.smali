@@ -105,12 +105,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 143
     iput v0, p0, Lcom/android/server/enterprise/email/AccountMetaData;->mId:I
 
     return-void

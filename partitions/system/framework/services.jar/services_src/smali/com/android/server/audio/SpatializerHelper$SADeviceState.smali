@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$sfputsBinauralEnabledDefault(Z)V
     .locals 0
 
-    .line 0
     sput-boolean p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->sBinauralEnabledDefault:Z
 
     return-void
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$sfputsHeadTrackingEnabledDefault(Z)V
     .locals 0
 
-    .line 0
     sput-boolean p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->sHeadTrackingEnabledDefault:Z
 
     return-void
@@ -45,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$sfputsTransauralEnabledDefault(Z)V
     .locals 0
 
-    .line 0
     sput-boolean p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->sTransauralEnabledDefault:Z
 
     return-void
@@ -54,25 +51,20 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 2
 
-    .line 1591
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 1579
     iput-boolean v0, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mHasHeadTracker:Z
 
-    .line 1592
     iput p1, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceType:I
 
-    .line 1593
     invoke-static {p1}, Lcom/android/server/audio/SpatializerHelper;->-$$Nest$smisWireless(I)Z
 
     move-result v1
@@ -89,7 +81,6 @@
     :goto_0
     iput-object p2, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceAddress:Ljava/lang/String;
 
-    .line 1594
     invoke-static {}, Lcom/android/server/audio/SpatializerHelper;->-$$Nest$sfgetSPAT_MODE_FOR_DEVICE_TYPE()Landroid/util/SparseIntArray;
 
     move-result-object p2
@@ -102,7 +93,6 @@
 
     if-nez p1, :cond_1
 
-    .line 1596
     sget-boolean v0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->sBinauralEnabledDefault:Z
 
     goto :goto_1
@@ -112,15 +102,12 @@
 
     if-ne p1, p2, :cond_2
 
-    .line 1598
     sget-boolean v0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->sTransauralEnabledDefault:Z
 
-    .line 1599
     :cond_2
     :goto_1
     iput-boolean v0, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mEnabled:Z
 
-    .line 1600
     sget-boolean p1, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->sHeadTrackingEnabledDefault:Z
 
     iput-boolean p1, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mHeadTrackerEnabled:Z
@@ -137,7 +124,6 @@
 
     return-object v0
 
-    .line 1648
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
@@ -150,12 +136,10 @@
     :cond_1
     const-string v1, ","
 
-    .line 1651
     invoke-static {p0, v1}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1652
     array-length v2, v1
 
     const/4 v3, 0x5
@@ -167,7 +151,6 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 1657
     :try_start_0
     aget-object v3, v1, v2
 
@@ -175,7 +158,6 @@
 
     move-result v3
 
-    .line 1658
     new-instance v4, Lcom/android/server/audio/SpatializerHelper$SADeviceState;
 
     const/4 v5, 0x1
@@ -186,7 +168,6 @@
 
     const/4 v3, 0x2
 
-    .line 1659
     aget-object v3, v1, v3
 
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -207,7 +188,6 @@
 
     const/4 v3, 0x3
 
-    .line 1660
     aget-object v3, v1, v3
 
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -228,7 +208,6 @@
 
     const/4 v3, 0x4
 
-    .line 1661
     aget-object v1, v1, v3
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -249,7 +228,6 @@
     :catch_0
     move-exception v1
 
-    .line 1664
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,7 +267,6 @@
 
     return v1
 
-    .line 1612
     :cond_1
     const-class v2, Lcom/android/server/audio/SpatializerHelper$SADeviceState;
 
@@ -301,11 +278,9 @@
 
     return v1
 
-    .line 1615
     :cond_2
     check-cast p1, Lcom/android/server/audio/SpatializerHelper$SADeviceState;
 
-    .line 1616
     iget v2, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceType:I
 
     iget v3, p1, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceType:I
@@ -316,7 +291,6 @@
 
     iget-object v3, p1, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceAddress:Ljava/lang/String;
 
-    .line 1617
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -353,12 +327,10 @@
 .method public getAudioDeviceAttributes()Landroid/media/AudioDeviceAttributes;
     .locals 3
 
-    .line 1670
     new-instance v0, Landroid/media/AudioDeviceAttributes;
 
     iget v1, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceType:I
 
-    .line 1671
     iget-object p0, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceAddress:Ljava/lang/String;
 
     if-nez p0, :cond_0
@@ -376,7 +348,6 @@
 .method public hashCode()I
     .locals 4
 
-    .line 1625
     iget v0, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceType:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -399,7 +370,6 @@
 
     iget-boolean p0, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mHeadTrackerEnabled:Z
 
-    .line 1626
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -408,7 +378,6 @@
 
     move-result-object p0
 
-    .line 1625
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -419,7 +388,6 @@
 .method public toPersistableString()Ljava/lang/String;
     .locals 5
 
-    .line 1636
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,14 +398,12 @@
 
     const-string v1, ","
 
-    .line 1637
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mDeviceAddress:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v2, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mEnabled:Z
@@ -458,7 +424,6 @@
     :goto_0
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1639
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v2, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mHasHeadTracker:Z
@@ -475,7 +440,6 @@
     :goto_1
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1640
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean p0, p0, Lcom/android/server/audio/SpatializerHelper$SADeviceState;->mHeadTrackerEnabled:Z
@@ -490,7 +454,6 @@
     :goto_2
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1641
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -501,7 +464,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1631
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

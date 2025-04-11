@@ -15,10 +15,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 202
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 203
     new-instance p1, Lcom/android/internal/os/LooperStats;
 
     const/16 v0, 0x3e8
@@ -29,7 +27,6 @@
 
     iput-object p1, p0, Lcom/android/server/LooperStatsService$Lifecycle;->mStats:Lcom/android/internal/os/LooperStats;
 
-    .line 204
     new-instance v0, Lcom/android/server/LooperStatsService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -42,7 +39,6 @@
 
     iput-object v0, p0, Lcom/android/server/LooperStatsService$Lifecycle;->mService:Lcom/android/server/LooperStatsService;
 
-    .line 205
     new-instance p1, Lcom/android/server/LooperStatsService$SettingsObserver;
 
     invoke-direct {p1, v0}, Lcom/android/server/LooperStatsService$SettingsObserver;-><init>(Lcom/android/server/LooperStatsService;)V
@@ -61,19 +57,16 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 217
     iget-object p1, p0, Lcom/android/server/LooperStatsService$Lifecycle;->mService:Lcom/android/server/LooperStatsService;
 
     invoke-static {p1}, Lcom/android/server/LooperStatsService;->-$$Nest$minitFromSettings(Lcom/android/server/LooperStatsService;)V
 
     const-string/jumbo p1, "looper_stats"
 
-    .line 218
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 219
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -88,7 +81,6 @@
 
     invoke-virtual {v0, p1, v2, v1, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 221
     iget-object p1, p0, Lcom/android/server/LooperStatsService$Lifecycle;->mStats:Lcom/android/internal/os/LooperStats;
 
     const-class v0, Lcom/android/internal/os/CachedDeviceState$Readonly;
@@ -108,7 +100,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 210
     const-class v0, Lcom/android/internal/os/LooperStats;
 
     iget-object v1, p0, Lcom/android/server/LooperStatsService$Lifecycle;->mStats:Lcom/android/internal/os/LooperStats;
@@ -117,7 +108,6 @@
 
     const-string/jumbo v0, "looper_stats"
 
-    .line 211
     iget-object v1, p0, Lcom/android/server/LooperStatsService$Lifecycle;->mService:Lcom/android/server/LooperStatsService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V

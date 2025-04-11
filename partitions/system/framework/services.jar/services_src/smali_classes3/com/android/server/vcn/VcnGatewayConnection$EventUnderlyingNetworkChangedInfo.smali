@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;)V
     .locals 0
 
-    .line 244
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 245
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventUnderlyingNetworkChangedInfo;->newUnderlying:Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;
 
     return-void
@@ -28,7 +26,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 255
     instance-of v0, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventUnderlyingNetworkChangedInfo;
 
     if-nez v0, :cond_0
@@ -37,11 +34,9 @@
 
     return p0
 
-    .line 259
     :cond_0
     check-cast p1, Lcom/android/server/vcn/VcnGatewayConnection$EventUnderlyingNetworkChangedInfo;
 
-    .line 260
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventUnderlyingNetworkChangedInfo;->newUnderlying:Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;
 
     iget-object p1, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventUnderlyingNetworkChangedInfo;->newUnderlying:Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;
@@ -56,7 +51,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 250
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventUnderlyingNetworkChangedInfo;->newUnderlying:Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;
 
     filled-new-array {p0}, [Ljava/lang/Object;

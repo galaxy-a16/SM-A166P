@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/DualAppManagerService;)V
     .locals 0
 
-    .line 165
     iput-object p1, p0, Lcom/android/server/DualAppManagerService$InternalHandler;->this$0:Lcom/android/server/DualAppManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/DualAppManagerService;Lcom/android/server/DualAppManagerService$InternalHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/DualAppManagerService$InternalHandler;-><init>(Lcom/android/server/DualAppManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +49,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     :try_start_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -78,7 +74,6 @@
 
     goto :goto_0
 
-    .line 200
     :cond_0
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -90,7 +85,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_1
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -100,7 +94,6 @@
 
     goto :goto_0
 
-    .line 192
     :cond_2
     iget-object p0, p0, Lcom/android/server/DualAppManagerService$InternalHandler;->this$0:Lcom/android/server/DualAppManagerService;
 
@@ -108,20 +101,17 @@
 
     goto :goto_0
 
-    .line 187
     :cond_3
     iget-object v0, p0, Lcom/android/server/DualAppManagerService$InternalHandler;->this$0:Lcom/android/server/DualAppManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/DualAppManagerService;->updateWhitelistPackages()V
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/DualAppManagerService$InternalHandler;->this$0:Lcom/android/server/DualAppManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/DualAppManagerService;->updateInstalledWhitelistPackages()V
 
     goto :goto_0
 
-    .line 180
     :cond_4
     new-instance p0, Landroid/content/Intent;
 
@@ -131,19 +121,16 @@
 
     const-string v2, "com.samsung.android.da.daagent.service.SwitchLauncherService"
 
-    .line 181
     invoke-virtual {p0, v0, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "defaultLauncher"
 
-    .line 182
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
 
     invoke-virtual {p0, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 183
     invoke-static {}, Lcom/android/server/DualAppManagerService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object v0
@@ -159,10 +146,8 @@
     :catch_0
     move-exception p0
 
-    .line 208
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 211
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 

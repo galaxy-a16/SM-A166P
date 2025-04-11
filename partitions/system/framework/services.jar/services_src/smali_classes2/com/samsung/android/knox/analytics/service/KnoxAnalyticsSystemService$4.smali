@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;IZLjava/lang/String;)V
     .locals 0
 
-    .line 257
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$4;->this$0:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;
 
     iput p2, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$4;->val$trigger:I
@@ -39,7 +38,6 @@
 .method public run()V
     .locals 4
 
-    .line 260
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -48,7 +46,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 261
     :goto_0
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$4;->this$0:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;
 
@@ -58,7 +55,6 @@
 
     if-nez v0, :cond_0
 
-    .line 263
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$4;->this$0:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;
 
@@ -70,7 +66,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 264
     :try_start_1
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$4;->this$0:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;
 
@@ -82,12 +77,10 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/Object;->wait(J)V
 
-    .line 265
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 266
     :try_start_2
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -104,7 +97,6 @@
     :catchall_0
     move-exception v1
 
-    .line 265
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -115,7 +107,6 @@
     :try_end_4
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 268
     :catch_0
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -127,7 +118,6 @@
 
     goto :goto_0
 
-    .line 271
     :cond_0
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -137,7 +127,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 272
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$4;->this$0:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService;
 
     iget v1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsSystemService$4;->val$trigger:I

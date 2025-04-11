@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/aod/AODManagerService;)V
     .locals 0
 
-    .line 233
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$3;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayChanged(I)V
     .locals 1
 
-    .line 244
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$3;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {v0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmDisplayManager(Lcom/android/server/aod/AODManagerService;)Landroid/hardware/display/DisplayManager;
@@ -43,7 +40,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$3;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {v0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmDisplayManager(Lcom/android/server/aod/AODManagerService;)Landroid/hardware/display/DisplayManager;
@@ -58,7 +54,6 @@
 
     if-nez p1, :cond_0
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/aod/AODManagerService$3;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-virtual {v0}, Landroid/view/Display;->getState()I
@@ -74,6 +69,5 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

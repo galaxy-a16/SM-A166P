@@ -18,17 +18,14 @@
 .method public constructor <init>(Lcom/android/server/cocktailbar/settings/CocktailOrderManager;Ljava/util/ArrayList;Landroid/util/SparseArray;)V
     .locals 5
 
-    .line 285
     iput-object p1, p0, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderComparator;->this$0:Lcom/android/server/cocktailbar/settings/CocktailOrderManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 286
     iget-object v0, p1, Lcom/android/server/cocktailbar/settings/CocktailOrderManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 287
     :try_start_0
     new-instance v1, Ljava/util/HashMap;
 
@@ -36,10 +33,8 @@
 
     iput-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderComparator;->mOrderInfoMap:Ljava/util/HashMap;
 
-    .line 288
     iput-object p3, p0, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderComparator;->mEnabledPanelInfoArray:Landroid/util/SparseArray;
 
-    .line 289
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
     move-result p3
@@ -49,7 +44,6 @@
     :goto_0
     if-ge v1, p3, :cond_2
 
-    .line 291
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -58,12 +52,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 292
     iget-object v3, v2, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderInfo;->mComponentName:Landroid/content/ComponentName;
 
     if-eqz v3, :cond_1
 
-    .line 293
     iget-object v3, p1, Lcom/android/server/cocktailbar/settings/CocktailOrderManager;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/server/cocktailbar/utils/CocktailBarConfig;->getInstance(Landroid/content/Context;)Lcom/android/server/cocktailbar/utils/CocktailBarConfig;
@@ -72,7 +64,6 @@
 
     iget-object v4, v2, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderInfo;->mComponentName:Landroid/content/ComponentName;
 
-    .line 294
     invoke-virtual {v4}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v4
@@ -83,7 +74,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 297
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,7 +94,6 @@
 
     goto :goto_1
 
-    .line 299
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -112,7 +101,6 @@
 
     iget-object v4, v2, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderInfo;->mComponentName:Landroid/content/ComponentName;
 
-    .line 300
     invoke-virtual {v4}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v4
@@ -131,7 +119,6 @@
 
     move-result-object v3
 
-    .line 302
     :goto_1
     iget-object v4, p0, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderComparator;->mOrderInfoMap:Ljava/util/HashMap;
 
@@ -148,7 +135,6 @@
 
     goto :goto_0
 
-    .line 305
     :cond_2
     monitor-exit v0
 
@@ -171,7 +157,6 @@
 
     const/4 v0, 0x0
 
-    .line 311
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderComparator;->mEnabledPanelInfoArray:Landroid/util/SparseArray;
 
@@ -185,7 +170,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 312
     iget-object v2, p0, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderComparator;->mEnabledPanelInfoArray:Landroid/util/SparseArray;
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
@@ -198,7 +182,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 313
     iget-object v3, p0, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderComparator;->mOrderInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -233,7 +216,6 @@
 
     move-result-object v1
 
-    .line 314
     iget-object v3, p0, Lcom/android/server/cocktailbar/settings/CocktailOrderManager$CocktailOrderComparator;->mOrderInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -272,7 +254,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 316
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -290,7 +271,6 @@
     :cond_2
     return v0
 
-    .line 321
     :catch_0
     invoke-static {}, Lcom/android/server/cocktailbar/settings/CocktailOrderManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -324,7 +304,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 281
     check-cast p1, Ljava/lang/Integer;
 
     check-cast p2, Ljava/lang/Integer;

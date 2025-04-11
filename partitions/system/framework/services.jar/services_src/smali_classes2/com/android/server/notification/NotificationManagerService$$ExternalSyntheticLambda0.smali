@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/NotificationManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/notification/NotificationManagerService;
@@ -27,7 +26,6 @@
 .method public final repost(ILcom/android/server/notification/NotificationRecord;Z)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/notification/NotificationManagerService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/notification/NotificationManagerService;->$r8$lambda$9UL2h3_oRxz1Hio8dlmfAXln67g(Lcom/android/server/notification/NotificationManagerService;ILcom/android/server/notification/NotificationRecord;Z)V

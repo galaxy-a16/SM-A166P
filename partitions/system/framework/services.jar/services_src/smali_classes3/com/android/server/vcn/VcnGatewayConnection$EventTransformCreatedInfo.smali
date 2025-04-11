@@ -16,13 +16,10 @@
 .method public constructor <init>(ILandroid/net/IpSecTransform;)V
     .locals 0
 
-    .line 348
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 349
     iput p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventTransformCreatedInfo;->direction:I
 
-    .line 350
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -39,7 +36,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 360
     instance-of v0, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventTransformCreatedInfo;
 
     const/4 v1, 0x0
@@ -48,11 +44,9 @@
 
     return v1
 
-    .line 364
     :cond_0
     check-cast p1, Lcom/android/server/vcn/VcnGatewayConnection$EventTransformCreatedInfo;
 
-    .line 365
     iget v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventTransformCreatedInfo;->direction:I
 
     iget v2, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventTransformCreatedInfo;->direction:I
@@ -78,7 +72,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 355
     iget v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventTransformCreatedInfo;->direction:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

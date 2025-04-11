@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 229
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 230
     iput-object p1, p0, Lcom/android/server/enterprise/general/MiscPolicy$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getStorageProvider()Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .locals 1
 
-    .line 234
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object p0, p0, Lcom/android/server/enterprise/general/MiscPolicy$Injector;->mContext:Landroid/content/Context;

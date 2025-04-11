@@ -22,7 +22,6 @@
 .method public synthetic constructor <init>(JJLjava/util/function/Consumer;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/android/server/wm/WallpaperAnimationAdapter$$ExternalSyntheticLambda0;->f$0:J
@@ -43,7 +42,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 8
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/wm/WallpaperAnimationAdapter$$ExternalSyntheticLambda0;->f$0:J
 
     iget-wide v2, p0, Lcom/android/server/wm/WallpaperAnimationAdapter$$ExternalSyntheticLambda0;->f$1:J

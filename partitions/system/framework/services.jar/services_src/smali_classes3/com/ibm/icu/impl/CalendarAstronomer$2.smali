@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/ibm/icu/impl/CalendarAstronomer;)V
     .locals 0
 
-    .line 699
     iput-object p1, p0, Lcom/ibm/icu/impl/CalendarAstronomer$2;->this$0:Lcom/ibm/icu/impl/CalendarAstronomer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public eval()Lcom/ibm/icu/impl/CalendarAstronomer$Equatorial;
     .locals 0
 
-    .line 701
     iget-object p0, p0, Lcom/ibm/icu/impl/CalendarAstronomer$2;->this$0:Lcom/ibm/icu/impl/CalendarAstronomer;
 
     invoke-virtual {p0}, Lcom/ibm/icu/impl/CalendarAstronomer;->getSunPosition()Lcom/ibm/icu/impl/CalendarAstronomer$Equatorial;

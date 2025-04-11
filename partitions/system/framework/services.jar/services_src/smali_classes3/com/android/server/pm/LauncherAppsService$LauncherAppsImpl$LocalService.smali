@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;)V
     .locals 0
 
-    .line 2226
     iput-object p1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$LocalService;->this$0:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     invoke-direct {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsServiceInternal;-><init>()V
@@ -26,10 +25,8 @@
 
     move-object v0, p0
 
-    .line 2231
     iget-object v0, v0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$LocalService;->this$0:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
-    .line 2232
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
@@ -52,7 +49,6 @@
 
     move/from16 v10, p9
 
-    .line 2231
     invoke-static/range {v0 .. v10}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->-$$Nest$mstartShortcutInner(Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;Landroid/os/Bundle;I)Z
 
     move-result v0

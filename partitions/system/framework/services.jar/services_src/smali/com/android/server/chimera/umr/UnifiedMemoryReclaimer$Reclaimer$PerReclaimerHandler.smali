@@ -15,10 +15,8 @@
 
     const/4 v1, 0x1
 
-    .line 715
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 716
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -33,7 +31,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 721
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer$PerReclaimerHandler;->mReclaimer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -46,7 +43,6 @@
 
     return-void
 
-    .line 726
     :cond_0
     :try_start_0
     iget v0, p1, Landroid/os/Message;->what:I
@@ -57,7 +53,6 @@
 
     goto :goto_0
 
-    .line 729
     :cond_1
     invoke-static {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;->-$$Nest$mswitchMode(Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$Reclaimer;)V
     :try_end_0
@@ -68,7 +63,6 @@
     :catch_0
     move-exception p0
 
-    .line 733
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +83,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 734
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

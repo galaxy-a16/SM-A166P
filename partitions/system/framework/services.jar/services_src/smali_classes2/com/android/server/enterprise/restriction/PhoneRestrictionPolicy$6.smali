@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;)V
     .locals 0
 
-    .line 2887
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$6;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,19 +23,16 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 2890
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
 
     const-string v0, "PhoneRestrictionPolicy"
 
-    .line 2891
     invoke-static {v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v1, "com.samsung.android.knox.intent.action.PHONE_READY_INTERNAL"
 
-    .line 2892
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -45,7 +41,6 @@
 
     const-string v1, "android.intent.action.LOCKED_BOOT_COMPLETED"
 
-    .line 2893
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -57,7 +52,6 @@
     :cond_0
     const-string p1, "android.intent.action.SIM_STATE_CHANGED"
 
-    .line 2895
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -66,17 +60,14 @@
 
     const-string p1, "Received ACTION_SIM_STATE_CHANGED broadcast"
 
-    .line 2896
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2897
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$6;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
     invoke-static {p0}, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;->-$$Nest$munlockAllSimCards(Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;)V
 
     goto :goto_1
 
-    .line 2894
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$6;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;

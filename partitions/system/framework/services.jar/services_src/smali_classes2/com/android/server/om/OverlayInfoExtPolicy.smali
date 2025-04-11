@@ -10,7 +10,6 @@
 .method public static synthetic $r8$lambda$BhYiFauNFflsWjeTDekPSiNf_ds(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/om/OverlayInfoExtPolicy;->lambda$retainOverlay$0(Ljava/lang/String;)Z
 
     move-result p0
@@ -21,7 +20,6 @@
 .method public static synthetic $r8$lambda$eFXRH08QTLyRIqTzUHvYw7j5djQ(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/om/OverlayInfoExtPolicy;->lambda$retainOverlay$1(Ljava/lang/String;)Z
 
     move-result p0
@@ -42,7 +40,6 @@
 
     const-string v0, "/data/overlays/currentstyle"
 
-    .line 40
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -55,7 +52,6 @@
 
     const-string v0, "/data/overlays/currentstyle"
 
-    .line 42
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -70,7 +66,6 @@
 
     const-string p0, "/data/overlays"
 
-    .line 12
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -84,7 +79,6 @@
     :cond_0
     const-string p0, "android"
 
-    .line 24
     invoke-virtual {p0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -93,7 +87,6 @@
 
     return p4
 
-    .line 27
     :cond_1
     invoke-virtual {p2}, Landroid/content/pm/overlay/OverlayPaths;->getOverlayPaths()Ljava/util/List;
 
@@ -117,7 +110,6 @@
 
     goto :goto_0
 
-    .line 35
     :cond_2
     sget-object p0, Landroid/content/om/SamsungThemeConstants;->changeableApps:Ljava/util/HashSet;
 
@@ -129,7 +121,6 @@
 
     return p4
 
-    .line 39
     :cond_3
     invoke-virtual {p2}, Landroid/content/pm/overlay/OverlayPaths;->getOverlayPaths()Ljava/util/List;
 
@@ -147,7 +138,6 @@
 
     move-result p0
 
-    .line 41
     invoke-virtual {p2}, Landroid/content/pm/overlay/OverlayPaths;->getResourceDirs()Ljava/util/List;
 
     move-result-object p1

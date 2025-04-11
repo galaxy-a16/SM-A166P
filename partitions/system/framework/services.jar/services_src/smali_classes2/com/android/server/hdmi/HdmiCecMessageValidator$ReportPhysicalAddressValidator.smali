@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiCecMessageValidator$ReportPhysicalAddressValidator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator$ReportPhysicalAddressValidator;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public isValid([B)I
     .locals 1
 
-    .line 857
     array-length p0, p1
 
     const/4 v0, 0x3
@@ -43,7 +41,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 860
     invoke-static {p1, p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->-$$Nest$smisValidPhysicalAddress([BI)Z
 
     move-result v0

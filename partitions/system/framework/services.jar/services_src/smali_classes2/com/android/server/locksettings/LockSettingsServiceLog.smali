@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetF_LOCK(Lcom/android/server/locksettings/LockSettingsServiceLog;)Ljava/util/concurrent/locks/Lock;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->F_LOCK:Ljava/util/concurrent/locks/Lock;
 
     return-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmFileWriteLock(Lcom/android/server/locksettings/LockSettingsServiceLog;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mFileWriteLock:Ljava/lang/Object;
 
     return-object p0
@@ -47,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLogFile(Lcom/android/server/locksettings/LockSettingsServiceLog;)[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     return-object p0
@@ -56,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fputLOG_FILE(Lcom/android/server/locksettings/LockSettingsServiceLog;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->LOG_FILE:Ljava/lang/String;
 
     return-void
@@ -65,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$mmakeLogTime(Lcom/android/server/locksettings/LockSettingsServiceLog;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsServiceLog;->makeLogTime()Ljava/lang/String;
 
     move-result-object p0
@@ -76,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$msendToDiagmon(Lcom/android/server/locksettings/LockSettingsServiceLog;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/LockSettingsServiceLog;->sendToDiagmon(I)V
 
     return-void
@@ -85,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$mshowDump(Lcom/android/server/locksettings/LockSettingsServiceLog;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsServiceLog;->showDump()V
 
     return-void
@@ -94,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$mzipLogFile(Lcom/android/server/locksettings/LockSettingsServiceLog;I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/LockSettingsServiceLog;->zipLogFile(I)Ljava/lang/String;
 
     move-result-object p0
@@ -105,7 +97,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 62
     sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/locksettings/LockSettingsServiceLog;->SECURITY_LOG_VERSION:Ljava/lang/String;
@@ -116,33 +107,26 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mFileWriteLock:Ljava/lang/Object;
 
-    .line 56
     sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->BUILD_ID:Ljava/lang/String;
 
-    .line 57
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->EVENT_ID:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 59
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->saveLssLog:Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;
 
-    .line 60
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->LOG_FILE:Ljava/lang/String;
 
-    .line 77
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
@@ -153,13 +137,10 @@
 
     new-array v0, v0, [Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
-    .line 84
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
-    .line 87
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mContext:Landroid/content/Context;
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/locksettings/LockSettingsServiceLog;->init()V
 
     return-void
@@ -171,15 +152,12 @@
     :try_start_0
     const-string v0, "SHA-256"
 
-    .line 134
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    .line 135
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 136
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -201,7 +179,6 @@
     :catch_0
     move-exception p0
 
-    .line 138
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -228,7 +205,6 @@
 .method public static isDevBuild()Z
     .locals 2
 
-    .line 148
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v1, "eng"
@@ -269,7 +245,6 @@
 
     const-string v1, "false"
 
-    .line 144
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -288,14 +263,12 @@
 .method public addLog(ILjava/lang/String;)V
     .locals 1
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     aget-object v0, v0, p1
 
     if-nez v0, :cond_0
 
-    .line 101
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -316,7 +289,6 @@
 
     return-void
 
-    .line 105
     :cond_0
     new-instance v0, Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;
 
@@ -324,7 +296,6 @@
 
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->saveLssLog:Lcom/android/server/locksettings/LockSettingsServiceLog$SaveLssLog;
 
-    .line 106
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -337,7 +308,6 @@
 
     const-string v1, "LockSettingsLog"
 
-    .line 267
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -349,7 +319,6 @@
 
     if-ge v2, v3, :cond_6
 
-    .line 274
     iget-object v3, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     aget-object v3, v3, v2
@@ -364,7 +333,6 @@
 
     goto/16 :goto_9
 
-    .line 278
     :cond_0
     iget-object v3, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
@@ -374,7 +342,6 @@
 
     move-result-object v3
 
-    .line 279
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -393,10 +360,8 @@
 
     move-result-object v4
 
-    .line 280
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 282
     iget-object v6, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     aget-object v6, v6, v2
@@ -407,7 +372,6 @@
 
     if-nez v6, :cond_1
 
-    .line 285
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -426,18 +390,15 @@
 
     move-result-object v3
 
-    .line 286
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto/16 :goto_9
 
-    .line 292
     :cond_1
     iget-object v7, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->F_LOCK:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v7}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 294
     :try_start_0
     new-instance v7, Ljava/io/RandomAccessFile;
 
@@ -452,7 +413,6 @@
 
     move v6, v0
 
-    .line 295
     :goto_1
     :try_start_1
     invoke-virtual {v7}, Ljava/io/RandomAccessFile;->readLine()Ljava/lang/String;
@@ -461,7 +421,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 296
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -495,7 +454,6 @@
 
     goto :goto_1
 
-    .line 303
     :cond_3
     :goto_2
     :try_start_3
@@ -517,7 +475,6 @@
 
     move-object v4, v6
 
-    .line 294
     :goto_3
     :try_start_4
     invoke-virtual {v7}, Ljava/io/RandomAccessFile;->close()V
@@ -572,7 +529,6 @@
     :catch_3
     move-exception v6
 
-    .line 308
     :goto_5
     :try_start_6
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
@@ -593,20 +549,16 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 312
     :goto_8
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 313
     invoke-static {v1, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     :cond_4
     iget-object v4, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->F_LOCK:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v4}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 318
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -623,7 +575,6 @@
 
     move-result-object v3
 
-    .line 319
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_9
@@ -634,25 +585,20 @@
     :goto_a
     if-eqz v4, :cond_5
 
-    .line 312
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 313
     invoke-static {v1, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     :cond_5
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->F_LOCK:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 316
     throw v0
 
     :cond_6
     const-string p0, "dump end"
 
-    .line 321
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -661,17 +607,14 @@
 .method public final getCurTime()Ljava/lang/String;
     .locals 1
 
-    .line 152
     new-instance p0, Landroid/text/format/Time;
 
     invoke-direct {p0}, Landroid/text/format/Time;-><init>()V
 
-    .line 153
     invoke-virtual {p0}, Landroid/text/format/Time;->setToNow()V
 
     const-string v0, "%Y%m%d_%H%M%S"
 
-    .line 154
     invoke-virtual {p0, v0}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -682,7 +625,6 @@
 .method public init()V
     .locals 4
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     new-instance v1, Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
@@ -697,7 +639,6 @@
 
     aput-object v1, v0, v2
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     new-instance v1, Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
@@ -710,7 +651,6 @@
 
     aput-object v1, v0, v2
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     new-instance v1, Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
@@ -723,7 +663,6 @@
 
     aput-object v1, v0, v2
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     new-instance v1, Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
@@ -736,7 +675,6 @@
 
     aput-object v1, v0, v2
 
-    .line 96
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     new-instance v0, Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
@@ -755,12 +693,10 @@
 .method public final makeLogTime()Ljava/lang/String;
     .locals 7
 
-    .line 158
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object p0
 
-    .line 159
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -769,7 +705,6 @@
 
     const/4 v0, 0x2
 
-    .line 161
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -782,7 +717,6 @@
 
     const/4 v0, 0x5
 
-    .line 162
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -793,7 +727,6 @@
 
     const/16 v0, 0xb
 
-    .line 163
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -804,7 +737,6 @@
 
     const/16 v0, 0xc
 
-    .line 164
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -815,7 +747,6 @@
 
     const/16 v0, 0xd
 
-    .line 165
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -826,7 +757,6 @@
 
     const/16 v0, 0xe
 
-    .line 166
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
@@ -841,7 +771,6 @@
 
     const-string v0, "%02d-%02d %02d:%02d:%02d.%03d "
 
-    .line 160
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -854,7 +783,6 @@
 
     const-string v0, "LockSettingsLog"
 
-    .line 388
     :try_start_0
     iget-object v1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
@@ -866,14 +794,12 @@
 
     move-result-object v1
 
-    .line 389
     new-instance v2, Ljava/io/File;
 
     const-string v3, "/data/log/"
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 390
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -882,12 +808,10 @@
 
     const-string p0, "No log folder"
 
-    .line 391
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 394
     :cond_0
     new-instance v3, Lcom/android/server/locksettings/LockSettingsServiceLog$3;
 
@@ -901,12 +825,10 @@
 
     const-string p0, "No log files"
 
-    .line 404
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 407
     :cond_1
     array-length v1, p0
 
@@ -917,17 +839,14 @@
 
     aget-object v3, p0, v2
 
-    .line 408
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 409
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 410
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -958,7 +877,6 @@
     :catch_0
     move-exception p0
 
-    .line 414
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -992,7 +910,6 @@
 
     const-string v4, "DiagMon"
 
-    .line 214
     iget-object v5, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1015,12 +932,10 @@
 
     const-string/jumbo p0, "sendToDiagmon failed. errorlog_agree is not true!!"
 
-    .line 216
     invoke-static {v6, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 219
     :cond_0
     iget-object v5, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->LOG_FILE:Ljava/lang/String;
 
@@ -1028,12 +943,10 @@
 
     const-string/jumbo p0, "sendToDiagmon failed. filename is null!!"
 
-    .line 220
     invoke-static {v6, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 223
     :cond_1
     iget-object v5, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
@@ -1045,7 +958,6 @@
 
     if-nez v5, :cond_2
 
-    .line 224
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1072,7 +984,6 @@
 
     return-void
 
-    .line 227
     :cond_2
     invoke-static {}, Lcom/android/server/locksettings/LockSettingsServiceLog;->isShipBuild()Z
 
@@ -1088,12 +999,10 @@
 
     const-string/jumbo p0, "sendToDiagmon failed. Can upload only ship or dev!"
 
-    .line 228
     invoke-static {v6, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 232
     :cond_3
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1113,24 +1022,20 @@
 
     invoke-static {v6, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     new-instance v5, Landroid/content/Intent;
 
     const-string v7, "com.sec.android.diagmonagent.intent.REPORT_ERROR_V2"
 
     invoke-direct {v5, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 235
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
     const/16 v8, 0x20
 
-    .line 236
     invoke-virtual {v5, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 239
     :try_start_0
     new-instance v9, Landroid/os/Bundle;
 
@@ -1138,7 +1043,6 @@
 
     invoke-virtual {v7, v4, v9}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 241
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1149,7 +1053,6 @@
 
     invoke-virtual {v9, v3, v10}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 242
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1164,7 +1067,6 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 243
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1179,7 +1081,6 @@
 
     invoke-virtual {v9, v2, v10}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 244
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1198,7 +1099,6 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 245
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1217,7 +1117,6 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 246
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1242,7 +1141,6 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 247
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1259,7 +1157,6 @@
 
     invoke-virtual {v9, v10, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 248
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1278,7 +1175,6 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 249
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v9
@@ -1303,7 +1199,6 @@
 
     invoke-virtual {v2, v9, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 250
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -1318,7 +1213,6 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 251
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -1335,7 +1229,6 @@
 
     invoke-virtual {p1, v2, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 252
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -1354,7 +1247,6 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 253
     invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -1375,18 +1267,14 @@
 
     const-string/jumbo p1, "uploadMO"
 
-    .line 255
     invoke-virtual {v5, p1, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 256
     invoke-virtual {v5, v8}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     const-string p1, "com.sec.android.diagmonagent"
 
-    .line 257
     invoke-virtual {v5, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 259
     iget-object p1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
@@ -1400,13 +1288,11 @@
 
     const-string v0, "Exception while sending a bug report."
 
-    .line 261
     invoke-static {v6, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     const/4 p1, 0x0
 
-    .line 263
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->LOG_FILE:Ljava/lang/String;
 
     return-void
@@ -1419,7 +1305,6 @@
 
     const-string v1, "LockSettingsLog"
 
-    .line 340
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -1435,7 +1320,6 @@
 
     if-ge v3, v5, :cond_5
 
-    .line 347
     iget-object v5, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     aget-object v5, v5, v3
@@ -1450,7 +1334,6 @@
 
     goto/16 :goto_9
 
-    .line 351
     :cond_0
     iget-object v5, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
@@ -1460,7 +1343,6 @@
 
     move-result-object v5
 
-    .line 352
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1481,7 +1363,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     iget-object v6, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     aget-object v6, v6, v3
@@ -1490,12 +1371,10 @@
 
     move-result-object v6
 
-    .line 357
     iget-object v8, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->F_LOCK:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v8}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 359
     :try_start_0
     new-instance v8, Ljava/io/RandomAccessFile;
 
@@ -1510,7 +1389,6 @@
 
     move v6, v2
 
-    .line 360
     :goto_1
     :try_start_1
     invoke-virtual {v8}, Ljava/io/RandomAccessFile;->readLine()Ljava/lang/String;
@@ -1519,7 +1397,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 361
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1567,7 +1444,6 @@
 
     goto :goto_1
 
-    .line 368
     :cond_2
     :goto_2
     :try_start_3
@@ -1591,7 +1467,6 @@
 
     move-object v4, v13
 
-    .line 359
     :goto_3
     :try_start_4
     invoke-virtual {v8}, Ljava/io/RandomAccessFile;->close()V
@@ -1650,7 +1525,6 @@
     :catch_3
     move-exception v6
 
-    .line 373
     :goto_5
     :try_start_6
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
@@ -1671,17 +1545,14 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 377
     :goto_8
     invoke-static {v1, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     :cond_3
     iget-object v6, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->F_LOCK:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v6}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 381
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1708,22 +1579,18 @@
     :goto_a
     if-eqz v4, :cond_4
 
-    .line 377
     invoke-static {v1, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     :cond_4
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->F_LOCK:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 380
     throw v0
 
     :cond_5
     const-string p0, "!@LSS log end"
 
-    .line 383
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1732,14 +1599,12 @@
 .method public uploadLogFile(I)V
     .locals 1
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
     aget-object v0, v0, p1
 
     if-nez v0, :cond_0
 
-    .line 111
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1760,13 +1625,11 @@
 
     return-void
 
-    .line 115
     :cond_0
     new-instance v0, Lcom/android/server/locksettings/LockSettingsServiceLog$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/locksettings/LockSettingsServiceLog$1;-><init>(Lcom/android/server/locksettings/LockSettingsServiceLog;I)V
 
-    .line 129
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -1775,12 +1638,10 @@
 .method public writeLog()V
     .locals 1
 
-    .line 325
     new-instance v0, Lcom/android/server/locksettings/LockSettingsServiceLog$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/locksettings/LockSettingsServiceLog$2;-><init>(Lcom/android/server/locksettings/LockSettingsServiceLog;)V
 
-    .line 336
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -1789,7 +1650,6 @@
 .method public final zipLogFile(I)Ljava/lang/String;
     .locals 13
 
-    .line 170
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1812,7 +1672,6 @@
 
     move-result-object v0
 
-    .line 172
     iget-object v1, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mFileWriteLock:Ljava/lang/Object;
 
     monitor-enter v1
@@ -1826,7 +1685,6 @@
 
     const/4 v3, 0x0
 
-    .line 180
     :try_start_1
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -1835,7 +1693,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_5
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 181
     :try_start_2
     new-instance v5, Ljava/util/zip/ZipOutputStream;
 
@@ -1857,7 +1714,6 @@
 
     if-ne p1, v7, :cond_0
 
-    .line 184
     :try_start_3
     iget-object v9, p0, Lcom/android/server/locksettings/LockSettingsServiceLog;->mLogFile:[Lcom/android/server/locksettings/LockSettingsServiceLog$LogFileManager;
 
@@ -1881,19 +1737,16 @@
     :goto_1
     if-eqz v9, :cond_2
 
-    .line 186
     new-instance v10, Ljava/io/File;
 
     invoke-direct {v10, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 187
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
     move-result v10
 
     if-eqz v10, :cond_2
 
-    .line 188
     new-instance v10, Ljava/util/zip/ZipEntry;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1922,7 +1775,6 @@
 
     invoke-virtual {v5, v10}, Ljava/util/zip/ZipOutputStream;->putNextEntry(Ljava/util/zip/ZipEntry;)V
 
-    .line 191
     new-instance v10, Ljava/io/FileInputStream;
 
     invoke-direct {v10, v9}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
@@ -1930,7 +1782,6 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 192
     :goto_2
     :try_start_4
     invoke-virtual {v10, v2}, Ljava/io/FileInputStream;->read([B)I
@@ -1939,16 +1790,13 @@
 
     if-lez v8, :cond_1
 
-    .line 193
     invoke-virtual {v5, v2, v6, v8}, Ljava/util/zip/ZipOutputStream;->write([BII)V
 
     goto :goto_2
 
-    .line 195
     :cond_1
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
 
-    .line 196
     invoke-virtual {v5}, Ljava/util/zip/ZipOutputStream;->closeEntry()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
@@ -1986,14 +1834,12 @@
     :cond_3
     if-eqz v8, :cond_4
 
-    .line 204
     :try_start_5
     invoke-virtual {v8}, Ljava/io/FileInputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    .line 205
     :catch_2
     :cond_4
     :try_start_6
@@ -2002,7 +1848,6 @@
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 206
     :catch_3
     :try_start_7
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
@@ -2049,7 +1894,6 @@
     :try_start_8
     const-string p1, "LockSettingsLog"
 
-    .line 202
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2070,7 +1914,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 204
     :try_start_9
     invoke-virtual {v8}, Ljava/io/FileInputStream;->close()V
     :try_end_9
@@ -2081,7 +1924,6 @@
     :cond_5
     if-eqz v5, :cond_6
 
-    .line 205
     :try_start_a
     invoke-virtual {v5}, Ljava/util/zip/ZipOutputStream;->close()V
     :try_end_a
@@ -2092,7 +1934,6 @@
     :cond_6
     if-eqz v4, :cond_7
 
-    .line 206
     :try_start_b
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_b
@@ -2110,10 +1951,8 @@
 
     const-string/jumbo p1, "zipLogFile - finish"
 
-    .line 208
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     monitor-exit v1
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_4
@@ -2128,7 +1967,6 @@
     :goto_7
     if-eqz v3, :cond_8
 
-    .line 204
     :try_start_d
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_d
@@ -2139,7 +1977,6 @@
     :cond_8
     if-eqz v5, :cond_9
 
-    .line 205
     :try_start_e
     invoke-virtual {v5}, Ljava/util/zip/ZipOutputStream;->close()V
     :try_end_e
@@ -2150,14 +1987,12 @@
     :cond_9
     if-eqz v4, :cond_a
 
-    .line 206
     :try_start_f
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_f
     .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_c
     .catchall {:try_start_f .. :try_end_f} :catchall_4
 
-    .line 207
     :catch_c
     :cond_a
     :try_start_10
@@ -2166,7 +2001,6 @@
     :catchall_4
     move-exception p0
 
-    .line 209
     monitor-exit v1
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_4

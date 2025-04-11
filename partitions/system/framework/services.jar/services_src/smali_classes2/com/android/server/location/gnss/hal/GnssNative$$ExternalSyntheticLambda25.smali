@@ -28,7 +28,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/gnss/hal/GnssNative;I[I[F[F[F[F[F)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda25;->f$0:Lcom/android/server/location/gnss/hal/GnssNative;
@@ -55,7 +54,6 @@
 .method public final runOrThrow()V
     .locals 8
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda25;->f$0:Lcom/android/server/location/gnss/hal/GnssNative;
 
     iget v1, p0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda25;->f$1:I

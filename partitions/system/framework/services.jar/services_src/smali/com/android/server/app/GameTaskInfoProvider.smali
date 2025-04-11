@@ -19,17 +19,14 @@
 .method public constructor <init>(Landroid/os/UserHandle;Landroid/app/IActivityTaskManager;Lcom/android/server/app/GameClassifier;)V
     .locals 2
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/app/GameTaskInfoProvider;->mLock:Ljava/lang/Object;
 
-    .line 41
     new-instance v0, Landroid/util/LruCache;
 
     const/16 v1, 0x32
@@ -38,13 +35,10 @@
 
     iput-object v0, p0, Lcom/android/server/app/GameTaskInfoProvider;->mGameTaskInfoCache:Landroid/util/LruCache;
 
-    .line 52
     iput-object p1, p0, Lcom/android/server/app/GameTaskInfoProvider;->mUserHandle:Landroid/os/UserHandle;
 
-    .line 53
     iput-object p2, p0, Lcom/android/server/app/GameTaskInfoProvider;->mActivityTaskManager:Landroid/app/IActivityTaskManager;
 
-    .line 54
     iput-object p3, p0, Lcom/android/server/app/GameTaskInfoProvider;->mGameClassifier:Lcom/android/server/app/GameClassifier;
 
     return-void
@@ -55,12 +49,10 @@
 .method public final generateGameInfo(ILandroid/content/ComponentName;)Lcom/android/server/app/GameTaskInfo;
     .locals 4
 
-    .line 115
     new-instance v0, Lcom/android/server/app/GameTaskInfo;
 
     iget-object v1, p0, Lcom/android/server/app/GameTaskInfoProvider;->mGameClassifier:Lcom/android/server/app/GameClassifier;
 
-    .line 116
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -73,12 +65,10 @@
 
     invoke-direct {v0, p1, v1, p2}, Lcom/android/server/app/GameTaskInfo;-><init>(IZLandroid/content/ComponentName;)V
 
-    .line 118
     iget-object p2, p0, Lcom/android/server/app/GameTaskInfoProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 119
     :try_start_0
     iget-object p0, p0, Lcom/android/server/app/GameTaskInfoProvider;->mGameTaskInfoCache:Landroid/util/LruCache;
 
@@ -88,7 +78,6 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 120
     monitor-exit p2
 
     return-object v0
@@ -106,12 +95,10 @@
 .method public get(I)Lcom/android/server/app/GameTaskInfo;
     .locals 3
 
-    .line 59
     iget-object v0, p0, Lcom/android/server/app/GameTaskInfoProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 60
     :try_start_0
     iget-object v1, p0, Lcom/android/server/app/GameTaskInfoProvider;->mGameTaskInfoCache:Landroid/util/LruCache;
 
@@ -127,32 +114,27 @@
 
     if-eqz v1, :cond_0
 
-    .line 62
     monitor-exit v0
 
     return-object v1
 
-    .line 64
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/app/GameTaskInfoProvider;->getRunningTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 67
     iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
 
     if-nez v0, :cond_1
 
     goto :goto_0
 
-    .line 71
     :cond_1
     invoke-virtual {p0, p1, v0}, Lcom/android/server/app/GameTaskInfoProvider;->generateGameInfo(ILandroid/content/ComponentName;)Lcom/android/server/app/GameTaskInfo;
 
@@ -169,7 +151,6 @@
     :catchall_0
     move-exception p0
 
-    .line 64
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -181,12 +162,10 @@
 .method public get(ILandroid/content/ComponentName;)Lcom/android/server/app/GameTaskInfo;
     .locals 5
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/app/GameTaskInfoProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 76
     :try_start_0
     iget-object v1, p0, Lcom/android/server/app/GameTaskInfoProvider;->mGameTaskInfoCache:Landroid/util/LruCache;
 
@@ -202,7 +181,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 78
     iget-object v2, v1, Lcom/android/server/app/GameTaskInfo;->mComponentName:Landroid/content/ComponentName;
 
     invoke-virtual {v2, p2}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
@@ -213,7 +191,6 @@
 
     const-string v2, "GameTaskInfoProvider"
 
-    .line 79
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,20 +223,17 @@
 
     goto :goto_0
 
-    .line 83
     :cond_0
     monitor-exit v0
 
     return-object v1
 
-    .line 86
     :cond_1
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 88
     invoke-virtual {p0, p1, p2}, Lcom/android/server/app/GameTaskInfoProvider;->generateGameInfo(ILandroid/content/ComponentName;)Lcom/android/server/app/GameTaskInfo;
 
     move-result-object p0
@@ -269,7 +243,6 @@
     :catchall_0
     move-exception p0
 
-    .line 86
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -283,7 +256,6 @@
 
     const/4 v0, 0x0
 
-    .line 95
     :try_start_0
     iget-object p0, p0, Lcom/android/server/app/GameTaskInfoProvider;->mActivityTaskManager:Landroid/app/IActivityTaskManager;
 
@@ -299,7 +271,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 105
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -317,7 +288,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 106
     iget v2, v1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     if-ne v2, p1, :cond_0
@@ -332,7 +302,6 @@
 
     const-string p1, "Failed to fetch running tasks"
 
-    .line 101
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0

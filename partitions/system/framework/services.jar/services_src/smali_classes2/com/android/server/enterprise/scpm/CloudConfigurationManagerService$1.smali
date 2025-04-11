@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService;)V
     .locals 0
 
-    .line 140
     iput-object p1, p0, Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService$1;->this$0:Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 143
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -37,14 +35,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService$1;->this$0:Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService;
 
     invoke-static {p0}, Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService;->-$$Nest$mtryRegister(Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService;)V
 
     goto :goto_0
 
-    .line 146
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -62,10 +58,8 @@
 
     const-string/jumbo p1, "receive ACTION_SCPM_POLICY_CLEAR_DATA intent"
 
-    .line 147
     invoke-static {v0, p1}, Lcom/samsung/android/knox/custom/utils/KnoxsdkFileLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 148
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -80,7 +74,6 @@
 
     goto :goto_0
 
-    .line 156
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -96,10 +89,8 @@
 
     const-string/jumbo p1, "receive intent: knox-sdk-mam-configuration"
 
-    .line 157
     invoke-static {v0, p1}, Lcom/samsung/android/knox/custom/utils/KnoxsdkFileLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService$1;->this$0:Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService;
 
     const-string p1, "KNOX_CUSTOM"
@@ -112,7 +103,6 @@
 
     goto :goto_0
 
-    .line 159
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -128,10 +118,8 @@
 
     const-string/jumbo p1, "receive intent: knox-remotecontrol"
 
-    .line 160
     invoke-static {v0, p1}, Lcom/samsung/android/knox/custom/utils/KnoxsdkFileLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService$1;->this$0:Lcom/android/server/enterprise/scpm/CloudConfigurationManagerService;
 
     const-string p1, "RESTRICTION"

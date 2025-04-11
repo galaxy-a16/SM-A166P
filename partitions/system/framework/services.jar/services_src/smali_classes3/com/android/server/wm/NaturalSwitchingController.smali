@@ -20,22 +20,18 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 1
 
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 55
     iput-boolean v0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mNaturalSwitchingRunning:Z
 
-    .line 56
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/wm/NaturalSwitchingController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-void
@@ -48,20 +44,16 @@
 
     const-string v0, "[NaturalSwitchingController]"
 
-    .line 202
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 203
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 205
     invoke-virtual {p0}, Lcom/android/server/wm/NaturalSwitchingController;->isRunning()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 206
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +77,6 @@
 .method public final findTaskForFreezerSnapshotLocked(I)Lcom/android/server/wm/Task;
     .locals 2
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -98,7 +89,6 @@
 
     if-nez p0, :cond_0
 
-    .line 157
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +111,6 @@
 
     return-object p0
 
-    .line 160
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/Task;->getTopLeafTask()Lcom/android/server/wm/Task;
 
@@ -129,7 +118,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 161
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->isAnimating()Z
 
     move-result v1
@@ -154,7 +142,6 @@
 .method public finishNaturalSwitching()V
     .locals 1
 
-    .line 83
     invoke-virtual {p0}, Lcom/android/server/wm/NaturalSwitchingController;->isRunning()Z
 
     move-result v0
@@ -165,7 +152,6 @@
 
     const-string v0, "finishNaturalSwitching: failed, it\'s not running!"
 
-    .line 84
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -173,10 +159,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 87
     iput-boolean v0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mNaturalSwitchingRunning:Z
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/wm/NaturalSwitchingController;->updateWallpaper()V
 
     return-void
@@ -185,7 +169,6 @@
 .method public getSurfaceFreezerSnapshot(I)Lcom/samsung/android/multiwindow/SurfaceFreezerSnapshot;
     .locals 7
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -194,7 +177,6 @@
 
     monitor-enter v0
 
-    .line 106
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/NaturalSwitchingController;->findTaskForFreezerSnapshotLocked(I)Lcom/android/server/wm/Task;
 
@@ -206,7 +188,6 @@
 
     const-string p0, "NaturalSwitchingController"
 
-    .line 108
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -223,7 +204,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -232,7 +212,6 @@
 
     return-object v2
 
-    .line 111
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
@@ -241,14 +220,12 @@
 
     if-eqz v3, :cond_7
 
-    .line 113
     invoke-virtual {v1}, Lcom/android/server/wm/TaskFragment;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v4
 
     if-eqz v4, :cond_7
 
-    .line 114
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->getParentSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v4
@@ -257,13 +234,11 @@
 
     goto/16 :goto_3
 
-    .line 118
     :cond_1
     iget-object v4, p0, Lcom/android/server/wm/NaturalSwitchingController;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v4}, Lcom/android/server/wm/Task;->getBounds(Landroid/graphics/Rect;)V
 
-    .line 126
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v4
@@ -274,21 +249,18 @@
 
     move-result-object v4
 
-    .line 127
     invoke-virtual {v1}, Lcom/android/server/wm/Task;->getTopVisibleAppMainWindow()Lcom/android/server/wm/WindowState;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 128
     invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->hasWallpaper()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 129
     iget-object v1, v3, Lcom/android/server/wm/DisplayContent;->mWallpaperController:Lcom/android/server/wm/WallpaperController;
 
     iget-object p0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mTmpRect:Landroid/graphics/Rect;
@@ -304,7 +276,6 @@
     :cond_2
     move-object v6, v2
 
-    .line 131
     :goto_0
     monitor-exit v0
     :try_end_1
@@ -314,7 +285,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 135
     invoke-virtual {v4}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->getHardwareBuffer()Landroid/hardware/HardwareBuffer;
 
     move-result-object p0
@@ -327,7 +297,6 @@
     :goto_1
     if-eqz p0, :cond_6
 
-    .line 136
     invoke-virtual {p0}, Landroid/hardware/HardwareBuffer;->getWidth()I
 
     move-result v0
@@ -344,28 +313,23 @@
 
     goto :goto_2
 
-    .line 140
     :cond_4
     invoke-static {p0}, Landroid/graphics/GraphicBuffer;->createFromHardwareBuffer(Landroid/hardware/HardwareBuffer;)Landroid/graphics/GraphicBuffer;
 
     move-result-object v0
 
-    .line 141
     invoke-virtual {v4}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->containsSecureLayers()Z
 
     move-result v4
 
-    .line 142
     invoke-static {p0}, Lcom/android/internal/policy/TransitionAnimation;->hasProtectedContent(Landroid/hardware/HardwareBuffer;)Z
 
     move-result v5
 
-    .line 144
     invoke-static {v0}, Landroid/hardware/HardwareBuffer;->createFromGraphicBuffer(Landroid/graphics/GraphicBuffer;)Landroid/hardware/HardwareBuffer;
 
     move-result-object p0
 
-    .line 143
     invoke-static {p0, v2}, Landroid/graphics/Bitmap;->wrapHardwareBuffer(Landroid/hardware/HardwareBuffer;Landroid/graphics/ColorSpace;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -374,7 +338,6 @@
 
     const-string p0, "NaturalSwitchingController"
 
-    .line 146
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -393,7 +356,6 @@
 
     return-object v2
 
-    .line 150
     :cond_5
     new-instance v0, Lcom/samsung/android/multiwindow/SurfaceFreezerSnapshot;
 
@@ -411,7 +373,6 @@
     :goto_2
     const-string p0, "NaturalSwitchingController"
 
-    .line 137
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -435,7 +396,6 @@
     :try_start_2
     const-string p0, "NaturalSwitchingController"
 
-    .line 115
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -452,7 +412,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -464,7 +423,6 @@
     :catchall_0
     move-exception p0
 
-    .line 131
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -478,14 +436,12 @@
 .method public initialize()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public isRunning()Z
     .locals 0
 
-    .line 97
     iget-boolean p0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mNaturalSwitchingRunning:Z
 
     return p0
@@ -494,7 +450,6 @@
 .method public preventNaturalSwitching(I)Z
     .locals 4
 
-    .line 166
     iget-object v0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -503,7 +458,6 @@
 
     move-result-object v0
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -514,7 +468,6 @@
 
     move-result-object p0
 
-    .line 168
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->isSplitScreenModeActivated()Z
 
     move-result p1
@@ -523,7 +476,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 169
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->getRootMainStageTask()Lcom/android/server/wm/Task;
 
     move-result-object p0
@@ -536,14 +488,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 171
     invoke-virtual {p0}, Lcom/android/server/wm/Task;->topRunningActivityLocked()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     if-eqz p0, :cond_0
@@ -552,7 +502,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 173
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p0
@@ -561,7 +510,6 @@
 
     return v2
 
-    .line 177
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->getRootSideStageTask()Lcom/android/server/wm/Task;
 
@@ -569,7 +517,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 178
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->getRootSideStageTask()Lcom/android/server/wm/Task;
 
     move-result-object p0
@@ -580,14 +527,12 @@
 
     if-eqz p0, :cond_3
 
-    .line 180
     invoke-virtual {p0}, Lcom/android/server/wm/Task;->topRunningActivityLocked()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    .line 181
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     if-eqz p0, :cond_3
@@ -596,7 +541,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 182
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p0
@@ -608,7 +552,6 @@
     :cond_1
     if-eqz p0, :cond_3
 
-    .line 187
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result p0
@@ -617,12 +560,10 @@
 
     if-ne p0, p1, :cond_3
 
-    .line 188
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->getVisibleTasks()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 189
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p1
@@ -632,21 +573,18 @@
     :goto_0
     if-ltz p1, :cond_3
 
-    .line 191
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/wm/Task;
 
-    .line 192
     invoke-virtual {v0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result v3
 
     if-ne v3, v2, :cond_2
 
-    .line 193
     invoke-virtual {v0}, Lcom/android/server/wm/TaskFragment;->supportsMultiWindow()Z
 
     move-result p0
@@ -667,7 +605,6 @@
 .method public setWindowManager(Lcom/android/server/wm/WindowManagerService;)V
     .locals 0
 
-    .line 69
     iput-object p1, p0, Lcom/android/server/wm/NaturalSwitchingController;->mWm:Lcom/android/server/wm/WindowManagerService;
 
     return-void
@@ -676,7 +613,6 @@
 .method public startNaturalSwitching()Z
     .locals 1
 
-    .line 73
     invoke-virtual {p0}, Lcom/android/server/wm/NaturalSwitchingController;->isRunning()Z
 
     move-result v0
@@ -687,7 +623,6 @@
 
     const-string/jumbo v0, "startNaturalSwitching: failed, already running!"
 
-    .line 74
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -697,10 +632,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 77
     iput-boolean v0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mNaturalSwitchingRunning:Z
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/wm/NaturalSwitchingController;->updateWallpaper()V
 
     return v0
@@ -709,7 +642,6 @@
 .method public final updateWallpaper()V
     .locals 2
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mWm:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
@@ -722,7 +654,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/wm/DisplayContent;->mWallpaperMayChange:Z
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/wm/NaturalSwitchingController;->mWm:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->requestTraversal()V

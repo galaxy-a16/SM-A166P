@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/biometrics/BiometricSensor;
 
     invoke-static {p1}, Lcom/android/server/biometrics/AuthSession;->$r8$lambda$g_WQhuCX_xuytfNBqr0kBkA02GA(Lcom/android/server/biometrics/BiometricSensor;)Ljava/lang/Boolean;

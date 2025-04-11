@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/usage/UsageStatsService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1992
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
-    .line 1993
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,14 +23,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 9
 
-    .line 1998
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2097
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     goto/16 :goto_4
@@ -40,15 +36,12 @@
     :pswitch_0
     const/16 p1, 0x9
 
-    .line 2054
     invoke-virtual {p0, p1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2068
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 2069
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {v0}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$fgetmPendingLaunchTimeChangePackages(Lcom/android/server/usage/UsageStatsService;)Landroid/util/SparseSetArray;
@@ -57,7 +50,6 @@
 
     monitor-enter v0
 
-    .line 2070
     :try_start_0
     iget-object v2, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -69,7 +61,6 @@
 
     move-result v2
 
-    .line 2071
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -79,10 +70,8 @@
     :goto_0
     if-ltz v2, :cond_5
 
-    .line 2073
     invoke-virtual {p1}, Landroid/util/ArraySet;->clear()V
 
-    .line 2075
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {v0}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$fgetmPendingLaunchTimeChangePackages(Lcom/android/server/usage/UsageStatsService;)Landroid/util/SparseSetArray;
@@ -91,7 +80,6 @@
 
     monitor-enter v0
 
-    .line 2076
     :try_start_1
     iget-object v3, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -103,7 +91,6 @@
 
     move-result v3
 
-    .line 2077
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {v4}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$fgetmPendingLaunchTimeChangePackages(Lcom/android/server/usage/UsageStatsService;)Landroid/util/SparseSetArray;
@@ -116,7 +103,6 @@
 
     invoke-virtual {p1, v4}, Landroid/util/ArraySet;->addAll(Landroid/util/ArraySet;)V
 
-    .line 2078
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {v4}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$fgetmPendingLaunchTimeChangePackages(Lcom/android/server/usage/UsageStatsService;)Landroid/util/SparseSetArray;
@@ -125,12 +111,10 @@
 
     invoke-virtual {v4, v3}, Landroid/util/SparseSetArray;->remove(I)V
 
-    .line 2079
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2083
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result v0
@@ -140,22 +124,18 @@
     :goto_1
     if-ltz v0, :cond_1
 
-    .line 2084
     invoke-virtual {p1, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    .line 2085
     iget-object v5, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
-    .line 2086
     invoke-virtual {v5, v3, v4}, Lcom/android/server/usage/UsageStatsService;->getEstimatedPackageLaunchTime(ILjava/lang/String;)J
 
     move-result-wide v5
 
-    .line 2088
     iget-object v7, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {v7}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$fgetmEstimatedLaunchTimeChangedListeners(Lcom/android/server/usage/UsageStatsService;)Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -179,7 +159,6 @@
 
     check-cast v8, Landroid/app/usage/UsageStatsManagerInternal$EstimatedLaunchTimeChangedListener;
 
-    .line 2089
     invoke-interface {v8, v3, v4, v5, v6}, Landroid/app/usage/UsageStatsManagerInternal$EstimatedLaunchTimeChangedListener;->onEstimatedLaunchTimeChanged(ILjava/lang/String;J)V
 
     goto :goto_2
@@ -197,7 +176,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2079
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -208,7 +186,6 @@
     :catchall_1
     move-exception p0
 
-    .line 2071
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -216,18 +193,15 @@
 
     throw p0
 
-    .line 2049
     :pswitch_1
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2050
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {p0, p1}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$mhandleEstimatedLaunchTimesOnUserUnlock(Lcom/android/server/usage/UsageStatsService;I)V
 
     goto/16 :goto_4
 
-    .line 2044
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -237,13 +211,11 @@
 
     monitor-enter v0
 
-    .line 2045
     :try_start_4
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {p0}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$mloadGlobalComponentUsageLocked(Lcom/android/server/usage/UsageStatsService;)V
 
-    .line 2046
     monitor-exit v0
 
     goto/16 :goto_4
@@ -257,7 +229,6 @@
 
     throw p0
 
-    .line 2023
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -271,7 +242,6 @@
 
     goto/16 :goto_4
 
-    .line 2010
     :pswitch_4
     :try_start_5
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -287,7 +257,6 @@
     :catch_0
     move-exception v0
 
-    .line 2012
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService;->mUserManager:Landroid/os/UserManager;
@@ -302,7 +271,6 @@
 
     const-string p0, "UsageStatsService"
 
-    .line 2015
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -323,11 +291,9 @@
 
     goto/16 :goto_4
 
-    .line 2013
     :cond_2
     throw v0
 
-    .line 2003
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -339,11 +305,9 @@
 
     goto/16 :goto_4
 
-    .line 2026
     :pswitch_6
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 2027
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const/4 v2, 0x2
@@ -354,7 +318,6 @@
 
     move v1, v3
 
-    .line 2030
     :cond_3
     iget-object p1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -364,7 +327,6 @@
 
     monitor-enter v2
 
-    .line 2031
     :try_start_6
     iget-object p1, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -378,7 +340,6 @@
 
     if-eq v1, p1, :cond_4
 
-    .line 2033
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {p0}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$fgetmUidToKernelCounter(Lcom/android/server/usage/UsageStatsService;)Landroid/util/SparseIntArray;
@@ -389,7 +350,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 2035
     :try_start_7
     invoke-static {}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$sfgetKERNEL_COUNTER_FILE()Ljava/io/File;
 
@@ -424,7 +384,6 @@
     :try_start_8
     const-string p1, "UsageStatsService"
 
-    .line 2037
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -441,7 +400,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2040
     :cond_4
     :goto_3
     monitor-exit v2
@@ -457,7 +415,6 @@
 
     throw p0
 
-    .line 2020
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -467,7 +424,6 @@
 
     goto :goto_4
 
-    .line 2006
     :pswitch_8
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -475,7 +431,6 @@
 
     goto :goto_4
 
-    .line 2000
     :pswitch_9
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$H;->this$0:Lcom/android/server/usage/UsageStatsService;
 

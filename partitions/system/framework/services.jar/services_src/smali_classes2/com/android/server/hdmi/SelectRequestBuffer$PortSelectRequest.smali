@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;ILandroid/hardware/hdmi/IHdmiControlCallback;)V
     .locals 0
 
-    .line 105
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;-><init>(Lcom/android/server/hdmi/HdmiControlService;ILandroid/hardware/hdmi/IHdmiControlCallback;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiControlService;ILandroid/hardware/hdmi/IHdmiControlCallback;Lcom/android/server/hdmi/SelectRequestBuffer$PortSelectRequest-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/hdmi/SelectRequestBuffer$PortSelectRequest;-><init>(Lcom/android/server/hdmi/HdmiControlService;ILandroid/hardware/hdmi/IHdmiControlCallback;)V
 
     return-void
@@ -27,14 +25,12 @@
 .method public process()V
     .locals 2
 
-    .line 110
     invoke-virtual {p0}, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;->isLocalDeviceReady()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 111
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,14 +51,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     invoke-virtual {p0}, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 114
     iget v1, p0, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;->mId:I
 
     iget-object p0, p0, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;->mCallback:Landroid/hardware/hdmi/IHdmiControlCallback;
@@ -71,7 +65,6 @@
 
     return-void
 
-    .line 117
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;->audioSystem()Lcom/android/server/hdmi/HdmiCecLocalDeviceAudioSystem;
 
@@ -79,7 +72,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 119
     iget v1, p0, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;->mId:I
 
     iget-object p0, p0, Lcom/android/server/hdmi/SelectRequestBuffer$SelectRequest;->mCallback:Landroid/hardware/hdmi/IHdmiControlCallback;

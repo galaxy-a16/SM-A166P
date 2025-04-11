@@ -15,7 +15,6 @@
 .method public static ofFile(Ljava/io/File;)Lcom/android/server/integrity/parser/RandomAccessObject;
     .locals 1
 
-    .line 44
     new-instance v0, Lcom/android/server/integrity/parser/RandomAccessObject$RandomAccessFileObject;
 
     invoke-direct {v0, p0}, Lcom/android/server/integrity/parser/RandomAccessObject$RandomAccessFileObject;-><init>(Ljava/io/File;)V

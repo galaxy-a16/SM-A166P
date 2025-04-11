@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 4421
     iput-object p1, p0, Lcom/android/server/BatteryService$42;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 4
 
-    .line 4424
     iget-object v0, p0, Lcom/android/server/BatteryService$42;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmFullCapacityEnable(Lcom/android/server/BatteryService;)Z
@@ -42,10 +40,8 @@
 
     const/16 v0, 0x55
 
-    .line 4425
     invoke-static {v2, v0}, Lcom/android/server/BatteryService;->-$$Nest$smfileWriteInt(Ljava/lang/String;I)V
 
-    .line 4426
     iget-object p0, p0, Lcom/android/server/BatteryService$42;->this$0:Lcom/android/server/BatteryService;
 
     const-wide/16 v2, 0x55
@@ -57,10 +53,8 @@
     :cond_0
     const/16 v0, 0x64
 
-    .line 4428
     invoke-static {v2, v0}, Lcom/android/server/BatteryService;->-$$Nest$smfileWriteInt(Ljava/lang/String;I)V
 
-    .line 4429
     iget-object p0, p0, Lcom/android/server/BatteryService$42;->this$0:Lcom/android/server/BatteryService;
 
     const-wide/16 v2, 0x64

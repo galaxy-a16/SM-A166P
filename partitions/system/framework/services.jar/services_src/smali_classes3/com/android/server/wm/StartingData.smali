@@ -25,13 +25,10 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;I)V
     .locals 0
 
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/wm/StartingData;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 66
     iput p2, p0, Lcom/android/server/wm/StartingData;->mTypeParams:I
 
     return-void
@@ -45,7 +42,6 @@
 .method public hasImeSurface()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

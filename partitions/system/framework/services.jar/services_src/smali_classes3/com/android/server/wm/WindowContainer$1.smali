@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowContainer$ConfigurationMerger;Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)V
     .locals 0
 
-    .line 4274
     iput-object p1, p0, Lcom/android/server/wm/WindowContainer$1;->val$configurationMerger:Lcom/android/server/wm/WindowContainer$ConfigurationMerger;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowContainer$1;->val$receiver:Lcom/android/server/wm/WindowContainer;
@@ -35,27 +34,22 @@
 .method public onMergedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 2
 
-    .line 4278
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer$1;->val$configurationMerger:Lcom/android/server/wm/WindowContainer$ConfigurationMerger;
 
     if-eqz v0, :cond_0
 
-    .line 4279
     iget-object v1, p0, Lcom/android/server/wm/WindowContainer$1;->val$receiver:Lcom/android/server/wm/WindowContainer;
 
-    .line 4280
     invoke-virtual {v1}, Lcom/android/server/wm/ConfigurationContainer;->getRequestedOverrideConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
 
-    .line 4279
     invoke-interface {v0, p1, v1}, Lcom/android/server/wm/WindowContainer$ConfigurationMerger;->merge(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 4281
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/WindowContainer$1;->val$supplier:Lcom/android/server/wm/WindowContainer;
 
@@ -63,7 +57,6 @@
 
     move-result-object p1
 
-    .line 4282
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer$1;->val$receiver:Lcom/android/server/wm/WindowContainer;
 

@@ -24,10 +24,8 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;)V
     .locals 0
 
-    .line 73
     invoke-direct {p0}, Lcom/android/server/utils/WatchableImpl;-><init>()V
 
-    .line 74
     iput-object p1, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
     return-void
@@ -38,7 +36,6 @@
 .method public componentExists(Landroid/content/ComponentName;)Z
     .locals 2
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mActivities:Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
 
     iget-object v0, v0, Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;->mActivities:Ljava/util/HashMap;
@@ -55,7 +52,6 @@
 
     return v1
 
-    .line 83
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mReceivers:Lcom/android/server/pm/resolution/ComponentResolver$ReceiverIntentResolver;
 
@@ -71,7 +67,6 @@
 
     return v1
 
-    .line 87
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mServices:Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
 
@@ -87,7 +82,6 @@
 
     return v1
 
-    .line 91
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
@@ -111,7 +105,6 @@
 .method public dumpActivityResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 7
 
-    .line 319
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mActivities:Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
 
     invoke-virtual {p2}, Lcom/android/server/pm/DumpState;->getTitlePrinted()Z
@@ -134,7 +127,6 @@
 
     const/4 p0, 0x1
 
-    .line 321
     invoke-virtual {p2, p0}, Lcom/android/server/pm/DumpState;->isOptionEnabled(I)Z
 
     move-result v5
@@ -145,14 +137,12 @@
 
     move-object v4, p3
 
-    .line 319
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/IntentResolver;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 322
     invoke-virtual {p2, p0}, Lcom/android/server/pm/DumpState;->setTitlePrinted(Z)V
 
     :cond_1
@@ -162,7 +152,6 @@
 .method public dumpContentProviders(Lcom/android/server/pm/Computer;Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 7
 
-    .line 360
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
     iget-object v0, v0, Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;->mProviders:Landroid/util/ArrayMap;
@@ -198,7 +187,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 361
     invoke-interface {v3}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -214,20 +202,17 @@
     :cond_0
     if-nez v2, :cond_2
 
-    .line 365
     invoke-virtual {p3}, Lcom/android/server/pm/DumpState;->onTitlePrinted()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 366
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     :cond_1
     const-string v2, "Registered ContentProviders:"
 
-    .line 368
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     move v2, v4
@@ -235,10 +220,8 @@
     :cond_2
     const-string v4, "  "
 
-    .line 371
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 372
     invoke-interface {v3}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -251,13 +234,10 @@
 
     const-string v4, ":"
 
-    .line 373
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 374
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 375
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -266,7 +246,6 @@
 
     goto :goto_0
 
-    .line 379
     :cond_3
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProvidersByAuthority:Landroid/util/ArrayMap;
 
@@ -292,7 +271,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 380
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -301,7 +279,6 @@
 
     if-eqz p4, :cond_5
 
-    .line 381
     invoke-interface {v2}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -317,20 +294,17 @@
     :cond_5
     if-nez v1, :cond_7
 
-    .line 385
     invoke-virtual {p3}, Lcom/android/server/pm/DumpState;->onTitlePrinted()Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    .line 386
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     :cond_6
     const-string v1, "ContentProvider Authorities:"
 
-    .line 388
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     move v1, v4
@@ -338,10 +312,8 @@
     :cond_7
     const-string v3, "  ["
 
-    .line 391
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 392
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -352,20 +324,16 @@
 
     const-string v0, "]:"
 
-    .line 393
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 394
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 395
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 397
     invoke-interface {v2}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -378,10 +346,8 @@
 
     const-string v2, "      applicationInfo="
 
-    .line 400
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 401
     invoke-static {v0}, Lcom/android/server/pm/parsing/pkg/AndroidPackageUtils;->generateAppInfoWithoutState(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -397,7 +363,6 @@
 .method public dumpProviderResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 7
 
-    .line 329
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
     invoke-virtual {p2}, Lcom/android/server/pm/DumpState;->getTitlePrinted()Z
@@ -420,7 +385,6 @@
 
     const/4 p0, 0x1
 
-    .line 331
     invoke-virtual {p2, p0}, Lcom/android/server/pm/DumpState;->isOptionEnabled(I)Z
 
     move-result v5
@@ -431,14 +395,12 @@
 
     move-object v4, p3
 
-    .line 329
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/IntentResolver;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 332
     invoke-virtual {p2, p0}, Lcom/android/server/pm/DumpState;->setTitlePrinted(Z)V
 
     :cond_1
@@ -448,7 +410,6 @@
 .method public dumpReceiverResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 7
 
-    .line 339
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mReceivers:Lcom/android/server/pm/resolution/ComponentResolver$ReceiverIntentResolver;
 
     invoke-virtual {p2}, Lcom/android/server/pm/DumpState;->getTitlePrinted()Z
@@ -471,7 +432,6 @@
 
     const/4 p0, 0x1
 
-    .line 341
     invoke-virtual {p2, p0}, Lcom/android/server/pm/DumpState;->isOptionEnabled(I)Z
 
     move-result v5
@@ -482,14 +442,12 @@
 
     move-object v4, p3
 
-    .line 339
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/IntentResolver;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 342
     invoke-virtual {p2, p0}, Lcom/android/server/pm/DumpState;->setTitlePrinted(Z)V
 
     :cond_1
@@ -499,7 +457,6 @@
 .method public dumpServicePermissions(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;)V
     .locals 2
 
-    .line 408
     invoke-virtual {p2}, Lcom/android/server/pm/DumpState;->onTitlePrinted()Z
 
     move-result p2
@@ -511,18 +468,14 @@
     :cond_0
     const-string p2, "Service permissions:"
 
-    .line 409
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 411
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mServices:Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
 
-    .line 412
     invoke-virtual {p0}, Lcom/android/server/IntentResolver;->filterIterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    .line 413
     :cond_1
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -531,19 +484,16 @@
 
     if-eqz p2, :cond_2
 
-    .line 414
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Landroid/util/Pair;
 
-    .line 415
     iget-object p2, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p2, Lcom/android/server/pm/pkg/component/ParsedService;
 
-    .line 417
     invoke-interface {p2}, Lcom/android/server/pm/pkg/component/ParsedService;->getPermission()Ljava/lang/String;
 
     move-result-object v0
@@ -552,10 +502,8 @@
 
     const-string v1, "    "
 
-    .line 419
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 420
     invoke-interface {p2}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p2
@@ -568,10 +516,8 @@
 
     const-string p2, ": "
 
-    .line 421
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 422
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
@@ -583,7 +529,6 @@
 .method public dumpServiceResolvers(Ljava/io/PrintWriter;Lcom/android/server/pm/DumpState;Ljava/lang/String;)V
     .locals 7
 
-    .line 349
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mServices:Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
 
     invoke-virtual {p2}, Lcom/android/server/pm/DumpState;->getTitlePrinted()Z
@@ -606,7 +551,6 @@
 
     const/4 p0, 0x1
 
-    .line 351
     invoke-virtual {p2, p0}, Lcom/android/server/pm/DumpState;->isOptionEnabled(I)Z
 
     move-result v5
@@ -617,14 +561,12 @@
 
     move-object v4, p3
 
-    .line 349
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/IntentResolver;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 352
     invoke-virtual {p2, p0}, Lcom/android/server/pm/DumpState;->setTitlePrinted(Z)V
 
     :cond_1
@@ -634,7 +576,6 @@
 .method public getActivity(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedActivity;
     .locals 0
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mActivities:Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
 
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;->mActivities:Ljava/util/HashMap;
@@ -651,7 +592,6 @@
 .method public getProvider(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedProvider;
     .locals 0
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;->mProviders:Landroid/util/ArrayMap;
@@ -668,7 +608,6 @@
 .method public getReceiver(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedActivity;
     .locals 0
 
-    .line 109
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mReceivers:Lcom/android/server/pm/resolution/ComponentResolver$ReceiverIntentResolver;
 
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;->mActivities:Ljava/util/HashMap;
@@ -685,7 +624,6 @@
 .method public getService(Landroid/content/ComponentName;)Lcom/android/server/pm/pkg/component/ParsedService;
     .locals 0
 
-    .line 115
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mServices:Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
 
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;->mServices:Ljava/util/HashMap;
@@ -702,7 +640,6 @@
 .method public isActivityDefined(Landroid/content/ComponentName;)Z
     .locals 0
 
-    .line 123
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mActivities:Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
 
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;->mActivities:Ljava/util/HashMap;
@@ -727,7 +664,6 @@
 .method public queryActivities(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
     .locals 7
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mActivities:Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
 
     move-object v1, p1
@@ -750,7 +686,6 @@
 .method public queryActivities(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
     .locals 8
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mActivities:Lcom/android/server/pm/resolution/ComponentResolver$ActivityIntentResolver;
 
     move-object v1, p1
@@ -775,7 +710,6 @@
 .method public queryProvider(Lcom/android/server/pm/Computer;Ljava/lang/String;JI)Landroid/content/pm/ProviderInfo;
     .locals 8
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProvidersByAuthority:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -792,7 +726,6 @@
 
     return-object p0
 
-    .line 150
     :cond_0
     invoke-interface {v1}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getPackageName()Ljava/lang/String;
 
@@ -806,7 +739,6 @@
 
     return-object p0
 
-    .line 154
     :cond_1
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
@@ -816,7 +748,6 @@
 
     return-object p0
 
-    .line 158
     :cond_2
     invoke-interface {p1, p5}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
@@ -832,7 +763,6 @@
 
     move-object v7, p1
 
-    .line 159
     invoke-static/range {v2 .. v7}, Lcom/android/server/pm/parsing/PackageInfoUtils;->generateApplicationInfo(Lcom/android/server/pm/pkg/AndroidPackage;JLcom/android/server/pm/pkg/PackageUserStateInternal;ILcom/android/server/pm/pkg/PackageStateInternal;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v5
@@ -850,7 +780,6 @@
 
     move-object v7, p1
 
-    .line 164
     invoke-static/range {v0 .. v7}, Lcom/android/server/pm/parsing/PackageInfoUtils;->generateProviderInfo(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/component/ParsedProvider;JLcom/android/server/pm/pkg/PackageUserStateInternal;Landroid/content/pm/ApplicationInfo;ILcom/android/server/pm/pkg/PackageStateInternal;)Landroid/content/pm/ProviderInfo;
 
     move-result-object p0
@@ -861,7 +790,6 @@
 .method public queryProviders(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
     .locals 7
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
     move-object v1, p1
@@ -884,7 +812,6 @@
 .method public queryProviders(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
     .locals 8
 
-    .line 180
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
     move-object v1, p1
@@ -917,7 +844,6 @@
 
     move/from16 v11, p7
 
-    .line 189
     iget-object v3, v0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {v3, v11}, Lcom/android/server/pm/UserManagerService;->exists(I)Z
@@ -930,7 +856,6 @@
 
     return-object v4
 
-    .line 194
     :cond_0
     iget-object v3, v0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
@@ -949,7 +874,6 @@
     :goto_0
     if-ltz v12, :cond_c
 
-    .line 195
     iget-object v3, v0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProviders:Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;
 
     iget-object v3, v3, Lcom/android/server/pm/resolution/ComponentResolver$ProviderIntentResolver;->mProviders:Landroid/util/ArrayMap;
@@ -962,7 +886,6 @@
 
     check-cast v10, Lcom/android/server/pm/pkg/component/ParsedProvider;
 
-    .line 196
     invoke-interface {v10}, Lcom/android/server/pm/pkg/component/ParsedProvider;->getAuthority()Ljava/lang/String;
 
     move-result-object v3
@@ -977,7 +900,6 @@
 
     goto/16 :goto_4
 
-    .line 200
     :cond_2
     invoke-interface {v10}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getPackageName()Ljava/lang/String;
 
@@ -994,7 +916,6 @@
     :goto_2
     goto :goto_1
 
-    .line 205
     :cond_3
     invoke-interface {v15}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
@@ -1007,7 +928,6 @@
     :cond_4
     if-eqz v1, :cond_5
 
-    .line 210
     invoke-interface {v10}, Lcom/android/server/pm/pkg/component/ParsedMainComponent;->getProcessName()Ljava/lang/String;
 
     move-result-object v3
@@ -1018,7 +938,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 211
     invoke-interface/range {v16 .. v16}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
     move-result v3
@@ -1039,7 +958,6 @@
     :cond_6
     if-eqz v2, :cond_7
 
-    .line 215
     invoke-interface {v10}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v3
@@ -1055,7 +973,6 @@
     :cond_7
     if-nez v4, :cond_8
 
-    .line 219
     new-instance v4, Lcom/android/server/pm/parsing/PackageInfoUtils$CachedApplicationInfoGenerator;
 
     invoke-direct {v4}, Lcom/android/server/pm/parsing/PackageInfoUtils$CachedApplicationInfoGenerator;-><init>()V
@@ -1063,7 +980,6 @@
     :cond_8
     move-object/from16 v17, v4
 
-    .line 221
     invoke-interface {v15, v11}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v18
@@ -1080,7 +996,6 @@
 
     move-object v9, v15
 
-    .line 223
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/pm/parsing/PackageInfoUtils$CachedApplicationInfoGenerator;->generate(Lcom/android/server/pm/pkg/AndroidPackage;JLcom/android/server/pm/pkg/PackageUserStateInternal;ILcom/android/server/pm/pkg/PackageStateInternal;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v8
@@ -1102,7 +1017,6 @@
 
     move-object v10, v15
 
-    .line 228
     invoke-static/range {v3 .. v10}, Lcom/android/server/pm/parsing/PackageInfoUtils;->generateProviderInfo(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/component/ParsedProvider;JLcom/android/server/pm/pkg/PackageUserStateInternal;Landroid/content/pm/ApplicationInfo;ILcom/android/server/pm/pkg/PackageStateInternal;)Landroid/content/pm/ProviderInfo;
 
     move-result-object v3
@@ -1117,14 +1031,12 @@
     :cond_a
     if-nez v13, :cond_b
 
-    .line 234
     new-instance v13, Ljava/util/ArrayList;
 
     add-int/lit8 v4, v12, 0x1
 
     invoke-direct {v13, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 236
     :cond_b
     invoke-interface {v13, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1142,7 +1054,6 @@
 .method public queryReceivers(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
     .locals 7
 
-    .line 245
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mReceivers:Lcom/android/server/pm/resolution/ComponentResolver$ReceiverIntentResolver;
 
     move-object v1, p1
@@ -1165,7 +1076,6 @@
 .method public queryReceivers(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
     .locals 8
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mReceivers:Lcom/android/server/pm/resolution/ComponentResolver$ReceiverIntentResolver;
 
     move-object v1, p1
@@ -1190,7 +1100,6 @@
 .method public queryServices(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JI)Ljava/util/List;
     .locals 7
 
-    .line 261
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mServices:Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
 
     move-object v1, p1
@@ -1213,7 +1122,6 @@
 .method public queryServices(Lcom/android/server/pm/Computer;Landroid/content/Intent;Ljava/lang/String;JLjava/util/List;I)Ljava/util/List;
     .locals 8
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mServices:Lcom/android/server/pm/resolution/ComponentResolver$ServiceIntentResolver;
 
     move-object v1, p1
@@ -1240,7 +1148,6 @@
 
     move-object/from16 v0, p0
 
-    .line 277
     iget-object v1, v0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProvidersByAuthority:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
@@ -1254,7 +1161,6 @@
     :goto_0
     if-ltz v1, :cond_7
 
-    .line 278
     iget-object v3, v0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProvidersByAuthority:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -1265,7 +1171,6 @@
 
     check-cast v5, Lcom/android/server/pm/pkg/component/ParsedProvider;
 
-    .line 279
     invoke-interface {v5}, Lcom/android/server/pm/pkg/component/ParsedProvider;->isSyncable()Z
 
     move-result v3
@@ -1276,7 +1181,6 @@
 
     goto :goto_1
 
-    .line 283
     :cond_0
     invoke-interface {v5}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getPackageName()Ljava/lang/String;
 
@@ -1292,7 +1196,6 @@
 
     goto :goto_1
 
-    .line 288
     :cond_1
     invoke-interface {v11}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
@@ -1305,7 +1208,6 @@
     :cond_2
     if-eqz p4, :cond_3
 
-    .line 293
     invoke-interface {v11}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
     move-result v3
@@ -1324,7 +1226,6 @@
     :cond_3
     if-nez v2, :cond_4
 
-    .line 297
     new-instance v2, Lcom/android/server/pm/parsing/PackageInfoUtils$CachedApplicationInfoGenerator;
 
     invoke-direct {v2}, Lcom/android/server/pm/parsing/PackageInfoUtils$CachedApplicationInfoGenerator;-><init>()V
@@ -1332,7 +1233,6 @@
     :cond_4
     move/from16 v3, p5
 
-    .line 299
     invoke-interface {v11, v3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v8
@@ -1349,7 +1249,6 @@
 
     move-object/from16 v19, v11
 
-    .line 301
     invoke-virtual/range {v13 .. v19}, Lcom/android/server/pm/parsing/PackageInfoUtils$CachedApplicationInfoGenerator;->generate(Lcom/android/server/pm/pkg/AndroidPackage;JLcom/android/server/pm/pkg/PackageUserStateInternal;ILcom/android/server/pm/pkg/PackageStateInternal;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v9
@@ -1368,7 +1267,6 @@
 
     move/from16 v10, p5
 
-    .line 306
     invoke-static/range {v4 .. v11}, Lcom/android/server/pm/parsing/PackageInfoUtils;->generateProviderInfo(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/component/ParsedProvider;JLcom/android/server/pm/pkg/PackageUserStateInternal;Landroid/content/pm/ApplicationInfo;ILcom/android/server/pm/pkg/PackageStateInternal;)Landroid/content/pm/ProviderInfo;
 
     move-result-object v4
@@ -1377,7 +1275,6 @@
 
     goto :goto_2
 
-    .line 311
     :cond_6
     iget-object v5, v0, Lcom/android/server/pm/resolution/ComponentResolverBase;->mProvidersByAuthority:Landroid/util/ArrayMap;
 
@@ -1393,7 +1290,6 @@
 
     move-object/from16 v5, p3
 
-    .line 312
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_3

@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 40
     invoke-direct {p0}, Lcom/android/server/location/injector/PackageResetHelper;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mContext:Landroid/content/Context;
 
     return-void
@@ -27,7 +25,6 @@
 .method public onRegister()V
     .locals 2
 
-    .line 46
     iget-object v0, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v0, :cond_0
@@ -42,7 +39,6 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 47
     new-instance v0, Lcom/android/server/location/injector/SystemPackageResetHelper$Receiver;
 
     const/4 v1, 0x0
@@ -51,37 +47,30 @@
 
     iput-object v0, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 49
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 50
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 51
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.PACKAGE_RESTARTED"
 
-    .line 52
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.QUERY_PACKAGE_RESTART"
 
-    .line 53
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo v1, "package"
 
-    .line 54
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 60
     iget-object v1, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -94,7 +83,6 @@
 .method public onUnregister()V
     .locals 2
 
-    .line 65
     iget-object v0, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
@@ -109,7 +97,6 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -118,7 +105,6 @@
 
     const/4 v0, 0x0
 
-    .line 67
     iput-object v0, p0, Lcom/android/server/location/injector/SystemPackageResetHelper;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-void

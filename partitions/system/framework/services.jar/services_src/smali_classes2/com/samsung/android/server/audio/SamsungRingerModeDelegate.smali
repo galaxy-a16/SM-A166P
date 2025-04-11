@@ -20,7 +20,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 47
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -29,7 +28,6 @@
 
     const-string/jumbo v0, "notification"
 
-    .line 49
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -38,7 +36,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mNm:Landroid/app/NotificationManager;
 
-    .line 50
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->init(Landroid/content/Context;)V
 
     return-void
@@ -49,7 +46,6 @@
 .method public canVolumeDownEnterSilent()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -58,7 +54,6 @@
 .method public getRingerModeAffectedStreams(I)I
     .locals 0
 
-    .line 0
     or-int/lit16 p0, p1, 0x126
 
     return p0
@@ -67,7 +62,6 @@
 .method public final init(Landroid/content/Context;)V
     .locals 2
 
-    .line 64
     iget-object v0, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mNm:Landroid/app/NotificationManager;
 
     invoke-virtual {v0}, Landroid/app/NotificationManager;->getZenMode()I
@@ -76,7 +70,6 @@
 
     iput v0, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mZenMode:I
 
-    .line 65
     const-class v0, Landroid/media/AudioManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -87,7 +80,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mAudioManager:Landroid/media/AudioManagerInternal;
 
-    .line 67
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -96,7 +88,6 @@
 
     const-string/jumbo v0, "zen_mode"
 
-    .line 68
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -111,13 +102,10 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 120
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 122
     iget p1, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mZenMode:I
 
-    .line 123
     iget-object v0, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "zen_mode"
@@ -141,7 +129,6 @@
 
     return-void
 
-    .line 136
     :cond_1
     iget-object p1, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mAudioManager:Landroid/media/AudioManagerInternal;
 
@@ -149,7 +136,6 @@
 
     move-result p1
 
-    .line 139
     iget-object p0, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mAudioManager:Landroid/media/AudioManagerInternal;
 
     const-string v0, "SamsungRingerModeDelegate"
@@ -162,7 +148,6 @@
 .method public onSetRingerModeExternal(IILjava/lang/String;ILandroid/media/VolumePolicy;)I
     .locals 0
 
-    .line 0
     return p2
 .end method
 
@@ -179,7 +164,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/server/audio/SamsungRingerModeDelegate;->mNm:Landroid/app/NotificationManager;
 
@@ -199,7 +183,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "SamsungRingerModeDelegate"
 
     return-object p0

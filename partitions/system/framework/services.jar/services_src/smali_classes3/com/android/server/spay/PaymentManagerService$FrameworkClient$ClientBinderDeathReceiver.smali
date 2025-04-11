@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$mdeleteClient(Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->deleteClient()V
 
     return-void
@@ -25,7 +24,6 @@
 .method public constructor <init>(Lcom/android/server/spay/PaymentManagerService$FrameworkClient;)V
     .locals 0
 
-    .line 146
     iput-object p1, p0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->this$1:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +40,8 @@
 
     const-string v1, "Error: Framework App dead, unloading loaded TAs"
 
-    .line 151
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     invoke-virtual {p0}, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->deleteClient()V
 
     return-void
@@ -59,7 +55,6 @@
     :try_start_0
     const-string v0, "PaymentManagerService"
 
-    .line 156
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +75,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->this$1:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     iget-object v0, v0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;->mCommnInfo:Landroid/spay/PaymentTZServiceCommnInfo;
@@ -108,7 +102,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 158
     iget-object v2, p0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->this$1:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     iget-object v2, v2, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;->mCommnInfo:Landroid/spay/PaymentTZServiceCommnInfo;
@@ -123,7 +116,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -137,7 +129,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 162
     invoke-static {}, Lcom/android/server/spay/PaymentManagerService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object v1
@@ -148,7 +139,6 @@
 
     const-string v3, "PaymentManagerService"
 
-    .line 163
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +162,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 166
     iget-boolean v3, v2, Lcom/android/server/spay/TAController;->SET_QSEE_SECURE_UI:Z
 
     if-nez v3, :cond_0
@@ -181,7 +170,6 @@
 
     const-string/jumbo v3, "secureUI unsetted"
 
-    .line 167
     invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -192,7 +180,6 @@
     :cond_0
     const-wide/16 v3, 0x64
 
-    .line 172
     :try_start_2
     invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
     :try_end_2
@@ -207,7 +194,6 @@
 
     const-string v4, "Failed to put thread to sleep!"
 
-    .line 174
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
@@ -215,7 +201,6 @@
 
     goto :goto_1
 
-    .line 178
     :cond_1
     :goto_3
     invoke-virtual {v2}, Lcom/android/server/spay/TAController;->unloadTA()V
@@ -228,13 +213,11 @@
     :catch_1
     move-exception v1
 
-    .line 180
     :try_start_4
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 183
     :cond_2
     iget-object v0, p0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->this$1:Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
@@ -252,7 +235,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 184
     monitor-exit p0
 
     return-void
@@ -268,7 +250,6 @@
 .method public setReceiver(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 143
     iput-object p1, p0, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->mReceiver:Landroid/os/IBinder;
 
     return-void

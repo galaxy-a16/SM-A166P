@@ -27,7 +27,6 @@
 
     new-array v0, v0, [J
 
-    .line 45
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/notification/VibratorHelper;->DEFAULT_VIBRATE_PATTERN:[J
@@ -48,10 +47,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     const-class v0, Landroid/os/Vibrator;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -62,7 +59,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mVibrator:Landroid/os/Vibrator;
 
-    .line 56
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -79,7 +75,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mDefaultPattern:[J
 
-    .line 60
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -92,7 +87,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mFallbackPattern:[J
 
-    .line 64
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -105,7 +99,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mDefaultPwlePattern:[F
 
-    .line 66
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -130,21 +123,18 @@
 
     return-object v0
 
-    .line 112
     :cond_0
     :try_start_0
     array-length v1, p0
 
     if-eqz v1, :cond_4
 
-    .line 114
     rem-int/lit8 v2, v1, 0x3
 
     if-eqz v2, :cond_1
 
     goto :goto_1
 
-    .line 118
     :cond_1
     invoke-static {}, Landroid/os/VibrationEffect;->startWaveform()Landroid/os/VibrationEffect$WaveformBuilder;
 
@@ -157,7 +147,6 @@
 
     add-int/lit8 v4, v3, 0x2
 
-    .line 120
     aget v4, p0, v4
 
     float-to-int v4, v4
@@ -170,7 +159,6 @@
 
     aget v5, p0, v3
 
-    .line 121
     invoke-static {v5}, Landroid/os/VibrationEffect$VibrationParameter;->targetAmplitude(F)Landroid/os/VibrationEffect$VibrationParameter;
 
     move-result-object v5
@@ -183,14 +171,12 @@
 
     move-result-object v6
 
-    .line 120
     invoke-virtual {v2, v4, v5, v6}, Landroid/os/VibrationEffect$WaveformBuilder;->addTransition(Ljava/time/Duration;Landroid/os/VibrationEffect$VibrationParameter;Landroid/os/VibrationEffect$VibrationParameter;)Landroid/os/VibrationEffect$WaveformBuilder;
 
     add-int/lit8 v3, v3, 0x3
 
     goto :goto_0
 
-    .line 124
     :cond_2
     invoke-virtual {v2}, Landroid/os/VibrationEffect$WaveformBuilder;->build()Landroid/os/VibrationEffect;
 
@@ -198,17 +184,14 @@
 
     if-eqz p1, :cond_3
 
-    .line 126
     invoke-static {}, Landroid/os/VibrationEffect;->startComposition()Landroid/os/VibrationEffect$Composition;
 
     move-result-object p1
 
-    .line 127
     invoke-virtual {p1, v1}, Landroid/os/VibrationEffect$Composition;->repeatEffectIndefinitely(Landroid/os/VibrationEffect;)Landroid/os/VibrationEffect$Composition;
 
     move-result-object p1
 
-    .line 128
     invoke-virtual {p1}, Landroid/os/VibrationEffect$Composition;->compose()Landroid/os/VibrationEffect;
 
     move-result-object p0
@@ -224,7 +207,6 @@
     :goto_1
     return-object v0
 
-    .line 132
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -234,7 +216,6 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 133
     invoke-static {p0}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
 
     move-result-object p0
@@ -247,7 +228,6 @@
 
     const-string p1, "NotificationVibratorHelper"
 
-    .line 132
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -267,7 +247,6 @@
     :cond_0
     const/4 p1, -0x1
 
-    .line 83
     :goto_0
     :try_start_0
     invoke-static {p0, p1}, Landroid/os/VibrationEffect;->createWaveform([JI)Landroid/os/VibrationEffect;
@@ -278,7 +257,6 @@
 
     return-object p0
 
-    .line 86
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -288,7 +266,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 87
     invoke-static {p0}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
 
     move-result-object p0
@@ -301,7 +278,6 @@
 
     const-string p1, "NotificationVibratorHelper"
 
-    .line 86
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -313,12 +289,10 @@
 .method public static getFloatArray(Landroid/content/res/Resources;I)[F
     .locals 3
 
-    .line 187
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
-    .line 189
     :try_start_0
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->length()I
 
@@ -333,14 +307,12 @@
 
     const/high16 v2, 0x7fc00000    # Float.NaN
 
-    .line 191
     invoke-virtual {p0, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
     aput v2, v0, v1
 
-    .line 192
     invoke-static {v2}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v2
@@ -349,7 +321,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 198
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     const/4 p0, 0x0
@@ -371,14 +342,12 @@
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 199
     throw p1
 .end method
 
 .method public static getLongArray(Landroid/content/res/Resources;II[J)[J
     .locals 2
 
-    .line 203
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object p0
@@ -387,7 +356,6 @@
 
     return-object p3
 
-    .line 207
     :cond_0
     array-length p1, p0
 
@@ -398,7 +366,6 @@
     :cond_1
     array-length p2, p0
 
-    .line 208
     :goto_0
     new-array p1, p2, [J
 
@@ -407,7 +374,6 @@
     :goto_1
     if-ge p3, p2, :cond_2
 
-    .line 210
     aget v0, p0, p3
 
     int-to-long v0, v0
@@ -429,7 +395,6 @@
 
     const/16 v0, -0xf
 
-    .line 152
     iget-object p0, p0, Lcom/android/server/notification/VibratorHelper;->mVibrator:Landroid/os/Vibrator;
 
     invoke-virtual {p0, v0}, Landroid/os/Vibrator;->cancel(I)V
@@ -440,7 +405,6 @@
 .method public createDefaultVibration(Z)Landroid/os/VibrationEffect;
     .locals 1
 
-    .line 176
     iget-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mVibrator:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->hasFrequencyControl()Z
@@ -449,7 +413,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mDefaultPwlePattern:[F
 
     invoke-static {v0, p1}, Lcom/android/server/notification/VibratorHelper;->createPwleWaveformVibration([FZ)Landroid/os/VibrationEffect;
@@ -460,7 +423,6 @@
 
     return-object v0
 
-    .line 182
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/VibratorHelper;->mDefaultPattern:[J
 
@@ -474,7 +436,6 @@
 .method public createFallbackVibration(Z)Landroid/os/VibrationEffect;
     .locals 1
 
-    .line 161
     iget-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mVibrator:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->hasFrequencyControl()Z
@@ -483,7 +444,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     iget-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mFallbackPwlePattern:[F
 
     invoke-static {v0, p1}, Lcom/android/server/notification/VibratorHelper;->createPwleWaveformVibration([FZ)Landroid/os/VibrationEffect;
@@ -494,7 +454,6 @@
 
     return-object v0
 
-    .line 167
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/VibratorHelper;->mFallbackPattern:[J
 
@@ -508,7 +467,6 @@
 .method public vibrate(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;Ljava/lang/String;)V
     .locals 6
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/notification/VibratorHelper;->mVibrator:Landroid/os/Vibrator;
 
     const/16 v1, 0x3e8
@@ -519,7 +477,6 @@
 
     invoke-direct {p0, p2}, Landroid/os/VibrationAttributes$Builder;-><init>(Landroid/media/AudioAttributes;)V
 
-    .line 145
     invoke-virtual {p0}, Landroid/os/VibrationAttributes$Builder;->build()Landroid/os/VibrationAttributes;
 
     move-result-object v5
@@ -528,7 +485,6 @@
 
     move-object v4, p3
 
-    .line 144
     invoke-virtual/range {v0 .. v5}, Landroid/os/Vibrator;->vibrate(ILjava/lang/String;Landroid/os/VibrationEffect;Ljava/lang/String;Landroid/os/VibrationAttributes;)V
 
     return-void

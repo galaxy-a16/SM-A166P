@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/connectivity/IpConnectivityMetrics;)V
     .locals 0
 
-    .line 411
     iput-object p1, p0, Lcom/android/server/connectivity/IpConnectivityMetrics$LoggerImpl;->this$0:Lcom/android/server/connectivity/IpConnectivityMetrics;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/connectivity/IpConnectivityMetrics;Lcom/android/server/connectivity/IpConnectivityMetrics$LoggerImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/IpConnectivityMetrics$LoggerImpl;-><init>(Lcom/android/server/connectivity/IpConnectivityMetrics;)V
 
     return-void

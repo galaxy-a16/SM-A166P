@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverServiceManager;I)V
     .locals 0
 
-    .line 205
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     iput p2, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->val$type:I
@@ -31,7 +30,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 10
 
-    .line 208
     invoke-static {}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -58,7 +56,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fgetmLock(Lcom/android/server/sepunion/cover/CoverServiceManager;)Ljava/lang/Object;
@@ -67,7 +64,6 @@
 
     monitor-enter v0
 
-    .line 211
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
@@ -77,15 +73,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 213
     invoke-virtual {v1}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->unbind()V
 
-    .line 214
     iget-object v2, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {v2, v1}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$mremoveCoverServiceLocked(Lcom/android/server/sepunion/cover/CoverServiceManager;Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)V
 
-    .line 216
     :cond_0
     invoke-static {}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$sfgetSYSTEM_UI_COVER()Landroid/content/ComponentName;
 
@@ -109,7 +102,6 @@
 
     goto :goto_0
 
-    .line 221
     :cond_1
     new-instance v1, Lcom/android/server/sepunion/cover/CoverServiceManager$SViewCoverBaseServiceInfo;
 
@@ -131,7 +123,6 @@
 
     goto :goto_1
 
-    .line 218
     :cond_2
     :goto_0
     new-instance v8, Lcom/android/server/sepunion/cover/CoverServiceManager$SemCoverServiceInfo;
@@ -142,7 +133,6 @@
 
     new-instance v7, Landroid/os/UserHandle;
 
-    .line 219
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
@@ -161,7 +151,6 @@
 
     move-object v1, v8
 
-    .line 224
     :goto_1
     iget-object p2, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
@@ -189,7 +178,6 @@
 
     invoke-static {p2, p1}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$mupdateBindHistoryLocked(Lcom/android/server/sepunion/cover/CoverServiceManager;Ljava/lang/String;)V
 
-    .line 226
     iget-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {p1}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fgetmActiveServices(Lcom/android/server/sepunion/cover/CoverServiceManager;)Ljava/util/ArrayList;
@@ -198,7 +186,6 @@
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 228
     iget-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {v1}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->-$$Nest$fgetcomponent(Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)Landroid/content/ComponentName;
@@ -207,22 +194,18 @@
 
     invoke-static {p1, p2}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$maddBindingServiceLocked(Lcom/android/server/sepunion/cover/CoverServiceManager;Landroid/content/ComponentName;)V
 
-    .line 229
     iget-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fputmIsUserSwitching(Lcom/android/server/sepunion/cover/CoverServiceManager;Z)V
 
-    .line 230
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 231
     invoke-virtual {v1}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->systemReady()V
 
-    .line 232
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {p0}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fgetmCoverStateProvider(Lcom/android/server/sepunion/cover/CoverServiceManager;)Lcom/android/server/sepunion/cover/CoverServiceManager$OnCoverStateProvider;
@@ -240,7 +223,6 @@
     :catchall_0
     move-exception p0
 
-    .line 230
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -252,7 +234,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 5
 
-    .line 237
     invoke-static {}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -273,7 +254,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fgetmLock(Lcom/android/server/sepunion/cover/CoverServiceManager;)Ljava/lang/Object;
@@ -282,7 +262,6 @@
 
     monitor-enter v0
 
-    .line 240
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
@@ -292,15 +271,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 242
     invoke-virtual {v1}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->unbind()V
 
-    .line 243
     iget-object v2, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {v2, v1}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$mremoveCoverServiceLocked(Lcom/android/server/sepunion/cover/CoverServiceManager;Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)V
 
-    .line 244
     iget-object v2, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -327,7 +303,6 @@
 
     invoke-static {v2, p1}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$mupdateBindHistoryLocked(Lcom/android/server/sepunion/cover/CoverServiceManager;Ljava/lang/String;)V
 
-    .line 245
     invoke-static {v1}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->-$$Nest$fgettype(Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)I
 
     move-result p1
@@ -353,7 +328,6 @@
 
     move-result-object v2
 
-    .line 247
     invoke-virtual {p1, v2}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -367,7 +341,6 @@
 
     move-result-object v2
 
-    .line 248
     invoke-static {p1, v2}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$mfindCoverServiceByComponentLocked(Lcom/android/server/sepunion/cover/CoverServiceManager;Landroid/content/ComponentName;)I
 
     move-result p1
@@ -378,7 +351,6 @@
 
     if-ne p1, v2, :cond_4
 
-    .line 250
     :cond_2
     invoke-virtual {v1}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->disconnect()Z
 
@@ -386,7 +358,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 251
     invoke-static {}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -411,14 +382,12 @@
 
     invoke-static {p1, v2}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$2;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {p0, v1}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$mreconnectCoverService(Lcom/android/server/sepunion/cover/CoverServiceManager;Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)V
 
     goto :goto_0
 
-    .line 256
     :cond_3
     invoke-static {}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -444,7 +413,6 @@
 
     invoke-static {p0, p1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     :cond_4
     :goto_0
     monitor-exit v0

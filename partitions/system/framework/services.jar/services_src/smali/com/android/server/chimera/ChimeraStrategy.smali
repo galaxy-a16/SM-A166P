@@ -41,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMemFreeTarget(Lcom/android/server/chimera/ChimeraStrategy;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mMemFreeTarget:J
 
     return-wide v0
@@ -50,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRecentAppManager(Lcom/android/server/chimera/ChimeraStrategy;)Lcom/android/server/chimera/ChimeraRecentAppManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mRecentAppManager:Lcom/android/server/chimera/ChimeraRecentAppManager;
 
     return-object p0
@@ -59,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraStrategy;)Lcom/android/server/chimera/SystemRepository;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     return-object p0
@@ -68,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$fputmMemFreeTarget(Lcom/android/server/chimera/ChimeraStrategy;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mMemFreeTarget:J
 
     return-void
@@ -77,34 +73,26 @@
 .method public constructor <init>(Lcom/android/server/chimera/ChimeraRecentAppManager;Lcom/android/server/chimera/SystemRepository;Lcom/android/server/chimera/SettingRepository;)V
     .locals 1
 
-    .line 276
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string/jumbo v0, "persist.config.chimera.protected_count_on_lmkd"
 
-    .line 29
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->PROPERTY_NAME_PROTECTED_COUNT_LMKD:Ljava/lang/String;
 
     const-string/jumbo v0, "persist.config.chimera.protected_count_on_home"
 
-    .line 30
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->PROPERTY_NAME_PROTECTED_COUNT_HOME:Ljava/lang/String;
 
     const-string/jumbo v0, "ro.slmk.chimera_strategy_%dgb"
 
-    .line 31
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->PROPERTY_NAME_STRATEGY:Ljava/lang/String;
 
-    .line 277
     iput-object p1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mRecentAppManager:Lcom/android/server/chimera/ChimeraRecentAppManager;
 
-    .line 278
     iput-object p2, p0, Lcom/android/server/chimera/ChimeraStrategy;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
-    .line 279
     iput-object p3, p0, Lcom/android/server/chimera/ChimeraStrategy;->mSettingRepository:Lcom/android/server/chimera/SettingRepository;
 
-    .line 280
     invoke-virtual {p0}, Lcom/android/server/chimera/ChimeraStrategy;->initializeDefaultParameters()V
 
     return-void
@@ -117,7 +105,6 @@
 
     if-eqz p2, :cond_a
 
-    .line 410
     array-length v0, p2
 
     if-nez v0, :cond_0
@@ -129,7 +116,6 @@
 
     const/4 v1, 0x0
 
-    .line 414
     aget-object v2, p2, v1
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -138,30 +124,25 @@
 
     if-eqz v0, :cond_1
 
-    .line 415
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ChimeraStrategy;->dumpInfo(Ljava/io/PrintWriter;)V
 
     goto/16 :goto_2
 
-    .line 416
     :cond_1
     array-length v0, p2
 
     if-lez v0, :cond_a
 
-    .line 417
     aget-object v0, p2, v1
 
     const-string v1, "info"
 
-    .line 418
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 419
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ChimeraStrategy;->dumpInfo(Ljava/io/PrintWriter;)V
 
     goto/16 :goto_2
@@ -169,7 +150,6 @@
     :cond_2
     const-string/jumbo v1, "mem"
 
-    .line 420
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -182,19 +162,15 @@
 
     if-le v1, v2, :cond_3
 
-    .line 422
     :try_start_0
     aget-object p2, p2, v2
 
-    .line 423
     invoke-static {p2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 424
     invoke-virtual {p0, v0, v1}, Lcom/android/server/chimera/ChimeraStrategy;->setTargetMem(J)V
 
-    .line 425
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,7 +194,6 @@
     :catch_0
     move-exception p0
 
-    .line 427
     invoke-virtual {p0}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -230,7 +205,6 @@
     :cond_3
     const-string/jumbo v1, "set_protected_count_on_lmkd"
 
-    .line 429
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -241,7 +215,6 @@
 
     if-le v1, v2, :cond_4
 
-    .line 431
     :try_start_1
     aget-object p2, p2, v2
 
@@ -258,14 +231,12 @@
     :catch_1
     move-exception p2
 
-    .line 433
     invoke-virtual {p2}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 435
     :goto_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -290,7 +261,6 @@
     :cond_4
     const-string/jumbo v1, "set_protected_count_on_home"
 
-    .line 436
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -301,7 +271,6 @@
 
     if-le v1, v2, :cond_5
 
-    .line 438
     :try_start_2
     aget-object p2, p2, v2
 
@@ -318,14 +287,12 @@
     :catch_2
     move-exception p2
 
-    .line 440
     invoke-virtual {p2}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 442
     :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -350,19 +317,16 @@
     :cond_5
     const-string v1, "enable_dynamic"
 
-    .line 443
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    .line 444
     invoke-virtual {p0}, Lcom/android/server/chimera/ChimeraStrategy;->enableDynamicTargetFree()V
 
     const-string p0, "enable dynamic memfreetarget"
 
-    .line 446
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto/16 :goto_2
@@ -370,7 +334,6 @@
     :cond_6
     const-string v1, "dynamic_min"
 
-    .line 447
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -381,25 +344,20 @@
 
     if-le v1, v2, :cond_7
 
-    .line 448
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDynamicFreeMem:Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     if-eqz v0, :cond_a
 
-    .line 449
     aget-object p2, p2, v2
 
-    .line 450
     invoke-static {p2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 451
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDynamicFreeMem:Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     invoke-static {p0, v0, v1}, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->-$$Nest$msetThresholdMin(Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;J)V
 
-    .line 452
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -421,7 +379,6 @@
     :cond_7
     const-string v1, "dynamic_max"
 
-    .line 454
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -432,25 +389,20 @@
 
     if-le v1, v2, :cond_8
 
-    .line 455
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDynamicFreeMem:Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     if-eqz v0, :cond_a
 
-    .line 456
     aget-object p2, p2, v2
 
-    .line 457
     invoke-static {p2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 458
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDynamicFreeMem:Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     invoke-static {p0, v0, v1}, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->-$$Nest$msetThresholdMax(Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;J)V
 
-    .line 459
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -472,14 +424,12 @@
     :cond_8
     const-string v1, "get_reentry"
 
-    .line 461
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 462
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDynamicFreeMem:Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     if-eqz p0, :cond_a
@@ -488,12 +438,10 @@
 
     if-eqz p0, :cond_a
 
-    .line 463
     invoke-virtual {p0}, Lcom/android/server/chimera/ReentryCounter;->getReentry()F
 
     move-result p0
 
-    .line 464
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -515,27 +463,22 @@
     :cond_9
     const-string/jumbo v1, "set_reentry"
 
-    .line 466
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    .line 467
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDynamicFreeMem:Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     if-eqz v0, :cond_a
 
-    .line 468
     aget-object p2, p2, v2
 
-    .line 469
     invoke-static {p2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result p2
 
-    .line 470
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -552,7 +495,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 471
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDynamicFreeMem:Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     invoke-static {p0, p2}, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->-$$Nest$msetReentry(Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;F)V
@@ -565,7 +507,6 @@
 .method public dumpInfo(Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 485
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -586,7 +527,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 486
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -605,7 +545,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 487
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -624,7 +563,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 488
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -649,19 +587,16 @@
 .method public final enableDynamicTargetFree()V
     .locals 2
 
-    .line 478
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mSettingRepository:Lcom/android/server/chimera/SettingRepository;
 
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Lcom/android/server/chimera/SettingRepository;->enableDynamicTargetFree(Z)V
 
-    .line 479
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDynamicFreeMem:Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     if-nez v0, :cond_0
 
-    .line 480
     new-instance v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;
 
     invoke-direct {v0, p0}, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;-><init>(Lcom/android/server/chimera/ChimeraStrategy;)V
@@ -675,7 +610,6 @@
 .method public getAlwaysRunningProcQuota()I
     .locals 0
 
-    .line 406
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mAlwaysRunningProcessQuota:I
 
     return p0
@@ -684,7 +618,6 @@
 .method public getDeviceIdleAppThreshold()I
     .locals 0
 
-    .line 398
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDeviceIdleAppThreshold:I
 
     return p0
@@ -693,7 +626,6 @@
 .method public getDeviceIdleNativeThreshold()I
     .locals 0
 
-    .line 402
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDeviceIdleNativeThreshold:I
 
     return p0
@@ -702,7 +634,6 @@
 .method public getFreeMemTarget(J)J
     .locals 1
 
-    .line 373
     invoke-virtual {p0}, Lcom/android/server/chimera/ChimeraStrategy;->isEnableDynamicFreeMem()Z
 
     move-result v0
@@ -715,7 +646,6 @@
 
     goto :goto_0
 
-    .line 376
     :cond_0
     invoke-virtual {v0, p1, p2}, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->updateFreeMem(J)J
 
@@ -725,7 +655,6 @@
 
     return-wide p1
 
-    .line 374
     :cond_1
     :goto_0
     iget-wide p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mMemFreeTarget:J
@@ -736,19 +665,16 @@
 .method public getProtectedCountOnHomeTrigger()I
     .locals 1
 
-    .line 362
     invoke-virtual {p0}, Lcom/android/server/chimera/ChimeraStrategy;->isEnableDynamicFreeMem()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 363
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mProtectedCountOnDynamic:I
 
     return p0
 
-    .line 365
     :cond_0
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mProtectedCountOnHomeTrigger:I
 
@@ -758,19 +684,16 @@
 .method public getProtectedCountOnLmkdTrigger()I
     .locals 1
 
-    .line 355
     invoke-virtual {p0}, Lcom/android/server/chimera/ChimeraStrategy;->isEnableDynamicFreeMem()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 356
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mProtectedCountOnDynamic:I
 
     return p0
 
-    .line 358
     :cond_0
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mProtectedCountOnLmkdTrigger:I
 
@@ -780,7 +703,6 @@
 .method public getQuickReclaimDefaultThreshold()I
     .locals 0
 
-    .line 394
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mQuickReclaimDefaultThreshold:I
 
     return p0
@@ -789,15 +711,12 @@
 .method public final initializeDefaultParameters()V
     .locals 6
 
-    .line 284
     invoke-static {}, Lcom/android/server/chimera/ChimeraCommonUtil;->getRamSizeGb()I
 
     move-result v0
 
-    .line 285
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/ChimeraStrategy;->updateDefaultParametersIfExist(I)V
 
-    .line 286
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getTargetFree(I)I
 
     move-result v1
@@ -810,17 +729,14 @@
 
     iput-wide v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mMemFreeTarget:J
 
-    .line 287
     iput-wide v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mFixedMemFreeTarget:J
 
     const-string/jumbo v1, "persist.config.chimera.protected_count_on_lmkd"
 
-    .line 289
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getProtectedCountOnLmkdTrigger(I)I
 
     move-result v2
 
-    .line 288
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v1
@@ -829,19 +745,16 @@
 
     const-string/jumbo v1, "persist.config.chimera.protected_count_on_home"
 
-    .line 291
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getProtectedCountOnHomeTrigger(I)I
 
     move-result v2
 
-    .line 290
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mProtectedCountOnHomeTrigger:I
 
-    .line 293
     iget-wide v2, p0, Lcom/android/server/chimera/ChimeraStrategy;->mMemFreeTarget:J
 
     const-wide/16 v4, 0x0
@@ -856,7 +769,6 @@
 
     if-gez v1, :cond_1
 
-    .line 294
     :cond_0
     sget v1, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->UNKNOWN_GB_TARGET_FREE:I
 
@@ -864,17 +776,14 @@
 
     iput-wide v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mMemFreeTarget:J
 
-    .line 295
     sget v1, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->UNKNOWN_GB_PROTECTED_COUNT_ON_HOME:I
 
     iput v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mProtectedCountOnHomeTrigger:I
 
-    .line 296
     sget v1, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->UNKNOWN_GB_PROTECTED_COUNT_ON_LMKD:I
 
     iput v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mProtectedCountOnLmkdTrigger:I
 
-    .line 299
     :cond_1
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getDynamicProtectedCount(I)F
 
@@ -884,35 +793,30 @@
 
     iput v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mProtectedCountOnDynamic:I
 
-    .line 300
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getQuickReclaimDefaultThreshold(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mQuickReclaimDefaultThreshold:I
 
-    .line 301
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getDeviceIdleAppThreshold(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDeviceIdleAppThreshold:I
 
-    .line 302
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getDeviceIdleNativeThreshold(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mDeviceIdleNativeThreshold:I
 
-    .line 303
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getAlwaysRunningProcQuota(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mAlwaysRunningProcessQuota:I
 
-    .line 305
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -953,7 +857,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 309
     invoke-virtual {p0}, Lcom/android/server/chimera/ChimeraStrategy;->isEnableDynamicFreeMem()Z
 
     move-result v0
@@ -1006,7 +909,6 @@
 
     const-string v0, "ChimeraStrategy"
 
-    .line 305
     invoke-interface {v1, v0, p0}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1015,7 +917,6 @@
 .method public isEnableDynamicFreeMem()Z
     .locals 0
 
-    .line 381
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mSettingRepository:Lcom/android/server/chimera/SettingRepository;
 
     invoke-interface {p0}, Lcom/android/server/chimera/SettingRepository;->isDynamicTargetFreeEnabled()Z
@@ -1028,10 +929,8 @@
 .method public setTargetMem(J)V
     .locals 0
 
-    .line 385
     iput-wide p1, p0, Lcom/android/server/chimera/ChimeraStrategy;->mMemFreeTarget:J
 
-    .line 386
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mSettingRepository:Lcom/android/server/chimera/SettingRepository;
 
     const/4 p1, 0x0
@@ -1048,7 +947,6 @@
 
     move v1, v0
 
-    .line 321
     :goto_0
     invoke-static {}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->-$$Nest$sfgetsParameters()[[I
 
@@ -1062,7 +960,6 @@
 
     if-lez v2, :cond_1
 
-    .line 322
     invoke-static {}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->-$$Nest$sfgetsParameters()[[I
 
     move-result-object v2
@@ -1073,7 +970,6 @@
 
     if-lt v2, p1, :cond_0
 
-    .line 323
     invoke-static {}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->-$$Nest$sfgetsParameters()[[I
 
     move-result-object p1
@@ -1097,7 +993,6 @@
     :goto_1
     if-eq p1, v3, :cond_3
 
-    .line 330
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -1114,12 +1009,10 @@
 
     const-string v1, ""
 
-    .line 331
     invoke-static {p1, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 333
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1146,7 +1039,6 @@
 
     invoke-interface {p0, v2, p1}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 334
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -1155,12 +1047,10 @@
 
     const-string p0, ","
 
-    .line 335
     invoke-virtual {v1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 337
     array-length p1, p0
 
     const/4 v1, 0x3
@@ -1172,7 +1062,6 @@
     :goto_2
     if-gt p1, v1, :cond_3
 
-    .line 340
     :try_start_0
     invoke-static {}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->-$$Nest$sfgetsParameters()[[I
 
@@ -1201,7 +1090,6 @@
     :catch_0
     move-exception v3
 
-    .line 343
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1230,7 +1118,6 @@
     :cond_2
     const-string p0, "Chimera parameter mismatched"
 
-    .line 348
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3

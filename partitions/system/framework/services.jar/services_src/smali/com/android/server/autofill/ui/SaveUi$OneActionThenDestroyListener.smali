@@ -18,12 +18,10 @@
 .method public constructor <init>(Lcom/android/server/autofill/ui/SaveUi;Lcom/android/server/autofill/ui/SaveUi$OnSaveListener;)V
     .locals 0
 
-    .line 127
     iput-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->this$0:Lcom/android/server/autofill/ui/SaveUi;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
     iput-object p2, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mRealListener:Lcom/android/server/autofill/ui/SaveUi$OnSaveListener;
 
     return-void
@@ -34,7 +32,6 @@
 .method public onCancel(Landroid/content/IntentSender;)V
     .locals 2
 
-    .line 142
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -59,7 +56,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mDone:Z
 
@@ -67,7 +63,6 @@
 
     return-void
 
-    .line 146
     :cond_1
     iget-object p0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mRealListener:Lcom/android/server/autofill/ui/SaveUi$OnSaveListener;
 
@@ -79,7 +74,6 @@
 .method public onDestroy()V
     .locals 2
 
-    .line 151
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -104,7 +98,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mDone:Z
 
@@ -115,10 +108,8 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 155
     iput-boolean v0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mDone:Z
 
-    .line 156
     iget-object p0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mRealListener:Lcom/android/server/autofill/ui/SaveUi$OnSaveListener;
 
     invoke-interface {p0}, Lcom/android/server/autofill/ui/SaveUi$OnSaveListener;->onDestroy()V
@@ -129,7 +120,6 @@
 .method public onSave()V
     .locals 2
 
-    .line 133
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -154,7 +144,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mDone:Z
 
@@ -162,7 +151,6 @@
 
     return-void
 
-    .line 137
     :cond_1
     iget-object p0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mRealListener:Lcom/android/server/autofill/ui/SaveUi$OnSaveListener;
 
@@ -174,7 +162,6 @@
 .method public startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;)V
     .locals 2
 
-    .line 161
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -199,7 +186,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mDone:Z
 
@@ -207,7 +193,6 @@
 
     return-void
 
-    .line 165
     :cond_1
     iget-object p0, p0, Lcom/android/server/autofill/ui/SaveUi$OneActionThenDestroyListener;->mRealListener:Lcom/android/server/autofill/ui/SaveUi$OnSaveListener;
 

@@ -11,35 +11,30 @@
 .method public onKnoxContainerLaunch(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPersonaActive(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onRemovePersona(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onResetPersona(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStateChange(ILcom/samsung/android/knox/SemPersonaState;Lcom/samsung/android/knox/SemPersonaState;)V
     .locals 3
 
-    .line 342
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -72,7 +67,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     iget-object p2, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$1;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
 
     invoke-static {p2}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->-$$Nest$fgetmUCSMHandler(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;)Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;
@@ -85,10 +79,8 @@
 
     move-result-object p2
 
-    .line 344
     iput p1, p2, Landroid/os/Message;->arg1:I
 
-    .line 345
     sget-object p1, Lcom/samsung/android/knox/SemPersonaState;->ACTIVE:Lcom/samsung/android/knox/SemPersonaState;
 
     invoke-virtual {p3, p1}, Lcom/samsung/android/knox/SemPersonaState;->equals(Ljava/lang/Object;)Z
@@ -99,7 +91,6 @@
 
     const/4 p1, 0x1
 
-    .line 346
     iput p1, p2, Landroid/os/Message;->arg2:I
 
     goto :goto_0
@@ -107,10 +98,8 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 348
     iput p1, p2, Landroid/os/Message;->arg2:I
 
-    .line 350
     :goto_0
     iget-object p0, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$1;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
 

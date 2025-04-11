@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;Landroid/content/Intent;)V
     .locals 0
 
-    .line 1586
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent$2;->this$0:Lcom/android/server/wm/DisplayContent;
 
     iput-object p2, p0, Lcom/android/server/wm/DisplayContent$2;->val$focusMonitorIntent:Landroid/content/Intent;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 3
 
-    .line 1589
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent$2;->this$0:Lcom/android/server/wm/DisplayContent;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;

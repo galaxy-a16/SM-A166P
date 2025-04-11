@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCerts(Lcom/android/server/pm/Policy;)Ljava/util/Set;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPkgMap(Lcom/android/server/pm/Policy;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSeinfo(Lcom/android/server/pm/Policy;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
     return-object p0
@@ -42,17 +39,14 @@
 .method public constructor <init>(Lcom/android/server/pm/Policy$PolicyBuilder;)V
     .locals 1
 
-    .line 491
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 492
     invoke-static {p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->-$$Nest$fgetmSeinfo(Lcom/android/server/pm/Policy$PolicyBuilder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
-    .line 493
     invoke-static {p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->-$$Nest$fgetmCerts(Lcom/android/server/pm/Policy$PolicyBuilder;)Ljava/util/Set;
 
     move-result-object v0
@@ -63,7 +57,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
-    .line 494
     invoke-static {p1}, Lcom/android/server/pm/Policy$PolicyBuilder;->-$$Nest$fgetmPkgMap(Lcom/android/server/pm/Policy$PolicyBuilder;)Ljava/util/Map;
 
     move-result-object p1
@@ -80,7 +73,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/Policy$PolicyBuilder;Lcom/android/server/pm/Policy-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/Policy;-><init>(Lcom/android/server/pm/Policy$PolicyBuilder;)V
 
     return-void
@@ -91,7 +83,6 @@
 .method public getInnerPackages()Ljava/util/Map;
     .locals 0
 
-    .line 523
     iget-object p0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
     return-object p0
@@ -100,7 +91,6 @@
 .method public getMatchedSeInfo(Lcom/android/server/pm/pkg/AndroidPackage;)Ljava/lang/String;
     .locals 4
 
-    .line 580
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
     const/4 v1, 0x0
@@ -113,7 +103,6 @@
 
     check-cast v0, [Landroid/content/pm/Signature;
 
-    .line 581
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object v2
@@ -122,7 +111,6 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 582
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSigningDetails()Landroid/content/pm/SigningDetails;
 
     move-result-object v2
@@ -137,7 +125,6 @@
 
     if-nez v2, :cond_1
 
-    .line 585
     array-length v2, v0
 
     const/4 v3, 0x1
@@ -161,7 +148,6 @@
 
     return-object p0
 
-    .line 592
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
@@ -179,7 +165,6 @@
 
     return-object p1
 
-    .line 598
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
@@ -189,7 +174,6 @@
 .method public getSignatures()Ljava/util/Set;
     .locals 0
 
-    .line 504
     iget-object p0, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
     return-object p0
@@ -198,7 +182,6 @@
 .method public hasGlobalSeinfo()Z
     .locals 0
 
-    .line 532
     iget-object p0, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
     if-eqz p0, :cond_0
@@ -217,7 +200,6 @@
 .method public hasInnerPackages()Z
     .locals 0
 
-    .line 513
     iget-object p0, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
@@ -232,12 +214,10 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .line 537
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 538
     iget-object v1, p0, Lcom/android/server/pm/Policy;->mCerts:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -257,7 +237,6 @@
 
     check-cast v2, Landroid/content/pm/Signature;
 
-    .line 539
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,13 +271,11 @@
 
     goto :goto_0
 
-    .line 542
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 543
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -317,7 +294,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 546
     :cond_1
     iget-object v1, p0, Lcom/android/server/pm/Policy;->mPkgMap:Ljava/util/Map;
 
@@ -342,7 +318,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 547
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -375,7 +350,6 @@
 
     goto :goto_1
 
-    .line 550
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

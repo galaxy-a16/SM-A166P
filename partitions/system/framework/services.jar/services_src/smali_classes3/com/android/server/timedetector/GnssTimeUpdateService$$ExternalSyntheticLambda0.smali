@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/timedetector/GnssTimeUpdateService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/timedetector/GnssTimeUpdateService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/timedetector/GnssTimeUpdateService;
@@ -27,7 +26,6 @@
 .method public final onLocationChanged(Landroid/location/Location;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/timedetector/GnssTimeUpdateService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/timedetector/GnssTimeUpdateService;
 
     invoke-static {p0, p1}, Lcom/android/server/timedetector/GnssTimeUpdateService;->$r8$lambda$p0HEUUClXIRFUADEFn4PSYJV9i0(Lcom/android/server/timedetector/GnssTimeUpdateService;Landroid/location/Location;)V

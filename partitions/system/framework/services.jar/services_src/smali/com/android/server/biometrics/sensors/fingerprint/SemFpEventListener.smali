@@ -7,20 +7,17 @@
 .method public onError(IIII)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onGestureEvent(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSpenEvent(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method

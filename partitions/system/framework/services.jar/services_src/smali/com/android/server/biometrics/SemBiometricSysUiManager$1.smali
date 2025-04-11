@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$1AL0RZ2kzoIdHR4Urmnfz04YrOU(Lcom/android/server/biometrics/SemBiometricSysUiManager$1;III)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->lambda$onEvent$2(III)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$F34AqE3n6lWmSC9KsOjMbRw4eos(Lcom/android/server/biometrics/SemBiometricSysUiManager$1;III)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->lambda$onError$0(III)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public static synthetic $r8$lambda$FzAvkXUDs4ZQCIIoiUaVz44B41Q(Lcom/android/server/biometrics/SemBiometricSysUiManager$1;II[B)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->lambda$onSysUiDismissed$1(II[B)V
 
     return-void
@@ -38,7 +35,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;)V
     .locals 0
 
-    .line 577
     iput-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     invoke-direct {p0}, Lcom/samsung/android/biometrics/ISemBiometricSysUiCallback$Stub;-><init>()V
@@ -49,7 +45,6 @@
 .method private synthetic lambda$onError$0(III)V
     .locals 0
 
-    .line 592
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->-$$Nest$mnotifySysUiErrorEvent(Lcom/android/server/biometrics/SemBiometricSysUiManager;III)V
@@ -60,7 +55,6 @@
 .method private synthetic lambda$onEvent$2(III)V
     .locals 0
 
-    .line 608
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->-$$Nest$mnotifySysUiEvent(Lcom/android/server/biometrics/SemBiometricSysUiManager;III)V
@@ -71,7 +65,6 @@
 .method private synthetic lambda$onSysUiDismissed$1(II[B)V
     .locals 0
 
-    .line 600
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->-$$Nest$mnotifySysUiDismissedEvent(Lcom/android/server/biometrics/SemBiometricSysUiManager;II[B)V
@@ -84,12 +77,10 @@
 .method public onError(III)V
     .locals 2
 
-    .line 589
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 590
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,7 +109,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 592
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
@@ -138,12 +128,10 @@
 .method public onEvent(III)V
     .locals 2
 
-    .line 605
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 606
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +160,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
@@ -192,12 +179,10 @@
 .method public onSysUiDismissed(II[B)V
     .locals 2
 
-    .line 597
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 598
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,7 +207,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 600
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
@@ -242,12 +226,10 @@
 .method public onTouchEvent(II)V
     .locals 2
 
-    .line 581
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 582
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -272,7 +254,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 584
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 

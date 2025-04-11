@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$mpostDispatchOnZenModeChanged(Lcom/android/server/notification/ZenModeHelper$H;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/notification/ZenModeHelper$H;->postDispatchOnZenModeChanged()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$mpostMetricsTimer(Lcom/android/server/notification/ZenModeHelper$H;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/notification/ZenModeHelper$H;->postMetricsTimer()V
 
     return-void
@@ -29,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$mpostUpdateRingerAndAudio(Lcom/android/server/notification/ZenModeHelper$H;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/notification/ZenModeHelper$H;->postUpdateRingerAndAudio(Z)V
 
     return-void
@@ -38,10 +35,8 @@
 .method public constructor <init>(Lcom/android/server/notification/ZenModeHelper;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1770
     iput-object p1, p0, Lcom/android/server/notification/ZenModeHelper$H;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
-    .line 1771
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -50,7 +45,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/ZenModeHelper;Landroid/os/Looper;Lcom/android/server/notification/ZenModeHelper$H-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/notification/ZenModeHelper$H;-><init>(Lcom/android/server/notification/ZenModeHelper;Landroid/os/Looper;)V
 
     return-void
@@ -61,7 +55,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1791
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -78,7 +71,6 @@
 
     goto :goto_0
 
-    .line 1799
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -88,14 +80,12 @@
 
     move-result p1
 
-    .line 1800
     iget-object p0, p0, Lcom/android/server/notification/ZenModeHelper$H;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     invoke-static {p0, p1}, Lcom/android/server/notification/ZenModeHelper;->-$$Nest$mupdateRingerAndAudio(Lcom/android/server/notification/ZenModeHelper;Z)V
 
     goto :goto_0
 
-    .line 1796
     :cond_1
     iget-object p0, p0, Lcom/android/server/notification/ZenModeHelper$H;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
@@ -107,7 +97,6 @@
 
     goto :goto_0
 
-    .line 1793
     :cond_2
     iget-object p0, p0, Lcom/android/server/notification/ZenModeHelper$H;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
@@ -122,10 +111,8 @@
 
     const/4 v0, 0x1
 
-    .line 1775
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1776
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     return-void
@@ -136,12 +123,10 @@
 
     const/4 v0, 0x2
 
-    .line 1780
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
     const-wide/32 v1, 0x1499700
 
-    .line 1781
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     return-void
@@ -152,10 +137,8 @@
 
     const/4 v0, 0x5
 
-    .line 1785
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1786
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/media/SystemMediaRoute2Provider;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/media/SystemMediaRoute2Provider$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/media/SystemMediaRoute2Provider;
@@ -27,7 +26,6 @@
 .method public final onBluetoothRoutesUpdated(Ljava/util/List;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/SystemMediaRoute2Provider$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/media/SystemMediaRoute2Provider;
 
     invoke-static {p0, p1}, Lcom/android/server/media/SystemMediaRoute2Provider;->$r8$lambda$2GKqQYoOSDVjBUC5-Qya60OupuE(Lcom/android/server/media/SystemMediaRoute2Provider;Ljava/util/List;)V

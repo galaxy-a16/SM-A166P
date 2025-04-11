@@ -49,7 +49,6 @@
 
     const/4 v0, 0x1
 
-    .line 810
     invoke-virtual {p0, p1, p2, p3, v0}, Landroid/content/pm/PackageManagerInternal;->filterAppAccess(Ljava/lang/String;IIZ)Z
 
     move-result p0
@@ -155,7 +154,6 @@
 
     const/4 v0, 0x0
 
-    .line 727
     invoke-virtual {p0, v0}, Landroid/content/pm/PackageManagerInternal;->getPackageList(Landroid/content/pm/PackageManagerInternal$PackageListObserver;)Lcom/android/server/pm/PackageList;
 
     move-result-object p0

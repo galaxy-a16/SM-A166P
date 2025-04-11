@@ -26,21 +26,16 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService;IILandroid/hardware/display/IDisplayManagerCallback;J)V
     .locals 0
 
-    .line 4879
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4880
     iput p2, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mPid:I
 
-    .line 4881
     iput p3, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mUid:I
 
-    .line 4882
     iput-object p4, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
 
-    .line 4883
     new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-direct {p1, p5, p6}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
@@ -55,7 +50,6 @@
 .method public binderDied()V
     .locals 1
 
-    .line 4895
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {v0, p0}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$monCallbackDied(Lcom/android/server/display/DisplayManagerService;Lcom/android/server/display/DisplayManagerService$CallbackRecord;)V
@@ -66,7 +60,6 @@
 .method public notifyAsyncBinderBufferFillEvent(ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 4951
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
 
@@ -79,7 +72,6 @@
     :catch_0
     move-exception p1
 
-    .line 4953
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,7 +96,6 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/power/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4955
     invoke-virtual {p0}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->binderDied()V
 
     :goto_0
@@ -114,7 +105,6 @@
 .method public notifyDeviceEventAsync(Landroid/os/Bundle;I)V
     .locals 1
 
-    .line 4981
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
 
@@ -127,7 +117,6 @@
     :catch_0
     move-exception p1
 
-    .line 4983
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,7 +141,6 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/power/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4985
     invoke-virtual {p0}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->binderDied()V
 
     :goto_0
@@ -162,7 +150,6 @@
 .method public notifyDisplayEventAsync(II)Z
     .locals 2
 
-    .line 4902
     invoke-virtual {p0, p2}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->shouldSendEvent(I)Z
 
     move-result v0
@@ -173,7 +160,6 @@
 
     return v1
 
-    .line 4907
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
@@ -187,7 +173,6 @@
     :catch_0
     move-exception p1
 
-    .line 4910
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -212,7 +197,6 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/power/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4912
     invoke-virtual {p0}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->binderDied()V
 
     const/4 p0, 0x0
@@ -223,7 +207,6 @@
 .method public notifyDisplayVolumeEventAsync(ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 4940
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
 
@@ -236,7 +219,6 @@
     :catch_0
     move-exception p1
 
-    .line 4942
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -261,7 +243,6 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/power/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4944
     invoke-virtual {p0}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->binderDied()V
 
     :goto_0
@@ -271,7 +252,6 @@
 .method public notifyDisplayVolumeKeyEventAsync(I)V
     .locals 2
 
-    .line 4961
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
 
@@ -284,7 +264,6 @@
     :catch_0
     move-exception p1
 
-    .line 4963
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -309,7 +288,6 @@
 
     invoke-static {v1, v0, p1}, Lcom/android/server/power/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4965
     invoke-virtual {p0}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->binderDied()V
 
     :goto_0
@@ -319,7 +297,6 @@
 .method public notifyWifiDisplayParameterEventAsync(ILjava/util/List;)V
     .locals 1
 
-    .line 4971
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
 
@@ -332,7 +309,6 @@
     :catch_0
     move-exception p1
 
-    .line 4973
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -357,7 +333,6 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/power/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4975
     invoke-virtual {p0}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->binderDied()V
 
     :goto_0
@@ -367,7 +342,6 @@
 .method public final shouldSendEvent(I)Z
     .locals 7
 
-    .line 4918
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mEventsMask:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
@@ -398,7 +372,6 @@
 
     if-eq p1, v5, :cond_0
 
-    .line 4932
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -493,7 +466,6 @@
 .method public updateEventsMask(J)V
     .locals 0
 
-    .line 4887
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mEventsMask:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V

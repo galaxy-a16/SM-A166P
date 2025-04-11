@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/WindowState;
 
     invoke-static {p1}, Lcom/android/server/wm/ActivityRecord;->$r8$lambda$qqoojtactlnb3WXHac8B2OHWLC4(Lcom/android/server/wm/WindowState;)Z

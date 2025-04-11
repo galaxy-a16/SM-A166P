@@ -30,7 +30,6 @@
 .method public constructor <init>(Lcom/android/server/media/MediaSessionRecord;ZIIILjava/lang/String;III)V
     .locals 0
 
-    .line 664
     iput-object p1, p0, Lcom/android/server/media/MediaSessionRecord$2;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     iput-boolean p2, p0, Lcom/android/server/media/MediaSessionRecord$2;->val$useSuggested:Z
@@ -59,13 +58,11 @@
 .method public run()V
     .locals 9
 
-    .line 668
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/media/MediaSessionRecord$2;->val$useSuggested:Z
 
     if-eqz v0, :cond_1
 
-    .line 669
     iget v0, p0, Lcom/android/server/media/MediaSessionRecord$2;->val$stream:I
 
     const/4 v1, 0x0
@@ -76,7 +73,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 670
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$2;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     invoke-static {v0}, Lcom/android/server/media/MediaSessionRecord;->-$$Nest$fgetmAudioManager(Lcom/android/server/media/MediaSessionRecord;)Landroid/media/AudioManager;
@@ -101,19 +97,16 @@
 
     move-result-object v0
 
-    .line 672
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
     iget v8, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 670
     invoke-virtual/range {v1 .. v8}, Landroid/media/AudioManager;->adjustSuggestedStreamVolumeForUid(IIILjava/lang/String;III)V
 
     goto/16 :goto_0
 
-    .line 674
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$2;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -143,19 +136,16 @@
 
     move-result-object v0
 
-    .line 677
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
     iget v8, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 674
     invoke-virtual/range {v1 .. v8}, Landroid/media/AudioManager;->adjustSuggestedStreamVolumeForUid(IIILjava/lang/String;III)V
 
     goto :goto_0
 
-    .line 680
     :cond_1
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$2;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -181,14 +171,12 @@
 
     move-result-object v0
 
-    .line 682
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
     iget v8, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 680
     invoke-virtual/range {v1 .. v8}, Landroid/media/AudioManager;->adjustStreamVolumeForUid(IIILjava/lang/String;III)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -199,7 +187,6 @@
     :catch_0
     move-exception v0
 
-    .line 685
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

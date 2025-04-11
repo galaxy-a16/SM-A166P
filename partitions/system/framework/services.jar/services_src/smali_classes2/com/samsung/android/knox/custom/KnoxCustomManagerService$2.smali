@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)V
     .locals 0
 
-    .line 8900
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$2;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,10 +26,8 @@
 .method public run()V
     .locals 1
 
-    .line 8903
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 8905
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object p0
@@ -43,7 +40,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/power/ShutdownThread;->systemShutdown(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 8907
     invoke-static {}, Landroid/os/Looper;->loop()V
 
     return-void

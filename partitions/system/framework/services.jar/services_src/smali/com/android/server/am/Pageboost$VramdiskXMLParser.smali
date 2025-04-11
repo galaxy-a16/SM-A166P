@@ -7,14 +7,12 @@
 .method public static getString(Ljava/lang/String;)Ljava/util/LinkedList;
     .locals 6
 
-    .line 695
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 697
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
@@ -24,31 +22,25 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 698
     :try_start_1
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v3
 
-    .line 699
     invoke-virtual {v3}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v3
 
-    .line 700
     invoke-virtual {v3, v2}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
 
     move-result-object v3
 
-    .line 701
     invoke-interface {v3}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v4
 
-    .line 702
     invoke-interface {v4}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 704
     invoke-interface {v3, p0}, Lorg/w3c/dom/Document;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object p0
@@ -59,7 +51,6 @@
 
     move v4, v3
 
-    .line 705
     :goto_0
     :try_start_2
     invoke-interface {p0}, Lorg/w3c/dom/NodeList;->getLength()I
@@ -68,12 +59,10 @@
 
     if-ge v3, v5, :cond_0
 
-    .line 706
     invoke-interface {p0, v3}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v5
 
-    .line 707
     invoke-interface {v5}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v5
@@ -82,7 +71,6 @@
 
     move-result-object v5
 
-    .line 708
     invoke-interface {v5}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v5
@@ -97,7 +85,6 @@
 
     goto :goto_0
 
-    .line 711
     :cond_0
     :try_start_3
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
@@ -121,7 +108,6 @@
     :catchall_1
     move-exception p0
 
-    .line 697
     :goto_1
     :try_start_4
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
@@ -141,7 +127,6 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 712
     :catch_1
     :goto_3
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;

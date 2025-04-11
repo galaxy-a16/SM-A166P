@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/people/data/UsageStatsQueryHelper;->$r8$lambda$nZ7shENcp4iWnNqD1CZXYLmDuLs(Ljava/lang/String;)Lcom/android/server/people/data/AppUsageStatsData;

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubService;I)V
     .locals 0
 
-    .line 248
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iput p2, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->val$contextHubId:I
@@ -28,7 +27,6 @@
 .method public final finishCallback()V
     .locals 3
 
-    .line 251
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
@@ -48,7 +46,6 @@
 
     check-cast v0, Landroid/hardware/location/IContextHubClient;
 
-    .line 252
     invoke-interface {v0}, Landroid/hardware/location/IContextHubClient;->callbackFinished()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -58,7 +55,6 @@
     :catch_0
     move-exception v0
 
-    .line 254
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,7 +86,6 @@
 .method public onClientAuthorizationChanged(JI)V
     .locals 0
 
-    .line 311
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubService$1;->finishCallback()V
 
     return-void
@@ -107,7 +102,6 @@
 
     aput-byte v1, v0, v1
 
-    .line 280
     iget-object v1, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iget v2, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->val$contextHubId:I
@@ -118,7 +112,6 @@
 
     invoke-static {v1, v4, v2, v3, v0}, Lcom/android/server/location/contexthub/ContextHubService;->-$$Nest$monMessageReceiptOldApi(Lcom/android/server/location/contexthub/ContextHubService;III[B)I
 
-    .line 281
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubService$1;->finishCallback()V
 
     return-void
@@ -127,7 +120,6 @@
 .method public onMessageFromNanoApp(Landroid/hardware/location/NanoAppMessage;)V
     .locals 4
 
-    .line 265
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     invoke-static {v0}, Lcom/android/server/location/contexthub/ContextHubService;->-$$Nest$fgetmNanoAppStateManager(Lcom/android/server/location/contexthub/ContextHubService;)Lcom/android/server/location/contexthub/NanoAppStateManager;
@@ -136,7 +128,6 @@
 
     iget v1, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->val$contextHubId:I
 
-    .line 266
     invoke-virtual {p1}, Landroid/hardware/location/NanoAppMessage;->getNanoAppId()J
 
     move-result-wide v2
@@ -145,25 +136,20 @@
 
     move-result v0
 
-    .line 268
     iget-object v1, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
-    .line 269
     invoke-virtual {p1}, Landroid/hardware/location/NanoAppMessage;->getMessageType()I
 
     move-result v2
 
     iget v3, p0, Lcom/android/server/location/contexthub/ContextHubService$1;->val$contextHubId:I
 
-    .line 272
     invoke-virtual {p1}, Landroid/hardware/location/NanoAppMessage;->getMessageBody()[B
 
     move-result-object p1
 
-    .line 268
     invoke-static {v1, v2, v3, v0, p1}, Lcom/android/server/location/contexthub/ContextHubService;->-$$Nest$monMessageReceiptOldApi(Lcom/android/server/location/contexthub/ContextHubService;III[B)I
 
-    .line 274
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubService$1;->finishCallback()V
 
     return-void
@@ -172,7 +158,6 @@
 .method public onNanoAppAborted(JI)V
     .locals 0
 
-    .line 286
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubService$1;->finishCallback()V
 
     return-void
@@ -181,7 +166,6 @@
 .method public onNanoAppDisabled(J)V
     .locals 0
 
-    .line 306
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubService$1;->finishCallback()V
 
     return-void
@@ -190,7 +174,6 @@
 .method public onNanoAppEnabled(J)V
     .locals 0
 
-    .line 301
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubService$1;->finishCallback()V
 
     return-void
@@ -199,7 +182,6 @@
 .method public onNanoAppLoaded(J)V
     .locals 0
 
-    .line 291
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubService$1;->finishCallback()V
 
     return-void
@@ -208,7 +190,6 @@
 .method public onNanoAppUnloaded(J)V
     .locals 0
 
-    .line 296
     invoke-virtual {p0}, Lcom/android/server/location/contexthub/ContextHubService$1;->finishCallback()V
 
     return-void

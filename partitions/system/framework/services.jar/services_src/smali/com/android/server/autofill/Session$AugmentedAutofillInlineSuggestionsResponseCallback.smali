@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/android/server/autofill/Session;)V
     .locals 1
 
-    .line 5077
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5078
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -32,7 +30,6 @@
 .method public apply(Lcom/android/server/autofill/ui/InlineFillUi;)Ljava/lang/Boolean;
     .locals 1
 
-    .line 5083
     iget-object p0, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionsResponseCallback;->mSessionWeakRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -43,25 +40,21 @@
 
     const-string v0, "AugmentedAutofillInlineSuggestionsResponseCallback:"
 
-    .line 5085
     invoke-static {p0, v0}, Lcom/android/server/autofill/Session;->-$$Nest$smlogIfSessionNull(Lcom/android/server/autofill/Session;Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5087
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
 
-    .line 5090
     :cond_0
     iget-object v0, p0, Lcom/android/server/autofill/Session;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 5091
     :try_start_0
     iget-object p0, p0, Lcom/android/server/autofill/Session;->mInlineSessionController:Lcom/android/server/autofill/AutofillInlineSessionController;
 
@@ -80,7 +73,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5092
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -91,7 +83,6 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 5072
     check-cast p1, Lcom/android/server/autofill/ui/InlineFillUi;
 
     invoke-virtual {p0, p1}, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionsResponseCallback;->apply(Lcom/android/server/autofill/ui/InlineFillUi;)Ljava/lang/Boolean;

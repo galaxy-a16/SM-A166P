@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/Watchdog;)V
     .locals 0
 
-    .line 473
     iput-object p1, p0, Lcom/android/server/Watchdog$RebootRequestReceiver;->this$0:Lcom/android/server/Watchdog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,14 +27,12 @@
 
     const/4 v0, 0x0
 
-    .line 476
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 477
     iget-object p0, p0, Lcom/android/server/Watchdog$RebootRequestReceiver;->this$0:Lcom/android/server/Watchdog;
 
     const-string p1, "Received ACTION_REBOOT broadcast"
@@ -44,7 +41,6 @@
 
     return-void
 
-    .line 480
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 

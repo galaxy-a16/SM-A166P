@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/RecentsAnimationController$TaskAnimationAdapter;
 
     invoke-static {p1}, Lcom/android/server/wm/RecentsAnimationController;->$r8$lambda$9xkcokzUhiYQY_6mZv1HWL4smVk(Lcom/android/server/wm/RecentsAnimationController$TaskAnimationAdapter;)Ljava/lang/Integer;

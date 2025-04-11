@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/PhantomProcessList;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/PhantomProcessList$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/am/PhantomProcessList;
@@ -27,7 +26,6 @@
 .method public final onFileDescriptorEvents(Ljava/io/FileDescriptor;I)I
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/PhantomProcessList$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/am/PhantomProcessList;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/am/PhantomProcessList;->$r8$lambda$_5u2uwZUp6Yqz2HsvxOSaAdGJ1Y(Lcom/android/server/am/PhantomProcessList;Ljava/io/FileDescriptor;I)I

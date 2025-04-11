@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/BoundsCompatStatusLogger;)V
     .locals 0
 
-    .line 205
     iput-object p1, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/BoundsCompatStatusLogger;Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;-><init>(Lcom/android/server/wm/BoundsCompatStatusLogger;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public collectIfNeededLocked(ILjava/lang/String;)Z
     .locals 1
 
-    .line 217
     iget-object v0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     invoke-static {v0}, Lcom/android/server/wm/BoundsCompatStatusLogger;->-$$Nest$fgetmAtmService(Lcom/android/server/wm/BoundsCompatStatusLogger;)Lcom/android/server/wm/ActivityTaskManagerService;
@@ -72,7 +69,6 @@
 
     if-nez v0, :cond_1
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     const-string p1, "519402"
@@ -88,7 +84,6 @@
 
     if-nez p1, :cond_2
 
-    .line 226
     iget-object p0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     const-string p1, "519403"
@@ -105,14 +100,12 @@
 .method public initializeLocked()V
     .locals 2
 
-    .line 211
     iget-object v0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     const-string v1, "519402"
 
     invoke-static {v0, v1}, Lcom/android/server/wm/BoundsCompatStatusLogger;->-$$Nest$mcreateSettingLocked(Lcom/android/server/wm/BoundsCompatStatusLogger;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 212
     iget-object p0, p0, Lcom/android/server/wm/BoundsCompatStatusLogger$FixedAspectRatioStatusCollector;->this$0:Lcom/android/server/wm/BoundsCompatStatusLogger;
 
     const-string v0, "519403"

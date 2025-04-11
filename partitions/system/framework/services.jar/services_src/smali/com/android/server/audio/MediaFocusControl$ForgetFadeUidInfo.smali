@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUid(Lcom/android/server/audio/MediaFocusControl$ForgetFadeUidInfo;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/audio/MediaFocusControl$ForgetFadeUidInfo;->mUid:I
 
     return p0
@@ -20,10 +19,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1745
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1746
     iput p1, p0, Lcom/android/server/audio/MediaFocusControl$ForgetFadeUidInfo;->mUid:I
 
     return-void
@@ -45,7 +42,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1754
     const-class v2, Lcom/android/server/audio/MediaFocusControl$ForgetFadeUidInfo;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -56,11 +52,9 @@
 
     goto :goto_0
 
-    .line 1757
     :cond_1
     check-cast p1, Lcom/android/server/audio/MediaFocusControl$ForgetFadeUidInfo;
 
-    .line 1758
     iget p1, p1, Lcom/android/server/audio/MediaFocusControl$ForgetFadeUidInfo;->mUid:I
 
     iget p0, p0, Lcom/android/server/audio/MediaFocusControl$ForgetFadeUidInfo;->mUid:I
@@ -80,7 +74,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 1766
     iget p0, p0, Lcom/android/server/audio/MediaFocusControl$ForgetFadeUidInfo;->mUid:I
 
     return p0

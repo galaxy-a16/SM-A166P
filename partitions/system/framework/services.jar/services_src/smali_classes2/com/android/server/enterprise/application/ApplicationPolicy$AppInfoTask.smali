@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCmd(Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
 
     return-object p0
@@ -25,7 +24,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUsage(Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
 
     return-wide v0
@@ -34,13 +32,10 @@
 .method public constructor <init>(Ljava/lang/String;J)V
     .locals 0
 
-    .line 6948
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6949
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
 
-    .line 6950
     iput-wide p2, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
 
     return-void
@@ -51,7 +46,6 @@
 .method public compareTo(Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;)I
     .locals 5
 
-    .line 6980
     iget-wide v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
 
     iget-wide v2, p1, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mUsage:J
@@ -60,7 +54,6 @@
 
     if-nez v4, :cond_0
 
-    .line 6981
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
 
     iget-object p1, p1, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->mCmd:Ljava/lang/String;
@@ -84,7 +77,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 6938
     check-cast p1, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;
 
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;->compareTo(Lcom/android/server/enterprise/application/ApplicationPolicy$AppInfoTask;)I

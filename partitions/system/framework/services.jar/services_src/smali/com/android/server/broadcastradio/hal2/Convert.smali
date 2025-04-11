@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$021e3bsGPoIo22XMl3-LMB4HbLM(Landroid/hardware/broadcastradio/V2_0/DabTableEntry;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->lambda$dabConfigFromHal$0(Landroid/hardware/broadcastradio/V2_0/DabTableEntry;)Ljava/lang/String;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$Kq5ISKTfWPKegE_SsSFu2AJN9sk(Landroid/hardware/broadcastradio/V2_0/ProgramFilter;Landroid/hardware/radio/ProgramSelector$Identifier;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/broadcastradio/hal2/Convert;->lambda$programFilterToHal$4(Landroid/hardware/broadcastradio/V2_0/ProgramFilter;Landroid/hardware/radio/ProgramSelector$Identifier;)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static synthetic $r8$lambda$Tbg1M0nM-9TptquDkDETxdSKDKM(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->lambda$programListChunkFromHal$6(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object p0
@@ -42,7 +39,6 @@
 .method public static synthetic $r8$lambda$Y4U_WqUf-qQU3YGJaLinaSDp2kY(Landroid/hardware/broadcastradio/V2_0/DabTableEntry;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->lambda$dabConfigFromHal$1(Landroid/hardware/broadcastradio/V2_0/DabTableEntry;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -53,7 +49,6 @@
 .method public static synthetic $r8$lambda$bJBn3r7NhXX5ymfDKyosmclwX7o(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->lambda$programInfoFromHal$3(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object p0
@@ -64,7 +59,6 @@
 .method public static synthetic $r8$lambda$g90Qd112XUUngx020-FELGIJqnY(Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)Landroid/hardware/radio/RadioManager$ProgramInfo;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->lambda$programListChunkFromHal$5(Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)Landroid/hardware/radio/RadioManager$ProgramInfo;
 
     move-result-object p0
@@ -75,7 +69,6 @@
 .method public static synthetic $r8$lambda$xlrfdYCSbG37WfNVYAoVW4hqmFI(I)[Landroid/hardware/radio/ProgramSelector$Identifier;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->lambda$programSelectorFromHal$2(I)[Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object p0
@@ -86,7 +79,6 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 341
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -95,7 +87,6 @@
 
     const/4 v1, 0x1
 
-    .line 342
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -114,7 +105,6 @@
 
     const/4 v1, 0x2
 
-    .line 344
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -131,7 +121,6 @@
 
     const/4 v1, 0x3
 
-    .line 346
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -146,7 +135,6 @@
 
     const/4 v1, 0x4
 
-    .line 348
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -161,7 +149,6 @@
 
     const/4 v1, 0x5
 
-    .line 350
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -176,7 +163,6 @@
 
     const/4 v1, 0x6
 
-    .line 352
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -191,7 +177,6 @@
 
     const/4 v1, 0x7
 
-    .line 354
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -206,7 +191,6 @@
 
     const/16 v1, 0x8
 
-    .line 356
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -221,7 +205,6 @@
 
     const/16 v1, 0x9
 
-    .line 358
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -236,7 +219,6 @@
 
     const/16 v1, 0xa
 
-    .line 360
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -251,7 +233,6 @@
 
     const/16 v1, 0xb
 
-    .line 362
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -266,7 +247,6 @@
 
     const/16 v1, 0xc
 
-    .line 364
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -281,7 +261,6 @@
 
     const/16 v1, 0xd
 
-    .line 366
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -296,7 +275,6 @@
 
     const/16 v1, 0xe
 
-    .line 368
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -311,7 +289,6 @@
 
     const/16 v1, 0xf
 
-    .line 370
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -326,7 +303,6 @@
 
     const/16 v1, 0x10
 
-    .line 372
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -355,7 +331,6 @@
 
     return-object v0
 
-    .line 197
     :cond_0
     iget-object v1, v0, Landroid/hardware/broadcastradio/V2_0/AmFmRegionConfig;->ranges:Ljava/util/ArrayList;
 
@@ -363,14 +338,12 @@
 
     move-result v1
 
-    .line 198
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     const/4 v1, 0x0
 
-    .line 203
     iget-object v0, v0, Landroid/hardware/broadcastradio/V2_0/AmFmRegionConfig;->ranges:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -390,19 +363,16 @@
 
     check-cast v3, Landroid/hardware/broadcastradio/V2_0/AmFmBandRange;
 
-    .line 204
     iget v4, v3, Landroid/hardware/broadcastradio/V2_0/AmFmBandRange;->lowerBound:I
 
     invoke-static {v4}, Lcom/android/server/broadcastradio/hal2/Utils;->getBand(I)Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     move-result-object v4
 
-    .line 205
     sget-object v5, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->UNKNOWN:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     if-ne v4, v5, :cond_1
 
-    .line 206
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -429,13 +399,11 @@
 
     goto :goto_0
 
-    .line 209
     :cond_1
     sget-object v5, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->FM:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     if-ne v4, v5, :cond_2
 
-    .line 210
     new-instance v14, Landroid/hardware/radio/RadioManager$FmBandDescriptor;
 
     const/4 v5, 0x1
@@ -466,7 +434,6 @@
 
     goto :goto_0
 
-    .line 217
     :cond_2
     new-instance v4, Landroid/hardware/radio/RadioManager$AmBandDescriptor;
 
@@ -496,7 +463,6 @@
 
     goto :goto_0
 
-    .line 226
     :cond_3
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -516,12 +482,10 @@
 .method public static announcementFromHal(Landroid/hardware/broadcastradio/V2_0/Announcement;)Landroid/hardware/radio/Announcement;
     .locals 3
 
-    .line 440
     new-instance v0, Landroid/hardware/radio/Announcement;
 
     iget-object v1, p0, Landroid/hardware/broadcastradio/V2_0/Announcement;->selector:Landroid/hardware/broadcastradio/V2_0/ProgramSelector;
 
-    .line 441
     invoke-static {v1}, Lcom/android/server/broadcastradio/hal2/Convert;->programSelectorFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramSelector;)Landroid/hardware/radio/ProgramSelector;
 
     move-result-object v1
@@ -536,7 +500,6 @@
 
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/Announcement;->vendorInfo:Ljava/util/ArrayList;
 
-    .line 443
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->vendorInfoFromHal(Ljava/util/List;)Ljava/util/Map;
 
     move-result-object p0
@@ -555,7 +518,6 @@
 
     return-object p0
 
-    .line 232
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
@@ -585,7 +547,6 @@
 .method public static halResultToTunerResult(I)I
     .locals 2
 
-    .line 0
     if-eqz p0, :cond_5
 
     const/4 v0, 0x2
@@ -638,7 +599,6 @@
 .method public static identifierTypeToProgramType(I)I
     .locals 1
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     :pswitch_0
@@ -704,12 +664,10 @@
 .method public static identifierTypesToProgramTypes([I)[I
     .locals 5
 
-    .line 172
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 174
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -719,7 +677,6 @@
 
     aget v3, p0, v2
 
-    .line 175
     invoke-static {v3}, Lcom/android/server/broadcastradio/hal2/Convert;->identifierTypeToProgramType(I)I
 
     move-result v3
@@ -728,7 +685,6 @@
 
     goto :goto_1
 
-    .line 179
     :cond_0
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -742,7 +698,6 @@
 
     const/4 v4, 0x1
 
-    .line 182
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -756,7 +711,6 @@
 
     const/4 v3, 0x3
 
-    .line 186
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -769,7 +723,6 @@
 
     goto :goto_0
 
-    .line 190
     :cond_3
     invoke-interface {v0}, Ljava/util/Set;->stream()Ljava/util/stream/Stream;
 
@@ -793,7 +746,6 @@
 .method public static isEmpty(Landroid/hardware/broadcastradio/V2_0/ProgramSelector;)Z
     .locals 5
 
-    .line 306
     iget-object v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     iget v1, v0, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;->type:I
@@ -804,7 +756,6 @@
 
     return v2
 
-    .line 307
     :cond_0
     iget-wide v0, v0, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;->value:J
 
@@ -816,7 +767,6 @@
 
     return v2
 
-    .line 308
     :cond_1
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
@@ -837,7 +787,6 @@
 .method public static synthetic lambda$dabConfigFromHal$0(Landroid/hardware/broadcastradio/V2_0/DabTableEntry;)Ljava/lang/String;
     .locals 0
 
-    .line 232
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/DabTableEntry;->label:Ljava/lang/String;
 
     return-object p0
@@ -846,7 +795,6 @@
 .method public static synthetic lambda$dabConfigFromHal$1(Landroid/hardware/broadcastradio/V2_0/DabTableEntry;)Ljava/lang/Integer;
     .locals 0
 
-    .line 232
     iget p0, p0, Landroid/hardware/broadcastradio/V2_0/DabTableEntry;->frequency:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -859,7 +807,6 @@
 .method public static synthetic lambda$programFilterToHal$4(Landroid/hardware/broadcastradio/V2_0/ProgramFilter;Landroid/hardware/radio/ProgramSelector$Identifier;)V
     .locals 0
 
-    .line 421
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramFilter;->identifiers:Ljava/util/ArrayList;
 
     invoke-static {p1}, Lcom/android/server/broadcastradio/hal2/Convert;->programIdentifierToHal(Landroid/hardware/radio/ProgramSelector$Identifier;)Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
@@ -874,7 +821,6 @@
 .method public static synthetic lambda$programInfoFromHal$3(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
     .locals 1
 
-    .line 399
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->programIdentifierFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object p0
@@ -891,7 +837,6 @@
 .method public static synthetic lambda$programListChunkFromHal$5(Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)Landroid/hardware/radio/RadioManager$ProgramInfo;
     .locals 0
 
-    .line 430
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->programInfoFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)Landroid/hardware/radio/RadioManager$ProgramInfo;
 
     move-result-object p0
@@ -902,7 +847,6 @@
 .method public static synthetic lambda$programListChunkFromHal$6(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
     .locals 1
 
-    .line 432
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->programIdentifierFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object p0
@@ -919,7 +863,6 @@
 .method public static synthetic lambda$programSelectorFromHal$2(I)[Landroid/hardware/radio/ProgramSelector$Identifier;
     .locals 0
 
-    .line 318
     new-array p0, p0, [Landroid/hardware/radio/ProgramSelector$Identifier;
 
     return-object p0
@@ -934,7 +877,6 @@
 
     return-object p0
 
-    .line 449
     :cond_0
     instance-of v0, p0, Ljava/util/ArrayList;
 
@@ -944,7 +886,6 @@
 
     return-object p0
 
-    .line 450
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -956,12 +897,10 @@
 .method public static metadataFromHal(Ljava/util/ArrayList;)Landroid/hardware/radio/RadioMetadata;
     .locals 5
 
-    .line 377
     new-instance v0, Landroid/hardware/radio/RadioMetadata$Builder;
 
     invoke-direct {v0}, Landroid/hardware/radio/RadioMetadata$Builder;-><init>()V
 
-    .line 379
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -979,7 +918,6 @@
 
     check-cast v1, Landroid/hardware/broadcastradio/V2_0/Metadata;
 
-    .line 380
     sget-object v2, Lcom/android/server/broadcastradio/hal2/Convert;->metadataKeys:Ljava/util/Map;
 
     iget v3, v1, Landroid/hardware/broadcastradio/V2_0/Metadata;->key:I
@@ -996,7 +934,6 @@
 
     if-nez v2, :cond_0
 
-    .line 382
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1023,7 +960,6 @@
 
     goto :goto_0
 
-    .line 385
     :cond_0
     invoke-static {v2}, Lcom/android/server/broadcastradio/hal2/Convert$MetadataDef;->-$$Nest$fgettype(Lcom/android/server/broadcastradio/hal2/Convert$MetadataDef;)Lcom/android/server/broadcastradio/hal2/Convert$MetadataType;
 
@@ -1033,7 +969,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 386
     invoke-static {v2}, Lcom/android/server/broadcastradio/hal2/Convert$MetadataDef;->-$$Nest$fgetkey(Lcom/android/server/broadcastradio/hal2/Convert$MetadataDef;)Ljava/lang/String;
 
     move-result-object v2
@@ -1044,7 +979,6 @@
 
     goto :goto_0
 
-    .line 390
     :cond_1
     invoke-static {v2}, Lcom/android/server/broadcastradio/hal2/Convert$MetadataDef;->-$$Nest$fgetkey(Lcom/android/server/broadcastradio/hal2/Convert$MetadataDef;)Ljava/lang/String;
 
@@ -1058,7 +992,6 @@
 
     goto :goto_0
 
-    .line 394
     :cond_2
     invoke-virtual {v0}, Landroid/hardware/radio/RadioMetadata$Builder;->build()Landroid/hardware/radio/RadioMetadata;
 
@@ -1072,18 +1005,15 @@
 
     if-nez p0, :cond_0
 
-    .line 415
     new-instance p0, Landroid/hardware/radio/ProgramList$Filter;
 
     invoke-direct {p0}, Landroid/hardware/radio/ProgramList$Filter;-><init>()V
 
-    .line 417
     :cond_0
     new-instance v0, Landroid/hardware/broadcastradio/V2_0/ProgramFilter;
 
     invoke-direct {v0}, Landroid/hardware/broadcastradio/V2_0/ProgramFilter;-><init>()V
 
-    .line 419
     invoke-virtual {p0}, Landroid/hardware/radio/ProgramList$Filter;->getIdentifierTypes()Ljava/util/Set;
 
     move-result-object v1
@@ -1102,7 +1032,6 @@
 
     invoke-interface {v1, v3}, Ljava/util/stream/Stream;->forEachOrdered(Ljava/util/function/Consumer;)V
 
-    .line 420
     invoke-virtual {p0}, Landroid/hardware/radio/ProgramList$Filter;->getIdentifiers()Ljava/util/Set;
 
     move-result-object v1
@@ -1117,14 +1046,12 @@
 
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->forEachOrdered(Ljava/util/function/Consumer;)V
 
-    .line 422
     invoke-virtual {p0}, Landroid/hardware/radio/ProgramList$Filter;->areCategoriesIncluded()Z
 
     move-result v1
 
     iput-boolean v1, v0, Landroid/hardware/broadcastradio/V2_0/ProgramFilter;->includeCategories:Z
 
-    .line 423
     invoke-virtual {p0}, Landroid/hardware/radio/ProgramList$Filter;->areModificationsExcluded()Z
 
     move-result p0
@@ -1137,7 +1064,6 @@
 .method public static programIdentifierFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
     .locals 4
 
-    .line 288
     iget v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;->type:I
 
     if-nez v0, :cond_0
@@ -1146,7 +1072,6 @@
 
     return-object p0
 
-    .line 289
     :cond_0
     new-instance v0, Landroid/hardware/radio/ProgramSelector$Identifier;
 
@@ -1162,12 +1087,10 @@
 .method public static programIdentifierToHal(Landroid/hardware/radio/ProgramSelector$Identifier;)Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
     .locals 1
 
-    .line 281
     new-instance v0, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     invoke-direct {v0}, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;-><init>()V
 
-    .line 282
     invoke-static {v0, p0}, Lcom/android/server/broadcastradio/hal2/Convert;->programIdentifierToHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;Landroid/hardware/radio/ProgramSelector$Identifier;)V
 
     return-object v0
@@ -1176,14 +1099,12 @@
 .method public static programIdentifierToHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;Landroid/hardware/radio/ProgramSelector$Identifier;)V
     .locals 2
 
-    .line 275
     invoke-virtual {p1}, Landroid/hardware/radio/ProgramSelector$Identifier;->getType()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;->type:I
 
-    .line 276
     invoke-virtual {p1}, Landroid/hardware/radio/ProgramSelector$Identifier;->getValue()J
 
     move-result-wide v0
@@ -1196,7 +1117,6 @@
 .method public static programInfoFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)Landroid/hardware/radio/RadioManager$ProgramInfo;
     .locals 10
 
-    .line 398
     iget-object v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramInfo;->relatedContent:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
@@ -1207,12 +1127,10 @@
 
     invoke-direct {v1}, Lcom/android/server/broadcastradio/hal2/Convert$$ExternalSyntheticLambda7;-><init>()V
 
-    .line 399
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    .line 400
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v1
@@ -1225,12 +1143,10 @@
 
     check-cast v5, Ljava/util/Collection;
 
-    .line 402
     new-instance v0, Landroid/hardware/radio/RadioManager$ProgramInfo;
 
     iget-object v1, p0, Landroid/hardware/broadcastradio/V2_0/ProgramInfo;->selector:Landroid/hardware/broadcastradio/V2_0/ProgramSelector;
 
-    .line 403
     invoke-static {v1}, Lcom/android/server/broadcastradio/hal2/Convert;->programSelectorFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramSelector;)Landroid/hardware/radio/ProgramSelector;
 
     move-result-object v2
@@ -1243,14 +1159,12 @@
 
     iget-object v1, p0, Landroid/hardware/broadcastradio/V2_0/ProgramInfo;->logicallyTunedTo:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
-    .line 404
     invoke-static {v1}, Lcom/android/server/broadcastradio/hal2/Convert;->programIdentifierFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object v3
 
     iget-object v1, p0, Landroid/hardware/broadcastradio/V2_0/ProgramInfo;->physicallyTunedTo:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
-    .line 405
     invoke-static {v1}, Lcom/android/server/broadcastradio/hal2/Convert;->programIdentifierFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object v4
@@ -1261,14 +1175,12 @@
 
     iget-object v1, p0, Landroid/hardware/broadcastradio/V2_0/ProgramInfo;->metadata:Ljava/util/ArrayList;
 
-    .line 409
     invoke-static {v1}, Lcom/android/server/broadcastradio/hal2/Convert;->metadataFromHal(Ljava/util/ArrayList;)Landroid/hardware/radio/RadioMetadata;
 
     move-result-object v8
 
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramInfo;->vendorInfo:Ljava/util/ArrayList;
 
-    .line 410
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->vendorInfoFromHal(Ljava/util/List;)Ljava/util/Map;
 
     move-result-object v9
@@ -1283,7 +1195,6 @@
 .method public static programListChunkFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;)Landroid/hardware/radio/ProgramList$Chunk;
     .locals 4
 
-    .line 429
     iget-object v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;->modified:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
@@ -1294,7 +1205,6 @@
 
     invoke-direct {v1}, Lcom/android/server/broadcastradio/hal2/Convert$$ExternalSyntheticLambda8;-><init>()V
 
-    .line 430
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v0
@@ -1309,7 +1219,6 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 431
     iget-object v1, p0, Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;->removed:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
@@ -1320,12 +1229,10 @@
 
     invoke-direct {v2}, Lcom/android/server/broadcastradio/hal2/Convert$$ExternalSyntheticLambda9;-><init>()V
 
-    .line 432
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    .line 433
     invoke-static {}, Ljava/util/stream/Collectors;->toSet()Ljava/util/stream/Collector;
 
     move-result-object v2
@@ -1336,7 +1243,6 @@
 
     check-cast v1, Ljava/util/Set;
 
-    .line 435
     new-instance v2, Landroid/hardware/radio/ProgramList$Chunk;
 
     iget-boolean v3, p0, Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;->purge:Z
@@ -1351,7 +1257,6 @@
 .method public static programSelectorFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramSelector;)Landroid/hardware/radio/ProgramSelector;
     .locals 5
 
-    .line 314
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->isEmpty(Landroid/hardware/broadcastradio/V2_0/ProgramSelector;)Z
 
     move-result v0
@@ -1362,7 +1267,6 @@
 
     return-object v1
 
-    .line 316
     :cond_0
     iget-object v0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
@@ -1374,7 +1278,6 @@
 
     invoke-direct {v2}, Lcom/android/server/broadcastradio/hal2/Convert$$ExternalSyntheticLambda4;-><init>()V
 
-    .line 317
     invoke-interface {v0, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v0
@@ -1391,28 +1294,24 @@
 
     invoke-direct {v2}, Lcom/android/server/broadcastradio/hal2/Convert$$ExternalSyntheticLambda6;-><init>()V
 
-    .line 318
     invoke-interface {v0, v2}, Ljava/util/stream/Stream;->toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Landroid/hardware/radio/ProgramSelector$Identifier;
 
-    .line 320
     new-instance v2, Landroid/hardware/radio/ProgramSelector;
 
     iget-object v3, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     iget v3, v3, Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;->type:I
 
-    .line 321
     invoke-static {v3}, Lcom/android/server/broadcastradio/hal2/Convert;->identifierTypeToProgramType(I)I
 
     move-result v3
 
     iget-object p0, p0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
-    .line 322
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/Convert;->programIdentifierFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;)Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object p0
@@ -1431,12 +1330,10 @@
 .method public static programSelectorToHal(Landroid/hardware/radio/ProgramSelector;)Landroid/hardware/broadcastradio/V2_0/ProgramSelector;
     .locals 3
 
-    .line 294
     new-instance v0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;
 
     invoke-direct {v0}, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;-><init>()V
 
-    .line 297
     iget-object v1, v0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->primaryId:Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;
 
     invoke-virtual {p0}, Landroid/hardware/radio/ProgramSelector;->getPrimaryId()Landroid/hardware/radio/ProgramSelector$Identifier;
@@ -1445,7 +1342,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/broadcastradio/hal2/Convert;->programIdentifierToHal(Landroid/hardware/broadcastradio/V2_0/ProgramIdentifier;Landroid/hardware/radio/ProgramSelector$Identifier;)V
 
-    .line 298
     invoke-virtual {p0}, Landroid/hardware/radio/ProgramSelector;->getSecondaryIds()[Landroid/hardware/radio/ProgramSelector$Identifier;
 
     move-result-object p0
@@ -1464,7 +1360,6 @@
 
     iget-object v1, v0, Landroid/hardware/broadcastradio/V2_0/ProgramSelector;->secondaryIds:Ljava/util/ArrayList;
 
-    .line 299
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/android/server/broadcastradio/hal2/Convert$$ExternalSyntheticLambda3;
@@ -1485,13 +1380,10 @@
 
     move-object/from16 v3, p1
 
-    .line 238
     invoke-static/range {p1 .. p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
     invoke-static/range {p2 .. p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
     iget-object v1, v0, Landroid/hardware/broadcastradio/V2_0/Properties;->supportedIdentifierTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
@@ -1502,7 +1394,6 @@
 
     invoke-direct {v4}, Lcom/android/server/audio/AudioService$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 242
     invoke-interface {v1, v4}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
 
     move-result-object v1
@@ -1513,12 +1404,10 @@
 
     move-object/from16 v16, v1
 
-    .line 243
     invoke-static {v1}, Lcom/android/server/broadcastradio/hal2/Convert;->identifierTypesToProgramTypes([I)[I
 
     move-result-object v15
 
-    .line 245
     new-instance v19, Landroid/hardware/radio/RadioManager$ModuleProperties;
 
     move-object/from16 v1, v19
@@ -1541,21 +1430,18 @@
 
     const/4 v12, 0x0
 
-    .line 264
     invoke-static/range {p3 .. p3}, Lcom/android/server/broadcastradio/hal2/Convert;->amfmConfigToBands(Landroid/hardware/broadcastradio/V2_0/AmFmRegionConfig;)[Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     move-result-object v13
 
     const/4 v14, 0x1
 
-    .line 268
     invoke-static/range {p4 .. p4}, Lcom/android/server/broadcastradio/hal2/Convert;->dabConfigFromHal(Ljava/util/List;)Ljava/util/Map;
 
     move-result-object v17
 
     iget-object v0, v0, Landroid/hardware/broadcastradio/V2_0/Properties;->vendorInfo:Ljava/util/ArrayList;
 
-    .line 269
     invoke-static {v0}, Lcom/android/server/broadcastradio/hal2/Convert;->vendorInfoFromHal(Ljava/util/List;)Ljava/util/Map;
 
     move-result-object v18
@@ -1568,7 +1454,6 @@
 .method public static throwOnError(Ljava/lang/String;I)V
     .locals 3
 
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1591,7 +1476,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 79
     new-instance v0, Landroid/os/ParcelableException;
 
     new-instance v1, Ljava/lang/RuntimeException;
@@ -1622,7 +1506,6 @@
 
     throw v0
 
-    .line 77
     :pswitch_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -1630,7 +1513,6 @@
 
     throw p0
 
-    .line 75
     :pswitch_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1638,7 +1520,6 @@
 
     throw p0
 
-    .line 73
     :pswitch_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1646,7 +1527,6 @@
 
     throw p0
 
-    .line 71
     :pswitch_3
     new-instance p0, Landroid/os/ParcelableException;
 
@@ -1680,20 +1560,17 @@
 
     if-nez p0, :cond_0
 
-    .line 126
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 
-    .line 128
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 129
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1711,7 +1588,6 @@
 
     check-cast v1, Landroid/hardware/broadcastradio/V2_0/VendorKeyValue;
 
-    .line 130
     iget-object v2, v1, Landroid/hardware/broadcastradio/V2_0/VendorKeyValue;->key:Ljava/lang/String;
 
     if-eqz v2, :cond_2
@@ -1722,7 +1598,6 @@
 
     goto :goto_1
 
-    .line 134
     :cond_1
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1734,7 +1609,6 @@
 
     const-string v2, "VendorKeyValue contains null pointers"
 
-    .line 131
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -1748,20 +1622,17 @@
 
     if-nez p0, :cond_0
 
-    .line 107
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-object p0
 
-    .line 109
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 110
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -1783,12 +1654,10 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 111
     new-instance v2, Landroid/hardware/broadcastradio/V2_0/VendorKeyValue;
 
     invoke-direct {v2}, Landroid/hardware/broadcastradio/V2_0/VendorKeyValue;-><init>()V
 
-    .line 112
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -1797,7 +1666,6 @@
 
     iput-object v3, v2, Landroid/hardware/broadcastradio/V2_0/VendorKeyValue;->key:Ljava/lang/String;
 
-    .line 113
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -1806,7 +1674,6 @@
 
     iput-object v1, v2, Landroid/hardware/broadcastradio/V2_0/VendorKeyValue;->value:Ljava/lang/String;
 
-    .line 114
     iget-object v3, v2, Landroid/hardware/broadcastradio/V2_0/VendorKeyValue;->key:Ljava/lang/String;
 
     if-eqz v3, :cond_2
@@ -1815,7 +1682,6 @@
 
     goto :goto_1
 
-    .line 118
     :cond_1
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1827,7 +1693,6 @@
 
     const-string v2, "VendorKeyValue contains null pointers"
 
-    .line 115
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0

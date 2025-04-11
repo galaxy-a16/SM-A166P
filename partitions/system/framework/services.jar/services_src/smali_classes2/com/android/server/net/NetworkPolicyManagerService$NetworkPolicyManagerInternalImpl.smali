@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$qW3KX8vWV_N1FqP5gEV48YBITdk(Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->lambda$setLowPowerStandbyActive$0(I)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/net/NetworkPolicyManagerService;)V
     .locals 0
 
-    .line 6609
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Lcom/android/server/net/NetworkPolicyManagerInternal;-><init>()V
@@ -31,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/net/NetworkPolicyManagerService;Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;-><init>(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
     return-void
@@ -40,7 +37,6 @@
 .method private synthetic lambda$setLowPowerStandbyActive$0(I)V
     .locals 0
 
-    .line 6706
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$mupdateRulesForPowerRestrictionsUL(Lcom/android/server/net/NetworkPolicyManagerService;I)V
@@ -53,14 +49,12 @@
 .method public getSubscriptionOpportunisticQuota(Landroid/net/Network;I)J
     .locals 5
 
-    .line 6652
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkPoliciesSecondLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 6653
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -76,7 +70,6 @@
 
     move-result-wide v1
 
-    .line 6655
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -96,7 +89,6 @@
 
     long-to-float p1, v1
 
-    .line 6661
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p0}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmContext(Lcom/android/server/net/NetworkPolicyManagerService;)Landroid/content/Context;
@@ -127,7 +119,6 @@
 
     long-to-float p1, v1
 
-    .line 6664
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p0}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmContext(Lcom/android/server/net/NetworkPolicyManagerService;)Landroid/content/Context;
@@ -152,7 +143,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6655
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -164,7 +154,6 @@
 .method public onAdminDataAvailable()V
     .locals 0
 
-    .line 6673
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p0}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmAdminDataAvailableLatch(Lcom/android/server/net/NetworkPolicyManagerService;)Ljava/util/concurrent/CountDownLatch;
@@ -179,14 +168,12 @@
 .method public onTempPowerSaveWhitelistChange(IZILjava/lang/String;)V
     .locals 2
 
-    .line 6627
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mUidRulesFirstLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 6628
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -194,12 +181,10 @@
 
     if-nez v1, :cond_0
 
-    .line 6629
     monitor-exit v0
 
     return-void
 
-    .line 6631
     :cond_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -211,7 +196,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 6633
     iget-object p2, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p2}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmPowerSaveTempWhitelistAppIds(Lcom/android/server/net/NetworkPolicyManagerService;)Landroid/util/SparseBooleanArray;
@@ -224,7 +208,6 @@
 
     goto :goto_0
 
-    .line 6635
     :cond_1
     iget-object p2, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -234,13 +217,11 @@
 
     invoke-virtual {p2, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 6637
     :goto_0
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$mupdateRulesForTempWhitelistChangeUL(Lcom/android/server/net/NetworkPolicyManagerService;I)V
 
-    .line 6638
     monitor-exit v0
 
     return-void
@@ -258,14 +239,12 @@
 .method public resetUserState(I)V
     .locals 5
 
-    .line 6613
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mUidRulesFirstLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 6614
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -277,7 +256,6 @@
 
     move-result v1
 
-    .line 6615
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v4, p1}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$maddDefaultRestrictBackgroundAllowlistUidsUL(Lcom/android/server/net/NetworkPolicyManagerService;I)Z
@@ -297,7 +275,6 @@
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 6617
     iget-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object p1, p1, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkPoliciesSecondLock:Ljava/lang/Object;
@@ -306,13 +283,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6618
     :try_start_1
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/net/NetworkPolicyManagerService;->writePolicyAL()V
 
-    .line 6619
     monitor-exit p1
 
     goto :goto_1
@@ -327,7 +302,6 @@
     :try_start_2
     throw p0
 
-    .line 6621
     :cond_2
     :goto_1
     monitor-exit v0
@@ -347,7 +321,6 @@
 .method public setAppIdleWhitelist(IZ)V
     .locals 0
 
-    .line 6678
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/net/NetworkPolicyManagerService;->setAppIdleWhitelist(IZ)V
@@ -362,10 +335,8 @@
 
     const-wide/32 v1, 0x200000
 
-    .line 6694
     invoke-static {v1, v2, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 6696
     :try_start_0
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -375,7 +346,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 6697
     :try_start_1
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -383,24 +353,20 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 6698
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 6710
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void
 
-    .line 6700
     :cond_0
     :try_start_2
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iput-boolean p1, v3, Lcom/android/server/net/NetworkPolicyManagerService;->mLowPowerStandbyActive:Z
 
-    .line 6701
     iget-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object p1, p1, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkPoliciesSecondLock:Ljava/lang/Object;
@@ -409,7 +375,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 6702
     :try_start_3
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -426,19 +391,16 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 6710
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void
 
-    .line 6703
     :cond_1
     :try_start_5
     monitor-exit p1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 6705
     :try_start_6
     iget-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -450,17 +412,14 @@
 
     invoke-static {p1, v3, v4}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$mforEachUid(Lcom/android/server/net/NetworkPolicyManagerService;Ljava/lang/String;Ljava/util/function/IntConsumer;)V
 
-    .line 6707
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForLowPowerStandbyUL()V
 
-    .line 6708
     monitor-exit v0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 6710
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void
@@ -468,7 +427,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6703
     :try_start_7
     monitor-exit p1
     :try_end_7
@@ -480,7 +438,6 @@
     :catchall_1
     move-exception p0
 
-    .line 6708
     monitor-exit v0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
@@ -493,24 +450,20 @@
     :catchall_2
     move-exception p0
 
-    .line 6710
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 6711
     throw p0
 .end method
 
 .method public setLowPowerStandbyAllowlist([I)V
     .locals 8
 
-    .line 6716
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mUidRulesFirstLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 6717
     :try_start_0
     new-instance v1, Landroid/util/SparseBooleanArray;
 
@@ -520,7 +473,6 @@
 
     move v3, v2
 
-    .line 6718
     :goto_0
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -536,7 +488,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 6719
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v4}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmLowPowerStandbyAllowlistUids(Lcom/android/server/net/NetworkPolicyManagerService;)Landroid/util/SparseBooleanArray;
@@ -547,14 +498,12 @@
 
     move-result v4
 
-    .line 6720
     invoke-static {p1, v4}, Lcom/android/internal/util/ArrayUtils;->contains([II)Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 6721
     invoke-virtual {v1, v4, v5}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
     :cond_0
@@ -565,7 +514,6 @@
     :cond_1
     move v3, v2
 
-    .line 6725
     :goto_1
     invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->size()I
 
@@ -573,12 +521,10 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 6726
     invoke-virtual {v1, v3}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v4
 
-    .line 6727
     iget-object v6, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v6}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmLowPowerStandbyAllowlistUids(Lcom/android/server/net/NetworkPolicyManagerService;)Landroid/util/SparseBooleanArray;
@@ -591,7 +537,6 @@
 
     goto :goto_1
 
-    .line 6730
     :cond_2
     array-length v3, p1
 
@@ -602,7 +547,6 @@
 
     aget v6, p1, v4
 
-    .line 6731
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v7}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmLowPowerStandbyAllowlistUids(Lcom/android/server/net/NetworkPolicyManagerService;)Landroid/util/SparseBooleanArray;
@@ -615,10 +559,8 @@
 
     if-gez v7, :cond_3
 
-    .line 6732
     invoke-virtual {v1, v6, v5}, Landroid/util/SparseBooleanArray;->append(IZ)V
 
-    .line 6733
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v7}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmLowPowerStandbyAllowlistUids(Lcom/android/server/net/NetworkPolicyManagerService;)Landroid/util/SparseBooleanArray;
@@ -632,7 +574,6 @@
 
     goto :goto_2
 
-    .line 6737
     :cond_4
     iget-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -640,12 +581,10 @@
 
     if-nez p1, :cond_5
 
-    .line 6738
     monitor-exit v0
 
     return-void
 
-    .line 6741
     :cond_5
     iget-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -655,7 +594,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6742
     :try_start_1
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -674,14 +612,12 @@
 
     return-void
 
-    .line 6743
     :cond_6
     :try_start_3
     monitor-exit p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 6745
     :goto_3
     :try_start_4
     invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->size()I
@@ -690,17 +626,14 @@
 
     if-ge v2, p1, :cond_7
 
-    .line 6746
     invoke-virtual {v1, v2}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result p1
 
-    .line 6747
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v3, p1}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$mupdateRulesForPowerRestrictionsUL(Lcom/android/server/net/NetworkPolicyManagerService;I)V
 
-    .line 6748
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v3, p1}, Lcom/android/server/net/NetworkPolicyManagerService;->updateRuleForLowPowerStandbyUL(I)V
@@ -709,7 +642,6 @@
 
     goto :goto_3
 
-    .line 6750
     :cond_7
     monitor-exit v0
     :try_end_4
@@ -720,7 +652,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6743
     :try_start_5
     monitor-exit p1
     :try_end_5
@@ -732,7 +663,6 @@
     :catchall_1
     move-exception p0
 
-    .line 6750
     monitor-exit v0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
@@ -743,7 +673,6 @@
 .method public setMeteredRestrictedPackages(Ljava/util/Set;I)V
     .locals 0
 
-    .line 6683
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$msetMeteredRestrictedPackagesInternal(Lcom/android/server/net/NetworkPolicyManagerService;Ljava/util/Set;I)V
@@ -754,7 +683,6 @@
 .method public setMeteredRestrictedPackagesAsync(Ljava/util/Set;I)V
     .locals 2
 
-    .line 6688
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -767,7 +695,6 @@
 
     move-result-object p0
 
-    .line 6689
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

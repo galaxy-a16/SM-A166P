@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService$Injector;)V
     .locals 0
 
-    .line 1458
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$Injector$3;->this$0:Lcom/android/server/power/PowerManagerService$Injector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public permissionless_turn_screen_on()Z
     .locals 1
 
-    .line 1467
     invoke-static {}, Landroid/sysprop/PowerProperties;->permissionless_turn_screen_on()Ljava/util/Optional;
 
     move-result-object p0
@@ -50,15 +48,12 @@
 .method public waive_target_sdk_check_for_turn_screen_on()Z
     .locals 1
 
-    .line 1461
     invoke-static {}, Landroid/sysprop/PowerProperties;->waive_target_sdk_check_for_turn_screen_on()Ljava/util/Optional;
 
     move-result-object p0
 
-    .line 1462
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 1461
     invoke-virtual {p0, v0}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

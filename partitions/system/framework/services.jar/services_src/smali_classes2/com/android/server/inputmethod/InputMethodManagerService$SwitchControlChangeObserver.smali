@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 8218
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
-    .line 8219
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,7 +27,6 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 8223
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p1, p1, Lcom/android/server/inputmethod/InputMethodManagerService;->mContext:Landroid/content/Context;
@@ -46,7 +43,6 @@
 
     move-result p1
 
-    .line 8225
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,7 +70,6 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 8228
     iget-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object v1, p1, Lcom/android/server/inputmethod/InputMethodManagerService;->mContext:Landroid/content/Context;
@@ -87,10 +82,8 @@
 
     invoke-static {p1, v1}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$fputmPrevInputMethodForUniversalSwitch(Lcom/android/server/inputmethod/InputMethodManagerService;Ljava/lang/String;)V
 
-    .line 8230
     invoke-virtual {p0}, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->setDefaultUniversalSwitchInputMethod()V
 
-    .line 8231
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mSettings:Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;
@@ -99,7 +92,6 @@
 
     goto :goto_0
 
-    .line 8234
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->restorePreviousUsedInputMethod()V
 
@@ -110,7 +102,6 @@
 .method public final restorePreviousUsedInputMethod()V
     .locals 5
 
-    .line 8247
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$fgetmPrevInputMethodForUniversalSwitch(Lcom/android/server/inputmethod/InputMethodManagerService;)Ljava/lang/String;
@@ -123,12 +114,10 @@
 
     const-string p0, "Failed to return the previous IME becuase the stored info is null"
 
-    .line 8248
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 8251
     :cond_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -144,7 +133,6 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodInfo;
 
-    .line 8252
     iget-object v2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object v3, v2, Lcom/android/server/inputmethod/InputMethodManagerService;->mContext:Landroid/content/Context;
@@ -155,7 +143,6 @@
 
     move-result-object v2
 
-    .line 8253
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -194,7 +181,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 8254
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$fgetmPrevInputMethodForUniversalSwitch(Lcom/android/server/inputmethod/InputMethodManagerService;)Ljava/lang/String;
@@ -207,7 +193,6 @@
 
     if-nez v0, :cond_1
 
-    .line 8256
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$fgetmPrevInputMethodForUniversalSwitch(Lcom/android/server/inputmethod/InputMethodManagerService;)Ljava/lang/String;
@@ -222,12 +207,10 @@
 
     move-result-object p0
 
-    .line 8257
     invoke-virtual {v2, p0}, Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;->getSelectedInputMethodSubtypeId(Ljava/lang/String;)I
 
     move-result p0
 
-    .line 8256
     invoke-virtual {v0, v1, p0}, Lcom/android/server/inputmethod/InputMethodManagerService;->setInputMethodLocked(Ljava/lang/String;I)V
 
     :cond_1
@@ -237,7 +220,6 @@
 .method public final setDefaultUniversalSwitchInputMethod()V
     .locals 2
 
-    .line 8240
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$misHoneyboardInstalled(Lcom/android/server/inputmethod/InputMethodManagerService;)Z
@@ -260,7 +242,6 @@
 
     if-nez v0, :cond_0
 
-    .line 8241
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mSettings:Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;

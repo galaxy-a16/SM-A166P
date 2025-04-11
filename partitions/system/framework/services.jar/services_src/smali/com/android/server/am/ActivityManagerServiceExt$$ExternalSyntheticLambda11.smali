@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ActivityManagerServiceExt;ZLjava/lang/String;Lcom/android/server/am/ProcessRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerServiceExt$$ExternalSyntheticLambda11;->f$0:Lcom/android/server/am/ActivityManagerServiceExt;
@@ -39,7 +38,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 3
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$$ExternalSyntheticLambda11;->f$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     iget-boolean v1, p0, Lcom/android/server/am/ActivityManagerServiceExt$$ExternalSyntheticLambda11;->f$1:Z

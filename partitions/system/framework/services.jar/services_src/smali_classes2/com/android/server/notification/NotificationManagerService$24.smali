@@ -28,7 +28,6 @@
 .method public static synthetic $r8$lambda$J3ikqNDp3JDY_4FbUTnoA7qcBjo(II)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/notification/NotificationManagerService$24;->lambda$run$0(II)Z
 
     move-result p0
@@ -39,7 +38,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;IIIIZJ)V
     .locals 0
 
-    .line 13069
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$24;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$24;->val$listener:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -64,7 +62,6 @@
 .method public static synthetic lambda$run$0(II)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0xb
 
     if-eq v0, p0, :cond_1
@@ -106,14 +103,12 @@
 
     move-object/from16 v0, p0
 
-    .line 13072
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$24;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationManagerService;->mNotificationLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 13074
     :try_start_0
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$24;->val$listener:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
 
@@ -130,7 +125,6 @@
 
     move-result-object v2
 
-    .line 13075
     :goto_0
     iget v3, v0, Lcom/android/server/notification/NotificationManagerService$24;->val$callingUid:I
 
@@ -150,14 +144,12 @@
 
     invoke-static/range {v3 .. v10}, Lcom/android/server/EventLogTags;->writeNotificationCancelAll(IILjava/lang/String;IIIILjava/lang/String;)V
 
-    .line 13078
     iget v3, v0, Lcom/android/server/notification/NotificationManagerService$24;->val$reason:I
 
     new-instance v15, Lcom/android/server/notification/NotificationManagerService$24$$ExternalSyntheticLambda0;
 
     invoke-direct {v15, v3}, Lcom/android/server/notification/NotificationManagerService$24$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 13090
     iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$24;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v4, v3, Lcom/android/server/notification/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
@@ -200,7 +192,6 @@
 
     invoke-static/range {v3 .. v18}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mcancelAllNotificationsByListLocked(Lcom/android/server/notification/NotificationManagerService;Ljava/util/ArrayList;IILjava/lang/String;ZLjava/lang/String;Lcom/android/server/notification/NotificationManagerService$FlagChecker;ZIZILjava/lang/String;ZJ)V
 
-    .line 13094
     iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$24;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v4, v3, Lcom/android/server/notification/NotificationManagerService;->mEnqueuedNotifications:Ljava/util/ArrayList;
@@ -241,7 +232,6 @@
 
     invoke-static/range {v3 .. v18}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mcancelAllNotificationsByListLocked(Lcom/android/server/notification/NotificationManagerService;Ljava/util/ArrayList;IILjava/lang/String;ZLjava/lang/String;Lcom/android/server/notification/NotificationManagerService$FlagChecker;ZIZILjava/lang/String;ZJ)V
 
-    .line 13098
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$24;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v2, v2, Lcom/android/server/notification/NotificationManagerService;->mSnoozeHelper:Lcom/android/server/notification/SnoozeHelper;
@@ -252,7 +242,6 @@
 
     invoke-virtual {v2, v3, v0}, Lcom/android/server/notification/SnoozeHelper;->cancel(IZ)V
 
-    .line 13099
     monitor-exit v1
 
     return-void

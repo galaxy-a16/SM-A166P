@@ -11,25 +11,21 @@
 
     const-string v1, "VDM.PermissionUtils"
 
-    .line 41
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 42
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v3
 
     const/4 v5, 0x0
 
-    .line 44
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 45
     invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v6
@@ -40,7 +36,6 @@
 
     if-eq p0, v2, :cond_0
 
-    .line 47
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,7 +65,6 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 56
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v5
@@ -87,7 +81,6 @@
 
     goto :goto_0
 
-    .line 52
     :catch_0
     :try_start_1
     new-instance p0, Ljava/lang/StringBuilder;
@@ -110,7 +103,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 56
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v5
@@ -118,6 +110,5 @@
     :goto_0
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 57
     throw p0
 .end method

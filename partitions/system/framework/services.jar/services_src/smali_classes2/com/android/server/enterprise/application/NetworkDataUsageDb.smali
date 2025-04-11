@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     iput-object p1, p0, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->mContext:Landroid/content/Context;
 
     return-void
@@ -28,7 +26,6 @@
     :try_start_0
     const-string v1, " (_id integer primary key , mobiledatausagercv long, wifidatausagesendrcv long, mobiledatausagesend long, wifidatausagesend long );"
 
-    .line 425
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +44,6 @@
 
     const-string p0, "::createDmAppMgrTable: Table is Created "
 
-    .line 427
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -57,7 +53,6 @@
     :catch_0
     const-string p0, "::createDmAppMgrTable: Exception while table is creating "
 
-    .line 431
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -75,7 +70,6 @@
 
     const/4 v3, 0x0
 
-    .line 387
     :try_start_0
     invoke-virtual {p0, v1, v2, v3}, Landroid/content/Context;->openOrCreateDatabase(Ljava/lang/String;ILandroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
 
@@ -83,7 +77,6 @@
 
     const-string p0, "::getAppControlDB: DB is Created "
 
-    .line 391
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -93,7 +86,6 @@
     :catch_0
     const-string p0, "::getAppControlDB: Exception to create DB"
 
-    .line 395
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -101,14 +93,12 @@
 
     const-string p0, "NetworkDataUsage"
 
-    .line 399
     invoke-static {v3, p0}, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->isTableExists(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 401
     invoke-static {v3}, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->createDmAppMgrTable(Landroid/database/sqlite/SQLiteDatabase;)V
 
     :cond_0
@@ -126,7 +116,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 443
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
@@ -137,7 +126,6 @@
 
     if-lez v2, :cond_0
 
-    .line 447
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -161,7 +149,6 @@
 
     const-string p0, "::isTableExists: Table exists "
 
-    .line 451
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -173,7 +160,6 @@
     :catch_0
     const-string p0, "::isTableExists:Table Does not exists "
 
-    .line 457
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -190,7 +176,6 @@
 
     const/4 v1, 0x0
 
-    .line 297
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->mContext:Landroid/content/Context;
 
@@ -205,7 +190,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 363
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_0
@@ -229,7 +213,6 @@
 
     move-object v2, p0
 
-    .line 305
     invoke-virtual/range {v2 .. v9}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
@@ -239,7 +222,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 311
     :try_start_2
     new-instance v3, Ljava/util/Hashtable;
 
@@ -248,7 +230,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 313
     :try_start_3
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -256,18 +237,15 @@
 
     if-eqz v1, :cond_3
 
-    .line 317
     :cond_2
     new-instance v1, Lcom/samsung/android/knox/application/NetworkStats;
 
     invoke-direct {v1}, Lcom/samsung/android/knox/application/NetworkStats;-><init>()V
 
-    .line 321
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 319
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
@@ -276,12 +254,10 @@
 
     const-string/jumbo v4, "mobiledatausagesend"
 
-    .line 325
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 323
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
@@ -290,12 +266,10 @@
 
     const-string/jumbo v4, "mobiledatausagercv"
 
-    .line 329
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 327
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
@@ -304,12 +278,10 @@
 
     const-string/jumbo v4, "wifidatausagesend"
 
-    .line 333
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 331
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
@@ -318,19 +290,16 @@
 
     const-string/jumbo v4, "wifidatausagesendrcv"
 
-    .line 337
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 335
     invoke-interface {v2, v4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
 
     iput-wide v4, v1, Lcom/samsung/android/knox/application/NetworkStats;->wifiRxBytes:J
 
-    .line 339
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
@@ -345,7 +314,6 @@
 
     invoke-virtual {v3, v4, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 343
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v1
@@ -386,10 +354,8 @@
     :goto_1
     if-eqz v2, :cond_5
 
-    .line 359
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 363
     :cond_5
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
@@ -420,7 +386,6 @@
     :try_start_4
     const-string v2, "NetworkDataUsageDb"
 
-    .line 351
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -441,13 +406,11 @@
 
     if-eqz v1, :cond_6
 
-    .line 359
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_6
     if-eqz p0, :cond_7
 
-    .line 363
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_7
@@ -462,16 +425,13 @@
     :goto_4
     if-eqz v1, :cond_8
 
-    .line 359
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_8
     if-eqz p0, :cond_9
 
-    .line 363
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 367
     :cond_9
     throw v0
 .end method
@@ -489,7 +449,6 @@
 
     move-object/from16 v0, p0
 
-    .line 134
     :try_start_0
     iget-object v0, v0, Lcom/android/server/enterprise/application/NetworkDataUsageDb;->mContext:Landroid/content/Context;
 
@@ -506,7 +465,6 @@
     :cond_0
     if-eqz v1, :cond_7
 
-    .line 142
     :try_start_1
     invoke-virtual/range {p1 .. p1}, Ljava/util/Hashtable;->isEmpty()Z
 
@@ -514,12 +472,10 @@
 
     if-nez v0, :cond_7
 
-    .line 144
     invoke-virtual/range {p1 .. p1}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 148
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -543,7 +499,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_5
 
-    .line 152
     :try_start_2
     invoke-virtual {v1, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -551,7 +506,6 @@
 
     check-cast v9, Lcom/samsung/android/knox/application/NetworkStats;
 
-    .line 154
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -572,7 +526,6 @@
 
     move-result-object v8
 
-    .line 160
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v10
@@ -592,18 +545,15 @@
 
     if-eqz v10, :cond_2
 
-    .line 162
     :try_start_3
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
 
-    .line 168
     invoke-interface {v8, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v11
 
-    .line 166
     invoke-interface {v8, v11}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v16
@@ -613,88 +563,73 @@
 
     move-object/from16 v18, v5
 
-    .line 170
     :try_start_4
     iget-wide v4, v9, Lcom/samsung/android/knox/application/NetworkStats;->mobileTxBytes:J
 
     add-long v4, v4, v16
 
-    .line 172
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
     invoke-virtual {v10, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 178
     invoke-interface {v8, v15}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 176
     invoke-interface {v8, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v3
 
     move-object v5, v12
 
-    .line 180
     iget-wide v11, v9, Lcom/samsung/android/knox/application/NetworkStats;->mobileRxBytes:J
 
     add-long/2addr v11, v3
 
-    .line 182
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
     invoke-virtual {v10, v15, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 188
     invoke-interface {v8, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 186
     invoke-interface {v8, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v3
 
-    .line 190
     iget-wide v11, v9, Lcom/samsung/android/knox/application/NetworkStats;->wifiTxBytes:J
 
     add-long/2addr v11, v3
 
-    .line 192
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
     invoke-virtual {v10, v14, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 198
     invoke-interface {v8, v13}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 196
     invoke-interface {v8, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v3
 
-    .line 200
     iget-wide v11, v9, Lcom/samsung/android/knox/application/NetworkStats;->wifiRxBytes:J
 
     add-long/2addr v11, v3
 
-    .line 202
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
     invoke-virtual {v10, v13, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 206
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -761,7 +696,6 @@
 
     move-object v5, v12
 
-    .line 220
     :try_start_6
     new-instance v10, Landroid/content/ContentValues;
 
@@ -769,43 +703,32 @@
 
     const-string v12, "_id"
 
-    .line 222
     invoke-virtual {v10, v12, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 224
     iget-wide v11, v9, Lcom/samsung/android/knox/application/NetworkStats;->mobileTxBytes:J
 
-    .line 226
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    .line 224
     invoke-virtual {v10, v3, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 228
     iget-wide v11, v9, Lcom/samsung/android/knox/application/NetworkStats;->mobileRxBytes:J
 
-    .line 230
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    .line 228
     invoke-virtual {v10, v15, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 232
     iget-wide v11, v9, Lcom/samsung/android/knox/application/NetworkStats;->wifiTxBytes:J
 
-    .line 234
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    .line 232
     invoke-virtual {v10, v14, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 236
     iget-wide v11, v9, Lcom/samsung/android/knox/application/NetworkStats;->wifiRxBytes:J
 
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -819,7 +742,6 @@
 
     const/4 v3, 0x0
 
-    .line 240
     :try_start_7
     invoke-virtual {v4, v5, v3, v10}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
@@ -836,7 +758,6 @@
 
     const/4 v7, 0x1
 
-    .line 255
     :cond_3
     :goto_1
     :try_start_8
@@ -877,7 +798,6 @@
     :try_start_9
     const-string v5, "NetworkDataUsageDb"
 
-    .line 252
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -920,11 +840,9 @@
     :goto_5
     if-eqz v8, :cond_5
 
-    .line 255
     :try_start_a
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 257
     :cond_5
     throw v0
     :try_end_a
@@ -964,7 +882,6 @@
     :goto_8
     if-eqz v5, :cond_8
 
-    .line 275
     invoke-virtual {v5}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_8

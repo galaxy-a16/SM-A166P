@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/media/soundtrigger_middleware/ISoundTriggerModule;)V
     .locals 0
 
-    .line 154
     invoke-direct {p0}, Landroid/media/soundtrigger_middleware/ISoundTriggerModule$Stub;-><init>()V
 
-    .line 155
     iput-object p1, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
     return-void
@@ -23,7 +21,6 @@
 .method public synthetic constructor <init>(Landroid/media/soundtrigger_middleware/ISoundTriggerModule;Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;-><init>(Landroid/media/soundtrigger_middleware/ISoundTriggerModule;)V
 
     return-void
@@ -34,12 +31,10 @@
 .method public detach()V
     .locals 1
 
-    .line 226
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 227
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -49,7 +44,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 228
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -60,7 +54,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 226
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -81,12 +74,10 @@
 .method public forceRecognitionEvent(I)V
     .locals 1
 
-    .line 196
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 197
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -96,7 +87,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 198
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -107,7 +97,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 196
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -128,12 +117,10 @@
 .method public getModelParameter(II)I
     .locals 1
 
-    .line 211
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 212
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -145,7 +132,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 213
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -156,7 +142,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 211
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -177,12 +162,10 @@
 .method public loadModel(Landroid/media/soundtrigger/SoundModel;)I
     .locals 1
 
-    .line 160
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 161
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -194,7 +177,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -205,7 +187,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 160
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -226,12 +207,10 @@
 .method public loadPhraseModel(Landroid/media/soundtrigger/PhraseSoundModel;)I
     .locals 1
 
-    .line 167
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 168
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -243,7 +222,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 169
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -254,7 +232,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 167
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -275,12 +252,10 @@
 .method public queryModelParameterSupport(II)Landroid/media/soundtrigger/ModelParameterRange;
     .locals 1
 
-    .line 219
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 220
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -292,7 +267,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 221
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -303,7 +277,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 219
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -324,12 +297,10 @@
 .method public setModelParameter(III)V
     .locals 1
 
-    .line 204
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 205
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -339,7 +310,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 206
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -350,7 +320,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 204
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -371,12 +340,10 @@
 .method public startRecognition(ILandroid/media/soundtrigger/RecognitionConfig;)Landroid/os/IBinder;
     .locals 1
 
-    .line 182
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 183
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -388,7 +355,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 184
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -399,7 +365,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 182
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -420,12 +385,10 @@
 .method public stopRecognition(I)V
     .locals 1
 
-    .line 189
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 190
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -435,7 +398,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 191
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -446,7 +408,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 189
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1
@@ -467,12 +428,10 @@
 .method public unloadModel(I)V
     .locals 1
 
-    .line 174
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
     move-result-object v0
 
-    .line 175
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService$ModuleService;->mDelegate:Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
 
@@ -482,7 +441,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 176
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
 
     :cond_0
@@ -493,7 +451,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 174
     :try_start_1
     invoke-interface {v0}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_1

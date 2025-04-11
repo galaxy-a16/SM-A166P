@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usage/StorageStatsService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/usage/StorageStatsService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/usage/StorageStatsService;
@@ -27,7 +26,6 @@
 .method public final onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/usage/StorageStatsService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/usage/StorageStatsService;
 
     invoke-static {p0, p1}, Lcom/android/server/usage/StorageStatsService;->$r8$lambda$mV00ZEQcFgVx0r-hI2MoZntkGgE(Lcom/android/server/usage/StorageStatsService;Landroid/provider/DeviceConfig$Properties;)V

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/Face10;)V
     .locals 0
 
-    .line 213
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     invoke-direct {p0}, Landroid/app/SynchronousUserSwitchObserver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onUserSwitching(I)V
     .locals 9
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     const/4 v1, 0x0
 
     invoke-static {v0, p1, v1}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$mscheduleInternalCleanup(Lcom/android/server/biometrics/sensors/face/hidl/Face10;ILcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 217
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     invoke-static {v2}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$fgetmSensorId(Lcom/android/server/biometrics/sensors/face/hidl/Face10;)I
@@ -52,14 +49,12 @@
 
     move-result-object p0
 
-    .line 219
     invoke-virtual {p0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v8
 
     move v5, p1
 
-    .line 217
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->scheduleGetFeature(ILandroid/os/IBinder;IILcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;Ljava/lang/String;)V
 
     return-void

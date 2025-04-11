@@ -18,7 +18,6 @@
 .method public static convertStepToRamp(Landroid/os/VibratorInfo;Landroid/os/vibrator/StepSegment;)Landroid/os/vibrator/RampSegment;
     .locals 7
 
-    .line 109
     invoke-virtual {p1}, Landroid/os/vibrator/StepSegment;->getFrequencyHz()F
 
     move-result v0
@@ -27,7 +26,6 @@
 
     move-result v5
 
-    .line 110
     new-instance p0, Landroid/os/vibrator/RampSegment;
 
     invoke-virtual {p1}, Landroid/os/vibrator/StepSegment;->getAmplitude()F
@@ -38,7 +36,6 @@
 
     move-result v3
 
-    .line 111
     invoke-virtual {p1}, Landroid/os/vibrator/StepSegment;->getDuration()J
 
     move-result-wide v0
@@ -63,7 +60,6 @@
 
     if-nez v0, :cond_0
 
-    .line 151
     invoke-virtual {p0}, Landroid/os/VibratorInfo;->getResonantFrequencyHz()F
 
     move-result p1
@@ -75,7 +71,6 @@
 .method public static isStep(Landroid/os/vibrator/VibrationEffectSegment;)Z
     .locals 0
 
-    .line 147
     instance-of p0, p0, Landroid/os/vibrator/StepSegment;
 
     return p0
@@ -88,12 +83,10 @@
 
     move/from16 v1, p2
 
-    .line 116
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 117
     invoke-virtual/range {p1 .. p1}, Landroid/os/vibrator/RampSegment;->getStartFrequencyHz()F
 
     move-result v3
@@ -102,7 +95,6 @@
 
     move-result v3
 
-    .line 118
     invoke-virtual/range {p1 .. p1}, Landroid/os/vibrator/RampSegment;->getEndFrequencyHz()F
 
     move-result v4
@@ -111,7 +103,6 @@
 
     move-result v9
 
-    .line 119
     invoke-virtual/range {p1 .. p1}, Landroid/os/vibrator/RampSegment;->getDuration()J
 
     move-result-wide v4
@@ -120,7 +111,6 @@
 
     div-long/2addr v4, v6
 
-    .line 120
     invoke-virtual/range {p1 .. p1}, Landroid/os/vibrator/RampSegment;->getStartAmplitude()F
 
     move-result v0
@@ -140,7 +130,6 @@
 
     long-to-float v0, v6
 
-    .line 126
     invoke-virtual/range {p1 .. p1}, Landroid/os/vibrator/RampSegment;->getDuration()J
 
     move-result-wide v14
@@ -149,12 +138,10 @@
 
     div-float/2addr v0, v10
 
-    .line 128
     invoke-static {v3, v9, v0}, Landroid/util/MathUtils;->lerp(FFF)F
 
     move-result v14
 
-    .line 130
     invoke-virtual/range {p1 .. p1}, Landroid/os/vibrator/RampSegment;->getStartAmplitude()F
 
     move-result v10
@@ -167,7 +154,6 @@
 
     move-result v12
 
-    .line 131
     new-instance v0, Landroid/os/vibrator/RampSegment;
 
     long-to-int v15, v4
@@ -176,15 +162,12 @@
 
     invoke-direct/range {v10 .. v15}, Landroid/os/vibrator/RampSegment;-><init>(FFFFI)V
 
-    .line 135
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 136
     invoke-virtual {v0}, Landroid/os/vibrator/RampSegment;->getEndAmplitude()F
 
     move-result v11
 
-    .line 137
     invoke-virtual {v0}, Landroid/os/vibrator/RampSegment;->getEndFrequencyHz()F
 
     move-result v13
@@ -193,7 +176,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_0
     new-instance v0, Landroid/os/vibrator/RampSegment;
 
@@ -201,7 +183,6 @@
 
     move-result v1
 
-    .line 141
     invoke-virtual/range {p1 .. p1}, Landroid/os/vibrator/RampSegment;->getDuration()J
 
     move-result-wide v3
@@ -220,7 +201,6 @@
 
     invoke-direct/range {v5 .. v10}, Landroid/os/vibrator/RampSegment;-><init>(FFFFI)V
 
-    .line 140
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object v2
@@ -233,7 +213,6 @@
 
     const-wide/16 v0, 0x400
 
-    .line 41
     invoke-virtual {p3, v0, v1}, Landroid/os/VibratorInfo;->hasCapability(J)Z
 
     move-result v0
@@ -242,11 +221,9 @@
 
     return p2
 
-    .line 45
     :cond_0
     invoke-virtual {p0, p3, p1}, Lcom/android/server/vibrator/StepToRampAdapter;->convertStepsToRamps(Landroid/os/VibratorInfo;Ljava/util/List;)V
 
-    .line 46
     invoke-virtual {p0, p3, p1, p2}, Lcom/android/server/vibrator/StepToRampAdapter;->splitLongRampSegments(Landroid/os/VibratorInfo;Ljava/util/List;I)I
 
     move-result p0
@@ -257,7 +234,6 @@
 .method public bridge synthetic apply(Ljava/util/List;ILjava/lang/Object;)I
     .locals 0
 
-    .line 36
     check-cast p3, Landroid/os/VibratorInfo;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/vibrator/StepToRampAdapter;->apply(Ljava/util/List;ILandroid/os/VibratorInfo;)I
@@ -270,7 +246,6 @@
 .method public final convertStepsToRamps(Landroid/os/VibratorInfo;Ljava/util/List;)V
     .locals 5
 
-    .line 51
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p0
@@ -282,14 +257,12 @@
     :goto_0
     if-ge v1, p0, :cond_1
 
-    .line 54
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/vibrator/VibrationEffectSegment;
 
-    .line 55
     invoke-static {v2}, Lcom/android/server/vibrator/StepToRampAdapter;->isStep(Landroid/os/vibrator/VibrationEffectSegment;)Z
 
     move-result v3
@@ -308,7 +281,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 56
     invoke-static {p1, v2}, Lcom/android/server/vibrator/StepToRampAdapter;->convertStepToRamp(Landroid/os/VibratorInfo;Landroid/os/vibrator/StepSegment;)Landroid/os/vibrator/RampSegment;
 
     move-result-object v2
@@ -324,7 +296,6 @@
     :goto_1
     if-ge v0, p0, :cond_4
 
-    .line 62
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -338,7 +309,6 @@
     :goto_2
     if-ltz v1, :cond_2
 
-    .line 63
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -351,7 +321,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 64
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -374,7 +343,6 @@
     :goto_3
     if-ge v1, p0, :cond_3
 
-    .line 66
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -387,7 +355,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 67
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -416,7 +383,6 @@
 .method public final splitLongRampSegments(Landroid/os/VibratorInfo;Ljava/util/List;I)I
     .locals 6
 
-    .line 79
     invoke-virtual {p1}, Landroid/os/VibratorInfo;->getPwlePrimitiveDurationMax()I
 
     move-result p0
@@ -425,7 +391,6 @@
 
     return p3
 
-    .line 85
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -436,7 +401,6 @@
     :goto_0
     if-ge v1, v0, :cond_4
 
-    .line 87
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -449,7 +413,6 @@
 
     goto :goto_1
 
-    .line 90
     :cond_1
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -457,7 +420,6 @@
 
     check-cast v2, Landroid/os/vibrator/RampSegment;
 
-    .line 91
     invoke-virtual {v2}, Landroid/os/vibrator/RampSegment;->getDuration()J
 
     move-result-wide v4
@@ -474,11 +436,9 @@
 
     goto :goto_1
 
-    .line 95
     :cond_2
     invoke-interface {p2, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 96
     invoke-static {p1, v2, v4}, Lcom/android/server/vibrator/StepToRampAdapter;->splitRampSegment(Landroid/os/VibratorInfo;Landroid/os/vibrator/RampSegment;I)Ljava/util/List;
 
     move-result-object v2

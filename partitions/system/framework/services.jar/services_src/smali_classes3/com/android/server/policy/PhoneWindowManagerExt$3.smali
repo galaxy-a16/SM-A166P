@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;II)V
     .locals 0
 
-    .line 3230
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$3;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;-><init>(II)V
@@ -24,7 +23,6 @@
 .method public cancel()V
     .locals 0
 
-    .line 3246
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$3;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->-$$Nest$mcheckAccessibilityShortcutVolupPowerTriggered(Lcom/android/server/policy/PhoneWindowManagerExt;)V
@@ -35,7 +33,6 @@
 .method public execute()V
     .locals 0
 
-    .line 3241
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$3;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-static {p0}, Lcom/android/server/policy/PhoneWindowManagerExt;->-$$Nest$minterceptAccessibilityShortcutVolupPowerChord(Lcom/android/server/policy/PhoneWindowManagerExt;)V
@@ -46,7 +43,6 @@
 .method public preCondition()Z
     .locals 0
 
-    .line 3236
     invoke-super {p0}, Lcom/android/server/policy/KeyCombinationManager$TwoKeysCombinationRule;->preCondition()Z
 
     move-result p0

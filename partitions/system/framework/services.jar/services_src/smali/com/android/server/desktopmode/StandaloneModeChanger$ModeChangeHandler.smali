@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/StandaloneModeChanger;Landroid/os/Looper;)V
     .locals 1
 
-    .line 629
     iput-object p1, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeHandler;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x0
 
-    .line 630
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/StandaloneModeChanger;Landroid/os/Looper;Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeHandler;-><init>(Lcom/android/server/desktopmode/StandaloneModeChanger;Landroid/os/Looper;)V
 
     return-void
@@ -38,7 +35,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
 
-    .line 635
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -55,7 +51,6 @@
 
     goto/16 :goto_2
 
-    .line 666
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeHandler;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
@@ -69,7 +64,6 @@
 
     goto/16 :goto_2
 
-    .line 662
     :cond_1
     iget-object p0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeHandler;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
@@ -87,7 +81,6 @@
 
     goto/16 :goto_2
 
-    .line 637
     :cond_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -97,7 +90,6 @@
 
     move-result v0
 
-    .line 638
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     const/16 v2, 0xa
@@ -116,7 +108,6 @@
     :goto_0
     if-eqz v2, :cond_6
 
-    .line 640
     iget-object v4, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeHandler;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     iget-object v4, v4, Lcom/android/server/desktopmode/ModeChanger;->mActivityTaskManagerInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
@@ -131,7 +122,6 @@
 
     goto :goto_1
 
-    .line 642
     :cond_4
     invoke-virtual {v4, v3, v1}, Lcom/android/server/wm/ActivityTaskManagerInternal;->goodToChangeMode(II)Z
 
@@ -139,13 +129,11 @@
 
     if-nez v4, :cond_6
 
-    .line 645
     :goto_1
     sget-boolean v2, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v2, :cond_5
 
-    .line 646
     invoke-static {}, Lcom/android/server/desktopmode/StandaloneModeChanger;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -178,7 +166,6 @@
 
     invoke-static {v2, v4}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 649
     :cond_5
     iget-object p0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeHandler;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
@@ -186,19 +173,16 @@
 
     add-int/2addr p1, v1
 
-    .line 651
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 650
     invoke-virtual {p0, v1, p1, v3, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
     const-wide/16 v0, 0x1f4
 
-    .line 649
     invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_2
@@ -206,7 +190,6 @@
     :cond_6
     if-nez v2, :cond_7
 
-    .line 654
     invoke-static {}, Lcom/android/server/desktopmode/StandaloneModeChanger;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -227,7 +210,6 @@
 
     invoke-static {v1, p1}, Lcom/android/server/desktopmode/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 657
     :cond_7
     iget-object p0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeHandler;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 

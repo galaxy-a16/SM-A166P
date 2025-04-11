@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->$r8$lambda$-sEkLhywQnZ3R5l0AwP1o5DXIKE(Ljava/lang/String;)Ljava/lang/String;

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/ZramWriteback;Ljava/lang/String;Landroid/app/job/JobParameters;)V
     .locals 0
 
-    .line 148
     iput-object p1, p0, Lcom/android/server/ZramWriteback$1;->this$0:Lcom/android/server/ZramWriteback;
 
     iput-object p3, p0, Lcom/android/server/ZramWriteback$1;->val$params:Landroid/app/job/JobParameters;
@@ -28,17 +27,14 @@
 .method public run()V
     .locals 2
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/ZramWriteback$1;->this$0:Lcom/android/server/ZramWriteback;
 
     invoke-static {v0}, Lcom/android/server/ZramWriteback;->-$$Nest$mmarkAndFlushPages(Lcom/android/server/ZramWriteback;)V
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/ZramWriteback$1;->this$0:Lcom/android/server/ZramWriteback;
 
     invoke-static {v0}, Lcom/android/server/ZramWriteback;->-$$Nest$smschedNextWriteback(Landroid/content/Context;)V
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/ZramWriteback$1;->this$0:Lcom/android/server/ZramWriteback;
 
     iget-object p0, p0, Lcom/android/server/ZramWriteback$1;->val$params:Landroid/app/job/JobParameters;

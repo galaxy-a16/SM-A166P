@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;)V
     .locals 0
 
-    .line 2959
     iput-object p1, p0, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck$1;->this$0:Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;
 
     invoke-direct {p0}, Landroid/content/ISyncAdapterUnsyncableAccountCallback$Stub;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2963
     iget-object p0, p0, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck$1;->this$0:Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;
 
     invoke-static {p0}, Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;->-$$Nest$monReady(Lcom/android/server/content/SyncManager$OnUnsyncableAccountCheck;)V

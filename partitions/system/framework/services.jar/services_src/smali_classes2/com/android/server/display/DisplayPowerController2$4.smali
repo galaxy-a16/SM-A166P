@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayPowerController2;)V
     .locals 0
 
-    .line 1626
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController2$4;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 1647
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController2$4;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmTag(Lcom/android/server/display/DisplayPowerController2;)Ljava/lang/String;
@@ -44,12 +42,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1635
     sget-object p1, Lcom/android/server/power/PowerManagerUtil;->sCurrentScreenOffProfiler:Lcom/android/server/power/PowerManagerUtil$ScreenOffProfiler;
 
     invoke-virtual {p1}, Lcom/android/server/power/PowerManagerUtil$ScreenOffProfiler;->noteCfAnimationEnd()V
 
-    .line 1636
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController2$4;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmTag(Lcom/android/server/display/DisplayPowerController2;)Ljava/lang/String;
@@ -60,7 +56,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1637
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController2$4;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$msendUpdatePowerState(Lcom/android/server/display/DisplayPowerController2;)V
@@ -71,7 +66,6 @@
 .method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 1642
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController2$4;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmTag(Lcom/android/server/display/DisplayPowerController2;)Ljava/lang/String;
@@ -88,12 +82,10 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 1629
     sget-object p1, Lcom/android/server/power/PowerManagerUtil;->sCurrentScreenOffProfiler:Lcom/android/server/power/PowerManagerUtil$ScreenOffProfiler;
 
     invoke-virtual {p1}, Lcom/android/server/power/PowerManagerUtil$ScreenOffProfiler;->noteCfAnimationStart()V
 
-    .line 1630
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController2$4;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmTag(Lcom/android/server/display/DisplayPowerController2;)Ljava/lang/String;

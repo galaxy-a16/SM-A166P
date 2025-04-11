@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 15980
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$25;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -28,7 +27,6 @@
 
     return-void
 
-    .line 15986
     :cond_0
     iget-object p1, p0, Lcom/android/server/notification/NotificationManagerService$25;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -46,7 +44,6 @@
 
     iput-boolean p2, p1, Lcom/android/server/notification/NotificationManagerService;->mIsRuneStoneEnabled:Z
 
-    .line 15987
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

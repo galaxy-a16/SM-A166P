@@ -28,7 +28,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/dreams/DreamManagerService;Landroid/content/ComponentName;Landroid/os/Binder;ZZILandroid/os/PowerManager$WakeLock;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/dreams/DreamManagerService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/dreams/DreamManagerService;
@@ -55,7 +54,6 @@
 .method public final run()V
     .locals 8
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/dreams/DreamManagerService;
 
     iget-object v1, p0, Lcom/android/server/dreams/DreamManagerService$$ExternalSyntheticLambda3;->f$1:Landroid/content/ComponentName;

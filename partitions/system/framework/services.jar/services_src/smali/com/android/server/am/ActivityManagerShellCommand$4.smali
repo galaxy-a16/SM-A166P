@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerShellCommand;Landroid/util/ArrayMap;)V
     .locals 0
 
-    .line 2938
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$4;->this$0:Lcom/android/server/am/ActivityManagerShellCommand;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerShellCommand$4;->val$recentConfigs:Landroid/util/ArrayMap;
@@ -31,7 +30,6 @@
 .method public compare(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)I
     .locals 1
 
-    .line 2941
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerShellCommand$4;->val$recentConfigs:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -58,7 +56,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 2938
     check-cast p1, Landroid/content/res/Configuration;
 
     check-cast p2, Landroid/content/res/Configuration;

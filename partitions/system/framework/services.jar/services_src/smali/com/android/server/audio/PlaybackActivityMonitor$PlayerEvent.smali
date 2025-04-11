@@ -15,16 +15,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 1281
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 1282
     iput p1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mPlayerIId:I
 
-    .line 1283
     iput p2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEvent:I
 
-    .line 1284
     iput p3, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
     return-void
@@ -35,7 +31,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 3
 
-    .line 1289
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "player piid:"
@@ -52,14 +47,12 @@
 
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEvent:I
 
-    .line 1291
     invoke-static {v1}, Landroid/media/AudioPlaybackConfiguration;->toLogFriendlyPlayerState(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1293
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEvent:I
 
     const/4 v2, 0x5
@@ -74,7 +67,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 1328
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -84,17 +76,14 @@
     :cond_0
     const-string v1, " source:"
 
-    .line 1303
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1304
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
     if-gtz v1, :cond_1
 
     const-string/jumbo p0, "none "
 
-    .line 1305
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -106,10 +95,8 @@
 
     const-string/jumbo v1, "masterMute "
 
-    .line 1308
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1310
     :cond_2
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
@@ -119,10 +106,8 @@
 
     const-string/jumbo v1, "streamVolume "
 
-    .line 1311
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1313
     :cond_3
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
@@ -132,10 +117,8 @@
 
     const-string/jumbo v1, "streamMute "
 
-    .line 1314
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1316
     :cond_4
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
@@ -145,10 +128,8 @@
 
     const-string v1, "appOps "
 
-    .line 1317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1319
     :cond_5
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
@@ -158,10 +139,8 @@
 
     const-string v1, "clientVolume "
 
-    .line 1320
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1322
     :cond_6
     iget p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
@@ -171,10 +150,8 @@
 
     const-string/jumbo p0, "volumeShaper "
 
-    .line 1323
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1326
     :cond_7
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -183,7 +160,6 @@
 
     return-object p0
 
-    .line 1295
     :cond_8
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -219,7 +195,6 @@
 
     return-object p0
 
-    .line 1298
     :cond_9
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
@@ -227,14 +202,12 @@
 
     const-string v1, " deviceId:"
 
-    .line 1299
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;->mEventValue:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1301
     :cond_a
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

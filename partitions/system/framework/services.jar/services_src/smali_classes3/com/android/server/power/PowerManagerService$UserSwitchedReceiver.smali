@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;)V
     .locals 0
 
-    .line 7655
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$UserSwitchedReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "PowerManagerService"
 
-    .line 7659
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -35,7 +33,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7660
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
@@ -60,10 +57,8 @@
 
     move-result-object p2
 
-    .line 7659
     invoke-static {p1, p2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7663
     iget-object p1, p0, Lcom/android/server/power/PowerManagerService$UserSwitchedReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/PowerManagerService;)Ljava/lang/Object;
@@ -72,7 +67,6 @@
 
     monitor-enter p1
 
-    .line 7665
     :try_start_0
     iget-object p2, p0, Lcom/android/server/power/PowerManagerService$UserSwitchedReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -82,12 +76,10 @@
 
     invoke-static {p2, v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$msetQuickPanelBrightnessBarDisabled(Lcom/android/server/power/PowerManagerService;Z)V
 
-    .line 7667
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$UserSwitchedReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerService;->handleSettingsChangedLocked()V
 
-    .line 7668
     monitor-exit p1
 
     return-void

@@ -7,7 +7,6 @@
 .method public constructor <init>(ILjava/lang/String;ILjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
     .locals 0
 
-    .line 33
     invoke-direct/range {p0 .. p5}, Lcom/android/server/am/BaseAppStateEvents;-><init>(ILjava/lang/String;ILjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/am/BaseAppStateTimeEvents;)V
     .locals 0
 
-    .line 37
     invoke-direct {p0, p1}, Lcom/android/server/am/BaseAppStateEvents;-><init>(Lcom/android/server/am/BaseAppStateEvents;)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public getTotalEventsSince(JJI)I
     .locals 0
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object p0, p0, p5
@@ -36,7 +33,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 72
     invoke-virtual {p0}, Ljava/util/LinkedList;->size()I
 
     move-result p4
@@ -45,7 +41,6 @@
 
     goto :goto_1
 
-    .line 76
     :cond_0
     invoke-virtual {p0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -65,7 +60,6 @@
 
     check-cast p4, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;
 
-    .line 77
     invoke-virtual {p4}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide p4

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/wifi/WifiPolicy;)V
     .locals 0
 
-    .line 2935
     iput-object p1, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,19 +23,16 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    .line 2938
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "WifiPolicyService"
 
-    .line 2939
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
-    .line 2940
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -47,7 +43,6 @@
 
     const/4 v0, 0x4
 
-    .line 2941
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -58,7 +53,6 @@
 
     if-nez p1, :cond_5
 
-    .line 2944
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
@@ -72,7 +66,6 @@
 
     if-eq p1, v0, :cond_5
 
-    .line 2945
     iget-object p0, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     invoke-static {p0}, Lcom/android/server/enterprise/wifi/WifiPolicy;->-$$Nest$fgetmWifiState(Lcom/android/server/enterprise/wifi/WifiPolicy;)Ljava/util/concurrent/atomic/AtomicInteger;
@@ -99,14 +92,12 @@
 
     const/4 v2, 0x1
 
-    .line 2948
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
 
     const-string v4, "WifiPolicy"
 
-    .line 2947
     invoke-static/range {v0 .. v5}, Landroid/sec/enterprise/auditlog/AuditLog;->log(IIZILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
@@ -114,7 +105,6 @@
     :cond_2
     const-string v1, "android.intent.action.LOCKED_BOOT_COMPLETED"
 
-    .line 2951
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -123,10 +113,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 2952
     invoke-static {v2}, Lcom/android/server/enterprise/wifi/WifiPolicy;->-$$Nest$sfputisBootCompleted(Z)V
 
-    .line 2953
     iget-object p0, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     invoke-static {p0}, Lcom/android/server/enterprise/wifi/WifiPolicy;->-$$Nest$mmigrateWifiNetworkIfNeeded(Lcom/android/server/enterprise/wifi/WifiPolicy;)V
@@ -136,7 +124,6 @@
     :cond_3
     const-string v1, "com.samsung.android.knox.intent.action.KNOXFRAMEWORK_SYSTEMUI_UPDATE_INTENT_INTERNAL"
 
-    .line 2954
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -147,12 +134,10 @@
 
     const/4 v0, 0x0
 
-    .line 2955
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 2956
     iget-object p0, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$1;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     invoke-static {p0, p1}, Lcom/android/server/enterprise/wifi/WifiPolicy;->-$$Nest$mupdateSystemUIMonitor(Lcom/android/server/enterprise/wifi/WifiPolicy;I)V
@@ -162,7 +147,6 @@
     :cond_4
     const-string v1, "android.net.wifi.CONFIGURED_NETWORKS_CHANGE"
 
-    .line 2957
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -173,12 +157,10 @@
 
     const/4 v1, -0x1
 
-    .line 2958
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 2959
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,17 +179,14 @@
 
     if-ne p1, v2, :cond_5
 
-    .line 2963
     new-instance p1, Lcom/android/server/enterprise/wifi/WifiPolicy$1$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/enterprise/wifi/WifiPolicy$1$1;-><init>(Lcom/android/server/enterprise/wifi/WifiPolicy$1;)V
 
-    .line 2968
     new-instance p0, Ljava/lang/Thread;
 
     invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2969
     invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     :cond_5

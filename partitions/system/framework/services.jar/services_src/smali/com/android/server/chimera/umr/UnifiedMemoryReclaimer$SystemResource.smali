@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetname(Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->name:Ljava/lang/String;
 
     return-object p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$msetStatus(Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->setStatus(I)V
 
     return-void
@@ -41,27 +39,20 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 1
 
-    .line 905
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 897
     iput v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->status:I
 
-    .line 903
     iput v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->cancelCount:I
 
-    .line 906
     iput-object p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->name:Ljava/lang/String;
 
-    .line 907
     iput p2, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiThresholdMS:I
 
-    .line 908
     iput p3, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiWindowMS:I
 
-    .line 910
     new-instance p1, Ljava/util/Timer;
 
     invoke-direct {p1}, Ljava/util/Timer;-><init>()V
@@ -76,7 +67,6 @@
 .method public final cancelResetResourceStatusTask()V
     .locals 2
 
-    .line 963
     iget-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->resetResourceStatusTask:Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource$ResetResourceStatusTask;
 
     if-eqz v0, :cond_0
@@ -87,12 +77,10 @@
 
     if-nez v0, :cond_0
 
-    .line 964
     iget-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->resetResourceStatusTask:Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource$ResetResourceStatusTask;
 
     invoke-virtual {v0}, Ljava/util/TimerTask;->cancel()Z
 
-    .line 965
     iget-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->name:Ljava/lang/String;
 
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -109,7 +97,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;Z)V
 
-    .line 966
     iget v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->cancelCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -118,12 +105,10 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 967
     rem-int/lit8 v0, v0, 0xa
 
     if-nez v0, :cond_0
 
-    .line 968
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->timer:Ljava/util/Timer;
 
     invoke-virtual {p0}, Ljava/util/Timer;->purge()I
@@ -135,7 +120,6 @@
 .method public getPsiThresholdMS()I
     .locals 0
 
-    .line 923
     iget p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiThresholdMS:I
 
     return p0
@@ -144,7 +128,6 @@
 .method public getPsiWindowMS()I
     .locals 0
 
-    .line 932
     iget p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiWindowMS:I
 
     return p0
@@ -153,7 +136,6 @@
 .method public final getStatus()I
     .locals 0
 
-    .line 941
     iget p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->status:I
 
     return p0
@@ -162,7 +144,6 @@
 .method public isBusy()Z
     .locals 1
 
-    .line 914
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->getStatus()I
 
     move-result p0
@@ -183,10 +164,8 @@
 .method public final scheduleResetResourceStatusTask(I)V
     .locals 3
 
-    .line 974
     invoke-virtual {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->cancelResetResourceStatusTask()V
 
-    .line 975
     new-instance v0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource$ResetResourceStatusTask;
 
     const/4 v1, 0x0
@@ -195,7 +174,6 @@
 
     iput-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->resetResourceStatusTask:Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource$ResetResourceStatusTask;
 
-    .line 976
     iget-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->name:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -216,7 +194,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;Z)V
 
-    .line 977
     iget-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->timer:Ljava/util/Timer;
 
     iget-object p0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->resetResourceStatusTask:Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource$ResetResourceStatusTask;
@@ -233,10 +210,8 @@
 
     const/4 v0, 0x1
 
-    .line 918
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->setStatus(I)V
 
-    .line 919
     iget v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiWindowMS:I
 
     add-int/lit8 v0, v0, 0x64
@@ -249,7 +224,6 @@
 .method public setPsiThresholdMS(I)V
     .locals 3
 
-    .line 927
     iget-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->name:Ljava/lang/String;
 
     iget v1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiThresholdMS:I
@@ -274,7 +248,6 @@
 
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 928
     iput p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiThresholdMS:I
 
     return-void
@@ -283,7 +256,6 @@
 .method public setPsiWindowMS(I)V
     .locals 3
 
-    .line 936
     iget-object v0, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->name:Ljava/lang/String;
 
     iget v1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiWindowMS:I
@@ -308,7 +280,6 @@
 
     invoke-static {v0}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 937
     iput p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->psiWindowMS:I
 
     return-void
@@ -317,7 +288,6 @@
 .method public final setStatus(I)V
     .locals 0
 
-    .line 945
     iput p1, p0, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemResource;->status:I
 
     return-void

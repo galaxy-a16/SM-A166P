@@ -13,21 +13,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 27
     new-instance v0, Lcom/android/server/permission/access/appop/PackageAppOpPersistence;
 
     invoke-direct {v0}, Lcom/android/server/permission/access/appop/PackageAppOpPersistence;-><init>()V
 
     invoke-direct {p0, v0}, Lcom/android/server/permission/access/appop/BaseAppOpPolicy;-><init>(Lcom/android/server/permission/access/appop/BaseAppOpPersistence;)V
 
-    .line 29
     new-instance v0, Lcom/android/server/permission/access/collection/IndexedListSet;
 
     invoke-direct {v0}, Lcom/android/server/permission/access/collection/IndexedListSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/permission/access/appop/PackageAppOpPolicy;->onAppOpModeChangedListeners:Lcom/android/server/permission/access/collection/IndexedListSet;
 
-    .line 30
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +39,6 @@
 .method public final getAppOpMode(Lcom/android/server/permission/access/GetStateScope;Ljava/lang/String;ILjava/lang/String;)I
     .locals 0
 
-    .line 76
     invoke-virtual {p1}, Lcom/android/server/permission/access/GetStateScope;->getState()Lcom/android/server/permission/access/AccessState;
 
     move-result-object p0
@@ -67,7 +63,6 @@
 
     check-cast p0, Landroid/util/ArrayMap;
 
-    .line 77
     invoke-static {p4}, Landroid/app/AppOpsManager;->opToDefaultMode(Ljava/lang/String;)I
 
     move-result p1
@@ -80,7 +75,6 @@
 
     goto :goto_0
 
-    .line 87
     :cond_0
     invoke-virtual {p0, p4}, Landroid/util/ArrayMap;->indexOfKey(Ljava/lang/Object;)I
 
@@ -88,7 +82,6 @@
 
     if-ltz p2, :cond_1
 
-    .line 88
     invoke-virtual {p0, p2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -107,7 +100,6 @@
 .method public final getAppOpModes(Lcom/android/server/permission/access/GetStateScope;Ljava/lang/String;I)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 64
     invoke-virtual {p1}, Lcom/android/server/permission/access/GetStateScope;->getState()Lcom/android/server/permission/access/AccessState;
 
     move-result-object p0
@@ -140,19 +132,16 @@
 
     const-string/jumbo p0, "null cannot be cast to non-null type com.android.server.permission.access.PackageUri"
 
-    .line 36
     invoke-static {p2, p0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2}, Lcom/android/server/audio/CurrentDeviceManager$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
     const-string/jumbo p0, "null cannot be cast to non-null type com.android.server.permission.access.AppOpUri"
 
-    .line 37
     invoke-static {p3, p0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p3}, Lcom/android/server/audio/CurrentDeviceManager$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
-    .line 38
     invoke-static {p2}, Lcom/android/server/audio/CurrentDeviceManager$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
     const/4 p0, 0x0
@@ -163,7 +152,6 @@
 .method public getSubjectScheme()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string/jumbo p0, "package"
 
     return-object p0
@@ -172,7 +160,6 @@
 .method public onPackageRemoved(Lcom/android/server/permission/access/MutateStateScope;Ljava/lang/String;I)V
     .locals 4
 
-    .line 56
     invoke-virtual {p1}, Lcom/android/server/permission/access/MutateStateScope;->getNewState()Lcom/android/server/permission/access/AccessState;
 
     move-result-object p0
@@ -181,7 +168,6 @@
 
     move-result-object p0
 
-    .line 164
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result p1
@@ -193,7 +179,6 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
-    .line 57
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -202,19 +187,16 @@
 
     check-cast v1, Lcom/android/server/permission/access/UserState;
 
-    .line 57
     invoke-virtual {v1}, Lcom/android/server/permission/access/UserState;->getPackageAppOpModes()Landroid/util/ArrayMap;
 
     move-result-object v2
 
-    .line 96
     invoke-virtual {v2, p2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
-    .line 58
     invoke-static {v1, p3, v3, v2}, Lcom/android/server/permission/access/WritableState;->requestWrite$default(Lcom/android/server/permission/access/WritableState;ZILjava/lang/Object;)V
 
     add-int/lit8 v0, v0, 0x1
@@ -228,10 +210,8 @@
 .method public onStateMutated(Lcom/android/server/permission/access/GetStateScope;)V
     .locals 0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/permission/access/appop/PackageAppOpPolicy;->onAppOpModeChangedListeners:Lcom/android/server/permission/access/collection/IndexedListSet;
 
-    .line 91
     invoke-virtual {p0}, Lcom/android/server/permission/access/collection/IndexedListSet;->size()I
 
     move-result p1
@@ -243,7 +223,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 92
     invoke-virtual {p0, p1}, Lcom/android/server/permission/access/collection/IndexedListSet;->elementAt(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -252,14 +231,12 @@
 
     const/4 p0, 0x0
 
-    .line 52
     throw p0
 .end method
 
 .method public final removeAppOpModes(Lcom/android/server/permission/access/MutateStateScope;Ljava/lang/String;I)Z
     .locals 1
 
-    .line 67
     invoke-virtual {p1}, Lcom/android/server/permission/access/MutateStateScope;->getNewState()Lcom/android/server/permission/access/AccessState;
 
     move-result-object p0
@@ -274,7 +251,6 @@
 
     check-cast p0, Lcom/android/server/permission/access/UserState;
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/permission/access/UserState;->getPackageAppOpModes()Landroid/util/ArrayMap;
 
     move-result-object p1
@@ -301,7 +277,6 @@
 
     const/4 v0, 0x0
 
-    .line 70
     invoke-static {p0, p3, p2, v0}, Lcom/android/server/permission/access/WritableState;->requestWrite$default(Lcom/android/server/permission/access/WritableState;ZILjava/lang/Object;)V
 
     :cond_1
@@ -311,7 +286,6 @@
 .method public final setAppOpMode(Lcom/android/server/permission/access/MutateStateScope;Ljava/lang/String;ILjava/lang/String;I)Z
     .locals 4
 
-    .line 85
     invoke-virtual {p1}, Lcom/android/server/permission/access/MutateStateScope;->getNewState()Lcom/android/server/permission/access/AccessState;
 
     move-result-object p1
@@ -326,24 +300,20 @@
 
     check-cast p1, Lcom/android/server/permission/access/UserState;
 
-    .line 86
     invoke-virtual {p1}, Lcom/android/server/permission/access/UserState;->getPackageAppOpModes()Landroid/util/ArrayMap;
 
     move-result-object p3
 
-    .line 87
     invoke-virtual {p3, p2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/util/ArrayMap;
 
-    .line 88
     invoke-static {p4}, Landroid/app/AppOpsManager;->opToDefaultMode(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 89
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -352,7 +322,6 @@
 
     goto :goto_0
 
-    .line 87
     :cond_0
     invoke-virtual {v0, p4}, Landroid/util/ArrayMap;->indexOfKey(Ljava/lang/Object;)I
 
@@ -360,12 +329,10 @@
 
     if-ltz v3, :cond_1
 
-    .line 88
     invoke-virtual {v0, v3}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 89
     :cond_1
     :goto_0
     check-cast v2, Ljava/lang/Number;
@@ -383,15 +350,12 @@
     :cond_2
     if-nez v0, :cond_3
 
-    .line 94
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 178
     invoke-virtual {p3, p2, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 97
     :cond_3
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -401,44 +365,37 @@
 
     move-result-object v1
 
-    .line 110
     invoke-virtual {v0, p4}, Landroid/util/ArrayMap;->indexOfKey(Ljava/lang/Object;)I
 
     move-result v2
 
     if-ltz v2, :cond_5
 
-    .line 112
     invoke-virtual {v0, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p4
 
-    .line 113
     invoke-static {p5, p4}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p4
 
     if-nez p4, :cond_6
 
-    .line 114
     invoke-static {p5, v1}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p4
 
     if-eqz p4, :cond_4
 
-    .line 115
     invoke-virtual {v0, v2}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 117
     :cond_4
     invoke-virtual {v0, v2, p5}, Landroid/util/ArrayMap;->setValueAt(ILjava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 122
     :cond_5
     invoke-static {p5, v1}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -446,10 +403,8 @@
 
     if-nez v1, :cond_6
 
-    .line 123
     invoke-virtual {v0, p4, p5}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
     :cond_6
     :goto_1
     invoke-virtual {v0}, Landroid/util/ArrayMap;->isEmpty()Z
@@ -458,7 +413,6 @@
 
     if-eqz p4, :cond_7
 
-    .line 96
     invoke-virtual {p3, p2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_7
@@ -466,13 +420,10 @@
 
     const/4 p3, 0x0
 
-    .line 101
     invoke-static {p1, v3, p2, p3}, Lcom/android/server/permission/access/WritableState;->requestWrite$default(Lcom/android/server/permission/access/WritableState;ZILjava/lang/Object;)V
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/permission/access/appop/PackageAppOpPolicy;->onAppOpModeChangedListeners:Lcom/android/server/permission/access/collection/IndexedListSet;
 
-    .line 91
     invoke-virtual {p0}, Lcom/android/server/permission/access/collection/IndexedListSet;->size()I
 
     move-result p1
@@ -481,7 +432,6 @@
 
     return p2
 
-    .line 92
     :cond_8
     invoke-virtual {p0, v3}, Lcom/android/server/permission/access/collection/IndexedListSet;->elementAt(I)Ljava/lang/Object;
 
@@ -489,7 +439,6 @@
 
     invoke-static {p0}, Lcom/android/server/audio/CurrentDeviceManager$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
-    .line 103
     throw p3
 .end method
 
@@ -498,19 +447,16 @@
 
     const-string/jumbo p0, "null cannot be cast to non-null type com.android.server.permission.access.PackageUri"
 
-    .line 46
     invoke-static {p2, p0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2}, Lcom/android/server/audio/CurrentDeviceManager$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
     const-string/jumbo p0, "null cannot be cast to non-null type com.android.server.permission.access.AppOpUri"
 
-    .line 47
     invoke-static {p3, p0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p3}, Lcom/android/server/audio/CurrentDeviceManager$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
-    .line 48
     invoke-static {p2}, Lcom/android/server/audio/CurrentDeviceManager$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
     const/4 p0, 0x0

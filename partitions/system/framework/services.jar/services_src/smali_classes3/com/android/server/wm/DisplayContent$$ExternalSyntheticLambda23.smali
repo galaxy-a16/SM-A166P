@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/wm/DisplayContent;->$r8$lambda$c-UKmHwM5rllmaU8PUq8JzDz-P8()V
 
     return-void

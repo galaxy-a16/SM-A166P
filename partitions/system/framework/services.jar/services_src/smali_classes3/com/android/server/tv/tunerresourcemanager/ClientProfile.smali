@@ -39,78 +39,64 @@
 .method public constructor <init>(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)V
     .locals 2
 
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 61
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mGroupId:I
 
-    .line 70
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mPrimaryUsingFrontendHandle:I
 
-    .line 75
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingFrontendHandles:Ljava/util/Set;
 
-    .line 80
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mShareFeClientIds:Ljava/util/Set;
 
-    .line 82
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingDemuxHandles:Ljava/util/Set;
 
-    .line 87
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingLnbHandles:Ljava/util/Set;
 
-    .line 92
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCasSystemId:I
 
-    .line 97
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCiCamId:I
 
     const/4 v0, 0x0
 
-    .line 103
     iput-boolean v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mIsPriorityOverwritten:Z
 
-    .line 114
     invoke-static {p1}, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->-$$Nest$fgetmId(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mId:I
 
-    .line 115
     invoke-static {p1}, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->-$$Nest$fgetmTvInputSessionId(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mTvInputSessionId:Ljava/lang/String;
 
-    .line 116
     invoke-static {p1}, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->-$$Nest$fgetmUseCase(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUseCase:I
 
-    .line 117
     invoke-static {p1}, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->-$$Nest$fgetmProcessId(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)I
 
     move-result p1
@@ -123,7 +109,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;Lcom/android/server/tv/tunerresourcemanager/ClientProfile-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;-><init>(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)V
 
     return-void
@@ -134,7 +119,6 @@
 .method public getId()I
     .locals 0
 
-    .line 121
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mId:I
 
     return p0
@@ -143,7 +127,6 @@
 .method public getInUseCasSystemId()I
     .locals 0
 
-    .line 294
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCasSystemId:I
 
     return p0
@@ -152,7 +135,6 @@
 .method public getInUseCiCamId()I
     .locals 0
 
-    .line 314
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCiCamId:I
 
     return p0
@@ -161,7 +143,6 @@
 .method public getInUseDemuxHandles()Ljava/util/Set;
     .locals 0
 
-    .line 250
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingDemuxHandles:Ljava/util/Set;
 
     return-object p0
@@ -170,7 +151,6 @@
 .method public getInUseFrontendHandles()Ljava/util/Set;
     .locals 0
 
-    .line 221
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingFrontendHandles:Ljava/util/Set;
 
     return-object p0
@@ -179,7 +159,6 @@
 .method public getInUseLnbHandles()Ljava/util/Set;
     .locals 0
 
-    .line 272
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingLnbHandles:Ljava/util/Set;
 
     return-object p0
@@ -188,7 +167,6 @@
 .method public getPrimaryFrontend()I
     .locals 0
 
-    .line 199
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mPrimaryUsingFrontendHandle:I
 
     return p0
@@ -197,7 +175,6 @@
 .method public getPriority()I
     .locals 1
 
-    .line 148
     iget v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mPriority:I
 
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mNiceValue:I
@@ -210,7 +187,6 @@
 .method public getProcessId()I
     .locals 0
 
-    .line 133
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mProcessId:I
 
     return p0
@@ -219,7 +195,6 @@
 .method public getShareFeClientIds()Ljava/util/Set;
     .locals 0
 
-    .line 225
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mShareFeClientIds:Ljava/util/Set;
 
     return-object p0
@@ -228,7 +203,6 @@
 .method public getUseCase()I
     .locals 0
 
-    .line 129
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUseCase:I
 
     return p0
@@ -237,7 +211,6 @@
 .method public isPriorityOverwritten()Z
     .locals 0
 
-    .line 140
     iget-boolean p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mIsPriorityOverwritten:Z
 
     return p0
@@ -253,10 +226,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 169
     iput-boolean v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mIsPriorityOverwritten:Z
 
-    .line 170
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mPriority:I
 
     return-void
@@ -265,30 +236,24 @@
 .method public reclaimAllResources()V
     .locals 2
 
-    .line 328
     iget-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingFrontendHandles:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 329
     iget-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mShareFeClientIds:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
     const/4 v0, -0x1
 
-    .line 330
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mPrimaryUsingFrontendHandle:I
 
-    .line 331
     iget-object v1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingLnbHandles:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->clear()V
 
-    .line 332
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCasSystemId:I
 
-    .line 333
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCiCamId:I
 
     return-void
@@ -299,7 +264,6 @@
 
     const/4 v0, -0x1
 
-    .line 301
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCasSystemId:I
 
     return-void
@@ -310,7 +274,6 @@
 
     const/4 v0, -0x1
 
-    .line 321
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCiCamId:I
 
     return-void
@@ -319,7 +282,6 @@
 .method public releaseDemux(I)V
     .locals 0
 
-    .line 259
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingDemuxHandles:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -334,19 +296,16 @@
 .method public releaseFrontend()V
     .locals 1
 
-    .line 232
     iget-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingFrontendHandles:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 233
     iget-object v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mShareFeClientIds:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
     const/4 v0, -0x1
 
-    .line 234
     iput v0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mPrimaryUsingFrontendHandle:I
 
     return-void
@@ -355,7 +314,6 @@
 .method public releaseLnb(I)V
     .locals 0
 
-    .line 281
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingLnbHandles:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -370,7 +328,6 @@
 .method public setNiceValue(I)V
     .locals 0
 
-    .line 174
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mNiceValue:I
 
     return-void
@@ -379,7 +336,6 @@
 .method public setPrimaryFrontend(I)V
     .locals 0
 
-    .line 192
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mPrimaryUsingFrontendHandle:I
 
     return-void
@@ -392,7 +348,6 @@
 
     return-void
 
-    .line 159
     :cond_0
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mPriority:I
 
@@ -402,7 +357,6 @@
 .method public shareFrontend(I)V
     .locals 0
 
-    .line 208
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mShareFeClientIds:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -417,7 +371,6 @@
 .method public stopSharingFrontend(I)V
     .locals 0
 
-    .line 217
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mShareFeClientIds:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -432,7 +385,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 338
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -483,7 +435,6 @@
 .method public useCas(I)V
     .locals 0
 
-    .line 290
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCasSystemId:I
 
     return-void
@@ -492,7 +443,6 @@
 .method public useCiCam(I)V
     .locals 0
 
-    .line 310
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingCiCamId:I
 
     return-void
@@ -501,7 +451,6 @@
 .method public useDemux(I)V
     .locals 0
 
-    .line 243
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingDemuxHandles:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -516,7 +465,6 @@
 .method public useFrontend(I)V
     .locals 0
 
-    .line 183
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingFrontendHandles:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -531,7 +479,6 @@
 .method public useLnb(I)V
     .locals 0
 
-    .line 268
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;->mUsingLnbHandles:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

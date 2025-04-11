@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/media/SystemMediaRoute2Provider;)V
     .locals 0
 
-    .line 460
     iput-object p1, p0, Lcom/android/server/media/SystemMediaRoute2Provider$AudioManagerBroadcastReceiver;->this$0:Lcom/android/server/media/SystemMediaRoute2Provider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/media/SystemMediaRoute2Provider;Lcom/android/server/media/SystemMediaRoute2Provider$AudioManagerBroadcastReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/media/SystemMediaRoute2Provider$AudioManagerBroadcastReceiver;-><init>(Lcom/android/server/media/SystemMediaRoute2Provider;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .line 465
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -54,14 +51,12 @@
 
     const-string p1, "com.samsung.android.bluetooth.cast.extra.STATE"
 
-    .line 466
     invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string v3, "com.samsung.android.bluetooth.cast.device.extra.REMOTEROLE"
 
-    .line 467
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
@@ -70,7 +65,6 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 469
     iget-object v3, p0, Lcom/android/server/media/SystemMediaRoute2Provider$AudioManagerBroadcastReceiver;->this$0:Lcom/android/server/media/SystemMediaRoute2Provider;
 
     if-ne p1, v4, :cond_0
@@ -87,7 +81,6 @@
 
     goto :goto_2
 
-    .line 472
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -103,12 +96,10 @@
 
     const-string/jumbo p1, "state"
 
-    .line 473
     invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 474
     iget-object v3, p0, Lcom/android/server/media/SystemMediaRoute2Provider$AudioManagerBroadcastReceiver;->this$0:Lcom/android/server/media/SystemMediaRoute2Provider;
 
     if-ne p1, v1, :cond_2
@@ -123,7 +114,6 @@
 
     invoke-static {v3, p1, v1, v0}, Lcom/android/server/media/SystemMediaRoute2Provider;->-$$Nest$mpostDeviceRoute(Lcom/android/server/media/SystemMediaRoute2Provider;Ljava/lang/String;ZI)V
 
-    .line 477
     :cond_3
     :goto_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -138,7 +128,6 @@
 
     if-nez p1, :cond_4
 
-    .line 478
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -158,7 +147,6 @@
 
     const/4 v0, -0x1
 
-    .line 482
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -169,7 +157,6 @@
 
     return-void
 
-    .line 487
     :cond_5
     iget-object p0, p0, Lcom/android/server/media/SystemMediaRoute2Provider$AudioManagerBroadcastReceiver;->this$0:Lcom/android/server/media/SystemMediaRoute2Provider;
 

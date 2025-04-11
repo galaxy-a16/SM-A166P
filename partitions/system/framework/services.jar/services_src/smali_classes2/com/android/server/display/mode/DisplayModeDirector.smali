@@ -57,7 +57,6 @@
 .method public static synthetic $r8$lambda$GOkuNfMB9txKqB1v22Kq6Biqta4(Landroid/view/Display$Mode;Landroid/view/Display$Mode;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector;->lambda$selectBaseMode$0(Landroid/view/Display$Mode;Landroid/view/Display$Mode;)I
 
     move-result p0
@@ -68,7 +67,6 @@
 .method public static synthetic $r8$lambda$cYe3aL63AjILsX75WRfBHNMFS1I(Lcom/android/server/display/mode/DisplayModeDirector;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->notifyDesiredDisplayModeSpecsChangedLocked()V
 
     return-void
@@ -77,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBrightnessObserver(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     return-object p0
@@ -86,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -95,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDefaultDisplayDeviceConfig(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/DisplayDeviceConfig;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultDisplayDeviceConfig:Lcom/android/server/display/DisplayDeviceConfig;
 
     return-object p0
@@ -104,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDefaultModeByDisplay(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultModeByDisplay:Landroid/util/SparseArray;
 
     return-object p0
@@ -113,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceConfig(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/provider/DeviceConfigInterface;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDeviceConfig:Landroid/provider/DeviceConfigInterface;
 
     return-object p0
@@ -122,7 +115,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceConfigDisplaySettings(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDeviceConfigDisplaySettings:Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;
 
     return-object p0
@@ -131,7 +123,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHandler:Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
 
     return-object p0
@@ -140,7 +131,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHbmObserver(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHbmObserver:Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
 
     return-object p0
@@ -149,7 +139,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInjector(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$Injector;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mInjector:Lcom/android/server/display/mode/DisplayModeDirector$Injector;
 
     return-object p0
@@ -158,7 +147,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/display/mode/DisplayModeDirector;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -167,7 +155,6 @@
 .method public static bridge synthetic -$$Nest$fgetmModeSwitchingType(Lcom/android/server/display/mode/DisplayModeDirector;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
     return p0
@@ -176,7 +163,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRefreshRateModeManager(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/RefreshRateModeManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mRefreshRateModeManager:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     return-object p0
@@ -185,7 +171,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSettingsObserver(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     return-object p0
@@ -194,7 +179,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSupportedModesByDisplay(Lcom/android/server/display/mode/DisplayModeDirector;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportedModesByDisplay:Landroid/util/SparseArray;
 
     return-object p0
@@ -203,7 +187,6 @@
 .method public static bridge synthetic -$$Nest$fgetmVotesStorage(Lcom/android/server/display/mode/DisplayModeDirector;)Lcom/android/server/display/mode/VotesStorage;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 
     return-object p0
@@ -212,7 +195,6 @@
 .method public static bridge synthetic -$$Nest$fputmModeSwitchingType(Lcom/android/server/display/mode/DisplayModeDirector;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
     return-void
@@ -221,7 +203,6 @@
 .method public static bridge synthetic -$$Nest$mgetMaxRefreshRateLocked(Lcom/android/server/display/mode/DisplayModeDirector;I)F
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector;->getMaxRefreshRateLocked(I)F
 
     move-result p0
@@ -232,7 +213,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyDesiredDisplayModeSpecsChangedLocked(Lcom/android/server/display/mode/DisplayModeDirector;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->notifyDesiredDisplayModeSpecsChangedLocked()V
 
     return-void
@@ -241,7 +221,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 1
 
-    .line 175
     new-instance v0, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;
 
     invoke-direct {v0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$RealInjector;-><init>(Landroid/content/Context;)V
@@ -254,17 +233,14 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/mode/DisplayModeDirector$Injector;)V
     .locals 11
 
-    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 119
     new-instance v3, Ljava/lang/Object;
 
     invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
-    .line 169
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_VRR_POLICY:Z
 
     const/4 v1, 0x0
@@ -282,14 +258,11 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 172
     :goto_0
     iput v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
-    .line 180
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mContext:Landroid/content/Context;
 
-    .line 181
     new-instance v0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
 
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -300,38 +273,32 @@
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHandler:Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
 
-    .line 182
     iput-object p3, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mInjector:Lcom/android/server/display/mode/DisplayModeDirector$Injector;
 
-    .line 183
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportedModesByDisplay:Landroid/util/SparseArray;
 
-    .line 184
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultModeByDisplay:Landroid/util/SparseArray;
 
-    .line 185
     new-instance v0, Lcom/android/server/display/mode/DisplayModeDirector$AppRequestObserver;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/mode/DisplayModeDirector$AppRequestObserver;-><init>(Lcom/android/server/display/mode/DisplayModeDirector;)V
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mAppRequestObserver:Lcom/android/server/display/mode/DisplayModeDirector$AppRequestObserver;
 
-    .line 186
     invoke-interface {p3}, Lcom/android/server/display/mode/DisplayModeDirector$Injector;->getDeviceConfig()Landroid/provider/DeviceConfigInterface;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDeviceConfig:Landroid/provider/DeviceConfigInterface;
 
-    .line 187
     new-instance v9, Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;
 
     const/4 v0, 0x0
@@ -340,31 +307,26 @@
 
     iput-object v9, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDeviceConfigDisplaySettings:Lcom/android/server/display/mode/DisplayModeDirector$DeviceConfigDisplaySettings;
 
-    .line 188
     new-instance v2, Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     invoke-direct {v2, p0, p1, p2}, Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;-><init>(Lcom/android/server/display/mode/DisplayModeDirector;Landroid/content/Context;Landroid/os/Handler;)V
 
     iput-object v2, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
-    .line 189
     new-instance v2, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     invoke-direct {v2, p0, p1, p2, p3}, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;-><init>(Lcom/android/server/display/mode/DisplayModeDirector;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/mode/DisplayModeDirector$Injector;)V
 
     iput-object v2, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
-    .line 190
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultDisplayDeviceConfig:Lcom/android/server/display/DisplayDeviceConfig;
 
-    .line 191
     new-instance v2, Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;
 
     invoke-direct {v2, p0, v0}, Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;-><init>(Lcom/android/server/display/mode/DisplayModeDirector;Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver-IA;)V
 
     iput-object v2, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mUdfpsObserver:Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;
 
-    .line 192
     new-instance v10, Lcom/android/server/display/mode/VotesStorage;
 
     new-instance v0, Lcom/android/server/display/mode/DisplayModeDirector$$ExternalSyntheticLambda0;
@@ -375,28 +337,24 @@
 
     iput-object v10, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 
-    .line 193
     new-instance v0, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;
 
     invoke-direct {v0, p0, p1, p2, v10}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;-><init>(Lcom/android/server/display/mode/DisplayModeDirector;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/mode/VotesStorage;)V
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDisplayObserver:Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;
 
-    .line 194
     new-instance v0, Lcom/android/server/display/mode/DisplayModeDirector$SensorObserver;
 
     invoke-direct {v0, p1, v10, p3}, Lcom/android/server/display/mode/DisplayModeDirector$SensorObserver;-><init>(Landroid/content/Context;Lcom/android/server/display/mode/VotesStorage;Lcom/android/server/display/mode/DisplayModeDirector$Injector;)V
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSensorObserver:Lcom/android/server/display/mode/DisplayModeDirector$SensorObserver;
 
-    .line 195
     new-instance v0, Lcom/android/server/display/mode/SkinThermalStatusObserver;
 
     invoke-direct {v0, p3, v10}, Lcom/android/server/display/mode/SkinThermalStatusObserver;-><init>(Lcom/android/server/display/mode/DisplayModeDirector$Injector;Lcom/android/server/display/mode/VotesStorage;)V
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSkinThermalStatusObserver:Lcom/android/server/display/mode/SkinThermalStatusObserver;
 
-    .line 196
     new-instance v0, Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
 
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
@@ -415,17 +373,14 @@
 
     iput-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHbmObserver:Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
 
-    .line 198
     iput-boolean v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mAlwaysRespectAppRequest:Z
 
-    .line 199
     invoke-interface {p3}, Lcom/android/server/display/mode/DisplayModeDirector$Injector;->supportsFrameRateOverride()Z
 
     move-result p3
 
     iput-boolean p3, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportsFrameRateOverride:Z
 
-    .line 202
     new-instance p3, Lcom/android/server/display/mode/RefreshRateModeManager;
 
     move-object v0, p3
@@ -448,7 +403,6 @@
 .method public static synthetic lambda$selectBaseMode$0(Landroid/view/Display$Mode;Landroid/view/Display$Mode;)I
     .locals 0
 
-    .line 399
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result p0
@@ -481,7 +435,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 910
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -524,38 +477,31 @@
 .method public defaultDisplayDeviceUpdated(Lcom/android/server/display/DisplayDeviceConfig;)V
     .locals 3
 
-    .line 754
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 755
     :try_start_0
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultDisplayDeviceConfig:Lcom/android/server/display/DisplayDeviceConfig;
 
-    .line 756
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, p1, v2}, Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;->setRefreshRates(Lcom/android/server/display/DisplayDeviceConfig;Z)V
 
-    .line 758
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     invoke-virtual {v1, p1, v2}, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;->updateBlockingZoneThresholds(Lcom/android/server/display/DisplayDeviceConfig;Z)V
 
-    .line 760
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     invoke-static {v1, p1}, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;->-$$Nest$mreloadLightSensor(Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;Lcom/android/server/display/DisplayDeviceConfig;)V
 
-    .line 761
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHbmObserver:Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;->setupHdrRefreshRates(Lcom/android/server/display/DisplayDeviceConfig;)V
 
-    .line 762
     monitor-exit v0
 
     return-void
@@ -573,12 +519,10 @@
 .method public final disableModeSwitching(Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;F)V
     .locals 1
 
-    .line 418
     iput p2, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxPhysicalRefreshRate:F
 
     iput p2, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minPhysicalRefreshRate:F
 
-    .line 419
     iget v0, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
     invoke-static {v0, p2}, Ljava/lang/Math;->min(FF)F
@@ -587,12 +531,10 @@
 
     iput p2, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
-    .line 421
     iget-boolean p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz p0, :cond_0
 
-    .line 422
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -618,30 +560,25 @@
 .method public final disableRenderRateSwitching(Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;F)V
     .locals 1
 
-    .line 427
     iget v0, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
     iput v0, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
-    .line 429
     invoke-virtual {p0, p2, p1}, Lcom/android/server/display/mode/DisplayModeDirector;->isRenderRateAchievable(FLcom/android/server/display/mode/DisplayModeDirector$VoteSummary;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 430
     iput p2, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
     iput p2, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
-    .line 433
     :cond_0
     iget-boolean p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz p0, :cond_1
 
-    .line 434
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -669,10 +606,8 @@
 
     const-string v0, "DisplayModeDirector"
 
-    .line 837
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 838
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -680,14 +615,12 @@
     :try_start_0
     const-string v1, "  mSupportedModesByDisplay:"
 
-    .line 839
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     move v2, v1
 
-    .line 840
     :goto_0
     iget-object v3, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportedModesByDisplay:Landroid/util/SparseArray;
 
@@ -697,14 +630,12 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 841
     iget-object v3, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportedModesByDisplay:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
-    .line 842
     iget-object v4, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportedModesByDisplay:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -713,7 +644,6 @@
 
     check-cast v4, [Landroid/view/Display$Mode;
 
-    .line 843
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -747,10 +677,8 @@
     :cond_0
     const-string v2, "  mDefaultModeByDisplay:"
 
-    .line 845
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 846
     :goto_1
     iget-object v2, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultModeByDisplay:Landroid/util/SparseArray;
 
@@ -760,14 +688,12 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 847
     iget-object v2, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultModeByDisplay:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 848
     iget-object v3, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultModeByDisplay:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -776,7 +702,6 @@
 
     check-cast v3, Landroid/view/Display$Mode;
 
-    .line 849
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -803,7 +728,6 @@
 
     goto :goto_1
 
-    .line 851
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -827,7 +751,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 852
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -846,64 +769,52 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 853
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     invoke-virtual {v1, p1}, Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 854
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mAppRequestObserver:Lcom/android/server/display/mode/DisplayModeDirector$AppRequestObserver;
 
     invoke-static {v1, p1}, Lcom/android/server/display/mode/DisplayModeDirector$AppRequestObserver;->-$$Nest$mdumpLocked(Lcom/android/server/display/mode/DisplayModeDirector$AppRequestObserver;Ljava/io/PrintWriter;)V
 
-    .line 855
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     invoke-virtual {v1, p1}, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 856
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mUdfpsObserver:Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;
 
     invoke-virtual {v1, p1}, Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 857
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHbmObserver:Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
 
     invoke-virtual {v1, p1}, Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 859
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_VRR_POLICY:Z
 
     if-nez v1, :cond_2
 
-    .line 861
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSkinThermalStatusObserver:Lcom/android/server/display/mode/SkinThermalStatusObserver;
 
     invoke-virtual {v1, p1}, Lcom/android/server/display/mode/SkinThermalStatusObserver;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 864
     :cond_2
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_VRR_REFRESH_RATE_MODE:Z
 
     if-eqz v1, :cond_3
 
-    .line 865
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mRefreshRateModeManager:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-virtual {v1, p1}, Lcom/android/server/display/mode/RefreshRateModeManager;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 868
     :cond_3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 869
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/mode/VotesStorage;->dump(Ljava/io/PrintWriter;)V
 
-    .line 870
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSensorObserver:Lcom/android/server/display/mode/DisplayModeDirector$SensorObserver;
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$SensorObserver;->dump(Ljava/io/PrintWriter;)V
@@ -913,7 +824,6 @@
     :catchall_0
     move-exception p0
 
-    .line 868
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -925,7 +835,6 @@
 .method public final equalsWithinFloatTolerance(FF)Z
     .locals 1
 
-    .line 0
     const p0, 0x3c23d70a    # 0.01f
 
     sub-float v0, p2, p0
@@ -960,7 +869,6 @@
 
     move-object/from16 v2, p2
 
-    .line 645
     iget v3, v2, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
     iget v4, v2, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
@@ -977,12 +885,10 @@
 
     if-lez v3, :cond_1
 
-    .line 646
     iget-boolean v0, v0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 647
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1007,7 +913,6 @@
 
     invoke-static {v6, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 651
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1015,13 +920,11 @@
 
     return-object v0
 
-    .line 654
     :cond_1
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 655
     iget v7, v2, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->appRequestBaseModeRefreshRate:F
 
     const/4 v8, 0x0
@@ -1037,7 +940,6 @@
     :cond_2
     const/4 v7, 0x0
 
-    .line 656
     :goto_0
     array-length v9, v1
 
@@ -1048,7 +950,6 @@
 
     aget-object v11, v1, v10
 
-    .line 657
     invoke-virtual {v11}, Landroid/view/Display$Mode;->getPhysicalWidth()I
 
     move-result v12
@@ -1059,7 +960,6 @@
 
     if-ne v12, v13, :cond_9
 
-    .line 658
     invoke-virtual {v11}, Landroid/view/Display$Mode;->getPhysicalHeight()I
 
     move-result v12
@@ -1070,13 +970,11 @@
 
     goto/16 :goto_3
 
-    .line 668
     :cond_3
     invoke-virtual {v11}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result v12
 
-    .line 672
     iget v13, v2, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minPhysicalRefreshRate:F
 
     sub-float/2addr v13, v5
@@ -1099,13 +997,11 @@
 
     goto/16 :goto_2
 
-    .line 686
     :cond_4
     iget-boolean v13, v0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportsFrameRateOverride:Z
 
     if-nez v13, :cond_6
 
-    .line 687
     iget v13, v2, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
     sub-float/2addr v13, v5
@@ -1122,13 +1018,11 @@
 
     if-lez v13, :cond_6
 
-    .line 689
     :cond_5
     iget-boolean v13, v0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz v13, :cond_a
 
-    .line 690
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -1167,7 +1061,6 @@
 
     goto/16 :goto_4
 
-    .line 700
     :cond_6
     invoke-virtual {v0, v12, v2}, Lcom/android/server/display/mode/DisplayModeDirector;->isRenderRateAchievable(FLcom/android/server/display/mode/DisplayModeDirector$VoteSummary;)Z
 
@@ -1175,12 +1068,10 @@
 
     if-nez v8, :cond_7
 
-    .line 701
     iget-boolean v8, v0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz v8, :cond_a
 
-    .line 702
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1221,11 +1112,9 @@
 
     goto/16 :goto_4
 
-    .line 711
     :cond_7
     invoke-virtual {v3, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 712
     invoke-virtual {v11}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result v8
@@ -1242,14 +1131,12 @@
 
     goto/16 :goto_4
 
-    .line 674
     :cond_8
     :goto_2
     iget-boolean v13, v0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz v13, :cond_a
 
-    .line 675
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -1288,14 +1175,12 @@
 
     goto :goto_4
 
-    .line 659
     :cond_9
     :goto_3
     iget-boolean v8, v0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz v8, :cond_a
 
-    .line 660
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1328,7 +1213,6 @@
 
     invoke-virtual {v8, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 663
     invoke-virtual {v11}, Landroid/view/Display$Mode;->getPhysicalWidth()I
 
     move-result v12
@@ -1339,7 +1223,6 @@
 
     invoke-virtual {v8, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 664
     invoke-virtual {v11}, Landroid/view/Display$Mode;->getPhysicalHeight()I
 
     move-result v11
@@ -1350,7 +1233,6 @@
 
     move-result-object v8
 
-    .line 660
     invoke-static {v6, v8}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_a
@@ -1362,7 +1244,6 @@
     :cond_b
     if-eqz v7, :cond_c
 
-    .line 718
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -1376,7 +1257,6 @@
 .method public getAppRequestObserver()Lcom/android/server/display/mode/DisplayModeDirector$AppRequestObserver;
     .locals 0
 
-    .line 731
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mAppRequestObserver:Lcom/android/server/display/mode/DisplayModeDirector$AppRequestObserver;
 
     return-object p0
@@ -1385,7 +1265,6 @@
 .method public getBrightnessObserver()Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
     .locals 0
 
-    .line 936
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     return-object p0
@@ -1394,12 +1273,10 @@
 .method public getDesiredDisplayModeSpecs(I)Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecs;
     .locals 14
 
-    .line 448
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 449
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 
@@ -1407,7 +1284,6 @@
 
     move-result-object v1
 
-    .line 450
     iget-object v2, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportedModesByDisplay:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1416,7 +1292,6 @@
 
     check-cast v2, [Landroid/view/Display$Mode;
 
-    .line 451
     iget-object v3, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultModeByDisplay:Landroid/util/SparseArray;
 
     invoke-virtual {v3, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1431,21 +1306,17 @@
 
     goto/16 :goto_4
 
-    .line 459
     :cond_0
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 460
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 461
     new-instance v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;
 
     invoke-direct {v5}, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;-><init>()V
 
-    .line 465
     iget-boolean v6, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mAlwaysRespectAppRequest:Z
 
     const/4 v7, 0x6
@@ -1470,10 +1341,8 @@
     :goto_0
     if-gt v10, v6, :cond_6
 
-    .line 473
     invoke-virtual {p0, v1, v10, v6, v5}, Lcom/android/server/display/mode/DisplayModeDirector;->summarizeVotes(Landroid/util/SparseArray;IILcom/android/server/display/mode/DisplayModeDirector$VoteSummary;)V
 
-    .line 479
     iget v4, v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->height:I
 
     const/4 v11, -0x1
@@ -1484,7 +1353,6 @@
 
     if-ne v4, v11, :cond_3
 
-    .line 481
     :cond_2
     invoke-virtual {v3}, Landroid/view/Display$Mode;->getPhysicalWidth()I
 
@@ -1492,34 +1360,29 @@
 
     iput v4, v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->width:I
 
-    .line 482
     invoke-virtual {v3}, Landroid/view/Display$Mode;->getPhysicalHeight()I
 
     move-result v4
 
     iput v4, v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->height:I
 
-    .line 485
     :cond_3
     invoke-virtual {p0, v2, v5}, Lcom/android/server/display/mode/DisplayModeDirector;->filterModes([Landroid/view/Display$Mode;Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;)Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 486
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v11
 
     if-nez v11, :cond_4
 
-    .line 487
     iget-boolean v6, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz v6, :cond_6
 
     const-string v6, "DisplayModeDirector"
 
-    .line 488
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1534,7 +1397,6 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 490
     invoke-static {v10}, Lcom/android/server/display/mode/Vote;->priorityToString(I)Ljava/lang/String;
 
     move-result-object v10
@@ -1609,12 +1471,10 @@
 
     move-result-object v10
 
-    .line 488
     invoke-static {v6, v10}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 508
     :cond_4
     iget-boolean v11, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
@@ -1622,7 +1482,6 @@
 
     const-string v11, "DisplayModeDirector"
 
-    .line 509
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1631,7 +1490,6 @@
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 510
     invoke-static {v10}, Lcom/android/server/display/mode/Vote;->priorityToString(I)Ljava/lang/String;
 
     move-result-object v13
@@ -1706,7 +1564,6 @@
 
     move-result-object v12
 
-    .line 509
     invoke-static {v11, v12}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
@@ -1714,7 +1571,6 @@
 
     goto/16 :goto_0
 
-    .line 529
     :cond_6
     :goto_1
     iget-boolean v6, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
@@ -1723,7 +1579,6 @@
 
     const-string v6, "DisplayModeDirector"
 
-    .line 530
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1770,71 +1625,59 @@
 
     invoke-static {v6, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
     :cond_7
     new-instance v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;
 
     invoke-direct {v6}, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;-><init>()V
 
-    .line 543
     invoke-virtual {p0, v1, v7, v8, v6}, Lcom/android/server/display/mode/DisplayModeDirector;->summarizeVotes(Landroid/util/SparseArray;IILcom/android/server/display/mode/DisplayModeDirector$VoteSummary;)V
 
-    .line 548
     iget v7, v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minPhysicalRefreshRate:F
 
     iget v8, v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minPhysicalRefreshRate:F
 
-    .line 549
     invoke-static {v7, v8}, Ljava/lang/Math;->min(FF)F
 
     move-result v7
 
     iput v7, v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minPhysicalRefreshRate:F
 
-    .line 551
     iget v7, v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxPhysicalRefreshRate:F
 
     iget v8, v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxPhysicalRefreshRate:F
 
-    .line 552
     invoke-static {v7, v8}, Ljava/lang/Math;->max(FF)F
 
     move-result v7
 
     iput v7, v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxPhysicalRefreshRate:F
 
-    .line 554
     iget v7, v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
     iget v8, v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
-    .line 555
     invoke-static {v7, v8}, Ljava/lang/Math;->min(FF)F
 
     move-result v7
 
     iput v7, v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
-    .line 557
     iget v7, v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
     iget v8, v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
-    .line 558
     invoke-static {v7, v8}, Ljava/lang/Math;->max(FF)F
 
     move-result v7
 
     iput v7, v6, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
-    .line 560
     iget-boolean v7, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz v7, :cond_8
 
     const-string v7, "DisplayModeDirector"
 
-    .line 561
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1881,7 +1724,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 573
     :cond_8
     invoke-virtual {p0, v5, v4, v3}, Lcom/android/server/display/mode/DisplayModeDirector;->selectBaseMode(Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;Ljava/util/ArrayList;Landroid/view/Display$Mode;)Landroid/view/Display$Mode;
 
@@ -1891,7 +1733,6 @@
 
     const-string p0, "DisplayModeDirector"
 
-    .line 575
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1912,7 +1753,6 @@
 
     invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 577
     invoke-static {v2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -1923,25 +1763,20 @@
 
     move-result-object p1
 
-    .line 575
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 579
     invoke-virtual {v3}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result p0
 
-    .line 580
     new-instance p1, Landroid/view/SurfaceControl$RefreshRateRange;
 
     invoke-direct {p1, p0, p0}, Landroid/view/SurfaceControl$RefreshRateRange;-><init>(FF)V
 
-    .line 581
     new-instance p0, Landroid/view/SurfaceControl$RefreshRateRanges;
 
     invoke-direct {p0, p1, p1}, Landroid/view/SurfaceControl$RefreshRateRanges;-><init>(Landroid/view/SurfaceControl$RefreshRateRange;Landroid/view/SurfaceControl$RefreshRateRange;)V
 
-    .line 582
     new-instance p1, Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecs;
 
     invoke-virtual {v3}, Landroid/view/Display$Mode;->getModeId()I
@@ -1954,7 +1789,6 @@
 
     return-object p1
 
-    .line 587
     :cond_9
     iget p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
@@ -1980,37 +1814,29 @@
     :goto_3
     if-nez p1, :cond_c
 
-    .line 592
     iget-boolean v2, v5, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->disableRefreshRateSwitching:Z
 
     if-eqz v2, :cond_d
 
-    .line 593
     :cond_c
     invoke-virtual {v4}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result v2
 
-    .line 594
     invoke-virtual {p0, v5, v2}, Lcom/android/server/display/mode/DisplayModeDirector;->disableModeSwitching(Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;F)V
 
     if-eqz p1, :cond_d
 
-    .line 596
     invoke-virtual {p0, v6, v2}, Lcom/android/server/display/mode/DisplayModeDirector;->disableModeSwitching(Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;F)V
 
-    .line 597
     invoke-virtual {p0, v5, v2}, Lcom/android/server/display/mode/DisplayModeDirector;->disableRenderRateSwitching(Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;F)V
 
-    .line 599
     iget p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
     if-nez p1, :cond_d
 
-    .line 600
     invoke-virtual {p0, v6, v2}, Lcom/android/server/display/mode/DisplayModeDirector;->disableRenderRateSwitching(Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;F)V
 
-    .line 605
     :cond_d
     iget p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
@@ -2020,7 +1846,6 @@
 
     move v9, v1
 
-    .line 608
     :cond_e
     new-instance p0, Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecs;
 
@@ -2078,7 +1903,6 @@
     :goto_4
     const-string p0, "DisplayModeDirector"
 
-    .line 453
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2099,7 +1923,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     new-instance p0, Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecs;
 
     invoke-direct {p0}, Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecs;-><init>()V
@@ -2111,7 +1934,6 @@
     :catchall_0
     move-exception p0
 
-    .line 624
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2122,12 +1944,10 @@
 .method public getDesiredDisplayModeSpecsWithInjectedFpsSettings(FFF)Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecs;
     .locals 2
 
-    .line 957
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 958
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
@@ -2135,7 +1955,6 @@
 
     const/4 p1, 0x0
 
-    .line 960
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/DisplayModeDirector;->getDesiredDisplayModeSpecs(I)Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecs;
 
     move-result-object p0
@@ -2147,7 +1966,6 @@
     :catchall_0
     move-exception p0
 
-    .line 961
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2158,7 +1976,6 @@
 .method public getHbmObserver()Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
     .locals 0
 
-    .line 951
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHbmObserver:Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
 
     return-object p0
@@ -2167,7 +1984,6 @@
 .method public final getMaxRefreshRateLocked(I)F
     .locals 4
 
-    .line 875
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportedModesByDisplay:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -2176,7 +1992,6 @@
 
     check-cast p0, [Landroid/view/Display$Mode;
 
-    .line 877
     array-length p1, p0
 
     const/4 v0, 0x0
@@ -2188,7 +2003,6 @@
 
     aget-object v2, p0, v1
 
-    .line 878
     invoke-virtual {v2}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result v3
@@ -2197,7 +2011,6 @@
 
     if-lez v3, :cond_0
 
-    .line 879
     invoke-virtual {v2}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result v0
@@ -2214,12 +2027,10 @@
 .method public getModeSwitchingType()I
     .locals 1
 
-    .line 811
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 812
     :try_start_0
     iget p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
@@ -2230,7 +2041,6 @@
     :catchall_0
     move-exception p0
 
-    .line 813
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2241,7 +2051,6 @@
 .method public getRefreshRateModeManager()Lcom/android/server/display/mode/RefreshRateModeManager;
     .locals 0
 
-    .line 208
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mRefreshRateModeManager:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     return-object p0
@@ -2250,7 +2059,6 @@
 .method public getSettingsObserver()Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
     .locals 0
 
-    .line 941
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     return-object p0
@@ -2259,7 +2067,6 @@
 .method public getUdpfsObserver()Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;
     .locals 0
 
-    .line 946
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mUdfpsObserver:Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;
 
     return-object p0
@@ -2268,14 +2075,12 @@
 .method public getVote(II)Lcom/android/server/display/mode/Vote;
     .locals 0
 
-    .line 827
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/VotesStorage;->getVotes(I)Landroid/util/SparseArray;
 
     move-result-object p0
 
-    .line 828
     invoke-virtual {p0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -2288,7 +2093,6 @@
 .method public injectBrightnessObserver(Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;)V
     .locals 0
 
-    .line 931
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     return-void
@@ -2297,7 +2101,6 @@
 .method public injectDefaultModeByDisplay(Landroid/util/SparseArray;)V
     .locals 0
 
-    .line 921
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDefaultModeByDisplay:Landroid/util/SparseArray;
 
     return-void
@@ -2306,7 +2109,6 @@
 .method public injectSupportedModesByDisplay(Landroid/util/SparseArray;)V
     .locals 0
 
-    .line 916
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSupportedModesByDisplay:Landroid/util/SparseArray;
 
     return-void
@@ -2315,7 +2117,6 @@
 .method public injectVotesByDisplay(Landroid/util/SparseArray;)V
     .locals 0
 
-    .line 926
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/VotesStorage;->injectVotesByDisplay(Landroid/util/SparseArray;)V
@@ -2326,7 +2127,6 @@
 .method public final isRenderRateAchievable(FLcom/android/server/display/mode/DisplayModeDirector$VoteSummary;)Z
     .locals 3
 
-    .line 636
     iget p0, p2, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
     div-float p0, p1, p0
@@ -2337,7 +2137,6 @@
 
     float-to-double v1, p0
 
-    .line 637
     invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v1
@@ -2348,7 +2147,6 @@
 
     div-float/2addr p1, p0
 
-    .line 640
     iget p0, p2, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
     sub-float/2addr p0, v0
@@ -2371,7 +2169,6 @@
 .method public final notifyDesiredDisplayModeSpecsChangedLocked()V
     .locals 2
 
-    .line 886
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDesiredDisplayModeSpecsListener:Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecsListener;
 
     if-eqz v0, :cond_0
@@ -2380,14 +2177,12 @@
 
     const/4 v1, 0x1
 
-    .line 887
     invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 892
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHandler:Lcom/android/server/display/mode/DisplayModeDirector$DisplayModeDirectorHandler;
 
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDesiredDisplayModeSpecsListener:Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecsListener;
@@ -2396,7 +2191,6 @@
 
     move-result-object p0
 
-    .line 894
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_0
@@ -2406,7 +2200,6 @@
 .method public onBootCompleted()V
     .locals 0
 
-    .line 267
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mUdfpsObserver:Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;
 
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector$UdfpsObserver;->observe()V
@@ -2417,33 +2210,27 @@
 .method public onUserSwitching()V
     .locals 2
 
-    .line 3136
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3137
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     invoke-static {v1}, Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;->-$$Nest$mupdateRefreshRateSettingLocked(Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;)V
 
-    .line 3138
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     invoke-static {v1}, Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;->-$$Nest$mupdateLowPowerModeSettingLocked(Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;)V
 
-    .line 3139
     iget-object v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     invoke-static {v1}, Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;->-$$Nest$mupdateModeSwitchingTypeSettingLocked(Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;)V
 
-    .line 3140
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_VRR_REFRESH_RATE_MODE:Z
 
     if-eqz v1, :cond_0
 
-    .line 3141
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mRefreshRateModeManager:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-virtual {p0}, Lcom/android/server/display/mode/RefreshRateModeManager;->getController()Lcom/android/server/display/mode/RefreshRateController;
@@ -2454,7 +2241,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/display/mode/RefreshRateController;->updateRefreshRateModeLocked(Z)V
 
-    .line 3143
     :cond_0
     monitor-exit v0
 
@@ -2473,7 +2259,6 @@
 .method public final selectBaseMode(Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;Ljava/util/ArrayList;Landroid/view/Display$Mode;)Landroid/view/Display$Mode;
     .locals 3
 
-    .line 391
     iget v0, p1, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->appRequestBaseModeRefreshRate:F
 
     const/4 v1, 0x0
@@ -2484,13 +2269,11 @@
 
     goto :goto_0
 
-    .line 392
     :cond_0
     invoke-virtual {p3}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result v0
 
-    .line 394
     :goto_0
     sget-boolean p3, Lcom/samsung/android/rune/CoreRune;->FW_VRR_POLICY:Z
 
@@ -2504,7 +2287,6 @@
 
     if-nez p3, :cond_1
 
-    .line 396
     invoke-virtual {p2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p3
@@ -2517,7 +2299,6 @@
 
     if-nez p1, :cond_1
 
-    .line 398
     invoke-virtual {p2}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object p1
@@ -2526,12 +2307,10 @@
 
     invoke-direct {p3}, Lcom/android/server/display/mode/DisplayModeDirector$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 399
     invoke-interface {p1, p3}, Ljava/util/stream/Stream;->max(Ljava/util/Comparator;)Ljava/util/Optional;
 
     move-result-object p1
 
-    .line 400
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -2542,7 +2321,6 @@
 
     move-result v0
 
-    .line 403
     :cond_1
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2561,7 +2339,6 @@
 
     check-cast p3, Landroid/view/Display$Mode;
 
-    .line 404
     invoke-virtual {p3}, Landroid/view/Display$Mode;->getRefreshRate()F
 
     move-result v1
@@ -2574,7 +2351,6 @@
 
     return-object p3
 
-    .line 414
     :cond_3
     invoke-virtual {p2}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -2602,16 +2378,13 @@
 .method public setDesiredDisplayModeSpecsListener(Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecsListener;)V
     .locals 1
 
-    .line 739
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 740
     :try_start_0
     iput-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDesiredDisplayModeSpecsListener:Lcom/android/server/display/mode/DisplayModeDirector$DesiredDisplayModeSpecsListener;
 
-    .line 741
     monitor-exit v0
 
     return-void
@@ -2629,28 +2402,23 @@
 .method public setLoggingEnabled(Z)V
     .locals 1
 
-    .line 274
     iget-boolean v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 277
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
-    .line 278
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     invoke-static {v0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;->-$$Nest$msetLoggingEnabled(Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;Z)V
 
-    .line 279
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSkinThermalStatusObserver:Lcom/android/server/display/mode/SkinThermalStatusObserver;
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/mode/SkinThermalStatusObserver;->setLoggingEnabled(Z)V
 
-    .line 280
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mVotesStorage:Lcom/android/server/display/mode/VotesStorage;
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/VotesStorage;->setLoggingEnabled(Z)V
@@ -2661,24 +2429,19 @@
 .method public setModeSwitchingType(I)V
     .locals 2
 
-    .line 798
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 799
     :try_start_0
     iget v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
     if-eq p1, v1, :cond_0
 
-    .line 800
     iput p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mModeSwitchingType:I
 
-    .line 801
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->notifyDesiredDisplayModeSpecsChangedLocked()V
 
-    .line 803
     :cond_0
     monitor-exit v0
 
@@ -2697,34 +2460,27 @@
 .method public setShouldAlwaysRespectAppRequestedMode(Z)V
     .locals 2
 
-    .line 770
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 771
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mAlwaysRespectAppRequest:Z
 
     if-eq v1, p1, :cond_0
 
-    .line 772
     iput-boolean p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mAlwaysRespectAppRequest:Z
 
-    .line 773
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->notifyDesiredDisplayModeSpecsChangedLocked()V
 
-    .line 775
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_VRR_SEAMLESS:Z
 
     if-eqz p1, :cond_0
 
-    .line 776
     iget-object p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     invoke-static {p0}, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;->-$$Nest$monBrightnessChangedLocked(Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;)V
 
-    .line 780
     :cond_0
     monitor-exit v0
 
@@ -2743,12 +2499,10 @@
 .method public shouldAlwaysRespectAppRequestedMode()Z
     .locals 1
 
-    .line 788
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 789
     :try_start_0
     iget-boolean p0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mAlwaysRespectAppRequest:Z
 
@@ -2759,7 +2513,6 @@
     :catchall_0
     move-exception p0
 
-    .line 790
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2770,49 +2523,40 @@
 .method public start(Landroid/hardware/SensorManager;)V
     .locals 1
 
-    .line 221
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_VRR_FOR_SUB_DISPLAY:Z
 
     if-eqz v0, :cond_0
 
-    .line 222
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mRefreshRateModeManager:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-virtual {v0}, Lcom/android/server/display/mode/RefreshRateModeManager;->setPrimaryDisplayToken()V
 
-    .line 224
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_VRR_REFRESH_RATE_MODE:Z
 
     if-eqz v0, :cond_1
 
-    .line 225
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mRefreshRateModeManager:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-virtual {v0}, Lcom/android/server/display/mode/RefreshRateModeManager;->updateDefaultDisplayToken()V
 
-    .line 229
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSettingsObserver:Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;
 
     invoke-virtual {v0}, Lcom/android/server/display/mode/DisplayModeDirector$SettingsObserver;->observe()V
 
-    .line 230
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mDisplayObserver:Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;
 
     invoke-virtual {v0}, Lcom/android/server/display/mode/DisplayModeDirector$DisplayObserver;->observe()V
 
-    .line 233
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_VRR_REFRESH_RATE_MODE:Z
 
     if-eqz v0, :cond_2
 
-    .line 234
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mRefreshRateModeManager:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-virtual {v0}, Lcom/android/server/display/mode/RefreshRateModeManager;->observe()V
 
-    .line 237
     :cond_2
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_VRR_POLICY:Z
 
@@ -2822,44 +2566,36 @@
 
     if-eqz v0, :cond_4
 
-    .line 239
     :cond_3
     iget-object v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mBrightnessObserver:Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;
 
     invoke-static {v0, p1}, Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;->-$$Nest$mobserve(Lcom/android/server/display/mode/DisplayModeDirector$BrightnessObserver;Landroid/hardware/SensorManager;)V
 
-    .line 242
     :cond_4
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSensorObserver:Lcom/android/server/display/mode/DisplayModeDirector$SensorObserver;
 
     invoke-virtual {p1}, Lcom/android/server/display/mode/DisplayModeDirector$SensorObserver;->observe()V
 
-    .line 243
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mHbmObserver:Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;
 
     invoke-virtual {p1}, Lcom/android/server/display/mode/DisplayModeDirector$HbmObserver;->observe()V
 
-    .line 248
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_VRR_POLICY:Z
 
     if-nez p1, :cond_5
 
-    .line 250
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mSkinThermalStatusObserver:Lcom/android/server/display/mode/SkinThermalStatusObserver;
 
     invoke-virtual {p1}, Lcom/android/server/display/mode/SkinThermalStatusObserver;->observe()V
 
-    .line 253
     :cond_5
     iget-object p1, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 256
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/display/mode/DisplayModeDirector;->notifyDesiredDisplayModeSpecsChangedLocked()V
 
-    .line 257
     monitor-exit p1
 
     return-void
@@ -2877,13 +2613,11 @@
 .method public final summarizeVotes(Landroid/util/SparseArray;IILcom/android/server/display/mode/DisplayModeDirector$VoteSummary;)V
     .locals 4
 
-    .line 328
     invoke-virtual {p4}, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->reset()V
 
     :goto_0
     if-lt p3, p2, :cond_5
 
-    .line 332
     invoke-virtual {p1, p3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -2894,7 +2628,6 @@
 
     goto/16 :goto_1
 
-    .line 340
     :cond_0
     iget-object v1, v0, Lcom/android/server/display/mode/Vote;->refreshRateRanges:Landroid/view/SurfaceControl$RefreshRateRanges;
 
@@ -2910,7 +2643,6 @@
 
     move-result v1
 
-    .line 342
     iget v2, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minPhysicalRefreshRate:F
 
     invoke-static {v2, v1}, Ljava/lang/Math;->max(FF)F
@@ -2919,7 +2651,6 @@
 
     iput v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minPhysicalRefreshRate:F
 
-    .line 344
     iget v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxPhysicalRefreshRate:F
 
     iget-object v2, v0, Lcom/android/server/display/mode/Vote;->refreshRateRanges:Landroid/view/SurfaceControl$RefreshRateRanges;
@@ -2934,7 +2665,6 @@
 
     iput v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxPhysicalRefreshRate:F
 
-    .line 349
     iget-object v1, v0, Lcom/android/server/display/mode/Vote;->refreshRateRanges:Landroid/view/SurfaceControl$RefreshRateRanges;
 
     iget-object v2, v1, Landroid/view/SurfaceControl$RefreshRateRanges;->render:Landroid/view/SurfaceControl$RefreshRateRange;
@@ -2949,7 +2679,6 @@
 
     move-result v1
 
-    .line 351
     iget v2, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
     iget-object v3, v0, Lcom/android/server/display/mode/Vote;->refreshRateRanges:Landroid/view/SurfaceControl$RefreshRateRanges;
@@ -2964,7 +2693,6 @@
 
     iput v2, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->minRenderFrameRate:F
 
-    .line 353
     iget v2, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
     invoke-static {v2, v1}, Ljava/lang/Math;->min(FF)F
@@ -2973,7 +2701,6 @@
 
     iput v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->maxRenderFrameRate:F
 
-    .line 358
     iget v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->height:I
 
     const/4 v2, -0x1
@@ -2992,13 +2719,10 @@
 
     if-lez v2, :cond_1
 
-    .line 360
     iput v2, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->width:I
 
-    .line 361
     iput v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->height:I
 
-    .line 363
     :cond_1
     iget-boolean v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->disableRefreshRateSwitching:Z
 
@@ -3010,10 +2734,8 @@
 
     const/4 v1, 0x1
 
-    .line 364
     iput-boolean v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->disableRefreshRateSwitching:Z
 
-    .line 366
     :cond_2
     iget v1, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->appRequestBaseModeRefreshRate:F
 
@@ -3029,16 +2751,13 @@
 
     if-lez v1, :cond_3
 
-    .line 368
     iput v0, p4, Lcom/android/server/display/mode/DisplayModeDirector$VoteSummary;->appRequestBaseModeRefreshRate:F
 
-    .line 371
     :cond_3
     iget-boolean v0, p0, Lcom/android/server/display/mode/DisplayModeDirector;->mLoggingEnabled:Z
 
     if-eqz v0, :cond_4
 
-    .line 372
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

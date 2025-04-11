@@ -15,10 +15,8 @@
 
     const/4 v1, 0x3
 
-    .line 1734
     invoke-direct {p0, p1, v0, v1}, Landroid/view/DisplayEventReceiver;-><init>(Landroid/os/Looper;II)V
 
-    .line 1737
     iput-object p2, p0, Lcom/android/server/display/LocalDisplayAdapter$ProxyDisplayEventReceiver;->mListener:Lcom/android/server/display/LocalDisplayAdapter$DisplayEventListener;
 
     return-void
@@ -29,7 +27,6 @@
 .method public onFrameRateOverridesChanged(JJ[Landroid/view/DisplayEventReceiver$FrameRateOverride;)V
     .locals 6
 
-    .line 1754
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$ProxyDisplayEventReceiver;->mListener:Lcom/android/server/display/LocalDisplayAdapter$DisplayEventListener;
 
     move-wide v1, p1
@@ -46,7 +43,6 @@
 .method public onHotplug(JJZ)V
     .locals 6
 
-    .line 1742
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$ProxyDisplayEventReceiver;->mListener:Lcom/android/server/display/LocalDisplayAdapter$DisplayEventListener;
 
     move-wide v1, p1
@@ -63,7 +59,6 @@
 .method public onModeChanged(JJIJ)V
     .locals 8
 
-    .line 1748
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$ProxyDisplayEventReceiver;->mListener:Lcom/android/server/display/LocalDisplayAdapter$DisplayEventListener;
 
     move-wide v1, p1

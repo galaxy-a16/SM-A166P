@@ -7,7 +7,6 @@
 .method public static final andInv(II)I
     .locals 0
 
-    .line 0
     not-int p1, p1
 
     and-int/2addr p0, p1
@@ -18,7 +17,6 @@
 .method public static final hasAnyBit(II)Z
     .locals 0
 
-    .line 0
     and-int/2addr p0, p1
 
     if-eqz p0, :cond_0
@@ -37,7 +35,6 @@
 .method public static final hasBits(II)Z
     .locals 0
 
-    .line 0
     and-int/2addr p0, p1
 
     if-ne p0, p1, :cond_0

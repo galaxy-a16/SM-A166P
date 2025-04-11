@@ -17,19 +17,14 @@
 .method public constructor <init>(Ljava/lang/String;IZZ)V
     .locals 0
 
-    .line 368
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 369
     iput-object p1, p0, Lcom/android/server/notification/PermissionHelper$PackagePermission;->packageName:Ljava/lang/String;
 
-    .line 370
     iput p2, p0, Lcom/android/server/notification/PermissionHelper$PackagePermission;->userId:I
 
-    .line 371
     iput-boolean p3, p0, Lcom/android/server/notification/PermissionHelper$PackagePermission;->granted:Z
 
-    .line 372
     iput-boolean p4, p0, Lcom/android/server/notification/PermissionHelper$PackagePermission;->userModifiedSettings:Z
 
     return-void
@@ -51,7 +46,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 378
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -64,11 +58,9 @@
 
     goto :goto_1
 
-    .line 379
     :cond_1
     check-cast p1, Lcom/android/server/notification/PermissionHelper$PackagePermission;
 
-    .line 380
     iget v2, p0, Lcom/android/server/notification/PermissionHelper$PackagePermission;->userId:I
 
     iget v3, p1, Lcom/android/server/notification/PermissionHelper$PackagePermission;->userId:I
@@ -91,7 +83,6 @@
 
     iget-object p1, p1, Lcom/android/server/notification/PermissionHelper$PackagePermission;->packageName:Ljava/lang/String;
 
-    .line 382
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -114,7 +105,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 387
     iget-object v0, p0, Lcom/android/server/notification/PermissionHelper$PackagePermission;->packageName:Ljava/lang/String;
 
     iget v1, p0, Lcom/android/server/notification/PermissionHelper$PackagePermission;->userId:I
@@ -149,7 +139,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 392
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

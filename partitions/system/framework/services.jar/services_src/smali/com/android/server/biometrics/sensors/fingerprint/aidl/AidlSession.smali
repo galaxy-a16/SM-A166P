@@ -19,22 +19,16 @@
 .method public constructor <init>(ILandroid/hardware/biometrics/fingerprint/ISession;ILcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;)V
     .locals 0
 
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mHalInterfaceVersion:I
 
-    .line 52
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mSession:Landroid/hardware/biometrics/fingerprint/ISession;
 
-    .line 53
     iput p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mUserId:I
 
-    .line 54
     iput-object p4, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mHalSessionCallback:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;
 
-    .line 57
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,7 +55,6 @@
 .method public getHalSessionCallback()Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;
     .locals 0
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mHalSessionCallback:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;
 
     return-object p0
@@ -70,12 +63,10 @@
 .method public getSehFingerprint()Lvendor/samsung/hardware/biometrics/fingerprint/ISehFingerprint;
     .locals 0
 
-    .line 99
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mLazySehFingerprint:Ljava/util/function/Supplier;
 
     if-eqz p0, :cond_0
 
-    .line 100
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -93,7 +84,6 @@
 .method public getSession()Landroid/hardware/biometrics/fingerprint/ISession;
     .locals 0
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mSession:Landroid/hardware/biometrics/fingerprint/ISession;
 
     return-object p0
@@ -102,7 +92,6 @@
 .method public getUserId()I
     .locals 0
 
-    .line 68
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mUserId:I
 
     return p0
@@ -111,7 +100,6 @@
 .method public hasContextMethods()Z
     .locals 1
 
-    .line 81
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mHalInterfaceVersion:I
 
     const/4 v0, 0x2
@@ -132,12 +120,10 @@
 .method public resetLockout(Landroid/hardware/keymaster/HardwareAuthToken;)V
     .locals 0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mHalSessionCallback:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;
 
     if-eqz p0, :cond_0
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;->onLockoutCleared()V
 
     :cond_0
@@ -147,7 +133,6 @@
 .method public setLazySehFingerprint(Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 94
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->mLazySehFingerprint:Ljava/util/function/Supplier;
 
     return-void

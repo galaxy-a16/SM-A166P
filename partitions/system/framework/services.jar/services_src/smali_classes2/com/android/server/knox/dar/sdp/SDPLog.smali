@@ -13,7 +13,6 @@
 
     const-string/jumbo v0, "ro.build.type"
 
-    .line 18
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -28,7 +27,6 @@
 
     const-string v1, "eng"
 
-    .line 19
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -61,7 +59,6 @@
 
     const/4 v0, 0x0
 
-    .line 25
     invoke-static {v0, p0}, Lcom/android/server/knox/dar/sdp/SDPLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -70,12 +67,10 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 32
     invoke-static {p1}, Lcom/android/server/knox/dar/sdp/SDPLogUtil;->makeDebugMessage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 33
     invoke-static {v0}, Lcom/android/server/knox/dar/sdp/SDPLogger;->enqMessage(Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
@@ -87,7 +82,6 @@
     :cond_0
     const-string p0, "SDPLog"
 
-    .line 35
     :goto_0
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -98,7 +92,6 @@
 .method public static dump(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 100
     invoke-static {p0}, Lcom/android/server/knox/dar/sdp/SDPLogger;->dump(Ljava/io/PrintWriter;)V
 
     return-void
@@ -109,7 +102,6 @@
 
     const/4 v0, 0x0
 
-    .line 65
     invoke-static {v0, p0}, Lcom/android/server/knox/dar/sdp/SDPLog;->e(Ljava/lang/String;Ljava/lang/Exception;)V
 
     return-void
@@ -120,7 +112,6 @@
 
     const/4 v0, 0x0
 
-    .line 69
     invoke-static {v0, p0, p1}, Lcom/android/server/knox/dar/sdp/SDPLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
 
     return-void
@@ -129,12 +120,10 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 4
 
-    .line 76
     invoke-static {p1, p2}, Lcom/android/server/knox/dar/sdp/SDPLogUtil;->makeErrorMessages(Ljava/lang/String;Ljava/lang/Exception;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 77
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -144,7 +133,6 @@
 
     aget-object v3, v0, v2
 
-    .line 78
     invoke-static {v3}, Lcom/android/server/knox/dar/sdp/SDPLogger;->enqMessage(Ljava/lang/String;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -161,11 +149,9 @@
     :cond_1
     const-string p0, "SDPLog"
 
-    .line 81
     :goto_1
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
@@ -175,7 +161,6 @@
 .method public static i(Ljava/lang/String;)V
     .locals 2
 
-    .line 44
     new-instance v0, Ljava/lang/Throwable;
 
     invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
@@ -190,12 +175,10 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
-    .line 55
     invoke-static {p1, p2}, Lcom/android/server/knox/dar/sdp/SDPLogUtil;->makeInfoMessages(Ljava/lang/String;Ljava/lang/Throwable;)[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 56
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -205,7 +188,6 @@
 
     aget-object v2, p2, v1
 
-    .line 57
     invoke-static {v2}, Lcom/android/server/knox/dar/sdp/SDPLogger;->enqMessage(Ljava/lang/String;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -222,7 +204,6 @@
     :cond_1
     const-string p0, "SDPLog"
 
-    .line 60
     :goto_1
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -233,32 +214,26 @@
 .method public static varargs p([Ljava/lang/Object;)V
     .locals 1
 
-    .line 87
     sget-boolean v0, Lcom/android/server/knox/dar/sdp/SDPLog;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 88
     invoke-static {}, Lcom/android/server/knox/dar/sdp/SDPLogUtil;->getCurrentTime()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 89
     invoke-static {p0}, Lcom/android/server/knox/dar/sdp/SDPLogUtil;->makePairs([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 90
     invoke-static {v0, p0}, Lcom/android/server/knox/dar/sdp/SDPLogUtil;->makeParamMessage(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 91
     invoke-static {v0}, Lcom/android/server/knox/dar/sdp/SDPLogger;->enqMessage(Ljava/lang/String;)V
 
     const-string v0, "SDPLog.p"
 
-    .line 93
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0

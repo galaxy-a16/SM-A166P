@@ -20,14 +20,12 @@
 .method public authenticate(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public autofill(Landroid/service/autofill/Dataset;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -38,7 +36,6 @@
 
     const-string v0, "An error happened on the tooltip"
 
-    .line 199
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -47,13 +44,11 @@
 .method public onInflate()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public startIntentSender(Landroid/content/IntentSender;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

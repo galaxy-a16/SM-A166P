@@ -20,7 +20,6 @@
 .method public getCocktailType()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -29,7 +28,6 @@
 .method public getModeId()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -38,7 +36,6 @@
 .method public getModeName()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -47,7 +44,6 @@
 .method public getRegistrationType()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -56,7 +52,6 @@
 .method public onBroadcastReceived(Landroid/content/Intent;)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -65,7 +60,6 @@
 .method public renewMode(I)I
     .locals 0
 
-    .line 20
     invoke-virtual {p0}, Lcom/android/server/cocktailbar/mode/NormalMode;->getModeId()I
 
     move-result p0

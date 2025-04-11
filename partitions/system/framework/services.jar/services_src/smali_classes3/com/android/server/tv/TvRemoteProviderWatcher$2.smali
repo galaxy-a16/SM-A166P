@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/tv/TvRemoteProviderWatcher;)V
     .locals 0
 
-    .line 227
     iput-object p1, p0, Lcom/android/server/tv/TvRemoteProviderWatcher$2;->this$0:Lcom/android/server/tv/TvRemoteProviderWatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 0
 
-    .line 230
     iget-object p0, p0, Lcom/android/server/tv/TvRemoteProviderWatcher$2;->this$0:Lcom/android/server/tv/TvRemoteProviderWatcher;
 
     invoke-static {p0}, Lcom/android/server/tv/TvRemoteProviderWatcher;->-$$Nest$mscanPackages(Lcom/android/server/tv/TvRemoteProviderWatcher;)V

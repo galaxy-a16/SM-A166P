@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost;Landroid/os/Looper;)V
     .locals 0
 
-    .line 464
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost$1;->this$1:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,10 +23,8 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 468
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 469
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -44,7 +41,6 @@
 
     goto :goto_1
 
-    .line 484
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost$1;->this$1:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost;
 
@@ -62,7 +58,6 @@
 
     goto :goto_1
 
-    .line 479
     :cond_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -70,7 +65,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 480
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost$1;->this$1:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost;
 
     check-cast v0, Ljava/lang/String;
@@ -81,7 +75,6 @@
 
     goto :goto_1
 
-    .line 471
     :cond_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -89,24 +82,20 @@
 
     if-eqz v1, :cond_4
 
-    .line 472
     check-cast v0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost$HostLightingInfo;
 
-    .line 473
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost$1;->this$1:Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost;
 
     invoke-virtual {v0}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost$HostLightingInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 474
     invoke-virtual {v0}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost$HostLightingInfo;->getLightingInfo()Lcom/samsung/android/edge/SemEdgeLightingInfo;
 
     move-result-object v0
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 473
     invoke-static {p0, v1, v0, p1}, Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost;->-$$Nest$m_onStartEdgeLighting(Lcom/android/server/notification/edgelighting/EdgeLightingClientManager$EdgeLightingHost;Ljava/lang/String;Lcom/samsung/android/edge/SemEdgeLightingInfo;I)V
 
     :cond_4

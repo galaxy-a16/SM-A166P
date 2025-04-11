@@ -15,16 +15,12 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 0
 
-    .line 49
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;-><init>()V
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mContext:Landroid/content/Context;
 
-    .line 51
     iput-object p2, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mType:Ljava/lang/String;
 
-    .line 52
     iput p3, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mUserId:I
 
     return-void
@@ -33,7 +29,6 @@
 .method public static createAction(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;
     .locals 1
 
-    .line 56
     new-instance v0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
@@ -44,7 +39,6 @@
 .method public static getStringResId(Ljava/lang/String;)I
     .locals 2
 
-    .line 60
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -122,7 +116,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 70
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string v0, "Wrong NavigationBar Action Type"
@@ -175,7 +168,6 @@
 .method public performCornerAction(I)V
     .locals 5
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mType:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -259,7 +251,6 @@
     :goto_0
     packed-switch v4, :pswitch_data_0
 
-    .line 121
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "Wrong NavigationBar Action Type"
@@ -268,7 +259,6 @@
 
     throw p0
 
-    .line 83
     :pswitch_0
     const-class v0, Lcom/android/server/statusbar/StatusBarManagerInternal;
 
@@ -280,20 +270,16 @@
 
     if-eqz v0, :cond_5
 
-    .line 85
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mContext:Landroid/content/Context;
 
-    .line 86
     invoke-static {p0, p1}, Landroid/app/StatusBarManager;->getNaturalBarTypeByDisplayId(Landroid/content/Context;I)I
 
     move-result p0
 
-    .line 85
     invoke-interface {v0, p0}, Lcom/android/server/statusbar/StatusBarManagerInternal;->toggleRecentAppsToType(I)V
 
     goto :goto_1
 
-    .line 79
     :pswitch_1
     new-instance p1, Landroid/content/Intent;
 
@@ -301,14 +287,12 @@
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_1
 
-    .line 90
     :pswitch_2
     new-instance p1, Ljava/lang/Thread;
 
@@ -318,12 +302,10 @@
 
     invoke-direct {p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 104
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     goto :goto_1
 
-    .line 109
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mContext:Landroid/content/Context;
 
@@ -341,7 +323,6 @@
 
     if-eq v0, v2, :cond_4
 
-    .line 113
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
@@ -352,7 +333,6 @@
 
     goto :goto_1
 
-    .line 115
     :cond_4
     new-instance p1, Landroid/content/Intent;
 
@@ -362,10 +342,8 @@
 
     const-string v0, "com.android.systemui"
 
-    .line 116
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V

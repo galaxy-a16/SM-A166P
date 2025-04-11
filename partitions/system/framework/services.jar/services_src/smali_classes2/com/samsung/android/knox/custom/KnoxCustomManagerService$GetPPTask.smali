@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)V
     .locals 0
 
-    .line 12378
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$GetPPTask;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,12 +28,10 @@
 
     const-string v0, "content://com.samsung.android.ppclient.PPClientProvider"
 
-    .line 12382
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 12383
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$GetPPTask;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmContext(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Landroid/content/Context;
@@ -59,7 +56,6 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
-    .line 12378
     invoke-virtual {p0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$GetPPTask;->call()Landroid/os/Bundle;
 
     move-result-object p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;)V
     .locals 0
 
-    .line 537
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$4;->this$0:Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -28,10 +27,8 @@
 
     const-string v0, "EmergencyNetwork : onAvailable"
 
-    .line 540
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 541
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$4;->this$0:Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;
 
     const/4 p1, 0x1
@@ -48,10 +45,8 @@
 
     const-string v0, "EmergencyNetwork : onLost"
 
-    .line 546
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$4;->this$0:Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;
 
     const/4 p1, 0x0
@@ -68,10 +63,8 @@
 
     const-string/jumbo v1, "mEmergencyNetwork : onUnavailable"
 
-    .line 552
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 553
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$4;->this$0:Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler;
 
     const/4 v0, 0x0

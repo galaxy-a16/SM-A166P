@@ -89,7 +89,6 @@
 .method public static synthetic $values()[Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
     .locals 34
 
-    .line 387
     sget-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_DISABLED_LIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_INSTALLATION_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
@@ -168,7 +167,6 @@
 .method public static constructor <clinit>()V
     .locals 13
 
-    .line 388
     new-instance v6, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v1, "PKGNAME_DISABLED_LIST"
@@ -187,7 +185,6 @@
 
     sput-object v6, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_DISABLED_LIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 390
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_INSTALLATION_BLACKLIST"
@@ -206,7 +203,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_INSTALLATION_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 392
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_INSTALLATION_WHITELIST"
@@ -225,7 +221,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_INSTALLATION_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 394
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PERMISSION_INSTALLATION_BLACKLIST"
@@ -244,7 +239,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PERMISSION_INSTALLATION_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 396
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "SIGNATURE_INSTALLATION_BLACKLIST"
@@ -263,7 +257,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->SIGNATURE_INSTALLATION_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 399
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "SIGNATURE_INSTALLATION_WHITELIST"
@@ -282,7 +275,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->SIGNATURE_INSTALLATION_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 402
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_STOP_BLACKLIST"
@@ -301,7 +293,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_STOP_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 404
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_STOP_WHITELIST"
@@ -320,7 +311,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_STOP_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 406
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_WIDGET_WHITELIST"
@@ -339,7 +329,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_WIDGET_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 408
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_WIDGET_BLACKLIST"
@@ -358,7 +347,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_WIDGET_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 410
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_NOTIFICATION_BLACKLIST"
@@ -377,7 +365,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_NOTIFICATION_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 412
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_NOTIFICATION_WHITELIST"
@@ -396,7 +383,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_NOTIFICATION_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 414
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_CLEARDATA_BLACKLIST"
@@ -415,7 +401,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_CLEARDATA_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 416
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_CLEARDATA_WHITELIST"
@@ -434,7 +419,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_CLEARDATA_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 418
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_CLEARCACHE_BLACKLIST"
@@ -453,7 +437,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_CLEARCACHE_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 420
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_CLEARCACHE_WHITELIST"
@@ -472,7 +455,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_CLEARCACHE_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 422
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_START_BLACKLIST"
@@ -491,7 +473,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_START_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 424
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_START_WHITELIST"
@@ -510,7 +491,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_START_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 426
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_CLIPBOARD_BLACKLIST"
@@ -529,7 +509,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_CLIPBOARD_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 428
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_CLIPBOARD_WHITELIST"
@@ -548,7 +527,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_CLIPBOARD_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 430
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_FOCUSMONITORING_LIST"
@@ -567,7 +545,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_FOCUSMONITORING_LIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 432
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_FOCUSMONITORING_WHITELIST"
@@ -586,7 +563,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_FOCUSMONITORING_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 434
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_DOZEMODE_WHITELIST"
@@ -605,7 +581,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_DOZEMODE_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 436
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_AVR_WHITELIST"
@@ -624,7 +599,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_AVR_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 438
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_REVOCATION_CHECK"
@@ -643,7 +617,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_REVOCATION_CHECK:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 440
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_OCSP_CHECK"
@@ -662,7 +635,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_OCSP_CHECK:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 442
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_UPDATE_WHITELIST"
@@ -681,7 +653,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_UPDATE_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 444
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_UPDATE_BLACKLIST"
@@ -700,7 +671,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_UPDATE_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 446
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "UNINSTALLATION_BLACKLIST"
@@ -719,7 +689,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->UNINSTALLATION_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 448
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "UNINSTALLATION_WHITELIST"
@@ -738,7 +707,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->UNINSTALLATION_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 450
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_INSTALLER_WHITELIST"
@@ -757,7 +725,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_INSTALLER_WHITELIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 452
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "PKGNAME_INSTALLER_BLACKLIST"
@@ -776,7 +743,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_INSTALLER_BLACKLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 454
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v2, "PKGNAME_CAMERA_ALLOWLIST"
@@ -795,7 +761,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->PKGNAME_CAMERA_ALLOWLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 456
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     const-string v8, "SIGNATURE_CAMERA_ALLOWLIST"
@@ -814,21 +779,18 @@
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->SIGNATURE_CAMERA_ALLOWLIST:Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 387
     invoke-static {}, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->$values()[Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->$VALUES:[Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
-    .line 486
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->sAppApiMaskToKey:Ljava/util/Map;
 
-    .line 489
     invoke-static {}, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->values()[Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     move-result-object v0
@@ -842,7 +804,6 @@
 
     aget-object v3, v0, v2
 
-    .line 490
     invoke-virtual {v3}, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->getTable()Ljava/lang/String;
 
     move-result-object v4
@@ -851,7 +812,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 491
     sget-object v4, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->sAppApiMaskToKey:Ljava/util/Map;
 
     invoke-virtual {v3}, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->getMask()I
@@ -880,16 +840,12 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 463
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 464
     iput-object p3, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->adminMapKey:Ljava/lang/String;
 
-    .line 465
     iput p4, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->mask:I
 
-    .line 466
     iput-object p5, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->table:Ljava/lang/String;
 
     return-void
@@ -898,7 +854,6 @@
 .method public static getAppApiMaskKeyMap()Ljava/util/Map;
     .locals 2
 
-    .line 497
     new-instance v0, Ljava/util/HashMap;
 
     sget-object v1, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->sAppApiMaskToKey:Ljava/util/Map;
@@ -911,7 +866,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
     .locals 1
 
-    .line 387
     const-class v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -926,7 +880,6 @@
 .method public static values()[Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
     .locals 1
 
-    .line 387
     sget-object v0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->$VALUES:[Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->clone()Ljava/lang/Object;
@@ -943,7 +896,6 @@
 .method public getAdminMapKey()Ljava/lang/String;
     .locals 0
 
-    .line 475
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->adminMapKey:Ljava/lang/String;
 
     return-object p0
@@ -952,7 +904,6 @@
 .method public getMask()I
     .locals 0
 
-    .line 479
     iget p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->mask:I
 
     return p0
@@ -961,7 +912,6 @@
 .method public getTable()Ljava/lang/String;
     .locals 0
 
-    .line 483
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->table:Ljava/lang/String;
 
     return-object p0
@@ -970,7 +920,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 471
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$AppControlStateEnum;->adminMapKey:Ljava/lang/String;
 
     return-object p0

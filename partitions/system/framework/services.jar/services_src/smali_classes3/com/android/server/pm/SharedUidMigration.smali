@@ -7,7 +7,6 @@
 .method public static applyStrategy(I)Z
     .locals 1
 
-    .line 95
     invoke-static {}, Lcom/android/server/pm/SharedUidMigration;->isDisabled()Z
 
     move-result v0
@@ -34,7 +33,6 @@
 .method public static getCurrentStrategy()I
     .locals 3
 
-    .line 79
     sget-boolean v0, Landroid/os/Build;->IS_USERDEBUG:Z
 
     const/4 v1, 0x1
@@ -46,7 +44,6 @@
     :cond_0
     const-string/jumbo v0, "persist.debug.pm.shared_uid_migration_strategy"
 
-    .line 83
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -70,7 +67,6 @@
 .method public static isDisabled()Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x0
 
     return v0

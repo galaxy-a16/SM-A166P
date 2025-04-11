@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 106
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public get(Lcom/android/server/display/DisplayPowerState;)Ljava/lang/Float;
     .locals 0
 
-    .line 114
     invoke-virtual {p1}, Lcom/android/server/display/DisplayPowerState;->getColorFadeLevel()F
 
     move-result p0
@@ -33,7 +31,6 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 106
     check-cast p1, Lcom/android/server/display/DisplayPowerState;
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/DisplayPowerState$1;->get(Lcom/android/server/display/DisplayPowerState;)Ljava/lang/Float;
@@ -46,7 +43,6 @@
 .method public setValue(Lcom/android/server/display/DisplayPowerState;F)V
     .locals 0
 
-    .line 109
     invoke-virtual {p1, p2}, Lcom/android/server/display/DisplayPowerState;->setColorFadeLevel(F)V
 
     return-void
@@ -55,7 +51,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 106
     check-cast p1, Lcom/android/server/display/DisplayPowerState;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/display/DisplayPowerState$1;->setValue(Lcom/android/server/display/DisplayPowerState;F)V

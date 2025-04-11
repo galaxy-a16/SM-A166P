@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 37
     const-class v0, Lorg/tukaani/xz/LZMAInputStream;
 
     return-void
@@ -36,29 +35,24 @@
 .method public constructor <init>(Ljava/io/InputStream;JBI)V
     .locals 9
 
-    .line 369
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 55
     iput-boolean v0, p0, Lorg/tukaani/xz/LZMAInputStream;->endReached:Z
 
     const/4 v0, 0x1
 
     new-array v0, v0, [B
 
-    .line 57
     iput-object v0, p0, Lorg/tukaani/xz/LZMAInputStream;->tempBuf:[B
 
     const/4 v0, 0x0
 
-    .line 65
     iput-object v0, p0, Lorg/tukaani/xz/LZMAInputStream;->exception:Ljava/io/IOException;
 
     const/4 v7, 0x0
 
-    .line 371
     invoke-static {}, Lorg/tukaani/xz/ArrayCache;->getDefaultCache()Lorg/tukaani/xz/ArrayCache;
 
     move-result-object v8
@@ -73,7 +67,6 @@
 
     move v6, p5
 
-    .line 370
     invoke-virtual/range {v1 .. v8}, Lorg/tukaani/xz/LZMAInputStream;->initialize(Ljava/io/InputStream;JBI[BLorg/tukaani/xz/ArrayCache;)V
 
     return-void
@@ -101,7 +94,6 @@
 
     return p0
 
-    .line 138
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -117,17 +109,14 @@
 .method public close()V
     .locals 2
 
-    .line 753
     iget-object v0, p0, Lorg/tukaani/xz/LZMAInputStream;->in:Ljava/io/InputStream;
 
     if-eqz v0, :cond_0
 
-    .line 754
     invoke-virtual {p0}, Lorg/tukaani/xz/LZMAInputStream;->putArraysToCache()V
 
     const/4 v0, 0x0
 
-    .line 757
     :try_start_0
     iget-object v1, p0, Lorg/tukaani/xz/LZMAInputStream;->in:Ljava/io/InputStream;
 
@@ -135,7 +124,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 759
     iput-object v0, p0, Lorg/tukaani/xz/LZMAInputStream;->in:Ljava/io/InputStream;
 
     goto :goto_0
@@ -145,7 +133,6 @@
 
     iput-object v0, p0, Lorg/tukaani/xz/LZMAInputStream;->in:Ljava/io/InputStream;
 
-    .line 760
     throw v1
 
     :cond_0
@@ -172,7 +159,6 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 566
     div-int/lit8 v6, v0, 0x2d
 
     mul-int/lit8 v1, v6, 0x9
@@ -181,7 +167,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 568
     div-int/lit8 v5, v0, 0x9
 
     mul-int/lit8 v1, v5, 0x9
@@ -206,12 +191,10 @@
 
     move-object/from16 v9, p7
 
-    .line 577
     invoke-virtual/range {v0 .. v9}, Lorg/tukaani/xz/LZMAInputStream;->initialize(Ljava/io/InputStream;JIIII[BLorg/tukaani/xz/ArrayCache;)V
 
     return-void
 
-    .line 574
     :cond_0
     new-instance v0, Lorg/tukaani/xz/UnsupportedOptionsException;
 
@@ -221,7 +204,6 @@
 
     throw v0
 
-    .line 564
     :cond_1
     new-instance v0, Lorg/tukaani/xz/CorruptedInputException;
 
@@ -231,7 +213,6 @@
 
     throw v0
 
-    .line 557
     :cond_2
     new-instance v0, Lorg/tukaani/xz/UnsupportedOptionsException;
 
@@ -281,13 +262,10 @@
 
     if-gt v9, v5, :cond_1
 
-    .line 592
     iput-object v1, v0, Lorg/tukaani/xz/LZMAInputStream;->in:Ljava/io/InputStream;
 
-    .line 593
     iput-object v4, v0, Lorg/tukaani/xz/LZMAInputStream;->arrayCache:Lorg/tukaani/xz/ArrayCache;
 
-    .line 597
     invoke-static/range {p7 .. p7}, Lorg/tukaani/xz/LZMAInputStream;->getDictSize(I)I
 
     move-result v5
@@ -306,12 +284,10 @@
 
     long-to-int v5, v2
 
-    .line 599
     invoke-static {v5}, Lorg/tukaani/xz/LZMAInputStream;->getDictSize(I)I
 
     move-result v5
 
-    .line 601
     :cond_0
     new-instance v6, Lorg/tukaani/xz/lz/LZDecoder;
 
@@ -325,14 +301,12 @@
 
     iput-object v6, v0, Lorg/tukaani/xz/LZMAInputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
-    .line 602
     new-instance v6, Lorg/tukaani/xz/rangecoder/RangeDecoderFromStream;
 
     invoke-direct {v6, p1}, Lorg/tukaani/xz/rangecoder/RangeDecoderFromStream;-><init>(Ljava/io/InputStream;)V
 
     iput-object v6, v0, Lorg/tukaani/xz/LZMAInputStream;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoderFromStream;
 
-    .line 603
     new-instance v1, Lorg/tukaani/xz/lzma/LZMADecoder;
 
     iget-object v5, v0, Lorg/tukaani/xz/LZMAInputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
@@ -349,12 +323,10 @@
 
     iput-object v1, v0, Lorg/tukaani/xz/LZMAInputStream;->lzma:Lorg/tukaani/xz/lzma/LZMADecoder;
 
-    .line 605
     iput-wide v2, v0, Lorg/tukaani/xz/LZMAInputStream;->remainingSize:J
 
     return-void
 
-    .line 590
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -366,19 +338,16 @@
 .method public final putArraysToCache()V
     .locals 2
 
-    .line 740
     iget-object v0, p0, Lorg/tukaani/xz/LZMAInputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     if-eqz v0, :cond_0
 
-    .line 741
     iget-object v1, p0, Lorg/tukaani/xz/LZMAInputStream;->arrayCache:Lorg/tukaani/xz/ArrayCache;
 
     invoke-virtual {v0, v1}, Lorg/tukaani/xz/lz/LZDecoder;->putArraysToCache(Lorg/tukaani/xz/ArrayCache;)V
 
     const/4 v0, 0x0
 
-    .line 742
     iput-object v0, p0, Lorg/tukaani/xz/LZMAInputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
     :cond_0
@@ -388,7 +357,6 @@
 .method public read()I
     .locals 3
 
-    .line 628
     iget-object v0, p0, Lorg/tukaani/xz/LZMAInputStream;->tempBuf:[B
 
     const/4 v1, 0x1
@@ -427,7 +395,6 @@
 
     if-ltz v0, :cond_a
 
-    .line 655
     array-length v1, p1
 
     if-gt v0, v1, :cond_a
@@ -438,18 +405,15 @@
 
     return v0
 
-    .line 661
     :cond_0
     iget-object v1, p0, Lorg/tukaani/xz/LZMAInputStream;->in:Ljava/io/InputStream;
 
     if-eqz v1, :cond_9
 
-    .line 664
     iget-object v1, p0, Lorg/tukaani/xz/LZMAInputStream;->exception:Ljava/io/IOException;
 
     if-nez v1, :cond_8
 
-    .line 667
     iget-boolean v1, p0, Lorg/tukaani/xz/LZMAInputStream;->endReached:Z
 
     const/4 v2, -0x1
@@ -461,7 +425,6 @@
     :cond_1
     if-lez p3, :cond_7
 
-    .line 678
     :try_start_0
     iget-wide v3, p0, Lorg/tukaani/xz/LZMAInputStream;->remainingSize:J
 
@@ -484,7 +447,6 @@
     :cond_2
     move v1, p3
 
-    .line 681
     :goto_0
     iget-object v3, p0, Lorg/tukaani/xz/LZMAInputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
@@ -494,7 +456,6 @@
 
     const/4 v1, 0x1
 
-    .line 685
     :try_start_1
     iget-object v3, p0, Lorg/tukaani/xz/LZMAInputStream;->lzma:Lorg/tukaani/xz/lzma/LZMADecoder;
 
@@ -508,7 +469,6 @@
     :catch_0
     move-exception v3
 
-    .line 691
     :try_start_2
     iget-wide v7, p0, Lorg/tukaani/xz/LZMAInputStream;->remainingSize:J
 
@@ -526,15 +486,12 @@
 
     if-eqz v4, :cond_6
 
-    .line 694
     iput-boolean v1, p0, Lorg/tukaani/xz/LZMAInputStream;->endReached:Z
 
-    .line 700
     iget-object v3, p0, Lorg/tukaani/xz/LZMAInputStream;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoderFromStream;
 
     invoke-virtual {v3}, Lorg/tukaani/xz/rangecoder/RangeDecoderFromStream;->normalize()V
 
-    .line 704
     :goto_1
     iget-object v3, p0, Lorg/tukaani/xz/LZMAInputStream;->lz:Lorg/tukaani/xz/lz/LZDecoder;
 
@@ -548,7 +505,6 @@
 
     add-int/2addr v0, v3
 
-    .line 709
     iget-wide v7, p0, Lorg/tukaani/xz/LZMAInputStream;->remainingSize:J
 
     cmp-long v4, v7, v5
@@ -559,23 +515,19 @@
 
     sub-long/2addr v7, v3
 
-    .line 711
     iput-wide v7, p0, Lorg/tukaani/xz/LZMAInputStream;->remainingSize:J
 
     cmp-long v3, v7, v5
 
     if-nez v3, :cond_3
 
-    .line 715
     iput-boolean v1, p0, Lorg/tukaani/xz/LZMAInputStream;->endReached:Z
 
-    .line 718
     :cond_3
     iget-boolean v1, p0, Lorg/tukaani/xz/LZMAInputStream;->endReached:Z
 
     if-eqz v1, :cond_1
 
-    .line 723
     iget-object p1, p0, Lorg/tukaani/xz/LZMAInputStream;->rc:Lorg/tukaani/xz/rangecoder/RangeDecoderFromStream;
 
     invoke-virtual {p1}, Lorg/tukaani/xz/rangecoder/RangeDecoderFromStream;->isFinished()Z
@@ -592,7 +544,6 @@
 
     if-nez p1, :cond_5
 
-    .line 726
     invoke-virtual {p0}, Lorg/tukaani/xz/LZMAInputStream;->putArraysToCache()V
 
     if-nez v0, :cond_4
@@ -605,7 +556,6 @@
     :goto_2
     return v2
 
-    .line 724
     :cond_5
     new-instance p1, Lorg/tukaani/xz/CorruptedInputException;
 
@@ -613,7 +563,6 @@
 
     throw p1
 
-    .line 692
     :cond_6
     throw v3
     :try_end_2
@@ -622,20 +571,16 @@
     :catch_1
     move-exception p1
 
-    .line 734
     iput-object p1, p0, Lorg/tukaani/xz/LZMAInputStream;->exception:Ljava/io/IOException;
 
-    .line 735
     throw p1
 
     :cond_7
     return v0
 
-    .line 665
     :cond_8
     throw v1
 
-    .line 662
     :cond_9
     new-instance p0, Lorg/tukaani/xz/XZIOException;
 
@@ -645,7 +590,6 @@
 
     throw p0
 
-    .line 656
     :cond_a
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 

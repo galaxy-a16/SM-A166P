@@ -23,14 +23,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 73
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->sActionToMetadataKeyMap:Ljava/util/Map;
 
-    .line 79
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -43,7 +41,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 94
     new-instance v0, Lcom/android/server/devicepolicy/OverlayPackagesProvider$DefaultInjector;
 
     const/4 v1, 0x0
@@ -58,10 +55,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/devicepolicy/OverlayPackagesProvider$Injector;)V
     .locals 5
 
-    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     sget-object v0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->sActionToMetadataKeyMap:Ljava/util/Map;
 
     const-string v1, "android.app.REQUIRED_APP_MANAGED_USER"
@@ -74,31 +69,24 @@
 
     const-string v3, "android.app.action.PROVISION_MANAGED_PROFILE"
 
-    .line 76
     invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "android.app.REQUIRED_APP_MANAGED_DEVICE"
 
     const-string v4, "android.app.action.PROVISION_MANAGED_DEVICE"
 
-    .line 77
     invoke-interface {v0, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
     sget-object v0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->sAllowedActions:Ljava/util/Set;
 
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 82
     invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 83
     invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 135
     iput-object p1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
-    .line 136
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
@@ -111,7 +99,6 @@
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 137
     invoke-static {p2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -120,7 +107,6 @@
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mInjector:Lcom/android/server/devicepolicy/OverlayPackagesProvider$Injector;
 
-    .line 139
     invoke-static {}, Lcom/samsung/android/feature/SemCscFeature;->getInstance()Lcom/samsung/android/feature/SemCscFeature;
 
     move-result-object p1
@@ -145,13 +131,10 @@
 
     const-string v0, "OverlayPackagesProvider"
 
-    .line 522
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 523
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 525
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "required_apps_managed_device"
@@ -160,7 +143,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 527
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "required_apps_managed_user"
@@ -169,7 +151,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 529
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "required_apps_managed_profile"
@@ -178,7 +159,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 532
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string v1, "disallowed_apps_managed_device"
@@ -187,7 +167,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 534
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string v3, "disallowed_apps_managed_user"
@@ -196,12 +175,10 @@
 
     invoke-static {p1, v0, v3, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 536
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 539
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "vendor_required_apps_managed_device"
@@ -210,7 +187,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 541
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "vendor_required_apps_managed_user"
@@ -219,7 +195,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 543
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "vendor_required_apps_managed_profile"
@@ -228,7 +203,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 546
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "vendor_disallowed_apps_managed_user"
@@ -237,7 +211,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 548
     iget-object v0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "vendor_disallowed_apps_managed_device"
@@ -246,7 +219,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 550
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "vendor_disallowed_apps_managed_profile"
@@ -255,7 +227,6 @@
 
     invoke-static {p1, p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->dumpResources(Landroid/util/IndentingPrintWriter;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 553
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -266,7 +237,6 @@
 
     const-string v0, "ATT"
 
-    .line 460
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -290,7 +260,6 @@
     :cond_0
     const-string v0, "SPR"
 
-    .line 462
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -334,7 +303,6 @@
     :cond_1
     const-string v0, "TMB"
 
-    .line 464
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -350,7 +318,6 @@
     :cond_2
     const-string v0, "VZW"
 
-    .line 466
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -374,7 +341,6 @@
     :cond_3
     const-string v0, "USC"
 
-    .line 468
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -390,7 +356,6 @@
     :cond_4
     const-string v0, "DCM"
 
-    .line 470
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -406,7 +371,6 @@
     :cond_5
     const-string v0, "SBM"
 
-    .line 472
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -422,7 +386,6 @@
     :cond_6
     const-string v0, "KDI"
 
-    .line 474
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -438,7 +401,6 @@
     :cond_7
     const-string v0, "CCT"
 
-    .line 476
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -481,7 +443,6 @@
 
     const-string v0, "ATT"
 
-    .line 486
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -505,7 +466,6 @@
     :cond_0
     const-string v0, "SPR"
 
-    .line 488
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -549,7 +509,6 @@
     :cond_1
     const-string v0, "TMB"
 
-    .line 490
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -565,7 +524,6 @@
     :cond_2
     const-string v0, "VZW"
 
-    .line 492
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -589,7 +547,6 @@
     :cond_3
     const-string v0, "USC"
 
-    .line 494
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -605,7 +562,6 @@
     :cond_4
     const-string v0, "DCM"
 
-    .line 496
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -621,7 +577,6 @@
     :cond_5
     const-string v0, "SBM"
 
-    .line 498
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -637,7 +592,6 @@
     :cond_6
     const-string v0, "KDI"
 
-    .line 500
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -653,7 +607,6 @@
     :cond_7
     const-string v0, "CCT"
 
-    .line 502
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -694,7 +647,6 @@
 .method public final getCarrierDisallowedAppsListArrayforManagedUser()I
     .locals 0
 
-    .line 0
     const p0, 0x1070024
 
     return p0
@@ -703,7 +655,6 @@
 .method public final getCarrierDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 389
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -765,7 +716,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 400
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -790,7 +740,6 @@
 
     throw p0
 
-    .line 394
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierDisallowedAppsListArrayforManagedProfile()I
 
@@ -798,7 +747,6 @@
 
     goto :goto_1
 
-    .line 391
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierDisallowedAppsListArrayforManagedUser()I
 
@@ -806,13 +754,11 @@
 
     goto :goto_1
 
-    .line 397
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierDisallowedAppsListArrayforManagedDevice()I
 
     move-result p1
 
-    .line 403
     :goto_1
     new-instance v0, Landroid/util/ArraySet;
 
@@ -856,7 +802,6 @@
 
     const-string v0, "ATT"
 
-    .line 408
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -880,7 +825,6 @@
     :cond_0
     const-string v0, "SPR"
 
-    .line 410
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -924,7 +868,6 @@
     :cond_1
     const-string v0, "TMB"
 
-    .line 412
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -948,7 +891,6 @@
     :cond_2
     const-string v0, "VZW"
 
-    .line 414
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -972,7 +914,6 @@
     :cond_3
     const-string v0, "USC"
 
-    .line 416
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -988,7 +929,6 @@
     :cond_4
     const-string v0, "DCM"
 
-    .line 418
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1004,7 +944,6 @@
     :cond_5
     const-string v0, "SBM"
 
-    .line 420
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1020,7 +959,6 @@
     :cond_6
     const-string v0, "KDI"
 
-    .line 422
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1036,7 +974,6 @@
     :cond_7
     const-string v0, "CCT"
 
-    .line 424
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1085,7 +1022,6 @@
 
     const-string v0, "ATT"
 
-    .line 434
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1109,7 +1045,6 @@
     :cond_0
     const-string v0, "SPR"
 
-    .line 436
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1153,7 +1088,6 @@
     :cond_1
     const-string v0, "TMB"
 
-    .line 438
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1169,7 +1103,6 @@
     :cond_2
     const-string v0, "VZW"
 
-    .line 440
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1193,7 +1126,6 @@
     :cond_3
     const-string v0, "USC"
 
-    .line 442
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1209,7 +1141,6 @@
     :cond_4
     const-string v0, "DCM"
 
-    .line 444
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1225,7 +1156,6 @@
     :cond_5
     const-string v0, "SBM"
 
-    .line 446
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1241,7 +1171,6 @@
     :cond_6
     const-string v0, "KDI"
 
-    .line 448
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1257,7 +1186,6 @@
     :cond_7
     const-string v0, "CCT"
 
-    .line 450
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->salesCode:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1298,7 +1226,6 @@
 .method public final getCarrierRequiredAppsListArrayforManagedUser()I
     .locals 0
 
-    .line 0
     const p0, 0x107003a
 
     return p0
@@ -1307,7 +1234,6 @@
 .method public final getCarrierRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 370
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -1369,7 +1295,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 381
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1394,7 +1319,6 @@
 
     throw p0
 
-    .line 375
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierRequiredAppsListArrayforManagedProfile()I
 
@@ -1402,7 +1326,6 @@
 
     goto :goto_1
 
-    .line 372
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierRequiredAppsListArrayforManagedUser()I
 
@@ -1410,13 +1333,11 @@
 
     goto :goto_1
 
-    .line 378
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierRequiredAppsListArrayforManagedDevice()I
 
     move-result p1
 
-    .line 384
     :goto_1
     new-instance v0, Landroid/util/ArraySet;
 
@@ -1458,24 +1379,20 @@
 .method public final getDeviceManagerRoleHolders()Ljava/util/Set;
     .locals 2
 
-    .line 177
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 178
     iget-object v1, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mInjector:Lcom/android/server/devicepolicy/OverlayPackagesProvider$Injector;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
 
-    .line 179
     invoke-interface {v1, p0}, Lcom/android/server/devicepolicy/OverlayPackagesProvider$Injector;->getDevicePolicyManagementRoleHolderPackageName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 181
     invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -1485,26 +1402,22 @@
 .method public final getDisallowedApps(Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 283
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 284
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 285
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getVendorDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 287
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object p0
@@ -1517,7 +1430,6 @@
 .method public final getDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 313
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -1579,7 +1491,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 324
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1617,7 +1528,6 @@
     :pswitch_2
     const p1, 0x10701c0
 
-    .line 327
     :goto_1
     new-instance v0, Landroid/util/ArraySet;
 
@@ -1657,7 +1567,6 @@
 .method public final getLaunchableApps(I)Ljava/util/Set;
     .locals 2
 
-    .line 244
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -1666,10 +1575,8 @@
 
     const-string v1, "android.intent.category.LAUNCHER"
 
-    .line 245
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 246
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mPm:Landroid/content/pm/PackageManager;
 
     const v1, 0xc2200
@@ -1678,12 +1585,10 @@
 
     move-result-object p0
 
-    .line 252
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 253
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1701,7 +1606,6 @@
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 254
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -1717,10 +1621,8 @@
 .method public getNonRequiredApps(Landroid/content/ComponentName;ILjava/lang/String;)Ljava/util/Set;
     .locals 1
 
-    .line 162
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 163
     sget-object v0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->sAllowedActions:Ljava/util/Set;
 
     invoke-interface {v0, p3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1729,12 +1631,10 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 164
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getLaunchableApps(I)Ljava/util/Set;
 
     move-result-object v0
 
-    .line 167
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -1745,29 +1645,24 @@
 
     invoke-interface {v0, p1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
-    .line 168
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getSystemInputMethods(I)Ljava/util/Set;
 
     move-result-object p1
 
     invoke-interface {v0, p1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
-    .line 169
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getDisallowedApps(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object p1
 
     invoke-interface {v0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 171
     invoke-virtual {p0, v0, p3}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getRequiredAppsMainlineModules(Ljava/util/Set;Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object p1
 
-    .line 170
     invoke-interface {v0, p1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
-    .line 172
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getDeviceManagerRoleHolders()Ljava/util/Set;
 
     move-result-object p0
@@ -1780,33 +1675,28 @@
 .method public final getRequiredApps(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 272
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 273
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 274
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getVendorRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 276
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object p0
 
     invoke-interface {v0, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 278
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-object v0
@@ -1815,12 +1705,10 @@
 .method public final getRequiredAppsMainlineModules(Ljava/util/Set;Ljava/lang/String;)Ljava/util/Set;
     .locals 3
 
-    .line 196
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 197
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1838,7 +1726,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 198
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->isMainlineModule(Ljava/lang/String;)Z
 
     move-result v2
@@ -1847,7 +1734,6 @@
 
     goto :goto_0
 
-    .line 201
     :cond_0
     invoke-virtual {p0, v1, p2}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->isRequiredAppDeclaredInMetadata(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1857,7 +1743,6 @@
 
     goto :goto_0
 
-    .line 204
     :cond_1
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -1870,7 +1755,6 @@
 .method public final getRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 294
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -1932,7 +1816,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 305
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1970,7 +1853,6 @@
     :pswitch_2
     const p1, 0x10701d6
 
-    .line 308
     :goto_1
     new-instance v0, Landroid/util/ArraySet;
 
@@ -2010,19 +1892,16 @@
 .method public final getSystemInputMethods(I)Ljava/util/Set;
     .locals 2
 
-    .line 260
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mInjector:Lcom/android/server/devicepolicy/OverlayPackagesProvider$Injector;
 
     invoke-interface {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider$Injector;->getInputMethodListAsUser(I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 261
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 262
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2041,21 +1920,18 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodInfo;
 
-    .line 263
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v1
 
     iget-object v1, v1, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 264
     invoke-virtual {v1}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 265
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -2071,7 +1947,6 @@
 .method public final getVendorDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 351
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -2133,7 +2008,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 362
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2171,7 +2045,6 @@
     :pswitch_2
     const p1, 0x10701e5
 
-    .line 365
     :goto_1
     new-instance v0, Landroid/util/ArraySet;
 
@@ -2211,7 +2084,6 @@
 .method public final getVendorRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
     .locals 2
 
-    .line 332
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -2273,7 +2145,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 343
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2311,7 +2182,6 @@
     :pswitch_2
     const p1, 0x10701e9
 
-    .line 346
     :goto_1
     new-instance v0, Landroid/util/ArraySet;
 
@@ -2351,10 +2221,8 @@
 .method public final isApkInApexMainlineModule(Ljava/lang/String;)Z
     .locals 0
 
-    .line 238
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mInjector:Lcom/android/server/devicepolicy/OverlayPackagesProvider$Injector;
 
-    .line 239
     invoke-interface {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider$Injector;->getActiveApexPackageNameContainingPackage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -2375,7 +2243,6 @@
 .method public final isMainlineModule(Ljava/lang/String;)Z
     .locals 1
 
-    .line 225
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->isRegularMainlineModule(Ljava/lang/String;)Z
 
     move-result v0
@@ -2408,7 +2275,6 @@
 
     const/4 v0, 0x0
 
-    .line 230
     :try_start_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mPm:Landroid/content/pm/PackageManager;
 
@@ -2427,7 +2293,6 @@
 .method public final isRequiredAppDeclaredInMetadata(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    .line 212
     :try_start_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mPm:Landroid/content/pm/PackageManager;
 
@@ -2439,7 +2304,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 216
     sget-object p1, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->sActionToMetadataKeyMap:Ljava/util/Map;
 
     invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2448,7 +2312,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 217
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;

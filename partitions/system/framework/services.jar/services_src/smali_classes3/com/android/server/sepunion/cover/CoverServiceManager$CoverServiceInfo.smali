@@ -28,7 +28,6 @@
 .method public static bridge synthetic -$$Nest$fgetcomponent(Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)Landroid/content/ComponentName;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->component:Landroid/content/ComponentName;
 
     return-object p0
@@ -37,7 +36,6 @@
 .method public static bridge synthetic -$$Nest$fgetconnection(Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)Landroid/content/ServiceConnection;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->connection:Landroid/content/ServiceConnection;
 
     return-object p0
@@ -46,7 +44,6 @@
 .method public static bridge synthetic -$$Nest$fgettype(Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->type:I
 
     return p0
@@ -55,7 +52,6 @@
 .method public static bridge synthetic -$$Nest$fgetuser(Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)Landroid/os/UserHandle;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->user:Landroid/os/UserHandle;
 
     return-object p0
@@ -64,36 +60,28 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverServiceManager;Landroid/content/ComponentName;ILandroid/os/IBinder;Landroid/content/ServiceConnection;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 847
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 851
     iput-object p2, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->component:Landroid/content/ComponentName;
 
-    .line 852
     iput p3, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->type:I
 
-    .line 853
     iput-object p4, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->binder:Landroid/os/IBinder;
 
-    .line 854
     invoke-virtual {p0, p4}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->asInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->service:Landroid/os/IInterface;
 
-    .line 855
     iput-object p5, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->connection:Landroid/content/ServiceConnection;
 
-    .line 856
     iput-object p6, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->user:Landroid/os/UserHandle;
 
     const/4 p1, 0x0
 
-    .line 857
     iput p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->disconnectionCount:I
 
     return-void
@@ -107,7 +95,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 869
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,7 +117,6 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 870
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {v0, p0}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$mremoveCoverServiceLocked(Lcom/android/server/sepunion/cover/CoverServiceManager;Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)V
@@ -141,7 +127,6 @@
 .method public disconnect()Z
     .locals 2
 
-    .line 879
     iget v0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->disconnectionCount:I
 
     const/4 v1, 0x1
@@ -172,7 +157,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 875
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->component:Landroid/content/ComponentName;
 
     iget v1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->type:I
@@ -201,7 +185,6 @@
 .method public unbind()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

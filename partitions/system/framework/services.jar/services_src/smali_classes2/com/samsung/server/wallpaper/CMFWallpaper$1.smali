@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/CMFWallpaper;Landroid/os/Looper;)V
     .locals 0
 
-    .line 77
     iput-object p1, p0, Lcom/samsung/server/wallpaper/CMFWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/CMFWallpaper;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 80
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x3f5
@@ -33,13 +31,11 @@
 
     goto :goto_0
 
-    .line 82
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/String;
 
-    .line 83
     iget-object p0, p0, Lcom/samsung/server/wallpaper/CMFWallpaper$1;->this$0:Lcom/samsung/server/wallpaper/CMFWallpaper;
 
     invoke-static {p0}, Lcom/samsung/server/wallpaper/CMFWallpaper;->-$$Nest$fgetmContext(Lcom/samsung/server/wallpaper/CMFWallpaper;)Landroid/content/Context;

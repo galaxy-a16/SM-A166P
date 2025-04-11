@@ -16,17 +16,14 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 6219
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 6220
     invoke-interface {p2, p0, p1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 6221
     iput-object p2, p0, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->mToken:Landroid/os/IBinder;
 
     return-void
@@ -37,7 +34,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 6238
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/appop/AppOpsService;->mAppOpsRestrictions:Lcom/android/server/appop/AppOpsRestrictions;
@@ -46,7 +42,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/appop/AppOpsRestrictions;->clearGlobalRestrictions(Ljava/lang/Object;)Z
 
-    .line 6239
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-static {v0}, Lcom/android/server/appop/AppOpsService;->-$$Nest$fgetmOpGlobalRestrictions(Lcom/android/server/appop/AppOpsService;)Landroid/util/ArrayMap;
@@ -57,7 +52,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6240
     invoke-virtual {p0}, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->destroy()V
 
     return-void
@@ -66,7 +60,6 @@
 .method public destroy()V
     .locals 2
 
-    .line 6244
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->mToken:Landroid/os/IBinder;
 
     const/4 v1, 0x0
@@ -79,7 +72,6 @@
 .method public hasRestriction(I)Z
     .locals 1
 
-    .line 6229
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/appop/AppOpsService;->mAppOpsRestrictions:Lcom/android/server/appop/AppOpsRestrictions;
@@ -96,7 +88,6 @@
 .method public isDefault()Z
     .locals 1
 
-    .line 6233
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/appop/AppOpsService;->mAppOpsRestrictions:Lcom/android/server/appop/AppOpsRestrictions;
@@ -115,7 +106,6 @@
 .method public setRestriction(IZ)Z
     .locals 1
 
-    .line 6225
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$ClientGlobalRestrictionState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/appop/AppOpsService;->mAppOpsRestrictions:Lcom/android/server/appop/AppOpsRestrictions;

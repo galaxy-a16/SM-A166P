@@ -19,7 +19,6 @@
 .method public constructor <init>(IJIIJ)V
     .locals 3
 
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
@@ -28,31 +27,26 @@
 
     const/4 v2, 0x1
 
-    .line 90
     invoke-static {p1, v2, v0, v1}, Lcom/android/internal/util/Preconditions;->checkArgumentInRange(IIILjava/lang/String;)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/cpu/CpuAvailabilityInfo;->cpuset:I
 
-    .line 93
     invoke-static {p2, p3}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(J)J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/android/server/cpu/CpuAvailabilityInfo;->dataTimestampUptimeMillis:J
 
-    .line 94
     invoke-static {p4}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/cpu/CpuAvailabilityInfo;->latestAvgAvailabilityPercent:I
 
-    .line 96
     iput p5, p0, Lcom/android/server/cpu/CpuAvailabilityInfo;->pastNMillisAvgAvailabilityPercent:I
 
-    .line 97
     invoke-static {p6, p7}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(J)J
 
     move-result-wide p1
@@ -73,7 +67,6 @@
 
     return v0
 
-    .line 71
     :cond_0
     instance-of v1, p1, Lcom/android/server/cpu/CpuAvailabilityInfo;
 
@@ -83,11 +76,9 @@
 
     return v2
 
-    .line 74
     :cond_1
     check-cast p1, Lcom/android/server/cpu/CpuAvailabilityInfo;
 
-    .line 75
     iget v1, p0, Lcom/android/server/cpu/CpuAvailabilityInfo;->cpuset:I
 
     iget v3, p1, Lcom/android/server/cpu/CpuAvailabilityInfo;->cpuset:I
@@ -134,7 +125,6 @@
 .method public hashCode()I
     .locals 6
 
-    .line 83
     iget v0, p0, Lcom/android/server/cpu/CpuAvailabilityInfo;->cpuset:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -155,7 +145,6 @@
 
     iget v3, p0, Lcom/android/server/cpu/CpuAvailabilityInfo;->pastNMillisAvgAvailabilityPercent:I
 
-    .line 84
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -170,7 +159,6 @@
 
     move-result-object p0
 
-    .line 83
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -181,7 +169,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -15,20 +15,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 47
     iput v0, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mScreenState:I
 
     const/4 v0, 0x0
 
-    .line 48
     iput-object v0, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mLastChanged:Ljava/lang/Long;
 
-    .line 54
     new-instance v0, Lcom/android/internal/logging/MetricsLogger;
 
     invoke-direct {v0}, Lcom/android/internal/logging/MetricsLogger;-><init>()V
@@ -43,7 +39,6 @@
 .method public final isOn()Z
     .locals 2
 
-    .line 118
     iget v0, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mScreenState:I
 
     const/4 v1, 0x1
@@ -69,14 +64,12 @@
 .method public final log()V
     .locals 6
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mLastChanged:Ljava/lang/Long;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 100
     :cond_0
     iget v1, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mScreenState:I
 
@@ -98,7 +91,6 @@
     :cond_2
     const/high16 v1, -0x80000000
 
-    .line 110
     :goto_0
     iget-object p0, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mLogger:Lcom/android/internal/logging/MetricsLogger;
 
@@ -110,17 +102,14 @@
 
     const/4 v3, 0x4
 
-    .line 112
     invoke-virtual {v2, v3}, Landroid/metrics/LogMaker;->setType(I)Landroid/metrics/LogMaker;
 
     move-result-object v2
 
-    .line 113
     invoke-virtual {v2, v1}, Landroid/metrics/LogMaker;->setSubtype(I)Landroid/metrics/LogMaker;
 
     move-result-object v1
 
-    .line 114
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -135,7 +124,6 @@
 
     move-result-object v0
 
-    .line 110
     invoke-virtual {p0, v0}, Lcom/android/internal/logging/MetricsLogger;->write(Landroid/metrics/LogMaker;)V
 
     return-void
@@ -144,7 +132,6 @@
 .method public logFocusedAppWithFoldState(ZLjava/lang/String;)V
     .locals 2
 
-    .line 85
     iget-object p0, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mLogger:Lcom/android/internal/logging/MetricsLogger;
 
     new-instance v0, Landroid/metrics/LogMaker;
@@ -155,22 +142,18 @@
 
     const/4 v1, 0x4
 
-    .line 87
     invoke-virtual {v0, v1}, Landroid/metrics/LogMaker;->setType(I)Landroid/metrics/LogMaker;
 
     move-result-object v0
 
-    .line 88
     invoke-virtual {v0, p1}, Landroid/metrics/LogMaker;->setSubtype(I)Landroid/metrics/LogMaker;
 
     move-result-object p1
 
-    .line 89
     invoke-virtual {p1, p2}, Landroid/metrics/LogMaker;->setPackageName(Ljava/lang/String;)Landroid/metrics/LogMaker;
 
     move-result-object p1
 
-    .line 85
     invoke-virtual {p0, p1}, Lcom/android/internal/logging/MetricsLogger;->write(Landroid/metrics/LogMaker;)V
 
     return-void
@@ -179,17 +162,14 @@
 .method public onFinishedGoingToSleep()V
     .locals 1
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/policy/DisplayFoldDurationLogger;->log()V
 
     const/4 v0, 0x0
 
-    .line 69
     iput v0, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mScreenState:I
 
     const/4 v0, 0x0
 
-    .line 70
     iput-object v0, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mLastChanged:Ljava/lang/Long;
 
     return-void
@@ -202,12 +182,10 @@
 
     const/4 p1, -0x1
 
-    .line 58
     iput p1, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mScreenState:I
 
     goto :goto_0
 
-    .line 59
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -217,7 +195,6 @@
 
     const/4 p1, 0x2
 
-    .line 60
     iput p1, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mScreenState:I
 
     goto :goto_0
@@ -225,10 +202,8 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 62
     iput p1, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mScreenState:I
 
-    .line 64
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -246,7 +221,6 @@
 .method public setDeviceFolded(Z)V
     .locals 2
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/server/policy/DisplayFoldDurationLogger;->isOn()Z
 
     move-result v0
@@ -255,7 +229,6 @@
 
     return-void
 
-    .line 79
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/DisplayFoldDurationLogger;->log()V
 
@@ -268,11 +241,9 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 80
     :goto_0
     iput p1, p0, Lcom/android/server/policy/DisplayFoldDurationLogger;->mScreenState:I
 
-    .line 81
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0

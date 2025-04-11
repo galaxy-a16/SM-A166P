@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/am/ServiceRecord;Ljava/lang/String;III)V
     .locals 0
 
-    .line 1407
     iput-object p1, p0, Lcom/android/server/am/ServiceRecord$3;->this$0:Lcom/android/server/am/ServiceRecord;
 
     iput-object p2, p0, Lcom/android/server/am/ServiceRecord$3;->val$localPackageName:Ljava/lang/String;
@@ -43,7 +42,6 @@
 .method public run()V
     .locals 9
 
-    .line 1409
     const-class v0, Lcom/android/server/notification/NotificationManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -58,7 +56,6 @@
 
     return-void
 
-    .line 1415
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/android/server/am/ServiceRecord$3;->val$localPackageName:Ljava/lang/String;
@@ -90,10 +87,8 @@
 
     const-string v2, "Error canceling notification for service"
 
-    .line 1418
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1420
     :goto_0
     iget-object v0, p0, Lcom/android/server/am/ServiceRecord$3;->this$0:Lcom/android/server/am/ServiceRecord;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/license/LicenseLogService;)V
     .locals 0
 
-    .line 334
     iput-object p1, p0, Lcom/android/server/enterprise/license/LicenseLogService$1;->this$0:Lcom/android/server/enterprise/license/LicenseLogService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 337
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "android.intent.action.LOCKED_BOOT_COMPLETED"
 
-    .line 338
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -40,14 +37,12 @@
 
     const-string p1, "com.samsung.android.knox.intent.action.LICENSE_LOG_DELETE_OLD_RECORDS_INTERNAL"
 
-    .line 339
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 340
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -67,7 +62,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     invoke-static {}, Lcom/android/server/enterprise/license/LicenseLogService;->-$$Nest$sfgetmHandler()Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;
 
     move-result-object p0
@@ -78,7 +72,6 @@
 
     move-result-object p0
 
-    .line 343
     invoke-static {}, Lcom/android/server/enterprise/license/LicenseLogService;->-$$Nest$sfgetmHandler()Lcom/android/server/enterprise/license/LicenseLogService$LogHandler;
 
     move-result-object p1

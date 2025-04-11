@@ -29,36 +29,26 @@
 .method public constructor <init>(Lcom/android/server/am/mars/database/MARsVersionManager;Ljava/lang/String;IIIIIJJI)V
     .locals 0
 
-    .line 100
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->this$0:Lcom/android/server/am/mars/database/MARsVersionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
     iput-object p2, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->name:Ljava/lang/String;
 
-    .line 102
     iput p3, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->num:I
 
-    .line 103
     iput p4, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->enabled:I
 
-    .line 104
     iput p5, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->targetCategory:I
 
-    .line 105
     iput p6, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->restriction:I
 
-    .line 106
     iput p7, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->action:I
 
-    .line 107
     iput-wide p8, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->firstTriggerTime:J
 
-    .line 108
     iput-wide p10, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->repeatTriggerTime:J
 
-    .line 109
     iput p12, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->bigdataRestriction:I
 
     return-void
@@ -69,7 +59,6 @@
 .method public getAction()I
     .locals 0
 
-    .line 139
     iget p0, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->action:I
 
     return p0
@@ -78,7 +67,6 @@
 .method public getEnabled()I
     .locals 0
 
-    .line 127
     iget p0, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->enabled:I
 
     return p0
@@ -87,7 +75,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->name:Ljava/lang/String;
 
     return-object p0
@@ -96,7 +83,6 @@
 .method public getNum()I
     .locals 0
 
-    .line 123
     iget p0, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->num:I
 
     return p0
@@ -105,7 +91,6 @@
 .method public getRestriction()I
     .locals 0
 
-    .line 135
     iget p0, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->restriction:I
 
     return p0
@@ -114,7 +99,6 @@
 .method public getTargetCategory()I
     .locals 0
 
-    .line 131
     iget p0, p0, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;->targetCategory:I
 
     return p0
@@ -123,7 +107,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 113
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

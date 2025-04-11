@@ -36,7 +36,6 @@
 .method public static synthetic $r8$lambda$kGQeuNdbvFwGn-CghEuSr5znX00(Lcom/android/server/pm/InstantAppResolverConnection;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/pm/InstantAppResolverConnection;->lambda$optimisticBind$0()V
 
     return-void
@@ -45,7 +44,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBindState(Lcom/android/server/pm/InstantAppResolverConnection;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
     return p0
@@ -54,7 +52,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/pm/InstantAppResolverConnection;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -63,7 +60,6 @@
 .method public static bridge synthetic -$$Nest$fputmBindState(Lcom/android/server/pm/InstantAppResolverConnection;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
     return-void
@@ -72,7 +68,6 @@
 .method public static bridge synthetic -$$Nest$fputmRemoteInstance(Lcom/android/server/pm/InstantAppResolverConnection;Landroid/app/IInstantAppResolver;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mRemoteInstance:Landroid/app/IInstantAppResolver;
 
     return-void
@@ -81,7 +76,6 @@
 .method public static bridge synthetic -$$Nest$mhandleBinderDiedLocked(Lcom/android/server/pm/InstantAppResolverConnection;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/pm/InstantAppResolverConnection;->handleBinderDiedLocked()V
 
     return-void
@@ -90,7 +84,6 @@
 .method public static bridge synthetic -$$Nest$sfgetCALL_SERVICE_TIMEOUT_MS()J
     .locals 2
 
-    .line 0
     sget-wide v0, Lcom/android/server/pm/InstantAppResolverConnection;->CALL_SERVICE_TIMEOUT_MS:J
 
     return-wide v0
@@ -99,7 +92,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG_INSTANT()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/pm/InstantAppResolverConnection;->DEBUG_INSTANT:Z
 
     return v0
@@ -108,7 +100,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 59
     sget-boolean v0, Landroid/os/Build;->IS_ENG:Z
 
     if-eqz v0, :cond_0
@@ -132,11 +123,9 @@
     :cond_1
     const-wide/16 v0, 0x64
 
-    .line 61
     :goto_1
     sput-wide v0, Lcom/android/server/pm/InstantAppResolverConnection;->CALL_SERVICE_TIMEOUT_MS:J
 
-    .line 62
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     sput-boolean v0, Lcom/android/server/pm/InstantAppResolverConnection;->DEBUG_INSTANT:Z
@@ -147,24 +136,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Ljava/lang/String;)V
     .locals 2
 
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
-    .line 65
     new-instance v0, Lcom/android/server/pm/InstantAppResolverConnection$GetInstantAppResolveInfoCaller;
 
     invoke-direct {v0}, Lcom/android/server/pm/InstantAppResolverConnection$GetInstantAppResolveInfoCaller;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mGetInstantAppResolveInfoCaller:Lcom/android/server/pm/InstantAppResolverConnection$GetInstantAppResolveInfoCaller;
 
-    .line 67
     new-instance v0, Lcom/android/server/pm/InstantAppResolverConnection$MyServiceConnection;
 
     const/4 v1, 0x0
@@ -175,13 +160,10 @@
 
     const/4 v0, 0x0
 
-    .line 77
     iput v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
-    .line 84
     iput-object p1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mContext:Landroid/content/Context;
 
-    .line 85
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -192,7 +174,6 @@
 
     iput-object p1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mIntent:Landroid/content/Intent;
 
-    .line 86
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -210,7 +191,6 @@
     :try_start_0
     const-string v1, "Optimistic Bind"
 
-    .line 255
     invoke-virtual {p0, v1}, Lcom/android/server/pm/InstantAppResolverConnection;->bind(Ljava/lang/String;)Landroid/app/IInstantAppResolver;
 
     move-result-object p0
@@ -223,7 +203,6 @@
 
     const-string p0, "Optimistic bind succeeded."
 
-    .line 256
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException; {:try_start_0 .. :try_end_0} :catch_0
@@ -237,7 +216,6 @@
 
     const-string v1, "Optimistic bind failed."
 
-    .line 259
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -250,23 +228,19 @@
 .method public final bind(Ljava/lang/String;)Landroid/app/IInstantAppResolver;
     .locals 9
 
-    .line 170
     iget-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 171
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mRemoteInstance:Landroid/app/IInstantAppResolver;
 
     if-eqz v1, :cond_0
 
-    .line 172
     monitor-exit v0
 
     return-object v1
 
-    .line 175
     :cond_0
     iget v1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
@@ -278,14 +252,12 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 177
     sget-boolean v1, Lcom/android/server/pm/InstantAppResolverConnection;->DEBUG_INSTANT:Z
 
     if-eqz v1, :cond_1
 
     const-string v1, "PackageManager"
 
-    .line 178
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,12 +280,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_5
 
-    .line 181
     :cond_1
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/pm/InstantAppResolverConnection;->waitForBindLocked(Ljava/lang/String;)V
 
-    .line 182
     iget-object v1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mRemoteInstance:Landroid/app/IInstantAppResolver;
     :try_end_1
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_1 .. :try_end_1} :catch_0
@@ -321,7 +291,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 183
     :try_start_2
     monitor-exit v0
 
@@ -335,20 +304,17 @@
     :cond_2
     move v1, v4
 
-    .line 191
     :goto_0
     iget v5, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
     if-ne v5, v3, :cond_5
 
-    .line 194
     sget-boolean v1, Lcom/android/server/pm/InstantAppResolverConnection;->DEBUG_INSTANT:Z
 
     if-eqz v1, :cond_3
 
     const-string v1, "PackageManager"
 
-    .line 195
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -369,21 +335,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     :cond_3
     invoke-virtual {p0, p1}, Lcom/android/server/pm/InstantAppResolverConnection;->waitForBindLocked(Ljava/lang/String;)V
 
-    .line 199
     iget-object p0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mRemoteInstance:Landroid/app/IInstantAppResolver;
 
     if-eqz p0, :cond_4
 
-    .line 200
     monitor-exit v0
 
     return-object p0
 
-    .line 202
     :cond_4
     new-instance p0, Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException;
 
@@ -391,11 +353,9 @@
 
     throw p0
 
-    .line 204
     :cond_5
     iput v3, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
-    .line 205
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_5
@@ -404,7 +364,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 212
     :try_start_3
     sget-boolean v1, Lcom/android/server/pm/InstantAppResolverConnection;->DEBUG_INSTANT:Z
 
@@ -412,7 +371,6 @@
 
     const-string v1, "PackageManager"
 
-    .line 213
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -433,7 +391,6 @@
 
     invoke-static {v1, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     :cond_6
     iget-object v1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mContext:Landroid/content/Context;
 
@@ -441,7 +398,6 @@
 
     invoke-virtual {v1, v5}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 217
     :cond_7
     sget-boolean v1, Lcom/android/server/pm/InstantAppResolverConnection;->DEBUG_INSTANT:Z
 
@@ -449,7 +405,6 @@
 
     const-string v1, "PackageManager"
 
-    .line 218
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -470,7 +425,6 @@
 
     invoke-static {v1, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :cond_8
     iget-object v1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mContext:Landroid/content/Context;
 
@@ -482,7 +436,6 @@
 
     const v8, 0x4000001
 
-    .line 222
     invoke-virtual {v1, v5, v6, v8, v7}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
     move-result v1
@@ -491,7 +444,6 @@
 
     if-eqz v1, :cond_a
 
-    .line 224
     :try_start_4
     iget-object v3, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
@@ -499,19 +451,15 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 225
     :try_start_5
     invoke-virtual {p0, p1}, Lcom/android/server/pm/InstantAppResolverConnection;->waitForBindLocked(Ljava/lang/String;)V
 
-    .line 226
     iget-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mRemoteInstance:Landroid/app/IInstantAppResolver;
 
-    .line 227
     monitor-exit v3
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 234
     iget-object p1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
@@ -520,23 +468,19 @@
 
     if-nez v0, :cond_9
 
-    .line 236
     :try_start_6
     iput v2, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
     goto :goto_1
 
-    .line 238
     :cond_9
     iput v4, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
-    .line 240
     :goto_1
     iget-object p0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 241
     monitor-exit p1
 
     return-object v0
@@ -553,7 +497,6 @@
     :catchall_1
     move-exception p1
 
-    .line 228
     :try_start_7
     monitor-exit v3
     :try_end_7
@@ -565,7 +508,6 @@
     :cond_a
     const-string v5, "PackageManager"
 
-    .line 230
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -590,7 +532,6 @@
 
     invoke-static {v5, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     new-instance p1, Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException;
 
     invoke-direct {p1, v3}, Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException;-><init>(I)V
@@ -609,7 +550,6 @@
 
     move v1, v4
 
-    .line 234
     :goto_2
     iget-object v3, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
@@ -619,34 +559,28 @@
 
     if-nez v0, :cond_b
 
-    .line 236
     :try_start_9
     iput v2, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
     goto :goto_3
 
-    .line 238
     :cond_b
     iput v4, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
-    .line 240
     :goto_3
     iget-object p0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 241
     monitor-exit v3
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_4
 
-    .line 242
     throw p1
 
     :catchall_4
     move-exception p0
 
-    .line 241
     :try_start_a
     monitor-exit v3
     :try_end_a
@@ -657,7 +591,6 @@
     :catchall_5
     move-exception p0
 
-    .line 205
     :try_start_b
     monitor-exit v0
     :try_end_b
@@ -669,7 +602,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 266
     sget-boolean v0, Lcom/android/server/pm/InstantAppResolverConnection;->DEBUG_INSTANT:Z
 
     if-eqz v0, :cond_0
@@ -678,25 +610,20 @@
 
     const-string v1, "Binder to instant app resolver died"
 
-    .line 267
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 270
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/InstantAppResolverConnection;->handleBinderDiedLocked()V
 
-    .line 271
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 272
     invoke-virtual {p0}, Lcom/android/server/pm/InstantAppResolverConnection;->optimisticBind()V
 
     return-void
@@ -704,7 +631,6 @@
     :catchall_0
     move-exception p0
 
-    .line 271
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -716,7 +642,6 @@
 .method public getInstantAppIntentFilterList(Landroid/content/pm/InstantAppRequestInfo;Lcom/android/server/pm/InstantAppResolverConnection$PhaseTwoCallback;Landroid/os/Handler;J)V
     .locals 7
 
-    .line 119
     new-instance v6, Lcom/android/server/pm/InstantAppResolverConnection$1;
 
     move-object v0, v6
@@ -731,7 +656,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/InstantAppResolverConnection$1;-><init>(Lcom/android/server/pm/InstantAppResolverConnection;Landroid/os/Handler;Lcom/android/server/pm/InstantAppResolverConnection$PhaseTwoCallback;J)V
 
-    .line 129
     :try_start_0
     invoke-virtual {p1}, Landroid/content/pm/InstantAppRequestInfo;->getToken()Ljava/lang/String;
 
@@ -741,7 +665,6 @@
 
     move-result-object p0
 
-    .line 130
     invoke-interface {p0, p1, v6}, Landroid/app/IInstantAppResolver;->getInstantAppIntentFilterList(Landroid/content/pm/InstantAppRequestInfo;Landroid/os/IRemoteCallback;)V
     :try_end_0
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_2
@@ -751,7 +674,6 @@
     :catch_0
     return-void
 
-    .line 134
     :catch_1
     new-instance p0, Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException;
 
@@ -761,7 +683,6 @@
 
     throw p0
 
-    .line 132
     :catch_2
     new-instance p0, Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException;
 
@@ -775,10 +696,8 @@
 .method public getInstantAppResolveInfoList(Landroid/content/pm/InstantAppRequestInfo;)Ljava/util/List;
     .locals 2
 
-    .line 91
     invoke-virtual {p0}, Lcom/android/server/pm/InstantAppResolverConnection;->throwIfCalledOnMainThread()V
 
-    .line 95
     :try_start_0
     invoke-virtual {p1}, Landroid/content/pm/InstantAppRequestInfo;->getToken()Ljava/lang/String;
 
@@ -792,11 +711,9 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 102
     :try_start_1
     iget-object v1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mGetInstantAppResolveInfoCaller:Lcom/android/server/pm/InstantAppResolverConnection$GetInstantAppResolveInfoCaller;
 
-    .line 103
     invoke-virtual {v1, v0, p1}, Lcom/android/server/pm/InstantAppResolverConnection$GetInstantAppResolveInfoCaller;->getInstantAppResolveInfoList(Landroid/app/IInstantAppResolver;Landroid/content/pm/InstantAppRequestInfo;)Ljava/util/List;
 
     move-result-object p1
@@ -805,18 +722,15 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 110
     :try_start_2
     iget-object p0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 111
     monitor-exit v0
 
     return-object p1
@@ -830,19 +744,16 @@
 
     throw p0
 
-    .line 109
     :catch_0
     iget-object p1, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 110
     :try_start_3
     iget-object p0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 111
     monitor-exit p1
 
     const/4 p0, 0x0
@@ -858,7 +769,6 @@
 
     throw p0
 
-    .line 105
     :catch_1
     :try_start_4
     new-instance p1, Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException;
@@ -874,7 +784,6 @@
 
     goto :goto_0
 
-    .line 99
     :catch_2
     new-instance p1, Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException;
 
@@ -884,7 +793,6 @@
 
     throw p1
 
-    .line 97
     :catch_3
     new-instance p1, Lcom/android/server/pm/InstantAppResolverConnection$ConnectionException;
 
@@ -896,30 +804,25 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 109
     :goto_0
     iget-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 110
     :try_start_5
     iget-object p0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 111
     monitor-exit v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 112
     throw p1
 
     :catchall_3
     move-exception p0
 
-    .line 111
     :try_start_6
     monitor-exit v0
     :try_end_6
@@ -931,12 +834,10 @@
 .method public final getRemoteInstanceLazy(Ljava/lang/String;)Landroid/app/IInstantAppResolver;
     .locals 2
 
-    .line 142
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 144
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/InstantAppResolverConnection;->bind(Ljava/lang/String;)Landroid/app/IInstantAppResolver;
 
@@ -944,7 +845,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 146
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -954,19 +854,16 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 147
     throw p0
 .end method
 
 .method public final handleBinderDiedLocked()V
     .locals 2
 
-    .line 277
     iget-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mRemoteInstance:Landroid/app/IInstantAppResolver;
 
     if-eqz v0, :cond_0
 
-    .line 279
     :try_start_0
     invoke-interface {v0}, Landroid/app/IInstantAppResolver;->asBinder()Landroid/os/IBinder;
 
@@ -982,7 +879,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 282
     iput-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mRemoteInstance:Landroid/app/IInstantAppResolver;
 
     return-void
@@ -991,7 +887,6 @@
 .method public optimisticBind()V
     .locals 2
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBgHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/pm/InstantAppResolverConnection$$ExternalSyntheticLambda0;
@@ -1006,7 +901,6 @@
 .method public final throwIfCalledOnMainThread()V
     .locals 1
 
-    .line 246
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -1025,7 +919,6 @@
 
     return-void
 
-    .line 247
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -1039,25 +932,21 @@
 .method public final waitForBindLocked(Ljava/lang/String;)V
     .locals 6
 
-    .line 152
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 153
     :goto_0
     iget v2, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mBindState:I
 
     if-eqz v2, :cond_2
 
-    .line 154
     iget-object v2, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mRemoteInstance:Landroid/app/IInstantAppResolver;
 
     if-eqz v2, :cond_0
 
     goto :goto_1
 
-    .line 157
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -1065,7 +954,6 @@
 
     sub-long/2addr v2, v0
 
-    .line 158
     sget-wide v4, Lcom/android/server/pm/InstantAppResolverConnection;->BIND_SERVICE_TIMEOUT_MS:J
 
     sub-long/2addr v4, v2
@@ -1076,14 +964,12 @@
 
     if-lez v2, :cond_1
 
-    .line 162
     iget-object v2, p0, Lcom/android/server/pm/InstantAppResolverConnection;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v2, v4, v5}, Ljava/lang/Object;->wait(J)V
 
     goto :goto_0
 
-    .line 160
     :cond_1
     new-instance p0, Ljava/util/concurrent/TimeoutException;
 

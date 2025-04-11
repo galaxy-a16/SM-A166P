@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/exynos/ExynosDisplayFactory;JJ)V
     .locals 0
 
-    .line 642
     iput-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -24,7 +23,6 @@
 .method public onFinish()V
     .locals 2
 
-    .line 786
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {v0}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetDEBUG(Lcom/android/server/display/exynos/ExynosDisplayFactory;)Z
@@ -33,7 +31,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 787
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -58,7 +55,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -72,7 +68,6 @@
 .method public onTick(J)V
     .locals 6
 
-    .line 646
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerCount(Lcom/android/server/display/exynos/ExynosDisplayFactory;)I
@@ -90,7 +85,6 @@
     :goto_0
     if-ge p2, v0, :cond_24
 
-    .line 649
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -111,7 +105,6 @@
 
     goto :goto_1
 
-    .line 651
     :cond_0
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -129,7 +122,6 @@
 
     goto :goto_1
 
-    .line 653
     :cond_1
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -152,7 +144,6 @@
 
     goto :goto_0
 
-    .line 657
     :cond_2
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -165,7 +156,6 @@
     :goto_2
     if-ge p2, v0, :cond_24
 
-    .line 660
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -186,7 +176,6 @@
 
     goto :goto_3
 
-    .line 662
     :cond_3
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -204,7 +193,6 @@
 
     goto :goto_3
 
-    .line 664
     :cond_4
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -227,7 +215,6 @@
 
     goto :goto_2
 
-    .line 668
     :cond_5
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -240,7 +227,6 @@
     :goto_4
     if-ge p2, v0, :cond_24
 
-    .line 671
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -261,7 +247,6 @@
 
     goto :goto_5
 
-    .line 673
     :cond_6
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -279,7 +264,6 @@
 
     goto :goto_5
 
-    .line 675
     :cond_7
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -302,7 +286,6 @@
 
     goto :goto_4
 
-    .line 679
     :cond_8
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -317,7 +300,6 @@
     :goto_6
     if-ge p2, v0, :cond_24
 
-    .line 682
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -338,7 +320,6 @@
 
     goto :goto_7
 
-    .line 684
     :cond_9
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -356,7 +337,6 @@
 
     goto :goto_7
 
-    .line 686
     :cond_a
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -379,7 +359,6 @@
 
     goto :goto_6
 
-    .line 690
     :cond_b
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -394,7 +373,6 @@
     :goto_8
     if-ge p2, v0, :cond_24
 
-    .line 693
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -415,7 +393,6 @@
 
     goto :goto_9
 
-    .line 695
     :cond_c
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -433,7 +410,6 @@
 
     goto :goto_9
 
-    .line 697
     :cond_d
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -464,7 +440,6 @@
 
     goto :goto_8
 
-    .line 701
     :cond_e
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -479,7 +454,6 @@
     :goto_a
     if-ge p2, v0, :cond_24
 
-    .line 704
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -500,7 +474,6 @@
 
     goto :goto_b
 
-    .line 706
     :cond_f
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -518,7 +491,6 @@
 
     goto :goto_b
 
-    .line 708
     :cond_10
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -541,7 +513,6 @@
 
     goto :goto_a
 
-    .line 712
     :cond_11
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -556,7 +527,6 @@
     :goto_c
     if-ge p2, v0, :cond_24
 
-    .line 715
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -577,7 +547,6 @@
 
     goto :goto_d
 
-    .line 717
     :cond_12
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -595,7 +564,6 @@
 
     goto :goto_d
 
-    .line 719
     :cond_13
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -618,7 +586,6 @@
 
     goto :goto_c
 
-    .line 723
     :cond_14
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -633,7 +600,6 @@
     :goto_e
     if-ge p2, v0, :cond_24
 
-    .line 726
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -654,7 +620,6 @@
 
     goto :goto_f
 
-    .line 728
     :cond_15
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -672,7 +637,6 @@
 
     goto :goto_f
 
-    .line 730
     :cond_16
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -703,7 +667,6 @@
 
     goto :goto_e
 
-    .line 734
     :cond_17
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -718,7 +681,6 @@
     :goto_10
     if-ge p2, v0, :cond_24
 
-    .line 737
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -739,7 +701,6 @@
 
     goto :goto_11
 
-    .line 739
     :cond_18
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -757,7 +718,6 @@
 
     goto :goto_11
 
-    .line 741
     :cond_19
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -768,7 +728,6 @@
 
     goto :goto_10
 
-    .line 745
     :cond_1a
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -783,7 +742,6 @@
     :goto_12
     if-ge p2, v0, :cond_24
 
-    .line 748
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -804,7 +762,6 @@
 
     goto :goto_13
 
-    .line 750
     :cond_1b
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -822,7 +779,6 @@
 
     goto :goto_13
 
-    .line 752
     :cond_1c
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -845,7 +801,6 @@
 
     goto :goto_12
 
-    .line 756
     :cond_1d
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -860,7 +815,6 @@
     :goto_14
     if-ge p2, v0, :cond_24
 
-    .line 759
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -881,7 +835,6 @@
 
     goto :goto_15
 
-    .line 761
     :cond_1e
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -899,7 +852,6 @@
 
     goto :goto_15
 
-    .line 763
     :cond_1f
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -922,7 +874,6 @@
 
     goto :goto_14
 
-    .line 767
     :cond_20
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -937,7 +888,6 @@
     :goto_16
     if-ge p2, v0, :cond_24
 
-    .line 770
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmCountDownTimerTable(Lcom/android/server/display/exynos/ExynosDisplayFactory;)[[I
@@ -958,7 +908,6 @@
 
     goto :goto_17
 
-    .line 772
     :cond_21
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -976,7 +925,6 @@
 
     goto :goto_17
 
-    .line 774
     :cond_22
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -999,7 +947,6 @@
 
     goto :goto_16
 
-    .line 778
     :cond_23
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
@@ -1011,7 +958,6 @@
 
     if-gt p1, p2, :cond_24
 
-    .line 779
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$fgetmColorModeModeIdxDefault(Lcom/android/server/display/exynos/ExynosDisplayFactory;)I
@@ -1020,7 +966,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/display/exynos/ExynosDisplayFactory;->-$$Nest$msetCalibrationMODE_IDX(Lcom/android/server/display/exynos/ExynosDisplayFactory;I)Z
 
-    .line 782
     :cond_24
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayFactory$3;->this$0:Lcom/android/server/display/exynos/ExynosDisplayFactory;
 

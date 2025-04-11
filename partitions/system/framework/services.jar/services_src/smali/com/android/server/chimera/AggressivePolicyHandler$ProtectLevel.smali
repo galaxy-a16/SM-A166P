@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
     .locals 2
 
-    .line 35
     sget-object v0, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;->NORMAL:Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
 
     sget-object v1, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;->HEAVY:Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 36
     new-instance v0, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
 
     const-string v1, "NORMAL"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;->NORMAL:Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
 
-    .line 37
     new-instance v0, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
 
     const-string v1, "HEAVY"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;->HEAVY:Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
 
-    .line 35
     invoke-static {}, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;->$values()[Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 35
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
     .locals 1
 
-    .line 35
     const-class v0, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
     .locals 1
 
-    .line 35
     sget-object v0, Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;->$VALUES:[Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;
 
     invoke-virtual {v0}, [Lcom/android/server/chimera/AggressivePolicyHandler$ProtectLevel;->clone()Ljava/lang/Object;

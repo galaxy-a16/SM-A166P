@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/appprelauncher/AppPrelaunchService;)V
     .locals 0
 
-    .line 33
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->mService:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     return-void
@@ -25,7 +23,6 @@
 .method public final getUid(Ljava/lang/String;)I
     .locals 3
 
-    .line 119
     const-class p0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -36,12 +33,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 121
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v2
 
-    .line 120
     invoke-virtual {p0, p1, v0, v1, v2}, Landroid/content/pm/PackageManagerInternal;->getPackageUid(Ljava/lang/String;JI)I
 
     move-result p0
@@ -52,7 +47,6 @@
 
     return p0
 
-    .line 123
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -70,7 +64,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 124
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result p1
@@ -91,7 +84,6 @@
 
     const/4 v0, 0x1
 
-    .line 149
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->prepareArgs()Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;
 
@@ -99,12 +91,10 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 155
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v2
 
-    .line 157
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -131,7 +121,6 @@
 
     invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 158
     iget-object v3, p0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->mService:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     iget v5, v1, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->uid:I
@@ -144,7 +133,6 @@
 
     if-nez v3, :cond_0
 
-    .line 159
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -182,7 +170,6 @@
     :cond_0
     const-string p0, "Success"
 
-    .line 163
     invoke-virtual {v2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -192,7 +179,6 @@
     :catch_0
     move-exception v1
 
-    .line 151
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -225,7 +211,6 @@
 
     if-nez p1, :cond_0
 
-    .line 40
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
@@ -235,7 +220,6 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 43
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -288,14 +272,12 @@
 
     if-eq v1, v3, :cond_4
 
-    .line 49
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 47
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->kill()I
 
@@ -303,7 +285,6 @@
 
     return p0
 
-    .line 45
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->prelaunch()I
 
@@ -316,7 +297,6 @@
     :catch_0
     move-exception p1
 
-    .line 52
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -343,52 +323,42 @@
 .method public onHelp()V
     .locals 2
 
-    .line 59
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "AppPrelauncher (prelauncher) commands:"
 
-    .line 60
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 61
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help message."
 
-    .line 62
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, ""
 
-    .line 63
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "  prelaunch PACKAGE [--uid UID] [--stage STAGE] [--debug]"
 
-    .line 64
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    Runs PACKAGE for UID in background until STAGE if specified"
 
-    .line 65
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "  kill PACKAGE [--uid UID]"
 
-    .line 66
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    Kills PACKAGE for UID if it is still prelaunched"
 
-    .line 67
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -397,14 +367,12 @@
 .method public final parseOptions()Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;
     .locals 3
 
-    .line 78
     new-instance v0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;-><init>(Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args-IA;)V
 
-    .line 80
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
@@ -414,7 +382,6 @@
 
     const-string v2, "--stage"
 
-    .line 81
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -429,17 +396,14 @@
 
     if-nez v2, :cond_1
 
-    .line 90
     iget-object v2, v0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->packageName:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 93
     iput-object v1, v0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->packageName:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 91
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -465,7 +429,6 @@
 
     throw p0
 
-    .line 83
     :cond_1
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -479,7 +442,6 @@
 
     goto :goto_0
 
-    .line 86
     :cond_2
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -502,7 +464,6 @@
 
     const/4 v0, 0x1
 
-    .line 132
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->prepareArgs()Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;
 
@@ -510,7 +471,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 138
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v2
@@ -545,7 +505,6 @@
 
     invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 139
     iget-object v2, p0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->mService:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     iget-object v3, v1, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->packageName:Ljava/lang/String;
@@ -560,7 +519,6 @@
 
     if-nez v2, :cond_0
 
-    .line 140
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -593,7 +551,6 @@
     :catch_0
     move-exception v1
 
-    .line 134
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -624,24 +581,20 @@
 .method public final prepareArgs()Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;
     .locals 4
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->parseOptions()Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;
 
     move-result-object v0
 
-    .line 106
     iget-object v1, v0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->packageName:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 109
     iget v2, v0, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand$Args;->uid:I
 
     const/4 v3, -0x1
 
     if-ne v2, v3, :cond_0
 
-    .line 110
     invoke-virtual {p0, v1}, Lcom/android/server/appprelauncher/AppPrelaunchShellCommand;->getUid(Ljava/lang/String;)I
 
     move-result p0
@@ -651,7 +604,6 @@
     :cond_0
     return-object v0
 
-    .line 107
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

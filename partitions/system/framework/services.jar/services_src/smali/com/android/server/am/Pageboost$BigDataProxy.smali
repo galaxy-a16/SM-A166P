@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$sfgetENABLED()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/am/Pageboost$BigDataProxy;->ENABLED:Z
 
     return v0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$smmakeString()Ljava/lang/String;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/Pageboost$BigDataProxy;->makeString()Ljava/lang/String;
 
     move-result-object v0
@@ -37,7 +35,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 2768
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -50,18 +47,15 @@
 .method public static initBigDataProxy()V
     .locals 5
 
-    .line 2773
     sget-object v0, Lcom/android/server/am/Pageboost$BigDataProxy;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2782
     :try_start_0
     sget-boolean v1, Lcom/android/server/am/Pageboost$BigDataProxy;->ENABLED:Z
 
     if-eqz v1, :cond_1
 
-    .line 2783
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -72,7 +66,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2785
     :try_start_1
     new-instance v1, Ljava/lang/String;
 
@@ -94,19 +87,16 @@
 
     const-string v2, " "
 
-    .line 2786
     invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2788
     array-length v2, v2
 
     sget v3, Lcom/android/server/am/Pageboost$BigDataProxy;->CNT_INFO:I
 
     if-gt v2, v3, :cond_0
 
-    .line 2789
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -129,7 +119,6 @@
 
     goto :goto_0
 
-    .line 2791
     :cond_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -144,7 +133,6 @@
 
     goto :goto_0
 
-    .line 2794
     :catch_0
     :try_start_2
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -155,7 +143,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2797
     :cond_1
     :goto_0
     monitor-exit v0
@@ -175,7 +162,6 @@
 .method public static keepLastData()V
     .locals 7
 
-    .line 2801
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object v0
@@ -188,13 +174,11 @@
 
     goto :goto_4
 
-    .line 2805
     :cond_0
     sget-object v0, Lcom/android/server/am/Pageboost$BigDataProxy;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2806
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -205,7 +189,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
-    .line 2807
     :try_start_1
     new-instance v2, Ljava/io/OutputStreamWriter;
 
@@ -216,7 +199,6 @@
     :try_start_2
     const-string v3, " "
 
-    .line 2809
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v4
@@ -237,12 +219,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2810
     invoke-virtual {v2, v3}, Ljava/io/OutputStreamWriter;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2811
     :try_start_3
     invoke-virtual {v2}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_3
@@ -259,7 +239,6 @@
     :catchall_0
     move-exception v3
 
-    .line 2806
     :try_start_5
     invoke-virtual {v2}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_5
@@ -308,7 +287,6 @@
     :catch_0
     move-exception v1
 
-    .line 2812
     :try_start_9
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -318,10 +296,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2813
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2815
     :goto_2
     monitor-exit v0
 
@@ -342,7 +318,6 @@
 .method public static makeString()Ljava/lang/String;
     .locals 1
 
-    .line 0
     const-string v0, " "
 
     return-object v0
@@ -351,20 +326,17 @@
 .method public static sendData()V
     .locals 11
 
-    .line 2820
     sget-boolean v0, Lcom/android/server/am/Pageboost$BigDataProxy;->ENABLED:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2824
     :cond_0
     invoke-static {}, Lcom/android/server/am/Pageboost$BigDataProxy;->makeString()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 2826
     sget-object v1, Lcom/android/server/am/Pageboost$BigDataProxy;->mSemHqmManager:Landroid/os/SemHqmManager;
 
     const/4 v2, 0x0

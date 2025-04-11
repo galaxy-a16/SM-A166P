@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;Landroid/app/AlarmManager;Landroid/app/PendingIntent;Lcom/android/server/timedetector/TimeDetectorInternal;)V
     .locals 0
 
-    .line 135
     iput-object p1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$1;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     iput-object p2, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$1;->val$alarmManager:Landroid/app/AlarmManager;
@@ -39,14 +38,12 @@
 .method public scheduleNextRefresh(J)V
     .locals 2
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$1;->val$alarmManager:Landroid/app/AlarmManager;
 
     iget-object v1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$1;->val$pendingPollIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 139
     iget-object v0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$1;->val$alarmManager:Landroid/app/AlarmManager;
 
     const/4 v1, 0x3
@@ -61,7 +58,6 @@
 .method public submitSuggestion(Lcom/android/server/timedetector/NetworkTimeSuggestion;)V
     .locals 0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$1;->val$timeDetectorInternal:Lcom/android/server/timedetector/TimeDetectorInternal;
 
     invoke-interface {p0, p1}, Lcom/android/server/timedetector/TimeDetectorInternal;->suggestNetworkTime(Lcom/android/server/timedetector/NetworkTimeSuggestion;)V

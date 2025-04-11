@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 20
     invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
 
     move-result v0
@@ -28,10 +27,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -46,18 +43,15 @@
 .method public clear()V
     .locals 1
 
-    .line 34
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 35
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
 
-    .line 36
     monitor-exit v0
 
     return-void
@@ -75,7 +69,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 58
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,12 +89,10 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 59
     iget-object p1, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
     monitor-enter p1
 
-    .line 60
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
@@ -113,7 +104,6 @@
 
     move-result-object p0
 
-    .line 61
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -121,14 +111,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 62
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Ljava/util/Map$Entry;
 
-    .line 63
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,10 +148,8 @@
     :cond_0
     const-string p0, ""
 
-    .line 65
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 66
     monitor-exit p1
 
     return-void
@@ -181,12 +167,10 @@
 .method public getPolicyInfoWithPackageName(Ljava/lang/String;)Lcom/samsung/android/edge/EdgeLightingPolicyInfo;
     .locals 1
 
-    .line 40
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 41
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
@@ -203,7 +187,6 @@
     :catchall_0
     move-exception p0
 
-    .line 42
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -214,12 +197,10 @@
 .method public size()I
     .locals 1
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 53
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
@@ -234,7 +215,6 @@
     :catchall_0
     move-exception p0
 
-    .line 54
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -245,14 +225,12 @@
 .method public updatePolicy(Lcom/samsung/android/edge/EdgeLightingPolicyInfo;)V
     .locals 3
 
-    .line 25
     sget-boolean v0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "EdgeLightingPolicyRepository"
 
-    .line 26
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -273,13 +251,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 29
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/policy/EdgeLightingPolicyRepository;->mRepository:Ljava/util/HashMap;
 
@@ -287,7 +263,6 @@
 
     invoke-virtual {p0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     monitor-exit v0
 
     return-void

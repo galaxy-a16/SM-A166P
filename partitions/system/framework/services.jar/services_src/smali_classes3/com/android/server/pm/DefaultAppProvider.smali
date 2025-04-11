@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$uUNN1fkTpwoqn1-qKzSAsYorEIc(Lcom/android/internal/infra/AndroidFuture;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/pm/DefaultAppProvider;->lambda$setDefaultBrowser$0(Lcom/android/internal/infra/AndroidFuture;Ljava/lang/Boolean;)V
 
     return-void
@@ -22,13 +21,10 @@
 .method public constructor <init>(Ljava/util/function/Supplier;Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/pm/DefaultAppProvider;->mRoleManagerSupplier:Ljava/util/function/Supplier;
 
-    .line 55
     iput-object p2, p0, Lcom/android/server/pm/DefaultAppProvider;->mUserManagerInternalSupplier:Ljava/util/function/Supplier;
 
     return-void
@@ -37,7 +33,6 @@
 .method public static synthetic lambda$setDefaultBrowser$0(Lcom/android/internal/infra/AndroidFuture;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 90
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -46,12 +41,10 @@
 
     const/4 p1, 0x0
 
-    .line 91
     invoke-virtual {p0, p1}, Lcom/android/internal/infra/AndroidFuture;->complete(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 93
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -70,7 +63,6 @@
 
     const-string v0, "android.app.role.BROWSER"
 
-    .line 66
     invoke-virtual {p0, v0, p1}, Lcom/android/server/pm/DefaultAppProvider;->getRoleHolder(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -83,7 +75,6 @@
 
     const-string v0, "android.app.role.DIALER"
 
-    .line 128
     invoke-virtual {p0, v0, p1}, Lcom/android/server/pm/DefaultAppProvider;->getRoleHolder(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -94,10 +85,8 @@
 .method public getDefaultHome(I)Ljava/lang/String;
     .locals 1
 
-    .line 139
     iget-object v0, p0, Lcom/android/server/pm/DefaultAppProvider;->mUserManagerInternalSupplier:Ljava/util/function/Supplier;
 
-    .line 140
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -110,7 +99,6 @@
 
     const-string v0, "android.app.role.HOME"
 
-    .line 139
     invoke-virtual {p0, v0, p1}, Lcom/android/server/pm/DefaultAppProvider;->getRoleHolder(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -121,7 +109,6 @@
 .method public final getRoleHolder(Ljava/lang/String;I)Ljava/lang/String;
     .locals 2
 
-    .line 170
     iget-object p0, p0, Lcom/android/server/pm/DefaultAppProvider;->mRoleManagerSupplier:Ljava/util/function/Supplier;
 
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
@@ -136,19 +123,16 @@
 
     return-object p0
 
-    .line 174
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 177
     :try_start_0
     invoke-static {p2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object p2
 
-    .line 176
     invoke-virtual {p0, p1, p2}, Landroid/app/role/RoleManager;->getRoleHoldersAsUser(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object p0
@@ -161,7 +145,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 179
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -171,7 +154,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 180
     throw p0
 .end method
 
@@ -186,7 +168,6 @@
 
     return v1
 
-    .line 82
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/DefaultAppProvider;->mRoleManagerSupplier:Ljava/util/function/Supplier;
 
@@ -202,28 +183,23 @@
 
     return v1
 
-    .line 86
     :cond_1
     invoke-static {p3}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object p0
 
-    .line 87
     invoke-static {}, Lcom/android/server/FgThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p3
 
-    .line 88
     new-instance v0, Lcom/android/internal/infra/AndroidFuture;
 
     invoke-direct {v0}, Lcom/android/internal/infra/AndroidFuture;-><init>()V
 
-    .line 89
     new-instance v8, Lcom/android/server/pm/DefaultAppProvider$$ExternalSyntheticLambda0;
 
     invoke-direct {v8, v0}, Lcom/android/server/pm/DefaultAppProvider$$ExternalSyntheticLambda0;-><init>(Lcom/android/internal/infra/AndroidFuture;)V
 
-    .line 96
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v9
@@ -241,7 +217,6 @@
 
     move-object v7, p3
 
-    .line 99
     invoke-virtual/range {v2 .. v8}, Landroid/app/role/RoleManager;->addRoleHolderAsUser(Ljava/lang/String;Ljava/lang/String;ILandroid/os/UserHandle;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V
 
     goto :goto_0
@@ -257,7 +232,6 @@
 
     move-object v7, v8
 
-    .line 102
     invoke-virtual/range {v2 .. v7}, Landroid/app/role/RoleManager;->clearRoleHoldersAsUser(Ljava/lang/String;ILandroid/os/UserHandle;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -265,7 +239,6 @@
     :goto_0
     if-nez p2, :cond_3
 
-    .line 107
     :try_start_1
     sget-object p0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -286,7 +259,6 @@
     :try_start_2
     const-string p2, "PackageManager"
 
-    .line 109
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -305,7 +277,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 115
     invoke-static {v9, v10}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v1
@@ -323,14 +294,12 @@
 
     invoke-static {v9, v10}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 116
     throw p0
 .end method
 
 .method public setDefaultHome(Ljava/lang/String;ILjava/util/concurrent/Executor;Ljava/util/function/Consumer;)Z
     .locals 9
 
-    .line 154
     iget-object p0, p0, Lcom/android/server/pm/DefaultAppProvider;->mRoleManagerSupplier:Ljava/util/function/Supplier;
 
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
@@ -347,7 +316,6 @@
 
     return p0
 
-    .line 158
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -358,7 +326,6 @@
 
     const/4 v3, 0x0
 
-    .line 161
     invoke-static {p2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v4
@@ -369,12 +336,10 @@
 
     move-object v6, p4
 
-    .line 160
     invoke-virtual/range {v0 .. v6}, Landroid/app/role/RoleManager;->addRoleHolderAsUser(Ljava/lang/String;Ljava/lang/String;ILandroid/os/UserHandle;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 163
     invoke-static {v7, v8}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     const/4 p0, 0x1
@@ -386,6 +351,5 @@
 
     invoke-static {v7, v8}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 164
     throw p0
 .end method

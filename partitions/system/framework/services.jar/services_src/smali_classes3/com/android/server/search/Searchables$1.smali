@@ -26,13 +26,11 @@
 
     return p0
 
-    .line 392
     :cond_0
     invoke-static {p1}, Lcom/android/server/search/Searchables;->-$$Nest$smisSystemApp(Landroid/content/pm/ResolveInfo;)Z
 
     move-result p0
 
-    .line 393
     invoke-static {p2}, Lcom/android/server/search/Searchables;->-$$Nest$smisSystemApp(Landroid/content/pm/ResolveInfo;)Z
 
     move-result v0
@@ -54,7 +52,6 @@
 
     return p0
 
-    .line 405
     :cond_2
     iget p0, p2, Landroid/content/pm/ResolveInfo;->priority:I
 
@@ -68,7 +65,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 386
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     check-cast p2, Landroid/content/pm/ResolveInfo;

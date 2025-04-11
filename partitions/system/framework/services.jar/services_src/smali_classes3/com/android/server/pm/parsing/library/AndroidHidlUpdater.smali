@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 35
     invoke-direct {p0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public updatePackage(Lcom/android/server/pm/parsing/pkg/ParsedPackage;ZZ)V
     .locals 3
 
-    .line 41
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result v0
@@ -45,20 +43,16 @@
 
     if-eqz p3, :cond_2
 
-    .line 45
     :cond_1
     invoke-virtual {p0, p1, v2}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->prefixRequiredLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
 
-    .line 46
     invoke-virtual {p0, p1, v1}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->prefixRequiredLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 48
     :cond_2
     invoke-static {p1, v2}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->removeLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
 
-    .line 49
     invoke-static {p1, v1}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->removeLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
 
     :goto_1

@@ -20,19 +20,14 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->pattern:Ljava/lang/String;
 
-    .line 37
     iput-object p2, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->hashCode:Ljava/lang/String;
 
-    .line 38
     iput p3, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->versionType:I
 
-    .line 39
     iput-object p4, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->format:Ljava/lang/String;
 
     return-void
@@ -43,10 +38,8 @@
 .method public compareTo(Ljava/lang/Object;)I
     .locals 4
 
-    .line 100
     check-cast p1, Lcom/android/server/asks/ADPContainer$ADPPolicy;
 
-    .line 102
     iget v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->versionType:I
 
     const v1, 0x65837583
@@ -57,14 +50,12 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->format:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
     return v3
 
-    .line 107
     :cond_0
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -87,7 +78,6 @@
     :cond_1
     return v3
 
-    .line 113
     :cond_2
     iget-object p0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->hashCode:Ljava/lang/String;
 
@@ -116,11 +106,9 @@
 
     return v0
 
-    .line 83
     :cond_0
     check-cast p1, Lcom/android/server/asks/ADPContainer$ADPPolicy;
 
-    .line 85
     invoke-virtual {p0}, Lcom/android/server/asks/ADPContainer$ADPPolicy;->getPattern()Ljava/lang/String;
 
     move-result-object v1
@@ -129,7 +117,6 @@
 
     move-result-object v1
 
-    .line 86
     invoke-virtual {p1}, Lcom/android/server/asks/ADPContainer$ADPPolicy;->getHashCode()Ljava/lang/String;
 
     move-result-object v2
@@ -138,7 +125,6 @@
 
     move-result-object v1
 
-    .line 88
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v1
@@ -147,7 +133,6 @@
 
     return v0
 
-    .line 91
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/asks/ADPContainer$ADPPolicy;->getPattern()Ljava/lang/String;
 
@@ -157,7 +142,6 @@
 
     move-result-object p1
 
-    .line 92
     invoke-virtual {p0}, Lcom/android/server/asks/ADPContainer$ADPPolicy;->getHashCode()Ljava/lang/String;
 
     move-result-object p0
@@ -166,7 +150,6 @@
 
     move-result-object p0
 
-    .line 94
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result p0
@@ -177,19 +160,16 @@
 .method public findMatcherByHashCode(Ljava/lang/String;)Z
     .locals 0
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->pattern:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object p0
 
-    .line 66
     invoke-virtual {p0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p0
 
-    .line 67
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result p0
@@ -200,7 +180,6 @@
 .method public getFormat()Ljava/lang/String;
     .locals 0
 
-    .line 46
     iget-object p0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->format:Ljava/lang/String;
 
     return-object p0
@@ -209,7 +188,6 @@
 .method public getHashCode()Ljava/lang/String;
     .locals 0
 
-    .line 43
     iget-object p0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->hashCode:Ljava/lang/String;
 
     return-object p0
@@ -218,7 +196,6 @@
 .method public getPattern()Ljava/lang/String;
     .locals 0
 
-    .line 42
     iget-object p0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->pattern:Ljava/lang/String;
 
     return-object p0
@@ -227,7 +204,6 @@
 .method public getVersionType()I
     .locals 0
 
-    .line 44
     iget p0, p0, Lcom/android/server/asks/ADPContainer$ADPPolicy;->versionType:I
 
     return p0

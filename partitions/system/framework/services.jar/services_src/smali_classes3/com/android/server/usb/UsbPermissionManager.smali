@@ -19,27 +19,22 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/usb/UsbService;)V
     .locals 1
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/usb/UsbPermissionManager;->mContext:Landroid/content/Context;
 
-    .line 55
     iput-object p2, p0, Lcom/android/server/usb/UsbPermissionManager;->mUsbService:Lcom/android/server/usb/UsbService;
 
     return-void
@@ -50,12 +45,10 @@
 .method public dump(Lcom/android/internal/util/dump/DualDumpOutputStream;Ljava/lang/String;J)V
     .locals 7
 
-    .line 123
     invoke-virtual {p1, p2, p3, p4}, Lcom/android/internal/util/dump/DualDumpOutputStream;->start(Ljava/lang/String;J)J
 
     move-result-wide p2
 
-    .line 124
     iget-object p4, p0, Lcom/android/server/usb/UsbPermissionManager;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/os/UserManager;
@@ -66,18 +59,15 @@
 
     check-cast p4, Landroid/os/UserManager;
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 126
     :try_start_0
     invoke-virtual {p4}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object p4
 
-    .line 127
     invoke-interface {p4}, Ljava/util/List;->size()I
 
     move-result v1
@@ -87,7 +77,6 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 129
     invoke-interface {p4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -110,13 +99,11 @@
 
     goto :goto_0
 
-    .line 132
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 133
     invoke-virtual {p1, p2, p3}, Lcom/android/internal/util/dump/DualDumpOutputStream;->end(J)V
 
     return-void
@@ -124,7 +111,6 @@
     :catchall_0
     move-exception p0
 
-    .line 132
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -136,12 +122,10 @@
 .method public getPermissionsForUser(I)Lcom/android/server/usb/UsbUserPermissionManager;
     .locals 5
 
-    .line 59
     iget-object v0, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 60
     :try_start_0
     iget-object v1, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
@@ -153,38 +137,32 @@
 
     if-nez v1, :cond_0
 
-    .line 62
     new-instance v1, Lcom/android/server/usb/UsbUserPermissionManager;
 
     iget-object v2, p0, Lcom/android/server/usb/UsbPermissionManager;->mContext:Landroid/content/Context;
 
-    .line 63
     invoke-static {p1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    .line 62
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->createContextAsUser(Landroid/os/UserHandle;I)Landroid/content/Context;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/server/usb/UsbPermissionManager;->mUsbService:Lcom/android/server/usb/UsbService;
 
-    .line 63
     invoke-virtual {v3, p1}, Lcom/android/server/usb/UsbService;->getSettingsForUser(I)Lcom/android/server/usb/UsbUserSettingsManager;
 
     move-result-object v3
 
     invoke-direct {v1, v2, v3}, Lcom/android/server/usb/UsbUserPermissionManager;-><init>(Landroid/content/Context;Lcom/android/server/usb/UsbUserSettingsManager;)V
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 66
     :cond_0
     monitor-exit v0
 
@@ -193,7 +171,6 @@
     :catchall_0
     move-exception p0
 
-    .line 67
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -204,7 +181,6 @@
 .method public getPermissionsForUser(Landroid/os/UserHandle;)Lcom/android/server/usb/UsbUserPermissionManager;
     .locals 0
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result p1
@@ -219,14 +195,12 @@
 .method public usbAccessoryRemoved(Landroid/hardware/usb/UsbAccessory;)V
     .locals 3
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 110
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
@@ -237,7 +211,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 112
     iget-object v2, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -252,13 +225,11 @@
 
     goto :goto_0
 
-    .line 114
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 116
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.hardware.usb.action.USB_ACCESSORY_DETACHED"
@@ -267,15 +238,12 @@
 
     const/high16 v1, 0x1000000
 
-    .line 117
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string v1, "accessory"
 
-    .line 118
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/usb/UsbPermissionManager;->mContext:Landroid/content/Context;
 
     sget-object p1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -287,7 +255,6 @@
     :catchall_0
     move-exception p0
 
-    .line 114
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -299,14 +266,12 @@
 .method public usbDeviceRemoved(Landroid/hardware/usb/UsbDevice;)V
     .locals 3
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 87
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
@@ -317,7 +282,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 89
     iget-object v2, p0, Lcom/android/server/usb/UsbPermissionManager;->mPermissionsByUser:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -332,13 +296,11 @@
 
     goto :goto_0
 
-    .line 91
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 93
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.hardware.usb.action.USB_DEVICE_DETACHED"
@@ -347,15 +309,12 @@
 
     const/high16 v1, 0x1000000
 
-    .line 94
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string v1, "device"
 
-    .line 95
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 98
     sget-object p1, Lcom/android/server/usb/UsbPermissionManager;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -374,7 +333,6 @@
 
     invoke-static {p1, v1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/usb/UsbPermissionManager;->mContext:Landroid/content/Context;
 
     sget-object p1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -386,7 +344,6 @@
     :catchall_0
     move-exception p0
 
-    .line 91
     :try_start_1
     monitor-exit v0
     :try_end_1

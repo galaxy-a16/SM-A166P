@@ -20,7 +20,6 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/samsung/android/server/hwrs/common/HwrsUtils;->$r8$lambda$bnCVDssCicaspWN719739bl2x5A(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
     move-result-object p0

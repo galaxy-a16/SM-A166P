@@ -23,14 +23,12 @@
 .method public static final dumpBitfield(B)Ljava/lang/String;
     .locals 4
 
-    .line 121
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "EMPTY"
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     and-int/lit8 v1, p0, 0x1
@@ -41,7 +39,6 @@
 
     const-string v1, "HWBINDER"
 
-    .line 125
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     int-to-byte v1, v2
@@ -60,7 +57,6 @@
 
     const-string v2, "PASSTHROUGH"
 
-    .line 129
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     or-int/lit8 v1, v1, 0x2
@@ -70,7 +66,6 @@
     :cond_1
     if-eq p0, v1, :cond_2
 
-    .line 133
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,7 +99,6 @@
     :cond_2
     const-string p0, " | "
 
-    .line 135
     invoke-static {p0, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0
@@ -139,7 +133,6 @@
 
     return-object p0
 
-    .line 117
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 

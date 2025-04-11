@@ -31,7 +31,6 @@
 
     const-string/jumbo v0, "screen_brightness_mode"
 
-    .line 31
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -40,7 +39,6 @@
 
     const-string/jumbo v0, "screen_mode_setting"
 
-    .line 33
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -53,10 +51,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v1, "eng"
@@ -91,30 +87,24 @@
     :goto_1
     iput-boolean v0, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->DEBUG:Z
 
-    .line 26
     iput-boolean v2, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->mIsBrightnessModeAuto:Z
 
-    .line 27
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->mBrightnessModeLock:Ljava/lang/Object;
 
-    .line 28
     iput-boolean v2, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->mUseScreenStatusAsyncHandle:Z
 
-    .line 43
     iput-object p1, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->mContext:Landroid/content/Context;
 
-    .line 44
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 45
     new-instance p1, Lcom/samsung/android/displayquality/SemDisplayQualityAP$SettingsObserver;
 
     new-instance v0, Landroid/os/Handler;
@@ -125,14 +115,12 @@
 
     iput-object p1, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->mSettingsObserver:Lcom/samsung/android/displayquality/SemDisplayQualityAP$SettingsObserver;
 
-    .line 47
     iget-boolean p0, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->DEBUG:Z
 
     if-eqz p0, :cond_2
 
     const-string p0, "SemDisplayQualityAP"
 
-    .line 48
     invoke-static {p0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -144,14 +132,12 @@
 .method public enhanceOutdoorVisibilityByLux(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getScreenModeSetting()I
     .locals 2
 
-    .line 75
     iget-object p0, p0, Lcom/samsung/android/displayquality/SemDisplayQualityAP;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -199,7 +185,6 @@
 
     const/4 v1, 0x0
 
-    .line 69
     invoke-static {p1, v0, v1, p0}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
@@ -217,6 +202,5 @@
 .method public setAdaptiveSync(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method

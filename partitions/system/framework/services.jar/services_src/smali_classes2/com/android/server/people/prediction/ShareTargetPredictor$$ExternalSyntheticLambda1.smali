@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;
 
     invoke-static {p1}, Lcom/android/server/people/prediction/ShareTargetPredictor;->$r8$lambda$XF4nIDP0fnmSvuwZq5GkC1yfvfU(Lcom/android/server/people/prediction/ShareTargetPredictor$ShareTarget;)Ljava/lang/Integer;

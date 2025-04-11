@@ -29,45 +29,34 @@
 .method public constructor <init>(Landroid/os/IBinder;Landroid/os/CombinedVibration;IIILcom/android/server/vibrator/Vibration$CallerInfo;)V
     .locals 0
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput-object p1, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mToken:Landroid/os/IBinder;
 
-    .line 23
     iput-object p2, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mEffect:Landroid/os/CombinedVibration;
 
-    .line 24
     iput p3, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mIndex:I
 
-    .line 25
     iput p4, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mRepeat:I
 
-    .line 26
     iput p5, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mMagnitude:I
 
-    .line 27
     iget-object p1, p6, Lcom/android/server/vibrator/Vibration$CallerInfo;->attrs:Landroid/os/VibrationAttributes;
 
     iput-object p1, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mAttrs:Landroid/os/VibrationAttributes;
 
-    .line 28
     iget p1, p6, Lcom/android/server/vibrator/Vibration$CallerInfo;->uid:I
 
     iput p1, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mUid:I
 
-    .line 29
     iget p1, p6, Lcom/android/server/vibrator/Vibration$CallerInfo;->displayId:I
 
     iput p1, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mDisplayId:I
 
-    .line 30
     iget-object p1, p6, Lcom/android/server/vibrator/Vibration$CallerInfo;->opPkg:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mOpPkg:Ljava/lang/String;
 
-    .line 31
     iget-object p1, p6, Lcom/android/server/vibrator/Vibration$CallerInfo;->reason:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mReason:Ljava/lang/String;
@@ -91,7 +80,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 131
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -104,7 +92,6 @@
 
     goto :goto_1
 
-    .line 132
     :cond_1
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -114,11 +101,9 @@
 
     return v1
 
-    .line 133
     :cond_2
     check-cast p1, Lcom/android/server/vibrator/SemVibrationBundle;
 
-    .line 134
     iget v2, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mUid:I
 
     iget v3, p1, Lcom/android/server/vibrator/SemVibrationBundle;->mUid:I
@@ -153,7 +138,6 @@
 
     iget-object v3, p1, Lcom/android/server/vibrator/SemVibrationBundle;->mToken:Landroid/os/IBinder;
 
-    .line 139
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -164,7 +148,6 @@
 
     iget-object v3, p1, Lcom/android/server/vibrator/SemVibrationBundle;->mAttrs:Landroid/os/VibrationAttributes;
 
-    .line 140
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -175,7 +158,6 @@
 
     iget-object v3, p1, Lcom/android/server/vibrator/SemVibrationBundle;->mOpPkg:Ljava/lang/String;
 
-    .line 141
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -186,7 +168,6 @@
 
     iget-object v3, p1, Lcom/android/server/vibrator/SemVibrationBundle;->mReason:Ljava/lang/String;
 
-    .line 142
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -197,7 +178,6 @@
 
     iget-object p1, p1, Lcom/android/server/vibrator/SemVibrationBundle;->mEffect:Landroid/os/CombinedVibration;
 
-    .line 143
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -220,7 +200,6 @@
 .method public getAttrs()Landroid/os/VibrationAttributes;
     .locals 0
 
-    .line 43
     iget-object p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mAttrs:Landroid/os/VibrationAttributes;
 
     return-object p0
@@ -229,7 +208,6 @@
 .method public getDisplayId()I
     .locals 0
 
-    .line 59
     iget p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mDisplayId:I
 
     return p0
@@ -238,7 +216,6 @@
 .method public getEffect()Landroid/os/CombinedVibration;
     .locals 0
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mEffect:Landroid/os/CombinedVibration;
 
     return-object p0
@@ -247,7 +224,6 @@
 .method public getIndex()I
     .locals 0
 
-    .line 91
     iget p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mIndex:I
 
     return p0
@@ -256,7 +232,6 @@
 .method public getMagnitude()I
     .locals 0
 
-    .line 107
     iget p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mMagnitude:I
 
     return p0
@@ -265,7 +240,6 @@
 .method public getOpPkg()Ljava/lang/String;
     .locals 0
 
-    .line 67
     iget-object p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mOpPkg:Ljava/lang/String;
 
     return-object p0
@@ -274,7 +248,6 @@
 .method public getReason()Ljava/lang/String;
     .locals 0
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mReason:Ljava/lang/String;
 
     return-object p0
@@ -283,7 +256,6 @@
 .method public getRepeat()I
     .locals 0
 
-    .line 99
     iget p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mRepeat:I
 
     return p0
@@ -292,7 +264,6 @@
 .method public getToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 35
     iget-object p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mToken:Landroid/os/IBinder;
 
     return-object p0
@@ -301,7 +272,6 @@
 .method public getUid()I
     .locals 0
 
-    .line 51
     iget p0, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mUid:I
 
     return p0
@@ -310,7 +280,6 @@
 .method public setMagnitude(I)V
     .locals 0
 
-    .line 111
     iput p1, p0, Lcom/android/server/vibrator/SemVibrationBundle;->mMagnitude:I
 
     return-void
@@ -319,7 +288,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -18,7 +18,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -27,7 +26,6 @@
 .method public final enforceCallingUser(I)V
     .locals 2
 
-    .line 133
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result p0
@@ -46,7 +44,6 @@
 
     goto :goto_0
 
-    .line 137
     :cond_0
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -60,7 +57,6 @@
 
     return-void
 
-    .line 138
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -90,13 +86,11 @@
 .method public onMessage(ILjava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 7
 
-    .line 90
     :try_start_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 91
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v1
@@ -188,14 +182,12 @@
 
     goto :goto_2
 
-    .line 109
     :cond_1
     :try_start_1
     invoke-virtual {p3, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p2
 
-    .line 110
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->stateMachine:Lcom/android/server/knox/dar/ddar/fsm/StateMachineImpl;
 
     invoke-virtual {p0, p2}, Lcom/android/server/knox/dar/ddar/fsm/StateMachineImpl;->getPreviousState(I)Lcom/samsung/android/knox/dar/ddar/fsm/State;
@@ -206,7 +198,6 @@
 
     move v4, v5
 
-    .line 112
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/knox/dar/ddar/fsm/State;->name()Ljava/lang/String;
 
@@ -214,18 +205,15 @@
 
     invoke-virtual {v0, p1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 113
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 102
     :cond_3
     invoke-virtual {p3, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p2
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->stateMachine:Lcom/android/server/knox/dar/ddar/fsm/StateMachineImpl;
 
     invoke-virtual {p0, p2}, Lcom/android/server/knox/dar/ddar/fsm/StateMachineImpl;->getCurrentState(I)Lcom/samsung/android/knox/dar/ddar/fsm/State;
@@ -236,7 +224,6 @@
 
     move v4, v5
 
-    .line 105
     :cond_4
     invoke-virtual {p0}, Lcom/samsung/android/knox/dar/ddar/fsm/State;->name()Ljava/lang/String;
 
@@ -244,30 +231,24 @@
 
     invoke-virtual {v0, p1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 97
     :cond_5
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->enforceCallingUser(I)V
 
-    .line 98
     invoke-virtual {p0, p3}, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->processEvent(Landroid/os/Bundle;)Z
 
     move-result p0
 
-    .line 99
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 93
     :cond_6
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->enforceCallingUser(I)V
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->setInitialState()Z
 
     move-result p0
@@ -282,7 +263,6 @@
     :catch_0
     move-exception p0
 
-    .line 118
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -303,7 +283,6 @@
 .method public onStateChanged(Lcom/samsung/android/knox/dar/ddar/fsm/State;Lcom/samsung/android/knox/dar/ddar/fsm/State;Lcom/samsung/android/knox/dar/ddar/fsm/Event;I)V
     .locals 0
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->context:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/knox/dar/ddar/DualDARController;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/dar/ddar/DualDARController;
@@ -320,7 +299,6 @@
 
     const-string v0, "KEY_EVENT"
 
-    .line 124
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
@@ -335,7 +313,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 125
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -344,12 +321,10 @@
 
     move-result-object v0
 
-    .line 126
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->stateMachine:Lcom/android/server/knox/dar/ddar/fsm/StateMachineImpl;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/knox/dar/ddar/fsm/StateMachineImpl;->processEvent(Lcom/samsung/android/knox/dar/ddar/fsm/Event;I)Z
@@ -367,12 +342,10 @@
 .method public final setInitialState()Z
     .locals 5
 
-    .line 61
     invoke-static {}, Lcom/android/server/pm/PersonaServiceHelper;->getDualDARUser()I
 
     move-result v0
 
-    .line 62
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -395,7 +368,6 @@
 
     invoke-static {v4, v1, v3}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 63
     iget-boolean v1, p0, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->initiateState:Z
 
     const/4 v3, 0x1
@@ -406,7 +378,6 @@
 
     new-array v0, v2, [Ljava/lang/Object;
 
-    .line 64
     invoke-static {v4, p0, v0}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return v3
@@ -420,22 +391,18 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 68
     invoke-static {v4, v1, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 69
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->stateMachine:Lcom/android/server/knox/dar/ddar/fsm/StateMachineImpl;
 
     sget-object v2, Lcom/samsung/android/knox/dar/ddar/fsm/State;->DEVICE_LOCK_DATA_LOCK:Lcom/samsung/android/knox/dar/ddar/fsm/State;
 
     invoke-virtual {v1, v0, v2}, Lcom/android/server/knox/dar/ddar/fsm/StateMachineImpl;->setInitialState(ILcom/samsung/android/knox/dar/ddar/fsm/State;)V
 
-    .line 70
     iput-boolean v3, p0, Lcom/android/server/knox/dar/ddar/fsm/StateMachineProxy;->initiateState:Z
 
     return v3
 
-    .line 74
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 

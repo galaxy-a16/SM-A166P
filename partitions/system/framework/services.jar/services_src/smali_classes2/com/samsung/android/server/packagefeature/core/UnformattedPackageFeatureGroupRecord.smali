@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lcom/samsung/android/server/util/CoreLogger;Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 52
     invoke-direct/range {p0 .. p5}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/samsung/android/server/util/CoreLogger;Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;Ljava/util/function/Supplier;)V
 
-    .line 53
     iget-object p1, p4, Lcom/samsung/android/server/packagefeature/PackageFeatureGroup;->mName:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;->mGroupName:Ljava/lang/String;
@@ -31,10 +29,8 @@
 
     const/4 v0, 0x0
 
-    .line 58
     iput-object v0, p0, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;->mGetFileDescriptor:Ljava/util/function/Function;
 
-    .line 59
     invoke-super {p0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;->initialize()V
 
     return-void
@@ -43,14 +39,12 @@
 .method public propagateToCallback(Ljava/lang/String;Lcom/samsung/android/server/packagefeature/PackageFeatureCallback;Lcom/samsung/android/server/packagefeature/PackageFeatureData;IILjava/lang/String;)V
     .locals 1
 
-    .line 79
     iget-object p3, p0, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;->mGetFileDescriptor:Ljava/util/function/Function;
 
     if-nez p3, :cond_0
 
     return-void
 
-    .line 80
     :cond_0
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -70,7 +64,6 @@
 
     if-le p5, p1, :cond_1
 
-    .line 81
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +118,6 @@
 
     move-result-object p1
 
-    .line 83
     iget-object p3, p0, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;->mGroupName:Ljava/lang/String;
 
     iget-object p4, p0, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;->mGetFileDescriptor:Ljava/util/function/Function;
@@ -138,14 +130,12 @@
 .method public propagateToCallbacks()V
     .locals 1
 
-    .line 71
     iget-object v0, p0, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;->mGetFileDescriptor:Ljava/util/function/Function;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 72
     :cond_0
     invoke-super {p0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;->propagateToCallbacks()V
 
@@ -155,13 +145,10 @@
 .method public updateGroupDataFromScpm(Ljava/util/function/Function;)V
     .locals 0
 
-    .line 64
     iput-object p1, p0, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;->mGetFileDescriptor:Ljava/util/function/Function;
 
-    .line 65
     invoke-virtual {p0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;->updateGroupDataDummyFromScpm()V
 
-    .line 66
     invoke-virtual {p0}, Lcom/samsung/android/server/packagefeature/core/UnformattedPackageFeatureGroupRecord;->propagateToCallbacks()V
 
     return-void

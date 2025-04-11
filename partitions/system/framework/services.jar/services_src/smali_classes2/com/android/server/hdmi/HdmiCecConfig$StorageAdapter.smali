@@ -13,18 +13,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 121
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecConfig$StorageAdapter;->mContext:Landroid/content/Context;
 
-    .line 126
     invoke-virtual {p1}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 127
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/io/File;
@@ -43,7 +39,6 @@
 
     const/4 v1, 0x0
 
-    .line 129
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/io/File;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
@@ -58,7 +53,6 @@
 .method public retrieveGlobalSetting(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecConfig$StorageAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -80,7 +74,6 @@
 .method public retrieveSharedPref(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 173
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecConfig$StorageAdapter;->mSharedPrefs:Landroid/content/SharedPreferences;
 
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -93,7 +86,6 @@
 .method public retrieveSystemProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 138
     invoke-static {p1, p2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -104,7 +96,6 @@
 .method public storeGlobalSetting(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecConfig$StorageAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -119,7 +110,6 @@
 .method public storeSharedPref(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 181
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecConfig$StorageAdapter;->mSharedPrefs:Landroid/content/SharedPreferences;
 
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -138,7 +128,6 @@
 .method public storeSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 146
     invoke-static {p1, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

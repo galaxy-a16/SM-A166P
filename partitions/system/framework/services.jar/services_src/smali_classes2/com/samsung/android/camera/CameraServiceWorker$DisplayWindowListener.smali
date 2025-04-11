@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;)V
     .locals 0
 
-    .line 262
     iput-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$DisplayWindowListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-direct {p0}, Landroid/view/IDisplayWindowListener$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;Lcom/samsung/android/camera/CameraServiceWorker$DisplayWindowListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/CameraServiceWorker$DisplayWindowListener;-><init>(Lcom/samsung/android/camera/CameraServiceWorker;)V
 
     return-void
@@ -33,14 +31,12 @@
 .method public onDisplayAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDisplayConfigurationChanged(ILandroid/content/res/Configuration;)V
     .locals 0
 
-    .line 266
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$DisplayWindowListener;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-virtual {p0}, Lcom/samsung/android/camera/CameraServiceWorker;->getCameraService()Landroid/hardware/ICameraService;
@@ -51,7 +47,6 @@
 
     return-void
 
-    .line 270
     :cond_0
     :try_start_0
     invoke-interface {p0}, Landroid/hardware/ICameraService;->notifyDeviceInjectorOrientationChange()V
@@ -63,7 +58,6 @@
     :catch_0
     move-exception p0
 
-    .line 272
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,27 +83,23 @@
 .method public onDisplayRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onFixedRotationFinished(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onFixedRotationStarted(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onKeepClearAreasChanged(ILjava/util/List;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

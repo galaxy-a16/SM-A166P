@@ -57,7 +57,6 @@
 
     move-object/from16 v1, p1
 
-    .line 1103
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$7;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     move-object/from16 v1, p21
@@ -78,7 +77,6 @@
 .method public daemonAuthenticate(J)V
     .locals 3
 
-    .line 1106
     invoke-static {}, Lcom/android/server/biometrics/SemBioLoggingManager;->get()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object v0
@@ -97,7 +95,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Lcom/android/server/biometrics/SemBioLoggingManager;->faceStart(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1107
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$sfgetmProviderExtImpl()Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;
 
     move-result-object p0
@@ -110,7 +107,6 @@
 .method public daemonAuthenticationCancel()V
     .locals 2
 
-    .line 1111
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$sfgetmProviderExtImpl()Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;
 
     move-result-object p0
@@ -121,14 +117,12 @@
 
     invoke-static {p0, v0, v1}, Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;->-$$Nest$msendError(Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;II)V
 
-    .line 1112
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$sfgetmProviderExtImpl()Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;
 
     move-result-object p0
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;->-$$Nest$mdaemonCancel(Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;)I
 
-    .line 1113
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$sfgetmProviderExtImpl()Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;
 
     move-result-object p0

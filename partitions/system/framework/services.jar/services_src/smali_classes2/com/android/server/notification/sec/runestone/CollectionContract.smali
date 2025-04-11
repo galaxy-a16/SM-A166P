@@ -13,7 +13,6 @@
 
     const-string v0, "content://com.samsung.android.rubin.collection/"
 
-    .line 14
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

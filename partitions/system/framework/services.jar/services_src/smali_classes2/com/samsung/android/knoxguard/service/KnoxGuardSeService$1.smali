@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 92
     invoke-direct {p0}, Landroid/app/AppOpsManager$OnOpChangedInternalListener;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 
     const-string p0, "com.samsung.android.kgclient"
 
-    .line 95
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -29,7 +27,6 @@
 
     return-void
 
-    .line 97
     :cond_0
     sget-object p2, Lcom/samsung/android/knoxguard/service/utils/Constants;->PROTECTED_APP_OPS_LIST:Ljava/util/List;
 
@@ -43,7 +40,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 99
     :try_start_0
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardSeService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
@@ -57,7 +53,6 @@
 
     check-cast p2, Landroid/app/AppOpsManager;
 
-    .line 100
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardSeService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object v0
@@ -68,12 +63,10 @@
 
     const/4 v1, 0x0
 
-    .line 101
     invoke-virtual {v0, p0, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
-    .line 102
     invoke-static {p0, p2, p1}, Lcom/samsung/android/knoxguard/service/utils/IntegritySeUtil;->enableAppOpIfNotAllowed(Landroid/content/pm/PackageInfo;Landroid/app/AppOpsManager;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -83,7 +76,6 @@
     :catchall_0
     move-exception p0
 
-    .line 104
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardSeService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

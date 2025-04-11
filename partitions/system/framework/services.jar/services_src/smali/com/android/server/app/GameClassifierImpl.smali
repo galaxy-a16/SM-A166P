@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/content/pm/PackageManager;)V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Lcom/android/server/app/GameClassifierImpl;->mPackageManager:Landroid/content/pm/PackageManager;
 
     return-void
@@ -30,16 +28,13 @@
 
     const/4 v0, 0x0
 
-    .line 38
     :try_start_0
     iget-object p0, p0, Lcom/android/server/app/GameClassifierImpl;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 42
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result p2
 
-    .line 39
     invoke-virtual {p0, p1, v0, p2}, Landroid/content/pm/PackageManager;->getApplicationInfoAsUser(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 49
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/signedconfig/SignedConfigService$UpdateReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/signedconfig/SignedConfigService$UpdateReceiver;-><init>()V
 
     return-void
@@ -27,7 +25,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 52
     new-instance p0, Lcom/android/server/signedconfig/SignedConfigService;
 
     invoke-direct {p0, p1}, Lcom/android/server/signedconfig/SignedConfigService;-><init>(Landroid/content/Context;)V

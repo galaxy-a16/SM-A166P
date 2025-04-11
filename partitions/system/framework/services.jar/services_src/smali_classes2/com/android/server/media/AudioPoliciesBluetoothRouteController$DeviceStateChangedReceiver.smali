@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/media/AudioPoliciesBluetoothRouteController;)V
     .locals 0
 
-    .line 473
     iput-object p1, p0, Lcom/android/server/media/AudioPoliciesBluetoothRouteController$DeviceStateChangedReceiver;->this$0:Lcom/android/server/media/AudioPoliciesBluetoothRouteController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/media/AudioPoliciesBluetoothRouteController;Lcom/android/server/media/AudioPoliciesBluetoothRouteController$DeviceStateChangedReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/media/AudioPoliciesBluetoothRouteController$DeviceStateChangedReceiver;-><init>(Lcom/android/server/media/AudioPoliciesBluetoothRouteController;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 476
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -149,13 +146,11 @@
 
     goto :goto_1
 
-    .line 483
     :pswitch_0
     iget-object p1, p0, Lcom/android/server/media/AudioPoliciesBluetoothRouteController$DeviceStateChangedReceiver;->this$0:Lcom/android/server/media/AudioPoliciesBluetoothRouteController;
 
     invoke-static {p1}, Lcom/android/server/media/AudioPoliciesBluetoothRouteController;->-$$Nest$mupdateBluetoothRoutes(Lcom/android/server/media/AudioPoliciesBluetoothRouteController;)V
 
-    .line 484
     iget-object p0, p0, Lcom/android/server/media/AudioPoliciesBluetoothRouteController$DeviceStateChangedReceiver;->this$0:Lcom/android/server/media/AudioPoliciesBluetoothRouteController;
 
     invoke-static {p0}, Lcom/android/server/media/AudioPoliciesBluetoothRouteController;->-$$Nest$mnotifyBluetoothRoutesUpdated(Lcom/android/server/media/AudioPoliciesBluetoothRouteController;)V

@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService$WakeLock;J)V
     .locals 0
 
-    .line 207
     invoke-direct {p0}, Lcom/android/server/power/PowerHistorian$Record;-><init>()V
 
-    .line 208
     iput-object p1, p0, Lcom/android/server/power/PowerHistorian$WakeLockReleaseRecord;->mWakeLock:Lcom/android/server/power/PowerManagerService$WakeLock;
 
-    .line 209
     iput-wide p2, p0, Lcom/android/server/power/PowerHistorian$WakeLockReleaseRecord;->mElapsedTimeMillis:J
 
     return-void
@@ -30,7 +27,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 214
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,7 +39,6 @@
 
     iget-wide v1, p0, Lcom/android/server/power/PowerHistorian$WakeLockReleaseRecord;->mElapsedTimeMillis:J
 
-    .line 216
     invoke-static {v1, v2}, Landroid/util/TimeUtils;->formatDuration(J)Ljava/lang/String;
 
     move-result-object v1
@@ -54,7 +49,6 @@
 
     const-string v2, " %-18s"
 
-    .line 215
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1

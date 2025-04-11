@@ -13,15 +13,12 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 0
 
-    .line 99
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
-    .line 100
     invoke-interface {p0, p1}, Lcom/android/server/wm/AnimationAdapter;->dumpDebug(Landroid/util/proto/ProtoOutputStream;)V
 
-    .line 101
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -30,7 +27,6 @@
 .method public getBackgroundColor()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -42,7 +38,6 @@
 .method public getShowBackground()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -60,7 +55,6 @@
 .method public shouldDeferAnimationFinish(Ljava/lang/Runnable;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)V
     .locals 0
 
-    .line 705
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$8;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 3
 
-    .line 708
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$8;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->-$$Nest$fgetmCoverHideAnimator(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)Lcom/android/server/sepunion/cover/CoverHideAnimator;
@@ -42,7 +40,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/sepunion/cover/CoverHideAnimator;->playCoverHideAnimation(Ljava/lang/Runnable;)V
 
-    .line 709
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$8;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->-$$Nest$fgetmCoverStateLock(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)Ljava/lang/Object;
@@ -51,7 +48,6 @@
 
     monitor-enter v0
 
-    .line 710
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$8;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
@@ -81,7 +77,6 @@
 
     invoke-virtual {v1, v2, p0}, Lcom/android/server/sepunion/cover/StateNotifier;->updatePowerState(IZ)V
 
-    .line 711
     monitor-exit v0
 
     return-void

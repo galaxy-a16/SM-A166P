@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1685
     iput-object p1, p0, Lcom/android/server/BatteryService$14;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 1687
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -33,7 +31,6 @@
 
     goto :goto_0
 
-    .line 1689
     :cond_0
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -43,7 +40,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1690
     iget-object p1, p0, Lcom/android/server/BatteryService$14;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmSkipActionBatteryChangedHandler(Lcom/android/server/BatteryService;)Landroid/os/Handler;
@@ -54,7 +50,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 1691
     iget-object p1, p0, Lcom/android/server/BatteryService$14;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmLock(Lcom/android/server/BatteryService;)Ljava/lang/Object;
@@ -63,7 +58,6 @@
 
     monitor-enter p1
 
-    .line 1692
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$14;->this$0:Lcom/android/server/BatteryService;
 
@@ -73,19 +67,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 1693
     iget-object v0, p0, Lcom/android/server/BatteryService$14;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$msendBatteryChangedIntentLocked(Lcom/android/server/BatteryService;)V
 
-    .line 1694
     iget-object p0, p0, Lcom/android/server/BatteryService$14;->this$0:Lcom/android/server/BatteryService;
 
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/android/server/BatteryService;->-$$Nest$fputmIsSkipActionBatteryChanged(Lcom/android/server/BatteryService;Z)V
 
-    .line 1696
     :cond_1
     monitor-exit p1
 

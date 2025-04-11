@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;)V
     .locals 0
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -36,7 +34,6 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 1
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$1;->counter:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
@@ -57,7 +54,6 @@
 
     move-result-object p0
 
-    .line 66
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V

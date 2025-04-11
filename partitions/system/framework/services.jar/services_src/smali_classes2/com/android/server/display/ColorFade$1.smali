@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/ColorFade;)V
     .locals 0
 
-    .line 851
     iput-object p1, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,10 +26,8 @@
 .method public onResolutionChanged()V
     .locals 2
 
-    .line 854
     monitor-enter p0
 
-    .line 855
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
@@ -38,7 +35,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/ColorFade;->-$$Nest$fputmIsResolutionChanged(Lcom/android/server/display/ColorFade;Z)V
 
-    .line 856
     monitor-exit p0
 
     return-void

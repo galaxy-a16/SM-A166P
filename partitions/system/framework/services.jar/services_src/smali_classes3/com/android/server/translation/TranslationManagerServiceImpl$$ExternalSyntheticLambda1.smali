@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/translation/TranslationManagerServiceImpl$$ExternalSyntheticLambda1;->f$0:Landroid/os/Bundle;
@@ -27,7 +26,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/translation/TranslationManagerServiceImpl$$ExternalSyntheticLambda1;->f$0:Landroid/os/Bundle;
 
     check-cast p1, Landroid/os/IRemoteCallback;

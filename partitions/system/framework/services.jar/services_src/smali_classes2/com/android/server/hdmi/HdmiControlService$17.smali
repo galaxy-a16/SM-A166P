@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;Landroid/hardware/hdmi/IHdmiCecVolumeControlFeatureListener;)V
     .locals 0
 
-    .line 3143
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$17;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$17;->val$listener:Landroid/hardware/hdmi/IHdmiCecVolumeControlFeatureListener;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 5
 
-    .line 3147
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$17;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmLock(Lcom/android/server/hdmi/HdmiControlService;)Ljava/lang/Object;
@@ -40,7 +38,6 @@
 
     monitor-enter v0
 
-    .line 3149
     :try_start_0
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$17;->val$listener:Landroid/hardware/hdmi/IHdmiCecVolumeControlFeatureListener;
 
@@ -68,7 +65,6 @@
     :try_start_1
     const-string v2, "HdmiControlService"
 
-    .line 3151
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +87,6 @@
 
     invoke-static {v2, p0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3154
     :goto_0
     monitor-exit v0
 

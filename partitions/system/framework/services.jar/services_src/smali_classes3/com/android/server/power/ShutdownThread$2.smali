@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/ShutdownThread;)V
     .locals 0
 
-    .line 728
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$2;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 731
     iget-object p0, p0, Lcom/android/server/power/ShutdownThread$2;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-virtual {p0}, Lcom/android/server/power/ShutdownThread;->actionDone()V

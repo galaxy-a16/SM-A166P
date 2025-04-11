@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/DockObserver;)V
     .locals 0
 
-    .line 535
     iput-object p1, p0, Lcom/android/server/DockObserver$3;->this$0:Lcom/android/server/DockObserver;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string v0, "DockObserver"
 
-    .line 538
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,14 +45,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 539
     iget-object v0, p0, Lcom/android/server/DockObserver$3;->this$0:Lcom/android/server/DockObserver;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/android/server/DockObserver;->-$$Nest$fputmLastUeventDevice(Lcom/android/server/DockObserver;I)V
 
-    .line 542
     :try_start_0
     iget-object v0, p0, Lcom/android/server/DockObserver$3;->this$0:Lcom/android/server/DockObserver;
 
@@ -66,7 +62,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 544
     :try_start_1
     iget-object v1, p0, Lcom/android/server/DockObserver$3;->this$0:Lcom/android/server/DockObserver;
 
@@ -78,7 +73,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/DockObserver;->-$$Nest$fputmUsbpdIds(Lcom/android/server/DockObserver;Ljava/lang/String;)V
 
-    .line 546
     iget-object p0, p0, Lcom/android/server/DockObserver$3;->this$0:Lcom/android/server/DockObserver;
 
     const-string v1, "SWITCH_STATE"
@@ -93,7 +87,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/DockObserver;->-$$Nest$msetActualDockStateLocked(Lcom/android/server/DockObserver;I)V
 
-    .line 547
     monitor-exit v0
 
     goto :goto_0
@@ -113,7 +106,6 @@
     :catch_0
     const-string p0, "DockObserver"
 
-    .line 549
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

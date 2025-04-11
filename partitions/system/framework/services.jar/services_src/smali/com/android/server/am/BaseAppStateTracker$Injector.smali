@@ -49,7 +49,6 @@
 .method public currentTimeMillis()J
     .locals 2
 
-    .line 351
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -60,7 +59,6 @@
 .method public getActivityManagerInternal()Landroid/app/ActivityManagerInternal;
     .locals 0
 
-    .line 324
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
     return-object p0
@@ -69,7 +67,6 @@
 .method public getBatteryManagerInternal()Landroid/os/BatteryManagerInternal;
     .locals 0
 
-    .line 328
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mBatteryManagerInternal:Landroid/os/BatteryManagerInternal;
 
     return-object p0
@@ -78,7 +75,6 @@
 .method public getBatteryStatsInternal()Landroid/os/BatteryStatsInternal;
     .locals 0
 
-    .line 332
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mBatteryStatsInternal:Landroid/os/BatteryStatsInternal;
 
     return-object p0
@@ -87,7 +83,6 @@
 .method public getIAppOpsService()Lcom/android/internal/app/IAppOpsService;
     .locals 0
 
-    .line 391
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mIAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
     return-object p0
@@ -96,7 +91,6 @@
 .method public getMediaSessionManager()Landroid/media/session/MediaSessionManager;
     .locals 0
 
-    .line 375
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mMediaSessionManager:Landroid/media/session/MediaSessionManager;
 
     return-object p0
@@ -105,7 +99,6 @@
 .method public getPackageManager()Landroid/content/pm/PackageManager;
     .locals 0
 
-    .line 355
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mPackageManager:Landroid/content/pm/PackageManager;
 
     return-object p0
@@ -114,7 +107,6 @@
 .method public getPackageManagerInternal()Landroid/content/pm/PackageManagerInternal;
     .locals 0
 
-    .line 359
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
     return-object p0
@@ -123,7 +115,6 @@
 .method public getPermissionManager()Landroid/permission/PermissionManager;
     .locals 0
 
-    .line 363
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mPermissionManager:Landroid/permission/PermissionManager;
 
     return-object p0
@@ -132,7 +123,6 @@
 .method public getPermissionManagerServiceInternal()Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
     .locals 0
 
-    .line 367
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mPermissionManagerServiceInternal:Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
     return-object p0
@@ -141,7 +131,6 @@
 .method public getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
     .locals 0
 
-    .line 336
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mAppStatePolicy:Lcom/android/server/am/BaseAppStatePolicy;
 
     return-object p0
@@ -150,7 +139,6 @@
 .method public getServiceStartForegroundTimeout()J
     .locals 2
 
-    .line 379
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
     invoke-virtual {p0}, Landroid/app/ActivityManagerInternal;->getServiceStartForegroundTimeout()I
@@ -165,7 +153,6 @@
 .method public getUserManagerInternal()Lcom/android/server/pm/UserManagerInternal;
     .locals 0
 
-    .line 344
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
     return-object p0
@@ -174,7 +161,6 @@
 .method public onSystemReady()V
     .locals 2
 
-    .line 301
     const-class v0, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -185,7 +171,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
-    .line 302
     const-class v0, Landroid/os/BatteryManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -196,7 +181,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mBatteryManagerInternal:Landroid/os/BatteryManagerInternal;
 
-    .line 303
     const-class v0, Landroid/os/BatteryStatsInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -207,7 +191,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mBatteryStatsInternal:Landroid/os/BatteryStatsInternal;
 
-    .line 304
     const-class v0, Lcom/android/server/DeviceIdleInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -218,7 +201,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mDeviceIdleInternal:Lcom/android/server/DeviceIdleInternal;
 
-    .line 305
     const-class v0, Lcom/android/server/pm/UserManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -229,7 +211,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
-    .line 306
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -240,7 +221,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
-    .line 307
     const-class v0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -251,21 +231,18 @@
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mPermissionManagerServiceInternal:Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
-    .line 309
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mAppStatePolicy:Lcom/android/server/am/BaseAppStatePolicy;
 
     iget-object v0, v0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     iget-object v0, v0, Lcom/android/server/am/BaseAppStateTracker;->mContext:Landroid/content/Context;
 
-    .line 310
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 311
     const-class v1, Landroid/app/AppOpsManager;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -276,7 +253,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mAppOpsManager:Landroid/app/AppOpsManager;
 
-    .line 312
     const-class v1, Landroid/media/session/MediaSessionManager;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -287,7 +263,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mMediaSessionManager:Landroid/media/session/MediaSessionManager;
 
-    .line 313
     const-class v1, Landroid/permission/PermissionManager;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -298,7 +273,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mPermissionManager:Landroid/permission/PermissionManager;
 
-    .line 314
     const-class v1, Landroid/app/role/RoleManager;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -309,7 +283,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mRoleManager:Landroid/app/role/RoleManager;
 
-    .line 315
     const-class v0, Lcom/android/server/notification/NotificationManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -322,19 +295,16 @@
 
     const-string v0, "appops"
 
-    .line 318
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 317
     invoke-static {v0}, Lcom/android/internal/app/IAppOpsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IAppOpsService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mIAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
-    .line 320
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;
 
     move-result-object p0
@@ -347,7 +317,6 @@
 .method public setPolicy(Lcom/android/server/am/BaseAppStatePolicy;)V
     .locals 0
 
-    .line 297
     iput-object p1, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mAppStatePolicy:Lcom/android/server/am/BaseAppStatePolicy;
 
     return-void

@@ -19,7 +19,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/HqmDataDispatcher$Timer-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/power/HqmDataDispatcher$Timer;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
 .method public start()V
     .locals 2
 
-    .line 534
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -43,7 +41,6 @@
 .method public stop()F
     .locals 4
 
-    .line 538
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0

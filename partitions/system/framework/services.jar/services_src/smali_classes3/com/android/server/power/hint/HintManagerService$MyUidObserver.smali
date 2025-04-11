@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$X_ORSMbLLWaRwaNTRolOsVjBgEY(Lcom/android/server/power/hint/HintManagerService$MyUidObserver;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->lambda$onUidGone$0(I)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$fdbZUOLAIV_9Kg99wGvHWv5K7Ek(Lcom/android/server/power/hint/HintManagerService$MyUidObserver;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->lambda$onUidStateChanged$1(II)V
 
     return-void
@@ -31,12 +29,10 @@
 .method public constructor <init>(Lcom/android/server/power/hint/HintManagerService;)V
     .locals 0
 
-    .line 250
     iput-object p1, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
 
-    .line 251
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -49,7 +45,6 @@
 .method private synthetic lambda$onUidGone$0(I)V
     .locals 6
 
-    .line 263
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -58,7 +53,6 @@
 
     monitor-enter v0
 
-    .line 264
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
@@ -78,12 +72,10 @@
 
     if-nez v1, :cond_0
 
-    .line 266
     monitor-exit v0
 
     return-void
 
-    .line 268
     :cond_0
     invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
 
@@ -94,14 +86,12 @@
     :goto_0
     if-ltz v2, :cond_2
 
-    .line 270
     invoke-virtual {v1, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/util/ArraySet;
 
-    .line 271
     invoke-virtual {v3}, Landroid/util/ArraySet;->size()I
 
     move-result v4
@@ -111,7 +101,6 @@
     :goto_1
     if-ltz v4, :cond_1
 
-    .line 272
     invoke-virtual {v3, v4}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -129,13 +118,11 @@
 
     goto :goto_0
 
-    .line 275
     :cond_2
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->mProcStatesCache:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 276
     monitor-exit v0
 
     return-void
@@ -153,7 +140,6 @@
 .method private synthetic lambda$onUidStateChanged$1(II)V
     .locals 2
 
-    .line 287
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -162,7 +148,6 @@
 
     monitor-enter v0
 
-    .line 288
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->mProcStatesCache:Landroid/util/SparseArray;
 
@@ -172,7 +157,6 @@
 
     invoke-virtual {v1, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 289
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {p0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmActiveSessions(Lcom/android/server/power/hint/HintManagerService;)Landroid/util/ArrayMap;
@@ -191,12 +175,10 @@
 
     if-nez p0, :cond_0
 
-    .line 291
     monitor-exit v0
 
     return-void
 
-    .line 293
     :cond_0
     invoke-virtual {p0}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
@@ -219,7 +201,6 @@
 
     check-cast p1, Landroid/util/ArraySet;
 
-    .line 294
     invoke-virtual {p1}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -237,12 +218,10 @@
 
     check-cast p2, Lcom/android/server/power/hint/HintManagerService$AppHintSession;
 
-    .line 295
     invoke-static {p2}, Lcom/android/server/power/hint/HintManagerService$AppHintSession;->-$$Nest$monProcStateChanged(Lcom/android/server/power/hint/HintManagerService$AppHintSession;)V
 
     goto :goto_0
 
-    .line 298
     :cond_2
     monitor-exit v0
 
@@ -263,7 +242,6 @@
 .method public isUidForeground(I)Z
     .locals 3
 
-    .line 254
     iget-object v0, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->this$0:Lcom/android/server/power/hint/HintManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/hint/HintManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/hint/HintManagerService;)Ljava/lang/Object;
@@ -272,7 +250,6 @@
 
     monitor-enter v0
 
-    .line 255
     :try_start_0
     iget-object p0, p0, Lcom/android/server/power/hint/HintManagerService$MyUidObserver;->mProcStatesCache:Landroid/util/SparseArray;
 
@@ -309,7 +286,6 @@
     :catchall_0
     move-exception p0
 
-    .line 257
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -320,7 +296,6 @@
 .method public onUidGone(IZ)V
     .locals 1
 
-    .line 262
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p2
@@ -337,7 +312,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 286
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p3

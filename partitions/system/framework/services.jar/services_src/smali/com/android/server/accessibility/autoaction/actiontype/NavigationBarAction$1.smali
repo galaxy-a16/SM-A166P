@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;)V
     .locals 0
 
-    .line 90
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/NavigationBarAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,11 +28,9 @@
 
     const-wide/16 v0, 0x64
 
-    .line 93
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 99
     new-instance p0, Landroid/app/Instrumentation;
 
     invoke-direct {p0}, Landroid/app/Instrumentation;-><init>()V
@@ -49,7 +46,6 @@
     :catch_0
     move-exception p0
 
-    .line 101
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

@@ -13,17 +13,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 185
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
-    .line 191
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -36,7 +33,6 @@
 .method public static errorToFinishState(I)I
     .locals 1
 
-    .line 0
     const/4 v0, -0x1
 
     if-eq p0, v0, :cond_1
@@ -61,7 +57,6 @@
 .method public static getUserTypeForStatsd(Ljava/lang/String;)I
     .locals 10
 
-    .line 228
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -277,7 +272,6 @@
 .method public static journeyToEvent(I)I
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const/4 p0, 0x0
@@ -337,12 +331,10 @@
 .method public final findUserJourneySession(I)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
     .locals 5
 
-    .line 342
     iget-object v0, p0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 343
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
@@ -355,19 +347,16 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 345
     iget-object v3, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
-    .line 346
     div-int/lit8 v4, v3, 0x64
 
     if-ne v4, p1, :cond_0
 
-    .line 347
     iget-object p0, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -385,7 +374,6 @@
 
     goto :goto_0
 
-    .line 350
     :cond_1
     monitor-exit v0
 
@@ -406,18 +394,15 @@
 .method public finishAndClearIncompleteUserJourney(II)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
     .locals 11
 
-    .line 369
     iget-object v0, p0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 370
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/UserJourneyLogger;->getUserJourneyKey(II)I
 
     move-result v1
 
-    .line 371
     iget-object v2, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -428,10 +413,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 373
     iget v3, v2, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;->mJourney:I
 
-    .line 376
     invoke-static {v3}, Lcom/android/server/pm/UserJourneyLogger;->journeyToEvent(I)I
 
     move-result v6
@@ -446,14 +429,12 @@
 
     move v5, p1
 
-    .line 373
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleEventOccurred(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIII)V
 
     const/4 v6, -0x1
 
     const-string v3, ""
 
-    .line 385
     invoke-static {v3}, Lcom/android/server/pm/UserJourneyLogger;->getUserTypeForStatsd(Ljava/lang/String;)I
 
     move-result v8
@@ -470,20 +451,16 @@
 
     move v7, p1
 
-    .line 380
     invoke-virtual/range {v3 .. v10}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleJourneyReported(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIIIII)V
 
-    .line 387
     iget-object p0, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 389
     monitor-exit v0
 
     return-object v2
 
-    .line 391
     :cond_0
     monitor-exit v0
 
@@ -504,7 +481,6 @@
 .method public final getUserJourneyKey(II)I
     .locals 0
 
-    .line 0
     mul-int/lit8 p1, p1, 0x64
 
     add-int/2addr p1, p2
@@ -515,12 +491,10 @@
 .method public logDelayedUserJourneyFinishWithError(ILandroid/content/pm/UserInfo;II)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
     .locals 11
 
-    .line 463
     iget-object v0, p0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 464
     :try_start_0
     iget v1, p2, Landroid/content/pm/UserInfo;->id:I
 
@@ -528,7 +502,6 @@
 
     move-result v1
 
-    .line 465
     iget-object v2, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -539,12 +512,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 467
     iget v7, p2, Landroid/content/pm/UserInfo;->id:I
 
     iget-object v3, p2, Landroid/content/pm/UserInfo;->userType:Ljava/lang/String;
 
-    .line 470
     invoke-static {v3}, Lcom/android/server/pm/UserJourneyLogger;->getUserTypeForStatsd(Ljava/lang/String;)I
 
     move-result v8
@@ -561,20 +532,16 @@
 
     move v10, p4
 
-    .line 467
     invoke-virtual/range {v3 .. v10}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleJourneyReported(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIIIII)V
 
-    .line 473
     iget-object p0, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 475
     monitor-exit v0
 
     return-object v2
 
-    .line 477
     :cond_0
     monitor-exit v0
 
@@ -597,7 +564,6 @@
 
     move-object v0, p0
 
-    .line 488
     iget-object v9, v0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v9
@@ -606,13 +572,11 @@
 
     move/from16 v8, p3
 
-    .line 489
     :try_start_0
     invoke-virtual {p0, v8, p1}, Lcom/android/server/pm/UserJourneyLogger;->getUserJourneyKey(II)I
 
     move-result v10
 
-    .line 490
     iget-object v1, v0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v10}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -623,7 +587,6 @@
 
     check-cast v11, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
 
-    .line 493
     invoke-static {p1}, Lcom/android/server/pm/UserJourneyLogger;->journeyToEvent(I)I
 
     move-result v4
@@ -638,10 +601,8 @@
 
     move/from16 v3, p3
 
-    .line 492
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleEventOccurred(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIII)V
 
-    .line 499
     invoke-static/range {p4 .. p4}, Lcom/android/server/pm/UserJourneyLogger;->getUserTypeForStatsd(Ljava/lang/String;)I
 
     move-result v6
@@ -662,15 +623,12 @@
 
     move v8, v12
 
-    .line 497
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleJourneyReported(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIIIII)V
 
-    .line 502
     iget-object v0, v0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v10}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 503
     monitor-exit v9
 
     return-object v11
@@ -678,7 +636,6 @@
     :catchall_0
     move-exception v0
 
-    .line 504
     monitor-exit v9
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -689,7 +646,6 @@
 .method public logUserCreateJourneyFinish(ILandroid/content/pm/UserInfo;)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
     .locals 11
 
-    .line 514
     iget-object v0, p0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -698,13 +654,11 @@
 
     const/4 v2, 0x4
 
-    .line 517
     :try_start_0
     invoke-virtual {p0, v1, v2}, Lcom/android/server/pm/UserJourneyLogger;->getUserJourneyKey(II)I
 
     move-result v1
 
-    .line 518
     iget-object v2, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -715,7 +669,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 520
     iget v5, p2, Landroid/content/pm/UserInfo;->id:I
 
     const/4 v6, 0x3
@@ -732,12 +685,10 @@
 
     const/4 v5, 0x4
 
-    .line 526
     iget v7, p2, Landroid/content/pm/UserInfo;->id:I
 
     iget-object v3, p2, Landroid/content/pm/UserInfo;->userType:Ljava/lang/String;
 
-    .line 529
     invoke-static {v3}, Lcom/android/server/pm/UserJourneyLogger;->getUserTypeForStatsd(Ljava/lang/String;)I
 
     move-result v8
@@ -752,20 +703,16 @@
 
     move v6, p1
 
-    .line 526
     invoke-virtual/range {v3 .. v10}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleJourneyReported(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIIIII)V
 
-    .line 532
     iget-object p0, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 534
     monitor-exit v0
 
     return-object v2
 
-    .line 536
     :cond_0
     monitor-exit v0
 
@@ -786,7 +733,6 @@
 .method public logUserJourneyBegin(II)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
     .locals 11
 
-    .line 545
     invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
     move-result-object v0
@@ -799,31 +745,25 @@
 
     move-result-wide v0
 
-    .line 546
     iget-object v2, p0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 547
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/UserJourneyLogger;->getUserJourneyKey(II)I
 
     move-result v3
 
-    .line 548
     new-instance v10, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
 
     invoke-direct {v10, v0, v1, p2}, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;-><init>(JI)V
 
-    .line 550
     iget-object p2, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {p2, v3, v10}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 552
     iget p2, v10, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;->mJourney:I
 
-    .line 554
     invoke-static {p2}, Lcom/android/server/pm/UserJourneyLogger;->journeyToEvent(I)I
 
     move-result v7
@@ -838,10 +778,8 @@
 
     move v6, p1
 
-    .line 552
     invoke-virtual/range {v4 .. v9}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleEventOccurred(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIII)V
 
-    .line 558
     monitor-exit v2
 
     return-object v10
@@ -849,7 +787,6 @@
     :catchall_0
     move-exception p0
 
-    .line 559
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -862,7 +799,6 @@
 
     const/4 v0, -0x1
 
-    .line 400
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/pm/UserJourneyLogger;->logUserJourneyFinishWithError(ILandroid/content/pm/UserInfo;II)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
 
     move-result-object p0
@@ -877,18 +813,15 @@
 
     move-object v7, p2
 
-    .line 433
     iget-object v9, v0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v9
 
-    .line 434
     :try_start_0
     invoke-static/range {p4 .. p4}, Lcom/android/server/pm/UserJourneyLogger;->errorToFinishState(I)I
 
     move-result v5
 
-    .line 435
     iget v1, v7, Landroid/content/pm/UserInfo;->id:I
 
     move v8, p3
@@ -897,7 +830,6 @@
 
     move-result v10
 
-    .line 436
     iget-object v1, v0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v10}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -910,12 +842,10 @@
 
     if-eqz v11, :cond_0
 
-    .line 438
     iget v3, v7, Landroid/content/pm/UserInfo;->id:I
 
     iget v1, v11, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;->mJourney:I
 
-    .line 440
     invoke-static {v1}, Lcom/android/server/pm/UserJourneyLogger;->journeyToEvent(I)I
 
     move-result v4
@@ -926,15 +856,12 @@
 
     move/from16 v6, p4
 
-    .line 438
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleEventOccurred(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIII)V
 
-    .line 444
     iget v5, v7, Landroid/content/pm/UserInfo;->id:I
 
     iget-object v1, v7, Landroid/content/pm/UserInfo;->userType:Ljava/lang/String;
 
-    .line 447
     invoke-static {v1}, Lcom/android/server/pm/UserJourneyLogger;->getUserTypeForStatsd(Ljava/lang/String;)I
 
     move-result v6
@@ -951,20 +878,16 @@
 
     move/from16 v8, p4
 
-    .line 444
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleJourneyReported(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIIIII)V
 
-    .line 450
     iget-object v0, v0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v10}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 452
     monitor-exit v9
 
     return-object v11
 
-    .line 454
     :cond_0
     monitor-exit v9
 
@@ -985,7 +908,6 @@
 .method public logUserLifecycleEvent(III)V
     .locals 6
 
-    .line 332
     invoke-virtual {p0, p1}, Lcom/android/server/pm/UserJourneyLogger;->findUserJourneySession(I)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
 
     move-result-object v1
@@ -1000,7 +922,6 @@
 
     move v4, p3
 
-    .line 333
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/pm/UserJourneyLogger;->logUserLifecycleEventOccurred(Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;IIII)V
 
     return-void
@@ -1025,12 +946,10 @@
 
     move/from16 v4, p3
 
-    .line 308
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/pm/UserJourneyLogger;->writeUserLifecycleEventOccurred(JIIII)V
 
     goto :goto_0
 
-    .line 311
     :cond_0
     iget-wide v8, v0, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;->mSessionId:J
 
@@ -1075,12 +994,10 @@
 
     move/from16 v7, p6
 
-    .line 277
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/pm/UserJourneyLogger;->writeUserLifecycleJourneyReported(JIIIIIIJ)V
 
     goto :goto_0
 
-    .line 280
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1090,7 +1007,6 @@
 
     sub-long v14, v1, v3
 
-    .line 281
     iget-wide v6, v0, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;->mSessionId:J
 
     move-object/from16 v5, p0
@@ -1116,12 +1032,10 @@
 .method public logUserSwitchJourneyFinish(ILandroid/content/pm/UserInfo;)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
     .locals 6
 
-    .line 410
     iget-object v0, p0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 411
     :try_start_0
     iget v1, p2, Landroid/content/pm/UserInfo;->id:I
 
@@ -1131,7 +1045,6 @@
 
     move-result v1
 
-    .line 412
     iget v3, p2, Landroid/content/pm/UserInfo;->id:I
 
     const/4 v4, 0x1
@@ -1140,7 +1053,6 @@
 
     move-result v3
 
-    .line 414
     iget-object v5, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v1}, Landroid/util/SparseArray;->contains(I)Z
@@ -1149,7 +1061,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 415
     invoke-virtual {p0, p1, p2, v2}, Lcom/android/server/pm/UserJourneyLogger;->logUserJourneyFinish(ILandroid/content/pm/UserInfo;I)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
 
     move-result-object p0
@@ -1158,7 +1069,6 @@
 
     return-object p0
 
-    .line 419
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
@@ -1168,7 +1078,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 420
     invoke-virtual {p0, p1, p2, v4}, Lcom/android/server/pm/UserJourneyLogger;->logUserJourneyFinish(ILandroid/content/pm/UserInfo;I)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
 
     move-result-object p0
@@ -1177,7 +1086,6 @@
 
     return-object p0
 
-    .line 424
     :cond_1
     monitor-exit v0
 
@@ -1188,7 +1096,6 @@
     :catchall_0
     move-exception p0
 
-    .line 425
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1199,7 +1106,6 @@
 .method public startSessionForDelayedJourney(IIJ)Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
     .locals 11
 
-    .line 569
     invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
     move-result-object v0
@@ -1212,18 +1118,15 @@
 
     move-result-wide v6
 
-    .line 570
     iget-object v0, p0, Lcom/android/server/pm/UserJourneyLogger;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 571
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/UserJourneyLogger;->getUserJourneyKey(II)I
 
     move-result p1
 
-    .line 572
     new-instance v1, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;
 
     move-object v5, v1
@@ -1234,12 +1137,10 @@
 
     invoke-direct/range {v5 .. v10}, Lcom/android/server/pm/UserJourneyLogger$UserJourneySession;-><init>(JIJ)V
 
-    .line 574
     iget-object p0, p0, Lcom/android/server/pm/UserJourneyLogger;->mUserIdToUserJourneyMap:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 575
     monitor-exit v0
 
     return-object v1
@@ -1247,7 +1148,6 @@
     :catchall_0
     move-exception p0
 
-    .line 576
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1270,7 +1170,6 @@
 
     move v6, p6
 
-    .line 322
     invoke-static/range {v0 .. v6}, Lcom/android/internal/util/FrameworkStatsLog;->write(IJIIII)V
 
     return-void
@@ -1297,7 +1196,6 @@
 
     move-wide/from16 v9, p9
 
-    .line 293
     invoke-static/range {v0 .. v10}, Lcom/android/internal/util/FrameworkStatsLog;->write(IJIIIIIIJ)V
 
     return-void

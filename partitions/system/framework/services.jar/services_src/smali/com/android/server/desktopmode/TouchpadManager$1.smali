@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$rcQzYH5TcQqtfA7y7L8VoyQjQX4(Lcom/android/server/desktopmode/TouchpadManager$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/desktopmode/TouchpadManager$1;->lambda$onDismiss$0()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/TouchpadManager;)V
     .locals 0
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/desktopmode/TouchpadManager$1;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     invoke-direct {p0}, Lcom/android/server/desktopmode/UiManager$InternalUiCallback;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onDismiss$0()V
     .locals 0
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager$1;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/TouchpadManager;->-$$Nest$mupdateTouchpadOnDismiss(Lcom/android/server/desktopmode/TouchpadManager;)V
@@ -44,7 +41,6 @@
 .method public onDismiss()V
     .locals 2
 
-    .line 64
     iget-object v0, p0, Lcom/android/server/desktopmode/TouchpadManager$1;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/TouchpadManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/TouchpadManager;)Landroid/os/Handler;
@@ -63,7 +59,6 @@
 .method public onShow()V
     .locals 1
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/desktopmode/TouchpadManager$1;->this$0:Lcom/android/server/desktopmode/TouchpadManager;
 
     const/4 v0, 0x1

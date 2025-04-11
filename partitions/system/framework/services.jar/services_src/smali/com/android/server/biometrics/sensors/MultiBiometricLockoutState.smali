@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$t_uyAl934-W-ev5LkYhIsoCcyzQ(JLjava/util/Map$Entry;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->lambda$toString$0(JLjava/util/Map$Entry;)Ljava/lang/String;
 
     move-result-object p0
@@ -24,17 +23,14 @@
 .method public constructor <init>(Ljava/time/Clock;)V
     .locals 1
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->mCanUserAuthenticate:Ljava/util/Map;
 
-    .line 47
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->mClock:Ljava/time/Clock;
 
     return-void
@@ -43,7 +39,6 @@
 .method public static synthetic lambda$toString$0(JLjava/util/Map$Entry;)Ljava/lang/String;
     .locals 0
 
-    .line 169
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p2
@@ -62,7 +57,6 @@
 .method public clearPermanentLockOut(II)V
     .locals 3
 
-    .line 86
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->getAuthMapForUser(I)Ljava/util/Map;
 
     move-result-object p0
@@ -81,7 +75,6 @@
 
     if-eq p2, p1, :cond_2
 
-    .line 98
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,7 +95,6 @@
 
     return-void
 
-    .line 89
     :cond_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -116,7 +108,6 @@
 
     invoke-static {p2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fputmPermanentlyLockedOut(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;Z)V
 
-    .line 92
     :cond_1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -130,7 +121,6 @@
 
     invoke-static {p2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fputmPermanentlyLockedOut(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;Z)V
 
-    .line 95
     :cond_2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -150,7 +140,6 @@
 .method public clearTimedLockout(II)V
     .locals 3
 
-    .line 120
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->getAuthMapForUser(I)Ljava/util/Map;
 
     move-result-object p0
@@ -169,7 +158,6 @@
 
     if-eq p2, p1, :cond_2
 
-    .line 132
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +178,6 @@
 
     return-void
 
-    .line 123
     :cond_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -204,7 +191,6 @@
 
     invoke-static {p2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fputmTimedLockout(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;Z)V
 
-    .line 126
     :cond_1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -218,7 +204,6 @@
 
     invoke-static {p2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fputmTimedLockout(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;Z)V
 
-    .line 129
     :cond_2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -238,14 +223,12 @@
 .method public final createUnlockedMap()Ljava/util/Map;
     .locals 3
 
-    .line 51
     new-instance p0, Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     const/16 v0, 0xf
 
-    .line 52
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -254,40 +237,32 @@
 
     const/4 v2, 0x0
 
-    .line 53
     invoke-direct {v1, v0, v2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;-><init>(Ljava/lang/Integer;ZZ)V
 
-    .line 52
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const/16 v0, 0xff
 
-    .line 54
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     new-instance v1, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;
 
-    .line 55
     invoke-direct {v1, v0, v2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;-><init>(Ljava/lang/Integer;ZZ)V
 
-    .line 54
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const/16 v0, 0xfff
 
-    .line 56
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     new-instance v1, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;
 
-    .line 57
     invoke-direct {v1, v0, v2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;-><init>(Ljava/lang/Integer;ZZ)V
 
-    .line 56
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
@@ -296,7 +271,6 @@
 .method public final getAuthMapForUser(I)Ljava/util/Map;
     .locals 3
 
-    .line 62
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->mCanUserAuthenticate:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -309,7 +283,6 @@
 
     if-nez v0, :cond_0
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->mCanUserAuthenticate:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -322,7 +295,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 65
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->mCanUserAuthenticate:Ljava/util/Map;
 
@@ -342,12 +314,10 @@
 .method public getLockoutState(II)I
     .locals 1
 
-    .line 144
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->getAuthMapForUser(I)Ljava/util/Map;
 
     move-result-object p0
 
-    .line 145
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -360,7 +330,6 @@
 
     if-nez p1, :cond_0
 
-    .line 146
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -385,7 +354,6 @@
 
     return v0
 
-    .line 150
     :cond_0
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -397,7 +365,6 @@
 
     check-cast p0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;
 
-    .line 151
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fgetmPermanentlyLockedOut(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;)Z
 
     move-result p1
@@ -408,7 +375,6 @@
 
     return p0
 
-    .line 153
     :cond_1
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fgetmTimedLockout(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;)Z
 
@@ -427,7 +393,6 @@
 .method public setPermanentLockOut(II)V
     .locals 3
 
-    .line 69
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->getAuthMapForUser(I)Ljava/util/Map;
 
     move-result-object p0
@@ -446,7 +411,6 @@
 
     if-eq p2, p1, :cond_2
 
-    .line 81
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -467,7 +431,6 @@
 
     return-void
 
-    .line 72
     :cond_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -481,7 +444,6 @@
 
     invoke-static {p2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fputmPermanentlyLockedOut(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;Z)V
 
-    .line 75
     :cond_1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -495,7 +457,6 @@
 
     invoke-static {p2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fputmPermanentlyLockedOut(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;Z)V
 
-    .line 78
     :cond_2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -515,7 +476,6 @@
 .method public setTimedLockout(II)V
     .locals 3
 
-    .line 103
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->getAuthMapForUser(I)Ljava/util/Map;
 
     move-result-object p0
@@ -534,7 +494,6 @@
 
     if-eq p2, p1, :cond_2
 
-    .line 115
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -555,7 +514,6 @@
 
     return-void
 
-    .line 106
     :cond_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -569,7 +527,6 @@
 
     invoke-static {p2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fputmTimedLockout(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;Z)V
 
-    .line 109
     :cond_1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -583,7 +540,6 @@
 
     invoke-static {p2, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;->-$$Nest$fputmTimedLockout(Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState$AuthenticatorState;Z)V
 
-    .line 112
     :cond_2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -603,14 +559,12 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->mClock:Ljava/time/Clock;
 
     invoke-virtual {v0}, Ljava/time/Clock;->millis()J
 
     move-result-wide v0
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->mCanUserAuthenticate:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -636,7 +590,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 166
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -647,14 +600,12 @@
 
     move-result v4
 
-    .line 167
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/Map;
 
-    .line 168
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v3
@@ -673,7 +624,6 @@
 
     const-string v5, ", "
 
-    .line 170
     invoke-static {v5}, Ljava/util/stream/Collectors;->joining(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
 
     move-result-object v5
@@ -684,7 +634,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 171
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V

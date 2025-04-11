@@ -39,7 +39,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,7 +69,6 @@
 
     const/4 v3, 0x1
 
-    .line 155
     filled-new-array {v2, v3, v0, v1}, [I
 
     move-result-object v0
@@ -83,10 +81,8 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;Lcom/android/server/tare/EconomicPolicy$Injector;)V
     .locals 1
 
-    .line 178
     invoke-direct {p0, p1}, Lcom/android/server/tare/EconomicPolicy;-><init>(Lcom/android/server/tare/InternalResourceService;)V
 
-    .line 171
     new-instance p1, Landroid/util/KeyValueListParser;
 
     const/16 v0, 0x2c
@@ -95,28 +91,24 @@
 
     iput-object p1, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
-    .line 174
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
-    .line 175
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
-    .line 179
     iput-object p2, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mInjector:Lcom/android/server/tare/EconomicPolicy$Injector;
 
     const-string p1, ""
 
     const/4 p2, 0x0
 
-    .line 180
     invoke-virtual {p0, p1, p2}, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->loadConstants(Ljava/lang/String;Landroid/provider/DeviceConfig$Properties;)V
 
     return-void
@@ -129,13 +121,10 @@
 
     const-string v0, "Min satiated balance:"
 
-    .line 453
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 454
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 455
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceExempted:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -150,7 +139,6 @@
 
     invoke-virtual {v0}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 456
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceOther:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -165,7 +153,6 @@
 
     invoke-virtual {v0}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 457
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceIncrementalAppUpdater:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -180,10 +167,8 @@
 
     invoke-virtual {v0}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 458
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 459
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMaxSatiatedBalance:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -200,10 +185,8 @@
 
     const-string v0, "Consumption limits: ["
 
-    .line 460
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 461
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedConsumptionLimit:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -214,10 +197,8 @@
 
     const-string v0, ", "
 
-    .line 462
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 463
     iget-wide v1, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mInitialSatiatedConsumptionLimit:J
 
     invoke-static {v1, v2}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -226,10 +207,8 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 464
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 465
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMaxSatiatedConsumptionLimit:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -240,25 +219,20 @@
 
     const-string v0, "]"
 
-    .line 466
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 468
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
     const-string v0, "Actions:"
 
-    .line 469
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 470
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 471
     :goto_0
     iget-object v2, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
@@ -268,7 +242,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 472
     iget-object v2, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -283,22 +256,17 @@
 
     goto :goto_0
 
-    .line 474
     :cond_0
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 476
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
     const-string v1, "Rewards:"
 
-    .line 477
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 478
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 479
     :goto_1
     iget-object v1, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
@@ -308,7 +276,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 480
     iget-object v1, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -323,7 +290,6 @@
 
     goto :goto_1
 
-    .line 482
     :cond_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -333,7 +299,6 @@
 .method public getAction(I)Lcom/android/server/tare/EconomicPolicy$Action;
     .locals 0
 
-    .line 262
     iget-object p0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -348,7 +313,6 @@
 .method public getCostModifiers()[I
     .locals 0
 
-    .line 256
     sget-object p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->COST_MODIFIERS:[I
 
     return-object p0
@@ -357,7 +321,6 @@
 .method public getInitialSatiatedConsumptionLimit()J
     .locals 2
 
-    .line 240
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mInitialSatiatedConsumptionLimit:J
 
     return-wide v0
@@ -366,7 +329,6 @@
 .method public getMaxSatiatedBalance(ILjava/lang/String;)J
     .locals 3
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/tare/InternalResourceService;->isPackageRestricted(ILjava/lang/String;)Z
@@ -379,7 +341,6 @@
 
     return-wide p0
 
-    .line 219
     :cond_0
     iget-object v0, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
@@ -389,7 +350,6 @@
 
     if-nez v0, :cond_1
 
-    .line 221
     sget-object v0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -400,7 +360,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 222
     invoke-static {p1, p2}, Lcom/android/server/tare/TareUtils;->appToString(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -411,18 +370,15 @@
 
     move-result-object p1
 
-    .line 221
     invoke-static {v0, p1}, Landroid/util/Slog;->wtfStack(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 226
     :cond_1
     iget-boolean p1, v0, Lcom/android/server/tare/InstalledPackageInfo;->isSystemInstaller:Z
 
     if-eqz p1, :cond_3
 
-    .line 227
     iget-object p1, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {p1}, Lcom/android/server/tare/InternalResourceService;->getRealtimeSinceFirstSetupMs()J
@@ -445,12 +401,10 @@
     :goto_0
     if-eqz p1, :cond_3
 
-    .line 231
     iget-wide p0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMaxSatiatedConsumptionLimit:J
 
     return-wide p0
 
-    .line 235
     :cond_3
     :goto_1
     iget-wide p0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMaxSatiatedBalance:J
@@ -461,7 +415,6 @@
 .method public getMaxSatiatedConsumptionLimit()J
     .locals 2
 
-    .line 250
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMaxSatiatedConsumptionLimit:J
 
     return-wide v0
@@ -470,7 +423,6 @@
 .method public getMinSatiatedBalance(ILjava/lang/String;)J
     .locals 4
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/tare/InternalResourceService;->isPackageRestricted(ILjava/lang/String;)Z
@@ -483,7 +435,6 @@
 
     return-wide p0
 
-    .line 198
     :cond_0
     iget-object v0, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
@@ -493,12 +444,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 199
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceExempted:J
 
     goto :goto_0
 
-    .line 200
     :cond_1
     iget-object v0, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
@@ -508,16 +457,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 201
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceHeadlessSystemApp:J
 
     goto :goto_0
 
-    .line 203
     :cond_2
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceOther:J
 
-    .line 208
     :goto_0
     iget-object v2, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
@@ -527,14 +473,12 @@
 
     int-to-long p1, p1
 
-    .line 209
     iget-wide v2, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceIncrementalAppUpdater:J
 
     mul-long/2addr p1, v2
 
     add-long/2addr v0, p1
 
-    .line 211
     iget-wide p0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMaxSatiatedBalance:J
 
     invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->min(JJ)J
@@ -547,7 +491,6 @@
 .method public getMinSatiatedConsumptionLimit()J
     .locals 2
 
-    .line 245
     iget-wide v0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedConsumptionLimit:J
 
     return-wide v0
@@ -556,7 +499,6 @@
 .method public getReward(I)Lcom/android/server/tare/EconomicPolicy$Reward;
     .locals 0
 
-    .line 268
     iget-object p0, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -573,17 +515,14 @@
 
     move-object/from16 v9, p0
 
-    .line 273
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 274
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 277
     :try_start_0
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
@@ -598,14 +537,12 @@
     :catch_0
     move-exception v0
 
-    .line 279
     sget-object v1, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->TAG:Ljava/lang/String;
 
     const-string v2, "Global setting key incorrect: "
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 282
     :goto_0
     iget-object v2, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
@@ -623,7 +560,6 @@
 
     iput-wide v7, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceOther:J
 
-    .line 284
     iget-object v2, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v4, "js_min_satiated_balance_headless_system_app"
@@ -636,7 +572,6 @@
 
     iput-wide v7, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceHeadlessSystemApp:J
 
-    .line 288
     iget-object v2, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v4, "js_min_satiated_balance_exempted"
@@ -649,7 +584,6 @@
 
     iput-wide v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceExempted:J
 
-    .line 292
     iget-object v2, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v4, "js_min_satiated_balance_increment_updater"
@@ -664,7 +598,6 @@
 
     iput-wide v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedBalanceIncrementalAppUpdater:J
 
-    .line 295
     iget-object v2, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v4, "js_max_satiated_balance"
@@ -673,7 +606,6 @@
 
     const/4 v0, 0x1
 
-    .line 297
     invoke-static {v0}, Landroid/app/tare/EconomyManager;->arcToCake(I)J
 
     move-result-wide v7
@@ -686,35 +618,30 @@
 
     move-object/from16 v1, p0
 
-    .line 295
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;JJ)J
 
     move-result-wide v1
 
     iput-wide v1, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMaxSatiatedBalance:J
 
-    .line 298
     iget-object v2, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v4, "js_minimum_consumption_limit"
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_MIN_CONSUMPTION_LIMIT_CAKES:J
 
-    .line 300
     invoke-static {v0}, Landroid/app/tare/EconomyManager;->arcToCake(I)J
 
     move-result-wide v7
 
     move-object/from16 v1, p0
 
-    .line 298
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;JJ)J
 
     move-result-wide v7
 
     iput-wide v7, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMinSatiatedConsumptionLimit:J
 
-    .line 301
     iget-object v2, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v4, "js_initial_consumption_limit"
@@ -727,7 +654,6 @@
 
     iput-wide v7, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mInitialSatiatedConsumptionLimit:J
 
-    .line 304
     iget-object v2, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     const-string v4, "js_maximum_consumption_limit"
@@ -740,7 +666,6 @@
 
     iput-wide v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mMaxSatiatedConsumptionLimit:J
 
-    .line 308
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -755,7 +680,6 @@
 
     move-object/from16 v1, p0
 
-    .line 309
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -766,7 +690,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_MAX_START_BASE_PRICE_CAKES:J
 
-    .line 312
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -781,10 +704,8 @@
 
     const/high16 v1, 0x60000000
 
-    .line 308
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 315
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -801,7 +722,6 @@
 
     move-object/from16 v3, p2
 
-    .line 316
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -812,7 +732,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_MAX_RUNNING_BASE_PRICE_CAKES:J
 
-    .line 319
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -827,10 +746,8 @@
 
     const v1, 0x60000001
 
-    .line 315
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 322
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -847,7 +764,6 @@
 
     move-object/from16 v3, p2
 
-    .line 323
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -858,7 +774,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_HIGH_START_BASE_PRICE_CAKES:J
 
-    .line 326
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -873,10 +788,8 @@
 
     const v1, 0x60000002
 
-    .line 322
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 329
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -893,7 +806,6 @@
 
     move-object/from16 v3, p2
 
-    .line 330
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -904,7 +816,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_HIGH_RUNNING_BASE_PRICE_CAKES:J
 
-    .line 333
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -919,10 +830,8 @@
 
     const v1, 0x60000003
 
-    .line 329
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 336
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -939,7 +848,6 @@
 
     move-object/from16 v3, p2
 
-    .line 337
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -950,7 +858,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_DEFAULT_START_BASE_PRICE_CAKES:J
 
-    .line 340
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -965,10 +872,8 @@
 
     const v1, 0x60000004
 
-    .line 336
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 343
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -985,7 +890,6 @@
 
     move-object/from16 v3, p2
 
-    .line 344
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -996,7 +900,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_DEFAULT_RUNNING_BASE_PRICE_CAKES:J
 
-    .line 347
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -1011,10 +914,8 @@
 
     const v1, 0x60000005
 
-    .line 343
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 350
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -1031,7 +932,6 @@
 
     move-object/from16 v3, p2
 
-    .line 351
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -1042,7 +942,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_LOW_START_BASE_PRICE_CAKES:J
 
-    .line 354
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -1057,10 +956,8 @@
 
     const v1, 0x60000006
 
-    .line 350
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 357
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -1077,7 +974,6 @@
 
     move-object/from16 v3, p2
 
-    .line 358
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -1088,7 +984,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_LOW_RUNNING_BASE_PRICE_CAKES:J
 
-    .line 361
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -1103,10 +998,8 @@
 
     const v1, 0x60000007
 
-    .line 357
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 364
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -1123,7 +1016,6 @@
 
     move-object/from16 v3, p2
 
-    .line 365
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -1134,7 +1026,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_MIN_START_BASE_PRICE_CAKES:J
 
-    .line 368
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -1149,10 +1040,8 @@
 
     const v1, 0x60000008
 
-    .line 364
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 371
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -1169,7 +1058,6 @@
 
     move-object/from16 v3, p2
 
-    .line 372
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -1180,7 +1068,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_MIN_RUNNING_BASE_PRICE_CAKES:J
 
-    .line 375
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -1195,10 +1082,8 @@
 
     const v1, 0x60000009
 
-    .line 371
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 378
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     new-instance v7, Lcom/android/server/tare/EconomicPolicy$Action;
@@ -1215,7 +1100,6 @@
 
     move-object/from16 v3, p2
 
-    .line 379
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v10
@@ -1226,7 +1110,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_ACTION_JOB_TIMEOUT_PENALTY_BASE_PRICE_CAKES:J
 
-    .line 382
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -1241,10 +1124,8 @@
 
     const v1, 0x6000000a
 
-    .line 378
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 386
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     new-instance v10, Lcom/android/server/tare/EconomicPolicy$Reward;
@@ -1261,7 +1142,6 @@
 
     move-object/from16 v3, p2
 
-    .line 387
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v11
@@ -1272,7 +1152,6 @@
 
     const-wide/32 v5, 0x1dcd6500
 
-    .line 390
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v13
@@ -1283,7 +1162,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_TOP_ACTIVITY_MAX_CAKES:J
 
-    .line 393
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v15
@@ -1302,10 +1180,8 @@
 
     const v1, -0x7ffffffe
 
-    .line 386
     invoke-virtual {v0, v1, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 396
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     new-instance v10, Lcom/android/server/tare/EconomicPolicy$Reward;
@@ -1322,7 +1198,6 @@
 
     move-object/from16 v3, p2
 
-    .line 397
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v11
@@ -1333,7 +1208,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_NOTIFICATION_SEEN_ONGOING_CAKES:J
 
-    .line 400
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v13
@@ -1344,7 +1218,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_NOTIFICATION_SEEN_MAX_CAKES:J
 
-    .line 403
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v15
@@ -1363,10 +1236,8 @@
 
     const/high16 v1, -0x80000000
 
-    .line 396
     invoke-virtual {v0, v1, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 406
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     new-instance v10, Lcom/android/server/tare/EconomicPolicy$Reward;
@@ -1383,7 +1254,6 @@
 
     move-object/from16 v3, p2
 
-    .line 408
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v11
@@ -1394,7 +1264,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_NOTIFICATION_INTERACTION_ONGOING_CAKES:J
 
-    .line 411
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v13
@@ -1405,7 +1274,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_NOTIFICATION_INTERACTION_MAX_CAKES:J
 
-    .line 414
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v15
@@ -1424,10 +1292,8 @@
 
     const v1, -0x7fffffff
 
-    .line 406
     invoke-virtual {v0, v1, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 417
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     new-instance v10, Lcom/android/server/tare/EconomicPolicy$Reward;
@@ -1444,7 +1310,6 @@
 
     move-object/from16 v3, p2
 
-    .line 418
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v11
@@ -1455,7 +1320,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_WIDGET_INTERACTION_ONGOING_CAKES:J
 
-    .line 421
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v13
@@ -1466,7 +1330,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_WIDGET_INTERACTION_MAX_CAKES:J
 
-    .line 424
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v15
@@ -1485,10 +1348,8 @@
 
     const v1, -0x7ffffffd
 
-    .line 417
     invoke-virtual {v0, v1, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 427
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     new-instance v10, Lcom/android/server/tare/EconomicPolicy$Reward;
@@ -1505,7 +1366,6 @@
 
     move-object/from16 v3, p2
 
-    .line 429
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v11
@@ -1516,7 +1376,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_OTHER_USER_INTERACTION_ONGOING_CAKES:J
 
-    .line 432
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v13
@@ -1527,7 +1386,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_OTHER_USER_INTERACTION_MAX_CAKES:J
 
-    .line 435
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v15
@@ -1546,10 +1404,8 @@
 
     const v1, -0x7ffffffc
 
-    .line 427
     invoke-virtual {v0, v1, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 438
     iget-object v0, v9, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     new-instance v10, Lcom/android/server/tare/EconomicPolicy$Reward;
@@ -1566,7 +1422,6 @@
 
     move-object/from16 v3, p2
 
-    .line 440
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v11
@@ -1577,7 +1432,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_APP_INSTALL_ONGOING_CAKES:J
 
-    .line 443
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v13
@@ -1588,7 +1442,6 @@
 
     sget-wide v5, Landroid/app/tare/EconomyManager;->DEFAULT_JS_REWARD_APP_INSTALL_MAX_CAKES:J
 
-    .line 446
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;J)J
 
     move-result-wide v8
@@ -1607,7 +1460,6 @@
 
     const/high16 v1, -0x60000000
 
-    .line 438
     invoke-virtual {v0, v1, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     return-void
@@ -1616,10 +1468,8 @@
 .method public setup(Landroid/provider/DeviceConfig$Properties;)V
     .locals 3
 
-    .line 185
     invoke-super {p0, p1}, Lcom/android/server/tare/EconomicPolicy;->setup(Landroid/provider/DeviceConfig$Properties;)V
 
-    .line 186
     iget-object v0, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -1630,7 +1480,6 @@
 
     move-result-object v0
 
-    .line 187
     iget-object v1, p0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;->mInjector:Lcom/android/server/tare/EconomicPolicy$Injector;
 
     const-string/jumbo v2, "tare_job_scheduler_constants"

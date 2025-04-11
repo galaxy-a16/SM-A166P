@@ -21,24 +21,18 @@
 .method public constructor <init>(Lcom/android/server/am/AppPermissionTracker;ILjava/lang/String;I)V
     .locals 0
 
-    .line 282
     iput-object p1, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->this$0:Lcom/android/server/am/AppPermissionTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 283
     iput p2, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mUid:I
 
-    .line 284
     iput-object p3, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mPermission:Ljava/lang/String;
 
-    .line 285
     iput p4, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mAppOp:I
 
-    .line 286
     invoke-virtual {p0}, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->updatePermissionState()V
 
-    .line 287
     invoke-virtual {p0}, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->updateAppOps()V
 
     return-void
@@ -53,18 +47,15 @@
 
     if-eqz p1, :cond_1
 
-    .line 328
     instance-of v1, p1, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
-    .line 331
     :cond_0
     check-cast p1, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;
 
-    .line 332
     iget v1, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mUid:I
 
     iget v2, p1, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mUid:I
@@ -81,7 +72,6 @@
 
     iget-object p1, p1, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mPermission:Ljava/lang/String;
 
-    .line 333
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -98,7 +88,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 338
     iget v0, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mUid:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
@@ -117,7 +106,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 339
     iget-object p0, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mPermission:Ljava/lang/String;
 
     if-nez p0, :cond_0
@@ -140,7 +128,6 @@
 .method public isGranted()Z
     .locals 1
 
-    .line 323
     iget-boolean v0, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mPermissionGranted:Z
 
     if-eqz v0, :cond_0
@@ -163,7 +150,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 344
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +158,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 345
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -185,7 +170,6 @@
 
     iget v1, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mUid:I
 
-    .line 346
     invoke-static {v1}, Landroid/os/UserHandle;->formatUid(I)Ljava/lang/String;
 
     move-result-object v1
@@ -200,7 +184,6 @@
 
     move-result-object v0
 
-    .line 347
     iget-object v1, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mPermission:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -211,7 +194,6 @@
 
     if-nez v1, :cond_0
 
-    .line 349
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -232,7 +214,6 @@
 
     move-result-object v0
 
-    .line 351
     :cond_0
     iget v3, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mAppOp:I
 
@@ -242,7 +223,6 @@
 
     if-nez v1, :cond_1
 
-    .line 353
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -257,7 +237,6 @@
 
     move-result-object v0
 
-    .line 355
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -283,7 +262,6 @@
 
     move-result-object v0
 
-    .line 357
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -305,7 +283,6 @@
 .method public updateAppOps()V
     .locals 9
 
-    .line 300
     iget v0, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mAppOp:I
 
     const/4 v1, -0x1
@@ -314,12 +291,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 301
     iput-boolean v2, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mAppOpAllowed:Z
 
     return-void
 
-    .line 304
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->this$0:Lcom/android/server/am/AppPermissionTracker;
 
@@ -339,7 +314,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 306
     iget-object v3, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->this$0:Lcom/android/server/am/AppPermissionTracker;
 
     iget-object v3, v3, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
@@ -348,7 +322,6 @@
 
     move-result-object v3
 
-    .line 307
     array-length v4, v0
 
     move v5, v1
@@ -358,7 +331,6 @@
 
     aget-object v6, v0, v5
 
-    .line 309
     :try_start_0
     iget v7, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mAppOp:I
 
@@ -370,7 +342,6 @@
 
     if-nez v6, :cond_1
 
-    .line 311
     iput-boolean v2, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mAppOpAllowed:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -383,7 +354,6 @@
 
     goto :goto_0
 
-    .line 319
     :cond_2
     iput-boolean v1, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mAppOpAllowed:Z
 
@@ -393,7 +363,6 @@
 .method public updatePermissionState()V
     .locals 4
 
-    .line 291
     iget-object v0, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mPermission:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -404,12 +373,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 292
     iput-boolean v1, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mPermissionGranted:Z
 
     return-void
 
-    .line 295
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->this$0:Lcom/android/server/am/AppPermissionTracker;
 
@@ -423,7 +390,6 @@
 
     iget-object v3, p0, Lcom/android/server/am/AppPermissionTracker$UidGrantedPermissionState;->mPermission:Ljava/lang/String;
 
-    .line 296
     invoke-interface {v0, v2, v3}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;->checkUidPermission(ILjava/lang/String;)I
 
     move-result v0

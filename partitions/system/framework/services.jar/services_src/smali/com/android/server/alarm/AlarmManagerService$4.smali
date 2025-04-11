@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/AlarmManagerService;)V
     .locals 0
 
-    .line 2374
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/app/IAppOpsCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public opChanged(IILjava/lang/String;)V
     .locals 8
 
-    .line 2378
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -33,7 +31,6 @@
 
     if-ne p1, v1, :cond_10
 
-    .line 2380
     invoke-static {p3, v0}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$smisExactAlarmChangeEnabled(Ljava/lang/String;I)Z
 
     move-result p1
@@ -42,7 +39,6 @@
 
     goto/16 :goto_7
 
-    .line 2383
     :cond_0
     iget-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -54,7 +50,6 @@
 
     return-void
 
-    .line 2386
     :cond_1
     iget-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -76,7 +71,6 @@
 
     return-void
 
-    .line 2391
     :cond_2
     iget-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -86,14 +80,12 @@
 
     move-result p1
 
-    .line 2395
     iget-object v2, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v2, v2, Lcom/android/server/alarm/AlarmManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 2396
     :try_start_0
     iget-object v3, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -105,12 +97,10 @@
 
     if-gez v3, :cond_3
 
-    .line 2398
     invoke-static {v1}, Landroid/app/AppOpsManager;->opToDefaultMode(I)I
 
     move-result v1
 
-    .line 2400
     iget-object v3, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v3, v3, Lcom/android/server/alarm/AlarmManagerService;->mLastOpScheduleExactAlarm:Landroid/util/SparseIntArray;
@@ -119,7 +109,6 @@
 
     goto :goto_0
 
-    .line 2402
     :cond_3
     iget-object v1, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -129,14 +118,12 @@
 
     move-result v1
 
-    .line 2403
     iget-object v4, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v4, v4, Lcom/android/server/alarm/AlarmManagerService;->mLastOpScheduleExactAlarm:Landroid/util/SparseIntArray;
 
     invoke-virtual {v4, v3, p1}, Landroid/util/SparseIntArray;->setValueAt(II)V
 
-    .line 2405
     :goto_0
     monitor-exit v2
     :try_end_0
@@ -146,16 +133,13 @@
 
     return-void
 
-    .line 2409
     :cond_4
     iget-object v2, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
-    .line 2410
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 2409
     invoke-static {v2, p3, v3}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$misScheduleExactAlarmDeniedByDefault(Lcom/android/server/alarm/AlarmManagerService;Ljava/lang/String;I)Z
 
     move-result v2
@@ -168,7 +152,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 2416
     iget-object v2, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -227,7 +210,6 @@
 
     goto :goto_5
 
-    .line 2426
     :cond_a
     iget-object v2, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -235,7 +217,6 @@
 
     iget-object v2, v2, Lcom/android/server/alarm/AlarmManagerService$Constants;->EXACT_ALARM_DENY_LIST:Ljava/util/Set;
 
-    .line 2427
     invoke-interface {v2, p3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v2
@@ -271,7 +252,6 @@
 
     if-nez v4, :cond_e
 
-    .line 2437
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService;->mHandler:Lcom/android/server/alarm/AlarmManagerService$AlarmHandler;
@@ -282,7 +262,6 @@
 
     move-result-object p0
 
-    .line 2438
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_6
@@ -292,7 +271,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 2440
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$4;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-static {p0, p3, v0}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$msendScheduleExactAlarmPermissionStateChangedBroadcast(Lcom/android/server/alarm/AlarmManagerService;Ljava/lang/String;I)V
@@ -304,7 +282,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2405
     :try_start_1
     monitor-exit v2
     :try_end_1

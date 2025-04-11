@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/battery/DeviceBatteryInfoService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 202
     iput-object p1, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$2;->this$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,10 +23,8 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    .line 205
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 206
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,7 +43,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     iget-object p1, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$2;->this$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
     invoke-static {p1}, Lcom/samsung/android/server/battery/DeviceBatteryInfoService;->-$$Nest$fgetmContext(Lcom/samsung/android/server/battery/DeviceBatteryInfoService;)Landroid/content/Context;
@@ -63,7 +59,6 @@
 
     move-result-object p1
 
-    .line 209
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,14 +75,12 @@
 
     invoke-static {p2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     iget-object p2, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$2;->this$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
     iget-object p2, p2, Lcom/samsung/android/server/battery/DeviceBatteryInfoService;->mPhoneBatteryInfo:Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;
 
     invoke-virtual {p2, p1}, Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;->setDeviceName(Ljava/lang/String;)V
 
-    .line 211
     iget-object p0, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$2;->this$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
     const-string p1, "com.samsung.battery.ACTION_BATTERY_INFO_CHANGED"

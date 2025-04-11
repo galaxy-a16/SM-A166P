@@ -19,7 +19,6 @@
 .method public static synthetic $values()[Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
     .locals 2
 
-    .line 222
     sget-object v0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->AVG10:Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
 
     sget-object v1, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->TOTAL:Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
@@ -34,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 223
     new-instance v0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
 
     const/4 v1, 0x0
@@ -47,7 +45,6 @@
 
     sput-object v0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->AVG10:Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
 
-    .line 224
     new-instance v0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
 
     const/4 v1, 0x1
@@ -60,7 +57,6 @@
 
     sput-object v0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->TOTAL:Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
 
-    .line 222
     invoke-static {}, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->$values()[Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
 
     move-result-object v0
@@ -73,10 +69,8 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 228
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 229
     iput-object p3, p0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->mPath:Ljava/lang/String;
 
     return-void
@@ -85,7 +79,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
     .locals 1
 
-    .line 222
     const-class v0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -100,7 +93,6 @@
 .method public static values()[Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
     .locals 1
 
-    .line 222
     sget-object v0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->$VALUES:[Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
 
     invoke-virtual {v0}, [Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->clone()Ljava/lang/Object;

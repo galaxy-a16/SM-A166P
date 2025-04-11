@@ -21,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;Ljava/util/UUID;Z)V
     .locals 7
 
-    .line 87
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -30,7 +29,6 @@
 
     move-result-object v4
 
-    .line 88
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->getUserStates()Landroid/util/SparseArray;
 
     move-result-object v5
@@ -43,7 +41,6 @@
 
     move v3, p3
 
-    .line 87
     invoke-direct/range {v0 .. v6}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;-><init>(Ljava/lang/String;Ljava/util/UUID;ZLandroid/util/ArrayMap;Landroid/util/SparseArray;Ljava/lang/String;)V
 
     return-void
@@ -52,7 +49,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/util/UUID;Z)V
     .locals 7
 
-    .line 82
     new-instance v4, Landroid/util/ArrayMap;
 
     const/4 v0, 0x0
@@ -81,47 +77,36 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/util/UUID;ZLandroid/util/ArrayMap;Landroid/util/SparseArray;Ljava/lang/String;)V
     .locals 2
 
-    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 170
     iput-object p1, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mPackageName:Ljava/lang/String;
 
-    .line 171
     const-class v0, Landroid/annotation/NonNull;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p1}, Lcom/android/internal/util/AnnotationValidations;->validate(Ljava/lang/Class;Landroid/annotation/NonNull;Ljava/lang/Object;)V
 
-    .line 173
     iput-object p2, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mId:Ljava/util/UUID;
 
-    .line 174
     const-class p1, Landroid/annotation/NonNull;
 
     invoke-static {p1, v1, p2}, Lcom/android/internal/util/AnnotationValidations;->validate(Ljava/lang/Class;Landroid/annotation/NonNull;Ljava/lang/Object;)V
 
-    .line 176
     iput-boolean p3, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mHasAutoVerifyDomains:Z
 
-    .line 177
     iput-object p4, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mStateMap:Landroid/util/ArrayMap;
 
-    .line 178
     const-class p1, Landroid/annotation/NonNull;
 
     invoke-static {p1, v1, p4}, Lcom/android/internal/util/AnnotationValidations;->validate(Ljava/lang/Class;Landroid/annotation/NonNull;Ljava/lang/Object;)V
 
-    .line 180
     iput-object p5, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
-    .line 181
     const-class p1, Landroid/annotation/NonNull;
 
     invoke-static {p1, v1, p5}, Lcom/android/internal/util/AnnotationValidations;->validate(Ljava/lang/Class;Landroid/annotation/NonNull;Ljava/lang/Object;)V
 
-    .line 183
     iput-object p6, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mBackupSignatureHash:Ljava/lang/String;
 
     return-void
@@ -143,7 +128,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 266
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -156,16 +140,13 @@
 
     goto :goto_1
 
-    .line 268
     :cond_1
     check-cast p1, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;
 
-    .line 270
     iget-object v2, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mPackageName:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mPackageName:Ljava/lang/String;
 
-    .line 271
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -176,7 +157,6 @@
 
     iget-object v3, p1, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mId:Ljava/util/UUID;
 
-    .line 272
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -193,7 +173,6 @@
 
     iget-object v3, p1, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mStateMap:Landroid/util/ArrayMap;
 
-    .line 274
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -202,7 +181,6 @@
 
     iget-object v2, p1, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
-    .line 275
     invoke-virtual {p0, v2}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->userStatesEquals(Landroid/util/SparseArray;)Z
 
     move-result v2
@@ -213,7 +191,6 @@
 
     iget-object p1, p1, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mBackupSignatureHash:Ljava/lang/String;
 
-    .line 276
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -236,7 +213,6 @@
 .method public getBackupSignatureHash()Ljava/lang/String;
     .locals 0
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mBackupSignatureHash:Ljava/lang/String;
 
     return-object p0
@@ -245,7 +221,6 @@
 .method public getId()Ljava/util/UUID;
     .locals 0
 
-    .line 195
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mId:Ljava/util/UUID;
 
     return-object p0
@@ -254,7 +229,6 @@
 .method public getOrCreateUserState(I)Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;
     .locals 1
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -265,12 +239,10 @@
 
     if-nez v0, :cond_0
 
-    .line 101
     new-instance v0, Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;
 
     invoke-direct {v0, p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;-><init>(I)V
 
-    .line 102
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -282,7 +254,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -291,7 +262,6 @@
 .method public getStateMap()Landroid/util/ArrayMap;
     .locals 0
 
-    .line 219
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mStateMap:Landroid/util/ArrayMap;
 
     return-object p0
@@ -300,7 +270,6 @@
 .method public getUserState(I)Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;
     .locals 0
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -315,7 +284,6 @@
 .method public getUserStates()Landroid/util/SparseArray;
     .locals 0
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
     return-object p0
@@ -324,7 +292,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 286
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mPackageName:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -337,7 +304,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 287
     iget-object v2, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mId:Ljava/util/UUID;
 
     invoke-static {v2}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -348,7 +314,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 288
     iget-boolean v2, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mHasAutoVerifyDomains:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->hashCode(Z)I
@@ -359,7 +324,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 289
     iget-object v2, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mStateMap:Landroid/util/ArrayMap;
 
     invoke-static {v2}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -370,7 +334,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 290
     invoke-virtual {p0}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->userStatesHashCode()I
 
     move-result v2
@@ -379,7 +342,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 291
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mBackupSignatureHash:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -394,7 +356,6 @@
 .method public isHasAutoVerifyDomains()Z
     .locals 0
 
-    .line 207
     iget-boolean p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mHasAutoVerifyDomains:Z
 
     return p0
@@ -403,7 +364,6 @@
 .method public removeAllUsers()V
     .locals 0
 
-    .line 112
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->clear()V
@@ -414,7 +374,6 @@
 .method public removeUser(I)V
     .locals 0
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
@@ -425,7 +384,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 248
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -492,7 +450,6 @@
 .method public final userStatesEquals(Landroid/util/SparseArray;)Z
     .locals 0
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->contentEquals(Landroid/util/SparseArray;)Z
@@ -505,7 +462,6 @@
 .method public final userStatesHashCode()I
     .locals 0
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->contentHashCode()I

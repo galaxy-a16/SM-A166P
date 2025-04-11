@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/profcollect/ProfcollectForwardingService;)V
     .locals 0
 
-    .line 74
     iput-object p1, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$2;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "com.android.server.profcollect.UPLOAD_PROFILES"
 
-    .line 77
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -41,10 +39,8 @@
 
     const-string p2, "Received broadcast to pack and upload reports"
 
-    .line 78
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/profcollect/ProfcollectForwardingService$2;->this$0:Lcom/android/server/profcollect/ProfcollectForwardingService;
 
     invoke-static {p0}, Lcom/android/server/profcollect/ProfcollectForwardingService;->-$$Nest$mpackAndUploadReport(Lcom/android/server/profcollect/ProfcollectForwardingService;)V

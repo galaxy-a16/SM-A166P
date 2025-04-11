@@ -20,7 +20,6 @@
 .method public final onDexoptDone(Lcom/android/server/art/model/DexoptResult;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/pm/DexOptHelper;->$r8$lambda$DtSjxWBcLIzLFJe39GhRSCMc8Cw(Lcom/android/server/art/model/DexoptResult;)V
 
     return-void

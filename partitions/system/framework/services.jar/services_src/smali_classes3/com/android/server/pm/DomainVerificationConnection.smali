@@ -18,13 +18,10 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;)V
     .locals 1
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 41
     iget-object p1, p1, Lcom/android/server/pm/PackageManagerService;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     const-class v0, Lcom/android/server/pm/UserManagerInternal;
@@ -45,7 +42,6 @@
 .method public doesUserExist(I)Z
     .locals 0
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mUmInternal:Lcom/android/server/pm/UserManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/UserManagerInternal;->exists(I)Z
@@ -58,7 +54,6 @@
 .method public filterAppAccess(Ljava/lang/String;II)Z
     .locals 1
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
@@ -77,7 +72,6 @@
 .method public getAllUserIds()[I
     .locals 0
 
-    .line 98
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mUmInternal:Lcom/android/server/pm/UserManagerInternal;
 
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerInternal;->getUserIds()[I
@@ -90,7 +84,6 @@
 .method public getCallingUid()I
     .locals 0
 
-    .line 51
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -101,7 +94,6 @@
 .method public getCallingUserId()I
     .locals 0
 
-    .line 57
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result p0
@@ -112,7 +104,6 @@
 .method public getDeviceIdleInternal()Lcom/android/server/DeviceIdleInternal;
     .locals 1
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
@@ -131,7 +122,6 @@
 .method public getPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/AndroidPackage;
     .locals 0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
@@ -148,7 +138,6 @@
 .method public getPowerSaveTempWhitelistAppDuration()J
     .locals 2
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -163,12 +152,10 @@
 .method public isCallerPackage(ILjava/lang/String;)Z
     .locals 3
 
-    .line 80
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 81
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
@@ -197,7 +184,6 @@
 .method public schedule(ILjava/lang/Object;)V
     .locals 2
 
-    .line 62
     iget-object v0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mHandler:Landroid/os/Handler;
@@ -208,13 +194,10 @@
 
     move-result-object v0
 
-    .line 63
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 64
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService;->mHandler:Landroid/os/Handler;
@@ -227,7 +210,6 @@
 .method public scheduleWriteSettings()V
     .locals 0
 
-    .line 46
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->scheduleWriteSettings()V
@@ -238,7 +220,6 @@
 .method public snapshot()Lcom/android/server/pm/Computer;
     .locals 0
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/pm/DomainVerificationConnection;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;

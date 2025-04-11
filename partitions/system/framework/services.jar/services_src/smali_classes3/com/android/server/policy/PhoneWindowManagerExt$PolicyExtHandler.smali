@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 456
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler;-><init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 9
 
-    .line 471
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -52,13 +49,11 @@
 
     goto :goto_0
 
-    .line 485
     :cond_0
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz p1, :cond_1
 
-    .line 486
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,7 +90,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     :cond_1
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -115,7 +109,6 @@
 
     if-le p1, v0, :cond_2
 
-    .line 490
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object v3, p1, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;
@@ -132,7 +125,6 @@
 
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/policy/PhoneWindowManager;->wakeUp(JZILjava/lang/String;)Z
 
-    .line 493
     :cond_2
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -140,7 +132,6 @@
 
     goto :goto_0
 
-    .line 479
     :cond_3
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -158,7 +149,6 @@
 
     goto :goto_0
 
-    .line 474
     :cond_4
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$PolicyExtHandler;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 

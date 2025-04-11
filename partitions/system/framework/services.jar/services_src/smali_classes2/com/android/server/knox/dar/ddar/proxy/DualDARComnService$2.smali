@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;)V
     .locals 0
 
-    .line 102
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService$2;->this$0:Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 105
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -33,14 +31,12 @@
 
     const/16 v1, -0x2710
 
-    .line 106
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 107
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -49,7 +45,6 @@
 
     const-string v1, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 108
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -61,7 +56,6 @@
     :cond_0
     const-string p0, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 125
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -70,12 +64,10 @@
 
     const-string p0, "android.intent.action.PACKAGE_FULLY_REMOVED"
 
-    .line 126
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 110
     :cond_1
     :goto_0
     :try_start_0
@@ -85,7 +77,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 112
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
@@ -96,12 +87,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 114
     iget-object p2, p0, Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService$2;->this$0:Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
 
     invoke-static {p2, p1}, Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;->-$$Nest$mreConnectAgentsByPkgName(Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;Ljava/lang/String;)V
 
-    .line 116
     :cond_2
     iget-object p2, p0, Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService$2;->this$0:Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
 
@@ -119,7 +108,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 118
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService$2;->this$0:Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
 
     invoke-static {p0, v0}, Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;->-$$Nest$maddKPUAppToWhitelist(Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;I)V
@@ -139,10 +127,8 @@
 
     const-string/jumbo v0, "package added or changed uri runtime exception occurred"
 
-    .line 122
     invoke-static {p2, v0, p1}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 123
     invoke-virtual {p0}, Ljava/lang/RuntimeException;->printStackTrace()V
 
     :cond_3

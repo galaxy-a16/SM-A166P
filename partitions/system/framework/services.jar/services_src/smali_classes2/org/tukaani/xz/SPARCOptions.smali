@@ -9,7 +9,6 @@
 
     const/4 v0, 0x4
 
-    .line 22
     invoke-direct {p0, v0}, Lorg/tukaani/xz/BCJOptions;-><init>(I)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
-    .line 18
     invoke-super {p0}, Lorg/tukaani/xz/BCJOptions;->clone()Ljava/lang/Object;
 
     move-result-object p0
@@ -31,7 +29,6 @@
 .method public getInputStream(Ljava/io/InputStream;Lorg/tukaani/xz/ArrayCache;)Ljava/io/InputStream;
     .locals 2
 
-    .line 31
     new-instance p2, Lorg/tukaani/xz/SimpleInputStream;
 
     new-instance v0, Lorg/tukaani/xz/simple/SPARC;

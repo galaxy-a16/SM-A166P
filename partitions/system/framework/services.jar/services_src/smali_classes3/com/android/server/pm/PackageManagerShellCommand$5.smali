@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerShellCommand;ILjava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 3145
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerShellCommand$5;->this$0:Lcom/android/server/pm/PackageManagerShellCommand;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerShellCommand$5;->val$userId:I
@@ -35,14 +34,12 @@
 .method public onUserRemoved(Landroid/content/pm/UserInfo;)V
     .locals 1
 
-    .line 3148
     iget v0, p0, Lcom/android/server/pm/PackageManagerShellCommand$5;->val$userId:I
 
     iget p1, p1, Landroid/content/pm/UserInfo;->id:I
 
     if-ne v0, p1, :cond_0
 
-    .line 3149
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerShellCommand$5;->val$waitLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V

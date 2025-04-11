@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/infra/ServiceNameBaseResolver;Landroid/os/Looper;Landroid/os/Handler$Callback;ZI)V
     .locals 0
 
-    .line 222
     iput-object p1, p0, Lcom/android/server/infra/ServiceNameBaseResolver$1;->this$0:Lcom/android/server/infra/ServiceNameBaseResolver;
 
     iput p5, p0, Lcom/android/server/infra/ServiceNameBaseResolver$1;->val$userId:I
@@ -28,19 +27,16 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 225
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_0
 
-    .line 226
     iget-object p1, p0, Lcom/android/server/infra/ServiceNameBaseResolver$1;->this$0:Lcom/android/server/infra/ServiceNameBaseResolver;
 
     iget-object v0, p1, Lcom/android/server/infra/ServiceNameBaseResolver;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 227
     :try_start_0
     iget-object p1, p0, Lcom/android/server/infra/ServiceNameBaseResolver$1;->this$0:Lcom/android/server/infra/ServiceNameBaseResolver;
 
@@ -48,7 +44,6 @@
 
     invoke-virtual {p1, p0}, Lcom/android/server/infra/ServiceNameBaseResolver;->resetTemporaryService(I)V
 
-    .line 228
     monitor-exit v0
 
     goto :goto_0
@@ -62,7 +57,6 @@
 
     throw p0
 
-    .line 230
     :cond_0
     invoke-static {}, Lcom/android/server/infra/ServiceNameBaseResolver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

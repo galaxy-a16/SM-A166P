@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;Landroid/util/Pair;)V
     .locals 0
 
-    .line 3002
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$8;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iput-object p2, p0, Lcom/android/server/appop/AppOpsService$8;->val$key:Landroid/util/Pair;
@@ -28,7 +27,6 @@
 .method public bridge synthetic onCallbackDied(Landroid/os/IInterface;)V
     .locals 0
 
-    .line 3002
     check-cast p1, Lcom/android/internal/app/IAppOpsAsyncNotedCallback;
 
     invoke-virtual {p0, p1}, Lcom/android/server/appop/AppOpsService$8;->onCallbackDied(Lcom/android/internal/app/IAppOpsAsyncNotedCallback;)V
@@ -39,12 +37,10 @@
 .method public onCallbackDied(Lcom/android/internal/app/IAppOpsAsyncNotedCallback;)V
     .locals 1
 
-    .line 3005
     iget-object p1, p0, Lcom/android/server/appop/AppOpsService$8;->this$0:Lcom/android/server/appop/AppOpsService;
 
     monitor-enter p1
 
-    .line 3006
     :try_start_0
     invoke-virtual {p0}, Landroid/os/RemoteCallbackList;->getRegisteredCallbackCount()I
 
@@ -52,7 +48,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3007
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$8;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-static {v0}, Lcom/android/server/appop/AppOpsService;->-$$Nest$fgetmAsyncOpWatchers(Lcom/android/server/appop/AppOpsService;)Landroid/util/ArrayMap;
@@ -63,7 +58,6 @@
 
     invoke-virtual {v0, p0}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3009
     :cond_0
     monitor-exit p1
 

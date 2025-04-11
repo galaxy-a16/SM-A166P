@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
-    .line 363
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$5;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 366
     iget-object p1, p0, Lcom/android/server/UiModeManagerService$5;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-static {p1}, Lcom/android/server/UiModeManagerService;->-$$Nest$fgetmLock(Lcom/android/server/UiModeManagerService;)Ljava/lang/Object;
@@ -33,20 +31,17 @@
 
     monitor-enter p1
 
-    .line 368
     :try_start_0
     iget-object p2, p0, Lcom/android/server/UiModeManagerService$5;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-static {p2}, Lcom/android/server/UiModeManagerService;->-$$Nest$munregisterScreenOffEventLocked(Lcom/android/server/UiModeManagerService;)V
 
-    .line 369
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$5;->this$0:Lcom/android/server/UiModeManagerService;
 
     const/4 p2, 0x0
 
     invoke-virtual {p0, p2, p2}, Lcom/android/server/UiModeManagerService;->updateLocked(II)V
 
-    .line 370
     monitor-exit p1
 
     return-void

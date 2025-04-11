@@ -17,7 +17,6 @@
 
     const v0, 0x9c40
 
-    .line 31
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;-><init>(I)V
 
     return-void
@@ -26,10 +25,8 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
@@ -38,10 +35,8 @@
 
     const v0, 0xfbfe
 
-    .line 25
     iput v0, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mLastNetId:I
 
-    .line 36
     iput p1, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mMinNetId:I
 
     return-void
@@ -56,7 +51,6 @@
 
     move v1, v0
 
-    .line 45
     :goto_0
     iget v2, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mMinNetId:I
 
@@ -71,7 +65,6 @@
     :cond_0
     move p1, v0
 
-    .line 47
     :goto_1
     invoke-virtual {p2, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
 
@@ -86,7 +79,6 @@
 
     goto :goto_0
 
-    .line 51
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -100,18 +92,15 @@
 .method public releaseNetId(I)V
     .locals 1
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
     monitor-enter v0
 
-    .line 71
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 72
     monitor-exit v0
 
     return-void
@@ -129,12 +118,10 @@
 .method public reserveNetId()I
     .locals 4
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
     monitor-enter v0
 
-    .line 59
     :try_start_0
     iget v1, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mLastNetId:I
 
@@ -146,14 +133,12 @@
 
     iput v1, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mLastNetId:I
 
-    .line 61
     iget-object v2, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v1, v3}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 62
     iget p0, p0, Lcom/android/server/enterprise/firewall/KnoxNetIdManager;->mLastNetId:I
 
     monitor-exit v0
@@ -163,7 +148,6 @@
     :catchall_0
     move-exception p0
 
-    .line 63
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

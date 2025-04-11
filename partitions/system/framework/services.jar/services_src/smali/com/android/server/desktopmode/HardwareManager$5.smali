@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/HardwareManager;)V
     .locals 0
 
-    .line 219
     iput-object p1, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-direct {p0}, Lcom/android/server/desktopmode/StateManager$StateListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onDisplayDisconnectionRequested(I)V
     .locals 7
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmLock(Lcom/android/server/desktopmode/HardwareManager;)Ljava/lang/Object;
@@ -33,7 +31,6 @@
 
     monitor-enter v0
 
-    .line 250
     :try_start_0
     new-instance v1, Landroid/util/IntArray;
 
@@ -41,7 +38,6 @@
 
     invoke-direct {v1, v2}, Landroid/util/IntArray;-><init>(I)V
 
-    .line 251
     iget-object v2, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v2}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmDisplays(Lcom/android/server/desktopmode/HardwareManager;)Landroid/util/SparseArray;
@@ -59,7 +55,6 @@
     :goto_0
     if-ge v4, v2, :cond_1
 
-    .line 252
     iget-object v5, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v5}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmDisplays(Lcom/android/server/desktopmode/HardwareManager;)Landroid/util/SparseArray;
@@ -72,14 +67,12 @@
 
     check-cast v5, Lcom/android/server/desktopmode/DisplayInfo;
 
-    .line 253
     invoke-virtual {v5}, Lcom/android/server/desktopmode/DisplayInfo;->getType()I
 
     move-result v6
 
     if-ne v6, p1, :cond_0
 
-    .line 254
     invoke-virtual {v5}, Lcom/android/server/desktopmode/DisplayInfo;->getDisplayId()I
 
     move-result v5
@@ -91,7 +84,6 @@
 
     goto :goto_0
 
-    .line 257
     :cond_1
     invoke-virtual {v1}, Landroid/util/IntArray;->size()I
 
@@ -102,7 +94,6 @@
     :goto_1
     if-ge v2, p1, :cond_2
 
-    .line 258
     iget-object v4, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-virtual {v1, v2}, Landroid/util/IntArray;->get(I)I
@@ -115,7 +106,6 @@
 
     goto :goto_1
 
-    .line 260
     :cond_2
     monitor-exit v0
 
@@ -134,7 +124,6 @@
 .method public onDualModeStartLoadingScreen(Z)V
     .locals 0
 
-    .line 234
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$msetLowRefreshRate(Lcom/android/server/desktopmode/HardwareManager;Z)V
@@ -145,7 +134,6 @@
 .method public onDualModeStopLoadingScreen(Z)V
     .locals 2
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmLock(Lcom/android/server/desktopmode/HardwareManager;)Ljava/lang/Object;
@@ -154,7 +142,6 @@
 
     monitor-enter v0
 
-    .line 240
     :try_start_0
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->IS_TABLET:Z
 
@@ -170,7 +157,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 242
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/HardwareManager;)Lcom/android/server/desktopmode/IStateManager;
@@ -183,7 +169,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/HardwareManager;->logConnectedAccessoryInformationLocked(Lcom/android/server/desktopmode/State;)V
 
-    .line 244
     :cond_0
     monitor-exit v0
 
@@ -202,7 +187,6 @@
 .method public onStartLoadingScreen(Z)V
     .locals 1
 
-    .line 222
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmPowerManagerInternal(Lcom/android/server/desktopmode/HardwareManager;)Landroid/os/PowerManagerInternal;
@@ -213,7 +197,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/PowerManagerInternal;->setGoToSleepPrevention(Z)V
 
-    .line 223
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmWindowManager(Lcom/android/server/desktopmode/HardwareManager;)Lcom/android/server/wm/WindowManagerService;
@@ -230,7 +213,6 @@
 .method public onStopLoadingScreen(Z)V
     .locals 1
 
-    .line 228
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmPowerManagerInternal(Lcom/android/server/desktopmode/HardwareManager;)Landroid/os/PowerManagerInternal;
@@ -241,7 +223,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/PowerManagerInternal;->setGoToSleepPrevention(Z)V
 
-    .line 229
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$5;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$fgetmWindowManager(Lcom/android/server/desktopmode/HardwareManager;)Lcom/android/server/wm/WindowManagerService;

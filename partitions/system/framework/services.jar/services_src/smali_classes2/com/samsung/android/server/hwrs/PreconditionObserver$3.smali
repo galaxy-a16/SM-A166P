@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/hwrs/PreconditionObserver;)V
     .locals 0
 
-    .line 174
     iput-object p1, p0, Lcom/samsung/android/server/hwrs/PreconditionObserver$3;->this$0:Lcom/samsung/android/server/hwrs/PreconditionObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,10 +30,8 @@
 
     const-string/jumbo p2, "onServiceConnected - binding completed"
 
-    .line 177
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     iget-object p0, p0, Lcom/samsung/android/server/hwrs/PreconditionObserver$3;->this$0:Lcom/samsung/android/server/hwrs/PreconditionObserver;
 
     const/4 p1, 0x1
@@ -51,17 +48,14 @@
 
     const-string/jumbo v0, "onServiceDisconnected"
 
-    .line 183
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     iget-object p1, p0, Lcom/samsung/android/server/hwrs/PreconditionObserver$3;->this$0:Lcom/samsung/android/server/hwrs/PreconditionObserver;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/samsung/android/server/hwrs/PreconditionObserver;->-$$Nest$fputmBoundCameraShare(Lcom/samsung/android/server/hwrs/PreconditionObserver;Z)V
 
-    .line 185
     iget-object p0, p0, Lcom/samsung/android/server/hwrs/PreconditionObserver$3;->this$0:Lcom/samsung/android/server/hwrs/PreconditionObserver;
 
     const/4 p1, 0x4

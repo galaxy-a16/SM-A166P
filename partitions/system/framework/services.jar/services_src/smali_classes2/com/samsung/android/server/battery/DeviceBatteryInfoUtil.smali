@@ -13,7 +13,6 @@
 
     return-object p0
 
-    .line 14
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -28,12 +27,10 @@
 
     const-string v1, ""
 
-    .line 15
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +68,6 @@
     :catch_0
     move-exception p0
 
-    .line 20
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

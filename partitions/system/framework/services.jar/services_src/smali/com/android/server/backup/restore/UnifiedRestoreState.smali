@@ -23,7 +23,6 @@
 .method public static synthetic $values()[Lcom/android/server/backup/restore/UnifiedRestoreState;
     .locals 6
 
-    .line 22
     sget-object v0, Lcom/android/server/backup/restore/UnifiedRestoreState;->INITIAL:Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     sget-object v1, Lcom/android/server/backup/restore/UnifiedRestoreState;->RUNNING_QUEUE:Lcom/android/server/backup/restore/UnifiedRestoreState;
@@ -46,7 +45,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 23
     new-instance v0, Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     const-string v1, "INITIAL"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lcom/android/server/backup/restore/UnifiedRestoreState;->INITIAL:Lcom/android/server/backup/restore/UnifiedRestoreState;
 
-    .line 24
     new-instance v0, Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     const-string v1, "RUNNING_QUEUE"
@@ -68,7 +65,6 @@
 
     sput-object v0, Lcom/android/server/backup/restore/UnifiedRestoreState;->RUNNING_QUEUE:Lcom/android/server/backup/restore/UnifiedRestoreState;
 
-    .line 25
     new-instance v0, Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     const-string v1, "RESTORE_KEYVALUE"
@@ -79,7 +75,6 @@
 
     sput-object v0, Lcom/android/server/backup/restore/UnifiedRestoreState;->RESTORE_KEYVALUE:Lcom/android/server/backup/restore/UnifiedRestoreState;
 
-    .line 26
     new-instance v0, Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     const-string v1, "RESTORE_FULL"
@@ -90,7 +85,6 @@
 
     sput-object v0, Lcom/android/server/backup/restore/UnifiedRestoreState;->RESTORE_FULL:Lcom/android/server/backup/restore/UnifiedRestoreState;
 
-    .line 27
     new-instance v0, Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     const-string v1, "RESTORE_FINISHED"
@@ -101,7 +95,6 @@
 
     sput-object v0, Lcom/android/server/backup/restore/UnifiedRestoreState;->RESTORE_FINISHED:Lcom/android/server/backup/restore/UnifiedRestoreState;
 
-    .line 28
     new-instance v0, Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     const-string v1, "FINAL"
@@ -112,7 +105,6 @@
 
     sput-object v0, Lcom/android/server/backup/restore/UnifiedRestoreState;->FINAL:Lcom/android/server/backup/restore/UnifiedRestoreState;
 
-    .line 22
     invoke-static {}, Lcom/android/server/backup/restore/UnifiedRestoreState;->$values()[Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     move-result-object v0
@@ -125,7 +117,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 22
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -134,7 +125,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/backup/restore/UnifiedRestoreState;
     .locals 1
 
-    .line 22
     const-class v0, Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -149,7 +139,6 @@
 .method public static values()[Lcom/android/server/backup/restore/UnifiedRestoreState;
     .locals 1
 
-    .line 22
     sget-object v0, Lcom/android/server/backup/restore/UnifiedRestoreState;->$VALUES:[Lcom/android/server/backup/restore/UnifiedRestoreState;
 
     invoke-virtual {v0}, [Lcom/android/server/backup/restore/UnifiedRestoreState;->clone()Ljava/lang/Object;

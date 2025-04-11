@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCancelled(Lcom/android/server/location/contexthub/AuthStateDenialTimer;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mCancelled:Z
 
     return p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStopTimeInFuture(Lcom/android/server/location/contexthub/AuthStateDenialTimer;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mStopTimeInFuture:J
 
     return-wide v0
@@ -41,7 +39,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 35
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x3c
@@ -58,21 +55,16 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubClientBroker;JLandroid/os/Looper;)V
     .locals 1
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 49
     iput-boolean v0, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mCancelled:Z
 
-    .line 52
     iput-object p1, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mClient:Lcom/android/server/location/contexthub/ContextHubClientBroker;
 
-    .line 53
     iput-wide p2, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mNanoAppId:J
 
-    .line 54
     new-instance p1, Lcom/android/server/location/contexthub/AuthStateDenialTimer$CountDownHandler;
 
     invoke-direct {p1, p0, p4}, Lcom/android/server/location/contexthub/AuthStateDenialTimer$CountDownHandler;-><init>(Lcom/android/server/location/contexthub/AuthStateDenialTimer;Landroid/os/Looper;)V
@@ -91,18 +83,15 @@
 
     const/4 v0, 0x1
 
-    .line 61
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mCancelled:Z
 
-    .line 62
     iget-object v1, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->removeMessages(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
     monitor-exit p0
 
     return-void
@@ -118,7 +107,6 @@
 .method public onFinish()V
     .locals 3
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mClient:Lcom/android/server/location/contexthub/ContextHubClientBroker;
 
     iget-wide v1, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mNanoAppId:J
@@ -135,11 +123,9 @@
 
     const/4 v0, 0x0
 
-    .line 69
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mCancelled:Z
 
-    .line 70
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -150,7 +136,6 @@
 
     iput-wide v0, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mStopTimeInFuture:J
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/location/contexthub/AuthStateDenialTimer;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -163,7 +148,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 72
     monitor-exit p0
 
     return-void

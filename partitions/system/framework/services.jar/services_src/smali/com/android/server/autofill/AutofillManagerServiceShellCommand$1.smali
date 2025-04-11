@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/AutofillManagerServiceShellCommand;Ljava/io/PrintWriter;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 389
     iput-object p1, p0, Lcom/android/server/autofill/AutofillManagerServiceShellCommand$1;->this$0:Lcom/android/server/autofill/AutofillManagerServiceShellCommand;
 
     iput-object p2, p0, Lcom/android/server/autofill/AutofillManagerServiceShellCommand$1;->val$pw:Ljava/io/PrintWriter;
@@ -32,7 +31,6 @@
 .method public send(ILandroid/os/Bundle;)V
     .locals 3
 
-    .line 392
     iget-object v0, p0, Lcom/android/server/autofill/AutofillManagerServiceShellCommand$1;->val$pw:Ljava/io/PrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -55,7 +53,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 394
     iget-object p1, p0, Lcom/android/server/autofill/AutofillManagerServiceShellCommand$1;->val$pw:Ljava/io/PrintWriter;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -80,7 +77,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 396
     :cond_0
     iget-object p0, p0, Lcom/android/server/autofill/AutofillManagerServiceShellCommand$1;->val$latch:Ljava/util/concurrent/CountDownLatch;
 

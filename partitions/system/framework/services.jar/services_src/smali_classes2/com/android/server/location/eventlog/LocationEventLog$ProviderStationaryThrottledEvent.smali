@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;ZLandroid/location/provider/ProviderRequest;)V
     .locals 0
 
-    .line 419
     invoke-direct {p0, p1}, Lcom/android/server/location/eventlog/LocationEventLog$ProviderEvent;-><init>(Ljava/lang/String;)V
 
-    .line 420
     iput-boolean p2, p0, Lcom/android/server/location/eventlog/LocationEventLog$ProviderStationaryThrottledEvent;->mStationaryThrottled:Z
 
-    .line 421
     iput-object p3, p0, Lcom/android/server/location/eventlog/LocationEventLog$ProviderStationaryThrottledEvent;->mRequest:Landroid/location/provider/ProviderRequest;
 
     return-void
@@ -30,7 +27,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 426
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,7 +50,6 @@
     :cond_0
     const-string/jumbo v1, "unthrottled"
 
-    .line 427
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

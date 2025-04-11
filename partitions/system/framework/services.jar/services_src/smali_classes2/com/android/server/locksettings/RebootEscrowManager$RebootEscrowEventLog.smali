@@ -13,19 +13,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1019
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;
 
-    .line 1020
     iput-object v0, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEventLog;->mEntries:[Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;
 
     const/4 v0, 0x0
 
-    .line 1021
     iput v0, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEventLog;->mNextIndex:I
 
     return-void
@@ -36,7 +33,6 @@
 .method public addEntry(I)V
     .locals 1
 
-    .line 1024
     new-instance v0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;
 
     invoke-direct {v0, p1}, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;-><init>(I)V
@@ -49,7 +45,6 @@
 .method public addEntry(II)V
     .locals 1
 
-    .line 1028
     new-instance v0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -66,17 +61,14 @@
 .method public final addEntryInternal(Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;)V
     .locals 2
 
-    .line 1032
     iget v0, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEventLog;->mNextIndex:I
 
-    .line 1033
     iget-object v1, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEventLog;->mEntries:[Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;
 
     aput-object p1, v1, v0
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 1034
     array-length p1, v1
 
     rem-int/2addr v0, p1
@@ -89,7 +81,6 @@
 .method public dump(Lcom/android/internal/util/IndentingPrintWriter;)V
     .locals 7
 
-    .line 1038
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss.SSS"
@@ -100,7 +91,6 @@
 
     const/4 v1, 0x0
 
-    .line 1040
     :goto_0
     iget-object v2, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEventLog;->mEntries:[Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;
 
@@ -108,7 +98,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 1041
     iget v3, p0, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEventLog;->mNextIndex:I
 
     add-int/2addr v3, v1
@@ -126,13 +115,10 @@
     :cond_0
     const-string v3, "Event #"
 
-    .line 1046
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1047
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->println(I)V
 
-    .line 1049
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -173,27 +159,22 @@
 
     const-string v3, " event="
 
-    .line 1052
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1053
     invoke-virtual {v2}, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;->getEventDescription()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1055
     iget-object v3, v2, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;->mUserId:Ljava/lang/Integer;
 
     if-eqz v3, :cond_1
 
     const-string v3, " user="
 
-    .line 1056
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1057
     iget-object v2, v2, Lcom/android/server/locksettings/RebootEscrowManager$RebootEscrowEvent;->mUserId:Ljava/lang/Integer;
 
     invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V

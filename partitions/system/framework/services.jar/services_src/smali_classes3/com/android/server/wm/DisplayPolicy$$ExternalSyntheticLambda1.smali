@@ -28,7 +28,6 @@
 .method public synthetic constructor <init>(II[Lcom/android/internal/view/AppearanceRegion;ZIILjava/lang/String;[Lcom/android/internal/statusbar/LetterboxDetails;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/wm/DisplayPolicy$$ExternalSyntheticLambda1;->f$0:I
@@ -55,7 +54,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 9
 
-    .line 0
     iget v0, p0, Lcom/android/server/wm/DisplayPolicy$$ExternalSyntheticLambda1;->f$0:I
 
     iget v1, p0, Lcom/android/server/wm/DisplayPolicy$$ExternalSyntheticLambda1;->f$1:I

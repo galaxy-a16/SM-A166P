@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/app/prediction/AppPredictionSessionId;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/appprediction/AppPredictionManagerService$PredictionManagerServiceStub$$ExternalSyntheticLambda6;->f$0:Landroid/app/prediction/AppPredictionSessionId;
@@ -27,7 +26,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/appprediction/AppPredictionManagerService$PredictionManagerServiceStub$$ExternalSyntheticLambda6;->f$0:Landroid/app/prediction/AppPredictionSessionId;
 
     check-cast p1, Lcom/android/server/appprediction/AppPredictionPerUserService;

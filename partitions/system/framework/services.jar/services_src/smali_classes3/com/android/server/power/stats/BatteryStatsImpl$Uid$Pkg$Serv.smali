@@ -30,13 +30,10 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;)V
     .locals 0
 
-    .line 11868
     invoke-direct {p0}, Landroid/os/BatteryStats$Uid$Pkg$Serv;-><init>()V
 
-    .line 11869
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
-    .line 11870
     iget-object p1, p1, Lcom/android/server/power/stats/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {p1, p0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->add(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
@@ -49,7 +46,6 @@
 .method public detach()V
     .locals 1
 
-    .line 11894
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget-object v0, v0, Lcom/android/server/power/stats/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
@@ -62,7 +58,6 @@
 .method public getLaunches(I)I
     .locals 0
 
-    .line 11993
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunches:I
 
     return p0
@@ -71,7 +66,6 @@
 .method public getStartTime(JI)J
     .locals 0
 
-    .line 11998
     invoke-virtual {p0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->getStartTimeToNowLocked(J)J
 
     move-result-wide p0
@@ -82,7 +76,6 @@
 .method public getStartTimeToNowLocked(J)J
     .locals 2
 
-    .line 11925
     iget-boolean v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mRunning:Z
 
     if-nez v0, :cond_0
@@ -91,7 +84,6 @@
 
     return-wide p0
 
-    .line 11926
     :cond_0
     iget-wide v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mStartTimeMs:J
 
@@ -107,7 +99,6 @@
 .method public getStarts(I)I
     .locals 0
 
-    .line 12003
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mStarts:I
 
     return p0
@@ -116,14 +107,12 @@
 .method public onTimeStarted(JJJ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onTimeStopped(JJJ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -132,7 +121,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 11884
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->detach()V
 
     :cond_0
@@ -144,12 +132,10 @@
 .method public startLaunchedLocked(J)V
     .locals 4
 
-    .line 11934
     iget-boolean v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunched:Z
 
     if-nez v0, :cond_0
 
-    .line 11935
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunches:I
 
     const/4 v1, 0x1
@@ -158,7 +144,6 @@
 
     iput v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunches:I
 
-    .line 11936
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl;->getBatteryUptimeLocked(J)J
@@ -171,7 +156,6 @@
 
     iput-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunchedSinceMs:J
 
-    .line 11937
     iput-boolean v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunched:Z
 
     :cond_0
@@ -181,12 +165,10 @@
 .method public startRunningLocked(J)V
     .locals 4
 
-    .line 11963
     iget-boolean v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 11964
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mStarts:I
 
     const/4 v1, 0x1
@@ -195,7 +177,6 @@
 
     iput v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mStarts:I
 
-    .line 11965
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl;->getBatteryUptimeLocked(J)J
@@ -208,7 +189,6 @@
 
     iput-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mRunningSinceMs:J
 
-    .line 11966
     iput-boolean v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mRunning:Z
 
     :cond_0
@@ -218,12 +198,10 @@
 .method public stopLaunchedLocked(J)V
     .locals 2
 
-    .line 11946
     iget-boolean v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunched:Z
 
     if-eqz v0, :cond_1
 
-    .line 11947
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl;->getBatteryUptimeLocked(J)J
@@ -244,7 +222,6 @@
 
     if-lez v0, :cond_0
 
-    .line 11950
     iget-wide v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunchedTimeMs:J
 
     add-long/2addr v0, p1
@@ -253,7 +230,6 @@
 
     goto :goto_0
 
-    .line 11952
     :cond_0
     iget p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunches:I
 
@@ -264,7 +240,6 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 11954
     iput-boolean p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunched:Z
 
     :cond_1
@@ -274,12 +249,10 @@
 .method public stopRunningLocked(J)V
     .locals 2
 
-    .line 11975
     iget-boolean v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mRunning:Z
 
     if-eqz v0, :cond_1
 
-    .line 11976
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl;->getBatteryUptimeLocked(J)J
@@ -300,7 +273,6 @@
 
     if-lez v0, :cond_0
 
-    .line 11979
     iget-wide v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mStartTimeMs:J
 
     add-long/2addr v0, p1
@@ -309,7 +281,6 @@
 
     goto :goto_0
 
-    .line 11981
     :cond_0
     iget p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mStarts:I
 
@@ -320,7 +291,6 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 11983
     iput-boolean p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Pkg$Serv;->mRunning:Z
 
     :cond_1

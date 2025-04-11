@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/content/SyncManager;)V
     .locals 0
 
-    .line 2425
     iput-object p1, p0, Lcom/android/server/content/SyncManager$12;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public compare(Landroid/content/pm/RegisteredServicesCache$ServiceInfo;Landroid/content/pm/RegisteredServicesCache$ServiceInfo;)I
     .locals 0
 
-    .line 2429
     iget-object p0, p1, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->type:Ljava/lang/Object;
 
     check-cast p0, Landroid/content/SyncAdapterType;
@@ -50,7 +48,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 2425
     check-cast p1, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;
 
     check-cast p2, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;

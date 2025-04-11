@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 601
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 602
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$ScanResultsSupplier;->mContext:Landroid/content/Context;
 
     return-void
@@ -28,7 +26,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
-    .line 598
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService$ScanResultsSupplier;->get()Ljava/util/List;
 
     move-result-object p0
@@ -39,7 +36,6 @@
 .method public get()Ljava/util/List;
     .locals 1
 
-    .line 607
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$ScanResultsSupplier;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/net/wifi/WifiScanner;
@@ -52,7 +48,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 609
     invoke-virtual {p0}, Landroid/net/wifi/WifiScanner;->getSingleScanResults()Ljava/util/List;
 
     move-result-object p0
@@ -64,10 +59,8 @@
 
     const-string v0, "WifiScanner is null, failed to return scan results."
 
-    .line 611
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 612
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0

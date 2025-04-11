@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceIdle(Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mDeviceIdle:Z
 
     return p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceLightIdle(Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mDeviceLightIdle:Z
 
     return p0
@@ -35,14 +33,12 @@
 .method public constructor <init>(Lcom/android/server/tare/DeviceIdleModifier;)V
     .locals 0
 
-    .line 80
     iput-object p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 75
     iput-boolean p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mIsSetup:Z
 
     return-void
@@ -53,21 +49,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 111
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
-    .line 112
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 113
     iget-boolean p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mDeviceIdle:Z
 
     iget-object p2, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
@@ -82,7 +75,6 @@
 
     if-eq p1, p2, :cond_1
 
-    .line 114
     iget-object p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
 
     invoke-static {p1}, Lcom/android/server/tare/DeviceIdleModifier;->-$$Nest$fgetmPowerManager(Lcom/android/server/tare/DeviceIdleModifier;)Landroid/os/PowerManager;
@@ -95,7 +87,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mDeviceIdle:Z
 
-    .line 115
     iget-object p0, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
 
     invoke-static {p0}, Lcom/android/server/tare/DeviceIdleModifier;->-$$Nest$fgetmIrs(Lcom/android/server/tare/DeviceIdleModifier;)Lcom/android/server/tare/InternalResourceService;
@@ -109,14 +100,12 @@
     :cond_0
     const-string p2, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
 
-    .line 117
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 118
     iget-boolean p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mDeviceLightIdle:Z
 
     iget-object p2, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
@@ -131,7 +120,6 @@
 
     if-eq p1, p2, :cond_1
 
-    .line 119
     iget-object p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
 
     invoke-static {p1}, Lcom/android/server/tare/DeviceIdleModifier;->-$$Nest$fgetmPowerManager(Lcom/android/server/tare/DeviceIdleModifier;)Landroid/os/PowerManager;
@@ -144,7 +132,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mDeviceLightIdle:Z
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
 
     invoke-static {p0}, Lcom/android/server/tare/DeviceIdleModifier;->-$$Nest$fgetmIrs(Lcom/android/server/tare/DeviceIdleModifier;)Lcom/android/server/tare/InternalResourceService;
@@ -161,14 +148,12 @@
 .method public startTracking(Landroid/content/Context;)V
     .locals 2
 
-    .line 84
     iget-boolean v0, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mIsSetup:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 88
     :cond_0
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -176,18 +161,14 @@
 
     const-string v1, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
-    .line 89
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
 
-    .line 90
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 91
     invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 94
     iget-object p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
 
     invoke-static {p1}, Lcom/android/server/tare/DeviceIdleModifier;->-$$Nest$fgetmPowerManager(Lcom/android/server/tare/DeviceIdleModifier;)Landroid/os/PowerManager;
@@ -200,7 +181,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mDeviceIdle:Z
 
-    .line 95
     iget-object p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->this$0:Lcom/android/server/tare/DeviceIdleModifier;
 
     invoke-static {p1}, Lcom/android/server/tare/DeviceIdleModifier;->-$$Nest$fgetmPowerManager(Lcom/android/server/tare/DeviceIdleModifier;)Landroid/os/PowerManager;
@@ -215,7 +195,6 @@
 
     const/4 p1, 0x1
 
-    .line 97
     iput-boolean p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mIsSetup:Z
 
     return-void
@@ -224,20 +203,17 @@
 .method public stopTracking(Landroid/content/Context;)V
     .locals 1
 
-    .line 101
     iget-boolean v0, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mIsSetup:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 105
     :cond_0
     invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     const/4 p1, 0x0
 
-    .line 106
     iput-boolean p1, p0, Lcom/android/server/tare/DeviceIdleModifier$DeviceIdleTracker;->mIsSetup:Z
 
     return-void

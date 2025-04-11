@@ -17,21 +17,16 @@
 .method public constructor <init>(Landroid/net/NetworkRequest;II)V
     .locals 0
 
-    .line 188
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 189
     iput-object p1, p0, Landroid/net/NetworkFactoryLegacyImpl$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
-    .line 190
     iput p2, p0, Landroid/net/NetworkFactoryLegacyImpl$NetworkRequestInfo;->score:I
 
     const/4 p1, 0x0
 
-    .line 191
     iput-boolean p1, p0, Landroid/net/NetworkFactoryLegacyImpl$NetworkRequestInfo;->requested:Z
 
-    .line 192
     iput p3, p0, Landroid/net/NetworkFactoryLegacyImpl$NetworkRequestInfo;->providerId:I
 
     return-void
@@ -42,7 +37,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 197
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

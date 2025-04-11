@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/ResolutionMonitor;)V
     .locals 0
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor$1;->this$0:Lcom/android/server/sepunion/cover/ResolutionMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,21 +23,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 40
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.intent.action.CONFIGURATION_CHANGED"
 
-    .line 41
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 42
     iget-object p1, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor$1;->this$0:Lcom/android/server/sepunion/cover/ResolutionMonitor;
 
     invoke-static {p1}, Lcom/android/server/sepunion/cover/ResolutionMonitor;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/cover/ResolutionMonitor;)Landroid/content/Context;
@@ -53,7 +49,6 @@
 
     move-result-object p1
 
-    .line 43
     iget-object p2, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor$1;->this$0:Lcom/android/server/sepunion/cover/ResolutionMonitor;
 
     invoke-static {p2}, Lcom/android/server/sepunion/cover/ResolutionMonitor;->-$$Nest$fgetmConfiguration(Lcom/android/server/sepunion/cover/ResolutionMonitor;)Landroid/content/res/Configuration;
@@ -64,7 +59,6 @@
 
     move-result p2
 
-    .line 44
     invoke-static {}, Lcom/android/server/sepunion/cover/ResolutionMonitor;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -91,7 +85,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 47
     iget-object p2, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor$1;->this$0:Lcom/android/server/sepunion/cover/ResolutionMonitor;
 
     invoke-static {p2}, Lcom/android/server/sepunion/cover/ResolutionMonitor;->-$$Nest$fgetmHandler(Lcom/android/server/sepunion/cover/ResolutionMonitor;)Landroid/os/Handler;
@@ -106,7 +99,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 49
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/ResolutionMonitor$1;->this$0:Lcom/android/server/sepunion/cover/ResolutionMonitor;
 

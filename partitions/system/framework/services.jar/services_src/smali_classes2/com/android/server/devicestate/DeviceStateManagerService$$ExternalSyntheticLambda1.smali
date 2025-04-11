@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/devicestate/DeviceStateManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/devicestate/DeviceStateManagerService;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateManagerService$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {p0}, Lcom/android/server/devicestate/DeviceStateManagerService;->$r8$lambda$02YhgV5Mu-_NCLjC4VxnkiqAyy0(Lcom/android/server/devicestate/DeviceStateManagerService;)V

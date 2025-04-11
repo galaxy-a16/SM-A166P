@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 41
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/wm/MultiWindowFoldController;->DEBUG:Z
@@ -41,20 +40,16 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 2
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 54
     iput v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mFoldingState:I
 
     const/4 v0, 0x1
 
-    .line 60
     iput-boolean v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mIsLidOpened:Z
 
-    .line 63
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -69,7 +64,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mMainDisplayBounds:[Landroid/graphics/Rect;
 
-    .line 64
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -84,10 +78,8 @@
 
     iput-object v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mCoverDisplayBounds:[Landroid/graphics/Rect;
 
-    .line 72
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowFoldController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 73
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowFoldController;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -100,7 +92,6 @@
 .method public final applyFoldingPolicy()V
     .locals 2
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -109,14 +100,12 @@
 
     move-result-object v0
 
-    .line 134
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->getRootMainStageTask()Lcom/android/server/wm/Task;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 135
     invoke-virtual {v0}, Lcom/android/server/wm/TaskDisplayArea;->getRootMainStageTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -137,7 +126,6 @@
 
     const-string/jumbo v1, "reset"
 
-    .line 137
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/MultiWindowFoldController;->setFoldingState(ILjava/lang/String;)V
 
     goto :goto_1
@@ -147,7 +135,6 @@
 
     const-string v1, "apply_folding_policy"
 
-    .line 139
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/MultiWindowFoldController;->setFoldingState(ILjava/lang/String;)V
 
     :goto_1
@@ -157,7 +144,6 @@
 .method public getCoverDisplayBounds(Z)Landroid/graphics/Rect;
     .locals 3
 
-    .line 227
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mCoverDisplayBounds:[Landroid/graphics/Rect;
 
     const/4 v1, 0x0
@@ -172,10 +158,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 228
     invoke-virtual {p0, v2}, Lcom/android/server/wm/MultiWindowFoldController;->initDisplayBounds(Z)V
 
-    .line 230
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mCoverDisplayBounds:[Landroid/graphics/Rect;
 
@@ -195,7 +179,6 @@
 .method public getMainDisplayBounds(Z)Landroid/graphics/Rect;
     .locals 2
 
-    .line 220
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mMainDisplayBounds:[Landroid/graphics/Rect;
 
     const/4 v1, 0x0
@@ -208,10 +191,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 221
     invoke-virtual {p0, v1}, Lcom/android/server/wm/MultiWindowFoldController;->initDisplayBounds(Z)V
 
-    .line 223
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mMainDisplayBounds:[Landroid/graphics/Rect;
 
@@ -233,7 +214,6 @@
 .method public final getTopMostTaskWindowingMode()I
     .locals 0
 
-    .line 173
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -242,7 +222,6 @@
 
     move-result-object p0
 
-    .line 174
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object p0
@@ -253,7 +232,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 176
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->getWindowingMode()I
 
     move-result p0
@@ -269,7 +247,6 @@
 .method public final initDisplayBounds(Z)V
     .locals 3
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -284,7 +261,6 @@
 
     if-nez v0, :cond_0
 
-    .line 185
     sget-object p0, Lcom/android/server/wm/MultiWindowFoldController;->TAG:Ljava/lang/String;
 
     const-string p1, "initDisplayBounds: cannot find display!"
@@ -293,18 +269,15 @@
 
     return-void
 
-    .line 189
     :cond_0
     new-instance v1, Landroid/view/DisplayInfo;
 
     invoke-direct {v1}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 190
     invoke-virtual {v0, v1}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
     if-eqz p1, :cond_1
 
-    .line 192
     iget v0, v1, Landroid/view/DisplayInfo;->logicalWidth:I
 
     iget v2, v1, Landroid/view/DisplayInfo;->logicalHeight:I
@@ -313,7 +286,6 @@
 
     goto :goto_0
 
-    .line 194
     :cond_1
     iget v0, v1, Landroid/view/DisplayInfo;->logicalWidth:I
 
@@ -321,7 +293,6 @@
 
     invoke-virtual {p0, v0, v2}, Lcom/android/server/wm/MultiWindowFoldController;->updateMainDisplayBounds(II)V
 
-    .line 196
     :goto_0
     sget-object p0, Lcom/android/server/wm/MultiWindowFoldController;->TAG:Ljava/lang/String;
 
@@ -355,7 +326,6 @@
 
     const/4 v0, 0x0
 
-    .line 107
     invoke-virtual {p0, v0, p1}, Lcom/android/server/wm/MultiWindowFoldController;->setFoldingState(ILjava/lang/String;)V
 
     return-void
@@ -364,14 +334,12 @@
 .method public initialize()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public isHoldingSplitScreen()Z
     .locals 1
 
-    .line 111
     iget p0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mFoldingState:I
 
     const/4 v0, 0x1
@@ -390,7 +358,6 @@
 .method public isLidOpened()Z
     .locals 0
 
-    .line 81
     iget-boolean p0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mIsLidOpened:Z
 
     return p0
@@ -399,7 +366,6 @@
 .method public final isSplitScreenActivated()Z
     .locals 0
 
-    .line 168
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -408,7 +374,6 @@
 
     move-result-object p0
 
-    .line 169
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object p0
@@ -434,7 +399,6 @@
     :cond_0
     move v1, v0
 
-    .line 124
     :goto_0
     sget-object v2, Lcom/android/server/wm/MultiWindowFoldController;->TAG:Ljava/lang/String;
 
@@ -456,7 +420,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 126
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -479,7 +442,6 @@
 
     goto :goto_1
 
-    .line 127
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/wm/MultiWindowFoldController;->isSplitScreenActivated()Z
 
@@ -487,7 +449,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 128
     invoke-virtual {p0}, Lcom/android/server/wm/MultiWindowFoldController;->applyFoldingPolicy()V
 
     :cond_2
@@ -498,12 +459,10 @@
 .method public onKeyguardGoingAway()V
     .locals 4
 
-    .line 155
     iget-boolean v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mIsLidOpened:Z
 
     if-nez v0, :cond_1
 
-    .line 156
     iget v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mFoldingState:I
 
     const/4 v1, 0x0
@@ -518,34 +477,29 @@
 
     if-eqz v0, :cond_0
 
-    .line 157
     invoke-virtual {p0}, Lcom/android/server/wm/MultiWindowFoldController;->getTopMostTaskWindowingMode()I
 
     move-result v0
 
     if-eq v0, v2, :cond_0
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v2, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mAmInternal:Landroid/app/ActivityManagerInternal;
 
-    .line 159
     invoke-virtual {v0}, Landroid/app/ActivityManagerInternal;->getCurrentUserId()I
 
     move-result v0
 
     const-string v3, "MultiWindowFoldController:keyguard_going_away"
 
-    .line 158
     invoke-virtual {v2, v0, v3, v1}, Lcom/android/server/wm/RootWindowContainer;->startHomeOnDisplay(ILjava/lang/String;I)Z
 
     :cond_0
     const-string v0, "keyguard_going_away"
 
-    .line 163
     invoke-virtual {p0, v1, v0}, Lcom/android/server/wm/MultiWindowFoldController;->setFoldingState(ILjava/lang/String;)V
 
     :cond_1
@@ -555,7 +509,6 @@
 .method public onStartWakeUpInFoldingState()V
     .locals 4
 
-    .line 144
     iget v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mFoldingState:I
 
     const/4 v1, 0x1
@@ -572,7 +525,6 @@
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mTaskSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
-    .line 145
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskSupervisor;->getKeyguardController()Lcom/android/server/wm/KeyguardController;
 
     move-result-object v0
@@ -585,14 +537,12 @@
 
     if-nez v0, :cond_1
 
-    .line 146
     invoke-virtual {p0}, Lcom/android/server/wm/MultiWindowFoldController;->getTopMostTaskWindowingMode()I
 
     move-result v0
 
     if-eq v0, v1, :cond_0
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
@@ -610,7 +560,6 @@
     :cond_0
     const-string/jumbo v0, "start_home_by_wakeup"
 
-    .line 150
     invoke-virtual {p0, v2, v0}, Lcom/android/server/wm/MultiWindowFoldController;->setFoldingState(ILjava/lang/String;)V
 
     :cond_1
@@ -620,12 +569,10 @@
 .method public final setFoldingState(ILjava/lang/String;)V
     .locals 3
 
-    .line 115
     iget v0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mFoldingState:I
 
     if-eq v0, p1, :cond_0
 
-    .line 116
     sget-object v0, Lcom/android/server/wm/MultiWindowFoldController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -658,7 +605,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     iput p1, p0, Lcom/android/server/wm/MultiWindowFoldController;->mFoldingState:I
 
     :cond_0
@@ -681,7 +627,6 @@
     :cond_0
     move v2, v1
 
-    .line 211
     :goto_0
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowFoldController;->mCoverDisplayBounds:[Landroid/graphics/Rect;
 
@@ -709,7 +654,6 @@
     :goto_2
     invoke-virtual {v3, v1, v1, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 214
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mCoverDisplayBounds:[Landroid/graphics/Rect;
 
     aget-object p0, p0, v0
@@ -753,7 +697,6 @@
     :cond_0
     move v2, v1
 
-    .line 201
     :goto_0
     iget-object v3, p0, Lcom/android/server/wm/MultiWindowFoldController;->mMainDisplayBounds:[Landroid/graphics/Rect;
 
@@ -781,7 +724,6 @@
     :goto_2
     invoke-virtual {v3, v1, v1, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 204
     iget-object p0, p0, Lcom/android/server/wm/MultiWindowFoldController;->mMainDisplayBounds:[Landroid/graphics/Rect;
 
     aget-object p0, p0, v0

@@ -18,7 +18,6 @@
 .method public static synthetic $r8$lambda$B70vxiLOQi_q6eEbCXmH4O1MsP4(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;Landroid/media/MediaRoute2ProviderInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->lambda$postProviderUpdated$2(Landroid/media/MediaRoute2ProviderInfo;)V
 
     return-void
@@ -27,7 +26,6 @@
 .method public static synthetic $r8$lambda$DXfpxsR9chILFCmpuPlQJ3FMNIk(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->lambda$postSessionsUpdated$4(Ljava/util/List;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public static synthetic $r8$lambda$G9EA7csJ0lQ3HYtQqqogfvXINX4(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->lambda$register$0()V
 
     return-void
@@ -45,7 +42,6 @@
 .method public static synthetic $r8$lambda$JuX3ytZhBSgAhLwKMHfFhX_dq4g(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;JI)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->lambda$postRequestFailed$6(JI)V
 
     return-void
@@ -54,7 +50,6 @@
 .method public static synthetic $r8$lambda$Om7gb1GM0lugmtJDlS2KD7abSyo(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;JLandroid/media/RoutingSessionInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->lambda$postSessionCreated$3(JLandroid/media/RoutingSessionInfo;)V
 
     return-void
@@ -63,7 +58,6 @@
 .method public static synthetic $r8$lambda$ds4IOjSEQRg2S9xD15dGe-2LwqQ(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->lambda$binderDied$1()V
 
     return-void
@@ -72,7 +66,6 @@
 .method public static synthetic $r8$lambda$pnXXc79rZw_f8F3za9NQkVk7DRE(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;Landroid/media/RoutingSessionInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->lambda$postSessionReleased$5(Landroid/media/RoutingSessionInfo;)V
 
     return-void
@@ -81,15 +74,12 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;Landroid/media/IMediaRoute2ProviderService;)V
     .locals 0
 
-    .line 517
     iput-object p1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 518
     iput-object p2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
-    .line 519
     new-instance p1, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$ServiceCallbackStub;
 
     invoke-direct {p1, p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$ServiceCallbackStub;-><init>(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;)V
@@ -102,7 +92,6 @@
 .method private synthetic lambda$binderDied$1()V
     .locals 1
 
-    .line 606
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0, p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$monConnectionDied(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;)V
@@ -113,7 +102,6 @@
 .method private synthetic lambda$postProviderUpdated$2(Landroid/media/MediaRoute2ProviderInfo;)V
     .locals 1
 
-    .line 610
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0, p0, p1}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$monProviderUpdated(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;Landroid/media/MediaRoute2ProviderInfo;)V
@@ -124,7 +112,6 @@
 .method private synthetic lambda$postRequestFailed$6(JI)V
     .locals 1
 
-    .line 626
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0, p0, p1, p2, p3}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$monRequestFailed(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;JI)V
@@ -135,7 +122,6 @@
 .method private synthetic lambda$postSessionCreated$3(JLandroid/media/RoutingSessionInfo;)V
     .locals 1
 
-    .line 614
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0, p0, p1, p2, p3}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$monSessionCreated(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;JLandroid/media/RoutingSessionInfo;)V
@@ -146,7 +132,6 @@
 .method private synthetic lambda$postSessionReleased$5(Landroid/media/RoutingSessionInfo;)V
     .locals 1
 
-    .line 622
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0, p0, p1}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$monSessionReleased(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;Landroid/media/RoutingSessionInfo;)V
@@ -157,7 +142,6 @@
 .method private synthetic lambda$postSessionsUpdated$4(Ljava/util/List;)V
     .locals 1
 
-    .line 618
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0, p0, p1}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$monSessionsUpdated(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;Ljava/util/List;)V
@@ -168,7 +152,6 @@
 .method private synthetic lambda$register$0()V
     .locals 1
 
-    .line 526
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0, p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$monConnectionReady(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;)V
@@ -181,7 +164,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 606
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;)Landroid/os/Handler;
@@ -200,7 +182,6 @@
 .method public deselectRoute(JLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 574
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -217,7 +198,6 @@
 
     const-string p2, "deselectRoute: Failed to deliver request."
 
-    .line 576
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -227,7 +207,6 @@
 .method public dispose()V
     .locals 2
 
-    .line 535
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
     invoke-interface {v0}, Landroid/media/IMediaRoute2ProviderService;->asBinder()Landroid/os/IBinder;
@@ -238,7 +217,6 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 536
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mCallbackStub:Lcom/android/server/media/MediaRoute2ProviderServiceProxy$ServiceCallbackStub;
 
     invoke-virtual {p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$ServiceCallbackStub;->dispose()V
@@ -249,7 +227,6 @@
 .method public postProviderUpdated(Landroid/media/MediaRoute2ProviderInfo;)V
     .locals 2
 
-    .line 610
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;)Landroid/os/Handler;
@@ -268,7 +245,6 @@
 .method public postRequestFailed(JI)V
     .locals 2
 
-    .line 626
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;)Landroid/os/Handler;
@@ -287,7 +263,6 @@
 .method public postSessionCreated(JLandroid/media/RoutingSessionInfo;)V
     .locals 2
 
-    .line 614
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;)Landroid/os/Handler;
@@ -306,7 +281,6 @@
 .method public postSessionReleased(Landroid/media/RoutingSessionInfo;)V
     .locals 2
 
-    .line 622
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;)Landroid/os/Handler;
@@ -325,7 +299,6 @@
 .method public postSessionsUpdated(Ljava/util/List;)V
     .locals 2
 
-    .line 618
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;)Landroid/os/Handler;
@@ -346,7 +319,6 @@
 
     const/4 v0, 0x0
 
-    .line 524
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -356,14 +328,12 @@
 
     invoke-interface {v1, p0, v0}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 525
     iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
     iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mCallbackStub:Lcom/android/server/media/MediaRoute2ProviderServiceProxy$ServiceCallbackStub;
 
     invoke-interface {v1, v2}, Landroid/media/IMediaRoute2ProviderService;->setCallback(Landroid/media/IMediaRoute2ProviderServiceCallback;)V
 
-    .line 526
     iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->this$0:Lcom/android/server/media/MediaRoute2ProviderServiceProxy;
 
     invoke-static {v1}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->-$$Nest$fgetmHandler(Lcom/android/server/media/MediaRoute2ProviderServiceProxy;)Landroid/os/Handler;
@@ -382,7 +352,6 @@
 
     return p0
 
-    .line 529
     :catch_0
     invoke-virtual {p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->binderDied()V
 
@@ -392,7 +361,6 @@
 .method public releaseSession(JLjava/lang/String;)V
     .locals 0
 
-    .line 550
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -407,7 +375,6 @@
 
     const-string/jumbo p1, "releaseSession: Failed to deliver request."
 
-    .line 552
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -417,7 +384,6 @@
 .method public requestCreateSession(JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 6
 
-    .line 542
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -440,7 +406,6 @@
 
     const-string/jumbo p1, "requestCreateSession: Failed to deliver request."
 
-    .line 544
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -450,7 +415,6 @@
 .method public selectRoute(JLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 566
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -467,7 +431,6 @@
 
     const-string/jumbo p2, "selectRoute: Failed to deliver request."
 
-    .line 568
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -477,7 +440,6 @@
 .method public setRouteVolume(JLjava/lang/String;I)V
     .locals 0
 
-    .line 590
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -494,7 +456,6 @@
 
     const-string/jumbo p2, "setRouteVolume: Failed to deliver request."
 
-    .line 592
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -504,7 +465,6 @@
 .method public setSessionVolume(JLjava/lang/String;I)V
     .locals 0
 
-    .line 598
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -521,7 +481,6 @@
 
     const-string/jumbo p2, "setSessionVolume: Failed to deliver request."
 
-    .line 600
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -531,7 +490,6 @@
 .method public transferToRoute(JLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 582
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -548,7 +506,6 @@
 
     const-string/jumbo p2, "transferToRoute: Failed to deliver request."
 
-    .line 584
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -558,7 +515,6 @@
 .method public updateDiscoveryPreference(Landroid/media/RouteDiscoveryPreference;)V
     .locals 0
 
-    .line 558
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;->mService:Landroid/media/IMediaRoute2ProviderService;
 
@@ -573,7 +529,6 @@
 
     const-string/jumbo p1, "updateDiscoveryPreference: Failed to deliver request."
 
-    .line 560
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/devicestate/DeviceStateManagerService;)V
     .locals 0
 
-    .line 1426
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestTaskStackListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-direct {p0}, Landroid/app/TaskStackListener;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/devicestate/DeviceStateManagerService;Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestTaskStackListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestTaskStackListener;-><init>(Lcom/android/server/devicestate/DeviceStateManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onTaskMovedToFront(Landroid/app/ActivityManager$RunningTaskInfo;)V
     .locals 3
 
-    .line 1430
     iget-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestTaskStackListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {p1}, Lcom/android/server/devicestate/DeviceStateManagerService;->-$$Nest$fgetmLock(Lcom/android/server/devicestate/DeviceStateManagerService;)Ljava/lang/Object;
@@ -42,7 +39,6 @@
 
     monitor-enter p1
 
-    .line 1431
     :try_start_0
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestTaskStackListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
@@ -52,12 +48,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1432
     monitor-exit p1
 
     return-void
 
-    .line 1435
     :cond_0
     iget-object v0, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestTaskStackListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
@@ -71,7 +65,6 @@
 
     check-cast v0, Lcom/android/server/devicestate/OverrideRequest;
 
-    .line 1436
     iget-object v1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestTaskStackListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/devicestate/OverrideRequest;->getPid()I
@@ -84,7 +77,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1437
     iget-object p0, p0, Lcom/android/server/devicestate/DeviceStateManagerService$OverrideRequestTaskStackListener;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-static {p0}, Lcom/android/server/devicestate/DeviceStateManagerService;->-$$Nest$fgetmOverrideRequestController(Lcom/android/server/devicestate/DeviceStateManagerService;)Lcom/android/server/devicestate/OverrideRequestController;
@@ -93,7 +85,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicestate/OverrideRequestController;->cancelRequest(Lcom/android/server/devicestate/OverrideRequest;)V
 
-    .line 1439
     :cond_1
     monitor-exit p1
 

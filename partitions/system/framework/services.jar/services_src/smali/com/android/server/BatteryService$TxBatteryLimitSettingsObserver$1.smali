@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;)V
     .locals 0
 
-    .line 1370
     iput-object p1, p0, Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 6
 
-    .line 1373
     iget-object v0, p0, Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -38,7 +36,6 @@
 
     monitor-enter v0
 
-    .line 1374
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;
 
@@ -52,7 +49,6 @@
 
     move-result-object v1
 
-    .line 1375
     iget-object v2, p0, Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;
 
     iget-object v2, v2, Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -69,7 +65,6 @@
 
     invoke-static {v2, v1}, Lcom/android/server/BatteryService;->-$$Nest$fputmTxBatteryLimit(Lcom/android/server/BatteryService;I)V
 
-    .line 1376
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -98,7 +93,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1378
     iget-object p0, p0, Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;
 
     iget-object p0, p0, Lcom/android/server/BatteryService$TxBatteryLimitSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -109,7 +103,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/BatteryService;->-$$Nest$msetWirelessPowerSharingTxBatteryLimit(Lcom/android/server/BatteryService;I)V
 
-    .line 1379
     monitor-exit v0
 
     return-void

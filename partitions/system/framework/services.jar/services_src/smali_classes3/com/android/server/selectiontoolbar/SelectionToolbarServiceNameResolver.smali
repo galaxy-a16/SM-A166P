@@ -14,7 +14,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -25,7 +24,6 @@
 
     const-class v1, Landroid/service/selectiontoolbar/DefaultSelectionToolbarRenderService;
 
-    .line 29
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -56,7 +54,6 @@
 
     const-string/jumbo p0, "service="
 
-    .line 38
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget-object p0, Lcom/android/server/selectiontoolbar/SelectionToolbarServiceNameResolver;->SELECTION_TOOLBAR_SERVICE_NAME:Ljava/lang/String;
@@ -71,7 +68,6 @@
 
     const-string v0, "defaultService="
 
-    .line 43
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Lcom/android/server/selectiontoolbar/SelectionToolbarServiceNameResolver;->getDefaultServiceName(I)Ljava/lang/String;
@@ -86,7 +82,6 @@
 .method public getDefaultServiceName(I)Ljava/lang/String;
     .locals 0
 
-    .line 33
     sget-object p0, Lcom/android/server/selectiontoolbar/SelectionToolbarServiceNameResolver;->SELECTION_TOOLBAR_SERVICE_NAME:Ljava/lang/String;
 
     return-object p0

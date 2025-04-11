@@ -28,7 +28,6 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenGestureScreenShotManager$Host;IIZLandroid/graphics/Rect;IIZ)V
     .locals 0
 
-    .line 2238
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureScreenShotManager$Host$1;->this$0:Lcom/android/server/smartclip/SpenGestureScreenShotManager$Host;
 
     iput p2, p0, Lcom/android/server/smartclip/SpenGestureScreenShotManager$Host$1;->val$displayId:I
@@ -55,7 +54,6 @@
 .method public call()Lcom/android/server/smartclip/SpenGestureScreenShotManager$RealScreenShot;
     .locals 9
 
-    .line 2240
     new-instance v8, Lcom/android/server/smartclip/SpenGestureScreenShotManager$RealScreenShot;
 
     iget v1, p0, Lcom/android/server/smartclip/SpenGestureScreenShotManager$Host$1;->val$displayId:I
@@ -82,7 +80,6 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
-    .line 2238
     invoke-virtual {p0}, Lcom/android/server/smartclip/SpenGestureScreenShotManager$Host$1;->call()Lcom/android/server/smartclip/SpenGestureScreenShotManager$RealScreenShot;
 
     move-result-object p0

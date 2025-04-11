@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;)V
     .locals 0
 
-    .line 1182
     iput-object p1, p0, Lcom/android/server/BatteryService$LedSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
-    .line 1183
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,10 +27,8 @@
 .method public onChange(Z)V
     .locals 6
 
-    .line 1188
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 1190
     iget-object p1, p0, Lcom/android/server/BatteryService$LedSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmLock(Lcom/android/server/BatteryService;)Ljava/lang/Object;
@@ -41,7 +37,6 @@
 
     monitor-enter p1
 
-    .line 1191
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$LedSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
@@ -53,7 +48,6 @@
 
     move-result-object v0
 
-    .line 1192
     iget-object v1, p0, Lcom/android/server/BatteryService$LedSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     const-string/jumbo v2, "led_indicator_charing"
@@ -80,7 +74,6 @@
     :goto_0
     invoke-static {v1, v2}, Lcom/android/server/BatteryService;->-$$Nest$fputmLedChargingSettingsEnable(Lcom/android/server/BatteryService;Z)V
 
-    .line 1193
     iget-object v1, p0, Lcom/android/server/BatteryService$LedSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     const-string/jumbo v2, "led_indicator_low_battery"
@@ -99,7 +92,6 @@
     :goto_1
     invoke-static {v1, v4}, Lcom/android/server/BatteryService;->-$$Nest$fputmLedLowBatterySettingsEnable(Lcom/android/server/BatteryService;Z)V
 
-    .line 1194
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -126,7 +118,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1195
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -153,7 +144,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1197
     iget-object p0, p0, Lcom/android/server/BatteryService$LedSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmLed(Lcom/android/server/BatteryService;)Lcom/android/server/BatteryService$Led;
@@ -162,7 +152,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/BatteryService$Led;->updateLightsLocked()V
 
-    .line 1198
     monitor-exit p1
 
     return-void

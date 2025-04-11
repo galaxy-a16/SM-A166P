@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/ShutdownDialog;)V
     .locals 0
 
-    .line 174
     iput-object p1, p0, Lcom/android/server/power/ShutdownDialog$1;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$1;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetmLogString(Lcom/android/server/power/ShutdownDialog;)Ljava/lang/StringBuffer;
@@ -43,7 +41,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 178
     iget-object p1, p0, Lcom/android/server/power/ShutdownDialog$1;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {p1}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetmLogView(Lcom/android/server/power/ShutdownDialog;)Landroid/widget/TextView;
@@ -52,7 +49,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 179
     iget-object p1, p0, Lcom/android/server/power/ShutdownDialog$1;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-static {p1}, Lcom/android/server/power/ShutdownDialog;->-$$Nest$fgetmLogView(Lcom/android/server/power/ShutdownDialog;)Landroid/widget/TextView;

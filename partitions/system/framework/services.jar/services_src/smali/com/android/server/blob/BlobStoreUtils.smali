@@ -7,7 +7,6 @@
 .method public static formatTime(J)Ljava/lang/String;
     .locals 0
 
-    .line 64
     invoke-static {p0, p1}, Landroid/text/format/TimeMigrationUtils;->formatMillisWithFixedFormat(J)Ljava/lang/String;
 
     move-result-object p0
@@ -18,7 +17,6 @@
 .method public static getDescriptionResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)I
     .locals 0
 
-    .line 56
     invoke-static {p0, p2, p3}, Lcom/android/server/blob/BlobStoreUtils;->getPackageResources(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/res/Resources;
 
     move-result-object p0
@@ -29,7 +27,6 @@
 
     goto :goto_0
 
-    .line 59
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/android/server/blob/BlobStoreUtils;->getDescriptionResourceId(Landroid/content/res/Resources;Ljava/lang/String;Ljava/lang/String;)I
 
@@ -44,7 +41,6 @@
 
     const-string/jumbo v0, "string"
 
-    .line 50
     invoke-virtual {p0, p1, v0, p2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -55,7 +51,6 @@
 .method public static getPackageResources(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/res/Resources;
     .locals 2
 
-    .line 38
     :try_start_0
     invoke-static {p2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
@@ -67,7 +62,6 @@
 
     move-result-object p0
 
-    .line 39
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -83,7 +77,6 @@
     :catch_0
     move-exception p0
 
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

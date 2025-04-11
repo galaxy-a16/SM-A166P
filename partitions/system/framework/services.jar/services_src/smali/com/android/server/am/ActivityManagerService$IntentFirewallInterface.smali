@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 7314
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$IntentFirewallInterface;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public checkComponentPermission(Ljava/lang/String;IIIZ)I
     .locals 0
 
-    .line 7318
     invoke-static {p1, p2, p3, p4, p5}, Lcom/android/server/am/ActivityManagerService;->checkComponentPermission(Ljava/lang/String;IIIZ)I
 
     move-result p0
@@ -38,7 +36,6 @@
 .method public getAMSLock()Ljava/lang/Object;
     .locals 0
 
-    .line 7324
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$IntentFirewallInterface;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     return-object p0

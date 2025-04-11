@@ -13,10 +13,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 148
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -25,7 +23,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/PolicyEnforcerCallbacks$BlockingCallback;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 150
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -38,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/devicepolicy/PolicyEnforcerCallbacks$BlockingCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/PolicyEnforcerCallbacks$BlockingCallback;-><init>()V
 
     return-void
@@ -49,7 +45,6 @@
 .method public await(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Boolean;
     .locals 1
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/devicepolicy/PolicyEnforcerCallbacks$BlockingCallback;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
@@ -62,10 +57,8 @@
 
     const-string p2, "Callback was not received"
 
-    .line 158
     invoke-static {p1, p2}, Lcom/android/server/utils/Slogf;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/PolicyEnforcerCallbacks$BlockingCallback;->mValue:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -81,12 +74,10 @@
 .method public trigger(Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/devicepolicy/PolicyEnforcerCallbacks$BlockingCallback;->mValue:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/devicepolicy/PolicyEnforcerCallbacks$BlockingCallback;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V

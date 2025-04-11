@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/DropBoxManagerService;)V
     .locals 0
 
-    .line 167
     iput-object p1, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/os/IDropBoxManagerService$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public addData(Ljava/lang/String;[BI)V
     .locals 0
 
-    .line 170
     iget-object p0, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/DropBoxManagerService;->addData(Ljava/lang/String;[BI)V
@@ -35,7 +33,6 @@
 .method public addFile(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;I)V
     .locals 0
 
-    .line 175
     iget-object p0, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/DropBoxManagerService;->addFile(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;I)V
@@ -46,7 +43,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 197
     iget-object p0, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/DropBoxManagerService;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -67,7 +63,6 @@
 
     move-object v4, p4
 
-    .line 185
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/DropBoxManagerService$2;->getNextEntryWithAttribution(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Landroid/os/DropBoxManager$Entry;
 
     move-result-object p0
@@ -78,7 +73,6 @@
 .method public getNextEntryWithAttribution(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Landroid/os/DropBoxManager$Entry;
     .locals 6
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;
 
     move-object v1, p1
@@ -99,7 +93,6 @@
 .method public isTagEnabled(Ljava/lang/String;)Z
     .locals 0
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/DropBoxManagerService;->isTagEnabled(Ljava/lang/String;)Z
@@ -112,7 +105,6 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 8
 
-    .line 204
     new-instance v0, Lcom/android/server/DropBoxManagerService$ShellCmd;
 
     iget-object v1, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;

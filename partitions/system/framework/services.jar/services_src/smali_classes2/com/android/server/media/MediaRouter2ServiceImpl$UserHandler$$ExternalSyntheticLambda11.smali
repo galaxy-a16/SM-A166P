@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/media/MediaRoute2Info;
 
     invoke-static {p1}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->$r8$lambda$ZUj_Gut6AZbLeuVd5sdRnYxbE4g(Landroid/media/MediaRoute2Info;)Ljava/lang/String;

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Landroid/os/Handler;Landroid/content/Context;)V
     .locals 0
 
-    .line 10892
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$18;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$18;->val$context:Landroid/content/Context;
@@ -28,7 +27,6 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 10895
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerService$18;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$18;->val$context:Landroid/content/Context;
@@ -43,10 +41,8 @@
 
     const-string v0, "1"
 
-    .line 10896
     invoke-static {p1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10897
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerService$18;->val$context:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/devicestate/DeviceStateManagerService;)V
     .locals 0
 
-    .line 1484
     iput-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$1;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 1487
     iget-object p1, p0, Lcom/android/server/devicestate/DeviceStateManagerService$1;->this$0:Lcom/android/server/devicestate/DeviceStateManagerService;
 
     const-string/jumbo v0, "tx_event"
@@ -44,7 +42,6 @@
     :cond_0
     iput-boolean v1, p1, Lcom/android/server/devicestate/DeviceStateManagerService;->mIsWirelessPowerSharing:Z
 
-    .line 1490
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

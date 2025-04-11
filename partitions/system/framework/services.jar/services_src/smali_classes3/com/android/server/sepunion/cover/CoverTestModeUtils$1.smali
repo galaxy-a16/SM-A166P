@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverTestModeUtils;)V
     .locals 0
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils$1;->this$0:Lcom/android/server/sepunion/cover/CoverTestModeUtils;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 38
     invoke-static {}, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->-$$Nest$sfgetsCurrentTestMode()I
 
     move-result p1
@@ -33,7 +31,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverTestModeUtils$1;->this$0:Lcom/android/server/sepunion/cover/CoverTestModeUtils;
 
     invoke-static {p0}, Lcom/android/server/sepunion/cover/CoverTestModeUtils;->-$$Nest$fgetmCallback(Lcom/android/server/sepunion/cover/CoverTestModeUtils;)Lcom/android/server/sepunion/cover/CoverTestModeUtils$OnCoverTestModeChanged;

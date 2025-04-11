@@ -11,10 +11,8 @@
 .method public constructor <init>(Lco/nstant/in/cbor/model/MajorType;Ljava/math/BigInteger;)V
     .locals 0
 
-    .line 11
     invoke-direct {p0, p1}, Lco/nstant/in/cbor/model/DataItem;-><init>(Lco/nstant/in/cbor/model/MajorType;)V
 
-    .line 12
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -31,19 +29,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 21
     instance-of v0, p1, Lco/nstant/in/cbor/model/Number;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 22
     move-object v0, p1
 
     check-cast v0, Lco/nstant/in/cbor/model/Number;
 
-    .line 23
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/DataItem;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -69,7 +64,6 @@
 .method public getValue()Ljava/math/BigInteger;
     .locals 0
 
-    .line 16
     iget-object p0, p0, Lco/nstant/in/cbor/model/Number;->value:Ljava/math/BigInteger;
 
     return-object p0
@@ -78,7 +72,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 30
     invoke-super {p0}, Lco/nstant/in/cbor/model/DataItem;->hashCode()I
 
     move-result v0
@@ -97,7 +90,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 35
     iget-object p0, p0, Lco/nstant/in/cbor/model/Number;->value:Ljava/math/BigInteger;
 
     invoke-virtual {p0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;

@@ -20,7 +20,6 @@
 .method public static synthetic $r8$lambda$1Lx7A0SEnKyJfKTbWZMHKnV_uws(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;IILandroid/hardware/biometrics/fingerprint/ISession;I)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->lambda$getStartUserClient$2(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;IILandroid/hardware/biometrics/fingerprint/ISession;I)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public static synthetic $r8$lambda$B7P7ogOIb9_8Bi-QZdoSh9VYmtU(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->lambda$getStopUserClient$0()V
 
     return-void
@@ -38,7 +36,6 @@
 .method public static synthetic $r8$lambda$TmX1gdWRMs2PfanMNYsqz68IF0k(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->lambda$getStartUserClient$1()V
 
     return-void
@@ -47,7 +44,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;Lcom/android/server/biometrics/log/BiometricContext;Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;)V
     .locals 0
 
-    .line 697
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->val$biometricContext:Lcom/android/server/biometrics/log/BiometricContext;
@@ -64,7 +60,6 @@
 .method private synthetic lambda$getStartUserClient$1()V
     .locals 2
 
-    .line 716
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;->-$$Nest$fgetmTag(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;)Ljava/lang/String;
@@ -75,7 +70,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 717
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     const/4 v0, 0x0
@@ -88,7 +82,6 @@
 .method private synthetic lambda$getStartUserClient$2(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;IILandroid/hardware/biometrics/fingerprint/ISession;I)V
     .locals 3
 
-    .line 727
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;->-$$Nest$fgetmTag(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;)Ljava/lang/String;
@@ -117,7 +110,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 730
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;
@@ -126,7 +118,6 @@
 
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;->mCurrentSession:Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;
 
-    .line 733
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     iget-object p1, p1, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;->mCurrentSession:Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;
@@ -139,7 +130,6 @@
 
     invoke-virtual {p1, p5}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/AidlSession;->setLazySehFingerprint(Ljava/util/function/Supplier;)V
 
-    .line 735
     invoke-static {p3}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getInstance(I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;
 
     move-result-object p1
@@ -150,14 +140,12 @@
 
     move-result-object p5
 
-    .line 736
     invoke-virtual {p1, p5, p4}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->isInvalidationInProgress(Landroid/content/Context;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 737
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;->-$$Nest$fgetmTag(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;)Ljava/lang/String;
@@ -186,7 +174,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 742
     invoke-virtual {p2, p3, p4}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;->scheduleInvalidationRequest(II)V
 
     :cond_0
@@ -196,7 +183,6 @@
 .method private synthetic lambda$getStopUserClient$0()V
     .locals 1
 
-    .line 704
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     const/4 v0, 0x0
@@ -211,7 +197,6 @@
 .method public getStartUserClient(I)Lcom/android/server/biometrics/sensors/StartUserClient;
     .locals 13
 
-    .line 710
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;->-$$Nest$fgetmSensorProperties(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;)Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
@@ -220,7 +205,6 @@
 
     iget v0, v0, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
 
-    .line 712
     new-instance v12, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
@@ -257,7 +241,6 @@
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->val$biometricContext:Lcom/android/server/biometrics/log/BiometricContext;
 
-    .line 715
     invoke-interface {v1}, Lcom/android/server/biometrics/log/BiometricContext;->getAuthSessionCoordinator()Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;
 
     move-result-object v10
@@ -274,7 +257,6 @@
 
     invoke-direct/range {v1 .. v11}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;-><init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Lcom/android/server/biometrics/sensors/UserAwareBiometricScheduler;IILcom/android/server/biometrics/sensors/LockoutCache;Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback$Callback;)V
 
-    .line 721
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->val$provider:Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;
 
     invoke-virtual {v1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;->getHalListener()Lcom/android/server/biometrics/sensors/fingerprint/SemFpHalCallbackEx;
@@ -283,7 +265,6 @@
 
     invoke-virtual {v12, v1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;->setHalListener(Lcom/android/server/biometrics/sensors/fingerprint/SemFpHalCallbackEx;)V
 
-    .line 722
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
 
     invoke-static {v1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;->-$$Nest$fgetmLockoutHalImpl(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;)Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;
@@ -292,14 +273,12 @@
 
     invoke-virtual {v12, v1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;->setLockoutImpl(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;)V
 
-    .line 725
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->val$provider:Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;
 
     new-instance v10, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1$$ExternalSyntheticLambda2;
 
     invoke-direct {v10, p0, v12, v1, v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$HalSessionCallback;Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintProvider;I)V
 
-    .line 747
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintStartUserClient;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
@@ -336,7 +315,6 @@
 
     move-result-object v1
 
-    .line 749
     invoke-static {v1}, Lcom/android/server/biometrics/log/BiometricLogger;->ofUnknown(Landroid/content/Context;)Lcom/android/server/biometrics/log/BiometricLogger;
 
     move-result-object v7
@@ -357,7 +335,6 @@
 .method public getStopUserClient(I)Lcom/android/server/biometrics/sensors/StopUserClient;
     .locals 10
 
-    .line 701
     new-instance v9, Lcom/android/server/biometrics/sensors/fingerprint/aidl/FingerprintStopUserClient;
 
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/Sensor;
@@ -392,7 +369,6 @@
 
     move-result-object v0
 
-    .line 703
     invoke-static {v0}, Lcom/android/server/biometrics/log/BiometricLogger;->ofUnknown(Landroid/content/Context;)Lcom/android/server/biometrics/log/BiometricLogger;
 
     move-result-object v6

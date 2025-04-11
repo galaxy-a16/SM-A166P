@@ -35,7 +35,6 @@
 
     const-string v1, ""
 
-    .line 13
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -48,7 +47,6 @@
 
     sput-boolean v2, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MID:Z
 
-    .line 14
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -65,7 +63,6 @@
 
     const-string/jumbo v2, "user"
 
-    .line 16
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -82,7 +79,6 @@
 
     const-string v1, "0x4f4c"
 
-    .line 17
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -107,33 +103,25 @@
     :goto_1
     sput-boolean v0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ENG:Z
 
-    .line 20
     sput-boolean v3, Lcom/android/server/am/mars/MARsDebugConfig;->ENABLE_ALARM_WAKEUP_BLOCK:Z
 
-    .line 23
     sput-boolean v2, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ALL:Z
 
     if-nez v0, :cond_2
 
     move v3, v2
 
-    .line 27
     :cond_2
     sput-boolean v3, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
 
-    .line 29
     sput-boolean v2, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_OLAF:Z
 
-    .line 31
     sput-boolean v2, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_FREECESS:Z
 
-    .line 33
     sput-boolean v2, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_DATABASE:Z
 
-    .line 35
     sput-boolean v2, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_FILTER:Z
 
-    .line 36
     sput-boolean v2, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_NETLINK:Z
 
     return-void

@@ -20,7 +20,6 @@
 .method public final accept(Landroid/hardware/location/IContextHubClientCallback;)V
     .locals 0
 
-    .line 0
     invoke-interface {p1}, Landroid/hardware/location/IContextHubClientCallback;->onHubReset()V
 
     return-void

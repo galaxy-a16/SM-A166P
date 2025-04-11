@@ -17,17 +17,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 3162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 3165
     iput v0, p0, Lcom/android/server/display/DisplayDeviceConfig$SensorData;->minRefreshRate:F
 
     const/high16 v0, 0x7f800000    # Float.POSITIVE_INFINITY
 
-    .line 3166
     iput v0, p0, Lcom/android/server/display/DisplayDeviceConfig$SensorData;->maxRefreshRate:F
 
     return-void
@@ -38,7 +35,6 @@
 .method public matches(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
-    .line 3182
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -47,7 +43,6 @@
 
     xor-int/2addr v0, v1
 
-    .line 3183
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -61,10 +56,8 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 3184
     iget-object v0, p0, Lcom/android/server/display/DisplayDeviceConfig$SensorData;->name:Ljava/lang/String;
 
-    .line 3185
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -76,7 +69,6 @@
 
     iget-object p0, p0, Lcom/android/server/display/DisplayDeviceConfig$SensorData;->type:Ljava/lang/String;
 
-    .line 3186
     invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -96,7 +88,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 3170
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

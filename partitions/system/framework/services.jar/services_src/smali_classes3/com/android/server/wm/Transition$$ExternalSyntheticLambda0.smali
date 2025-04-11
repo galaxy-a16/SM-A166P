@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/Transition$ChangeInfo;
 
     invoke-static {p1}, Lcom/android/server/wm/Transition;->$r8$lambda$Q0wiFVqYrR0fj8HalNpl1qIsPug(Lcom/android/server/wm/Transition$ChangeInfo;)V

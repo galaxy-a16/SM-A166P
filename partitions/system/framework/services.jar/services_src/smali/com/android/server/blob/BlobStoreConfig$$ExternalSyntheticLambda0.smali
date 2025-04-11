@@ -20,7 +20,6 @@
 .method public final onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/blob/BlobStoreConfig;->$r8$lambda$mZL_oViqqqvWZY3MWJlbhS2Z5pc(Landroid/provider/DeviceConfig$Properties;)V
 
     return-void

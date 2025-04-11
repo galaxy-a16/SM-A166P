@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;Ljava/lang/String;I)V
     .locals 0
 
-    .line 581
     iput-object p1, p0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver$2;->this$0:Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;
 
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
@@ -28,7 +27,6 @@
 
     return-void
 
-    .line 587
     :cond_0
     new-instance v3, Ljava/io/File;
 
@@ -38,7 +36,6 @@
 
     invoke-direct {v3, v0, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 591
     iget-object v0, p0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver$2;->this$0:Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;
 
     iget-object v0, v0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;->mWallpaperFile:Ljava/io/File;
@@ -53,7 +50,6 @@
 
     iget-object v0, v0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;->mDesktopWallpaperFile:Ljava/io/File;
 
-    .line 592
     invoke-virtual {v0, v3}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -64,7 +60,6 @@
 
     iget-object v0, v0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;->mSubDisplayWallpaperFile:Ljava/io/File;
 
-    .line 593
     invoke-virtual {v0, v3}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -75,7 +70,6 @@
 
     iget-object v0, v0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;->mVirtualDisplayWallpaperFile:Ljava/io/File;
 
-    .line 594
     invoke-virtual {v0, v3}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -96,7 +90,6 @@
     :goto_1
     move v4, v0
 
-    .line 595
     iget-object p0, p0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver$2;->this$0:Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;
 
     iget-object v0, p0, Lcom/samsung/server/wallpaper/SemWallpaperManagerService$SemWallpaperObserver;->mCallback:Lcom/android/server/wallpaper/WallpaperManagerService$SemCallback;

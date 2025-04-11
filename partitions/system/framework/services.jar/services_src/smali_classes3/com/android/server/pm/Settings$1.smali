@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/Settings;)V
     .locals 0
 
-    .line 575
     iput-object p1, p0, Lcom/android/server/pm/Settings$1;->this$0:Lcom/android/server/pm/Settings;
 
     invoke-direct {p0}, Lcom/android/server/utils/Watcher;-><init>()V
@@ -24,7 +23,6 @@
 .method public onChange(Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 578
     iget-object p0, p0, Lcom/android/server/pm/Settings$1;->this$0:Lcom/android/server/pm/Settings;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/Settings;->dispatchChange(Lcom/android/server/utils/Watchable;)V

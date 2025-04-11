@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/server/wallpaper/CMFWallpaper;Landroid/os/Handler;)V
     .locals 0
 
-    .line 90
     iput-object p1, p0, Lcom/samsung/server/wallpaper/CMFWallpaper$2;->this$0:Lcom/samsung/server/wallpaper/CMFWallpaper;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,14 +23,12 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 93
     iget-object p1, p0, Lcom/samsung/server/wallpaper/CMFWallpaper$2;->this$0:Lcom/samsung/server/wallpaper/CMFWallpaper;
 
     invoke-static {p1}, Lcom/samsung/server/wallpaper/CMFWallpaper;->-$$Nest$mgetCmfColorCodeFromSettingsDB(Lcom/samsung/server/wallpaper/CMFWallpaper;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 94
     iget-object v0, p0, Lcom/samsung/server/wallpaper/CMFWallpaper$2;->this$0:Lcom/samsung/server/wallpaper/CMFWallpaper;
 
     invoke-static {v0}, Lcom/samsung/server/wallpaper/CMFWallpaper;->-$$Nest$fgetmDeviceColor(Lcom/samsung/server/wallpaper/CMFWallpaper;)Ljava/lang/String;
@@ -56,7 +53,6 @@
 
     if-nez v0, :cond_0
 
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,12 +71,10 @@
 
     invoke-static {v1, v0}, Lcom/samsung/server/wallpaper/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     iget-object v0, p0, Lcom/samsung/server/wallpaper/CMFWallpaper$2;->this$0:Lcom/samsung/server/wallpaper/CMFWallpaper;
 
     invoke-static {v0, p1}, Lcom/samsung/server/wallpaper/CMFWallpaper;->-$$Nest$msetDeviceColor(Lcom/samsung/server/wallpaper/CMFWallpaper;Ljava/lang/String;)V
 
-    .line 97
     iget-object p0, p0, Lcom/samsung/server/wallpaper/CMFWallpaper$2;->this$0:Lcom/samsung/server/wallpaper/CMFWallpaper;
 
     invoke-static {p0}, Lcom/samsung/server/wallpaper/CMFWallpaper;->-$$Nest$fgetmService(Lcom/samsung/server/wallpaper/CMFWallpaper;)Lcom/samsung/server/wallpaper/SemWallpaperManagerService;

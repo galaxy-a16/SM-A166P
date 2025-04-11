@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/aod/AODManagerService;)V
     .locals 0
 
-    .line 1442
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$LocalService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/aod/AODManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/aod/AODManagerService;Lcom/android/server/aod/AODManagerService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/aod/AODManagerService$LocalService;-><init>(Lcom/android/server/aod/AODManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public isAODAnalogLiveClock()Z
     .locals 3
 
-    .line 1473
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +57,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1474
     iget-object p0, p0, Lcom/android/server/aod/AODManagerService$LocalService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {p0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmIsAODAnalogLiveClock(Lcom/android/server/aod/AODManagerService;)Z
@@ -73,7 +69,6 @@
 .method public screenTurningOn(Lcom/samsung/android/aod/AODManager$AODChangeListener;)V
     .locals 3
 
-    .line 1446
     invoke-static {}, Lcom/android/server/aod/AODConfig;->isNeedsScreenTurningOnDelayed()Z
 
     move-result v0
@@ -92,7 +87,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1448
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$LocalService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {v0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmAODHandler(Lcom/android/server/aod/AODManagerService;)Lcom/android/server/aod/AODManagerService$AODHandler;
@@ -111,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1449
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$LocalService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {v0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmAODHandler(Lcom/android/server/aod/AODManagerService;)Lcom/android/server/aod/AODManagerService$AODHandler;
@@ -126,7 +119,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1452
     :cond_0
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -136,14 +128,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1453
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetDEBUG_TURNING_ON_DELAYED()I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1454
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -168,7 +158,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1456
     :cond_1
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$LocalService;->this$0:Lcom/android/server/aod/AODManagerService;
 
@@ -178,18 +167,15 @@
 
     monitor-enter v0
 
-    .line 1457
     :try_start_0
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$LocalService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {v1, p1}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fputmAODChangeListener(Lcom/android/server/aod/AODManagerService;Lcom/samsung/android/aod/AODManager$AODChangeListener;)V
 
-    .line 1458
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1459
     iget-object p1, p0, Lcom/android/server/aod/AODManagerService$LocalService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {p1}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmAODHandler(Lcom/android/server/aod/AODManagerService;)Lcom/android/server/aod/AODManagerService$AODHandler;
@@ -216,7 +202,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1460
     iget-object p0, p0, Lcom/android/server/aod/AODManagerService$LocalService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {p0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$mwakeUpInternal(Lcom/android/server/aod/AODManagerService;)V
@@ -226,7 +211,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1458
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -234,7 +218,6 @@
 
     throw p0
 
-    .line 1462
     :cond_2
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -246,12 +229,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 1464
     invoke-interface {p1}, Lcom/samsung/android/aod/AODManager$AODChangeListener;->readyToScreenTurningOn()V
 
     goto :goto_0
 
-    .line 1466
     :cond_3
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

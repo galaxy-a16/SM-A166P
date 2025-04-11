@@ -13,17 +13,14 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessRecord;)V
     .locals 1
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
-    .line 42
     iput-object p1, p0, Lcom/android/server/am/PackageList;->mProcess:Lcom/android/server/am/ProcessRecord;
 
     return-void
@@ -34,16 +31,13 @@
 .method public clear()V
     .locals 1
 
-    .line 53
     monitor-enter p0
 
-    .line 54
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 55
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mProcess:Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
@@ -52,7 +46,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->clearPackageList()V
 
-    .line 56
     monitor-exit p0
 
     return-void
@@ -70,10 +63,8 @@
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 66
     monitor-enter p0
 
-    .line 67
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -88,7 +79,6 @@
     :catchall_0
     move-exception p1
 
-    .line 68
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -99,10 +89,8 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 156
     monitor-enter p0
 
-    .line 157
     :try_start_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -110,7 +98,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 158
     iget-object p2, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {p2}, Landroid/util/ArrayMap;->size()I
@@ -126,10 +113,8 @@
 
     const-string v1, ", "
 
-    .line 159
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 160
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -148,10 +133,8 @@
     :cond_1
     const-string/jumbo p2, "}"
 
-    .line 162
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 163
     monitor-exit p0
 
     return-void
@@ -169,10 +152,8 @@
 .method public forEachPackage(Ljava/util/function/BiConsumer;)V
     .locals 4
 
-    .line 86
     monitor-enter p0
 
-    .line 87
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -185,7 +166,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 88
     iget-object v2, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -208,7 +188,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_0
     monitor-exit p0
 
@@ -227,10 +206,8 @@
 .method public forEachPackage(Ljava/util/function/Consumer;)V
     .locals 3
 
-    .line 78
     monitor-enter p0
 
-    .line 79
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -243,7 +220,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 80
     iget-object v2, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -258,7 +234,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_0
     monitor-exit p0
 
@@ -277,10 +252,8 @@
 .method public forEachPackageProcessStats(Ljava/util/function/Consumer;)V
     .locals 3
 
-    .line 115
     monitor-enter p0
 
-    .line 116
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -293,7 +266,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 117
     iget-object v2, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -308,7 +280,6 @@
 
     goto :goto_0
 
-    .line 119
     :cond_0
     monitor-exit p0
 
@@ -327,10 +298,8 @@
 .method public get(Ljava/lang/String;)Lcom/android/internal/app/procstats/ProcessStats$ProcessStateHolder;
     .locals 1
 
-    .line 72
     monitor-enter p0
 
-    .line 73
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -347,7 +316,6 @@
     :catchall_0
     move-exception p1
 
-    .line 74
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -358,10 +326,8 @@
 .method public getPackageList()[Ljava/lang/String;
     .locals 4
 
-    .line 128
     monitor-enter p0
 
-    .line 129
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -371,14 +337,12 @@
 
     if-nez v0, :cond_0
 
-    .line 131
     monitor-exit p0
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 133
     :cond_0
     new-array v1, v0, [Ljava/lang/String;
 
@@ -387,7 +351,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 135
     iget-object v3, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -402,7 +365,6 @@
 
     goto :goto_0
 
-    .line 137
     :cond_1
     monitor-exit p0
 
@@ -411,7 +373,6 @@
     :catchall_0
     move-exception v0
 
-    .line 138
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -422,7 +383,6 @@
 .method public getPackageListLocked()Landroid/util/ArrayMap;
     .locals 0
 
-    .line 124
     iget-object p0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     return-object p0
@@ -431,10 +391,8 @@
 .method public getPackageListWithVersionCode()Ljava/util/List;
     .locals 7
 
-    .line 142
     monitor-enter p0
 
-    .line 143
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -444,14 +402,12 @@
 
     if-nez v0, :cond_0
 
-    .line 145
     monitor-exit p0
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 147
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -462,7 +418,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 149
     new-instance v3, Landroid/content/pm/VersionedPackage;
 
     iget-object v4, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
@@ -491,7 +446,6 @@
 
     goto :goto_0
 
-    .line 151
     :cond_1
     monitor-exit p0
 
@@ -500,7 +454,6 @@
     :catchall_0
     move-exception v0
 
-    .line 152
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -511,10 +464,8 @@
 .method public put(Ljava/lang/String;Lcom/android/internal/app/procstats/ProcessStats$ProcessStateHolder;)Lcom/android/internal/app/procstats/ProcessStats$ProcessStateHolder;
     .locals 1
 
-    .line 46
     monitor-enter p0
 
-    .line 47
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mProcess:Lcom/android/server/am/ProcessRecord;
 
@@ -524,7 +475,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/WindowProcessController;->addPackage(Ljava/lang/String;)V
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -540,7 +490,6 @@
     :catchall_0
     move-exception p1
 
-    .line 49
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -551,10 +500,8 @@
 .method public searchEachPackage(Ljava/util/function/Function;)Ljava/lang/Object;
     .locals 3
 
-    .line 103
     monitor-enter p0
 
-    .line 104
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -567,7 +514,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 105
     iget-object v2, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -582,7 +528,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 107
     monitor-exit p0
 
     return-object v2
@@ -592,7 +537,6 @@
 
     goto :goto_0
 
-    .line 110
     :cond_1
     monitor-exit p0
 
@@ -613,10 +557,8 @@
 .method public size()I
     .locals 1
 
-    .line 60
     monitor-enter p0
 
-    .line 61
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/PackageList;->mPkgList:Landroid/util/ArrayMap;
 
@@ -631,7 +573,6 @@
     :catchall_0
     move-exception v0
 
-    .line 62
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

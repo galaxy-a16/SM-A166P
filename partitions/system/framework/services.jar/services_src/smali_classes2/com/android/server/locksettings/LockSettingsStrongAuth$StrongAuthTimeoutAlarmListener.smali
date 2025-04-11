@@ -18,15 +18,12 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsStrongAuth;JI)V
     .locals 0
 
-    .line 587
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$StrongAuthTimeoutAlarmListener;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 588
     iput-wide p2, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$StrongAuthTimeoutAlarmListener;->mLatestStrongAuthTime:J
 
-    .line 589
     iput p4, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$StrongAuthTimeoutAlarmListener;->mUserId:I
 
     return-void
@@ -37,7 +34,6 @@
 .method public getLatestStrongAuthTime()J
     .locals 2
 
-    .line 605
     iget-wide v0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$StrongAuthTimeoutAlarmListener;->mLatestStrongAuthTime:J
 
     return-wide v0
@@ -46,7 +42,6 @@
 .method public onAlarm()V
     .locals 2
 
-    .line 610
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$StrongAuthTimeoutAlarmListener;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
     const/16 v1, 0x10
@@ -61,7 +56,6 @@
 .method public setLatestStrongAuthTime(J)V
     .locals 0
 
-    .line 597
     iput-wide p1, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$StrongAuthTimeoutAlarmListener;->mLatestStrongAuthTime:J
 
     return-void

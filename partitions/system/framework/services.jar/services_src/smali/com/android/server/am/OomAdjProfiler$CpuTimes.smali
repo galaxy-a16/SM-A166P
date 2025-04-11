@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/am/OomAdjProfiler;)V
     .locals 0
 
-    .line 192
     iput-object p1, p0, Lcom/android/server/am/OomAdjProfiler$CpuTimes;->this$0:Lcom/android/server/am/OomAdjProfiler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/OomAdjProfiler;Lcom/android/server/am/OomAdjProfiler$CpuTimes-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/OomAdjProfiler$CpuTimes;-><init>(Lcom/android/server/am/OomAdjProfiler;)V
 
     return-void
@@ -41,7 +39,6 @@
 
     mul-long/2addr p1, v0
 
-    .line 201
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/am/OomAdjProfiler$CpuTimes;->addCpuTimeUs(JZZ)V
 
     return-void
@@ -50,7 +47,6 @@
 .method public addCpuTimeUs(J)V
     .locals 2
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/am/OomAdjProfiler$CpuTimes;->this$0:Lcom/android/server/am/OomAdjProfiler;
 
     invoke-static {v0}, Lcom/android/server/am/OomAdjProfiler;->-$$Nest$fgetmOnBattery(Lcom/android/server/am/OomAdjProfiler;)Z
@@ -73,7 +69,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 210
     iget-wide v0, p0, Lcom/android/server/am/OomAdjProfiler$CpuTimes;->mOnBatteryTimeUs:J
 
     add-long/2addr v0, p1
@@ -82,7 +77,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 212
     iget-wide p3, p0, Lcom/android/server/am/OomAdjProfiler$CpuTimes;->mOnBatteryScreenOffTimeUs:J
 
     add-long/2addr p3, p1
@@ -96,7 +90,6 @@
 .method public isEmpty()Z
     .locals 4
 
-    .line 218
     iget-wide v0, p0, Lcom/android/server/am/OomAdjProfiler$CpuTimes;->mOnBatteryTimeUs:J
 
     const-wide/16 v2, 0x0
@@ -125,7 +118,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 222
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

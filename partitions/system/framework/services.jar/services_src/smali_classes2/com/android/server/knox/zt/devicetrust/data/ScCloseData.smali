@@ -17,19 +17,14 @@
 .method public constructor <init>(IIJJJJ)V
     .locals 0
 
-    .line 24
     invoke-direct {p0, p1, p5, p6}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;-><init>(IJ)V
 
-    .line 25
     iput p2, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->fd:I
 
-    .line 26
     iput-wide p3, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->ret:J
 
-    .line 27
     iput-wide p7, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->pidTgid:J
 
-    .line 28
     iput-wide p9, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->uidGid:J
 
     return-void
@@ -40,7 +35,6 @@
 .method public getPid()I
     .locals 2
 
-    .line 85
     iget-wide v0, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->pidTgid:J
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getPid(J)I
@@ -53,7 +47,6 @@
 .method public getUid()I
     .locals 2
 
-    .line 90
     iget-wide v0, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->uidGid:J
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getUid(J)I
@@ -66,14 +59,12 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 4
 
-    .line 54
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "when"
 
-    .line 55
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getTime()J
 
     move-result-wide v2
@@ -82,12 +73,10 @@
 
     const-string/jumbo v1, "what"
 
-    .line 56
     iget v2, p0, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->event:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 57
     iget-wide v1, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->pidTgid:J
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getPid(J)I
@@ -98,7 +87,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 58
     iget-wide v1, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->uidGid:J
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getUid(J)I
@@ -111,19 +99,16 @@
 
     const-string v1, "fd"
 
-    .line 59
     iget v2, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->fd:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v1, "ret"
 
-    .line 60
     iget-wide v2, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->ret:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 61
     invoke-virtual {p0, v0}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->readExtras(Landroid/os/Bundle;)V
 
     return-object v0
@@ -132,7 +117,6 @@
 .method public toJson()Ljava/lang/String;
     .locals 4
 
-    .line 67
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -140,7 +124,6 @@
     :try_start_0
     const-string/jumbo v1, "when"
 
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getTime()J
 
     move-result-wide v2
@@ -149,14 +132,12 @@
 
     const-string/jumbo v1, "what"
 
-    .line 70
     iget v2, p0, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->event:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string/jumbo v1, "pid"
 
-    .line 71
     iget-wide v2, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->pidTgid:J
 
     invoke-virtual {p0, v2, v3}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getPid(J)I
@@ -167,7 +148,6 @@
 
     const-string/jumbo v1, "uid"
 
-    .line 72
     iget-wide v2, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->uidGid:J
 
     invoke-virtual {p0, v2, v3}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getUid(J)I
@@ -178,24 +158,20 @@
 
     const-string v1, "fd"
 
-    .line 73
     iget v2, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->fd:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string/jumbo v1, "ret"
 
-    .line 74
     iget-wide v2, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->ret:J
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 75
     invoke-virtual {p0, v0}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->readExtras(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 80
     :catch_0
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -207,10 +183,8 @@
 .method public toLine()Ljava/lang/String;
     .locals 10
 
-    .line 33
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 36
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getTime()J
 
     move-result-wide v1
@@ -259,7 +233,6 @@
 
     const/4 v1, 0x1
 
-    .line 37
     invoke-virtual {p0, v1}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->readExtras(Z)Ljava/lang/String;
 
     move-result-object v9
@@ -270,7 +243,6 @@
 
     const-string/jumbo v1, "when : %d | what : %d | pid : %d | uid : %d | fd : %d | ret : %d%s"
 
-    .line 33
     invoke-static {v0, v1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -281,12 +253,10 @@
 .method public toMap()Ljava/util/Map;
     .locals 3
 
-    .line 42
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 43
     invoke-virtual {p0}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getTime()J
 
     move-result-wide v1
@@ -299,7 +269,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     iget v1, p0, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->event:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -310,7 +279,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     iget-wide v1, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->pidTgid:J
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getPid(J)I
@@ -325,7 +293,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     iget-wide v1, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->uidGid:J
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/knox/zt/devicetrust/data/EndpointData;->getUid(J)I
@@ -340,7 +307,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     iget v1, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->fd:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -351,7 +317,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
     iget-wide v1, p0, Lcom/android/server/knox/zt/devicetrust/data/ScCloseData;->ret:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;

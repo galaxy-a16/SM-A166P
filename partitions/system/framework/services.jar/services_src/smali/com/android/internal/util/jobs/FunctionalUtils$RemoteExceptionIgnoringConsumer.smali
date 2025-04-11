@@ -15,7 +15,6 @@
 .method public accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 167
     :try_start_0
     invoke-interface {p0, p1}, Lcom/android/internal/util/jobs/FunctionalUtils$RemoteExceptionIgnoringConsumer;->acceptOrThrow(Ljava/lang/Object;)V
     :try_end_0

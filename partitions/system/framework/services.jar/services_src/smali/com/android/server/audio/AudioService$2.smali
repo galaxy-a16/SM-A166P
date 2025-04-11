@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioService;)V
     .locals 0
 
-    .line 1032
     iput-object p1, p0, Lcom/android/server/audio/AudioService$2;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public final disableAudioForUid(ZI)V
     .locals 7
 
-    .line 1043
     iget-object v0, p0, Lcom/android/server/audio/AudioService$2;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {v0}, Lcom/android/server/audio/AudioService;->-$$Nest$fgetmAudioHandler(Lcom/android/server/audio/AudioService;)Lcom/android/server/audio/AudioService$AudioHandler;
@@ -49,7 +47,6 @@
 .method public onUidCachedChanged(IZ)V
     .locals 0
 
-    .line 1039
     invoke-virtual {p0, p2, p1}, Lcom/android/server/audio/AudioService$2;->disableAudioForUid(ZI)V
 
     return-void
@@ -60,7 +57,6 @@
 
     const/4 p2, 0x0
 
-    .line 1035
     invoke-virtual {p0, p2, p1}, Lcom/android/server/audio/AudioService$2;->disableAudioForUid(ZI)V
 
     return-void

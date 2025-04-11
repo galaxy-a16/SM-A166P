@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLastComputed(Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;->mLastComputed:J
 
     return-wide v0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmResult(Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;->mResult:I
 
     return p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTimestamp(Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;->mTimestamp:J
 
     return-wide v0
@@ -42,16 +39,12 @@
 .method public constructor <init>(JIJ)V
     .locals 0
 
-    .line 597
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 598
     iput-wide p1, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;->mLastComputed:J
 
-    .line 599
     iput p3, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;->mResult:I
 
-    .line 600
     iput-wide p4, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;->mTimestamp:J
 
     return-void

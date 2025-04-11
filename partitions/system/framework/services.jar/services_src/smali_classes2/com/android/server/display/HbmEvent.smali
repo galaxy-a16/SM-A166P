@@ -13,13 +13,10 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput-wide p1, p0, Lcom/android/server/display/HbmEvent;->mStartTimeMillis:J
 
-    .line 29
     iput-wide p3, p0, Lcom/android/server/display/HbmEvent;->mEndTimeMillis:J
 
     return-void
@@ -30,7 +27,6 @@
 .method public getEndTimeMillis()J
     .locals 2
 
-    .line 37
     iget-wide v0, p0, Lcom/android/server/display/HbmEvent;->mEndTimeMillis:J
 
     return-wide v0
@@ -39,7 +35,6 @@
 .method public getStartTimeMillis()J
     .locals 2
 
-    .line 33
     iget-wide v0, p0, Lcom/android/server/display/HbmEvent;->mStartTimeMillis:J
 
     return-wide v0
@@ -48,7 +43,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -15,12 +15,10 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerShellCommand;I)V
     .locals 1
 
-    .line 598
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;->this$0:Lcom/android/server/am/ActivityManagerShellCommand;
 
     invoke-direct {p0}, Landroid/os/IProgressListener$Stub;-><init>()V
 
-    .line 595
     new-instance p1, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v0, 0x1
@@ -29,7 +27,6 @@
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;->mFinishedLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 599
     iput p2, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;->mUserId:I
 
     return-void
@@ -38,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ActivityManagerShellCommand;ILcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;-><init>(Lcom/android/server/am/ActivityManagerShellCommand;I)V
 
     return-void
@@ -49,7 +45,6 @@
 .method public onFinished(ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 612
     iget p2, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;->mUserId:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -70,7 +65,6 @@
 
     invoke-static {p2, v0, p1}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 613
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;->mFinishedLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -81,7 +75,6 @@
 .method public onProgress(IILandroid/os/Bundle;)V
     .locals 0
 
-    .line 607
     iget p0, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;->mUserId:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -112,14 +105,12 @@
 .method public onStarted(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 618
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +129,6 @@
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;->mFinishedLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 619
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
 
     move-result-wide v1
@@ -173,7 +163,6 @@
 .method public waitForFinish(J)Z
     .locals 1
 
-    .line 624
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProgressWaiter;->mFinishedLatch:Ljava/util/concurrent/CountDownLatch;
 
@@ -187,7 +176,6 @@
 
     return p0
 
-    .line 626
     :catch_0
     sget-object p0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 

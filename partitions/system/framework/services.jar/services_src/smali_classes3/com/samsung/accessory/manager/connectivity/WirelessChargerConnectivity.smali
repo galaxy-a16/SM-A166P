@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmsgState(Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->msgState:I
 
     return p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fputmsgState(Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->msgState:I
 
     return-void
@@ -41,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -50,7 +47,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,15 +75,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 34
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;-><init>(Landroid/content/Context;)V
 
     const/4 p1, -0x1
 
-    .line 30
     iput p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->msgState:I
 
-    .line 31
     new-instance p1, Landroid/content/IntentFilter;
 
     const-string v0, "com.samsung.server.BatteryService.action.SEC_BATTERY_EVENT"
@@ -96,21 +89,18 @@
 
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->readTriggerIntentFilter:Landroid/content/IntentFilter;
 
-    .line 39
     new-instance p1, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity$1;
 
     invoke-direct {p1, p0}, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity$1;-><init>(Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;)V
 
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->mReadTriggerReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 35
     new-instance p1, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-direct {p1}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
-    .line 36
     new-instance p1, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity$AdapterStateChangedHandler;
 
     const/4 v0, 0x0
@@ -129,20 +119,17 @@
 
     add-int/lit8 p0, p2, 0x1
 
-    .line 222
     new-array p0, p0, [B
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 223
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 224
     aget-byte v2, p1, v1
 
     aput-byte v2, p0, v1
@@ -151,7 +138,6 @@
 
     goto :goto_0
 
-    .line 226
     :cond_0
     aput-byte v0, p0, p2
 
@@ -163,20 +149,17 @@
 
     if-eqz p1, :cond_1
 
-    .line 233
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 234
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_0
 
-    .line 235
     aget-byte v1, p1, v0
 
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -199,7 +182,6 @@
 
     goto :goto_0
 
-    .line 237
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -216,21 +198,18 @@
 .method public close()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public connect(Ljava/lang/String;)Z
     .locals 0
 
-    .line 259
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mStateChangedCallback:Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;
 
     const/4 p1, 0x1
 
     if-eqz p0, :cond_0
 
-    .line 260
     invoke-interface {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;->onConnectionStateChanged(I)V
 
     :cond_0
@@ -240,7 +219,6 @@
 .method public final convertSessionState(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     packed-switch p1, :pswitch_data_0
 
     const/4 p0, 0x0
@@ -297,7 +275,6 @@
 .method public disable()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -306,7 +283,6 @@
 .method public disconnect()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -315,14 +291,12 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public enable()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -331,7 +305,6 @@
 .method public isEnabled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -340,7 +313,6 @@
 .method public isEnabledInternally()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -349,21 +321,18 @@
 .method public openNode(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)Z
     .locals 3
 
-    .line 113
     iget-object p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {p1}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->wirelesscharger_open()I
 
     move-result p1
 
-    .line 114
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "register receiver"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->mReadTriggerReceiver:Landroid/content/BroadcastReceiver;
@@ -372,7 +341,6 @@
 
     invoke-virtual {v1, v2, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 118
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -393,7 +361,6 @@
 
     const-string/jumbo p0, "open fail"
 
-    .line 120
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -409,7 +376,6 @@
 .method public sendStartAuth(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -418,24 +384,20 @@
 .method public sendStopAuth()Z
     .locals 2
 
-    .line 98
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->TAG:Ljava/lang/String;
 
     const-string v1, "close batt_misc"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {v1}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->ccic_close()I
 
     const-string/jumbo v1, "unregister receiver"
 
-    .line 100
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     iget-object v0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->mReadTriggerReceiver:Landroid/content/BroadcastReceiver;
@@ -450,7 +412,6 @@
 .method public sendStopUsbAuth()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -459,13 +420,11 @@
 
     const-wide/16 v0, 0xf
 
-    .line 151
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 154
     :catch_0
     sget-object v0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->TAG:Ljava/lang/String;
 
@@ -487,7 +446,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     iget-object v1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
     invoke-virtual {v1, p1}, Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;->ioctl_longDataWrite_batt([B)I
@@ -510,19 +468,16 @@
 
     aput-byte v6, v4, v5
 
-    .line 159
     array-length p1, p1
 
     if-eq v1, p1, :cond_0
 
     const-string p0, "command write fail"
 
-    .line 160
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v4
 
-    .line 164
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -551,13 +506,11 @@
     :cond_1
     const-wide/16 v4, 0x64
 
-    .line 167
     :try_start_1
     invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 170
     :catch_1
     iget p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->msgState:I
 
@@ -571,7 +524,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 172
     :cond_2
     sget-object p1, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->TAG:Ljava/lang/String;
 
@@ -597,7 +549,6 @@
 
     invoke-static {p1, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->getSessionState()I
 
     move-result p1
@@ -611,13 +562,11 @@
     :cond_3
     const-wide/16 v7, 0x32
 
-    .line 177
     :try_start_2
     invoke-static {v7, v8}, Ljava/lang/Thread;->sleep(J)V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 181
     :catch_2
     sget-object p1, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->TAG:Ljava/lang/String;
 
@@ -639,14 +588,12 @@
 
     invoke-static {p1, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :cond_4
     :try_start_3
     invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
     :try_end_3
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 188
     :catch_3
     iget p1, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->msgState:I
 
@@ -658,7 +605,6 @@
 
     if-eq p1, v0, :cond_4
 
-    .line 190
     :cond_5
     sget-object p1, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->TAG:Ljava/lang/String;
 
@@ -684,7 +630,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->getSessionState()I
 
     move-result v0
@@ -693,7 +638,6 @@
 
     return-object v3
 
-    .line 194
     :cond_6
     iget-object v0, p0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->mMsgHelper:Lcom/samsung/accessory/manager/authentication/msg/MsgHelper;
 
@@ -701,7 +645,6 @@
 
     move-result-object v0
 
-    .line 196
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -732,7 +675,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     array-length p1, v0
 
     invoke-virtual {p0, v0, p1}, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;->addOneByte([BI)[B
@@ -745,7 +687,6 @@
 .method public setStateChangedCallback(Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;)V
     .locals 0
 
-    .line 78
     invoke-super {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->setStateChangedCallback(Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;)V
 
     return-void

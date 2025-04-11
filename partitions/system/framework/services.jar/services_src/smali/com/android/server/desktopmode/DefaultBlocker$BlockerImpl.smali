@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/DefaultBlocker;I)V
     .locals 0
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;->this$0:Lcom/android/server/desktopmode/DefaultBlocker;
 
     invoke-direct {p0}, Lcom/samsung/android/desktopmode/IDesktopModeBlocker$Stub;-><init>()V
 
-    .line 47
     iput p2, p0, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;->reasonCode:I
 
     return-void
@@ -29,7 +27,6 @@
 .method public onBlocked()Ljava/lang/String;
     .locals 2
 
-    .line 52
     iget v0, p0, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;->reasonCode:I
 
     const/4 v1, 0x3
@@ -48,7 +45,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;->this$0:Lcom/android/server/desktopmode/DefaultBlocker;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DefaultBlocker;->-$$Nest$fgetmContext(Lcom/android/server/desktopmode/DefaultBlocker;)Landroid/content/Context;
@@ -68,7 +64,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_1
     iget-object v0, p0, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;->this$0:Lcom/android/server/desktopmode/DefaultBlocker;
 
@@ -84,7 +79,6 @@
 
     const v1, 0x1040c35
 
-    .line 56
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -95,14 +89,12 @@
 
     const v1, 0x1040430
 
-    .line 55
     invoke-virtual {v0, v1, p0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 54
     :cond_2
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;->this$0:Lcom/android/server/desktopmode/DefaultBlocker;
 
@@ -118,7 +110,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_3
     iget-object p0, p0, Lcom/android/server/desktopmode/DefaultBlocker$BlockerImpl;->this$0:Lcom/android/server/desktopmode/DefaultBlocker;
 

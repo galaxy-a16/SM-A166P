@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -20,7 +19,6 @@
 
     move-object/from16 v0, p0
 
-    .line 687
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->hashCode()I
@@ -395,15 +393,12 @@
 .method public static parse(Ljava/io/InputStream;)Ljava/util/List;
     .locals 0
 
-    .line 584
     invoke-static {p0}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object p0
 
-    .line 585
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->nextTag()I
 
-    .line 586
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->readDevices(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/util/List;
 
     move-result-object p0
@@ -414,12 +409,10 @@
 .method public static readDeviceConfig(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Lcom/android/server/hdmi/HdmiUtils$DeviceConfig;
     .locals 7
 
-    .line 638
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 642
     sget-object v1, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->NS:Ljava/lang/String;
 
     const-string v2, "device"
@@ -428,7 +421,6 @@
 
     invoke-interface {p0, v3, v1, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 643
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
@@ -440,7 +432,6 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 644
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v1
@@ -449,7 +440,6 @@
 
     goto :goto_0
 
-    .line 647
     :cond_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
@@ -457,7 +447,6 @@
 
     const-string/jumbo v5, "supportedFormat"
 
-    .line 650
     invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -466,14 +455,12 @@
 
     const-string v1, "format"
 
-    .line 651
     invoke-interface {p0, v4, v1}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v6, "descriptor"
 
-    .line 652
     invoke-interface {p0, v4, v6}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -484,13 +471,11 @@
 
     goto :goto_1
 
-    .line 654
     :cond_1
     invoke-static {v1}, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->formatNameToNum(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 655
     :goto_1
     invoke-static {v4}, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->readSad(Ljava/lang/String;)[B
 
@@ -500,31 +485,26 @@
 
     if-eqz v4, :cond_2
 
-    .line 657
     new-instance v6, Lcom/android/server/hdmi/HdmiUtils$CodecSad;
 
     invoke-direct {v6, v1, v4}, Lcom/android/server/hdmi/HdmiUtils$CodecSad;-><init>(I[B)V
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 659
     :cond_2
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->nextTag()I
 
-    .line 660
     sget-object v1, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->NS:Ljava/lang/String;
 
     invoke-interface {p0, v2, v1, v5}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 662
     :cond_3
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->skip(Lcom/android/modules/utils/TypedXmlPullParser;)V
 
     goto :goto_0
 
-    .line 665
     :cond_4
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -534,7 +514,6 @@
 
     return-object v4
 
-    .line 668
     :cond_5
     new-instance p0, Lcom/android/server/hdmi/HdmiUtils$DeviceConfig;
 
@@ -546,12 +525,10 @@
 .method public static readDevices(Lcom/android/modules/utils/TypedXmlPullParser;)Ljava/util/List;
     .locals 4
 
-    .line 609
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 611
     sget-object v1, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->NS:Ljava/lang/String;
 
     const-string v2, "config"
@@ -560,7 +537,6 @@
 
     invoke-interface {p0, v3, v1, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 612
     :cond_0
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -571,7 +547,6 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 613
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v1
@@ -580,7 +555,6 @@
 
     goto :goto_0
 
-    .line 616
     :cond_1
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
@@ -588,7 +562,6 @@
 
     const-string v2, "device"
 
-    .line 618
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -599,14 +572,12 @@
 
     const/4 v2, 0x0
 
-    .line 619
     invoke-interface {p0, v2, v1}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 622
     invoke-static {p0, v1}, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->readDeviceConfig(Lcom/android/modules/utils/TypedXmlPullParser;Ljava/lang/String;)Lcom/android/server/hdmi/HdmiUtils$DeviceConfig;
 
     move-result-object v2
@@ -614,12 +585,10 @@
     :cond_2
     if-eqz v2, :cond_0
 
-    .line 625
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 628
     :cond_3
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiUtils$ShortAudioDescriptorXmlParser;->skip(Lcom/android/modules/utils/TypedXmlPullParser;)V
 
@@ -636,7 +605,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 674
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -645,20 +613,17 @@
 
     goto :goto_0
 
-    .line 677
     :cond_0
     invoke-static {p0}, Lcom/android/internal/util/HexDump;->hexStringToByteArray(Ljava/lang/String;)[B
 
     move-result-object p0
 
-    .line 678
     array-length v1, p0
 
     const/4 v2, 0x3
 
     if-eq v1, v2, :cond_1
 
-    .line 679
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -692,7 +657,6 @@
 .method public static skip(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 4
 
-    .line 591
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getEventType()I
 
     move-result v0
@@ -706,7 +670,6 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 596
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
 
     move-result v2
@@ -732,7 +695,6 @@
     :cond_2
     return-void
 
-    .line 592
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 

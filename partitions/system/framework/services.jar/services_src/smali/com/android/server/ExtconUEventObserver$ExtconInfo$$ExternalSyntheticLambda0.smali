@@ -20,7 +20,6 @@
 .method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->$r8$lambda$q1NKfXWDxBCUTdtfDANc8h8632I(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result p0

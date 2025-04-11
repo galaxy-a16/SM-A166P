@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Landroid/util/MutableInt;Landroid/util/MutableBoolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/broadcastradio/hal2/TunerSession$$ExternalSyntheticLambda0;->f$0:Landroid/util/MutableInt;
@@ -31,7 +30,6 @@
 .method public final onValues(IZ)V
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/TunerSession$$ExternalSyntheticLambda0;->f$0:Landroid/util/MutableInt;
 
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/TunerSession$$ExternalSyntheticLambda0;->f$1:Landroid/util/MutableBoolean;

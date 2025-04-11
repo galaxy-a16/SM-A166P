@@ -19,28 +19,22 @@
 .method public constructor <init>(IIJLjava/lang/String;)V
     .locals 1
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 46
     iput-boolean v0, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mIsComplete:Z
 
-    .line 57
     iput p1, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mTransactionId:I
 
-    .line 58
     iput p2, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mTransactionType:I
 
-    .line 59
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mNanoAppId:Ljava/lang/Long;
 
-    .line 60
     iput-object p5, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mPackage:Ljava/lang/String;
 
     return-void
@@ -49,26 +43,20 @@
 .method public constructor <init>(IILjava/lang/String;)V
     .locals 1
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 46
     iput-boolean v0, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mIsComplete:Z
 
-    .line 49
     iput p1, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mTransactionId:I
 
-    .line 50
     iput p2, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mTransactionType:I
 
     const/4 p1, 0x0
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mNanoAppId:Ljava/lang/Long;
 
-    .line 52
     iput-object p3, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mPackage:Ljava/lang/String;
 
     return-void
@@ -79,14 +67,12 @@
 .method public getTimeout(Ljava/util/concurrent/TimeUnit;)J
     .locals 2
 
-    .line 119
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mTransactionType:I
 
     if-eqz p0, :cond_0
 
     const-wide/16 v0, 0x5
 
-    .line 128
     sget-object p0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {p1, v0, v1, p0}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
@@ -98,7 +84,6 @@
     :cond_0
     const-wide/16 v0, 0x1e
 
-    .line 121
     sget-object p0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {p1, v0, v1, p0}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
@@ -111,7 +96,6 @@
 .method public getTransactionId()I
     .locals 0
 
-    .line 101
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mTransactionId:I
 
     return p0
@@ -120,7 +104,6 @@
 .method public getTransactionType()I
     .locals 0
 
-    .line 110
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mTransactionType:I
 
     return p0
@@ -129,7 +112,6 @@
 .method public isComplete()Z
     .locals 0
 
-    .line 145
     iget-boolean p0, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mIsComplete:Z
 
     return p0
@@ -138,7 +120,6 @@
 .method public onQueryResponse(ILjava/util/List;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -153,7 +134,6 @@
 
     const/4 v0, 0x1
 
-    .line 138
     iput-boolean v0, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mIsComplete:Z
 
     return-void
@@ -162,7 +142,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 150
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -185,12 +164,10 @@
 
     move-result-object v0
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/location/contexthub/ContextHubServiceTransaction;->mNanoAppId:Ljava/lang/Long;
 
     if-eqz v1, :cond_0
 
-    .line 153
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,7 +198,6 @@
 
     move-result-object v0
 
-    .line 155
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 

@@ -15,17 +15,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     invoke-static {}, Lcom/android/server/am/mars/filter/FilterFactory;->getInstance()Lcom/android/server/am/mars/filter/FilterFactory;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/FilterManager;->mFF:Lcom/android/server/am/mars/filter/FilterFactory;
 
-    .line 16
     invoke-static {}, Lcom/android/server/am/mars/filter/FilterChainFactory;->getInstance()Lcom/android/server/am/mars/filter/FilterChainFactory;
 
     move-result-object v0
@@ -38,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/FilterManager-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/FilterManager;-><init>()V
 
     return-void
@@ -47,7 +43,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/FilterManager;
     .locals 1
 
-    .line 24
     invoke-static {}, Lcom/android/server/am/mars/filter/FilterManager$FilterManagerHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/FilterManager;
 
     move-result-object v0
@@ -60,12 +55,10 @@
 .method public deInit()V
     .locals 1
 
-    .line 39
     iget-object v0, p0, Lcom/android/server/am/mars/filter/FilterManager;->mFF:Lcom/android/server/am/mars/filter/FilterFactory;
 
     invoke-virtual {v0}, Lcom/android/server/am/mars/filter/FilterFactory;->deInit()V
 
-    .line 40
     iget-object p0, p0, Lcom/android/server/am/mars/filter/FilterManager;->mFCF:Lcom/android/server/am/mars/filter/FilterChainFactory;
 
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/FilterChainFactory;->deInit()V
@@ -76,7 +69,6 @@
 .method public final filter(ILjava/lang/String;II)I
     .locals 3
 
-    .line 44
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -93,7 +85,6 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 46
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager;->getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object p0
@@ -110,7 +101,6 @@
 
     return v0
 
-    .line 50
     :cond_0
     invoke-static {}, Lcom/android/server/am/mars/filter/FilterChainFactory;->getInstance()Lcom/android/server/am/mars/filter/FilterChainFactory;
 
@@ -122,7 +112,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 52
     invoke-virtual {p0, p2, p3, p4, p1}, Lcom/android/server/am/mars/filter/FilterChain;->filter(Ljava/lang/String;III)I
 
     move-result p0
@@ -151,7 +140,6 @@
 
     goto :goto_1
 
-    .line 69
     :cond_0
     invoke-static {}, Lcom/android/server/am/mars/filter/FilterFactory;->getInstance()Lcom/android/server/am/mars/filter/FilterFactory;
 
@@ -165,7 +153,6 @@
 
     const/16 v2, 0x11
 
-    .line 70
     invoke-interface {v1, p1, p2, p3, v2}, Lcom/android/server/am/mars/filter/IFilter;->filter(Ljava/lang/String;III)I
 
     move-result v1
@@ -193,7 +180,6 @@
 .method public filterForSpecificPolicy(ILjava/lang/String;II)I
     .locals 0
 
-    .line 58
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/am/mars/filter/FilterManager;->filter(ILjava/lang/String;II)I
 
     move-result p0
@@ -204,17 +190,14 @@
 .method public init(Landroid/content/Context;)V
     .locals 1
 
-    .line 32
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/FilterManager;->setContext(Landroid/content/Context;)V
 
-    .line 33
     iget-object p1, p0, Lcom/android/server/am/mars/filter/FilterManager;->mFF:Lcom/android/server/am/mars/filter/FilterFactory;
 
     iget-object v0, p0, Lcom/android/server/am/mars/filter/FilterManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1, v0}, Lcom/android/server/am/mars/filter/FilterFactory;->init(Landroid/content/Context;)V
 
-    .line 34
     iget-object p1, p0, Lcom/android/server/am/mars/filter/FilterManager;->mFCF:Lcom/android/server/am/mars/filter/FilterChainFactory;
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/FilterManager;->mContext:Landroid/content/Context;
@@ -227,7 +210,6 @@
 .method public setContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 28
     iput-object p1, p0, Lcom/android/server/am/mars/filter/FilterManager;->mContext:Landroid/content/Context;
 
     return-void

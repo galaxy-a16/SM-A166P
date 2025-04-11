@@ -75,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCustomDisplayMetrics(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mCustomDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     return-object p0
@@ -84,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayRemovedOnEnablingDesktopMode(Lcom/android/server/desktopmode/MultiResolutionManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mDisplayRemovedOnEnablingDesktopMode:Z
 
     return p0
@@ -93,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDualModeDensityChangedListener(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mDualModeDensityChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
     return-object p0
@@ -102,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMaxSupportedResolution(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mMaxSupportedResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     return-object p0
@@ -111,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$fgetmResolver(Lcom/android/server/desktopmode/MultiResolutionManager;)Landroid/content/ContentResolver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mResolver:Landroid/content/ContentResolver;
 
     return-object p0
@@ -120,7 +115,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSelectedDisplayMetrics(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSelectedDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     return-object p0
@@ -129,7 +123,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSettingsHelper(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/SettingsHelper;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSettingsHelper:Lcom/android/server/desktopmode/SettingsHelper;
 
     return-object p0
@@ -138,7 +131,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStandaloneModeDensityChangedListener(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStandaloneModeDensityChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
     return-object p0
@@ -147,7 +139,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStandaloneModeDisplayMetrics(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStandaloneModeDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;
 
     return-object p0
@@ -156,7 +147,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/IStateManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     return-object p0
@@ -165,7 +155,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserSettingResolutionChangedListener(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolutionChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
     return-object p0
@@ -174,7 +163,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWindowManagerInternal(Lcom/android/server/desktopmode/MultiResolutionManager;)Lcom/android/server/wm/WindowManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
     return-object p0
@@ -183,7 +171,6 @@
 .method public static bridge synthetic -$$Nest$fputmDisplayRemovedOnEnablingDesktopMode(Lcom/android/server/desktopmode/MultiResolutionManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mDisplayRemovedOnEnablingDesktopMode:Z
 
     return-void
@@ -192,7 +179,6 @@
 .method public static bridge synthetic -$$Nest$mhandleReconnection(Lcom/android/server/desktopmode/MultiResolutionManager;Lcom/android/server/desktopmode/State;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->handleReconnection(Lcom/android/server/desktopmode/State;)V
 
     return-void
@@ -201,7 +187,6 @@
 .method public static bridge synthetic -$$Nest$msetSelectedDisplayMetrics(Lcom/android/server/desktopmode/MultiResolutionManager;Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/desktopmode/MultiResolutionManager;->setSelectedDisplayMetrics(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;I)V
 
     return-void
@@ -210,7 +195,6 @@
 .method public static bridge synthetic -$$Nest$mshowUserSettingIsNotSupportedToast(Lcom/android/server/desktopmode/MultiResolutionManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->showUserSettingIsNotSupportedToast()V
 
     return-void
@@ -219,7 +203,6 @@
 .method public static bridge synthetic -$$Nest$mupdateDisplayResolutionUnsupported(Lcom/android/server/desktopmode/MultiResolutionManager;Lcom/android/server/desktopmode/DisplayInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->updateDisplayResolutionUnsupported(Lcom/android/server/desktopmode/DisplayInfo;)V
 
     return-void
@@ -228,7 +211,6 @@
 .method public static bridge synthetic -$$Nest$sfgetRESOLUTION_TABLE()Ljava/util/Map;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/desktopmode/MultiResolutionManager;->RESOLUTION_TABLE:Ljava/util/Map;
 
     return-object v0
@@ -237,7 +219,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/desktopmode/MultiResolutionManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -246,7 +227,6 @@
 .method public static constructor <clinit>()V
     .locals 12
 
-    .line 40
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -269,14 +249,12 @@
 
     sput-object v0, Lcom/android/server/desktopmode/MultiResolutionManager;->TAG:Ljava/lang/String;
 
-    .line 68
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/desktopmode/MultiResolutionManager;->RESOLUTION_TABLE:Ljava/util/Map;
 
-    .line 70
     new-instance v1, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const/16 v2, 0xf00
@@ -289,7 +267,6 @@
 
     sput-object v1, Lcom/android/server/desktopmode/MultiResolutionManager;->UHD:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 71
     new-instance v2, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const-string v3, "UWQHD"
@@ -302,7 +279,6 @@
 
     sput-object v2, Lcom/android/server/desktopmode/MultiResolutionManager;->UWQHD:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 72
     new-instance v3, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const-string v4, "WQXGA"
@@ -315,7 +291,6 @@
 
     sput-object v3, Lcom/android/server/desktopmode/MultiResolutionManager;->WQXGA:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 73
     new-instance v4, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const-string v8, "WQHD"
@@ -324,7 +299,6 @@
 
     sput-object v4, Lcom/android/server/desktopmode/MultiResolutionManager;->WQHD:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 74
     new-instance v5, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const-string v8, "UWFHD"
@@ -335,7 +309,6 @@
 
     sput-object v5, Lcom/android/server/desktopmode/MultiResolutionManager;->UWFHD:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 75
     new-instance v6, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const/16 v8, 0x4b0
@@ -348,7 +321,6 @@
 
     sput-object v6, Lcom/android/server/desktopmode/MultiResolutionManager;->WUXGA:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 76
     new-instance v8, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const-string v10, "FHD"
@@ -357,7 +329,6 @@
 
     sput-object v8, Lcom/android/server/desktopmode/MultiResolutionManager;->FHD:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 77
     new-instance v9, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const-string v10, "HD"
@@ -368,51 +339,40 @@
 
     sput-object v9, Lcom/android/server/desktopmode/MultiResolutionManager;->HD:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 78
     sput-object v8, Lcom/android/server/desktopmode/MultiResolutionManager;->DUAL_MODE_DEFAULT:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 79
     sput-object v1, Lcom/android/server/desktopmode/MultiResolutionManager;->HIGHEST_RESOLUTION:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 80
     sput-object v9, Lcom/android/server/desktopmode/MultiResolutionManager;->LOWEST_RESOLUTION:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 84
     iget-object v7, v1, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->name:Ljava/lang/String;
 
     invoke-interface {v0, v7, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     iget-object v1, v2, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->name:Ljava/lang/String;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 86
     iget-object v1, v3, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->name:Ljava/lang/String;
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
     iget-object v1, v4, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->name:Ljava/lang/String;
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 88
     iget-object v1, v5, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->name:Ljava/lang/String;
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
     iget-object v1, v6, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->name:Ljava/lang/String;
 
     invoke-interface {v0, v1, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
     iget-object v1, v8, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->name:Ljava/lang/String;
 
     invoke-interface {v0, v1, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
     iget-object v1, v9, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->name:Ljava/lang/String;
 
     invoke-interface {v0, v1, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -423,18 +383,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/desktopmode/IStateManager;Lcom/android/server/desktopmode/SettingsHelper;Lcom/android/server/wm/ActivityTaskManagerInternal;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/WindowManagerInternal;)V
     .locals 2
 
-    .line 204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 50
     iput-boolean v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mIsForcedSupportAllResolution:Z
 
-    .line 51
     iput-boolean v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mDisplayRemovedOnEnablingDesktopMode:Z
 
-    .line 94
     new-instance v0, Lcom/android/server/desktopmode/MultiResolutionManager$1;
 
     const-string/jumbo v1, "resolution_user_setting"
@@ -443,7 +399,6 @@
 
     iput-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolutionChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
-    .line 114
     new-instance v0, Lcom/android/server/desktopmode/MultiResolutionManager$2;
 
     const-string v1, "dual_mode_screen_zoom"
@@ -452,7 +407,6 @@
 
     iput-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mDualModeDensityChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
-    .line 123
     new-instance v0, Lcom/android/server/desktopmode/MultiResolutionManager$3;
 
     const-string/jumbo v1, "standalone_mode_screen_zoom"
@@ -461,42 +415,32 @@
 
     iput-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStandaloneModeDensityChangedListener:Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;
 
-    .line 132
     new-instance v0, Lcom/android/server/desktopmode/MultiResolutionManager$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/MultiResolutionManager$4;-><init>(Lcom/android/server/desktopmode/MultiResolutionManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateListener:Lcom/android/server/desktopmode/StateManager$StateListener;
 
-    .line 205
     iput-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mContext:Landroid/content/Context;
 
-    .line 206
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mResolver:Landroid/content/ContentResolver;
 
-    .line 207
     iput-object p2, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
-    .line 208
     invoke-interface {p2, v0}, Lcom/android/server/desktopmode/IStateManager;->registerListener(Lcom/android/server/desktopmode/StateManager$StateListener;)V
 
-    .line 209
     iput-object p4, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 210
     iput-object p5, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 211
     iput-object p6, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
-    .line 212
     iput-object p3, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSettingsHelper:Lcom/android/server/desktopmode/SettingsHelper;
 
-    .line 213
     new-instance p1, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     sget-object p2, Lcom/android/server/desktopmode/MultiResolutionManager;->DUAL_MODE_DEFAULT:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
@@ -507,10 +451,8 @@
 
     iput-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSelectedDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
-    .line 214
     iput-object p2, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mMaxSupportedResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 215
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_STANDALONE:Z
 
     if-eqz p1, :cond_0
@@ -530,7 +472,6 @@
 .method public final calculateMaxSupportedResolution(Lcom/android/server/desktopmode/DisplayInfo;)Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
     .locals 1
 
-    .line 366
     sget-object v0, Lcom/android/server/desktopmode/MultiResolutionManager;->LOWEST_RESOLUTION:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/desktopmode/MultiResolutionManager;->calculateMaxSupportedResolution(Lcom/android/server/desktopmode/DisplayInfo;Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
@@ -545,12 +486,10 @@
 
     if-eqz p1, :cond_5
 
-    .line 371
     invoke-virtual {p1}, Lcom/android/server/desktopmode/DisplayInfo;->getRealSize()Landroid/graphics/Point;
 
     move-result-object p0
 
-    .line 372
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -573,7 +512,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/desktopmode/DisplayInfo;->getRotation()I
 
@@ -583,7 +521,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 376
     invoke-virtual {p1}, Lcom/android/server/desktopmode/DisplayInfo;->getRotation()I
 
     move-result p1
@@ -592,7 +529,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 379
     :cond_1
     iget p1, p0, Landroid/graphics/Point;->y:I
 
@@ -600,10 +536,8 @@
 
     if-le p1, v0, :cond_2
 
-    .line 380
     invoke-virtual {p0, p1, v0}, Landroid/graphics/Point;->set(II)V
 
-    .line 384
     :cond_2
     sget-object p1, Lcom/android/server/desktopmode/MultiResolutionManager;->RESOLUTION_TABLE:Ljava/util/Map;
 
@@ -628,14 +562,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 385
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 386
     iget v1, p0, Landroid/graphics/Point;->x:I
 
     iget v2, v0, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->width:I
@@ -653,7 +585,6 @@
     :cond_4
     return-object p2
 
-    .line 392
     :cond_5
     sget-object p0, Lcom/android/server/desktopmode/MultiResolutionManager;->DUAL_MODE_DEFAULT:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
@@ -663,7 +594,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 2
 
-    .line 412
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -690,10 +620,8 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 413
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 414
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -712,7 +640,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 415
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -731,7 +658,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 416
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -750,7 +676,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 417
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -769,7 +694,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 418
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -788,7 +712,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 419
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -807,7 +730,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 420
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -826,7 +748,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 421
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -845,7 +766,6 @@
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 422
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -854,7 +774,6 @@
 .method public getCustomDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
     .locals 0
 
-    .line 427
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mCustomDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     return-object p0
@@ -863,7 +782,6 @@
 .method public final getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
     .locals 1
 
-    .line 241
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mCustomDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     if-eqz v0, :cond_0
@@ -880,7 +798,6 @@
 .method public getStandaloneModeDensity()I
     .locals 0
 
-    .line 220
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStandaloneModeDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;
 
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;->getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
@@ -895,7 +812,6 @@
 .method public getStandaloneModeOriginalDensity(I)I
     .locals 0
 
-    .line 225
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStandaloneModeDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;->-$$Nest$mgetOriginalDisplaySizeDensity(Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;I)Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
@@ -910,12 +826,10 @@
 .method public final handleReconnection(Lcom/android/server/desktopmode/State;)V
     .locals 2
 
-    .line 396
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
 
     move-result-object v0
 
-    .line 397
     iget v0, v0, Lcom/samsung/android/desktopmode/SemDesktopModeState;->enabled:I
 
     const/4 v1, 0x4
@@ -926,7 +840,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 398
     :cond_0
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopDisplayId()I
 
@@ -936,7 +849,6 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 399
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->isResolutionChangeNeeded(Lcom/android/server/desktopmode/State;)Z
 
     move-result v0
@@ -945,12 +857,10 @@
 
     const/4 p1, 0x1
 
-    .line 400
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->setDualDisplayResolutionDensity(Z)I
 
     goto :goto_0
 
-    .line 402
     :cond_1
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -962,13 +872,11 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 404
     :cond_2
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     if-eqz v0, :cond_3
 
-    .line 405
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getConnectedDisplay()Lcom/android/server/desktopmode/DisplayInfo;
 
     move-result-object p1
@@ -983,17 +891,14 @@
 .method public final isResolutionChangeNeeded(Lcom/android/server/desktopmode/State;)Z
     .locals 2
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     const/4 v1, 0x1
 
     if-nez v0, :cond_0
 
-    .line 324
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mLastDualModeMaxSupportedResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 325
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getConnectedDisplay()Lcom/android/server/desktopmode/DisplayInfo;
 
     move-result-object p1
@@ -1002,7 +907,6 @@
 
     move-result-object p0
 
-    .line 326
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1011,7 +915,6 @@
 
     goto :goto_0
 
-    .line 329
     :cond_0
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getConnectedDisplay()Lcom/android/server/desktopmode/DisplayInfo;
 
@@ -1021,21 +924,18 @@
 
     move-result-object p1
 
-    .line 330
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     move-result-object p0
 
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->resolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 329
     invoke-virtual {p1, p0}, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->isSupportedOn(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 331
     sget-boolean p0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p0, :cond_2
@@ -1051,7 +951,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 334
     :cond_2
     :goto_0
     sget-boolean p0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
@@ -1083,7 +982,6 @@
 .method public onUserChanged(Z)V
     .locals 3
 
-    .line 229
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1106,11 +1004,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->updateUserSettingDisplayMetrics()V
 
-    .line 231
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->SUPPORT_STANDALONE:Z
 
     if-eqz v0, :cond_1
@@ -1119,7 +1015,6 @@
 
     invoke-static {v0}, Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;->-$$Nest$mupdateDesktopModeDensity(Lcom/android/server/desktopmode/MultiResolutionManager$StandaloneModeDisplayMetrics;)V
 
-    .line 233
     :cond_1
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
@@ -1129,19 +1024,16 @@
 
     if-eqz p1, :cond_2
 
-    .line 234
     invoke-interface {v0}, Lcom/android/server/desktopmode/State;->isExternalDisplayConnected()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 235
     invoke-interface {v0}, Lcom/android/server/desktopmode/State;->getConnectedDisplay()Lcom/android/server/desktopmode/DisplayInfo;
 
     move-result-object p1
 
-    .line 236
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->calculateMaxSupportedResolution(Lcom/android/server/desktopmode/DisplayInfo;)Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     move-result-object p1
@@ -1155,7 +1047,6 @@
 .method public setCustomResolutionFromAdbCommand(Ljava/io/PrintWriter;III)V
     .locals 3
 
-    .line 433
     :try_start_0
     new-instance v0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
@@ -1171,7 +1062,6 @@
 
     const-string p2, "Successfully set custom resolution"
 
-    .line 435
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1181,12 +1071,10 @@
     :catch_0
     const/4 p2, 0x0
 
-    .line 437
     iput-object p2, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mCustomDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     const-string p0, "Failed to set custom resolution. Width, height, and density must be greater than 0. Custom resolution is removed."
 
-    .line 438
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_0
@@ -1198,13 +1086,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 264
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->updateUserSettingDisplayMetrics()V
 
-    .line 265
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->updateDualDisplayMetrics()V
 
-    .line 266
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
@@ -1215,7 +1100,6 @@
 
     iget v0, v0, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->width:I
 
-    .line 267
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     move-result-object v1
@@ -1224,21 +1108,18 @@
 
     iget v1, v1, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->height:I
 
-    .line 268
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     move-result-object p0
 
     iget p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->density:I
 
-    .line 266
     invoke-virtual {p1, v0, v1, p0}, Lcom/android/server/wm/ActivityTaskManagerInternal;->enableDexDisplay(III)I
 
     move-result p0
 
     return p0
 
-    .line 270
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
@@ -1252,7 +1133,6 @@
 .method public final setSelectedDisplayMetrics(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;I)V
     .locals 3
 
-    .line 245
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1281,13 +1161,11 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     :cond_0
     new-instance v0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;-><init>(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;I)V
 
-    .line 248
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSelectedDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     invoke-virtual {p1, v0}, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->equals(Ljava/lang/Object;)Z
@@ -1296,7 +1174,6 @@
 
     if-nez p1, :cond_2
 
-    .line 249
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_1
@@ -1319,18 +1196,15 @@
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
     :cond_1
     iput-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSelectedDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
-    .line 251
     iget-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p1}, Lcom/android/server/desktopmode/IStateManager;->getState()Lcom/android/server/desktopmode/State;
 
     move-result-object p1
 
-    .line 252
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopDisplayId()I
 
     move-result p2
@@ -1339,14 +1213,12 @@
 
     if-eq p2, v0, :cond_2
 
-    .line 253
     iget-object p2, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopDisplayId()I
 
     move-result p1
 
-    .line 254
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     move-result-object v0
@@ -1355,7 +1227,6 @@
 
     iget v0, v0, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->width:I
 
-    .line 255
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     move-result-object v1
@@ -1364,14 +1235,12 @@
 
     iget v1, v1, Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;->height:I
 
-    .line 256
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->getSelectedDisplayMetrics()Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     move-result-object p0
 
     iget p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->density:I
 
-    .line 253
     invoke-virtual {p2, p1, v0, v1, p0}, Lcom/android/server/wm/WindowManagerInternal;->setDisplaySizeAndDensityInDex(IIII)V
 
     :cond_2
@@ -1381,7 +1250,6 @@
 .method public setSupportAllResolution(Z)V
     .locals 0
 
-    .line 446
     iput-boolean p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mIsForcedSupportAllResolution:Z
 
     return-void
@@ -1390,14 +1258,12 @@
 .method public final showUserSettingIsNotSupportedToast()V
     .locals 2
 
-    .line 280
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
-    .line 281
     invoke-interface {v0}, Lcom/android/server/desktopmode/IStateManager;->getState()Lcom/android/server/desktopmode/State;
 
     move-result-object v0
@@ -1410,7 +1276,6 @@
 
     goto :goto_0
 
-    .line 284
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
@@ -1426,7 +1291,6 @@
 
     if-nez v0, :cond_2
 
-    .line 285
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -1437,7 +1301,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :cond_1
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
@@ -1453,7 +1316,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 288
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mContext:Landroid/content/Context;
 
     invoke-static {p0, v0}, Lcom/android/server/desktopmode/Utils;->getDisplayContext(Landroid/content/Context;I)Landroid/content/Context;
@@ -1474,7 +1336,6 @@
 
     const/4 v0, 0x0
 
-    .line 275
     invoke-virtual {p0, p1, v0}, Lcom/android/server/desktopmode/MultiResolutionManager;->calculateMaxSupportedResolution(Lcom/android/server/desktopmode/DisplayInfo;Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     move-result-object p1
@@ -1488,7 +1349,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 276
     :goto_0
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
@@ -1500,7 +1360,6 @@
 .method public final updateDualDisplayMetrics()V
     .locals 3
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {v0}, Lcom/android/server/desktopmode/IStateManager;->getState()Lcom/android/server/desktopmode/State;
@@ -1513,14 +1372,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 296
     iget-boolean v1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mIsForcedSupportAllResolution:Z
 
     if-eqz v1, :cond_0
 
     goto :goto_2
 
-    .line 305
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/MultiResolutionManager;->calculateMaxSupportedResolution(Lcom/android/server/desktopmode/DisplayInfo;)Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
@@ -1528,14 +1385,12 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/MultiResolutionManager;->updateMaxSupportedResolution(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)V
 
-    .line 306
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
-    .line 307
     invoke-interface {v0}, Lcom/android/server/desktopmode/IStateManager;->getState()Lcom/android/server/desktopmode/State;
 
     move-result-object v0
@@ -1548,7 +1403,6 @@
 
     goto :goto_0
 
-    .line 311
     :cond_1
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
@@ -1560,7 +1414,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 312
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     goto :goto_1
@@ -1570,50 +1423,42 @@
 
     goto :goto_1
 
-    .line 308
     :cond_3
     :goto_0
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mMaxSupportedResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 314
     :goto_1
     iget-object v1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSelectedDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     invoke-virtual {v1, v0}, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->setResolution(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)V
 
-    .line 315
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mMaxSupportedResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     iput-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mLastDualModeMaxSupportedResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     goto :goto_3
 
-    .line 297
     :cond_4
     :goto_2
     iget-boolean v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mIsForcedSupportAllResolution:Z
 
     if-eqz v0, :cond_5
 
-    .line 298
     invoke-virtual {p0}, Lcom/android/server/desktopmode/MultiResolutionManager;->updateSupportAllResolution()V
 
     goto :goto_3
 
-    .line 300
     :cond_5
     sget-object v0, Lcom/android/server/desktopmode/MultiResolutionManager;->HIGHEST_RESOLUTION:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/MultiResolutionManager;->updateMaxSupportedResolution(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)V
 
-    .line 301
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSelectedDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     sget-object v1, Lcom/android/server/desktopmode/MultiResolutionManager;->DUAL_MODE_DEFAULT:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     invoke-virtual {v0, v1}, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->setResolution(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)V
 
-    .line 317
     :goto_3
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
@@ -1646,7 +1491,6 @@
 .method public final updateMaxSupportedResolution(Lcom/android/server/desktopmode/DisplayInfo;)V
     .locals 0
 
-    .line 339
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/MultiResolutionManager;->calculateMaxSupportedResolution(Lcom/android/server/desktopmode/DisplayInfo;)Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     move-result-object p1
@@ -1659,7 +1503,6 @@
 .method public final updateMaxSupportedResolution(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)V
     .locals 3
 
-    .line 343
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1682,11 +1525,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     :cond_0
     iput-object p1, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mMaxSupportedResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 345
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v0, "resolution_max"
@@ -1701,14 +1542,12 @@
 .method public final updateSupportAllResolution()V
     .locals 2
 
-    .line 350
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSelectedDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     sget-object v1, Lcom/android/server/desktopmode/MultiResolutionManager;->HIGHEST_RESOLUTION:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
     invoke-virtual {v0, v1}, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->setResolution(Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;)V
 
-    .line 351
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v0, "resolution_max"
@@ -1723,7 +1562,6 @@
 .method public final updateUserSettingDisplayMetrics()V
     .locals 4
 
-    .line 357
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1734,7 +1572,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     :cond_0
     sget-object v0, Lcom/android/server/desktopmode/MultiResolutionManager;->RESOLUTION_TABLE:Ljava/util/Map;
 
@@ -1756,7 +1593,6 @@
 
     iput-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mUserSettingResolution:Lcom/android/server/desktopmode/MultiResolutionManager$Resolution;
 
-    .line 360
     iget-object v0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mSelectedDisplayMetrics:Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;
 
     iget-object p0, p0, Lcom/android/server/desktopmode/MultiResolutionManager;->mResolver:Landroid/content/ContentResolver;
@@ -1765,12 +1601,10 @@
 
     const/16 v2, 0xa0
 
-    .line 361
     invoke-static {p0, v1, v2}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettings(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 360
     invoke-virtual {v0, p0}, Lcom/android/server/desktopmode/MultiResolutionManager$DisplayMetrics;->setDensity(I)V
 
     return-void

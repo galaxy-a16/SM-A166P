@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$hgwZFTlGDEKnlZb_4n0FC3BvXiI(Landroid/media/AudioPlaybackConfiguration;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/accessibility/FlashNotificationsController$3;->lambda$onPlaybackConfigChanged$0(Landroid/media/AudioPlaybackConfiguration;)Z
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/FlashNotificationsController;)V
     .locals 0
 
-    .line 238
     iput-object p1, p0, Lcom/android/server/accessibility/FlashNotificationsController$3;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-direct {p0}, Landroid/media/AudioManager$AudioPlaybackCallback;-><init>()V
@@ -33,14 +31,12 @@
 .method public static synthetic lambda$onPlaybackConfigChanged$0(Landroid/media/AudioPlaybackConfiguration;)Z
     .locals 1
 
-    .line 244
     invoke-virtual {p0}, Landroid/media/AudioPlaybackConfiguration;->isActive()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 245
     invoke-virtual {p0}, Landroid/media/AudioPlaybackConfiguration;->getAudioAttributes()Landroid/media/AudioAttributes;
 
     move-result-object p0
@@ -71,7 +67,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 243
     invoke-interface {p1}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object p1
@@ -80,7 +75,6 @@
 
     invoke-direct {v0}, Lcom/android/server/accessibility/FlashNotificationsController$3$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 244
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
     move-result p1
@@ -90,7 +84,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 249
     :goto_0
     iget-object v0, p0, Lcom/android/server/accessibility/FlashNotificationsController$3;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
@@ -100,7 +93,6 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 250
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,20 +113,17 @@
 
     if-eqz p1, :cond_1
 
-    .line 252
     iget-object v0, p0, Lcom/android/server/accessibility/FlashNotificationsController$3;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/FlashNotificationsController;->-$$Nest$mstartFlashNotificationSequenceForAlarm(Lcom/android/server/accessibility/FlashNotificationsController;)V
 
     goto :goto_1
 
-    .line 254
     :cond_1
     iget-object v0, p0, Lcom/android/server/accessibility/FlashNotificationsController$3;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/FlashNotificationsController;->-$$Nest$mstopFlashNotificationSequenceForAlarm(Lcom/android/server/accessibility/FlashNotificationsController;)V
 
-    .line 256
     :goto_1
     iget-object p0, p0, Lcom/android/server/accessibility/FlashNotificationsController$3;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 

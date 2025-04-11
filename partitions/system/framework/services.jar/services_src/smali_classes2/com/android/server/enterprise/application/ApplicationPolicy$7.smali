@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/application/ApplicationPolicy;)V
     .locals 0
 
-    .line 7732
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$7;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,17 +27,14 @@
 
     const-string p2, "boot completed - refreshWidgetStatus"
 
-    .line 7734
     invoke-static {p1, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7735
     iget-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$7;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/enterprise/application/ApplicationPolicy;->-$$Nest$fputmBootCompleted(Lcom/android/server/enterprise/application/ApplicationPolicy;Z)V
 
-    .line 7737
     iget-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$7;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget-object p1, p1, Lcom/android/server/enterprise/application/ApplicationPolicy;->mContext:Landroid/content/Context;
@@ -53,14 +49,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 7740
     invoke-virtual {p1}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 7742
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -78,7 +72,6 @@
 
     check-cast p2, Landroid/content/pm/UserInfo;
 
-    .line 7743
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$7;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget p2, p2, Landroid/content/pm/UserInfo;->id:I

@@ -20,14 +20,12 @@
 .method public final compare(Lcom/android/server/enterprise/application/ProcessStats$Stats;Lcom/android/server/enterprise/application/ProcessStats$Stats;)I
     .locals 3
 
-    .line 239
     iget p0, p1, Lcom/android/server/enterprise/application/ProcessStats$Stats;->rel_utime:I
 
     iget v0, p1, Lcom/android/server/enterprise/application/ProcessStats$Stats;->rel_stime:I
 
     add-int/2addr p0, v0
 
-    .line 240
     iget v0, p2, Lcom/android/server/enterprise/application/ProcessStats$Stats;->rel_utime:I
 
     iget v1, p2, Lcom/android/server/enterprise/application/ProcessStats$Stats;->rel_stime:I
@@ -50,7 +48,6 @@
     :goto_0
     return v1
 
-    .line 246
     :cond_1
     iget-boolean p0, p1, Lcom/android/server/enterprise/application/ProcessStats$Stats;->added:Z
 
@@ -68,7 +65,6 @@
     :goto_1
     return v1
 
-    .line 250
     :cond_3
     iget-boolean p1, p1, Lcom/android/server/enterprise/application/ProcessStats$Stats;->removed:Z
 
@@ -95,7 +91,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 236
     check-cast p1, Lcom/android/server/enterprise/application/ProcessStats$Stats;
 
     check-cast p2, Lcom/android/server/enterprise/application/ProcessStats$Stats;

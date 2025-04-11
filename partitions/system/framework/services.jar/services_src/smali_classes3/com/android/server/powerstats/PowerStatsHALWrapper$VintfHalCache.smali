@@ -15,12 +15,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 343
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 344
     iput-object v0, p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache;->mInstance:Landroid/hardware/power/stats/IPowerStats;
 
     return-void
@@ -29,7 +27,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache;-><init>()V
 
     return-void
@@ -42,7 +39,6 @@
 
     monitor-enter p0
 
-    .line 366
     :try_start_0
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsHALWrapper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -54,12 +50,10 @@
 
     const/4 v0, 0x0
 
-    .line 367
     iput-object v0, p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache;->mInstance:Landroid/hardware/power/stats/IPowerStats;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 368
     monitor-exit p0
 
     return-void
@@ -77,7 +71,6 @@
 
     monitor-enter p0
 
-    .line 349
     :try_start_0
     iget-object v0, p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache;->mInstance:Landroid/hardware/power/stats/IPowerStats;
 
@@ -85,7 +78,6 @@
 
     const-string v0, "android.hardware.power.stats.IPowerStats/default"
 
-    .line 350
     invoke-static {v0}, Landroid/os/ServiceManager;->waitForDeclaredService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -96,7 +88,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 353
     invoke-static {v0}, Landroid/hardware/power/stats/IPowerStats$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/power/stats/IPowerStats;
 
     move-result-object v1
@@ -107,7 +98,6 @@
 
     const/4 v1, 0x0
 
-    .line 355
     :try_start_1
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_1
@@ -116,7 +106,6 @@
 
     goto :goto_0
 
-    .line 357
     :catch_0
     :try_start_2
     invoke-static {}, Lcom/android/server/powerstats/PowerStatsHALWrapper;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -141,7 +130,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache;->mInstance:Landroid/hardware/power/stats/IPowerStats;
@@ -163,7 +151,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
-    .line 343
     invoke-virtual {p0}, Lcom/android/server/powerstats/PowerStatsHALWrapper$VintfHalCache;->get()Landroid/hardware/power/stats/IPowerStats;
 
     move-result-object p0

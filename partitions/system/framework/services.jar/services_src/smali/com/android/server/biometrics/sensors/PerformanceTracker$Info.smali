@@ -39,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/sensors/PerformanceTracker$Info-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/PerformanceTracker$Info;-><init>()V
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/ThermalManagerService$ThermalHal11Wrapper;)V
     .locals 0
 
-    .line 1049
     iput-object p1, p0, Lcom/android/server/power/ThermalManagerService$ThermalHal11Wrapper$1;->this$0:Lcom/android/server/power/ThermalManagerService$ThermalHal11Wrapper;
 
     invoke-direct {p0}, Landroid/hardware/thermal/V1_1/IThermalCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public notifyThrottling(ZLandroid/hardware/thermal/V1_0/Temperature;)V
     .locals 3
 
-    .line 1053
     new-instance v0, Landroid/os/Temperature;
 
     iget v1, p2, Landroid/hardware/thermal/V1_0/Temperature;->currentValue:F
@@ -42,16 +40,13 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1056
     :goto_0
     invoke-direct {v0, v1, v2, p2, p1}, Landroid/os/Temperature;-><init>(FILjava/lang/String;I)V
 
-    .line 1057
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p1
 
-    .line 1059
     :try_start_0
     iget-object p0, p0, Lcom/android/server/power/ThermalManagerService$ThermalHal11Wrapper$1;->this$0:Lcom/android/server/power/ThermalManagerService$ThermalHal11Wrapper;
 
@@ -61,7 +56,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1061
     invoke-static {p1, p2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -71,6 +65,5 @@
 
     invoke-static {p1, p2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1062
     throw p0
 .end method

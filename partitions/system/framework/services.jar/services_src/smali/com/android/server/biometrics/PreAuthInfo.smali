@@ -29,37 +29,26 @@
 .method public constructor <init>(ZIZLjava/util/List;Ljava/util/List;ZZZILandroid/content/Context;)V
     .locals 0
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     iput-boolean p1, p0, Lcom/android/server/biometrics/PreAuthInfo;->mBiometricRequested:Z
 
-    .line 82
     iput p2, p0, Lcom/android/server/biometrics/PreAuthInfo;->mBiometricStrengthRequested:I
 
-    .line 83
     iput-boolean p3, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialRequested:Z
 
-    .line 85
     iput-object p4, p0, Lcom/android/server/biometrics/PreAuthInfo;->eligibleSensors:Ljava/util/List;
 
-    .line 86
     iput-object p5, p0, Lcom/android/server/biometrics/PreAuthInfo;->ineligibleSensors:Ljava/util/List;
 
-    .line 87
     iput-boolean p6, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialAvailable:Z
 
-    .line 88
     iput-boolean p7, p0, Lcom/android/server/biometrics/PreAuthInfo;->confirmationRequested:Z
 
-    .line 89
     iput-boolean p8, p0, Lcom/android/server/biometrics/PreAuthInfo;->ignoreEnrollmentState:Z
 
-    .line 90
     iput p9, p0, Lcom/android/server/biometrics/PreAuthInfo;->userId:I
 
-    .line 91
     iput-object p10, p0, Lcom/android/server/biometrics/PreAuthInfo;->context:Landroid/content/Context;
 
     return-void
@@ -68,7 +57,6 @@
 .method public static create(Landroid/app/trust/ITrustManager;Landroid/app/admin/DevicePolicyManager;Lcom/android/server/biometrics/BiometricService$SettingObserver;Ljava/util/List;ILandroid/hardware/biometrics/PromptInfo;Ljava/lang/String;ZLandroid/content/Context;)Lcom/android/server/biometrics/PreAuthInfo;
     .locals 22
 
-    .line 104
     invoke-virtual/range {p5 .. p5}, Landroid/hardware/biometrics/PromptInfo;->semGetBiometricType()I
 
     move-result v0
@@ -79,7 +67,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 109
     invoke-virtual/range {p5 .. p5}, Landroid/hardware/biometrics/PromptInfo;->getAuthenticators()I
 
     move-result v1
@@ -88,7 +75,6 @@
 
     move-object/from16 v2, p5
 
-    .line 108
     invoke-virtual {v2, v1}, Landroid/hardware/biometrics/PromptInfo;->setAuthenticators(I)V
 
     goto :goto_0
@@ -96,28 +82,23 @@
     :cond_0
     move-object/from16 v2, p5
 
-    .line 113
     :goto_0
     invoke-virtual/range {p5 .. p5}, Landroid/hardware/biometrics/PromptInfo;->isConfirmationRequested()Z
 
     move-result v9
 
-    .line 114
     invoke-static/range {p5 .. p5}, Lcom/android/server/biometrics/Utils;->isBiometricRequested(Landroid/hardware/biometrics/PromptInfo;)Z
 
     move-result v3
 
-    .line 115
     invoke-static/range {p5 .. p5}, Lcom/android/server/biometrics/Utils;->getPublicBiometricStrength(Landroid/hardware/biometrics/PromptInfo;)I
 
     move-result v4
 
-    .line 116
     invoke-static/range {p5 .. p5}, Lcom/android/server/biometrics/Utils;->isCredentialRequested(Landroid/hardware/biometrics/PromptInfo;)Z
 
     move-result v5
 
-    .line 119
     invoke-virtual/range {p8 .. p8}, Landroid/content/Context;->getAssociatedDisplayId()I
 
     move-result v1
@@ -126,12 +107,10 @@
 
     move/from16 v8, p4
 
-    .line 118
     invoke-interface {v6, v8, v1}, Landroid/app/trust/ITrustManager;->isDeviceSecure(II)Z
 
     move-result v1
 
-    .line 122
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,7 +133,6 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 123
     invoke-static {v4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v10
@@ -171,22 +149,18 @@
 
     const-string v7, "BiometricService/PreAuthInfo"
 
-    .line 122
     invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 134
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz v3, :cond_4
 
-    .line 137
     invoke-interface/range {p3 .. p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v20
@@ -208,7 +182,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 140
     iget v10, v14, Lcom/android/server/biometrics/BiometricSensor;->modality:I
 
     and-int/2addr v10, v0
@@ -217,13 +190,11 @@
 
     goto :goto_1
 
-    .line 149
     :cond_1
     invoke-virtual/range {p5 .. p5}, Landroid/hardware/biometrics/PromptInfo;->getAllowedSensorIds()Ljava/util/List;
 
     move-result-object v17
 
-    .line 150
     invoke-virtual/range {p5 .. p5}, Landroid/hardware/biometrics/PromptInfo;->isIgnoreEnrollmentState()Z
 
     move-result v18
@@ -250,12 +221,10 @@
 
     move-object/from16 v19, p8
 
-    .line 146
     invoke-static/range {v10 .. v19}, Lcom/android/server/biometrics/PreAuthInfo;->getStatusForBiometricAuthenticator(Landroid/app/admin/DevicePolicyManager;Lcom/android/server/biometrics/BiometricService$SettingObserver;Lcom/android/server/biometrics/BiometricSensor;ILjava/lang/String;ZILjava/util/List;ZLandroid/content/Context;)I
 
     move-result v10
 
-    .line 153
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -306,7 +275,6 @@
 
     goto :goto_2
 
-    .line 168
     :cond_2
     new-instance v11, Landroid/util/Pair;
 
@@ -320,7 +288,6 @@
 
     goto :goto_3
 
-    .line 166
     :cond_3
     :goto_2
     invoke-interface {v6, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -337,10 +304,8 @@
     :cond_4
     move-object v8, v15
 
-    .line 173
     new-instance v0, Lcom/android/server/biometrics/PreAuthInfo;
 
-    .line 175
     invoke-virtual/range {p5 .. p5}, Landroid/hardware/biometrics/PromptInfo;->isIgnoreEnrollmentState()Z
 
     move-result v10
@@ -363,7 +328,6 @@
 .method public static getStatusForBiometricAuthenticator(Landroid/app/admin/DevicePolicyManager;Lcom/android/server/biometrics/BiometricService$SettingObserver;Lcom/android/server/biometrics/BiometricSensor;ILjava/lang/String;ZILjava/util/List;ZLandroid/content/Context;)I
     .locals 2
 
-    .line 194
     invoke-interface {p7}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -386,16 +350,13 @@
 
     return v1
 
-    .line 198
     :cond_0
     iget p7, p2, Lcom/android/server/biometrics/BiometricSensor;->oemStrength:I
 
-    .line 199
     invoke-static {p7, p6}, Lcom/android/server/biometrics/Utils;->isAtLeastStrength(II)Z
 
     move-result p7
 
-    .line 201
     invoke-virtual {p2}, Lcom/android/server/biometrics/BiometricSensor;->getCurrentStrength()I
 
     move-result v0
@@ -422,7 +383,6 @@
     :cond_2
     const/4 p6, 0x6
 
-    .line 210
     :try_start_0
     iget-object p7, p2, Lcom/android/server/biometrics/BiometricSensor;->impl:Landroid/hardware/biometrics/IBiometricAuthenticator;
 
@@ -434,7 +394,6 @@
 
     return p6
 
-    .line 214
     :cond_3
     iget-object p7, p2, Lcom/android/server/biometrics/BiometricSensor;->impl:Landroid/hardware/biometrics/IBiometricAuthenticator;
 
@@ -450,11 +409,9 @@
 
     return p0
 
-    .line 218
     :cond_4
     const-class p4, Landroid/hardware/SensorPrivacyManager;
 
-    .line 219
     invoke-virtual {p9, p4}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p4
@@ -465,12 +422,10 @@
 
     if-eqz p4, :cond_5
 
-    .line 221
     iget p8, p2, Lcom/android/server/biometrics/BiometricSensor;->modality:I
 
     if-ne p8, p7, :cond_5
 
-    .line 223
     invoke-virtual {p4, v1, p3}, Landroid/hardware/SensorPrivacyManager;->isSensorPrivacyEnabled(II)Z
 
     move-result p4
@@ -481,11 +436,9 @@
 
     return p0
 
-    .line 228
     :cond_5
     iget-object p4, p2, Lcom/android/server/biometrics/BiometricSensor;->impl:Landroid/hardware/biometrics/IBiometricAuthenticator;
 
-    .line 229
     invoke-interface {p4, p3}, Landroid/hardware/biometrics/IBiometricAuthenticator;->getLockoutModeForUser(I)I
 
     move-result p4
@@ -507,7 +460,6 @@
 
     return p0
 
-    .line 239
     :cond_7
     iget p4, p2, Lcom/android/server/biometrics/BiometricSensor;->modality:I
 
@@ -522,7 +474,6 @@
     :cond_8
     if-eqz p5, :cond_9
 
-    .line 244
     iget p1, p2, Lcom/android/server/biometrics/BiometricSensor;->modality:I
 
     invoke-static {p0, p1, p3}, Lcom/android/server/biometrics/PreAuthInfo;->isBiometricDisabledByDevicePolicy(Landroid/app/admin/DevicePolicyManager;II)Z
@@ -543,7 +494,6 @@
 .method public static isBiometricDisabledByDevicePolicy(Landroid/app/admin/DevicePolicyManager;II)Z
     .locals 2
 
-    .line 260
     invoke-static {p1}, Lcom/android/server/biometrics/PreAuthInfo;->mapModalityToDevicePolicyType(I)I
 
     move-result v0
@@ -552,7 +502,6 @@
 
     const/4 v1, 0x0
 
-    .line 265
     invoke-virtual {p0, v1, p2}, Landroid/app/admin/DevicePolicyManager;->getKeyguardDisabledFeatures(Landroid/content/ComponentName;I)I
 
     move-result p0
@@ -568,7 +517,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 268
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -602,7 +550,6 @@
 
     return p0
 
-    .line 262
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -628,7 +575,6 @@
 .method public static isEnabledForApp(Lcom/android/server/biometrics/BiometricService$SettingObserver;II)Z
     .locals 0
 
-    .line 254
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/BiometricService$SettingObserver;->getEnabledForApps(I)Z
 
     move-result p0
@@ -651,7 +597,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 287
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -695,7 +640,6 @@
 .method public final calculateErrorByPriority()Landroid/util/Pair;
     .locals 4
 
-    .line 298
     iget-object v0, p0, Lcom/android/server/biometrics/PreAuthInfo;->ineligibleSensors:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -715,7 +659,6 @@
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 299
     iget-object v2, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -730,7 +673,6 @@
 
     return-object v1
 
-    .line 304
     :cond_1
     iget-object p0, p0, Lcom/android/server/biometrics/PreAuthInfo;->ineligibleSensors:Ljava/util/List;
 
@@ -748,7 +690,6 @@
 .method public getCanAuthenticateResult()I
     .locals 0
 
-    .line 406
     invoke-virtual {p0}, Lcom/android/server/biometrics/PreAuthInfo;->getInternalStatus()Landroid/util/Pair;
 
     move-result-object p0
@@ -761,12 +702,10 @@
 
     move-result p0
 
-    .line 405
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->authenticatorStatusToBiometricConstant(I)I
 
     move-result p0
 
-    .line 404
     invoke-static {p0}, Lcom/android/server/biometrics/Utils;->biometricConstantsToBiometricManager(I)I
 
     move-result p0
@@ -777,7 +716,6 @@
 .method public getEligibleModalities()I
     .locals 3
 
-    .line 458
     iget-object v0, p0, Lcom/android/server/biometrics/PreAuthInfo;->eligibleSensors:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -799,14 +737,12 @@
 
     check-cast v2, Lcom/android/server/biometrics/BiometricSensor;
 
-    .line 459
     iget v2, v2, Lcom/android/server/biometrics/BiometricSensor;->modality:I
 
     or-int/2addr v1, v2
 
     goto :goto_0
 
-    .line 462
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialRequested:Z
 
@@ -825,12 +761,10 @@
 .method public final getInternalStatus()Landroid/util/Pair;
     .locals 10
 
-    .line 319
     iget-object v0, p0, Lcom/android/server/biometrics/PreAuthInfo;->context:Landroid/content/Context;
 
     const-class v1, Landroid/hardware/SensorPrivacyManager;
 
-    .line 320
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -843,10 +777,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 324
     iget v3, p0, Lcom/android/server/biometrics/PreAuthInfo;->userId:I
 
-    .line 325
     invoke-virtual {v0, v1, v3}, Landroid/hardware/SensorPrivacyManager;->isSensorPrivacyEnabled(II)Z
 
     move-result v0
@@ -856,7 +788,6 @@
     :cond_0
     move v0, v2
 
-    .line 328
     :goto_0
     iget-boolean v3, p0, Lcom/android/server/biometrics/PreAuthInfo;->mBiometricRequested:Z
 
@@ -876,7 +807,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 329
     iget-boolean v1, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialAvailable:Z
 
     if-nez v1, :cond_3
@@ -891,7 +821,6 @@
 
     goto :goto_1
 
-    .line 349
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/PreAuthInfo;->ineligibleSensors:Ljava/util/List;
 
@@ -901,12 +830,10 @@
 
     if-nez v0, :cond_2
 
-    .line 350
     invoke-virtual {p0}, Lcom/android/server/biometrics/PreAuthInfo;->calculateErrorByPriority()Landroid/util/Pair;
 
     move-result-object p0
 
-    .line 351
     iget-object v0, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/biometrics/BiometricSensor;
@@ -915,7 +842,6 @@
 
     or-int/2addr v2, v0
 
-    .line 352
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Integer;
@@ -931,7 +857,6 @@
 
     goto/16 :goto_6
 
-    .line 330
     :cond_3
     :goto_1
     iget-object v1, p0, Lcom/android/server/biometrics/PreAuthInfo;->eligibleSensors:Ljava/util/List;
@@ -953,14 +878,12 @@
 
     check-cast v3, Lcom/android/server/biometrics/BiometricSensor;
 
-    .line 331
     iget v3, v3, Lcom/android/server/biometrics/BiometricSensor;->modality:I
 
     or-int/2addr v2, v3
 
     goto :goto_2
 
-    .line 334
     :cond_4
     iget-boolean p0, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialAvailable:Z
 
@@ -980,7 +903,6 @@
     :cond_6
     if-eqz v3, :cond_a
 
-    .line 359
     iget-object v3, p0, Lcom/android/server/biometrics/PreAuthInfo;->eligibleSensors:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
@@ -989,7 +911,6 @@
 
     if-nez v3, :cond_9
 
-    .line 360
     iget-object p0, p0, Lcom/android/server/biometrics/PreAuthInfo;->eligibleSensors:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1009,7 +930,6 @@
 
     check-cast v1, Lcom/android/server/biometrics/BiometricSensor;
 
-    .line 361
     iget v1, v1, Lcom/android/server/biometrics/BiometricSensor;->modality:I
 
     or-int/2addr v2, v1
@@ -1032,7 +952,6 @@
 
     goto :goto_7
 
-    .line 374
     :cond_9
     iget-object v0, p0, Lcom/android/server/biometrics/PreAuthInfo;->ineligibleSensors:Ljava/util/List;
 
@@ -1042,12 +961,10 @@
 
     if-nez v0, :cond_c
 
-    .line 375
     invoke-virtual {p0}, Lcom/android/server/biometrics/PreAuthInfo;->calculateErrorByPriority()Landroid/util/Pair;
 
     move-result-object p0
 
-    .line 376
     iget-object v0, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/biometrics/BiometricSensor;
@@ -1056,7 +973,6 @@
 
     or-int/2addr v2, v0
 
-    .line 377
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Integer;
@@ -1067,13 +983,11 @@
 
     goto :goto_7
 
-    .line 383
     :cond_a
     iget-boolean v0, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialRequested:Z
 
     if-eqz v0, :cond_b
 
-    .line 385
     iget-boolean p0, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialAvailable:Z
 
     if-eqz p0, :cond_2
@@ -1088,10 +1002,8 @@
     :cond_b
     const-string p0, "No authenticators requested"
 
-    .line 389
     invoke-static {v7, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     :cond_c
     :goto_7
     new-instance p0, Ljava/lang/StringBuilder;
@@ -1116,7 +1028,6 @@
 
     invoke-static {v7, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     new-instance p0, Landroid/util/Pair;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1135,12 +1046,10 @@
 .method public getPreAuthenticateStatus()Landroid/util/Pair;
     .locals 2
 
-    .line 417
     invoke-virtual {p0}, Lcom/android/server/biometrics/PreAuthInfo;->getInternalStatus()Landroid/util/Pair;
 
     move-result-object p0
 
-    .line 419
     iget-object v0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -1153,7 +1062,6 @@
 
     move-result v0
 
-    .line 420
     iget-object v1, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
@@ -1162,7 +1070,6 @@
 
     move-result v1
 
-    .line 421
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Integer;
@@ -1176,7 +1083,6 @@
     :pswitch_0
     const/4 v1, 0x0
 
-    .line 441
     :pswitch_1
     new-instance p0, Landroid/util/Pair;
 
@@ -1212,7 +1118,6 @@
 .method public numSensorsWaitingForCookie()I
     .locals 4
 
-    .line 470
     iget-object p0, p0, Lcom/android/server/biometrics/PreAuthInfo;->eligibleSensors:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1235,7 +1140,6 @@
 
     check-cast v1, Lcom/android/server/biometrics/BiometricSensor;
 
-    .line 471
     invoke-virtual {v1}, Lcom/android/server/biometrics/BiometricSensor;->getSensorState()I
 
     move-result v2
@@ -1244,7 +1148,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 472
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1261,7 +1164,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 473
     invoke-virtual {v1}, Lcom/android/server/biometrics/BiometricSensor;->getCookie()I
 
     move-result v1
@@ -1274,7 +1176,6 @@
 
     const-string v2, "BiometricService/PreAuthInfo"
 
-    .line 472
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     add-int/lit8 v0, v0, 0x1
@@ -1288,7 +1189,6 @@
 .method public shouldShowCredential()Z
     .locals 1
 
-    .line 448
     iget-boolean v0, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialRequested:Z
 
     if-eqz v0, :cond_0
@@ -1311,7 +1211,6 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .line 482
     new-instance v0, Ljava/lang/StringBuilder;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1350,10 +1249,8 @@
 
     const-string v1, ", Eligible:{"
 
-    .line 486
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 487
     iget-object v1, p0, Lcom/android/server/biometrics/PreAuthInfo;->eligibleSensors:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1375,7 +1272,6 @@
 
     check-cast v2, Lcom/android/server/biometrics/BiometricSensor;
 
-    .line 488
     iget v2, v2, Lcom/android/server/biometrics/BiometricSensor;->id:I
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -1387,15 +1283,12 @@
     :cond_0
     const-string/jumbo v1, "}"
 
-    .line 490
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, ", Ineligible:{"
 
-    .line 492
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 493
     iget-object v2, p0, Lcom/android/server/biometrics/PreAuthInfo;->ineligibleSensors:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1415,7 +1308,6 @@
 
     check-cast v4, Landroid/util/Pair;
 
-    .line 494
     iget-object v5, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -1432,13 +1324,11 @@
 
     goto :goto_1
 
-    .line 496
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ", CredentialAvailable: "
 
-    .line 498
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean p0, p0, Lcom/android/server/biometrics/PreAuthInfo;->credentialAvailable:Z
@@ -1447,10 +1337,8 @@
 
     const-string p0, ", "
 
-    .line 499
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 500
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

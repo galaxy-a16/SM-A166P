@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 836
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 837
     iput-object p1, p0, Lcom/samsung/android/server/pm/permission/OmcPermissionPolicy$PmServiceProxy;->mContext:Landroid/content/Context;
 
     return-void

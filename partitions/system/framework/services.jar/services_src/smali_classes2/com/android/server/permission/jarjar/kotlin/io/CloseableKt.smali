@@ -11,12 +11,10 @@
 
     if-nez p1, :cond_0
 
-    .line 56
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
 
     goto :goto_0
 
-    .line 59
     :cond_0
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -28,7 +26,6 @@
     :catchall_0
     move-exception p0
 
-    .line 61
     invoke-static {p1, p0}, Lcom/android/server/permission/jarjar/kotlin/ExceptionsKt__ExceptionsKt;->addSuppressed(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     :cond_1

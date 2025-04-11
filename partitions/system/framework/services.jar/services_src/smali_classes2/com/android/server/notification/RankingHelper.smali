@@ -25,40 +25,32 @@
 
     const-string v1, "RankingHelper"
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v2, Lcom/android/server/notification/GlobalSortKeyComparator;
 
     invoke-direct {v2}, Lcom/android/server/notification/GlobalSortKeyComparator;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/notification/RankingHelper;->mFinalComparator:Lcom/android/server/notification/GlobalSortKeyComparator;
 
-    .line 39
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/notification/RankingHelper;->mProxyByGroupTmp:Landroid/util/ArrayMap;
 
-    .line 47
     iput-object p1, p0, Lcom/android/server/notification/RankingHelper;->mContext:Landroid/content/Context;
 
-    .line 48
     iput-object p2, p0, Lcom/android/server/notification/RankingHelper;->mRankingHandler:Lcom/android/server/notification/RankingHandler;
 
-    .line 49
     new-instance p2, Lcom/android/server/notification/NotificationComparator;
 
     invoke-direct {p2, p1}, Lcom/android/server/notification/NotificationComparator;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/android/server/notification/RankingHelper;->mPreliminaryComparator:Lcom/android/server/notification/NotificationComparator;
 
-    .line 51
     array-length p1, p6
 
-    .line 52
     new-array p2, p1, [Lcom/android/server/notification/NotificationSignalExtractor;
 
     iput-object p2, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
@@ -68,7 +60,6 @@
     :goto_0
     if-ge p2, p1, :cond_0
 
-    .line 55
     :try_start_0
     iget-object v2, p0, Lcom/android/server/notification/RankingHelper;->mContext:Landroid/content/Context;
 
@@ -82,25 +73,20 @@
 
     move-result-object v2
 
-    .line 57
     invoke-virtual {v2}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/notification/NotificationSignalExtractor;
 
-    .line 58
     iget-object v3, p0, Lcom/android/server/notification/RankingHelper;->mContext:Landroid/content/Context;
 
     invoke-interface {v2, v3, p5}, Lcom/android/server/notification/NotificationSignalExtractor;->initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
 
-    .line 59
     invoke-interface {v2, p3}, Lcom/android/server/notification/NotificationSignalExtractor;->setConfig(Lcom/android/server/notification/RankingConfig;)V
 
-    .line 60
     invoke-interface {v2, p4}, Lcom/android/server/notification/NotificationSignalExtractor;->setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
 
-    .line 61
     iget-object v3, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     aput-object v2, v3, p2
@@ -114,7 +100,6 @@
     :catch_0
     move-exception v2
 
-    .line 67
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,7 +125,6 @@
     :catch_1
     move-exception v2
 
-    .line 65
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,7 +150,6 @@
     :catch_2
     move-exception v2
 
-    .line 63
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,7 +184,6 @@
 .method public dump(Landroid/util/proto/ProtoOutputStream;Lcom/android/server/notification/NotificationManagerService$DumpFilter;)V
     .locals 4
 
-    .line 179
     iget-object p2, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     array-length p2, p2
@@ -211,12 +193,10 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
-    .line 181
     iget-object v1, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     aget-object v1, v1, v0
 
-    .line 182
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -227,7 +207,6 @@
 
     const-wide v2, 0x20900000001L
 
-    .line 181
     invoke-virtual {p1, v2, v3, v1}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
@@ -241,20 +220,16 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/notification/NotificationManagerService$DumpFilter;)V
     .locals 2
 
-    .line 166
     iget-object p3, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     array-length p3, p3
 
-    .line 167
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mSignalExtractors.length = "
 
-    .line 168
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 169
     invoke-virtual {p1, p3}, Ljava/io/PrintWriter;->println(I)V
 
     const/4 v0, 0x0
@@ -262,15 +237,12 @@
     :goto_0
     if-ge v0, p3, :cond_0
 
-    .line 171
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  "
 
-    .line 172
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 173
     iget-object v1, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     aget-object v1, v1, v0
@@ -296,7 +268,6 @@
 .method public extractSignals(Lcom/android/server/notification/NotificationRecord;)V
     .locals 5
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     array-length v0, v0
@@ -306,12 +277,10 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 87
     iget-object v2, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     aget-object v2, v2, v1
 
-    .line 89
     :try_start_0
     invoke-interface {v2, p1}, Lcom/android/server/notification/NotificationSignalExtractor;->process(Lcom/android/server/notification/NotificationRecord;)Lcom/android/server/notification/RankingReconsideration;
 
@@ -319,7 +288,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 91
     iget-object v3, p0, Lcom/android/server/notification/RankingHelper;->mRankingHandler:Lcom/android/server/notification/RankingHandler;
 
     invoke-interface {v3, v2}, Lcom/android/server/notification/RankingHandler;->requestReconsideration(Lcom/android/server/notification/RankingReconsideration;)V
@@ -335,7 +303,6 @@
 
     const-string v4, "NotificationSignalExtractor failed."
 
-    .line 94
     invoke-static {v3, v4, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -351,7 +318,6 @@
 .method public findExtractor(Ljava/lang/Class;)Lcom/android/server/notification/NotificationSignalExtractor;
     .locals 4
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     array-length v0, v0
@@ -361,12 +327,10 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 76
     iget-object v2, p0, Lcom/android/server/notification/RankingHelper;->mSignalExtractors:[Lcom/android/server/notification/NotificationSignalExtractor;
 
     aget-object v2, v2, v1
 
-    .line 77
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -393,7 +357,6 @@
 .method public indexOf(Ljava/util/ArrayList;Lcom/android/server/notification/NotificationRecord;)I
     .locals 0
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/notification/RankingHelper;->mFinalComparator:Lcom/android/server/notification/GlobalSortKeyComparator;
 
     invoke-static {p1, p2, p0}, Ljava/util/Collections;->binarySearch(Ljava/util/List;Ljava/lang/Object;Ljava/util/Comparator;)I
@@ -406,7 +369,6 @@
 .method public sort(Ljava/util/ArrayList;)V
     .locals 14
 
-    .line 100
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -416,7 +378,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 103
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -431,13 +392,11 @@
 
     goto :goto_0
 
-    .line 107
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/RankingHelper;->mPreliminaryComparator:Lcom/android/server/notification/NotificationComparator;
 
     invoke-static {p1, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 109
     iget-object v1, p0, Lcom/android/server/notification/RankingHelper;->mProxyByGroupTmp:Landroid/util/ArrayMap;
 
     monitor-enter v1
@@ -449,7 +408,6 @@
     :goto_1
     if-ge v3, v0, :cond_2
 
-    .line 112
     :try_start_0
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -457,15 +415,12 @@
 
     check-cast v4, Lcom/android/server/notification/NotificationRecord;
 
-    .line 113
     invoke-virtual {v4, v3}, Lcom/android/server/notification/NotificationRecord;->setAuthoritativeRank(I)V
 
-    .line 114
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationRecord;->getGroupKey()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 115
     iget-object v6, p0, Lcom/android/server/notification/RankingHelper;->mProxyByGroupTmp:Landroid/util/ArrayMap;
 
     invoke-virtual {v6, v5}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -476,7 +431,6 @@
 
     if-nez v6, :cond_1
 
-    .line 117
     iget-object v6, p0, Lcom/android/server/notification/RankingHelper;->mProxyByGroupTmp:Landroid/util/ArrayMap;
 
     invoke-virtual {v6, v5, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -497,14 +451,12 @@
     :goto_2
     if-ge v3, v0, :cond_7
 
-    .line 123
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/server/notification/NotificationRecord;
 
-    .line 124
     iget-object v5, p0, Lcom/android/server/notification/RankingHelper;->mProxyByGroupTmp:Landroid/util/ArrayMap;
 
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationRecord;->getGroupKey()Ljava/lang/String;
@@ -517,7 +469,6 @@
 
     check-cast v5, Lcom/android/server/notification/NotificationRecord;
 
-    .line 125
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v6
@@ -535,7 +486,6 @@
     :cond_3
     const-string v7, ""
 
-    .line 135
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -546,7 +496,6 @@
 
     goto :goto_3
 
-    .line 138
     :cond_4
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -562,7 +511,6 @@
 
     move-result-object v6
 
-    .line 141
     :goto_3
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -578,7 +526,6 @@
 
     new-array v9, v9, [Ljava/lang/Object;
 
-    .line 144
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationRecord;->getCriticality()I
 
     move-result v10
@@ -589,7 +536,6 @@
 
     aput-object v10, v9, v2
 
-    .line 145
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationRecord;->isRecentlyIntrusive()Z
 
     move-result v10
@@ -602,7 +548,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 146
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationRecord;->getImportance()I
 
     move-result v10
@@ -616,7 +561,6 @@
     :cond_5
     move v10, v12
 
-    .line 145
     :goto_4
     invoke-static {v10}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
@@ -624,7 +568,6 @@
 
     aput-object v10, v9, v13
 
-    .line 148
     invoke-virtual {v5}, Lcom/android/server/notification/NotificationRecord;->getAuthoritativeRank()I
 
     move-result v5
@@ -644,7 +587,6 @@
     :cond_6
     move v11, v12
 
-    .line 149
     :goto_5
     invoke-static {v11}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
@@ -658,7 +600,6 @@
 
     aput-object v6, v9, v5
 
-    .line 151
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationRecord;->getAuthoritativeRank()I
 
     move-result v5
@@ -671,37 +612,31 @@
 
     aput-object v5, v9, v6
 
-    .line 143
     invoke-static {v8, v9}, Landroid/text/TextUtils;->formatSimple(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 142
     invoke-virtual {v4, v5}, Lcom/android/server/notification/NotificationRecord;->setGlobalSortKey(Ljava/lang/String;)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto/16 :goto_2
 
-    .line 153
     :cond_7
     iget-object v0, p0, Lcom/android/server/notification/RankingHelper;->mProxyByGroupTmp:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 154
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 157
     iget-object p0, p0, Lcom/android/server/notification/RankingHelper;->mFinalComparator:Lcom/android/server/notification/GlobalSortKeyComparator;
 
     invoke-static {p1, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     return-void
 
-    .line 154
     :goto_6
     :try_start_1
     monitor-exit v1

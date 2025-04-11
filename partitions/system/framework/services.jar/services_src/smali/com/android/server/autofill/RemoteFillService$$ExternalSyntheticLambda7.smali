@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/RemoteFillService;Ljava/lang/Throwable;Landroid/content/IntentSender;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/RemoteFillService$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/autofill/RemoteFillService;
@@ -35,7 +34,6 @@
 .method public final run()V
     .locals 2
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/autofill/RemoteFillService$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/autofill/RemoteFillService;
 
     iget-object v1, p0, Lcom/android/server/autofill/RemoteFillService$$ExternalSyntheticLambda7;->f$1:Ljava/lang/Throwable;

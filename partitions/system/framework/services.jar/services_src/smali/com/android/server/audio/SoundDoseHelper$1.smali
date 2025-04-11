@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/SoundDoseHelper;)V
     .locals 0
 
-    .line 225
     iput-object p1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-direct {p0}, Landroid/media/ISoundDoseCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onMomentaryExposure(FI)V
     .locals 4
 
-    .line 227
     iget-object v0, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v0}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmEnableCsd(Lcom/android/server/audio/SoundDoseHelper;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -41,7 +39,6 @@
 
     const-string/jumbo p1, "onMomentaryExposure: csd not supported, ignoring callback"
 
-    .line 228
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -49,7 +46,6 @@
     :cond_0
     const-string v0, "AS.SoundDoseHelper"
 
-    .line 232
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,7 +68,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     iget-object p2, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {p2}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmLogger(Lcom/android/server/audio/SoundDoseHelper;)Lcom/android/server/utils/EventLogger;
@@ -85,7 +80,6 @@
 
     invoke-virtual {p2, p1}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 237
     iget-object p1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {p1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmCsdStateLock(Lcom/android/server/audio/SoundDoseHelper;)Ljava/lang/Object;
@@ -94,7 +88,6 @@
 
     monitor-enter p1
 
-    .line 238
     :try_start_0
     iget-object p2, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
@@ -108,7 +101,6 @@
 
     if-ltz p2, :cond_2
 
-    .line 239
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -134,7 +126,6 @@
 
     goto :goto_1
 
-    .line 241
     :cond_2
     :goto_0
     iget-object p2, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
@@ -147,7 +138,6 @@
 
     const/4 p2, 0x1
 
-    .line 244
     :goto_1
     monitor-exit p1
     :try_end_0
@@ -155,7 +145,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 247
     iget-object p1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {p1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmVolumeController(Lcom/android/server/audio/SoundDoseHelper;)Lcom/android/server/audio/AudioService$ISafeHearingVolumeController;
@@ -166,12 +155,10 @@
 
     const/4 p2, 0x3
 
-    .line 249
     invoke-static {p0, p2}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$mgetTimeoutMsForWarning(Lcom/android/server/audio/SoundDoseHelper;I)I
 
     move-result p0
 
-    .line 247
     invoke-interface {p1, p2, p0}, Lcom/android/server/audio/AudioService$ISafeHearingVolumeController;->postDisplayCsdWarning(II)V
 
     :cond_3
@@ -180,7 +167,6 @@
     :catchall_0
     move-exception p0
 
-    .line 244
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -192,7 +178,6 @@
 .method public onNewCsdValue(F[Landroid/media/SoundDoseRecord;)V
     .locals 5
 
-    .line 254
     iget-object v0, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v0}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmEnableCsd(Lcom/android/server/audio/SoundDoseHelper;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -209,7 +194,6 @@
 
     const-string/jumbo p1, "onNewCsdValue: csd not supported, ignoring value"
 
-    .line 255
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -217,7 +201,6 @@
     :cond_0
     const-string v0, "AS.SoundDoseHelper"
 
-    .line 259
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -234,7 +217,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 260
     iget-object v0, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v0}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmCsdStateLock(Lcom/android/server/audio/SoundDoseHelper;)Ljava/lang/Object;
@@ -243,7 +225,6 @@
 
     monitor-enter v0
 
-    .line 261
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
@@ -257,7 +238,6 @@
 
     if-gez v1, :cond_2
 
-    .line 263
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmCurrentCsd(Lcom/android/server/audio/SoundDoseHelper;)F
@@ -284,7 +264,6 @@
 
     if-ltz v1, :cond_3
 
-    .line 264
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmNextCsdWarning(Lcom/android/server/audio/SoundDoseHelper;)F
@@ -297,7 +276,6 @@
 
     if-nez v1, :cond_1
 
-    .line 266
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmVolumeController(Lcom/android/server/audio/SoundDoseHelper;)Lcom/android/server/audio/AudioService$ISafeHearingVolumeController;
@@ -308,15 +286,12 @@
 
     const/4 v4, 0x2
 
-    .line 268
     invoke-static {v3, v4}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$mgetTimeoutMsForWarning(Lcom/android/server/audio/SoundDoseHelper;I)I
 
     move-result v3
 
-    .line 266
     invoke-interface {v1, v4, v3}, Lcom/android/server/audio/AudioService$ISafeHearingVolumeController;->postDisplayCsdWarning(II)V
 
-    .line 271
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmAudioService(Lcom/android/server/audio/SoundDoseHelper;)Lcom/android/server/audio/AudioService;
@@ -327,7 +302,6 @@
 
     goto :goto_0
 
-    .line 273
     :cond_1
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
@@ -339,15 +313,12 @@
 
     const/4 v4, 0x1
 
-    .line 275
     invoke-static {v3, v4}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$mgetTimeoutMsForWarning(Lcom/android/server/audio/SoundDoseHelper;I)I
 
     move-result v3
 
-    .line 273
     invoke-interface {v1, v4, v3}, Lcom/android/server/audio/AudioService$ISafeHearingVolumeController;->postDisplayCsdWarning(II)V
 
-    .line 278
     :goto_0
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
@@ -361,7 +332,6 @@
 
     goto :goto_1
 
-    .line 282
     :cond_2
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
@@ -387,7 +357,6 @@
 
     if-ltz v1, :cond_3
 
-    .line 284
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fgetmNextCsdWarning(Lcom/android/server/audio/SoundDoseHelper;)F
@@ -398,19 +367,16 @@
 
     invoke-static {v1, v3}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fputmNextCsdWarning(Lcom/android/server/audio/SoundDoseHelper;F)V
 
-    .line 287
     :cond_3
     :goto_1
     iget-object v1, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {v1, p1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$fputmCurrentCsd(Lcom/android/server/audio/SoundDoseHelper;F)V
 
-    .line 288
     iget-object p0, p0, Lcom/android/server/audio/SoundDoseHelper$1;->this$0:Lcom/android/server/audio/SoundDoseHelper;
 
     invoke-static {p0, p2, p1}, Lcom/android/server/audio/SoundDoseHelper;->-$$Nest$mupdateSoundDoseRecords_l(Lcom/android/server/audio/SoundDoseHelper;[Landroid/media/SoundDoseRecord;F)V
 
-    .line 289
     monitor-exit v0
 
     return-void

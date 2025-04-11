@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$mincrement(Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;JJ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->increment(JJ)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public static bridge synthetic -$$Nest$msetState(Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;IJ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->setState(IJ)V
 
     return-void
@@ -34,7 +32,6 @@
 .method public static bridge synthetic -$$Nest$mupdate(Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;JJ)J
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->update(JJ)J
 
     move-result-wide p0
@@ -45,7 +42,6 @@
 .method public static bridge synthetic -$$Nest$mwriteToParcel(Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;Landroid/os/Parcel;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->writeToParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -54,7 +50,6 @@
 .method public static bridge synthetic -$$Nest$smreadFromParcel(Landroid/os/Parcel;Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;IJ)Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->readFromParcel(Landroid/os/Parcel;Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;IJ)Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;
 
     move-result-object p0
@@ -65,7 +60,6 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;IJ)V
     .locals 1
 
-    .line 2440
     new-instance v0, Lcom/android/internal/os/LongMultiStateCounter;
 
     invoke-direct {v0, p2}, Lcom/android/internal/os/LongMultiStateCounter;-><init>(I)V
@@ -78,7 +72,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;IJLcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;-><init>(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;IJ)V
 
     return-void
@@ -87,23 +80,18 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;Lcom/android/internal/os/LongMultiStateCounter;J)V
     .locals 1
 
-    .line 2444
     invoke-direct {p0}, Landroid/os/BatteryStats$LongCounter;-><init>()V
 
-    .line 2445
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
-    .line 2446
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
-    .line 2447
     invoke-virtual {p1}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->isRunning()Z
 
     move-result v0
 
     invoke-virtual {p2, v0, p3, p4}, Lcom/android/internal/os/LongMultiStateCounter;->setEnabled(ZJ)V
 
-    .line 2448
     invoke-virtual {p1, p0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->add(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
     return-void
@@ -112,7 +100,6 @@
 .method public static readFromParcel(Landroid/os/Parcel;Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;IJ)Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;
     .locals 1
 
-    .line 2454
     sget-object v0, Lcom/android/internal/os/LongMultiStateCounter;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -121,7 +108,6 @@
 
     check-cast p0, Lcom/android/internal/os/LongMultiStateCounter;
 
-    .line 2455
     invoke-virtual {p0}, Lcom/android/internal/os/LongMultiStateCounter;->getStateCount()I
 
     move-result v0
@@ -132,7 +118,6 @@
 
     return-object p0
 
-    .line 2458
     :cond_0
     new-instance p2, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;
 
@@ -146,7 +131,6 @@
 .method public detach()V
     .locals 1
 
-    .line 2527
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->remove(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
@@ -157,7 +141,6 @@
 .method public getCountForProcessState(I)J
     .locals 0
 
-    .line 2496
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/os/LongMultiStateCounter;->getCount(I)J
@@ -170,7 +153,6 @@
 .method public getCountLocked(I)J
     .locals 0
 
-    .line 2505
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->getTotalCountLocked()J
 
     move-result-wide p0
@@ -181,7 +163,6 @@
 .method public getStateCount()I
     .locals 0
 
-    .line 2476
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     invoke-virtual {p0}, Lcom/android/internal/os/LongMultiStateCounter;->getStateCount()I
@@ -194,7 +175,6 @@
 .method public getTotalCountLocked()J
     .locals 2
 
-    .line 2500
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     invoke-virtual {p0}, Lcom/android/internal/os/LongMultiStateCounter;->getTotalCount()J
@@ -207,7 +187,6 @@
 .method public final increment(JJ)V
     .locals 0
 
-    .line 2489
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/internal/os/LongMultiStateCounter;->incrementValue(JJ)V
@@ -218,7 +197,6 @@
 .method public logState(Landroid/util/Printer;Ljava/lang/String;)V
     .locals 1
 
-    .line 2510
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,7 +223,6 @@
 .method public onTimeStarted(JJJ)V
     .locals 0
 
-    .line 2467
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     const-wide/16 p3, 0x3e8
@@ -262,7 +239,6 @@
 .method public onTimeStopped(JJJ)V
     .locals 0
 
-    .line 2472
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     const-wide/16 p3, 0x3e8
@@ -279,14 +255,12 @@
 .method public reset(ZJ)Z
     .locals 0
 
-    .line 2518
     iget-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     invoke-virtual {p2}, Lcom/android/internal/os/LongMultiStateCounter;->reset()V
 
     if-eqz p1, :cond_0
 
-    .line 2520
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->detach()V
 
     :cond_0
@@ -298,7 +272,6 @@
 .method public final setState(IJ)V
     .locals 0
 
-    .line 2481
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/os/LongMultiStateCounter;->setState(IJ)V
@@ -309,7 +282,6 @@
 .method public final update(JJ)J
     .locals 0
 
-    .line 2485
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/internal/os/LongMultiStateCounter;->updateValue(JJ)J
@@ -322,7 +294,6 @@
 .method public final writeToParcel(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 2462
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$TimeMultiStateCounter;->mCounter:Lcom/android/internal/os/LongMultiStateCounter;
 
     const/4 v0, 0x0

@@ -17,7 +17,6 @@
 .method public createLockDownVpnTracker(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/connectivity/Vpn;Lcom/android/internal/net/VpnProfile;)Lcom/android/server/net/LockdownVpnTracker;
     .locals 0
 
-    .line 177
     new-instance p0, Lcom/android/server/net/LockdownVpnTracker;
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/net/LockdownVpnTracker;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/connectivity/Vpn;Lcom/android/internal/net/VpnProfile;)V
@@ -28,7 +27,6 @@
 .method public createVpn(Landroid/os/Looper;Landroid/content/Context;Landroid/os/INetworkManagementService;Landroid/net/INetd;I)Lcom/android/server/connectivity/Vpn;
     .locals 7
 
-    .line 171
     new-instance p0, Lcom/android/server/connectivity/Vpn;
 
     new-instance v6, Lcom/android/server/connectivity/VpnProfileStore;
@@ -55,7 +53,6 @@
 .method public getCallingUid()I
     .locals 0
 
-    .line 146
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -68,12 +65,10 @@
 
     const-string/jumbo p0, "network_management"
 
-    .line 165
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 164
     invoke-static {p0}, Landroid/os/INetworkManagementService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/INetworkManagementService;
 
     move-result-object p0
@@ -84,7 +79,6 @@
 .method public getMainUserId()I
     .locals 0
 
-    .line 183
     const-class p0, Lcom/android/server/pm/UserManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -103,7 +97,6 @@
 .method public getNetd()Landroid/net/INetd;
     .locals 0
 
-    .line 160
     invoke-static {}, Landroid/net/util/NetdService;->getInstance()Landroid/net/INetd;
 
     move-result-object p0
@@ -114,7 +107,6 @@
 .method public getVpnProfileStore()Lcom/android/server/connectivity/VpnProfileStore;
     .locals 0
 
-    .line 156
     new-instance p0, Lcom/android/server/connectivity/VpnProfileStore;
 
     invoke-direct {p0}, Lcom/android/server/connectivity/VpnProfileStore;-><init>()V
@@ -125,7 +117,6 @@
 .method public makeHandlerThread()Landroid/os/HandlerThread;
     .locals 1
 
-    .line 151
     new-instance p0, Landroid/os/HandlerThread;
 
     const-string v0, "VpnManagerService"

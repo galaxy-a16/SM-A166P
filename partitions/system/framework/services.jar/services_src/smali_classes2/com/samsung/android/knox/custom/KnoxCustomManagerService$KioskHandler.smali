@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 11237
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
-    .line 11238
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
 
-    .line 11243
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x3
@@ -36,7 +33,6 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 11244
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$mcloseLauncherApp(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)V
@@ -46,7 +42,6 @@
     :cond_0
     if-ne v0, v2, :cond_1
 
-    .line 11246
     new-instance v0, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.AIRPLANE_MODE"
@@ -55,15 +50,12 @@
 
     const/high16 v4, 0x20000000
 
-    .line 11247
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string/jumbo v4, "state"
 
-    .line 11248
     invoke-virtual {v0, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 11249
     iget-object v4, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v4}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmContext(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Landroid/content/Context;
@@ -83,7 +75,6 @@
     :cond_1
     if-ne v0, v1, :cond_2
 
-    .line 11251
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmPhoneStatusBarInit(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Z
@@ -92,12 +83,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 11252
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$minitialiseSystemUi(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)V
 
-    .line 11256
     :cond_2
     :goto_0
     :try_start_0
@@ -109,7 +98,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 11257
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     new-instance v0, Lcom/samsung/android/sec_platform_library/FactoryPhone;
@@ -122,7 +110,6 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fputmFactoryPhone(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;Lcom/samsung/android/sec_platform_library/FactoryPhone;)V
 
-    .line 11258
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmFactoryPhone(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/samsung/android/sec_platform_library/FactoryPhone;
@@ -156,7 +143,6 @@
 
     if-ne p1, v4, :cond_4
 
-    .line 11261
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     const/16 v1, 0x11
@@ -165,7 +151,6 @@
 
     move-result-object p1
 
-    .line 11262
     iget-object v1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmFactoryPhone(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/samsung/android/sec_platform_library/FactoryPhone;
@@ -198,7 +183,6 @@
 
     if-ne p1, v0, :cond_6
 
-    .line 11266
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     const/16 v0, 0x20
@@ -207,7 +191,6 @@
 
     move-result-object p1
 
-    .line 11267
     iget-object v0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {v0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmFactoryPhone(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/samsung/android/sec_platform_library/FactoryPhone;
@@ -231,7 +214,6 @@
     :cond_6
     if-ne p1, v2, :cond_7
 
-    .line 11269
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmContext(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Landroid/content/Context;
@@ -246,7 +228,6 @@
 
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 11270
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmContext(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Landroid/content/Context;
@@ -261,7 +242,6 @@
 
     invoke-static {p1, v0, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 11271
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmContext(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Landroid/content/Context;
@@ -278,7 +258,6 @@
 
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 11272
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmFactoryPhone(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/samsung/android/sec_platform_library/FactoryPhone;
@@ -294,10 +273,8 @@
     :catch_0
     move-exception p1
 
-    .line 11275
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 11276
     iget-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmFactoryPhone(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/samsung/android/sec_platform_library/FactoryPhone;
@@ -306,7 +283,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 11277
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/samsung/android/knox/custom/KnoxCustomManagerService;
 
     invoke-static {p0}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->-$$Nest$fgetmFactoryPhone(Lcom/samsung/android/knox/custom/KnoxCustomManagerService;)Lcom/samsung/android/sec_platform_library/FactoryPhone;

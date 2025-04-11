@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;Lcom/android/server/hdmi/HdmiCecMessage;)V
     .locals 0
 
-    .line 519
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$2;->val$cecMessage:Lcom/android/server/hdmi/HdmiCecMessage;
@@ -33,7 +32,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 523
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

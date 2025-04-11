@@ -24,7 +24,6 @@
     :try_start_0
     const-string v1, "android.os.Build$VERSION"
 
-    .line 16
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -56,7 +55,6 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 19
     invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
     move-result v2

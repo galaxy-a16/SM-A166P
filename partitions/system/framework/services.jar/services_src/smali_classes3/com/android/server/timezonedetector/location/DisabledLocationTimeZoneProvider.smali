@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$IoNPGG_b4HqEw0X-yHEyqSglG8Q(Landroid/service/timezone/TimeZoneProviderEvent;)Landroid/service/timezone/TimeZoneProviderEvent;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/DisabledLocationTimeZoneProvider;->lambda$new$0(Landroid/service/timezone/TimeZoneProviderEvent;)Landroid/service/timezone/TimeZoneProviderEvent;
 
     move-result-object p0
@@ -18,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderMetricsLogger;Lcom/android/server/timezonedetector/location/ThreadingDomain;Ljava/lang/String;Z)V
     .locals 6
 
-    .line 44
     new-instance v4, Lcom/android/server/timezonedetector/location/DisabledLocationTimeZoneProvider$$ExternalSyntheticLambda0;
 
     invoke-direct {v4}, Lcom/android/server/timezonedetector/location/DisabledLocationTimeZoneProvider$$ExternalSyntheticLambda0;-><init>()V
@@ -41,7 +39,6 @@
 .method public static synthetic lambda$new$0(Landroid/service/timezone/TimeZoneProviderEvent;)Landroid/service/timezone/TimeZoneProviderEvent;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
@@ -50,7 +47,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;[Ljava/lang/String;)V
     .locals 2
 
-    .line 70
     iget-object p2, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;->mSharedLock:Ljava/lang/Object;
 
     monitor-enter p2
@@ -58,10 +54,8 @@
     :try_start_0
     const-string/jumbo v0, "{DisabledLocationTimeZoneProvider}"
 
-    .line 71
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +74,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,7 +92,6 @@
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 74
     monitor-exit p2
 
     return-void
@@ -117,14 +109,12 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onInitialize()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -133,7 +123,6 @@
 .method public onStartUpdates(Ljava/time/Duration;Ljava/time/Duration;)V
     .locals 0
 
-    .line 60
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Provider is disabled"
@@ -146,7 +135,6 @@
 .method public onStopUpdates()V
     .locals 1
 
-    .line 65
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Provider is disabled"
@@ -159,12 +147,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;->mSharedLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 80
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -201,7 +187,6 @@
     :catchall_0
     move-exception p0
 
-    .line 84
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

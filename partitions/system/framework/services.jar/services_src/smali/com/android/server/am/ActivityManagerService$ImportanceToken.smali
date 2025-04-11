@@ -22,15 +22,12 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;ILjava/lang/String;)V
     .locals 0
 
-    .line 1309
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$ImportanceToken;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1310
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$ImportanceToken;->pid:I
 
-    .line 1311
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$ImportanceToken;->reason:Ljava/lang/String;
 
     return-void
@@ -41,26 +38,22 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 3
 
-    .line 1322
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10500000001L
 
-    .line 1323
     iget v2, p0, Lcom/android/server/am/ActivityManagerService$ImportanceToken;->pid:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
-    .line 1324
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$ImportanceToken;->token:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
     const-wide v1, 0x10900000002L
 
-    .line 1325
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -70,12 +63,10 @@
     :cond_0
     const-wide v0, 0x10900000003L
 
-    .line 1327
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$ImportanceToken;->reason:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 1328
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -84,7 +75,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

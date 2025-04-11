@@ -20,7 +20,6 @@
 .method public final test(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/chimera/AggressivePolicyHandler;->$r8$lambda$iPd-EeCnAs6Vc5EpKMzEeGSEcSs(I)Z
 
     move-result p0

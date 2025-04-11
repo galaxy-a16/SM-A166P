@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/soundtrigger/PhoneCallStateHandler;)V
     .locals 0
 
-    .line 69
     iput-object p1, p0, Lcom/android/server/soundtrigger/PhoneCallStateHandler$1;->this$0:Lcom/android/server/soundtrigger/PhoneCallStateHandler;
 
     invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
@@ -28,7 +27,6 @@
 
     const-string v0, "Failed to add a telephony listener"
 
-    .line 77
     invoke-static {p0, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -37,7 +35,6 @@
 .method public onSubscriptionsChanged()V
     .locals 0
 
-    .line 72
     iget-object p0, p0, Lcom/android/server/soundtrigger/PhoneCallStateHandler$1;->this$0:Lcom/android/server/soundtrigger/PhoneCallStateHandler;
 
     invoke-static {p0}, Lcom/android/server/soundtrigger/PhoneCallStateHandler;->-$$Nest$mupdateTelephonyListeners(Lcom/android/server/soundtrigger/PhoneCallStateHandler;)V

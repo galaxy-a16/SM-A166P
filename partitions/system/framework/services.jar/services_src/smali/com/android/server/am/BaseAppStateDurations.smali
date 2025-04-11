@@ -7,7 +7,6 @@
 .method public constructor <init>(ILjava/lang/String;ILjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
     .locals 0
 
-    .line 39
     invoke-direct/range {p0 .. p5}, Lcom/android/server/am/BaseAppStateTimeEvents;-><init>(ILjava/lang/String;ILjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/am/BaseAppStateDurations;)V
     .locals 0
 
-    .line 43
     invoke-direct {p0, p1}, Lcom/android/server/am/BaseAppStateTimeEvents;-><init>(Lcom/android/server/am/BaseAppStateTimeEvents;)V
 
     return-void
@@ -29,7 +27,6 @@
 
     if-eqz p2, :cond_10
 
-    .line 103
     invoke-virtual/range {p2 .. p2}, Ljava/util/LinkedList;->size()I
 
     move-result v0
@@ -41,7 +38,6 @@
     :cond_0
     if-eqz p1, :cond_f
 
-    .line 106
     invoke-virtual/range {p1 .. p1}, Ljava/util/LinkedList;->size()I
 
     move-result v0
@@ -50,18 +46,15 @@
 
     goto/16 :goto_9
 
-    .line 109
     :cond_1
     invoke-virtual/range {p1 .. p1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 110
     invoke-virtual/range {p2 .. p2}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 111
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -74,12 +67,10 @@
 
     check-cast v3, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;
 
-    .line 112
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
 
-    .line 114
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v5
@@ -138,7 +129,6 @@
 
     xor-int/lit8 v11, v11, 0x1
 
-    .line 122
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
@@ -162,7 +152,6 @@
 
     move-wide v6, v12
 
-    .line 123
     :goto_4
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -187,7 +176,6 @@
 
     xor-int/lit8 v10, v10, 0x1
 
-    .line 127
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
@@ -221,7 +209,6 @@
     :cond_9
     xor-int/lit8 v11, v11, 0x1
 
-    .line 131
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v7
@@ -269,7 +256,6 @@
     :goto_8
     if-eq v15, v14, :cond_e
 
-    .line 134
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->clone()Ljava/lang/Object;
 
     move-result-object v2
@@ -287,7 +273,6 @@
 
     goto/16 :goto_0
 
-    .line 107
     :cond_f
     :goto_9
     invoke-virtual/range {p2 .. p2}, Ljava/util/LinkedList;->clone()Ljava/lang/Object;
@@ -306,40 +291,33 @@
 .method public addEvent(ZLcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;I)V
     .locals 2
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object v1, v0, p3
 
     if-nez v1, :cond_0
 
-    .line 51
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
     aput-object v1, v0, p3
 
-    .line 53
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object v0, v0, p3
 
-    .line 54
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
-    .line 55
     invoke-virtual {p0, p3}, Lcom/android/server/am/BaseAppStateDurations;->isActive(I)Z
 
     move-result v1
 
     if-eq p1, v1, :cond_1
 
-    .line 63
     invoke-virtual {v0, p2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 65
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
@@ -357,7 +335,6 @@
 .method public formatEventSummary(JI)Ljava/lang/String;
     .locals 0
 
-    .line 246
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/BaseAppStateDurations;->getTotalDurations(JI)J
 
     move-result-wide p0
@@ -374,7 +351,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 215
     invoke-virtual {p0, v0, v1}, Lcom/android/server/am/BaseAppStateEvents;->getEarliest(J)J
 
     move-result-wide v3
@@ -399,7 +375,6 @@
 
     move-object/from16 v2, p0
 
-    .line 219
     iget-object v2, v2, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object v2, v2, p5
@@ -408,7 +383,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 220
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
     move-result v5
@@ -417,7 +391,6 @@
 
     goto :goto_3
 
-    .line 226
     :cond_0
     invoke-virtual {v2}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -444,7 +417,6 @@
 
     check-cast v12, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;
 
-    .line 227
     invoke-virtual {v12}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v13
@@ -457,7 +429,6 @@
 
     goto :goto_1
 
-    .line 230
     :cond_1
     invoke-virtual {v12}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
@@ -477,7 +448,6 @@
 
     goto :goto_2
 
-    .line 228
     :cond_2
     :goto_1
     invoke-virtual {v12}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
@@ -489,7 +459,6 @@
 
     goto :goto_0
 
-    .line 234
     :cond_3
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
@@ -499,7 +468,6 @@
 
     if-ne v2, v6, :cond_4
 
-    .line 235
     invoke-static {v9, v10, v0, v1}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
@@ -523,7 +491,6 @@
 .method public isActive(I)Z
     .locals 0
 
-    .line 241
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object p0, p0, p1
@@ -554,7 +521,6 @@
 
     if-eqz p2, :cond_c
 
-    .line 179
     invoke-virtual/range {p2 .. p2}, Ljava/util/LinkedList;->size()I
 
     move-result v0
@@ -563,7 +529,6 @@
 
     if-eqz p1, :cond_c
 
-    .line 180
     invoke-virtual/range {p1 .. p1}, Ljava/util/LinkedList;->size()I
 
     move-result v0
@@ -572,18 +537,15 @@
 
     goto/16 :goto_8
 
-    .line 183
     :cond_0
     invoke-virtual/range {p1 .. p1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 184
     invoke-virtual/range {p2 .. p2}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 185
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -596,12 +558,10 @@
 
     check-cast v3, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;
 
-    .line 186
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
 
-    .line 188
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v5
@@ -656,7 +616,6 @@
 
     xor-int/lit8 v11, v11, 0x1
 
-    .line 196
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
@@ -680,7 +639,6 @@
 
     move-wide v6, v12
 
-    .line 197
     :goto_3
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -705,7 +663,6 @@
 
     xor-int/lit8 v10, v10, 0x1
 
-    .line 201
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
@@ -739,7 +696,6 @@
     :cond_7
     xor-int/lit8 v11, v11, 0x1
 
-    .line 205
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v7
@@ -786,7 +742,6 @@
     :goto_7
     if-eq v15, v14, :cond_b
 
-    .line 208
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->clone()Ljava/lang/Object;
 
     move-result-object v2
@@ -812,7 +767,6 @@
 .method public subtract(Lcom/android/server/am/BaseAppStateDurations;I)V
     .locals 4
 
-    .line 160
     iget-object v0, p1, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     array-length v1, v0
@@ -828,7 +782,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 168
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
@@ -836,12 +789,10 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 169
     aget-object v2, v1, v0
 
     if-eqz v2, :cond_1
 
-    .line 170
     iget-object v3, p1, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object v3, v3, p2
@@ -865,7 +816,6 @@
 .method public subtract(Lcom/android/server/am/BaseAppStateDurations;II)V
     .locals 3
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     array-length v1, v0
@@ -888,7 +838,6 @@
 
     goto :goto_0
 
-    .line 153
     :cond_0
     invoke-virtual {p0, v1, p1}, Lcom/android/server/am/BaseAppStateDurations;->subtract(Ljava/util/LinkedList;Ljava/util/LinkedList;)Ljava/util/LinkedList;
 
@@ -904,7 +853,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 251
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -931,7 +879,6 @@
 
     const/4 v1, 0x0
 
-    .line 252
     invoke-virtual {p0, v1}, Lcom/android/server/am/BaseAppStateDurations;->isActive(I)Z
 
     move-result v2
@@ -942,7 +889,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 253
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -963,7 +909,6 @@
 .method public trimEvents(JI)V
     .locals 1
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     aget-object p3, v0, p3
@@ -980,7 +925,6 @@
 
     return-void
 
-    .line 77
     :cond_0
     :goto_0
     invoke-virtual {p3}, Ljava/util/LinkedList;->size()I
@@ -993,14 +937,12 @@
 
     if-le p0, v1, :cond_3
 
-    .line 78
     invoke-virtual {p3}, Ljava/util/LinkedList;->peek()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;->getTimestamp()J
 
     move-result-wide v2
@@ -1011,7 +953,6 @@
 
     return-void
 
-    .line 83
     :cond_1
     invoke-virtual {p3, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -1027,7 +968,6 @@
 
     if-lez p0, :cond_2
 
-    .line 85
     invoke-virtual {p3, v0}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -1038,16 +978,13 @@
 
     return-void
 
-    .line 89
     :cond_2
     invoke-virtual {p3}, Ljava/util/LinkedList;->pop()Ljava/lang/Object;
 
-    .line 90
     invoke-virtual {p3}, Ljava/util/LinkedList;->pop()Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 92
     :cond_3
     invoke-virtual {p3}, Ljava/util/LinkedList;->size()I
 
@@ -1055,7 +992,6 @@
 
     if-ne p0, v1, :cond_4
 
-    .line 94
     invoke-virtual {p3, v0}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object p0

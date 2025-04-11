@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 9
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValue;
 
     sget-object v1, Lco/nstant/in/cbor/model/SimpleValueType;->FALSE:Lco/nstant/in/cbor/model/SimpleValueType;
@@ -32,7 +31,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValue;->FALSE:Lco/nstant/in/cbor/model/SimpleValue;
 
-    .line 11
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValue;
 
     sget-object v1, Lco/nstant/in/cbor/model/SimpleValueType;->TRUE:Lco/nstant/in/cbor/model/SimpleValueType;
@@ -41,7 +39,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValue;->TRUE:Lco/nstant/in/cbor/model/SimpleValue;
 
-    .line 12
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValue;
 
     sget-object v1, Lco/nstant/in/cbor/model/SimpleValueType;->NULL:Lco/nstant/in/cbor/model/SimpleValueType;
@@ -50,7 +47,6 @@
 
     sput-object v0, Lco/nstant/in/cbor/model/SimpleValue;->NULL:Lco/nstant/in/cbor/model/SimpleValue;
 
-    .line 13
     new-instance v0, Lco/nstant/in/cbor/model/SimpleValue;
 
     sget-object v1, Lco/nstant/in/cbor/model/SimpleValueType;->UNDEFINED:Lco/nstant/in/cbor/model/SimpleValueType;
@@ -69,23 +65,18 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 25
     sget-object v0, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE:Lco/nstant/in/cbor/model/SpecialType;
 
     goto :goto_0
 
-    .line 26
     :cond_0
     sget-object v0, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE_NEXT_BYTE:Lco/nstant/in/cbor/model/SpecialType;
 
-    .line 25
     :goto_0
     invoke-direct {p0, v0}, Lco/nstant/in/cbor/model/Special;-><init>(Lco/nstant/in/cbor/model/SpecialType;)V
 
-    .line 27
     iput p1, p0, Lco/nstant/in/cbor/model/SimpleValue;->value:I
 
-    .line 28
     invoke-static {p1}, Lco/nstant/in/cbor/model/SimpleValueType;->ofByte(I)Lco/nstant/in/cbor/model/SimpleValueType;
 
     move-result-object p1
@@ -98,19 +89,16 @@
 .method public constructor <init>(Lco/nstant/in/cbor/model/SimpleValueType;)V
     .locals 1
 
-    .line 19
     sget-object v0, Lco/nstant/in/cbor/model/SpecialType;->SIMPLE_VALUE:Lco/nstant/in/cbor/model/SpecialType;
 
     invoke-direct {p0, v0}, Lco/nstant/in/cbor/model/Special;-><init>(Lco/nstant/in/cbor/model/SpecialType;)V
 
-    .line 20
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/SimpleValueType;->getValue()I
 
     move-result v0
 
     iput v0, p0, Lco/nstant/in/cbor/model/SimpleValue;->value:I
 
-    .line 21
     iput-object p1, p0, Lco/nstant/in/cbor/model/SimpleValue;->simpleValueType:Lco/nstant/in/cbor/model/SimpleValueType;
 
     return-void
@@ -121,19 +109,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 41
     instance-of v0, p1, Lco/nstant/in/cbor/model/SimpleValue;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 42
     move-object v0, p1
 
     check-cast v0, Lco/nstant/in/cbor/model/SimpleValue;
 
-    .line 43
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/Special;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -155,7 +140,6 @@
 .method public getSimpleValueType()Lco/nstant/in/cbor/model/SimpleValueType;
     .locals 0
 
-    .line 32
     iget-object p0, p0, Lco/nstant/in/cbor/model/SimpleValue;->simpleValueType:Lco/nstant/in/cbor/model/SimpleValueType;
 
     return-object p0
@@ -164,7 +148,6 @@
 .method public getValue()I
     .locals 0
 
-    .line 36
     iget p0, p0, Lco/nstant/in/cbor/model/SimpleValue;->value:I
 
     return p0
@@ -173,7 +156,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 50
     invoke-super {p0}, Lco/nstant/in/cbor/model/Special;->hashCode()I
 
     move-result v0
@@ -196,7 +178,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 55
     iget-object p0, p0, Lco/nstant/in/cbor/model/SimpleValue;->simpleValueType:Lco/nstant/in/cbor/model/SimpleValueType;
 
     invoke-virtual {p0}, Ljava/lang/Enum;->toString()Ljava/lang/String;

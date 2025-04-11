@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$DxXEpV-OX0z6Ep0M5vY27R7NQys(Lcom/android/server/app/GameManagerService$MyUidObserver;ILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/app/GameManagerService$MyUidObserver;->lambda$onUidStateChanged$0(ILjava/lang/String;)Z
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/app/GameManagerService;)V
     .locals 0
 
-    .line 2209
     iput-object p1, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
@@ -33,7 +31,6 @@
 .method private synthetic lambda$onUidStateChanged$0(ILjava/lang/String;)Z
     .locals 0
 
-    .line 2231
     iget-object p0, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {p0, p2, p1}, Lcom/android/server/app/GameManagerService;->-$$Nest$misPackageGame(Lcom/android/server/app/GameManagerService;Ljava/lang/String;I)Z
@@ -48,7 +45,6 @@
 .method public final disableGameMode(I)V
     .locals 3
 
-    .line 2244
     iget-object v0, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {v0}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmUidObserverLock(Lcom/android/server/app/GameManagerService;)Ljava/lang/Object;
@@ -57,7 +53,6 @@
 
     monitor-enter v0
 
-    .line 2245
     :try_start_0
     iget-object v1, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
@@ -75,12 +70,10 @@
 
     if-nez v1, :cond_0
 
-    .line 2246
     monitor-exit v0
 
     return-void
 
-    .line 2248
     :cond_0
     iget-object v1, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
@@ -94,7 +87,6 @@
 
     invoke-interface {v1, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 2249
     iget-object p1, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {p1}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmForegroundGameUids(Lcom/android/server/app/GameManagerService;)Ljava/util/Set;
@@ -107,7 +99,6 @@
 
     if-nez p1, :cond_1
 
-    .line 2250
     monitor-exit v0
 
     return-void
@@ -117,10 +108,8 @@
 
     const-string v1, "Game power mode OFF (process remomved or state changed to background)"
 
-    .line 2252
     invoke-static {p1, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2254
     iget-object p0, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {p0}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmPowerManagerInternal(Lcom/android/server/app/GameManagerService;)Landroid/os/PowerManagerInternal;
@@ -133,7 +122,6 @@
 
     invoke-virtual {p0, p1, v1}, Landroid/os/PowerManagerInternal;->setPowerMode(IZ)V
 
-    .line 2255
     monitor-exit v0
 
     return-void
@@ -151,7 +139,6 @@
 .method public onUidGone(IZ)V
     .locals 0
 
-    .line 2212
     iget-object p2, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {p2}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmUidObserverLock(Lcom/android/server/app/GameManagerService;)Ljava/lang/Object;
@@ -160,11 +147,9 @@
 
     monitor-enter p2
 
-    .line 2213
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/app/GameManagerService$MyUidObserver;->disableGameMode(I)V
 
-    .line 2214
     monitor-exit p2
 
     return-void
@@ -182,7 +167,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 2219
     iget-object p3, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {p3}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmUidObserverLock(Lcom/android/server/app/GameManagerService;)Ljava/lang/Object;
@@ -191,7 +175,6 @@
 
     monitor-enter p3
 
-    .line 2220
     :try_start_0
     invoke-static {p2}, Landroid/app/ActivityManager;->isProcStateBackground(I)Z
 
@@ -199,15 +182,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 2221
     invoke-virtual {p0, p1}, Lcom/android/server/app/GameManagerService$MyUidObserver;->disableGameMode(I)V
 
-    .line 2222
     monitor-exit p3
 
     return-void
 
-    .line 2225
     :cond_0
     iget-object p2, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
@@ -225,14 +205,12 @@
 
     if-eqz p2, :cond_4
 
-    .line 2226
     array-length p4, p2
 
     if-nez p4, :cond_1
 
     goto :goto_0
 
-    .line 2230
     :cond_1
     iget-object p4, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
@@ -244,7 +222,6 @@
 
     move-result p4
 
-    .line 2231
     invoke-static {p2}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
 
     move-result-object p2
@@ -259,12 +236,10 @@
 
     if-nez p2, :cond_2
 
-    .line 2232
     monitor-exit p3
 
     return-void
 
-    .line 2235
     :cond_2
     iget-object p2, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
@@ -282,10 +257,8 @@
 
     const-string p4, "Game power mode ON (process state was changed to foreground)"
 
-    .line 2236
     invoke-static {p2, p4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2237
     iget-object p2, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {p2}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmPowerManagerInternal(Lcom/android/server/app/GameManagerService;)Landroid/os/PowerManagerInternal;
@@ -298,7 +271,6 @@
 
     invoke-virtual {p2, p4, p5}, Landroid/os/PowerManagerInternal;->setPowerMode(IZ)V
 
-    .line 2239
     :cond_3
     iget-object p0, p0, Lcom/android/server/app/GameManagerService$MyUidObserver;->this$0:Lcom/android/server/app/GameManagerService;
 
@@ -312,12 +284,10 @@
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2240
     monitor-exit p3
 
     return-void
 
-    .line 2227
     :cond_4
     :goto_0
     monitor-exit p3
@@ -327,7 +297,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2240
     monitor-exit p3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

@@ -20,7 +20,6 @@
 .method public addLogicalAddress(B)B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -29,7 +28,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -38,42 +36,36 @@
 .method public clearLogicalAddress()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public enableAudioReturnChannel(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public enableCec(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public enableSystemCecControl(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public enableWakeupByOtp(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getCecVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -82,7 +74,6 @@
 .method public getPhysicalAddress()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -91,7 +82,6 @@
 .method public getVendorId()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -100,7 +90,6 @@
 .method public sendMessage(Landroid/hardware/tv/hdmi/cec/CecMessage;)B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -109,13 +98,11 @@
 .method public setCallback(Landroid/hardware/tv/hdmi/cec/IHdmiCecCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setLanguage(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

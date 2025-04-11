@@ -34,7 +34,6 @@
 .method public static synthetic $r8$lambda$afeSNyx9k0owE1yKBfcEslbjNCA(I)[Landroid/apex/CompressedApexInfo;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->lambda$getCompressedApexInfoList$2(I)[Landroid/apex/CompressedApexInfo;
 
     move-result-object p0
@@ -45,7 +44,6 @@
 .method public static synthetic $r8$lambda$k5b6zfb-HxA0U0GmwgX7Mgx7kQk(Landroid/ota/nano/OtaPackageMetadata$ApexInfo;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->lambda$getCompressedApexInfoList$0(Landroid/ota/nano/OtaPackageMetadata$ApexInfo;)Z
 
     move-result p0
@@ -56,7 +54,6 @@
 .method public static synthetic $r8$lambda$ljWAkCRCnNZ_YG4A_oZb3uYOv9Y(Landroid/ota/nano/OtaPackageMetadata$ApexInfo;)Landroid/apex/CompressedApexInfo;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->lambda$getCompressedApexInfoList$1(Landroid/ota/nano/OtaPackageMetadata$ApexInfo;)Landroid/apex/CompressedApexInfo;
 
     move-result-object p0
@@ -67,47 +64,40 @@
 .method public static constructor <clinit>()V
     .locals 6
 
-    .line 114
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/recoverysystem/RecoverySystemService;->sRequestLock:Ljava/lang/Object;
 
-    .line 183
     new-instance v0, Landroid/util/FastImmutableArraySet;
 
     const/4 v1, 0x2
 
-    .line 185
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
-    .line 186
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     const/4 v3, 0x4
 
-    .line 187
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     const/4 v4, 0x5
 
-    .line 188
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
     const/4 v5, 0x6
 
-    .line 189
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -126,7 +116,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 406
     new-instance v0, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-direct {v0, p1}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;-><init>(Landroid/content/Context;)V
@@ -139,7 +128,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lcom/android/server/recoverysystem/RecoverySystemService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/recoverysystem/RecoverySystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -148,27 +136,22 @@
 .method public constructor <init>(Lcom/android/server/recoverysystem/RecoverySystemService$Injector;)V
     .locals 1
 
-    .line 410
     invoke-direct {p0}, Landroid/os/IRecoverySystem$Stub;-><init>()V
 
-    .line 129
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
-    .line 131
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
-    .line 411
     iput-object p1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
-    .line 412
     invoke-virtual {p1}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -185,10 +168,8 @@
 
     const-string v1, "RecoverySystemService"
 
-    .line 555
     invoke-static {v1, v0}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 557
     :try_start_0
     invoke-static {}, Landroid/security/AndroidKeyStoreMaintenance;->deleteAllKeys()V
     :try_end_0
@@ -201,7 +182,6 @@
 
     const-string v2, "Failed to delete all keys from keystore."
 
-    .line 559
     invoke-static {v1, v2, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -213,7 +193,6 @@
 
     const-string v0, "RecoverySystemService"
 
-    .line 959
     new-instance v1, Ljava/util/zip/ZipFile;
 
     invoke-direct {v1, p0}, Ljava/util/zip/ZipFile;-><init>(Ljava/lang/String;)V
@@ -221,7 +200,6 @@
     :try_start_0
     const-string p0, "apex_info.pb"
 
-    .line 960
     invoke-virtual {v1, p0}, Ljava/util/zip/ZipFile;->getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
 
     move-result-object p0
@@ -230,14 +208,12 @@
 
     if-nez p0, :cond_0
 
-    .line 997
     invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 964
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->getSize()J
@@ -250,7 +226,6 @@
 
     if-gez v2, :cond_4
 
-    .line 969
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->getSize()J
 
     move-result-wide v2
@@ -261,7 +236,6 @@
 
     if-nez v2, :cond_1
 
-    .line 970
     new-instance p0, Landroid/apex/CompressedApexInfoList;
 
     invoke-direct {p0}, Landroid/apex/CompressedApexInfoList;-><init>()V
@@ -270,17 +244,14 @@
 
     new-array v0, v0, [Landroid/apex/CompressedApexInfo;
 
-    .line 971
     iput-object v0, p0, Landroid/apex/CompressedApexInfoList;->apexInfos:[Landroid/apex/CompressedApexInfo;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 997
     invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
 
     return-object p0
 
-    .line 974
     :cond_1
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -307,7 +278,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 976
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->getSize()J
 
     move-result-wide v2
@@ -316,20 +286,17 @@
 
     new-array v3, v2, [B
 
-    .line 978
     invoke-virtual {v1, p0}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 979
     :try_start_3
     invoke-virtual {p0, v3}, Ljava/io/InputStream;->read([B)I
 
     move-result v4
 
-    .line 980
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -350,31 +317,25 @@
 
     move-result-object v5
 
-    .line 981
     invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     if-ne v4, v2, :cond_2
 
-    .line 985
     :try_start_4
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
-    .line 986
     invoke-static {v3}, Landroid/ota/nano/OtaPackageMetadata$ApexMetadata;->parseFrom([B)Landroid/ota/nano/OtaPackageMetadata$ApexMetadata;
 
     move-result-object p0
 
-    .line 987
     new-instance v0, Landroid/apex/CompressedApexInfoList;
 
     invoke-direct {v0}, Landroid/apex/CompressedApexInfoList;-><init>()V
 
-    .line 988
     iget-object p0, p0, Landroid/ota/nano/OtaPackageMetadata$ApexMetadata;->apexInfo:[Landroid/ota/nano/OtaPackageMetadata$ApexInfo;
 
-    .line 989
     invoke-static {p0}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -399,7 +360,6 @@
 
     invoke-direct {v2}, Lcom/android/server/recoverysystem/RecoverySystemService$$ExternalSyntheticLambda2;-><init>()V
 
-    .line 995
     invoke-interface {p0, v2}, Ljava/util/stream/Stream;->toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -410,12 +370,10 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 997
     invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
 
     return-object v0
 
-    .line 983
     :cond_2
     :try_start_5
     new-instance v0, Ljava/io/IOException;
@@ -431,7 +389,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 978
     :try_start_6
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_6
@@ -449,7 +406,6 @@
     :goto_0
     throw v0
 
-    .line 965
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -461,7 +417,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 966
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->getSize()J
 
     move-result-wide v6
@@ -487,7 +442,6 @@
     :catchall_2
     move-exception p0
 
-    .line 959
     :try_start_8
     invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
     :try_end_8
@@ -507,7 +461,6 @@
 .method public static isUpdatableApexSupported()Z
     .locals 2
 
-    .line 951
     invoke-static {}, Landroid/sysprop/ApexProperties;->updatable()Ljava/util/Optional;
 
     move-result-object v0
@@ -530,7 +483,6 @@
 .method public static synthetic lambda$getCompressedApexInfoList$0(Landroid/ota/nano/OtaPackageMetadata$ApexInfo;)Z
     .locals 0
 
-    .line 989
     iget-boolean p0, p0, Landroid/ota/nano/OtaPackageMetadata$ApexInfo;->isCompressed:Z
 
     return p0
@@ -539,22 +491,18 @@
 .method public static synthetic lambda$getCompressedApexInfoList$1(Landroid/ota/nano/OtaPackageMetadata$ApexInfo;)Landroid/apex/CompressedApexInfo;
     .locals 3
 
-    .line 990
     new-instance v0, Landroid/apex/CompressedApexInfo;
 
     invoke-direct {v0}, Landroid/apex/CompressedApexInfo;-><init>()V
 
-    .line 991
     iget-object v1, p0, Landroid/ota/nano/OtaPackageMetadata$ApexInfo;->packageName:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/apex/CompressedApexInfo;->moduleName:Ljava/lang/String;
 
-    .line 992
     iget-wide v1, p0, Landroid/ota/nano/OtaPackageMetadata$ApexInfo;->decompressedSize:J
 
     iput-wide v1, v0, Landroid/apex/CompressedApexInfo;->decompressedSize:J
 
-    .line 993
     iget-wide v1, p0, Landroid/ota/nano/OtaPackageMetadata$ApexInfo;->version:J
 
     iput-wide v1, v0, Landroid/apex/CompressedApexInfo;->versionCode:J
@@ -565,7 +513,6 @@
 .method public static synthetic lambda$getCompressedApexInfoList$2(I)[Landroid/apex/CompressedApexInfo;
     .locals 0
 
-    .line 995
     new-array p0, p0, [Landroid/apex/CompressedApexInfo;
 
     return-object p0
@@ -576,7 +523,6 @@
 .method public allocateSpaceForUpdate(Ljava/lang/String;)Z
     .locals 4
 
-    .line 1002
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mContext:Landroid/content/Context;
 
     const-string v0, "android.permission.RECOVERY"
@@ -585,7 +531,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1003
     invoke-static {}, Lcom/android/server/recoverysystem/RecoverySystemService;->isUpdatableApexSupported()Z
 
     move-result p0
@@ -598,18 +543,15 @@
 
     const-string p0, "Updatable Apex not supported, allocateSpaceForUpdate does nothing."
 
-    .line 1004
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 1008
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1010
     :try_start_0
     invoke-static {p1}, Lcom/android/server/recoverysystem/RecoverySystemService;->getCompressedApexInfoList(Ljava/lang/String;)Landroid/apex/CompressedApexInfoList;
 
@@ -619,7 +561,6 @@
 
     const-string p0, "apex_info.pb not present in OTA package. Assuming device doesn\'t support compressedAPEX, continueing without allocating space."
 
-    .line 1012
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
@@ -627,19 +568,16 @@
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1025
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v0
 
-    .line 1017
     :cond_1
     :try_start_1
     invoke-static {}, Lcom/android/server/pm/ApexManager;->getInstance()Lcom/android/server/pm/ApexManager;
 
     move-result-object p1
 
-    .line 1018
     invoke-virtual {p1, p0}, Lcom/android/server/pm/ApexManager;->reserveSpaceForCompressedApex(Landroid/apex/CompressedApexInfoList;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -647,7 +585,6 @@
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1025
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v0
@@ -663,7 +600,6 @@
     :try_start_2
     const-string p1, "Failed to reserve space for compressed apex: "
 
-    .line 1023
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -671,12 +607,10 @@
     :catch_1
     move-exception p0
 
-    .line 1021
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowAsRuntimeException()Ljava/lang/RuntimeException;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1025
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -687,7 +621,6 @@
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1026
     throw p0
 .end method
 
@@ -702,10 +635,8 @@
 
     const-string p0, "Missing packageName when rebooting with lskf."
 
-    .line 822
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 823
     new-instance p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;
 
     const/16 p1, 0x7d0
@@ -714,7 +645,6 @@
 
     return-object p0
 
-    .line 826
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/recoverysystem/RecoverySystemService;->isLskfCaptured(Ljava/lang/String;)Z
 
@@ -722,7 +652,6 @@
 
     if-nez p1, :cond_1
 
-    .line 827
     new-instance p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;
 
     const/16 p1, 0xbb8
@@ -731,7 +660,6 @@
 
     return-object p0
 
-    .line 831
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/server/recoverysystem/RecoverySystemService;->verifySlotForNextBoot(Z)Z
 
@@ -739,7 +667,6 @@
 
     if-nez p1, :cond_2
 
-    .line 832
     new-instance p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;
 
     const/16 p1, 0xfa0
@@ -748,13 +675,11 @@
 
     return-object p0
 
-    .line 836
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p1
 
-    .line 839
     :try_start_0
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -768,10 +693,8 @@
 
     const-string p0, "Failed to get lock settings service, skipping armRebootEscrow"
 
-    .line 841
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 843
     new-instance p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;
 
     const/4 v0, 0x3
@@ -780,12 +703,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 849
     invoke-static {p1, p2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
 
-    .line 847
     :cond_3
     :try_start_1
     invoke-virtual {p0}, Lcom/android/internal/widget/LockSettingsInternal;->armRebootEscrow()I
@@ -794,12 +715,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 849
     invoke-static {p1, p2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-eqz p0, :cond_4
 
-    .line 853
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -816,14 +735,12 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 855
     new-instance p1, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;
 
     invoke-direct {p1, v2, p0}, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;-><init>(II)V
 
     return-object p1
 
-    .line 859
     :cond_4
     new-instance p0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;
 
@@ -834,10 +751,8 @@
     :catchall_0
     move-exception p0
 
-    .line 849
     invoke-static {p1, p2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 850
     throw p0
 .end method
 
@@ -853,7 +768,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 1054
     iget-object v2, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     const-string v3, "init.svc.uncrypt"
@@ -862,7 +776,6 @@
 
     move-result-object v2
 
-    .line 1055
     iget-object v3, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     const-string v4, "init.svc.setup-bcb"
@@ -871,7 +784,6 @@
 
     move-result-object v3
 
-    .line 1056
     iget-object v4, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     const-string v5, "init.svc.clear-bcb"
@@ -882,7 +794,6 @@
 
     const-string/jumbo v5, "running"
 
-    .line 1057
     invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -891,7 +802,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1058
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -920,7 +830,6 @@
 
     return v6
 
-    .line 1071
     :cond_2
     :try_start_0
     iget-object v2, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
@@ -940,7 +849,6 @@
 
     const-string v4, "Interrupted:"
 
-    .line 1073
     invoke-static {v3, v4, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_3
@@ -955,7 +863,6 @@
 .method public clearBcb()Z
     .locals 3
 
-    .line 513
     sget-object v0, Lcom/android/server/recoverysystem/RecoverySystemService;->sRequestLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -964,7 +871,6 @@
 
     const/4 v2, 0x0
 
-    .line 514
     :try_start_0
     invoke-virtual {p0, v1, v2}, Lcom/android/server/recoverysystem/RecoverySystemService;->setupOrClearBcb(ZLjava/lang/String;)Z
 
@@ -977,7 +883,6 @@
     :catchall_0
     move-exception p0
 
-    .line 515
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -988,7 +893,6 @@
 .method public clearLskf(Ljava/lang/String;)Z
     .locals 4
 
-    .line 721
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->enforcePermissionForResumeOnReboot()V
 
     const/4 v0, 0x0
@@ -999,12 +903,10 @@
 
     const-string p0, "Missing packageName when clearing lskf."
 
-    .line 723
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 728
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/recoverysystem/RecoverySystemService;->updateRoRPreparationStateOnClear(Ljava/lang/String;)I
 
@@ -1022,7 +924,6 @@
 
     return v3
 
-    .line 750
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1044,13 +945,11 @@
 
     throw p0
 
-    .line 736
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 738
     :try_start_0
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -1062,17 +961,14 @@
 
     const-string p0, "Failed to get lock settings service, skipping clearRebootEscrow"
 
-    .line 740
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 747
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v0
 
-    .line 745
     :cond_3
     :try_start_1
     invoke-virtual {p0}, Lcom/android/internal/widget/LockSettingsInternal;->clearRebootEscrow()Z
@@ -1081,7 +977,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 747
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -1091,10 +986,8 @@
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 748
     throw p0
 
-    .line 731
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1120,20 +1013,17 @@
 
     monitor-enter p0
 
-    .line 903
     :try_start_0
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 904
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 905
     monitor-exit p0
 
     return-void
@@ -1149,7 +1039,6 @@
 .method public final clearRoRPreparationStateOnRebootFailure(Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;)V
     .locals 2
 
-    .line 908
     sget-object v0, Lcom/android/server/recoverysystem/RecoverySystemService;->FATAL_ARM_ESCROW_ERRORS:Landroid/util/FastImmutableArraySet;
 
     iget v1, p1, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;->mProviderErrorCode:I
@@ -1166,7 +1055,6 @@
 
     return-void
 
-    .line 912
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1188,7 +1076,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 914
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->clearRoRPreparationState()V
 
     return-void
@@ -1197,7 +1084,6 @@
 .method public final enforcePermissionForResumeOnReboot()V
     .locals 2
 
-    .line 564
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.RECOVERY"
@@ -1212,7 +1098,6 @@
 
     const-string v0, "android.permission.REBOOT"
 
-    .line 566
     invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -1221,7 +1106,6 @@
 
     goto :goto_0
 
-    .line 568
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1239,7 +1123,6 @@
 .method public final enforceShell()V
     .locals 1
 
-    .line 1234
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->isCallerShell()Z
 
     move-result p0
@@ -1248,7 +1131,6 @@
 
     return-void
 
-    .line 1235
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1262,7 +1144,6 @@
 .method public final isAbDevice()Z
     .locals 1
 
-    .line 770
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     const-string/jumbo v0, "ro.build.ab_update"
@@ -1283,7 +1164,6 @@
 .method public final isCallerShell()Z
     .locals 1
 
-    .line 1229
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -1312,13 +1192,10 @@
 .method public isLskfCaptured(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1032
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->enforcePermissionForResumeOnReboot()V
 
-    .line 1034
     monitor-enter p0
 
-    .line 1035
     :try_start_0
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
@@ -1326,7 +1203,6 @@
 
     move-result v0
 
-    .line 1036
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1335,7 +1211,6 @@
 
     const-string p0, "RecoverySystemService"
 
-    .line 1039
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1364,7 +1239,6 @@
     :catchall_0
     move-exception p1
 
-    .line 1036
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -1380,11 +1254,9 @@
 
     return-void
 
-    .line 688
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->updateRoRPreparationStateOnPreparedForReboot()V
 
-    .line 689
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->reportMetricsOnPreparedForReboot()V
 
     return-void
@@ -1393,15 +1265,12 @@
 .method public onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
     .locals 11
 
-    .line 1242
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->enforceShell()V
 
-    .line 1243
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 1245
     :try_start_0
     new-instance v3, Lcom/android/server/recoverysystem/RecoverySystemShellCommand;
 
@@ -1427,7 +1296,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1248
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -1437,14 +1305,12 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1249
     throw v0
 .end method
 
 .method public onSystemServicesReady()V
     .locals 1
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getLockSettingsService()Lcom/android/internal/widget/LockSettingsInternal;
@@ -1457,12 +1323,10 @@
 
     const-string v0, "Failed to get lock settings service, skipping set RebootEscrowListener"
 
-    .line 419
     invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 423
     :cond_0
     invoke-virtual {v0, p0}, Lcom/android/internal/widget/LockSettingsInternal;->setRebootEscrowListener(Lcom/android/internal/widget/RebootEscrowListener;)V
 
@@ -1478,7 +1342,6 @@
 
     const-string v1, "--wipe_data"
 
-    .line 530
     invoke-virtual {p1, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1492,13 +1355,11 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 531
     :goto_0
     sget-object v2, Lcom/android/server/recoverysystem/RecoverySystemService;->sRequestLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 532
     :try_start_0
     invoke-virtual {p0, v0, p1}, Lcom/android/server/recoverysystem/RecoverySystemService;->setupOrClearBcb(ZLjava/lang/String;)Z
 
@@ -1506,7 +1367,6 @@
 
     if-nez v0, :cond_1
 
-    .line 533
     monitor-exit v2
 
     return-void
@@ -1514,10 +1374,8 @@
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 537
     invoke-static {}, Lcom/android/server/recoverysystem/RecoverySystemService;->deleteSecrets()V
 
-    .line 541
     :cond_2
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -1529,12 +1387,10 @@
 
     const-string v1, "!@[RecoverySystemService] rebootRecoveryWithCommand: [reset tracking] write to recovery_cause"
 
-    .line 543
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 544
     :try_start_1
     new-instance v0, Ljava/io/FileWriter;
 
@@ -1545,7 +1401,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 545
     :try_start_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1565,7 +1420,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 546
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
     :try_end_3
@@ -1577,7 +1431,6 @@
     :catchall_0
     move-exception p1
 
-    .line 544
     :try_start_4
     invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
     :try_end_4
@@ -1605,16 +1458,13 @@
 
     const-string v1, "IOException when writing /sys/class/sec/sec_debug/recovery_cause:"
 
-    .line 547
     invoke-static {v0, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
     const-string/jumbo p1, "recovery"
 
-    .line 550
     invoke-virtual {p0, p1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
 
-    .line 551
     monitor-exit v2
 
     return-void
@@ -1632,10 +1482,8 @@
 .method public rebootWithLskf(Ljava/lang/String;Ljava/lang/String;Z)I
     .locals 0
 
-    .line 946
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->enforcePermissionForResumeOnReboot()V
 
-    .line 947
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/recoverysystem/RecoverySystemService;->rebootWithLskfImpl(Ljava/lang/String;Ljava/lang/String;Z)I
 
     move-result p0
@@ -1646,7 +1494,6 @@
 .method public rebootWithLskfAssumeSlotSwitch(Ljava/lang/String;Ljava/lang/String;)I
     .locals 3
 
-    .line 939
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.RECOVERY"
@@ -1657,7 +1504,6 @@
 
     const/4 v0, 0x1
 
-    .line 940
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/recoverysystem/RecoverySystemService;->rebootWithLskfImpl(Ljava/lang/String;Ljava/lang/String;Z)I
 
     move-result p0
@@ -1668,25 +1514,20 @@
 .method public final rebootWithLskfImpl(Ljava/lang/String;Ljava/lang/String;Z)I
     .locals 1
 
-    .line 919
     invoke-virtual {p0, p1, p3}, Lcom/android/server/recoverysystem/RecoverySystemService;->armRebootEscrow(Ljava/lang/String;Z)Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;
 
     move-result-object v0
 
-    .line 920
     invoke-virtual {p0, p1, p3, v0}, Lcom/android/server/recoverysystem/RecoverySystemService;->reportMetricsOnRebootWithLskf(Ljava/lang/String;ZLcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;)V
 
-    .line 921
     invoke-virtual {p0, v0}, Lcom/android/server/recoverysystem/RecoverySystemService;->clearRoRPreparationStateOnRebootFailure(Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;)V
 
-    .line 923
     iget p1, v0, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;->mRebootErrorCode:I
 
     if-eqz p1, :cond_0
 
     return p1
 
-    .line 929
     :cond_0
     iget-object p1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -1696,14 +1537,12 @@
 
     invoke-virtual {p1}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->deletePrefsFile()V
 
-    .line 931
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getPowerManager()Landroid/os/PowerManager;
 
     move-result-object p0
 
-    .line 932
     invoke-virtual {p0, p2}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
 
     const/16 p0, 0x3e8
@@ -1714,17 +1553,14 @@
 .method public final reportMetricsOnPreparedForReboot()V
     .locals 12
 
-    .line 655
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getCurrentTimeMillis()J
 
     move-result-wide v0
 
-    .line 658
     monitor-enter p0
 
-    .line 659
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
@@ -1732,12 +1568,10 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 660
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 663
     iget-object v3, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v3}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getMetricsPrefs()Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;
@@ -1746,17 +1580,14 @@
 
     const-string v4, "lskf_captured_timestamp"
 
-    .line 664
     invoke-virtual {v3, v4, v0, v1}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->putLong(Ljava/lang/String;J)V
 
     const-string v4, "lskf_captured_count"
 
     const/4 v5, 0x0
 
-    .line 665
     invoke-virtual {v3, v4, v5}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->incrementIntKey(Ljava/lang/String;I)V
 
-    .line 667
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -1774,14 +1605,12 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 668
     iget-object v6, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v6, v5}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getUidFromPackageName(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 671
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1814,7 +1643,6 @@
 
     long-to-int v7, v7
 
-    .line 674
     div-int/lit16 v7, v7, 0x3e8
 
     goto :goto_1
@@ -1827,7 +1655,6 @@
 
     const-string v9, "Reporting lskf captured, lskf capture takes %d seconds for package %s"
 
-    .line 677
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -1836,14 +1663,12 @@
 
     move-result-object v5
 
-    .line 676
     invoke-static {v9, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-static {v8, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 678
     iget-object v5, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -1860,7 +1685,6 @@
     :catchall_0
     move-exception v0
 
-    .line 660
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -1872,22 +1696,18 @@
 .method public final reportMetricsOnRebootWithLskf(Ljava/lang/String;ZLcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;)V
     .locals 12
 
-    .line 875
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v0, p1}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getUidFromPackageName(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 876
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->useServerBasedRoR()Z
 
     move-result v7
 
-    .line 878
     monitor-enter p0
 
-    .line 879
     :try_start_0
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
@@ -1895,19 +1715,16 @@
 
     move-result v4
 
-    .line 880
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 882
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getCurrentTimeMillis()J
 
     move-result-wide v0
 
-    .line 884
     iget-object v2, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v2}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getMetricsPrefs()Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;
@@ -1918,7 +1735,6 @@
 
     const-wide/16 v8, -0x1
 
-    .line 885
     invoke-virtual {v2, v5, v8, v9}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -1937,7 +1753,6 @@
 
     long-to-int v0, v0
 
-    .line 887
     div-int/lit16 v0, v0, 0x3e8
 
     move v8, v0
@@ -1947,7 +1762,6 @@
     :cond_0
     move v8, v9
 
-    .line 890
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1969,7 +1783,6 @@
 
     const-string v0, "lskf_captured_count"
 
-    .line 891
     invoke-virtual {v2, v0, v9}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->getInt(Ljava/lang/String;I)I
 
     move-result v9
@@ -1978,7 +1791,6 @@
 
     const-string v1, "Reporting reboot with lskf, package name %s, client count %d, request count %d, lskf captured count %d, duration since lskf captured %d seconds."
 
-    .line 895
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1987,7 +1799,6 @@
 
     move-result-object v6
 
-    .line 896
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -2000,14 +1811,12 @@
 
     move-result-object p1
 
-    .line 893
     invoke-static {v1, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 897
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {p3}, Lcom/android/server/recoverysystem/RecoverySystemService$RebootPreparationError;->getErrorCodeForMetrics()I
@@ -2023,7 +1832,6 @@
     :catchall_0
     move-exception p1
 
-    .line 880
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -2035,17 +1843,14 @@
 .method public final reportMetricsOnRequestLskf(Ljava/lang/String;I)V
     .locals 6
 
-    .line 574
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v0, p1}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getUidFromPackageName(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 576
     monitor-enter p0
 
-    .line 577
     :try_start_0
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
@@ -2053,19 +1858,16 @@
 
     move-result v1
 
-    .line 578
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 581
     iget-object v2, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {v2}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getMetricsPrefs()Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;
 
     move-result-object v2
 
-    .line 582
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2082,15 +1884,12 @@
 
     iget-object v4, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
-    .line 583
     invoke-virtual {v4}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getCurrentTimeMillis()J
 
     move-result-wide v4
 
-    .line 582
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->putLong(Ljava/lang/String;J)V
 
-    .line 584
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2109,7 +1908,6 @@
 
     invoke-virtual {v2, p1, v3}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;->incrementIntKey(Ljava/lang/String;I)V
 
-    .line 586
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {p0, v0, p2, v1}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->reportRebootEscrowPreparationMetrics(III)V
@@ -2119,7 +1917,6 @@
     :catchall_0
     move-exception p1
 
-    .line 578
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -2131,7 +1928,6 @@
 .method public requestLskf(Ljava/lang/String;Landroid/content/IntentSender;)Z
     .locals 4
 
-    .line 591
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->enforcePermissionForResumeOnReboot()V
 
     const-string v0, "RecoverySystemService"
@@ -2142,18 +1938,15 @@
 
     const-string p0, "Missing packageName when requesting lskf."
 
-    .line 594
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 598
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/recoverysystem/RecoverySystemService;->updateRoRPreparationStateOnNewRequest(Ljava/lang/String;Landroid/content/IntentSender;)I
 
     move-result v2
 
-    .line 600
     invoke-virtual {p0, p1, v2}, Lcom/android/server/recoverysystem/RecoverySystemService;->reportMetricsOnRequestLskf(Ljava/lang/String;I)V
 
     const/4 p1, 0x1
@@ -2168,7 +1961,6 @@
 
     return p1
 
-    .line 628
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2190,19 +1982,16 @@
 
     throw p0
 
-    .line 605
     :cond_2
     invoke-virtual {p0, p2}, Lcom/android/server/recoverysystem/RecoverySystemService;->sendPreparedForRebootIntentIfNeeded(Landroid/content/IntentSender;)V
 
     return p1
 
-    .line 610
     :cond_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 612
     :try_start_0
     iget-object p2, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -2214,17 +2003,14 @@
 
     const-string p0, "Failed to get lock settings service, skipping prepareRebootEscrow"
 
-    .line 614
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 625
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v1
 
-    .line 619
     :cond_4
     :try_start_1
     invoke-virtual {p2}, Lcom/android/internal/widget/LockSettingsInternal;->prepareRebootEscrow()Z
@@ -2233,12 +2019,10 @@
 
     if-nez p2, :cond_5
 
-    .line 620
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->clearRoRPreparationState()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 625
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v1
@@ -2253,7 +2037,6 @@
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 626
     throw p0
 .end method
 
@@ -2274,7 +2057,6 @@
 
     move-object v0, p1
 
-    .line 712
     :try_start_0
     invoke-virtual/range {v0 .. v5}, Landroid/content/IntentSender;->sendIntent(Landroid/content/Context;ILandroid/content/Intent;Landroid/content/IntentSender$OnFinished;Landroid/os/Handler;)V
     :try_end_0
@@ -2285,7 +2067,6 @@
     :catch_0
     move-exception p0
 
-    .line 714
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2316,14 +2097,12 @@
 .method public setupBcb(Ljava/lang/String;)Z
     .locals 2
 
-    .line 521
     sget-object v0, Lcom/android/server/recoverysystem/RecoverySystemService;->sRequestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
-    .line 522
     :try_start_0
     invoke-virtual {p0, v1, p1}, Lcom/android/server/recoverysystem/RecoverySystemService;->setupOrClearBcb(ZLjava/lang/String;)Z
 
@@ -2336,7 +2115,6 @@
     :catchall_0
     move-exception p0
 
-    .line 523
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2347,7 +2125,6 @@
 .method public final setupOrClearBcb(ZLjava/lang/String;)Z
     .locals 5
 
-    .line 1081
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.RECOVERY"
@@ -2356,7 +2133,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1083
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->checkAndWaitForUncryptService()Z
 
     move-result v0
@@ -2369,7 +2145,6 @@
 
     const-string/jumbo p0, "uncrypt service is unavailable."
 
-    .line 1085
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -2379,7 +2154,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1090
     iget-object v3, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     const-string/jumbo v4, "setup-bcb"
@@ -2388,7 +2162,6 @@
 
     goto :goto_0
 
-    .line 1092
     :cond_1
     iget-object v3, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -2396,7 +2169,6 @@
 
     invoke-virtual {v3, v0, v4}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->systemPropertiesSet(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1096
     :goto_0
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -2408,7 +2180,6 @@
 
     const-string p0, "Failed to connect to uncrypt socket"
 
-    .line 1098
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -2416,24 +2187,20 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 1105
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->sendCommand(Ljava/lang/String;)V
 
-    .line 1109
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->getPercentageUncrypted()I
 
     move-result p2
 
-    .line 1113
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->sendAck()V
 
     const/16 v0, 0x64
 
     if-ne p2, v0, :cond_5
 
-    .line 1116
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2467,14 +2234,12 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1127
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 1120
     :cond_5
     :try_start_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -2496,7 +2261,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1127
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
     return v1
@@ -2512,12 +2276,10 @@
     :try_start_2
     const-string p2, "IOException when communicating with uncrypt:"
 
-    .line 1124
     invoke-static {v2, p2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1127
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
     return v1
@@ -2525,19 +2287,16 @@
     :goto_2
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
-    .line 1128
     throw p1
 .end method
 
 .method public uncrypt(Ljava/lang/String;Landroid/os/IRecoverySystemProgressListener;)Z
     .locals 7
 
-    .line 430
     sget-object v0, Lcom/android/server/recoverysystem/RecoverySystemService;->sRequestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 431
     :try_start_0
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mContext:Landroid/content/Context;
 
@@ -2547,7 +2306,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 433
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->checkAndWaitForUncryptService()Z
 
     move-result v1
@@ -2560,15 +2318,12 @@
 
     const-string/jumbo p1, "uncrypt service is unavailable."
 
-    .line 434
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
     monitor-exit v0
 
     return v2
 
-    .line 440
     :cond_0
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -2576,7 +2331,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    .line 442
     :try_start_1
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -2587,7 +2341,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 443
     :try_start_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2607,14 +2360,12 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 444
     :try_start_3
     invoke-virtual {v1}, Ljava/io/FileWriter;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 451
     :try_start_4
     iget-object p1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -2624,7 +2375,6 @@
 
     invoke-virtual {p1, v1, v3}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->systemPropertiesSet(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 454
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->connectService()Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;
@@ -2637,10 +2387,8 @@
 
     const-string p1, "Failed to connect to uncrypt socket"
 
-    .line 456
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 457
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
@@ -2652,7 +2400,6 @@
 
     move v1, p1
 
-    .line 464
     :goto_0
     :try_start_5
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->getPercentageUncrypted()I
@@ -2674,7 +2421,6 @@
 
     const-string v4, "RecoverySystemService"
 
-    .line 473
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2696,7 +2442,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 476
     :try_start_6
     invoke-interface {p2, v3}, Landroid/os/IRecoverySystemProgressListener;->onProgress(I)V
     :try_end_6
@@ -2712,7 +2457,6 @@
 
     const-string v5, "RemoteException when posting progress"
 
-    .line 478
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -2723,20 +2467,16 @@
 
     const-string/jumbo p2, "uncrypt successfully finished."
 
-    .line 482
     invoke-static {p1, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 486
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->sendAck()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 503
     :try_start_8
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
-    .line 506
     monitor-exit v0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_3
@@ -2754,7 +2494,6 @@
     :try_start_9
     const-string p1, "RecoverySystemService"
 
-    .line 491
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2771,13 +2510,11 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 495
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->sendAck()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 503
     :try_start_a
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
@@ -2800,12 +2537,10 @@
 
     const-string v1, "IOException when reading status: "
 
-    .line 500
     invoke-static {p2, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 503
     :try_start_c
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
@@ -2816,7 +2551,6 @@
     :goto_2
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
-    .line 504
     throw p1
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_3
@@ -2826,7 +2560,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 442
     :try_start_d
     invoke-virtual {v1}, Ljava/io/FileWriter;->close()V
     :try_end_d
@@ -2853,7 +2586,6 @@
     :try_start_f
     const-string p2, "RecoverySystemService"
 
-    .line 445
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2864,7 +2596,6 @@
 
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
-    .line 446
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->getUncryptPackageFileName()Ljava/lang/String;
 
     move-result-object p0
@@ -2879,10 +2610,8 @@
 
     move-result-object p0
 
-    .line 445
     invoke-static {p2, p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 447
     monitor-exit v0
 
     return v2
@@ -2890,7 +2619,6 @@
     :catchall_3
     move-exception p0
 
-    .line 507
     monitor-exit v0
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_3
@@ -2903,7 +2631,6 @@
 
     monitor-enter p0
 
-    .line 756
     :try_start_0
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
@@ -2925,7 +2652,6 @@
 
     const-string v0, "RecoverySystemService"
 
-    .line 758
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2944,24 +2670,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 759
     monitor-exit p0
 
     return v1
 
-    .line 761
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 762
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 765
     iget-object p1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
     invoke-virtual {p1}, Landroid/util/ArrayMap;->isEmpty()Z
@@ -2992,7 +2714,6 @@
     :cond_2
     const/4 v0, 0x2
 
-    .line 766
     :goto_0
     monitor-exit p0
 
@@ -3011,7 +2732,6 @@
 
     monitor-enter p0
 
-    .line 635
     :try_start_0
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
@@ -3021,7 +2741,6 @@
 
     if-nez v0, :cond_1
 
-    .line 636
     iget-object p2, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
     invoke-virtual {p2, p1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -3032,7 +2751,6 @@
 
     const-string p2, "RecoverySystemService"
 
-    .line 637
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3049,7 +2767,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     :cond_0
     iget-object p2, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
@@ -3057,14 +2774,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 642
     monitor-exit p0
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 645
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
@@ -3073,7 +2788,6 @@
 
     move-result v0
 
-    .line 646
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -3084,7 +2798,6 @@
 
     const-string v1, "RecoverySystemService"
 
-    .line 647
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3101,7 +2814,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 650
     :cond_2
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
@@ -3118,7 +2830,6 @@
     :cond_3
     const/4 p1, 0x2
 
-    .line 651
     :goto_0
     monitor-exit p0
 
@@ -3137,7 +2848,6 @@
 
     monitor-enter p0
 
-    .line 693
     :try_start_0
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
@@ -3151,10 +2861,8 @@
 
     const-string/jumbo v1, "onPreparedForReboot called when some clients have prepared."
 
-    .line 694
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 697
     :cond_0
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
@@ -3168,13 +2876,11 @@
 
     const-string/jumbo v1, "onPreparedForReboot called but no client has requested."
 
-    .line 698
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     const/4 v0, 0x0
 
-    .line 702
     :goto_0
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
@@ -3184,7 +2890,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 703
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -3195,7 +2900,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/recoverysystem/RecoverySystemService;->sendPreparedForRebootIntentIfNeeded(Landroid/content/IntentSender;)V
 
-    .line 704
     iget-object v1, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPreparedForReboot:Landroid/util/ArraySet;
 
     iget-object v2, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
@@ -3212,7 +2916,6 @@
 
     goto :goto_0
 
-    .line 706
     :cond_2
     iget-object v0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mCallerPendingRequest:Landroid/util/ArrayMap;
 
@@ -3220,7 +2923,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 707
     monitor-exit p0
 
     return-void
@@ -3236,7 +2938,6 @@
 .method public final useServerBasedRoR()Z
     .locals 4
 
-    .line 864
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
@@ -3248,14 +2949,12 @@
 
     const/4 v3, 0x0
 
-    .line 866
     invoke-static {p0, v2, v3}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 869
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p0
@@ -3265,14 +2964,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 870
     throw p0
 .end method
 
 .method public final verifySlotForNextBoot(Z)Z
     .locals 4
 
-    .line 774
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService;->isAbDevice()Z
 
     move-result v0
@@ -3285,7 +2982,6 @@
 
     const-string p0, "Device isn\'t a/b, skipping slot verification."
 
-    .line 775
     invoke-static {v2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -3293,7 +2989,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 781
     :try_start_0
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService;->mInjector:Lcom/android/server/recoverysystem/RecoverySystemService$Injector;
 
@@ -3307,12 +3002,10 @@
 
     const-string p0, "Cannot get the boot control HAL, skipping slot verification."
 
-    .line 789
     invoke-static {v2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 796
     :cond_1
     :try_start_1
     invoke-interface {p0}, Landroid/hardware/boot/IBootControl;->getCurrentSlot()I
@@ -3325,7 +3018,6 @@
 
     goto :goto_0
 
-    .line 798
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -3347,7 +3039,6 @@
 
     throw p0
 
-    .line 801
     :cond_3
     :goto_0
     invoke-interface {p0}, Landroid/hardware/boot/IBootControl;->getActiveBootSlot()I
@@ -3371,7 +3062,6 @@
     :goto_1
     if-eq p0, v3, :cond_6
 
-    .line 812
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3404,7 +3094,6 @@
 
     const-string p1, "Failed to query the active slots"
 
-    .line 803
     invoke-static {v2, p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -3412,7 +3101,6 @@
     :catch_1
     move-exception p0
 
-    .line 783
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

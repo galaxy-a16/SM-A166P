@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl;I)V
     .locals 0
 
-    .line 122
     iput-object p1, p0, Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl$BroadcastRadioDeathRecipient;->this$0:Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     iput p2, p0, Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl$BroadcastRadioDeathRecipient;->mModuleId:I
 
     return-void
@@ -36,7 +34,6 @@
 
     const-string v1, "ServiceDied for module id %d"
 
-    .line 128
     iget v2, p0, Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl$BroadcastRadioDeathRecipient;->mModuleId:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -49,7 +46,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/utils/Slogf;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl$BroadcastRadioDeathRecipient;->this$0:Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl;->-$$Nest$fgetmLock(Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl;)Ljava/lang/Object;
@@ -58,7 +54,6 @@
 
     monitor-enter v0
 
-    .line 130
     :try_start_0
     iget-object v1, p0, Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl$BroadcastRadioDeathRecipient;->this$0:Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl;
 
@@ -78,10 +73,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 132
     invoke-virtual {v1, v2}, Lcom/android/server/broadcastradio/aidl/RadioModule;->closeSessions(I)V
 
-    .line 135
     :cond_0
     iget-object v1, p0, Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl$BroadcastRadioDeathRecipient;->this$0:Lcom/android/server/broadcastradio/aidl/BroadcastRadioServiceImpl;
 
@@ -110,7 +103,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 136
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -133,7 +125,6 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 138
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -150,15 +141,12 @@
 
     aput-object p0, v5, v2
 
-    .line 137
     invoke-static {v1, v4, v5}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 139
     monitor-exit v0
 
     return-void
 
-    .line 142
     :cond_2
     monitor-exit v0
 

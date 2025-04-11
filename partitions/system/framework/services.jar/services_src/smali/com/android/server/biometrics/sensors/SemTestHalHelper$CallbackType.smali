@@ -25,7 +25,6 @@
 .method public static synthetic $values()[Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
     .locals 7
 
-    .line 45
     sget-object v0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;->ACQUIRED:Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     sget-object v1, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;->ERROR:Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
@@ -50,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 46
     new-instance v0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     const-string v1, "ACQUIRED"
@@ -121,7 +119,6 @@
 
     sput-object v0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;->TSP_FOD:Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
-    .line 45
     invoke-static {}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;->$values()[Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     move-result-object v0
@@ -134,7 +131,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 45
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -143,7 +139,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
     .locals 1
 
-    .line 45
     const-class v0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,7 +153,6 @@
 .method public static values()[Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
     .locals 1
 
-    .line 45
     sget-object v0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;->$VALUES:[Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     invoke-virtual {v0}, [Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;->clone()Ljava/lang/Object;

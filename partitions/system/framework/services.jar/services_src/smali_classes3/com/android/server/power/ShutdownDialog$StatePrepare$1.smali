@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/ShutdownDialog$StatePrepare;)V
     .locals 0
 
-    .line 397
     iput-object p1, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare$1;->this$1:Lcom/android/server/power/ShutdownDialog$StatePrepare;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -26,7 +25,6 @@
 
     const-wide/16 v0, 0x1f4
 
-    .line 401
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -41,13 +39,11 @@
 
     const-string v1, "InterruptedException"
 
-    .line 403
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     const-string p0, "g_shutdown_suspend=suspend"
 
-    .line 405
     invoke-static {p0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
     return-void

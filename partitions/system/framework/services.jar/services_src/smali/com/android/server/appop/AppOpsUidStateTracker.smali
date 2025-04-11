@@ -7,7 +7,6 @@
 .method public static processStateToUidState(I)I
     .locals 3
 
-    .line 0
     const/4 v0, -0x1
 
     const/16 v1, 0x2bc

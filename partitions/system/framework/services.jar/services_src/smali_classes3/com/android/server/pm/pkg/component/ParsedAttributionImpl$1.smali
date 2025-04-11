@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/android/server/pm/pkg/component/ParsedAttributionImpl;
     .locals 0
 
-    .line 204
     new-instance p0, Lcom/android/server/pm/pkg/component/ParsedAttributionImpl;
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedAttributionImpl;-><init>(Landroid/os/Parcel;)V
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 196
     invoke-virtual {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedAttributionImpl$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/server/pm/pkg/component/ParsedAttributionImpl;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Lcom/android/server/pm/pkg/component/ParsedAttributionImpl;
     .locals 0
 
-    .line 199
     new-array p0, p1, [Lcom/android/server/pm/pkg/component/ParsedAttributionImpl;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 196
     invoke-virtual {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedAttributionImpl$1;->newArray(I)[Lcom/android/server/pm/pkg/component/ParsedAttributionImpl;
 
     move-result-object p0

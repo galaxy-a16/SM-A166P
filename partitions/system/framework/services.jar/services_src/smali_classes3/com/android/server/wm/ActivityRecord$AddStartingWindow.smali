@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 3099
     iput-object p1, p0, Lcom/android/server/wm/ActivityRecord$AddStartingWindow;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord$AddStartingWindow-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/ActivityRecord$AddStartingWindow;-><init>(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public run()V
     .locals 8
 
-    .line 3105
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord$AddStartingWindow;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
@@ -47,7 +44,6 @@
 
     monitor-enter v0
 
-    .line 3108
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/ActivityRecord$AddStartingWindow;->this$0:Lcom/android/server/wm/ActivityRecord;
 
@@ -57,7 +53,6 @@
 
     if-nez v2, :cond_1
 
-    .line 3110
     sget-boolean p0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_STARTING_WINDOW_enabled:Z
 
     if-eqz p0, :cond_0
@@ -78,7 +73,6 @@
 
     invoke-static {v1, v4, v3, v2, p0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3113
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -88,7 +82,6 @@
 
     return-void
 
-    .line 3116
     :cond_1
     :try_start_1
     monitor-exit v0
@@ -99,7 +92,6 @@
 
     const-string v0, "ActivityTaskManager"
 
-    .line 3120
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +126,6 @@
 
     const/4 v0, 0x0
 
-    .line 3130
     :try_start_2
     iget-object v1, p0, Lcom/android/server/wm/ActivityRecord$AddStartingWindow;->this$0:Lcom/android/server/wm/ActivityRecord;
 
@@ -153,7 +144,6 @@
 
     const-string v4, "Exception when adding starting window"
 
-    .line 3132
     invoke-static {v2, v4, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-object v1, v0
@@ -161,7 +151,6 @@
     :goto_0
     if-eqz v1, :cond_5
 
-    .line 3136
     iget-object v2, p0, Lcom/android/server/wm/ActivityRecord$AddStartingWindow;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
@@ -172,7 +161,6 @@
 
     monitor-enter v2
 
-    .line 3138
     :try_start_3
     iget-object v4, p0, Lcom/android/server/wm/ActivityRecord$AddStartingWindow;->this$0:Lcom/android/server/wm/ActivityRecord;
 
@@ -180,7 +168,6 @@
 
     if-nez v5, :cond_3
 
-    .line 3139
     sget-boolean v5, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_STARTING_WINDOW_enabled:Z
 
     if-eqz v5, :cond_2
@@ -209,20 +196,17 @@
 
     invoke-static {v6, v5, v3, v7, v4}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3142
     :cond_2
     iget-object v4, p0, Lcom/android/server/wm/ActivityRecord$AddStartingWindow;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     iput-object v0, v4, Lcom/android/server/wm/ActivityRecord;->mStartingWindow:Lcom/android/server/wm/WindowState;
 
-    .line 3143
     iput-object v0, v4, Lcom/android/server/wm/ActivityRecord;->mStartingData:Lcom/android/server/wm/StartingData;
 
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 3146
     :cond_3
     iput-object v1, v4, Lcom/android/server/wm/ActivityRecord;->mStartingSurface:Lcom/android/server/wm/StartingSurfaceController$StartingSurface;
 
@@ -231,7 +215,6 @@
     :goto_1
     if-nez v0, :cond_4
 
-    .line 3149
     sget-boolean v4, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_STARTING_WINDOW_enabled:Z
 
     if-eqz v4, :cond_4
@@ -270,7 +253,6 @@
 
     invoke-static {v6, v4, v3, v7, p0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3153
     :cond_4
     monitor-exit v2
     :try_end_3
@@ -280,7 +262,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 3155
     invoke-virtual {v1, v3}, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;->remove(Z)V
 
     goto :goto_2
@@ -288,7 +269,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3153
     :try_start_4
     monitor-exit v2
     :try_end_4
@@ -298,7 +278,6 @@
 
     throw p0
 
-    .line 3158
     :cond_5
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_STARTING_WINDOW_enabled:Z
 
@@ -329,7 +308,6 @@
     :catchall_1
     move-exception p0
 
-    .line 3116
     :try_start_5
     monitor-exit v0
     :try_end_5

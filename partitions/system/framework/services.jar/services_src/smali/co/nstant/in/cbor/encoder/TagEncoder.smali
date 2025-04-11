@@ -7,7 +7,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 13
     invoke-direct {p0, p1, p2}, Lco/nstant/in/cbor/encoder/AbstractEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public encode(Lco/nstant/in/cbor/model/Tag;)V
     .locals 3
 
-    .line 18
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->TAG:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Tag;->getValue()J

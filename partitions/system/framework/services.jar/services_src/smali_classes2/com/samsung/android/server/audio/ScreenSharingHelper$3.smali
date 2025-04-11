@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/ScreenSharingHelper;)V
     .locals 0
 
-    .line 374
     iput-object p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper$3;->this$0:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     return-void
 
-    .line 379
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -50,22 +48,18 @@
 
     const-string p1, "Enable presentation mode"
 
-    .line 380
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 381
     iget-object p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper$3;->this$0:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
     invoke-static {p1, v1}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->-$$Nest$fputmIsPresentationMode(Lcom/samsung/android/server/audio/ScreenSharingHelper;Z)V
 
-    .line 382
     iget-object p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper$3;->this$0:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
     invoke-static {p0, v0}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->-$$Nest$msetMirroringPolicyParameter(Lcom/samsung/android/server/audio/ScreenSharingHelper;Z)V
 
     goto :goto_0
 
-    .line 383
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -81,15 +75,12 @@
 
     const-string p1, "Disable presentation mode"
 
-    .line 384
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     iget-object p1, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper$3;->this$0:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
     invoke-static {p1, v0}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->-$$Nest$fputmIsPresentationMode(Lcom/samsung/android/server/audio/ScreenSharingHelper;Z)V
 
-    .line 386
     iget-object p0, p0, Lcom/samsung/android/server/audio/ScreenSharingHelper$3;->this$0:Lcom/samsung/android/server/audio/ScreenSharingHelper;
 
     invoke-static {p0, v1}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->-$$Nest$msetMirroringPolicyParameter(Lcom/samsung/android/server/audio/ScreenSharingHelper;Z)V

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;)V
     .locals 0
 
-    .line 12629
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$22;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$22;->val$r:Lcom/android/server/notification/NotificationRecord;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 1
 
-    .line 12632
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$22;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmGroupHelper(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/GroupHelper;

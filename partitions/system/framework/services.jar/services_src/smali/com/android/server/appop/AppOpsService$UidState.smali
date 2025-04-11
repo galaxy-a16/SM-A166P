@@ -19,19 +19,16 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;I)V
     .locals 0
 
-    .line 522
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 514
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$UidState;->pkgOps:Landroid/util/ArrayMap;
 
-    .line 523
     iput p2, p0, Lcom/android/server/appop/AppOpsService$UidState;->uid:I
 
     return-void
@@ -42,7 +39,6 @@
 .method public clear()V
     .locals 4
 
-    .line 527
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/appop/AppOpsService;->mAppOpsCheckingService:Lcom/android/server/appop/AppOpsCheckingServiceInterface;
@@ -53,7 +49,6 @@
 
     const/4 v0, 0x0
 
-    .line 528
     :goto_0
     iget-object v1, p0, Lcom/android/server/appop/AppOpsService$UidState;->pkgOps:Landroid/util/ArrayMap;
 
@@ -63,7 +58,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 529
     iget-object v1, p0, Lcom/android/server/appop/AppOpsService$UidState;->pkgOps:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -72,7 +66,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 530
     iget-object v2, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v2, v2, Lcom/android/server/appop/AppOpsService;->mAppOpsCheckingService:Lcom/android/server/appop/AppOpsCheckingServiceInterface;
@@ -96,7 +89,6 @@
 .method public dump(Ljava/io/PrintWriter;J)V
     .locals 1
 
-    .line 578
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-virtual {v0}, Lcom/android/server/appop/AppOpsService;->getUidStateTracker()Lcom/android/server/appop/AppOpsUidStateTracker;
@@ -115,10 +107,8 @@
 
     const/4 v0, 0x0
 
-    .line 553
     iput-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->foregroundOps:Landroid/util/SparseBooleanArray;
 
-    .line 554
     iget-object v1, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v1, v1, Lcom/android/server/appop/AppOpsService;->mAppOpsCheckingService:Lcom/android/server/appop/AppOpsCheckingServiceInterface;
@@ -131,7 +121,6 @@
 
     iput-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->foregroundOps:Landroid/util/SparseBooleanArray;
 
-    .line 555
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->pkgOps:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -145,14 +134,12 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 556
     iget-object v2, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v2, v2, Lcom/android/server/appop/AppOpsService;->mAppOpsCheckingService:Lcom/android/server/appop/AppOpsCheckingServiceInterface;
 
     iget-object v3, p0, Lcom/android/server/appop/AppOpsService$UidState;->pkgOps:Landroid/util/ArrayMap;
 
-    .line 557
     invoke-virtual {v3, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -165,12 +152,10 @@
 
     iget v5, p0, Lcom/android/server/appop/AppOpsService$UidState;->uid:I
 
-    .line 558
     invoke-static {v5}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
-    .line 557
     invoke-interface {v2, v3, v4, v5}, Lcom/android/server/appop/AppOpsCheckingServiceInterface;->evalForegroundPackageOps(Ljava/lang/String;Landroid/util/SparseBooleanArray;I)Landroid/util/SparseBooleanArray;
 
     move-result-object v2
@@ -184,15 +169,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 560
     iput-boolean v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->hasForegroundWatchers:Z
 
-    .line 561
     iget-object v2, p0, Lcom/android/server/appop/AppOpsService$UidState;->foregroundOps:Landroid/util/SparseBooleanArray;
 
     if-eqz v2, :cond_2
 
-    .line 562
     :goto_1
     iget-object v2, p0, Lcom/android/server/appop/AppOpsService$UidState;->foregroundOps:Landroid/util/SparseBooleanArray;
 
@@ -202,7 +184,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 563
     iget-object v2, p0, Lcom/android/server/appop/AppOpsService$UidState;->foregroundOps:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseBooleanArray;->valueAt(I)Z
@@ -211,7 +192,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 564
     iput-boolean v1, p0, Lcom/android/server/appop/AppOpsService$UidState;->hasForegroundWatchers:Z
 
     goto :goto_2
@@ -229,7 +209,6 @@
 .method public evalMode(II)I
     .locals 1
 
-    .line 549
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-virtual {v0}, Lcom/android/server/appop/AppOpsService;->getUidStateTracker()Lcom/android/server/appop/AppOpsUidStateTracker;
@@ -248,7 +227,6 @@
 .method public getNonDefaultUidModes()Landroid/util/SparseIntArray;
     .locals 1
 
-    .line 536
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/appop/AppOpsService;->mAppOpsCheckingService:Lcom/android/server/appop/AppOpsCheckingServiceInterface;
@@ -265,7 +243,6 @@
 .method public getState()I
     .locals 1
 
-    .line 573
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-virtual {v0}, Lcom/android/server/appop/AppOpsService;->getUidStateTracker()Lcom/android/server/appop/AppOpsUidStateTracker;
@@ -284,7 +261,6 @@
 .method public getUidMode(I)I
     .locals 1
 
-    .line 540
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/appop/AppOpsService;->mAppOpsCheckingService:Lcom/android/server/appop/AppOpsCheckingServiceInterface;
@@ -301,7 +277,6 @@
 .method public setUidMode(II)Z
     .locals 1
 
-    .line 544
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$UidState;->this$0:Lcom/android/server/appop/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/appop/AppOpsService;->mAppOpsCheckingService:Lcom/android/server/appop/AppOpsCheckingServiceInterface;

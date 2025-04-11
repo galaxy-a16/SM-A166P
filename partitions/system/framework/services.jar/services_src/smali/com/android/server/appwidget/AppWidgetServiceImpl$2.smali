@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/appwidget/AppWidgetServiceImpl;)V
     .locals 0
 
-    .line 566
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$2;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-direct {p0}, Landroid/os/ContainerStateReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "AppWidgetServiceImpl"
 
-    .line 569
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,7 +41,6 @@
 
     invoke-static {p1, p3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     iget-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$2;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$fgetmLock(Lcom/android/server/appwidget/AppWidgetServiceImpl;)Ljava/lang/Object;
@@ -52,13 +49,11 @@
 
     monitor-enter p1
 
-    .line 571
     :try_start_0
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$2;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {p0, p2}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$mreloadWidgetsMaskedState(Lcom/android/server/appwidget/AppWidgetServiceImpl;I)V
 
-    .line 572
     monitor-exit p1
 
     return-void
@@ -78,7 +73,6 @@
 
     const-string p1, "AppWidgetServiceImpl"
 
-    .line 577
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,7 +89,6 @@
 
     invoke-static {p1, p3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     iget-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$2;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$fgetmLock(Lcom/android/server/appwidget/AppWidgetServiceImpl;)Ljava/lang/Object;
@@ -104,13 +97,11 @@
 
     monitor-enter p1
 
-    .line 579
     :try_start_0
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$2;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {p0, p2}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$mreloadWidgetsMaskedState(Lcom/android/server/appwidget/AppWidgetServiceImpl;I)V
 
-    .line 580
     monitor-exit p1
 
     return-void

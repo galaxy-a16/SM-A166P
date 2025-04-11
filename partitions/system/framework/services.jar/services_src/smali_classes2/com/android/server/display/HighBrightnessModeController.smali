@@ -93,7 +93,6 @@
 .method public static synthetic $r8$lambda$VEPvdVZIjRMBwvjPGz4sag4_VjA(Lcom/android/server/display/HighBrightnessModeController;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/HighBrightnessModeController;->lambda$new$0(Ljava/lang/String;)V
 
     return-void
@@ -102,7 +101,6 @@
 .method public static synthetic $r8$lambda$hxclw1NhWLN5FQ3C8IficPi9SSA(Lcom/android/server/display/HighBrightnessModeController;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->recalculateTimeAllowance()V
 
     return-void
@@ -111,7 +109,6 @@
 .method public static synthetic $r8$lambda$wujjNfr3pyxgCjw0svSnZxVH_Bs(Lcom/android/server/display/HighBrightnessModeController;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/HighBrightnessModeController;->lambda$dump$1(Ljava/io/PrintWriter;)V
 
     return-void
@@ -120,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBrightness(Lcom/android/server/display/HighBrightnessModeController;)F
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
     return p0
@@ -129,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/display/HighBrightnessModeController;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -138,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/display/HighBrightnessModeController;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -147,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHdrBrightnessCfg(Lcom/android/server/display/HighBrightnessModeController;)Lcom/android/server/display/HighBrightnessModeController$HdrBrightnessDeviceConfig;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHdrBrightnessCfg:Lcom/android/server/display/HighBrightnessModeController$HdrBrightnessDeviceConfig;
 
     return-object p0
@@ -156,7 +149,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHeight(Lcom/android/server/display/HighBrightnessModeController;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHeight:I
 
     return p0
@@ -165,7 +157,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsBlockedByLowPowerMode(Lcom/android/server/display/HighBrightnessModeController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsBlockedByLowPowerMode:Z
 
     return p0
@@ -174,7 +165,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsHdrLayerPresent(Lcom/android/server/display/HighBrightnessModeController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsHdrLayerPresent:Z
 
     return p0
@@ -183,7 +173,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLogLevel(Lcom/android/server/display/HighBrightnessModeController;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mLogLevel:I
 
     return p0
@@ -192,7 +181,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSDRDimming(Lcom/android/server/display/HighBrightnessModeController;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mSDRDimming:I
 
     return p0
@@ -201,7 +189,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStaticVRR(Lcom/android/server/display/HighBrightnessModeController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mStaticVRR:Z
 
     return p0
@@ -210,7 +197,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSupportHdrSolution(Lcom/android/server/display/HighBrightnessModeController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mSupportHdrSolution:Z
 
     return p0
@@ -219,7 +205,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSupportPhotoHdr(Lcom/android/server/display/HighBrightnessModeController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mSupportPhotoHdr:Z
 
     return p0
@@ -228,7 +213,6 @@
 .method public static bridge synthetic -$$Nest$fgetmThresRatio(Lcom/android/server/display/HighBrightnessModeController;)F
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mThresRatio:F
 
     return p0
@@ -237,7 +221,6 @@
 .method public static bridge synthetic -$$Nest$fgetmThrottlingReason(Lcom/android/server/display/HighBrightnessModeController;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mThrottlingReason:I
 
     return p0
@@ -246,7 +229,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUnthrottledBrightness(Lcom/android/server/display/HighBrightnessModeController;)F
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mUnthrottledBrightness:F
 
     return p0
@@ -255,7 +237,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWidth(Lcom/android/server/display/HighBrightnessModeController;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mWidth:I
 
     return p0
@@ -264,7 +245,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsBlockedByLowPowerMode(Lcom/android/server/display/HighBrightnessModeController;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsBlockedByLowPowerMode:Z
 
     return-void
@@ -273,7 +253,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsHdrLayerPresent(Lcom/android/server/display/HighBrightnessModeController;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsHdrLayerPresent:Z
 
     return-void
@@ -282,7 +261,6 @@
 .method public static bridge synthetic -$$Nest$fputmMaxDesiredHdrSdrRatio(Lcom/android/server/display/HighBrightnessModeController;F)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mMaxDesiredHdrSdrRatio:F
 
     return-void
@@ -291,7 +269,6 @@
 .method public static bridge synthetic -$$Nest$mupdateHbmMode(Lcom/android/server/display/HighBrightnessModeController;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->updateHbmMode()V
 
     return-void
@@ -300,7 +277,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 89
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -313,7 +289,6 @@
 
     sput-boolean v0, Lcom/android/server/display/HighBrightnessModeController;->FEATURE_SUPPORT_HDR_SOLUTION:Z
 
-    .line 91
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -332,7 +307,6 @@
 .method public constructor <init>(Landroid/os/Handler;IILandroid/os/IBinder;Ljava/lang/String;FFLcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;Lcom/android/server/display/HighBrightnessModeController$HdrBrightnessDeviceConfig;Ljava/lang/Runnable;Lcom/android/server/display/HighBrightnessModeMetadata;Landroid/content/Context;)V
     .locals 14
 
-    .line 147
     new-instance v1, Lcom/android/server/display/HighBrightnessModeController$Injector;
 
     invoke-direct {v1}, Lcom/android/server/display/HighBrightnessModeController$Injector;-><init>()V
@@ -377,138 +351,106 @@
 
     move v2, p7
 
-    .line 155
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v3, 0x0
 
-    .line 84
     iput v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mLogLevel:I
 
     const v4, 0x3f666666    # 0.9f
 
-    .line 85
     iput v4, v0, Lcom/android/server/display/HighBrightnessModeController;->mThresRatio:F
 
-    .line 86
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mSupportHdrSolution:Z
 
-    .line 87
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mStaticVRR:Z
 
-    .line 88
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mSupportPhotoHdr:Z
 
     const-string v4, "SurfaceFlinger"
 
-    .line 92
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v4
 
     iput-object v4, v0, Lcom/android/server/display/HighBrightnessModeController;->mSurfaceFlinger:Landroid/os/IBinder;
 
-    .line 93
     iput v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mSDRDimming:I
 
-    .line 111
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mIsInAllowedAmbientRange:Z
 
-    .line 112
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mIsTimeAvailable:Z
 
-    .line 113
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mIsAutoBrightnessEnabled:Z
 
-    .line 114
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mIsAutoBrightnessOffByState:Z
 
-    .line 121
     iput v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mThrottlingReason:I
 
-    .line 124
     iput v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mHbmMode:I
 
-    .line 125
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mIsHdrLayerPresent:Z
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 127
     iput v4, v0, Lcom/android/server/display/HighBrightnessModeController;->mMaxDesiredHdrSdrRatio:F
 
-    .line 128
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mIsBlockedByLowPowerMode:Z
 
     const/4 v4, 0x1
 
-    .line 133
     iput v4, v0, Lcom/android/server/display/HighBrightnessModeController;->mHbmStatsState:I
 
-    .line 135
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mUseTimeAllowance:Z
 
     const/4 v5, 0x0
 
-    .line 142
     iput-object v5, v0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     move-object v5, p1
 
-    .line 156
     iput-object v5, v0, Lcom/android/server/display/HighBrightnessModeController;->mInjector:Lcom/android/server/display/HighBrightnessModeController$Injector;
 
     move-object/from16 v6, p13
 
-    .line 157
     iput-object v6, v0, Lcom/android/server/display/HighBrightnessModeController;->mContext:Landroid/content/Context;
 
-    .line 158
     invoke-virtual {p1}, Lcom/android/server/display/HighBrightnessModeController$Injector;->getClock()Lcom/android/server/display/DisplayManagerService$Clock;
 
     move-result-object v5
 
     iput-object v5, v0, Lcom/android/server/display/HighBrightnessModeController;->mClock:Lcom/android/server/display/DisplayManagerService$Clock;
 
-    .line 159
     iput-object v1, v0, Lcom/android/server/display/HighBrightnessModeController;->mHandler:Landroid/os/Handler;
 
-    .line 160
     iput v2, v0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
-    .line 161
     iput v2, v0, Lcom/android/server/display/HighBrightnessModeController;->mBrightnessMin:F
 
     move/from16 v2, p8
 
-    .line 162
     iput v2, v0, Lcom/android/server/display/HighBrightnessModeController;->mBrightnessMax:F
 
     move-object/from16 v2, p11
 
-    .line 163
     iput-object v2, v0, Lcom/android/server/display/HighBrightnessModeController;->mHbmChangeCallback:Ljava/lang/Runnable;
 
     move-object/from16 v2, p12
 
-    .line 164
     iput-object v2, v0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
-    .line 165
     new-instance v2, Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;
 
     invoke-direct {v2, p0, p2}, Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;-><init>(Lcom/android/server/display/HighBrightnessModeController;Landroid/os/Handler;)V
 
     iput-object v2, v0, Lcom/android/server/display/HighBrightnessModeController;->mSettingsObserver:Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;
 
-    .line 166
     new-instance v2, Lcom/android/server/display/HighBrightnessModeController$$ExternalSyntheticLambda0;
 
     invoke-direct {v2, p0}, Lcom/android/server/display/HighBrightnessModeController$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/display/HighBrightnessModeController;)V
 
     iput-object v2, v0, Lcom/android/server/display/HighBrightnessModeController;->mRecalcRunnable:Ljava/lang/Runnable;
 
-    .line 167
     new-instance v2, Lcom/android/server/display/HighBrightnessModeController$HdrListener;
 
     invoke-direct {v2, p0}, Lcom/android/server/display/HighBrightnessModeController$HdrListener;-><init>(Lcom/android/server/display/HighBrightnessModeController;)V
@@ -519,7 +461,6 @@
 
     const-string v5, "0"
 
-    .line 170
     invoke-static {v2, v5}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -534,14 +475,12 @@
 
     const-string/jumbo v5, "null"
 
-    .line 171
     invoke-static {v2, v5}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v6, "debug.hbmc.enforce.vrr"
 
-    .line 172
     invoke-static {v6, v5}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -550,7 +489,6 @@
 
     const-string v7, "0.9"
 
-    .line 173
     invoke-static {v6, v7}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -561,14 +499,12 @@
 
     iput v6, v0, Lcom/android/server/display/HighBrightnessModeController;->mThresRatio:F
 
-    .line 174
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->getSDRDimmingEnalbe()I
 
     move-result v6
 
     iput v6, v0, Lcom/android/server/display/HighBrightnessModeController;->mSDRDimming:I
 
-    .line 177
     sget-boolean v7, Lcom/android/server/display/HighBrightnessModeController;->FEATURE_SUPPORT_PHOTOHDR:Z
 
     iput-boolean v7, v0, Lcom/android/server/display/HighBrightnessModeController;->mSupportPhotoHdr:Z
@@ -579,21 +515,18 @@
 
     goto :goto_0
 
-    .line 179
     :cond_0
     iget v6, v0, Lcom/android/server/display/HighBrightnessModeController;->mThresRatio:F
 
     :goto_0
     iput v6, v0, Lcom/android/server/display/HighBrightnessModeController;->mThresRatio:F
 
-    .line 181
     new-instance v6, Lcom/android/server/display/HighBrightnessModeController$$ExternalSyntheticLambda1;
 
     invoke-direct {v6, p0, v2}, Lcom/android/server/display/HighBrightnessModeController$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/display/HighBrightnessModeController;Ljava/lang/String;)V
 
     invoke-virtual {p2, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 217
     invoke-virtual {v5}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v1
@@ -618,29 +551,24 @@
 
     if-nez v1, :cond_1
 
-    .line 227
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mStaticVRR:Z
 
     goto :goto_1
 
-    .line 223
     :cond_1
     iput-boolean v3, v0, Lcom/android/server/display/HighBrightnessModeController;->mStaticVRR:Z
 
     const-string v1, "Prevent Static VRR @HDR"
 
-    .line 224
     invoke-static {v5, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 219
     :cond_2
     iput-boolean v4, v0, Lcom/android/server/display/HighBrightnessModeController;->mStaticVRR:Z
 
     const-string v1, "Enforce Static VRR @HDR"
 
-    .line 220
     invoke-static {v5, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
@@ -658,7 +586,6 @@
 
     move-object/from16 v6, p10
 
-    .line 232
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/display/HighBrightnessModeController;->resetHbmData(IILandroid/os/IBinder;Ljava/lang/String;Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;Lcom/android/server/display/HighBrightnessModeController$HdrBrightnessDeviceConfig;)V
 
     return-void
@@ -667,7 +594,6 @@
 .method private synthetic lambda$dump$1(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 390
     invoke-virtual {p0, p1}, Lcom/android/server/display/HighBrightnessModeController;->dumpLocal(Ljava/io/PrintWriter;)V
 
     return-void
@@ -676,7 +602,6 @@
 .method private synthetic lambda$new$0(Ljava/lang/String;)V
     .locals 6
 
-    .line 182
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object p1
@@ -705,14 +630,12 @@
 
     if-nez p1, :cond_2
 
-    .line 193
     sget-boolean p1, Lcom/android/server/display/HighBrightnessModeController;->FEATURE_SUPPORT_HDR_SOLUTION:Z
 
     iput-boolean p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mSupportHdrSolution:Z
 
     if-nez p1, :cond_4
 
-    .line 196
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mContext:Landroid/content/Context;
 
     const-class v3, Landroid/hardware/display/DisplayManager;
@@ -723,24 +646,20 @@
 
     check-cast p1, Landroid/hardware/display/DisplayManager;
 
-    .line 197
     invoke-virtual {p1, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object p1
 
-    .line 198
     invoke-virtual {p1}, Landroid/view/Display;->getHdrCapabilities()Landroid/view/Display$HdrCapabilities;
 
     move-result-object p1
 
-    .line 199
     invoke-virtual {p1}, Landroid/view/Display$HdrCapabilities;->getSupportedHdrTypes()[I
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    .line 201
     array-length v3, p1
 
     :goto_0
@@ -767,34 +686,28 @@
 
     goto :goto_0
 
-    .line 205
     :cond_1
     :goto_1
     iput-boolean v2, p0, Lcom/android/server/display/HighBrightnessModeController;->mSupportHdrSolution:Z
 
     goto :goto_2
 
-    .line 188
     :cond_2
     iput-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mSupportHdrSolution:Z
 
     const-string p1, "Prevent HighBrightnessMode @HDR"
 
-    .line 189
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 184
     :cond_3
     iput-boolean v2, p0, Lcom/android/server/display/HighBrightnessModeController;->mSupportHdrSolution:Z
 
     const-string p1, "Enforce HighBrightnessMode @HDR"
 
-    .line 185
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     :cond_4
     :goto_2
     new-instance p1, Ljava/lang/StringBuilder;
@@ -823,7 +736,6 @@
 .method public final calculateHighBrightnessMode()I
     .locals 2
 
-    .line 669
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result v0
@@ -834,7 +746,6 @@
 
     return v1
 
-    .line 671
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsHdrLayerPresent:Z
 
@@ -844,7 +755,6 @@
 
     return p0
 
-    .line 673
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->isCurrentlyAllowed()Z
 
@@ -863,7 +773,6 @@
 .method public final calculateRemainingTime(J)J
     .locals 10
 
-    .line 471
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result v0
@@ -874,7 +783,6 @@
 
     return-wide v1
 
-    .line 479
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
@@ -890,7 +798,6 @@
 
     if-lez v0, :cond_1
 
-    .line 482
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -915,7 +822,6 @@
 
     invoke-static {v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/display/HighBrightnessModeMetadata;->setRunningStartTimeMillis(J)V
@@ -930,7 +836,6 @@
     :cond_2
     move-wide v3, v1
 
-    .line 495
     :goto_0
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
@@ -938,7 +843,6 @@
 
     sub-long/2addr p1, v5
 
-    .line 496
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     invoke-virtual {v0}, Lcom/android/server/display/HighBrightnessModeMetadata;->getHbmEventQueue()Ljava/util/ArrayDeque;
@@ -949,7 +853,6 @@
 
     move-result-object v0
 
-    .line 497
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -957,14 +860,12 @@
 
     if-eqz v5, :cond_4
 
-    .line 498
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/display/HbmEvent;
 
-    .line 501
     invoke-virtual {v5}, Lcom/android/server/display/HbmEvent;->getEndTimeMillis()J
 
     move-result-wide v6
@@ -973,12 +874,10 @@
 
     if-gez v6, :cond_3
 
-    .line 502
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_1
 
-    .line 506
     :cond_3
     invoke-virtual {v5}, Lcom/android/server/display/HbmEvent;->getStartTimeMillis()J
 
@@ -988,7 +887,6 @@
 
     move-result-wide v6
 
-    .line 508
     invoke-virtual {v5}, Lcom/android/server/display/HbmEvent;->getEndTimeMillis()J
 
     move-result-wide v8
@@ -999,7 +897,6 @@
 
     goto :goto_1
 
-    .line 515
     :cond_4
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
@@ -1017,7 +914,6 @@
 .method public final deviceSupportsHbm()Z
     .locals 0
 
-    .line 467
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
     if-eqz p0, :cond_0
@@ -1036,7 +932,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 390
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/display/HighBrightnessModeController$$ExternalSyntheticLambda2;
@@ -1053,7 +948,6 @@
 .method public final dumpHbmEvent(Ljava/io/PrintWriter;Lcom/android/server/display/HbmEvent;)J
     .locals 4
 
-    .line 441
     invoke-virtual {p2}, Lcom/android/server/display/HbmEvent;->getEndTimeMillis()J
 
     move-result-wide v0
@@ -1064,7 +958,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 442
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1073,7 +966,6 @@
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 443
     invoke-virtual {p2}, Lcom/android/server/display/HbmEvent;->getStartTimeMillis()J
 
     move-result-wide v2
@@ -1088,7 +980,6 @@
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 444
     invoke-virtual {p2}, Lcom/android/server/display/HbmEvent;->getEndTimeMillis()J
 
     move-result-wide v2
@@ -1103,7 +994,6 @@
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 445
     invoke-static {v0, v1}, Landroid/util/TimeUtils;->formatDuration(J)Ljava/lang/String;
 
     move-result-object v0
@@ -1118,10 +1008,8 @@
 
     move-result-object p0
 
-    .line 442
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 446
     invoke-virtual {p2}, Lcom/android/server/display/HbmEvent;->getStartTimeMillis()J
 
     move-result-wide p0
@@ -1134,10 +1022,8 @@
 
     const-string v0, "HighBrightnessModeController:"
 
-    .line 399
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 400
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1156,7 +1042,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 401
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1175,7 +1060,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 402
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1198,7 +1082,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 403
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1219,7 +1102,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 404
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1240,7 +1122,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 405
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1257,7 +1138,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 406
     iget v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmMode:I
 
     const/4 v2, 0x2
@@ -1266,7 +1146,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 407
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1301,10 +1180,8 @@
 
     move-result-object v0
 
-    .line 405
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 408
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1327,7 +1204,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 409
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1346,7 +1222,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 410
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1359,7 +1234,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 411
     iget-boolean v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsAutoBrightnessEnabled:Z
 
     if-eqz v1, :cond_1
@@ -1376,10 +1250,8 @@
 
     move-result-object v0
 
-    .line 410
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 412
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1398,7 +1270,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 413
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1417,7 +1288,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 414
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1436,7 +1306,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 415
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1455,7 +1324,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 416
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1474,7 +1342,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 417
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1493,7 +1360,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 418
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1520,7 +1386,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 419
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1539,7 +1404,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 420
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1550,7 +1414,6 @@
 
     iget-object v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
-    .line 421
     invoke-virtual {v1}, Lcom/android/server/display/HighBrightnessModeMetadata;->getRunningStartTimeMillis()J
 
     move-result-wide v1
@@ -1565,10 +1428,8 @@
 
     move-result-object v0
 
-    .line 420
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 422
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1587,7 +1448,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 423
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1616,17 +1476,14 @@
 
     const-string v0, "  mEvents="
 
-    .line 424
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 425
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mClock:Lcom/android/server/display/DisplayManagerService$Clock;
 
     invoke-interface {v0}, Lcom/android/server/display/DisplayManagerService$Clock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 427
     iget-object v2, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     invoke-virtual {v2}, Lcom/android/server/display/HighBrightnessModeMetadata;->getRunningStartTimeMillis()J
@@ -1639,7 +1496,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 429
     new-instance v4, Lcom/android/server/display/HbmEvent;
 
     invoke-direct {v4, v2, v3, v0, v1}, Lcom/android/server/display/HbmEvent;-><init>(JJ)V
@@ -1648,7 +1504,6 @@
 
     move-result-wide v0
 
-    .line 431
     :cond_2
     iget-object v2, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
@@ -1673,7 +1528,6 @@
 
     check-cast v3, Lcom/android/server/display/HbmEvent;
 
-    .line 432
     invoke-virtual {v3}, Lcom/android/server/display/HbmEvent;->getEndTimeMillis()J
 
     move-result-wide v4
@@ -1682,7 +1536,6 @@
 
     if-lez v4, :cond_3
 
-    .line 433
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1691,7 +1544,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 434
     invoke-virtual {v3}, Lcom/android/server/display/HbmEvent;->getEndTimeMillis()J
 
     move-result-wide v5
@@ -1708,10 +1560,8 @@
 
     move-result-object v0
 
-    .line 433
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 436
     :cond_3
     invoke-virtual {p0, p1, v3}, Lcom/android/server/display/HighBrightnessModeController;->dumpHbmEvent(Ljava/io/PrintWriter;Lcom/android/server/display/HbmEvent;)J
 
@@ -1726,7 +1576,6 @@
 .method public getCurrentBrightnessMax()F
     .locals 1
 
-    .line 255
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result v0
@@ -1741,7 +1590,6 @@
 
     goto :goto_0
 
-    .line 263
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
@@ -1749,7 +1597,6 @@
 
     return p0
 
-    .line 259
     :cond_1
     :goto_0
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightnessMax:F
@@ -1760,7 +1607,6 @@
 .method public getCurrentBrightnessMin()F
     .locals 0
 
-    .line 251
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightnessMin:F
 
     return p0
@@ -1769,12 +1615,10 @@
 .method public getHdrBrightnessValue()F
     .locals 4
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHdrBrightnessCfg:Lcom/android/server/display/HighBrightnessModeController$HdrBrightnessDeviceConfig;
 
     if-eqz v0, :cond_0
 
-    .line 273
     iget v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
     iget v2, p0, Lcom/android/server/display/HighBrightnessModeController;->mMaxDesiredHdrSdrRatio:F
@@ -1791,7 +1635,6 @@
 
     return v0
 
-    .line 285
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->getCurrentBrightnessMin()F
 
@@ -1817,7 +1660,6 @@
 .method public getHdrListener()Lcom/android/server/display/HighBrightnessModeController$HdrListener;
     .locals 0
 
-    .line 395
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHdrListener:Lcom/android/server/display/HighBrightnessModeController$HdrListener;
 
     return-object p0
@@ -1826,7 +1668,6 @@
 .method public getHighBrightnessMode()I
     .locals 0
 
-    .line 337
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmMode:I
 
     return p0
@@ -1835,7 +1676,6 @@
 .method public getNormalBrightnessMax()F
     .locals 1
 
-    .line 268
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result v0
@@ -1860,12 +1700,10 @@
 
     const-string v0, "HighBrightnessModeController"
 
-    .line 712
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 713
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
@@ -1874,7 +1712,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 715
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/HighBrightnessModeController;->mSurfaceFlinger:Landroid/os/IBinder;
 
@@ -1882,14 +1719,12 @@
 
     const-string v3, "android.ui.ISurfaceComposer"
 
-    .line 716
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v3, 0x0
 
-    .line 719
     :try_start_1
     iget-object v4, p0, Lcom/android/server/display/HighBrightnessModeController;->mSurfaceFlinger:Landroid/os/IBinder;
 
@@ -1909,7 +1744,6 @@
     :catch_0
     move-exception v4
 
-    .line 725
     :try_start_2
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1918,7 +1752,6 @@
     :catch_1
     const-string v4, "SecurityException: Need system privilege"
 
-    .line 723
     invoke-static {v0, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -1926,23 +1759,19 @@
     :catch_2
     const-string v4, "getSDRDimmingEnalbe() FAILED!"
 
-    .line 721
     invoke-static {v0, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     if-eqz v3, :cond_0
 
-    .line 728
     invoke-virtual {v2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 729
     iget p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mLogLevel:I
 
     if-lez p0, :cond_1
 
-    .line 730
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1966,13 +1795,10 @@
     :catchall_0
     move-exception p0
 
-    .line 736
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 739
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 741
     throw p0
 
     :cond_0
@@ -1982,13 +1808,11 @@
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 736
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 739
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
     :cond_3
@@ -1998,14 +1822,12 @@
 .method public getTransitionPoint()F
     .locals 1
 
-    .line 341
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 342
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
     iget p0, p0, Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;->transitionPoint:F
@@ -2021,10 +1843,8 @@
 .method public handleResolutionChange(II)V
     .locals 0
 
-    .line 705
     iput p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mWidth:I
 
-    .line 706
     iput p2, p0, Lcom/android/server/display/HighBrightnessModeController;->mHeight:I
 
     return-void
@@ -2045,7 +1865,6 @@
 
     if-eq p1, p0, :cond_0
 
-    .line 664
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -2071,7 +1890,6 @@
 .method public final isCurrentlyAllowed()Z
     .locals 1
 
-    .line 460
     iget-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsAutoBrightnessEnabled:Z
 
     if-eqz v0, :cond_0
@@ -2102,7 +1920,6 @@
 .method public isResolutionChanged(II)Z
     .locals 1
 
-    .line 701
     iget v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mWidth:I
 
     if-ne v0, p1, :cond_1
@@ -2129,7 +1946,6 @@
 .method public isThermalThrottlingActive()Z
     .locals 2
 
-    .line 650
     iget v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mUnthrottledBrightness:F
 
     iget-object v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
@@ -2164,10 +1980,8 @@
 .method public onAmbientLuxChange(F)V
     .locals 1
 
-    .line 290
     iput p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mAmbientLux:F
 
-    .line 291
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result v0
@@ -2180,7 +1994,6 @@
 
     goto :goto_1
 
-    .line 295
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
@@ -2197,16 +2010,13 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 296
     :goto_0
     iget-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsInAllowedAmbientRange:Z
 
     if-eq p1, v0, :cond_2
 
-    .line 297
     iput-boolean p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsInAllowedAmbientRange:Z
 
-    .line 298
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->recalculateTimeAllowance()V
 
     :cond_2
@@ -2217,7 +2027,6 @@
 .method public onBrightnessChanged(FFI)V
     .locals 6
 
-    .line 304
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result v0
@@ -2226,17 +2035,13 @@
 
     return-void
 
-    .line 307
     :cond_0
     iput p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
-    .line 308
     iput p2, p0, Lcom/android/server/display/HighBrightnessModeController;->mUnthrottledBrightness:F
 
-    .line 309
     iput p3, p0, Lcom/android/server/display/HighBrightnessModeController;->mThrottlingReason:I
 
-    .line 313
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     invoke-virtual {p1}, Lcom/android/server/display/HighBrightnessModeMetadata;->getRunningStartTimeMillis()J
@@ -2260,7 +2065,6 @@
     :cond_1
     move p3, v3
 
-    .line 315
     :goto_0
     iget v4, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
@@ -2284,7 +2088,6 @@
     :goto_1
     if-eq p3, v2, :cond_4
 
-    .line 318
     iget-object p3, p0, Lcom/android/server/display/HighBrightnessModeController;->mClock:Lcom/android/server/display/DisplayManagerService$Clock;
 
     invoke-interface {p3}, Lcom/android/server/display/DisplayManagerService$Clock;->uptimeMillis()J
@@ -2293,30 +2096,25 @@
 
     if-eqz v2, :cond_3
 
-    .line 320
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     invoke-virtual {p1, v3, v4}, Lcom/android/server/display/HighBrightnessModeMetadata;->setRunningStartTimeMillis(J)V
 
     goto :goto_2
 
-    .line 322
     :cond_3
     new-instance p3, Lcom/android/server/display/HbmEvent;
 
     invoke-direct {p3, p1, p2, v3, v4}, Lcom/android/server/display/HbmEvent;-><init>(JJ)V
 
-    .line 323
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     invoke-virtual {p1, p3}, Lcom/android/server/display/HighBrightnessModeMetadata;->addHbmEvent(Lcom/android/server/display/HbmEvent;)V
 
-    .line 324
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/server/display/HighBrightnessModeMetadata;->setRunningStartTimeMillis(J)V
 
-    .line 333
     :cond_4
     :goto_2
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->recalculateTimeAllowance()V
@@ -2327,24 +2125,20 @@
 .method public final recalculateTimeAllowance()V
     .locals 12
 
-    .line 522
     iget-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mUseTimeAllowance:Z
 
     if-eqz v0, :cond_6
 
-    .line 523
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mClock:Lcom/android/server/display/DisplayManagerService$Clock;
 
     invoke-interface {v0}, Lcom/android/server/display/DisplayManagerService$Clock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 524
     invoke-virtual {p0, v0, v1}, Lcom/android/server/display/HighBrightnessModeController;->calculateRemainingTime(J)J
 
     move-result-wide v2
 
-    .line 528
     iget-object v4, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
     iget-wide v5, v4, Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;->timeMinMillis:J
@@ -2373,7 +2167,6 @@
 
     if-lez v8, :cond_1
 
-    .line 529
     iget v8, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
     iget v4, v4, Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;->transitionPoint:F
@@ -2399,19 +2192,16 @@
     :cond_2
     move v6, v7
 
-    .line 531
     :cond_3
     :goto_2
     iput-boolean v6, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsTimeAvailable:Z
 
-    .line 536
     iget-object v4, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     invoke-virtual {v4}, Lcom/android/server/display/HighBrightnessModeMetadata;->getHbmEventQueue()Ljava/util/ArrayDeque;
 
     move-result-object v4
 
-    .line 537
     iget v5, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
     iget-object v6, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
@@ -2428,7 +2218,6 @@
 
     goto :goto_3
 
-    .line 540
     :cond_4
     iget-boolean v5, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsTimeAvailable:Z
 
@@ -2440,21 +2229,18 @@
 
     if-lez v5, :cond_5
 
-    .line 544
     iget-object v5, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
     iget-wide v8, v5, Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;->timeWindowMillis:J
 
     sub-long v8, v0, v8
 
-    .line 545
     invoke-virtual {v4}, Ljava/util/ArrayDeque;->peekLast()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/server/display/HbmEvent;
 
-    .line 547
     invoke-virtual {v4}, Lcom/android/server/display/HbmEvent;->getStartTimeMillis()J
 
     move-result-wide v4
@@ -2485,14 +2271,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 578
     iget-object v2, p0, Lcom/android/server/display/HighBrightnessModeController;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/display/HighBrightnessModeController;->mRecalcRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 579
     iget-object v2, p0, Lcom/android/server/display/HighBrightnessModeController;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/display/HighBrightnessModeController;->mRecalcRunnable:Ljava/lang/Runnable;
@@ -2503,7 +2287,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
 
-    .line 583
     :cond_6
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->updateHbmMode()V
 
@@ -2513,23 +2296,19 @@
 .method public final registerHdrListener(Landroid/os/IBinder;)V
     .locals 1
 
-    .line 681
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mRegisteredDisplayToken:Landroid/os/IBinder;
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 685
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->unregisterHdrListener()V
 
-    .line 686
     iput-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mRegisteredDisplayToken:Landroid/os/IBinder;
 
     if-eqz p1, :cond_1
 
-    .line 688
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHdrListener:Lcom/android/server/display/HighBrightnessModeController$HdrListener;
 
     invoke-virtual {p0, p1}, Landroid/view/SurfaceControlHdrLayerInfoListener;->register(Landroid/os/IBinder;)V
@@ -2541,44 +2320,34 @@
 .method public resetHbmData(IILandroid/os/IBinder;Ljava/lang/String;Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;Lcom/android/server/display/HighBrightnessModeController$HdrBrightnessDeviceConfig;)V
     .locals 2
 
-    .line 359
     iput p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mWidth:I
 
-    .line 360
     iput p2, p0, Lcom/android/server/display/HighBrightnessModeController;->mHeight:I
 
-    .line 361
     iput-object p5, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
-    .line 362
     iput-object p6, p0, Lcom/android/server/display/HighBrightnessModeController;->mHdrBrightnessCfg:Lcom/android/server/display/HighBrightnessModeController$HdrBrightnessDeviceConfig;
 
-    .line 363
     invoke-virtual {p4}, Ljava/lang/String;->hashCode()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mDisplayStatsId:I
 
-    .line 365
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->unregisterHdrListener()V
 
-    .line 366
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mSettingsObserver:Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;
 
     invoke-virtual {p1}, Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;->stopObserving()V
 
-    .line 367
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 368
     invoke-virtual {p0, p3}, Lcom/android/server/display/HighBrightnessModeController;->registerHdrListener(Landroid/os/IBinder;)V
 
-    .line 371
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
     iget-wide p2, p1, Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;->timeWindowMillis:J
@@ -2605,33 +2374,26 @@
 
     if-nez p1, :cond_0
 
-    .line 374
     iput-boolean p3, p0, Lcom/android/server/display/HighBrightnessModeController;->mUseTimeAllowance:Z
 
-    .line 375
     iput-boolean p6, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsTimeAvailable:Z
 
     goto :goto_0
 
-    .line 377
     :cond_0
     iput-boolean p6, p0, Lcom/android/server/display/HighBrightnessModeController;->mUseTimeAllowance:Z
 
-    .line 381
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->recalculateTimeAllowance()V
 
-    .line 382
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
 
     iget-boolean p1, p1, Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;->allowInLowPowerMode:Z
 
     if-nez p1, :cond_1
 
-    .line 383
     iput-boolean p3, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsBlockedByLowPowerMode:Z
 
-    .line 384
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mSettingsObserver:Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;
 
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;->startObserving()V
@@ -2666,11 +2428,9 @@
     :cond_1
     move v1, v0
 
-    .line 237
     :goto_1
     iput-boolean v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsAutoBrightnessOffByState:Z
 
-    .line 239
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->deviceSupportsHbm()Z
 
     move-result p1
@@ -2683,14 +2443,11 @@
 
     goto :goto_2
 
-    .line 245
     :cond_2
     iput-boolean v2, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsAutoBrightnessEnabled:Z
 
-    .line 246
     iput-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsInAllowedAmbientRange:Z
 
-    .line 247
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->recalculateTimeAllowance()V
 
     :cond_3
@@ -2701,7 +2458,6 @@
 .method public setHighBrightnessModeMetadata(Lcom/android/server/display/HighBrightnessModeMetadata;)V
     .locals 0
 
-    .line 354
     iput-object p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHighBrightnessModeMetadata:Lcom/android/server/display/HighBrightnessModeMetadata;
 
     return-void
@@ -2712,10 +2468,8 @@
 
     const/4 v0, 0x0
 
-    .line 349
     invoke-virtual {p0, v0}, Lcom/android/server/display/HighBrightnessModeController;->registerHdrListener(Landroid/os/IBinder;)V
 
-    .line 350
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mSettingsObserver:Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;
 
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController$SettingsObserver;->stopObserving()V
@@ -2726,19 +2480,16 @@
 .method public final unregisterHdrListener()V
     .locals 2
 
-    .line 693
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mRegisteredDisplayToken:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
-    .line 694
     iget-object v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHdrListener:Lcom/android/server/display/HighBrightnessModeController$HdrListener;
 
     invoke-virtual {v1, v0}, Landroid/view/SurfaceControlHdrLayerInfoListener;->unregister(Landroid/os/IBinder;)V
 
     const/4 v0, 0x0
 
-    .line 695
     iput-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsHdrLayerPresent:Z
 
     :cond_0
@@ -2748,23 +2499,18 @@
 .method public final updateHbmMode()V
     .locals 2
 
-    .line 587
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->calculateHighBrightnessMode()I
 
     move-result v0
 
-    .line 588
     invoke-virtual {p0, v0}, Lcom/android/server/display/HighBrightnessModeController;->updateHbmStats(I)V
 
-    .line 589
     iget v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmMode:I
 
     if-eq v1, v0, :cond_0
 
-    .line 590
     iput v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmMode:I
 
-    .line 591
     iget-object p0, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmChangeCallback:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
@@ -2784,7 +2530,6 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 598
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->getHdrBrightnessValue()F
 
     move-result v3
@@ -2804,7 +2549,6 @@
     :cond_0
     if-ne p1, v1, :cond_1
 
-    .line 600
     iget p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
     iget-object v3, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmData:Lcom/android/server/display/DisplayDeviceConfig$HighBrightnessModeData;
@@ -2822,7 +2566,6 @@
     :cond_1
     move p1, v1
 
-    .line 604
     :goto_0
     iget v3, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmStatsState:I
 
@@ -2857,7 +2600,6 @@
 
     if-nez v5, :cond_c
 
-    .line 617
     iget-boolean v3, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsAutoBrightnessEnabled:Z
 
     if-nez v3, :cond_5
@@ -2877,7 +2619,6 @@
 
     goto :goto_3
 
-    .line 623
     :cond_6
     iget-boolean v3, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsInAllowedAmbientRange:Z
 
@@ -2887,7 +2628,6 @@
 
     goto :goto_3
 
-    .line 625
     :cond_7
     iget-boolean v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsTimeAvailable:Z
 
@@ -2897,7 +2637,6 @@
 
     goto :goto_3
 
-    .line 627
     :cond_8
     invoke-virtual {p0}, Lcom/android/server/display/HighBrightnessModeController;->isThermalThrottlingActive()Z
 
@@ -2907,7 +2646,6 @@
 
     goto :goto_3
 
-    .line 630
     :cond_9
     iget-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsHdrLayerPresent:Z
 
@@ -2917,7 +2655,6 @@
 
     goto :goto_3
 
-    .line 633
     :cond_a
     iget-boolean v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mIsBlockedByLowPowerMode:Z
 
@@ -2927,7 +2664,6 @@
 
     goto :goto_3
 
-    .line 636
     :cond_b
     iget v0, p0, Lcom/android/server/display/HighBrightnessModeController;->mBrightness:F
 
@@ -2946,7 +2682,6 @@
     :cond_c
     move v0, v4
 
-    .line 643
     :goto_3
     iget-object v1, p0, Lcom/android/server/display/HighBrightnessModeController;->mInjector:Lcom/android/server/display/HighBrightnessModeController$Injector;
 
@@ -2954,7 +2689,6 @@
 
     invoke-virtual {v1, v2, p1, v0}, Lcom/android/server/display/HighBrightnessModeController$Injector;->reportHbmStateChange(III)V
 
-    .line 644
     iput p1, p0, Lcom/android/server/display/HighBrightnessModeController;->mHbmStatsState:I
 
     return-void

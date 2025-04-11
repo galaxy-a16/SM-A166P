@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutPackage;)V
     .locals 0
 
-    .line 2644
     iput-object p1, p0, Lcom/android/server/pm/ShortcutPackage$2;->this$0:Lcom/android/server/pm/ShortcutPackage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,19 +26,16 @@
 .method public onResult(Landroid/app/appsearch/AppSearchBatchResult;)V
     .locals 3
 
-    .line 2648
     invoke-virtual {p1}, Landroid/app/appsearch/AppSearchBatchResult;->isSuccess()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 2650
     invoke-virtual {p1}, Landroid/app/appsearch/AppSearchBatchResult;->getFailures()Ljava/util/Map;
 
     move-result-object p0
 
-    .line 2651
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p1
@@ -63,7 +59,6 @@
 
     const-string v1, ""
 
-    .line 2655
     :try_start_0
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -77,7 +72,6 @@
 
     const-string/jumbo v0, "uri"
 
-    .line 2656
     invoke-virtual {v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
@@ -95,7 +89,6 @@
     :catch_0
     move-object v0, v1
 
-    .line 2660
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -128,7 +121,6 @@
 
     const-string v0, "Error removing shortcuts"
 
-    .line 2667
     invoke-static {p0, v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/injector/SystemEmergencyHelper;)V
     .locals 0
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/location/injector/SystemEmergencyHelper$1;->this$0:Lcom/android/server/location/injector/SystemEmergencyHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.action.NEW_OUTGOING_CALL"
 
-    .line 68
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -39,13 +37,11 @@
 
     return-void
 
-    .line 72
     :cond_0
     iget-object p1, p0, Lcom/android/server/location/injector/SystemEmergencyHelper$1;->this$0:Lcom/android/server/location/injector/SystemEmergencyHelper;
 
     monitor-enter p1
 
-    .line 74
     :try_start_0
     iget-object p0, p0, Lcom/android/server/location/injector/SystemEmergencyHelper$1;->this$0:Lcom/android/server/location/injector/SystemEmergencyHelper;
 
@@ -53,12 +49,10 @@
 
     const-string v1, "android.intent.extra.PHONE_NUMBER"
 
-    .line 75
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 74
     invoke-virtual {v0, p2}, Landroid/telephony/TelephonyManager;->isEmergencyNumber(Ljava/lang/String;)Z
 
     move-result p2
@@ -83,10 +77,8 @@
 
     const-string v0, "Failed to call TelephonyManager.isEmergencyNumber()."
 
-    .line 77
     invoke-static {p2, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 79
     :goto_0
     monitor-exit p1
 

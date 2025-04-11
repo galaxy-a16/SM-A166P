@@ -20,19 +20,16 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
-    .line 3431
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3429
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->runnableJobs:Ljava/util/List;
 
-    .line 3432
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->reset()V
 
     return-void
@@ -43,14 +40,12 @@
 .method public accept(Lcom/android/server/job/controllers/JobStatus;)V
     .locals 12
 
-    .line 3437
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/job/JobSchedulerService;->isCurrentlyRunningLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v0
 
-    .line 3438
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     const/4 v2, 0x0
@@ -67,7 +62,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 3439
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v1, v1, Lcom/android/server/job/JobSchedulerService;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
@@ -76,7 +70,6 @@
 
     move-result v6
 
-    .line 3440
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
     move-result-object v7
@@ -89,14 +82,12 @@
 
     move-result-object v7
 
-    .line 3439
     invoke-virtual {v1, v6, v7}, Landroid/app/ActivityManagerInternal;->isAppStartModeDisabled(ILjava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 3441
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,7 +106,6 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3442
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
     move-result-object v3
@@ -136,12 +126,10 @@
 
     const-string v3, "JobScheduler"
 
-    .line 3441
     invoke-static {v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz v0, :cond_0
 
-    .line 3444
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService;->mHandler:Lcom/android/server/job/JobSchedulerService$JobHandler;
@@ -154,12 +142,10 @@
 
     move-result-object p0
 
-    .line 3446
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 3447
     :cond_0
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -173,7 +159,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3448
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-static {p0, p1}, Lcom/android/server/job/JobSchedulerService;->-$$Nest$mnoteJobNonPending(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/controllers/JobStatus;)V
@@ -182,7 +167,6 @@
     :goto_0
     return-void
 
-    .line 3454
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsExpeditedJob()Z
 
@@ -200,7 +184,6 @@
 
     goto/16 :goto_3
 
-    .line 3457
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectiveStandbyBucket()I
 
@@ -213,7 +196,6 @@
 
     goto :goto_3
 
-    .line 3460
     :cond_4
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
@@ -225,7 +207,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 3464
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sSystemClock:Ljava/time/Clock;
 
     invoke-virtual {v1}, Ljava/time/Clock;->millis()J
@@ -240,12 +221,10 @@
 
     add-long/2addr v3, v8
 
-    .line 3466
     invoke-static {v1}, Lcom/android/server/job/JobSchedulerService;->-$$Nest$fgetmPrefetchController(Lcom/android/server/job/JobSchedulerService;)Lcom/android/server/job/controllers/PrefetchController;
 
     move-result-object v1
 
-    .line 3467
     invoke-virtual {v1, p1}, Lcom/android/server/job/controllers/PrefetchController;->getNextEstimatedLaunchTimeLocked(Lcom/android/server/job/controllers/JobStatus;)J
 
     move-result-wide v8
@@ -256,7 +235,6 @@
 
     goto :goto_1
 
-    .line 3469
     :cond_5
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getNumPreviousAttempts()I
 
@@ -266,7 +244,6 @@
 
     goto :goto_3
 
-    .line 3472
     :cond_6
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
@@ -274,7 +251,6 @@
 
     move-result-wide v8
 
-    .line 3473
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getFirstForceBatchedTimeElapsed()J
 
     move-result-wide v10
@@ -283,7 +259,6 @@
 
     if-lez v1, :cond_7
 
-    .line 3474
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getFirstForceBatchedTimeElapsed()J
 
     move-result-wide v10
@@ -307,7 +282,6 @@
     :cond_7
     move v1, v2
 
-    .line 3476
     :goto_2
     iget-object v4, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -317,14 +291,12 @@
 
     if-le v4, v5, :cond_8
 
-    .line 3478
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectiveStandbyBucket()I
 
     move-result v4
 
     if-eqz v4, :cond_8
 
-    .line 3479
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectiveStandbyBucket()I
 
     move-result v4
@@ -339,14 +311,12 @@
     :goto_3
     if-eqz v2, :cond_9
 
-    .line 3485
     iget v1, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->forceBatchedCount:I
 
     add-int/2addr v1, v5
 
     iput v1, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->forceBatchedCount:I
 
-    .line 3486
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getFirstForceBatchedTimeElapsed()J
 
     move-result-wide v1
@@ -355,7 +325,6 @@
 
     if-nez v1, :cond_a
 
-    .line 3487
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {v1}, Ljava/time/Clock;->millis()J
@@ -366,7 +335,6 @@
 
     goto :goto_4
 
-    .line 3490
     :cond_9
     iget v1, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->unbatchedCount:I
 
@@ -378,7 +346,6 @@
     :goto_4
     if-nez v0, :cond_10
 
-    .line 3493
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->runnableJobs:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -388,21 +355,18 @@
     :cond_b
     if-eqz v0, :cond_f
 
-    .line 3499
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->isReady()Z
 
     move-result v0
 
     if-nez v0, :cond_d
 
-    .line 3500
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectiveStandbyBucket()I
 
     move-result v0
 
     if-ne v0, v4, :cond_c
 
-    .line 3501
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getStopReason()I
 
     move-result v0
@@ -422,7 +386,6 @@
 
     goto :goto_5
 
-    .line 3511
     :cond_d
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -432,12 +395,10 @@
 
     if-eqz v0, :cond_e
 
-    .line 3513
     invoke-virtual {v0}, Lcom/android/server/job/restrictions/JobRestriction;->getInternalReason()I
 
     move-result v3
 
-    .line 3514
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -446,7 +407,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3515
     invoke-static {v3}, Landroid/app/job/JobParameters;->getInternalReasonCodeDescription(I)Ljava/lang/String;
 
     move-result-object v1
@@ -464,7 +424,6 @@
 
     const-string v0, "couldn\'t figure out why the job should stop running"
 
-    .line 3522
     :goto_5
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -478,7 +437,6 @@
 
     goto :goto_6
 
-    .line 3524
     :cond_f
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -492,7 +450,6 @@
 
     if-eqz v0, :cond_10
 
-    .line 3525
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-static {p0, p1}, Lcom/android/server/job/JobSchedulerService;->-$$Nest$mnoteJobNonPending(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/controllers/JobStatus;)V
@@ -505,7 +462,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 3426
     check-cast p1, Lcom/android/server/job/controllers/JobStatus;
 
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->accept(Lcom/android/server/job/controllers/JobStatus;)V
@@ -516,7 +472,6 @@
 .method public postProcessLocked()V
     .locals 8
 
-    .line 3533
     iget v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->unbatchedCount:I
 
     if-gtz v0, :cond_4
@@ -533,7 +488,6 @@
 
     goto :goto_1
 
-    .line 3541
     :cond_0
     sget-boolean v0, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
@@ -543,10 +497,8 @@
 
     const-string/jumbo v1, "maybeQueueReadyJobsForExecutionLocked: Not running anything."
 
-    .line 3542
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3544
     :cond_1
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->runnableJobs:Ljava/util/List;
 
@@ -556,7 +508,6 @@
 
     if-lez v0, :cond_6
 
-    .line 3546
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-static {v1}, Lcom/android/server/job/JobSchedulerService;->-$$Nest$fgetmPendingJobReasonCache(Lcom/android/server/job/JobSchedulerService;)Landroid/util/SparseArrayMap;
@@ -570,7 +521,6 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
-    .line 3548
     :try_start_0
     iget-object v3, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->runnableJobs:Ljava/util/List;
 
@@ -580,14 +530,12 @@
 
     check-cast v3, Lcom/android/server/job/controllers/JobStatus;
 
-    .line 3549
     iget-object v4, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-static {v4}, Lcom/android/server/job/JobSchedulerService;->-$$Nest$fgetmPendingJobReasonCache(Lcom/android/server/job/JobSchedulerService;)Landroid/util/SparseArrayMap;
 
     move-result-object v4
 
-    .line 3550
     invoke-virtual {v3}, Lcom/android/server/job/controllers/JobStatus;->getUid()I
 
     move-result v5
@@ -604,19 +552,16 @@
 
     if-nez v4, :cond_2
 
-    .line 3552
     new-instance v4, Landroid/util/SparseIntArray;
 
     invoke-direct {v4}, Landroid/util/SparseIntArray;-><init>()V
 
-    .line 3553
     iget-object v5, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-static {v5}, Lcom/android/server/job/JobSchedulerService;->-$$Nest$fgetmPendingJobReasonCache(Lcom/android/server/job/JobSchedulerService;)Landroid/util/SparseArrayMap;
 
     move-result-object v5
 
-    .line 3554
     invoke-virtual {v3}, Lcom/android/server/job/controllers/JobStatus;->getUid()I
 
     move-result v6
@@ -627,7 +572,6 @@
 
     invoke-virtual {v5, v6, v7, v4}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3558
     :cond_2
     invoke-virtual {v3}, Lcom/android/server/job/controllers/JobStatus;->getJobId()I
 
@@ -641,7 +585,6 @@
 
     goto :goto_0
 
-    .line 3561
     :cond_3
     monitor-exit v1
 
@@ -656,7 +599,6 @@
 
     throw p0
 
-    .line 3535
     :cond_4
     :goto_1
     sget-boolean v0, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
@@ -667,10 +609,8 @@
 
     const-string/jumbo v1, "maybeQueueReadyJobsForExecutionLocked: Running jobs."
 
-    .line 3536
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3538
     :cond_5
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -678,7 +618,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/job/JobSchedulerService;->noteJobsPending(Ljava/util/List;)V
 
-    .line 3539
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-static {v0}, Lcom/android/server/job/JobSchedulerService;->-$$Nest$fgetmPendingJobQueue(Lcom/android/server/job/JobSchedulerService;)Lcom/android/server/job/PendingJobQueue;
@@ -689,7 +628,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/job/PendingJobQueue;->addAll(Ljava/util/List;)V
 
-    .line 3566
     :cond_6
     :goto_2
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->reset()V
@@ -702,13 +640,10 @@
 
     const/4 v0, 0x0
 
-    .line 3571
     iput v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->forceBatchedCount:I
 
-    .line 3572
     iput v0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->unbatchedCount:I
 
-    .line 3573
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$MaybeReadyJobQueueFunctor;->runnableJobs:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V

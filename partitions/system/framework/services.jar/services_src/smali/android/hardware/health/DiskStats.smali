@@ -38,7 +38,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 20
     new-instance v0, Landroid/hardware/health/DiskStats$1;
 
     invoke-direct {v0}, Landroid/hardware/health/DiskStats$1;-><init>()V
@@ -51,42 +50,30 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 7
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->reads:J
 
-    .line 8
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->readMerges:J
 
-    .line 9
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->readSectors:J
 
-    .line 10
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->readTicks:J
 
-    .line 11
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->writes:J
 
-    .line 12
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->writeMerges:J
 
-    .line 13
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->writeSectors:J
 
-    .line 14
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->writeTicks:J
 
-    .line 15
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->ioInFlight:J
 
-    .line 16
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->ioTicks:J
 
-    .line 17
     iput-wide v0, p0, Landroid/hardware/health/DiskStats;->ioInQueue:J
 
     return-void
@@ -97,7 +84,6 @@
 .method public describeContents()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -106,7 +92,6 @@
 .method public final getStability()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -115,12 +100,10 @@
 .method public final readFromParcel(Landroid/os/Parcel;)V
     .locals 7
 
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -133,7 +116,6 @@
 
     if-lt v1, v2, :cond_17
 
-    .line 58
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -152,12 +134,10 @@
     :goto_0
     add-int/2addr v0, v1
 
-    .line 84
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 82
     :cond_0
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -165,7 +145,6 @@
 
     throw p0
 
-    .line 59
     :cond_1
     :try_start_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -174,7 +153,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->reads:J
 
-    .line 60
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -191,7 +169,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_2
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -199,7 +176,6 @@
 
     throw p0
 
-    .line 61
     :cond_3
     :try_start_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -208,7 +184,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->readMerges:J
 
-    .line 62
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -225,7 +200,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_4
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -233,7 +207,6 @@
 
     throw p0
 
-    .line 63
     :cond_5
     :try_start_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -242,7 +215,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->readSectors:J
 
-    .line 64
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -259,7 +231,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_6
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -267,7 +238,6 @@
 
     throw p0
 
-    .line 65
     :cond_7
     :try_start_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -276,7 +246,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->readTicks:J
 
-    .line 66
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -293,7 +262,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_8
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -301,7 +269,6 @@
 
     throw p0
 
-    .line 67
     :cond_9
     :try_start_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -310,7 +277,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->writes:J
 
-    .line 68
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -327,7 +293,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_a
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -335,7 +300,6 @@
 
     throw p0
 
-    .line 69
     :cond_b
     :try_start_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -344,7 +308,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->writeMerges:J
 
-    .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -361,7 +324,6 @@
 
     goto/16 :goto_0
 
-    .line 82
     :cond_c
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -369,7 +331,6 @@
 
     throw p0
 
-    .line 71
     :cond_d
     :try_start_7
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -378,7 +339,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->writeSectors:J
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -395,7 +355,6 @@
 
     goto/16 :goto_0
 
-    .line 82
     :cond_e
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -403,7 +362,6 @@
 
     throw p0
 
-    .line 73
     :cond_f
     :try_start_8
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -412,7 +370,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->writeTicks:J
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -429,7 +386,6 @@
 
     goto/16 :goto_0
 
-    .line 82
     :cond_10
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -437,7 +393,6 @@
 
     throw p0
 
-    .line 75
     :cond_11
     :try_start_9
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -446,7 +401,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->ioInFlight:J
 
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -463,7 +417,6 @@
 
     goto/16 :goto_0
 
-    .line 82
     :cond_12
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -471,7 +424,6 @@
 
     throw p0
 
-    .line 77
     :cond_13
     :try_start_a
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -480,7 +432,6 @@
 
     iput-wide v5, p0, Landroid/hardware/health/DiskStats;->ioTicks:J
 
-    .line 78
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -497,7 +448,6 @@
 
     goto/16 :goto_0
 
-    .line 82
     :cond_14
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -505,7 +455,6 @@
 
     throw p0
 
-    .line 79
     :cond_15
     :try_start_b
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -522,12 +471,10 @@
 
     add-int/2addr v0, v1
 
-    .line 84
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 82
     :cond_16
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -540,7 +487,6 @@
 
     goto :goto_1
 
-    .line 57
     :cond_17
     :try_start_c
     new-instance p0, Landroid/os/BadParcelableException;
@@ -558,7 +504,6 @@
 
     if-le v0, v4, :cond_18
 
-    .line 82
     new-instance p0, Landroid/os/BadParcelableException;
 
     invoke-direct {p0, v3}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
@@ -568,95 +513,76 @@
     :cond_18
     add-int/2addr v0, v1
 
-    .line 84
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 85
     throw p0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 34
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p2
 
     const/4 v0, 0x0
 
-    .line 35
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 36
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->reads:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 37
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->readMerges:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 38
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->readSectors:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 39
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->readTicks:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 40
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->writes:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 41
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->writeMerges:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 42
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->writeSectors:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 43
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->writeTicks:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 44
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->ioInFlight:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 45
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->ioTicks:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 46
     iget-wide v0, p0, Landroid/hardware/health/DiskStats;->ioInQueue:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p0
 
-    .line 48
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->setDataPosition(I)V
 
     sub-int p2, p0, p2
 
-    .line 49
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 50
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/Transition;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/Transition$$ExternalSyntheticLambda17;->f$0:Lcom/android/server/wm/Transition;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/Transition$$ExternalSyntheticLambda17;->f$0:Lcom/android/server/wm/Transition;
 
     invoke-static {p0}, Lcom/android/server/wm/Transition;->$r8$lambda$mQzTeV4kXtOurVEczjlyR65dhVA(Lcom/android/server/wm/Transition;)V

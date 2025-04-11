@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 41
     invoke-static {}, Lcom/samsung/android/camera/Logger$ID;->values()[Lcom/samsung/android/camera/Logger$ID;
 
     move-result-object v0
@@ -32,15 +31,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 42
     iput-object v0, p0, Lcom/samsung/android/camera/Logger;->mLogQueue:Ljava/util/Queue;
 
-    .line 47
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
@@ -51,7 +47,6 @@
 
     const-string v0, "New Logger Instance"
 
-    .line 48
     invoke-static {p0, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -60,7 +55,6 @@
 .method public static dumpLog(Lcom/samsung/android/camera/Logger$ID;Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,7 +75,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 79
     invoke-static {p0}, Lcom/samsung/android/camera/Logger;->getInstance(Lcom/samsung/android/camera/Logger$ID;)Lcom/samsung/android/camera/Logger;
 
     move-result-object p0
@@ -98,7 +91,6 @@
 
     monitor-enter v0
 
-    .line 52
     :try_start_0
     sget-object v1, Lcom/samsung/android/camera/Logger;->mInstance:[Lcom/samsung/android/camera/Logger;
 
@@ -110,7 +102,6 @@
 
     if-nez v1, :cond_0
 
-    .line 53
     sget-object v1, Lcom/samsung/android/camera/Logger;->mInstance:[Lcom/samsung/android/camera/Logger;
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -123,7 +114,6 @@
 
     aput-object v3, v1, v2
 
-    .line 55
     :cond_0
     sget-object v1, Lcom/samsung/android/camera/Logger;->mInstance:[Lcom/samsung/android/camera/Logger;
 
@@ -150,20 +140,17 @@
 .method public static log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
     .locals 4
 
-    .line 60
     :try_start_0
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss.SSS Z"
 
-    .line 61
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 62
     invoke-static {p0}, Lcom/samsung/android/camera/Logger;->getInstance(Lcom/samsung/android/camera/Logger$ID;)Lcom/samsung/android/camera/Logger;
 
     move-result-object p0
@@ -178,7 +165,6 @@
 
     invoke-direct {v3}, Ljava/util/Date;-><init>()V
 
-    .line 63
     invoke-virtual {v0, v3}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
@@ -195,7 +181,6 @@
 
     move-result-object p1
 
-    .line 62
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/Logger;->addLogInternal(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -211,7 +196,6 @@
 
     monitor-enter p0
 
-    .line 70
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/Logger;->mLogQueue:Ljava/util/Queue;
@@ -224,14 +208,12 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 71
     iget-object v0, p0, Lcom/samsung/android/camera/Logger;->mLogQueue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 74
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/camera/Logger;->mLogQueue:Ljava/util/Queue;
 
@@ -239,7 +221,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 75
     monitor-exit p0
 
     return-void
@@ -257,7 +238,6 @@
 
     monitor-enter p0
 
-    .line 83
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/Logger;->mLogQueue:Ljava/util/Queue;
 
@@ -265,7 +245,6 @@
 
     move-result-object v0
 
-    .line 85
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -273,7 +252,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 86
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,7 +278,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_0
     monitor-exit p0
 

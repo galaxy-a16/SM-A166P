@@ -22,7 +22,6 @@
 .method public static synthetic $r8$lambda$dK3GcovMUwwm4jd8cYjeOIRUJJA(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;ILcom/android/server/pm/pkg/PackageStateInternal;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->lambda$initializeForUser$0(ILcom/android/server/pm/pkg/PackageStateInternal;)V
 
     return-void
@@ -31,7 +30,6 @@
 .method public static bridge synthetic -$$Nest$maddPackageUser(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->addPackageUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
 
     move-result-object p0
@@ -42,34 +40,28 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1490
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1487
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
-    .line 1488
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mInitializedUsers:Ljava/util/Set;
 
-    .line 1491
     iput-object p1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mContext:Landroid/content/Context;
 
-    .line 1492
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mPackageManager:Landroid/content/pm/IPackageManager;
 
-    .line 1493
     const-class p1, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -86,14 +78,12 @@
 .method private synthetic lambda$initializeForUser$0(ILcom/android/server/pm/pkg/PackageStateInternal;)V
     .locals 1
 
-    .line 1508
     invoke-interface {p2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1509
     invoke-interface {p2, p1}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v0
@@ -104,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1510
     invoke-virtual {p0, p2, p1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->addPackageUser(Lcom/android/server/pm/pkg/PackageState;I)Lcom/android/server/pm/pkg/PackageState;
 
     :cond_0
@@ -116,12 +105,10 @@
 .method public final addPackageUser(Lcom/android/server/pm/pkg/PackageState;I)Lcom/android/server/pm/pkg/PackageState;
     .locals 3
 
-    .line 1563
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1564
     :try_start_0
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
@@ -137,14 +124,12 @@
 
     if-nez v1, :cond_0
 
-    .line 1566
     new-instance v1, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, p1, v2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;-><init>(Lcom/android/server/pm/pkg/PackageState;Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers-IA;)V
 
-    .line 1567
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getPackageName()Ljava/lang/String;
@@ -155,11 +140,9 @@
 
     goto :goto_0
 
-    .line 1569
     :cond_0
     invoke-static {v1, p1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fputmPackageState(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;Lcom/android/server/pm/pkg/PackageState;)V
 
-    .line 1571
     :goto_0
     invoke-static {v1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmInstalledUsers(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Ljava/util/Set;
 
@@ -171,7 +154,6 @@
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1572
     invoke-static {v1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmPackageState(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Lcom/android/server/pm/pkg/PackageState;
 
     move-result-object p0
@@ -183,7 +165,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1573
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -194,7 +175,6 @@
 .method public final addPackageUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
     .locals 1
 
-    .line 1551
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
     invoke-virtual {v0, p1}, Landroid/content/pm/PackageManagerInternal;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
@@ -203,7 +183,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1553
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -234,7 +213,6 @@
 
     return-object p0
 
-    .line 1557
     :cond_0
     invoke-virtual {p0, v0, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->addPackageUser(Lcom/android/server/pm/pkg/PackageState;I)Lcom/android/server/pm/pkg/PackageState;
 
@@ -246,7 +224,6 @@
 .method public doesTargetDefineOverlayable(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 1674
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->getPackageStateForUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
 
     move-result-object p0
@@ -259,7 +236,6 @@
 
     goto :goto_0
 
-    .line 1675
     :cond_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageState;->getAndroidPackage()Lcom/android/server/pm/pkg/AndroidPackage;
 
@@ -268,7 +244,6 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 1682
     :try_start_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplits()Ljava/util/List;
 
@@ -290,14 +265,12 @@
 
     move-result-object p1
 
-    .line 1683
     invoke-virtual {p1}, Landroid/content/res/ApkAssets;->definesOverlayable()Z
 
     move-result p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1687
     :try_start_1
     invoke-virtual {p1}, Landroid/content/res/ApkAssets;->close()V
     :try_end_1
@@ -316,12 +289,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 1691
     :catchall_2
     :cond_1
     throw p0
 
-    .line 1677
     :cond_2
     new-instance p0, Ljava/io/IOException;
 
@@ -335,7 +306,6 @@
 .method public dump(Ljava/io/PrintWriter;Lcom/android/server/om/DumpState;)V
     .locals 6
 
-    .line 1722
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v0
@@ -343,17 +313,14 @@
     :try_start_0
     const-string v1, "AndroidPackage cache"
 
-    .line 1723
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1725
     invoke-virtual {p2}, Lcom/android/server/om/DumpState;->isVerbose()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 1726
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,12 +347,10 @@
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1727
     monitor-exit v0
 
     return-void
 
-    .line 1730
     :cond_0
     iget-object p2, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
@@ -397,15 +362,12 @@
 
     const-string p0, "    <empty>"
 
-    .line 1731
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1732
     monitor-exit v0
 
     return-void
 
-    .line 1735
     :cond_1
     iget-object p2, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
@@ -418,7 +380,6 @@
     :goto_0
     if-ge v1, p2, :cond_2
 
-    .line 1736
     iget-object v2, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -427,7 +388,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1737
     iget-object v3, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -436,7 +396,6 @@
 
     check-cast v3, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;
 
-    .line 1738
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -469,7 +428,6 @@
 
     const-string v2, ", "
 
-    .line 1739
     invoke-static {v3}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmInstalledUsers(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Ljava/util/Set;
 
     move-result-object v3
@@ -484,7 +442,6 @@
 
     goto :goto_0
 
-    .line 1741
     :cond_2
     monitor-exit v0
 
@@ -503,7 +460,6 @@
 .method public enforcePermission(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1696
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
@@ -514,12 +470,10 @@
 .method public forgetAllPackageInfos(I)V
     .locals 3
 
-    .line 1700
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1703
     :try_start_0
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
@@ -532,7 +486,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 1704
     iget-object v2, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -547,7 +500,6 @@
 
     goto :goto_0
 
-    .line 1706
     :cond_0
     monitor-exit v0
 
@@ -566,7 +518,6 @@
 .method public getConfigSignaturePackage()Ljava/lang/String;
     .locals 2
 
-    .line 1640
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
     const/16 v0, 0xd
@@ -577,7 +528,6 @@
 
     move-result-object p0
 
-    .line 1643
     array-length v0, p0
 
     if-nez v0, :cond_0
@@ -596,7 +546,6 @@
 .method public getNamedActors()Ljava/util/Map;
     .locals 0
 
-    .line 1621
     invoke-static {}, Lcom/android/server/SystemConfig;->getInstance()Lcom/android/server/SystemConfig;
 
     move-result-object p0
@@ -611,7 +560,6 @@
 .method public getOverlayableForTarget(Ljava/lang/String;Ljava/lang/String;I)Landroid/content/om/OverlayableInfo;
     .locals 0
 
-    .line 1651
     invoke-virtual {p0, p1, p3}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->getPackageStateForUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
 
     move-result-object p0
@@ -624,7 +572,6 @@
 
     goto :goto_0
 
-    .line 1652
     :cond_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageState;->getAndroidPackage()Lcom/android/server/pm/pkg/AndroidPackage;
 
@@ -633,7 +580,6 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 1659
     :try_start_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplits()Ljava/util/List;
 
@@ -655,14 +601,12 @@
 
     move-result-object p1
 
-    .line 1660
     invoke-virtual {p1, p2}, Landroid/content/res/ApkAssets;->getOverlayableInfo(Ljava/lang/String;)Landroid/content/om/OverlayableInfo;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1664
     :try_start_1
     invoke-virtual {p1}, Landroid/content/res/ApkAssets;->close()V
     :try_end_1
@@ -681,12 +625,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 1668
     :catchall_2
     :cond_1
     throw p0
 
-    .line 1654
     :cond_2
     new-instance p0, Ljava/io/IOException;
 
@@ -700,12 +642,10 @@
 .method public getPackageStateForUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
     .locals 5
 
-    .line 1530
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1531
     :try_start_0
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
@@ -717,7 +657,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1532
     invoke-static {v1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmInstalledUsers(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Ljava/util/Set;
 
     move-result-object v2
@@ -732,7 +671,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1533
     invoke-static {v1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmPackageState(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Lcom/android/server/pm/pkg/PackageState;
 
     move-result-object p0
@@ -746,7 +684,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 1536
     :try_start_1
     iget-object v2, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -759,13 +696,11 @@
 
     if-nez v2, :cond_1
 
-    .line 1537
     :try_start_2
     monitor-exit v0
 
     return-object v1
 
-    .line 1544
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->addPackageUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
 
@@ -780,7 +715,6 @@
 
     const-string v2, "OverlayManager"
 
-    .line 1540
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -803,7 +737,6 @@
 
     invoke-static {v2, p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1542
     monitor-exit v0
 
     return-object v1
@@ -811,7 +744,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1545
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -822,7 +754,6 @@
 .method public getPackagesForUid(I)[Ljava/lang/String;
     .locals 0
 
-    .line 1713
     :try_start_0
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -843,12 +774,10 @@
 .method public initializeForUser(I)Landroid/util/ArrayMap;
     .locals 7
 
-    .line 1504
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1505
     :try_start_0
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mInitializedUsers:Ljava/util/Set;
 
@@ -862,7 +791,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1506
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mInitializedUsers:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -871,7 +799,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1507
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
     new-instance v2, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$$ExternalSyntheticLambda0;
@@ -880,13 +807,11 @@
 
     invoke-virtual {v1, v2}, Landroid/content/pm/PackageManagerInternal;->forEachPackageState(Ljava/util/function/Consumer;)V
 
-    .line 1515
     :cond_0
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 1516
     iget-object v2, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
@@ -898,7 +823,6 @@
     :goto_0
     if-ge v3, v2, :cond_2
 
-    .line 1517
     iget-object v4, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v4, v3}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -907,7 +831,6 @@
 
     check-cast v4, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;
 
-    .line 1518
     invoke-static {v4}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmInstalledUsers(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Ljava/util/Set;
 
     move-result-object v5
@@ -922,7 +845,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 1519
     iget-object v5, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     invoke-virtual {v5, v3}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -942,7 +864,6 @@
 
     goto :goto_0
 
-    .line 1522
     :cond_2
     monitor-exit v0
 
@@ -951,7 +872,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1523
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -962,7 +882,6 @@
 .method public isInstantApp(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 1615
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManagerInternal;->isInstantApp(Ljava/lang/String;I)Z
@@ -975,7 +894,6 @@
 .method public onPackageAdded(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
     .locals 0
 
-    .line 1600
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->addPackageUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
 
     move-result-object p0
@@ -986,7 +904,6 @@
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 0
 
-    .line 1610
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->removePackageUser(Ljava/lang/String;I)V
 
     return-void
@@ -995,7 +912,6 @@
 .method public onPackageUpdated(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
     .locals 0
 
-    .line 1606
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->addPackageUser(Ljava/lang/String;I)Lcom/android/server/pm/pkg/PackageState;
 
     move-result-object p0
@@ -1006,12 +922,10 @@
 .method public final removePackageUser(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;I)V
     .locals 2
 
-    .line 1590
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1591
     :try_start_0
     invoke-static {p1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmInstalledUsers(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Ljava/util/Set;
 
@@ -1023,7 +937,6 @@
 
     invoke-interface {v1, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 1592
     invoke-static {p1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmInstalledUsers(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Ljava/util/Set;
 
     move-result-object p2
@@ -1034,7 +947,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1593
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     invoke-static {p1}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;->-$$Nest$fgetmPackageState(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;)Lcom/android/server/pm/pkg/PackageState;
@@ -1047,7 +959,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1595
     :cond_0
     monitor-exit v0
 
@@ -1066,12 +977,10 @@
 .method public final removePackageUser(Ljava/lang/String;I)V
     .locals 2
 
-    .line 1579
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 1580
     :try_start_0
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mCache:Landroid/util/ArrayMap;
 
@@ -1083,16 +992,13 @@
 
     if-nez p1, :cond_0
 
-    .line 1582
     monitor-exit v0
 
     return-void
 
-    .line 1584
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->removePackageUser(Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl$PackageStateUsers;I)V
 
-    .line 1585
     monitor-exit v0
 
     return-void
@@ -1112,7 +1018,6 @@
 
     const/4 v0, 0x0
 
-    .line 1630
     :try_start_0
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$PackageManagerHelperImpl;->mPackageManager:Landroid/content/pm/IPackageManager;
 

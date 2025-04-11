@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 52
     new-instance v0, Lcom/android/server/pm/permission/CompatibilityPermissionInfo;
 
     const-string v1, "android.permission.POST_NOTIFICATIONS"
@@ -52,20 +51,16 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 2
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/pm/permission/CompatibilityPermissionInfo;->mName:Ljava/lang/String;
 
-    .line 82
     const-class v0, Landroid/annotation/NonNull;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p1}, Lcom/android/internal/util/AnnotationValidations;->validate(Ljava/lang/Class;Landroid/annotation/NonNull;Ljava/lang/Object;)V
 
-    .line 84
     iput p2, p0, Lcom/android/server/pm/permission/CompatibilityPermissionInfo;->mSdkVersion:I
 
     return-void
@@ -76,7 +71,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 91
     iget-object p0, p0, Lcom/android/server/pm/permission/CompatibilityPermissionInfo;->mName:Ljava/lang/String;
 
     return-object p0
@@ -85,7 +79,6 @@
 .method public getSdkVersion()I
     .locals 0
 
-    .line 96
     iget p0, p0, Lcom/android/server/pm/permission/CompatibilityPermissionInfo;->mSdkVersion:I
 
     return p0

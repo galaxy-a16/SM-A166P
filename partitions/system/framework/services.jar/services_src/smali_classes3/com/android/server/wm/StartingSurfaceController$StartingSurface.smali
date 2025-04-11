@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/wm/StartingSurfaceController;Lcom/android/server/wm/Task;)V
     .locals 0
 
-    .line 281
     iput-object p1, p0, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;->this$0:Lcom/android/server/wm/StartingSurfaceController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 282
     iput-object p2, p0, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;->mTask:Lcom/android/server/wm/Task;
 
     return-void
@@ -29,7 +27,6 @@
 .method public remove(Z)V
     .locals 2
 
-    .line 291
     iget-object v0, p0, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;->this$0:Lcom/android/server/wm/StartingSurfaceController;
 
     invoke-static {v0}, Lcom/android/server/wm/StartingSurfaceController;->-$$Nest$fgetmService(Lcom/android/server/wm/StartingSurfaceController;)Lcom/android/server/wm/WindowManagerService;
@@ -42,7 +39,6 @@
 
     monitor-enter v0
 
-    .line 292
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/StartingSurfaceController$StartingSurface;->this$0:Lcom/android/server/wm/StartingSurfaceController;
 
@@ -58,7 +54,6 @@
 
     invoke-virtual {v1, p0, p1}, Lcom/android/server/wm/TaskOrganizerController;->removeStartingWindow(Lcom/android/server/wm/Task;Z)V
 
-    .line 293
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

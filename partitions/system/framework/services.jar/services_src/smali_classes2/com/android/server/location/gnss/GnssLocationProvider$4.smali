@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$qua2Fj1zSKDVebVDFl50LsPWIFU(Lcom/android/server/location/gnss/GnssLocationProvider$4;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/GnssLocationProvider$4;->lambda$onReceive$0()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssLocationProvider;)V
     .locals 0
 
-    .line 670
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$onReceive$0()V
     .locals 3
 
-    .line 692
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -62,12 +59,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 673
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 674
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,7 +88,6 @@
     :cond_0
     const-string p2, "android.telephony.action.CARRIER_CONFIG_CHANGED"
 
-    .line 679
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -110,13 +104,11 @@
 
     goto/16 :goto_0
 
-    .line 682
     :cond_1
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionId()I
 
     move-result p1
 
-    .line 683
     iget-object p2, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     invoke-static {p2}, Lcom/android/server/location/gnss/GnssLocationProvider;->-$$Nest$fgetmSubscriptionManager(Lcom/android/server/location/gnss/GnssLocationProvider;)Landroid/telephony/SubscriptionManager;
@@ -125,7 +117,6 @@
 
     const/4 v1, 0x0
 
-    .line 684
     invoke-static {p1, v1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -136,7 +127,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 686
     iget-object p2, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     invoke-virtual {p1}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
@@ -145,7 +135,6 @@
 
     iput p1, p2, Lcom/android/server/location/gnss/GnssLocationProvider;->mSimSlotId:I
 
-    .line 687
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,13 +155,11 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 689
     :cond_2
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     iget p1, p1, Lcom/android/server/location/gnss/GnssLocationProvider;->mSimSlotId:I
 
-    .line 690
     invoke-static {p1, v1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -183,10 +170,8 @@
 
     const-string/jumbo p2, "persist.sys.gps.dds.subId"
 
-    .line 689
     invoke-static {p2, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 691
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     new-instance p2, Lcom/android/server/location/gnss/GnssLocationProvider$4$$ExternalSyntheticLambda0;
@@ -195,7 +180,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/location/gnss/GnssLocationProvider;->postWithWakeLockHeld(Ljava/lang/Runnable;)V
 
-    .line 693
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     iget-object p1, p1, Lcom/android/server/location/gnss/GnssLocationProvider;->mSecGpsSimHistoryDump:Ljava/util/ArrayList;
@@ -208,14 +192,12 @@
 
     if-le p1, p2, :cond_3
 
-    .line 694
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
     iget-object p1, p1, Lcom/android/server/location/gnss/GnssLocationProvider;->mSecGpsSimHistoryDump:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 696
     :cond_3
     iget-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
@@ -231,7 +213,6 @@
 
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 
-    .line 697
     invoke-static {v0}, Lcom/android/server/location/gnss/GnssLocationProvider;->-$$Nest$mgetTimestamp(Lcom/android/server/location/gnss/GnssLocationProvider;)Ljava/lang/String;
 
     move-result-object v0
@@ -252,10 +233,8 @@
 
     move-result-object p2
 
-    .line 696
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 699
     :cond_4
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssLocationProvider$4;->this$0:Lcom/android/server/location/gnss/GnssLocationProvider;
 

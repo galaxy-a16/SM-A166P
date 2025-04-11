@@ -11,12 +11,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 23
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 24
     iput-wide v0, p0, Lorg/apache/commons/compress/compressors/CompressorInputStream;->bytesRead:J
 
     return-void
@@ -29,7 +27,6 @@
 
     int-to-long v0, p1
 
-    .line 35
     invoke-virtual {p0, v0, v1}, Lorg/apache/commons/compress/compressors/CompressorInputStream;->count(J)V
 
     return-void
@@ -44,7 +41,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 46
     iget-wide v0, p0, Lorg/apache/commons/compress/compressors/CompressorInputStream;->bytesRead:J
 
     add-long/2addr v0, p1

@@ -16,13 +16,10 @@
 .method public constructor <init>(Ljava/util/Set;Ljava/lang/Object;)V
     .locals 0
 
-    .line 5668
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5669
     iput-object p1, p0, Lcom/android/server/pm/Settings$KeySetToValueMap;->mKeySet:Ljava/util/Set;
 
-    .line 5670
     iput-object p2, p0, Lcom/android/server/pm/Settings$KeySetToValueMap;->mValue:Ljava/lang/Object;
 
     return-void
@@ -33,7 +30,6 @@
 .method public clear()V
     .locals 0
 
-    .line 5715
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -44,7 +40,6 @@
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 5685
     iget-object p0, p0, Lcom/android/server/pm/Settings$KeySetToValueMap;->mKeySet:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -57,7 +52,6 @@
 .method public containsValue(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 5690
     iget-object p0, p0, Lcom/android/server/pm/Settings$KeySetToValueMap;->mValue:Ljava/lang/Object;
 
     if-ne p0, p1, :cond_0
@@ -76,7 +70,6 @@
 .method public entrySet()Ljava/util/Set;
     .locals 0
 
-    .line 5730
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -87,7 +80,6 @@
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 5695
     iget-object p0, p0, Lcom/android/server/pm/Settings$KeySetToValueMap;->mValue:Ljava/lang/Object;
 
     return-object p0
@@ -96,7 +88,6 @@
 .method public isEmpty()Z
     .locals 0
 
-    .line 5680
     iget-object p0, p0, Lcom/android/server/pm/Settings$KeySetToValueMap;->mKeySet:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->isEmpty()Z
@@ -109,7 +100,6 @@
 .method public keySet()Ljava/util/Set;
     .locals 0
 
-    .line 5720
     iget-object p0, p0, Lcom/android/server/pm/Settings$KeySetToValueMap;->mKeySet:Ljava/util/Set;
 
     return-object p0
@@ -118,7 +108,6 @@
 .method public put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 5700
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -129,7 +118,6 @@
 .method public putAll(Ljava/util/Map;)V
     .locals 0
 
-    .line 5710
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -140,7 +128,6 @@
 .method public remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 5705
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -151,7 +138,6 @@
 .method public size()I
     .locals 0
 
-    .line 5675
     iget-object p0, p0, Lcom/android/server/pm/Settings$KeySetToValueMap;->mKeySet:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->size()I
@@ -164,7 +150,6 @@
 .method public values()Ljava/util/Collection;
     .locals 0
 
-    .line 5725
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

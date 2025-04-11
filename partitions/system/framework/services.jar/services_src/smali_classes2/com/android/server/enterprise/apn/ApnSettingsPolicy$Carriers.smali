@@ -15,7 +15,6 @@
 
     const-string v0, "content://telephony/carriers"
 
-    .line 857
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -24,7 +23,6 @@
 
     const-string v0, "content://telephony/carriers/preferapn"
 
-    .line 858
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

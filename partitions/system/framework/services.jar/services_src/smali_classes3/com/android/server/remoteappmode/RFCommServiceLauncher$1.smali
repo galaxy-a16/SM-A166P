@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$ulfQiR8b3mFjnZpsQgP5oVy82GM(Lcom/android/server/remoteappmode/RFCommServiceLauncher$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/remoteappmode/RFCommServiceLauncher$1;->lambda$onServiceDisconnected$0()V
 
     return-void
@@ -23,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/remoteappmode/RFCommServiceLauncher;)V
     .locals 0
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/remoteappmode/RFCommServiceLauncher$1;->this$0:Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,14 +32,12 @@
 .method private synthetic lambda$onServiceDisconnected$0()V
     .locals 2
 
-    .line 77
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.mdx.instanthotspot.action.RFCOMM_SERVICE_DISCONNECTED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/remoteappmode/RFCommServiceLauncher$1;->this$0:Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
     invoke-static {p0}, Lcom/android/server/remoteappmode/RFCommServiceLauncher;->-$$Nest$fgetmContext(Lcom/android/server/remoteappmode/RFCommServiceLauncher;)Landroid/content/Context;
@@ -62,10 +58,8 @@
 
     const-string p2, "HotspotRFCommService is connected"
 
-    .line 65
     invoke-static {p1, p2}, Lcom/android/server/remoteappmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iget-object p0, p0, Lcom/android/server/remoteappmode/RFCommServiceLauncher$1;->this$0:Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
     const/4 p1, 0x1
@@ -82,17 +76,14 @@
 
     const-string v0, "HotspotRFCommService is disconnected"
 
-    .line 72
     invoke-static {p1, v0}, Lcom/android/server/remoteappmode/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     iget-object p1, p0, Lcom/android/server/remoteappmode/RFCommServiceLauncher$1;->this$0:Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/remoteappmode/RFCommServiceLauncher;->-$$Nest$fputmBounded(Lcom/android/server/remoteappmode/RFCommServiceLauncher;Z)V
 
-    .line 76
     iget-object p1, p0, Lcom/android/server/remoteappmode/RFCommServiceLauncher$1;->this$0:Lcom/android/server/remoteappmode/RFCommServiceLauncher;
 
     invoke-static {p1}, Lcom/android/server/remoteappmode/RFCommServiceLauncher;->-$$Nest$fgetmHandler(Lcom/android/server/remoteappmode/RFCommServiceLauncher;)Landroid/os/Handler;

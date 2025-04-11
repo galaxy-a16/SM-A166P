@@ -37,7 +37,6 @@
 .method public static synthetic $r8$lambda$vbmENPQEOKpFnfYOIhYE7xB0YMI(Lcom/android/server/blob/BlobStoreSession;Landroid/os/RevocableFileDescriptor;Ljava/io/IOException;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/blob/BlobStoreSession;->lambda$trackRevocableFdLocked$0(Landroid/os/RevocableFileDescriptor;Ljava/io/IOException;)V
 
     return-void
@@ -46,17 +45,14 @@
 .method public constructor <init>(Landroid/content/Context;JLandroid/app/blob/BlobHandle;ILjava/lang/String;JLcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;)V
     .locals 1
 
-    .line 128
     invoke-direct {p0}, Landroid/app/blob/IBlobStoreSession$Stub;-><init>()V
 
-    .line 96
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
-    .line 110
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -65,35 +61,26 @@
 
     const/4 v0, 0x0
 
-    .line 117
     iput v0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 120
     new-instance v0, Lcom/android/server/blob/BlobAccessMode;
 
     invoke-direct {v0}, Lcom/android/server/blob/BlobAccessMode;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
-    .line 129
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreSession;->mContext:Landroid/content/Context;
 
-    .line 130
     iput-object p4, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobHandle:Landroid/app/blob/BlobHandle;
 
-    .line 131
     iput-wide p2, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionId:J
 
-    .line 132
     iput p5, p0, Lcom/android/server/blob/BlobStoreSession;->mOwnerUid:I
 
-    .line 133
     iput-object p6, p0, Lcom/android/server/blob/BlobStoreSession;->mOwnerPackageName:Ljava/lang/String;
 
-    .line 134
     iput-wide p7, p0, Lcom/android/server/blob/BlobStoreSession;->mCreationTimeMs:J
 
-    .line 135
     iput-object p9, p0, Lcom/android/server/blob/BlobStoreSession;->mListener:Lcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;
 
     return-void
@@ -102,7 +89,6 @@
 .method public constructor <init>(Landroid/content/Context;JLandroid/app/blob/BlobHandle;ILjava/lang/String;Lcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;)V
     .locals 10
 
-    .line 141
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
@@ -121,7 +107,6 @@
 
     move-object/from16 v9, p7
 
-    .line 140
     invoke-direct/range {v0 .. v9}, Lcom/android/server/blob/BlobStoreSession;-><init>(Landroid/content/Context;JLandroid/app/blob/BlobHandle;ILjava/lang/String;JLcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;)V
 
     return-void
@@ -132,21 +117,18 @@
 
     const-string v0, "id"
 
-    .line 597
     invoke-static {p0, v0}, Lcom/android/internal/util/XmlUtils;->readLongAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)J
 
     move-result-wide v3
 
     const-string/jumbo v0, "p"
 
-    .line 598
     invoke-static {p0, v0}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
     const-string/jumbo v0, "u"
 
-    .line 599
     invoke-static {p0, v0}, Lcom/android/internal/util/XmlUtils;->readIntAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
     move-result v6
@@ -157,14 +139,12 @@
 
     const-string p1, "crt"
 
-    .line 601
     invoke-static {p0, p1}, Lcom/android/internal/util/XmlUtils;->readLongAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)J
 
     move-result-wide v0
 
     goto :goto_0
 
-    .line 602
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -173,7 +153,6 @@
     :goto_0
     move-wide v8, v0
 
-    .line 604
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result p1
@@ -184,7 +163,6 @@
 
     move-object v11, v5
 
-    .line 607
     :cond_1
     :goto_1
     invoke-static {p0, p1}, Lcom/android/internal/util/XmlUtils;->nextElementWithin(Lorg/xmlpull/v1/XmlPullParser;I)Z
@@ -195,7 +173,6 @@
 
     const-string v1, "bh"
 
-    .line 608
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -206,7 +183,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 609
     invoke-static {p0}, Landroid/app/blob/BlobHandle;->createFromXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/app/blob/BlobHandle;
 
     move-result-object v5
@@ -216,7 +192,6 @@
     :cond_2
     const-string v1, "am"
 
-    .line 610
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -227,7 +202,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 611
     invoke-static {p0}, Lcom/android/server/blob/BlobAccessMode;->createFromXml(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/blob/BlobAccessMode;
 
     move-result-object v11
@@ -241,7 +215,6 @@
 
     const-string p1, "blobHandle should be available"
 
-    .line 616
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -251,12 +224,10 @@
 
     const-string p1, "blobAccessMode should be available"
 
-    .line 620
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 624
     :cond_5
     new-instance p0, Lcom/android/server/blob/BlobStoreSession;
 
@@ -268,7 +239,6 @@
 
     invoke-direct/range {v1 .. v10}, Lcom/android/server/blob/BlobStoreSession;-><init>(Landroid/content/Context;JLandroid/app/blob/BlobHandle;ILjava/lang/String;JLcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;)V
 
-    .line 626
     iget-object p1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p1, v11}, Lcom/android/server/blob/BlobAccessMode;->allow(Lcom/android/server/blob/BlobAccessMode;)V
@@ -279,18 +249,15 @@
 .method private synthetic lambda$trackRevocableFdLocked$0(Landroid/os/RevocableFileDescriptor;Ljava/io/IOException;)V
     .locals 0
 
-    .line 502
     iget-object p2, p0, Lcom/android/server/blob/BlobStoreSession;->mRevocableFds:Ljava/util/ArrayList;
 
     monitor-enter p2
 
-    .line 503
     :try_start_0
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mRevocableFds:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 504
     monitor-exit p2
 
     return-void
@@ -330,7 +297,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 532
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -393,7 +359,6 @@
 
     const/4 v1, 0x1
 
-    .line 415
     invoke-virtual {p0, v0, v1}, Lcom/android/server/blob/BlobStoreSession;->closeSession(IZ)V
 
     return-void
@@ -402,20 +367,16 @@
 .method public allowPackageAccess(Ljava/lang/String;[B)V
     .locals 3
 
-    .line 328
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
     const-string/jumbo v0, "packageName must not be null"
 
-    .line 329
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 330
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 331
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -423,7 +384,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 335
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {v1}, Lcom/android/server/blob/BlobAccessMode;->getAllowedPackagesCount()I
@@ -436,17 +396,14 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 340
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/blob/BlobAccessMode;->allowPackageAccess(Ljava/lang/String;[B)V
 
-    .line 341
     monitor-exit v0
 
     return-void
 
-    .line 336
     :cond_0
     new-instance p1, Landroid/os/ParcelableException;
 
@@ -462,7 +419,6 @@
 
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
-    .line 338
     invoke-virtual {p0}, Lcom/android/server/blob/BlobAccessMode;->getAllowedPackagesCount()I
 
     move-result p0
@@ -479,7 +435,6 @@
 
     throw p1
 
-    .line 332
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -493,7 +448,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 333
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -511,7 +465,6 @@
     :catchall_0
     move-exception p0
 
-    .line 341
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -522,15 +475,12 @@
 .method public allowPublicAccess()V
     .locals 4
 
-    .line 358
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
-    .line 359
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 360
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -538,17 +488,14 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 364
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p0}, Lcom/android/server/blob/BlobAccessMode;->allowPublicAccess()V
 
-    .line 365
     monitor-exit v0
 
     return-void
 
-    .line 361
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -562,7 +509,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 362
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -580,7 +526,6 @@
     :catchall_0
     move-exception p0
 
-    .line 365
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -591,15 +536,12 @@
 .method public allowSameSignatureAccess()V
     .locals 4
 
-    .line 346
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
-    .line 347
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 348
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -607,17 +549,14 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 352
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p0}, Lcom/android/server/blob/BlobAccessMode;->allowSameSignatureAccess()V
 
-    .line 353
     monitor-exit v0
 
     return-void
 
-    .line 349
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -631,7 +570,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 350
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -649,7 +587,6 @@
     :catchall_0
     move-exception p0
 
-    .line 353
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -660,19 +597,16 @@
 .method public final assertCallerIsOwner()V
     .locals 2
 
-    .line 548
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 549
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mOwnerUid:I
 
     if-ne v0, v1, :cond_0
 
     return-void
 
-    .line 550
     :cond_0
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -702,7 +636,6 @@
 
     const/4 v0, 0x0
 
-    .line 410
     invoke-virtual {p0, v0, v0}, Lcom/android/server/blob/BlobStoreSession;->closeSession(IZ)V
 
     return-void
@@ -711,15 +644,12 @@
 .method public final closeSession(IZ)V
     .locals 3
 
-    .line 428
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
-    .line 429
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 430
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -729,12 +659,10 @@
 
     if-nez p1, :cond_0
 
-    .line 434
     monitor-exit v0
 
     return-void
 
-    .line 436
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -748,7 +676,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 437
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -763,21 +690,17 @@
 
     throw p1
 
-    .line 441
     :cond_1
     iput p1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 442
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->revokeAllFds()V
 
     if-eqz p2, :cond_2
 
-    .line 445
     iget-object p1, p0, Lcom/android/server/blob/BlobStoreSession;->mListener:Lcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;
 
     invoke-virtual {p1, p0}, Lcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;->onStateChanged(Lcom/android/server/blob/BlobStoreSession;)V
 
-    .line 447
     :cond_2
     monitor-exit v0
 
@@ -796,12 +719,10 @@
 .method public commit(Landroid/app/blob/IBlobCommitCallback;)V
     .locals 2
 
-    .line 420
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 421
     :try_start_0
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobCommitCallback:Landroid/app/blob/IBlobCommitCallback;
 
@@ -809,10 +730,8 @@
 
     const/4 v1, 0x1
 
-    .line 423
     invoke-virtual {p0, p1, v1}, Lcom/android/server/blob/BlobStoreSession;->closeSession(IZ)V
 
-    .line 424
     monitor-exit v0
 
     return-void
@@ -832,7 +751,6 @@
 
     const-wide/32 v0, 0x80000
 
-    .line 452
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -850,7 +768,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 453
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSessionFile()Ljava/io/File;
 
     move-result-object v3
@@ -865,10 +782,8 @@
 
     move-result-object v2
 
-    .line 452
     invoke-static {v0, v1, v2}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 454
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSessionFile()Ljava/io/File;
 
     move-result-object v2
@@ -902,12 +817,10 @@
 
     const-string v3, "Error computing the digest"
 
-    .line 456
     invoke-static {v2, v3, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 458
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
@@ -916,17 +829,14 @@
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 459
     throw p0
 .end method
 
 .method public destroy()V
     .locals 0
 
-    .line 483
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->revokeAllFds()V
 
-    .line 484
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSessionFile()Ljava/io/File;
 
     move-result-object p0
@@ -939,12 +849,10 @@
 .method public dump(Landroid/util/IndentingPrintWriter;Lcom/android/server/blob/BlobStoreManagerService$DumpArgs;)V
     .locals 6
 
-    .line 555
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 556
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -968,7 +876,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 557
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -987,7 +894,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 558
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1006,7 +912,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 559
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1029,7 +934,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 560
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1060,13 +964,10 @@
 
     const-string v1, "blobHandle:"
 
-    .line 562
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 563
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 564
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobHandle:Landroid/app/blob/BlobHandle;
 
     invoke-virtual {p2}, Lcom/android/server/blob/BlobStoreManagerService$DumpArgs;->shouldDumpFull()Z
@@ -1075,26 +976,20 @@
 
     invoke-virtual {v1, p1, p2}, Landroid/app/blob/BlobHandle;->dump(Landroid/util/IndentingPrintWriter;Z)V
 
-    .line 565
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p2, "accessMode:"
 
-    .line 567
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 568
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 569
     iget-object p2, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p2, p1}, Lcom/android/server/blob/BlobAccessMode;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 570
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 572
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1117,7 +1012,6 @@
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 573
     monitor-exit v0
 
     return-void
@@ -1135,12 +1029,10 @@
 .method public getBlobAccessMode()Lcom/android/server/blob/BlobAccessMode;
     .locals 1
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 193
     :try_start_0
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
@@ -1151,7 +1043,6 @@
     :catchall_0
     move-exception p0
 
-    .line 194
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1162,7 +1053,6 @@
 .method public getBlobHandle()Landroid/app/blob/BlobHandle;
     .locals 0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobHandle:Landroid/app/blob/BlobHandle;
 
     return-object p0
@@ -1171,7 +1061,6 @@
 .method public getOwnerPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 157
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mOwnerPackageName:Ljava/lang/String;
 
     return-object p0
@@ -1180,7 +1069,6 @@
 .method public getOwnerUid()I
     .locals 0
 
-    .line 153
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mOwnerUid:I
 
     return p0
@@ -1189,12 +1077,10 @@
 .method public getSessionFile()Ljava/io/File;
     .locals 2
 
-    .line 510
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionFile:Ljava/io/File;
 
     if-nez v0, :cond_0
 
-    .line 511
     iget-wide v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionId:J
 
     invoke-static {v0, v1}, Lcom/android/server/blob/BlobStoreConfig;->prepareBlobFile(J)Ljava/io/File;
@@ -1203,7 +1089,6 @@
 
     iput-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionFile:Ljava/io/File;
 
-    .line 513
     :cond_0
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionFile:Ljava/io/File;
 
@@ -1213,7 +1098,6 @@
 .method public getSessionId()J
     .locals 2
 
-    .line 149
     iget-wide v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionId:J
 
     return-wide v0
@@ -1222,7 +1106,6 @@
 .method public getSize()J
     .locals 2
 
-    .line 322
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSessionFile()Ljava/io/File;
 
     move-result-object p0
@@ -1237,12 +1120,10 @@
 .method public getState()I
     .locals 1
 
-    .line 175
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 176
     :try_start_0
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -1253,7 +1134,6 @@
     :catchall_0
     move-exception p0
 
-    .line 177
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1264,7 +1144,6 @@
 .method public hasAccess(ILjava/lang/String;)Z
     .locals 1
 
-    .line 161
     iget v0, p0, Lcom/android/server/blob/BlobStoreSession;->mOwnerUid:I
 
     if-ne v0, p1, :cond_0
@@ -1291,7 +1170,6 @@
 .method public isExpired()Z
     .locals 4
 
-    .line 204
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSessionFile()Ljava/io/File;
 
     move-result-object v0
@@ -1306,10 +1184,8 @@
 
     if-nez v2, :cond_0
 
-    .line 206
     iget-wide v0, p0, Lcom/android/server/blob/BlobStoreSession;->mCreationTimeMs:J
 
-    .line 205
     :cond_0
     invoke-static {v0, v1}, Lcom/android/server/blob/BlobStoreConfig;->hasSessionExpired(J)Z
 
@@ -1321,12 +1197,10 @@
 .method public isFinalized()Z
     .locals 2
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 199
     :try_start_0
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -1357,7 +1231,6 @@
     :catchall_0
     move-exception p0
 
-    .line 200
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1368,25 +1241,20 @@
 .method public isPackageAccessAllowed(Ljava/lang/String;[B)Z
     .locals 3
 
-    .line 371
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
     const-string/jumbo v0, "packageName must not be null"
 
-    .line 372
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "certificate"
 
-    .line 373
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkByteArrayNotEmpty([BLjava/lang/String;)[B
 
-    .line 375
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 376
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -1394,7 +1262,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 380
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/blob/BlobAccessMode;->isPackageAccessAllowed(Ljava/lang/String;[B)Z
@@ -1405,7 +1272,6 @@
 
     return p0
 
-    .line 377
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1419,7 +1285,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 378
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1437,7 +1302,6 @@
     :catchall_0
     move-exception p0
 
-    .line 381
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1448,15 +1312,12 @@
 .method public isPublicAccessAllowed()Z
     .locals 4
 
-    .line 398
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
-    .line 399
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 400
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -1464,7 +1325,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 404
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p0}, Lcom/android/server/blob/BlobAccessMode;->isPublicAccessAllowed()Z
@@ -1475,7 +1335,6 @@
 
     return p0
 
-    .line 401
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1489,7 +1348,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 402
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1507,7 +1365,6 @@
     :catchall_0
     move-exception p0
 
-    .line 405
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1518,15 +1375,12 @@
 .method public isSameSignatureAccessAllowed()Z
     .locals 4
 
-    .line 386
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
-    .line 387
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 388
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -1534,7 +1388,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 392
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p0}, Lcom/android/server/blob/BlobAccessMode;->isSameSignatureAccessAllowed()Z
@@ -1545,7 +1398,6 @@
 
     return p0
 
-    .line 389
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1559,7 +1411,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 390
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1577,7 +1428,6 @@
     :catchall_0
     move-exception p0
 
-    .line 393
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1588,12 +1438,10 @@
 .method public open()V
     .locals 4
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 166
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->isFinalized()Z
 
@@ -1603,15 +1451,12 @@
 
     const/4 v1, 0x1
 
-    .line 170
     iput v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 171
     monitor-exit v0
 
     return-void
 
-    .line 167
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1625,7 +1470,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 168
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1643,7 +1487,6 @@
     :catchall_0
     move-exception p0
 
-    .line 171
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1654,15 +1497,12 @@
 .method public openRead()Landroid/os/ParcelFileDescriptor;
     .locals 5
 
-    .line 271
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 273
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -1670,7 +1510,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 277
     invoke-static {}, Lcom/android/server/blob/BlobStoreConfig;->shouldUseRevocableFdForReads()Z
 
     move-result v1
@@ -1679,7 +1518,6 @@
 
     if-nez v1, :cond_0
 
-    .line 279
     :try_start_1
     new-instance v1, Landroid/os/ParcelFileDescriptor;
 
@@ -1700,20 +1538,17 @@
     :catch_0
     move-exception p0
 
-    .line 281
     invoke-static {p0}, Landroid/util/ExceptionUtils;->wrap(Ljava/io/IOException;)Ljava/lang/RuntimeException;
 
     move-result-object p0
 
     throw p0
 
-    .line 284
     :cond_0
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 288
     :try_start_3
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->openReadInternal()Ljava/io/FileDescriptor;
 
@@ -1721,7 +1556,6 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 289
     :try_start_4
     new-instance v1, Landroid/os/RevocableFileDescriptor;
 
@@ -1729,23 +1563,19 @@
 
     invoke-direct {v1, v3, v0}, Landroid/os/RevocableFileDescriptor;-><init>(Landroid/content/Context;Ljava/io/FileDescriptor;)V
 
-    .line 290
     iget-object v3, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v3
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 291
     :try_start_5
     iget v4, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
     if-ne v4, v2, :cond_1
 
-    .line 296
     invoke-virtual {p0, v1}, Lcom/android/server/blob/BlobStoreSession;->trackRevocableFdLocked(Landroid/os/RevocableFileDescriptor;)V
 
-    .line 297
     invoke-virtual {v1}, Landroid/os/RevocableFileDescriptor;->getRevocableFileDescriptor()Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
@@ -1754,11 +1584,9 @@
 
     return-object p0
 
-    .line 292
     :cond_1
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/io/FileDescriptor;)V
 
-    .line 293
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1771,7 +1599,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 294
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1789,7 +1616,6 @@
     :catchall_0
     move-exception p0
 
-    .line 298
     monitor-exit v3
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -1809,18 +1635,15 @@
 
     const/4 v0, 0x0
 
-    .line 300
     :goto_0
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/io/FileDescriptor;)V
 
-    .line 301
     invoke-static {p0}, Landroid/util/ExceptionUtils;->wrap(Ljava/io/IOException;)Ljava/lang/RuntimeException;
 
     move-result-object p0
 
     throw p0
 
-    .line 274
     :cond_2
     :try_start_7
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -1835,7 +1658,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 275
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1853,7 +1675,6 @@
     :catchall_1
     move-exception p0
 
-    .line 284
     monitor-exit v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
@@ -1864,7 +1685,6 @@
 .method public final openReadInternal()Ljava/io/FileDescriptor;
     .locals 2
 
-    .line 308
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSessionFile()Ljava/io/File;
 
@@ -1872,7 +1692,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 312
     invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -1887,7 +1706,6 @@
 
     return-object p0
 
-    .line 310
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1902,7 +1720,6 @@
     :catch_0
     move-exception p0
 
-    .line 315
     invoke-virtual {p0}, Landroid/system/ErrnoException;->rethrowAsIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -1915,18 +1732,14 @@
 
     const-string/jumbo v0, "offsetBytes must not be negative"
 
-    .line 213
     invoke-static {p1, p2, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(JLjava/lang/String;)J
 
-    .line 215
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 217
     :try_start_0
     iget v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
@@ -1934,12 +1747,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 221
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 225
     :try_start_1
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/blob/BlobStoreSession;->openWriteInternal(JJ)Ljava/io/FileDescriptor;
 
@@ -1947,7 +1758,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 226
     :try_start_2
     new-instance p2, Landroid/os/RevocableFileDescriptor;
 
@@ -1955,23 +1765,19 @@
 
     invoke-direct {p2, p3, p1}, Landroid/os/RevocableFileDescriptor;-><init>(Landroid/content/Context;Ljava/io/FileDescriptor;)V
 
-    .line 227
     iget-object p3, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter p3
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 228
     :try_start_3
     iget p4, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
     if-ne p4, v2, :cond_0
 
-    .line 233
     invoke-virtual {p0, p2}, Lcom/android/server/blob/BlobStoreSession;->trackRevocableFdLocked(Landroid/os/RevocableFileDescriptor;)V
 
-    .line 234
     invoke-virtual {p2}, Landroid/os/RevocableFileDescriptor;->getRevocableFileDescriptor()Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
@@ -1980,11 +1786,9 @@
 
     return-object p0
 
-    .line 229
     :cond_0
     invoke-static {p1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/io/FileDescriptor;)V
 
-    .line 230
     new-instance p2, Ljava/lang/IllegalStateException;
 
     new-instance p4, Ljava/lang/StringBuilder;
@@ -1997,7 +1801,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 231
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -2015,7 +1818,6 @@
     :catchall_0
     move-exception p0
 
-    .line 235
     monitor-exit p3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -2035,18 +1837,15 @@
 
     const/4 p1, 0x0
 
-    .line 237
     :goto_0
     invoke-static {p1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/io/FileDescriptor;)V
 
-    .line 238
     invoke-static {p0}, Landroid/util/ExceptionUtils;->wrap(Ljava/io/IOException;)Ljava/lang/RuntimeException;
 
     move-result-object p0
 
     throw p0
 
-    .line 218
     :cond_1
     :try_start_5
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -2061,7 +1860,6 @@
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
-    .line 219
     invoke-static {p0}, Lcom/android/server/blob/BlobStoreSession;->stateToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -2079,7 +1877,6 @@
     :catchall_1
     move-exception p0
 
-    .line 221
     monitor-exit v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -2090,7 +1887,6 @@
 .method public final openWriteInternal(JJ)Ljava/io/FileDescriptor;
     .locals 5
 
-    .line 247
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSessionFile()Ljava/io/File;
 
@@ -2098,7 +1894,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 251
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -2121,7 +1916,6 @@
 
     if-lez v3, :cond_1
 
-    .line 253
     sget v3, Landroid/system/OsConstants;->SEEK_SET:I
 
     invoke-static {v0, p1, p2, v3}, Landroid/system/Os;->lseek(Ljava/io/FileDescriptor;JI)J
@@ -2134,7 +1928,6 @@
 
     goto :goto_0
 
-    .line 255
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2168,7 +1961,6 @@
 
     if-lez p1, :cond_2
 
-    .line 260
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mContext:Landroid/content/Context;
 
     const-class p1, Landroid/os/storage/StorageManager;
@@ -2184,7 +1976,6 @@
     :cond_2
     return-object v0
 
-    .line 249
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2199,7 +1990,6 @@
     :catch_0
     move-exception p0
 
-    .line 264
     invoke-virtual {p0}, Landroid/system/ErrnoException;->rethrowAsIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -2210,12 +2000,10 @@
 .method public final revokeAllFds()V
     .locals 3
 
-    .line 488
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mRevocableFds:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 489
     :try_start_0
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mRevocableFds:Ljava/util/ArrayList;
 
@@ -2228,7 +2016,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 490
     iget-object v2, p0, Lcom/android/server/blob/BlobStoreSession;->mRevocableFds:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2243,13 +2030,11 @@
 
     goto :goto_0
 
-    .line 492
     :cond_0
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mRevocableFds:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
-    .line 493
     monitor-exit v0
 
     return-void
@@ -2267,12 +2052,10 @@
 .method public sendCommitCallbackResult(I)V
     .locals 3
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 183
     :try_start_0
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobCommitCallback:Landroid/app/blob/IBlobCommitCallback;
 
@@ -2296,16 +2079,13 @@
 
     const-string v2, "Error sending the callback result"
 
-    .line 185
     invoke-static {v1, v2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     const/4 p1, 0x0
 
-    .line 187
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobCommitCallback:Landroid/app/blob/IBlobCommitCallback;
 
-    .line 188
     monitor-exit v0
 
     return-void
@@ -2321,7 +2101,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 539
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2372,23 +2151,19 @@
 .method public final trackRevocableFdLocked(Landroid/os/RevocableFileDescriptor;)V
     .locals 2
 
-    .line 498
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mRevocableFds:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 499
     :try_start_0
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mRevocableFds:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 500
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 501
     new-instance v0, Lcom/android/server/blob/BlobStoreSession$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/blob/BlobStoreSession$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/blob/BlobStoreSession;Landroid/os/RevocableFileDescriptor;)V
@@ -2400,7 +2175,6 @@
     :catchall_0
     move-exception p0
 
-    .line 500
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2412,12 +2186,10 @@
 .method public verifyBlobData()V
     .locals 9
 
-    .line 463
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 464
     :try_start_0
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mDataDigest:[B
 
@@ -2435,7 +2207,6 @@
 
     const/4 v1, 0x4
 
-    .line 465
     iput v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
     goto :goto_1
@@ -2443,7 +2214,6 @@
     :cond_0
     const-string v1, "BlobStore"
 
-    .line 468
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2452,7 +2222,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 469
     iget-object v3, p0, Lcom/android/server/blob/BlobStoreSession;->mDataDigest:[B
 
     if-nez v3, :cond_1
@@ -2477,7 +2246,6 @@
 
     iget-object v3, v3, Landroid/app/blob/BlobHandle;->digest:[B
 
-    .line 471
     invoke-static {v3}, Landroid/app/blob/BlobHandle;->safeDigest([B)Ljava/lang/String;
 
     move-result-object v3
@@ -2492,45 +2260,37 @@
 
     move-result-object v2
 
-    .line 468
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x5
 
-    .line 472
     iput v1, p0, Lcom/android/server/blob/BlobStoreSession;->mState:I
 
     const/16 v2, 0x12a
 
-    .line 474
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getOwnerUid()I
 
     move-result v3
 
     iget-wide v4, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionId:J
 
-    .line 475
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSize()J
 
     move-result-wide v6
 
     const/4 v8, 0x3
 
-    .line 474
     invoke-static/range {v2 .. v8}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIJJI)V
 
     const/4 v1, 0x1
 
-    .line 476
     invoke-virtual {p0, v1}, Lcom/android/server/blob/BlobStoreSession;->sendCommitCallbackResult(I)V
 
-    .line 478
     :goto_1
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mListener:Lcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;
 
     invoke-virtual {v1, p0}, Lcom/android/server/blob/BlobStoreManagerService$SessionStateChangeListener;->onStateChanged(Lcom/android/server/blob/BlobStoreSession;)V
 
-    .line 479
     monitor-exit v0
 
     return-void
@@ -2548,7 +2308,6 @@
 .method public writeToXml(Lorg/xmlpull/v1/XmlSerializer;)V
     .locals 4
 
-    .line 577
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -2556,28 +2315,24 @@
     :try_start_0
     const-string v1, "id"
 
-    .line 578
     iget-wide v2, p0, Lcom/android/server/blob/BlobStoreSession;->mSessionId:J
 
     invoke-static {p1, v1, v2, v3}, Lcom/android/internal/util/XmlUtils;->writeLongAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;J)V
 
     const-string/jumbo v1, "p"
 
-    .line 579
     iget-object v2, p0, Lcom/android/server/blob/BlobStoreSession;->mOwnerPackageName:Ljava/lang/String;
 
     invoke-static {p1, v1, v2}, Lcom/android/internal/util/XmlUtils;->writeStringAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string/jumbo v1, "u"
 
-    .line 580
     iget v2, p0, Lcom/android/server/blob/BlobStoreSession;->mOwnerUid:I
 
     invoke-static {p1, v1, v2}, Lcom/android/internal/util/XmlUtils;->writeIntAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;I)V
 
     const-string v1, "crt"
 
-    .line 581
     iget-wide v2, p0, Lcom/android/server/blob/BlobStoreSession;->mCreationTimeMs:J
 
     invoke-static {p1, v1, v2, v3}, Lcom/android/internal/util/XmlUtils;->writeLongAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;J)V
@@ -2586,35 +2341,28 @@
 
     const/4 v2, 0x0
 
-    .line 583
     invoke-interface {p1, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 584
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobHandle:Landroid/app/blob/BlobHandle;
 
     invoke-virtual {v1, p1}, Landroid/app/blob/BlobHandle;->writeToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
     const-string v1, "bh"
 
-    .line 585
     invoke-interface {p1, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v1, "am"
 
-    .line 587
     invoke-interface {p1, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 588
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
     invoke-virtual {p0, p1}, Lcom/android/server/blob/BlobAccessMode;->writeToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
     const-string p0, "am"
 
-    .line 589
     invoke-interface {p1, v2, p0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 590
     monitor-exit v0
 
     return-void

@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDATE_FORMAT()Ljava/text/SimpleDateFormat;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/power/WakeLockLog;->DATE_FORMAT:Ljava/text/SimpleDateFormat;
 
     return-object v0
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$sfgetLEVEL_TO_STRING()[Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/power/WakeLockLog;->LEVEL_TO_STRING:[Ljava/lang/String;
 
     return-object v0
@@ -61,7 +59,6 @@
 
     const-string v7, "draw"
 
-    .line 92
     filled-new-array/range {v0 .. v7}, [Ljava/lang/String;
 
     move-result-object v0
@@ -74,14 +71,12 @@
 
     const-string v2, "*job*/"
 
-    .line 114
     filled-new-array {v2, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/power/WakeLockLog;->REDUCED_TAG_PREFIXES:[Ljava/lang/String;
 
-    .line 117
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM-dd HH:mm:ss.SSS"
@@ -96,7 +91,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 131
     new-instance v0, Lcom/android/server/power/WakeLockLog$Injector;
 
     invoke-direct {v0}, Lcom/android/server/power/WakeLockLog$Injector;-><init>()V
@@ -109,39 +103,32 @@
 .method public constructor <init>(Lcom/android/server/power/WakeLockLog$Injector;)V
     .locals 3
 
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/power/WakeLockLog;->mLock:Ljava/lang/Object;
 
-    .line 136
     iput-object p1, p0, Lcom/android/server/power/WakeLockLog;->mInjector:Lcom/android/server/power/WakeLockLog$Injector;
 
-    .line 137
     new-instance v0, Lcom/android/server/power/WakeLockLog$TagDatabase;
 
     invoke-direct {v0, p1}, Lcom/android/server/power/WakeLockLog$TagDatabase;-><init>(Lcom/android/server/power/WakeLockLog$Injector;)V
 
     iput-object v0, p0, Lcom/android/server/power/WakeLockLog;->mTagDatabase:Lcom/android/server/power/WakeLockLog$TagDatabase;
 
-    .line 138
     new-instance v1, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;
 
     invoke-direct {v1, v0}, Lcom/android/server/power/WakeLockLog$EntryByteTranslator;-><init>(Lcom/android/server/power/WakeLockLog$TagDatabase;)V
 
-    .line 139
     new-instance v2, Lcom/android/server/power/WakeLockLog$TheLog;
 
     invoke-direct {v2, p1, v1, v0}, Lcom/android/server/power/WakeLockLog$TheLog;-><init>(Lcom/android/server/power/WakeLockLog$Injector;Lcom/android/server/power/WakeLockLog$EntryByteTranslator;Lcom/android/server/power/WakeLockLog$TagDatabase;)V
 
     iput-object v2, p0, Lcom/android/server/power/WakeLockLog;->mLog:Lcom/android/server/power/WakeLockLog$TheLog;
 
-    .line 140
     invoke-virtual {p1}, Lcom/android/server/power/WakeLockLog$Injector;->getDateFormat()Ljava/text/SimpleDateFormat;
 
     move-result-object p1
@@ -158,7 +145,6 @@
 
     const/4 v0, 0x0
 
-    .line 171
     invoke-virtual {p0, p1, v0}, Lcom/android/server/power/WakeLockLog;->dump(Ljava/io/PrintWriter;Z)V
 
     return-void
@@ -167,7 +153,6 @@
 .method public dump(Ljava/io/PrintWriter;Z)V
     .locals 6
 
-    .line 177
     :try_start_0
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog;->mLock:Ljava/lang/Object;
 
@@ -178,15 +163,12 @@
     :try_start_1
     const-string v1, "Wake Lock Log"
 
-    .line 178
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 179
     new-instance v1, Lcom/android/server/power/WakeLockLog$LogEntry;
 
     invoke-direct {v1}, Lcom/android/server/power/WakeLockLog$LogEntry;-><init>()V
 
-    .line 180
     iget-object v2, p0, Lcom/android/server/power/WakeLockLog;->mLog:Lcom/android/server/power/WakeLockLog$TheLog;
 
     invoke-virtual {v2, v1}, Lcom/android/server/power/WakeLockLog$TheLog;->getAllItems(Lcom/android/server/power/WakeLockLog$LogEntry;)Ljava/util/Iterator;
@@ -197,7 +179,6 @@
 
     move v3, v2
 
-    .line 183
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -206,7 +187,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 189
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -215,7 +195,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 191
     iget v5, v4, Lcom/android/server/power/WakeLockLog$LogEntry;->type:I
 
     if-nez v5, :cond_1
@@ -227,7 +206,6 @@
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
-    .line 198
     iget-object v5, p0, Lcom/android/server/power/WakeLockLog;->mDumpsysDateFormat:Ljava/text/SimpleDateFormat;
 
     invoke-virtual {v4, p1, v5}, Lcom/android/server/power/WakeLockLog$LogEntry;->dump(Ljava/io/PrintWriter;Ljava/text/SimpleDateFormat;)V
@@ -237,10 +215,8 @@
     :cond_2
     const-string v1, "  -"
 
-    .line 202
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 203
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,7 +239,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 204
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -288,7 +263,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 206
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -307,7 +281,6 @@
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 208
     :cond_3
     monitor-exit v0
 
@@ -328,7 +301,6 @@
     :catch_0
     move-exception p0
 
-    .line 210
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -356,12 +328,10 @@
 .method public final handleWakeLockEventInternal(ILjava/lang/String;IIJ)V
     .locals 9
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 250
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/WakeLockLog;->mTagDatabase:Lcom/android/server/power/WakeLockLog$TagDatabase;
 
@@ -371,7 +341,6 @@
 
     move-result-object v7
 
-    .line 252
     iget-object p0, p0, Lcom/android/server/power/WakeLockLog;->mLog:Lcom/android/server/power/WakeLockLog$TheLog;
 
     new-instance p2, Lcom/android/server/power/WakeLockLog$LogEntry;
@@ -388,7 +357,6 @@
 
     invoke-virtual {p0, p2}, Lcom/android/server/power/WakeLockLog$TheLog;->addEntry(Lcom/android/server/power/WakeLockLog$LogEntry;)V
 
-    .line 253
     monitor-exit v0
 
     return-void
@@ -408,7 +376,6 @@
 
     const/4 v0, 0x1
 
-    .line 151
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/power/WakeLockLog;->onWakeLockEvent(ILjava/lang/String;II)V
 
     return-void
@@ -419,7 +386,6 @@
 
     if-nez p2, :cond_0
 
-    .line 225
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -440,7 +406,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 227
     invoke-static {p4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -453,12 +418,10 @@
 
     const-string p1, "PowerManagerService.WLLog"
 
-    .line 225
     invoke-static {p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 231
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/WakeLockLog;->mInjector:Lcom/android/server/power/WakeLockLog$Injector;
 
@@ -470,7 +433,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 233
     invoke-virtual {p0, p4}, Lcom/android/server/power/WakeLockLog;->translateFlagsFromPowerManager(I)I
 
     move-result p4
@@ -483,7 +445,6 @@
     :goto_0
     move v5, p4
 
-    .line 235
     invoke-virtual {p0, p2}, Lcom/android/server/power/WakeLockLog;->tagNameReducer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -506,7 +467,6 @@
 
     const/4 v1, 0x0
 
-    .line 161
     invoke-virtual {p0, v0, p1, p2, v1}, Lcom/android/server/power/WakeLockLog;->onWakeLockEvent(ILjava/lang/String;II)V
 
     return-void
@@ -521,7 +481,6 @@
 
     return-object p0
 
-    .line 320
     :cond_0
     sget-object v0, Lcom/android/server/power/WakeLockLog;->REDUCED_TAG_PREFIXES:[Ljava/lang/String;
 
@@ -536,7 +495,6 @@
 
     aget-object v4, v0, v3
 
-    .line 321
     invoke-virtual {p1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -556,12 +514,10 @@
     :goto_1
     if-eqz p0, :cond_8
 
-    .line 328
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 331
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -570,7 +526,6 @@
 
     const-string p0, "/"
 
-    .line 334
     invoke-virtual {p1, p0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result p0
@@ -585,7 +540,6 @@
 
     move-result p0
 
-    .line 336
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
@@ -597,7 +551,6 @@
     :goto_2
     if-ge v1, p0, :cond_7
 
-    .line 338
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -626,7 +579,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 342
     :cond_5
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -637,7 +589,6 @@
 
     goto :goto_2
 
-    .line 346
     :cond_7
     invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -645,7 +596,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 347
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -691,7 +641,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 291
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

@@ -15,16 +15,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 156
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 157
     iput p1, p0, Lcom/android/server/audio/AudioDeviceBroker$AudioModeInfo;->mMode:I
 
-    .line 158
     iput p2, p0, Lcom/android/server/audio/AudioDeviceBroker$AudioModeInfo;->mPid:I
 
-    .line 159
     iput p3, p0, Lcom/android/server/audio/AudioDeviceBroker$AudioModeInfo;->mUid:I
 
     return-void
@@ -35,7 +31,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

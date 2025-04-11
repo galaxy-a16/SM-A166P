@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/adb/AdbService;)V
     .locals 0
 
-    .line 464
     iput-object p1, p0, Lcom/android/server/adb/AdbService$AdbConnectionPortListener;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +32,6 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 467
     iget-object v0, p0, Lcom/android/server/adb/AdbService$AdbConnectionPortListener;->this$0:Lcom/android/server/adb/AdbService;
 
     iget-object v0, v0, Lcom/android/server/adb/AdbService;->mConnectionPort:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -42,7 +40,6 @@
 
     goto :goto_0
 
-    .line 469
     :cond_0
     iget-object p1, p0, Lcom/android/server/adb/AdbService$AdbConnectionPortListener;->this$0:Lcom/android/server/adb/AdbService;
 
@@ -52,7 +49,6 @@
 
     invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 472
     :try_start_0
     iget-object p1, p0, Lcom/android/server/adb/AdbService$AdbConnectionPortListener;->this$0:Lcom/android/server/adb/AdbService;
 
@@ -75,10 +71,8 @@
 
     const-string v0, "ADB_ENABLED is restricted."
 
-    .line 477
     invoke-static {p1, v0}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     :goto_0
     iget-object p0, p0, Lcom/android/server/adb/AdbService$AdbConnectionPortListener;->this$0:Lcom/android/server/adb/AdbService;
 

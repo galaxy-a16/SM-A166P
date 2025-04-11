@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/camera/CameraServiceProxy;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 837
     iput-object p1, p0, Lcom/android/server/camera/CameraServiceProxy$EventWriterTask;->this$0:Lcom/android/server/camera/CameraServiceProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 838
     iput-object p2, p0, Lcom/android/server/camera/CameraServiceProxy$EventWriterTask;->mEventList:Ljava/util/ArrayList;
 
     return-void
@@ -34,7 +32,6 @@
 
     move-object/from16 v0, p1
 
-    .line 860
     iget v1, v0, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mCameraFacing:I
 
     const-string v2, "CameraService_proxy"
@@ -53,7 +50,6 @@
 
     if-eq v1, v4, :cond_0
 
-    .line 871
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +85,6 @@
     :cond_2
     move v12, v5
 
-    .line 876
     :goto_0
     iget-object v1, v0, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mExtSessionStats:Landroid/hardware/CameraExtensionSessionStats;
 
@@ -99,7 +94,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 877
     iget v1, v1, Landroid/hardware/CameraExtensionSessionStats;->type:I
 
     if-eqz v1, :cond_7
@@ -112,7 +106,6 @@
 
     if-eq v1, v15, :cond_3
 
-    .line 899
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -158,7 +151,6 @@
     :cond_7
     move v7, v6
 
-    .line 901
     :goto_1
     iget-object v1, v0, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mExtSessionStats:Landroid/hardware/CameraExtensionSessionStats;
 
@@ -174,12 +166,10 @@
     :goto_2
     move/from16 v35, v7
 
-    .line 905
     iget-object v1, v0, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mStreamStats:Ljava/util/List;
 
     if-eqz v1, :cond_9
 
-    .line 906
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -199,7 +189,6 @@
     :goto_4
     if-ge v7, v2, :cond_b
 
-    .line 933
     new-instance v8, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;
 
     invoke-direct {v8}, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;-><init>()V
@@ -208,7 +197,6 @@
 
     if-ge v7, v1, :cond_a
 
-    .line 935
     iget-object v8, v0, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mStreamStats:Ljava/util/List;
 
     invoke-interface {v8, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -217,7 +205,6 @@
 
     check-cast v8, Landroid/hardware/CameraStreamStats;
 
-    .line 936
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getWidth()I
@@ -226,7 +213,6 @@
 
     iput v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->width:I
 
-    .line 937
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getHeight()I
@@ -235,7 +221,6 @@
 
     iput v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->height:I
 
-    .line 938
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getFormat()I
@@ -244,7 +229,6 @@
 
     iput v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->format:I
 
-    .line 939
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getDataSpace()I
@@ -253,7 +237,6 @@
 
     iput v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->dataSpace:I
 
-    .line 940
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getUsage()J
@@ -262,7 +245,6 @@
 
     iput-wide v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->usage:J
 
-    .line 941
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getRequestCount()J
@@ -271,7 +253,6 @@
 
     iput-wide v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->requestCount:J
 
-    .line 942
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getErrorCount()J
@@ -280,7 +261,6 @@
 
     iput-wide v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->errorCount:J
 
-    .line 943
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getStartLatencyMs()I
@@ -289,7 +269,6 @@
 
     iput v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->firstCaptureLatencyMillis:I
 
-    .line 944
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getMaxHalBuffers()I
@@ -298,7 +277,6 @@
 
     iput v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->maxHalBuffers:I
 
-    .line 945
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getMaxAppBuffers()I
@@ -307,7 +285,6 @@
 
     iput v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->maxAppBuffers:I
 
-    .line 946
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getHistogramType()I
@@ -316,7 +293,6 @@
 
     iput v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->histogramType:I
 
-    .line 947
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getHistogramBins()[F
@@ -325,7 +301,6 @@
 
     iput-object v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->histogramBins:[F
 
-    .line 948
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getHistogramCounts()[J
@@ -334,7 +309,6 @@
 
     iput-object v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->histogramCounts:[J
 
-    .line 949
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getDynamicRangeProfile()J
@@ -343,7 +317,6 @@
 
     iput-wide v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->dynamicRangeProfile:J
 
-    .line 950
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getStreamUseCase()J
@@ -352,7 +325,6 @@
 
     iput-wide v10, v9, Landroid/stats/camera/nano/CameraProtos$CameraStreamProto;->streamUseCase:J
 
-    .line 951
     aget-object v9, v14, v7
 
     invoke-virtual {v8}, Landroid/hardware/CameraStreamStats;->getColorSpace()I
@@ -369,7 +341,6 @@
     :cond_b
     const/16 v7, 0xe3
 
-    .line 979
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->getDuration()J
 
     move-result-wide v8
@@ -420,35 +391,30 @@
 
     aget-object v2, v24, v6
 
-    .line 983
     invoke-static {v2}, Lcom/android/framework/protobuf/nano/MessageNano;->toByteArray(Lcom/android/framework/protobuf/nano/MessageNano;)[B
 
     move-result-object v25
 
     aget-object v2, v24, v5
 
-    .line 984
     invoke-static {v2}, Lcom/android/framework/protobuf/nano/MessageNano;->toByteArray(Lcom/android/framework/protobuf/nano/MessageNano;)[B
 
     move-result-object v26
 
     aget-object v2, v24, v4
 
-    .line 985
     invoke-static {v2}, Lcom/android/framework/protobuf/nano/MessageNano;->toByteArray(Lcom/android/framework/protobuf/nano/MessageNano;)[B
 
     move-result-object v27
 
     aget-object v2, v24, v3
 
-    .line 986
     invoke-static {v2}, Lcom/android/framework/protobuf/nano/MessageNano;->toByteArray(Lcom/android/framework/protobuf/nano/MessageNano;)[B
 
     move-result-object v28
 
     aget-object v2, v24, v29
 
-    .line 987
     invoke-static {v2}, Lcom/android/framework/protobuf/nano/MessageNano;->toByteArray(Lcom/android/framework/protobuf/nano/MessageNano;)[B
 
     move-result-object v29
@@ -475,7 +441,6 @@
 
     const/16 v7, 0xe3
 
-    .line 979
     invoke-static/range {v7 .. v36}, Lcom/android/internal/util/FrameworkStatsLog;->write(IJILjava/lang/String;ILjava/lang/String;IZIIIJJZI[B[B[B[B[BLjava/lang/String;IJIIZ)V
 
     return-void
@@ -484,12 +449,10 @@
 .method public run()V
     .locals 3
 
-    .line 843
     iget-object v0, p0, Lcom/android/server/camera/CameraServiceProxy$EventWriterTask;->mEventList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 844
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -508,12 +471,10 @@
 
     check-cast v1, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
 
-    .line 845
     invoke-virtual {p0, v1}, Lcom/android/server/camera/CameraServiceProxy$EventWriterTask;->logCameraUsageEvent(Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;)V
 
     const-wide/16 v1, 0x64
 
-    .line 847
     :try_start_0
     invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -521,7 +482,6 @@
 
     goto :goto_0
 
-    .line 850
     :cond_0
     iget-object p0, p0, Lcom/android/server/camera/CameraServiceProxy$EventWriterTask;->mEventList:Ljava/util/ArrayList;
 

@@ -19,7 +19,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/health/HealthServiceWrapperHidl$Mutable-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/health/HealthServiceWrapperHidl$Mutable;-><init>()V
 
     return-void

@@ -7,7 +7,6 @@
 .method public static clone(Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
-    .line 46
     new-instance v0, Landroid/os/Bundle;
 
     if-eqz p0, :cond_0
@@ -28,7 +27,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 35
     invoke-virtual {p0}, Landroid/os/Bundle;->size()I
 
     move-result p0

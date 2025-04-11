@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManager;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
-    .line 919
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 920
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/WakeGestureListener;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public onWakeUp()V
     .locals 11
 
-    .line 925
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {v0}, Lcom/android/server/policy/PhoneWindowManager;->-$$Nest$fgetmLock(Lcom/android/server/policy/PhoneWindowManager;)Ljava/lang/Object;
@@ -34,7 +31,6 @@
 
     monitor-enter v0
 
-    .line 926
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -44,7 +40,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 927
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     const-string v2, "Wake Up"
@@ -55,7 +50,6 @@
 
     invoke-virtual {v1, v3, v4, v2}, Lcom/android/server/policy/PhoneWindowManager;->performHapticFeedback(IZLjava/lang/String;)Z
 
-    .line 929
     iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -74,7 +68,6 @@
 
     invoke-virtual/range {v5 .. v10}, Lcom/android/server/policy/PhoneWindowManager;->wakeUp(JZILjava/lang/String;)Z
 
-    .line 932
     :cond_0
     monitor-exit v0
 

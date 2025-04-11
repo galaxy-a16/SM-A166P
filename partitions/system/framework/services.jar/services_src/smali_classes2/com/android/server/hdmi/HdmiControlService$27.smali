@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;Z)V
     .locals 0
 
-    .line 4699
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$27;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iput-boolean p2, p0, Lcom/android/server/hdmi/HdmiControlService$27;->val$enabled:Z
@@ -30,7 +29,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4703
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,7 +47,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4710
     :cond_0
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$27;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -61,24 +58,20 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/hdmi/HdmiEarcController;->setEarcEnabled(Z)V
 
-    .line 4711
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$27;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmCecController(Lcom/android/server/hdmi/HdmiControlService;)Lcom/android/server/hdmi/HdmiCecController;
 
     move-result-object p1
 
-    .line 4712
     iget-boolean v0, p0, Lcom/android/server/hdmi/HdmiControlService$27;->val$enabled:Z
 
-    .line 4713
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$27;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmEarcPortId(Lcom/android/server/hdmi/HdmiControlService;)I
 
     move-result p0
 
-    .line 4711
     invoke-virtual {p1, v0, p0}, Lcom/android/server/hdmi/HdmiCecController;->setHpdSignalType(II)V
 
     return-void

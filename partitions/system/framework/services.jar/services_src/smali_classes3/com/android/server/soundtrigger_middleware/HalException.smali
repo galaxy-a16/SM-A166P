@@ -11,10 +11,8 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .line 37
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 38
     iput p1, p0, Lcom/android/server/soundtrigger_middleware/HalException;->errorCode:I
 
     return-void
@@ -25,7 +23,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

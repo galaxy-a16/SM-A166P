@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersonaManagerService;)V
     .locals 0
 
-    .line 900
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$PackageDeleteObs;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
@@ -28,12 +27,10 @@
 .method public packageDeleted(Ljava/lang/String;I)V
     .locals 3
 
-    .line 905
     monitor-enter p0
 
     const/4 v0, 0x1
 
-    .line 906
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/pm/PersonaManagerService$PackageDeleteObs;->finished:Z
 
@@ -44,13 +41,11 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 907
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/pm/PersonaManagerService$PackageDeleteObs;->result:Z
 
     const-string v0, "PersonaManagerService"
 
-    .line 908
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,10 +68,8 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 909
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 910
     monitor-exit p0
 
     return-void

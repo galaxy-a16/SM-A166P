@@ -24,7 +24,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/sepunion/GalaxyRegistryService;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -33,7 +32,6 @@
 .method public static bridge synthetic -$$Nest$mstartService(Lcom/android/server/sepunion/GalaxyRegistryService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/GalaxyRegistryService;->startService()V
 
     return-void
@@ -42,7 +40,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -51,7 +48,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 29
     const-class v0, Lcom/android/server/sepunion/GalaxyRegistryService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -66,10 +62,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 39
     invoke-direct {p0}, Lcom/samsung/android/sepunion/IGalaxyRegistryService$Stub;-><init>()V
 
-    .line 37
     new-instance v0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;
 
     const/4 v1, 0x0
@@ -78,17 +72,14 @@
 
     iput-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mMonitor:Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;
 
-    .line 113
     new-instance v0, Lcom/android/server/sepunion/GalaxyRegistryService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/GalaxyRegistryService$1;-><init>(Lcom/android/server/sepunion/GalaxyRegistryService;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mContext:Landroid/content/Context;
 
-    .line 41
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -105,10 +96,8 @@
 
     const-string p1, "\n##### GalaxyRegistryService  #####\n##### (dumpsys sepunion galaxyregistry) #####\n"
 
-    .line 107
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 110
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -139,7 +128,6 @@
 
     const-string v0, ""
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -151,19 +139,16 @@
 
     const/16 v2, 0x80
 
-    .line 145
     invoke-virtual {p0, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
-    .line 146
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz p0, :cond_0
 
     const-string v1, "com.samsung.android.app.galaxyregistry.SYSTEM_SERVICE_CLASS"
 
-    .line 149
     invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -175,7 +160,6 @@
     :catch_0
     move-exception p0
 
-    .line 152
     sget-object v1, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -207,7 +191,6 @@
 
     const-string v0, "com.samsung.android.app.galaxyregistry"
 
-    .line 124
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -218,7 +201,6 @@
 
     const/16 v2, 0x40
 
-    .line 127
     :try_start_0
     invoke-virtual {p0, v0, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -226,7 +208,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 129
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz v2, :cond_1
@@ -237,7 +218,6 @@
 
     const-string v2, "android"
 
-    .line 130
     invoke-virtual {p0, v0, v2}, Landroid/content/pm/PackageManager;->checkSignatures(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -249,7 +229,6 @@
     :cond_0
     return v1
 
-    .line 133
     :cond_1
     sget-object p0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
@@ -264,7 +243,6 @@
     :catch_0
     move-exception p0
 
-    .line 135
     sget-object v0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -298,34 +276,28 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 70
     invoke-virtual {p0}, Lcom/android/server/sepunion/GalaxyRegistryService;->isInstalled()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 71
     sget-object p1, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onBootPhase()"
 
     invoke-static {p1, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
-    .line 74
     invoke-virtual {p1, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
@@ -339,14 +311,12 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public registerListener(Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 3
 
-    .line 46
     sget-object v0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -379,7 +349,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mMonitor:Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;
 
     invoke-virtual {p0, p2}, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->registerWatcher(Landroid/os/IBinder;)V
@@ -390,14 +359,12 @@
 .method public final startService()V
     .locals 4
 
-    .line 159
     invoke-virtual {p0}, Lcom/android/server/sepunion/GalaxyRegistryService;->isInstalled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 160
     sget-object p0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     const-string v0, "failed to start service - app is not installed"
@@ -406,20 +373,17 @@
 
     return-void
 
-    .line 164
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/sepunion/GalaxyRegistryService;->getTargetClass()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 166
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 167
     sget-object p0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     const-string v0, "failed to start service - target class is not specified"
@@ -428,14 +392,12 @@
 
     return-void
 
-    .line 172
     :cond_1
     :try_start_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 173
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.samsung.android.app.galaxyregistry"
@@ -450,24 +412,20 @@
 
     const v1, 0x1000020
 
-    .line 174
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string/jumbo v1, "option"
 
     const-string/jumbo v2, "start"
 
-    .line 175
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "extra"
 
     const-string/jumbo v2, "system"
 
-    .line 176
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 177
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
@@ -479,7 +437,6 @@
     :catch_0
     move-exception p0
 
-    .line 179
     sget-object v0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -502,7 +459,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     :goto_0
     sget-object p0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
@@ -516,7 +472,6 @@
 .method public unRegisterListener(Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 3
 
-    .line 52
     sget-object v0, Lcom/android/server/sepunion/GalaxyRegistryService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -541,7 +496,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService;->mMonitor:Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;
 
     invoke-virtual {p0, p2}, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->unregisterWatcher(Landroid/os/IBinder;)V

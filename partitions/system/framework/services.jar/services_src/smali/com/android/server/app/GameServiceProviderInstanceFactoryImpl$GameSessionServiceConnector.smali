@@ -7,14 +7,12 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;)V
     .locals 8
 
-    .line 102
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.service.games.action.GAME_SESSION_SERVICE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 103
     invoke-virtual {p2}, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->getGameSessionServiceComponentName()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -25,7 +23,6 @@
 
     const/high16 v5, 0x8180000
 
-    .line 104
     invoke-virtual {p2}, Lcom/android/server/app/GameServiceConfiguration$GameServiceComponentConfiguration;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object p2
@@ -42,7 +39,6 @@
 
     move-object v3, p1
 
-    .line 102
     invoke-direct/range {v2 .. v7}, Lcom/android/internal/infra/ServiceConnector$Impl;-><init>(Landroid/content/Context;Landroid/content/Intent;IILjava/util/function/Function;)V
 
     return-void
@@ -53,7 +49,6 @@
 .method public getAutoDisconnectTimeoutMs()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0

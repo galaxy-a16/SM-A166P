@@ -14,12 +14,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 38
     iput v0, p0, Lcom/android/server/display/brightness/strategy/TemporaryBrightnessStrategy;->mTemporaryScreenBrightness:F
 
     return-void
@@ -32,10 +30,8 @@
 
     const-string v0, "TemporaryBrightnessStrategy:"
 
-    .line 72
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +56,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "TemporaryBrightnessStrategy"
 
     return-object p0
@@ -69,7 +64,6 @@
 .method public getTemporaryScreenBrightness()F
     .locals 0
 
-    .line 61
     iget p0, p0, Lcom/android/server/display/brightness/strategy/TemporaryBrightnessStrategy;->mTemporaryScreenBrightness:F
 
     return p0
@@ -78,7 +72,6 @@
 .method public setTemporaryScreenBrightness(F)V
     .locals 0
 
-    .line 65
     iput p1, p0, Lcom/android/server/display/brightness/strategy/TemporaryBrightnessStrategy;->mTemporaryScreenBrightness:F
 
     return-void
@@ -87,17 +80,14 @@
 .method public updateBrightness(Landroid/hardware/display/DisplayManagerInternal$DisplayPowerRequest;)Lcom/android/server/display/DisplayBrightnessState;
     .locals 1
 
-    .line 48
     iget p1, p0, Lcom/android/server/display/brightness/strategy/TemporaryBrightnessStrategy;->mTemporaryScreenBrightness:F
 
-    .line 51
     invoke-virtual {p0}, Lcom/android/server/display/brightness/strategy/TemporaryBrightnessStrategy;->getName()Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x7
 
-    .line 49
     invoke-static {v0, p1, p1, p0}, Lcom/android/server/display/brightness/BrightnessUtils;->constructDisplayBrightnessState(IFFLjava/lang/String;)Lcom/android/server/display/DisplayBrightnessState;
 
     move-result-object p0

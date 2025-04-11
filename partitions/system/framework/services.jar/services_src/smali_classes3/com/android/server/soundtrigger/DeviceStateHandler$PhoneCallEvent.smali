@@ -11,10 +11,8 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 235
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 236
     iput-boolean p1, p0, Lcom/android/server/soundtrigger/DeviceStateHandler$PhoneCallEvent;->mIsInPhoneCall:Z
 
     return-void
@@ -25,7 +23,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

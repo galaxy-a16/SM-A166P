@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 7
     new-instance v0, Lco/nstant/in/cbor/model/Special;
 
     sget-object v1, Lco/nstant/in/cbor/model/SpecialType;->BREAK:Lco/nstant/in/cbor/model/SpecialType;
@@ -30,12 +29,10 @@
 .method public constructor <init>(Lco/nstant/in/cbor/model/SpecialType;)V
     .locals 1
 
-    .line 12
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->SPECIAL:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-direct {p0, v0}, Lco/nstant/in/cbor/model/DataItem;-><init>(Lco/nstant/in/cbor/model/MajorType;)V
 
-    .line 13
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lco/nstant/in/cbor/model/Special;->specialType:Lco/nstant/in/cbor/model/SpecialType;
@@ -48,19 +45,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 22
     instance-of v0, p1, Lco/nstant/in/cbor/model/Special;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 23
     move-object v0, p1
 
     check-cast v0, Lco/nstant/in/cbor/model/Special;
 
-    .line 24
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/DataItem;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -82,7 +76,6 @@
 .method public getSpecialType()Lco/nstant/in/cbor/model/SpecialType;
     .locals 0
 
-    .line 17
     iget-object p0, p0, Lco/nstant/in/cbor/model/Special;->specialType:Lco/nstant/in/cbor/model/SpecialType;
 
     return-object p0
@@ -91,7 +84,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 31
     invoke-super {p0}, Lco/nstant/in/cbor/model/DataItem;->hashCode()I
 
     move-result v0
@@ -110,7 +102,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 36
     iget-object p0, p0, Lco/nstant/in/cbor/model/Special;->specialType:Lco/nstant/in/cbor/model/SpecialType;
 
     invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;

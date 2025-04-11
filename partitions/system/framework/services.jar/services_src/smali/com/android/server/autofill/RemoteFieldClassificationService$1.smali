@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/RemoteFieldClassificationService;JLjava/lang/ref/WeakReference;)V
     .locals 0
 
-    .line 149
     iput-object p1, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->this$0:Lcom/android/server/autofill/RemoteFieldClassificationService;
 
     iput-wide p2, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->val$startTime:J
@@ -32,14 +31,12 @@
 .method public cancel()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public isCompleted()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -48,19 +45,16 @@
 .method public onCancellable(Landroid/os/ICancellationSignal;)V
     .locals 2
 
-    .line 152
     iget-object p1, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->this$0:Lcom/android/server/autofill/RemoteFieldClassificationService;
 
     iget-wide v0, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->val$startTime:J
 
     invoke-static {p1, v0, v1}, Lcom/android/server/autofill/RemoteFieldClassificationService;->-$$Nest$mlogLatency(Lcom/android/server/autofill/RemoteFieldClassificationService;J)V
 
-    .line 153
     sget-boolean p0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz p0, :cond_0
 
-    .line 154
     invoke-static {}, Lcom/android/server/autofill/RemoteFieldClassificationService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -76,19 +70,16 @@
 .method public onFailure()V
     .locals 3
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->this$0:Lcom/android/server/autofill/RemoteFieldClassificationService;
 
     iget-wide v1, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->val$startTime:J
 
     invoke-static {v0, v1, v2}, Lcom/android/server/autofill/RemoteFieldClassificationService;->-$$Nest$mlogLatency(Lcom/android/server/autofill/RemoteFieldClassificationService;J)V
 
-    .line 192
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_0
 
-    .line 193
     invoke-static {}, Lcom/android/server/autofill/RemoteFieldClassificationService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -97,7 +88,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     :cond_0
     iget-object p0, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->val$fieldClassificationServiceCallbacksWeakRef:Ljava/lang/ref/WeakReference;
 
@@ -107,7 +97,6 @@
 
     const-string/jumbo v1, "onFailure "
 
-    .line 197
     invoke-static {p0, v0, v1}, Lcom/android/server/autofill/Helper;->weakDeref(Ljava/lang/ref/WeakReference;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -123,7 +112,6 @@
 
     const/4 v1, 0x0
 
-    .line 205
     invoke-interface {p0, v0, v1}, Lcom/android/server/autofill/RemoteFieldClassificationService$FieldClassificationServiceCallbacks;->onClassificationRequestFailure(ILjava/lang/CharSequence;)V
 
     return-void
@@ -132,26 +120,22 @@
 .method public onSuccess(Landroid/service/assist/classification/FieldClassificationResponse;)V
     .locals 4
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->this$0:Lcom/android/server/autofill/RemoteFieldClassificationService;
 
     iget-wide v1, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->val$startTime:J
 
     invoke-static {v0, v1, v2}, Lcom/android/server/autofill/RemoteFieldClassificationService;->-$$Nest$mlogLatency(Lcom/android/server/autofill/RemoteFieldClassificationService;J)V
 
-    .line 161
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     const-string/jumbo v1, "onSuccess "
 
     if-eqz v0, :cond_3
 
-    .line 162
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
 
-    .line 163
     invoke-static {}, Lcom/android/server/autofill/RemoteFieldClassificationService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -177,7 +161,6 @@
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 167
     invoke-virtual {p1}, Landroid/service/assist/classification/FieldClassificationResponse;->getClassifications()Ljava/util/Set;
 
     move-result-object v0
@@ -186,7 +169,6 @@
 
     goto :goto_0
 
-    .line 170
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -196,7 +178,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 171
     invoke-virtual {p1}, Landroid/service/assist/classification/FieldClassificationResponse;->getClassifications()Ljava/util/Set;
 
     move-result-object v2
@@ -217,7 +198,6 @@
     :goto_0
     const-string/jumbo v0, "null response"
 
-    .line 173
     :goto_1
     invoke-static {}, Lcom/android/server/autofill/RemoteFieldClassificationService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -237,7 +217,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     :cond_3
     :goto_2
     iget-object p0, p0, Lcom/android/server/autofill/RemoteFieldClassificationService$1;->val$fieldClassificationServiceCallbacksWeakRef:Ljava/lang/ref/WeakReference;
@@ -246,7 +225,6 @@
 
     move-result-object v0
 
-    .line 178
     invoke-static {p0, v0, v1}, Lcom/android/server/autofill/Helper;->weakDeref(Ljava/lang/ref/WeakReference;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -257,7 +235,6 @@
 
     return-void
 
-    .line 186
     :cond_4
     invoke-interface {p0, p1}, Lcom/android/server/autofill/RemoteFieldClassificationService$FieldClassificationServiceCallbacks;->onClassificationRequestSuccess(Landroid/service/assist/classification/FieldClassificationResponse;)V
 

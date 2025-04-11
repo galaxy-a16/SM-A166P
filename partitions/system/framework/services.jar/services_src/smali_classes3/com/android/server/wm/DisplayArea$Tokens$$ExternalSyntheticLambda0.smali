@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/WindowToken;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowToken;->getWindowLayerFromType()I

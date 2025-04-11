@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$mupdateRemoteServiceLocked(Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->updateRemoteServiceLocked()V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -35,17 +33,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/contentsuggestions/ContentSuggestionsManagerService;Ljava/lang/Object;I)V
     .locals 0
 
-    .line 60
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/infra/AbstractPerUserSystemService;-><init>(Lcom/android/server/infra/AbstractMasterSystemService;Ljava/lang/Object;I)V
 
-    .line 61
     const-class p1, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -64,14 +59,12 @@
 .method public classifyContentSelectionsLocked(Landroid/app/contentsuggestions/ClassificationsRequest;Landroid/app/contentsuggestions/IClassificationsCallback;)V
     .locals 0
 
-    .line 124
     invoke-virtual {p0}, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->ensureRemoteServiceLocked()Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 126
     invoke-virtual {p0, p1, p2}, Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;->classifyContentSelections(Landroid/app/contentsuggestions/ClassificationsRequest;Landroid/app/contentsuggestions/IClassificationsCallback;)V
 
     :cond_0
@@ -81,19 +74,16 @@
 .method public final ensureRemoteServiceLocked()Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
     .locals 8
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->mRemoteService:Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
     if-nez v0, :cond_2
 
-    .line 151
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getComponentNameLocked()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/infra/AbstractPerUserSystemService;->mMaster:Lcom/android/server/infra/AbstractMasterSystemService;
 
     check-cast p0, Lcom/android/server/contentsuggestions/ContentSuggestionsManagerService;
@@ -102,7 +92,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 154
     sget-object p0, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->TAG:Ljava/lang/String;
 
     const-string v0, "ensureRemoteServiceLocked(): not set"
@@ -114,13 +103,11 @@
 
     return-object p0
 
-    .line 158
     :cond_1
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v2
 
-    .line 160
     new-instance v7, Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getContext()Landroid/content/Context;
@@ -137,7 +124,6 @@
 
     check-cast v0, Lcom/android/server/contentsuggestions/ContentSuggestionsManagerService;
 
-    .line 169
     invoke-virtual {v0}, Lcom/android/server/infra/AbstractMasterSystemService;->isBindInstantServiceAllowed()Z
 
     move-result v5
@@ -154,7 +140,6 @@
 
     iput-object v7, p0, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->mRemoteService:Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
-    .line 172
     :cond_2
     iget-object p0, p0, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->mRemoteService:Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
@@ -164,7 +149,6 @@
 .method public newServiceInfoLocked(Landroid/content/ComponentName;)Landroid/content/pm/ServiceInfo;
     .locals 3
 
-    .line 70
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -180,7 +164,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     iget-object p1, p0, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     const-string v0, "android.permission.BIND_CONTENT_SUGGESTIONS_SERVICE"
@@ -193,7 +176,6 @@
 
     return-object p0
 
-    .line 77
     :cond_0
     sget-object p1, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->TAG:Ljava/lang/String;
 
@@ -221,7 +203,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     new-instance p0, Ljava/lang/SecurityException;
 
     const-string p1, "Service does not require permission android.permission.BIND_CONTENT_SUGGESTIONS_SERVICE"
@@ -230,7 +211,6 @@
 
     throw p0
 
-    .line 73
     :catch_0
     new-instance p0, Landroid/content/pm/PackageManager$NameNotFoundException;
 
@@ -256,14 +236,12 @@
 .method public notifyInteractionLocked(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 132
     invoke-virtual {p0}, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->ensureRemoteServiceLocked()Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 134
     invoke-virtual {p0, p1, p2}, Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;->notifyInteraction(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_0
@@ -279,7 +257,6 @@
 
     const/4 v2, -0x1
 
-    .line 97
     invoke-virtual {p0, v2, v0, v1, p1}, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->provideContextImageLocked(ILandroid/hardware/HardwareBuffer;ILandroid/os/Bundle;)V
 
     return-void
@@ -288,14 +265,12 @@
 .method public provideContextImageLocked(ILandroid/hardware/HardwareBuffer;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 103
     invoke-virtual {p0}, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->ensureRemoteServiceLocked()Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 105
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;->provideContextImage(ILandroid/hardware/HardwareBuffer;ILandroid/os/Bundle;)V
 
     :cond_0
@@ -305,14 +280,12 @@
 .method public suggestContentSelectionsLocked(Landroid/app/contentsuggestions/SelectionsRequest;Landroid/app/contentsuggestions/ISelectionsCallback;)V
     .locals 0
 
-    .line 114
     invoke-virtual {p0}, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->ensureRemoteServiceLocked()Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 116
     invoke-virtual {p0, p1, p2}, Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;->suggestContentSelections(Landroid/app/contentsuggestions/SelectionsRequest;Landroid/app/contentsuggestions/ISelectionsCallback;)V
 
     :cond_0
@@ -322,12 +295,10 @@
 .method public updateLocked(Z)Z
     .locals 0
 
-    .line 89
     invoke-super {p0, p1}, Lcom/android/server/infra/AbstractPerUserSystemService;->updateLocked(Z)Z
 
     move-result p1
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->updateRemoteServiceLocked()V
 
     return p1
@@ -336,17 +307,14 @@
 .method public final updateRemoteServiceLocked()V
     .locals 1
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->mRemoteService:Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
     if-eqz v0, :cond_0
 
-    .line 141
     invoke-virtual {v0}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->destroy()V
 
     const/4 v0, 0x0
 
-    .line 142
     iput-object v0, p0, Lcom/android/server/contentsuggestions/ContentSuggestionsPerUserService;->mRemoteService:Lcom/android/server/contentsuggestions/RemoteContentSuggestionsService;
 
     :cond_0

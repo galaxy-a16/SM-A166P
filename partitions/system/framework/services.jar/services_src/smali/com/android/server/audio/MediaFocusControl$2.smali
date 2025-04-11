@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/audio/MediaFocusControl;Z)V
     .locals 0
 
-    .line 1564
     iput-object p1, p0, Lcom/android/server/audio/MediaFocusControl$2;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     iput-boolean p2, p0, Lcom/android/server/audio/MediaFocusControl$2;->val$enteringRingOrCall:Z
@@ -28,14 +27,12 @@
 .method public run()V
     .locals 2
 
-    .line 1566
     iget-boolean v0, p0, Lcom/android/server/audio/MediaFocusControl$2;->val$enteringRingOrCall:Z
 
     if-eqz v0, :cond_0
 
     const-wide/16 v0, 0x64
 
-    .line 1568
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -46,10 +43,8 @@
     :catch_0
     move-exception v0
 
-    .line 1570
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 1573
     :cond_0
     :goto_0
     invoke-static {}, Lcom/android/server/audio/MediaFocusControl;->-$$Nest$sfgetmAudioFocusLock()Ljava/lang/Object;
@@ -58,7 +53,6 @@
 
     monitor-enter v0
 
-    .line 1576
     :try_start_1
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$2;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -68,7 +62,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1577
     iget-object p0, p0, Lcom/android/server/audio/MediaFocusControl$2;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     invoke-static {p0}, Lcom/android/server/audio/MediaFocusControl;->-$$Nest$fgetmFocusEnforcer(Lcom/android/server/audio/MediaFocusControl;)Lcom/android/server/audio/PlayerFocusEnforcer;
@@ -83,7 +76,6 @@
 
     goto :goto_1
 
-    .line 1579
     :cond_1
     iget-object p0, p0, Lcom/android/server/audio/MediaFocusControl$2;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -93,7 +85,6 @@
 
     invoke-interface {p0}, Lcom/android/server/audio/PlayerFocusEnforcer;->unmutePlayersForCall()V
 
-    .line 1581
     :goto_1
     monitor-exit v0
 

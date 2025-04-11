@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/EmergencyModeBlocker;)V
     .locals 0
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$SettingsListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
     const/4 p1, 0x0
 
-    .line 62
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -27,10 +25,8 @@
 .method public onChange(Z)V
     .locals 4
 
-    .line 67
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 68
     iget-object p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$SettingsListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$misEmergencyModeEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
@@ -39,7 +35,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$fputmEmergencyModeEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
 
-    .line 69
     iget-object p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$SettingsListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$misMpsmEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
@@ -48,7 +43,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$fputmMpsmEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
 
-    .line 70
     iget-object p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$SettingsListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$misLimitAppsAndHomeScreenEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
@@ -57,12 +51,10 @@
 
     invoke-static {p1, v0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$fputmLimitAppsAndHomeScreenEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
 
-    .line 71
     sget-boolean p1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p1, :cond_0
 
-    .line 72
     invoke-static {}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -125,7 +117,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$SettingsListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 

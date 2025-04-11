@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/wm/SystemGesturesPointerEventListener;)V
     .locals 1
 
-    .line 461
     iput-object p1, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->this$0:Lcom/android/server/wm/SystemGesturesPointerEventListener;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
-    .line 462
     new-instance v0, Landroid/widget/OverScroller;
 
     invoke-static {p1}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->-$$Nest$fgetmContext(Lcom/android/server/wm/SystemGesturesPointerEventListener;)Landroid/content/Context;
@@ -37,17 +35,14 @@
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 11
 
-    .line 475
     iget-object p1, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->mOverscroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->computeScrollOffset()Z
 
-    .line 476
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
 
-    .line 478
     iget-object v0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->this$0:Lcom/android/server/wm/SystemGesturesPointerEventListener;
 
     invoke-static {v0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->-$$Nest$fgetmLastFlingTime(Lcom/android/server/wm/SystemGesturesPointerEventListener;)J
@@ -76,12 +71,10 @@
 
     if-lez v0, :cond_0
 
-    .line 479
     iget-object v0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->mOverscroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0, v1}, Landroid/widget/OverScroller;->forceFinished(Z)V
 
-    .line 481
     :cond_0
     iget-object v2, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->mOverscroller:Landroid/widget/OverScroller;
 
@@ -103,7 +96,6 @@
 
     invoke-virtual/range {v2 .. v10}, Landroid/widget/OverScroller;->fling(IIIIIIII)V
 
-    .line 483
     iget-object p3, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->mOverscroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p3}, Landroid/widget/OverScroller;->getDuration()I
@@ -116,18 +108,15 @@
 
     move p3, p4
 
-    .line 487
     :cond_1
     iget-object p4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->this$0:Lcom/android/server/wm/SystemGesturesPointerEventListener;
 
     invoke-static {p4, p1, p2}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->-$$Nest$fputmLastFlingTime(Lcom/android/server/wm/SystemGesturesPointerEventListener;J)V
 
-    .line 490
     iget-object p1, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->mOverscroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->abortAnimation()V
 
-    .line 493
     iget-object p0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->this$0:Lcom/android/server/wm/SystemGesturesPointerEventListener;
 
     invoke-static {p0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->-$$Nest$fgetmCallbacks(Lcom/android/server/wm/SystemGesturesPointerEventListener;)Lcom/android/server/wm/SystemGesturesPointerEventListener$Callbacks;
@@ -142,7 +131,6 @@
 .method public onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 467
     iget-object p1, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->mOverscroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->isFinished()Z
@@ -153,7 +141,6 @@
 
     if-nez p1, :cond_0
 
-    .line 468
     iget-object p0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener$FlingGestureDetector;->mOverscroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0, v0}, Landroid/widget/OverScroller;->forceFinished(Z)V

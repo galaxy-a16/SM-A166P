@@ -16,13 +16,11 @@
 
     move v1, v0
 
-    .line 116
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_2
 
-    .line 117
     aget-object v2, p0, v1
 
     iget-object v2, v2, Landroid/hardware/power/stats/StateResidencyResult;->stateResidencyData:[Landroid/hardware/power/stats/StateResidency;
@@ -34,14 +32,12 @@
     :goto_1
     if-ge v3, v2, :cond_1
 
-    .line 119
     aget-object v4, p0, v1
 
     iget-object v4, v4, Landroid/hardware/power/stats/StateResidencyResult;->stateResidencyData:[Landroid/hardware/power/stats/StateResidency;
 
     aget-object v4, v4, v3
 
-    .line 121
     iget-wide v5, v4, Landroid/hardware/power/stats/StateResidency;->lastEntryTimestampMs:J
 
     add-long/2addr v5, p1
@@ -64,15 +60,12 @@
 .method public static getProtoBytes([Landroid/hardware/power/stats/StateResidencyResult;)[B
     .locals 1
 
-    .line 127
     new-instance v0, Landroid/util/proto/ProtoOutputStream;
 
     invoke-direct {v0}, Landroid/util/proto/ProtoOutputStream;-><init>()V
 
-    .line 128
     invoke-static {p0, v0}, Lcom/android/server/powerstats/ProtoStreamUtils$StateResidencyResultUtils;->packProtoMessage([Landroid/hardware/power/stats/StateResidencyResult;Landroid/util/proto/ProtoOutputStream;)V
 
-    .line 129
     invoke-virtual {v0}, Landroid/util/proto/ProtoOutputStream;->getBytes()[B
 
     move-result-object p0
@@ -96,13 +89,11 @@
 
     move v3, v2
 
-    .line 136
     :goto_0
     array-length v4, v0
 
     if-ge v3, v4, :cond_2
 
-    .line 137
     aget-object v4, v0, v3
 
     iget-object v4, v4, Landroid/hardware/power/stats/StateResidencyResult;->stateResidencyData:[Landroid/hardware/power/stats/StateResidency;
@@ -111,12 +102,10 @@
 
     const-wide v5, 0x20b00000002L
 
-    .line 138
     invoke-virtual {v1, v5, v6}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v7
 
-    .line 139
     aget-object v9, v0, v3
 
     iget v9, v9, Landroid/hardware/power/stats/StateResidencyResult;->id:I
@@ -130,45 +119,38 @@
     :goto_1
     if-ge v9, v4, :cond_1
 
-    .line 142
     aget-object v12, v0, v3
 
     iget-object v12, v12, Landroid/hardware/power/stats/StateResidencyResult;->stateResidencyData:[Landroid/hardware/power/stats/StateResidency;
 
     aget-object v12, v12, v9
 
-    .line 144
     invoke-virtual {v1, v5, v6}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v13
 
-    .line 145
     iget v15, v12, Landroid/hardware/power/stats/StateResidency;->id:I
 
     invoke-virtual {v1, v10, v11, v15}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
     const-wide v5, 0x10300000002L
 
-    .line 146
     iget-wide v10, v12, Landroid/hardware/power/stats/StateResidency;->totalTimeInStateMs:J
 
     invoke-virtual {v1, v5, v6, v10, v11}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
     const-wide v5, 0x10300000003L
 
-    .line 148
     iget-wide v10, v12, Landroid/hardware/power/stats/StateResidency;->totalStateEntryCount:J
 
     invoke-virtual {v1, v5, v6, v10, v11}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
     const-wide v5, 0x10300000004L
 
-    .line 150
     iget-wide v10, v12, Landroid/hardware/power/stats/StateResidency;->lastEntryTimestampMs:J
 
     invoke-virtual {v1, v5, v6, v10, v11}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    .line 152
     invoke-virtual {v1, v13, v14}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     add-int/lit8 v9, v9, 0x1
@@ -179,7 +161,6 @@
 
     goto :goto_1
 
-    .line 154
     :cond_1
     invoke-virtual {v1, v7, v8}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
@@ -194,7 +175,6 @@
 .method public static unpackProtoMessage([B)[Landroid/hardware/power/stats/StateResidencyResult;
     .locals 4
 
-    .line 159
     new-instance v0, Landroid/util/proto/ProtoInputStream;
 
     new-instance v1, Ljava/io/ByteArrayInputStream;
@@ -203,19 +183,16 @@
 
     invoke-direct {v0, v1}, Landroid/util/proto/ProtoInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 160
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 164
     :goto_0
     :try_start_0
     invoke-virtual {v0}, Landroid/util/proto/ProtoInputStream;->nextField()I
 
     move-result v1
 
-    .line 165
     new-instance v2, Landroid/hardware/power/stats/StateResidencyResult;
 
     invoke-direct {v2}, Landroid/hardware/power/stats/StateResidencyResult;-><init>()V
@@ -226,19 +203,16 @@
 
     const-wide v1, 0x20b00000002L
 
-    .line 169
     invoke-virtual {v0, v1, v2}, Landroid/util/proto/ProtoInputStream;->start(J)J
 
     move-result-wide v1
 
-    .line 170
     invoke-static {v0}, Lcom/android/server/powerstats/ProtoStreamUtils$StateResidencyResultUtils;->unpackStateResidencyResultProto(Landroid/util/proto/ProtoInputStream;)Landroid/hardware/power/stats/StateResidencyResult;
 
     move-result-object v3
 
     invoke-interface {p0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 171
     invoke-virtual {v0, v1, v2}, Landroid/util/proto/ProtoInputStream;->end(J)V
 
     goto :goto_0
@@ -248,14 +222,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 174
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
 
     new-array v1, v1, [Landroid/hardware/power/stats/StateResidencyResult;
 
-    .line 173
     invoke-interface {p0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -264,7 +236,6 @@
 
     return-object v1
 
-    .line 176
     :cond_1
     invoke-static {}, Lcom/android/server/powerstats/ProtoStreamUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -278,7 +249,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 177
     invoke-static {v0}, Landroid/util/proto/ProtoUtils;->currentFieldToString(Landroid/util/proto/ProtoInputStream;)Ljava/lang/String;
 
     move-result-object v3
@@ -289,14 +259,12 @@
 
     move-result-object v2
 
-    .line 176
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/util/proto/WireTypeMismatchException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 180
     :catch_0
     invoke-static {}, Lcom/android/server/powerstats/ProtoStreamUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -310,7 +278,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 181
     invoke-static {v0}, Landroid/util/proto/ProtoUtils;->currentFieldToString(Landroid/util/proto/ProtoInputStream;)Ljava/lang/String;
 
     move-result-object v3
@@ -321,7 +288,6 @@
 
     move-result-object v2
 
-    .line 180
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -330,12 +296,10 @@
 .method public static unpackStateResidencyProto(Landroid/util/proto/ProtoInputStream;)Landroid/hardware/power/stats/StateResidency;
     .locals 4
 
-    .line 223
     new-instance v0, Landroid/hardware/power/stats/StateResidency;
 
     invoke-direct {v0}, Landroid/hardware/power/stats/StateResidency;-><init>()V
 
-    .line 227
     :goto_0
     :try_start_0
     invoke-virtual {p0}, Landroid/util/proto/ProtoInputStream;->nextField()I
@@ -362,7 +326,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 251
     invoke-static {}, Lcom/android/server/powerstats/ProtoStreamUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -375,7 +338,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 252
     invoke-static {p0}, Landroid/util/proto/ProtoUtils;->currentFieldToString(Landroid/util/proto/ProtoInputStream;)Ljava/lang/String;
 
     move-result-object v3
@@ -386,7 +348,6 @@
 
     move-result-object v2
 
-    .line 251
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -394,7 +355,6 @@
     :cond_0
     const-wide v1, 0x10300000004L
 
-    .line 244
     invoke-virtual {p0, v1, v2}, Landroid/util/proto/ProtoInputStream;->readLong(J)J
 
     move-result-wide v1
@@ -406,7 +366,6 @@
     :cond_1
     const-wide v1, 0x10300000003L
 
-    .line 239
     invoke-virtual {p0, v1, v2}, Landroid/util/proto/ProtoInputStream;->readLong(J)J
 
     move-result-wide v1
@@ -418,7 +377,6 @@
     :cond_2
     const-wide v1, 0x10300000002L
 
-    .line 234
     invoke-virtual {p0, v1, v2}, Landroid/util/proto/ProtoInputStream;->readLong(J)J
 
     move-result-wide v1
@@ -430,7 +388,6 @@
     :cond_3
     const-wide v1, 0x10500000001L
 
-    .line 229
     invoke-virtual {p0, v1, v2}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v1
@@ -444,7 +401,6 @@
     :cond_4
     return-object v0
 
-    .line 257
     :catch_0
     invoke-static {}, Lcom/android/server/powerstats/ProtoStreamUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -458,7 +414,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 258
     invoke-static {p0}, Landroid/util/proto/ProtoUtils;->currentFieldToString(Landroid/util/proto/ProtoInputStream;)Ljava/lang/String;
 
     move-result-object v3
@@ -469,7 +424,6 @@
 
     move-result-object v2
 
-    .line 257
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -478,17 +432,14 @@
 .method public static unpackStateResidencyResultProto(Landroid/util/proto/ProtoInputStream;)Landroid/hardware/power/stats/StateResidencyResult;
     .locals 5
 
-    .line 188
     new-instance v0, Landroid/hardware/power/stats/StateResidencyResult;
 
     invoke-direct {v0}, Landroid/hardware/power/stats/StateResidencyResult;-><init>()V
 
-    .line 189
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 193
     :goto_0
     :try_start_0
     invoke-virtual {p0}, Landroid/util/proto/ProtoInputStream;->nextField()I
@@ -507,7 +458,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 210
     invoke-static {}, Lcom/android/server/powerstats/ProtoStreamUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -520,7 +470,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 211
     invoke-static {p0}, Landroid/util/proto/ProtoUtils;->currentFieldToString(Landroid/util/proto/ProtoInputStream;)Ljava/lang/String;
 
     move-result-object v4
@@ -531,7 +480,6 @@
 
     move-result-object v3
 
-    .line 210
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -539,19 +487,16 @@
     :cond_0
     const-wide v2, 0x20b00000002L
 
-    .line 199
     invoke-virtual {p0, v2, v3}, Landroid/util/proto/ProtoInputStream;->start(J)J
 
     move-result-wide v2
 
-    .line 200
     invoke-static {p0}, Lcom/android/server/powerstats/ProtoStreamUtils$StateResidencyResultUtils;->unpackStateResidencyProto(Landroid/util/proto/ProtoInputStream;)Landroid/hardware/power/stats/StateResidency;
 
     move-result-object v4
 
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 201
     invoke-virtual {p0, v2, v3}, Landroid/util/proto/ProtoInputStream;->end(J)V
 
     goto :goto_0
@@ -559,7 +504,6 @@
     :cond_1
     const-wide v2, 0x10500000001L
 
-    .line 195
     invoke-virtual {p0, v2, v3}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v2
@@ -568,7 +512,6 @@
 
     goto :goto_0
 
-    .line 206
     :cond_2
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -576,7 +519,6 @@
 
     new-array v2, v2, [Landroid/hardware/power/stats/StateResidency;
 
-    .line 205
     invoke-interface {v1, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
@@ -589,7 +531,6 @@
 
     return-object v0
 
-    .line 215
     :catch_0
     invoke-static {}, Lcom/android/server/powerstats/ProtoStreamUtils;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -603,7 +544,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 216
     invoke-static {p0}, Landroid/util/proto/ProtoUtils;->currentFieldToString(Landroid/util/proto/ProtoInputStream;)Ljava/lang/String;
 
     move-result-object v4
@@ -614,7 +554,6 @@
 
     move-result-object v3
 
-    .line 215
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0

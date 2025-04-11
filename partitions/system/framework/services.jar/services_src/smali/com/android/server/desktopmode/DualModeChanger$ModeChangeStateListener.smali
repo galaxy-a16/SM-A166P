@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/DualModeChanger;)V
     .locals 0
 
-    .line 773
     iput-object p1, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-direct {p0}, Lcom/android/server/desktopmode/StateManager$StateListener;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;-><init>(Lcom/android/server/desktopmode/DualModeChanger;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onExternalDisplayConnectionChanged(Lcom/android/server/desktopmode/State;)V
     .locals 2
 
-    .line 816
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->isExternalDisplayConnected()Z
 
     move-result v0
@@ -48,7 +45,6 @@
 
     if-nez v0, :cond_0
 
-    .line 817
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getDesktopModeState()Lcom/samsung/android/desktopmode/SemDesktopModeState;
 
     move-result-object v0
@@ -59,7 +55,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 818
     iget-object p0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/DualModeChanger;->-$$Nest$mshowDisplayUnsupportDialogIfNeeded(Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/State;)V
@@ -71,7 +66,6 @@
 .method public onNavBarGestureEnabled(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 824
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -96,7 +90,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 825
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
@@ -108,7 +101,6 @@
 .method public onSpenEnabled(Lcom/android/server/desktopmode/State;)V
     .locals 0
 
-    .line 811
     iget-object p0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/DualModeChanger;->-$$Nest$mupdateSpenNotification(Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/State;)V
@@ -119,7 +111,6 @@
 .method public onTouchpadAvailabilityChanged(Lcom/android/server/desktopmode/State;)V
     .locals 4
 
-    .line 784
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -144,18 +135,15 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 785
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/DualModeChanger;->-$$Nest$mupdateTouchpadNotification(Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/State;)V
 
-    .line 786
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/DualModeChanger;->-$$Nest$mupdateNavBarIcon(Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/State;)V
 
-    .line 787
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->isTouchpadAvailable()Z
 
     move-result v0
@@ -164,7 +152,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 788
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     iget-object v0, v0, Lcom/android/server/desktopmode/ModeChanger;->mResolver:Landroid/content/ContentResolver;
@@ -179,7 +166,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 790
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     iget-object v2, v0, Lcom/android/server/desktopmode/ModeChanger;->mUiManager:Lcom/android/server/desktopmode/UiManager;
@@ -188,15 +174,12 @@
 
     move-result-object v0
 
-    .line 791
     invoke-virtual {v0}, Lcom/android/server/desktopmode/TouchpadManager;->getInternalUiCallback()Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
 
     move-result-object v0
 
-    .line 790
     invoke-virtual {v2, v3, v1, v0}, Lcom/android/server/desktopmode/UiManager;->startActivity(IILcom/android/server/desktopmode/UiManager$InternalUiCallback;)V
 
-    .line 793
     :cond_1
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
@@ -210,7 +193,6 @@
 
     if-nez v0, :cond_4
 
-    .line 797
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-virtual {v0, p1}, Lcom/android/server/desktopmode/DualModeChanger;->canShowTouchpadNotification(Lcom/android/server/desktopmode/State;)Z
@@ -226,7 +208,6 @@
     :cond_2
     const/4 p1, 0x7
 
-    .line 800
     :goto_0
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
@@ -236,7 +217,6 @@
 
     invoke-virtual {v0, v3, p1, v2}, Lcom/android/server/desktopmode/UiManager;->showDialog(IILcom/android/server/desktopmode/UiManager$InternalUiCallback;)V
 
-    .line 801
     iget-object p0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     iget-object p0, p0, Lcom/android/server/desktopmode/ModeChanger;->mResolver:Landroid/content/ContentResolver;
@@ -247,7 +227,6 @@
 
     goto :goto_1
 
-    .line 805
     :cond_3
     iget-object p0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
@@ -263,7 +242,6 @@
 .method public onTouchpadEnabled(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 776
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -288,18 +266,15 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 777
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/DualModeChanger;->-$$Nest$mupdateTouchpadNotification(Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/State;)V
 
-    .line 778
     iget-object v0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/DualModeChanger;->-$$Nest$mupdateSpenNotification(Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/State;)V
 
-    .line 779
     iget-object p0, p0, Lcom/android/server/desktopmode/DualModeChanger$ModeChangeStateListener;->this$0:Lcom/android/server/desktopmode/DualModeChanger;
 
     invoke-static {p0, p1}, Lcom/android/server/desktopmode/DualModeChanger;->-$$Nest$mupdateNavBarIcon(Lcom/android/server/desktopmode/DualModeChanger;Lcom/android/server/desktopmode/State;)V

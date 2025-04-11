@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 5722
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$10;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,21 +23,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 5724
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "com.samsung.android.motion.PALM_SCREEN_OFF"
 
-    .line 5725
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 5726
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationConstants;->isSafeDebugInput()Z
 
     move-result p1
@@ -47,7 +43,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 5727
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,7 +65,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5729
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$10;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
@@ -85,10 +79,8 @@
     :cond_1
     const-string p1, "Going to sleep by palm touch down"
 
-    .line 5733
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5734
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt$10;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManagerExt;->mPolicy:Lcom/android/server/policy/PhoneWindowManager;

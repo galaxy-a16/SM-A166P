@@ -15,16 +15,12 @@
 .method public constructor <init>(JJLandroid/util/IntArray;)V
     .locals 0
 
-    .line 913
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 914
     iput-wide p1, p0, Lcom/android/server/cpu/CpuInfoReader$DynamicPolicyInfo;->curCpuFreqKHz:J
 
-    .line 915
     iput-wide p3, p0, Lcom/android/server/cpu/CpuInfoReader$DynamicPolicyInfo;->avgTimeInStateCpuFreqKHz:J
 
-    .line 916
     iput-object p5, p0, Lcom/android/server/cpu/CpuInfoReader$DynamicPolicyInfo;->affectedCpuCores:Landroid/util/IntArray;
 
     return-void
@@ -35,7 +31,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 921
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

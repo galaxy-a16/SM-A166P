@@ -16,24 +16,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 40
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tv/TvRemoteService;->mLock:Ljava/lang/Object;
 
-    .line 45
     new-instance v1, Lcom/android/server/tv/TvRemoteProviderWatcher;
 
     invoke-direct {v1, p1, v0}, Lcom/android/server/tv/TvRemoteProviderWatcher;-><init>(Landroid/content/Context;Ljava/lang/Object;)V
 
     iput-object v1, p0, Lcom/android/server/tv/TvRemoteService;->mWatcher:Lcom/android/server/tv/TvRemoteProviderWatcher;
 
-    .line 46
     invoke-static {}, Lcom/android/server/Watchdog;->getInstance()Lcom/android/server/Watchdog;
 
     move-result-object p1
@@ -48,7 +44,6 @@
 .method public monitor()V
     .locals 1
 
-    .line 56
     iget-object p0, p0, Lcom/android/server/tv/TvRemoteService;->mLock:Ljava/lang/Object;
 
     monitor-enter p0
@@ -75,7 +70,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/tv/TvRemoteService;->mWatcher:Lcom/android/server/tv/TvRemoteProviderWatcher;
 
     invoke-virtual {p0}, Lcom/android/server/tv/TvRemoteProviderWatcher;->start()V
@@ -87,6 +81,5 @@
 .method public onStart()V
     .locals 0
 
-    .line 0
     return-void
 .end method

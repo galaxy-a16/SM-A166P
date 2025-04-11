@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$c6bpW70x4_bDF2sj4TjYEibXujM(Lcom/android/server/am/BroadcastQueue;Ljava/lang/String;Ljava/io/FileDescriptor;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/BroadcastQueue;->lambda$dumpToDropBoxLocked$0(Ljava/lang/String;Ljava/io/FileDescriptor;)V
 
     return-void
@@ -28,10 +27,8 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Landroid/os/Handler;Ljava/lang/String;Lcom/android/server/am/BroadcastSkipPolicy;Lcom/android/server/am/BroadcastHistory;)V
     .locals 1
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -40,7 +37,6 @@
 
     iput-object p1, p0, Lcom/android/server/am/BroadcastQueue;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 58
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -49,17 +45,14 @@
 
     iput-object p2, p0, Lcom/android/server/am/BroadcastQueue;->mHandler:Landroid/os/Handler;
 
-    .line 59
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p3, p0, Lcom/android/server/am/BroadcastQueue;->mQueueName:Ljava/lang/String;
 
-    .line 60
     invoke-static {p4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p4, p0, Lcom/android/server/am/BroadcastQueue;->mSkipPolicy:Lcom/android/server/am/BroadcastSkipPolicy;
 
-    .line 61
     invoke-static {p5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p5, p0, Lcom/android/server/am/BroadcastQueue;->mHistory:Lcom/android/server/am/BroadcastHistory;
@@ -74,7 +67,6 @@
 
     return-void
 
-    .line 74
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -86,12 +78,10 @@
 .method private synthetic lambda$dumpToDropBoxLocked$0(Ljava/lang/String;Ljava/io/FileDescriptor;)V
     .locals 12
 
-    .line 283
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 284
     :try_start_0
     new-instance v11, Ljava/io/PrintWriter;
 
@@ -102,10 +92,8 @@
     :try_start_1
     const-string v1, "Message: "
 
-    .line 285
     invoke-virtual {v11, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 286
     invoke-virtual {v11, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 v4, 0x0
@@ -128,15 +116,12 @@
 
     move-object v3, v11
 
-    .line 287
     invoke-virtual/range {v1 .. v10}, Lcom/android/server/am/BroadcastQueue;->dumpLocked(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;IZZZLjava/lang/String;Z)Z
 
-    .line 288
     invoke-virtual {v11}, Ljava/io/PrintWriter;->flush()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 289
     :try_start_2
     invoke-virtual {v11}, Ljava/io/PrintWriter;->close()V
     :try_end_2
@@ -149,7 +134,6 @@
     :catchall_0
     move-exception p0
 
-    .line 283
     :try_start_3
     invoke-virtual {v11}, Ljava/io/PrintWriter;->close()V
     :try_end_3
@@ -192,7 +176,6 @@
 
     const-string v0, "BroadcastQueue"
 
-    .line 65
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -201,7 +184,6 @@
 .method public static traceBegin(Ljava/lang/String;)I
     .locals 4
 
-    .line 85
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -210,7 +192,6 @@
 
     const-string v3, "BroadcastQueue"
 
-    .line 86
     invoke-static {v1, v2, v3, p0, v0}, Landroid/os/Trace;->asyncTraceForTrackBegin(JLjava/lang/String;Ljava/lang/String;I)V
 
     return v0
@@ -223,7 +204,6 @@
 
     const-string v2, "BroadcastQueue"
 
-    .line 92
     invoke-static {v0, v1, v2, p0}, Landroid/os/Trace;->asyncTraceForTrackEnd(JLjava/lang/String;I)V
 
     return-void
@@ -252,7 +232,6 @@
 .method public dumpToDropBoxLocked(Ljava/lang/String;)V
     .locals 2
 
-    .line 282
     const-class v0, Lcom/android/server/DropBoxManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -286,7 +265,6 @@
 .method public forceDelayBroadcastDelivery(Ljava/lang/String;J)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -320,7 +298,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 98
     iget-object p0, p0, Lcom/android/server/am/BroadcastQueue;->mQueueName:Ljava/lang/String;
 
     return-object p0

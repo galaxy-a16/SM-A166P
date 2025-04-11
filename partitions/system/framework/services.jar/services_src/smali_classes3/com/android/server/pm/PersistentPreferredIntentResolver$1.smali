@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PersistentPreferredIntentResolver;Lcom/android/server/pm/PersistentPreferredIntentResolver;Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 64
     iput-object p1, p0, Lcom/android/server/pm/PersistentPreferredIntentResolver$1;->this$0:Lcom/android/server/pm/PersistentPreferredIntentResolver;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/utils/SnapshotCache;-><init>(Ljava/lang/Object;Lcom/android/server/utils/Watchable;)V
@@ -24,7 +23,6 @@
 .method public createSnapshot()Lcom/android/server/pm/PersistentPreferredIntentResolver;
     .locals 2
 
-    .line 67
     new-instance v0, Lcom/android/server/pm/PersistentPreferredIntentResolver;
 
     iget-object p0, p0, Lcom/android/server/utils/SnapshotCache;->mSource:Ljava/lang/Object;
@@ -41,7 +39,6 @@
 .method public bridge synthetic createSnapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/server/pm/PersistentPreferredIntentResolver$1;->createSnapshot()Lcom/android/server/pm/PersistentPreferredIntentResolver;
 
     move-result-object p0

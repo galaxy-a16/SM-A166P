@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 382
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 383
     iput-object p1, p0, Lcom/samsung/android/server/pm/install/UnknownSourceAppManager$PackageSettingsDelegator;->mGetPackagesLocked:Ljava/util/function/Supplier;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getPackagesLocked()Lcom/android/server/utils/WatchedArrayMap;
     .locals 0
 
-    .line 387
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/UnknownSourceAppManager$PackageSettingsDelegator;->mGetPackagesLocked:Ljava/util/function/Supplier;
 
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;

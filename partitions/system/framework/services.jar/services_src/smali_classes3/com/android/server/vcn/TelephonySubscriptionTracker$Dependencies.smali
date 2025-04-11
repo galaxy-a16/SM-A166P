@@ -17,7 +17,6 @@
 .method public getActiveDataSubscriptionId()I
     .locals 0
 
-    .line 573
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getActiveDataSubscriptionId()I
 
     move-result p0
@@ -28,7 +27,6 @@
 .method public isConfigForIdentifiedCarrier(Landroid/os/PersistableBundle;)Z
     .locals 0
 
-    .line 568
     invoke-static {p1}, Landroid/telephony/CarrierConfigManager;->isConfigForIdentifiedCarrier(Landroid/os/PersistableBundle;)Z
 
     move-result p0

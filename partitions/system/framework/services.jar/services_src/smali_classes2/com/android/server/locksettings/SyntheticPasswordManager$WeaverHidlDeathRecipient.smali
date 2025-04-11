@@ -16,14 +16,12 @@
 .method public constructor <init>(Lcom/android/server/locksettings/SyntheticPasswordManager;)V
     .locals 0
 
-    .line 1089
     iput-object p1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$WeaverHidlDeathRecipient;->this$0:Lcom/android/server/locksettings/SyntheticPasswordManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 1090
     iput p1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$WeaverHidlDeathRecipient;->deathCount:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/locksettings/SyntheticPasswordManager;Lcom/android/server/locksettings/SyntheticPasswordManager$WeaverHidlDeathRecipient-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/locksettings/SyntheticPasswordManager$WeaverHidlDeathRecipient;-><init>(Lcom/android/server/locksettings/SyntheticPasswordManager;)V
 
     return-void
@@ -43,14 +40,12 @@
 .method public serviceDied(J)V
     .locals 1
 
-    .line 1094
     iget p1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$WeaverHidlDeathRecipient;->deathCount:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$WeaverHidlDeathRecipient;->deathCount:I
 
-    .line 1095
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +70,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1097
     :try_start_0
     iget-object p1, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$WeaverHidlDeathRecipient;->this$0:Lcom/android/server/locksettings/SyntheticPasswordManager;
 
@@ -98,10 +92,8 @@
 
     const-string v0, "Failed to unlinkToDeath"
 
-    .line 1099
     invoke-static {p2, v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1101
     :goto_0
     iget-object p0, p0, Lcom/android/server/locksettings/SyntheticPasswordManager$WeaverHidlDeathRecipient;->this$0:Lcom/android/server/locksettings/SyntheticPasswordManager;
 

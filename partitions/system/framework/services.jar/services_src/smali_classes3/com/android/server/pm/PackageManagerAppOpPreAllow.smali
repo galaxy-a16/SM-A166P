@@ -21,25 +21,21 @@
 
     if-eqz p1, :cond_3
 
-    .line 18
     :cond_0
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 19
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 20
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 22
     :cond_1
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -55,27 +51,22 @@
 
     if-eqz v5, :cond_3
 
-    .line 23
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     const-string v6, "com.verizon.mips.services"
 
-    .line 24
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v6, "com.vzw.hss.myverizon"
 
-    .line 25
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v6, "com.verizon.pushtotalkplus"
 
-    .line 26
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 28
     const-class v6, Landroid/app/AppOpsManager;
 
     invoke-virtual {p2, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -84,7 +75,6 @@
 
     check-cast v6, Landroid/app/AppOpsManager;
 
-    .line 29
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -104,7 +94,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 31
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -116,7 +105,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 33
     iget-object v9, v8, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v9}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
@@ -125,7 +113,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 34
     iget-object v8, v8, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v8, v8, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -141,25 +128,21 @@
 
     if-eqz p1, :cond_7
 
-    .line 47
     :cond_4
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 48
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 49
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 51
     :cond_5
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -175,17 +158,14 @@
 
     if-eqz p1, :cond_7
 
-    .line 52
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "com.dish.wireless.activation"
 
-    .line 53
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 55
     const-class v1, Landroid/app/AppOpsManager;
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -194,7 +174,6 @@
 
     check-cast v1, Landroid/app/AppOpsManager;
 
-    .line 56
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -214,7 +193,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 58
     :try_start_1
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -226,7 +204,6 @@
 
     if-eqz v5, :cond_6
 
-    .line 60
     iget-object v6, v5, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v6}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
@@ -235,7 +212,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 61
     iget-object v5, v5, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v5, v5, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -249,7 +225,6 @@
     :cond_7
     if-eqz p0, :cond_8
 
-    .line 75
     :try_start_2
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -261,7 +236,6 @@
 
     if-eqz p0, :cond_8
 
-    .line 76
     iget-object p1, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {p1}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
@@ -270,7 +244,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 77
     const-class p1, Landroid/app/AppOpsManager;
 
     invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -279,7 +252,6 @@
 
     check-cast p1, Landroid/app/AppOpsManager;
 
-    .line 78
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget p0, p0, Landroid/content/pm/ApplicationInfo;->uid:I

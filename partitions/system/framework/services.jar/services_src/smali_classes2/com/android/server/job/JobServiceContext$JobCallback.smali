@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/job/JobServiceContext;)V
     .locals 0
 
-    .line 249
     iput-object p1, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     invoke-direct {p0}, Landroid/app/job/IJobCallback$Stub;-><init>()V
@@ -28,7 +27,6 @@
 .method public acknowledgeGetTransferredDownloadBytesMessage(IIJ)V
     .locals 6
 
-    .line 256
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     move-object v1, p0
@@ -47,7 +45,6 @@
 .method public acknowledgeGetTransferredUploadBytesMessage(IIJ)V
     .locals 6
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     move-object v1, p0
@@ -66,7 +63,6 @@
 .method public acknowledgeStartMessage(IZ)V
     .locals 1
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/job/JobServiceContext;->doAcknowledgeStartMessage(Lcom/android/server/job/JobServiceContext$JobCallback;IZ)V
@@ -77,7 +73,6 @@
 .method public acknowledgeStopMessage(IZ)V
     .locals 1
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/job/JobServiceContext;->doAcknowledgeStopMessage(Lcom/android/server/job/JobServiceContext$JobCallback;IZ)V
@@ -88,7 +83,6 @@
 .method public completeWork(II)Z
     .locals 1
 
-    .line 282
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/job/JobServiceContext;->doCompleteWork(Lcom/android/server/job/JobServiceContext$JobCallback;II)Z
@@ -101,7 +95,6 @@
 .method public dequeueWork(I)Landroid/app/job/JobWorkItem;
     .locals 1
 
-    .line 277
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     invoke-virtual {v0, p0, p1}, Lcom/android/server/job/JobServiceContext;->doDequeueWork(Lcom/android/server/job/JobServiceContext$JobCallback;I)Landroid/app/job/JobWorkItem;
@@ -114,7 +107,6 @@
 .method public jobFinished(IZ)V
     .locals 1
 
-    .line 287
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/job/JobServiceContext;->doJobFinished(Lcom/android/server/job/JobServiceContext$JobCallback;IZ)V
@@ -125,7 +117,6 @@
 .method public setNotification(IILandroid/app/Notification;I)V
     .locals 6
 
-    .line 305
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     move-object v1, p0
@@ -146,7 +137,6 @@
 .method public updateEstimatedNetworkBytes(ILandroid/app/job/JobWorkItem;JJ)V
     .locals 8
 
-    .line 293
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     move-object v1, p0
@@ -167,7 +157,6 @@
 .method public updateTransferredNetworkBytes(ILandroid/app/job/JobWorkItem;JJ)V
     .locals 8
 
-    .line 299
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext$JobCallback;->this$0:Lcom/android/server/job/JobServiceContext;
 
     move-object v1, p0

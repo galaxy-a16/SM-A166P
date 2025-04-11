@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;)V
     .locals 0
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/wm/AppSnapshotLoader;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
     return-void
@@ -50,7 +48,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 102
     invoke-static {p2, v1}, Ljava/lang/Float;->compare(FF)I
 
     move-result v2
@@ -69,7 +66,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 106
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
     move-result p1
@@ -103,7 +99,6 @@
     :cond_6
     if-eqz p1, :cond_8
 
-    .line 117
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
     move-result p1
@@ -124,7 +119,6 @@
 
     move p2, v1
 
-    .line 126
     :goto_3
     new-instance p1, Lcom/android/server/wm/AppSnapshotLoader$PreRLegacySnapshotConfig;
 
@@ -146,14 +140,12 @@
 
     const-string v14, "WindowManager"
 
-    .line 142
     iget-object v3, v0, Lcom/android/server/wm/AppSnapshotLoader;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
     invoke-virtual {v3, v1, v2}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->getProtoFile(II)Ljava/io/File;
 
     move-result-object v3
 
-    .line 143
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v4
@@ -164,7 +156,6 @@
 
     return-object v22
 
-    .line 147
     :cond_0
     :try_start_0
     invoke-virtual {v3}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
@@ -175,30 +166,24 @@
 
     move-result-object v3
 
-    .line 148
     invoke-static {v3}, Lcom/android/server/wm/nano/WindowManagerProtos$TaskSnapshotProto;->parseFrom([B)Lcom/android/server/wm/nano/WindowManagerProtos$TaskSnapshotProto;
 
     move-result-object v3
 
-    .line 149
     iget-object v4, v0, Lcom/android/server/wm/AppSnapshotLoader;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
-    .line 150
     invoke-virtual {v4, v1, v2}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->getHighResolutionBitmapFile(II)Ljava/io/File;
 
     move-result-object v4
 
-    .line 152
     iget v5, v3, Lcom/android/server/wm/nano/WindowManagerProtos$TaskSnapshotProto;->taskWidth:I
 
     iget v6, v3, Lcom/android/server/wm/nano/WindowManagerProtos$TaskSnapshotProto;->legacyScale:F
 
-    .line 153
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v7
 
-    .line 152
     invoke-virtual {v0, v5, v6, v7, v15}, Lcom/android/server/wm/AppSnapshotLoader;->getLegacySnapshotConfig(IFZZ)Lcom/android/server/wm/AppSnapshotLoader$PreRLegacySnapshotConfig;
 
     move-result-object v5
@@ -207,7 +192,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 155
     iget-boolean v7, v5, Lcom/android/server/wm/AppSnapshotLoader$PreRLegacySnapshotConfig;->mForceLoadReducedJpeg:Z
 
     if-eqz v7, :cond_1
@@ -224,7 +208,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 158
     :cond_2
     iget-object v4, v0, Lcom/android/server/wm/AppSnapshotLoader;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
@@ -232,7 +215,6 @@
 
     move-result-object v4
 
-    .line 161
     :cond_3
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -242,16 +224,13 @@
 
     return-object v22
 
-    .line 165
     :cond_4
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 167
     iget-object v0, v0, Lcom/android/server/wm/AppSnapshotLoader;->mPersistInfoProvider:Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;
 
-    .line 166
     invoke-virtual {v0}, Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;->use16BitFormat()Z
 
     move-result v0
@@ -262,7 +241,6 @@
 
     if-nez v0, :cond_5
 
-    .line 167
     sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     goto :goto_1
@@ -273,7 +251,6 @@
     :goto_1
     iput-object v0, v2, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 168
     invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -284,7 +261,6 @@
 
     if-nez v0, :cond_6
 
-    .line 170
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -307,7 +283,6 @@
 
     return-object v22
 
-    .line 174
     :cond_6
     sget-object v2, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
 
@@ -315,12 +290,10 @@
 
     move-result-object v2
 
-    .line 175
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     if-nez v2, :cond_7
 
-    .line 177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -343,7 +316,6 @@
 
     return-object v22
 
-    .line 180
     :cond_7
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHardwareBuffer()Landroid/hardware/HardwareBuffer;
 
@@ -351,7 +323,6 @@
 
     if-nez v8, :cond_8
 
-    .line 182
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -360,7 +331,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v2
@@ -371,12 +341,10 @@
 
     move-result-object v0
 
-    .line 182
     invoke-static {v14, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v22
 
-    .line 187
     :cond_8
     iget-object v0, v3, Lcom/android/server/wm/nano/WindowManagerProtos$TaskSnapshotProto;->topActivityComponent:Ljava/lang/String;
 
@@ -386,7 +354,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 192
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -399,7 +366,6 @@
 
     float-to-int v0, v0
 
-    .line 193
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
@@ -412,7 +378,6 @@
 
     float-to-int v4, v4
 
-    .line 194
     new-instance v5, Landroid/graphics/Point;
 
     invoke-direct {v5, v0, v4}, Landroid/graphics/Point;-><init>(II)V
@@ -421,7 +386,6 @@
 
     goto :goto_2
 
-    .line 196
     :cond_9
     new-instance v0, Landroid/graphics/Point;
 
@@ -433,7 +397,6 @@
 
     move-object v12, v0
 
-    .line 199
     :goto_2
     new-instance v0, Landroid/window/TaskSnapshot;
 
@@ -443,7 +406,6 @@
 
     move-result-wide v9
 
-    .line 200
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getColorSpace()Landroid/graphics/ColorSpace;
 
     move-result-object v11
@@ -562,7 +524,6 @@
     :catch_1
     move-object/from16 v23, v14
 
-    .line 212
     :catch_2
     :goto_3
     new-instance v0, Ljava/lang/StringBuilder;

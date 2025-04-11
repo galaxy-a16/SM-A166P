@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Landroid/view/IOnKeyguardExitResult;)V
     .locals 0
 
-    .line 3655
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$10;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$10;->val$callback:Landroid/view/IOnKeyguardExitResult;
@@ -31,7 +30,6 @@
 .method public onKeyguardExitResult(Z)V
     .locals 0
 
-    .line 3659
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService$10;->val$callback:Landroid/view/IOnKeyguardExitResult;
 

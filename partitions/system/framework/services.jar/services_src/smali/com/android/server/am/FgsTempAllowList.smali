@@ -15,10 +15,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -27,10 +25,8 @@
 
     const/16 v0, 0x64
 
-    .line 49
     iput v0, p0, Lcom/android/server/am/FgsTempAllowList;->mMaxSize:I
 
-    .line 50
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +41,6 @@
 .method public add(IJLjava/lang/Object;)V
     .locals 7
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/am/FgsTempAllowList;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -59,7 +54,6 @@
     :try_start_0
     const-string p0, "ActivityManager"
 
-    .line 79
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,32 +76,27 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     monitor-exit v0
 
     return-void
 
-    .line 85
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 86
     iget-object v3, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
     move-result v3
 
-    .line 87
     iget v4, p0, Lcom/android/server/am/FgsTempAllowList;->mMaxSize:I
 
     if-le v3, v4, :cond_2
 
     const-string v4, "ActivityManager"
 
-    .line 88
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +126,6 @@
     :goto_0
     if-ltz v3, :cond_2
 
-    .line 91
     iget-object v4, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -158,7 +146,6 @@
 
     if-gez v4, :cond_1
 
-    .line 92
     iget-object v4, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseArray;->removeAt(I)V
@@ -168,7 +155,6 @@
 
     goto :goto_0
 
-    .line 96
     :cond_2
     iget-object v3, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
@@ -182,7 +168,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 98
     iget-object p2, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p2, Ljava/lang/Long;
@@ -195,7 +180,6 @@
 
     if-gez p2, :cond_4
 
-    .line 99
     :cond_3
     iget-object p0, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
@@ -209,7 +193,6 @@
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 101
     :cond_4
     monitor-exit v0
 
@@ -228,14 +211,12 @@
 .method public forEach(Ljava/util/function/BiConsumer;)V
     .locals 4
 
-    .line 161
     iget-object v0, p0, Lcom/android/server/am/FgsTempAllowList;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 162
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
@@ -246,14 +227,12 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 163
     iget-object v2, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 164
     iget-object v3, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -264,7 +243,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 166
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -276,7 +254,6 @@
 
     goto :goto_0
 
-    .line 169
     :cond_1
     monitor-exit v0
 
@@ -295,12 +272,10 @@
 .method public get(I)Landroid/util/Pair;
     .locals 6
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/am/FgsTempAllowList;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 112
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
@@ -312,12 +287,10 @@
 
     if-gez p1, :cond_0
 
-    .line 114
     monitor-exit v0
 
     return-object v1
 
-    .line 115
     :cond_0
     iget-object v2, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
@@ -343,17 +316,14 @@
 
     if-gez v2, :cond_1
 
-    .line 116
     iget-object p0, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->removeAt(I)V
 
-    .line 117
     monitor-exit v0
 
     return-object v1
 
-    .line 119
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
@@ -370,7 +340,6 @@
     :catchall_0
     move-exception p0
 
-    .line 121
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -381,7 +350,6 @@
 .method public isAllowed(I)Z
     .locals 0
 
-    .line 129
     invoke-virtual {p0, p1}, Lcom/android/server/am/FgsTempAllowList;->get(I)Landroid/util/Pair;
 
     move-result-object p0
@@ -402,18 +370,15 @@
 .method public removeUid(I)V
     .locals 1
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/am/FgsTempAllowList;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 138
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/FgsTempAllowList;->mTempAllowList:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 139
     monitor-exit v0
 
     return-void

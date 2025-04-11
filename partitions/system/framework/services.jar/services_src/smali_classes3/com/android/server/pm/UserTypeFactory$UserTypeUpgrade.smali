@@ -15,16 +15,12 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 658
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 659
     iput-object p1, p0, Lcom/android/server/pm/UserTypeFactory$UserTypeUpgrade;->mFromType:Ljava/lang/String;
 
-    .line 660
     iput-object p2, p0, Lcom/android/server/pm/UserTypeFactory$UserTypeUpgrade;->mToType:Ljava/lang/String;
 
-    .line 661
     iput p3, p0, Lcom/android/server/pm/UserTypeFactory$UserTypeUpgrade;->mUpToVersion:I
 
     return-void
@@ -35,7 +31,6 @@
 .method public getFromType()Ljava/lang/String;
     .locals 0
 
-    .line 665
     iget-object p0, p0, Lcom/android/server/pm/UserTypeFactory$UserTypeUpgrade;->mFromType:Ljava/lang/String;
 
     return-object p0
@@ -44,7 +39,6 @@
 .method public getToType()Ljava/lang/String;
     .locals 0
 
-    .line 669
     iget-object p0, p0, Lcom/android/server/pm/UserTypeFactory$UserTypeUpgrade;->mToType:Ljava/lang/String;
 
     return-object p0
@@ -53,7 +47,6 @@
 .method public getUpToVersion()I
     .locals 0
 
-    .line 673
     iget p0, p0, Lcom/android/server/pm/UserTypeFactory$UserTypeUpgrade;->mUpToVersion:I
 
     return p0

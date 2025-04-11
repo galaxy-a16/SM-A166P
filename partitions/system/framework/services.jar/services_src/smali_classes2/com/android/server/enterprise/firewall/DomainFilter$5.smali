@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/firewall/DomainFilter;)V
     .locals 0
 
-    .line 371
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$5;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -24,14 +23,11 @@
 .method public onAvailable(Landroid/net/Network;)V
     .locals 2
 
-    .line 374
     invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onAvailable(Landroid/net/Network;)V
 
-    .line 376
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$5;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
-    .line 377
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$mgetConnectivityService(Lcom/android/server/enterprise/firewall/DomainFilter;)Landroid/net/ConnectivityManager;
 
     move-result-object v0
@@ -44,14 +40,12 @@
 
     const/16 v1, 0x11
 
-    .line 378
     invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 380
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +54,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 381
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$5;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$mhasAnyRuleInDatabase(Lcom/android/server/enterprise/firewall/DomainFilter;)Z
@@ -69,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 382
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$5;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-static {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$mexemptCaptivePortalHostname(Lcom/android/server/enterprise/firewall/DomainFilter;Landroid/net/Network;)V
@@ -81,7 +73,6 @@
     :catch_0
     move-exception p0
 
-    .line 386
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

@@ -18,7 +18,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 11
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,12 +46,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 12
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/BackupServiceFilter;->mContext:Landroid/content/Context;
 
     return-void
@@ -61,7 +58,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/BackupServiceFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/BackupServiceFilter;-><init>()V
 
     return-void
@@ -70,7 +66,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/BackupServiceFilter;
     .locals 1
 
-    .line 21
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/BackupServiceFilter$BackupServiceFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/BackupServiceFilter;
 
     move-result-object v0
@@ -83,14 +78,12 @@
 .method public deInit()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 35
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -114,6 +107,5 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

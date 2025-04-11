@@ -45,18 +45,14 @@
 
     const/4 v0, 0x0
 
-    .line 498
     iput-object v0, p0, Lcom/android/server/pm/UserManagerService$UserData;->seedAccountName:Ljava/lang/String;
 
-    .line 499
     iput-object v0, p0, Lcom/android/server/pm/UserManagerService$UserData;->seedAccountType:Ljava/lang/String;
 
-    .line 500
     iput-object v0, p0, Lcom/android/server/pm/UserManagerService$UserData;->seedAccountOptions:Landroid/os/PersistableBundle;
 
     const/4 v0, 0x0
 
-    .line 501
     iput-boolean v0, p0, Lcom/android/server/pm/UserManagerService$UserData;->persistSeedData:Z
 
     return-void
@@ -65,7 +61,6 @@
 .method public getIgnorePrepareStorageErrors()Z
     .locals 0
 
-    .line 479
     iget-boolean p0, p0, Lcom/android/server/pm/UserManagerService$UserData;->mIgnorePrepareStorageErrors:Z
 
     return p0
@@ -74,7 +69,6 @@
 .method public getLastRequestQuietModeEnabledMillis()J
     .locals 2
 
-    .line 475
     iget-wide v0, p0, Lcom/android/server/pm/UserManagerService$UserData;->mLastRequestQuietModeEnabledMillis:J
 
     return-wide v0
@@ -83,7 +77,6 @@
 .method public setIgnorePrepareStorageErrors()V
     .locals 2
 
-    .line 489
     sget v0, Landroid/os/Build$VERSION;->DEVICE_INITIAL_SDK_INT:I
 
     const/16 v1, 0x21
@@ -92,7 +85,6 @@
 
     const/4 v0, 0x1
 
-    .line 490
     iput-boolean v0, p0, Lcom/android/server/pm/UserManagerService$UserData;->mIgnorePrepareStorageErrors:Z
 
     return-void
@@ -102,7 +94,6 @@
 
     const-string v0, "Not setting mIgnorePrepareStorageErrors to true since this is a new device"
 
-    .line 493
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -111,7 +102,6 @@
 .method public setLastRequestQuietModeEnabledMillis(J)V
     .locals 0
 
-    .line 471
     iput-wide p1, p0, Lcom/android/server/pm/UserManagerService$UserData;->mLastRequestQuietModeEnabledMillis:J
 
     return-void

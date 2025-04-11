@@ -21,15 +21,12 @@
 .method public static read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/display/config/BlockingZoneConfig;
     .locals 4
 
-    .line 38
     new-instance v0, Lcom/android/server/display/config/BlockingZoneConfig;
 
     invoke-direct {v0}, Lcom/android/server/display/config/BlockingZoneConfig;-><init>()V
 
-    .line 40
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    .line 42
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -43,7 +40,6 @@
 
     if-eq v1, v3, :cond_3
 
-    .line 44
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -54,7 +50,6 @@
 
     goto :goto_0
 
-    .line 45
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -62,24 +57,20 @@
 
     const-string v2, "defaultRefreshRate"
 
-    .line 46
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 47
     invoke-static {p0}, Lcom/android/server/display/config/XmlParser;->readText(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 48
     new-instance v2, Ljava/math/BigInteger;
 
     invoke-direct {v2, v1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {v0, v2}, Lcom/android/server/display/config/BlockingZoneConfig;->setDefaultRefreshRate(Ljava/math/BigInteger;)V
 
     goto :goto_0
@@ -87,24 +78,20 @@
     :cond_1
     const-string v2, "blockingZoneThreshold"
 
-    .line 50
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 51
     invoke-static {p0}, Lcom/android/server/display/config/BlockingZoneThreshold;->read(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/display/config/BlockingZoneThreshold;
 
     move-result-object v1
 
-    .line 52
     invoke-virtual {v0, v1}, Lcom/android/server/display/config/BlockingZoneConfig;->setBlockingZoneThreshold(Lcom/android/server/display/config/BlockingZoneThreshold;)V
 
     goto :goto_0
 
-    .line 54
     :cond_2
     invoke-static {p0}, Lcom/android/server/display/config/XmlParser;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
@@ -115,7 +102,6 @@
 
     return-object v0
 
-    .line 58
     :cond_4
     new-instance p0, Ljavax/xml/datatype/DatatypeConfigurationException;
 
@@ -131,7 +117,6 @@
 .method public final getBlockingZoneThreshold()Lcom/android/server/display/config/BlockingZoneThreshold;
     .locals 0
 
-    .line 23
     iget-object p0, p0, Lcom/android/server/display/config/BlockingZoneConfig;->blockingZoneThreshold:Lcom/android/server/display/config/BlockingZoneThreshold;
 
     return-object p0
@@ -140,7 +125,6 @@
 .method public final getDefaultRefreshRate()Ljava/math/BigInteger;
     .locals 0
 
-    .line 8
     iget-object p0, p0, Lcom/android/server/display/config/BlockingZoneConfig;->defaultRefreshRate:Ljava/math/BigInteger;
 
     return-object p0
@@ -149,7 +133,6 @@
 .method public final setBlockingZoneThreshold(Lcom/android/server/display/config/BlockingZoneThreshold;)V
     .locals 0
 
-    .line 34
     iput-object p1, p0, Lcom/android/server/display/config/BlockingZoneConfig;->blockingZoneThreshold:Lcom/android/server/display/config/BlockingZoneThreshold;
 
     return-void
@@ -158,7 +141,6 @@
 .method public final setDefaultRefreshRate(Ljava/math/BigInteger;)V
     .locals 0
 
-    .line 19
     iput-object p1, p0, Lcom/android/server/display/config/BlockingZoneConfig;->defaultRefreshRate:Ljava/math/BigInteger;
 
     return-void

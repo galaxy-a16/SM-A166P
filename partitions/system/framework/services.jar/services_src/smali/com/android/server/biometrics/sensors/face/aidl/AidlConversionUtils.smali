@@ -17,7 +17,6 @@
 
     return p0
 
-    .line 205
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -37,7 +36,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
@@ -61,7 +59,6 @@
 
     return v0
 
-    .line 193
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -81,7 +78,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
@@ -97,7 +93,6 @@
 .method public static toFrameworkAcquiredInfo(B)I
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const/16 p0, 0x17
@@ -268,7 +263,6 @@
 .method public static toFrameworkAuthenticationFrame(Landroid/hardware/biometrics/face/AuthenticationFrame;)Landroid/hardware/face/FaceAuthenticationFrame;
     .locals 1
 
-    .line 159
     new-instance v0, Landroid/hardware/face/FaceAuthenticationFrame;
 
     iget-object p0, p0, Landroid/hardware/biometrics/face/AuthenticationFrame;->data:Landroid/hardware/biometrics/face/BaseFrame;
@@ -285,12 +279,10 @@
 .method public static toFrameworkBaseFrame(Landroid/hardware/biometrics/face/BaseFrame;)Landroid/hardware/face/FaceDataFrame;
     .locals 8
 
-    .line 172
     new-instance v7, Landroid/hardware/face/FaceDataFrame;
 
     iget-byte v0, p0, Landroid/hardware/biometrics/face/BaseFrame;->acquiredInfo:B
 
-    .line 173
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/aidl/AidlConversionUtils;->toFrameworkAcquiredInfo(B)I
 
     move-result v1
@@ -321,7 +313,6 @@
 
     goto :goto_0
 
-    .line 183
     :cond_0
     new-instance v0, Landroid/hardware/face/FaceEnrollCell;
 
@@ -342,26 +333,22 @@
 .method public static toFrameworkEnrollmentFrame(Landroid/hardware/biometrics/face/EnrollmentFrame;)Landroid/hardware/face/FaceEnrollFrame;
     .locals 3
 
-    .line 164
     new-instance v0, Landroid/hardware/face/FaceEnrollFrame;
 
     iget-object v1, p0, Landroid/hardware/biometrics/face/EnrollmentFrame;->cell:Landroid/hardware/biometrics/face/Cell;
 
-    .line 165
     invoke-static {v1}, Lcom/android/server/biometrics/sensors/face/aidl/AidlConversionUtils;->toFrameworkCell(Landroid/hardware/biometrics/face/Cell;)Landroid/hardware/face/FaceEnrollCell;
 
     move-result-object v1
 
     iget-byte v2, p0, Landroid/hardware/biometrics/face/EnrollmentFrame;->stage:B
 
-    .line 166
     invoke-static {v2}, Lcom/android/server/biometrics/sensors/face/aidl/AidlConversionUtils;->toFrameworkEnrollmentStage(I)I
 
     move-result v2
 
     iget-object p0, p0, Landroid/hardware/biometrics/face/EnrollmentFrame;->data:Landroid/hardware/biometrics/face/BaseFrame;
 
-    .line 167
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/aidl/AidlConversionUtils;->toFrameworkBaseFrame(Landroid/hardware/biometrics/face/BaseFrame;)Landroid/hardware/face/FaceDataFrame;
 
     move-result-object p0
@@ -374,7 +361,6 @@
 .method public static toFrameworkEnrollmentStage(I)I
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const/4 p0, 0x0
@@ -427,7 +413,6 @@
 .method public static toFrameworkError(B)I
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const/16 p0, 0x11

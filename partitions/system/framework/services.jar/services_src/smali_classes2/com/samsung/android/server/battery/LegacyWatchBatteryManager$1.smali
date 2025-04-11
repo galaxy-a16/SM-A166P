@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 116
     iput-object p1, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,10 +23,8 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 8
 
-    .line 119
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 120
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,7 +45,6 @@
 
     const/4 p1, 0x0
 
-    .line 124
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
@@ -78,7 +74,6 @@
 
     const-string p0, "cur is null"
 
-    .line 126
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -86,13 +81,11 @@
 
     if-eqz p1, :cond_0
 
-    .line 156
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     :cond_0
     return-void
 
-    .line 129
     :cond_1
     :goto_0
     :try_start_1
@@ -104,7 +97,6 @@
 
     const-string p2, "_btAddress"
 
-    .line 130
     invoke-interface {p1, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p2
@@ -115,7 +107,6 @@
 
     const-string v1, "Level"
 
-    .line 131
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
@@ -126,7 +117,6 @@
 
     const-string v2, "Status"
 
-    .line 132
     invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -137,7 +127,6 @@
 
     const-string v3, "Time"
 
-    .line 133
     invoke-interface {p1, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
@@ -146,7 +135,6 @@
 
     move-result-object v3
 
-    .line 134
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -185,7 +173,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     iget-object v3, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
     iget-object v3, v3, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;->mWatchBatteryInfo:Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;
@@ -200,7 +187,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 138
     iget-object v3, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
     iget-object v3, v3, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;->mWatchBatteryInfo:Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;
@@ -209,7 +195,6 @@
 
     move-result v3
 
-    .line 139
     iget-object v4, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
     iget-object v4, v4, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;->mWatchBatteryInfo:Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;
@@ -218,24 +203,20 @@
 
     move-result v4
 
-    .line 140
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 141
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 142
     iget-object v5, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
     iget-object v5, v5, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;->mWatchBatteryInfo:Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;
 
     invoke-virtual {v5, v1}, Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;->setBatteryLevel(I)V
 
-    .line 143
     iget-object v5, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
     iget-object v5, v5, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;->mWatchBatteryInfo:Lcom/samsung/android/os/SemCompanionDeviceBatteryInfo;
@@ -244,7 +225,6 @@
 
     if-gez v3, :cond_2
 
-    .line 145
     iget-object v1, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
     invoke-static {v1}, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;->-$$Nest$fgetmBatteryInfoServiceInternal(Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;)Lcom/samsung/android/server/battery/DeviceBatteryInfoServiceInternal;
@@ -264,7 +244,6 @@
 
     if-eq v4, v2, :cond_1
 
-    .line 147
     :cond_3
     iget-object p2, p0, Lcom/samsung/android/server/battery/LegacyWatchBatteryManager$1;->this$0:Lcom/samsung/android/server/battery/LegacyWatchBatteryManager;
 
@@ -285,7 +264,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     :cond_4
     :goto_1
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
@@ -300,7 +278,6 @@
     :catch_0
     move-exception p0
 
-    .line 153
     :try_start_2
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -331,10 +308,8 @@
     :goto_3
     if-eqz p1, :cond_6
 
-    .line 156
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 158
     :cond_6
     throw p0
 .end method

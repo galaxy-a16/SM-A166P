@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wallpaper/WallpaperManagerService;)V
     .locals 0
 
-    .line 2401
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public getWallpaperData(II)Lcom/android/server/wallpaper/WallpaperData;
     .locals 1
 
-    .line 2404
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {v0}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmLock(Lcom/android/server/wallpaper/WallpaperManagerService;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 2405
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$2;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -51,7 +48,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2406
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

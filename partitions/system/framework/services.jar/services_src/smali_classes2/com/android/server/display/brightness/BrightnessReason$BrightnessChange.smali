@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/display/brightness/BrightnessReason;IF)V
     .locals 0
 
-    .line 346
     iput-object p1, p0, Lcom/android/server/display/brightness/BrightnessReason$BrightnessChange;->this$0:Lcom/android/server/display/brightness/BrightnessReason;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 347
     iput p2, p0, Lcom/android/server/display/brightness/BrightnessReason$BrightnessChange;->modifier:I
 
-    .line 349
     invoke-static {p3}, Lcom/android/internal/display/BrightnessSynchronizer;->brightnessFloatToInt(F)I
 
     move-result p1
@@ -38,12 +35,10 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 354
     iget-object v0, p0, Lcom/android/server/display/brightness/BrightnessReason$BrightnessChange;->this$0:Lcom/android/server/display/brightness/BrightnessReason;
 
     iget v1, p0, Lcom/android/server/display/brightness/BrightnessReason$BrightnessChange;->modifier:I
 
-    .line 355
     invoke-static {v0, v1}, Lcom/android/server/display/brightness/BrightnessReason;->-$$Nest$mmodifierToString(Lcom/android/server/display/brightness/BrightnessReason;I)Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +55,6 @@
 
     const-string v0, " -> %s[%d]"
 
-    .line 354
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

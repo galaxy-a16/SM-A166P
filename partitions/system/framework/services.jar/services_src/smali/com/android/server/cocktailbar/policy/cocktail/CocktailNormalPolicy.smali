@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 12
     const-class v0, Lcom/android/server/cocktailbar/policy/cocktail/CocktailContextualPolicy;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -26,7 +25,6 @@
 .method public constructor <init>(Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;)V
     .locals 0
 
-    .line 15
     invoke-direct {p0, p1}, Lcom/android/server/cocktailbar/policy/cocktail/AbsCocktailPolicy;-><init>(Lcom/android/server/cocktailbar/policy/cocktail/CocktailPolicy$OnCocktailPolicyListener;)V
 
     return-void
@@ -37,7 +35,6 @@
 .method public getCocktailType()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -46,7 +43,6 @@
 .method public isAcceptCloseCocktail(Lcom/samsung/android/cocktailbar/Cocktail;Lcom/android/server/cocktailbar/settings/CocktailBarSettings;IZ)Z
     .locals 0
 
-    .line 42
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
 
     move-result p0
@@ -72,7 +68,6 @@
 .method public isAcceptShowCocktail(Lcom/samsung/android/cocktailbar/Cocktail;Lcom/android/server/cocktailbar/settings/CocktailBarSettings;IZ)Z
     .locals 0
 
-    .line 34
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
 
     move-result p0
@@ -98,7 +93,6 @@
 .method public isAcceptUpdateCocktail(Lcom/samsung/android/cocktailbar/Cocktail;Lcom/android/server/cocktailbar/settings/CocktailBarSettings;Lcom/android/server/cocktailbar/mode/CocktailBarModeManager;IZ)Z
     .locals 0
 
-    .line 26
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getCocktailId()I
 
     move-result p0
@@ -128,7 +122,6 @@
 
     if-nez p1, :cond_0
 
-    .line 51
     sget-object p1, Lcom/android/server/cocktailbar/policy/cocktail/CocktailNormalPolicy;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "isMatchedPolicy: cocktail is null"
@@ -137,7 +130,6 @@
 
     return p0
 
-    .line 54
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/cocktailbar/Cocktail;->getProviderInfo()Lcom/samsung/android/cocktailbar/CocktailProviderInfo;
 
@@ -145,7 +137,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 56
     iget p1, p1, Lcom/samsung/android/cocktailbar/CocktailProviderInfo;->category:I
 
     and-int/lit16 p1, p1, 0x101

@@ -20,7 +20,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 83
     new-instance v0, Landroid/hardware/usb/PortRole$1;
 
     invoke-direct {v0}, Landroid/hardware/usb/PortRole$1;-><init>()V
@@ -33,15 +32,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 16
     iput v0, p0, Landroid/hardware/usb/PortRole;->_tag:I
 
-    .line 17
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v0
@@ -54,10 +50,8 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     invoke-virtual {p0, p1}, Landroid/hardware/usb/PortRole;->readFromParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -66,7 +60,6 @@
 .method public synthetic constructor <init>(Landroid/os/Parcel;Landroid/hardware/usb/PortRole-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Landroid/hardware/usb/PortRole;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -77,7 +70,6 @@
 .method public final _assertTag(I)V
     .locals 3
 
-    .line 142
     invoke-virtual {p0}, Landroid/hardware/usb/PortRole;->getTag()I
 
     move-result v0
@@ -86,7 +78,6 @@
 
     return-void
 
-    .line 143
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -134,10 +125,8 @@
 .method public final _set(ILjava/lang/Object;)V
     .locals 0
 
-    .line 157
     iput p1, p0, Landroid/hardware/usb/PortRole;->_tag:I
 
-    .line 158
     iput-object p2, p0, Landroid/hardware/usb/PortRole;->_value:Ljava/lang/Object;
 
     return-void
@@ -160,7 +149,6 @@
 
     return-object p0
 
-    .line 153
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -196,7 +184,6 @@
 .method public describeContents()I
     .locals 0
 
-    .line 136
     invoke-virtual {p0}, Landroid/hardware/usb/PortRole;->getTag()I
 
     const/4 p0, 0x0
@@ -209,10 +196,8 @@
 
     const/4 v0, 0x1
 
-    .line 55
     invoke-virtual {p0, v0}, Landroid/hardware/usb/PortRole;->_assertTag(I)V
 
-    .line 56
     iget-object p0, p0, Landroid/hardware/usb/PortRole;->_value:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Byte;
@@ -229,10 +214,8 @@
 
     const/4 v0, 0x2
 
-    .line 70
     invoke-virtual {p0, v0}, Landroid/hardware/usb/PortRole;->_assertTag(I)V
 
-    .line 71
     iget-object p0, p0, Landroid/hardware/usb/PortRole;->_value:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Byte;
@@ -249,10 +232,8 @@
 
     const/4 v0, 0x0
 
-    .line 40
     invoke-virtual {p0, v0}, Landroid/hardware/usb/PortRole;->_assertTag(I)V
 
-    .line 41
     iget-object p0, p0, Landroid/hardware/usb/PortRole;->_value:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/Byte;
@@ -267,7 +248,6 @@
 .method public final getStability()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -276,7 +256,6 @@
 .method public getTag()I
     .locals 0
 
-    .line 30
     iget p0, p0, Landroid/hardware/usb/PortRole;->_tag:I
 
     return p0
@@ -285,7 +264,6 @@
 .method public readFromParcel(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 112
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -300,12 +278,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 126
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
 
-    .line 127
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
@@ -314,7 +290,6 @@
 
     return-void
 
-    .line 130
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -336,13 +311,11 @@
 
     throw p0
 
-    .line 121
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
 
-    .line 122
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
@@ -351,13 +324,11 @@
 
     return-void
 
-    .line 116
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
 
-    .line 117
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
@@ -372,7 +343,6 @@
 
     const/4 v0, 0x1
 
-    .line 60
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
@@ -387,7 +357,6 @@
 
     const/4 v0, 0x2
 
-    .line 75
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
@@ -402,7 +371,6 @@
 
     const/4 v0, 0x0
 
-    .line 45
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
@@ -415,12 +383,10 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 96
     iget p2, p0, Landroid/hardware/usb/PortRole;->_tag:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 97
     iget p2, p0, Landroid/hardware/usb/PortRole;->_tag:I
 
     if-eqz p2, :cond_2
@@ -435,7 +401,6 @@
 
     goto :goto_0
 
-    .line 105
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/usb/PortRole;->getMode()B
 
@@ -445,7 +410,6 @@
 
     goto :goto_0
 
-    .line 102
     :cond_1
     invoke-virtual {p0}, Landroid/hardware/usb/PortRole;->getDataRole()B
 
@@ -455,7 +419,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_2
     invoke-virtual {p0}, Landroid/hardware/usb/PortRole;->getPowerRole()B
 

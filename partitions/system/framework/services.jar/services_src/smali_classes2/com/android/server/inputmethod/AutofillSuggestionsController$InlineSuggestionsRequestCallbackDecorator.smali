@@ -19,22 +19,16 @@
 .method public constructor <init>(Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;Ljava/lang/String;ILandroid/os/IBinder;Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 178
     invoke-direct {p0}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback$Stub;-><init>()V
 
-    .line 179
     iput-object p1, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
-    .line 180
     iput-object p2, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mImePackageName:Ljava/lang/String;
 
-    .line 181
     iput p3, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mImeDisplayId:I
 
-    .line 182
     iput-object p4, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mImeToken:Landroid/os/IBinder;
 
-    .line 183
     iput-object p5, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     return-void
@@ -45,7 +39,6 @@
 .method public onInlineSuggestionsRequest(Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/inputmethod/IInlineSuggestionsResponseCallback;)V
     .locals 3
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mImePackageName:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/view/inputmethod/InlineSuggestionsRequest;->getHostPackageName()Ljava/lang/String;
@@ -58,12 +51,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 201
     iget v0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mImeDisplayId:I
 
     invoke-virtual {p1, v0}, Landroid/view/inputmethod/InlineSuggestionsRequest;->setHostDisplayId(I)V
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mImms:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object v1, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mImeToken:Landroid/os/IBinder;
@@ -74,14 +65,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/inputmethod/InputMethodManagerService;->setCurHostInputToken(Landroid/os/IBinder;Landroid/os/IBinder;)V
 
-    .line 203
     iget-object p0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
     invoke-interface {p0, p1, p2}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;->onInlineSuggestionsRequest(Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/inputmethod/IInlineSuggestionsResponseCallback;)V
 
     return-void
 
-    .line 196
     :cond_0
     new-instance p2, Ljava/lang/SecurityException;
 
@@ -93,7 +82,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 197
     invoke-virtual {p1}, Landroid/view/inputmethod/InlineSuggestionsRequest;->getHostPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -124,7 +112,6 @@
 .method public onInlineSuggestionsSessionInvalidated()V
     .locals 0
 
-    .line 233
     iget-object p0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
     invoke-interface {p0}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;->onInlineSuggestionsSessionInvalidated()V
@@ -135,7 +122,6 @@
 .method public onInlineSuggestionsUnsupported()V
     .locals 0
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
     invoke-interface {p0}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;->onInlineSuggestionsUnsupported()V
@@ -146,7 +132,6 @@
 .method public onInputMethodFinishInput()V
     .locals 0
 
-    .line 228
     iget-object p0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
     invoke-interface {p0}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;->onInputMethodFinishInput()V
@@ -157,7 +142,6 @@
 .method public onInputMethodFinishInputView()V
     .locals 0
 
-    .line 223
     iget-object p0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
     invoke-interface {p0}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;->onInputMethodFinishInputView()V
@@ -168,7 +152,6 @@
 .method public onInputMethodShowInputRequested(Z)V
     .locals 0
 
-    .line 213
     iget-object p0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
     invoke-interface {p0, p1}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;->onInputMethodShowInputRequested(Z)V
@@ -179,7 +162,6 @@
 .method public onInputMethodStartInput(Landroid/view/autofill/AutofillId;)V
     .locals 0
 
-    .line 208
     iget-object p0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
     invoke-interface {p0, p1}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;->onInputMethodStartInput(Landroid/view/autofill/AutofillId;)V
@@ -190,7 +172,6 @@
 .method public onInputMethodStartInputView()V
     .locals 0
 
-    .line 218
     iget-object p0, p0, Lcom/android/server/inputmethod/AutofillSuggestionsController$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;
 
     invoke-interface {p0}, Lcom/android/internal/inputmethod/IInlineSuggestionsRequestCallback;->onInputMethodStartInputView()V

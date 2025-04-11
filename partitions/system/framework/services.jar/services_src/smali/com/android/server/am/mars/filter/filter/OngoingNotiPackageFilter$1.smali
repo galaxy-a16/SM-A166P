@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;)V
     .locals 0
 
-    .line 90
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;
 
     invoke-direct {p0}, Landroid/service/notification/NotificationListenerService;-><init>()V
@@ -24,14 +23,12 @@
 .method public onListenerConnected()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onListenerDisconnected()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -40,7 +37,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;
 
     invoke-static {p0}, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;->-$$Nest$fgetmActiveNotiMap(Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -66,7 +62,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;
 
     invoke-static {p0}, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;->-$$Nest$fgetmActiveNotiMap(Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;)Ljava/util/concurrent/ConcurrentHashMap;

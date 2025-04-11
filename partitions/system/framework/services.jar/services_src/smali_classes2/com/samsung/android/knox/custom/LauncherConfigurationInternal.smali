@@ -119,7 +119,6 @@
 
     const-string v0, "content://com.sec.android.app.launcher.settings/settings"
 
-    .line 12
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -132,10 +131,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 141
     iput-object p1, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     return-void
@@ -146,27 +143,22 @@
 .method public addShortcut(ILandroid/graphics/Point;Landroid/content/ComponentName;)I
     .locals 2
 
-    .line 257
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "page"
 
-    .line 258
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "coordination_position"
 
-    .line 259
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     const-string p1, "component"
 
-    .line 260
     invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 261
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -187,7 +179,6 @@
 
     const/4 p2, -0x2
 
-    .line 262
     invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -198,32 +189,26 @@
 .method public addWidget(ILandroid/graphics/Point;Landroid/graphics/Point;Landroid/content/ComponentName;)I
     .locals 2
 
-    .line 238
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "page"
 
-    .line 239
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "coordination_position"
 
-    .line 240
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     const-string p1, "coordination_size"
 
-    .line 241
     invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     const-string p1, "component"
 
-    .line 242
     invoke-virtual {v0, p1, p4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 243
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -244,7 +229,6 @@
 
     const/4 p2, -0x2
 
-    .line 244
     invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -255,7 +239,6 @@
 .method public getAppsButtonVisibility()Z
     .locals 3
 
-    .line 321
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -276,7 +259,6 @@
 
     const/4 v1, -0x2
 
-    .line 322
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -287,7 +269,6 @@
 
     const-string/jumbo v0, "state"
 
-    .line 324
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -301,7 +282,6 @@
 .method public getAppsCellDimension()Landroid/util/Size;
     .locals 3
 
-    .line 191
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -322,19 +302,16 @@
 
     const/4 v1, 0x0
 
-    .line 192
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v2, "cols"
 
-    .line 193
     invoke-virtual {p0, v2, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 194
     new-instance v1, Landroid/util/Size;
 
     invoke-direct {v1, v0, p0}, Landroid/util/Size;-><init>(II)V
@@ -345,7 +322,6 @@
 .method public getHomeCellDimension()Landroid/util/Size;
     .locals 3
 
-    .line 184
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -366,19 +342,16 @@
 
     const/4 v1, 0x0
 
-    .line 185
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v2, "cols"
 
-    .line 186
     invoke-virtual {p0, v2, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 187
     new-instance v1, Landroid/util/Size;
 
     invoke-direct {v1, v0, p0}, Landroid/util/Size;-><init>(II)V
@@ -389,7 +362,6 @@
 .method public getHomeMode()I
     .locals 4
 
-    .line 153
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -408,14 +380,12 @@
 
     move-result-object p0
 
-    .line 154
     invoke-virtual {p0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "easy_mode"
 
-    .line 155
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -429,7 +399,6 @@
     :cond_0
     const-string v0, "home_apps_mode"
 
-    .line 158
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -443,7 +412,6 @@
     :cond_1
     const-string v0, "home_only_mode"
 
-    .line 161
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -463,17 +431,14 @@
 .method public getHotseatItem(I)Landroid/content/ComponentName;
     .locals 3
 
-    .line 218
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "index"
 
-    .line 219
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 220
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -494,26 +459,22 @@
 
     const/4 v0, -0x2
 
-    .line 221
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string v0, "component"
 
-    .line 222
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p0
 
     if-nez p1, :cond_0
 
-    .line 223
     instance-of p1, p0, Landroid/content/ComponentName;
 
     if-eqz p1, :cond_0
 
-    .line 224
     check-cast p0, Landroid/content/ComponentName;
 
     return-object p0
@@ -525,7 +486,6 @@
 .method public getHotseatItemCount()I
     .locals 3
 
-    .line 198
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -546,7 +506,6 @@
 
     const/4 v1, -0x2
 
-    .line 199
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -557,7 +516,6 @@
 .method public getHotseatMaxItemCount()I
     .locals 3
 
-    .line 203
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -578,7 +536,6 @@
 
     const/4 v1, -0x2
 
-    .line 204
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -589,7 +546,6 @@
 .method public getSupplementServicePageVisibility()Z
     .locals 3
 
-    .line 293
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -610,7 +566,6 @@
 
     const/4 v1, -0x2
 
-    .line 294
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -621,7 +576,6 @@
 
     const/4 v1, 0x0
 
-    .line 296
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -637,17 +591,14 @@
 .method public isSupported(I)I
     .locals 3
 
-    .line 145
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "feature"
 
-    .line 146
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 147
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -668,7 +619,6 @@
 
     const/4 v0, -0x2
 
-    .line 148
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -679,27 +629,22 @@
 .method public makeEmptyPosition(ILandroid/graphics/Point;Landroid/graphics/Point;)I
     .locals 2
 
-    .line 275
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "page"
 
-    .line 276
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "coordination_position"
 
-    .line 277
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     const-string p1, "coordination_size"
 
-    .line 278
     invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 279
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -720,7 +665,6 @@
 
     const/4 p2, -0x2
 
-    .line 280
     invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -731,17 +675,14 @@
 .method public removeHotseatItem(I)I
     .locals 3
 
-    .line 230
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "index"
 
-    .line 231
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 232
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -762,7 +703,6 @@
 
     const/4 v0, -0x2
 
-    .line 233
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -773,17 +713,14 @@
 .method public removePageFromHome(I)I
     .locals 3
 
-    .line 285
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "page"
 
-    .line 286
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 287
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -804,7 +741,6 @@
 
     const/4 v0, -0x2
 
-    .line 288
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -815,17 +751,14 @@
 .method public removeShortcut(Landroid/content/ComponentName;)I
     .locals 3
 
-    .line 267
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "component"
 
-    .line 268
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 269
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -846,7 +779,6 @@
 
     const/4 v0, -0x2
 
-    .line 270
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -857,17 +789,14 @@
 .method public removeWidget(Landroid/content/ComponentName;)I
     .locals 3
 
-    .line 249
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "component"
 
-    .line 250
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 251
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -888,7 +817,6 @@
 
     const/4 v0, -0x2
 
-    .line 252
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -899,7 +827,6 @@
 .method public setAppsButtonVisibility(Z)I
     .locals 2
 
-    .line 310
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -908,7 +835,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 312
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -925,7 +851,6 @@
 
     goto :goto_0
 
-    .line 314
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
@@ -946,7 +871,6 @@
 
     const/4 v0, -0x2
 
-    .line 316
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -957,22 +881,18 @@
 .method public setHotseatItem(ILandroid/content/ComponentName;)I
     .locals 2
 
-    .line 209
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "index"
 
-    .line 210
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "component"
 
-    .line 211
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 212
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -993,7 +913,6 @@
 
     const/4 p2, -0x2
 
-    .line 213
     invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -1004,17 +923,14 @@
 .method public setSupplementServicePageVisibility(Z)I
     .locals 3
 
-    .line 302
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "visibility"
 
-    .line 303
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 304
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1035,7 +951,6 @@
 
     const/4 v0, -0x2
 
-    .line 305
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -1046,7 +961,6 @@
 .method public switchHomeMode(I)I
     .locals 3
 
-    .line 168
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -1059,7 +973,6 @@
 
     const-string p1, "home_apps_mode"
 
-    .line 170
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -1071,10 +984,8 @@
 
     const-string p1, "home_only_mode"
 
-    .line 173
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 178
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;->mContext:Landroid/content/Context;
 
@@ -1096,7 +1007,6 @@
 
     const/4 v0, -0x2
 
-    .line 179
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0

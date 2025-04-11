@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usage/UsageStatsService;)V
     .locals 0
 
-    .line 277
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$1;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Lcom/android/server/usage/AppStandbyInternal$AppIdleStateChangeListener;-><init>()V
@@ -24,12 +23,10 @@
 .method public onAppIdleStateChanged(Ljava/lang/String;IZII)V
     .locals 3
 
-    .line 281
     new-instance p3, Landroid/app/usage/UsageEvents$Event;
 
     const/16 v0, 0xb
 
-    .line 282
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
@@ -44,13 +41,10 @@
 
     or-int/2addr p4, p5
 
-    .line 283
     iput p4, p3, Landroid/app/usage/UsageEvents$Event;->mBucketAndReason:I
 
-    .line 284
     iput-object p1, p3, Landroid/app/usage/UsageEvents$Event;->mPackage:Ljava/lang/String;
 
-    .line 285
     iget-object p0, p0, Lcom/android/server/usage/UsageStatsService$1;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {p0, p2, p3}, Lcom/android/server/usage/UsageStatsService;->-$$Nest$mreportEventOrAddToQueue(Lcom/android/server/usage/UsageStatsService;ILandroid/app/usage/UsageEvents$Event;)V

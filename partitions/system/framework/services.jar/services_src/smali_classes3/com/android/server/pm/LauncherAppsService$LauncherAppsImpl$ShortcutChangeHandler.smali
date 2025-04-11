@@ -16,17 +16,14 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerInternal;)V
     .locals 1
 
-    .line 1674
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1678
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mCallbacks:Landroid/os/RemoteCallbackList;
 
-    .line 1675
     iput-object p1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
     return-void
@@ -35,39 +32,32 @@
 .method public static filterShortcutsByQuery(Ljava/lang/String;Ljava/util/List;Landroid/content/pm/ShortcutQueryWrapper;Z)Ljava/util/List;
     .locals 10
 
-    .line 1742
     invoke-virtual {p2}, Landroid/content/pm/ShortcutQueryWrapper;->getChangedSince()J
 
     move-result-wide v0
 
-    .line 1743
     invoke-virtual {p2}, Landroid/content/pm/ShortcutQueryWrapper;->getPackage()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1744
     invoke-virtual {p2}, Landroid/content/pm/ShortcutQueryWrapper;->getShortcutIds()Ljava/util/List;
 
     move-result-object v3
 
-    .line 1745
     invoke-virtual {p2}, Landroid/content/pm/ShortcutQueryWrapper;->getLocusIds()Ljava/util/List;
 
     move-result-object v4
 
-    .line 1746
     invoke-virtual {p2}, Landroid/content/pm/ShortcutQueryWrapper;->getActivity()Landroid/content/ComponentName;
 
     move-result-object v5
 
-    .line 1747
     invoke-virtual {p2}, Landroid/content/pm/ShortcutQueryWrapper;->getQueryFlags()I
 
     move-result p2
 
     if-eqz v2, :cond_0
 
-    .line 1749
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -78,7 +68,6 @@
 
     return-object p0
 
-    .line 1753
     :cond_0
     new-instance p0, Ljava/util/ArrayList;
 
@@ -170,7 +159,6 @@
     :goto_6
     or-int/2addr p2, v2
 
-    .line 1764
     :goto_7
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -178,7 +166,6 @@
 
     if-ge v7, v2, :cond_e
 
-    .line 1765
     invoke-interface {p1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -187,7 +174,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 1767
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getActivity()Landroid/content/ComponentName;
 
     move-result-object v6
@@ -207,7 +193,6 @@
 
     if-eqz v6, :cond_9
 
-    .line 1770
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getLastChangedTimestamp()J
 
     move-result-wide v8
@@ -221,7 +206,6 @@
     :cond_9
     if-eqz v3, :cond_a
 
-    .line 1773
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v6
@@ -237,7 +221,6 @@
     :cond_a
     if-eqz v4, :cond_b
 
-    .line 1776
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getLocusId()Landroid/content/LocusId;
 
     move-result-object v6
@@ -253,7 +236,6 @@
     :cond_b
     if-nez p3, :cond_c
 
-    .line 1779
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getFlags()I
 
     move-result v6
@@ -262,7 +244,6 @@
 
     if-eqz v6, :cond_d
 
-    .line 1780
     :cond_c
     invoke-interface {p0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -283,13 +264,11 @@
 
     monitor-enter p0
 
-    .line 1683
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 1684
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     new-instance v1, Landroid/util/Pair;
@@ -300,7 +279,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1685
     monitor-exit p0
 
     return-void
@@ -316,12 +294,10 @@
 .method public final hasUserAccess(Landroid/os/UserHandle;Landroid/os/UserHandle;)Z
     .locals 2
 
-    .line 1788
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v0
 
-    .line 1789
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v1
@@ -332,7 +308,6 @@
 
     return p0
 
-    .line 1792
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
@@ -350,7 +325,6 @@
 .method public final onShortcutEvent(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;Z)V
     .locals 5
 
-    .line 1706
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
@@ -362,7 +336,6 @@
     :goto_0
     if-ge v1, v0, :cond_3
 
-    .line 1709
     iget-object v2, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2, v1}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
@@ -371,24 +344,20 @@
 
     check-cast v2, Landroid/content/pm/IShortcutChangeCallback;
 
-    .line 1710
     iget-object v3, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mCallbacks:Landroid/os/RemoteCallbackList;
 
-    .line 1712
     invoke-virtual {v3, v1}, Landroid/os/RemoteCallbackList;->getBroadcastCookie(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/util/Pair;
 
-    .line 1714
     iget-object v4, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v4, Landroid/os/UserHandle;
 
     if-eqz v4, :cond_0
 
-    .line 1715
     invoke-virtual {p0, v4, p3}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->hasUserAccess(Landroid/os/UserHandle;Landroid/os/UserHandle;)Z
 
     move-result v4
@@ -397,7 +366,6 @@
 
     goto :goto_1
 
-    .line 1721
     :cond_0
     iget-object v3, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -407,7 +375,6 @@
 
     move-result-object v3
 
-    .line 1723
     invoke-static {v3}, Lcom/android/internal/util/CollectionUtils;->isEmpty(Ljava/util/Collection;)Z
 
     move-result v4
@@ -416,13 +383,11 @@
 
     if-eqz p4, :cond_1
 
-    .line 1726
     :try_start_0
     invoke-interface {v2, p1, v3, p3}, Landroid/content/pm/IShortcutChangeCallback;->onShortcutsRemoved(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
 
     goto :goto_1
 
-    .line 1728
     :cond_1
     invoke-interface {v2, p1, v3, p3}, Landroid/content/pm/IShortcutChangeCallback;->onShortcutsAddedOrUpdated(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
     :try_end_0
@@ -435,7 +400,6 @@
 
     goto :goto_0
 
-    .line 1736
     :cond_3
     iget-object p0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -449,7 +413,6 @@
 
     const/4 v0, 0x0
 
-    .line 1695
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->onShortcutEvent(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;Z)V
 
     return-void
@@ -460,7 +423,6 @@
 
     const/4 v0, 0x1
 
-    .line 1701
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->onShortcutEvent(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;Z)V
 
     return-void
@@ -471,7 +433,6 @@
 
     monitor-enter p0
 
-    .line 1689
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$ShortcutChangeHandler;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -479,7 +440,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1690
     monitor-exit p0
 
     return-void

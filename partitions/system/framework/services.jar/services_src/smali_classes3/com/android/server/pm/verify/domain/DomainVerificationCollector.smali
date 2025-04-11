@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$2SK_jNYiNkNaWwZjL4Iwoe_gHZk(Landroid/util/ArraySet;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->lambda$static$0(Landroid/util/ArraySet;Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -32,7 +31,6 @@
 .method public static synthetic $r8$lambda$2jz0zelYXVvRtbJi77ibwF_Gjdc(Ljava/lang/String;Ljava/lang/Void;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->lambda$containsWebDomain$1(Ljava/lang/String;Ljava/lang/Void;Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -43,7 +41,6 @@
 .method public static synthetic $r8$lambda$SwupicDAo3MlAIkFLi3192TJjfA(Ljava/lang/String;Ljava/lang/Void;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->lambda$containsAutoVerifyDomain$2(Ljava/lang/String;Ljava/lang/Void;Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -54,7 +51,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 45
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -65,7 +61,6 @@
 
     sget-object v1, Landroid/util/Patterns;->DOMAIN_NAME:Ljava/util/regex/Pattern;
 
-    .line 46
     invoke-virtual {v1}, Ljava/util/regex/Pattern;->pattern()Ljava/lang/String;
 
     move-result-object v1
@@ -82,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->DOMAIN_NAME_WITH_WILDCARD:Ljava/util/regex/Pattern;
 
-    .line 50
     new-instance v0, Lcom/android/server/pm/verify/domain/DomainVerificationCollector$$ExternalSyntheticLambda2;
 
     invoke-direct {v0}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector$$ExternalSyntheticLambda2;-><init>()V
@@ -95,16 +89,12 @@
 .method public constructor <init>(Lcom/android/server/compat/PlatformCompat;Lcom/android/server/SystemConfig;)V
     .locals 0
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
-    .line 68
     iput-object p2, p0, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->mSystemConfig:Lcom/android/server/SystemConfig;
 
-    .line 71
     sget-object p1, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->DOMAIN_NAME_WITH_WILDCARD:Ljava/util/regex/Pattern;
 
     const-string p2, ""
@@ -121,14 +111,12 @@
 .method public static synthetic lambda$containsAutoVerifyDomain$2(Ljava/lang/String;Ljava/lang/Void;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 131
     invoke-static {p0, p2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 132
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
@@ -142,14 +130,12 @@
 .method public static synthetic lambda$containsWebDomain$1(Ljava/lang/String;Ljava/lang/Void;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 120
     invoke-static {p0, p2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 121
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
@@ -163,7 +149,6 @@
 .method public static synthetic lambda$static$0(Landroid/util/ArraySet;Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 52
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     const/4 p0, 0x0
@@ -176,7 +161,6 @@
 .method public final byteSizeOf(Ljava/lang/String;)I
     .locals 0
 
-    .line 300
     invoke-static {p1}, Landroid/content/pm/verify/domain/DomainVerificationUtils;->estimatedByteSizeOf(Ljava/lang/String;)I
 
     move-result p0
@@ -191,7 +175,6 @@
 
     const/4 v1, 0x1
 
-    .line 96
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->collectDomains(Lcom/android/server/pm/pkg/AndroidPackage;ZZ)Landroid/util/ArraySet;
 
     move-result-object p0
@@ -202,12 +185,10 @@
 .method public final collectDomains(Lcom/android/server/pm/pkg/AndroidPackage;ZZ)Landroid/util/ArraySet;
     .locals 7
 
-    .line 141
     new-instance v6, Landroid/util/ArraySet;
 
     invoke-direct {v6}, Landroid/util/ArraySet;-><init>()V
 
-    .line 142
     sget-object v5, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->ARRAY_SET_COLLECTOR:Ljava/util/function/BiFunction;
 
     move-object v0, p0
@@ -228,26 +209,22 @@
 .method public final collectDomains(Lcom/android/server/pm/pkg/AndroidPackage;ZZLjava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
     .locals 3
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
     const-wide/32 v1, 0xa74866d
 
-    .line 151
     invoke-static {v0, p1, v1, v2}, Lcom/android/server/pm/verify/domain/DomainVerificationUtils;->isChangeEnabled(Lcom/android/server/compat/PlatformCompat;Lcom/android/server/pm/pkg/AndroidPackage;J)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 154
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->collectDomainsInternal(Lcom/android/server/pm/pkg/AndroidPackage;ZZLjava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
-    .line 157
     :cond_0
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->collectDomainsLegacy(Lcom/android/server/pm/pkg/AndroidPackage;ZZLjava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
 
@@ -263,12 +240,10 @@
 
     move/from16 v1, p2
 
-    .line 243
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getActivities()Ljava/util/List;
 
     move-result-object v2
 
-    .line 244
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
@@ -284,19 +259,16 @@
 
     if-eqz v7, :cond_7
 
-    .line 247
     invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Lcom/android/server/pm/pkg/component/ParsedActivity;
 
-    .line 248
     invoke-interface {v9}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getIntents()Ljava/util/List;
 
     move-result-object v9
 
-    .line 249
     invoke-interface {v9}, Ljava/util/List;->size()I
 
     move-result v10
@@ -308,21 +280,18 @@
 
     if-eqz v7, :cond_6
 
-    .line 251
     invoke-interface {v9, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, Lcom/android/server/pm/pkg/component/ParsedIntentInfo;
 
-    .line 252
     invoke-interface {v12}, Lcom/android/server/pm/pkg/component/ParsedIntentInfo;->getIntentFilter()Landroid/content/IntentFilter;
 
     move-result-object v12
 
     if-eqz v1, :cond_0
 
-    .line 253
     invoke-virtual {v12}, Landroid/content/IntentFilter;->getAutoVerify()Z
 
     move-result v13
@@ -334,14 +303,12 @@
     :cond_0
     const-string v13, "android.intent.category.DEFAULT"
 
-    .line 257
     invoke-virtual {v12, v13}, Landroid/content/IntentFilter;->hasCategory(Ljava/lang/String;)Z
 
     move-result v13
 
     if-eqz v13, :cond_5
 
-    .line 258
     invoke-virtual {v12, v1}, Landroid/content/IntentFilter;->handlesWebUris(Z)Z
 
     move-result v13
@@ -350,7 +317,6 @@
 
     goto :goto_5
 
-    .line 276
     :cond_1
     invoke-virtual {v12}, Landroid/content/IntentFilter;->countDataAuthorities()I
 
@@ -363,7 +329,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 278
     invoke-virtual {v12, v14}, Landroid/content/IntentFilter;->getDataAuthority(I)Landroid/content/IntentFilter$AuthorityEntry;
 
     move-result-object v15
@@ -372,7 +337,6 @@
 
     move-result-object v15
 
-    .line 279
     invoke-virtual {v0, v15}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->isValidHost(Ljava/lang/String;)Z
 
     move-result v4
@@ -381,7 +345,6 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 280
     invoke-virtual {v0, v15}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->byteSizeOf(Ljava/lang/String;)I
 
     move-result v4
@@ -407,7 +370,6 @@
 
     const/16 v16, 0x0
 
-    .line 282
     :goto_3
     invoke-interface {v7, v4, v15}, Ljava/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -474,25 +436,21 @@
 
     move-object/from16 v5, p5
 
-    .line 171
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->collectDomainsInternal(Lcom/android/server/pm/pkg/AndroidPackage;ZZLjava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 
-    .line 175
     :cond_0
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getActivities()Ljava/util/List;
 
     move-result-object v1
 
-    .line 176
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 180
     iget-object v3, v0, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->mSystemConfig:Lcom/android/server/SystemConfig;
 
     invoke-virtual {v3}, Lcom/android/server/SystemConfig;->getLinkedApps()Landroid/util/ArraySet;
@@ -520,19 +478,16 @@
 
     if-nez v3, :cond_2
 
-    .line 184
     invoke-interface {v1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/android/server/pm/pkg/component/ParsedActivity;
 
-    .line 185
     invoke-interface {v7}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getIntents()Ljava/util/List;
 
     move-result-object v7
 
-    .line 186
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v8
@@ -544,14 +499,12 @@
 
     if-nez v3, :cond_1
 
-    .line 189
     invoke-interface {v7, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/pm/pkg/component/ParsedIntentInfo;
 
-    .line 190
     invoke-interface {v3}, Lcom/android/server/pm/pkg/component/ParsedIntentInfo;->getIntentFilter()Landroid/content/IntentFilter;
 
     move-result-object v3
@@ -586,19 +539,16 @@
 
     if-eqz v7, :cond_9
 
-    .line 203
     invoke-interface {v1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Lcom/android/server/pm/pkg/component/ParsedActivity;
 
-    .line 204
     invoke-interface {v9}, Lcom/android/server/pm/pkg/component/ParsedComponent;->getIntents()Ljava/util/List;
 
     move-result-object v9
 
-    .line 205
     invoke-interface {v9}, Ljava/util/List;->size()I
 
     move-result v10
@@ -610,26 +560,22 @@
 
     if-eqz v7, :cond_8
 
-    .line 207
     invoke-interface {v9, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, Lcom/android/server/pm/pkg/component/ParsedIntentInfo;
 
-    .line 208
     invoke-interface {v12}, Lcom/android/server/pm/pkg/component/ParsedIntentInfo;->getIntentFilter()Landroid/content/IntentFilter;
 
     move-result-object v12
 
-    .line 209
     invoke-virtual {v12, v5}, Landroid/content/IntentFilter;->handlesWebUris(Z)Z
 
     move-result v13
 
     if-eqz v13, :cond_7
 
-    .line 210
     invoke-virtual {v12}, Landroid/content/IntentFilter;->countDataAuthorities()I
 
     move-result v13
@@ -639,7 +585,6 @@
     :goto_4
     if-ge v14, v13, :cond_7
 
-    .line 212
     invoke-virtual {v12, v14}, Landroid/content/IntentFilter;->getDataAuthority(I)Landroid/content/IntentFilter$AuthorityEntry;
 
     move-result-object v15
@@ -648,7 +593,6 @@
 
     move-result-object v15
 
-    .line 213
     invoke-virtual {v0, v15}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->isValidHost(Ljava/lang/String;)Z
 
     move-result v3
@@ -657,7 +601,6 @@
 
     if-ne v3, v5, :cond_6
 
-    .line 214
     invoke-virtual {v0, v15}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->byteSizeOf(Ljava/lang/String;)I
 
     move-result v3
@@ -683,7 +626,6 @@
 
     const/16 v16, 0x0
 
-    .line 216
     :goto_5
     invoke-interface {v7, v3, v15}, Ljava/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -741,7 +683,6 @@
 
     const/4 v1, 0x0
 
-    .line 114
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->collectDomains(Lcom/android/server/pm/pkg/AndroidPackage;ZZ)Landroid/util/ArraySet;
 
     move-result-object p0
@@ -754,7 +695,6 @@
 
     const/4 v0, 0x1
 
-    .line 105
     invoke-virtual {p0, p1, v0, v0}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->collectDomains(Lcom/android/server/pm/pkg/AndroidPackage;ZZ)Landroid/util/ArraySet;
 
     move-result-object p0
@@ -771,7 +711,6 @@
 
     const/4 v4, 0x0
 
-    .line 129
     new-instance v5, Lcom/android/server/pm/verify/domain/DomainVerificationCollector$$ExternalSyntheticLambda0;
 
     invoke-direct {v5, p2}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector$$ExternalSyntheticLambda0;-><init>(Ljava/lang/String;)V
@@ -806,7 +745,6 @@
 
     const/4 v4, 0x0
 
-    .line 118
     new-instance v5, Lcom/android/server/pm/verify/domain/DomainVerificationCollector$$ExternalSyntheticLambda1;
 
     invoke-direct {v5, p2}, Lcom/android/server/pm/verify/domain/DomainVerificationCollector$$ExternalSyntheticLambda1;-><init>(Ljava/lang/String;)V
@@ -835,7 +773,6 @@
 .method public final isValidHost(Ljava/lang/String;)Z
     .locals 1
 
-    .line 310
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -846,13 +783,11 @@
 
     return p0
 
-    .line 314
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->mDomainMatcher:Ljava/util/regex/Matcher;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Matcher;->reset(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    .line 315
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationCollector;->mDomainMatcher:Ljava/util/regex/Matcher;
 
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z

@@ -13,7 +13,6 @@
 
     const-string v0, "MM-dd HH:mm:ss.SSS"
 
-    .line 245
     invoke-static {v0}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;)Ljava/time/format/DateTimeFormatter;
 
     move-result-object v0
@@ -26,7 +25,6 @@
 .method public static getCurrentTimeToLoggingFormat()Ljava/lang/String;
     .locals 2
 
-    .line 253
     invoke-static {}, Lcom/android/server/power/Slog$TimeUtil;->now()Ljava/time/LocalDateTime;
 
     move-result-object v0
@@ -43,7 +41,6 @@
 .method public static now()Ljava/time/LocalDateTime;
     .locals 1
 
-    .line 249
     invoke-static {}, Ljava/time/LocalDateTime;->now()Ljava/time/LocalDateTime;
 
     move-result-object v0

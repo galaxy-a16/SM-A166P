@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;)V
     .locals 0
 
-    .line 389
     iput-object p1, p0, Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver$1;->this$0:Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;
 
     invoke-direct {p0}, Landroid/content/IIntentSender$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public send(ILandroid/content/Intent;Ljava/lang/String;Landroid/os/IBinder;Landroid/content/IIntentReceiver;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 393
     iget-object p1, p0, Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver$1;->this$0:Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;
 
     invoke-static {p1}, Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;->-$$Nest$fgetmLock(Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;)Ljava/lang/Object;
@@ -33,13 +31,11 @@
 
     monitor-enter p1
 
-    .line 394
     :try_start_0
     iget-object p3, p0, Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver$1;->this$0:Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;
 
     invoke-static {p3, p2}, Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;->-$$Nest$fputmResult(Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;Landroid/content/Intent;)V
 
-    .line 395
     iget-object p0, p0, Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver$1;->this$0:Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;
 
     invoke-static {p0}, Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;->-$$Nest$fgetmLock(Lcom/android/server/backup/utils/RestoreUtils$LocalIntentReceiver;)Ljava/lang/Object;
@@ -48,7 +44,6 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 396
     monitor-exit p1
 
     return-void

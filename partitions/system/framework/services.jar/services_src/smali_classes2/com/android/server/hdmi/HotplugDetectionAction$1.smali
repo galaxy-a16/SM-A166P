@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HotplugDetectionAction;)V
     .locals 0
 
-    .line 136
     iput-object p1, p0, Lcom/android/server/hdmi/HotplugDetectionAction$1;->this$0:Lcom/android/server/hdmi/HotplugDetectionAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onPollingFinished(Ljava/util/List;)V
     .locals 1
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/hdmi/HotplugDetectionAction$1;->this$0:Lcom/android/server/hdmi/HotplugDetectionAction;
 
     const/4 v0, 0x0

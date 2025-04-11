@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/accessibility/AccessibilityManagerService;)V
     .locals 0
 
-    .line 6877
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$ColorInversionStateContentObserver;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
-    .line 6878
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,17 +27,14 @@
 .method public onChange(Z)V
     .locals 7
 
-    .line 6883
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 6884
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$ColorInversionStateContentObserver;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$mgetCurrentUserStateLocked(Lcom/android/server/accessibility/AccessibilityManagerService;)Lcom/android/server/accessibility/AccessibilityUserState;
 
     move-result-object p1
 
-    .line 6885
     const-class v0, Lcom/android/server/display/color/DisplayTransformManager;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -48,7 +43,6 @@
 
     check-cast v0, Lcom/android/server/display/color/DisplayTransformManager;
 
-    .line 6886
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$ColorInversionStateContentObserver;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-static {v1}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/AccessibilityManagerService;)Landroid/content/Context;
@@ -80,7 +74,6 @@
     :cond_0
     move v1, v4
 
-    .line 6888
     :goto_0
     iget-object v3, p0, Lcom/android/server/accessibility/AccessibilityManagerService$ColorInversionStateContentObserver;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -109,7 +102,6 @@
     :cond_1
     move v3, v4
 
-    .line 6891
     :goto_1
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$ColorInversionStateContentObserver;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
@@ -151,7 +143,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 6899
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->-$$Nest$sfgetMATRIX_INVERT_COLOR()[F
 
     move-result-object p0
@@ -164,7 +155,6 @@
     :goto_4
     const/16 p1, 0x12c
 
-    .line 6898
     invoke-virtual {v0, p1, p0}, Lcom/android/server/display/color/DisplayTransformManager;->setColorMatrix(I[F)V
 
     :cond_5

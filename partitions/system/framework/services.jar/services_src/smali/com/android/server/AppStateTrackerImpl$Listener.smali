@@ -7,7 +7,6 @@
 .method public static bridge synthetic -$$Nest$monAutoRestrictedBucketFeatureFlagChanged(Lcom/android/server/AppStateTrackerImpl$Listener;Lcom/android/server/AppStateTrackerImpl;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/AppStateTrackerImpl$Listener;->onAutoRestrictedBucketFeatureFlagChanged(Lcom/android/server/AppStateTrackerImpl;Z)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$monExemptedBucketChanged(Lcom/android/server/AppStateTrackerImpl$Listener;Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/AppStateTrackerImpl$Listener;->onExemptedBucketChanged(Lcom/android/server/AppStateTrackerImpl;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$monForceAllAppsStandbyChanged(Lcom/android/server/AppStateTrackerImpl$Listener;Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/AppStateTrackerImpl$Listener;->onForceAllAppsStandbyChanged(Lcom/android/server/AppStateTrackerImpl;)V
 
     return-void
@@ -34,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$monPowerSaveExemptionListChanged(Lcom/android/server/AppStateTrackerImpl$Listener;Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/AppStateTrackerImpl$Listener;->onPowerSaveExemptionListChanged(Lcom/android/server/AppStateTrackerImpl;)V
 
     return-void
@@ -43,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$monPowerSaveUnexempted(Lcom/android/server/AppStateTrackerImpl$Listener;Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/AppStateTrackerImpl$Listener;->onPowerSaveUnexempted(Lcom/android/server/AppStateTrackerImpl;)V
 
     return-void
@@ -52,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$monRunAnyAppOpsChanged(Lcom/android/server/AppStateTrackerImpl$Listener;Lcom/android/server/AppStateTrackerImpl;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/AppStateTrackerImpl$Listener;->onRunAnyAppOpsChanged(Lcom/android/server/AppStateTrackerImpl;ILjava/lang/String;)V
 
     return-void
@@ -61,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$monTempPowerSaveExemptionListChanged(Lcom/android/server/AppStateTrackerImpl$Listener;Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/AppStateTrackerImpl$Listener;->onTempPowerSaveExemptionListChanged(Lcom/android/server/AppStateTrackerImpl;)V
 
     return-void
@@ -70,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$monUidActiveStateChanged(Lcom/android/server/AppStateTrackerImpl$Listener;Lcom/android/server/AppStateTrackerImpl;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/AppStateTrackerImpl$Listener;->onUidActiveStateChanged(Lcom/android/server/AppStateTrackerImpl;I)V
 
     return-void
@@ -89,19 +81,16 @@
 .method public handleUidCachedChanged(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final onAutoRestrictedBucketFeatureFlagChanged(Lcom/android/server/AppStateTrackerImpl;Z)V
     .locals 0
 
-    .line 360
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllJobs()V
 
     if-eqz p2, :cond_0
 
-    .line 362
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->unblockAllUnrestrictedAlarms()V
 
     :cond_0
@@ -111,10 +100,8 @@
 .method public final onExemptedBucketChanged(Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 342
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllJobs()V
 
-    .line 343
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllAlarms()V
 
     return-void
@@ -123,10 +110,8 @@
 .method public final onForceAllAppsStandbyChanged(Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 350
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllJobs()V
 
-    .line 351
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllAlarms()V
 
     return-void
@@ -135,13 +120,10 @@
 .method public final onPowerSaveExemptionListChanged(Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 318
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllJobs()V
 
-    .line 319
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllAlarms()V
 
-    .line 320
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->unblockAllUnrestrictedAlarms()V
 
     return-void
@@ -150,10 +132,8 @@
 .method public final onPowerSaveUnexempted(Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 309
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllJobs()V
 
-    .line 310
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllAlarms()V
 
     return-void
@@ -162,24 +142,20 @@
 .method public final onRunAnyAppOpsChanged(Lcom/android/server/AppStateTrackerImpl;ILjava/lang/String;)V
     .locals 3
 
-    .line 274
     invoke-virtual {p1, p2}, Lcom/android/server/AppStateTrackerImpl;->isUidActive(I)Z
 
     move-result v0
 
     invoke-virtual {p0, p2, p3, v0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateJobsForUidPackage(ILjava/lang/String;Z)V
 
-    .line 276
     invoke-virtual {p1, p2, p3}, Lcom/android/server/AppStateTrackerImpl;->areAlarmsRestricted(ILjava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 277
     invoke-virtual {p0, p2, p3}, Lcom/android/server/AppStateTrackerImpl$Listener;->unblockAlarmsForUidPackage(ILjava/lang/String;)V
 
-    .line 280
     :cond_0
     invoke-virtual {p1, p2, p3}, Lcom/android/server/AppStateTrackerImpl;->isRunAnyInBackgroundAppOpsAllowed(ILjava/lang/String;)Z
 
@@ -193,7 +169,6 @@
 
     if-nez p1, :cond_1
 
-    .line 281
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,12 +193,10 @@
 
     const/4 p1, 0x1
 
-    .line 283
     invoke-virtual {p0, p2, p3, p1}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateBackgroundRestrictedForUidPackage(ILjava/lang/String;Z)V
 
     goto :goto_0
 
-    .line 285
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -249,7 +222,6 @@
 
     const/4 p1, 0x0
 
-    .line 287
     invoke-virtual {p0, p2, p3, p1}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateBackgroundRestrictedForUidPackage(ILjava/lang/String;Z)V
 
     :goto_0
@@ -259,7 +231,6 @@
 .method public final onTempPowerSaveExemptionListChanged(Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 331
     invoke-virtual {p0}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAllJobs()V
 
     return-void
@@ -268,20 +239,16 @@
 .method public final onUidActiveStateChanged(Lcom/android/server/AppStateTrackerImpl;I)V
     .locals 0
 
-    .line 295
     invoke-virtual {p1, p2}, Lcom/android/server/AppStateTrackerImpl;->isUidActive(I)Z
 
     move-result p1
 
-    .line 297
     invoke-virtual {p0, p2, p1}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateJobsForUid(IZ)V
 
-    .line 298
     invoke-virtual {p0, p2}, Lcom/android/server/AppStateTrackerImpl$Listener;->updateAlarmsForUid(I)V
 
     if-eqz p1, :cond_0
 
-    .line 301
     invoke-virtual {p0, p2}, Lcom/android/server/AppStateTrackerImpl$Listener;->unblockAlarmsForUid(I)V
 
     :cond_0
@@ -291,69 +258,59 @@
 .method public removeAlarmsForUid(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public unblockAlarmsForUid(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public unblockAlarmsForUidPackage(ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public unblockAllUnrestrictedAlarms()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateAlarmsForUid(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateAllAlarms()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateAllJobs()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateBackgroundRestrictedForUidPackage(ILjava/lang/String;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateJobsForUid(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateJobsForUidPackage(ILjava/lang/String;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method

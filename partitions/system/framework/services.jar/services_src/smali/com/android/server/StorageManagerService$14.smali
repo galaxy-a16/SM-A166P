@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 5926
     iput-object p1, p0, Lcom/android/server/StorageManagerService$14;->this$0:Lcom/android/server/StorageManagerService;
 
     iput-object p2, p0, Lcom/android/server/StorageManagerService$14;->val$result:Ljava/util/concurrent/CompletableFuture;
@@ -28,7 +27,6 @@
 .method public onFinished(ILandroid/os/PersistableBundle;)V
     .locals 0
 
-    .line 5935
     iget-object p0, p0, Lcom/android/server/StorageManagerService$14;->val$result:Ljava/util/concurrent/CompletableFuture;
 
     invoke-virtual {p0, p2}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
@@ -39,6 +37,5 @@
 .method public onStatus(ILandroid/os/PersistableBundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

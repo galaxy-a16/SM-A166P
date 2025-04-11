@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$uLnCpwpu5pVQCsiKhs99yA-FXrI(II[BLjava/lang/Integer;)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/hdmi/ReportFeaturesMessage;->lambda$build$0(II[BLjava/lang/Integer;)Lcom/android/server/hdmi/HdmiCecMessage;
 
     move-result-object p0
@@ -36,13 +35,10 @@
 
     move-object v4, p3
 
-    .line 48
     invoke-direct/range {v0 .. v5}, Lcom/android/server/hdmi/HdmiCecMessage;-><init>(III[BI)V
 
-    .line 49
     iput p4, p0, Lcom/android/server/hdmi/ReportFeaturesMessage;->mCecVersion:I
 
-    .line 50
     iput-object p5, p0, Lcom/android/server/hdmi/ReportFeaturesMessage;->mDeviceFeatures:Landroid/hardware/hdmi/DeviceFeatures;
 
     return-void
@@ -55,7 +51,6 @@
 
     int-to-byte v0, v0
 
-    .line 67
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -79,7 +74,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 68
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -109,7 +103,6 @@
 
     if-ne p3, v4, :cond_1
 
-    .line 74
     invoke-interface {p4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -127,7 +120,6 @@
 
     check-cast p4, Ljava/lang/Integer;
 
-    .line 75
     invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
 
     move-result p4
@@ -142,7 +134,6 @@
 
     goto :goto_1
 
-    .line 78
     :cond_1
     invoke-interface {p4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -177,12 +168,10 @@
 
     aput-byte p2, p4, v0
 
-    .line 83
     invoke-virtual {p5}, Landroid/hardware/hdmi/DeviceFeatures;->toOperand()[B
 
     move-result-object p2
 
-    .line 86
     array-length v0, p2
 
     add-int/2addr v0, p3
@@ -191,21 +180,18 @@
 
     move-result-object p4
 
-    .line 88
     array-length v0, p2
 
     invoke-static {p2, v1, p4, p3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     const/16 p2, 0xf
 
-    .line 92
     invoke-static {p0, p2}, Lcom/android/server/hdmi/ReportFeaturesMessage;->validateAddress(II)I
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    .line 94
     new-instance p1, Lcom/android/server/hdmi/HdmiCecMessage;
 
     const/16 v4, 0xf
@@ -222,7 +208,6 @@
 
     return-object p1
 
-    .line 97
     :cond_3
     new-instance p2, Lcom/android/server/hdmi/ReportFeaturesMessage;
 
@@ -246,19 +231,16 @@
 .method public static build(II[B)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 9
 
-    .line 134
     new-instance v0, Lcom/android/server/hdmi/ReportFeaturesMessage$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/hdmi/ReportFeaturesMessage$$ExternalSyntheticLambda0;-><init>(II[B)V
 
-    .line 138
     invoke-static {p0, p1}, Lcom/android/server/hdmi/ReportFeaturesMessage;->validateAddress(II)I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 140
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -271,7 +253,6 @@
 
     return-object p0
 
-    .line 143
     :cond_0
     array-length v1, p2
 
@@ -279,7 +260,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 144
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -295,7 +275,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 147
     aget-byte v1, p2, v1
 
     invoke-static {v1}, Ljava/lang/Byte;->toUnsignedInt(B)I
@@ -304,7 +283,6 @@
 
     const/4 v1, 0x2
 
-    .line 149
     invoke-static {p2, v1}, Lcom/android/server/hdmi/HdmiUtils;->getEndOfSequence([BI)I
 
     move-result v3
@@ -313,7 +291,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 151
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -329,14 +306,12 @@
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
-    .line 153
     invoke-static {p2, v3}, Lcom/android/server/hdmi/HdmiUtils;->getEndOfSequence([BI)I
 
     move-result v3
 
     if-ne v3, v4, :cond_3
 
-    .line 156
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -349,7 +324,6 @@
 
     return-object p0
 
-    .line 158
     :cond_3
     invoke-static {p2, v1}, Lcom/android/server/hdmi/HdmiUtils;->getEndOfSequence([BI)I
 
@@ -357,19 +331,16 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 159
     array-length v1, p2
 
     invoke-static {p2, v0, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v0
 
-    .line 160
     invoke-static {v0}, Landroid/hardware/hdmi/DeviceFeatures;->fromOperand([B)Landroid/hardware/hdmi/DeviceFeatures;
 
     move-result-object v8
 
-    .line 162
     new-instance v0, Lcom/android/server/hdmi/ReportFeaturesMessage;
 
     move-object v3, v0
@@ -414,7 +385,6 @@
 
     return p0
 
-    .line 118
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -457,12 +427,10 @@
 .method public static synthetic lambda$build$0(II[BLjava/lang/Integer;)Lcom/android/server/hdmi/HdmiCecMessage;
     .locals 7
 
-    .line 135
     new-instance v6, Lcom/android/server/hdmi/HdmiCecMessage;
 
     const/16 v3, 0xa6
 
-    .line 136
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
@@ -487,7 +455,6 @@
 
     const v1, 0x8000
 
-    .line 169
     invoke-static {p0, p1, v0, v1}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->validateAddress(IIII)I
 
     move-result p0
@@ -500,7 +467,6 @@
 .method public getCecVersion()I
     .locals 0
 
-    .line 180
     iget p0, p0, Lcom/android/server/hdmi/ReportFeaturesMessage;->mCecVersion:I
 
     return p0
@@ -509,7 +475,6 @@
 .method public getDeviceFeatures()Landroid/hardware/hdmi/DeviceFeatures;
     .locals 0
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/hdmi/ReportFeaturesMessage;->mDeviceFeatures:Landroid/hardware/hdmi/DeviceFeatures;
 
     return-object p0

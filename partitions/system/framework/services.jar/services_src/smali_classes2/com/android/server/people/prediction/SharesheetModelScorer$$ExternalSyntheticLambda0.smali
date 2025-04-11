@@ -20,7 +20,6 @@
 .method public final applyAsLong(Ljava/lang/Object;)J
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/util/Pair;
 
     invoke-static {p1}, Lcom/android/server/people/prediction/SharesheetModelScorer;->$r8$lambda$rcY8vkT-h-QyhFNM0TVMGcgvrxM(Landroid/util/Pair;)J

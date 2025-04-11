@@ -44,7 +44,6 @@
 .method public static synthetic $r8$lambda$-rDzy3DKds5P0fP77hZ0CRhjJVU(Lcom/android/server/SystemServiceManager;Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService;Lcom/android/server/SystemService$TargetUser;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/SystemServiceManager;->lambda$getOnUserStartingRunnable$0(Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService;Lcom/android/server/SystemService$TargetUser;)V
 
     return-void
@@ -53,7 +52,6 @@
 .method public static synthetic $r8$lambda$KXtbFDvpiPHNhGsrPSmpY-iasyc(Lcom/android/server/SystemServiceManager;Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$UserCompletedEventType;Ljava/lang/String;Lcom/android/server/SystemService;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/SystemServiceManager;->lambda$getOnUserCompletedEventRunnable$1(Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$UserCompletedEventType;Ljava/lang/String;Lcom/android/server/SystemService;)V
 
     return-void
@@ -62,7 +60,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 78
     const-class v0, Lcom/android/server/SystemServiceManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -77,39 +74,32 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 133
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 115
     iput v0, p0, Lcom/android/server/SystemServiceManager;->mCurrentPhase:I
 
-    .line 123
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
-    .line 134
     iput-object p1, p0, Lcom/android/server/SystemServiceManager;->mContext:Landroid/content/Context;
 
-    .line 135
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
-    .line 136
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/SystemServiceManager;->mServiceClassnames:Ljava/util/Set;
 
-    .line 137
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object p1
@@ -132,17 +122,14 @@
 .method public static ensureSystemDir()Ljava/io/File;
     .locals 3
 
-    .line 768
     sget-object v0, Lcom/android/server/SystemServiceManager;->sSystemDir:Ljava/io/File;
 
     if-nez v0, :cond_0
 
-    .line 769
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    .line 770
     new-instance v1, Ljava/io/File;
 
     const-string/jumbo v2, "system"
@@ -151,10 +138,8 @@
 
     sput-object v1, Lcom/android/server/SystemServiceManager;->sSystemDir:Ljava/io/File;
 
-    .line 771
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 773
     :cond_0
     sget-object v0, Lcom/android/server/SystemServiceManager;->sSystemDir:Ljava/io/File;
 
@@ -164,17 +149,14 @@
 .method private synthetic lambda$getOnUserCompletedEventRunnable$1(Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$UserCompletedEventType;Ljava/lang/String;Lcom/android/server/SystemService;)V
     .locals 5
 
-    .line 677
     new-instance v0, Lcom/android/server/utils/TimingsTraceAndSlog;
 
     invoke-direct {v0, p1}, Lcom/android/server/utils/TimingsTraceAndSlog;-><init>(Lcom/android/server/utils/TimingsTraceAndSlog;)V
 
-    .line 678
     invoke-virtual {p2}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
 
     move-result p1
 
-    .line 679
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,16 +183,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/utils/TimingsTraceAndSlog;->traceBegin(Ljava/lang/String;)V
 
-    .line 682
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 683
     invoke-virtual {p5, p2, p3}, Lcom/android/server/SystemService;->onUserCompletedEvent(Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$UserCompletedEventType;)V
 
-    .line 684
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -236,7 +215,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 690
     invoke-virtual {v0}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
     return-void
@@ -252,31 +230,25 @@
     :try_start_1
     const-string p3, "CompletedEvent"
 
-    .line 687
     invoke-virtual {p0, p3, p2, p4, p1}, Lcom/android/server/SystemServiceManager;->logFailure(Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Ljava/lang/String;Ljava/lang/Exception;)V
 
-    .line 688
     throw p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 690
     :goto_0
     invoke-virtual {v0}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
-    .line 691
     throw p0
 .end method
 
 .method private synthetic lambda$getOnUserStartingRunnable$0(Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService;Lcom/android/server/SystemService$TargetUser;)V
     .locals 6
 
-    .line 656
     new-instance v0, Lcom/android/server/utils/TimingsTraceAndSlog;
 
     invoke-direct {v0, p1}, Lcom/android/server/utils/TimingsTraceAndSlog;-><init>(Lcom/android/server/utils/TimingsTraceAndSlog;)V
 
-    .line 657
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -285,12 +257,10 @@
 
     move-result-object p1
 
-    .line 658
     invoke-virtual {p3}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
 
     move-result v1
 
-    .line 659
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,16 +283,13 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/utils/TimingsTraceAndSlog;->traceBegin(Ljava/lang/String;)V
 
-    .line 661
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 662
     invoke-virtual {p2, p3}, Lcom/android/server/SystemService;->onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
 
-    .line 663
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
@@ -361,12 +328,10 @@
     :try_start_1
     const-string v1, "Start"
 
-    .line 666
     invoke-virtual {p0, v1, p3, p1, p2}, Lcom/android/server/SystemServiceManager;->logFailure(Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 668
     :goto_0
     invoke-virtual {v0}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
@@ -375,7 +340,6 @@
     :goto_1
     invoke-virtual {v0}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
-    .line 669
     throw p0
 .end method
 
@@ -384,7 +348,6 @@
 
     const/4 v0, 0x1
 
-    .line 191
     :try_start_0
     invoke-static {p0, v0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -397,7 +360,6 @@
     :catch_0
     move-exception v0
 
-    .line 193
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -414,7 +376,6 @@
 
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 194
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -441,7 +402,6 @@
 
     const-string p2, "Current phase: %d\n"
 
-    .line 783
     iget v0, p0, Lcom/android/server/SystemServiceManager;->mCurrentPhase:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -454,12 +414,10 @@
 
     invoke-virtual {p1, p2, v0}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 784
     iget-object p2, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
     monitor-enter p2
 
-    .line 785
     :try_start_0
     iget-object v0, p0, Lcom/android/server/SystemServiceManager;->mCurrentUser:Lcom/android/server/SystemService$TargetUser;
 
@@ -467,15 +425,12 @@
 
     const-string v0, "Current user: "
 
-    .line 786
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 787
     iget-object v0, p0, Lcom/android/server/SystemServiceManager;->mCurrentUser:Lcom/android/server/SystemService$TargetUser;
 
     invoke-virtual {v0, p1}, Lcom/android/server/SystemService$TargetUser;->dump(Ljava/io/PrintWriter;)V
 
-    .line 788
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     goto :goto_0
@@ -483,10 +438,8 @@
     :cond_0
     const-string v0, "Current user not set!"
 
-    .line 790
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 793
     :goto_0
     iget-object v0, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
@@ -504,7 +457,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 795
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -518,7 +470,6 @@
     :goto_1
     if-ge v2, v0, :cond_2
 
-    .line 797
     iget-object v3, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -535,7 +486,6 @@
 
     const-string v3, ", "
 
-    .line 798
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     :cond_1
@@ -543,7 +493,6 @@
 
     goto :goto_1
 
-    .line 800
     :cond_2
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
@@ -552,16 +501,13 @@
     :cond_3
     const-string v0, "No target users"
 
-    .line 802
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 804
     :goto_2
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 805
     iget-object p2, p0, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -574,7 +520,6 @@
 
     const-string v2, "%d started services:\n"
 
-    .line 808
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -588,7 +533,6 @@
     :goto_3
     if-ge v1, p2, :cond_5
 
-    .line 810
     iget-object v2, p0, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -597,7 +541,6 @@
 
     check-cast v2, Lcom/android/server/SystemService;
 
-    .line 811
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -617,7 +560,6 @@
     :cond_4
     const-string p0, "No started services"
 
-    .line 814
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_5
@@ -626,7 +568,6 @@
     :catchall_0
     move-exception p0
 
-    .line 804
     :try_start_1
     monitor-exit p2
     :try_end_1
@@ -638,7 +579,6 @@
 .method public getDumpableName()Ljava/lang/String;
     .locals 0
 
-    .line 778
     const-class p0, Lcom/android/server/SystemServiceManager;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -651,7 +591,6 @@
 .method public final getOnUserCompletedEventRunnable(Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService;Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$UserCompletedEventType;)Ljava/lang/Runnable;
     .locals 8
 
-    .line 676
     new-instance v7, Lcom/android/server/SystemServiceManager$$ExternalSyntheticLambda1;
 
     move-object v0, v7
@@ -676,7 +615,6 @@
 .method public final getOnUserStartingRunnable(Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService;Lcom/android/server/SystemService$TargetUser;)Ljava/lang/Runnable;
     .locals 1
 
-    .line 655
     new-instance v0, Lcom/android/server/SystemServiceManager$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/SystemServiceManager$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/SystemServiceManager;Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService;Lcom/android/server/SystemService$TargetUser;)V
@@ -687,7 +625,6 @@
 .method public getRuntimeStartElapsedTime()J
     .locals 2
 
-    .line 726
     iget-wide v0, p0, Lcom/android/server/SystemServiceManager;->mRuntimeStartElapsedTime:J
 
     return-wide v0
@@ -696,7 +633,6 @@
 .method public getRuntimeStartUptime()J
     .locals 2
 
-    .line 733
     iget-wide v0, p0, Lcom/android/server/SystemServiceManager;->mRuntimeStartUptime:J
 
     return-wide v0
@@ -705,12 +641,10 @@
 .method public final getTargetUser(I)Lcom/android/server/SystemService$TargetUser;
     .locals 1
 
-    .line 386
     iget-object v0, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 387
     :try_start_0
     iget-object p0, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
@@ -727,7 +661,6 @@
     :catchall_0
     move-exception p0
 
-    .line 388
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -738,7 +671,6 @@
 .method public isBootCompleted()Z
     .locals 1
 
-    .line 363
     iget p0, p0, Lcom/android/server/SystemServiceManager;->mCurrentPhase:I
 
     const/16 v0, 0x3e8
@@ -763,12 +695,10 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 169
     invoke-static {p1, v1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object p1
 
-    .line 170
     invoke-interface {p1}, Ljava/nio/file/Path;->getNameCount()I
 
     move-result v1
@@ -795,7 +725,6 @@
 
     const/4 v1, 0x1
 
-    .line 171
     invoke-interface {p1, v1}, Ljava/nio/file/Path;->getName(I)Ljava/nio/file/Path;
 
     move-result-object p1
@@ -804,17 +733,14 @@
 
     move-result-object p1
 
-    .line 172
     invoke-static {}, Lcom/android/server/pm/ApexManager;->getInstance()Lcom/android/server/pm/ApexManager;
 
     move-result-object v2
 
-    .line 173
     invoke-virtual {v2, p1}, Lcom/android/server/pm/ApexManager;->getActivePackageNameForApexModuleName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 175
     :try_start_0
     iget-object p0, p0, Lcom/android/server/SystemServiceManager;->mContext:Landroid/content/Context;
 
@@ -824,17 +750,14 @@
 
     const-wide/32 v2, 0x40000000
 
-    .line 176
     invoke-static {v2, v3}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
 
     move-result-object v2
 
-    .line 175
     invoke-virtual {p0, p1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
-    .line 177
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget p0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -855,7 +778,6 @@
 .method public isRuntimeRestarted()Z
     .locals 0
 
-    .line 719
     iget-boolean p0, p0, Lcom/android/server/SystemServiceManager;->mRuntimeRestarted:Z
 
     return p0
@@ -864,7 +786,6 @@
 .method public isSafeMode()Z
     .locals 0
 
-    .line 712
     iget-boolean p0, p0, Lcom/android/server/SystemServiceManager;->mSafeMode:Z
 
     return p0
@@ -873,7 +794,6 @@
 .method public final logFailure(Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 2
 
-    .line 697
     sget-object p0, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -910,7 +830,6 @@
 .method public final newTargetUser(I)Lcom/android/server/SystemService$TargetUser;
     .locals 3
 
-    .line 392
     iget-object p0, p0, Lcom/android/server/SystemServiceManager;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/UserManagerInternal;->getUserInfo(I)Landroid/content/pm/UserInfo;
@@ -926,7 +845,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 393
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -944,7 +862,6 @@
 
     invoke-static {v0, p1}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 394
     new-instance p1, Lcom/android/server/SystemService$TargetUser;
 
     invoke-direct {p1, p0}, Lcom/android/server/SystemService$TargetUser;-><init>(Landroid/content/pm/UserInfo;)V
@@ -967,7 +884,6 @@
 
     move-object v4, p4
 
-    .line 522
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/SystemServiceManager;->onUser(Lcom/android/server/utils/TimingsTraceAndSlog;Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$UserCompletedEventType;)V
 
     return-void
@@ -986,12 +902,10 @@
 
     move-object/from16 v11, p4
 
-    .line 528
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
 
     move-result v12
 
-    .line 530
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1014,7 +928,6 @@
 
     invoke-virtual {v8, v0}, Lcom/android/server/utils/TimingsTraceAndSlog;->traceBegin(Ljava/lang/String;)V
 
-    .line 531
     sget-object v0, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1035,7 +948,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 532
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1066,17 +978,14 @@
 
     move-result-object v1
 
-    .line 531
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 534
     invoke-virtual {v7, v12, v9}, Lcom/android/server/SystemServiceManager;->useThreadPool(ILjava/lang/String;)Z
 
     move-result v14
 
     if-eqz v14, :cond_1
 
-    .line 536
     iget v0, v7, Lcom/android/server/SystemServiceManager;->mNumUserPoolThreads:I
 
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
@@ -1090,7 +999,6 @@
     :cond_1
     const/4 v6, 0x0
 
-    .line 538
     :goto_1
     iget-object v0, v7, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
@@ -1105,7 +1013,6 @@
     :goto_2
     if-ge v4, v5, :cond_9
 
-    .line 540
     iget-object v0, v7, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1116,7 +1023,6 @@
 
     check-cast v3, Lcom/android/server/SystemService;
 
-    .line 541
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1125,7 +1031,6 @@
 
     move-result-object v2
 
-    .line 542
     invoke-virtual {v3, v11}, Lcom/android/server/SystemService;->isUserSupported(Lcom/android/server/SystemService$TargetUser;)Z
 
     move-result v0
@@ -1134,7 +1039,6 @@
 
     if-eqz v10, :cond_2
 
-    .line 547
     invoke-virtual {v3, v10}, Lcom/android/server/SystemService;->isUserSupported(Lcom/android/server/SystemService$TargetUser;)Z
 
     move-result v0
@@ -1142,7 +1046,6 @@
     :cond_2
     if-nez v0, :cond_3
 
-    .line 556
     sget-object v0, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1182,7 +1085,6 @@
     :cond_3
     if-eqz v14, :cond_4
 
-    .line 561
     invoke-virtual {v7, v9, v4}, Lcom/android/server/SystemServiceManager;->useThreadPoolForService(Ljava/lang/String;I)Z
 
     move-result v1
@@ -1199,7 +1101,6 @@
     :goto_3
     if-nez v17, :cond_5
 
-    .line 563
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1226,13 +1127,11 @@
 
     invoke-virtual {v8, v0}, Lcom/android/server/utils/TimingsTraceAndSlog;->traceBegin(Ljava/lang/String;)V
 
-    .line 565
     :cond_5
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v19
 
-    .line 567
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Ljava/lang/String;->hashCode()I
 
@@ -1352,7 +1251,6 @@
 
     move-object v15, v6
 
-    .line 595
     :try_start_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
     :try_end_1
@@ -1381,7 +1279,6 @@
 
     move-object/from16 v6, p5
 
-    .line 591
     :try_start_2
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/SystemServiceManager;->getOnUserCompletedEventRunnable(Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService;Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$UserCompletedEventType;)Ljava/lang/Runnable;
 
@@ -1415,7 +1312,6 @@
 
     move-object v15, v6
 
-    .line 588
     :try_start_3
     invoke-virtual {v1, v11}, Lcom/android/server/SystemService;->onUserStopped(Lcom/android/server/SystemService$TargetUser;)V
 
@@ -1432,7 +1328,6 @@
 
     move-object v15, v6
 
-    .line 585
     invoke-virtual {v1, v11}, Lcom/android/server/SystemService;->onUserStopping(Lcom/android/server/SystemService$TargetUser;)V
 
     goto/16 :goto_8
@@ -1448,7 +1343,6 @@
 
     move-object v15, v6
 
-    .line 582
     invoke-virtual {v1, v11}, Lcom/android/server/SystemService;->onUserUnlocked(Lcom/android/server/SystemService$TargetUser;)V
 
     goto :goto_8
@@ -1464,7 +1358,6 @@
 
     move-object v15, v6
 
-    .line 579
     invoke-virtual {v1, v11}, Lcom/android/server/SystemService;->onUserUnlocking(Lcom/android/server/SystemService$TargetUser;)V
 
     goto :goto_8
@@ -1482,7 +1375,6 @@
 
     if-eqz v17, :cond_7
 
-    .line 573
     invoke-virtual {v7, v8, v1, v11}, Lcom/android/server/SystemServiceManager;->getOnUserStartingRunnable(Lcom/android/server/utils/TimingsTraceAndSlog;Lcom/android/server/SystemService;Lcom/android/server/SystemService$TargetUser;)Ljava/lang/Runnable;
 
     move-result-object v0
@@ -1491,7 +1383,6 @@
 
     goto :goto_8
 
-    .line 575
     :cond_7
     invoke-virtual {v1, v11}, Lcom/android/server/SystemService;->onUserStarting(Lcom/android/server/SystemService$TargetUser;)V
 
@@ -1508,7 +1399,6 @@
 
     move-object v15, v6
 
-    .line 569
     invoke-virtual {v1, v10, v11}, Lcom/android/server/SystemService;->onUserSwitching(Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$TargetUser;)V
 
     goto :goto_8
@@ -1520,7 +1410,6 @@
 
     goto :goto_7
 
-    .line 595
     :goto_6
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1553,14 +1442,12 @@
 
     move-object v15, v6
 
-    .line 598
     :goto_7
     invoke-virtual {v7, v9, v11, v2, v0}, Lcom/android/server/SystemServiceManager;->logFailure(Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Ljava/lang/String;Ljava/lang/Exception;)V
 
     :goto_8
     if-nez v17, :cond_8
 
-    .line 601
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -1587,7 +1474,6 @@
 
     invoke-virtual {v7, v2, v3, v1, v0}, Lcom/android/server/SystemServiceManager;->warnIfTooLong(JLcom/android/server/SystemService;Ljava/lang/String;)V
 
-    .line 603
     invoke-virtual/range {p1 .. p1}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
     :cond_8
@@ -1605,10 +1491,8 @@
 
     if-eqz v14, :cond_a
 
-    .line 608
     invoke-interface {v15}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    .line 610
     :try_start_4
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -1627,7 +1511,6 @@
 
     const-string v1, "(user lifecycle threadpool was interrupted)"
 
-    .line 613
     invoke-virtual {v7, v9, v11, v1, v0}, Lcom/android/server/SystemServiceManager;->logFailure(Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Ljava/lang/String;Ljava/lang/Exception;)V
 
     :goto_a
@@ -1637,10 +1520,8 @@
 
     const/4 v1, 0x0
 
-    .line 616
     invoke-virtual {v7, v9, v11, v0, v1}, Lcom/android/server/SystemServiceManager;->logFailure(Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Ljava/lang/String;Ljava/lang/Exception;)V
 
-    .line 619
     :cond_a
     invoke-virtual/range {p1 .. p1}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
@@ -1674,7 +1555,6 @@
 .method public final onUser(Ljava/lang/String;I)V
     .locals 4
 
-    .line 514
     invoke-virtual {p0, p2}, Lcom/android/server/SystemServiceManager;->getTargetUser(I)Lcom/android/server/SystemService$TargetUser;
 
     move-result-object v0
@@ -1688,7 +1568,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 515
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1706,7 +1585,6 @@
 
     invoke-static {v1, p2}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 517
     invoke-static {}, Lcom/android/server/utils/TimingsTraceAndSlog;->newAsyncLog()Lcom/android/server/utils/TimingsTraceAndSlog;
 
     move-result-object p2
@@ -1721,7 +1599,6 @@
 .method public onUserCompletedEvent(II)V
     .locals 8
 
-    .line 496
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1742,7 +1619,6 @@
 
     return-void
 
-    .line 501
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/SystemServiceManager;->getTargetUser(I)Lcom/android/server/SystemService$TargetUser;
 
@@ -1752,7 +1628,6 @@
 
     return-void
 
-    .line 506
     :cond_1
     invoke-static {}, Lcom/android/server/utils/TimingsTraceAndSlog;->newAsyncLog()Lcom/android/server/utils/TimingsTraceAndSlog;
 
@@ -1776,19 +1651,16 @@
 .method public onUserStarting(Lcom/android/server/utils/TimingsTraceAndSlog;I)V
     .locals 3
 
-    .line 401
     invoke-virtual {p0, p2}, Lcom/android/server/SystemServiceManager;->newTargetUser(I)Lcom/android/server/SystemService$TargetUser;
 
     move-result-object v0
 
-    .line 402
     iget-object v1, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
     monitor-enter v1
 
     if-nez p2, :cond_0
 
-    .line 412
     :try_start_0
     iget-object v2, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
@@ -1798,39 +1670,33 @@
 
     if-eqz v2, :cond_0
 
-    .line 413
     sget-object p0, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     const-string p1, "Skipping starting system user twice"
 
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     monitor-exit v1
 
     return-void
 
-    .line 416
     :cond_0
     iget-object v2, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 417
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/16 v1, 0x7582
 
-    .line 418
     invoke-static {v1, p2}, Landroid/util/EventLog;->writeEvent(II)I
 
     const-string p2, "Start"
 
     const/4 v1, 0x0
 
-    .line 419
     invoke-virtual {p0, p1, p2, v1, v0}, Lcom/android/server/SystemServiceManager;->onUser(Lcom/android/server/utils/TimingsTraceAndSlog;Ljava/lang/String;Lcom/android/server/SystemService$TargetUser;Lcom/android/server/SystemService$TargetUser;)V
 
     return-void
@@ -1838,7 +1704,6 @@
     :catchall_0
     move-exception p0
 
-    .line 417
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -1852,26 +1717,21 @@
 
     const/16 v0, 0x7587
 
-    .line 478
     invoke-static {v0, p1}, Landroid/util/EventLog;->writeEvent(II)I
 
     const-string v0, "Cleanup"
 
-    .line 479
     invoke-virtual {p0, v0, p1}, Lcom/android/server/SystemServiceManager;->onUser(Ljava/lang/String;I)V
 
-    .line 482
     iget-object v0, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 483
     :try_start_0
     iget-object p0, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 484
     monitor-exit v0
 
     return-void
@@ -1891,12 +1751,10 @@
 
     const/16 v0, 0x7586
 
-    .line 470
     invoke-static {v0, p1}, Landroid/util/EventLog;->writeEvent(II)I
 
     const-string v0, "Stop"
 
-    .line 471
     invoke-virtual {p0, v0, p1}, Lcom/android/server/SystemServiceManager;->onUser(Ljava/lang/String;I)V
 
     return-void
@@ -1905,7 +1763,6 @@
 .method public onUserSwitching(II)V
     .locals 5
 
-    .line 442
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1922,25 +1779,21 @@
 
     invoke-static {v1, v0}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 444
     iget-object v0, p0, Lcom/android/server/SystemServiceManager;->mTargetUsers:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 445
     :try_start_0
     iget-object v1, p0, Lcom/android/server/SystemServiceManager;->mCurrentUser:Lcom/android/server/SystemService$TargetUser;
 
     if-nez v1, :cond_0
 
-    .line 449
     invoke-virtual {p0, p1}, Lcom/android/server/SystemServiceManager;->newTargetUser(I)Lcom/android/server/SystemService$TargetUser;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 451
     :cond_0
     invoke-virtual {v1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
 
@@ -1948,7 +1801,6 @@
 
     if-eq p1, v1, :cond_1
 
-    .line 452
     sget-object v1, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1987,11 +1839,9 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 455
     :cond_1
     iget-object p1, p0, Lcom/android/server/SystemServiceManager;->mCurrentUser:Lcom/android/server/SystemService$TargetUser;
 
-    .line 457
     :goto_0
     invoke-virtual {p0, p2}, Lcom/android/server/SystemServiceManager;->getTargetUser(I)Lcom/android/server/SystemService$TargetUser;
 
@@ -2008,7 +1858,6 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 458
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2026,12 +1875,10 @@
 
     invoke-static {v2, p2}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 462
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 463
     invoke-static {}, Lcom/android/server/utils/TimingsTraceAndSlog;->newAsyncLog()Lcom/android/server/utils/TimingsTraceAndSlog;
 
     move-result-object p2
@@ -2045,7 +1892,6 @@
     :catchall_0
     move-exception p0
 
-    .line 462
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2059,12 +1905,10 @@
 
     const/16 v0, 0x7585
 
-    .line 434
     invoke-static {v0, p1}, Landroid/util/EventLog;->writeEvent(II)I
 
     const-string v0, "Unlocked"
 
-    .line 435
     invoke-virtual {p0, v0, p1}, Lcom/android/server/SystemServiceManager;->onUser(Ljava/lang/String;I)V
 
     return-void
@@ -2075,12 +1919,10 @@
 
     const/16 v0, 0x7584
 
-    .line 426
     invoke-static {v0, p1}, Landroid/util/EventLog;->writeEvent(II)I
 
     const-string v0, "Unlocking"
 
-    .line 427
     invoke-virtual {p0, v0, p1}, Lcom/android/server/SystemServiceManager;->onUser(Ljava/lang/String;I)V
 
     return-void
@@ -2089,7 +1931,6 @@
 .method public preSystemReady()V
     .locals 1
 
-    .line 382
     const-class v0, Lcom/android/server/pm/UserManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2106,14 +1947,12 @@
 .method public sealStartedServices()V
     .locals 1
 
-    .line 301
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/SystemServiceManager;->mServiceClassnames:Ljava/util/Set;
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -2128,7 +1967,6 @@
 .method public setSafeMode(Z)V
     .locals 0
 
-    .line 703
     iput-boolean p1, p0, Lcom/android/server/SystemServiceManager;->mSafeMode:Z
 
     return-void
@@ -2137,13 +1975,10 @@
 .method public setStartInfo(ZJJ)V
     .locals 0
 
-    .line 738
     iput-boolean p1, p0, Lcom/android/server/SystemServiceManager;->mRuntimeRestarted:Z
 
-    .line 739
     iput-wide p2, p0, Lcom/android/server/SystemServiceManager;->mRuntimeStartElapsedTime:J
 
-    .line 740
     iput-wide p4, p0, Lcom/android/server/SystemServiceManager;->mRuntimeStartUptime:J
 
     return-void
@@ -2154,15 +1989,12 @@
 
     const-string v0, "OnBootPhase_"
 
-    .line 313
     iget v1, p0, Lcom/android/server/SystemServiceManager;->mCurrentPhase:I
 
     if-le p2, v1, :cond_4
 
-    .line 316
     iput p2, p0, Lcom/android/server/SystemServiceManager;->mCurrentPhase:I
 
-    .line 318
     sget-object v1, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2183,7 +2015,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2199,7 +2030,6 @@
 
     invoke-virtual {p1, v1}, Lcom/android/server/utils/TimingsTraceAndSlog;->traceBegin(Ljava/lang/String;)V
 
-    .line 321
     iget-object v1, p0, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -2213,7 +2043,6 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 323
     iget-object v4, p0, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2224,12 +2053,10 @@
 
     check-cast v8, Lcom/android/server/SystemService;
 
-    .line 324
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    .line 325
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2260,7 +2087,6 @@
 
     const-string/jumbo v6, "sys.isrb.wificrash"
 
-    .line 327
     invoke-static {v6, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v6
@@ -2283,7 +2109,6 @@
 
     if-ltz v6, :cond_0
 
-    .line 328
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
@@ -2298,14 +2123,12 @@
 
     invoke-virtual/range {v5 .. v10}, Lcom/android/server/SystemServiceManager;->warnIfTooLong(JLcom/android/server/SystemService;Ljava/lang/String;I)V
 
-    .line 329
     invoke-virtual {p1}, Landroid/util/TimingsTraceLog;->traceEnd()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
-    .line 334
     :cond_0
     :try_start_1
     iget v6, p0, Lcom/android/server/SystemServiceManager;->mCurrentPhase:I
@@ -2315,7 +2138,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 345
     :try_start_2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -2331,7 +2153,6 @@
 
     invoke-virtual/range {v5 .. v10}, Lcom/android/server/SystemServiceManager;->warnIfTooLong(JLcom/android/server/SystemService;Ljava/lang/String;I)V
 
-    .line 346
     invoke-virtual {p1}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
     :goto_1
@@ -2344,7 +2165,6 @@
 
     const-string/jumbo v0, "persist.sys.rescue_level"
 
-    .line 336
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -2353,14 +2173,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 337
     sget-object v0, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "startBootPhase isrb setname "
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 338
     invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -2371,7 +2189,6 @@
 
     invoke-static {v0}, Lcom/samsung/isrb/IsrbHooks;->saveCrashServiceName(Ljava/lang/String;)V
 
-    .line 340
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2383,7 +2200,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 341
     invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -2412,7 +2228,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 349
     :cond_2
     invoke-virtual {p1}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
@@ -2420,7 +2235,6 @@
 
     if-ne p2, v0, :cond_3
 
-    .line 353
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -2431,10 +2245,8 @@
 
     const-string p0, "TotalBootTime"
 
-    .line 354
     invoke-virtual {p1, p0, v0, v1}, Lcom/android/server/utils/TimingsTraceAndSlog;->logDuration(Ljava/lang/String;J)V
 
-    .line 355
     invoke-static {}, Lcom/android/server/SystemServerInitThreadPool;->shutdown()V
 
     :cond_3
@@ -2443,13 +2255,10 @@
     :catchall_0
     move-exception p0
 
-    .line 349
     invoke-virtual {p1}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
-    .line 350
     throw p0
 
-    .line 314
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2465,7 +2274,6 @@
 
     const-string v0, ": service must have a public constructor with a Context argument"
 
-    .line 213
     const-class v1, Lcom/android/server/SystemService;
 
     const-string v2, "Failed to create service "
@@ -2481,7 +2289,6 @@
 
     move-result-object v7
 
-    .line 214
     sget-object v8, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2500,7 +2307,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2517,7 +2323,6 @@
 
     invoke-static {v5, v6, v9}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 218
     invoke-virtual {v1, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v9
@@ -2526,7 +2331,6 @@
 
     const/4 v1, 0x0
 
-    .line 223
     invoke-static {v4, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v9
@@ -2539,7 +2343,6 @@
 
     const-string v11, "ISRB"
 
-    .line 224
     invoke-static {v9, v11}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
@@ -2556,7 +2359,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 226
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2573,12 +2375,10 @@
 
     invoke-static {v8, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 227
     invoke-static {v5, v6}, Landroid/os/Trace;->traceEnd(J)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 268
     invoke-static {v5, v6}, Landroid/os/Trace;->traceEnd(J)V
 
     const/4 p0, 0x0
@@ -2591,7 +2391,6 @@
     :try_start_1
     new-array v9, v8, [Ljava/lang/Class;
 
-    .line 233
     const-class v11, Landroid/content/Context;
 
     aput-object v11, v9, v1
@@ -2602,7 +2401,6 @@
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    .line 234
     iget-object v9, p0, Lcom/android/server/SystemServiceManager;->mContext:Landroid/content/Context;
 
     aput-object v9, v8, v1
@@ -2619,13 +2417,11 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 265
     :try_start_2
     invoke-virtual {p0, p1}, Lcom/android/server/SystemServiceManager;->startService(Lcom/android/server/SystemService;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 268
     invoke-static {v5, v6}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p1
@@ -2633,7 +2429,6 @@
     :catch_0
     move-exception p0
 
-    .line 257
     :try_start_3
     invoke-static {v4, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
@@ -2641,15 +2436,12 @@
 
     if-ne p1, v10, :cond_1
 
-    .line 258
     sget-object p1, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     invoke-static {p1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     invoke-static {v7}, Lcom/samsung/isrb/IsrbHooks;->saveCrashServiceName(Ljava/lang/String;)V
 
-    .line 261
     :cond_1
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -2676,22 +2468,18 @@
     :catch_1
     move-exception p0
 
-    .line 250
     invoke-static {v4, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
     if-ne p1, v10, :cond_2
 
-    .line 251
     sget-object p1, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     invoke-static {p1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     invoke-static {v7}, Lcom/samsung/isrb/IsrbHooks;->saveCrashServiceName(Ljava/lang/String;)V
 
-    .line 254
     :cond_2
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -2716,22 +2504,18 @@
     :catch_2
     move-exception p0
 
-    .line 243
     invoke-static {v4, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
     if-ne p1, v10, :cond_3
 
-    .line 244
     sget-object p1, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     invoke-static {p1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     invoke-static {v7}, Lcom/samsung/isrb/IsrbHooks;->saveCrashServiceName(Ljava/lang/String;)V
 
-    .line 247
     :cond_3
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -2756,22 +2540,18 @@
     :catch_3
     move-exception p0
 
-    .line 236
     invoke-static {v4, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
     if-ne p1, v10, :cond_4
 
-    .line 237
     sget-object p1, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     invoke-static {p1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     invoke-static {v7}, Lcom/samsung/isrb/IsrbHooks;->saveCrashServiceName(Ljava/lang/String;)V
 
-    .line 240
     :cond_4
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -2795,7 +2575,6 @@
 
     throw p1
 
-    .line 219
     :cond_5
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -2813,7 +2592,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 220
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -2833,29 +2611,24 @@
     :catchall_0
     move-exception p0
 
-    .line 268
     invoke-static {v5, v6}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 269
     throw p0
 .end method
 
 .method public startService(Ljava/lang/String;)Lcom/android/server/SystemService;
     .locals 1
 
-    .line 148
     const-class v0, Lcom/android/server/SystemServiceManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 147
     invoke-static {p1, v0}, Lcom/android/server/SystemServiceManager;->loadClassFromLoader(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 149
     invoke-virtual {p0, p1}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
     move-result-object p0
@@ -2866,7 +2639,6 @@
 .method public startService(Lcom/android/server/SystemService;)V
     .locals 4
 
-    .line 274
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -2875,7 +2647,6 @@
 
     move-result-object v0
 
-    .line 275
     iget-object v1, p0, Lcom/android/server/SystemServiceManager;->mServiceClassnames:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2884,7 +2655,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 276
     sget-object p0, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -2905,29 +2675,24 @@
 
     return-void
 
-    .line 279
     :cond_0
     iget-object v1, p0, Lcom/android/server/SystemServiceManager;->mServiceClassnames:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 282
     iget-object v0, p0, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 285
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 287
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/SystemService;->onStart()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 296
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -2947,7 +2712,6 @@
 
     const/4 v1, 0x0
 
-    .line 289
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -2956,14 +2720,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 290
     sget-object v0, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "startService isrb setname"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -2974,7 +2736,6 @@
 
     invoke-static {v0}, Lcom/samsung/isrb/IsrbHooks;->saveCrashServiceName(Ljava/lang/String;)V
 
-    .line 293
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -3012,7 +2773,6 @@
 .method public startServiceFromJar(Ljava/lang/String;Ljava/lang/String;)Lcom/android/server/SystemService;
     .locals 2
 
-    .line 160
     const-class v0, Lcom/android/server/SystemServiceManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -3023,17 +2783,14 @@
 
     move-result v1
 
-    .line 159
     invoke-static {p2, v0, v1}, Lcom/android/internal/os/SystemServerClassLoaderFactory;->getOrCreateClassLoader(Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ldalvik/system/PathClassLoader;
 
     move-result-object p2
 
-    .line 161
     invoke-static {p1, p2}, Lcom/android/server/SystemServiceManager;->loadClassFromLoader(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 162
     invoke-virtual {p0, p1}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
     move-result-object p0
@@ -3044,14 +2801,12 @@
 .method public updateOtherServicesStartIndex()V
     .locals 1
 
-    .line 373
     invoke-virtual {p0}, Lcom/android/server/SystemServiceManager;->isBootCompleted()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 374
     iget-object p0, p0, Lcom/android/server/SystemServiceManager;->mServices:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -3067,7 +2822,6 @@
 .method public final useThreadPool(ILjava/lang/String;)Z
     .locals 2
 
-    .line 629
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     const-string p0, "Start"
@@ -3095,7 +2849,6 @@
     :cond_0
     return v1
 
-    .line 633
     :cond_1
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
@@ -3114,7 +2867,6 @@
 .method public final useThreadPoolForService(Ljava/lang/String;I)Z
     .locals 2
 
-    .line 642
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     const-string p0, "Start"
@@ -3142,7 +2894,6 @@
     :cond_0
     return v1
 
-    .line 645
     :cond_1
     sget p0, Lcom/android/server/SystemServiceManager;->sOtherServicesStartIndex:I
 
@@ -3167,7 +2918,6 @@
 
     move-object v4, p4
 
-    .line 756
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/SystemServiceManager;->warnIfTooLong(JLcom/android/server/SystemService;Ljava/lang/String;I)V
 
     return-void
@@ -3182,7 +2932,6 @@
 
     if-lez p0, :cond_0
 
-    .line 745
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -3191,7 +2940,6 @@
 
     move-result-object p0
 
-    .line 746
     sget-object p3, Lcom/android/server/SystemServiceManager;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3230,7 +2978,6 @@
 
     if-gez p4, :cond_0
 
-    .line 749
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3259,7 +3006,6 @@
 
     invoke-static {p3, p4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 750
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V

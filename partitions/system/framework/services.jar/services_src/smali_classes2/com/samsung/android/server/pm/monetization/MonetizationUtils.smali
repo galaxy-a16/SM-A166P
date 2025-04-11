@@ -47,36 +47,30 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsForBadge:Landroid/util/ArraySet;
 
-    .line 51
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsLaunched:Landroid/util/ArraySet;
 
-    .line 52
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreAppsForBadge:Landroid/util/ArraySet;
 
-    .line 54
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const-string/jumbo v1, "persist.galaxy_store.badge.feature"
 
-    .line 55
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -91,7 +85,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 57
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -100,43 +93,34 @@
 
     const-string v0, "Monetization"
 
-    .line 62
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->TAG:Ljava/lang/String;
 
     const-string v0, "0"
 
-    .line 64
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->DISABLE_GALAXY_STORE_BADGE:Ljava/lang/String;
 
-    .line 65
     iput-object v2, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->ENABLE_GALAXY_STORE_BADGE:Ljava/lang/String;
 
     const-string v0, "2"
 
-    .line 66
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->DISABLE_GALAXY_STORE_BADGE_FOR_APP:Ljava/lang/String;
 
     const-string v0, "com.truecaller"
 
-    .line 68
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->TRUECALLER_PKGNAME:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 69
     iput-boolean v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mIsTruecallerSettingsUpdated:Z
 
     const-string v0, ""
 
-    .line 71
     iput-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPath:Ljava/lang/String;
 
-    .line 85
     iput-object p1, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mContext:Landroid/content/Context;
 
     const-string/jumbo p1, "ro.csc.sales_code"
 
-    .line 86
     invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -145,7 +129,6 @@
 
     const-string v0, "INS"
 
-    .line 87
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -166,14 +149,12 @@
 
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mSalesCode:Ljava/lang/String;
 
-    .line 88
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 89
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -208,25 +189,21 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/samsung/android/server/pm/monetization/MonetizationUtils;
     .locals 2
 
-    .line 94
     const-class v0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;
 
     monitor-enter v0
 
-    .line 95
     :try_start_0
     sget-object v1, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->sInstance:Lcom/samsung/android/server/pm/monetization/MonetizationUtils;
 
     if-nez v1, :cond_0
 
-    .line 96
     new-instance v1, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->sInstance:Lcom/samsung/android/server/pm/monetization/MonetizationUtils;
 
-    .line 98
     :cond_0
     sget-object p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->sInstance:Lcom/samsung/android/server/pm/monetization/MonetizationUtils;
 
@@ -237,7 +214,6 @@
     :catchall_0
     move-exception p0
 
-    .line 99
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -250,7 +226,6 @@
 .method public changeMonetizationBadgeState(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
 
-    .line 345
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,7 +250,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
     sget-boolean v0, Lcom/samsung/android/rune/PMRune;->PM_BADGE_ON_MONETIZED_APP_SUPPORTED:Z
 
     if-eqz v0, :cond_5
@@ -284,7 +258,6 @@
 
     const-string v2, "android.permission.WRITE_SECURE_SETTINGS"
 
-    .line 347
     invoke-virtual {v0, v2}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result v0
@@ -293,10 +266,8 @@
 
     const-string/jumbo v0, "value cannot be null"
 
-    .line 352
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 353
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -368,21 +339,17 @@
 
     const-string p0, "Unknown parameter passed to change badge state"
 
-    .line 374
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 370
     :pswitch_3
     invoke-static {p2, v5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 371
     invoke-virtual {p0, p2, v3, v3, v3}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->updateSettingsForMonetization(Ljava/lang/String;ZZZ)V
 
     goto :goto_1
 
-    .line 362
     :pswitch_4
     iget-object v1, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -392,24 +359,19 @@
 
     if-nez v1, :cond_3
 
-    .line 363
     iget-object v1, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 364
     invoke-static {v0, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
     :cond_3
     invoke-static {p2, v5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 367
     invoke-virtual {p0, p2, v3, v3, v2}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->updateSettingsForMonetization(Ljava/lang/String;ZZZ)V
 
     goto :goto_1
 
-    .line 355
     :pswitch_5
     iget-object p2, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -419,22 +381,18 @@
 
     if-eqz p2, :cond_4
 
-    .line 356
     iget-object p2, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 357
     invoke-virtual {p0, v3}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->resetSettingsForMonetization(Z)V
 
-    .line 358
     invoke-static {v0, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     :goto_1
     return-void
 
-    .line 349
     :cond_5
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -468,18 +426,15 @@
 
     move v1, v0
 
-    .line 309
     :cond_0
     array-length v2, p2
 
     if-ge v1, v2, :cond_2
 
-    .line 310
     aget-object v2, p2, v1
 
     if-eqz v2, :cond_2
 
-    .line 311
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -501,7 +456,6 @@
 
     const-string v3, "--proto"
 
-    .line 314
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -510,23 +464,19 @@
 
     return-void
 
-    .line 319
     :cond_2
     :goto_0
     iget-object p2, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mBadgeLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 320
     :try_start_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "Monetization app list:"
 
-    .line 321
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 322
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsForBadge:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
@@ -550,16 +500,13 @@
 
     goto :goto_1
 
-    .line 323
     :cond_3
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "Monetization apps launched list:"
 
-    .line 324
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 325
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsLaunched:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
@@ -583,11 +530,9 @@
 
     goto :goto_2
 
-    .line 326
     :cond_4
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 327
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -610,7 +555,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 329
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -619,15 +563,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 330
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "GalaxyStore monetized apps: "
 
-    .line 331
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 332
     iget-object p0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreAppsForBadge:Landroid/util/ArraySet;
 
     invoke-virtual {p0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
@@ -651,7 +592,6 @@
 
     goto :goto_3
 
-    .line 334
     :cond_5
     monitor-exit p2
 
@@ -670,7 +610,6 @@
 .method public final getParsedPackagesList()Ljava/lang/String;
     .locals 5
 
-    .line 231
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPath:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -683,7 +622,6 @@
 
     return-object v1
 
-    .line 233
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -691,7 +629,6 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 234
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -702,18 +639,15 @@
 
     const-string p0, "No packages to monetization badge."
 
-    .line 235
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 239
     :cond_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v2
 
-    .line 240
     :try_start_0
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -723,18 +657,15 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 241
     :try_start_1
     invoke-interface {v2, v4, v1}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 242
     invoke-virtual {p0, v2}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->parseMonetizedPackages(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 243
     :try_start_2
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -747,7 +678,6 @@
     :catchall_0
     move-exception p0
 
-    .line 240
     :try_start_3
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_3
@@ -771,7 +701,6 @@
     :catch_0
     move-exception p0
 
-    .line 250
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -793,7 +722,6 @@
     :catch_1
     move-exception p0
 
-    .line 247
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -815,7 +743,6 @@
     :catch_2
     move-exception p0
 
-    .line 244
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -838,7 +765,6 @@
 .method public initializeSettingsForMonetization(ZZ)V
     .locals 11
 
-    .line 182
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mBadgeLock:Ljava/lang/Object;
 
@@ -849,19 +775,16 @@
     :try_start_1
     const-string v1, "launcherapps"
 
-    .line 184
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 183
     invoke-static {v1}, Landroid/content/pm/ILauncherApps$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/ILauncherApps;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mLauncherApps:Landroid/content/pm/ILauncherApps;
 
-    .line 185
     const-class v1, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -874,7 +797,6 @@
 
     const-string/jumbo v1, "package"
 
-    .line 186
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
@@ -885,14 +807,12 @@
 
     iput-object v1, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPackageManager:Landroid/content/pm/IPackageManager;
 
-    .line 188
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->getParsedPackagesList()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "Monetization"
 
-    .line 189
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -919,17 +839,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     iget-object v2, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mContext:Landroid/content/Context;
 
-    .line 192
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     const-string v3, "MONETIZATION_PACKAGES"
 
-    .line 191
     invoke-static {v2, v3}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -938,7 +855,6 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->readSettingsForMonetization(Ljava/lang/String;Z)V
 
-    .line 194
     iget-object v2, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -949,24 +865,20 @@
 
     if-eqz v2, :cond_1
 
-    .line 195
     iget-object v2, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mContext:Landroid/content/Context;
 
-    .line 196
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     const-string v5, "galaxy_app_store_india_nudge_packages"
 
-    .line 195
     invoke-static {v2, v5}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p0, v2, v4}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->readSettingsForMonetization(Ljava/lang/String;Z)V
 
-    .line 199
     :cond_1
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -978,12 +890,10 @@
 
     const-string v2, ";"
 
-    .line 200
     invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 203
     array-length v2, v1
 
     move v6, v4
@@ -997,7 +907,6 @@
 
     const-string v9, "-"
 
-    .line 204
     invoke-virtual {v8, v9}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v9
@@ -1006,12 +915,10 @@
 
     if-eq v9, v10, :cond_2
 
-    .line 206
     invoke-virtual {v8, v4, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 208
     :cond_2
     iget-object v9, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsForBadge:Landroid/util/ArraySet;
 
@@ -1019,7 +926,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 209
     invoke-virtual {p0, v8, v4}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->wasPackageEverLaunched(Ljava/lang/String;I)Z
 
     move-result v9
@@ -1028,7 +934,6 @@
 
     const-string v7, "Monetization"
 
-    .line 210
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1049,7 +954,6 @@
 
     invoke-static {v7, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     invoke-virtual {p0, v8, v4, v3, v3}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->updateSettingsForMonetization(Ljava/lang/String;ZZZ)V
 
     move v7, v3
@@ -1057,7 +961,6 @@
     :cond_3
     const-string v9, "com.truecaller"
 
-    .line 214
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
@@ -1066,10 +969,8 @@
 
     if-eqz p2, :cond_4
 
-    .line 215
     invoke-virtual {p0, v8, v5}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->modifyAppState(Ljava/lang/String;I)V
 
-    .line 216
     iput-boolean v4, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mIsTruecallerSettingsUpdated:Z
 
     :cond_4
@@ -1080,7 +981,6 @@
     :cond_5
     if-eqz v7, :cond_7
 
-    .line 219
     invoke-virtual {p0, v3}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->writeSettingsForMonetization(Z)V
 
     goto :goto_2
@@ -1088,7 +988,6 @@
     :cond_6
     const-string p1, "SUP"
 
-    .line 220
     iget-object v1, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1101,13 +1000,10 @@
 
     const-string p1, "com.truecaller"
 
-    .line 221
     invoke-virtual {p0, p1, v5}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->modifyAppState(Ljava/lang/String;I)V
 
-    .line 222
     iput-boolean v4, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mIsTruecallerSettingsUpdated:Z
 
-    .line 224
     :cond_7
     :goto_2
     monitor-exit v0
@@ -1129,7 +1025,6 @@
     :catch_0
     move-exception p0
 
-    .line 226
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1159,7 +1054,6 @@
 .method public isGalaxyStoreFeatureEnabled()Z
     .locals 0
 
-    .line 103
     iget-object p0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -1172,12 +1066,10 @@
 .method public isMonetizedPreloadApp(Ljava/lang/String;)Z
     .locals 1
 
-    .line 165
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mBadgeLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 166
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsForBadge:Landroid/util/ArraySet;
 
@@ -1192,7 +1084,6 @@
     :catchall_0
     move-exception p0
 
-    .line 167
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1203,7 +1094,6 @@
 .method public final modifyAppState(Ljava/lang/String;I)V
     .locals 6
 
-    .line 286
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPackageManager:Landroid/content/pm/IPackageManager;
 
@@ -1229,17 +1119,14 @@
 .method public final parseMonetizedPackages(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
     .locals 5
 
-    .line 258
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 260
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result p0
 
     const-string v0, ""
 
-    .line 262
     :cond_0
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1254,7 +1141,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 263
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
@@ -1270,13 +1156,11 @@
 
     goto :goto_0
 
-    .line 268
     :cond_2
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 269
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     const-string/jumbo v2, "packages"
@@ -1289,7 +1173,6 @@
 
     if-nez v2, :cond_3
 
-    .line 276
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1313,12 +1196,10 @@
 
     const-string/jumbo v1, "name"
 
-    .line 271
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 272
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1335,7 +1216,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1349,7 +1229,6 @@
 .method public final readSettingsForMonetization(Ljava/lang/String;Z)V
     .locals 5
 
-    .line 156
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1358,12 +1237,10 @@
 
     const-string v0, ";"
 
-    .line 157
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 158
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1377,7 +1254,6 @@
 
     const/4 v4, 0x1
 
-    .line 159
     invoke-virtual {p0, v3, v1, p2, v4}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->updateSettingsForMonetization(Ljava/lang/String;ZZZ)V
 
     add-int/lit8 v2, v2, 0x1
@@ -1391,14 +1267,12 @@
 .method public final resetSettingsForMonetization(Z)V
     .locals 1
 
-    .line 171
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mBadgeLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     if-eqz p1, :cond_0
 
-    .line 173
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsLaunched:Landroid/util/ArraySet;
 
@@ -1406,13 +1280,11 @@
 
     goto :goto_0
 
-    .line 175
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreAppsForBadge:Landroid/util/ArraySet;
 
     invoke-virtual {p0}, Landroid/util/ArraySet;->clear()V
 
-    .line 177
     :goto_0
     monitor-exit v0
 
@@ -1431,7 +1303,6 @@
 .method public sendChangePackageIconInfo(Ljava/lang/String;[I)V
     .locals 5
 
-    .line 107
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -1441,7 +1312,6 @@
 
     aget v2, p2, v1
 
-    .line 109
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mLauncherApps:Landroid/content/pm/ILauncherApps;
 
@@ -1454,7 +1324,6 @@
     :catch_0
     move-exception v2
 
-    .line 111
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1489,7 +1358,6 @@
 .method public shouldAppSupportBadgeIcon(Ljava/lang/String;)Z
     .locals 3
 
-    .line 380
     sget-boolean v0, Lcom/samsung/android/rune/PMRune;->PM_BADGE_ON_MONETIZED_APP_SUPPORTED:Z
 
     const/4 v1, 0x0
@@ -1498,13 +1366,11 @@
 
     return v1
 
-    .line 381
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mBadgeLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 382
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->isMonetizedPreloadApp(Ljava/lang/String;)Z
 
@@ -1523,7 +1389,6 @@
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreBadgeEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 383
     invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v2
@@ -1549,7 +1414,6 @@
     :catchall_0
     move-exception p0
 
-    .line 384
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1560,7 +1424,6 @@
 .method public updateSettingsForMonetization(Ljava/lang/String;ZZZ)V
     .locals 1
 
-    .line 119
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mBadgeLock:Ljava/lang/Object;
 
@@ -1570,7 +1433,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 122
     :try_start_1
     iget-object p4, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsLaunched:Landroid/util/ArraySet;
 
@@ -1592,7 +1454,6 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 125
     iget-object p4, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreAppsForBadge:Landroid/util/ArraySet;
 
     invoke-virtual {p4, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
@@ -1605,7 +1466,6 @@
 
     return-void
 
-    .line 127
     :cond_1
     iget-object p4, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreAppsForBadge:Landroid/util/ArraySet;
 
@@ -1622,10 +1482,8 @@
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 131
     invoke-virtual {p0, p3}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->writeSettingsForMonetization(Z)V
 
-    .line 132
     :cond_3
     monitor-exit v0
 
@@ -1644,7 +1502,6 @@
     :catch_0
     move-exception p0
 
-    .line 134
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1674,7 +1531,6 @@
 .method public updateState()V
     .locals 2
 
-    .line 293
     iget-boolean v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mIsTruecallerSettingsUpdated:Z
 
     if-nez v0, :cond_0
@@ -1683,12 +1539,10 @@
 
     const/4 v1, 0x0
 
-    .line 294
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->modifyAppState(Ljava/lang/String;I)V
 
     const/4 v0, 0x1
 
-    .line 295
     iput-boolean v0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mIsTruecallerSettingsUpdated:Z
 
     :cond_0
@@ -1698,7 +1552,6 @@
 .method public final wasPackageEverLaunched(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 301
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPackageManagerInternal:Landroid/content/pm/PackageManagerInternal;
 
@@ -1719,14 +1572,12 @@
 .method public final writeSettingsForMonetization(Z)V
     .locals 3
 
-    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     if-eqz p1, :cond_0
 
-    .line 140
     iget-object v1, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mPreloadAppsLaunched:Landroid/util/ArraySet;
 
     goto :goto_0
@@ -1734,7 +1585,6 @@
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mGalaxyStoreAppsForBadge:Landroid/util/ArraySet;
 
-    .line 143
     :goto_0
     invoke-virtual {v1}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
@@ -1753,7 +1603,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 144
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, ";"
@@ -1765,7 +1614,6 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 148
     iget-object p0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1782,11 +1630,9 @@
 
     goto :goto_2
 
-    .line 150
     :cond_2
     iget-object p0, p0, Lcom/samsung/android/server/pm/monetization/MonetizationUtils;->mContext:Landroid/content/Context;
 
-    .line 151
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1797,7 +1643,6 @@
 
     move-result-object v0
 
-    .line 150
     invoke-static {p0, p1, v0}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     :goto_2

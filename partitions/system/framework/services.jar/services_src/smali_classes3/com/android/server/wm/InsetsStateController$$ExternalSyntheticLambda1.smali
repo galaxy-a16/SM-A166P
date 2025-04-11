@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/InsetsControlTarget;
 
     invoke-static {p1}, Lcom/android/server/wm/InsetsStateController;->$r8$lambda$8NvxZUoT43jVWN9TcFw5mmsbHQo(Lcom/android/server/wm/InsetsControlTarget;)Ljava/util/ArrayList;

@@ -16,13 +16,10 @@
 .method public constructor <init>(Lcom/android/server/vibrator/VibrationStepConductor;J)V
     .locals 0
 
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
 
-    .line 38
     iput-wide p2, p0, Lcom/android/server/vibrator/Step;->startTime:J
 
     return-void
@@ -33,7 +30,6 @@
 .method public acceptVibratorCompleteCallback(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -42,7 +38,6 @@
 .method public calculateWaitTime()J
     .locals 6
 
-    .line 91
     iget-wide v0, p0, Lcom/android/server/vibrator/Step;->startTime:J
 
     const-wide v2, 0x7fffffffffffffffL
@@ -55,7 +50,6 @@
 
     return-wide v2
 
-    .line 96
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -79,7 +73,6 @@
 .method public compareTo(Lcom/android/server/vibrator/Step;)I
     .locals 2
 
-    .line 101
     iget-wide v0, p0, Lcom/android/server/vibrator/Step;->startTime:J
 
     iget-wide p0, p1, Lcom/android/server/vibrator/Step;->startTime:J
@@ -94,7 +87,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 32
     check-cast p1, Lcom/android/server/vibrator/Step;
 
     invoke-virtual {p0, p1}, Lcom/android/server/vibrator/Step;->compareTo(Lcom/android/server/vibrator/Step;)I
@@ -107,7 +99,6 @@
 .method public getVibration()Lcom/android/server/vibrator/HalVibration;
     .locals 0
 
-    .line 42
     iget-object p0, p0, Lcom/android/server/vibrator/Step;->conductor:Lcom/android/server/vibrator/VibrationStepConductor;
 
     invoke-virtual {p0}, Lcom/android/server/vibrator/VibrationStepConductor;->getVibration()Lcom/android/server/vibrator/HalVibration;
@@ -120,7 +111,6 @@
 .method public getVibratorOnDuration()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -129,7 +119,6 @@
 .method public isCleanUp()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

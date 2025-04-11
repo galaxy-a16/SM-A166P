@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsService;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 4459
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsService$7;->this$0:Lcom/android/server/locksettings/LockSettingsService;
 
     iput-object p2, p0, Lcom/android/server/locksettings/LockSettingsService$7;->val$latch:Ljava/util/concurrent/CountDownLatch;
@@ -28,7 +27,6 @@
 .method public onRemovalError(Lcom/samsung/android/bio/face/SemBioFace;ILjava/lang/CharSequence;)V
     .locals 0
 
-    .line 4463
     invoke-virtual {p1}, Lcom/samsung/android/bio/face/SemBioFace;->getFaceId()I
 
     move-result p1
@@ -43,7 +41,6 @@
 
     const-string p2, "Can\'t remove face %d. Reason: %s"
 
-    .line 4462
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -52,7 +49,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4464
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$7;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -63,7 +59,6 @@
 .method public onRemovalSucceeded(Lcom/samsung/android/bio/face/SemBioFace;)V
     .locals 0
 
-    .line 4469
     iget-object p0, p0, Lcom/android/server/locksettings/LockSettingsService$7;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V

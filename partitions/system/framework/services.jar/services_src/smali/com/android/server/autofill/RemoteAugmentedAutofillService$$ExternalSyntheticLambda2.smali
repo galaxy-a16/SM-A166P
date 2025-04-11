@@ -20,7 +20,6 @@
 .method public final runNoResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/service/autofill/augmented/IAugmentedAutofillService;
 
     invoke-static {p1}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->$r8$lambda$7WYIPObqsiZmRUPcDjanw3e7V9E(Landroid/service/autofill/augmented/IAugmentedAutofillService;)V

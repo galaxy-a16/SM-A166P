@@ -20,17 +20,14 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupData;->mFeatures:Ljava/util/Map;
 
-    .line 44
     iput p1, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupData;->mVersion:I
 
     return-void
@@ -41,7 +38,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/util/Set;)V
     .locals 5
 
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +52,6 @@
 
     move-result-object v0
 
-    .line 74
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupData;->mFeatures:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -80,21 +75,18 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 75
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 76
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/samsung/android/server/packagefeature/core/PackageFeatureRawData;
 
-    .line 77
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,17 +115,14 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 78
     invoke-interface {p3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 79
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 80
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,7 +141,6 @@
 
     goto :goto_0
 
-    .line 83
     :cond_0
     invoke-virtual {v1, p1, v0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureRawData;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
@@ -165,12 +153,10 @@
 .method public getCopiedPackageFeature(Ljava/lang/String;)Lcom/samsung/android/server/packagefeature/PackageFeatureData;
     .locals 1
 
-    .line 57
     new-instance v0, Lcom/samsung/android/server/packagefeature/PackageFeatureData;
 
     invoke-direct {v0}, Lcom/samsung/android/server/packagefeature/PackageFeatureData;-><init>()V
 
-    .line 59
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupData;->getPackageFeature(Ljava/lang/String;)Lcom/samsung/android/server/packagefeature/core/PackageFeatureRawData;
 
     move-result-object p0
@@ -183,7 +169,6 @@
 .method public final getPackageFeature(Ljava/lang/String;)Lcom/samsung/android/server/packagefeature/core/PackageFeatureRawData;
     .locals 1
 
-    .line 64
     iget-object v0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupData;->mFeatures:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -194,12 +179,10 @@
 
     if-nez v0, :cond_0
 
-    .line 66
     new-instance v0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureRawData;
 
     invoke-direct {v0}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureRawData;-><init>()V
 
-    .line 67
     iget-object p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupData;->mFeatures:Ljava/util/Map;
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -211,7 +194,6 @@
 .method public getVersion()I
     .locals 0
 
-    .line 48
     iget p0, p0, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupData;->mVersion:I
 
     return p0
@@ -220,7 +202,6 @@
 .method public putPackageFeature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 53
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupData;->getPackageFeature(Ljava/lang/String;)Lcom/samsung/android/server/packagefeature/core/PackageFeatureRawData;
 
     move-result-object p0

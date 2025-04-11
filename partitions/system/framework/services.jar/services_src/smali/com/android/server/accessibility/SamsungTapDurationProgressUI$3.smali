@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/SamsungTapDurationProgressUI;)V
     .locals 0
 
-    .line 298
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTapDurationProgressUI$3;->this$0:Lcom/android/server/accessibility/SamsungTapDurationProgressUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 307
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDurationProgressUI$3;->this$0:Lcom/android/server/accessibility/SamsungTapDurationProgressUI;
 
     invoke-static {p1}, Lcom/android/server/accessibility/SamsungTapDurationProgressUI;->-$$Nest$fgetmStandBy(Lcom/android/server/accessibility/SamsungTapDurationProgressUI;)Landroid/widget/ImageView;
@@ -73,7 +70,6 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 308
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDurationProgressUI$3;->this$0:Lcom/android/server/accessibility/SamsungTapDurationProgressUI;
 
     invoke-static {p1}, Lcom/android/server/accessibility/SamsungTapDurationProgressUI;->-$$Nest$fgetmHold(Lcom/android/server/accessibility/SamsungTapDurationProgressUI;)Landroid/widget/ImageView;
@@ -82,7 +78,6 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 309
     iget-object p0, p0, Lcom/android/server/accessibility/SamsungTapDurationProgressUI$3;->this$0:Lcom/android/server/accessibility/SamsungTapDurationProgressUI;
 
     invoke-static {p0}, Lcom/android/server/accessibility/SamsungTapDurationProgressUI;->-$$Nest$fgetmView(Lcom/android/server/accessibility/SamsungTapDurationProgressUI;)Landroid/view/View;
@@ -97,14 +92,12 @@
 .method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 301
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungTapDurationProgressUI$3;->this$0:Lcom/android/server/accessibility/SamsungTapDurationProgressUI;
 
     invoke-static {p1}, Lcom/android/server/accessibility/SamsungTapDurationProgressUI;->-$$Nest$fgetmView(Lcom/android/server/accessibility/SamsungTapDurationProgressUI;)Landroid/view/View;
@@ -115,7 +108,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 302
     iget-object p0, p0, Lcom/android/server/accessibility/SamsungTapDurationProgressUI$3;->this$0:Lcom/android/server/accessibility/SamsungTapDurationProgressUI;
 
     invoke-static {p0}, Lcom/android/server/accessibility/SamsungTapDurationProgressUI;->-$$Nest$fgetmView(Lcom/android/server/accessibility/SamsungTapDurationProgressUI;)Landroid/view/View;

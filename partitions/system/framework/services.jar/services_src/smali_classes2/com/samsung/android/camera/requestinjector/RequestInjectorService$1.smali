@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/requestinjector/RequestInjectorService;)V
     .locals 0
 
-    .line 111
     iput-object p1, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService$1;->this$0:Lcom/samsung/android/camera/requestinjector/RequestInjectorService;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$SemCameraDeviceStateCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCameraDeviceStateChanged(Ljava/lang/String;IILjava/lang/String;I)V
     .locals 8
 
-    .line 115
     iget-object p2, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService$1;->this$0:Lcom/samsung/android/camera/requestinjector/RequestInjectorService;
 
     invoke-static {p2}, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->-$$Nest$fgetmCameraServiceWorker(Lcom/samsung/android/camera/requestinjector/RequestInjectorService;)Lcom/samsung/android/camera/CameraServiceWorker;
@@ -41,7 +39,6 @@
 
     const-string p0, "Samsung Camera is opened. ignore VT Camera Setting."
 
-    .line 116
     invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -79,7 +76,6 @@
 
     if-eq p3, p5, :cond_3
 
-    .line 167
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,7 +94,6 @@
 
     goto/16 :goto_1
 
-    .line 125
     :cond_1
     :try_start_0
     invoke-static {p4, p5}, Lcom/samsung/android/camera/CameraServiceWorker;->getTaskInfo(Ljava/lang/String;I)Lcom/samsung/android/camera/CameraServiceWorker$TaskInfo;
@@ -107,7 +102,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 127
     iget p3, p3, Lcom/samsung/android/camera/CameraServiceWorker$TaskInfo;->displayId:I
 
     goto :goto_0
@@ -115,7 +109,6 @@
     :cond_2
     move p3, v7
 
-    .line 129
     :goto_0
     new-instance p5, Landroid/content/Intent;
 
@@ -123,20 +116,16 @@
 
     invoke-direct {p5, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {p5, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "camera_open_package_name"
 
-    .line 131
     invoke-virtual {p5, v2, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 132
     invoke-virtual {p5, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p4, "display_id"
 
-    .line 133
     invoke-virtual {p5, p4, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string p4, "Camera is opening. Start VT Camera Setting. cameraId(%s), displayId(%d)"
@@ -145,7 +134,6 @@
 
     aput-object p1, v1, v7
 
-    .line 134
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -158,7 +146,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     iget-object p0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService$1;->this$0:Lcom/samsung/android/camera/requestinjector/RequestInjectorService;
 
     invoke-static {p0}, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->-$$Nest$fgetmContext(Lcom/samsung/android/camera/requestinjector/RequestInjectorService;)Landroid/content/Context;
@@ -176,10 +163,8 @@
     :catch_0
     move-exception p0
 
-    .line 138
     invoke-static {v0, v6, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 139
     sget-object p1, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -198,7 +183,6 @@
 
     goto :goto_1
 
-    .line 147
     :cond_3
     :try_start_1
     new-instance p5, Landroid/content/Intent;
@@ -207,15 +191,12 @@
 
     invoke-direct {p5, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 148
     invoke-virtual {p5, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "camera_close_package_name"
 
-    .line 149
     invoke-virtual {p5, v2, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 150
     invoke-virtual {p5, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p4, "Camera is closed. cameraId(%s), state(%d)"
@@ -224,7 +205,6 @@
 
     aput-object p1, v1, v7
 
-    .line 151
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -237,7 +217,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     iget-object p0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService$1;->this$0:Lcom/samsung/android/camera/requestinjector/RequestInjectorService;
 
     invoke-static {p0}, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->-$$Nest$fgetmContext(Lcom/samsung/android/camera/requestinjector/RequestInjectorService;)Landroid/content/Context;
@@ -255,10 +234,8 @@
     :catch_1
     move-exception p0
 
-    .line 155
     invoke-static {v0, v6, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 156
     sget-object p1, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     new-instance p2, Ljava/lang/StringBuilder;

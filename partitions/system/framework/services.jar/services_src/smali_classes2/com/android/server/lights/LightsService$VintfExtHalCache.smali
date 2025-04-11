@@ -15,12 +15,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 904
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 905
     iput-object v0, p0, Lcom/android/server/lights/LightsService$VintfExtHalCache;->mInstance:Lvendor/samsung/hardware/light/ISehLights;
 
     return-void
@@ -29,7 +27,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/lights/LightsService$VintfExtHalCache-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/lights/LightsService$VintfExtHalCache;-><init>()V
 
     return-void
@@ -44,13 +41,11 @@
 
     const/4 v0, 0x0
 
-    .line 927
     :try_start_0
     iput-object v0, p0, Lcom/android/server/lights/LightsService$VintfExtHalCache;->mInstance:Lvendor/samsung/hardware/light/ISehLights;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 928
     monitor-exit p0
 
     return-void
@@ -66,7 +61,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
-    .line 904
     invoke-virtual {p0}, Lcom/android/server/lights/LightsService$VintfExtHalCache;->get()Lvendor/samsung/hardware/light/ISehLights;
 
     move-result-object p0
@@ -79,7 +73,6 @@
 
     monitor-enter p0
 
-    .line 910
     :try_start_0
     iget-object v0, p0, Lcom/android/server/lights/LightsService$VintfExtHalCache;->mInstance:Lvendor/samsung/hardware/light/ISehLights;
 
@@ -87,7 +80,6 @@
 
     const-string v0, "android.hardware.light.ILights/default"
 
-    .line 911
     invoke-static {v0}, Landroid/os/ServiceManager;->waitForDeclaredService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -100,7 +92,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 915
     :try_start_1
     invoke-interface {v0}, Landroid/os/IBinder;->getExtension()Landroid/os/IBinder;
 
@@ -114,7 +105,6 @@
 
     const/4 v1, 0x0
 
-    .line 916
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -126,7 +116,6 @@
     :try_start_2
     const-string v0, "LightsService"
 
-    .line 918
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -145,7 +134,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 922
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/lights/LightsService$VintfExtHalCache;->mInstance:Lvendor/samsung/hardware/light/ISehLights;

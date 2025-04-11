@@ -23,7 +23,6 @@
 .method public static synthetic $r8$lambda$NhwWnq4BIWAmFr-ENPuBUfgm-CA(Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->lambda$uninstallPackage$0(Ljava/lang/String;)V
 
     return-void
@@ -32,10 +31,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/pm/PackageInstallerService;ZZ)V
     .locals 0
 
-    .line 54
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;-><init>(Landroid/content/Context;Lcom/android/server/pm/PackageInstallerService;ZZ)V
 
-    .line 34
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
@@ -44,34 +41,28 @@
 
     const/4 p1, 0x0
 
-    .line 35
     iput-boolean p1, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mLoaded:Z
 
-    .line 36
     iput-boolean p1, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mStorePreloadAppList:Z
 
-    .line 47
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscAddedAPKList:Ljava/util/List;
 
-    .line 48
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscUpdateAPKList:Ljava/util/List;
 
-    .line 49
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscInstallOnceAPKList:Ljava/util/List;
 
-    .line 50
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -84,12 +75,10 @@
 .method private synthetic lambda$uninstallPackage$0(Ljava/lang/String;)V
     .locals 1
 
-    .line 89
     iget-boolean v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mStorePreloadAppList:Z
 
     if-eqz v0, :cond_0
 
-    .line 90
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mInstalledAppListDeviceInfo:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
@@ -103,12 +92,10 @@
 .method public addInstallPackageList([Ljava/io/File;)V
     .locals 4
 
-    .line 112
     iget-boolean v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mLoaded:Z
 
     if-eqz v0, :cond_1
 
-    .line 113
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -118,26 +105,22 @@
 
     aget-object v2, p1, v1
 
-    .line 114
     new-instance v3, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$ApkFile;
 
     invoke-direct {v3, v2}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$ApkFile;-><init>(Ljava/io/File;)V
 
-    .line 115
     invoke-virtual {p0, v3}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->needInstall(Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$ApkFile;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 116
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mInstallPackageList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 118
     :cond_0
     invoke-virtual {v3}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$ApkFile;->removeCacheFile()V
 
@@ -155,7 +138,6 @@
 
     const/4 v0, 0x0
 
-    .line 143
     iput-boolean v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mStorePreloadAppList:Z
 
     return-void
@@ -168,14 +150,12 @@
 
     const/4 v1, 0x0
 
-    .line 234
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 235
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -184,7 +164,6 @@
 
     goto :goto_0
 
-    .line 240
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -200,7 +179,6 @@
 
     move-result-object v1
 
-    .line 241
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -221,7 +199,6 @@
 
     return-object v1
 
-    .line 236
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
@@ -242,7 +219,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 182
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -251,7 +227,6 @@
 
     goto :goto_0
 
-    .line 185
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -265,7 +240,6 @@
 
     if-nez p1, :cond_1
 
-    .line 187
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string/jumbo p1, "pkgInfo is null"
@@ -274,7 +248,6 @@
 
     return v0
 
-    .line 191
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -289,7 +262,6 @@
 
     return p0
 
-    .line 193
     :catch_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
@@ -323,7 +295,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 200
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -332,7 +303,6 @@
 
     goto :goto_0
 
-    .line 203
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -346,7 +316,6 @@
 
     if-nez p1, :cond_1
 
-    .line 205
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string/jumbo p1, "pkgInfo is null on isInstalledInHistory()"
@@ -355,7 +324,6 @@
 
     return v0
 
-    .line 208
     :cond_1
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mInstallHistory:Ljava/util/Collection;
 
@@ -375,10 +343,8 @@
 .method public loadChinaCSCConfig()V
     .locals 3
 
-    .line 213
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->loadConfigApkListInCsc()V
 
-    .line 215
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -403,7 +369,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 216
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -428,7 +393,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 217
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -453,7 +417,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 218
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -478,7 +441,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 219
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscAddedAPKList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -497,7 +459,6 @@
 
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscInstallOnceAPKList:Ljava/util/List;
 
-    .line 220
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -514,7 +475,6 @@
 
     goto :goto_0
 
-    .line 224
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
@@ -524,7 +484,6 @@
 
     goto :goto_1
 
-    .line 221
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
@@ -535,7 +494,6 @@
 
     const/4 v0, 0x1
 
-    .line 222
     iput-boolean v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mLoaded:Z
 
     :goto_1
@@ -545,7 +503,6 @@
 .method public loadConfigApkListInCsc()V
     .locals 1
 
-    .line 230
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->getApkListPath()Ljava/lang/String;
 
     move-result-object v0
@@ -558,14 +515,12 @@
 .method public final loadInstallAppListHashSet()V
     .locals 4
 
-    .line 147
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string v1, "loadInstallApplistHashSet"
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 149
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -575,7 +530,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
     :try_start_1
     new-instance v1, Ljava/io/ObjectInputStream;
 
@@ -583,23 +537,19 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 152
     :try_start_2
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 153
     instance-of v3, v2, Ljava/util/HashSet;
 
     if-eqz v3, :cond_0
 
-    .line 154
     check-cast v2, Ljava/util/HashSet;
 
     iput-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mInstalledAppListDeviceInfo:Ljava/util/HashSet;
 
-    .line 155
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string v3, "SUCCESS : Load INSTALLED_APPLIST file from previous one"
@@ -608,7 +558,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 157
     :cond_0
     :try_start_3
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->close()V
@@ -625,7 +574,6 @@
     :catchall_0
     move-exception v2
 
-    .line 149
     :try_start_5
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->close()V
     :try_end_5
@@ -665,7 +613,6 @@
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
 
-    .line 158
     :catch_0
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
@@ -673,20 +620,17 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 162
     :goto_2
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mInstalledAppListDeviceInfo:Ljava/util/HashSet;
 
     if-nez v0, :cond_1
 
-    .line 163
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string v1, "Failed to load INSTALLED_APPLIST, Create new INSTALLED_APPLIST HashSet"
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 165
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -700,7 +644,6 @@
 .method public final needInstall(Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$ApkFile;)Z
     .locals 3
 
-    .line 170
     invoke-virtual {p1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$ApkFile;->getApkFileName()Ljava/lang/String;
 
     move-result-object v0
@@ -711,7 +654,6 @@
 
     return v1
 
-    .line 174
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscAddedAPKList:Ljava/util/List;
 
@@ -734,7 +676,6 @@
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscUpdateAPKList:Ljava/util/List;
 
-    .line 175
     invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v2
@@ -754,7 +695,6 @@
     :cond_2
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscInstallOnceAPKList:Ljava/util/List;
 
-    .line 176
     invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -771,7 +711,6 @@
 
     if-nez v0, :cond_4
 
-    .line 177
     invoke-virtual {p1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$ApkFile;->getFile()Ljava/io/File;
 
     move-result-object p1
@@ -792,17 +731,14 @@
 .method public final parsePackagesOrApks(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
     .locals 4
 
-    .line 303
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result p0
 
-    .line 305
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 306
     :cond_0
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -817,7 +753,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 307
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
@@ -833,7 +768,6 @@
 
     goto :goto_0
 
-    .line 312
     :cond_2
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -841,7 +775,6 @@
 
     const-string v2, "apk"
 
-    .line 314
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -861,12 +794,10 @@
 
     const-string/jumbo v2, "name"
 
-    .line 315
     invoke-interface {p1, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 316
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -879,7 +810,6 @@
 
     if-nez v2, :cond_0
 
-    .line 317
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -891,7 +821,6 @@
 .method public parsePreloadPackages(Ljava/lang/String;)V
     .locals 3
 
-    .line 246
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -910,19 +839,16 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 247
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 248
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 249
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string p1, "No XML file exists"
@@ -931,13 +857,11 @@
 
     return-void
 
-    .line 253
     :cond_0
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object p1
 
-    .line 254
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -949,16 +873,13 @@
 
     const/4 v0, 0x0
 
-    .line 255
     :try_start_1
     invoke-interface {p1, v1, v0}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 256
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->parsePreloadPackagesInternal(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 257
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -971,7 +892,6 @@
     :catchall_0
     move-exception p1
 
-    .line 254
     :try_start_3
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_3
@@ -995,7 +915,6 @@
     :catch_0
     move-exception p1
 
-    .line 262
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1019,7 +938,6 @@
     :catch_1
     move-exception p1
 
-    .line 260
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1043,7 +961,6 @@
     :catch_2
     move-exception p1
 
-    .line 258
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1069,15 +986,12 @@
 .method public final parsePreloadPackagesInternal(Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 6
 
-    .line 268
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 270
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 271
     :cond_0
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1092,7 +1006,6 @@
 
     if-ne v1, v3, :cond_1
 
-    .line 272
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v4
@@ -1108,13 +1021,11 @@
 
     goto :goto_0
 
-    .line 276
     :cond_2
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 277
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1191,7 +1102,6 @@
     :goto_2
     packed-switch v2, :pswitch_data_0
 
-    .line 295
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1212,52 +1122,44 @@
 
     goto :goto_0
 
-    .line 287
     :pswitch_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->parsePackagesOrApks(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 288
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscInstallOnceAPKList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
 
-    .line 291
     :pswitch_1
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->parsePackagesOrApks(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 292
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscUpdateAPKList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
 
-    .line 279
     :pswitch_2
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->parsePackagesOrApks(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 280
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscAddedAPKList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto/16 :goto_0
 
-    .line 283
     :pswitch_3
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->parsePackagesOrApks(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 284
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscUninstallPKGList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
@@ -1287,47 +1189,37 @@
 .method public prepareInstall()V
     .locals 2
 
-    .line 59
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->prepareSettings()V
 
-    .line 60
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->checkNeedPreloadAppList()V
 
-    .line 62
     iget-boolean v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mIsUpgrade:Z
 
     if-eqz v0, :cond_2
 
-    .line 64
     iget-boolean v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mStorePreloadAppList:Z
 
     if-eqz v0, :cond_0
 
-    .line 65
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->loadInstallAppListHashSet()V
 
-    .line 68
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->loadChinaCSCConfig()V
 
-    .line 69
     iget-boolean v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mLoaded:Z
 
     if-nez v0, :cond_1
 
-    .line 70
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string v1, "CHN - loadChinaCSCConfig - no items to load -> setDisabled"
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 71
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->setDisabled()V
 
     return-void
 
-    .line 76
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
@@ -1339,15 +1231,12 @@
 
     const-string v1, "1"
 
-    .line 77
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x3e8
 
-    .line 78
     invoke-static {v0, v1}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 80
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->scanUninstallPkgChinaCSC()V
 
     :cond_2
@@ -1357,15 +1246,12 @@
 .method public putInstallHistory(Ljava/lang/String;)V
     .locals 1
 
-    .line 97
     invoke-super {p0, p1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->putInstallHistory(Ljava/lang/String;)V
 
-    .line 99
     iget-boolean v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mStorePreloadAppList:Z
 
     if-eqz v0, :cond_0
 
-    .line 100
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mInstalledAppListDeviceInfo:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -1377,7 +1263,6 @@
 .method public final scanUninstallPkgChinaCSC()V
     .locals 5
 
-    .line 325
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscUninstallPKGList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1388,7 +1273,6 @@
 
     return-void
 
-    .line 329
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mCscUninstallPKGList:Ljava/util/List;
 
@@ -1415,12 +1299,10 @@
 
     const-string v3, ""
 
-    .line 332
     invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 333
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const/4 v3, 0x0
@@ -1433,7 +1315,6 @@
 
     goto :goto_1
 
-    .line 335
     :catch_0
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
@@ -1458,7 +1339,6 @@
     :goto_1
     if-eqz v2, :cond_1
 
-    .line 338
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mUninstallPackageList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -1467,7 +1347,6 @@
 
     if-nez v2, :cond_1
 
-    .line 339
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1486,7 +1365,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 340
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mUninstallPackageList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1500,10 +1378,8 @@
 .method public setDisabled()V
     .locals 0
 
-    .line 106
     invoke-virtual {p0}, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->storeInstallAppListHashSet()V
 
-    .line 107
     invoke-super {p0}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->setDisabled()V
 
     return-void
@@ -1512,19 +1388,16 @@
 .method public storeInstallAppListHashSet()V
     .locals 4
 
-    .line 125
     iget-boolean v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mStorePreloadAppList:Z
 
     if-eqz v0, :cond_0
 
-    .line 126
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string/jumbo v1, "storeInstallAppListHashSet"
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;->out(Ljava/lang/String;)V
 
-    .line 128
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mInstalledAppListDeviceInfo:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
@@ -1533,7 +1406,6 @@
 
     if-nez v0, :cond_0
 
-    .line 129
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -1543,7 +1415,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 130
     :try_start_1
     new-instance v1, Ljava/io/ObjectOutputStream;
 
@@ -1551,13 +1422,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 132
     :try_start_2
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller;->mInstalledAppListDeviceInfo:Ljava/util/HashSet;
 
     invoke-virtual {v1, v2}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
-    .line 133
     iget-object v2, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
     const-string v3, "SUCCESS : Stored INSTALLED_APPLIST file"
@@ -1566,7 +1435,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 134
     :try_start_3
     invoke-virtual {v1}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_3
@@ -1582,7 +1450,6 @@
     :catchall_0
     move-exception v2
 
-    .line 129
     :try_start_5
     invoke-virtual {v1}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_5
@@ -1622,7 +1489,6 @@
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
 
-    .line 135
     :catch_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mLogMsg:Lcom/samsung/android/server/pm/install/PrePackageInstallerBase$PrePackageInstallLogMsg;
 
@@ -1638,10 +1504,8 @@
 .method public uninstallPackage()V
     .locals 2
 
-    .line 86
     invoke-super {p0}, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->uninstallPackage()V
 
-    .line 88
     iget-object v0, p0, Lcom/samsung/android/server/pm/install/PrePackageInstallerBase;->mUninstallPackageList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/samsung/android/server/pm/install/ChnPrePackageInstaller$$ExternalSyntheticLambda0;

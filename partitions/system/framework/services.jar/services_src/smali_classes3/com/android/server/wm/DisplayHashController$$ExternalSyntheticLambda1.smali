@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/service/displayhash/IDisplayHashingService;
 
     check-cast p2, Landroid/os/RemoteCallback;

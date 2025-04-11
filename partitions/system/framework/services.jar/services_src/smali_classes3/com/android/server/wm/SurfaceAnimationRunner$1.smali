@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/wm/SurfaceAnimationRunner;Lcom/android/server/wm/SurfaceAnimationRunner$RunningAnimation;)V
     .locals 0
 
-    .line 357
     iput-object p1, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->this$0:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     iput-object p2, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->val$a:Lcom/android/server/wm/SurfaceAnimationRunner$RunningAnimation;
@@ -28,7 +27,6 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 371
     iget-object p1, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->this$0:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     invoke-static {p1}, Lcom/android/server/wm/SurfaceAnimationRunner;->-$$Nest$fgetmLock(Lcom/android/server/wm/SurfaceAnimationRunner;)Ljava/lang/Object;
@@ -37,7 +35,6 @@
 
     monitor-enter p1
 
-    .line 372
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->this$0:Lcom/android/server/wm/SurfaceAnimationRunner;
 
@@ -49,7 +46,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 373
     iget-object v0, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->this$0:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     invoke-static {v0}, Lcom/android/server/wm/SurfaceAnimationRunner;->-$$Nest$fgetmCancelLock(Lcom/android/server/wm/SurfaceAnimationRunner;)Ljava/lang/Object;
@@ -60,7 +56,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 374
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->val$a:Lcom/android/server/wm/SurfaceAnimationRunner$RunningAnimation;
 
@@ -70,7 +65,6 @@
 
     if-nez v1, :cond_0
 
-    .line 377
     iget-object v1, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->this$0:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     invoke-static {v1}, Lcom/android/server/wm/SurfaceAnimationRunner;->-$$Nest$fgetmAnimationThreadHandler(Lcom/android/server/wm/SurfaceAnimationRunner;)Landroid/os/Handler;
@@ -83,13 +77,11 @@
 
     invoke-virtual {v1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 379
     :cond_0
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 380
     :try_start_2
     monitor-exit p1
     :try_end_2
@@ -100,7 +92,6 @@
     :catchall_0
     move-exception p0
 
-    .line 379
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -112,7 +103,6 @@
     :catchall_1
     move-exception p0
 
-    .line 380
     monitor-exit p1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -123,7 +113,6 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 360
     iget-object p1, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->this$0:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     invoke-static {p1}, Lcom/android/server/wm/SurfaceAnimationRunner;->-$$Nest$fgetmCancelLock(Lcom/android/server/wm/SurfaceAnimationRunner;)Ljava/lang/Object;
@@ -132,7 +121,6 @@
 
     monitor-enter p1
 
-    .line 361
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->val$a:Lcom/android/server/wm/SurfaceAnimationRunner$RunningAnimation;
 
@@ -142,7 +130,6 @@
 
     if-nez v0, :cond_0
 
-    .line 364
     iget-object v0, p0, Lcom/android/server/wm/SurfaceAnimationRunner$1;->this$0:Lcom/android/server/wm/SurfaceAnimationRunner;
 
     invoke-static {v0}, Lcom/android/server/wm/SurfaceAnimationRunner;->-$$Nest$fgetmFrameTransaction(Lcom/android/server/wm/SurfaceAnimationRunner;)Landroid/view/SurfaceControl$Transaction;
@@ -157,7 +144,6 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 366
     :cond_0
     monitor-exit p1
 

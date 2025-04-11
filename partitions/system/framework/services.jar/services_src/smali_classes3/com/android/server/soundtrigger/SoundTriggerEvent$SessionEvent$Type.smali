@@ -49,7 +49,6 @@
 .method public static synthetic $values()[Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
     .locals 19
 
-    .line 85
     sget-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->START_RECOGNITION:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     sget-object v1, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->STOP_RECOGNITION:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
@@ -98,7 +97,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 87
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "START_RECOGNITION"
@@ -109,7 +107,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->START_RECOGNITION:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 88
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "STOP_RECOGNITION"
@@ -120,7 +117,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->STOP_RECOGNITION:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 89
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "LOAD_MODEL"
@@ -131,7 +127,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->LOAD_MODEL:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 90
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "UNLOAD_MODEL"
@@ -142,7 +137,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->UNLOAD_MODEL:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 91
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "UPDATE_MODEL"
@@ -153,7 +147,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->UPDATE_MODEL:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 92
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "DELETE_MODEL"
@@ -164,7 +157,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->DELETE_MODEL:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 93
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "START_RECOGNITION_SERVICE"
@@ -175,7 +167,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->START_RECOGNITION_SERVICE:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 94
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "STOP_RECOGNITION_SERVICE"
@@ -186,7 +177,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->STOP_RECOGNITION_SERVICE:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 95
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "GET_MODEL_STATE"
@@ -197,7 +187,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->GET_MODEL_STATE:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 96
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "SET_PARAMETER"
@@ -208,7 +197,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->SET_PARAMETER:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 97
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "GET_MODULE_PROPERTIES"
@@ -219,7 +207,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->GET_MODULE_PROPERTIES:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 98
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "DETACH"
@@ -230,7 +217,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->DETACH:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 100
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "RECOGNITION"
@@ -241,7 +227,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->RECOGNITION:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 101
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "RESUME"
@@ -252,7 +237,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->RESUME:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 102
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "RESUME_FAILED"
@@ -263,7 +247,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->RESUME_FAILED:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 103
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "PAUSE"
@@ -274,7 +257,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->PAUSE:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 104
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "PAUSE_FAILED"
@@ -285,7 +267,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->PAUSE_FAILED:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 105
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "RESOURCES_AVAILABLE"
@@ -296,7 +277,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->RESOURCES_AVAILABLE:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 106
     new-instance v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     const-string v1, "MODULE_DIED"
@@ -307,7 +287,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->MODULE_DIED:Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
-    .line 85
     invoke-static {}, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->$values()[Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     move-result-object v0
@@ -320,7 +299,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 85
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -329,7 +307,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
     .locals 1
 
-    .line 85
     const-class v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -344,7 +321,6 @@
 .method public static values()[Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
     .locals 1
 
-    .line 85
     sget-object v0, Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->$VALUES:[Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;
 
     invoke-virtual {v0}, [Lcom/android/server/soundtrigger/SoundTriggerEvent$SessionEvent$Type;->clone()Ljava/lang/Object;

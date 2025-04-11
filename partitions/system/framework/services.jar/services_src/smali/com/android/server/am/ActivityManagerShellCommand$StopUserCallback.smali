@@ -13,15 +13,12 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 2775
     invoke-direct {p0}, Landroid/app/IStopUserCallback$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2773
     iput-boolean v0, p0, Lcom/android/server/am/ActivityManagerShellCommand$StopUserCallback;->mFinished:Z
 
-    .line 2776
     iput p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$StopUserCallback;->mUserId:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public synthetic constructor <init>(ILcom/android/server/am/ActivityManagerShellCommand$StopUserCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityManagerShellCommand$StopUserCallback;-><init>(I)V
 
     return-void
@@ -41,7 +37,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 2804
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,7 +82,6 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
-    .line 2797
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -98,15 +92,12 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2798
     iput-boolean v2, p0, Lcom/android/server/am/ActivityManagerShellCommand$StopUserCallback;->mFinished:Z
 
-    .line 2799
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2800
     monitor-exit p0
 
     return-void
@@ -133,7 +124,6 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
-    .line 2790
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -144,15 +134,12 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/server/utils/Slogf;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2791
     iput-boolean v2, p0, Lcom/android/server/am/ActivityManagerShellCommand$StopUserCallback;->mFinished:Z
 
-    .line 2792
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2793
     monitor-exit p0
 
     return-void
@@ -170,7 +157,6 @@
 
     monitor-enter p0
 
-    .line 2781
     :goto_0
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/am/ActivityManagerShellCommand$StopUserCallback;->mFinished:Z
@@ -194,7 +180,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 2785
     iget v3, p0, Lcom/android/server/am/ActivityManagerShellCommand$StopUserCallback;->mUserId:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -209,7 +194,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2786
     monitor-exit p0
 
     return-void
@@ -222,7 +206,6 @@
     :catch_0
     move-exception v0
 
-    .line 2783
     :try_start_2
     new-instance v1, Ljava/lang/IllegalStateException;
 

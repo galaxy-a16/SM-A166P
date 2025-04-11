@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;)V
     .locals 0
 
-    .line 16065
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$NotificationTrampolineCallback;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationManagerService$NotificationTrampolineCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationManagerService$NotificationTrampolineCallback;-><init>(Lcom/android/server/notification/NotificationManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public final blockTrampoline(I)Z
     .locals 2
 
-    .line 16088
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$NotificationTrampolineCallback;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$fgetmRoleObserver(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$RoleObserver;
@@ -59,7 +56,6 @@
 
     const-wide/32 v0, 0xd933952
 
-    .line 16089
     invoke-static {v0, v1, p1}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JI)Z
 
     move-result p0
@@ -69,7 +65,6 @@
     :cond_0
     const-wide/32 v0, 0x9fe8a20
 
-    .line 16092
     invoke-static {v0, v1, p1}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JI)Z
 
     move-result p0
@@ -80,7 +75,6 @@
 .method public canCloseSystemDialogs(Ljava/util/Collection;I)Z
     .locals 0
 
-    .line 16100
     invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$sfgetALLOWLIST_TOKEN()Landroid/os/IBinder;
 
     move-result-object p0
@@ -93,7 +87,6 @@
 
     const-wide/32 p0, 0x9fe8a20
 
-    .line 16101
     invoke-static {p0, p1, p2}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JI)Z
 
     move-result p0
@@ -114,7 +107,6 @@
 .method public isActivityStartAllowed(Ljava/util/Collection;ILjava/lang/String;)Z
     .locals 3
 
-    .line 16069
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -125,7 +117,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 16070
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -143,7 +134,6 @@
 
     check-cast v0, Landroid/os/IBinder;
 
-    .line 16071
     invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$sfgetALLOWLIST_TOKEN()Landroid/os/IBinder;
 
     move-result-object v2
@@ -152,7 +142,6 @@
 
     return v1
 
-    .line 16076
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -168,7 +157,6 @@
 
     move-result-object p1
 
-    .line 16078
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationManagerService$NotificationTrampolineCallback;->blockTrampoline(I)Z
 
     move-result p0
@@ -177,7 +165,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 16079
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -198,7 +185,6 @@
 
     return p0
 
-    .line 16082
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 

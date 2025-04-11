@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreManagerService$$ExternalSyntheticLambda13;->f$0:Lcom/android/server/blob/BlobStoreManagerService;
@@ -31,7 +30,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/blob/BlobStoreManagerService$$ExternalSyntheticLambda13;->f$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     iget p0, p0, Lcom/android/server/blob/BlobStoreManagerService$$ExternalSyntheticLambda13;->f$1:I

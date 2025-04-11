@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/inputmethod/HandwritingModeController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/inputmethod/HandwritingModeController$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/inputmethod/HandwritingModeController;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/inputmethod/HandwritingModeController$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/inputmethod/HandwritingModeController;
 
     invoke-static {p0}, Lcom/android/server/inputmethod/HandwritingModeController;->$r8$lambda$x_096HZYtwr1Yc6iN2NdNjH0kKE(Lcom/android/server/inputmethod/HandwritingModeController;)V

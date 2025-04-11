@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/firewall/DomainFilterNapCommon;)V
     .locals 0
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilterNapCommon$1;->this$0:Lcom/android/server/enterprise/firewall/DomainFilterNapCommon;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onAvailable(Landroid/net/Network;)V
     .locals 3
 
-    .line 46
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilterNapCommon;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -49,10 +47,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onAvailable(Landroid/net/Network;)V
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilterNapCommon$1;->this$0:Lcom/android/server/enterprise/firewall/DomainFilterNapCommon;
 
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/DomainFilterNapCommon;->-$$Nest$mhasFeatureEnabled(Lcom/android/server/enterprise/firewall/DomainFilterNapCommon;)Z
@@ -61,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 49
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilterNapCommon$1;->this$0:Lcom/android/server/enterprise/firewall/DomainFilterNapCommon;
 
     invoke-virtual {p1}, Landroid/net/Network;->getNetId()I

@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/accessibility/gestures/GestureMatcher;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$msetState(Lcom/android/server/accessibility/gestures/GestureMatcher;ILandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/accessibility/gestures/GestureMatcher;->setState(ILandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -37,28 +35,22 @@
 .method public constructor <init>(ILandroid/os/Handler;Lcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
     .locals 1
 
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 55
     iput v0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mState:I
 
-    .line 69
     iput p1, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mGestureId:I
 
-    .line 70
     iput-object p2, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mHandler:Landroid/os/Handler;
 
-    .line 71
     new-instance p1, Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;
 
     invoke-direct {p1, p0}, Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;-><init>(Lcom/android/server/accessibility/gestures/GestureMatcher;)V
 
     iput-object p1, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mDelayedTransition:Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;
 
-    .line 72
     iput-object p3, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mListener:Lcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;
 
     return-void
@@ -81,7 +73,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 294
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -124,12 +115,10 @@
 .method public final cancelAfter(JLandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 8
 
-    .line 233
     iget-object v0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mDelayedTransition:Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;->cancel()V
 
-    .line 234
     iget-object v1, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mDelayedTransition:Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;
 
     const/4 v2, 0x3
@@ -150,7 +139,6 @@
 .method public final cancelAfterDoubleTapTimeout(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 7
 
-    .line 224
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
 
     move-result v0
@@ -173,7 +161,6 @@
 .method public cancelAfterTapTimeout(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 7
 
-    .line 218
     invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
 
     move-result v0
@@ -198,7 +185,6 @@
 
     const/4 v0, 0x3
 
-    .line 109
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->setState(ILandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -207,7 +193,6 @@
 .method public final cancelPendingTransitions()V
     .locals 0
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mDelayedTransition:Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;->cancel()V
@@ -220,10 +205,8 @@
 
     const/4 v0, 0x0
 
-    .line 81
     iput v0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mState:I
 
-    .line 82
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelPendingTransitions()V
 
     return-void
@@ -232,12 +215,10 @@
 .method public final completeAfter(JLandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 8
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mDelayedTransition:Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;->cancel()V
 
-    .line 270
     iget-object v1, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mDelayedTransition:Lcom/android/server/accessibility/gestures/GestureMatcher$DelayedTransition;
 
     const/4 v2, 0x2
@@ -258,7 +239,6 @@
 .method public final completeAfterDoubleTapTimeout(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 7
 
-    .line 280
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
 
     move-result v0
@@ -281,7 +261,6 @@
 .method public final completeAfterLongPressTimeout(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 7
 
-    .line 249
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result v0
@@ -306,7 +285,6 @@
 
     const/4 v0, 0x2
 
-    .line 114
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->setState(ILandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -315,7 +293,6 @@
 .method public getGestureId()I
     .locals 0
 
-    .line 122
     iget p0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mGestureId:I
 
     return p0
@@ -327,7 +304,6 @@
 .method public final getState()I
     .locals 0
 
-    .line 86
     iget p0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mState:I
 
     return p0
@@ -336,14 +312,12 @@
 .method public onDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final onMotionEvent(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)I
     .locals 4
 
-    .line 135
     iget v0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mState:I
 
     const/4 v1, 0x3
@@ -356,7 +330,6 @@
 
     goto :goto_1
 
-    .line 138
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -378,40 +351,33 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 156
     invoke-virtual {p0, v1, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->setState(ILandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     goto :goto_0
 
-    .line 149
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->onPointerUp(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     goto :goto_0
 
-    .line 143
     :cond_2
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->onPointerDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     goto :goto_0
 
-    .line 146
     :cond_3
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->onMove(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     goto :goto_0
 
-    .line 152
     :cond_4
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->onUp(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     goto :goto_0
 
-    .line 140
     :cond_5
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->onDown(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
-    .line 159
     :goto_0
     iget p0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mState:I
 
@@ -431,7 +397,6 @@
 .method public onPointerUp(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -441,7 +406,6 @@
 .method public final setListener(Lcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;)V
     .locals 0
 
-    .line 118
     iput-object p1, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mListener:Lcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;
 
     return-void
@@ -450,18 +414,14 @@
 .method public final setState(ILandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 6
 
-    .line 95
     iput p1, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mState:I
 
-    .line 96
     invoke-virtual {p0}, Lcom/android/server/accessibility/gestures/GestureMatcher;->cancelPendingTransitions()V
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mListener:Lcom/android/server/accessibility/gestures/GestureMatcher$StateChangeListener;
 
     if-eqz v0, :cond_0
 
-    .line 98
     iget v1, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mGestureId:I
 
     iget v2, p0, Lcom/android/server/accessibility/gestures/GestureMatcher;->mState:I
@@ -483,7 +443,6 @@
 
     const/4 v0, 0x1
 
-    .line 104
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureMatcher;->setState(ILandroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
 
     return-void
@@ -492,7 +451,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 309
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

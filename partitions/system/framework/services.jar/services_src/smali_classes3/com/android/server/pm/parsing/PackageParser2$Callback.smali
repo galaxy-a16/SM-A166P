@@ -23,7 +23,6 @@
 .method public final startParsingPackage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/res/TypedArray;Z)Lcom/android/server/pm/pkg/parsing/ParsingPackage;
     .locals 0
 
-    .line 205
     invoke-static {p1, p2, p3, p4, p5}, Lcom/android/server/pm/parsing/pkg/PackageImpl;->forParsing(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/res/TypedArray;Z)Lcom/android/server/pm/parsing/pkg/PackageImpl;
 
     move-result-object p0

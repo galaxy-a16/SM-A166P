@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/app/GameManagerService;)V
     .locals 0
 
-    .line 1524
     iput-object p1, p0, Lcom/android/server/app/GameManagerService$2;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.action.ACTION_SHUTDOWN"
 
-    .line 1527
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1528
     iget-object p1, p0, Lcom/android/server/app/GameManagerService$2;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {p1}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmLock(Lcom/android/server/app/GameManagerService;)Ljava/lang/Object;
@@ -46,7 +43,6 @@
 
     monitor-enter p1
 
-    .line 1533
     :try_start_0
     iget-object p2, p0, Lcom/android/server/app/GameManagerService$2;->this$0:Lcom/android/server/app/GameManagerService;
 
@@ -75,7 +71,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 1534
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -86,7 +81,6 @@
 
     move-result v0
 
-    .line 1535
     iget-object v1, p0, Lcom/android/server/app/GameManagerService$2;->this$0:Lcom/android/server/app/GameManagerService;
 
     const-string v2, "RECEIVE_SHUTDOWN_INDENT"
@@ -97,7 +91,6 @@
 
     invoke-static {v1, v0, v4, v2, v3}, Lcom/android/server/app/GameManagerService;->-$$Nest$msendUserMessage(Lcom/android/server/app/GameManagerService;IILjava/lang/String;I)V
 
-    .line 1537
     iget-object v1, p0, Lcom/android/server/app/GameManagerService$2;->this$0:Lcom/android/server/app/GameManagerService;
 
     const-string v2, "RECEIVE_SHUTDOWN_INDENT"
@@ -108,7 +101,6 @@
 
     goto :goto_0
 
-    .line 1542
     :cond_0
     monitor-exit p1
 

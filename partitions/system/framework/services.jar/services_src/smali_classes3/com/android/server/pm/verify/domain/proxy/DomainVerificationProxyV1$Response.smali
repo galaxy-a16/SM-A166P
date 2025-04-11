@@ -17,21 +17,16 @@
 .method public constructor <init>(IIILjava/util/List;)V
     .locals 0
 
-    .line 320
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 321
     iput p1, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response;->callingUid:I
 
-    .line 322
     iput p2, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response;->verificationId:I
 
-    .line 323
     iput p3, p0, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response;->verificationCode:I
 
     if-nez p4, :cond_0
 
-    .line 324
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p4
@@ -45,7 +40,6 @@
 .method public synthetic constructor <init>(IIILjava/util/List;Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/pm/verify/domain/proxy/DomainVerificationProxyV1$Response;-><init>(IIILjava/util/List;)V
 
     return-void

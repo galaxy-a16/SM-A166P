@@ -21,22 +21,16 @@
 
     const/4 v0, 0x0
 
-    .line 200
     invoke-direct {p0, p1, p4, p7, v0}, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinItemRequestInner;-><init>(Lcom/android/server/pm/ShortcutRequestPinProcessor;Landroid/content/IntentSender;ILcom/android/server/pm/ShortcutRequestPinProcessor$PinItemRequestInner-IA;)V
 
-    .line 201
     iput-object p2, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->shortcutOriginal:Landroid/content/pm/ShortcutInfo;
 
-    .line 202
     iput-object p3, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->shortcutForLauncher:Landroid/content/pm/ShortcutInfo;
 
-    .line 203
     iput-object p5, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->launcherPackage:Ljava/lang/String;
 
-    .line 204
     iput p6, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->launcherUserId:I
 
-    .line 205
     iput-boolean p8, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->preExisting:Z
 
     return-void
@@ -45,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/ShortcutRequestPinProcessor;Landroid/content/pm/ShortcutInfo;Landroid/content/pm/ShortcutInfo;Landroid/content/IntentSender;Ljava/lang/String;IIZLcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p8}, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;-><init>(Lcom/android/server/pm/ShortcutRequestPinProcessor;Landroid/content/pm/ShortcutInfo;Landroid/content/pm/ShortcutInfo;Landroid/content/IntentSender;Ljava/lang/String;IIZ)V
 
     return-void
@@ -56,7 +49,6 @@
 .method public getShortcutInfo()Landroid/content/pm/ShortcutInfo;
     .locals 0
 
-    .line 210
     iget-object p0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;->shortcutForLauncher:Landroid/content/pm/ShortcutInfo;
 
     return-object p0
@@ -65,7 +57,6 @@
 .method public tryAccept()Z
     .locals 1
 
-    .line 219
     iget-object v0, p0, Lcom/android/server/pm/ShortcutRequestPinProcessor$PinItemRequestInner;->mProcessor:Lcom/android/server/pm/ShortcutRequestPinProcessor;
 
     invoke-virtual {v0, p0}, Lcom/android/server/pm/ShortcutRequestPinProcessor;->directPinShortcut(Lcom/android/server/pm/ShortcutRequestPinProcessor$PinShortcutRequestInner;)Z

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NASLearnMoreActivity;)V
     .locals 0
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/notification/NASLearnMoreActivity$1;->this$0:Lcom/android/server/notification/NASLearnMoreActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/notification/NASLearnMoreActivity$1;->this$0:Lcom/android/server/notification/NASLearnMoreActivity;
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V

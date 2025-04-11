@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     invoke-static {p1}, Lcom/android/server/chimera/SystemRepositoryDefault;->$r8$lambda$y38VPU_vU03HaCs3-EMFR59Aee8(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;

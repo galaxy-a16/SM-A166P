@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
@@ -32,10 +30,8 @@
 .method public getLockoutModeForUser(I)I
     .locals 2
 
-    .line 44
     monitor-enter p0
 
-    .line 45
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/LockoutCache;->mUserLockoutStates:Landroid/util/SparseIntArray;
 
@@ -52,7 +48,6 @@
     :catchall_0
     move-exception p1
 
-    .line 46
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -65,7 +60,6 @@
 
     const-string v0, "LockoutCache"
 
-    .line 36
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,16 +82,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     monitor-enter p0
 
-    .line 38
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/LockoutCache;->mUserLockoutStates:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 39
     monitor-exit p0
 
     return-void

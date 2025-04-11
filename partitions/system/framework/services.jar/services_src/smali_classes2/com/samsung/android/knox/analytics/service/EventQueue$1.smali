@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/analytics/service/EventQueue;)V
     .locals 0
 
-    .line 51
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue$1;->this$0:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 53
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue$1;->this$0:Lcom/samsung/android/knox/analytics/service/EventQueue;
 
     invoke-static {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->-$$Nest$msaveCachedLogs(Lcom/samsung/android/knox/analytics/service/EventQueue;)V

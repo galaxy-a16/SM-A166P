@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayMcfManager;)V
     .locals 0
 
-    .line 371
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$2;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-direct {p0}, Lcom/samsung/android/mcf/ble/BleAdapterCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onMcfServiceStateChanged(II)V
     .locals 2
 
-    .line 374
     invoke-static {}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -45,7 +43,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayMcfManager$2;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p2}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/display/WifiDisplayMcfManager;)Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;
@@ -56,7 +53,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 377
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayMcfManager$2;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p2}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/display/WifiDisplayMcfManager;)Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;
@@ -69,7 +65,6 @@
 
     move-result-object p0
 
-    .line 378
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -78,7 +73,6 @@
 
     move-result-object p0
 
-    .line 377
     invoke-virtual {p2, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void

@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 620
     invoke-static {}, Lcom/android/server/enterprise/firewall/FirewallDefinitions$Table;->values()[Lcom/android/server/enterprise/firewall/FirewallDefinitions$Table;
 
     move-result-object v0
@@ -53,7 +52,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 181
     :catch_1
     invoke-static {}, Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;->values()[Lcom/samsung/android/knox/net/firewall/FirewallRule$RuleType;
 

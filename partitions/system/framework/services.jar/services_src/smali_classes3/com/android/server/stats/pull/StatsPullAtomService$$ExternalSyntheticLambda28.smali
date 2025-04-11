@@ -20,7 +20,6 @@
 .method public final test(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/stats/pull/StatsPullAtomService;->$r8$lambda$eD--XHbTJFnTAfV7PSPxYO7KF7s(I)Z
 
     move-result p0

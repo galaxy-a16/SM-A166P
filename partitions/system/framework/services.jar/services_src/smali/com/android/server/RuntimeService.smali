@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 42
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/RuntimeService;->mContext:Landroid/content/Context;
 
     return-void
@@ -23,7 +21,6 @@
 .method public static hasOption([Ljava/lang/String;Ljava/lang/String;)Z
     .locals 4
 
-    .line 71
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -35,7 +32,6 @@
 
     aget-object v3, p0, v2
 
-    .line 72
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -60,10 +56,8 @@
 
     const-string v0, "Core Library Debug Info: "
 
-    .line 87
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/i18n/timezone/DebugInfo;->getDebugEntries()Ljava/util/List;
 
     move-result-object p0
@@ -85,7 +79,6 @@
 
     check-cast v0, Lcom/android/i18n/timezone/DebugInfo$DebugEntry;
 
-    .line 89
     invoke-virtual {v0}, Lcom/android/i18n/timezone/DebugInfo$DebugEntry;->getKey()Ljava/lang/String;
 
     move-result-object v1
@@ -94,10 +87,8 @@
 
     const-string v1, ": \""
 
-    .line 90
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 91
     invoke-virtual {v0}, Lcom/android/i18n/timezone/DebugInfo$DebugEntry;->getStringValue()Ljava/lang/String;
 
     move-result-object v0
@@ -106,7 +97,6 @@
 
     const-string v0, "\""
 
-    .line 92
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
@@ -118,7 +108,6 @@
 .method public static reportTimeZoneInfoProto(Lcom/android/i18n/timezone/DebugInfo;Landroid/util/proto/ProtoOutputStream;)V
     .locals 6
 
-    .line 104
     invoke-virtual {p0}, Lcom/android/i18n/timezone/DebugInfo;->getDebugEntries()Ljava/util/List;
 
     move-result-object p0
@@ -142,12 +131,10 @@
 
     const-wide v1, 0x20b00000001L
 
-    .line 105
     invoke-virtual {p1, v1, v2}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v1
 
-    .line 106
     invoke-virtual {v0}, Lcom/android/i18n/timezone/DebugInfo$DebugEntry;->getKey()Ljava/lang/String;
 
     move-result-object v3
@@ -158,14 +145,12 @@
 
     const-wide v3, 0x10900000002L
 
-    .line 107
     invoke-virtual {v0}, Lcom/android/i18n/timezone/DebugInfo$DebugEntry;->getStringValue()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v3, v4, v0}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 108
     invoke-virtual {p1, v1, v2}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     goto :goto_0
@@ -179,7 +164,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 1
 
-    .line 48
     iget-object p0, p0, Lcom/android/server/RuntimeService;->mContext:Landroid/content/Context;
 
     const-string v0, "RuntimeService"
@@ -195,29 +179,24 @@
     :cond_0
     const-string p0, "--proto"
 
-    .line 52
     invoke-static {p3, p0}, Lcom/android/server/RuntimeService;->hasOption([Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
-    .line 55
     invoke-static {}, Lcom/android/i18n/timezone/I18nModuleDebug;->getDebugInfo()Lcom/android/i18n/timezone/DebugInfo;
 
     move-result-object p3
 
     if-eqz p0, :cond_1
 
-    .line 58
     new-instance p2, Landroid/util/proto/ProtoOutputStream;
 
     invoke-direct {p2, p1}, Landroid/util/proto/ProtoOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 59
     invoke-static {p3, p2}, Lcom/android/server/RuntimeService;->reportTimeZoneInfoProto(Lcom/android/i18n/timezone/DebugInfo;Landroid/util/proto/ProtoOutputStream;)V
 
     goto :goto_0
 
-    .line 61
     :cond_1
     invoke-static {p3, p2}, Lcom/android/server/RuntimeService;->reportTimeZoneInfo(Lcom/android/i18n/timezone/DebugInfo;Ljava/io/PrintWriter;)V
 
@@ -226,7 +205,6 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 65
     invoke-virtual {p2}, Landroid/util/proto/ProtoOutputStream;->flush()V
 
     :cond_2

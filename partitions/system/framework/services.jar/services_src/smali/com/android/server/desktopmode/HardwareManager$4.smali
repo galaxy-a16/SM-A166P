@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/HardwareManager;)V
     .locals 0
 
-    .line 186
     iput-object p1, p0, Lcom/android/server/desktopmode/HardwareManager$4;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -26,40 +25,34 @@
 
     const-string v0, "ACTION"
 
-    .line 189
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "DEVTYPE"
 
-    .line 190
     invoke-virtual {p1, v1}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "PRODUCT"
 
-    .line 191
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v2, "4b4/f645"
 
-    .line 196
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 197
     sget-boolean v2, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 198
     invoke-static {}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -92,7 +85,6 @@
 
     invoke-static {v2, p1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     :cond_0
     iget-object p1, p0, Lcom/android/server/desktopmode/HardwareManager$4;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
@@ -105,14 +97,12 @@
     :try_start_0
     const-string v1, "add"
 
-    .line 202
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 203
     invoke-static {}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -121,21 +111,18 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$4;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     const/16 v1, 0x72
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$msetRawDockStateLocked(Lcom/android/server/desktopmode/HardwareManager;I)V
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$4;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     const-string v1, "04b4:f645"
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$msetRawDockUsbpdIdsLocked(Lcom/android/server/desktopmode/HardwareManager;Ljava/lang/String;)V
 
-    .line 206
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$4;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$mupdateDockStatusLocked(Lcom/android/server/desktopmode/HardwareManager;)Z
@@ -145,14 +132,12 @@
     :cond_1
     const-string/jumbo v1, "remove"
 
-    .line 207
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 209
     invoke-static {}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -161,26 +146,22 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$4;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$msetRawDockStateLocked(Lcom/android/server/desktopmode/HardwareManager;I)V
 
-    .line 211
     iget-object v0, p0, Lcom/android/server/desktopmode/HardwareManager$4;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     const-string v1, "04b4:f645"
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$msetRawDockUsbpdIdsLocked(Lcom/android/server/desktopmode/HardwareManager;Ljava/lang/String;)V
 
-    .line 212
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$4;->this$0:Lcom/android/server/desktopmode/HardwareManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$mupdateDockStatusLocked(Lcom/android/server/desktopmode/HardwareManager;)Z
 
-    .line 214
     :cond_2
     :goto_0
     monitor-exit p1

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService$8;Z)V
     .locals 0
 
-    .line 1043
     iput-object p1, p0, Lcom/android/server/BatteryService$8$1;->this$1:Lcom/android/server/BatteryService$8;
 
     iput-boolean p2, p0, Lcom/android/server/BatteryService$8$1;->val$wirelssPowerSharingEnable:Z
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 3
 
-    .line 1046
     iget-object v0, p0, Lcom/android/server/BatteryService$8$1;->this$1:Lcom/android/server/BatteryService$8;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$8;->this$0:Lcom/android/server/BatteryService;
@@ -44,7 +42,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1047
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -69,7 +66,6 @@
 
     goto :goto_0
 
-    .line 1049
     :cond_0
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

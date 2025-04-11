@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/pm/Settings;)V
     .locals 0
 
-    .line 716
     iput-object p1, p0, Lcom/android/server/pm/Settings$3;->this$0:Lcom/android/server/pm/Settings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public accept(Ljava/lang/Integer;)V
     .locals 9
 
-    .line 719
     iget-object v0, p0, Lcom/android/server/pm/Settings$3;->this$0:Lcom/android/server/pm/Settings;
 
     invoke-static {v0}, Lcom/android/server/pm/Settings;->-$$Nest$fgetmRuntimePermissionsPersistence(Lcom/android/server/pm/Settings;)Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
@@ -70,7 +68,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 716
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/Settings$3;->accept(Ljava/lang/Integer;)V

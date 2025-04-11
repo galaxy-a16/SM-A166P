@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$mcalcCountAverage(Lcom/android/server/NandswapManager$ProcessingManager;)D
     .locals 2
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->calcCountAverage()D
 
     move-result-wide v0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$mcalcSizeAverage(Lcom/android/server/NandswapManager$ProcessingManager;)D
     .locals 2
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->calcSizeAverage()D
 
     move-result-wide v0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$mclearAllList(Lcom/android/server/NandswapManager$ProcessingManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->clearAllList()V
 
     return-void
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$mgetPreviousObjReads(Lcom/android/server/NandswapManager$ProcessingManager;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->getPreviousObjReads()I
 
     move-result p0
@@ -63,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$mgetPreviousObjWrites(Lcom/android/server/NandswapManager$ProcessingManager;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->getPreviousObjWrites()I
 
     move-result p0
@@ -74,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$mgetPreviousReads(Lcom/android/server/NandswapManager$ProcessingManager;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->getPreviousReads()I
 
     move-result p0
@@ -85,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$mgetPreviousWrites(Lcom/android/server/NandswapManager$ProcessingManager;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/NandswapManager$ProcessingManager;->getPreviousWrites()I
 
     move-result p0
@@ -96,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$msetCount(Lcom/android/server/NandswapManager$ProcessingManager;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/NandswapManager$ProcessingManager;->setCount(I)V
 
     return-void
@@ -105,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$msetPreviousValue(Lcom/android/server/NandswapManager$ProcessingManager;IIII)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/NandswapManager$ProcessingManager;->setPreviousValue(IIII)V
 
     return-void
@@ -114,7 +105,6 @@
 .method public static bridge synthetic -$$Nest$msetSize(Lcom/android/server/NandswapManager$ProcessingManager;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/NandswapManager$ProcessingManager;->setSize(I)V
 
     return-void
@@ -123,17 +113,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1019
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1020
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->countList:Ljava/util/ArrayList;
 
-    .line 1021
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -142,16 +129,12 @@
 
     const/4 v0, 0x0
 
-    .line 1022
     iput v0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->reads:I
 
-    .line 1023
     iput v0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->writes:I
 
-    .line 1024
     iput v0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->objReads:I
 
-    .line 1025
     iput v0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->objWrites:I
 
     return-void
@@ -160,7 +143,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/NandswapManager$ProcessingManager-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/NandswapManager$ProcessingManager;-><init>()V
 
     return-void
@@ -177,7 +159,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1052
     iget-object p1, p0, Lcom/android/server/NandswapManager$ProcessingManager;->countList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -186,7 +167,6 @@
 
     int-to-double v3, p1
 
-    .line 1053
     iget-object p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->countList:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -208,7 +188,6 @@
 
     check-cast p1, Ljava/lang/Integer;
 
-    .line 1054
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -224,7 +203,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1057
     iget-object p1, p0, Lcom/android/server/NandswapManager$ProcessingManager;->sizeList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -233,7 +211,6 @@
 
     int-to-double v3, p1
 
-    .line 1058
     iget-object p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->sizeList:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -255,7 +232,6 @@
 
     check-cast p1, Ljava/lang/Integer;
 
-    .line 1059
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -289,7 +265,6 @@
 
     const/4 v0, 0x1
 
-    .line 1035
     invoke-virtual {p0, v0}, Lcom/android/server/NandswapManager$ProcessingManager;->calcAverage(I)D
 
     move-result-wide v0
@@ -302,7 +277,6 @@
 
     const/4 v0, 0x2
 
-    .line 1038
     invoke-virtual {p0, v0}, Lcom/android/server/NandswapManager$ProcessingManager;->calcAverage(I)D
 
     move-result-wide v0
@@ -313,12 +287,10 @@
 .method public final clearAllList()V
     .locals 1
 
-    .line 1042
     iget-object v0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->countList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1043
     iget-object p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->sizeList:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -329,7 +301,6 @@
 .method public final getPreviousObjReads()I
     .locals 0
 
-    .line 1089
     iget p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->objReads:I
 
     return p0
@@ -338,7 +309,6 @@
 .method public final getPreviousObjWrites()I
     .locals 0
 
-    .line 1092
     iget p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->objWrites:I
 
     return p0
@@ -347,7 +317,6 @@
 .method public final getPreviousReads()I
     .locals 0
 
-    .line 1083
     iget p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->reads:I
 
     return p0
@@ -356,7 +325,6 @@
 .method public final getPreviousWrites()I
     .locals 0
 
-    .line 1086
     iget p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->writes:I
 
     return p0
@@ -365,7 +333,6 @@
 .method public final setCount(I)V
     .locals 0
 
-    .line 1028
     iget-object p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->countList:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -380,16 +347,12 @@
 .method public final setPreviousValue(IIII)V
     .locals 0
 
-    .line 1077
     iput p1, p0, Lcom/android/server/NandswapManager$ProcessingManager;->reads:I
 
-    .line 1078
     iput p2, p0, Lcom/android/server/NandswapManager$ProcessingManager;->writes:I
 
-    .line 1079
     iput p3, p0, Lcom/android/server/NandswapManager$ProcessingManager;->objReads:I
 
-    .line 1080
     iput p4, p0, Lcom/android/server/NandswapManager$ProcessingManager;->objWrites:I
 
     return-void
@@ -398,7 +361,6 @@
 .method public final setSize(I)V
     .locals 0
 
-    .line 1031
     iget-object p0, p0, Lcom/android/server/NandswapManager$ProcessingManager;->sizeList:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

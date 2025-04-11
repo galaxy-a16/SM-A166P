@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$mgetConfiguredLayouts(Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;)Ljava/util/Set;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->getConfiguredLayouts()Ljava/util/Set;
 
     move-result-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$mgetCurrentLayout(Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->getCurrentLayout()Ljava/lang/String;
 
     move-result-object p0
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$mhasConfiguredLayouts(Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->hasConfiguredLayouts()Z
 
     move-result p0
@@ -46,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$msetConfiguredLayouts(Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;Ljava/util/Set;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->setConfiguredLayouts(Ljava/util/Set;)V
 
     return-void
@@ -55,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$msetCurrentLayout(Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->setCurrentLayout(Ljava/lang/String;)V
 
     return-void
@@ -72,7 +67,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;-><init>()V
 
     return-void
@@ -83,7 +77,6 @@
 .method public final getConfiguredLayouts()Ljava/util/Set;
     .locals 0
 
-    .line 1551
     iget-object p0, p0, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->mConfiguredLayouts:Ljava/util/Set;
 
     return-object p0
@@ -92,7 +85,6 @@
 .method public final getCurrentLayout()Ljava/lang/String;
     .locals 0
 
-    .line 1560
     iget-object p0, p0, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->mCurrentLayout:Ljava/lang/String;
 
     return-object p0
@@ -101,7 +93,6 @@
 .method public final hasConfiguredLayouts()Z
     .locals 0
 
-    .line 1546
     iget-object p0, p0, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->mConfiguredLayouts:Ljava/util/Set;
 
     if-eqz p0, :cond_0
@@ -126,7 +117,6 @@
 .method public final setConfiguredLayouts(Ljava/util/Set;)V
     .locals 0
 
-    .line 1555
     iput-object p1, p0, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->mConfiguredLayouts:Ljava/util/Set;
 
     return-void
@@ -135,7 +125,6 @@
 .method public final setCurrentLayout(Ljava/lang/String;)V
     .locals 0
 
-    .line 1564
     iput-object p1, p0, Lcom/android/server/input/KeyboardLayoutManager$KeyboardConfiguration;->mCurrentLayout:Ljava/lang/String;
 
     return-void

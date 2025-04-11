@@ -7,7 +7,6 @@
 .method public static final dumpBitfield(B)Ljava/lang/String;
     .locals 4
 
-    .line 18
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -20,7 +19,6 @@
 
     const-string v1, "D50"
 
-    .line 21
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     int-to-byte v1, v2
@@ -39,7 +37,6 @@
 
     const-string v2, "D75"
 
-    .line 25
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     or-int/lit8 v1, v1, 0x2
@@ -49,7 +46,6 @@
     :cond_1
     if-eq p0, v1, :cond_2
 
-    .line 29
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,7 +79,6 @@
     :cond_2
     const-string p0, " | "
 
-    .line 31
     invoke-static {p0, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0

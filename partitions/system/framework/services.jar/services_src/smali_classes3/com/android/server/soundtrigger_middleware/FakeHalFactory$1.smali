@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$L0MjRmAct22uCR2-5g0T1U3p-W0(Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->lambda$detach$0(Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$Z6mvvZ8PRjfqa3uVBUUhX4XjWT0(Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;Landroid/os/IBinder;Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->lambda$clientAttached$1(Landroid/os/IBinder;Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static synthetic $r8$lambda$ZD4jXf5fSGW8fy4BRo_OC--LAjI(Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->lambda$clientDetached$2(Landroid/os/IBinder;)V
 
     return-void
@@ -40,7 +37,6 @@
 .method public constructor <init>(Lcom/android/server/soundtrigger_middleware/FakeHalFactory;Landroid/os/IBinder;Ljava/lang/Runnable;Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;)V
     .locals 0
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->this$0:Lcom/android/server/soundtrigger_middleware/FakeHalFactory;
 
     iput-object p4, p0, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->val$session:Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;
@@ -53,7 +49,6 @@
 .method private synthetic lambda$clientAttached$1(Landroid/os/IBinder;Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;)V
     .locals 0
 
-    .line 76
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->this$0:Lcom/android/server/soundtrigger_middleware/FakeHalFactory;
 
@@ -72,7 +67,6 @@
 
     const-string p1, "Unexpected RemoteException from same process"
 
-    .line 78
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -82,7 +76,6 @@
 .method private synthetic lambda$clientDetached$2(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 87
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->this$0:Lcom/android/server/soundtrigger_middleware/FakeHalFactory;
 
@@ -101,7 +94,6 @@
 
     const-string p1, "Unexpected RemoteException from same process"
 
-    .line 89
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -111,7 +103,6 @@
 .method private synthetic lambda$detach$0(Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;)V
     .locals 0
 
-    .line 65
     :try_start_0
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->this$0:Lcom/android/server/soundtrigger_middleware/FakeHalFactory;
 
@@ -130,7 +121,6 @@
 
     const-string p1, "Unexpected RemoteException from same process"
 
-    .line 67
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -142,7 +132,6 @@
 .method public clientAttached(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 74
     sget-object v0, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$ExecutorHolder;->INJECTION_EXECUTOR:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->val$session:Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;
@@ -159,7 +148,6 @@
 .method public clientDetached(Landroid/os/IBinder;)V
     .locals 2
 
-    .line 85
     sget-object v0, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$ExecutorHolder;->INJECTION_EXECUTOR:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1$$ExternalSyntheticLambda1;
@@ -174,7 +162,6 @@
 .method public detach()V
     .locals 3
 
-    .line 63
     sget-object v0, Lcom/android/server/soundtrigger_middleware/FakeSoundTriggerHal$ExecutorHolder;->INJECTION_EXECUTOR:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Lcom/android/server/soundtrigger_middleware/FakeHalFactory$1;->val$session:Landroid/media/soundtrigger_middleware/IInjectGlobalEvent;

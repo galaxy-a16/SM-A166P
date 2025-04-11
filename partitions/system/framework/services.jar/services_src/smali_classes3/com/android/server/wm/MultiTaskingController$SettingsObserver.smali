@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$minitSettings(Lcom/android/server/wm/MultiTaskingController$SettingsObserver;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->initSettings()V
 
     return-void
@@ -40,22 +39,18 @@
 .method public constructor <init>(Lcom/android/server/wm/MultiTaskingController;Landroid/os/Handler;)V
     .locals 0
 
-    .line 488
     iput-object p1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
-    .line 489
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const-string p1, "dexonpc_connection_state"
 
-    .line 428
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mDexOnPC:Landroid/net/Uri;
 
-    .line 431
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -64,7 +59,6 @@
 
     const-string/jumbo p1, "navigation_bar_gesture_while_hidden"
 
-    .line 499
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -73,7 +67,6 @@
 
     const-string/jumbo p1, "navigation_bar_gesture_detail_type"
 
-    .line 501
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -82,7 +75,6 @@
 
     const-string/jumbo p1, "open_in_split_screen_view"
 
-    .line 517
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -91,21 +83,18 @@
 
     const-string p1, "edge_enable"
 
-    .line 521
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mEdgeUri:Landroid/net/Uri;
 
-    .line 529
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_SMART_POPUP_VIEW:Z
 
     if-eqz p1, :cond_0
 
     const-string p1, "floating_noti_package_list"
 
-    .line 530
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -114,7 +103,6 @@
 
     const-string/jumbo p1, "notification_bubbles"
 
-    .line 532
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -124,21 +112,18 @@
     :cond_0
     const-string p1, "freeform_corner_gesture_level"
 
-    .line 535
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mSwipeForPopUpViewCornerAreaUri:Landroid/net/Uri;
 
-    .line 538
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->MW_SHELL_FREEFORM_CAPTION_TYPE:Z
 
     if-eqz p1, :cond_1
 
     const-string p1, "freeform_caption_type"
 
-    .line 539
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -154,7 +139,6 @@
 .method public final initSettings()V
     .locals 5
 
-    .line 549
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
     invoke-static {v0}, Lcom/android/server/wm/MultiTaskingController;->-$$Nest$fgetmAtm(Lcom/android/server/wm/MultiTaskingController;)Lcom/android/server/wm/ActivityTaskManagerService;
@@ -167,54 +151,46 @@
 
     move-result-object v0
 
-    .line 560
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mNavigationBarGestureWhileHiddenUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 561
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mNavigationBarGesturesDetailTypeUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 567
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mSplitGestureUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 576
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mEdgeUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 582
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_SMART_POPUP_VIEW:Z
 
     if-eqz v1, :cond_0
 
-    .line 583
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mSmartPopupViewPackageListUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 584
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mNotificationBubbleUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 587
     :cond_0
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
@@ -222,19 +198,16 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 589
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->MW_SHELL_FREEFORM_CAPTION_TYPE:Z
 
     if-eqz v1, :cond_1
 
-    .line 590
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mFreeformCaptionTypeUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 595
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mUriList:Ljava/util/ArrayList;
 
@@ -259,7 +232,6 @@
 
     const/4 v4, -0x1
 
-    .line 596
     invoke-virtual {v0, v2, v3, p0, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     goto :goto_0
@@ -269,7 +241,6 @@
 
     const/4 v1, 0x1
 
-    .line 598
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->readSettings(Landroid/net/Uri;Z)V
 
     return-void
@@ -280,7 +251,6 @@
 
     if-nez p2, :cond_0
 
-    .line 604
     invoke-static {}, Lcom/android/server/wm/MultiTaskingController;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -294,7 +264,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 607
     invoke-virtual {p0, p2, p1}, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->readSettings(Landroid/net/Uri;Z)V
 
     return-void
@@ -303,7 +272,6 @@
 .method public readSettings(Landroid/net/Uri;Z)V
     .locals 6
 
-    .line 611
     iget-object v0, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
     invoke-static {v0}, Lcom/android/server/wm/MultiTaskingController;->-$$Nest$fgetmAtm(Lcom/android/server/wm/MultiTaskingController;)Lcom/android/server/wm/ActivityTaskManagerService;
@@ -322,7 +290,6 @@
 
     if-nez p2, :cond_0
 
-    .line 635
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mNavigationBarGestureWhileHiddenUri:Landroid/net/Uri;
 
     invoke-virtual {v3, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -331,7 +298,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 636
     :cond_0
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -356,7 +322,6 @@
     :cond_2
     if-nez p2, :cond_3
 
-    .line 639
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mNavigationBarGesturesDetailTypeUri:Landroid/net/Uri;
 
     invoke-virtual {v3, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -365,7 +330,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 640
     :cond_3
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -390,7 +354,6 @@
     :cond_5
     if-nez p2, :cond_6
 
-    .line 649
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mSplitGestureUri:Landroid/net/Uri;
 
     invoke-virtual {v3, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -399,7 +362,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 650
     :cond_6
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -434,7 +396,6 @@
     :cond_8
     if-nez p2, :cond_9
 
-    .line 666
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mEdgeUri:Landroid/net/Uri;
 
     invoke-virtual {v3, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -448,7 +409,6 @@
 
     const/4 v4, -0x2
 
-    .line 668
     invoke-static {v0, v3, v1, v4}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v3
@@ -460,7 +420,6 @@
     :cond_a
     move v2, v1
 
-    .line 670
     :goto_3
     iget-object v3, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -474,7 +433,6 @@
 
     monitor-enter v3
 
-    .line 671
     :try_start_0
     iget-object v4, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -490,14 +448,12 @@
 
     if-eqz v4, :cond_b
 
-    .line 673
     invoke-virtual {v4}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object v4
 
     invoke-virtual {v4, v2}, Lcom/android/server/wm/DisplayPolicy;->updateEdgeSettings(Z)V
 
-    .line 675
     :cond_b
     monitor-exit v3
     :try_end_0
@@ -505,13 +461,11 @@
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
-    .line 689
     :cond_c
     sget-boolean v2, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_SMART_POPUP_VIEW:Z
 
     if-eqz v2, :cond_e
 
-    .line 690
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
     invoke-static {v2}, Lcom/android/server/wm/MultiTaskingController;->-$$Nest$fgetmAtm(Lcom/android/server/wm/MultiTaskingController;)Lcom/android/server/wm/ActivityTaskManagerService;
@@ -536,14 +490,12 @@
 
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mNotificationBubbleUri:Landroid/net/Uri;
 
-    .line 691
     invoke-virtual {v2, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_e
 
-    .line 692
     :cond_d
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -557,7 +509,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wm/FreeformController;->scheduleUnbindSmartPopupViewService(Ljava/lang/String;)V
 
-    .line 693
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
     invoke-static {v2}, Lcom/android/server/wm/MultiTaskingController;->-$$Nest$fgetmAtm(Lcom/android/server/wm/MultiTaskingController;)Lcom/android/server/wm/ActivityTaskManagerService;
@@ -573,17 +524,14 @@
     :cond_e
     if-nez p2, :cond_f
 
-    .line 696
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mSwipeForPopUpViewCornerAreaUri:Landroid/net/Uri;
 
-    .line 697
     invoke-virtual {v2, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_10
 
-    .line 698
     :cond_f
     iget-object v2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -591,19 +539,16 @@
 
     const/4 v4, 0x2
 
-    .line 699
     invoke-static {v0, v3, v4}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 698
     invoke-static {v0}, Lcom/samsung/android/multiwindow/MultiWindowEdgeDetector;->getCornerGestureCustomValue(I)I
 
     move-result v0
 
     invoke-virtual {v2, v0}, Lcom/android/server/wm/MultiTaskingController;->setCornerGestureCustomValue(I)V
 
-    .line 702
     :cond_10
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_SHELL_FREEFORM_CAPTION_TYPE:Z
 
@@ -611,7 +556,6 @@
 
     if-nez p2, :cond_11
 
-    .line 703
     iget-object p2, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->mFreeformCaptionTypeUri:Landroid/net/Uri;
 
     invoke-virtual {p2, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -620,7 +564,6 @@
 
     if-eqz p1, :cond_12
 
-    .line 704
     :cond_11
     iget-object p1, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
@@ -640,7 +583,6 @@
 
     move-result p1
 
-    .line 706
     iget-object p0, p0, Lcom/android/server/wm/MultiTaskingController$SettingsObserver;->this$0:Lcom/android/server/wm/MultiTaskingController;
 
     invoke-static {p0}, Lcom/android/server/wm/MultiTaskingController;->-$$Nest$fgetmAtm(Lcom/android/server/wm/MultiTaskingController;)Lcom/android/server/wm/ActivityTaskManagerService;
@@ -657,7 +599,6 @@
     :catchall_0
     move-exception p0
 
-    .line 675
     :try_start_1
     monitor-exit v3
     :try_end_1
@@ -671,7 +612,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 720
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

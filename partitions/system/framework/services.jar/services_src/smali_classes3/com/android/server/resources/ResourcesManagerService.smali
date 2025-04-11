@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActivityManagerService(Lcom/android/server/resources/ResourcesManagerService;)Lcom/android/server/am/ActivityManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/resources/ResourcesManagerService;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     return-object p0
@@ -22,10 +21,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 53
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 62
     new-instance p1, Lcom/android/server/resources/ResourcesManagerService$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/resources/ResourcesManagerService$1;-><init>(Lcom/android/server/resources/ResourcesManagerService;)V
@@ -34,7 +31,6 @@
 
     const-string/jumbo v0, "resources"
 
-    .line 54
     invoke-virtual {p0, v0, p1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -45,7 +41,6 @@
 .method public onStart()V
     .locals 0
 
-    .line 59
     invoke-static {}, Landroid/content/res/ResourceTimer;->start()V
 
     return-void
@@ -54,7 +49,6 @@
 .method public setActivityManagerService(Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 101
     iput-object p1, p0, Lcom/android/server/resources/ResourcesManagerService;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     return-void

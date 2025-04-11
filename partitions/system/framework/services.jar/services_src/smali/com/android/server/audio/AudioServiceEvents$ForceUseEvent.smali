@@ -15,16 +15,12 @@
 .method public constructor <init>(IILjava/lang/String;)V
     .locals 0
 
-    .line 135
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 136
     iput p1, p0, Lcom/android/server/audio/AudioServiceEvents$ForceUseEvent;->mUsage:I
 
-    .line 137
     iput p2, p0, Lcom/android/server/audio/AudioServiceEvents$ForceUseEvent;->mConfig:I
 
-    .line 138
     iput-object p3, p0, Lcom/android/server/audio/AudioServiceEvents$ForceUseEvent;->mReason:Ljava/lang/String;
 
     return-void
@@ -35,7 +31,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 143
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "setForceUse("
@@ -44,7 +39,6 @@
 
     iget v1, p0, Lcom/android/server/audio/AudioServiceEvents$ForceUseEvent;->mUsage:I
 
-    .line 144
     invoke-static {v1}, Landroid/media/AudioSystem;->forceUseUsageToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -53,7 +47,6 @@
 
     const-string v1, ", "
 
-    .line 145
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/audio/AudioServiceEvents$ForceUseEvent;->mConfig:I
@@ -66,7 +59,6 @@
 
     const-string v1, ") due to "
 
-    .line 146
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/android/server/audio/AudioServiceEvents$ForceUseEvent;->mReason:Ljava/lang/String;

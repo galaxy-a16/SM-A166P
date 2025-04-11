@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/ComponentName;
 
     invoke-static {p1}, Lcom/android/server/backup/transport/TransportConnectionManager;->$r8$lambda$L5nD_60PEhxIdzeW4lU6im8fA18(Landroid/content/ComponentName;)Landroid/content/Intent;

@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPanningScalingHandler(Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;)Lcom/android/server/accessibility/magnification/PanningScalingHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->mPanningScalingHandler:Lcom/android/server/accessibility/magnification/PanningScalingHandler;
 
     return-object p0
@@ -25,12 +24,10 @@
 .method public constructor <init>(Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;Lcom/android/server/accessibility/magnification/PanningScalingHandler;)V
     .locals 0
 
-    .line 356
     iput-object p1, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 357
     iput-object p2, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->mPanningScalingHandler:Lcom/android/server/accessibility/magnification/PanningScalingHandler;
 
     return-void
@@ -41,7 +38,6 @@
 .method public clear()V
     .locals 0
 
-    .line 382
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->mPanningScalingHandler:Lcom/android/server/accessibility/magnification/PanningScalingHandler;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/PanningScalingHandler;->clear()V
@@ -52,7 +48,6 @@
 .method public onEnter()V
     .locals 1
 
-    .line 362
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->mPanningScalingHandler:Lcom/android/server/accessibility/magnification/PanningScalingHandler;
 
     const/4 v0, 0x1
@@ -65,14 +60,12 @@
 .method public onExit()V
     .locals 2
 
-    .line 367
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->mPanningScalingHandler:Lcom/android/server/accessibility/magnification/PanningScalingHandler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/server/accessibility/magnification/PanningScalingHandler;->setEnabled(Z)V
 
-    .line 368
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;->-$$Nest$fgetmWindowMagnificationMgr(Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;)Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
@@ -85,7 +78,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->persistScale(I)V
 
-    .line 369
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->clear()V
 
     return-void
@@ -94,7 +86,6 @@
 .method public onMotionEvent(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 374
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result p1
@@ -107,7 +98,6 @@
 
     if-ne p1, p2, :cond_1
 
-    .line 376
     :cond_0
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler$PanningScalingGestureState;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationGestureHandler;
 
@@ -122,7 +112,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 387
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

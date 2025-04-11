@@ -20,7 +20,6 @@
 .method public final getAsBoolean()Z
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/policy/DeviceStateProviderImpl;->$r8$lambda$Ufigq7BdGNXDG80GLpR5V75c-9s()Z
 
     move-result p0

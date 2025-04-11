@@ -31,7 +31,6 @@
 .method public static userAssignmentResultToString(I)Ljava/lang/String;
     .locals 2
 
-    .line 572
     const-class v0, Lcom/android/server/pm/UserManagerInternal;
 
     const-string v1, "USER_ASSIGNMENT_RESULT_"
@@ -46,7 +45,6 @@
 .method public static userStartModeToString(I)Ljava/lang/String;
     .locals 2
 
-    .line 580
     const-class v0, Lcom/android/server/pm/UserManagerInternal;
 
     const-string v1, "USER_START_MODE_"

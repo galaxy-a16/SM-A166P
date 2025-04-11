@@ -16,13 +16,11 @@
 
     move v1, v0
 
-    .line 98
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_2
 
-    .line 99
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,7 +51,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 101
     aget-object v2, p0, v1
 
     iget-object v2, v2, Landroid/hardware/power/stats/PowerEntity;->states:[Landroid/hardware/power/stats/State;
@@ -62,7 +59,6 @@
 
     move v2, v0
 
-    .line 102
     :goto_1
     aget-object v3, p0, v1
 
@@ -72,7 +68,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 103
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,15 +122,12 @@
 .method public static getProtoBytes([Landroid/hardware/power/stats/PowerEntity;)[B
     .locals 1
 
-    .line 53
     new-instance v0, Landroid/util/proto/ProtoOutputStream;
 
     invoke-direct {v0}, Landroid/util/proto/ProtoOutputStream;-><init>()V
 
-    .line 54
     invoke-static {p0, v0}, Lcom/android/server/powerstats/ProtoStreamUtils$PowerEntityUtils;->packProtoMessage([Landroid/hardware/power/stats/PowerEntity;Landroid/util/proto/ProtoOutputStream;)V
 
-    .line 55
     invoke-virtual {v0}, Landroid/util/proto/ProtoOutputStream;->getBytes()[B
 
     move-result-object p0
@@ -155,7 +147,6 @@
 
     move v1, v0
 
-    .line 62
     :goto_0
     array-length v2, p0
 
@@ -163,12 +154,10 @@
 
     const-wide v2, 0x20b00000001L
 
-    .line 63
     invoke-virtual {p1, v2, v3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v2
 
-    .line 64
     aget-object v4, p0, v1
 
     iget v4, v4, Landroid/hardware/power/stats/PowerEntity;->id:I
@@ -177,7 +166,6 @@
 
     invoke-virtual {p1, v5, v6, v4}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
-    .line 65
     aget-object v4, p0, v1
 
     iget-object v4, v4, Landroid/hardware/power/stats/PowerEntity;->name:Ljava/lang/String;
@@ -186,14 +174,12 @@
 
     invoke-virtual {p1, v7, v8, v4}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 66
     aget-object v4, p0, v1
 
     iget-object v4, v4, Landroid/hardware/power/stats/PowerEntity;->states:[Landroid/hardware/power/stats/State;
 
     if-eqz v4, :cond_1
 
-    .line 67
     array-length v4, v4
 
     move v9, v0
@@ -201,7 +187,6 @@
     :goto_1
     if-ge v9, v4, :cond_1
 
-    .line 69
     aget-object v10, p0, v1
 
     iget-object v10, v10, Landroid/hardware/power/stats/PowerEntity;->states:[Landroid/hardware/power/stats/State;
@@ -210,29 +195,24 @@
 
     const-wide v11, 0x20b00000003L
 
-    .line 70
     invoke-virtual {p1, v11, v12}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v11
 
-    .line 71
     iget v13, v10, Landroid/hardware/power/stats/State;->id:I
 
     invoke-virtual {p1, v5, v6, v13}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
-    .line 72
     iget-object v10, v10, Landroid/hardware/power/stats/State;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v7, v8, v10}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 73
     invoke-virtual {p1, v11, v12}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 76
     :cond_1
     invoke-virtual {p1, v2, v3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 

@@ -23,7 +23,6 @@
 .method public static synthetic $values()[Lcom/android/server/wm/DeviceStateController$DeviceState;
     .locals 6
 
-    .line 67
     sget-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->UNKNOWN:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     sget-object v1, Lcom/android/server/wm/DeviceStateController$DeviceState;->OPEN:Lcom/android/server/wm/DeviceStateController$DeviceState;
@@ -46,7 +45,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 68
     new-instance v0, Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     const-string v1, "UNKNOWN"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->UNKNOWN:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
-    .line 69
     new-instance v0, Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     const-string v1, "OPEN"
@@ -68,7 +65,6 @@
 
     sput-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->OPEN:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
-    .line 70
     new-instance v0, Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     const-string v1, "FOLDED"
@@ -79,7 +75,6 @@
 
     sput-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->FOLDED:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
-    .line 71
     new-instance v0, Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     const-string v1, "HALF_FOLDED"
@@ -90,7 +85,6 @@
 
     sput-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->HALF_FOLDED:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
-    .line 72
     new-instance v0, Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     const-string v1, "REAR"
@@ -101,7 +95,6 @@
 
     sput-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->REAR:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
-    .line 73
     new-instance v0, Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     const-string v1, "CONCURRENT"
@@ -112,7 +105,6 @@
 
     sput-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->CONCURRENT:Lcom/android/server/wm/DeviceStateController$DeviceState;
 
-    .line 67
     invoke-static {}, Lcom/android/server/wm/DeviceStateController$DeviceState;->$values()[Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     move-result-object v0
@@ -125,7 +117,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 67
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -134,7 +125,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/wm/DeviceStateController$DeviceState;
     .locals 1
 
-    .line 67
     const-class v0, Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -149,7 +139,6 @@
 .method public static values()[Lcom/android/server/wm/DeviceStateController$DeviceState;
     .locals 1
 
-    .line 67
     sget-object v0, Lcom/android/server/wm/DeviceStateController$DeviceState;->$VALUES:[Lcom/android/server/wm/DeviceStateController$DeviceState;
 
     invoke-virtual {v0}, [Lcom/android/server/wm/DeviceStateController$DeviceState;->clone()Ljava/lang/Object;

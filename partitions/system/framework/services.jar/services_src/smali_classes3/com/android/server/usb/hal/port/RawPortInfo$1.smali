@@ -20,27 +20,22 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/android/server/usb/hal/port/RawPortInfo;
     .locals 25
 
-    .line 170
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 171
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 172
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 173
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 174
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -58,13 +53,11 @@
     :cond_0
     move v7, v5
 
-    .line 175
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 176
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -78,13 +71,11 @@
     :cond_1
     move v9, v5
 
-    .line 177
     :goto_1
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 178
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -98,58 +89,47 @@
     :cond_2
     move v11, v5
 
-    .line 179
     :goto_2
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result v12
 
-    .line 180
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
 
-    .line 181
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result v14
 
-    .line 182
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v15
 
-    .line 183
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v16
 
-    .line 184
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result v17
 
-    .line 185
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v18
 
-    .line 186
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result v19
 
-    .line 187
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v20
 
-    .line 188
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v21
 
-    .line 189
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v22
@@ -158,7 +138,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 191
     sget-object v0, Landroid/hardware/usb/DisplayPortAltModeInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v5, p1
@@ -177,7 +156,6 @@
     :goto_3
     move-object/from16 v23, v0
 
-    .line 195
     new-instance v24, Lcom/android/server/usb/hal/port/RawPortInfo;
 
     move-object/from16 v0, v24
@@ -224,7 +202,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 165
     invoke-virtual {p0, p1}, Lcom/android/server/usb/hal/port/RawPortInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/server/usb/hal/port/RawPortInfo;
 
     move-result-object p0
@@ -235,7 +212,6 @@
 .method public newArray(I)[Lcom/android/server/usb/hal/port/RawPortInfo;
     .locals 0
 
-    .line 210
     new-array p0, p1, [Lcom/android/server/usb/hal/port/RawPortInfo;
 
     return-object p0
@@ -244,7 +220,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 165
     invoke-virtual {p0, p1}, Lcom/android/server/usb/hal/port/RawPortInfo$1;->newArray(I)[Lcom/android/server/usb/hal/port/RawPortInfo;
 
     move-result-object p0

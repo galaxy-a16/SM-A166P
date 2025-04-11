@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/AppRestrictionController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppRestrictionController$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/AppRestrictionController;
@@ -27,7 +26,6 @@
 .method public final onRoleHoldersChanged(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/AppRestrictionController;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/am/AppRestrictionController;->$r8$lambda$EwFIU5om1lhpakIdAy6SunKdsh8(Lcom/android/server/am/AppRestrictionController;Ljava/lang/String;Landroid/os/UserHandle;)V

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/ComponentName;
 
     invoke-static {p1}, Lcom/android/server/pm/ShortcutPackage;->$r8$lambda$6DoG_6MlAxefEfMKdDvPoBN471c(Landroid/content/ComponentName;)Ljava/util/ArrayList;

@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    .line 1638
     invoke-direct {p0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 1639
     iput-object p1, p0, Lcom/android/server/pm/ShortcutService$FileOutputStreamWithPath;->mFile:Ljava/io/File;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getFile()Ljava/io/File;
     .locals 0
 
-    .line 1643
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$FileOutputStreamWithPath;->mFile:Ljava/io/File;
 
     return-object p0

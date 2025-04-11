@@ -20,7 +20,6 @@
 .method public final visit(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/contentcapture/ContentCapturePerUserService;
 
     invoke-static {p1}, Lcom/android/server/contentcapture/ContentCaptureManagerService;->$r8$lambda$VqglsIyEwsKUp0orkRVmJSRKCxQ(Lcom/android/server/contentcapture/ContentCapturePerUserService;)V

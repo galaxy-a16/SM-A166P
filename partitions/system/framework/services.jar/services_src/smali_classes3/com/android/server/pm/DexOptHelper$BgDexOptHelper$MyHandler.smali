@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1526
     iput-object p1, p0, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper$MyHandler;->this$0:Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;
 
-    .line 1527
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 1532
     iget-object p1, p0, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper$MyHandler;->this$0:Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;
 
     invoke-static {p1}, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;->-$$Nest$mreachedToThermalThrottleLevel(Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;)Z
@@ -42,22 +39,18 @@
 
     const-string v0, "Canceling bg dexopt by thermal throttling"
 
-    .line 1533
     invoke-static {p1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
 
-    .line 1534
     iget-object p1, p0, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper$MyHandler;->this$0:Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;
 
     invoke-static {p1}, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;->-$$Nest$mcancelBackgroundDexoptJob(Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;)V
 
-    .line 1535
     iget-object p0, p0, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper$MyHandler;->this$0:Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;
 
     invoke-virtual {p0}, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;->stopObserveThermal()V
 
     return-void
 
-    .line 1539
     :cond_0
     iget-object p1, p0, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper$MyHandler;->this$0:Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;
 
@@ -67,7 +60,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1540
     iget-object p0, p0, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper$MyHandler;->this$0:Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;
 
     invoke-static {p0}, Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;->-$$Nest$mscheduleObserveThermal(Lcom/android/server/pm/DexOptHelper$BgDexOptHelper;)V

@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$mLockInfo_Logging(Lcom/android/server/wm/SluggishDetector$LockContentionInfo;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->LockInfo_Logging()V
 
     return-void
@@ -36,7 +35,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1173
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,7 +65,6 @@
 
     const-wide/16 v0, -0x1
 
-    .line 1174
     sput-wide v0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->prevTime:J
 
     return-void
@@ -76,26 +73,22 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 1183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "/"
 
-    .line 1184
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 1185
     aget-object v0, p1, v0
 
     iput-object v0, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->mThreadName:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 1186
     aget-object v0, p1, v0
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -106,14 +99,12 @@
 
     const/4 v0, 0x2
 
-    .line 1187
     aget-object v0, p1, v0
 
     iput-object v0, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->mOwnerFileName:Ljava/lang/String;
 
     const/4 v0, 0x3
 
-    .line 1188
     aget-object v0, p1, v0
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -124,14 +115,12 @@
 
     const/4 v0, 0x4
 
-    .line 1189
     aget-object p1, p1, v0
 
     iput-object p1, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->mOwnerMethod:Ljava/lang/String;
 
     const/4 p1, -0x1
 
-    .line 1190
     iput p1, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->LcdOnValue:I
 
     return-void
@@ -142,19 +131,16 @@
 .method public final LockInfo_Logging()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public checkTime()Z
     .locals 6
 
-    .line 1194
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 1195
     sget-wide v2, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->prevTime:J
 
     const-wide/16 v4, -0x1
@@ -167,7 +153,6 @@
 
     const-wide/16 v4, 0x3e8
 
-    .line 1196
     div-long/2addr v2, v4
 
     const-wide/16 v4, 0x5
@@ -180,7 +165,6 @@
 
     return p0
 
-    .line 1202
     :cond_0
     sput-wide v0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->prevTime:J
 
@@ -192,14 +176,12 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1218
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "\"SDVR\":\""
 
-    .line 1221
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "1.2.0"
@@ -212,7 +194,6 @@
 
     const-string v2, ",\"THNM\":\""
 
-    .line 1224
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->mThreadName:Ljava/lang/String;
@@ -223,7 +204,6 @@
 
     const-string v2, ",\"OMTD\":\""
 
-    .line 1227
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->mOwnerMethod:Ljava/lang/String;
@@ -234,7 +214,6 @@
 
     const-string v2, ",\"OFNM\":\""
 
-    .line 1230
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->mOwnerFileName:Ljava/lang/String;
@@ -245,7 +224,6 @@
 
     const-string v2, ",\"OFLN\":\""
 
-    .line 1233
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v2, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->mOwnerFileLine:I
@@ -256,7 +234,6 @@
 
     const-string v2, ",\"WTTM\":\""
 
-    .line 1236
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v2, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->mWaitTime:I
@@ -267,7 +244,6 @@
 
     const-string v2, ",\"LCDV\":\""
 
-    .line 1239
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p0, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->LcdOnValue:I
@@ -276,7 +252,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1241
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -287,7 +262,6 @@
 .method public updateLCD()V
     .locals 2
 
-    .line 1209
     invoke-static {}, Lcom/android/server/wm/SluggishDetector;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object v0
@@ -302,7 +276,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1211
     invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
 
     move-result v0
@@ -312,7 +285,6 @@
     :cond_0
     const/16 v0, -0x63
 
-    .line 1213
     :goto_0
     iput v0, p0, Lcom/android/server/wm/SluggishDetector$LockContentionInfo;->LcdOnValue:I
 

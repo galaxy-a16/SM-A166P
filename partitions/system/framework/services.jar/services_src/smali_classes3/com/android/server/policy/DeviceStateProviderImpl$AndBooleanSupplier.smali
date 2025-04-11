@@ -14,10 +14,8 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .line 706
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 707
     iput-object p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl$AndBooleanSupplier;->mBooleanSuppliers:Ljava/util/List;
 
     return-void
@@ -32,7 +30,6 @@
 
     move v1, v0
 
-    .line 712
     :goto_0
     iget-object v2, p0, Lcom/android/server/policy/DeviceStateProviderImpl$AndBooleanSupplier;->mBooleanSuppliers:Ljava/util/List;
 
@@ -42,7 +39,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 713
     iget-object v2, p0, Lcom/android/server/policy/DeviceStateProviderImpl$AndBooleanSupplier;->mBooleanSuppliers:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;

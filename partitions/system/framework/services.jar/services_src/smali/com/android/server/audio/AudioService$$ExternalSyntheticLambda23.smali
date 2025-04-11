@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/audio/AudioService$AudioPolicyProxy;
 
     invoke-static {p1}, Lcom/android/server/audio/AudioService;->$r8$lambda$hedye8sxCRi2b20hKIHQYuW9NQ4(Lcom/android/server/audio/AudioService$AudioPolicyProxy;)V

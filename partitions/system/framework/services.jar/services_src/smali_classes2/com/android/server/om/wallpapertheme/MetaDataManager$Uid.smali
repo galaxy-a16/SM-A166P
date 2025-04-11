@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDestAttribName(Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mDestAttribName:Ljava/lang/String;
 
     return-object p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmOpacity(Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mOpacity:Ljava/lang/String;
 
     return-object p0
@@ -41,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmType(Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mType:I
 
     return p0
@@ -50,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUidValue(Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mUidValue:Ljava/lang/String;
 
     return-object p0
@@ -59,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmValueRef(Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mValueRef:Ljava/lang/String;
 
     return-object p0
@@ -68,24 +63,18 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 311
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 312
     iput-object p1, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mUidValue:Ljava/lang/String;
 
-    .line 313
     iput-object p3, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mDestAttribName:Ljava/lang/String;
 
-    .line 314
     iput-object p5, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mValueRef:Ljava/lang/String;
 
-    .line 315
     iput-object p6, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mPOption:Ljava/lang/String;
 
     if-eqz p7, :cond_0
 
-    .line 316
     invoke-virtual {p7}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
@@ -98,10 +87,8 @@
     :cond_1
     iput-object p7, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mOpacity:Ljava/lang/String;
 
-    .line 317
     iput-object p4, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mDefaultValue:Ljava/lang/String;
 
-    .line 318
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
@@ -237,30 +224,25 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 335
     iput p7, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mType:I
 
     goto :goto_1
 
-    .line 332
     :pswitch_0
     iput p3, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mType:I
 
     goto :goto_1
 
-    .line 329
     :pswitch_1
     iput p4, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mType:I
 
     goto :goto_1
 
-    .line 326
     :pswitch_2
     iput p5, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mType:I
 
     goto :goto_1
 
-    .line 323
     :pswitch_3
     iput p6, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mType:I
 
@@ -297,7 +279,6 @@
 .method public getDestAttribName()Ljava/lang/String;
     .locals 0
 
-    .line 351
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mDestAttribName:Ljava/lang/String;
 
     return-object p0
@@ -306,7 +287,6 @@
 .method public getOpacity()Ljava/lang/String;
     .locals 0
 
-    .line 341
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mOpacity:Ljava/lang/String;
 
     return-object p0
@@ -315,7 +295,6 @@
 .method public getReference()Ljava/lang/String;
     .locals 0
 
-    .line 355
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mValueRef:Ljava/lang/String;
 
     return-object p0
@@ -324,7 +303,6 @@
 .method public getType()I
     .locals 0
 
-    .line 348
     iget p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mType:I
 
     return p0
@@ -333,7 +311,6 @@
 .method public getUidValue()Ljava/lang/String;
     .locals 0
 
-    .line 345
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/MetaDataManager$Uid;->mUidValue:Ljava/lang/String;
 
     return-object p0

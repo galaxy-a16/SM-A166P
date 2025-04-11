@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Landroid/net/networkstack/ModuleNetworkStackClient;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -22,14 +21,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Landroid/net/networkstack/NetworkStackClientBase;-><init>()V
 
     return-void
@@ -42,23 +39,19 @@
 
     monitor-enter p0
 
-    .line 53
     :try_start_0
     sget-object v0, Landroid/net/networkstack/ModuleNetworkStackClient;->sInstance:Landroid/net/networkstack/ModuleNetworkStackClient;
 
     if-nez v0, :cond_0
 
-    .line 54
     new-instance v0, Landroid/net/networkstack/ModuleNetworkStackClient;
 
     invoke-direct {v0}, Landroid/net/networkstack/ModuleNetworkStackClient;-><init>()V
 
     sput-object v0, Landroid/net/networkstack/ModuleNetworkStackClient;->sInstance:Landroid/net/networkstack/ModuleNetworkStackClient;
 
-    .line 55
     invoke-direct {v0}, Landroid/net/networkstack/ModuleNetworkStackClient;->startPolling()V
 
-    .line 57
     :cond_0
     sget-object v0, Landroid/net/networkstack/ModuleNetworkStackClient;->sInstance:Landroid/net/networkstack/ModuleNetworkStackClient;
     :try_end_0
@@ -85,13 +78,11 @@
 
     const/4 v1, 0x0
 
-    .line 62
     :try_start_0
     sput-object v1, Landroid/net/networkstack/ModuleNetworkStackClient;->sInstance:Landroid/net/networkstack/ModuleNetworkStackClient;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
     monitor-exit v0
 
     return-void
@@ -107,14 +98,12 @@
 .method private startPolling()V
     .locals 3
 
-    .line 68
     invoke-static {}, Landroid/net/NetworkStack;->getService()Landroid/os/IBinder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 73
     invoke-static {v0}, Landroid/net/INetworkStackConnector$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/INetworkStackConnector;
 
     move-result-object v0
@@ -123,7 +112,6 @@
 
     return-void
 
-    .line 76
     :cond_0
     new-instance v0, Ljava/lang/Thread;
 

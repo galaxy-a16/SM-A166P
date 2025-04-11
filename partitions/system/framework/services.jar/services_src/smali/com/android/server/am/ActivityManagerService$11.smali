@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 6158
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$11;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZI)V
     .locals 0
 
-    .line 6163
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerService$11;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p1, p1, Lcom/android/server/am/ActivityManagerService;->mProcLock:Lcom/android/server/am/ActivityManagerGlobalLock;
@@ -33,13 +31,11 @@
 
     monitor-enter p1
 
-    .line 6164
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$11;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService;->mAppProfiler:Lcom/android/server/am/AppProfiler;
 
-    .line 6165
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p2
@@ -48,10 +44,8 @@
 
     const/4 p5, 0x0
 
-    .line 6164
     invoke-virtual {p0, p2, p3, p4, p5}, Lcom/android/server/am/AppProfiler;->requestPssAllProcsLPr(JZZ)V
 
-    .line 6166
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/ConnectivityController;)V
     .locals 0
 
-    .line 1499
     iput-object p1, p0, Lcom/android/server/job/controllers/ConnectivityController$3;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     invoke-direct {p0}, Landroid/net/NetworkPolicyManager$Listener;-><init>()V
@@ -24,14 +23,12 @@
 .method public onRestrictBackgroundChanged(Z)V
     .locals 2
 
-    .line 1502
     invoke-static {}, Lcom/android/server/job/controllers/ConnectivityController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1503
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +47,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1505
     :cond_0
     iget-object p0, p0, Lcom/android/server/job/controllers/ConnectivityController$3;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
@@ -72,14 +68,12 @@
 .method public onUidPoliciesChanged(II)V
     .locals 1
 
-    .line 1510
     invoke-static {}, Lcom/android/server/job/controllers/ConnectivityController;->-$$Nest$sfgetDEBUG()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 1511
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,7 +92,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1513
     :cond_0
     iget-object p2, p0, Lcom/android/server/job/controllers/ConnectivityController$3;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
@@ -112,19 +105,16 @@
 
     move-result-object p0
 
-    .line 1514
     invoke-virtual {p0, p1}, Landroid/net/NetworkPolicyManager;->getRestrictBackgroundStatus(I)I
 
     move-result p0
 
     const/4 v0, 0x3
 
-    .line 1513
     invoke-virtual {p2, v0, p1, p0}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 1515
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

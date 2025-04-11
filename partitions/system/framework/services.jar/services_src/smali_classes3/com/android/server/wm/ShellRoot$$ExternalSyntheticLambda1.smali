@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/ShellRoot;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/ShellRoot$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/wm/ShellRoot;
@@ -27,7 +26,6 @@
 .method public final binderDied()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ShellRoot$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/wm/ShellRoot;
 
     invoke-static {p0}, Lcom/android/server/wm/ShellRoot;->$r8$lambda$BZcZ_PQXv8yD4VnGFmigpNgMg6A(Lcom/android/server/wm/ShellRoot;)V

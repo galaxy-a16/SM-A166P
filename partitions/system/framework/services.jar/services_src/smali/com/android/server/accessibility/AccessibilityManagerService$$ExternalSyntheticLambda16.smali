@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/ComponentName;
 
     invoke-static {p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->$r8$lambda$FLRT9oX02fNsMafR5snB3QPRpp4(Landroid/content/ComponentName;)Ljava/lang/String;

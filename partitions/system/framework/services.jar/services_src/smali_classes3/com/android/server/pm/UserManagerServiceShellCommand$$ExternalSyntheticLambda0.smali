@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/pm/UserManagerServiceShellCommand;->$r8$lambda$dUQEqUh7JN9FbS4WkI_JvBecK5A()V
 
     return-void

@@ -17,7 +17,6 @@
 .method public static synthetic $values()[Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
     .locals 3
 
-    .line 137
     sget-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;->SOFTWARE:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
     sget-object v1, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;->TRUSTED_ENVIRONMENT:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
@@ -34,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 138
     new-instance v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
     const-string v1, "SOFTWARE"
@@ -45,7 +43,6 @@
 
     sput-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;->SOFTWARE:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
-    .line 139
     new-instance v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
     const-string v1, "TRUSTED_ENVIRONMENT"
@@ -56,7 +53,6 @@
 
     sput-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;->TRUSTED_ENVIRONMENT:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
-    .line 140
     new-instance v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
     const-string v1, "STRONG_BOX"
@@ -67,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;->STRONG_BOX:Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
-    .line 137
     invoke-static {}, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;->$values()[Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
     move-result-object v0
@@ -80,7 +75,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 137
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -89,7 +83,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
     .locals 1
 
-    .line 137
     const-class v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -104,7 +97,6 @@
 .method public static values()[Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
     .locals 1
 
-    .line 137
     sget-object v0, Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;->$VALUES:[Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;
 
     invoke-virtual {v0}, [Lcom/android/server/security/AndroidKeystoreAttestationVerificationAttributes$SecurityLevel;->clone()Ljava/lang/Object;

@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/compat/PlatformCompat;->$r8$lambda$La7tS0VF-8cvQsA8oEXqB-0faSQ(I)[Lcom/android/internal/compat/CompatibilityChangeInfo;
 
     move-result-object p0

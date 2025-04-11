@@ -13,15 +13,12 @@
 .method public constructor <init>(Lcom/android/server/pm/DynamicCodeLoggingService;Landroid/app/job/JobParameters;)V
     .locals 0
 
-    .line 169
     iput-object p1, p0, Lcom/android/server/pm/DynamicCodeLoggingService$IdleLoggingThread;->this$0:Lcom/android/server/pm/DynamicCodeLoggingService;
 
     const-string p1, "DynamicCodeLoggingService_IdleLoggingJob"
 
-    .line 170
     invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 171
     iput-object p2, p0, Lcom/android/server/pm/DynamicCodeLoggingService$IdleLoggingThread;->mParams:Landroid/app/job/JobParameters;
 
     return-void
@@ -32,15 +29,12 @@
 .method public run()V
     .locals 4
 
-    .line 180
     invoke-static {}, Lcom/android/server/pm/DynamicCodeLoggingService;->-$$Nest$smgetDynamicCodeLogger()Lcom/android/server/pm/dex/DynamicCodeLogger;
 
     move-result-object v0
 
-    .line 181
     invoke-static {v0}, Lcom/android/server/pm/DynamicCodeLoggingService;->-$$Nest$smsyncDataFromArtService(Lcom/android/server/pm/dex/DynamicCodeLogger;)V
 
-    .line 182
     invoke-virtual {v0}, Lcom/android/server/pm/dex/DynamicCodeLogger;->getAllPackagesWithDynamicCodeLoading()Ljava/util/Set;
 
     move-result-object v1
@@ -62,7 +56,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 183
     iget-object v3, p0, Lcom/android/server/pm/DynamicCodeLoggingService$IdleLoggingThread;->this$0:Lcom/android/server/pm/DynamicCodeLoggingService;
 
     invoke-static {v3}, Lcom/android/server/pm/DynamicCodeLoggingService;->-$$Nest$fgetmIdleLoggingStopRequested(Lcom/android/server/pm/DynamicCodeLoggingService;)Z
@@ -71,7 +64,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 184
     invoke-static {}, Lcom/android/server/pm/DynamicCodeLoggingService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -82,13 +74,11 @@
 
     return-void
 
-    .line 188
     :cond_0
     invoke-virtual {v0, v2}, Lcom/android/server/pm/dex/DynamicCodeLogger;->logDynamicCodeLoading(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 191
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/DynamicCodeLoggingService$IdleLoggingThread;->this$0:Lcom/android/server/pm/DynamicCodeLoggingService;
 

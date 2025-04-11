@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;)V
     .locals 0
 
-    .line 3222
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$4;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 5
 
-    .line 3228
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -39,7 +37,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3237
     iget-object v1, p0, Lcom/android/server/pm/UserManagerService$4;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {v1}, Lcom/android/server/pm/UserManagerService;->-$$Nest$fgetmRestrictionsLock(Lcom/android/server/pm/UserManagerService;)Ljava/lang/Object;
@@ -50,14 +47,12 @@
 
     const/4 v2, 0x0
 
-    .line 3238
     :goto_0
     :try_start_1
     array-length v3, v0
 
     if-ge v2, v3, :cond_0
 
-    .line 3239
     iget-object v3, p0, Lcom/android/server/pm/UserManagerService$4;->this$0:Lcom/android/server/pm/UserManagerService;
 
     aget v4, v0, v2
@@ -68,7 +63,6 @@
 
     goto :goto_0
 
-    .line 3241
     :cond_0
     monitor-exit v1
 
@@ -88,7 +82,6 @@
 
     const-string v0, "Unable to access ActivityManagerService"
 
-    .line 3230
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

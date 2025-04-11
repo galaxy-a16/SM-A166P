@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 354
     invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
 
     return-void
@@ -25,10 +24,8 @@
 
     const-string p0, "PhysicalChannelConfigChanged"
 
-    .line 359
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->-$$Nest$smlog(Ljava/lang/String;)V
 
-    .line 360
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->-$$Nest$smbandFromCP()Ljava/lang/String;
 
     move-result-object p0

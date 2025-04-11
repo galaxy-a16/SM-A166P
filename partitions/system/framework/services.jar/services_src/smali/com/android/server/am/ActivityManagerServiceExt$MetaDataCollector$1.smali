@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;)V
     .locals 0
 
-    .line 497
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector$1;->this$1:Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public run()V
     .locals 2
 
-    .line 501
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector$1;->this$1:Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;
 
     monitor-enter v0
 
-    .line 502
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector$1;->this$1:Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;
 
@@ -40,12 +37,10 @@
 
     move-result v1
 
-    .line 503
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 504
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector$1;->this$1:Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
@@ -58,12 +53,10 @@
 
     if-nez v1, :cond_0
 
-    .line 505
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector$1;->this$1:Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;
 
     invoke-static {v0}, Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;->-$$Nest$mloadInternal(Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;)V
 
-    .line 507
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector$1;->this$1:Lcom/android/server/am/ActivityManagerServiceExt$MetaDataCollector;
 
@@ -74,7 +67,6 @@
     :catchall_0
     move-exception p0
 
-    .line 503
     :try_start_1
     monitor-exit v0
     :try_end_1

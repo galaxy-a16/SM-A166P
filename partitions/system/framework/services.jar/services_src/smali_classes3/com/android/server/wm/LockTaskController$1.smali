@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$T7sQuFVI7TKnFaoqWEHyL2LxfLA(Lcom/android/server/wm/LockTaskController$1;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/LockTaskController$1;->lambda$onDismissSucceeded$0(I)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/wm/LockTaskController;I)V
     .locals 0
 
-    .line 1025
     iput-object p1, p0, Lcom/android/server/wm/LockTaskController$1;->this$0:Lcom/android/server/wm/LockTaskController;
 
     iput p2, p0, Lcom/android/server/wm/LockTaskController$1;->val$userId:I
@@ -35,7 +33,6 @@
 .method private synthetic lambda$onDismissSucceeded$0(I)V
     .locals 3
 
-    .line 1035
     iget-object v0, p0, Lcom/android/server/wm/LockTaskController$1;->this$0:Lcom/android/server/wm/LockTaskController;
 
     invoke-static {v0}, Lcom/android/server/wm/LockTaskController;->-$$Nest$fgetmPendingDisableFromDismiss(Lcom/android/server/wm/LockTaskController;)I
@@ -44,7 +41,6 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1036
     iget-object v0, p0, Lcom/android/server/wm/LockTaskController$1;->this$0:Lcom/android/server/wm/LockTaskController;
 
     iget-object v1, v0, Lcom/android/server/wm/LockTaskController;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -57,7 +53,6 @@
 
     invoke-virtual {v1, v0, v2, p1}, Lcom/android/server/wm/WindowManagerService;->disableKeyguard(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 1038
     iget-object p0, p0, Lcom/android/server/wm/LockTaskController$1;->this$0:Lcom/android/server/wm/LockTaskController;
 
     const/16 p1, -0x2710
@@ -77,7 +72,6 @@
 
     const-string/jumbo v0, "setKeyguardState: dismiss cancelled"
 
-    .line 1045
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -90,7 +84,6 @@
 
     const-string/jumbo v0, "setKeyguardState: failed to dismiss keyguard"
 
-    .line 1028
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -99,7 +92,6 @@
 .method public onDismissSucceeded()V
     .locals 3
 
-    .line 1033
     iget-object v0, p0, Lcom/android/server/wm/LockTaskController$1;->this$0:Lcom/android/server/wm/LockTaskController;
 
     invoke-static {v0}, Lcom/android/server/wm/LockTaskController;->-$$Nest$fgetmHandler(Lcom/android/server/wm/LockTaskController;)Landroid/os/Handler;

@@ -25,7 +25,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/KillPolicyManager$KpmState;
     .locals 5
 
-    .line 1868
     sget-object v0, Lcom/android/server/am/KillPolicyManager$KpmState;->NONE:Lcom/android/server/am/KillPolicyManager$KpmState;
 
     sget-object v1, Lcom/android/server/am/KillPolicyManager$KpmState;->LIGHT:Lcom/android/server/am/KillPolicyManager$KpmState;
@@ -46,7 +45,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 1869
     new-instance v0, Lcom/android/server/am/KillPolicyManager$KpmState;
 
     const/4 v1, 0x0
@@ -59,7 +57,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$KpmState;->NONE:Lcom/android/server/am/KillPolicyManager$KpmState;
 
-    .line 1870
     new-instance v0, Lcom/android/server/am/KillPolicyManager$KpmState;
 
     const/4 v1, 0x1
@@ -72,7 +69,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$KpmState;->LIGHT:Lcom/android/server/am/KillPolicyManager$KpmState;
 
-    .line 1871
     new-instance v0, Lcom/android/server/am/KillPolicyManager$KpmState;
 
     const/4 v1, 0x2
@@ -85,7 +81,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$KpmState;->NORMAL:Lcom/android/server/am/KillPolicyManager$KpmState;
 
-    .line 1872
     new-instance v0, Lcom/android/server/am/KillPolicyManager$KpmState;
 
     const/4 v1, 0x3
@@ -98,7 +93,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$KpmState;->HEAVY:Lcom/android/server/am/KillPolicyManager$KpmState;
 
-    .line 1873
     new-instance v0, Lcom/android/server/am/KillPolicyManager$KpmState;
 
     const/4 v1, 0x4
@@ -111,7 +105,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$KpmState;->CRITICAL:Lcom/android/server/am/KillPolicyManager$KpmState;
 
-    .line 1868
     invoke-static {}, Lcom/android/server/am/KillPolicyManager$KpmState;->$values()[Lcom/android/server/am/KillPolicyManager$KpmState;
 
     move-result-object v0
@@ -124,10 +117,8 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 1877
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1878
     iput-object p3, p0, Lcom/android/server/am/KillPolicyManager$KpmState;->mName:Ljava/lang/String;
 
     return-void
@@ -136,7 +127,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/KillPolicyManager$KpmState;
     .locals 1
 
-    .line 1868
     const-class v0, Lcom/android/server/am/KillPolicyManager$KpmState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -151,7 +141,6 @@
 .method public static values()[Lcom/android/server/am/KillPolicyManager$KpmState;
     .locals 1
 
-    .line 1868
     sget-object v0, Lcom/android/server/am/KillPolicyManager$KpmState;->$VALUES:[Lcom/android/server/am/KillPolicyManager$KpmState;
 
     invoke-virtual {v0}, [Lcom/android/server/am/KillPolicyManager$KpmState;->clone()Ljava/lang/Object;
@@ -168,7 +157,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 1882
     iget-object p0, p0, Lcom/android/server/am/KillPolicyManager$KpmState;->mName:Ljava/lang/String;
 
     return-object p0

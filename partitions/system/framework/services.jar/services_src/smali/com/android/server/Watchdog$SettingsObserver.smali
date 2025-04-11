@@ -15,7 +15,6 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/Watchdog;)V
     .locals 1
 
-    .line 730
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -24,20 +23,16 @@
 
     const-string/jumbo v0, "system_server_watchdog_timeout_ms"
 
-    .line 725
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/Watchdog$SettingsObserver;->mUri:Landroid/net/Uri;
 
-    .line 731
     iput-object p1, p0, Lcom/android/server/Watchdog$SettingsObserver;->mContext:Landroid/content/Context;
 
-    .line 732
     iput-object p2, p0, Lcom/android/server/Watchdog$SettingsObserver;->mWatchdog:Lcom/android/server/Watchdog;
 
-    .line 734
     invoke-virtual {p0}, Lcom/android/server/Watchdog$SettingsObserver;->onChange()V
 
     return-void
@@ -48,13 +43,11 @@
 .method public onChange()V
     .locals 4
 
-    .line 746
     :try_start_0
     iget-object v0, p0, Lcom/android/server/Watchdog$SettingsObserver;->mWatchdog:Lcom/android/server/Watchdog;
 
     iget-object p0, p0, Lcom/android/server/Watchdog$SettingsObserver;->mContext:Landroid/content/Context;
 
-    .line 747
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -63,7 +56,6 @@
 
     const-wide/32 v2, 0xea60
 
-    .line 746
     invoke-static {p0, v1, v2, v3}, Landroid/provider/Settings$Global;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
 
     move-result-wide v1
@@ -77,7 +69,6 @@
     :catch_0
     move-exception p0
 
-    .line 750
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,7 +98,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 0
 
-    .line 739
     iget-object p1, p0, Lcom/android/server/Watchdog$SettingsObserver;->mUri:Landroid/net/Uri;
 
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -116,7 +106,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 740
     invoke-virtual {p0}, Lcom/android/server/Watchdog$SettingsObserver;->onChange()V
 
     :cond_0

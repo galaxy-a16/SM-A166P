@@ -24,7 +24,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 45
     iget p0, p0, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Ref$IntRef;->element:I
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

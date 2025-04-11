@@ -24,7 +24,6 @@
 .method public static synthetic $r8$lambda$TJGyEgTwQ2dylRCVb7VN7k2BJQE(Lcom/android/server/sepunion/OneHandService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/sepunion/OneHandService;->lambda$onBootPhase$0()V
 
     return-void
@@ -33,7 +32,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/sepunion/OneHandService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/OneHandService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -42,7 +40,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/sepunion/OneHandService;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/OneHandService;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public static bridge synthetic -$$Nest$mstartGestureService(Lcom/android/server/sepunion/OneHandService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/OneHandService;->startGestureService()V
 
     return-void
@@ -60,7 +56,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/OneHandService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -69,7 +64,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 30
     const-class v0, Lcom/android/server/sepunion/OneHandService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -84,10 +78,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 42
     invoke-direct {p0}, Lcom/samsung/android/sepunion/IOneHandService$Stub;-><init>()V
 
-    .line 40
     new-instance v0, Lcom/android/server/sepunion/OneHandService$OneHandServiceMonitor;
 
     const/4 v1, 0x0
@@ -96,17 +88,14 @@
 
     iput-object v0, p0, Lcom/android/server/sepunion/OneHandService;->mMonitor:Lcom/android/server/sepunion/OneHandService$OneHandServiceMonitor;
 
-    .line 150
     new-instance v0, Lcom/android/server/sepunion/OneHandService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/OneHandService$1;-><init>(Lcom/android/server/sepunion/OneHandService;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/OneHandService;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/sepunion/OneHandService;->mContext:Landroid/content/Context;
 
-    .line 44
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -119,7 +108,6 @@
 .method private synthetic lambda$onBootPhase$0()V
     .locals 0
 
-    .line 106
     invoke-virtual {p0}, Lcom/android/server/sepunion/OneHandService;->clearOneHandModeRunningState()V
 
     return-void
@@ -130,7 +118,6 @@
 .method public final clearOneHandModeRunningState()V
     .locals 5
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/sepunion/OneHandService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -151,7 +138,6 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 113
     iget-object p0, p0, Lcom/android/server/sepunion/OneHandService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -167,7 +153,6 @@
 .method public clickTile(Ljava/lang/String;)V
     .locals 2
 
-    .line 74
     sget-object p0, Lcom/android/server/sepunion/OneHandService;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -194,10 +179,8 @@
 
     const-string p1, "\n##### OneHandService  #####\n##### (dumpsys sepunion onehand) #####\n"
 
-    .line 144
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 147
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,7 +209,6 @@
 .method public final isInstalled()Z
     .locals 2
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/sepunion/OneHandService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -238,7 +220,6 @@
 
     const/4 v1, 0x1
 
-    .line 163
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -258,41 +239,34 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 96
     invoke-virtual {p0}, Lcom/android/server/sepunion/OneHandService;->isInstalled()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 97
     sget-object p1, Lcom/android/server/sepunion/OneHandService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onBootPhase()"
 
     invoke-static {p1, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
-    .line 100
     invoke-virtual {p1, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 101
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/sepunion/OneHandService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/sepunion/OneHandService;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 105
     :cond_0
     iget-object p1, p0, Lcom/android/server/sepunion/OneHandService;->mHandler:Landroid/os/Handler;
 
@@ -308,14 +282,12 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public registerListener(Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 3
 
-    .line 49
     sget-object v0, Lcom/android/server/sepunion/OneHandService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -348,7 +320,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     iget-object p0, p0, Lcom/android/server/sepunion/OneHandService;->mMonitor:Lcom/android/server/sepunion/OneHandService$OneHandServiceMonitor;
 
     invoke-virtual {p0, p2}, Lcom/android/server/sepunion/OneHandService$OneHandServiceMonitor;->registerWatcher(Landroid/os/IBinder;)V
@@ -359,7 +330,6 @@
 .method public final startGestureService()V
     .locals 3
 
-    .line 171
     invoke-virtual {p0}, Lcom/android/server/sepunion/OneHandService;->isInstalled()Z
 
     move-result v0
@@ -368,7 +338,6 @@
 
     return-void
 
-    .line 175
     :cond_0
     :try_start_0
     new-instance v0, Landroid/content/ComponentName;
@@ -379,7 +348,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 176
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.samsung.action.SIDEGESTUREPAD_SERVICE"
@@ -392,24 +360,20 @@
 
     const v1, 0x1000020
 
-    .line 177
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string/jumbo v1, "option"
 
     const-string/jumbo v2, "start"
 
-    .line 178
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "extra"
 
     const-string/jumbo v2, "system"
 
-    .line 179
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/sepunion/OneHandService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
@@ -421,7 +385,6 @@
     :catch_0
     move-exception p0
 
-    .line 182
     sget-object v0, Lcom/android/server/sepunion/OneHandService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -440,7 +403,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :goto_0
     sget-object p0, Lcom/android/server/sepunion/OneHandService;->TAG:Ljava/lang/String;
 
@@ -454,7 +416,6 @@
 .method public unRegisterListener(Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 3
 
-    .line 55
     sget-object v0, Lcom/android/server/sepunion/OneHandService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -479,7 +440,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     iget-object p0, p0, Lcom/android/server/sepunion/OneHandService;->mMonitor:Lcom/android/server/sepunion/OneHandService$OneHandServiceMonitor;
 
     invoke-virtual {p0, p2}, Lcom/android/server/sepunion/OneHandService$OneHandServiceMonitor;->unregisterWatcher(Landroid/os/IBinder;)V
@@ -490,7 +450,6 @@
 .method public writeSetting(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 2
 
-    .line 79
     sget-object p0, Lcom/android/server/sepunion/OneHandService;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;

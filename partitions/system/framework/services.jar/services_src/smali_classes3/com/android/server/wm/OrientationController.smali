@@ -30,7 +30,6 @@
 .method public static synthetic $r8$lambda$Qc8LvIwXf3uJmAbt8qUFwjknFj4(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/OrientationController;->lambda$onUpdateValueToTask$1(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -39,7 +38,6 @@
 .method public static synthetic $r8$lambda$kVkXDQ0JOezTYXwRn0BSm_fqvaY(ILjava/lang/String;Ljava/lang/Integer;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/wm/OrientationController;->lambda$new$0(ILjava/lang/String;Ljava/lang/Integer;)Ljava/lang/String;
 
     move-result-object p0
@@ -50,17 +48,14 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 7
 
-    .line 116
     invoke-direct {p0, p1}, Lcom/android/server/wm/PackagesChangeAsTask;-><init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
 
-    .line 92
     new-instance v4, Lcom/android/server/wm/OrientationController$$ExternalSyntheticLambda0;
 
     invoke-direct {v4}, Lcom/android/server/wm/OrientationController$$ExternalSyntheticLambda0;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/wm/OrientationController;->mDumpInterface:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange$DumpInterface;
 
-    .line 94
     new-instance p1, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     const/16 v1, 0x40
@@ -91,34 +86,28 @@
 
     iput-object p1, p0, Lcom/android/server/wm/OrientationController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
-    .line 112
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_DEFAULT_ENABLED:Z
 
     iput-boolean v0, p0, Lcom/android/server/wm/OrientationController;->mDefaultEnabled:Z
 
-    .line 113
     iput-boolean v6, p0, Lcom/android/server/wm/OrientationController;->mDisallowWhenLandscapeFixedApp:Z
 
     const/4 v0, 0x2
 
-    .line 600
     iput v0, p0, Lcom/android/server/wm/OrientationController;->mRotationCompatPolicy:I
 
-    .line 117
     filled-new-array {p1}, [Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PackagesChange;->setUserChanges([Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;)V
 
-    .line 118
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_IGNORE_APP_ROTATION_LIST:Z
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_1
 
-    .line 119
     new-instance p1, Lcom/samsung/android/server/packagefeature/util/PackageSpecialManagementList;
 
     sget-object v1, Lcom/samsung/android/server/packagefeature/PackageFeature;->IGNORE_APP_ROTATION:Lcom/samsung/android/server/packagefeature/PackageFeature;
@@ -133,12 +122,10 @@
     :goto_1
     iput-object p1, p0, Lcom/android/server/wm/OrientationController;->mDefaultEnabledList:Ljava/util/List;
 
-    .line 120
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_IGNORE_APP_ROTATION_DISABLED_LIST:Z
 
     if-eqz p1, :cond_2
 
-    .line 121
     new-instance p1, Lcom/samsung/android/server/packagefeature/util/PackageSpecialManagementList;
 
     sget-object v1, Lcom/samsung/android/server/packagefeature/PackageFeature;->IGNORE_APP_ROTATION_DISABLED:Lcom/samsung/android/server/packagefeature/PackageFeature;
@@ -150,23 +137,19 @@
     :cond_2
     move-object p1, v0
 
-    .line 122
     :goto_2
     iput-object p1, p0, Lcom/android/server/wm/OrientationController;->mDefaultDisabledList:Ljava/util/List;
 
-    .line 123
     sget-boolean p1, Lcom/samsung/android/rune/CoreRune;->FW_TABLET_ROTATION_COMPAT_LIST:Z
 
     if-eqz p1, :cond_3
 
-    .line 124
     new-instance v0, Lcom/samsung/android/server/packagefeature/util/PackageSpecialManagementList;
 
     sget-object p1, Lcom/samsung/android/server/packagefeature/PackageFeature;->TABLET_APP_ROTATION_COMPAT:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/server/packagefeature/util/PackageSpecialManagementList;-><init>(Lcom/samsung/android/server/packagefeature/PackageFeature;)V
 
-    .line 125
     :cond_3
     iput-object v0, p0, Lcom/android/server/wm/OrientationController;->mTabletRotationCompatList:Ljava/util/List;
 
@@ -176,7 +159,6 @@
 .method public static getRotationCompatReasonFromSizeChangesSupported(IZ)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_4
@@ -238,7 +220,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 571
     iget-boolean v0, p0, Lcom/android/server/wm/Task;->mOrientationControlEnabledAsFullScreen:Z
 
     if-nez v0, :cond_0
@@ -262,7 +243,6 @@
 .method public static synthetic lambda$new$0(ILjava/lang/String;Ljava/lang/Integer;)Ljava/lang/String;
     .locals 0
 
-    .line 93
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -273,7 +253,6 @@
 .method public static synthetic lambda$onUpdateValueToTask$1(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 426
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->recomputeConfiguration()V
 
     return-void
@@ -290,7 +269,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 580
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -311,7 +289,6 @@
 .method public static policyToString(Lcom/android/server/wm/Task;)Ljava/lang/String;
     .locals 1
 
-    .line 584
     iget-boolean v0, p0, Lcom/android/server/wm/Task;->mOrientationControlEnabledAsFullScreen:Z
 
     if-eqz v0, :cond_0
@@ -320,7 +297,6 @@
 
     return-object p0
 
-    .line 587
     :cond_0
     iget-boolean p0, p0, Lcom/android/server/wm/Task;->mOrientationControlEnabledAsAspectRatio:Z
 
@@ -349,7 +325,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 762
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -383,7 +358,6 @@
 
     packed-switch p0, :pswitch_data_1
 
-    .line 808
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -525,14 +499,12 @@
 .method public adjustBounds(Lcom/android/server/wm/ActivityRecord;Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 834
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->canHaveSizeCompatBounds(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 835
     invoke-interface {p0}, Lcom/android/server/wm/BoundsCompatController;->getBoundsCompatUtils()Lcom/android/server/wm/BoundsCompatUtils;
 
     move-result-object p0
@@ -541,7 +513,6 @@
 
     return-void
 
-    .line 838
     :cond_0
     invoke-interface {p0}, Lcom/android/server/wm/BoundsCompatController;->getBoundsCompatUtils()Lcom/android/server/wm/BoundsCompatUtils;
 
@@ -555,7 +526,6 @@
 .method public final assertBooleanOptionsRequires(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)Z
     .locals 1
 
-    .line 499
     array-length p0, p2
 
     const/4 v0, 0x1
@@ -577,7 +547,6 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 501
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -601,7 +570,6 @@
 .method public canHaveSizeCompatBounds(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 829
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->shouldUseSizeCompatMode(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result p0
@@ -628,7 +596,6 @@
 .method public canRotationCompatMode(I)Z
     .locals 0
 
-    .line 0
     const/16 p0, 0x64
 
     if-lt p1, p0, :cond_0
@@ -651,7 +618,6 @@
 .method public final canSetOrientation(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/Task;)Z
     .locals 2
 
-    .line 321
     iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     iget-boolean v0, v0, Lcom/android/server/wm/BoundsCompatRecord;->mIsIgnoreOrientationRequest:Z
@@ -666,13 +632,11 @@
 
     goto :goto_0
 
-    .line 325
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRequestedOrientation()I
 
     move-result p1
 
-    .line 326
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->isAllowedScreenOrientation(I)Z
 
     move-result v0
@@ -689,7 +653,6 @@
 
     goto :goto_0
 
-    .line 331
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -699,7 +662,6 @@
 
     if-ne p2, v1, :cond_2
 
-    .line 333
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->isDisallowWhenLandscape(I)Z
 
     move-result p0
@@ -721,7 +683,6 @@
 .method public clearRotationCompatMode(Lcom/android/server/wm/ActivityRecord;Z)V
     .locals 2
 
-    .line 711
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getCompatDisplayInsets()Lcom/android/server/wm/ActivityRecord$CompatDisplayInsets;
 
     move-result-object p0
@@ -730,7 +691,6 @@
 
     return-void
 
-    .line 715
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/wm/ActivityRecord$CompatDisplayInsets;->mCreatedByRotationCompat:Z
 
@@ -738,7 +698,6 @@
 
     if-nez v0, :cond_1
 
-    .line 716
     iput-boolean v1, p0, Lcom/android/server/wm/ActivityRecord$CompatDisplayInsets;->mCanRotationCompatMode:Z
 
     return-void
@@ -748,15 +707,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 720
     iput-boolean v0, p0, Lcom/android/server/wm/ActivityRecord$CompatDisplayInsets;->mConfigChangeNeeded:Z
 
-    .line 721
     iget-object p2, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     iput-object p0, p2, Lcom/android/server/wm/BoundsCompatRecord;->mPendingCompatDisplayInsets:Lcom/android/server/wm/ActivityRecord$CompatDisplayInsets;
 
-    .line 724
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
@@ -764,7 +720,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 725
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->inPinnedWindowingMode()Z
 
     move-result p0
@@ -776,7 +731,6 @@
     :cond_3
     move v1, v0
 
-    .line 729
     :goto_0
     invoke-virtual {p1, v0, v1}, Lcom/android/server/wm/ActivityRecord;->clearSizeCompatMode(ZZ)V
 
@@ -786,38 +740,30 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 1
 
-    .line 444
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mDefaultEnabled="
 
-    .line 445
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 446
     iget-boolean v0, p0, Lcom/android/server/wm/OrientationController;->mDefaultEnabled:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
     const-string v0, ", mDisallowWhenLandscapeFixedApp="
 
-    .line 447
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 448
     iget-boolean v0, p0, Lcom/android/server/wm/OrientationController;->mDisallowWhenLandscapeFixedApp:Z
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 449
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 450
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_ROTATION_COMPAT:Z
 
     if-eqz v0, :cond_0
 
-    .line 451
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -830,7 +776,6 @@
 
     iget p0, p0, Lcom/android/server/wm/OrientationController;->mRotationCompatPolicy:I
 
-    .line 452
     invoke-static {p0}, Lcom/android/server/wm/OrientationController;->rotationCompatPolicyToString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -841,10 +786,8 @@
 
     move-result-object p0
 
-    .line 451
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 453
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     :cond_0
@@ -854,7 +797,6 @@
 .method public executeShellCommand(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)Z
     .locals 3
 
-    .line 459
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL:Z
 
     const/4 v1, 0x0
@@ -866,7 +808,6 @@
     :cond_0
     const-string v0, "-setOrientationControlDefault"
 
-    .line 462
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -875,7 +816,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 463
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/OrientationController;->assertBooleanOptionsRequires(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)Z
 
     move-result v0
@@ -884,7 +824,6 @@
 
     return v2
 
-    .line 464
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/PackagesChange;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -894,7 +833,6 @@
 
     monitor-enter v0
 
-    .line 465
     :try_start_0
     aget-object p2, p2, v1
 
@@ -904,7 +842,6 @@
 
     iput-boolean p2, p0, Lcom/android/server/wm/OrientationController;->mDefaultEnabled:Z
 
-    .line 466
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -925,7 +862,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 467
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -949,14 +885,12 @@
     :cond_2
     const-string v0, "-setDisallowWhenLandscapeFixedApp"
 
-    .line 470
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 471
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/OrientationController;->assertBooleanOptionsRequires(Ljava/lang/String;[Ljava/lang/String;Ljava/io/PrintWriter;)Z
 
     move-result v0
@@ -965,7 +899,6 @@
 
     return v2
 
-    .line 472
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/PackagesChange;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -975,7 +908,6 @@
 
     monitor-enter v0
 
-    .line 473
     :try_start_2
     aget-object p2, p2, v1
 
@@ -985,7 +917,6 @@
 
     iput-boolean p2, p0, Lcom/android/server/wm/OrientationController;->mDisallowWhenLandscapeFixedApp:Z
 
-    .line 474
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1006,7 +937,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 476
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -1027,7 +957,6 @@
 
     throw p0
 
-    .line 479
     :cond_4
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_ROTATION_COMPAT:Z
 
@@ -1035,14 +964,12 @@
 
     const-string v0, "-setRotationCompatPolicy"
 
-    .line 480
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 482
     :try_start_4
     invoke-virtual {p0, p2, p3}, Lcom/android/server/wm/OrientationController;->setRotationCompatPolicy([Ljava/lang/String;Ljava/io/PrintWriter;)V
     :try_end_4
@@ -1050,7 +977,6 @@
 
     goto :goto_1
 
-    .line 484
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1070,12 +996,10 @@
 
     const-string p0, "RotationCompatPolicyList"
 
-    .line 485
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 p0, 0x2
 
-    .line 486
     filled-new-array {v1, v2, p0}, [I
 
     move-result-object p0
@@ -1085,10 +1009,8 @@
 
     if-ge v1, p1, :cond_5
 
-    .line 488
     aget p1, p0, v1
 
-    .line 489
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1126,7 +1048,6 @@
 .method public final getAdjustedOrientation(I)I
     .locals 1
 
-    .line 262
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->isDisallowWhenLandscape(I)Z
 
     move-result p0
@@ -1170,7 +1091,6 @@
 
     const/4 v0, -0x2
 
-    .line 218
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/wm/OrientationController;->getAdjustedOrientation(Lcom/android/server/wm/ActivityRecord;IZI)I
 
     move-result p0
@@ -1185,7 +1105,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 224
     iget-object v1, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     iget-boolean v1, v1, Lcom/android/server/wm/BoundsCompatRecord;->mIsIgnoreOrientationRequest:Z
@@ -1194,13 +1113,11 @@
 
     goto :goto_0
 
-    .line 228
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRequestedOrientation()I
 
     move-result v1
 
-    .line 229
     invoke-virtual {p0, v1}, Lcom/android/server/wm/OrientationController;->isAllowedScreenOrientation(I)Z
 
     move-result v2
@@ -1218,7 +1135,6 @@
 
     return v0
 
-    .line 237
     :cond_2
     invoke-virtual {p0, v1}, Lcom/android/server/wm/OrientationController;->getAdjustedOrientation(I)I
 
@@ -1236,14 +1152,12 @@
     :cond_4
     if-ne p4, v2, :cond_5
 
-    .line 248
     invoke-virtual {p0, v1}, Lcom/android/server/wm/OrientationController;->getAdjustedOrientation(I)I
 
     move-result p0
 
     return p0
 
-    .line 254
     :cond_5
     iget-object p2, p1, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1255,7 +1169,6 @@
 
     if-nez p2, :cond_7
 
-    .line 255
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->isVisibleRequested()Z
 
     move-result p2
@@ -1272,7 +1185,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 256
     :cond_6
     invoke-virtual {p0, v1}, Lcom/android/server/wm/OrientationController;->getAdjustedOrientation(I)I
 
@@ -1288,7 +1200,6 @@
 .method public final getDefaultEnabledPolicy(ILjava/lang/String;Ljava/lang/Integer;)I
     .locals 7
 
-    .line 166
     iget-object v0, p0, Lcom/android/server/wm/OrientationController;->mDefaultDisabledList:Ljava/util/List;
 
     const/4 v1, 0x1
@@ -1297,7 +1208,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 167
     invoke-interface {v0, p2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1320,7 +1230,6 @@
 
     if-eqz p3, :cond_5
 
-    .line 169
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
@@ -1334,7 +1243,6 @@
     :cond_1
     move v6, v2
 
-    .line 170
     :goto_1
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
@@ -1366,7 +1274,6 @@
 
     goto :goto_4
 
-    .line 178
     :cond_5
     invoke-virtual {p0, p2, p1}, Lcom/android/server/wm/PackagesChange;->getLauncherActivities(Ljava/lang/String;I)Ljava/util/List;
 
@@ -1389,7 +1296,6 @@
 
     check-cast v6, Landroid/content/pm/ResolveInfo;
 
-    .line 179
     invoke-virtual {v6}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
 
     move-result-object v6
@@ -1420,7 +1326,6 @@
 
     move v4, v5
 
-    .line 190
     :cond_9
     invoke-virtual {p0, p1, p2, v4}, Lcom/android/server/wm/OrientationController;->setPolicyInternal(ILjava/lang/String;I)V
 
@@ -1439,7 +1344,6 @@
 .method public getPolicy(ILjava/lang/String;)I
     .locals 3
 
-    .line 138
     invoke-virtual {p0, p2}, Lcom/android/server/wm/OrientationController;->isExcludedPackage(Ljava/lang/String;)Z
 
     move-result v0
@@ -1450,13 +1354,11 @@
 
     return v1
 
-    .line 141
     :cond_0
     invoke-static {p1}, Lcom/android/server/wm/PackagesChange;->getAdjustedUserIdIfNeeded(I)I
 
     move-result p1
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/wm/OrientationController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;->getValue(ILjava/lang/String;)Ljava/lang/Object;
@@ -1465,7 +1367,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 143
     sget-boolean v2, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_DEFAULT_ENABLED:Z
 
     if-eqz v2, :cond_1
@@ -1474,7 +1375,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 144
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/wm/OrientationController;->getDefaultEnabledPolicy(ILjava/lang/String;Ljava/lang/Integer;)I
 
     move-result p1
@@ -1488,7 +1388,6 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 150
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -1499,7 +1398,6 @@
 
     return p0
 
-    .line 152
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/OrientationController;->mDefaultEnabledList:Ljava/util/List;
 
@@ -1522,7 +1420,6 @@
 .method public final getPolicyFromLegacyFlag(I)I
     .locals 2
 
-    .line 0
     and-int/lit16 p0, p1, -0xc1
 
     if-eqz p0, :cond_2
@@ -1562,43 +1459,36 @@
 .method public getPreferredConfigurationOrientation(Lcom/android/server/wm/ActivityRecord;I)I
     .locals 6
 
-    .line 377
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
 
-    .line 378
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRequestedOrientation()I
 
     move-result v1
 
-    .line 379
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->useBehindOrientation(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 381
     invoke-virtual {v0, p1}, Lcom/android/server/wm/WindowContainer;->getActivityBelow(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 382
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_EMBED_ACTIVITY:Z
 
     if-eqz v0, :cond_0
 
-    .line 383
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isSplitEmbedded()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 387
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/OrientationController;->getPreferredConfigurationOrientation(Lcom/android/server/wm/ActivityRecord;I)I
 
@@ -1609,7 +1499,6 @@
     :cond_1
     return p2
 
-    .line 390
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getRequestedConfigurationOrientation()I
 
@@ -1642,7 +1531,6 @@
     :cond_4
     move v0, v2
 
-    .line 394
     :cond_5
     :goto_1
     iget-object v2, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
@@ -1653,7 +1541,6 @@
 
     if-ne v4, v1, :cond_6
 
-    .line 396
     iget p0, v2, Lcom/android/server/wm/BoundsCompatRecord;->mPreferredOrientation:I
 
     return p0
@@ -1666,14 +1553,12 @@
     :cond_7
     if-eqz v0, :cond_8
 
-    .line 402
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isRelaunching()Z
 
     move-result p0
 
     if-eqz p0, :cond_8
 
-    .line 403
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     iget p0, p0, Lcom/android/server/wm/BoundsCompatRecord;->mPreferredOrientation:I
@@ -1687,7 +1572,6 @@
 .method public getRotationCompatReason(Lcom/android/server/wm/ActivityRecord;)I
     .locals 3
 
-    .line 631
     iget v0, p0, Lcom/android/server/wm/OrientationController;->mRotationCompatPolicy:I
 
     if-nez v0, :cond_0
@@ -1696,7 +1580,6 @@
 
     return p0
 
-    .line 634
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_ROTATION_COMPAT_FOR_FOLD:Z
 
@@ -1706,7 +1589,6 @@
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 635
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->isFolded()Z
 
     move-result v0
@@ -1717,7 +1599,6 @@
 
     return p0
 
-    .line 638
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getDisplayId()I
 
@@ -1729,18 +1610,15 @@
 
     return p0
 
-    .line 641
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
 
-    .line 646
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRequestedOrientation()I
 
     move-result v1
 
-    .line 647
     invoke-virtual {p0, v1}, Lcom/android/server/wm/OrientationController;->isAllowedScreenOrientation(I)Z
 
     move-result v2
@@ -1751,7 +1629,6 @@
 
     return p0
 
-    .line 650
     :cond_3
     invoke-static {v1}, Landroid/content/pm/ActivityInfo;->isFixedOrientationLandscape(I)Z
 
@@ -1759,7 +1636,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 651
     iget-boolean v1, p0, Lcom/android/server/wm/OrientationController;->mDisallowWhenLandscapeFixedApp:Z
 
     if-eqz v1, :cond_5
@@ -1768,7 +1644,6 @@
 
     return p0
 
-    .line 654
     :cond_4
     invoke-static {v1}, Landroid/content/pm/ActivityInfo;->isFixedOrientationPortrait(I)Z
 
@@ -1776,7 +1651,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 664
     :cond_5
     iget-object v1, p0, Lcom/android/server/wm/OrientationController;->mTabletRotationCompatList:Ljava/util/List;
 
@@ -1786,7 +1660,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 665
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -1801,7 +1674,6 @@
 
     return p0
 
-    .line 668
     :cond_6
     iget p0, p0, Lcom/android/server/wm/OrientationController;->mRotationCompatPolicy:I
 
@@ -1813,7 +1685,6 @@
 
     return p0
 
-    .line 672
     :cond_7
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->supportsSizeChanges()I
 
@@ -1821,7 +1692,6 @@
 
     const/4 v2, 0x0
 
-    .line 671
     invoke-static {p0, v2}, Lcom/android/server/wm/OrientationController;->getRotationCompatReasonFromSizeChangesSupported(IZ)I
 
     move-result p0
@@ -1830,13 +1700,11 @@
 
     return p0
 
-    .line 676
     :cond_8
     iget-object p0, v0, Lcom/android/server/wm/Task;->realActivity:Landroid/content/ComponentName;
 
     if-eqz p0, :cond_9
 
-    .line 678
     invoke-static {}, Lcom/samsung/android/server/util/DisplayCompatPolicies;->getDisplayCompatPolicies()Lcom/samsung/android/server/util/DisplayCompatPolicies;
 
     move-result-object p0
@@ -1851,12 +1719,10 @@
 
     move-result p0
 
-    .line 677
     invoke-static {p0}, Lcom/samsung/android/server/util/DisplayCompatPolicies;->getSizeChangesSupported(I)I
 
     move-result p0
 
-    .line 679
     invoke-static {p0, v1}, Lcom/android/server/wm/OrientationController;->getRotationCompatReasonFromSizeChangesSupported(IZ)I
 
     move-result p0
@@ -1865,7 +1731,6 @@
 
     return p0
 
-    .line 685
     :cond_9
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isResizeable()Z
 
@@ -1883,7 +1748,6 @@
     :goto_0
     return p0
 
-    .line 656
     :cond_b
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->useBehindOrientation(Lcom/android/server/wm/ActivityRecord;)Z
 
@@ -1891,14 +1755,12 @@
 
     if-eqz p0, :cond_c
 
-    .line 657
     invoke-virtual {v0, p1}, Lcom/android/server/wm/WindowContainer;->getActivityBelow(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
 
     if-eqz p0, :cond_c
 
-    .line 658
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     iget-boolean p0, p0, Lcom/android/server/wm/BoundsCompatRecord;->mCanRotationCompatMode:Z
@@ -1922,14 +1784,12 @@
 
     if-eqz p1, :cond_7
 
-    .line 277
     iget-object v1, p1, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     if-nez v1, :cond_0
 
     goto/16 :goto_1
 
-    .line 281
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
@@ -1939,7 +1799,6 @@
 
     return v0
 
-    .line 286
     :cond_1
     invoke-virtual {v1}, Lcom/android/server/wm/ConfigurationContainer;->inMultiWindowMode()Z
 
@@ -1947,7 +1806,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 287
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRequestedOrientation()I
@@ -1958,7 +1816,6 @@
 
     return v0
 
-    .line 290
     :cond_2
     iget-object v2, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
@@ -1966,14 +1823,12 @@
 
     iput v3, v2, Lcom/android/server/wm/BoundsCompatRecord;->mScreenOrientationInMultiWindow:I
 
-    .line 292
     invoke-virtual {p0, p1, v1}, Lcom/android/server/wm/OrientationController;->canSetOrientation(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/Task;)Z
 
     move-result v2
 
     if-nez v2, :cond_7
 
-    .line 293
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getRequestedConfigurationOrientation()I
 
     move-result v2
@@ -1982,7 +1837,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 295
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v4
@@ -2003,27 +1857,23 @@
 
     if-nez v2, :cond_6
 
-    .line 296
     iget-object v2, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     iget-boolean v2, v2, Lcom/android/server/wm/BoundsCompatRecord;->mIsTaskOrientationMismatched:Z
 
     if-eqz v2, :cond_6
 
-    .line 300
     :cond_4
     iget-object v2, p0, Lcom/android/server/wm/OrientationController;->mTmpRect:Landroid/graphics/Rect;
 
     if-nez v2, :cond_5
 
-    .line 301
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/wm/OrientationController;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 303
     :cond_5
     iget-object v2, p0, Lcom/android/server/wm/OrientationController;->mTmpRect:Landroid/graphics/Rect;
 
@@ -2033,17 +1883,14 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 307
     invoke-virtual {v1}, Lcom/android/server/wm/ConfigurationContainer;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Lcom/android/server/wm/ActivityRecord;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 308
     invoke-virtual {v1, v0}, Lcom/android/server/wm/Task;->dispatchTaskInfoChangedIfNeeded(Z)V
 
-    .line 310
     iget-object v0, p0, Lcom/android/server/wm/OrientationController;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getBounds()Landroid/graphics/Rect;
@@ -2056,7 +1903,6 @@
 
     if-nez v0, :cond_6
 
-    .line 311
     iget-object v0, p0, Lcom/android/server/wm/PackagesChange;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mChangeTransitController:Lcom/android/server/wm/ChangeTransitionController;
@@ -2076,7 +1922,6 @@
 .method public final isAllowedScreenOrientation(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x5
 
     if-eq p1, p0, :cond_0
@@ -2102,12 +1947,10 @@
 .method public final isDisallowWhenLandscape(I)Z
     .locals 0
 
-    .line 350
     iget-boolean p0, p0, Lcom/android/server/wm/OrientationController;->mDisallowWhenLandscapeFixedApp:Z
 
     if-eqz p0, :cond_0
 
-    .line 351
     invoke-static {p1}, Landroid/content/pm/ActivityInfo;->isFixedOrientationLandscape(I)Z
 
     move-result p0
@@ -2128,7 +1971,6 @@
 .method public isExcludedPackage(Ljava/lang/String;)Z
     .locals 0
 
-    .line 160
     invoke-virtual {p0, p1}, Lcom/android/server/wm/PackagesChange;->isSettingsPackage(Ljava/lang/String;)Z
 
     move-result p0
@@ -2139,7 +1981,6 @@
 .method public isIgnoreOrientationRequest(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 1
 
-    .line 355
     iget-object p0, p1, Lcom/android/server/wm/WindowContainer;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     const/4 v0, 0x0
@@ -2148,7 +1989,6 @@
 
     return v0
 
-    .line 358
     :cond_0
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_CAMERA_COMPAT:Z
 
@@ -2156,7 +1996,6 @@
 
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mLetterboxUiController:Lcom/android/server/wm/LetterboxUiController;
 
-    .line 359
     invoke-virtual {p0}, Lcom/android/server/wm/LetterboxUiController;->isOverrideRespectRequestedOrientationEnabled()Z
 
     move-result p0
@@ -2165,7 +2004,6 @@
 
     return v0
 
-    .line 362
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getRequestedOverrideWindowingMode()I
 
@@ -2177,7 +2015,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 363
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p0
@@ -2194,7 +2031,6 @@
 
     if-nez p0, :cond_2
 
-    .line 364
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result p0
@@ -2219,34 +2055,28 @@
 .method public logInRotationForOrientation(Lcom/android/server/wm/DisplayContent;)V
     .locals 2
 
-    .line 528
     iget-object p0, p1, Lcom/android/server/wm/DisplayContent;->mLastOrientationControlSource:Lcom/android/server/wm/WindowContainer;
 
-    .line 529
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getLastOrientationSource()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
 
     if-eqz p0, :cond_1
 
-    .line 532
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "rotationForOrientation, Orientation has been adjusted"
 
-    .line 533
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     if-ne p0, v0, :cond_0
 
     const-string p0, ", OriginalOrientation="
 
-    .line 535
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 536
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getOverrideOrientation()I
 
     move-result p0
@@ -2255,7 +2085,6 @@
 
     move-result-object p0
 
-    .line 535
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_2
@@ -2263,7 +2092,6 @@
     :cond_0
     const-string v0, ", OrientationControlSource="
 
-    .line 538
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -2273,14 +2101,12 @@
     :cond_1
     if-eqz v0, :cond_5
 
-    .line 541
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
 
     if-eqz p0, :cond_4
 
-    .line 542
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -2293,7 +2119,6 @@
 
     goto :goto_1
 
-    .line 545
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2301,10 +2126,8 @@
 
     const-string/jumbo v1, "rotationForOrientation, Orientation is not adjusted"
 
-    .line 546
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 547
     iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     iget-boolean v1, v1, Lcom/android/server/wm/BoundsCompatRecord;->mIsIgnoreOrientationRequest:Z
@@ -2313,10 +2136,8 @@
 
     const-string v1, ", mOrientation="
 
-    .line 548
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 549
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getOrientation()I
 
     move-result v1
@@ -2325,12 +2146,10 @@
 
     move-result-object v1
 
-    .line 548
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ", containsClosing="
 
-    .line 550
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p1, Lcom/android/server/wm/DisplayContent;->mClosingApps:Landroid/util/ArraySet;
@@ -2343,7 +2162,6 @@
 
     const-string v1, ", containsOpening="
 
-    .line 551
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p1, p1, Lcom/android/server/wm/DisplayContent;->mOpeningApps:Landroid/util/ArraySet;
@@ -2356,7 +2174,6 @@
 
     const-string p1, ", isVisibleRequested="
 
-    .line 552
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->isVisibleRequested()Z
@@ -2370,7 +2187,6 @@
     :cond_3
     const-string p1, ", inMultiWindowMode="
 
-    .line 554
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->inMultiWindowMode()Z
@@ -2381,7 +2197,6 @@
 
     const-string p1, ", inSizeCompatMode="
 
-    .line 562
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->inSizeCompatMode()Z
@@ -2407,7 +2222,6 @@
 
     const-string p0, "OrientationController"
 
-    .line 566
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -2421,7 +2235,6 @@
 .method public onDumpInTask(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/wm/Task;)V
     .locals 0
 
-    .line 433
     invoke-static {p3}, Lcom/android/server/wm/OrientationController;->isEnabled(Lcom/android/server/wm/Task;)Z
 
     move-result p0
@@ -2430,23 +2243,19 @@
 
     return-void
 
-    .line 436
     :cond_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, "mOrientationControlPolicy="
 
-    .line 437
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 438
     invoke-static {p3}, Lcom/android/server/wm/OrientationController;->policyToString(Lcom/android/server/wm/Task;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 439
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -2455,17 +2264,14 @@
 .method public onUpdateValueToTask(Lcom/android/server/wm/Task;Ljava/lang/String;Z)V
     .locals 5
 
-    .line 417
     iget-boolean v0, p1, Lcom/android/server/wm/Task;->mOrientationControlEnabledAsFullScreen:Z
 
-    .line 418
     iget-boolean v1, p1, Lcom/android/server/wm/Task;->mOrientationControlEnabledAsAspectRatio:Z
 
     const/4 v2, 0x0
 
     if-eqz p2, :cond_0
 
-    .line 420
     iget v3, p1, Lcom/android/server/wm/Task;->mUserId:I
 
     invoke-virtual {p0, v3, p2}, Lcom/android/server/wm/OrientationController;->getPolicy(ILjava/lang/String;)I
@@ -2491,7 +2297,6 @@
     :cond_1
     move p2, v2
 
-    .line 421
     :goto_1
     iput-boolean p2, p1, Lcom/android/server/wm/Task;->mOrientationControlEnabledAsFullScreen:Z
 
@@ -2501,7 +2306,6 @@
 
     move v2, v3
 
-    .line 422
     :cond_2
     iput-boolean v2, p1, Lcom/android/server/wm/Task;->mOrientationControlEnabledAsAspectRatio:Z
 
@@ -2511,7 +2315,6 @@
 
     if-eq v2, v1, :cond_4
 
-    .line 425
     :cond_3
     new-instance p0, Lcom/android/server/wm/OrientationController$$ExternalSyntheticLambda1;
 
@@ -2526,7 +2329,6 @@
 .method public setPolicy(ILjava/lang/String;I)V
     .locals 0
 
-    .line 130
     invoke-virtual {p0, p3}, Lcom/android/server/wm/OrientationController;->getPolicyFromLegacyFlag(I)I
 
     move-result p3
@@ -2539,7 +2341,6 @@
 .method public final setPolicyInternal(ILjava/lang/String;I)V
     .locals 0
 
-    .line 134
     iget-object p0, p0, Lcom/android/server/wm/OrientationController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2554,7 +2355,6 @@
 .method public final setRotationCompatPolicy([Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 507
     iget-object v0, p0, Lcom/android/server/wm/PackagesChange;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -2563,13 +2363,11 @@
 
     monitor-enter v0
 
-    .line 508
     :try_start_0
     iget v1, p0, Lcom/android/server/wm/OrientationController;->mRotationCompatPolicy:I
 
     const/4 v2, 0x0
 
-    .line 509
     aget-object p1, p1, v2
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -2592,7 +2390,6 @@
 
     goto :goto_0
 
-    .line 513
     :cond_0
     new-instance p0, Ljava/lang/Exception;
 
@@ -2604,7 +2401,6 @@
     :goto_0
     if-ne v1, p1, :cond_2
 
-    .line 516
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2625,7 +2421,6 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 517
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2634,12 +2429,10 @@
 
     return-void
 
-    .line 519
     :cond_2
     :try_start_1
     iput p1, p0, Lcom/android/server/wm/OrientationController;->mRotationCompatPolicy:I
 
-    .line 520
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2648,7 +2441,6 @@
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 521
     invoke-static {v1}, Lcom/android/server/wm/OrientationController;->rotationCompatPolicyToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -2659,7 +2451,6 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 522
     invoke-static {p1}, Lcom/android/server/wm/OrientationController;->rotationCompatPolicyToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -2670,10 +2461,8 @@
 
     move-result-object p0
 
-    .line 520
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 523
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2698,7 +2487,6 @@
 .method public shouldCreateCompatDisplayInsets(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 2
 
-    .line 733
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
     iget-boolean p0, p0, Lcom/android/server/wm/BoundsCompatRecord;->mCanRotationCompatMode:Z
@@ -2715,7 +2503,6 @@
 
     goto :goto_0
 
-    .line 736
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->inMultiWindowMode()Z
 
@@ -2725,7 +2512,6 @@
 
     return v0
 
-    .line 742
     :cond_1
     iget-object p0, p1, Lcom/android/server/wm/ActivityRecord;->mCompatRecord:Lcom/android/server/wm/BoundsCompatRecord;
 
@@ -2737,7 +2523,6 @@
 
     return v1
 
-    .line 745
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getRequestedConfigurationOrientation()I
 
@@ -2755,7 +2540,6 @@
 .method public shouldUseSandboxDisplay(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 819
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->canHaveSizeCompatBounds(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result p0
@@ -2766,7 +2550,6 @@
 .method public shouldUseSandboxViewBoundsAndMotionEvent(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 824
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OrientationController;->canHaveSizeCompatBounds(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result p0
@@ -2777,7 +2560,6 @@
 .method public shouldUseSizeCompatMode(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 0
 
-    .line 813
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->FW_ORIENTATION_CONTROL_WITH_ROTATION_COMPAT:Z
 
     if-eqz p0, :cond_0
@@ -2802,7 +2584,6 @@
 .method public final useBehindOrientation(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 1
 
-    .line 409
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRequestedOrientation()I
 
     move-result p0
@@ -2815,7 +2596,6 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 412
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->providesOrientation()Z
 
     move-result p0

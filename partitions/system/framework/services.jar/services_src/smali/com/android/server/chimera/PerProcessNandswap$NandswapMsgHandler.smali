@@ -21,10 +21,8 @@
 .method public constructor <init>(Lcom/android/server/chimera/PerProcessNandswap;Lcom/android/server/chimera/PerProcessNandswap;)V
     .locals 0
 
-    .line 1940
     iput-object p1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
-    .line 1941
     invoke-static {p1}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$fgetmMsgThread(Lcom/android/server/chimera/PerProcessNandswap;)Lcom/android/server/ServiceThread;
 
     move-result-object p1
@@ -37,14 +35,12 @@
 
     const-string p1, "com.sec.android.app.launcher"
 
-    .line 1934
     filled-new-array {p1}, [Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->LAUNCHER_APP_PKGNAME:[Ljava/lang/String;
 
-    .line 1937
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -53,10 +49,8 @@
 
     const/4 p1, 0x2
 
-    .line 1938
     iput p1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->RECENT_ENTRY_PROCESS_COUNT:I
 
-    .line 1942
     const-class p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -65,7 +59,6 @@
 
     iput-object p1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
-    .line 1943
     iput-object p2, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->self:Lcom/android/server/chimera/PerProcessNandswap;
 
     return-void
@@ -74,7 +67,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/chimera/PerProcessNandswap;Lcom/android/server/chimera/PerProcessNandswap;Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;-><init>(Lcom/android/server/chimera/PerProcessNandswap;Lcom/android/server/chimera/PerProcessNandswap;)V
 
     return-void
@@ -85,7 +77,6 @@
 .method public final acceptPPRRequest(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;
     .locals 2
 
-    .line 2348
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     iget-object v0, v0, Lcom/android/server/chimera/PerProcessNandswap;->mNandswapMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -104,7 +95,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2350
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap;->mNandswapMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -122,7 +112,6 @@
     :cond_0
     move-object p1, v0
 
-    .line 2355
     :goto_0
     iget-object p0, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->ppnStateLock:Ljava/lang/Object;
 
@@ -130,11 +119,9 @@
 
     const/4 v0, 0x1
 
-    .line 2356
     :try_start_0
     iput v0, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->ppnState:I
 
-    .line 2357
     monitor-exit p0
 
     return-object p1
@@ -152,14 +139,12 @@
 .method public final changePPRState(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;I)V
     .locals 2
 
-    .line 2326
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2327
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -194,17 +179,14 @@
 
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2331
     :cond_0
     iget-object p0, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->ppnStateLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 2332
     :try_start_0
     iput p2, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->ppnState:I
 
-    .line 2333
     monitor-exit p0
 
     return-void
@@ -222,7 +204,6 @@
 .method public final checkCanDoPPRForCachedApp(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
     .locals 2
 
-    .line 2129
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     iget-object v0, v0, Lcom/android/server/chimera/PerProcessNandswap;->mNandswapMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -245,7 +226,6 @@
 
     return v0
 
-    .line 2132
     :cond_0
     iget v1, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->ppnState:I
 
@@ -268,7 +248,6 @@
 .method public final checkCanDoPPRForCachedAppPsi(I)Z
     .locals 0
 
-    .line 2119
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap;->mNandswapMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -289,7 +268,6 @@
 
     return p1
 
-    .line 2122
     :cond_0
     iget p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->ppnState:I
 
@@ -306,14 +284,12 @@
 .method public final checkDHAHeavyProcess(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
     .locals 0
 
-    .line 2147
     invoke-static {}, Lcom/android/server/am/DynamicHiddenApp;->getInstance()Lcom/android/server/am/DynamicHiddenApp;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 2148
     iget-object p1, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->processName:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/DynamicHiddenApp;->IsForceKillHeavyProcess(Ljava/lang/String;)Z
@@ -336,7 +312,6 @@
 .method public final checkPPRAppCondition(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
     .locals 3
 
-    .line 2296
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,7 +336,6 @@
 
     move-result-object v0
 
-    .line 2305
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->checkDHAHeavyProcess(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
 
     move-result v1
@@ -370,14 +344,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 2306
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2307
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -399,7 +371,6 @@
     :cond_0
     return v2
 
-    .line 2309
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->isExceptionApp(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
 
@@ -407,14 +378,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 2310
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 2311
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -445,7 +414,6 @@
 .method public final checkPPRCondition()Z
     .locals 6
 
-    .line 2268
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-static {v0}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$fgetWRITEBACK_ENABLED(Lcom/android/server/chimera/PerProcessNandswap;)Z
@@ -464,7 +432,6 @@
 
     goto/16 :goto_0
 
-    .line 2272
     :cond_0
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -484,14 +451,12 @@
 
     if-ltz v0, :cond_2
 
-    .line 2273
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2274
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -523,7 +488,6 @@
     :cond_1
     return v1
 
-    .line 2276
     :cond_2
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -541,14 +505,12 @@
 
     if-ltz v0, :cond_4
 
-    .line 2277
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 2278
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -565,7 +527,6 @@
 
     move-result-object p0
 
-    .line 2279
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -576,22 +537,18 @@
 
     move-result-object p0
 
-    .line 2278
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
     return v1
 
-    .line 2283
     :cond_4
     new-instance v0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 2284
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 2285
     iget-object v2, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-virtual {v2, v0}, Lcom/android/server/chimera/PerProcessNandswap;->getSwapFreePercentage(Lcom/android/internal/util/MemInfoReader;)I
@@ -604,14 +561,12 @@
 
     if-ge v2, v3, :cond_6
 
-    .line 2286
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 2287
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -622,7 +577,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2288
     invoke-virtual {v0}, Lcom/android/internal/util/MemInfoReader;->getSwapFreeSizeKb()J
 
     move-result-wide v3
@@ -647,7 +601,6 @@
 
     move-result-object v0
 
-    .line 2287
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
@@ -658,7 +611,6 @@
 
     return p0
 
-    .line 2269
     :cond_7
     :goto_0
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
@@ -667,7 +619,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 2270
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     const-string v0, "Nandswap check_ppr:  deny reason: disabled"
@@ -681,7 +632,6 @@
 .method public final checkTimeoutPPRForCachedApp(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
     .locals 4
 
-    .line 2140
     iget-wide v0, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->lastNandswapTime:J
 
     const-wide/16 v2, 0x0
@@ -694,13 +644,11 @@
 
     return v0
 
-    .line 2142
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 2143
     iget-wide p0, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->lastNandswapTime:J
 
     sub-long/2addr v1, p0
@@ -725,7 +673,6 @@
 
     const/4 v0, 0x0
 
-    .line 2340
     invoke-virtual {p0, p1, v0}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->changePPRState(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;I)V
 
     return-void
@@ -734,7 +681,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 8
 
-    .line 1949
     :try_start_0
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -752,7 +698,6 @@
 
     goto/16 :goto_6
 
-    .line 1952
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
     :try_end_0
@@ -770,13 +715,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2110
     :try_start_1
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     goto/16 :goto_5
 
-    .line 1970
     :pswitch_0
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isWritebackOnFreezeEnabled()Z
 
@@ -786,7 +729,6 @@
 
     return-void
 
-    .line 1973
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -796,7 +738,6 @@
 
     return-void
 
-    .line 1977
     :cond_2
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -804,7 +745,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1978
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -831,13 +771,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1980
     :cond_3
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->tryToNandswapByFreezeEvent(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
 
     goto/16 :goto_7
 
-    .line 1955
     :pswitch_1
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isWritebackOnBGEnabled()Z
 
@@ -847,7 +785,6 @@
 
     return-void
 
-    .line 1958
     :cond_4
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -857,7 +794,6 @@
 
     return-void
 
-    .line 1962
     :cond_5
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -865,7 +801,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 1963
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -892,13 +827,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1965
     :cond_6
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->tryToNandswapByBgEvent(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
 
     goto/16 :goto_7
 
-    .line 1985
     :pswitch_2
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isPsiEnabled()Z
 
@@ -908,7 +841,6 @@
 
     return-void
 
-    .line 1988
     :cond_7
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -916,10 +848,8 @@
 
     if-eqz v0, :cond_8
 
-    .line 1989
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 1990
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -938,19 +868,16 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1992
     :cond_8
     invoke-virtual {p0}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->tryToNandswapByPsiEvent()V
 
     goto/16 :goto_7
 
-    .line 2066
     :pswitch_3
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/String;
 
-    .line 2070
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->LAUNCHER_APP_PKGNAME:[Ljava/lang/String;
 
     array-length v1, v0
@@ -962,7 +889,6 @@
 
     aget-object v6, v0, v3
 
-    .line 2071
     invoke-virtual {p1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -982,14 +908,12 @@
     :goto_1
     if-nez v4, :cond_c
 
-    .line 2077
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 2078
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1014,7 +938,6 @@
     :cond_c
     move v0, v5
 
-    .line 2084
     :goto_2
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->recentEntryProcessNames:Ljava/util/ArrayList;
 
@@ -1024,7 +947,6 @@
 
     if-ge v0, v1, :cond_e
 
-    .line 2085
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->recentEntryProcessNames:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1033,14 +955,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 2086
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_d
 
-    .line 2088
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->recentEntryProcessNames:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1054,7 +974,6 @@
 
     goto :goto_2
 
-    .line 2093
     :cond_e
     :goto_3
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->recentEntryProcessNames:Ljava/util/ArrayList;
@@ -1063,14 +982,12 @@
 
     if-nez v4, :cond_10
 
-    .line 2095
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_f
 
-    .line 2096
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1092,7 +1009,6 @@
     :cond_f
     return-void
 
-    .line 2100
     :cond_10
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->recentEntryProcessNames:Ljava/util/ArrayList;
 
@@ -1102,12 +1018,10 @@
 
     if-le v0, v2, :cond_11
 
-    .line 2101
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->recentEntryProcessNames:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2103
     :cond_11
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -1115,7 +1029,6 @@
 
     if-eqz v0, :cond_1d
 
-    .line 2104
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1136,11 +1049,9 @@
 
     goto/16 :goto_7
 
-    .line 2047
     :pswitch_4
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2048
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     iget-object v0, v0, Lcom/android/server/chimera/PerProcessNandswap;->mNandswapMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -1159,7 +1070,6 @@
 
     return-void
 
-    .line 2053
     :cond_12
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1169,7 +1079,6 @@
 
     if-eqz v1, :cond_13
 
-    .line 2054
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-static {v1}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$fgetmKeyApps(Lcom/android/server/chimera/PerProcessNandswap;)Ljava/util/Map;
@@ -1180,7 +1089,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2057
     :cond_13
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -1188,7 +1096,6 @@
 
     if-eqz v1, :cond_14
 
-    .line 2058
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1215,7 +1122,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2061
     :cond_14
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1229,11 +1135,9 @@
 
     goto/16 :goto_7
 
-    .line 2012
     :pswitch_5
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 2013
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     iget-object v0, v0, Lcom/android/server/chimera/PerProcessNandswap;->mNandswapMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -1252,7 +1156,6 @@
 
     return-void
 
-    .line 2018
     :cond_15
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1262,7 +1165,6 @@
 
     if-eqz v1, :cond_16
 
-    .line 2019
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$sfgetSTATUS_ALREADY_PPN()Ljava/lang/Integer;
 
     move-result-object v1
@@ -1295,7 +1197,6 @@
 
     if-nez v1, :cond_16
 
-    .line 2020
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-static {v1}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$fgetmKeyApps(Lcom/android/server/chimera/PerProcessNandswap;)Ljava/util/Map;
@@ -1310,7 +1211,6 @@
 
     invoke-interface {v1, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2024
     :cond_16
     iget v1, v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->ppnState:I
 
@@ -1322,7 +1222,6 @@
 
     if-ne v1, v2, :cond_1d
 
-    .line 2027
     :cond_17
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -1330,7 +1229,6 @@
 
     if-eqz v1, :cond_18
 
-    .line 2028
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1355,7 +1253,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2031
     :cond_18
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isPrefetchActionEnabled()Z
 
@@ -1363,7 +1260,6 @@
 
     if-eqz v1, :cond_1a
 
-    .line 2032
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1384,55 +1280,44 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2033
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$sfgetFAST_MADVISE_ENABLED()Z
 
     move-result v1
 
     if-eqz v1, :cond_19
 
-    .line 2034
     invoke-static {p1}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$smprefetchProcessFast(I)J
 
     goto :goto_4
 
-    .line 2036
     :cond_19
     invoke-static {p1}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$smprefetchProcess(I)J
 
-    .line 2041
     :cond_1a
     :goto_4
     invoke-virtual {p0, v0, v5}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->changePPRState(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;I)V
 
     goto :goto_7
 
-    .line 1997
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;
 
-    .line 1998
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 1999
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    .line 2000
     iget-object v2, v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->processName:Ljava/lang/String;
 
-    .line 2001
     iget v4, v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->pid:I
 
-    .line 2003
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v5
 
     if-eqz v5, :cond_1b
 
-    .line 2004
     iget-object v5, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1467,13 +1352,11 @@
 
     invoke-static {v5, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2008
     :cond_1b
     invoke-virtual {p0, v0, v1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->changePPRState(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;I)V
 
     goto :goto_7
 
-    .line 2110
     :goto_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1504,7 +1387,6 @@
     :catch_0
     move-exception p0
 
-    .line 2114
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1d
@@ -1526,7 +1408,6 @@
 .method public final isExceptionApp(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
     .locals 5
 
-    .line 2153
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$sfgetNANDSWAP_EXCEPTION_PKGNAMES()[Ljava/lang/String;
 
     move-result-object p0
@@ -1542,7 +1423,6 @@
 
     aget-object v3, p0, v2
 
-    .line 2154
     iget-object v4, p1, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;->processName:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1568,7 +1448,6 @@
 .method public final startNandswapProcess(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
     .locals 2
 
-    .line 2319
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-static {v0}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$fgetmPendingNandswapActivityApp(Lcom/android/server/chimera/PerProcessNandswap;)Ljava/util/ArrayList;
@@ -1577,7 +1456,6 @@
 
     monitor-enter v0
 
-    .line 2320
     :try_start_0
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1587,12 +1465,10 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2321
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2322
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap;->mNandswapHandler:Landroid/os/Handler;
@@ -1610,7 +1486,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2321
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1622,7 +1497,6 @@
 .method public final tryToNandswapByBgEvent(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
     .locals 2
 
-    .line 2164
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->checkCanDoPPRForCachedApp(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
 
@@ -1632,7 +1506,6 @@
 
     return-void
 
-    .line 2167
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->tryToNandswapProcess(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
 
@@ -1640,14 +1513,12 @@
 
     if-nez v0, :cond_1
 
-    .line 2168
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2169
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1683,7 +1554,6 @@
     :catch_0
     move-exception p0
 
-    .line 2172
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -1694,7 +1564,6 @@
 .method public final tryToNandswapByFreezeEvent(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
     .locals 2
 
-    .line 2178
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->checkCanDoPPRForCachedApp(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
 
@@ -1704,7 +1573,6 @@
 
     return-void
 
-    .line 2181
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->tryToNandswapProcess(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
 
@@ -1712,14 +1580,12 @@
 
     if-nez v0, :cond_1
 
-    .line 2182
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2183
     iget-object p0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1755,7 +1621,6 @@
     :catch_0
     move-exception p0
 
-    .line 2186
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -1766,7 +1631,6 @@
 .method public final tryToNandswapByPsiEvent()V
     .locals 10
 
-    .line 2194
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->checkPPRCondition()Z
 
@@ -1776,7 +1640,6 @@
 
     return-void
 
-    .line 2196
     :cond_0
     iget-object v0, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1790,7 +1653,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 2198
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-static {v1}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/PerProcessNandswap;)Lcom/android/server/chimera/SystemRepository;
@@ -1801,7 +1663,6 @@
 
     move-result-object v1
 
-    .line 2199
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -1817,14 +1678,12 @@
 
     if-lez v4, :cond_4
 
-    .line 2201
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;
 
-    .line 2202
     iget-object v6, v5, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     if-eqz v6, :cond_3
@@ -1838,10 +1697,8 @@
     :cond_1
     const/4 v7, 0x0
 
-    .line 2206
     aget-object v6, v6, v7
 
-    .line 2209
     invoke-static {v6, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v6
@@ -1850,7 +1707,6 @@
 
     goto :goto_1
 
-    .line 2213
     :cond_2
     iget v6, v5, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->flags:I
 
@@ -1858,7 +1714,6 @@
 
     if-lez v6, :cond_3
 
-    .line 2214
     iget-object v6, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-static {v6}, Lcom/android/server/chimera/PerProcessNandswap;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/PerProcessNandswap;)Lcom/android/server/chimera/SystemRepository;
@@ -1877,7 +1732,6 @@
 
     if-lt v6, v7, :cond_3
 
-    .line 2216
     iget v7, v5, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     invoke-virtual {p0, v7}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->checkCanDoPPRForCachedAppPsi(I)Z
@@ -1886,7 +1740,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 2217
     new-instance v7, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;
 
     iget-object v8, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
@@ -1897,7 +1750,6 @@
 
     invoke-direct {v7, v8, v9, v5, v6}, Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;-><init>(Lcom/android/server/chimera/PerProcessNandswap;Ljava/lang/String;II)V
 
-    .line 2218
     invoke-virtual {p0, v7}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->tryToNandswapProcess(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
 
     move-result v5
@@ -1917,7 +1769,6 @@
     :catch_0
     move-exception p0
 
-    .line 2228
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_4
@@ -1927,7 +1778,6 @@
 .method public final tryToNandswapProcess(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
     .locals 4
 
-    .line 2233
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1956,7 +1806,6 @@
 
     move-result-object v0
 
-    .line 2235
     invoke-virtual {p0}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->checkPPRCondition()Z
 
     move-result v1
@@ -1965,12 +1814,10 @@
 
     if-nez v1, :cond_0
 
-    .line 2238
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->denyPPRRequest(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
 
     return v2
 
-    .line 2240
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->checkPPRAppCondition(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Z
 
@@ -1978,12 +1825,10 @@
 
     if-nez v1, :cond_1
 
-    .line 2243
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->denyPPRRequest(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
 
     return v2
 
-    .line 2245
     :cond_1
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
@@ -1995,14 +1840,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 2248
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 2249
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2021,13 +1864,11 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2251
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->denyPPRRequest(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
 
     return v2
 
-    .line 2256
     :cond_3
     invoke-static {}, Lcom/android/server/chimera/PerProcessNandswap;->isDebugEnabled()Z
 
@@ -2035,7 +1876,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 2257
     iget-object v1, p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2054,13 +1894,11 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2259
     :cond_4
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->acceptPPRRequest(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;
 
     move-result-object p1
 
-    .line 2260
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/PerProcessNandswap$NandswapMsgHandler;->startNandswapProcess(Lcom/android/server/chimera/PerProcessNandswap$NandswapRecord;)V
 
     const/4 p0, 0x1

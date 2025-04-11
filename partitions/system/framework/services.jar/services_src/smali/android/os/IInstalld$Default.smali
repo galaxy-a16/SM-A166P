@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,28 +28,24 @@
 .method public cleanupInvalidPackageDirs(Ljava/lang/String;II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public clearAppData(Ljava/lang/String;Ljava/lang/String;IIJ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public clearAppProfiles(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public compileLayouts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -59,21 +54,18 @@
 .method public compressFile(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public controlDexOptBlocking(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public copyKnoxAppData(Ljava/lang/String;ILjava/lang/String;II)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -82,7 +74,6 @@
 .method public copyKnoxCancel(Ljava/lang/String;J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -91,7 +82,6 @@
 .method public copyKnoxChunks(Ljava/lang/String;ILjava/lang/String;IIJJJ)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -100,7 +90,6 @@
 .method public copySystemProfile(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -109,7 +98,6 @@
 .method public createAppData(Landroid/os/CreateAppDataArgs;)Landroid/os/CreateAppDataResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -118,7 +106,6 @@
 .method public createAppDataBatched([Landroid/os/CreateAppDataArgs;)[Landroid/os/CreateAppDataResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -127,7 +114,6 @@
 .method public createEncAppData(Ljava/lang/String;III)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -136,14 +122,12 @@
 .method public createOatDir(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public createProfileSnapshot(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -152,14 +136,12 @@
 .method public createUserData(Ljava/lang/String;III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public deleteKnoxFile(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -168,7 +150,6 @@
 .method public deleteOdex(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)J
     .locals 0
 
-    .line 0
     const-wide/16 p0, 0x0
 
     return-wide p0
@@ -177,56 +158,48 @@
 .method public deleteReferenceProfile(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public destroyAppData(Ljava/lang/String;Ljava/lang/String;IIJ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public destroyAppDataSnapshot(Ljava/lang/String;Ljava/lang/String;IJII)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public destroyAppProfiles(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public destroyCeSnapshotsNotSpecified(Ljava/lang/String;I[I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public destroyProfileSnapshot(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public destroyUserData(Ljava/lang/String;II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public dexopt(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x0
 
     return v0
@@ -235,7 +208,6 @@
 .method public dumpProfiles(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -244,21 +216,18 @@
 .method public fixupAppData(Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public freeCache(Ljava/lang/String;JI)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getAppCrates(Ljava/lang/String;[Ljava/lang/String;I)[Landroid/os/storage/CrateMetadata;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -267,7 +236,6 @@
 .method public getAppSize(Ljava/lang/String;[Ljava/lang/String;III[J[Ljava/lang/String;)[J
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -276,7 +244,6 @@
 .method public getCompressedStats(Ljava/lang/String;[J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -285,7 +252,6 @@
 .method public getDualDARLockstate()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -294,7 +260,6 @@
 .method public getExternalSize(Ljava/lang/String;II[I)[J
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -303,7 +268,6 @@
 .method public getKnoxFileInfo(Ljava/lang/String;)[J
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -312,7 +276,6 @@
 .method public getKnoxScanDir(Ljava/lang/String;JLjava/util/List;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -321,7 +284,6 @@
 .method public getOdexVisibility(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -330,7 +292,6 @@
 .method public getUserCrates(Ljava/lang/String;I)[Landroid/os/storage/CrateMetadata;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -339,7 +300,6 @@
 .method public getUserSize(Ljava/lang/String;II[I)[J
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -348,7 +308,6 @@
 .method public hasDualDARPolicy(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -357,7 +316,6 @@
 .method public hasDualDARPolicyRecursively(Ljava/lang/String;Ljava/util/List;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -366,7 +324,6 @@
 .method public hashSecondaryDexFile(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;I)[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -375,14 +332,12 @@
 .method public invalidateMounts()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public isQuotaSupported(Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -391,21 +346,18 @@
 .method public linkFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public linkNativeLibraryDirectory(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public mergeProfiles(ILjava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -414,21 +366,18 @@
 .method public migrateAppData(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public migrateLegacyObbData()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public migrateSdpDb(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -437,28 +386,24 @@
 .method public moveAb(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public moveCompleteApp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPrivateVolumeRemoved(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public prepareAppProfile(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -467,14 +412,12 @@
 .method public reconcileSdkData(Landroid/os/ReconcileSdkDataArgs;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public reconcileSecondaryDexFile(Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Ljava/lang/String;I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -483,7 +426,6 @@
 .method public removeEncPkgDir(ILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -492,7 +434,6 @@
 .method public removeEncUserDir(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -501,7 +442,6 @@
 .method public removeNotTargetedPreloadApksIfNeeded()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -510,49 +450,42 @@
 .method public restoreAppDataSnapshot(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public restoreconAppData(Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public rmPackageDir(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public rmdex(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public scanApkStats(Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setAppQuota(Ljava/lang/String;IIJ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setDualDARPolicyDir(IILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -561,7 +494,6 @@
 .method public setDualDARPolicyDirRecursively(IILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -570,7 +502,6 @@
 .method public setEviction(IZ)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -579,14 +510,12 @@
 .method public setFirstBoot()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public snapshotAppData(Ljava/lang/String;Ljava/lang/String;III)J
     .locals 0
 
-    .line 0
     const-wide/16 p0, 0x0
 
     return-wide p0
@@ -595,6 +524,5 @@
 .method public tryMountDataMirror(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

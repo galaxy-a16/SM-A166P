@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/knox/custom/HardKeyReport;
     .locals 1
 
-    .line 72
     new-instance p0, Lcom/samsung/android/knox/custom/HardKeyReport;
 
     const/4 v0, 0x0
@@ -33,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 70
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/custom/HardKeyReport$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/knox/custom/HardKeyReport;
 
     move-result-object p0
@@ -44,7 +42,6 @@
 .method public newArray(I)[Lcom/samsung/android/knox/custom/HardKeyReport;
     .locals 0
 
-    .line 75
     new-array p0, p1, [Lcom/samsung/android/knox/custom/HardKeyReport;
 
     return-object p0
@@ -53,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 70
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/custom/HardKeyReport$1;->newArray(I)[Lcom/samsung/android/knox/custom/HardKeyReport;
 
     move-result-object p0

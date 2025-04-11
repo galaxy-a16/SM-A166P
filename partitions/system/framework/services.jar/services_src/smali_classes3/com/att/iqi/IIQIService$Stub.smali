@@ -38,12 +38,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 63
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.att.iqi.IIQIService"
 
-    .line 64
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -61,24 +59,20 @@
     :cond_0
     const-string v0, "com.att.iqi.IIQIService"
 
-    .line 75
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 76
     instance-of v1, v0, Lcom/att/iqi/IIQIService;
 
     if-eqz v1, :cond_1
 
-    .line 77
     check-cast v0, Lcom/att/iqi/IIQIService;
 
     return-object v0
 
-    .line 79
     :cond_1
     new-instance v0, Lcom/att/iqi/IIQIService$Stub$Proxy;
 
@@ -92,7 +86,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
@@ -109,7 +102,6 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 89
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_0
@@ -119,78 +111,63 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 204
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
-    .line 196
     :pswitch_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide p1
 
-    .line 197
     invoke-interface {p0, p1, p2}, Lcom/att/iqi/IIQIService;->setUnlockCode(J)Z
 
     move-result p0
 
-    .line 198
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 199
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 190
     :pswitch_1
     invoke-interface {p0}, Lcom/att/iqi/IIQIService;->disableService()V
 
     goto/16 :goto_0
 
-    .line 185
     :pswitch_2
     invoke-interface {p0}, Lcom/att/iqi/IIQIService;->forceStopService()V
 
     goto/16 :goto_0
 
-    .line 178
     :pswitch_3
     invoke-interface {p0}, Lcom/att/iqi/IIQIService;->getTimestamp()J
 
     move-result-wide p0
 
-    .line 179
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 180
     invoke-virtual {p3, p0, p1}, Landroid/os/Parcel;->writeLong(J)V
 
     goto/16 :goto_0
 
-    .line 170
     :pswitch_4
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
-    .line 171
     invoke-interface {p0, p1}, Lcom/att/iqi/IIQIService;->reportKeyCode([B)Z
 
     move-result p0
 
-    .line 172
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 173
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 163
     :pswitch_5
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -200,12 +177,10 @@
 
     move-result-object p1
 
-    .line 164
     invoke-interface {p0, p1}, Lcom/att/iqi/IIQIService;->unregisterProfileChangedCallback(Lcom/att/iqi/IProfileChangedCallback;)V
 
     goto/16 :goto_0
 
-    .line 156
     :pswitch_6
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -215,12 +190,10 @@
 
     move-result-object p1
 
-    .line 157
     invoke-interface {p0, p1}, Lcom/att/iqi/IIQIService;->registerProfileChangedCallback(Lcom/att/iqi/IProfileChangedCallback;)V
 
     goto :goto_0
 
-    .line 147
     :pswitch_7
     sget-object p1, Lcom/att/iqi/lib/Metric$ID;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -230,7 +203,6 @@
 
     check-cast p1, Lcom/att/iqi/lib/Metric$ID;
 
-    .line 149
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -239,12 +211,10 @@
 
     move-result-object p2
 
-    .line 150
     invoke-interface {p0, p1, p2}, Lcom/att/iqi/IIQIService;->unregisterMetricSourcingCallback(Lcom/att/iqi/lib/Metric$ID;Lcom/att/iqi/IMetricSourcingCallback;)V
 
     goto :goto_0
 
-    .line 138
     :pswitch_8
     sget-object p1, Lcom/att/iqi/lib/Metric$ID;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -254,7 +224,6 @@
 
     check-cast p1, Lcom/att/iqi/lib/Metric$ID;
 
-    .line 140
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -263,12 +232,10 @@
 
     move-result-object p2
 
-    .line 141
     invoke-interface {p0, p1, p2}, Lcom/att/iqi/IIQIService;->registerMetricSourcingCallback(Lcom/att/iqi/lib/Metric$ID;Lcom/att/iqi/IMetricSourcingCallback;)V
 
     goto :goto_0
 
-    .line 129
     :pswitch_9
     sget-object p1, Lcom/att/iqi/lib/Metric$ID;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -278,7 +245,6 @@
 
     check-cast p1, Lcom/att/iqi/lib/Metric$ID;
 
-    .line 131
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -287,12 +253,10 @@
 
     move-result-object p2
 
-    .line 132
     invoke-interface {p0, p1, p2}, Lcom/att/iqi/IIQIService;->unregisterMetricQueryCallback(Lcom/att/iqi/lib/Metric$ID;Lcom/att/iqi/IMetricQueryCallback;)V
 
     goto :goto_0
 
-    .line 120
     :pswitch_a
     sget-object p1, Lcom/att/iqi/lib/Metric$ID;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -302,7 +266,6 @@
 
     check-cast p1, Lcom/att/iqi/lib/Metric$ID;
 
-    .line 122
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -311,12 +274,10 @@
 
     move-result-object p2
 
-    .line 123
     invoke-interface {p0, p1, p2}, Lcom/att/iqi/IIQIService;->registerMetricQueryCallback(Lcom/att/iqi/lib/Metric$ID;Lcom/att/iqi/IMetricQueryCallback;)V
 
     goto :goto_0
 
-    .line 113
     :pswitch_b
     sget-object p1, Lcom/att/iqi/lib/Metric;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -326,12 +287,10 @@
 
     check-cast p1, Lcom/att/iqi/lib/Metric;
 
-    .line 114
     invoke-interface {p0, p1}, Lcom/att/iqi/IIQIService;->submitMetric(Lcom/att/iqi/lib/Metric;)V
 
     goto :goto_0
 
-    .line 104
     :pswitch_c
     sget-object p1, Lcom/att/iqi/lib/Metric$ID;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -341,21 +300,17 @@
 
     check-cast p1, Lcom/att/iqi/lib/Metric$ID;
 
-    .line 105
     invoke-interface {p0, p1}, Lcom/att/iqi/IIQIService;->shouldSubmitMetric(Lcom/att/iqi/lib/Metric$ID;)Z
 
     move-result p0
 
-    .line 106
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 107
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     :goto_0
     return v1
 
-    .line 95
     :cond_1
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

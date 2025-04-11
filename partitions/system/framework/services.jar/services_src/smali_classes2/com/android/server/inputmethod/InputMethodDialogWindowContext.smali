@@ -21,7 +21,6 @@
 .method public get(I)Landroid/content/Context;
     .locals 2
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodDialogWindowContext;->mDialogWindowContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
@@ -32,13 +31,11 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 49
     :cond_0
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object v0
 
-    .line 50
     invoke-virtual {v0, p1}, Landroid/app/ActivityThread;->getSystemUiContext(I)Landroid/app/ContextImpl;
 
     move-result-object p1
@@ -47,12 +44,10 @@
 
     const/4 v1, 0x0
 
-    .line 51
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->createWindowContext(ILandroid/os/Bundle;)Landroid/content/Context;
 
     move-result-object p1
 
-    .line 53
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     const v1, 0x1030223
@@ -61,7 +56,6 @@
 
     iput-object v0, p0, Lcom/android/server/inputmethod/InputMethodDialogWindowContext;->mDialogWindowContext:Landroid/content/Context;
 
-    .line 56
     :cond_1
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodDialogWindowContext;->mDialogWindowContext:Landroid/content/Context;
 

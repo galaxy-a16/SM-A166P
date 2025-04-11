@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/power/PowerManagerService$WakeLock;
 
     invoke-static {p1}, Lcom/android/server/power/PowerManagerService$1;->$r8$lambda$ydKnZi-VXIf4Ge5mfQ4vZPKyAog(Lcom/android/server/power/PowerManagerService$WakeLock;)Z

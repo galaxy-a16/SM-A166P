@@ -14,14 +14,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Ljava/util/concurrent/Callable;)V
     .locals 0
 
-    .line 2277
     invoke-direct {p0, p1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
     return-void
@@ -32,7 +30,6 @@
 .method public getScreenShot()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 2284
     :try_start_0
     invoke-virtual {p0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
 
@@ -52,7 +49,6 @@
     :catch_0
     move-exception p0
 
-    .line 2288
     sget-object v0, Lcom/android/server/smartclip/SpenGestureScreenShotManager$FutureScreenShot;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ExecutionException;->getMessage()Ljava/lang/String;
@@ -66,7 +62,6 @@
     :catch_1
     move-exception p0
 
-    .line 2286
     sget-object v0, Lcom/android/server/smartclip/SpenGestureScreenShotManager$FutureScreenShot;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/InterruptedException;->getMessage()Ljava/lang/String;

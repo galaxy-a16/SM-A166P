@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-static {p1}, Lcom/samsung/android/server/audio/DualA2dpVolumeManager;->$r8$lambda$U4iDc8SCpZHu4tlK-uqZZ8UZ4e4(Ljava/lang/Boolean;)Z

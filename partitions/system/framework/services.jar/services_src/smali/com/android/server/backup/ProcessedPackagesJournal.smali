@@ -13,17 +13,14 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 1
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
-    .line 66
     iput-object p1, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mStateDirectory:Ljava/io/File;
 
     return-void
@@ -34,12 +31,10 @@
 .method public addPackage(Ljava/lang/String;)V
     .locals 4
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 89
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
@@ -49,12 +44,10 @@
 
     if-nez v1, :cond_0
 
-    .line 91
     monitor-exit v0
 
     return-void
 
-    .line 94
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -66,7 +59,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 96
     :try_start_1
     new-instance p0, Ljava/io/RandomAccessFile;
 
@@ -77,7 +69,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 97
     :try_start_2
     invoke-virtual {p0}, Ljava/io/RandomAccessFile;->length()J
 
@@ -85,12 +76,10 @@
 
     invoke-virtual {p0, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    .line 98
     invoke-virtual {p0, p1}, Ljava/io/RandomAccessFile;->writeUTF(Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 99
     :try_start_3
     invoke-virtual {p0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_3
@@ -102,7 +91,6 @@
     :catchall_0
     move-exception v2
 
-    .line 96
     :try_start_4
     invoke-virtual {p0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_4
@@ -126,7 +114,6 @@
     :try_start_6
     const-string p0, "ProcessedPackagesJournal"
 
-    .line 100
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +136,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     :goto_1
     monitor-exit v0
 
@@ -168,12 +154,10 @@
 .method public getPackagesCopy()Ljava/util/Set;
     .locals 2
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 116
     :try_start_0
     new-instance v1, Ljava/util/HashSet;
 
@@ -188,7 +172,6 @@
     :catchall_0
     move-exception p0
 
-    .line 117
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -199,12 +182,10 @@
 .method public hasBeenProcessed(Ljava/lang/String;)Z
     .locals 1
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 83
     :try_start_0
     iget-object p0, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
@@ -219,7 +200,6 @@
     :catchall_0
     move-exception p0
 
-    .line 84
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -230,16 +210,13 @@
 .method public init()V
     .locals 1
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 74
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/backup/ProcessedPackagesJournal;->loadFromDisk()V
 
-    .line 75
     monitor-exit v0
 
     return-void
@@ -259,7 +236,6 @@
 
     const-string v0, "ProcessedPackagesJournal"
 
-    .line 129
     new-instance v1, Ljava/io/File;
 
     iget-object v2, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mStateDirectory:Ljava/io/File;
@@ -268,7 +244,6 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 131
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -277,7 +252,6 @@
 
     return-void
 
-    .line 135
     :cond_0
     :try_start_0
     new-instance v2, Ljava/io/DataInputStream;
@@ -295,14 +269,12 @@
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 138
     :goto_0
     :try_start_1
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 140
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -319,7 +291,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     iget-object v3, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
     invoke-interface {v3, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -331,7 +302,6 @@
     :catchall_0
     move-exception p0
 
-    .line 135
     :try_start_2
     invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
     :try_end_2
@@ -356,7 +326,6 @@
 
     const-string v1, "Error reading processed packages journal"
 
-    .line 147
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :catch_1
@@ -366,18 +335,15 @@
 .method public reset()V
     .locals 3
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 122
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mProcessedPackages:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->clear()V
 
-    .line 123
     new-instance v1, Ljava/io/File;
 
     iget-object p0, p0, Lcom/android/server/backup/ProcessedPackagesJournal;->mStateDirectory:Ljava/io/File;
@@ -386,10 +352,8 @@
 
     invoke-direct {v1, p0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 124
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 125
     monitor-exit v0
 
     return-void

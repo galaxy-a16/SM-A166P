@@ -47,14 +47,12 @@
     :goto_1
     if-nez v0, :cond_3
 
-    .line 92
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->isInstalled()Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 93
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->isHidden()Z
 
     move-result p0
@@ -76,7 +74,6 @@
 .method public static isEnabled(Lcom/android/server/pm/pkg/PackageUserState;Landroid/content/pm/ComponentInfo;J)Z
     .locals 7
 
-    .line 107
     iget-object v0, p1, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-boolean v2, v0, Landroid/content/pm/ApplicationInfo;->enabled:Z
@@ -113,7 +110,6 @@
 
     return v1
 
-    .line 129
     :cond_0
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->getEnabledState()I
 
@@ -146,7 +142,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 139
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->getLastDisableAppCaller()Ljava/lang/String;
 
     move-result-object v0
@@ -167,7 +162,6 @@
 
     if-eqz p3, :cond_4
 
-    .line 140
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->getEnabledComponents()Landroid/util/ArraySet;
 
     move-result-object p1
@@ -188,7 +182,6 @@
 
     goto :goto_0
 
-    .line 142
     :cond_2
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->getDisabledComponents()Landroid/util/ArraySet;
 
@@ -229,7 +222,6 @@
 
     return v4
 
-    .line 162
     :cond_7
     :goto_1
     invoke-interface {p0, p3}, Lcom/android/server/pm/pkg/PackageUserState;->isComponentEnabled(Ljava/lang/String;)Z
@@ -240,7 +232,6 @@
 
     return v1
 
-    .line 164
     :cond_8
     invoke-interface {p0, p3}, Lcom/android/server/pm/pkg/PackageUserState;->isComponentDisabled(Ljava/lang/String;)Z
 
@@ -257,7 +248,6 @@
 .method public static isMatch(Lcom/android/server/pm/pkg/PackageUserState;Landroid/content/pm/ComponentInfo;J)Z
     .locals 9
 
-    .line 41
     iget-object v0, p1, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v0}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
@@ -288,12 +278,10 @@
 .method public static isMatch(Lcom/android/server/pm/pkg/PackageUserState;ZZLcom/android/server/pm/pkg/component/ParsedMainComponent;J)Z
     .locals 8
 
-    .line 48
     invoke-interface {p3}, Lcom/android/server/pm/pkg/component/ParsedMainComponent;->isEnabled()Z
 
     move-result v3
 
-    .line 49
     invoke-interface {p3}, Lcom/android/server/pm/pkg/component/ParsedMainComponent;->isDirectBootAware()Z
 
     move-result v4
@@ -310,7 +298,6 @@
 
     move-wide v6, p4
 
-    .line 48
     invoke-static/range {v0 .. v7}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->isMatch(Lcom/android/server/pm/pkg/PackageUserState;ZZZZLjava/lang/String;J)Z
 
     move-result p0
@@ -348,7 +335,6 @@
 
     move v1, v11
 
-    .line 65
     :goto_0
     invoke-static {p0, v6, v7}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->isAvailable(Lcom/android/server/pm/pkg/PackageUserState;J)Z
 
@@ -360,7 +346,6 @@
 
     if-nez v1, :cond_2
 
-    .line 66
     :cond_1
     invoke-static {v11, v6, v7}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->reportIfDebug(ZJ)Z
 
@@ -379,14 +364,12 @@
 
     move-wide/from16 v4, p6
 
-    .line 69
     invoke-static/range {v0 .. v5}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->isEnabled(Lcom/android/server/pm/pkg/PackageUserState;ZZLjava/lang/String;J)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 70
     invoke-static {v11, v6, v7}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->reportIfDebug(ZJ)Z
 
     move-result v0
@@ -404,7 +387,6 @@
 
     if-nez p1, :cond_4
 
-    .line 75
     invoke-static {v11, v6, v7}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->reportIfDebug(ZJ)Z
 
     move-result v0
@@ -457,7 +439,6 @@
     :cond_7
     move v10, v11
 
-    .line 83
     :cond_8
     :goto_3
     invoke-static {v10, v6, v7}, Lcom/android/server/pm/pkg/PackageUserStateUtils;->reportIfDebug(ZJ)Z
@@ -470,7 +451,6 @@
 .method public static isPackageEnabled(Lcom/android/server/pm/pkg/PackageUserState;Lcom/android/server/pm/pkg/AndroidPackage;)Z
     .locals 1
 
-    .line 173
     invoke-interface {p0}, Lcom/android/server/pm/pkg/PackageUserState;->getEnabledState()I
 
     move-result p0
@@ -491,7 +471,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 182
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->isEnabled()Z
 
     move-result p0
@@ -510,6 +489,5 @@
 .method public static reportIfDebug(ZJ)Z
     .locals 0
 
-    .line 0
     return p0
 .end method

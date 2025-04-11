@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/UserManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/pm/UserManagerService;
@@ -27,7 +26,6 @@
 .method public final onPullAtom(ILjava/util/List;)I
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/UserManagerService$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/UserManagerService;->$r8$lambda$GDCoZapEtTsnmO5b-65d4lG89TA(Lcom/android/server/pm/UserManagerService;ILjava/util/List;)I

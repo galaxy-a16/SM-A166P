@@ -20,7 +20,6 @@
 .method public final getAsBoolean()Z
     .locals 0
 
-    .line 0
     invoke-static {}, Landroid/os/Build;->isDebuggable()Z
 
     move-result p0

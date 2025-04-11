@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/StandaloneModeChanger$1;->$r8$lambda$0UNsrOJ228bHUn2oRmFLnvfHd9g(Ljava/lang/Boolean;)V

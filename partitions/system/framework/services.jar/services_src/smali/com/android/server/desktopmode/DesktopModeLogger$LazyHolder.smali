@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 105
     invoke-static {}, Lcom/android/server/desktopmode/DesktopModeLogger$LazyHolder;->isDmaSupported()Z
 
     move-result v0
@@ -24,7 +23,6 @@
 .method public static isDmaSupported()Z
     .locals 6
 
-    .line 108
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -39,19 +37,16 @@
 
     const-string v2, "com.sec.android.diagmonagent"
 
-    .line 110
     invoke-virtual {v0, v2}, Landroid/content/pm/PackageManagerInternal;->getPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/AndroidPackage;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 112
     invoke-interface {v0}, Lcom/android/server/pm/pkg/AndroidPackage;->getLongVersionCode()J
 
     move-result-wide v2
 
-    .line 113
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;
 
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSKmlWriter;->$r8$lambda$1KzM0EHs-KvB5_NZenB62ZRs4Lc(Lcom/android/server/location/nsflp/NSKmlWriter$SATELLITE_STATE;)Ljava/util/List;

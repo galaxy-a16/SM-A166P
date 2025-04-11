@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/ui/DialogFillUi;)V
     .locals 0
 
-    .line 470
     iput-object p1, p0, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;->this$0:Lcom/android/server/autofill/ui/DialogFillUi;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/ui/DialogFillUi;Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;-><init>(Lcom/android/server/autofill/ui/DialogFillUi;)V
 
     return-void
@@ -36,10 +34,8 @@
 .method public post()V
     .locals 3
 
-    .line 474
     invoke-virtual {p0}, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;->remove()V
 
-    .line 475
     iget-object v0, p0, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;->this$0:Lcom/android/server/autofill/ui/DialogFillUi;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/DialogFillUi;->-$$Nest$fgetmListView(Lcom/android/server/autofill/ui/DialogFillUi;)Landroid/widget/ListView;
@@ -56,7 +52,6 @@
 .method public remove()V
     .locals 1
 
-    .line 479
     iget-object v0, p0, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;->this$0:Lcom/android/server/autofill/ui/DialogFillUi;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/DialogFillUi;->-$$Nest$fgetmListView(Lcom/android/server/autofill/ui/DialogFillUi;)Landroid/widget/ListView;
@@ -71,7 +66,6 @@
 .method public run()V
     .locals 3
 
-    .line 484
     iget-object v0, p0, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;->this$0:Lcom/android/server/autofill/ui/DialogFillUi;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/DialogFillUi;->-$$Nest$fgetmListView(Lcom/android/server/autofill/ui/DialogFillUi;)Landroid/widget/ListView;
@@ -88,7 +82,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 487
     iget-object v0, p0, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;->this$0:Lcom/android/server/autofill/ui/DialogFillUi;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/DialogFillUi;->-$$Nest$fgetmContext(Lcom/android/server/autofill/ui/DialogFillUi;)Landroid/content/Context;
@@ -103,7 +96,6 @@
 
     goto :goto_0
 
-    .line 489
     :cond_0
     new-instance v1, Ljava/util/HashMap;
 
@@ -111,14 +103,12 @@
 
     const-string v2, "count"
 
-    .line 490
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 491
     iget-object v0, p0, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;->this$0:Lcom/android/server/autofill/ui/DialogFillUi;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/DialogFillUi;->-$$Nest$fgetmContext(Lcom/android/server/autofill/ui/DialogFillUi;)Landroid/content/Context;
@@ -135,7 +125,6 @@
 
     move-result-object v0
 
-    .line 495
     :goto_0
     iget-object p0, p0, Lcom/android/server/autofill/ui/DialogFillUi$AnnounceFilterResult;->this$0:Lcom/android/server/autofill/ui/DialogFillUi;
 

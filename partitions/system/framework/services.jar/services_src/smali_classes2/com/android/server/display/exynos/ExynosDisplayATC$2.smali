@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/exynos/ExynosDisplayATC;JJ)V
     .locals 0
 
-    .line 407
     iput-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -24,7 +23,6 @@
 .method public onFinish()V
     .locals 3
 
-    .line 418
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {v0}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fgetmHandler(Lcom/android/server/display/exynos/ExynosDisplayATC;)Landroid/os/Handler;
@@ -33,7 +31,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 419
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {v0}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fgetmHandler(Lcom/android/server/display/exynos/ExynosDisplayATC;)Landroid/os/Handler;
@@ -44,7 +41,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 421
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
@@ -52,12 +48,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fputmCountDownTimerCount(Lcom/android/server/display/exynos/ExynosDisplayATC;I)V
 
-    .line 423
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {v0}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$mcheckDimOperating(Lcom/android/server/display/exynos/ExynosDisplayATC;)V
 
-    .line 424
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {v0}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fgetmDimOperating(Lcom/android/server/display/exynos/ExynosDisplayATC;)I
@@ -68,7 +62,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 425
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {v0}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fgetDEBUG(Lcom/android/server/display/exynos/ExynosDisplayATC;)Z
@@ -79,19 +72,15 @@
 
     const-string v0, "Restart Refresh Timer as dimming started"
 
-    .line 426
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
     :cond_1
     invoke-virtual {p0}, Landroid/os/CountDownTimer;->cancel()V
 
-    .line 428
     invoke-virtual {p0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     goto :goto_0
 
-    .line 431
     :cond_2
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
@@ -101,7 +90,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 432
     iget-object v0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {v0}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fgetmHandler(Lcom/android/server/display/exynos/ExynosDisplayATC;)Landroid/os/Handler;
@@ -112,13 +100,11 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 433
     :cond_3
     sget-boolean v0, Lcom/android/server/display/exynos/ExynosDisplayATC;->TUNE_MODE:Z
 
     if-eqz v0, :cond_4
 
-    .line 434
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,7 +147,6 @@
 .method public onTick(J)V
     .locals 1
 
-    .line 410
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fgetmCountDownTimerCount(Lcom/android/server/display/exynos/ExynosDisplayATC;)I
@@ -174,7 +159,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fputmCountDownTimerCount(Lcom/android/server/display/exynos/ExynosDisplayATC;I)V
 
-    .line 413
     iget-object p1, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {p1}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fgetmHandler(Lcom/android/server/display/exynos/ExynosDisplayATC;)Landroid/os/Handler;
@@ -183,7 +167,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 414
     iget-object p0, p0, Lcom/android/server/display/exynos/ExynosDisplayATC$2;->this$0:Lcom/android/server/display/exynos/ExynosDisplayATC;
 
     invoke-static {p0}, Lcom/android/server/display/exynos/ExynosDisplayATC;->-$$Nest$fgetmHandler(Lcom/android/server/display/exynos/ExynosDisplayATC;)Landroid/os/Handler;

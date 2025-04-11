@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->mContext:Landroid/content/Context;
 
-    .line 62
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-direct {v0, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
@@ -36,7 +33,6 @@
 
     const/4 v0, 0x0
 
-    .line 74
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->dumpTable(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
     return-void
@@ -45,7 +41,6 @@
 .method public dumpTable(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
     .locals 10
 
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,7 +69,6 @@
 
     const-string v0, "generic"
 
-    .line 81
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -89,12 +83,10 @@
 
     const-string/jumbo v3, "value"
 
-    .line 82
     filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 90
     array-length v1, p3
 
     const/4 v3, 0x0
@@ -104,12 +96,10 @@
 
     aget-object v4, p3, v3
 
-    .line 91
     new-instance v9, Landroid/content/ContentValues;
 
     invoke-direct {v9}, Landroid/content/ContentValues;-><init>()V
 
-    .line 92
     invoke-virtual {v9, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v4, p0
@@ -122,7 +112,6 @@
 
     move-object v8, p4
 
-    .line 93
     invoke-virtual/range {v4 .. v9}, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->printColumns(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)V
 
     add-int/lit8 v3, v3, 0x1
@@ -142,7 +131,6 @@
 
     move-object v8, p4
 
-    .line 96
     invoke-virtual/range {v4 .. v9}, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->printColumns(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)V
 
     :cond_1
@@ -152,22 +140,18 @@
 .method public final getBitNumbers(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 145
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 146
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 147
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 148
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -192,7 +176,6 @@
 
     const-string v0, ": "
 
-    .line 150
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -207,7 +190,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 153
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -231,7 +213,6 @@
 
     goto :goto_0
 
-    .line 158
     :cond_2
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -243,14 +224,12 @@
 .method public final printColumns(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)V
     .locals 0
 
-    .line 103
     invoke-virtual {p0, p2, p3, p4, p5}, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->readColumns(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 104
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->write(Ljava/lang/String;)V
 
     :cond_0
@@ -260,14 +239,12 @@
 .method public final readColumns(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Ljava/lang/String;
     .locals 5
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v0, p1, p2, p4}, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->getValues(Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 118
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p4
@@ -281,18 +258,15 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 122
     invoke-static {p3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 123
     :cond_1
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 124
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -310,7 +284,6 @@
 
     check-cast p4, Landroid/content/ContentValues;
 
-    .line 125
     array-length v1, p2
 
     const/4 v2, 0x0
@@ -322,35 +295,28 @@
 
     const-string v4, "   "
 
-    .line 126
     invoke-virtual {p3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 127
     invoke-virtual {p3, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, ": "
 
-    .line 128
     invoke-virtual {p3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 129
     invoke-virtual {p4, v3}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 130
     invoke-virtual {p3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     if-eqz v0, :cond_3
 
-    .line 131
     invoke-interface {v0, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 133
     :try_start_0
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->getBitNumbers(Ljava/lang/String;)Ljava/lang/String;
 
@@ -360,7 +326,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 137
     :catch_0
     :cond_3
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
@@ -373,7 +338,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_4
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
 
@@ -381,7 +345,6 @@
 
     invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
     invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -394,7 +357,6 @@
 
     const/4 v0, 0x0
 
-    .line 109
     invoke-virtual {p0, p1, p2, v0, v0}, Lcom/android/server/enterprise/utils/EnterpriseDumpHelper;->readColumns(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Ljava/lang/String;
 
     move-result-object p0

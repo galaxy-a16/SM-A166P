@@ -27,19 +27,16 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;I)V
     .locals 0
 
-    .line 3956
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3948
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
-    .line 3957
     iput p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mUid:I
 
     return-void
@@ -54,7 +51,6 @@
 
     const-string p1, ""
 
-    .line 3975
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -62,14 +58,12 @@
 
     const-string v0, "*overflow*"
 
-    .line 3976
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 3977
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
     :cond_1
@@ -79,27 +73,22 @@
 .method public cleanup(J)V
     .locals 3
 
-    .line 3982
     iput-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastCleanupTimeMs:J
 
-    .line 3983
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     const/4 p2, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 3984
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 3985
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
-    .line 3988
     :cond_0
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
@@ -109,7 +98,6 @@
 
     if-nez p1, :cond_2
 
-    .line 3991
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p1, v1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -118,7 +106,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3992
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,7 +116,6 @@
 
     iget-object v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
-    .line 3993
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -140,21 +126,17 @@
 
     move-result-object p1
 
-    .line 3992
     invoke-static {v0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3994
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p1, v1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3996
     :cond_1
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 3999
     :cond_2
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
@@ -168,7 +150,6 @@
 
     if-nez p1, :cond_4
 
-    .line 4000
     :cond_3
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -188,7 +169,6 @@
 
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
-    .line 4001
     invoke-virtual {p0, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -199,7 +179,6 @@
 
     move-result-object p0
 
-    .line 4000
     invoke-static {v0, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
@@ -210,7 +189,6 @@
 .method public getMap()Landroid/util/ArrayMap;
     .locals 0
 
-    .line 3961
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     return-object p0
@@ -226,7 +204,6 @@
 
     const-string p1, ""
 
-    .line 4010
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -238,7 +215,6 @@
 
     return-object v0
 
-    .line 4017
     :cond_1
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
@@ -248,7 +224,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 4018
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -257,12 +232,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 4021
     iget-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
     if-nez p2, :cond_2
 
-    .line 4024
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -285,19 +258,16 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4025
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->instantiateObject()Ljava/lang/Object;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 4026
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, v2, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4028
     :cond_2
     iget p0, v0, Landroid/util/MutableInt;->value:I
 
@@ -307,7 +277,6 @@
 
     return-object p2
 
-    .line 4035
     :cond_3
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -315,44 +284,37 @@
 
     move-result v0
 
-    .line 4036
     invoke-static {}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$sfgetMAX_WAKELOCKS_PER_UID()I
 
     move-result v3
 
     if-lt v0, v3, :cond_6
 
-    .line 4039
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
     if-nez v0, :cond_4
 
-    .line 4042
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->instantiateObject()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
-    .line 4043
     iget-object v3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v2, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4045
     :cond_4
     iget-object v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     if-nez v2, :cond_5
 
-    .line 4046
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
-    .line 4048
     :cond_5
     iget-object v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
@@ -362,18 +324,15 @@
 
     invoke-virtual {v2, p1, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4049
     iput-wide p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastOverflowTimeMs:J
 
     return-object v0
 
-    .line 4054
     :cond_6
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->instantiateObject()Ljava/lang/Object;
 
     move-result-object p2
 
-    .line 4055
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -388,7 +347,6 @@
 
     const-string p1, ""
 
-    .line 4063
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
@@ -400,13 +358,11 @@
 
     return-object v0
 
-    .line 4070
     :cond_1
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     if-eqz v0, :cond_3
 
-    .line 4071
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -415,12 +371,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 4074
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
     if-eqz v1, :cond_3
 
-    .line 4076
     iget v2, v0, Landroid/util/MutableInt;->value:I
 
     add-int/lit8 v2, v2, -0x1
@@ -429,18 +383,15 @@
 
     if-gtz v2, :cond_2
 
-    .line 4078
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4079
     iput-wide p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastOverflowFinishTimeMs:J
 
     :cond_2
     return-object v1
 
-    .line 4088
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -448,28 +399,22 @@
 
     const-string v1, "Unable to find object for "
 
-    .line 4089
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4090
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " in uid "
 
-    .line 4091
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4092
     iget p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mUid:I
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, " mapsize="
 
-    .line 4093
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4094
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
@@ -480,25 +425,20 @@
 
     const-string p1, " activeoverflow="
 
-    .line 4095
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4096
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mActiveOverflow:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, " curoverflow="
 
-    .line 4097
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4098
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mCurOverflow:Ljava/lang/Object;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 4100
     iget-wide v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastOverflowTimeMs:J
 
     const-wide/16 v3, 0x0
@@ -509,17 +449,14 @@
 
     const-string p1, " lastOverflowTime="
 
-    .line 4101
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4102
     iget-wide v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastOverflowTimeMs:J
 
     sub-long/2addr v1, p2
 
     invoke-static {v1, v2, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 4104
     :cond_4
     iget-wide v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastOverflowFinishTimeMs:J
 
@@ -529,17 +466,14 @@
 
     const-string p1, " lastOverflowFinishTime="
 
-    .line 4105
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4106
     iget-wide v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastOverflowFinishTimeMs:J
 
     sub-long/2addr v1, p2
 
     invoke-static {v1, v2, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 4108
     :cond_5
     iget-wide v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastClearTimeMs:J
 
@@ -549,17 +483,14 @@
 
     const-string p1, " lastClearTime="
 
-    .line 4109
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4110
     iget-wide v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastClearTimeMs:J
 
     sub-long/2addr v1, p2
 
     invoke-static {v1, v2, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 4112
     :cond_6
     iget-wide v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastCleanupTimeMs:J
 
@@ -569,10 +500,8 @@
 
     const-string p1, " lastCleanupTime="
 
-    .line 4113
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4114
     iget-wide p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$OverflowArrayMap;->mLastCleanupTimeMs:J
 
     sub-long/2addr p0, p2
@@ -582,7 +511,6 @@
     :cond_7
     const-string p0, "BatteryStatsImpl"
 
-    .line 4116
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/usage/AppStandbyController;Landroid/os/Looper;)V
     .locals 0
 
-    .line 2852
     iput-object p1, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
-    .line 2853
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 12
 
-    .line 2858
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x0
@@ -34,13 +31,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2942
     :pswitch_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     goto/16 :goto_3
 
-    .line 2938
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -54,7 +49,6 @@
 
     goto/16 :goto_3
 
-    .line 2929
     :pswitch_2
     iget v0, p1, Landroid/os/Message;->arg2:I
 
@@ -65,7 +59,6 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 2931
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -78,7 +71,6 @@
 
     goto/16 :goto_3
 
-    .line 2933
     :cond_1
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -92,7 +84,6 @@
 
     goto/16 :goto_3
 
-    .line 2924
     :pswitch_3
     iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -108,17 +99,14 @@
 
     iget-object p0, v1, Lcom/android/server/usage/AppStandbyController;->mInjector:Lcom/android/server/usage/AppStandbyController$Injector;
 
-    .line 2925
     invoke-virtual {p0}, Lcom/android/server/usage/AppStandbyController$Injector;->elapsedRealtime()J
 
     move-result-wide v5
 
-    .line 2924
     invoke-static/range {v1 .. v6}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$mcheckAndUpdateStandbyState(Lcom/android/server/usage/AppStandbyController;Ljava/lang/String;IIJ)V
 
     goto/16 :goto_3
 
-    .line 2903
     :pswitch_4
     iget-object p1, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -130,12 +118,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2904
     iget-object p1, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {p1}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$mwaitForAdminData(Lcom/android/server/usage/AppStandbyController;)V
 
-    .line 2905
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     const/4 p1, -0x1
@@ -144,7 +130,6 @@
 
     goto/16 :goto_3
 
-    .line 2920
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -152,13 +137,11 @@
 
     goto/16 :goto_3
 
-    .line 2913
     :pswitch_6
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/usage/AppStandbyController$ContentProviderUsageRecord;
 
-    .line 2914
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     iget-object v0, p1, Lcom/android/server/usage/AppStandbyController$ContentProviderUsageRecord;->name:Ljava/lang/String;
@@ -169,12 +152,10 @@
 
     invoke-static {p0, v0, v1, v2}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$mreportContentProviderUsage(Lcom/android/server/usage/AppStandbyController;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 2915
     invoke-virtual {p1}, Lcom/android/server/usage/AppStandbyController$ContentProviderUsageRecord;->recycle()V
 
     goto/16 :goto_3
 
-    .line 2909
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -191,10 +172,8 @@
     :pswitch_8
     const/4 p1, 0x5
 
-    .line 2873
     invoke-virtual {p0, p1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2876
     iget-object v0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     iget-object v0, v0, Lcom/android/server/usage/AppStandbyController;->mInjector:Lcom/android/server/usage/AppStandbyController$Injector;
@@ -203,7 +182,6 @@
 
     move-result-wide v0
 
-    .line 2877
     iget-object v3, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {v3}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmPendingIdleStateChecks(Lcom/android/server/usage/AppStandbyController;)Landroid/util/SparseLongArray;
@@ -212,7 +190,6 @@
 
     monitor-enter v3
 
-    .line 2878
     :try_start_0
     iget-object v4, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -233,7 +210,6 @@
     :goto_0
     if-ltz v4, :cond_4
 
-    .line 2879
     iget-object v2, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {v2}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmPendingIdleStateChecks(Lcom/android/server/usage/AppStandbyController;)Landroid/util/SparseLongArray;
@@ -248,7 +224,6 @@
 
     if-gtz v2, :cond_3
 
-    .line 2882
     iget-object v2, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {v2}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmPendingIdleStateChecks(Lcom/android/server/usage/AppStandbyController;)Landroid/util/SparseLongArray;
@@ -259,7 +234,6 @@
 
     move-result v2
 
-    .line 2883
     iget-object v9, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-virtual {v9, v2}, Lcom/android/server/usage/AppStandbyController;->checkIdleStates(I)Z
@@ -276,14 +250,12 @@
 
     if-eqz v9, :cond_2
 
-    .line 2884
     iget-object v9, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     iget-wide v10, v9, Lcom/android/server/usage/AppStandbyController;->mCheckIdleIntervalMillis:J
 
     add-long/2addr v10, v0
 
-    .line 2885
     invoke-static {v9}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmPendingIdleStateChecks(Lcom/android/server/usage/AppStandbyController;)Landroid/util/SparseLongArray;
 
     move-result-object v9
@@ -294,7 +266,6 @@
 
     goto :goto_1
 
-    .line 2887
     :cond_2
     iget-object v2, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -306,7 +277,6 @@
 
     goto :goto_2
 
-    .line 2892
     :cond_3
     :goto_1
     invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->min(JJ)J
@@ -318,7 +288,6 @@
 
     goto :goto_0
 
-    .line 2894
     :cond_4
     monitor-exit v3
     :try_end_0
@@ -328,7 +297,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 2896
     iget-object v2, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     invoke-static {v2}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$fgetmHandler(Lcom/android/server/usage/AppStandbyController;)Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;
@@ -341,14 +309,12 @@
 
     move-result-object p0
 
-    .line 2897
     invoke-virtual {p0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p0
 
     sub-long/2addr v7, v0
 
-    .line 2896
     invoke-virtual {v2, p0, v7, v8}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_3
@@ -356,7 +322,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2894
     :try_start_1
     monitor-exit v3
     :try_end_1
@@ -364,7 +329,6 @@
 
     throw p0
 
-    .line 2869
     :pswitch_9
     iget-object p0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
@@ -385,13 +349,11 @@
 
     goto :goto_3
 
-    .line 2862
     :pswitch_a
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;
 
-    .line 2863
     iget-object v0, p0, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->this$0:Lcom/android/server/usage/AppStandbyController;
 
     iget-object v1, p1, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->packageName:Ljava/lang/String;
@@ -406,7 +368,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/android/server/usage/AppStandbyController;->-$$Nest$minformListeners(Lcom/android/server/usage/AppStandbyController;Ljava/lang/String;IIIZ)V
 
-    .line 2865
     invoke-virtual {p1}, Lcom/android/server/usage/AppStandbyController$StandbyUpdateRecord;->recycle()V
 
     :cond_6

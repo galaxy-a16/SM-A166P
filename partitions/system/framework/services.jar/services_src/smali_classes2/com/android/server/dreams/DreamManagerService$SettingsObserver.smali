@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/dreams/DreamManagerService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 201
     iput-object p1, p0, Lcom/android/server/dreams/DreamManagerService$SettingsObserver;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
-    .line 202
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 207
     iget-object p1, p0, Lcom/android/server/dreams/DreamManagerService$SettingsObserver;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {p1}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$fgetmLock(Lcom/android/server/dreams/DreamManagerService;)Ljava/lang/Object;
@@ -34,13 +31,11 @@
 
     monitor-enter p1
 
-    .line 208
     :try_start_0
     iget-object p0, p0, Lcom/android/server/dreams/DreamManagerService$SettingsObserver;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {p0}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$mupdateWhenToDreamSettings(Lcom/android/server/dreams/DreamManagerService;)V
 
-    .line 209
     monitor-exit p1
 
     return-void

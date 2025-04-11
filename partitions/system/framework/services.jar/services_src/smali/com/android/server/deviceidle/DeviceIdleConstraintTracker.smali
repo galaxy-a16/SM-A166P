@@ -17,21 +17,16 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 45
     iput-boolean v0, p0, Lcom/android/server/deviceidle/DeviceIdleConstraintTracker;->active:Z
 
-    .line 51
     iput-boolean v0, p0, Lcom/android/server/deviceidle/DeviceIdleConstraintTracker;->monitoring:Z
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/deviceidle/DeviceIdleConstraintTracker;->name:Ljava/lang/String;
 
-    .line 55
     iput p2, p0, Lcom/android/server/deviceidle/DeviceIdleConstraintTracker;->minState:I
 
     return-void

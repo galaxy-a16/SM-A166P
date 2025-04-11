@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsParameters()[[I
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
     return-object v0
@@ -36,7 +35,6 @@
 
     new-array v1, v0, [I
 
-    .line 48
     fill-array-data v1, :array_0
 
     new-array v2, v0, [I
@@ -77,19 +75,16 @@
 
     const/4 v0, 0x2
 
-    .line 59
     sput v0, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->IDX_DYNAMIC_REENTRY:I
 
     const/4 v0, 0x1
 
-    .line 60
     sput v0, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->IDX_DYNAMIC_PROTECT:I
 
     const/4 v0, 0x3
 
     new-array v1, v0, [F
 
-    .line 61
     fill-array-data v1, :array_8
 
     new-array v2, v0, [F
@@ -295,7 +290,6 @@
 
     move v1, v0
 
-    .line 146
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
@@ -309,7 +303,6 @@
 
     const/16 p0, 0x8
 
-    .line 148
     aget p0, v2, p0
 
     return p0
@@ -332,7 +325,6 @@
 
     move v1, v0
 
-    .line 128
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
@@ -346,7 +338,6 @@
 
     const/4 p0, 0x6
 
-    .line 130
     aget p0, v2, p0
 
     return p0
@@ -369,7 +360,6 @@
 
     move v1, v0
 
-    .line 137
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
@@ -383,7 +373,6 @@
 
     const/4 p0, 0x7
 
-    .line 139
     aget p0, v2, p0
 
     return p0
@@ -406,7 +395,6 @@
 
     move v1, v0
 
-    .line 101
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sDynamicParameters:[[F
 
@@ -426,7 +414,6 @@
 
     if-ltz v3, :cond_0
 
-    .line 103
     sget p0, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->IDX_DYNAMIC_PROTECT:I
 
     aget p0, v2, p0
@@ -451,7 +438,6 @@
 
     move v1, v0
 
-    .line 92
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
@@ -465,7 +451,6 @@
 
     const/4 p0, 0x3
 
-    .line 94
     aget p0, v2, p0
 
     return p0
@@ -488,7 +473,6 @@
 
     move v1, v0
 
-    .line 83
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
@@ -502,7 +486,6 @@
 
     const/4 p0, 0x2
 
-    .line 85
     aget p0, v2, p0
 
     return p0
@@ -525,7 +508,6 @@
 
     move v1, v0
 
-    .line 119
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
@@ -539,7 +521,6 @@
 
     const/4 p0, 0x5
 
-    .line 121
     aget p0, v2, p0
 
     return p0
@@ -562,7 +543,6 @@
 
     move v1, v0
 
-    .line 110
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
@@ -572,7 +552,6 @@
 
     if-lez v2, :cond_1
 
-    .line 111
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sDynamicParameters:[[F
 
     aget-object v2, v2, v1
@@ -585,7 +564,6 @@
 
     if-ltz v3, :cond_0
 
-    .line 112
     sget p0, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->IDX_DYNAMIC_REENTRY:I
 
     aget p0, v2, p0
@@ -610,7 +588,6 @@
 
     move v1, v0
 
-    .line 73
     :goto_0
     sget-object v2, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->sParameters:[[I
 
@@ -624,7 +601,6 @@
 
     const/4 p0, 0x1
 
-    .line 76
     aget p0, v2, p0
 
     return p0

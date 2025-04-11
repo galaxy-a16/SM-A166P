@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 47
     new-instance v0, Ljava/io/PrintWriter;
 
     new-instance v1, Landroid/util/LogWriter;

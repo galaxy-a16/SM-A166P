@@ -9,7 +9,6 @@
 
     const/4 p0, 0x1
 
-    .line 294
     invoke-static {p1, p0}, Landroid/hardware/health/V2_0/IHealth;->getService(Ljava/lang/String;Z)Landroid/hardware/health/V2_0/IHealth;
 
     move-result-object p0

@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/pm/StagingManager;Landroid/content/pm/IStagedApexObserver;)V
     .locals 0
 
-    .line 190
     iput-object p1, p0, Lcom/android/server/pm/StagingManager$1;->this$0:Lcom/android/server/pm/StagingManager;
 
     iput-object p2, p0, Lcom/android/server/pm/StagingManager$1;->val$observer:Landroid/content/pm/IStagedApexObserver;
@@ -31,7 +30,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/pm/StagingManager$1;->this$0:Lcom/android/server/pm/StagingManager;
 
     invoke-static {v0}, Lcom/android/server/pm/StagingManager;->-$$Nest$fgetmStagedApexObservers(Lcom/android/server/pm/StagingManager;)Ljava/util/List;
@@ -40,7 +38,6 @@
 
     monitor-enter v0
 
-    .line 194
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/StagingManager$1;->this$0:Lcom/android/server/pm/StagingManager;
 
@@ -52,7 +49,6 @@
 
     invoke-interface {v1, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 195
     monitor-exit v0
 
     return-void

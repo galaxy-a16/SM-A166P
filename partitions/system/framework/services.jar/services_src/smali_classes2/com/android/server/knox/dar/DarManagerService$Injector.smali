@@ -21,20 +21,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 210
     iput-object p1, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mContext:Landroid/content/Context;
 
-    .line 211
     new-instance v0, Lcom/android/server/knox/dar/DarDatabaseCache;
 
     invoke-direct {v0, p1}, Lcom/android/server/knox/dar/DarDatabaseCache;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mDarDatabaseCache:Lcom/android/server/knox/dar/DarDatabaseCache;
 
-    .line 212
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {v0, p1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
@@ -43,13 +39,10 @@
 
     const/4 p1, 0x0
 
-    .line 213
     iput-object p1, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mEscrowTokenStateChangeCallback:Lcom/android/internal/widget/LockPatternUtils$EscrowTokenStateChangeCallback;
 
-    .line 214
     iput-object p1, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
 
-    .line 215
     iput-object p1, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mDualDARPolicyService:Lcom/samsung/android/knox/ddar/IDualDARPolicy;
 
     return-void
@@ -60,7 +53,6 @@
 .method public binderClearCallingIdentity()J
     .locals 2
 
-    .line 219
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
@@ -71,7 +63,6 @@
 .method public binderGetCallingPid()I
     .locals 0
 
-    .line 235
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p0
@@ -82,7 +73,6 @@
 .method public binderGetCallingUid()I
     .locals 0
 
-    .line 231
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p0
@@ -93,7 +83,6 @@
 .method public binderRestoreCallingIdentity(J)V
     .locals 0
 
-    .line 223
     invoke-static {p1, p2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -102,7 +91,6 @@
 .method public binderWithCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
     .locals 0
 
-    .line 227
     invoke-static {p1}, Landroid/os/Binder;->withCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
 
     return-void
@@ -111,12 +99,10 @@
 .method public enforceCallerKnoxCoreOrSelf(Ljava/lang/String;)V
     .locals 4
 
-    .line 283
     invoke-virtual {p0}, Lcom/android/server/knox/dar/DarManagerService$Injector;->binderGetCallingPid()I
 
     move-result v0
 
-    .line 284
     invoke-virtual {p0}, Lcom/android/server/knox/dar/DarManagerService$Injector;->binderGetCallingUid()I
 
     move-result p0
@@ -125,7 +111,6 @@
 
     if-eq p0, v1, :cond_1
 
-    .line 285
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
@@ -134,7 +119,6 @@
 
     goto :goto_0
 
-    .line 286
     :cond_0
     new-instance v1, Ljava/lang/SecurityException;
 
@@ -188,7 +172,6 @@
 .method public getActivityManager()Landroid/app/ActivityManager;
     .locals 1
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mContext:Landroid/content/Context;
 
     const-string v0, "activity"
@@ -205,7 +188,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 243
     iget-object p0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -214,7 +196,6 @@
 .method public getDarDatabaseCache()Lcom/android/server/knox/dar/DarDatabaseCache;
     .locals 0
 
-    .line 247
     iget-object p0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mDarDatabaseCache:Lcom/android/server/knox/dar/DarDatabaseCache;
 
     return-object p0
@@ -223,7 +204,6 @@
 .method public getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
     .locals 1
 
-    .line 251
     iget-object p0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mContext:Landroid/content/Context;
 
     const-string v0, "device_policy"
@@ -240,26 +220,22 @@
 .method public getDualDARPolicyService()Ljava/util/Optional;
     .locals 1
 
-    .line 304
     iget-object v0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mDualDARPolicyService:Lcom/samsung/android/knox/ddar/IDualDARPolicy;
 
     if-nez v0, :cond_0
 
     const-string v0, "DualDARPolicy"
 
-    .line 306
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 305
     invoke-static {v0}, Lcom/samsung/android/knox/ddar/IDualDARPolicy$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/knox/ddar/IDualDARPolicy;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mDualDARPolicyService:Lcom/samsung/android/knox/ddar/IDualDARPolicy;
 
-    .line 308
     :cond_0
     iget-object p0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mDualDARPolicyService:Lcom/samsung/android/knox/ddar/IDualDARPolicy;
 
@@ -273,7 +249,6 @@
 .method public getEscrowTokenStateChangeCallback()Lcom/android/internal/widget/LockPatternUtils$EscrowTokenStateChangeCallback;
     .locals 0
 
-    .line 295
     iget-object p0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mEscrowTokenStateChangeCallback:Lcom/android/internal/widget/LockPatternUtils$EscrowTokenStateChangeCallback;
 
     return-object p0
@@ -282,7 +257,6 @@
 .method public getKeyProtector()Lcom/android/server/knox/dar/KeyProtector;
     .locals 0
 
-    .line 255
     invoke-static {}, Lcom/android/server/knox/dar/KeyProtector;->getInstance()Lcom/android/server/knox/dar/KeyProtector;
 
     move-result-object p0
@@ -293,7 +267,6 @@
 .method public getLockPatternUtils()Lcom/android/internal/widget/LockPatternUtils;
     .locals 0
 
-    .line 259
     iget-object p0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object p0
@@ -302,7 +275,6 @@
 .method public getLockSettingsService()Lcom/android/internal/widget/LockSettingsInternal;
     .locals 0
 
-    .line 312
     const-class p0, Lcom/android/internal/widget/LockSettingsInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -317,7 +289,6 @@
 .method public getUserManager()Landroid/os/UserManager;
     .locals 1
 
-    .line 275
     iget-object p0, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "user"
@@ -334,7 +305,6 @@
 .method public getUserManagerInternal()Lcom/android/server/pm/UserManagerInternal;
     .locals 0
 
-    .line 279
     const-class p0, Lcom/android/server/pm/UserManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -349,7 +319,6 @@
 .method public setEscrowTokenStateChangeCallback(Lcom/android/internal/widget/LockPatternUtils$EscrowTokenStateChangeCallback;)V
     .locals 0
 
-    .line 300
     iput-object p1, p0, Lcom/android/server/knox/dar/DarManagerService$Injector;->mEscrowTokenStateChangeCallback:Lcom/android/internal/widget/LockPatternUtils$EscrowTokenStateChangeCallback;
 
     return-void

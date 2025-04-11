@@ -9,20 +9,17 @@
 
     const-string v0, "BackupManagerService"
 
-    .line 123
     :try_start_0
     invoke-static {p0}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
 
     move-result-object p0
 
-    .line 124
     new-instance v1, Ljavax/crypto/spec/PBEKeySpec;
 
     const/16 v2, 0x100
 
     invoke-direct {v1, p1, p2, p3, v2}, Ljavax/crypto/spec/PBEKeySpec;-><init>([C[BII)V
 
-    .line 125
     invoke-virtual {p0, v1}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
 
     move-result-object p0
@@ -35,7 +32,6 @@
     :catch_0
     const-string p0, "PBKDF2 unavailable!"
 
-    .line 129
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -43,7 +39,6 @@
     :catch_1
     const-string p0, "Invalid key spec for PBKDF2!"
 
-    .line 127
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -55,14 +50,12 @@
 .method public static buildPasswordHash(Ljava/lang/String;Ljava/lang/String;[BI)Ljava/lang/String;
     .locals 0
 
-    .line 68
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/backup/utils/PasswordUtils;->buildPasswordKey(Ljava/lang/String;Ljava/lang/String;[BI)Ljavax/crypto/SecretKey;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 70
     invoke-interface {p0}, Ljavax/crypto/SecretKey;->getEncoded()[B
 
     move-result-object p0
@@ -82,7 +75,6 @@
 .method public static buildPasswordKey(Ljava/lang/String;Ljava/lang/String;[BI)Ljavax/crypto/SecretKey;
     .locals 0
 
-    .line 54
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p1
@@ -99,7 +91,6 @@
 
     const/4 v0, 0x1
 
-    .line 79
     invoke-static {p0, v0}, Llibcore/util/HexEncoding;->encodeToString([BZ)Ljava/lang/String;
 
     move-result-object p0
@@ -110,7 +101,6 @@
 .method public static hexToByteArray(Ljava/lang/String;)[B
     .locals 5
 
-    .line 86
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -119,19 +109,16 @@
 
     mul-int/lit8 v1, v0, 0x2
 
-    .line 87
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-ne v1, v2, :cond_1
 
-    .line 91
     new-array v0, v0, [B
 
     const/4 v1, 0x0
 
-    .line 92
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -139,7 +126,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 93
     div-int/lit8 v2, v1, 0x2
 
     add-int/lit8 v3, v1, 0x2
@@ -165,7 +151,6 @@
     :cond_0
     return-object v0
 
-    .line 88
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -179,20 +164,17 @@
 .method public static makeKeyChecksum(Ljava/lang/String;[B[BI)[B
     .locals 3
 
-    .line 111
     array-length v0, p1
 
     new-array v0, v0, [C
 
     const/4 v1, 0x0
 
-    .line 112
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 113
     aget-byte v2, p1, v1
 
     int-to-char v2, v2
@@ -203,13 +185,11 @@
 
     goto :goto_0
 
-    .line 116
     :cond_0
     invoke-static {p0, v0, p2, p3}, Lcom/android/server/backup/utils/PasswordUtils;->buildCharArrayKey(Ljava/lang/String;[C[BI)Ljavax/crypto/SecretKey;
 
     move-result-object p0
 
-    .line 117
     invoke-interface {p0}, Ljava/security/Key;->getEncoded()[B
 
     move-result-object p0

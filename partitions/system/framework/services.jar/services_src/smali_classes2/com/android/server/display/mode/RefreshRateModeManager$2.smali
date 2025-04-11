@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/mode/RefreshRateModeManager;)V
     .locals 0
 
-    .line 191
     iput-object p1, p0, Lcom/android/server/display/mode/RefreshRateModeManager$2;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.action.BATTERY_CHANGED"
 
-    .line 194
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -44,7 +42,6 @@
 
     const/4 v0, 0x0
 
-    .line 197
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -55,7 +52,6 @@
 
     const/4 v0, 0x1
 
-    .line 200
     :cond_1
     iget-object p1, p0, Lcom/android/server/display/mode/RefreshRateModeManager$2;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
@@ -65,7 +61,6 @@
 
     monitor-enter p1
 
-    .line 201
     :try_start_0
     iget-object p2, p0, Lcom/android/server/display/mode/RefreshRateModeManager$2;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
@@ -79,12 +74,10 @@
 
     if-nez p2, :cond_2
 
-    .line 202
     iget-object p0, p0, Lcom/android/server/display/mode/RefreshRateModeManager$2;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-virtual {p0}, Lcom/android/server/display/mode/RefreshRateModeManager;->onBrightnessChangedLocked()V
 
-    .line 204
     :cond_2
     monitor-exit p1
 

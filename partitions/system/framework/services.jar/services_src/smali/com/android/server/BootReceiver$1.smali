@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BootReceiver;)V
     .locals 0
 
-    .line 957
     iput-object p1, p0, Lcom/android/server/BootReceiver$1;->this$0:Lcom/android/server/BootReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public compare(Ljava/io/File;Ljava/io/File;)I
     .locals 0
 
-    .line 960
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide p0
@@ -54,7 +52,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 957
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;

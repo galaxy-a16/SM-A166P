@@ -19,22 +19,16 @@
 .method public constructor <init>(ILjava/lang/String;IJ)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput p1, p0, Lcom/android/server/usage/BroadcastEvent;->mSourceUid:I
 
-    .line 39
     iput-object p2, p0, Lcom/android/server/usage/BroadcastEvent;->mTargetPackage:Ljava/lang/String;
 
-    .line 40
     iput p3, p0, Lcom/android/server/usage/BroadcastEvent;->mTargetUserId:I
 
-    .line 41
     iput-wide p4, p0, Lcom/android/server/usage/BroadcastEvent;->mIdForResponseEvent:J
 
-    .line 42
     new-instance p1, Landroid/util/LongArrayQueue;
 
     invoke-direct {p1}, Landroid/util/LongArrayQueue;-><init>()V
@@ -49,7 +43,6 @@
 .method public addTimestampMs(J)V
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/usage/BroadcastEvent;->mTimestampsMs:Landroid/util/LongArrayQueue;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/LongArrayQueue;->addLast(J)V
@@ -71,18 +64,15 @@
 
     if-eqz p1, :cond_3
 
-    .line 74
     instance-of v2, p1, Lcom/android/server/usage/BroadcastEvent;
 
     if-nez v2, :cond_1
 
     goto :goto_1
 
-    .line 77
     :cond_1
     check-cast p1, Lcom/android/server/usage/BroadcastEvent;
 
-    .line 78
     iget v2, p0, Lcom/android/server/usage/BroadcastEvent;->mSourceUid:I
 
     iget v3, p1, Lcom/android/server/usage/BroadcastEvent;->mSourceUid:I
@@ -107,7 +97,6 @@
 
     iget-object p1, p1, Lcom/android/server/usage/BroadcastEvent;->mTargetPackage:Ljava/lang/String;
 
-    .line 81
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -130,7 +119,6 @@
 .method public getIdForResponseEvent()J
     .locals 2
 
-    .line 58
     iget-wide v0, p0, Lcom/android/server/usage/BroadcastEvent;->mIdForResponseEvent:J
 
     return-wide v0
@@ -139,7 +127,6 @@
 .method public getSourceUid()I
     .locals 0
 
-    .line 46
     iget p0, p0, Lcom/android/server/usage/BroadcastEvent;->mSourceUid:I
 
     return p0
@@ -148,7 +135,6 @@
 .method public getTargetPackage()Ljava/lang/String;
     .locals 0
 
-    .line 50
     iget-object p0, p0, Lcom/android/server/usage/BroadcastEvent;->mTargetPackage:Ljava/lang/String;
 
     return-object p0
@@ -157,7 +143,6 @@
 .method public getTargetUserId()I
     .locals 0
 
-    .line 54
     iget p0, p0, Lcom/android/server/usage/BroadcastEvent;->mTargetUserId:I
 
     return p0
@@ -166,7 +151,6 @@
 .method public getTimestampsMs()Landroid/util/LongArrayQueue;
     .locals 0
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/usage/BroadcastEvent;->mTimestampsMs:Landroid/util/LongArrayQueue;
 
     return-object p0
@@ -175,7 +159,6 @@
 .method public hashCode()I
     .locals 5
 
-    .line 86
     iget v0, p0, Lcom/android/server/usage/BroadcastEvent;->mSourceUid:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -192,7 +175,6 @@
 
     iget-wide v3, p0, Lcom/android/server/usage/BroadcastEvent;->mIdForResponseEvent:J
 
-    .line 87
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -201,7 +183,6 @@
 
     move-result-object p0
 
-    .line 86
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -212,7 +193,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

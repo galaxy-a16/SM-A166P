@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/job/controllers/idle/DeviceIdlenessTracker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/idle/DeviceIdlenessTracker$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/job/controllers/idle/DeviceIdlenessTracker;
@@ -27,7 +26,6 @@
 .method public final onAlarm()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/controllers/idle/DeviceIdlenessTracker$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/job/controllers/idle/DeviceIdlenessTracker;
 
     invoke-static {p0}, Lcom/android/server/job/controllers/idle/DeviceIdlenessTracker;->$r8$lambda$C1VGr0l-TuKK48hYrn97sRiHuHQ(Lcom/android/server/job/controllers/idle/DeviceIdlenessTracker;)V

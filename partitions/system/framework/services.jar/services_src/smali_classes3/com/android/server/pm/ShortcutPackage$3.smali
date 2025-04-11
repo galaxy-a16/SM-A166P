@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutPackage;)V
     .locals 0
 
-    .line 2705
     iput-object p1, p0, Lcom/android/server/pm/ShortcutPackage$3;->this$0:Lcom/android/server/pm/ShortcutPackage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onResult(Landroid/app/appsearch/AppSearchBatchResult;)V
     .locals 1
 
-    .line 2709
     invoke-virtual {p1}, Landroid/app/appsearch/AppSearchBatchResult;->isSuccess()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 2710
     invoke-virtual {p1}, Landroid/app/appsearch/AppSearchBatchResult;->getFailures()Ljava/util/Map;
 
     move-result-object p0
@@ -62,7 +59,6 @@
 
     const-string v0, "ShortcutService"
 
-    .line 2711
     invoke-virtual {p1}, Landroid/app/appsearch/AppSearchResult;->getErrorMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -82,7 +78,6 @@
 
     const-string v0, "Error persisting shortcuts"
 
-    .line 2717
     invoke-static {p0, v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void

@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;)V
     .locals 0
 
-    .line 2592
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$VolumeDownKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     const/16 p1, 0x19
 
-    .line 2593
     invoke-direct {p0, p1}, Lcom/android/server/policy/SingleKeyGestureDetector$SingleKeyRule;-><init>(I)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public onPress(JLandroid/view/KeyEvent;)V
     .locals 0
 
-    .line 2598
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getFlags()I
 
     move-result p1
@@ -40,7 +37,6 @@
 
     return-void
 
-    .line 2601
     :cond_0
     iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$VolumeDownKeyRule;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 

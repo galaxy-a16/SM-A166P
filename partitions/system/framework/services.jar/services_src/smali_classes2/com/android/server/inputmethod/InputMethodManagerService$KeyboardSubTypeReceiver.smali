@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 7803
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$KeyboardSubTypeReceiver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 7806
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 7808
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -45,14 +42,12 @@
 
     const-string p2, "SamsungIME.Subtype"
 
-    .line 7809
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/inputmethod/InputMethodSubtype;
 
-    .line 7810
     iget-object p2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$KeyboardSubTypeReceiver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     iget-object p2, p2, Lcom/android/server/inputmethod/InputMethodManagerService;->mSettings:Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;
@@ -63,14 +58,12 @@
 
     if-nez p2, :cond_0
 
-    .line 7811
     iget-object p2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$KeyboardSubTypeReceiver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     const/4 v0, 0x1
 
     invoke-static {p2, v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->-$$Nest$fputmSubTypeIntentReceived(Lcom/android/server/inputmethod/InputMethodManagerService;Z)V
 
-    .line 7813
     :cond_0
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$KeyboardSubTypeReceiver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -83,7 +76,6 @@
     :catch_0
     move-exception p0
 
-    .line 7815
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

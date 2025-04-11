@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/email/AccountsReceiver;)V
     .locals 0
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/enterprise/email/AccountsReceiver$1;->this$0:Lcom/android/server/enterprise/email/AccountsReceiver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     move-object/from16 v1, p2
 
-    .line 87
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -38,21 +36,18 @@
 
     const/4 v4, 0x0
 
-    .line 88
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
     const-string v5, "com.samsung.android.knox.intent.extra.USER_HANDLE_ID_INTERNAL"
 
-    .line 89
     invoke-virtual {v1, v5, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
     if-nez v2, :cond_0
 
-    .line 91
     invoke-static {}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -63,7 +58,6 @@
 
     return-void
 
-    .line 94
     :cond_0
     invoke-static {}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -87,7 +81,6 @@
 
     const-string v5, "com.samsung.android.knox.intent.action.CBA_INSTALL_STATUS_INTERNAL"
 
-    .line 96
     invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -107,24 +100,20 @@
 
     const/4 v3, 0x1
 
-    .line 98
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 99
     invoke-virtual {v1, v7, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 100
     invoke-virtual {v1, v6, v8, v9}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v5
 
     if-ne v2, v3, :cond_1
 
-    .line 102
     invoke-static {}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -145,7 +134,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     :cond_1
     iget-object v0, v0, Lcom/android/server/enterprise/email/AccountsReceiver$1;->this$0:Lcom/android/server/enterprise/email/AccountsReceiver;
 
@@ -156,7 +144,6 @@
     :cond_2
     const-string v4, "edm.intent.action.sec.MDM_ACCOUNT_SETUP_RESULT"
 
-    .line 106
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -212,7 +199,6 @@
     :try_start_2
     const-string v4, "com.samsung.android.knox.intent.action.MDM_ACCOUNT_SETUP_RESULT_INTERNAL"
 
-    .line 107
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -224,7 +210,6 @@
     :cond_3
     const-string v4, "edm.intent.action.sec.MDM_ACCOUNT_DELETE_RESULT"
 
-    .line 155
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -233,7 +218,6 @@
 
     const-string v4, "com.samsung.android.knox.intent.action.MDM_ACCOUNT_DELETE_RESULT_INTERNAL"
 
-    .line 156
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -243,17 +227,14 @@
     :cond_4
     const/16 v2, 0x8
 
-    .line 157
     invoke-virtual {v1, v13, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 158
     invoke-virtual {v1, v11}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 159
     invoke-virtual {v1, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -262,24 +243,20 @@
 
     const-wide/16 v10, -0x1
 
-    .line 160
     invoke-virtual {v1, v9, v10, v11}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v9
 
-    .line 161
     invoke-virtual {v1, v8, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 162
     invoke-virtual {v1, v6, v9, v10}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v8
 
     if-nez v4, :cond_5
 
-    .line 164
     invoke-virtual {v1, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -287,12 +264,10 @@
     :cond_5
     if-nez v5, :cond_6
 
-    .line 167
     invoke-virtual {v1, v14}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 170
     :cond_6
     invoke-virtual {v15, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -300,7 +275,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 171
     invoke-virtual {v1, v12}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -309,12 +283,10 @@
 
     move-object/from16 v10, v21
 
-    .line 173
     invoke-virtual {v1, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 176
     :cond_7
     new-instance v1, Landroid/content/Intent;
 
@@ -322,32 +294,26 @@
 
     invoke-direct {v1, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 177
     invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 178
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-object/from16 v6, v20
 
-    .line 179
     invoke-virtual {v1, v6, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     const-string v0, "com.samsung.android.knox.intent.extra.SERVER_ADDRESS"
 
-    .line 180
     invoke-virtual {v1, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-object/from16 v0, v18
 
     move/from16 v7, v19
 
-    .line 181
     invoke-virtual {v1, v0, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-object/from16 v10, p0
 
-    .line 182
     iget-object v0, v10, Lcom/android/server/enterprise/email/AccountsReceiver$1;->this$0:Lcom/android/server/enterprise/email/AccountsReceiver;
 
     invoke-static {v0}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/email/AccountsReceiver;)Landroid/content/Context;
@@ -373,7 +339,6 @@
 
     move-object/from16 v12, v17
 
-    .line 185
     invoke-virtual {v1, v12}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
@@ -382,12 +347,10 @@
 
     move-object/from16 v12, v16
 
-    .line 187
     invoke-virtual {v1, v12}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 190
     :cond_9
     new-instance v1, Landroid/content/Intent;
 
@@ -395,29 +358,22 @@
 
     invoke-direct {v1, v13}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 191
     invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 192
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 193
     invoke-virtual {v1, v6, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     move-object/from16 v2, p1
 
-    .line 194
     invoke-virtual {v1, v2, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "com.samsung.android.knox.intent.extra.INCOMING_SERVER_ADDRESS"
 
-    .line 195
     invoke-virtual {v1, v0, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 196
     invoke-virtual {v1, v11, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 197
     iget-object v0, v10, Lcom/android/server/enterprise/email/AccountsReceiver$1;->this$0:Lcom/android/server/enterprise/email/AccountsReceiver;
 
     invoke-static {v0}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/email/AccountsReceiver;)Landroid/content/Context;
@@ -446,17 +402,14 @@
 
     const/16 v4, 0x8
 
-    .line 108
     invoke-virtual {v1, v13, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 109
     invoke-virtual {v1, v11}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 110
     invoke-virtual {v1, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -469,24 +422,20 @@
 
     const-wide/16 v2, -0x1
 
-    .line 111
     invoke-virtual {v1, v9, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v9
 
-    .line 112
     invoke-virtual {v1, v8, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 113
     invoke-virtual {v1, v6, v9, v10}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v3
 
     if-nez v11, :cond_b
 
-    .line 115
     invoke-virtual {v1, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
@@ -494,12 +443,10 @@
     :cond_b
     if-nez v5, :cond_c
 
-    .line 118
     invoke-virtual {v1, v14}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 121
     :cond_c
     invoke-virtual {v15, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -507,7 +454,6 @@
 
     if-eqz v6, :cond_e
 
-    .line 122
     invoke-virtual {v1, v12}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -516,12 +462,10 @@
 
     move-object/from16 v5, v21
 
-    .line 124
     invoke-virtual {v1, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 127
     :cond_d
     new-instance v1, Landroid/content/Intent;
 
@@ -529,34 +473,28 @@
 
     invoke-direct {v1, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 129
     invoke-virtual {v1, v0, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-object v6, v13
 
-    .line 130
     invoke-virtual {v1, v6, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-object/from16 v7, v20
 
-    .line 131
     invoke-virtual {v1, v7, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     const-string v0, "com.samsung.android.knox.intent.extra.SERVER_ADDRESS"
 
-    .line 132
     invoke-virtual {v1, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-object/from16 v0, v18
 
     move/from16 v8, v19
 
-    .line 133
     invoke-virtual {v1, v0, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-object/from16 v9, p0
 
-    .line 134
     iget-object v0, v9, Lcom/android/server/enterprise/email/AccountsReceiver$1;->this$0:Lcom/android/server/enterprise/email/AccountsReceiver;
 
     invoke-static {v0}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/email/AccountsReceiver;)Landroid/content/Context;
@@ -569,7 +507,6 @@
 
     invoke-virtual {v0, v1, v5, v6}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 135
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -600,14 +537,12 @@
 
     if-eqz v1, :cond_10
 
-    .line 137
     new-instance v1, Lcom/android/server/enterprise/email/AccountsReceiver$SMIMEThread;
 
     invoke-direct {v1, v0, v3, v4}, Lcom/android/server/enterprise/email/AccountsReceiver$SMIMEThread;-><init>(Lcom/android/server/enterprise/email/AccountSMIMECertificate;J)V
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 138
     invoke-static {}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -631,7 +566,6 @@
 
     move-object/from16 v12, v23
 
-    .line 141
     invoke-virtual {v1, v12}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
@@ -640,12 +574,10 @@
 
     move-object/from16 v12, v22
 
-    .line 143
     invoke-virtual {v1, v12}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 146
     :cond_f
     new-instance v1, Landroid/content/Intent;
 
@@ -653,29 +585,22 @@
 
     invoke-direct {v1, v13}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 147
     invoke-virtual {v1, v0, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 148
     invoke-virtual {v1, v6, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 149
     invoke-virtual {v1, v7, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     move-object/from16 v0, p1
 
-    .line 150
     invoke-virtual {v1, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "com.samsung.android.knox.intent.extra.INCOMING_SERVER_ADDRESS"
 
-    .line 151
     invoke-virtual {v1, v0, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 152
     invoke-virtual {v1, v10, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 153
     iget-object v0, v9, Lcom/android/server/enterprise/email/AccountsReceiver$1;->this$0:Lcom/android/server/enterprise/email/AccountsReceiver;
 
     invoke-static {v0}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/email/AccountsReceiver;)Landroid/content/Context;
@@ -695,7 +620,6 @@
     :catch_0
     move-exception v0
 
-    .line 201
     invoke-static {}, Lcom/android/server/enterprise/email/AccountsReceiver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1

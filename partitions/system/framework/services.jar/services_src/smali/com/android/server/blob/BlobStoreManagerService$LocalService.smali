@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;)V
     .locals 0
 
-    .line 1940
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreManagerService$LocalService;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-direct {p0}, Lcom/android/server/blob/BlobStoreManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;Lcom/android/server/blob/BlobStoreManagerService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/blob/BlobStoreManagerService$LocalService;-><init>(Lcom/android/server/blob/BlobStoreManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onIdleMaintenance()V
     .locals 0
 
-    .line 1943
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreManagerService$LocalService;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreManagerService;->runIdleMaintenance()V

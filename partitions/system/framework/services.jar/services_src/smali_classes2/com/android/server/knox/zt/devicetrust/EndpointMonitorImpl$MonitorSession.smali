@@ -35,7 +35,6 @@
 .method public static synthetic $r8$lambda$Eje67zAi1BIi2isim37pA87VnKA(Lcom/android/server/knox/zt/devicetrust/data/EndpointData;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->lambda$new$0(Lcom/android/server/knox/zt/devicetrust/data/EndpointData;)Z
 
     move-result p0
@@ -46,18 +45,14 @@
 .method public constructor <init>(Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl;II[ILjava/util/Map;Landroid/os/IZtdListener;Lcom/samsung/android/knox/zt/devicetrust/IEndpointMonitorListener;Ljava/util/function/Predicate;III)V
     .locals 4
 
-    .line 206
     iput-object p1, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->this$0:Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 207
     iput p2, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->type:I
 
-    .line 208
     iput p3, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->requestorUid:I
 
-    .line 209
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -66,7 +61,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 211
     array-length v0, p4
 
     const/4 v1, 0x0
@@ -76,7 +70,6 @@
 
     aget v2, p4, v1
 
-    .line 212
     iget-object v3, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->allowedUids:Ljava/util/Set;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -89,21 +82,17 @@
 
     goto :goto_0
 
-    .line 215
     :cond_0
     iput-object p5, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->targets:Ljava/util/Map;
 
-    .line 216
     iput-object p6, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->uadListener:Landroid/os/IZtdListener;
 
-    .line 217
     iput-object p7, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->listener:Lcom/samsung/android/knox/zt/devicetrust/IEndpointMonitorListener;
 
     if-eqz p8, :cond_1
 
     goto :goto_1
 
-    .line 218
     :cond_1
     new-instance p8, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession$$ExternalSyntheticLambda0;
 
@@ -112,7 +101,6 @@
     :goto_1
     iput-object p8, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->filter:Ljava/util/function/Predicate;
 
-    .line 219
     invoke-static {p1, p2}, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl;->-$$Nest$mcreateMonitorFactory(Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl;I)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object p4
@@ -123,20 +111,16 @@
 
     iput-object p4, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->executor:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 220
     invoke-static {p1, p2, p3}, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl;->-$$Nest$mcreateMonitorRunnable(Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl;II)Ljava/lang/Runnable;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->monitor:Ljava/lang/Runnable;
 
-    .line 221
     iput p9, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->flags:I
 
-    .line 222
     iput p10, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->extras:I
 
-    .line 223
     iput p11, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->mode:I
 
     return-void
@@ -145,7 +129,6 @@
 .method public static synthetic lambda$new$0(Lcom/android/server/knox/zt/devicetrust/data/EndpointData;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -156,7 +139,6 @@
 .method public onEvent(Lcom/android/server/knox/zt/devicetrust/data/EndpointData;)V
     .locals 4
 
-    .line 188
     iget-object v0, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->filter:Ljava/util/function/Predicate;
 
     invoke-interface {v0, p1}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
@@ -167,7 +149,6 @@
 
     return-void
 
-    .line 191
     :cond_0
     iget v0, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->mode:I
 
@@ -185,7 +166,6 @@
 
     goto :goto_0
 
-    .line 199
     :cond_1
     iget-object v0, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->listener:Lcom/samsung/android/knox/zt/devicetrust/IEndpointMonitorListener;
 
@@ -215,7 +195,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_2
     iget-object v0, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->listener:Lcom/samsung/android/knox/zt/devicetrust/IEndpointMonitorListener;
 
@@ -245,7 +224,6 @@
 
     goto :goto_0
 
-    .line 193
     :cond_3
     iget-object v0, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->listener:Lcom/samsung/android/knox/zt/devicetrust/IEndpointMonitorListener;
 
@@ -280,7 +258,6 @@
 .method public startLocked()I
     .locals 9
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->monitor:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
@@ -289,7 +266,6 @@
 
     return p0
 
-    .line 181
     :cond_0
     iget-object v0, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->this$0:Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl;
 
@@ -305,7 +281,6 @@
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
     iget-object v2, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->executor:Ljava/util/concurrent/ScheduledExecutorService;
 
     iget-object v3, p0, Lcom/android/server/knox/zt/devicetrust/EndpointMonitorImpl$MonitorSession;->monitor:Ljava/lang/Runnable;

@@ -20,7 +20,6 @@
 .method public final onSystemReady(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/wm/CoreSaStatusLoggingService;->$r8$lambda$x6Xv_r3tDvFfr-5OteVUCeZz_eo(Lcom/android/server/wm/ActivityTaskManagerService;)V
 
     return-void

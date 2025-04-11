@@ -9,7 +9,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 90
     invoke-virtual {p0}, Ljava/io/File;->length()J
 
     move-result-wide v0
@@ -20,7 +19,6 @@
 
     if-lez v0, :cond_0
 
-    .line 91
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -54,12 +52,10 @@
 
     const-string/jumbo v0, "pm_debug_info.txt"
 
-    .line 68
     invoke-static {v0}, Lcom/samsung/android/server/pm/PmLog;->getDumpFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 69
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -71,10 +67,8 @@
     :cond_0
     const-string v1, "\npm_debug_info.txt:"
 
-    .line 73
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 74
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -86,7 +80,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     :goto_0
     :try_start_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -95,14 +88,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 77
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 79
     :cond_1
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
@@ -114,7 +105,6 @@
     :catchall_0
     move-exception p0
 
-    .line 74
     :try_start_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -141,19 +131,16 @@
 .method public static getDumpFile(Ljava/lang/String;)Ljava/io/File;
     .locals 3
 
-    .line 84
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    .line 85
     new-instance v1, Ljava/io/File;
 
     const-string v2, "log"
 
     invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 86
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -166,7 +153,6 @@
 
     const/4 v0, 0x3
 
-    .line 32
     invoke-static {v0, p0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
     return-void
@@ -177,7 +163,6 @@
 
     const-string/jumbo v0, "pm_debug_info.txt"
 
-    .line 48
     invoke-static {v0, p0}, Lcom/samsung/android/server/pm/PmLog;->logToFile(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -188,7 +173,6 @@
 
     const-string v0, "PackageManager"
 
-    .line 36
     invoke-static {p0, v0}, Lcom/samsung/android/server/pm/PmLog;->logDebugInfoAndLogcat(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -201,11 +185,9 @@
 
     const-string p1, "PackageManager"
 
-    .line 43
     :cond_0
     invoke-static {p1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     invoke-static {p0}, Lcom/samsung/android/server/pm/PmLog;->logDebugInfo(Ljava/lang/String;)V
 
     return-void
@@ -214,7 +196,6 @@
 .method public static logFinishedScanningInfo(Ljava/lang/String;JIII)V
     .locals 3
 
-    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,7 +231,6 @@
     :cond_0
     int-to-long v1, p3
 
-    .line 106
     div-long p0, p1, v1
 
     :goto_0
@@ -266,7 +246,6 @@
 
     move-result-object p0
 
-    .line 103
     invoke-static {p5, p0}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
     return-void
@@ -275,7 +254,6 @@
 .method public static logRoleHoldersChanged(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 97
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -296,7 +274,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 98
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result p0
@@ -307,7 +284,6 @@
 
     move-result-object p0
 
-    .line 97
     invoke-static {p0}, Lcom/samsung/android/server/pm/PmLog;->logDebugInfoAndLogcat(Ljava/lang/String;)V
 
     return-void
@@ -316,12 +292,10 @@
 .method public static logToFile(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
-    .line 52
     invoke-static {p0}, Lcom/samsung/android/server/pm/PmLog;->getDumpFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
 
-    .line 53
     :try_start_0
     new-instance v0, Lcom/android/internal/util/FastPrintWriter;
 
@@ -335,7 +309,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 54
     :try_start_1
     new-instance v1, Ljava/text/SimpleDateFormat;
 
@@ -343,7 +316,6 @@
 
     invoke-direct {v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 55
     new-instance v2, Ljava/util/Date;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -356,7 +328,6 @@
 
     move-result-object v1
 
-    .line 56
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -375,7 +346,6 @@
 
     invoke-virtual {v0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 58
     invoke-virtual {p0}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -384,15 +354,12 @@
 
     const/4 v2, -0x1
 
-    .line 57
     invoke-static {p1, v1, v2, v2}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 61
     invoke-static {p0}, Lcom/samsung/android/server/pm/PmLog;->backupDumpIfNeeded(Ljava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 62
     :try_start_2
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
     :try_end_2
@@ -403,7 +370,6 @@
     :catchall_0
     move-exception p0
 
-    .line 53
     :try_start_3
     invoke-virtual {v0}, Ljava/io/PrintWriter;->close()V
     :try_end_3

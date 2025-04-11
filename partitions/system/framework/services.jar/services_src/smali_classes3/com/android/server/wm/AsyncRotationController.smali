@@ -44,7 +44,6 @@
 .method public static synthetic $r8$lambda$A1aBeI5Na2yunKUVrHn5EAiOl38(Lcom/android/server/wm/AsyncRotationController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/AsyncRotationController;->lambda$scheduleTimeout$2()V
 
     return-void
@@ -53,7 +52,6 @@
 .method public static synthetic $r8$lambda$FwZt4XS_Tmjft095bASPMEGxAXQ(Landroid/view/SurfaceControl$Transaction;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/AsyncRotationController;->lambda$keepAppearanceInPreviousRotation$0(Landroid/view/SurfaceControl$Transaction;)V
 
     return-void
@@ -62,7 +60,6 @@
 .method public static synthetic $r8$lambda$GDyzUKUvEMqZfw3LUtNgz-PrSsM(Lcom/android/server/wm/AsyncRotationController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/AsyncRotationController;->lambda$setupStartTransaction$3()V
 
     return-void
@@ -71,7 +68,6 @@
 .method public static synthetic $r8$lambda$OwOfmKpwmnXzfV5KR0PHxHH7tOg(Lcom/android/server/wm/AsyncRotationController;ILcom/android/server/wm/AnimationAdapter;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/AsyncRotationController;->lambda$finishOp$1(ILcom/android/server/wm/AnimationAdapter;)V
 
     return-void
@@ -80,29 +76,24 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;)V
     .locals 8
 
-    .line 131
     invoke-direct {p0, p1}, Lcom/android/server/wm/FadeAnimationController;-><init>(Lcom/android/server/wm/DisplayContent;)V
 
-    .line 79
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
-    .line 123
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mForceTargetWindowTokens:Ljava/util/ArrayList;
 
-    .line 132
     iget-object v0, p1, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iput-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 133
     invoke-virtual {p1}, Lcom/android/server/wm/ConfigurationContainer;->getWindowConfiguration()Landroid/app/WindowConfiguration;
 
     move-result-object v0
@@ -113,10 +104,8 @@
 
     iput v0, p0, Lcom/android/server/wm/AsyncRotationController;->mOriginalRotation:I
 
-    .line 134
     iget-object v1, p1, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
-    .line 135
     invoke-virtual {v1}, Lcom/android/server/wm/TransitionController;->getCollectingTransitionType()I
 
     move-result v1
@@ -131,12 +120,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 137
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayRotation()Lcom/android/server/wm/DisplayRotation;
 
     move-result-object v1
 
-    .line 138
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object v2
@@ -147,7 +134,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 142
     iget-object v6, v2, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v6, v6, Landroid/view/WindowManager$LayoutParams;->rotationAnimation:I
@@ -156,14 +142,12 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 143
     invoke-virtual {v2}, Lcom/android/server/wm/WindowState;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 144
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayRotation;->getRotation()I
 
     move-result v2
@@ -174,18 +158,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 145
     iput v7, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     goto :goto_0
 
-    .line 147
     :cond_0
     iput v3, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     goto :goto_0
 
-    .line 149
     :cond_1
     iget-object v0, p1, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
@@ -195,16 +176,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 150
     iput v5, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     goto :goto_0
 
-    .line 152
     :cond_2
     iput v4, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
-    .line 167
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getRotationAnimation()Lcom/android/server/wm/ScreenRotationAnimation;
 
@@ -222,37 +200,30 @@
     :cond_4
     iput-boolean v4, p0, Lcom/android/server/wm/AsyncRotationController;->mHasScreenRotationAnimation:Z
 
-    .line 173
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->isKeyguardGoingAway()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 174
     iput-boolean v5, p0, Lcom/android/server/wm/AsyncRotationController;->mHasUnlockTransitionAnimation:Z
 
     :cond_5
     if-eqz v4, :cond_6
 
-    .line 179
     iput-boolean v5, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
-    .line 183
     :cond_6
     invoke-virtual {p1, p0, v5}, Lcom/android/server/wm/WindowContainer;->forAllWindows(Ljava/util/function/Consumer;Z)V
 
-    .line 186
     iget v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     if-nez v0, :cond_7
 
-    .line 187
     iput-boolean v5, p0, Lcom/android/server/wm/AsyncRotationController;->mIsStartTransactionCommitted:Z
 
     goto :goto_1
 
-    .line 188
     :cond_7
     iget-object v0, p1, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
@@ -262,26 +233,22 @@
 
     if-eqz p1, :cond_9
 
-    .line 189
     iget-object p1, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object p1, p1, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
 
-    .line 190
     invoke-virtual {p1}, Lcom/android/server/wm/TransitionController;->getCollectingTransition()Lcom/android/server/wm/Transition;
 
     move-result-object p1
 
     if-eqz p1, :cond_8
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mSyncEngine:Lcom/android/server/wm/BLASTSyncEngine;
 
-    .line 193
     invoke-virtual {p1}, Lcom/android/server/wm/Transition;->getSyncId()I
 
     move-result p1
@@ -292,15 +259,12 @@
 
     if-eqz p1, :cond_8
 
-    .line 194
     iget p1, p1, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mSyncMethod:I
 
     if-ne p1, v5, :cond_8
 
-    .line 195
     iput-boolean v5, p0, Lcom/android/server/wm/AsyncRotationController;->mAlwaysWaitForStartTransaction:Z
 
-    .line 198
     :cond_8
     invoke-virtual {p0}, Lcom/android/server/wm/AsyncRotationController;->keepAppearanceInPreviousRotation()V
 
@@ -312,10 +276,8 @@
 .method public static canBeAsync(Lcom/android/server/wm/WindowToken;)Z
     .locals 2
 
-    .line 255
     iget p0, p0, Lcom/android/server/wm/WindowToken;->windowType:I
 
-    .line 258
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_TRANSIENT_LAUNCH_OVERLAY:Z
 
     const/4 v1, 0x0
@@ -370,14 +332,12 @@
 .method private synthetic lambda$finishOp$1(ILcom/android/server/wm/AnimationAdapter;)V
     .locals 0
 
-    .line 370
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getInsetsStateController()Lcom/android/server/wm/InsetsStateController;
 
     move-result-object p0
 
-    .line 371
     invoke-virtual {p0}, Lcom/android/server/wm/InsetsStateController;->getImeSourceProvider()Lcom/android/server/wm/ImeInsetsSourceProvider;
 
     move-result-object p0
@@ -390,14 +350,12 @@
 .method public static synthetic lambda$keepAppearanceInPreviousRotation$0(Landroid/view/SurfaceControl$Transaction;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method private synthetic lambda$scheduleTimeout$2()V
     .locals 4
 
-    .line 497
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -409,7 +367,6 @@
     :try_start_0
     const-string v1, "AsyncRotation_WindowManager"
 
-    .line 498
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -426,7 +383,6 @@
 
     goto :goto_0
 
-    .line 499
     :cond_0
     iget-object v3, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -437,27 +393,22 @@
 
     move-result-object v2
 
-    .line 498
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x1
 
-    .line 500
     iput-boolean v1, p0, Lcom/android/server/wm/AsyncRotationController;->mIsStartTransactionCommitted:Z
 
-    .line 507
     iget-object v1, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->finishAsyncRotationIfPossible()V
 
-    .line 508
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mWindowPlacerLocked:Lcom/android/server/wm/WindowSurfacePlacer;
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowSurfacePlacer;->performSurfacePlacement()V
 
-    .line 509
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -482,7 +433,6 @@
 .method private synthetic lambda$setupStartTransaction$3()V
     .locals 7
 
-    .line 652
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -496,15 +446,12 @@
 
     const-string v2, "Start transaction is committed"
 
-    .line 653
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x1
 
-    .line 654
     iput-boolean v1, p0, Lcom/android/server/wm/AsyncRotationController;->mIsStartTransactionCommitted:Z
 
-    .line 659
     iget-object v2, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
@@ -518,7 +465,6 @@
     :goto_0
     if-ltz v2, :cond_1
 
-    .line 660
     iget-object v4, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v4, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -533,7 +479,6 @@
 
     const-string v4, "AsyncRotation_WindowManager"
 
-    .line 662
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -544,7 +489,6 @@
 
     iget-object v6, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
-    .line 663
     invoke-virtual {v6, v2}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -561,10 +505,8 @@
 
     move-result-object v5
 
-    .line 662
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 665
     iget-object v4, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v5, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
@@ -577,7 +519,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wm/DisplayContent;->finishAsyncRotation(Lcom/android/server/wm/WindowToken;)V
 
-    .line 668
     sget-boolean v4, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
     if-eqz v4, :cond_0
@@ -589,7 +530,6 @@
 
     goto :goto_0
 
-    .line 680
     :cond_1
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
@@ -597,14 +537,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 681
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mWindowPlacerLocked:Lcom/android/server/wm/WindowSurfacePlacer;
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowSurfacePlacer;->performSurfacePlacement()V
 
-    .line 684
     :cond_2
     monitor-exit v0
     :try_end_0
@@ -632,7 +570,6 @@
 .method public accept(Lcom/android/server/wm/WindowState;)V
     .locals 6
 
-    .line 205
     iget-boolean v0, p1, Lcom/android/server/wm/WindowState;->mHasSurface:Z
 
     if-eqz v0, :cond_0
@@ -645,13 +582,11 @@
 
     if-nez v0, :cond_1
 
-    .line 207
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_FREEFORM_MINIMIZE_CONTAINER:Z
 
     if-eqz v0, :cond_b
 
-    .line 208
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
@@ -668,14 +603,12 @@
 
     if-eqz v0, :cond_b
 
-    .line 210
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 217
     :cond_1
     iget v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
@@ -687,7 +620,6 @@
 
     return-void
 
-    .line 222
     :cond_2
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -703,10 +635,8 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 224
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 225
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object v0
@@ -715,12 +645,10 @@
 
     move-result v0
 
-    .line 226
     iget v1, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     if-nez v1, :cond_4
 
-    .line 227
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     iput-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mNavBarToken:Lcom/android/server/wm/WindowToken;
@@ -729,7 +657,6 @@
 
     return-void
 
-    .line 231
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -739,7 +666,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 232
     invoke-virtual {v0}, Lcom/android/server/wm/RecentsAnimationController;->isNavigationBarAttachedToApp()Z
 
     move-result v0
@@ -753,7 +679,6 @@
 
     if-eq v1, v4, :cond_6
 
-    .line 235
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowContainer;->mTransitionController:Lcom/android/server/wm/TransitionController;
@@ -767,7 +692,6 @@
     :cond_5
     move v3, v5
 
-    .line 239
     :cond_6
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
@@ -782,7 +706,6 @@
 
     return-void
 
-    .line 242
     :cond_7
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
@@ -790,7 +713,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 243
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     new-instance p1, Lcom/android/server/wm/AsyncRotationController$Operation;
@@ -804,7 +726,6 @@
     :cond_8
     if-eq v0, v4, :cond_a
 
-    .line 248
     iget-boolean p1, p1, Lcom/android/server/wm/WindowState;->mForceSeamlesslyRotate:Z
 
     if-eqz p1, :cond_9
@@ -814,7 +735,6 @@
     :cond_9
     move v3, v5
 
-    .line 250
     :cond_a
     :goto_1
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
@@ -832,7 +752,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 69
     check-cast p1, Lcom/android/server/wm/WindowState;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/AsyncRotationController;->accept(Lcom/android/server/wm/WindowState;)V
@@ -843,7 +762,6 @@
 .method public final canDrawBeforeStartTransaction(Lcom/android/server/wm/AsyncRotationController$Operation;)Z
     .locals 0
 
-    .line 908
     iget-boolean p0, p0, Lcom/android/server/wm/AsyncRotationController;->mAlwaysWaitForStartTransaction:Z
 
     if-nez p0, :cond_0
@@ -866,7 +784,6 @@
 .method public completeAll()V
     .locals 2
 
-    .line 415
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -878,7 +795,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 416
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -893,13 +809,11 @@
 
     goto :goto_0
 
-    .line 418
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 419
     invoke-virtual {p0}, Lcom/android/server/wm/AsyncRotationController;->onAllCompleted()V
 
     return-void
@@ -908,7 +822,6 @@
 .method public completeRotation(Lcom/android/server/wm/WindowToken;)Z
     .locals 5
 
-    .line 438
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mIsStartTransactionCommitted:Z
 
     const-string v1, "AsyncRotation_WindowManager"
@@ -919,7 +832,6 @@
 
     if-nez v0, :cond_1
 
-    .line 439
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -930,7 +842,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 445
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -951,13 +862,11 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     iput-boolean v2, p0, Lcom/android/server/wm/AsyncRotationController$Operation;->mIsCompletionPending:Z
 
     :cond_0
     return v3
 
-    .line 450
     :cond_1
     iget v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
@@ -971,7 +880,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 451
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -982,14 +890,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 452
     iget v0, v0, Lcom/android/server/wm/AsyncRotationController$Operation;->mAction:I
 
     const/4 v4, 0x2
 
     if-ne v0, v4, :cond_2
 
-    .line 454
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1012,7 +918,6 @@
 
     return v3
 
-    .line 458
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/wm/AsyncRotationController;->isTargetToken(Lcom/android/server/wm/WindowToken;)Z
 
@@ -1022,7 +927,6 @@
 
     return v3
 
-    .line 459
     :cond_3
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHasScreenRotationAnimation:Z
 
@@ -1032,7 +936,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 460
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1054,10 +957,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 461
     invoke-virtual {p0, p1}, Lcom/android/server/wm/AsyncRotationController;->finishOp(Lcom/android/server/wm/WindowToken;)V
 
-    .line 462
     iget-object p1, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {p1}, Landroid/util/ArrayMap;->isEmpty()Z
@@ -1066,7 +967,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 463
     invoke-virtual {p0}, Lcom/android/server/wm/AsyncRotationController;->onAllCompleted()V
 
     return v2
@@ -1078,10 +978,8 @@
 .method public fadeWindowToken(ZLcom/android/server/wm/WindowToken;I)V
     .locals 2
 
-    .line 876
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
-    .line 878
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/server/wm/AsyncRotationController;->shouldHideImmediately(Lcom/android/server/wm/WindowToken;)Z
 
@@ -1091,12 +989,10 @@
 
     iput-boolean v1, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
-    .line 880
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/wm/FadeAnimationController;->fadeWindowToken(ZLcom/android/server/wm/WindowToken;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 882
     iput-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
     return-void
@@ -1106,14 +1002,12 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
-    .line 883
     throw p1
 .end method
 
 .method public final finishOp(Lcom/android/server/wm/WindowToken;)V
     .locals 6
 
-    .line 359
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1126,7 +1020,6 @@
 
     return-void
 
-    .line 361
     :cond_0
     iget-object v1, v0, Lcom/android/server/wm/AsyncRotationController$Operation;->mDrawTransaction:Landroid/view/SurfaceControl$Transaction;
 
@@ -1134,7 +1027,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 363
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getSyncTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v1
@@ -1145,10 +1037,8 @@
 
     const/4 v1, 0x0
 
-    .line 364
     iput-object v1, v0, Lcom/android/server/wm/AsyncRotationController$Operation;->mDrawTransaction:Landroid/view/SurfaceControl$Transaction;
 
-    .line 365
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1169,7 +1059,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     :cond_1
     iget v1, v0, Lcom/android/server/wm/AsyncRotationController$Operation;->mAction:I
 
@@ -1181,7 +1070,6 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 368
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1202,7 +1090,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     new-instance v1, Lcom/android/server/wm/AsyncRotationController$$ExternalSyntheticLambda1;
 
     invoke-direct {v1, p0}, Lcom/android/server/wm/AsyncRotationController$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/wm/AsyncRotationController;)V
@@ -1216,7 +1103,6 @@
 
     if-ne v1, v3, :cond_3
 
-    .line 373
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1237,7 +1123,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     invoke-virtual {p0, v5, p1, v4}, Lcom/android/server/wm/AsyncRotationController;->fadeWindowToken(ZLcom/android/server/wm/WindowToken;I)V
 
     goto :goto_0
@@ -1245,7 +1130,6 @@
     :cond_3
     if-ne v1, v5, :cond_4
 
-    .line 377
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mRotator:Lcom/android/server/wm/SeamlessRotator;
 
     if-eqz v1, :cond_4
@@ -1254,14 +1138,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 378
     invoke-virtual {v1}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 379
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1282,7 +1164,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mRotator:Lcom/android/server/wm/SeamlessRotator;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getSyncTransaction()Landroid/view/SurfaceControl$Transaction;
@@ -1293,7 +1174,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/wm/SeamlessRotator;->setIdentityMatrix(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
 
-    .line 383
     :cond_4
     :goto_0
     sget-boolean p0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
@@ -1304,7 +1184,6 @@
 
     if-ne p0, v5, :cond_6
 
-    .line 387
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
 
     move-result p0
@@ -1314,7 +1193,6 @@
     :goto_1
     if-ltz p0, :cond_6
 
-    .line 388
     invoke-virtual {p1, p0}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
@@ -1325,7 +1203,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 389
     invoke-virtual {p1, p0}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
@@ -1348,7 +1225,6 @@
 .method public getDrawTransaction(Lcom/android/server/wm/WindowToken;)Landroid/view/SurfaceControl$Transaction;
     .locals 2
 
-    .line 582
     iget v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     const/4 v1, 0x0
@@ -1357,7 +1233,6 @@
 
     return-object v1
 
-    .line 587
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -1369,19 +1244,16 @@
 
     if-eqz p0, :cond_2
 
-    .line 589
     iget-object p1, p0, Lcom/android/server/wm/AsyncRotationController$Operation;->mDrawTransaction:Landroid/view/SurfaceControl$Transaction;
 
     if-nez p1, :cond_1
 
-    .line 590
     new-instance p1, Landroid/view/SurfaceControl$Transaction;
 
     invoke-direct {p1}, Landroid/view/SurfaceControl$Transaction;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/AsyncRotationController$Operation;->mDrawTransaction:Landroid/view/SurfaceControl$Transaction;
 
-    .line 592
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController$Operation;->mDrawTransaction:Landroid/view/SurfaceControl$Transaction;
 
@@ -1394,12 +1266,10 @@
 .method public getFadeInAnimation()Landroid/view/animation/Animation;
     .locals 2
 
-    .line 785
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHasScreenRotationAnimation:Z
 
     if-eqz v0, :cond_1
 
-    .line 790
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
     if-eqz v0, :cond_0
@@ -1418,7 +1288,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 792
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController;->mContext:Landroid/content/Context;
 
     const v0, 0x10a00aa
@@ -1429,7 +1298,6 @@
 
     return-object p0
 
-    .line 797
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController;->mContext:Landroid/content/Context;
 
@@ -1441,7 +1309,6 @@
 
     return-object p0
 
-    .line 799
     :cond_1
     invoke-super {p0}, Lcom/android/server/wm/FadeAnimationController;->getFadeInAnimation()Landroid/view/animation/Animation;
 
@@ -1453,12 +1320,10 @@
 .method public getFadeOutAnimation()Landroid/view/animation/Animation;
     .locals 1
 
-    .line 804
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
     if-eqz v0, :cond_1
 
-    .line 807
     iget p0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     const/4 v0, 0x2
@@ -1472,7 +1337,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 808
     :goto_0
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
@@ -1480,13 +1344,11 @@
 
     return-object v0
 
-    .line 811
     :cond_1
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION:Z
 
     if-eqz v0, :cond_2
 
-    .line 812
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController;->mContext:Landroid/content/Context;
 
     const v0, 0x10a003f
@@ -1497,7 +1359,6 @@
 
     return-object p0
 
-    .line 815
     :cond_2
     invoke-super {p0}, Lcom/android/server/wm/FadeAnimationController;->getFadeOutAnimation()Landroid/view/animation/Animation;
 
@@ -1509,7 +1370,6 @@
 .method public handleFinishDrawing(Lcom/android/server/wm/WindowState;Landroid/view/SurfaceControl$Transaction;)Z
     .locals 6
 
-    .line 730
     iget v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     const/4 v1, 0x0
@@ -1518,7 +1378,6 @@
 
     return v1
 
-    .line 733
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -1536,7 +1395,6 @@
 
     if-nez v0, :cond_2
 
-    .line 739
     iget p2, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     if-ne p2, v2, :cond_1
@@ -1547,21 +1405,18 @@
 
     iget-object p2, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
-    .line 740
     invoke-static {p2}, Lcom/android/server/wm/AsyncRotationController;->canBeAsync(Lcom/android/server/wm/WindowToken;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 741
     iget-object p2, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     const/4 v0, 0x2
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/wm/AsyncRotationController;->hideImmediately(Lcom/android/server/wm/WindowToken;I)V
 
-    .line 742
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1587,7 +1442,6 @@
     :cond_1
     return v1
 
-    .line 746
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1607,12 +1461,10 @@
 
     if-eqz p2, :cond_6
 
-    .line 747
     iget-boolean v3, p0, Lcom/android/server/wm/AsyncRotationController;->mIsSyncDrawRequested:Z
 
     if-eqz v3, :cond_6
 
-    .line 748
     invoke-virtual {p0, v0}, Lcom/android/server/wm/AsyncRotationController;->canDrawBeforeStartTransaction(Lcom/android/server/wm/AsyncRotationController$Operation;)Z
 
     move-result v3
@@ -1621,20 +1473,17 @@
 
     goto :goto_1
 
-    .line 752
     :cond_3
     iget-object v1, v0, Lcom/android/server/wm/AsyncRotationController$Operation;->mDrawTransaction:Landroid/view/SurfaceControl$Transaction;
 
     if-nez v1, :cond_5
 
-    .line 753
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isClientLocal()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 756
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mTransactionFactory:Ljava/util/function/Supplier;
@@ -1647,22 +1496,18 @@
 
     iput-object v1, v0, Lcom/android/server/wm/AsyncRotationController$Operation;->mDrawTransaction:Landroid/view/SurfaceControl$Transaction;
 
-    .line 757
     invoke-virtual {v1, p2}, Landroid/view/SurfaceControl$Transaction;->merge(Landroid/view/SurfaceControl$Transaction;)Landroid/view/SurfaceControl$Transaction;
 
     goto :goto_0
 
-    .line 761
     :cond_4
     iput-object p2, v0, Lcom/android/server/wm/AsyncRotationController$Operation;->mDrawTransaction:Landroid/view/SurfaceControl$Transaction;
 
     goto :goto_0
 
-    .line 764
     :cond_5
     invoke-virtual {v1, p2}, Landroid/view/SurfaceControl$Transaction;->merge(Landroid/view/SurfaceControl$Transaction;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 766
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1672,7 +1517,6 @@
 
     return v2
 
-    .line 749
     :cond_6
     :goto_1
     iget-object p0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -1687,7 +1531,6 @@
 .method public hasFadeOperation(Lcom/android/server/wm/WindowToken;)Z
     .locals 0
 
-    .line 552
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1698,7 +1541,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 553
     iget p0, p0, Lcom/android/server/wm/AsyncRotationController$Operation;->mAction:I
 
     const/4 p1, 0x2
@@ -1719,7 +1561,6 @@
 .method public hideImeImmediately()V
     .locals 2
 
-    .line 518
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v0, v0, Lcom/android/server/wm/DisplayContent;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
@@ -1728,11 +1569,9 @@
 
     return-void
 
-    .line 519
     :cond_0
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
-    .line 520
     invoke-virtual {p0, v0}, Lcom/android/server/wm/AsyncRotationController;->isTargetToken(Lcom/android/server/wm/WindowToken;)Z
 
     move-result v1
@@ -1744,10 +1583,8 @@
     :cond_1
     const/4 v1, 0x3
 
-    .line 521
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/AsyncRotationController;->hideImmediately(Lcom/android/server/wm/WindowToken;I)V
 
-    .line 522
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1776,20 +1613,16 @@
 .method public final hideImmediately(Lcom/android/server/wm/WindowToken;I)V
     .locals 3
 
-    .line 526
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
     const/4 v1, 0x1
 
-    .line 527
     iput-boolean v1, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
-    .line 528
     new-instance v1, Lcom/android/server/wm/AsyncRotationController$Operation;
 
     invoke-direct {v1, p2}, Lcom/android/server/wm/AsyncRotationController$Operation;-><init>(I)V
 
-    .line 529
     iget-object p2, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {p2, p1, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1798,17 +1631,14 @@
 
     const/16 v2, 0x40
 
-    .line 530
     invoke-virtual {p0, p2, p1, v2}, Lcom/android/server/wm/AsyncRotationController;->fadeWindowToken(ZLcom/android/server/wm/WindowToken;I)V
 
-    .line 531
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getAnimationLeash()Landroid/view/SurfaceControl;
 
     move-result-object p1
 
     iput-object p1, v1, Lcom/android/server/wm/AsyncRotationController$Operation;->mLeash:Landroid/view/SurfaceControl;
 
-    .line 532
     iput-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
     return-void
@@ -1817,7 +1647,6 @@
 .method public hideImmediatelyIfNeeded(Lcom/android/server/wm/WindowState;Ljava/lang/String;)V
     .locals 4
 
-    .line 887
     iget-boolean v0, p1, Lcom/android/server/wm/WindowState;->mHasSurface:Z
 
     if-eqz v0, :cond_1
@@ -1832,7 +1661,6 @@
 
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
-    .line 888
     invoke-virtual {p0, v0}, Lcom/android/server/wm/AsyncRotationController;->isTargetToken(Lcom/android/server/wm/WindowToken;)Z
 
     move-result v0
@@ -1845,7 +1673,6 @@
 
     goto :goto_0
 
-    .line 891
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1871,29 +1698,24 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 893
     iget-boolean p2, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
     const/4 v0, 0x1
 
-    .line 894
     iput-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
-    .line 895
     new-instance v0, Lcom/android/server/wm/AsyncRotationController$Operation;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Lcom/android/server/wm/AsyncRotationController$Operation;-><init>(I)V
 
-    .line 896
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     iget-object v2, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     invoke-virtual {v1, v2, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 897
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     const/16 v2, 0x40
@@ -1902,7 +1724,6 @@
 
     invoke-virtual {p0, v3, v1, v2}, Lcom/android/server/wm/AsyncRotationController;->fadeWindowToken(ZLcom/android/server/wm/WindowToken;I)V
 
-    .line 898
     iget-object p1, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getAnimationLeash()Landroid/view/SurfaceControl;
@@ -1911,7 +1732,6 @@
 
     iput-object p1, v0, Lcom/android/server/wm/AsyncRotationController$Operation;->mLeash:Landroid/view/SurfaceControl;
 
-    .line 899
     iput-boolean p2, p0, Lcom/android/server/wm/AsyncRotationController;->mHideImmediately:Z
 
     :cond_1
@@ -1922,7 +1742,6 @@
 .method public isAsync(Lcom/android/server/wm/WindowState;)Z
     .locals 2
 
-    .line 537
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mNavBarToken:Lcom/android/server/wm/WindowToken;
@@ -1937,7 +1756,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 539
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/server/wm/AsyncRotationController;->isTargetToken(Lcom/android/server/wm/WindowToken;)Z
 
@@ -1963,7 +1781,6 @@
 .method public isTargetToken(Lcom/android/server/wm/WindowToken;)Z
     .locals 0
 
-    .line 547
     iget-object p0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -1976,14 +1793,12 @@
 .method public keepAppearanceInPreviousRotation()V
     .locals 7
 
-    .line 292
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mIsSyncDrawRequested:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 296
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -2000,7 +1815,6 @@
 
     if-ltz v0, :cond_4
 
-    .line 297
     iget-object v3, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -2017,7 +1831,6 @@
 
     goto :goto_2
 
-    .line 301
     :cond_1
     iget-object v3, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -2027,7 +1840,6 @@
 
     check-cast v3, Lcom/android/server/wm/WindowToken;
 
-    .line 302
     invoke-virtual {v3}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
 
     move-result v4
@@ -2037,14 +1849,12 @@
     :goto_1
     if-ltz v4, :cond_3
 
-    .line 306
     sget-boolean v5, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
     if-eqz v5, :cond_2
 
     iget-object v5, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
-    .line 307
     invoke-virtual {v5, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -2055,7 +1865,6 @@
 
     if-ne v5, v1, :cond_2
 
-    .line 308
     invoke-virtual {v3, v4}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v5
@@ -2068,7 +1877,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 309
     invoke-virtual {v3, v4}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v5
@@ -2077,7 +1885,6 @@
 
     iput-boolean v1, v5, Lcom/android/server/wm/WindowState;->mHasSeamlessOperation:Z
 
-    .line 313
     :cond_2
     invoke-virtual {v3, v4}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
@@ -2091,7 +1898,6 @@
 
     invoke-virtual {v5, v6}, Lcom/android/server/wm/WindowState;->applyWithNextDraw(Ljava/util/function/Consumer;)V
 
-    .line 314
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2122,13 +1928,11 @@
 
     goto :goto_0
 
-    .line 317
     :cond_4
     iput-boolean v1, p0, Lcom/android/server/wm/AsyncRotationController;->mIsSyncDrawRequested:Z
 
     const-string p0, "Requested to sync draw transaction"
 
-    .line 318
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2141,33 +1945,27 @@
 
     const-string/jumbo v1, "onAllCompleted"
 
-    .line 423
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTimeoutRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 425
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 427
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mOnShowRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    .line 428
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     const/4 v0, 0x0
 
-    .line 429
     iput-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mOnShowRunnable:Ljava/lang/Runnable;
 
     :cond_1
@@ -2177,7 +1975,6 @@
 .method public onTransitionFinished()V
     .locals 4
 
-    .line 690
     iget v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     const/4 v1, 0x2
@@ -2186,7 +1983,6 @@
 
     return-void
 
-    .line 695
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2208,7 +2004,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 697
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
     if-eqz v0, :cond_1
@@ -2221,12 +2016,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 698
     invoke-virtual {p0}, Lcom/android/server/wm/AsyncRotationController;->scheduleTimeout()V
 
     return-void
 
-    .line 704
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -2239,7 +2032,6 @@
     :goto_0
     if-ltz v0, :cond_5
 
-    .line 705
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -2248,21 +2040,18 @@
 
     check-cast v1, Lcom/android/server/wm/WindowToken;
 
-    .line 706
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->isVisible()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 707
     iget-object v2, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v2, v1}, Lcom/android/server/wm/DisplayContent;->finishAsyncRotation(Lcom/android/server/wm/WindowToken;)V
 
     goto :goto_2
 
-    .line 710
     :cond_2
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
 
@@ -2273,7 +2062,6 @@
     :goto_1
     if-ltz v2, :cond_4
 
-    .line 713
     invoke-virtual {v1, v2}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v3
@@ -2286,7 +2074,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 714
     iget-object v2, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v2, v1}, Lcom/android/server/wm/DisplayContent;->finishAsyncRotation(Lcom/android/server/wm/WindowToken;)V
@@ -2304,7 +2091,6 @@
 
     goto :goto_0
 
-    .line 719
     :cond_5
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -2314,7 +2100,6 @@
 
     if-nez v0, :cond_6
 
-    .line 720
     invoke-virtual {p0}, Lcom/android/server/wm/AsyncRotationController;->scheduleTimeout()V
 
     :cond_6
@@ -2324,19 +2109,16 @@
 .method public final scheduleTimeout()V
     .locals 3
 
-    .line 495
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTimeoutRunnable:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
-    .line 496
     new-instance v0, Lcom/android/server/wm/AsyncRotationController$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0}, Lcom/android/server/wm/AsyncRotationController$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/wm/AsyncRotationController;)V
 
     iput-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTimeoutRunnable:Ljava/lang/Runnable;
 
-    .line 512
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -2354,7 +2136,6 @@
 .method public setOnShowRunnable(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 598
     iput-object p1, p0, Lcom/android/server/wm/AsyncRotationController;->mOnShowRunnable:Ljava/lang/Runnable;
 
     return-void
@@ -2363,14 +2144,12 @@
 .method public setupStartTransaction(Landroid/view/SurfaceControl$Transaction;)V
     .locals 8
 
-    .line 606
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mIsStartTransactionCommitted:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 607
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -2383,7 +2162,6 @@
     :goto_0
     if-ltz v0, :cond_6
 
-    .line 608
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -2392,12 +2170,10 @@
 
     check-cast v1, Lcom/android/server/wm/AsyncRotationController$Operation;
 
-    .line 609
     iget-object v2, v1, Lcom/android/server/wm/AsyncRotationController$Operation;->mLeash:Landroid/view/SurfaceControl;
 
     if-eqz v2, :cond_5
 
-    .line 610
     invoke-virtual {v2}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v3
@@ -2406,7 +2182,6 @@
 
     goto/16 :goto_1
 
-    .line 611
     :cond_1
     iget-boolean v3, p0, Lcom/android/server/wm/AsyncRotationController;->mHasScreenRotationAnimation:Z
 
@@ -2420,7 +2195,6 @@
 
     if-ne v1, v3, :cond_3
 
-    .line 617
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
     if-eqz v1, :cond_2
@@ -2437,7 +2211,6 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 620
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2448,7 +2221,6 @@
 
     iget-object v2, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
-    .line 621
     invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -2465,7 +2237,6 @@
 
     move-result-object v1
 
-    .line 620
     invoke-static {v4, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -2473,10 +2244,8 @@
     :cond_2
     const/4 v1, 0x0
 
-    .line 626
     invoke-virtual {p1, v2, v1}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 628
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2507,20 +2276,17 @@
 
     goto :goto_1
 
-    .line 635
     :cond_3
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mRotator:Lcom/android/server/wm/SeamlessRotator;
 
     if-nez v1, :cond_4
 
-    .line 636
     new-instance v1, Lcom/android/server/wm/SeamlessRotator;
 
     iget v3, p0, Lcom/android/server/wm/AsyncRotationController;->mOriginalRotation:I
 
     iget-object v5, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 637
     invoke-virtual {v5}, Lcom/android/server/wm/ConfigurationContainer;->getWindowConfiguration()Landroid/app/WindowConfiguration;
 
     move-result-object v5
@@ -2531,7 +2297,6 @@
 
     iget-object v6, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 638
     invoke-virtual {v6}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object v6
@@ -2542,13 +2307,11 @@
 
     iput-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mRotator:Lcom/android/server/wm/SeamlessRotator;
 
-    .line 641
     :cond_4
     iget-object v1, p0, Lcom/android/server/wm/AsyncRotationController;->mRotator:Lcom/android/server/wm/SeamlessRotator;
 
     invoke-virtual {v1, p1, v2}, Lcom/android/server/wm/SeamlessRotator;->applyTransform(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
 
-    .line 643
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2583,7 +2346,6 @@
 
     goto/16 :goto_0
 
-    .line 651
     :cond_6
     new-instance v0, Landroid/os/HandlerExecutor;
 
@@ -2605,7 +2367,6 @@
 .method public shouldFinishAsyncRotationForSameChanges(Lcom/android/server/wm/Transition;)Z
     .locals 2
 
-    .line 774
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mIsStartTransactionCommitted:Z
 
     if-nez v0, :cond_1
@@ -2614,7 +2375,6 @@
 
     iget-object v1, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 775
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getRotation()I
 
     move-result v1
@@ -2642,7 +2402,6 @@
 .method public shouldFreezeInsetsPosition(Lcom/android/server/wm/WindowState;)Z
     .locals 3
 
-    .line 562
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
     const/4 v1, 0x1
@@ -2655,7 +2414,6 @@
 
     return v1
 
-    .line 568
     :cond_0
     sget v0, Lcom/android/server/wm/TransitionController;->SYNC_METHOD:I
 
@@ -2665,7 +2423,6 @@
 
     return v2
 
-    .line 573
     :cond_1
     iget v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
@@ -2677,7 +2434,6 @@
 
     iget-object p1, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
-    .line 574
     invoke-virtual {p0, p1}, Lcom/android/server/wm/AsyncRotationController;->isTargetToken(Lcom/android/server/wm/WindowToken;)Z
 
     move-result p0
@@ -2696,7 +2452,6 @@
 .method public shouldHideImmediately(Lcom/android/server/wm/WindowToken;)Z
     .locals 3
 
-    .line 848
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
     const/4 v1, 0x1
@@ -2715,14 +2470,12 @@
 
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 853
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/android/server/wm/DisplayPolicy;->mExt:Lcom/android/server/wm/DisplayPolicyExt;
 
-    .line 854
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayPolicyExt;->getTaskbarController()Lcom/android/server/wm/TaskbarController;
 
     move-result-object v0
@@ -2736,7 +2489,6 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 855
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object v0
@@ -2749,7 +2501,6 @@
 
     return v1
 
-    .line 864
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHasUnlockTransitionAnimation:Z
 
@@ -2759,7 +2510,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 868
     invoke-virtual {p1}, Lcom/android/server/wm/WindowToken;->getWindowLayerFromType()I
 
     move-result p1
@@ -2770,7 +2520,6 @@
 
     const/16 v0, 0x7f8
 
-    .line 869
     invoke-interface {p0, v0}, Lcom/android/server/policy/WindowManagerPolicy;->getWindowLayerFromTypeLw(I)I
 
     move-result p0
@@ -2792,7 +2541,6 @@
 .method public start()V
     .locals 7
 
-    .line 477
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -2806,7 +2554,6 @@
     :goto_0
     if-ltz v0, :cond_3
 
-    .line 478
     iget-object v2, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -2815,7 +2562,6 @@
 
     check-cast v2, Lcom/android/server/wm/WindowToken;
 
-    .line 479
     iget-object v3, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -2824,7 +2570,6 @@
 
     check-cast v3, Lcom/android/server/wm/AsyncRotationController$Operation;
 
-    .line 480
     iget v4, v3, Lcom/android/server/wm/AsyncRotationController$Operation;->mAction:I
 
     const/4 v5, 0x2
@@ -2842,12 +2587,10 @@
     :cond_0
     if-ne v4, v1, :cond_2
 
-    .line 485
     iget-object v4, v2, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     iput-object v4, v3, Lcom/android/server/wm/AsyncRotationController$Operation;->mLeash:Landroid/view/SurfaceControl;
 
-    .line 486
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2876,17 +2619,14 @@
 
     const/16 v5, 0x40
 
-    .line 481
     invoke-virtual {p0, v4, v2, v5}, Lcom/android/server/wm/AsyncRotationController;->fadeWindowToken(ZLcom/android/server/wm/WindowToken;I)V
 
-    .line 482
     invoke-virtual {v2}, Lcom/android/server/wm/WindowContainer;->getAnimationLeash()Landroid/view/SurfaceControl;
 
     move-result-object v4
 
     iput-object v4, v3, Lcom/android/server/wm/AsyncRotationController$Operation;->mLeash:Landroid/view/SurfaceControl;
 
-    .line 483
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2913,13 +2653,11 @@
 
     goto :goto_0
 
-    .line 489
     :cond_3
     iget-boolean v0, p0, Lcom/android/server/wm/AsyncRotationController;->mHasScreenRotationAnimation:Z
 
     if-eqz v0, :cond_4
 
-    .line 490
     invoke-virtual {p0}, Lcom/android/server/wm/AsyncRotationController;->scheduleTimeout()V
 
     :cond_4
@@ -2929,7 +2667,6 @@
 .method public updateTargetWindows()V
     .locals 8
 
-    .line 326
     iget v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTransitionOp:I
 
     if-eqz v0, :cond_6
@@ -2940,7 +2677,6 @@
 
     goto :goto_3
 
-    .line 327
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -2955,7 +2691,6 @@
     :goto_0
     if-ltz v0, :cond_6
 
-    .line 328
     iget-object v2, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -2964,7 +2699,6 @@
 
     check-cast v2, Lcom/android/server/wm/AsyncRotationController$Operation;
 
-    .line 329
     iget-boolean v3, v2, Lcom/android/server/wm/AsyncRotationController$Operation;->mIsCompletionPending:Z
 
     if-nez v3, :cond_5
@@ -2975,7 +2709,6 @@
 
     goto :goto_2
 
-    .line 333
     :cond_1
     iget-object v2, p0, Lcom/android/server/wm/AsyncRotationController;->mTargetWindowTokens:Landroid/util/ArrayMap;
 
@@ -2985,7 +2718,6 @@
 
     check-cast v2, Lcom/android/server/wm/WindowToken;
 
-    .line 335
     invoke-virtual {v2}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
 
     move-result v3
@@ -2997,14 +2729,12 @@
     :goto_1
     if-ltz v4, :cond_4
 
-    .line 337
     invoke-virtual {v2, v4}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/server/wm/WindowState;
 
-    .line 339
     invoke-virtual {v6}, Lcom/android/server/wm/WindowState;->isDrawn()Z
 
     move-result v7
@@ -3030,7 +2760,6 @@
     :cond_4
     if-ne v5, v3, :cond_5
 
-    .line 344
     iget-object v3, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v3, v2}, Lcom/android/server/wm/DisplayContent;->finishAsyncRotation(Lcom/android/server/wm/WindowToken;)V

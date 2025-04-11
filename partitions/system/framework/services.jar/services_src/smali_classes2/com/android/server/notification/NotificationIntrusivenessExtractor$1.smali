@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationIntrusivenessExtractor;Ljava/lang/String;J)V
     .locals 0
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/notification/NotificationIntrusivenessExtractor$1;->this$0:Lcom/android/server/notification/NotificationIntrusivenessExtractor;
 
     invoke-direct {p0, p2, p3, p4}, Lcom/android/server/notification/RankingReconsideration;-><init>(Ljava/lang/String;J)V
@@ -24,7 +23,6 @@
 .method public applyChangesLocked(Lcom/android/server/notification/NotificationRecord;)V
     .locals 4
 
-    .line 77
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -43,7 +41,6 @@
 
     const/4 p0, 0x0
 
-    .line 78
     invoke-virtual {p1, p0}, Lcom/android/server/notification/NotificationRecord;->setRecentlyIntrusive(Z)V
 
     :cond_0
@@ -53,6 +50,5 @@
 .method public work()V
     .locals 0
 
-    .line 0
     return-void
 .end method

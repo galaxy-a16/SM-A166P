@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$HyP8A2MhlYMAZvYmmRl1Pv5xIME(Lcom/android/server/biometrics/BiometricService$1;JI)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/BiometricService$1;->lambda$onAuthenticationFailed$2(JI)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$Jfub7CjyfAftn8-wCGVp2Ie8I_o(Lcom/android/server/biometrics/BiometricService$1;JIII)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/biometrics/BiometricService$1;->lambda$onAcquired$5(JIII)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static synthetic $r8$lambda$bUPpNsS2o7zJZRZpfQrjeDWBD8I(Lcom/android/server/biometrics/BiometricService$1;JIIII)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/biometrics/BiometricService$1;->lambda$onError$3(JIIII)V
 
     return-void
@@ -40,7 +37,6 @@
 .method public static synthetic $r8$lambda$kIwusRILEkQC556JaDJOcIzKgVU(Lcom/android/server/biometrics/BiometricService$1;JIIII)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/biometrics/BiometricService$1;->lambda$onError$4(JIIII)V
 
     return-void
@@ -49,7 +45,6 @@
 .method public static synthetic $r8$lambda$ucJ0bllpT9aA55nRoQau3NttdHg(Lcom/android/server/biometrics/BiometricService$1;JI[B)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/BiometricService$1;->lambda$onAuthenticationSucceeded$1(JI[B)V
 
     return-void
@@ -58,7 +53,6 @@
 .method public static synthetic $r8$lambda$zv_w1qi4PJqr9ncvfCrzl20jQIQ(Lcom/android/server/biometrics/BiometricService$1;JI[BLandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/biometrics/BiometricService$1;->lambda$onSemAuthenticationSucceeded$0(JI[BLandroid/os/Bundle;)V
 
     return-void
@@ -67,7 +61,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/BiometricService;J)V
     .locals 0
 
-    .line 466
     iput-object p1, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     iput-wide p2, p0, Lcom/android/server/biometrics/BiometricService$1;->val$requestId:J
@@ -80,7 +73,6 @@
 .method private synthetic lambda$onAcquired$5(JIII)V
     .locals 6
 
-    .line 503
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     move-wide v1, p1
@@ -99,7 +91,6 @@
 .method private synthetic lambda$onAuthenticationFailed$2(JI)V
     .locals 0
 
-    .line 483
     iget-object p0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$mhandleAuthenticationRejected(Lcom/android/server/biometrics/BiometricService;JI)V
@@ -110,7 +101,6 @@
 .method private synthetic lambda$onAuthenticationSucceeded$1(JI[B)V
     .locals 6
 
-    .line 476
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     const/4 v5, 0x0
@@ -129,7 +119,6 @@
 .method private synthetic lambda$onError$3(JIIII)V
     .locals 7
 
-    .line 493
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     move-wide v1, p1
@@ -150,7 +139,6 @@
 .method private synthetic lambda$onError$4(JIIII)V
     .locals 7
 
-    .line 496
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     move-wide v1, p1
@@ -171,7 +159,6 @@
 .method private synthetic lambda$onSemAuthenticationSucceeded$0(JI[BLandroid/os/Bundle;)V
     .locals 6
 
-    .line 470
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     move-wide v1, p1
@@ -192,7 +179,6 @@
 .method public onAcquired(III)V
     .locals 9
 
-    .line 503
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -227,10 +213,8 @@
 
     const-string/jumbo v1, "onAuthenticationFailed"
 
-    .line 482
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -251,7 +235,6 @@
 .method public onAuthenticationSucceeded(I[B)V
     .locals 8
 
-    .line 476
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -284,7 +267,6 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 493
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;
@@ -313,7 +295,6 @@
 
     goto :goto_0
 
-    .line 496
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
@@ -348,7 +329,6 @@
 .method public onSemAuthenticationSucceeded(I[BLandroid/os/Bundle;)V
     .locals 9
 
-    .line 470
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$1;->this$0:Lcom/android/server/biometrics/BiometricService;
 
     invoke-static {v0}, Lcom/android/server/biometrics/BiometricService;->-$$Nest$fgetmHandler(Lcom/android/server/biometrics/BiometricService;)Landroid/os/Handler;

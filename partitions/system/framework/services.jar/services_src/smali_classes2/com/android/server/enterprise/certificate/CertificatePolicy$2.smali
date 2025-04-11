@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/certificate/CertificatePolicy;)V
     .locals 0
 
-    .line 1182
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$2;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 1185
     iget-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$2;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-static {p1, p2}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->-$$Nest$mgetPackageName(Lcom/android/server/enterprise/certificate/CertificatePolicy;Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1186
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -40,14 +37,12 @@
 
     const/4 v2, 0x0
 
-    .line 1187
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
 
     if-eqz p1, :cond_0
 
-    .line 1190
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -61,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1192
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -74,7 +68,6 @@
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 1193
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -83,7 +76,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1194
     iget-object p0, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$2;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-static {p0, p1}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->-$$Nest$mdisplayAppSignature(Lcom/android/server/enterprise/certificate/CertificatePolicy;Ljava/lang/String;)V
@@ -95,7 +87,6 @@
     :catch_0
     move-exception p0
 
-    .line 1198
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0

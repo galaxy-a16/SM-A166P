@@ -43,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$msetBonusMaxCachedAppsPerSwap(Lcom/android/server/bgslotmanager/BGSlotManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->setBonusMaxCachedAppsPerSwap()V
 
     return-void
@@ -56,7 +55,6 @@
 
     const-string v1, "4"
 
-    .line 19
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -67,7 +65,6 @@
 
     const-string v1, "16"
 
-    .line 29
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -78,7 +75,6 @@
 
     const-string v1, "8"
 
-    .line 31
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -89,7 +85,6 @@
 
     const-string v1, "24"
 
-    .line 33
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -98,14 +93,12 @@
 
     const/4 v0, 0x0
 
-    .line 35
     sput v0, Lcom/android/server/bgslotmanager/BGSlotManager;->BONUS_MAX_CACHED_APPS_PER_SWAP:I
 
     const-string v0, "dha_empty_limit"
 
     const-string v1, "32"
 
-    .line 37
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -116,7 +109,6 @@
 
     const-string v1, ""
 
-    .line 40
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSystemPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -137,7 +129,6 @@
 
     const-string/jumbo v1, "true"
 
-    .line 44
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyBool(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -150,46 +141,38 @@
 .method public constructor <init>(Lcom/android/server/bgslotmanager/MemInfoGetter;)V
     .locals 2
 
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string/jumbo v0, "reduce_chn_cached_max"
 
     const-string v1, "0"
 
-    .line 41
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->CHN_REDUCE_CACHED:I
 
-    .line 47
     sget v0, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_CACHED_APPS:I
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originCachedMax:I
 
-    .line 48
     sget v0, Lcom/android/server/bgslotmanager/BGSlotManager;->MIN_CACHED_APPS:I
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originCachedMin:I
 
-    .line 49
     sget v0, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_EMPTY_APPS:I
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originEmptyMax:I
 
-    .line 50
     sget v0, Lcom/android/server/bgslotmanager/BGSlotManager;->MIN_EMPTY_APPS:I
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originEmptyMin:I
 
     const/4 v0, 0x0
 
-    .line 52
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->mInfo:Lcom/android/server/bgslotmanager/MemInfoGetter;
 
     return-void
@@ -200,30 +183,24 @@
 .method public final changeBGSlot()V
     .locals 9
 
-    .line 99
     iget v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originCachedMax:I
 
-    .line 100
     iget v1, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originCachedMin:I
 
-    .line 101
     iget v2, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originEmptyMax:I
 
-    .line 107
     iget v3, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
     and-int/lit8 v4, v3, 0x1
 
     if-lez v4, :cond_1
 
-    .line 109
     div-int/lit8 v1, v2, 0x2
 
     iget v4, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originEmptyMin:I
 
     if-le v1, v4, :cond_0
 
-    .line 110
     div-int/lit8 v2, v2, 0x2
 
     goto :goto_0
@@ -261,7 +238,6 @@
 
     move v0, v6
 
-    .line 124
     :cond_3
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -301,7 +277,6 @@
 
     add-int/2addr v0, v4
 
-    .line 127
     sget v3, Lcom/android/server/bgslotmanager/BGSlotManager;->BONUS_MAX_CACHED_APPS_PER_SWAP:I
 
     add-int/2addr v0, v3
@@ -314,7 +289,6 @@
 
     add-int/2addr v1, v5
 
-    .line 128
     invoke-static {v5, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -323,14 +297,12 @@
 
     add-int/2addr v2, v5
 
-    .line 129
     invoke-static {v5, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
     sput v0, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_EMPTY_APPS:I
 
-    .line 131
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,7 +333,6 @@
 
     invoke-static {v8, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->updateDefaultCachedMAX()V
 
     return-void
@@ -370,15 +341,12 @@
 .method public initBGSlotManager(Lcom/android/server/am/DynamicHiddenApp;J)V
     .locals 3
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->mDynamicHiddenApp:Lcom/android/server/am/DynamicHiddenApp;
 
-    .line 63
     sget-boolean v0, Lcom/android/server/bgslotmanager/BGSlotManager;->IS_CHINA_MODEL:Z
 
     if-eqz v0, :cond_0
 
-    .line 64
     sget v1, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_CACHED_APPS:I
 
     iget v2, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->CHN_REDUCE_CACHED:I
@@ -387,12 +355,10 @@
 
     sput v1, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_CACHED_APPS:I
 
-    .line 65
     sget v1, Lcom/android/server/am/BGProtectManager;->dha_keepempty_chn_key:I
 
     sput v1, Lcom/android/server/am/BGProtectManager;->dha_keepempty_key:I
 
-    .line 66
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -418,33 +384,27 @@
 
     if-lez p2, :cond_1
 
-    .line 69
     sget p2, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_EMPTY_APPS:I
 
     sget p3, Lcom/android/server/bgslotmanager/BGSlotManager;->STATIC_MAX_EMPTY_FOR_OVER_8GB:I
 
     if-ge p2, p3, :cond_1
 
-    .line 70
     sput p3, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_EMPTY_APPS:I
 
-    .line 73
     :cond_1
     sget p2, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_CACHED_APPS:I
 
     iput p2, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originCachedMax:I
 
-    .line 74
     sget p2, Lcom/android/server/bgslotmanager/BGSlotManager;->MIN_CACHED_APPS:I
 
     iput p2, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originCachedMin:I
 
-    .line 75
     sget p2, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_EMPTY_APPS:I
 
     iput p2, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originEmptyMax:I
 
-    .line 76
     sget p2, Lcom/android/server/bgslotmanager/BGSlotManager;->MIN_EMPTY_APPS:I
 
     iput p2, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originEmptyMin:I
@@ -453,19 +413,16 @@
 
     const-string p2, "0"
 
-    .line 78
     invoke-static {p0, p2}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
     const-string p3, "cur_trim_empty_num"
 
-    .line 79
     invoke-static {p3, p2}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p2
 
-    .line 78
     invoke-virtual {p1, p0, p2}, Lcom/android/server/am/DynamicHiddenApp;->setCurTrimProcesses(II)V
 
     return-void
@@ -474,7 +431,6 @@
 .method public initBGSlotManagerPostBoot()V
     .locals 0
 
-    .line 83
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->setBonusMaxCachedAppsPerSwap()V
 
     return-void
@@ -483,21 +439,18 @@
 .method public restoreFromCameraBGSlot()V
     .locals 1
 
-    .line 143
     iget v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
     and-int/lit8 v0, v0, -0x2
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
-    .line 144
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     const-string p0, "DynamicHiddenApp_BGSlotManager"
 
     const-string v0, "CameraBGSlot Recovered"
 
-    .line 145
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -506,21 +459,18 @@
 .method public restoreFromHighResBGSlot()V
     .locals 1
 
-    .line 154
     iget v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
     and-int/lit8 v0, v0, -0x3
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
-    .line 155
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     const-string p0, "DynamicHiddenApp_BGSlotManager"
 
     const-string v0, "HighResBGSlot Recovered"
 
-    .line 156
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -529,21 +479,18 @@
 .method public restoreFromHomeHubBGSlot()V
     .locals 1
 
-    .line 165
     iget v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
     and-int/lit8 v0, v0, -0x5
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
-    .line 166
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     const-string p0, "DynamicHiddenApp_BGSlotManager"
 
     const-string v0, "HomeHubBGSlot Recovered"
 
-    .line 167
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -552,7 +499,6 @@
 .method public runSetBonusMaxCachedAppsPerSwapTimer()V
     .locals 7
 
-    .line 187
     new-instance v6, Lcom/android/server/bgslotmanager/BGSlotManager$1;
 
     const-wide/32 v2, 0xea60
@@ -565,7 +511,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/bgslotmanager/BGSlotManager$1;-><init>(Lcom/android/server/bgslotmanager/BGSlotManager;JJ)V
 
-    .line 196
     invoke-virtual {v6}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     return-void
@@ -574,7 +519,6 @@
 .method public setBGSlotByRes(II)V
     .locals 1
 
-    .line 171
     sget-boolean v0, Lcom/android/server/bgslotmanager/BGSlotManager;->HRT_MaxCached_Enable:Z
 
     if-eqz v0, :cond_0
@@ -585,12 +529,10 @@
 
     if-lt p1, p2, :cond_0
 
-    .line 172
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->setHighResBGSlot()V
 
     goto :goto_0
 
-    .line 174
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->restoreFromHighResBGSlot()V
 
@@ -601,7 +543,6 @@
 .method public final setBonusMaxCachedAppsPerSwap()V
     .locals 3
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->mInfo:Lcom/android/server/bgslotmanager/MemInfoGetter;
 
     invoke-virtual {v0}, Lcom/android/server/bgslotmanager/MemInfoGetter;->getSwapsizeGB()I
@@ -614,7 +555,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 89
     sput v2, Lcom/android/server/bgslotmanager/BGSlotManager;->BONUS_MAX_CACHED_APPS_PER_SWAP:I
 
     goto :goto_0
@@ -624,7 +564,6 @@
 
     const/4 v0, 0x2
 
-    .line 91
     sput v0, Lcom/android/server/bgslotmanager/BGSlotManager;->BONUS_MAX_CACHED_APPS_PER_SWAP:I
 
     goto :goto_0
@@ -632,10 +571,8 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 93
     sput v0, Lcom/android/server/bgslotmanager/BGSlotManager;->BONUS_MAX_CACHED_APPS_PER_SWAP:I
 
-    .line 95
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
@@ -645,14 +582,12 @@
 .method public setCameraBGSlot()V
     .locals 1
 
-    .line 138
     iget v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
-    .line 139
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     return-void
@@ -661,14 +596,12 @@
 .method public setHighResBGSlot()V
     .locals 1
 
-    .line 149
     iget v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
-    .line 150
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     return-void
@@ -677,14 +610,12 @@
 .method public setHomeHubBGSlot()V
     .locals 1
 
-    .line 160
     iget v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
     or-int/lit8 v0, v0, 0x4
 
     iput v0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->BGSlotState:I
 
-    .line 161
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     return-void
@@ -695,12 +626,10 @@
 
     if-lez p1, :cond_0
 
-    .line 201
     sput p1, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_CACHED_APPS:I
 
     iput p1, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originCachedMax:I
 
-    .line 202
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     :cond_0
@@ -712,12 +641,10 @@
 
     if-lez p1, :cond_0
 
-    .line 208
     sput p1, Lcom/android/server/bgslotmanager/BGSlotManager;->MIN_CACHED_APPS:I
 
     iput p1, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originCachedMin:I
 
-    .line 209
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     :cond_0
@@ -729,12 +656,10 @@
 
     if-lez p1, :cond_0
 
-    .line 215
     sput p1, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_EMPTY_APPS:I
 
     iput p1, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originEmptyMax:I
 
-    .line 216
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     :cond_0
@@ -746,12 +671,10 @@
 
     if-lez p1, :cond_0
 
-    .line 222
     sput p1, Lcom/android/server/bgslotmanager/BGSlotManager;->MIN_EMPTY_APPS:I
 
     iput p1, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->originEmptyMin:I
 
-    .line 223
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/BGSlotManager;->changeBGSlot()V
 
     :cond_0
@@ -765,12 +688,10 @@
 
     const-string v1, "0"
 
-    .line 230
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 236
     iget-object p0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->mInfo:Lcom/android/server/bgslotmanager/MemInfoGetter;
 
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/MemInfoGetter;->getPhysicalMemory()I
@@ -783,7 +704,6 @@
 
     const/4 v1, 0x3
 
-    .line 239
     filled-new-array {p2, v1, v1, v1}, [I
 
     move-result-object v2
@@ -850,7 +770,6 @@
 
     const-string/jumbo v6, "start update max task snapshot number"
 
-    .line 251
     invoke-static {v4, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const v6, 0x384000
@@ -881,17 +800,14 @@
 
     if-ge p1, v1, :cond_3
 
-    .line 257
     aget-object v1, v2, p1
 
     aget v6, v1, v5
 
     if-ne p0, v6, :cond_2
 
-    .line 258
     aget v5, v1, p2
 
-    .line 260
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -933,10 +849,8 @@
 
     const-string p1, "can not update max task snapshot number, due to unidentified physical memory"
 
-    .line 266
     invoke-static {v4, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -970,10 +884,8 @@
     :cond_5
     const-string p2, "can not update max task snapshot number, due to resolution or physical memory"
 
-    .line 271
     invoke-static {v4, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1002,7 +914,6 @@
     :cond_6
     move v0, v9
 
-    .line 278
     :goto_5
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1026,7 +937,6 @@
 
     invoke-static {v4, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     invoke-static {v0}, Lcom/android/server/wm/TaskSnapshotCache;->setMaxSnapshot(I)V
 
     return-void
@@ -1035,7 +945,6 @@
 .method public updateDefaultCachedMAX()V
     .locals 4
 
-    .line 179
     sget v0, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_CACHED_APPS:I
 
     sget v1, Lcom/android/server/bgslotmanager/BGSlotManager;->MAX_EMPTY_APPS:I
@@ -1054,7 +963,6 @@
 
     sub-float/2addr v0, v3
 
-    .line 183
     iget-object p0, p0, Lcom/android/server/bgslotmanager/BGSlotManager;->mDynamicHiddenApp:Lcom/android/server/am/DynamicHiddenApp;
 
     invoke-virtual {p0, v2, v0}, Lcom/android/server/am/DynamicHiddenApp;->updateMaxCachedProcessesNum(IF)V

@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$Fwk20uwVRMGgttfWEd3wmQSjWjg(Landroid/content/Context;Landroid/net/Uri;I)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/enterprise/utils/SecContentProviderUtil;->lambda$notifyPolicyChangesAsUser$0(Landroid/content/Context;Landroid/net/Uri;I)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static synthetic lambda$notifyPolicyChangesAsUser$0(Landroid/content/Context;Landroid/net/Uri;I)V
     .locals 2
 
-    .line 91
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -33,20 +31,17 @@
 .method public static notifyPolicyChangesAllUser(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 7
 
-    .line 107
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
     const/4 v2, 0x0
 
-    .line 109
     :try_start_0
     invoke-static {v2}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->getUsers(Z)Ljava/util/List;
 
     move-result-object v2
 
-    .line 110
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -64,7 +59,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 111
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -82,7 +76,6 @@
 
     goto :goto_0
 
-    .line 116
     :cond_0
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -100,7 +93,6 @@
     :try_start_1
     const-string v2, "SecContentProviderUtil"
 
-    .line 114
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -124,23 +116,19 @@
     :goto_2
     return-void
 
-    .line 116
     :goto_3
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 117
     throw p0
 .end method
 
 .method public static notifyPolicyChangesAsUser(Landroid/content/Context;Landroid/net/Uri;I)V
     .locals 5
 
-    .line 95
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 97
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -155,7 +143,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 102
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -172,7 +159,6 @@
     :try_start_1
     const-string v2, "SecContentProviderUtil"
 
-    .line 99
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,18 +188,15 @@
     :goto_1
     return-void
 
-    .line 102
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 103
     throw p0
 .end method
 
 .method public static notifyPolicyChangesAsUser(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 2
 
-    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -232,7 +215,6 @@
 
     move-result-object p1
 
-    .line 90
     new-instance v0, Lcom/android/server/enterprise/utils/SecContentProviderUtil$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/enterprise/utils/SecContentProviderUtil$$ExternalSyntheticLambda0;-><init>(Landroid/content/Context;Landroid/net/Uri;I)V

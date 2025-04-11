@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lcom/android/server/am/AbnormalUsageService;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     return-void
@@ -25,13 +23,10 @@
 .method public final printProcessMemoryState(Landroid/content/Context;Lcom/android/server/am/ProcessRecord;I)V
     .locals 3
 
-    .line 54
     iget-object p1, p2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
-    .line 56
     iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 57
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,19 +45,16 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     filled-new-array {p3}, [I
 
     move-result-object p2
 
-    .line 61
     iget-object p0, p0, Lcom/android/server/am/AbnormalUsageService;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {p0, p2}, Lcom/android/server/am/ActivityManagerService;->getProcessMemoryInfo([I)[Landroid/os/Debug$MemoryInfo;
 
     move-result-object p0
 
-    .line 62
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +81,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     array-length p1, p0
 
     :goto_0
@@ -97,7 +88,6 @@
 
     aget-object p2, p0, v1
 
-    .line 64
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,10 +139,8 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 48
     invoke-virtual {p2, v0}, Lcom/android/server/am/ProcessRecord;->setExcessiveResourceUsage(Z)V
 
-    .line 49
     invoke-virtual {p0, p1, p2, p4}, Lcom/android/server/am/AbnormalUsageService;->printProcessMemoryState(Landroid/content/Context;Lcom/android/server/am/ProcessRecord;I)V
 
     :cond_0

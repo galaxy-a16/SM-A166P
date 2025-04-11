@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecController;IILcom/android/server/hdmi/HdmiCecController$AllocateAddressCallback;)V
     .locals 0
 
-    .line 237
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$3;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecController$3;->val$deviceType:I
@@ -39,7 +38,6 @@
 .method public run()V
     .locals 3
 
-    .line 240
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController$3;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecController$3;->val$deviceType:I

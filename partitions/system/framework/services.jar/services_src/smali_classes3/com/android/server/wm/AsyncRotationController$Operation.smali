@@ -17,10 +17,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 935
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 936
     iput p1, p0, Lcom/android/server/wm/AsyncRotationController$Operation;->mAction:I
 
     return-void

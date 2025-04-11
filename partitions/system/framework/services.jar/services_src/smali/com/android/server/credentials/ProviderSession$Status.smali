@@ -29,7 +29,6 @@
 .method public static synthetic $values()[Lcom/android/server/credentials/ProviderSession$Status;
     .locals 9
 
-    .line 162
     sget-object v0, Lcom/android/server/credentials/ProviderSession$Status;->NOT_STARTED:Lcom/android/server/credentials/ProviderSession$Status;
 
     sget-object v1, Lcom/android/server/credentials/ProviderSession$Status;->PENDING:Lcom/android/server/credentials/ProviderSession$Status;
@@ -58,7 +57,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 163
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "NOT_STARTED"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->NOT_STARTED:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 164
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "PENDING"
@@ -80,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->PENDING:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 165
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "CREDENTIALS_RECEIVED"
@@ -91,7 +87,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->CREDENTIALS_RECEIVED:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 166
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "SERVICE_DEAD"
@@ -102,7 +97,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->SERVICE_DEAD:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 167
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "SAVE_ENTRIES_RECEIVED"
@@ -113,7 +107,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->SAVE_ENTRIES_RECEIVED:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 168
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "CANCELED"
@@ -124,7 +117,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->CANCELED:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 169
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "EMPTY_RESPONSE"
@@ -135,7 +127,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->EMPTY_RESPONSE:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 170
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "NO_CREDENTIALS_FROM_AUTH_ENTRY"
@@ -146,7 +137,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->NO_CREDENTIALS_FROM_AUTH_ENTRY:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 171
     new-instance v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     const-string v1, "COMPLETE"
@@ -157,7 +147,6 @@
 
     sput-object v0, Lcom/android/server/credentials/ProviderSession$Status;->COMPLETE:Lcom/android/server/credentials/ProviderSession$Status;
 
-    .line 162
     invoke-static {}, Lcom/android/server/credentials/ProviderSession$Status;->$values()[Lcom/android/server/credentials/ProviderSession$Status;
 
     move-result-object v0
@@ -170,7 +159,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 162
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -179,7 +167,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/credentials/ProviderSession$Status;
     .locals 1
 
-    .line 162
     const-class v0, Lcom/android/server/credentials/ProviderSession$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -194,7 +181,6 @@
 .method public static values()[Lcom/android/server/credentials/ProviderSession$Status;
     .locals 1
 
-    .line 162
     sget-object v0, Lcom/android/server/credentials/ProviderSession$Status;->$VALUES:[Lcom/android/server/credentials/ProviderSession$Status;
 
     invoke-virtual {v0}, [Lcom/android/server/credentials/ProviderSession$Status;->clone()Ljava/lang/Object;

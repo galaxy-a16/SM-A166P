@@ -31,7 +31,6 @@
 .method public getSA()I
     .locals 0
 
-    .line 156
     iget p0, p0, Lcom/android/server/asks/PKGINFO;->SA:I
 
     return p0
@@ -40,22 +39,16 @@
 .method public set(IIIIII)V
     .locals 0
 
-    .line 139
     iput p1, p0, Lcom/android/server/asks/PKGINFO;->policy:I
 
-    .line 140
     iput p2, p0, Lcom/android/server/asks/PKGINFO;->isExecuteBlock:I
 
-    .line 141
     iput p3, p0, Lcom/android/server/asks/PKGINFO;->SA:I
 
-    .line 142
     iput p4, p0, Lcom/android/server/asks/PKGINFO;->policyTarget:I
 
-    .line 143
     iput p5, p0, Lcom/android/server/asks/PKGINFO;->reportedTarget:I
 
-    .line 144
     iput p6, p0, Lcom/android/server/asks/PKGINFO;->regexDomain:I
 
     return-void

@@ -20,7 +20,6 @@
 .method public final runNoResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/service/games/IGameService;
 
     invoke-interface {p1}, Landroid/service/games/IGameService;->disconnected()V

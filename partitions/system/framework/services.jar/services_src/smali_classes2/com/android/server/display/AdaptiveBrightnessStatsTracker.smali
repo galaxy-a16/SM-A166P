@@ -31,7 +31,6 @@
 .method public static synthetic $r8$lambda$j210nxbksmpeSsMKmGHKwP7NlV4(Lcom/android/server/display/AdaptiveBrightnessStatsTracker;)J
     .locals 2
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->lambda$new$0()J
 
     move-result-wide v0
@@ -42,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBucketBoundariesForStats(Lcom/android/server/display/AdaptiveBrightnessStatsTracker;)[F
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mBucketBoundariesForStats:[F
 
     return-object p0
@@ -51,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInjector(Lcom/android/server/display/AdaptiveBrightnessStatsTracker;)Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mInjector:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
 
     return-object p0
@@ -60,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserManager(Lcom/android/server/display/AdaptiveBrightnessStatsTracker;)Landroid/os/UserManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mUserManager:Landroid/os/UserManager;
 
     return-object p0
@@ -69,20 +65,16 @@
 .method public constructor <init>(Landroid/os/UserManager;Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;Lcom/android/server/display/BrightnessMappingStrategy;)V
     .locals 0
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mUserManager:Landroid/os/UserManager;
 
     if-eqz p2, :cond_0
 
-    .line 83
     iput-object p2, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mInjector:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
 
     goto :goto_0
 
-    .line 85
     :cond_0
     new-instance p1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
 
@@ -90,7 +82,6 @@
 
     iput-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mInjector:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
 
-    .line 87
     :goto_0
     new-instance p1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
@@ -98,7 +89,6 @@
 
     iput-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
-    .line 88
     new-instance p1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
     new-instance p2, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$$ExternalSyntheticLambda0;
@@ -111,10 +101,8 @@
 
     const/high16 p1, -0x40800000    # -1.0f
 
-    .line 89
     iput p1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentAmbientLux:F
 
-    .line 91
     invoke-virtual {p0}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->initBucketBoundariesForStats()V
 
     return-void
@@ -123,7 +111,6 @@
 .method private synthetic lambda$new$0()J
     .locals 2
 
-    .line 88
     iget-object p0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mInjector:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;->elapsedRealtimeMillis()J
@@ -144,7 +131,6 @@
 
     monitor-enter p0
 
-    .line 126
     :try_start_0
     iget-object v2, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -154,12 +140,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 127
     iget v4, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentUserId:I
 
     if-ne v0, v4, :cond_0
 
-    .line 128
     iget-object v3, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
     iget-object v0, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mInjector:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
@@ -174,7 +158,6 @@
 
     iget-object v0, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
-    .line 129
     invoke-virtual {v0}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;->totalDurationSec()F
 
     move-result v8
@@ -187,16 +170,13 @@
 
     move/from16 v12, p6
 
-    .line 128
     invoke-virtual/range {v3 .. v12}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->log(ILjava/time/LocalDate;FFFLandroid/util/Spline;Landroid/hardware/display/BrightnessChangeEvent;Landroid/util/Spline;Z)V
 
     goto :goto_0
 
-    .line 135
     :cond_0
     iput v0, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentUserId:I
 
-    .line 137
     :goto_0
     iget-object v0, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -213,7 +193,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 138
     :goto_1
     iget-object v2, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -221,7 +200,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 139
     iget-object v0, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
     invoke-virtual {v0}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;->start()V
@@ -229,22 +207,18 @@
     :cond_2
     move v0, p2
 
-    .line 146
     iput v0, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentAmbientLux:F
 
     move/from16 v0, p3
 
-    .line 147
     iput v0, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentScreenBrightness:F
 
     move-object/from16 v0, p4
 
-    .line 148
     iput-object v0, v1, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentScreenBrightnessSpline:Landroid/util/Spline;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 149
     monitor-exit p0
 
     return-void
@@ -262,13 +236,11 @@
 
     monitor-enter p0
 
-    .line 199
     :try_start_0
     iget v1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentUserId:I
 
     if-ne p1, v1, :cond_0
 
-    .line 200
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
     iget-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mInjector:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Injector;
@@ -295,7 +267,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 204
     :cond_0
     monitor-exit p0
 
@@ -317,17 +288,14 @@
     :try_start_0
     const-string v0, "AdaptiveBrightnessStats:"
 
-    .line 172
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 173
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 174
     monitor-exit p0
 
     return-void
@@ -345,7 +313,6 @@
 
     monitor-enter p0
 
-    .line 160
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
@@ -374,10 +341,8 @@
 
     new-array v1, v0, [F
 
-    .line 177
     fill-array-data v1, :array_0
 
-    .line 183
     sget-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_SUPPORT_HBM:Z
 
     if-eqz v2, :cond_1
@@ -387,7 +352,6 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 186
     aget v3, v1, v2
 
     sget v4, Lcom/android/server/power/PowerManagerUtil;->HBM_LUX:I
@@ -408,7 +372,6 @@
     :cond_1
     const/16 v2, 0x37
 
-    .line 193
     :cond_2
     :goto_1
     invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([FI)[F
@@ -485,7 +448,6 @@
 
     monitor-enter p0
 
-    .line 120
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -493,7 +455,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 121
     monitor-exit p0
 
     return-void
@@ -511,7 +472,6 @@
 
     monitor-enter p0
 
-    .line 156
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
@@ -519,7 +479,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 157
     monitor-exit p0
 
     return-void
@@ -537,7 +496,6 @@
 
     monitor-enter p0
 
-    .line 112
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -547,14 +505,12 @@
 
     if-nez v0, :cond_0
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
     invoke-virtual {v0}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;->start()V
 
     goto :goto_0
 
-    .line 114
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -564,14 +520,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
     invoke-virtual {v0}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;->resume()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 117
     :cond_1
     :goto_0
     monitor-exit p0
@@ -591,7 +545,6 @@
 
     monitor-enter p0
 
-    .line 164
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
@@ -599,7 +552,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 165
     monitor-exit p0
 
     return-void
@@ -617,7 +569,6 @@
 
     monitor-enter p0
 
-    .line 95
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -625,14 +576,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 97
     iget-object p1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
     invoke-virtual {p1}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 99
     :cond_0
     monitor-exit p0
 
@@ -651,7 +600,6 @@
 
     monitor-enter p0
 
-    .line 102
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -661,7 +609,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 103
     iget-object v1, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
     iget v2, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentUserId:I
@@ -678,7 +625,6 @@
 
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
-    .line 104
     invoke-virtual {v0}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;->totalDurationSec()F
 
     move-result v6
@@ -691,10 +637,8 @@
 
     const/4 v10, 0x0
 
-    .line 103
     invoke-virtual/range {v1 .. v10}, Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;->log(ILjava/time/LocalDate;FFFLandroid/util/Spline;Landroid/hardware/display/BrightnessChangeEvent;Landroid/util/Spline;Z)V
 
-    .line 107
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mTimer:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$Timer;
 
@@ -702,12 +646,10 @@
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 108
     iput v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mCurrentAmbientLux:F
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 109
     monitor-exit p0
 
     return-void
@@ -725,7 +667,6 @@
 
     monitor-enter p0
 
-    .line 168
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
@@ -739,7 +680,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 169
     monitor-exit p0
 
     return-void
@@ -757,7 +697,6 @@
 
     monitor-enter p0
 
-    .line 152
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/AdaptiveBrightnessStatsTracker;->mAdaptiveBrightnessStats:Lcom/android/server/display/AdaptiveBrightnessStatsTracker$AdaptiveBrightnessStats;
 
@@ -765,7 +704,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 153
     monitor-exit p0
 
     return-void

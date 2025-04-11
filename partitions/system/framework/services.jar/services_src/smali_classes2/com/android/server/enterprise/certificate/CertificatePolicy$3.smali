@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/certificate/CertificatePolicy;I[Ljava/lang/String;Landroid/content/Intent;)V
     .locals 0
 
-    .line 1320
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     iput p2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->val$userId:I
@@ -36,19 +35,15 @@
 .method public run()V
     .locals 7
 
-    .line 1322
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1324
     :try_start_0
     iget v2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->val$userId:I
 
-    .line 1325
     iget-object v3, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
-    .line 1326
     invoke-static {v3}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->-$$Nest$mgetPersonaManagerAdapter(Lcom/android/server/enterprise/certificate/CertificatePolicy;)Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;
 
     move-result-object v3
@@ -61,7 +56,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1328
     iget-object v2, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-static {v2}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->-$$Nest$fgetmEdmStorageProvider(Lcom/android/server/enterprise/certificate/CertificatePolicy;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -74,12 +68,10 @@
 
     move-result v2
 
-    .line 1329
     invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
 
-    .line 1332
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
@@ -91,7 +83,6 @@
 
     const-string v3, "CertificatePolicy"
 
-    .line 1333
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,7 +135,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1338
     iget-object v3, p0, Lcom/android/server/enterprise/certificate/CertificatePolicy$3;->this$0:Lcom/android/server/enterprise/certificate/CertificatePolicy;
 
     invoke-static {v3}, Lcom/android/server/enterprise/certificate/CertificatePolicy;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/certificate/CertificatePolicy;)Landroid/content/Context;
@@ -163,7 +153,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1342
     :cond_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -174,6 +163,5 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1343
     throw p0
 .end method

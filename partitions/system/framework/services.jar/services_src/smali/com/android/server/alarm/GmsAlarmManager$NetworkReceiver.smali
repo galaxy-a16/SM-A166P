@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/GmsAlarmManager;)V
     .locals 0
 
-    .line 425
     iput-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/alarm/GmsAlarmManager;Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;-><init>(Lcom/android/server/alarm/GmsAlarmManager;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 428
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -45,7 +42,6 @@
     :cond_0
     const-string p1, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    .line 429
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -60,10 +56,8 @@
 
     const-string v0, "GmsAlarmManager"
 
-    .line 430
     invoke-static {v0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     const-string/jumbo v1, "networkInfo"
@@ -76,7 +70,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fputmNetworkInfo(Lcom/android/server/alarm/GmsAlarmManager;Landroid/net/NetworkInfo;)V
 
-    .line 433
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p1}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fgetmNetworkInfo(Lcom/android/server/alarm/GmsAlarmManager;)Landroid/net/NetworkInfo;
@@ -85,7 +78,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 434
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p1}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fgetmNetworkInfo(Lcom/android/server/alarm/GmsAlarmManager;)Landroid/net/NetworkInfo;
@@ -98,10 +90,8 @@
 
     const p2, 0x9d08
 
-    .line 435
     invoke-static {p2, p1}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 436
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,7 +145,6 @@
     :cond_1
     if-ne p1, v1, :cond_3
 
-    .line 441
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p1}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fgetmNetworkInfo(Lcom/android/server/alarm/GmsAlarmManager;)Landroid/net/NetworkInfo;
@@ -168,7 +157,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 442
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p1}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fgetvpnStats(Lcom/android/server/alarm/GmsAlarmManager;)Lcom/android/server/alarm/GmsAlarmManager$NetWorkStats;
@@ -183,7 +171,6 @@
 
     goto :goto_0
 
-    .line 444
     :cond_2
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
@@ -197,7 +184,6 @@
 
     invoke-virtual {p1, v1, v2}, Lcom/android/server/alarm/GmsAlarmManager$NetWorkStats;->setEndTime(J)V
 
-    .line 447
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
@@ -224,20 +210,17 @@
 
     if-nez p1, :cond_4
 
-    .line 448
     iget-object p0, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p0, v0}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fputmScreenOffChange(Lcom/android/server/alarm/GmsAlarmManager;Z)V
 
     return-void
 
-    .line 451
     :cond_4
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p1}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$mcancelAlarm(Lcom/android/server/alarm/GmsAlarmManager;)V
 
-    .line 452
     iget-object p0, p0, Lcom/android/server/alarm/GmsAlarmManager$NetworkReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     const-wide/16 p1, 0x2710

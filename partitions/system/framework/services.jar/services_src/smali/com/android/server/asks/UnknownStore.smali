@@ -43,60 +43,42 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 199
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->KEY_VALUE:Ljava/lang/String;
 
-    .line 200
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->PKGNAME:Ljava/lang/String;
 
-    .line 201
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->SIGHASH:Ljava/lang/String;
 
-    .line 202
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->PKGSIGHASH:Ljava/lang/String;
 
-    .line 203
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->BASE_CODE_PATH:Ljava/lang/String;
 
-    .line 206
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->blockPermissions:Ljava/util/HashMap;
 
-    .line 207
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->warningPermissions:Ljava/util/HashMap;
 
-    .line 208
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
-    .line 209
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
-    .line 210
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
-    .line 212
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
-    .line 213
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
-    .line 214
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->regexDomainRule:Ljava/util/ArrayList;
 
-    .line 215
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->regexPackageRule:Ljava/util/ArrayList;
 
-    .line 217
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->tagNameList:Ljava/util/ArrayList;
 
-    .line 219
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->unknownAppsList:Ljava/util/HashMap;
 
-    .line 221
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     return-void
@@ -119,7 +101,6 @@
 
     const-string v4, "ALL"
 
-    .line 455
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -150,25 +131,21 @@
 
     move/from16 v8, p10
 
-    .line 456
     invoke-virtual/range {v0 .. v8}, Lcom/android/server/asks/UnknownStore;->addDefaultPolicy(IIIIILjava/lang/String;Ljava/lang/String;I)V
 
     goto/16 :goto_4
 
-    .line 459
     :cond_0
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     if-nez v5, :cond_1
 
-    .line 460
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
     iput-object v5, v0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
-    .line 462
     :cond_1
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
@@ -178,12 +155,10 @@
 
     if-eqz v3, :cond_11
 
-    .line 464
     new-instance v5, Lcom/android/server/asks/PKGINFO;
 
     invoke-direct {v5}, Lcom/android/server/asks/PKGINFO;-><init>()V
 
-    .line 472
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     if-eqz v6, :cond_8
@@ -192,7 +167,6 @@
 
     if-ne v2, v7, :cond_2
 
-    .line 474
     iget v2, v6, Lcom/android/server/asks/PKGINFO;->isExecuteBlock:I
 
     goto :goto_0
@@ -202,19 +176,16 @@
 
     if-ne v2, v6, :cond_4
 
-    .line 476
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
     if-nez v6, :cond_3
 
-    .line 477
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
-    .line 479
     :cond_3
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
@@ -224,7 +195,6 @@
 
     if-nez v6, :cond_4
 
-    .line 480
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
     invoke-virtual {v6, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -235,7 +205,6 @@
 
     if-ne v6, v7, :cond_5
 
-    .line 485
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     iget v6, v6, Lcom/android/server/asks/PKGINFO;->policyTarget:I
@@ -245,7 +214,6 @@
 
     if-ne v9, v7, :cond_6
 
-    .line 488
     iget-object v9, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     iget v9, v9, Lcom/android/server/asks/PKGINFO;->reportedTarget:I
@@ -255,7 +223,6 @@
 
     if-ne v10, v7, :cond_7
 
-    .line 491
     iget-object v10, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     iget v10, v10, Lcom/android/server/asks/PKGINFO;->SA:I
@@ -263,7 +230,6 @@
     :cond_7
     if-ne v8, v7, :cond_9
 
-    .line 494
     iget-object v7, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     iget v7, v7, Lcom/android/server/asks/PKGINFO;->regexDomain:I
@@ -293,19 +259,16 @@
 
     if-ne v8, v6, :cond_b
 
-    .line 500
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->regexDomainRule:Ljava/util/ArrayList;
 
     if-nez v6, :cond_a
 
-    .line 501
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, v0, Lcom/android/server/asks/UnknownStore;->regexDomainRule:Ljava/util/ArrayList;
 
-    .line 503
     :cond_a
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->regexDomainRule:Ljava/util/ArrayList;
 
@@ -315,7 +278,6 @@
 
     if-nez v6, :cond_d
 
-    .line 504
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->regexDomainRule:Ljava/util/ArrayList;
 
     invoke-virtual {v6, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -327,19 +289,16 @@
 
     if-ne v12, v6, :cond_d
 
-    .line 507
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->regexPackageRule:Ljava/util/ArrayList;
 
     if-nez v6, :cond_c
 
-    .line 508
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, v0, Lcom/android/server/asks/UnknownStore;->regexPackageRule:Ljava/util/ArrayList;
 
-    .line 510
     :cond_c
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->regexPackageRule:Ljava/util/ArrayList;
 
@@ -349,7 +308,6 @@
 
     if-nez v6, :cond_d
 
-    .line 511
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->regexPackageRule:Ljava/util/ArrayList;
 
     invoke-virtual {v6, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -358,19 +316,16 @@
     :goto_2
     if-nez p4, :cond_f
 
-    .line 516
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
     if-nez v6, :cond_e
 
-    .line 517
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
-    .line 519
     :cond_e
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
@@ -380,7 +335,6 @@
 
     if-nez v6, :cond_f
 
-    .line 520
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
     invoke-virtual {v6, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -392,10 +346,8 @@
 
     move v8, v2
 
-    .line 523
     invoke-virtual/range {v6 .. v12}, Lcom/android/server/asks/PKGINFO;->set(IIIIII)V
 
-    .line 525
     iget-object v2, v0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -404,28 +356,23 @@
 
     if-nez v2, :cond_11
 
-    .line 526
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 528
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_10
 
-    .line 529
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_3
 
-    .line 531
     :cond_10
     invoke-virtual {v2, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 533
     :goto_3
     iget-object v0, v0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
@@ -447,12 +394,10 @@
 
     move/from16 v3, p8
 
-    .line 395
     iget-object v4, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     if-nez v4, :cond_d
 
-    .line 396
     new-instance v4, Lcom/android/server/asks/PKGINFO;
 
     invoke-direct {v4}, Lcom/android/server/asks/PKGINFO;-><init>()V
@@ -474,19 +419,16 @@
 
     if-ne v1, v6, :cond_2
 
-    .line 407
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
     if-nez v6, :cond_1
 
-    .line 408
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
-    .line 410
     :cond_1
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
@@ -496,12 +438,10 @@
 
     if-nez v6, :cond_2
 
-    .line 411
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 412
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -578,19 +518,16 @@
 
     if-nez p3, :cond_a
 
-    .line 435
     iget-object v1, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
     if-nez v1, :cond_9
 
-    .line 436
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
-    .line 438
     :cond_9
     iget-object v1, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
@@ -600,30 +537,25 @@
 
     if-nez v1, :cond_a
 
-    .line 439
     iget-object v1, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 440
     iget-object v1, v0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 443
     :cond_a
     iget-object v1, v0, Lcom/android/server/asks/UnknownStore;->unknownAppsList:Ljava/util/HashMap;
 
     if-nez v1, :cond_b
 
-    .line 444
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, v0, Lcom/android/server/asks/UnknownStore;->unknownAppsList:Ljava/util/HashMap;
 
-    .line 446
     :cond_b
     iget-object v1, v0, Lcom/android/server/asks/UnknownStore;->unknownAppsList:Ljava/util/HashMap;
 
@@ -633,14 +565,12 @@
 
     if-nez v1, :cond_c
 
-    .line 447
     iget-object v1, v0, Lcom/android/server/asks/UnknownStore;->unknownAppsList:Ljava/util/HashMap;
 
     move-object/from16 v3, p7
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 449
     :cond_c
     iget-object v7, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
@@ -665,64 +595,54 @@
 
     move-object/from16 v4, p12
 
-    .line 558
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
     if-nez v5, :cond_0
 
-    .line 559
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v5, v0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
-    .line 561
     :cond_0
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
     if-nez v5, :cond_1
 
-    .line 562
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v5, v0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
-    .line 564
     :cond_1
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->blockPermissions:Ljava/util/HashMap;
 
     if-nez v5, :cond_2
 
-    .line 565
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
     iput-object v5, v0, Lcom/android/server/asks/UnknownStore;->blockPermissions:Ljava/util/HashMap;
 
-    .line 567
     :cond_2
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->warningPermissions:Ljava/util/HashMap;
 
     if-nez v5, :cond_3
 
-    .line 568
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
     iput-object v5, v0, Lcom/android/server/asks/UnknownStore;->warningPermissions:Ljava/util/HashMap;
 
-    .line 570
     :cond_3
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->tagNameList:Ljava/util/ArrayList;
 
     if-nez v5, :cond_4
 
-    .line 571
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
@@ -734,7 +654,6 @@
 
     if-eqz p9, :cond_6
 
-    .line 578
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
@@ -743,7 +662,6 @@
 
     if-lez v5, :cond_5
 
-    .line 580
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
     add-int/lit8 v5, v5, -0x1
@@ -756,7 +674,6 @@
 
     goto :goto_0
 
-    .line 582
     :cond_5
     new-instance v5, Ljava/util/HashMap;
 
@@ -764,7 +681,6 @@
 
     goto :goto_0
 
-    .line 585
     :cond_6
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->blockPermissions:Ljava/util/HashMap;
 
@@ -773,7 +689,6 @@
     :cond_7
     if-eqz p9, :cond_9
 
-    .line 589
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
@@ -782,7 +697,6 @@
 
     if-lez v5, :cond_8
 
-    .line 591
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
     add-int/lit8 v5, v5, -0x1
@@ -795,7 +709,6 @@
 
     goto :goto_0
 
-    .line 593
     :cond_8
     new-instance v5, Ljava/util/HashMap;
 
@@ -803,21 +716,18 @@
 
     goto :goto_0
 
-    .line 596
     :cond_9
     iget-object v5, v0, Lcom/android/server/asks/UnknownStore;->warningPermissions:Ljava/util/HashMap;
 
     :goto_0
     if-eqz v5, :cond_b
 
-    .line 601
     invoke-virtual {v5, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-nez v6, :cond_b
 
-    .line 602
     iget-object v6, v0, Lcom/android/server/asks/UnknownStore;->tagNameList:Ljava/util/ArrayList;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -838,7 +748,6 @@
 
     if-nez v6, :cond_b
 
-    .line 603
     new-instance v6, Lcom/android/server/asks/PEMINFO;
 
     invoke-direct {v6}, Lcom/android/server/asks/PEMINFO;-><init>()V
@@ -857,7 +766,6 @@
 
     move/from16 v13, p8
 
-    .line 604
     invoke-virtual/range {v7 .. v13}, Lcom/android/server/asks/PEMINFO;->set(IIIIII)V
 
     if-eqz v2, :cond_a
@@ -866,16 +774,13 @@
 
     if-eq v3, v7, :cond_a
 
-    .line 607
     invoke-virtual {v6, v2, v3}, Lcom/android/server/asks/PEMINFO;->setMoreRules(Ljava/lang/String;I)V
 
-    .line 609
     :cond_a
     invoke-virtual {v5, p1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p13, :cond_b
 
-    .line 611
     iget-object v0, v0, Lcom/android/server/asks/UnknownStore;->tagNameList:Ljava/util/ArrayList;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -899,32 +804,27 @@
 .method public addPermissionGroup(Z)V
     .locals 1
 
-    .line 541
     iget-object v0, p0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 542
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
-    .line 544
     :cond_0
     iget-object v0, p0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
     if-nez v0, :cond_1
 
-    .line 545
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
-    .line 548
     :cond_1
     new-instance v0, Ljava/util/HashMap;
 
@@ -932,14 +832,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 550
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 552
     :cond_2
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
@@ -952,7 +850,6 @@
 .method public checkDomain(Ljava/lang/String;Lcom/android/server/asks/RETVALUE;)Z
     .locals 9
 
-    .line 291
     invoke-virtual {p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v0
@@ -982,19 +879,16 @@
 
     if-eqz p1, :cond_2
 
-    .line 294
     iget-object v2, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     if-eqz v2, :cond_2
 
-    .line 295
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 296
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1007,14 +901,12 @@
 
     const-string p1, "ALL"
 
-    .line 297
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 298
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1025,12 +917,10 @@
 
     const-string p1, "checkPolicyWithDetail() : Target"
 
-    .line 300
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v3, 0x0
 
-    .line 301
     iget v4, p0, Lcom/android/server/asks/PKGINFO;->policy:I
 
     iget v5, p0, Lcom/android/server/asks/PKGINFO;->SA:I
@@ -1054,7 +944,6 @@
     :cond_1
     const-string p0, " no"
 
-    .line 306
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -1069,7 +958,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 698
     invoke-virtual {p2, v0}, Lcom/android/server/asks/RETVALUE;->setStatus(I)V
 
     :cond_0
@@ -1077,12 +965,10 @@
 
     if-eqz p1, :cond_b
 
-    .line 701
     iget-object v2, p1, Lcom/android/server/asks/PEMINFO;->moreRules:Lcom/android/server/asks/MORERULES;
 
     if-eqz v2, :cond_b
 
-    .line 702
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1125,7 +1011,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 704
     iget-object v2, p1, Lcom/android/server/asks/PEMINFO;->moreRules:Lcom/android/server/asks/MORERULES;
 
     iget-boolean v2, v2, Lcom/android/server/asks/MORERULES;->check_moreRule_RANK:Z
@@ -1134,7 +1019,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 705
     invoke-virtual {p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v2
@@ -1161,13 +1045,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 706
     :cond_1
     new-instance v2, Lcom/android/server/asks/MoreRuleRANK;
 
     invoke-direct {v2}, Lcom/android/server/asks/MoreRuleRANK;-><init>()V
 
-    .line 707
     iget-object v4, p0, Lcom/android/server/asks/UnknownStore;->SIGHASH:Ljava/lang/String;
 
     iget-object v5, p0, Lcom/android/server/asks/UnknownStore;->PKGSIGHASH:Ljava/lang/String;
@@ -1178,7 +1060,6 @@
 
     if-nez v2, :cond_3
 
-    .line 708
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1215,18 +1096,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 709
     invoke-virtual {p2, v3}, Lcom/android/server/asks/RETVALUE;->setStatus(I)V
 
     goto :goto_1
 
-    .line 711
     :cond_3
     invoke-virtual {p2, v0}, Lcom/android/server/asks/RETVALUE;->setStatus(I)V
 
     return-void
 
-    .line 716
     :cond_4
     :goto_1
     iget-object v2, p1, Lcom/android/server/asks/PEMINFO;->moreRules:Lcom/android/server/asks/MORERULES;
@@ -1235,7 +1113,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 717
     invoke-virtual {p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v2
@@ -1262,13 +1139,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 719
     :cond_5
     new-instance v2, Lcom/android/server/asks/MoreRuleRandomPkg;
 
     invoke-direct {v2}, Lcom/android/server/asks/MoreRuleRandomPkg;-><init>()V
 
-    .line 720
     iget-object v4, p0, Lcom/android/server/asks/UnknownStore;->PKGNAME:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Lcom/android/server/asks/MoreRuleRandomPkg;->getResult(Ljava/lang/String;)I
@@ -1277,7 +1152,6 @@
 
     if-nez v2, :cond_7
 
-    .line 721
     invoke-virtual {p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v2
@@ -1304,19 +1178,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 722
     :cond_6
     invoke-virtual {p2, v3}, Lcom/android/server/asks/RETVALUE;->setStatus(I)V
 
     goto :goto_2
 
-    .line 724
     :cond_7
     invoke-virtual {p2, v0}, Lcom/android/server/asks/RETVALUE;->setStatus(I)V
 
     return-void
 
-    .line 729
     :cond_8
     :goto_2
     iget-object v2, p1, Lcom/android/server/asks/PEMINFO;->moreRules:Lcom/android/server/asks/MORERULES;
@@ -1325,7 +1196,6 @@
 
     if-eqz v2, :cond_c
 
-    .line 730
     invoke-virtual {p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v2
@@ -1352,7 +1222,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 731
     :cond_9
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->BASE_CODE_PATH:Ljava/lang/String;
 
@@ -1362,7 +1231,6 @@
 
     if-eqz p0, :cond_c
 
-    .line 733
     invoke-static {p0}, Ljava/util/Arrays;->stream([I)Ljava/util/stream/IntStream;
 
     move-result-object p0
@@ -1375,7 +1243,6 @@
 
     const-string p0, "Zip broken"
 
-    .line 734
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v3, 0x0
@@ -1392,7 +1259,6 @@
 
     move-object v2, p2
 
-    .line 735
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/asks/RETVALUE;->set(IIIIII)V
 
     goto :goto_3
@@ -1400,21 +1266,17 @@
     :cond_a
     const-string p0, "Zip Success"
 
-    .line 737
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 738
     invoke-virtual {p2, v0}, Lcom/android/server/asks/RETVALUE;->setStatus(I)V
 
     return-void
 
-    .line 744
     :cond_b
     invoke-virtual {p2, v0}, Lcom/android/server/asks/RETVALUE;->setStatus(I)V
 
     const-string p0, "The moreRule targetPolicy may be NULL."
 
-    .line 745
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_c
@@ -1425,7 +1287,6 @@
 .method public checkPolicy(Ljava/lang/String;Lcom/android/server/asks/RETVALUE;)V
     .locals 8
 
-    .line 620
     iget-object v2, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     if-nez v2, :cond_0
@@ -1452,7 +1313,6 @@
 
     const/4 v1, 0x0
 
-    .line 622
     iget v2, v3, Lcom/android/server/asks/PKGINFO;->policy:I
 
     iget v4, v3, Lcom/android/server/asks/PKGINFO;->SA:I
@@ -1486,14 +1346,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 628
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 629
     iget-object v2, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1504,7 +1362,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 631
     invoke-virtual {v1}, Ljava/util/HashMap;->size()I
 
     move-result v2
@@ -1521,7 +1378,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 632
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -1532,12 +1388,10 @@
 
     const-string v0, "checkPolicy() : Target"
 
-    .line 634
     invoke-static {v3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v2, 0x0
 
-    .line 635
     iget v3, v1, Lcom/android/server/asks/PKGINFO;->policy:I
 
     iget v4, v1, Lcom/android/server/asks/PKGINFO;->SA:I
@@ -1581,12 +1435,10 @@
 
     move-object v0, p2
 
-    .line 639
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/asks/RETVALUE;->set(IIIIII)V
 
     return-void
 
-    .line 646
     :cond_2
     iget-object v1, p0, Lcom/android/server/asks/UnknownStore;->blockPermissions:Ljava/util/HashMap;
 
@@ -1618,12 +1470,10 @@
 
     move-object v0, p2
 
-    .line 647
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/asks/RETVALUE;->set(IIIIII)V
 
     return-void
 
-    .line 652
     :cond_3
     iget-object v1, p0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
@@ -1631,12 +1481,10 @@
 
     const-string v1, "checkPolicy() : Default"
 
-    .line 653
     invoke-static {v3, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 654
     iget-object v0, p0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     iget v2, v0, Lcom/android/server/asks/PKGINFO;->policy:I
@@ -1672,7 +1520,6 @@
 
     move-object v0, p2
 
-    .line 660
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/asks/RETVALUE;->set(IIIIII)V
 
     :cond_5
@@ -1682,7 +1529,6 @@
 .method public checkPolicyWithAppHash(Ljava/lang/String;Ljava/lang/String;Lcom/android/server/asks/RETVALUE;)V
     .locals 10
 
-    .line 665
     iget-object v0, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     if-eqz v0, :cond_2
@@ -1693,14 +1539,12 @@
 
     if-eqz p3, :cond_2
 
-    .line 666
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 667
     iget-object v0, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1711,7 +1555,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 669
     invoke-virtual {p1, p2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1722,7 +1565,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 670
     invoke-virtual {p1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1731,12 +1573,10 @@
 
     if-eqz p0, :cond_2
 
-    .line 672
     invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v4, 0x0
 
-    .line 673
     iget v5, p0, Lcom/android/server/asks/PKGINFO;->policy:I
 
     iget v6, p0, Lcom/android/server/asks/PKGINFO;->SA:I
@@ -1753,7 +1593,6 @@
 
     goto :goto_0
 
-    .line 676
     :cond_0
     iget-object p2, p0, Lcom/android/server/asks/UnknownStore;->blockPermissions:Ljava/util/HashMap;
 
@@ -1785,7 +1624,6 @@
 
     move-object v3, p3
 
-    .line 677
     invoke-virtual/range {v3 .. v9}, Lcom/android/server/asks/RETVALUE;->set(IIIIII)V
 
     return-void
@@ -1793,14 +1631,12 @@
     :cond_1
     const-string p0, "ALL"
 
-    .line 680
     invoke-virtual {p1, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 681
     invoke-virtual {p1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1809,12 +1645,10 @@
 
     if-eqz p0, :cond_2
 
-    .line 683
     invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v4, 0x0
 
-    .line 684
     iget v5, p0, Lcom/android/server/asks/PKGINFO;->policy:I
 
     iget v6, p0, Lcom/android/server/asks/PKGINFO;->SA:I
@@ -1851,10 +1685,8 @@
 
     const-string v5, "PackageInformationStore"
 
-    .line 752
     invoke-static {v5, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 754
     iget-object v4, v0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
     if-eqz v4, :cond_22
@@ -1873,20 +1705,17 @@
 
     if-eqz v1, :cond_22
 
-    .line 755
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v7, 0x0
 
-    .line 756
     :goto_0
     array-length v8, v1
 
     if-ge v7, v8, :cond_0
 
-    .line 757
     aget-object v8, v1, v7
 
     invoke-virtual {v4, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1904,7 +1733,6 @@
 
     const/4 v12, 0x0
 
-    .line 765
     :goto_1
     iget-object v13, v0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
@@ -1914,7 +1742,6 @@
 
     if-ge v9, v13, :cond_5
 
-    .line 766
     iget-object v10, v0, Lcom/android/server/asks/UnknownStore;->blockPermGroup:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1923,7 +1750,6 @@
 
     check-cast v10, Ljava/util/HashMap;
 
-    .line 767
     invoke-virtual {v10}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v11
@@ -1936,7 +1762,6 @@
 
     const/4 v12, 0x0
 
-    .line 771
     :goto_2
     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1944,14 +1769,12 @@
 
     if-eqz v14, :cond_3
 
-    .line 772
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Ljava/util/Map$Entry;
 
-    .line 773
     invoke-interface {v14}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v15
@@ -1969,14 +1792,12 @@
     :cond_1
     if-nez v12, :cond_2
 
-    .line 778
     invoke-interface {v14}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, Ljava/lang/String;
 
-    .line 779
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v14
@@ -2010,7 +1831,6 @@
     :goto_3
     if-eqz v11, :cond_4
 
-    .line 786
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2062,14 +1882,12 @@
 
     if-eqz v11, :cond_a
 
-    .line 793
     invoke-virtual {v10, v12}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Lcom/android/server/asks/PEMINFO;
 
-    .line 794
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -2088,7 +1906,6 @@
 
     if-eqz v10, :cond_a
 
-    .line 796
     iget v7, v10, Lcom/android/server/asks/PEMINFO;->MIN:I
 
     if-gt v7, v2, :cond_a
@@ -2097,10 +1914,8 @@
 
     if-gt v2, v7, :cond_a
 
-    .line 798
     invoke-virtual {v0, v10, v3}, Lcom/android/server/asks/UnknownStore;->checkMoreRule(Lcom/android/server/asks/PEMINFO;Lcom/android/server/asks/RETVALUE;)V
 
-    .line 800
     iget v7, v3, Lcom/android/server/asks/RETVALUE;->status:I
 
     if-eqz v7, :cond_6
@@ -2109,18 +1924,15 @@
 
     goto/16 :goto_5
 
-    .line 802
     :cond_6
     iget-object v7, v10, Lcom/android/server/asks/PEMINFO;->moreRules:Lcom/android/server/asks/MORERULES;
 
     if-eqz v7, :cond_7
 
-    .line 803
     iget v7, v7, Lcom/android/server/asks/MORERULES;->moreRulePolicy:I
 
     iput v7, v10, Lcom/android/server/asks/PEMINFO;->policy:I
 
-    .line 804
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v7
@@ -2143,7 +1955,6 @@
 
     invoke-static {v5, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 807
     :cond_7
     iget v7, v10, Lcom/android/server/asks/PEMINFO;->policyTarget:I
 
@@ -2153,12 +1964,10 @@
 
     const-string v0, "additional P(B) : Target Group(local)"
 
-    .line 808
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 809
     iget v2, v10, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v10, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2190,12 +1999,10 @@
 
     const-string v0, "additional P(B) : Target Group(url)"
 
-    .line 812
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 813
     iget v2, v10, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v10, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2225,12 +2032,10 @@
 
     const-string v0, "additional P(B) :  Target Group"
 
-    .line 816
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 817
     iget v2, v10, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v10, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2259,13 +2064,11 @@
     :goto_5
     const/4 v7, 0x0
 
-    .line 830
     :goto_6
     array-length v10, v1
 
     if-ge v7, v10, :cond_10
 
-    .line 831
     iget-object v10, v0, Lcom/android/server/asks/UnknownStore;->blockPermissions:Ljava/util/HashMap;
 
     aget-object v11, v1, v7
@@ -2276,7 +2079,6 @@
 
     if-eqz v10, :cond_f
 
-    .line 832
     iget-object v10, v0, Lcom/android/server/asks/UnknownStore;->blockPermissions:Ljava/util/HashMap;
 
     aget-object v11, v1, v7
@@ -2289,7 +2091,6 @@
 
     if-eqz v10, :cond_f
 
-    .line 834
     iget v11, v10, Lcom/android/server/asks/PEMINFO;->MIN:I
 
     if-gt v11, v2, :cond_f
@@ -2298,10 +2099,8 @@
 
     if-gt v2, v11, :cond_f
 
-    .line 837
     invoke-virtual {v0, v10, v3}, Lcom/android/server/asks/UnknownStore;->checkMoreRule(Lcom/android/server/asks/PEMINFO;Lcom/android/server/asks/RETVALUE;)V
 
-    .line 839
     iget v11, v3, Lcom/android/server/asks/RETVALUE;->status:I
 
     if-eqz v11, :cond_b
@@ -2310,18 +2109,15 @@
 
     goto/16 :goto_7
 
-    .line 841
     :cond_b
     iget-object v11, v10, Lcom/android/server/asks/PEMINFO;->moreRules:Lcom/android/server/asks/MORERULES;
 
     if-eqz v11, :cond_c
 
-    .line 842
     iget v11, v11, Lcom/android/server/asks/MORERULES;->moreRulePolicy:I
 
     iput v11, v10, Lcom/android/server/asks/PEMINFO;->policy:I
 
-    .line 843
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v11
@@ -2344,7 +2140,6 @@
 
     invoke-static {v5, v11}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 846
     :cond_c
     iget v11, v10, Lcom/android/server/asks/PEMINFO;->policyTarget:I
 
@@ -2354,12 +2149,10 @@
 
     const-string v0, "additional P(B) : Target(local)"
 
-    .line 847
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 848
     iget v2, v10, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v10, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2391,12 +2184,10 @@
 
     const-string v0, "additional P(B) : Target(url)"
 
-    .line 851
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 852
     iget v2, v10, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v10, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2426,12 +2217,10 @@
 
     const-string v0, "additional P(B) : Target"
 
-    .line 855
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 856
     iget v2, v10, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v10, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2471,7 +2260,6 @@
 
     const/4 v11, 0x0
 
-    .line 875
     :goto_8
     iget-object v12, v0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
@@ -2481,7 +2269,6 @@
 
     if-ge v7, v12, :cond_15
 
-    .line 876
     iget-object v9, v0, Lcom/android/server/asks/UnknownStore;->warningPermGroup:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2490,7 +2277,6 @@
 
     check-cast v9, Ljava/util/HashMap;
 
-    .line 877
     invoke-virtual {v9}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v10
@@ -2503,7 +2289,6 @@
 
     const/4 v11, 0x0
 
-    .line 881
     :goto_9
     invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2511,14 +2296,12 @@
 
     if-eqz v16, :cond_13
 
-    .line 882
     invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v16
 
     check-cast v16, Ljava/util/Map$Entry;
 
-    .line 883
     invoke-interface/range {v16 .. v16}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v8
@@ -2536,7 +2319,6 @@
     :cond_11
     if-nez v11, :cond_12
 
-    .line 888
     invoke-interface/range {v16 .. v16}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v8
@@ -2545,7 +2327,6 @@
 
     check-cast v11, Ljava/lang/String;
 
-    .line 889
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v8
@@ -2581,7 +2362,6 @@
     :goto_a
     if-eqz v8, :cond_14
 
-    .line 896
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2629,14 +2409,12 @@
 
     if-eqz v9, :cond_1b
 
-    .line 902
     invoke-virtual {v7, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/android/server/asks/PEMINFO;
 
-    .line 903
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v8
@@ -2662,7 +2440,6 @@
     :cond_16
     if-eqz v7, :cond_1b
 
-    .line 905
     iget v8, v7, Lcom/android/server/asks/PEMINFO;->MIN:I
 
     if-gt v8, v2, :cond_1b
@@ -2671,10 +2448,8 @@
 
     if-gt v2, v8, :cond_1b
 
-    .line 908
     invoke-virtual {v0, v7, v3}, Lcom/android/server/asks/UnknownStore;->checkMoreRule(Lcom/android/server/asks/PEMINFO;Lcom/android/server/asks/RETVALUE;)V
 
-    .line 910
     iget v8, v3, Lcom/android/server/asks/RETVALUE;->status:I
 
     if-eqz v8, :cond_17
@@ -2683,18 +2458,15 @@
 
     goto/16 :goto_c
 
-    .line 912
     :cond_17
     iget-object v8, v7, Lcom/android/server/asks/PEMINFO;->moreRules:Lcom/android/server/asks/MORERULES;
 
     if-eqz v8, :cond_18
 
-    .line 913
     iget v8, v8, Lcom/android/server/asks/MORERULES;->moreRulePolicy:I
 
     iput v8, v7, Lcom/android/server/asks/PEMINFO;->policy:I
 
-    .line 914
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2711,7 +2483,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 917
     :cond_18
     iget v8, v7, Lcom/android/server/asks/PEMINFO;->policyTarget:I
 
@@ -2721,12 +2492,10 @@
 
     const-string v0, "additional P(Wa) : Target Group(local)"
 
-    .line 918
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 919
     iget v2, v7, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v7, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2758,12 +2527,10 @@
 
     const-string v0, "additional P(Wa) : Target Group(url)"
 
-    .line 922
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 923
     iget v2, v7, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v7, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2795,12 +2562,10 @@
 
     const-string v0, "additional P(Wa) :  Target Group"
 
-    .line 926
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 927
     iget v2, v7, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v7, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2829,13 +2594,11 @@
     :goto_c
     const/4 v7, 0x0
 
-    .line 941
     :goto_d
     array-length v8, v1
 
     if-ge v7, v8, :cond_22
 
-    .line 942
     iget-object v8, v0, Lcom/android/server/asks/UnknownStore;->warningPermissions:Ljava/util/HashMap;
 
     aget-object v9, v1, v7
@@ -2846,7 +2609,6 @@
 
     if-eqz v8, :cond_20
 
-    .line 943
     iget-object v8, v0, Lcom/android/server/asks/UnknownStore;->warningPermissions:Ljava/util/HashMap;
 
     aget-object v9, v1, v7
@@ -2857,7 +2619,6 @@
 
     check-cast v8, Lcom/android/server/asks/PEMINFO;
 
-    .line 944
     iget v9, v8, Lcom/android/server/asks/PEMINFO;->MIN:I
 
     if-gt v9, v2, :cond_20
@@ -2866,10 +2627,8 @@
 
     if-gt v2, v9, :cond_20
 
-    .line 947
     invoke-virtual {v0, v8, v3}, Lcom/android/server/asks/UnknownStore;->checkMoreRule(Lcom/android/server/asks/PEMINFO;Lcom/android/server/asks/RETVALUE;)V
 
-    .line 949
     iget v9, v3, Lcom/android/server/asks/RETVALUE;->status:I
 
     if-eqz v9, :cond_1c
@@ -2878,18 +2637,15 @@
 
     goto/16 :goto_e
 
-    .line 951
     :cond_1c
     iget-object v9, v8, Lcom/android/server/asks/PEMINFO;->moreRules:Lcom/android/server/asks/MORERULES;
 
     if-eqz v9, :cond_1d
 
-    .line 952
     iget v9, v9, Lcom/android/server/asks/MORERULES;->moreRulePolicy:I
 
     iput v9, v8, Lcom/android/server/asks/PEMINFO;->policy:I
 
-    .line 953
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2906,7 +2662,6 @@
 
     invoke-static {v5, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 957
     :cond_1d
     iget v9, v8, Lcom/android/server/asks/PEMINFO;->policyTarget:I
 
@@ -2916,12 +2671,10 @@
 
     const-string v0, "additional P(Wa) : Target(local)"
 
-    .line 958
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 959
     iget v2, v8, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v8, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2953,12 +2706,10 @@
 
     const-string v0, "additional P(Wa) : Target(url)"
 
-    .line 962
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 963
     iget v2, v8, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v8, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -2990,12 +2741,10 @@
 
     const-string v0, "additional P(Wa) : Target"
 
-    .line 966
     invoke-static {v5, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 967
     iget v2, v8, Lcom/android/server/asks/PEMINFO;->policy:I
 
     iget v4, v8, Lcom/android/server/asks/PEMINFO;->SA:I
@@ -3029,7 +2778,6 @@
 
     goto/16 :goto_d
 
-    .line 982
     :cond_22
     iget-object v1, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
@@ -3037,12 +2785,10 @@
 
     const-string v1, "additional P : Default"
 
-    .line 983
     invoke-static {v5, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 984
     iget-object v0, v0, Lcom/android/server/asks/UnknownStore;->defaultCertPolicy:Lcom/android/server/asks/PKGINFO;
 
     iget v2, v0, Lcom/android/server/asks/PKGINFO;->policy:I
@@ -3092,7 +2838,6 @@
 
     move v6, v7
 
-    .line 990
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/asks/RETVALUE;->set(IIIIII)V
 
     :cond_24
@@ -3102,7 +2847,6 @@
 .method public checkRegexTarget(Ljava/lang/String;Lcom/android/server/asks/RETVALUE;Z)Z
     .locals 10
 
-    .line 316
     invoke-virtual {p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result v0
@@ -3142,12 +2886,10 @@
 
     if-eqz p3, :cond_1
 
-    .line 322
     iget-object p3, p0, Lcom/android/server/asks/UnknownStore;->regexDomainRule:Ljava/util/ArrayList;
 
     if-eqz p3, :cond_2
 
-    .line 323
     invoke-virtual {p3}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
 
     move-result-object p3
@@ -3156,13 +2898,11 @@
 
     goto :goto_0
 
-    .line 326
     :cond_1
     iget-object p3, p0, Lcom/android/server/asks/UnknownStore;->regexPackageRule:Ljava/util/ArrayList;
 
     if-eqz p3, :cond_2
 
-    .line 327
     invoke-virtual {p3}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
 
     move-result-object p3
@@ -3179,7 +2919,6 @@
 
     move v3, v0
 
-    .line 331
     :goto_1
     invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
 
@@ -3187,7 +2926,6 @@
 
     if-ge v3, v4, :cond_8
 
-    .line 332
     invoke-virtual {p3, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -3196,24 +2934,20 @@
 
     const/16 v5, 0x20
 
-    .line 333
     invoke-static {v4, v5}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v5
 
-    .line 334
     invoke-virtual {v5, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v5
 
-    .line 336
     invoke-virtual {v5}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v5
 
     if-eqz v5, :cond_7
 
-    .line 337
     invoke-virtual {p0}, Lcom/android/server/asks/UnknownStore;->isDevDevice()Z
 
     move-result p3
@@ -3242,7 +2976,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 338
     :cond_3
     iget-object p1, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
@@ -3258,7 +2991,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 339
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     invoke-virtual {p0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3269,14 +3001,12 @@
 
     if-eqz p0, :cond_5
 
-    .line 342
     invoke-virtual {p0, v3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 343
     invoke-virtual {p0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -3287,7 +3017,6 @@
 
     goto :goto_2
 
-    .line 344
     :cond_4
     invoke-virtual {p0, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -3295,7 +3024,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 345
     invoke-virtual {p0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -3310,12 +3038,10 @@
 
     const-string p0, "checkPolicyWithDetail() : policy Target"
 
-    .line 349
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v4, 0x0
 
-    .line 350
     iget v5, v2, Lcom/android/server/asks/PKGINFO;->policy:I
 
     iget v6, v2, Lcom/android/server/asks/PKGINFO;->SA:I
@@ -3335,7 +3061,6 @@
 
     goto :goto_4
 
-    .line 353
     :cond_6
     iget-object p1, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
@@ -3347,7 +3072,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 354
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->certPolicies:Ljava/util/HashMap;
 
     invoke-virtual {p0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3358,14 +3082,12 @@
 
     if-eqz p0, :cond_8
 
-    .line 355
     invoke-virtual {p0, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 356
     invoke-virtual {p0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -3376,12 +3098,10 @@
 
     const-string p1, "checkPolicyWithDetail() : ALL Target"
 
-    .line 358
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v3, 0x0
 
-    .line 359
     iget v4, p0, Lcom/android/server/asks/PKGINFO;->policy:I
 
     iget v5, p0, Lcom/android/server/asks/PKGINFO;->SA:I
@@ -3409,7 +3129,6 @@
 
     const-string p0, "Regex Policy does not match."
 
-    .line 368
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_9
@@ -3419,7 +3138,6 @@
 .method public getExceptList()Ljava/util/ArrayList;
     .locals 0
 
-    .line 284
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->exceptPkgName:Ljava/util/ArrayList;
 
     return-object p0
@@ -3428,7 +3146,6 @@
 .method public getExcuteBlockList()Ljava/util/ArrayList;
     .locals 0
 
-    .line 281
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->executeBlockPkgName:Ljava/util/ArrayList;
 
     return-object p0
@@ -3437,7 +3154,6 @@
 .method public getKey()Ljava/lang/String;
     .locals 0
 
-    .line 244
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->KEY_VALUE:Ljava/lang/String;
 
     return-object p0
@@ -3446,7 +3162,6 @@
 .method public getRegexDomainList()Ljava/util/ArrayList;
     .locals 0
 
-    .line 278
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->regexDomainRule:Ljava/util/ArrayList;
 
     return-object p0
@@ -3455,7 +3170,6 @@
 .method public getUnknownAppsList()Ljava/util/HashMap;
     .locals 0
 
-    .line 287
     iget-object p0, p0, Lcom/android/server/asks/UnknownStore;->unknownAppsList:Ljava/util/HashMap;
 
     return-object p0
@@ -3466,7 +3180,6 @@
 
     const-string/jumbo p0, "ro.boot.em.status"
 
-    .line 995
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -3483,7 +3196,6 @@
 .method public setBaseCodePath(Ljava/lang/String;)V
     .locals 0
 
-    .line 241
     iput-object p1, p0, Lcom/android/server/asks/UnknownStore;->BASE_CODE_PATH:Ljava/lang/String;
 
     return-void
@@ -3492,7 +3204,6 @@
 .method public setKey(Ljava/lang/String;)V
     .locals 0
 
-    .line 224
     iput-object p1, p0, Lcom/android/server/asks/UnknownStore;->KEY_VALUE:Ljava/lang/String;
 
     return-void
@@ -3501,7 +3212,6 @@
 .method public setPkgName(Ljava/lang/String;)V
     .locals 0
 
-    .line 238
     iput-object p1, p0, Lcom/android/server/asks/UnknownStore;->PKGNAME:Ljava/lang/String;
 
     return-void
@@ -3510,7 +3220,6 @@
 .method public setPkgSigHash(Ljava/lang/String;)V
     .locals 0
 
-    .line 229
     iput-object p1, p0, Lcom/android/server/asks/UnknownStore;->PKGSIGHASH:Ljava/lang/String;
 
     return-void
@@ -3519,7 +3228,6 @@
 .method public setSigHash(Ljava/lang/String;)V
     .locals 0
 
-    .line 234
     iput-object p1, p0, Lcom/android/server/asks/UnknownStore;->SIGHASH:Ljava/lang/String;
 
     return-void

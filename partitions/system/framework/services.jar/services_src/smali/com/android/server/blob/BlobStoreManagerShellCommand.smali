@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/blob/BlobStoreManagerService;)V
     .locals 0
 
-    .line 30
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 31
     iput-object p1, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand;->mService:Lcom/android/server/blob/BlobStoreManagerService;
 
     return-void
@@ -29,20 +27,17 @@
 
     const/4 p1, 0x0
 
-    .line 37
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 39
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
-    .line 40
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
@@ -134,14 +129,12 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 52
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 48
     :pswitch_0
     invoke-virtual {p0, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->runIdleMaintenance(Ljava/io/PrintWriter;)I
 
@@ -149,7 +142,6 @@
 
     return p0
 
-    .line 50
     :pswitch_1
     invoke-virtual {p0, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->runQueryBlobExistence(Ljava/io/PrintWriter;)I
 
@@ -157,7 +149,6 @@
 
     return p0
 
-    .line 44
     :pswitch_2
     invoke-virtual {p0, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->runClearAllBlobs(Ljava/io/PrintWriter;)I
 
@@ -165,7 +156,6 @@
 
     return p0
 
-    .line 42
     :pswitch_3
     invoke-virtual {p0, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->runClearAllSessions(Ljava/io/PrintWriter;)I
 
@@ -173,7 +163,6 @@
 
     return p0
 
-    .line 46
     :pswitch_4
     invoke-virtual {p0, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->runDeleteBlob(Ljava/io/PrintWriter;)I
 
@@ -205,142 +194,112 @@
 .method public onHelp()V
     .locals 3
 
-    .line 108
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "BlobStore service (blob_store) commands:"
 
-    .line 109
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "help"
 
-    .line 110
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 111
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 112
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "clear-all-sessions [-u | --user USER_ID]"
 
-    .line 113
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Remove all sessions."
 
-    .line 114
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Options:"
 
-    .line 115
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "      -u or --user: specify which user\'s sessions to be removed."
 
-    .line 116
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "                    If not specified, sessions in all users are removed."
 
-    .line 117
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 118
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v1, "clear-all-blobs [-u | --user USER_ID]"
 
-    .line 119
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "    Remove all blobs."
 
-    .line 120
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 121
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "      -u or --user: specify which user\'s blobs to be removed."
 
-    .line 122
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "                    If not specified, blobs in all users are removed."
 
-    .line 123
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "delete-blob [-u | --user USER_ID] [--digest DIGEST] [--expiry EXPIRY_TIME] [--label LABEL] [--tag TAG]"
 
-    .line 124
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v2, "    Delete a blob."
 
-    .line 126
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 127
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      -u or --user: specify which user\'s blobs to be removed;"
 
-    .line 128
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 129
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      --digest: Base64 encoded digest of the blob to delete."
 
-    .line 130
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      --expiry: Expiry time of the blob to delete, in milliseconds."
 
-    .line 131
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      --label: Label of the blob to delete."
 
-    .line 132
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      --tag: Tag of the blob to delete."
 
-    .line 133
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "idle-maintenance"
 
-    .line 134
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Run idle maintenance which takes care of removing stale data."
 
-    .line 135
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string/jumbo v0, "query-blob-existence [-b BLOB_ID]"
 
-    .line 136
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Prints 1 if blob exists, otherwise 0."
 
-    .line 137
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 138
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -349,7 +308,6 @@
 .method public final parseOptions(Ljava/io/PrintWriter;Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;)I
     .locals 4
 
-    .line 143
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -359,7 +317,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 144
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -500,7 +457,6 @@
     :goto_2
     packed-switch v1, :pswitch_data_0
 
-    .line 168
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -523,7 +479,6 @@
 
     return v3
 
-    .line 150
     :pswitch_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -533,7 +488,6 @@
 
     goto/16 :goto_0
 
-    .line 159
     :pswitch_1
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -547,7 +501,6 @@
 
     goto/16 :goto_0
 
-    .line 153
     :pswitch_2
     invoke-static {}, Ljava/util/Base64;->getDecoder()Ljava/util/Base64$Decoder;
 
@@ -565,7 +518,6 @@
 
     goto/16 :goto_0
 
-    .line 162
     :pswitch_3
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -575,7 +527,6 @@
 
     goto/16 :goto_0
 
-    .line 147
     :pswitch_4
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -589,7 +540,6 @@
 
     goto/16 :goto_0
 
-    .line 165
     :pswitch_5
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -603,7 +553,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     :pswitch_6
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -613,7 +562,6 @@
 
     goto/16 :goto_0
 
-    .line 172
     :cond_8
     iget p0, p2, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;->userId:I
 
@@ -621,7 +569,6 @@
 
     if-ne p0, p1, :cond_9
 
-    .line 173
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result p0
@@ -659,7 +606,6 @@
 .method public final runClearAllBlobs(Ljava/io/PrintWriter;)I
     .locals 2
 
-    .line 69
     new-instance v0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;
 
     const/4 v1, 0x0
@@ -668,10 +614,8 @@
 
     const/4 v1, -0x1
 
-    .line 70
     iput v1, v0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;->userId:I
 
-    .line 72
     invoke-virtual {p0, p1, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->parseOptions(Ljava/io/PrintWriter;Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;)I
 
     move-result p1
@@ -680,7 +624,6 @@
 
     return v1
 
-    .line 76
     :cond_0
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand;->mService:Lcom/android/server/blob/BlobStoreManagerService;
 
@@ -696,7 +639,6 @@
 .method public final runClearAllSessions(Ljava/io/PrintWriter;)I
     .locals 2
 
-    .line 57
     new-instance v0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;
 
     const/4 v1, 0x0
@@ -705,10 +647,8 @@
 
     const/4 v1, -0x1
 
-    .line 58
     iput v1, v0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;->userId:I
 
-    .line 60
     invoke-virtual {p0, p1, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->parseOptions(Ljava/io/PrintWriter;Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;)I
 
     move-result p1
@@ -717,7 +657,6 @@
 
     return v1
 
-    .line 64
     :cond_0
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand;->mService:Lcom/android/server/blob/BlobStoreManagerService;
 
@@ -733,14 +672,12 @@
 .method public final runDeleteBlob(Ljava/io/PrintWriter;)I
     .locals 2
 
-    .line 81
     new-instance v0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;-><init>(Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs-IA;)V
 
-    .line 83
     invoke-virtual {p0, p1, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->parseOptions(Ljava/io/PrintWriter;Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;)I
 
     move-result p1
@@ -751,7 +688,6 @@
 
     return p0
 
-    .line 87
     :cond_0
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand;->mService:Lcom/android/server/blob/BlobStoreManagerService;
 
@@ -771,7 +707,6 @@
 .method public final runIdleMaintenance(Ljava/io/PrintWriter;)I
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand;->mService:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreManagerService;->runIdleMaintenance()V
@@ -784,14 +719,12 @@
 .method public final runQueryBlobExistence(Ljava/io/PrintWriter;)I
     .locals 3
 
-    .line 97
     new-instance v0, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;-><init>(Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs-IA;)V
 
-    .line 98
     invoke-virtual {p0, p1, v0}, Lcom/android/server/blob/BlobStoreManagerShellCommand;->parseOptions(Ljava/io/PrintWriter;Lcom/android/server/blob/BlobStoreManagerShellCommand$ParsedArgs;)I
 
     move-result v1
@@ -802,7 +735,6 @@
 
     return p0
 
-    .line 102
     :cond_0
     iget-object p0, p0, Lcom/android/server/blob/BlobStoreManagerShellCommand;->mService:Lcom/android/server/blob/BlobStoreManagerService;
 

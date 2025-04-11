@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/companion/CompanionDeviceManagerService;)V
     .locals 0
 
-    .line 1422
     iput-object p1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$3;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -24,7 +23,6 @@
 .method public onPackageDataCleared(Ljava/lang/String;I)V
     .locals 0
 
-    .line 1430
     iget-object p2, p0, Lcom/android/server/companion/CompanionDeviceManagerService$3;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p0}, Lcom/android/internal/content/PackageMonitor;->getChangingUserId()I
@@ -39,7 +37,6 @@
 .method public onPackageModified(Ljava/lang/String;)V
     .locals 1
 
-    .line 1435
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$3;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p0}, Lcom/android/internal/content/PackageMonitor;->getChangingUserId()I
@@ -54,7 +51,6 @@
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 0
 
-    .line 1425
     iget-object p2, p0, Lcom/android/server/companion/CompanionDeviceManagerService$3;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p0}, Lcom/android/internal/content/PackageMonitor;->getChangingUserId()I

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/AppSyncInfo;Landroid/content/Context;)V
     .locals 8
 
-    .line 1033
     iput-object p1, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->this$0:Lcom/android/server/alarm/AppSyncInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
 
     const-string v5, "data5"
 
-    .line 1022
     filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
 
     move-result-object p1
@@ -51,7 +49,6 @@
 
     const-string v0, "content://com.samsung.android.sm.policy"
 
-    .line 1026
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -60,7 +57,6 @@
 
     const-string/jumbo v1, "policy_item"
 
-    .line 1027
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -69,7 +65,6 @@
 
     const-string v1, "AppsyncPolicy"
 
-    .line 1028
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -78,7 +73,6 @@
 
     const/4 v0, 0x0
 
-    .line 1029
     aget-object v1, p1, v0
 
     const/4 v0, 0x1
@@ -109,10 +103,8 @@
 
     iput-object p1, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_SCPM_PROJECTION:[Ljava/lang/String;
 
-    .line 1034
     iput-object p2, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->mCtx:Landroid/content/Context;
 
-    .line 1035
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -129,12 +121,10 @@
 
     const-string v0, "CAT_ALLOW_PKGS"
 
-    .line 1169
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1170
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_SCPM_URI:Landroid/net/Uri;
@@ -155,13 +145,11 @@
 
     return-object v1
 
-    .line 1178
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1179
     :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -169,7 +157,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 1180
     iget-object v3, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_ITEMS:[Ljava/lang/String;
 
     array-length v4, v3
@@ -181,7 +168,6 @@
 
     aget-object v6, v3, v5
 
-    .line 1181
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v6
@@ -190,7 +176,6 @@
 
     goto :goto_2
 
-    .line 1190
     :cond_2
     :try_start_0
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -209,7 +194,6 @@
 
     const-string v7, ""
 
-    .line 1195
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -218,7 +202,6 @@
 
     goto :goto_2
 
-    .line 1198
     :cond_3
     invoke-virtual {v6}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -232,7 +215,6 @@
 
     goto :goto_0
 
-    .line 1201
     :cond_5
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -244,12 +226,10 @@
 
     const-string v0, "CAT_BLOCK_PKGS"
 
-    .line 1207
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1208
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_SCPM_URI:Landroid/net/Uri;
@@ -270,13 +250,11 @@
 
     return-object v1
 
-    .line 1216
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1217
     :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -284,7 +262,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 1218
     iget-object v3, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_ITEMS:[Ljava/lang/String;
 
     array-length v4, v3
@@ -296,7 +273,6 @@
 
     aget-object v6, v3, v5
 
-    .line 1219
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v6
@@ -305,7 +281,6 @@
 
     goto :goto_2
 
-    .line 1228
     :cond_2
     :try_start_0
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -324,7 +299,6 @@
 
     const-string v7, ""
 
-    .line 1233
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -333,7 +307,6 @@
 
     goto :goto_2
 
-    .line 1236
     :cond_3
     invoke-virtual {v6}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -347,7 +320,6 @@
 
     goto :goto_0
 
-    .line 1239
     :cond_5
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -359,12 +331,10 @@
 
     const-string v0, "CAT_WIN_MILLIS"
 
-    .line 1087
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1088
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_SCPM_URI:Landroid/net/Uri;
@@ -385,7 +355,6 @@
 
     return-wide v0
 
-    .line 1096
     :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -393,7 +362,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1099
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-wide v0
@@ -401,19 +369,16 @@
     :cond_1
     const-string/jumbo v2, "item"
 
-    .line 1103
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
     if-gez v2, :cond_2
 
-    .line 1107
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-wide v0
 
-    .line 1113
     :cond_2
     :try_start_0
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getLong(I)J
@@ -423,7 +388,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1118
     :catch_0
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
@@ -434,7 +398,6 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 1119
     throw v0
 
     :goto_0
@@ -446,12 +409,10 @@
 
     const-string v0, "CAT_SUSP_PKGS"
 
-    .line 1131
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1132
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_SCPM_URI:Landroid/net/Uri;
@@ -472,13 +433,11 @@
 
     return-object v1
 
-    .line 1140
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1141
     :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -486,7 +445,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 1142
     iget-object v3, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_ITEMS:[Ljava/lang/String;
 
     array-length v4, v3
@@ -498,7 +456,6 @@
 
     aget-object v6, v3, v5
 
-    .line 1143
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v6
@@ -507,7 +464,6 @@
 
     goto :goto_2
 
-    .line 1152
     :cond_2
     :try_start_0
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -526,7 +482,6 @@
 
     const-string v7, ""
 
-    .line 1157
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -535,7 +490,6 @@
 
     goto :goto_2
 
-    .line 1160
     :cond_3
     iget-object v7, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->this$0:Lcom/android/server/alarm/AppSyncInfo;
 
@@ -553,7 +507,6 @@
 
     goto :goto_0
 
-    .line 1163
     :cond_5
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -565,12 +518,10 @@
 
     const-string v0, "CAT_SUSP_MILLIS"
 
-    .line 1050
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1051
     iget-object v1, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v2, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->POLICY_SCPM_URI:Landroid/net/Uri;
@@ -591,7 +542,6 @@
 
     return-wide v0
 
-    .line 1059
     :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -599,7 +549,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1062
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-wide v0
@@ -607,19 +556,16 @@
     :cond_1
     const-string/jumbo v2, "item"
 
-    .line 1066
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
     if-gez v2, :cond_2
 
-    .line 1070
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-wide v0
 
-    .line 1076
     :cond_2
     :try_start_0
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getLong(I)J
@@ -629,7 +575,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1081
     :catch_0
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
@@ -640,7 +585,6 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 1082
     throw v0
 
     :goto_0
@@ -650,7 +594,6 @@
 .method public isSCPMAvailable()Z
     .locals 2
 
-    .line 1039
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo$SCPMHelper;->mCtx:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;

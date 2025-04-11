@@ -31,10 +31,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Landroid/hardware/health/V2_1/HealthInfo;
 
     invoke-direct {v0}, Landroid/hardware/health/V2_1/HealthInfo;-><init>()V
@@ -43,34 +41,24 @@
 
     const/4 v0, 0x0
 
-    .line 20
     iput v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryCurrentNow:I
 
-    .line 31
     iput v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryOnline:I
 
-    .line 39
     iput v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryChargeType:I
 
-    .line 43
     iput-boolean v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryPowerSharingOnline:Z
 
-    .line 47
     iput-boolean v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->chargerPogoOnline:Z
 
-    .line 56
     iput v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryHighVoltageCharger:I
 
-    .line 84
     iput v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryEvent:I
 
-    .line 89
     iput v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryCurrentEvent:I
 
-    .line 93
     iput-boolean v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->chargerOtgOnline:Z
 
-    .line 129
     iput v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->wirelessPowerSharingTxEvent:I
 
     return-void
@@ -94,7 +82,6 @@
 
     return v1
 
-    .line 139
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -106,11 +93,9 @@
 
     return v1
 
-    .line 142
     :cond_2
     check-cast p1, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;
 
-    .line 143
     iget-object v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->legacy:Landroid/hardware/health/V2_1/HealthInfo;
 
     iget-object v3, p1, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->legacy:Landroid/hardware/health/V2_1/HealthInfo;
@@ -123,7 +108,6 @@
 
     return v1
 
-    .line 146
     :cond_3
     iget v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryCurrentNow:I
 
@@ -133,7 +117,6 @@
 
     return v1
 
-    .line 149
     :cond_4
     iget v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryOnline:I
 
@@ -143,7 +126,6 @@
 
     return v1
 
-    .line 152
     :cond_5
     iget v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryChargeType:I
 
@@ -153,7 +135,6 @@
 
     return v1
 
-    .line 155
     :cond_6
     iget-boolean v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryPowerSharingOnline:Z
 
@@ -163,7 +144,6 @@
 
     return v1
 
-    .line 158
     :cond_7
     iget-boolean v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->chargerPogoOnline:Z
 
@@ -173,7 +153,6 @@
 
     return v1
 
-    .line 161
     :cond_8
     iget v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryHighVoltageCharger:I
 
@@ -183,7 +162,6 @@
 
     return v1
 
-    .line 164
     :cond_9
     iget v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryEvent:I
 
@@ -193,7 +171,6 @@
 
     return v1
 
-    .line 167
     :cond_a
     iget v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryCurrentEvent:I
 
@@ -203,7 +180,6 @@
 
     return v1
 
-    .line 170
     :cond_b
     iget-boolean v2, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->chargerOtgOnline:Z
 
@@ -213,7 +189,6 @@
 
     return v1
 
-    .line 173
     :cond_c
     iget p0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->wirelessPowerSharingTxEvent:I
 
@@ -230,10 +205,8 @@
 .method public final hashCode()I
     .locals 12
 
-    .line 181
     iget-object v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->legacy:Landroid/hardware/health/V2_1/HealthInfo;
 
-    .line 182
     invoke-static {v0}, Landroid/os/HidlSupport;->deepHashCode(Ljava/lang/Object;)I
 
     move-result v0
@@ -244,7 +217,6 @@
 
     iget v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryCurrentNow:I
 
-    .line 183
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -259,7 +231,6 @@
 
     iget v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryOnline:I
 
-    .line 184
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -274,7 +245,6 @@
 
     iget v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryChargeType:I
 
-    .line 185
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -289,7 +259,6 @@
 
     iget-boolean v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryPowerSharingOnline:Z
 
-    .line 186
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -304,7 +273,6 @@
 
     iget-boolean v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->chargerPogoOnline:Z
 
-    .line 187
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -319,7 +287,6 @@
 
     iget v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryHighVoltageCharger:I
 
-    .line 188
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -334,7 +301,6 @@
 
     iget v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryEvent:I
 
-    .line 189
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -349,7 +315,6 @@
 
     iget v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryCurrentEvent:I
 
-    .line 190
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -364,7 +329,6 @@
 
     iget-boolean v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->chargerOtgOnline:Z
 
-    .line 191
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -379,7 +343,6 @@
 
     iget p0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->wirelessPowerSharingTxEvent:I
 
-    .line 192
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -396,7 +359,6 @@
 
     move-result-object p0
 
-    .line 181
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -407,7 +369,6 @@
 .method public final readEmbeddedFromParcel(Landroid/os/HwParcel;Landroid/os/HwBlob;J)V
     .locals 3
 
-    .line 253
     iget-object v0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->legacy:Landroid/hardware/health/V2_1/HealthInfo;
 
     const-wide/16 v1, 0x0
@@ -420,7 +381,6 @@
 
     add-long/2addr v0, p3
 
-    .line 254
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -431,7 +391,6 @@
 
     add-long/2addr v0, p3
 
-    .line 255
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -442,7 +401,6 @@
 
     add-long/2addr v0, p3
 
-    .line 256
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -453,7 +411,6 @@
 
     add-long/2addr v0, p3
 
-    .line 257
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getBool(J)Z
 
     move-result p1
@@ -464,7 +421,6 @@
 
     add-long/2addr v0, p3
 
-    .line 258
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getBool(J)Z
 
     move-result p1
@@ -475,7 +431,6 @@
 
     add-long/2addr v0, p3
 
-    .line 259
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -486,7 +441,6 @@
 
     add-long/2addr v0, p3
 
-    .line 260
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -497,7 +451,6 @@
 
     add-long/2addr v0, p3
 
-    .line 261
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -508,7 +461,6 @@
 
     add-long/2addr v0, p3
 
-    .line 262
     invoke-virtual {p2, v0, v1}, Landroid/os/HwBlob;->getBool(J)Z
 
     move-result p1
@@ -519,7 +471,6 @@
 
     add-long/2addr p3, v0
 
-    .line 263
     invoke-virtual {p2, p3, p4}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result p1
@@ -534,14 +485,12 @@
 
     const-wide/16 v0, 0xb0
 
-    .line 226
     invoke-virtual {p1, v0, v1}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
 
     move-result-object v0
 
     const-wide/16 v1, 0x0
 
-    .line 227
     invoke-virtual {p0, p1, v0, v1, v2}, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->readEmbeddedFromParcel(Landroid/os/HwParcel;Landroid/os/HwBlob;J)V
 
     return-void
@@ -550,132 +499,106 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .line 197
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "{"
 
-    .line 198
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ".legacy = "
 
-    .line 199
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 200
     iget-object v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->legacy:Landroid/hardware/health/V2_1/HealthInfo;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ", .batteryCurrentNow = "
 
-    .line 201
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 202
     iget v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryCurrentNow:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .batteryOnline = "
 
-    .line 203
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 204
     iget v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryOnline:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .batteryChargeType = "
 
-    .line 205
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 206
     iget v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryChargeType:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .batteryPowerSharingOnline = "
 
-    .line 207
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 208
     iget-boolean v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryPowerSharingOnline:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v1, ", .chargerPogoOnline = "
 
-    .line 209
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 210
     iget-boolean v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->chargerPogoOnline:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v1, ", .batteryHighVoltageCharger = "
 
-    .line 211
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 212
     iget v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryHighVoltageCharger:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .batteryEvent = "
 
-    .line 213
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 214
     iget v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryEvent:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .batteryCurrentEvent = "
 
-    .line 215
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 216
     iget v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->batteryCurrentEvent:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", .chargerOtgOnline = "
 
-    .line 217
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     iget-boolean v1, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->chargerOtgOnline:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v1, ", .wirelessPowerSharingTxEvent = "
 
-    .line 219
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 220
     iget p0, p0, Lvendor/samsung/hardware/health/V2_0/SehHealthInfo;->wirelessPowerSharingTxEvent:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string/jumbo p0, "}"
 
-    .line 221
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 222
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
 
     invoke-static {p0}, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;->$r8$lambda$mX3-jxOIyb0E_QncEPR9qNq9MdI(Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;)V

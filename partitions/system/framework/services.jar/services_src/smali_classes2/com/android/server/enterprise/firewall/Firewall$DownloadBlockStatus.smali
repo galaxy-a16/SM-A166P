@@ -17,7 +17,6 @@
 .method public static synthetic $values()[Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
     .locals 3
 
-    .line 114
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->PASSED_NORULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     sget-object v1, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->PASSED_BY_WHITELIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
@@ -34,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 115
     new-instance v0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     const-string v1, "PASSED_NORULE"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->BLOCKED_BY_BLACKLIST_RULE:Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
-    .line 114
     invoke-static {}, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->$values()[Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     move-result-object v0
@@ -78,7 +75,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 114
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -87,7 +83,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
     .locals 1
 
-    .line 114
     const-class v0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -102,7 +97,6 @@
 .method public static values()[Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
     .locals 1
 
-    .line 114
     sget-object v0, Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->$VALUES:[Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;
 
     invoke-virtual {v0}, [Lcom/android/server/enterprise/firewall/Firewall$DownloadBlockStatus;->clone()Ljava/lang/Object;

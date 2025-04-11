@@ -7,31 +7,26 @@
 .method public static createDontSendToRestrictedAppsBundle(Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 2
 
-    .line 35
     invoke-static {}, Landroid/app/BroadcastOptions;->makeBasic()Landroid/app/BroadcastOptions;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 36
     invoke-virtual {v0, v1}, Landroid/app/BroadcastOptions;->setDontSendToRestrictedApps(Z)V
 
     const/4 v1, 0x0
 
-    .line 37
     invoke-virtual {v0, v1}, Landroid/app/BroadcastOptions;->setPendingIntentBackgroundActivityLaunchAllowed(Z)V
 
     if-nez p0, :cond_0
 
-    .line 39
     invoke-virtual {v0}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p0
 
     return-object p0
 
-    .line 41
     :cond_0
     invoke-virtual {v0}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
 

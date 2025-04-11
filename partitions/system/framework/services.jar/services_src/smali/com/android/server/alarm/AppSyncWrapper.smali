@@ -13,7 +13,6 @@
 
     const-string v0, "eng"
 
-    .line 1248
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

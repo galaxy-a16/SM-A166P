@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$maddPendingChangeByOwnerLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->addPendingChangeByOwnerLocked(I)V
 
     return-void
@@ -30,15 +29,12 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 16818
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 16819
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const-string/jumbo p1, "user_setup_complete"
 
-    .line 16807
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -47,7 +43,6 @@
 
     const-string p1, "device_provisioned"
 
-    .line 16809
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -56,7 +51,6 @@
 
     const-string p1, "device_paired"
 
-    .line 16811
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -65,14 +59,12 @@
 
     const-string p1, "default_input_method"
 
-    .line 16812
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mDefaultImeChanged:Landroid/net/Uri;
 
-    .line 16815
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
@@ -87,7 +79,6 @@
 .method public final addPendingChangeByOwnerLocked(I)V
     .locals 0
 
-    .line 16833
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserIdsWithPendingChangesByOwner:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -102,7 +93,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 1
 
-    .line 16838
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -127,7 +117,6 @@
 
     goto :goto_1
 
-    .line 16840
     :cond_0
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mDeviceProvisioned:Landroid/net/Uri;
 
@@ -137,7 +126,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 16841
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getLockObject()Ljava/lang/Object;
@@ -146,13 +134,11 @@
 
     monitor-enter p1
 
-    .line 16844
     :try_start_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-static {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$msetDeviceOwnershipSystemPropertyLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService;)V
 
-    .line 16845
     monitor-exit p1
 
     goto :goto_2
@@ -166,7 +152,6 @@
 
     throw p0
 
-    .line 16846
     :cond_1
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mDefaultImeChanged:Landroid/net/Uri;
 
@@ -176,7 +161,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 16847
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getLockObject()Ljava/lang/Object;
@@ -185,7 +169,6 @@
 
     monitor-enter p1
 
-    .line 16848
     :try_start_1
     iget-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserIdsWithPendingChangesByOwner:Ljava/util/Set;
 
@@ -199,7 +182,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 16851
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserIdsWithPendingChangesByOwner:Ljava/util/Set;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -210,7 +192,6 @@
 
     goto :goto_0
 
-    .line 16855
     :cond_2
     iget-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -222,12 +203,10 @@
 
     iput-boolean v0, p2, Lcom/android/server/devicepolicy/DevicePolicyData;->mCurrentInputMethodSet:Z
 
-    .line 16856
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-static {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$msaveSettingsLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService;I)V
 
-    .line 16858
     :goto_0
     monitor-exit p1
 
@@ -242,7 +221,6 @@
 
     throw p0
 
-    .line 16839
     :cond_3
     :goto_1
     iget-object p0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
@@ -257,7 +235,6 @@
 .method public register()V
     .locals 4
 
-    .line 16823
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
@@ -270,7 +247,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 16824
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
@@ -279,21 +255,18 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 16825
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mIsWatch:Z
 
     if-eqz v1, :cond_0
 
-    .line 16826
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mPaired:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 16828
     :cond_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 

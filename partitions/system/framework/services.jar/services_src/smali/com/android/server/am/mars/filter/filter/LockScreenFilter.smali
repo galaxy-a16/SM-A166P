@@ -32,7 +32,6 @@
 .method public static bridge synthetic -$$Nest$mgetLockClockFace(Lcom/android/server/am/mars/filter/filter/LockScreenFilter;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFace()V
 
     return-void
@@ -41,7 +40,6 @@
 .method public static bridge synthetic -$$Nest$mgetLockClockFaceSub(Lcom/android/server/am/mars/filter/filter/LockScreenFilter;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFaceSub()V
 
     return-void
@@ -50,7 +48,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,23 +76,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 20
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
 
-    .line 22
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkg:Ljava/lang/String;
 
     const/4 v0, -0x1
 
-    .line 23
     iput v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkgUid:I
 
-    .line 46
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -108,7 +100,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/LockScreenFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;-><init>()V
 
     return-void
@@ -117,7 +108,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/LockScreenFilter;
     .locals 1
 
-    .line 55
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter$LockScreenFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/LockScreenFilter;
 
     move-result-object v0
@@ -130,7 +120,6 @@
 .method public deInit()V
     .locals 0
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->unregisterContentObserver()V
 
     return-void
@@ -139,7 +128,6 @@
 .method public filter(Ljava/lang/String;III)I
     .locals 2
 
-    .line 117
     iget-boolean p2, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->isLockTypeClockFace:Z
 
     const/4 v0, 0x0
@@ -168,7 +156,6 @@
 
     const-string p2, "com.samsung.android.app.clockface"
 
-    .line 118
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -177,7 +164,6 @@
 
     return v1
 
-    .line 121
     :cond_2
     iget p2, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkgUid:I
 
@@ -200,7 +186,6 @@
 
     if-ne p4, p2, :cond_4
 
-    .line 126
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkgMap:Ljava/util/Map;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -215,7 +200,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 127
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -233,7 +217,6 @@
 
     const/4 v0, 0x0
 
-    .line 152
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
 
@@ -243,7 +226,6 @@
 
     const-string v1, "content://com.samsung.android.app.clockpack.provider/lock_settings/lock_clock_type"
 
-    .line 153
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
@@ -264,7 +246,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 154
     :try_start_1
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
@@ -272,10 +253,8 @@
 
     if-lez v2, :cond_0
 
-    .line 155
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 156
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
@@ -287,7 +266,6 @@
     :catchall_0
     move-exception v2
 
-    .line 152
     :try_start_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_2
@@ -312,7 +290,6 @@
     :goto_1
     if-eqz v1, :cond_1
 
-    .line 158
     :try_start_4
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -330,7 +307,6 @@
 
     move v2, v0
 
-    .line 159
     :goto_2
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -346,7 +322,6 @@
 
     const/4 v0, 0x1
 
-    .line 161
     :cond_2
     iput-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->isLockTypeClockFace:Z
 
@@ -358,7 +333,6 @@
 
     const/4 v0, 0x0
 
-    .line 167
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
 
@@ -368,7 +342,6 @@
 
     const-string v1, "content://com.samsung.android.app.clockpack.provider/lock_settings/lock_sub_clock_type"
 
-    .line 168
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
@@ -389,7 +362,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 169
     :try_start_1
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
@@ -397,10 +369,8 @@
 
     if-lez v2, :cond_0
 
-    .line 170
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 171
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
@@ -412,7 +382,6 @@
     :catchall_0
     move-exception v2
 
-    .line 167
     :try_start_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_2
@@ -437,7 +406,6 @@
     :goto_1
     if-eqz v1, :cond_1
 
-    .line 173
     :try_start_4
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -455,7 +423,6 @@
 
     move v2, v0
 
-    .line 174
     :goto_2
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -471,7 +438,6 @@
 
     const/4 v0, 0x1
 
-    .line 176
     :cond_2
     iput-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->isLockTypeClockFaceSub:Z
 
@@ -481,16 +447,12 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
 
-    .line 61
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->registerContentObserver()V
 
-    .line 62
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFace()V
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFaceSub()V
 
     return-void
@@ -499,17 +461,14 @@
 .method public final registerContentObserver()V
     .locals 4
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_2
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_0
 
-    .line 74
     new-instance v0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -520,13 +479,11 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceObserver:Landroid/database/ContentObserver;
 
-    .line 81
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceSubObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_1
 
-    .line 82
     new-instance v0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter$2;
 
     new-instance v1, Landroid/os/Handler;
@@ -537,7 +494,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceSubObserver:Landroid/database/ContentObserver;
 
-    .line 90
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
@@ -558,7 +514,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -582,7 +537,6 @@
     :catch_0
     move-exception p0
 
-    .line 93
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
@@ -593,15 +547,12 @@
 .method public setKeyguardInfo(Ljava/lang/String;I)V
     .locals 2
 
-    .line 135
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkg:Ljava/lang/String;
 
-    .line 136
     iput p2, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkgUid:I
 
     if-eqz p1, :cond_1
 
-    .line 139
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkgMap:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -610,7 +561,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkgMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
@@ -621,7 +571,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkgMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -644,7 +593,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mKeyguardPkgMap:Ljava/util/Map;
 
@@ -661,20 +609,17 @@
 .method public final unregisterContentObserver()V
     .locals 3
 
-    .line 100
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_1
 
-    .line 101
     iget-object v1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceObserver:Landroid/database/ContentObserver;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 102
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -683,16 +628,13 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 103
     iput-object v2, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceObserver:Landroid/database/ContentObserver;
 
-    .line 105
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceSubObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_1
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -703,14 +645,12 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 107
     iput-object v2, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceSubObserver:Landroid/database/ContentObserver;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 111
     :catch_0
     sget-object p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->TAG:Ljava/lang/String;
 

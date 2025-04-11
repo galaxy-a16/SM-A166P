@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/pm/SuspendPackageHelper;->$r8$lambda$43Fm1w88azFYVcLmkv8CjXbZsvE(I)[Ljava/lang/String;
 
     move-result-object p0

@@ -30,7 +30,6 @@
 .method public static synthetic $r8$lambda$eAgGNiGNEhFYCF4yh3RouyrCzJc(Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->lambda$static$0(Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;)I
 
     move-result p0
@@ -41,7 +40,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 73
     new-instance v0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$$ExternalSyntheticLambda0;-><init>()V
@@ -54,23 +52,18 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 219
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 220
     iput-object p1, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mContext:Landroid/content/Context;
 
-    .line 221
     const-class p1, Landroid/app/ActivityManagerInternal;
 
-    .line 222
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/app/ActivityManagerInternal;
 
-    .line 221
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -79,7 +72,6 @@
 
     iput-object p1, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mActivityManager:Landroid/app/ActivityManagerInternal;
 
-    .line 223
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -88,17 +80,13 @@
 
     if-eqz p3, :cond_0
 
-    .line 226
     invoke-virtual {p1, p3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 229
     :cond_0
     iput-object p4, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mCallerPermission:Ljava/lang/String;
 
-    .line 230
     iput-object p5, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mServicePermission:Ljava/lang/String;
 
-    .line 231
     iput-boolean p6, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mMatchSystemAppsOnly:Z
 
     return-void
@@ -109,7 +97,6 @@
 
     const/4 v6, 0x1
 
-    .line 176
     new-instance v7, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;
 
     move-object v0, v7
@@ -132,14 +119,12 @@
 .method public static createFromConfig(Landroid/content/Context;Ljava/lang/String;II)Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;
     .locals 0
 
-    .line 154
     invoke-static {p0, p2, p3}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->retrieveExplicitPackage(Landroid/content/Context;II)Ljava/lang/String;
 
     move-result-object p2
 
     const/4 p3, 0x0
 
-    .line 156
     invoke-static {p0, p1, p2, p3, p3}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->create(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;
 
     move-result-object p0
@@ -152,7 +137,6 @@
 
     const/4 v6, 0x0
 
-    .line 190
     new-instance v7, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;
 
     move-object v0, v7
@@ -195,7 +179,6 @@
 
     return v1
 
-    .line 85
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;->getVersion()I
 
@@ -211,7 +194,6 @@
 
     if-nez v2, :cond_4
 
-    .line 87
     invoke-virtual {p0}, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->getUserId()I
 
     move-result v3
@@ -226,7 +208,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->getUserId()I
 
@@ -254,19 +235,16 @@
 .method public static retrieveExplicitPackage(Landroid/content/Context;II)Ljava/lang/String;
     .locals 0
 
-    .line 196
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    .line 197
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 199
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -284,7 +262,6 @@
 .method public getServiceInfo()Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;
     .locals 7
 
-    .line 275
     iget-boolean v0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mMatchSystemAppsOnly:Z
 
     if-eqz v0, :cond_0
@@ -296,7 +273,6 @@
     :cond_0
     const v0, 0x10000080
 
-    .line 278
     :goto_0
     iget-object v1, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mActivityManager:Landroid/app/ActivityManagerInternal;
 
@@ -304,7 +280,6 @@
 
     move-result v1
 
-    .line 279
     iget-object v2, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -317,7 +292,6 @@
 
     move-result-object v0
 
-    .line 283
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -338,7 +312,6 @@
 
     check-cast v2, Landroid/content/pm/ResolveInfo;
 
-    .line 284
     iget-object v3, v2, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -347,14 +320,12 @@
 
     check-cast v4, Landroid/content/pm/ServiceInfo;
 
-    .line 286
     iget-object v4, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mCallerPermission:Ljava/lang/String;
 
     const-string v5, "CurrentUserServiceSupplier"
 
     if-eqz v4, :cond_2
 
-    .line 287
     iget-object v6, v3, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -363,7 +334,6 @@
 
     if-nez v4, :cond_2
 
-    .line 288
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -394,7 +364,6 @@
 
     goto :goto_1
 
-    .line 294
     :cond_2
     new-instance v4, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;
 
@@ -406,27 +375,22 @@
 
     invoke-direct {v4, v6, v2}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;-><init>(Ljava/lang/String;Landroid/content/pm/ResolveInfo;)V
 
-    .line 296
     iget-object v2, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mServicePermission:Ljava/lang/String;
 
     if-eqz v2, :cond_3
 
-    .line 297
     iget-object v3, v3, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 298
     invoke-virtual {v4}, Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;->getUserId()I
 
     move-result v6
 
-    .line 297
     invoke-static {v2, v3, v6}, Landroid/permission/PermissionManager;->checkPackageNamePermission(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 299
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -457,7 +421,6 @@
 
     goto/16 :goto_1
 
-    .line 305
     :cond_3
     sget-object v2, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->sBoundServiceInfoComparator:Ljava/util/Comparator;
 
@@ -478,7 +441,6 @@
 .method public bridge synthetic getServiceInfo()Lcom/android/server/servicewatcher/ServiceWatcher$BoundServiceInfo;
     .locals 0
 
-    .line 65
     invoke-virtual {p0}, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->getServiceInfo()Lcom/android/server/servicewatcher/CurrentUserServiceSupplier$BoundServiceInfo;
 
     move-result-object p0
@@ -489,7 +451,6 @@
 .method public hasMatchingService()Z
     .locals 3
 
-    .line 237
     iget-boolean v0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mMatchSystemAppsOnly:Z
 
     if-eqz v0, :cond_0
@@ -501,7 +462,6 @@
     :cond_0
     const/high16 v0, 0xc0000
 
-    .line 240
     :goto_0
     iget-object v1, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mContext:Landroid/content/Context;
 
@@ -513,12 +473,10 @@
 
     const/4 v2, 0x0
 
-    .line 241
     invoke-virtual {v1, p0, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentServicesAsUser(Landroid/content/Intent;II)Ljava/util/List;
 
     move-result-object p0
 
-    .line 244
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -531,7 +489,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 315
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -545,7 +502,6 @@
 
     const/16 v1, -0x2710
 
-    .line 319
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -554,7 +510,6 @@
 
     return-void
 
-    .line 323
     :cond_1
     iget-object v0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mListener:Lcom/android/server/servicewatcher/ServiceWatcher$ServiceChangedListener;
 
@@ -565,7 +520,6 @@
     :cond_2
     const-string v1, "android.intent.action.USER_UNLOCKED"
 
-    .line 328
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -582,13 +536,11 @@
 
     goto :goto_0
 
-    .line 330
     :cond_3
     invoke-interface {v0}, Lcom/android/server/servicewatcher/ServiceWatcher$ServiceChangedListener;->onServiceChanged()V
 
     goto :goto_0
 
-    .line 334
     :cond_4
     iget-object p0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mActivityManager:Landroid/app/ActivityManagerInternal;
 
@@ -598,7 +550,6 @@
 
     if-ne p2, p0, :cond_5
 
-    .line 335
     invoke-interface {v0}, Lcom/android/server/servicewatcher/ServiceWatcher$ServiceChangedListener;->onServiceChanged()V
 
     :cond_5
@@ -609,7 +560,6 @@
 .method public register(Lcom/android/server/servicewatcher/ServiceWatcher$ServiceChangedListener;)V
     .locals 7
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mListener:Lcom/android/server/servicewatcher/ServiceWatcher$ServiceChangedListener;
 
     if-nez v0, :cond_0
@@ -624,44 +574,36 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 251
     iput-object p1, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mListener:Lcom/android/server/servicewatcher/ServiceWatcher$ServiceChangedListener;
 
-    .line 253
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p1, "android.intent.action.USER_SWITCHED"
 
-    .line 254
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p1, "android.intent.action.USER_UNLOCKED"
 
-    .line 255
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const/16 p1, 0x3e8
 
-    .line 256
     invoke-virtual {v4, p1}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 257
     iget-object v1, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mContext:Landroid/content/Context;
 
     sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     const/4 v5, 0x0
 
-    .line 258
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
 
     move-object v2, p0
 
-    .line 257
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     return-void
@@ -670,7 +612,6 @@
 .method public unregister()V
     .locals 1
 
-    .line 263
     iget-object v0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mListener:Lcom/android/server/servicewatcher/ServiceWatcher$ServiceChangedListener;
 
     if-eqz v0, :cond_0
@@ -687,10 +628,8 @@
 
     const/4 v0, 0x0
 
-    .line 265
     iput-object v0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mListener:Lcom/android/server/servicewatcher/ServiceWatcher$ServiceChangedListener;
 
-    .line 266
     iget-object v0, p0, Lcom/android/server/servicewatcher/CurrentUserServiceSupplier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V

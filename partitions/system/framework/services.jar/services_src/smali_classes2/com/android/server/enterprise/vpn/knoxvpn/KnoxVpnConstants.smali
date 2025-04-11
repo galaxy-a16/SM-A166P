@@ -33,7 +33,6 @@
 
     const-string v0, "com.android.providers.downloads"
 
-    .line 236
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v1
@@ -42,7 +41,6 @@
 
     const/4 v1, 0x0
 
-    .line 237
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -59,7 +57,6 @@
 
     sput-object v1, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->BLACK_LISTED_UID:[Ljava/lang/Integer;
 
-    .line 238
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -68,20 +65,16 @@
 
     const/4 v0, 0x0
 
-    .line 267
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->DEFAULT_PROXY_SERVER:Ljava/lang/String;
 
-    .line 269
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->DEFAULT_PROXY_CREDENTIALS:Ljava/lang/String;
 
-    .line 270
     sput-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnConstants;->DEFAULT_PAC_URL:Ljava/lang/String;
 
     const-string v0, "com.android.chrome"
 
     const-string v1, "com.sec.android.app.sbrowser"
 
-    .line 283
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -98,7 +91,6 @@
 
     const-string v4, "com.samsung.android.email.ui"
 
-    .line 297
     filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -107,7 +99,6 @@
 
     const/16 v0, 0x41b
 
-    .line 392
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -134,7 +125,6 @@
 
     const-string/jumbo v1, "usb"
 
-    .line 398
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0

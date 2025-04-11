@@ -16,10 +16,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 7710
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7711
     sget-object v0, Landroid/app/BackgroundStartPrivileges;->NONE:Landroid/app/BackgroundStartPrivileges;
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor;->mBackgroundStartPrivileges:Landroid/app/BackgroundStartPrivileges;
@@ -30,7 +28,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor;-><init>()V
 
     return-void
@@ -41,17 +38,14 @@
 .method public accept(Lcom/android/server/am/ProcessRecord;)V
     .locals 2
 
-    .line 7726
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->uid:I
 
     iget v1, p0, Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor;->mUid:I
 
     if-ne v0, v1, :cond_0
 
-    .line 7727
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor;->mBackgroundStartPrivileges:Landroid/app/BackgroundStartPrivileges;
 
-    .line 7728
     invoke-virtual {p1}, Lcom/android/server/am/ProcessRecord;->getBackgroundStartPrivileges()Landroid/app/BackgroundStartPrivileges;
 
     move-result-object p1
@@ -69,7 +63,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 7710
     check-cast p1, Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor;->accept(Lcom/android/server/am/ProcessRecord;)V
@@ -80,7 +73,6 @@
 .method public getResult()Landroid/app/BackgroundStartPrivileges;
     .locals 0
 
-    .line 7722
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor;->mBackgroundStartPrivileges:Landroid/app/BackgroundStartPrivileges;
 
     return-object p0
@@ -89,10 +81,8 @@
 .method public prepare(I)V
     .locals 0
 
-    .line 7716
     iput p1, p0, Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor;->mUid:I
 
-    .line 7717
     sget-object p1, Landroid/app/BackgroundStartPrivileges;->NONE:Landroid/app/BackgroundStartPrivileges;
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$GetBackgroundStartPrivilegesFunctor;->mBackgroundStartPrivileges:Landroid/app/BackgroundStartPrivileges;

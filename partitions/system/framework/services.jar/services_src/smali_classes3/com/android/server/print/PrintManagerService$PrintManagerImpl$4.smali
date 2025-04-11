@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/print/PrintManagerService$PrintManagerImpl;I)V
     .locals 0
 
-    .line 1079
     iput-object p1, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
     iput p2, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->val$userId:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 3
 
-    .line 1082
     iget-object v0, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
     invoke-static {v0}, Lcom/android/server/print/PrintManagerService$PrintManagerImpl;->-$$Nest$fgetmLock(Lcom/android/server/print/PrintManagerService$PrintManagerImpl;)Ljava/lang/Object;
@@ -40,7 +38,6 @@
 
     monitor-enter v0
 
-    .line 1083
     :try_start_0
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
@@ -58,10 +55,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1085
     invoke-virtual {v1}, Lcom/android/server/print/UserState;->destroyLocked()V
 
-    .line 1086
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
     invoke-static {v1}, Lcom/android/server/print/PrintManagerService$PrintManagerImpl;->-$$Nest$fgetmUserStates(Lcom/android/server/print/PrintManagerService$PrintManagerImpl;)Landroid/util/SparseArray;
@@ -72,7 +67,6 @@
 
     invoke-virtual {v1, p0}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 1088
     :cond_0
     monitor-exit v0
 

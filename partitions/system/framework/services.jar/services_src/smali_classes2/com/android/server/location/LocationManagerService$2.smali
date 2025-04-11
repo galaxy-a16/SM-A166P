@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/LocationManagerService;)V
     .locals 0
 
-    .line 557
     iput-object p1, p0, Lcom/android/server/location/LocationManagerService$2;->this$0:Lcom/android/server/location/LocationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "com.samsung.android.location.mock.delete"
 
-    .line 560
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -37,14 +35,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 561
     iget-object p1, p0, Lcom/android/server/location/LocationManagerService$2;->this$0:Lcom/android/server/location/LocationManagerService;
 
     iget-object p1, p1, Lcom/android/server/location/LocationManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 562
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$2;->this$0:Lcom/android/server/location/LocationManagerService;
 
@@ -54,14 +50,12 @@
 
     const-string v0, "android.intent.extra.PACKAGE_NAME"
 
-    .line 563
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 564
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$2;->this$0:Lcom/android/server/location/LocationManagerService;
 
     invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->-$$Nest$fgetmMockLocationRecord(Lcom/android/server/location/LocationManagerService;)Ljava/util/HashMap;
@@ -74,12 +68,10 @@
 
     if-nez v0, :cond_0
 
-    .line 565
     iget-object p0, p0, Lcom/android/server/location/LocationManagerService$2;->this$0:Lcom/android/server/location/LocationManagerService;
 
     invoke-static {p0, p2}, Lcom/android/server/location/LocationManagerService;->-$$Nest$mrecoverRealProviderLocked(Lcom/android/server/location/LocationManagerService;Ljava/lang/String;)V
 
-    .line 567
     :cond_0
     monitor-exit p1
 

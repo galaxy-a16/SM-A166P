@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$Ed3-KDnHowImEFWPfsMVkuQO_Gs(Landroid/tracing/TraceReportParams;Ljava/lang/Void;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/tracing/TracingServiceProxy;->lambda$reportTrace$1(Landroid/tracing/TraceReportParams;Ljava/lang/Void;Ljava/lang/Throwable;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$i_wPpmGt-2r1yBCMpFQP46ltzHw(Landroid/tracing/TraceReportParams;Landroid/os/IMessenger;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/tracing/TracingServiceProxy;->lambda$reportTrace$0(Landroid/tracing/TraceReportParams;Landroid/os/IMessenger;)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyTraceur(Lcom/android/server/tracing/TracingServiceProxy;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/tracing/TracingServiceProxy;->notifyTraceur(Z)V
 
     return-void
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$mreportTrace(Lcom/android/server/tracing/TracingServiceProxy;Landroid/tracing/TraceReportParams;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/tracing/TracingServiceProxy;->reportTrace(Landroid/tracing/TraceReportParams;)V
 
     return-void
@@ -53,27 +49,22 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 115
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 97
     new-instance v0, Lcom/android/server/tracing/TracingServiceProxy$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/tracing/TracingServiceProxy$1;-><init>(Lcom/android/server/tracing/TracingServiceProxy;)V
 
     iput-object v0, p0, Lcom/android/server/tracing/TracingServiceProxy;->mTracingServiceProxy:Landroid/tracing/ITracingServiceProxy$Stub;
 
-    .line 116
     iput-object p1, p0, Lcom/android/server/tracing/TracingServiceProxy;->mContext:Landroid/content/Context;
 
-    .line 117
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/tracing/TracingServiceProxy;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 118
     new-instance p1, Landroid/util/LruCache;
 
     const/16 v0, 0x8
@@ -88,26 +79,22 @@
 .method public static synthetic lambda$reportTrace$0(Landroid/tracing/TraceReportParams;Landroid/os/IMessenger;)V
     .locals 8
 
-    .line 188
     iget-boolean v0, p0, Landroid/tracing/TraceReportParams;->usePipeForTesting:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    .line 189
     invoke-static {}, Landroid/os/ParcelFileDescriptor;->createPipe()[Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0
 
-    .line 190
     new-instance v2, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
     iget-object v3, p0, Landroid/tracing/TraceReportParams;->fd:Landroid/os/ParcelFileDescriptor;
 
     invoke-direct {v2, v3}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 191
     :try_start_0
     new-instance v3, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
@@ -119,41 +106,34 @@
 
     const/16 v4, 0x400
 
-    .line 192
     :try_start_1
     invoke-virtual {v2, v4}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->readNBytes(I)[B
 
     move-result-object v5
 
-    .line 193
     array-length v6, v5
 
     if-eq v6, v4, :cond_0
 
-    .line 197
     invoke-virtual {v3, v5}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 198
     :try_start_2
     invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 199
     invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->close()V
 
     const/4 v2, 0x0
 
-    .line 200
     aget-object v0, v0, v2
 
     iput-object v0, p0, Landroid/tracing/TraceReportParams;->fd:Landroid/os/ParcelFileDescriptor;
 
     goto :goto_2
 
-    .line 194
     :cond_0
     :try_start_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -169,7 +149,6 @@
     :catchall_0
     move-exception p0
 
-    .line 191
     :try_start_4
     invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
     :try_end_4
@@ -191,7 +170,6 @@
     :catchall_2
     move-exception p0
 
-    .line 190
     :try_start_6
     invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->close()V
     :try_end_6
@@ -207,27 +185,22 @@
     :goto_1
     throw p0
 
-    .line 203
     :cond_1
     :goto_2
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 204
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 205
     iput-object p0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 206
     invoke-interface {p1, v0}, Landroid/os/IMessenger;->send(Landroid/os/Message;)V
 
     const/16 v2, 0x1a8
 
     const/4 v3, 0x2
 
-    .line 208
     iget-wide v4, p0, Landroid/tracing/TraceReportParams;->uuidLsb:J
 
     iget-wide v6, p0, Landroid/tracing/TraceReportParams;->uuidMsb:J
@@ -246,7 +219,6 @@
 
     const/4 v1, 0x5
 
-    .line 212
     iget-wide v2, p0, Landroid/tracing/TraceReportParams;->uuidLsb:J
 
     iget-wide v4, p0, Landroid/tracing/TraceReportParams;->uuidMsb:J
@@ -257,10 +229,8 @@
 
     const-string v0, "Failed to report trace"
 
-    .line 214
     invoke-static {p1, v0, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 217
     :cond_0
     :try_start_0
     iget-object p0, p0, Landroid/tracing/TraceReportParams;->fd:Landroid/os/ParcelFileDescriptor;
@@ -278,7 +248,6 @@
 .method public final getOrCreateReporterService(Landroid/content/ComponentName;)Lcom/android/internal/infra/ServiceConnector;
     .locals 8
 
-    .line 225
     iget-object v0, p0, Lcom/android/server/tracing/TracingServiceProxy;->mCachedReporterServices:Landroid/util/LruCache;
 
     invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -289,22 +258,18 @@
 
     if-nez v0, :cond_0
 
-    .line 227
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 228
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 229
     new-instance p1, Lcom/android/server/tracing/TracingServiceProxy$2;
 
     iget-object v3, p0, Lcom/android/server/tracing/TracingServiceProxy;->mContext:Landroid/content/Context;
 
     const/16 v5, 0x21
 
-    .line 232
     invoke-virtual {v3}, Landroid/content/Context;->getUser()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -325,7 +290,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/tracing/TracingServiceProxy$2;-><init>(Lcom/android/server/tracing/TracingServiceProxy;Landroid/content/Context;Landroid/content/Intent;IILjava/util/function/Function;)V
 
-    .line 246
     iget-object p0, p0, Lcom/android/server/tracing/TracingServiceProxy;->mCachedReporterServices:Landroid/util/LruCache;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
@@ -349,7 +313,6 @@
 
     const/4 v2, 0x0
 
-    .line 266
     :try_start_0
     iget-object p0, p0, Lcom/android/server/tracing/TracingServiceProxy;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -359,7 +322,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 272
     iget-object v3, p0, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     const-string v4, "android.permission.BIND_TRACE_REPORT_SERVICE"
@@ -370,14 +332,12 @@
 
     if-nez v3, :cond_0
 
-    .line 273
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 274
     invoke-virtual {p1}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p1
@@ -402,7 +362,6 @@
 
     move-result-object p0
 
-    .line 273
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -412,7 +371,6 @@
 
     return p0
 
-    .line 268
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -420,7 +378,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 269
     invoke-virtual {p1}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p1
@@ -435,7 +392,6 @@
 
     move-result-object p0
 
-    .line 268
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -444,7 +400,6 @@
 .method public final hasPermission(Landroid/content/ComponentName;Ljava/lang/String;)Z
     .locals 1
 
-    .line 253
     iget-object p0, p0, Lcom/android/server/tracing/TracingServiceProxy;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -457,7 +412,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 255
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,7 +420,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 256
     invoke-virtual {p1}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p1
@@ -489,7 +442,6 @@
 
     const-string p1, "TracingServiceProxy"
 
-    .line 255
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -507,12 +459,10 @@
 
     const-string v0, "TracingServiceProxy"
 
-    .line 127
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 131
     :try_start_0
     iget-object v2, p0, Lcom/android/server/tracing/TracingServiceProxy;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -524,7 +474,6 @@
 
     move-result-object v2
 
-    .line 134
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     const-string v3, "com.android.traceur.StopTraceService"
@@ -535,7 +484,6 @@
 
     const-string p1, "com.android.traceur.NOTIFY_SESSION_STOLEN"
 
-    .line 136
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_0
@@ -543,10 +491,8 @@
     :cond_0
     const-string p1, "com.android.traceur.NOTIFY_SESSION_STOPPED"
 
-    .line 138
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 141
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -554,7 +500,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 143
     :try_start_1
     iget-object p0, p0, Lcom/android/server/tracing/TracingServiceProxy;->mContext:Landroid/content/Context;
 
@@ -565,7 +510,6 @@
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 147
     :goto_1
     :try_start_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -585,19 +529,16 @@
     :try_start_3
     const-string p1, "Failed to notifyTraceSessionEnded"
 
-    .line 145
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_1
 
-    .line 147
     :goto_2
     :try_start_4
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 148
     throw p0
     :try_end_4
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4 .. :try_end_4} :catch_1
@@ -607,7 +548,6 @@
 
     const-string p1, "Failed to locate Traceur"
 
-    .line 151
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_3
@@ -619,7 +559,6 @@
 
     const-string/jumbo v0, "tracing.proxy"
 
-    .line 123
     iget-object v1, p0, Lcom/android/server/tracing/TracingServiceProxy;->mTracingServiceProxy:Landroid/tracing/ITracingServiceProxy$Stub;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
@@ -634,14 +573,12 @@
 
     const/4 v1, 0x1
 
-    .line 156
     iget-wide v2, p1, Landroid/tracing/TraceReportParams;->uuidLsb:J
 
     iget-wide v4, p1, Landroid/tracing/TraceReportParams;->uuidMsb:J
 
     invoke-static/range {v0 .. v5}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIJJ)V
 
-    .line 161
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object v1, p1, Landroid/tracing/TraceReportParams;->reporterPackageName:Ljava/lang/String;
@@ -650,7 +587,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
     invoke-virtual {p0, v0}, Lcom/android/server/tracing/TracingServiceProxy;->hasBindServicePermission(Landroid/content/ComponentName;)Z
 
     move-result v1
@@ -661,7 +597,6 @@
 
     const/4 v3, 0x3
 
-    .line 164
     iget-wide v4, p1, Landroid/tracing/TraceReportParams;->uuidLsb:J
 
     iget-wide v6, p1, Landroid/tracing/TraceReportParams;->uuidMsb:J
@@ -673,14 +608,12 @@
     :cond_0
     const-string v1, "android.permission.DUMP"
 
-    .line 168
     invoke-virtual {p0, v0, v1}, Lcom/android/server/tracing/TracingServiceProxy;->hasPermission(Landroid/content/ComponentName;Ljava/lang/String;)Z
 
     move-result v1
 
     const-string v2, "android.permission.PACKAGE_USAGE_STATS"
 
-    .line 169
     invoke-virtual {p0, v0, v2}, Lcom/android/server/tracing/TracingServiceProxy;->hasPermission(Landroid/content/ComponentName;Ljava/lang/String;)Z
 
     move-result v2
@@ -691,13 +624,11 @@
 
     goto :goto_0
 
-    .line 176
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 178
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/tracing/TracingServiceProxy;->getOrCreateReporterService(Landroid/content/ComponentName;)Lcom/android/internal/infra/ServiceConnector;
 
@@ -707,7 +638,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 180
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -717,7 +647,6 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 181
     throw p0
 
     :cond_2
@@ -726,7 +655,6 @@
 
     const/4 v4, 0x4
 
-    .line 172
     iget-wide v5, p1, Landroid/tracing/TraceReportParams;->uuidLsb:J
 
     iget-wide v7, p1, Landroid/tracing/TraceReportParams;->uuidMsb:J
@@ -739,7 +667,6 @@
 .method public final reportTrace(Lcom/android/internal/infra/ServiceConnector;Landroid/tracing/TraceReportParams;)V
     .locals 0
 
-    .line 187
     new-instance p0, Lcom/android/server/tracing/TracingServiceProxy$$ExternalSyntheticLambda0;
 
     invoke-direct {p0, p2}, Lcom/android/server/tracing/TracingServiceProxy$$ExternalSyntheticLambda0;-><init>(Landroid/tracing/TraceReportParams;)V
@@ -752,7 +679,6 @@
 
     invoke-direct {p1, p2}, Lcom/android/server/tracing/TracingServiceProxy$$ExternalSyntheticLambda1;-><init>(Landroid/tracing/TraceReportParams;)V
 
-    .line 210
     invoke-virtual {p0, p1}, Lcom/android/internal/infra/AndroidFuture;->whenComplete(Ljava/util/function/BiConsumer;)Lcom/android/internal/infra/AndroidFuture;
 
     return-void

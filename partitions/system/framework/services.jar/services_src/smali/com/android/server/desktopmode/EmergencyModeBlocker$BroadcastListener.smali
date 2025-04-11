@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/EmergencyModeBlocker;)V
     .locals 0
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$BroadcastListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/EmergencyModeBlocker;Lcom/android/server/desktopmode/EmergencyModeBlocker$BroadcastListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/EmergencyModeBlocker$BroadcastListener;-><init>(Lcom/android/server/desktopmode/EmergencyModeBlocker;)V
 
     return-void
@@ -37,12 +35,10 @@
 
     const/4 v0, 0x0
 
-    .line 41
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 42
     sget-boolean p2, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p2, :cond_0
@@ -86,13 +82,11 @@
 
     goto :goto_0
 
-    .line 52
     :cond_1
     iget-object p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$BroadcastListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
     invoke-static {p1, v0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$fputmEnabledInBroadcast(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$BroadcastListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
     const/16 p1, 0x2710
@@ -101,7 +95,6 @@
 
     goto :goto_0
 
-    .line 47
     :cond_2
     iget-object p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$BroadcastListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
@@ -109,7 +102,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$fputmEnabledInBroadcast(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
 
-    .line 48
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker$BroadcastListener;->this$0:Lcom/android/server/desktopmode/EmergencyModeBlocker;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->-$$Nest$mscheduleUpdateBlockerRegistration(Lcom/android/server/desktopmode/EmergencyModeBlocker;)V

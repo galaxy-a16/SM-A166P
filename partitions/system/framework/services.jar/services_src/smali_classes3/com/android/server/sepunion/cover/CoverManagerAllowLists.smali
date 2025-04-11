@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,37 +47,30 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
-    .line 48
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
-    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mPrefixPackage:Ljava/util/ArrayList;
 
-    .line 52
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->setupSignaturesMap()V
 
-    .line 53
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->setupAllowList()V
 
-    .line 54
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->setPrefixPackage()V
 
     return-void
@@ -87,7 +79,6 @@
 .method public static encode(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 246
     sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -96,7 +87,6 @@
 
     const/4 v0, 0x2
 
-    .line 247
     invoke-static {p0, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object p0
@@ -111,13 +101,11 @@
 
     if-eqz p1, :cond_1
 
-    .line 232
     :try_start_0
     invoke-static {p1}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->encode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 233
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mPrefixPackage:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -137,7 +125,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 234
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -151,7 +138,6 @@
     :catch_0
     move-exception p0
 
-    .line 239
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -161,7 +147,6 @@
 .method public final ensureUserContext(Landroid/content/Context;Landroid/os/UserHandle;)Landroid/content/Context;
     .locals 1
 
-    .line 277
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -180,7 +165,6 @@
     :catch_0
     move-exception p0
 
-    .line 280
     sget-object p2, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->TAG:Ljava/lang/String;
 
     const-string v0, "Error creating user context"
@@ -196,21 +180,18 @@
 
     const-string p0, "activity"
 
-    .line 217
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 218
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 220
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -228,12 +209,10 @@
 
     check-cast p1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 221
     iget v0, p1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v0, p2, :cond_0
 
-    .line 222
     iget-object p0, p1, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     return-object p0
@@ -247,7 +226,6 @@
 .method public final getSignatures(I)Ljava/util/ArrayList;
     .locals 4
 
-    .line 251
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -267,7 +245,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 255
     iget-object v3, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -292,7 +269,6 @@
 
     const/4 v0, 0x7
 
-    .line 212
     invoke-virtual {p0, p1, v0}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->isMatchedSignature([Landroid/content/pm/Signature;I)Z
 
     move-result p0
@@ -303,7 +279,6 @@
 .method public isAllowedToUse(Landroid/content/Context;II)Z
     .locals 6
 
-    .line 146
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -320,30 +295,25 @@
 
     return v1
 
-    .line 150
     :cond_0
     invoke-virtual {p0, p1, p3}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->getPackageForPid(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 151
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 154
     invoke-static {p2}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 155
     invoke-virtual {p0, p1, v0}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->ensureUserContext(Landroid/content/Context;Landroid/os/UserHandle;)Landroid/content/Context;
 
     move-result-object p1
 
     const/4 v4, 0x0
 
-    .line 157
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -351,12 +321,10 @@
 
     const/16 v5, 0x40
 
-    .line 158
     invoke-virtual {p1, p3, v5}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v4
 
-    .line 159
     invoke-virtual {v0}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v0
@@ -369,7 +337,6 @@
 
     goto :goto_0
 
-    .line 164
     :catch_0
     sget-object p1, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->TAG:Ljava/lang/String;
 
@@ -395,7 +362,6 @@
 
     const/4 p1, -0x1
 
-    .line 166
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -403,7 +369,6 @@
 
     if-eq p1, p2, :cond_1
 
-    .line 172
     sget-object p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->TAG:Ljava/lang/String;
 
     const-string p1, "isAllowedToUse : pkg does not match uid"
@@ -415,7 +380,6 @@
     :cond_1
     if-nez v4, :cond_2
 
-    .line 177
     sget-object p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->TAG:Ljava/lang/String;
 
     const-string p1, "isAllowedToUse : pkgInfo is null"
@@ -424,7 +388,6 @@
 
     return v0
 
-    .line 181
     :cond_2
     iget-object p1, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -439,7 +402,6 @@
     :cond_3
     const-string p1, "eng"
 
-    .line 186
     sget-object p2, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -450,11 +412,9 @@
 
     return v1
 
-    .line 191
     :cond_4
     iget-object p1, v4, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 192
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->hasSamsungKey([Landroid/content/pm/Signature;)Z
 
     move-result p2
@@ -463,13 +423,11 @@
 
     return v1
 
-    .line 197
     :cond_5
     invoke-virtual {p0, p3}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->convertPackageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 198
     iget-object p3, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     invoke-virtual {p3, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -480,7 +438,6 @@
 
     if-nez p3, :cond_6
 
-    .line 200
     sget-object p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -501,7 +458,6 @@
 
     return v0
 
-    .line 203
     :cond_6
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
@@ -517,7 +473,6 @@
 .method public final isMatchedSignature([Landroid/content/pm/Signature;I)Z
     .locals 5
 
-    .line 262
     invoke-virtual {p0, p2}, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->getSignatures(I)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -528,7 +483,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 264
     array-length v0, p1
 
     move v1, p2
@@ -538,7 +492,6 @@
 
     aget-object v2, p1, v1
 
-    .line 265
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -558,7 +511,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 266
     invoke-virtual {v4, v2}, Landroid/content/pm/Signature;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -581,7 +533,6 @@
 .method public final setPrefixPackage()V
     .locals 1
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mPrefixPackage:Ljava/util/ArrayList;
 
     const-string v0, "Y29tLnNhbXN1bmcucmFkaW8="
@@ -594,7 +545,6 @@
 .method public final setupAllowList()V
     .locals 3
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0x8
@@ -607,7 +557,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0x10
@@ -620,7 +569,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0x20
@@ -633,7 +581,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0x40
@@ -646,7 +593,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0x80
@@ -659,14 +605,12 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const-string v2, "Y29tLndob3gyLmxndXBsdXM="
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0x100
@@ -679,7 +623,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0x200
@@ -692,14 +635,12 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const-string v2, "Y29tLnNlYy5hbmRyb2lkLmFwcC5zaGVhbHRoOnJlbW90ZQ=="
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0xc00
@@ -712,7 +653,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v1, 0x1000
@@ -725,7 +665,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mAllowList:Ljava/util/HashMap;
 
     const/16 v0, 0x2000
@@ -744,7 +683,6 @@
 .method public final setupSignaturesMap()V
     .locals 4
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -755,10 +693,8 @@
 
     const/4 v2, 0x1
 
-    .line 59
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -769,10 +705,8 @@
 
     const/4 v2, 0x2
 
-    .line 64
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -783,10 +717,8 @@
 
     const/4 v2, 0x4
 
-    .line 69
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -797,10 +729,8 @@
 
     const/16 v2, 0x8
 
-    .line 74
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -811,10 +741,8 @@
 
     const/16 v2, 0x10
 
-    .line 79
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -825,10 +753,8 @@
 
     const/16 v3, 0x20
 
-    .line 84
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -839,10 +765,8 @@
 
     const/16 v3, 0x40
 
-    .line 89
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -853,10 +777,8 @@
 
     const/16 v3, 0x80
 
-    .line 94
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -867,10 +789,8 @@
 
     const/16 v3, 0x100
 
-    .line 99
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -881,10 +801,8 @@
 
     const/16 v3, 0x200
 
-    .line 104
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -895,10 +813,8 @@
 
     const/16 v3, 0x400
 
-    .line 108
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -909,10 +825,8 @@
 
     const/16 v3, 0x800
 
-    .line 112
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -921,10 +835,8 @@
 
     const/16 v2, 0x1000
 
-    .line 116
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerAllowLists;->mSignaturesMap:Landroid/util/SparseArray;
 
     new-instance v0, Landroid/content/pm/Signature;
@@ -935,7 +847,6 @@
 
     const/16 v1, 0x2000
 
-    .line 120
     invoke-virtual {p0, v1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     return-void

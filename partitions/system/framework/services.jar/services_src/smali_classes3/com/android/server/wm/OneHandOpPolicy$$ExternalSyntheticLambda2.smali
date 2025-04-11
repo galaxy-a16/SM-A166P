@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/OneHandOpPolicy;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/OneHandOpPolicy$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/wm/OneHandOpPolicy;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/OneHandOpPolicy$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/wm/OneHandOpPolicy;
 
     invoke-static {p0}, Lcom/android/server/wm/OneHandOpPolicy;->$r8$lambda$BbehN5o9_3tLa2u_SBpMZbEPXiY(Lcom/android/server/wm/OneHandOpPolicy;)V

@@ -16,13 +16,10 @@
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/hdmi/WorkSourceUidPreservingRunnable;->mRunnable:Ljava/lang/Runnable;
 
-    .line 33
     invoke-static {}, Landroid/os/Binder;->getCallingWorkSourceUid()I
 
     move-result p1
@@ -37,14 +34,12 @@
 .method public run()V
     .locals 2
 
-    .line 38
     iget v0, p0, Lcom/android/server/hdmi/WorkSourceUidPreservingRunnable;->mUid:I
 
     invoke-static {v0}, Landroid/os/Binder;->setCallingWorkSourceUid(I)J
 
     move-result-wide v0
 
-    .line 40
     :try_start_0
     iget-object p0, p0, Lcom/android/server/hdmi/WorkSourceUidPreservingRunnable;->mRunnable:Ljava/lang/Runnable;
 
@@ -52,7 +47,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 42
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingWorkSource(J)V
 
     return-void
@@ -62,6 +56,5 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingWorkSource(J)V
 
-    .line 43
     throw p0
 .end method

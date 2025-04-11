@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 7823
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$DemoResetReceiver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "com.samsung.sea.rm.DEMO_RESET_STARTED"
 
-    .line 7826
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -47,7 +45,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 7827
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object p1
@@ -58,7 +55,6 @@
 
     move-result-object p1
 
-    .line 7829
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -80,7 +76,6 @@
     :cond_0
     const-string p1, "com.samsung.android.honeyboard/.service.HoneyBoardService"
 
-    .line 7832
     :goto_0
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$DemoResetReceiver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 

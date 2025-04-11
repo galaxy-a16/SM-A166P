@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 42
     new-instance v0, Ljava/util/UUID;
 
     const-wide/16 v1, 0x0
@@ -26,7 +25,6 @@
 .method public static uuidFromAudioDeviceAttributes(Landroid/media/AudioDeviceAttributes;)Ljava/util/UUID;
     .locals 4
 
-    .line 48
     invoke-virtual {p0}, Landroid/media/AudioDeviceAttributes;->getInternalType()I
 
     move-result v0
@@ -39,7 +37,6 @@
 
     return-object v2
 
-    .line 50
     :cond_0
     invoke-virtual {p0}, Landroid/media/AudioDeviceAttributes;->getAddress()Ljava/lang/String;
 
@@ -53,7 +50,6 @@
 
     move-result-object p0
 
-    .line 51
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -64,7 +60,6 @@
 
     return-object v2
 
-    .line 54
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -80,7 +75,6 @@
 
     move-result-object p0
 
-    .line 57
     :try_start_0
     invoke-static {p0}, Ljava/lang/Long;->decode(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -96,7 +90,6 @@
 
     or-long/2addr v0, v2
 
-    .line 62
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,7 +112,6 @@
 
     invoke-static {v2, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     new-instance p0, Ljava/util/UUID;
 
     const-wide/16 v2, 0x0

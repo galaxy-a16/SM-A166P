@@ -22,7 +22,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/integrity/AppIntegrityManagerServiceImpl;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/ParceledListSlice;Landroid/content/IntentSender;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/integrity/AppIntegrityManagerServiceImpl$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/integrity/AppIntegrityManagerServiceImpl;
@@ -43,7 +42,6 @@
 .method public final run()V
     .locals 4
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/integrity/AppIntegrityManagerServiceImpl$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/integrity/AppIntegrityManagerServiceImpl;
 
     iget-object v1, p0, Lcom/android/server/integrity/AppIntegrityManagerServiceImpl$$ExternalSyntheticLambda1;->f$1:Ljava/lang/String;

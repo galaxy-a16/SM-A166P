@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$QRJ8rMpaFaI6JUONuc9XWQqiJNE()Ljava/util/regex/Matcher;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/pm/verify/domain/DomainVerificationUtils;->lambda$static$0()Ljava/util/regex/Matcher;
 
     move-result-object v0
@@ -22,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 38
     new-instance v0, Lcom/android/server/pm/verify/domain/DomainVerificationUtils$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/pm/verify/domain/DomainVerificationUtils$$ExternalSyntheticLambda0;-><init>()V
@@ -39,19 +37,16 @@
 .method public static buildMockAppInfo(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/content/pm/ApplicationInfo;
     .locals 2
 
-    .line 106
     new-instance v0, Landroid/content/pm/ApplicationInfo;
 
     invoke-direct {v0}, Landroid/content/pm/ApplicationInfo;-><init>()V
 
-    .line 107
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 108
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result p0
@@ -64,7 +59,6 @@
 .method public static isChangeEnabled(Lcom/android/server/compat/PlatformCompat;Lcom/android/server/pm/pkg/AndroidPackage;J)Z
     .locals 0
 
-    .line 94
     invoke-static {p1}, Lcom/android/server/pm/verify/domain/DomainVerificationUtils;->buildMockAppInfo(Lcom/android/server/pm/pkg/AndroidPackage;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p1
@@ -79,7 +73,6 @@
 .method public static isDomainVerificationIntent(Landroid/content/Intent;J)Z
     .locals 8
 
-    .line 53
     invoke-virtual {p0}, Landroid/content/Intent;->isWebIntent()Z
 
     move-result v0
@@ -90,7 +83,6 @@
 
     return v1
 
-    .line 57
     :cond_0
     invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -100,7 +92,6 @@
 
     move-result-object v0
 
-    .line 58
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -109,7 +100,6 @@
 
     return v1
 
-    .line 62
     :cond_1
     sget-object v2, Lcom/android/server/pm/verify/domain/DomainVerificationUtils;->sCachedMatcher:Ljava/lang/ThreadLocal;
 
@@ -131,13 +121,11 @@
 
     return v1
 
-    .line 66
     :cond_2
     invoke-virtual {p0}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 67
     invoke-static {v0}, Lcom/android/internal/util/CollectionUtils;->size(Ljava/util/Collection;)I
 
     move-result v0
@@ -157,14 +145,12 @@
 
     if-ne v0, v2, :cond_5
 
-    .line 73
     invoke-virtual {p0, v5}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 74
     invoke-virtual {p0, v3}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
 
     move-result p0
@@ -194,7 +180,6 @@
 
     return v1
 
-    .line 83
     :cond_7
     invoke-virtual {p0, v3}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
 
@@ -204,7 +189,6 @@
 
     return v1
 
-    .line 88
     :cond_8
     invoke-virtual {p0, v5}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
 
@@ -216,7 +200,6 @@
 .method public static synthetic lambda$static$0()Ljava/util/regex/Matcher;
     .locals 2
 
-    .line 39
     sget-object v0, Landroid/util/Patterns;->DOMAIN_NAME:Ljava/util/regex/Pattern;
 
     const-string v1, ""
@@ -231,7 +214,6 @@
 .method public static throwPackageUnavailable(Ljava/lang/String;)Landroid/content/pm/PackageManager$NameNotFoundException;
     .locals 3
 
-    .line 48
     new-instance v0, Landroid/content/pm/PackageManager$NameNotFoundException;
 
     new-instance v1, Ljava/lang/StringBuilder;

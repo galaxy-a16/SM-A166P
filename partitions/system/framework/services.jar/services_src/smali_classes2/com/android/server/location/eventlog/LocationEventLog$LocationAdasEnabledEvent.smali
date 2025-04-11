@@ -13,13 +13,10 @@
 .method public constructor <init>(IZ)V
     .locals 0
 
-    .line 520
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 521
     iput p1, p0, Lcom/android/server/location/eventlog/LocationEventLog$LocationAdasEnabledEvent;->mUserId:I
 
-    .line 522
     iput-boolean p2, p0, Lcom/android/server/location/eventlog/LocationEventLog$LocationAdasEnabledEvent;->mEnabled:Z
 
     return-void
@@ -30,7 +27,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 527
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

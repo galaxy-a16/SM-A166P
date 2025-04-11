@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/ComponentName;
 
     check-cast p2, Landroid/content/Context;

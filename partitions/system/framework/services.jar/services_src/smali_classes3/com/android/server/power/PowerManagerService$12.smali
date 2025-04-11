@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;)V
     .locals 0
 
-    .line 10897
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,15 +26,12 @@
 .method public onSContextChanged(Landroid/hardware/scontext/SContextEvent;)V
     .locals 12
 
-    .line 10900
     iget-object v0, p1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
-    .line 10901
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 10902
     invoke-virtual {v0}, Landroid/hardware/scontext/SContext;->getType()I
 
     move-result v0
@@ -44,12 +40,10 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 10903
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextEvent;->getWirelessChargingDetectionContext()Landroid/hardware/scontext/SContextWirelessChargingDetection;
 
     move-result-object p1
 
-    .line 10904
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextWirelessChargingDetection;->getAction()I
 
     move-result p1
@@ -69,15 +63,12 @@
 
     const-string v5, "WirelessChargerSContextListener : Move"
 
-    .line 10911
     invoke-static {p1, v5}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10912
     iget-object p1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-boolean v4, p1, Lcom/android/server/power/PowerManagerService;->mIsDeviceMoving:Z
 
-    .line 10913
     iget-boolean v4, p1, Lcom/android/server/power/PowerManagerService;->mIsWirelessChargerSContextRegistered:Z
 
     if-eqz v4, :cond_3
@@ -98,10 +89,8 @@
 
     const-string v4, "SContextListener : Unregister SContextListener"
 
-    .line 10914
     invoke-static {p1, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10915
     iget-object p1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iget-object v4, p1, Lcom/android/server/power/PowerManagerService;->mWirelessChargerSContextManager:Landroid/hardware/scontext/SContextManager;
@@ -112,19 +101,16 @@
 
     invoke-virtual {v4, p1, v3}, Landroid/hardware/scontext/SContextManager;->unregisterListener(Landroid/hardware/scontext/SContextListener;I)V
 
-    .line 10916
     iget-object p1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-boolean v0, p1, Lcom/android/server/power/PowerManagerService;->mIsWirelessChargerSContextRegistered:Z
 
-    .line 10918
     invoke-static {p1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/PowerManagerService;)Ljava/lang/Object;
 
     move-result-object p1
 
     monitor-enter p1
 
-    .line 10919
     :try_start_0
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -144,17 +130,14 @@
 
     const-string v2, "WirelessChargerSContextListener : received move lately"
 
-    .line 10920
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10921
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const-wide/16 v2, 0x0
 
     invoke-static {v1, v2, v3}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fputmPassedWakeupTime(Lcom/android/server/power/PowerManagerService;J)V
 
-    .line 10922
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmDirty(Lcom/android/server/power/PowerManagerService;)I
@@ -165,14 +148,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fputmDirty(Lcom/android/server/power/PowerManagerService;I)V
 
-    .line 10923
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const-string v2, " powered change"
 
     invoke-static {v1, v2}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fputmScreenOnReason(Lcom/android/server/power/PowerManagerService;Ljava/lang/String;)V
 
-    .line 10924
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v3}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmPowerGroups(Lcom/android/server/power/PowerManagerService;)Landroid/util/SparseArray;
@@ -203,22 +184,18 @@
 
     move-result-object v0
 
-    .line 10925
     invoke-virtual {v0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v10
 
     const/16 v11, 0x3e8
 
-    .line 10924
     invoke-static/range {v3 .. v11}, Lcom/android/server/power/PowerManagerService;->-$$Nest$mwakePowerGroupLocked(Lcom/android/server/power/PowerManagerService;Lcom/android/server/power/PowerGroup;JILjava/lang/String;ILjava/lang/String;I)V
 
-    .line 10926
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$mupdatePowerStateLocked(Lcom/android/server/power/PowerManagerService;)V
 
-    .line 10928
     :cond_1
     monitor-exit p1
 
@@ -238,10 +215,8 @@
 
     const-string v1, "WirelessChargerSContextListener : No Move"
 
-    .line 10907
     invoke-static {p1, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10908
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerService;->mIsDeviceMoving:Z

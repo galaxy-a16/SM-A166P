@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 31
     const-class v0, Lorg/tukaani/xz/LZMA2Options;
 
     const-class v1, Ljava/lang/Number;
@@ -26,13 +25,11 @@
 .method public decode(Ljava/lang/String;Ljava/io/InputStream;JLorg/apache/commons/compress/archivers/sevenz/Coder;[B)Ljava/io/InputStream;
     .locals 0
 
-    .line 38
     :try_start_0
     invoke-virtual {p0, p5}, Lorg/apache/commons/compress/archivers/sevenz/LZMA2Decoder;->getDictionarySize(Lorg/apache/commons/compress/archivers/sevenz/Coder;)I
 
     move-result p0
 
-    .line 39
     new-instance p1, Lorg/tukaani/xz/LZMA2InputStream;
 
     invoke-direct {p1, p2, p0}, Lorg/tukaani/xz/LZMA2InputStream;-><init>(Ljava/io/InputStream;I)V
@@ -44,7 +41,6 @@
     :catch_0
     move-exception p0
 
-    .line 41
     new-instance p1, Ljava/io/IOException;
 
     invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
@@ -59,7 +55,6 @@
 .method public final getDictionarySize(Lorg/apache/commons/compress/archivers/sevenz/Coder;)I
     .locals 0
 
-    .line 76
     iget-object p0, p1, Lorg/apache/commons/compress/archivers/sevenz/Coder;->properties:[B
 
     const/4 p1, 0x0
@@ -87,7 +82,6 @@
 
     or-int/lit8 p1, p1, 0x2
 
-    .line 86
     div-int/lit8 p0, p0, 0x2
 
     add-int/lit8 p0, p0, 0xb
@@ -96,7 +90,6 @@
 
     return p0
 
-    .line 81
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -106,7 +99,6 @@
 
     throw p0
 
-    .line 78
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -120,7 +112,6 @@
 .method public getOptionsFromCoder(Lorg/apache/commons/compress/archivers/sevenz/Coder;Ljava/io/InputStream;)Ljava/lang/Object;
     .locals 0
 
-    .line 65
     invoke-virtual {p0, p1}, Lorg/apache/commons/compress/archivers/sevenz/LZMA2Decoder;->getDictionarySize(Lorg/apache/commons/compress/archivers/sevenz/Coder;)I
 
     move-result p0

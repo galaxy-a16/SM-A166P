@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/devicepolicy/ActiveAdmin;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->$r8$lambda$_sw4-W87Qng3XTytYvIZsOagjP4(Lcom/android/server/devicepolicy/ActiveAdmin;)Ljava/lang/Integer;

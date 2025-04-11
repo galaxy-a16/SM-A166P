@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;Landroid/os/Looper;)V
     .locals 0
 
-    .line 152
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener$1;->this$1:Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,10 +23,8 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 156
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 157
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -40,7 +37,6 @@
 
     goto :goto_0
 
-    .line 162
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener$1;->this$1:Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;
 
@@ -48,7 +44,6 @@
 
     goto :goto_0
 
-    .line 159
     :cond_1
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener$1;->this$1:Lcom/android/server/notification/edgelighting/EdgeLightingListenerManager$EdgeLightingListener;
 

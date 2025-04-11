@@ -14,7 +14,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/encoder/MapEncoder;)V
     .locals 0
 
-    .line 59
     iput-object p1, p0, Lco/nstant/in/cbor/encoder/MapEncoder$1;->this$0:Lco/nstant/in/cbor/encoder/MapEncoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 59
     check-cast p1, [B
 
     check-cast p2, [B
@@ -42,7 +40,6 @@
 .method public compare([B[B)I
     .locals 5
 
-    .line 63
     array-length p0, p1
 
     array-length v0, p2
@@ -53,7 +50,6 @@
 
     return v1
 
-    .line 66
     :cond_0
     array-length p0, p1
 
@@ -70,13 +66,11 @@
 
     move v0, p0
 
-    .line 69
     :goto_0
     array-length v3, p1
 
     if-ge v0, v3, :cond_4
 
-    .line 70
     aget-byte v3, p1, v0
 
     aget-byte v4, p2, v0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/InstantAppRegistry;Lcom/android/server/pm/InstantAppRegistry;Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 195
     iput-object p1, p0, Lcom/android/server/pm/InstantAppRegistry$2;->this$0:Lcom/android/server/pm/InstantAppRegistry;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/utils/SnapshotCache;-><init>(Ljava/lang/Object;Lcom/android/server/utils/Watchable;)V
@@ -24,7 +23,6 @@
 .method public createSnapshot()Lcom/android/server/pm/InstantAppRegistry;
     .locals 2
 
-    .line 198
     new-instance v0, Lcom/android/server/pm/InstantAppRegistry;
 
     iget-object p0, p0, Lcom/android/server/utils/SnapshotCache;->mSource:Ljava/lang/Object;
@@ -35,7 +33,6 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/pm/InstantAppRegistry;-><init>(Lcom/android/server/pm/InstantAppRegistry;Lcom/android/server/pm/InstantAppRegistry-IA;)V
 
-    .line 199
     invoke-static {v0}, Lcom/android/server/pm/InstantAppRegistry;->-$$Nest$fgetmWatchable(Lcom/android/server/pm/InstantAppRegistry;)Lcom/android/server/utils/WatchableImpl;
 
     move-result-object p0
@@ -48,7 +45,6 @@
 .method public bridge synthetic createSnapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 195
     invoke-virtual {p0}, Lcom/android/server/pm/InstantAppRegistry$2;->createSnapshot()Lcom/android/server/pm/InstantAppRegistry;
 
     move-result-object p0

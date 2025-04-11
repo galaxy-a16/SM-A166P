@@ -20,7 +20,6 @@
 
     const-string v2, "android$frameworks$location$altitude$IAltitudeService"
 
-    .line 218
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v0

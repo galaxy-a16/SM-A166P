@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$_c3KdHEz39Wp1k5zzEf4DRLliV4(Lcom/android/server/adb/AdbService;ZB)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/adb/AdbService;->-$$Nest$msetAdbdEnabledForTransport(Lcom/android/server/adb/AdbService;ZB)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/adb/AdbService;)V
     .locals 0
 
-    .line 123
     iput-object p1, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-direct {p0}, Landroid/debug/AdbManagerInternal;-><init>()V
@@ -31,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/adb/AdbService;Lcom/android/server/adb/AdbService$AdbManagerInternalImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;-><init>(Lcom/android/server/adb/AdbService;)V
 
     return-void
@@ -42,7 +39,6 @@
 .method public getAdbKeysFile()Ljava/io/File;
     .locals 1
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-static {v0}, Lcom/android/server/adb/AdbService;->-$$Nest$fgetmDebuggingManager(Lcom/android/server/adb/AdbService;)Lcom/android/server/adb/AdbDebuggingManager;
@@ -73,7 +69,6 @@
 .method public getAdbTempKeysFile()Ljava/io/File;
     .locals 1
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-static {v0}, Lcom/android/server/adb/AdbService;->-$$Nest$fgetmDebuggingManager(Lcom/android/server/adb/AdbService;)Lcom/android/server/adb/AdbDebuggingManager;
@@ -106,7 +101,6 @@
 
     if-nez p1, :cond_0
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-static {p0}, Lcom/android/server/adb/AdbService;->-$$Nest$fgetmIsAdbUsbEnabled(Lcom/android/server/adb/AdbService;)Z
@@ -120,7 +114,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 139
     iget-object p0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-static {p0}, Lcom/android/server/adb/AdbService;->-$$Nest$fgetmIsAdbWifiEnabled(Lcom/android/server/adb/AdbService;)Z
@@ -129,7 +122,6 @@
 
     return p0
 
-    .line 141
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -155,7 +147,6 @@
 .method public notifyKeyFilesUpdated()V
     .locals 1
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-static {v0}, Lcom/android/server/adb/AdbService;->-$$Nest$fgetmDebuggingManager(Lcom/android/server/adb/AdbService;)Lcom/android/server/adb/AdbDebuggingManager;
@@ -166,7 +157,6 @@
 
     return-void
 
-    .line 160
     :cond_0
     iget-object p0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
@@ -182,7 +172,6 @@
 .method public registerTransport(Landroid/debug/IAdbTransport;)V
     .locals 1
 
-    .line 126
     iget-object p0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-static {p0}, Lcom/android/server/adb/AdbService;->-$$Nest$fgetmTransports(Lcom/android/server/adb/AdbService;)Landroid/util/ArrayMap;
@@ -201,7 +190,6 @@
 .method public startAdbdForTransport(B)V
     .locals 3
 
-    .line 165
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -212,14 +200,12 @@
 
     iget-object p0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
-    .line 166
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
 
-    .line 165
     invoke-static {v1, p0, v2, p1}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/TriConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
@@ -232,7 +218,6 @@
 .method public stopAdbdForTransport(B)V
     .locals 3
 
-    .line 171
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -243,14 +228,12 @@
 
     iget-object p0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
-    .line 172
     sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
 
-    .line 171
     invoke-static {v1, p0, v2, p1}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/TriConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
@@ -263,7 +246,6 @@
 .method public unregisterTransport(Landroid/debug/IAdbTransport;)V
     .locals 0
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/adb/AdbService$AdbManagerInternalImpl;->this$0:Lcom/android/server/adb/AdbService;
 
     invoke-static {p0}, Lcom/android/server/adb/AdbService;->-$$Nest$fgetmTransports(Lcom/android/server/adb/AdbService;)Landroid/util/ArrayMap;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wallpaper/WallpaperManagerService;)V
     .locals 0
 
-    .line 2205
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -24,7 +23,6 @@
 .method public doPackagesChangedLocked(ZLcom/android/server/wallpaper/WallpaperData;)Z
     .locals 7
 
-    .line 2304
     iget-object v0, p2, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     const/4 v1, 0x2
@@ -41,12 +39,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 2306
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2305
     invoke-virtual {p0, v0}, Lcom/android/internal/content/PackageMonitor;->isPackageDisappearing(Ljava/lang/String;)I
 
     move-result v0
@@ -58,7 +54,6 @@
     :cond_0
     if-eqz p1, :cond_3
 
-    .line 2313
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmImageWallpaper(Lcom/android/server/wallpaper/WallpaperManagerService;)Landroid/content/ComponentName;
@@ -73,7 +68,6 @@
 
     if-nez p1, :cond_3
 
-    .line 2315
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,10 +86,8 @@
 
     invoke-static {v3, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2318
     iget-object p1, p2, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
-    .line 2319
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -110,10 +102,8 @@
 
     const-string p1, "doPackagesChangedLocked : try to rebind"
 
-    .line 2320
     invoke-static {v3, p1}, Lcom/samsung/server/wallpaper/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2321
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget-object p1, p2, Lcom/android/server/wallpaper/WallpaperData;->mSemWallpaperData:Lcom/samsung/server/wallpaper/SemWallpaperData;
@@ -128,7 +118,6 @@
 
     return v5
 
-    .line 2323
     :cond_1
     iget-object p1, p2, Lcom/android/server/wallpaper/WallpaperData;->connection:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
 
@@ -136,10 +125,8 @@
 
     const-string p1, "doPackagesChangedLocked : removeCallbacks"
 
-    .line 2324
     invoke-static {v3, p1}, Lcom/samsung/server/wallpaper/Log;->addLogString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2325
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmContext(Lcom/android/server/wallpaper/WallpaperManagerService;)Landroid/content/Context;
@@ -158,7 +145,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2328
     :cond_2
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -166,7 +152,6 @@
 
     invoke-virtual {p1, v6, v5, v0, v4}, Lcom/android/server/wallpaper/WallpaperManagerService;->clearWallpaperLocked(ZIILandroid/os/IRemoteCallback;)V
 
-    .line 2330
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmSemService(Lcom/android/server/wallpaper/WallpaperManagerService;)Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
@@ -179,7 +164,6 @@
 
     invoke-virtual {p1, v0}, Lcom/samsung/server/wallpaper/LegibilityColor;->doPackagesChangedLocked(Lcom/samsung/server/wallpaper/SemWallpaperData;)V
 
-    .line 2332
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmSemService(Lcom/android/server/wallpaper/WallpaperManagerService;)Lcom/samsung/server/wallpaper/SemWallpaperManagerService;
@@ -198,18 +182,15 @@
     :cond_4
     move p1, v6
 
-    .line 2337
     :goto_0
     iget-object v0, p2, Lcom/android/server/wallpaper/WallpaperData;->nextWallpaperComponent:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_6
 
-    .line 2339
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2338
     invoke-virtual {p0, v0}, Lcom/android/internal/content/PackageMonitor;->isPackageDisappearing(Ljava/lang/String;)I
 
     move-result v0
@@ -218,11 +199,9 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 2342
     :cond_5
     iput-object v4, p2, Lcom/android/server/wallpaper/WallpaperData;->nextWallpaperComponent:Landroid/content/ComponentName;
 
-    .line 2348
     :cond_6
     iget-object v0, p2, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
@@ -246,7 +225,6 @@
 
     iget-object v0, p2, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
-    .line 2350
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -257,7 +235,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 2352
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -277,7 +254,6 @@
 
     goto :goto_1
 
-    .line 2356
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -297,21 +273,18 @@
 
     invoke-static {v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2358
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget v2, p2, Lcom/android/server/wallpaper/WallpaperData;->userId:I
 
     invoke-virtual {v0, v6, v5, v2, v4}, Lcom/android/server/wallpaper/WallpaperManagerService;->clearWallpaperLocked(ZIILandroid/os/IRemoteCallback;)V
 
-    .line 2361
     :cond_7
     :goto_1
     iget-object v0, p2, Lcom/android/server/wallpaper/WallpaperData;->nextWallpaperComponent:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_8
 
-    .line 2362
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -322,7 +295,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 2364
     :try_start_1
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -342,7 +314,6 @@
 
     goto :goto_2
 
-    .line 2368
     :catch_1
     iput-object v4, p2, Lcom/android/server/wallpaper/WallpaperData;->nextWallpaperComponent:Landroid/content/ComponentName;
 
@@ -354,7 +325,6 @@
 .method public onHandleForceStop(Landroid/content/Intent;[Ljava/lang/String;IZ)Z
     .locals 1
 
-    .line 2275
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmLock(Lcom/android/server/wallpaper/WallpaperManagerService;)Ljava/lang/Object;
@@ -363,7 +333,6 @@
 
     monitor-enter p1
 
-    .line 2277
     :try_start_0
     iget-object p2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -379,12 +348,10 @@
 
     if-eq p2, p3, :cond_0
 
-    .line 2278
     monitor-exit p1
 
     return v0
 
-    .line 2280
     :cond_0
     iget-object p2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -404,14 +371,12 @@
 
     if-eqz p2, :cond_1
 
-    .line 2282
     invoke-virtual {p0, p4, p2}, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->doPackagesChangedLocked(ZLcom/android/server/wallpaper/WallpaperData;)Z
 
     move-result p0
 
     or-int/2addr v0, p0
 
-    .line 2285
     :cond_1
     monitor-exit p1
 
@@ -420,7 +385,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2286
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -431,7 +395,6 @@
 .method public onPackageModified(Ljava/lang/String;)V
     .locals 3
 
-    .line 2234
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {v0}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmLock(Lcom/android/server/wallpaper/WallpaperManagerService;)Ljava/lang/Object;
@@ -440,7 +403,6 @@
 
     monitor-enter v0
 
-    .line 2235
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -454,12 +416,10 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 2236
     monitor-exit v0
 
     return-void
 
-    .line 2238
     :cond_0
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -479,12 +439,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 2240
     iget-object v2, v1, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     if-eqz v2, :cond_2
 
-    .line 2241
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -500,19 +458,16 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 2244
     invoke-virtual {p0, p1, v1}, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->doPackagesChangedLocked(ZLcom/android/server/wallpaper/WallpaperData;)Z
 
     goto :goto_1
 
-    .line 2242
     :cond_2
     :goto_0
     monitor-exit v0
 
     return-void
 
-    .line 2246
     :cond_3
     :goto_1
     monitor-exit v0
@@ -532,7 +487,6 @@
 .method public onPackageUpdateFinished(Ljava/lang/String;I)V
     .locals 8
 
-    .line 2208
     iget-object p2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {p2}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmLock(Lcom/android/server/wallpaper/WallpaperManagerService;)Ljava/lang/Object;
@@ -541,7 +495,6 @@
 
     monitor-enter p2
 
-    .line 2209
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -555,12 +508,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2210
     monitor-exit p2
 
     return-void
 
-    .line 2212
     :cond_0
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -580,12 +531,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2214
     iget-object v1, v0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     if-eqz v1, :cond_1
 
-    .line 2215
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -598,7 +547,6 @@
 
     const-string p1, "WallpaperManagerService"
 
-    .line 2217
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -621,15 +569,12 @@
 
     const/4 p1, 0x0
 
-    .line 2219
     iput-boolean p1, v0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperUpdating:Z
 
-    .line 2220
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {v2, v0}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$mclearWallpaperComponentLocked(Lcom/android/server/wallpaper/WallpaperManagerService;Lcom/android/server/wallpaper/WallpaperData;)V
 
-    .line 2221
     iget-object v2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     const/4 v4, 0x0
@@ -650,7 +595,6 @@
 
     const-string v2, "WallpaperManagerService"
 
-    .line 2223
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -671,7 +615,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2225
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     iget v0, v0, Lcom/android/server/wallpaper/WallpaperData;->userId:I
@@ -682,7 +625,6 @@
 
     invoke-virtual {p0, p1, v2, v0, v1}, Lcom/android/server/wallpaper/WallpaperManagerService;->clearWallpaperLocked(ZIILandroid/os/IRemoteCallback;)V
 
-    .line 2229
     :cond_1
     monitor-exit p2
 
@@ -701,7 +643,6 @@
 .method public onPackageUpdateStarted(Ljava/lang/String;I)V
     .locals 2
 
-    .line 2251
     iget-object p2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {p2}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmLock(Lcom/android/server/wallpaper/WallpaperManagerService;)Ljava/lang/Object;
@@ -710,7 +651,6 @@
 
     monitor-enter p2
 
-    .line 2252
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -724,12 +664,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2253
     monitor-exit p2
 
     return-void
 
-    .line 2255
     :cond_0
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -749,12 +687,10 @@
 
     if-eqz p0, :cond_1
 
-    .line 2257
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_1
 
-    .line 2258
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -767,7 +703,6 @@
 
     const-string p1, "WallpaperManagerService"
 
-    .line 2260
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -792,15 +727,12 @@
 
     const/4 p1, 0x1
 
-    .line 2263
     iput-boolean p1, p0, Lcom/android/server/wallpaper/WallpaperData;->wallpaperUpdating:Z
 
-    .line 2264
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperData;->connection:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperConnection;
 
     if-eqz p1, :cond_1
 
-    .line 2265
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -813,7 +745,6 @@
 
     invoke-virtual {p1, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2270
     :cond_1
     monitor-exit p2
 
@@ -832,7 +763,6 @@
 .method public onSomePackagesChanged()V
     .locals 3
 
-    .line 2291
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-static {v0}, Lcom/android/server/wallpaper/WallpaperManagerService;->-$$Nest$fgetmLock(Lcom/android/server/wallpaper/WallpaperManagerService;)Ljava/lang/Object;
@@ -841,7 +771,6 @@
 
     monitor-enter v0
 
-    .line 2292
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -855,12 +784,10 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 2293
     monitor-exit v0
 
     return-void
 
-    .line 2295
     :cond_0
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -882,10 +809,8 @@
 
     const/4 v2, 0x1
 
-    .line 2297
     invoke-virtual {p0, v2, v1}, Lcom/android/server/wallpaper/WallpaperManagerService$MyPackageMonitor;->doPackagesChangedLocked(ZLcom/android/server/wallpaper/WallpaperData;)Z
 
-    .line 2299
     :cond_1
     monitor-exit v0
 

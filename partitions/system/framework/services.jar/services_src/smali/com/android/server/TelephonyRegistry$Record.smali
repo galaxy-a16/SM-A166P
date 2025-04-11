@@ -43,15 +43,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 174
     iput v0, p0, Lcom/android/server/TelephonyRegistry$Record;->subId:I
 
-    .line 176
     iput v0, p0, Lcom/android/server/TelephonyRegistry$Record;->phoneId:I
 
     return-void
@@ -60,7 +57,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/TelephonyRegistry$Record-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/TelephonyRegistry$Record;-><init>()V
 
     return-void
@@ -71,7 +67,6 @@
 .method public canReadCallLog()Z
     .locals 6
 
-    .line 200
     :try_start_0
     iget-object v0, p0, Lcom/android/server/TelephonyRegistry$Record;->context:Landroid/content/Context;
 
@@ -102,7 +97,6 @@
 .method public matchCarrierConfigChangeListener()Z
     .locals 0
 
-    .line 195
     iget-object p0, p0, Lcom/android/server/TelephonyRegistry$Record;->carrierConfigChangeListener:Lcom/android/internal/telephony/ICarrierConfigChangeListener;
 
     if-eqz p0, :cond_0
@@ -121,7 +115,6 @@
 .method public matchCarrierPrivilegesCallback()Z
     .locals 0
 
-    .line 191
     iget-object p0, p0, Lcom/android/server/TelephonyRegistry$Record;->carrierPrivilegesCallback:Lcom/android/internal/telephony/ICarrierPrivilegesCallback;
 
     if-eqz p0, :cond_0
@@ -140,7 +133,6 @@
 .method public matchOnOpportunisticSubscriptionsChangedListener()Z
     .locals 0
 
-    .line 187
     iget-object p0, p0, Lcom/android/server/TelephonyRegistry$Record;->onOpportunisticSubscriptionsChangedListenerCallback:Lcom/android/internal/telephony/IOnSubscriptionsChangedListener;
 
     if-eqz p0, :cond_0
@@ -159,7 +151,6 @@
 .method public matchOnSubscriptionsChangedListener()Z
     .locals 0
 
-    .line 183
     iget-object p0, p0, Lcom/android/server/TelephonyRegistry$Record;->onSubscriptionsChangedListenerCallback:Lcom/android/internal/telephony/IOnSubscriptionsChangedListener;
 
     if-eqz p0, :cond_0
@@ -178,7 +169,6 @@
 .method public matchTelephonyCallbackEvent(I)Z
     .locals 1
 
-    .line 179
     iget-object v0, p0, Lcom/android/server/TelephonyRegistry$Record;->callback:Lcom/android/internal/telephony/IPhoneStateListener;
 
     if-eqz v0, :cond_0
@@ -209,7 +199,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 209
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

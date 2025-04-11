@@ -14,10 +14,8 @@
 .method public constructor <init>([Ljava/lang/String;)V
     .locals 0
 
-    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 167
     iput-object p1, p0, Lcom/android/server/graphics/fonts/FontManagerService$FsverityUtilImpl;->mDerCertPaths:[Ljava/lang/String;
 
     return-void
@@ -28,7 +26,6 @@
 .method public isFromTrustedProvider(Ljava/lang/String;[B)Z
     .locals 7
 
-    .line 172
     invoke-static {p1}, Lcom/android/internal/security/VerityUtils;->getFsverityDigest(Ljava/lang/String;)[B
 
     move-result-object v0
@@ -39,7 +36,6 @@
 
     if-nez v0, :cond_0
 
-    .line 174
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -58,7 +54,6 @@
 
     return v2
 
-    .line 177
     :cond_0
     iget-object p0, p0, Lcom/android/server/graphics/fonts/FontManagerService$FsverityUtilImpl;->mDerCertPaths:[Ljava/lang/String;
 
@@ -71,7 +66,6 @@
 
     aget-object v4, p0, v3
 
-    .line 178
     :try_start_0
     new-instance v5, Ljava/io/FileInputStream;
 
@@ -79,7 +73,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 179
     :try_start_1
     invoke-static {p2, v0, v5}, Lcom/android/internal/security/VerityUtils;->verifyPkcs7DetachedSignature([B[BLjava/io/InputStream;)Z
 
@@ -89,7 +82,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 182
     :try_start_2
     invoke-virtual {v5}, Ljava/io/InputStream;->close()V
 
@@ -107,7 +99,6 @@
     :catchall_0
     move-exception v6
 
-    .line 178
     :try_start_3
     invoke-virtual {v5}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -126,7 +117,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 183
     :catch_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -156,7 +146,6 @@
 .method public rename(Ljava/io/File;Ljava/io/File;)Z
     .locals 0
 
-    .line 197
     invoke-virtual {p1, p2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result p0
@@ -167,7 +156,6 @@
 .method public setUpFsverity(Ljava/lang/String;)V
     .locals 0
 
-    .line 191
     invoke-static {p1}, Lcom/android/internal/security/VerityUtils;->setUpFsverity(Ljava/lang/String;)V
 
     return-void

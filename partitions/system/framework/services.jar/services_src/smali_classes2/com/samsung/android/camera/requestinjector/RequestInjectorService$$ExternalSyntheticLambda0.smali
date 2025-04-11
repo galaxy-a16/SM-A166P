@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, [I
 
     invoke-static {p1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;

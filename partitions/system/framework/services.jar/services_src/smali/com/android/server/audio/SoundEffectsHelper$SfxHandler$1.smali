@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;II)V
     .locals 0
 
-    .line 542
     iput-object p1, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->this$1:Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;
 
     iput p2, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->val$effect:I
@@ -37,7 +36,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 546
     iget-object p1, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->this$1:Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;
 
     iget-object p1, p1, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;

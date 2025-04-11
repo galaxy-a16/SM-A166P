@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmId(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->mId:I
 
     return p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmProcessId(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->mProcessId:I
 
     return p0
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTvInputSessionId(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->mTvInputSessionId:Ljava/lang/String;
 
     return-object p0
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUseCase(Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->mUseCase:I
 
     return p0
@@ -53,10 +49,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 351
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 352
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->mId:I
 
     return-void
@@ -67,7 +61,6 @@
 .method public build()Lcom/android/server/tv/tunerresourcemanager/ClientProfile;
     .locals 2
 
-    .line 391
     new-instance v0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile;
 
     const/4 v1, 0x0
@@ -80,7 +73,6 @@
 .method public processId(I)Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;
     .locals 0
 
-    .line 381
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->mProcessId:I
 
     return-object p0
@@ -89,7 +81,6 @@
 .method public tvInputSessionId(Ljava/lang/String;)Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;
     .locals 0
 
-    .line 371
     iput-object p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->mTvInputSessionId:Ljava/lang/String;
 
     return-object p0
@@ -98,7 +89,6 @@
 .method public useCase(I)Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;
     .locals 0
 
-    .line 361
     iput p1, p0, Lcom/android/server/tv/tunerresourcemanager/ClientProfile$Builder;->mUseCase:I
 
     return-object p0

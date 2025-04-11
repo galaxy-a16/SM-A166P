@@ -16,13 +16,10 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/biometrics/SemBiometricBoostingManager$Releaser;->mContext:Landroid/content/Context;
 
-    .line 37
     iput p2, p0, Lcom/android/server/biometrics/SemBiometricBoostingManager$Releaser;->mBiometricType:I
 
     return-void
@@ -33,7 +30,6 @@
 .method public run()V
     .locals 2
 
-    .line 42
     invoke-static {}, Lcom/android/server/biometrics/SemBiometricBoostingManager;->getInstance()Lcom/android/server/biometrics/SemBiometricBoostingManager;
 
     move-result-object v0

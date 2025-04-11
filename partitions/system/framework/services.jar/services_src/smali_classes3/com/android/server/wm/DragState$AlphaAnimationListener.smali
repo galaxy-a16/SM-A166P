@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DragState;)V
     .locals 0
 
-    .line 1532
     iput-object p1, p0, Lcom/android/server/wm/DragState$AlphaAnimationListener;->this$0:Lcom/android/server/wm/DragState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/DragState;Lcom/android/server/wm/DragState$AlphaAnimationListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/DragState$AlphaAnimationListener;-><init>(Lcom/android/server/wm/DragState;)V
 
     return-void
@@ -37,14 +35,12 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 1559
     iget-object p0, p0, Lcom/android/server/wm/DragState$AlphaAnimationListener;->this$0:Lcom/android/server/wm/DragState;
 
     const/4 p1, 0x0
@@ -57,35 +53,30 @@
 .method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .line 1536
     iget-object v0, p0, Lcom/android/server/wm/DragState$AlphaAnimationListener;->this$0:Lcom/android/server/wm/DragState;
 
     iget-object v0, v0, Lcom/android/server/wm/DragState;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mTransactionFactory:Ljava/util/function/Supplier;
 
-    .line 1537
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/SurfaceControl$Transaction;
 
-    .line 1538
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DragState$AlphaAnimationListener;->this$0:Lcom/android/server/wm/DragState;
 
@@ -103,7 +94,6 @@
 
     invoke-static {v1, p1}, Lcom/android/server/wm/DragState;->-$$Nest$fputmCurrentAlpha(Lcom/android/server/wm/DragState;F)V
 
-    .line 1539
     iget-object p0, p0, Lcom/android/server/wm/DragState$AlphaAnimationListener;->this$0:Lcom/android/server/wm/DragState;
 
     iget-object p1, p0, Lcom/android/server/wm/DragState;->mSurfaceControl:Landroid/view/SurfaceControl;
@@ -114,20 +104,17 @@
 
     const-string/jumbo p1, "mSurfaceControl is null, animation cannot be updated."
 
-    .line 1540
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_0
 
-    .line 1545
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->close()V
 
     :cond_0
     return-void
 
-    .line 1543
     :cond_1
     :try_start_1
     invoke-static {p0}, Lcom/android/server/wm/DragState;->-$$Nest$fgetmCurrentAlpha(Lcom/android/server/wm/DragState;)F
@@ -136,12 +123,10 @@
 
     invoke-virtual {v0, p1, p0}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 1544
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->apply()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1545
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->close()V
 
     return-void
@@ -151,7 +136,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1536
     :try_start_2
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->close()V
     :try_end_2

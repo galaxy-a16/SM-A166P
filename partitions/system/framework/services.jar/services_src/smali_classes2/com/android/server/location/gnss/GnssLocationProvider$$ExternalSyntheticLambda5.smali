@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/telephony/CellInfo;
 
     invoke-static {p1}, Lcom/android/server/location/gnss/GnssLocationProvider;->$r8$lambda$LmsOOJtR0UBskqoogIlWMZ8DkTU(Landroid/telephony/CellInfo;)I

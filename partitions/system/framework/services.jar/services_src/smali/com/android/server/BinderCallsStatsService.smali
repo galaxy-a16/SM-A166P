@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBinderCallsStats(Lcom/android/server/BinderCallsStatsService;)Lcom/android/internal/os/BinderCallsStats;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWorkSourceProvider(Lcom/android/server/BinderCallsStatsService;)Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService;->mWorkSourceProvider:Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;
 
     return-object p0
@@ -33,13 +31,10 @@
 .method public constructor <init>(Lcom/android/internal/os/BinderCallsStats;Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;)V
     .locals 0
 
-    .line 354
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 355
     iput-object p1, p0, Lcom/android/server/BinderCallsStatsService;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
-    .line 356
     iput-object p2, p0, Lcom/android/server/BinderCallsStatsService;->mWorkSourceProvider:Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;
 
     return-void
@@ -50,7 +45,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 7
 
-    .line 370
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object p1
@@ -72,18 +66,15 @@
 
     move v0, p1
 
-    .line 378
     :goto_0
     array-length v1, p3
 
     if-ge p1, v1, :cond_4
 
-    .line 379
     aget-object v1, p3, p1
 
     const-string v2, "-a"
 
-    .line 380
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -97,7 +88,6 @@
     :cond_1
     const-string v2, "-h"
 
-    .line 382
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -106,32 +96,26 @@
 
     const-string p0, "dumpsys binder_calls_stats options:"
 
-    .line 383
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  -a: Verbose"
 
-    .line 384
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  --work-source-uid <UID>: Dump binder calls from the UID"
 
-    .line 385
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  --set-cpu-threshold <threshold>: Set new CPU threshold"
 
-    .line 387
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  --set-sampling <sampling value>: Set new sampling ratio"
 
-    .line 388
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "  --set-limit <limit value>: Set new limit value(default 1500)"
 
-    .line 389
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -139,7 +123,6 @@
     :cond_2
     const-string v2, "--work-source-uid"
 
-    .line 392
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -148,22 +131,18 @@
 
     const-string p0, "Currently SEC debugging feature is enabled."
 
-    .line 394
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "It collects the incoming binder transactions depending on sampling ratio per package."
 
-    .line 395
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "And it clears the collected binder stats every 1 or 5 minutes."
 
-    .line 396
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p0, "So it can be meaningless to invoke dump() with \'--work-source-uid\'."
 
-    .line 397
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -174,20 +153,17 @@
 
     goto :goto_0
 
-    .line 415
     :cond_4
     array-length p1, p3
 
     if-lez p1, :cond_5
 
-    .line 417
     new-instance v1, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;
 
     invoke-direct {v1, p0, p2}, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;-><init>(Lcom/android/server/BinderCallsStatsService;Ljava/io/PrintWriter;)V
 
     const/4 v3, 0x0
 
-    .line 418
     sget-object v4, Ljava/io/FileDescriptor;->out:Ljava/io/FileDescriptor;
 
     sget-object v5, Ljava/io/FileDescriptor;->err:Ljava/io/FileDescriptor;
@@ -207,7 +183,6 @@
     :cond_5
     move p1, v0
 
-    .line 432
     :cond_6
     iget-object p3, p0, Lcom/android/server/BinderCallsStatsService;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
@@ -219,7 +194,6 @@
 
     invoke-virtual {p3, p2, v0, v1, p1}, Lcom/android/internal/os/BinderCallsStats;->dump(Ljava/io/PrintWriter;Lcom/android/internal/os/AppIdToPackageMap;IZ)V
 
-    .line 434
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BinderCallsStats;->dumpStats(Ljava/io/PrintWriter;)V
@@ -230,14 +204,12 @@
 .method public handleShellCommand(Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;[Ljava/lang/String;)I
     .locals 7
 
-    .line 441
     new-instance v6, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;
 
     const/4 v0, 0x0
 
     invoke-direct {v6, p0, v0}, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;-><init>(Lcom/android/server/BinderCallsStatsService;Ljava/io/PrintWriter;)V
 
-    .line 442
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v2
@@ -246,7 +218,6 @@
 
     move-result-object v3
 
-    .line 443
     invoke-virtual {p3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v4
@@ -257,14 +228,12 @@
 
     move-object v5, p4
 
-    .line 442
     invoke-virtual/range {v0 .. v5}, Landroid/os/ShellCommand;->exec(Landroid/os/Binder;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;)I
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 445
     invoke-virtual {v6}, Landroid/os/ShellCommand;->onHelp()V
 
     :cond_0
@@ -278,10 +247,8 @@
 
     const-string v1, "Resetting stats"
 
-    .line 364
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;
 
     const/4 v0, 0x0
@@ -296,7 +263,6 @@
 .method public systemReady(Landroid/content/Context;)V
     .locals 3
 
-    .line 360
     new-instance v0, Lcom/android/server/BinderCallsStatsService$SettingsObserver;
 
     iget-object v1, p0, Lcom/android/server/BinderCallsStatsService;->mBinderCallsStats:Lcom/android/internal/os/BinderCallsStats;

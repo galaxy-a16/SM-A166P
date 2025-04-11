@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;)V
     .locals 0
 
-    .line 859
     iput-object p1, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,19 +26,16 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 5
 
-    .line 862
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 863
     iget-object v2, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     invoke-static {v2}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fgetmBlueLightFilterModeEnabled(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;)Z
@@ -50,7 +46,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 864
     iget-object v2, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -67,7 +62,6 @@
 
     invoke-static {v2, p1}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fputbopr_cumulative_value_for_bigdata_blf_on(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;I)V
 
-    .line 865
     iget-object p1, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fgetbopr_cumulative_count_for_bigdata_blf_on(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;)I
@@ -78,7 +72,6 @@
 
     invoke-static {p1, v2}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fputbopr_cumulative_count_for_bigdata_blf_on(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;I)V
 
-    .line 866
     iget-object p1, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fgetbopr_cumulative_value_for_bigdata_blf_on(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;)I
@@ -97,7 +90,6 @@
 
     goto :goto_0
 
-    .line 868
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
@@ -107,7 +99,6 @@
 
     if-nez v2, :cond_1
 
-    .line 869
     iget-object v2, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -124,7 +115,6 @@
 
     invoke-static {v2, p1}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fputbopr_cumulative_value_for_bigdata_blf_off(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;I)V
 
-    .line 870
     iget-object p1, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fgetbopr_cumulative_count_for_bigdata_blf_off(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;)I
@@ -135,7 +125,6 @@
 
     invoke-static {p1, v2}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fputbopr_cumulative_count_for_bigdata_blf_off(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;I)V
 
-    .line 871
     iget-object p1, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fgetbopr_cumulative_value_for_bigdata_blf_off(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;)I
@@ -152,7 +141,6 @@
 
     invoke-static {p1, v2}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fputbopr_average_value_for_bigdata_blf_off(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;I)V
 
-    .line 873
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
@@ -169,7 +157,6 @@
 
     invoke-virtual {p1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 874
     iget-object p1, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;)Lcom/samsung/android/displaysolution/EyeComfortSolutionService$ECSControlHandler;
@@ -180,7 +167,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 875
     iget-object p1, p0, Lcom/samsung/android/displaysolution/EyeComfortSolutionService$2;->this$0:Lcom/samsung/android/displaysolution/EyeComfortSolutionService;
 
     invoke-static {p1}, Lcom/samsung/android/displaysolution/EyeComfortSolutionService;->-$$Nest$fgetmHandler(Lcom/samsung/android/displaysolution/EyeComfortSolutionService;)Lcom/samsung/android/displaysolution/EyeComfortSolutionService$ECSControlHandler;

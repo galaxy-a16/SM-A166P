@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 512
     invoke-direct {p0}, Lcom/android/server/IntentResolver;-><init>()V
 
-    .line 559
     new-instance v0, Landroid/util/ArrayMap;
 
     const/4 v1, 0x0
@@ -29,7 +27,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;-><init>()V
 
     return-void
@@ -40,7 +37,6 @@
 .method public addComponentFilter(Landroid/content/ComponentName;Lcom/android/server/firewall/IntentFirewall$Rule;)V
     .locals 2
 
-    .line 554
     iget-object v0, p0, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;->mRulesByComponent:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -49,7 +45,6 @@
 
     check-cast v0, [Lcom/android/server/firewall/IntentFirewall$Rule;
 
-    .line 555
     const-class v1, Lcom/android/server/firewall/IntentFirewall$Rule;
 
     invoke-static {v1, v0, p2}, Lcom/android/internal/util/ArrayUtils;->appendElement(Ljava/lang/Class;[Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
@@ -58,7 +53,6 @@
 
     check-cast p2, [Lcom/android/server/firewall/IntentFirewall$Rule;
 
-    .line 556
     iget-object p0, p0, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;->mRulesByComponent:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -69,7 +63,6 @@
 .method public allowFilterResult(Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;Ljava/util/List;)Z
     .locals 0
 
-    .line 516
     invoke-static {p1}, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;->-$$Nest$fgetrule(Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;)Lcom/android/server/firewall/IntentFirewall$Rule;
 
     move-result-object p0
@@ -86,7 +79,6 @@
 .method public bridge synthetic allowFilterResult(Ljava/lang/Object;Ljava/util/List;)Z
     .locals 0
 
-    .line 512
     check-cast p1, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;->allowFilterResult(Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;Ljava/util/List;)Z
@@ -99,14 +91,12 @@
 .method public getIntentFilter(Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;)Landroid/content/IntentFilter;
     .locals 0
 
-    .line 0
     return-object p1
 .end method
 
 .method public bridge synthetic getIntentFilter(Ljava/lang/Object;)Landroid/content/IntentFilter;
     .locals 0
 
-    .line 512
     check-cast p1, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;->getIntentFilter(Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;)Landroid/content/IntentFilter;
@@ -119,7 +109,6 @@
 .method public isPackageForFilter(Ljava/lang/String;Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -128,7 +117,6 @@
 .method public bridge synthetic isPackageForFilter(Ljava/lang/String;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 512
     check-cast p2, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;->isPackageForFilter(Ljava/lang/String;Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;)Z
@@ -141,7 +129,6 @@
 .method public newArray(I)[Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;
     .locals 0
 
-    .line 526
     new-array p0, p1, [Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;
 
     return-object p0
@@ -150,7 +137,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 512
     invoke-virtual {p0, p1}, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;->newArray(I)[Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;
 
     move-result-object p0
@@ -161,7 +147,6 @@
 .method public newResult(Lcom/android/server/pm/Computer;Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;IIJ)Lcom/android/server/firewall/IntentFirewall$Rule;
     .locals 0
 
-    .line 532
     invoke-static {p2}, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;->-$$Nest$fgetrule(Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;)Lcom/android/server/firewall/IntentFirewall$Rule;
 
     move-result-object p0
@@ -172,7 +157,6 @@
 .method public bridge synthetic newResult(Lcom/android/server/pm/Computer;Ljava/lang/Object;IIJ)Ljava/lang/Object;
     .locals 0
 
-    .line 512
     check-cast p2, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;
 
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;->newResult(Lcom/android/server/pm/Computer;Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;IIJ)Lcom/android/server/firewall/IntentFirewall$Rule;
@@ -185,7 +169,6 @@
 .method public queryByComponent(Landroid/content/ComponentName;Ljava/util/List;)V
     .locals 0
 
-    .line 547
     iget-object p0, p0, Lcom/android/server/firewall/IntentFirewall$FirewallIntentResolver;->mRulesByComponent:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -196,7 +179,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 549
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -210,6 +192,5 @@
 .method public sortResults(Ljava/util/List;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

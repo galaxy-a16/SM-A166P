@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/chimera/ChimeraRecentAppManager;)Lcom/android/server/chimera/ChimeraRecentAppManager$RecentAppHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mHandler:Lcom/android/server/chimera/ChimeraRecentAppManager$RecentAppHandler;
 
     return-object p0
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSettingRepository(Lcom/android/server/chimera/ChimeraRecentAppManager;)Lcom/android/server/chimera/SettingRepository;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSettingRepository:Lcom/android/server/chimera/SettingRepository;
 
     return-object p0
@@ -45,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraRecentAppManager;)Lcom/android/server/chimera/SystemRepository;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     return-object p0
@@ -54,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$misRecentAppExist(Lcom/android/server/chimera/ChimeraRecentAppManager;I)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ChimeraRecentAppManager;->isRecentAppExist(I)Z
 
     move-result p0
@@ -65,65 +61,54 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepository;Lcom/android/server/chimera/SettingRepository;Landroid/os/Looper;)V
     .locals 1
 
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppLock:Ljava/lang/Object;
 
-    .line 35
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiListLock:Ljava/lang/Object;
 
-    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppList:Ljava/util/List;
 
-    .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiSomeTotalList:Ljava/util/Map;
 
-    .line 42
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiFullTotalList:Ljava/util/Map;
 
-    .line 45
     new-instance v0, Lcom/android/server/chimera/ChimeraRecentAppManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/chimera/ChimeraRecentAppManager$1;-><init>(Lcom/android/server/chimera/ChimeraRecentAppManager;)V
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mProcessObserver:Lcom/android/server/chimera/SystemRepository$ChimeraProcessObserver;
 
-    .line 71
     iput-object p1, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
-    .line 72
     iput-object p2, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSettingRepository:Lcom/android/server/chimera/SettingRepository;
 
-    .line 73
     new-instance p1, Lcom/android/server/chimera/ChimeraRecentAppManager$RecentAppHandler;
 
     invoke-direct {p1, p0, p3}, Lcom/android/server/chimera/ChimeraRecentAppManager$RecentAppHandler;-><init>(Lcom/android/server/chimera/ChimeraRecentAppManager;Landroid/os/Looper;)V
 
     iput-object p1, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mHandler:Lcom/android/server/chimera/ChimeraRecentAppManager$RecentAppHandler;
 
-    .line 74
     invoke-virtual {p0}, Lcom/android/server/chimera/ChimeraRecentAppManager;->registerProcessObserver()V
 
     return-void
@@ -134,21 +119,18 @@
 .method public checkAppUsageEnd(I)V
     .locals 13
 
-    .line 88
     invoke-static {p1}, Lcom/android/server/chimera/ChimeraCommonUtil;->getAllRunningPackagePids(I)Ljava/util/Set;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 89
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
 
     if-lez v1, :cond_2
 
-    .line 94
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -174,7 +156,6 @@
 
     move-result v1
 
-    .line 95
     iget-object v2, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-static {v2, v1}, Lcom/android/server/chimera/ChimeraCommonUtil;->getProcPss(Lcom/android/server/chimera/SystemRepository;I)J
@@ -185,7 +166,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_0
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -193,15 +173,12 @@
 
     move-result-wide v7
 
-    .line 100
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ChimeraRecentAppManager;->getPsiInfo(I)Landroid/util/Pair;
 
     move-result-object v0
 
-    .line 101
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ChimeraRecentAppManager;->updatePsiInfo(I)V
 
-    .line 102
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ChimeraRecentAppManager;->getPsiInfo(I)Landroid/util/Pair;
 
     move-result-object v1
@@ -210,7 +187,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 104
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Long;
@@ -229,7 +205,6 @@
 
     sub-long v9, v2, v9
 
-    .line 105
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Long;
@@ -248,12 +223,10 @@
 
     sub-long v11, v1, v3
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiListLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 111
     :try_start_0
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiSomeTotalList:Ljava/util/Map;
 
@@ -263,7 +236,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 112
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiFullTotalList:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -272,17 +244,14 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 115
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 116
     :try_start_1
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppList:Ljava/util/List;
 
@@ -296,7 +265,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 117
     iget-object p1, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -307,14 +275,12 @@
 
     if-le p1, v0, :cond_1
 
-    .line 118
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppList:Ljava/util/List;
 
     const/4 p1, 0x0
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 120
     :cond_1
     monitor-exit v1
 
@@ -332,7 +298,6 @@
     :catchall_1
     move-exception p0
 
-    .line 113
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -348,7 +313,6 @@
 .method public checkAppUsageStart(I)V
     .locals 0
 
-    .line 83
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ChimeraRecentAppManager;->updatePsiInfo(I)V
 
     return-void
@@ -357,12 +321,10 @@
 .method public final getPsiInfo(I)Landroid/util/Pair;
     .locals 3
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiListLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 126
     :try_start_0
     iget-object v1, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiSomeTotalList:Ljava/util/Map;
 
@@ -376,7 +338,6 @@
 
     check-cast v1, Ljava/lang/Long;
 
-    .line 127
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiFullTotalList:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -393,7 +354,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 129
     invoke-static {v1, p0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0
@@ -402,7 +362,6 @@
 
     return-object p0
 
-    .line 131
     :cond_0
     monitor-exit v0
 
@@ -425,17 +384,14 @@
 
     move-object/from16 v0, p0
 
-    .line 143
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 145
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 146
     :try_start_0
     iget-object v3, v0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppList:Ljava/util/List;
 
@@ -459,7 +415,6 @@
 
     const-wide/16 v15, 0x0
 
-    .line 151
     :goto_0
     iget-object v4, v0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppList:Ljava/util/List;
 
@@ -469,7 +424,6 @@
 
     if-ge v6, v4, :cond_2
 
-    .line 152
     iget-object v4, v0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppList:Ljava/util/List;
 
     invoke-interface {v4, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -478,22 +432,18 @@
 
     check-cast v4, Lcom/android/server/chimera/ChimeraRecentAppManager$ResourceUsageInfo;
 
-    .line 153
     invoke-virtual {v4}, Lcom/android/server/chimera/ChimeraRecentAppManager$ResourceUsageInfo;->getAppPss()J
 
     move-result-wide v19
 
-    .line 154
     invoke-virtual {v4}, Lcom/android/server/chimera/ChimeraRecentAppManager$ResourceUsageInfo;->getAvailMem()J
 
     move-result-wide v21
 
-    .line 155
     invoke-virtual {v4}, Lcom/android/server/chimera/ChimeraRecentAppManager$ResourceUsageInfo;->getPsiSomeTotal()J
 
     move-result-wide v23
 
-    .line 156
     invoke-virtual {v4}, Lcom/android/server/chimera/ChimeraRecentAppManager$ResourceUsageInfo;->getPsiFullTotal()J
 
     move-result-wide v4
@@ -518,7 +468,6 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 165
     :cond_0
     iget-object v4, v0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mRecentAppList:Ljava/util/List;
 
@@ -540,16 +489,12 @@
     :cond_2
     int-to-long v4, v3
 
-    .line 169
     div-long v6, v7, v4
 
-    .line 170
     div-long v8, v9, v4
 
-    .line 171
     div-long v10, v11, v4
 
-    .line 172
     div-long v4, v13, v4
 
     move-wide/from16 v26, v4
@@ -575,13 +520,11 @@
 
     move-wide v15, v10
 
-    .line 174
     :goto_1
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 175
     iget-object v0, v0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string v2, "ChimeraRecentAppManager"
@@ -626,35 +569,30 @@
 
     invoke-interface {v0, v2, v3}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 178
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 179
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 180
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 181
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 182
     invoke-static/range {v15 .. v16}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -666,7 +604,6 @@
     :catchall_0
     move-exception v0
 
-    .line 174
     :try_start_1
     monitor-exit v2
     :try_end_1
@@ -678,7 +615,6 @@
 .method public final isRecentAppExist(I)Z
     .locals 0
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiSomeTotalList:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -695,7 +631,6 @@
 .method public final registerProcessObserver()V
     .locals 1
 
-    .line 210
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mProcessObserver:Lcom/android/server/chimera/SystemRepository$ChimeraProcessObserver;
@@ -708,7 +643,6 @@
 .method public updatePsiInfo(I)V
     .locals 8
 
-    .line 192
     sget-object v0, Lcom/android/server/chimera/ChimeraCommonUtil$PsiFileType;->MEMORY:Lcom/android/server/chimera/ChimeraCommonUtil$PsiFileType;
 
     sget-object v1, Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;->TOTAL:Lcom/android/server/chimera/ChimeraCommonUtil$PsiDataType;
@@ -717,14 +651,12 @@
 
     move-result-object v0
 
-    .line 195
     invoke-virtual {v0}, Lcom/android/server/chimera/ChimeraCommonUtil$PsiFile;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     const-string v1, "ChimeraRecentAppManager"
@@ -739,20 +671,17 @@
 
     goto :goto_0
 
-    .line 198
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/chimera/ChimeraCommonUtil$PsiFile;->getPsiSomeTotal()J
 
     move-result-wide v1
 
-    .line 199
     invoke-virtual {v0}, Lcom/android/server/chimera/ChimeraCommonUtil$PsiFile;->getPsiFullTotal()J
 
     move-result-wide v3
 
     move-wide v0, v1
 
-    .line 201
     :goto_0
     iget-object v2, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -786,12 +715,10 @@
 
     invoke-interface {v2, v5, v6}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 203
     iget-object v2, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiListLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 204
     :try_start_0
     iget-object v5, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiSomeTotalList:Ljava/util/Map;
 
@@ -805,7 +732,6 @@
 
     invoke-interface {v5, v6, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraRecentAppManager;->mPsiFullTotalList:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -818,7 +744,6 @@
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
     monitor-exit v2
 
     return-void

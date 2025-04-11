@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/ScreenCurtainController;)V
     .locals 0
 
-    .line 442
     iput-object p1, p0, Lcom/android/server/power/ScreenCurtainController$2;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onFoldStateChanged(Z)V
     .locals 3
 
-    .line 445
     iget-object v0, p0, Lcom/android/server/power/ScreenCurtainController$2;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
     invoke-static {v0}, Lcom/android/server/power/ScreenCurtainController;->-$$Nest$fgetmLock(Lcom/android/server/power/ScreenCurtainController;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 446
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/ScreenCurtainController$2;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
@@ -46,12 +43,10 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 447
     iget-object v1, p0, Lcom/android/server/power/ScreenCurtainController$2;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
     invoke-static {v1, p1}, Lcom/android/server/power/ScreenCurtainController;->-$$Nest$fputmFolded(Lcom/android/server/power/ScreenCurtainController;Z)V
 
-    .line 448
     iget-object p1, p0, Lcom/android/server/power/ScreenCurtainController$2;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
     invoke-static {p1}, Lcom/android/server/power/ScreenCurtainController;->-$$Nest$fgetmScreenCurtainEnabled(Lcom/android/server/power/ScreenCurtainController;)Z
@@ -60,7 +55,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 449
     iget-object p1, p0, Lcom/android/server/power/ScreenCurtainController$2;->this$0:Lcom/android/server/power/ScreenCurtainController;
 
     invoke-static {p1}, Lcom/android/server/power/ScreenCurtainController;->-$$Nest$fgetmHandler(Lcom/android/server/power/ScreenCurtainController;)Landroid/os/Handler;
@@ -75,27 +69,22 @@
 
     const/16 v1, 0x8
 
-    .line 451
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    .line 450
     invoke-virtual {p0, v2, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 451
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 449
     invoke-virtual {p1, p0, v1, v2}, Landroid/os/Handler;->sendMessageAtTime(Landroid/os/Message;J)Z
 
-    .line 454
     :cond_0
     monitor-exit v0
 
@@ -114,6 +103,5 @@
 .method public onTableModeChanged(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method

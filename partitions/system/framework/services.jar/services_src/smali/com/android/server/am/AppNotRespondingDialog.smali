@@ -20,7 +20,6 @@
 .method public static synthetic $r8$lambda$XuUrgCDzITG3H1w9e0yAjWQcjko(Lcom/android/server/am/AppNotRespondingDialog;Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/AppNotRespondingDialog;->lambda$new$0(Landroid/content/DialogInterface;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public static synthetic $r8$lambda$roBtzWJvYSno9qiIuqbObNTiZ4Q(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/AppNotRespondingDialog;->lambda$new$1(Landroid/content/DialogInterface;)V
 
     return-void
@@ -38,7 +36,6 @@
 .method public static bridge synthetic -$$Nest$fgetmData(Lcom/android/server/am/AppNotRespondingDialog;)Lcom/android/server/am/AppNotRespondingDialog$Data;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mData:Lcom/android/server/am/AppNotRespondingDialog$Data;
 
     return-object p0
@@ -47,7 +44,6 @@
 .method public static bridge synthetic -$$Nest$fgetmProc(Lcom/android/server/am/AppNotRespondingDialog;)Lcom/android/server/am/ProcessRecord;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     return-object p0
@@ -56,7 +52,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Lcom/android/server/am/AppNotRespondingDialog;)Lcom/android/server/am/ActivityManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     return-object p0
@@ -65,45 +60,36 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;Lcom/android/server/am/AppNotRespondingDialog$Data;)V
     .locals 6
 
-    .line 69
     invoke-direct {p0, p2}, Lcom/android/server/am/BaseErrorDialog;-><init>(Landroid/content/Context;)V
 
-    .line 192
     new-instance v0, Lcom/android/server/am/AppNotRespondingDialog$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/AppNotRespondingDialog$1;-><init>(Lcom/android/server/am/AppNotRespondingDialog;)V
 
     iput-object v0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
-    .line 71
     iput-object p1, p0, Lcom/android/server/am/AppNotRespondingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 72
     iget-object p1, p3, Lcom/android/server/am/AppNotRespondingDialog$Data;->proc:Lcom/android/server/am/ProcessRecord;
 
     iput-object p1, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
-    .line 73
     iput-object p3, p0, Lcom/android/server/am/AppNotRespondingDialog;->mData:Lcom/android/server/am/AppNotRespondingDialog$Data;
 
-    .line 74
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 76
     invoke-virtual {p0, v1}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
-    .line 79
     iget-object v1, p3, Lcom/android/server/am/AppNotRespondingDialog$Data;->aInfo:Landroid/content/pm/ApplicationInfo;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 80
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
@@ -117,7 +103,6 @@
     :cond_0
     move-object v1, v2
 
-    .line 83
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/am/ProcessRecord;->getPkgList()Lcom/android/server/am/PackageList;
 
@@ -131,7 +116,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 84
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p2
@@ -150,7 +134,6 @@
 
     goto :goto_1
 
-    .line 89
     :cond_1
     iget-object p2, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
@@ -169,20 +152,17 @@
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 94
     iget-object v2, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     const p2, 0x10401b5
 
     goto :goto_1
 
-    .line 97
     :cond_3
     iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     const p2, 0x10401b7
 
-    .line 102
     :goto_1
     invoke-static {}, Landroid/text/BidiFormatter;->getInstance()Landroid/text/BidiFormatter;
 
@@ -190,7 +170,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 105
     invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -217,7 +196,6 @@
 
     goto :goto_2
 
-    .line 106
     :cond_4
     invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -235,16 +213,13 @@
 
     move-result-object p2
 
-    .line 104
     :goto_2
     invoke-virtual {p0, p2}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 108
     iget-boolean p2, p3, Lcom/android/server/am/AppNotRespondingDialog$Data;->aboveSystem:Z
 
     if-eqz p2, :cond_5
 
-    .line 109
     invoke-virtual {p0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object p2
@@ -253,7 +228,6 @@
 
     invoke-virtual {p2, p3}, Landroid/view/Window;->setType(I)V
 
-    .line 111
     :cond_5
     invoke-virtual {p0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -263,7 +237,6 @@
 
     move-result-object p2
 
-    .line 112
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -286,31 +259,26 @@
 
     const/16 p1, 0x110
 
-    .line 113
     iput p1, p2, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 115
     invoke-virtual {p0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
     invoke-virtual {p1, p2}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 118
     invoke-static {}, Lcom/samsung/android/feature/SemGateConfig;->isGateEnabled()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 119
     new-instance p1, Lcom/android/server/am/AppNotRespondingDialog$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/am/AppNotRespondingDialog$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/AppNotRespondingDialog;)V
 
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
-    .line 135
     new-instance p1, Lcom/android/server/am/AppNotRespondingDialog$$ExternalSyntheticLambda1;
 
     invoke-direct {p1}, Lcom/android/server/am/AppNotRespondingDialog$$ExternalSyntheticLambda1;-><init>()V
@@ -324,7 +292,6 @@
 .method private synthetic lambda$new$0(Landroid/content/DialogInterface;)V
     .locals 5
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     if-nez p0, :cond_0
@@ -336,7 +303,6 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 121
     :goto_0
     check-cast p1, Lcom/android/server/am/AppNotRespondingDialog;
 
@@ -346,15 +312,12 @@
 
     const/4 v2, -0x1
 
-    .line 123
     invoke-virtual {p1, v2}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object p1
 
-    .line 124
     invoke-virtual {p1, v1}, Landroid/widget/Button;->getLocationOnScreen([I)V
 
-    .line 126
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -373,7 +336,6 @@
 
     aget v3, v1, v3
 
-    .line 127
     invoke-virtual {p1}, Landroid/widget/Button;->getWidth()I
 
     move-result v4
@@ -396,7 +358,6 @@
 
     aget p0, v1, p0
 
-    .line 128
     invoke-virtual {p1}, Landroid/widget/Button;->getHeight()I
 
     move-result v1
@@ -423,15 +384,12 @@
 
     const-string v0, "GATE"
 
-    .line 126
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, "<GATE-M>APP_ANR:Storing dumpstate at /data/log/, dumpstate_app_anr</GATE-M>"
 
-    .line 130
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     invoke-virtual {p1}, Landroid/widget/Button;->performClick()Z
 
     return-void
@@ -444,7 +402,6 @@
 
     const-string v0, "<GATE-M>APP_ANR:ANR dialog has been cleared</GATE-M>"
 
-    .line 137
     invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -455,7 +412,6 @@
 .method public closeDialog()V
     .locals 1
 
-    .line 246
     iget-object p0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
     const/4 v0, 0x1
@@ -472,7 +428,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 177
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
@@ -491,7 +446,6 @@
 
     goto :goto_0
 
-    .line 185
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
@@ -505,7 +459,6 @@
 
     goto :goto_0
 
-    .line 179
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
@@ -519,7 +472,6 @@
 
     goto :goto_0
 
-    .line 182
     :cond_2
     iget-object p0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
@@ -538,24 +490,20 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
 
-    .line 145
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
 
     const p1, 0x102002b
 
-    .line 146
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/FrameLayout;
 
-    .line 147
     invoke-virtual {p0}, Landroid/app/AlertDialog;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 148
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
@@ -568,17 +516,14 @@
 
     const p1, 0x10201db
 
-    .line 151
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 152
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessRecord;->mErrorState:Lcom/android/server/am/ProcessErrorStateRecord;
@@ -608,14 +553,12 @@
     :cond_1
     move v2, v0
 
-    .line 154
     :goto_1
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     :try_start_0
     const-string/jumbo v2, "restriction_policy"
 
-    .line 159
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
@@ -626,7 +569,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 160
     iget-object v3, p0, Lcom/android/server/am/AppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     iget v3, v3, Lcom/android/server/am/ProcessRecord;->userId:I
@@ -637,7 +579,6 @@
 
     if-nez v2, :cond_2
 
-    .line 161
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -646,31 +587,26 @@
     :cond_2
     const p1, 0x10201d9
 
-    .line 167
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 168
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const p1, 0x10201dd
 
-    .line 169
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 170
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const p1, 0x102029f
 
-    .line 172
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object p0

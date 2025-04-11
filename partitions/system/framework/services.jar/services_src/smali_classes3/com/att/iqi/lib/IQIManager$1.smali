@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/att/iqi/lib/IQIManager;Landroid/os/Message;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 462
     iput-object p1, p0, Lcom/att/iqi/lib/IQIManager$1;->this$0:Lcom/att/iqi/lib/IQIManager;
 
     iput-object p2, p0, Lcom/att/iqi/lib/IQIManager$1;->val$msg:Landroid/os/Message;
@@ -32,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 465
     iget-object p2, p0, Lcom/att/iqi/lib/IQIManager$1;->this$0:Lcom/att/iqi/lib/IQIManager;
 
     invoke-static {p2}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmMessageDispatcher(Lcom/att/iqi/lib/IQIManager;)Landroid/os/Handler;
@@ -47,7 +45,6 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
-    .line 466
     iget-object p2, p0, Lcom/att/iqi/lib/IQIManager$1;->this$0:Lcom/att/iqi/lib/IQIManager;
 
     invoke-static {p2}, Lcom/att/iqi/lib/IQIManager;->-$$Nest$fgetmExecutorService(Lcom/att/iqi/lib/IQIManager;)Ljava/util/concurrent/ExecutorService;
@@ -58,7 +55,6 @@
 
     invoke-interface {p2, v0}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
-    .line 467
     invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     return-void

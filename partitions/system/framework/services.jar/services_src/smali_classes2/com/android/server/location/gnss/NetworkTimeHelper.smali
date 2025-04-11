@@ -15,7 +15,6 @@
 .method public static create(Landroid/content/Context;Landroid/os/Looper;Lcom/android/server/location/gnss/NetworkTimeHelper$InjectTimeCallback;)Lcom/android/server/location/gnss/NetworkTimeHelper;
     .locals 1
 
-    .line 63
     new-instance v0, Lcom/android/server/location/gnss/NtpNetworkTimeHelper;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/NtpNetworkTimeHelper;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/android/server/location/gnss/NetworkTimeHelper$InjectTimeCallback;)V

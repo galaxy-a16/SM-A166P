@@ -26,7 +26,6 @@
 .method public static synthetic $r8$lambda$4oO032ufcs9lDMx82LGNhYq06_k(Lcom/android/server/om/OverlayManagerServiceExt;Landroid/content/om/OverlayInfoExt;ILandroid/content/om/ISamsungOverlayCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->lambda$notifyListener$6(Landroid/content/om/OverlayInfoExt;ILandroid/content/om/ISamsungOverlayCallback;)V
 
     return-void
@@ -35,7 +34,6 @@
 .method public static synthetic $r8$lambda$5y3dYKGtoNuukziZ6tgFoUcirY8(ILandroid/content/om/OverlayInfoExt;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/om/OverlayManagerServiceExt;->lambda$handleUserSwitch$0(ILandroid/content/om/OverlayInfoExt;)Z
 
     move-result p0
@@ -46,7 +44,6 @@
 .method public static synthetic $r8$lambda$80vjZaApQDTi7Xbzy27-qdlAfo0(Lcom/android/server/om/OverlayManagerServiceExt;ILandroid/content/om/ISamsungOverlayCallback;Landroid/content/om/OverlayInfoExt;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->lambda$addOverlaysInternal$1(ILandroid/content/om/ISamsungOverlayCallback;Landroid/content/om/OverlayInfoExt;)Ljava/lang/String;
 
     move-result-object p0
@@ -57,7 +54,6 @@
 .method public static synthetic $r8$lambda$9JRR47Gvf8w5269TGezCT33UojI(Landroid/content/om/OverlayInfo;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/om/OverlayManagerServiceExt;->lambda$notifySystemServicesInternal$4(Landroid/content/om/OverlayInfo;)Ljava/lang/String;
 
     move-result-object p0
@@ -68,7 +64,6 @@
 .method public static synthetic $r8$lambda$HLKiYwRXG8ldpodaN7qTtMJ_diA(Lcom/android/server/om/OverlayManagerServiceExt;ILandroid/content/om/ISamsungOverlayCallback;Landroid/content/om/OverlayInfoExt;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->lambda$removeOverlaysInternal$2(ILandroid/content/om/ISamsungOverlayCallback;Landroid/content/om/OverlayInfoExt;)Ljava/lang/String;
 
     move-result-object p0
@@ -79,7 +74,6 @@
 .method public static synthetic $r8$lambda$_k4vcU-CYuS3Mr1XdQQJWUmndHs(Lcom/android/server/om/OverlayManagerServiceExt;ILandroid/content/om/OverlayInfoExt;)Ljava/util/List;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/om/OverlayManagerServiceExt;->lambda$notifySystemServices$3(ILandroid/content/om/OverlayInfoExt;)Ljava/util/List;
 
     move-result-object p0
@@ -90,7 +84,6 @@
 .method public static synthetic $r8$lambda$hAg1BKwqfXAdHrY-mh6ws_Td8MA(Ljava/util/List;I)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/om/OverlayManagerServiceExt;->lambda$notifyActivityManager$5(Ljava/util/List;I)V
 
     return-void
@@ -99,27 +92,22 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/om/PackageManagerHelper;Lcom/android/server/om/OverlayManagerSettings;Lcom/android/server/om/IdmapManager;Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;)V
     .locals 0
 
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     iput-object p1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mContext:Landroid/content/Context;
 
-    .line 85
     new-instance p1, Lcom/android/server/om/OverlayManagerServiceExt$PMSHelperImpl;
 
     invoke-direct {p1, p2}, Lcom/android/server/om/OverlayManagerServiceExt$PMSHelperImpl;-><init>(Lcom/android/server/om/PackageManagerHelper;)V
 
     iput-object p1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mPackageManager:Lcom/android/server/om/OverlayManagerServiceExt$PMSHelperImpl;
 
-    .line 86
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
-    .line 87
     new-instance p1, Lcom/android/server/om/IdmapManagerWrapper;
 
     invoke-static {}, Lcom/android/server/om/IdmapDaemon;->getInstance()Lcom/android/server/om/IdmapDaemon;
@@ -130,26 +118,20 @@
 
     iput-object p1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIdmapManager:Lcom/android/server/om/IdmapManagerWrapper;
 
-    .line 88
     iput-object p3, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
-    .line 89
     iput-object p5, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mPackageUpdateHelper:Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/om/OverlayManagerServiceExt;->verifyOverlayPackages()V
 
-    .line 91
     new-instance p1, Lcom/android/server/om/OverlayInfoExtPolicy;
 
     invoke-direct {p1}, Lcom/android/server/om/OverlayInfoExtPolicy;-><init>()V
 
     invoke-static {p1}, Lcom/android/server/om/OverlayPolicyManager;->registerPolicy(Lcom/android/server/om/OverlayPolicyManager$OverlayPackagePolicy;)V
 
-    .line 92
     invoke-virtual {p0}, Lcom/android/server/om/OverlayManagerServiceExt;->checkAndEnableThemeCenter()V
 
-    .line 93
     invoke-virtual {p0}, Lcom/android/server/om/OverlayManagerServiceExt;->checkAndEnableThemeStore()V
 
     return-void
@@ -160,14 +142,12 @@
 
     if-eqz p3, :cond_2
 
-    .line 214
     iget-object v0, p3, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     if-nez v0, :cond_0
 
     goto :goto_1
 
-    .line 217
     :cond_0
     iget v0, p3, Landroid/content/om/OverlayInfoExt;->configFlags:I
 
@@ -175,7 +155,6 @@
 
     move-result-object v0
 
-    .line 219
     array-length v1, v0
 
     add-int/lit8 v1, v1, -0x1
@@ -183,10 +162,8 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 220
     aget v2, v0, v1
 
-    .line 221
     iget-object v3, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mPackageManager:Lcom/android/server/om/OverlayManagerServiceExt$PMSHelperImpl;
 
     iget-object v4, p3, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
@@ -197,18 +174,15 @@
 
     move-result-object v3
 
-    .line 223
     invoke-virtual {p0, p3, v2, p1, v3}, Lcom/android/server/om/OverlayManagerServiceExt;->setEnabledState(Landroid/content/om/OverlayInfoExt;IILcom/android/server/pm/pkg/AndroidPackage;)V
 
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 225
     :cond_1
     invoke-virtual {p0, p3, p2, p1}, Lcom/android/server/om/OverlayManagerServiceExt;->notifyListener(Landroid/content/om/OverlayInfoExt;Landroid/content/om/ISamsungOverlayCallback;I)V
 
-    .line 226
     iget-object p0, p3, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     iget-object p0, p0, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
@@ -225,7 +199,6 @@
 .method public static synthetic lambda$handleUserSwitch$0(ILandroid/content/om/OverlayInfoExt;)Z
     .locals 0
 
-    .line 143
     iget p1, p1, Landroid/content/om/OverlayInfoExt;->configFlags:I
 
     and-int/2addr p0, p1
@@ -246,14 +219,12 @@
 .method public static synthetic lambda$notifyActivityManager$5(Ljava/util/List;I)V
     .locals 1
 
-    .line 553
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 556
     :try_start_0
     invoke-interface {v0, p0, p1}, Landroid/app/IActivityManager;->scheduleApplicationInfoChanged(Ljava/util/List;I)V
     :try_end_0
@@ -268,7 +239,6 @@
 
     const-string/jumbo v0, "updateActivityManagerforSamsungOverlay scheduleApplicationInfoChanged"
 
-    .line 558
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -279,7 +249,6 @@
 .method private synthetic lambda$notifyListener$6(Landroid/content/om/OverlayInfoExt;ILandroid/content/om/ISamsungOverlayCallback;)V
     .locals 1
 
-    .line 602
     :try_start_0
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
@@ -298,7 +267,6 @@
     :catch_0
     const/4 p0, -0x1
 
-    .line 607
     :goto_0
     :try_start_1
     iget-object p1, p1, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
@@ -320,14 +288,12 @@
 
     if-eqz p2, :cond_1
 
-    .line 481
     iget-object v0, p2, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 484
     :cond_0
     iget p2, p2, Landroid/content/om/OverlayInfoExt;->configFlags:I
 
@@ -335,7 +301,6 @@
 
     move-result-object p0
 
-    .line 486
     invoke-static {p0}, Ljava/util/Arrays;->stream([I)Ljava/util/stream/IntStream;
 
     move-result-object p0
@@ -366,14 +331,12 @@
 .method public static synthetic lambda$notifySystemServicesInternal$4(Landroid/content/om/OverlayInfo;)Ljava/lang/String;
     .locals 1
 
-    .line 518
     invoke-static {p0}, Landroid/content/om/OverlayInfoExt;->isOverlayInfoExt(Landroid/content/om/OverlayInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 519
     iget-object p0, p0, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
 
     return-object p0
@@ -389,14 +352,12 @@
 
     if-eqz p3, :cond_4
 
-    .line 377
     iget-object v0, p3, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     if-nez v0, :cond_0
 
     goto :goto_3
 
-    .line 380
     :cond_0
     iget v0, p3, Landroid/content/om/OverlayInfoExt;->configFlags:I
 
@@ -404,7 +365,6 @@
 
     move-result-object v0
 
-    .line 382
     array-length v1, v0
 
     const/4 v2, 0x1
@@ -414,10 +374,8 @@
     :goto_0
     if-ltz v1, :cond_3
 
-    .line 383
     aget v3, v0, v1
 
-    .line 384
     iget-object v4, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     iget-object v5, p3, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
@@ -428,7 +386,6 @@
 
     invoke-virtual {v4, v5, v3}, Lcom/android/server/om/OverlayManagerSettings;->remove(Landroid/content/om/OverlayIdentifier;I)Z
 
-    .line 386
     iget v4, p3, Landroid/content/om/OverlayInfoExt;->configFlags:I
 
     and-int/lit16 v4, v4, 0x100
@@ -442,7 +399,6 @@
     :cond_1
     const/4 v4, 0x0
 
-    .line 387
     :goto_1
     invoke-static {v3}, Lcom/samsung/android/app/SemDualAppManager;->isDualAppId(I)Z
 
@@ -456,12 +412,10 @@
 
     const-string v4, "Skip deleting idmap for dual app"
 
-    .line 390
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 392
     :cond_2
     invoke-virtual {p0, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->removeIdmap(Landroid/content/om/OverlayInfoExt;)V
 
@@ -470,11 +424,9 @@
 
     goto :goto_0
 
-    .line 396
     :cond_3
     invoke-virtual {p0, p3, p2, p1}, Lcom/android/server/om/OverlayManagerServiceExt;->notifyListener(Landroid/content/om/OverlayInfoExt;Landroid/content/om/ISamsungOverlayCallback;I)V
 
-    .line 397
     iget-object p0, p3, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     iget-object p0, p0, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
@@ -493,12 +445,10 @@
 .method public addOverlays(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)V
     .locals 0
 
-    .line 231
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->addOverlaysInternal(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)Ljava/util/List;
 
     move-result-object p2
 
-    .line 232
     invoke-virtual {p0, p2, p1, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->notifySystemServices(Ljava/util/List;Ljava/util/List;I)V
 
     return-void
@@ -507,7 +457,6 @@
 .method public final addOverlaysInternal(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)Ljava/util/List;
     .locals 1
 
-    .line 213
     invoke-virtual {p0, p1}, Lcom/android/server/om/OverlayManagerServiceExt;->getSafeStream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object p1
@@ -526,7 +475,6 @@
 
     move-result-object p0
 
-    .line 227
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object p1
@@ -549,7 +497,6 @@
 
     return v0
 
-    .line 414
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
@@ -564,21 +511,18 @@
     :try_end_0
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 419
     invoke-static {p1}, Landroid/content/om/OverlayInfoExt;->initFromInfo(Landroid/content/om/OverlayInfo;)Landroid/content/om/OverlayInfoExt;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
-    .line 420
     iget-object v2, v1, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     if-nez v2, :cond_1
 
     goto :goto_0
 
-    .line 424
     :cond_1
     :try_start_1
     iget-object v2, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
@@ -589,7 +533,6 @@
 
     invoke-virtual {v2, v1, p2, p3}, Lcom/android/server/om/OverlayManagerSettings;->setEnabled(Landroid/content/om/OverlayIdentifier;IZ)Z
 
-    .line 425
     iget-object p3, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mPackageManager:Lcom/android/server/om/OverlayManagerServiceExt$PMSHelperImpl;
 
     invoke-virtual {p1}, Landroid/content/om/OverlayInfo;->getTargetPackageName()Ljava/lang/String;
@@ -600,7 +543,6 @@
 
     move-result-object p3
 
-    .line 426
     invoke-virtual {p0, p3, p1, v0, p2}, Lcom/android/server/om/OverlayManagerServiceExt;->handleStateUpdate(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/CriticalOverlayInfo;II)I
 
     move-result p0
@@ -624,7 +566,6 @@
     :catch_0
     move-exception p0
 
-    .line 429
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_4
@@ -634,7 +575,6 @@
     :catch_1
     move-exception p0
 
-    .line 416
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v0
@@ -647,7 +587,6 @@
 
     const-string v1, "OverlayManagerExt"
 
-    .line 699
     :try_start_0
     iget-object v2, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mContext:Landroid/content/Context;
 
@@ -663,7 +602,6 @@
 
     if-le v2, v3, :cond_0
 
-    .line 702
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -684,7 +622,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 703
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -702,7 +639,6 @@
     :catch_0
     move-exception p0
 
-    .line 708
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -735,7 +671,6 @@
 
     const-string v1, "OverlayManagerExt"
 
-    .line 714
     :try_start_0
     const-class v2, Landroid/content/pm/PackageManagerInternal;
 
@@ -745,19 +680,16 @@
 
     check-cast v2, Landroid/content/pm/PackageManagerInternal;
 
-    .line 716
     invoke-virtual {v2, v0}, Landroid/content/pm/PackageManagerInternal;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    .line 718
     invoke-interface {v2, v3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v2
 
-    .line 720
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageUserState;->getEnabledState()I
 
     move-result v4
@@ -768,19 +700,16 @@
 
     const-string/jumbo v4, "shell:1000"
 
-    .line 722
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageUserState;->getLastDisableAppCaller()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 721
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 723
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -799,7 +728,6 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 724
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageUserState;->getLastDisableAppCaller()Ljava/lang/String;
 
     move-result-object v2
@@ -814,10 +742,8 @@
 
     move-result-object v2
 
-    .line 723
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 726
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -833,7 +759,6 @@
     :catch_0
     move-exception p0
 
-    .line 731
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -862,7 +787,6 @@
 .method public final createIdmap(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;I)I
     .locals 2
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIdmapManager:Lcom/android/server/om/IdmapManagerWrapper;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/om/IdmapManagerWrapper;->createIdmap(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;I)I
@@ -873,21 +797,18 @@
 
     if-nez v1, :cond_0
 
-    .line 342
     iget v1, p2, Landroid/content/om/OverlayInfoExt;->configFlags:I
 
     and-int/lit8 v1, v1, 0x8
 
     if-eqz v1, :cond_0
 
-    .line 345
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIdmapManager:Lcom/android/server/om/IdmapManagerWrapper;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/om/IdmapManagerWrapper;->createIdmap(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;I)I
 
     move-result v0
 
-    .line 347
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -935,19 +856,16 @@
 .method public getAllOverlaysInCategory(II)[Landroid/content/om/OverlayInfoExt;
     .locals 3
 
-    .line 436
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {p0, p2}, Lcom/android/server/om/OverlayManagerSettings;->getOverlaysForUser(I)Landroid/util/ArrayMap;
 
     move-result-object p0
 
-    .line 437
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 438
     invoke-virtual {p0}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object p0
@@ -969,7 +887,6 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 439
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -988,14 +905,12 @@
 
     check-cast v1, Landroid/content/om/OverlayInfo;
 
-    .line 440
     invoke-static {v1, p1}, Landroid/content/om/OverlayInfoExt;->isOverlayInfoExtOfCategory(Landroid/content/om/OverlayInfo;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 441
     invoke-static {v1}, Landroid/content/om/OverlayInfoExt;->initFromInfo(Landroid/content/om/OverlayInfo;)Landroid/content/om/OverlayInfoExt;
 
     move-result-object v1
@@ -1009,7 +924,6 @@
 
     new-array p0, p0, [Landroid/content/om/OverlayInfoExt;
 
-    .line 445
     invoke-interface {p2, p0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -1022,14 +936,12 @@
 .method public getOverlayForPath(Ljava/lang/String;I)Landroid/content/om/OverlayInfoExt;
     .locals 2
 
-    .line 450
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {p0, p2}, Lcom/android/server/om/OverlayManagerSettings;->getOverlaysForUser(I)Landroid/util/ArrayMap;
 
     move-result-object p0
 
-    .line 451
     invoke-virtual {p0}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object p0
@@ -1051,7 +963,6 @@
 
     check-cast p2, Ljava/util/List;
 
-    .line 452
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1069,7 +980,6 @@
 
     check-cast v0, Landroid/content/om/OverlayInfo;
 
-    .line 453
     iget-object v1, v0, Landroid/content/om/OverlayInfo;->baseCodePath:Ljava/lang/String;
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1078,7 +988,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 454
     invoke-static {v0}, Landroid/content/om/OverlayInfoExt;->initFromInfo(Landroid/content/om/OverlayInfo;)Landroid/content/om/OverlayInfoExt;
 
     move-result-object p0
@@ -1094,19 +1003,16 @@
 .method public getOverlaysForTarget(Ljava/lang/String;II)[Landroid/content/om/OverlayInfoExt;
     .locals 1
 
-    .line 463
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {p0, p1, p3}, Lcom/android/server/om/OverlayManagerSettings;->getOverlaysForTarget(Ljava/lang/String;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 464
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 465
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1125,14 +1031,12 @@
 
     check-cast p3, Landroid/content/om/OverlayInfo;
 
-    .line 466
     invoke-static {p3, p2}, Landroid/content/om/OverlayInfoExt;->isOverlayInfoExtOfCategory(Landroid/content/om/OverlayInfo;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 467
     invoke-static {p3}, Landroid/content/om/OverlayInfoExt;->initFromInfo(Landroid/content/om/OverlayInfo;)Landroid/content/om/OverlayInfoExt;
 
     move-result-object p3
@@ -1146,7 +1050,6 @@
 
     new-array p0, p0, [Landroid/content/om/OverlayInfoExt;
 
-    .line 470
     invoke-interface {p1, p0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -1159,7 +1062,6 @@
 .method public final getSafeStream(Ljava/util/Collection;)Ljava/util/stream/Stream;
     .locals 0
 
-    .line 681
     invoke-static {p1}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p0
@@ -1192,7 +1094,6 @@
 .method public getTargetPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 654
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIdmapManager:Lcom/android/server/om/IdmapManagerWrapper;
 
     invoke-virtual {p0, p1}, Lcom/android/server/om/IdmapManagerWrapper;->getTargetPath(Ljava/lang/String;)Ljava/lang/String;
@@ -1205,7 +1106,6 @@
 .method public final getUserIds(II)[I
     .locals 4
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
@@ -1221,7 +1121,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 189
     filled-new-array {p2}, [I
 
     move-result-object p0
@@ -1240,19 +1139,16 @@
 
     if-eqz p1, :cond_6
 
-    .line 198
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 199
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 200
     array-length p2, v0
 
     const/4 v1, 0x0
@@ -1262,7 +1158,6 @@
 
     aget v2, v0, v1
 
-    .line 201
     invoke-static {v2}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
     move-result v3
@@ -1275,7 +1170,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 202
     :cond_3
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1288,7 +1182,6 @@
 
     goto :goto_0
 
-    .line 205
     :cond_5
     invoke-virtual {p0, p1}, Lcom/android/server/om/OverlayManagerServiceExt;->getSafeStream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
@@ -1308,7 +1201,6 @@
 
     goto :goto_1
 
-    .line 207
     :cond_6
     filled-new-array {p2}, [I
 
@@ -1323,7 +1215,6 @@
 
     const/4 v0, 0x0
 
-    .line 620
     :try_start_0
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
@@ -1341,7 +1232,6 @@
     :try_end_0
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 625
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1366,7 +1256,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 626
     invoke-static {p2}, Landroid/content/om/OverlayInfoExt;->initFromInfo(Landroid/content/om/OverlayInfo;)Landroid/content/om/OverlayInfoExt;
 
     move-result-object v1
@@ -1392,14 +1281,12 @@
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 634
     invoke-virtual {p2}, Landroid/content/om/OverlayInfo;->getCategory()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
-    .line 635
     invoke-virtual {p2}, Landroid/content/om/OverlayInfo;->getCategory()Ljava/lang/String;
 
     move-result-object p2
@@ -1417,7 +1304,6 @@
     :cond_2
     if-eqz p1, :cond_4
 
-    .line 640
     iget-object p2, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIdmapManager:Lcom/android/server/om/IdmapManagerWrapper;
 
     invoke-virtual {p2, p1, v1, p3}, Lcom/android/server/om/IdmapManagerWrapper;->createIdmap(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;I)I
@@ -1445,7 +1331,6 @@
     :cond_4
     move v9, v0
 
-    .line 643
     :goto_2
     iget-object p2, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
@@ -1459,7 +1344,6 @@
 
     move-result p2
 
-    .line 644
     iget-object v6, v1, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     move-object v4, p0
@@ -1476,7 +1360,6 @@
 
     if-eq p2, p4, :cond_5
 
-    .line 646
     invoke-virtual {p0, p1, v1, p3, p4}, Lcom/android/server/om/OverlayManagerServiceExt;->updateOverlayState(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;II)V
 
     move v0, v3
@@ -1492,7 +1375,6 @@
     :catch_0
     move-exception p0
 
-    .line 622
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v0
@@ -1501,7 +1383,6 @@
 .method public handleUserSwitch(I)V
     .locals 5
 
-    .line 117
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
@@ -1514,7 +1395,6 @@
 
     move-result-object v1
 
-    .line 118
     invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
     move-result-object v1
@@ -1539,7 +1419,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 119
     invoke-virtual {p0, v0}, Lcom/android/server/om/OverlayManagerServiceExt;->getSafeStream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object v0
@@ -1556,12 +1435,10 @@
 
     invoke-direct {v1}, Lcom/android/server/om/OverlayManagerServiceExt$$ExternalSyntheticLambda4;-><init>()V
 
-    .line 120
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    .line 121
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v1
@@ -1572,19 +1449,16 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 123
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 124
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_2
 
-    .line 129
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
@@ -1597,7 +1471,6 @@
 
     move-result-object v3
 
-    .line 130
     invoke-interface {v3}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
     move-result-object v3
@@ -1622,14 +1495,12 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 132
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 133
     invoke-static {p1}, Lcom/samsung/android/knox/SemPersonaManager;->isDualAppId(I)Z
 
     move-result v3
@@ -1647,7 +1518,6 @@
     :goto_0
     const/16 v3, 0x30
 
-    .line 141
     :goto_1
     invoke-virtual {p0, v2}, Lcom/android/server/om/OverlayManagerServiceExt;->getSafeStream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
@@ -1665,7 +1535,6 @@
 
     invoke-direct {v4}, Lcom/android/server/om/OverlayManagerServiceExt$$ExternalSyntheticLambda4;-><init>()V
 
-    .line 142
     invoke-interface {v2, v4}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v2
@@ -1674,12 +1543,10 @@
 
     invoke-direct {v4, v3}, Lcom/android/server/om/OverlayManagerServiceExt$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 143
     invoke-interface {v2, v4}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v2
 
-    .line 144
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v3
@@ -1690,23 +1557,19 @@
 
     check-cast v2, Ljava/util/List;
 
-    .line 145
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 148
     :cond_2
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 149
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 151
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1730,10 +1593,8 @@
     :cond_3
     const/4 v1, 0x0
 
-    .line 154
     invoke-virtual {p0, v2, v1, p1}, Lcom/android/server/om/OverlayManagerServiceExt;->addOverlays(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)V
 
-    .line 155
     iput-boolean v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIsInitOnBoot:Z
 
     return-void
@@ -1782,7 +1643,6 @@
 
     if-nez p3, :cond_4
 
-    .line 672
     iget-object p3, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIdmapManager:Lcom/android/server/om/IdmapManagerWrapper;
 
     invoke-virtual {p3, p2}, Lcom/android/server/om/IdmapManagerWrapper;->idmapExists(Landroid/content/om/OverlayInfo;)Z
@@ -1793,7 +1653,6 @@
 
     return p1
 
-    .line 676
     :cond_4
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
@@ -1821,19 +1680,16 @@
 .method public final initInSettings(Landroid/content/om/OverlayInfoExt;I)Z
     .locals 12
 
-    .line 256
     invoke-virtual {p1}, Landroid/content/om/OverlayInfoExt;->getOverlayIdentifier()Landroid/content/om/OverlayIdentifier;
 
     move-result-object v1
 
-    .line 258
     iget v0, p1, Landroid/content/om/OverlayInfoExt;->configFlags:I
 
     and-int/lit16 v0, v0, 0x800
 
     if-eqz v0, :cond_0
 
-    .line 261
     :try_start_0
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
@@ -1848,7 +1704,6 @@
     :catch_0
     const/4 v0, 0x0
 
-    .line 266
     :goto_0
     iget-object v2, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
@@ -1862,7 +1717,6 @@
     :goto_1
     move v11, v0
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     iget-object p0, p1, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
@@ -1893,7 +1747,6 @@
 .method public final notifyActivityManager(Ljava/util/List;IZ)V
     .locals 2
 
-    .line 536
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1924,29 +1777,24 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerServiceExt;->updateServiceInfos(Ljava/util/List;I)V
 
     if-eqz p3, :cond_0
 
     const-string p0, "android"
 
-    .line 548
     invoke-interface {p1, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
-    .line 549
     invoke-interface {p1, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     const-string p0, "framework-res"
 
-    .line 550
     invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 552
     :cond_0
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
@@ -1968,7 +1816,6 @@
 
     return-void
 
-    .line 597
     :cond_0
     invoke-static {}, Lcom/android/server/FgThread;->getHandler()Landroid/os/Handler;
 
@@ -1986,7 +1833,6 @@
 .method public notifySystemServices(Ljava/util/List;Ljava/util/List;I)V
     .locals 2
 
-    .line 480
     invoke-virtual {p0, p2}, Lcom/android/server/om/OverlayManagerServiceExt;->getSafeStream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object v0
@@ -2005,7 +1851,6 @@
 
     move-result-object p3
 
-    .line 487
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v0
@@ -2016,12 +1861,10 @@
 
     check-cast p3, Ljava/util/List;
 
-    .line 488
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 489
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -2039,12 +1882,10 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 490
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
 
-    .line 493
     :cond_0
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -2067,7 +1908,6 @@
 
     move-result v0
 
-    .line 494
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/om/OverlayManagerServiceExt;->notifySystemServicesInternal(Ljava/util/List;Ljava/util/List;I)V
 
     goto :goto_1
@@ -2079,7 +1919,6 @@
 .method public final notifySystemServicesInternal(Ljava/util/List;Ljava/util/List;I)V
     .locals 3
 
-    .line 501
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -2099,7 +1938,6 @@
 
     check-cast v0, Landroid/content/om/OverlayInfoExt;
 
-    .line 502
     iget-object v2, v0, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     iget-object v2, v2, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
@@ -2116,7 +1954,6 @@
 
     if-nez v2, :cond_0
 
-    .line 505
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2152,7 +1989,6 @@
     :cond_1
     const/4 p2, 0x1
 
-    .line 510
     :goto_0
     invoke-interface {p1, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2162,19 +1998,16 @@
 
     if-eqz p2, :cond_2
 
-    .line 514
     sget-object v0, Landroid/content/om/SamsungThemeConstants;->changeableApps:Ljava/util/HashSet;
 
     invoke-interface {p1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 515
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {v0, p3}, Lcom/android/server/om/OverlayManagerSettings;->getOverlaysForUser(I)Landroid/util/ArrayMap;
 
     move-result-object v0
 
-    .line 516
     invoke-virtual {v0}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v0
@@ -2196,7 +2029,6 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 517
     invoke-virtual {p0, v1}, Lcom/android/server/om/OverlayManagerServiceExt;->getSafeStream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object v1
@@ -2209,7 +2041,6 @@
 
     move-result-object v1
 
-    .line 522
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v2
@@ -2220,12 +2051,10 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 524
     invoke-interface {p1, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_1
 
-    .line 528
     :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
@@ -2235,19 +2064,16 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 529
     iget-object p1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mPackageUpdateHelper:Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;
 
     invoke-virtual {p1, v0, p3, p2}, Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;->updatePackageManager(Ljava/util/Collection;IZ)Ljava/util/List;
 
     move-result-object p1
 
-    .line 530
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mPackageUpdateHelper:Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;
 
     invoke-virtual {v0}, Lcom/android/server/om/OverlayManagerService$PackageUpdateHelper;->persistSettings()V
 
-    .line 531
     invoke-virtual {p0, p1, p3, p2}, Lcom/android/server/om/OverlayManagerServiceExt;->notifyActivityManager(Ljava/util/List;IZ)V
 
     return-void
@@ -2258,14 +2084,12 @@
 
     if-eqz p1, :cond_4
 
-    .line 353
     iget-object v0, p1, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     if-nez v0, :cond_0
 
     goto :goto_1
 
-    .line 356
     :cond_0
     iget-object v1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIdmapManager:Lcom/android/server/om/IdmapManagerWrapper;
 
@@ -2277,7 +2101,6 @@
 
     return-void
 
-    .line 359
     :cond_1
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
@@ -2285,7 +2108,6 @@
 
     move-result-object v0
 
-    .line 360
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -2295,7 +2117,6 @@
 
     aget v3, v0, v2
 
-    .line 362
     :try_start_0
     iget-object v4, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
@@ -2309,7 +2130,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 363
     invoke-virtual {v3}, Landroid/content/om/OverlayInfo;->isEnabled()Z
 
     move-result v3
@@ -2326,7 +2146,6 @@
 
     goto :goto_0
 
-    .line 371
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2360,7 +2179,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIdmapManager:Lcom/android/server/om/IdmapManagerWrapper;
 
     iget-object p1, p1, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
@@ -2377,12 +2195,10 @@
 .method public removeOverlays(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)V
     .locals 0
 
-    .line 403
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->removeOverlaysInternal(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)Ljava/util/List;
 
     move-result-object p2
 
-    .line 404
     invoke-virtual {p0, p2, p1, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->notifySystemServices(Ljava/util/List;Ljava/util/List;I)V
 
     return-void
@@ -2391,7 +2207,6 @@
 .method public final removeOverlaysInternal(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)Ljava/util/List;
     .locals 1
 
-    .line 376
     invoke-virtual {p0, p1}, Lcom/android/server/om/OverlayManagerServiceExt;->getSafeStream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object p1
@@ -2414,7 +2229,6 @@
 
     invoke-direct {p1}, Lcom/android/server/om/OverlayManagerServiceExt$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 398
     invoke-interface {p0, p1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -2437,7 +2251,6 @@
 
     if-nez p1, :cond_0
 
-    .line 162
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
@@ -2445,31 +2258,25 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 165
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p2
 
-    .line 167
     :cond_1
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/om/OverlayManagerServiceExt;->removeOverlaysInternal(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 168
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/om/OverlayManagerServiceExt;->addOverlaysInternal(Ljava/util/List;Landroid/content/om/ISamsungOverlayCallback;I)Ljava/util/List;
 
     move-result-object p3
 
-    .line 170
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 171
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 173
     new-instance p3, Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/HashSet;
@@ -2478,18 +2285,14 @@
 
     invoke-direct {p3, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 175
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 176
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 177
     invoke-interface {v0, p2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 179
     invoke-virtual {p0, p3, v0, p4}, Lcom/android/server/om/OverlayManagerServiceExt;->notifySystemServices(Ljava/util/List;Ljava/util/List;I)V
 
     return-void
@@ -2500,7 +2303,6 @@
 
     if-eq p2, p3, :cond_0
 
-    .line 237
     iget-object p3, p1, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     iget-object p3, p3, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
@@ -2513,7 +2315,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 239
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2544,7 +2345,6 @@
 
     return-void
 
-    .line 243
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/OverlayManagerServiceExt;->initInSettings(Landroid/content/om/OverlayInfoExt;I)Z
 
@@ -2566,7 +2366,6 @@
     :cond_2
     const/4 p3, 0x2
 
-    .line 251
     :goto_0
     invoke-virtual {p0, p4, p1, p2, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->updateOverlayState(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;II)V
 
@@ -2576,7 +2375,6 @@
 .method public setIsInitonBoot(Z)V
     .locals 0
 
-    .line 475
     iput-boolean p1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIsInitOnBoot:Z
 
     return-void
@@ -2585,14 +2383,12 @@
 .method public final updateIdmap(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;II)I
     .locals 2
 
-    .line 323
     iget v0, p2, Landroid/content/om/OverlayInfoExt;->configFlags:I
 
     and-int/lit16 v0, v0, 0x200
 
     if-eqz v0, :cond_0
 
-    .line 324
     invoke-static {p1}, Lcom/android/server/om/SemSamsungThemeUtils;->deleteResourceMapFile(Lcom/android/server/pm/pkg/AndroidPackage;)V
 
     :cond_0
@@ -2602,7 +2398,6 @@
 
     if-ne p4, v0, :cond_3
 
-    .line 328
     invoke-static {p3}, Lcom/samsung/android/app/SemDualAppManager;->isDualAppId(I)Z
 
     move-result p4
@@ -2618,7 +2413,6 @@
     :cond_1
     move p3, v1
 
-    .line 331
     :cond_2
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/om/OverlayManagerServiceExt;->createIdmap(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;I)I
 
@@ -2631,7 +2425,6 @@
 
     if-ne p4, p1, :cond_4
 
-    .line 333
     invoke-virtual {p0, p2}, Lcom/android/server/om/OverlayManagerServiceExt;->removeIdmap(Landroid/content/om/OverlayInfoExt;)V
 
     :cond_4
@@ -2646,12 +2439,10 @@
 
     if-eqz p4, :cond_2
 
-    .line 279
     iget-boolean v1, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mIsInitOnBoot:Z
 
     if-eqz v1, :cond_0
 
-    .line 281
     iget-object p1, p2, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     iget p4, p1, Landroid/content/om/OverlayInfo;->state:I
@@ -2663,7 +2454,6 @@
 
     if-ne p4, v1, :cond_4
 
-    .line 285
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/om/OverlayManagerServiceExt;->updateIdmap(Lcom/android/server/pm/pkg/AndroidPackage;Landroid/content/om/OverlayInfoExt;II)I
 
     move-result p1
@@ -2683,7 +2473,6 @@
 
     goto :goto_0
 
-    .line 295
     :cond_2
     iget-object p4, p2, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
@@ -2691,7 +2480,6 @@
 
     if-nez p1, :cond_3
 
-    .line 298
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2708,12 +2496,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     invoke-virtual {p0, p2}, Lcom/android/server/om/OverlayManagerServiceExt;->removeIdmap(Landroid/content/om/OverlayInfoExt;)V
 
     if-eqz p4, :cond_3
 
-    .line 301
     invoke-virtual {p4}, Landroid/content/om/OverlayInfo;->getCategory()Ljava/lang/String;
 
     move-result-object p1
@@ -2732,12 +2518,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 302
     iget-object p1, p4, Landroid/content/om/OverlayInfo;->baseCodePath:Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/om/SemSamsungThemeUtils;->deleteFile(Ljava/lang/String;)V
 
-    .line 303
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {p2}, Landroid/content/om/OverlayInfoExt;->getOverlayIdentifier()Landroid/content/om/OverlayIdentifier;
@@ -2751,20 +2535,17 @@
     :cond_3
     const/4 p4, -0x1
 
-    .line 309
     :cond_4
     :goto_0
     iget-object p1, p2, Landroid/content/om/OverlayInfoExt;->info:Landroid/content/om/OverlayInfo;
 
     if-eqz p1, :cond_5
 
-    .line 311
     :try_start_0
     invoke-virtual {p2}, Landroid/content/om/OverlayInfoExt;->getOverlayIdentifier()Landroid/content/om/OverlayIdentifier;
 
     move-result-object p1
 
-    .line 312
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/om/OverlayManagerSettings;->setState(Landroid/content/om/OverlayIdentifier;II)Z
@@ -2776,10 +2557,8 @@
     :catch_0
     move-exception p0
 
-    .line 314
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 315
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2818,32 +2597,27 @@
 .method public final updateServiceInfos(Ljava/util/List;I)V
     .locals 1
 
-    .line 568
     :try_start_0
     iget-object p2, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "textservices"
 
-    .line 569
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Landroid/view/textservice/TextServicesManager;
 
-    .line 570
     invoke-virtual {p2}, Landroid/view/textservice/TextServicesManager;->getCurrentSpellCheckerInfo()Landroid/view/textservice/SpellCheckerInfo;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 574
     invoke-virtual {p2}, Landroid/view/textservice/SpellCheckerInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v0
 
-    .line 575
     invoke-virtual {p2}, Landroid/view/textservice/SpellCheckerInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
@@ -2855,7 +2629,6 @@
 
     move-object p2, v0
 
-    .line 578
     :goto_0
     invoke-interface {p1, p2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2865,7 +2638,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 579
     iget-object p0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2880,14 +2652,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 581
     iget-object p1, v0, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object p2, p0, Landroid/content/pm/ApplicationInfo;->resourceDirs:[Ljava/lang/String;
 
     iput-object p2, p1, Landroid/content/pm/ApplicationInfo;->resourceDirs:[Ljava/lang/String;
 
-    .line 582
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->overlayPaths:[Ljava/lang/String;
 
     iput-object p0, p1, Landroid/content/pm/ApplicationInfo;->overlayPaths:[Ljava/lang/String;
@@ -2899,7 +2669,6 @@
     :catch_0
     move-exception p0
 
-    .line 588
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2930,14 +2699,12 @@
 .method public final verifyOverlayPackages()V
     .locals 8
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {v0}, Lcom/android/server/om/OverlayManagerSettings;->getUsers()[I
 
     move-result-object v0
 
-    .line 99
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -2947,14 +2714,12 @@
 
     aget v3, v0, v2
 
-    .line 100
     iget-object v4, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {v4, v3}, Lcom/android/server/om/OverlayManagerSettings;->getOverlaysForUser(I)Landroid/util/ArrayMap;
 
     move-result-object v4
 
-    .line 101
     invoke-virtual {v4}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v4
@@ -2981,7 +2746,6 @@
 
     check-cast v4, Ljava/util/List;
 
-    .line 102
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -3000,7 +2764,6 @@
 
     check-cast v5, Landroid/content/om/OverlayInfo;
 
-    .line 103
     invoke-static {v5}, Landroid/content/om/OverlayInfoExt;->isOverlayInfoExt(Landroid/content/om/OverlayInfo;)Z
 
     move-result v6
@@ -3009,7 +2772,6 @@
 
     goto :goto_1
 
-    .line 106
     :cond_1
     new-instance v6, Ljava/io/File;
 
@@ -3023,7 +2785,6 @@
 
     if-nez v6, :cond_0
 
-    .line 107
     iget-object v6, p0, Lcom/android/server/om/OverlayManagerServiceExt;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
     invoke-virtual {v5}, Landroid/content/om/OverlayInfo;->getOverlayIdentifier()Landroid/content/om/OverlayIdentifier;
@@ -3032,7 +2793,6 @@
 
     invoke-virtual {v6, v7, v3}, Lcom/android/server/om/OverlayManagerSettings;->remove(Landroid/content/om/OverlayIdentifier;I)Z
 
-    .line 108
     invoke-static {v5}, Landroid/content/om/OverlayInfoExt;->initFromInfo(Landroid/content/om/OverlayInfo;)Landroid/content/om/OverlayInfoExt;
 
     move-result-object v5

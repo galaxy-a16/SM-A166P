@@ -11,12 +11,10 @@
 .method public constructor <init>(Landroid/os/PersistableBundle;)V
     .locals 1
 
-    .line 532
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Bundle was null"
 
-    .line 533
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -33,7 +31,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 568
     instance-of v0, p1, Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;
 
     if-nez v0, :cond_0
@@ -42,11 +39,9 @@
 
     return p0
 
-    .line 572
     :cond_0
     check-cast p1, Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;
 
-    .line 574
     iget-object p0, p0, Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;->mBundle:Landroid/os/PersistableBundle;
 
     iget-object p1, p1, Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;->mBundle:Landroid/os/PersistableBundle;
@@ -61,7 +56,6 @@
 .method public getInt(Ljava/lang/String;I)I
     .locals 0
 
-    .line 544
     iget-object p0, p0, Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;->mBundle:Landroid/os/PersistableBundle;
 
     invoke-virtual {p0, p1, p2}, Landroid/os/PersistableBundle;->getInt(Ljava/lang/String;I)I
@@ -74,7 +68,6 @@
 .method public getIntArray(Ljava/lang/String;[I)[I
     .locals 0
 
-    .line 557
     iget-object p0, p0, Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;->mBundle:Landroid/os/PersistableBundle;
 
     invoke-virtual {p0, p1}, Landroid/os/PersistableBundle;->getIntArray(Ljava/lang/String;)[I
@@ -95,7 +88,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 563
     iget-object p0, p0, Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;->mBundle:Landroid/os/PersistableBundle;
 
     invoke-static {p0}, Lcom/android/server/vcn/util/PersistableBundleUtils;->getHashCode(Landroid/os/PersistableBundle;)I
@@ -108,7 +100,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 579
     iget-object p0, p0, Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;->mBundle:Landroid/os/PersistableBundle;
 
     invoke-virtual {p0}, Landroid/os/PersistableBundle;->toString()Ljava/lang/String;

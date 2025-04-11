@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/application/ApplicationPolicy;)V
     .locals 0
 
-    .line 13402
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$LocalService;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Lcom/samsung/android/knox/localservice/ApplicationPolicyInternal;-><init>()V
@@ -24,7 +23,6 @@
 .method public getApplicationNameFromDb(Ljava/lang/String;I)Ljava/lang/String;
     .locals 0
 
-    .line 13428
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$LocalService;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/application/ApplicationPolicy;->getApplicationNameFromDb(Ljava/lang/String;I)Ljava/lang/String;
@@ -37,7 +35,6 @@
 .method public getApplicationStateEnabledAsUser(Ljava/lang/String;ZI)Z
     .locals 0
 
-    .line 13406
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$LocalService;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/enterprise/application/ApplicationPolicy;->-$$Nest$mgetApplicationStateEnabledAsUserInMap(Lcom/android/server/enterprise/application/ApplicationPolicy;Ljava/lang/String;ZI)Z
@@ -50,7 +47,6 @@
 .method public isApplicationStartDisabledAsUser(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 13413
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$LocalService;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/application/ApplicationPolicy;->isApplicationStartDisabledAsUser(Ljava/lang/String;I)Z
@@ -63,7 +59,6 @@
 .method public isApplicationStopDisabledAsUser(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 7
 
-    .line 13421
     iget-object v0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$LocalService;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     move-object v1, p1

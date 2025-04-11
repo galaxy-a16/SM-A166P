@@ -20,7 +20,6 @@
 .method public static bridge synthetic -$$Nest$sminternalCreateFromParcel(Landroid/os/Parcel;)Landroid/net/UidRangeParcel;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/UidRangeParcel;->internalCreateFromParcel(Landroid/os/Parcel;)Landroid/net/UidRangeParcel;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 30
     new-instance v0, Landroid/net/UidRangeParcel$1;
 
     invoke-direct {v0}, Landroid/net/UidRangeParcel$1;-><init>()V
@@ -44,13 +42,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput p1, p0, Landroid/net/UidRangeParcel;->start:I
 
-    .line 54
     iput p2, p0, Landroid/net/UidRangeParcel;->stop:I
 
     return-void
@@ -59,17 +54,14 @@
 .method private static internalCreateFromParcel(Landroid/os/Parcel;)Landroid/net/UidRangeParcel;
     .locals 7
 
-    .line 58
     new-instance v0, Landroid/net/UidRangeParcel$Builder;
 
     invoke-direct {v0}, Landroid/net/UidRangeParcel$Builder;-><init>()V
 
-    .line 59
     invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v1
 
-    .line 60
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -82,11 +74,9 @@
 
     if-lt v2, v3, :cond_5
 
-    .line 62
     :try_start_0
     invoke-virtual {v0}, Landroid/net/UidRangeParcel$Builder;->build()Landroid/net/UidRangeParcel;
 
-    .line 63
     invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v3
@@ -106,17 +96,14 @@
     :goto_0
     add-int/2addr v1, v2
 
-    .line 75
     invoke-virtual {p0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 76
     invoke-virtual {v0}, Landroid/net/UidRangeParcel$Builder;->build()Landroid/net/UidRangeParcel;
 
     move-result-object p0
 
     return-object p0
 
-    .line 73
     :cond_0
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -124,17 +111,14 @@
 
     throw p0
 
-    .line 65
     :cond_1
     :try_start_1
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 66
     invoke-virtual {v0, v3}, Landroid/net/UidRangeParcel$Builder;->setStart(I)Landroid/net/UidRangeParcel$Builder;
 
-    .line 67
     invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v3
@@ -153,7 +137,6 @@
 
     goto :goto_0
 
-    .line 73
     :cond_2
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -161,14 +144,12 @@
 
     throw p0
 
-    .line 69
     :cond_3
     :try_start_2
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 70
     invoke-virtual {v0, v3}, Landroid/net/UidRangeParcel$Builder;->setStop(I)Landroid/net/UidRangeParcel$Builder;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -179,7 +160,6 @@
 
     goto :goto_0
 
-    .line 73
     :cond_4
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -187,7 +167,6 @@
 
     throw p0
 
-    .line 62
     :cond_5
     :try_start_3
     new-instance v3, Landroid/os/BadParcelableException;
@@ -207,7 +186,6 @@
 
     goto :goto_0
 
-    .line 73
     :cond_6
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -221,7 +199,6 @@
 .method public describeContents()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -243,7 +220,6 @@
 
     return v1
 
-    .line 90
     :cond_1
     instance-of v2, p1, Landroid/net/UidRangeParcel;
 
@@ -251,11 +227,9 @@
 
     return v1
 
-    .line 91
     :cond_2
     check-cast p1, Landroid/net/UidRangeParcel;
 
-    .line 92
     iget v2, p0, Landroid/net/UidRangeParcel;->start:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -276,7 +250,6 @@
 
     return v1
 
-    .line 93
     :cond_3
     iget p0, p0, Landroid/net/UidRangeParcel;->stop:I
 
@@ -305,7 +278,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 99
     iget v0, p0, Landroid/net/UidRangeParcel;->start:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -340,7 +312,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 81
     new-instance v0, Ljava/util/StringJoiner;
 
     const-string/jumbo v1, "{"
@@ -351,7 +322,6 @@
 
     invoke-direct {v0, v3, v1, v2}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    .line 82
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -370,7 +340,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 83
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -389,7 +358,6 @@
 
     invoke-virtual {v0, p0}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 84
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -414,40 +382,32 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 42
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p2
 
     const/4 v0, 0x0
 
-    .line 43
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 44
     iget v0, p0, Landroid/net/UidRangeParcel;->start:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 45
     iget p0, p0, Landroid/net/UidRangeParcel;->stop:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 46
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p0
 
-    .line 47
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->setDataPosition(I)V
 
     sub-int p2, p0, p2
 
-    .line 48
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 49
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void

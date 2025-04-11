@@ -24,7 +24,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 1
 
-    .line 684
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -41,12 +40,10 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 685
     iget-object p0, p0, Lcom/android/server/wm/TaskOrganizerController$StartingWindowAnimationAdaptor;->mAnimationLeash:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 686
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -55,14 +52,12 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getDurationHint()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -71,7 +66,6 @@
 .method public getShowWallpaper()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -80,7 +74,6 @@
 .method public getStatusBarTransitionsStartTime()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -89,14 +82,12 @@
 .method public onAnimationCancelled(Landroid/view/SurfaceControl;)V
     .locals 1
 
-    .line 667
     iget-object v0, p0, Lcom/android/server/wm/TaskOrganizerController$StartingWindowAnimationAdaptor;->mAnimationLeash:Landroid/view/SurfaceControl;
 
     if-ne v0, p1, :cond_0
 
     const/4 p1, 0x0
 
-    .line 668
     iput-object p1, p0, Lcom/android/server/wm/TaskOrganizerController$StartingWindowAnimationAdaptor;->mAnimationLeash:Landroid/view/SurfaceControl;
 
     :cond_0
@@ -106,7 +97,6 @@
 .method public startAnimation(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;ILcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)V
     .locals 0
 
-    .line 662
     iput-object p1, p0, Lcom/android/server/wm/TaskOrganizerController$StartingWindowAnimationAdaptor;->mAnimationLeash:Landroid/view/SurfaceControl;
 
     return-void

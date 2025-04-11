@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/locales/LocaleManagerService;Lcom/android/server/locales/SystemAppUpdateTracker;)V
     .locals 0
 
-    .line 129
     iput-object p1, p0, Lcom/android/server/locales/LocaleManagerService$1;->this$0:Lcom/android/server/locales/LocaleManagerService;
 
     iput-object p2, p0, Lcom/android/server/locales/LocaleManagerService$1;->val$systemAppUpdateTracker:Lcom/android/server/locales/SystemAppUpdateTracker;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 0
 
-    .line 132
     iget-object p0, p0, Lcom/android/server/locales/LocaleManagerService$1;->val$systemAppUpdateTracker:Lcom/android/server/locales/SystemAppUpdateTracker;
 
     invoke-virtual {p0}, Lcom/android/server/locales/SystemAppUpdateTracker;->init()V

@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecConfig;Lcom/android/server/hdmi/HdmiCecConfig$SettingChangeListener;Lcom/android/server/hdmi/HdmiCecConfig$Setting;)V
     .locals 0
 
-    .line 915
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecConfig$1;->this$0:Lcom/android/server/hdmi/HdmiCecConfig;
 
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiCecConfig$1;->val$listener:Lcom/android/server/hdmi/HdmiCecConfig$SettingChangeListener;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 1
 
-    .line 918
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecConfig$1;->val$listener:Lcom/android/server/hdmi/HdmiCecConfig$SettingChangeListener;
 
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecConfig$1;->val$setting:Lcom/android/server/hdmi/HdmiCecConfig$Setting;

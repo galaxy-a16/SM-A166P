@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/credentials/RemoteCredentialService;Ljava/util/concurrent/CompletableFuture;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicReference;)V
     .locals 0
 
-    .line 166
     iput-object p1, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->this$0:Lcom/android/server/credentials/RemoteCredentialService;
 
     iput-object p2, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->val$getCredentials:Ljava/util/concurrent/CompletableFuture;
@@ -36,10 +35,8 @@
 .method public onCancellable(Landroid/os/ICancellationSignal;)V
     .locals 1
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->val$futureRef:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 184
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -48,27 +45,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 185
     invoke-virtual {v0}, Ljava/util/concurrent/CompletableFuture;->isCancelled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 186
     iget-object p0, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->this$0:Lcom/android/server/credentials/RemoteCredentialService;
 
     invoke-static {p0, p1}, Lcom/android/server/credentials/RemoteCredentialService;->-$$Nest$mdispatchCancellationSignal(Lcom/android/server/credentials/RemoteCredentialService;Landroid/os/ICancellationSignal;)V
 
     goto :goto_0
 
-    .line 188
     :cond_0
     iget-object v0, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->val$cancellationSink:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->this$0:Lcom/android/server/credentials/RemoteCredentialService;
 
     invoke-static {v0}, Lcom/android/server/credentials/RemoteCredentialService;->-$$Nest$fgetmCallback(Lcom/android/server/credentials/RemoteCredentialService;)Lcom/android/server/credentials/RemoteCredentialService$ProviderCallbacks;
@@ -77,7 +70,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 190
     iget-object p0, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->this$0:Lcom/android/server/credentials/RemoteCredentialService;
 
     invoke-static {p0}, Lcom/android/server/credentials/RemoteCredentialService;->-$$Nest$fgetmCallback(Lcom/android/server/credentials/RemoteCredentialService;)Lcom/android/server/credentials/RemoteCredentialService$ProviderCallbacks;
@@ -100,13 +92,11 @@
 
     goto :goto_0
 
-    .line 174
     :cond_0
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 176
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -126,7 +116,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     iget-object p0, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->val$getCredentials:Ljava/util/concurrent/CompletableFuture;
 
     new-instance v0, Landroid/credentials/GetCredentialException;
@@ -141,7 +130,6 @@
 .method public onSuccess(Landroid/service/credentials/BeginGetCredentialResponse;)V
     .locals 0
 
-    .line 169
     iget-object p0, p0, Lcom/android/server/credentials/RemoteCredentialService$1;->val$getCredentials:Ljava/util/concurrent/CompletableFuture;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z

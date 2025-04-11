@@ -16,19 +16,16 @@
 .method public constructor <init>(Lcom/android/server/audio/SoundEffectsHelper;)V
     .locals 1
 
-    .line 566
     iput-object p1, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 563
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->mLoadCompleteHandlers:Ljava/util/List;
 
-    .line 572
     invoke-static {p1}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$fgetmSoundPool(Lcom/android/server/audio/SoundEffectsHelper;)Landroid/media/SoundPool;
 
     move-result-object p1
@@ -45,7 +42,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 577
     iget-object p0, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->mLoadCompleteHandlers:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -57,7 +53,6 @@
 .method public onComplete(Z)V
     .locals 2
 
-    .line 622
     iget-object v0, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     invoke-static {v0}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$fgetmSoundPool(Lcom/android/server/audio/SoundEffectsHelper;)Landroid/media/SoundPool;
@@ -66,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 623
     iget-object v0, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     invoke-static {v0}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$fgetmSoundPool(Lcom/android/server/audio/SoundEffectsHelper;)Landroid/media/SoundPool;
@@ -77,7 +71,6 @@
 
     invoke-virtual {v0, v1}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
-    .line 625
     :cond_0
     iget-object v0, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->mLoadCompleteHandlers:Ljava/util/List;
 
@@ -98,12 +91,10 @@
 
     check-cast v1, Lcom/android/server/audio/SoundEffectsHelper$OnEffectsLoadCompleteHandler;
 
-    .line 626
     invoke-interface {v1, p1}, Lcom/android/server/audio/SoundEffectsHelper$OnEffectsLoadCompleteHandler;->run(Z)V
 
     goto :goto_0
 
-    .line 628
     :cond_1
     iget-object p0, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
@@ -145,7 +136,6 @@
 
     if-nez p3, :cond_3
 
-    .line 585
     iget-object p3, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     invoke-static {p3}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$fgetmResources(Lcom/android/server/audio/SoundEffectsHelper;)Ljava/util/List;
@@ -172,7 +162,6 @@
 
     check-cast v1, Lcom/android/server/audio/SoundEffectsHelper$Resource;
 
-    .line 586
     iget v3, v1, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mSampleId:I
 
     if-ne v3, p2, :cond_1
@@ -181,7 +170,6 @@
 
     if-nez v3, :cond_1
 
-    .line 587
     iget-object v3, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -204,10 +192,8 @@
 
     invoke-static {v3, v4}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$mlogEvent(Lcom/android/server/audio/SoundEffectsHelper;Ljava/lang/String;)V
 
-    .line 588
     iput-boolean v2, v1, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mLoaded:Z
 
-    .line 590
     sget-boolean v2, Lcom/samsung/android/audio/Rune;->SEC_AUDIO_EXTENSION_SITUATION_VOLUME:Z
 
     if-eqz v2, :cond_1
@@ -216,7 +202,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 591
     iget-object v2, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     invoke-static {v2}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$fgetmSoundPool(Lcom/android/server/audio/SoundEffectsHelper;)Landroid/media/SoundPool;
@@ -227,7 +212,6 @@
 
     invoke-virtual {v2, p2, v3}, Landroid/media/SoundPool;->semSetSituationType(ILjava/lang/String;)V
 
-    .line 595
     :cond_1
     iget v2, v1, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mSampleId:I
 
@@ -244,12 +228,10 @@
     :cond_2
     if-nez v0, :cond_5
 
-    .line 600
     invoke-virtual {p0, v2}, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->onComplete(Z)V
 
     goto :goto_2
 
-    .line 603
     :cond_3
     iget-object v1, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
@@ -259,7 +241,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 606
     iget-object p2, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     invoke-static {p2, v1}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$mgetResourceFilePath(Lcom/android/server/audio/SoundEffectsHelper;Lcom/android/server/audio/SoundEffectsHelper$Resource;)Ljava/lang/String;
@@ -268,7 +249,6 @@
 
     goto :goto_1
 
-    .line 608
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -284,7 +264,6 @@
 
     move-result-object p2
 
-    .line 610
     :goto_1
     iget-object v1, p0, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
@@ -308,7 +287,6 @@
 
     invoke-static {v1, p1}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$mlogEvent(Lcom/android/server/audio/SoundEffectsHelper;Ljava/lang/String;)V
 
-    .line 611
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -333,7 +311,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 613
     invoke-virtual {p0, v0}, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->onComplete(Z)V
 
     :cond_5
@@ -346,7 +323,6 @@
 
     const/4 v0, 0x0
 
-    .line 618
     invoke-virtual {p0, v0}, Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;->onComplete(Z)V
 
     return-void

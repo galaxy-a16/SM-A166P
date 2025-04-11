@@ -19,14 +19,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static byteArrayToHex([B)Ljava/lang/String;
     .locals 5
 
-    .line 128
     new-instance v0, Ljava/lang/StringBuilder;
 
     array-length v1, p0
@@ -35,7 +33,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 129
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -47,7 +44,6 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    .line 130
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -68,7 +64,6 @@
 
     goto :goto_0
 
-    .line 131
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -80,17 +75,14 @@
 .method public static copyOptions(ILandroid/hardware/face/FaceAuthenticateOptions;)Landroid/hardware/face/FaceAuthenticateOptions;
     .locals 1
 
-    .line 211
     new-instance v0, Landroid/hardware/face/FaceAuthenticateOptions$Builder;
 
     invoke-direct {v0}, Landroid/hardware/face/FaceAuthenticateOptions$Builder;-><init>()V
 
-    .line 212
     invoke-virtual {v0, p0}, Landroid/hardware/face/FaceAuthenticateOptions$Builder;->setUserId(I)Landroid/hardware/face/FaceAuthenticateOptions$Builder;
 
     move-result-object p0
 
-    .line 213
     invoke-virtual {p1}, Landroid/hardware/face/FaceAuthenticateOptions;->getSensorId()I
 
     move-result v0
@@ -99,7 +91,6 @@
 
     move-result-object p0
 
-    .line 214
     invoke-virtual {p1}, Landroid/hardware/face/FaceAuthenticateOptions;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +99,6 @@
 
     move-result-object p0
 
-    .line 215
     invoke-virtual {p1}, Landroid/hardware/face/FaceAuthenticateOptions;->getAttributionTag()Ljava/lang/String;
 
     move-result-object v0
@@ -117,7 +107,6 @@
 
     move-result-object p0
 
-    .line 216
     invoke-virtual {p1}, Landroid/hardware/face/FaceAuthenticateOptions;->getDisplayState()I
 
     move-result p1
@@ -126,7 +115,6 @@
 
     move-result-object p0
 
-    .line 217
     invoke-virtual {p0}, Landroid/hardware/face/FaceAuthenticateOptions$Builder;->build()Landroid/hardware/face/FaceAuthenticateOptions;
 
     move-result-object p0
@@ -137,7 +125,6 @@
 .method public static getBundle()Landroid/os/Bundle;
     .locals 1
 
-    .line 102
     sget-object v0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mBundle:Landroid/os/Bundle;
 
     return-object v0
@@ -146,12 +133,10 @@
 .method public static getFidoRequestData()[B
     .locals 2
 
-    .line 50
     sget-object v0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoRequestData:[B
 
     const/4 v1, 0x0
 
-    .line 51
     sput-object v1, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoRequestData:[B
 
     if-nez v0, :cond_0
@@ -167,12 +152,10 @@
 .method public static getFidoRequestDataAsArrayList()Ljava/util/ArrayList;
     .locals 5
 
-    .line 59
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 60
     sget-object v1, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoRequestData:[B
 
     if-eqz v1, :cond_0
@@ -181,7 +164,6 @@
 
     if-lez v2, :cond_0
 
-    .line 61
     array-length v2, v1
 
     const/4 v3, 0x0
@@ -191,7 +173,6 @@
 
     aget-byte v4, v1, v3
 
-    .line 62
     invoke-static {v4}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v4
@@ -205,7 +186,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 65
     sput-object v1, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoRequestData:[B
 
     return-object v0
@@ -214,7 +194,6 @@
 .method public static getFidoResultData()[B
     .locals 2
 
-    .line 91
     sget-object v0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoResultData:[B
 
     const/4 v1, 0x0
@@ -232,7 +211,6 @@
     :cond_0
     move-object v0, v1
 
-    .line 92
     :goto_0
     sput-object v1, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoResultData:[B
 
@@ -242,7 +220,6 @@
 .method public static getSecurityMode(Landroid/content/Context;)I
     .locals 2
 
-    .line 190
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->isOpenEyesMode(Landroid/content/Context;)Z
 
     move-result v0
@@ -256,7 +233,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 193
     :goto_0
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->isMaskSettingOn(Landroid/content/Context;)Z
 
@@ -272,7 +248,6 @@
 
     or-int/lit8 v0, v0, 0x10
 
-    .line 197
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -302,7 +277,6 @@
 .method public static getSurface()Landroid/view/Surface;
     .locals 1
 
-    .line 115
     sget-object v0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mSurface:Landroid/view/Surface;
 
     return-object v0
@@ -322,7 +296,6 @@
     :cond_0
     const-string/jumbo v1, "sem_privileged_attr"
 
-    .line 135
     invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -341,7 +314,6 @@
 .method public static isMaskSettingOn(Landroid/content/Context;)Z
     .locals 3
 
-    .line 206
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -388,7 +360,6 @@
     :pswitch_3
     return v0
 
-    .line 170
     :pswitch_4
     sget-boolean p0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_JDM_HAL:Z
 
@@ -444,7 +415,6 @@
 .method public static isOpenEyesMode(Landroid/content/Context;)Z
     .locals 3
 
-    .line 202
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -475,7 +445,6 @@
 .method public static needToAuthenticateExt()Z
     .locals 1
 
-    .line 119
     sget-boolean v0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mNeedtoAuthenticateExt:Z
 
     return v0
@@ -486,7 +455,6 @@
 
     const/4 v0, 0x0
 
-    .line 106
     sput-object v0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mBundle:Landroid/os/Bundle;
 
     return-void
@@ -497,12 +465,10 @@
 
     const/4 v0, 0x0
 
-    .line 123
     sput-object v0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mSurface:Landroid/view/Surface;
 
     const/4 v0, 0x0
 
-    .line 124
     sput-boolean v0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mNeedtoAuthenticateExt:Z
 
     return-void
@@ -511,7 +477,6 @@
 .method public static semBigDataFABKCondition(I)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x4
 
     if-lt p0, v0, :cond_0
@@ -530,7 +495,6 @@
 .method public static semBigDataFALICondition(I)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x4
 
     if-lt p0, v0, :cond_0
@@ -549,7 +513,6 @@
 .method public static semBigDataFALQCondition(II)Z
     .locals 4
 
-    .line 0
     mul-int/lit8 p1, p1, 0x5
 
     int-to-double v0, p1
@@ -578,7 +541,6 @@
 .method public static semBigDataFAMOCondition(I)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x4
 
     if-lt p0, v0, :cond_0
@@ -597,7 +559,6 @@
 .method public static setBundle(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 98
     sput-object p0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mBundle:Landroid/os/Bundle;
 
     return-void
@@ -606,7 +567,6 @@
 .method public static setFidoRequestData([B)V
     .locals 3
 
-    .line 38
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -617,12 +577,10 @@
 
     const-string v1, "fidoRequestData is null"
 
-    .line 40
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 42
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -652,7 +610,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :cond_1
     :goto_0
     sput-object p0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoRequestData:[B
@@ -669,12 +626,10 @@
 
     new-array p0, v0, [B
 
-    .line 71
     sput-object p0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoResultData:[B
 
     return-void
 
-    .line 74
     :cond_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -684,7 +639,6 @@
 
     sput-object v1, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoResultData:[B
 
-    .line 75
     :goto_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -692,7 +646,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 76
     sget-object v1, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoResultData:[B
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -711,13 +664,11 @@
 
     goto :goto_0
 
-    .line 78
     :cond_1
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_2
 
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -768,11 +719,9 @@
 
     new-array p0, p0, [B
 
-    .line 84
     :goto_0
     sput-object p0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mFidoResultData:[B
 
-    .line 85
     sget-boolean p0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz p0, :cond_1
@@ -785,7 +734,6 @@
 
     if-ge p0, v0, :cond_1
 
-    .line 86
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -827,12 +775,10 @@
 .method public static setSurface(Landroid/view/Surface;)V
     .locals 0
 
-    .line 110
     sput-object p0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mSurface:Landroid/view/Surface;
 
     const/4 p0, 0x1
 
-    .line 111
     sput-boolean p0, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->mNeedtoAuthenticateExt:Z
 
     return-void

@@ -21,13 +21,10 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;Lcom/android/server/power/stats/BatteryStatsImpl$Uid;)V
     .locals 0
 
-    .line 11308
     invoke-direct {p0}, Landroid/os/BatteryStats$Uid$Wakelock;-><init>()V
 
-    .line 11309
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
-    .line 11310
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mUid:Lcom/android/server/power/stats/BatteryStatsImpl$Uid;
 
     return-void
@@ -38,22 +35,18 @@
 .method public detachFromTimeBase()V
     .locals 1
 
-    .line 11400
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerPartial:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
     invoke-static {v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
-    .line 11401
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerFull:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-static {v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
-    .line 11402
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerWindow:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-static {v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
-    .line 11403
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerDraw:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-static {p0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
@@ -64,7 +57,6 @@
 .method public bridge synthetic getWakeTime(I)Landroid/os/BatteryStats$Timer;
     .locals 0
 
-    .line 11276
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->getWakeTime(I)Lcom/android/server/power/stats/BatteryStatsImpl$Timer;
 
     move-result-object p0
@@ -89,12 +81,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 11394
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerDraw:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     return-object p0
 
-    .line 11395
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -116,19 +106,16 @@
 
     throw p0
 
-    .line 11393
     :cond_1
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerWindow:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     return-object p0
 
-    .line 11391
     :cond_2
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerFull:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     return-object p0
 
-    .line 11392
     :cond_3
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerPartial:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
@@ -138,7 +125,6 @@
 .method public reset(J)Z
     .locals 3
 
-    .line 11348
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerFull:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v1, 0x0
@@ -151,7 +137,6 @@
 
     or-int/2addr v0, v1
 
-    .line 11349
     iget-object v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerPartial:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
     invoke-static {v2, v1, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smresetIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;ZJ)Z
@@ -162,7 +147,6 @@
 
     or-int/2addr v0, v2
 
-    .line 11350
     iget-object v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerWindow:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-static {v2, v1, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smresetIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;ZJ)Z
@@ -173,7 +157,6 @@
 
     or-int/2addr v0, v2
 
-    .line 11351
     iget-object v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerDraw:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-static {v2, v1, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smresetIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;ZJ)Z
@@ -186,38 +169,30 @@
 
     if-nez p1, :cond_0
 
-    .line 11354
     iget-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerFull:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-static {p2}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
     const/4 p2, 0x0
 
-    .line 11355
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerFull:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
-    .line 11357
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerPartial:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
     invoke-static {v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
-    .line 11358
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerPartial:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
-    .line 11360
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerWindow:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-static {v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
-    .line 11361
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerWindow:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
-    .line 11363
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerDraw:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     invoke-static {v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
 
-    .line 11364
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Wakelock;->mTimerDraw:Lcom/android/server/power/stats/BatteryStatsImpl$StopwatchTimer;
 
     :cond_0

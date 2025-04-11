@@ -35,7 +35,6 @@
 .method public static isValidMainlineOrderId(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x3e8
 
     if-lt p0, v0, :cond_0
@@ -58,7 +57,6 @@
 .method public static isValidOrderId(I)Z
     .locals 1
 
-    .line 169
     invoke-static {p0}, Lcom/android/server/wm/ActivityInterceptorCallback;->isValidMainlineOrderId(I)Z
 
     move-result v0
@@ -91,7 +89,6 @@
 .method public onActivityLaunched(Landroid/app/TaskInfo;Landroid/content/pm/ActivityInfo;Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

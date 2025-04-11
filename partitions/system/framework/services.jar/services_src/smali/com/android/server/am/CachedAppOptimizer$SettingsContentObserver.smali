@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/CachedAppOptimizer;)V
     .locals 0
 
-    .line 449
     iput-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$SettingsContentObserver;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    .line 450
     invoke-static {p1}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmAm(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/ActivityManagerService;
 
     move-result-object p1
@@ -31,7 +29,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 455
     sget-object p1, Lcom/android/server/am/CachedAppOptimizer;->CACHED_APP_FREEZER_ENABLED_URI:Landroid/net/Uri;
 
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -40,20 +37,17 @@
 
     if-eqz p1, :cond_0
 
-    .line 456
     iget-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$SettingsContentObserver;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-object p1, p1, Lcom/android/server/am/CachedAppOptimizer;->mPhenotypeFlagLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 457
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$SettingsContentObserver;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {p0}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$mupdateUseFreezer(Lcom/android/server/am/CachedAppOptimizer;)V
 
-    .line 458
     monitor-exit p1
 
     goto :goto_0

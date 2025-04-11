@@ -23,20 +23,16 @@
 .method public constructor <init>(II)V
     .locals 3
 
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x50
 
-    .line 12
     iput v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mBufferSize:I
 
     const/16 v0, 0x19
 
-    .line 13
     iput v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mLaunchPackageLimit:I
 
-    .line 16
     new-instance v0, Lcom/android/internal/util/RingBuffer;
 
     const-class v1, Landroid/util/Pair;
@@ -49,27 +45,20 @@
 
     const/4 v0, 0x0
 
-    .line 17
     iput v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mLaunchCounter:I
 
-    .line 19
     iput-boolean v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mIsHeavyLaunch:Z
 
     const-wide/16 v0, 0x0
 
-    .line 20
     iput-wide v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mStartTime:J
 
-    .line 21
     iput-wide v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mLastStartedUpTime:J
 
-    .line 24
     iput p1, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mBufferSize:I
 
-    .line 25
     iput p2, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mLaunchPackageLimit:I
 
-    .line 26
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
@@ -84,7 +73,6 @@
 .method public addLaunch(IJ)V
     .locals 4
 
-    .line 30
     iget-object v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mBuffer:Lcom/android/internal/util/RingBuffer;
 
     new-instance v1, Landroid/util/Pair;
@@ -101,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/util/RingBuffer;->append(Ljava/lang/Object;)V
 
-    .line 32
     iget p1, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mLaunchCounter:I
 
     const/4 p2, 0x1
@@ -110,7 +97,6 @@
 
     iput p1, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mLaunchCounter:I
 
-    .line 34
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -125,14 +111,12 @@
 
     if-lez p1, :cond_3
 
-    .line 36
     iget p1, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mLaunchCounter:I
 
     rem-int/lit8 p1, p1, 0xa
 
     if-nez p1, :cond_3
 
-    .line 37
     iget-object p1, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mBuffer:Lcom/android/internal/util/RingBuffer;
 
     invoke-virtual {p1}, Lcom/android/internal/util/RingBuffer;->toArray()[Ljava/lang/Object;
@@ -141,7 +125,6 @@
 
     check-cast p1, [Landroid/util/Pair;
 
-    .line 39
     array-length p3, p1
 
     iget v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mBufferSize:I
@@ -150,7 +133,6 @@
 
     sub-int/2addr v0, p2
 
-    .line 40
     aget-object p3, p1, v0
 
     iget-object p3, p3, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -181,20 +163,17 @@
 
     if-gez v0, :cond_2
 
-    .line 41
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     move v1, p3
 
-    .line 43
     :goto_0
     iget v2, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mBufferSize:I
 
     if-ge v1, v2, :cond_0
 
-    .line 44
     aget-object v2, p1, v1
 
     iget-object v2, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -207,7 +186,6 @@
 
     goto :goto_0
 
-    .line 47
     :cond_0
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
 
@@ -217,10 +195,8 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 48
     iput-boolean p2, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mIsHeavyLaunch:Z
 
-    .line 49
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
@@ -233,13 +209,11 @@
 
     goto :goto_1
 
-    .line 52
     :cond_1
     iput-boolean p3, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mIsHeavyLaunch:Z
 
     goto :goto_1
 
-    .line 56
     :cond_2
     iput-boolean p3, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mIsHeavyLaunch:Z
 
@@ -251,7 +225,6 @@
 .method public getLastStartedUpTime()J
     .locals 2
 
-    .line 68
     iget-wide v0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mLastStartedUpTime:J
 
     return-wide v0
@@ -260,7 +233,6 @@
 .method public isHeavyLaunch()Z
     .locals 0
 
-    .line 64
     iget-boolean p0, p0, Lcom/android/server/chimera/HeavyLaunchCounter;->mIsHeavyLaunch:Z
 
     return p0

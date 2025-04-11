@@ -19,21 +19,16 @@
 .method public constructor <init>(Lcom/android/server/chimera/AbnormalFgsDetector;Ljava/lang/String;IIJ)V
     .locals 0
 
-    .line 258
     iput-object p1, p0, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->this$0:Lcom/android/server/chimera/AbnormalFgsDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 259
     iput-object p2, p0, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->processName:Ljava/lang/String;
 
-    .line 260
     iput p3, p0, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->uid:I
 
-    .line 261
     iput p4, p0, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->count:I
 
-    .line 262
     iput-wide p5, p0, Lcom/android/server/chimera/AbnormalFgsDetector$HeavyAppItem;->detectPss:J
 
     return-void
@@ -44,7 +39,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 267
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

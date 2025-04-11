@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 580
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 581
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$WifiInfoSupplier;->mContext:Landroid/content/Context;
 
     return-void
@@ -28,7 +26,6 @@
 .method public get()Landroid/net/wifi/WifiInfo;
     .locals 1
 
-    .line 586
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$WifiInfoSupplier;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/net/wifi/WifiManager;
@@ -41,7 +38,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 588
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object p0
@@ -53,7 +49,6 @@
 
     const-string v0, "WifiManager is null, failed to return the WifiInfo."
 
-    .line 590
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -64,7 +59,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
-    .line 577
     invoke-virtual {p0}, Lcom/android/server/NetworkScoreService$WifiInfoSupplier;->get()Landroid/net/wifi/WifiInfo;
 
     move-result-object p0

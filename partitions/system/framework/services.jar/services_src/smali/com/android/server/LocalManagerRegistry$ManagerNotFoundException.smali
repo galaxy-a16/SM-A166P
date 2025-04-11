@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 2
 
-    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

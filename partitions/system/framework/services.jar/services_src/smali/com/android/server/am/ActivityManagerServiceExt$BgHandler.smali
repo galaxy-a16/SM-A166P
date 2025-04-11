@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerServiceExt;Landroid/os/Looper;)V
     .locals 1
 
-    .line 330
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerServiceExt$BgHandler;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x0
 
-    .line 331
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 0
 
-    .line 336
     iget p0, p1, Landroid/os/Message;->what:I
 
     return-void

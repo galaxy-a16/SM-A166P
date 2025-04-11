@@ -25,7 +25,6 @@
 .method public static synthetic $values()[Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
     .locals 5
 
-    .line 25
     sget-object v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->UNKNOWN:Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     sget-object v1, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->FINAL_FAILURE:Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
@@ -46,7 +45,6 @@
 .method public static constructor <clinit>()V
     .locals 6
 
-    .line 27
     new-instance v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     const-string v1, "UNKNOWN"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->UNKNOWN:Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
-    .line 29
     new-instance v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     const-string v1, "FINAL_FAILURE"
@@ -70,7 +67,6 @@
 
     sput-object v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->FINAL_FAILURE:Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
-    .line 31
     new-instance v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     const-string v1, "QUERY_FAILURE"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->QUERY_FAILURE:Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
-    .line 33
     new-instance v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     const-string v1, "FINAL_SUCCESS"
@@ -92,7 +87,6 @@
 
     sput-object v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->FINAL_SUCCESS:Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
-    .line 35
     new-instance v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     const-string v1, "QUERY_SUCCESS"
@@ -101,7 +95,6 @@
 
     sput-object v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->QUERY_SUCCESS:Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
-    .line 25
     invoke-static {}, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->$values()[Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     move-result-object v0
@@ -114,10 +107,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 40
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 41
     iput p3, p0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->mInnerMetricCode:I
 
     return-void
@@ -126,7 +117,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
     .locals 1
 
-    .line 25
     const-class v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -141,7 +131,6 @@
 .method public static values()[Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
     .locals 1
 
-    .line 25
     sget-object v0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->$VALUES:[Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;
 
     invoke-virtual {v0}, [Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->clone()Ljava/lang/Object;
@@ -158,7 +147,6 @@
 .method public getMetricCode()I
     .locals 0
 
-    .line 50
     iget p0, p0, Lcom/android/server/credentials/metrics/ProviderStatusForMetrics;->mInnerMetricCode:I
 
     return p0

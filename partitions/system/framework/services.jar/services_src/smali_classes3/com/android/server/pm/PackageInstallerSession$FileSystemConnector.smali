@@ -13,19 +13,16 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageInstallerSession;Ljava/util/List;)V
     .locals 1
 
-    .line 2163
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$FileSystemConnector;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallerSessionFileSystemConnector$Stub;-><init>()V
 
-    .line 2161
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$FileSystemConnector;->mAddedFiles:Ljava/util/Set;
 
-    .line 2164
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -43,7 +40,6 @@
 
     check-cast p2, Landroid/content/pm/InstallationFileParcel;
 
-    .line 2165
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$FileSystemConnector;->mAddedFiles:Ljava/util/Set;
 
     iget-object p2, p2, Landroid/content/pm/InstallationFileParcel;->name:Ljava/lang/String;
@@ -63,7 +59,6 @@
 
     if-eqz p6, :cond_1
 
-    .line 2175
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$FileSystemConnector;->mAddedFiles:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -72,7 +67,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2179
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerSession$FileSystemConnector;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
@@ -93,14 +87,12 @@
     :catch_0
     move-exception p0
 
-    .line 2181
     invoke-static {p0}, Landroid/util/ExceptionUtils;->wrap(Ljava/io/IOException;)Ljava/lang/RuntimeException;
 
     move-result-object p0
 
     throw p0
 
-    .line 2176
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -110,7 +102,6 @@
 
     throw p0
 
-    .line 2173
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

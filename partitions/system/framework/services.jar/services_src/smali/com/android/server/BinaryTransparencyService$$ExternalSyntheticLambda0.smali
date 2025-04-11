@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/PackageInfo;
 
     invoke-static {p1}, Lcom/android/server/BinaryTransparencyService;->$r8$lambda$q4TgzXhc9IfqDHhB8PdeROVBn_8(Landroid/content/pm/PackageInfo;)Z

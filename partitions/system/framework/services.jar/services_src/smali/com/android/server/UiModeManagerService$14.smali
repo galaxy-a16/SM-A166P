@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
-    .line 639
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$14;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -30,7 +29,6 @@
 
     const-string v2, "dark_theme_custom_end_time"
 
-    .line 642
     filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
@@ -39,7 +37,6 @@
 
     move-result-object v0
 
-    .line 645
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
@@ -56,7 +53,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 646
     iget-object p2, p0, Lcom/android/server/UiModeManagerService$14;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-static {p2}, Lcom/android/server/UiModeManagerService;->-$$Nest$fgetmLock(Lcom/android/server/UiModeManagerService;)Ljava/lang/Object;
@@ -65,7 +61,6 @@
 
     monitor-enter p2
 
-    .line 647
     :try_start_0
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$14;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -73,20 +68,16 @@
 
     move-result-object v1
 
-    .line 648
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v2
 
-    .line 647
     invoke-static {v0, p1, v1, v2}, Lcom/android/server/UiModeManagerService;->-$$Nest$mupdateNightModeFromSettingsLocked(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)V
 
-    .line 649
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$14;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-static {p0}, Lcom/android/server/UiModeManagerService;->-$$Nest$mupdateConfigurationLocked(Lcom/android/server/UiModeManagerService;)V
 
-    .line 650
     monitor-exit p2
 
     goto :goto_0

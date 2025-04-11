@@ -15,16 +15,12 @@
 .method public constructor <init>(Lcom/android/server/wallpaper/WallpaperData;Lcom/android/server/wallpaper/WallpaperData;Z)V
     .locals 0
 
-    .line 227
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 228
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperDataParser$WallpaperLoadingResult;->mSystemWallpaperData:Lcom/android/server/wallpaper/WallpaperData;
 
-    .line 229
     iput-object p2, p0, Lcom/android/server/wallpaper/WallpaperDataParser$WallpaperLoadingResult;->mLockWallpaperData:Lcom/android/server/wallpaper/WallpaperData;
 
-    .line 230
     iput-boolean p3, p0, Lcom/android/server/wallpaper/WallpaperDataParser$WallpaperLoadingResult;->mSuccess:Z
 
     return-void
@@ -33,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wallpaper/WallpaperData;Lcom/android/server/wallpaper/WallpaperData;ZLcom/android/server/wallpaper/WallpaperDataParser$WallpaperLoadingResult-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wallpaper/WallpaperDataParser$WallpaperLoadingResult;-><init>(Lcom/android/server/wallpaper/WallpaperData;Lcom/android/server/wallpaper/WallpaperData;Z)V
 
     return-void
@@ -44,7 +39,6 @@
 .method public getLockWallpaperData()Lcom/android/server/wallpaper/WallpaperData;
     .locals 0
 
-    .line 238
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperDataParser$WallpaperLoadingResult;->mLockWallpaperData:Lcom/android/server/wallpaper/WallpaperData;
 
     return-object p0
@@ -53,7 +47,6 @@
 .method public getSystemWallpaperData()Lcom/android/server/wallpaper/WallpaperData;
     .locals 0
 
-    .line 234
     iget-object p0, p0, Lcom/android/server/wallpaper/WallpaperDataParser$WallpaperLoadingResult;->mSystemWallpaperData:Lcom/android/server/wallpaper/WallpaperData;
 
     return-object p0
@@ -62,7 +55,6 @@
 .method public success()Z
     .locals 0
 
-    .line 242
     iget-boolean p0, p0, Lcom/android/server/wallpaper/WallpaperDataParser$WallpaperLoadingResult;->mSuccess:Z
 
     return p0

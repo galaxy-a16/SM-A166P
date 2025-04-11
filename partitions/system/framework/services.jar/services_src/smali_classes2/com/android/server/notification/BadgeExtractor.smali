@@ -24,7 +24,6 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -35,7 +34,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 38
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
@@ -44,7 +42,6 @@
 
     goto/16 :goto_3
 
-    .line 43
     :cond_0
     iget-object v1, p0, Lcom/android/server/notification/BadgeExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
@@ -52,7 +49,6 @@
 
     return-object v0
 
-    .line 47
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
@@ -66,10 +62,8 @@
 
     move-result v1
 
-    .line 48
     iget-object v2, p0, Lcom/android/server/notification/BadgeExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
-    .line 49
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v3
@@ -98,7 +92,6 @@
 
     goto :goto_1
 
-    .line 53
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getChannel()Landroid/app/NotificationChannel;
 
@@ -106,7 +99,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 54
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getChannel()Landroid/app/NotificationChannel;
 
     move-result-object v1
@@ -131,18 +123,15 @@
 
     goto :goto_2
 
-    .line 56
     :cond_4
     invoke-virtual {p1, v2}, Lcom/android/server/notification/NotificationRecord;->setShowBadge(Z)V
 
     goto :goto_2
 
-    .line 51
     :cond_5
     :goto_1
     invoke-virtual {p1, v3}, Lcom/android/server/notification/NotificationRecord;->setShowBadge(Z)V
 
-    .line 60
     :goto_2
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->isIntercepted()Z
 
@@ -150,7 +139,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 61
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSuppressedVisualEffects()I
 
     move-result v1
@@ -159,10 +147,8 @@
 
     if-eqz v1, :cond_6
 
-    .line 62
     invoke-virtual {p1, v3}, Lcom/android/server/notification/NotificationRecord;->setShowBadge(Z)V
 
-    .line 65
     :cond_6
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -174,17 +160,14 @@
 
     if-eqz v1, :cond_7
 
-    .line 66
     invoke-virtual {v1}, Landroid/app/Notification$BubbleMetadata;->isNotificationSuppressed()Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
-    .line 67
     invoke-virtual {p1, v3}, Lcom/android/server/notification/NotificationRecord;->setShowBadge(Z)V
 
-    .line 70
     :cond_7
     iget-object p0, p0, Lcom/android/server/notification/BadgeExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
@@ -194,19 +177,16 @@
 
     if-eqz p0, :cond_8
 
-    .line 71
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object p0
 
-    .line 72
     invoke-virtual {p0}, Landroid/app/Notification;->isMediaNotification()Z
 
     move-result p0
 
     if-eqz p0, :cond_8
 
-    .line 73
     invoke-virtual {p1, v3}, Lcom/android/server/notification/NotificationRecord;->setShowBadge(Z)V
 
     :cond_8
@@ -217,7 +197,6 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/notification/BadgeExtractor;->mConfig:Lcom/android/server/notification/RankingConfig;
 
     return-void
@@ -226,6 +205,5 @@
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

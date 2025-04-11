@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$2k2vjp7uAGf_E4iUS8WbpvGbAzo(ILjava/lang/String;ILjava/util/Map$Entry;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->lambda$getKeyphraseSoundModel$1(ILjava/lang/String;ILjava/util/Map$Entry;)Z
 
     move-result p0
@@ -25,7 +24,6 @@
 .method public static synthetic $r8$lambda$F1TFjBneGg6qqkHsBCjNXkyC5b4(Ljava/lang/String;Ljava/lang/String;ILjava/util/Map$Entry;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->lambda$getKeyphraseSoundModel$3(Ljava/lang/String;Ljava/lang/String;ILjava/util/Map$Entry;)Z
 
     move-result p0
@@ -36,7 +34,6 @@
 .method public static synthetic $r8$lambda$KKCdPCLibVwWAz3rSnSjFzyTiQA(ILjava/lang/String;ILcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->lambda$deleteKeyphraseSoundModel$0(ILjava/lang/String;ILcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;)Z
 
     move-result p0
@@ -47,7 +44,6 @@
 .method public static synthetic $r8$lambda$S5-E2LpxnHThPiTf9kmiFp568m8(Ljava/util/Map$Entry;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->lambda$getKeyphraseSoundModel$2(Ljava/util/Map$Entry;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
 
     move-result-object p0
@@ -58,7 +54,6 @@
 .method public static synthetic $r8$lambda$sX_-vWrGyga89AN8QuWR5x4sIEc(Ljava/util/Map$Entry;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->lambda$getKeyphraseSoundModel$4(Ljava/util/Map$Entry;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
 
     move-result-object p0
@@ -69,10 +64,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -85,14 +78,12 @@
 .method public static synthetic lambda$deleteKeyphraseSoundModel$0(ILjava/lang/String;ILcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;)Z
     .locals 1
 
-    .line 109
     invoke-virtual {p3}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->keyphraseId()I
 
     move-result v0
 
     if-ne v0, p0, :cond_0
 
-    .line 110
     invoke-virtual {p3}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->locale()Ljava/lang/String;
 
     move-result-object p0
@@ -103,7 +94,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 111
     invoke-virtual {p3}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->userIds()Ljava/util/List;
 
     move-result-object p0
@@ -132,7 +122,6 @@
 .method public static synthetic lambda$getKeyphraseSoundModel$1(ILjava/lang/String;ILjava/util/Map$Entry;)Z
     .locals 1
 
-    .line 119
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -145,7 +134,6 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 120
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -162,7 +150,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 121
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -197,7 +184,6 @@
 .method public static synthetic lambda$getKeyphraseSoundModel$2(Ljava/util/Map$Entry;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
     .locals 0
 
-    .line 123
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -210,7 +196,6 @@
 .method public static synthetic lambda$getKeyphraseSoundModel$3(Ljava/lang/String;Ljava/lang/String;ILjava/util/Map$Entry;)Z
     .locals 2
 
-    .line 132
     invoke-interface {p3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -235,7 +220,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 133
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -252,7 +236,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 134
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -282,7 +265,6 @@
 .method public static synthetic lambda$getKeyphraseSoundModel$4(Ljava/util/Map$Entry;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
     .locals 0
 
-    .line 136
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -297,7 +279,6 @@
 .method public deleteKeyphraseSoundModel(IILjava/lang/String;)Z
     .locals 1
 
-    .line 109
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->mModelMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -320,10 +301,8 @@
 
     const-string v0, "Using test enrollment database, with enrolled models:"
 
-    .line 145
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->mModelMap:Ljava/util/Map;
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
@@ -334,14 +313,12 @@
 .method public getKeyphraseSoundModel(IILjava/lang/String;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
     .locals 1
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->mModelMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
 
-    .line 118
     invoke-interface {p0}, Ljava/util/Set;->stream()Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -350,12 +327,10 @@
 
     invoke-direct {v0, p1, p3, p2}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$$ExternalSyntheticLambda1;-><init>(ILjava/lang/String;I)V
 
-    .line 119
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 122
     invoke-interface {p0}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object p0
@@ -364,14 +339,12 @@
 
     invoke-direct {p1}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$$ExternalSyntheticLambda2;-><init>()V
 
-    .line 123
     invoke-virtual {p0, p1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
-    .line 124
     invoke-virtual {p0, p1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -384,14 +357,12 @@
 .method public getKeyphraseSoundModel(Ljava/lang/String;ILjava/lang/String;)Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;
     .locals 1
 
-    .line 130
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->mModelMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
 
-    .line 131
     invoke-interface {p0}, Ljava/util/Set;->stream()Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -400,12 +371,10 @@
 
     invoke-direct {v0, p1, p3, p2}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$$ExternalSyntheticLambda3;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 132
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 135
     invoke-interface {p0}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object p0
@@ -414,14 +383,12 @@
 
     invoke-direct {p1}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$$ExternalSyntheticLambda4;-><init>()V
 
-    .line 136
     invoke-virtual {p0, p1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
-    .line 137
     invoke-virtual {p0, p1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -434,7 +401,6 @@
 .method public updateKeyphraseSoundModel(Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;)Z
     .locals 4
 
-    .line 99
     invoke-virtual {p1}, Landroid/hardware/soundtrigger/SoundTrigger$KeyphraseSoundModel;->getKeyphrases()[Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;
 
     move-result-object v0
@@ -443,7 +409,6 @@
 
     aget-object v0, v0, v1
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase;->mModelMap:Ljava/util/Map;
 
     new-instance v1, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;
@@ -452,7 +417,6 @@
 
     move-result v2
 
-    .line 101
     invoke-virtual {v0}, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->getUsers()[I
 
     move-result-object v3
@@ -469,7 +433,6 @@
 
     move-result-object v3
 
-    .line 102
     invoke-virtual {v0}, Landroid/hardware/soundtrigger/SoundTrigger$Keyphrase;->getLocale()Ljava/util/Locale;
 
     move-result-object v0
@@ -480,7 +443,6 @@
 
     invoke-direct {v1, v2, v3, v0}, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;-><init>(ILjava/util/List;Ljava/lang/String;)V
 
-    .line 100
     invoke-interface {p0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 p0, 0x1

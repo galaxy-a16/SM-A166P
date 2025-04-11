@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/att/iqi/lib/Metric;
     .locals 2
 
-    .line 129
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p0
 
-    .line 130
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -34,15 +32,12 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 136
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 137
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 142
     const-class v1, Lcom/att/iqi/lib/Metric;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getPackageName()Ljava/lang/String;
@@ -51,24 +46,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 144
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 147
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 148
     invoke-static {v0, p1}, Lcom/att/iqi/lib/Metric;->-$$Nest$smmaybeLoadAndInstantiate(Ljava/lang/String;Landroid/os/Parcel;)Lcom/att/iqi/lib/Metric;
 
     move-result-object p0
 
     return-object p0
 
-    .line 145
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -78,7 +69,6 @@
 
     throw p0
 
-    .line 134
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -92,7 +82,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 126
     invoke-virtual {p0, p1}, Lcom/att/iqi/lib/Metric$1;->createFromParcel(Landroid/os/Parcel;)Lcom/att/iqi/lib/Metric;
 
     move-result-object p0
@@ -103,7 +92,6 @@
 .method public newArray(I)[Lcom/att/iqi/lib/Metric;
     .locals 0
 
-    .line 153
     new-array p0, p1, [Lcom/att/iqi/lib/Metric;
 
     return-object p0
@@ -112,7 +100,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 126
     invoke-virtual {p0, p1}, Lcom/att/iqi/lib/Metric$1;->newArray(I)[Lcom/att/iqi/lib/Metric;
 
     move-result-object p0

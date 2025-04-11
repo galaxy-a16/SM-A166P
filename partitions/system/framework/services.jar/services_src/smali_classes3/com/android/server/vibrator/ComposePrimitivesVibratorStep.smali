@@ -11,7 +11,6 @@
 
     move-wide/from16 v7, p7
 
-    .line 46
     invoke-static {p2, p3, v7, v8}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
@@ -40,10 +39,8 @@
 
     const-wide/32 v1, 0x800000
 
-    .line 52
     invoke-static {v1, v2, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 56
     :try_start_0
     iget-object v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
@@ -55,7 +52,6 @@
 
     move-result v0
 
-    .line 57
     iget-object v3, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
     iget v4, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->segmentIndex:I
@@ -72,7 +68,6 @@
 
     move-result-object v0
 
-    .line 60
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -81,7 +76,6 @@
 
     const-string v0, "VibrationThread"
 
-    .line 61
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +86,6 @@
 
     iget-object v4, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
-    .line 62
     invoke-virtual {v4}, Landroid/os/VibrationEffect$Composed;->getSegments()Ljava/util/List;
 
     move-result-object v4
@@ -109,24 +102,20 @@
 
     move-result-object v3
 
-    .line 61
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 64
     invoke-virtual {p0, v0}, Lcom/android/server/vibrator/AbstractVibratorStep;->nextSteps(I)Ljava/util/List;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 81
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
 
-    .line 73
     :cond_1
     :try_start_1
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -141,7 +130,6 @@
 
     check-cast v3, [Landroid/os/vibrator/PrimitiveSegment;
 
-    .line 74
     iget-object v4, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
     invoke-virtual {p0}, Lcom/android/server/vibrator/Step;->getVibration()Lcom/android/server/vibrator/HalVibration;
@@ -154,10 +142,8 @@
 
     move-result-wide v4
 
-    .line 75
     invoke-virtual {p0, v4, v5}, Lcom/android/server/vibrator/AbstractVibratorStep;->handleVibratorOnResult(J)J
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/server/vibrator/Step;->getVibration()Lcom/android/server/vibrator/HalVibration;
 
     move-result-object v6
@@ -166,7 +152,6 @@
 
     invoke-virtual {v6, v4, v5, v3}, Lcom/android/server/vibrator/VibrationStats;->reportComposePrimitives(J[Landroid/os/vibrator/PrimitiveSegment;)V
 
-    .line 79
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -177,7 +162,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 81
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
@@ -187,19 +171,16 @@
 
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 82
     throw p0
 .end method
 
 .method public final unrollPrimitiveSegments(Landroid/os/VibrationEffect$Composed;II)Ljava/util/List;
     .locals 4
 
-    .line 100
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0, p3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 101
     invoke-virtual {p1}, Landroid/os/VibrationEffect$Composed;->getSegments()Ljava/util/List;
 
     move-result-object v0
@@ -208,12 +189,10 @@
 
     move-result v0
 
-    .line 102
     invoke-virtual {p1}, Landroid/os/VibrationEffect$Composed;->getRepeatIndex()I
 
     move-result v1
 
-    .line 104
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -227,7 +206,6 @@
 
     move p2, v1
 
-    .line 113
     :cond_0
     invoke-virtual {p1}, Landroid/os/VibrationEffect$Composed;->getSegments()Ljava/util/List;
 
@@ -239,12 +217,10 @@
 
     check-cast v2, Landroid/os/vibrator/VibrationEffectSegment;
 
-    .line 114
     instance-of v3, v2, Landroid/os/vibrator/PrimitiveSegment;
 
     if-eqz v3, :cond_1
 
-    .line 115
     check-cast v2, Landroid/os/vibrator/PrimitiveSegment;
 
     invoke-interface {p0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z

@@ -57,7 +57,6 @@
 .method public static synthetic $r8$lambda$N9iDDwdo16HXCT6Bu5e6NivpYiE(Lcom/android/server/job/controllers/TareController;JLcom/android/server/job/controllers/JobStatus;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/job/controllers/TareController;->lambda$onConstantsUpdatedLocked$1(JLcom/android/server/job/controllers/JobStatus;)V
 
     return-void
@@ -66,7 +65,6 @@
 .method public static synthetic $r8$lambda$W1idysKjV7dDFTgpVJRDvWlbjmo(Lcom/android/server/job/controllers/TareController;ILjava/lang/String;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/job/controllers/TareController;->lambda$new$0(ILjava/lang/String;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;Z)V
 
     return-void
@@ -75,7 +73,6 @@
 .method public static synthetic $r8$lambda$c8D7cqiLh1gKXzg0yw11TGD9Ils(Lcom/android/server/job/controllers/TareController;Landroid/util/IndentingPrintWriter;ILjava/lang/String;Landroid/util/ArrayMap;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/job/controllers/TareController;->lambda$dumpControllerStateLocked$3(Landroid/util/IndentingPrintWriter;ILjava/lang/String;Landroid/util/ArrayMap;)V
 
     return-void
@@ -84,7 +81,6 @@
 .method public static synthetic $r8$lambda$fj0FacJuY07nKECXcY0wwurVeio(Lcom/android/server/job/controllers/TareController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/job/controllers/TareController;->lambda$onConstantsUpdatedLocked$2()V
 
     return-void
@@ -93,7 +89,6 @@
 .method public static constructor <clinit>()V
     .locals 15
 
-    .line 52
     sget-boolean v0, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     const/4 v1, 0x1
@@ -106,7 +101,6 @@
 
     const/4 v3, 0x3
 
-    .line 53
     invoke-static {v0, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -127,7 +121,6 @@
     :goto_1
     sput-boolean v0, Lcom/android/server/job/controllers/TareController;->DEBUG:Z
 
-    .line 61
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -146,7 +139,6 @@
 
     invoke-direct {v7, v10, v2, v8, v9}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 62
     invoke-static {v3, v7}, Ljava/util/List;->of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -155,7 +147,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MIN:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 74
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -164,7 +155,6 @@
 
     invoke-direct {v3, v10, v2, v7, v8}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 75
     invoke-static {v3}, Ljava/util/List;->of(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -173,7 +163,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_MIN:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 86
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -184,7 +173,6 @@
 
     invoke-direct {v9, v10, v2, v7, v8}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 87
     invoke-static {v3, v9}, Ljava/util/List;->of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -193,7 +181,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_LOW:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 99
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -202,7 +189,6 @@
 
     invoke-direct {v3, v10, v2, v7, v8}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 100
     invoke-static {v3}, Ljava/util/List;->of(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -211,7 +197,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_LOW:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 109
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -222,7 +207,6 @@
 
     invoke-direct {v4, v10, v2, v7, v8}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 110
     invoke-static {v3, v4}, Ljava/util/List;->of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -231,7 +215,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_DEFAULT:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 122
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -240,7 +223,6 @@
 
     invoke-direct {v3, v10, v2, v11, v12}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 123
     invoke-static {v3}, Ljava/util/List;->of(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -249,7 +231,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_DEFAULT:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 132
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -264,7 +245,6 @@
 
     invoke-direct {v9, v10, v2, v7, v8}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 133
     invoke-static {v3, v9}, Ljava/util/List;->of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -273,14 +253,12 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_HIGH:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 145
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
 
     invoke-direct {v3, v10, v2, v11, v12}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 146
     invoke-static {v3}, Ljava/util/List;->of(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -289,7 +267,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_HIGH:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 158
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -304,7 +281,6 @@
 
     invoke-direct {v13, v14, v2, v7, v8}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 159
     invoke-static {v3, v13}, Ljava/util/List;->of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -313,14 +289,12 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MAX:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 172
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
 
     invoke-direct {v3, v14, v2, v11, v12}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 173
     invoke-static {v3}, Ljava/util/List;->of(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -329,7 +303,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_MAX:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 182
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -340,7 +313,6 @@
 
     invoke-direct {v9, v14, v2, v7, v8}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 183
     invoke-static {v3, v9}, Ljava/util/List;->of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -349,14 +321,12 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MAX_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 195
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
 
     invoke-direct {v3, v14, v2, v11, v12}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 196
     invoke-static {v3}, Ljava/util/List;->of(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
@@ -365,7 +335,6 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_MAX_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 205
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v3, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
@@ -376,7 +345,6 @@
 
     invoke-direct {v1, v10, v2, v7, v8}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 206
     invoke-static {v3, v1}, Ljava/util/List;->of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -385,14 +353,12 @@
 
     sput-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_HIGH_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 218
     new-instance v0, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     new-instance v1, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;
 
     invoke-direct {v1, v10, v2, v11, v12}, Lcom/android/server/tare/EconomyManagerInternal$AnticipatedAction;-><init>(IIJ)V
 
-    .line 219
     invoke-static {v1}, Ljava/util/List;->of(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -407,44 +373,36 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/controllers/BackgroundJobsController;Lcom/android/server/job/controllers/ConnectivityController;)V
     .locals 0
 
-    .line 305
     invoke-direct {p0, p1}, Lcom/android/server/job/controllers/StateController;-><init>(Lcom/android/server/job/JobSchedulerService;)V
 
-    .line 233
     new-instance p1, Landroid/util/SparseArrayMap;
 
     invoke-direct {p1}, Landroid/util/SparseArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityCache:Landroid/util/SparseArrayMap;
 
-    .line 241
     new-instance p1, Landroid/util/SparseArrayMap;
 
     invoke-direct {p1}, Landroid/util/SparseArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/TareController;->mRegisteredBillsAndJobs:Landroid/util/SparseArrayMap;
 
-    .line 245
     new-instance p1, Lcom/android/server/job/controllers/TareController$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/job/controllers/TareController$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/job/controllers/TareController;)V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityChangeListener:Lcom/android/server/tare/EconomyManagerInternal$AffordabilityChangeListener;
 
-    .line 296
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/TareController;->mTopStartedJobs:Landroid/util/ArraySet;
 
-    .line 306
     iput-object p2, p0, Lcom/android/server/job/controllers/TareController;->mBackgroundJobsController:Lcom/android/server/job/controllers/BackgroundJobsController;
 
-    .line 307
     iput-object p3, p0, Lcom/android/server/job/controllers/TareController;->mConnectivityController:Lcom/android/server/job/controllers/ConnectivityController;
 
-    .line 308
     const-class p1, Lcom/android/server/tare/EconomyManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -455,7 +413,6 @@
 
     iput-object p1, p0, Lcom/android/server/job/controllers/TareController;->mEconomyManagerInternal:Lcom/android/server/tare/EconomyManagerInternal;
 
-    .line 309
     iget-object p1, p0, Lcom/android/server/job/controllers/StateController;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
     iget-boolean p1, p1, Lcom/android/server/job/JobSchedulerService$Constants;->USE_TARE_POLICY:Z
@@ -468,7 +425,6 @@
 .method public static getRunningActionId(Lcom/android/server/job/controllers/JobStatus;)I
     .locals 2
 
-    .line 581
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
 
     move-result v0
@@ -493,7 +449,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 591
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -552,28 +507,22 @@
 .method private synthetic lambda$dumpControllerStateLocked$3(Landroid/util/IndentingPrintWriter;ILjava/lang/String;Landroid/util/ArrayMap;)V
     .locals 1
 
-    .line 746
     invoke-virtual {p4}, Landroid/util/ArrayMap;->size()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 748
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->print(I)V
 
     const-string p2, ":"
 
-    .line 749
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 750
     invoke-virtual {p1, p3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 751
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 753
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const/4 p2, 0x0
@@ -581,7 +530,6 @@
     :goto_0
     if-ge p2, v0, :cond_0
 
-    .line 755
     invoke-virtual {p4, p2}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -596,10 +544,8 @@
 
     const-string p3, ": "
 
-    .line 756
     invoke-virtual {p1, p3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 757
     invoke-virtual {p4, p2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -610,7 +556,6 @@
 
     goto :goto_0
 
-    .line 759
     :cond_0
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -621,21 +566,18 @@
 .method private synthetic lambda$new$0(ILjava/lang/String;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;Z)V
     .locals 6
 
-    .line 247
     sget-object v0, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {v0}, Ljava/time/Clock;->millis()J
 
     move-result-wide v0
 
-    .line 248
     sget-boolean v2, Lcom/android/server/job/controllers/TareController;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
     const-string v2, "JobScheduler.TARE"
 
-    .line 249
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -652,7 +594,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 250
     invoke-virtual {p0, p3}, Lcom/android/server/job/controllers/TareController;->getBillName(Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)Ljava/lang/String;
 
     move-result-object v4
@@ -669,20 +610,16 @@
 
     move-result-object v3
 
-    .line 249
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     :cond_0
     iget-object v2, p0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 254
     :try_start_0
     iget-object v3, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityCache:Landroid/util/SparseArrayMap;
 
-    .line 255
     invoke-virtual {v3, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -691,17 +628,14 @@
 
     if-nez v3, :cond_1
 
-    .line 257
     new-instance v3, Landroid/util/ArrayMap;
 
     invoke-direct {v3}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 258
     iget-object v4, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityCache:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v4, p1, p2, v3}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 260
     :cond_1
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -709,10 +643,8 @@
 
     invoke-virtual {v3, p3, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 262
     iget-object v3, p0, Lcom/android/server/job/controllers/TareController;->mRegisteredBillsAndJobs:Landroid/util/SparseArrayMap;
 
-    .line 263
     invoke-virtual {v3, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -721,7 +653,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 265
     invoke-virtual {p1, p3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -730,7 +661,6 @@
 
     if-eqz p1, :cond_7
 
-    .line 267
     new-instance p2, Landroid/util/ArraySet;
 
     invoke-direct {p2}, Landroid/util/ArraySet;-><init>()V
@@ -739,7 +669,6 @@
 
     move v3, p3
 
-    .line 268
     :goto_0
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
@@ -747,7 +676,6 @@
 
     if-ge v3, v4, :cond_6
 
-    .line 269
     invoke-virtual {p1, v3}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -756,7 +684,6 @@
 
     if-nez p4, :cond_3
 
-    .line 274
     invoke-virtual {p0, v4}, Lcom/android/server/job/controllers/TareController;->hasEnoughWealthLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v5
@@ -774,7 +701,6 @@
     :goto_1
     const/4 v5, 0x1
 
-    .line 273
     :goto_2
     invoke-virtual {v4, v0, v1, v5}, Lcom/android/server/job/controllers/JobStatus;->setTareWealthConstraintSatisfied(JZ)Z
 
@@ -782,10 +708,8 @@
 
     if-eqz v5, :cond_4
 
-    .line 275
     invoke-virtual {p2, v4}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 277
     :cond_4
     invoke-virtual {v4}, Lcom/android/server/job/controllers/JobStatus;->isRequestedExpeditedJob()Z
 
@@ -793,19 +717,16 @@
 
     if-eqz v5, :cond_5
 
-    .line 279
     invoke-virtual {p0, v4}, Lcom/android/server/job/controllers/TareController;->canAffordExpeditedBillLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v5
 
-    .line 278
     invoke-virtual {p0, v4, v0, v1, v5}, Lcom/android/server/job/controllers/TareController;->setExpeditedTareApproved(Lcom/android/server/job/controllers/JobStatus;JZ)Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
-    .line 280
     invoke-virtual {p2, v4}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     :cond_5
@@ -813,7 +734,6 @@
 
     goto :goto_0
 
-    .line 283
     :cond_6
     invoke-virtual {p2}, Landroid/util/ArraySet;->size()I
 
@@ -821,12 +741,10 @@
 
     if-lez p1, :cond_7
 
-    .line 284
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {p0, p2}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
-    .line 288
     :cond_7
     monitor-exit v2
 
@@ -845,38 +763,31 @@
 .method private synthetic lambda$onConstantsUpdatedLocked$1(JLcom/android/server/job/controllers/JobStatus;)V
     .locals 2
 
-    .line 431
     iget-boolean v0, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
     const/4 v1, 0x1
 
     if-nez v0, :cond_0
 
-    .line 432
     invoke-virtual {p3, p1, p2, v1}, Lcom/android/server/job/controllers/JobStatus;->setTareWealthConstraintSatisfied(JZ)Z
 
-    .line 433
     invoke-virtual {p0, p3, p1, p2, v1}, Lcom/android/server/job/controllers/TareController;->setExpeditedTareApproved(Lcom/android/server/job/controllers/JobStatus;JZ)Z
 
     goto :goto_1
 
-    .line 436
     :cond_0
     invoke-virtual {p0, p3}, Lcom/android/server/job/controllers/TareController;->hasEnoughWealthLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v0
 
-    .line 435
     invoke-virtual {p3, p1, p2, v0}, Lcom/android/server/job/controllers/JobStatus;->setTareWealthConstraintSatisfied(JZ)Z
 
-    .line 438
     invoke-virtual {p3}, Lcom/android/server/job/controllers/JobStatus;->isRequestedExpeditedJob()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 439
     invoke-virtual {p0, p3}, Lcom/android/server/job/controllers/TareController;->canAffordExpeditedBillLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v0
@@ -888,7 +799,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 437
     :goto_0
     invoke-virtual {p0, p3, p1, p2, v1}, Lcom/android/server/job/controllers/TareController;->setExpeditedTareApproved(Lcom/android/server/job/controllers/JobStatus;JZ)Z
 
@@ -899,12 +809,10 @@
 .method private synthetic lambda$onConstantsUpdatedLocked$2()V
     .locals 5
 
-    .line 428
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 429
     :try_start_0
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
@@ -912,7 +820,6 @@
 
     move-result-wide v1
 
-    .line 430
     iget-object v3, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v3}, Lcom/android/server/job/JobSchedulerService;->getJobStore()Lcom/android/server/job/JobStore;
@@ -925,7 +832,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/job/JobStore;->forEachJob(Ljava/util/function/Consumer;)V
 
-    .line 442
     monitor-exit v0
 
     return-void
@@ -945,20 +851,16 @@
 .method public final addJobToBillList(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)V
     .locals 4
 
-    .line 476
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v0
 
-    .line 477
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 478
     iget-object v2, p0, Lcom/android/server/job/controllers/TareController;->mRegisteredBillsAndJobs:Landroid/util/SparseArrayMap;
 
-    .line 479
     invoke-virtual {v2, v0, v1}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -967,17 +869,14 @@
 
     if-nez v2, :cond_0
 
-    .line 481
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 482
     iget-object v3, p0, Lcom/android/server/job/controllers/TareController;->mRegisteredBillsAndJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v3, v0, v1, v2}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 484
     :cond_0
     invoke-virtual {v2, p2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -987,15 +886,12 @@
 
     if-nez v3, :cond_1
 
-    .line 486
     new-instance v3, Landroid/util/ArraySet;
 
     invoke-direct {v3}, Landroid/util/ArraySet;-><init>()V
 
-    .line 487
     invoke-virtual {v2, p2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 489
     :cond_1
     invoke-virtual {v3, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
@@ -1003,7 +899,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 490
     iget-object p1, p0, Lcom/android/server/job/controllers/TareController;->mEconomyManagerInternal:Lcom/android/server/tare/EconomyManagerInternal;
 
     iget-object p0, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityChangeListener:Lcom/android/server/tare/EconomyManagerInternal$AffordabilityChangeListener;
@@ -1017,7 +912,6 @@
 .method public final canAffordBillLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)Z
     .locals 3
 
-    .line 600
     iget-boolean v0, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
     const/4 v1, 0x1
@@ -1026,7 +920,6 @@
 
     return v1
 
-    .line 603
     :cond_0
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
@@ -1042,7 +935,6 @@
 
     if-eq v0, v2, :cond_4
 
-    .line 604
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->isTopStartedJobLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v0
@@ -1051,21 +943,17 @@
 
     goto :goto_0
 
-    .line 609
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v0
 
-    .line 610
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 611
     iget-object v1, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityCache:Landroid/util/SparseArrayMap;
 
-    .line 612
     invoke-virtual {v1, v0, p1}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -1074,17 +962,14 @@
 
     if-nez v1, :cond_2
 
-    .line 614
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 615
     iget-object v2, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityCache:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v2, v0, p1, v1}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 618
     :cond_2
     invoke-virtual {v1, p2}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -1092,7 +977,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 619
     invoke-virtual {v1, p2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1105,7 +989,6 @@
 
     return p0
 
-    .line 622
     :cond_3
     iget-object p0, p0, Lcom/android/server/job/controllers/TareController;->mEconomyManagerInternal:Lcom/android/server/tare/EconomyManagerInternal;
 
@@ -1113,7 +996,6 @@
 
     move-result p0
 
-    .line 623
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -1130,7 +1012,6 @@
 .method public final canAffordExpeditedBillLocked(Lcom/android/server/job/controllers/JobStatus;)Z
     .locals 3
 
-    .line 629
     iget-boolean v0, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
     const/4 v1, 0x1
@@ -1139,7 +1020,6 @@
 
     return v1
 
-    .line 632
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->isRequestedExpeditedJob()Z
 
@@ -1151,7 +1031,6 @@
 
     return p0
 
-    .line 635
     :cond_1
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
@@ -1167,7 +1046,6 @@
 
     if-eq v0, v2, :cond_5
 
-    .line 636
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->isTopStartedJobLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v0
@@ -1176,7 +1054,6 @@
 
     goto :goto_0
 
-    .line 641
     :cond_2
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
@@ -1186,7 +1063,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 642
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->getRunningBill(Lcom/android/server/job/controllers/JobStatus;)Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     move-result-object v0
@@ -1197,7 +1073,6 @@
 
     return p0
 
-    .line 645
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
 
@@ -1207,7 +1082,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 646
     sget-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MAX_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/job/controllers/TareController;->canAffordBillLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)Z
@@ -1216,7 +1090,6 @@
 
     return p0
 
-    .line 648
     :cond_4
     sget-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_HIGH_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1234,7 +1107,6 @@
 .method public canScheduleEJ(Lcom/android/server/job/controllers/JobStatus;)Z
     .locals 2
 
-    .line 449
     iget-boolean v0, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
     if-nez v0, :cond_0
@@ -1243,7 +1115,6 @@
 
     return p0
 
-    .line 452
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
 
@@ -1253,7 +1124,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 453
     sget-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MAX_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/job/controllers/TareController;->canAffordBillLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)Z
@@ -1262,7 +1132,6 @@
 
     return p0
 
-    .line 455
     :cond_1
     sget-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_HIGH_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1278,23 +1147,18 @@
 
     const-string p2, "Is enabled: "
 
-    .line 740
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 741
     iget-boolean p2, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Z)V
 
     const-string p2, "Affordability cache:"
 
-    .line 743
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 744
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 745
     iget-object p2, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityCache:Landroid/util/SparseArrayMap;
 
     new-instance v0, Lcom/android/server/job/controllers/TareController$$ExternalSyntheticLambda1;
@@ -1303,7 +1167,6 @@
 
     invoke-virtual {p2, v0}, Landroid/util/SparseArrayMap;->forEach(Landroid/util/SparseArrayMap$TriConsumer;)V
 
-    .line 762
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -1312,7 +1175,6 @@
 .method public final getBillName(Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)Ljava/lang/String;
     .locals 1
 
-    .line 699
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MAX_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     invoke-virtual {p1, p0}, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;->equals(Ljava/lang/Object;)Z
@@ -1325,7 +1187,6 @@
 
     return-object p0
 
-    .line 702
     :cond_0
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_MAX_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1339,7 +1200,6 @@
 
     return-object p0
 
-    .line 705
     :cond_1
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_HIGH_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1353,7 +1213,6 @@
 
     return-object p0
 
-    .line 708
     :cond_2
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_HIGH_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1367,7 +1226,6 @@
 
     return-object p0
 
-    .line 711
     :cond_3
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_HIGH:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1381,7 +1239,6 @@
 
     return-object p0
 
-    .line 714
     :cond_4
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_HIGH:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1395,7 +1252,6 @@
 
     return-object p0
 
-    .line 717
     :cond_5
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_DEFAULT:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1409,7 +1265,6 @@
 
     return-object p0
 
-    .line 720
     :cond_6
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_DEFAULT:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1423,7 +1278,6 @@
 
     return-object p0
 
-    .line 723
     :cond_7
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_LOW:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1437,7 +1291,6 @@
 
     return-object p0
 
-    .line 726
     :cond_8
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_LOW:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1451,7 +1304,6 @@
 
     return-object p0
 
-    .line 729
     :cond_9
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MIN:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1465,7 +1317,6 @@
 
     return-object p0
 
-    .line 732
     :cond_a
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_MIN:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1479,7 +1330,6 @@
 
     return-object p0
 
-    .line 735
     :cond_b
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1505,23 +1355,19 @@
 .method public getMaxJobExecutionTimeMsLocked(Lcom/android/server/job/controllers/JobStatus;)J
     .locals 3
 
-    .line 466
     iget-boolean v0, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
     if-nez v0, :cond_0
 
-    .line 467
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
     iget-wide p0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->RUNTIME_FREE_QUOTA_MAX_LIMIT_MS:J
 
     return-wide p0
 
-    .line 469
     :cond_0
     iget-object v0, p0, Lcom/android/server/job/controllers/TareController;->mEconomyManagerInternal:Lcom/android/server/tare/EconomyManagerInternal;
 
-    .line 470
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v1
@@ -1530,12 +1376,10 @@
 
     move-result-object v2
 
-    .line 471
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->getRunningBill(Lcom/android/server/job/controllers/JobStatus;)Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     move-result-object p0
 
-    .line 469
     invoke-interface {v0, v1, v2, p0}, Lcom/android/server/tare/EconomyManagerInternal;->getMaxDurationMs(ILjava/lang/String;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)J
 
     move-result-wide p0
@@ -1546,12 +1390,10 @@
 .method public final getPossibleStartBills(Lcom/android/server/job/controllers/JobStatus;)Landroid/util/ArraySet;
     .locals 3
 
-    .line 520
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 521
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->isRequestedExpeditedJob()Z
 
     move-result v0
@@ -1560,27 +1402,23 @@
 
     if-eqz v0, :cond_1
 
-    .line 522
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
 
     move-result v0
 
     if-ne v0, v1, :cond_0
 
-    .line 523
     sget-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MAX_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     invoke-virtual {p0, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 525
     :cond_0
     sget-object v0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_HIGH_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     invoke-virtual {p0, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 528
     :cond_1
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
@@ -1605,7 +1443,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 545
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1614,7 +1451,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 546
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
 
     move-result p1
@@ -1631,12 +1467,10 @@
 
     const-string v0, "JobScheduler.TARE"
 
-    .line 545
     invoke-static {v0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 530
     :cond_2
     sget-object p1, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MAX:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1644,7 +1478,6 @@
 
     goto :goto_1
 
-    .line 533
     :cond_3
     sget-object p1, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_HIGH:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1652,7 +1485,6 @@
 
     goto :goto_1
 
-    .line 536
     :cond_4
     sget-object p1, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_DEFAULT:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1660,7 +1492,6 @@
 
     goto :goto_1
 
-    .line 539
     :cond_5
     sget-object p1, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_LOW:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1668,7 +1499,6 @@
 
     goto :goto_1
 
-    .line 542
     :cond_6
     sget-object p1, Lcom/android/server/job/controllers/TareController;->BILL_JOB_START_MIN:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1681,7 +1511,6 @@
 .method public final getRunningBill(Lcom/android/server/job/controllers/JobStatus;)Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
     .locals 2
 
-    .line 555
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsExpeditedJob()Z
 
     move-result p0
@@ -1696,7 +1525,6 @@
 
     goto :goto_1
 
-    .line 562
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
 
@@ -1720,7 +1548,6 @@
 
     if-eq p0, v0, :cond_1
 
-    .line 572
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1745,38 +1572,32 @@
 
     goto :goto_0
 
-    .line 564
     :cond_1
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_MAX:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     return-object p0
 
-    .line 566
     :cond_2
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_HIGH:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     return-object p0
 
-    .line 575
     :cond_3
     :goto_0
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_DEFAULT:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     return-object p0
 
-    .line 568
     :cond_4
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_LOW:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     return-object p0
 
-    .line 570
     :cond_5
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_MIN:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     return-object p0
 
-    .line 556
     :cond_6
     :goto_1
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
@@ -1785,12 +1606,10 @@
 
     if-ne p0, v0, :cond_7
 
-    .line 557
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_MAX_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     return-object p0
 
-    .line 559
     :cond_7
     sget-object p0, Lcom/android/server/job/controllers/TareController;->BILL_JOB_RUNNING_HIGH_EXPEDITED:Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -1800,7 +1619,6 @@
 .method public final hasEnoughWealthLocked(Lcom/android/server/job/controllers/JobStatus;)Z
     .locals 5
 
-    .line 653
     iget-boolean v0, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
     const/4 v1, 0x1
@@ -1809,7 +1627,6 @@
 
     return v1
 
-    .line 656
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsUserInitiatedJob()Z
 
@@ -1819,7 +1636,6 @@
 
     return v1
 
-    .line 660
     :cond_1
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
@@ -1835,7 +1651,6 @@
 
     if-eq v0, v2, :cond_6
 
-    .line 661
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->isTopStartedJobLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v0
@@ -1844,7 +1659,6 @@
 
     goto :goto_1
 
-    .line 666
     :cond_2
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
@@ -1854,7 +1668,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 667
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->getRunningBill(Lcom/android/server/job/controllers/JobStatus;)Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
     move-result-object v0
@@ -1865,7 +1678,6 @@
 
     return p0
 
-    .line 670
     :cond_3
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->getPossibleStartBills(Lcom/android/server/job/controllers/JobStatus;)Landroid/util/ArraySet;
 
@@ -1875,7 +1687,6 @@
 
     move v3, v2
 
-    .line 671
     :goto_0
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
 
@@ -1883,14 +1694,12 @@
 
     if-ge v3, v4, :cond_5
 
-    .line 672
     invoke-virtual {v0, v3}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
-    .line 673
     invoke-virtual {p0, p1, v4}, Lcom/android/server/job/controllers/TareController;->canAffordBillLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)Z
 
     move-result v4
@@ -1915,7 +1724,6 @@
 .method public final isTopStartedJobLocked(Lcom/android/server/job/controllers/JobStatus;)Z
     .locals 0
 
-    .line 461
     iget-object p0, p0, Lcom/android/server/job/controllers/TareController;->mTopStartedJobs:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -1928,14 +1736,12 @@
 .method public maybeStartTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)V
     .locals 4
 
-    .line 315
     sget-object p2, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {p2}, Ljava/time/Clock;->millis()J
 
     move-result-wide v0
 
-    .line 316
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsUserInitiatedJob()Z
 
     move-result p2
@@ -1944,12 +1750,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 318
     invoke-virtual {p1, v0, v1, v2}, Lcom/android/server/job/controllers/JobStatus;->setTareWealthConstraintSatisfied(JZ)Z
 
     return-void
 
-    .line 321
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->hasEnoughWealthLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
@@ -1957,7 +1761,6 @@
 
     invoke-virtual {p1, v0, v1, p2}, Lcom/android/server/job/controllers/JobStatus;->setTareWealthConstraintSatisfied(JZ)Z
 
-    .line 323
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->isRequestedExpeditedJob()Z
 
     move-result p2
@@ -1977,16 +1780,13 @@
     :cond_1
     move v2, v3
 
-    .line 322
     :goto_0
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/android/server/job/controllers/TareController;->setExpeditedTareApproved(Lcom/android/server/job/controllers/JobStatus;JZ)Z
 
-    .line 325
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->getPossibleStartBills(Lcom/android/server/job/controllers/JobStatus;)Landroid/util/ArraySet;
 
     move-result-object p2
 
-    .line 326
     :goto_1
     invoke-virtual {p2}, Landroid/util/ArraySet;->size()I
 
@@ -1994,7 +1794,6 @@
 
     if-ge v3, v0, :cond_2
 
-    .line 327
     invoke-virtual {p2, v3}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -2014,7 +1813,6 @@
 .method public maybeStopTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)V
     .locals 5
 
-    .line 400
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsUserInitiatedJob()Z
 
     move-result p2
@@ -2023,18 +1821,15 @@
 
     return-void
 
-    .line 403
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result p2
 
-    .line 404
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 405
     iget-object v1, p0, Lcom/android/server/job/controllers/TareController;->mTopStartedJobs:Landroid/util/ArraySet;
 
     invoke-virtual {v1, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
@@ -2051,10 +1846,8 @@
 
     if-lez v1, :cond_1
 
-    .line 409
     iget-object v1, p0, Lcom/android/server/job/controllers/TareController;->mEconomyManagerInternal:Lcom/android/server/tare/EconomyManagerInternal;
 
-    .line 410
     invoke-static {p1}, Lcom/android/server/job/controllers/TareController;->getRunningActionId(Lcom/android/server/job/controllers/JobStatus;)I
 
     move-result v2
@@ -2067,14 +1860,11 @@
 
     move-result-object v3
 
-    .line 409
     invoke-interface {v1, p2, v0, v2, v3}, Lcom/android/server/tare/EconomyManagerInternal;->noteOngoingEventStopped(ILjava/lang/String;ILjava/lang/String;)V
 
-    .line 412
     :cond_1
     iget-object v1, p0, Lcom/android/server/job/controllers/TareController;->mRegisteredBillsAndJobs:Landroid/util/SparseArrayMap;
 
-    .line 413
     invoke-virtual {v1, p2, v0}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -2085,7 +1875,6 @@
 
     const/4 v0, 0x0
 
-    .line 415
     :goto_0
     invoke-virtual {p2}, Landroid/util/ArrayMap;->size()I
 
@@ -2093,7 +1882,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 416
     invoke-virtual {p2, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2113,7 +1901,6 @@
 .method public onConstantsUpdatedLocked()V
     .locals 2
 
-    .line 424
     iget-boolean v0, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
     iget-object v1, p0, Lcom/android/server/job/controllers/StateController;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
@@ -2122,10 +1909,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 425
     iput-boolean v1, p0, Lcom/android/server/job/controllers/TareController;->mIsEnabled:Z
 
-    .line 427
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -2143,7 +1928,6 @@
 .method public prepareForExecutionLocked(Lcom/android/server/job/controllers/JobStatus;)V
     .locals 6
 
-    .line 334
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsUserInitiatedJob()Z
 
     move-result v0
@@ -2152,21 +1936,17 @@
 
     return-void
 
-    .line 339
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v0
 
-    .line 340
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 341
     iget-object v2, p0, Lcom/android/server/job/controllers/TareController;->mRegisteredBillsAndJobs:Landroid/util/SparseArrayMap;
 
-    .line 342
     invoke-virtual {v2, v0, v1}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -2179,7 +1959,6 @@
 
     const-string v2, "Job is being prepared but doesn\'t have a pre-existing billToJobMap"
 
-    .line 344
     invoke-static {v3, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -2187,7 +1966,6 @@
     :cond_1
     const/4 v4, 0x0
 
-    .line 346
     :goto_0
     invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
 
@@ -2195,7 +1973,6 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 347
     invoke-virtual {v2, v4}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -2208,14 +1985,12 @@
 
     goto :goto_0
 
-    .line 351
     :cond_2
     :goto_1
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
 
     move-result v2
 
-    .line 352
     iget-object v4, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v4, v2}, Lcom/android/server/job/JobSchedulerService;->getUidBias(I)I
@@ -2226,12 +2001,10 @@
 
     if-ne v2, v4, :cond_4
 
-    .line 353
     sget-boolean v0, Lcom/android/server/job/controllers/TareController;->DEBUG:Z
 
     if-eqz v0, :cond_3
 
-    .line 354
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2252,7 +2025,6 @@
 
     invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 356
     :cond_3
     iget-object p0, p0, Lcom/android/server/job/controllers/TareController;->mTopStartedJobs:Landroid/util/ArraySet;
 
@@ -2260,7 +2032,6 @@
 
     goto :goto_2
 
-    .line 359
     :cond_4
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->getRunningBill(Lcom/android/server/job/controllers/JobStatus;)Lcom/android/server/tare/EconomyManagerInternal$ActionBill;
 
@@ -2268,10 +2039,8 @@
 
     invoke-virtual {p0, p1, v2}, Lcom/android/server/job/controllers/TareController;->addJobToBillList(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)V
 
-    .line 360
     iget-object p0, p0, Lcom/android/server/job/controllers/TareController;->mEconomyManagerInternal:Lcom/android/server/tare/EconomyManagerInternal;
 
-    .line 361
     invoke-static {p1}, Lcom/android/server/job/controllers/TareController;->getRunningActionId(Lcom/android/server/job/controllers/JobStatus;)I
 
     move-result v2
@@ -2284,7 +2053,6 @@
 
     move-result-object p1
 
-    .line 360
     invoke-interface {p0, v0, v1, v2, p1}, Lcom/android/server/tare/EconomyManagerInternal;->noteOngoingEventStarted(ILjava/lang/String;ILjava/lang/String;)V
 
     :goto_2
@@ -2294,20 +2062,16 @@
 .method public final removeJobFromBillList(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)V
     .locals 3
 
-    .line 497
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v0
 
-    .line 498
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 499
     iget-object v2, p0, Lcom/android/server/job/controllers/TareController;->mRegisteredBillsAndJobs:Landroid/util/SparseArrayMap;
 
-    .line 500
     invoke-virtual {v2, v0, v1}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -2316,7 +2080,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 502
     invoke-virtual {v2, p2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -2325,7 +2088,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 503
     invoke-virtual {v2, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
     move-result p1
@@ -2338,7 +2100,6 @@
 
     if-nez p1, :cond_1
 
-    .line 504
     :cond_0
     iget-object p1, p0, Lcom/android/server/job/controllers/TareController;->mEconomyManagerInternal:Lcom/android/server/tare/EconomyManagerInternal;
 
@@ -2346,10 +2107,8 @@
 
     invoke-interface {p1, v0, v1, v2, p2}, Lcom/android/server/tare/EconomyManagerInternal;->unregisterAffordabilityChangeListener(ILjava/lang/String;Lcom/android/server/tare/EconomyManagerInternal$AffordabilityChangeListener;Lcom/android/server/tare/EconomyManagerInternal$ActionBill;)V
 
-    .line 508
     iget-object p0, p0, Lcom/android/server/job/controllers/TareController;->mAffordabilityCache:Landroid/util/SparseArrayMap;
 
-    .line 509
     invoke-virtual {p0, v0, v1}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2358,7 +2117,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 511
     invoke-virtual {p0, p2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
@@ -2368,33 +2126,28 @@
 .method public final setExpeditedTareApproved(Lcom/android/server/job/controllers/JobStatus;JZ)Z
     .locals 0
 
-    .line 686
     invoke-virtual {p1, p2, p3, p4}, Lcom/android/server/job/controllers/JobStatus;->setExpeditedJobTareApproved(JZ)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 687
     iget-object p2, p0, Lcom/android/server/job/controllers/TareController;->mBackgroundJobsController:Lcom/android/server/job/controllers/BackgroundJobsController;
 
     invoke-virtual {p2, p1}, Lcom/android/server/job/controllers/BackgroundJobsController;->evaluateStateLocked(Lcom/android/server/job/controllers/JobStatus;)V
 
-    .line 688
     iget-object p2, p0, Lcom/android/server/job/controllers/TareController;->mConnectivityController:Lcom/android/server/job/controllers/ConnectivityController;
 
     invoke-virtual {p2, p1}, Lcom/android/server/job/controllers/ConnectivityController;->evaluateStateLocked(Lcom/android/server/job/controllers/JobStatus;)V
 
     if-eqz p4, :cond_0
 
-    .line 689
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->isReady()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 690
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {p0, p1}, Lcom/android/server/job/StateChangedListener;->onRunJobNow(Lcom/android/server/job/controllers/JobStatus;)V
@@ -2413,7 +2166,6 @@
 .method public unprepareFromExecutionLocked(Lcom/android/server/job/controllers/JobStatus;)V
     .locals 5
 
-    .line 368
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsUserInitiatedJob()Z
 
     move-result v0
@@ -2422,18 +2174,15 @@
 
     return-void
 
-    .line 371
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v0
 
-    .line 372
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 375
     iget-object v2, p0, Lcom/android/server/job/controllers/TareController;->mTopStartedJobs:Landroid/util/ArraySet;
 
     invoke-virtual {v2, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
@@ -2442,10 +2191,8 @@
 
     if-nez v2, :cond_1
 
-    .line 378
     iget-object v2, p0, Lcom/android/server/job/controllers/TareController;->mEconomyManagerInternal:Lcom/android/server/tare/EconomyManagerInternal;
 
-    .line 379
     invoke-static {p1}, Lcom/android/server/job/controllers/TareController;->getRunningActionId(Lcom/android/server/job/controllers/JobStatus;)I
 
     move-result v3
@@ -2458,19 +2205,15 @@
 
     move-result-object v4
 
-    .line 378
     invoke-interface {v2, v0, v1, v3, v4}, Lcom/android/server/tare/EconomyManagerInternal;->noteOngoingEventStopped(ILjava/lang/String;ILjava/lang/String;)V
 
-    .line 382
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/TareController;->getPossibleStartBills(Lcom/android/server/job/controllers/JobStatus;)Landroid/util/ArraySet;
 
     move-result-object v2
 
-    .line 383
     iget-object v3, p0, Lcom/android/server/job/controllers/TareController;->mRegisteredBillsAndJobs:Landroid/util/SparseArrayMap;
 
-    .line 384
     invoke-virtual {v3, v0, v1}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -2485,7 +2228,6 @@
 
     const-string v3, "Job was just unprepared but didn\'t have a pre-existing billToJobMap"
 
-    .line 386
     invoke-static {v0, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -2493,7 +2235,6 @@
     :cond_2
     move v3, v1
 
-    .line 388
     :goto_0
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
 
@@ -2501,7 +2242,6 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 389
     invoke-virtual {v0, v3}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -2514,7 +2254,6 @@
 
     goto :goto_0
 
-    .line 392
     :cond_3
     :goto_1
     invoke-virtual {v2}, Landroid/util/ArraySet;->size()I
@@ -2523,7 +2262,6 @@
 
     if-ge v1, v0, :cond_4
 
-    .line 393
     invoke-virtual {v2, v1}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v0

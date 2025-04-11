@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Landroid/hardware/biometrics/fingerprint/IFingerprint$Stub;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public createSession(IILandroid/hardware/biometrics/fingerprint/ISessionCallback;)Landroid/hardware/biometrics/fingerprint/ISession;
     .locals 2
 
-    .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,7 +41,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     new-instance p1, Lcom/android/server/biometrics/sensors/fingerprint/aidl/TestHal$1;
 
     invoke-direct {p1, p0, p3}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/TestHal$1;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/TestHal;Landroid/hardware/biometrics/fingerprint/ISessionCallback;)V
@@ -54,7 +51,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "637371b53fb7faf9bd43aa51b72c23852d6e6d96"
 
     return-object p0
@@ -63,7 +59,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x3
 
     return p0
@@ -76,7 +71,6 @@
 
     const-string v0, "getSensorProps"
 
-    .line 49
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0

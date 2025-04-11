@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;ZLandroid/content/Intent;)V
     .locals 0
 
-    .line 3515
     iput-object p1, p0, Lcom/android/server/BatteryService$34;->this$0:Lcom/android/server/BatteryService;
 
     iput-boolean p2, p0, Lcom/android/server/BatteryService$34;->val$batteryRxConnected:Z
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 3518
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -58,7 +56,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3519
     iget-object v0, p0, Lcom/android/server/BatteryService$34;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmContext(Lcom/android/server/BatteryService;)Landroid/content/Context;
@@ -71,13 +68,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 3522
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/BatteryService$34;->val$batteryRxConnected:Z
 
     if-eqz v0, :cond_0
 
-    .line 3523
     iget-object p0, p0, Lcom/android/server/BatteryService$34;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p0}, Lcom/android/server/BatteryService;->-$$Nest$fgetmBatteryStats(Lcom/android/server/BatteryService;)Lcom/android/internal/app/IBatteryStats;
@@ -88,7 +83,6 @@
 
     goto :goto_0
 
-    .line 3525
     :cond_0
     iget-object p0, p0, Lcom/android/server/BatteryService$34;->this$0:Lcom/android/server/BatteryService;
 
@@ -102,7 +96,6 @@
 
     goto :goto_0
 
-    .line 3528
     :catch_0
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

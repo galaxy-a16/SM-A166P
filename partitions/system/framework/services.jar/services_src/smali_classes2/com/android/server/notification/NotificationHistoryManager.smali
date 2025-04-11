@@ -33,7 +33,6 @@
 .method public static synthetic $r8$lambda$mI05eFn7iC4p77ZSxyTfEob6KqQ(Lcom/android/server/notification/NotificationHistoryManager;Landroid/app/NotificationHistory$HistoricalNotification;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationHistoryManager;->lambda$addNotification$0(Landroid/app/NotificationHistory$HistoricalNotification;)V
 
     return-void
@@ -42,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/notification/NotificationHistoryManager;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -51,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/notification/NotificationHistoryManager;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -60,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUserManager(Lcom/android/server/notification/NotificationHistoryManager;)Landroid/os/UserManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserManager:Landroid/os/UserManager;
 
     return-object p0
@@ -69,7 +65,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 53
     sget-boolean v0, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
 
     sput-boolean v0, Lcom/android/server/notification/NotificationHistoryManager;->DEBUG:Z
@@ -80,55 +75,46 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
     .locals 1
 
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
-    .line 63
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
-    .line 65
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
-    .line 68
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingPackageRemovals:Landroid/util/SparseArray;
 
-    .line 70
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mHistoryEnabled:Landroid/util/SparseBooleanArray;
 
-    .line 72
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingHistoryDisables:Landroid/util/SparseBooleanArray;
 
-    .line 76
     iput-object p1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mContext:Landroid/content/Context;
 
-    .line 77
     const-class v0, Landroid/os/UserManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -139,7 +125,6 @@
 
     iput-object p1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserManager:Landroid/os/UserManager;
 
-    .line 78
     new-instance p1, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;
 
     invoke-direct {p1, p0, p2}, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;-><init>(Lcom/android/server/notification/NotificationHistoryManager;Landroid/os/Handler;)V
@@ -152,12 +137,10 @@
 .method private synthetic lambda$addNotification$0(Landroid/app/NotificationHistory$HistoricalNotification;)V
     .locals 3
 
-    .line 243
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 245
     :try_start_0
     invoke-virtual {p1}, Landroid/app/NotificationHistory$HistoricalNotification;->getUserId()I
 
@@ -171,7 +154,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 247
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -180,7 +162,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 248
     invoke-virtual {p1}, Landroid/app/NotificationHistory$HistoricalNotification;->getUserId()I
 
     move-result p1
@@ -191,19 +172,15 @@
 
     move-result-object p1
 
-    .line 247
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     monitor-exit v0
 
     return-void
 
-    .line 251
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationHistoryDatabase;->addNotification(Landroid/app/NotificationHistory$HistoricalNotification;)V
 
-    .line 252
     monitor-exit v0
 
     return-void
@@ -223,7 +200,6 @@
 .method public addNotification(Landroid/app/NotificationHistory$HistoricalNotification;)V
     .locals 1
 
-    .line 242
     new-instance v0, Lcom/android/server/notification/NotificationHistoryManager$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/notification/NotificationHistoryManager$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/notification/NotificationHistoryManager;Landroid/app/NotificationHistory$HistoricalNotification;)V
@@ -236,12 +212,10 @@
 .method public cleanupHistoryFiles()V
     .locals 5
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 161
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
@@ -254,7 +228,6 @@
     :goto_0
     if-ge v2, v1, :cond_2
 
-    .line 165
     iget-object v3, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseBooleanArray;->valueAt(I)Z
@@ -263,12 +236,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 166
     iget-object v3, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
     iget-object v4, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
-    .line 167
     invoke-virtual {v4, v2}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v4
@@ -283,7 +254,6 @@
 
     goto :goto_1
 
-    .line 171
     :cond_0
     invoke-virtual {v3}, Lcom/android/server/notification/NotificationHistoryDatabase;->prune()V
 
@@ -293,7 +263,6 @@
 
     goto :goto_0
 
-    .line 174
     :cond_2
     monitor-exit v0
 
@@ -312,18 +281,15 @@
 .method public deleteConversations(Ljava/lang/String;ILjava/util/Set;)V
     .locals 1
 
-    .line 194
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 195
     :try_start_0
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 197
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
     move-result-object p0
@@ -332,7 +298,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 201
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -349,16 +314,13 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     monitor-exit v0
 
     return-void
 
-    .line 205
     :cond_0
     invoke-virtual {p0, p1, p3}, Lcom/android/server/notification/NotificationHistoryDatabase;->deleteConversations(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 206
     monitor-exit v0
 
     return-void
@@ -376,18 +338,15 @@
 .method public deleteNotificationChannel(Ljava/lang/String;ILjava/lang/String;)V
     .locals 1
 
-    .line 210
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 211
     :try_start_0
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 213
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
     move-result-object p0
@@ -396,7 +355,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 217
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -413,16 +371,13 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     monitor-exit v0
 
     return-void
 
-    .line 221
     :cond_0
     invoke-virtual {p0, p1, p3}, Lcom/android/server/notification/NotificationHistoryDatabase;->deleteNotificationChannel(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 222
     monitor-exit v0
 
     return-void
@@ -440,18 +395,15 @@
 .method public deleteNotificationHistoryItem(Ljava/lang/String;IJ)V
     .locals 1
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 179
     :try_start_0
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 181
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
     move-result-object p0
@@ -460,7 +412,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 185
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -477,16 +428,13 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     monitor-exit v0
 
     return-void
 
-    .line 189
     :cond_0
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/notification/NotificationHistoryDatabase;->deleteNotificationHistoryItem(Ljava/lang/String;J)V
 
-    .line 190
     monitor-exit v0
 
     return-void
@@ -504,24 +452,20 @@
 .method public final disableHistory(Lcom/android/server/notification/NotificationHistoryDatabase;I)V
     .locals 1
 
-    .line 383
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1, v0}, Lcom/android/server/notification/NotificationHistoryDatabase;->disableHistory(Landroid/content/Context;)V
 
-    .line 388
     iget-object p1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingHistoryDisables:Landroid/util/SparseBooleanArray;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, p2, v0}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 389
     iget-object p1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mHistoryEnabled:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p1, p2, v0}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 390
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
     const/4 p1, 0x0
@@ -534,12 +478,10 @@
 .method public doesHistoryExistForUser(I)Z
     .locals 1
 
-    .line 441
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 442
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
@@ -564,7 +506,6 @@
     :catchall_0
     move-exception p0
 
-    .line 443
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -575,12 +516,10 @@
 .method public getPendingPackageRemovalsForUser(I)Ljava/util/List;
     .locals 1
 
-    .line 458
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 459
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingPackageRemovals:Landroid/util/SparseArray;
 
@@ -597,7 +536,6 @@
     :catchall_0
     move-exception p0
 
-    .line 460
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -608,7 +546,6 @@
 .method public final getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
     .locals 5
 
-    .line 396
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mHistoryEnabled:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -621,12 +558,10 @@
 
     if-nez v0, :cond_1
 
-    .line 397
     sget-boolean v0, Lcom/android/server/notification/NotificationHistoryManager;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 398
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -643,7 +578,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
@@ -651,7 +585,6 @@
 
     return-object v2
 
-    .line 403
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
@@ -663,7 +596,6 @@
 
     if-nez v0, :cond_4
 
-    .line 405
     new-instance v0, Ljava/io/File;
 
     invoke-static {p1}, Landroid/os/Environment;->getDataSystemCeDirectory(I)Ljava/io/File;
@@ -674,7 +606,6 @@
 
     invoke-direct {v0, v3, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 407
     iget-object v3, p0, Lcom/android/server/notification/NotificationHistoryManager;->mContext:Landroid/content/Context;
 
     invoke-static {}, Lcom/android/server/IoThread;->getHandler()Landroid/os/Handler;
@@ -685,7 +616,6 @@
 
     move-result-object v0
 
-    .line 409
     iget-object v3, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -696,13 +626,11 @@
 
     if-eqz v3, :cond_3
 
-    .line 411
     :try_start_0
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationHistoryDatabase;->init()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 427
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -712,7 +640,6 @@
     :catch_0
     move-exception v0
 
-    .line 413
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {p0, p1}, Landroid/os/UserManager;->isUserUnlocked(I)Z
@@ -721,7 +648,6 @@
 
     if-nez p0, :cond_2
 
-    .line 416
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -738,11 +664,9 @@
 
     return-object v2
 
-    .line 414
     :cond_2
     throw v0
 
-    .line 423
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -768,12 +692,10 @@
 .method public isUserUnlocked(I)Z
     .locals 1
 
-    .line 434
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 435
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
@@ -788,7 +710,6 @@
     :catchall_0
     move-exception p0
 
-    .line 436
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -799,7 +720,6 @@
 .method public onBootPhaseAppsCanStart()V
     .locals 3
 
-    .line 88
     :try_start_0
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mContext:Landroid/content/Context;
 
@@ -816,10 +736,8 @@
 
     const-string v2, "Failed to schedule cleanup job"
 
-    .line 90
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 92
     :goto_0
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mSettingsObserver:Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;
 
@@ -831,7 +749,6 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mSettingsObserver:Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryManager$SettingsObserver;->stopObserving()V
@@ -842,20 +759,17 @@
 .method public onHistoryEnabledChanged(IZ)V
     .locals 2
 
-    .line 365
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     if-eqz p2, :cond_0
 
-    .line 367
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mHistoryEnabled:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1, p1, p2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 370
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
@@ -865,12 +779,10 @@
 
     if-nez p2, :cond_3
 
-    .line 373
     invoke-virtual {p0, v1, p1}, Lcom/android/server/notification/NotificationHistoryManager;->disableHistory(Lcom/android/server/notification/NotificationHistoryDatabase;I)V
 
     goto :goto_1
 
-    .line 376
     :cond_1
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingHistoryDisables:Landroid/util/SparseBooleanArray;
 
@@ -886,7 +798,6 @@
     :goto_0
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 378
     :cond_3
     :goto_1
     monitor-exit v0
@@ -906,12 +817,10 @@
 .method public onPackageRemoved(ILjava/lang/String;)V
     .locals 3
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 141
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
@@ -923,7 +832,6 @@
 
     if-nez v1, :cond_1
 
-    .line 142
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mHistoryEnabled:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseBooleanArray;->get(IZ)Z
@@ -932,35 +840,29 @@
 
     if-eqz v1, :cond_0
 
-    .line 143
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingPackageRemovals:Landroid/util/SparseArray;
 
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 144
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseArray;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/List;
 
-    .line 145
     invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingPackageRemovals:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 148
     :cond_0
     monitor-exit v0
 
     return-void
 
-    .line 150
     :cond_1
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
@@ -972,16 +874,13 @@
 
     if-nez p0, :cond_2
 
-    .line 152
     monitor-exit v0
 
     return-void
 
-    .line 155
     :cond_2
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationHistoryDatabase;->onPackageRemoved(Ljava/lang/String;)V
 
-    .line 156
     monitor-exit v0
 
     return-void
@@ -999,12 +898,10 @@
 .method public onUserAdded(I)V
     .locals 3
 
-    .line 351
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 352
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
@@ -1012,12 +909,10 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 353
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mHistoryEnabled:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, p1, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 354
     monitor-exit v0
 
     return-void
@@ -1035,12 +930,10 @@
 .method public onUserRemoved(I)V
     .locals 3
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 132
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingPackageRemovals:Landroid/util/SparseArray;
 
@@ -1048,22 +941,18 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 133
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mHistoryEnabled:Landroid/util/SparseBooleanArray;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 134
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingHistoryDisables:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 135
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationHistoryManager;->onUserStopped(I)V
 
-    .line 136
     monitor-exit v0
 
     return-void
@@ -1081,12 +970,10 @@
 .method public onUserStopped(I)V
     .locals 3
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 123
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
@@ -1094,14 +981,12 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 124
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 125
     monitor-exit v0
 
     return-void
@@ -1119,12 +1004,10 @@
 .method public onUserUnlocked(I)V
     .locals 5
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 97
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
@@ -1132,7 +1015,6 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 99
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
     move-result-object v1
@@ -1141,7 +1023,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 101
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1158,12 +1039,10 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     monitor-exit v0
 
     return-void
 
-    .line 106
     :cond_0
     iget-object v2, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingPackageRemovals:Landroid/util/SparseArray;
 
@@ -1177,7 +1056,6 @@
 
     const/4 v3, 0x0
 
-    .line 108
     :goto_0
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -1185,7 +1063,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 109
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -1198,7 +1075,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_1
     iget-object v2, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingPackageRemovals:Landroid/util/SparseArray;
 
@@ -1206,7 +1082,6 @@
 
     invoke-virtual {v2, p1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 115
     :cond_2
     iget-object v2, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserPendingHistoryDisables:Landroid/util/SparseBooleanArray;
 
@@ -1216,10 +1091,8 @@
 
     if-eqz v2, :cond_3
 
-    .line 116
     invoke-virtual {p0, v1, p1}, Lcom/android/server/notification/NotificationHistoryManager;->disableHistory(Lcom/android/server/notification/NotificationHistoryDatabase;I)V
 
-    .line 118
     :cond_3
     monitor-exit v0
 
@@ -1238,12 +1111,10 @@
 .method public readFilteredNotificationHistoryForDump(ILjava/lang/String;I)Landroid/app/NotificationHistory;
     .locals 1
 
-    .line 338
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 340
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
@@ -1253,7 +1124,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 342
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1270,7 +1140,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     new-instance p0, Landroid/app/NotificationHistory;
 
     invoke-direct {p0}, Landroid/app/NotificationHistory;-><init>()V
@@ -1279,7 +1148,6 @@
 
     return-object p0
 
-    .line 346
     :cond_0
     invoke-virtual {p0, p2, p3}, Lcom/android/server/notification/NotificationHistoryDatabase;->readNotificationHistoryForDump(Ljava/lang/String;I)Landroid/app/NotificationHistory;
 
@@ -1292,7 +1160,6 @@
     :catchall_0
     move-exception p0
 
-    .line 347
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1303,12 +1170,10 @@
 .method public readFilteredNotificationHistoryForPackage(ILjava/lang/String;Ljava/lang/String;I)Landroid/app/NotificationHistory;
     .locals 3
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 318
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
@@ -1318,7 +1183,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 320
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1335,7 +1199,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     new-instance p0, Landroid/app/NotificationHistory;
 
     invoke-direct {p0}, Landroid/app/NotificationHistory;-><init>()V
@@ -1344,18 +1207,15 @@
 
     return-object p0
 
-    .line 324
     :cond_0
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/notification/NotificationHistoryDatabase;->readNotificationHistoryForPackage(Ljava/lang/String;Ljava/lang/String;I)Landroid/app/NotificationHistory;
 
     move-result-object p1
 
-    .line 325
     invoke-virtual {p1}, Landroid/app/NotificationHistory;->getNotificationsToWrite()Ljava/util/List;
 
     move-result-object p2
 
-    .line 326
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1374,7 +1234,6 @@
 
     check-cast p3, Landroid/app/NotificationHistory$HistoricalNotification;
 
-    .line 327
     invoke-virtual {p3}, Landroid/app/NotificationHistory$HistoricalNotification;->getIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object p4
@@ -1383,7 +1242,6 @@
 
     const-string p4, "NotificationHistory"
 
-    .line 328
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1400,7 +1258,6 @@
 
     invoke-static {p4, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     invoke-virtual {p3}, Landroid/app/NotificationHistory$HistoricalNotification;->getPackage()Ljava/lang/String;
 
     move-result-object p4
@@ -1413,7 +1270,6 @@
 
     goto :goto_0
 
-    .line 332
     :cond_2
     monitor-exit v0
 
@@ -1422,7 +1278,6 @@
     :catchall_0
     move-exception p0
 
-    .line 333
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1433,12 +1288,10 @@
 .method public readNotificationHistory([I)Landroid/app/NotificationHistory;
     .locals 8
 
-    .line 257
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 258
     :try_start_0
     new-instance v1, Landroid/app/NotificationHistory;
 
@@ -1446,12 +1299,10 @@
 
     if-nez p1, :cond_0
 
-    .line 260
     monitor-exit v0
 
     return-object v1
 
-    .line 262
     :cond_0
     array-length v2, p1
 
@@ -1462,7 +1313,6 @@
 
     aget v4, p1, v3
 
-    .line 264
     invoke-virtual {p0, v4}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
     move-result-object v5
@@ -1471,7 +1321,6 @@
 
     const-string v5, "NotificationHistory"
 
-    .line 266
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1490,7 +1339,6 @@
 
     goto :goto_1
 
-    .line 269
     :cond_1
     invoke-virtual {v5}, Lcom/android/server/notification/NotificationHistoryDatabase;->readNotificationHistory()Landroid/app/NotificationHistory;
 
@@ -1503,7 +1351,6 @@
 
     goto :goto_0
 
-    .line 271
     :cond_2
     monitor-exit v0
 
@@ -1512,7 +1359,6 @@
     :catchall_0
     move-exception p0
 
-    .line 272
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1523,12 +1369,10 @@
 .method public replaceNotificationHistoryDatabase(ILcom/android/server/notification/NotificationHistoryDatabase;)V
     .locals 2
 
-    .line 449
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 450
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
@@ -1538,12 +1382,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 451
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 453
     :cond_0
     monitor-exit v0
 
@@ -1562,12 +1404,10 @@
 .method public triggerWriteToDisk()V
     .locals 5
 
-    .line 226
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 227
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
@@ -1580,14 +1420,12 @@
     :goto_0
     if-ge v2, v1, :cond_2
 
-    .line 229
     iget-object v3, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
-    .line 230
     iget-object v4, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserUnlockedStates:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -1598,7 +1436,6 @@
 
     goto :goto_1
 
-    .line 233
     :cond_0
     iget-object v4, p0, Lcom/android/server/notification/NotificationHistoryManager;->mUserState:Landroid/util/SparseArray;
 
@@ -1610,7 +1447,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 235
     invoke-virtual {v3}, Lcom/android/server/notification/NotificationHistoryDatabase;->forceWriteToDisk()V
 
     :cond_1
@@ -1619,7 +1455,6 @@
 
     goto :goto_0
 
-    .line 238
     :cond_2
     monitor-exit v0
 
@@ -1638,12 +1473,10 @@
 .method public updateCancelEvent(ILjava/lang/String;Z)V
     .locals 1
 
-    .line 303
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 305
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
@@ -1653,7 +1486,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 307
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1670,16 +1502,13 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     monitor-exit v0
 
     return-void
 
-    .line 310
     :cond_0
     invoke-virtual {p0, p2, p3}, Lcom/android/server/notification/NotificationHistoryDatabase;->updateCancelEvent(Ljava/lang/String;Z)V
 
-    .line 311
     monitor-exit v0
 
     return-void
@@ -1697,12 +1526,10 @@
 .method public updateNotificationItems(IILandroid/app/NotificationHistory$HistoricalNotification;)V
     .locals 1
 
-    .line 292
     iget-object v0, p0, Lcom/android/server/notification/NotificationHistoryManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 294
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/server/notification/NotificationHistoryManager;->getUserHistoryAndInitializeIfNeededLocked(I)Lcom/android/server/notification/NotificationHistoryDatabase;
 
@@ -1712,7 +1539,6 @@
 
     const-string p0, "NotificationHistory"
 
-    .line 296
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1729,16 +1555,13 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
     monitor-exit v0
 
     return-void
 
-    .line 299
     :cond_0
     invoke-virtual {p0, p1, p3}, Lcom/android/server/notification/NotificationHistoryDatabase;->updateNotificationItems(ILandroid/app/NotificationHistory$HistoricalNotification;)V
 
-    .line 300
     monitor-exit v0
 
     return-void

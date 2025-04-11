@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$w32eEg5we6rjvBm1bKOkGQXSHNU(Lcom/android/server/location/gnss/GnssLocationProviderSec$CtsRestrictModeFileObserver;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/GnssLocationProviderSec$CtsRestrictModeFileObserver;->lambda$secCheckCtsRestrictMode$0(Ljava/lang/String;)V
 
     return-void
@@ -20,10 +19,8 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssLocationProviderSec;Ljava/io/File;I)V
     .locals 0
 
-    .line 2559
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$CtsRestrictModeFileObserver;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 
-    .line 2560
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/io/File;I)V
 
     return-void
@@ -32,7 +29,6 @@
 .method private synthetic lambda$secCheckCtsRestrictMode$0(Ljava/lang/String;)V
     .locals 2
 
-    .line 2580
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$CtsRestrictModeFileObserver;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -59,7 +55,6 @@
 .method public onEvent(ILjava/lang/String;)V
     .locals 1
 
-    .line 2565
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,10 +79,8 @@
 
     const-string p1, "CTS restrict mode : file modified!"
 
-    .line 2567
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2568
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssLocationProviderSec$CtsRestrictModeFileObserver;->secCheckCtsRestrictMode()V
 
     :cond_0
@@ -101,7 +94,6 @@
 
     const-string v0, ""
 
-    .line 2587
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -112,7 +104,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2588
     :try_start_1
     new-instance p1, Ljava/io/InputStreamReader;
 
@@ -120,7 +111,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    .line 2589
     :try_start_2
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -128,7 +118,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 2590
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -136,7 +125,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2591
     :try_start_4
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -160,7 +148,6 @@
     :catchall_0
     move-exception v3
 
-    .line 2587
     :try_start_7
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_7
@@ -227,7 +214,6 @@
     :catch_0
     const-string p1, "Could not load file /sys/class/sensors/ssc_core/operation_modedue to IllegalArgumentException"
 
-    .line 2598
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
@@ -235,7 +221,6 @@
     :catch_1
     move-exception p0
 
-    .line 2596
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_3
@@ -243,7 +228,6 @@
     :catch_2
     const-string p1, "Could not access file /sys/class/sensors/ssc_core/operation_mode"
 
-    .line 2594
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
@@ -251,7 +235,6 @@
     :catch_3
     const-string p1, "Could not open File /sys/class/sensors/ssc_core/operation_mode"
 
-    .line 2592
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_3
@@ -261,14 +244,12 @@
 .method public final secCheckCtsRestrictMode()V
     .locals 3
 
-    .line 2573
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sys/class/sensors/ssc_core/operation_mode"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2574
     invoke-virtual {p0, v0}, Lcom/android/server/location/gnss/GnssLocationProviderSec$CtsRestrictModeFileObserver;->readRestrictModeFromFile(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v0
@@ -277,7 +258,6 @@
 
     return-void
 
-    .line 2577
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -299,7 +279,6 @@
 
     const-string/jumbo v1, "restrict"
 
-    .line 2578
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -314,7 +293,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 2580
     :cond_1
     iget-object v1, p0, Lcom/android/server/location/gnss/GnssLocationProviderSec$CtsRestrictModeFileObserver;->this$0:Lcom/android/server/location/gnss/GnssLocationProviderSec;
 

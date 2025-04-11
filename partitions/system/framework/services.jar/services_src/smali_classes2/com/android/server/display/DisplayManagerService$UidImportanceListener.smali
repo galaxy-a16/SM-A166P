@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService;)V
     .locals 0
 
-    .line 1293
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$UidImportanceListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/DisplayManagerService;Lcom/android/server/display/DisplayManagerService$UidImportanceListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService$UidImportanceListener;-><init>(Lcom/android/server/display/DisplayManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onUidImportance(II)V
     .locals 0
 
-    .line 1298
     invoke-virtual {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService$UidImportanceListener;->onUidImportanceExt(II)V
 
     return-void
@@ -45,7 +42,6 @@
 .method public final onUidImportanceExt(II)V
     .locals 3
 
-    .line 1330
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$UidImportanceListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     iget-object v0, v0, Lcom/android/server/display/DisplayManagerService;->mPendingCallbacksSelfLocked:Landroid/util/SparseArray;
@@ -59,7 +55,6 @@
     :try_start_0
     const-string p2, "DisplayManagerService"
 
-    .line 1333
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,14 +71,12 @@
 
     invoke-static {p2, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1334
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$UidImportanceListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService;->mPendingCallbacksSelfLocked:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 1335
     monitor-exit v0
 
     return-void
@@ -98,12 +91,10 @@
 
     if-lt p2, v1, :cond_1
 
-    .line 1338
     monitor-exit v0
 
     return-void
 
-    .line 1342
     :cond_1
     iget-object p2, p0, Lcom/android/server/display/DisplayManagerService$UidImportanceListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -117,7 +108,6 @@
 
     if-nez p2, :cond_2
 
-    .line 1345
     monitor-exit v0
 
     return-void
@@ -125,7 +115,6 @@
     :cond_2
     const/4 v1, 0x0
 
-    .line 1352
     :goto_0
     invoke-virtual {p2}, Landroid/util/SparseArray;->size()I
 
@@ -133,7 +122,6 @@
 
     if-ge v1, v2, :cond_4
 
-    .line 1353
     invoke-virtual {p2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -142,7 +130,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1355
     invoke-virtual {v2}, Lcom/android/server/display/DisplayManagerService$PendingCallback;->sendPendingDisplayEvent()V
 
     :cond_3
@@ -150,7 +137,6 @@
 
     goto :goto_0
 
-    .line 1358
     :cond_4
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$UidImportanceListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -158,7 +144,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 1359
     monitor-exit v0
 
     return-void

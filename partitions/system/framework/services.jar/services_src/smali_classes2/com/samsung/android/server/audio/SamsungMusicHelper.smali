@@ -7,12 +7,10 @@
 .method public static isScreenOffMusicEnabled(Landroid/content/Context;)Z
     .locals 9
 
-    .line 33
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 36
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -36,7 +34,6 @@
     :cond_0
     move v1, v6
 
-    .line 39
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -66,12 +63,10 @@
 
     const-string p0, "ScreenOffMusicProvider does not exist"
 
-    .line 43
     invoke-static {v8, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_6
 
-    .line 52
     :cond_2
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -86,7 +81,6 @@
 
     move-object v2, v3
 
-    .line 54
     :cond_3
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -94,7 +88,6 @@
 
     move-result-object p0
 
-    .line 52
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -115,7 +108,6 @@
 
     const/4 v5, 0x0
 
-    .line 59
     :try_start_1
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -125,7 +117,6 @@
 
     if-eqz p0, :cond_5
 
-    .line 60
     :try_start_2
     invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
 
@@ -135,18 +126,15 @@
 
     goto :goto_2
 
-    .line 63
     :cond_4
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 64
     invoke-interface {p0, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v1, "true"
 
-    .line 65
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -164,7 +152,6 @@
     :goto_2
     const-string/jumbo v0, "screen off music query failed"
 
-    .line 61
     invoke-static {v8, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -172,7 +159,6 @@
     :goto_3
     if-eqz p0, :cond_7
 
-    .line 67
     :try_start_3
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_3
@@ -183,7 +169,6 @@
     :goto_4
     if-eqz p0, :cond_6
 
-    .line 59
     :try_start_4
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -206,7 +191,6 @@
     :catch_0
     move-exception p0
 
-    .line 68
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :catch_1

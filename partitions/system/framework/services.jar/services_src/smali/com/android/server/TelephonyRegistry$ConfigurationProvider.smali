@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$4eWR_11p6qowlxxrsk_R5zmCUQo(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider;->lambda$isDisplayInfoReadPhoneStateEnforcedInPlatformCompat$5(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -18,7 +17,6 @@
 .method public static synthetic $r8$lambda$CoNWCNUmsZdJaeiCqIub6fY_iwk(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider;->lambda$isActiveDataSubIdReadPhoneStateEnforcedInPlatformCompat$3(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -29,7 +27,6 @@
 .method public static synthetic $r8$lambda$L-pL6TmK4RT30eTdskn6d8dqINk(I)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider;->lambda$isRegistrationLimitEnabledInPlatformCompat$1(I)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -40,7 +37,6 @@
 .method public static synthetic $r8$lambda$_AFTrjbPXFDexTE-UPfUPmtjhi0(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider;->lambda$isDisplayInfoNrAdvancedSupported$6(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -51,7 +47,6 @@
 .method public static synthetic $r8$lambda$_ZMr604_ruYd0mLx6NzNuPEs5Ec(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider;->lambda$isCallStateReadPhoneStateEnforcedInPlatformCompat$2(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -62,7 +57,6 @@
 .method public static synthetic $r8$lambda$iwYU3kZ0wEItA1RdCwOCdIjnoGI(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider;->lambda$isCellInfoReadPhoneStateEnforcedInPlatformCompat$4(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -73,7 +67,6 @@
 .method public static synthetic $r8$lambda$ytnzkDR6ZanEA30bbFEyzzXw2eM()Ljava/lang/Integer;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider;->lambda$getRegistrationLimit$0()Ljava/lang/Integer;
 
     move-result-object v0
@@ -98,7 +91,6 @@
 
     const-string/jumbo v2, "telephony"
 
-    .line 232
     invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
@@ -115,7 +107,6 @@
 
     const-wide/32 v0, 0xae06792
 
-    .line 268
     invoke-static {v0, v1, p0, p1}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p0
@@ -132,7 +123,6 @@
 
     const-wide/32 v0, 0x95f3323
 
-    .line 255
     invoke-static {v0, v1, p0, p1}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p0
@@ -149,7 +139,6 @@
 
     const-wide/32 v0, 0xafc8f5e
 
-    .line 281
     invoke-static {v0, v1, p0, p1}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p0
@@ -166,7 +155,6 @@
 
     const-wide/32 v0, 0xad3e56b
 
-    .line 304
     invoke-static {v0, v1, p0, p1}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p0
@@ -183,7 +171,6 @@
 
     const-wide/32 v0, 0xaeae033
 
-    .line 293
     invoke-static {v0, v1, p0, p1}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result p0
@@ -200,7 +187,6 @@
 
     const-wide/32 v0, 0x8fe4129
 
-    .line 244
     invoke-static {v0, v1, p0}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JI)Z
 
     move-result p0
@@ -217,7 +203,6 @@
 .method public getRegistrationLimit()I
     .locals 0
 
-    .line 231
     new-instance p0, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda2;
 
     invoke-direct {p0}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda2;-><init>()V
@@ -238,7 +223,6 @@
 .method public isActiveDataSubIdReadPhoneStateEnforcedInPlatformCompat(Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 0
 
-    .line 268
     new-instance p0, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda0;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda0;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
@@ -259,7 +243,6 @@
 .method public isCallStateReadPhoneStateEnforcedInPlatformCompat(Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 0
 
-    .line 255
     new-instance p0, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda5;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda5;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
@@ -280,7 +263,6 @@
 .method public isCellInfoReadPhoneStateEnforcedInPlatformCompat(Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 0
 
-    .line 281
     new-instance p0, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda4;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda4;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
@@ -301,7 +283,6 @@
 .method public isDisplayInfoNrAdvancedSupported(Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 0
 
-    .line 304
     new-instance p0, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda1;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda1;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
@@ -322,7 +303,6 @@
 .method public isDisplayInfoReadPhoneStateEnforcedInPlatformCompat(Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 0
 
-    .line 293
     new-instance p0, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda6;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda6;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
@@ -343,7 +323,6 @@
 .method public isRegistrationLimitEnabledInPlatformCompat(I)Z
     .locals 0
 
-    .line 244
     new-instance p0, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda3;
 
     invoke-direct {p0, p1}, Lcom/android/server/TelephonyRegistry$ConfigurationProvider$$ExternalSyntheticLambda3;-><init>(I)V

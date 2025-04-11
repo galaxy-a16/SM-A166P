@@ -20,18 +20,14 @@
 .method public constructor <init>(Landroid/net/NetworkScorerAppData;)V
     .locals 1
 
-    .line 957
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 953
     iput-boolean v0, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mBound:Z
 
-    .line 954
     iput-boolean v0, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mConnected:Z
 
-    .line 958
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mAppData:Landroid/net/NetworkScorerAppData;
 
     return-void
@@ -42,19 +38,16 @@
 .method public bind(Landroid/content/Context;)V
     .locals 4
 
-    .line 963
     iget-boolean v0, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mBound:Z
 
     if-nez v0, :cond_1
 
-    .line 964
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.net.action.RECOMMEND_NETWORKS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 965
     iget-object v1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mAppData:Landroid/net/NetworkScorerAppData;
 
     invoke-virtual {v1}, Landroid/net/NetworkScorerAppData;->getRecommendationServiceComponent()Landroid/content/ComponentName;
@@ -65,7 +58,6 @@
 
     const v1, 0x4000001
 
-    .line 966
     sget-object v2, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
     invoke-virtual {p1, v0, p0, v1, v2}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
@@ -74,14 +66,12 @@
 
     iput-boolean v1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mBound:Z
 
-    .line 969
     iget-boolean v1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mBound:Z
 
     const-string v2, "NetworkScoreService"
 
     if-nez v1, :cond_0
 
-    .line 970
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,12 +88,10 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 971
     invoke-virtual {p1, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     goto :goto_0
 
-    .line 973
     :cond_0
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
@@ -123,7 +111,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 1031
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +121,6 @@
 
     iget-object p3, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mAppData:Landroid/net/NetworkScorerAppData;
 
-    .line 1032
     invoke-virtual {p3}, Landroid/net/NetworkScorerAppData;->getRecommendationServiceComponent()Landroid/content/ComponentName;
 
     move-result-object p3
@@ -161,7 +147,6 @@
 
     move-result-object p0
 
-    .line 1031
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -170,7 +155,6 @@
 .method public getAppData()Landroid/net/NetworkScorerAppData;
     .locals 0
 
-    .line 996
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mAppData:Landroid/net/NetworkScorerAppData;
 
     return-object p0
@@ -179,7 +163,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 1006
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mAppData:Landroid/net/NetworkScorerAppData;
 
     invoke-virtual {p0}, Landroid/net/NetworkScorerAppData;->getRecommendationServiceComponent()Landroid/content/ComponentName;
@@ -196,7 +179,6 @@
 .method public getRecommendationProvider()Landroid/net/INetworkRecommendationProvider;
     .locals 0
 
-    .line 1001
     iget-object p0, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mRecommendationProvider:Landroid/net/INetworkRecommendationProvider;
 
     return-object p0
@@ -205,7 +187,6 @@
 .method public isAlive()Z
     .locals 1
 
-    .line 1011
     iget-boolean v0, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mBound:Z
 
     if-eqz v0, :cond_0
@@ -228,7 +209,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
 
-    .line 1016
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
     move-result v0
@@ -260,10 +240,8 @@
     :cond_0
     const/4 p1, 0x1
 
-    .line 1017
     iput-boolean p1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mConnected:Z
 
-    .line 1018
     invoke-static {p2}, Landroid/net/INetworkRecommendationProvider$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/INetworkRecommendationProvider;
 
     move-result-object p1
@@ -276,14 +254,12 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 1023
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1024
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -309,12 +285,10 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1026
     iput-boolean p1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mConnected:Z
 
     const/4 p1, 0x0
 
-    .line 1027
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mRecommendationProvider:Landroid/net/INetworkRecommendationProvider;
 
     return-void
@@ -327,19 +301,15 @@
 
     const/4 v1, 0x0
 
-    .line 981
     :try_start_0
     iget-boolean v2, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mBound:Z
 
     if-eqz v2, :cond_0
 
-    .line 982
     iput-boolean v1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mBound:Z
 
-    .line 983
     invoke-virtual {p1, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 984
     invoke-static {}, Lcom/android/server/NetworkScoreService;->-$$Nest$sfgetDBG()Z
 
     move-result p1
@@ -359,17 +329,14 @@
 
     const-string v2, "Unbind failed."
 
-    .line 987
     invoke-static {v0, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 990
     :cond_0
     :goto_0
     iput-boolean v1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mConnected:Z
 
     const/4 p1, 0x0
 
-    .line 991
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$ScoringServiceConnection;->mRecommendationProvider:Landroid/net/INetworkRecommendationProvider;
 
     return-void

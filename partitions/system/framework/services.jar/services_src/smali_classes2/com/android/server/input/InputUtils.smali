@@ -7,7 +7,6 @@
 .method public static isPogoKeyboard(IILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/16 p2, 0x4e8
 
     if-ne p0, p2, :cond_0
@@ -35,7 +34,6 @@
 
     const/4 v2, 0x0
 
-    .line 104
     :try_start_0
     new-instance v3, Ljava/io/BufferedReader;
 
@@ -54,7 +52,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 105
     :try_start_1
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -69,7 +66,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 118
     :try_start_2
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -104,7 +100,6 @@
 
     goto :goto_5
 
-    .line 113
     :catch_3
     :goto_0
     :try_start_3
@@ -130,7 +125,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 118
     :goto_1
     :try_start_4
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
@@ -139,7 +133,6 @@
 
     goto :goto_4
 
-    .line 110
     :catch_4
     :goto_2
     :try_start_5
@@ -165,7 +158,6 @@
 
     goto :goto_1
 
-    .line 107
     :catch_5
     :goto_3
     new-instance v3, Ljava/lang/StringBuilder;
@@ -200,13 +192,11 @@
     :goto_5
     if-eqz v2, :cond_1
 
-    .line 118
     :try_start_6
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_7
 
-    .line 123
     :catch_7
     :cond_1
     throw p0

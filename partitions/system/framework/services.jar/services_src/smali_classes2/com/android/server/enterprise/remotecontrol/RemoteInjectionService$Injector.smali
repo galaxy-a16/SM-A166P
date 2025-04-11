@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 874
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 875
     iput-object p1, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getEDMStorageProvider()Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .locals 1
 
-    .line 883
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object p0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService$Injector;->mContext:Landroid/content/Context;
@@ -38,7 +35,6 @@
 .method public getEnterpriseDeviceManager()Lcom/samsung/android/knox/EnterpriseDeviceManager;
     .locals 0
 
-    .line 887
     iget-object p0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/EnterpriseDeviceManager;
@@ -51,7 +47,6 @@
 .method public getWindowManager()Landroid/view/WindowManager;
     .locals 1
 
-    .line 879
     iget-object p0, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService$Injector;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "window"

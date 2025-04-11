@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$pOHygsgdKZPZaE18RKc_zp_sQkM(Ljava/lang/Runnable;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/samsung/android/server/audio/AudioExecutor;->lambda$execute$0(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     return-void
@@ -20,15 +19,12 @@
 .method public static execute(Ljava/lang/Runnable;)V
     .locals 3
 
-    .line 27
     invoke-static {}, Lcom/samsung/android/server/audio/AudioExecutor;->init()V
 
-    .line 29
     invoke-static {}, Landroid/os/Debug;->getCaller()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 31
     sget-object v1, Lcom/samsung/android/server/audio/AudioExecutor;->sExecutor:Landroid/os/HandlerExecutor;
 
     new-instance v2, Lcom/samsung/android/server/audio/AudioExecutor$$ExternalSyntheticLambda0;
@@ -47,23 +43,19 @@
 
     monitor-enter v0
 
-    .line 19
     :try_start_0
     sget-object v1, Lcom/samsung/android/server/audio/AudioExecutor;->sExecutor:Landroid/os/HandlerExecutor;
 
     if-nez v1, :cond_0
 
-    .line 20
     new-instance v1, Landroid/os/HandlerThread;
 
     const-string v2, "AS.AudioExecutor"
 
     invoke-direct {v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 21
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 22
     new-instance v2, Landroid/os/HandlerExecutor;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
@@ -76,7 +68,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
     :cond_0
     monitor-exit v0
 
@@ -93,15 +84,12 @@
 .method public static synthetic lambda$execute$0(Ljava/lang/Runnable;Ljava/lang/String;)V
     .locals 4
 
-    .line 32
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 34
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
-    .line 36
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -114,7 +102,6 @@
 
     if-lez p0, :cond_0
 
-    .line 38
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

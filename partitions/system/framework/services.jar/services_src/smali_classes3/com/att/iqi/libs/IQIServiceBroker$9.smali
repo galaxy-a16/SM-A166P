@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/att/iqi/libs/IQIServiceBroker;)V
     .locals 0
 
-    .line 878
     iput-object p1, p0, Lcom/att/iqi/libs/IQIServiceBroker$9;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
 
     invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onSubscriptionsChanged()V
     .locals 2
 
-    .line 881
     iget-object v0, p0, Lcom/att/iqi/libs/IQIServiceBroker$9;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
 
     invoke-static {v0}, Lcom/att/iqi/libs/IQIServiceBroker;->-$$Nest$fgetmContext(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/content/Context;
@@ -39,7 +37,6 @@
 
     check-cast v0, Landroid/telephony/SubscriptionManager;
 
-    .line 882
     iget-object v1, p0, Lcom/att/iqi/libs/IQIServiceBroker$9;->this$0:Lcom/att/iqi/libs/IQIServiceBroker;
 
     invoke-static {v1}, Lcom/att/iqi/libs/IQIServiceBroker;->-$$Nest$fgetmMessageDispatcher(Lcom/att/iqi/libs/IQIServiceBroker;)Landroid/os/Handler;
@@ -54,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 884
     invoke-static {v0}, Lcom/att/iqi/libs/IQIConcierge;->updateSubscriptions(Landroid/telephony/SubscriptionManager;)Z
 
     move-result v0
@@ -68,13 +64,11 @@
     :cond_0
     const/4 v0, 0x3
 
-    .line 883
     :goto_0
     invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 882
     invoke-virtual {v1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void

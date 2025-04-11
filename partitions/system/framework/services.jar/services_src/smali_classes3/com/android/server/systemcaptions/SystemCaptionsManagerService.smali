@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 32
     new-instance v0, Lcom/android/server/infra/FrameworkResourcesServiceNameResolver;
 
     const v1, 0x1040314
@@ -28,7 +27,6 @@
 .method public bridge synthetic newServiceLocked(IZ)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 27
     invoke-virtual {p0, p1, p2}, Lcom/android/server/systemcaptions/SystemCaptionsManagerService;->newServiceLocked(IZ)Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;
 
     move-result-object p0
@@ -39,14 +37,12 @@
 .method public newServiceLocked(IZ)Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;
     .locals 2
 
-    .line 49
     new-instance v0, Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;
 
     iget-object v1, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     invoke-direct {v0, p0, v1, p2, p1}, Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;-><init>(Lcom/android/server/systemcaptions/SystemCaptionsManagerService;Ljava/lang/Object;ZI)V
 
-    .line 51
     invoke-virtual {v0}, Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;->initializeLocked()V
 
     return-object v0
@@ -55,7 +51,6 @@
 .method public bridge synthetic onServiceRemoved(Lcom/android/server/infra/AbstractPerUserSystemService;I)V
     .locals 0
 
-    .line 27
     check-cast p1, Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/systemcaptions/SystemCaptionsManagerService;->onServiceRemoved(Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;I)V
@@ -66,16 +61,13 @@
 .method public onServiceRemoved(Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;I)V
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 59
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/systemcaptions/SystemCaptionsManagerPerUserService;->destroyLocked()V
 
-    .line 60
     monitor-exit p0
 
     return-void
@@ -93,6 +85,5 @@
 .method public onStart()V
     .locals 0
 
-    .line 0
     return-void
 .end method

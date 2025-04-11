@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/broadcastradio/ProgramListChunk;
     .locals 0
 
-    .line 16
     new-instance p0, Landroid/hardware/broadcastradio/ProgramListChunk;
 
     invoke-direct {p0}, Landroid/hardware/broadcastradio/ProgramListChunk;-><init>()V
 
-    .line 17
     invoke-virtual {p0, p1}, Landroid/hardware/broadcastradio/ProgramListChunk;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 13
     invoke-virtual {p0, p1}, Landroid/hardware/broadcastradio/ProgramListChunk$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/broadcastradio/ProgramListChunk;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/broadcastradio/ProgramListChunk;
     .locals 0
 
-    .line 22
     new-array p0, p1, [Landroid/hardware/broadcastradio/ProgramListChunk;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 13
     invoke-virtual {p0, p1}, Landroid/hardware/broadcastradio/ProgramListChunk$1;->newArray(I)[Landroid/hardware/broadcastradio/ProgramListChunk;
 
     move-result-object p0

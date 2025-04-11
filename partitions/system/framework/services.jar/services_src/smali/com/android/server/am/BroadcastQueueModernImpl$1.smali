@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/BroadcastQueueModernImpl;)V
     .locals 0
 
-    .line 1802
     iput-object p1, p0, Lcom/android/server/am/BroadcastQueueModernImpl$1;->this$0:Lcom/android/server/am/BroadcastQueueModernImpl;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 1806
     iget-object p3, p0, Lcom/android/server/am/BroadcastQueueModernImpl$1;->this$0:Lcom/android/server/am/BroadcastQueueModernImpl;
 
     iget-object p3, p3, Lcom/android/server/am/BroadcastQueue;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -37,7 +35,6 @@
 
     if-ne p2, p4, :cond_0
 
-    .line 1808
     :try_start_0
     iget-object p2, p0, Lcom/android/server/am/BroadcastQueueModernImpl$1;->this$0:Lcom/android/server/am/BroadcastQueueModernImpl;
 
@@ -51,7 +48,6 @@
 
     goto :goto_0
 
-    .line 1810
     :cond_0
     iget-object p2, p0, Lcom/android/server/am/BroadcastQueueModernImpl$1;->this$0:Lcom/android/server/am/BroadcastQueueModernImpl;
 
@@ -61,13 +57,11 @@
 
     invoke-virtual {p2, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 1812
     :goto_0
     iget-object p0, p0, Lcom/android/server/am/BroadcastQueueModernImpl$1;->this$0:Lcom/android/server/am/BroadcastQueueModernImpl;
 
     invoke-static {p0, p1}, Lcom/android/server/am/BroadcastQueueModernImpl;->-$$Nest$mrefreshProcessQueuesLocked(Lcom/android/server/am/BroadcastQueueModernImpl;I)V
 
-    .line 1813
     monitor-exit p3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

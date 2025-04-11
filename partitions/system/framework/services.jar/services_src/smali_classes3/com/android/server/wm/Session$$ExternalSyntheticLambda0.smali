@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/Session$$ExternalSyntheticLambda0;->f$0:Landroid/os/IBinder;
@@ -27,7 +26,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/Session$$ExternalSyntheticLambda0;->f$0:Landroid/os/IBinder;
 
     check-cast p1, Lcom/android/server/wm/WallpaperController;

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubService;I)V
     .locals 0
 
-    .line 633
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubService$9;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iput p2, p0, Lcom/android/server/location/contexthub/ContextHubService$9;->val$contextHubId:I
@@ -28,14 +27,12 @@
 .method public onQueryResponse(ILjava/util/List;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onTransactionComplete(I)V
     .locals 1
 
-    .line 636
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubService$9;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubService$9;->val$contextHubId:I

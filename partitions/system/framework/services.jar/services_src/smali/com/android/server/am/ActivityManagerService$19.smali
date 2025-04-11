@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;I)V
     .locals 0
 
-    .line 11188
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$19;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$19;->val$callingPid:I
@@ -31,7 +30,6 @@
 .method public binderDied()V
     .locals 1
 
-    .line 11191
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$19;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {v0}, Lcom/android/server/am/ActivityManagerService;->-$$Nest$fgetmStrictModeCallbacks(Lcom/android/server/am/ActivityManagerService;)Landroid/util/SparseArray;

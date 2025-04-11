@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 303
     invoke-direct {p0}, Landroid/os/BatteryStats$LongCounter;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getCountForProcessState(I)J
     .locals 0
 
-    .line 0
     const-wide/16 p0, 0x0
 
     return-wide p0
@@ -27,7 +25,6 @@
 .method public getCountLocked(I)J
     .locals 0
 
-    .line 0
     const-wide/16 p0, 0x0
 
     return-wide p0
@@ -36,7 +33,6 @@
 .method public logState(Landroid/util/Printer;Ljava/lang/String;)V
     .locals 0
 
-    .line 316
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

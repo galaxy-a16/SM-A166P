@@ -7,7 +7,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 14
     invoke-direct {p0, p1, p2}, Lco/nstant/in/cbor/encoder/AbstractEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     return-void
@@ -18,26 +17,22 @@
 .method public encode(Lco/nstant/in/cbor/model/ByteString;)V
     .locals 3
 
-    .line 19
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/ByteString;->getBytes()[B
 
     move-result-object v0
 
-    .line 20
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/ByteString;->isChunked()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 21
     sget-object p1, Lco/nstant/in/cbor/model/MajorType;->BYTE_STRING:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encodeTypeChunked(Lco/nstant/in/cbor/model/MajorType;)V
 
     if-eqz v0, :cond_2
 
-    .line 23
     new-instance p1, Lco/nstant/in/cbor/model/ByteString;
 
     invoke-direct {p1, v0}, Lco/nstant/in/cbor/model/ByteString;-><init>([B)V
@@ -49,7 +44,6 @@
     :cond_0
     if-nez v0, :cond_1
 
-    .line 26
     iget-object p0, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encoder:Lco/nstant/in/cbor/CborEncoder;
 
     sget-object p1, Lco/nstant/in/cbor/model/SimpleValue;->NULL:Lco/nstant/in/cbor/model/SimpleValue;
@@ -58,7 +52,6 @@
 
     goto :goto_0
 
-    .line 28
     :cond_1
     sget-object p1, Lco/nstant/in/cbor/model/MajorType;->BYTE_STRING:Lco/nstant/in/cbor/model/MajorType;
 
@@ -68,7 +61,6 @@
 
     invoke-virtual {p0, p1, v1, v2}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encodeTypeAndLength(Lco/nstant/in/cbor/model/MajorType;J)V
 
-    .line 29
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write([B)V
 
     :cond_2

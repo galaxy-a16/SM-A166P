@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;)V
     .locals 0
 
-    .line 1005
     iput-object p1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1$1;->this$2:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 1
 
-    .line 1008
     iget-object p0, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1$1;->this$2:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;
 
     iget-object p0, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;

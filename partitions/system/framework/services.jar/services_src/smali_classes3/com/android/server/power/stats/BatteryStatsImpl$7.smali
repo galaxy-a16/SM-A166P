@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;II)V
     .locals 0
 
-    .line 13485
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$7;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iput p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$7;->val$oldState:I
@@ -35,21 +34,18 @@
 .method public run()V
     .locals 3
 
-    .line 13487
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$7;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-virtual {v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->getBatteryPermil()I
 
     move-result v0
 
-    .line 13488
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$7;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$7;->val$oldState:I
 
     invoke-static {v1, v2, v0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$mupdateOldDischargeSubScreenLevelPermilLocked(Lcom/android/server/power/stats/BatteryStatsImpl;II)V
 
-    .line 13489
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$7;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$7;->val$newState:I

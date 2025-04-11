@@ -13,10 +13,8 @@
 
     const/4 v0, 0x0
 
-    .line 145
     invoke-direct {p0, p1, v0}, Lcom/android/server/firewall/StringFilter;-><init>(Lcom/android/server/firewall/StringFilter$ValueProvider;Lcom/android/server/firewall/StringFilter-IA;)V
 
-    .line 146
     iput-object p2, p0, Lcom/android/server/firewall/StringFilter$EqualsFilter;->mFilterValue:Ljava/lang/String;
 
     return-void
@@ -29,7 +27,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 151
     iget-object p0, p0, Lcom/android/server/firewall/StringFilter$EqualsFilter;->mFilterValue:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/IAccountManagerResponse;Ljava/lang/String;ZZLjava/lang/String;ZZLandroid/accounts/Account;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 4102
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$12;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p10, p0, Lcom/android/server/accounts/AccountManagerService$12;->val$account:Landroid/accounts/Account;
@@ -32,12 +31,10 @@
 .method public run()V
     .locals 3
 
-    .line 4105
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$Session;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     if-eqz v0, :cond_0
 
-    .line 4106
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$12;->val$account:Landroid/accounts/Account;
 
     iget-object v2, p0, Lcom/android/server/accounts/AccountManagerService$12;->val$options:Landroid/os/Bundle;
@@ -51,7 +48,6 @@
 .method public toDebugString(J)Ljava/lang/String;
     .locals 1
 
-    .line 4111
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +64,6 @@
 
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerService$12;->val$account:Landroid/accounts/Account;
 
-    .line 4112
     invoke-virtual {p0}, Landroid/accounts/Account;->toSafeString()Ljava/lang/String;
 
     move-result-object p0

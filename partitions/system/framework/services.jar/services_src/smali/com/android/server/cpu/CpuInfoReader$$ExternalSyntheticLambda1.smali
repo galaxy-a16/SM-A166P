@@ -20,7 +20,6 @@
 .method public final accept(Ljava/io/File;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/cpu/CpuInfoReader;->$r8$lambda$3raLXB5fVt6rSou3d3T2U1IJcVM(Ljava/io/File;)Z
 
     move-result p0

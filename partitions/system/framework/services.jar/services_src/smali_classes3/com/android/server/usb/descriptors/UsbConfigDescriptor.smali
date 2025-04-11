@@ -25,10 +25,8 @@
 .method public constructor <init>(IB)V
     .locals 0
 
-    .line 50
     invoke-direct {p0, p1, p2}, Lcom/android/server/usb/descriptors/UsbDescriptor;-><init>(IB)V
 
-    .line 46
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -37,7 +35,6 @@
 
     const/4 p1, 0x2
 
-    .line 51
     iput p1, p0, Lcom/android/server/usb/descriptors/UsbDescriptor;->mHierarchyLevel:I
 
     return-void
@@ -48,7 +45,6 @@
 .method public addInterfaceDescriptor(Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;)V
     .locals 0
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mInterfaceDescriptors:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -59,7 +55,6 @@
 .method public getAttribs()I
     .locals 0
 
-    .line 71
     iget p0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mAttribs:I
 
     return p0
@@ -68,7 +63,6 @@
 .method public getConfigValue()I
     .locals 0
 
-    .line 63
     iget p0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mConfigValue:I
 
     return p0
@@ -77,7 +71,6 @@
 .method public getInterfaceDescriptors()Ljava/util/ArrayList;
     .locals 0
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mInterfaceDescriptors:Ljava/util/ArrayList;
 
     return-object p0
@@ -86,7 +79,6 @@
 .method public getNumInterfaces()B
     .locals 0
 
-    .line 59
     iget-byte p0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mNumInterfaces:B
 
     return p0
@@ -95,7 +87,6 @@
 .method public final isAudioInterface(Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;)Z
     .locals 1
 
-    .line 87
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;->getUsbClass()I
 
     move-result p0
@@ -104,7 +95,6 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 88
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;->getUsbSubclass()I
 
     move-result p0
@@ -125,49 +115,42 @@
 .method public parseRawDescriptors(Lcom/android/server/usb/descriptors/ByteStream;)I
     .locals 1
 
-    .line 120
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->unpackUsbShort()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mTotalLength:I
 
-    .line 121
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mNumInterfaces:B
 
-    .line 122
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getUnsignedByte()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mConfigValue:I
 
-    .line 123
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mConfigIndex:B
 
-    .line 124
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getUnsignedByte()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mAttribs:I
 
-    .line 125
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/ByteStream;->getUnsignedByte()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mMaxPower:I
 
-    .line 127
     iget p0, p0, Lcom/android/server/usb/descriptors/UsbDescriptor;->mLength:I
 
     return p0
@@ -176,13 +159,10 @@
 .method public report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
     .locals 2
 
-    .line 132
     invoke-super {p0, p1}, Lcom/android/server/usb/descriptors/UsbDescriptor;->report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
 
-    .line 134
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->openList()V
 
-    .line 135
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,7 +183,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 136
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -224,7 +203,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 137
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -249,7 +227,6 @@
 
     invoke-virtual {p1, p0}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->writeListItem(Ljava/lang/String;)V
 
-    .line 138
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/report/ReportCanvas;->closeList()V
 
     return-void
@@ -258,14 +235,12 @@
 .method public toAndroid(Lcom/android/server/usb/descriptors/UsbDescriptorParser;)Landroid/hardware/usb/UsbConfiguration;
     .locals 5
 
-    .line 102
     iget-byte v0, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mConfigIndex:B
 
     invoke-virtual {p1, v0}, Lcom/android/server/usb/descriptors/UsbDescriptorParser;->getDescriptorString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 103
     new-instance v1, Landroid/hardware/usb/UsbConfiguration;
 
     iget v2, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mConfigValue:I
@@ -276,12 +251,10 @@
 
     invoke-direct {v1, v2, v0, v3, v4}, Landroid/hardware/usb/UsbConfiguration;-><init>(ILjava/lang/String;II)V
 
-    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 107
     iget-object v2, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mInterfaceDescriptors:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -302,7 +275,6 @@
 
     check-cast v3, Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;
 
-    .line 108
     iget-boolean v4, p0, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;->mBlockAudio:Z
 
     if-eqz v4, :cond_1
@@ -313,7 +285,6 @@
 
     if-nez v4, :cond_0
 
-    .line 109
     :cond_1
     invoke-virtual {v3, p1}, Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;->toAndroid(Lcom/android/server/usb/descriptors/UsbDescriptorParser;)Landroid/hardware/usb/UsbInterface;
 
@@ -328,14 +299,12 @@
 
     new-array p0, p0, [Landroid/hardware/usb/UsbInterface;
 
-    .line 113
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, [Landroid/hardware/usb/UsbInterface;
 
-    .line 114
     invoke-virtual {v1, p0}, Landroid/hardware/usb/UsbConfiguration;->setInterfaces([Landroid/os/Parcelable;)V
 
     return-object v1

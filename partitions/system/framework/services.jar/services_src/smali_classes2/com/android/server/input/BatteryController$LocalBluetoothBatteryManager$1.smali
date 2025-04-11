@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;)V
     .locals 0
 
-    .line 965
     iput-object p1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager$1;->this$0:Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.bluetooth.device.action.BATTERY_LEVEL_CHANGED"
 
-    .line 968
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -42,7 +40,6 @@
     :cond_0
     const-string p1, "android.bluetooth.device.extra.DEVICE"
 
-    .line 971
     const-class v0, Landroid/bluetooth/BluetoothDevice;
 
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -60,12 +57,10 @@
 
     const/4 v1, -0x1
 
-    .line 976
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 978
     iget-object v0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager$1;->this$0:Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;
 
     invoke-static {v0}, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->-$$Nest$fgetmBroadcastReceiver(Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;)Landroid/content/BroadcastReceiver;
@@ -74,7 +69,6 @@
 
     monitor-enter v0
 
-    .line 979
     :try_start_0
     iget-object v1, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager$1;->this$0:Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;
 
@@ -84,27 +78,22 @@
 
     if-eqz v1, :cond_2
 
-    .line 980
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 981
     iget-object p0, p0, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager$1;->this$0:Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;
 
     invoke-static {p0}, Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;->-$$Nest$fgetmRegisteredListener(Lcom/android/server/input/BatteryController$LocalBluetoothBatteryManager;)Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;
 
     move-result-object p0
 
-    .line 982
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 981
     invoke-interface {p0, v1, v2, p1, p2}, Lcom/android/server/input/BatteryController$BluetoothBatteryManager$BluetoothBatteryListener;->onBluetoothBatteryChanged(JLjava/lang/String;I)V
 
-    .line 984
     :cond_2
     monitor-exit v0
 

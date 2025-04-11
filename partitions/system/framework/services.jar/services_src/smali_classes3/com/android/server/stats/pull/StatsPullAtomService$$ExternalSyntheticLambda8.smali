@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/stats/pull/netstats/NetworkStatsExt;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/stats/pull/StatsPullAtomService$$ExternalSyntheticLambda8;->f$0:Lcom/android/server/stats/pull/netstats/NetworkStatsExt;
@@ -27,7 +26,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/stats/pull/StatsPullAtomService$$ExternalSyntheticLambda8;->f$0:Lcom/android/server/stats/pull/netstats/NetworkStatsExt;
 
     check-cast p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;

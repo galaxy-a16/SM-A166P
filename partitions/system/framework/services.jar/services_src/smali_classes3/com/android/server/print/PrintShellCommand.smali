@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/print/IPrintManager;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/print/PrintShellCommand;->mService:Landroid/print/IPrintManager;
 
     return-void
@@ -27,7 +25,6 @@
 
     if-nez p1, :cond_0
 
-    .line 41
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
@@ -37,7 +34,6 @@
     :cond_0
     const-string v0, "get-bind-instant-service-allowed"
 
-    .line 43
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -56,7 +52,6 @@
 
     return p0
 
-    .line 48
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/print/PrintShellCommand;->runSetBindInstantServiceAllowed()I
 
@@ -64,7 +59,6 @@
 
     return p0
 
-    .line 45
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/print/PrintShellCommand;->runGetBindInstantServiceAllowed()I
 
@@ -76,44 +70,36 @@
 .method public onHelp()V
     .locals 1
 
-    .line 101
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Print service commands:"
 
-    .line 102
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 103
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 104
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  set-bind-instant-service-allowed [--user <USER_ID>] true|false "
 
-    .line 105
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Set whether binding to print services provided by instant apps is allowed."
 
-    .line 106
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  get-bind-instant-service-allowed [--user <USER_ID>]"
 
-    .line 108
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Get whether binding to print services provided by instant apps is allowed."
 
-    .line 109
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -122,7 +108,6 @@
 .method public final parseUserId()Ljava/lang/Integer;
     .locals 3
 
-    .line 87
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
     move-result-object v0
@@ -131,14 +116,12 @@
 
     const-string v1, "--user"
 
-    .line 89
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 90
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object p0
@@ -153,7 +136,6 @@
 
     return-object p0
 
-    .line 92
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
@@ -182,7 +164,6 @@
     :cond_1
     const/4 p0, 0x0
 
-    .line 96
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -193,7 +174,6 @@
 .method public final runGetBindInstantServiceAllowed()I
     .locals 2
 
-    .line 55
     invoke-virtual {p0}, Lcom/android/server/print/PrintShellCommand;->parseUserId()Ljava/lang/Integer;
 
     move-result-object v0
@@ -204,7 +184,6 @@
 
     return p0
 
-    .line 60
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
@@ -213,7 +192,6 @@
 
     iget-object p0, p0, Lcom/android/server/print/PrintShellCommand;->mService:Landroid/print/IPrintManager;
 
-    .line 61
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -226,7 +204,6 @@
 
     move-result-object p0
 
-    .line 60
     invoke-virtual {v1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -236,7 +213,6 @@
     :catch_0
     move-exception p0
 
-    .line 63
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
 
     :goto_0
@@ -248,7 +224,6 @@
 .method public final runSetBindInstantServiceAllowed()I
     .locals 3
 
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/print/PrintShellCommand;->parseUserId()Ljava/lang/Integer;
 
     move-result-object v0
@@ -259,7 +234,6 @@
 
     return v1
 
-    .line 73
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -267,7 +241,6 @@
 
     if-nez v2, :cond_1
 
-    .line 75
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -278,7 +251,6 @@
 
     return v1
 
-    .line 79
     :cond_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/print/PrintShellCommand;->mService:Landroid/print/IPrintManager;
@@ -300,7 +272,6 @@
     :catch_0
     move-exception p0
 
-    .line 81
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
 
     :goto_0

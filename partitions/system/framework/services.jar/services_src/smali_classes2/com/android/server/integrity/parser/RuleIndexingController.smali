@@ -15,29 +15,24 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     new-instance v0, Lcom/android/server/integrity/model/BitInputStream;
 
     invoke-direct {v0, p1}, Lcom/android/server/integrity/model/BitInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 49
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/parser/RuleIndexingController;->getNextIndexGroup(Lcom/android/server/integrity/model/BitInputStream;)Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
     sput-object p1, Lcom/android/server/integrity/parser/RuleIndexingController;->sPackageNameBasedIndexes:Ljava/util/LinkedHashMap;
 
-    .line 50
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/parser/RuleIndexingController;->getNextIndexGroup(Lcom/android/server/integrity/model/BitInputStream;)Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
     sput-object p1, Lcom/android/server/integrity/parser/RuleIndexingController;->sAppCertificateBasedIndexes:Ljava/util/LinkedHashMap;
 
-    .line 51
     invoke-virtual {p0, v0}, Lcom/android/server/integrity/parser/RuleIndexingController;->getNextIndexGroup(Lcom/android/server/integrity/model/BitInputStream;)Ljava/util/LinkedHashMap;
 
     move-result-object p0
@@ -50,7 +45,6 @@
 .method public static searchIndexingKeysRangeContainingKey(Ljava/util/LinkedHashMap;Ljava/lang/String;)Lcom/android/server/integrity/parser/RuleIndexRange;
     .locals 4
 
-    .line 103
     invoke-virtual {p0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -69,7 +63,6 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 105
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -84,10 +77,8 @@
 
     move-result-object p1
 
-    .line 106
     new-instance v0, Lcom/android/server/integrity/parser/RuleIndexRange;
 
-    .line 107
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -132,7 +123,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 116
     invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -155,34 +145,29 @@
 
     return-object p0
 
-    .line 119
     :cond_0
     div-int/lit8 v0, v0, 0x2
 
     add-int/2addr v0, p2
 
-    .line 120
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 122
     invoke-virtual {p1, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v1
 
     if-ltz v1, :cond_1
 
-    .line 123
     invoke-static {p0, p1, v0, p3}, Lcom/android/server/integrity/parser/RuleIndexingController;->searchKeysRangeContainingKey(Ljava/util/List;Ljava/lang/String;II)Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 125
     :cond_1
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/integrity/parser/RuleIndexingController;->searchKeysRangeContainingKey(Ljava/util/List;Ljava/lang/String;II)Ljava/util/List;
 
@@ -190,7 +175,6 @@
 
     return-object p0
 
-    .line 113
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -206,12 +190,10 @@
 .method public final getNextIndexGroup(Lcom/android/server/integrity/model/BitInputStream;)Ljava/util/LinkedHashMap;
     .locals 2
 
-    .line 84
     new-instance p0, Ljava/util/LinkedHashMap;
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 85
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/integrity/model/BitInputStream;->hasNext()Z
 
@@ -219,17 +201,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 86
     invoke-static {p1}, Lcom/android/server/integrity/parser/BinaryFileOperations;->getStringValue(Lcom/android/server/integrity/model/BitInputStream;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 87
     invoke-static {p1}, Lcom/android/server/integrity/parser/BinaryFileOperations;->getIntValue(Lcom/android/server/integrity/model/BitInputStream;)I
 
     move-result v1
 
-    .line 89
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -238,14 +217,12 @@
 
     const-string v1, "END_KEY"
 
-    .line 91
     invoke-virtual {v0, v1}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 95
     :cond_1
     invoke-virtual {p0}, Ljava/util/LinkedHashMap;->size()I
 
@@ -257,7 +234,6 @@
 
     return-object p0
 
-    .line 96
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -271,28 +247,22 @@
 .method public identifyRulesToEvaluate(Landroid/content/integrity/AppInstallMetadata;)Ljava/util/List;
     .locals 3
 
-    .line 59
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 62
     sget-object v0, Lcom/android/server/integrity/parser/RuleIndexingController;->sPackageNameBasedIndexes:Ljava/util/LinkedHashMap;
 
-    .line 64
     invoke-virtual {p1}, Landroid/content/integrity/AppInstallMetadata;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 63
     invoke-static {v0, v1}, Lcom/android/server/integrity/parser/RuleIndexingController;->searchIndexingKeysRangeContainingKey(Ljava/util/LinkedHashMap;Ljava/lang/String;)Lcom/android/server/integrity/parser/RuleIndexRange;
 
     move-result-object v0
 
-    .line 62
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 67
     invoke-virtual {p1}, Landroid/content/integrity/AppInstallMetadata;->getAppCertificates()Ljava/util/List;
 
     move-result-object p1
@@ -314,20 +284,16 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 68
     sget-object v1, Lcom/android/server/integrity/parser/RuleIndexingController;->sAppCertificateBasedIndexes:Ljava/util/LinkedHashMap;
 
-    .line 69
     invoke-static {v1, v0}, Lcom/android/server/integrity/parser/RuleIndexingController;->searchIndexingKeysRangeContainingKey(Ljava/util/LinkedHashMap;Ljava/lang/String;)Lcom/android/server/integrity/parser/RuleIndexRange;
 
     move-result-object v0
 
-    .line 68
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 74
     :cond_0
     new-instance p1, Lcom/android/server/integrity/parser/RuleIndexRange;
 
@@ -335,7 +301,6 @@
 
     const-string v1, "START_KEY"
 
-    .line 76
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -350,7 +315,6 @@
 
     const-string v2, "END_KEY"
 
-    .line 77
     invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -363,7 +327,6 @@
 
     invoke-direct {p1, v0, v1}, Lcom/android/server/integrity/parser/RuleIndexRange;-><init>(II)V
 
-    .line 74
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p0

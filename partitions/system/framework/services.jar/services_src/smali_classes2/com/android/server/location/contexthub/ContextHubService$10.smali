@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubService;I)V
     .locals 0
 
-    .line 652
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubService$10;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iput p2, p0, Lcom/android/server/location/contexthub/ContextHubService$10;->val$contextHubId:I
@@ -38,7 +37,6 @@
 
     aput-byte p1, p2, v0
 
-    .line 660
     iget-object p1, p0, Lcom/android/server/location/contexthub/ContextHubService$10;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     iget p0, p0, Lcom/android/server/location/contexthub/ContextHubService$10;->val$contextHubId:I
@@ -55,6 +53,5 @@
 .method public onTransactionComplete(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

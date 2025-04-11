@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/AppWarnings$BaseDialog;)V
     .locals 0
 
-    .line 615
     iput-object p1, p0, Lcom/android/server/wm/AppWarnings$BaseDialog$1;->this$0:Lcom/android/server/wm/AppWarnings$BaseDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
-    .line 618
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 619
     iget-object p1, p0, Lcom/android/server/wm/AppWarnings$BaseDialog$1;->this$0:Lcom/android/server/wm/AppWarnings$BaseDialog;
 
     iget-object p1, p1, Lcom/android/server/wm/AppWarnings$BaseDialog;->mManager:Lcom/android/server/wm/AppWarnings;

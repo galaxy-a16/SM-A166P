@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityManagerPerformance;)V
     .locals 0
 
-    .line 152
     iput-object p1, p0, Lcom/android/server/wm/ActivityManagerPerformance$1;->this$0:Lcom/android/server/wm/ActivityManagerPerformance;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onStateChanged(I)V
     .locals 2
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/wm/ActivityManagerPerformance$1;->this$0:Lcom/android/server/wm/ActivityManagerPerformance;
 
     if-nez p1, :cond_0
@@ -42,19 +40,16 @@
     :goto_0
     invoke-static {p0, v0}, Lcom/android/server/wm/ActivityManagerPerformance;->-$$Nest$fputmIsFolded(Lcom/android/server/wm/ActivityManagerPerformance;Z)V
 
-    .line 156
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Lcom/android/server/wm/ActivityManagerPerformance;->-$$Nest$sfputmFoldListenedTime(J)V
 
-    .line 157
     sget-boolean p0, Lcom/android/server/wm/ActivityManagerPerformance;->DEBUG:Z
 
     if-eqz p0, :cond_1
 
-    .line 158
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

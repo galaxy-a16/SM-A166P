@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRecordDone(Lcom/android/server/am/Pageboost$IoRecord;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/am/Pageboost$IoRecord;->mRecordDone:Z
 
     return p0
@@ -32,47 +31,37 @@
 .method public constructor <init>(Lcom/android/server/am/Pageboost$PageboostAppInfo;I)V
     .locals 3
 
-    .line 1687
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 1678
     iput v0, p0, Lcom/android/server/am/Pageboost$IoRecord;->mPid:I
 
     const-wide/16 v1, 0x0
 
-    .line 1682
     iput-wide v1, p0, Lcom/android/server/am/Pageboost$IoRecord;->mBytesRecorded:J
 
-    .line 1683
     iput-boolean v0, p0, Lcom/android/server/am/Pageboost$IoRecord;->mCorrectness:Z
 
-    .line 1684
     iput-boolean v0, p0, Lcom/android/server/am/Pageboost$IoRecord;->mRecordDone:Z
 
     if-gtz p2, :cond_0
 
     return-void
 
-    .line 1692
     :cond_0
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1695
     iput p2, p0, Lcom/android/server/am/Pageboost$IoRecord;->mPid:I
 
-    .line 1696
     iget-object p2, p1, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mName:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/android/server/am/Pageboost$IoRecord;->mPkg:Ljava/lang/String;
 
-    .line 1697
     iput-object p1, p0, Lcom/android/server/am/Pageboost$IoRecord;->mApp:Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
-    .line 1699
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +94,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1701
     iget p1, p0, Lcom/android/server/am/Pageboost$IoRecord;->mPid:I
 
     invoke-static {p1}, Lcom/android/server/am/Pageboost$PageboostAppCapture;->check64Bit(I)Z
@@ -114,7 +102,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/am/Pageboost$IoRecord;->is64bit:Z
 
-    .line 1702
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -148,10 +135,8 @@
 
     add-int/lit8 p0, p0, 0x7
 
-    .line 1758
     div-int/lit8 p0, p0, 0x8
 
-    .line 1759
     new-array p0, p0, [B
 
     return-object p0
@@ -164,7 +149,6 @@
 
     const-string v1, "1"
 
-    .line 1707
     invoke-static {v0, v1}, Lcom/android/server/am/Pageboost$IoRecord;->write(Ljava/lang/String;Ljava/lang/String;)Z
 
     return-void
@@ -173,7 +157,6 @@
 .method public static fillBitmap([BIIZ)V
     .locals 6
 
-    .line 1768
     rem-int/lit8 v0, p1, 0x8
 
     const/16 v1, 0xff
@@ -184,7 +167,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1769
     div-int/lit8 p1, p1, 0x8
 
     aget-byte v4, p0, p1
@@ -219,18 +201,15 @@
 
     int-to-byte v0, v0
 
-    .line 1777
     aput-byte v0, p0, p1
 
     add-int/2addr p1, v2
 
     mul-int/2addr p1, v3
 
-    .line 1782
     :cond_2
     div-int/2addr p1, v3
 
-    .line 1783
     div-int/lit8 v0, p2, 0x8
 
     const/4 v4, 0x0
@@ -249,16 +228,13 @@
     :goto_2
     int-to-byte v5, v5
 
-    .line 1790
     invoke-static {p0, p1, v0, v5}, Ljava/util/Arrays;->fill([BIIB)V
 
-    .line 1794
     :cond_4
     rem-int/2addr p2, v3
 
     if-eqz p2, :cond_7
 
-    .line 1795
     aget-byte p1, p0, v0
 
     and-int/2addr p1, v1
@@ -291,7 +267,6 @@
 
     int-to-byte p1, p1
 
-    .line 1803
     aput-byte p1, p0, v0
 
     :cond_7
@@ -303,14 +278,12 @@
 
     const/4 v0, 0x3
 
-    .line 1727
     aget-byte v0, p0, v0
 
     shl-int/lit8 v0, v0, 0x18
 
     const/4 v1, 0x2
 
-    .line 1728
     aget-byte v1, p0, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -321,7 +294,6 @@
 
     const/4 v1, 0x1
 
-    .line 1729
     aget-byte v1, p0, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -332,7 +304,6 @@
 
     const/4 v1, 0x0
 
-    .line 1730
     aget-byte p0, p0, v1
 
     and-int/lit16 p0, p0, 0xff
@@ -351,7 +322,6 @@
 
     add-int/lit8 v0, v0, 0x7
 
-    .line 1741
     div-int/lit8 v0, v0, 0x8
 
     int-to-long v0, v0
@@ -366,12 +336,10 @@
 
     sub-int/2addr p4, p1
 
-    .line 1746
     invoke-static {p4}, Lcom/android/server/am/Pageboost$IoRecord;->createBitmap(I)[B
 
     move-result-object p5
 
-    .line 1748
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -380,12 +348,10 @@
 
     sub-int/2addr p3, p1
 
-    .line 1750
     invoke-static {p5, p2, p3, v1}, Lcom/android/server/am/Pageboost$IoRecord;->fillBitmap([BIIZ)V
 
     const/4 p0, 0x1
 
-    .line 1752
     invoke-static {p5, p3, p4, p0}, Lcom/android/server/am/Pageboost$IoRecord;->fillBitmap([BIIZ)V
 
     goto :goto_0
@@ -400,7 +366,6 @@
 .method public static write(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
 
-    .line 1711
     :try_start_0
     new-instance v0, Ljava/io/FileWriter;
 
@@ -412,16 +377,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1712
     :try_start_1
     invoke-virtual {v0, p1}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 1713
     invoke-virtual {v0}, Ljava/io/FileWriter;->flush()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1714
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
     :try_end_2
@@ -434,7 +396,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1711
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
     :try_end_3
@@ -456,7 +417,6 @@
     :catch_0
     move-exception p0
 
-    .line 1715
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -469,7 +429,6 @@
 .method public getApp()Lcom/android/server/am/Pageboost$PageboostAppInfo;
     .locals 0
 
-    .line 1722
     iget-object p0, p0, Lcom/android/server/am/Pageboost$IoRecord;->mApp:Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
     return-object p0
@@ -478,7 +437,6 @@
 .method public getResultFromKernel()J
     .locals 8
 
-    .line 1922
     invoke-virtual {p0}, Lcom/android/server/am/Pageboost$IoRecord;->isCorrect()Z
 
     move-result v0
@@ -489,7 +447,6 @@
 
     return-wide v1
 
-    .line 1931
     :cond_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -513,7 +470,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1932
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -540,14 +496,12 @@
 
     const-string v3, "3"
 
-    .line 1935
     invoke-static {v0, v3}, Lcom/android/server/am/Pageboost$IoRecord;->write(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 1936
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -561,14 +515,12 @@
     :cond_1
     const-string v3, "4"
 
-    .line 1941
     invoke-static {v0, v3}, Lcom/android/server/am/Pageboost$IoRecord;->write(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 1942
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -585,7 +537,6 @@
     :try_start_0
     new-array v5, v3, [Ljava/lang/String;
 
-    .line 1948
     invoke-static {v0, v5}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object v5
@@ -594,7 +545,6 @@
 
     move-result-object v5
 
-    .line 1949
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v6
@@ -623,7 +573,6 @@
 
     invoke-static {v6, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1950
     invoke-virtual {p0, v5}, Lcom/android/server/am/Pageboost$IoRecord;->parsingResult([B)J
 
     move-result-wide v4
@@ -632,14 +581,12 @@
 
     const-string v6, "1"
 
-    .line 1957
     invoke-static {v0, v6}, Lcom/android/server/am/Pageboost$IoRecord;->write(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 1958
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -664,7 +611,6 @@
     :cond_4
     if-eqz v3, :cond_5
 
-    .line 1968
     iput-boolean v6, p0, Lcom/android/server/am/Pageboost$IoRecord;->mRecordDone:Z
 
     return-wide v4
@@ -672,7 +618,6 @@
     :cond_5
     return-wide v1
 
-    .line 1952
     :catch_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -688,7 +633,6 @@
 .method public isCorrect()Z
     .locals 0
 
-    .line 1975
     iget-boolean p0, p0, Lcom/android/server/am/Pageboost$IoRecord;->mCorrectness:Z
 
     return p0
@@ -701,7 +645,6 @@
 
     move-object/from16 v1, p1
 
-    .line 1817
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/Pageboost$IoRecord;->isCorrect()Z
 
     move-result v2
@@ -712,7 +655,6 @@
 
     return-wide v3
 
-    .line 1821
     :cond_0
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetmFileDB()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -724,7 +666,6 @@
 
     invoke-static {v2, v5}, Lcom/android/server/am/Pageboost$PageboostFileDBHelper;->dropTable(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V
 
-    .line 1822
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetmFileDB()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
@@ -739,7 +680,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1824
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -750,13 +690,11 @@
 
     return-wide v3
 
-    .line 1828
     :cond_1
     iget-object v3, v0, Lcom/android/server/am/Pageboost$IoRecord;->mApp:Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
     invoke-static {v3}, Lcom/android/server/am/Pageboost$PageboostAppInfo;->-$$Nest$minitAalPrefetchList(Lcom/android/server/am/Pageboost$PageboostAppInfo;)V
 
-    .line 1830
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -773,7 +711,6 @@
 
     move v13, v6
 
-    .line 1831
     :goto_0
     array-length v7, v1
 
@@ -781,12 +718,10 @@
 
     add-int/lit8 v7, v6, 0x4
 
-    .line 1837
     invoke-static {v1, v6, v7}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v6
 
-    .line 1838
     invoke-static {v6}, Lcom/android/server/am/Pageboost$IoRecord;->readInt([B)I
 
     move-result v12
@@ -800,19 +735,16 @@
     :cond_2
     add-int v6, v7, v12
 
-    .line 1845
     invoke-static {v1, v7, v6}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v7
 
-    .line 1846
     new-instance v10, Ljava/lang/String;
 
     sget-object v8, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-direct {v10, v7, v8}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 1849
     iget-object v7, v0, Lcom/android/server/am/Pageboost$IoRecord;->mApp:Lcom/android/server/am/Pageboost$PageboostAppInfo;
 
     iget-object v7, v7, Lcom/android/server/am/Pageboost$PageboostAppInfo;->mApkPath:Ljava/lang/String;
@@ -846,24 +778,20 @@
     :goto_2
     add-int/lit8 v7, v6, 0x4
 
-    .line 1858
     invoke-static {v1, v6, v7}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v6
 
-    .line 1859
     invoke-static {v6}, Lcom/android/server/am/Pageboost$IoRecord;->readInt([B)I
 
     move-result v8
 
     add-int/lit8 v14, v7, 0x4
 
-    .line 1861
     invoke-static {v1, v7, v14}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v6
 
-    .line 1862
     invoke-static {v6}, Lcom/android/server/am/Pageboost$IoRecord;->readInt([B)I
 
     move-result v7
@@ -874,7 +802,6 @@
 
     goto :goto_3
 
-    .line 1871
     :cond_4
     iget-boolean v6, v0, Lcom/android/server/am/Pageboost$IoRecord;->is64bit:Z
 
@@ -912,7 +839,6 @@
     :goto_3
     if-eqz v15, :cond_6
 
-    .line 1905
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetmFileDB()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v6
@@ -956,7 +882,6 @@
 
     move/from16 v19, v22
 
-    .line 1883
     invoke-static/range {v14 .. v19}, Lcom/android/server/am/Pageboost$IoRecord;->resizeBitmap([BIIIII)[B
 
     move-result-object v6
@@ -973,7 +898,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 1890
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetmFileDB()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v6
@@ -1017,13 +941,11 @@
 
     const/16 v17, -0x1
 
-    .line 1894
     :goto_5
     invoke-static {v14}, Lcom/android/server/am/Pageboost$IoRecord;->createBitmap(I)[B
 
     move-result-object v6
 
-    .line 1895
     invoke-static {v6, v3, v14, v5}, Lcom/android/server/am/Pageboost$IoRecord;->fillBitmap([BIIZ)V
 
     move v9, v15
@@ -1066,7 +988,6 @@
 
     goto/16 :goto_2
 
-    .line 1912
     :cond_c
     :goto_7
     invoke-static {}, Lcom/android/server/am/Pageboost;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -1089,7 +1010,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1913
     iput-wide v4, v0, Lcom/android/server/am/Pageboost$IoRecord;->mBytesRecorded:J
 
     return-wide v4

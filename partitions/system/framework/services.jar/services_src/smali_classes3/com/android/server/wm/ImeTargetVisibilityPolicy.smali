@@ -21,7 +21,6 @@
 
     return v0
 
-    .line 67
     :cond_0
     invoke-static {p0, p1}, Lcom/android/server/wm/ImeTargetVisibilityPolicy;->shouldComputeImeParentForEmbeddedActivity(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/InputTarget;)Z
 
@@ -33,13 +32,11 @@
 
     return v2
 
-    .line 79
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 80
     invoke-static {v1}, Landroid/view/WindowManager$LayoutParams;->mayUseInputMethod(I)Z
 
     move-result v1
@@ -68,10 +65,8 @@
     :goto_1
     if-eqz p1, :cond_5
 
-    .line 83
     iget-object v3, p0, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 84
     invoke-interface {p1}, Lcom/android/server/wm/InputTarget;->getActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p1
@@ -89,7 +84,6 @@
     :goto_2
     move p1, v2
 
-    .line 86
     :goto_3
     invoke-virtual {p0}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
@@ -123,7 +117,6 @@
 
     goto :goto_0
 
-    .line 121
     :cond_0
     invoke-interface {p1}, Lcom/android/server/wm/InputTarget;->getWindowState()Lcom/android/server/wm/WindowState;
 
@@ -131,14 +124,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 122
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->isAttached()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 123
     invoke-virtual {v1}, Lcom/android/server/wm/WindowContainer;->isAttached()Z
 
     move-result v2
@@ -147,13 +138,11 @@
 
     goto :goto_0
 
-    .line 127
     :cond_1
     invoke-interface {p1}, Lcom/android/server/wm/InputTarget;->getActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p1
 
-    .line 128
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->getActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v2
@@ -164,7 +153,6 @@
 
     if-eq p1, v2, :cond_3
 
-    .line 131
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v3
@@ -175,7 +163,6 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 132
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isEmbedded()Z
 
     move-result p1
@@ -190,7 +177,6 @@
 
     goto :goto_0
 
-    .line 136
     :cond_2
     invoke-virtual {p0, v1}, Lcom/android/server/wm/WindowContainer;->compareTo(Lcom/android/server/wm/WindowContainer;)I
 

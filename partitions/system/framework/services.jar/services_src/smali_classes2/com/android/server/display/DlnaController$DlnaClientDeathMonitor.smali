@@ -18,12 +18,10 @@
 .method public constructor <init>(Lcom/android/server/display/DlnaController;Landroid/os/IBinder;I)V
     .locals 2
 
-    .line 138
     iput-object p1, p0, Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,15 +44,12 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     iput-object p2, p0, Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;->mBinder:Landroid/os/IBinder;
 
-    .line 141
     iput p3, p0, Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;->mPlayerType:I
 
     const/4 p1, 0x0
 
-    .line 143
     :try_start_0
     invoke-interface {p2, p0, p1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -62,7 +57,6 @@
 
     goto :goto_0
 
-    .line 145
     :catch_0
     invoke-virtual {p0}, Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;->binderDied()V
 
@@ -79,10 +73,8 @@
 
     const-string v1, "binderDied"
 
-    .line 151
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     iget-object v0, p0, Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-static {v0}, Lcom/android/server/display/DlnaController;->-$$Nest$fgetmHandler(Lcom/android/server/display/DlnaController;)Landroid/os/Handler;
@@ -105,10 +97,8 @@
 
     const-string/jumbo v1, "unlinkToDeath"
 
-    .line 168
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     iget-object v0, p0, Lcom/android/server/display/DlnaController$DlnaClientDeathMonitor;->mBinder:Landroid/os/IBinder;
 
     const/4 v1, 0x0

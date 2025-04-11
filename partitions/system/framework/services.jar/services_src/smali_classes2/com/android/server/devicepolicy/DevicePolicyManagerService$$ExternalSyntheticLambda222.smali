@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->$r8$lambda$SFtxos4oiafRMZQaYUzNDtR2A7o(I)[Ljava/lang/String;
 
     move-result-object p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/DualAppManagerService;)V
     .locals 0
 
-    .line 247
     iput-object p1, p0, Lcom/android/server/DualAppManagerService$OpChangeListener;->this$0:Lcom/android/server/DualAppManagerService;
 
     invoke-direct {p0}, Landroid/app/AppOpsManager$OnOpChangedInternalListener;-><init>()V
@@ -30,7 +29,6 @@
 
     return-void
 
-    .line 262
     :cond_0
     sget p0, Lcom/android/server/DualAppManagerService;->inOpsCallback:I
 
@@ -40,7 +38,6 @@
 
     const-string/jumbo p1, "onOpChanged() is in progress"
 
-    .line 263
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -48,12 +45,10 @@
     :cond_1
     const/4 p0, 0x1
 
-    .line 266
     sput p0, Lcom/android/server/DualAppManagerService;->inOpsCallback:I
 
     const/4 p0, 0x0
 
-    .line 268
     :try_start_0
     invoke-static {}, Lcom/android/server/DualAppManagerService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
@@ -67,7 +62,6 @@
 
     check-cast v0, Landroid/app/AppOpsManager;
 
-    .line 270
     invoke-static {}, Lcom/android/server/DualAppManagerService;->-$$Nest$sfgetmInstalledWhitelistedPkgMap()Ljava/util/HashMap;
 
     move-result-object v1
@@ -83,12 +77,10 @@
 
     if-nez v1, :cond_2
 
-    .line 284
     sput p0, Lcom/android/server/DualAppManagerService;->inOpsCallback:I
 
     return-void
 
-    .line 276
     :cond_2
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -103,14 +95,12 @@
 
     move-result v2
 
-    .line 279
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
     invoke-virtual {v0, p1, v3, p2, v2}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
 
-    .line 280
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object p1
@@ -143,13 +133,10 @@
     :catchall_0
     move-exception p1
 
-    .line 284
     sput p0, Lcom/android/server/DualAppManagerService;->inOpsCallback:I
 
-    .line 285
     throw p1
 
-    .line 284
     :catch_0
     :goto_0
     sput p0, Lcom/android/server/DualAppManagerService;->inOpsCallback:I
@@ -160,7 +147,6 @@
 .method public onOpChanged(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 252
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

@@ -17,7 +17,6 @@
 .method public isOneHandModeRunning(Landroid/content/Context;)Z
     .locals 0
 
-    .line 34
     invoke-static {p1}, Lcom/android/server/biometrics/Utils;->isOneHandMode(Landroid/content/Context;)Z
 
     move-result p0
@@ -28,7 +27,6 @@
 .method public registerContentObserver(Landroid/content/Context;Landroid/net/Uri;Landroid/database/ContentObserver;)V
     .locals 1
 
-    .line 29
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -40,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/desktopmode/DesktopModeSettings;->TAG:Ljava/lang/String;
 
-    .line 99
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -49,17 +47,14 @@
 
     const-string v1, "dock_usbpd_ids"
 
-    .line 101
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v1, "dock_version"
 
-    .line 102
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v0, "content://com.sec.android.desktopmode.uiservice.SettingsProvider/settings"
 
-    .line 110
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -68,7 +63,6 @@
 
     const/16 v0, -0x2710
 
-    .line 130
     sput v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     return-void
@@ -77,7 +71,6 @@
 .method public static applyGlobalSettings(Landroid/content/ContentResolver;I)V
     .locals 4
 
-    .line 141
     sget-object v0, Lcom/android/server/desktopmode/DesktopModeSettings;->SETTINGS_GLOBAL_KEYS:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -102,14 +95,12 @@
 
     const/4 v3, 0x0
 
-    .line 142
     invoke-static {p0, v1, v2, v3}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 144
     invoke-static {p0, v1, v2, p1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0
@@ -121,7 +112,6 @@
 .method public static clearSettingsAsUser(Landroid/content/ContentResolver;I)V
     .locals 2
 
-    .line 374
     :try_start_0
     invoke-static {p1}, Lcom/android/server/desktopmode/DesktopModeSettings;->getUriAsUser(I)Landroid/net/Uri;
 
@@ -140,7 +130,6 @@
     :catch_0
     move-exception p0
 
-    .line 376
     sget-object p1, Lcom/android/server/desktopmode/DesktopModeSettings;->TAG:Ljava/lang/String;
 
     const-string v0, "Failed to clear Dex settings"
@@ -156,7 +145,6 @@
 
     const/4 v0, 0x0
 
-    .line 323
     invoke-static {p0, p1, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettings(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -177,7 +165,6 @@
 .method public static deleteAllSettingsAsUserOrThrowException(Landroid/content/ContentResolver;I)V
     .locals 2
 
-    .line 349
     invoke-static {p1}, Lcom/android/server/desktopmode/DesktopModeSettings;->getUriAsUser(I)Landroid/net/Uri;
 
     move-result-object p1
@@ -194,7 +181,6 @@
 .method public static deleteAllSettingsOrThrowException(Landroid/content/ContentResolver;)V
     .locals 1
 
-    .line 361
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->deleteAllSettingsAsUserOrThrowException(Landroid/content/ContentResolver;I)V
@@ -205,7 +191,6 @@
 .method public static deleteSettings(Landroid/content/ContentResolver;Ljava/lang/String;)V
     .locals 1
 
-    .line 345
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, p1, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->deleteSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;I)V
@@ -216,7 +201,6 @@
 .method public static deleteSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;I)V
     .locals 0
 
-    .line 334
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/android/server/desktopmode/DesktopModeSettings;->deleteSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;I)V
     :try_end_0
@@ -227,7 +211,6 @@
     :catch_0
     move-exception p0
 
-    .line 336
     sget-object p1, Lcom/android/server/desktopmode/DesktopModeSettings;->TAG:Ljava/lang/String;
 
     const-string p2, "Failed to delete settings"
@@ -241,7 +224,6 @@
 .method public static deleteSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;I)V
     .locals 2
 
-    .line 327
     new-instance v0, Landroid/os/Bundle;
 
     const/4 v1, 0x1
@@ -250,10 +232,8 @@
 
     const-string/jumbo v1, "key"
 
-    .line 328
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 329
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeSettings;->getUriAsUser(I)Landroid/net/Uri;
 
     move-result-object p1
@@ -270,7 +250,6 @@
 .method public static deleteSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;)V
     .locals 1
 
-    .line 341
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, p1, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->deleteSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;I)V
@@ -281,7 +260,6 @@
 .method public static dump(Landroid/util/IndentingPrintWriter;Landroid/content/ContentResolver;I)V
     .locals 4
 
-    .line 396
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,15 +286,12 @@
 
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 397
     invoke-virtual {p0}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 398
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 399
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -331,7 +306,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 400
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/DesktopModeSettings;->getAllSettingsAsUser(Landroid/content/ContentResolver;I)Landroid/os/Bundle;
 
     move-result-object v3
@@ -346,12 +320,10 @@
 
     move-result-object v2
 
-    .line 399
     invoke-virtual {p0, v2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     if-eqz p2, :cond_0
 
-    .line 402
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -362,7 +334,6 @@
 
     const/4 v2, 0x0
 
-    .line 403
     invoke-static {p1, v2}, Lcom/android/server/desktopmode/DesktopModeSettings;->getAllSettingsAsUser(Landroid/content/ContentResolver;I)Landroid/os/Bundle;
 
     move-result-object p1
@@ -377,14 +348,11 @@
 
     move-result-object p1
 
-    .line 402
     invoke-virtual {p0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 405
     :cond_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 406
     invoke-virtual {p0}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -395,7 +363,6 @@
 
     const-string v0, "dumpApp"
 
-    .line 386
     :try_start_0
     invoke-static {p2}, Lcom/android/server/desktopmode/DesktopModeSettings;->getUriAsUser(I)Landroid/net/Uri;
 
@@ -409,7 +376,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 388
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -423,7 +389,6 @@
     :catch_0
     move-exception p0
 
-    .line 391
     sget-object p1, Lcom/android/server/desktopmode/DesktopModeSettings;->TAG:Ljava/lang/String;
 
     const-string p2, "Failed to dump"
@@ -438,7 +403,6 @@
 .method public static getAllSettings(Landroid/content/ContentResolver;)Landroid/os/Bundle;
     .locals 1
 
-    .line 172
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->getAllSettingsAsUser(Landroid/content/ContentResolver;I)Landroid/os/Bundle;
@@ -453,7 +417,6 @@
 
     const/4 v0, 0x0
 
-    .line 163
     :try_start_0
     invoke-static {p1}, Lcom/android/server/desktopmode/DesktopModeSettings;->getUriAsUser(I)Landroid/net/Uri;
 
@@ -472,7 +435,6 @@
     :catch_0
     move-exception p0
 
-    .line 165
     sget-object p1, Lcom/android/server/desktopmode/DesktopModeSettings;->TAG:Ljava/lang/String;
 
     const-string v1, "Failed to get settings"
@@ -485,7 +447,6 @@
 .method public static getSettings(Landroid/content/ContentResolver;Ljava/lang/String;I)I
     .locals 1
 
-    .line 220
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
@@ -498,7 +459,6 @@
 .method public static getSettings(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 212
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
@@ -511,7 +471,6 @@
 .method public static getSettings(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 216
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
@@ -524,7 +483,6 @@
 .method public static getSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
     .locals 0
 
-    .line 200
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -543,7 +501,6 @@
 .method public static getSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
     .locals 0
 
-    .line 177
     :try_start_0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
@@ -556,7 +513,6 @@
     :catch_0
     move-exception p0
 
-    .line 179
     sget-object p1, Lcom/android/server/desktopmode/DesktopModeSettings;->TAG:Ljava/lang/String;
 
     const-string p3, "Failed to get settings"
@@ -569,7 +525,6 @@
 .method public static getSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
     .locals 0
 
-    .line 196
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p2
@@ -588,7 +543,6 @@
 .method public static getSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
     .locals 3
 
-    .line 185
     new-instance v0, Landroid/os/Bundle;
 
     const/4 v1, 0x2
@@ -597,15 +551,12 @@
 
     const-string/jumbo v1, "key"
 
-    .line 186
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "def"
 
-    .line 187
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
     invoke-static {p3}, Lcom/android/server/desktopmode/DesktopModeSettings;->getUriAsUser(I)Landroid/net/Uri;
 
     move-result-object p3
@@ -620,7 +571,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 190
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -634,7 +584,6 @@
 .method public static getSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 232
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->getSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
@@ -647,7 +596,6 @@
 .method public static getUri()Landroid/net/Uri;
     .locals 1
 
-    .line 154
     sget-object v0, Lcom/android/server/desktopmode/DesktopModeSettings;->CONTENT_URI:Landroid/net/Uri;
 
     return-object v0
@@ -656,7 +604,6 @@
 .method public static getUriAsUser(I)Landroid/net/Uri;
     .locals 2
 
-    .line 150
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -693,7 +640,6 @@
 .method public static isGlobalKey(Ljava/lang/String;)Z
     .locals 1
 
-    .line 137
     sget-object v0, Lcom/android/server/desktopmode/DesktopModeSettings;->SETTINGS_GLOBAL_KEYS:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -706,7 +652,6 @@
 .method public static setCurrentUserId(I)V
     .locals 0
 
-    .line 133
     sput p0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     return-void
@@ -715,7 +660,6 @@
 .method public static setSettings(Landroid/content/ContentResolver;Ljava/lang/String;I)V
     .locals 1
 
-    .line 291
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -730,7 +674,6 @@
 .method public static setSettings(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 283
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)V
@@ -741,7 +684,6 @@
 .method public static setSettings(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 287
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p2
@@ -756,7 +698,6 @@
 .method public static setSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;II)V
     .locals 0
 
-    .line 271
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -769,7 +710,6 @@
 .method public static setSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 260
     :try_start_0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)V
     :try_end_0
@@ -780,7 +720,6 @@
     :catch_0
     move-exception p0
 
-    .line 262
     sget-object p1, Lcom/android/server/desktopmode/DesktopModeSettings;->TAG:Ljava/lang/String;
 
     const-string p2, "Failed to set settings"
@@ -794,7 +733,6 @@
 .method public static setSettingsAsUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)V
     .locals 0
 
-    .line 267
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p2
@@ -807,7 +745,6 @@
 .method public static setSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 2
 
-    .line 252
     new-instance v0, Landroid/os/Bundle;
 
     const/4 v1, 0x2
@@ -816,15 +753,12 @@
 
     const-string/jumbo v1, "key"
 
-    .line 253
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p1, "val"
 
-    .line 254
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 255
     invoke-static {p3}, Lcom/android/server/desktopmode/DesktopModeSettings;->getUriAsUser(I)Landroid/net/Uri;
 
     move-result-object p1
@@ -841,7 +775,6 @@
 .method public static setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;I)V
     .locals 1
 
-    .line 311
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -856,7 +789,6 @@
 .method public static setSettingsOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 303
     sget v0, Lcom/android/server/desktopmode/DesktopModeSettings;->sCurrentUserId:I
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettingsAsUserOrThrowException(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)V

@@ -17,7 +17,6 @@
 .method public onAutomaticRuleStatusChanged(ILjava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -27,14 +26,12 @@
 .method public onConsolidatedPolicyChanged()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPolicyChanged()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$863jxrEgvn4894ewHOscego7Z3E(Lcom/android/server/pm/UserManagerInternal;Landroid/content/pm/UserInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/os/storage/StorageManagerInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/pm/AppDataHelper;->lambda$prepareAppDataPostCommitLIF$0(Lcom/android/server/pm/UserManagerInternal;Landroid/content/pm/UserInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/os/storage/StorageManagerInternal;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$XKd90BrYAoNGMNlpqrkUQl4QMqM(Lcom/android/server/pm/AppDataHelper;Ljava/lang/String;Lcom/android/server/pm/pkg/AndroidPackage;IILandroid/os/CreateAppDataArgs;Lcom/android/server/pm/PackageSetting;Ljava/lang/Long;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p8}, Lcom/android/server/pm/AppDataHelper;->lambda$prepareAppDataLeaf$2(Ljava/lang/String;Lcom/android/server/pm/pkg/AndroidPackage;IILandroid/os/CreateAppDataArgs;Lcom/android/server/pm/PackageSetting;Ljava/lang/Long;Ljava/lang/Throwable;)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static synthetic $r8$lambda$gK8YdvMZp1xfh9Hy3FWAxyYEfCw(Lcom/android/server/pm/AppDataHelper;Ljava/util/List;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/AppDataHelper;->lambda$fixAppsDataOnBoot$3(Ljava/util/List;I)V
 
     return-void
@@ -44,7 +41,6 @@
 .method public static synthetic $r8$lambda$x2ZTPRKH_pOtIqCp8f2v4-XnJRY(Lcom/android/server/pm/AppDataHelper;ZLcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;II)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/pm/AppDataHelper;->lambda$prepareAppDataAndMigrate$1(ZLcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;II)V
 
     return-void
@@ -53,25 +49,20 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;)V
     .locals 1
 
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
-    .line 84
     iget-object p1, p1, Lcom/android/server/pm/PackageManagerService;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     iput-object p1, p0, Lcom/android/server/pm/AppDataHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
-    .line 85
     invoke-virtual {p1}, Lcom/android/server/pm/PackageManagerServiceInjector;->getInstaller()Lcom/android/server/pm/Installer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
 
-    .line 86
     invoke-virtual {p1}, Lcom/android/server/pm/PackageManagerServiceInjector;->getArtManagerService()Lcom/android/server/pm/dex/ArtManagerService;
 
     move-result-object p1
@@ -84,7 +75,6 @@
 .method private synthetic lambda$fixAppsDataOnBoot$3(Ljava/util/List;I)V
     .locals 11
 
-    .line 527
     new-instance v0, Landroid/util/TimingsTraceLog;
 
     const-string v1, "SystemServerTimingAsync"
@@ -95,10 +85,8 @@
 
     const-string v1, "AppDataFixup"
 
-    .line 529
     invoke-virtual {v0, v1}, Landroid/util/TimingsTraceLog;->traceBegin(Ljava/lang/String;)V
 
-    .line 531
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -119,21 +107,17 @@
 
     const-string v3, "Trouble fixing GIDs"
 
-    .line 534
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 536
     :goto_0
     invoke-virtual {v0}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
     const-string v1, "AppDataPrepare"
 
-    .line 538
     invoke-virtual {v0, v1}, Landroid/util/TimingsTraceLog;->traceBegin(Ljava/lang/String;)V
 
     if-eqz p1, :cond_3
 
-    .line 539
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -142,13 +126,11 @@
 
     goto :goto_2
 
-    .line 543
     :cond_0
     new-instance v1, Lcom/android/server/pm/Installer$Batch;
 
     invoke-direct {v1}, Lcom/android/server/pm/Installer$Batch;-><init>()V
 
-    .line 544
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -171,33 +153,28 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 545
     iget-object v3, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
 
     move-result-object v3
 
-    .line 546
     invoke-interface {v3, v2}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    .line 549
     invoke-interface {v4, v9}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v2
 
-    .line 550
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageUserState;->isInstalled()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 551
     invoke-interface {v4}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v5
@@ -212,14 +189,12 @@
 
     move v7, p2
 
-    .line 552
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/pm/AppDataHelper;->prepareAppDataAndMigrate(Lcom/android/server/pm/Installer$Batch;Lcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;IIZ)V
 
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 557
     :cond_2
     iget-object p1, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -227,21 +202,17 @@
 
     monitor-enter p1
 
-    .line 558
     :try_start_1
     invoke-virtual {p0, v1}, Lcom/android/server/pm/AppDataHelper;->executeBatchLI(Lcom/android/server/pm/Installer$Batch;)V
 
-    .line 559
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 560
     invoke-virtual {v0}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
     const-string p0, "PackageManager"
 
-    .line 561
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -267,7 +238,6 @@
     :catchall_0
     move-exception p0
 
-    .line 559
     :try_start_2
     monitor-exit p1
     :try_end_2
@@ -285,14 +255,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 197
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/pm/AppDataHelper;->maybeMigrateAppDataLIF(Lcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 200
     new-instance p1, Lcom/android/server/pm/Installer$Batch;
 
     invoke-direct {p1}, Lcom/android/server/pm/Installer$Batch;-><init>()V
@@ -309,10 +277,8 @@
 
     move v5, p5
 
-    .line 201
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/pm/AppDataHelper;->prepareAppData(Lcom/android/server/pm/Installer$Batch;Lcom/android/server/pm/pkg/AndroidPackage;III)Ljava/util/concurrent/CompletableFuture;
 
-    .line 202
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppDataHelper;->executeBatchLI(Lcom/android/server/pm/Installer$Batch;)V
 
     :cond_0
@@ -324,7 +290,6 @@
 
     if-eqz p8, :cond_0
 
-    .line 241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -349,12 +314,10 @@
 
     invoke-static {p8, p1}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
 
-    .line 243
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/pm/AppDataHelper;->destroyAppDataLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;II)V
 
     const/4 p1, 0x3
 
-    .line 245
     :try_start_0
     iget-object p8, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -370,7 +333,6 @@
 
     const-string p5, "Recovery succeeded!"
 
-    .line 246
     invoke-static {p1, p5}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
     :try_end_0
     .catch Lcom/android/server/pm/Installer$InstallerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -380,10 +342,8 @@
     :catch_0
     const-string p5, "Recovery failed!"
 
-    .line 248
     invoke-static {p1, p5}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
 
-    .line 252
     :cond_0
     :goto_0
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->useArtService()Z
@@ -392,7 +352,6 @@
 
     if-nez p1, :cond_2
 
-    .line 276
     iget-object p1, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/pm/PackageManagerService;->isDeviceUpgrading()Z
@@ -411,7 +370,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 279
     :cond_1
     :try_start_1
     iget-object p1, p0, Lcom/android/server/pm/AppDataHelper;->mArtManagerService:Lcom/android/server/pm/dex/ArtManagerService;
@@ -427,7 +385,6 @@
     :catch_1
     move-exception p0
 
-    .line 282
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -440,7 +397,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 287
     invoke-virtual {p7}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -451,14 +407,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 289
     iget-object p1, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p1, p1, Lcom/android/server/pm/PackageManagerService;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter p1
 
-    .line 290
     :try_start_2
     invoke-virtual {p7}, Ljava/lang/Long;->longValue()J
 
@@ -466,7 +420,6 @@
 
     invoke-virtual {p6, p7, p8, p3}, Lcom/android/server/pm/PackageSetting;->setCeDataInode(JI)V
 
-    .line 291
     monitor-exit p1
 
     goto :goto_2
@@ -480,7 +433,6 @@
 
     throw p0
 
-    .line 294
     :cond_3
     :goto_2
     invoke-virtual {p0, p2, p6, p3, p4}, Lcom/android/server/pm/AppDataHelper;->prepareAppDataContentsLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/PackageStateInternal;II)V
@@ -491,7 +443,6 @@
 .method public static synthetic lambda$prepareAppDataPostCommitLIF$0(Lcom/android/server/pm/UserManagerInternal;Landroid/content/pm/UserInfo;Lcom/android/server/pm/pkg/AndroidPackage;Landroid/os/storage/StorageManagerInternal;)V
     .locals 1
 
-    .line 145
     iget v0, p1, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {p0, v0}, Lcom/android/server/pm/UserManagerInternal;->isUserUnlockingOrUnlocked(I)Z
@@ -500,7 +451,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 148
     iget p0, p1, Landroid/content/pm/UserInfo;->id:I
 
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
@@ -515,7 +465,6 @@
 
     move-result p0
 
-    .line 149
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -531,7 +480,6 @@
 .method public final assertPackageStorageValid(Lcom/android/server/pm/Computer;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 2
 
-    .line 490
     invoke-interface {p1, p3}, Lcom/android/server/pm/Computer;->getPackageStateInternal(Ljava/lang/String;)Lcom/android/server/pm/pkg/PackageStateInternal;
 
     move-result-object p1
@@ -540,7 +488,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 494
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getVolumeUuid()Ljava/lang/String;
 
     move-result-object v1
@@ -551,7 +498,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 499
     invoke-interface {p1, p4}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object p2
@@ -562,14 +508,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 503
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    .line 504
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object p1
@@ -582,7 +526,6 @@
 
     goto :goto_0
 
-    .line 505
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -612,7 +555,6 @@
     :goto_0
     return-void
 
-    .line 500
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -640,7 +582,6 @@
 
     throw p0
 
-    .line 495
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -660,7 +601,6 @@
 
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 497
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getVolumeUuid()Ljava/lang/String;
 
     move-result-object p1
@@ -673,14 +613,12 @@
 
     const/4 p1, -0x8
 
-    .line 495
     invoke-static {p0, p1}, Lcom/android/server/pm/PackageManagerException;->ofInternalError(Ljava/lang/String;I)Lcom/android/server/pm/PackageManagerException;
 
     move-result-object p0
 
     throw p0
 
-    .line 492
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -714,7 +652,6 @@
 
     return-void
 
-    .line 570
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/AppDataHelper;->clearAppDataLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;II)V
 
@@ -724,7 +661,6 @@
 
     if-nez p2, :cond_1
 
-    .line 573
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppDataHelper;->clearAppProfilesLIF(Lcom/android/server/pm/pkg/AndroidPackage;)V
 
     :cond_1
@@ -734,14 +670,12 @@
 .method public final clearAppDataLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;II)V
     .locals 10
 
-    .line 578
     iget-object v0, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
 
     move-result-object v0
 
-    .line 580
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -750,7 +684,6 @@
 
     move-result-object v0
 
-    .line 581
     iget-object v1, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1, p2}, Lcom/android/server/pm/PackageManagerService;->resolveUserIds(I)[I
@@ -768,7 +701,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 583
     invoke-interface {v0, v6}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v3
@@ -785,7 +717,6 @@
     :goto_1
     move-wide v8, v3
 
-    .line 585
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -808,7 +739,6 @@
     :catch_0
     move-exception v3
 
-    .line 588
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -831,7 +761,6 @@
 
     if-nez p1, :cond_0
 
-    .line 595
     new-instance p0, Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
@@ -844,7 +773,6 @@
 
     return-void
 
-    .line 598
     :cond_0
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->useArtService()Z
 
@@ -852,12 +780,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 599
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppDataHelper;->destroyAppProfilesWithArtService(Lcom/android/server/pm/pkg/AndroidPackage;)V
 
     goto :goto_0
 
-    .line 602
     :cond_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/AppDataHelper;->mArtManagerService:Lcom/android/server/pm/dex/ArtManagerService;
@@ -872,7 +798,6 @@
     :catch_0
     move-exception p0
 
-    .line 604
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -887,7 +812,6 @@
 
     return-void
 
-    .line 697
     :cond_0
     invoke-static {p2}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -901,7 +825,6 @@
 
     const-string/jumbo p0, "skip to clear keystore for SYSTEM_UID"
 
-    .line 698
     invoke-static {v2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -917,7 +840,6 @@
 
     goto :goto_1
 
-    .line 713
     :cond_2
     iget-object p0, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -936,14 +858,12 @@
 
     aget v2, p0, v1
 
-    .line 715
     invoke-static {v2, p2}, Landroid/os/UserHandle;->getUid(II)I
 
     move-result v2
 
     int-to-long v2, v2
 
-    .line 714
     invoke-static {v0, v2, v3}, Landroid/security/AndroidKeyStoreMaintenance;->clearNamespace(IJ)I
 
     add-int/lit8 v1, v1, 0x1
@@ -953,7 +873,6 @@
     :cond_3
     return-void
 
-    .line 707
     :cond_4
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;
@@ -980,7 +899,6 @@
 
     if-nez p1, :cond_0
 
-    .line 611
     new-instance p0, Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
@@ -993,7 +911,6 @@
 
     return-void
 
-    .line 614
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/AppDataHelper;->destroyAppDataLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;II)V
 
@@ -1003,14 +920,12 @@
 .method public destroyAppDataLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;II)V
     .locals 11
 
-    .line 618
     iget-object v0, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
 
     move-result-object v0
 
-    .line 620
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -1019,7 +934,6 @@
 
     move-result-object v0
 
-    .line 621
     iget-object v1, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1, p2}, Lcom/android/server/pm/PackageManagerService;->resolveUserIds(I)[I
@@ -1037,7 +951,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 623
     invoke-interface {v0, v7}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v4
@@ -1054,7 +967,6 @@
     :goto_1
     move-wide v9, v4
 
-    .line 625
     :try_start_0
     iget-object v4, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -1077,7 +989,6 @@
     :catch_0
     move-exception v4
 
-    .line 628
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -1086,7 +997,6 @@
 
     invoke-static {v5, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 630
     :goto_2
     iget-object v4, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -1100,7 +1010,6 @@
 
     invoke-virtual {v4, v5, p2}, Lcom/android/server/pm/dex/DexManager;->notifyPackageDataDestroyed(Ljava/lang/String;I)V
 
-    .line 631
     iget-object v4, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v4}, Lcom/android/server/pm/PackageManagerService;->getDynamicCodeLogger()Lcom/android/server/pm/dex/DynamicCodeLogger;
@@ -1126,7 +1035,6 @@
 
     if-nez p1, :cond_0
 
-    .line 637
     new-instance p0, Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
@@ -1139,7 +1047,6 @@
 
     return-void
 
-    .line 640
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppDataHelper;->destroyAppProfilesLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;)V
 
@@ -1149,19 +1056,16 @@
 .method public final destroyAppProfilesLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;)V
     .locals 1
 
-    .line 644
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->useArtService()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 645
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppDataHelper;->destroyAppProfilesWithArtService(Lcom/android/server/pm/pkg/AndroidPackage;)V
 
     goto :goto_0
 
-    .line 648
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
@@ -1180,7 +1084,6 @@
     :catch_0
     move-exception p0
 
-    .line 652
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1195,7 +1098,6 @@
     :catch_1
     move-exception p0
 
-    .line 650
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -1206,7 +1108,6 @@
 .method public final destroyAppProfilesWithArtService(Lcom/android/server/pm/pkg/AndroidPackage;)V
     .locals 1
 
-    .line 658
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->artManagerLocalIsInitialized()Z
 
     move-result p0
@@ -1215,7 +1116,6 @@
 
     return-void
 
-    .line 668
     :cond_0
     invoke-static {}, Lcom/android/server/pm/PackageManagerServiceUtils;->getPackageManagerLocal()Lcom/android/server/pm/PackageManagerLocal;
 
@@ -1225,7 +1125,6 @@
 
     move-result-object p0
 
-    .line 670
     :try_start_0
     invoke-static {}, Lcom/android/server/pm/DexOptHelper;->getArtManagerLocal()Lcom/android/server/art/ArtManagerLocal;
 
@@ -1253,7 +1152,6 @@
     :try_start_1
     const-string v0, "PackageManager"
 
-    .line 673
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1261,7 +1159,6 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 675
     invoke-interface {p0}, Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;->close()V
 
     :cond_1
@@ -1270,7 +1167,6 @@
     :goto_1
     if-eqz p0, :cond_2
 
-    .line 667
     :try_start_2
     invoke-interface {p0}, Lcom/android/server/pm/PackageManagerLocal$FilteredSnapshot;->close()V
     :try_end_2
@@ -1291,7 +1187,6 @@
 .method public final executeBatchLI(Lcom/android/server/pm/Installer$Batch;)V
     .locals 1
 
-    .line 159
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -1308,7 +1203,6 @@
 
     const-string v0, "Failed to execute pending operations"
 
-    .line 161
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1318,7 +1212,6 @@
 .method public fixAppsDataOnBoot()Ljava/util/concurrent/Future;
     .locals 7
 
-    .line 518
     invoke-static {}, Landroid/os/storage/StorageManager;->isFileEncrypted()Z
 
     move-result v0
@@ -1332,7 +1225,6 @@
     :cond_0
     const/4 v0, 0x3
 
-    .line 523
     :goto_0
     sget-object v2, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
@@ -1350,7 +1242,6 @@
 
     move-result-object v1
 
-    .line 526
     new-instance v2, Lcom/android/server/pm/AppDataHelper$$ExternalSyntheticLambda3;
 
     invoke-direct {v2, p0, v1, v0}, Lcom/android/server/pm/AppDataHelper$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/pm/AppDataHelper;Ljava/util/List;I)V
@@ -1367,7 +1258,6 @@
 .method public final maybeMigrateAppDataLIF(Lcom/android/server/pm/pkg/PackageState;Lcom/android/server/pm/pkg/AndroidPackage;I)Z
     .locals 3
 
-    .line 340
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->isSystem()Z
 
     move-result p1
@@ -1380,7 +1270,6 @@
 
     if-nez p1, :cond_1
 
-    .line 342
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->isDefaultToDeviceProtectedStorage()Z
 
     move-result p1
@@ -1396,7 +1285,6 @@
     :cond_0
     const/4 p1, 0x2
 
-    .line 345
     :goto_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
@@ -1418,7 +1306,6 @@
     :catch_0
     move-exception p0
 
-    .line 348
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1427,7 +1314,6 @@
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 349
     invoke-interface {p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
@@ -1450,7 +1336,6 @@
 
     const/4 p1, 0x5
 
-    .line 348
     invoke-static {p1, p0}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
 
     :goto_1
@@ -1471,7 +1356,6 @@
 
     if-nez p2, :cond_0
 
-    .line 180
     new-instance p0, Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
@@ -1480,14 +1364,12 @@
 
     invoke-static {v1, p1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 181
     invoke-static {v0}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
 
     move-result-object p0
 
     return-object p0
 
-    .line 183
     :cond_0
     invoke-virtual {p0, p2}, Lcom/android/server/pm/AppDataHelper;->shouldHaveAppStorage(Lcom/android/server/pm/pkg/AndroidPackage;)Z
 
@@ -1495,7 +1377,6 @@
 
     if-nez v2, :cond_1
 
-    .line 184
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1516,14 +1397,12 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     invoke-static {v0}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
 
     move-result-object p0
 
     return-object p0
 
-    .line 187
     :cond_1
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/pm/AppDataHelper;->prepareAppDataLeaf(Lcom/android/server/pm/Installer$Batch;Lcom/android/server/pm/pkg/AndroidPackage;III)Ljava/util/concurrent/CompletableFuture;
 
@@ -1537,7 +1416,6 @@
 
     const/4 v0, 0x0
 
-    .line 102
     invoke-virtual {p0, p1, v0}, Lcom/android/server/pm/AppDataHelper;->prepareAppDataPostCommitLIF(Lcom/android/server/pm/pkg/AndroidPackage;I)V
 
     return-void
@@ -1558,7 +1436,6 @@
 
     move v5, p5
 
-    .line 193
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/pm/AppDataHelper;->prepareAppData(Lcom/android/server/pm/Installer$Batch;Lcom/android/server/pm/pkg/AndroidPackage;III)Ljava/util/concurrent/CompletableFuture;
 
     move-result-object p1
@@ -1591,7 +1468,6 @@
 
     if-nez p1, :cond_0
 
-    .line 301
     new-instance p0, Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
@@ -1604,7 +1480,6 @@
 
     return-void
 
-    .line 304
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/pm/AppDataHelper;->prepareAppDataContentsLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/PackageStateInternal;II)V
 
@@ -1614,12 +1489,10 @@
 .method public final prepareAppDataContentsLeafLIF(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/PackageStateInternal;II)V
     .locals 2
 
-    .line 309
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getVolumeUuid()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 310
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -1630,7 +1503,6 @@
 
     if-nez p2, :cond_0
 
-    .line 317
     invoke-static {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackageUtils;->getRawPrimaryCpuAbi(Lcom/android/server/pm/pkg/AndroidPackage;)Ljava/lang/String;
 
     move-result-object p2
@@ -1645,19 +1517,16 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 318
     invoke-static {p2}, Ldalvik/system/VMRuntime;->is64BitAbi(Ljava/lang/String;)Z
 
     move-result p2
 
     if-nez p2, :cond_2
 
-    .line 319
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getNativeLibraryDir()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 320
     new-instance p2, Ljava/io/File;
 
     invoke-direct {p2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -1670,7 +1539,6 @@
 
     return-void
 
-    .line 324
     :cond_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
@@ -1684,7 +1552,6 @@
     :catch_0
     move-exception p0
 
-    .line 327
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1719,14 +1586,12 @@
 
     move-object/from16 v0, p0
 
-    .line 216
     iget-object v1, v0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v1
 
-    .line 217
     :try_start_0
     iget-object v2, v0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -1742,7 +1607,6 @@
 
     move/from16 v5, p4
 
-    .line 218
     invoke-virtual {v8, v5}, Lcom/android/server/pm/PackageSetting;->readUserState(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v2
@@ -1751,22 +1615,18 @@
 
     move-result-object v2
 
-    .line 219
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 220
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getVolumeUuid()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 221
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 223
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
     move-result v1
@@ -1775,15 +1635,12 @@
 
     move-result v13
 
-    .line 225
     invoke-virtual {v8}, Lcom/android/server/pm/PackageSetting;->getSeInfo()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 227
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 229
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1796,12 +1653,10 @@
 
     move-result-object v14
 
-    .line 230
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result v15
 
-    .line 231
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/pkg/AndroidPackage;->getUsesSdkLibraries()Ljava/util/List;
 
     move-result-object v1
@@ -1818,19 +1673,16 @@
 
     move/from16 v12, p5
 
-    .line 232
     invoke-static/range {v9 .. v16}, Lcom/android/server/pm/Installer;->buildCreateAppDataArgs(Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;IZ)Landroid/os/CreateAppDataArgs;
 
     move-result-object v7
 
     move/from16 v1, p3
 
-    .line 234
     iput v1, v7, Landroid/os/CreateAppDataArgs;->previousAppId:I
 
     move-object/from16 v1, p1
 
-    .line 236
     invoke-virtual {v1, v7}, Lcom/android/server/pm/Installer$Batch;->createAppData(Landroid/os/CreateAppDataArgs;)Ljava/util/concurrent/CompletableFuture;
 
     move-result-object v9
@@ -1858,7 +1710,6 @@
     :catchall_0
     move-exception v0
 
-    .line 219
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -1870,14 +1721,12 @@
 .method public prepareAppDataPostCommitLIF(Lcom/android/server/pm/pkg/AndroidPackage;I)V
     .locals 12
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mLock:Lcom/android/server/pm/PackageManagerTracedLock;
 
     monitor-enter v0
 
-    .line 114
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
@@ -1891,19 +1740,16 @@
 
     move-result-object v1
 
-    .line 115
     iget-object v2, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
     invoke-virtual {v2, v1}, Lcom/android/server/pm/Settings;->writeKernelMappingLPr(Lcom/android/server/pm/PackageSetting;)V
 
-    .line 116
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 119
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppDataHelper;->shouldHaveAppStorage(Lcom/android/server/pm/pkg/AndroidPackage;)Z
 
     move-result v0
@@ -1912,7 +1758,6 @@
 
     const-string p0, "PackageManager"
 
-    .line 120
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1935,20 +1780,17 @@
 
     return-void
 
-    .line 124
     :cond_0
     new-instance v0, Lcom/android/server/pm/Installer$Batch;
 
     invoke-direct {v0}, Lcom/android/server/pm/Installer$Batch;-><init>()V
 
-    .line 125
     iget-object v2, p0, Lcom/android/server/pm/AppDataHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     invoke-virtual {v2}, Lcom/android/server/pm/PackageManagerServiceInjector;->getUserManagerInternal()Lcom/android/server/pm/UserManagerInternal;
 
     move-result-object v8
 
-    .line 126
     iget-object v2, p0, Lcom/android/server/pm/AppDataHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     const-class v3, Landroid/os/storage/StorageManagerInternal;
@@ -1963,7 +1805,6 @@
 
     const/4 v2, 0x0
 
-    .line 128
     invoke-virtual {v8, v2}, Lcom/android/server/pm/UserManagerInternal;->getUsers(Z)Ljava/util/List;
 
     move-result-object v2
@@ -1988,7 +1829,6 @@
 
     check-cast v11, Landroid/content/pm/UserInfo;
 
-    .line 130
     iget v2, v11, Landroid/content/pm/UserInfo;->id:I
 
     invoke-static {v2}, Landroid/os/storage/StorageManager;->isUserKeyUnlocked(I)Z
@@ -1999,7 +1839,6 @@
 
     iget v2, v11, Landroid/content/pm/UserInfo;->id:I
 
-    .line 131
     invoke-virtual {v9, v2}, Landroid/os/storage/StorageManagerInternal;->isCeStoragePrepared(I)Z
 
     move-result v2
@@ -2010,7 +1849,6 @@
 
     goto :goto_1
 
-    .line 133
     :cond_2
     iget v2, v11, Landroid/content/pm/UserInfo;->id:I
 
@@ -2025,7 +1863,6 @@
     :goto_1
     move v7, v2
 
-    .line 139
     iget v2, v11, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {v1, v2}, Lcom/android/server/pm/PackageSetting;->getInstalled(I)Z
@@ -2034,7 +1871,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 141
     iget v6, v11, Landroid/content/pm/UserInfo;->id:I
 
     move-object v2, p0
@@ -2057,7 +1893,6 @@
 
     goto :goto_0
 
-    .line 154
     :cond_3
     invoke-virtual {p0, v0}, Lcom/android/server/pm/AppDataHelper;->executeBatchLI(Lcom/android/server/pm/Installer$Batch;)V
 
@@ -2066,7 +1901,6 @@
     :catchall_0
     move-exception p0
 
-    .line 116
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2078,7 +1912,6 @@
 .method public reconcileAppsData(IIZ)V
     .locals 3
 
-    .line 366
     iget-object v0, p0, Lcom/android/server/pm/AppDataHelper;->mInjector:Lcom/android/server/pm/PackageManagerServiceInjector;
 
     const-class v1, Landroid/os/storage/StorageManager;
@@ -2089,7 +1922,6 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    .line 367
     invoke-virtual {v0}, Landroid/os/storage/StorageManager;->getWritablePrivateVolumes()Ljava/util/List;
 
     move-result-object v0
@@ -2111,23 +1943,19 @@
 
     check-cast v1, Landroid/os/storage/VolumeInfo;
 
-    .line 368
     invoke-virtual {v1}, Landroid/os/storage/VolumeInfo;->getFsUuid()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 369
     iget-object v2, p0, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 370
     :try_start_0
     invoke-virtual {p0, v1, p1, p2, p3}, Lcom/android/server/pm/AppDataHelper;->reconcileAppsDataLI(Ljava/lang/String;IIZ)V
 
-    .line 371
     monitor-exit v2
 
     goto :goto_0
@@ -2156,7 +1984,6 @@
 
     move/from16 v11, p3
 
-    .line 395
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2177,7 +2004,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 396
     invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -2198,12 +2024,10 @@
 
     const-string v13, "PackageManager"
 
-    .line 395
     invoke-static {v13, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p5, :cond_0
 
-    .line 397
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -2218,7 +2042,6 @@
 
     const/4 v15, 0x5
 
-    .line 400
     :try_start_0
     iget-object v0, v8, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -2231,7 +2054,6 @@
     :catch_0
     move-exception v0
 
-    .line 402
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2248,18 +2070,15 @@
 
     invoke-static {v15, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
 
-    .line 405
     :goto_1
     invoke-static/range {p1 .. p2}, Landroid/os/Environment;->getDataUserCeDirectory(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object v0
 
-    .line 406
     invoke-static/range {p1 .. p2}, Landroid/os/Environment;->getDataUserDeDirectory(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object v16
 
-    .line 408
     iget-object v1, v8, Lcom/android/server/pm/AppDataHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/pm/PackageManagerService;->snapshotComputer()Lcom/android/server/pm/Computer;
@@ -2278,7 +2097,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 412
     invoke-static {}, Landroid/os/storage/StorageManager;->isFileEncrypted()Z
 
     move-result v1
@@ -2293,7 +2111,6 @@
 
     goto :goto_2
 
-    .line 413
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2319,14 +2136,12 @@
 
     throw v0
 
-    .line 418
     :cond_2
     :goto_2
     invoke-static {v0}, Landroid/os/FileUtils;->listFilesOrEmpty(Ljava/io/File;)[Ljava/io/File;
 
     move-result-object v3
 
-    .line 419
     array-length v2, v3
 
     move/from16 v1, v17
@@ -2338,12 +2153,10 @@
 
     move-object/from16 v18, v3
 
-    .line 420
     invoke-virtual {v15}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 422
     :try_start_1
     invoke-virtual {v8, v6, v9, v3, v10}, Lcom/android/server/pm/AppDataHelper;->assertPackageStorageValid(Lcom/android/server/pm/Computer;Ljava/lang/String;Ljava/lang/String;I)V
     :try_end_1
@@ -2374,7 +2187,6 @@
 
     move-object v1, v0
 
-    .line 424
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2395,7 +2207,6 @@
 
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
 
-    .line 426
     :try_start_2
     iget-object v1, v8, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
     :try_end_2
@@ -2460,7 +2271,6 @@
 
     move-object v13, v7
 
-    .line 429
     :goto_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2520,12 +2330,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 435
     invoke-static/range {v16 .. v16}, Landroid/os/FileUtils;->listFilesOrEmpty(Ljava/io/File;)[Ljava/io/File;
 
     move-result-object v15
 
-    .line 436
     array-length v6, v15
 
     move/from16 v7, v17
@@ -2535,12 +2343,10 @@
 
     aget-object v1, v15, v7
 
-    .line 437
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 439
     :try_start_4
     invoke-virtual {v8, v14, v9, v3, v10}, Lcom/android/server/pm/AppDataHelper;->assertPackageStorageValid(Lcom/android/server/pm/Computer;Ljava/lang/String;Ljava/lang/String;I)V
     :try_end_4
@@ -2562,7 +2368,6 @@
 
     move-object v2, v0
 
-    .line 441
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2585,7 +2390,6 @@
 
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
 
-    .line 443
     :try_start_5
     iget-object v1, v8, Lcom/android/server/pm/AppDataHelper;->mInstaller:Lcom/android/server/pm/Installer;
     :try_end_5
@@ -2630,7 +2434,6 @@
 
     move/from16 v21, v7
 
-    .line 446
     :goto_8
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2662,20 +2465,16 @@
 
     const-wide/32 v12, 0x40000
 
-    .line 454
     invoke-static {v12, v13, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 455
     new-instance v0, Lcom/android/server/pm/Installer$Batch;
 
     invoke-direct {v0}, Lcom/android/server/pm/Installer$Batch;-><init>()V
 
-    .line 456
     invoke-interface {v14, v9}, Lcom/android/server/pm/Computer;->getVolumePackages(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 458
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -2697,19 +2496,16 @@
 
     check-cast v3, Lcom/android/server/pm/pkg/PackageStateInternal;
 
-    .line 459
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageState;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 460
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v2
 
     if-nez v2, :cond_5
 
-    .line 461
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2737,7 +2533,6 @@
 
     if-eqz p5, :cond_6
 
-    .line 467
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v2
@@ -2750,7 +2545,6 @@
 
     move-object/from16 v7, v23
 
-    .line 468
     invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_b
@@ -2763,7 +2557,6 @@
     :cond_6
     move-object/from16 v7, v23
 
-    .line 472
     invoke-interface {v3, v10}, Lcom/android/server/pm/pkg/PackageStateInternal;->getUserStateOrDefault(I)Lcom/android/server/pm/pkg/PackageUserStateInternal;
 
     move-result-object v1
@@ -2774,7 +2567,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 473
     invoke-interface {v3}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v4
@@ -2812,13 +2604,10 @@
 
     move-object/from16 v15, v24
 
-    .line 477
     invoke-virtual {v8, v0}, Lcom/android/server/pm/AppDataHelper;->executeBatchLI(Lcom/android/server/pm/Installer$Batch;)V
 
-    .line 478
     invoke-static {v12, v13}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 480
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2857,7 +2646,6 @@
 
     move v4, p4
 
-    .line 378
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/pm/AppDataHelper;->reconcileAppsDataLI(Ljava/lang/String;IIZZ)Ljava/util/List;
 
     return-void
@@ -2866,7 +2654,6 @@
 .method public final shouldHaveAppStorage(Lcom/android/server/pm/pkg/AndroidPackage;)Z
     .locals 1
 
-    .line 683
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getProperties()Ljava/util/Map;
 
     move-result-object p0
@@ -2881,7 +2668,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 684
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$Property;->getBoolean()Z
 
     move-result p0

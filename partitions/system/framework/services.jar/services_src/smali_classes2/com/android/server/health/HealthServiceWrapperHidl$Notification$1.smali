@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/health/HealthServiceWrapperHidl$Notification;)V
     .locals 0
 
-    .line 310
     iput-object p1, p0, Lcom/android/server/health/HealthServiceWrapperHidl$Notification$1;->this$1:Lcom/android/server/health/HealthServiceWrapperHidl$Notification;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     const-string v0, "HealthServiceWrapperHidl"
 
-    .line 314
     :try_start_0
     iget-object v1, p0, Lcom/android/server/health/HealthServiceWrapperHidl$Notification$1;->this$1:Lcom/android/server/health/HealthServiceWrapperHidl$Notification;
 
@@ -51,7 +49,6 @@
 
     move-result-object v1
 
-    .line 315
     iget-object v2, p0, Lcom/android/server/health/HealthServiceWrapperHidl$Notification$1;->this$1:Lcom/android/server/health/HealthServiceWrapperHidl$Notification;
 
     iget-object v2, v2, Lcom/android/server/health/HealthServiceWrapperHidl$Notification;->this$0:Lcom/android/server/health/HealthServiceWrapperHidl;
@@ -66,7 +63,6 @@
 
     check-cast v2, Landroid/hardware/health/V2_0/IHealth;
 
-    .line 319
     invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
@@ -75,7 +71,6 @@
 
     return-void
 
-    .line 321
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -101,7 +96,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 326
     iget-object v3, p0, Lcom/android/server/health/HealthServiceWrapperHidl$Notification$1;->this$1:Lcom/android/server/health/HealthServiceWrapperHidl$Notification;
 
     iget-object v3, v3, Lcom/android/server/health/HealthServiceWrapperHidl$Notification;->this$0:Lcom/android/server/health/HealthServiceWrapperHidl;
@@ -114,7 +108,6 @@
 
     return-void
 
-    .line 327
     :cond_1
     iget-object v3, p0, Lcom/android/server/health/HealthServiceWrapperHidl$Notification$1;->this$1:Lcom/android/server/health/HealthServiceWrapperHidl$Notification;
 
@@ -142,7 +135,6 @@
     :catch_0
     move-exception v1
 
-    .line 330
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,7 +157,6 @@
 
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 335
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -180,7 +171,6 @@
 
     move-result-object p0
 
-    .line 330
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

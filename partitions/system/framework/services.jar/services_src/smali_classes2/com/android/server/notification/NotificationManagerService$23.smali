@@ -36,7 +36,6 @@
 .method public static synthetic $r8$lambda$ime-UgR8A8B4zQ8v48bjcrp3ONQ(III)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/notification/NotificationManagerService$23;->lambda$run$0(III)Z
 
     move-result p0
@@ -47,7 +46,6 @@
 .method public constructor <init>(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;IILjava/lang/String;IIIIZLjava/lang/String;J)V
     .locals 0
 
-    .line 12925
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$23;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$23;->val$listener:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -80,7 +78,6 @@
 .method public static synthetic lambda$run$0(III)Z
     .locals 2
 
-    .line 0
     and-int v0, p2, p0
 
     const/4 v1, 0x0
@@ -109,7 +106,6 @@
 
     move-object/from16 v0, p0
 
-    .line 12928
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$23;->val$listener:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
 
     if-nez v1, :cond_0
@@ -125,7 +121,6 @@
 
     move-result-object v1
 
-    .line 12929
     :goto_0
     iget v2, v0, Lcom/android/server/notification/NotificationManagerService$23;->val$callingUid:I
 
@@ -145,14 +140,12 @@
 
     invoke-static/range {v2 .. v9}, Lcom/android/server/EventLogTags;->writeNotificationCancelAll(IILjava/lang/String;IIIILjava/lang/String;)V
 
-    .line 12935
     iget-boolean v2, v0, Lcom/android/server/notification/NotificationManagerService$23;->val$doit:Z
 
     if-nez v2, :cond_1
 
     return-void
 
-    .line 12939
     :cond_1
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$23;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -160,7 +153,6 @@
 
     monitor-enter v15
 
-    .line 12940
     :try_start_0
     iget v2, v0, Lcom/android/server/notification/NotificationManagerService$23;->val$mustHaveFlags:I
 
@@ -170,7 +162,6 @@
 
     invoke-direct {v14, v2, v3}, Lcom/android/server/notification/NotificationManagerService$23$$ExternalSyntheticLambda0;-><init>(II)V
 
-    .line 12949
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$23;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v3, v2, Lcom/android/server/notification/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
@@ -220,7 +211,6 @@
     :try_start_1
     invoke-static/range {v2 .. v17}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mcancelAllNotificationsByListLocked(Lcom/android/server/notification/NotificationManagerService;Ljava/util/ArrayList;IILjava/lang/String;ZLjava/lang/String;Lcom/android/server/notification/NotificationManagerService$FlagChecker;ZIZILjava/lang/String;ZJ)V
 
-    .line 12953
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$23;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v3, v2, Lcom/android/server/notification/NotificationManagerService;->mEnqueuedNotifications:Ljava/util/ArrayList;
@@ -261,7 +251,6 @@
 
     invoke-static/range {v2 .. v17}, Lcom/android/server/notification/NotificationManagerService;->-$$Nest$mcancelAllNotificationsByListLocked(Lcom/android/server/notification/NotificationManagerService;Ljava/util/ArrayList;IILjava/lang/String;ZLjava/lang/String;Lcom/android/server/notification/NotificationManagerService$FlagChecker;ZIZILjava/lang/String;ZJ)V
 
-    .line 12958
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$23;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/notification/NotificationManagerService;->mSnoozeHelper:Lcom/android/server/notification/SnoozeHelper;
@@ -272,7 +261,6 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/notification/SnoozeHelper;->cancel(ILjava/lang/String;)Z
 
-    .line 12959
     monitor-exit v21
 
     return-void

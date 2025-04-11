@@ -16,14 +16,12 @@
 .method public constructor <init>(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;)V
     .locals 0
 
-    .line 1026
     iput-object p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     invoke-direct {p0}, Landroid/hardware/TriggerEventListener;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 1028
     iput-boolean p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->active:Z
 
     return-void
@@ -32,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;-><init>(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;)V
 
     return-void
@@ -43,19 +40,16 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 2
 
-    .line 1041
     iget-object p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     monitor-enter p1
 
-    .line 1042
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
@@ -73,10 +67,8 @@
 
     const/4 v0, 0x0
 
-    .line 1043
     iput-boolean v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->active:Z
 
-    .line 1044
     monitor-exit p1
 
     return-void
@@ -94,14 +86,12 @@
 .method public onTrigger(Landroid/hardware/TriggerEvent;)V
     .locals 2
 
-    .line 1032
     iget-object p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     monitor-enter p1
 
     const/4 v0, 0x0
 
-    .line 1033
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->active:Z
 
@@ -109,17 +99,14 @@
 
     const-string/jumbo v1, "onTrigger clear MOTION_STILL bit"
 
-    .line 1034
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1035
     iget-object p0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     const/16 v0, 0x10
 
     invoke-static {p0, v0}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;->-$$Nest$mreportClearState(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;I)V
 
-    .line 1036
     monitor-exit p1
 
     return-void
@@ -137,7 +124,6 @@
 .method public registerLocked()Z
     .locals 4
 
-    .line 1053
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     invoke-static {v0}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;->-$$Nest$fgetmMotionSensor(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;)Landroid/hardware/Sensor;
@@ -152,7 +138,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1054
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     invoke-static {v0}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;->-$$Nest$fgetmSensorManager(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;)Landroid/hardware/SensorManager;
@@ -177,7 +162,6 @@
 
     goto :goto_0
 
-    .line 1056
     :cond_0
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
@@ -208,12 +192,10 @@
 
     const/4 v1, 0x1
 
-    .line 1060
     iput-boolean v1, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->active:Z
 
     goto :goto_1
 
-    .line 1062
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -246,7 +228,6 @@
 .method public unregisterLocked()V
     .locals 3
 
-    .line 1068
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     invoke-static {v0}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;->-$$Nest$fgetmMotionSensor(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;)Landroid/hardware/Sensor;
@@ -261,7 +242,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1069
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     invoke-static {v0}, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;->-$$Nest$fgetmSensorManager(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;)Landroid/hardware/SensorManager;
@@ -284,7 +264,6 @@
 
     goto :goto_0
 
-    .line 1071
     :cond_0
     iget-object v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
@@ -303,7 +282,6 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 1073
     iput-boolean v0, p0, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy$MotionListener;->active:Z
 
     return-void

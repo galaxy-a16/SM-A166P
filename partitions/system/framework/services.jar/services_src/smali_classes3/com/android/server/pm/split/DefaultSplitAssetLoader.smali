@@ -22,24 +22,20 @@
 .method public constructor <init>(Landroid/content/pm/parsing/PackageLite;I)V
     .locals 1
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-virtual {p1}, Landroid/content/pm/parsing/PackageLite;->getBaseApkPath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mBaseApkPath:Ljava/lang/String;
 
-    .line 46
     invoke-virtual {p1}, Landroid/content/pm/parsing/PackageLite;->getSplitApkPaths()[Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mSplitApkPaths:[Ljava/lang/String;
 
-    .line 47
     iput p2, p0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mFlags:I
 
     return-void
@@ -52,7 +48,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 53
     invoke-static {p0}, Landroid/content/pm/parsing/ApkLiteParseUtils;->isApkPath(Ljava/lang/String;)Z
 
     move-result p1
@@ -61,7 +56,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -83,7 +77,6 @@
 
     throw p1
 
-    .line 58
     :cond_1
     :goto_0
     :try_start_0
@@ -98,7 +91,6 @@
     :catch_0
     move-exception p1
 
-    .line 60
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -125,7 +117,6 @@
 .method public close()V
     .locals 0
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mCachedAssetManager:Landroid/content/res/AssetManager;
 
     invoke-static {p0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
@@ -136,7 +127,6 @@
 .method public getBaseApkAssets()Landroid/content/res/ApkAssets;
     .locals 0
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mBaseApkAssets:Landroid/content/res/ApkAssets;
 
     return-object p0
@@ -147,14 +137,12 @@
 
     move-object/from16 v0, p0
 
-    .line 66
     iget-object v1, v0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mCachedAssetManager:Landroid/content/res/AssetManager;
 
     if-eqz v1, :cond_0
 
     return-object v1
 
-    .line 70
     :cond_0
     iget-object v1, v0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mSplitApkPaths:[Ljava/lang/String;
 
@@ -162,7 +150,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 71
     array-length v1, v1
 
     goto :goto_0
@@ -177,7 +164,6 @@
 
     new-array v1, v1, [Landroid/content/res/ApkAssets;
 
-    .line 75
     iget-object v4, v0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mBaseApkPath:Ljava/lang/String;
 
     iget v5, v0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mFlags:I
@@ -190,7 +176,6 @@
 
     aput-object v4, v1, v2
 
-    .line 78
     iget-object v4, v0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mSplitApkPaths:[Ljava/lang/String;
 
     invoke-static {v4}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
@@ -199,7 +184,6 @@
 
     if-nez v4, :cond_2
 
-    .line 79
     iget-object v4, v0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mSplitApkPaths:[Ljava/lang/String;
 
     array-length v5, v4
@@ -213,7 +197,6 @@
 
     add-int/lit8 v8, v3, 0x1
 
-    .line 80
     iget v9, v0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mFlags:I
 
     invoke-static {v7, v9}, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->loadApkAssets(Ljava/lang/String;I)Landroid/content/res/ApkAssets;
@@ -228,7 +211,6 @@
 
     goto :goto_1
 
-    .line 84
     :cond_2
     new-instance v3, Landroid/content/res/AssetManager;
 
@@ -272,15 +254,12 @@
 
     const/16 v27, 0x0
 
-    .line 85
     sget v28, Landroid/os/Build$VERSION;->RESOURCES_SDK_INT:I
 
     invoke-virtual/range {v9 .. v28}, Landroid/content/res/AssetManager;->setConfiguration(IILjava/lang/String;IIIIIIIIIIIIIIII)V
 
-    .line 87
     invoke-virtual {v3, v1, v2}, Landroid/content/res/AssetManager;->setApkAssets([Landroid/content/res/ApkAssets;Z)V
 
-    .line 89
     iput-object v3, v0, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->mCachedAssetManager:Landroid/content/res/AssetManager;
 
     return-object v3
@@ -289,7 +268,6 @@
 .method public getSplitAssetManager(I)Landroid/content/res/AssetManager;
     .locals 0
 
-    .line 95
     invoke-virtual {p0}, Lcom/android/server/pm/split/DefaultSplitAssetLoader;->getBaseAssetManager()Landroid/content/res/AssetManager;
 
     move-result-object p0

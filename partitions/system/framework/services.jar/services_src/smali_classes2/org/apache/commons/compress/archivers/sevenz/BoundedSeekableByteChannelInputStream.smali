@@ -15,13 +15,10 @@
 .method public constructor <init>(Ljava/nio/channels/SeekableByteChannel;J)V
     .locals 2
 
-    .line 32
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->channel:Ljava/nio/channels/SeekableByteChannel;
 
-    .line 34
     iput-wide p2, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->bytesRemaining:J
 
     const-wide/16 v0, 0x2000
@@ -38,7 +35,6 @@
 
     long-to-int p1, p2
 
-    .line 36
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -50,7 +46,6 @@
     :cond_0
     const/16 p1, 0x2000
 
-    .line 38
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -66,14 +61,12 @@
 .method public close()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public read()I
     .locals 4
 
-    .line 44
     iget-wide v0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
@@ -86,12 +79,10 @@
 
     sub-long/2addr v0, v2
 
-    .line 45
     iput-wide v0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->bytesRemaining:J
 
     const/4 v0, 0x1
 
-    .line 46
     invoke-virtual {p0, v0}, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->read(I)I
 
     move-result v0
@@ -100,7 +91,6 @@
 
     return v0
 
-    .line 50
     :cond_0
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->buffer:Ljava/nio/ByteBuffer;
 
@@ -121,7 +111,6 @@
 .method public final read(I)I
     .locals 1
 
-    .line 82
     iget-object v0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
@@ -130,7 +119,6 @@
 
     invoke-virtual {v0, p1}, Ljava/nio/Buffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 83
     iget-object p1, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->channel:Ljava/nio/channels/SeekableByteChannel;
 
     iget-object v0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->buffer:Ljava/nio/ByteBuffer;
@@ -139,7 +127,6 @@
 
     move-result p1
 
-    .line 84
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
@@ -150,7 +137,6 @@
 .method public read([BII)I
     .locals 4
 
-    .line 57
     iget-wide v0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
@@ -172,7 +158,6 @@
 
     long-to-int p3, v0
 
-    .line 66
     :cond_1
     iget-object v0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->buffer:Ljava/nio/ByteBuffer;
 
@@ -182,39 +167,32 @@
 
     if-gt p3, v0, :cond_2
 
-    .line 67
     iget-object v0, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 68
     invoke-virtual {p0, p3}, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->read(I)I
 
     move-result p3
 
     goto :goto_0
 
-    .line 70
     :cond_2
     invoke-static {p3}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 71
     iget-object p3, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->channel:Ljava/nio/channels/SeekableByteChannel;
 
     invoke-interface {p3, v0}, Ljava/nio/channels/SeekableByteChannel;->read(Ljava/nio/ByteBuffer;)I
 
     move-result p3
 
-    .line 72
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     :goto_0
     if-ltz p3, :cond_3
 
-    .line 75
     invoke-virtual {v0, p1, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 76
     iget-wide p1, p0, Lorg/apache/commons/compress/archivers/sevenz/BoundedSeekableByteChannelInputStream;->bytesRemaining:J
 
     int-to-long v0, p3

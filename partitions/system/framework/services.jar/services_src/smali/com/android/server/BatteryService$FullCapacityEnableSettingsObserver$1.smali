@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;)V
     .locals 0
 
-    .line 979
     iput-object p1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 6
 
-    .line 982
     iget-object v0, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -38,7 +36,6 @@
 
     monitor-enter v0
 
-    .line 983
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
@@ -52,7 +49,6 @@
 
     move-result-object v1
 
-    .line 985
     iget-object v2, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v2, v2, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -65,7 +61,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 986
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -74,14 +69,12 @@
 
     invoke-static {v2, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 988
     iget-object v2, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v2, v2, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v2, v3}, Lcom/android/server/BatteryService;->-$$Nest$fputmLifeExtender(Lcom/android/server/BatteryService;Z)V
 
-    .line 989
     iget-object v2, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v2, v2, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -104,16 +97,13 @@
 
     const/4 v4, -0x2
 
-    .line 990
     invoke-static {v1, v2, v3, v4}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 993
     :cond_0
     sget-boolean v2, Lcom/android/server/battery/BattFeatures;->SUPPORT_ECO_BATTERY:Z
 
     if-eqz v2, :cond_3
 
-    .line 995
     iget-object v2, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v2, v2, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -122,7 +112,6 @@
 
     move-result v2
 
-    .line 996
     iget-object v4, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v4, v4, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -135,7 +124,6 @@
 
     invoke-static {v4, v1}, Lcom/android/server/BatteryService;->-$$Nest$fputmProtectBatteryMode(Lcom/android/server/BatteryService;I)V
 
-    .line 998
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,7 +148,6 @@
 
     move-result-object v1
 
-    .line 999
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 
     move-result-object v2
@@ -185,17 +172,14 @@
 
     const-string v3, "Battery Protect Mode Changed"
 
-    .line 1000
     invoke-static {v2, v3, v1}, Lcom/android/server/battery/BatteryLogger;->writeToFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1002
     iget-object v1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v1, v1, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {v1}, Lcom/android/server/BatteryService;->-$$Nest$mwriteProtectBatteryValues(Lcom/android/server/BatteryService;)V
 
-    .line 1003
     iget-object v1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v1, v1, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -206,7 +190,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1004
     iget-object v1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v1, v1, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -219,7 +202,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1005
     iget-object v1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v1, v1, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -236,7 +218,6 @@
 
     goto :goto_0
 
-    .line 1012
     :cond_1
     iget-object v1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
@@ -254,7 +235,6 @@
 
     goto :goto_0
 
-    .line 1020
     :cond_2
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 
@@ -266,7 +246,6 @@
 
     goto :goto_0
 
-    .line 1025
     :cond_3
     iget-object v2, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
@@ -287,7 +266,6 @@
     :cond_4
     invoke-static {v2, v3}, Lcom/android/server/BatteryService;->-$$Nest$fputmFullCapacityEnable(Lcom/android/server/BatteryService;Z)V
 
-    .line 1026
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG_SS()Ljava/lang/String;
 
     move-result-object v1
@@ -316,7 +294,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1027
     iget-object v1, p0, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver$1;->this$1:Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;
 
     iget-object v1, v1, Lcom/android/server/BatteryService$FullCapacityEnableSettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -335,7 +312,6 @@
 
     invoke-virtual {v1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1029
     :goto_0
     monitor-exit v0
 

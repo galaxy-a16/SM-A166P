@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/bgslotmanager/CameraKillModeManager;)V
     .locals 0
 
-    .line 142
     iput-object p1, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +27,6 @@
 .method public runLmkdCameraKillMode(II)V
     .locals 1
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v0}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/bgslotmanager/CameraKillModeManager;)Lcom/android/server/am/DynamicHiddenApp;
@@ -37,7 +35,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 173
     iget-object v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v0}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fgetmDynamicHiddenApp(Lcom/android/server/bgslotmanager/CameraKillModeManager;)Lcom/android/server/am/DynamicHiddenApp;
@@ -55,7 +52,6 @@
 .method public runReduceBackgroundCached()V
     .locals 5
 
-    .line 153
     iget v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->cameraState:I
 
     const/4 v1, 0x3
@@ -64,7 +60,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 154
     iget-object v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v0}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fgetisOriginBG(Lcom/android/server/bgslotmanager/CameraKillModeManager;)Z
@@ -73,12 +68,10 @@
 
     if-nez v0, :cond_1
 
-    .line 155
     iget-object v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v0, v2}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fputisOriginBG(Lcom/android/server/bgslotmanager/CameraKillModeManager;Z)V
 
-    .line 156
     iget-object p0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {p0}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fgetmBGSlotManager(Lcom/android/server/bgslotmanager/CameraKillModeManager;)Lcom/android/server/bgslotmanager/BGSlotManager;
@@ -89,7 +82,6 @@
 
     goto :goto_0
 
-    .line 159
     :cond_0
     iget-object v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
@@ -99,7 +91,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 160
     iget-object v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v0}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fgetmInfo(Lcom/android/server/bgslotmanager/CameraKillModeManager;)Lcom/android/server/bgslotmanager/MemInfoGetter;
@@ -110,7 +101,6 @@
 
     move-result-wide v0
 
-    .line 161
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -151,7 +141,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     iget-object v2, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v2}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fgetmMinFreeMax(Lcom/android/server/bgslotmanager/CameraKillModeManager;)F
@@ -172,7 +161,6 @@
 
     if-gez v0, :cond_1
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v0}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fgetmBGSlotManager(Lcom/android/server/bgslotmanager/CameraKillModeManager;)Lcom/android/server/bgslotmanager/BGSlotManager;
@@ -181,7 +169,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/bgslotmanager/BGSlotManager;->setCameraBGSlot()V
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     const/4 v0, 0x0
@@ -202,17 +189,14 @@
 
     if-nez p1, :cond_0
 
-    .line 178
     iget-object v2, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v2, v1}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fputisUsingCamera(Lcom/android/server/bgslotmanager/CameraKillModeManager;Z)V
 
-    .line 179
     iput v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->cameraState:I
 
     goto :goto_0
 
-    .line 180
     :cond_0
     iget v2, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->prevCameraState:I
 
@@ -222,7 +206,6 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 181
     iput v1, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->cameraState:I
 
     goto :goto_0
@@ -232,7 +215,6 @@
 
     const/16 v0, 0xb
 
-    .line 183
     iput v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->cameraState:I
 
     goto :goto_0
@@ -242,7 +224,6 @@
 
     if-ne p1, v3, :cond_3
 
-    .line 185
     iput v3, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->cameraState:I
 
     goto :goto_0
@@ -252,7 +233,6 @@
 
     const/16 v0, 0xc
 
-    .line 187
     iput v0, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->cameraState:I
 
     goto :goto_0
@@ -262,10 +242,8 @@
 
     if-ne p1, v1, :cond_5
 
-    .line 189
     iput v1, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->cameraState:I
 
-    .line 190
     iget-object v1, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->this$0:Lcom/android/server/bgslotmanager/CameraKillModeManager;
 
     invoke-static {v1, v0}, Lcom/android/server/bgslotmanager/CameraKillModeManager;->-$$Nest$fputisUsingCamera(Lcom/android/server/bgslotmanager/CameraKillModeManager;Z)V
@@ -274,7 +252,6 @@
     :goto_0
     if-eqz p2, :cond_6
 
-    .line 194
     iput p1, p0, Lcom/android/server/bgslotmanager/CameraKillModeManager$CameraKillModeOperator;->prevCameraState:I
 
     :cond_6

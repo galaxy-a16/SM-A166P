@@ -7,7 +7,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 19
     invoke-direct {p0, p1, p2}, Lco/nstant/in/cbor/encoder/AbstractEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     return-void
@@ -18,26 +17,22 @@
 .method public encode(Lco/nstant/in/cbor/model/Map;)V
     .locals 6
 
-    .line 24
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Map;->getKeys()Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 26
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Map;->isChunked()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 27
     sget-object v1, Lco/nstant/in/cbor/model/MajorType;->MAP:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-virtual {p0, v1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encodeTypeChunked(Lco/nstant/in/cbor/model/MajorType;)V
 
     goto :goto_0
 
-    .line 29
     :cond_0
     sget-object v1, Lco/nstant/in/cbor/model/MajorType;->MAP:Lco/nstant/in/cbor/model/MajorType;
 
@@ -49,7 +44,6 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encodeTypeAndLength(Lco/nstant/in/cbor/model/MajorType;J)V
 
-    .line 32
     :goto_0
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -59,7 +53,6 @@
 
     return-void
 
-    .line 36
     :cond_1
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/Map;->isChunked()Z
 
@@ -67,7 +60,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 37
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -85,12 +77,10 @@
 
     check-cast v1, Lco/nstant/in/cbor/model/DataItem;
 
-    .line 38
     iget-object v2, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encoder:Lco/nstant/in/cbor/CborEncoder;
 
     invoke-virtual {v2, v1}, Lco/nstant/in/cbor/CborEncoder;->encode(Lco/nstant/in/cbor/model/DataItem;)V
 
-    .line 39
     iget-object v2, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encoder:Lco/nstant/in/cbor/CborEncoder;
 
     invoke-virtual {p1, v1}, Lco/nstant/in/cbor/model/Map;->get(Lco/nstant/in/cbor/model/DataItem;)Lco/nstant/in/cbor/model/DataItem;
@@ -101,7 +91,6 @@
 
     goto :goto_1
 
-    .line 41
     :cond_2
     iget-object p0, p0, Lco/nstant/in/cbor/encoder/AbstractEncoder;->encoder:Lco/nstant/in/cbor/CborEncoder;
 
@@ -111,7 +100,6 @@
 
     return-void
 
-    .line 59
     :cond_3
     new-instance v1, Ljava/util/TreeMap;
 
@@ -121,17 +109,14 @@
 
     invoke-direct {v1, v2}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    .line 81
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 82
     new-instance v3, Lco/nstant/in/cbor/CborEncoder;
 
     invoke-direct {v3, v2}, Lco/nstant/in/cbor/CborEncoder;-><init>(Ljava/io/OutputStream;)V
 
-    .line 83
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -149,38 +134,30 @@
 
     check-cast v4, Lco/nstant/in/cbor/model/DataItem;
 
-    .line 85
     invoke-virtual {v3, v4}, Lco/nstant/in/cbor/CborEncoder;->encode(Lco/nstant/in/cbor/model/DataItem;)V
 
-    .line 86
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v5
 
-    .line 87
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->reset()V
 
-    .line 89
     invoke-virtual {p1, v4}, Lco/nstant/in/cbor/model/Map;->get(Lco/nstant/in/cbor/model/DataItem;)Lco/nstant/in/cbor/model/DataItem;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Lco/nstant/in/cbor/CborEncoder;->encode(Lco/nstant/in/cbor/model/DataItem;)V
 
-    .line 90
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v4
 
-    .line 91
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->reset()V
 
-    .line 92
     invoke-virtual {v1, v5, v4}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
 
-    .line 94
     :cond_4
     invoke-virtual {v1}, Ljava/util/TreeMap;->entrySet()Ljava/util/Set;
 
@@ -203,7 +180,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 95
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -212,7 +188,6 @@
 
     invoke-virtual {p0, v1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write([B)V
 
-    .line 96
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0

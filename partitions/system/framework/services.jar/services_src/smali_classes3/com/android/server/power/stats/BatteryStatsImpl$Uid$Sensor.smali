@@ -17,16 +17,12 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;Lcom/android/server/power/stats/BatteryStatsImpl$Uid;I)V
     .locals 0
 
-    .line 11421
     invoke-direct {p0}, Landroid/os/BatteryStats$Uid$Sensor;-><init>()V
 
-    .line 11422
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mBsi:Lcom/android/server/power/stats/BatteryStatsImpl;
 
-    .line 11423
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mUid:Lcom/android/server/power/stats/BatteryStatsImpl$Uid;
 
-    .line 11424
     iput p3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mHandle:I
 
     return-void
@@ -37,7 +33,6 @@
 .method public detachFromTimeBase()V
     .locals 0
 
-    .line 11476
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mTimer:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
     invoke-static {p0}, Lcom/android/server/power/stats/BatteryStatsImpl;->-$$Nest$smdetachIfNotNull(Lcom/android/server/power/stats/BatteryStatsImpl$TimeBaseObs;)V
@@ -48,7 +43,6 @@
 .method public getHandle()I
     .locals 0
 
-    .line 11472
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mHandle:I
 
     return p0
@@ -57,7 +51,6 @@
 .method public bridge synthetic getSensorBackgroundTime()Landroid/os/BatteryStats$Timer;
     .locals 0
 
-    .line 11407
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->getSensorBackgroundTime()Lcom/android/server/power/stats/BatteryStatsImpl$Timer;
 
     move-result-object p0
@@ -68,7 +61,6 @@
 .method public getSensorBackgroundTime()Lcom/android/server/power/stats/BatteryStatsImpl$Timer;
     .locals 0
 
-    .line 11464
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mTimer:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
     if-nez p0, :cond_0
@@ -77,7 +69,6 @@
 
     return-object p0
 
-    .line 11467
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;->getSubTimer()Lcom/android/server/power/stats/BatteryStatsImpl$DurationTimer;
 
@@ -89,7 +80,6 @@
 .method public bridge synthetic getSensorTime()Landroid/os/BatteryStats$Timer;
     .locals 0
 
-    .line 11407
     invoke-virtual {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->getSensorTime()Lcom/android/server/power/stats/BatteryStatsImpl$Timer;
 
     move-result-object p0
@@ -100,7 +90,6 @@
 .method public getSensorTime()Lcom/android/server/power/stats/BatteryStatsImpl$Timer;
     .locals 0
 
-    .line 11459
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mTimer:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
     return-object p0
@@ -109,7 +98,6 @@
 .method public reset(J)Z
     .locals 2
 
-    .line 11442
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mTimer:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
     const/4 v1, 0x1
@@ -122,7 +110,6 @@
 
     const/4 p1, 0x0
 
-    .line 11443
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Uid$Sensor;->mTimer:Lcom/android/server/power/stats/BatteryStatsImpl$DualTimer;
 
     return v1

@@ -37,7 +37,6 @@
 
     const-string v9, "HW_CUSC"
 
-    .line 58
     filled-new-array/range {v0 .. v9}, [Ljava/lang/String;
 
     move-result-object v0
@@ -116,12 +115,10 @@
 .method public static createJSONObj(Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/lang/String;
     .locals 5
 
-    .line 117
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 119
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -132,7 +129,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 121
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -151,7 +147,6 @@
 
     goto :goto_0
 
-    .line 127
     :cond_0
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -162,7 +157,6 @@
     :catch_0
     move-exception p0
 
-    .line 124
     invoke-virtual {p0}, Lorg/json/JSONException;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -173,7 +167,6 @@
 .method public static getAudioServerResetCount()I
     .locals 1
 
-    .line 157
     sget-boolean v0, Lcom/samsung/android/server/audio/AudioHqmHelper;->mAudioServerResetCountMaxLimit:Z
 
     if-eqz v0, :cond_0
@@ -182,7 +175,6 @@
 
     return v0
 
-    .line 160
     :cond_0
     sget v0, Lcom/samsung/android/server/audio/AudioHqmHelper;->mAudioServerResetCount:I
 
@@ -192,7 +184,6 @@
 .method public static increaseAudioServerResetCount()V
     .locals 3
 
-    .line 147
     sget v0, Lcom/samsung/android/server/audio/AudioHqmHelper;->mAudioServerResetCount:I
 
     const/4 v1, 0x1
@@ -205,7 +196,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 150
     sget v2, Lcom/samsung/android/server/audio/AudioHqmHelper;->mPreAudioServerResetCount:I
 
     sub-int/2addr v0, v2
@@ -214,10 +204,8 @@
 
     const/4 v0, 0x0
 
-    .line 151
     sput v0, Lcom/samsung/android/server/audio/AudioHqmHelper;->mPreAudioServerResetCount:I
 
-    .line 152
     sput-boolean v1, Lcom/samsung/android/server/audio/AudioHqmHelper;->mAudioServerResetCountMaxLimit:Z
 
     :cond_0
@@ -227,17 +215,14 @@
 .method public static loggingAudioServerResetCount(Landroid/content/Context;Z)V
     .locals 4
 
-    .line 164
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 165
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 167
     sget v2, Lcom/samsung/android/server/audio/AudioHqmHelper;->mAudioServerResetCount:I
 
     sget v3, Lcom/samsung/android/server/audio/AudioHqmHelper;->mPreAudioServerResetCount:I
@@ -246,16 +231,13 @@
 
     if-nez p1, :cond_0
 
-    .line 169
     sput v2, Lcom/samsung/android/server/audio/AudioHqmHelper;->mPreAudioServerResetCount:I
 
     :cond_0
     const-string p1, "FW_ASRC"
 
-    .line 172
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 173
     invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -264,7 +246,6 @@
 
     const-string p1, "FWAC"
 
-    .line 174
     invoke-static {p0, v0, v1, p1}, Lcom/samsung/android/server/audio/AudioHqmHelper;->sendLoggingDataToHQM(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;)V
 
     return-void
@@ -282,7 +263,6 @@
     :cond_0
     const-string v0, "l_bigdata_logging"
 
-    .line 89
     :goto_0
     new-instance v1, Lcom/samsung/android/media/AudioParameter;
 
@@ -301,17 +281,14 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 94
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 95
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 97
     sget-object v5, Lcom/samsung/android/server/audio/AudioHqmHelper;->BIG_DATA:[[Ljava/lang/String;
 
     aget-object v5, v5, v2
@@ -325,17 +302,14 @@
 
     aget-object v8, v5, v7
 
-    .line 98
     invoke-virtual {v1, v8}, Lcom/samsung/android/media/AudioParameter;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
     if-eqz v9, :cond_1
 
-    .line 99
     invoke-virtual {v3, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 100
     invoke-virtual {v4, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -343,7 +317,6 @@
 
     goto :goto_2
 
-    .line 103
     :cond_2
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -365,7 +338,6 @@
     :cond_4
     const-string v5, "FWAC"
 
-    .line 106
     :goto_3
     invoke-static {p0, v3, v4, v5}, Lcom/samsung/android/server/audio/AudioHqmHelper;->sendLoggingDataToHQM(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;)V
 
@@ -374,7 +346,6 @@
 
     goto :goto_1
 
-    .line 112
     :cond_5
     invoke-static {p0, p1}, Lcom/samsung/android/server/audio/AudioHqmHelper;->loggingAudioServerResetCount(Landroid/content/Context;Z)V
 
@@ -384,7 +355,6 @@
 .method public static sendLoggingDataToHQM(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 11
 
-    .line 132
     invoke-static {p1, p2}, Lcom/samsung/android/server/audio/AudioHqmHelper;->createJSONObj(Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/lang/String;
 
     move-result-object p1
@@ -398,7 +368,6 @@
 
     const-string v0, ""
 
-    .line 136
     invoke-virtual {p1, p2, v0}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -411,7 +380,6 @@
 
     const-string p1, "HqmManagerService"
 
-    .line 139
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -424,7 +392,6 @@
 
     const-string/jumbo p1, "sendLoggingDataToHQM() Server update !!!"
 
-    .line 141
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v2, 0x0
@@ -443,7 +410,6 @@
 
     move-object v4, p3
 
-    .line 142
     invoke-virtual/range {v1 .. v10}, Landroid/os/SemHqmManager;->sendHWParamToHQM(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     return-void
@@ -454,7 +420,6 @@
 
     const-string v0, "alarm"
 
-    .line 78
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -463,7 +428,6 @@
 
     check-cast v1, Landroid/app/AlarmManager;
 
-    .line 79
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.sec.media.action.AUDIOCORE_LOGGING"
@@ -474,14 +438,12 @@
 
     const/high16 v3, 0x4000000
 
-    .line 80
     invoke-static {p0, v2, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v7
 
     const/4 v2, 0x3
 
-    .line 83
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -490,7 +452,6 @@
 
     add-long/2addr v3, v5
 
-    .line 82
     invoke-virtual/range {v1 .. v7}, Landroid/app/AlarmManager;->setRepeating(IJJLandroid/app/PendingIntent;)V
 
     return-void

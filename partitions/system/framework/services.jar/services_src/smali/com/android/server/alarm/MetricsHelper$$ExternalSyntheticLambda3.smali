@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/alarm/Alarm;
 
     invoke-static {p1}, Lcom/android/server/alarm/MetricsHelper;->$r8$lambda$5QjJJRxSSpcoVMwg7zoe5z7TZsI(Lcom/android/server/alarm/Alarm;)Z

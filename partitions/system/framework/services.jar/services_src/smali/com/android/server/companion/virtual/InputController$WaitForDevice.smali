@@ -20,7 +20,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceAddedLatch(Lcom/android/server/companion/virtual/InputController$WaitForDevice;)Ljava/util/concurrent/CountDownLatch;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->mDeviceAddedLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public static bridge synthetic -$$Nest$fputmInputDeviceId(Lcom/android/server/companion/virtual/InputController$WaitForDevice;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->mInputDeviceId:I
 
     return-void
@@ -38,12 +36,10 @@
 .method public constructor <init>(Lcom/android/server/companion/virtual/InputController;Ljava/lang/String;II)V
     .locals 7
 
-    .line 697
     iput-object p1, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->this$0:Lcom/android/server/companion/virtual/InputController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 692
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -54,10 +50,8 @@
 
     const/4 v0, -0x2
 
-    .line 695
     iput v0, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->mInputDeviceId:I
 
-    .line 698
     new-instance v0, Lcom/android/server/companion/virtual/InputController$WaitForDevice$1;
 
     move-object v1, v0
@@ -76,7 +70,6 @@
 
     iput-object v0, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->mListener:Landroid/hardware/input/InputManager$InputDeviceListener;
 
-    .line 725
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object p0
@@ -95,7 +88,6 @@
 .method public close()V
     .locals 1
 
-    .line 754
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object v0
@@ -110,7 +102,6 @@
 .method public waitForDeviceCreation()I
     .locals 4
 
-    .line 736
     :try_start_0
     iget-object v0, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->mDeviceAddedLatch:Ljava/util/concurrent/CountDownLatch;
 
@@ -126,7 +117,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 744
     iget v0, p0, Lcom/android/server/companion/virtual/InputController$WaitForDevice;->mInputDeviceId:I
 
     const/4 v1, -0x2
@@ -135,7 +125,6 @@
 
     return v0
 
-    .line 745
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -159,7 +148,6 @@
 
     throw v0
 
-    .line 737
     :cond_1
     :try_start_1
     new-instance p0, Lcom/android/server/companion/virtual/InputController$DeviceCreationException;
@@ -175,7 +163,6 @@
     :catch_0
     move-exception p0
 
-    .line 741
     new-instance v0, Lcom/android/server/companion/virtual/InputController$DeviceCreationException;
 
     const-string v1, "Interrupted while waiting for virtual device to be created."

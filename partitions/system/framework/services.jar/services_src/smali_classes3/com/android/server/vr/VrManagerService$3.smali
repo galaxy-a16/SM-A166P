@@ -20,7 +20,6 @@
 .method public asInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 0
 
-    .line 439
     invoke-static {p1}, Landroid/service/vr/IVrListener$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/vr/IVrListener;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public checkType(Landroid/os/IInterface;)Z
     .locals 0
 
-    .line 444
     instance-of p0, p1, Landroid/service/vr/IVrListener;
 
     return p0

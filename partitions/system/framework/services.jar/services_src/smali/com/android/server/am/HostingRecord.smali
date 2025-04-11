@@ -49,7 +49,6 @@
 
     move-object v1, p1
 
-    .line 117
     invoke-direct/range {v0 .. v9}, Lcom/android/server/am/HostingRecord;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -60,7 +59,6 @@
 
     const/4 v0, 0x0
 
-    .line 123
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/am/HostingRecord;-><init>(Ljava/lang/String;Landroid/content/ComponentName;I)V
 
     return-void
@@ -69,7 +67,6 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/content/ComponentName;I)V
     .locals 0
 
-    .line 153
     invoke-virtual {p2}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p2
@@ -82,7 +79,6 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/content/ComponentName;Ljava/lang/String;)V
     .locals 11
 
-    .line 178
     invoke-virtual {p2}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object v2
@@ -115,7 +111,6 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/content/ComponentName;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 11
 
-    .line 193
     invoke-virtual {p2}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object v2
@@ -148,7 +143,6 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;)V
     .locals 10
 
-    .line 128
     invoke-virtual {p2}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object v2
@@ -179,7 +173,6 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 11
 
-    .line 185
     invoke-virtual {p2}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object v2
@@ -212,7 +205,6 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/content/ComponentName;Z)V
     .locals 10
 
-    .line 142
     invoke-virtual {p2}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object v2
@@ -245,7 +237,6 @@
 
     const/4 v0, 0x0
 
-    .line 148
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/am/HostingRecord;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
@@ -274,7 +265,6 @@
 
     move v3, p3
 
-    .line 157
     invoke-direct/range {v0 .. v9}, Lcom/android/server/am/HostingRecord;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -283,34 +273,24 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 165
     iput-object p1, p0, Lcom/android/server/am/HostingRecord;->mHostingType:Ljava/lang/String;
 
-    .line 166
     iput-object p2, p0, Lcom/android/server/am/HostingRecord;->mHostingName:Ljava/lang/String;
 
-    .line 167
     iput p3, p0, Lcom/android/server/am/HostingRecord;->mHostingZygote:I
 
-    .line 168
     iput-object p4, p0, Lcom/android/server/am/HostingRecord;->mDefiningPackageName:Ljava/lang/String;
 
-    .line 169
     iput p5, p0, Lcom/android/server/am/HostingRecord;->mDefiningUid:I
 
-    .line 170
     iput-boolean p6, p0, Lcom/android/server/am/HostingRecord;->mIsTopApp:Z
 
-    .line 171
     iput-object p7, p0, Lcom/android/server/am/HostingRecord;->mDefiningProcessName:Ljava/lang/String;
 
-    .line 172
     iput-object p8, p0, Lcom/android/server/am/HostingRecord;->mAction:Ljava/lang/String;
 
-    .line 173
     iput-object p9, p0, Lcom/android/server/am/HostingRecord;->mTriggerType:Ljava/lang/String;
 
     return-void
@@ -319,37 +299,26 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 200
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 201
     iput-object p1, p0, Lcom/android/server/am/HostingRecord;->mHostingType:Ljava/lang/String;
 
-    .line 202
     iput-object p2, p0, Lcom/android/server/am/HostingRecord;->mHostingName:Ljava/lang/String;
 
-    .line 203
     iput p3, p0, Lcom/android/server/am/HostingRecord;->mHostingZygote:I
 
-    .line 204
     iput-object p4, p0, Lcom/android/server/am/HostingRecord;->mDefiningPackageName:Ljava/lang/String;
 
-    .line 205
     iput p5, p0, Lcom/android/server/am/HostingRecord;->mDefiningUid:I
 
-    .line 206
     iput-boolean p6, p0, Lcom/android/server/am/HostingRecord;->mIsTopApp:Z
 
-    .line 207
     iput-object p7, p0, Lcom/android/server/am/HostingRecord;->mDefiningProcessName:Ljava/lang/String;
 
-    .line 208
     iput-object p8, p0, Lcom/android/server/am/HostingRecord;->mAction:Ljava/lang/String;
 
-    .line 209
     iput-object p9, p0, Lcom/android/server/am/HostingRecord;->mTriggerType:Ljava/lang/String;
 
-    .line 210
     iput-object p10, p0, Lcom/android/server/am/HostingRecord;->mFrom:Ljava/lang/String;
 
     return-void
@@ -358,7 +327,6 @@
 .method public static byAppZygote(Landroid/content/ComponentName;Ljava/lang/String;ILjava/lang/String;)Lcom/android/server/am/HostingRecord;
     .locals 11
 
-    .line 299
     new-instance v10, Lcom/android/server/am/HostingRecord;
 
     const-string v1, ""
@@ -391,7 +359,6 @@
 .method public static byWebviewZygote(Landroid/content/ComponentName;Ljava/lang/String;ILjava/lang/String;)Lcom/android/server/am/HostingRecord;
     .locals 11
 
-    .line 285
     new-instance v10, Lcom/android/server/am/HostingRecord;
 
     const-string v1, ""
@@ -426,7 +393,6 @@
 
     move-object/from16 v0, p0
 
-    .line 324
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->hashCode()I
@@ -778,7 +744,6 @@
 .method public static getTriggerTypeForStatsd(Ljava/lang/String;)I
     .locals 6
 
-    .line 364
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -904,7 +869,6 @@
 .method public getAction()Ljava/lang/String;
     .locals 0
 
-    .line 270
     iget-object p0, p0, Lcom/android/server/am/HostingRecord;->mAction:Ljava/lang/String;
 
     return-object p0
@@ -913,7 +877,6 @@
 .method public getDefiningPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 251
     iget-object p0, p0, Lcom/android/server/am/HostingRecord;->mDefiningPackageName:Ljava/lang/String;
 
     return-object p0
@@ -922,7 +885,6 @@
 .method public getDefiningProcessName()Ljava/lang/String;
     .locals 0
 
-    .line 261
     iget-object p0, p0, Lcom/android/server/am/HostingRecord;->mDefiningProcessName:Ljava/lang/String;
 
     return-object p0
@@ -931,7 +893,6 @@
 .method public getDefiningUid()I
     .locals 0
 
-    .line 241
     iget p0, p0, Lcom/android/server/am/HostingRecord;->mDefiningUid:I
 
     return p0
@@ -940,7 +901,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 227
     iget-object p0, p0, Lcom/android/server/am/HostingRecord;->mHostingName:Ljava/lang/String;
 
     return-object p0
@@ -949,7 +909,6 @@
 .method public getTriggerType()Ljava/lang/String;
     .locals 0
 
-    .line 275
     iget-object p0, p0, Lcom/android/server/am/HostingRecord;->mTriggerType:Ljava/lang/String;
 
     return-object p0
@@ -958,7 +917,6 @@
 .method public getType()Ljava/lang/String;
     .locals 0
 
-    .line 223
     iget-object p0, p0, Lcom/android/server/am/HostingRecord;->mHostingType:Ljava/lang/String;
 
     return-object p0
@@ -967,7 +925,6 @@
 .method public isTopApp()Z
     .locals 0
 
-    .line 231
     iget-boolean p0, p0, Lcom/android/server/am/HostingRecord;->mIsTopApp:Z
 
     return p0
@@ -976,7 +933,6 @@
 .method public toStringForTracker()Ljava/lang/String;
     .locals 3
 
-    .line 218
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1017,7 +973,6 @@
 .method public usesAppZygote()Z
     .locals 1
 
-    .line 308
     iget p0, p0, Lcom/android/server/am/HostingRecord;->mHostingZygote:I
 
     const/4 v0, 0x2
@@ -1038,7 +993,6 @@
 .method public usesWebviewZygote()Z
     .locals 1
 
-    .line 315
     iget p0, p0, Lcom/android/server/am/HostingRecord;->mHostingZygote:I
 
     const/4 v0, 0x1

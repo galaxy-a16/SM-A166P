@@ -47,7 +47,6 @@
 .method public static synthetic $r8$lambda$MragwLwYrg7NvsgaOuU1CQ3aEJw(Lcom/android/server/biometrics/SemBioAnalyticsManager;Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->lambda$onBootComplete$0(Landroid/content/Context;)V
 
     return-void
@@ -56,7 +55,6 @@
 .method public static synthetic $r8$lambda$ikGr-wfnHR7_V2b0fIgmgdgIjas(Lcom/android/server/biometrics/SemBioAnalyticsManager;Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->lambda$fpInsertLog$1(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
     return-void
@@ -65,7 +63,6 @@
 .method public static synthetic $r8$lambda$vwxQKA6IuNdL1oAg4Ean9jrUwa4(Lcom/android/server/biometrics/SemBioAnalyticsManager;Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->lambda$faceInsertLog$2(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
     return-void
@@ -74,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->DEBUG:Z
 
     return v0
@@ -83,12 +79,10 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 38
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->DEBUG:Z
 
-    .line 381
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$1;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/SemBioAnalyticsManager$1;-><init>()V
@@ -101,20 +95,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 397
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 340
     iput-boolean v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsFirstSensorCheckForDQA:Z
 
     const/4 v0, 0x0
 
-    .line 343
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFpAuthRejectConsecutively:I
 
-    .line 398
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
 
     move-result-object v0
@@ -125,7 +115,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mH:Landroid/os/Handler;
 
-    .line 399
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -138,7 +127,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/SemBioAnalyticsManager-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;-><init>()V
 
     return-void
@@ -147,7 +135,6 @@
 .method public static get()Lcom/android/server/biometrics/SemBioAnalyticsManager;
     .locals 1
 
-    .line 394
     sget-object v0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->sInstance:Landroid/util/Singleton;
 
     invoke-virtual {v0}, Landroid/util/Singleton;->get()Ljava/lang/Object;
@@ -162,7 +149,6 @@
 .method public static getInstance()Lcom/android/server/biometrics/SemBioAnalyticsManager;
     .locals 1
 
-    .line 390
     sget-object v0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->sInstance:Landroid/util/Singleton;
 
     invoke-virtual {v0}, Landroid/util/Singleton;->get()Ljava/lang/Object;
@@ -177,19 +163,16 @@
 .method private synthetic lambda$faceInsertLog$2(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
     .locals 1
 
-    .line 629
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
-    .line 630
     iget-object p0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mPendingRequestBeforeBootComplete:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 632
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceHandleData(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
@@ -200,19 +183,16 @@
 .method private synthetic lambda$fpInsertLog$1(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
     .locals 1
 
-    .line 454
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
-    .line 455
     iget-object p0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mPendingRequestBeforeBootComplete:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 457
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpHandleData(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
@@ -223,17 +203,14 @@
 .method private synthetic lambda$onBootComplete$0(Landroid/content/Context;)V
     .locals 1
 
-    .line 430
     iput-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
 
-    .line 431
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
     invoke-direct {v0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mDqaMgr:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
-    .line 432
     iget-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->isSupportDMALogging(Landroid/content/Context;)Z
@@ -242,7 +219,6 @@
 
     iput-boolean p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsSupportDMA:Z
 
-    .line 433
     iget-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mPendingRequestBeforeBootComplete:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -262,12 +238,10 @@
 
     check-cast v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
-    .line 434
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpHandleData(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
     goto :goto_0
 
-    .line 436
     :cond_0
     iget-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mPendingRequestBeforeBootComplete:Ljava/util/ArrayList;
 
@@ -275,7 +249,6 @@
 
     const/4 p1, 0x0
 
-    .line 437
     iput-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mPendingRequestBeforeBootComplete:Ljava/util/ArrayList;
 
     return-void
@@ -302,7 +275,6 @@
 
     goto :goto_0
 
-    .line 609
     :pswitch_0
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityMisAligned:I
 
@@ -312,7 +284,6 @@
 
     goto :goto_0
 
-    .line 603
     :pswitch_1
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualitySmallFace:I
 
@@ -322,7 +293,6 @@
 
     goto :goto_0
 
-    .line 600
     :pswitch_2
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityBigFace:I
 
@@ -355,7 +325,6 @@
 
     goto :goto_0
 
-    .line 620
     :cond_1
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityMisAligned:I
 
@@ -365,7 +334,6 @@
 
     goto :goto_0
 
-    .line 614
     :cond_2
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityFakeFace:I
 
@@ -375,7 +343,6 @@
 
     goto :goto_0
 
-    .line 594
     :cond_3
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityNoFace:I
 
@@ -385,7 +352,6 @@
 
     goto :goto_0
 
-    .line 597
     :cond_4
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityLow:I
 
@@ -414,7 +380,6 @@
 
     return-void
 
-    .line 819
     :cond_0
     sget-boolean v0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->DEBUG:Z
 
@@ -422,7 +387,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 820
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -443,7 +407,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 823
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mDqaMgr:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
@@ -455,10 +418,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 824
     invoke-virtual {v0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;->faceHandleDqaData(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 828
     :cond_2
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_LOGGING_MODE:Z
 
@@ -470,12 +431,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 830
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 832
     iget-boolean v2, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsSupportDMA:Z
 
     const-string v3, "extra"
@@ -484,7 +443,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 834
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
@@ -493,20 +451,16 @@
 
     const-string v6, "4G3-399-5448102"
 
-    .line 835
     invoke-virtual {v2, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 836
     iget-object v5, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
     invoke-virtual {v2, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 837
     iget-object p1, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
     if-eqz p1, :cond_3
 
-    .line 838
     invoke-virtual {v2, v3, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
@@ -514,32 +468,26 @@
 
     const-string v3, "com.android.server.biometrics.sensors.face"
 
-    .line 840
     invoke-virtual {v2, p1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p1, "type"
 
     const-string v3, "ev"
 
-    .line 842
     invoke-virtual {v2, p1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "com.sec.android.diagmonagent.intent.USE_APP_FEATURE_SURVEY"
 
-    .line 843
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 844
     invoke-virtual {v0, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     const-string p1, "com.sec.android.diagmonagent"
 
-    .line 845
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_0
 
-    .line 848
     :cond_4
     new-instance v2, Landroid/content/ContentValues;
 
@@ -549,39 +497,31 @@
 
     const-string v6, "com.samsung.android.bio.face.service"
 
-    .line 849
     invoke-virtual {v2, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 850
     iget-object v5, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
     invoke-virtual {v2, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 851
     iget-object p1, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
     if-eqz p1, :cond_5
 
-    .line 852
     invoke-virtual {v2, v3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     const-string p1, "com.samsung.android.providers.context.log.action.USE_APP_FEATURE_SURVEY"
 
-    .line 855
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "data"
 
-    .line 856
     invoke-virtual {v0, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     const-string p1, "com.samsung.android.providers.context"
 
-    .line 857
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 860
     :goto_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
@@ -595,7 +535,6 @@
     :catch_0
     move-exception p0
 
-    .line 862
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -626,22 +565,16 @@
 
     const/4 v0, 0x0
 
-    .line 582
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityNoFace:I
 
-    .line 583
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityLow:I
 
-    .line 584
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityFakeFace:I
 
-    .line 585
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityBigFace:I
 
-    .line 586
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualitySmallFace:I
 
-    .line 587
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityMisAligned:I
 
     return-void
@@ -650,7 +583,6 @@
 .method public final faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
     .locals 2
 
-    .line 628
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mH:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$$ExternalSyntheticLambda2;
@@ -665,7 +597,6 @@
 .method public faceOnAuthenticatedFailure(Ljava/lang/String;)V
     .locals 4
 
-    .line 679
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v1, "FAIF"
@@ -678,7 +609,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 680
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/biometrics/Utils;->isFolderOpened(Landroid/content/Context;)Z
@@ -695,7 +625,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 681
     :cond_0
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
@@ -712,10 +641,8 @@
 .method public faceOnAuthenticatedFailure(Ljava/lang/String;IIIII)V
     .locals 2
 
-    .line 646
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceOnAuthenticatedFailure(Ljava/lang/String;)V
 
-    .line 648
     invoke-static {p2}, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->semBigDataFALICondition(I)Z
 
     move-result p2
@@ -726,7 +653,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 649
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FALI"
@@ -737,7 +663,6 @@
 
     goto :goto_0
 
-    .line 650
     :cond_0
     invoke-static {p5}, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->semBigDataFABKCondition(I)Z
 
@@ -745,7 +670,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 651
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FABK"
@@ -756,7 +680,6 @@
 
     goto :goto_0
 
-    .line 652
     :cond_1
     invoke-static {p6}, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->semBigDataFAMOCondition(I)Z
 
@@ -764,7 +687,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 653
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FAMO"
@@ -775,7 +697,6 @@
 
     goto :goto_0
 
-    .line 654
     :cond_2
     invoke-static {p3, p4}, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->semBigDataFALQCondition(II)Z
 
@@ -783,7 +704,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 655
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FALQ"
@@ -794,7 +714,6 @@
 
     goto :goto_0
 
-    .line 657
     :cond_3
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
@@ -811,7 +730,6 @@
 .method public faceOnAuthenticatedFailureForHIDL(Ljava/lang/String;IIII)V
     .locals 3
 
-    .line 663
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceOnAuthenticatedFailure(Ljava/lang/String;)V
 
     const/4 v0, 0x3
@@ -822,7 +740,6 @@
 
     if-lt p2, v2, :cond_0
 
-    .line 666
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FALI"
@@ -836,7 +753,6 @@
     :cond_0
     if-lt p3, v2, :cond_1
 
-    .line 668
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FABK"
@@ -850,7 +766,6 @@
     :cond_1
     if-lt p4, v2, :cond_2
 
-    .line 670
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FAMO"
@@ -866,7 +781,6 @@
 
     if-lt p5, p2, :cond_3
 
-    .line 672
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FALQ"
@@ -877,7 +791,6 @@
 
     goto :goto_0
 
-    .line 674
     :cond_3
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
@@ -894,7 +807,6 @@
 .method public faceOnAuthenticatedSuccess(Ljava/lang/String;)V
     .locals 4
 
-    .line 638
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v1, "FAIS"
@@ -907,7 +819,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 639
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/biometrics/Utils;->isFolderOpened(Landroid/content/Context;)Z
@@ -924,7 +835,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 640
     :cond_0
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
@@ -941,7 +851,6 @@
 .method public faceOnEnrollmentSuccess(Ljava/lang/String;)V
     .locals 4
 
-    .line 724
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const/4 v1, -0x1
@@ -972,7 +881,6 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 687
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string p3, "FAMK"
@@ -992,7 +900,6 @@
 
     if-ne p2, p3, :cond_2
 
-    .line 689
     :cond_1
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
@@ -1010,7 +917,6 @@
 .method public faceOnRemoved(Ljava/lang/String;)V
     .locals 4
 
-    .line 728
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const/4 v1, -0x1
@@ -1029,7 +935,6 @@
 .method public faceOnTimeout(Ljava/lang/String;)V
     .locals 5
 
-    .line 694
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v1, "FATO"
@@ -1042,12 +947,10 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 696
     iget v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityNoFace:I
 
     if-lez v0, :cond_0
 
-    .line 697
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v4, "FAQN"
@@ -1056,13 +959,11 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 699
     :cond_0
     iget v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityLow:I
 
     if-lez v0, :cond_1
 
-    .line 700
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v4, "FAQL"
@@ -1071,13 +972,11 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 702
     :cond_1
     iget v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityFakeFace:I
 
     if-lez v0, :cond_2
 
-    .line 703
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v4, "FAQF"
@@ -1086,13 +985,11 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 705
     :cond_2
     iget v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityBigFace:I
 
     if-lez v0, :cond_3
 
-    .line 706
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v4, "FAQB"
@@ -1101,13 +998,11 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 708
     :cond_3
     iget v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualitySmallFace:I
 
     if-lez v0, :cond_4
 
-    .line 709
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v4, "FAQS"
@@ -1116,13 +1011,11 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 711
     :cond_4
     iget v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityMisAligned:I
 
     if-lez v0, :cond_5
 
-    .line 712
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v4, "FAQM"
@@ -1131,7 +1024,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 715
     :cond_5
     iget v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityNoFace:I
 
@@ -1157,7 +1049,6 @@
 
     if-nez v0, :cond_6
 
-    .line 717
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const-string v1, "FANF"
@@ -1168,7 +1059,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 720
     :cond_6
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->faceInitHelpEvent()V
 
@@ -1178,7 +1068,6 @@
 .method public fpHalInfo(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 442
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1191,10 +1080,8 @@
 
     const-string v0, "FPDA"
 
-    .line 443
     invoke-virtual {p0, v0, p1, v2, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 446
     :cond_0
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1204,7 +1091,6 @@
 
     const-string p1, "FPDS"
 
-    .line 447
     invoke-virtual {p0, p1, p2, v2, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     :cond_1
@@ -1218,7 +1104,6 @@
 
     return-void
 
-    .line 751
     :cond_0
     sget-boolean v0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->DEBUG:Z
 
@@ -1226,7 +1111,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 752
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1247,7 +1131,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 755
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mDqaMgr:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
@@ -1259,10 +1142,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 756
     invoke-virtual {v0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;->fpHandleDqaData(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 758
     :cond_2
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_GESTURE_MODE:Z
 
@@ -1270,7 +1151,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 759
     iget-boolean v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mHasGestureEventForDQA:Z
 
     if-nez v0, :cond_3
@@ -1285,10 +1165,8 @@
 
     if-eqz v0, :cond_3
 
-    .line 760
     iput-boolean v2, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mHasGestureEventForDQA:Z
 
-    .line 763
     :cond_3
     iget-object v0, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
@@ -1300,7 +1178,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 764
     iput v2, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mLatestAuthenticatedForDQA:I
 
     goto :goto_0
@@ -1308,7 +1185,6 @@
     :cond_4
     const-string v0, "FPIF"
 
-    .line 765
     iget-object v4, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1319,10 +1195,8 @@
 
     const/4 v0, 0x0
 
-    .line 766
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mLatestAuthenticatedForDQA:I
 
-    .line 770
     :cond_5
     :goto_0
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_LOGGING_MODE:Z
@@ -1335,12 +1209,10 @@
 
     if-eqz v0, :cond_a
 
-    .line 772
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 774
     iget-boolean v2, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsSupportDMA:Z
 
     const-string v4, "feature"
@@ -1349,7 +1221,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 776
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
@@ -1358,23 +1229,18 @@
 
     const-string v7, "4G2-399-4810151"
 
-    .line 777
     invoke-virtual {v2, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 778
     iget-object v6, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
     invoke-virtual {v2, v4, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 779
     iget-object v4, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
     if-eqz v4, :cond_6
 
-    .line 780
     invoke-virtual {v2, v5, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 783
     :cond_6
     iget-object v4, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
@@ -1396,14 +1262,12 @@
 
     if-eqz p1, :cond_7
 
-    .line 784
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     const-string v3, "FINGERPRINT_IDENTIFICATION"
 
-    .line 785
     filled-new-array {v5}, [Ljava/lang/String;
 
     move-result-object v4
@@ -1412,7 +1276,6 @@
 
     const-string/jumbo v3, "personalizedData"
 
-    .line 786
     invoke-virtual {v2, v3, p1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
     :cond_7
@@ -1420,32 +1283,26 @@
 
     const-string v3, "com.android.server.biometrics.sensors.fingerprint"
 
-    .line 788
     invoke-virtual {v2, p1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p1, "type"
 
     const-string v3, "ev"
 
-    .line 789
     invoke-virtual {v2, p1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "com.sec.android.diagmonagent.intent.USE_APP_FEATURE_SURVEY"
 
-    .line 790
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 791
     invoke-virtual {v0, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     const-string p1, "com.sec.android.diagmonagent"
 
-    .line 792
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_1
 
-    .line 795
     :cond_8
     new-instance v2, Landroid/content/ContentValues;
 
@@ -1455,39 +1312,31 @@
 
     const-string v6, "com.samsung.android.fingerprint.service"
 
-    .line 796
     invoke-virtual {v2, v3, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 797
     iget-object v3, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
     invoke-virtual {v2, v4, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 798
     iget-object p1, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
     if-eqz p1, :cond_9
 
-    .line 799
     invoke-virtual {v2, v5, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_9
     const-string p1, "com.samsung.android.providers.context.log.action.USE_APP_FEATURE_SURVEY"
 
-    .line 802
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "data"
 
-    .line 803
     invoke-virtual {v0, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     const-string p1, "com.samsung.android.providers.context"
 
-    .line 804
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 807
     :goto_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
@@ -1501,7 +1350,6 @@
     :catch_0
     move-exception p0
 
-    .line 809
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1530,7 +1378,6 @@
 .method public final fpInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
     .locals 2
 
-    .line 453
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mH:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$$ExternalSyntheticLambda1;
@@ -1545,14 +1392,12 @@
 .method public fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 1
 
-    .line 464
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;-><init>(Ljava/lang/String;Ljava/lang/String;II)V
 
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
-    .line 465
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLogExt(Ljava/lang/String;Ljava/lang/String;II)V
 
     return-void
@@ -1587,28 +1432,23 @@
 
     goto :goto_0
 
-    .line 541
     :cond_0
     new-instance p3, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     invoke-direct {p3}, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;-><init>()V
 
-    .line 542
     iput-object v1, p3, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
-    .line 543
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p3, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
-    .line 544
     iput v3, p3, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mType:I
 
     goto :goto_0
 
-    .line 529
     :cond_1
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
@@ -1616,42 +1456,34 @@
 
     const-string v1, "FPIB"
 
-    .line 530
     iput-object v1, v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
-    .line 531
     iput-object p3, v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
-    .line 532
     iput v3, v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mType:I
 
     move-object p3, v0
 
     goto :goto_0
 
-    .line 535
     :cond_2
     new-instance p3, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     invoke-direct {p3}, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;-><init>()V
 
-    .line 536
     iput-object v1, p3, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
-    .line 537
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p3, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
-    .line 538
     iput v3, p3, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mType:I
 
     :goto_0
     if-eqz p3, :cond_3
 
-    .line 548
     invoke-virtual {p0, p3}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
     :cond_3
@@ -1661,25 +1493,20 @@
 
     if-ne p2, p1, :cond_4
 
-    .line 552
     new-instance p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     invoke-direct {p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;-><init>()V
 
     const-string p2, "FPPD"
 
-    .line 553
     iput-object p2, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mFeature:Ljava/lang/String;
 
-    .line 554
     iput-object v4, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mExtra:Ljava/lang/String;
 
     const/4 p2, 0x2
 
-    .line 555
     iput p2, p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;->mType:I
 
-    .line 556
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;)V
 
     :cond_4
@@ -1691,7 +1518,6 @@
 
     const-string p2, "FPIS"
 
-    .line 469
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -1700,7 +1526,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 470
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFpAuthRejectConsecutively:I
 
     const/4 p2, 0x3
@@ -1719,7 +1544,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 473
     :cond_0
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
@@ -1734,7 +1558,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 476
     iput p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFpAuthRejectConsecutively:I
 
     goto :goto_0
@@ -1742,14 +1565,12 @@
     :cond_2
     const-string p2, "FPIF"
 
-    .line 477
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 478
     iget p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFpAuthRejectConsecutively:I
 
     add-int/lit8 p1, p1, 0x1
@@ -1760,12 +1581,10 @@
 
     if-lt p1, p2, :cond_3
 
-    .line 479
     rem-int/lit8 p2, p1, 0x5
 
     if-nez p2, :cond_3
 
-    .line 480
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1806,7 +1625,6 @@
 
     goto :goto_1
 
-    .line 509
     :cond_1
     invoke-static {p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semIsAuthenticationFailedReasonEvent(I)Z
 
@@ -1850,7 +1668,6 @@
     :goto_1
     if-eqz p1, :cond_3
 
-    .line 515
     new-instance p2, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const/4 v0, -0x1
@@ -1878,7 +1695,6 @@
 .method public fpInsertLogRemove(I)V
     .locals 4
 
-    .line 520
     new-instance v0, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const/4 v1, -0x1
@@ -1915,12 +1731,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 563
     iget-boolean v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsSensorErrorForDQA:Z
 
     if-nez v0, :cond_1
 
-    .line 564
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1953,7 +1767,6 @@
 
     move-result-object v0
 
-    .line 568
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1978,7 +1791,6 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 569
     new-instance p1, Lcom/android/server/biometrics/SemBioAnalyticsManager$EventData;
 
     const/4 v2, -0x1
@@ -1993,16 +1805,13 @@
 
     const/4 p1, 0x1
 
-    .line 570
     iput-boolean p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsSensorErrorForDQA:Z
 
     goto :goto_0
 
-    .line 573
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsSensorErrorForDQA:Z
 
-    .line 575
     :cond_1
     :goto_0
     iput-boolean v1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsFirstSensorCheckForDQA:Z
@@ -2013,7 +1822,6 @@
 .method public injectPendingList(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 424
     iput-object p1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mPendingRequestBeforeBootComplete:Ljava/util/ArrayList;
 
     return-void
@@ -2024,7 +1832,6 @@
 
     const/4 p0, 0x0
 
-    .line 736
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -2038,7 +1845,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 738
     iget p1, p1, Landroid/content/pm/PackageInfo;->versionCode:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2055,7 +1861,6 @@
     :catch_0
     move-exception p1
 
-    .line 741
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2085,7 +1890,6 @@
 .method public onBootComplete(Landroid/content/Context;)V
     .locals 2
 
-    .line 429
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mH:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/SemBioAnalyticsManager$$ExternalSyntheticLambda0;
@@ -2100,7 +1904,6 @@
 .method public reset()V
     .locals 2
 
-    .line 404
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -2109,47 +1912,34 @@
 
     const/4 v0, 0x0
 
-    .line 405
     iput-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mContext:Landroid/content/Context;
 
-    .line 406
     iput-object v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mDqaMgr:Lcom/android/server/biometrics/SemBioAnalyticsManager$DQAManager;
 
     const/4 v0, 0x0
 
-    .line 407
     iput-boolean v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsSupportDMA:Z
 
-    .line 409
     iput-boolean v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsSensorErrorForDQA:Z
 
     const/4 v1, 0x1
 
-    .line 410
     iput-boolean v1, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mIsFirstSensorCheckForDQA:Z
 
-    .line 411
     iput-boolean v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mHasGestureEventForDQA:Z
 
-    .line 412
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mLatestAuthenticatedForDQA:I
 
-    .line 414
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityNoFace:I
 
-    .line 415
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityLow:I
 
-    .line 416
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityFakeFace:I
 
-    .line 417
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityBigFace:I
 
-    .line 418
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualitySmallFace:I
 
-    .line 419
     iput v0, p0, Lcom/android/server/biometrics/SemBioAnalyticsManager;->mFaceQualityMisAligned:I
 
     return-void

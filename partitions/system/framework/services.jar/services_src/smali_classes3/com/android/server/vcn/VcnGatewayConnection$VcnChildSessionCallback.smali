@@ -22,7 +22,6 @@
 
     const/4 v0, 0x0
 
-    .line 2388
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;-><init>(Lcom/android/server/vcn/VcnGatewayConnection;IZ)V
 
     return-void
@@ -31,20 +30,16 @@
 .method public constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;IZ)V
     .locals 0
 
-    .line 2405
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2385
     iput-boolean p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mIsChildOpened:Z
 
-    .line 2406
     iput p2, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mToken:I
 
-    .line 2407
     iput-boolean p3, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mIsOpportunistic:Z
 
     return-void
@@ -55,7 +50,6 @@
 .method public onClosed()V
     .locals 3
 
-    .line 2431
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +70,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogDbg(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 2433
     iget-boolean v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mIsOpportunistic:Z
 
     if-eqz v0, :cond_0
@@ -85,7 +78,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2434
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     const-string v0, "ChildClosed for unopened opportunistic child; ignoring"
@@ -94,7 +86,6 @@
 
     return-void
 
-    .line 2438
     :cond_0
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
@@ -110,7 +101,6 @@
 .method public onClosedExceptionally(Landroid/net/ipsec/ike/exceptions/IkeException;)V
     .locals 3
 
-    .line 2443
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -131,7 +121,6 @@
 
     invoke-static {v0, v1, p1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogInfo(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 2445
     iget-boolean v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mIsOpportunistic:Z
 
     if-eqz v0, :cond_0
@@ -140,7 +129,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2446
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     const-string p1, "ChildClosedExceptionally for unopened opportunistic child; ignoring"
@@ -149,7 +137,6 @@
 
     return-void
 
-    .line 2450
     :cond_0
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
@@ -163,7 +150,6 @@
 .method public onIpSecTransformCreated(Landroid/net/IpSecTransform;I)V
     .locals 3
 
-    .line 2455
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -190,7 +176,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogDbg(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 2456
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     iget p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mToken:I
@@ -203,7 +188,6 @@
 .method public onIpSecTransformDeleted(Landroid/net/IpSecTransform;I)V
     .locals 2
 
-    .line 2471
     iget-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -236,7 +220,6 @@
 .method public onIpSecTransformsMigrated(Landroid/net/IpSecTransform;Landroid/net/IpSecTransform;)V
     .locals 3
 
-    .line 2463
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -257,7 +240,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogDbg(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 2464
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     iget p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mToken:I
@@ -270,7 +252,6 @@
 .method public onOpened(Landroid/net/ipsec/ike/ChildSessionConfiguration;)V
     .locals 1
 
-    .line 2426
     new-instance v0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionConfiguration;
 
     invoke-direct {v0, p1}, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionConfiguration;-><init>(Landroid/net/ipsec/ike/ChildSessionConfiguration;)V
@@ -283,7 +264,6 @@
 .method public onOpened(Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionConfiguration;)V
     .locals 3
 
-    .line 2413
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -304,12 +284,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogDbg(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 2415
     iget-boolean v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mIsOpportunistic:Z
 
     if-eqz v0, :cond_0
 
-    .line 2416
     iget-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     const-string v0, "ChildOpened for opportunistic child; suppressing event message"
@@ -318,12 +296,10 @@
 
     const/4 p1, 0x1
 
-    .line 2417
     iput-boolean p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->mIsChildOpened:Z
 
     return-void
 
-    .line 2421
     :cond_0
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnChildSessionCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 

@@ -11,10 +11,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 282
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 283
     iput p1, p0, Lcom/android/server/SystemService$UserCompletedEventType;->mEventType:I
 
     return-void
@@ -23,7 +21,6 @@
 .method public static newUserCompletedEventTypeForTest(I)Lcom/android/server/SystemService$UserCompletedEventType;
     .locals 1
 
-    .line 293
     new-instance v0, Lcom/android/server/SystemService$UserCompletedEventType;
 
     invoke-direct {v0, p0}, Lcom/android/server/SystemService$UserCompletedEventType;-><init>(I)V
@@ -36,7 +33,6 @@
 .method public includesOnUserStarting()Z
     .locals 1
 
-    .line 298
     iget p0, p0, Lcom/android/server/SystemService$UserCompletedEventType;->mEventType:I
 
     const/4 v0, 0x1
@@ -57,7 +53,6 @@
 .method public includesOnUserSwitching()Z
     .locals 0
 
-    .line 308
     iget p0, p0, Lcom/android/server/SystemService$UserCompletedEventType;->mEventType:I
 
     and-int/lit8 p0, p0, 0x4
@@ -78,7 +73,6 @@
 .method public includesOnUserUnlocked()Z
     .locals 0
 
-    .line 303
     iget p0, p0, Lcom/android/server/SystemService$UserCompletedEventType;->mEventType:I
 
     and-int/lit8 p0, p0, 0x2
@@ -99,14 +93,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 313
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 315
     invoke-virtual {p0}, Lcom/android/server/SystemService$UserCompletedEventType;->includesOnUserSwitching()Z
 
     move-result v1
@@ -117,7 +109,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 316
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/SystemService$UserCompletedEventType;->includesOnUserUnlocked()Z
 
@@ -129,7 +120,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 317
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/SystemService$UserCompletedEventType;->includesOnUserStarting()Z
 
@@ -141,7 +131,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 318
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -158,10 +147,8 @@
     :cond_3
     const-string/jumbo p0, "}"
 
-    .line 319
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 320
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

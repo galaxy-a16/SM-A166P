@@ -25,14 +25,12 @@
 .method public final addConfigDescriptor(Lcom/android/server/usb/descriptors/UsbConfigDescriptor;)V
     .locals 1
 
-    .line 70
     new-instance v0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsConfigNode;
 
     invoke-direct {v0, p1}, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsConfigNode;-><init>(Lcom/android/server/usb/descriptors/UsbConfigDescriptor;)V
 
     iput-object v0, p0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsTree;->mConfigNode:Lcom/android/server/usb/descriptors/tree/UsbDescriptorsConfigNode;
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsTree;->mDeviceNode:Lcom/android/server/usb/descriptors/tree/UsbDescriptorsDeviceNode;
 
     invoke-virtual {p0, v0}, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsDeviceNode;->addConfigDescriptorNode(Lcom/android/server/usb/descriptors/tree/UsbDescriptorsConfigNode;)V
@@ -43,7 +41,6 @@
 .method public final addDeviceDescriptor(Lcom/android/server/usb/descriptors/UsbDeviceDescriptor;)V
     .locals 1
 
-    .line 63
     new-instance v0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsDeviceNode;
 
     invoke-direct {v0, p1}, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsDeviceNode;-><init>(Lcom/android/server/usb/descriptors/UsbDeviceDescriptor;)V
@@ -56,7 +53,6 @@
 .method public final addEndpointDescriptor(Lcom/android/server/usb/descriptors/UsbEndpointDescriptor;)V
     .locals 1
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsTree;->mInterfaceNode:Lcom/android/server/usb/descriptors/tree/UsbDescriptorsInterfaceNode;
 
     new-instance v0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsEndpointNode;
@@ -71,14 +67,12 @@
 .method public final addInterfaceDescriptor(Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;)V
     .locals 1
 
-    .line 78
     new-instance v0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsInterfaceNode;
 
     invoke-direct {v0, p1}, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsInterfaceNode;-><init>(Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;)V
 
     iput-object v0, p0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsTree;->mInterfaceNode:Lcom/android/server/usb/descriptors/tree/UsbDescriptorsInterfaceNode;
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsTree;->mConfigNode:Lcom/android/server/usb/descriptors/tree/UsbDescriptorsConfigNode;
 
     invoke-virtual {p0, v0}, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsConfigNode;->addInterfaceNode(Lcom/android/server/usb/descriptors/tree/UsbDescriptorsInterfaceNode;)V
@@ -89,14 +83,12 @@
 .method public parse(Lcom/android/server/usb/descriptors/UsbDescriptorParser;)V
     .locals 4
 
-    .line 102
     invoke-virtual {p1}, Lcom/android/server/usb/descriptors/UsbDescriptorParser;->getDescriptors()Ljava/util/ArrayList;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 104
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -104,14 +96,12 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 105
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/usb/descriptors/UsbDescriptor;
 
-    .line 106
     invoke-virtual {v1}, Lcom/android/server/usb/descriptors/UsbDescriptor;->getType()B
 
     move-result v2
@@ -134,7 +124,6 @@
 
     goto :goto_1
 
-    .line 123
     :cond_0
     check-cast v1, Lcom/android/server/usb/descriptors/UsbEndpointDescriptor;
 
@@ -142,7 +131,6 @@
 
     goto :goto_1
 
-    .line 119
     :cond_1
     check-cast v1, Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;
 
@@ -150,7 +138,6 @@
 
     goto :goto_1
 
-    .line 115
     :cond_2
     check-cast v1, Lcom/android/server/usb/descriptors/UsbConfigDescriptor;
 
@@ -158,7 +145,6 @@
 
     goto :goto_1
 
-    .line 111
     :cond_3
     check-cast v1, Lcom/android/server/usb/descriptors/UsbDeviceDescriptor;
 
@@ -176,7 +162,6 @@
 .method public report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V
     .locals 0
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsTree;->mDeviceNode:Lcom/android/server/usb/descriptors/tree/UsbDescriptorsDeviceNode;
 
     invoke-virtual {p0, p1}, Lcom/android/server/usb/descriptors/tree/UsbDescriptorsDeviceNode;->report(Lcom/android/server/usb/descriptors/report/ReportCanvas;)V

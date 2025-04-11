@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$2PgT3sEuqs_elEeU5k9W_EWoTc0(Lcom/android/server/app/GameServiceProviderInstanceImpl$6;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/app/GameServiceProviderInstanceImpl$6;->lambda$createGameSession$0(I)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/app/GameServiceProviderInstanceImpl;)V
     .locals 0
 
-    .line 185
     iput-object p1, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$6;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-direct {p0}, Landroid/service/games/IGameServiceController$Stub;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$createGameSession$0(I)V
     .locals 0
 
-    .line 192
     iget-object p0, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$6;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-static {p0, p1}, Lcom/android/server/app/GameServiceProviderInstanceImpl;->-$$Nest$mcreateGameSession(Lcom/android/server/app/GameServiceProviderInstanceImpl;I)V
@@ -44,10 +41,8 @@
 .method public createGameSession(I)V
     .locals 2
 
-    .line 189
     invoke-super {p0}, Landroid/service/games/IGameServiceController$Stub;->createGameSession_enforcePermission()V
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/app/GameServiceProviderInstanceImpl$6;->this$0:Lcom/android/server/app/GameServiceProviderInstanceImpl;
 
     invoke-static {v0}, Lcom/android/server/app/GameServiceProviderInstanceImpl;->-$$Nest$fgetmBackgroundExecutor(Lcom/android/server/app/GameServiceProviderInstanceImpl;)Ljava/util/concurrent/Executor;

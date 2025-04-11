@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/graphics/fonts/FontManagerService$Lifecycle;)V
     .locals 0
 
-    .line 148
     iput-object p1, p0, Lcom/android/server/graphics/fonts/FontManagerService$Lifecycle$1;->this$0:Lcom/android/server/graphics/fonts/FontManagerService$Lifecycle;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public getSerializedSystemFontMap()Landroid/os/SharedMemory;
     .locals 0
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/graphics/fonts/FontManagerService$Lifecycle$1;->this$0:Lcom/android/server/graphics/fonts/FontManagerService$Lifecycle;
 
     invoke-static {p0}, Lcom/android/server/graphics/fonts/FontManagerService$Lifecycle;->-$$Nest$fgetmService(Lcom/android/server/graphics/fonts/FontManagerService$Lifecycle;)Lcom/android/server/graphics/fonts/FontManagerService;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/magnification/WindowMagnificationManager;)V
     .locals 0
 
-    .line 159
     iput-object p1, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationManager$1;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,17 +23,14 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 162
     invoke-virtual {p1}, Landroid/content/Context;->getDisplayId()I
 
     move-result p1
 
-    .line 163
     iget-object p2, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationManager$1;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
 
     invoke-virtual {p2, p1}, Lcom/android/server/accessibility/magnification/WindowMagnificationManager;->removeMagnificationButton(I)Z
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/WindowMagnificationManager$1;->this$0:Lcom/android/server/accessibility/magnification/WindowMagnificationManager;
 
     const/4 p2, 0x0

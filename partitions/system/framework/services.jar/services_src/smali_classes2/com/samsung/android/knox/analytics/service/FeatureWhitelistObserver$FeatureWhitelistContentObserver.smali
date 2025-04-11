@@ -11,13 +11,10 @@
 .method public constructor <init>(Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;Landroid/os/Handler;)V
     .locals 0
 
-    .line 32
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver$FeatureWhitelistContentObserver;->this$0:Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;
 
-    .line 33
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 34
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -26,7 +23,6 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 35
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver$FeatureWhitelistContentObserver;->updateFeatureWhitelistCache()V
 
     return-void
@@ -37,10 +33,8 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    .line 39
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 40
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -69,7 +63,6 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver$FeatureWhitelistContentObserver;->updateFeatureWhitelistCache()V
 
     return-void
@@ -78,7 +71,6 @@
 .method public final updateFeatureWhitelistCache()V
     .locals 2
 
-    .line 45
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver$FeatureWhitelistContentObserver;->this$0:Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;
 
     invoke-static {v0}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;->-$$Nest$fgetmContext(Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;)Landroid/content/Context;
@@ -91,7 +83,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;->-$$Nest$fputmFeaturesWhitelistCache(Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;Ljava/util/List;)V
 
-    .line 46
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver$FeatureWhitelistContentObserver;->this$0:Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;
 
     invoke-static {p0}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;->-$$Nest$fgetmFeaturesWhitelistCache(Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;)Ljava/util/List;
@@ -100,7 +91,6 @@
 
     if-nez p0, :cond_0
 
-    .line 47
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0

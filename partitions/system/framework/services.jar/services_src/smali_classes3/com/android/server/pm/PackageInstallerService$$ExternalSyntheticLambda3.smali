@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PackageInstallerService;Lcom/android/server/pm/Computer;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/pm/PackageInstallerService;
@@ -35,7 +34,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/pm/PackageInstallerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerService$$ExternalSyntheticLambda3;->f$1:Lcom/android/server/pm/Computer;

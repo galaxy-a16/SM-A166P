@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/SystemServerAdapter;)V
     .locals 0
 
-    .line 114
     iput-object p1, p0, Lcom/android/server/audio/SystemServerAdapter$1;->this$0:Lcom/android/server/audio/SystemServerAdapter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 117
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -41,7 +39,6 @@
 
     const/16 v1, -0x2710
 
-    .line 118
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -50,7 +47,6 @@
 
     return-void
 
-    .line 124
     :cond_0
     const-class v0, Landroid/os/UserManager;
 
@@ -60,7 +56,6 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    .line 125
     invoke-virtual {v0, p2}, Landroid/os/UserManager;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v0
@@ -69,7 +64,6 @@
 
     return-void
 
-    .line 131
     :cond_1
     iget-object v1, p0, Lcom/android/server/audio/SystemServerAdapter$1;->this$0:Lcom/android/server/audio/SystemServerAdapter;
 
@@ -79,7 +73,6 @@
 
     invoke-static {v1, p1, v2, p2, v3}, Lcom/android/server/audio/SystemServerAdapter;->-$$Nest$mbroadcastProfileParentStickyIntent(Lcom/android/server/audio/SystemServerAdapter;Landroid/content/Context;Ljava/lang/String;II)V
 
-    .line 133
     iget-object p0, p0, Lcom/android/server/audio/SystemServerAdapter$1;->this$0:Lcom/android/server/audio/SystemServerAdapter;
 
     const-string v1, "android.intent.action.HEADSET_PLUG"

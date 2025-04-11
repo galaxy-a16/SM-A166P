@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -31,7 +29,6 @@
 
     monitor-enter p0
 
-    .line 46
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/injector/DeviceIdleHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -51,12 +48,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 47
     invoke-virtual {p0}, Lcom/android/server/location/injector/DeviceIdleHelper;->registerInternal()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
     :cond_0
     monitor-exit p0
 
@@ -76,12 +71,10 @@
 .method public final notifyDeviceIdleChanged()V
     .locals 2
 
-    .line 61
     invoke-virtual {p0}, Lcom/android/server/location/injector/DeviceIdleHelper;->isDeviceIdle()Z
 
     move-result v0
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/location/injector/DeviceIdleHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -101,7 +94,6 @@
 
     check-cast v1, Lcom/android/server/location/injector/DeviceIdleHelper$DeviceIdleListener;
 
-    .line 64
     invoke-interface {v1, v0}, Lcom/android/server/location/injector/DeviceIdleHelper$DeviceIdleListener;->onDeviceIdleChanged(Z)V
 
     goto :goto_0
@@ -118,7 +110,6 @@
 
     monitor-enter p0
 
-    .line 55
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/injector/DeviceIdleHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -136,12 +127,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 56
     invoke-virtual {p0}, Lcom/android/server/location/injector/DeviceIdleHelper;->unregisterInternal()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 58
     :cond_0
     monitor-exit p0
 

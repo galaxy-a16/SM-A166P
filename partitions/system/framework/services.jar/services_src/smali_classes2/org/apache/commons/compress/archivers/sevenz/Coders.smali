@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 47
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/Coders$1;
 
     invoke-direct {v0}, Lorg/apache/commons/compress/archivers/sevenz/Coders$1;-><init>()V
@@ -24,7 +23,6 @@
 .method public static addDecoder(Ljava/lang/String;Ljava/io/InputStream;JLorg/apache/commons/compress/archivers/sevenz/Coder;[B)Ljava/io/InputStream;
     .locals 8
 
-    .line 73
     iget-object v0, p4, Lorg/apache/commons/compress/archivers/sevenz/Coder;->decompressionMethodId:[B
 
     invoke-static {v0}, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->byId([B)Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
@@ -47,14 +45,12 @@
 
     move-object v7, p5
 
-    .line 79
     invoke-virtual/range {v1 .. v7}, Lorg/apache/commons/compress/archivers/sevenz/CoderBase;->decode(Ljava/lang/String;Ljava/io/InputStream;JLorg/apache/commons/compress/archivers/sevenz/Coder;[B)Ljava/io/InputStream;
 
     move-result-object p0
 
     return-object p0
 
-    .line 75
     :cond_0
     new-instance p1, Ljava/io/IOException;
 
@@ -68,7 +64,6 @@
 
     iget-object p3, p4, Lorg/apache/commons/compress/archivers/sevenz/Coder;->decompressionMethodId:[B
 
-    .line 76
     invoke-static {p3}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object p3
@@ -93,7 +88,6 @@
 .method public static findByMethod(Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;)Lorg/apache/commons/compress/archivers/sevenz/CoderBase;
     .locals 1
 
-    .line 68
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/Coders;->CODER_MAP:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;

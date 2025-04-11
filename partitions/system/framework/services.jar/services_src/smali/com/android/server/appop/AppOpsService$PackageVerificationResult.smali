@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/app/AppOpsManager$RestrictionBypass;Z)V
     .locals 0
 
-    .line 613
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 614
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$PackageVerificationResult;->bypass:Landroid/app/AppOpsManager$RestrictionBypass;
 
-    .line 615
     iput-boolean p2, p0, Lcom/android/server/appop/AppOpsService$PackageVerificationResult;->isAttributionTagValid:Z
 
     return-void

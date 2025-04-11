@@ -19,10 +19,8 @@
 .method public constructor <init>(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;)V
     .locals 2
 
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x3
@@ -33,16 +31,12 @@
 
     const/4 v0, 0x1
 
-    .line 138
     iput-boolean v0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mIsTransforming:Z
 
-    .line 142
     iput-object p1, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 143
     iput-object p2, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mDisplayFrames:Lcom/android/server/wm/DisplayFrames;
 
-    .line 144
     iput-object p3, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mRotatedOverrideConfiguration:Landroid/content/res/Configuration;
 
     return-void
@@ -53,7 +47,6 @@
 .method public disassociate(Lcom/android/server/wm/WindowToken;)V
     .locals 0
 
-    .line 168
     iget-object p0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -64,7 +57,6 @@
 .method public resetTransform()V
     .locals 2
 
-    .line 161
     iget-object v0, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -76,7 +68,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 162
     iget-object v1, p0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -98,6 +89,5 @@
 .method public transform(Lcom/android/server/wm/WindowContainer;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

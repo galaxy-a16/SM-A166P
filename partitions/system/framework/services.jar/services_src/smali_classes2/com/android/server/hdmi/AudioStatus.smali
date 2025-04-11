@@ -13,12 +13,10 @@
 .method public constructor <init>(IZ)V
     .locals 1
 
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x64
 
-    .line 37
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p1
@@ -31,7 +29,6 @@
 
     iput p1, p0, Lcom/android/server/hdmi/AudioStatus;->mVolume:I
 
-    .line 38
     iput-boolean p2, p0, Lcom/android/server/hdmi/AudioStatus;->mMute:Z
 
     return-void
@@ -42,7 +39,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 51
     instance-of v0, p1, Lcom/android/server/hdmi/AudioStatus;
 
     const/4 v1, 0x0
@@ -51,11 +47,9 @@
 
     return v1
 
-    .line 55
     :cond_0
     check-cast p1, Lcom/android/server/hdmi/AudioStatus;
 
-    .line 56
     iget v0, p0, Lcom/android/server/hdmi/AudioStatus;->mVolume:I
 
     iget v2, p1, Lcom/android/server/hdmi/AudioStatus;->mVolume:I
@@ -77,7 +71,6 @@
 .method public getMute()Z
     .locals 0
 
-    .line 46
     iget-boolean p0, p0, Lcom/android/server/hdmi/AudioStatus;->mMute:Z
 
     return p0
@@ -86,7 +79,6 @@
 .method public getVolume()I
     .locals 0
 
-    .line 42
     iget p0, p0, Lcom/android/server/hdmi/AudioStatus;->mVolume:I
 
     return p0
@@ -95,7 +87,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 62
     iget v0, p0, Lcom/android/server/hdmi/AudioStatus;->mVolume:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -122,7 +113,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

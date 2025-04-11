@@ -29,52 +29,44 @@
 .method public constructor <init>(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)V
     .locals 2
 
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmTelephonyDetectionSupported(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mTelephonyDetectionSupported:Z
 
-    .line 71
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmGeoDetectionSupported(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mGeoDetectionSupported:Z
 
-    .line 72
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmTelephonyFallbackSupported(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mTelephonyFallbackSupported:Z
 
-    .line 73
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmGeoDetectionRunInBackgroundEnabled(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mGeoDetectionRunInBackgroundEnabled:Z
 
-    .line 74
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmEnhancedMetricsCollectionEnabled(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mEnhancedMetricsCollectionEnabled:Z
 
-    .line 75
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmAutoDetectionEnabledSetting(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mAutoDetectionEnabledSetting:Z
 
-    .line 77
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmUserId(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -89,21 +81,18 @@
 
     iput v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mUserId:I
 
-    .line 78
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmUserConfigAllowed(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mUserConfigAllowed:Z
 
-    .line 79
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmLocationEnabledSetting(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mLocationEnabledSetting:Z
 
-    .line 80
     invoke-static {p1}, Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;->-$$Nest$fgetmGeoDetectionEnabledSetting(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)Z
 
     move-result p1
@@ -116,7 +105,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;Lcom/android/server/timezonedetector/ConfigurationInternal-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/timezonedetector/ConfigurationInternal;-><init>(Lcom/android/server/timezonedetector/ConfigurationInternal$Builder;)V
 
     return-void
@@ -127,19 +115,16 @@
 .method public asCapabilities(Z)Landroid/app/time/TimeZoneCapabilities;
     .locals 7
 
-    .line 228
     iget v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mUserId:I
 
     invoke-static {v0}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 229
     new-instance v1, Landroid/app/time/TimeZoneCapabilities$Builder;
 
     invoke-direct {v1, v0}, Landroid/app/time/TimeZoneCapabilities$Builder;-><init>(Landroid/os/UserHandle;)V
 
-    .line 231
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isUserConfigAllowed()Z
 
     move-result v0
@@ -159,7 +144,6 @@
     :goto_0
     const/4 p1, 0x1
 
-    .line 235
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isAutoDetectionSupported()Z
 
@@ -187,21 +171,17 @@
     :cond_3
     move v0, v4
 
-    .line 245
     :goto_2
     invoke-virtual {v1, v0}, Landroid/app/time/TimeZoneCapabilities$Builder;->setConfigureAutoDetectionEnabledCapability(I)Landroid/app/time/TimeZoneCapabilities$Builder;
 
-    .line 247
     iget-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mLocationEnabledSetting:Z
 
     invoke-virtual {v1, v0}, Landroid/app/time/TimeZoneCapabilities$Builder;->setUseLocationEnabled(Z)Landroid/app/time/TimeZoneCapabilities$Builder;
 
-    .line 249
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isGeoDetectionSupported()Z
 
     move-result v0
 
-    .line 250
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isTelephonyDetectionSupported()Z
 
     move-result v5
@@ -214,7 +194,6 @@
 
     goto :goto_4
 
-    .line 264
     :cond_4
     iget-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mAutoDetectionEnabledSetting:Z
 
@@ -237,7 +216,6 @@
     :goto_3
     move v3, v6
 
-    .line 269
     :cond_7
     :goto_4
     invoke-virtual {v1, v3}, Landroid/app/time/TimeZoneCapabilities$Builder;->setConfigureGeoDetectionEnabledCapability(I)Landroid/app/time/TimeZoneCapabilities$Builder;
@@ -246,7 +224,6 @@
 
     goto :goto_5
 
-    .line 279
     :cond_8
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getAutoDetectionEnabledBehavior()Z
 
@@ -261,11 +238,9 @@
     :cond_9
     move v2, v4
 
-    .line 284
     :goto_5
     invoke-virtual {v1, v2}, Landroid/app/time/TimeZoneCapabilities$Builder;->setSetManualTimeZoneCapability(I)Landroid/app/time/TimeZoneCapabilities$Builder;
 
-    .line 286
     invoke-virtual {v1}, Landroid/app/time/TimeZoneCapabilities$Builder;->build()Landroid/app/time/TimeZoneCapabilities;
 
     move-result-object p0
@@ -276,12 +251,10 @@
 .method public asConfiguration()Landroid/app/time/TimeZoneConfiguration;
     .locals 2
 
-    .line 291
     new-instance v0, Landroid/app/time/TimeZoneConfiguration$Builder;
 
     invoke-direct {v0}, Landroid/app/time/TimeZoneConfiguration$Builder;-><init>()V
 
-    .line 292
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getAutoDetectionEnabledSetting()Z
 
     move-result v1
@@ -290,7 +263,6 @@
 
     move-result-object v0
 
-    .line 293
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getGeoDetectionEnabledSetting()Z
 
     move-result p0
@@ -299,7 +271,6 @@
 
     move-result-object p0
 
-    .line 294
     invoke-virtual {p0}, Landroid/app/time/TimeZoneConfiguration$Builder;->build()Landroid/app/time/TimeZoneConfiguration;
 
     move-result-object p0
@@ -321,7 +292,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 318
     const-class v2, Lcom/android/server/timezonedetector/ConfigurationInternal;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -332,11 +302,9 @@
 
     goto :goto_1
 
-    .line 321
     :cond_1
     check-cast p1, Lcom/android/server/timezonedetector/ConfigurationInternal;
 
-    .line 322
     iget v2, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mUserId:I
 
     iget v3, p1, Lcom/android/server/timezonedetector/ConfigurationInternal;->mUserId:I
@@ -413,7 +381,6 @@
 .method public getAutoDetectionEnabledBehavior()Z
     .locals 1
 
-    .line 135
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isAutoDetectionSupported()Z
 
     move-result v0
@@ -440,7 +407,6 @@
 .method public getAutoDetectionEnabledSetting()Z
     .locals 0
 
-    .line 127
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mAutoDetectionEnabledSetting:Z
 
     return p0
@@ -449,7 +415,6 @@
 .method public getDetectionMode()I
     .locals 2
 
-    .line 174
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isAutoDetectionSupported()Z
 
     move-result v0
@@ -460,7 +425,6 @@
 
     return v1
 
-    .line 177
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getAutoDetectionEnabledSetting()Z
 
@@ -470,7 +434,6 @@
 
     return v1
 
-    .line 180
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getGeoDetectionEnabledBehavior()Z
 
@@ -482,7 +445,6 @@
 
     return p0
 
-    .line 182
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isTelephonyDetectionSupported()Z
 
@@ -503,7 +465,6 @@
 .method public final getGeoDetectionEnabledBehavior()Z
     .locals 1
 
-    .line 195
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isGeoDetectionSupported()Z
 
     move-result v0
@@ -516,14 +477,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 196
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isTelephonyDetectionSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 199
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getGeoDetectionEnabledSetting()Z
 
     move-result p0
@@ -544,7 +503,6 @@
 .method public getGeoDetectionEnabledSetting()Z
     .locals 0
 
-    .line 166
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mGeoDetectionEnabledSetting:Z
 
     return p0
@@ -553,28 +511,24 @@
 .method public final getGeoDetectionRunInBackgroundEnabledBehavior()Z
     .locals 1
 
-    .line 220
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->isGeoDetectionSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 221
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getLocationEnabledSetting()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 222
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getAutoDetectionEnabledSetting()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 223
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getGeoDetectionRunInBackgroundEnabledSetting()Z
 
     move-result p0
@@ -595,7 +549,6 @@
 .method public getGeoDetectionRunInBackgroundEnabledSetting()Z
     .locals 0
 
-    .line 113
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mGeoDetectionRunInBackgroundEnabled:Z
 
     return p0
@@ -604,7 +557,6 @@
 .method public getLocationEnabledSetting()Z
     .locals 0
 
-    .line 161
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mLocationEnabledSetting:Z
 
     return p0
@@ -613,7 +565,6 @@
 .method public getUserId()I
     .locals 0
 
-    .line 140
     iget p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mUserId:I
 
     return p0
@@ -622,7 +573,6 @@
 .method public hashCode()I
     .locals 11
 
-    .line 336
     iget v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mUserId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -643,7 +593,6 @@
 
     iget-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mGeoDetectionSupported:Z
 
-    .line 337
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
@@ -656,7 +605,6 @@
 
     iget-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mGeoDetectionRunInBackgroundEnabled:Z
 
-    .line 338
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
@@ -669,7 +617,6 @@
 
     iget-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mAutoDetectionEnabledSetting:Z
 
-    .line 339
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v8
@@ -690,7 +637,6 @@
 
     move-result-object p0
 
-    .line 336
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -701,7 +647,6 @@
 .method public isAutoDetectionSupported()Z
     .locals 1
 
-    .line 85
     iget-boolean v0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mTelephonyDetectionSupported:Z
 
     if-nez v0, :cond_1
@@ -728,7 +673,6 @@
 .method public isEnhancedMetricsCollectionEnabled()Z
     .locals 0
 
-    .line 122
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mEnhancedMetricsCollectionEnabled:Z
 
     return p0
@@ -737,7 +681,6 @@
 .method public isGeoDetectionExecutionEnabled()Z
     .locals 2
 
-    .line 215
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getDetectionMode()I
 
     move-result v0
@@ -746,7 +689,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 216
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/ConfigurationInternal;->getGeoDetectionRunInBackgroundEnabledBehavior()Z
 
     move-result p0
@@ -771,7 +713,6 @@
 .method public isGeoDetectionSupported()Z
     .locals 0
 
-    .line 95
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mGeoDetectionSupported:Z
 
     return p0
@@ -780,7 +721,6 @@
 .method public isTelephonyDetectionSupported()Z
     .locals 0
 
-    .line 90
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mTelephonyDetectionSupported:Z
 
     return p0
@@ -789,7 +729,6 @@
 .method public isTelephonyFallbackSupported()Z
     .locals 0
 
-    .line 103
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mTelephonyFallbackSupported:Z
 
     return p0
@@ -798,7 +737,6 @@
 .method public isUserConfigAllowed()Z
     .locals 0
 
-    .line 156
     iget-boolean p0, p0, Lcom/android/server/timezonedetector/ConfigurationInternal;->mUserConfigAllowed:Z
 
     return p0
@@ -807,7 +745,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 344
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/net/TrafficTimeStatsParcel;
     .locals 0
 
-    .line 25
     new-instance p0, Landroid/net/TrafficTimeStatsParcel;
 
     invoke-direct {p0}, Landroid/net/TrafficTimeStatsParcel;-><init>()V
 
-    .line 26
     invoke-virtual {p0, p1}, Landroid/net/TrafficTimeStatsParcel;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 22
     invoke-virtual {p0, p1}, Landroid/net/TrafficTimeStatsParcel$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/TrafficTimeStatsParcel;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/net/TrafficTimeStatsParcel;
     .locals 0
 
-    .line 31
     new-array p0, p1, [Landroid/net/TrafficTimeStatsParcel;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 22
     invoke-virtual {p0, p1}, Landroid/net/TrafficTimeStatsParcel$1;->newArray(I)[Landroid/net/TrafficTimeStatsParcel;
 
     move-result-object p0

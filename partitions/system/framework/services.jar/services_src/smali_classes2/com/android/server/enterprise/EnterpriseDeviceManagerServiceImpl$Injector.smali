@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 2275
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2276
     iput-object p1, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public SecContentProviderNotifyPolicyChangesAsUser(Ljava/lang/String;I)V
     .locals 0
 
-    .line 2385
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/enterprise/utils/SecContentProviderUtil;->notifyPolicyChangesAsUser(Landroid/content/Context;Ljava/lang/String;I)V
@@ -36,7 +33,6 @@
 .method public addLazySystemService(Ljava/lang/String;Lcom/android/server/enterprise/EnterpriseServiceCallback;)V
     .locals 0
 
-    .line 2377
     invoke-static {p1, p2}, Lcom/android/server/enterprise/EnterpriseService;->addLazySystemService(Ljava/lang/String;Lcom/android/server/enterprise/EnterpriseServiceCallback;)V
 
     return-void
@@ -45,7 +41,6 @@
 .method public addSystemService(Ljava/lang/String;Lcom/android/server/enterprise/EnterpriseServiceCallback;)V
     .locals 0
 
-    .line 2315
     invoke-static {p1, p2}, Lcom/android/server/enterprise/EnterpriseService;->addSystemService(Ljava/lang/String;Lcom/android/server/enterprise/EnterpriseServiceCallback;)V
 
     return-void
@@ -54,7 +49,6 @@
 .method public binderWithCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
     .locals 0
 
-    .line 2403
     invoke-static {p1}, Landroid/os/Binder;->withCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
 
     return-void
@@ -63,7 +57,6 @@
 .method public getAppOpsManager()Landroid/app/AppOpsManager;
     .locals 1
 
-    .line 2399
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/app/AppOpsManager;
@@ -80,7 +73,6 @@
 .method public getApplicationPolicy()Lcom/android/server/enterprise/application/ApplicationPolicy;
     .locals 1
 
-    .line 2331
     new-instance v0, Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
@@ -93,7 +85,6 @@
 .method public getConstrainedState()Lcom/android/server/enterprise/utils/ConstrainedState;
     .locals 0
 
-    .line 2381
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/enterprise/utils/ConstrainedState;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/utils/ConstrainedState;
@@ -106,7 +97,6 @@
 .method public getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
     .locals 1
 
-    .line 2361
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     const-string v0, "device_policy"
@@ -125,7 +115,6 @@
 
     const-string p0, "device_policy"
 
-    .line 2284
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -142,7 +131,6 @@
 
     const-string p0, "enterprise_license_policy"
 
-    .line 2288
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -157,7 +145,6 @@
 .method public getEnterpriseLicenseService()Lcom/android/server/enterprise/license/EnterpriseLicenseService;
     .locals 2
 
-    .line 2327
     new-instance v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;
 
     iget-object v1, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
@@ -174,7 +161,6 @@
 .method public getPackageManagerAdapterInstance()Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     .locals 0
 
-    .line 2296
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
@@ -189,7 +175,6 @@
 
     const-string/jumbo p0, "package"
 
-    .line 2280
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -204,7 +189,6 @@
 .method public getPasswordPolicy()Lcom/android/server/enterprise/security/PasswordPolicy;
     .locals 1
 
-    .line 2353
     new-instance v0, Lcom/android/server/enterprise/security/PasswordPolicy;
 
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
@@ -217,7 +201,6 @@
 .method public getPersonaManagerAdapterInstance()Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;
     .locals 0
 
-    .line 2307
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/enterprise/adapterlayer/PersonaManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapter/IPersonaManagerAdapter;
@@ -230,7 +213,6 @@
 .method public getPhoneRestrictionPolicy()Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
     .locals 1
 
-    .line 2339
     new-instance v0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
@@ -243,7 +225,6 @@
 .method public getRemoteInjectionService()Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;
     .locals 1
 
-    .line 2342
     new-instance v0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;
 
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
@@ -256,7 +237,6 @@
 .method public getRestrictionPolicy()Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     .locals 1
 
-    .line 2345
     new-instance v0, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
@@ -269,7 +249,6 @@
 .method public getStorageManagerAdapterInstance()Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
     .locals 0
 
-    .line 2299
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/StorageManagerAdapter;
@@ -282,7 +261,6 @@
 .method public getStorageProvider()Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .locals 1
 
-    .line 2323
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
@@ -295,7 +273,6 @@
 .method public getSystemUIAdapterInstance()Lcom/android/server/enterprise/adapterlayer/SystemUIAdapter;
     .locals 0
 
-    .line 2292
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/enterprise/adapterlayer/SystemUIAdapter;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/adapterlayer/SystemUIAdapter;
@@ -308,7 +285,6 @@
 .method public getUserManager()Landroid/os/UserManager;
     .locals 0
 
-    .line 2373
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
@@ -321,7 +297,6 @@
 .method public getWifiPolicy()Lcom/android/server/enterprise/wifi/WifiPolicy;
     .locals 1
 
-    .line 2335
     new-instance v0, Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     iget-object p0, p0, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->mContext:Landroid/content/Context;
@@ -334,7 +309,6 @@
 .method public getWindowManagerAdapterInstance()Lcom/android/server/enterprise/adapterlayer/WindowManagerAdapter;
     .locals 0
 
-    .line 2303
     invoke-static {}, Lcom/android/server/enterprise/adapterlayer/WindowManagerAdapter;->getInstance()Lcom/android/server/enterprise/adapterlayer/WindowManagerAdapter;
 
     move-result-object p0
@@ -345,7 +319,6 @@
 .method public hasDeviceOwner()Z
     .locals 0
 
-    .line 2365
     invoke-virtual {p0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object p0
@@ -370,7 +343,6 @@
 .method public invokeSystemReadyIfNeeded()V
     .locals 0
 
-    .line 2389
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseService;->invokeSystemReadyIfNeeded()V
 
     return-void
@@ -379,7 +351,6 @@
 .method public invokeSystemReadyIfNeeded(Lcom/android/server/enterprise/EnterpriseServiceCallback;Ljava/lang/String;)V
     .locals 0
 
-    .line 2395
     invoke-static {p1, p2}, Lcom/android/server/enterprise/EnterpriseService;->invokeSystemReadyIfNeeded(Lcom/android/server/enterprise/EnterpriseServiceCallback;Ljava/lang/String;)V
 
     return-void
@@ -388,7 +359,6 @@
 .method public isFirmwareChanged()Z
     .locals 0
 
-    .line 2319
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;->-$$Nest$sfgetmInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl;
 
     move-result-object p0
@@ -403,7 +373,6 @@
 .method public isOrganizationOwnedDeviceWithManagedProfile()Z
     .locals 0
 
-    .line 2369
     invoke-virtual {p0}, Lcom/android/server/enterprise/EnterpriseDeviceManagerServiceImpl$Injector;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object p0
@@ -418,7 +387,6 @@
 .method public serviceManagerAddService(Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 2311
     invoke-static {p1, p2}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -427,7 +395,6 @@
 .method public userHandleGetCallingUserId()I
     .locals 0
 
-    .line 2357
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result p0

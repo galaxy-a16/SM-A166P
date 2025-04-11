@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/util/SparseArray;)V
     .locals 0
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
     return-void
@@ -25,7 +23,6 @@
 .method public get(I)Ljava/lang/Object;
     .locals 0
 
-    .line 38
     iget-object p0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -38,7 +35,6 @@
 .method public get(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 42
     iget-object p0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArray;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -51,7 +47,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/hdmi/UnmodifiableSparseArray;->mArray:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->toString()Ljava/lang/String;

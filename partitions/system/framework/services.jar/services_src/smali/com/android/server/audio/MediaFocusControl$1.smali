@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/audio/MediaFocusControl;Landroid/media/audiopolicy/IAudioPolicyCallback;)V
     .locals 0
 
-    .line 810
     iput-object p1, p0, Lcom/android/server/audio/MediaFocusControl$1;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     iput-object p2, p0, Lcom/android/server/audio/MediaFocusControl$1;->val$pcb2:Landroid/media/audiopolicy/IAudioPolicyCallback;
@@ -28,14 +27,12 @@
 .method public run()V
     .locals 5
 
-    .line 813
     invoke-static {}, Lcom/android/server/audio/MediaFocusControl;->-$$Nest$sfgetmAudioFocusLock()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 814
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$1;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -49,14 +46,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 815
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
-    .line 818
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$1;->val$pcb2:Landroid/media/audiopolicy/IAudioPolicyCallback;
@@ -92,7 +87,6 @@
     :try_start_2
     const-string v2, "MediaFocusControl"
 
-    .line 822
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,7 +97,6 @@
 
     iget-object p0, p0, Lcom/android/server/audio/MediaFocusControl$1;->val$pcb2:Landroid/media/audiopolicy/IAudioPolicyCallback;
 
-    .line 823
     invoke-interface {p0}, Landroid/media/audiopolicy/IAudioPolicyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object p0
@@ -114,10 +107,8 @@
 
     move-result-object p0
 
-    .line 822
     invoke-static {v2, p0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 825
     :goto_0
     monitor-exit v0
 

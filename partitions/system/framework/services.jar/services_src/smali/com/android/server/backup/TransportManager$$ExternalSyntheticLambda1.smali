@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/ComponentName;
 
     invoke-static {p1}, Lcom/android/server/backup/TransportManager;->$r8$lambda$VdLWXXS3KmyjvqMPKCdg0edE854(Landroid/content/ComponentName;)Z

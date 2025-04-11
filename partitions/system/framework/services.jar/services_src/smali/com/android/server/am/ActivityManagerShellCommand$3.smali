@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerShellCommand;ILjava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 2577
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$3;->this$0:Lcom/android/server/am/ActivityManagerShellCommand;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerShellCommand$3;->val$userId:I
@@ -32,12 +31,10 @@
 .method public onUserSwitchComplete(I)V
     .locals 1
 
-    .line 2580
     iget v0, p0, Lcom/android/server/am/ActivityManagerShellCommand$3;->val$userId:I
 
     if-ne v0, p1, :cond_0
 
-    .line 2581
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerShellCommand$3;->val$switchLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V

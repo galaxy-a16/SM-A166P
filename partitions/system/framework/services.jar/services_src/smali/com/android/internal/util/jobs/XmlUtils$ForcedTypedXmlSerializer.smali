@@ -10,7 +10,6 @@
 .method public constructor <init>(Lorg/xmlpull/v1/XmlSerializer;)V
     .locals 0
 
-    .line 61
     invoke-direct {p0, p1}, Lcom/android/internal/util/XmlSerializerWrapper;-><init>(Lorg/xmlpull/v1/XmlSerializer;)V
 
     return-void
@@ -21,7 +20,6 @@
 .method public attributeBoolean(Ljava/lang/String;Ljava/lang/String;Z)Lorg/xmlpull/v1/XmlSerializer;
     .locals 0
 
-    .line 121
     invoke-static {p3}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p3
@@ -38,7 +36,6 @@
 
     const/4 v0, 0x2
 
-    .line 79
     invoke-static {p3, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object p3
@@ -53,7 +50,6 @@
 .method public attributeBytesHex(Ljava/lang/String;Ljava/lang/String;[B)Lorg/xmlpull/v1/XmlSerializer;
     .locals 0
 
-    .line 73
     invoke-static {p3}, Lcom/android/internal/util/HexDump;->toHexString([B)Ljava/lang/String;
 
     move-result-object p3
@@ -68,7 +64,6 @@
 .method public attributeDouble(Ljava/lang/String;Ljava/lang/String;D)Lorg/xmlpull/v1/XmlSerializer;
     .locals 0
 
-    .line 115
     invoke-static {p3, p4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
 
     move-result-object p3
@@ -83,7 +78,6 @@
 .method public attributeFloat(Ljava/lang/String;Ljava/lang/String;F)Lorg/xmlpull/v1/XmlSerializer;
     .locals 0
 
-    .line 109
     invoke-static {p3}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object p3
@@ -98,7 +92,6 @@
 .method public attributeInt(Ljava/lang/String;Ljava/lang/String;I)Lorg/xmlpull/v1/XmlSerializer;
     .locals 0
 
-    .line 85
     invoke-static {p3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p3
@@ -115,7 +108,6 @@
 
     const/16 v0, 0x10
 
-    .line 91
     invoke-static {p3, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p3
@@ -130,7 +122,6 @@
 .method public attributeInterned(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     .locals 0
 
-    .line 67
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/util/XmlSerializerWrapper;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     move-result-object p0
@@ -141,7 +132,6 @@
 .method public attributeLong(Ljava/lang/String;Ljava/lang/String;J)Lorg/xmlpull/v1/XmlSerializer;
     .locals 0
 
-    .line 97
     invoke-static {p3, p4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p3
@@ -158,7 +148,6 @@
 
     const/16 v0, 0x10
 
-    .line 103
     invoke-static {p3, p4, v0}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
 
     move-result-object p3

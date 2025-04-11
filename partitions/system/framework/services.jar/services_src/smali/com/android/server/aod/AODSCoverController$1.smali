@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/aod/AODSCoverController;)V
     .locals 0
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/aod/AODSCoverController$1;->this$0:Lcom/android/server/aod/AODSCoverController;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/aod/AODSCoverController$1;->this$0:Lcom/android/server/aod/AODSCoverController;
 
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getAttachState()Z
@@ -35,7 +33,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/aod/AODSCoverController;->-$$Nest$fputmCoverAttached(Lcom/android/server/aod/AODSCoverController;Z)V
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/aod/AODSCoverController$1;->this$0:Lcom/android/server/aod/AODSCoverController;
 
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
@@ -48,7 +45,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/aod/AODSCoverController;->-$$Nest$fputmCoverClosed(Lcom/android/server/aod/AODSCoverController;Z)V
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/aod/AODSCoverController$1;->this$0:Lcom/android/server/aod/AODSCoverController;
 
     invoke-static {v0}, Lcom/android/server/aod/AODSCoverController;->-$$Nest$fgetmCoverAttached(Lcom/android/server/aod/AODSCoverController;)Z
@@ -75,7 +71,6 @@
     :goto_0
     invoke-static {v0, v1}, Lcom/android/server/aod/AODSCoverController;->-$$Nest$fputmCoverUIWorking(Lcom/android/server/aod/AODSCoverController;Z)V
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/aod/AODSCoverController$1;->this$0:Lcom/android/server/aod/AODSCoverController;
 
     invoke-static {v0}, Lcom/android/server/aod/AODSCoverController;->-$$Nest$fgetmAODSettingHelper(Lcom/android/server/aod/AODSCoverController;)Lcom/android/server/aod/AODSettingHelper;
@@ -88,7 +83,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 54
     iget-object v0, p0, Lcom/android/server/aod/AODSCoverController$1;->this$0:Lcom/android/server/aod/AODSCoverController;
 
     invoke-static {v0}, Lcom/android/server/aod/AODSCoverController;->-$$Nest$fgetmCoverAttached(Lcom/android/server/aod/AODSCoverController;)Z
@@ -101,14 +95,12 @@
 
     if-ne p1, v2, :cond_1
 
-    .line 56
     iget-object p0, p0, Lcom/android/server/aod/AODSCoverController$1;->this$0:Lcom/android/server/aod/AODSCoverController;
 
     invoke-static {p0}, Lcom/android/server/aod/AODSCoverController;->-$$Nest$mregisterSViewCoverSensorListener(Lcom/android/server/aod/AODSCoverController;)V
 
     goto :goto_1
 
-    .line 58
     :cond_1
     iget-object p0, p0, Lcom/android/server/aod/AODSCoverController$1;->this$0:Lcom/android/server/aod/AODSCoverController;
 

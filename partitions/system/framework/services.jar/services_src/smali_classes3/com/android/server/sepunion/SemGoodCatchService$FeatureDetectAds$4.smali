@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;Lcom/android/server/sepunion/SemGoodCatchService;)V
     .locals 0
 
-    .line 847
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$4;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     iput-object p2, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$4;->val$this$0:Lcom/android/server/sepunion/SemGoodCatchService;
@@ -28,7 +27,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 850
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -41,7 +39,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 851
     iget-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$4;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     new-instance p2, Lcom/samsung/android/sepunion/SemGoodCatchManager;

@@ -40,7 +40,6 @@
 .method public static synthetic $r8$lambda$3MKyieh4NuCyvznGHDWsHaKYIsE(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIIILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$onBiometricError$8(IIIILjava/lang/String;)V
 
     return-void
@@ -49,7 +48,6 @@
 .method public static synthetic $r8$lambda$4hUGAjZpQeU2O56Run2K35Os5is(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$sendCommand$9(IIILandroid/os/Bundle;)V
 
     return-void
@@ -58,7 +56,6 @@
 .method public static synthetic $r8$lambda$5_tJG0i3dDuasUHcu_HBaXpobp0(Lcom/android/server/biometrics/SemBiometricSysUiManager;IILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$sendCommandIfSessionExist$11(IILandroid/os/Bundle;)V
 
     return-void
@@ -67,7 +64,6 @@
 .method public static synthetic $r8$lambda$7r7cOGsp9RSs9ug9KKCD1Bm0dF0(Lcom/android/server/biometrics/SemBiometricSysUiManager;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$sendConnectionError$12(I)V
 
     return-void
@@ -76,7 +72,6 @@
 .method public static synthetic $r8$lambda$I0IWSoxfFdLqWQHSpnYxt5TEpX4(Lcom/android/server/biometrics/SemBiometricSysUiManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$new$0()V
 
     return-void
@@ -85,7 +80,6 @@
 .method public static synthetic $r8$lambda$IQin1rVnBAqcfAYV8M1j2fLIqlI(Lcom/android/server/biometrics/SemBiometricSysUiManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$new$1()V
 
     return-void
@@ -94,7 +88,6 @@
 .method public static synthetic $r8$lambda$JK5I9ErVGWMhIsplOU3A_aHUfaw(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIIILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$onBiometricHelp$7(IIIILjava/lang/String;)V
 
     return-void
@@ -103,7 +96,6 @@
 .method public static synthetic $r8$lambda$NXNON-NJvre5A9pPksBM6bHTK-8(Lcom/android/server/biometrics/SemBiometricSysUiManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$binderDied$3()V
 
     return-void
@@ -112,7 +104,6 @@
 .method public static synthetic $r8$lambda$UhIt2UIL1QzlRotoL_EEyaphPNw(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIZILjava/lang/String;JLandroid/os/Bundle;Landroid/hardware/biometrics/PromptInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p9}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$show$4(IIZILjava/lang/String;JLandroid/os/Bundle;Landroid/hardware/biometrics/PromptInfo;)V
 
     return-void
@@ -121,7 +112,6 @@
 .method public static synthetic $r8$lambda$lkjWDeWtuvqGK_jBPI1oE5q8ryw(Lcom/android/server/biometrics/SemBiometricSysUiManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$runPendingCommand$2()V
 
     return-void
@@ -130,7 +120,6 @@
 .method public static synthetic $r8$lambda$ncRDs1AgDIbyE_94Bznd-Aq0Exw(Lcom/android/server/biometrics/SemBiometricSysUiManager;III)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$hide$5(III)V
 
     return-void
@@ -139,7 +128,6 @@
 .method public static synthetic $r8$lambda$qHWGOrKS1XQ44MKt2MW6rIVyoRk(Lcom/android/server/biometrics/SemBiometricSysUiManager;IILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$sendCommand$10(IILandroid/os/Bundle;)V
 
     return-void
@@ -148,7 +136,6 @@
 .method public static synthetic $r8$lambda$vkooMGhZPAKXrBF2lVe595SajYQ(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIZLjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->lambda$onAuthenticated$6(IIZLjava/lang/String;)V
 
     return-void
@@ -157,7 +144,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/biometrics/SemBiometricSysUiManager;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -166,7 +152,6 @@
 .method public static bridge synthetic -$$Nest$mnotifySysUiDismissedEvent(Lcom/android/server/biometrics/SemBiometricSysUiManager;II[B)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->notifySysUiDismissedEvent(II[B)V
 
     return-void
@@ -175,7 +160,6 @@
 .method public static bridge synthetic -$$Nest$mnotifySysUiErrorEvent(Lcom/android/server/biometrics/SemBiometricSysUiManager;III)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->notifySysUiErrorEvent(III)V
 
     return-void
@@ -184,7 +168,6 @@
 .method public static bridge synthetic -$$Nest$mnotifySysUiEvent(Lcom/android/server/biometrics/SemBiometricSysUiManager;III)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->notifySysUiEvent(III)V
 
     return-void
@@ -193,7 +176,6 @@
 .method public static bridge synthetic -$$Nest$mnotifySysUiTouchEvent(Lcom/android/server/biometrics/SemBiometricSysUiManager;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->notifySysUiTouchEvent(II)V
 
     return-void
@@ -202,24 +184,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;)V
     .locals 2
 
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mPendingCommand:Ljava/util/List;
 
-    .line 50
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
-    .line 52
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -228,31 +206,26 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mKeepBind:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 53
     new-instance v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;)V
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleUnbind:Ljava/lang/Runnable;
 
-    .line 62
     new-instance v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;)V
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleBindTimeout:Ljava/lang/Runnable;
 
-    .line 577
     new-instance v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager$1;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;)V
 
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiServiceReceiver:Lcom/samsung/android/biometrics/ISemBiometricSysUiCallback;
 
-    .line 107
     iput-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mContext:Landroid/content/Context;
 
-    .line 108
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -265,7 +238,6 @@
 .method public static get()Lcom/android/server/biometrics/SemBiometricSysUiManager;
     .locals 1
 
-    .line 91
     sget-object v0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sInstance:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     return-object v0
@@ -278,13 +250,11 @@
 
     monitor-enter v0
 
-    .line 102
     :try_start_0
     sput-object p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sInstance:Lcom/android/server/biometrics/SemBiometricSysUiManager;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
     monitor-exit v0
 
     return-void
@@ -304,10 +274,8 @@
 
     const/4 v1, 0x1
 
-    .line 336
     invoke-virtual {p0, v0, v1, v0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->notifySysUiErrorEvent(III)V
 
-    .line 337
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->cleanup()V
 
     return-void
@@ -316,7 +284,6 @@
 .method private synthetic lambda$hide$5(III)V
     .locals 4
 
-    .line 371
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     const-string v1, "hide: "
@@ -325,7 +292,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 372
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -350,7 +316,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 374
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->findSessionId(I)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
@@ -358,7 +323,6 @@
 
     if-nez v0, :cond_1
 
-    .line 376
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -377,7 +341,6 @@
 
     return-void
 
-    .line 380
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
@@ -391,7 +354,6 @@
     :catch_0
     move-exception p1
 
-    .line 382
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -412,7 +374,6 @@
 
     const/4 p1, -0x1
 
-    .line 383
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sendConnectionError(I)V
 
     :goto_0
@@ -422,10 +383,8 @@
 .method private synthetic lambda$new$0()V
     .locals 1
 
-    .line 54
     monitor-enter p0
 
-    .line 55
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
@@ -447,10 +406,8 @@
 
     if-nez v0, :cond_0
 
-    .line 56
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->unBind()V
 
-    .line 58
     :cond_0
     monitor-exit p0
 
@@ -473,17 +430,14 @@
 
     const-string v1, "handle binding timeout"
 
-    .line 63
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
     const/4 v1, 0x2
 
-    .line 64
     invoke-virtual {p0, v0, v1, v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->notifySysUiErrorEvent(III)V
 
-    .line 65
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->unBind()V
 
     return-void
@@ -492,7 +446,6 @@
 .method private synthetic lambda$onAuthenticated$6(IIZLjava/lang/String;)V
     .locals 2
 
-    .line 392
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->findSessionId(I)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
     move-result-object v0
@@ -501,7 +454,6 @@
 
     if-nez v0, :cond_0
 
-    .line 394
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -520,7 +472,6 @@
 
     return-void
 
-    .line 398
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
@@ -534,7 +485,6 @@
     :catch_0
     move-exception p0
 
-    .line 400
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -562,7 +512,6 @@
 .method private synthetic lambda$onBiometricError$8(IIIILjava/lang/String;)V
     .locals 8
 
-    .line 433
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->findSessionId(I)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
     move-result-object v0
@@ -571,7 +520,6 @@
 
     if-nez v0, :cond_0
 
-    .line 435
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -590,7 +538,6 @@
 
     return-void
 
-    .line 439
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
@@ -614,7 +561,6 @@
     :catch_0
     move-exception p0
 
-    .line 441
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -642,14 +588,12 @@
 .method private synthetic lambda$onBiometricHelp$7(IIIILjava/lang/String;)V
     .locals 8
 
-    .line 411
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     const-string v1, "BiometricSysUiManager"
 
     if-eqz v0, :cond_0
 
-    .line 412
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -670,7 +614,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->findSessionId(I)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
@@ -678,7 +621,6 @@
 
     if-nez v0, :cond_1
 
-    .line 416
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -697,7 +639,6 @@
 
     return-void
 
-    .line 420
     :cond_1
     :try_start_0
     iget-object v2, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
@@ -721,7 +662,6 @@
     :catch_0
     move-exception p0
 
-    .line 422
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -749,10 +689,8 @@
 .method private synthetic lambda$runPendingCommand$2()V
     .locals 2
 
-    .line 276
     monitor-enter p0
 
-    .line 277
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mPendingCommand:Ljava/util/List;
 
@@ -773,18 +711,15 @@
 
     check-cast v1, Ljava/lang/Runnable;
 
-    .line 278
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 280
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mPendingCommand:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 281
     monitor-exit p0
 
     return-void
@@ -802,7 +737,6 @@
 .method private synthetic lambda$sendCommand$10(IILandroid/os/Bundle;)V
     .locals 1
 
-    .line 468
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
 
@@ -817,7 +751,6 @@
     :catch_0
     move-exception p0
 
-    .line 470
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -847,7 +780,6 @@
 .method private synthetic lambda$sendCommand$9(IIILandroid/os/Bundle;)V
     .locals 2
 
-    .line 450
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->findSessionId(I)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
     move-result-object v0
@@ -856,7 +788,6 @@
 
     if-nez v0, :cond_0
 
-    .line 452
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -875,7 +806,6 @@
 
     return-void
 
-    .line 456
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
@@ -889,7 +819,6 @@
     :catch_0
     move-exception p0
 
-    .line 458
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -917,7 +846,6 @@
 .method private synthetic lambda$sendCommandIfSessionExist$11(IILandroid/os/Bundle;)V
     .locals 2
 
-    .line 477
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -930,12 +858,10 @@
 
     const-string/jumbo p0, "sendCommandIfSessionExist: No exist Session"
 
-    .line 478
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 482
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
@@ -951,7 +877,6 @@
     :catch_0
     move-exception p0
 
-    .line 484
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -983,7 +908,6 @@
 
     const/4 v1, 0x2
 
-    .line 492
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->notifySysUiErrorEvent(III)V
 
     return-void
@@ -996,7 +920,6 @@
 
     move/from16 v0, p1
 
-    .line 348
     sget-boolean v2, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     const-string/jumbo v13, "show: "
@@ -1005,7 +928,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 349
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1065,7 +987,6 @@
 
     move-wide/from16 v10, p6
 
-    .line 352
     :goto_0
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->findSessionId(I)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
@@ -1073,7 +994,6 @@
 
     if-nez v2, :cond_1
 
-    .line 354
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1092,7 +1012,6 @@
 
     return-void
 
-    .line 358
     :cond_1
     :try_start_0
     iget-object v2, v1, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
@@ -1124,7 +1043,6 @@
     :catch_0
     move-exception v0
 
-    .line 361
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1145,7 +1063,6 @@
 
     const/4 v0, -0x1
 
-    .line 362
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sendConnectionError(I)V
 
     :goto_1
@@ -1159,13 +1076,11 @@
 
     monitor-enter v0
 
-    .line 95
     :try_start_0
     sget-object v1, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sInstance:Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     if-nez v1, :cond_0
 
-    .line 96
     new-instance v1, Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
@@ -1182,7 +1097,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 98
     :cond_0
     monitor-exit v0
 
@@ -1201,24 +1115,20 @@
 .method public final bind()V
     .locals 5
 
-    .line 223
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 224
     :try_start_1
     iget-boolean v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mIsConnected:Z
 
     if-eqz v0, :cond_0
 
-    .line 225
     monitor-exit p0
 
     return-void
 
-    .line 227
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mIsWaitingForConnection:Z
 
@@ -1228,10 +1138,8 @@
 
     const-string/jumbo v1, "openSession: waiting for service connection"
 
-    .line 228
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     monitor-exit p0
 
     return-void
@@ -1241,10 +1149,8 @@
 
     const-string v1, "bind: started"
 
-    .line 231
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     sget-boolean v0, Landroid/os/Build;->IS_ENG:Z
 
     if-eqz v0, :cond_2
@@ -1256,13 +1162,11 @@
     :cond_2
     const v0, 0x24000001
 
-    .line 240
     :goto_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 241
     new-instance v2, Landroid/content/ComponentName;
 
     const-string v3, "com.samsung.android.biometrics.app.setting"
@@ -1273,7 +1177,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 244
     iget-object v2, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mContext:Landroid/content/Context;
 
     invoke-static {}, Lcom/android/server/biometrics/SemBioFgThread;->get()Lcom/android/server/biometrics/SemBioFgThread;
@@ -1284,10 +1187,8 @@
 
     const/4 v0, 0x1
 
-    .line 245
     iput-boolean v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mIsWaitingForConnection:Z
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleBindTimeout:Ljava/lang/Runnable;
@@ -1296,7 +1197,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 247
     monitor-exit p0
 
     goto :goto_1
@@ -1318,7 +1218,6 @@
 
     const-string v1, "BiometricSysUiManager"
 
-    .line 249
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1341,7 +1240,6 @@
 
     const/4 v0, -0x2
 
-    .line 250
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sendConnectionError(I)V
 
     :goto_1
@@ -1355,10 +1253,8 @@
 
     const-string v1, "binderDied: handle error"
 
-    .line 334
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda7;
@@ -1373,7 +1269,6 @@
 .method public cancelUnbind()V
     .locals 1
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleUnbind:Ljava/lang/Runnable;
@@ -1386,10 +1281,8 @@
 .method public final cleanup()V
     .locals 2
 
-    .line 112
     monitor-enter p0
 
-    .line 113
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mPendingCommand:Ljava/util/List;
 
@@ -1397,25 +1290,20 @@
 
     const/4 v0, 0x0
 
-    .line 114
     iput-boolean v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mIsConnected:Z
 
-    .line 115
     iput-boolean v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mIsWaitingForConnection:Z
 
     const/4 v0, 0x0
 
-    .line 116
     iput-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleBindTimeout:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 118
     monitor-exit p0
 
     return-void
@@ -1433,14 +1321,12 @@
 .method public closeSession(I)V
     .locals 3
 
-    .line 184
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "BiometricSysUiManager"
 
-    .line 185
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1461,11 +1347,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     :cond_0
     monitor-enter p0
 
-    .line 188
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->findSessionId(I)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
@@ -1473,15 +1357,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 191
     invoke-virtual {p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->destroy()V
 
-    .line 192
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -1494,14 +1375,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 193
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleUnbind:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 194
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleUnbind:Ljava/lang/Runnable;
@@ -1510,11 +1389,9 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 197
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->printSessionClient()V
 
-    .line 198
     monitor-exit p0
 
     return-void
@@ -1532,7 +1409,6 @@
 .method public final findSessionId(I)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
     .locals 2
 
-    .line 122
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1552,7 +1428,6 @@
 
     check-cast v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
-    .line 123
     invoke-static {v0}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmId(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)I
 
     move-result v1
@@ -1570,7 +1445,6 @@
 .method public final findSessionToken(Ljava/lang/String;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
     .locals 2
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1590,7 +1464,6 @@
 
     check-cast v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
-    .line 132
     invoke-static {v0}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmToken(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Ljava/lang/String;
 
     move-result-object v1
@@ -1612,27 +1485,22 @@
 .method public final handleRequest(Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 206
     monitor-enter p0
 
-    .line 207
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
 
     if-eqz v0, :cond_0
 
-    .line 208
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 210
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mIsWaitingForConnection:Z
 
     if-eqz v0, :cond_2
 
-    .line 211
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -1641,16 +1509,13 @@
 
     const-string v1, "handleRequest: Add pending list"
 
-    .line 212
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mPendingCommand:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 218
     :cond_2
     :goto_0
     monitor-exit p0
@@ -1670,12 +1535,10 @@
 .method public hide(III)V
     .locals 1
 
-    .line 370
     new-instance v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;III)V
 
-    .line 386
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->handleRequest(Ljava/lang/Runnable;)V
 
     return-void
@@ -1684,14 +1547,12 @@
 .method public keepBindService(Z)V
     .locals 2
 
-    .line 148
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mKeepBind:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     if-nez p1, :cond_0
 
-    .line 150
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleUnbind:Ljava/lang/Runnable;
@@ -1707,10 +1568,8 @@
 .method public final notifySysUiDismissedEvent(II[B)V
     .locals 5
 
-    .line 524
     monitor-enter p0
 
-    .line 525
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
@@ -1734,7 +1593,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 527
     :try_start_1
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
@@ -1750,7 +1608,6 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 528
     :cond_1
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
@@ -1769,7 +1626,6 @@
     :try_start_2
     const-string v2, "BiometricSysUiManager"
 
-    .line 531
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1792,7 +1648,6 @@
 
     goto :goto_0
 
-    .line 534
     :cond_2
     monitor-exit p0
 
@@ -1811,10 +1666,8 @@
 .method public final notifySysUiErrorEvent(III)V
     .locals 5
 
-    .line 510
     monitor-enter p0
 
-    .line 511
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
@@ -1838,7 +1691,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 513
     :try_start_1
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
@@ -1854,7 +1706,6 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 514
     :cond_1
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
@@ -1873,7 +1724,6 @@
     :try_start_2
     const-string v2, "BiometricSysUiManager"
 
-    .line 517
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1896,7 +1746,6 @@
 
     goto :goto_0
 
-    .line 520
     :cond_2
     monitor-exit p0
 
@@ -1915,10 +1764,8 @@
 .method public final notifySysUiEvent(III)V
     .locals 5
 
-    .line 538
     monitor-enter p0
 
-    .line 539
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
@@ -1942,7 +1789,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 541
     :try_start_1
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
@@ -1963,7 +1809,6 @@
 
     if-eq p2, v2, :cond_2
 
-    .line 547
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
     move-result-object v1
@@ -1972,7 +1817,6 @@
 
     goto :goto_0
 
-    .line 544
     :cond_2
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
@@ -1991,7 +1835,6 @@
     :try_start_2
     const-string v2, "BiometricSysUiManager"
 
-    .line 552
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2014,7 +1857,6 @@
 
     goto :goto_0
 
-    .line 555
     :cond_3
     monitor-exit p0
 
@@ -2033,10 +1875,8 @@
 .method public final notifySysUiTouchEvent(II)V
     .locals 5
 
-    .line 496
     monitor-enter p0
 
-    .line 497
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
@@ -2060,7 +1900,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 499
     :try_start_1
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
@@ -2076,7 +1915,6 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 500
     :cond_1
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmListener(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
@@ -2095,7 +1933,6 @@
     :try_start_2
     const-string v2, "BiometricSysUiManager"
 
-    .line 503
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2118,7 +1955,6 @@
 
     goto :goto_0
 
-    .line 506
     :cond_2
     monitor-exit p0
 
@@ -2137,7 +1973,6 @@
 .method public onAuthenticated(IIZLjava/lang/String;)V
     .locals 7
 
-    .line 391
     new-instance v6, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda9;
 
     move-object v0, v6
@@ -2154,7 +1989,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda9;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIZLjava/lang/String;)V
 
-    .line 403
     invoke-virtual {p0, v6}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->handleRequest(Ljava/lang/Runnable;)V
 
     return-void
@@ -2163,7 +1997,6 @@
 .method public onBiometricError(IIIILjava/lang/String;)V
     .locals 8
 
-    .line 432
     new-instance v7, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda12;
 
     move-object v0, v7
@@ -2182,7 +2015,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda12;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIIILjava/lang/String;)V
 
-    .line 444
     invoke-virtual {p0, v7}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->handleRequest(Ljava/lang/Runnable;)V
 
     return-void
@@ -2191,7 +2023,6 @@
 .method public onBiometricHelp(IIIILjava/lang/String;)V
     .locals 8
 
-    .line 409
     new-instance v7, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda11;
 
     move-object v0, v7
@@ -2210,7 +2041,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda11;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIIILjava/lang/String;)V
 
-    .line 426
     invoke-virtual {p0, v7}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->handleRequest(Ljava/lang/Runnable;)V
 
     return-void
@@ -2219,14 +2049,12 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
 
-    .line 288
     sget-boolean p1, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz p1, :cond_0
 
     const-string p1, "BiometricSysUiManager"
 
-    .line 289
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2243,11 +2071,9 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     :cond_0
     monitor-enter p0
 
-    .line 292
     :try_start_0
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
@@ -2257,15 +2083,12 @@
 
     const/4 p1, 0x0
 
-    .line 293
     iput-boolean p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mIsWaitingForConnection:Z
 
     const/4 v0, 0x1
 
-    .line 294
     iput-boolean v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mIsConnected:Z
 
-    .line 295
     invoke-static {p2}, Lcom/samsung/android/biometrics/ISemBiometricSysUiService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
 
     move-result-object p2
@@ -2278,22 +2101,18 @@
 
     const-string/jumbo p2, "onServiceConnected: failed "
 
-    .line 297
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, -0x1
 
-    .line 298
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sendConnectionError(I)V
 
-    .line 299
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
-    .line 302
     :cond_1
     :try_start_1
     invoke-interface {p2}, Lcom/samsung/android/biometrics/ISemBiometricSysUiService;->asBinder()Landroid/os/IBinder;
@@ -2313,7 +2132,6 @@
     :try_start_2
     const-string p2, "BiometricSysUiManager"
 
-    .line 304
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2334,11 +2152,9 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->runPendingCommand()V
 
-    .line 307
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -2347,7 +2163,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 308
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mRunnableHandleUnbind:Ljava/lang/Runnable;
@@ -2356,7 +2171,6 @@
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 310
     :cond_2
     monitor-exit p0
 
@@ -2375,14 +2189,12 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 4
 
-    .line 316
     sget-boolean p1, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz p1, :cond_0
 
     const-string p1, "BiometricSysUiManager"
 
-    .line 317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2401,19 +2213,16 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     :cond_0
     monitor-enter p0
 
     const/4 p1, 0x0
 
-    .line 321
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
 
     if-eqz v0, :cond_1
 
-    .line 322
     invoke-interface {v0}, Lcom/samsung/android/biometrics/ISemBiometricSysUiService;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -2436,7 +2245,6 @@
     :try_start_1
     const-string v1, "BiometricSysUiManager"
 
-    .line 325
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2461,13 +2269,10 @@
     :goto_0
     const/4 v0, 0x2
 
-    .line 327
     invoke-virtual {p0, p1, v0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->notifySysUiErrorEvent(III)V
 
-    .line 328
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->cleanup()V
 
-    .line 329
     monitor-exit p0
 
     return-void
@@ -2483,14 +2288,12 @@
 .method public openSession(Ljava/lang/String;Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;)I
     .locals 3
 
-    .line 155
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "BiometricSysUiManager"
 
-    .line 156
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2522,16 +2325,13 @@
 
     const-string/jumbo p1, "openSession: token is null"
 
-    .line 159
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 163
     :cond_1
     monitor-enter p0
 
-    .line 164
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
@@ -2539,24 +2339,20 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 165
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->findSessionToken(Ljava/lang/String;)Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
     move-result-object v1
 
     if-nez v1, :cond_2
 
-    .line 167
     new-instance v1, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
     invoke-direct {v1, p1, p2}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;-><init>(Ljava/lang/String;Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;)V
 
-    .line 168
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 169
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -2571,10 +2367,8 @@
 
     const-string/jumbo p2, "openSession: too many session list"
 
-    .line 170
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     iget-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -2583,7 +2377,6 @@
 
     check-cast p1, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
-    .line 172
     invoke-virtual {p1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->destroy()V
 
     goto :goto_0
@@ -2593,18 +2386,14 @@
 
     const-string/jumbo p2, "openSession: exist token"
 
-    .line 175
     invoke-static {p1, p2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     :cond_3
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->bind()V
 
-    .line 178
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->printSessionClient()V
 
-    .line 179
     invoke-static {v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;->-$$Nest$fgetmId(Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;)I
 
     move-result p1
@@ -2616,7 +2405,6 @@
     :catchall_0
     move-exception p1
 
-    .line 180
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2627,12 +2415,10 @@
 .method public final printSessionClient()V
     .locals 3
 
-    .line 140
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSessionList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2652,7 +2438,6 @@
 
     check-cast v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiServiceSession;
 
-    .line 142
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2684,7 +2469,6 @@
 .method public final runPendingCommand()V
     .locals 2
 
-    .line 275
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda6;
@@ -2699,7 +2483,6 @@
 .method public sendCommand(IIILandroid/os/Bundle;)V
     .locals 7
 
-    .line 449
     new-instance v6, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda8;
 
     move-object v0, v6
@@ -2716,7 +2499,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda8;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;IIILandroid/os/Bundle;)V
 
-    .line 461
     invoke-virtual {p0, v6}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->handleRequest(Ljava/lang/Runnable;)V
 
     return-void
@@ -2725,10 +2507,8 @@
 .method public sendCommand(IILandroid/os/Bundle;)V
     .locals 1
 
-    .line 465
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->bind()V
 
-    .line 466
     new-instance v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda10;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda10;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;IILandroid/os/Bundle;)V
@@ -2741,12 +2521,10 @@
 .method public sendCommandIfSessionExist(IILandroid/os/Bundle;)V
     .locals 1
 
-    .line 476
     new-instance v0, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda4;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda4;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiManager;IILandroid/os/Bundle;)V
 
-    .line 487
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->handleRequest(Ljava/lang/Runnable;)V
 
     return-void
@@ -2755,7 +2533,6 @@
 .method public final sendConnectionError(I)V
     .locals 2
 
-    .line 491
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2778,7 +2555,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda3;
@@ -2811,7 +2587,6 @@
 
     move-object v3, p3
 
-    .line 342
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->show(IILandroid/os/Bundle;ZILjava/lang/String;JLandroid/hardware/biometrics/PromptInfo;)V
 
     return-void
@@ -2820,7 +2595,6 @@
 .method public show(IILandroid/os/Bundle;ZILjava/lang/String;JLandroid/hardware/biometrics/PromptInfo;)V
     .locals 12
 
-    .line 347
     new-instance v11, Lcom/android/server/biometrics/SemBiometricSysUiManager$$ExternalSyntheticLambda5;
 
     move-object v0, v11
@@ -2847,7 +2621,6 @@
 
     move-object v0, p0
 
-    .line 365
     invoke-virtual {p0, v11}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->handleRequest(Ljava/lang/Runnable;)V
 
     return-void
@@ -2856,7 +2629,6 @@
 .method public final unBind()V
     .locals 4
 
-    .line 256
     monitor-enter p0
 
     :try_start_0
@@ -2864,17 +2636,14 @@
 
     const-string/jumbo v1, "unBind: started"
 
-    .line 257
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     iget-object v0, p0, Lcom/android/server/biometrics/SemBiometricSysUiManager;->mSysUiService:Lcom/samsung/android/biometrics/ISemBiometricSysUiService;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_0
 
-    .line 260
     :try_start_1
     invoke-interface {v0}, Lcom/samsung/android/biometrics/ISemBiometricSysUiService;->asBinder()Landroid/os/IBinder;
 
@@ -2895,7 +2664,6 @@
     :try_start_2
     const-string v1, "BiometricSysUiManager"
 
-    .line 262
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2918,7 +2686,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 266
     :cond_0
     :goto_0
     :try_start_3
@@ -2937,7 +2704,6 @@
     :try_start_4
     const-string v1, "BiometricSysUiManager"
 
-    .line 268
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2958,11 +2724,9 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->cleanup()V
 
-    .line 271
     monitor-exit p0
 
     return-void

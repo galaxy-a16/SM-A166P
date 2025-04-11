@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/MARsTrigger;)V
     .locals 0
 
-    .line 684
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$11;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 687
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -35,13 +33,11 @@
 
     goto :goto_0
 
-    .line 689
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 690
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,7 +58,6 @@
 
     const-string v0, "android.intent.action.USER_SWITCHED"
 
-    .line 692
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -73,12 +68,10 @@
 
     const/4 v0, 0x0
 
-    .line 693
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 694
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,19 +96,16 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 696
     sget-boolean p0, Lcom/android/server/am/MARsPolicyManager;->App_StartUp_History:Z
 
     if-eqz p0, :cond_1
 
-    .line 697
     invoke-static {}, Lcom/android/server/am/mars/database/MARsDBManager;->getInstance()Lcom/android/server/am/mars/database/MARsDBManager;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/mars/database/MARsDBManager;->doUpdateCompHistory(Z)V
 
-    .line 700
     :cond_1
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
@@ -123,7 +113,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/MARsPolicyManager;->switchUser(I)V
 
-    .line 701
     invoke-static {}, Lcom/android/server/am/mars/database/MARsDBManager;->getInstance()Lcom/android/server/am/mars/database/MARsDBManager;
 
     move-result-object p0

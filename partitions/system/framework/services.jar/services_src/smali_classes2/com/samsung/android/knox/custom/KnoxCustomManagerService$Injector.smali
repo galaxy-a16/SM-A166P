@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 552
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 553
     iput-object p1, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public final binderWithCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingSupplier;)Ljava/lang/Object;
     .locals 0
 
-    .line 596
     invoke-static {p1}, Landroid/os/Binder;->withCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingSupplier;)Ljava/lang/Object;
 
     move-result-object p0
@@ -36,7 +33,6 @@
 .method public binderWithCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
     .locals 0
 
-    .line 592
     invoke-static {p1}, Landroid/os/Binder;->withCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
 
     return-void
@@ -45,7 +41,6 @@
 .method public getDexLaumcherConfiguration()Lcom/samsung/android/knox/custom/DeXLauncherConfigurationInternal;
     .locals 1
 
-    .line 581
     new-instance v0, Lcom/samsung/android/knox/custom/DeXLauncherConfigurationInternal;
 
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
@@ -58,7 +53,6 @@
 .method public getEDM()Lcom/samsung/android/knox/EnterpriseDeviceManager;
     .locals 0
 
-    .line 565
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/EnterpriseDeviceManager;
@@ -71,7 +65,6 @@
 .method public getKLM()Lcom/samsung/android/knox/license/KnoxEnterpriseLicenseManager;
     .locals 0
 
-    .line 585
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/knox/license/KnoxEnterpriseLicenseManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/license/KnoxEnterpriseLicenseManager;
@@ -84,7 +77,6 @@
 .method public getPrivateKnoxCustom()Lcom/samsung/android/knox/custom/PrivateKnoxCustom;
     .locals 0
 
-    .line 589
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/samsung/android/knox/custom/PrivateKnoxCustom;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/custom/PrivateKnoxCustom;
@@ -97,7 +89,6 @@
 .method public getStorageProvider()Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .locals 1
 
-    .line 557
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
@@ -110,7 +101,6 @@
 .method public getSubscriptionManager()Landroid/telephony/SubscriptionManager;
     .locals 1
 
-    .line 612
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/telephony/SubscriptionManager;
@@ -127,7 +117,6 @@
 .method public getTelecomManager()Landroid/telecom/TelecomManager;
     .locals 1
 
-    .line 608
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/telecom/TelecomManager;
@@ -144,7 +133,6 @@
 .method public getTelephonyManager()Landroid/telephony/TelephonyManager;
     .locals 1
 
-    .line 616
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     const-class v0, Landroid/telephony/TelephonyManager;
@@ -161,7 +149,6 @@
 .method public getUserManager()Landroid/os/UserManager;
     .locals 0
 
-    .line 600
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
@@ -174,7 +161,6 @@
 .method public getWindowManagerService()Landroid/view/IWindowManager;
     .locals 0
 
-    .line 604
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
     move-result-object p0
@@ -185,7 +171,6 @@
 .method public getlauncherConfiguration()Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;
     .locals 1
 
-    .line 561
     new-instance v0, Lcom/samsung/android/knox/custom/LauncherConfigurationInternal;
 
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
@@ -198,7 +183,6 @@
 .method public settingsGlobalPutInt(Ljava/lang/String;I)V
     .locals 0
 
-    .line 569
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -213,7 +197,6 @@
 .method public settingsSecurePutInt(Ljava/lang/String;I)V
     .locals 0
 
-    .line 573
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -228,7 +211,6 @@
 .method public settingsSecurePutString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 577
     iget-object p0, p0, Lcom/samsung/android/knox/custom/KnoxCustomManagerService$Injector;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;

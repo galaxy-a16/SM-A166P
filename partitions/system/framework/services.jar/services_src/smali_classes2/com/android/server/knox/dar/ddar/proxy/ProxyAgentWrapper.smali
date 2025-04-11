@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInfo(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;)Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mInfo:Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;
 
     return-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsReconnection(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsReconnection:Z
 
     return p0
@@ -47,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmProxyAgent(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;)Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
     return-object p0
@@ -56,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;)Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mService:Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
 
     return-object p0
@@ -65,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fputmBindPending(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mBindPending:Z
 
     return-void
@@ -74,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsNotify(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsNotify:Z
 
     return-void
@@ -83,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsReconnection(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsReconnection:Z
 
     return-void
@@ -92,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fputmProxyAgent(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
     return-void
@@ -101,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$monAgentReconnected(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->onAgentReconnected()V
 
     return-void
@@ -110,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$mtriggerRestart(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->triggerRestart()V
 
     return-void
@@ -119,10 +109,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;)V
     .locals 3
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -131,19 +119,14 @@
 
     const/4 v0, 0x0
 
-    .line 49
     iput-boolean v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mBindPending:Z
 
-    .line 50
     iput-boolean v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsReconnection:Z
 
-    .line 51
     iput-boolean v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsStale:Z
 
-    .line 52
     iput-boolean v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsNotify:Z
 
-    .line 138
     new-instance v1, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper$1;-><init>(Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;)V
@@ -156,16 +139,12 @@
 
     const-string v2, "KnoxService::ProxyAgentWrapper"
 
-    .line 55
     invoke-static {v2, v1, v0}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 57
     iput-object p1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mContext:Landroid/content/Context;
 
-    .line 58
     iput-object p2, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mService:Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
 
-    .line 59
     iput-object p3, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mInfo:Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;
 
     return-void
@@ -178,7 +157,6 @@
 
     const-string v0, "KnoxService::ProxyAgentWrapper"
 
-    .line 92
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,18 +183,15 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgentLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 94
     :try_start_0
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mInfo:Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;
 
     iget-object v1, v1, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mCompName:Landroid/content/ComponentName;
 
-    .line 95
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->isServiceConnected()Z
 
     move-result v3
@@ -227,7 +202,6 @@
 
     const-string p0, "KnoxService::ProxyAgentWrapper"
 
-    .line 96
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -254,14 +228,12 @@
 
     invoke-static {p0, v1, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 97
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return v4
 
-    .line 100
     :cond_0
     :try_start_1
     new-instance v3, Landroid/content/Intent;
@@ -272,7 +244,6 @@
 
     move-result-object v3
 
-    .line 102
     iget-object v5, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mContext:Landroid/content/Context;
 
     iget-object v6, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mConnection:Landroid/content/ServiceConnection;
@@ -297,7 +268,6 @@
 
     const-string p0, "KnoxService::ProxyAgentWrapper"
 
-    .line 106
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -323,13 +293,11 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 107
     :try_start_2
     monitor-exit v0
 
     return v2
 
-    .line 110
     :cond_1
     monitor-exit v0
 
@@ -340,7 +308,6 @@
 
     const-string v1, "KnoxService::ProxyAgentWrapper"
 
-    .line 112
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -363,10 +330,8 @@
 
     invoke-static {v1, v3, v4}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 113
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 115
     monitor-exit v0
 
     return v2
@@ -374,7 +339,6 @@
     :catchall_0
     move-exception p0
 
-    .line 116
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -387,7 +351,6 @@
 
     const-string v0, "KnoxService::ProxyAgentWrapper"
 
-    .line 63
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -414,7 +377,6 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 66
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgentLock:Ljava/lang/Object;
 
@@ -422,7 +384,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->isServiceConnected()Z
 
@@ -430,12 +391,10 @@
 
     if-nez v1, :cond_1
 
-    .line 68
     iget-boolean v1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mBindPending:Z
 
     if-nez v1, :cond_0
 
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->connectAsync()Z
 
     move-result v1
@@ -448,26 +407,21 @@
 
     new-array v4, v2, [Ljava/lang/Object;
 
-    .line 71
     invoke-static {p0, v3, v4}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 72
     monitor-exit v0
 
     return v1
 
-    .line 75
     :cond_0
     iput-boolean v2, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsNotify:Z
 
-    .line 76
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgentLock:Ljava/lang/Object;
 
     const-wide/16 v3, 0xbb8
 
     invoke-virtual {v1, v3, v4}, Ljava/lang/Object;->wait(J)V
 
-    .line 77
     iget-boolean p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsNotify:Z
 
     if-nez p0, :cond_1
@@ -478,15 +432,12 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
-    .line 78
     invoke-static {p0, v1, v3}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 79
     monitor-exit v0
 
     return v2
 
-    .line 82
     :cond_1
     monitor-exit v0
 
@@ -509,7 +460,6 @@
     :catch_0
     move-exception p0
 
-    .line 85
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v2
@@ -526,10 +476,8 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
-    .line 120
     invoke-static {v0, v1, v3}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 121
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->isServiceConnected()Z
 
     move-result v0
@@ -538,13 +486,11 @@
 
     return-void
 
-    .line 124
     :cond_0
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgentLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 125
     :try_start_0
     iget-object v1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mContext:Landroid/content/Context;
 
@@ -554,13 +500,10 @@
 
     const/4 v1, 0x0
 
-    .line 126
     iput-object v1, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
-    .line 127
     iput-boolean v2, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mBindPending:Z
 
-    .line 128
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -571,7 +514,6 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    .line 129
     invoke-static {p0, v0, v1}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return-void
@@ -579,7 +521,6 @@
     :catchall_0
     move-exception p0
 
-    .line 128
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -591,7 +532,6 @@
 .method public enableReconnectionFlag()V
     .locals 3
 
-    .line 217
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -616,7 +556,6 @@
 
     const/4 v0, 0x1
 
-    .line 218
     iput-boolean v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsReconnection:Z
 
     return-void
@@ -625,12 +564,10 @@
 .method public isProxyAgentBindPending()Z
     .locals 1
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgentLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 270
     :try_start_0
     iget-boolean p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mBindPending:Z
 
@@ -641,7 +578,6 @@
     :catchall_0
     move-exception p0
 
-    .line 271
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -652,12 +588,10 @@
 .method public isServiceConnected()Z
     .locals 1
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgentLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 134
     :try_start_0
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
@@ -678,7 +612,6 @@
     :catchall_0
     move-exception p0
 
-    .line 135
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -689,7 +622,6 @@
 .method public markStale()V
     .locals 3
 
-    .line 212
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -714,7 +646,6 @@
 
     const/4 v0, 0x1
 
-    .line 213
     iput-boolean v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsStale:Z
 
     return-void
@@ -727,7 +658,6 @@
 
     const/4 v1, 0x0
 
-    .line 223
     :try_start_0
     iget-object v2, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
@@ -737,10 +667,8 @@
 
     new-array v3, v1, [Ljava/lang/Object;
 
-    .line 224
     invoke-static {v0, v2, v3}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 225
     iget-object v2, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
     invoke-interface {v2}, Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;->onAgentReconnected()V
@@ -752,7 +680,6 @@
     :catch_0
     move-exception v2
 
-    .line 228
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -765,7 +692,6 @@
 
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mCompName:Landroid/content/ComponentName;
 
-    .line 229
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
     move-result-object p0
@@ -782,10 +708,8 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 228
     invoke-static {v0, p0, v1}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 230
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
@@ -796,7 +720,6 @@
 .method public relay(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 7
 
-    .line 235
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -819,7 +742,6 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 238
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
@@ -827,19 +749,16 @@
 
     const-string v0, "SECURE_CLIENT_ID"
 
-    .line 239
     invoke-virtual {p4, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "SECURE_CLIENT_PUB_KEY"
 
-    .line 240
     invoke-virtual {p4, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 242
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
     move-result v4
@@ -895,7 +814,6 @@
 
     if-eq v4, v6, :cond_3
 
-    .line 254
     :try_start_1
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
@@ -905,7 +823,6 @@
 
     goto :goto_3
 
-    .line 249
     :cond_3
     iget-object p4, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
@@ -913,17 +830,14 @@
 
     move-result p1
 
-    .line 250
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    .line 251
     invoke-virtual {p2, v5, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 244
     :cond_4
     iget-object p4, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mProxyAgent:Lcom/samsung/android/knox/dar/ddar/proxy/IProxyAgent;
 
@@ -931,12 +845,10 @@
 
     move-result-object p1
 
-    .line 245
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    .line 246
     invoke-virtual {p2, v5, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -950,7 +862,6 @@
     :catch_0
     move-exception p1
 
-    .line 261
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -963,7 +874,6 @@
 
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentInfo;->mCompName:Landroid/content/ComponentName;
 
-    .line 262
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
     move-result-object p0
@@ -982,10 +892,8 @@
 
     new-array p2, v1, [Ljava/lang/Object;
 
-    .line 261
     invoke-static {v3, p0, p2}, Lcom/android/server/knox/dar/ddar/DDLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 263
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_5
@@ -997,7 +905,6 @@
 .method public final triggerRestart()V
     .locals 3
 
-    .line 202
     iget-boolean v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mIsStale:Z
 
     const/4 v1, 0x0
@@ -1010,10 +917,8 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 203
     invoke-static {v2, v0, v1}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 204
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mService:Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
 
     invoke-virtual {v0}, Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;->getHandler()Landroid/os/Handler;
@@ -1024,7 +929,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/knox/dar/ddar/proxy/ProxyAgentWrapper;->mService:Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;
 
     invoke-virtual {v0}, Lcom/android/server/knox/dar/ddar/proxy/DualDARComnService;->getHandler()Landroid/os/Handler;
@@ -1052,7 +956,6 @@
 
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 207
     invoke-static {v2, p0, v0}, Lcom/android/server/knox/dar/ddar/DDLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     :goto_0

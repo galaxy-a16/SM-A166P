@@ -47,40 +47,34 @@
 
     move-object/from16 v1, p1
 
-    .line 23
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v2, 0x17
 
     new-array v3, v2, [B
 
-    .line 4
     iput-object v3, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->chip_id:[B
 
     const/16 v3, 0xe
 
     new-array v3, v3, [B
 
-    .line 6
     iput-object v3, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->sn:[B
 
     const/16 v3, 0x9
 
     new-array v3, v3, [B
 
-    .line 7
     iput-object v3, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->cover_id:[B
 
     const/4 v3, 0x2
 
     new-array v3, v3, [B
 
-    .line 18
     iput-object v3, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->vendorInfo:[B
 
     const/4 v3, 0x0
 
-    .line 21
     iput-boolean v3, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->valid:Z
 
     const-string v4, "0"
@@ -155,7 +149,6 @@
 
     const-string v39, "U"
 
-    .line 111
     filled-new-array/range {v4 .. v39}, [Ljava/lang/String;
 
     move-result-object v3
@@ -164,12 +157,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 24
     array-length v3, v1
 
     if-ne v3, v2, :cond_0
 
-    .line 25
     invoke-virtual/range {p1 .. p1}, [B->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -178,12 +169,10 @@
 
     iput-object v1, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->chip_id:[B
 
-    .line 26
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->setId()V
 
     const/4 v1, 0x1
 
-    .line 27
     iput-boolean v1, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->valid:Z
 
     :cond_0
@@ -197,20 +186,17 @@
 
     if-eqz p1, :cond_1
 
-    .line 145
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 146
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_0
 
-    .line 147
     aget-byte v1, p1, v0
 
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -233,7 +219,6 @@
 
     goto :goto_0
 
-    .line 149
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -252,7 +237,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 119
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -261,7 +245,6 @@
 
     goto :goto_2
 
-    .line 123
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -269,7 +252,6 @@
 
     const/4 v1, 0x0
 
-    .line 125
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -279,14 +261,12 @@
 
     add-int/lit8 v2, v1, 0x2
 
-    .line 126
     invoke-virtual {p1, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
     const/16 v3, 0x10
 
-    .line 128
     :try_start_0
     invoke-static {v1, v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
@@ -298,7 +278,6 @@
 
     const-string v1, "0"
 
-    .line 130
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -306,14 +285,12 @@
     :cond_1
     if-ltz v1, :cond_2
 
-    .line 131
     iget-object v3, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->HexDecimalTable:[Ljava/lang/String;
 
     array-length v4, v3
 
     if-ge v1, v4, :cond_2
 
-    .line 132
     aget-object v1, v3, v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -323,7 +300,6 @@
     :cond_2
     const-string v1, " "
 
-    .line 134
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
@@ -334,7 +310,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -352,7 +327,6 @@
 .method public getColor()I
     .locals 0
 
-    .line 84
     iget p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->color:I
 
     return p0
@@ -361,7 +335,6 @@
 .method public getCoverId()Ljava/lang/String;
     .locals 0
 
-    .line 72
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->id:Ljava/lang/String;
 
     return-object p0
@@ -370,7 +343,6 @@
 .method public getId()[B
     .locals 0
 
-    .line 56
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->chip_id:[B
 
     return-object p0
@@ -379,7 +351,6 @@
 .method public getModel()I
     .locals 0
 
-    .line 76
     iget p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->model:I
 
     return p0
@@ -388,7 +359,6 @@
 .method public getReserved()B
     .locals 0
 
-    .line 108
     iget-byte p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->reserved:B
 
     return p0
@@ -397,7 +367,6 @@
 .method public getSmapp()I
     .locals 0
 
-    .line 80
     iget p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->smapp:I
 
     return p0
@@ -406,7 +375,6 @@
 .method public getSn()Ljava/lang/String;
     .locals 0
 
-    .line 68
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->serial:Ljava/lang/String;
 
     return-object p0
@@ -415,7 +383,6 @@
 .method public getType()I
     .locals 0
 
-    .line 88
     iget p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->type:I
 
     return p0
@@ -424,7 +391,6 @@
 .method public getUrl()I
     .locals 0
 
-    .line 100
     iget p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->url:I
 
     return p0
@@ -433,7 +399,6 @@
 .method public getYear()I
     .locals 0
 
-    .line 60
     iget p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->year:I
 
     return p0
@@ -442,7 +407,6 @@
 .method public isValid()Z
     .locals 0
 
-    .line 52
     iget-boolean p0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->valid:Z
 
     return p0
@@ -451,7 +415,6 @@
 .method public final setId()V
     .locals 5
 
-    .line 33
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->chip_id:[B
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->sn:[B
@@ -462,7 +425,6 @@
 
     invoke-static {v0, v2, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 34
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->chip_id:[B
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->cover_id:[B
@@ -471,7 +433,6 @@
 
     invoke-static {v0, v3, v1, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 35
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->sn:[B
 
     invoke-virtual {p0, v0}, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->byteArrayToString([B)Ljava/lang/String;
@@ -484,7 +445,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->serial:Ljava/lang/String;
 
-    .line 36
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->cover_id:[B
 
     invoke-virtual {p0, v0}, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->byteArrayToString([B)Ljava/lang/String;
@@ -497,7 +457,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->id:Ljava/lang/String;
 
-    .line 37
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->chip_id:[B
 
     const/4 v1, 0x3
@@ -510,14 +469,12 @@
 
     const/4 v1, 0x4
 
-    .line 38
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
 
     iput v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->month:I
 
-    .line 39
     aget-byte v1, v0, v3
 
     and-int/lit16 v1, v1, 0xff
@@ -526,7 +483,6 @@
 
     const/16 v1, 0xf
 
-    .line 40
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -535,7 +491,6 @@
 
     const/16 v1, 0x10
 
-    .line 41
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -544,7 +499,6 @@
 
     const/16 v1, 0x11
 
-    .line 42
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -553,14 +507,12 @@
 
     const/16 v1, 0x12
 
-    .line 44
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
 
     iput v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->idVersion:I
 
-    .line 45
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->vendorInfo:[B
 
     const/16 v3, 0x13
@@ -571,7 +523,6 @@
 
     const/16 v2, 0x14
 
-    .line 46
     aget-byte v2, v0, v2
 
     const/4 v3, 0x1
@@ -580,7 +531,6 @@
 
     const/16 v1, 0x15
 
-    .line 47
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -589,7 +539,6 @@
 
     const/16 v1, 0x16
 
-    .line 48
     aget-byte v0, v0, v1
 
     iput-byte v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->reserved:B
@@ -600,7 +549,6 @@
 .method public setType(I)V
     .locals 0
 
-    .line 92
     iput p1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverInfo;->type:I
 
     return-void

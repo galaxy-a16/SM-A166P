@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$dh94ySQZVYOTQOBWV_stkYkxd3M(Lcom/android/server/am/AppMediaSessionTracker;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/AppMediaSessionTracker;->-$$Nest$mtrimDurations(Lcom/android/server/am/AppMediaSessionTracker;)V
 
     return-void
@@ -30,7 +29,6 @@
 
     move-object v2, p2
 
-    .line 202
     invoke-direct/range {v0 .. v7}, Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;-><init>(Lcom/android/server/am/BaseAppStateTracker$Injector;Lcom/android/server/am/BaseAppStateEventsTracker;Ljava/lang/String;ZLjava/lang/String;J)V
 
     return-void
@@ -41,15 +39,12 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 227
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "APP MEDIA SESSION TRACKER POLICY SETTINGS:"
 
-    .line 228
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,7 +67,6 @@
 .method public getExemptionReasonString(Ljava/lang/String;II)Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string/jumbo p0, "n/a"
 
     return-object p0
@@ -81,7 +75,6 @@
 .method public onMaxTrackingDurationChanged(J)V
     .locals 0
 
-    .line 216
     iget-object p0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     move-object p1, p0
@@ -106,7 +99,6 @@
 .method public onTrackerEnabled(Z)V
     .locals 0
 
-    .line 211
     iget-object p0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast p0, Lcom/android/server/am/AppMediaSessionTracker;

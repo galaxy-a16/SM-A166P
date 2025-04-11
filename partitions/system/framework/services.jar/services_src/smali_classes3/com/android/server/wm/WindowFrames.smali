@@ -39,7 +39,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,45 +51,38 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowFrames;->mParentFrame:Landroid/graphics/Rect;
 
-    .line 46
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowFrames;->mDisplayFrame:Landroid/graphics/Rect;
 
-    .line 51
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
 
-    .line 56
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowFrames;->mLastFrame:Landroid/graphics/Rect;
 
-    .line 61
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowFrames;->mRelFrame:Landroid/graphics/Rect;
 
-    .line 66
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -99,20 +91,16 @@
 
     const/4 v0, 0x0
 
-    .line 68
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mFrameSizeChanged:Z
 
-    .line 72
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/WindowFrames;->mCompatFrame:Landroid/graphics/Rect;
 
-    .line 79
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mLastForceReportingResized:Z
 
-    .line 80
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mForceReportingResized:Z
 
     return-void
@@ -125,10 +113,8 @@
 
     const/4 v0, 0x0
 
-    .line 130
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mLastForceReportingResized:Z
 
-    .line 131
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mFrameSizeChanged:Z
 
     return-void
@@ -137,7 +123,6 @@
 .method public didFrameSizeChange()Z
     .locals 2
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/wm/WindowFrames;->mLastFrame:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -184,7 +169,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 187
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,7 +195,6 @@
 
     iget-object p2, p0, Lcom/android/server/wm/WindowFrames;->mDisplayFrame:Landroid/graphics/Rect;
 
-    .line 188
     invoke-virtual {p2, v1}, Landroid/graphics/Rect;->toShortString(Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p2
@@ -224,7 +207,6 @@
 
     iget-object p2, p0, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
 
-    .line 189
     invoke-virtual {p2, v1}, Landroid/graphics/Rect;->toShortString(Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p2
@@ -237,7 +219,6 @@
 
     iget-object p2, p0, Lcom/android/server/wm/WindowFrames;->mLastFrame:Landroid/graphics/Rect;
 
-    .line 190
     invoke-virtual {p2, v1}, Landroid/graphics/Rect;->toShortString(Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p2
@@ -256,7 +237,6 @@
 
     move-result-object p0
 
-    .line 187
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -265,40 +245,34 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 3
 
-    .line 178
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
-    .line 179
     iget-object v0, p0, Lcom/android/server/wm/WindowFrames;->mParentFrame:Landroid/graphics/Rect;
 
     const-wide v1, 0x10b00000008L
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/graphics/Rect;->dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
 
-    .line 180
     iget-object v0, p0, Lcom/android/server/wm/WindowFrames;->mDisplayFrame:Landroid/graphics/Rect;
 
     const-wide v1, 0x10b00000004L
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/graphics/Rect;->dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
 
     const-wide v1, 0x10b00000005L
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/graphics/Rect;->dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
 
-    .line 182
     iget-object p0, p0, Lcom/android/server/wm/WindowFrames;->mCompatFrame:Landroid/graphics/Rect;
 
     const-wide v0, 0x10b00000010L
 
     invoke-virtual {p0, p1, v0, v1}, Landroid/graphics/Rect;->dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
 
-    .line 183
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -309,7 +283,6 @@
 
     const/4 v0, 0x1
 
-    .line 145
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mForceReportingResized:Z
 
     return-void
@@ -318,7 +291,6 @@
 .method public getInsetsChangedInfo()Ljava/lang/String;
     .locals 2
 
-    .line 195
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -349,7 +321,6 @@
 .method public hasContentChanged()Z
     .locals 0
 
-    .line 160
     iget-boolean p0, p0, Lcom/android/server/wm/WindowFrames;->mContentChanged:Z
 
     return p0
@@ -358,7 +329,6 @@
 .method public hasInsetsChanged()Z
     .locals 0
 
-    .line 174
     iget-boolean p0, p0, Lcom/android/server/wm/WindowFrames;->mInsetsChanged:Z
 
     return p0
@@ -367,7 +337,6 @@
 .method public isFrameSizeChangeReported()Z
     .locals 1
 
-    .line 122
     iget-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mFrameSizeChanged:Z
 
     if-nez v0, :cond_1
@@ -398,7 +367,6 @@
 
     const/4 v0, 0x0
 
-    .line 138
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mForceReportingResized:Z
 
     return-void
@@ -407,7 +375,6 @@
 .method public parentFrameWasClippedByDisplayCutout()Z
     .locals 0
 
-    .line 97
     iget-boolean p0, p0, Lcom/android/server/wm/WindowFrames;->mParentFrameWasClippedByDisplayCutout:Z
 
     return p0
@@ -416,7 +383,6 @@
 .method public setContentChanged(Z)V
     .locals 0
 
-    .line 153
     iput-boolean p1, p0, Lcom/android/server/wm/WindowFrames;->mContentChanged:Z
 
     return-void
@@ -425,7 +391,6 @@
 .method public setInsetsChanged(Z)V
     .locals 0
 
-    .line 167
     iput-boolean p1, p0, Lcom/android/server/wm/WindowFrames;->mInsetsChanged:Z
 
     return-void
@@ -434,7 +399,6 @@
 .method public setParentFrameWasClippedByDisplayCutout(Z)V
     .locals 0
 
-    .line 93
     iput-boolean p1, p0, Lcom/android/server/wm/WindowFrames;->mParentFrameWasClippedByDisplayCutout:Z
 
     return-void
@@ -443,7 +407,6 @@
 .method public setReportResizeHints()Z
     .locals 2
 
-    .line 113
     iget-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mLastForceReportingResized:Z
 
     iget-boolean v1, p0, Lcom/android/server/wm/WindowFrames;->mForceReportingResized:Z
@@ -452,7 +415,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mLastForceReportingResized:Z
 
-    .line 114
     iget-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mFrameSizeChanged:Z
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowFrames;->didFrameSizeChange()Z
@@ -463,7 +425,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/WindowFrames;->mFrameSizeChanged:Z
 
-    .line 115
     iget-boolean p0, p0, Lcom/android/server/wm/WindowFrames;->mLastForceReportingResized:Z
 
     if-nez p0, :cond_1

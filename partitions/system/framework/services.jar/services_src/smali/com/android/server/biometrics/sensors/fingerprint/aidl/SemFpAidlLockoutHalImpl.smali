@@ -30,37 +30,30 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/SemBiometricLockoutTracker;Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl$LockoutResetCallback;)V
     .locals 6
 
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mContext:Landroid/content/Context;
 
-    .line 66
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mFailedAttempts:Landroid/util/SparseIntArray;
 
-    .line 67
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mRemainingLockoutTime:Landroid/util/SparseLongArray;
 
-    .line 68
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mTimedLockoutCleared:Landroid/util/SparseBooleanArray;
 
-    .line 69
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mIntegratedLockoutTracker:Lcom/android/server/biometrics/SemBiometricLockoutTracker;
 
-    .line 70
     const-class p2, Landroid/app/AlarmManager;
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -71,7 +64,6 @@
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 71
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl$1;
 
     invoke-direct {v1, p0, p3}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl$1;-><init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl$LockoutResetCallback;)V
@@ -84,7 +76,6 @@
 
     const-string v3, "android.permission.RESET_FINGERPRINT_LOCKOUT"
 
-    .line 87
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object p0
@@ -97,7 +88,6 @@
 
     move-object v0, p1
 
-    .line 71
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
     return-void
@@ -106,12 +96,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl$LockoutResetCallback;)V
     .locals 1
 
-    .line 56
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FEATURE_INTEGRATED_LOCKOUT:Z
 
     if-eqz v0, :cond_0
 
-    .line 57
     invoke-static {}, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->get()Lcom/android/server/biometrics/SemBiometricLockoutTracker;
 
     move-result-object v0
@@ -121,7 +109,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 55
     :goto_0
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;-><init>(Landroid/content/Context;Lcom/android/server/biometrics/SemBiometricLockoutTracker;Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl$LockoutResetCallback;)V
 
@@ -133,7 +120,6 @@
 .method public addFailedAttemptForUser(I)V
     .locals 4
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mFailedAttempts:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x0
@@ -148,22 +134,18 @@
 
     invoke-virtual {v0, p1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mTimedLockoutCleared:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mIntegratedLockoutTracker:Lcom/android/server/biometrics/SemBiometricLockoutTracker;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x2
 
-    .line 114
     invoke-virtual {v0, p1, v1}, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->addFailedAttempt(II)V
 
-    .line 117
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->getLockoutModeForUser(I)I
 
@@ -171,13 +153,10 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 118
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->scheduleLockoutResetForUser(I)V
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mRemainingLockoutTime:Landroid/util/SparseLongArray;
 
-    .line 120
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -190,7 +169,6 @@
 
     add-long/2addr v0, v2
 
-    .line 119
     invoke-virtual {p0, p1, v0, v1}, Landroid/util/SparseLongArray;->put(IJ)V
 
     :cond_1
@@ -200,7 +178,6 @@
 .method public final cancelLockoutResetForUser(I)V
     .locals 1
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->getLockoutResetIntentForUser(I)Landroid/app/PendingIntent;
@@ -215,7 +192,6 @@
 .method public getLockoutModeForUser(I)I
     .locals 4
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mIntegratedLockoutTracker:Lcom/android/server/biometrics/SemBiometricLockoutTracker;
 
     const/4 v1, 0x2
@@ -224,7 +200,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 148
     invoke-virtual {v0, p1}, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->getFailedAttempts(I)I
 
     move-result v0
@@ -233,7 +208,6 @@
 
     return v1
 
-    .line 152
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mFailedAttempts:Landroid/util/SparseIntArray;
 
@@ -250,10 +224,8 @@
     :cond_1
     if-lez v0, :cond_2
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mTimedLockoutCleared:Landroid/util/SparseBooleanArray;
 
-    .line 156
     invoke-virtual {p0, p1, v3}, Landroid/util/SparseBooleanArray;->get(IZ)Z
 
     move-result p0
@@ -275,7 +247,6 @@
 .method public final getLockoutResetIntentForUser(I)Landroid/app/PendingIntent;
     .locals 2
 
-    .line 174
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mContext:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
@@ -286,14 +257,12 @@
 
     const-string/jumbo v1, "lockout_reset_user"
 
-    .line 175
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object v0
 
     const/high16 v1, 0xc000000
 
-    .line 174
     invoke-static {p0, p1, v0, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p0
@@ -308,7 +277,6 @@
 
     const/4 v1, 0x0
 
-    .line 127
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->getLockoutModeForUser(I)I
 
@@ -332,7 +300,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 133
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mRemainingLockoutTime:Landroid/util/SparseLongArray;
 
     const-wide/16 v2, 0x0
@@ -357,7 +324,6 @@
 
     if-gez p0, :cond_2
 
-    .line 135
     :try_start_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -394,7 +360,6 @@
     :catch_1
     move-exception p1
 
-    .line 140
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -424,14 +389,12 @@
 .method public resetFailedAttemptsForUser(ZI)V
     .locals 2
 
-    .line 92
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->getLockoutModeForUser(I)I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 93
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -459,17 +422,14 @@
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 97
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mIntegratedLockoutTracker:Lcom/android/server/biometrics/SemBiometricLockoutTracker;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x2
 
-    .line 98
     invoke-virtual {p1, p2, v0}, Lcom/android/server/biometrics/SemBiometricLockoutTracker;->resetFailedAttempts(II)V
 
-    .line 101
     :cond_1
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mFailedAttempts:Landroid/util/SparseIntArray;
 
@@ -477,7 +437,6 @@
 
     invoke-virtual {p1, p2, v0}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 103
     :cond_2
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mTimedLockoutCleared:Landroid/util/SparseBooleanArray;
 
@@ -485,14 +444,12 @@
 
     invoke-virtual {p1, p2, v0}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 104
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mRemainingLockoutTime:Landroid/util/SparseLongArray;
 
     const-wide/16 v0, 0x0
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/util/SparseLongArray;->put(IJ)V
 
-    .line 107
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->cancelLockoutResetForUser(I)V
 
     return-void
@@ -501,10 +458,8 @@
 .method public final scheduleLockoutResetForUser(I)V
     .locals 5
 
-    .line 168
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 169
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
@@ -513,14 +468,12 @@
 
     add-long/2addr v1, v3
 
-    .line 170
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemFpAidlLockoutHalImpl;->getLockoutResetIntentForUser(I)Landroid/app/PendingIntent;
 
     move-result-object p0
 
     const/4 p1, 0x2
 
-    .line 168
     invoke-virtual {v0, p1, v1, v2, p0}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
     return-void

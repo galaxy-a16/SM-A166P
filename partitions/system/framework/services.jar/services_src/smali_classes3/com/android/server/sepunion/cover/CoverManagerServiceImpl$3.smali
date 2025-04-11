@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)V
     .locals 0
 
-    .line 138
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$3;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-direct {p0}, Landroid/view/IDisplayFoldListener$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onDisplayFoldChanged(IZ)V
     .locals 3
 
-    .line 141
     invoke-static {}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -57,7 +55,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 144
     iget-object p2, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$3;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -82,7 +79,6 @@
 
     goto :goto_1
 
-    .line 146
     :cond_1
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$3;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 

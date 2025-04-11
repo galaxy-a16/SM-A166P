@@ -15,19 +15,16 @@
 .method public constructor <init>(Lcom/android/server/pm/ShortcutService;)V
     .locals 0
 
-    .line 5173
     iput-object p1, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 5175
     iput p1, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
 
     const/16 p1, 0xf
 
-    .line 5177
     iput p1, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mShortcutMatchFlags:I
 
     return-void
@@ -36,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/ShortcutService;Lcom/android/server/pm/ShortcutService$MyShellCommand-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/ShortcutService$MyShellCommand;-><init>(Lcom/android/server/pm/ShortcutService;)V
 
     return-void
@@ -47,7 +43,6 @@
 .method public final handleClearShortcuts()V
     .locals 6
 
-    .line 5366
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v0}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -58,18 +53,15 @@
 
     const/4 v1, 0x1
 
-    .line 5367
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->parseOptionsLocked(Z)V
 
-    .line 5368
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "ShellCommand"
 
-    .line 5370
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,14 +86,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5372
     iget-object v3, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     iget p0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
 
     invoke-static {v3, v2, p0, v1}, Lcom/android/server/pm/ShortcutService;->-$$Nest$mcleanUpPackageForAllLoadedUsers(Lcom/android/server/pm/ShortcutService;Ljava/lang/String;IZ)V
 
-    .line 5374
     monitor-exit v0
 
     return-void
@@ -119,7 +109,6 @@
 .method public final handleGetDefaultLauncher()V
     .locals 6
 
-    .line 5332
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v0}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -130,11 +119,9 @@
 
     const/4 v1, 0x1
 
-    .line 5333
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->parseOptionsLocked(Z)V
 
-    .line 5335
     iget-object v1, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     iget v2, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
@@ -145,12 +132,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 5342
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5343
     iget-object v3, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v3}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmPackageManagerInternal(Lcom/android/server/pm/ShortcutService;)Landroid/content/pm/PackageManagerInternal;
@@ -161,15 +146,12 @@
 
     iget v5, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
 
-    .line 5344
     invoke-virtual {v4, v5}, Lcom/android/server/pm/ShortcutService;->getParentOrSelfUserId(I)I
 
     move-result v4
 
-    .line 5343
     invoke-virtual {v3, v2, v4}, Landroid/content/pm/PackageManagerInternal;->getHomeActivitiesAsUser(Ljava/util/List;I)Landroid/content/ComponentName;
 
-    .line 5345
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -187,12 +169,10 @@
 
     check-cast v3, Landroid/content/pm/ResolveInfo;
 
-    .line 5346
     invoke-virtual {v3}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
 
     move-result-object v3
 
-    .line 5347
     iget-object v4, v3, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -201,7 +181,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 5348
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -226,13 +205,11 @@
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5352
     :cond_1
     monitor-exit v0
 
     return-void
 
-    .line 5337
     :cond_2
     new-instance v1, Lcom/android/server/pm/ShortcutService$CommandException;
 
@@ -259,7 +236,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5352
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -270,7 +246,6 @@
 .method public final handleGetShortcuts()V
     .locals 5
 
-    .line 5378
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v0}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -281,18 +256,15 @@
 
     const/4 v1, 0x1
 
-    .line 5379
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->parseOptionsLocked(Z)V
 
-    .line 5380
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "ShellCommand"
 
-    .line 5382
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -325,7 +297,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5385
     iget-object v2, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     iget v3, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
@@ -334,19 +305,16 @@
 
     move-result-object v2
 
-    .line 5386
     invoke-virtual {v2, v1}, Lcom/android/server/pm/ShortcutUser;->getPackageShortcutsIfExists(Ljava/lang/String;)Lcom/android/server/pm/ShortcutPackage;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 5388
     monitor-exit v0
 
     return-void
 
-    .line 5391
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -356,7 +324,6 @@
 
     invoke-virtual {v1, v2, p0}, Lcom/android/server/pm/ShortcutPackage;->dumpShortcuts(Ljava/io/PrintWriter;I)V
 
-    .line 5392
     monitor-exit v0
 
     return-void
@@ -374,7 +341,6 @@
 .method public final handleHasShortcutAccess()V
     .locals 4
 
-    .line 5404
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v0}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -385,16 +351,13 @@
 
     const/4 v1, 0x1
 
-    .line 5405
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->parseOptionsLocked(Z)V
 
-    .line 5406
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 5408
     iget-object v2, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     iget v3, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
@@ -403,7 +366,6 @@
 
     move-result v1
 
-    .line 5409
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -414,7 +376,6 @@
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5410
     monitor-exit v0
 
     return-void
@@ -432,14 +393,12 @@
 .method public final handleOverrideConfig()V
     .locals 4
 
-    .line 5309
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "ShellCommand"
 
-    .line 5311
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -456,7 +415,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5313
     iget-object v1, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v1}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -465,7 +423,6 @@
 
     monitor-enter v1
 
-    .line 5314
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
@@ -475,12 +432,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 5317
     monitor-exit v1
 
     return-void
 
-    .line 5315
     :cond_0
     new-instance p0, Lcom/android/server/pm/ShortcutService$CommandException;
 
@@ -493,7 +448,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5317
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -508,10 +462,8 @@
 
     const-string v1, "cmd: handleResetAllThrottling"
 
-    .line 5303
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5305
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService;->resetAllThrottlingInner()V
@@ -526,10 +478,8 @@
 
     const-string v1, "cmd: handleResetConfig"
 
-    .line 5321
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5323
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v0}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -538,13 +488,11 @@
 
     monitor-enter v0
 
-    .line 5324
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {p0}, Lcom/android/server/pm/ShortcutService;->-$$Nest$mloadConfigurationLocked(Lcom/android/server/pm/ShortcutService;)V
 
-    .line 5325
     monitor-exit v0
 
     return-void
@@ -562,7 +510,6 @@
 .method public final handleResetThrottling()V
     .locals 4
 
-    .line 5293
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v0}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -573,13 +520,11 @@
 
     const/4 v1, 0x1
 
-    .line 5294
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->parseOptionsLocked(Z)V
 
     const-string v1, "ShellCommand"
 
-    .line 5296
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -598,14 +543,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5298
     iget-object v1, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     iget p0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
 
     invoke-virtual {v1, p0}, Lcom/android/server/pm/ShortcutService;->resetThrottlingInner(I)V
 
-    .line 5299
     monitor-exit v0
 
     return-void
@@ -623,7 +566,6 @@
 .method public final handleUnloadUser()V
     .locals 4
 
-    .line 5356
     iget-object v0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-static {v0}, Lcom/android/server/pm/ShortcutService;->-$$Nest$fgetmLock(Lcom/android/server/pm/ShortcutService;)Ljava/lang/Object;
@@ -634,13 +576,11 @@
 
     const/4 v1, 0x1
 
-    .line 5357
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->parseOptionsLocked(Z)V
 
     const-string v1, "ShellCommand"
 
-    .line 5359
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -659,14 +599,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5361
     iget-object v1, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     iget p0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
 
     invoke-virtual {v1, p0}, Lcom/android/server/pm/ShortcutService;->handleStopUser(I)V
 
-    .line 5362
     monitor-exit v0
 
     return-void
@@ -684,7 +622,6 @@
 .method public final handleVerifyStates()V
     .locals 3
 
-    .line 5397
     :try_start_0
     iget-object p0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
@@ -697,7 +634,6 @@
     :catchall_0
     move-exception p0
 
-    .line 5399
     new-instance v0, Lcom/android/server/pm/ShortcutService$CommandException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -734,14 +670,12 @@
 
     if-nez p1, :cond_0
 
-    .line 5208
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 5210
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -749,7 +683,6 @@
 
     const/4 v1, 0x1
 
-    .line 5212
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -898,68 +831,57 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
-    .line 5244
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     goto :goto_3
 
-    .line 5241
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleHasShortcutAccess()V
 
     goto :goto_2
 
-    .line 5238
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleVerifyStates()V
 
     goto :goto_2
 
-    .line 5235
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleGetShortcuts()V
 
     goto :goto_2
 
-    .line 5232
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleClearShortcuts()V
 
     goto :goto_2
 
-    .line 5229
     :pswitch_4
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleUnloadUser()V
 
     goto :goto_2
 
-    .line 5226
     :pswitch_5
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleGetDefaultLauncher()V
 
     goto :goto_2
 
-    .line 5223
     :pswitch_6
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleResetConfig()V
 
     goto :goto_2
 
-    .line 5220
     :pswitch_7
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleOverrideConfig()V
 
     goto :goto_2
 
-    .line 5217
     :pswitch_8
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleResetAllThrottling()V
 
     goto :goto_2
 
-    .line 5214
     :pswitch_9
     invoke-virtual {p0}, Lcom/android/server/pm/ShortcutService$MyShellCommand;->handleResetThrottling()V
     :try_end_0
@@ -968,7 +890,6 @@
     :goto_2
     const-string p0, "Success"
 
-    .line 5250
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v3
@@ -979,7 +900,6 @@
     :catch_0
     move-exception p0
 
-    .line 5247
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1036,144 +956,112 @@
 .method public onHelp()V
     .locals 1
 
-    .line 5256
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Usage: cmd shortcut COMMAND [options ...]"
 
-    .line 5257
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5258
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "cmd shortcut reset-throttling [--user USER_ID]"
 
-    .line 5259
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Reset throttling for all packages and users"
 
-    .line 5260
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5261
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "cmd shortcut reset-all-throttling"
 
-    .line 5262
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Reset the throttling state for all users"
 
-    .line 5263
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5264
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "cmd shortcut override-config CONFIG"
 
-    .line 5265
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Override the configuration for testing (will last until reboot)"
 
-    .line 5266
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5267
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "cmd shortcut reset-config"
 
-    .line 5268
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Reset the configuration set with \"update-config\""
 
-    .line 5269
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5270
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "[Deprecated] cmd shortcut get-default-launcher [--user USER_ID]"
 
-    .line 5271
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Show the default launcher"
 
-    .line 5272
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Note: This command is deprecated. Callers should query the default launcher from RoleManager instead."
 
-    .line 5273
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5275
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "cmd shortcut unload-user [--user USER_ID]"
 
-    .line 5276
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Unload a user from the memory"
 
-    .line 5277
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    (This should not affect any observable behavior)"
 
-    .line 5278
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5279
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "cmd shortcut clear-shortcuts [--user USER_ID] PACKAGE"
 
-    .line 5280
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Remove all shortcuts from a package, including pinned shortcuts"
 
-    .line 5281
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5282
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "cmd shortcut get-shortcuts [--user USER_ID] [--flags FLAGS] PACKAGE"
 
-    .line 5283
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Show the shortcuts for a package that match the given flags"
 
-    .line 5284
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5285
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "cmd shortcut has-shortcut-access [--user USER_ID] PACKAGE"
 
-    .line 5286
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Prints \"true\" if the package can access shortcuts, \"false\" otherwise"
 
-    .line 5287
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5289
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -1182,7 +1070,6 @@
 .method public final parseOptionsLocked(Z)V
     .locals 2
 
-    .line 5184
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -1192,7 +1079,6 @@
 
     const-string v1, "--flags"
 
-    .line 5185
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1209,7 +1095,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 5188
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1220,7 +1105,6 @@
 
     iput v0, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->mUserId:I
 
-    .line 5189
     iget-object v1, p0, Lcom/android/server/pm/ShortcutService$MyShellCommand;->this$0:Lcom/android/server/pm/ShortcutService;
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/ShortcutService;->isUserUnlockedL(I)Z
@@ -1231,7 +1115,6 @@
 
     goto :goto_0
 
-    .line 5190
     :cond_0
     new-instance p1, Lcom/android/server/pm/ShortcutService$CommandException;
 
@@ -1259,7 +1142,6 @@
 
     throw p1
 
-    .line 5200
     :cond_1
     new-instance p0, Lcom/android/server/pm/ShortcutService$CommandException;
 
@@ -1281,7 +1163,6 @@
 
     throw p0
 
-    .line 5197
     :cond_2
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 

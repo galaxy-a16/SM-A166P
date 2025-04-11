@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/tv/hdmi/cec/CecMessage;
     .locals 0
 
-    .line 15
     new-instance p0, Landroid/hardware/tv/hdmi/cec/CecMessage;
 
     invoke-direct {p0}, Landroid/hardware/tv/hdmi/cec/CecMessage;-><init>()V
 
-    .line 16
     invoke-virtual {p0, p1}, Landroid/hardware/tv/hdmi/cec/CecMessage;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 12
     invoke-virtual {p0, p1}, Landroid/hardware/tv/hdmi/cec/CecMessage$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/tv/hdmi/cec/CecMessage;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/tv/hdmi/cec/CecMessage;
     .locals 0
 
-    .line 21
     new-array p0, p1, [Landroid/hardware/tv/hdmi/cec/CecMessage;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 12
     invoke-virtual {p0, p1}, Landroid/hardware/tv/hdmi/cec/CecMessage$1;->newArray(I)[Landroid/hardware/tv/hdmi/cec/CecMessage;
 
     move-result-object p0

@@ -15,16 +15,12 @@
 .method public constructor <init>(IZLjava/lang/String;)V
     .locals 0
 
-    .line 575
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 576
     iput p1, p0, Lcom/android/server/audio/AudioServiceEvents$StreamMuteEvent;->mStreamType:I
 
-    .line 577
     iput-boolean p2, p0, Lcom/android/server/audio/AudioServiceEvents$StreamMuteEvent;->mMuted:Z
 
-    .line 578
     iput-object p3, p0, Lcom/android/server/audio/AudioServiceEvents$StreamMuteEvent;->mSource:Ljava/lang/String;
 
     return-void
@@ -35,7 +31,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 584
     iget v0, p0, Lcom/android/server/audio/AudioServiceEvents$StreamMuteEvent;->mStreamType:I
 
     invoke-static {}, Landroid/media/AudioSystem;->getNumStreamTypes()I
@@ -48,14 +43,12 @@
 
     if-ltz v0, :cond_0
 
-    .line 585
     sget-object v1, Landroid/media/AudioSystem;->STREAM_NAMES:[Ljava/lang/String;
 
     aget-object v0, v1, v0
 
     goto :goto_0
 
-    .line 586
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -73,13 +66,11 @@
 
     move-result-object v0
 
-    .line 587
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 588
     iget-boolean v0, p0, Lcom/android/server/audio/AudioServiceEvents$StreamMuteEvent;->mMuted:Z
 
     if-eqz v0, :cond_1
@@ -96,10 +87,8 @@
 
     iget-object p0, p0, Lcom/android/server/audio/AudioServiceEvents$StreamMuteEvent;->mSource:Ljava/lang/String;
 
-    .line 589
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 590
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

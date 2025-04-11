@@ -20,7 +20,6 @@
 .method public test(Landroid/content/pm/PackageInfo;)Z
     .locals 0
 
-    .line 381
     invoke-static {p1}, Lcom/android/server/pm/ShortcutService;->-$$Nest$smisInstalled(Landroid/content/pm/PackageInfo;)Z
 
     move-result p0
@@ -33,7 +32,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 379
     check-cast p1, Landroid/content/pm/PackageInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/ShortcutService$2;->test(Landroid/content/pm/PackageInfo;)Z

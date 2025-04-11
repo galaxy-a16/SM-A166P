@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$mgetUidState(Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;I)Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;->getUidState(I)Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;
 
     move-result-object p0
@@ -22,10 +21,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 61
     invoke-direct {p0}, Landroid/app/IUidObserver$Stub;-><init>()V
 
-    .line 62
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -38,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;-><init>()V
 
     return-void
@@ -49,7 +45,6 @@
 .method public final getUidState(I)Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;
     .locals 0
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;->mUidState:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -68,21 +63,18 @@
 .method public onUidActive(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidCachedChanged(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidGone(IZ)V
     .locals 0
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;->mUidState:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -97,21 +89,18 @@
 .method public onUidIdle(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidProcAdjChanged(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 83
     iget-object p3, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;->mUidState:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -126,14 +115,12 @@
 
     if-nez p3, :cond_0
 
-    .line 85
     new-instance p3, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;
 
     const/4 p4, 0x0
 
     invoke-direct {p3, p2, p5, p4}, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;-><init>(IILcom/android/server/location/nsflp/NSPermissionHelper$UidState-IA;)V
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;->mUidState:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -144,11 +131,9 @@
 
     goto :goto_0
 
-    .line 88
     :cond_0
     invoke-static {p3, p2}, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;->-$$Nest$fputstate(Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;I)V
 
-    .line 89
     invoke-static {p3, p5}, Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;->-$$Nest$fputcapability(Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;I)V
 
     :goto_0

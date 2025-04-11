@@ -31,7 +31,6 @@
 .method public registerIgnoringScore(Ljava/lang/String;)V
     .locals 0
 
-    .line 43
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

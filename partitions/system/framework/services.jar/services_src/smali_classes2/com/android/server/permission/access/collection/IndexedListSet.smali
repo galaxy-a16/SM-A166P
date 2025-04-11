@@ -14,7 +14,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 22
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -27,10 +26,8 @@
 .method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     iput-object p1, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     return-void
@@ -41,7 +38,6 @@
 .method public add(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 42
     iget-object v0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -54,7 +50,6 @@
 
     goto :goto_0
 
-    .line 45
     :cond_0
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
@@ -69,7 +64,6 @@
 .method public addAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .line 56
     new-instance p0, Lcom/android/server/permission/jarjar/kotlin/NotImplementedError;
 
     const/4 p1, 0x0
@@ -84,7 +78,6 @@
 .method public clear()V
     .locals 0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -95,7 +88,6 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 27
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -108,7 +100,6 @@
 .method public containsAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .line 34
     new-instance p0, Lcom/android/server/permission/jarjar/kotlin/NotImplementedError;
 
     const/4 p1, 0x0
@@ -123,7 +114,6 @@
 .method public final copy()Lcom/android/server/permission/access/collection/IndexedListSet;
     .locals 2
 
-    .line 69
     new-instance v0, Lcom/android/server/permission/access/collection/IndexedListSet;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -140,7 +130,6 @@
 .method public final elementAt(I)Ljava/lang/Object;
     .locals 0
 
-    .line 37
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -153,7 +142,6 @@
 .method public getSize()I
     .locals 0
 
-    .line 25
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -166,7 +154,6 @@
 .method public isEmpty()Z
     .locals 0
 
-    .line 29
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -179,7 +166,6 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 0
 
-    .line 31
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -192,7 +178,6 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 49
     iget-object p0, p0, Lcom/android/server/permission/access/collection/IndexedListSet;->list:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -205,7 +190,6 @@
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .line 60
     new-instance p0, Lcom/android/server/permission/jarjar/kotlin/NotImplementedError;
 
     const/4 p1, 0x0
@@ -220,7 +204,6 @@
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .line 64
     new-instance p0, Lcom/android/server/permission/jarjar/kotlin/NotImplementedError;
 
     const/4 p1, 0x0
@@ -235,7 +218,6 @@
 .method public final bridge size()I
     .locals 0
 
-    .line 19
     invoke-virtual {p0}, Lcom/android/server/permission/access/collection/IndexedListSet;->getSize()I
 
     move-result p0
@@ -246,7 +228,6 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/CollectionToArray;->toArray(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -257,7 +238,6 @@
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/CollectionToArray;->toArray(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0

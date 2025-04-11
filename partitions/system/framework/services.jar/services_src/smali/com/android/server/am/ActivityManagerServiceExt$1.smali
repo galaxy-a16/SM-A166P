@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerServiceExt;)V
     .locals 0
 
-    .line 1245
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerServiceExt$1;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onPackageFeatureDataChanged(Lcom/samsung/android/server/packagefeature/PackageFeatureData;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onUnformattedPackageFeatureFileChanged(Ljava/lang/String;Ljava/util/function/Function;)V
     .locals 1
 
-    .line 1254
     invoke-interface {p2, p1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -45,7 +42,6 @@
 
     return-void
 
-    .line 1256
     :cond_0
     iget-object p2, p0, Lcom/android/server/am/ActivityManagerServiceExt$1;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
@@ -55,7 +51,6 @@
 
     monitor-enter p2
 
-    .line 1257
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$1;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
@@ -75,7 +70,6 @@
 
     return-void
 
-    .line 1259
     :cond_1
     :try_start_1
     invoke-static {p1}, Lcom/samsung/android/server/pm/allowlist/BroadcastReceiverListParserWithScpm;->updateParserIfNeeded(Ljava/io/FileDescriptor;)Lcom/samsung/android/server/pm/allowlist/BroadcastReceiverListParser;
@@ -84,12 +78,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 1261
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$1;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     invoke-static {v0, p1}, Lcom/android/server/am/ActivityManagerServiceExt;->-$$Nest$fputmParser(Lcom/android/server/am/ActivityManagerServiceExt;Lcom/samsung/android/server/pm/allowlist/BroadcastReceiverListParser;)V
 
-    .line 1263
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerServiceExt$1;->this$0:Lcom/android/server/am/ActivityManagerServiceExt;
 
     invoke-static {p0}, Lcom/android/server/am/ActivityManagerServiceExt;->-$$Nest$fgetmParser(Lcom/android/server/am/ActivityManagerServiceExt;)Lcom/samsung/android/server/pm/allowlist/BroadcastReceiverListParser;
@@ -100,15 +92,12 @@
 
     move-result p0
 
-    .line 1264
     sget-boolean p1, Lcom/samsung/android/rune/PMRune;->PM_WA_WORK_COMP_CHANGED:Z
 
     if-eq p1, p0, :cond_2
 
-    .line 1265
     sput-boolean p0, Lcom/samsung/android/rune/PMRune;->PM_WA_WORK_COMP_CHANGED:Z
 
-    .line 1266
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +114,6 @@
 
     invoke-static {p0}, Lcom/samsung/android/server/pm/PmLog;->logDebugInfoAndLogcat(Ljava/lang/String;)V
 
-    .line 1270
     :cond_2
     monitor-exit p2
     :try_end_1

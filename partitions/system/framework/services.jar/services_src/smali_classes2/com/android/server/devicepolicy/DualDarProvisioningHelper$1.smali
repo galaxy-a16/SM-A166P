@@ -19,14 +19,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 80
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "DualDarProvisioningHelper"
 
-    .line 81
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,7 +41,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$1;->this$0:Lcom/android/server/devicepolicy/DualDarProvisioningHelper;
 
     invoke-static {v0}, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->-$$Nest$fgetmContext(Lcom/android/server/devicepolicy/DualDarProvisioningHelper;)Landroid/content/Context;
@@ -52,7 +49,6 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$1;->this$0:Lcom/android/server/devicepolicy/DualDarProvisioningHelper;
 
     invoke-static {v0}, Lcom/android/server/devicepolicy/DualDarProvisioningHelper;->-$$Nest$fgetmContext(Lcom/android/server/devicepolicy/DualDarProvisioningHelper;)Landroid/content/Context;
@@ -67,7 +63,6 @@
 
     const-string v0, "com.android.dualdar.started.provisioning_success"
 
-    .line 87
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -78,20 +73,17 @@
 
     if-eqz p1, :cond_0
 
-    .line 89
     iget-object p1, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$1;->val$success:[Z
 
     aput-boolean v0, p1, v1
 
     goto :goto_0
 
-    .line 91
     :cond_0
     iget-object p1, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$1;->val$success:[Z
 
     aput-boolean v1, p1, v1
 
-    .line 92
     iget-object p1, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$1;->val$errorCode:[I
 
     const-string v2, "ERROR_CODE"
@@ -104,24 +96,20 @@
 
     aput p2, p1, v1
 
-    .line 95
     :goto_0
     iget-object p1, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$1;->val$mutex:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 96
     :try_start_0
     iget-object p2, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$1;->val$finished:[Z
 
     aput-boolean v0, p2, v1
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/devicepolicy/DualDarProvisioningHelper$1;->val$mutex:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
-    .line 98
     monitor-exit p1
 
     return-void

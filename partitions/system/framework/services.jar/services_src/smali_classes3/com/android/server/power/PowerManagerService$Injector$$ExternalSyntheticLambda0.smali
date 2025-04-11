@@ -20,7 +20,6 @@
 .method public final checkPermissionForDataDelivery(Landroid/content/Context;Ljava/lang/String;ILandroid/content/AttributionSource;Ljava/lang/String;)I
     .locals 0
 
-    .line 0
     invoke-static {p1, p2, p3, p4, p5}, Landroid/content/PermissionChecker;->checkPermissionForDataDelivery(Landroid/content/Context;Ljava/lang/String;ILandroid/content/AttributionSource;Ljava/lang/String;)I
 
     move-result p0

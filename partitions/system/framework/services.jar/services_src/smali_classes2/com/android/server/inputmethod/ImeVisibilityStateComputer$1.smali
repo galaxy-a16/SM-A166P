@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/ImeVisibilityStateComputer;)V
     .locals 0
 
-    .line 205
     iput-object p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$1;->this$0:Lcom/android/server/inputmethod/ImeVisibilityStateComputer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onImeInputTargetVisibilityChanged(Landroid/os/IBinder;ZZ)V
     .locals 4
 
-    .line 220
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$1;->this$0:Lcom/android/server/inputmethod/ImeVisibilityStateComputer;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/ImeVisibilityStateComputer;->-$$Nest$fgetmCurVisibleImeInputTarget(Lcom/android/server/inputmethod/ImeVisibilityStateComputer;)Landroid/os/IBinder;
@@ -49,7 +47,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 222
     iget-object v0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$1;->this$0:Lcom/android/server/inputmethod/ImeVisibilityStateComputer;
 
     invoke-static {v0}, Lcom/android/server/inputmethod/ImeVisibilityStateComputer;->-$$Nest$fgetmService(Lcom/android/server/inputmethod/ImeVisibilityStateComputer;)Lcom/android/server/inputmethod/InputMethodManagerService;
@@ -66,7 +63,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/server/inputmethod/InputMethodManagerService;->onApplyImeVisibilityFromComputer(Landroid/os/IBinder;Lcom/android/server/inputmethod/ImeVisibilityStateComputer$ImeVisibilityResult;)V
 
-    .line 226
     :cond_1
     iget-object p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$1;->this$0:Lcom/android/server/inputmethod/ImeVisibilityStateComputer;
 
@@ -88,7 +84,6 @@
 .method public onImeTargetOverlayVisibilityChanged(Landroid/os/IBinder;IZZ)V
     .locals 0
 
-    .line 210
     iget-object p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$1;->this$0:Lcom/android/server/inputmethod/ImeVisibilityStateComputer;
 
     if-eqz p3, :cond_0
@@ -104,7 +99,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 214
     :goto_0
     invoke-static {p0, p1}, Lcom/android/server/inputmethod/ImeVisibilityStateComputer;->-$$Nest$fputmCurVisibleImeLayeringOverlay(Lcom/android/server/inputmethod/ImeVisibilityStateComputer;Landroid/os/IBinder;)V
 

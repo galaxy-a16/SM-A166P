@@ -24,28 +24,22 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;Lcom/android/server/wm/ActivityTaskSupervisor;Lcom/android/server/wm/ActivityStartInterceptor;)V
     .locals 2
 
-    .line 472
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
-    .line 461
     iput v0, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->MAX_STARTER_COUNT:I
 
-    .line 468
     new-instance v1, Landroid/util/Pools$SynchronizedPool;
 
     invoke-direct {v1, v0}, Landroid/util/Pools$SynchronizedPool;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mStarterPool:Landroid/util/Pools$SynchronizedPool;
 
-    .line 473
     iput-object p1, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 474
     iput-object p2, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
-    .line 475
     iput-object p3, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mInterceptor:Lcom/android/server/wm/ActivityStartInterceptor;
 
     return-void
@@ -56,7 +50,6 @@
 .method public obtain()Lcom/android/server/wm/ActivityStarter;
     .locals 4
 
-    .line 485
     iget-object v0, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mStarterPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v0}, Landroid/util/Pools$SynchronizedPool;->acquire()Ljava/lang/Object;
@@ -67,14 +60,12 @@
 
     if-nez v0, :cond_1
 
-    .line 488
     iget-object v0, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
     if-eqz v1, :cond_0
 
-    .line 491
     new-instance v1, Lcom/android/server/wm/ActivityStarter;
 
     iget-object v2, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mController:Lcom/android/server/wm/ActivityStartController;
@@ -89,7 +80,6 @@
 
     goto :goto_0
 
-    .line 489
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -109,10 +99,8 @@
 
     const/4 v0, 0x1
 
-    .line 499
     invoke-virtual {p1, v0}, Lcom/android/server/wm/ActivityStarter;->reset(Z)V
 
-    .line 500
     iget-object p0, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mStarterPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {p0, p1}, Landroid/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
@@ -123,7 +111,6 @@
 .method public setController(Lcom/android/server/wm/ActivityStartController;)V
     .locals 0
 
-    .line 480
     iput-object p1, p0, Lcom/android/server/wm/ActivityStarter$DefaultFactory;->mController:Lcom/android/server/wm/ActivityStartController;
 
     return-void

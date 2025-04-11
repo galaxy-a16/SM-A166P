@@ -18,7 +18,6 @@
 .method public static synthetic $r8$lambda$BOeu3Z_thjhn5orzRylyWuwwdGM(Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->lambda$new$0()V
 
     return-void
@@ -27,12 +26,10 @@
 .method public constructor <init>(Lcom/android/server/sepunion/GalaxyRegistryService;)V
     .locals 0
 
-    .line 185
     iput-object p1, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->this$0:Lcom/android/server/sepunion/GalaxyRegistryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 234
     new-instance p1, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;)V
@@ -45,7 +42,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/sepunion/GalaxyRegistryService;Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;-><init>(Lcom/android/server/sepunion/GalaxyRegistryService;)V
 
     return-void
@@ -54,7 +50,6 @@
 .method private synthetic lambda$new$0()V
     .locals 0
 
-    .line 235
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->this$0:Lcom/android/server/sepunion/GalaxyRegistryService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$mstartService(Lcom/android/server/sepunion/GalaxyRegistryService;)V
@@ -67,7 +62,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 218
     invoke-static {}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -90,7 +84,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :try_start_0
     iget-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->mWatcher:Landroid/os/IBinder;
 
@@ -98,15 +91,12 @@
 
     const/4 v1, 0x0
 
-    .line 222
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
     const/4 v0, 0x0
 
-    .line 223
     iput-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->mWatcher:Landroid/os/IBinder;
 
-    .line 224
     invoke-static {}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -115,7 +105,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
     iget-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->this$0:Lcom/android/server/sepunion/GalaxyRegistryService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$fgetmHandler(Lcom/android/server/sepunion/GalaxyRegistryService;)Landroid/os/Handler;
@@ -126,7 +115,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 227
     iget-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->this$0:Lcom/android/server/sepunion/GalaxyRegistryService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$fgetmHandler(Lcom/android/server/sepunion/GalaxyRegistryService;)Landroid/os/Handler;
@@ -146,7 +134,6 @@
     :catch_0
     move-exception p0
 
-    .line 230
     invoke-static {}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -175,7 +162,6 @@
 .method public isAlive()Z
     .locals 0
 
-    .line 189
     iget-object p0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->mWatcher:Landroid/os/IBinder;
 
     if-eqz p0, :cond_0
@@ -200,7 +186,6 @@
 .method public registerWatcher(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 193
     invoke-static {}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -229,7 +214,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     :try_start_0
     iget-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->mWatcher:Landroid/os/IBinder;
 
@@ -237,10 +221,8 @@
 
     const/4 v0, 0x0
 
-    .line 196
     invoke-interface {p1, p0, v0}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 197
     iput-object p1, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->mWatcher:Landroid/os/IBinder;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -250,7 +232,6 @@
     :catch_0
     move-exception p0
 
-    .line 200
     invoke-static {}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -279,7 +260,6 @@
 .method public unregisterWatcher(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 205
     invoke-static {}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -308,7 +288,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->mWatcher:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
@@ -317,13 +296,11 @@
 
     const/4 v0, 0x0
 
-    .line 208
     :try_start_0
     invoke-interface {p1, p0, v0}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
     const/4 p1, 0x0
 
-    .line 209
     iput-object p1, p0, Lcom/android/server/sepunion/GalaxyRegistryService$GalaxyRegistryServiceMonitor;->mWatcher:Landroid/os/IBinder;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -333,7 +310,6 @@
     :catch_0
     move-exception p0
 
-    .line 211
     invoke-static {}, Lcom/android/server/sepunion/GalaxyRegistryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

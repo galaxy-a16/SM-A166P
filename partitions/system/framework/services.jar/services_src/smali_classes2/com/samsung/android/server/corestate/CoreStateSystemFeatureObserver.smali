@@ -15,27 +15,22 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->mSystemFeaturesRepository:Ljava/util/Map;
 
-    .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->mSystemFeaturesList:Ljava/util/ArrayList;
 
-    .line 42
     iput-object p1, p0, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->mContext:Landroid/content/Context;
 
-    .line 43
     invoke-virtual {p0}, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->registerObservingItems()V
 
     return-void
@@ -46,7 +41,6 @@
 .method public init()V
     .locals 4
 
-    .line 47
     iget-object v0, p0, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->mSystemFeaturesList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -66,12 +60,10 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 48
     iget-object v2, p0, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->mSystemFeaturesRepository:Ljava/util/Map;
 
     iget-object v3, p0, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->mContext:Landroid/content/Context;
 
-    .line 49
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
@@ -84,7 +76,6 @@
 
     move-result-object v3
 
-    .line 48
     invoke-interface {v2, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -96,7 +87,6 @@
 .method public populateState(Landroid/os/Bundle;I)I
     .locals 1
 
-    .line 60
     iget-object p0, p0, Lcom/samsung/android/server/corestate/CoreStateSystemFeatureObserver;->mSystemFeaturesRepository:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -120,7 +110,6 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 61
     invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -150,6 +139,5 @@
 .method public registerObservingItems()V
     .locals 0
 
-    .line 0
     return-void
 .end method

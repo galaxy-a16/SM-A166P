@@ -39,7 +39,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 42
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -50,12 +49,10 @@
 
     sput v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->NUMBER_OF_CORES:I
 
-    .line 54
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     sput-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->KEEP_ALIVE_TIME_UNIT:Ljava/util/concurrent/TimeUnit;
 
-    .line 55
     new-instance v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;
 
     invoke-direct {v0}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;-><init>()V
@@ -68,38 +65,32 @@
 .method public constructor <init>()V
     .locals 8
 
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTargetPackages:Ljava/util/List;
 
-    .line 63
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mExtractedLocales:Ljava/util/Set;
 
-    .line 74
     new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     iput-object v7, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTasksWorkQueue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 75
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTasks:Ljava/util/Queue;
 
-    .line 77
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget v3, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->NUMBER_OF_CORES:I
@@ -122,7 +113,6 @@
 .method public static getInstance()Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;
     .locals 1
 
-    .line 89
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->sInstance:Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;
 
     return-object v0
@@ -133,7 +123,6 @@
 .method public cancelCurrent()V
     .locals 4
 
-    .line 194
     sget-object p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->sInstance:Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;
 
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTasksWorkQueue:Ljava/util/concurrent/BlockingQueue;
@@ -144,12 +133,10 @@
 
     new-array v1, v0, [Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;
 
-    .line 197
     iget-object v2, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTasksWorkQueue:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v2, v1}, Ljava/util/concurrent/BlockingQueue;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 203
     monitor-enter p0
 
     const/4 v2, 0x0
@@ -157,11 +144,9 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 206
     :try_start_0
     aget-object v3, v1, v2
 
-    .line 208
     invoke-virtual {v3}, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->getApkExtractionTask()Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     move-result-object v3
@@ -172,7 +157,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 212
     invoke-virtual {v3}, Ljava/lang/Thread;->interrupt()V
 
     :cond_0
@@ -180,7 +164,6 @@
 
     goto :goto_0
 
-    .line 215
     :cond_1
     monitor-exit p0
 
@@ -204,7 +187,6 @@
 
     const/4 v0, 0x0
 
-    .line 113
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->extractLocaleApks(Ljava/util/Set;Ljava/util/Set;Landroid/content/Context;Z)V
 
     return-void
@@ -213,7 +195,6 @@
 .method public extractLocaleApks(Ljava/util/Set;Ljava/util/Set;Landroid/content/Context;Z)V
     .locals 3
 
-    .line 126
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -242,7 +223,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     iget-object v1, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTargetPackages:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
@@ -251,7 +231,6 @@
 
     if-nez v1, :cond_0
 
-    .line 130
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -270,15 +249,12 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/localeoverlaymanager/LogWriter;->logDebugInfoAndLogcat(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 131
     invoke-virtual {p0}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->cancelCurrent()V
 
-    .line 132
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTargetPackages:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 135
     :cond_0
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -286,28 +262,22 @@
 
     iput-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mContextRef:Ljava/lang/ref/WeakReference;
 
-    .line 136
     iget-object p3, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTargetPackages:Ljava/util/List;
 
     invoke-interface {p3, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 137
     iget-object p3, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mExtractedLocales:Ljava/util/Set;
 
     invoke-interface {p3}, Ljava/util/Set;->clear()V
 
-    .line 138
     iput-object p2, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mLocalesToAdd:Ljava/util/Set;
 
-    .line 139
     iput-boolean p4, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mShouldReplace:Z
 
     const/4 p2, 0x0
 
-    .line 140
     iput-boolean p2, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mForceEnable:Z
 
-    .line 143
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -325,7 +295,6 @@
 
     check-cast p2, Ljava/lang/String;
 
-    .line 144
     invoke-virtual {p0, p2}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->startExtraction(Ljava/lang/String;)V
 
     goto :goto_0
@@ -339,7 +308,6 @@
 
     monitor-enter p0
 
-    .line 155
     :try_start_0
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->TAG:Ljava/lang/String;
 
@@ -373,7 +341,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 158
     iget-object p2, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mExtractedLocales:Ljava/util/Set;
 
     invoke-virtual {p1}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->getExtractedLocaleApks()Ljava/util/Set;
@@ -382,13 +349,11 @@
 
     invoke-interface {p2, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 160
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->onFinishTask(Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
     monitor-exit p0
 
     return-void
@@ -406,7 +371,6 @@
 
     monitor-enter p0
 
-    .line 103
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTargetPackages:Ljava/util/List;
 
@@ -416,7 +380,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 104
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTargetPackages:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -429,20 +392,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 106
     iget-object v1, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mExtractedLocales:Ljava/util/Set;
 
     iget-boolean v2, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mForceEnable:Z
 
     invoke-interface {v0, v1, v2}, Lcom/samsung/android/localeoverlaymanager/ExtractionCompleteCallback;->onExtractionComplete(Ljava/util/Set;Z)V
 
-    .line 108
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->recycleTask(Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 109
     monitor-exit p0
 
     return-void
@@ -458,7 +418,6 @@
 .method public recycleTask(Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;)V
     .locals 0
 
-    .line 226
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTasks:Ljava/util/Queue;
 
     invoke-interface {p0, p1}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
@@ -469,14 +428,12 @@
 .method public release()V
     .locals 1
 
-    .line 233
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTasks:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->clear()V
 
     const/4 v0, 0x0
 
-    .line 234
     iput-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mCallback:Lcom/samsung/android/localeoverlaymanager/ExtractionCompleteCallback;
 
     return-void
@@ -485,7 +442,6 @@
 .method public setCallback(Lcom/samsung/android/localeoverlaymanager/ExtractionCompleteCallback;)V
     .locals 0
 
-    .line 98
     iput-object p1, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mCallback:Lcom/samsung/android/localeoverlaymanager/ExtractionCompleteCallback;
 
     return-void
@@ -496,7 +452,6 @@
 
     const/4 v0, 0x1
 
-    .line 238
     iput-boolean v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mForceEnable:Z
 
     return-void
@@ -505,7 +460,6 @@
 .method public startExtraction(Ljava/lang/String;)V
     .locals 5
 
-    .line 169
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -528,7 +482,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     sget-object v1, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->sInstance:Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;
 
     iget-object v2, v1, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mTasks:Ljava/util/Queue;
@@ -541,12 +494,10 @@
 
     if-nez v2, :cond_0
 
-    .line 173
     new-instance v2, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     invoke-direct {v2}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;-><init>()V
 
-    .line 176
     :cond_0
     iget-object v3, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mContextRef:Ljava/lang/ref/WeakReference;
 
@@ -566,17 +517,14 @@
     :goto_0
     if-eqz v3, :cond_2
 
-    .line 177
     iget-object v4, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mLocalesToAdd:Ljava/util/Set;
 
     if-eqz v4, :cond_2
 
-    .line 179
     iget-boolean p0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mShouldReplace:Z
 
     invoke-virtual {v2, p1, v4, v3, p0}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->initializeTask(Ljava/lang/String;Ljava/util/Set;Landroid/content/Context;Z)V
 
-    .line 180
     iget-object p0, v1, Lcom/samsung/android/localeoverlaymanager/ApkExtractionManager;->mThreadPool:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {v2}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->getRunnable()Ljava/lang/Runnable;
@@ -587,7 +535,6 @@
 
     goto :goto_1
 
-    .line 182
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 

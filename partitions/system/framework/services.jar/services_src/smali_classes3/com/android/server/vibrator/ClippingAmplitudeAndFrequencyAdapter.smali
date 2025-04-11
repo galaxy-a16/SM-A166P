@@ -20,7 +20,6 @@
 .method public apply(Ljava/util/List;ILandroid/os/VibratorInfo;)I
     .locals 4
 
-    .line 40
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -30,19 +29,16 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 42
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/vibrator/VibrationEffectSegment;
 
-    .line 43
     instance-of v3, v2, Landroid/os/vibrator/StepSegment;
 
     if-eqz v3, :cond_0
 
-    .line 44
     check-cast v2, Landroid/os/vibrator/StepSegment;
 
     invoke-virtual {p0, v2, p3}, Lcom/android/server/vibrator/ClippingAmplitudeAndFrequencyAdapter;->apply(Landroid/os/vibrator/StepSegment;Landroid/os/VibratorInfo;)Landroid/os/vibrator/StepSegment;
@@ -53,13 +49,11 @@
 
     goto :goto_1
 
-    .line 45
     :cond_0
     instance-of v3, v2, Landroid/os/vibrator/RampSegment;
 
     if-eqz v3, :cond_1
 
-    .line 46
     check-cast v2, Landroid/os/vibrator/RampSegment;
 
     invoke-virtual {p0, v2, p3}, Lcom/android/server/vibrator/ClippingAmplitudeAndFrequencyAdapter;->apply(Landroid/os/vibrator/RampSegment;Landroid/os/VibratorInfo;)Landroid/os/vibrator/RampSegment;
@@ -81,7 +75,6 @@
 .method public bridge synthetic apply(Ljava/util/List;ILjava/lang/Object;)I
     .locals 0
 
-    .line 35
     check-cast p3, Landroid/os/VibratorInfo;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/vibrator/ClippingAmplitudeAndFrequencyAdapter;->apply(Ljava/util/List;ILandroid/os/VibratorInfo;)I
@@ -94,7 +87,6 @@
 .method public final apply(Landroid/os/vibrator/RampSegment;Landroid/os/VibratorInfo;)Landroid/os/vibrator/RampSegment;
     .locals 7
 
-    .line 61
     invoke-virtual {p1}, Landroid/os/vibrator/RampSegment;->getStartFrequencyHz()F
 
     move-result v0
@@ -103,7 +95,6 @@
 
     move-result v4
 
-    .line 62
     invoke-virtual {p1}, Landroid/os/vibrator/RampSegment;->getEndFrequencyHz()F
 
     move-result v0
@@ -112,10 +103,8 @@
 
     move-result v5
 
-    .line 63
     new-instance v0, Landroid/os/vibrator/RampSegment;
 
-    .line 64
     invoke-virtual {p1}, Landroid/os/vibrator/RampSegment;->getStartAmplitude()F
 
     move-result v1
@@ -124,7 +113,6 @@
 
     move-result v2
 
-    .line 65
     invoke-virtual {p1}, Landroid/os/vibrator/RampSegment;->getEndAmplitude()F
 
     move-result v1
@@ -133,7 +121,6 @@
 
     move-result v3
 
-    .line 68
     invoke-virtual {p1}, Landroid/os/vibrator/RampSegment;->getDuration()J
 
     move-result-wide p0
@@ -150,7 +137,6 @@
 .method public final apply(Landroid/os/vibrator/StepSegment;Landroid/os/VibratorInfo;)Landroid/os/vibrator/StepSegment;
     .locals 3
 
-    .line 53
     invoke-virtual {p1}, Landroid/os/vibrator/StepSegment;->getFrequencyHz()F
 
     move-result v0
@@ -159,10 +145,8 @@
 
     move-result v0
 
-    .line 54
     new-instance v1, Landroid/os/vibrator/StepSegment;
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/vibrator/StepSegment;->getAmplitude()F
 
     move-result v2
@@ -171,7 +155,6 @@
 
     move-result p0
 
-    .line 57
     invoke-virtual {p1}, Landroid/os/vibrator/StepSegment;->getDuration()J
 
     move-result-wide p1
@@ -186,12 +169,10 @@
 .method public final clampAmplitude(Landroid/os/VibratorInfo;FF)F
     .locals 0
 
-    .line 80
     invoke-virtual {p1}, Landroid/os/VibratorInfo;->getFrequencyProfile()Landroid/os/VibratorInfo$FrequencyProfile;
 
     move-result-object p0
 
-    .line 81
     invoke-virtual {p0}, Landroid/os/VibratorInfo$FrequencyProfile;->isEmpty()Z
 
     move-result p1
@@ -200,7 +181,6 @@
 
     return p3
 
-    .line 86
     :cond_0
     invoke-virtual {p0, p2}, Landroid/os/VibratorInfo$FrequencyProfile;->getMaxAmplitude(F)F
 
@@ -216,7 +196,6 @@
 .method public final clampFrequency(Landroid/os/VibratorInfo;F)F
     .locals 1
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/VibratorInfo;->getFrequencyProfile()Landroid/os/VibratorInfo$FrequencyProfile;
 
     move-result-object p0
@@ -235,7 +214,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_0
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -253,7 +231,6 @@
 
     return p0
 
-    .line 74
     :cond_1
     :goto_0
     invoke-virtual {p1}, Landroid/os/VibratorInfo;->getResonantFrequencyHz()F

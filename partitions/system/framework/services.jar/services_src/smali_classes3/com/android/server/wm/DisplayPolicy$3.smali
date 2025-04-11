@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayPolicy;Landroid/view/TwoFingerSwipeGestureDetector;)V
     .locals 0
 
-    .line 909
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     iput-object p2, p0, Lcom/android/server/wm/DisplayPolicy$3;->val$detector:Landroid/view/TwoFingerSwipeGestureDetector;
@@ -31,7 +30,6 @@
 .method public onCommitted(I)V
     .locals 5
 
-    .line 925
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmLock(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/Object;
@@ -40,13 +38,11 @@
 
     monitor-enter v0
 
-    .line 926
     :try_start_0
     invoke-static {}, Landroid/graphics/Region;->obtain()Landroid/graphics/Region;
 
     move-result-object v1
 
-    .line 927
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     iget-object v2, v2, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
@@ -55,7 +51,6 @@
 
     invoke-virtual {v2, v1, v3}, Lcom/android/server/wm/DisplayContent;->calculateSystemGestureExclusion(Landroid/graphics/Region;Landroid/graphics/Region;)Z
 
-    .line 929
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmSystemGestures(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/SystemGesturesPointerEventListener;
@@ -79,7 +74,6 @@
     :cond_0
     move v1, v3
 
-    .line 931
     :goto_0
     iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
@@ -101,7 +95,6 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 934
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
@@ -111,7 +104,6 @@
 
     invoke-virtual {p0, p1, v3}, Lcom/android/server/wm/DisplayPolicy;->requestTransientBars(Lcom/android/server/wm/WindowState;Z)V
 
-    .line 937
     :cond_2
     monitor-exit v0
 
@@ -130,7 +122,6 @@
 .method public onDetecting()V
     .locals 4
 
-    .line 912
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->-$$Nest$fgetmLock(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/Object;
@@ -139,7 +130,6 @@
 
     monitor-enter v0
 
-    .line 913
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
@@ -155,14 +145,12 @@
 
     if-nez v1, :cond_0
 
-    .line 914
     iget-object p0, p0, Lcom/android/server/wm/DisplayPolicy$3;->val$detector:Landroid/view/TwoFingerSwipeGestureDetector;
 
     invoke-virtual {p0}, Landroid/view/TwoFingerSwipeGestureDetector;->cancel()V
 
     goto :goto_0
 
-    .line 916
     :cond_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$3;->val$detector:Landroid/view/TwoFingerSwipeGestureDetector;
 
@@ -188,7 +176,6 @@
 
     invoke-virtual {v1, v2, p0, v3}, Landroid/view/TwoFingerSwipeGestureDetector;->init(Landroid/graphics/Rect;FI)V
 
-    .line 920
     :goto_0
     monitor-exit v0
 

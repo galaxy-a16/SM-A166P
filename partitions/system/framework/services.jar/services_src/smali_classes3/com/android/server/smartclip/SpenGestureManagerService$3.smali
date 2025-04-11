@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenGestureManagerService;)V
     .locals 0
 
-    .line 454
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$3;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -24,21 +23,18 @@
 .method public onDoubleTap(Landroid/view/MotionEvent;)Z
     .locals 8
 
-    .line 458
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 459
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v1
 
     float-to-int v1, v1
 
-    .line 460
     sget-object v2, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -75,12 +71,10 @@
 
     const-string p1, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
-    .line 462
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 463
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object p1
@@ -105,13 +99,11 @@
 
     if-eqz p1, :cond_1
 
-    .line 467
     :try_start_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
     const-string v3, "getSealedState"
 
-    .line 468
     invoke-interface {p1, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
@@ -128,19 +120,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 469
     sget-object p0, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "now KNOX state : can\'t excute Double Tap"
 
     invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 470
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 474
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     return v2
@@ -155,10 +144,8 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 475
     throw p0
 
-    .line 478
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$3;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
@@ -169,7 +156,6 @@
 
     invoke-static {p1, v3}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fputmLastDoubleTapPosition(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/graphics/Point;)V
 
-    .line 479
     iget-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$3;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {p1}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/smartclip/SpenGestureManagerService;)Landroid/os/Handler;

@@ -37,7 +37,6 @@
 .method public static synthetic $values()[Lcom/android/server/credentials/metrics/ApiName;
     .locals 10
 
-    .line 41
     sget-object v0, Lcom/android/server/credentials/metrics/ApiName;->UNKNOWN:Lcom/android/server/credentials/metrics/ApiName;
 
     sget-object v1, Lcom/android/server/credentials/metrics/ApiName;->GET_CREDENTIAL:Lcom/android/server/credentials/metrics/ApiName;
@@ -68,7 +67,6 @@
 .method public static constructor <clinit>()V
     .locals 9
 
-    .line 42
     new-instance v0, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v1, "UNKNOWN"
@@ -79,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/credentials/metrics/ApiName;->UNKNOWN:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 43
     new-instance v0, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v1, "GET_CREDENTIAL"
@@ -90,7 +87,6 @@
 
     sput-object v0, Lcom/android/server/credentials/metrics/ApiName;->GET_CREDENTIAL:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 44
     new-instance v1, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v2, "GET_CREDENTIAL_VIA_REGISTRY"
@@ -103,7 +99,6 @@
 
     sput-object v1, Lcom/android/server/credentials/metrics/ApiName;->GET_CREDENTIAL_VIA_REGISTRY:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 46
     new-instance v2, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v5, "CREATE_CREDENTIAL"
@@ -114,7 +109,6 @@
 
     sput-object v2, Lcom/android/server/credentials/metrics/ApiName;->CREATE_CREDENTIAL:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 48
     new-instance v3, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v5, "CLEAR_CREDENTIAL"
@@ -125,7 +119,6 @@
 
     sput-object v3, Lcom/android/server/credentials/metrics/ApiName;->CLEAR_CREDENTIAL:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 50
     new-instance v5, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v6, "IS_ENABLED_CREDENTIAL_PROVIDER_SERVICE"
@@ -136,7 +129,6 @@
 
     sput-object v5, Lcom/android/server/credentials/metrics/ApiName;->IS_ENABLED_CREDENTIAL_PROVIDER_SERVICE:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 54
     new-instance v5, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v6, "SET_ENABLED_PROVIDERS"
@@ -147,7 +139,6 @@
 
     sput-object v5, Lcom/android/server/credentials/metrics/ApiName;->SET_ENABLED_PROVIDERS:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 57
     new-instance v5, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v6, "GET_CREDENTIAL_PROVIDER_SERVICES"
@@ -158,7 +149,6 @@
 
     sput-object v5, Lcom/android/server/credentials/metrics/ApiName;->GET_CREDENTIAL_PROVIDER_SERVICES:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 60
     new-instance v5, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v6, "REGISTER_CREDENTIAL_DESCRIPTION"
@@ -169,7 +159,6 @@
 
     sput-object v5, Lcom/android/server/credentials/metrics/ApiName;->REGISTER_CREDENTIAL_DESCRIPTION:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 64
     new-instance v5, Lcom/android/server/credentials/metrics/ApiName;
 
     const-string v6, "UNREGISTER_CREDENTIAL_DESCRIPTION"
@@ -178,19 +167,16 @@
 
     sput-object v5, Lcom/android/server/credentials/metrics/ApiName;->UNREGISTER_CREDENTIAL_DESCRIPTION:Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 41
     invoke-static {}, Lcom/android/server/credentials/metrics/ApiName;->$values()[Lcom/android/server/credentials/metrics/ApiName;
 
     move-result-object v4
 
     sput-object v4, Lcom/android/server/credentials/metrics/ApiName;->$VALUES:[Lcom/android/server/credentials/metrics/ApiName;
 
-    .line 72
     new-instance v4, Ljava/util/AbstractMap$SimpleEntry;
 
     iget v2, v2, Lcom/android/server/credentials/metrics/ApiName;->mInnerMetricCode:I
 
-    .line 74
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -203,7 +189,6 @@
 
     iget v0, v0, Lcom/android/server/credentials/metrics/ApiName;->mInnerMetricCode:I
 
-    .line 76
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -216,7 +201,6 @@
 
     iget v1, v1, Lcom/android/server/credentials/metrics/ApiName;->mInnerMetricCode:I
 
-    .line 78
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -229,7 +213,6 @@
 
     iget v3, v3, Lcom/android/server/credentials/metrics/ApiName;->mInnerMetricCode:I
 
-    .line 80
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -242,7 +225,6 @@
 
     move-result-object v0
 
-    .line 72
     invoke-static {v0}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v0
@@ -255,10 +237,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 83
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 84
     iput p3, p0, Lcom/android/server/credentials/metrics/ApiName;->mInnerMetricCode:I
 
     return-void
@@ -267,7 +247,6 @@
 .method public static getMetricCodeFromRequestInfo(Ljava/lang/String;)I
     .locals 2
 
-    .line 105
     sget-object v0, Lcom/android/server/credentials/metrics/ApiName;->sRequestInfoToMetric:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -280,17 +259,14 @@
 
     const-string v0, "Attempted to use an unsupported string key request info"
 
-    .line 106
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     sget-object p0, Lcom/android/server/credentials/metrics/ApiName;->UNKNOWN:Lcom/android/server/credentials/metrics/ApiName;
 
     iget p0, p0, Lcom/android/server/credentials/metrics/ApiName;->mInnerMetricCode:I
 
     return p0
 
-    .line 109
     :cond_0
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -308,7 +284,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/credentials/metrics/ApiName;
     .locals 1
 
-    .line 41
     const-class v0, Lcom/android/server/credentials/metrics/ApiName;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -323,7 +298,6 @@
 .method public static values()[Lcom/android/server/credentials/metrics/ApiName;
     .locals 1
 
-    .line 41
     sget-object v0, Lcom/android/server/credentials/metrics/ApiName;->$VALUES:[Lcom/android/server/credentials/metrics/ApiName;
 
     invoke-virtual {v0}, [Lcom/android/server/credentials/metrics/ApiName;->clone()Ljava/lang/Object;
@@ -340,7 +314,6 @@
 .method public getMetricCode()I
     .locals 0
 
-    .line 93
     iget p0, p0, Lcom/android/server/credentials/metrics/ApiName;->mInnerMetricCode:I
 
     return p0

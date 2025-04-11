@@ -27,7 +27,6 @@
 
     new-array v0, v0, [J
 
-    .line 64
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/am/PlatformCompatCache;->CACHED_COMPAT_CHANGE_IDS_MAPPING:[J
@@ -47,10 +46,8 @@
 .method public constructor <init>([J)V
     .locals 8
 
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
@@ -59,12 +56,10 @@
 
     const-string/jumbo v0, "platform_compat"
 
-    .line 78
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 79
     instance-of v2, v1, Lcom/android/server/compat/PlatformCompat;
 
     const/4 v3, 0x0
@@ -73,7 +68,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 80
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
@@ -82,7 +76,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/PlatformCompatCache;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
-    .line 82
     array-length v0, p1
 
     :goto_0
@@ -90,7 +83,6 @@
 
     aget-wide v1, p1, v3
 
-    .line 83
     iget-object v5, p0, Lcom/android/server/am/PlatformCompatCache;->mCaches:Landroid/util/LongSparseArray;
 
     new-instance v6, Lcom/android/server/am/PlatformCompatCache$CacheItem;
@@ -105,18 +97,15 @@
 
     goto :goto_0
 
-    .line 85
     :cond_0
     iput-object v4, p0, Lcom/android/server/am/PlatformCompatCache;->mIPlatformCompatProxy:Lcom/android/internal/compat/IPlatformCompat;
 
     const/4 p1, 0x1
 
-    .line 86
     iput-boolean p1, p0, Lcom/android/server/am/PlatformCompatCache;->mCacheEnabled:Z
 
     goto :goto_1
 
-    .line 89
     :cond_1
     invoke-static {v1}, Lcom/android/internal/compat/IPlatformCompat$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/compat/IPlatformCompat;
 
@@ -124,10 +113,8 @@
 
     iput-object p1, p0, Lcom/android/server/am/PlatformCompatCache;->mIPlatformCompatProxy:Lcom/android/internal/compat/IPlatformCompat;
 
-    .line 90
     iput-object v4, p0, Lcom/android/server/am/PlatformCompatCache;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
-    .line 91
     iput-boolean v3, p0, Lcom/android/server/am/PlatformCompatCache;->mCacheEnabled:Z
 
     :goto_1
@@ -137,12 +124,10 @@
 .method public static getInstance()Lcom/android/server/am/PlatformCompatCache;
     .locals 2
 
-    .line 96
     sget-object v0, Lcom/android/server/am/PlatformCompatCache;->sPlatformCompatCache:Lcom/android/server/am/PlatformCompatCache;
 
     if-nez v0, :cond_0
 
-    .line 97
     new-instance v0, Lcom/android/server/am/PlatformCompatCache;
 
     const/4 v1, 0x3
@@ -155,7 +140,6 @@
 
     sput-object v0, Lcom/android/server/am/PlatformCompatCache;->sPlatformCompatCache:Lcom/android/server/am/PlatformCompatCache;
 
-    .line 103
     :cond_0
     sget-object v0, Lcom/android/server/am/PlatformCompatCache;->sPlatformCompatCache:Lcom/android/server/am/PlatformCompatCache;
 
@@ -172,7 +156,6 @@
 .method public static isChangeEnabled(ILandroid/content/pm/ApplicationInfo;Z)Z
     .locals 3
 
-    .line 121
     invoke-static {}, Lcom/android/server/am/PlatformCompatCache;->getInstance()Lcom/android/server/am/PlatformCompatCache;
 
     move-result-object v0
@@ -193,7 +176,6 @@
 .method public invalidate(Landroid/content/pm/ApplicationInfo;)V
     .locals 2
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/am/PlatformCompatCache;->mCaches:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->size()I
@@ -205,7 +187,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 130
     iget-object v1, p0, Lcom/android/server/am/PlatformCompatCache;->mCaches:Landroid/util/LongSparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
@@ -227,7 +208,6 @@
 .method public final isChangeEnabled(JLandroid/content/pm/ApplicationInfo;Z)Z
     .locals 1
 
-    .line 108
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/am/PlatformCompatCache;->mCacheEnabled:Z
 
@@ -247,7 +227,6 @@
 
     goto :goto_0
 
-    .line 109
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/PlatformCompatCache;->mIPlatformCompatProxy:Lcom/android/internal/compat/IPlatformCompat;
 
@@ -263,7 +242,6 @@
     :catch_0
     move-exception p0
 
-    .line 111
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -288,7 +266,6 @@
 .method public onApplicationInfoChanged(Landroid/content/pm/ApplicationInfo;)V
     .locals 2
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/am/PlatformCompatCache;->mCaches:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->size()I
@@ -300,7 +277,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 139
     iget-object v1, p0, Lcom/android/server/am/PlatformCompatCache;->mCaches:Landroid/util/LongSparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;

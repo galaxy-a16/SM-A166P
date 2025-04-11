@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$0UNsrOJ228bHUn2oRmFLnvfHd9g(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/desktopmode/StandaloneModeChanger$1;->lambda$onUserChanged$0(Ljava/lang/Boolean;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/StandaloneModeChanger;)V
     .locals 0
 
-    .line 117
     iput-object p1, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$1;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     invoke-direct {p0}, Lcom/android/server/desktopmode/StateManager$StateListener;-><init>()V
@@ -31,7 +29,6 @@
 .method public static synthetic lambda$onUserChanged$0(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -40,7 +37,6 @@
 .method public onUserChanged(Lcom/android/server/desktopmode/State;)V
     .locals 1
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$1;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     new-instance p1, Lcom/android/server/desktopmode/StandaloneModeChanger$1$$ExternalSyntheticLambda0;

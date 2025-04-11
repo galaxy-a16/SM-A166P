@@ -20,7 +20,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/att/iqi/lib/metrics/sp/SPTX;
     .locals 0
 
-    .line 160
     new-instance p0, Lcom/att/iqi/lib/metrics/sp/SPTX;
 
     invoke-direct {p0, p1}, Lcom/att/iqi/lib/metrics/sp/SPTX;-><init>(Landroid/os/Parcel;)V
@@ -31,7 +30,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 157
     invoke-virtual {p0, p1}, Lcom/att/iqi/lib/metrics/sp/SPTX$1;->createFromParcel(Landroid/os/Parcel;)Lcom/att/iqi/lib/metrics/sp/SPTX;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 .method public newArray(I)[Lcom/att/iqi/lib/metrics/sp/SPTX;
     .locals 0
 
-    .line 165
     new-array p0, p1, [Lcom/att/iqi/lib/metrics/sp/SPTX;
 
     return-object p0
@@ -51,7 +48,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 157
     invoke-virtual {p0, p1}, Lcom/att/iqi/lib/metrics/sp/SPTX$1;->newArray(I)[Lcom/att/iqi/lib/metrics/sp/SPTX;
 
     move-result-object p0

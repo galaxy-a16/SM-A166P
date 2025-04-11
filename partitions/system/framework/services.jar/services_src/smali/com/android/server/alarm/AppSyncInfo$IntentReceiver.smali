@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/alarm/AppSyncInfo;)V
     .locals 0
 
-    .line 482
     iput-object p1, p0, Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;->this$0:Lcom/android/server/alarm/AppSyncInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 483
     invoke-static {p1}, Lcom/android/server/alarm/AppSyncInfo;->-$$Nest$minitFilter(Lcom/android/server/alarm/AppSyncInfo;)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 488
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -42,7 +39,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 489
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;->this$0:Lcom/android/server/alarm/AppSyncInfo;
 
     invoke-static {p0, v0}, Lcom/android/server/alarm/AppSyncInfo;->-$$Nest$fputmScreenOn(Lcom/android/server/alarm/AppSyncInfo;Z)V
@@ -52,7 +48,6 @@
     :cond_0
     const-string p1, "android.intent.action.SCREEN_ON"
 
-    .line 490
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -65,7 +60,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 491
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;->this$0:Lcom/android/server/alarm/AppSyncInfo;
 
     invoke-static {p0, v1}, Lcom/android/server/alarm/AppSyncInfo;->-$$Nest$fputmScreenOn(Lcom/android/server/alarm/AppSyncInfo;Z)V
@@ -75,7 +69,6 @@
     :cond_1
     const-string p1, "android.intent.action.ACTION_POWER_CONNECTED"
 
-    .line 492
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -86,7 +79,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 493
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;->this$0:Lcom/android/server/alarm/AppSyncInfo;
 
     invoke-static {p0, v1}, Lcom/android/server/alarm/AppSyncInfo;->-$$Nest$fputmCharging(Lcom/android/server/alarm/AppSyncInfo;Z)V
@@ -96,7 +88,6 @@
     :cond_2
     const-string p1, "android.intent.action.ACTION_POWER_DISCONNECTED"
 
-    .line 494
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -107,7 +98,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 495
     iget-object p0, p0, Lcom/android/server/alarm/AppSyncInfo$IntentReceiver;->this$0:Lcom/android/server/alarm/AppSyncInfo;
 
     invoke-static {p0, v0}, Lcom/android/server/alarm/AppSyncInfo;->-$$Nest$fputmCharging(Lcom/android/server/alarm/AppSyncInfo;Z)V

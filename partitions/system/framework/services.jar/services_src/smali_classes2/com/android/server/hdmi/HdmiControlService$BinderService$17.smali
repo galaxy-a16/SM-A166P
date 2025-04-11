@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService$BinderService;I[B)V
     .locals 0
 
-    .line 2604
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$17;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$17;->val$recorderAddress:I
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 2
 
-    .line 2607
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$17;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -50,12 +48,10 @@
 
     const-string v0, "TV device is not enabled."
 
-    .line 2608
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2611
     :cond_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$17;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 

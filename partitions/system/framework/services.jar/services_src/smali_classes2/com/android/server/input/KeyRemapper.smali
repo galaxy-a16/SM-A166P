@@ -20,7 +20,6 @@
 .method public static synthetic $r8$lambda$G8RGWTs7w3_uK0OrBVOAAoPuFKI(Lcom/android/server/input/KeyRemapper;Landroid/os/Message;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/input/KeyRemapper;->handleMessage(Landroid/os/Message;)Z
 
     move-result p0
@@ -31,7 +30,6 @@
 .method public static synthetic $r8$lambda$sJXqCZdrAyfLFM8k9UE_5mzU20o(Lcom/android/server/input/KeyRemapper;ILjava/lang/Integer;Ljava/lang/Integer;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/input/KeyRemapper;->lambda$onInputDeviceAdded$0(ILjava/lang/Integer;Ljava/lang/Integer;)V
 
     return-void
@@ -40,19 +38,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/input/NativeInputManagerService;Lcom/android/server/input/PersistentDataStore;Landroid/os/Looper;)V
     .locals 0
 
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lcom/android/server/input/KeyRemapper;->mContext:Landroid/content/Context;
 
-    .line 54
     iput-object p2, p0, Lcom/android/server/input/KeyRemapper;->mNative:Lcom/android/server/input/NativeInputManagerService;
 
-    .line 55
     iput-object p3, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
-    .line 56
     new-instance p1, Landroid/os/Handler;
 
     new-instance p2, Lcom/android/server/input/KeyRemapper$$ExternalSyntheticLambda1;
@@ -69,7 +62,6 @@
 .method private synthetic lambda$onInputDeviceAdded$0(ILjava/lang/Integer;Ljava/lang/Integer;)V
     .locals 0
 
-    .line 147
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mNative:Lcom/android/server/input/NativeInputManagerService;
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
@@ -90,26 +82,22 @@
 .method public final addKeyRemapping(II)V
     .locals 7
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/input/KeyRemapper;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/hardware/input/InputManager;
 
-    .line 96
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/input/InputManager;
 
-    .line 95
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v1, v0
 
     check-cast v1, Landroid/hardware/input/InputManager;
 
-    .line 97
     invoke-virtual {v0}, Landroid/hardware/input/InputManager;->getInputDeviceIds()[I
 
     move-result-object v1
@@ -123,14 +111,12 @@
 
     aget v4, v1, v3
 
-    .line 98
     invoke-virtual {v0, v4}, Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 99
     invoke-virtual {v5}, Landroid/view/InputDevice;->isVirtual()Z
 
     move-result v6
@@ -143,7 +129,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 100
     iget-object v5, p0, Lcom/android/server/input/KeyRemapper;->mNative:Lcom/android/server/input/NativeInputManagerService;
 
     invoke-interface {v5, v4, p1, p2}, Lcom/android/server/input/NativeInputManagerService;->addKeyRemapping(III)V
@@ -160,7 +145,6 @@
 .method public clearAllKeyRemappings()V
     .locals 2
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/input/KeyRemapper;->supportRemapping()Z
 
     move-result v0
@@ -169,7 +153,6 @@
 
     return-void
 
-    .line 81
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/KeyRemapper;->mHandler:Landroid/os/Handler;
 
@@ -179,7 +162,6 @@
 
     move-result-object v0
 
-    .line 82
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -190,12 +172,10 @@
 .method public final clearAllRemappingsInternal()V
     .locals 4
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
     monitor-enter v0
 
-    .line 123
     :try_start_0
     iget-object v1, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
@@ -203,7 +183,6 @@
 
     move-result-object v1
 
-    .line 124
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -229,26 +208,22 @@
 
     move-result v2
 
-    .line 125
     iget-object v3, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
     invoke-virtual {v3, v2}, Lcom/android/server/input/PersistentDataStore;->clearMappedKey(I)Z
 
-    .line 128
     invoke-virtual {p0, v2, v2}, Lcom/android/server/input/KeyRemapper;->addKeyRemapping(II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 131
     :cond_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
     invoke-virtual {p0}, Lcom/android/server/input/PersistentDataStore;->saveIfNeeded()V
 
-    .line 133
     monitor-exit v0
 
     return-void
@@ -256,18 +231,15 @@
     :catchall_0
     move-exception v1
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
     invoke-virtual {p0}, Lcom/android/server/input/PersistentDataStore;->saveIfNeeded()V
 
-    .line 132
     throw v1
 
     :catchall_1
     move-exception p0
 
-    .line 133
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -278,27 +250,23 @@
 .method public getKeyRemapping()Ljava/util/Map;
     .locals 1
 
-    .line 86
     invoke-virtual {p0}, Lcom/android/server/input/KeyRemapper;->supportRemapping()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 87
     new-instance p0, Landroid/util/ArrayMap;
 
     invoke-direct {p0}, Landroid/util/ArrayMap;-><init>()V
 
     return-object p0
 
-    .line 89
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
     monitor-enter v0
 
-    .line 90
     :try_start_0
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
@@ -313,7 +281,6 @@
     :catchall_0
     move-exception p0
 
-    .line 91
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -324,7 +291,6 @@
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 4
 
-    .line 160
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x0
@@ -343,13 +309,11 @@
 
     return v1
 
-    .line 170
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/input/KeyRemapper;->clearAllRemappingsInternal()V
 
     return v2
 
-    .line 167
     :cond_1
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -359,7 +323,6 @@
 
     return v2
 
-    .line 162
     :cond_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -372,7 +335,6 @@
 
     aget v3, p1, v1
 
-    .line 163
     invoke-virtual {p0, v3}, Lcom/android/server/input/KeyRemapper;->onInputDeviceAdded(I)V
 
     add-int/lit8 v1, v1, 0x1
@@ -386,7 +348,6 @@
 .method public onInputDeviceAdded(I)V
     .locals 2
 
-    .line 138
     invoke-virtual {p0}, Lcom/android/server/input/KeyRemapper;->supportRemapping()Z
 
     move-result v0
@@ -395,34 +356,29 @@
 
     return-void
 
-    .line 141
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/KeyRemapper;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/hardware/input/InputManager;
 
-    .line 142
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/input/InputManager;
 
-    .line 141
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v1, v0
 
     check-cast v1, Landroid/hardware/input/InputManager;
 
-    .line 143
     invoke-virtual {v0, p1}, Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 144
     invoke-virtual {v0}, Landroid/view/InputDevice;->isVirtual()Z
 
     move-result v1
@@ -435,12 +391,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 145
     invoke-virtual {p0}, Lcom/android/server/input/KeyRemapper;->getKeyRemapping()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 146
     new-instance v1, Lcom/android/server/input/KeyRemapper$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0, p1}, Lcom/android/server/input/KeyRemapper$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/input/KeyRemapper;I)V
@@ -454,21 +408,18 @@
 .method public onInputDeviceChanged(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onInputDeviceRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public remapKey(II)V
     .locals 2
 
-    .line 70
     invoke-virtual {p0}, Lcom/android/server/input/KeyRemapper;->supportRemapping()Z
 
     move-result v0
@@ -477,7 +428,6 @@
 
     return-void
 
-    .line 73
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/KeyRemapper;->mHandler:Landroid/os/Handler;
 
@@ -487,7 +437,6 @@
 
     move-result-object p1
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -498,17 +447,14 @@
 .method public final remapKeyInternal(II)V
     .locals 2
 
-    .line 106
     invoke-virtual {p0, p1, p2}, Lcom/android/server/input/KeyRemapper;->addKeyRemapping(II)V
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
     monitor-enter v0
 
     if-ne p1, p2, :cond_0
 
-    .line 110
     :try_start_0
     iget-object p2, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
@@ -516,7 +462,6 @@
 
     goto :goto_0
 
-    .line 112
     :cond_0
     iget-object v1, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
@@ -524,14 +469,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 115
     :goto_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
     invoke-virtual {p0}, Lcom/android/server/input/PersistentDataStore;->saveIfNeeded()V
 
-    .line 117
     monitor-exit v0
 
     return-void
@@ -539,18 +482,15 @@
     :catchall_0
     move-exception p1
 
-    .line 115
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mDataStore:Lcom/android/server/input/PersistentDataStore;
 
     invoke-virtual {p0}, Lcom/android/server/input/PersistentDataStore;->saveIfNeeded()V
 
-    .line 116
     throw p1
 
     :catchall_1
     move-exception p0
 
-    .line 117
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -561,7 +501,6 @@
 .method public final supportRemapping()Z
     .locals 1
 
-    .line 177
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "settings_new_keyboard_modifier_key"
@@ -576,46 +515,38 @@
 .method public systemRunning()V
     .locals 3
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/input/KeyRemapper;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/hardware/input/InputManager;
 
-    .line 61
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/input/InputManager;
 
-    .line 60
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v1, v0
 
     check-cast v1, Landroid/hardware/input/InputManager;
 
-    .line 62
     iget-object v1, p0, Lcom/android/server/input/KeyRemapper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0, v1}, Landroid/hardware/input/InputManager;->registerInputDeviceListener(Landroid/hardware/input/InputManager$InputDeviceListener;Landroid/os/Handler;)V
 
-    .line 64
     iget-object v1, p0, Lcom/android/server/input/KeyRemapper;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
 
-    .line 65
     invoke-virtual {v0}, Landroid/hardware/input/InputManager;->getInputDeviceIds()[I
 
     move-result-object v0
 
-    .line 64
     invoke-static {v1, v2, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/input/KeyRemapper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z

@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;Lcom/android/internal/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 84
     iput-object p1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$DeathRecipient;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     iput-object p2, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$DeathRecipient;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     return-void
@@ -38,7 +36,6 @@
 
     if-nez v0, :cond_0
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$DeathRecipient;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -59,7 +56,6 @@
 
     invoke-static {p2, v0, p1}, Lcom/android/server/usb/UsbDeviceManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 92
     iget-object p1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$DeathRecipient;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-static {p1}, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;->-$$Nest$fgetmGadgetProxyLock(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;)Ljava/lang/Object;
@@ -68,7 +64,6 @@
 
     monitor-enter p1
 
-    .line 93
     :try_start_0
     iget-object p0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$DeathRecipient;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
@@ -76,7 +71,6 @@
 
     invoke-static {p0, p2}, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;->-$$Nest$fputmGadgetProxy(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;Landroid/hardware/usb/gadget/V1_0/IUsbGadget;)V
 
-    .line 94
     monitor-exit p1
 
     goto :goto_0

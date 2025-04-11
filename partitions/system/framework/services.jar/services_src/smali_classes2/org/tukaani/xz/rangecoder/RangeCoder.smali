@@ -17,7 +17,6 @@
 
     const/16 v0, 0x400
 
-    .line 24
     invoke-static {p0, v0}, Ljava/util/Arrays;->fill([SS)V
 
     return-void

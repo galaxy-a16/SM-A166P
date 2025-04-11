@@ -25,7 +25,6 @@
 .method public static synthetic $r8$lambda$9AFzrJSMzkKupNVLfgCF-Z1j8Z8(Lcom/android/server/pm/GentleUpdateHelper;Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/GentleUpdateHelper;->lambda$checkInstallConstraints$0(Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;)V
 
     return-void
@@ -34,7 +33,6 @@
 .method public static synthetic $r8$lambda$IeS0qRni6UCtZE3Btr85xiSgZrI(Lcom/android/server/pm/GentleUpdateHelper;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/GentleUpdateHelper;->lambda$onUidImportance$4(Ljava/lang/String;I)V
 
     return-void
@@ -43,7 +41,6 @@
 .method public static synthetic $r8$lambda$nCAt7KRN7zOukiKl60bcTX8LmCE(Lcom/android/server/pm/GentleUpdateHelper;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/GentleUpdateHelper;->onUidImportance(II)V
 
     return-void
@@ -52,7 +49,6 @@
 .method public static synthetic $r8$lambda$pSIrJ4iDp1o0E4FLVVvXamkjSMY(Lcom/android/server/pm/GentleUpdateHelper;Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/GentleUpdateHelper;->lambda$checkInstallConstraints$1(Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;Ljava/lang/Boolean;)V
 
     return-void
@@ -61,7 +57,6 @@
 .method public static synthetic $r8$lambda$umU9MdrmQnrLypjsm-AUuX71YXI(Lcom/android/server/pm/GentleUpdateHelper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/pm/GentleUpdateHelper;->runIdleJob()V
 
     return-void
@@ -70,7 +65,6 @@
 .method public static synthetic $r8$lambda$yp5RZDR5Gwn3ziZIKMVf_AUDxHQ(Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/pm/GentleUpdateHelper;->lambda$checkDeviceIdle$3(Ljava/util/concurrent/CompletableFuture;)V
 
     return-void
@@ -79,7 +73,6 @@
 .method public static synthetic $r8$lambda$zT3hUrOpii_VZvAOTiPA3oL7Luo(Lcom/android/server/pm/GentleUpdateHelper;Ljava/util/List;Landroid/content/pm/PackageInstaller$InstallConstraints;Ljava/util/concurrent/CompletableFuture;J)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/pm/GentleUpdateHelper;->lambda$checkInstallConstraints$2(Ljava/util/List;Landroid/content/pm/PackageInstaller$InstallConstraints;Ljava/util/concurrent/CompletableFuture;J)V
 
     return-void
@@ -88,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/pm/GentleUpdateHelper;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -97,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$mrunIdleJob(Lcom/android/server/pm/GentleUpdateHelper;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/pm/GentleUpdateHelper;->runIdleJob()V
 
     return-void
@@ -106,7 +97,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 60
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0xa
@@ -123,34 +113,28 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcom/android/server/pm/AppStateHelper;)V
     .locals 1
 
-    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 140
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
-    .line 141
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingIdleFutures:Ljava/util/ArrayList;
 
-    .line 145
     iput-object p1, p0, Lcom/android/server/pm/GentleUpdateHelper;->mContext:Landroid/content/Context;
 
-    .line 146
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     iput-object p1, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHandler:Landroid/os/Handler;
 
-    .line 147
     iput-object p3, p0, Lcom/android/server/pm/GentleUpdateHelper;->mAppStateHelper:Lcom/android/server/pm/AppStateHelper;
 
     return-void
@@ -159,7 +143,6 @@
 .method public static synthetic lambda$checkDeviceIdle$3(Ljava/util/concurrent/CompletableFuture;)V
     .locals 1
 
-    .line 198
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, v0}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
@@ -172,7 +155,6 @@
 
     const/4 v0, 0x0
 
-    .line 178
     invoke-virtual {p0, p1, v0}, Lcom/android/server/pm/GentleUpdateHelper;->processPendingCheck(Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;Z)Z
 
     return-void
@@ -181,7 +163,6 @@
 .method private synthetic lambda$checkInstallConstraints$1(Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 171
     iget-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -194,7 +175,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 172
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
@@ -205,27 +185,22 @@
 
     if-nez p2, :cond_0
 
-    .line 174
     iget-object p2, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    .line 175
     invoke-virtual {p0}, Lcom/android/server/pm/GentleUpdateHelper;->scheduleIdleJob()V
 
-    .line 178
     iget-object p2, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda6;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda6;-><init>(Lcom/android/server/pm/GentleUpdateHelper;Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;)V
 
-    .line 179
     invoke-virtual {p1}, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;->getRemainingTimeMillis()J
 
     move-result-wide p0
 
-    .line 178
     invoke-virtual {p2, v0, p0, p1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :cond_0
@@ -235,7 +210,6 @@
 .method private synthetic lambda$checkInstallConstraints$2(Ljava/util/List;Landroid/content/pm/PackageInstaller$InstallConstraints;Ljava/util/concurrent/CompletableFuture;J)V
     .locals 7
 
-    .line 166
     new-instance v6, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;
 
     move-object v0, v6
@@ -250,14 +224,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;-><init>(Ljava/util/List;Landroid/content/pm/PackageInstaller$InstallConstraints;Ljava/util/concurrent/CompletableFuture;J)V
 
-    .line 168
     invoke-virtual {p2}, Landroid/content/pm/PackageInstaller$InstallConstraints;->isDeviceIdleRequired()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 169
     invoke-virtual {p0}, Lcom/android/server/pm/GentleUpdateHelper;->checkDeviceIdle()Ljava/util/concurrent/CompletableFuture;
 
     move-result-object p1
@@ -271,7 +243,6 @@
 
     move-result-object p1
 
-    .line 170
     :goto_0
     new-instance p2, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda3;
 
@@ -285,7 +256,6 @@
 .method private synthetic lambda$onUidImportance$4(Ljava/lang/String;I)V
     .locals 0
 
-    .line 307
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/GentleUpdateHelper;->onUidImportance(Ljava/lang/String;I)V
 
     return-void
@@ -296,7 +266,6 @@
 .method public final areConstraintsSatisfied(Ljava/util/List;Landroid/content/pm/PackageInstaller$InstallConstraints;Z)Z
     .locals 1
 
-    .line 240
     invoke-virtual {p2}, Landroid/content/pm/PackageInstaller$InstallConstraints;->isDeviceIdleRequired()Z
 
     move-result v0
@@ -305,7 +274,6 @@
 
     if-eqz p3, :cond_4
 
-    .line 241
     :cond_0
     invoke-virtual {p2}, Landroid/content/pm/PackageInstaller$InstallConstraints;->isAppNotForegroundRequired()Z
 
@@ -315,14 +283,12 @@
 
     iget-object p3, p0, Lcom/android/server/pm/GentleUpdateHelper;->mAppStateHelper:Lcom/android/server/pm/AppStateHelper;
 
-    .line 242
     invoke-virtual {p3, p1}, Lcom/android/server/pm/AppStateHelper;->hasForegroundApp(Ljava/util/List;)Z
 
     move-result p3
 
     if-nez p3, :cond_4
 
-    .line 243
     :cond_1
     invoke-virtual {p2}, Landroid/content/pm/PackageInstaller$InstallConstraints;->isAppNotInteractingRequired()Z
 
@@ -332,14 +298,12 @@
 
     iget-object p3, p0, Lcom/android/server/pm/GentleUpdateHelper;->mAppStateHelper:Lcom/android/server/pm/AppStateHelper;
 
-    .line 244
     invoke-virtual {p3, p1}, Lcom/android/server/pm/AppStateHelper;->hasInteractingApp(Ljava/util/List;)Z
 
     move-result p3
 
     if-nez p3, :cond_4
 
-    .line 245
     :cond_2
     invoke-virtual {p2}, Landroid/content/pm/PackageInstaller$InstallConstraints;->isAppNotTopVisibleRequired()Z
 
@@ -349,14 +313,12 @@
 
     iget-object p3, p0, Lcom/android/server/pm/GentleUpdateHelper;->mAppStateHelper:Lcom/android/server/pm/AppStateHelper;
 
-    .line 246
     invoke-virtual {p3, p1}, Lcom/android/server/pm/AppStateHelper;->hasTopVisibleApp(Ljava/util/List;)Z
 
     move-result p1
 
     if-nez p1, :cond_4
 
-    .line 247
     :cond_3
     invoke-virtual {p2}, Landroid/content/pm/PackageInstaller$InstallConstraints;->isNotInCallRequired()Z
 
@@ -366,7 +328,6 @@
 
     iget-object p0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mAppStateHelper:Lcom/android/server/pm/AppStateHelper;
 
-    .line 248
     invoke-virtual {p0}, Lcom/android/server/pm/AppStateHelper;->isInCall()Z
 
     move-result p0
@@ -391,20 +352,16 @@
 .method public final checkDeviceIdle()Ljava/util/concurrent/CompletableFuture;
     .locals 4
 
-    .line 195
     new-instance v0, Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {v0}, Ljava/util/concurrent/CompletableFuture;-><init>()V
 
-    .line 196
     iget-object v1, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingIdleFutures:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 197
     invoke-virtual {p0}, Lcom/android/server/pm/GentleUpdateHelper;->scheduleIdleJob()V
 
-    .line 198
     iget-object p0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda5;
@@ -421,12 +378,10 @@
 .method public checkInstallConstraints(Ljava/util/List;Landroid/content/pm/PackageInstaller$InstallConstraints;J)Ljava/util/concurrent/CompletableFuture;
     .locals 10
 
-    .line 164
     new-instance v7, Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {v7}, Ljava/util/concurrent/CompletableFuture;-><init>()V
 
-    .line 165
     iget-object v8, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHandler:Landroid/os/Handler;
 
     new-instance v9, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda1;
@@ -455,13 +410,10 @@
 
     const-string v0, "Gentle update with constraints info:"
 
-    .line 313
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 314
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 315
     iget-boolean v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHasPendingIdleJob:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -472,10 +424,8 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 316
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 317
     iget-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingIdleFutures:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -490,34 +440,28 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 318
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 319
     iget-object p0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->clone()Ljava/util/ArrayDeque;
 
     move-result-object p0
 
-    .line 320
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->size()I
 
     move-result v0
 
     const-string v1, "Num of PendingChecks"
 
-    .line 321
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {p1, v1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 322
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 323
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
     const/4 v1, 0x0
@@ -525,24 +469,20 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 325
     invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->print(I)V
 
     const-string v2, ":"
 
     invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 326
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;
 
-    .line 327
     invoke-virtual {v2, p1}, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;->dump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 328
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     add-int/lit8 v1, v1, 0x1
@@ -556,18 +496,15 @@
 .method public final onUidImportance(II)V
     .locals 2
 
-    .line 304
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 306
     :try_start_0
     invoke-interface {v0, p1}, Landroid/content/pm/IPackageManager;->getNameForUid(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda4;
@@ -585,7 +522,6 @@
 .method public final onUidImportance(Ljava/lang/String;I)V
     .locals 5
 
-    .line 287
     iget-object p2, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
     invoke-virtual {p2}, Ljava/util/ArrayDeque;->size()I
@@ -599,7 +535,6 @@
     :goto_0
     if-ge v1, p2, :cond_2
 
-    .line 289
     iget-object v2, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
     invoke-virtual {v2}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
@@ -608,31 +543,26 @@
 
     check-cast v2, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;
 
-    .line 290
     iget-object v3, p0, Lcom/android/server/pm/GentleUpdateHelper;->mAppStateHelper:Lcom/android/server/pm/AppStateHelper;
 
     iget-object v4, v2, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;->packageNames:Ljava/util/List;
 
-    .line 291
     invoke-virtual {v3, v4}, Lcom/android/server/pm/AppStateHelper;->getDependencyPackages(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v3
 
-    .line 292
     invoke-interface {v3, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 293
     invoke-virtual {p0, v2, v0}, Lcom/android/server/pm/GentleUpdateHelper;->processPendingCheck(Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;Z)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 294
     :cond_0
     iget-object v3, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
@@ -643,7 +573,6 @@
 
     goto :goto_0
 
-    .line 297
     :cond_2
     iget-object p1, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
@@ -653,7 +582,6 @@
 
     if-nez p1, :cond_3
 
-    .line 299
     invoke-virtual {p0}, Lcom/android/server/pm/GentleUpdateHelper;->scheduleIdleJob()V
 
     :cond_3
@@ -663,10 +591,8 @@
 .method public final processPendingCheck(Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;Z)Z
     .locals 5
 
-    .line 254
     iget-object v0, p1, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;->future:Ljava/util/concurrent/CompletableFuture;
 
-    .line 255
     invoke-virtual {v0}, Ljava/util/concurrent/CompletableFuture;->isDone()Z
 
     move-result v1
@@ -677,11 +603,9 @@
 
     return v2
 
-    .line 258
     :cond_0
     iget-object v1, p1, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;->constraints:Landroid/content/pm/PackageInstaller$InstallConstraints;
 
-    .line 259
     iget-object v3, p0, Lcom/android/server/pm/GentleUpdateHelper;->mAppStateHelper:Lcom/android/server/pm/AppStateHelper;
 
     iget-object v4, p1, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;->packageNames:Ljava/util/List;
@@ -690,14 +614,12 @@
 
     move-result-object v3
 
-    .line 260
     invoke-virtual {p0, v3, v1, p2}, Lcom/android/server/pm/GentleUpdateHelper;->areConstraintsSatisfied(Ljava/util/List;Landroid/content/pm/PackageInstaller$InstallConstraints;Z)Z
 
     move-result p0
 
     if-nez p0, :cond_2
 
-    .line 261
     invoke-virtual {p1}, Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;->isTimedOut()Z
 
     move-result p1
@@ -711,7 +633,6 @@
 
     return p0
 
-    .line 262
     :cond_2
     :goto_0
     new-instance p1, Landroid/content/pm/PackageInstaller$InstallConstraintsResult;
@@ -726,7 +647,6 @@
 .method public final processPendingChecksInIdle()V
     .locals 4
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
@@ -738,7 +658,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 272
     iget-object v2, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
     invoke-virtual {v2}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
@@ -749,14 +668,12 @@
 
     const/4 v3, 0x1
 
-    .line 273
     invoke-virtual {p0, v2, v3}, Lcom/android/server/pm/GentleUpdateHelper;->processPendingCheck(Lcom/android/server/pm/GentleUpdateHelper$PendingInstallConstraintsCheck;Z)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 275
     iget-object v3, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
@@ -766,7 +683,6 @@
 
     goto :goto_0
 
-    .line 278
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingChecks:Ljava/util/ArrayDeque;
 
@@ -776,7 +692,6 @@
 
     if-nez v0, :cond_2
 
-    .line 280
     invoke-virtual {p0}, Lcom/android/server/pm/GentleUpdateHelper;->scheduleIdleJob()V
 
     :cond_2
@@ -788,13 +703,10 @@
 
     const/4 v0, 0x0
 
-    .line 228
     iput-boolean v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHasPendingIdleJob:Z
 
-    .line 229
     invoke-virtual {p0}, Lcom/android/server/pm/GentleUpdateHelper;->processPendingChecksInIdle()V
 
-    .line 231
     iget-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingIdleFutures:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -814,14 +726,12 @@
 
     check-cast v1, Ljava/util/concurrent/CompletableFuture;
 
-    .line 232
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 234
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mPendingIdleFutures:Ljava/util/ArrayList;
 
@@ -837,14 +747,12 @@
 
     const/4 v1, 0x0
 
-    .line 206
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 208
     iget-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda0;
@@ -855,7 +763,6 @@
 
     return-void
 
-    .line 212
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHasPendingIdleJob:Z
 
@@ -866,15 +773,12 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 216
     iput-boolean v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mHasPendingIdleJob:Z
 
-    .line 217
     new-instance v1, Landroid/content/ComponentName;
 
     iget-object v2, p0, Lcom/android/server/pm/GentleUpdateHelper;->mContext:Landroid/content/Context;
 
-    .line 218
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -887,24 +791,20 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 219
     new-instance v2, Landroid/app/job/JobInfo$Builder;
 
     const v3, 0xe067fd7
 
     invoke-direct {v2, v3, v1}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
-    .line 220
     invoke-virtual {v2, v0}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
 
     move-result-object v0
 
-    .line 221
     invoke-virtual {v0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
     move-result-object v0
 
-    .line 222
     iget-object p0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/app/job/JobScheduler;
@@ -915,7 +815,6 @@
 
     check-cast p0, Landroid/app/job/JobScheduler;
 
-    .line 223
     invoke-virtual {p0, v0}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
     return-void
@@ -924,7 +823,6 @@
 .method public systemReady()V
     .locals 3
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/pm/GentleUpdateHelper;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/app/ActivityManager;
@@ -935,7 +833,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 153
     new-instance v1, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, p0}, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/pm/GentleUpdateHelper;)V
@@ -944,7 +841,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/ActivityManager;->addOnUidImportanceListener(Landroid/app/ActivityManager$OnUidImportanceListener;I)V
 
-    .line 155
     new-instance v1, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, p0}, Lcom/android/server/pm/GentleUpdateHelper$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/pm/GentleUpdateHelper;)V

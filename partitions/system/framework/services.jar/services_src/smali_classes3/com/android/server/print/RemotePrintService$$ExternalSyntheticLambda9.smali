@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/print/RemotePrintService;
 
     invoke-static {p1}, Lcom/android/server/print/RemotePrintService;->$r8$lambda$3PlkZvNG_dkPjbZ-n2H3eAPMasE(Lcom/android/server/print/RemotePrintService;)V

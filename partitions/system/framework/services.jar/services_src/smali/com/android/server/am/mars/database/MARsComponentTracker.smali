@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmComponentTrackerList(Lcom/android/server/am/mars/database/MARsComponentTracker;)Ljava/util/concurrent/ConcurrentHashMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fputmCTHandler(Lcom/android/server/am/mars/database/MARsComponentTracker;Lcom/android/server/am/mars/database/MARsComponentTracker$CTHandler;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mCTHandler:Lcom/android/server/am/mars/database/MARsComponentTracker$CTHandler;
 
     return-void
@@ -43,10 +41,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0}, Landroid/text/format/Time;-><init>()V
@@ -55,17 +51,14 @@
 
     const-string v0, "/data/system/mars/"
 
-    .line 51
     iput-object v0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mMARsPath:Ljava/lang/String;
 
-    .line 53
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -74,10 +67,8 @@
 
     const/4 v0, 0x0
 
-    .line 57
     iput-boolean v0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mEnabledEventLog:Z
 
-    .line 58
     iput-boolean v0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->isEnabledCT:Z
 
     return-void
@@ -86,7 +77,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/database/MARsComponentTracker-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/database/MARsComponentTracker;-><init>()V
 
     return-void
@@ -95,7 +85,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/database/MARsComponentTracker;
     .locals 1
 
-    .line 68
     invoke-static {}, Lcom/android/server/am/mars/database/MARsComponentTracker$MARsComponentTrackerHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/database/MARsComponentTracker;
 
     move-result-object v0
@@ -110,15 +99,12 @@
 
     const-string p1, ""
 
-    .line 240
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "ACTIVITY MANAGER MARs CT HISTORY"
 
-    .line 241
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,7 +127,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 243
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -152,7 +137,6 @@
 
     move-result-object p0
 
-    .line 244
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -160,19 +144,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 245
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 246
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;
 
-    .line 247
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -199,7 +180,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 248
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,7 +202,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 249
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -241,7 +220,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 250
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -260,7 +238,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 251
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -279,7 +256,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 252
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,7 +276,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 253
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -309,7 +284,6 @@
 
     goto/16 :goto_0
 
-    .line 255
     :cond_0
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
@@ -327,7 +301,6 @@
 
     const-string/jumbo p0, "null"
 
-    .line 297
     filled-new-array {p0}, [Ljava/lang/Object;
 
     move-result-object p0
@@ -340,7 +313,6 @@
 
     return-object p0
 
-    .line 298
     :cond_0
     new-instance p0, Ljava/text/SimpleDateFormat;
 
@@ -348,12 +320,10 @@
 
     invoke-direct {p0, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 299
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
 
-    .line 300
     invoke-virtual {p0, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p0
@@ -364,7 +334,6 @@
 .method public getEnabled()Z
     .locals 0
 
-    .line 87
     iget-boolean p0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->isEnabledCT:Z
 
     return p0
@@ -373,12 +342,10 @@
 .method public final getFileName(J)Ljava/lang/String;
     .locals 1
 
-    .line 331
     iget-object v0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->ctTime:Landroid/text/format/Time;
 
     invoke-virtual {v0, p1, p2}, Landroid/text/format/Time;->set(J)V
 
-    .line 333
     iget-object p1, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->ctTime:Landroid/text/format/Time;
 
     iget p1, p1, Landroid/text/format/Time;->year:I
@@ -387,7 +354,6 @@
 
     move-result-object p1
 
-    .line 335
     iget-object p2, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->ctTime:Landroid/text/format/Time;
 
     iget p2, p2, Landroid/text/format/Time;->month:I
@@ -398,7 +364,6 @@
 
     move-result-object p2
 
-    .line 337
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->ctTime:Landroid/text/format/Time;
 
     iget p0, p0, Landroid/text/format/Time;->monthDay:I
@@ -407,7 +372,6 @@
 
     move-result-object p0
 
-    .line 339
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -432,7 +396,6 @@
 .method public getListSize()I
     .locals 0
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
@@ -445,10 +408,8 @@
 .method public init(Landroid/content/Context;)V
     .locals 2
 
-    .line 72
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/database/MARsComponentTracker;->setContext(Landroid/content/Context;)V
 
-    .line 73
     new-instance p1, Lcom/android/server/am/mars/database/MARsComponentTracker$MARsCTThread;
 
     const-string v0, "MARsCTThread"
@@ -457,7 +418,6 @@
 
     invoke-direct {p1, p0, v0, v1}, Lcom/android/server/am/mars/database/MARsComponentTracker$MARsCTThread;-><init>(Lcom/android/server/am/mars/database/MARsComponentTracker;Ljava/lang/String;I)V
 
-    .line 74
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -498,7 +458,6 @@
 
     if-eqz p1, :cond_c
 
-    .line 348
     invoke-virtual/range {p1 .. p1}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
 
     move-result v15
@@ -510,7 +469,6 @@
     :cond_0
     const-string/jumbo v15, "line.separator"
 
-    .line 354
     invoke-static {v15}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v15
@@ -519,7 +477,6 @@
 
     move-object/from16 v17, v13
 
-    .line 357
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v12
@@ -528,7 +485,6 @@
 
     move-result-object v12
 
-    .line 358
     new-instance v13, Ljava/io/File;
 
     move-object/from16 v18, v1
@@ -553,7 +509,6 @@
 
     const/4 v1, 0x0
 
-    .line 361
     :try_start_0
     invoke-virtual {v13}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -568,7 +523,6 @@
 
     if-nez v2, :cond_1
 
-    .line 362
     :try_start_1
     invoke-virtual {v13}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -607,7 +561,6 @@
 
     goto/16 :goto_c
 
-    .line 364
     :cond_1
     :goto_2
     :try_start_2
@@ -622,23 +575,18 @@
 
     if-nez v2, :cond_2
 
-    .line 365
     :try_start_3
     invoke-virtual {v13}, Ljava/io/File;->createNewFile()Z
 
-    .line 366
     invoke-virtual {v13, v12}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 367
     invoke-virtual {v13, v12, v12}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 370
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/mars/database/MARsComponentTracker;->removeRedundantFile()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 373
     :cond_2
     :try_start_4
     invoke-virtual {v13}, Ljava/io/File;->canWrite()Z
@@ -649,7 +597,6 @@
 
     return-void
 
-    .line 377
     :cond_3
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -658,7 +605,6 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_5
     .catchall {:try_start_4 .. :try_end_4} :catchall_6
 
-    .line 380
     :try_start_5
     invoke-static {}, Landroid/util/Xml;->newSerializer()Lorg/xmlpull/v1/XmlSerializer;
 
@@ -666,24 +612,18 @@
 
     const-string v13, "UTF-8"
 
-    .line 383
     invoke-interface {v12, v2, v13}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 384
     sget-object v13, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-interface {v12, v1, v13}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 385
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 386
     invoke-interface {v12, v1, v14}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 387
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 389
     iget-object v13, v0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v13}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -694,7 +634,6 @@
 
     move-result-object v13
 
-    .line 391
     :goto_3
     invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
 
@@ -707,7 +646,6 @@
 
     if-eqz v20, :cond_9
 
-    .line 392
     :try_start_6
     invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -724,7 +662,6 @@
 
     move-object/from16 v20, v14
 
-    .line 393
     :try_start_7
     iget-object v14, v13, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->calleePkgName:Ljava/lang/String;
     :try_end_7
@@ -742,7 +679,6 @@
     :cond_4
     move-object/from16 v14, v22
 
-    .line 394
     :goto_4
     :try_start_8
     iget v2, v13, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->calleePid:I
@@ -753,7 +689,6 @@
 
     move-object/from16 v24, v3
 
-    .line 395
     iget-object v3, v13, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->callerPkgName:Ljava/lang/String;
 
     move-object/from16 v25, v4
@@ -765,7 +700,6 @@
     :cond_5
     move-object/from16 v3, v22
 
-    .line 396
     :goto_5
     iget v4, v13, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->callerPid:I
 
@@ -775,7 +709,6 @@
 
     move-object/from16 v26, v5
 
-    .line 397
     iget-object v5, v13, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->hostingType:Ljava/lang/String;
 
     if-eqz v5, :cond_6
@@ -787,7 +720,6 @@
     :cond_6
     move-object/from16 v27, v22
 
-    .line 398
     :goto_6
     iget-object v5, v13, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->action:Ljava/lang/String;
 
@@ -802,7 +734,6 @@
     :cond_7
     move-object/from16 v29, v22
 
-    .line 399
     :goto_7
     iget-wide v4, v13, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->time:J
 
@@ -810,7 +741,6 @@
 
     move-result-object v4
 
-    .line 400
     iget-object v5, v13, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->from:Ljava/lang/String;
 
     if-eqz v5, :cond_8
@@ -820,19 +750,15 @@
     :cond_8
     move-object/from16 v5, v22
 
-    .line 403
     :goto_8
     invoke-interface {v12, v1}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const/4 v13, 0x0
 
-    .line 404
     invoke-interface {v12, v13, v11}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 405
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 406
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -849,19 +775,14 @@
 
     const/4 v13, 0x0
 
-    .line 407
     invoke-interface {v12, v13, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 408
     invoke-interface {v12, v14}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 409
     invoke-interface {v12, v13, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 410
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 411
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -878,37 +799,26 @@
 
     const/4 v13, 0x0
 
-    .line 412
     invoke-interface {v12, v13, v9}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 413
     invoke-interface {v12, v2}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 414
     invoke-interface {v12, v13, v9}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 415
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 416
     invoke-interface {v12, v1}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 417
     invoke-interface {v12, v13, v11}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 418
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 421
     invoke-interface {v12, v1}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 422
     invoke-interface {v12, v13, v8}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 423
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 424
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -925,19 +835,14 @@
 
     const/4 v2, 0x0
 
-    .line 425
     invoke-interface {v12, v2, v7}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 426
     invoke-interface {v12, v3}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 427
     invoke-interface {v12, v2, v7}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 428
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 429
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -954,41 +859,30 @@
 
     const/4 v2, 0x0
 
-    .line 430
     invoke-interface {v12, v2, v6}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     move-object/from16 v3, v28
 
-    .line 431
     invoke-interface {v12, v3}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 432
     invoke-interface {v12, v2, v6}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 433
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 434
     invoke-interface {v12, v1}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 435
     invoke-interface {v12, v2, v8}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 436
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 439
     invoke-interface {v12, v1}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     move-object/from16 v3, v26
 
-    .line 440
     invoke-interface {v12, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 441
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 442
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1007,21 +901,16 @@
 
     const/4 v13, 0x0
 
-    .line 443
     invoke-interface {v12, v13, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     move-object/from16 v14, v27
 
-    .line 444
     invoke-interface {v12, v14}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 445
     invoke-interface {v12, v13, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 446
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 447
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -1040,23 +929,18 @@
 
     const/4 v14, 0x0
 
-    .line 448
     invoke-interface {v12, v14, v13}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     move-object/from16 v14, v29
 
-    .line 449
     invoke-interface {v12, v14}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const/4 v14, 0x0
 
-    .line 450
     invoke-interface {v12, v14, v13}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 451
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 452
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1077,19 +961,14 @@
 
     const/4 v2, 0x0
 
-    .line 453
     invoke-interface {v12, v2, v14}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 454
     invoke-interface {v12, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 455
     invoke-interface {v12, v2, v14}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 456
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 457
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1108,28 +987,20 @@
 
     const/4 v4, 0x0
 
-    .line 458
     invoke-interface {v12, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 459
     invoke-interface {v12, v5}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 460
     invoke-interface {v12, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 461
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 462
     invoke-interface {v12, v1}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 463
     invoke-interface {v12, v4, v3}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 464
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 465
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
@@ -1195,7 +1066,6 @@
 
     move-object/from16 v20, v14
 
-    .line 468
     :try_start_9
     invoke-interface {v12, v1}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -1203,13 +1073,10 @@
 
     const/4 v2, 0x0
 
-    .line 469
     invoke-interface {v12, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 470
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 471
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -1222,25 +1089,19 @@
 
     const/4 v2, 0x0
 
-    .line 472
     invoke-interface {v12, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 473
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 474
     invoke-interface {v12, v15}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 475
     invoke-interface {v12}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 476
     invoke-virtual/range {v23 .. v23}, Ljava/io/FileOutputStream;->flush()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
     .catchall {:try_start_9 .. :try_end_9} :catchall_4
 
-    .line 483
     :try_start_a
     invoke-virtual/range {v23 .. v23}, Ljava/io/FileOutputStream;->close()V
     :try_end_a
@@ -1253,7 +1114,6 @@
 
     move-object v1, v0
 
-    .line 485
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1336,12 +1196,10 @@
 
     move-object/from16 v23, v2
 
-    .line 478
     :goto_c
     :try_start_b
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 479
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1362,7 +1220,6 @@
 
     if-eqz v23, :cond_a
 
-    .line 483
     :try_start_c
     invoke-virtual/range {v23 .. v23}, Ljava/io/FileOutputStream;->close()V
     :try_end_c
@@ -1375,7 +1232,6 @@
 
     move-object v2, v0
 
-    .line 485
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1403,7 +1259,6 @@
     :goto_f
     if-eqz v23, :cond_b
 
-    .line 483
     :try_start_d
     invoke-virtual/range {v23 .. v23}, Ljava/io/FileOutputStream;->close()V
     :try_end_d
@@ -1416,7 +1271,6 @@
 
     move-object v4, v0
 
-    .line 485
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1431,7 +1285,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
     :cond_b
     :goto_10
     throw v2
@@ -1444,7 +1297,6 @@
 .method public listClear()V
     .locals 0
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
@@ -1455,7 +1307,6 @@
 .method public final removeRedundantFile()V
     .locals 9
 
-    .line 305
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mMARsPath:Ljava/lang/String;
@@ -1466,7 +1317,6 @@
 
     move-result-object v0
 
-    .line 306
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -1478,17 +1328,14 @@
 
     aget-object v4, v0, v3
 
-    .line 307
     invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 309
     iget-object v5, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mLatestXMLFiles:Ljava/util/ArrayList;
 
     if-eqz v5, :cond_2
 
-    .line 310
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v5
@@ -1497,7 +1344,6 @@
 
     goto :goto_1
 
-    .line 312
     :cond_0
     iget-object v5, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mLatestXMLFiles:Ljava/util/ArrayList;
 
@@ -1509,7 +1355,6 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 313
     iget-object v5, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mLatestXMLFiles:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1518,7 +1363,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 314
     new-instance v6, Ljava/io/File;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1537,10 +1381,8 @@
 
     invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 315
     invoke-virtual {v6}, Ljava/io/File;->delete()Z
 
-    .line 316
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1559,14 +1401,12 @@
 
     invoke-static {v6, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     iget-object v5, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mLatestXMLFiles:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 319
     :cond_1
     iget-object v5, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mLatestXMLFiles:Ljava/util/ArrayList;
 
@@ -1585,57 +1425,46 @@
 .method public sendCTInfo(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
     .locals 2
 
-    .line 207
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "currentLevel"
 
-    .line 209
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "calleePid"
 
-    .line 210
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "callerPid"
 
-    .line 211
     invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "calleePkgName"
 
-    .line 212
     invoke-virtual {v0, p1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "callerPkgName"
 
-    .line 213
     invoke-virtual {v0, p1, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "hostingType"
 
-    .line 214
     invoke-virtual {v0, p1, p6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "action"
 
-    .line 215
     invoke-virtual {v0, p1, p7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo p1, "time"
 
-    .line 216
     invoke-virtual {v0, p1, p8, p9}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string p1, "from"
 
-    .line 217
     invoke-virtual {v0, p1, p10}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 219
     iget-object p1, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mCTHandler:Lcom/android/server/am/mars/database/MARsComponentTracker$CTHandler;
 
     const/4 p2, 0x1
@@ -1644,10 +1473,8 @@
 
     move-result-object p1
 
-    .line 220
     invoke-virtual {p1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 222
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mCTHandler:Lcom/android/server/am/mars/database/MARsComponentTracker$CTHandler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -1658,7 +1485,6 @@
 .method public final setContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mContext:Landroid/content/Context;
 
     return-void
@@ -1667,7 +1493,6 @@
 .method public setEnabled(Z)V
     .locals 0
 
-    .line 91
     iput-boolean p1, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->isEnabledCT:Z
 
     return-void
@@ -1676,7 +1501,6 @@
 .method public setEnabledEventLog(Z)V
     .locals 0
 
-    .line 99
     iput-boolean p1, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mEnabledEventLog:Z
 
     return-void
@@ -1687,7 +1511,6 @@
 
     const-string p0, "activity"
 
-    .line 260
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1705,7 +1528,6 @@
 
     return-void
 
-    .line 267
     :cond_1
     invoke-virtual {p4, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1725,7 +1547,6 @@
 
     goto/16 :goto_0
 
-    .line 271
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1735,7 +1556,6 @@
 
     if-nez p5, :cond_5
 
-    .line 276
     invoke-static {}, Lcom/android/server/am/mars/database/MARsDBManager;->getInstance()Lcom/android/server/am/mars/database/MARsDBManager;
 
     move-result-object v0
@@ -1761,7 +1581,6 @@
 
     if-nez p5, :cond_4
 
-    .line 280
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1788,7 +1607,6 @@
 
     goto :goto_0
 
-    .line 282
     :cond_4
     invoke-static {}, Lcom/android/server/am/mars/database/MARsDBManager;->getInstance()Lcom/android/server/am/mars/database/MARsDBManager;
 
@@ -1804,7 +1622,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/mars/database/MARsDBManager;->sendUpdateAppStartUpInfoMsgToDBHandler(Ljava/lang/String;Ljava/lang/String;ZJ)V
 
-    .line 283
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1839,7 +1656,6 @@
 
     move-object v12, p0
 
-    .line 227
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1880,7 +1696,6 @@
 
     move-result-object v13
 
-    .line 228
     iget-object v0, v12, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, v13}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1893,10 +1708,8 @@
 
     move/from16 v4, p1
 
-    .line 230
     iput v4, v0, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->currentLevel:I
 
-    .line 231
     iget v1, v0, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->count:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1905,7 +1718,6 @@
 
     move-wide/from16 v2, p8
 
-    .line 232
     iput-wide v2, v0, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;->time:J
 
     goto :goto_0
@@ -1915,7 +1727,6 @@
 
     move-wide/from16 v2, p8
 
-    .line 234
     new-instance v14, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;
 
     move-object v0, v14
@@ -1938,7 +1749,6 @@
 
     invoke-direct/range {v0 .. v11}, Lcom/android/server/am/mars/database/MARsComponentTracker$ComponentTracker;-><init>(Lcom/android/server/am/mars/database/MARsComponentTracker;JIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
     iget-object v0, v12, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, v13, v14}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1950,7 +1760,6 @@
 .method public updateMARsCTFile()V
     .locals 1
 
-    .line 344
     iget-object v0, p0, Lcom/android/server/am/mars/database/MARsComponentTracker;->mComponentTrackerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/mars/database/MARsComponentTracker;->insertMARsCTInfoToXml(Ljava/util/concurrent/ConcurrentHashMap;)V

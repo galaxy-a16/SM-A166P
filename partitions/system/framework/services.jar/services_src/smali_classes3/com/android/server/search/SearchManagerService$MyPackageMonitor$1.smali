@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/search/SearchManagerService$MyPackageMonitor;Landroid/os/Looper;Lcom/android/server/search/SearchManagerService;)V
     .locals 0
 
-    .line 226
     iput-object p1, p0, Lcom/android/server/search/SearchManagerService$MyPackageMonitor$1;->this$1:Lcom/android/server/search/SearchManagerService$MyPackageMonitor;
 
     iput-object p3, p0, Lcom/android/server/search/SearchManagerService$MyPackageMonitor$1;->val$this$0:Lcom/android/server/search/SearchManagerService;
@@ -28,15 +27,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 229
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 230
     iget v0, p1, Landroid/os/Message;->what:I
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 231
     iget-object p0, p0, Lcom/android/server/search/SearchManagerService$MyPackageMonitor$1;->this$1:Lcom/android/server/search/SearchManagerService$MyPackageMonitor;
 
     iget p1, p1, Landroid/os/Message;->what:I

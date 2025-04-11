@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetINSTANCE()Ljava/com/android/server/am/mars/database/MARsListManager;
     .locals 1
 
-    .line 0
     sget-object v0, Ljava/com/android/server/am/mars/database/MARsListManager$ListManagerHolder;->INSTANCE:Ljava/com/android/server/am/mars/database/MARsListManager;
 
     return-object v0
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 53
     new-instance v0, Ljava/com/android/server/am/mars/database/MARsListManager;
 
     const/4 v1, 0x0

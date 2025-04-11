@@ -19,33 +19,26 @@
 .method public constructor <init>(IILjava/lang/String;)V
     .locals 1
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 
-    .line 45
     iput p1, p0, Lcom/android/server/job/GrantedUriPermissions;->mGrantFlags:I
 
-    .line 46
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/job/GrantedUriPermissions;->mSourceUserId:I
 
-    .line 47
     iput-object p3, p0, Lcom/android/server/job/GrantedUriPermissions;->mTag:Ljava/lang/String;
 
-    .line 48
     const-class p1, Lcom/android/server/uri/UriGrantsManagerInternal;
 
-    .line 49
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
@@ -78,7 +71,6 @@
 .method public static checkGrantFlags(I)Z
     .locals 0
 
-    .line 0
     and-int/lit8 p0, p0, 0x3
 
     if-eqz p0, :cond_0
@@ -97,7 +89,6 @@
 .method public static createFromClip(Landroid/content/ClipData;ILjava/lang/String;IILjava/lang/String;)Lcom/android/server/job/GrantedUriPermissions;
     .locals 7
 
-    .line 91
     invoke-static {p4}, Lcom/android/server/job/GrantedUriPermissions;->checkGrantFlags(I)Z
 
     move-result v0
@@ -125,7 +116,6 @@
 
     move-object v5, p5
 
-    .line 96
     invoke-static/range {v0 .. v6}, Lcom/android/server/job/GrantedUriPermissions;->grantClip(Landroid/content/ClipData;ILjava/lang/String;IILjava/lang/String;Lcom/android/server/job/GrantedUriPermissions;)Lcom/android/server/job/GrantedUriPermissions;
 
     move-result-object v6
@@ -137,12 +127,10 @@
 .method public static createFromIntent(Landroid/content/Intent;ILjava/lang/String;ILjava/lang/String;)Lcom/android/server/job/GrantedUriPermissions;
     .locals 8
 
-    .line 67
     invoke-virtual {p0}, Landroid/content/Intent;->getFlags()I
 
     move-result v7
 
-    .line 68
     invoke-static {v7}, Lcom/android/server/job/GrantedUriPermissions;->checkGrantFlags(I)Z
 
     move-result v0
@@ -156,7 +144,6 @@
     :cond_0
     const/4 v6, 0x0
 
-    .line 74
     invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -173,14 +160,12 @@
 
     move-object v5, p4
 
-    .line 76
     invoke-static/range {v0 .. v6}, Lcom/android/server/job/GrantedUriPermissions;->grantUri(Landroid/net/Uri;ILjava/lang/String;IILjava/lang/String;Lcom/android/server/job/GrantedUriPermissions;)Lcom/android/server/job/GrantedUriPermissions;
 
     move-result-object v0
 
     move-object v6, v0
 
-    .line 80
     :cond_1
     invoke-virtual {p0}, Landroid/content/Intent;->getClipData()Landroid/content/ClipData;
 
@@ -198,7 +183,6 @@
 
     move-object v5, p4
 
-    .line 82
     invoke-static/range {v0 .. v6}, Lcom/android/server/job/GrantedUriPermissions;->grantClip(Landroid/content/ClipData;ILjava/lang/String;IILjava/lang/String;Lcom/android/server/job/GrantedUriPermissions;)Lcom/android/server/job/GrantedUriPermissions;
 
     move-result-object v6
@@ -210,7 +194,6 @@
 .method public static grantClip(Landroid/content/ClipData;ILjava/lang/String;IILjava/lang/String;Lcom/android/server/job/GrantedUriPermissions;)Lcom/android/server/job/GrantedUriPermissions;
     .locals 9
 
-    .line 105
     invoke-virtual {p0}, Landroid/content/ClipData;->getItemCount()I
 
     move-result v0
@@ -222,7 +205,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 107
     invoke-virtual {p0, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
     move-result-object v2
@@ -252,14 +234,12 @@
 .method public static grantItem(Landroid/content/ClipData$Item;ILjava/lang/String;IILjava/lang/String;Lcom/android/server/job/GrantedUriPermissions;)Lcom/android/server/job/GrantedUriPermissions;
     .locals 8
 
-    .line 135
     invoke-virtual {p0}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 136
     invoke-virtual {p0}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
 
     move-result-object v1
@@ -283,21 +263,18 @@
     :cond_0
     move-object v6, p6
 
-    .line 139
     invoke-virtual {p0}, Landroid/content/ClipData$Item;->getIntent()Landroid/content/Intent;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 140
     invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p6
 
     if-eqz p6, :cond_1
 
-    .line 141
     invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -323,32 +300,27 @@
 .method public static grantUri(Landroid/net/Uri;ILjava/lang/String;IILjava/lang/String;Lcom/android/server/job/GrantedUriPermissions;)Lcom/android/server/job/GrantedUriPermissions;
     .locals 9
 
-    .line 118
     :try_start_0
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 117
     invoke-static {p0, v0}, Landroid/content/ContentProvider;->getUserIdFromUri(Landroid/net/Uri;I)I
 
     move-result v7
 
-    .line 119
     invoke-static {p0}, Landroid/content/ContentProvider;->getUriWithoutUserId(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object p0
 
     if-nez p6, :cond_0
 
-    .line 121
     new-instance v0, Lcom/android/server/job/GrantedUriPermissions;
 
     invoke-direct {v0, p4, p1, p5}, Lcom/android/server/job/GrantedUriPermissions;-><init>(IILjava/lang/String;)V
 
     move-object p6, v0
 
-    .line 123
     :cond_0
     invoke-static {}, Landroid/app/UriGrantsManager;->getService()Landroid/app/IUriGrantsManager;
 
@@ -368,7 +340,6 @@
 
     invoke-interface/range {v1 .. v8}, Landroid/app/IUriGrantsManager;->grantUriPermissionFromOwner(Landroid/os/IBinder;ILjava/lang/String;Landroid/net/Uri;III)V
 
-    .line 125
     iget-object p1, p6, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -382,7 +353,6 @@
 
     const-string p1, "AM dead"
 
-    .line 127
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -394,33 +364,28 @@
 .method public dump(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 4
 
-    .line 160
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10500000001L
 
-    .line 162
     iget v2, p0, Lcom/android/server/job/GrantedUriPermissions;->mGrantFlags:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
     const-wide v0, 0x10500000002L
 
-    .line 163
     iget v2, p0, Lcom/android/server/job/GrantedUriPermissions;->mSourceUserId:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
 
     const-wide v0, 0x10900000003L
 
-    .line 164
     iget-object v2, p0, Lcom/android/server/job/GrantedUriPermissions;->mTag:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/job/GrantedUriPermissions;->mPermissionOwner:Landroid/os/IBinder;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -433,7 +398,6 @@
 
     const/4 v0, 0x0
 
-    .line 166
     :goto_0
     iget-object v1, p0, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 
@@ -443,7 +407,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 167
     iget-object v1, p0, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -456,7 +419,6 @@
 
     const-wide v2, 0x20900000005L
 
-    .line 169
     invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -468,7 +430,6 @@
 
     goto :goto_0
 
-    .line 173
     :cond_1
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
@@ -480,7 +441,6 @@
 
     const-string/jumbo v0, "mGrantFlags=0x"
 
-    .line 149
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/job/GrantedUriPermissions;->mGrantFlags:I
@@ -493,7 +453,6 @@
 
     const-string v0, " mSourceUserId="
 
-    .line 150
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/job/GrantedUriPermissions;->mSourceUserId:I
@@ -502,7 +461,6 @@
 
     const-string/jumbo v0, "mTag="
 
-    .line 151
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/job/GrantedUriPermissions;->mTag:Ljava/lang/String;
@@ -511,7 +469,6 @@
 
     const-string/jumbo v0, "mPermissionOwner="
 
-    .line 152
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/job/GrantedUriPermissions;->mPermissionOwner:Landroid/os/IBinder;
@@ -520,7 +477,6 @@
 
     const/4 v0, 0x0
 
-    .line 153
     :goto_0
     iget-object v1, p0, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 
@@ -532,7 +488,6 @@
 
     const-string v1, "#"
 
-    .line 154
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(I)V
@@ -541,7 +496,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 155
     iget-object v1, p0, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -561,7 +515,6 @@
 .method public revoke()V
     .locals 6
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -573,7 +526,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 54
     const-class v1, Lcom/android/server/uri/UriGrantsManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -586,7 +538,6 @@
 
     iget-object v3, p0, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 
-    .line 55
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -597,14 +548,12 @@
 
     iget v5, p0, Lcom/android/server/job/GrantedUriPermissions;->mSourceUserId:I
 
-    .line 54
     invoke-interface {v1, v2, v3, v4, v5}, Lcom/android/server/uri/UriGrantsManagerInternal;->revokeUriPermissionFromOwner(Landroid/os/IBinder;Landroid/net/Uri;II)V
 
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 57
     :cond_0
     iget-object p0, p0, Lcom/android/server/job/GrantedUriPermissions;->mUris:Ljava/util/ArrayList;
 

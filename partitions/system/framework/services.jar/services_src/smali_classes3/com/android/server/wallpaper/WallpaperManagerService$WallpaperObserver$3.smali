@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver;Lcom/android/server/wallpaper/WallpaperData;)V
     .locals 0
 
-    .line 785
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver$3;->this$1:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver;
 
     iput-object p2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver$3;->val$wallpaper:Lcom/android/server/wallpaper/WallpaperData;
@@ -32,10 +31,8 @@
 
     const-string/jumbo v0, "publish system wallpaper changed!"
 
-    .line 788
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 789
     iget-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver$3;->this$1:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver;
 
     iget-object p1, p1, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;

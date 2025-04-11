@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActivityTaskManagerInternal(Lcom/android/server/smartspace/SmartspaceManagerService;)Lcom/android/server/wm/ActivityTaskManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/smartspace/SmartspaceManagerService;->mActivityTaskManagerInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/smartspace/SmartspaceManagerService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -33,14 +31,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 62
     new-instance v0, Lcom/android/server/infra/FrameworkResourcesServiceNameResolver;
 
     const v1, 0x1040312
@@ -53,7 +49,6 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/server/infra/AbstractMasterSystemService;-><init>(Landroid/content/Context;Lcom/android/server/infra/ServiceNameResolver;Ljava/lang/String;I)V
 
-    .line 65
     const-class p1, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -70,7 +65,6 @@
 .method public static synthetic access$000(Lcom/android/server/smartspace/SmartspaceManagerService;)Lcom/android/server/infra/ServiceNameResolver;
     .locals 0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mServiceNameResolver:Lcom/android/server/infra/ServiceNameResolver;
 
     return-object p0
@@ -79,7 +73,6 @@
 .method public static synthetic access$100(Lcom/android/server/smartspace/SmartspaceManagerService;)Ljava/lang/Object;
     .locals 0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -88,7 +81,6 @@
 .method public static synthetic access$200(Lcom/android/server/smartspace/SmartspaceManagerService;I)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 51
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->getServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -101,7 +93,6 @@
 .method public enforceCallingPermissionForManagement()V
     .locals 2
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -118,7 +109,6 @@
 .method public getMaximumTemporaryServiceDurationMs()I
     .locals 0
 
-    .line 0
     const p0, 0x1d4c0
 
     return p0
@@ -127,7 +117,6 @@
 .method public bridge synthetic newServiceLocked(IZ)Lcom/android/server/infra/AbstractPerUserSystemService;
     .locals 0
 
-    .line 51
     invoke-virtual {p0, p1, p2}, Lcom/android/server/smartspace/SmartspaceManagerService;->newServiceLocked(IZ)Lcom/android/server/smartspace/SmartspacePerUserService;
 
     move-result-object p0
@@ -138,7 +127,6 @@
 .method public newServiceLocked(IZ)Lcom/android/server/smartspace/SmartspacePerUserService;
     .locals 1
 
-    .line 70
     new-instance p2, Lcom/android/server/smartspace/SmartspacePerUserService;
 
     iget-object v0, p0, Lcom/android/server/infra/AbstractMasterSystemService;->mLock:Ljava/lang/Object;
@@ -151,7 +139,6 @@
 .method public onServicePackageRestartedLocked(I)V
     .locals 0
 
-    .line 93
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->peekServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -160,7 +147,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 95
     invoke-virtual {p0}, Lcom/android/server/smartspace/SmartspacePerUserService;->onPackageRestartedLocked()V
 
     :cond_0
@@ -170,7 +156,6 @@
 .method public onServicePackageUpdatedLocked(I)V
     .locals 0
 
-    .line 85
     invoke-virtual {p0, p1}, Lcom/android/server/infra/AbstractMasterSystemService;->peekServiceForUserLocked(I)Lcom/android/server/infra/AbstractPerUserSystemService;
 
     move-result-object p0
@@ -179,7 +164,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 87
     invoke-virtual {p0}, Lcom/android/server/smartspace/SmartspacePerUserService;->onPackageUpdatedLocked()V
 
     :cond_0
@@ -189,7 +173,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 75
     new-instance v0, Lcom/android/server/smartspace/SmartspaceManagerService$SmartspaceManagerStub;
 
     const/4 v1, 0x0

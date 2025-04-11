@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;Z)V
     .locals 0
 
-    .line 4944
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager$2;->this$1:Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;
 
     iput-boolean p2, p0, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager$2;->val$enable:Z
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 3
 
-    .line 4950
     iget-boolean v0, p0, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager$2;->val$enable:Z
 
     if-eqz v0, :cond_0
@@ -43,7 +41,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4951
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager$2;->this$1:Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;
 
@@ -63,7 +60,6 @@
 
     invoke-interface {v1, v2, v0}, Lcom/android/server/display/DisplayBlanker;->setDisplayStateLimitForEarlyWakeUp(II)V
 
-    .line 4953
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager$2;->this$1:Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;
 
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;->-$$Nest$fgetmEarlyWakeUpLock(Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;)Ljava/lang/Object;
@@ -72,7 +68,6 @@
 
     monitor-enter v0
 
-    .line 4954
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager$2;->this$1:Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;
 
@@ -80,12 +75,10 @@
 
     invoke-static {v1, v2}, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;->-$$Nest$fputmEarlyDisplayReadyLocked(Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;Z)V
 
-    .line 4955
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager$2;->this$1:Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;->-$$Nest$mupdateSuspendBlockerLocked(Lcom/android/server/display/DisplayPowerController2$EarlyWakeUpManager;)V
 
-    .line 4956
     monitor-exit v0
 
     return-void

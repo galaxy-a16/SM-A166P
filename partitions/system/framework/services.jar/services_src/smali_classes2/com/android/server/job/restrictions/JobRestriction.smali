@@ -17,19 +17,14 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;III)V
     .locals 0
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 47
     iput p3, p0, Lcom/android/server/job/restrictions/JobRestriction;->mPendingReason:I
 
-    .line 48
     iput p2, p0, Lcom/android/server/job/restrictions/JobRestriction;->mStopReason:I
 
-    .line 49
     iput p4, p0, Lcom/android/server/job/restrictions/JobRestriction;->mInternalReason:I
 
     return-void
@@ -43,14 +38,12 @@
 .method public dumpConstants(Landroid/util/proto/ProtoOutputStream;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final getInternalReason()I
     .locals 0
 
-    .line 89
     iget p0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mInternalReason:I
 
     return p0
@@ -59,7 +52,6 @@
 .method public final getPendingReason()I
     .locals 0
 
-    .line 79
     iget p0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mPendingReason:I
 
     return p0
@@ -68,7 +60,6 @@
 .method public final getStopReason()I
     .locals 0
 
-    .line 85
     iget p0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mStopReason:I
 
     return p0

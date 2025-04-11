@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usage/UsageStatsService;)V
     .locals 0
 
-    .line 3409
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$MyPackageMonitor;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usage/UsageStatsService;Lcom/android/server/usage/UsageStatsService$MyPackageMonitor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/usage/UsageStatsService$MyPackageMonitor;-><init>(Lcom/android/server/usage/UsageStatsService;)V
 
     return-void
@@ -33,12 +31,10 @@
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 4
 
-    .line 3412
     invoke-virtual {p0}, Lcom/android/internal/content/PackageMonitor;->getChangingUserId()I
 
     move-result v0
 
-    .line 3414
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$MyPackageMonitor;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-static {v0}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
@@ -51,7 +47,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3415
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$MyPackageMonitor;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     iget-object v1, v1, Lcom/android/server/usage/UsageStatsService;->mHandler:Landroid/os/Handler;
@@ -64,10 +59,8 @@
 
     move-result-object v0
 
-    .line 3416
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3418
     :cond_0
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$MyPackageMonitor;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -81,7 +74,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/server/usage/BroadcastResponseStatsTracker;->onPackageRemoved(Ljava/lang/String;I)V
 
-    .line 3419
     invoke-super {p0, p1, p2}, Lcom/android/internal/content/PackageMonitor;->onPackageRemoved(Ljava/lang/String;I)V
 
     return-void

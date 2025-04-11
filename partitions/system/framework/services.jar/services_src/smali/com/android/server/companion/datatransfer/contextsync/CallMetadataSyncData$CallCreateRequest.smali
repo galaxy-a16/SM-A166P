@@ -25,7 +25,6 @@
 .method public getAddress()Ljava/lang/String;
     .locals 0
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallCreateRequest;->mAddress:Ljava/lang/String;
 
     return-object p0
@@ -34,7 +33,6 @@
 .method public getFacilitator()Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
     .locals 0
 
-    .line 169
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallCreateRequest;->mFacilitator:Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     return-object p0
@@ -43,7 +41,6 @@
 .method public getId()Ljava/lang/String;
     .locals 0
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallCreateRequest;->mId:Ljava/lang/String;
 
     return-object p0
@@ -52,7 +49,6 @@
 .method public setAddress(Ljava/lang/String;)V
     .locals 0
 
-    .line 153
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallCreateRequest;->mAddress:Ljava/lang/String;
 
     return-void
@@ -61,7 +57,6 @@
 .method public setFacilitator(Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;)V
     .locals 0
 
-    .line 157
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallCreateRequest;->mFacilitator:Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallFacilitator;
 
     return-void
@@ -70,7 +65,6 @@
 .method public setId(Ljava/lang/String;)V
     .locals 0
 
-    .line 149
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/contextsync/CallMetadataSyncData$CallCreateRequest;->mId:Ljava/lang/String;
 
     return-void

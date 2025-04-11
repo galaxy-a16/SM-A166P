@@ -46,7 +46,6 @@
 .method public static toMsString(J)Ljava/lang/String;
     .locals 3
 
-    .line 1975
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,7 +82,6 @@
 .method public final buildOnFinishLog()Ljava/lang/String;
     .locals 5
 
-    .line 1979
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Finish Transition #"
@@ -96,7 +94,6 @@
 
     const-string v1, ": created at "
 
-    .line 1980
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mCreateWallTimeMs:J
@@ -109,7 +106,6 @@
 
     const-string v1, " collect-started="
 
-    .line 1981
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mCollectTimeNs:J
@@ -124,7 +120,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1982
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mRequestTimeNs:J
 
     const-wide/16 v3, 0x0
@@ -135,7 +130,6 @@
 
     const-string v1, " request-sent="
 
-    .line 1983
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mRequestTimeNs:J
@@ -153,7 +147,6 @@
     :cond_0
     const-string v1, " started="
 
-    .line 1985
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mStartTimeNs:J
@@ -170,7 +163,6 @@
 
     const-string v1, " ready="
 
-    .line 1986
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mReadyTimeNs:J
@@ -187,7 +179,6 @@
 
     const-string v1, " sent="
 
-    .line 1987
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mSendTimeNs:J
@@ -204,7 +195,6 @@
 
     const-string v1, " finished="
 
-    .line 1988
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mFinishTimeNs:J
@@ -219,7 +209,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1989
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -230,7 +219,6 @@
 .method public final buildOnSendLog()Ljava/lang/String;
     .locals 3
 
-    .line 1945
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Sent Transition #"
@@ -243,7 +231,6 @@
 
     const-string v1, " createdAt="
 
-    .line 1946
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mCreateWallTimeMs:J
@@ -254,21 +241,18 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1947
     iget-object v1, p0, Lcom/android/server/wm/TransitionController$Logger;->mRequest:Landroid/window/TransitionRequestInfo;
 
     if-eqz v1, :cond_0
 
     const-string v1, " via request="
 
-    .line 1948
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/android/server/wm/TransitionController$Logger;->mRequest:Landroid/window/TransitionRequestInfo;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 1950
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -280,7 +264,6 @@
 .method public logOnFinish()V
     .locals 4
 
-    .line 1993
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_TRANSITIONS_MIN_enabled:Z
 
     if-eqz v0, :cond_0
@@ -314,7 +297,6 @@
 .method public logOnSend()V
     .locals 5
 
-    .line 1968
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_TRANSITIONS_MIN_enabled:Z
 
     const/4 v1, 0x0
@@ -341,7 +323,6 @@
 
     invoke-static {v2, v4, v1, v3, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1969
     :cond_0
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_TRANSITIONS_MIN_enabled:Z
 
@@ -365,7 +346,6 @@
 
     invoke-static {v2, v4, v1, v3, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1970
     :cond_1
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_WINDOW_TRANSITIONS_MIN_enabled:Z
 
@@ -402,7 +382,6 @@
 .method public logOnSendAsync(Landroid/os/Handler;)V
     .locals 0
 
-    .line 1954
     invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
@@ -411,7 +390,6 @@
 .method public run()V
     .locals 2
 
-    .line 1960
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/TransitionController$Logger;->logOnSend()V
     :try_end_0
@@ -426,7 +404,6 @@
 
     const-string v1, "Failed to log transition"
 
-    .line 1963
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

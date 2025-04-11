@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,12 +37,10 @@
     :cond_1
     const-string p1, "INSECURE_PSWD_"
 
-    .line 105
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p1
 
-    .line 106
     array-length v0, p2
 
     array-length v1, p1
@@ -55,13 +52,11 @@
     :cond_2
     move v0, p0
 
-    .line 109
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_4
 
-    .line 110
     aget-byte v1, p2, v0
 
     aget-byte v2, p1, v0
@@ -86,7 +81,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 72
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result p0
@@ -98,7 +92,6 @@
 
     const-string/jumbo p1, "rootCertificateAlias is null or empty - use secure default value"
 
-    .line 73
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p1, "GoogleCloudKeyVaultServiceV1"
@@ -110,26 +103,22 @@
 .method public getRootCertificate(Ljava/lang/String;)Ljava/security/cert/X509Certificate;
     .locals 1
 
-    .line 56
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/recoverablekeystore/TestOnlyInsecureCertificateHelper;->getDefaultCertificateAliasIfEmpty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 57
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/recoverablekeystore/TestOnlyInsecureCertificateHelper;->isTestOnlyCertificateAlias(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 58
     invoke-static {}, Landroid/security/keystore/recovery/TrustedRootCertificates;->getTestOnlyInsecureCertificate()Ljava/security/cert/X509Certificate;
 
     move-result-object p0
 
     return-object p0
 
-    .line 62
     :cond_0
     invoke-static {p1}, Landroid/security/keystore/recovery/TrustedRootCertificates;->getRootCertificate(Ljava/lang/String;)Ljava/security/cert/X509Certificate;
 
@@ -139,7 +128,6 @@
 
     return-object p0
 
-    .line 64
     :cond_1
     new-instance p0, Landroid/os/ServiceSpecificException;
 
@@ -157,7 +145,6 @@
 
     const-string p0, "TEST_ONLY_INSECURE_CERTIFICATE_ALIAS"
 
-    .line 82
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -168,7 +155,6 @@
 .method public isValidRootCertificateAlias(Ljava/lang/String;)Z
     .locals 1
 
-    .line 86
     invoke-static {}, Landroid/security/keystore/recovery/TrustedRootCertificates;->getRootCertificates()Ljava/util/Map;
 
     move-result-object v0
@@ -179,7 +165,6 @@
 
     if-nez v0, :cond_1
 
-    .line 87
     invoke-virtual {p0, p1}, Lcom/android/server/locksettings/recoverablekeystore/TestOnlyInsecureCertificateHelper;->isTestOnlyCertificateAlias(Ljava/lang/String;)Z
 
     move-result p0
@@ -210,13 +195,11 @@
 
     return-object p0
 
-    .line 122
     :cond_0
     new-instance p0, Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 123
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -239,7 +222,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 124
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -250,21 +232,18 @@
 
     const-string v2, "INSECURE_KEY_ALIAS_KEY_MATERIAL_IS_NOT_PROTECTED_"
 
-    .line 126
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 127
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 128
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -289,10 +268,8 @@
 
     move-result-object v0
 
-    .line 127
     invoke-interface {p0, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

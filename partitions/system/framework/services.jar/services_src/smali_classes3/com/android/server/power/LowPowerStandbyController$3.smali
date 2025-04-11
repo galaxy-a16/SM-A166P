@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/LowPowerStandbyController;)V
     .locals 0
 
-    .line 198
     iput-object p1, p0, Lcom/android/server/power/LowPowerStandbyController$3;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 204
     iget-object p1, p0, Lcom/android/server/power/LowPowerStandbyController$3;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-static {p1}, Lcom/android/server/power/LowPowerStandbyController;->-$$Nest$fgetmLock(Lcom/android/server/power/LowPowerStandbyController;)Ljava/lang/Object;
@@ -33,13 +31,11 @@
 
     monitor-enter p1
 
-    .line 205
     :try_start_0
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$3;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-static {p0}, Lcom/android/server/power/LowPowerStandbyController;->-$$Nest$menqueueNotifyAllowlistChangedLocked(Lcom/android/server/power/LowPowerStandbyController;)V
 
-    .line 206
     monitor-exit p1
 
     return-void

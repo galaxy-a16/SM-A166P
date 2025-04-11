@@ -13,7 +13,6 @@
 
     goto :goto_0
 
-    .line 18
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -21,7 +20,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 19
     invoke-virtual {p0}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -34,7 +32,6 @@
 
     if-gtz v0, :cond_1
 
-    .line 20
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -45,7 +42,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/io/File;->setLastModified(J)Z
 
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -64,7 +60,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 22
     invoke-virtual {p0}, Ljava/io/File;->lastModified()J
 
     move-result-wide v1
@@ -77,10 +72,8 @@
 
     const-string v0, "PackageCacher"
 
-    .line 21
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->lastModified()J
 

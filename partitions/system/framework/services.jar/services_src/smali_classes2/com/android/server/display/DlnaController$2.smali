@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/DlnaController;)V
     .locals 0
 
-    .line 91
     iput-object p1, p0, Lcom/android/server/display/DlnaController$2;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public run()V
     .locals 4
 
-    .line 94
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.intent.action.DLNA_STATUS_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 95
     iget-object v1, p0, Lcom/android/server/display/DlnaController$2;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-static {v1}, Lcom/android/server/display/DlnaController;->-$$Nest$fgetmDevice(Lcom/android/server/display/DlnaController;)Landroid/hardware/display/SemDlnaDevice;
@@ -47,15 +44,12 @@
 
     const-string/jumbo v2, "status"
 
-    .line 96
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo v2, "state"
 
-    .line 97
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 98
     iget-object v2, p0, Lcom/android/server/display/DlnaController$2;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-static {v2}, Lcom/android/server/display/DlnaController;->-$$Nest$fgetmDevice(Lcom/android/server/display/DlnaController;)Landroid/hardware/display/SemDlnaDevice;
@@ -70,7 +64,6 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 99
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +82,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     iget-object p0, p0, Lcom/android/server/display/DlnaController$2;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-static {p0}, Lcom/android/server/display/DlnaController;->-$$Nest$fgetmContext(Lcom/android/server/display/DlnaController;)Landroid/content/Context;

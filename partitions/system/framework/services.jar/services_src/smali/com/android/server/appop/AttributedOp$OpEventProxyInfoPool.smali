@@ -7,7 +7,6 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 863
     invoke-direct {p0, p1}, Landroid/util/Pools$SimplePool;-><init>(I)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public acquire(ILjava/lang/String;Ljava/lang/String;)Landroid/app/AppOpsManager$OpEventProxyInfo;
     .locals 0
 
-    .line 869
     invoke-virtual {p0}, Landroid/util/Pools$SimplePool;->acquire()Ljava/lang/Object;
 
     move-result-object p0
@@ -27,12 +25,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 871
     invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager$OpEventProxyInfo;->reinit(ILjava/lang/String;Ljava/lang/String;)V
 
     return-object p0
 
-    .line 875
     :cond_0
     new-instance p0, Landroid/app/AppOpsManager$OpEventProxyInfo;
 

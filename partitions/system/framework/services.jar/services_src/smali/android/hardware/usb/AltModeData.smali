@@ -20,7 +20,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 51
     new-instance v0, Landroid/hardware/usb/AltModeData$1;
 
     invoke-direct {v0}, Landroid/hardware/usb/AltModeData$1;-><init>()V
@@ -33,10 +32,8 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     invoke-virtual {p0, p1}, Landroid/hardware/usb/AltModeData;->readFromParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -45,7 +42,6 @@
 .method public synthetic constructor <init>(Landroid/os/Parcel;Landroid/hardware/usb/AltModeData-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Landroid/hardware/usb/AltModeData;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -56,7 +52,6 @@
 .method public final _assertTag(I)V
     .locals 3
 
-    .line 104
     invoke-virtual {p0}, Landroid/hardware/usb/AltModeData;->getTag()I
 
     move-result v0
@@ -65,7 +60,6 @@
 
     return-void
 
-    .line 105
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -113,10 +107,8 @@
 .method public final _set(ILjava/lang/Object;)V
     .locals 0
 
-    .line 117
     iput p1, p0, Landroid/hardware/usb/AltModeData;->_tag:I
 
-    .line 118
     iput-object p2, p0, Landroid/hardware/usb/AltModeData;->_value:Ljava/lang/Object;
 
     return-void
@@ -131,7 +123,6 @@
 
     return-object p0
 
-    .line 113
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -157,7 +148,6 @@
 .method public describeContents()I
     .locals 2
 
-    .line 88
     invoke-virtual {p0}, Landroid/hardware/usb/AltModeData;->getTag()I
 
     move-result v0
@@ -168,7 +158,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/usb/AltModeData;->getDisplayPortAltModeData()Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;
 
@@ -193,13 +182,11 @@
 
     return p0
 
-    .line 97
     :cond_0
     instance-of v0, p1, Landroid/os/Parcelable;
 
     if-eqz v0, :cond_1
 
-    .line 98
     check-cast p1, Landroid/os/Parcelable;
 
     invoke-interface {p1}, Landroid/os/Parcelable;->describeContents()I
@@ -215,10 +202,8 @@
 
     const/4 v0, 0x0
 
-    .line 38
     invoke-virtual {p0, v0}, Landroid/hardware/usb/AltModeData;->_assertTag(I)V
 
-    .line 39
     iget-object p0, p0, Landroid/hardware/usb/AltModeData;->_value:Ljava/lang/Object;
 
     check-cast p0, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;
@@ -229,7 +214,6 @@
 .method public final getStability()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -238,7 +222,6 @@
 .method public getTag()I
     .locals 0
 
-    .line 28
     iget p0, p0, Landroid/hardware/usb/AltModeData;->_tag:I
 
     return p0
@@ -247,14 +230,12 @@
 .method public readFromParcel(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 78
     sget-object v1, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
@@ -263,12 +244,10 @@
 
     check-cast p1, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;
 
-    .line 79
     invoke-virtual {p0, v0, p1}, Landroid/hardware/usb/AltModeData;->_set(ILjava/lang/Object;)V
 
     return-void
 
-    .line 82
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -294,19 +273,16 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 64
     iget v0, p0, Landroid/hardware/usb/AltModeData;->_tag:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 65
     iget v0, p0, Landroid/hardware/usb/AltModeData;->_tag:I
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 67
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/usb/AltModeData;->getDisplayPortAltModeData()Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;
 

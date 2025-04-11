@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/dex/ArtManagerService;)V
     .locals 0
 
-    .line 777
     iput-object p1, p0, Lcom/android/server/pm/dex/ArtManagerService$ArtManagerInternalImpl;->this$0:Lcom/android/server/pm/dex/ArtManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/dex/ArtManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/dex/ArtManagerService;Lcom/android/server/pm/dex/ArtManagerService$ArtManagerInternalImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/dex/ArtManagerService$ArtManagerInternalImpl;-><init>(Lcom/android/server/pm/dex/ArtManagerService;)V
 
     return-void
@@ -35,7 +33,6 @@
 
     const-string p0, "ArtManagerInternalImpl"
 
-    .line 832
     invoke-static {p3, p4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p3
@@ -50,7 +47,6 @@
 
     const-string p2, "/data/misc/iorapd"
 
-    .line 830
     invoke-static {p2, p1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object p1
@@ -60,19 +56,16 @@
     :try_start_0
     new-array p3, p2, [Ljava/nio/file/LinkOption;
 
-    .line 837
     invoke-static {p1, p3}, Ljava/nio/file/Files;->exists(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
 
     move-result p3
 
-    .line 838
     invoke-static {}, Lcom/android/server/pm/dex/ArtManagerService;->-$$Nest$sfgetDEBUG()Z
 
     move-result p4
 
     if-eqz p4, :cond_1
 
-    .line 839
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,19 +97,16 @@
     :cond_1
     if-eqz p3, :cond_4
 
-    .line 842
     invoke-static {p1}, Ljava/nio/file/Files;->size(Ljava/nio/file/Path;)J
 
     move-result-wide p3
 
-    .line 843
     invoke-static {}, Lcom/android/server/pm/dex/ArtManagerService;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 844
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,7 +153,6 @@
     :catch_0
     move-exception p1
 
-    .line 850
     invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -180,7 +169,6 @@
 
     const-string v1, "error"
 
-    .line 784
     iget-object v2, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     const-string v3, "android"
@@ -191,21 +179,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 788
     invoke-static {}, Landroid/content/pm/dex/PackageOptimizationInfo;->createWithNoInfo()Landroid/content/pm/dex/PackageOptimizationInfo;
 
     move-result-object p0
 
     return-object p0
 
-    .line 794
     :cond_0
     :try_start_0
     invoke-static {p2}, Ldalvik/system/VMRuntime;->getInstructionSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 796
     invoke-virtual {p1}, Landroid/content/pm/ApplicationInfo;->getBaseCodePath()Ljava/lang/String;
 
     move-result-object v3
@@ -214,12 +199,10 @@
 
     move-result-object v2
 
-    .line 797
     invoke-virtual {v2}, Ldalvik/system/DexFile$OptimizationInfo;->getStatus()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 798
     invoke-virtual {v2}, Ldalvik/system/DexFile$OptimizationInfo;->getReason()Ljava/lang/String;
 
     move-result-object v1
@@ -236,7 +219,6 @@
     :catch_0
     move-exception v2
 
-    .line 804
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,7 +250,6 @@
     :catch_1
     move-exception p2
 
-    .line 800
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,7 +273,6 @@
     :goto_0
     move-object p2, v1
 
-    .line 810
     :goto_1
     iget-object v0, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -304,7 +284,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 811
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -319,18 +298,15 @@
 
     move-result-object v1
 
-    .line 814
     :cond_1
     invoke-static {v1}, Lcom/android/server/pm/dex/ArtManagerService;->-$$Nest$smgetCompilationFilterTronValue(Ljava/lang/String;)I
 
     move-result p0
 
-    .line 815
     invoke-static {p2}, Lcom/android/server/pm/dex/ArtManagerService;->-$$Nest$smgetCompilationReasonTronValue(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 817
     new-instance p2, Landroid/content/pm/dex/PackageOptimizationInfo;
 
     invoke-direct {p2, p0, p1}, Landroid/content/pm/dex/PackageOptimizationInfo;-><init>(II)V

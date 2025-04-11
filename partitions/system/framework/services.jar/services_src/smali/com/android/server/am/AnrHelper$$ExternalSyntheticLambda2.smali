@@ -20,7 +20,6 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/am/AnrHelper;->$r8$lambda$cvFEmS7kTDYE9oqF2kZkefBiQlE(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
     move-result-object p0

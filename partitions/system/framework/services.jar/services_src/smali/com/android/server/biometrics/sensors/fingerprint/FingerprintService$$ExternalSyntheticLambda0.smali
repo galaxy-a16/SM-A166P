@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService;->$r8$lambda$86Dbe1GK4etX-LZ3_TtqmqWU2Ag()Landroid/hardware/biometrics/IBiometricService;
 
     move-result-object p0

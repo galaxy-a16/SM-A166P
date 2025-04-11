@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/ShakeEventListener;)V
     .locals 0
 
-    .line 120
     iput-object p1, p0, Lcom/samsung/android/camera/ShakeEventListener$1;->this$0:Lcom/samsung/android/camera/ShakeEventListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 8
 
-    .line 123
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener$1;->this$0:Lcom/samsung/android/camera/ShakeEventListener;
 
     invoke-virtual {v0}, Lcom/samsung/android/camera/ShakeEventListener;->isSupported()Z
@@ -40,15 +38,12 @@
 
     const-string v1, "Force shake off, possible sensor crash"
 
-    .line 124
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     sget-object v0, Lcom/samsung/android/camera/Logger$ID;->SHAKE_EVENT_LISTENER:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {v0, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 126
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener$1;->this$0:Lcom/samsung/android/camera/ShakeEventListener;
 
     new-instance v7, Landroid/hardware/SensorEvent;

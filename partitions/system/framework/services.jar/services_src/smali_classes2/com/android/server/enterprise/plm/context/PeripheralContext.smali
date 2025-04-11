@@ -11,14 +11,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 18
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/plm/context/ProcessContext;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public getDisplayName()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "PeripheralService"
 
     return-object p0
@@ -38,7 +35,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "com.samsung.android.peripheral.framework"
 
     return-object p0
@@ -47,7 +43,6 @@
 .method public getServiceName()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "com.samsung.android.peripheral.framework.core.PeripheralService"
 
     return-object p0
@@ -56,17 +51,14 @@
 .method public needToKeepProcessAlive(Lcom/android/server/enterprise/plm/IStateDelegate;)Z
     .locals 3
 
-    .line 43
     invoke-interface {p1}, Lcom/android/server/enterprise/plm/IStateDelegate;->isKlmActivated()Z
 
     move-result p0
 
-    .line 44
     invoke-interface {p1}, Lcom/android/server/enterprise/plm/IStateDelegate;->isEdmServiceReady()Z
 
     move-result p1
 
-    .line 45
     sget-object v0, Lcom/android/server/enterprise/plm/context/PeripheralContext;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,7 +98,6 @@
     :goto_0
     const/4 p0, 0x1
 
-    .line 49
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -130,7 +121,6 @@
 .method public needToSupportThisDevice()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

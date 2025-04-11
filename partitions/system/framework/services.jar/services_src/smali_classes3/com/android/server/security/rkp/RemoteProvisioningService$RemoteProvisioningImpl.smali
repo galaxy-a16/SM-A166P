@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/security/rkp/RemoteProvisioningService;)V
     .locals 0
 
-    .line 88
     iput-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningService$RemoteProvisioningImpl;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningService;
 
     invoke-direct {p0}, Landroid/security/rkp/IRemoteProvisioning$Stub;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/security/rkp/RemoteProvisioningService;Lcom/android/server/security/rkp/RemoteProvisioningService$RemoteProvisioningImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningService$RemoteProvisioningImpl;-><init>(Lcom/android/server/security/rkp/RemoteProvisioningService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningService$RemoteProvisioningImpl;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -50,7 +47,6 @@
 
     return-void
 
-    .line 108
     :cond_0
     new-instance p0, Lcom/android/server/security/rkp/RemoteProvisioningShellCommand;
 
@@ -64,17 +60,14 @@
 .method public getRegistration(Ljava/lang/String;Landroid/security/rkp/IGetRegistrationCallback;)V
     .locals 8
 
-    .line 92
     invoke-static {}, Landroid/os/Binder;->getCallingUidOrThrow()I
 
     move-result v1
 
-    .line 93
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningService$RemoteProvisioningImpl;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -88,7 +81,6 @@
     :try_start_0
     const-string v0, "RemoteProvisionSysSvc"
 
-    .line 96
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,7 +101,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningService$RemoteProvisioningImpl;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -130,7 +121,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 101
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -140,14 +130,12 @@
 
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 102
     throw p0
 .end method
 
 .method public handleShellCommand(Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;[Ljava/lang/String;)I
     .locals 6
 
-    .line 114
     new-instance v0, Lcom/android/server/security/rkp/RemoteProvisioningShellCommand;
 
     invoke-direct {v0}, Lcom/android/server/security/rkp/RemoteProvisioningShellCommand;-><init>()V
@@ -156,7 +144,6 @@
 
     move-result-object v2
 
-    .line 115
     invoke-virtual {p2}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v3
@@ -169,7 +156,6 @@
 
     move-object v5, p4
 
-    .line 114
     invoke-virtual/range {v0 .. v5}, Landroid/os/ShellCommand;->exec(Landroid/os/Binder;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;)I
 
     move-result p0

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/companion/virtual/VirtualDeviceImpl;)V
     .locals 0
 
-    .line 166
     iput-object p1, p0, Lcom/android/server/companion/virtual/VirtualDeviceImpl$1;->this$0:Lcom/android/server/companion/virtual/VirtualDeviceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDisplayEmpty(I)V
     .locals 1
 
-    .line 191
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/VirtualDeviceImpl$1;->this$0:Lcom/android/server/companion/virtual/VirtualDeviceImpl;
 
@@ -48,7 +46,6 @@
 
     const-string v0, "Unable to call mActivityListener"
 
-    .line 193
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -58,7 +55,6 @@
 .method public onTopActivityChanged(ILandroid/content/ComponentName;)V
     .locals 1
 
-    .line 171
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/VirtualDeviceImpl$1;->this$0:Lcom/android/server/companion/virtual/VirtualDeviceImpl;
 
@@ -81,7 +77,6 @@
 
     const-string p2, "Unable to call mActivityListener"
 
-    .line 174
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -91,7 +86,6 @@
 .method public onTopActivityChanged(ILandroid/content/ComponentName;I)V
     .locals 0
 
-    .line 182
     :try_start_0
     iget-object p0, p0, Lcom/android/server/companion/virtual/VirtualDeviceImpl$1;->this$0:Lcom/android/server/companion/virtual/VirtualDeviceImpl;
 
@@ -112,7 +106,6 @@
 
     const-string p2, "Unable to call mActivityListener"
 
-    .line 184
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

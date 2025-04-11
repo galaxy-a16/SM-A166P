@@ -7,7 +7,6 @@
 .method public static parser(Lcom/android/modules/utils/TypedXmlPullParser;)Lcom/android/server/pm/SettingsXml$ReadSection;
     .locals 1
 
-    .line 65
     new-instance v0, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/SettingsXml$ReadSectionImpl;-><init>(Lcom/android/modules/utils/TypedXmlPullParser;)V
@@ -18,7 +17,6 @@
 .method public static serializer(Lcom/android/modules/utils/TypedXmlSerializer;)Lcom/android/server/pm/SettingsXml$Serializer;
     .locals 2
 
-    .line 60
     new-instance v0, Lcom/android/server/pm/SettingsXml$Serializer;
 
     const/4 v1, 0x0

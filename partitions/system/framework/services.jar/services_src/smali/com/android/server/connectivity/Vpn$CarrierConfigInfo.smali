@@ -17,19 +17,14 @@
 .method public constructor <init>(Ljava/lang/String;III)V
     .locals 0
 
-    .line 601
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 602
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;->mccMnc:Ljava/lang/String;
 
-    .line 603
     iput p2, p0, Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;->keepaliveDelaySec:I
 
-    .line 604
     iput p3, p0, Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;->encapType:I
 
-    .line 605
     iput p4, p0, Lcom/android/server/connectivity/Vpn$CarrierConfigInfo;->ipVersion:I
 
     return-void
@@ -40,7 +35,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 610
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

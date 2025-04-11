@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowManagerInternal;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/wm/WindowManagerInternal;
@@ -27,7 +26,6 @@
 .method public final getDisplayImePolicy(I)I
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/inputmethod/ImeVisibilityStateComputer$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/wm/WindowManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowManagerInternal;->getDisplayImePolicy(I)I

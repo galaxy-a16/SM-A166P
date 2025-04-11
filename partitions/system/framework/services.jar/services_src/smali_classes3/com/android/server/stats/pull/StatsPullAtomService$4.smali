@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/stats/pull/StatsPullAtomService;)V
     .locals 0
 
-    .line 3922
     iput-object p1, p0, Lcom/android/server/stats/pull/StatsPullAtomService$4;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 3
 
-    .line 3926
     :try_start_0
     iget-object v0, p0, Lcom/android/server/stats/pull/StatsPullAtomService$4;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
@@ -44,10 +42,8 @@
 
     const-string v2, "AppOps sampling ratio estimation failed: "
 
-    .line 3928
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3929
     iget-object v0, p0, Lcom/android/server/stats/pull/StatsPullAtomService$4;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
     invoke-static {v0}, Lcom/android/server/stats/pull/StatsPullAtomService;->-$$Nest$fgetmAttributedAppOpsLock(Lcom/android/server/stats/pull/StatsPullAtomService;)Ljava/lang/Object;
@@ -56,7 +52,6 @@
 
     monitor-enter v0
 
-    .line 3930
     :try_start_1
     iget-object p0, p0, Lcom/android/server/stats/pull/StatsPullAtomService$4;->this$0:Lcom/android/server/stats/pull/StatsPullAtomService;
 
@@ -72,7 +67,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/stats/pull/StatsPullAtomService;->-$$Nest$fputmAppOpsSamplingRate(Lcom/android/server/stats/pull/StatsPullAtomService;I)V
 
-    .line 3931
     monitor-exit v0
 
     :goto_0

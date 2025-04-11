@@ -30,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/AppErrors;Landroid/app/ApplicationErrorReport$CrashInfo;Ljava/lang/String;ILcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppErrors$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/AppErrors;
@@ -59,7 +58,6 @@
 .method public final run()V
     .locals 9
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/am/AppErrors$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/AppErrors;
 
     iget-object v1, p0, Lcom/android/server/am/AppErrors$$ExternalSyntheticLambda0;->f$1:Landroid/app/ApplicationErrorReport$CrashInfo;

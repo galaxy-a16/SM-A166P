@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/GmsAlarmManager;)V
     .locals 0
 
-    .line 312
     iput-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$BatteryChargingReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/alarm/GmsAlarmManager;Lcom/android/server/alarm/GmsAlarmManager$BatteryChargingReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/alarm/GmsAlarmManager$BatteryChargingReceiver;-><init>(Lcom/android/server/alarm/GmsAlarmManager;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 315
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -45,7 +42,6 @@
     :cond_0
     const-string p1, "android.os.action.CHARGING"
 
-    .line 316
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -58,7 +54,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 317
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$BatteryChargingReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p1}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fgetmHandler(Lcom/android/server/alarm/GmsAlarmManager;)Lcom/android/server/alarm/GmsAlarmManager$GmsHandler;
@@ -69,7 +64,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 318
     iget-object p0, p0, Lcom/android/server/alarm/GmsAlarmManager$BatteryChargingReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p0}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fgetmHandler(Lcom/android/server/alarm/GmsAlarmManager;)Lcom/android/server/alarm/GmsAlarmManager$GmsHandler;
@@ -80,7 +74,6 @@
 
     goto :goto_0
 
-    .line 320
     :cond_1
     iget-object p1, p0, Lcom/android/server/alarm/GmsAlarmManager$BatteryChargingReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
@@ -92,7 +85,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 321
     iget-object p0, p0, Lcom/android/server/alarm/GmsAlarmManager$BatteryChargingReceiver;->this$0:Lcom/android/server/alarm/GmsAlarmManager;
 
     invoke-static {p0}, Lcom/android/server/alarm/GmsAlarmManager;->-$$Nest$fgetmHandler(Lcom/android/server/alarm/GmsAlarmManager;)Lcom/android/server/alarm/GmsAlarmManager$GmsHandler;

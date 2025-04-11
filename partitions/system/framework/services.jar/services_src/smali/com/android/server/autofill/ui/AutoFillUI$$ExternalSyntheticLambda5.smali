@@ -32,7 +32,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/ui/AutoFillUI;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Landroid/service/autofill/FillResponse;Landroid/view/autofill/AutofillId;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Landroid/content/ComponentName;Lcom/android/server/autofill/PresentationStatsEventLogger;Landroid/metrics/LogMaker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/ui/AutoFillUI$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/autofill/ui/AutoFillUI;
@@ -63,7 +62,6 @@
 .method public final run()V
     .locals 10
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/autofill/ui/AutoFillUI$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/autofill/ui/AutoFillUI;
 
     iget-object v1, p0, Lcom/android/server/autofill/ui/AutoFillUI$$ExternalSyntheticLambda5;->f$1:Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;

@@ -63,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$maddEvent(Lcom/samsung/android/knox/analytics/service/EventQueue;Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/knox/analytics/service/EventQueue;->addEvent(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;I)V
 
     return-void
@@ -72,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$menqueueEvent(Lcom/samsung/android/knox/analytics/service/EventQueue;Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->enqueueEvent(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 
     return-void
@@ -81,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$msaveCachedLogs(Lcom/samsung/android/knox/analytics/service/EventQueue;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->saveCachedLogs()V
 
     return-void
@@ -90,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$mstop(Lcom/samsung/android/knox/analytics/service/EventQueue;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->stop()V
 
     return-void
@@ -99,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$mwaitVersioningCompleted(Lcom/samsung/android/knox/analytics/service/EventQueue;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->waitVersioningCompleted()V
 
     return-void
@@ -108,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -117,7 +111,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,10 +139,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -158,44 +149,36 @@
 
     const/4 v0, 0x0
 
-    .line 42
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mIsStarted:Z
 
-    .line 44
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mVersioningCompletedLock:Ljava/lang/Object;
 
-    .line 45
     iput-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mVersioningCompleted:Z
 
-    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
-    .line 51
     new-instance v0, Lcom/samsung/android/knox/analytics/service/EventQueue$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/knox/analytics/service/EventQueue$1;-><init>(Lcom/samsung/android/knox/analytics/service/EventQueue;)V
 
     iput-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mShutdownReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 102
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string v1, "constructor()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mContext:Landroid/content/Context;
 
-    .line 104
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mShutdownReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v0, Landroid/content/IntentFilter;
@@ -214,14 +197,12 @@
 .method public final addBulkEvents()V
     .locals 6
 
-    .line 233
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string v1, "addBulkEvents()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 234
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/samsung/android/knox/analytics/util/KnoxAnalyticsQueryResolver;->getLastEventId(Landroid/content/Context;)J
@@ -232,15 +213,12 @@
 
     add-long/2addr v1, v3
 
-    .line 236
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 237
     iget-object v4, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
-    .line 238
     invoke-static {v1, v2, v4}, Lcom/samsung/android/knox/analytics/util/KnoxAnalyticsDataConverter;->formatBulkEvents(JLjava/util/List;)Ljava/util/List;
 
     move-result-object v4
@@ -249,10 +227,8 @@
 
     const-string v5, "eventsList"
 
-    .line 237
     invoke-virtual {v3, v5, v4}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 239
     iget-object v4, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mContext:Landroid/content/Context;
 
     const/4 v5, 0x1
@@ -269,12 +245,10 @@
 
     const-string p0, "addBulkEvents(): error adding events, aborting."
 
-    .line 243
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 246
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
@@ -288,7 +262,6 @@
 
     const/4 v0, 0x0
 
-    .line 203
     invoke-virtual {p0, p1, p2, v0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->addEvent(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;IZ)V
 
     return-void
@@ -299,7 +272,6 @@
 
     if-nez p3, :cond_1
 
-    .line 208
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->checkEventFeatureWhitelisted(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)Z
 
     move-result p3
@@ -312,7 +284,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 209
     sget-object p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string p1, "addEvent(): feature blacklisted, discarding event."
@@ -321,14 +292,11 @@
 
     return-void
 
-    .line 213
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->checkFillUserType(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 
-    .line 214
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->checkFillPackageName(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 
-    .line 217
     :cond_1
     iget-object p3, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mContext:Landroid/content/Context;
 
@@ -342,12 +310,10 @@
 
     iput-wide v0, p1, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->eventId:J
 
-    .line 220
     invoke-static {p1}, Lcom/samsung/android/knox/analytics/util/KnoxAnalyticsDataConverter;->toJSONString(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 222
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mContext:Landroid/content/Context;
 
     iget-wide v0, p1, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->eventId:J
@@ -362,7 +328,6 @@
 
     if-nez p0, :cond_2
 
-    .line 227
     sget-object p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string p1, "addEvent(): error adding event, aborting."
@@ -376,7 +341,6 @@
 .method public final cancelMessageHandler()V
     .locals 1
 
-    .line 189
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mMessageDelayHandler:Landroid/os/Handler;
 
     const/4 v0, 0x0
@@ -389,14 +353,12 @@
 .method public final checkEventFeatureBlacklisted(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)Z
     .locals 4
 
-    .line 250
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string v1, "checkEventFeatureBlacklisted()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 251
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mFeatureBlacklistObserver:Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;
 
     const/4 v1, 0x0
@@ -405,12 +367,10 @@
 
     const-string p0, "Features Blacklist Observer is null, can\'t check!"
 
-    .line 252
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 255
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->getFeatureBlacklist()Ljava/util/List;
 
@@ -420,12 +380,10 @@
 
     const-string p0, "Features Blacklist is null, can\'t check!"
 
-    .line 257
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 261
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -444,7 +402,6 @@
 
     check-cast v0, Lcom/samsung/android/knox/analytics/util/BlacklistedFeature;
 
-    .line 262
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getFeature()Ljava/lang/String;
 
     move-result-object v2
@@ -470,14 +427,12 @@
 .method public final checkEventFeatureWhitelisted(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)Z
     .locals 3
 
-    .line 270
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string v1, "checkEventFeatureWhitelisted()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 271
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mFeatureWhitelistObserver:Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;
 
     const/4 v1, 0x0
@@ -486,12 +441,10 @@
 
     const-string p0, "Features Whitelist Observer is null, can\'t check!"
 
-    .line 272
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 275
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;->getFeatureWhitelist()Ljava/util/List;
 
@@ -501,12 +454,10 @@
 
     const-string p0, "Features Whitelist is null, can\'t check!"
 
-    .line 277
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 282
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -525,7 +476,6 @@
 
     check-cast v0, Lcom/samsung/android/knox/analytics/util/WhitelistedFeature;
 
-    .line 283
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getFeature()Ljava/lang/String;
 
     move-result-object v2
@@ -536,7 +486,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 285
     invoke-virtual {v0}, Lcom/samsung/android/knox/analytics/util/WhitelistedFeature;->getEnableApi()Lcom/samsung/android/knox/analytics/util/WhitelistedFeature$EnableApi;
 
     move-result-object p0
@@ -556,14 +505,12 @@
 .method public final checkFillPackageName(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
     .locals 5
 
-    .line 315
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string v1, "checkFillPackageName()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 316
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getPayload()Landroid/os/Bundle;
 
     move-result-object v1
@@ -578,7 +525,6 @@
 
     return-void
 
-    .line 319
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getPayload()Landroid/os/Bundle;
 
@@ -590,7 +536,6 @@
 
     move-result v1
 
-    .line 320
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getPayload()Landroid/os/Bundle;
 
     move-result-object v4
@@ -601,12 +546,10 @@
 
     const-string p0, "checkFillPackageName() - invalid pid."
 
-    .line 322
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 325
     :cond_1
     invoke-virtual {p0, v1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->getAppNameByPID(I)Ljava/lang/String;
 
@@ -614,7 +557,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 326
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -626,7 +568,6 @@
     :cond_2
     const-string/jumbo v0, "pN"
 
-    .line 329
     invoke-virtual {p1, v0, p0}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
@@ -637,14 +578,12 @@
 .method public final checkFillUserType(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
     .locals 5
 
-    .line 295
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string v1, "checkFillUserType()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 296
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getPayload()Landroid/os/Bundle;
 
     move-result-object v1
@@ -659,7 +598,6 @@
 
     return-void
 
-    .line 299
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getPayload()Landroid/os/Bundle;
 
@@ -671,7 +609,6 @@
 
     move-result v1
 
-    .line 300
     invoke-virtual {p1}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->getPayload()Landroid/os/Bundle;
 
     move-result-object v4
@@ -680,7 +617,6 @@
 
     if-ne v1, v3, :cond_1
 
-    .line 302
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -699,7 +635,6 @@
 
     return-void
 
-    .line 305
     :cond_1
     new-instance v2, Lcom/samsung/android/knox/analytics/util/UserManagerHelper;
 
@@ -707,7 +642,6 @@
 
     invoke-direct {v2, p0}, Lcom/samsung/android/knox/analytics/util/UserManagerHelper;-><init>(Landroid/content/Context;)V
 
-    .line 306
     invoke-virtual {v2, v1}, Lcom/samsung/android/knox/analytics/util/UserManagerHelper;->getUserType(I)I
 
     move-result p0
@@ -716,7 +650,6 @@
 
     const-string p0, "checkFillUserType() - Couldn\'t get userType"
 
-    .line 308
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -724,7 +657,6 @@
     :cond_2
     const-string/jumbo v0, "uT"
 
-    .line 311
     invoke-virtual {p1, v0, p0}, Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;->setProperty(Ljava/lang/String;I)V
 
     return-void
@@ -733,7 +665,6 @@
 .method public final enqueueEvent(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
     .locals 1
 
-    .line 157
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->checkEventFeatureWhitelisted(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)Z
 
     move-result v0
@@ -746,7 +677,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 158
     sget-object p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string p1, "enqueueEvent(): feature blacklisted, discarding event."
@@ -755,19 +685,15 @@
 
     return-void
 
-    .line 162
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->checkFillUserType(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 
-    .line 163
     invoke-virtual {p0, p1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->checkFillPackageName(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
 
-    .line 165
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 166
     iget-object p1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -778,12 +704,10 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 167
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->saveCachedLogs()V
 
     goto :goto_0
 
-    .line 169
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->restartMessageHandler()V
 
@@ -794,7 +718,6 @@
 .method public final getAppNameByPID(I)Ljava/lang/String;
     .locals 3
 
-    .line 333
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -817,19 +740,16 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 334
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mContext:Landroid/content/Context;
 
     const-string v1, "activity"
 
-    .line 335
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 336
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object p0
@@ -840,12 +760,10 @@
 
     const-string p0, "getAppNameByPID(): nill processInfoList"
 
-    .line 338
     invoke-static {v0, p0}, Lcom/samsung/android/knox/analytics/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
-    .line 341
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -866,17 +784,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 342
     iget v2, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v2, p1, :cond_1
 
-    .line 343
     iget-object p0, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     return-object p0
 
-    .line 346
     :cond_2
     sget-object p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
@@ -890,7 +805,6 @@
 .method public isStarted()Z
     .locals 0
 
-    .line 351
     iget-boolean p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mIsStarted:Z
 
     return p0
@@ -899,30 +813,25 @@
 .method public notifyVersioningCompleted()V
     .locals 2
 
-    .line 370
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "notifyVersioningCompleted()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 371
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mVersioningCompletedLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
-    .line 372
     :try_start_0
     iput-boolean v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mVersioningCompleted:Z
 
-    .line 373
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mVersioningCompletedLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 374
     monitor-exit v0
 
     return-void
@@ -940,41 +849,33 @@
 .method public postMessage(ILcom/samsung/android/knox/analytics/KnoxAnalyticsData;)V
     .locals 3
 
-    .line 145
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mDeactivationLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 146
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandler:Lcom/samsung/android/knox/analytics/service/EventQueue$EventHandler;
 
     if-eqz v1, :cond_0
 
-    .line 147
     invoke-virtual {v1, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 148
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "KnoxAnalyticsData"
 
-    .line 149
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 150
     invoke-virtual {p1, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 151
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandler:Lcom/samsung/android/knox/analytics/service/EventQueue$EventHandler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 153
     :cond_0
     monitor-exit v0
 
@@ -993,10 +894,8 @@
 .method public final restartMessageHandler()V
     .locals 4
 
-    .line 193
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->cancelMessageHandler()V
 
-    .line 194
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mMessageDelayHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/samsung/android/knox/analytics/service/EventQueue$2;
@@ -1015,7 +914,6 @@
 
     monitor-enter p0
 
-    .line 174
     :try_start_0
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
@@ -1041,7 +939,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 175
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1052,17 +949,14 @@
 
     if-nez v0, :cond_0
 
-    .line 176
     monitor-exit p0
 
     return-void
 
-    .line 179
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->cancelMessageHandler()V
 
-    .line 180
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1073,12 +967,10 @@
 
     if-le v0, v1, :cond_1
 
-    .line 181
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->addBulkEvents()V
 
     goto :goto_0
 
-    .line 183
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
@@ -1092,14 +984,12 @@
 
     invoke-virtual {p0, v0, v1, v1}, Lcom/samsung/android/knox/analytics/service/EventQueue;->addEvent(Lcom/samsung/android/knox/analytics/KnoxAnalyticsData;IZ)V
 
-    .line 184
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mEventsCache:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 186
     :goto_0
     monitor-exit p0
 
@@ -1116,12 +1006,10 @@
 .method public start()V
     .locals 3
 
-    .line 108
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mDeactivationLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 109
     :try_start_0
     sget-object v1, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
@@ -1129,12 +1017,10 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 110
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandlerThread:Landroid/os/HandlerThread;
 
     if-nez v1, :cond_0
 
-    .line 111
     new-instance v1, Landroid/os/HandlerThread;
 
     const-string v2, "EventQueue"
@@ -1143,16 +1029,13 @@
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 112
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 114
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandler:Lcom/samsung/android/knox/analytics/service/EventQueue$EventHandler;
 
     if-nez v1, :cond_1
 
-    .line 115
     new-instance v1, Lcom/samsung/android/knox/analytics/service/EventQueue$EventHandler;
 
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandlerThread:Landroid/os/HandlerThread;
@@ -1165,13 +1048,11 @@
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandler:Lcom/samsung/android/knox/analytics/service/EventQueue$EventHandler;
 
-    .line 117
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mMessageDelayHandler:Landroid/os/Handler;
 
     if-nez v1, :cond_2
 
-    .line 118
     new-instance v1, Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandlerThread:Landroid/os/HandlerThread;
@@ -1184,13 +1065,11 @@
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mMessageDelayHandler:Landroid/os/Handler;
 
-    .line 120
     :cond_2
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mFeatureBlacklistObserver:Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;
 
     if-nez v1, :cond_3
 
-    .line 121
     new-instance v1, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;
 
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mContext:Landroid/content/Context;
@@ -1199,16 +1078,13 @@
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mFeatureBlacklistObserver:Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;
 
-    .line 122
     invoke-virtual {v1}, Lcom/samsung/android/knox/analytics/service/FeatureBlacklistObserver;->start()V
 
-    .line 124
     :cond_3
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mFeatureWhitelistObserver:Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;
 
     if-nez v1, :cond_4
 
-    .line 125
     new-instance v1, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;
 
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mContext:Landroid/content/Context;
@@ -1217,16 +1093,13 @@
 
     iput-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mFeatureWhitelistObserver:Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;
 
-    .line 126
     invoke-virtual {v1}, Lcom/samsung/android/knox/analytics/service/FeatureWhitelistObserver;->start()V
 
     :cond_4
     const/4 v1, 0x1
 
-    .line 128
     iput-boolean v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mIsStarted:Z
 
-    .line 129
     monitor-exit v0
 
     return-void
@@ -1244,12 +1117,10 @@
 .method public final stop()V
     .locals 3
 
-    .line 133
     iget-object v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mDeactivationLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 134
     :try_start_0
     sget-object v1, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
@@ -1259,24 +1130,19 @@
 
     const/4 v1, 0x0
 
-    .line 135
     iput-boolean v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mIsStarted:Z
 
-    .line 136
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mHandler:Lcom/samsung/android/knox/analytics/service/EventQueue$EventHandler;
 
     if-eqz v1, :cond_0
 
     const/4 v2, 0x1
 
-    .line 137
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 140
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/knox/analytics/service/EventQueue;->saveCachedLogs()V
 
-    .line 141
     monitor-exit v0
 
     return-void
@@ -1294,20 +1160,17 @@
 .method public final waitVersioningCompleted()V
     .locals 5
 
-    .line 355
     :goto_0
     iget-boolean v0, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mVersioningCompleted:Z
 
     if-nez v0, :cond_0
 
-    .line 356
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "waitVersioningCompleted(): waiting"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 358
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mVersioningCompletedLock:Ljava/lang/Object;
 
@@ -1315,7 +1178,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 359
     :try_start_1
     iget-object v2, p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->mVersioningCompletedLock:Ljava/lang/Object;
 
@@ -1323,7 +1185,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/lang/Object;->wait(J)V
 
-    .line 360
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1331,7 +1192,6 @@
     :try_start_2
     const-string/jumbo v1, "waitVersioningCompleted(): after wait"
 
-    .line 361
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1341,7 +1201,6 @@
     :catchall_0
     move-exception v0
 
-    .line 360
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -1352,7 +1211,6 @@
     :try_end_4
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 363
     :catch_0
     sget-object v0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 
@@ -1362,7 +1220,6 @@
 
     goto :goto_0
 
-    .line 366
     :cond_0
     sget-object p0, Lcom/samsung/android/knox/analytics/service/EventQueue;->TAG:Ljava/lang/String;
 

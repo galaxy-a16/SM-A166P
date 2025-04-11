@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/input/WirelessKeyboardMouseShare;)V
     .locals 0
 
-    .line 1279
     iput-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-direct {p0}, Landroid/bluetooth/BluetoothHidDevice$Callback;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string v0, "WirelessKeyboardMouseShare"
 
-    .line 1283
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,7 +41,6 @@
 
     goto :goto_0
 
-    .line 1284
     :cond_0
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->toString()Ljava/lang/String;
 
@@ -62,10 +59,8 @@
 
     move-result-object p1
 
-    .line 1283
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1285
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-object p1, p1, Lcom/android/server/input/WirelessKeyboardMouseShare;->innerLock:Ljava/lang/Object;
@@ -74,7 +69,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 1287
     :try_start_0
     iget-object p2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -92,13 +86,11 @@
 
     goto :goto_2
 
-    .line 1289
     :cond_1
     iget-object p2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p2, v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmPluggedDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 1290
     iget-object p2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -129,16 +121,13 @@
 
     move-result-object p2
 
-    .line 1291
     invoke-virtual {p2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1293
     :goto_2
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-virtual {p0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->sendMessageStatus()V
 
-    .line 1294
     monitor-exit p1
 
     return-void
@@ -158,7 +147,6 @@
 
     const-string v0, "WirelessKeyboardMouseShare"
 
-    .line 1299
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,7 +163,6 @@
 
     goto :goto_0
 
-    .line 1300
     :cond_0
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->toString()Ljava/lang/String;
 
@@ -194,10 +181,8 @@
 
     move-result-object v1
 
-    .line 1299
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1301
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-object v0, v0, Lcom/android/server/input/WirelessKeyboardMouseShare;->innerLock:Ljava/lang/Object;
@@ -206,7 +191,6 @@
 
     if-nez p1, :cond_1
 
-    .line 1303
     :try_start_0
     monitor-exit v0
 
@@ -224,7 +208,6 @@
 
     if-ne p2, v1, :cond_4
 
-    .line 1307
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmAddIndex(Lcom/android/server/input/WirelessKeyboardMouseShare;)I
@@ -235,7 +218,6 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 1308
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-virtual {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->getFirstEmptySlot()I
@@ -244,7 +226,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmAddIndex(Lcom/android/server/input/WirelessKeyboardMouseShare;I)V
 
-    .line 1310
     :cond_2
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -258,20 +239,16 @@
 
     if-nez v4, :cond_5
 
-    .line 1312
     iget-object p2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p2, p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$mdisconnectBT(Lcom/android/server/input/WirelessKeyboardMouseShare;Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 1313
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->removeBond()Z
 
-    .line 1314
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-virtual {p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->sendMessageStatus()V
 
-    .line 1315
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmFocusedDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;)Landroid/bluetooth/BluetoothDevice;
@@ -284,7 +261,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1316
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmFocusedDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;)Landroid/bluetooth/BluetoothDevice;
@@ -293,7 +269,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->sendMessageConnectDeviceLocked(Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 1318
     :cond_3
     monitor-exit v0
 
@@ -302,7 +277,6 @@
     :cond_4
     move v4, v3
 
-    .line 1322
     :cond_5
     iget-object v5, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -316,7 +290,6 @@
 
     if-ne p2, v1, :cond_9
 
-    .line 1325
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -329,7 +302,6 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1326
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmPluggedDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;)Landroid/bluetooth/BluetoothDevice;
@@ -342,12 +314,10 @@
 
     if-nez v2, :cond_6
 
-    .line 1327
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2, p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmPluggedDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 1328
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
@@ -358,7 +328,6 @@
 
     const-string v2, "WirelessKeyboardMouseShare"
 
-    .line 1329
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -379,18 +348,15 @@
 
     invoke-static {v2, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1331
     :cond_6
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2, p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmFocusedDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 1332
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2, v3}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmToLocalTablet(Lcom/android/server/input/WirelessKeyboardMouseShare;Z)V
 
-    .line 1333
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -417,33 +383,27 @@
 
     move-result-object v2
 
-    .line 1334
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1335
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-virtual {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->sendMessageStatus()V
 
     if-ne v4, v1, :cond_8
 
-    .line 1337
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2, v7}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmFinishNewDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;Z)V
 
-    .line 1338
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-virtual {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->sendMessageMCF()V
 
-    .line 1340
     :cond_8
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2, v3}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmUnregisterWhenConnectionFail(Lcom/android/server/input/WirelessKeyboardMouseShare;Z)V
 
-    .line 1341
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -456,7 +416,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 1342
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -470,7 +429,6 @@
     :cond_9
     if-nez p2, :cond_f
 
-    .line 1346
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmToLocalTablet(Lcom/android/server/input/WirelessKeyboardMouseShare;)Z
@@ -479,7 +437,6 @@
 
     if-eq v4, v7, :cond_a
 
-    .line 1347
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmKeyboard(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;
@@ -488,7 +445,6 @@
 
     invoke-virtual {v4, v3}, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->clear(Z)V
 
-    .line 1348
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmMouse(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;
@@ -497,7 +453,6 @@
 
     invoke-virtual {v4, v3}, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->clear(Z)V
 
-    .line 1350
     :cond_a
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -507,7 +462,6 @@
 
     if-nez v4, :cond_d
 
-    .line 1351
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmPluggedDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;)Landroid/bluetooth/BluetoothDevice;
@@ -528,14 +482,12 @@
 
     if-eqz v4, :cond_b
 
-    .line 1352
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-virtual {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->stopHIDDevice()Z
 
     goto :goto_2
 
-    .line 1354
     :cond_b
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -549,7 +501,6 @@
 
     if-eqz v4, :cond_c
 
-    .line 1355
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -558,13 +509,11 @@
 
     invoke-virtual {v4, v6}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1357
     :cond_c
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4, v7}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmUnregisterWhenConnectionFail(Lcom/android/server/input/WirelessKeyboardMouseShare;Z)V
 
-    .line 1358
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -575,7 +524,6 @@
 
     move-result-object v4
 
-    .line 1359
     iget-object v6, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v6}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -586,24 +534,20 @@
 
     invoke-virtual {v6, v4, v8, v9}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1362
     :cond_d
     :goto_2
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4, v3}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmDisconnectWithoutUnregister(Lcom/android/server/input/WirelessKeyboardMouseShare;Z)V
 
-    .line 1363
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4, v7}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmToLocalTablet(Lcom/android/server/input/WirelessKeyboardMouseShare;Z)V
 
-    .line 1364
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v4, v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmPluggedDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 1365
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -630,28 +574,23 @@
 
     move-result-object v2
 
-    .line 1366
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1367
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-virtual {v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->sendMessageStatus()V
 
-    .line 1370
     :cond_f
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v2, v7}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmProtocol(Lcom/android/server/input/WirelessKeyboardMouseShare;B)V
 
-    .line 1372
     :cond_10
     :goto_4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1374
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->IFW_WIRELESS_KEYBOARD_SA_LOGGING:Z
 
     if-eqz v0, :cond_13
@@ -665,7 +604,6 @@
 
     if-gt p2, v0, :cond_13
 
-    .line 1377
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmPairedDevices(Lcom/android/server/input/WirelessKeyboardMouseShare;)[Landroid/bluetooth/BluetoothDevice;
@@ -676,14 +614,12 @@
 
     if-eqz v0, :cond_12
 
-    .line 1378
     invoke-virtual {p1, v0}, Landroid/bluetooth/BluetoothDevice;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_12
 
-    .line 1379
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmLogInfos(Lcom/android/server/input/WirelessKeyboardMouseShare;)Ljava/util/Map;
@@ -700,7 +636,6 @@
 
     if-eqz p1, :cond_11
 
-    .line 1380
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmLogInfos(Lcom/android/server/input/WirelessKeyboardMouseShare;)Ljava/util/Map;
@@ -741,7 +676,6 @@
 
     goto :goto_6
 
-    .line 1382
     :cond_11
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -770,7 +704,6 @@
     :goto_6
     return-void
 
-    .line 1372
     :goto_7
     :try_start_1
     monitor-exit v0
@@ -789,7 +722,6 @@
 
     if-ne p2, v1, :cond_0
 
-    .line 1413
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHandler(Lcom/android/server/input/WirelessKeyboardMouseShare;)Lcom/android/server/input/WirelessKeyboardMouseShare$WirelessKeyboardMouseShareHandler;
@@ -813,7 +745,6 @@
 
     if-eq p3, v1, :cond_1
 
-    .line 1416
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -830,7 +761,6 @@
 
     invoke-static {p4, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1417
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHidDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;)Landroid/bluetooth/BluetoothHidDevice;
@@ -841,7 +771,6 @@
 
     goto :goto_1
 
-    .line 1419
     :cond_1
     iget-object p2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -863,7 +792,6 @@
 
     const-string v1, "get_report id for keyboard"
 
-    .line 1424
     invoke-static {p4, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p4, 0x0
@@ -873,14 +801,12 @@
     :goto_0
     if-ge v1, p2, :cond_2
 
-    .line 1426
     aput-byte p4, v0, v1
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1428
     :cond_2
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -892,7 +818,6 @@
 
     goto :goto_1
 
-    .line 1430
     :cond_3
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -906,7 +831,6 @@
 
     goto :goto_1
 
-    .line 1434
     :cond_4
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -924,7 +848,6 @@
 
     invoke-static {p4, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1436
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHidDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;)Landroid/bluetooth/BluetoothHidDevice;
@@ -940,7 +863,6 @@
 .method public onInterruptData(Landroid/bluetooth/BluetoothDevice;B[B)V
     .locals 0
 
-    .line 1392
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -975,7 +897,6 @@
 .method public onSetProtocol(Landroid/bluetooth/BluetoothDevice;B)V
     .locals 1
 
-    .line 1397
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -994,7 +915,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1399
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p0, p2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fputmProtocol(Lcom/android/server/input/WirelessKeyboardMouseShare;B)V
@@ -1011,7 +931,6 @@
 
     if-eq p2, v1, :cond_0
 
-    .line 1444
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1028,7 +947,6 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1445
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHidDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;)Landroid/bluetooth/BluetoothHidDevice;
@@ -1052,10 +970,8 @@
 
     const-string/jumbo p2, "onSetReport(), mouse report id, sending successful handshake for set report"
 
-    .line 1449
     invoke-static {v0, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1450
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmHidDevice(Lcom/android/server/input/WirelessKeyboardMouseShare;)Landroid/bluetooth/BluetoothHidDevice;
@@ -1066,7 +982,6 @@
 
     return-void
 
-    .line 1453
     :cond_1
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -1078,7 +993,6 @@
 
     goto :goto_0
 
-    .line 1455
     :cond_2
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -1088,17 +1002,14 @@
 
     const/4 p1, 0x4
 
-    .line 1456
     invoke-static {p4}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p2
 
-    .line 1455
     invoke-virtual {p0, p1, p3, v2, p2}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 1456
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :goto_0
@@ -1108,14 +1019,12 @@
 .method public onVirtualCableUnplug(Landroid/bluetooth/BluetoothDevice;)V
     .locals 1
 
-    .line 1404
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-object p1, p1, Lcom/android/server/input/WirelessKeyboardMouseShare;->innerLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 1405
     :try_start_0
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$4;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -1127,10 +1036,8 @@
 
     const-string/jumbo v0, "onVirtualCableUnplug mPluggedDevice is null"
 
-    .line 1406
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1407
     monitor-exit p1
 
     return-void

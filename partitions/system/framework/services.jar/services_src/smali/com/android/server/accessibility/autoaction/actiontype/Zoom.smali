@@ -21,27 +21,22 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)V
     .locals 1
 
-    .line 58
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 54
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mLastMotionEvent:Landroid/view/MotionEvent;
 
-    .line 59
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mContext:Landroid/content/Context;
 
     const-string v0, "input"
 
-    .line 60
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -50,10 +45,8 @@
 
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
-    .line 61
     iput-object p3, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mType:Ljava/lang/String;
 
-    .line 62
     invoke-static {p2}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p1
@@ -66,7 +59,6 @@
 .method public static createAction(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)Lcom/android/server/accessibility/autoaction/actiontype/Zoom;
     .locals 1
 
-    .line 66
     new-instance v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;-><init>(Landroid/content/Context;Landroid/view/MotionEvent;Ljava/lang/String;)V
@@ -77,7 +69,6 @@
 .method public static getStringResId(Ljava/lang/String;)I
     .locals 1
 
-    .line 70
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     const-string/jumbo v0, "zoom_in"
@@ -100,7 +91,6 @@
 
     return p0
 
-    .line 76
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -131,14 +121,12 @@
 
     move/from16 v4, p6
 
-    .line 178
     iget-object v5, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v5}, Landroid/view/MotionEvent;->getDeviceId()I
 
     move-result v5
 
-    .line 179
     iget-object v6, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v6}, Landroid/hardware/input/InputManager;->getInputDeviceIds()[I
@@ -149,13 +137,11 @@
 
     move v8, v7
 
-    .line 180
     :goto_0
     array-length v9, v6
 
     if-ge v8, v9, :cond_1
 
-    .line 181
     iget-object v9, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v9, v8}, Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
@@ -166,7 +152,6 @@
 
     iget-object v9, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
-    .line 182
     invoke-virtual {v9, v8}, Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
 
     move-result-object v9
@@ -179,7 +164,6 @@
 
     iget-object v9, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
-    .line 183
     invoke-virtual {v9, v8}, Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
 
     move-result-object v9
@@ -213,7 +197,6 @@
     :goto_1
     sub-int v6, v1, v2
 
-    .line 189
     invoke-static {v6}, Ljava/lang/Math;->abs(I)I
 
     move-result v6
@@ -226,7 +209,6 @@
 
     const v9, 0x1050593
 
-    .line 190
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v8
@@ -255,32 +237,26 @@
 
     const/16 v9, 0x118
 
-    .line 197
     div-int v8, v9, v8
 
-    .line 199
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v24
 
-    .line 200
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v26
 
-    .line 205
     filled-new-array {v7}, [I
 
     move-result-object v15
 
     const/4 v14, 0x1
 
-    .line 208
     filled-new-array {v7, v14}, [I
 
     move-result-object v28
 
-    .line 212
     new-instance v9, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v9}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
@@ -289,12 +265,10 @@
 
     move-result-object v29
 
-    .line 213
     new-instance v9, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v9}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
 
-    .line 214
     new-instance v10, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v10}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
@@ -303,19 +277,16 @@
 
     move-result-object v30
 
-    .line 216
     aget-object v9, v29, v7
 
     const/high16 v10, 0x3f800000    # 1.0f
 
     iput v10, v9, Landroid/view/MotionEvent$PointerCoords;->pressure:F
 
-    .line 217
     aget-object v11, v30, v7
 
     iput v10, v11, Landroid/view/MotionEvent$PointerCoords;->pressure:F
 
-    .line 218
     aget-object v12, v30, v14
 
     iput v10, v12, Landroid/view/MotionEvent$PointerCoords;->pressure:F
@@ -324,26 +295,20 @@
 
     int-to-float v10, v10
 
-    .line 220
     iput v10, v9, Landroid/view/MotionEvent$PointerCoords;->y:F
 
-    .line 221
     iput v10, v11, Landroid/view/MotionEvent$PointerCoords;->y:F
 
-    .line 222
     iput v10, v12, Landroid/view/MotionEvent$PointerCoords;->y:F
 
     int-to-float v10, v1
 
-    .line 224
     iput v10, v9, Landroid/view/MotionEvent$PointerCoords;->x:F
 
-    .line 225
     iput v10, v11, Landroid/view/MotionEvent$PointerCoords;->x:F
 
     int-to-float v9, v3
 
-    .line 226
     iput v9, v12, Landroid/view/MotionEvent$PointerCoords;->x:F
 
     const/4 v13, 0x0
@@ -374,22 +339,18 @@
 
     move/from16 v20, v5
 
-    .line 228
     invoke-static/range {v9 .. v23}, Landroid/view/MotionEvent;->obtain(JJII[I[Landroid/view/MotionEvent$PointerCoords;IFFIIII)Landroid/view/MotionEvent;
 
     move-result-object v9
 
-    .line 231
     invoke-virtual {v9, v4}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
-    .line 232
     iget-object v10, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
     const/4 v15, 0x2
 
     invoke-virtual {v10, v9, v15}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 234
     invoke-virtual {v9}, Landroid/view/MotionEvent;->recycle()V
 
     int-to-long v13, v8
@@ -416,20 +377,16 @@
 
     move-object/from16 v16, v30
 
-    .line 238
     invoke-static/range {v9 .. v23}, Landroid/view/MotionEvent;->obtain(JJII[I[Landroid/view/MotionEvent$PointerCoords;IFFIIII)Landroid/view/MotionEvent;
 
     move-result-object v9
 
-    .line 242
     invoke-virtual {v9, v4}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
-    .line 243
     iget-object v10, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v10, v9, v8}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 245
     invoke-virtual {v9}, Landroid/view/MotionEvent;->recycle()V
 
     add-long v26, v26, v32
@@ -439,7 +396,6 @@
     :goto_4
     if-ge v15, v6, :cond_4
 
-    .line 251
     aget-object v9, v30, v7
 
     iget v10, v9, Landroid/view/MotionEvent$PointerCoords;->x:F
@@ -456,7 +412,6 @@
 
     iput v10, v9, Landroid/view/MotionEvent$PointerCoords;->x:F
 
-    .line 252
     aget-object v9, v30, v31
 
     iget v10, v9, Landroid/view/MotionEvent$PointerCoords;->x:F
@@ -501,20 +456,16 @@
 
     move/from16 v20, v5
 
-    .line 257
     invoke-static/range {v9 .. v23}, Landroid/view/MotionEvent;->obtain(JJII[I[Landroid/view/MotionEvent$PointerCoords;IFFIIII)Landroid/view/MotionEvent;
 
     move-result-object v9
 
-    .line 260
     invoke-virtual {v9, v4}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
-    .line 261
     iget-object v10, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v10, v9, v8}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 263
     invoke-virtual {v9}, Landroid/view/MotionEvent;->recycle()V
 
     add-int/lit8 v15, v34, 0x1
@@ -550,25 +501,20 @@
 
     move/from16 v20, v5
 
-    .line 269
     invoke-static/range {v9 .. v23}, Landroid/view/MotionEvent;->obtain(JJII[I[Landroid/view/MotionEvent$PointerCoords;IFFIIII)Landroid/view/MotionEvent;
 
     move-result-object v1
 
-    .line 273
     invoke-virtual {v1, v4}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
-    .line 274
     iget-object v3, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v3, v1, v8}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 276
     invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
 
     add-long v26, v26, v32
 
-    .line 280
     aget-object v1, v29, v7
 
     int-to-float v2, v2
@@ -583,25 +529,20 @@
 
     move-object/from16 v16, v29
 
-    .line 281
     invoke-static/range {v9 .. v23}, Landroid/view/MotionEvent;->obtain(JJII[I[Landroid/view/MotionEvent$PointerCoords;IFFIIII)Landroid/view/MotionEvent;
 
     move-result-object v1
 
-    .line 284
     invoke-virtual {v1, v4}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
-    .line 285
     iget-object v0, v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {v0, v1, v8}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 287
     invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
 
     sub-long v26, v26, v24
 
-    .line 290
     :try_start_0
     invoke-static/range {v26 .. v27}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -614,7 +555,6 @@
 
     move-object v1, v0
 
-    .line 292
     sget-object v0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->TAG:Ljava/lang/String;
 
     const-string v2, "InterruptedException : "
@@ -628,7 +568,6 @@
 .method public final getTopPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 163
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mContext:Landroid/content/Context;
 
     const-string v0, "activity"
@@ -641,14 +580,12 @@
 
     const/4 v0, 0x1
 
-    .line 164
     invoke-virtual {p0, v0}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 168
     :try_start_0
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -669,7 +606,6 @@
     :catch_0
     move-exception p0
 
-    .line 170
     invoke-virtual {p0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     const-string p0, ""
@@ -681,7 +617,6 @@
 .method public performCornerAction(I)V
     .locals 8
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mInputManager:Landroid/hardware/input/InputManager;
 
     if-eqz v0, :cond_2
@@ -690,12 +625,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 83
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 86
     new-instance v1, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v1}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
@@ -704,7 +637,6 @@
 
     move-result-object v1
 
-    .line 87
     iget-object v2, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     const/4 v3, 0x0
@@ -713,26 +645,22 @@
 
     invoke-virtual {v2, v0, v4}, Landroid/view/MotionEvent;->getPointerCoords(ILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 89
     aget-object v0, v1, v3
 
     iget v1, v0, Landroid/view/MotionEvent$PointerCoords;->x:F
 
     float-to-int v4, v1
 
-    .line 90
     iget v0, v0, Landroid/view/MotionEvent$PointerCoords;->y:F
 
     float-to-int v5, v0
 
-    .line 93
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->getTopPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "com.samsung.android.messaging"
 
-    .line 94
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -741,7 +669,6 @@
 
     const-string v1, "com.sec.android.app.launcher"
 
-    .line 95
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -762,7 +689,6 @@
     :goto_1
     move v6, v0
 
-    .line 101
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/accessibility/autoaction/actiontype/Zoom$1;
@@ -777,7 +703,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 105
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_2
@@ -787,7 +712,6 @@
 .method public zoom(IIFI)V
     .locals 9
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mContext:Landroid/content/Context;
 
     const-string v1, "display"
@@ -798,23 +722,18 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    .line 112
     invoke-virtual {v0, p4}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object v0
 
-    .line 113
     new-instance v1, Landroid/view/DisplayInfo;
 
     invoke-direct {v1}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 114
     invoke-virtual {v0, v1}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 115
     iget v0, v1, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    .line 120
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -858,7 +777,6 @@
 
     const-string v2, "com.samsung.android.messaging"
 
-    .line 133
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->getTopPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -873,13 +791,11 @@
 
     goto :goto_0
 
-    .line 136
     :cond_1
     div-int/lit8 v2, p3, 0x2
 
     sub-int v2, v5, v2
 
-    .line 138
     :goto_0
     div-int/lit8 p3, p3, 0x2
 
@@ -918,7 +834,6 @@
     :goto_1
     move p3, v2
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->mType:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -951,12 +866,10 @@
 
     move v8, p4
 
-    .line 155
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->generateTouchEvent(IIIIII)V
 
     goto :goto_2
 
-    .line 158
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -979,7 +892,6 @@
 
     move v8, p4
 
-    .line 152
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/accessibility/autoaction/actiontype/Zoom;->generateTouchEvent(IIIIII)V
 
     :goto_2

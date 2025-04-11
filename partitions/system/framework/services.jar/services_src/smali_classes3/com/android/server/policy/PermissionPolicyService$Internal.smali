@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$misNoDisplayActivity(Lcom/android/server/policy/PermissionPolicyService$Internal;Landroid/content/pm/ActivityInfo;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PermissionPolicyService$Internal;->isNoDisplayActivity(Landroid/content/pm/ActivityInfo;)Z
 
     move-result p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$monActivityManagerReady(Lcom/android/server/policy/PermissionPolicyService$Internal;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/policy/PermissionPolicyService$Internal;->onActivityManagerReady()V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$mshouldShowNotificationDialogOrClearFlags(Lcom/android/server/policy/PermissionPolicyService$Internal;Landroid/app/TaskInfo;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Landroid/app/ActivityOptions;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 0
     invoke-virtual/range {p0 .. p7}, Lcom/android/server/policy/PermissionPolicyService$Internal;->shouldShowNotificationDialogOrClearFlags(Landroid/app/TaskInfo;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Landroid/app/ActivityOptions;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -44,12 +41,10 @@
 .method public constructor <init>(Lcom/android/server/policy/PermissionPolicyService;)V
     .locals 0
 
-    .line 1195
     iput-object p1, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-direct {p0}, Lcom/android/server/policy/PermissionPolicyInternal;-><init>()V
 
-    .line 1197
     new-instance p1, Lcom/android/server/policy/PermissionPolicyService$Internal$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/policy/PermissionPolicyService$Internal$1;-><init>(Lcom/android/server/policy/PermissionPolicyService$Internal;)V
@@ -62,7 +57,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/policy/PermissionPolicyService;Lcom/android/server/policy/PermissionPolicyService$Internal-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PermissionPolicyService$Internal;-><init>(Lcom/android/server/policy/PermissionPolicyService;)V
 
     return-void
@@ -77,14 +71,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 1239
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/policy/PermissionPolicyService$Internal;->isActionRemovedForCallingPackage(Landroid/content/Intent;ILjava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 1241
     invoke-static {}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
     move-result-object p0
@@ -130,7 +122,6 @@
     :cond_0
     const-string p0, "android.content.pm.action.REQUEST_PERMISSIONS_FOR_OTHER"
 
-    .line 1246
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -147,7 +138,6 @@
 
     const-string p0, "android"
 
-    .line 1247
     invoke-virtual {p0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -166,7 +156,6 @@
 .method public final isActionRemovedForCallingPackage(Landroid/content/Intent;ILjava/lang/String;)Z
     .locals 3
 
-    .line 1434
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -180,7 +169,6 @@
     :cond_0
     const-string v2, "android.provider.Telephony.ACTION_CHANGE_DEFAULT"
 
-    .line 1438
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -197,7 +185,6 @@
 
     return v1
 
-    .line 1443
     :cond_1
     :try_start_0
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
@@ -210,17 +197,14 @@
 
     move-result-object p0
 
-    .line 1444
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 1443
     invoke-virtual {p0, p3, v1, p2}, Landroid/content/pm/PackageManager;->getApplicationInfoAsUser(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
-    .line 1445
     iget p0, p0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -233,7 +217,6 @@
 
     return p0
 
-    .line 1451
     :catch_0
     invoke-static {}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
@@ -258,7 +241,6 @@
     :cond_2
     const-string p0, "android.intent.extra.CALLING_PACKAGE"
 
-    .line 1454
     invoke-virtual {p1, p0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return v1
@@ -267,7 +249,6 @@
 .method public isInitialized(I)Z
     .locals 0
 
-    .line 1418
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {p0, p1}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$misStarted(Lcom/android/server/policy/PermissionPolicyService;I)Z
@@ -280,7 +261,6 @@
 .method public isIntentToPermissionDialog(Landroid/content/Intent;)Z
     .locals 1
 
-    .line 1273
     invoke-virtual {p1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -291,19 +271,16 @@
 
     move-result-object p0
 
-    .line 1274
     invoke-virtual {p0}, Landroid/content/pm/PackageManager;->getPermissionControllerPackageName()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1273
     invoke-static {v0, p0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 1275
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -316,7 +293,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1276
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -344,7 +320,6 @@
 .method public final isLauncherIntent(Landroid/content/Intent;)Z
     .locals 1
 
-    .line 1367
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -357,14 +332,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 1368
     invoke-virtual {p1}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 1369
     invoke-virtual {p1}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object p0
@@ -377,7 +350,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1370
     invoke-virtual {p1}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object p0
@@ -390,7 +362,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1371
     invoke-virtual {p1}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object p0
@@ -418,7 +389,6 @@
 .method public final isNoDisplayActivity(Landroid/content/pm/ActivityInfo;)Z
     .locals 3
 
-    .line 1287
     invoke-virtual {p1}, Landroid/content/pm/ActivityInfo;->getThemeResource()I
 
     move-result p0
@@ -429,7 +399,6 @@
 
     return v0
 
-    .line 1293
     :cond_0
     invoke-static {}, Lcom/android/internal/policy/AttributeCache;->instance()Lcom/android/internal/policy/AttributeCache;
 
@@ -439,14 +408,12 @@
 
     sget-object v2, Lcom/android/internal/R$styleable;->Window:[I
 
-    .line 1294
     invoke-virtual {v1, p1, p0, v2, v0}, Lcom/android/internal/policy/AttributeCache;->get(Ljava/lang/String;I[II)Lcom/android/internal/policy/AttributeCache$Entry;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 1296
     iget-object p0, p0, Lcom/android/internal/policy/AttributeCache$Entry;->array:Landroid/content/res/TypedArray;
 
     const/16 p1, 0xa
@@ -462,7 +429,6 @@
 .method public final isTaskPotentialTrampoline(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/TaskInfo;Landroid/content/Intent;)Z
     .locals 0
 
-    .line 1341
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -487,7 +453,6 @@
 
     iget-object p0, p0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 1343
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -506,7 +471,6 @@
 .method public final isTaskStartedFromLauncher(Ljava/lang/String;Landroid/app/TaskInfo;)Z
     .locals 2
 
-    .line 1375
     iget-object v0, p2, Landroid/app/TaskInfo;->baseActivity:Landroid/content/ComponentName;
 
     const/4 v1, 0x0
@@ -515,7 +479,6 @@
 
     return v1
 
-    .line 1377
     :cond_0
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -529,7 +492,6 @@
 
     iget-object p1, p2, Landroid/app/TaskInfo;->baseIntent:Landroid/content/Intent;
 
-    .line 1378
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PermissionPolicyService$Internal;->isLauncherIntent(Landroid/content/Intent;)Z
 
     move-result p0
@@ -545,7 +507,6 @@
 .method public final launchNotificationPermissionRequestDialog(Ljava/lang/String;Landroid/os/UserHandle;ILcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;)V
     .locals 6
 
-    .line 1383
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {v0}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fgetmPackageManager(Lcom/android/server/policy/PermissionPolicyService;)Landroid/content/pm/PackageManager;
@@ -558,24 +519,20 @@
 
     move-result-object v1
 
-    .line 1384
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->buildRequestPermissionsIntent([Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
     const/high16 v1, 0x10040000
 
-    .line 1386
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const-string v1, "android.content.pm.action.REQUEST_PERMISSIONS_FOR_OTHER"
 
-    .line 1387
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.PACKAGE_NAME"
 
-    .line 1389
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v1, 0x1
@@ -584,14 +541,12 @@
 
     if-eqz p4, :cond_0
 
-    .line 1391
     invoke-virtual {p4}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getCheckedOptions()Landroid/app/ActivityOptions;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 1392
     invoke-virtual {p4}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getCheckedOptions()Landroid/app/ActivityOptions;
 
     move-result-object v3
@@ -604,7 +559,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 1393
     invoke-virtual {p4}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getClearOptionsAnimationRunnable()Ljava/lang/Runnable;
 
     move-result-object v3
@@ -621,7 +575,6 @@
     :goto_0
     if-eqz v3, :cond_1
 
-    .line 1395
     invoke-virtual {p4}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getCheckedOptions()Landroid/app/ActivityOptions;
 
     move-result-object v4
@@ -630,7 +583,6 @@
 
     move-result-object v4
 
-    .line 1396
     invoke-virtual {p4}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getCheckedOptions()Landroid/app/ActivityOptions;
 
     move-result-object v5
@@ -639,14 +591,12 @@
 
     move-result-object v5
 
-    .line 1394
     invoke-static {v4, v5}, Landroid/app/ActivityOptions;->makeRemoteAnimation(Landroid/view/RemoteAnimationAdapter;Landroid/window/RemoteTransition;)Landroid/app/ActivityOptions;
 
     move-result-object v4
 
     goto :goto_1
 
-    .line 1397
     :cond_1
     new-instance v4, Landroid/app/ActivityOptions;
 
@@ -656,23 +606,19 @@
 
     invoke-direct {v4, v5}, Landroid/app/ActivityOptions;-><init>(Landroid/os/Bundle;)V
 
-    .line 1398
     :goto_1
     invoke-virtual {v4, v1, v2}, Landroid/app/ActivityOptions;->setTaskOverlay(ZZ)V
 
-    .line 1399
     invoke-virtual {v4, p3}, Landroid/app/ActivityOptions;->setLaunchTaskId(I)V
 
     if-eqz v3, :cond_2
 
-    .line 1406
     invoke-virtual {p4}, Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;->getClearOptionsAnimationRunnable()Ljava/lang/Runnable;
 
     move-result-object p3
 
     invoke-interface {p3}, Ljava/lang/Runnable;->run()V
 
-    .line 1409
     :cond_2
     :try_start_0
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
@@ -694,7 +640,6 @@
     :catch_0
     move-exception p0
 
-    .line 1411
     invoke-static {}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
     move-result-object p2
@@ -722,10 +667,8 @@
 .method public final onActivityManagerReady()V
     .locals 2
 
-    .line 1229
     const-class v0, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 1230
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -734,7 +677,6 @@
 
     const/4 v1, 0x1
 
-    .line 1231
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->mActivityInterceptorCallback:Lcom/android/server/wm/ActivityInterceptorCallback;
 
     invoke-virtual {v0, v1, p0}, Lcom/android/server/wm/ActivityTaskManagerInternal;->registerActivityStartInterceptor(ILcom/android/server/wm/ActivityInterceptorCallback;)V
@@ -745,10 +687,8 @@
 .method public final pkgHasRunningLauncherTask(Ljava/lang/String;Landroid/app/TaskInfo;)Z
     .locals 6
 
-    .line 1347
     const-class v0, Lcom/android/server/wm/ActivityTaskManagerInternal;
 
-    .line 1348
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -757,7 +697,6 @@
 
     const/4 v1, 0x0
 
-    .line 1351
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -765,7 +704,6 @@
 
     move-result-object v2
 
-    .line 1352
     invoke-virtual {v2, p1, v1}, Landroid/content/pm/PackageManager;->getPackageUid(Ljava/lang/String;I)I
 
     move-result v2
@@ -776,7 +714,6 @@
 
     move v2, v1
 
-    .line 1353
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -784,7 +721,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 1354
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -795,7 +731,6 @@
 
     move-result-object v3
 
-    .line 1355
     iget v4, v3, Landroid/app/TaskInfo;->taskId:I
 
     iget v5, p2, Landroid/app/TaskInfo;->taskId:I
@@ -810,7 +745,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1356
     invoke-virtual {p0, p1, v3}, Lcom/android/server/policy/PermissionPolicyService$Internal;->isTaskStartedFromLauncher(Ljava/lang/String;Landroid/app/TaskInfo;)Z
 
     move-result v3
@@ -836,7 +770,6 @@
 .method public setOnInitializedCallback(Lcom/android/server/policy/PermissionPolicyInternal$OnInitializedCallback;)V
     .locals 1
 
-    .line 1423
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {v0}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fgetmLock(Lcom/android/server/policy/PermissionPolicyService;)Ljava/lang/Object;
@@ -845,13 +778,11 @@
 
     monitor-enter v0
 
-    .line 1424
     :try_start_0
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {p0, p1}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fputmOnInitializedCallback(Lcom/android/server/policy/PermissionPolicyService;Lcom/android/server/policy/PermissionPolicyInternal$OnInitializedCallback;)V
 
-    .line 1425
     monitor-exit v0
 
     return-void
@@ -869,7 +800,6 @@
 .method public final shouldForceShowNotificationPermissionRequest(Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 6
 
-    .line 1464
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {v0}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fgetmPackageManagerInternal(Lcom/android/server/policy/PermissionPolicyService;)Landroid/content/pm/PackageManagerInternal;
@@ -884,7 +814,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 1465
     invoke-interface {v0}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -897,7 +826,6 @@
 
     move-result-object v2
 
-    .line 1466
     invoke-virtual {v2}, Landroid/content/pm/PackageManager;->getPermissionControllerPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -908,7 +836,6 @@
 
     if-nez v2, :cond_8
 
-    .line 1467
     invoke-interface {v0}, Lcom/android/server/pm/pkg/AndroidPackage;->getTargetSdkVersion()I
 
     move-result v2
@@ -919,7 +846,6 @@
 
     goto/16 :goto_4
 
-    .line 1475
     :cond_0
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -929,7 +855,6 @@
 
     monitor-enter v2
 
-    .line 1476
     :try_start_0
     iget-object v3, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -939,18 +864,15 @@
 
     if-nez v3, :cond_1
 
-    .line 1477
     monitor-exit v2
 
     return v1
 
-    .line 1479
     :cond_1
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1481
     invoke-interface {v0}, Lcom/android/server/pm/pkg/AndroidPackage;->getRequestedPermissions()Ljava/util/List;
 
     move-result-object v2
@@ -965,7 +887,6 @@
 
     const-wide/32 v2, 0xb9cec21
 
-    .line 1482
     invoke-static {v2, v3, p1, p2}, Landroid/app/compat/CompatChanges;->isChangeEnabled(JLjava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result v2
@@ -978,7 +899,6 @@
 
     move-result-object v2
 
-    .line 1483
     invoke-virtual {v2}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
 
     move-result v2
@@ -987,7 +907,6 @@
 
     goto :goto_3
 
-    .line 1487
     :cond_2
     invoke-interface {v0}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
@@ -997,7 +916,6 @@
 
     move-result v0
 
-    .line 1488
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     invoke-static {v2}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fgetmNotificationManager(Lcom/android/server/policy/PermissionPolicyService;)Lcom/android/server/notification/NotificationManagerInternal;
@@ -1006,7 +924,6 @@
 
     if-nez v2, :cond_3
 
-    .line 1489
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
     const-class v3, Lcom/android/server/notification/NotificationManagerInternal;
@@ -1019,7 +936,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$fputmNotificationManager(Lcom/android/server/policy/PermissionPolicyService;Lcom/android/server/notification/NotificationManagerInternal;)V
 
-    .line 1491
     :cond_3
     iget-object v2, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -1029,7 +945,6 @@
 
     const/4 v3, 0x1
 
-    .line 1492
     invoke-interface {v2, p1, v0, v3}, Lcom/android/server/notification/NotificationManagerInternal;->getNumNotificationChannelsForPackage(Ljava/lang/String;IZ)I
 
     move-result v2
@@ -1043,7 +958,6 @@
     :cond_4
     move v2, v1
 
-    .line 1493
     :goto_0
     iget-object v4, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -1066,7 +980,6 @@
     :cond_5
     move v0, v1
 
-    .line 1495
     :goto_1
     iget-object p0, p0, Lcom/android/server/policy/PermissionPolicyService$Internal;->this$0:Lcom/android/server/policy/PermissionPolicyService;
 
@@ -1109,7 +1022,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1479
     :try_start_1
     monitor-exit v2
     :try_end_1
@@ -1121,7 +1033,6 @@
     :goto_4
     if-nez v0, :cond_9
 
-    .line 1469
     invoke-static {}, Lcom/android/server/policy/PermissionPolicyService;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
     move-result-object p0
@@ -1165,7 +1076,6 @@
 
     move-object v6, p5
 
-    .line 1282
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/policy/PermissionPolicyService$Internal;->shouldShowNotificationDialogOrClearFlags(Landroid/app/TaskInfo;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Landroid/app/ActivityOptions;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -1186,7 +1096,6 @@
 
     if-eqz p6, :cond_4
 
-    .line 1326
     iget-boolean v1, p1, Landroid/app/TaskInfo;->isFocused:Z
 
     if-eqz v1, :cond_0
@@ -1204,7 +1113,6 @@
 
     goto :goto_0
 
-    .line 1331
     :cond_1
     invoke-virtual {p0, p4}, Lcom/android/server/policy/PermissionPolicyService$Internal;->isLauncherIntent(Landroid/content/Intent;)Z
 
@@ -1214,14 +1122,12 @@
 
     if-eqz p5, :cond_2
 
-    .line 1332
     invoke-virtual {p5}, Landroid/app/ActivityOptions;->isEligibleForLegacyPermissionPrompt()Z
 
     move-result p5
 
     if-nez p5, :cond_3
 
-    .line 1333
     :cond_2
     invoke-virtual {p0, p2, p1}, Lcom/android/server/policy/PermissionPolicyService$Internal;->isTaskStartedFromLauncher(Ljava/lang/String;Landroid/app/TaskInfo;)Z
 
@@ -1241,7 +1147,6 @@
 
     move-object v6, p4
 
-    .line 1334
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/policy/PermissionPolicyService$Internal;->isTaskPotentialTrampoline(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/TaskInfo;Landroid/content/Intent;)Z
 
     move-result p3
@@ -1250,7 +1155,6 @@
 
     if-eqz p7, :cond_3
 
-    .line 1336
     invoke-virtual {p0, p2, p1}, Lcom/android/server/policy/PermissionPolicyService$Internal;->pkgHasRunningLauncherTask(Ljava/lang/String;Landroid/app/TaskInfo;)Z
 
     move-result p0
@@ -1270,7 +1174,6 @@
 
     const/4 v0, 0x0
 
-    .line 1257
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/policy/PermissionPolicyService$Internal;->showNotificationPromptIfNeeded(Ljava/lang/String;IILcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;)V
 
     return-void
@@ -1279,7 +1182,6 @@
 .method public showNotificationPromptIfNeeded(Ljava/lang/String;IILcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;)V
     .locals 1
 
-    .line 1262
     invoke-static {p2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object p2
@@ -1290,7 +1192,6 @@
 
     if-eq p3, v0, :cond_1
 
-    .line 1264
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/PermissionPolicyService$Internal;->shouldForceShowNotificationPermissionRequest(Ljava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result v0
@@ -1299,7 +1200,6 @@
 
     goto :goto_0
 
-    .line 1268
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/policy/PermissionPolicyService$Internal;->launchNotificationPermissionRequestDialog(Ljava/lang/String;Landroid/os/UserHandle;ILcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;)V
 

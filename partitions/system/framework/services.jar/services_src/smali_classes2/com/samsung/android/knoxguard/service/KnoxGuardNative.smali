@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -24,7 +23,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 524
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
@@ -41,7 +39,6 @@
 .method public static generateHotpDHRequestRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 369
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_generateHotpDhRequest(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -54,7 +51,6 @@
 .method public static getClientDataRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 489
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_getClientData(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -67,7 +63,6 @@
 .method public static getHotpChallengeRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 389
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_getHotpChallenge(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -80,7 +75,6 @@
 .method public static getKGIDRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 493
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_getKGID(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -93,24 +87,20 @@
 .method public static getKGPolicyRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 5
 
-    .line 343
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;->getInstance()Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;
 
     move-result-object v0
 
-    .line 345
     invoke-virtual {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;->readData()I
 
     move-result v1
 
-    .line 346
     sget v2, Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;->SUCCESS:I
 
     const/4 v3, 0x0
 
     if-eq v1, v2, :cond_0
 
-    .line 347
     sget-object v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -131,13 +121,11 @@
 
     return-object v3
 
-    .line 350
     :cond_0
     invoke-virtual {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;->getPolicyRes()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 351
     invoke-virtual {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;->getSignature()Ljava/lang/String;
 
     move-result-object v0
@@ -148,7 +136,6 @@
 
     goto :goto_0
 
-    .line 357
     :cond_1
     sget v2, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -166,7 +153,6 @@
 
     return-object v0
 
-    .line 353
     :cond_2
     :goto_0
     sget-object v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
@@ -181,7 +167,6 @@
 .method public static getLockActionRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 481
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_getLockAction(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -194,7 +179,6 @@
 .method public static getLockObjectRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 485
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_getLockObject(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -207,7 +191,6 @@
 .method public static getNonceRefactor(Ljava/lang/String;Ljava/lang/String;)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 516
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->s2b(Ljava/lang/String;)[B
@@ -228,7 +211,6 @@
 .method public static getTAInfo(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 0
 
-    .line 381
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_getTAInfo(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
 
     move-result-object p0
@@ -239,25 +221,21 @@
 .method public static getTAState()I
     .locals 2
 
-    .line 80
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->getTAStateRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 82
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_FAILED:I
 
     return v0
 
-    .line 84
     :cond_0
     iget v1, v0, Lcom/samsung/android/knoxguard/service/KgErrWrapper;->err:I
 
     if-nez v1, :cond_1
 
-    .line 85
     iget v1, v0, Lcom/samsung/android/knoxguard/service/KgErrWrapper;->result:I
 
     :cond_1
@@ -267,7 +245,6 @@
 .method public static getTAStateRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 339
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_getTAState(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -280,7 +257,6 @@
 .method public static lockScreenRefactor(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroid/os/Bundle;)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 9
 
-    .line 434
     new-instance v8, Lcom/samsung/android/knoxguard/service/KnoxGuardSeService$KGLockscreenInfo;
 
     move-object v0, v8
@@ -301,7 +277,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/samsung/android/knoxguard/service/KnoxGuardSeService$KGLockscreenInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLandroid/os/Bundle;)V
 
-    .line 435
     invoke-static {v8}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->serialize(Ljava/lang/Object;)[B
 
     move-result-object v0
@@ -310,7 +285,6 @@
 
     if-nez p0, :cond_0
 
-    .line 437
     sget-object v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     const-string v2, "lockScreen: empty actionName"
@@ -322,7 +296,6 @@
     :cond_0
     if-nez v0, :cond_1
 
-    .line 441
     sget-object v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     const-string v2, "lockScreen: empty serialzeObj"
@@ -331,7 +304,6 @@
 
     return-object v1
 
-    .line 445
     :cond_1
     sget v1, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -349,7 +321,6 @@
 .method public static provisionCert(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 385
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->s2b(Ljava/lang/String;)[B
@@ -378,7 +349,6 @@
 .method public static resetRPMBRefactor(Ljava/lang/String;)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 501
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {p0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->s2b(Ljava/lang/String;)[B
@@ -401,7 +371,6 @@
 
     return-object p0
 
-    .line 533
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
@@ -428,7 +397,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 457
     :try_start_0
     new-instance v3, Ljava/io/ByteArrayOutputStream;
 
@@ -437,7 +405,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 458
     :try_start_1
     new-instance v4, Ljava/io/ObjectOutputStream;
 
@@ -446,11 +413,9 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 459
     :try_start_2
     invoke-virtual {v4, p0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
-    .line 460
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v2
@@ -458,7 +423,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 466
     :try_start_3
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_3
@@ -466,13 +430,11 @@
 
     goto :goto_0
 
-    .line 468
     :catch_0
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     invoke-static {p0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     :goto_0
     :try_start_4
     invoke-virtual {v4}, Ljava/io/ObjectOutputStream;->close()V
@@ -481,7 +443,6 @@
 
     goto :goto_3
 
-    .line 473
     :catch_1
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
@@ -522,7 +483,6 @@
 
     move-object v4, v3
 
-    .line 463
     :goto_1
     :try_start_5
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
@@ -531,7 +491,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 466
     :try_start_6
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_6
@@ -539,7 +498,6 @@
 
     goto :goto_2
 
-    .line 468
     :catch_5
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
@@ -564,7 +522,6 @@
     :goto_5
     if-eqz v2, :cond_3
 
-    .line 466
     :try_start_7
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_7
@@ -572,7 +529,6 @@
 
     goto :goto_6
 
-    .line 468
     :catch_6
     sget-object v2, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
@@ -582,7 +538,6 @@
     :goto_6
     if-eqz v4, :cond_4
 
-    .line 471
     :try_start_8
     invoke-virtual {v4}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_8
@@ -590,13 +545,11 @@
 
     goto :goto_7
 
-    .line 473
     :catch_7
     sget-object v1, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 475
     :cond_4
     :goto_7
     throw p0
@@ -607,14 +560,12 @@
 
     if-nez p0, :cond_0
 
-    .line 510
     sget-object v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "setClientData fail: empty input"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 512
     :cond_0
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -701,7 +652,6 @@
 .method public static unlockScreenRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 430
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_unlockScreen(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -714,7 +664,6 @@
 .method public static userCheckingRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 505
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_userChecking(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -729,7 +678,6 @@
 
     if-nez p0, :cond_0
 
-    .line 362
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "verifyCompleteToken input string is null"
@@ -740,7 +688,6 @@
 
     return-object p0
 
-    .line 365
     :cond_0
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -760,7 +707,6 @@
 
     if-nez p0, :cond_0
 
-    .line 394
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "verifyHotpPin fail, input null"
@@ -771,7 +717,6 @@
 
     return-object p0
 
-    .line 397
     :cond_0
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -791,7 +736,6 @@
 
     if-nez p0, :cond_0
 
-    .line 332
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "verifyHOTPsecret input string is null"
@@ -802,7 +746,6 @@
 
     return-object p0
 
-    .line 335
     :cond_0
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -828,7 +771,6 @@
 
     goto :goto_0
 
-    .line 377
     :cond_0
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -850,7 +792,6 @@
 
     return-object p0
 
-    .line 374
     :cond_1
     :goto_0
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
@@ -867,7 +808,6 @@
 .method public static verifyKgRotRefactor()Lcom/samsung/android/knoxguard/service/KgErrWrapper;
     .locals 1
 
-    .line 497
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
     invoke-static {v0}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->tz_verifyKgRot(I)Lcom/samsung/android/knoxguard/service/KgErrWrapper;
@@ -888,7 +828,6 @@
 
     goto :goto_0
 
-    .line 413
     :cond_0
     sget v1, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -906,7 +845,6 @@
 
     if-nez v1, :cond_1
 
-    .line 415
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     const-string/jumbo p1, "verifyPolicy failed, empty return from TA"
@@ -915,7 +853,6 @@
 
     return-object v1
 
-    .line 418
     :cond_1
     iget-object v2, v1, Lcom/samsung/android/knoxguard/service/KgErrWrapper;->data:[B
 
@@ -923,22 +860,18 @@
 
     move-result-object v2
 
-    .line 419
     invoke-static {}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;->getInstance()Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;
 
     move-result-object v3
 
-    .line 421
     invoke-virtual {v3, p0, p1}, Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;->saveData(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
-    .line 422
     sget p1, Lcom/samsung/android/knoxguard/service/KnoxGuardNative$PolicyStorageManager;->SUCCESS:I
 
     if-eq p0, p1, :cond_2
 
-    .line 423
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -962,7 +895,6 @@
     :cond_2
     return-object v1
 
-    .line 410
     :cond_3
     :goto_0
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;
@@ -983,7 +915,6 @@
 
     goto :goto_0
 
-    .line 405
     :cond_0
     sget v0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->KGTA_PARAM_DEFAULT:I
 
@@ -1001,7 +932,6 @@
 
     return-object p0
 
-    .line 402
     :cond_1
     :goto_0
     sget-object p0, Lcom/samsung/android/knoxguard/service/KnoxGuardNative;->TAG:Ljava/lang/String;

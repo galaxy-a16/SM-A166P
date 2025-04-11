@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/chimera/SystemRepository$CameraProcInfo;
 
     invoke-static {p1}, Lcom/android/server/chimera/PolicyHandler;->$r8$lambda$XcK3Q-3MjPV-VqV3aj0zrLGn4Ow(Lcom/android/server/chimera/SystemRepository$CameraProcInfo;)Z

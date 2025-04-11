@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$3n1Td_lNvJzQ8828U9ZoFE7TQaU(Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;Lcom/android/server/pm/pkg/PackageStateInternal;)Landroid/util/ArraySet;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->lambda$execute$0(Lcom/android/server/pm/pkg/PackageStateInternal;)Landroid/util/ArraySet;
 
     move-result-object p0
@@ -26,16 +25,12 @@
 .method public constructor <init>(Landroid/util/ArrayMap;Lcom/android/server/utils/WatchedArraySet;Lcom/android/server/utils/WatchedArraySet;)V
     .locals 0
 
-    .line 207
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 208
     iput-object p1, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mExistingSettings:Landroid/util/ArrayMap;
 
-    .line 209
     iput-object p2, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mForceQueryable:Lcom/android/server/utils/WatchedArraySet;
 
-    .line 210
     iput-object p3, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mProtectedBroadcasts:Lcom/android/server/utils/WatchedArraySet;
 
     return-void
@@ -44,7 +39,6 @@
 .method private synthetic lambda$execute$0(Lcom/android/server/pm/pkg/PackageStateInternal;)Landroid/util/ArraySet;
     .locals 0
 
-    .line 236
     invoke-virtual {p0, p1}, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->getVisibleListOfQueryViaComponents(Lcom/android/server/pm/pkg/PackageStateInternal;)Landroid/util/ArraySet;
 
     move-result-object p0
@@ -57,15 +51,12 @@
 .method public execute()Landroid/util/SparseSetArray;
     .locals 8
 
-    .line 218
     new-instance v0, Landroid/util/SparseSetArray;
 
     invoke-direct {v0}, Landroid/util/SparseSetArray;-><init>()V
 
-    .line 219
     const-class v1, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;
 
-    .line 220
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
@@ -74,18 +65,15 @@
 
     const/4 v3, 0x0
 
-    .line 219
     invoke-static {v2, v1, v3}, Lcom/android/internal/util/ConcurrentUtils;->newFixedThreadPool(ILjava/lang/String;I)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
 
-    .line 223
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 225
     iget-object v4, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mExistingSettings:Landroid/util/ArrayMap;
 
     invoke-virtual {v4}, Landroid/util/ArrayMap;->size()I
@@ -97,7 +85,6 @@
     :goto_0
     if-ltz v4, :cond_3
 
-    .line 226
     iget-object v5, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mExistingSettings:Landroid/util/ArrayMap;
 
     invoke-virtual {v5, v4}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -106,14 +93,12 @@
 
     check-cast v5, Lcom/android/server/pm/pkg/PackageStateInternal;
 
-    .line 227
     invoke-interface {v5}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
     move-result-object v6
 
     if-eqz v6, :cond_2
 
-    .line 228
     invoke-static {v6}, Lcom/android/server/pm/AppsFilterUtils;->requestsQueryAllPackages(Lcom/android/server/pm/pkg/AndroidPackage;)Z
 
     move-result v7
@@ -122,7 +107,6 @@
 
     goto :goto_1
 
-    .line 231
     :cond_0
     invoke-interface {v6}, Lcom/android/server/pm/pkg/AndroidPackage;->getQueriesIntents()Ljava/util/List;
 
@@ -134,7 +118,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 232
     invoke-interface {v6}, Lcom/android/server/pm/pkg/AndroidPackage;->getQueriesProviders()Ljava/util/Set;
 
     move-result-object v6
@@ -147,7 +130,6 @@
 
     goto :goto_1
 
-    .line 235
     :cond_1
     new-instance v6, Landroid/util/Pair;
 
@@ -155,14 +137,12 @@
 
     invoke-direct {v7, p0, v5}, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;Lcom/android/server/pm/pkg/PackageStateInternal;)V
 
-    .line 236
     invoke-interface {v1, v7}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object v7
 
     invoke-direct {v6, v5, v7}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 235
     invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_2
@@ -171,7 +151,6 @@
 
     goto :goto_0
 
-    .line 238
     :cond_3
     :goto_2
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -180,7 +159,6 @@
 
     if-ge v3, p0, :cond_5
 
-    .line 239
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -195,7 +173,6 @@
 
     move-result p0
 
-    .line 240
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -208,7 +185,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 242
     :try_start_1
     invoke-interface {v4}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
@@ -216,14 +192,12 @@
 
     check-cast v4, Landroid/util/ArraySet;
 
-    .line 243
     invoke-virtual {v4}, Landroid/util/ArraySet;->size()I
 
     move-result v5
 
     if-eqz v5, :cond_4
 
-    .line 244
     invoke-virtual {v0, p0, v4}, Landroid/util/SparseSetArray;->addAll(ILandroid/util/ArraySet;)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
@@ -238,7 +212,6 @@
     :catch_0
     move-exception p0
 
-    .line 247
     :try_start_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -248,7 +221,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 251
     :cond_5
     invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
@@ -259,19 +231,16 @@
 
     invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
-    .line 252
     throw p0
 .end method
 
 .method public final getVisibleListOfQueryViaComponents(Lcom/android/server/pm/pkg/PackageStateInternal;)Landroid/util/ArraySet;
     .locals 6
 
-    .line 266
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 267
     iget-object v1, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mExistingSettings:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
@@ -283,7 +252,6 @@
     :goto_0
     if-ltz v1, :cond_3
 
-    .line 268
     iget-object v2, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mExistingSettings:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -292,7 +260,6 @@
 
     check-cast v2, Lcom/android/server/pm/pkg/PackageStateInternal;
 
-    .line 269
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result v3
@@ -305,7 +272,6 @@
 
     goto :goto_1
 
-    .line 272
     :cond_0
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
@@ -315,7 +281,6 @@
 
     iget-object v3, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mForceQueryable:Lcom/android/server/utils/WatchedArraySet;
 
-    .line 273
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result v4
@@ -324,7 +289,6 @@
 
     move-result-object v4
 
-    .line 272
     invoke-virtual {v3, v4}, Lcom/android/server/utils/WatchedArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -333,7 +297,6 @@
 
     goto :goto_1
 
-    .line 277
     :cond_1
     invoke-interface {p1}, Lcom/android/server/pm/pkg/PackageStateInternal;->getPkg()Lcom/android/server/pm/parsing/pkg/AndroidPackageInternal;
 
@@ -345,14 +308,12 @@
 
     iget-object v5, p0, Lcom/android/server/pm/AppsFilterUtils$ParallelComputeComponentVisibility;->mProtectedBroadcasts:Lcom/android/server/utils/WatchedArraySet;
 
-    .line 276
     invoke-static {v3, v4, v5}, Lcom/android/server/pm/AppsFilterUtils;->canQueryViaComponents(Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/pm/pkg/AndroidPackage;Lcom/android/server/utils/WatchedArraySet;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 279
     invoke-interface {v2}, Lcom/android/server/pm/pkg/PackageState;->getAppId()I
 
     move-result v2

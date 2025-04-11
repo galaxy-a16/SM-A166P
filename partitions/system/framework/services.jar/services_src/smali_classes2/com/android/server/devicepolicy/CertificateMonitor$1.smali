@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/CertificateMonitor;)V
     .locals 0
 
-    .line 137
     iput-object p1, p0, Lcom/android/server/devicepolicy/CertificateMonitor$1;->this$0:Lcom/android/server/devicepolicy/CertificateMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.extra.user_handle"
 
-    .line 140
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getSendingUserId()I
 
     move-result v0
@@ -35,7 +33,6 @@
 
     move-result p1
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/devicepolicy/CertificateMonitor$1;->this$0:Lcom/android/server/devicepolicy/CertificateMonitor;
 
     invoke-static {p1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;

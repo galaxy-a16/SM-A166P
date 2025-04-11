@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiCecMessageValidator$UserControlPressedValidator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator$UserControlPressedValidator;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public isValid([B)I
     .locals 4
 
-    .line 1153
     array-length p0, p1
 
     const/4 v0, 0x4
@@ -40,7 +38,6 @@
 
     return v0
 
-    .line 1156
     :cond_0
     array-length p0, p1
 
@@ -50,7 +47,6 @@
 
     return v2
 
-    .line 1159
     :cond_1
     aget-byte p0, p1, v2
 
@@ -72,13 +68,11 @@
 
     return v2
 
-    .line 1164
     :cond_2
     array-length p0, p1
 
     if-lt p0, v0, :cond_3
 
-    .line 1165
     invoke-static {p1, v1}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->-$$Nest$smisValidChannelIdentifier([BI)Z
 
     move-result p0
@@ -90,7 +84,6 @@
     :cond_3
     return v0
 
-    .line 1162
     :cond_4
     aget-byte p0, p1, v1
 
@@ -104,7 +97,6 @@
 
     return p0
 
-    .line 1170
     :cond_5
     aget-byte p0, p1, v1
 
@@ -118,7 +110,6 @@
 
     return p0
 
-    .line 1168
     :cond_6
     aget-byte p0, p1, v1
 

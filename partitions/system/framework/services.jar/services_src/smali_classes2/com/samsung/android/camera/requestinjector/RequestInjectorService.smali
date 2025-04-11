@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCameraServiceWorker(Lcom/samsung/android/camera/requestinjector/RequestInjectorService;)Lcom/samsung/android/camera/CameraServiceWorker;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/samsung/android/camera/requestinjector/RequestInjectorService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -37,30 +35,24 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 1
 
-    .line 70
     invoke-direct {p0}, Lcom/samsung/android/camera/IRequestInjector$Stub;-><init>()V
 
-    .line 67
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mRequestInjectorLock:Ljava/lang/Object;
 
-    .line 68
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mExtraRequestMap:Landroid/util/ArrayMap;
 
-    .line 71
     iput-object p1, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
-    .line 72
     iput-object p2, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mContext:Landroid/content/Context;
 
-    .line 73
     iput-object p3, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mHandler:Landroid/os/Handler;
 
     return-void
@@ -79,7 +71,6 @@
 
     const-string v3, "key.tagName"
 
-    .line 185
     iget-object v4, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mContext:Landroid/content/Context;
 
     const-string v5, "android.permission.CAMERA_SEND_SYSTEM_EVENTS"
@@ -92,19 +83,16 @@
 
     if-eqz p1, :cond_4
 
-    .line 190
     array-length v4, p1
 
     const/4 v5, 0x1
 
     if-lt v4, v5, :cond_4
 
-    .line 195
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 197
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +113,6 @@
 
     invoke-static {v8, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     sget-object v6, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -144,7 +131,6 @@
 
     invoke-static {v6, v7}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 202
     :try_start_0
     array-length v6, p1
 
@@ -155,10 +141,8 @@
 
     aget-object v9, p1, v7
 
-    .line 204
     invoke-virtual {v9, v3}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 206
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -173,7 +157,6 @@
 
     invoke-static {v8, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     sget-object v10, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -190,7 +173,6 @@
 
     invoke-static {v10, v11}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 209
     invoke-virtual {v9, v3}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
@@ -199,7 +181,6 @@
 
     const-string v11, "key.i32"
 
-    .line 213
     invoke-virtual {v9, v11}, Landroid/os/PersistableBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v11
@@ -216,11 +197,9 @@
 
     goto :goto_1
 
-    .line 214
     :cond_0
     invoke-static {v10, v0}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 215
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
@@ -233,24 +212,20 @@
 
     goto :goto_0
 
-    .line 210
     :cond_2
     invoke-static {v10, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 211
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    .line 219
     :cond_3
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->sendExtraRequestsToRequestInjector([Landroid/os/PersistableBundle;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 221
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -260,10 +235,8 @@
 
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 222
     throw p0
 
-    .line 191
     :cond_4
     sget-object p0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
@@ -271,14 +244,12 @@
 
     invoke-static {p0, p1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 192
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    .line 187
     :cond_5
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -292,7 +263,6 @@
 .method public clearRequests()V
     .locals 9
 
-    .line 232
     iget-object v0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CAMERA_SEND_SYSTEM_EVENTS"
@@ -303,12 +273,10 @@
 
     if-nez v0, :cond_3
 
-    .line 237
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 240
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mRequestInjectorLock:Ljava/lang/Object;
 
@@ -316,7 +284,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 241
     :try_start_1
     iget-object v3, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mExtraRequestMap:Landroid/util/ArrayMap;
 
@@ -324,12 +291,10 @@
 
     move-result-object v3
 
-    .line 242
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 244
     invoke-interface {v3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -349,14 +314,12 @@
 
     check-cast v5, Landroid/os/PersistableBundle;
 
-    .line 245
     invoke-virtual {v5}, Landroid/os/PersistableBundle;->deepCopy()Landroid/os/PersistableBundle;
 
     move-result-object v5
 
     const-string v7, "key.i32"
 
-    .line 246
     invoke-virtual {v5, v7}, Landroid/os/PersistableBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v7
@@ -367,13 +330,11 @@
 
     new-array v8, v6, [I
 
-    .line 247
     invoke-virtual {v5, v7, v8}, Landroid/os/PersistableBundle;->putIntArray(Ljava/lang/String;[I)V
 
     :cond_0
     const-string v7, "key.u8"
 
-    .line 249
     invoke-virtual {v5, v7}, Landroid/os/PersistableBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v7
@@ -384,10 +345,8 @@
 
     new-array v6, v6, [I
 
-    .line 250
     invoke-virtual {v5, v7, v6}, Landroid/os/PersistableBundle;->putIntArray(Ljava/lang/String;[I)V
 
-    .line 253
     :cond_1
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -396,7 +355,6 @@
     :cond_2
     new-array v3, v6, [Landroid/os/PersistableBundle;
 
-    .line 256
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v3
@@ -405,12 +363,10 @@
 
     invoke-virtual {p0, v3}, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->sendExtraRequestsToRequestInjector([Landroid/os/PersistableBundle;)V
 
-    .line 257
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 259
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -418,7 +374,6 @@
     :catchall_0
     move-exception p0
 
-    .line 257
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -432,13 +387,10 @@
     :catchall_1
     move-exception p0
 
-    .line 259
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 260
     throw p0
 
-    .line 234
     :cond_3
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -454,7 +406,6 @@
 
     monitor-enter p0
 
-    .line 332
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mRequestInjectorLock:Ljava/lang/Object;
 
@@ -465,15 +416,12 @@
     :try_start_1
     const-string v1, "\n\tDump of Request Injector Service Activity"
 
-    .line 333
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "\t\tInterface v2 Hash:b05ff96f01de43f1b43fef6b50a2aa6a578c5be3"
 
-    .line 334
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 335
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -496,7 +444,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 336
     iget-object v1, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mExtraRequestMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
@@ -520,7 +467,6 @@
 
     check-cast v2, Landroid/os/PersistableBundle;
 
-    .line 337
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -543,7 +489,6 @@
 
     const-string v4, "key.i32"
 
-    .line 338
     invoke-virtual {v2, v4}, Landroid/os/PersistableBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v4
@@ -562,7 +507,6 @@
 
     const-string/jumbo v5, "null"
 
-    .line 339
     invoke-virtual {v4, v5}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -577,7 +521,6 @@
 
     const-string v4, "key.u8"
 
-    .line 340
     invoke-virtual {v2, v4}, Landroid/os/PersistableBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v2
@@ -596,7 +539,6 @@
 
     const-string/jumbo v4, "null"
 
-    .line 341
     invoke-virtual {v2, v4}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -609,18 +551,15 @@
 
     move-result-object v2
 
-    .line 337
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 343
     :cond_0
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 344
     monitor-exit p0
 
     return-void
@@ -628,7 +567,6 @@
     :catchall_0
     move-exception p1
 
-    .line 343
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -650,7 +588,6 @@
 .method public final getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "b05ff96f01de43f1b43fef6b50a2aa6a578c5be3"
 
     return-object p0
@@ -659,7 +596,6 @@
 .method public final getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x2
 
     return p0
@@ -668,7 +604,6 @@
 .method public final pkgInstalledOrNot(Ljava/lang/String;)Z
     .locals 1
 
-    .line 87
     iget-object p0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -677,7 +612,6 @@
 
     const/4 v0, 0x4
 
-    .line 90
     :try_start_0
     invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -687,7 +621,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 91
     invoke-virtual {p0}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
 
     move-result p1
@@ -710,7 +643,6 @@
     :catch_0
     move-exception p0
 
-    .line 95
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -742,22 +674,18 @@
 
     const-string/jumbo v1, "sendAllExtraRequestsToRequestInjector"
 
-    .line 267
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     sget-object v0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     const-string/jumbo v1, "sendAllExtraRequestsToRequestInjector"
 
     invoke-static {v0, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 270
     iget-object v0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mRequestInjectorLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 271
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mExtraRequestMap:Landroid/util/ArrayMap;
 
@@ -777,7 +705,6 @@
 
     invoke-virtual {p0, v1}, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->sendExtraRequestsToRequestInjector([Landroid/os/PersistableBundle;)V
 
-    .line 272
     monitor-exit v0
 
     return-void
@@ -797,7 +724,6 @@
 
     const-string v0, "RequestInjectorService"
 
-    .line 276
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -816,7 +742,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     sget-object v0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -837,7 +762,6 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 281
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mRequestInjectorLock:Ljava/lang/Object;
 
@@ -845,7 +769,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 282
     :try_start_1
     array-length v1, p1
 
@@ -860,7 +783,6 @@
 
     const-string v5, "RequestInjectorService"
 
-    .line 283
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -877,7 +799,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     sget-object v5, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -898,7 +819,6 @@
 
     const-string v5, "key.i32"
 
-    .line 286
     invoke-virtual {v4, v5}, Landroid/os/PersistableBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v5
@@ -918,7 +838,6 @@
     :cond_0
     const-string v5, "key.u8"
 
-    .line 287
     invoke-virtual {v4, v5}, Landroid/os/PersistableBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v5
@@ -935,7 +854,6 @@
 
     if-lez v5, :cond_2
 
-    .line 288
     :cond_1
     iget-object v5, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mExtraRequestMap:Landroid/util/ArrayMap;
 
@@ -949,7 +867,6 @@
 
     goto :goto_1
 
-    .line 290
     :cond_2
     iget-object v5, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mExtraRequestMap:Landroid/util/ArrayMap;
 
@@ -966,7 +883,6 @@
 
     goto :goto_0
 
-    .line 295
     :cond_3
     iget-object v1, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -987,17 +903,14 @@
 
     const-string p1, "Native camera service not available."
 
-    .line 299
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     sget-object p0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     const-string p1, "Native camera service not available."
 
     invoke-static {p0, p1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 301
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1006,12 +919,10 @@
 
     const-string/jumbo v0, "sendExtraRequestsToRequestInjector done"
 
-    .line 326
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo p1, "sendExtraRequestsToRequestInjector done"
 
-    .line 327
     invoke-static {p0, p1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
     return-void
@@ -1019,14 +930,12 @@
     :cond_4
     const-wide/16 v2, 0x64
 
-    .line 305
     :try_start_2
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 309
     :catch_0
     :try_start_3
     iget-object v2, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
@@ -1045,7 +954,6 @@
 
     goto :goto_2
 
-    .line 313
     :cond_5
     :try_start_4
     invoke-interface {v1, p1}, Landroid/hardware/ICameraService;->applyExtraRequestsToRequestInjector([Landroid/os/PersistableBundle;)Z
@@ -1061,17 +969,14 @@
 
     const-string p1, "Fail to apply ExtraRequests to Request Injector, maybe type mismatch"
 
-    .line 314
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     sget-object p0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     const-string p1, "Fail to apply ExtraRequests to Request Injector, maybe type mismatch"
 
     invoke-static {p0, p1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 317
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Fail to apply request. Please check log"
@@ -1091,10 +996,8 @@
 
     const-string v1, "Fail to apply ExtraRequests to Request Injector"
 
-    .line 320
     invoke-static {p1, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 321
     sget-object p1, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1113,7 +1016,6 @@
 
     invoke-static {p1, p0}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 324
     :goto_3
     monitor-exit v0
     :try_end_5
@@ -1123,10 +1025,8 @@
 
     const-string/jumbo p1, "sendExtraRequestsToRequestInjector done"
 
-    .line 326
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     sget-object p0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     const-string/jumbo p1, "sendExtraRequestsToRequestInjector done"
@@ -1138,7 +1038,6 @@
     :catchall_0
     move-exception p0
 
-    .line 324
     :try_start_6
     monitor-exit v0
     :try_end_6
@@ -1156,17 +1055,14 @@
 
     const-string/jumbo v0, "sendExtraRequestsToRequestInjector done"
 
-    .line 326
     invoke-static {p1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     sget-object p1, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     const-string/jumbo v0, "sendExtraRequestsToRequestInjector done"
 
     invoke-static {p1, v0}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 328
     throw p0
 .end method
 
@@ -1175,7 +1071,6 @@
 
     const-string v0, "com.samsung.android.vtcamerasettings"
 
-    .line 105
     invoke-virtual {p0, v0}, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->pkgInstalledOrNot(Ljava/lang/String;)Z
 
     move-result v0
@@ -1186,15 +1081,12 @@
 
     const-string v0, "VT Camera Setting exists. Register camera listener."
 
-    .line 106
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     sget-object v1, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {v1, v0}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 109
     iget-object v0, p0, Lcom/samsung/android/camera/requestinjector/RequestInjectorService;->mContext:Landroid/content/Context;
 
     const-string v1, "camera"
@@ -1213,7 +1105,6 @@
 
     const/4 v2, 0x1
 
-    .line 110
     invoke-virtual {v0, v1, p0, v2}, Landroid/hardware/camera2/CameraManager;->registerSemCameraDeviceStateCallback(Landroid/hardware/camera2/CameraManager$SemCameraDeviceStateCallback;Landroid/os/Handler;Z)V
 
     goto :goto_0
@@ -1221,10 +1112,8 @@
     :cond_0
     const-string p0, "VT Camera Setting does not exist. Skip register camera listener."
 
-    .line 173
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     sget-object v0, Lcom/samsung/android/camera/Logger$ID;->REQUEST_INJECTOR_SERVICE:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {v0, p0}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V

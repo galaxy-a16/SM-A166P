@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallback(Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;)Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$OnDeviceInfoTestModeChanged;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->mCallback:Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$OnDeviceInfoTestModeChanged;
 
     return-object p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTestModeChangeHandler(Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->mTestModeChangeHandler:Landroid/os/Handler;
 
     return-object p0
@@ -52,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -61,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsCurrentTestMode()I
     .locals 1
 
-    .line 0
     sget v0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->sCurrentTestMode:I
 
     return v0
@@ -70,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$smupdateTestModeFromSetting(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->updateTestModeFromSetting(Landroid/content/Context;)V
 
     return-void
@@ -79,7 +73,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 21
     invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
 
     move-result v0
@@ -90,7 +83,6 @@
 
     const/4 v0, 0x0
 
-    .line 24
     sput v0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->sCurrentTestMode:I
 
     return-void
@@ -99,10 +91,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$OnDeviceInfoTestModeChanged;)V
     .locals 2
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     new-instance v0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -113,12 +103,10 @@
 
     iput-object v0, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->mTestModeChangeHandler:Landroid/os/Handler;
 
-    .line 41
     sget-boolean v0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->SHIPPED:Z
 
     if-eqz v0, :cond_0
 
-    .line 42
     sget-object p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->TAG:Ljava/lang/String;
 
     const-string p1, "This version has been shipped!! Then device info test mode is not available"
@@ -127,14 +115,11 @@
 
     return-void
 
-    .line 46
     :cond_0
     iput-object p1, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->mContext:Landroid/content/Context;
 
-    .line 47
     iput-object p2, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->mCallback:Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$OnDeviceInfoTestModeChanged;
 
-    .line 49
     new-instance p1, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils$2;
 
     new-instance p2, Landroid/os/Handler;
@@ -151,12 +136,10 @@
 
     const-string p1, "deviceinfo_test_mode"
 
-    .line 57
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 58
     iget-object p2, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -169,7 +152,6 @@
 
     invoke-virtual {p2, p1, v0, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/sepunion/SemDeviceInfoTestModeUtils;->updateTestModeFromSetting(Landroid/content/Context;)V
@@ -180,7 +162,6 @@
 .method public static updateTestModeFromSetting(Landroid/content/Context;)V
     .locals 2
 
-    .line 64
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

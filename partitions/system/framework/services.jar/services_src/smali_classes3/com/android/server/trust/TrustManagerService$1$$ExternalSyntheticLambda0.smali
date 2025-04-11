@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/trust/TrustManagerService$1;->$r8$lambda$6tGcP2kY724AQoFZTqhRnLDeAIc()V
 
     return-void

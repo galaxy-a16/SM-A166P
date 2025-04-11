@@ -21,7 +21,6 @@
 
     return-object p0
 
-    .line 135
     :cond_0
     array-length v0, p0
 
@@ -31,7 +30,6 @@
 
     return-object p0
 
-    .line 137
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -41,7 +39,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 138
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -51,7 +48,6 @@
 
     aget-byte v3, p0, v2
 
-    .line 139
     invoke-static {v3}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v3
@@ -72,7 +68,6 @@
 
     goto :goto_0
 
-    .line 141
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -84,17 +79,14 @@
 .method public static getCurrentTime()Ljava/lang/String;
     .locals 4
 
-    .line 123
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 124
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2, v0, v1}, Ljava/util/Date;-><init>(J)V
 
-    .line 125
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss.SSS"
@@ -103,7 +95,6 @@
 
     invoke-direct {v0, v1, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 126
     invoke-virtual {v0, v2}, Ljava/text/Format;->format(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -114,7 +105,6 @@
 .method public static makeDebugMessage(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -151,7 +141,6 @@
 .method public static makeErrorMessages(Ljava/lang/String;Ljava/lang/Exception;)[Ljava/lang/String;
     .locals 7
 
-    .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -184,7 +173,6 @@
 
     return-object v2
 
-    .line 64
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Exception;->getStackTrace()[Ljava/lang/StackTraceElement;
@@ -205,17 +193,14 @@
     :goto_0
     add-int/2addr v5, v4
 
-    .line 68
     array-length v6, v3
 
     add-int/2addr v5, v6
 
-    .line 71
     new-array v2, v5, [Ljava/lang/String;
 
     if-eqz p0, :cond_2
 
-    .line 73
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -238,7 +223,6 @@
     :goto_1
     add-int/lit8 p0, v4, 0x1
 
-    .line 74
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -257,7 +241,6 @@
 
     aput-object p1, v2, v4
 
-    .line 75
     array-length p1, v3
 
     :goto_2
@@ -267,7 +250,6 @@
 
     add-int/lit8 v5, p0, 0x1
 
-    .line 76
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -302,7 +284,6 @@
 .method public static makeInfoMessages(Ljava/lang/String;Ljava/lang/Throwable;)[Ljava/lang/String;
     .locals 12
 
-    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -329,13 +310,11 @@
 
     if-eqz p1, :cond_2
 
-    .line 31
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object p1
 
-    .line 32
     array-length v1, p1
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
@@ -348,7 +327,6 @@
 
     if-le v1, v4, :cond_0
 
-    .line 33
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -383,7 +361,6 @@
     :cond_0
     move-object v1, v3
 
-    .line 34
     :goto_0
     array-length v5, p1
 
@@ -391,7 +368,6 @@
 
     if-le v5, v6, :cond_1
 
-    .line 35
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -420,7 +396,6 @@
 
     move-result-object v3
 
-    .line 36
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -430,7 +405,6 @@
 
     move-result-object p1
 
-    .line 37
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
@@ -439,7 +413,6 @@
 
     move-result-object v2
 
-    .line 38
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result v5
@@ -448,7 +421,6 @@
 
     move-result-object v5
 
-    .line 39
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v7
@@ -461,7 +433,6 @@
 
     move-result-object v7
 
-    .line 42
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -549,14 +520,12 @@
     :goto_1
     if-nez p0, :cond_3
 
-    .line 48
     filled-new-array {p1}, [Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 50
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -586,7 +555,6 @@
 
     return-object v0
 
-    .line 90
     :cond_0
     array-length v1, p0
 
@@ -596,7 +564,6 @@
 
     return-object p0
 
-    .line 94
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -616,13 +583,11 @@
 
     move v3, v2
 
-    .line 98
     :goto_0
     array-length v5, p0
 
     if-ge v2, v5, :cond_5
 
-    .line 100
     aget-object v5, p0, v2
 
     if-nez v5, :cond_2
@@ -631,13 +596,11 @@
 
     goto :goto_1
 
-    .line 102
     :cond_2
     instance-of v6, v5, [B
 
     if-eqz v6, :cond_3
 
-    .line 103
     check-cast v5, [B
 
     invoke-static {v5}, Lcom/android/server/knox/dar/sdp/SDPLogUtil;->bytesToHex([B)Ljava/lang/String;
@@ -646,7 +609,6 @@
 
     goto :goto_1
 
-    .line 105
     :cond_3
     invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -655,7 +617,6 @@
     :goto_1
     if-nez v3, :cond_4
 
-    .line 108
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -676,7 +637,6 @@
 
     goto :goto_2
 
-    .line 110
     :cond_4
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -694,7 +654,6 @@
 
     move-result-object v4
 
-    .line 111
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_2
@@ -707,7 +666,6 @@
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 117
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -724,7 +682,6 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 119
     :cond_6
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -736,7 +693,6 @@
 .method public static makeParamMessage(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 84
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -765,7 +721,6 @@
 .method public static safe(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-eqz p0, :cond_0
 
     goto :goto_0

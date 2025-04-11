@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/injector/SystemScreenInteractiveHelper;)V
     .locals 0
 
-    .line 53
     iput-object p1, p0, Lcom/android/server/location/injector/SystemScreenInteractiveHelper$1;->this$0:Lcom/android/server/location/injector/SystemScreenInteractiveHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 57
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -44,7 +42,6 @@
     :cond_0
     const-string p1, "android.intent.action.SCREEN_OFF"
 
-    .line 59
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -57,7 +54,6 @@
 
     const/4 p1, 0x0
 
-    .line 65
     :goto_0
     iget-object p0, p0, Lcom/android/server/location/injector/SystemScreenInteractiveHelper$1;->this$0:Lcom/android/server/location/injector/SystemScreenInteractiveHelper;
 

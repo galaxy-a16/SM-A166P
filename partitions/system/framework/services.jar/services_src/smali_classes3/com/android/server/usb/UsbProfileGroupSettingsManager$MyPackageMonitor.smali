@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbProfileGroupSettingsManager;)V
     .locals 0
 
-    .line 218
     iput-object p1, p0, Lcom/android/server/usb/UsbProfileGroupSettingsManager$MyPackageMonitor;->this$0:Lcom/android/server/usb/UsbProfileGroupSettingsManager;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/usb/UsbProfileGroupSettingsManager;Lcom/android/server/usb/UsbProfileGroupSettingsManager$MyPackageMonitor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/usb/UsbProfileGroupSettingsManager$MyPackageMonitor;-><init>(Lcom/android/server/usb/UsbProfileGroupSettingsManager;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 3
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/usb/UsbProfileGroupSettingsManager$MyPackageMonitor;->this$0:Lcom/android/server/usb/UsbProfileGroupSettingsManager;
 
     invoke-static {v0}, Lcom/android/server/usb/UsbProfileGroupSettingsManager;->-$$Nest$fgetmUserManager(Lcom/android/server/usb/UsbProfileGroupSettingsManager;)Landroid/os/UserManager;
@@ -50,12 +47,10 @@
 
     move-result v1
 
-    .line 222
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
 
-    .line 221
     invoke-virtual {v0, v1, v2}, Landroid/os/UserManager;->isSameProfileGroup(II)Z
 
     move-result v0
@@ -64,7 +59,6 @@
 
     return-void
 
-    .line 226
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/UsbProfileGroupSettingsManager$MyPackageMonitor;->this$0:Lcom/android/server/usb/UsbProfileGroupSettingsManager;
 
@@ -86,7 +80,6 @@
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 3
 
-    .line 231
     iget-object v0, p0, Lcom/android/server/usb/UsbProfileGroupSettingsManager$MyPackageMonitor;->this$0:Lcom/android/server/usb/UsbProfileGroupSettingsManager;
 
     invoke-static {v0}, Lcom/android/server/usb/UsbProfileGroupSettingsManager;->-$$Nest$fgetmUserManager(Lcom/android/server/usb/UsbProfileGroupSettingsManager;)Landroid/os/UserManager;
@@ -103,12 +96,10 @@
 
     move-result v1
 
-    .line 232
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
 
-    .line 231
     invoke-virtual {v0, v1, v2}, Landroid/os/UserManager;->isSameProfileGroup(II)Z
 
     move-result v0
@@ -117,7 +108,6 @@
 
     return-void
 
-    .line 236
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/UsbProfileGroupSettingsManager$MyPackageMonitor;->this$0:Lcom/android/server/usb/UsbProfileGroupSettingsManager;
 

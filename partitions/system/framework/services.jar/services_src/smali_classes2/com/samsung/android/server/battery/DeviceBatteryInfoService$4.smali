@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/battery/DeviceBatteryInfoService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 256
     iput-object p1, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$4;->this$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,10 +23,8 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    .line 259
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 260
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,7 +43,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     :try_start_0
     iget-object p1, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$4;->this$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
@@ -64,7 +60,6 @@
 
     move-result p1
 
-    .line 263
     iget-object v0, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$4;->this$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
     invoke-static {v0}, Lcom/samsung/android/server/battery/DeviceBatteryInfoService;->-$$Nest$fgetmWatchBatteryManager(Lcom/samsung/android/server/battery/DeviceBatteryInfoService;)Lcom/samsung/android/server/battery/WatchBatteryManagerInterface;
@@ -73,7 +68,6 @@
 
     invoke-interface {v0, p1}, Lcom/samsung/android/server/battery/WatchBatteryManagerInterface;->aodShowStateChanged(I)V
 
-    .line 264
     invoke-static {}, Lcom/samsung/android/server/battery/DeviceBatteryInfoService;->-$$Nest$sfgetmOneUIVersion()I
 
     move-result v0
@@ -82,7 +76,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 265
     iget-object p0, p0, Lcom/samsung/android/server/battery/DeviceBatteryInfoService$4;->this$0:Lcom/samsung/android/server/battery/DeviceBatteryInfoService;
 
     invoke-static {p0}, Lcom/samsung/android/server/battery/DeviceBatteryInfoService;->-$$Nest$fgetmFitBatteryManager(Lcom/samsung/android/server/battery/DeviceBatteryInfoService;)Lcom/samsung/android/server/battery/FitBatteryManager;
@@ -91,7 +84,6 @@
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/battery/FitBatteryManager;->aodShowStateChanged(I)V
 
-    .line 267
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -116,7 +108,6 @@
     :catch_0
     move-exception p0
 
-    .line 269
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

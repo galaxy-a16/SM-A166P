@@ -35,12 +35,10 @@
 
     move-object/from16 v11, p12
 
-    .line 53
     invoke-direct/range {v0 .. v11}, Lcom/android/server/biometrics/sensors/RemovalClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;Lcom/android/server/biometrics/sensors/BiometricUtils;ILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;Ljava/util/Map;)V
 
     move-object/from16 v1, p5
 
-    .line 55
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/face/aidl/FaceRemovalClient;->mBiometricIds:[I
 
     return-void
@@ -53,7 +51,6 @@
 
     const-string v0, "FaceRemovalClient"
 
-    .line 62
     :try_start_0
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;->getInstance()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
@@ -65,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 63
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;->getInstance()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
     move-result-object v1
@@ -76,7 +72,6 @@
 
     goto :goto_0
 
-    .line 68
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -84,10 +79,8 @@
 
     const-string/jumbo v3, "removeEnrollments START"
 
-    .line 69
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getFreshDaemon()Ljava/lang/Object;
 
     move-result-object v3
@@ -102,7 +95,6 @@
 
     invoke-interface {v3, v4}, Landroid/hardware/biometrics/face/ISession;->removeEnrollments([I)V
 
-    .line 71
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,10 +130,8 @@
 
     const-string v2, "Remote exception when requesting remove"
 
-    .line 75
     invoke-static {v0, v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v1, 0x0

@@ -155,27 +155,22 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     new-instance v0, Lcom/android/server/pm/ChangedPackagesTracker;
 
     invoke-direct {v0}, Lcom/android/server/pm/ChangedPackagesTracker;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerServiceTestParams;->changedPackagesTracker:Lcom/android/server/pm/ChangedPackagesTracker;
 
-    .line 109
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     iput v0, p0, Lcom/android/server/pm/PackageManagerServiceTestParams;->sdkInt:I
 
-    .line 111
     sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerServiceTestParams;->incrementalVersion:Ljava/lang/String;
 
-    .line 124
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V

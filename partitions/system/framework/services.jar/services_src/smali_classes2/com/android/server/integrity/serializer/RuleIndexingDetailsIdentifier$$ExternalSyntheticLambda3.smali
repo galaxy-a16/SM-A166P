@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/integrity/serializer/RuleIndexingDetails;
 
     invoke-static {p1}, Lcom/android/server/integrity/serializer/RuleIndexingDetailsIdentifier;->$r8$lambda$jp-n_A1FQzC4xqMfrQ4tr53aPks(Lcom/android/server/integrity/serializer/RuleIndexingDetails;)Z

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1092
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$4;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 3
 
-    .line 1095
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -55,7 +53,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1096
     iget-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$4;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$mgetSecureFolderId(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)I
@@ -64,7 +61,6 @@
 
     const-string v0, "hide_secure_folder_flag"
 
-    .line 1097
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -77,7 +73,6 @@
 
     if-nez p3, :cond_0
 
-    .line 1099
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetmContext()Landroid/content/Context;
 
     move-result-object p2
@@ -96,7 +91,6 @@
 
     if-eq p1, p3, :cond_0
 
-    .line 1102
     iget-object p0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$4;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {p0, p2}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$mshowSecureFolder(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;I)V

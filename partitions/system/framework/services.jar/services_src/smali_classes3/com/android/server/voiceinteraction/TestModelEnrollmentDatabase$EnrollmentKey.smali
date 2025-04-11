@@ -15,20 +15,16 @@
 .method public constructor <init>(ILjava/util/List;Ljava/lang/String;)V
     .locals 0
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput p1, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mKeyphraseId:I
 
-    .line 46
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p2, Ljava/util/List;
 
     iput-object p2, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mUserIds:Ljava/util/List;
 
-    .line 47
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p3, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mLocale:Ljava/lang/String;
@@ -54,7 +50,6 @@
 
     return v1
 
-    .line 85
     :cond_1
     instance-of v2, p1, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;
 
@@ -62,11 +57,9 @@
 
     return v1
 
-    .line 86
     :cond_2
     check-cast p1, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;
 
-    .line 87
     iget v2, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mKeyphraseId:I
 
     iget v3, p1, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mKeyphraseId:I
@@ -75,7 +68,6 @@
 
     return v1
 
-    .line 88
     :cond_3
     iget-object v2, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mUserIds:Ljava/util/List;
 
@@ -89,7 +81,6 @@
 
     return v1
 
-    .line 89
     :cond_4
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mLocale:Ljava/lang/String;
 
@@ -110,7 +101,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 75
     iget v0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mKeyphraseId:I
 
     const/16 v1, 0x1f
@@ -119,7 +109,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 76
     iget-object v2, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mUserIds:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->hashCode()I
@@ -130,7 +119,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 77
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mLocale:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -145,7 +133,6 @@
 .method public keyphraseId()I
     .locals 0
 
-    .line 51
     iget p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mKeyphraseId:I
 
     return p0
@@ -154,7 +141,6 @@
 .method public locale()Ljava/lang/String;
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mLocale:Ljava/lang/String;
 
     return-object p0
@@ -163,7 +149,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 64
     new-instance v0, Ljava/util/StringJoiner;
 
     const-string/jumbo v1, "{"
@@ -174,7 +159,6 @@
 
     invoke-direct {v0, v3, v1, v2}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    .line 65
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,7 +177,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 66
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +199,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 67
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -239,7 +221,6 @@
 
     invoke-virtual {v0, p0}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 68
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,7 +245,6 @@
 .method public userIds()Ljava/util/List;
     .locals 0
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/voiceinteraction/TestModelEnrollmentDatabase$EnrollmentKey;->mUserIds:Ljava/util/List;
 
     return-object p0

@@ -24,7 +24,6 @@
 
     const-string v2, "com.samsung.android.multistar"
 
-    .line 54
     filled-new-array {v2, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -41,10 +40,8 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Lcom/android/server/wm/MultiStarController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-void
@@ -57,7 +54,6 @@
 
     const/4 v0, 0x0
 
-    .line 87
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/MultiStarController;->checkMultiStarPackageAndPermission(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
@@ -68,30 +64,25 @@
 
     if-nez p2, :cond_0
 
-    .line 92
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 94
     :cond_0
     sget-object v0, Lcom/android/server/wm/MultiStarController;->DEFAULT_ALLOW_LIST:Ljava/util/List;
 
     invoke-interface {p2, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 96
     invoke-virtual {p0, p2}, Lcom/android/server/wm/MultiStarController;->ensureCallingPkg(Ljava/util/List;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 102
     invoke-static {p1}, Lcom/android/server/wm/ActivityTaskManagerService;->enforceTaskPermission(Ljava/lang/String;)V
 
     return-void
 
-    .line 97
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -117,7 +108,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 98
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p1
@@ -128,7 +118,6 @@
 
     move-result-object p0
 
-    .line 99
     new-instance p1, Ljava/lang/SecurityException;
 
     invoke-direct {p1, p0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
@@ -139,7 +128,6 @@
 .method public dumpLocked(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -148,23 +136,19 @@
 
     const/4 p0, 0x0
 
-    .line 68
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 69
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 68
     invoke-interface {v0, v1}, Landroid/content/pm/IPackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 70
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -182,7 +166,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 71
     array-length v2, v0
 
     move v3, p0
@@ -192,7 +175,6 @@
 
     aget-object v4, v0, v3
 
-    .line 72
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -218,14 +200,12 @@
 .method public initialize()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setCustomDensityEnabled(I)V
     .locals 2
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/wm/MultiStarController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiWindowEnableController:Lcom/android/server/wm/MultiWindowEnableController;
@@ -234,7 +214,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/MultiWindowEnableController;->dismissMultiWindowMode(I)V
 
-    .line 138
     iget-object p0, p0, Lcom/android/server/wm/MultiStarController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mMultiWindowEnableController:Lcom/android/server/wm/MultiWindowEnableController;
@@ -247,7 +226,6 @@
 .method public toggleFreeformWindowingMode()Z
     .locals 9
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/wm/MultiStarController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -258,21 +236,18 @@
 
     const/4 v1, 0x1
 
-    .line 145
     invoke-virtual {v0, v1, v1}, Lcom/android/server/wm/DisplayContent;->getRootTask(II)Lcom/android/server/wm/Task;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 147
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->topRunningActivityLocked()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v5
 
     if-eqz v5, :cond_2
 
-    .line 148
     invoke-virtual {v5}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -285,7 +260,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 149
     iget-object v0, p0, Lcom/android/server/wm/MultiStarController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mActivityClientController:Lcom/android/server/wm/ActivityClientController;
@@ -294,14 +268,12 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/wm/ActivityClientController;->toggleFreeformWindowingMode(Landroid/os/IBinder;)V
 
-    .line 150
     invoke-virtual {v5}, Lcom/android/server/wm/ConfigurationContainer;->inFreeformWindowingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 151
     invoke-virtual {v5}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -310,7 +282,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 152
     invoke-virtual {v5}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -323,7 +294,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 153
     :cond_0
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
@@ -331,10 +301,8 @@
 
     const/4 v0, 0x5
 
-    .line 154
     invoke-virtual {v7, v0}, Landroid/app/ActivityOptions;->setLaunchWindowingMode(I)V
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/wm/MultiStarController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mTaskSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
@@ -343,7 +311,6 @@
 
     move-result-object v2
 
-    .line 156
     invoke-virtual {v5}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v3
@@ -354,7 +321,6 @@
 
     const/4 v6, 0x0
 
-    .line 157
     invoke-virtual {v5}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object p0
@@ -363,7 +329,6 @@
 
     move-result v8
 
-    .line 155
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/wm/LaunchParamsController;->layoutTask(Lcom/android/server/wm/Task;Landroid/content/pm/ActivityInfo$WindowLayout;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;I)Z
 
     :cond_1

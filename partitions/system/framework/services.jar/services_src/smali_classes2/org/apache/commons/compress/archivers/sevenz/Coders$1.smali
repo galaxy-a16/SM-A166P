@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 47
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 51
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->COPY:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$CopyDecoder;
@@ -23,7 +21,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->LZMA:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/LZMADecoder;
@@ -32,7 +29,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->LZMA2:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/LZMA2Decoder;
@@ -41,7 +37,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->DEFLATE:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder;
@@ -50,7 +45,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->DEFLATE64:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$Deflate64Decoder;
@@ -59,7 +53,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BZIP2:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$BZIP2Decoder;
@@ -68,7 +61,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->AES256SHA256:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder;
@@ -77,7 +69,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_X86_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$BCJDecoder;
@@ -90,7 +81,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 59
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_PPC_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$BCJDecoder;
@@ -103,7 +93,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 60
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_IA64_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$BCJDecoder;
@@ -116,7 +105,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_ARM_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$BCJDecoder;
@@ -129,7 +117,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 62
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_ARM_THUMB_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$BCJDecoder;
@@ -142,7 +129,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 63
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_SPARC_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/Coders$BCJDecoder;
@@ -155,7 +141,6 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->DELTA_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-instance v1, Lorg/apache/commons/compress/archivers/sevenz/DeltaDecoder;

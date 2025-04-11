@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/RemoteFillService;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 209
     iput-object p1, p0, Lcom/android/server/autofill/RemoteFillService$2;->this$0:Lcom/android/server/autofill/RemoteFillService;
 
     iput-object p2, p0, Lcom/android/server/autofill/RemoteFillService$2;->val$save:Ljava/util/concurrent/CompletableFuture;
@@ -28,7 +27,6 @@
 .method public onFailure(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 217
     iget-object p0, p0, Lcom/android/server/autofill/RemoteFillService$2;->val$save:Ljava/util/concurrent/CompletableFuture;
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -47,7 +45,6 @@
 .method public onSuccess(Landroid/content/IntentSender;)V
     .locals 0
 
-    .line 212
     iget-object p0, p0, Lcom/android/server/autofill/RemoteFillService$2;->val$save:Ljava/util/concurrent/CompletableFuture;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z

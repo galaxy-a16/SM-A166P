@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -27,7 +25,6 @@
 .method public static isForeground(I)Z
     .locals 1
 
-    .line 0
     const/16 v0, 0x7d
 
     if-gt p0, v0, :cond_0
@@ -48,7 +45,6 @@
 .method public final addListener(Lcom/android/server/location/injector/AppForegroundHelper$AppForegroundListener;)V
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/location/injector/AppForegroundHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -62,7 +58,6 @@
 .method public final notifyAppForeground(IZ)V
     .locals 1
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/location/injector/AppForegroundHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -82,7 +77,6 @@
 
     check-cast v0, Lcom/android/server/location/injector/AppForegroundHelper$AppForegroundListener;
 
-    .line 71
     invoke-interface {v0, p1, p2}, Lcom/android/server/location/injector/AppForegroundHelper$AppForegroundListener;->onAppForegroundChanged(IZ)V
 
     goto :goto_0
@@ -94,7 +88,6 @@
 .method public final removeListener(Lcom/android/server/location/injector/AppForegroundHelper$AppForegroundListener;)V
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/location/injector/AppForegroundHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z

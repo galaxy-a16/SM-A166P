@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/AppStateTrackerImpl;)V
     .locals 0
 
-    .line 444
     iput-object p1, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,12 +27,10 @@
 
     const/4 v0, -0x1
 
-    .line 447
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 448
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -109,14 +106,12 @@
     :pswitch_0
     const-string v1, "android.intent.extra.REPLACING"
 
-    .line 461
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    .line 462
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -127,12 +122,10 @@
 
     const-string v2, "android.intent.extra.UID"
 
-    .line 463
     invoke-virtual {p2, v2, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 466
     iget-object v0, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     invoke-static {v0}, Lcom/android/server/AppStateTrackerImpl;->-$$Nest$fgetmLock(Lcom/android/server/AppStateTrackerImpl;)Ljava/lang/Object;
@@ -141,7 +134,6 @@
 
     monitor-enter v0
 
-    .line 467
     :try_start_0
     iget-object v2, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
@@ -149,7 +141,6 @@
 
     invoke-virtual {v2, p1, v1}, Landroid/util/SparseSetArray;->remove(ILjava/lang/Object;)Z
 
-    .line 468
     iget-object p1, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     iget-object p1, p1, Lcom/android/server/AppStateTrackerImpl;->mRunAnyRestrictedPackages:Landroid/util/ArraySet;
@@ -164,19 +155,16 @@
 
     invoke-virtual {p1, v1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 469
     iget-object p1, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     invoke-static {p1}, Lcom/android/server/AppStateTrackerImpl;->-$$Nest$mupdateBackgroundRestrictedUidPackagesLocked(Lcom/android/server/AppStateTrackerImpl;)V
 
-    .line 470
     iget-object p0, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     iget-object p0, p0, Lcom/android/server/AppStateTrackerImpl;->mActiveUids:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, p2}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 471
     monitor-exit v0
 
     goto :goto_3
@@ -190,7 +178,6 @@
 
     throw p0
 
-    .line 455
     :pswitch_1
     iget-object p1, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
@@ -200,7 +187,6 @@
 
     monitor-enter v0
 
-    .line 456
     :try_start_1
     iget-object p1, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
@@ -220,12 +206,10 @@
     :goto_2
     iput-boolean v3, p1, Lcom/android/server/AppStateTrackerImpl;->mIsPluggedIn:Z
 
-    .line 457
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 458
     iget-object p0, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     invoke-static {p0}, Lcom/android/server/AppStateTrackerImpl;->-$$Nest$mupdateForceAllAppStandbyState(Lcom/android/server/AppStateTrackerImpl;)V
@@ -235,7 +219,6 @@
     :catchall_1
     move-exception p0
 
-    .line 457
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -246,7 +229,6 @@
     :pswitch_2
     if-lez p1, :cond_4
 
-    .line 451
     iget-object p0, p0, Lcom/android/server/AppStateTrackerImpl$3;->this$0:Lcom/android/server/AppStateTrackerImpl;
 
     invoke-static {p0}, Lcom/android/server/AppStateTrackerImpl;->-$$Nest$fgetmHandler(Lcom/android/server/AppStateTrackerImpl;)Lcom/android/server/AppStateTrackerImpl$MyHandler;

@@ -14,7 +14,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 93
     invoke-static {}, Lcom/android/server/battery/sleepcharging/SleepPatternContract;->-$$Nest$sfgetAUTHORITY_URI()Landroid/net/Uri;
 
     move-result-object v0

@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$g9jop99seUO01YSOxSk08rHCh3w()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/wm/InsetsStateController$1;->lambda$notifyInsetsControlChanged$0()V
 
     return-void
@@ -23,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/wm/InsetsStateController;)V
     .locals 0
 
-    .line 80
     iput-object p1, p0, Lcom/android/server/wm/InsetsStateController$1;->this$0:Lcom/android/server/wm/InsetsStateController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,7 +32,6 @@
 .method public static synthetic lambda$notifyInsetsControlChanged$0()V
     .locals 1
 
-    .line 90
     invoke-static {}, Lcom/android/server/inputmethod/InputMethodManagerInternal;->get()Lcom/android/server/inputmethod/InputMethodManagerInternal;
 
     move-result-object v0
@@ -49,7 +46,6 @@
 .method public notifyInsetsControlChanged()V
     .locals 5
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/wm/InsetsStateController$1;->this$0:Lcom/android/server/wm/InsetsStateController;
 
     invoke-virtual {v0, p0}, Lcom/android/server/wm/InsetsStateController;->getControlsForDispatch(Lcom/android/server/wm/InsetsControlTarget;)[Landroid/view/InsetsSourceControl;
@@ -60,7 +56,6 @@
 
     return-void
 
-    .line 87
     :cond_0
     array-length v1, v0
 
@@ -71,7 +66,6 @@
 
     aget-object v3, v0, v2
 
-    .line 88
     invoke-virtual {v3}, Landroid/view/InsetsSourceControl;->getType()I
 
     move-result v3
@@ -82,7 +76,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 89
     iget-object v3, p0, Lcom/android/server/wm/InsetsStateController$1;->this$0:Lcom/android/server/wm/InsetsStateController;
 
     invoke-static {v3}, Lcom/android/server/wm/InsetsStateController;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/InsetsStateController;)Lcom/android/server/wm/DisplayContent;

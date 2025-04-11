@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/VerifyingSession;I)V
     .locals 0
 
-    .line 349
     iput-object p1, p0, Lcom/android/server/pm/VerifyingSession$1;->this$0:Lcom/android/server/pm/VerifyingSession;
 
     iput p2, p0, Lcom/android/server/pm/VerifyingSession$1;->val$verificationId:I
@@ -28,7 +27,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 352
     iget-object p1, p0, Lcom/android/server/pm/VerifyingSession$1;->this$0:Lcom/android/server/pm/VerifyingSession;
 
     invoke-static {p1}, Lcom/android/server/pm/VerifyingSession;->-$$Nest$fgetmPm(Lcom/android/server/pm/VerifyingSession;)Lcom/android/server/pm/PackageManagerService;
@@ -39,17 +37,14 @@
 
     const/16 p2, 0x1a
 
-    .line 353
     invoke-virtual {p1, p2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 354
     iget p2, p0, Lcom/android/server/pm/VerifyingSession$1;->val$verificationId:I
 
     iput p2, p1, Landroid/os/Message;->arg1:I
 
-    .line 355
     iget-object p2, p0, Lcom/android/server/pm/VerifyingSession$1;->this$0:Lcom/android/server/pm/VerifyingSession;
 
     invoke-static {p2}, Lcom/android/server/pm/VerifyingSession;->-$$Nest$fgetmPm(Lcom/android/server/pm/VerifyingSession;)Lcom/android/server/pm/PackageManagerService;

@@ -16,13 +16,10 @@
 .method public constructor <init>(Ljava/lang/String;J)V
     .locals 0
 
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-object p1, p0, Lcom/android/server/backup/fullbackup/FullBackupEntry;->packageName:Ljava/lang/String;
 
-    .line 26
     iput-wide p2, p0, Lcom/android/server/backup/fullbackup/FullBackupEntry;->lastBackup:J
 
     return-void
@@ -33,7 +30,6 @@
 .method public compareTo(Lcom/android/server/backup/fullbackup/FullBackupEntry;)I
     .locals 3
 
-    .line 31
     iget-wide v0, p0, Lcom/android/server/backup/fullbackup/FullBackupEntry;->lastBackup:J
 
     iget-wide p0, p1, Lcom/android/server/backup/fullbackup/FullBackupEntry;->lastBackup:J
@@ -64,7 +60,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 19
     check-cast p1, Lcom/android/server/backup/fullbackup/FullBackupEntry;
 
     invoke-virtual {p0, p1}, Lcom/android/server/backup/fullbackup/FullBackupEntry;->compareTo(Lcom/android/server/backup/fullbackup/FullBackupEntry;)I

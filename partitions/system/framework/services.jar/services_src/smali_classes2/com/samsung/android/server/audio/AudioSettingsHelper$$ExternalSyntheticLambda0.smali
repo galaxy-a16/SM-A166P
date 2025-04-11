@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/audio/AudioSettingsHelper$$ExternalSyntheticLambda0;->f$0:Ljava/lang/String;
@@ -31,7 +30,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/samsung/android/server/audio/AudioSettingsHelper$$ExternalSyntheticLambda0;->f$0:Ljava/lang/String;
 
     iget-object p0, p0, Lcom/samsung/android/server/audio/AudioSettingsHelper$$ExternalSyntheticLambda0;->f$1:Ljava/lang/String;

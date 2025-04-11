@@ -13,7 +13,6 @@
 .method public constructor <init>(ZI)V
     .locals 0
 
-    .line 246
     iput-boolean p1, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;->val$isWhiteListed:Z
 
     iput p2, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;->val$targetSDK:I
@@ -28,7 +27,6 @@
 .method public mayGrantPermission()Z
     .locals 1
 
-    .line 249
     iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;->val$isWhiteListed:Z
 
     if-nez v0, :cond_1

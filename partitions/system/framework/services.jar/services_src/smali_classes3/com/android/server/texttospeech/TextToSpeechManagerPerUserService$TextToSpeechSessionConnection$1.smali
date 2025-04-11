@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService$TextToSpeechSessionConnection;)V
     .locals 0
 
-    .line 116
     iput-object p1, p0, Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService$TextToSpeechSessionConnection$1;->this$0:Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService$TextToSpeechSessionConnection;
 
     invoke-direct {p0}, Landroid/speech/tts/ITextToSpeechSession$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public disconnect()V
     .locals 1
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService$TextToSpeechSessionConnection$1;->this$0:Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService$TextToSpeechSessionConnection;
 
     const-string v0, "client disconnection request"

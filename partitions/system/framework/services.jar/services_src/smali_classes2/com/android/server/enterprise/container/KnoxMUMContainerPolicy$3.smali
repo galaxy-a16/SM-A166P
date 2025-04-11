@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)V
     .locals 0
 
-    .line 1016
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -24,35 +23,30 @@
 .method public onKnoxContainerLaunch(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPersonaActive(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onRemovePersona(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onResetPersona(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStateChange(ILcom/samsung/android/knox/SemPersonaState;Lcom/samsung/android/knox/SemPersonaState;)V
     .locals 3
 
-    .line 1035
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -85,7 +79,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1037
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$3;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-static {v0}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->-$$Nest$fgetmHandler(Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;)Landroid/os/Handler;

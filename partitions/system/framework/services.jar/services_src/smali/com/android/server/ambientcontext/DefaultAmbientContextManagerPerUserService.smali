@@ -21,30 +21,24 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/ambientcontext/AmbientContextManagerService;Ljava/lang/Object;ILcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;Ljava/lang/String;)V
     .locals 0
 
-    .line 49
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;-><init>(Lcom/android/server/ambientcontext/AmbientContextManagerService;Ljava/lang/Object;I)V
 
-    .line 50
     iput-object p4, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mServiceType:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
-    .line 51
     iput-object p5, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mServiceName:Ljava/lang/String;
 
-    .line 52
     invoke-static {p5}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mComponentName:Landroid/content/ComponentName;
 
-    .line 53
     sget-object p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -55,7 +49,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 54
     invoke-virtual {p4}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p2
@@ -72,7 +65,6 @@
 
     move-result-object p1
 
-    .line 53
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -85,7 +77,6 @@
 
     const/4 v0, 0x0
 
-    .line 110
     iput-object v0, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mRemoteService:Lcom/android/server/ambientcontext/DefaultRemoteAmbientContextDetectionService;
 
     return-void
@@ -94,15 +85,12 @@
 .method public ensureRemoteServiceInitiated()V
     .locals 4
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mRemoteService:Lcom/android/server/ambientcontext/DefaultRemoteAmbientContextDetectionService;
 
     if-nez v0, :cond_0
 
-    .line 62
     new-instance v0, Lcom/android/server/ambientcontext/DefaultRemoteAmbientContextDetectionService;
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -124,7 +112,6 @@
 .method public getAmbientContextEventArrayExtraKeyConfig()I
     .locals 0
 
-    .line 0
     const p0, 0x10402c8
 
     return p0
@@ -133,7 +120,6 @@
 .method public getAmbientContextPackageNameExtraKeyConfig()I
     .locals 0
 
-    .line 0
     const p0, 0x10402c9
 
     return p0
@@ -142,7 +128,6 @@
 .method public getComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mComponentName:Landroid/content/ComponentName;
 
     return-object p0
@@ -151,7 +136,6 @@
 .method public getConsentComponentConfig()I
     .locals 0
 
-    .line 0
     const p0, 0x10402ef
 
     return p0
@@ -160,7 +144,6 @@
 .method public getProtectedBindPermission()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "android.permission.BIND_AMBIENT_CONTEXT_DETECTION_SERVICE"
 
     return-object p0
@@ -169,7 +152,6 @@
 .method public getRemoteService()Lcom/android/server/ambientcontext/RemoteAmbientDetectionService;
     .locals 0
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mRemoteService:Lcom/android/server/ambientcontext/DefaultRemoteAmbientContextDetectionService;
 
     return-object p0
@@ -178,7 +160,6 @@
 .method public getServiceType()Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
     .locals 0
 
-    .line 90
     iget-object p0, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mServiceType:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
     return-object p0
@@ -187,7 +168,6 @@
 .method public bridge synthetic onQueryServiceStatus([ILjava/lang/String;Landroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 33
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;->onQueryServiceStatus([ILjava/lang/String;Landroid/os/RemoteCallback;)V
 
     return-void
@@ -196,7 +176,6 @@
 .method public bridge synthetic onRegisterObserver(Landroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
     .locals 0
 
-    .line 33
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;->onRegisterObserver(Landroid/app/ambientcontext/AmbientContextEventRequest;Ljava/lang/String;Landroid/app/ambientcontext/IAmbientContextObserver;)V
 
     return-void
@@ -205,7 +184,6 @@
 .method public bridge synthetic onStartConsentActivity([ILjava/lang/String;)V
     .locals 0
 
-    .line 33
     invoke-super {p0, p1, p2}, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;->onStartConsentActivity([ILjava/lang/String;)V
 
     return-void
@@ -214,7 +192,6 @@
 .method public bridge synthetic onUnregisterObserver(Ljava/lang/String;)V
     .locals 0
 
-    .line 33
     invoke-super {p0, p1}, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;->onUnregisterObserver(Ljava/lang/String;)V
 
     return-void
@@ -223,7 +200,6 @@
 .method public setComponentName(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/ambientcontext/DefaultAmbientContextManagerPerUserService;->mComponentName:Landroid/content/ComponentName;
 
     return-void

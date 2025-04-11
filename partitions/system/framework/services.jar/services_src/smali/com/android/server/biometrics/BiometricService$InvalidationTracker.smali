@@ -13,20 +13,16 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;IILandroid/hardware/biometrics/IInvalidationCallback;)V
     .locals 3
 
-    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     iput-object p5, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mClientCallback:Landroid/hardware/biometrics/IInvalidationCallback;
 
-    .line 159
     new-instance p5, Landroid/util/ArraySet;
 
     invoke-direct {p5}, Landroid/util/ArraySet;-><init>()V
 
     iput-object p5, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mSensorsPendingInvalidation:Ljava/util/Set;
 
-    .line 161
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -44,14 +40,12 @@
 
     check-cast p5, Lcom/android/server/biometrics/BiometricSensor;
 
-    .line 162
     iget v0, p5, Lcom/android/server/biometrics/BiometricSensor;->id:I
 
     if-ne v0, p4, :cond_0
 
     goto :goto_0
 
-    .line 166
     :cond_0
     iget v0, p5, Lcom/android/server/biometrics/BiometricSensor;->oemStrength:I
 
@@ -65,7 +59,6 @@
 
     goto :goto_0
 
-    .line 171
     :cond_1
     :try_start_0
     iget-object v0, p5, Lcom/android/server/biometrics/BiometricSensor;->impl:Landroid/hardware/biometrics/IBiometricAuthenticator;
@@ -91,13 +84,11 @@
 
     const-string v2, "Remote Exception"
 
-    .line 175
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
     const-string v0, "BiometricService"
 
-    .line 178
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,10 +107,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     monitor-enter p0
 
-    .line 181
     :try_start_1
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mSensorsPendingInvalidation:Ljava/util/Set;
 
@@ -131,12 +120,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 182
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 185
     :try_start_2
     iget-object v0, p5, Lcom/android/server/biometrics/BiometricSensor;->impl:Landroid/hardware/biometrics/IBiometricAuthenticator;
 
@@ -157,7 +144,6 @@
 
     const-string v1, "RemoteException"
 
-    .line 192
     invoke-static {v0, v1, p5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -165,7 +151,6 @@
     :catchall_0
     move-exception p1
 
-    .line 182
     :try_start_3
     monitor-exit p0
     :try_end_3
@@ -173,11 +158,9 @@
 
     throw p1
 
-    .line 196
     :cond_3
     monitor-enter p0
 
-    .line 197
     :try_start_4
     iget-object p1, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mSensorsPendingInvalidation:Ljava/util/Set;
 
@@ -194,10 +177,8 @@
 
     const-string p2, "No sensors require invalidation"
 
-    .line 199
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     iget-object p1, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mClientCallback:Landroid/hardware/biometrics/IInvalidationCallback;
 
     invoke-interface {p1}, Landroid/hardware/biometrics/IInvalidationCallback;->onCompleted()V
@@ -215,10 +196,8 @@
 
     const-string p3, "Remote Exception"
 
-    .line 202
     invoke-static {p2, p3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 205
     :cond_4
     :goto_1
     monitor-exit p0
@@ -238,7 +217,6 @@
 .method public static start(Landroid/content/Context;Ljava/util/ArrayList;IILandroid/hardware/biometrics/IInvalidationCallback;)Lcom/android/server/biometrics/BiometricService$InvalidationTracker;
     .locals 7
 
-    .line 152
     new-instance v6, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;
 
     move-object v0, v6
@@ -263,10 +241,8 @@
 .method public onInvalidated(I)V
     .locals 3
 
-    .line 210
     monitor-enter p0
 
-    .line 211
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mSensorsPendingInvalidation:Ljava/util/Set;
 
@@ -278,7 +254,6 @@
 
     const-string v0, "BiometricService"
 
-    .line 213
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -295,7 +270,6 @@
 
     iget-object p1, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mSensorsPendingInvalidation:Ljava/util/Set;
 
-    .line 214
     invoke-interface {p1}, Ljava/util/Set;->size()I
 
     move-result p1
@@ -306,10 +280,8 @@
 
     move-result-object p1
 
-    .line 213
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     iget-object p1, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mSensorsPendingInvalidation:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
@@ -320,7 +292,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 218
     :try_start_1
     iget-object p1, p0, Lcom/android/server/biometrics/BiometricService$InvalidationTracker;->mClientCallback:Landroid/hardware/biometrics/IInvalidationCallback;
 
@@ -339,10 +310,8 @@
 
     const-string v1, "Remote Exception"
 
-    .line 220
     invoke-static {v0, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 223
     :cond_0
     :goto_0
     monitor-exit p0

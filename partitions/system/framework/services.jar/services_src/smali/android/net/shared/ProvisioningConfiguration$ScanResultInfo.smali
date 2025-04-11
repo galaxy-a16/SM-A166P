@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$smconvertToByteArray(Ljava/nio/ByteBuffer;)[B
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->convertToByteArray(Ljava/nio/ByteBuffer;)[B
 
     move-result-object p0
@@ -26,31 +25,24 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
     .locals 1
 
-    .line 379
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string/jumbo v0, "ssid must not be null."
 
-    .line 380
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bssid must not be null."
 
-    .line 381
     invoke-static {p2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 382
     iput-object p1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mSsid:Ljava/lang/String;
 
-    .line 383
     iput-object p2, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mBssid:Ljava/lang/String;
 
-    .line 384
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 385
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -63,25 +55,21 @@
 .method private static convertToByteArray(Ljava/nio/ByteBuffer;)[B
     .locals 2
 
-    .line 465
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
 
     new-array v0, v0, [B
 
-    .line 466
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 468
     :try_start_0
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 469
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
     :try_end_0
     .catch Ljava/nio/BufferUnderflowException; {:try_start_0 .. :try_end_0} :catch_0
@@ -95,7 +83,6 @@
 
     const-string v1, "Buffer under flow exception should never happen."
 
-    .line 471
     invoke-static {p0, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -113,13 +100,11 @@
 
     return-object p0
 
-    .line 458
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 459
     iget-object v1, p0, Landroid/net/ScanResultInfoParcelable;->informationElements:[Landroid/net/InformationElementParcelable;
 
     new-instance v2, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$$ExternalSyntheticLambda1;
@@ -132,7 +117,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 461
     new-instance v1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;
 
     iget-object v2, p0, Landroid/net/ScanResultInfoParcelable;->ssid:Ljava/lang/String;
@@ -155,7 +139,6 @@
 
     return v0
 
-    .line 428
     :cond_0
     instance-of v1, p1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;
 
@@ -165,11 +148,9 @@
 
     return v2
 
-    .line 429
     :cond_1
     check-cast p1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;
 
-    .line 430
     iget-object v1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mSsid:Ljava/lang/String;
 
     iget-object v3, p1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mSsid:Ljava/lang/String;
@@ -184,7 +165,6 @@
 
     iget-object v3, p1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mBssid:Ljava/lang/String;
 
-    .line 431
     invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -195,7 +175,6 @@
 
     iget-object p1, p1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mInformationElements:Ljava/util/List;
 
-    .line 432
     invoke-interface {p0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -214,7 +193,6 @@
 .method public getBssid()Ljava/lang/String;
     .locals 0
 
-    .line 401
     iget-object p0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mBssid:Ljava/lang/String;
 
     return-object p0
@@ -223,7 +201,6 @@
 .method public getInformationElements()Ljava/util/List;
     .locals 0
 
-    .line 409
     iget-object p0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mInformationElements:Ljava/util/List;
 
     return-object p0
@@ -232,7 +209,6 @@
 .method public getSsid()Ljava/lang/String;
     .locals 0
 
-    .line 393
     iget-object p0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mSsid:Ljava/lang/String;
 
     return-object p0
@@ -241,7 +217,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 437
     iget-object v0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mSsid:Ljava/lang/String;
 
     iget-object v1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mBssid:Ljava/lang/String;
@@ -262,22 +237,18 @@
 .method public toStableParcelable()Landroid/net/ScanResultInfoParcelable;
     .locals 3
 
-    .line 444
     new-instance v0, Landroid/net/ScanResultInfoParcelable;
 
     invoke-direct {v0}, Landroid/net/ScanResultInfoParcelable;-><init>()V
 
-    .line 445
     iget-object v1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mSsid:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/net/ScanResultInfoParcelable;->ssid:Ljava/lang/String;
 
-    .line 446
     iget-object v1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mBssid:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/net/ScanResultInfoParcelable;->bssid:Ljava/lang/String;
 
-    .line 447
     iget-object p0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mInformationElements:Ljava/util/List;
 
     new-instance v1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$$ExternalSyntheticLambda0;
@@ -300,14 +271,12 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 414
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     const-string v1, "SSID: "
 
-    .line 415
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     iget-object v1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mSsid:Ljava/lang/String;
@@ -316,7 +285,6 @@
 
     const-string v1, ", BSSID: "
 
-    .line 416
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     iget-object v1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mBssid:Ljava/lang/String;
@@ -325,10 +293,8 @@
 
     const-string v1, ", Information Elements: {"
 
-    .line 417
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 418
     iget-object p0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo;->mInformationElements:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -350,7 +316,6 @@
 
     const-string v2, "["
 
-    .line 419
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->toString()Ljava/lang/String;
@@ -368,10 +333,8 @@
     :cond_0
     const-string/jumbo p0, "}"
 
-    .line 421
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 422
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0

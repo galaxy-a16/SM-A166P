@@ -11,7 +11,6 @@
 .method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 372
     invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     return-void
@@ -24,7 +23,6 @@
 
     monitor-enter p0
 
-    .line 376
     :try_start_0
     iget-wide v0, p0, Lcom/android/server/knox/dar/ddar/DDLog$CountingOutputStream;->count:J
 
@@ -34,7 +32,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 377
     monitor-exit p0
 
     return-void
@@ -52,7 +49,6 @@
 
     monitor-enter p0
 
-    .line 395
     :try_start_0
     iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
@@ -60,7 +56,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 396
     monitor-exit p0
 
     return-void
@@ -78,7 +73,6 @@
 
     monitor-enter p0
 
-    .line 381
     :try_start_0
     iget-wide v0, p0, Lcom/android/server/knox/dar/ddar/DDLog$CountingOutputStream;->count:J
     :try_end_0
@@ -101,13 +95,11 @@
 
     monitor-enter p0
 
-    .line 390
     :try_start_0
     iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 391
     iget-wide v0, p0, Lcom/android/server/knox/dar/ddar/DDLog$CountingOutputStream;->count:J
 
     const-wide/16 v2, 0x1
@@ -118,7 +110,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 392
     monitor-exit p0
 
     return-void
@@ -136,13 +127,11 @@
 
     monitor-enter p0
 
-    .line 385
     :try_start_0
     iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 386
     iget-wide p1, p0, Lcom/android/server/knox/dar/ddar/DDLog$CountingOutputStream;->count:J
 
     int-to-long v0, p3
@@ -153,7 +142,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 387
     monitor-exit p0
 
     return-void

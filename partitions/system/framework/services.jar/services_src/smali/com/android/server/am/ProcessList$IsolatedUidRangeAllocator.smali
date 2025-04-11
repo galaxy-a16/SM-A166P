@@ -21,34 +21,28 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessList;III)V
     .locals 0
 
-    .line 816
     iput-object p1, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->this$0:Lcom/android/server/am/ProcessList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 813
     new-instance p1, Lcom/android/internal/app/ProcessMap;
 
     invoke-direct {p1}, Lcom/android/internal/app/ProcessMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mAppRanges:Lcom/android/internal/app/ProcessMap;
 
-    .line 817
     iput p2, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mFirstUid:I
 
-    .line 818
     iput p4, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mNumUidsPerRange:I
 
     sub-int/2addr p3, p2
 
     add-int/lit8 p3, p3, 0x1
 
-    .line 819
     div-int/2addr p3, p4
 
     iput p3, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mNumUidRanges:I
 
-    .line 820
     new-instance p1, Ljava/util/BitSet;
 
     invoke-direct {p1, p3}, Ljava/util/BitSet;-><init>(I)V
@@ -57,7 +51,6 @@
 
     const/4 p0, 0x0
 
-    .line 822
     invoke-virtual {p1, p0, p3}, Ljava/util/BitSet;->set(II)V
 
     return-void
@@ -68,7 +61,6 @@
 .method public freeUidRangeLocked(Landroid/content/pm/ApplicationInfo;)V
     .locals 3
 
-    .line 850
     iget-object v0, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mAppRanges:Lcom/android/internal/app/ProcessMap;
 
     iget-object v1, p1, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
@@ -83,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 853
     iget v0, v0, Lcom/android/server/am/ProcessList$IsolatedUidRange;->mFirstUid:I
 
     iget v1, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mFirstUid:I
@@ -94,12 +85,10 @@
 
     div-int/2addr v0, v1
 
-    .line 855
     iget-object v1, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mAvailableUidRanges:Ljava/util/BitSet;
 
     invoke-virtual {v1, v0}, Ljava/util/BitSet;->set(I)V
 
-    .line 857
     iget-object p0, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mAppRanges:Lcom/android/internal/app/ProcessMap;
 
     iget-object v0, p1, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
@@ -115,7 +104,6 @@
 .method public getIsolatedUidRangeLocked(Ljava/lang/String;I)Lcom/android/server/am/ProcessList$IsolatedUidRange;
     .locals 0
 
-    .line 827
     iget-object p0, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mAppRanges:Lcom/android/internal/app/ProcessMap;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/app/ProcessMap;->get(Ljava/lang/String;I)Ljava/lang/Object;
@@ -130,14 +118,12 @@
 .method public getOrCreateIsolatedUidRangeLocked(Ljava/lang/String;I)Lcom/android/server/am/ProcessList$IsolatedUidRange;
     .locals 4
 
-    .line 832
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->getIsolatedUidRangeLocked(Ljava/lang/String;I)Lcom/android/server/am/ProcessList$IsolatedUidRange;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 834
     iget-object v0, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mAvailableUidRanges:Ljava/util/BitSet;
 
     const/4 v1, 0x0
@@ -152,13 +138,11 @@
 
     return-object p0
 
-    .line 839
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mAvailableUidRanges:Ljava/util/BitSet;
 
     invoke-virtual {v1, v0}, Ljava/util/BitSet;->clear(I)V
 
-    .line 840
     iget v1, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mFirstUid:I
 
     iget v2, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mNumUidsPerRange:I
@@ -167,7 +151,6 @@
 
     add-int/2addr v1, v0
 
-    .line 841
     new-instance v0, Lcom/android/server/am/ProcessList$IsolatedUidRange;
 
     iget-object v3, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->this$0:Lcom/android/server/am/ProcessList;
@@ -178,7 +161,6 @@
 
     invoke-direct {v0, v3, v1, v2}, Lcom/android/server/am/ProcessList$IsolatedUidRange;-><init>(Lcom/android/server/am/ProcessList;II)V
 
-    .line 842
     iget-object p0, p0, Lcom/android/server/am/ProcessList$IsolatedUidRangeAllocator;->mAppRanges:Lcom/android/internal/app/ProcessMap;
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/internal/app/ProcessMap;->put(Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/Object;

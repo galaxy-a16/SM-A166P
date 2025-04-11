@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService;)V
     .locals 0
 
-    .line 30
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 31
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintShellCommand;->mContext:Landroid/content/Context;
 
-    .line 32
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintShellCommand;->mService:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService;
 
     return-void
@@ -30,7 +27,6 @@
 .method public final doHelp()I
     .locals 0
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintShellCommand;->onHelp()V
 
     const/4 p0, 0x0
@@ -41,7 +37,6 @@
 .method public final doSync()I
     .locals 0
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintShellCommand;->mService:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService;->syncEnrollmentsNow()V
@@ -58,7 +53,6 @@
 
     if-nez p1, :cond_0
 
-    .line 38
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintShellCommand;->onHelp()V
 
     return v0
@@ -66,7 +60,6 @@
     :cond_0
     const/4 v1, -0x1
 
-    .line 43
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -117,7 +110,6 @@
 
     if-eq v2, v0, :cond_4
 
-    .line 49
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -140,7 +132,6 @@
 
     goto :goto_2
 
-    .line 47
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintShellCommand;->doSync()I
 
@@ -148,7 +139,6 @@
 
     return p0
 
-    .line 45
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintShellCommand;->doHelp()I
 
@@ -161,7 +151,6 @@
     :catch_0
     move-exception p1
 
-    .line 52
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -189,34 +178,28 @@
 .method public onHelp()V
     .locals 1
 
-    .line 59
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Fingerprint Service commands:"
 
-    .line 60
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 61
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      Print this help text."
 
-    .line 62
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  sync"
 
-    .line 63
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      Sync enrollments now (virtualized sensors only)."
 
-    .line 64
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void

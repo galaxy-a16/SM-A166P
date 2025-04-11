@@ -13,18 +13,14 @@
 .method public constructor <init>(Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;Ljava/lang/Object;)V
     .locals 2
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethodConfiguration;->method:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 58
     iput-object p2, p0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethodConfiguration;->options:Ljava/lang/Object;
 
     if-eqz p2, :cond_1
 
-    .line 59
     invoke-static {p1}, Lorg/apache/commons/compress/archivers/sevenz/Coders;->findByMethod(Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;)Lorg/apache/commons/compress/archivers/sevenz/CoderBase;
 
     move-result-object p0
@@ -37,7 +33,6 @@
 
     goto :goto_0
 
-    .line 60
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -55,7 +50,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 61
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1

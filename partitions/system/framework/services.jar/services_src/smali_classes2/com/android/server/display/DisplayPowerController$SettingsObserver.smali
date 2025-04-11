@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayPowerController;Landroid/os/Handler;)V
     .locals 0
 
-    .line 4764
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    .line 4765
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    .line 4770
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerController;->-$$Nest$fgetmTag(Lcom/android/server/display/DisplayPowerController;)Ljava/lang/String;
@@ -48,7 +45,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4771
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerController;->-$$Nest$fgetmScreenBrightnessModeSettingName(Lcom/android/server/display/DisplayPowerController;)Ljava/lang/String;
@@ -65,14 +61,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 4773
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController;->-$$Nest$mhandleBrightnessModeChange(Lcom/android/server/display/DisplayPowerController;)V
 
     goto :goto_0
 
-    .line 4775
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 

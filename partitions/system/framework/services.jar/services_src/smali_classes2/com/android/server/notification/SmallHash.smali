@@ -9,7 +9,6 @@
 
     const/16 v0, 0x2000
 
-    .line 42
     invoke-static {p0, v0}, Ljava/lang/Math;->floorMod(II)I
 
     move-result p0
@@ -20,7 +19,6 @@
 .method public static hash(Ljava/lang/String;)I
     .locals 0
 
-    .line 33
     invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result p0

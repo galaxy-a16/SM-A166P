@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/AppOpsPolicy;)V
     .locals 0
 
-    .line 163
     iput-object p1, p0, Lcom/android/server/policy/AppOpsPolicy$1;->this$0:Lcom/android/server/policy/AppOpsPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 166
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
@@ -33,13 +31,11 @@
 
     return-void
 
-    .line 170
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 171
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -48,7 +44,6 @@
 
     return-void
 
-    .line 174
     :cond_1
     iget-object p2, p0, Lcom/android/server/policy/AppOpsPolicy$1;->this$0:Lcom/android/server/policy/AppOpsPolicy;
 
@@ -62,14 +57,12 @@
 
     move-result-object p2
 
-    .line 176
     invoke-interface {p2, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 177
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy$1;->this$0:Lcom/android/server/policy/AppOpsPolicy;
 
     invoke-static {p0, p1}, Lcom/android/server/policy/AppOpsPolicy;->-$$Nest$mupdateActivityRecognizerTags(Lcom/android/server/policy/AppOpsPolicy;Ljava/lang/String;)V

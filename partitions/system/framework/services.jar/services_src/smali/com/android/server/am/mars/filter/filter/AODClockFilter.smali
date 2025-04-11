@@ -24,7 +24,6 @@
 .method public static bridge synthetic -$$Nest$mgetAODCalaendarWidget(Lcom/android/server/am/mars/filter/filter/AODClockFilter;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->getAODCalaendarWidget()V
 
     return-void
@@ -33,7 +32,6 @@
 .method public static bridge synthetic -$$Nest$mgetAODClockType(Lcom/android/server/am/mars/filter/filter/AODClockFilter;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->getAODClockType()V
 
     return-void
@@ -42,10 +40,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,7 +70,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/AODClockFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/AODClockFilter;-><init>()V
 
     return-void
@@ -83,7 +78,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/AODClockFilter;
     .locals 1
 
-    .line 35
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/AODClockFilter$AODClockFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/AODClockFilter;
 
     move-result-object v0
@@ -96,7 +90,6 @@
 .method public deInit()V
     .locals 0
 
-    .line 47
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->unregisterContentObserver()V
 
     return-void
@@ -105,7 +98,6 @@
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 51
     iget-boolean p2, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->isUsingAODCalendarWidget:Z
 
     const/4 p3, 0x0
@@ -132,7 +124,6 @@
 
     const-string p0, "com.samsung.android.calendar"
 
-    .line 52
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -152,7 +143,6 @@
 
     const/4 v0, 0x0
 
-    .line 120
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mContext:Landroid/content/Context;
 
@@ -173,7 +163,6 @@
     :catch_0
     move-exception v1
 
-    .line 122
     iget-object v2, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -196,7 +185,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move v1, v0
@@ -208,7 +196,6 @@
 
     move v0, v2
 
-    .line 125
     :cond_0
     iput-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->isUsingAODCalendarWidget:Z
 
@@ -222,7 +209,6 @@
 
     const/4 v1, -0x1
 
-    .line 105
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mContext:Landroid/content/Context;
 
@@ -232,7 +218,6 @@
 
     const-string v2, "content://com.samsung.android.app.aodservice.provider/settings/aod_clock_type"
 
-    .line 106
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
@@ -253,7 +238,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 107
     :try_start_1
     invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 
@@ -261,10 +245,8 @@
 
     if-lez v3, :cond_0
 
-    .line 108
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 109
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v1
@@ -276,7 +258,6 @@
     :catchall_0
     move-exception v3
 
-    .line 105
     :try_start_2
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
     :try_end_2
@@ -297,7 +278,6 @@
     :goto_1
     if-eqz v2, :cond_1
 
-    .line 111
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
@@ -307,7 +287,6 @@
     :catch_0
     move-exception v2
 
-    .line 112
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -318,7 +297,6 @@
 
     const/4 v0, 0x1
 
-    .line 114
     :cond_2
     iput-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->isAodTypeCalendar:Z
 
@@ -328,13 +306,10 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mContext:Landroid/content/Context;
 
-    .line 41
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->registerContentObserver()V
 
-    .line 42
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->getAODClockType()V
 
     return-void
@@ -343,17 +318,14 @@
 .method public final registerContentObserver()V
     .locals 4
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_2
 
-    .line 59
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODClockTypeObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_0
 
-    .line 60
     new-instance v0, Lcom/android/server/am/mars/filter/filter/AODClockFilter$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -364,13 +336,11 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODClockTypeObserver:Landroid/database/ContentObserver;
 
-    .line 67
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODCalendarWidgetObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_1
 
-    .line 68
     new-instance v0, Lcom/android/server/am/mars/filter/filter/AODClockFilter$2;
 
     new-instance v1, Landroid/os/Handler;
@@ -381,7 +351,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODCalendarWidgetObserver:Landroid/database/ContentObserver;
 
-    .line 76
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mContext:Landroid/content/Context;
@@ -402,7 +371,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -426,7 +394,6 @@
     :catch_0
     move-exception p0
 
-    .line 79
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
@@ -437,20 +404,17 @@
 .method public final unregisterContentObserver()V
     .locals 3
 
-    .line 86
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_1
 
-    .line 87
     iget-object v1, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODClockTypeObserver:Landroid/database/ContentObserver;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 88
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -459,16 +423,13 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 89
     iput-object v2, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODClockTypeObserver:Landroid/database/ContentObserver;
 
-    .line 92
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODCalendarWidgetObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_1
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -479,14 +440,12 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 94
     iput-object v2, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODCalendarWidgetObserver:Landroid/database/ContentObserver;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 98
     :catch_0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->TAG:Ljava/lang/String;
 

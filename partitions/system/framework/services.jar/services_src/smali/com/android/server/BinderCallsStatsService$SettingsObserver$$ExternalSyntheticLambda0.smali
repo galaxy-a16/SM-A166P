@@ -20,7 +20,6 @@
 .method public final resolveWorkSourceUid(I)I
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/BinderCallsStatsService$SettingsObserver;->$r8$lambda$OKRhhu6iYXJJRzYdTSZuWm_BsAI(I)I
 
     move-result p0

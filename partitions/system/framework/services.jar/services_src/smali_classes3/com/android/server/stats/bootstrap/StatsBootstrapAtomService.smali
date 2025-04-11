@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 33
     invoke-direct {p0}, Landroid/os/IStatsBootstrapAtomService$Stub;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public reportBootstrapAtom(Landroid/os/StatsBootstrapAtom;)V
     .locals 8
 
-    .line 40
     iget p0, p1, Landroid/os/StatsBootstrapAtom;->atomId:I
 
     const-string v0, "StatsBootstrapAtomService"
@@ -33,7 +31,6 @@
 
     goto/16 :goto_2
 
-    .line 44
     :cond_0
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
@@ -45,7 +42,6 @@
 
     move-result-object p0
 
-    .line 45
     iget-object v2, p1, Landroid/os/StatsBootstrapAtom;->values:[Landroid/os/StatsBootstrapAtomValue;
 
     array-length v3, v2
@@ -57,7 +53,6 @@
 
     aget-object v5, v2, v4
 
-    .line 46
     invoke-virtual {v5}, Landroid/os/StatsBootstrapAtomValue;->getTag()I
 
     move-result v6
@@ -82,7 +77,6 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 66
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,7 +107,6 @@
 
     return-void
 
-    .line 63
     :cond_1
     invoke-virtual {v5}, Landroid/os/StatsBootstrapAtomValue;->getBytesValue()[B
 
@@ -123,7 +116,6 @@
 
     goto :goto_1
 
-    .line 60
     :cond_2
     invoke-virtual {v5}, Landroid/os/StatsBootstrapAtomValue;->getStringValue()Ljava/lang/String;
 
@@ -133,7 +125,6 @@
 
     goto :goto_1
 
-    .line 57
     :cond_3
     invoke-virtual {v5}, Landroid/os/StatsBootstrapAtomValue;->getFloatValue()F
 
@@ -143,7 +134,6 @@
 
     goto :goto_1
 
-    .line 54
     :cond_4
     invoke-virtual {v5}, Landroid/os/StatsBootstrapAtomValue;->getLongValue()J
 
@@ -153,7 +143,6 @@
 
     goto :goto_1
 
-    .line 51
     :cond_5
     invoke-virtual {v5}, Landroid/os/StatsBootstrapAtomValue;->getIntValue()I
 
@@ -163,7 +152,6 @@
 
     goto :goto_1
 
-    .line 48
     :cond_6
     invoke-virtual {v5}, Landroid/os/StatsBootstrapAtomValue;->getBoolValue()Z
 
@@ -176,7 +164,6 @@
 
     goto :goto_0
 
-    .line 72
     :cond_7
     invoke-virtual {p0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
 
@@ -190,7 +177,6 @@
 
     return-void
 
-    .line 41
     :cond_8
     :goto_2
     new-instance p0, Ljava/lang/StringBuilder;

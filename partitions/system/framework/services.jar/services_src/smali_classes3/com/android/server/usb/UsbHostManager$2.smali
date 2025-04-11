@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbHostManager;)V
     .locals 0
 
-    .line 777
     iput-object p1, p0, Lcom/android/server/usb/UsbHostManager$2;->this$0:Lcom/android/server/usb/UsbHostManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUEvent(Landroid/os/UEventObserver$UEvent;)V
     .locals 3
 
-    .line 780
     invoke-static {}, Lcom/android/server/usb/UsbHostManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -47,21 +45,18 @@
 
     const-string v0, "TYPE"
 
-    .line 782
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "STATE"
 
-    .line 783
     invoke-virtual {p1, v1}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v2, "usbaudio"
 
-    .line 785
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -70,40 +65,34 @@
 
     const-string v0, "PATH"
 
-    .line 786
     invoke-virtual {p1, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "CARDNUM"
 
-    .line 787
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v2, "ADD"
 
-    .line 789
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 790
     iget-object p0, p0, Lcom/android/server/usb/UsbHostManager$2;->this$0:Lcom/android/server/usb/UsbHostManager;
 
     invoke-static {p0}, Lcom/android/server/usb/UsbHostManager;->-$$Nest$fgetmUsbAlsaManager(Lcom/android/server/usb/UsbHostManager;)Lcom/android/server/usb/UsbAlsaManager;
 
     move-result-object p0
 
-    .line 791
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 790
     invoke-virtual {p0, v0, p1}, Lcom/android/server/usb/UsbAlsaManager;->usbDeviceAddedBundle(Ljava/lang/String;I)V
 
     goto :goto_0
@@ -111,26 +100,22 @@
     :cond_0
     const-string v2, "REMOVE"
 
-    .line 792
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 793
     iget-object p0, p0, Lcom/android/server/usb/UsbHostManager$2;->this$0:Lcom/android/server/usb/UsbHostManager;
 
     invoke-static {p0}, Lcom/android/server/usb/UsbHostManager;->-$$Nest$fgetmUsbAlsaManager(Lcom/android/server/usb/UsbHostManager;)Lcom/android/server/usb/UsbAlsaManager;
 
     move-result-object p0
 
-    .line 794
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 793
     invoke-virtual {p0, v0, p1}, Lcom/android/server/usb/UsbAlsaManager;->usbDeviceRemovedBundle(Ljava/lang/String;I)V
 
     :cond_1

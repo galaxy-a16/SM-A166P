@@ -23,7 +23,6 @@
 .method public static synthetic $values()[Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
     .locals 4
 
-    .line 76
     sget-object v0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->SUCCESS:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     sget-object v1, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->FAIL:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
@@ -42,7 +41,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 77
     new-instance v0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     const-string v1, "SUCCESS"
@@ -83,7 +81,6 @@
 
     sput-object v0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->FILE_NOT_FOUND:Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
-    .line 76
     invoke-static {}, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->$values()[Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     move-result-object v0
@@ -96,10 +93,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 80
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 81
     iput p3, p0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->code:I
 
     return-void
@@ -108,7 +103,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
     .locals 1
 
-    .line 76
     const-class v0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -123,7 +117,6 @@
 .method public static values()[Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
     .locals 1
 
-    .line 76
     sget-object v0, Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->$VALUES:[Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;
 
     invoke-virtual {v0}, [Lcom/android/server/policy/KeyCustomizationInfoXmlUtils$ErrorCode;->clone()Ljava/lang/Object;

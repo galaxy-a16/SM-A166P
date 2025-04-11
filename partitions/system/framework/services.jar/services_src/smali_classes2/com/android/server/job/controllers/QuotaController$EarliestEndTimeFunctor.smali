@@ -16,14 +16,12 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/QuotaController;)V
     .locals 2
 
-    .line 1548
     iput-object p1, p0, Lcom/android/server/job/controllers/QuotaController$EarliestEndTimeFunctor;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 1549
     iput-wide v0, p0, Lcom/android/server/job/controllers/QuotaController$EarliestEndTimeFunctor;->earliestEndElapsed:J
 
     return-void
@@ -32,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/job/controllers/QuotaController;Lcom/android/server/job/controllers/QuotaController$EarliestEndTimeFunctor-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/job/controllers/QuotaController$EarliestEndTimeFunctor;-><init>(Lcom/android/server/job/controllers/QuotaController;)V
 
     return-void
@@ -43,7 +40,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1548
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/QuotaController$EarliestEndTimeFunctor;->accept(Ljava/util/List;)V
@@ -56,19 +52,16 @@
 
     if-eqz p1, :cond_0
 
-    .line 1553
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 1554
     iget-wide v0, p0, Lcom/android/server/job/controllers/QuotaController$EarliestEndTimeFunctor;->earliestEndElapsed:J
 
     const/4 v2, 0x0
 
-    .line 1555
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -94,7 +87,6 @@
 
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 1560
     iput-wide v0, p0, Lcom/android/server/job/controllers/QuotaController$EarliestEndTimeFunctor;->earliestEndElapsed:J
 
     return-void

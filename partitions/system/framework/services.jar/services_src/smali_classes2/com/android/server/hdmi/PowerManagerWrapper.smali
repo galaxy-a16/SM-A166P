@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     const-class v0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -33,7 +31,6 @@
 .method public goToSleep(JII)V
     .locals 0
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/hdmi/PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/os/PowerManager;->goToSleep(JII)V
@@ -44,7 +41,6 @@
 .method public isInteractive()Z
     .locals 0
 
-    .line 36
     iget-object p0, p0, Lcom/android/server/hdmi/PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
@@ -57,7 +53,6 @@
 .method public newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
     .locals 0
 
-    .line 48
     iget-object p0, p0, Lcom/android/server/hdmi/PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {p0, p1, p2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
@@ -70,7 +65,6 @@
 .method public wakeUp(JILjava/lang/String;)V
     .locals 0
 
-    .line 40
     iget-object p0, p0, Lcom/android/server/hdmi/PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/os/PowerManager;->wakeUp(JILjava/lang/String;)V

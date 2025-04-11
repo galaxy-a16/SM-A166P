@@ -23,7 +23,6 @@
 
     const-string/jumbo v4, "wallpaper_lock_orig"
 
-    .line 48
     filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -36,7 +35,6 @@
 .method public static getCurrentWallpaperId()I
     .locals 1
 
-    .line 90
     sget v0, Lcom/android/server/wallpaper/WallpaperUtils;->sWallpaperId:I
 
     return v0
@@ -45,7 +43,6 @@
 .method public static getWallpaperDir(I)Ljava/io/File;
     .locals 0
 
-    .line 66
     invoke-static {p0}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object p0
@@ -56,19 +53,16 @@
 .method public static getWallpaperFiles(I)Ljava/util/List;
     .locals 4
 
-    .line 102
     invoke-static {p0}, Lcom/android/server/wallpaper/WallpaperUtils;->getWallpaperDir(I)Ljava/io/File;
 
     move-result-object p0
 
-    .line 103
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 104
     :goto_0
     sget-object v2, Lcom/android/server/wallpaper/WallpaperUtils;->sPerUserFiles:[Ljava/lang/String;
 
@@ -76,7 +70,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 105
     new-instance v3, Ljava/io/File;
 
     aget-object v2, v2, v1
@@ -96,7 +89,6 @@
 .method public static getWallpaperLockDir(I)Ljava/io/File;
     .locals 2
 
-    .line 70
     new-instance v0, Ljava/io/File;
 
     invoke-static {p0}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
@@ -113,7 +105,6 @@
 .method public static makeWallpaperIdLocked()I
     .locals 1
 
-    .line 81
     :cond_0
     sget v0, Lcom/android/server/wallpaper/WallpaperUtils;->sWallpaperId:I
 
@@ -129,7 +120,6 @@
 .method public static setCurrentWallpaperId(I)V
     .locals 0
 
-    .line 98
     sput p0, Lcom/android/server/wallpaper/WallpaperUtils;->sWallpaperId:I
 
     return-void

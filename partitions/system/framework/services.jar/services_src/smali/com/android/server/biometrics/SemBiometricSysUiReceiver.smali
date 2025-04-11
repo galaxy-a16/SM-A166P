@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     new-instance v0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;-><init>(Lcom/android/server/biometrics/SemBiometricSysUiReceiver;)V
@@ -32,7 +30,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -41,7 +38,6 @@
 .method public getSysUiListener()Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
     .locals 0
 
-    .line 57
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver;->mSysUiListener:Lcom/android/server/biometrics/SemBiometricSysUiManager$SysUiListener;
 
     return-object p0
@@ -54,7 +50,6 @@
 
     const-string/jumbo v0, "onDeviceCredentialPressed: No implementation"
 
-    .line 73
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -67,7 +62,6 @@
 
     const-string/jumbo p1, "onDialogAnimatedIn: No implementation"
 
-    .line 83
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -80,7 +74,6 @@
 
     const-string/jumbo p1, "onTryAgainPressed: No implementation"
 
-    .line 63
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -93,7 +86,6 @@
 
     const-string/jumbo p1, "onModalitySwitched: No implementation"
 
-    .line 97
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -106,7 +98,6 @@
 
     const-string/jumbo v0, "onStartFingerprintNow: No implementation"
 
-    .line 88
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -119,7 +110,6 @@
 
     const-string/jumbo p1, "onSysUiError: No implementation"
 
-    .line 101
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -132,7 +122,6 @@
 
     const-string/jumbo p1, "onSystemEvent: No implementation"
 
-    .line 78
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -145,7 +134,6 @@
 
     const-string/jumbo v0, "onTryAgainPressed: No implementation"
 
-    .line 68
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

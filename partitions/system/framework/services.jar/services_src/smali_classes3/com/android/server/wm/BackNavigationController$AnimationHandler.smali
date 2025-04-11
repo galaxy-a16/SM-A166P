@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmComposed(Lcom/android/server/wm/BackNavigationController$AnimationHandler;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mComposed:Z
 
     return p0
@@ -40,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmShowWindowlessSurface(Lcom/android/server/wm/BackNavigationController$AnimationHandler;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mShowWindowlessSurface:Z
 
     return p0
@@ -49,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWaitTransition(Lcom/android/server/wm/BackNavigationController$AnimationHandler;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mWaitTransition:Z
 
     return p0
@@ -58,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWindowManagerService(Lcom/android/server/wm/BackNavigationController$AnimationHandler;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -67,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fputmOpenTransitionTargetMatch(Lcom/android/server/wm/BackNavigationController$AnimationHandler;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenTransitionTargetMatch:Z
 
     return-void
@@ -76,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fputmWaitTransition(Lcom/android/server/wm/BackNavigationController$AnimationHandler;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mWaitTransition:Z
 
     return-void
@@ -85,21 +79,16 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;)V
     .locals 1
 
-    .line 735
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 723
     iput v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mSwitchType:I
 
-    .line 736
     iput-object p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 737
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
-    .line 738
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -118,12 +107,10 @@
 .method public static createAdaptor(Lcom/android/server/wm/WindowContainer;Z)Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
     .locals 4
 
-    .line 947
     new-instance v0, Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;-><init>(Lcom/android/server/wm/WindowContainer;Z)V
 
-    .line 949
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v1
@@ -132,19 +119,16 @@
 
     const/16 v3, 0x100
 
-    .line 950
     invoke-virtual {p0, v1, v0, v2, v3}, Lcom/android/server/wm/WindowContainer;->startAnimation(Landroid/view/SurfaceControl$Transaction;Lcom/android/server/wm/AnimationAdapter;ZI)V
 
     if-eqz p1, :cond_0
 
-    .line 953
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 954
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
@@ -155,7 +139,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 956
     iget-object p0, p0, Lcom/android/server/wm/WindowContainer;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v1, p0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
@@ -167,7 +150,6 @@
 .method public static isActivitySwitch(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)Z
     .locals 1
 
-    .line 746
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
@@ -180,7 +162,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 747
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p0
@@ -189,7 +170,6 @@
 
     move-result-object p0
 
-    .line 748
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p1
@@ -217,7 +197,6 @@
 .method public static isTaskSwitch(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)Z
     .locals 1
 
-    .line 755
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
@@ -230,7 +209,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 756
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
 
     move-result-object p0
@@ -260,14 +238,12 @@
 .method public final cleanUpWindowlessSurface()V
     .locals 5
 
-    .line 887
     invoke-virtual {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->getTopOpenActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 889
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,14 +265,12 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 891
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 892
     :cond_1
     iget-object v1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
@@ -308,7 +282,6 @@
 
     move-result-object v1
 
-    .line 894
     :goto_0
     iget-boolean v2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenTransitionTargetMatch:Z
 
@@ -330,20 +303,17 @@
 
     if-eqz v2, :cond_3
 
-    .line 896
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 898
     :cond_3
     iget v2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mRequestedStartingSurfaceTaskId:I
 
     if-eqz v2, :cond_5
 
-    .line 900
     iget-object v2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mStartingSurface:Landroid/view/SurfaceControl;
 
     if-eqz v2, :cond_4
@@ -352,7 +322,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 901
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v0
@@ -362,10 +331,8 @@
     :cond_4
     const/4 v0, 0x0
 
-    .line 904
     iput-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mStartingSurface:Landroid/view/SurfaceControl;
 
-    .line 906
     iput v3, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mRequestedStartingSurfaceTaskId:I
 
     :cond_5
@@ -375,29 +342,22 @@
 .method public clearBackAnimateTarget()V
     .locals 1
 
-    .line 911
     invoke-virtual {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->finishPresentAnimations()V
 
     const/4 v0, 0x0
 
-    .line 912
     iput-boolean v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mComposed:Z
 
-    .line 913
     iput-boolean v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mWaitTransition:Z
 
-    .line 914
     iput-boolean v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenTransitionTargetMatch:Z
 
-    .line 915
     iput v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mRequestedStartingSurfaceTaskId:I
 
-    .line 916
     iput v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mSwitchType:I
 
     const/4 v0, 0x0
 
-    .line 917
     iput-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenActivity:Lcom/android/server/wm/ActivityRecord;
 
     return-void
@@ -406,7 +366,6 @@
 .method public composeAnimations(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/ActivityRecord;)Z
     .locals 3
 
-    .line 787
     iget-boolean v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mComposed:Z
 
     const-string v1, "CoreBackPreview"
@@ -421,7 +380,6 @@
 
     goto :goto_1
 
-    .line 791
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->clearBackAnimateTarget()V
 
@@ -433,11 +391,9 @@
 
     goto :goto_0
 
-    .line 797
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->initiate(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/ActivityRecord;)V
 
-    .line 798
     iget p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mSwitchType:I
 
     if-nez p1, :cond_2
@@ -447,15 +403,12 @@
     :cond_2
     const/4 p1, 0x1
 
-    .line 801
     iput-boolean p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mComposed:Z
 
-    .line 802
     iput-boolean v2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mWaitTransition:Z
 
     return p1
 
-    .line 793
     :cond_3
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -482,7 +435,6 @@
 
     return v2
 
-    .line 788
     :cond_4
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -507,7 +459,6 @@
 .method public containTarget(Ljava/util/ArrayList;Z)Z
     .locals 3
 
-    .line 839
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -519,7 +470,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 840
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -539,7 +489,6 @@
 
     goto :goto_0
 
-    .line 844
     :cond_1
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -553,7 +502,6 @@
 
     const/4 v0, 0x0
 
-    .line 924
     invoke-virtual {p0, p2, v0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->containTarget(Ljava/util/ArrayList;Z)Z
 
     move-result p2
@@ -562,14 +510,12 @@
 
     const/4 p2, 0x1
 
-    .line 925
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->containTarget(Ljava/util/ArrayList;Z)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 926
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->containTarget(Ljava/util/ArrayList;Z)Z
 
     move-result p0
@@ -586,14 +532,12 @@
 .method public createStartingSurface(Landroid/window/TaskSnapshot;)V
     .locals 1
 
-    .line 817
     iget-boolean p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mComposed:Z
 
     if-nez p1, :cond_0
 
     return-void
 
-    .line 821
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->getTopOpenActivity()Lcom/android/server/wm/ActivityRecord;
 
@@ -601,7 +545,6 @@
 
     if-nez p1, :cond_1
 
-    .line 823
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -627,51 +570,42 @@
 .method public finishPresentAnimations()V
     .locals 2
 
-    .line 868
     iget-boolean v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mComposed:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 871
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->cleanUpWindowlessSurface()V
 
-    .line 873
     iget-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mCloseAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 874
     invoke-static {v0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;->-$$Nest$fgetmTarget(Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->cancelAnimation()V
 
-    .line 875
     iput-object v1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mCloseAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
-    .line 877
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     if-eqz v0, :cond_2
 
-    .line 878
     invoke-static {v0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;->-$$Nest$fgetmTarget(Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowContainer;->cancelAnimation()V
 
-    .line 879
     iput-object v1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
-    .line 881
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenActivity:Lcom/android/server/wm/ActivityRecord;
 
@@ -681,7 +615,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 882
     invoke-static {p0}, Lcom/android/server/wm/BackNavigationController;->-$$Nest$smrestoreLaunchBehind(Lcom/android/server/wm/ActivityRecord;)V
 
     :cond_3
@@ -691,7 +624,6 @@
 .method public getAnimationTargets()[Landroid/view/RemoteAnimationTarget;
     .locals 1
 
-    .line 807
     iget-boolean v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mComposed:Z
 
     if-eqz v0, :cond_0
@@ -724,14 +656,12 @@
 .method public final getTopOpenActivity()Lcom/android/server/wm/ActivityRecord;
     .locals 2
 
-    .line 830
     iget v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mSwitchType:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 831
     iget-object p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     invoke-static {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;->-$$Nest$fgetmTarget(Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;)Lcom/android/server/wm/WindowContainer;
@@ -749,7 +679,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 833
     iget-object p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     invoke-static {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;->-$$Nest$fgetmTarget(Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;)Lcom/android/server/wm/WindowContainer;
@@ -775,7 +704,6 @@
 .method public final initiate(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/ActivityRecord;)V
     .locals 3
 
-    .line 765
     invoke-static {p1, p2}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->isActivitySwitch(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)Z
 
     move-result v0
@@ -788,17 +716,14 @@
 
     const/4 v0, 0x2
 
-    .line 766
     iput v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mSwitchType:I
 
-    .line 767
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 768
     :cond_0
     invoke-static {p1, p2}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->isTaskSwitch(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)Z
 
@@ -806,10 +731,8 @@
 
     if-eqz v0, :cond_3
 
-    .line 769
     iput v1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mSwitchType:I
 
-    .line 770
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
 
     move-result-object p1
@@ -818,7 +741,6 @@
 
     move-result-object p1
 
-    .line 776
     :goto_0
     invoke-static {p1, v2}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->createAdaptor(Lcom/android/server/wm/WindowContainer;Z)Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
@@ -826,17 +748,14 @@
 
     iput-object p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mCloseAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
-    .line 777
     invoke-static {p2, v1}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->createAdaptor(Lcom/android/server/wm/WindowContainer;Z)Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
-    .line 778
     iput-object p3, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenActivity:Lcom/android/server/wm/ActivityRecord;
 
-    .line 779
     iget-object p1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mCloseAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     invoke-static {p1}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;->-$$Nest$fgetmAnimationTarget(Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;)Landroid/view/RemoteAnimationTarget;
@@ -858,16 +777,13 @@
 
     const-string p2, "composeNewAnimations fail, skip"
 
-    .line 780
     invoke-static {p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
     invoke-virtual {p0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->clearBackAnimateTarget()V
 
     :cond_2
     return-void
 
-    .line 772
     :cond_3
     iput v2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mSwitchType:I
 
@@ -877,14 +793,12 @@
 .method public isSupportWindowlessSurface()Z
     .locals 0
 
-    .line 812
     iget-object p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mTaskOrganizerController:Lcom/android/server/wm/TaskOrganizerController;
 
-    .line 813
     invoke-virtual {p0}, Lcom/android/server/wm/TaskOrganizerController;->isSupportWindowlessStartingSurface()Z
 
     move-result p0
@@ -895,7 +809,6 @@
 .method public isTarget(Lcom/android/server/wm/WindowContainer;Z)Z
     .locals 3
 
-    .line 848
     iget-boolean v0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mComposed:Z
 
     const/4 v1, 0x0
@@ -907,7 +820,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 856
     iget-object p2, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     goto :goto_0
@@ -920,7 +832,6 @@
 
     move-result-object p2
 
-    .line 857
     iget p0, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mSwitchType:I
 
     const/4 v0, 0x1
@@ -929,7 +840,6 @@
 
     if-eq p1, p2, :cond_3
 
-    .line 859
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
 
     move-result-object p0
@@ -942,7 +852,6 @@
 
     if-nez p0, :cond_3
 
-    .line 860
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asActivityRecord()Lcom/android/server/wm/ActivityRecord;
 
@@ -969,7 +878,6 @@
 
     if-eq p1, p2, :cond_6
 
-    .line 862
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asTaskFragment()Lcom/android/server/wm/TaskFragment;
 
     move-result-object p0
@@ -1010,54 +918,45 @@
 
     return-object p0
 
-    .line 1063
     :cond_0
     new-instance p5, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     invoke-direct {p5, p0, p1, p2}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;-><init>(Lcom/android/server/wm/BackNavigationController$AnimationHandler;ILandroid/window/BackAnimationAdapter;)V
 
-    .line 1064
     invoke-virtual {p5, p3, p4}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->setComposeTarget(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     move-result-object p0
 
-    .line 1065
     invoke-virtual {p0, v1}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->setIsLaunchBehind(Z)Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     move-result-object p0
 
     return-object p0
 
-    .line 1059
     :cond_1
     new-instance p3, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     invoke-direct {p3, p0, p1, p2}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;-><init>(Lcom/android/server/wm/BackNavigationController$AnimationHandler;ILandroid/window/BackAnimationAdapter;)V
 
-    .line 1060
     invoke-virtual {p3, p5, p6}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->setComposeTarget(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     move-result-object p0
 
-    .line 1061
     invoke-virtual {p0, v1}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->setIsLaunchBehind(Z)Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     move-result-object p0
 
     return-object p0
 
-    .line 1055
     :cond_2
     new-instance p5, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     invoke-direct {p5, p0, p1, p2}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;-><init>(Lcom/android/server/wm/BackNavigationController$AnimationHandler;ILandroid/window/BackAnimationAdapter;)V
 
-    .line 1056
     invoke-virtual {p5, v0}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->setIsLaunchBehind(Z)Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     move-result-object p0
 
-    .line 1057
     invoke-virtual {p0, p3, p4}, Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;->setComposeTarget(Lcom/android/server/wm/WindowContainer;Lcom/android/server/wm/WindowContainer;)Lcom/android/server/wm/BackNavigationController$AnimationHandler$ScheduleAnimationBuilder;
 
     move-result-object p0
@@ -1068,7 +967,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 931
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1077,7 +975,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 933
     iget-object v1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mOpenAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     const-string/jumbo v2, "null"
@@ -1100,7 +997,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 935
     iget-object v1, p0, Lcom/android/server/wm/BackNavigationController$AnimationHandler;->mCloseAdaptor:Lcom/android/server/wm/BackNavigationController$AnimationHandler$BackWindowAnimationAdaptor;
 
     if-eqz v1, :cond_1

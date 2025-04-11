@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/ChangeTransitionController;Landroid/os/Looper;)V
     .locals 0
 
-    .line 925
     iput-object p1, p0, Lcom/android/server/wm/ChangeTransitionController$H;->this$0:Lcom/android/server/wm/ChangeTransitionController;
 
-    .line 926
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 931
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -34,7 +31,6 @@
 
     goto :goto_0
 
-    .line 933
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/ChangeTransitionController$H;->this$0:Lcom/android/server/wm/ChangeTransitionController;
 
@@ -49,7 +45,6 @@
     :try_start_0
     const-string v0, "ChangeTransitionController"
 
-    .line 934
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,7 +67,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 935
     iget-object v0, p0, Lcom/android/server/wm/ChangeTransitionController$H;->this$0:Lcom/android/server/wm/ChangeTransitionController;
 
     invoke-static {v0}, Lcom/android/server/wm/ChangeTransitionController;->-$$Nest$fgetmSyncDeferredAllDrawnApps(Lcom/android/server/wm/ChangeTransitionController;)Landroid/util/ArraySet;
@@ -81,7 +75,6 @@
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->clear()V
 
-    .line 936
     iget-object p0, p0, Lcom/android/server/wm/ChangeTransitionController$H;->this$0:Lcom/android/server/wm/ChangeTransitionController;
 
     invoke-static {p0}, Lcom/android/server/wm/ChangeTransitionController;->-$$Nest$fgetmWm(Lcom/android/server/wm/ChangeTransitionController;)Lcom/android/server/wm/WindowManagerService;
@@ -90,7 +83,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->requestTraversal()V
 
-    .line 937
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

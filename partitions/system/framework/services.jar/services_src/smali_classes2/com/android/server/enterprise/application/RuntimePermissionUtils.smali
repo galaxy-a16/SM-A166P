@@ -17,7 +17,6 @@
 .method public createEntry(IILjava/lang/String;)[Ljava/lang/String;
     .locals 0
 
-    .line 71
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -40,14 +39,12 @@
 
     if-eqz p2, :cond_8
 
-    .line 15
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
-    .line 21
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -78,7 +75,6 @@
 
     const/4 v6, 0x0
 
-    .line 22
     aget-object v6, v5, v6
 
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -87,7 +83,6 @@
 
     const/4 v7, 0x1
 
-    .line 23
     aget-object v7, v5, v7
 
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -96,10 +91,8 @@
 
     const/4 v8, 0x2
 
-    .line 24
     aget-object v5, v5, v8
 
-    .line 29
     invoke-virtual {v5, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v8
@@ -118,7 +111,6 @@
     :cond_2
     const-string v8, "*"
 
-    .line 38
     invoke-virtual {v5, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -143,14 +135,12 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 52
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
     return-object p0
 
-    .line 54
     :cond_5
     invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
@@ -162,7 +152,6 @@
 
     return-object p0
 
-    .line 57
     :cond_6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -173,7 +162,6 @@
     :cond_7
     if-eq v2, v0, :cond_8
 
-    .line 61
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0

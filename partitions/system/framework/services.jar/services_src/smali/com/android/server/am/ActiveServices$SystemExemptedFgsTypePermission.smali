@@ -11,12 +11,10 @@
 .method public constructor <init>(Lcom/android/server/am/ActiveServices;)V
     .locals 0
 
-    .line 2840
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$SystemExemptedFgsTypePermission;->this$0:Lcom/android/server/am/ActiveServices;
 
     const-string p1, "System exempted"
 
-    .line 2841
     invoke-direct {p0, p1}, Landroid/app/ForegroundServiceTypePolicy$ForegroundServiceTypePermission;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -27,14 +25,12 @@
 .method public checkPermission(Landroid/content/Context;IILjava/lang/String;Z)I
     .locals 1
 
-    .line 2847
     iget-object p1, p0, Lcom/android/server/am/ActiveServices$SystemExemptedFgsTypePermission;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object p1, p1, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     iget-object p1, p1, Lcom/android/server/am/ActivityManagerService;->mAppRestrictionController:Lcom/android/server/am/AppRestrictionController;
 
-    .line 2849
     invoke-virtual {p1, p2}, Lcom/android/server/am/AppRestrictionController;->getPotentialSystemExemptionReason(I)I
 
     move-result p3
@@ -43,14 +39,12 @@
 
     if-ne p3, p5, :cond_0
 
-    .line 2852
     invoke-virtual {p1, p2, p4}, Lcom/android/server/am/AppRestrictionController;->getPotentialSystemExemptionReason(ILjava/lang/String;)I
 
     move-result p3
 
     if-ne p3, p5, :cond_0
 
-    .line 2855
     invoke-virtual {p1, p2, p4}, Lcom/android/server/am/AppRestrictionController;->getPotentialUserAllowedExemptionReason(ILjava/lang/String;)I
 
     move-result p3
@@ -62,7 +56,6 @@
 
     if-ne p3, p5, :cond_1
 
-    .line 2859
     iget-object p0, p0, Lcom/android/server/am/ActiveServices$SystemExemptedFgsTypePermission;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object p0, p0, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static cancelJob(Landroid/content/Context;)V
     .locals 1
 
-    .line 63
     const-class v0, Landroid/app/job/JobScheduler;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -27,7 +25,6 @@
 
     const v0, 0x3bde38
 
-    .line 64
     invoke-virtual {p0, v0}, Landroid/app/job/JobScheduler;->cancel(I)V
 
     return-void
@@ -36,7 +33,6 @@
 .method public static scheduleJob(Landroid/content/Context;)V
     .locals 6
 
-    .line 43
     const-class v0, Landroid/app/job/JobScheduler;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -47,12 +43,10 @@
 
     const v1, 0x3bde38
 
-    .line 45
     invoke-virtual {v0, v1}, Landroid/app/job/JobScheduler;->getPendingJob(I)Landroid/app/job/JobInfo;
 
     move-result-object v2
 
-    .line 46
     new-instance v3, Landroid/app/job/JobInfo$Builder;
 
     new-instance v4, Landroid/content/ComponentName;
@@ -65,12 +59,10 @@
 
     const/4 p0, 0x1
 
-    .line 48
     invoke-virtual {v3, p0}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
 
     move-result-object v3
 
-    .line 49
     invoke-virtual {v3, p0}, Landroid/app/job/JobInfo$Builder;->setRequiresCharging(Z)Landroid/app/job/JobInfo$Builder;
 
     move-result-object p0
@@ -79,7 +71,6 @@
 
     const-wide/16 v4, 0x18
 
-    .line 50
     invoke-virtual {v3, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v3
@@ -94,14 +85,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 52
     invoke-virtual {v2, p0}, Landroid/app/job/JobInfo;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 53
     invoke-virtual {v0, v1}, Landroid/app/job/JobScheduler;->cancel(I)V
 
     const/4 v2, 0x0
@@ -109,7 +98,6 @@
     :cond_0
     if-nez v2, :cond_1
 
-    .line 58
     invoke-virtual {v0, p0}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
     :cond_1
@@ -121,7 +109,6 @@
 .method public onStartJob(Landroid/app/job/JobParameters;)Z
     .locals 0
 
-    .line 72
     const-class p0, Landroid/hardware/display/DisplayManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -130,7 +117,6 @@
 
     check-cast p0, Landroid/hardware/display/DisplayManagerInternal;
 
-    .line 73
     invoke-virtual {p0}, Landroid/hardware/display/DisplayManagerInternal;->persistBrightnessTrackerState()V
 
     const/4 p0, 0x0
@@ -141,7 +127,6 @@
 .method public onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

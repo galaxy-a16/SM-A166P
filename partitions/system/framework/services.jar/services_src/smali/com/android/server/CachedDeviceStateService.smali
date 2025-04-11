@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceState(Lcom/android/server/CachedDeviceStateService;)Lcom/android/internal/os/CachedDeviceState;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/CachedDeviceStateService;->mDeviceState:Lcom/android/internal/os/CachedDeviceState;
 
     return-object p0
@@ -22,17 +21,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 61
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 39
     new-instance p1, Lcom/android/internal/os/CachedDeviceState;
 
     invoke-direct {p1}, Lcom/android/internal/os/CachedDeviceState;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/CachedDeviceStateService;->mDeviceState:Lcom/android/internal/os/CachedDeviceState;
 
-    .line 40
     new-instance p1, Lcom/android/server/CachedDeviceStateService$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/CachedDeviceStateService$1;-><init>(Lcom/android/server/CachedDeviceStateService;)V
@@ -51,32 +47,26 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 72
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "android.intent.action.BATTERY_CHANGED"
 
-    .line 73
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.SCREEN_ON"
 
-    .line 74
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.SCREEN_OFF"
 
-    .line 75
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const/16 v0, 0x3e8
 
-    .line 76
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 77
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -85,7 +75,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 78
     iget-object p1, p0, Lcom/android/server/CachedDeviceStateService;->mDeviceState:Lcom/android/internal/os/CachedDeviceState;
 
     invoke-virtual {p0}, Lcom/android/server/CachedDeviceStateService;->queryIsCharging()Z
@@ -94,7 +83,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/CachedDeviceState;->setCharging(Z)V
 
-    .line 79
     iget-object p1, p0, Lcom/android/server/CachedDeviceStateService;->mDeviceState:Lcom/android/internal/os/CachedDeviceState;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -114,7 +102,6 @@
 .method public onStart()V
     .locals 2
 
-    .line 66
     const-class v0, Lcom/android/internal/os/CachedDeviceState$Readonly;
 
     iget-object v1, p0, Lcom/android/server/CachedDeviceStateService;->mDeviceState:Lcom/android/internal/os/CachedDeviceState;
@@ -131,10 +118,8 @@
 .method public final queryIsCharging()Z
     .locals 2
 
-    .line 84
     const-class p0, Landroid/os/BatteryManagerInternal;
 
-    .line 85
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -149,12 +134,10 @@
 
     const-string v1, "BatteryManager null while starting CachedDeviceStateService"
 
-    .line 87
     invoke-static {p0, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 91
     :cond_0
     invoke-virtual {p0}, Landroid/os/BatteryManagerInternal;->getPlugType()I
 
@@ -174,7 +157,6 @@
 .method public final queryScreenInteractive(Landroid/content/Context;)Z
     .locals 0
 
-    .line 96
     const-class p0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -189,14 +171,12 @@
 
     const-string p1, "PowerManager null while starting CachedDeviceStateService"
 
-    .line 98
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 101
     :cond_0
     invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
 

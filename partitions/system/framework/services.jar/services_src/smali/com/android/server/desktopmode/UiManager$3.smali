@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/UiManager;Lcom/android/server/desktopmode/UiManager$InternalUiCallback;)V
     .locals 0
 
-    .line 259
     iput-object p1, p0, Lcom/android/server/desktopmode/UiManager$3;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     iput-object p2, p0, Lcom/android/server/desktopmode/UiManager$3;->val$callback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
@@ -28,19 +27,16 @@
 .method public onAnimationComplete()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onClickButtonNegative()V
     .locals 2
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$3;->val$callback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
 
     if-eqz v0, :cond_0
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$3;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;
@@ -64,12 +60,10 @@
 .method public onClickButtonPositive()V
     .locals 2
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$3;->val$callback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
 
     if-eqz v0, :cond_0
 
-    .line 263
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$3;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;
@@ -93,12 +87,10 @@
 .method public onDismiss()V
     .locals 3
 
-    .line 283
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$3;->val$callback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
 
     if-eqz v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$3;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;
@@ -115,7 +107,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 286
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/UiManager$3;->this$0:Lcom/android/server/desktopmode/UiManager;
 
@@ -127,12 +118,10 @@
 .method public onShow()V
     .locals 2
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$3;->val$callback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
 
     if-eqz v0, :cond_0
 
-    .line 277
     iget-object v0, p0, Lcom/android/server/desktopmode/UiManager$3;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/UiManager;->-$$Nest$fgetmHandler(Lcom/android/server/desktopmode/UiManager;)Lcom/android/server/desktopmode/UiManager$UiCommandHandler;

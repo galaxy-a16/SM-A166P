@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WmScreenshotController;)V
     .locals 0
 
-    .line 468
     iput-object p1, p0, Lcom/android/server/wm/WmScreenshotController$3;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    .line 470
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 471
     iget-object p2, p0, Lcom/android/server/wm/WmScreenshotController$3;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
     invoke-static {p2}, Lcom/android/server/wm/WmScreenshotController;->-$$Nest$fgetmService(Lcom/android/server/wm/WmScreenshotController;)Lcom/android/server/wm/WindowManagerService;
@@ -42,7 +39,6 @@
 
     move-result p2
 
-    .line 472
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +67,6 @@
 
     return-void
 
-    .line 477
     :cond_0
     iget-object p2, p0, Lcom/android/server/wm/WmScreenshotController$3;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
@@ -81,7 +76,6 @@
 
     if-lez v2, :cond_1
 
-    .line 479
     iget-object v0, p0, Lcom/android/server/wm/WmScreenshotController$3;->this$0:Lcom/android/server/wm/WmScreenshotController;
 
     const/4 v1, 0x1

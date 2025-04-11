@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/aidl/FaceEnrollClient;)V
     .locals 0
 
-    .line 313
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceEnrollClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/FaceEnrollClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
     .locals 0
 
-    .line 320
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceEnrollClient$2;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/FaceEnrollClient;
 
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/face/aidl/FaceEnrollClient;->getServiceExtImpl()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
@@ -50,6 +48,5 @@
 .method public onClientStarted(Lcom/android/server/biometrics/sensors/BaseClientMonitor;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

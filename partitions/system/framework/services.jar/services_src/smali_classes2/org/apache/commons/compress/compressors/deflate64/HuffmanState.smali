@@ -19,7 +19,6 @@
 .method public static synthetic $values()[Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
     .locals 4
 
-    .line 20
     sget-object v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->INITIAL:Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
     sget-object v1, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->STORED:Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 21
     new-instance v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
     const-string v1, "INITIAL"
@@ -49,7 +47,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->INITIAL:Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
-    .line 22
     new-instance v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
     const-string v1, "STORED"
@@ -60,7 +57,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->STORED:Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
-    .line 23
     new-instance v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
     const-string v1, "DYNAMIC_CODES"
@@ -71,7 +67,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->DYNAMIC_CODES:Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
-    .line 24
     new-instance v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
     const-string v1, "FIXED_CODES"
@@ -82,7 +77,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->FIXED_CODES:Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
-    .line 20
     invoke-static {}, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->$values()[Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
     move-result-object v0
@@ -95,7 +89,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 20
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -104,7 +97,6 @@
 .method public static valueOf(Ljava/lang/String;)Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
     .locals 1
 
-    .line 20
     const-class v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -119,7 +111,6 @@
 .method public static values()[Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
     .locals 1
 
-    .line 20
     sget-object v0, Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->$VALUES:[Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;
 
     invoke-virtual {v0}, [Lorg/apache/commons/compress/compressors/deflate64/HuffmanState;->clone()Ljava/lang/Object;

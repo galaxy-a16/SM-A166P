@@ -31,14 +31,12 @@
 
     const/16 v0, 0x14c
 
-    .line 286
     invoke-static {}, Lcom/android/server/pm/dex/ArtStatsLogUtils;->-$$Nest$sfgetCOMPILE_FILTER_MAP()Ljava/util/Map;
 
     move-result-object v4
 
     const/4 v5, 0x2
 
-    .line 290
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -59,7 +57,6 @@
 
     move-result-object v6
 
-    .line 292
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -74,7 +71,6 @@
 
     move-result v5
 
-    .line 294
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
@@ -87,14 +83,12 @@
 
     const/4 v15, 0x0
 
-    .line 301
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
 
     move-object/from16 v0, p11
 
-    .line 300
     invoke-interface {v14, v0, v15}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -111,7 +105,6 @@
 
     const/16 v0, 0x14c
 
-    .line 286
     invoke-static/range {v0 .. v16}, Lcom/android/internal/art/ArtStatsLog;->write(IJIIIJIIJIIIII)V
 
     return-void

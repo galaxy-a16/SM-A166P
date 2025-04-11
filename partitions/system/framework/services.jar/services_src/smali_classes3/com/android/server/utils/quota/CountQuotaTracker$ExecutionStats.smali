@@ -29,17 +29,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .line 103
     instance-of v0, p1, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 104
     check-cast p1, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;
 
-    .line 105
     iget-wide v2, p0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
     iget-wide v4, p1, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
@@ -85,7 +82,6 @@
 .method public hashCode()I
     .locals 4
 
-    .line 117
     iget-wide v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->expirationTimeElapsed:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
@@ -98,7 +94,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 118
     iget-wide v2, p0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->windowSizeMs:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
@@ -109,21 +104,18 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 119
     iget v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countLimit:I
 
     add-int/2addr v1, v0
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 120
     iget v0, p0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->countInWindow:I
 
     add-int/2addr v1, v0
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 121
     iget-wide v2, p0, Lcom/android/server/utils/quota/CountQuotaTracker$ExecutionStats;->inQuotaTimeElapsed:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
@@ -138,7 +130,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 94
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/backup/UserBackupManagerService;)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Landroid/content/pm/IPackageDataObserver$Stub;-><init>()V
 
-    .line 28
     iput-object p1, p0, Lcom/android/server/backup/internal/ClearDataObserver;->backupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
     return-void
@@ -25,7 +23,6 @@
 .method public onRemoveCompleted(Ljava/lang/String;Z)V
     .locals 1
 
-    .line 32
     iget-object p1, p0, Lcom/android/server/backup/internal/ClearDataObserver;->backupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/backup/UserBackupManagerService;->getClearDataLock()Ljava/lang/Object;
@@ -34,7 +31,6 @@
 
     monitor-enter p1
 
-    .line 33
     :try_start_0
     iget-object p2, p0, Lcom/android/server/backup/internal/ClearDataObserver;->backupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
@@ -42,7 +38,6 @@
 
     invoke-virtual {p2, v0}, Lcom/android/server/backup/UserBackupManagerService;->setClearingData(Z)V
 
-    .line 34
     iget-object p0, p0, Lcom/android/server/backup/internal/ClearDataObserver;->backupManagerService:Lcom/android/server/backup/UserBackupManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/backup/UserBackupManagerService;->getClearDataLock()Ljava/lang/Object;
@@ -51,7 +46,6 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 35
     monitor-exit p1
 
     return-void

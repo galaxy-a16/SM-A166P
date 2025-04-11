@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/os/Looper;Lcom/android/server/am/AppRestrictionController$Injector;)V
     .locals 0
 
-    .line 3092
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3093
     iput-object p2, p0, Lcom/android/server/am/AppRestrictionController$BgHandler;->mInjector:Lcom/android/server/am/AppRestrictionController$Injector;
 
     return-void
@@ -25,15 +23,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .line 3098
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController$BgHandler;->mInjector:Lcom/android/server/am/AppRestrictionController$Injector;
 
-    .line 3099
     invoke-virtual {p0}, Lcom/android/server/am/AppRestrictionController$Injector;->getAppRestrictionController()Lcom/android/server/am/AppRestrictionController;
 
     move-result-object p0
 
-    .line 3100
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x0
@@ -44,7 +39,6 @@
 
     goto/16 :goto_0
 
-    .line 3137
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController;->mRestrictionSettings:Lcom/android/server/am/AppRestrictionController$RestrictionSettings;
 
@@ -54,7 +48,6 @@
 
     goto/16 :goto_0
 
-    .line 3134
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/am/AppRestrictionController;->mRestrictionSettings:Lcom/android/server/am/AppRestrictionController$RestrictionSettings;
 
@@ -62,7 +55,6 @@
 
     goto/16 :goto_0
 
-    .line 3123
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -74,7 +66,6 @@
 
     goto :goto_0
 
-    .line 3126
     :pswitch_3
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -84,7 +75,6 @@
 
     goto :goto_0
 
-    .line 3130
     :pswitch_4
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -97,14 +87,12 @@
     :cond_0
     invoke-virtual {p0, v0, v1}, Lcom/android/server/am/AppRestrictionController;->handleUidInactive(IZ)V
 
-    .line 3131
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppRestrictionController;->handleUidGone(I)V
 
     goto :goto_0
 
-    .line 3120
     :pswitch_5
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -112,7 +100,6 @@
 
     goto :goto_0
 
-    .line 3117
     :pswitch_6
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -127,7 +114,6 @@
 
     goto :goto_0
 
-    .line 3114
     :pswitch_7
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -139,7 +125,6 @@
 
     goto :goto_0
 
-    .line 3111
     :pswitch_8
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -151,7 +136,6 @@
 
     goto :goto_0
 
-    .line 3108
     :pswitch_9
     iget v0, p1, Landroid/os/Message;->arg2:I
 
@@ -165,7 +149,6 @@
 
     goto :goto_0
 
-    .line 3105
     :pswitch_a
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -179,7 +162,6 @@
 
     goto :goto_0
 
-    .line 3102
     :pswitch_b
     iget v0, p1, Landroid/os/Message;->arg1:I
 

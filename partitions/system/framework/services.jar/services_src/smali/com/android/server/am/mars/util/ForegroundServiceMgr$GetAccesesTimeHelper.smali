@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$A0pxFSAoxtUhLyNilfnnDqvh3Cg(Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->lambda$getAllAccessTimeOfPackage$0(Landroid/os/Bundle;)V
 
     return-void
@@ -24,12 +23,10 @@
 .method public constructor <init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)V
     .locals 0
 
-    .line 156
     iput-object p1, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->this$0:Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 157
     new-instance p1, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;
 
     invoke-direct {p1, p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;-><init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;)V
@@ -45,7 +42,6 @@
     :try_start_0
     const-string v0, "historical_ops"
 
-    .line 171
     const-class v1, Landroid/app/AppOpsManager$HistoricalOps;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -54,7 +50,6 @@
 
     check-cast p1, Landroid/app/AppOpsManager$HistoricalOps;
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->visitor:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;
 
     invoke-virtual {p1, p0}, Landroid/app/AppOpsManager$HistoricalOps;->accept(Landroid/app/AppOpsManager$HistoricalOpsVisitor;)V
@@ -66,7 +61,6 @@
     :catch_0
     move-exception p0
 
-    .line 174
     sget-object p1, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->TAG:Ljava/lang/String;
 
     const-string v0, "exception"
@@ -82,7 +76,6 @@
 .method public checkAllOp(Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;)V
     .locals 5
 
-    .line 186
     :try_start_0
     iget-object v0, p1, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;->accessTimePerOp:Landroid/util/ArrayMap;
 
@@ -107,7 +100,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 187
     sget-object v2, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -130,7 +122,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     iget v2, p1, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;->filterUid:I
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->getAccessTimeOfOp(Ljava/lang/String;I)V
@@ -142,7 +133,6 @@
     :catch_0
     move-exception p0
 
-    .line 191
     sget-object p1, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->TAG:Ljava/lang/String;
 
     const-string v0, "exception"
@@ -156,7 +146,6 @@
 .method public getAccessTimeOfOp(Ljava/lang/String;I)V
     .locals 8
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->this$0:Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 
     invoke-static {v0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->-$$Nest$fgetmMapFGSRecord(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -173,7 +162,6 @@
 
     check-cast p2, Lcom/android/server/am/mars/ForegroundServiceRecord;
 
-    .line 197
     iget-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->visitor:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;
 
     iget-object v0, v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;->accessTimePerOp:Landroid/util/ArrayMap;
@@ -186,21 +174,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 198
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 199
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 200
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -211,7 +196,6 @@
 
     move-result-wide v2
 
-    .line 201
     sget-object v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -244,7 +228,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 202
     iget-object v1, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->this$0:Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 
     invoke-virtual {p2}, Lcom/android/server/am/mars/ForegroundServiceRecord;->getFGSStartTime()J
@@ -261,7 +244,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 203
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->this$0:Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 
     invoke-static {p0, p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->-$$Nest$mconvertFGSType(Lcom/android/server/am/mars/util/ForegroundServiceMgr;Ljava/lang/String;)I
@@ -281,19 +263,16 @@
 
     const-string v1, "appops"
 
-    .line 162
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 161
     invoke-static {v1}, Lcom/android/internal/app/IAppOpsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IAppOpsService;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->mAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
-    .line 163
     iget-object v1, v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->visitor:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;
 
     move/from16 v3, p1
@@ -302,7 +281,6 @@
 
     invoke-virtual {v1, v3, v4}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;->setTarget(ILjava/lang/String;)V
 
-    .line 165
     iget-object v2, v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->mAppOpsService:Lcom/android/internal/app/IAppOpsService;
 
     if-eqz v2, :cond_0
@@ -321,7 +299,6 @@
 
     const/16 v13, 0x1f
 
-    .line 167
     :try_start_0
     new-instance v14, Landroid/os/RemoteCallback;
 
@@ -337,7 +314,6 @@
 
     invoke-interface/range {v2 .. v14}, Lcom/android/internal/app/IAppOpsService;->getHistoricalOps(ILjava/lang/String;Ljava/lang/String;Ljava/util/List;IIJJILandroid/os/RemoteCallback;)V
 
-    .line 177
     invoke-static {}, Lcom/android/server/am/MARsHandler;->getInstance()Lcom/android/server/am/MARsHandler;
 
     move-result-object v1
@@ -363,7 +339,6 @@
     :catch_0
     move-exception v0
 
-    .line 179
     sget-object v1, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->TAG:Ljava/lang/String;
 
     const-string v2, "exception"

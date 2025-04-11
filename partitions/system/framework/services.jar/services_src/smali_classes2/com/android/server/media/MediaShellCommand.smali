@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmErrorWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand;->mErrorWriter:Ljava/io/PrintWriter;
 
     return-object p0
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInput(Lcom/android/server/media/MediaShellCommand;)Ljava/io/InputStream;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand;->mInput:Ljava/io/InputStream;
 
     return-object p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWriter(Lcom/android/server/media/MediaShellCommand;)Ljava/io/PrintWriter;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     return-object p0
@@ -52,10 +49,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 59
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/media/MediaShellCommand;->mPackageName:Ljava/lang/String;
 
     return-void
@@ -66,7 +61,6 @@
 .method public log(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 200
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -93,42 +87,36 @@
 .method public onCommand(Ljava/lang/String;)I
     .locals 3
 
-    .line 65
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
-    .line 66
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mErrorWriter:Ljava/io/PrintWriter;
 
-    .line 67
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getRawInputStream()Ljava/io/InputStream;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mInput:Ljava/io/InputStream;
 
-    .line 69
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 70
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     return p0
 
-    .line 72
     :cond_0
     sget-object v0, Lcom/android/server/media/MediaShellCommand;->sThread:Landroid/app/ActivityThread;
 
@@ -136,22 +124,18 @@
 
     if-nez v0, :cond_1
 
-    .line 73
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 74
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/media/MediaShellCommand;->sThread:Landroid/app/ActivityThread;
 
-    .line 75
     invoke-virtual {v0}, Landroid/app/ActivityThread;->getSystemContext()Landroid/app/ContextImpl;
 
     move-result-object v0
 
-    .line 77
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -160,7 +144,6 @@
 
     sput-object v0, Lcom/android/server/media/MediaShellCommand;->sMediaSessionManager:Landroid/media/session/MediaSessionManager;
 
-    .line 79
     :cond_1
     invoke-static {v1}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -179,14 +162,12 @@
     :try_start_0
     const-string v1, "dispatch"
 
-    .line 87
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/media/MediaShellCommand;->runDispatch()V
 
     goto :goto_0
@@ -194,14 +175,12 @@
     :cond_2
     const-string v1, "list-sessions"
 
-    .line 89
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/media/MediaShellCommand;->runListSessions()V
 
     goto :goto_0
@@ -209,14 +188,12 @@
     :cond_3
     const-string/jumbo v1, "monitor"
 
-    .line 91
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 92
     invoke-virtual {p0}, Lcom/android/server/media/MediaShellCommand;->runMonitor()V
 
     goto :goto_0
@@ -224,14 +201,12 @@
     :cond_4
     const-string/jumbo v1, "volume"
 
-    .line 93
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/server/media/MediaShellCommand;->runVolume()V
 
     :goto_0
@@ -239,7 +214,6 @@
 
     return p0
 
-    .line 96
     :cond_5
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -268,7 +242,6 @@
     :catch_0
     move-exception p1
 
-    .line 100
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -277,7 +250,6 @@
 
     return v0
 
-    .line 82
     :cond_6
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -291,89 +263,76 @@
 .method public onHelp()V
     .locals 3
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string/jumbo v1, "usage: media_session [subcommand] [options]"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "       media_session dispatch KEY"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "       media_session list-sessions"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "       media_session monitor <tag>"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "       media_session volume [options]"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {v0}, Ljava/io/PrintWriter;->println()V
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string/jumbo v1, "media_session dispatch: dispatch a media key to the system."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "                KEY may be: play, pause, play-pause, mute, headsethook,"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "                stop, next, previous, rewind, record, fast-forward."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string/jumbo v1, "media_session list-sessions: print a list of the current sessions."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string/jumbo v1, "media_session monitor: monitor updates to the specified session."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "                       Use the tag from list-sessions."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -394,7 +353,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
@@ -407,14 +365,12 @@
 
     move-object/from16 v0, p0
 
-    .line 164
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v2, "play"
 
-    .line 166
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -428,7 +384,6 @@
     :cond_0
     const-string/jumbo v2, "pause"
 
-    .line 168
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -442,7 +397,6 @@
     :cond_1
     const-string/jumbo v2, "play-pause"
 
-    .line 170
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -456,7 +410,6 @@
     :cond_2
     const-string/jumbo v2, "mute"
 
-    .line 172
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -470,7 +423,6 @@
     :cond_3
     const-string v2, "headsethook"
 
-    .line 174
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -484,7 +436,6 @@
     :cond_4
     const-string/jumbo v2, "stop"
 
-    .line 176
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -498,7 +449,6 @@
     :cond_5
     const-string/jumbo v2, "next"
 
-    .line 178
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -512,7 +462,6 @@
     :cond_6
     const-string/jumbo v2, "previous"
 
-    .line 180
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -526,7 +475,6 @@
     :cond_7
     const-string/jumbo v2, "rewind"
 
-    .line 182
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -540,7 +488,6 @@
     :cond_8
     const-string/jumbo v2, "record"
 
-    .line 184
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -554,7 +501,6 @@
     :cond_9
     const-string v2, "fast-forward"
 
-    .line 186
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -563,13 +509,11 @@
 
     const/16 v1, 0x5a
 
-    .line 192
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v15
 
-    .line 193
     new-instance v14, Landroid/view/KeyEvent;
 
     const/4 v7, 0x0
@@ -604,7 +548,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/media/MediaShellCommand;->sendMediaKey(Landroid/view/KeyEvent;)V
 
-    .line 195
     new-instance v1, Landroid/view/KeyEvent;
 
     const/4 v7, 0x1
@@ -621,7 +564,6 @@
 
     return-void
 
-    .line 189
     :cond_a
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -649,14 +591,12 @@
 .method public final runListSessions()V
     .locals 5
 
-    .line 347
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
     const-string v1, "Sessions:"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 349
     :try_start_0
     sget-object v0, Lcom/android/server/media/MediaShellCommand;->sMediaSessionManager:Landroid/media/session/MediaSessionManager;
 
@@ -666,7 +606,6 @@
 
     move-result-object v0
 
-    .line 350
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -690,7 +629,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 353
     :try_start_1
     iget-object v2, p0, Lcom/android/server/media/MediaShellCommand;->mWriter:Ljava/io/PrintWriter;
 
@@ -712,7 +650,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 354
     invoke-virtual {v1}, Landroid/media/session/MediaController;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -723,7 +660,6 @@
 
     move-result-object v1
 
-    .line 353
     invoke-virtual {v2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
@@ -731,7 +667,6 @@
 
     goto :goto_0
 
-    .line 361
     :catch_1
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand;->mErrorWriter:Ljava/io/PrintWriter;
 
@@ -746,7 +681,6 @@
 .method public final runMonitor()V
     .locals 6
 
-    .line 133
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -755,7 +689,6 @@
 
     const-string v0, "Error: must include a session id"
 
-    .line 135
     invoke-virtual {p0, v0}, Lcom/android/server/media/MediaShellCommand;->showError(Ljava/lang/String;)V
 
     return-void
@@ -763,7 +696,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 141
     :try_start_0
     sget-object v2, Lcom/android/server/media/MediaShellCommand;->sMediaSessionManager:Landroid/media/session/MediaSessionManager;
 
@@ -773,7 +705,6 @@
 
     move-result-object v2
 
-    .line 142
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -796,7 +727,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 144
     :try_start_1
     invoke-virtual {v3}, Landroid/media/session/MediaController;->getTag()Ljava/lang/String;
 
@@ -808,12 +738,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 145
     new-instance v4, Lcom/android/server/media/MediaShellCommand$ControllerMonitor;
 
     invoke-direct {v4, p0, v3}, Lcom/android/server/media/MediaShellCommand$ControllerMonitor;-><init>(Lcom/android/server/media/MediaShellCommand;Landroid/media/session/MediaController;)V
 
-    .line 147
     invoke-virtual {v4}, Lcom/android/server/media/MediaShellCommand$ControllerMonitor;->run()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -826,7 +754,6 @@
     :catch_1
     move-exception v2
 
-    .line 156
     iget-object v3, p0, Lcom/android/server/media/MediaShellCommand;->mErrorWriter:Ljava/io/PrintWriter;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -853,7 +780,6 @@
     :goto_0
     if-nez v1, :cond_3
 
-    .line 159
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand;->mErrorWriter:Ljava/io/PrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -879,7 +805,6 @@
 .method public final runVolume()V
     .locals 0
 
-    .line 368
     invoke-static {p0}, Lcom/android/server/media/VolumeCtrl;->run(Lcom/android/server/media/MediaShellCommand;)V
 
     return-void
@@ -888,7 +813,6 @@
 .method public final sendMediaKey(Landroid/view/KeyEvent;)V
     .locals 2
 
-    .line 126
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/MediaShellCommand;->mSessionService:Landroid/media/session/ISessionManager;
 
@@ -907,10 +831,8 @@
 .method public showError(Ljava/lang/String;)V
     .locals 0
 
-    .line 204
     invoke-virtual {p0}, Lcom/android/server/media/MediaShellCommand;->onHelp()V
 
-    .line 205
     iget-object p0, p0, Lcom/android/server/media/MediaShellCommand;->mErrorWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V

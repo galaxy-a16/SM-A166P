@@ -13,22 +13,18 @@
 .method public constructor <init>(Ljava/io/InputStream;I)V
     .locals 1
 
-    .line 29
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
     if-ltz p2, :cond_0
 
     const/4 p1, 0x0
 
-    .line 33
     iput p1, p0, Lcom/android/server/integrity/parser/LimitInputStream;->mReadBytes:I
 
-    .line 34
     iput p2, p0, Lcom/android/server/integrity/parser/LimitInputStream;->mLimit:I
 
     return-void
 
-    .line 31
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -60,7 +56,6 @@
 .method public available()I
     .locals 2
 
-    .line 39
     invoke-super {p0}, Ljava/io/FilterInputStream;->available()I
 
     move-result v0
@@ -81,7 +76,6 @@
 .method public read()I
     .locals 2
 
-    .line 44
     iget v0, p0, Lcom/android/server/integrity/parser/LimitInputStream;->mReadBytes:I
 
     iget v1, p0, Lcom/android/server/integrity/parser/LimitInputStream;->mLimit:I
@@ -95,10 +89,8 @@
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
-    .line 47
     iput v0, p0, Lcom/android/server/integrity/parser/LimitInputStream;->mReadBytes:I
 
-    .line 48
     invoke-super {p0}, Ljava/io/FilterInputStream;->read()I
 
     move-result p0
@@ -109,7 +101,6 @@
 .method public read([B)I
     .locals 2
 
-    .line 53
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -130,7 +121,6 @@
 
     return p0
 
-    .line 61
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/integrity/parser/LimitInputStream;->available()I
 
@@ -142,7 +132,6 @@
 
     return p0
 
-    .line 65
     :cond_1
     invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
 
@@ -152,7 +141,6 @@
 
     move-result p1
 
-    .line 66
     iget p2, p0, Lcom/android/server/integrity/parser/LimitInputStream;->mReadBytes:I
 
     add-int/2addr p2, p1
@@ -173,7 +161,6 @@
 
     return-wide v0
 
-    .line 75
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/integrity/parser/LimitInputStream;->available()I
 
@@ -186,7 +173,6 @@
     :cond_1
     int-to-long v0, v2
 
-    .line 79
     invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p1
@@ -195,12 +181,10 @@
 
     int-to-long p1, p1
 
-    .line 80
     invoke-super {p0, p1, p2}, Ljava/io/FilterInputStream;->skip(J)J
 
     move-result-wide p1
 
-    .line 81
     iget v0, p0, Lcom/android/server/integrity/parser/LimitInputStream;->mReadBytes:I
 
     long-to-int v1, p1

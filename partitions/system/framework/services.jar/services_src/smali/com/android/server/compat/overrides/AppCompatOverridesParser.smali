@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$CCLVQzkeXBCIlKIB40cGiPH6YP8(Ljava/lang/String;)Ljava/util/Set;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/compat/overrides/AppCompatOverridesParser;->lambda$parseRemoveOverrides$0(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object p0
@@ -30,7 +29,6 @@
 
     const/4 v1, 0x2
 
-    .line 68
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -43,10 +41,8 @@
 .method public constructor <init>(Landroid/content/pm/PackageManager;)V
     .locals 0
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/compat/overrides/AppCompatOverridesParser;->mPackageManager:Landroid/content/pm/PackageManager;
 
     return-void
@@ -57,7 +53,6 @@
 
     const-string/jumbo v0, "~"
 
-    .line 281
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -66,7 +61,6 @@
 
     move-result-object v0
 
-    .line 283
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -77,14 +71,12 @@
 
     const-string v0, ""
 
-    .line 285
     invoke-static {v0, p0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0
 
     return-object p0
 
-    .line 288
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -94,7 +86,6 @@
 
     if-le v1, v3, :cond_1
 
-    .line 289
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,7 +111,6 @@
     :cond_1
     const/4 p0, 0x0
 
-    .line 293
     invoke-interface {v0, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -143,7 +133,6 @@
 .method public static synthetic lambda$parseRemoveOverrides$0(Ljava/lang/String;)Ljava/util/Set;
     .locals 0
 
-    .line 142
     new-instance p0, Landroid/util/ArraySet;
 
     invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
@@ -154,21 +143,18 @@
 .method public static parseOwnedChangeIds(Ljava/lang/String;)Ljava/util/Set;
     .locals 7
 
-    .line 164
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 165
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object p0
 
     return-object p0
 
-    .line 168
     :cond_0
     new-instance v0, Landroid/util/ArraySet;
 
@@ -176,7 +162,6 @@
 
     const-string v1, ","
 
-    .line 169
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -190,7 +175,6 @@
 
     aget-object v3, p0, v2
 
-    .line 171
     :try_start_0
     invoke-static {v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -209,7 +193,6 @@
     :catch_0
     move-exception v4
 
-    .line 173
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -242,64 +225,54 @@
 .method public parsePackageOverrides(Ljava/lang/String;Ljava/lang/String;JLjava/util/Set;)Ljava/util/Map;
     .locals 10
 
-    .line 200
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 201
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 
-    .line 203
     :cond_0
     new-instance v0, Lcom/android/server/compat/overrides/AppCompatOverridesParser$PackageOverrideComparator;
 
     invoke-direct {v0, p3, p4}, Lcom/android/server/compat/overrides/AppCompatOverridesParser$PackageOverrideComparator;-><init>(J)V
 
-    .line 204
     new-instance p3, Landroid/util/ArrayMap;
 
     invoke-direct {p3}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 206
     invoke-static {p1}, Lcom/android/server/compat/overrides/AppCompatOverridesParser;->extractSignatureFromConfig(Ljava/lang/String;)Landroid/util/Pair;
 
     move-result-object p1
 
     if-nez p1, :cond_1
 
-    .line 208
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 
-    .line 210
     :cond_1
     iget-object p4, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p4, Ljava/lang/String;
 
-    .line 211
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/String;
 
-    .line 213
     invoke-virtual {p0, p2, p4}, Lcom/android/server/compat/overrides/AppCompatOverridesParser;->verifySignature(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
     if-nez p0, :cond_2
 
-    .line 214
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
@@ -309,7 +282,6 @@
     :cond_2
     const-string p0, ","
 
-    .line 217
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -329,7 +301,6 @@
 
     const/4 v3, 0x4
 
-    .line 218
     invoke-virtual {v1, v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object v2
@@ -338,7 +309,6 @@
 
     move-result-object v2
 
-    .line 219
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v4
@@ -347,7 +317,6 @@
 
     if-eq v4, v3, :cond_3
 
-    .line 220
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -366,7 +335,6 @@
 
     goto/16 :goto_1
 
-    .line 225
     :cond_3
     :try_start_0
     invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -381,7 +349,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 231
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
@@ -397,7 +364,6 @@
     :cond_4
     const/4 v6, 0x1
 
-    .line 235
     invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -406,7 +372,6 @@
 
     const/4 v7, 0x2
 
-    .line 236
     invoke-interface {v2, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -415,14 +380,12 @@
 
     const/4 v8, 0x3
 
-    .line 238
     invoke-interface {v2, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 239
     sget-object v8, Lcom/android/server/compat/overrides/AppCompatOverridesParser;->BOOLEAN_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v8, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -435,7 +398,6 @@
 
     if-nez v8, :cond_5
 
-    .line 240
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -454,13 +416,11 @@
 
     goto/16 :goto_1
 
-    .line 243
     :cond_5
     invoke-static {v2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 244
     new-instance v8, Landroid/app/compat/PackageOverride$Builder;
 
     invoke-direct {v8}, Landroid/app/compat/PackageOverride$Builder;-><init>()V
@@ -469,7 +429,6 @@
 
     move-result-object v2
 
-    .line 247
     :try_start_1
     invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z
 
@@ -477,14 +436,12 @@
 
     if-nez v8, :cond_6
 
-    .line 248
     invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v8
 
     invoke-virtual {v2, v8, v9}, Landroid/app/compat/PackageOverride$Builder;->setMinVersionCode(J)Landroid/app/compat/PackageOverride$Builder;
 
-    .line 250
     :cond_6
     invoke-virtual {v7}, Ljava/lang/String;->isEmpty()Z
 
@@ -492,7 +449,6 @@
 
     if-nez v6, :cond_7
 
-    .line 251
     invoke-static {v7}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v6
@@ -501,14 +457,12 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 261
     :cond_7
     :try_start_2
     invoke-virtual {v2}, Landroid/app/compat/PackageOverride$Builder;->build()Landroid/app/compat/PackageOverride;
 
     move-result-object v1
 
-    .line 262
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -519,7 +473,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 263
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -536,7 +489,6 @@
 
     if-gez v2, :cond_9
 
-    .line 264
     :cond_8
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -553,7 +505,6 @@
 
     const-string v2, "Failed to build PackageOverride"
 
-    .line 267
     invoke-static {v5, v2, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
@@ -561,7 +512,6 @@
     :catch_1
     move-exception v2
 
-    .line 254
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -583,7 +533,6 @@
     :catch_2
     move-exception v2
 
-    .line 227
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -613,21 +562,18 @@
 .method public parseRemoveOverrides(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Map;
     .locals 13
 
-    .line 102
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 103
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 
-    .line 106
     :cond_0
     new-instance v0, Landroid/util/ArrayMap;
 
@@ -635,7 +581,6 @@
 
     const-string v1, "*"
 
-    .line 107
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -646,24 +591,20 @@
 
     if-eqz v2, :cond_3
 
-    .line 108
     invoke-interface {p2}, Ljava/util/Set;->isEmpty()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 109
     invoke-static {v4, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 
-    .line 112
     :cond_1
     iget-object p0, p0, Lcom/android/server/compat/overrides/AppCompatOverridesParser;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -673,7 +614,6 @@
 
     move-result-object p0
 
-    .line 114
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -691,7 +631,6 @@
 
     check-cast p1, Landroid/content/pm/ApplicationInfo;
 
-    .line 115
     iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -701,7 +640,6 @@
     :cond_2
     return-object v0
 
-    .line 120
     :cond_3
     new-instance p0, Landroid/util/KeyValueListParser;
 
@@ -709,7 +647,6 @@
 
     invoke-direct {p0, v2}, Landroid/util/KeyValueListParser;-><init>(C)V
 
-    .line 122
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/util/KeyValueListParser;->setString(Ljava/lang/String;)V
     :try_end_0
@@ -719,7 +656,6 @@
 
     move v2, p1
 
-    .line 129
     :goto_1
     invoke-virtual {p0}, Landroid/util/KeyValueListParser;->size()I
 
@@ -727,38 +663,32 @@
 
     if-ge v2, v5, :cond_7
 
-    .line 130
     invoke-virtual {p0, v2}, Landroid/util/KeyValueListParser;->keyAt(I)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v6, ""
 
-    .line 131
     invoke-virtual {p0, v5, v6}, Landroid/util/KeyValueListParser;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 132
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_5
 
-    .line 133
     invoke-interface {p2}, Ljava/util/Set;->isEmpty()Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
-    .line 134
     invoke-static {v4, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 137
     :cond_4
     invoke-interface {v0, v5, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -767,7 +697,6 @@
     :cond_5
     const-string v7, ":"
 
-    .line 139
     invoke-virtual {v6, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
@@ -781,13 +710,11 @@
 
     aget-object v9, v6, v8
 
-    .line 141
     :try_start_1
     invoke-static {v9}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v10
 
-    .line 142
     new-instance v12, Lcom/android/server/compat/overrides/AppCompatOverridesParser$$ExternalSyntheticLambda0;
 
     invoke-direct {v12}, Lcom/android/server/compat/overrides/AppCompatOverridesParser$$ExternalSyntheticLambda0;-><init>()V
@@ -811,7 +738,6 @@
     :catch_0
     move-exception v10
 
-    .line 144
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -845,7 +771,6 @@
     :catch_1
     move-exception p0
 
-    .line 124
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -862,7 +787,6 @@
 
     invoke-static {v4, p1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 127
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0
@@ -877,7 +801,6 @@
 
     const/4 v1, 0x0
 
-    .line 305
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
@@ -889,12 +812,10 @@
 
     iget-object p0, p0, Lcom/android/server/compat/overrides/AppCompatOverridesParser;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 307
     invoke-static {p2}, Llibcore/util/HexEncoding;->decode(Ljava/lang/String;)[B
 
     move-result-object v2
 
-    .line 306
     invoke-virtual {p0, p1, v2, v3}, Landroid/content/pm/PackageManager;->hasSigningCertificate(Ljava/lang/String;[BI)Z
 
     move-result p0
@@ -910,7 +831,6 @@
     :goto_0
     if-nez v3, :cond_2
 
-    .line 310
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -937,7 +857,6 @@
     :catch_0
     move-exception p0
 
-    .line 314
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

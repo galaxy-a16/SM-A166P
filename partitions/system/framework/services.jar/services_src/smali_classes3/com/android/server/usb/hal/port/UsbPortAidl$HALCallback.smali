@@ -17,21 +17,16 @@
 .method public constructor <init>(Lcom/android/internal/util/IndentingPrintWriter;Lcom/android/server/usb/UsbPortManager;Lcom/android/server/usb/hal/port/UsbPortAidl;)V
     .locals 1
 
-    .line 468
     invoke-direct {p0}, Landroid/hardware/usb/IUsbCallback$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 466
     iput v0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->preDataRole:I
 
-    .line 469
     iput-object p1, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 470
     iput-object p2, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPortManager:Lcom/android/server/usb/UsbPortManager;
 
-    .line 471
     iput-object p3, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mUsbPortAidl:Lcom/android/server/usb/hal/port/UsbPortAidl;
 
     return-void
@@ -42,18 +37,14 @@
 .method public final formatComplianceWarnings([I)[I
     .locals 5
 
-    .line 594
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 595
     new-instance p0, Landroid/util/IntArray;
 
     invoke-direct {p0}, Landroid/util/IntArray;-><init>()V
 
-    .line 596
     invoke-static {p1}, Ljava/util/Arrays;->sort([I)V
 
-    .line 597
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -63,7 +54,6 @@
 
     aget v2, p1, v1
 
-    .line 598
     invoke-virtual {p0, v2}, Landroid/util/IntArray;->indexOf(I)I
 
     move-result v3
@@ -80,12 +70,10 @@
 
     if-le v2, v4, :cond_0
 
-    .line 602
     invoke-virtual {p0, v3}, Landroid/util/IntArray;->add(I)V
 
     goto :goto_1
 
-    .line 604
     :cond_0
     invoke-virtual {p0, v2}, Landroid/util/IntArray;->add(I)V
 
@@ -95,7 +83,6 @@
 
     goto :goto_0
 
-    .line 608
     :cond_2
     invoke-virtual {p0}, Landroid/util/IntArray;->toArray()[I
 
@@ -107,7 +94,6 @@
 .method public final formatDisplayPortAltModeInfo([Landroid/hardware/usb/AltModeData;)Landroid/hardware/usb/DisplayPortAltModeInfo;
     .locals 7
 
-    .line 640
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -117,19 +103,16 @@
 
     aget-object v2, p1, v1
 
-    .line 641
     invoke-virtual {v2}, Landroid/hardware/usb/AltModeData;->getTag()I
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 643
     invoke-virtual {v2}, Landroid/hardware/usb/AltModeData;->getDisplayPortAltModeData()Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;
 
     move-result-object p1
 
-    .line 644
     new-instance v6, Landroid/hardware/usb/DisplayPortAltModeInfo;
 
     iget v1, p1, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->partnerSinkStatus:I
@@ -138,7 +121,6 @@
 
     iget v0, p1, Landroid/hardware/usb/AltModeData$DisplayPortAltModeData;->pinAssignment:I
 
-    .line 646
     invoke-virtual {p0, v0}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toDisplayPortAltModeNumLanesInt(I)I
 
     move-result v3
@@ -167,7 +149,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "6c1263ce61606107f41a9edb66be1783d5881f00"
 
     return-object p0
@@ -176,7 +157,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x2
 
     return p0
@@ -187,7 +167,6 @@
 
     if-nez p3, :cond_0
 
-    .line 764
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -222,7 +201,6 @@
 
     goto :goto_0
 
-    .line 768
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -261,7 +239,6 @@
 
     if-nez p3, :cond_0
 
-    .line 741
     iget-object v0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -296,7 +273,6 @@
 
     goto :goto_0
 
-    .line 745
     :cond_0
     iget-object p2, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -326,7 +302,6 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/usb/UsbPortManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 750
     :goto_0
     :try_start_0
     invoke-static {}, Lcom/android/server/usb/hal/port/UsbPortAidl;->-$$Nest$sfgetsCallbacks()Landroid/util/LongSparseArray;
@@ -358,7 +333,6 @@
     :catch_0
     move-exception p1
 
-    .line 754
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string/jumbo p2, "notifyEnableUsbDataStatus: Failed to call onOperationComplete"
@@ -374,7 +348,6 @@
 
     if-nez p2, :cond_0
 
-    .line 803
     iget-object v0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -403,7 +376,6 @@
 
     goto :goto_0
 
-    .line 806
     :cond_0
     iget-object v0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -433,7 +405,6 @@
 
     invoke-static {v1, v0, p1}, Lcom/android/server/usb/UsbPortManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 811
     :goto_0
     :try_start_0
     invoke-static {}, Lcom/android/server/usb/hal/port/UsbPortAidl;->-$$Nest$sfgetsCallbacks()Landroid/util/LongSparseArray;
@@ -448,7 +419,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 813
     invoke-static {}, Lcom/android/server/usb/hal/port/UsbPortAidl;->-$$Nest$sfgetsCallbacks()Landroid/util/LongSparseArray;
 
     move-result-object p1
@@ -478,7 +448,6 @@
     :catch_0
     move-exception p1
 
-    .line 818
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string/jumbo p2, "notifyEnableUsbDataWhileDockedStatus: Failed to call onOperationComplete"
@@ -495,7 +464,6 @@
 
     if-nez p3, :cond_0
 
-    .line 778
     iget-object p2, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -524,7 +492,6 @@
 
     goto :goto_0
 
-    .line 781
     :cond_0
     iget-object p2, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -554,7 +521,6 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/usb/UsbPortManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 786
     :goto_0
     :try_start_0
     invoke-static {}, Lcom/android/server/usb/hal/port/UsbPortAidl;->-$$Nest$sfgetsCallbacks()Landroid/util/LongSparseArray;
@@ -569,7 +535,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 788
     invoke-static {}, Lcom/android/server/usb/hal/port/UsbPortAidl;->-$$Nest$sfgetsCallbacks()Landroid/util/LongSparseArray;
 
     move-result-object p1
@@ -599,7 +564,6 @@
     :catch_0
     move-exception p1
 
-    .line 793
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string p2, "enableLimitPowerTransfer: Failed to call onOperationComplete"
@@ -618,7 +582,6 @@
 
     move-object/from16 v1, p1
 
-    .line 657
     iget-object v2, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mUsbPortAidl:Lcom/android/server/usb/hal/port/UsbPortAidl;
 
     invoke-static {v2}, Lcom/android/server/usb/hal/port/UsbPortAidl;->-$$Nest$fgetmSystemReady(Lcom/android/server/usb/hal/port/UsbPortAidl;)Z
@@ -632,7 +595,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 662
     iget-object v0, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string/jumbo v1, "port status enquiry failed"
@@ -643,13 +605,11 @@
 
     return-void
 
-    .line 666
     :cond_1
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 668
     array-length v3, v1
 
     const/4 v4, 0x0
@@ -657,10 +617,8 @@
     :goto_0
     if-ge v4, v3, :cond_6
 
-    .line 670
     aget-object v5, v1, v4
 
-    .line 671
     new-instance v15, Lcom/android/server/usb/hal/port/RawPortInfo;
 
     move-object v6, v15
@@ -669,21 +627,18 @@
 
     iget-object v8, v5, Landroid/hardware/usb/PortStatus;->supportedModes:[B
 
-    .line 672
     invoke-virtual {v0, v8}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toSupportedModes([B)I
 
     move-result v8
 
     iget-object v9, v5, Landroid/hardware/usb/PortStatus;->supportedContaminantProtectionModes:[B
 
-    .line 673
     invoke-virtual {v0, v9}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toSupportedContaminantProtectionModes([B)I
 
     move-result v9
 
     iget-byte v10, v5, Landroid/hardware/usb/PortStatus;->currentMode:B
 
-    .line 675
     invoke-virtual {v0, v10}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toPortMode(B)I
 
     move-result v10
@@ -710,7 +665,6 @@
 
     iget-byte v1, v5, Landroid/hardware/usb/PortStatus;->contaminantProtectionStatus:B
 
-    .line 682
     invoke-virtual {v0, v1}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toContaminantProtectionStatus(B)I
 
     move-result v17
@@ -725,7 +679,6 @@
 
     iget-object v1, v5, Landroid/hardware/usb/PortStatus;->usbDataStatus:[B
 
-    .line 685
     invoke-virtual {v0, v1}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toUsbDataStatusInt([B)I
 
     move-result v20
@@ -744,7 +697,6 @@
 
     iget-object v1, v5, Landroid/hardware/usb/PortStatus;->complianceWarnings:[I
 
-    .line 689
     invoke-virtual {v0, v1}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->formatComplianceWarnings([I)[I
 
     move-result-object v24
@@ -755,24 +707,20 @@
 
     iget-object v1, v5, Landroid/hardware/usb/PortStatus;->supportedAltModes:[Landroid/hardware/usb/AltModeData;
 
-    .line 691
     invoke-virtual {v0, v1}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toSupportedAltModesInt([Landroid/hardware/usb/AltModeData;)I
 
     move-result v26
 
     iget-object v1, v5, Landroid/hardware/usb/PortStatus;->supportedAltModes:[Landroid/hardware/usb/AltModeData;
 
-    .line 692
     invoke-virtual {v0, v1}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->formatDisplayPortAltModeInfo([Landroid/hardware/usb/AltModeData;)Landroid/hardware/usb/DisplayPortAltModeInfo;
 
     move-result-object v27
 
     invoke-direct/range {v6 .. v27}, Lcom/android/server/usb/hal/port/RawPortInfo;-><init>(Ljava/lang/String;IIIZIZIZZIZIIZIZ[IIILandroid/hardware/usb/DisplayPortAltModeInfo;)V
 
-    .line 693
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 695
     iget-byte v1, v5, Landroid/hardware/usb/PortStatus;->currentDataRole:B
 
     const/4 v3, 0x2
@@ -781,14 +729,12 @@
 
     if-ne v1, v6, :cond_3
 
-    .line 697
     iget v7, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->preDataRole:I
 
     if-eqz v7, :cond_2
 
     if-ne v7, v3, :cond_3
 
-    .line 699
     :cond_2
     iget-object v3, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPortManager:Lcom/android/server/usb/UsbPortManager;
 
@@ -796,7 +742,6 @@
 
     goto :goto_1
 
-    .line 700
     :cond_3
     iget v7, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->preDataRole:I
 
@@ -806,18 +751,15 @@
 
     if-ne v1, v3, :cond_5
 
-    .line 702
     :cond_4
     iget-object v3, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPortManager:Lcom/android/server/usb/UsbPortManager;
 
     invoke-virtual {v3}, Lcom/android/server/usb/UsbPortManager;->stopBoost()V
 
-    .line 704
     :cond_5
     :goto_1
     iput v1, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->preDataRole:I
 
-    .line 706
     iget-object v1, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -848,7 +790,6 @@
 
     goto/16 :goto_0
 
-    .line 709
     :cond_6
     iget-object v0, v0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPortManager:Lcom/android/server/usb/UsbPortManager;
 
@@ -864,7 +805,6 @@
 
     if-nez p2, :cond_0
 
-    .line 729
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -891,7 +831,6 @@
 
     goto :goto_0
 
-    .line 732
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -928,7 +867,6 @@
 
     if-nez p2, :cond_0
 
-    .line 828
     iget-object v0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -957,7 +895,6 @@
 
     goto :goto_0
 
-    .line 831
     :cond_0
     iget-object v0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -987,7 +924,6 @@
 
     invoke-static {v1, v0, p1}, Lcom/android/server/usb/UsbPortManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 836
     :goto_0
     :try_start_0
     invoke-static {}, Lcom/android/server/usb/hal/port/UsbPortAidl;->-$$Nest$sfgetsCallbacks()Landroid/util/LongSparseArray;
@@ -1019,7 +955,6 @@
     :catch_0
     move-exception p1
 
-    .line 840
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string/jumbo p2, "notifyResetUsbPortStatus: Failed to call onOperationComplete"
@@ -1035,7 +970,6 @@
 
     if-nez p3, :cond_0
 
-    .line 716
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -1060,7 +994,6 @@
 
     goto :goto_0
 
-    .line 720
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -1117,7 +1050,6 @@
 
     if-eq p1, v2, :cond_0
 
-    .line 527
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1158,7 +1090,6 @@
 .method public final toDisplayPortAltModeNumLanesInt(I)I
     .locals 0
 
-    .line 0
     packed-switch p1, :pswitch_data_0
 
     const/4 p0, 0x0
@@ -1215,7 +1146,6 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 493
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1253,7 +1183,6 @@
 .method public final toSupportedAltModesInt([Landroid/hardware/usb/AltModeData;)I
     .locals 3
 
-    .line 613
     array-length p0, p1
 
     const/4 v0, 0x0
@@ -1265,7 +1194,6 @@
 
     aget-object v2, p1, v0
 
-    .line 614
     invoke-virtual {v2}, Landroid/hardware/usb/AltModeData;->getTag()I
 
     move-result v2
@@ -1289,7 +1217,6 @@
 .method public final toSupportedContaminantProtectionModes([B)I
     .locals 4
 
-    .line 537
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1301,7 +1228,6 @@
 
     aget-byte v3, p1, v1
 
-    .line 538
     invoke-virtual {p0, v3}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toContaminantProtectionStatus(B)I
 
     move-result v3
@@ -1319,7 +1245,6 @@
 .method public final toSupportedModes([B)I
     .locals 4
 
-    .line 502
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1331,7 +1256,6 @@
 
     aget-byte v3, p1, v1
 
-    .line 503
     invoke-virtual {p0, v3}, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->toPortMode(B)I
 
     move-result v3
@@ -1353,13 +1277,11 @@
 
     move v1, v0
 
-    .line 546
     :goto_0
     array-length v2, p1
 
     if-ge v0, v2, :cond_0
 
-    .line 547
     aget-byte v2, p1, v0
 
     packed-switch v2, :pswitch_data_0
@@ -1418,7 +1340,6 @@
 
     goto :goto_0
 
-    .line 589
     :cond_0
     iget-object p0, p0, Lcom/android/server/usb/hal/port/UsbPortAidl$HALCallback;->mPw:Lcom/android/internal/util/IndentingPrintWriter;
 

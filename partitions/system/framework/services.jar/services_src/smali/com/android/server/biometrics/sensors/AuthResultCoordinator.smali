@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$M_FBNyhGLet1pNbzg5-DZ_P2kKU(I)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->lambda$lockedOutFor$1(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$Vb_0WbOYm0OrYiqfJwJhpV3jFPU(I)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->lambda$lockOutTimed$2(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -33,7 +31,6 @@
 .method public static synthetic $r8$lambda$eLABHMehBcg2XWm44OfNgYDMj2M(I)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->lambda$authenticatedFor$0(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -44,10 +41,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -56,7 +51,6 @@
 
     const/16 p0, 0xf
 
-    .line 56
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -71,7 +65,6 @@
 
     const/16 p0, 0xff
 
-    .line 57
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -80,7 +73,6 @@
 
     const/16 p0, 0xfff
 
-    .line 58
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -95,7 +87,6 @@
 
     or-int/lit8 p0, p0, 0x4
 
-    .line 84
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -108,7 +99,6 @@
 
     or-int/lit8 p0, p0, 0x2
 
-    .line 99
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -121,7 +111,6 @@
 
     or-int/lit8 p0, p0, 0x1
 
-    .line 92
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -138,7 +127,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 84
     new-instance v0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator$$ExternalSyntheticLambda2;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator$$ExternalSyntheticLambda2;-><init>()V
@@ -152,7 +140,6 @@
 .method public final getResult()Ljava/util/Map;
     .locals 0
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->mAuthenticatorState:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -165,7 +152,6 @@
 .method public lockOutTimed(I)V
     .locals 1
 
-    .line 99
     new-instance v0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator$$ExternalSyntheticLambda1;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator$$ExternalSyntheticLambda1;-><init>()V
@@ -178,7 +164,6 @@
 .method public lockedOutFor(I)V
     .locals 1
 
-    .line 92
     new-instance v0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator$$ExternalSyntheticLambda0;-><init>()V
@@ -205,7 +190,6 @@
 
     goto :goto_0
 
-    .line 64
     :cond_0
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->mAuthenticatorState:Ljava/util/Map;
 
@@ -215,7 +199,6 @@
 
     iget-object v4, p0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->mAuthenticatorState:Ljava/util/Map;
 
-    .line 65
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -236,10 +219,8 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 64
     invoke-interface {p1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 68
     :cond_1
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->mAuthenticatorState:Ljava/util/Map;
 
@@ -249,7 +230,6 @@
 
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->mAuthenticatorState:Ljava/util/Map;
 
-    .line 69
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -270,10 +250,8 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 68
     invoke-interface {p1, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     :cond_2
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->mAuthenticatorState:Ljava/util/Map;
 
@@ -283,7 +261,6 @@
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->mAuthenticatorState:Ljava/util/Map;
 
-    .line 74
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -298,14 +275,12 @@
 
     move-result p0
 
-    .line 73
     invoke-interface {p2, p0}, Ljava/util/function/IntFunction;->apply(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 72
     invoke-interface {p1, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_0

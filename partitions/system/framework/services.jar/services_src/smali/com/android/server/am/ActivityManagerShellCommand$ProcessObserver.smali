@@ -17,19 +17,14 @@
 .method public constructor <init>(Ljava/io/PrintWriter;Landroid/app/IActivityManager;Landroid/app/IActivityTaskManager;Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 4002
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
 
-    .line 4003
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mPw:Ljava/io/PrintWriter;
 
-    .line 4004
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mIam:Landroid/app/IActivityManager;
 
-    .line 4005
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mIatm:Landroid/app/IActivityTaskManager;
 
-    .line 4006
     iput-object p4, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mInternal:Lcom/android/server/am/ActivityManagerService;
 
     return-void
@@ -42,7 +37,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 4013
     :try_start_0
     iget-object p3, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mIam:Landroid/app/IActivityManager;
 
@@ -52,7 +46,6 @@
 
     move-result p2
 
-    .line 4014
     iget-object p3, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mInternal:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {p3}, Lcom/android/server/am/ActivityManagerService;->getTopApp()Lcom/android/server/am/ProcessRecord;
@@ -61,7 +54,6 @@
 
     if-nez p3, :cond_0
 
-    .line 4016
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mPw:Ljava/io/PrintWriter;
 
     const-string p2, "No top app found"
@@ -70,7 +62,6 @@
 
     goto :goto_0
 
-    .line 4018
     :cond_0
     invoke-virtual {p3}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
@@ -82,7 +73,6 @@
 
     if-ne p3, p1, :cond_1
 
-    .line 4020
     iget-object p2, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mPw:Ljava/io/PrintWriter;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -101,7 +91,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 4023
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mPw:Ljava/io/PrintWriter;
@@ -112,7 +101,6 @@
 
     goto :goto_1
 
-    .line 4025
     :catch_0
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mPw:Ljava/io/PrintWriter;
 
@@ -120,7 +108,6 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 4026
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerShellCommand$ProcessObserver;->mPw:Ljava/io/PrintWriter;
 
     invoke-virtual {p0}, Ljava/io/PrintWriter;->flush()V
@@ -133,13 +120,11 @@
 .method public onForegroundServicesChanged(III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onProcessDied(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method

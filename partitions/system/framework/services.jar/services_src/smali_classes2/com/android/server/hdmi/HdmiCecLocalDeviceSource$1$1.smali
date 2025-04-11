@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;)V
     .locals 0
 
-    .line 171
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1$1;->this$1:Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiControlCallback$Stub;-><init>()V
@@ -26,7 +25,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 175
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,7 +43,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1$1;->this$1:Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;
 
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceSource$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceSource;

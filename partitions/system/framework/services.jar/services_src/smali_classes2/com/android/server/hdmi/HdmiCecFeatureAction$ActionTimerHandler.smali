@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecFeatureAction;Landroid/os/Looper;)V
     .locals 0
 
-    .line 143
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction$ActionTimerHandler;->this$0:Lcom/android/server/hdmi/HdmiCecFeatureAction;
 
-    .line 144
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -30,7 +28,6 @@
 
     const/16 v0, 0x64
 
-    .line 155
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
     return-void
@@ -39,14 +36,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 160
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x64
 
     if-eq v0, v1, :cond_0
 
-    .line 165
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +64,6 @@
 
     goto :goto_0
 
-    .line 162
     :cond_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecFeatureAction$ActionTimerHandler;->this$0:Lcom/android/server/hdmi/HdmiCecFeatureAction;
 
@@ -88,7 +82,6 @@
 
     const/4 v1, 0x0
 
-    .line 150
     invoke-virtual {p0, v0, p1, v1}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p1

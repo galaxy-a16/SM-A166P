@@ -28,7 +28,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper;Landroid/os/IBinder;JJILandroid/hardware/biometrics/IBiometricServiceReceiver;Ljava/lang/String;Landroid/hardware/biometrics/PromptInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper;
@@ -55,7 +54,6 @@
 .method public final run()V
     .locals 10
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper;
 
     iget-object v1, p0, Lcom/android/server/biometrics/BiometricService$BiometricServiceWrapper$$ExternalSyntheticLambda0;->f$1:Landroid/os/IBinder;

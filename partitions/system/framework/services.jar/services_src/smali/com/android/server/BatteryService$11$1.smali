@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService$11;I)V
     .locals 0
 
-    .line 1138
     iput-object p1, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iput p2, p0, Lcom/android/server/BatteryService$11$1;->val$audiomode:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 4
 
-    .line 1142
     iget v0, p0, Lcom/android/server/BatteryService$11$1;->val$audiomode:I
 
     const/4 v1, 0x0
@@ -40,7 +38,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1143
     iget-object v0, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
@@ -53,7 +50,6 @@
 
     move-result-object v0
 
-    .line 1144
     iget-object p0, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iget-object p0, p0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
@@ -71,7 +67,6 @@
     :cond_0
     if-nez v0, :cond_1
 
-    .line 1146
     iget-object v0, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
@@ -82,7 +77,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1147
     iget-object v0, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
@@ -97,7 +91,6 @@
 
     move-result-object v0
 
-    .line 1148
     iget-object p0, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iget-object p0, p0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
@@ -115,7 +108,6 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 1150
     iget-object v0, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
@@ -126,7 +118,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1151
     iget-object v0, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;
@@ -139,7 +130,6 @@
 
     move-result-object v0
 
-    .line 1152
     iget-object p0, p0, Lcom/android/server/BatteryService$11$1;->this$1:Lcom/android/server/BatteryService$11;
 
     iget-object p0, p0, Lcom/android/server/BatteryService$11;->this$0:Lcom/android/server/BatteryService;

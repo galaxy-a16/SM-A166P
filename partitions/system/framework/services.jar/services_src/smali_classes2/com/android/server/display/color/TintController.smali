@@ -33,29 +33,24 @@
 
     goto :goto_1
 
-    .line 127
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 128
     :goto_0
     array-length v0, p0
 
     if-ge v1, v0, :cond_2
 
-    .line 129
     rem-int v0, v1, p1
 
     if-nez v0, :cond_1
 
     const-string v0, "\n      "
 
-    .line 130
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 132
     :cond_1
     aget v0, p0, v1
 
@@ -79,7 +74,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_2
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -87,7 +81,6 @@
 
     return-object p0
 
-    .line 121
     :cond_3
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -127,12 +120,10 @@
 .method public cancelAnimator()V
     .locals 0
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/display/color/TintController;->mAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p0, :cond_0
 
-    .line 52
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_0
@@ -142,17 +133,14 @@
 .method public endAnimator()V
     .locals 1
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/display/color/TintController;->mAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 61
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
 
     const/4 v0, 0x0
 
-    .line 62
     iput-object v0, p0, Lcom/android/server/display/color/TintController;->mAnimator:Landroid/animation/ValueAnimator;
 
     :cond_0
@@ -168,7 +156,6 @@
 .method public getTransitionDurationMilliseconds()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0xbb8
 
     return-wide v0
@@ -177,7 +164,6 @@
 .method public isActivated()Z
     .locals 0
 
-    .line 71
     iget-object p0, p0, Lcom/android/server/display/color/TintController;->mIsActivated:Ljava/lang/Boolean;
 
     if-eqz p0, :cond_0
@@ -202,7 +188,6 @@
 .method public isActivatedStateNotSet()Z
     .locals 0
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/display/color/TintController;->mIsActivated:Ljava/lang/Boolean;
 
     if-nez p0, :cond_0
@@ -221,7 +206,6 @@
 .method public isActivationLock()Z
     .locals 0
 
-    .line 143
     iget-boolean p0, p0, Lcom/android/server/display/color/TintController;->mIsActivationLocked:Z
 
     return p0
@@ -233,7 +217,6 @@
 .method public setActivated(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/display/color/TintController;->mIsActivated:Ljava/lang/Boolean;
 
     return-void
@@ -242,7 +225,6 @@
 .method public setActivationLock(Z)V
     .locals 0
 
-    .line 139
     iput-boolean p1, p0, Lcom/android/server/display/color/TintController;->mIsActivationLocked:Z
 
     return-void
@@ -251,7 +233,6 @@
 .method public setAnimator(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/display/color/TintController;->mAnimator:Landroid/animation/ValueAnimator;
 
     return-void

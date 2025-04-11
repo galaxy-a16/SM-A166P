@@ -20,7 +20,6 @@
 .method public final preProcess(Landroid/service/timezone/TimeZoneProviderEvent;)Landroid/service/timezone/TimeZoneProviderEvent;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/timezonedetector/location/DisabledLocationTimeZoneProvider;->$r8$lambda$IoNPGG_b4HqEw0X-yHEyqSglG8Q(Landroid/service/timezone/TimeZoneProviderEvent;)Landroid/service/timezone/TimeZoneProviderEvent;
 
     move-result-object p0

@@ -20,7 +20,6 @@
 .method public activityManager()Landroid/app/IActivityManager;
     .locals 0
 
-    .line 81
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object p0
@@ -31,7 +30,6 @@
 .method public currentTimeMillis()J
     .locals 2
 
-    .line 66
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -42,7 +40,6 @@
 .method public maxCheckPoints()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x64
 
     return p0
@@ -51,7 +48,6 @@
 .method public maxDumpFiles()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x14
 
     return p0

@@ -17,7 +17,6 @@
 .method public currentTimeMillis()J
     .locals 2
 
-    .line 432
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

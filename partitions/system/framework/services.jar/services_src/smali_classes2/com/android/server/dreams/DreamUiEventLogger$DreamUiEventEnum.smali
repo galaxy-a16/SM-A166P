@@ -22,7 +22,6 @@
 .method public static synthetic $values()[Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
     .locals 2
 
-    .line 36
     sget-object v0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->DREAM_START:Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
 
     sget-object v1, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->DREAM_STOP:Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
@@ -37,7 +36,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 37
     new-instance v0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
 
     const/4 v1, 0x0
@@ -50,7 +48,6 @@
 
     sput-object v0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->DREAM_START:Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
 
-    .line 40
     new-instance v0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
 
     const/4 v1, 0x1
@@ -63,7 +60,6 @@
 
     sput-object v0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->DREAM_STOP:Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
 
-    .line 36
     invoke-static {}, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->$values()[Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
 
     move-result-object v0
@@ -76,10 +72,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 45
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 46
     iput p3, p0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->mId:I
 
     return-void
@@ -88,7 +82,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
     .locals 1
 
-    .line 36
     const-class v0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -103,7 +96,6 @@
 .method public static values()[Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
     .locals 1
 
-    .line 36
     sget-object v0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->$VALUES:[Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;
 
     invoke-virtual {v0}, [Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->clone()Ljava/lang/Object;
@@ -120,7 +112,6 @@
 .method public getId()I
     .locals 0
 
-    .line 51
     iget p0, p0, Lcom/android/server/dreams/DreamUiEventLogger$DreamUiEventEnum;->mId:I
 
     return p0

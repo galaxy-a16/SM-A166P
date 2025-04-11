@@ -23,7 +23,6 @@
 
     const-string v1, "low_power_standby"
 
-    .line 1372
     invoke-static {v1, p0, v0}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -40,7 +39,6 @@
 
     const-string v1, "low_power_standby"
 
-    .line 1380
     invoke-static {v1, p0, v0}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -53,7 +51,6 @@
 
     const-string p0, "low_power_standby"
 
-    .line 1389
     invoke-static {p0, p1, p2}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     return-void

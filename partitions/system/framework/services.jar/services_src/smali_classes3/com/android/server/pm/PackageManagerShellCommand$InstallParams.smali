@@ -17,17 +17,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 3272
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 3275
     iput v0, p0, Lcom/android/server/pm/PackageManagerShellCommand$InstallParams;->userId:I
 
     const-wide/32 v0, 0xea60
 
-    .line 3276
     iput-wide v0, p0, Lcom/android/server/pm/PackageManagerShellCommand$InstallParams;->stagedReadyTimeoutMs:J
 
     return-void
@@ -36,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PackageManagerShellCommand$InstallParams-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerShellCommand$InstallParams;-><init>()V
 
     return-void

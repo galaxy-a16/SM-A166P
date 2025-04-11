@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/os/IHwBinder;)V
     .locals 0
 
-    .line 245
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Landroid/os/IHwBinder;
@@ -32,7 +30,6 @@
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    .line 251
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
     return-object p0
@@ -41,28 +38,22 @@
 .method public debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
     .locals 2
 
-    .line 381
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 382
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 383
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeNativeHandle(Landroid/os/NativeHandle;)V
 
-    .line 384
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeStringVector(Ljava/util/ArrayList;)V
 
-    .line 386
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 388
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -72,15 +63,12 @@
 
     invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 389
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 390
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 392
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -90,35 +78,28 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 393
     throw p0
 .end method
 
 .method public enableContaminantPresenceDetection(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 327
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hardware.usb@1.2::IUsb"
 
-    .line 328
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 329
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 330
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeBool(Z)V
 
-    .line 332
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 334
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -128,12 +109,10 @@
 
     invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 335
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 337
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -143,14 +122,12 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 338
     throw p0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 266
     invoke-static {p0, p1}, Landroid/os/HidlSupport;->interfacesEqual(Landroid/os/IHwInterface;Ljava/lang/Object;)Z
 
     move-result p0
@@ -161,22 +138,18 @@
 .method public getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
     .locals 4
 
-    .line 493
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 494
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 496
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 498
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -186,23 +159,18 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 499
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 500
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 502
     new-instance p0, Landroid/hidl/base/V1_0/DebugInfo;
 
     invoke-direct {p0}, Landroid/hidl/base/V1_0/DebugInfo;-><init>()V
 
-    .line 503
     invoke-virtual {p0, v1}, Landroid/hidl/base/V1_0/DebugInfo;->readFromParcel(Landroid/os/HwParcel;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 506
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -212,29 +180,24 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 507
     throw p0
 .end method
 
 .method public getHashChain()Ljava/util/ArrayList;
     .locals 12
 
-    .line 418
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 419
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 421
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 423
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -244,27 +207,22 @@
 
     invoke-interface {p0, v2, v0, v1, v10}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 424
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 425
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 427
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     const-wide/16 v2, 0x10
 
-    .line 429
     invoke-virtual {v1, v2, v3}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
 
     move-result-object v0
 
     const-wide/16 v2, 0x8
 
-    .line 431
     invoke-virtual {v0, v2, v3}, Landroid/os/HwBlob;->getInt32(J)I
 
     move-result v11
@@ -273,7 +231,6 @@
 
     int-to-long v3, v2
 
-    .line 433
     invoke-virtual {v0}, Landroid/os/HwBlob;->handle()J
 
     move-result-wide v5
@@ -284,12 +241,10 @@
 
     move-object v2, v1
 
-    .line 432
     invoke-virtual/range {v2 .. v9}, Landroid/os/HwParcel;->readEmbeddedBuffer(JJJZ)Landroid/os/HwBlob;
 
     move-result-object v0
 
-    .line 436
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     :goto_0
@@ -303,10 +258,8 @@
 
     int-to-long v4, v4
 
-    .line 441
     invoke-virtual {v0, v4, v5, v3, v2}, Landroid/os/HwBlob;->copyToInt8Array(J[BI)V
 
-    .line 444
     invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -315,7 +268,6 @@
 
     goto :goto_0
 
-    .line 450
     :cond_0
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
@@ -326,14 +278,12 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 451
     throw p0
 .end method
 
 .method public final hashCode()I
     .locals 0
 
-    .line 271
     invoke-virtual {p0}, Landroid/hardware/usb/V1_2/IUsb$Proxy;->asBinder()Landroid/os/IHwBinder;
 
     move-result-object p0
@@ -348,22 +298,18 @@
 .method public interfaceChain()Ljava/util/ArrayList;
     .locals 4
 
-    .line 362
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 363
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 365
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 367
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -373,20 +319,16 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 368
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 369
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 371
     invoke-virtual {v1}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 374
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -396,29 +338,24 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 375
     throw p0
 .end method
 
 .method public interfaceDescriptor()Ljava/lang/String;
     .locals 4
 
-    .line 399
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 400
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 402
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 404
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -428,20 +365,16 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 405
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 406
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 408
     invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 411
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-object p0
@@ -451,14 +384,12 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 412
     throw p0
 .end method
 
 .method public linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
     .locals 0
 
-    .line 472
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/os/IHwBinder;->linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
@@ -471,22 +402,18 @@
 .method public notifySyspropsChanged()V
     .locals 4
 
-    .line 513
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 514
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 516
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 518
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -496,12 +423,10 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 519
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 521
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -511,29 +436,24 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 522
     throw p0
 .end method
 
 .method public ping()V
     .locals 4
 
-    .line 477
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 478
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 480
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 482
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -543,15 +463,12 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 483
     invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 484
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 486
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -561,29 +478,24 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 487
     throw p0
 .end method
 
 .method public queryPortStatus()V
     .locals 4
 
-    .line 311
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hardware.usb@1.0::IUsb"
 
-    .line 312
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 314
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 316
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -593,12 +505,10 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 317
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 319
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -608,21 +518,18 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 320
     throw p0
 .end method
 
 .method public setCallback(Landroid/hardware/usb/V1_0/IUsbCallback;)V
     .locals 3
 
-    .line 295
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hardware.usb@1.0::IUsb"
 
-    .line 296
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     if-nez p1, :cond_0
@@ -631,7 +538,6 @@
 
     goto :goto_0
 
-    .line 297
     :cond_0
     invoke-interface {p1}, Landroid/hardware/usb/V1_0/IUsbCallback;->asBinder()Landroid/os/IHwBinder;
 
@@ -640,12 +546,10 @@
     :goto_0
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeStrongBinder(Landroid/os/IHwBinder;)V
 
-    .line 299
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 301
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -655,12 +559,10 @@
 
     invoke-interface {p0, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 302
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 304
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -670,29 +572,24 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 305
     throw p0
 .end method
 
 .method public setHALInstrumentation()V
     .locals 4
 
-    .line 457
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hidl.base@1.0::IBase"
 
-    .line 458
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 460
     new-instance v1, Landroid/os/HwParcel;
 
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 462
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -702,12 +599,10 @@
 
     invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 463
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 465
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -717,35 +612,28 @@
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
 
-    .line 466
     throw p0
 .end method
 
 .method public switchRole(Ljava/lang/String;Landroid/hardware/usb/V1_0/PortRole;)V
     .locals 2
 
-    .line 278
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string v1, "android.hardware.usb@1.0::IUsb"
 
-    .line 279
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 280
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 281
     invoke-virtual {p2, v0}, Landroid/hardware/usb/V1_0/PortRole;->writeToParcel(Landroid/os/HwParcel;)V
 
-    .line 283
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 285
     :try_start_0
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
@@ -753,12 +641,10 @@
 
     invoke-interface {p0, p2, v0, p1, p2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 286
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 288
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return-void
@@ -768,14 +654,12 @@
 
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
-    .line 289
     throw p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 257
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -808,7 +692,6 @@
 .method public unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
     .locals 0
 
-    .line 528
     iget-object p0, p0, Landroid/hardware/usb/V1_2/IUsb$Proxy;->mRemote:Landroid/os/IHwBinder;
 
     invoke-interface {p0, p1}, Landroid/os/IHwBinder;->unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z

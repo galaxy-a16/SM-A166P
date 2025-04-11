@@ -20,7 +20,6 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/power/stats/BatteryExternalStatsWorker;->$r8$lambda$Bt3wgACBtFYeJXR-1zLDPOXzedQ(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
     move-result-object p0

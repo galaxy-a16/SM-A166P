@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/input/WirelessKeyboardMouseShare;)V
     .locals 0
 
-    .line 1690
     iput-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,12 +23,10 @@
 
     new-array p1, p1, [B
 
-    .line 1691
     iput-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mBuffer:[B
 
     const/4 p1, 0x2
 
-    .line 1692
     iput-byte p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mId:B
 
     return-void
@@ -38,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/input/WirelessKeyboardMouseShare;Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;-><init>(Lcom/android/server/input/WirelessKeyboardMouseShare;)V
 
     return-void
@@ -49,7 +45,6 @@
 .method public clear(Z)V
     .locals 4
 
-    .line 1695
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-object v0, v0, Lcom/android/server/input/WirelessKeyboardMouseShare;->innerLock:Ljava/lang/Object;
@@ -62,7 +57,6 @@
 
     if-eq p1, v1, :cond_1
 
-    .line 1697
     :try_start_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mBuffer:[B
 
@@ -70,7 +64,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1698
     monitor-exit v0
 
     return-void
@@ -80,29 +73,23 @@
 
     const-string v3, "Mouse need clear()."
 
-    .line 1700
     invoke-static {p1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1702
     :cond_1
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mBuffer:[B
 
     aput-byte v2, p1, v2
 
-    .line 1703
     aput-byte v2, p1, v1
 
     const/4 v3, 0x2
 
-    .line 1704
     aput-byte v2, p1, v3
 
     const/4 v3, 0x3
 
-    .line 1705
     aput-byte v2, p1, v3
 
-    .line 1707
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-byte v3, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mId:B
@@ -111,7 +98,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1709
     :try_start_1
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -142,10 +128,8 @@
 
     const-string p1, "ignore nullpointer exception "
 
-    .line 1711
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1713
     :goto_0
     monitor-exit v0
 
@@ -164,7 +148,6 @@
 .method public mouseButtonDownLocked(BBI)V
     .locals 2
 
-    .line 1731
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmConnectionState(Lcom/android/server/input/WirelessKeyboardMouseShare;)I
@@ -177,7 +160,6 @@
 
     return-void
 
-    .line 1734
     :cond_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mBuffer:[B
 
@@ -193,20 +175,16 @@
 
     const/4 p3, 0x1
 
-    .line 1735
     aput-byte v0, p1, p3
 
-    .line 1736
     aput-byte v0, p1, p2
 
-    .line 1738
     iget-object p2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-byte v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mId:B
 
     invoke-static {p2, v0, p1, p3}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$mstoreReportLocked(Lcom/android/server/input/WirelessKeyboardMouseShare;B[BZ)V
 
-    .line 1740
     :try_start_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -235,7 +213,6 @@
 
     const-string p1, "ignore nullpointer exception "
 
-    .line 1742
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -245,7 +222,6 @@
 .method public mouseButtonUpLocked(BBI)V
     .locals 2
 
-    .line 1746
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {p1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmConnectionState(Lcom/android/server/input/WirelessKeyboardMouseShare;)I
@@ -258,7 +234,6 @@
 
     return-void
 
-    .line 1749
     :cond_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mBuffer:[B
 
@@ -276,20 +251,16 @@
 
     const/4 p3, 0x1
 
-    .line 1750
     aput-byte v0, p1, p3
 
-    .line 1751
     aput-byte v0, p1, p2
 
-    .line 1753
     iget-object p2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-byte v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mId:B
 
     invoke-static {p2, v0, p1, p3}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$mstoreReportLocked(Lcom/android/server/input/WirelessKeyboardMouseShare;B[BZ)V
 
-    .line 1755
     :try_start_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -318,7 +289,6 @@
 
     const-string p1, "ignore nullpointer exception "
 
-    .line 1757
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -328,7 +298,6 @@
 .method public mouseMoveLocked(BB)V
     .locals 3
 
-    .line 1717
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmConnectionState(Lcom/android/server/input/WirelessKeyboardMouseShare;)I
@@ -341,7 +310,6 @@
 
     return-void
 
-    .line 1720
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mBuffer:[B
 
@@ -349,17 +317,14 @@
 
     aput-byte p1, v0, v2
 
-    .line 1721
     aput-byte p2, v0, v1
 
-    .line 1723
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-byte p2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mId:B
 
     invoke-static {p1, p2, v0, v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$mstoreReportLocked(Lcom/android/server/input/WirelessKeyboardMouseShare;B[BZ)V
 
-    .line 1725
     :try_start_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -388,7 +353,6 @@
 
     const-string p1, "ignore nullpointer exception "
 
-    .line 1727
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -398,7 +362,6 @@
 .method public mouseScrollLocked(B)V
     .locals 5
 
-    .line 1761
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmConnectionState(Lcom/android/server/input/WirelessKeyboardMouseShare;)I
@@ -411,7 +374,6 @@
 
     return-void
 
-    .line 1764
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mBuffer:[B
 
@@ -421,22 +383,18 @@
 
     aput-byte v3, v0, v2
 
-    .line 1765
     aput-byte v3, v0, v1
 
     const/4 v1, 0x3
 
-    .line 1766
     aput-byte p1, v0, v1
 
-    .line 1768
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-byte v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mId:B
 
     invoke-static {p1, v4, v0, v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$mstoreReportLocked(Lcom/android/server/input/WirelessKeyboardMouseShare;B[BZ)V
 
-    .line 1770
     :try_start_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -465,10 +423,8 @@
 
     const-string v0, "ignore nullpointer exception "
 
-    .line 1772
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1774
     :goto_0
     iget-object p0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Mouse;->mBuffer:[B
 

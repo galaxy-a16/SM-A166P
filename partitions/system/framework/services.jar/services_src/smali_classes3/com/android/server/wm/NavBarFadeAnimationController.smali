@@ -27,7 +27,6 @@
 .method public static synthetic $r8$lambda$b7zBonJ_3m6OmTe5na2f1k3DHb8(Lcom/android/server/wm/NavBarFadeAnimationController;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/NavBarFadeAnimationController;->lambda$fadeWindowToken$0(Z)V
 
     return-void
@@ -36,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPlaySequentially(Lcom/android/server/wm/NavBarFadeAnimationController;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mPlaySequentially:Z
 
     return p0
@@ -45,7 +43,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 35
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     const/4 v1, 0x0
@@ -56,7 +53,6 @@
 
     sput-object v0, Lcom/android/server/wm/NavBarFadeAnimationController;->FADE_IN_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
-    .line 37
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     const v3, 0x3e4ccccd    # 0.2f
@@ -71,15 +67,12 @@
 .method public constructor <init>(Lcom/android/server/wm/DisplayContent;)V
     .locals 4
 
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/wm/FadeAnimationController;-><init>(Lcom/android/server/wm/DisplayContent;)V
 
     const/4 v0, 0x0
 
-    .line 45
     iput-boolean v0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mPlaySequentially:Z
 
-    .line 49
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
     move-result-object p1
@@ -90,7 +83,6 @@
 
     iput-object p1, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    .line 50
     new-instance p1, Landroid/view/animation/AlphaAnimation;
 
     const/4 v0, 0x0
@@ -103,17 +95,14 @@
 
     const-wide/16 v2, 0x10a
 
-    .line 51
     invoke-virtual {p1, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 52
     iget-object p1, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeInAnimation:Landroid/view/animation/Animation;
 
     sget-object v2, Lcom/android/server/wm/NavBarFadeAnimationController;->FADE_IN_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {p1, v2}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 54
     new-instance p1, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {p1, v1, v0}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
@@ -122,10 +111,8 @@
 
     const-wide/16 v0, 0x85
 
-    .line 55
     invoke-virtual {p1, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 56
     iget-object p0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeOutAnimation:Landroid/view/animation/Animation;
 
     sget-object p1, Lcom/android/server/wm/NavBarFadeAnimationController;->FADE_OUT_INTERPOLATOR:Landroid/view/animation/Interpolator;
@@ -138,7 +125,6 @@
 .method private synthetic lambda$fadeWindowToken$0(Z)V
     .locals 2
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
@@ -155,17 +141,14 @@
 .method public createAdapter(Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;ZLcom/android/server/wm/WindowToken;)Lcom/android/server/wm/FadeAnimationController$FadeAnimationAdapter;
     .locals 8
 
-    .line 72
     new-instance v7, Lcom/android/server/wm/NavBarFadeAnimationController$NavFadeAnimationAdapter;
 
-    .line 73
     invoke-virtual {p3}, Lcom/android/server/wm/WindowContainer;->getSurfaceAnimationRunner()Lcom/android/server/wm/SurfaceAnimationRunner;
 
     move-result-object v3
 
     if-eqz p2, :cond_0
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeInParent:Landroid/view/SurfaceControl;
 
     goto :goto_0
@@ -196,7 +179,6 @@
 
     const/4 v0, 0x1
 
-    .line 103
     iput-boolean v0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mPlaySequentially:Z
 
     const-wide/16 v0, 0x0
@@ -211,31 +193,25 @@
 
     const-wide/16 v2, 0x3
 
-    .line 107
     div-long/2addr v0, v2
 
-    .line 108
     iget-object v2, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeOutAnimation:Landroid/view/animation/Animation;
 
     sub-long/2addr p1, v0
 
     invoke-virtual {v2, p1, p2}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 109
     iget-object p1, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeInAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {p1, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 111
     :cond_0
     iput-object p3, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeOutParent:Landroid/view/SurfaceControl;
 
-    .line 112
     iput-object p4, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeInParent:Landroid/view/SurfaceControl;
 
     const/4 p1, 0x0
 
-    .line 113
     invoke-virtual {p0, p1}, Lcom/android/server/wm/NavBarFadeAnimationController;->fadeWindowToken(Z)V
 
     return-void
@@ -244,27 +220,22 @@
 .method public fadeWindowToken(Z)V
     .locals 2
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/wm/FadeAnimationController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 84
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getAsyncRotationController()Lcom/android/server/wm/AsyncRotationController;
 
     move-result-object v0
 
-    .line 85
     new-instance v1, Lcom/android/server/wm/NavBarFadeAnimationController$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0, p1}, Lcom/android/server/wm/NavBarFadeAnimationController$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/NavBarFadeAnimationController;Z)V
 
     if-nez v0, :cond_0
 
-    .line 88
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 89
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
@@ -278,12 +249,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 94
     invoke-virtual {v0, v1}, Lcom/android/server/wm/AsyncRotationController;->setOnShowRunnable(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
-    .line 96
     :cond_1
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
@@ -295,7 +264,6 @@
 .method public getFadeInAnimation()Landroid/view/animation/Animation;
     .locals 0
 
-    .line 61
     iget-object p0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeInAnimation:Landroid/view/animation/Animation;
 
     return-object p0
@@ -304,7 +272,6 @@
 .method public getFadeOutAnimation()Landroid/view/animation/Animation;
     .locals 0
 
-    .line 66
     iget-object p0, p0, Lcom/android/server/wm/NavBarFadeAnimationController;->mFadeOutAnimation:Landroid/view/animation/Animation;
 
     return-object p0

@@ -43,7 +43,6 @@
 .method public static synthetic $values()[Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
     .locals 14
 
-    .line 36
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->COPY:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     sget-object v1, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->LZMA:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
@@ -82,7 +81,6 @@
 .method public static constructor <clinit>()V
     .locals 8
 
-    .line 38
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     const/4 v1, 0x1
@@ -99,7 +97,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->COPY:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 40
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     const/4 v2, 0x3
@@ -114,7 +111,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->LZMA:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 42
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v1, [B
@@ -131,7 +127,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->LZMA2:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 44
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v2, [B
@@ -144,7 +139,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->DEFLATE:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 49
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v2, [B
@@ -159,7 +153,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->DEFLATE64:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 51
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v2, [B
@@ -174,7 +167,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BZIP2:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 56
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v6, [B
@@ -189,7 +181,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->AES256SHA256:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 61
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v6, [B
@@ -204,7 +195,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_X86_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 66
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v6, [B
@@ -219,7 +209,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_PPC_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 71
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v6, [B
@@ -234,7 +223,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_IA64_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 76
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v6, [B
@@ -249,7 +237,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_ARM_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 81
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v6, [B
@@ -264,7 +251,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_ARM_THUMB_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 86
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v4, v6, [B
@@ -279,7 +265,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->BCJ_SPARC_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 91
     new-instance v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     new-array v1, v1, [B
@@ -294,7 +279,6 @@
 
     sput-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->DELTA_FILTER:Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
-    .line 36
     invoke-static {}, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->$values()[Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     move-result-object v0
@@ -391,10 +375,8 @@
 .method public constructor <init>(Ljava/lang/String;I[B)V
     .locals 0
 
-    .line 95
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 96
     iput-object p3, p0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->id:[B
 
     return-void
@@ -403,7 +385,6 @@
 .method public static byId([B)Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
     .locals 5
 
-    .line 106
     const-class v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
@@ -421,7 +402,6 @@
 
     aget-object v3, v0, v2
 
-    .line 107
     iget-object v4, v3, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->id:[B
 
     invoke-static {v4, p0}, Ljava/util/Arrays;->equals([B[B)Z
@@ -446,7 +426,6 @@
 .method public static valueOf(Ljava/lang/String;)Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
     .locals 1
 
-    .line 36
     const-class v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -461,7 +440,6 @@
 .method public static values()[Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
     .locals 1
 
-    .line 36
     sget-object v0, Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->$VALUES:[Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;
 
     invoke-virtual {v0}, [Lorg/apache/commons/compress/archivers/sevenz/SevenZMethod;->clone()Ljava/lang/Object;

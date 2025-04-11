@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$menforceCallingPermission(Lcom/android/server/notification/edgelighting/EdgeLightingManager$SecurityPolicy;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/notification/edgelighting/EdgeLightingManager$SecurityPolicy;->enforceCallingPermission(Ljava/lang/String;)V
 
     return-void
@@ -22,15 +21,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1163
     iput-object p1, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$SecurityPolicy;->mContext:Landroid/content/Context;
 
     const-string v0, "appops"
 
-    .line 1164
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -47,7 +43,6 @@
 .method public enforceCallFromPackage(Ljava/lang/String;)V
     .locals 1
 
-    .line 1172
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$SecurityPolicy;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -62,14 +57,12 @@
 .method public final enforceCallingPermission(Ljava/lang/String;)V
     .locals 5
 
-    .line 1176
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     const-string v1, "eng"
 
-    .line 1178
     sget-object v2, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,7 +73,6 @@
 
     return-void
 
-    .line 1182
     :cond_0
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$SecurityPolicy;->mContext:Landroid/content/Context;
 
@@ -98,7 +90,6 @@
 
     return-void
 
-    .line 1186
     :cond_1
     invoke-static {}, Lcom/android/server/notification/edgelighting/EdgeLightingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -130,7 +121,6 @@
 
     invoke-static {p0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1187
     new-instance p0, Ljava/lang/SecurityException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -159,7 +149,6 @@
 .method public enforceCallingPermissionFromHost()V
     .locals 2
 
-    .line 1168
     iget-object p0, p0, Lcom/android/server/notification/edgelighting/EdgeLightingManager$SecurityPolicy;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.EDGE_LIGHTING_HOST"

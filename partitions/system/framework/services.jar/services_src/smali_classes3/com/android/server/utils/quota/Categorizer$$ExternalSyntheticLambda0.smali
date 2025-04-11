@@ -20,7 +20,6 @@
 .method public final getCategory(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;
     .locals 0
 
-    .line 0
     invoke-static {p1, p2, p3}, Lcom/android/server/utils/quota/Categorizer;->$r8$lambda$br6fVIE9p341Uw_12kzI-_jVhgY(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;
 
     move-result-object p0

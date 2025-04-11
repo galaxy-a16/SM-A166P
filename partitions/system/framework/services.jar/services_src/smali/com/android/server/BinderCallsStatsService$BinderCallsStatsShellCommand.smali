@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/BinderCallsStatsService;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 453
     iput-object p1, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 454
     iput-object p2, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->mPrintWriter:Ljava/io/PrintWriter;
 
     return-void
@@ -29,14 +27,12 @@
 .method public getOutPrintWriter()Ljava/io/PrintWriter;
     .locals 1
 
-    .line 459
     iget-object v0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->mPrintWriter:Ljava/io/PrintWriter;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 462
     :cond_0
     invoke-super {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -48,7 +44,6 @@
 .method public onCommand(Ljava/lang/String;)I
     .locals 7
 
-    .line 467
     invoke-virtual {p0}, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -59,7 +54,6 @@
 
     return v1
 
-    .line 472
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -273,7 +267,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 544
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
@@ -283,10 +276,8 @@
     :pswitch_0
     const-string p1, "1"
 
-    .line 487
     invoke-static {v5, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 488
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
     invoke-static {p0}, Lcom/android/server/BinderCallsStatsService;->-$$Nest$fgetmBinderCallsStats(Lcom/android/server/BinderCallsStatsService;)Lcom/android/internal/os/BinderCallsStats;
@@ -297,7 +288,6 @@
 
     const-string p0, "Detailed tracking enabled"
 
-    .line 489
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto/16 :goto_2
@@ -305,10 +295,8 @@
     :pswitch_1
     const-string p1, ""
 
-    .line 492
     invoke-static {v5, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
     invoke-static {p0}, Lcom/android/server/BinderCallsStatsService;->-$$Nest$fgetmBinderCallsStats(Lcom/android/server/BinderCallsStatsService;)Lcom/android/internal/os/BinderCallsStats;
@@ -319,12 +307,10 @@
 
     const-string p0, "Detailed tracking disabled"
 
-    .line 494
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 478
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
@@ -336,7 +322,6 @@
 
     goto/16 :goto_2
 
-    .line 527
     :pswitch_3
     :try_start_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->peekNextArg()Ljava/lang/String;
@@ -347,7 +332,6 @@
 
     move-result p1
 
-    .line 528
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
     invoke-static {p0}, Lcom/android/server/BinderCallsStatsService;->-$$Nest$fgetmBinderCallsStats(Lcom/android/server/BinderCallsStatsService;)Lcom/android/internal/os/BinderCallsStats;
@@ -356,7 +340,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BinderCallsStats;->setSamplingInterval(I)V
 
-    .line 529
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -383,12 +366,10 @@
 
     const-string p1, "--set-sampling execution failed"
 
-    .line 531
     invoke-static {v6, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto/16 :goto_2
 
-    .line 536
     :pswitch_4
     :try_start_1
     invoke-virtual {p0}, Landroid/os/ShellCommand;->peekNextArg()Ljava/lang/String;
@@ -399,7 +380,6 @@
 
     move-result p1
 
-    .line 537
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
     invoke-static {p0}, Lcom/android/server/BinderCallsStatsService;->-$$Nest$fgetmBinderCallsStats(Lcom/android/server/BinderCallsStatsService;)Lcom/android/internal/os/BinderCallsStats;
@@ -408,7 +388,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BinderCallsStats;->setMaxBinderCallStatsCount(I)V
 
-    .line 538
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -435,12 +414,10 @@
 
     const-string p1, "--set-limit execution failed"
 
-    .line 540
     invoke-static {v6, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto/16 :goto_2
 
-    .line 497
     :pswitch_5
     iget-object p1, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
@@ -450,7 +427,6 @@
 
     invoke-virtual {p1, v4}, Lcom/android/internal/os/BinderCallsStats;->setDetailedTracking(Z)V
 
-    .line 498
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
     invoke-static {p0}, Lcom/android/server/BinderCallsStatsService;->-$$Nest$fgetmWorkSourceProvider(Lcom/android/server/BinderCallsStatsService;)Lcom/android/server/BinderCallsStatsService$AuthorizedWorkSourceProvider;
@@ -465,19 +441,16 @@
 
     goto/16 :goto_2
 
-    .line 501
     :pswitch_6
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 503
     :try_start_2
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 504
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
     invoke-static {p0}, Lcom/android/server/BinderCallsStatsService;->-$$Nest$fgetmBinderCallsStats(Lcom/android/server/BinderCallsStatsService;)Lcom/android/internal/os/BinderCallsStats;
@@ -490,7 +463,6 @@
 
     goto :goto_2
 
-    .line 506
     :catch_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -513,12 +485,10 @@
     :pswitch_7
     const/4 p0, 0x0
 
-    .line 481
     invoke-static {p0}, Landroid/os/Binder;->setObserver(Lcom/android/internal/os/BinderInternal$Observer;)V
 
     goto :goto_2
 
-    .line 484
     :pswitch_8
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
@@ -530,7 +500,6 @@
 
     goto :goto_2
 
-    .line 474
     :pswitch_9
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
@@ -538,12 +507,10 @@
 
     const-string p0, "binder_calls_stats reset."
 
-    .line 475
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 516
     :pswitch_a
     :try_start_3
     invoke-virtual {p0}, Landroid/os/ShellCommand;->peekNextArg()Ljava/lang/String;
@@ -554,7 +521,6 @@
 
     move-result p1
 
-    .line 517
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
     invoke-static {p0}, Lcom/android/server/BinderCallsStatsService;->-$$Nest$fgetmBinderCallsStats(Lcom/android/server/BinderCallsStatsService;)Lcom/android/internal/os/BinderCallsStats;
@@ -567,7 +533,6 @@
 
     if-eqz p0, :cond_d
 
-    .line 518
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -594,12 +559,10 @@
 
     const-string p1, "--set-cpu-threshold execution failed"
 
-    .line 521
     invoke-static {v6, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_2
 
-    .line 511
     :pswitch_b
     iget-object p0, p0, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->this$0:Lcom/android/server/BinderCallsStatsService;
 
@@ -651,59 +614,48 @@
 .method public onHelp()V
     .locals 1
 
-    .line 551
     invoke-virtual {p0}, Lcom/android/server/BinderCallsStatsService$BinderCallsStatsShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "binder_calls_stats commands:"
 
-    .line 552
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --reset: Reset stats"
 
-    .line 553
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --enable: Enable tracking binder calls"
 
-    .line 554
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --disable: Disables tracking binder calls"
 
-    .line 555
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --no-sampling: Tracks all calls"
 
-    .line 556
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --enable-detailed-tracking: Enables detailed tracking"
 
-    .line 557
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --disable-detailed-tracking: Disables detailed tracking"
 
-    .line 558
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --work-source-uid <UID>: Track all binder calls from the UID"
 
-    .line 559
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --set-cpu-threshold <threshold>: Set new CPU threshold"
 
-    .line 561
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  --set-sampling <sampling value>: Set new sampling ratio"
 
-    .line 562
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void

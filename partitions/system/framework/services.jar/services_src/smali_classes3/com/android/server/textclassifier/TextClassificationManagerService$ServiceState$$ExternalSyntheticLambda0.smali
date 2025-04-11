@@ -20,7 +20,6 @@
 .method public final onEntryEvicted(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/textclassifier/TextClassificationManagerService$PendingRequest;
 
     invoke-static {p1}, Lcom/android/server/textclassifier/TextClassificationManagerService$ServiceState;->$r8$lambda$vhu5Pvhu-nPUjgux-NCZ08eC8-I(Lcom/android/server/textclassifier/TextClassificationManagerService$PendingRequest;)V

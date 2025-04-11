@@ -20,10 +20,8 @@
 .method public constructor <init>(II)V
     .locals 2
 
-    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 141
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -34,13 +32,10 @@
 
     const/4 v0, 0x0
 
-    .line 142
     iput-boolean v0, p0, Lcom/android/server/storage/AppFuseBridge$MountScope;->mMountResult:Z
 
-    .line 145
     iput p1, p0, Lcom/android/server/storage/AppFuseBridge$MountScope;->uid:I
 
-    .line 146
     iput p2, p0, Lcom/android/server/storage/AppFuseBridge$MountScope;->mountId:I
 
     return-void
@@ -57,7 +52,6 @@
 .method public setMountResultLocked(Z)V
     .locals 4
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/storage/AppFuseBridge$MountScope;->mMounted:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
@@ -72,11 +66,9 @@
 
     return-void
 
-    .line 154
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/storage/AppFuseBridge$MountScope;->mMountResult:Z
 
-    .line 155
     iget-object p0, p0, Lcom/android/server/storage/AppFuseBridge$MountScope;->mMounted:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -87,12 +79,10 @@
 .method public waitForMount()Z
     .locals 1
 
-    .line 159
     iget-object v0, p0, Lcom/android/server/storage/AppFuseBridge$MountScope;->mMounted:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
 
-    .line 160
     iget-boolean p0, p0, Lcom/android/server/storage/AppFuseBridge$MountScope;->mMountResult:Z
 
     return p0

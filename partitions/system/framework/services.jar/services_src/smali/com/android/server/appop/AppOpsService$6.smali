@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsService;)V
     .locals 0
 
-    .line 1179
     iput-object p1, p0, Lcom/android/server/appop/AppOpsService$6;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public run()V
     .locals 2
 
-    .line 1182
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$6;->this$0:Lcom/android/server/appop/AppOpsService;
 
     invoke-static {v0}, Lcom/android/server/appop/AppOpsService;->-$$Nest$mgetPackageListAndResample(Lcom/android/server/appop/AppOpsService;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 1183
     iget-object p0, p0, Lcom/android/server/appop/AppOpsService$6;->this$0:Lcom/android/server/appop/AppOpsService;
 
     new-instance v1, Landroid/util/ArraySet;

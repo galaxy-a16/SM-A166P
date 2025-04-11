@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$-BBVmFTZ9kUTJDKMH8awIlSZQjc(Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$factoryReset$24(Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static synthetic $r8$lambda$05mh4iBHg0l_cifa9Q_wF7Vm13s(Landroid/net/IIpMemoryStore;Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Landroid/net/IpMemoryStoreClient;->lambda$storeNetworkAttributes$0(Landroid/net/IIpMemoryStore;Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnStatusListener;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static synthetic $r8$lambda$2vyUyXeEFhzTUuaOhA6aznSfuDc(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/Blob;Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Landroid/net/IpMemoryStoreClient;->lambda$storeBlob$3(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/Blob;Landroid/net/ipmemorystore/OnStatusListener;)V
 
     return-void
@@ -42,7 +39,6 @@
 .method public static synthetic $r8$lambda$2yuWcnMn7otiLdNSLqmkciM08gE(Landroid/net/IpMemoryStoreClient;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/net/IpMemoryStoreClient;->lambda$delete$19(Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -51,7 +47,6 @@
 .method public static synthetic $r8$lambda$5BeaSNtTQ7eThLtBxHuPZsv-HuA(Landroid/net/IIpMemoryStore;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Landroid/net/IpMemoryStoreClient;->lambda$findL2Key$6(Landroid/net/IIpMemoryStore;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
 
     return-void
@@ -60,7 +55,6 @@
 .method public static synthetic $r8$lambda$8YK0GrQ9cDMnab5woNCCCg74Oaw(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnBlobRetrievedListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3, p4}, Landroid/net/IpMemoryStoreClient;->lambda$retrieveBlob$15(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnBlobRetrievedListener;)V
 
     return-void
@@ -69,7 +63,6 @@
 .method public static synthetic $r8$lambda$ACLdAZXuc2dE30BOqq7iS1jZQoU(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$deleteCluster$23(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V
 
     return-void
@@ -78,7 +71,6 @@
 .method public static synthetic $r8$lambda$AyKm5xH69G4Vy6a4Xjd-IWGRxeA(Landroid/net/ipmemorystore/OnBlobRetrievedListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$retrieveBlob$17(Landroid/net/ipmemorystore/OnBlobRetrievedListener;)V
 
     return-void
@@ -87,7 +79,6 @@
 .method public static synthetic $r8$lambda$GMseOcASThh8M8whlPb_lFjXmNs(Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$retrieveNetworkAttributes$14(Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
 
     return-void
@@ -96,7 +87,6 @@
 .method public static synthetic $r8$lambda$HQcDrHPYetTl4cZXxcSZL25i2Yk(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$delete$20(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V
 
     return-void
@@ -105,7 +95,6 @@
 .method public static synthetic $r8$lambda$Kx9k8kPpwBuRk53DP6qvPf0jHWo(Landroid/net/IpMemoryStoreClient;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/net/IpMemoryStoreClient;->lambda$isSameNetwork$10(Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -114,7 +103,6 @@
 .method public static synthetic $r8$lambda$Lw8tJXTV8wEoc5oF7mCEdpTV6T8(Landroid/net/IpMemoryStoreClient;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnBlobRetrievedListener;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Landroid/net/IpMemoryStoreClient;->lambda$retrieveBlob$16(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnBlobRetrievedListener;Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -123,7 +111,6 @@
 .method public static synthetic $r8$lambda$M_PXf2ws7EyiFSZUw8VjmPLDp_8(Landroid/net/IIpMemoryStore;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Landroid/net/IpMemoryStoreClient;->lambda$delete$18(Landroid/net/IIpMemoryStore;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
 
     return-void
@@ -132,7 +119,6 @@
 .method public static synthetic $r8$lambda$NrfPH9JMwlSnVDX27-TC1-TWrLQ(Landroid/net/IpMemoryStoreClient;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Landroid/net/IpMemoryStoreClient;->lambda$factoryReset$25(Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -141,7 +127,6 @@
 .method public static synthetic $r8$lambda$VA2zGKOA1bu2MCnERTGOgfizzn0(Landroid/net/IpMemoryStoreClient;Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnStatusListener;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/net/IpMemoryStoreClient;->lambda$storeNetworkAttributes$1(Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnStatusListener;Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -150,7 +135,6 @@
 .method public static synthetic $r8$lambda$WTz9wiLYp-EQ7MJ8dtRj5dlBSZU(Landroid/net/IpMemoryStoreClient;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Landroid/net/IpMemoryStoreClient;->lambda$findL2Key$7(Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -159,7 +143,6 @@
 .method public static synthetic $r8$lambda$Xqvb9xvdspPCtjw9lsWrYkg7gMo(Landroid/net/IIpMemoryStore;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Landroid/net/IpMemoryStoreClient;->lambda$deleteCluster$21(Landroid/net/IIpMemoryStore;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
 
     return-void
@@ -168,7 +151,6 @@
 .method public static synthetic $r8$lambda$aMiCUTFQqKminjvIgsumv_kMxOU(Landroid/net/IpMemoryStoreClient;Ljava/lang/String;Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Landroid/net/IpMemoryStoreClient;->lambda$retrieveNetworkAttributes$13(Ljava/lang/String;Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -177,7 +159,6 @@
 .method public static synthetic $r8$lambda$dSfhEOJMxAMnKNR7tRyrpKd8mSc(Landroid/net/IIpMemoryStore;Ljava/lang/String;Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Landroid/net/IpMemoryStoreClient;->lambda$retrieveNetworkAttributes$12(Landroid/net/IIpMemoryStore;Ljava/lang/String;Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
 
     return-void
@@ -186,7 +167,6 @@
 .method public static synthetic $r8$lambda$eQmrAtrSXrXiCWMrS4ePymFCcfE(Landroid/net/IpMemoryStoreClient;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/Blob;Landroid/net/ipmemorystore/OnStatusListener;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Landroid/net/IpMemoryStoreClient;->lambda$storeBlob$4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/Blob;Landroid/net/ipmemorystore/OnStatusListener;Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -195,7 +175,6 @@
 .method public static synthetic $r8$lambda$hafDgQEx08ca6-wkWkPtp_9DbhY(Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$isSameNetwork$11(Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
 
     return-void
@@ -204,7 +183,6 @@
 .method public static synthetic $r8$lambda$ixdojHllAv6dNQdoLGh5luvUcSI(Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$storeBlob$5(Landroid/net/ipmemorystore/OnStatusListener;)V
 
     return-void
@@ -213,7 +191,6 @@
 .method public static synthetic $r8$lambda$lwi0VK5Do3lgfYFiuQMcCfINqUw(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Landroid/net/IpMemoryStoreClient;->lambda$isSameNetwork$9(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
 
     return-void
@@ -222,7 +199,6 @@
 .method public static synthetic $r8$lambda$v5yx7Shv9WKQytKs2Ay1zNjwtQU(Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$storeNetworkAttributes$2(Landroid/net/ipmemorystore/OnStatusListener;)V
 
     return-void
@@ -231,7 +207,6 @@
 .method public static synthetic $r8$lambda$xbgpg_sprsDY5REdCFDEPB42ygw(Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Landroid/net/IpMemoryStoreClient;->lambda$findL2Key$8(Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
 
     return-void
@@ -240,7 +215,6 @@
 .method public static synthetic $r8$lambda$zGI5DqAYXG5c4Vp7LHlfjoHg_7I(Landroid/net/IpMemoryStoreClient;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/net/IpMemoryStoreClient;->lambda$deleteCluster$22(Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;Landroid/net/IIpMemoryStore;)V
 
     return-void
@@ -249,24 +223,20 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_0
 
-    .line 48
     iput-object p1, p0, Landroid/net/IpMemoryStoreClient;->mContext:Landroid/content/Context;
 
     return-void
 
-    .line 47
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -282,7 +252,6 @@
 
     const-string v0, "Failed to execute remote procedure call"
 
-    .line 60
     invoke-direct {p0, v0, p1}, Landroid/net/IpMemoryStoreClient;->ignoringRemoteException(Ljava/lang/String;Landroid/net/IpMemoryStoreClient$ThrowingRunnable;)V
 
     return-void
@@ -291,7 +260,6 @@
 .method private ignoringRemoteException(Ljava/lang/String;Landroid/net/IpMemoryStoreClient$ThrowingRunnable;)V
     .locals 0
 
-    .line 65
     :try_start_0
     invoke-interface {p2}, Landroid/net/IpMemoryStoreClient$ThrowingRunnable;->run()V
     :try_end_0
@@ -302,7 +270,6 @@
     :catch_0
     move-exception p0
 
-    .line 67
     sget-object p2, Landroid/net/IpMemoryStoreClient;->TAG:Ljava/lang/String;
 
     invoke-static {p2, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -314,7 +281,6 @@
 .method private static synthetic lambda$delete$18(Landroid/net/IIpMemoryStore;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 0
 
-    .line 240
     invoke-static {p3}, Landroid/net/ipmemorystore/OnDeleteStatusListener;->toAIDL(Landroid/net/ipmemorystore/OnDeleteStatusListener;)Landroid/net/ipmemorystore/IOnStatusAndCountListener;
 
     move-result-object p3
@@ -327,7 +293,6 @@
 .method private synthetic lambda$delete$19(Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;Landroid/net/IIpMemoryStore;)V
     .locals 1
 
-    .line 239
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p4, p1, p2, p3}, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda0;-><init>(Landroid/net/IIpMemoryStore;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
@@ -340,7 +305,6 @@
 .method private static synthetic lambda$delete$20(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 2
 
-    .line 244
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     const/4 v1, -0x5
@@ -357,12 +321,10 @@
 .method private static synthetic lambda$deleteCluster$21(Landroid/net/IIpMemoryStore;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 0
 
-    .line 272
     invoke-static {p3}, Landroid/net/ipmemorystore/OnDeleteStatusListener;->toAIDL(Landroid/net/ipmemorystore/OnDeleteStatusListener;)Landroid/net/ipmemorystore/IOnStatusAndCountListener;
 
     move-result-object p3
 
-    .line 271
     invoke-interface {p0, p1, p2, p3}, Landroid/net/IIpMemoryStore;->deleteCluster(Ljava/lang/String;ZLandroid/net/ipmemorystore/IOnStatusAndCountListener;)V
 
     return-void
@@ -371,7 +333,6 @@
 .method private synthetic lambda$deleteCluster$22(Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;Landroid/net/IIpMemoryStore;)V
     .locals 1
 
-    .line 270
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda16;
 
     invoke-direct {v0, p4, p1, p2, p3}, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda16;-><init>(Landroid/net/IIpMemoryStore;Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
@@ -384,7 +345,6 @@
 .method private static synthetic lambda$deleteCluster$23(Landroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 2
 
-    .line 276
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     const/4 v1, -0x5
@@ -401,7 +361,6 @@
 .method private static synthetic lambda$factoryReset$24(Landroid/net/IIpMemoryStore;)V
     .locals 0
 
-    .line 287
     invoke-interface {p0}, Landroid/net/IIpMemoryStore;->factoryReset()V
 
     return-void
@@ -410,7 +369,6 @@
 .method private synthetic lambda$factoryReset$25(Landroid/net/IIpMemoryStore;)V
     .locals 1
 
-    .line 286
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda19;
 
     invoke-direct {v0, p1}, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda19;-><init>(Landroid/net/IIpMemoryStore;)V
@@ -423,17 +381,14 @@
 .method private static synthetic lambda$findL2Key$6(Landroid/net/IIpMemoryStore;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
     .locals 0
 
-    .line 144
     invoke-virtual {p1}, Landroid/net/ipmemorystore/NetworkAttributes;->toParcelable()Landroid/net/ipmemorystore/NetworkAttributesParcelable;
 
     move-result-object p1
 
-    .line 145
     invoke-static {p2}, Landroid/net/ipmemorystore/OnL2KeyResponseListener;->toAIDL(Landroid/net/ipmemorystore/OnL2KeyResponseListener;)Landroid/net/ipmemorystore/IOnL2KeyResponseListener;
 
     move-result-object p2
 
-    .line 144
     invoke-interface {p0, p1, p2}, Landroid/net/IIpMemoryStore;->findL2Key(Landroid/net/ipmemorystore/NetworkAttributesParcelable;Landroid/net/ipmemorystore/IOnL2KeyResponseListener;)V
 
     return-void
@@ -442,7 +397,6 @@
 .method private synthetic lambda$findL2Key$7(Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;Landroid/net/IIpMemoryStore;)V
     .locals 1
 
-    .line 143
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda15;
 
     invoke-direct {v0, p3, p1, p2}, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda15;-><init>(Landroid/net/IIpMemoryStore;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
@@ -455,7 +409,6 @@
 .method private static synthetic lambda$findL2Key$8(Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
     .locals 2
 
-    .line 148
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     const/4 v1, -0x5
@@ -472,7 +425,6 @@
 .method private synthetic lambda$isSameNetwork$10(Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;Landroid/net/IIpMemoryStore;)V
     .locals 1
 
-    .line 165
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda6;
 
     invoke-direct {v0, p4, p1, p2, p3}, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda6;-><init>(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
@@ -485,7 +437,6 @@
 .method private static synthetic lambda$isSameNetwork$11(Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
     .locals 2
 
-    .line 170
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     const/4 v1, -0x5
@@ -502,12 +453,10 @@
 .method private static synthetic lambda$isSameNetwork$9(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
     .locals 0
 
-    .line 167
     invoke-static {p3}, Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;->toAIDL(Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)Landroid/net/ipmemorystore/IOnSameL3NetworkResponseListener;
 
     move-result-object p3
 
-    .line 166
     invoke-interface {p0, p1, p2, p3}, Landroid/net/IIpMemoryStore;->isSameNetwork(Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/IOnSameL3NetworkResponseListener;)V
 
     return-void
@@ -516,12 +465,10 @@
 .method private static synthetic lambda$retrieveBlob$15(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnBlobRetrievedListener;)V
     .locals 0
 
-    .line 213
     invoke-static {p4}, Landroid/net/ipmemorystore/OnBlobRetrievedListener;->toAIDL(Landroid/net/ipmemorystore/OnBlobRetrievedListener;)Landroid/net/ipmemorystore/IOnBlobRetrievedListener;
 
     move-result-object p4
 
-    .line 212
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/net/IIpMemoryStore;->retrieveBlob(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/IOnBlobRetrievedListener;)V
 
     return-void
@@ -530,7 +477,6 @@
 .method private synthetic lambda$retrieveBlob$16(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnBlobRetrievedListener;Landroid/net/IIpMemoryStore;)V
     .locals 7
 
-    .line 211
     new-instance v6, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda11;
 
     move-object v0, v6
@@ -555,7 +501,6 @@
 .method private static synthetic lambda$retrieveBlob$17(Landroid/net/ipmemorystore/OnBlobRetrievedListener;)V
     .locals 2
 
-    .line 216
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     const/4 v1, -0x5
@@ -572,12 +517,10 @@
 .method private static synthetic lambda$retrieveNetworkAttributes$12(Landroid/net/IIpMemoryStore;Ljava/lang/String;Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
     .locals 0
 
-    .line 189
     invoke-static {p2}, Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;->toAIDL(Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)Landroid/net/ipmemorystore/IOnNetworkAttributesRetrievedListener;
 
     move-result-object p2
 
-    .line 188
     invoke-interface {p0, p1, p2}, Landroid/net/IIpMemoryStore;->retrieveNetworkAttributes(Ljava/lang/String;Landroid/net/ipmemorystore/IOnNetworkAttributesRetrievedListener;)V
 
     return-void
@@ -586,7 +529,6 @@
 .method private synthetic lambda$retrieveNetworkAttributes$13(Ljava/lang/String;Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;Landroid/net/IIpMemoryStore;)V
     .locals 1
 
-    .line 187
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p3, p1, p2}, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda3;-><init>(Landroid/net/IIpMemoryStore;Ljava/lang/String;Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
@@ -599,7 +541,6 @@
 .method private static synthetic lambda$retrieveNetworkAttributes$14(Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
     .locals 2
 
-    .line 192
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     const/4 v1, -0x5
@@ -616,7 +557,6 @@
 .method private static synthetic lambda$storeBlob$3(Landroid/net/IIpMemoryStore;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/Blob;Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 6
 
-    .line 118
     invoke-static {p5}, Landroid/net/ipmemorystore/OnStatusListener;->toAIDL(Landroid/net/ipmemorystore/OnStatusListener;)Landroid/net/ipmemorystore/IOnStatusListener;
 
     move-result-object v5
@@ -631,7 +571,6 @@
 
     move-object v4, p4
 
-    .line 117
     invoke-interface/range {v0 .. v5}, Landroid/net/IIpMemoryStore;->storeBlob(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/Blob;Landroid/net/ipmemorystore/IOnStatusListener;)V
 
     return-void
@@ -640,7 +579,6 @@
 .method private synthetic lambda$storeBlob$4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/Blob;Landroid/net/ipmemorystore/OnStatusListener;Landroid/net/IIpMemoryStore;)V
     .locals 8
 
-    .line 116
     new-instance v7, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda20;
 
     move-object v0, v7
@@ -667,7 +605,6 @@
 .method private static synthetic lambda$storeBlob$5(Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 2
 
-    .line 122
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     const/4 v1, -0x5
@@ -682,17 +619,14 @@
 .method private static synthetic lambda$storeNetworkAttributes$0(Landroid/net/IIpMemoryStore;Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 0
 
-    .line 92
     invoke-virtual {p2}, Landroid/net/ipmemorystore/NetworkAttributes;->toParcelable()Landroid/net/ipmemorystore/NetworkAttributesParcelable;
 
     move-result-object p2
 
-    .line 93
     invoke-static {p3}, Landroid/net/ipmemorystore/OnStatusListener;->toAIDL(Landroid/net/ipmemorystore/OnStatusListener;)Landroid/net/ipmemorystore/IOnStatusListener;
 
     move-result-object p3
 
-    .line 92
     invoke-interface {p0, p1, p2, p3}, Landroid/net/IIpMemoryStore;->storeNetworkAttributes(Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributesParcelable;Landroid/net/ipmemorystore/IOnStatusListener;)V
 
     return-void
@@ -701,7 +635,6 @@
 .method private synthetic lambda$storeNetworkAttributes$1(Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnStatusListener;Landroid/net/IIpMemoryStore;)V
     .locals 1
 
-    .line 91
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda25;
 
     invoke-direct {v0, p4, p1, p2, p3}, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda25;-><init>(Landroid/net/IIpMemoryStore;Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnStatusListener;)V
@@ -714,7 +647,6 @@
 .method private static synthetic lambda$storeNetworkAttributes$2(Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 2
 
-    .line 97
     new-instance v0, Landroid/net/ipmemorystore/Status;
 
     const/4 v1, -0x5
@@ -731,7 +663,6 @@
 .method public delete(Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 1
 
-    .line 239
     :try_start_0
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda12;
 
@@ -748,7 +679,6 @@
 
     return-void
 
-    .line 243
     :cond_0
     new-instance p1, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda13;
 
@@ -765,7 +695,6 @@
 .method public deleteCluster(Ljava/lang/String;ZLandroid/net/ipmemorystore/OnDeleteStatusListener;)V
     .locals 1
 
-    .line 270
     :try_start_0
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda1;
 
@@ -782,7 +711,6 @@
 
     return-void
 
-    .line 275
     :cond_0
     new-instance p1, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda2;
 
@@ -799,7 +727,6 @@
 .method public factoryReset()V
     .locals 2
 
-    .line 286
     :try_start_0
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda14;
 
@@ -814,7 +741,6 @@
     :catch_0
     move-exception p0
 
-    .line 289
     sget-object v0, Landroid/net/IpMemoryStoreClient;->TAG:Ljava/lang/String;
 
     const-string v1, "Error executing factory reset"
@@ -828,7 +754,6 @@
 .method public findL2Key(Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V
     .locals 1
 
-    .line 143
     :try_start_0
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda4;
 
@@ -840,7 +765,6 @@
 
     goto :goto_0
 
-    .line 147
     :catch_0
     new-instance p1, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda5;
 
@@ -857,7 +781,6 @@
 .method public isSameNetwork(Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnSameL3NetworkResponseListener;)V
     .locals 1
 
-    .line 165
     :try_start_0
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda9;
 
@@ -869,7 +792,6 @@
 
     goto :goto_0
 
-    .line 169
     :catch_0
     new-instance p1, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda10;
 
@@ -886,7 +808,6 @@
 .method public retrieveBlob(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/OnBlobRetrievedListener;)V
     .locals 7
 
-    .line 211
     :try_start_0
     new-instance v6, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda23;
 
@@ -910,7 +831,6 @@
 
     goto :goto_0
 
-    .line 215
     :catch_0
     new-instance p1, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda24;
 
@@ -927,7 +847,6 @@
 .method public retrieveNetworkAttributes(Ljava/lang/String;Landroid/net/ipmemorystore/OnNetworkAttributesRetrievedListener;)V
     .locals 1
 
-    .line 187
     :try_start_0
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda7;
 
@@ -939,7 +858,6 @@
 
     goto :goto_0
 
-    .line 191
     :catch_0
     new-instance p1, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda8;
 
@@ -959,7 +877,6 @@
 .method public storeBlob(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/ipmemorystore/Blob;Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 8
 
-    .line 116
     :try_start_0
     new-instance v7, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda17;
 
@@ -990,7 +907,6 @@
 
     return-void
 
-    .line 121
     :cond_0
     new-instance p1, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda18;
 
@@ -1007,7 +923,6 @@
 .method public storeNetworkAttributes(Ljava/lang/String;Landroid/net/ipmemorystore/NetworkAttributes;Landroid/net/ipmemorystore/OnStatusListener;)V
     .locals 1
 
-    .line 91
     :try_start_0
     new-instance v0, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda21;
 
@@ -1024,7 +939,6 @@
 
     return-void
 
-    .line 96
     :cond_0
     new-instance p1, Landroid/net/IpMemoryStoreClient$$ExternalSyntheticLambda22;
 

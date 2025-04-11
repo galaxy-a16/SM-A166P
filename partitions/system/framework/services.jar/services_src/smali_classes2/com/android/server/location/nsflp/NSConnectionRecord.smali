@@ -36,7 +36,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 74
     new-instance v0, Lcom/android/server/location/nsflp/NSConnectionRecord$1;
 
     invoke-direct {v0}, Lcom/android/server/location/nsflp/NSConnectionRecord$1;-><init>()V
@@ -49,106 +48,86 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 25
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->componentName:Ljava/lang/String;
 
-    .line 26
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevComponentName:Ljava/lang/String;
 
-    .line 27
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->packageName:Ljava/lang/String;
 
-    .line 28
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevPackageName:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 30
     iput v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectionCount:I
 
-    .line 31
     iput v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectionCount:I
 
     const-wide/16 v0, 0x0
 
-    .line 33
     iput-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectedTime:J
 
-    .line 34
     iput-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectedTime:J
 
-    .line 36
     iput-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->serviceBindingDiedTime:J
 
-    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->logTag:Ljava/lang/String;
 
-    .line 44
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->componentName:Ljava/lang/String;
 
-    .line 45
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevComponentName:Ljava/lang/String;
 
-    .line 46
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->packageName:Ljava/lang/String;
 
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevPackageName:Ljava/lang/String;
 
-    .line 48
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectionCount:I
 
-    .line 49
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectionCount:I
 
-    .line 50
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectedTime:J
 
-    .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectedTime:J
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -161,43 +140,32 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 25
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->componentName:Ljava/lang/String;
 
-    .line 26
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevComponentName:Ljava/lang/String;
 
-    .line 27
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->packageName:Ljava/lang/String;
 
-    .line 28
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevPackageName:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 30
     iput v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectionCount:I
 
-    .line 31
     iput v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectionCount:I
 
     const-wide/16 v0, 0x0
 
-    .line 33
     iput-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectedTime:J
 
-    .line 34
     iput-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectedTime:J
 
-    .line 36
     iput-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->serviceBindingDiedTime:J
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->logTag:Ljava/lang/String;
 
     return-void
@@ -208,7 +176,6 @@
 .method public describeContents()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -217,7 +184,6 @@
 .method public getDisconnectedDuration()J
     .locals 4
 
-    .line 133
     iget-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectedTime:J
 
     iget-wide v2, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectedTime:J
@@ -239,7 +205,6 @@
 .method public increaseConnectionCount()V
     .locals 1
 
-    .line 101
     iget v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectionCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -252,7 +217,6 @@
 .method public increaseDisconnectionCount()V
     .locals 1
 
-    .line 105
     iget v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectionCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -265,15 +229,12 @@
 .method public setComponentName(Ljava/lang/String;)V
     .locals 1
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->componentName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 88
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevComponentName:Ljava/lang/String;
 
-    .line 90
     :cond_0
     iput-object p1, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->componentName:Ljava/lang/String;
 
@@ -283,7 +244,6 @@
 .method public setConnectedTime(J)V
     .locals 0
 
-    .line 109
     iput-wide p1, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectedTime:J
 
     return-void
@@ -292,7 +252,6 @@
 .method public setDisconnectedTime(J)V
     .locals 0
 
-    .line 113
     iput-wide p1, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectedTime:J
 
     return-void
@@ -301,15 +260,12 @@
 .method public setPackageName(Ljava/lang/String;)V
     .locals 1
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->packageName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 95
     iput-object v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevPackageName:Ljava/lang/String;
 
-    .line 97
     :cond_0
     iput-object p1, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->packageName:Ljava/lang/String;
 
@@ -319,7 +275,6 @@
 .method public setServiceBindingDiedTime(J)V
     .locals 0
 
-    .line 117
     iput-wide p1, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->serviceBindingDiedTime:J
 
     return-void
@@ -328,7 +283,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -385,7 +339,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 128
     invoke-virtual {p0}, Lcom/android/server/location/nsflp/NSConnectionRecord;->getDisconnectedDuration()J
 
     move-result-wide v1
@@ -410,52 +363,42 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 57
     iget-object p2, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->logTag:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 58
     iget-object p2, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->componentName:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 59
     iget-object p2, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevComponentName:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 60
     iget-object p2, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 61
     iget-object p2, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->prevPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 62
     iget p2, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectionCount:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 63
     iget p2, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectionCount:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 64
     iget-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->connectedTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 65
     iget-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->disconnectedTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 66
     iget-wide v0, p0, Lcom/android/server/location/nsflp/NSConnectionRecord;->serviceBindingDiedTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V

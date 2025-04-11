@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 66
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/coverage/CoverageService$CoverageCommand-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/coverage/CoverageService$CoverageCommand;-><init>()V
 
     return-void
@@ -29,14 +27,12 @@
 
     const-string v0, "dump"
 
-    .line 73
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 74
     invoke-virtual {p0}, Lcom/android/server/coverage/CoverageService$CoverageCommand;->onDump()I
 
     move-result p0
@@ -46,21 +42,18 @@
     :cond_0
     const-string/jumbo v0, "reset"
 
-    .line 75
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/server/coverage/CoverageService$CoverageCommand;->onReset()I
 
     move-result p0
 
     return p0
 
-    .line 78
     :cond_1
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
@@ -72,7 +65,6 @@
 .method public final onDump()I
     .locals 6
 
-    .line 104
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
@@ -83,20 +75,17 @@
 
     goto :goto_0
 
-    .line 108
     :cond_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 109
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 110
     new-instance v0, Ljava/io/File;
 
     const-string v2, "coverage.ec"
@@ -111,7 +100,6 @@
     :goto_0
     const-string/jumbo v1, "w"
 
-    .line 115
     invoke-virtual {p0, v0, v1}, Landroid/os/ShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v1
@@ -122,7 +110,6 @@
 
     return v2
 
-    .line 121
     :cond_2
     :try_start_0
     new-instance v3, Ljava/io/BufferedOutputStream;
@@ -135,7 +122,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 123
     :try_start_1
     invoke-static {}, Lorg/jacoco/agent/rt/RT;->getAgent()Lorg/jacoco/agent/rt/IAgent;
 
@@ -149,10 +135,8 @@
 
     invoke-virtual {v3, v1}, Ljava/io/BufferedOutputStream;->write([B)V
 
-    .line 124
     invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 125
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v1
@@ -171,7 +155,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 126
     :try_start_2
     invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_2
@@ -182,7 +165,6 @@
     :catchall_0
     move-exception v0
 
-    .line 121
     :try_start_3
     invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_3
@@ -204,7 +186,6 @@
     :catch_0
     move-exception v0
 
-    .line 127
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -235,44 +216,36 @@
 .method public onHelp()V
     .locals 1
 
-    .line 87
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Coverage commands:"
 
-    .line 88
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 89
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 90
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  dump [FILE]"
 
-    .line 91
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Dump code coverage to FILE."
 
-    .line 92
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  reset"
 
-    .line 93
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Reset coverage information."
 
-    .line 94
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -281,14 +254,12 @@
 .method public final onReset()I
     .locals 1
 
-    .line 140
     invoke-static {}, Lorg/jacoco/agent/rt/RT;->getAgent()Lorg/jacoco/agent/rt/IAgent;
 
     move-result-object v0
 
     invoke-interface {v0}, Lorg/jacoco/agent/rt/IAgent;->reset()V
 
-    .line 141
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0

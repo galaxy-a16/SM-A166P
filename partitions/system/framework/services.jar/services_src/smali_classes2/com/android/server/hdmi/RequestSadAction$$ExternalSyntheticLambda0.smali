@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/hdmi/RequestSadAction;->$r8$lambda$zRrzE1KBnaH2HNW_K0uDMeDfMD8(Ljava/lang/Integer;)I

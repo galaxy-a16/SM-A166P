@@ -20,7 +20,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 3
     const-class v0, Lcom/android/server/compat/overrides/XmlWriter;
 
     return-void
@@ -29,13 +28,10 @@
 .method public constructor <init>(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     iput-object p1, p0, Lcom/android/server/compat/overrides/XmlWriter;->out:Ljava/io/PrintWriter;
 
-    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -44,12 +40,10 @@
 
     const/4 p1, 0x0
 
-    .line 12
     iput p1, p0, Lcom/android/server/compat/overrides/XmlWriter;->indent:I
 
     const/4 p1, 0x1
 
-    .line 13
     iput-boolean p1, p0, Lcom/android/server/compat/overrides/XmlWriter;->startLine:Z
 
     return-void
@@ -60,17 +54,14 @@
 
     const-string v0, "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
 
-    .line 58
     invoke-virtual {p0, v0}, Lcom/android/server/compat/overrides/XmlWriter;->print(Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
     const-string/jumbo v0, "overrides"
 
-    .line 60
     invoke-virtual {p1, p0, v0}, Lcom/android/server/compat/overrides/Overrides;->write(Lcom/android/server/compat/overrides/XmlWriter;Ljava/lang/String;)V
 
-    .line 62
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/compat/overrides/XmlWriter;->printXml()V
 
@@ -82,12 +73,10 @@
 .method public close()V
     .locals 0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/compat/overrides/XmlWriter;->out:Ljava/io/PrintWriter;
 
     if-eqz p0, :cond_0
 
-    .line 53
     invoke-virtual {p0}, Ljava/io/PrintWriter;->close()V
 
     :cond_0
@@ -97,7 +86,6 @@
 .method public decreaseIndent()V
     .locals 1
 
-    .line 43
     iget v0, p0, Lcom/android/server/compat/overrides/XmlWriter;->indent:I
 
     add-int/lit8 v0, v0, -0x1
@@ -110,7 +98,6 @@
 .method public increaseIndent()V
     .locals 1
 
-    .line 39
     iget v0, p0, Lcom/android/server/compat/overrides/XmlWriter;->indent:I
 
     add-int/lit8 v0, v0, 0x1
@@ -127,21 +114,18 @@
 
     const-string v1, "\n"
 
-    .line 25
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 26
     :cond_0
     :goto_0
     array-length v2, p1
 
     if-ge v0, v2, :cond_2
 
-    .line 27
     iget-boolean v2, p0, Lcom/android/server/compat/overrides/XmlWriter;->startLine:Z
 
     if-eqz v2, :cond_1
@@ -154,10 +138,8 @@
 
     if-nez v2, :cond_1
 
-    .line 28
     invoke-virtual {p0}, Lcom/android/server/compat/overrides/XmlWriter;->printIndent()V
 
-    .line 30
     :cond_1
     iget-object v2, p0, Lcom/android/server/compat/overrides/XmlWriter;->outBuffer:Ljava/lang/StringBuilder;
 
@@ -167,19 +149,16 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 31
     array-length v2, p1
 
     if-ge v0, v2, :cond_0
 
-    .line 32
     iget-object v2, p0, Lcom/android/server/compat/overrides/XmlWriter;->outBuffer:Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v2, 0x1
 
-    .line 33
     iput-boolean v2, p0, Lcom/android/server/compat/overrides/XmlWriter;->startLine:Z
 
     goto :goto_0
@@ -195,13 +174,11 @@
 
     move v1, v0
 
-    .line 18
     :goto_0
     iget v2, p0, Lcom/android/server/compat/overrides/XmlWriter;->indent:I
 
     if-ge v1, v2, :cond_0
 
-    .line 19
     iget-object v2, p0, Lcom/android/server/compat/overrides/XmlWriter;->outBuffer:Ljava/lang/StringBuilder;
 
     const-string v3, "    "
@@ -212,7 +189,6 @@
 
     goto :goto_0
 
-    .line 21
     :cond_0
     iput-boolean v0, p0, Lcom/android/server/compat/overrides/XmlWriter;->startLine:Z
 
@@ -222,7 +198,6 @@
 .method public printXml()V
     .locals 1
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/compat/overrides/XmlWriter;->out:Ljava/io/PrintWriter;
 
     iget-object p0, p0, Lcom/android/server/compat/overrides/XmlWriter;->outBuffer:Ljava/lang/StringBuilder;

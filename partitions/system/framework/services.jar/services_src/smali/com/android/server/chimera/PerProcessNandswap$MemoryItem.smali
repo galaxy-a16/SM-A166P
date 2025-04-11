@@ -21,22 +21,16 @@
 .method public constructor <init>(Ljava/lang/String;JJIJ)V
     .locals 0
 
-    .line 712
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 713
     iput-object p1, p0, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;->label:Ljava/lang/String;
 
-    .line 714
     iput-wide p2, p0, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;->swap:J
 
-    .line 715
     iput-wide p4, p0, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;->writeback:J
 
-    .line 716
     iput p6, p0, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;->ppnState:I
 
-    .line 717
     iput-wide p7, p0, Lcom/android/server/chimera/PerProcessNandswap$MemoryItem;->lastNandswapTimeDiff:J
 
     return-void

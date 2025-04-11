@@ -16,22 +16,18 @@
 .method public constructor <init>([BI)V
     .locals 1
 
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 75
     iput v0, p0, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->mIndex:I
 
-    .line 79
     array-length v0, p1
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->mScore:[B
 
-    .line 80
     invoke-virtual {p0, p1, p2}, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->set([BI)V
 
     return-void
@@ -44,13 +40,11 @@
 
     move v1, v0
 
-    .line 116
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_2
 
-    .line 117
     aget-byte v2, p0, v1
 
     aget-byte v3, p1, v1
@@ -82,7 +76,6 @@
 .method public compareTo(Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;)I
     .locals 0
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->mScore:[B
 
     iget-object p1, p1, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->mScore:[B
@@ -99,7 +92,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 74
     check-cast p1, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;
 
     invoke-virtual {p0, p1}, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->compareTo(Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;)I
@@ -114,7 +106,6 @@
 
     const/4 v0, 0x0
 
-    .line 84
     :goto_0
     iget-object v1, p0, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->mScore:[B
 
@@ -122,7 +113,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 85
     aget-byte v2, p1, v0
 
     aput-byte v2, v1, v0
@@ -131,7 +121,6 @@
 
     goto :goto_0
 
-    .line 87
     :cond_0
     iput p2, p0, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->mIndex:I
 
@@ -141,7 +130,6 @@
 .method public updateIfBetter([BI)V
     .locals 2
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->mScore:[B
 
     invoke-static {v0, p1}, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->compare([B[B)I
@@ -152,7 +140,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 95
     invoke-virtual {p0, p1, p2}, Lcom/android/server/inputmethod/LocaleUtils$ScoreEntry;->set([BI)V
 
     :cond_0

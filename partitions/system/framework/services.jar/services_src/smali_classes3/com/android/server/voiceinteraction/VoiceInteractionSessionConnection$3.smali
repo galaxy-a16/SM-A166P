@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;)V
     .locals 0
 
-    .line 928
     iput-object p1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$3;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 0
 
-    .line 931
     const-class p0, Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -38,7 +36,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 934
     invoke-interface {p0}, Lcom/android/server/statusbar/StatusBarManagerInternal;->showAssistDisclosure()V
 
     :cond_0

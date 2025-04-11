@@ -20,18 +20,14 @@
 .method public constructor <init>(Lcom/android/server/power/LowPowerStandbyController;Landroid/os/IBinder;ILjava/util/List;)V
     .locals 0
 
-    .line 215
     iput-object p1, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
     iput-object p2, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mToken:Landroid/os/IBinder;
 
-    .line 217
     iput p3, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mUid:I
 
-    .line 218
     iput-object p4, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mPorts:Ljava/util/List;
 
     return-void
@@ -42,7 +38,6 @@
 .method public binderDied()V
     .locals 1
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mToken:Landroid/os/IBinder;
@@ -55,7 +50,6 @@
 .method public getPorts()Ljava/util/List;
     .locals 0
 
-    .line 244
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mPorts:Ljava/util/List;
 
     return-object p0
@@ -64,7 +58,6 @@
 .method public getToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 236
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mToken:Landroid/os/IBinder;
 
     return-object p0
@@ -73,7 +66,6 @@
 .method public getUid()I
     .locals 0
 
-    .line 240
     iget p0, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mUid:I
 
     return p0
@@ -84,7 +76,6 @@
 
     const/4 v0, 0x0
 
-    .line 223
     :try_start_0
     iget-object v1, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mToken:Landroid/os/IBinder;
 
@@ -101,7 +92,6 @@
 
     const-string v1, "StandbyPorts token already died"
 
-    .line 226
     invoke-static {p0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -110,7 +100,6 @@
 .method public unlinkToDeath()V
     .locals 2
 
-    .line 232
     iget-object v0, p0, Lcom/android/server/power/LowPowerStandbyController$StandbyPortsLock;->mToken:Landroid/os/IBinder;
 
     const/4 v1, 0x0

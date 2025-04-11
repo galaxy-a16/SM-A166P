@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemEventListener;)V
     .locals 0
 
-    .line 281
     iput-object p1, p0, Lcom/android/server/chimera/SystemEventListener$AppLaunchIntent;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
     invoke-direct {p0}, Lcom/android/server/wm/ActivityMetricsLaunchObserver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/chimera/SystemEventListener;Lcom/android/server/chimera/SystemEventListener$AppLaunchIntent-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/chimera/SystemEventListener$AppLaunchIntent;-><init>(Lcom/android/server/chimera/SystemEventListener;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onIntentStarted(Landroid/content/Intent;J)V
     .locals 3
 
-    .line 285
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p2
@@ -42,19 +39,16 @@
 
     if-eqz p2, :cond_0
 
-    .line 286
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p1
 
-    .line 287
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 288
     :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
@@ -62,12 +56,10 @@
 
     if-eqz p2, :cond_3
 
-    .line 289
     invoke-virtual {p1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 295
     :goto_0
     iget-object p2, p0, Lcom/android/server/chimera/SystemEventListener$AppLaunchIntent;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -87,7 +79,6 @@
 
     const-string p2, "com.samsung.android.permissioncontroller"
 
-    .line 296
     invoke-virtual {p1, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -96,7 +87,6 @@
 
     goto :goto_1
 
-    .line 300
     :cond_1
     iget-object p2, p0, Lcom/android/server/chimera/SystemEventListener$AppLaunchIntent;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
@@ -110,10 +100,8 @@
 
     move-result-object p2
 
-    .line 301
     iput-object p1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/chimera/SystemEventListener$AppLaunchIntent;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
     invoke-static {v0}, Lcom/android/server/chimera/SystemEventListener;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/SystemEventListener;)Lcom/android/server/chimera/SystemRepository;
@@ -136,7 +124,6 @@
 
     invoke-interface {v0, p3, p1}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$AppLaunchIntent;->this$0:Lcom/android/server/chimera/SystemEventListener;
 
     invoke-static {p0}, Lcom/android/server/chimera/SystemEventListener;->-$$Nest$fgetmHandler(Lcom/android/server/chimera/SystemEventListener;)Lcom/android/server/chimera/SystemEventListener$SystemEventHandler;
@@ -149,7 +136,6 @@
     :goto_1
     return-void
 
-    .line 291
     :cond_3
     iget-object p0, p0, Lcom/android/server/chimera/SystemEventListener$AppLaunchIntent;->this$0:Lcom/android/server/chimera/SystemEventListener;
 

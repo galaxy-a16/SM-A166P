@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/wm/LaunchParamsPersister;->$r8$lambda$qFa64I0NmhmHZjNuQ-iK3i1w-QY(Ljava/lang/String;)Landroid/util/ArraySet;

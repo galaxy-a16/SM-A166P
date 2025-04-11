@@ -20,7 +20,6 @@
 .method public final accept(I)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/backup/UserBackupManagerService;->$r8$lambda$8vqZuKJoGFscF6OlJ1XHsa4I09U(I)V
 
     return-void

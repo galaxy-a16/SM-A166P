@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/notification/SmartAlertController;)V
     .locals 0
 
-    .line 169
     iput-object p1, p0, Lcom/android/server/notification/SmartAlertController$3;->this$0:Lcom/android/server/notification/SmartAlertController;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -24,7 +23,6 @@
 .method public run()V
     .locals 4
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/notification/SmartAlertController$3;->this$0:Lcom/android/server/notification/SmartAlertController;
 
     invoke-static {v0}, Lcom/android/server/notification/SmartAlertController;->-$$Nest$fgetmMotionRegistered(Lcom/android/server/notification/SmartAlertController;)Z
@@ -43,7 +41,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 173
     iget-object v0, p0, Lcom/android/server/notification/SmartAlertController$3;->this$0:Lcom/android/server/notification/SmartAlertController;
 
     invoke-static {v0}, Lcom/android/server/notification/SmartAlertController;->-$$Nest$fgetmSmartAlertMotionManager(Lcom/android/server/notification/SmartAlertController;)Lcom/samsung/android/gesture/SemMotionRecognitionManager;
@@ -52,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 174
     iget-object v0, p0, Lcom/android/server/notification/SmartAlertController$3;->this$0:Lcom/android/server/notification/SmartAlertController;
 
     invoke-static {v0}, Lcom/android/server/notification/SmartAlertController;->-$$Nest$fgetmSmartAlertMotionManager(Lcom/android/server/notification/SmartAlertController;)Lcom/samsung/android/gesture/SemMotionRecognitionManager;
@@ -69,7 +65,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/samsung/android/gesture/SemMotionRecognitionManager;->registerListener(Lcom/samsung/android/gesture/SemMotionEventListener;I)V
 
-    .line 176
     iget-object p0, p0, Lcom/android/server/notification/SmartAlertController$3;->this$0:Lcom/android/server/notification/SmartAlertController;
 
     const/4 v0, 0x1
@@ -78,7 +73,6 @@
 
     const-string p0, "SmartAlert - registerListener"
 
-    .line 177
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -86,7 +80,6 @@
     :cond_0
     const-string p0, "SmartAlert - mSmartAlertMotionManager is null"
 
-    .line 179
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -94,7 +87,6 @@
     :cond_1
     const-string p0, "SmartAlert - already registered or Setting disabled"
 
-    .line 182
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

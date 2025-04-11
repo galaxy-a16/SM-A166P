@@ -49,7 +49,6 @@
 .method public static synthetic $r8$lambda$3mKZO8MS6YXQ4vtUA-BuoIClMcQ(Lcom/android/server/dreams/DreamController$DreamRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/dreams/DreamController$DreamRecord;->lambda$new$1()V
 
     return-void
@@ -58,7 +57,6 @@
 .method public static synthetic $r8$lambda$EAr8nOLx4gLdCfP8xr5IxxDD_sk(Lcom/android/server/dreams/DreamController$DreamRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/dreams/DreamController$DreamRecord;->lambda$binderDied$2()V
 
     return-void
@@ -67,7 +65,6 @@
 .method public static synthetic $r8$lambda$KALGJyRu39gm6Ejo5k1P-BIBGsw(Lcom/android/server/dreams/DreamController$DreamRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/dreams/DreamController$DreamRecord;->lambda$new$0()V
 
     return-void
@@ -76,7 +73,6 @@
 .method public static synthetic $r8$lambda$sEOBm6IdmuE7Gk5bXHqB2J_5Wgk(Lcom/android/server/dreams/DreamController$DreamRecord;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/dreams/DreamController$DreamRecord;->lambda$onServiceConnected$3(Landroid/os/IBinder;)V
 
     return-void
@@ -85,7 +81,6 @@
 .method public static synthetic $r8$lambda$t5L_GmSab7LDKBTV0OrWOUs282E(Lcom/android/server/dreams/DreamController$DreamRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/dreams/DreamController$DreamRecord;->lambda$onServiceDisconnected$4()V
 
     return-void
@@ -94,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDreamStartTime(Lcom/android/server/dreams/DreamController$DreamRecord;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mDreamStartTime:J
 
     return-wide v0
@@ -103,7 +97,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDreamingStartedCallback(Lcom/android/server/dreams/DreamController$DreamRecord;)Landroid/os/IRemoteCallback;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mDreamingStartedCallback:Landroid/os/IRemoteCallback;
 
     return-object p0
@@ -112,7 +105,6 @@
 .method public static bridge synthetic -$$Nest$fgetmReleaseWakeLockIfNeeded(Lcom/android/server/dreams/DreamController$DreamRecord;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mReleaseWakeLockIfNeeded:Ljava/lang/Runnable;
 
     return-object p0
@@ -121,7 +113,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStopPreviousDreamsIfNeeded(Lcom/android/server/dreams/DreamController$DreamRecord;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopPreviousDreamsIfNeeded:Ljava/lang/Runnable;
 
     return-object p0
@@ -130,7 +121,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStopReason(Lcom/android/server/dreams/DreamController$DreamRecord;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopReason:Ljava/lang/String;
 
     return-object p0
@@ -139,7 +129,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStopStubbornDreamRunnable(Lcom/android/server/dreams/DreamController$DreamRecord;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopStubbornDreamRunnable:Ljava/lang/Runnable;
 
     return-object p0
@@ -148,7 +137,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStopUnconnectedDreamRunnable(Lcom/android/server/dreams/DreamController$DreamRecord;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopUnconnectedDreamRunnable:Ljava/lang/Runnable;
 
     return-object p0
@@ -157,7 +145,6 @@
 .method public static bridge synthetic -$$Nest$fputmDreamStartTime(Lcom/android/server/dreams/DreamController$DreamRecord;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mDreamStartTime:J
 
     return-void
@@ -166,7 +153,6 @@
 .method public static bridge synthetic -$$Nest$fputmStopReason(Lcom/android/server/dreams/DreamController$DreamRecord;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopReason:Ljava/lang/String;
 
     return-void
@@ -175,70 +161,56 @@
 .method public constructor <init>(Lcom/android/server/dreams/DreamController;Landroid/os/Binder;Landroid/content/ComponentName;ZZILandroid/os/PowerManager$WakeLock;)V
     .locals 2
 
-    .line 428
     iput-object p1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 402
     new-instance v0, Lcom/android/server/dreams/DreamController$DreamRecord$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/dreams/DreamController$DreamRecord$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/dreams/DreamController$DreamRecord;)V
 
     iput-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopPreviousDreamsIfNeeded:Ljava/lang/Runnable;
 
-    .line 403
     new-instance v0, Lcom/android/server/dreams/DreamController$DreamRecord$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0}, Lcom/android/server/dreams/DreamController$DreamRecord$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/dreams/DreamController$DreamRecord;)V
 
     iput-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mReleaseWakeLockIfNeeded:Ljava/lang/Runnable;
 
-    .line 405
     new-instance v1, Lcom/android/server/dreams/DreamController$DreamRecord$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, p0}, Lcom/android/server/dreams/DreamController$DreamRecord$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/dreams/DreamController$DreamRecord;)V
 
     iput-object v1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopUnconnectedDreamRunnable:Ljava/lang/Runnable;
 
-    .line 412
     new-instance v1, Lcom/android/server/dreams/DreamController$DreamRecord$$ExternalSyntheticLambda3;
 
     invoke-direct {v1, p0}, Lcom/android/server/dreams/DreamController$DreamRecord$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/dreams/DreamController$DreamRecord;)V
 
     iput-object v1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopStubbornDreamRunnable:Ljava/lang/Runnable;
 
-    .line 418
     new-instance v1, Lcom/android/server/dreams/DreamController$DreamRecord$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/dreams/DreamController$DreamRecord$1;-><init>(Lcom/android/server/dreams/DreamController$DreamRecord;)V
 
     iput-object v1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mDreamingStartedCallback:Landroid/os/IRemoteCallback;
 
-    .line 429
     iput-object p2, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mToken:Landroid/os/Binder;
 
-    .line 430
     iput-object p3, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mName:Landroid/content/ComponentName;
 
-    .line 431
     iput-boolean p4, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mIsPreviewMode:Z
 
-    .line 432
     iput-boolean p5, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mCanDoze:Z
 
-    .line 433
     iput p6, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mUserId:I
 
-    .line 434
     iput-object p7, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz p7, :cond_0
 
-    .line 438
     invoke-virtual {p7}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 440
     :cond_0
     invoke-static {p1}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmHandler(Lcom/android/server/dreams/DreamController;)Landroid/os/Handler;
 
@@ -256,10 +228,8 @@
 
     const/4 v0, 0x0
 
-    .line 447
     iput-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mService:Landroid/service/dreams/IDreamService;
 
-    .line 448
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmCurrentDream(Lcom/android/server/dreams/DreamController;)Lcom/android/server/dreams/DreamController$DreamRecord;
@@ -268,7 +238,6 @@
 
     if-ne v0, p0, :cond_1
 
-    .line 449
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmResetScreenTimeoutOnUnexpectedDreamExit(Lcom/android/server/dreams/DreamController;)Z
@@ -277,12 +246,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 450
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$mresetScreenTimeout(Lcom/android/server/dreams/DreamController;)V
 
-    .line 452
     :cond_0
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
@@ -299,7 +266,6 @@
 .method private synthetic lambda$new$0()V
     .locals 2
 
-    .line 406
     iget-boolean v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mBound:Z
 
     if-eqz v0, :cond_0
@@ -312,10 +278,8 @@
 
     const-string v1, "Bound dream did not connect in the time allotted"
 
-    .line 407
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 408
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     const/4 v0, 0x1
@@ -335,10 +299,8 @@
 
     const-string v1, "Stubborn dream did not finish itself in the time allotted"
 
-    .line 413
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     const/4 v1, 0x1
@@ -349,7 +311,6 @@
 
     const/4 v0, 0x0
 
-    .line 415
     iput-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mStopReason:Ljava/lang/String;
 
     return-void
@@ -360,10 +321,8 @@
 
     const/4 v0, 0x1
 
-    .line 461
     iput-boolean v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mConnected:Z
 
-    .line 462
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmCurrentDream(Lcom/android/server/dreams/DreamController;)Lcom/android/server/dreams/DreamController$DreamRecord;
@@ -376,7 +335,6 @@
 
     if-nez v0, :cond_0
 
-    .line 463
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {p1}, Landroid/service/dreams/IDreamService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/dreams/IDreamService;
@@ -387,7 +345,6 @@
 
     goto :goto_0
 
-    .line 466
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/dreams/DreamController$DreamRecord;->releaseWakeLockIfNeeded()V
 
@@ -400,10 +357,8 @@
 
     const/4 v0, 0x0
 
-    .line 475
     iput-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mService:Landroid/service/dreams/IDreamService;
 
-    .line 476
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmCurrentDream(Lcom/android/server/dreams/DreamController;)Lcom/android/server/dreams/DreamController$DreamRecord;
@@ -412,7 +367,6 @@
 
     if-ne v0, p0, :cond_1
 
-    .line 477
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmResetScreenTimeoutOnUnexpectedDreamExit(Lcom/android/server/dreams/DreamController;)Z
@@ -421,12 +375,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 478
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$mresetScreenTimeout(Lcom/android/server/dreams/DreamController;)V
 
-    .line 480
     :cond_0
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
@@ -445,7 +397,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 446
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmHandler(Lcom/android/server/dreams/DreamController;)Landroid/os/Handler;
@@ -464,7 +415,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 460
     iget-object p1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {p1}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmHandler(Lcom/android/server/dreams/DreamController;)Landroid/os/Handler;
@@ -483,7 +433,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 474
     iget-object p1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {p1}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmHandler(Lcom/android/server/dreams/DreamController;)Landroid/os/Handler;
@@ -502,20 +451,16 @@
 .method public releaseWakeLockIfNeeded()V
     .locals 1
 
-    .line 492
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_0
 
-    .line 493
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     const/4 v0, 0x0
 
-    .line 494
     iput-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 495
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmHandler(Lcom/android/server/dreams/DreamController;)Landroid/os/Handler;
@@ -533,7 +478,6 @@
 .method public stopPreviousDreamsIfNeeded()V
     .locals 1
 
-    .line 486
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamController;->-$$Nest$fgetmCurrentDream(Lcom/android/server/dreams/DreamController;)Lcom/android/server/dreams/DreamController$DreamRecord;
@@ -542,7 +486,6 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 487
     iget-object p0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-static {p0}, Lcom/android/server/dreams/DreamController;->-$$Nest$mstopPreviousDreams(Lcom/android/server/dreams/DreamController;)V

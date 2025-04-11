@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/media/BluetoothProfileMonitor;)V
     .locals 0
 
-    .line 122
     iput-object p1, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/media/BluetoothProfileMonitor;Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;-><init>(Lcom/android/server/media/BluetoothProfileMonitor;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onServiceConnected(ILandroid/bluetooth/BluetoothProfile;)V
     .locals 2
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
     monitor-enter v0
@@ -53,13 +50,11 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 139
     :try_start_0
     monitor-exit v0
 
     return-void
 
-    .line 136
     :cond_0
     iget-object p1, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
@@ -69,7 +64,6 @@
 
     goto :goto_0
 
-    .line 133
     :cond_1
     iget-object p1, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
@@ -79,7 +73,6 @@
 
     goto :goto_0
 
-    .line 130
     :cond_2
     iget-object p1, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
@@ -87,13 +80,11 @@
 
     invoke-static {p1, p2}, Lcom/android/server/media/BluetoothProfileMonitor;->-$$Nest$fputmA2dpProfile(Lcom/android/server/media/BluetoothProfileMonitor;Landroid/bluetooth/BluetoothA2dp;)V
 
-    .line 142
     :goto_0
     iget-object p0, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
     invoke-static {p0}, Lcom/android/server/media/BluetoothProfileMonitor;->-$$Nest$fgetmOnProfileChangedListener(Lcom/android/server/media/BluetoothProfileMonitor;)Lcom/android/server/media/BluetoothProfileMonitor$OnProfileChangedListener;
 
-    .line 143
     monitor-exit v0
 
     return-void
@@ -111,7 +102,6 @@
 .method public onServiceDisconnected(I)V
     .locals 3
 
-    .line 154
     iget-object v0, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
     monitor-enter v0
@@ -130,13 +120,11 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 166
     :try_start_0
     monitor-exit v0
 
     return-void
 
-    .line 163
     :cond_0
     iget-object p1, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
@@ -144,7 +132,6 @@
 
     goto :goto_0
 
-    .line 160
     :cond_1
     iget-object p1, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
@@ -152,19 +139,16 @@
 
     goto :goto_0
 
-    .line 157
     :cond_2
     iget-object p1, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
     invoke-static {p1, v2}, Lcom/android/server/media/BluetoothProfileMonitor;->-$$Nest$fputmA2dpProfile(Lcom/android/server/media/BluetoothProfileMonitor;Landroid/bluetooth/BluetoothA2dp;)V
 
-    .line 169
     :goto_0
     iget-object p0, p0, Lcom/android/server/media/BluetoothProfileMonitor$ProfileListener;->this$0:Lcom/android/server/media/BluetoothProfileMonitor;
 
     invoke-static {p0}, Lcom/android/server/media/BluetoothProfileMonitor;->-$$Nest$fgetmOnProfileChangedListener(Lcom/android/server/media/BluetoothProfileMonitor;)Lcom/android/server/media/BluetoothProfileMonitor$OnProfileChangedListener;
 
-    .line 170
     monitor-exit v0
 
     return-void

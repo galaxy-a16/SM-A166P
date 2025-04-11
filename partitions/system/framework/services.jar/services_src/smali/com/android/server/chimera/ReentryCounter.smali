@@ -25,10 +25,8 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepository;)V
     .locals 3
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -37,16 +35,12 @@
 
     const/4 v0, 0x0
 
-    .line 16
     iput v0, p0, Lcom/android/server/chimera/ReentryCounter;->mLaunchedAppCnt:I
 
-    .line 17
     iput-boolean v0, p0, Lcom/android/server/chimera/ReentryCounter;->mEnableReentry:Z
 
-    .line 20
     iput-object p1, p0, Lcom/android/server/chimera/ReentryCounter;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
-    .line 21
     new-instance v0, Lcom/android/internal/util/RingBuffer;
 
     const-class v1, Ljava/lang/Integer;
@@ -57,10 +51,8 @@
 
     iput-object v0, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryBuffer:Lcom/android/internal/util/RingBuffer;
 
-    .line 22
     invoke-interface {p1, p0}, Lcom/android/server/chimera/SystemRepository;->registerProcessObserver(Lcom/android/server/chimera/SystemRepository$ChimeraProcessObserver;)V
 
-    .line 23
     invoke-interface {p1, p0}, Lcom/android/server/chimera/SystemRepository;->registerUidObserver(Lcom/android/server/chimera/SystemRepository$ChimeraUidObserver;)V
 
     return-void
@@ -71,7 +63,6 @@
 .method public getReentry()F
     .locals 5
 
-    .line 37
     iget-object v0, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryBuffer:Lcom/android/internal/util/RingBuffer;
 
     invoke-virtual {v0}, Lcom/android/internal/util/RingBuffer;->size()I
@@ -84,7 +75,6 @@
 
     return p0
 
-    .line 42
     :cond_0
     iget-object p0, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryBuffer:Lcom/android/internal/util/RingBuffer;
 
@@ -105,7 +95,6 @@
 
     aget-object v4, p0, v2
 
-    .line 43
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
@@ -129,7 +118,6 @@
 .method public isReentryEnabled()Z
     .locals 0
 
-    .line 33
     iget-boolean p0, p0, Lcom/android/server/chimera/ReentryCounter;->mEnableReentry:Z
 
     return p0
@@ -144,7 +132,6 @@
 
     goto :goto_2
 
-    .line 70
     :cond_0
     iget-object p1, p0, Lcom/android/server/chimera/ReentryCounter;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -158,7 +145,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 71
     array-length p1, p5
 
     move p3, p2
@@ -168,7 +154,6 @@
 
     aget-object p4, p5, p3
 
-    .line 72
     iget-object p6, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
 
     invoke-interface {p6, p4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -177,7 +162,6 @@
 
     if-nez p6, :cond_1
 
-    .line 73
     iget-object p6, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -191,7 +175,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_2
     iget-object p1, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
 
@@ -218,7 +201,6 @@
 
     check-cast p2, Ljava/lang/String;
 
-    .line 79
     iget-object p4, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
 
     invoke-interface {p4, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -241,7 +223,6 @@
 
     goto :goto_1
 
-    .line 82
     :cond_3
     iget p1, p0, Lcom/android/server/chimera/ReentryCounter;->mLaunchedAppCnt:I
 
@@ -253,7 +234,6 @@
 
     if-lez p2, :cond_4
 
-    .line 83
     iput-boolean p3, p0, Lcom/android/server/chimera/ReentryCounter;->mEnableReentry:Z
 
     goto :goto_2
@@ -261,7 +241,6 @@
     :cond_4
     add-int/2addr p1, p3
 
-    .line 85
     iput p1, p0, Lcom/android/server/chimera/ReentryCounter;->mLaunchedAppCnt:I
 
     :cond_5
@@ -272,7 +251,6 @@
 .method public onUidGone(ILjava/lang/String;)V
     .locals 2
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -281,7 +259,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/chimera/ReentryCounter;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {v0, p1, p2}, Lcom/android/server/chimera/SystemRepository;->isKilledByRecentTask(ILjava/lang/String;)Z
@@ -290,14 +267,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
 
     invoke-interface {p0, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 54
     :cond_0
     iget-object p1, p0, Lcom/android/server/chimera/ReentryCounter;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
@@ -317,7 +292,6 @@
 
     iget-object v1, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
 
-    .line 55
     invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -330,10 +304,8 @@
 
     const-string v1, "ReentryCounter"
 
-    .line 54
     invoke-interface {p1, v1, v0}, Lcom/android/server/chimera/SystemRepository;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 57
     iget-object p1, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryBuffer:Lcom/android/internal/util/RingBuffer;
 
     iget-object v0, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
@@ -346,7 +318,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/util/RingBuffer;->append(Ljava/lang/Object;)V
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/chimera/ReentryCounter;->mPkgReentryMap:Ljava/util/Map;
 
     invoke-interface {p0, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -359,7 +330,6 @@
 .method public onUidGone(IZ)V
     .locals 3
 
-    .line 91
     iget-object p2, p0, Lcom/android/server/chimera/ReentryCounter;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {p2, p1}, Lcom/android/server/chimera/SystemRepository;->isApp(I)Z
@@ -368,7 +338,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 92
     iget-object p2, p0, Lcom/android/server/chimera/ReentryCounter;->mSystemRepository:Lcom/android/server/chimera/SystemRepository;
 
     invoke-interface {p2, p1}, Lcom/android/server/chimera/SystemRepository;->getPackageNameFromUid(I)[Ljava/lang/String;
@@ -384,7 +353,6 @@
 
     aget-object v2, p2, v1
 
-    .line 93
     invoke-virtual {p0, p1, v2}, Lcom/android/server/chimera/ReentryCounter;->onUidGone(ILjava/lang/String;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -398,7 +366,6 @@
 .method public setTargetReentryCount(F)V
     .locals 0
 
-    .line 29
     iput p1, p0, Lcom/android/server/chimera/ReentryCounter;->mTargetReentryCount:F
 
     return-void

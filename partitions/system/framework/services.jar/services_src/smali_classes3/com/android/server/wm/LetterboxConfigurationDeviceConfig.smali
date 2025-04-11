@@ -30,7 +30,6 @@
 
     const-string v0, "enable_compat_camera_treatment"
 
-    .line 58
     sget-object v9, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const-string v2, "enable_display_rotation_immersive_app_compat_policy"
@@ -49,7 +48,6 @@
 
     move-object v7, v9
 
-    .line 56
     invoke-static/range {v0 .. v9}, Ljava/util/Map;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object v0
@@ -62,27 +60,20 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 71
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsCameraCompatTreatmentEnabled:Z
 
-    .line 79
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsDisplayRotationImmersiveAppCompatPolicyEnabled:Z
 
-    .line 83
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsAllowIgnoreOrientationRequest:Z
 
-    .line 89
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsCompatFakeFocusAllowed:Z
 
-    .line 92
     iput-boolean v0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsTranslucentLetterboxingAllowed:Z
 
-    .line 97
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -91,7 +82,6 @@
 
     const-string/jumbo v0, "window_manager"
 
-    .line 100
     invoke-static {v0, p1, p0}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     return-void
@@ -104,7 +94,6 @@
 
     const-string/jumbo p0, "window_manager"
 
-    .line 177
     invoke-static {p0, p1, p2}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -115,7 +104,6 @@
 .method public getFlag(Ljava/lang/String;)Z
     .locals 2
 
-    .line 133
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -209,7 +197,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 145
     new-instance p0, Ljava/lang/AssertionError;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -230,31 +217,26 @@
 
     throw p0
 
-    .line 135
     :pswitch_0
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsCameraCompatTreatmentEnabled:Z
 
     return p0
 
-    .line 139
     :pswitch_1
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsAllowIgnoreOrientationRequest:Z
 
     return p0
 
-    .line 143
     :pswitch_2
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsTranslucentLetterboxingAllowed:Z
 
     return p0
 
-    .line 137
     :pswitch_3
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsDisplayRotationImmersiveAppCompatPolicyEnabled:Z
 
     return p0
 
-    .line 141
     :pswitch_4
     iget-boolean p0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mIsCompatFakeFocusAllowed:Z
 
@@ -284,7 +266,6 @@
 .method public onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 3
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mActiveDeviceConfigsSet:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
@@ -296,7 +277,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 107
     iget-object v1, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mActiveDeviceConfigsSet:Landroid/util/ArraySet;
 
     invoke-virtual {v1, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -305,7 +285,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 109
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
     move-result-object v2
@@ -316,7 +295,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 110
     invoke-virtual {p0, v1}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->readAndSaveValueFromDeviceConfig(Ljava/lang/String;)V
 
     :cond_0
@@ -331,7 +309,6 @@
 .method public final readAndSaveValueFromDeviceConfig(Ljava/lang/String;)V
     .locals 3
 
-    .line 150
     sget-object v0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->sKeyToDefaultValueMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -342,7 +319,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 154
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -436,7 +412,6 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 172
     new-instance p0, Ljava/lang/AssertionError;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -457,7 +432,6 @@
 
     throw p0
 
-    .line 156
     :pswitch_0
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -471,7 +445,6 @@
 
     goto :goto_1
 
-    .line 163
     :pswitch_1
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -485,7 +458,6 @@
 
     goto :goto_1
 
-    .line 169
     :pswitch_2
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -499,7 +471,6 @@
 
     goto :goto_1
 
-    .line 160
     :pswitch_3
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -513,7 +484,6 @@
 
     goto :goto_1
 
-    .line 166
     :pswitch_4
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -528,7 +498,6 @@
     :goto_1
     return-void
 
-    .line 152
     :cond_5
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -576,13 +545,11 @@
 
     return-void
 
-    .line 123
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->mActiveDeviceConfigsSet:Landroid/util/ArraySet;
 
     invoke-virtual {p1, p2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 124
     invoke-virtual {p0, p2}, Lcom/android/server/wm/LetterboxConfigurationDeviceConfig;->readAndSaveValueFromDeviceConfig(Ljava/lang/String;)V
 
     return-void

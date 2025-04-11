@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/accounts/TokenCache$TokenLruCache;)V
     .locals 0
 
-    .line 87
     iput-object p1, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->this$0:Lcom/android/server/accounts/TokenCache$TokenLruCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -33,7 +31,6 @@
 .method public add(Lcom/android/server/accounts/TokenCache$Key;)V
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->mKeys:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -44,7 +41,6 @@
 .method public evict()V
     .locals 3
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->mKeys:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -64,7 +60,6 @@
 
     check-cast v1, Lcom/android/server/accounts/TokenCache$Key;
 
-    .line 97
     iget-object v2, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->this$0:Lcom/android/server/accounts/TokenCache$TokenLruCache;
 
     invoke-virtual {v2, v1}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;

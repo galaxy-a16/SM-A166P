@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 106
     invoke-static {}, Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;->values()[Lcom/android/server/enterprise/plm/ProcessAdapter$TryReason;
 
     move-result-object v0

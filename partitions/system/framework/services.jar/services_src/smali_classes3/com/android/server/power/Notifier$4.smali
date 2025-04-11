@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/Notifier;)V
     .locals 0
 
-    .line 1077
     iput-object p1, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -26,12 +25,10 @@
 
     const/4 p1, 0x0
 
-    .line 1081
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    .line 1082
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p2
@@ -60,10 +57,8 @@
 
     const/16 p2, 0xaa6
 
-    .line 1081
     invoke-static {p2, p1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 1083
     iget-object p0, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-static {p0}, Lcom/android/server/power/Notifier;->-$$Nest$msendNextBroadcast(Lcom/android/server/power/Notifier;)V

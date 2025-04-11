@@ -45,7 +45,6 @@
 .method public static synthetic $values()[Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
     .locals 15
 
-    .line 156
     sget-object v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->none:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     sget-object v1, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc_dither:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
@@ -86,7 +85,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 157
     new-instance v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     const-string/jumbo v1, "none"
@@ -137,7 +135,6 @@
 
     sput-object v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->gamma_matrix:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
-    .line 158
     new-instance v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     const-string v1, "hsc48_lcg_s"
@@ -178,7 +175,6 @@
 
     sput-object v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->scl:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
-    .line 159
     new-instance v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     const-string v1, "cgc17_enc_s"
@@ -221,7 +217,6 @@
 
     sput-object v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->cgc17_con:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
-    .line 160
     new-instance v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     const-string v1, "de"
@@ -242,7 +237,6 @@
 
     sput-object v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->max:Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
-    .line 156
     invoke-static {}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->$values()[Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     move-result-object v0
@@ -255,7 +249,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    .line 165
     invoke-static {}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder$CalibCounter;->-$$Nest$sfgetnid()I
 
     move-result v0
@@ -268,15 +261,12 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 172
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 173
     iput p3, p0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id:I
 
     add-int/lit8 p3, p3, 0x1
 
-    .line 174
     invoke-static {p3}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder$CalibCounter;->-$$Nest$sfputnid(I)V
 
     return-void
@@ -285,7 +275,6 @@
 .method public constructor <init>(Ljava/lang/String;ILcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;I)V
     .locals 0
 
-    .line 169
     invoke-virtual {p3}, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id()I
 
     move-result p3
@@ -302,7 +291,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
     .locals 1
 
-    .line 156
     const-class v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -317,7 +305,6 @@
 .method public static values()[Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
     .locals 1
 
-    .line 156
     sget-object v0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->$VALUES:[Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;
 
     invoke-virtual {v0}, [Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->clone()Ljava/lang/Object;
@@ -334,7 +321,6 @@
 .method public id()I
     .locals 0
 
-    .line 178
     iget p0, p0, Lcom/android/server/display/exynos/ExynosDisplayTune$CalibOrder;->id:I
 
     return p0

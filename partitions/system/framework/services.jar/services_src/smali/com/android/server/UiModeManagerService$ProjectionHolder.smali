@@ -20,7 +20,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPackageName(Lcom/android/server/UiModeManagerService$ProjectionHolder;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mPackageName:Ljava/lang/String;
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public static bridge synthetic -$$Nest$mlinkToDeath(Lcom/android/server/UiModeManagerService$ProjectionHolder;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$ProjectionHolder;->linkToDeath()Z
 
     move-result p0
@@ -40,7 +38,6 @@
 .method public static bridge synthetic -$$Nest$munlinkToDeath(Lcom/android/server/UiModeManagerService$ProjectionHolder;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$ProjectionHolder;->unlinkToDeath()V
 
     return-void
@@ -49,19 +46,14 @@
 .method public constructor <init>(Ljava/lang/String;ILandroid/os/IBinder;Lcom/android/server/UiModeManagerService$ProjectionHolder$ProjectionReleaser;)V
     .locals 0
 
-    .line 1616
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1617
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mPackageName:Ljava/lang/String;
 
-    .line 1618
     iput p2, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mProjectionType:I
 
-    .line 1619
     iput-object p3, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mBinder:Landroid/os/IBinder;
 
-    .line 1620
     iput-object p4, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mProjectionReleaser:Lcom/android/server/UiModeManagerService$ProjectionHolder$ProjectionReleaser;
 
     return-void
@@ -70,7 +62,6 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILandroid/os/IBinder;Lcom/android/server/UiModeManagerService$ProjectionHolder$ProjectionReleaser;Lcom/android/server/UiModeManagerService$ProjectionHolder-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/UiModeManagerService$ProjectionHolder;-><init>(Ljava/lang/String;ILandroid/os/IBinder;Lcom/android/server/UiModeManagerService$ProjectionHolder$ProjectionReleaser;)V
 
     return-void
@@ -81,7 +72,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 1640
     invoke-static {}, Lcom/android/server/UiModeManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -116,7 +106,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1642
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mProjectionReleaser:Lcom/android/server/UiModeManagerService$ProjectionHolder$ProjectionReleaser;
 
     iget v1, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mProjectionType:I
@@ -133,7 +122,6 @@
 
     const/4 v0, 0x0
 
-    .line 1625
     :try_start_0
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mBinder:Landroid/os/IBinder;
 
@@ -148,7 +136,6 @@
     :catch_0
     move-exception v1
 
-    .line 1627
     invoke-static {}, Lcom/android/server/UiModeManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -181,7 +168,6 @@
 .method public final unlinkToDeath()V
     .locals 2
 
-    .line 1635
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$ProjectionHolder;->mBinder:Landroid/os/IBinder;
 
     const/4 v1, 0x0

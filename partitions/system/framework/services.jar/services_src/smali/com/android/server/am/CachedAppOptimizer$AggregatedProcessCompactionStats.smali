@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/am/CachedAppOptimizer;Ljava/lang/String;)V
     .locals 0
 
-    .line 642
     iput-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedProcessCompactionStats;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-direct {p0, p1}, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;-><init>(Lcom/android/server/am/CachedAppOptimizer;)V

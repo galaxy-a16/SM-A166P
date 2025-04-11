@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 18
     invoke-direct {p0, p1}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getAccountsByType()[Landroid/accounts/Account;
     .locals 3
 
-    .line 86
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
@@ -43,7 +41,6 @@
 .method public initContinuitySetting()V
     .locals 4
 
-    .line 23
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -62,7 +59,6 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 26
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mCurrentAccount:Landroid/accounts/Account;
 
     if-eqz v0, :cond_0
@@ -80,7 +76,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 29
     :goto_0
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/continuity/PreconditionObserver;->setContinuitySetting(I)V
 
@@ -93,7 +88,6 @@
 
     const/4 v0, 0x0
 
-    .line 47
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
@@ -122,7 +116,6 @@
     :catch_0
     move-exception p0
 
-    .line 50
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -151,7 +144,6 @@
 .method public registerContinuityObserver()V
     .locals 4
 
-    .line 57
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -178,7 +170,6 @@
 .method public registerHwSharingObserver()V
     .locals 4
 
-    .line 75
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -205,7 +196,6 @@
 .method public registerMultiControlObserver()V
     .locals 4
 
-    .line 63
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -232,7 +222,6 @@
 .method public registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
     .locals 6
 
-    .line 81
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -257,7 +246,6 @@
 .method public registerVideoCallContinuityObserver()V
     .locals 4
 
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -284,14 +272,12 @@
 .method public setContinuitySetting(I)V
     .locals 3
 
-    .line 35
     invoke-static {}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->isSupportedContinuity()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,7 +296,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -327,7 +312,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 39
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->logContinuitySettingEnable()V
 
     :cond_0

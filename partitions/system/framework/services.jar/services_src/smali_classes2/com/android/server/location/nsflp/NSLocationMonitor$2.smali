@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/nsflp/NSLocationMonitor;)V
     .locals 0
 
-    .line 474
     iput-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
@@ -28,10 +27,8 @@
 
     const-string/jumbo v1, "onSubscriptionsChanged"
 
-    .line 477
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmNetworkLock(Lcom/android/server/location/nsflp/NSLocationMonitor;)Ljava/lang/Object;
@@ -46,7 +43,6 @@
 
     move v3, v2
 
-    .line 481
     :goto_0
     :try_start_0
     iget-object v4, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
@@ -59,25 +55,21 @@
 
     if-ge v2, v4, :cond_6
 
-    .line 482
     invoke-static {v2}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object v4
 
     if-eqz v4, :cond_4
 
-    .line 484
     array-length v6, v4
 
     if-nez v6, :cond_0
 
     goto/16 :goto_1
 
-    .line 490
     :cond_0
     aget v4, v4, v1
 
-    .line 491
     iget-object v6, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v6}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmSimSubId(Lcom/android/server/location/nsflp/NSLocationMonitor;)[I
@@ -86,7 +78,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 492
     iget-object v6, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v6}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmSimSubId(Lcom/android/server/location/nsflp/NSLocationMonitor;)[I
@@ -115,7 +106,6 @@
 
     const-string v5, "NSLocationMonitor"
 
-    .line 493
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -147,7 +137,6 @@
     :cond_1
     const-string v6, "NSLocationMonitor"
 
-    .line 497
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -170,7 +159,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     iget-object v6, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v6}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmSimSubId(Lcom/android/server/location/nsflp/NSLocationMonitor;)[I
@@ -179,7 +167,6 @@
 
     aput v4, v6, v2
 
-    .line 502
     :cond_2
     iget-object v6, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -197,7 +184,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 505
     iget-object v3, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v3}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmPhoneStateListener(Lcom/android/server/location/nsflp/NSLocationMonitor;)[Landroid/telephony/PhoneStateListener;
@@ -210,7 +196,6 @@
 
     const-string v3, "NSLocationMonitor"
 
-    .line 506
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -227,7 +212,6 @@
 
     invoke-static {v3, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     iget-object v3, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v3}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmPhoneStateListener(Lcom/android/server/location/nsflp/NSLocationMonitor;)[Landroid/telephony/PhoneStateListener;
@@ -238,7 +222,6 @@
 
     invoke-virtual {v6, v3, v1}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 511
     :cond_3
     iget-object v3, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -256,7 +239,6 @@
 
     aput-object v7, v3, v2
 
-    .line 512
     iget-object v3, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v3}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmPhoneStateListener(Lcom/android/server/location/nsflp/NSLocationMonitor;)[Landroid/telephony/PhoneStateListener;
@@ -275,7 +257,6 @@
     :goto_1
     const-string v4, "NSLocationMonitor"
 
-    .line 485
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -305,17 +286,14 @@
     :cond_6
     if-eqz v3, :cond_7
 
-    .line 519
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "isInitialized"
 
-    .line 520
     invoke-virtual {v1, v2, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 522
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$2;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmNSConnectionHelper(Lcom/android/server/location/nsflp/NSLocationMonitor;)Lcom/android/server/location/nsflp/NSConnectionHelper;
@@ -326,7 +304,6 @@
 
     invoke-virtual {p0, v2, v1}, Lcom/android/server/location/nsflp/NSConnectionHelper;->onStateUpdated(Landroid/location/LocationConstants$STATE_TYPE;Landroid/os/Bundle;)V
 
-    .line 524
     :cond_7
     monitor-exit v0
 

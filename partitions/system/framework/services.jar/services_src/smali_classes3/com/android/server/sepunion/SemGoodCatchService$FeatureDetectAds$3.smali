@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;)V
     .locals 0
 
-    .line 826
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$3;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onStart(Ljava/lang/String;)V
     .locals 3
 
-    .line 829
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -48,7 +46,6 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 830
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$3;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;->on()V
@@ -59,7 +56,6 @@
 .method public onStop(Ljava/lang/String;)V
     .locals 3
 
-    .line 835
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -80,7 +76,6 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 836
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds$3;->this$1:Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;
 
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureDetectAds;->off()V

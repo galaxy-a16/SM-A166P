@@ -13,13 +13,10 @@
 .method public constructor <init>(ILandroid/content/ComponentName;)V
     .locals 0
 
-    .line 5726
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5727
     iput p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
 
-    .line 5728
     iput-object p2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
     return-void
@@ -28,7 +25,6 @@
 .method public synthetic constructor <init>(ILandroid/content/ComponentName;Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;-><init>(ILandroid/content/ComponentName;)V
 
     return-void
@@ -52,7 +48,6 @@
 
     return v1
 
-    .line 5743
     :cond_1
     const-class v2, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;
 
@@ -64,11 +59,9 @@
 
     return v1
 
-    .line 5746
     :cond_2
     check-cast p1, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;
 
-    .line 5747
     iget v2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
 
     iget v3, p1, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
@@ -77,20 +70,17 @@
 
     return v1
 
-    .line 5750
     :cond_3
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
     if-nez p0, :cond_4
 
-    .line 5751
     iget-object p0, p1, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
     if-eqz p0, :cond_5
 
     return v1
 
-    .line 5754
     :cond_4
     iget-object p1, p1, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
@@ -109,7 +99,6 @@
 .method public getProfile()Landroid/os/UserHandle;
     .locals 0
 
-    .line 5732
     iget p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
 
     invoke-static {p0}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
@@ -122,17 +111,14 @@
 .method public hashCode()I
     .locals 1
 
-    .line 5762
     iget v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 5763
     iget-object p0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
     if-eqz p0, :cond_0
 
-    .line 5764
     invoke-virtual {p0}, Landroid/content/ComponentName;->hashCode()I
 
     move-result p0
@@ -151,7 +137,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 5770
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -174,7 +159,6 @@
 
     iget v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
 
-    .line 5771
     invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v1

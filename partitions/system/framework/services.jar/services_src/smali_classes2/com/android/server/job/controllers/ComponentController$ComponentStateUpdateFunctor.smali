@@ -16,7 +16,6 @@
 .method public static bridge synthetic -$$Nest$mreset(Lcom/android/server/job/controllers/ComponentController$ComponentStateUpdateFunctor;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/job/controllers/ComponentController$ComponentStateUpdateFunctor;->reset()V
 
     return-void
@@ -25,12 +24,10 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/ComponentController;)V
     .locals 0
 
-    .line 234
     iput-object p1, p0, Lcom/android/server/job/controllers/ComponentController$ComponentStateUpdateFunctor;->this$0:Lcom/android/server/job/controllers/ComponentController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 235
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
@@ -45,7 +42,6 @@
 .method public accept(Lcom/android/server/job/controllers/JobStatus;)V
     .locals 1
 
-    .line 241
     iget-object v0, p0, Lcom/android/server/job/controllers/ComponentController$ComponentStateUpdateFunctor;->this$0:Lcom/android/server/job/controllers/ComponentController;
 
     invoke-static {v0, p1}, Lcom/android/server/job/controllers/ComponentController;->-$$Nest$mupdateComponentEnabledStateLocked(Lcom/android/server/job/controllers/ComponentController;Lcom/android/server/job/controllers/JobStatus;)Z
@@ -54,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 242
     iget-object p0, p0, Lcom/android/server/job/controllers/ComponentController$ComponentStateUpdateFunctor;->mChangedJobs:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
@@ -66,7 +61,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 234
     check-cast p1, Lcom/android/server/job/controllers/JobStatus;
 
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/ComponentController$ComponentStateUpdateFunctor;->accept(Lcom/android/server/job/controllers/JobStatus;)V
@@ -77,7 +71,6 @@
 .method public final reset()V
     .locals 0
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/job/controllers/ComponentController$ComponentStateUpdateFunctor;->mChangedJobs:Landroid/util/ArraySet;
 
     invoke-virtual {p0}, Landroid/util/ArraySet;->clear()V

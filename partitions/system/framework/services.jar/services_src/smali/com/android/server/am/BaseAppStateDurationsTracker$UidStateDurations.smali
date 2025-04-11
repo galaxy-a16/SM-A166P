@@ -9,7 +9,6 @@
 
     const-string v0, ""
 
-    .line 263
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;-><init>(ILjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
 
     return-void

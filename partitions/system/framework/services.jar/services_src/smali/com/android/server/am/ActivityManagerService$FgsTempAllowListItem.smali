@@ -17,19 +17,14 @@
 .method public constructor <init>(JILjava/lang/String;I)V
     .locals 0
 
-    .line 1644
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1645
     iput-wide p1, p0, Lcom/android/server/am/ActivityManagerService$FgsTempAllowListItem;->mDuration:J
 
-    .line 1646
     iput p3, p0, Lcom/android/server/am/ActivityManagerService$FgsTempAllowListItem;->mReasonCode:I
 
-    .line 1647
     iput-object p4, p0, Lcom/android/server/am/ActivityManagerService$FgsTempAllowListItem;->mReason:Ljava/lang/String;
 
-    .line 1648
     iput p5, p0, Lcom/android/server/am/ActivityManagerService$FgsTempAllowListItem;->mCallingUid:I
 
     return-void
@@ -40,7 +35,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 1652
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,7 +53,6 @@
 
     iget v1, p0, Lcom/android/server/am/ActivityManagerService$FgsTempAllowListItem;->mCallingUid:I
 
-    .line 1653
     invoke-static {v1}, Landroid/os/UserHandle;->formatUid(I)Ljava/lang/String;
 
     move-result-object v1
@@ -72,7 +65,6 @@
 
     iget v1, p0, Lcom/android/server/am/ActivityManagerService$FgsTempAllowListItem;->mReasonCode:I
 
-    .line 1654
     invoke-static {v1}, Landroid/os/PowerExemptionManager;->reasonCodeToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -91,7 +83,6 @@
 
     move-result-object p0
 
-    .line 1652
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     return-void

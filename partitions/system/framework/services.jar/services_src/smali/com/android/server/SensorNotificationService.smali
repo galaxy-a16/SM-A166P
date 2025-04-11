@@ -25,7 +25,6 @@
 
     const-string v0, "SensorNotificationService"
 
-    .line 62
     invoke-virtual {p1, v0}, Landroid/content/Context;->createAttributionContext(Ljava/lang/String;)Landroid/content/Context;
 
     move-result-object p1
@@ -34,10 +33,8 @@
 
     const-wide/32 v0, -0x1b7740
 
-    .line 59
     iput-wide v0, p0, Lcom/android/server/SensorNotificationService;->mLocalGeomagneticFieldUpdateTime:J
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -52,7 +49,6 @@
 .method public final broadcastDynamicSensorChanged()V
     .locals 2
 
-    .line 99
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.DYNAMIC_SENSOR_CHANGED"
@@ -61,10 +57,8 @@
 
     const/high16 v1, 0x40000000    # 2.0f
 
-    .line 100
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 101
     iget-object p0, p0, Lcom/android/server/SensorNotificationService;->mContext:Landroid/content/Context;
 
     sget-object v1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -77,7 +71,6 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -88,7 +81,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/SensorNotificationService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "sensor"
@@ -103,7 +95,6 @@
 
     const/16 v1, 0x20
 
-    .line 73
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v0
@@ -114,7 +105,6 @@
 
     goto :goto_0
 
-    .line 77
     :cond_0
     iget-object v1, p0, Lcom/android/server/SensorNotificationService;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -128,12 +118,10 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 84
     iget-object p1, p0, Lcom/android/server/SensorNotificationService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "location"
 
-    .line 85
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -157,7 +145,6 @@
 
     move-object v5, p0
 
-    .line 89
     invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
     :cond_3
@@ -168,7 +155,6 @@
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 9
 
-    .line 121
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
@@ -189,7 +175,6 @@
 
     return-void
 
-    .line 126
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -207,13 +192,11 @@
 
     return-void
 
-    .line 130
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
 
-    .line 133
     invoke-virtual {p0}, Lcom/android/server/SensorNotificationService;->useMockedLocation()Z
 
     move-result v0
@@ -232,11 +215,9 @@
 
     goto :goto_0
 
-    .line 137
     :cond_2
     new-instance v0, Landroid/hardware/GeomagneticField;
 
-    .line 138
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v1
@@ -249,7 +230,6 @@
 
     double-to-float v3, v3
 
-    .line 139
     invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v7
@@ -260,7 +240,6 @@
 
     invoke-direct/range {v1 .. v6}, Landroid/hardware/GeomagneticField;-><init>(FFFJ)V
 
-    .line 146
     :try_start_0
     invoke-virtual {v0}, Landroid/hardware/GeomagneticField;->getFieldStrength()F
 
@@ -270,7 +249,6 @@
 
     div-float/2addr p1, v1
 
-    .line 147
     invoke-virtual {v0}, Landroid/hardware/GeomagneticField;->getDeclination()F
 
     move-result v1
@@ -287,7 +265,6 @@
 
     double-to-float v1, v1
 
-    .line 148
     invoke-virtual {v0}, Landroid/hardware/GeomagneticField;->getInclination()F
 
     move-result v0
@@ -300,19 +277,16 @@
 
     double-to-float v0, v7
 
-    .line 145
     invoke-static {p1, v1, v0}, Landroid/hardware/SensorAdditionalInfo;->createLocalGeomagneticField(FFF)Landroid/hardware/SensorAdditionalInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/SensorNotificationService;->mSensorManager:Landroid/hardware/SensorManager;
 
     invoke-virtual {v0, p1}, Landroid/hardware/SensorManager;->setOperationParameter(Landroid/hardware/SensorAdditionalInfo;)Z
 
-    .line 151
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -328,7 +302,6 @@
 
     const-string p1, "Invalid local geomagnetic field, ignore."
 
-    .line 154
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -339,28 +312,24 @@
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 1
 
-    .line 107
     iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     iget-object v0, p0, Lcom/android/server/SensorNotificationService;->mMetaSensor:Landroid/hardware/Sensor;
 
     if-ne p1, v0, :cond_0
 
-    .line 108
     invoke-virtual {p0}, Lcom/android/server/SensorNotificationService;->broadcastDynamicSensorChanged()V
 
     :cond_0
@@ -370,7 +339,6 @@
 .method public onStart()V
     .locals 1
 
-    .line 67
     const-class v0, Lcom/android/server/SensorNotificationService;
 
     invoke-static {v0, p0}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
@@ -381,7 +349,6 @@
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -392,7 +359,6 @@
 
     const-string v0, "false"
 
-    .line 168
     invoke-static {p0, v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

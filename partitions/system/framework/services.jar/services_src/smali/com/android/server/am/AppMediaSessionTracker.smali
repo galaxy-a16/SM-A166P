@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$6H7ZQOjWd9RnRdWp2OWByVGdIhU(Lcom/android/server/am/AppMediaSessionTracker;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppMediaSessionTracker;->handleMediaSessionChanged(Ljava/util/List;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$monBgMediaSessionMonitorEnabled(Lcom/android/server/am/AppMediaSessionTracker;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppMediaSessionTracker;->onBgMediaSessionMonitorEnabled(Z)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$mtrimDurations(Lcom/android/server/am/AppMediaSessionTracker;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/AppMediaSessionTracker;->trimDurations()V
 
     return-void
@@ -44,7 +41,6 @@
 
     const/4 v0, 0x0
 
-    .line 64
     invoke-direct {p0, p1, p2, v0, v0}, Lcom/android/server/am/AppMediaSessionTracker;-><init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
 
     return-void
@@ -53,24 +49,20 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
     .locals 0
 
-    .line 69
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/am/BaseAppStateDurationsTracker;-><init>(Landroid/content/Context;Lcom/android/server/am/AppRestrictionController;Ljava/lang/reflect/Constructor;Ljava/lang/Object;)V
 
-    .line 57
     new-instance p1, Lcom/android/server/am/AppMediaSessionTracker$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/am/AppMediaSessionTracker$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/AppMediaSessionTracker;)V
 
     iput-object p1, p0, Lcom/android/server/am/AppMediaSessionTracker;->mSessionsChangedListener:Landroid/media/session/MediaSessionManager$OnActiveSessionsChangedListener;
 
-    .line 61
     new-instance p1, Lcom/android/internal/app/ProcessMap;
 
     invoke-direct {p1}, Lcom/android/internal/app/ProcessMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppMediaSessionTracker;->mTmpMediaControllers:Lcom/android/internal/app/ProcessMap;
 
-    .line 70
     new-instance p1, Landroid/os/HandlerExecutor;
 
     iget-object p2, p0, Lcom/android/server/am/BaseAppStateTracker;->mBgHandler:Landroid/os/Handler;
@@ -79,7 +71,6 @@
 
     iput-object p1, p0, Lcom/android/server/am/AppMediaSessionTracker;->mHandlerExecutor:Landroid/os/HandlerExecutor;
 
-    .line 71
     iget-object p1, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     new-instance p2, Lcom/android/server/am/AppMediaSessionTracker$AppMediaSessionPolicy;
@@ -96,7 +87,6 @@
 .method public createAppStateEvents(ILjava/lang/String;)Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
     .locals 1
 
-    .line 76
     new-instance v0, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
 
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
@@ -115,7 +105,6 @@
 .method public createAppStateEvents(Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;)Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
     .locals 0
 
-    .line 81
     new-instance p0, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
 
     invoke-direct {p0, p1}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;-><init>(Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;)V
@@ -126,7 +115,6 @@
 .method public bridge synthetic createAppStateEvents(ILjava/lang/String;)Lcom/android/server/am/BaseAppStateEvents;
     .locals 0
 
-    .line 50
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppMediaSessionTracker;->createAppStateEvents(ILjava/lang/String;)Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
 
     move-result-object p0
@@ -137,7 +125,6 @@
 .method public bridge synthetic createAppStateEvents(Lcom/android/server/am/BaseAppStateEvents;)Lcom/android/server/am/BaseAppStateEvents;
     .locals 0
 
-    .line 50
     check-cast p1, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppMediaSessionTracker;->createAppStateEvents(Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;)Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
@@ -150,15 +137,12 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 171
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "APP MEDIA SESSION TRACKER:"
 
-    .line 172
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 173
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,7 +165,6 @@
 .method public getType()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x4
 
     return p0
@@ -198,18 +181,15 @@
 
     if-eqz p1, :cond_6
 
-    .line 96
     iget-object v10, v0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 97
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v11
 
-    .line 98
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v13
@@ -227,12 +207,10 @@
 
     check-cast v1, Landroid/media/session/MediaController;
 
-    .line 99
     invoke-virtual {v1}, Landroid/media/session/MediaController;->getPackageName()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 100
     invoke-virtual {v1}, Landroid/media/session/MediaController;->getSessionToken()Landroid/media/session/MediaSession$Token;
 
     move-result-object v1
@@ -241,7 +219,6 @@
 
     move-result v15
 
-    .line 101
     iget-object v1, v0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
     invoke-virtual {v1, v15, v14}, Lcom/android/server/am/UidProcessMap;->get(ILjava/lang/String;)Ljava/lang/Object;
@@ -252,17 +229,14 @@
 
     if-nez v1, :cond_0
 
-    .line 103
     invoke-virtual {v0, v15, v14}, Lcom/android/server/am/AppMediaSessionTracker;->createAppStateEvents(ILjava/lang/String;)Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
 
     move-result-object v1
 
-    .line 104
     iget-object v2, v0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
     invoke-virtual {v2, v15, v14, v1}, Lcom/android/server/am/UidProcessMap;->put(ILjava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
     :cond_0
     invoke-virtual {v1}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;->isActive()Z
 
@@ -270,10 +244,8 @@
 
     if-nez v2, :cond_1
 
-    .line 107
     invoke-virtual {v1, v9, v11, v12}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;->addEvent(ZJ)V
 
-    .line 108
     iget v2, v1, Lcom/android/server/am/BaseAppStateEvents;->mUid:I
 
     iget-object v3, v1, Lcom/android/server/am/BaseAppStateEvents;->mPackageName:Ljava/lang/String;
@@ -288,7 +260,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/am/BaseAppStateTracker;->notifyListenersOnStateChange(ILjava/lang/String;ZJI)V
 
-    .line 112
     :cond_1
     iget-object v1, v0, Lcom/android/server/am/AppMediaSessionTracker;->mTmpMediaControllers:Lcom/android/internal/app/ProcessMap;
 
@@ -298,16 +269,13 @@
 
     goto :goto_0
 
-    .line 121
     :cond_2
     iget-object v1, v0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
-    .line 122
     invoke-virtual {v1}, Lcom/android/server/am/UidProcessMap;->getMap()Landroid/util/SparseArray;
 
     move-result-object v13
 
-    .line 123
     invoke-virtual {v13}, Landroid/util/SparseArray;->size()I
 
     move-result v1
@@ -319,7 +287,6 @@
     :goto_1
     if-ltz v14, :cond_5
 
-    .line 124
     invoke-virtual {v13, v14}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -328,7 +295,6 @@
 
     check-cast v15, Landroid/util/ArrayMap;
 
-    .line 125
     invoke-virtual {v15}, Landroid/util/ArrayMap;->size()I
 
     move-result v1
@@ -340,14 +306,12 @@
     :goto_2
     if-ltz v7, :cond_4
 
-    .line 126
     invoke-virtual {v15, v7}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
 
-    .line 127
     invoke-virtual {v1}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;->isActive()Z
 
     move-result v2
@@ -360,17 +324,14 @@
 
     iget v4, v1, Lcom/android/server/am/BaseAppStateEvents;->mUid:I
 
-    .line 128
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/app/ProcessMap;->get(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v2, :cond_3
 
-    .line 130
     invoke-virtual {v1, v8, v11, v12}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;->addEvent(ZJ)V
 
-    .line 131
     iget v2, v1, Lcom/android/server/am/BaseAppStateEvents;->mUid:I
 
     iget-object v3, v1, Lcom/android/server/am/BaseAppStateEvents;->mPackageName:Ljava/lang/String;
@@ -404,13 +365,11 @@
 
     goto :goto_1
 
-    .line 136
     :cond_5
     monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 137
     iget-object v0, v0, Lcom/android/server/am/AppMediaSessionTracker;->mTmpMediaControllers:Lcom/android/internal/app/ProcessMap;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ProcessMap;->clear()V
@@ -420,7 +379,6 @@
     :catchall_0
     move-exception v0
 
-    .line 136
     :try_start_1
     monitor-exit v10
     :try_end_1
@@ -428,27 +386,22 @@
 
     throw v0
 
-    .line 139
     :cond_6
     iget-object v10, v0, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 141
     :try_start_2
     iget-object v1, v0, Lcom/android/server/am/BaseAppStateEventsTracker;->mPkgEvents:Lcom/android/server/am/UidProcessMap;
 
-    .line 142
     invoke-virtual {v1}, Lcom/android/server/am/UidProcessMap;->getMap()Landroid/util/SparseArray;
 
     move-result-object v11
 
-    .line 143
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v12
 
-    .line 144
     invoke-virtual {v11}, Landroid/util/SparseArray;->size()I
 
     move-result v1
@@ -460,7 +413,6 @@
     :goto_4
     if-ltz v14, :cond_9
 
-    .line 145
     invoke-virtual {v11, v14}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -469,7 +421,6 @@
 
     check-cast v15, Landroid/util/ArrayMap;
 
-    .line 146
     invoke-virtual {v15}, Landroid/util/ArrayMap;->size()I
 
     move-result v1
@@ -481,24 +432,20 @@
     :goto_5
     if-ltz v7, :cond_8
 
-    .line 147
     invoke-virtual {v15, v7}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;
 
-    .line 148
     invoke-virtual {v1}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;->isActive()Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    .line 149
     invoke-virtual {v1, v8, v12, v13}, Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;->addEvent(ZJ)V
 
-    .line 150
     iget v2, v1, Lcom/android/server/am/BaseAppStateEvents;->mUid:I
 
     iget-object v3, v1, Lcom/android/server/am/BaseAppStateEvents;->mPackageName:Ljava/lang/String;
@@ -532,7 +479,6 @@
 
     goto :goto_4
 
-    .line 155
     :cond_9
     monitor-exit v10
 
@@ -554,7 +500,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 86
     iget-object p1, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {p1}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getMediaSessionManager()Landroid/media/session/MediaSessionManager;
@@ -573,7 +518,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_0
     iget-object p1, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
@@ -592,12 +536,10 @@
 .method public final trimDurations()V
     .locals 4
 
-    .line 160
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 161
     iget-object v2, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {v2}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPolicy()Lcom/android/server/am/BaseAppStatePolicy;

@@ -39,7 +39,6 @@
 .method public static synthetic $values()[Lcom/android/server/app/GameManagerService$FrameRate;
     .locals 12
 
-    .line 403
     sget-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_DEFAULT:Lcom/android/server/app/GameManagerService$FrameRate;
 
     sget-object v1, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_30:Lcom/android/server/app/GameManagerService$FrameRate;
@@ -74,7 +73,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 404
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const-string v1, "FPS_DEFAULT"
@@ -85,7 +83,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_DEFAULT:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 405
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/4 v1, 0x1
@@ -98,7 +95,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_30:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 406
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/4 v1, 0x2
@@ -111,7 +107,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_36:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 407
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/4 v1, 0x3
@@ -124,7 +119,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_40:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 408
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/4 v1, 0x4
@@ -137,7 +131,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_45:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 409
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/4 v1, 0x5
@@ -150,7 +143,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_48:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 410
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/4 v1, 0x6
@@ -163,7 +155,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_60:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 411
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/4 v1, 0x7
@@ -176,7 +167,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_72:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 412
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/16 v1, 0x8
@@ -189,7 +179,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_90:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 413
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/16 v1, 0x9
@@ -202,7 +191,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_120:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 414
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/16 v1, 0xa
@@ -215,7 +203,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_144:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 415
     new-instance v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     const/16 v1, 0xb
@@ -228,7 +215,6 @@
 
     sput-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->FPS_INVALID:Lcom/android/server/app/GameManagerService$FrameRate;
 
-    .line 403
     invoke-static {}, Lcom/android/server/app/GameManagerService$FrameRate;->$values()[Lcom/android/server/app/GameManagerService$FrameRate;
 
     move-result-object v0
@@ -241,10 +227,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 419
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 420
     iput p3, p0, Lcom/android/server/app/GameManagerService$FrameRate;->fps:I
 
     return-void
@@ -253,7 +237,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/app/GameManagerService$FrameRate;
     .locals 1
 
-    .line 403
     const-class v0, Lcom/android/server/app/GameManagerService$FrameRate;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -268,7 +251,6 @@
 .method public static values()[Lcom/android/server/app/GameManagerService$FrameRate;
     .locals 1
 
-    .line 403
     sget-object v0, Lcom/android/server/app/GameManagerService$FrameRate;->$VALUES:[Lcom/android/server/app/GameManagerService$FrameRate;
 
     invoke-virtual {v0}, [Lcom/android/server/app/GameManagerService$FrameRate;->clone()Ljava/lang/Object;

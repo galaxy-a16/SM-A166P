@@ -15,16 +15,12 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 0
 
-    .line 36
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mContext:Landroid/content/Context;
 
-    .line 38
     iput-object p2, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mType:Ljava/lang/String;
 
-    .line 39
     iput p3, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mUserId:I
 
     return-void
@@ -33,7 +29,6 @@
 .method public static createAction(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;
     .locals 1
 
-    .line 43
     new-instance v0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
@@ -44,7 +39,6 @@
 .method public static getStringResId(Ljava/lang/String;)I
     .locals 1
 
-    .line 47
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     const-string/jumbo v0, "reduce_brightness"
@@ -67,7 +61,6 @@
 
     return p0
 
-    .line 53
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -88,7 +81,6 @@
 .method public performCornerAction(I)V
     .locals 4
 
-    .line 59
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -105,7 +97,6 @@
 
     move-result p1
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mType:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -128,7 +119,6 @@
 
     add-int/lit8 p1, p1, 0x11
 
-    .line 64
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -137,19 +127,16 @@
 
     const/16 v2, 0xff
 
-    .line 65
     invoke-static {p1, v2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
     iget p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mUserId:I
 
-    .line 64
     invoke-static {v0, v1, p1, p0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     goto :goto_0
 
-    .line 73
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -162,21 +149,18 @@
     :cond_1
     add-int/lit8 p1, p1, -0x11
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 70
     invoke-static {p1, v2}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
     iget p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/BrightnessAction;->mUserId:I
 
-    .line 69
     invoke-static {v0, v1, p1, p0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     :goto_0

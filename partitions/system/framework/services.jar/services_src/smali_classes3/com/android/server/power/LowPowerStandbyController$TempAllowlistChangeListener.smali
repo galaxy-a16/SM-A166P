@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/LowPowerStandbyController;)V
     .locals 0
 
-    .line 1417
     iput-object p1, p0, Lcom/android/server/power/LowPowerStandbyController$TempAllowlistChangeListener;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAppAdded(I)V
     .locals 1
 
-    .line 1421
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$TempAllowlistChangeListener;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     const/4 v0, 0x2
@@ -40,7 +38,6 @@
 .method public onAppRemoved(I)V
     .locals 1
 
-    .line 1426
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$TempAllowlistChangeListener;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     const/4 v0, 0x2

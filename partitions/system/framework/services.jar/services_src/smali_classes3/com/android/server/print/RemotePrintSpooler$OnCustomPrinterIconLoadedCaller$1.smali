@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller;)V
     .locals 0
 
-    .line 810
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller;
 
     const/4 p1, 0x0
@@ -26,7 +25,6 @@
 .method public onCustomPrinterIconCached(I)V
     .locals 1
 
-    .line 813
     iget-object p0, p0, Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller$1;->this$0:Lcom/android/server/print/RemotePrintSpooler$OnCustomPrinterIconLoadedCaller;
 
     const/4 v0, 0x0

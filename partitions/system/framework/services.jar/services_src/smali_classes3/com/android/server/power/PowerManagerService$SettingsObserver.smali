@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 7720
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 7721
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -27,7 +25,6 @@
 
     const-string p1, "PowerManagerService"
 
-    .line 7727
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -44,7 +41,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7729
     iget-object p1, p0, Lcom/android/server/power/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p1}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/PowerManagerService;)Ljava/lang/Object;
@@ -53,13 +49,11 @@
 
     monitor-enter p1
 
-    .line 7730
     :try_start_0
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerService;->handleSettingsChangedLocked()V
 
-    .line 7731
     monitor-exit p1
 
     return-void

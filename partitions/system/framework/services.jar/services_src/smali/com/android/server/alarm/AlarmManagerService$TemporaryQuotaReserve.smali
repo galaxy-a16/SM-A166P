@@ -13,17 +13,14 @@
 .method public constructor <init>(J)V
     .locals 1
 
-    .line 466
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 462
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
-    .line 467
     iput-wide p1, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mMaxDuration:J
 
     return-void
@@ -34,7 +31,6 @@
 .method public cleanUpExpiredQuotas(J)V
     .locals 3
 
-    .line 529
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -46,7 +42,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 530
     iget-object v1, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -55,14 +50,12 @@
 
     check-cast v1, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;
 
-    .line 531
     iget-wide v1, v1, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->expirationTime:J
 
     cmp-long v1, v1, p1
 
     if-gez v1, :cond_0
 
-    .line 532
     iget-object v1, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
@@ -79,12 +72,10 @@
 .method public dump(Landroid/util/IndentingPrintWriter;J)V
     .locals 5
 
-    .line 552
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const/4 v0, 0x0
 
-    .line 553
     :goto_0
     iget-object v1, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
@@ -94,7 +85,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 554
     iget-object v1, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -103,7 +93,6 @@
 
     check-cast v1, Landroid/content/pm/UserPackage;
 
-    .line 555
     iget-object v2, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -112,31 +101,26 @@
 
     check-cast v2, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;
 
-    .line 556
     iget-object v3, v1, Landroid/content/pm/UserPackage;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, ", u"
 
-    .line 557
     invoke-virtual {p1, v3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 558
     iget v1, v1, Landroid/content/pm/UserPackage;->userId:I
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(I)V
 
     const-string v1, ": "
 
-    .line 559
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     if-nez v2, :cond_0
 
     const-string v1, "--"
 
-    .line 561
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     goto :goto_1
@@ -144,35 +128,28 @@
     :cond_0
     const-string/jumbo v1, "quota: "
 
-    .line 563
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 564
     iget v1, v2, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->remainingQuota:I
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(I)V
 
     const-string v1, ", expiration: "
 
-    .line 565
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 566
     iget-wide v3, v2, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->expirationTime:J
 
     invoke-static {v3, v4, p2, p3, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
     const-string v1, " last used: "
 
-    .line 567
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 568
     iget-wide v1, v2, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->lastUsage:J
 
     invoke-static {v1, v2, p2, p3, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 570
     :goto_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
@@ -180,7 +157,6 @@
 
     goto :goto_0
 
-    .line 572
     :cond_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -190,12 +166,10 @@
 .method public hasQuota(Ljava/lang/String;IJ)Z
     .locals 0
 
-    .line 486
     invoke-static {p2, p1}, Landroid/content/pm/UserPackage;->of(ILjava/lang/String;)Landroid/content/pm/UserPackage;
 
     move-result-object p1
 
-    .line 487
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -206,7 +180,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 489
     iget p1, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->remainingQuota:I
 
     if-lez p1, :cond_0
@@ -231,12 +204,10 @@
 .method public recordUsage(Ljava/lang/String;IJ)V
     .locals 7
 
-    .line 498
     invoke-static {p2, p1}, Landroid/content/pm/UserPackage;->of(ILjava/lang/String;)Landroid/content/pm/UserPackage;
 
     move-result-object v0
 
-    .line 499
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -253,7 +224,6 @@
 
     if-nez p0, :cond_0
 
-    .line 502
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -280,7 +250,6 @@
 
     return-void
 
-    .line 508
     :cond_0
     iget-wide v3, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->lastUsage:J
 
@@ -288,14 +257,12 @@
 
     if-lez v3, :cond_3
 
-    .line 509
     iget v3, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->remainingQuota:I
 
     const-string v4, " for package: "
 
     if-gtz v3, :cond_1
 
-    .line 510
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -328,7 +295,6 @@
 
     goto :goto_0
 
-    .line 513
     :cond_1
     iget-wide v5, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->expirationTime:J
 
@@ -336,7 +302,6 @@
 
     if-gez v5, :cond_2
 
-    .line 514
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -372,10 +337,8 @@
     :cond_2
     add-int/lit8 v3, v3, -0x1
 
-    .line 518
     iput v3, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->remainingQuota:I
 
-    .line 523
     :goto_0
     iput-wide p3, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->lastUsage:J
 
@@ -386,12 +349,10 @@
 .method public removeForPackage(Ljava/lang/String;I)V
     .locals 0
 
-    .line 547
     invoke-static {p2, p1}, Landroid/content/pm/UserPackage;->of(ILjava/lang/String;)Landroid/content/pm/UserPackage;
 
     move-result-object p1
 
-    .line 548
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -402,7 +363,6 @@
 .method public removeForUser(I)V
     .locals 2
 
-    .line 538
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -414,7 +374,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 539
     iget-object v1, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -423,12 +382,10 @@
 
     check-cast v1, Landroid/content/pm/UserPackage;
 
-    .line 540
     iget v1, v1, Landroid/content/pm/UserPackage;->userId:I
 
     if-ne v1, p1, :cond_0
 
-    .line 541
     iget-object v1, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
@@ -449,13 +406,11 @@
 
     return-void
 
-    .line 474
     :cond_0
     invoke-static {p2, p1}, Landroid/content/pm/UserPackage;->of(ILjava/lang/String;)Landroid/content/pm/UserPackage;
 
     move-result-object p1
 
-    .line 475
     iget-object p2, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {p2, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -466,23 +421,19 @@
 
     if-nez p2, :cond_1
 
-    .line 477
     new-instance p2, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;
 
     const/4 v0, 0x0
 
     invoke-direct {p2, v0}, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;-><init>(Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo-IA;)V
 
-    .line 478
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mQuotaBuffer:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 480
     :cond_1
     iput p3, p2, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve$QuotaInfo;->remainingQuota:I
 
-    .line 481
     iget-wide p0, p0, Lcom/android/server/alarm/AlarmManagerService$TemporaryQuotaReserve;->mMaxDuration:J
 
     add-long/2addr p4, p0

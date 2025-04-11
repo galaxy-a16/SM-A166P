@@ -23,7 +23,6 @@
 
     const/16 v2, 0x2710
 
-    .line 774
     invoke-direct {p0, v2, v0, v1}, Lcom/android/server/desktopmode/HardwareManager$DockState;-><init>(IZLjava/lang/String;)V
 
     return-void
@@ -34,7 +33,6 @@
 
     const/4 v0, 0x0
 
-    .line 778
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/server/desktopmode/HardwareManager$DockState;-><init>(IZLjava/lang/String;Z)V
 
     return-void
@@ -43,19 +41,14 @@
 .method public constructor <init>(IZLjava/lang/String;Z)V
     .locals 0
 
-    .line 781
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 782
     iput p1, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mType:I
 
-    .line 783
     iput-boolean p2, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mDesktopModeSupported:Z
 
-    .line 784
     iput-object p3, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mRawDockUsbpdIds:Ljava/lang/String;
 
-    .line 785
     iput-boolean p4, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mIsAdapter:Z
 
     return-void
@@ -66,7 +59,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 857
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,7 +175,6 @@
 .method public getType()I
     .locals 0
 
-    .line 789
     iget p0, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mType:I
 
     return p0
@@ -192,7 +183,6 @@
 .method public isAdapter()Z
     .locals 0
 
-    .line 809
     iget-boolean p0, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mIsAdapter:Z
 
     return p0
@@ -201,7 +191,6 @@
 .method public isDesktopModeSupported()Z
     .locals 0
 
-    .line 793
     iget-boolean p0, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mDesktopModeSupported:Z
 
     return p0
@@ -210,7 +199,6 @@
 .method public isDexPad()Z
     .locals 1
 
-    .line 805
     iget p0, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mType:I
 
     const/16 v0, 0x2714
@@ -239,7 +227,6 @@
 .method public isDexStation()Z
     .locals 1
 
-    .line 801
     iget p0, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mType:I
 
     const/16 v0, 0x2711
@@ -260,7 +247,6 @@
 .method public isRawDockUsbpdIdSupported()Z
     .locals 1
 
-    .line 813
     iget-object p0, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mRawDockUsbpdIds:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/HardwareManager;->-$$Nest$smresolveDockType(Ljava/lang/String;)I
@@ -285,7 +271,6 @@
 .method public isUndocked()Z
     .locals 1
 
-    .line 797
     iget p0, p0, Lcom/android/server/desktopmode/HardwareManager$DockState;->mType:I
 
     const/16 v0, 0x2710
@@ -306,7 +291,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 817
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

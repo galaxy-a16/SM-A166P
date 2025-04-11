@@ -40,7 +40,6 @@
 .method public static synthetic $r8$lambda$g0NCFQKIsOXZJYC9NsgNH1dA2s4(Lcom/android/server/desktopmode/EmergencyModeBlocker;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->updateBlockerRegistration()V
 
     return-void
@@ -49,7 +48,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEmergencyModeEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mEmergencyModeEnabledInSettings:Z
 
     return p0
@@ -58,7 +56,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLimitAppsAndHomeScreenEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mLimitAppsAndHomeScreenEnabledInSettings:Z
 
     return p0
@@ -67,7 +64,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMpsmEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mMpsmEnabledInSettings:Z
 
     return p0
@@ -76,7 +72,6 @@
 .method public static bridge synthetic -$$Nest$fputmEmergencyModeEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mEmergencyModeEnabledInSettings:Z
 
     return-void
@@ -85,7 +80,6 @@
 .method public static bridge synthetic -$$Nest$fputmEnabledInBroadcast(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mEnabledInBroadcast:Z
 
     return-void
@@ -94,7 +88,6 @@
 .method public static bridge synthetic -$$Nest$fputmLimitAppsAndHomeScreenEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mLimitAppsAndHomeScreenEnabledInSettings:Z
 
     return-void
@@ -103,7 +96,6 @@
 .method public static bridge synthetic -$$Nest$fputmMpsmEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mMpsmEnabledInSettings:Z
 
     return-void
@@ -112,7 +104,6 @@
 .method public static bridge synthetic -$$Nest$misEmergencyModeEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->isEmergencyModeEnabledInSettings()Z
 
     move-result p0
@@ -123,7 +114,6 @@
 .method public static bridge synthetic -$$Nest$misLimitAppsAndHomeScreenEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->isLimitAppsAndHomeScreenEnabledInSettings()Z
 
     move-result p0
@@ -134,7 +124,6 @@
 .method public static bridge synthetic -$$Nest$misMpsmEnabledInSettings(Lcom/android/server/desktopmode/EmergencyModeBlocker;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->isMpsmEnabledInSettings()Z
 
     move-result p0
@@ -145,7 +134,6 @@
 .method public static bridge synthetic -$$Nest$mscheduleUpdateBlockerRegistration(Lcom/android/server/desktopmode/EmergencyModeBlocker;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->scheduleUpdateBlockerRegistration()V
 
     return-void
@@ -154,7 +142,6 @@
 .method public static bridge synthetic -$$Nest$mscheduleUpdateBlockerRegistration(Lcom/android/server/desktopmode/EmergencyModeBlocker;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->scheduleUpdateBlockerRegistration(I)V
 
     return-void
@@ -163,7 +150,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -172,7 +158,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 20
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,10 +186,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/desktopmode/IStateManager;Lcom/samsung/android/desktopmode/SemDesktopModeManager;Lcom/android/server/desktopmode/Injector;)V
     .locals 7
 
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     new-instance v0, Lcom/android/server/desktopmode/EmergencyModeBlocker$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/desktopmode/EmergencyModeBlocker;)V
@@ -213,66 +196,52 @@
 
     const/4 v0, 0x0
 
-    .line 32
     iput-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mEmergencyModeEnabledInSettings:Z
 
-    .line 33
     iput-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mMpsmEnabledInSettings:Z
 
-    .line 34
     iput-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mLimitAppsAndHomeScreenEnabledInSettings:Z
 
-    .line 35
     iput-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mEnabledInBroadcast:Z
 
-    .line 36
     iput-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mBlockerRegistered:Z
 
-    .line 85
     iput-object p1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mContext:Landroid/content/Context;
 
-    .line 86
     iput-object p2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
-    .line 87
     iput-object p4, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mInjector:Lcom/android/server/desktopmode/Injector;
 
-    .line 88
     new-instance p2, Landroid/os/Handler;
 
     invoke-direct {p2}, Landroid/os/Handler;-><init>()V
 
     iput-object p2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mHandler:Landroid/os/Handler;
 
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->isEmergencyModeEnabledInSettings()Z
 
     move-result p2
 
     iput-boolean p2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mEmergencyModeEnabledInSettings:Z
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->isMpsmEnabledInSettings()Z
 
     move-result p2
 
     iput-boolean p2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mMpsmEnabledInSettings:Z
 
-    .line 91
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->isLimitAppsAndHomeScreenEnabledInSettings()Z
 
     move-result p2
 
     iput-boolean p2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mLimitAppsAndHomeScreenEnabledInSettings:Z
 
-    .line 92
     new-instance p2, Lcom/android/server/desktopmode/EmergencyModeBlocker$SettingsListener;
 
     invoke-direct {p2, p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker$SettingsListener;-><init>(Lcom/android/server/desktopmode/EmergencyModeBlocker;)V
 
     iput-object p2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mSettingListener:Lcom/android/server/desktopmode/EmergencyModeBlocker$SettingsListener;
 
-    .line 93
     new-instance v2, Lcom/android/server/desktopmode/EmergencyModeBlocker$BroadcastListener;
 
     const/4 p4, 0x0
@@ -295,7 +264,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 95
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p4
@@ -310,7 +278,6 @@
 
     invoke-virtual {p4, v1, v0, p2, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 98
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p4
@@ -323,7 +290,6 @@
 
     invoke-virtual {p4, v1, v0, p2, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 101
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -336,10 +302,8 @@
 
     invoke-virtual {p1, p4, v0, p2, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 104
     iput-object p3, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mManager:Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->scheduleUpdateBlockerRegistration()V
 
     return-void
@@ -350,14 +314,12 @@
 .method public final isEmergencyModeEnabledInSettings()Z
     .locals 6
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mInjector:Lcom/android/server/desktopmode/Injector;
 
     invoke-virtual {v0}, Lcom/android/server/desktopmode/Injector;->binderClearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 135
     iget-object v2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -378,7 +340,6 @@
 
     const/4 v5, 0x1
 
-    .line 137
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mInjector:Lcom/android/server/desktopmode/Injector;
 
@@ -390,14 +351,12 @@
 .method public final isLimitAppsAndHomeScreenEnabledInSettings()Z
     .locals 6
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mInjector:Lcom/android/server/desktopmode/Injector;
 
     invoke-virtual {v0}, Lcom/android/server/desktopmode/Injector;->binderClearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 151
     iget-object v2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -418,7 +377,6 @@
 
     const/4 v5, 0x1
 
-    .line 153
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mInjector:Lcom/android/server/desktopmode/Injector;
 
@@ -430,14 +388,12 @@
 .method public final isMpsmEnabledInSettings()Z
     .locals 6
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mInjector:Lcom/android/server/desktopmode/Injector;
 
     invoke-virtual {v0}, Lcom/android/server/desktopmode/Injector;->binderClearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 143
     iget-object v2, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -458,7 +414,6 @@
 
     const/4 v5, 0x1
 
-    .line 145
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mInjector:Lcom/android/server/desktopmode/Injector;
 
@@ -470,17 +425,14 @@
 .method public onBlocked()Ljava/lang/String;
     .locals 2
 
-    .line 164
     iget-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mLimitAppsAndHomeScreenEnabledInSettings:Z
 
     if-eqz v0, :cond_0
 
-    .line 165
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mContext:Landroid/content/Context;
 
     const v0, 0x1040436
 
-    .line 166
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -491,14 +443,12 @@
 
     const v1, 0x1040440
 
-    .line 165
     invoke-virtual {p0, v1, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_1
 
-    .line 167
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mContext:Landroid/content/Context;
 
@@ -510,7 +460,6 @@
 
     goto :goto_0
 
-    .line 168
     :cond_1
     iget-boolean p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mEmergencyModeEnabledInSettings:Z
 
@@ -523,7 +472,6 @@
     :cond_2
     const p0, 0x1040441
 
-    .line 167
     :goto_0
     invoke-virtual {v0, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -538,7 +486,6 @@
 
     const/4 v0, 0x0
 
-    .line 109
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->scheduleUpdateBlockerRegistration(I)V
 
     return-void
@@ -547,14 +494,12 @@
 .method public final scheduleUpdateBlockerRegistration(I)V
     .locals 3
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mUpdateRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mUpdateRunnable:Ljava/lang/Runnable;
@@ -569,7 +514,6 @@
 .method public shouldBlockDesktopMode()Z
     .locals 1
 
-    .line 158
     iget-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mEnabledInBroadcast:Z
 
     if-nez v0, :cond_1
@@ -604,36 +548,30 @@
 .method public final updateBlockerRegistration()V
     .locals 2
 
-    .line 118
     invoke-virtual {p0}, Lcom/android/server/desktopmode/EmergencyModeBlocker;->shouldBlockDesktopMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 119
     iget-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mBlockerRegistered:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    .line 120
     iput-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mBlockerRegistered:Z
 
-    .line 121
     iget-object v1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mManager:Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/desktopmode/SemDesktopModeManager;->registerBlocker(Lcom/samsung/android/desktopmode/SemDesktopModeManager$DesktopModeBlocker;)V
 
-    .line 122
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p0, v0}, Lcom/android/server/desktopmode/IStateManager;->setEmergencyModeEnabled(Z)V
 
     goto :goto_0
 
-    .line 125
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mBlockerRegistered:Z
 
@@ -641,15 +579,12 @@
 
     const/4 v0, 0x0
 
-    .line 126
     iput-boolean v0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mBlockerRegistered:Z
 
-    .line 127
     iget-object v1, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mManager:Lcom/samsung/android/desktopmode/SemDesktopModeManager;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/desktopmode/SemDesktopModeManager;->unregisterBlocker(Lcom/samsung/android/desktopmode/SemDesktopModeManager$DesktopModeBlocker;)V
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/desktopmode/EmergencyModeBlocker;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {p0, v0}, Lcom/android/server/desktopmode/IStateManager;->setEmergencyModeEnabled(Z)V

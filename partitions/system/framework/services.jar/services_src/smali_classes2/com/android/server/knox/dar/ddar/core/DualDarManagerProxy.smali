@@ -17,7 +17,6 @@
 
     const-string/jumbo v0, "ro.build.type"
 
-    .line 25
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -32,7 +31,6 @@
 
     const-string/jumbo v1, "userdebug"
 
-    .line 26
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -65,7 +63,6 @@
 .method public final enforceCallingUser(I)V
     .locals 2
 
-    .line 99
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result p0
@@ -84,7 +81,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_0
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -98,7 +94,6 @@
 
     return-void
 
-    .line 104
     :cond_1
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -128,7 +123,6 @@
 .method public onMessage(ILjava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 3
 
-    .line 46
     :try_start_0
     sget-boolean v0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->DEBUG:Z
 
@@ -152,13 +146,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 48
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v1
@@ -273,88 +265,72 @@
 
     goto :goto_2
 
-    .line 85
     :pswitch_0
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->enforceCallingUser(I)V
 
-    .line 86
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->mDualDarManagerImpl:Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;
 
     invoke-virtual {p0, p3}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;->handleClearDualDarTrialExpiryTimer(Landroid/os/Bundle;)Z
 
     move-result p0
 
-    .line 87
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 79
     :pswitch_1
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->enforceCallingUser(I)V
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->mDualDarManagerImpl:Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;
 
     invoke-virtual {p0, p3}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;->handleScheduleDualDarTrialExpiryTimer(Landroid/os/Bundle;)Z
 
     move-result p0
 
-    .line 81
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 73
     :pswitch_2
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->enforceCallingUser(I)V
 
-    .line 74
     invoke-virtual {p3, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->mDualDarManagerImpl:Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;->cancelDataLock(I)V
 
     goto :goto_2
 
-    .line 67
     :pswitch_3
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->enforceCallingUser(I)V
 
-    .line 68
     invoke-virtual {p3, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->mDualDarManagerImpl:Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;
 
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;->handleDataLock(I)V
 
     goto :goto_2
 
-    .line 61
     :pswitch_4
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->enforceCallingUser(I)V
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->mDualDarManagerImpl:Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;
 
     invoke-virtual {p0}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;->handleEnsureDataUnlocked()Z
 
     move-result p0
 
-    .line 63
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 56
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->mDualDarManagerImpl:Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;
 
@@ -362,23 +338,19 @@
 
     move-result p0
 
-    .line 57
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     goto :goto_2
 
-    .line 50
     :pswitch_6
     invoke-virtual {p0, p1}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->enforceCallingUser(I)V
 
-    .line 51
     iget-object p0, p0, Lcom/android/server/knox/dar/ddar/core/DualDarManagerProxy;->mDualDarManagerImpl:Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;
 
     invoke-virtual {p0, p3}, Lcom/android/server/knox/dar/ddar/core/DualDarManagerImpl;->handleDeviceOwnerProvisioning(Landroid/os/Bundle;)Z
 
     move-result p0
 
-    .line 52
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -389,7 +361,6 @@
     :catch_0
     move-exception p0
 
-    .line 93
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0

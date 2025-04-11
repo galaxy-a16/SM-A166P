@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/policy/PhoneWindowManagerExt;Landroid/content/Context;)V
     .locals 0
 
-    .line 6391
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManagerExt$14;->this$0:Lcom/android/server/policy/PhoneWindowManagerExt;
 
     invoke-direct {p0, p2}, Landroid/app/BootProgressDialog;-><init>(Landroid/content/Context;)V
@@ -24,7 +23,6 @@
 .method public dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -33,7 +31,6 @@
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -42,7 +39,6 @@
 .method public dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -51,7 +47,6 @@
 .method public dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -60,7 +55,6 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -69,7 +63,6 @@
 .method public dispatchTrackballEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

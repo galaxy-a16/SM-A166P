@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$AG1LcbHs_AaoejxETmZQrSxoJHg(Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;Landroid/os/Temperature;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->lambda$notifyThrottling$0(Landroid/os/Temperature;)V
 
     return-void
@@ -28,15 +27,12 @@
 .method public constructor <init>(Lcom/android/server/display/BrightnessThrottler;Lcom/android/server/display/BrightnessThrottler$Injector;Landroid/os/Handler;)V
     .locals 0
 
-    .line 447
     iput-object p1, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->this$0:Lcom/android/server/display/BrightnessThrottler;
 
     invoke-direct {p0}, Landroid/os/IThermalEventListener$Stub;-><init>()V
 
-    .line 448
     iput-object p2, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mInjector:Lcom/android/server/display/BrightnessThrottler$Injector;
 
-    .line 449
     iput-object p3, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mHandler:Landroid/os/Handler;
 
     return-void
@@ -45,12 +41,10 @@
 .method private synthetic lambda$notifyThrottling$0(Landroid/os/Temperature;)V
     .locals 0
 
-    .line 458
     invoke-virtual {p1}, Landroid/os/Temperature;->getStatus()I
 
     move-result p1
 
-    .line 459
     iget-object p0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->this$0:Lcom/android/server/display/BrightnessThrottler;
 
     invoke-static {p0, p1}, Lcom/android/server/display/BrightnessThrottler;->-$$Nest$mthermalStatusChanged(Lcom/android/server/display/BrightnessThrottler;I)V
@@ -65,10 +59,8 @@
 
     const-string v0, "  SkinThermalStatusObserver:"
 
-    .line 502
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 503
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,14 +79,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 504
     iget-object p0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mThermalService:Landroid/os/IThermalService;
 
     if-eqz p0, :cond_0
 
     const-string p0, "    ThermalService available"
 
-    .line 505
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
@@ -102,7 +92,6 @@
     :cond_0
     const-string p0, "    ThermalService not available"
 
-    .line 507
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :goto_0
@@ -112,7 +101,6 @@
 .method public notifyThrottling(Landroid/os/Temperature;)V
     .locals 2
 
-    .line 457
     iget-object v0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver$$ExternalSyntheticLambda0;
@@ -127,14 +115,12 @@
 .method public startObserving()V
     .locals 3
 
-    .line 464
     iget-boolean v0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mStarted:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 470
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mInjector:Lcom/android/server/display/BrightnessThrottler$Injector;
 
@@ -150,7 +136,6 @@
 
     const-string p0, "Could not observe thermal status. Service not available"
 
-    .line 472
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -158,13 +143,11 @@
     :cond_1
     const/4 v2, 0x3
 
-    .line 478
     :try_start_0
     invoke-interface {v0, p0, v2}, Landroid/os/IThermalService;->registerThermalEventListenerWithType(Landroid/os/IThermalEventListener;I)Z
 
     const/4 v0, 0x1
 
-    .line 479
     iput-boolean v0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mStarted:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -176,7 +159,6 @@
 
     const-string v0, "Failed to register thermal status listener"
 
-    .line 481
     invoke-static {v1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -186,14 +168,12 @@
 .method public stopObserving()V
     .locals 3
 
-    .line 486
     iget-boolean v0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mStarted:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 493
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mThermalService:Landroid/os/IThermalService;
@@ -202,7 +182,6 @@
 
     const/4 v0, 0x0
 
-    .line 494
     iput-boolean v0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mStarted:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -216,13 +195,11 @@
 
     const-string v2, "Failed to unregister thermal status listener"
 
-    .line 496
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     const/4 v0, 0x0
 
-    .line 498
     iput-object v0, p0, Lcom/android/server/display/BrightnessThrottler$SkinThermalStatusObserver;->mThermalService:Landroid/os/IThermalService;
 
     return-void

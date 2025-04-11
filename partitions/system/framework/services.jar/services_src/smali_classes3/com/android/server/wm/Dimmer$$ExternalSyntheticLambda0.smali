@@ -20,7 +20,6 @@
 .method public final startAnimation(Lcom/android/server/wm/SurfaceAnimator;Landroid/view/SurfaceControl$Transaction;Lcom/android/server/wm/AnimationAdapter;ZI)V
     .locals 0
 
-    .line 0
     invoke-virtual {p1, p2, p3, p4, p5}, Lcom/android/server/wm/SurfaceAnimator;->startAnimation(Landroid/view/SurfaceControl$Transaction;Lcom/android/server/wm/AnimationAdapter;ZI)V
 
     return-void

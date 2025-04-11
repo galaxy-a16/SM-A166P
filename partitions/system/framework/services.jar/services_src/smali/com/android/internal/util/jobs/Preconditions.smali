@@ -19,7 +19,6 @@
 
     return-void
 
-    .line 44
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -35,7 +34,6 @@
 
     return-void
 
-    .line 59
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -55,7 +53,6 @@
 
     return-void
 
-    .line 77
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -71,14 +68,12 @@
 .method public static checkArgumentFinite(FLjava/lang/String;)F
     .locals 1
 
-    .line 437
     invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 439
     invoke-static {p0}, Ljava/lang/Float;->isInfinite(F)Z
 
     move-result v0
@@ -87,7 +82,6 @@
 
     return p0
 
-    .line 440
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -109,7 +103,6 @@
 
     throw p0
 
-    .line 438
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -135,7 +128,6 @@
 .method public static checkArgumentInRange(DDDLjava/lang/String;)D
     .locals 1
 
-    .line 495
     invoke-static {p0, p1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v0
@@ -152,11 +144,9 @@
 
     return-wide p0
 
-    .line 502
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 504
     invoke-static {p2, p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p1
@@ -171,7 +161,6 @@
 
     const-string p2, "%s is out of range of [%f, %f] (too high)"
 
-    .line 503
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -180,11 +169,9 @@
 
     throw p0
 
-    .line 498
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 500
     invoke-static {p2, p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p1
@@ -199,7 +186,6 @@
 
     const-string p2, "%s is out of range of [%f, %f] (too low)"
 
-    .line 499
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -208,7 +194,6 @@
 
     throw p0
 
-    .line 496
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -234,7 +219,6 @@
 .method public static checkArgumentInRange(FFFLjava/lang/String;)F
     .locals 1
 
-    .line 463
     invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v0
@@ -251,11 +235,9 @@
 
     return p0
 
-    .line 470
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 472
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p1
@@ -270,7 +252,6 @@
 
     const-string p2, "%s is out of range of [%f, %f] (too high)"
 
-    .line 471
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -279,11 +260,9 @@
 
     throw p0
 
-    .line 466
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 468
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p1
@@ -298,7 +277,6 @@
 
     const-string p2, "%s is out of range of [%f, %f] (too low)"
 
-    .line 467
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -307,7 +285,6 @@
 
     throw p0
 
-    .line 464
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -339,11 +316,9 @@
 
     return p0
 
-    .line 530
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 532
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -358,7 +333,6 @@
 
     const-string p2, "%s is out of range of [%d, %d] (too high)"
 
-    .line 531
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -367,11 +341,9 @@
 
     throw p0
 
-    .line 526
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 528
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -386,7 +358,6 @@
 
     const-string p2, "%s is out of range of [%d, %d] (too low)"
 
-    .line 527
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -409,11 +380,9 @@
 
     return-wide p0
 
-    .line 557
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 559
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -428,7 +397,6 @@
 
     const-string p2, "%s is out of range of [%d, %d] (too high)"
 
-    .line 558
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -437,11 +405,9 @@
 
     throw p0
 
-    .line 553
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 555
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -456,7 +422,6 @@
 
     const-string p2, "%s is out of range of [%d, %d] (too low)"
 
-    .line 554
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -469,13 +434,10 @@
 .method public static checkArgumentIsSupported([Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 677
     invoke-static {p1}, Lcom/android/internal/util/jobs/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 678
     invoke-static {p0}, Lcom/android/internal/util/jobs/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 680
     invoke-static {p0, p1}, Lcom/android/internal/util/jobs/Preconditions;->contains([Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -484,7 +446,6 @@
 
     return-object p1
 
-    .line 681
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -498,7 +459,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 682
     invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -525,7 +485,6 @@
 
     return p0
 
-    .line 402
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -541,7 +500,6 @@
 
     return p0
 
-    .line 340
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -557,7 +515,6 @@
 
     return p0
 
-    .line 324
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -577,7 +534,6 @@
 
     return-wide p0
 
-    .line 355
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -597,7 +553,6 @@
 
     return-wide p0
 
-    .line 371
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -617,7 +572,6 @@
 
     return p0
 
-    .line 417
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -633,7 +587,6 @@
 
     return p0
 
-    .line 387
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -647,7 +600,6 @@
 
     const-string v0, "%s must not be null"
 
-    .line 717
     filled-new-array {p3}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -656,16 +608,13 @@
 
     const/4 v0, 0x0
 
-    .line 719
     :goto_0
     array-length v1, p0
 
     if-ge v0, v1, :cond_3
 
-    .line 720
     aget v1, p0, v0
 
-    .line 722
     invoke-static {v1}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v2
@@ -684,11 +633,9 @@
 
     goto :goto_0
 
-    .line 729
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 731
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -707,7 +654,6 @@
 
     const-string p2, "%s[%d] is out of range of [%f, %f] (too high)"
 
-    .line 730
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -716,11 +662,9 @@
 
     throw p0
 
-    .line 725
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 727
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -739,7 +683,6 @@
 
     const-string p2, "%s[%d] is out of range of [%f, %f] (too low)"
 
-    .line 726
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -748,7 +691,6 @@
 
     throw p0
 
-    .line 723
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -785,7 +727,6 @@
 
     const-string v0, "%s must not be null"
 
-    .line 753
     filled-new-array {p3}, [Ljava/lang/Object;
 
     move-result-object v1
@@ -794,13 +735,11 @@
 
     const/4 v0, 0x0
 
-    .line 755
     :goto_0
     array-length v1, p0
 
     if-ge v0, v1, :cond_2
 
-    .line 756
     aget v1, p0, v0
 
     if-lt v1, p1, :cond_1
@@ -811,11 +750,9 @@
 
     goto :goto_0
 
-    .line 763
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 765
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -834,7 +771,6 @@
 
     const-string p2, "%s[%d] is out of range of [%d, %d] (too high)"
 
-    .line 764
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -843,11 +779,9 @@
 
     throw p0
 
-    .line 759
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 761
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -866,7 +800,6 @@
 
     const-string p2, "%s[%d] is out of range of [%d, %d] (too low)"
 
-    .line 760
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -886,13 +819,11 @@
 
     const/4 v0, 0x0
 
-    .line 580
     :goto_0
     array-length v1, p0
 
     if-ge v0, v1, :cond_1
 
-    .line 581
     aget-object v1, p0, v0
 
     if-eqz v1, :cond_0
@@ -901,11 +832,9 @@
 
     goto :goto_0
 
-    .line 582
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
-    .line 583
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -927,7 +856,6 @@
     :cond_1
     return-object p0
 
-    .line 577
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -955,14 +883,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 657
     array-length v0, p0
 
     if-eqz v0, :cond_0
 
     return-object p0
 
-    .line 658
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -984,7 +910,6 @@
 
     throw p0
 
-    .line 655
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -1014,7 +939,6 @@
 
     return-void
 
-    .line 247
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1032,7 +956,6 @@
 
     return-void
 
-    .line 261
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1048,7 +971,6 @@
 
     return-void
 
-    .line 280
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1068,7 +990,6 @@
 
     return-void
 
-    .line 293
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1084,7 +1005,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 608
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1110,11 +1030,9 @@
 
     goto :goto_0
 
-    .line 610
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
-    .line 611
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -1136,7 +1054,6 @@
     :cond_1
     return-object p0
 
-    .line 604
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -1164,7 +1081,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 635
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -1173,7 +1089,6 @@
 
     return-object p0
 
-    .line 636
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1195,7 +1110,6 @@
 
     throw p0
 
-    .line 633
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -1227,7 +1141,6 @@
 
     return p0
 
-    .line 305
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1239,7 +1152,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 306
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1250,7 +1162,6 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 307
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1275,7 +1186,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 147
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-object p0
@@ -1290,7 +1200,6 @@
 
     return-object p0
 
-    .line 167
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -1310,7 +1219,6 @@
 
     return-object p0
 
-    .line 186
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -1328,7 +1236,6 @@
 
     const/4 v0, 0x0
 
-    .line 200
     invoke-static {p0, v0}, Lcom/android/internal/util/jobs/Preconditions;->checkState(ZLjava/lang/String;)V
 
     return-void
@@ -1341,7 +1248,6 @@
 
     return-void
 
-    .line 215
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1357,7 +1263,6 @@
 
     return-void
 
-    .line 234
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1373,7 +1278,6 @@
 .method public static checkStringNotEmpty(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 1
 
-    .line 90
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1382,7 +1286,6 @@
 
     return-object p0
 
-    .line 91
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1394,7 +1297,6 @@
 .method public static checkStringNotEmpty(Ljava/lang/CharSequence;Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
 
-    .line 108
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1403,7 +1305,6 @@
 
     return-object p0
 
-    .line 109
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1419,7 +1320,6 @@
 .method public static varargs checkStringNotEmpty(Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
 
-    .line 128
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1428,7 +1328,6 @@
 
     return-object p0
 
-    .line 129
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1453,13 +1352,11 @@
     :cond_0
     move v1, v0
 
-    .line 691
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_2
 
-    .line 692
     aget-object v2, p0, v1
 
     invoke-static {p1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z

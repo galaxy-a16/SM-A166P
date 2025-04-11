@@ -15,16 +15,12 @@
 .method public constructor <init>(IILjava/lang/String;)V
     .locals 0
 
-    .line 65
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 66
     iput p1, p0, Lcom/samsung/android/server/audio/AudioEvents$MasterMuteEvent;->mIsMute:I
 
-    .line 67
     iput p2, p0, Lcom/samsung/android/server/audio/AudioEvents$MasterMuteEvent;->mFlags:I
 
-    .line 68
     iput-object p3, p0, Lcom/samsung/android/server/audio/AudioEvents$MasterMuteEvent;->mCaller:Ljava/lang/String;
 
     return-void
@@ -35,7 +31,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "setMasterMute(mute:"
@@ -48,7 +43,6 @@
 
     const-string v1, " flags:0x"
 
-    .line 74
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/samsung/android/server/audio/AudioEvents$MasterMuteEvent;->mFlags:I
@@ -61,7 +55,6 @@
 
     const-string v1, ") from "
 
-    .line 75
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/samsung/android/server/audio/AudioEvents$MasterMuteEvent;->mCaller:Ljava/lang/String;

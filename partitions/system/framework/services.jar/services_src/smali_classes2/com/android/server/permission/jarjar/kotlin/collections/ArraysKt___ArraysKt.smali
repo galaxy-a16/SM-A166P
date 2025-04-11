@@ -11,7 +11,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 519
     invoke-static {p0, p1}, Lcom/android/server/permission/jarjar/kotlin/collections/ArraysKt___ArraysKt;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result p0
@@ -36,7 +35,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1011
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -53,12 +51,10 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 1013
     aget-object p0, p0, v1
 
     return-object p0
 
-    .line 1012
     :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -80,13 +76,11 @@
 
     if-nez p1, :cond_1
 
-    .line 1508
     array-length p1, p0
 
     :goto_0
     if-ge v0, p1, :cond_3
 
-    .line 1509
     aget-object v1, p0, v0
 
     if-nez v1, :cond_0
@@ -98,14 +92,12 @@
 
     goto :goto_0
 
-    .line 1514
     :cond_1
     array-length v1, p0
 
     :goto_1
     if-ge v0, v1, :cond_3
 
-    .line 1515
     aget-object v2, p0, v0
 
     invoke-static {p1, v2}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -154,10 +146,8 @@
 
     invoke-static {p6, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 23910
     invoke-interface {p1, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
-    .line 23912
     array-length p3, p0
 
     const/4 v0, 0x0
@@ -175,7 +165,6 @@
 
     if-le v1, v3, :cond_0
 
-    .line 23913
     invoke-interface {p1, p2}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
     :cond_0
@@ -183,7 +172,6 @@
 
     if-gt v1, p5, :cond_2
 
-    .line 23915
     :cond_1
     invoke-static {p1, v2, p7}, Lcom/android/server/permission/jarjar/kotlin/text/StringsKt__AppendableKt;->appendElement(Ljava/lang/Appendable;Ljava/lang/Object;Lcom/android/server/permission/jarjar/kotlin/jvm/functions/Function1;)V
 
@@ -196,10 +184,8 @@
 
     if-le v1, p5, :cond_3
 
-    .line 23918
     invoke-interface {p1, p6}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
-    .line 23919
     :cond_3
     invoke-interface {p1, p4}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
@@ -297,7 +283,6 @@
 
     move-object p9, v5
 
-    .line 23909
     invoke-static/range {p2 .. p9}, Lcom/android/server/permission/jarjar/kotlin/collections/ArraysKt___ArraysKt;->joinTo([Ljava/lang/Object;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lcom/android/server/permission/jarjar/kotlin/jvm/functions/Function1;)Ljava/lang/Appendable;
 
     move-result-object v0
@@ -312,7 +297,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/permission/jarjar/kotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3070
     array-length v0, p0
 
     const/4 v1, 0x1

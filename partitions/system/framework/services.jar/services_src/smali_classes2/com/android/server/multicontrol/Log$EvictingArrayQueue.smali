@@ -17,10 +17,8 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -29,13 +27,10 @@
 
     const/4 v0, 0x0
 
-    .line 108
     iput v0, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mPointer:I
 
-    .line 111
     iput p1, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mCapacity:I
 
-    .line 112
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -50,12 +45,10 @@
 .method public add(Ljava/lang/Object;)V
     .locals 3
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 117
     :try_start_0
     iget v1, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mPointer:I
 
@@ -67,7 +60,6 @@
 
     iput v1, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mPointer:I
 
-    .line 118
     iget-object v1, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -78,7 +70,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 120
     iget-object v1, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
     iget p0, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mPointer:I
@@ -87,13 +78,11 @@
 
     goto :goto_0
 
-    .line 122
     :cond_0
     iget-object p0, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 124
     :goto_0
     monitor-exit v0
 
@@ -112,12 +101,10 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 8
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 129
     :try_start_0
     iget-object v1, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
@@ -125,7 +112,6 @@
 
     move-result v1
 
-    .line 130
     iget v2, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mCapacity:I
 
     const/4 v3, 0x0
@@ -144,7 +130,6 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 132
     iget-object v5, p0, Lcom/android/server/multicontrol/Log$EvictingArrayQueue;->mElements:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_1
@@ -175,7 +160,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_2
     monitor-exit v0
 

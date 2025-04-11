@@ -167,7 +167,6 @@
 .method public static synthetic $r8$lambda$-p31-f-ZQOpJgUL2KmenGLvQrfw(Lcom/android/server/location/gnss/hal/GnssNative;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestLppeCommonIesCapability$29()V
 
     return-void
@@ -176,7 +175,6 @@
 .method public static synthetic $r8$lambda$0ezK1bV0g7tuYRwJok--BM_bnlg(Lcom/android/server/location/gnss/hal/GnssNative;IIIIILjava/lang/String;Ljava/lang/String;II)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p9}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportNiNotification$20(IIIIILjava/lang/String;Ljava/lang/String;II)V
 
     return-void
@@ -185,7 +183,6 @@
 .method public static synthetic $r8$lambda$4_nuAJRkROTh48XuyPo35rcbo2M(Lcom/android/server/location/gnss/hal/GnssNative;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestUbpCapability$31()V
 
     return-void
@@ -194,7 +191,6 @@
 .method public static synthetic $r8$lambda$5jBoh7HYHfdS0-aMYVLMOIMi9_Y(Lcom/android/server/location/gnss/hal/GnssNative;Landroid/location/GnssNavigationMessage;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportNavigationMessage$10(Landroid/location/GnssNavigationMessage;)V
 
     return-void
@@ -203,7 +199,6 @@
 .method public static synthetic $r8$lambda$8H1ZeOnhgEDasBeXJO_omH9_UNw(Lcom/android/server/location/gnss/hal/GnssNative;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestFlpLocation$30(I)V
 
     return-void
@@ -212,7 +207,6 @@
 .method public static synthetic $r8$lambda$9SeG1JvwjoiySrbNnAIyJ6IsPwE(Lcom/android/server/location/gnss/hal/GnssNative;ILandroid/location/Location;IJ)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p5}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportGeofenceTransition$14(ILandroid/location/Location;IJ)V
 
     return-void
@@ -221,7 +215,6 @@
 .method public static synthetic $r8$lambda$AjGkn4uqbvRStkZHEq6-xgPs4No(Lcom/android/server/location/gnss/hal/GnssNative;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestSetID$21(I)V
 
     return-void
@@ -230,7 +223,6 @@
 .method public static synthetic $r8$lambda$Awcc46TJQETrl5uzVQdg2-FuCx8(Lcom/android/server/location/gnss/hal/GnssNative;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$psdsDownloadRequest$13(I)V
 
     return-void
@@ -239,7 +231,6 @@
 .method public static synthetic $r8$lambda$CsTjIIsCxbVywrAQAmvgKMAtz_M(Lcom/android/server/location/gnss/hal/GnssNative;[Landroid/location/Location;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportLocationBatch$12([Landroid/location/Location;)V
 
     return-void
@@ -248,7 +239,6 @@
 .method public static synthetic $r8$lambda$Gc_x-9SzfXvDbK9bTdyMcHkGEeQ(Lcom/android/server/location/gnss/hal/GnssNative;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportGeofenceResumeStatus$19(II)V
 
     return-void
@@ -257,7 +247,6 @@
 .method public static synthetic $r8$lambda$JusSZiQ8wNJN3zClTQKczbuFdzk(Lcom/android/server/location/gnss/hal/GnssNative;ZZ)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestLocation$22(ZZ)V
 
     return-void
@@ -266,7 +255,6 @@
 .method public static synthetic $r8$lambda$JvlexUsNcPwplUB5KGrfj8ZEgy0(Lcom/android/server/location/gnss/hal/GnssNative;II[B)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportAGpsStatus$4(II[B)V
 
     return-void
@@ -275,7 +263,6 @@
 .method public static synthetic $r8$lambda$K3wHViMcHxUDHloXu4GlBsXIlCc(Lcom/android/server/location/gnss/hal/GnssNative;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportStatus$2(I)V
 
     return-void
@@ -284,7 +271,6 @@
 .method public static synthetic $r8$lambda$KvyZSbPJJUx9VCXCEbcM4n7Ho7c(Lcom/android/server/location/gnss/hal/GnssNative;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportGeofenceRemoveStatus$17(II)V
 
     return-void
@@ -293,7 +279,6 @@
 .method public static synthetic $r8$lambda$LOBd7gDAD6p39iWw1utz_jGScEg(Lcom/android/server/location/gnss/hal/GnssNative;I[I[F[F[F[F[F)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p7}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportSvStatus$3(I[I[F[F[F[F[F)V
 
     return-void
@@ -302,7 +287,6 @@
 .method public static synthetic $r8$lambda$MqrWTu9-FWqRh1MPbg8xpLEBGWs()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$isSupported$0()V
 
     return-void
@@ -311,7 +295,6 @@
 .method public static synthetic $r8$lambda$N51L_JgP81vjKY38FYo5xWaBVb0(Lcom/android/server/location/gnss/hal/GnssNative;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestWlanCapability$33()V
 
     return-void
@@ -320,7 +303,6 @@
 .method public static synthetic $r8$lambda$NNHaIV4bBSeDwASnvUXchjqvdJw(Lcom/android/server/location/gnss/hal/GnssNative;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestUtcTime$23()V
 
     return-void
@@ -329,7 +311,6 @@
 .method public static synthetic $r8$lambda$Q9w0tV_xX9egtcSybN8LJm5SxYc(Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;Landroid/location/GnssNavigationMessage;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportNavigationMessage$9(Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;Landroid/location/GnssNavigationMessage;)V
 
     return-void
@@ -338,7 +319,6 @@
 .method public static synthetic $r8$lambda$QJWEbTLWkFtD32Y0kAe73JhLqs0(Lcom/android/server/location/gnss/hal/GnssNative;Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$onCapabilitiesChanged$11(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
 
     return-void
@@ -347,7 +327,6 @@
 .method public static synthetic $r8$lambda$UO-Itf00EitYRld2-Et6cln6NN0(Lcom/android/server/location/gnss/hal/GnssNative;Landroid/location/GnssMeasurementsEvent;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportMeasurementData$7(Landroid/location/GnssMeasurementsEvent;)V
 
     return-void
@@ -356,7 +335,6 @@
 .method public static synthetic $r8$lambda$UwTntZBT6D2LaSuO_PjCWpxnAi4(Lcom/android/server/location/gnss/hal/GnssNative;ILandroid/location/Location;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportGeofenceStatus$15(ILandroid/location/Location;)V
 
     return-void
@@ -365,7 +343,6 @@
 .method public static synthetic $r8$lambda$XE-QWN0eWDYC04VwFN2SZYBcg1Y(Lcom/android/server/location/gnss/hal/GnssNative;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestRefLocationSec$25()V
 
     return-void
@@ -374,7 +351,6 @@
 .method public static synthetic $r8$lambda$bapql7gdDRJ6eyHWeZ4-qly1QM4(Lcom/android/server/location/gnss/hal/GnssNative;J)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportNmea$5(J)V
 
     return-void
@@ -383,7 +359,6 @@
 .method public static synthetic $r8$lambda$c0bOwDTKwTE2SVk5zq7XajS1c7k(Lcom/android/server/location/gnss/hal/GnssNative;Ljava/lang/String;BLjava/lang/String;BLjava/lang/String;BZZ)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p8}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportNfwNotification$26(Ljava/lang/String;BLjava/lang/String;BLjava/lang/String;BZZ)V
 
     return-void
@@ -392,7 +367,6 @@
 .method public static synthetic $r8$lambda$c7PEXg8mDS9fpoT2gQvoRXeAaiY(Lcom/android/server/location/gnss/hal/GnssNative;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$isInEmergencySession$27()Ljava/lang/Boolean;
 
     move-result-object p0
@@ -403,7 +377,6 @@
 .method public static synthetic $r8$lambda$cTaY7YzInXsy_YWx_ue2gyyNHy8(Lcom/android/server/location/gnss/hal/GnssNative;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestUbpInfo$32(I)V
 
     return-void
@@ -412,7 +385,6 @@
 .method public static synthetic $r8$lambda$gQlOpAiQlMYjYCW5IrKZGt1XLIo(Lcom/android/server/location/gnss/hal/GnssNative;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestWlanScanInfo$34(I)V
 
     return-void
@@ -421,7 +393,6 @@
 .method public static synthetic $r8$lambda$je1QgvCIsi3u6Iuo35kEwUmUsxs(Lcom/android/server/location/gnss/hal/GnssNative;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$isInEmergencySession$28()Ljava/lang/Boolean;
 
     move-result-object p0
@@ -432,7 +403,6 @@
 .method public static synthetic $r8$lambda$kC8CF9pIA0F_4_-Imx7TKNOfAlo(Lcom/android/server/location/gnss/hal/GnssNative;ZLandroid/location/Location;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportLocation$1(ZLandroid/location/Location;)V
 
     return-void
@@ -441,7 +411,6 @@
 .method public static synthetic $r8$lambda$kOWAxgttCFk__DgWRKOTUQZ5Ohk(Lcom/android/server/location/gnss/hal/GnssNative;DDD)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestCivicAddress$35(DDD)V
 
     return-void
@@ -450,7 +419,6 @@
 .method public static synthetic $r8$lambda$mJEbvlb_411v9k7aSO6Vr49G0e8(Lcom/android/server/location/gnss/hal/GnssNative;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportGeofencePauseStatus$18(II)V
 
     return-void
@@ -459,7 +427,6 @@
 .method public static synthetic $r8$lambda$oMsbPs2xqrBpoAk47K_K-uK84WY(Lcom/android/server/location/gnss/hal/GnssNative;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportGeofenceAddStatus$16(II)V
 
     return-void
@@ -468,7 +435,6 @@
 .method public static synthetic $r8$lambda$r3cS8VpqLMXFmR6tEUKdEWcjyVU(Lcom/android/server/location/gnss/hal/GnssNative;Ljava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportAntennaInfo$8(Ljava/util/List;)V
 
     return-void
@@ -477,7 +443,6 @@
 .method public static synthetic $r8$lambda$skkchHT9fPVhVo0xYbU-15WFGjc(Lcom/android/server/location/gnss/hal/GnssNative;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$requestRefLocation$24()V
 
     return-void
@@ -486,7 +451,6 @@
 .method public static synthetic $r8$lambda$vGs3i_3pUeSX3-OB-Bo0Fm97SzE(Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;Landroid/location/GnssMeasurementsEvent;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->lambda$reportMeasurementData$6(Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;Landroid/location/GnssMeasurementsEvent;)V
 
     return-void
@@ -495,7 +459,6 @@
 .method public static bridge synthetic -$$Nest$mnative_init_once(Lcom/android/server/location/gnss/hal/GnssNative;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->native_init_once(Z)V
 
     return-void
@@ -504,7 +467,6 @@
 .method public static bridge synthetic -$$Nest$smnative_add_geofence(IDDDIIII)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p10}, Lcom/android/server/location/gnss/hal/GnssNative;->native_add_geofence(IDDDIIII)Z
 
     move-result p0
@@ -515,7 +477,6 @@
 .method public static bridge synthetic -$$Nest$smnative_agps_set_id(ILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->native_agps_set_id(ILjava/lang/String;)V
 
     return-void
@@ -524,7 +485,6 @@
 .method public static bridge synthetic -$$Nest$smnative_agps_set_ref_location_cellid(IIIIJII)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p7}, Lcom/android/server/location/gnss/hal/GnssNative;->native_agps_set_ref_location_cellid(IIIIJII)V
 
     return-void
@@ -533,7 +493,6 @@
 .method public static bridge synthetic -$$Nest$smnative_agps_set_ref_location_cellid(IIIIJIII)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p8}, Lcom/android/server/location/gnss/hal/GnssNative;->native_agps_set_ref_location_cellid(IIIIJIII)V
 
     return-void
@@ -542,7 +501,6 @@
 .method public static bridge synthetic -$$Nest$smnative_class_init_once()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_class_init_once()V
 
     return-void
@@ -551,7 +509,6 @@
 .method public static bridge synthetic -$$Nest$smnative_cleanup()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_cleanup()V
 
     return-void
@@ -560,7 +517,6 @@
 .method public static bridge synthetic -$$Nest$smnative_cleanup_batching()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_cleanup_batching()V
 
     return-void
@@ -569,7 +525,6 @@
 .method public static bridge synthetic -$$Nest$smnative_configuration_update_extension(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->native_configuration_update_extension(Ljava/lang/String;)V
 
     return-void
@@ -578,7 +533,6 @@
 .method public static bridge synthetic -$$Nest$smnative_delete_aiding_data(I)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->native_delete_aiding_data(I)V
 
     return-void
@@ -587,7 +541,6 @@
 .method public static bridge synthetic -$$Nest$smnative_flush_batch()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_flush_batch()V
 
     return-void
@@ -596,7 +549,6 @@
 .method public static bridge synthetic -$$Nest$smnative_get_batch_size()I
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_get_batch_size()I
 
     move-result v0
@@ -607,7 +559,6 @@
 .method public static bridge synthetic -$$Nest$smnative_get_internal_state()Ljava/lang/String;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_get_internal_state()Ljava/lang/String;
 
     move-result-object v0
@@ -618,7 +569,6 @@
 .method public static bridge synthetic -$$Nest$smnative_get_seh_gnss_hal_version()F
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_get_seh_gnss_hal_version()F
 
     move-result v0
@@ -629,7 +579,6 @@
 .method public static bridge synthetic -$$Nest$smnative_init()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_init()Z
 
     move-result v0
@@ -640,7 +589,6 @@
 .method public static bridge synthetic -$$Nest$smnative_init_batching()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_init_batching()Z
 
     move-result v0
@@ -651,7 +599,6 @@
 .method public static bridge synthetic -$$Nest$smnative_init_extension_location_off()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_init_extension_location_off()Z
 
     move-result v0
@@ -662,7 +609,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_best_location(IDDDFFFFFFJIJD)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p19}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_best_location(IDDDFFFFFFJIJD)V
 
     return-void
@@ -671,7 +617,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_civic_address(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p12}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_civic_address(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -682,7 +627,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_flp_error(I)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_flp_error(I)V
 
     return-void
@@ -691,7 +635,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_flp_location(IDDDFFFFFFJ)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p14}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_flp_location(IDDDFFFFFFJ)V
 
     return-void
@@ -700,7 +643,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_location(IDDDFFFFFFJIJD)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p19}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_location(IDDDFFFFFFJIJD)V
 
     return-void
@@ -709,7 +651,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_lppe_com_ie_capability(IZZZIZZZZZ)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p9}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_lppe_com_ie_capability(IZZZIZZZZZ)V
 
     return-void
@@ -718,7 +659,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_measurement_corrections(Landroid/location/GnssMeasurementCorrections;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_measurement_corrections(Landroid/location/GnssMeasurementCorrections;)Z
 
     move-result p0
@@ -729,7 +669,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_ni_supl_message_data([BII)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_ni_supl_message_data([BII)V
 
     return-void
@@ -738,7 +677,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_psds_data([BII)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_psds_data([BII)V
 
     return-void
@@ -747,7 +685,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_time(JJI)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_time(JJI)V
 
     return-void
@@ -756,7 +693,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_ubp_capability(ZZZZ)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_ubp_capability(ZZZZ)V
 
     return-void
@@ -765,7 +701,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_ubp_error(I)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_ubp_error(I)V
 
     return-void
@@ -774,7 +709,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_ubp_info(II)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_ubp_info(II)V
 
     return-void
@@ -783,7 +717,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_wlan_capability(IIJIII)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p6}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_wlan_capability(IIJIII)V
 
     return-void
@@ -792,7 +725,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_wlan_error(I)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_wlan_error(I)V
 
     return-void
@@ -801,7 +733,6 @@
 .method public static bridge synthetic -$$Nest$smnative_inject_wlan_scan_info([J[I[II)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative;->native_inject_wlan_scan_info([J[I[II)V
 
     return-void
@@ -810,7 +741,6 @@
 .method public static bridge synthetic -$$Nest$smnative_is_antenna_info_supported()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_is_antenna_info_supported()Z
 
     move-result v0
@@ -821,7 +751,6 @@
 .method public static bridge synthetic -$$Nest$smnative_is_geofence_supported()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_is_geofence_supported()Z
 
     move-result v0
@@ -832,7 +761,6 @@
 .method public static bridge synthetic -$$Nest$smnative_is_gnss_visibility_control_supported()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_is_gnss_visibility_control_supported()Z
 
     move-result v0
@@ -843,7 +771,6 @@
 .method public static bridge synthetic -$$Nest$smnative_is_measurement_corrections_supported()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_is_measurement_corrections_supported()Z
 
     move-result v0
@@ -854,7 +781,6 @@
 .method public static bridge synthetic -$$Nest$smnative_is_measurement_supported()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_is_measurement_supported()Z
 
     move-result v0
@@ -865,7 +791,6 @@
 .method public static bridge synthetic -$$Nest$smnative_is_navigation_message_supported()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_is_navigation_message_supported()Z
 
     move-result v0
@@ -876,7 +801,6 @@
 .method public static bridge synthetic -$$Nest$smnative_is_seh_gnss_aidl_hal()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_is_seh_gnss_aidl_hal()Z
 
     move-result v0
@@ -887,7 +811,6 @@
 .method public static bridge synthetic -$$Nest$smnative_is_supported()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_is_supported()Z
 
     move-result v0
@@ -898,7 +821,6 @@
 .method public static bridge synthetic -$$Nest$smnative_pause_geofence(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->native_pause_geofence(I)Z
 
     move-result p0
@@ -909,7 +831,6 @@
 .method public static bridge synthetic -$$Nest$smnative_read_nmea([BI)I
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->native_read_nmea([BI)I
 
     move-result p0
@@ -920,7 +841,6 @@
 .method public static bridge synthetic -$$Nest$smnative_remove_geofence(I)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/hal/GnssNative;->native_remove_geofence(I)Z
 
     move-result p0
@@ -931,7 +851,6 @@
 .method public static bridge synthetic -$$Nest$smnative_request_power_stats()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_request_power_stats()V
 
     return-void
@@ -940,7 +859,6 @@
 .method public static bridge synthetic -$$Nest$smnative_resume_geofence(II)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->native_resume_geofence(II)Z
 
     move-result p0
@@ -951,7 +869,6 @@
 .method public static bridge synthetic -$$Nest$smnative_send_ni_response(II)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->native_send_ni_response(II)V
 
     return-void
@@ -960,7 +877,6 @@
 .method public static bridge synthetic -$$Nest$smnative_send_supl_ni_message([BI)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->native_send_supl_ni_message([BI)V
 
     return-void
@@ -969,7 +885,6 @@
 .method public static bridge synthetic -$$Nest$smnative_set_agps_server(ILjava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->native_set_agps_server(ILjava/lang/String;I)V
 
     return-void
@@ -978,7 +893,6 @@
 .method public static bridge synthetic -$$Nest$smnative_set_position_mode(IIIIIZ)Z
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p5}, Lcom/android/server/location/gnss/hal/GnssNative;->native_set_position_mode(IIIIIZ)Z
 
     move-result p0
@@ -989,7 +903,6 @@
 .method public static bridge synthetic -$$Nest$smnative_start()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_start()Z
 
     move-result v0
@@ -1000,7 +913,6 @@
 .method public static bridge synthetic -$$Nest$smnative_start_antenna_info_listening()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_start_antenna_info_listening()Z
 
     move-result v0
@@ -1011,7 +923,6 @@
 .method public static bridge synthetic -$$Nest$smnative_start_batch(JFZ)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative;->native_start_batch(JFZ)Z
 
     move-result p0
@@ -1022,7 +933,6 @@
 .method public static bridge synthetic -$$Nest$smnative_start_measurement_collection(ZZI)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative;->native_start_measurement_collection(ZZI)Z
 
     move-result p0
@@ -1033,7 +943,6 @@
 .method public static bridge synthetic -$$Nest$smnative_start_navigation_message_collection()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_start_navigation_message_collection()Z
 
     move-result v0
@@ -1044,7 +953,6 @@
 .method public static bridge synthetic -$$Nest$smnative_start_nmea_message_collection()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_start_nmea_message_collection()Z
 
     move-result v0
@@ -1055,7 +963,6 @@
 .method public static bridge synthetic -$$Nest$smnative_start_sv_status_collection()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_start_sv_status_collection()Z
 
     move-result v0
@@ -1066,7 +973,6 @@
 .method public static bridge synthetic -$$Nest$smnative_stop()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_stop()Z
 
     move-result v0
@@ -1077,7 +983,6 @@
 .method public static bridge synthetic -$$Nest$smnative_stop_antenna_info_listening()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_stop_antenna_info_listening()Z
 
     move-result v0
@@ -1088,7 +993,6 @@
 .method public static bridge synthetic -$$Nest$smnative_stop_batch()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_stop_batch()Z
 
     move-result v0
@@ -1099,7 +1003,6 @@
 .method public static bridge synthetic -$$Nest$smnative_stop_measurement_collection()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_stop_measurement_collection()Z
 
     move-result v0
@@ -1110,7 +1013,6 @@
 .method public static bridge synthetic -$$Nest$smnative_stop_navigation_message_collection()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_stop_navigation_message_collection()Z
 
     move-result v0
@@ -1121,7 +1023,6 @@
 .method public static bridge synthetic -$$Nest$smnative_stop_nmea_message_collection()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_stop_nmea_message_collection()Z
 
     move-result v0
@@ -1132,7 +1033,6 @@
 .method public static bridge synthetic -$$Nest$smnative_stop_sv_status_collection()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_stop_sv_status_collection()Z
 
     move-result v0
@@ -1143,7 +1043,6 @@
 .method public static bridge synthetic -$$Nest$smnative_supports_psds()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->native_supports_psds()Z
 
     move-result v0
@@ -1154,14 +1053,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 351
     invoke-static {}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->getInstance()Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssVendorConfig:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
-    .line 353
     invoke-static {}, Lcom/android/server/location/gnss/sec/CarrierConfig;->getInstance()Lcom/android/server/location/gnss/sec/CarrierConfig;
 
     move-result-object v0
@@ -1170,7 +1067,6 @@
 
     const/4 v0, 0x0
 
-    .line 357
     sput-boolean v0, Lcom/android/server/location/gnss/hal/GnssNative;->isHalInitialted:Z
 
     return-void
@@ -1179,10 +1075,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;Lcom/android/server/location/injector/Injector;Lcom/android/server/location/gnss/GnssConfiguration;)V
     .locals 3
 
-    .line 466
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 355
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1193,45 +1087,36 @@
 
     new-array v1, v0, [Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;
 
-    .line 424
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mBaseCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;
 
     new-array v1, v0, [Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;
 
-    .line 425
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mStatusCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;
 
     new-array v1, v0, [Lcom/android/server/location/gnss/hal/GnssNative$SvStatusCallbacks;
 
-    .line 426
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mSvStatusCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$SvStatusCallbacks;
 
     new-array v1, v0, [Lcom/android/server/location/gnss/hal/GnssNative$NmeaCallbacks;
 
-    .line 427
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNmeaCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$NmeaCallbacks;
 
     new-array v1, v0, [Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;
 
-    .line 428
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;
 
     new-array v1, v0, [Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;
 
-    .line 429
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mMeasurementCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;
 
     new-array v1, v0, [Lcom/android/server/location/gnss/hal/GnssNative$AntennaInfoCallbacks;
 
-    .line 430
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mAntennaInfoCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$AntennaInfoCallbacks;
 
     new-array v1, v0, [Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;
 
-    .line 431
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNavigationMessageCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;
 
-    .line 446
     new-instance v1, Landroid/location/GnssCapabilities$Builder;
 
     invoke-direct {v1}, Landroid/location/GnssCapabilities$Builder;-><init>()V
@@ -1244,55 +1129,42 @@
 
     const/4 v1, 0x0
 
-    .line 448
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mPowerStats:Lcom/android/server/location/gnss/GnssPowerStats;
 
-    .line 449
     iput v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHardwareYear:I
 
-    .line 450
     iput-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHardwareModelName:Ljava/lang/String;
 
     const-wide/16 v1, 0x0
 
-    .line 451
     iput-wide v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mStartRealtimeMs:J
 
-    .line 452
     iput-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHasFirstFix:Z
 
-    .line 460
     iput-wide v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->prevAssertTS:J
 
-    .line 461
     iput v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->continuousAssertCount:I
 
-    .line 467
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mContext:Landroid/content/Context;
 
-    .line 468
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p2, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
-    .line 469
     invoke-interface {p3}, Lcom/android/server/location/injector/Injector;->getEmergencyHelper()Lcom/android/server/location/injector/EmergencyHelper;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mEmergencyHelper:Lcom/android/server/location/injector/EmergencyHelper;
 
-    .line 470
     iput-object p4, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mConfiguration:Lcom/android/server/location/gnss/GnssConfiguration;
 
-    .line 473
     invoke-interface {p3}, Lcom/android/server/location/injector/Injector;->getNSConnectionHelper()Lcom/android/server/location/nsflp/NSConnectionHelper;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNSConnectionHelper:Lcom/android/server/location/nsflp/NSConnectionHelper;
 
-    .line 475
     new-instance p1, Lcom/android/server/location/gnss/sec/ActToolHelper;
 
     invoke-direct {p1}, Lcom/android/server/location/gnss/sec/ActToolHelper;-><init>()V
@@ -1303,14 +1175,12 @@
 
     const-string/jumbo p2, "true"
 
-    .line 476
     invoke-static {p1, p2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->enable_detecting_gnss_assert:Ljava/lang/String;
 
-    .line 477
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1335,7 +1205,6 @@
 .method public static checkInit()V
     .locals 2
 
-    .line 402
     sget-boolean v0, Lcom/android/server/location/gnss/hal/GnssNative;->isHalInitialted:Z
 
     if-nez v0, :cond_0
@@ -1344,14 +1213,12 @@
 
     const-string v1, "initializeHal() failed. but it will be recovered."
 
-    .line 403
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "dev.gnss.initializehal"
 
     const-string v1, "ON"
 
-    .line 404
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -1365,7 +1232,6 @@
 
     monitor-enter v0
 
-    .line 414
     :try_start_0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->isSupported()Z
 
@@ -1373,7 +1239,6 @@
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 415
     sget-object v1, Lcom/android/server/location/gnss/hal/GnssNative;->sInstance:Lcom/android/server/location/gnss/hal/GnssNative;
 
     if-nez v1, :cond_0
@@ -1388,7 +1253,6 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 416
     new-instance v1, Lcom/android/server/location/gnss/hal/GnssNative;
 
     sget-object v2, Lcom/android/server/location/gnss/hal/GnssNative;->sGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
@@ -1418,25 +1282,21 @@
 
     monitor-enter v0
 
-    .line 370
     :try_start_0
     sget-boolean v1, Lcom/android/server/location/gnss/hal/GnssNative;->sGnssHalInitialized:Z
 
     if-nez v1, :cond_1
 
-    .line 371
     sget-object v1, Lcom/android/server/location/gnss/hal/GnssNative;->sGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     if-nez v1, :cond_0
 
-    .line 372
     new-instance v1, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-direct {v1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;-><init>()V
 
     sput-object v1, Lcom/android/server/location/gnss/hal/GnssNative;->sGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
-    .line 374
     :cond_0
     sget-object v1, Lcom/android/server/location/gnss/hal/GnssNative;->sGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
@@ -1444,12 +1304,10 @@
 
     const/4 v1, 0x1
 
-    .line 375
     sput-boolean v1, Lcom/android/server/location/gnss/hal/GnssNative;->sGnssHalInitialized:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 377
     :cond_1
     monitor-exit v0
 
@@ -1470,7 +1328,6 @@
 
     monitor-enter v0
 
-    .line 384
     :try_start_0
     sget-object v1, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssVendorConfig:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
@@ -1480,7 +1337,6 @@
 
     if-nez v1, :cond_0
 
-    .line 385
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
@@ -1494,13 +1350,10 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 394
     sput-boolean v1, Lcom/android/server/location/gnss/hal/GnssNative;->isHalInitialted:Z
 
-    .line 395
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->initializeHal()V
 
-    .line 396
     sget-object v1, Lcom/android/server/location/gnss/hal/GnssNative;->sGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {v1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isSupported()Z
@@ -1509,12 +1362,10 @@
 
     const/4 v2, 0x1
 
-    .line 397
     sput-boolean v2, Lcom/android/server/location/gnss/hal/GnssNative;->isHalInitialted:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 398
     monitor-exit v0
 
     return v1
@@ -1530,7 +1381,6 @@
 .method private synthetic lambda$isInEmergencySession$27()Ljava/lang/Boolean;
     .locals 0
 
-    .line 1394
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNotificationCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$NotificationCallbacks;
 
     invoke-interface {p0}, Lcom/android/server/location/gnss/hal/GnssNative$NotificationCallbacks;->isInEmergencySessionSEC()Z
@@ -1547,14 +1397,12 @@
 .method private synthetic lambda$isInEmergencySession$28()Ljava/lang/Boolean;
     .locals 4
 
-    .line 1398
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mEmergencyHelper:Lcom/android/server/location/injector/EmergencyHelper;
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mConfiguration:Lcom/android/server/location/gnss/GnssConfiguration;
 
-    .line 1399
     invoke-virtual {p0}, Lcom/android/server/location/gnss/GnssConfiguration;->getEsExtensionSec()I
 
     move-result p0
@@ -1565,7 +1413,6 @@
 
     move-result-wide v1
 
-    .line 1398
     invoke-virtual {v0, v1, v2}, Lcom/android/server/location/injector/EmergencyHelper;->isInEmergency(J)Z
 
     move-result p0
@@ -1582,11 +1429,9 @@
 
     const-wide/16 v0, 0x1388
 
-    .line 387
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 388
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->checkInit()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1598,7 +1443,6 @@
 
     const-string v1, "checkInit() failed."
 
-    .line 390
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1608,7 +1452,6 @@
 .method private synthetic lambda$onCapabilitiesChanged$11(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
     .locals 3
 
-    .line 1261
     invoke-virtual {p1, p2}, Landroid/location/GnssCapabilities;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1617,7 +1460,6 @@
 
     return-void
 
-    .line 1265
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1639,7 +1481,6 @@
 
     const/4 v0, 0x0
 
-    .line 1267
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mBaseCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;
 
@@ -1647,7 +1488,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1268
     aget-object v1, v1, v0
 
     invoke-interface {v1, p2, p1}, Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;->onCapabilitiesChanged(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
@@ -1663,7 +1503,6 @@
 .method private synthetic lambda$psdsDownloadRequest$13(I)V
     .locals 0
 
-    .line 1299
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mPsdsCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$PsdsCallbacks;
 
     invoke-interface {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$PsdsCallbacks;->onRequestPsdsDownload(I)V
@@ -1674,7 +1513,6 @@
 .method private synthetic lambda$reportAGpsStatus$4(II[B)V
     .locals 0
 
-    .line 1170
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mAGpsCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$AGpsCallbacks;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative$AGpsCallbacks;->onReportAGpsStatus(II[B)V
@@ -1687,7 +1525,6 @@
 
     const/4 v0, 0x0
 
-    .line 1203
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mAntennaInfoCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$AntennaInfoCallbacks;
 
@@ -1695,7 +1532,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1204
     aget-object v1, v1, v0
 
     invoke-interface {v1, p1}, Lcom/android/server/location/gnss/hal/GnssNative$AntennaInfoCallbacks;->onReportAntennaInfo(Ljava/util/List;)V
@@ -1711,7 +1547,6 @@
 .method private synthetic lambda$reportGeofenceAddStatus$16(II)V
     .locals 0
 
-    .line 1319
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGeofenceCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;->onReportGeofenceAddStatus(II)V
@@ -1722,7 +1557,6 @@
 .method private synthetic lambda$reportGeofencePauseStatus$18(II)V
     .locals 0
 
-    .line 1331
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGeofenceCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;->onReportGeofencePauseStatus(II)V
@@ -1733,7 +1567,6 @@
 .method private synthetic lambda$reportGeofenceRemoveStatus$17(II)V
     .locals 0
 
-    .line 1325
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGeofenceCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;->onReportGeofenceRemoveStatus(II)V
@@ -1744,7 +1577,6 @@
 .method private synthetic lambda$reportGeofenceResumeStatus$19(II)V
     .locals 0
 
-    .line 1337
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGeofenceCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;->onReportGeofenceResumeStatus(II)V
@@ -1755,7 +1587,6 @@
 .method private synthetic lambda$reportGeofenceStatus$15(ILandroid/location/Location;)V
     .locals 0
 
-    .line 1313
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGeofenceCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;->onReportGeofenceStatus(ILandroid/location/Location;)V
@@ -1766,7 +1597,6 @@
 .method private synthetic lambda$reportGeofenceTransition$14(ILandroid/location/Location;IJ)V
     .locals 6
 
-    .line 1306
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGeofenceCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;
 
     move v1, p1
@@ -1791,15 +1621,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1115
     iget-boolean v2, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHasFirstFix:Z
 
     if-nez v2, :cond_0
 
-    .line 1116
     iput-boolean v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHasFirstFix:Z
 
-    .line 1119
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -1812,7 +1639,6 @@
 
     move v3, v0
 
-    .line 1120
     :goto_0
     iget-object v4, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mStatusCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;
 
@@ -1820,7 +1646,6 @@
 
     if-ge v3, v5, :cond_0
 
-    .line 1121
     aget-object v4, v4, v3
 
     invoke-interface {v4, v2}, Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;->onReportFirstFix(I)V
@@ -1829,7 +1654,6 @@
 
     goto :goto_0
 
-    .line 1125
     :cond_0
     invoke-virtual {p2}, Landroid/location/Location;->hasSpeed()Z
 
@@ -1837,7 +1661,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 1126
     invoke-virtual {p2}, Landroid/location/Location;->getSpeed()F
 
     move-result v2
@@ -1853,7 +1676,6 @@
     :cond_1
     move v1, v0
 
-    .line 1127
     :goto_1
     iget-boolean v2, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mItarSpeedLimitExceeded:Z
 
@@ -1865,12 +1687,10 @@
 
     const-string/jumbo v2, "speed nearing ITAR threshold - blocking further GNSS output"
 
-    .line 1128
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 1129
     :cond_2
     iget-boolean v2, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mItarSpeedLimitExceeded:Z
 
@@ -1880,15 +1700,12 @@
 
     const-string/jumbo v2, "speed leaving ITAR threshold - allowing further GNSS output"
 
-    .line 1130
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1132
     :cond_3
     :goto_2
     iput-boolean v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mItarSpeedLimitExceeded:Z
 
-    .line 1135
     :cond_4
     iget-boolean v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mItarSpeedLimitExceeded:Z
 
@@ -1896,7 +1713,6 @@
 
     return-void
 
-    .line 1139
     :cond_5
     :goto_3
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;
@@ -1905,7 +1721,6 @@
 
     if-ge v0, v2, :cond_6
 
-    .line 1140
     aget-object v1, v1, v0
 
     invoke-interface {v1, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;->onReportLocation(ZLandroid/location/Location;)V
@@ -1923,7 +1738,6 @@
 
     const/4 v0, 0x0
 
-    .line 1291
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;
 
@@ -1931,7 +1745,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1292
     aget-object v1, v1, v0
 
     invoke-interface {v1, p1}, Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;->onReportLocations([Landroid/location/Location;)V
@@ -1947,7 +1760,6 @@
 .method public static synthetic lambda$reportMeasurementData$6(Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;Landroid/location/GnssMeasurementsEvent;)V
     .locals 0
 
-    .line 1195
     invoke-interface {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;->onReportMeasurements(Landroid/location/GnssMeasurementsEvent;)V
 
     return-void
@@ -1956,14 +1768,12 @@
 .method private synthetic lambda$reportMeasurementData$7(Landroid/location/GnssMeasurementsEvent;)V
     .locals 6
 
-    .line 1189
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mItarSpeedLimitExceeded:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 1193
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mMeasurementCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;
 
@@ -1976,7 +1786,6 @@
 
     aget-object v3, v0, v2
 
-    .line 1195
     iget-object v4, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHandler:Landroid/os/Handler;
 
     new-instance v5, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda17;
@@ -1996,14 +1805,12 @@
 .method private synthetic lambda$reportNavigationMessage$10(Landroid/location/GnssNavigationMessage;)V
     .locals 6
 
-    .line 1212
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mItarSpeedLimitExceeded:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 1216
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNavigationMessageCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;
 
@@ -2016,7 +1823,6 @@
 
     aget-object v3, v0, v2
 
-    .line 1218
     iget-object v4, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHandler:Landroid/os/Handler;
 
     new-instance v5, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda8;
@@ -2036,7 +1842,6 @@
 .method public static synthetic lambda$reportNavigationMessage$9(Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;Landroid/location/GnssNavigationMessage;)V
     .locals 0
 
-    .line 1218
     invoke-interface {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;->onReportNavigationMessage(Landroid/location/GnssNavigationMessage;)V
 
     return-void
@@ -2047,7 +1852,6 @@
 
     move-object v0, p0
 
-    .line 1384
     iget-object v0, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mNotificationCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$NotificationCallbacks;
 
     move-object v1, p1
@@ -2076,7 +1880,6 @@
 
     move-object v0, p0
 
-    .line 1345
     iget-object v0, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mNotificationCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$NotificationCallbacks;
 
     move v1, p1
@@ -2105,7 +1908,6 @@
 .method private synthetic lambda$reportNmea$5(J)V
     .locals 3
 
-    .line 1176
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mItarSpeedLimitExceeded:Z
 
     if-eqz v0, :cond_0
@@ -2115,7 +1917,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1180
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNmeaCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$NmeaCallbacks;
 
@@ -2123,7 +1924,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1181
     aget-object v1, v1, v0
 
     invoke-interface {v1, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$NmeaCallbacks;->onReportNmea(J)V
@@ -2141,7 +1941,6 @@
 
     const/4 v0, 0x0
 
-    .line 1148
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mStatusCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;
 
@@ -2149,7 +1948,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1149
     aget-object v1, v1, v0
 
     invoke-interface {v1, p1}, Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;->onReportStatus(I)V
@@ -2165,14 +1963,12 @@
 .method private synthetic lambda$reportSvStatus$3(I[I[F[F[F[F[F)V
     .locals 0
 
-    .line 1159
     invoke-static/range {p1 .. p7}, Landroid/location/GnssStatus;->wrap(I[I[F[F[F[F[F)Landroid/location/GnssStatus;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    .line 1161
     :goto_0
     iget-object p3, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mSvStatusCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$SvStatusCallbacks;
 
@@ -2180,7 +1976,6 @@
 
     if-ge p2, p4, :cond_0
 
-    .line 1162
     aget-object p3, p3, p2
 
     invoke-interface {p3, p1}, Lcom/android/server/location/gnss/hal/GnssNative$SvStatusCallbacks;->onReportSvStatus(Landroid/location/GnssStatus;)V
@@ -2196,7 +1991,6 @@
 .method private synthetic lambda$requestCivicAddress$35(DDD)V
     .locals 7
 
-    .line 1485
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
 
     move-wide v1, p1
@@ -2213,7 +2007,6 @@
 .method private synthetic lambda$requestFlpLocation$30(I)V
     .locals 0
 
-    .line 1455
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
 
     invoke-interface {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;->onRequestFlpLocation(I)V
@@ -2224,7 +2017,6 @@
 .method private synthetic lambda$requestLocation$22(ZZ)V
     .locals 0
 
-    .line 1358
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationRequestCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;->onRequestLocation(ZZ)V
@@ -2235,7 +2027,6 @@
 .method private synthetic lambda$requestLppeCommonIesCapability$29()V
     .locals 0
 
-    .line 1449
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
 
     invoke-interface {p0}, Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;->onRequestLppeCommonIesCapability()V
@@ -2246,7 +2037,6 @@
 .method private synthetic lambda$requestRefLocation$24()V
     .locals 0
 
-    .line 1370
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationRequestCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;
 
     invoke-interface {p0}, Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;->onRequestRefLocation()V
@@ -2257,7 +2047,6 @@
 .method private synthetic lambda$requestRefLocationSec$25()V
     .locals 0
 
-    .line 1376
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationRequestCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;
 
     invoke-interface {p0}, Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;->onRequestRefLocationSec()V
@@ -2268,7 +2057,6 @@
 .method private synthetic lambda$requestSetID$21(I)V
     .locals 0
 
-    .line 1352
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mAGpsCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$AGpsCallbacks;
 
     invoke-interface {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$AGpsCallbacks;->onRequestSetID(I)V
@@ -2279,7 +2067,6 @@
 .method private synthetic lambda$requestUbpCapability$31()V
     .locals 0
 
-    .line 1461
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
 
     invoke-interface {p0}, Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;->onRequestUbpCapability()V
@@ -2290,7 +2077,6 @@
 .method private synthetic lambda$requestUbpInfo$32(I)V
     .locals 0
 
-    .line 1467
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
 
     invoke-interface {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;->onRequestUbpInfo(I)V
@@ -2301,7 +2087,6 @@
 .method private synthetic lambda$requestUtcTime$23()V
     .locals 0
 
-    .line 1364
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mTimeCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$TimeCallbacks;
 
     invoke-interface {p0}, Lcom/android/server/location/gnss/hal/GnssNative$TimeCallbacks;->onRequestUtcTime()V
@@ -2312,7 +2097,6 @@
 .method private synthetic lambda$requestWlanCapability$33()V
     .locals 0
 
-    .line 1473
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
 
     invoke-interface {p0}, Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;->onRequestWifiCapability()V
@@ -2323,7 +2107,6 @@
 .method private synthetic lambda$requestWlanScanInfo$34(I)V
     .locals 0
 
-    .line 1479
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
 
     invoke-interface {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;->onRequestWifiScan(I)V
@@ -2539,7 +2322,6 @@
 
     monitor-enter v0
 
-    .line 364
     :try_start_0
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2547,17 +2329,14 @@
 
     const/4 p0, 0x0
 
-    .line 365
     sput-boolean p0, Lcom/android/server/location/gnss/hal/GnssNative;->sGnssHalInitialized:Z
 
     const/4 p0, 0x0
 
-    .line 366
     sput-object p0, Lcom/android/server/location/gnss/hal/GnssNative;->sInstance:Lcom/android/server/location/gnss/hal/GnssNative;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 367
     monitor-exit v0
 
     return-void
@@ -2575,14 +2354,12 @@
 .method public addAntennaInfoCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$AntennaInfoCallbacks;)V
     .locals 2
 
-    .line 516
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 517
     const-class v0, Lcom/android/server/location/gnss/hal/GnssNative$AntennaInfoCallbacks;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mAntennaInfoCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$AntennaInfoCallbacks;
@@ -2601,14 +2378,12 @@
 .method public addBaseCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;)V
     .locals 2
 
-    .line 481
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 482
     const-class v0, Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mBaseCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;
@@ -2629,12 +2404,10 @@
 
     move-object v0, p0
 
-    .line 990
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 991
     iget-object v2, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move v3, p1
@@ -2663,14 +2436,12 @@
 .method public addLocationCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;)V
     .locals 2
 
-    .line 504
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 505
     const-class v0, Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$LocationCallbacks;
@@ -2689,14 +2460,12 @@
 .method public addMeasurementCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;)V
     .locals 2
 
-    .line 510
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 511
     const-class v0, Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mMeasurementCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$MeasurementCallbacks;
@@ -2715,14 +2484,12 @@
 .method public addNavigationMessageCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;)V
     .locals 2
 
-    .line 522
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 523
     const-class v0, Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNavigationMessageCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$NavigationMessageCallbacks;
@@ -2741,14 +2508,12 @@
 .method public addNmeaCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$NmeaCallbacks;)V
     .locals 2
 
-    .line 498
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 499
     const-class v0, Lcom/android/server/location/gnss/hal/GnssNative$NmeaCallbacks;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNmeaCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$NmeaCallbacks;
@@ -2767,14 +2532,12 @@
 .method public addStatusCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;)V
     .locals 2
 
-    .line 486
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 487
     const-class v0, Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mStatusCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$StatusCallbacks;
@@ -2793,14 +2556,12 @@
 .method public addSvStatusCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$SvStatusCallbacks;)V
     .locals 2
 
-    .line 492
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 493
     const-class v0, Lcom/android/server/location/gnss/hal/GnssNative$SvStatusCallbacks;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mSvStatusCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$SvStatusCallbacks;
@@ -2819,12 +2580,10 @@
 .method public cleanup()V
     .locals 1
 
-    .line 623
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 624
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->cleanup()V
@@ -2835,12 +2594,10 @@
 .method public cleanupBatching()V
     .locals 1
 
-    .line 939
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 940
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->cleanupBatching()V
@@ -2851,12 +2608,10 @@
 .method public deleteAidingData(I)V
     .locals 1
 
-    .line 704
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 705
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->deleteAidingData(I)V
@@ -2867,12 +2622,10 @@
 .method public flushBatch()V
     .locals 1
 
-    .line 956
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 957
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->flushBatch()V
@@ -2883,12 +2636,10 @@
 .method public getBatchSize()I
     .locals 1
 
-    .line 972
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 973
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->getBatchSize()I
@@ -2901,7 +2652,6 @@
 .method public getCapabilities()Landroid/location/GnssCapabilities;
     .locals 0
 
-    .line 638
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
     return-object p0
@@ -2910,7 +2660,6 @@
 .method public getConfiguration()Lcom/android/server/location/gnss/GnssConfiguration;
     .locals 0
 
-    .line 606
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mConfiguration:Lcom/android/server/location/gnss/GnssConfiguration;
 
     return-object p0
@@ -2919,7 +2668,6 @@
 .method public getHardwareModelName()Ljava/lang/String;
     .locals 0
 
-    .line 652
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHardwareModelName:Ljava/lang/String;
 
     return-object p0
@@ -2928,7 +2676,6 @@
 .method public getHardwareYear()I
     .locals 0
 
-    .line 645
     iget p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHardwareYear:I
 
     return p0
@@ -2937,12 +2684,10 @@
 .method public getInternalState()Ljava/lang/String;
     .locals 1
 
-    .line 696
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 697
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->getInternalState()Ljava/lang/String;
@@ -2955,7 +2700,6 @@
 .method public getPowerStats()Lcom/android/server/location/gnss/GnssPowerStats;
     .locals 0
 
-    .line 631
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mPowerStats:Lcom/android/server/location/gnss/GnssPowerStats;
 
     return-object p0
@@ -2964,12 +2708,10 @@
 .method public getSehGnssHalVersion()F
     .locals 1
 
-    .line 1512
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1513
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->getSehGnssHalVersion()F
@@ -2982,12 +2724,10 @@
 .method public gnssConfigurationUpdateSec(Ljava/lang/String;)V
     .locals 1
 
-    .line 1495
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1496
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->gnssConfigurationUpdateExtension(Ljava/lang/String;)V
@@ -2998,12 +2738,10 @@
 .method public init()Z
     .locals 1
 
-    .line 614
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 615
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->init()Z
@@ -3016,12 +2754,10 @@
 .method public initBatching()Z
     .locals 1
 
-    .line 931
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 932
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->initBatching()Z
@@ -3034,12 +2770,10 @@
 .method public initLocationOff()Z
     .locals 1
 
-    .line 1490
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1491
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->initLocationOff()Z
@@ -3052,22 +2786,18 @@
 .method public final initializeGnss(Z)V
     .locals 1
 
-    .line 588
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
     const/4 v0, 0x0
 
-    .line 589
     iput v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mTopFlags:I
 
-    .line 590
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->initOnce(Lcom/android/server/location/gnss/hal/GnssNative;Z)V
 
-    .line 594
     iget-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->init()Z
@@ -3078,12 +2808,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 595
     iget-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->cleanup()V
 
-    .line 596
     sget-object p1, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssVendorConfig:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
     invoke-virtual {p1}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->isBroadcomGnss()Z
@@ -3092,7 +2820,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 597
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->initLocationOff()Z
@@ -3100,7 +2827,6 @@
     :cond_0
     const-string p0, "gnss hal initialized"
 
-    .line 599
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -3108,7 +2834,6 @@
     :cond_1
     const-string p0, "gnss hal initialization failed"
 
-    .line 601
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -3120,12 +2845,10 @@
 
     move-object/from16 v0, p0
 
-    .line 762
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 765
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasAltitude()Z
 
     move-result v1
@@ -3146,7 +2869,6 @@
     :goto_0
     or-int/lit8 v1, v1, 0x1
 
-    .line 766
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasSpeed()Z
 
     move-result v4
@@ -3163,7 +2885,6 @@
     :goto_1
     or-int/2addr v1, v4
 
-    .line 767
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasBearing()Z
 
     move-result v4
@@ -3180,7 +2901,6 @@
     :goto_2
     or-int/2addr v1, v4
 
-    .line 768
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasAccuracy()Z
 
     move-result v4
@@ -3197,7 +2917,6 @@
     :goto_3
     or-int/2addr v1, v4
 
-    .line 769
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasVerticalAccuracy()Z
 
     move-result v4
@@ -3214,7 +2933,6 @@
     :goto_4
     or-int/2addr v1, v4
 
-    .line 770
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasSpeedAccuracy()Z
 
     move-result v4
@@ -3231,7 +2949,6 @@
     :goto_5
     or-int/2addr v1, v4
 
-    .line 771
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasBearingAccuracy()Z
 
     move-result v4
@@ -3248,57 +2965,46 @@
     :goto_6
     or-int v6, v1, v4
 
-    .line 773
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v7
 
-    .line 774
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v9
 
-    .line 775
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v11
 
-    .line 776
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getSpeed()F
 
     move-result v13
 
-    .line 777
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getBearing()F
 
     move-result v14
 
-    .line 778
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v15
 
-    .line 779
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getVerticalAccuracyMeters()F
 
     move-result v16
 
-    .line 780
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getSpeedAccuracyMetersPerSecond()F
 
     move-result v17
 
-    .line 781
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getBearingAccuracyDegrees()F
 
     move-result v18
 
-    .line 782
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getTime()J
 
     move-result-wide v19
 
-    .line 785
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasElapsedRealtimeUncertaintyNanos()Z
 
     move-result v1
@@ -3313,17 +3019,14 @@
     :goto_7
     or-int/lit8 v21, v2, 0x1
 
-    .line 787
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getElapsedRealtimeNanos()J
 
     move-result-wide v22
 
-    .line 788
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getElapsedRealtimeUncertaintyNanos()D
 
     move-result-wide v24
 
-    .line 790
     iget-object v5, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual/range {v5 .. v25}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectBestLocation(IDDDFFFFFFJIJD)V
@@ -3336,12 +3039,10 @@
 
     move-object/from16 v0, p0
 
-    .line 1589
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1590
     iget-object v2, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move-object/from16 v3, p1
@@ -3378,12 +3079,10 @@
 .method public injectFlpError(I)V
     .locals 1
 
-    .line 1533
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1534
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectFlpError(I)V
@@ -3396,12 +3095,10 @@
 
     move-object/from16 v0, p0
 
-    .line 1526
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1527
     iget-object v2, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move/from16 v3, p1
@@ -3436,19 +3133,16 @@
 
     move-object/from16 v0, p0
 
-    .line 721
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 722
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasAccuracy()Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    .line 725
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasAltitude()Z
 
     move-result v1
@@ -3469,7 +3163,6 @@
     :goto_0
     or-int/lit8 v1, v1, 0x1
 
-    .line 726
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasSpeed()Z
 
     move-result v4
@@ -3486,7 +3179,6 @@
     :goto_1
     or-int/2addr v1, v4
 
-    .line 727
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasBearing()Z
 
     move-result v4
@@ -3503,7 +3195,6 @@
     :goto_2
     or-int/2addr v1, v4
 
-    .line 728
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasAccuracy()Z
 
     move-result v4
@@ -3520,7 +3211,6 @@
     :goto_3
     or-int/2addr v1, v4
 
-    .line 729
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasVerticalAccuracy()Z
 
     move-result v4
@@ -3537,7 +3227,6 @@
     :goto_4
     or-int/2addr v1, v4
 
-    .line 730
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasSpeedAccuracy()Z
 
     move-result v4
@@ -3554,7 +3243,6 @@
     :goto_5
     or-int/2addr v1, v4
 
-    .line 731
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasBearingAccuracy()Z
 
     move-result v4
@@ -3571,57 +3259,46 @@
     :goto_6
     or-int v6, v1, v4
 
-    .line 733
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v7
 
-    .line 734
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v9
 
-    .line 735
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v11
 
-    .line 736
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getSpeed()F
 
     move-result v13
 
-    .line 737
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getBearing()F
 
     move-result v14
 
-    .line 738
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v15
 
-    .line 739
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getVerticalAccuracyMeters()F
 
     move-result v16
 
-    .line 740
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getSpeedAccuracyMetersPerSecond()F
 
     move-result v17
 
-    .line 741
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getBearingAccuracyDegrees()F
 
     move-result v18
 
-    .line 742
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getTime()J
 
     move-result-wide v19
 
-    .line 745
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->hasElapsedRealtimeUncertaintyNanos()Z
 
     move-result v1
@@ -3636,17 +3313,14 @@
     :goto_7
     or-int/lit8 v21, v2, 0x1
 
-    .line 747
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getElapsedRealtimeNanos()J
 
     move-result-wide v22
 
-    .line 748
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getElapsedRealtimeUncertaintyNanos()D
 
     move-result-wide v24
 
-    .line 750
     iget-object v5, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual/range {v5 .. v25}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectLocation(IDDDFFFFFFJIJD)V
@@ -3660,12 +3334,10 @@
 
     move-object v0, p0
 
-    .line 1540
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1541
     iget-object v2, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move v3, p1
@@ -3696,12 +3368,10 @@
 .method public injectMeasurementCorrections(Landroid/location/GnssMeasurementCorrections;)Z
     .locals 1
 
-    .line 923
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 924
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectMeasurementCorrections(Landroid/location/GnssMeasurementCorrections;)Z
@@ -3714,12 +3384,10 @@
 .method public injectNiSuplMessageData([BII)V
     .locals 1
 
-    .line 1088
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1089
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectNiSuplMessageData([BII)V
@@ -3730,12 +3398,10 @@
 .method public injectPsdsData([BII)V
     .locals 1
 
-    .line 1080
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1081
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectPsdsData([BII)V
@@ -3746,12 +3412,10 @@
 .method public injectTime(JJI)V
     .locals 7
 
-    .line 801
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 802
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move-wide v2, p1
@@ -3768,12 +3432,10 @@
 .method public injectUbpCapability(ZZZZ)V
     .locals 1
 
-    .line 1548
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1549
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectUbpCapability(ZZZZ)V
@@ -3784,12 +3446,10 @@
 .method public injectUbpError(I)V
     .locals 1
 
-    .line 1557
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1558
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectUbpError(I)V
@@ -3800,12 +3460,10 @@
 .method public injectUbpInfo(II)V
     .locals 1
 
-    .line 1553
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1554
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectUbpInfo(II)V
@@ -3818,12 +3476,10 @@
 
     move-object v0, p0
 
-    .line 1563
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1564
     iget-object v2, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move v3, p1
@@ -3846,12 +3502,10 @@
 .method public injectWlanError(I)V
     .locals 1
 
-    .line 1572
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1573
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectWlanError(I)V
@@ -3862,12 +3516,10 @@
 .method public injectWlanScanInfo([J[I[II)V
     .locals 1
 
-    .line 1568
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1569
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->injectWlanScanInfo([J[I[II)V
@@ -3878,12 +3530,10 @@
 .method public isAntennaInfoSupported()Z
     .locals 1
 
-    .line 833
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 834
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isAntennaInfoSupported()Z
@@ -3896,12 +3546,10 @@
 .method public isGeofencingSupported()Z
     .locals 1
 
-    .line 980
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 981
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isGeofencingSupported()Z
@@ -3916,7 +3564,6 @@
 
     const-string p0, "$"
 
-    .line 1442
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -3929,12 +3576,10 @@
 .method public isGnssVisibilityControlSupported()Z
     .locals 1
 
-    .line 1023
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1024
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isGnssVisibilityControlSupported()Z
@@ -3947,7 +3592,6 @@
 .method public isInEmergencySession()Z
     .locals 2
 
-    .line 1392
     sget-object v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssVendorConfig:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
     invoke-virtual {v0}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->isIzatServiceEnabled()Z
@@ -3970,7 +3614,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1393
     :cond_0
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda20;
 
@@ -3988,7 +3631,6 @@
 
     return p0
 
-    .line 1397
     :cond_1
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda21;
 
@@ -4010,7 +3652,6 @@
 .method public isItarSpeedLimitExceeded()Z
     .locals 0
 
-    .line 660
     iget-boolean p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mItarSpeedLimitExceeded:Z
 
     return p0
@@ -4019,12 +3660,10 @@
 .method public isMeasurementCorrectionsSupported()Z
     .locals 1
 
-    .line 915
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 916
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isMeasurementCorrectionsSupported()Z
@@ -4037,12 +3676,10 @@
 .method public isMeasurementSupported()Z
     .locals 1
 
-    .line 857
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 858
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isMeasurementSupported()Z
@@ -4055,12 +3692,10 @@
 .method public isNavigationMessageCollectionSupported()Z
     .locals 1
 
-    .line 809
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 810
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isNavigationMessageCollectionSupported()Z
@@ -4073,12 +3708,10 @@
 .method public isPsdsSupported()Z
     .locals 1
 
-    .line 1072
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1073
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isPsdsSupported()Z
@@ -4091,12 +3724,10 @@
 .method public isSehGnssAidlHal()Z
     .locals 1
 
-    .line 1517
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1518
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->isSehGnssAidlHal()Z
@@ -4109,7 +3740,6 @@
 .method public final onCapabilitiesChanged(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
     .locals 1
 
-    .line 1260
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda18;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda18;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
@@ -4122,12 +3752,10 @@
 .method public pauseGeofence(I)Z
     .locals 1
 
-    .line 1007
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1008
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->pauseGeofence(I)Z
@@ -4140,7 +3768,6 @@
 .method public psdsDownloadRequest(I)V
     .locals 1
 
-    .line 1299
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda34;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda34;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;I)V
@@ -4153,12 +3780,10 @@
 .method public readNmea([BI)I
     .locals 1
 
-    .line 713
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 714
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->readNmea([BI)I
@@ -4171,7 +3796,6 @@
 .method public register()V
     .locals 3
 
-    .line 576
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v1, 0x1
@@ -4180,22 +3804,18 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 577
     iput-boolean v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v0, 0x0
 
-    .line 579
     invoke-virtual {p0, v0}, Lcom/android/server/location/gnss/hal/GnssNative;->initializeGnss(Z)V
 
     const-string v1, "GnssManager"
 
     const-string v2, "gnss hal started"
 
-    .line 580
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mBaseCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;
 
@@ -4203,7 +3823,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 583
     aget-object v1, v1, v0
 
     invoke-interface {v1}, Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;->onHalStarted()V
@@ -4219,12 +3838,10 @@
 .method public removeGeofence(I)Z
     .locals 1
 
-    .line 1015
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1016
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->removeGeofence(I)Z
@@ -4237,7 +3854,6 @@
 .method public reportAGpsStatus(II[B)V
     .locals 1
 
-    .line 1169
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda22;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda22;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;II[B)V
@@ -4250,7 +3866,6 @@
 .method public reportAntennaInfo(Ljava/util/List;)V
     .locals 1
 
-    .line 1202
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda13;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda13;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;Ljava/util/List;)V
@@ -4263,7 +3878,6 @@
 .method public final reportExtraAssertMessage(Ljava/lang/String;)V
     .locals 9
 
-    .line 1405
     sget-object v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssVendorConfig:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
     invoke-virtual {v0}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->isIzatServiceEnabled()Z
@@ -4272,7 +3886,6 @@
 
     if-nez v1, :cond_3
 
-    .line 1406
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4291,7 +3904,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1410
     invoke-virtual {p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->isGnssAssertMessage(Ljava/lang/String;)Z
 
     move-result v1
@@ -4300,7 +3912,6 @@
 
     const-string/jumbo v1, "true"
 
-    .line 1411
     iget-object v3, p0, Lcom/android/server/location/gnss/hal/GnssNative;->enable_detecting_gnss_assert:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4309,12 +3920,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 1412
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 1413
     iget-wide v5, p0, Lcom/android/server/location/gnss/hal/GnssNative;->prevAssertTS:J
 
     sub-long v5, v3, v5
@@ -4327,7 +3936,6 @@
 
     if-gtz v1, :cond_0
 
-    .line 1415
     iget v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->continuousAssertCount:I
 
     add-int/lit8 v1, v1, 0x1
@@ -4336,11 +3944,9 @@
 
     goto :goto_0
 
-    .line 1417
     :cond_0
     iput v5, p0, Lcom/android/server/location/gnss/hal/GnssNative;->continuousAssertCount:I
 
-    .line 1420
     :goto_0
     iget v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->continuousAssertCount:I
 
@@ -4348,21 +3954,17 @@
 
     if-le v1, v6, :cond_1
 
-    .line 1421
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mActToolHelper:Lcom/android/server/location/gnss/sec/ActToolHelper;
 
     iget-object v6, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v6, p1}, Lcom/android/server/location/gnss/sec/ActToolHelper;->notifyEvent(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 1422
     iput v5, p0, Lcom/android/server/location/gnss/hal/GnssNative;->continuousAssertCount:I
 
-    .line 1424
     :cond_1
     iput-wide v3, p0, Lcom/android/server/location/gnss/hal/GnssNative;->prevAssertTS:J
 
-    .line 1426
     :cond_2
     invoke-virtual {v0}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->isBroadcomGnss()Z
 
@@ -4372,15 +3974,12 @@
 
     const-string v0, "GNSS report assert, reset it"
 
-    .line 1427
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1428
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {v0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->init()Z
 
-    .line 1433
     :cond_3
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNSConnectionHelper:Lcom/android/server/location/nsflp/NSConnectionHelper;
 
@@ -4392,7 +3991,6 @@
 .method public reportGeofenceAddStatus(II)V
     .locals 1
 
-    .line 1318
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda14;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda14;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;II)V
@@ -4405,7 +4003,6 @@
 .method public reportGeofencePauseStatus(II)V
     .locals 1
 
-    .line 1330
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda16;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda16;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;II)V
@@ -4418,7 +4015,6 @@
 .method public reportGeofenceRemoveStatus(II)V
     .locals 1
 
-    .line 1324
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda15;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda15;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;II)V
@@ -4431,7 +4027,6 @@
 .method public reportGeofenceResumeStatus(II)V
     .locals 1
 
-    .line 1336
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda5;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda5;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;II)V
@@ -4444,7 +4039,6 @@
 .method public reportGeofenceStatus(ILandroid/location/Location;)V
     .locals 1
 
-    .line 1312
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda19;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda19;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;ILandroid/location/Location;)V
@@ -4457,7 +4051,6 @@
 .method public reportGeofenceTransition(ILandroid/location/Location;IJ)V
     .locals 8
 
-    .line 1305
     new-instance v7, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda0;
 
     move-object v0, v7
@@ -4482,7 +4075,6 @@
 .method public reportGnssPowerStats(Lcom/android/server/location/gnss/GnssPowerStats;)V
     .locals 0
 
-    .line 1275
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mPowerStats:Lcom/android/server/location/gnss/GnssPowerStats;
 
     return-void
@@ -4495,10 +4087,8 @@
 
     const-string v1, "gnss hal died - restarting shortly..."
 
-    .line 1095
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1099
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -4515,7 +4105,6 @@
 .method public reportLocation(ZLandroid/location/Location;)V
     .locals 1
 
-    .line 1114
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;ZLandroid/location/Location;)V
@@ -4528,7 +4117,6 @@
 .method public reportLocationBatch([Landroid/location/Location;)V
     .locals 1
 
-    .line 1290
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda24;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda24;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;[Landroid/location/Location;)V
@@ -4541,7 +4129,6 @@
 .method public reportMeasurementData(Landroid/location/GnssMeasurementsEvent;)V
     .locals 1
 
-    .line 1188
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda35;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda35;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;Landroid/location/GnssMeasurementsEvent;)V
@@ -4554,7 +4141,6 @@
 .method public reportNavigationMessage(Landroid/location/GnssNavigationMessage;)V
     .locals 1
 
-    .line 1211
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;Landroid/location/GnssNavigationMessage;)V
@@ -4567,7 +4153,6 @@
 .method public reportNfwNotification(Ljava/lang/String;BLjava/lang/String;BLjava/lang/String;BZZ)V
     .locals 11
 
-    .line 1383
     new-instance v10, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda9;
 
     move-object v0, v10
@@ -4600,7 +4185,6 @@
 .method public reportNiNotification(IIIIILjava/lang/String;Ljava/lang/String;II)V
     .locals 12
 
-    .line 1344
     new-instance v11, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda36;
 
     move-object v0, v11
@@ -4635,7 +4219,6 @@
 .method public reportNmea(J)V
     .locals 1
 
-    .line 1175
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda7;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda7;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;J)V
@@ -4648,7 +4231,6 @@
 .method public reportStatus(I)V
     .locals 1
 
-    .line 1147
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda33;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda33;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;I)V
@@ -4661,7 +4243,6 @@
 .method public reportSvStatus(I[I[F[F[F[F[F)V
     .locals 10
 
-    .line 1158
     new-instance v9, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda25;
 
     move-object v0, v9
@@ -4692,7 +4273,6 @@
 .method public requestCivicAddress(DDD)V
     .locals 9
 
-    .line 1484
     new-instance v8, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda31;
 
     move-object v0, v8
@@ -4715,7 +4295,6 @@
 .method public requestFlpLocation(I)V
     .locals 1
 
-    .line 1454
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda23;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda23;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;I)V
@@ -4728,7 +4307,6 @@
 .method public requestLocation(ZZ)V
     .locals 1
 
-    .line 1357
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda28;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda28;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;ZZ)V
@@ -4741,7 +4319,6 @@
 .method public requestLppeCommonIesCapability()V
     .locals 1
 
-    .line 1448
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda29;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda29;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;)V
@@ -4754,12 +4331,10 @@
 .method public requestPowerStats()V
     .locals 1
 
-    .line 1039
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1040
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->requestPowerStats()V
@@ -4770,7 +4345,6 @@
 .method public requestRefLocation()V
     .locals 1
 
-    .line 1369
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda12;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda12;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;)V
@@ -4783,7 +4357,6 @@
 .method public requestRefLocationSec()V
     .locals 1
 
-    .line 1375
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda10;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda10;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;)V
@@ -4796,7 +4369,6 @@
 .method public requestSetID(I)V
     .locals 1
 
-    .line 1352
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda11;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda11;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;I)V
@@ -4809,7 +4381,6 @@
 .method public requestUbpCapability()V
     .locals 1
 
-    .line 1460
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;)V
@@ -4822,7 +4393,6 @@
 .method public requestUbpInfo(I)V
     .locals 1
 
-    .line 1466
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda32;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda32;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;I)V
@@ -4835,7 +4405,6 @@
 .method public requestUtcTime()V
     .locals 1
 
-    .line 1364
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda4;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda4;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;)V
@@ -4848,7 +4417,6 @@
 .method public requestWlanCapability()V
     .locals 1
 
-    .line 1472
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda26;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda26;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;)V
@@ -4861,7 +4429,6 @@
 .method public requestWlanScanInfo(I)V
     .locals 1
 
-    .line 1478
     new-instance v0, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda27;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/location/gnss/hal/GnssNative$$ExternalSyntheticLambda27;-><init>(Lcom/android/server/location/gnss/hal/GnssNative;I)V
@@ -4876,19 +4443,16 @@
 
     const/4 v0, 0x1
 
-    .line 1104
     invoke-virtual {p0, v0}, Lcom/android/server/location/gnss/hal/GnssNative;->initializeGnss(Z)V
 
     const-string v0, "GnssManager"
 
     const-string v1, "gnss hal restarted"
 
-    .line 1105
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 1107
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mBaseCallbacks:[Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;
 
@@ -4896,7 +4460,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1108
     aget-object v1, v1, v0
 
     invoke-interface {v1}, Lcom/android/server/location/gnss/hal/GnssNative$BaseCallbacks;->onHalRestarted()V
@@ -4912,12 +4475,10 @@
 .method public resumeGeofence(II)Z
     .locals 1
 
-    .line 999
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1000
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->resumeGeofence(II)Z
@@ -4930,12 +4491,10 @@
 .method public sendNiResponse(II)V
     .locals 1
 
-    .line 1031
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1032
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->sendNiResponse(II)V
@@ -4946,12 +4505,10 @@
 .method public sendSuplNiMessage([BI)V
     .locals 1
 
-    .line 1500
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1501
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->sendSuplNiMessage([BI)V
@@ -4962,7 +4519,6 @@
 .method public setAGpsCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$AGpsCallbacks;)V
     .locals 2
 
-    .line 552
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v1, 0x1
@@ -4971,7 +4527,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 553
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mAGpsCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$AGpsCallbacks;
 
     if-nez v0, :cond_0
@@ -4984,7 +4539,6 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 554
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mAGpsCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$AGpsCallbacks;
@@ -4997,12 +4551,10 @@
 
     move-object v0, p0
 
-    .line 1507
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1508
     iget-object v2, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move v3, p1
@@ -5029,12 +4581,10 @@
 
     move-object v0, p0
 
-    .line 1064
     iget-boolean v1, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1065
     iget-object v2, v0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move v3, p1
@@ -5061,12 +4611,10 @@
 .method public setAgpsServer(ILjava/lang/String;I)V
     .locals 1
 
-    .line 1047
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1048
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->setAgpsServer(ILjava/lang/String;I)V
@@ -5077,12 +4625,10 @@
 .method public setAgpsSetId(ILjava/lang/String;)V
     .locals 1
 
-    .line 1055
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1056
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->setAgpsSetId(ILjava/lang/String;)V
@@ -5093,7 +4639,6 @@
 .method public setGeofenceCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;)V
     .locals 2
 
-    .line 528
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v1, 0x1
@@ -5102,7 +4647,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 529
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGeofenceCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;
 
     if-nez v0, :cond_0
@@ -5115,7 +4659,6 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 530
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGeofenceCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$GeofenceCallbacks;
@@ -5126,7 +4669,6 @@
 .method public final setGnssHardwareModelName(Ljava/lang/String;)V
     .locals 0
 
-    .line 1285
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHardwareModelName:Ljava/lang/String;
 
     return-void
@@ -5135,7 +4677,6 @@
 .method public setGnssYearOfHardware(I)V
     .locals 0
 
-    .line 1280
     iput p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHardwareYear:I
 
     return-void
@@ -5144,7 +4685,6 @@
 .method public setLocationRequestCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;)V
     .locals 2
 
-    .line 540
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v1, 0x1
@@ -5153,7 +4693,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 541
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationRequestCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;
 
     if-nez v0, :cond_0
@@ -5166,7 +4705,6 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 542
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLocationRequestCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LocationRequestCallbacks;
@@ -5177,7 +4715,6 @@
 .method public setLppeHelperCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;)V
     .locals 2
 
-    .line 565
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v1, 0x1
@@ -5186,7 +4723,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 566
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
 
     if-nez v0, :cond_0
@@ -5199,7 +4735,6 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 567
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mLppeHelperCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$LppeHelperCallbacks;
@@ -5210,7 +4745,6 @@
 .method public setNotificationCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$NotificationCallbacks;)V
     .locals 2
 
-    .line 558
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v1, 0x1
@@ -5219,7 +4753,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 559
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNotificationCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$NotificationCallbacks;
 
     if-nez v0, :cond_0
@@ -5232,7 +4765,6 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 560
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mNotificationCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$NotificationCallbacks;
@@ -5243,12 +4775,10 @@
 .method public setPositionMode(IIIIIZ)Z
     .locals 8
 
-    .line 687
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 688
     iget-object v1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     move v2, p1
@@ -5273,7 +4803,6 @@
 .method public setPsdsCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$PsdsCallbacks;)V
     .locals 2
 
-    .line 546
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v1, 0x1
@@ -5282,7 +4811,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 547
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mPsdsCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$PsdsCallbacks;
 
     if-nez v0, :cond_0
@@ -5295,7 +4823,6 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 548
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mPsdsCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$PsdsCallbacks;
@@ -5306,17 +4833,14 @@
 .method public setSignalTypeCapabilities(Ljava/util/List;)V
     .locals 1
 
-    .line 1253
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
-    .line 1254
     invoke-virtual {v0, p1}, Landroid/location/GnssCapabilities;->withSignalTypes(Ljava/util/List;)Landroid/location/GnssCapabilities;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
-    .line 1255
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->onCapabilitiesChanged(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
 
     return-void
@@ -5325,17 +4849,14 @@
 .method public setSubHalMeasurementCorrectionsCapabilities(I)V
     .locals 1
 
-    .line 1238
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
-    .line 1239
     invoke-virtual {v0, p1}, Landroid/location/GnssCapabilities;->withSubHalMeasurementCorrectionsFlags(I)Landroid/location/GnssCapabilities;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
-    .line 1240
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->onCapabilitiesChanged(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
 
     return-void
@@ -5344,17 +4865,14 @@
 .method public setSubHalPowerIndicationCapabilities(I)V
     .locals 1
 
-    .line 1246
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
-    .line 1247
     invoke-virtual {v0, p1}, Landroid/location/GnssCapabilities;->withSubHalPowerFlags(I)Landroid/location/GnssCapabilities;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
-    .line 1248
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->onCapabilitiesChanged(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
 
     return-void
@@ -5363,7 +4881,6 @@
 .method public setTimeCallbacks(Lcom/android/server/location/gnss/hal/GnssNative$TimeCallbacks;)V
     .locals 2
 
-    .line 534
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     const/4 v1, 0x1
@@ -5372,7 +4889,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 535
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mTimeCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$TimeCallbacks;
 
     if-nez v0, :cond_0
@@ -5385,7 +4901,6 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 536
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mTimeCallbacks:Lcom/android/server/location/gnss/hal/GnssNative$TimeCallbacks;
@@ -5396,24 +4911,20 @@
 .method public setTopHalCapabilities(IZ)V
     .locals 1
 
-    .line 1229
     iget v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mTopFlags:I
 
     or-int/2addr p1, v0
 
     iput p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mTopFlags:I
 
-    .line 1230
     iget-object v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
-    .line 1231
     invoke-virtual {v0, p1, p2}, Landroid/location/GnssCapabilities;->withTopHalFlags(IZ)Landroid/location/GnssCapabilities;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mCapabilities:Landroid/location/GnssCapabilities;
 
-    .line 1232
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/gnss/hal/GnssNative;->onCapabilitiesChanged(Landroid/location/GnssCapabilities;Landroid/location/GnssCapabilities;)V
 
     return-void
@@ -5422,12 +4933,10 @@
 .method public start()Z
     .locals 2
 
-    .line 667
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 668
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -5436,10 +4945,8 @@
 
     const/4 v0, 0x0
 
-    .line 669
     iput-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mHasFirstFix:Z
 
-    .line 670
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->start()Z
@@ -5452,12 +4959,10 @@
 .method public startAntennaInfoListening()Z
     .locals 1
 
-    .line 841
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 842
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->startAntennaInfoListening()Z
@@ -5470,12 +4975,10 @@
 .method public startBatch(JFZ)Z
     .locals 1
 
-    .line 948
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 949
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->startBatch(JFZ)Z
@@ -5488,12 +4991,10 @@
 .method public startMeasurementCollection(ZZI)Z
     .locals 1
 
-    .line 866
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 867
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->startMeasurementCollection(ZZI)Z
@@ -5506,12 +5007,10 @@
 .method public startNavigationMessageCollection()Z
     .locals 1
 
-    .line 817
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 818
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->startNavigationMessageCollection()Z
@@ -5524,12 +5023,10 @@
 .method public startNmeaMessageCollection()Z
     .locals 1
 
-    .line 899
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 900
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->startNmeaMessageCollection()Z
@@ -5542,12 +5039,10 @@
 .method public startSvStatusCollection()Z
     .locals 1
 
-    .line 883
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 884
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->startSvStatusCollection()Z
@@ -5560,12 +5055,10 @@
 .method public stop()Z
     .locals 1
 
-    .line 677
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 678
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->stop()Z
@@ -5578,12 +5071,10 @@
 .method public stopAntennaInfoListening()Z
     .locals 1
 
-    .line 849
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 850
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->stopAntennaInfoListening()Z
@@ -5596,12 +5087,10 @@
 .method public stopBatch()V
     .locals 1
 
-    .line 964
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 965
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->stopBatch()V
@@ -5612,12 +5101,10 @@
 .method public stopMeasurementCollection()Z
     .locals 1
 
-    .line 875
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 876
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->stopMeasurementCollection()Z
@@ -5630,12 +5117,10 @@
 .method public stopNavigationMessageCollection()Z
     .locals 1
 
-    .line 825
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 826
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->stopNavigationMessageCollection()Z
@@ -5648,12 +5133,10 @@
 .method public stopNmeaMessageCollection()Z
     .locals 1
 
-    .line 907
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 908
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->stopNmeaMessageCollection()Z
@@ -5666,12 +5149,10 @@
 .method public stopSvStatusCollection()Z
     .locals 1
 
-    .line 891
     iget-boolean v0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mRegistered:Z
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 892
     iget-object p0, p0, Lcom/android/server/location/gnss/hal/GnssNative;->mGnssHal:Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;
 
     invoke-virtual {p0}, Lcom/android/server/location/gnss/hal/GnssNative$GnssHal;->stopSvStatusCollection()Z

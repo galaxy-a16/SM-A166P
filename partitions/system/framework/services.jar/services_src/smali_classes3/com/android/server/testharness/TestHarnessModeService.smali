@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$mgetMainUserId(Lcom/android/server/testharness/TestHarnessModeService;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getMainUserId()I
 
     move-result p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$mgetPersistentDataBlock(Lcom/android/server/testharness/TestHarnessModeService;)Lcom/android/server/PersistentDataBlockManagerInternal;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getPersistentDataBlock()Lcom/android/server/PersistentDataBlockManagerInternal;
 
     move-result-object p0
@@ -39,17 +37,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 79
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 284
     new-instance p1, Lcom/android/server/testharness/TestHarnessModeService$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/testharness/TestHarnessModeService$1;-><init>(Lcom/android/server/testharness/TestHarnessModeService;)V
@@ -64,14 +59,12 @@
 .method public final completeTestHarnessModeSetup()V
     .locals 3
 
-    .line 127
     sget-object v0, Lcom/android/server/testharness/TestHarnessModeService;->TAG:Ljava/lang/String;
 
     const-string v1, "Completing Test Harness Mode setup."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getTestHarnessModeData()[B
 
     move-result-object v0
@@ -80,7 +73,6 @@
 
     return-void
 
-    .line 133
     :cond_0
     :try_start_0
     invoke-static {v0}, Lcom/android/server/testharness/TestHarnessModeService$PersistentData;->fromBytes([B)Lcom/android/server/testharness/TestHarnessModeService$PersistentData;
@@ -89,16 +81,13 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/testharness/TestHarnessModeService;->setUpAdbFiles(Lcom/android/server/testharness/TestHarnessModeService$PersistentData;)V
 
-    .line 134
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->configureSettings()V
 
-    .line 135
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->configureUser()V
     :try_end_0
     .catch Lcom/android/server/testharness/TestHarnessModeService$SetUpTestHarnessModeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 143
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getPersistentDataBlock()Lcom/android/server/PersistentDataBlockManagerInternal;
 
@@ -116,7 +105,6 @@
     :catch_0
     move-exception v0
 
-    .line 137
     :try_start_1
     sget-object v1, Lcom/android/server/testharness/TestHarnessModeService;->TAG:Ljava/lang/String;
 
@@ -131,7 +119,6 @@
     :goto_1
     return-void
 
-    .line 143
     :goto_2
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getPersistentDataBlock()Lcom/android/server/PersistentDataBlockManagerInternal;
 
@@ -139,14 +126,12 @@
 
     invoke-interface {p0}, Lcom/android/server/PersistentDataBlockManagerInternal;->clearTestHarnessModeData()V
 
-    .line 144
     throw v0
 .end method
 
 .method public final configureSettings()V
     .locals 5
 
-    .line 163
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -159,7 +144,6 @@
 
     const/4 v1, 0x0
 
-    .line 167
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -172,10 +156,8 @@
 
     const-string v3, "adbd"
 
-    .line 168
     invoke-static {v0, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 169
     sget-object v0, Lcom/android/server/testharness/TestHarnessModeService;->TAG:Ljava/lang/String;
 
     const-string v3, "Restarted adbd"
@@ -187,29 +169,24 @@
 
     const-wide/16 v3, 0x0
 
-    .line 174
     invoke-static {p0, v0, v3, v4}, Landroid/provider/Settings$Global;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
     const-string v0, "development_settings_enabled"
 
-    .line 175
     invoke-static {p0, v0, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     const-string/jumbo v0, "verifier_verify_adb_installs"
 
-    .line 176
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     const-string/jumbo v0, "stay_on_while_plugged_in"
 
     const/16 v1, 0xf
 
-    .line 177
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     const-string/jumbo v0, "ota_disable_automatic_update"
 
-    .line 181
     invoke-static {p0, v0, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     return-void
@@ -218,17 +195,14 @@
 .method public final configureUser()V
     .locals 2
 
-    .line 197
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getMainUserId()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 199
     invoke-static {v1, v0}, Landroid/content/ContentResolver;->setMasterSyncAutomaticallyAsUser(ZI)V
 
-    .line 201
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -243,7 +217,6 @@
 
     const/4 v1, 0x1
 
-    .line 202
     invoke-static {v0}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     move-result-object v0
@@ -256,12 +229,10 @@
 .method public final disableLockScreen()V
     .locals 2
 
-    .line 121
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getMainUserId()I
 
     move-result v0
 
-    .line 122
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -272,7 +243,6 @@
 
     const/4 p0, 0x1
 
-    .line 123
     invoke-virtual {v1, p0, v0}, Lcom/android/internal/widget/LockPatternUtils;->setLockScreenDisabled(ZI)V
 
     return-void
@@ -281,7 +251,6 @@
 .method public final getMainUserId()I
     .locals 1
 
-    .line 206
     const-class p0, Lcom/android/server/pm/UserManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -290,7 +259,6 @@
 
     check-cast p0, Lcom/android/server/pm/UserManagerInternal;
 
-    .line 207
     invoke-virtual {p0}, Lcom/android/server/pm/UserManagerInternal;->getMainUserId()I
 
     move-result p0
@@ -299,7 +267,6 @@
 
     return p0
 
-    .line 212
     :cond_0
     sget-object p0, Lcom/android/server/testharness/TestHarnessModeService;->TAG:Ljava/lang/String;
 
@@ -315,22 +282,18 @@
 .method public final getPersistentDataBlock()Lcom/android/server/PersistentDataBlockManagerInternal;
     .locals 2
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/testharness/TestHarnessModeService;->mPersistentDataBlockManagerInternal:Lcom/android/server/PersistentDataBlockManagerInternal;
 
     if-nez v0, :cond_0
 
-    .line 277
     sget-object v0, Lcom/android/server/testharness/TestHarnessModeService;->TAG:Ljava/lang/String;
 
     const-string v1, "Getting PersistentDataBlockManagerInternal from LocalServices"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     const-class v0, Lcom/android/server/PersistentDataBlockManagerInternal;
 
-    .line 279
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -339,7 +302,6 @@
 
     iput-object v0, p0, Lcom/android/server/testharness/TestHarnessModeService;->mPersistentDataBlockManagerInternal:Lcom/android/server/PersistentDataBlockManagerInternal;
 
-    .line 281
     :cond_0
     iget-object p0, p0, Lcom/android/server/testharness/TestHarnessModeService;->mPersistentDataBlockManagerInternal:Lcom/android/server/PersistentDataBlockManagerInternal;
 
@@ -349,7 +311,6 @@
 .method public final getTestHarnessModeData()[B
     .locals 2
 
-    .line 148
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getPersistentDataBlock()Lcom/android/server/PersistentDataBlockManagerInternal;
 
     move-result-object p0
@@ -358,7 +319,6 @@
 
     if-nez p0, :cond_0
 
-    .line 150
     sget-object p0, Lcom/android/server/testharness/TestHarnessModeService;->TAG:Ljava/lang/String;
 
     const-string v1, "Failed to start Test Harness Mode; no implementation of PersistentDataBlockManagerInternal was bound!"
@@ -367,7 +327,6 @@
 
     return-object v0
 
-    .line 154
     :cond_0
     invoke-interface {p0}, Lcom/android/server/PersistentDataBlockManagerInternal;->getTestHarnessModeData()[B
 
@@ -375,7 +334,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 155
     array-length v1, p0
 
     if-nez v1, :cond_1
@@ -403,20 +361,16 @@
 
     goto :goto_0
 
-    .line 94
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->completeTestHarnessModeSetup()V
 
-    .line 95
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->showNotificationIfEnabled()V
 
     goto :goto_0
 
-    .line 91
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->setUpTestHarnessMode()V
 
-    .line 98
     :goto_0
     invoke-super {p0, p1}, Lcom/android/server/SystemService;->onBootPhase(I)V
 
@@ -428,7 +382,6 @@
 
     const-string/jumbo v0, "testharness"
 
-    .line 84
     iget-object v1, p0, Lcom/android/server/testharness/TestHarnessModeService;->mService:Landroid/os/IBinder;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
@@ -439,7 +392,6 @@
 .method public final setDeviceProvisioned()V
     .locals 3
 
-    .line 235
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -452,14 +404,12 @@
 
     const/4 v1, 0x1
 
-    .line 236
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     const-string/jumbo v0, "user_setup_complete"
 
     const/4 v2, -0x2
 
-    .line 237
     invoke-static {p0, v0, v1, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     return-void
@@ -468,7 +418,6 @@
 .method public final setUpAdbFiles(Lcom/android/server/testharness/TestHarnessModeService$PersistentData;)V
     .locals 3
 
-    .line 185
     const-class v0, Landroid/debug/AdbManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -477,14 +426,12 @@
 
     check-cast v0, Landroid/debug/AdbManagerInternal;
 
-    .line 187
     invoke-virtual {v0}, Landroid/debug/AdbManagerInternal;->getAdbKeysFile()Ljava/io/File;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 188
     iget-object v1, p1, Lcom/android/server/testharness/TestHarnessModeService$PersistentData;->mAdbKeys:[B
 
     invoke-virtual {v0}, Landroid/debug/AdbManagerInternal;->getAdbKeysFile()Ljava/io/File;
@@ -497,7 +444,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/testharness/TestHarnessModeService;->writeBytesToFile([BLjava/nio/file/Path;)V
 
-    .line 190
     :cond_0
     invoke-virtual {v0}, Landroid/debug/AdbManagerInternal;->getAdbTempKeysFile()Ljava/io/File;
 
@@ -505,7 +451,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 191
     iget-object p1, p1, Lcom/android/server/testharness/TestHarnessModeService$PersistentData;->mAdbTempKeys:[B
 
     invoke-virtual {v0}, Landroid/debug/AdbManagerInternal;->getAdbTempKeysFile()Ljava/io/File;
@@ -518,7 +463,6 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/testharness/TestHarnessModeService;->writeBytesToFile([BLjava/nio/file/Path;)V
 
-    .line 193
     :cond_1
     invoke-virtual {v0}, Landroid/debug/AdbManagerInternal;->notifyKeyFilesUpdated()V
 
@@ -528,14 +472,12 @@
 .method public final setUpTestHarnessMode()V
     .locals 2
 
-    .line 108
     sget-object v0, Lcom/android/server/testharness/TestHarnessModeService;->TAG:Ljava/lang/String;
 
     const-string v1, "Setting up test harness mode"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->getTestHarnessModeData()[B
 
     move-result-object v0
@@ -544,18 +486,15 @@
 
     return-void
 
-    .line 115
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->setDeviceProvisioned()V
 
-    .line 116
     invoke-virtual {p0}, Lcom/android/server/testharness/TestHarnessModeService;->disableLockScreen()V
 
     const-string/jumbo p0, "persist.sys.test_harness"
 
     const-string v0, "1"
 
-    .line 117
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -568,7 +507,6 @@
 
     const/4 v1, 0x0
 
-    .line 245
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -577,7 +515,6 @@
 
     return-void
 
-    .line 248
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
@@ -585,27 +522,22 @@
 
     const v2, 0x1040e12
 
-    .line 249
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 250
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
     const v3, 0x1040e11
 
-    .line 251
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 253
     new-instance v3, Landroid/app/Notification$Builder;
 
-    .line 254
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -616,36 +548,30 @@
 
     const v4, 0x1080a98
 
-    .line 255
     invoke-virtual {v3, v4}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     move-result-object v3
 
     const-wide/16 v4, 0x0
 
-    .line 256
     invoke-virtual {v3, v4, v5}, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    .line 257
     invoke-virtual {v3, v4}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
     move-result-object v3
 
-    .line 258
     invoke-virtual {v3, v0}, Landroid/app/Notification$Builder;->setTicker(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v3
 
-    .line 259
     invoke-virtual {v3, v1}, Landroid/app/Notification$Builder;->setDefaults(I)Landroid/app/Notification$Builder;
 
     move-result-object v1
 
-    .line 260
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -660,27 +586,22 @@
 
     move-result-object v1
 
-    .line 263
     invoke-virtual {v1, v0}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 264
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 265
     invoke-virtual {v0, v4}, Landroid/app/Notification$Builder;->setVisibility(I)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 266
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
     move-result-object v0
 
-    .line 269
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -695,7 +616,6 @@
 
     const/16 v1, 0x36
 
-    .line 270
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     const/4 v3, 0x0
@@ -713,30 +633,24 @@
     :try_start_0
     new-array v0, p0, [Ljava/nio/file/OpenOption;
 
-    .line 219
     invoke-static {p2, v0}, Ljava/nio/file/Files;->newOutputStream(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/OutputStream;
 
     move-result-object v0
 
-    .line 220
     invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
 
-    .line 221
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
     new-array p0, p0, [Ljava/nio/file/LinkOption;
 
-    .line 223
     invoke-static {p2, p0}, Ljava/nio/file/Files;->getPosixFilePermissions(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Ljava/util/Set;
 
     move-result-object p0
 
-    .line 224
     sget-object p1, Ljava/nio/file/attribute/PosixFilePermission;->GROUP_READ:Ljava/nio/file/attribute/PosixFilePermission;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 225
     invoke-static {p2, p0}, Ljava/nio/file/Files;->setPosixFilePermissions(Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -746,7 +660,6 @@
     :catch_0
     move-exception p0
 
-    .line 227
     sget-object p1, Lcom/android/server/testharness/TestHarnessModeService;->TAG:Ljava/lang/String;
 
     const-string p2, "Failed to set up adb keys"

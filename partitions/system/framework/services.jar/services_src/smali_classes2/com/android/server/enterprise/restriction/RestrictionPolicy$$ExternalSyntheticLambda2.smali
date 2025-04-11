@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->$r8$lambda$OYfnfROXesGCn54nOzdxJpWuqq4()V
 
     return-void

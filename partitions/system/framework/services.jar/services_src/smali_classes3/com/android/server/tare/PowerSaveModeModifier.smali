@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIrs(Lcom/android/server/tare/PowerSaveModeModifier;)Lcom/android/server/tare/InternalResourceService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/tare/PowerSaveModeModifier;->DEBUG:Z
 
     return v0
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/tare/PowerSaveModeModifier;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -46,7 +43,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,14 +65,12 @@
 
     sput-object v0, Lcom/android/server/tare/PowerSaveModeModifier;->TAG:Ljava/lang/String;
 
-    .line 33
     sget-boolean v1, Lcom/android/server/tare/InternalResourceService;->DEBUG:Z
 
     if-nez v1, :cond_1
 
     const/4 v1, 0x3
 
-    .line 34
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -103,13 +97,10 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 1
 
-    .line 40
     invoke-direct {p0}, Lcom/android/server/tare/Modifier;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
-    .line 42
     new-instance p1, Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;
 
     const/4 v0, 0x0
@@ -128,10 +119,8 @@
 
     const-string/jumbo v0, "power save="
 
-    .line 69
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mPowerSaveModeTracker:Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;
 
     invoke-static {p0}, Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;->-$$Nest$fgetmPowerSaveModeEnabled(Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;)Z
@@ -146,7 +135,6 @@
 .method public getModifiedCostToProduce(J)J
     .locals 2
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mPowerSaveModeTracker:Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;
 
     invoke-static {v0}, Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;->-$$Nest$fgetmPowerSaveModeEnabled(Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;)Z
@@ -166,7 +154,6 @@
 
     return-wide p0
 
-    .line 61
     :cond_0
     iget-object p0, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mPowerSaveModeTracker:Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;
 
@@ -187,7 +174,6 @@
 .method public setup()V
     .locals 1
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mPowerSaveModeTracker:Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;
 
     iget-object p0, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
@@ -204,7 +190,6 @@
 .method public tearDown()V
     .locals 1
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mPowerSaveModeTracker:Lcom/android/server/tare/PowerSaveModeModifier$PowerSaveModeTracker;
 
     iget-object p0, p0, Lcom/android/server/tare/PowerSaveModeModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;

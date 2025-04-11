@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1727
     iput-object p1, p0, Lcom/android/server/BatteryService$15;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 1730
     iget-object p1, p0, Lcom/android/server/BatteryService$15;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p1}, Lcom/android/server/BatteryService;->-$$Nest$fgetmLock(Lcom/android/server/BatteryService;)Ljava/lang/Object;
@@ -33,13 +31,11 @@
 
     monitor-enter p1
 
-    .line 1731
     :try_start_0
     iget-object p0, p0, Lcom/android/server/BatteryService$15;->this$0:Lcom/android/server/BatteryService;
 
     invoke-static {p0}, Lcom/android/server/BatteryService;->-$$Nest$mupdateBatteryWarningLevelLocked(Lcom/android/server/BatteryService;)V
 
-    .line 1732
     monitor-exit p1
 
     return-void

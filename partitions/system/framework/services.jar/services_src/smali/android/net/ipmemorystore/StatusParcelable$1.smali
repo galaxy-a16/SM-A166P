@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/net/ipmemorystore/StatusParcelable;
     .locals 0
 
-    .line 12
     new-instance p0, Landroid/net/ipmemorystore/StatusParcelable;
 
     invoke-direct {p0}, Landroid/net/ipmemorystore/StatusParcelable;-><init>()V
 
-    .line 13
     invoke-virtual {p0, p1}, Landroid/net/ipmemorystore/StatusParcelable;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 9
     invoke-virtual {p0, p1}, Landroid/net/ipmemorystore/StatusParcelable$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/ipmemorystore/StatusParcelable;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/net/ipmemorystore/StatusParcelable;
     .locals 0
 
-    .line 18
     new-array p0, p1, [Landroid/net/ipmemorystore/StatusParcelable;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 9
     invoke-virtual {p0, p1}, Landroid/net/ipmemorystore/StatusParcelable$1;->newArray(I)[Landroid/net/ipmemorystore/StatusParcelable;
 
     move-result-object p0

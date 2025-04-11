@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/location/nsflp/NSLocationMonitor;)V
     .locals 0
 
-    .line 345
     iput-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onNullBinding(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 427
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,7 +44,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmContext(Lcom/android/server/location/nsflp/NSLocationMonitor;)Landroid/content/Context;
@@ -63,7 +60,6 @@
 
     const-string v0, "NSLocationMonitor"
 
-    .line 348
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,14 +76,12 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 349
     invoke-static {}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$sfgetMONITOR_SERVICE_LOCK()Ljava/lang/Object;
 
     move-result-object p1
 
     monitor-enter p1
 
-    .line 350
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -97,7 +91,6 @@
 
     invoke-static {v0, p2}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fputmMonitorService(Lcom/android/server/location/nsflp/NSLocationMonitor;Landroid/location/INSLocationManager;)V
 
-    .line 351
     iget-object p2, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p2}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmMonitorService(Lcom/android/server/location/nsflp/NSLocationMonitor;)Landroid/location/INSLocationManager;
@@ -110,17 +103,14 @@
 
     const-string p2, "Failed to stub interface to MonitorService"
 
-    .line 352
     invoke-static {p0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 353
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     return-void
 
-    .line 357
     :cond_0
     :try_start_1
     iget-object p2, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
@@ -144,10 +134,8 @@
 
     const-string v0, "Failed to set callback"
 
-    .line 359
     invoke-static {p2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     :goto_0
     iget-object p2, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -163,17 +151,14 @@
 
     invoke-virtual {p2, v0}, Lcom/android/server/location/nsflp/NSConnectionHelper;->onServiceConnected(Landroid/location/INSLocationManager;)V
 
-    .line 363
     monitor-exit p1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 365
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$msendConnectionInfo(Lcom/android/server/location/nsflp/NSLocationMonitor;)V
 
-    .line 368
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmNSConnectionHelper(Lcom/android/server/location/nsflp/NSLocationMonitor;)Lcom/android/server/location/nsflp/NSConnectionHelper;
@@ -182,7 +167,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/location/nsflp/NSConnectionHelper;->sendSupportedBdmsgFormat()V
 
-    .line 371
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmNotificationListener(Lcom/android/server/location/nsflp/NSLocationMonitor;)Landroid/service/notification/NotificationListenerService;
@@ -191,7 +175,6 @@
 
     monitor-enter p2
 
-    .line 372
     :try_start_3
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -203,7 +186,6 @@
 
     if-nez p1, :cond_1
 
-    .line 374
     :try_start_4
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -235,7 +217,6 @@
 
     move-result-object v3
 
-    .line 375
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -250,10 +231,8 @@
 
     move-result v2
 
-    .line 374
     invoke-virtual {p1, v0, v1, v2}, Landroid/service/notification/NotificationListenerService;->registerAsSystemService(Landroid/content/Context;Landroid/content/ComponentName;I)V
 
-    .line 376
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     const/4 v0, 0x1
@@ -271,7 +250,6 @@
     :try_start_5
     const-string v0, "NSLocationMonitor"
 
-    .line 378
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,14 +270,12 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 381
     :cond_1
     :goto_1
     monitor-exit p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 384
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$minitNetworkStateListener(Lcom/android/server/location/nsflp/NSLocationMonitor;)V
@@ -309,7 +285,6 @@
     :catchall_0
     move-exception p0
 
-    .line 381
     :try_start_6
     monitor-exit p2
     :try_end_6
@@ -320,7 +295,6 @@
     :catchall_1
     move-exception p0
 
-    .line 363
     :try_start_7
     monitor-exit p1
     :try_end_7
@@ -334,7 +308,6 @@
 
     const-string v0, "NSLocationMonitor"
 
-    .line 389
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,14 +324,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     invoke-static {}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$sfgetMONITOR_SERVICE_LOCK()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 392
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -366,7 +337,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fputmMonitorService(Lcom/android/server/location/nsflp/NSLocationMonitor;Landroid/location/INSLocationManager;)V
 
-    .line 393
     iget-object v1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v1}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmNSConnectionHelper(Lcom/android/server/location/nsflp/NSLocationMonitor;)Lcom/android/server/location/nsflp/NSConnectionHelper;
@@ -375,12 +345,10 @@
 
     invoke-virtual {v1}, Lcom/android/server/location/nsflp/NSConnectionHelper;->onServiceDisconnected()V
 
-    .line 394
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 395
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmDisconnectedHistory(Lcom/android/server/location/nsflp/NSLocationMonitor;)Ljava/util/ArrayList;
@@ -397,7 +365,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 398
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     const/4 v1, 0x3
@@ -406,7 +373,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/location/nsflp/NSLocationMonitor;->noteGpsOp(II)V
 
-    .line 401
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmNotificationListener(Lcom/android/server/location/nsflp/NSLocationMonitor;)Landroid/service/notification/NotificationListenerService;
@@ -415,7 +381,6 @@
 
     monitor-enter v3
 
-    .line 402
     :try_start_1
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -427,7 +392,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 404
     :try_start_2
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
@@ -437,7 +401,6 @@
 
     invoke-virtual {v0}, Landroid/service/notification/NotificationListenerService;->unregisterAsSystemService()V
 
-    .line 405
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v0, v2}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fputmRegisteredNotificationListener(Lcom/android/server/location/nsflp/NSLocationMonitor;Z)V
@@ -453,7 +416,6 @@
     :try_start_3
     const-string v4, "NSLocationMonitor"
 
-    .line 407
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -474,26 +436,22 @@
 
     invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 410
     :cond_0
     :goto_0
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 413
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$mdeinitNetworkStateListener(Lcom/android/server/location/nsflp/NSLocationMonitor;)V
 
-    .line 415
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     sget-object v3, Lcom/android/server/location/nsflp/NSLocationMonitor$DEVICE_ACTIVITY_ERROR_CODE;->SEVICE_DISCONNECT:Lcom/android/server/location/nsflp/NSLocationMonitor$DEVICE_ACTIVITY_ERROR_CODE;
 
     invoke-static {v0, v3}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$mdisableDeviceActivity(Lcom/android/server/location/nsflp/NSLocationMonitor;Lcom/android/server/location/nsflp/NSLocationMonitor$DEVICE_ACTIVITY_ERROR_CODE;)V
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmNSLocationProviderHelper(Lcom/android/server/location/nsflp/NSLocationMonitor;)Lcom/android/server/location/nsflp/NSLocationProviderHelper;
@@ -502,7 +460,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/location/nsflp/NSLocationProviderHelper;->notifyMotionPowerSaveModeChanged(Z)V
 
-    .line 419
     iget-object v0, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {v0}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmCrashCount(Lcom/android/server/location/nsflp/NSLocationMonitor;)I
@@ -513,7 +470,6 @@
 
     const-string v0, "NSLocationMonitor"
 
-    .line 420
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -542,7 +498,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     iget-object p1, p0, Lcom/android/server/location/nsflp/NSLocationMonitor$1;->this$0:Lcom/android/server/location/nsflp/NSLocationMonitor;
 
     invoke-static {p1}, Lcom/android/server/location/nsflp/NSLocationMonitor;->-$$Nest$fgetmContext(Lcom/android/server/location/nsflp/NSLocationMonitor;)Landroid/content/Context;
@@ -557,7 +512,6 @@
     :catchall_0
     move-exception p0
 
-    .line 410
     :try_start_4
     monitor-exit v3
     :try_end_4
@@ -568,7 +522,6 @@
     :catchall_1
     move-exception p0
 
-    .line 394
     :try_start_5
     monitor-exit v0
     :try_end_5

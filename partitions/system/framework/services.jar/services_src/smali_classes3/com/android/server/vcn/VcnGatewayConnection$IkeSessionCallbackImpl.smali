@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;I)V
     .locals 0
 
-    .line 2343
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2344
     iput p2, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->mToken:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public onClosed()V
     .locals 3
 
-    .line 2355
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -53,7 +50,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogDbg(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 2356
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     iget p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->mToken:I
@@ -68,7 +64,6 @@
 .method public onClosedExceptionally(Landroid/net/ipsec/ike/exceptions/IkeException;)V
     .locals 3
 
-    .line 2361
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -89,7 +84,6 @@
 
     invoke-static {v0, v1, p1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogInfo(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 2362
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     iget p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->mToken:I
@@ -102,7 +96,6 @@
 .method public onError(Landroid/net/ipsec/ike/exceptions/IkeProtocolException;)V
     .locals 3
 
-    .line 2367
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -129,7 +122,6 @@
 .method public onIkeSessionConnectionInfoChanged(Landroid/net/ipsec/ike/IkeSessionConnectionInfo;)V
     .locals 3
 
-    .line 2374
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,7 +142,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogDbg(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 2375
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     iget p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->mToken:I
@@ -163,7 +154,6 @@
 .method public onOpened(Landroid/net/ipsec/ike/IkeSessionConfiguration;)V
     .locals 3
 
-    .line 2349
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -184,7 +174,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogDbg(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
-    .line 2350
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     iget p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$IkeSessionCallbackImpl;->mToken:I

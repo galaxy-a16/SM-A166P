@@ -7,12 +7,10 @@
 .method public static getLoggingImportance(Lcom/android/server/notification/NotificationRecord;)I
     .locals 1
 
-    .line 533
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getImportance()I
 
     move-result v0
 
-    .line 534
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getChannel()Landroid/app/NotificationChannel;
 
     move-result-object p0
@@ -21,7 +19,6 @@
 
     return v0
 
-    .line 538
     :cond_0
     invoke-static {p0, v0}, Lcom/android/server/notification/NotificationChannelLogger;->getLoggingImportance(Landroid/app/NotificationChannel;I)I
 
@@ -33,7 +30,6 @@
 .method public static isForegroundService(Lcom/android/server/notification/NotificationRecord;)Z
     .locals 2
 
-    .line 546
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0
@@ -54,7 +50,6 @@
 
     goto :goto_0
 
-    .line 549
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
@@ -80,7 +75,6 @@
 .method public static isNonDismissible(Lcom/android/server/notification/NotificationRecord;)Z
     .locals 2
 
-    .line 557
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0
@@ -101,7 +95,6 @@
 
     goto :goto_0
 
-    .line 560
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -134,7 +127,6 @@
 .method public logNotificationCancelled(Lcom/android/server/notification/NotificationRecord;II)V
     .locals 0
 
-    .line 109
     invoke-static {p2, p3}, Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;->fromCancelReason(II)Lcom/android/server/notification/NotificationRecordLogger$NotificationCancelledEvent;
 
     move-result-object p2
@@ -150,7 +142,6 @@
 .method public logNotificationVisibility(Lcom/android/server/notification/NotificationRecord;Z)V
     .locals 0
 
-    .line 119
     invoke-static {p2}, Lcom/android/server/notification/NotificationRecordLogger$NotificationEvent;->fromVisibility(Z)Lcom/android/server/notification/NotificationRecordLogger$NotificationEvent;
 
     move-result-object p2
@@ -163,12 +154,10 @@
 .method public prepareToLogNotificationPosted(Lcom/android/server/notification/NotificationRecord;Lcom/android/server/notification/NotificationRecord;IILcom/android/internal/logging/InstanceId;)Lcom/android/server/notification/NotificationRecordLogger$NotificationReported;
     .locals 6
 
-    .line 72
     new-instance v1, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;
 
     invoke-direct {v1, p1, p2}, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;-><init>(Lcom/android/server/notification/NotificationRecord;Lcom/android/server/notification/NotificationRecord;)V
 
-    .line 73
     invoke-virtual {v1, p4}, Lcom/android/server/notification/NotificationRecordLogger$NotificationRecordPair;->shouldLogReported(I)Z
 
     move-result p0
@@ -179,7 +168,6 @@
 
     return-object p0
 
-    .line 76
     :cond_0
     new-instance p0, Lcom/android/server/notification/NotificationRecordLogger$NotificationReported;
 

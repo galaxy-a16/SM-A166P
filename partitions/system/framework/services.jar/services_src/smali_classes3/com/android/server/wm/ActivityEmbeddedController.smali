@@ -13,10 +13,8 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 3
 
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/wm/PackagesChange;-><init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
 
-    .line 37
     new-instance p1, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     sget-object v0, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChangePersister;->EMBED_ACTIVITY_DIRECTORY:Ljava/lang/String;
@@ -37,12 +35,10 @@
 .method public findTargetUserId(I)I
     .locals 2
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedController;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
     if-nez v0, :cond_0
 
-    .line 49
     const-class v0, Lcom/android/server/pm/UserManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -53,7 +49,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedController;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
-    .line 51
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ActivityEmbeddedController;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
@@ -63,7 +58,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 52
     invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isProfile()Z
 
     move-result v1
@@ -76,7 +70,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 53
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/ActivityEmbeddedController;->mUserManagerInternal:Lcom/android/server/pm/UserManagerInternal;
 
@@ -95,12 +88,10 @@
 .method public getEnabled(Ljava/lang/String;I)I
     .locals 0
 
-    .line 59
     invoke-virtual {p0, p2}, Lcom/android/server/wm/ActivityEmbeddedController;->findTargetUserId(I)I
 
     move-result p2
 
-    .line 60
     iget-object p0, p0, Lcom/android/server/wm/ActivityEmbeddedController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     invoke-virtual {p0, p2, p1}, Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;->getValue(ILjava/lang/String;)Ljava/lang/Object;
@@ -115,7 +106,6 @@
 
     return p0
 
-    .line 64
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -127,12 +117,10 @@
 .method public setEnabled(Ljava/lang/String;II)V
     .locals 0
 
-    .line 68
     invoke-virtual {p0, p3}, Lcom/android/server/wm/ActivityEmbeddedController;->findTargetUserId(I)I
 
     move-result p3
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/wm/ActivityEmbeddedController;->mUserChange:Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

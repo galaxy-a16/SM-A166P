@@ -19,20 +19,16 @@
 .method public constructor <init>(Lcom/android/internal/os/Clock;Lcom/android/server/power/stats/BatteryStatsImpl$Uid;ILcom/android/server/power/stats/BatteryStatsImpl$TimeBase;)V
     .locals 0
 
-    .line 3689
     invoke-direct {p0, p1, p3, p4}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;-><init>(Lcom/android/internal/os/Clock;ILcom/android/server/power/stats/BatteryStatsImpl$TimeBase;)V
 
     const-wide/16 p3, -0x1
 
-    .line 3677
     iput-wide p3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mAcquireTime:J
 
-    .line 3690
     iput-object p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mUid:Lcom/android/server/power/stats/BatteryStatsImpl$Uid;
 
     const/16 p1, 0x64
 
-    .line 3692
     iput p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mDutyCycle:I
 
     return-void
@@ -43,7 +39,6 @@
 .method public computeCurrentCountLocked()I
     .locals 0
 
-    .line 3798
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mCount:I
 
     return p0
@@ -52,14 +47,12 @@
 .method public computeRunTimeLocked(JJ)J
     .locals 2
 
-    .line 3791
     iget-wide p3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTotalTimeUs:J
 
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     if-lez v0, :cond_0
 
-    .line 3792
     iget-wide v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mUpdateTime:J
 
     sub-long/2addr p1, v0
@@ -88,7 +81,6 @@
 .method public detach()V
     .locals 0
 
-    .line 3814
     invoke-super {p0}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->detach()V
 
     return-void
@@ -97,7 +89,6 @@
 .method public isRunningLocked()Z
     .locals 0
 
-    .line 3753
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     if-lez p0, :cond_0
@@ -116,10 +107,8 @@
 .method public logState(Landroid/util/Printer;Ljava/lang/String;)V
     .locals 3
 
-    .line 3723
     invoke-super {p0, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->logState(Landroid/util/Printer;Ljava/lang/String;)V
 
-    .line 3724
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -178,15 +167,12 @@
 .method public onTimeStopped(JJJ)V
     .locals 1
 
-    .line 3710
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     if-lez v0, :cond_0
 
-    .line 3714
     invoke-super/range {p0 .. p6}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->onTimeStopped(JJJ)V
 
-    .line 3715
     iput-wide p5, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mUpdateTime:J
 
     :cond_0
@@ -196,10 +182,8 @@
 .method public readSummaryFromParcelLocked(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 3825
     invoke-super {p0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 3826
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -208,7 +192,6 @@
 
     const/4 p1, 0x0
 
-    .line 3827
     iput p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     return-void
@@ -217,7 +200,6 @@
 .method public reset(ZJ)Z
     .locals 3
 
-    .line 3803
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     const/4 v1, 0x1
@@ -243,16 +225,13 @@
     :cond_1
     move v1, v2
 
-    .line 3804
     :goto_1
     invoke-super {p0, v1, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->reset(ZJ)Z
 
-    .line 3805
     iget p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     if-lez p1, :cond_2
 
-    .line 3806
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {p1, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->getRealtime(J)J
@@ -264,7 +243,6 @@
     :cond_2
     const-wide/16 p1, -0x1
 
-    .line 3808
     iput-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mAcquireTime:J
 
     return v0
@@ -273,7 +251,6 @@
 .method public setDutyCycle(I)V
     .locals 0
 
-    .line 3697
     iput p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mDutyCycle:I
 
     return-void
@@ -282,7 +259,6 @@
 .method public setMark(J)V
     .locals 6
 
-    .line 3837
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     const-wide/16 v1, 0x3e8
@@ -293,12 +269,10 @@
 
     move-result-wide p1
 
-    .line 3838
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     if-lez v0, :cond_0
 
-    .line 3840
     iget-wide v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTotalTimeUs:J
 
     iget-wide v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mUpdateTime:J
@@ -319,10 +293,8 @@
 
     iput-wide v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTotalTimeUs:J
 
-    .line 3841
     iput-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mUpdateTime:J
 
-    .line 3843
     :cond_0
     iget-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTotalTimeUs:J
 
@@ -334,7 +306,6 @@
 .method public startRunningLocked(J)V
     .locals 3
 
-    .line 3730
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     add-int/lit8 v1, v0, 0x1
@@ -343,7 +314,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3731
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     const-wide/16 v1, 0x3e8
@@ -354,10 +324,8 @@
 
     move-result-wide p1
 
-    .line 3732
     iput-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mUpdateTime:J
 
-    .line 3733
     iget-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {p1}, Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;->isRunning()Z
@@ -366,14 +334,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 3735
     iget p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mCount:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mCount:I
 
-    .line 3736
     iget-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTotalTimeUs:J
 
     iput-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mAcquireTime:J
@@ -383,7 +349,6 @@
     :cond_0
     const-wide/16 p1, -0x1
 
-    .line 3738
     iput-wide p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mAcquireTime:J
 
     :cond_1
@@ -394,7 +359,6 @@
 .method public stopRunningLocked(J)V
     .locals 6
 
-    .line 3758
     iget v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     if-nez v0, :cond_0
@@ -406,12 +370,10 @@
 
     sub-int/2addr v0, v1
 
-    .line 3761
     iput v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
     if-nez v0, :cond_1
 
-    .line 3762
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mTimeBase:Lcom/android/server/power/stats/BatteryStatsImpl$TimeBase;
 
     const-wide/16 v2, 0x3e8
@@ -422,10 +384,8 @@
 
     move-result-wide v2
 
-    .line 3763
     iput v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
-    .line 3764
     invoke-virtual {p0, v2, v3, p1, p2}, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->computeRunTimeLocked(JJ)J
 
     move-result-wide p1
@@ -434,10 +394,8 @@
 
     const/4 v0, 0x0
 
-    .line 3765
     iput v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mNesting:I
 
-    .line 3774
     iget-wide v2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mAcquireTime:J
 
     const-wide/16 v4, 0x0
@@ -450,7 +408,6 @@
 
     if-nez p1, :cond_1
 
-    .line 3777
     iget p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->mCount:I
 
     sub-int/2addr p1, v1
@@ -464,10 +421,8 @@
 .method public writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
     .locals 0
 
-    .line 3819
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/power/stats/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 3820
     iget p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$DutyTimer;->mDutyCycle:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

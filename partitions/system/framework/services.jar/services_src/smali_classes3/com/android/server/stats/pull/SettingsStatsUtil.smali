@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 9
 
-    .line 47
     new-instance v0, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;
 
     const-string v1, "GlobalFeature__boolean_whitelist"
@@ -54,7 +53,6 @@
 
     sput-object v0, Lcom/android/server/stats/pull/SettingsStatsUtil;->GLOBAL_SETTINGS:[Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;
 
-    .line 57
     new-instance v0, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;
 
     const-string v1, "SecureFeature__boolean_whitelist"
@@ -85,7 +83,6 @@
 
     sput-object v0, Lcom/android/server/stats/pull/SettingsStatsUtil;->SECURE_SETTINGS:[Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;
 
-    .line 67
     new-instance v0, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;
 
     const-string v1, "SystemFeature__boolean_whitelist"
@@ -122,22 +119,18 @@
 .method public static createStatsEvent(ILjava/lang/String;Ljava/lang/String;II)Landroid/util/StatsEvent;
     .locals 6
 
-    .line 159
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
     move-result-object v0
 
-    .line 160
     invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
     move-result-object p0
 
-    .line 161
     invoke-virtual {p0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-result-object p0
 
-    .line 166
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -150,32 +143,26 @@
 
     if-eqz p1, :cond_0
 
-    .line 167
     invoke-virtual {p0, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-result-object p1
 
-    .line 168
     invoke-virtual {p1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-result-object p1
 
-    .line 169
     invoke-virtual {p1, v0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-result-object p1
 
-    .line 170
     invoke-virtual {p1, v1}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move-result-object p1
 
-    .line 171
     invoke-virtual {p1, v2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-result-object p1
 
-    .line 172
     invoke-virtual {p1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     goto/16 :goto_3
@@ -201,7 +188,6 @@
 
     if-eq p4, p1, :cond_1
 
-    .line 196
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -225,7 +211,6 @@
 
     goto :goto_2
 
-    .line 187
     :cond_2
     :try_start_0
     invoke-static {p2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -236,7 +221,6 @@
 
     goto :goto_0
 
-    .line 189
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -254,7 +238,6 @@
 
     goto :goto_0
 
-    .line 180
     :cond_3
     :try_start_1
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -265,7 +248,6 @@
 
     goto :goto_1
 
-    .line 182
     :catch_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -292,7 +274,6 @@
     :cond_4
     const-string p1, "1"
 
-    .line 176
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -305,36 +286,29 @@
 
     move p1, v5
 
-    .line 198
     :goto_2
     invoke-virtual {p0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-result-object p4
 
-    .line 199
     invoke-virtual {p4, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
 
     move-result-object p4
 
-    .line 200
     invoke-virtual {p4, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
     move-result-object p1
 
-    .line 201
     invoke-virtual {p1, v1}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
 
     move-result-object p1
 
-    .line 202
     invoke-virtual {p1, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
 
     move-result-object p1
 
-    .line 203
     invoke-virtual {p1, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    .line 205
     :goto_3
     invoke-virtual {p0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
@@ -348,12 +322,10 @@
 
     const-string/jumbo v0, "settings_stats"
 
-    .line 139
     invoke-static {v0, p0}, Landroid/provider/DeviceConfig;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 140
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -367,12 +339,10 @@
     :cond_0
     const/4 v0, 0x3
 
-    .line 143
     invoke-static {p0, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object p0
 
-    .line 146
     :try_start_0
     invoke-static {p0}, Lcom/android/service/nano/StringListParamProto;->parseFrom([B)Lcom/android/service/nano/StringListParamProto;
 
@@ -389,7 +359,6 @@
 
     const-string v2, "Error parsing string list proto"
 
-    .line 148
     invoke-static {v0, v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -399,17 +368,14 @@
 .method public static logGlobalSettings(Landroid/content/Context;II)Ljava/util/List;
     .locals 12
 
-    .line 81
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 82
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 84
     sget-object v1, Lcom/android/server/stats/pull/SettingsStatsUtil;->GLOBAL_SETTINGS:[Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;
 
     array-length v2, v1
@@ -423,7 +389,6 @@
 
     aget-object v5, v1, v4
 
-    .line 85
     iget-object v6, v5, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;->mFlagName:Ljava/lang/String;
 
     invoke-static {v6}, Lcom/android/server/stats/pull/SettingsStatsUtil;->getList(Ljava/lang/String;)Lcom/android/service/nano/StringListParamProto;
@@ -434,7 +399,6 @@
 
     goto :goto_2
 
-    .line 89
     :cond_0
     iget-object v6, v6, Lcom/android/service/nano/StringListParamProto;->element:[Ljava/lang/String;
 
@@ -447,12 +411,10 @@
 
     aget-object v9, v6, v8
 
-    .line 90
     invoke-static {p0, v9, p2}, Landroid/provider/Settings$Global;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 91
     iget v11, v5, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;->mDataType:I
 
     invoke-static {p1, v9, v10, p2, v11}, Lcom/android/server/stats/pull/SettingsStatsUtil;->createStatsEvent(ILjava/lang/String;Ljava/lang/String;II)Landroid/util/StatsEvent;
@@ -478,17 +440,14 @@
 .method public static logSecureSettings(Landroid/content/Context;II)Ljava/util/List;
     .locals 12
 
-    .line 119
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 120
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 122
     sget-object v1, Lcom/android/server/stats/pull/SettingsStatsUtil;->SECURE_SETTINGS:[Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;
 
     array-length v2, v1
@@ -502,7 +461,6 @@
 
     aget-object v5, v1, v4
 
-    .line 123
     iget-object v6, v5, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;->mFlagName:Ljava/lang/String;
 
     invoke-static {v6}, Lcom/android/server/stats/pull/SettingsStatsUtil;->getList(Ljava/lang/String;)Lcom/android/service/nano/StringListParamProto;
@@ -513,7 +471,6 @@
 
     goto :goto_2
 
-    .line 127
     :cond_0
     iget-object v6, v6, Lcom/android/service/nano/StringListParamProto;->element:[Ljava/lang/String;
 
@@ -526,12 +483,10 @@
 
     aget-object v9, v6, v8
 
-    .line 128
     invoke-static {p0, v9, p2}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 129
     iget v11, v5, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;->mDataType:I
 
     invoke-static {p1, v9, v10, p2, v11}, Lcom/android/server/stats/pull/SettingsStatsUtil;->createStatsEvent(ILjava/lang/String;Ljava/lang/String;II)Landroid/util/StatsEvent;
@@ -557,17 +512,14 @@
 .method public static logSystemSettings(Landroid/content/Context;II)Ljava/util/List;
     .locals 12
 
-    .line 100
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 101
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 103
     sget-object v1, Lcom/android/server/stats/pull/SettingsStatsUtil;->SYSTEM_SETTINGS:[Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;
 
     array-length v2, v1
@@ -581,7 +533,6 @@
 
     aget-object v5, v1, v4
 
-    .line 104
     iget-object v6, v5, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;->mFlagName:Ljava/lang/String;
 
     invoke-static {v6}, Lcom/android/server/stats/pull/SettingsStatsUtil;->getList(Ljava/lang/String;)Lcom/android/service/nano/StringListParamProto;
@@ -592,7 +543,6 @@
 
     goto :goto_2
 
-    .line 108
     :cond_0
     iget-object v6, v6, Lcom/android/service/nano/StringListParamProto;->element:[Ljava/lang/String;
 
@@ -605,12 +555,10 @@
 
     aget-object v9, v6, v8
 
-    .line 109
     invoke-static {p0, v9, p2}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 110
     iget v11, v5, Lcom/android/server/stats/pull/SettingsStatsUtil$FlagsData;->mDataType:I
 
     invoke-static {p1, v9, v10, p2, v11}, Lcom/android/server/stats/pull/SettingsStatsUtil;->createStatsEvent(ILjava/lang/String;Ljava/lang/String;II)Landroid/util/StatsEvent;

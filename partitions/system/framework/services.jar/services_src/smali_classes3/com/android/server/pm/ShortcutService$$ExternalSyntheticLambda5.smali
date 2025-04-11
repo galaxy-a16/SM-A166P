@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/ShortcutUser;
 
     invoke-static {p1}, Lcom/android/server/pm/ShortcutService;->$r8$lambda$h5v2RjPcsTzRJMiC23oG_rTL8-k(Lcom/android/server/pm/ShortcutUser;)V

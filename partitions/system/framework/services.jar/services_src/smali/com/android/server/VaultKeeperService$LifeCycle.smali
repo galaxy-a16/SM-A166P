@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 46
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -87,7 +86,6 @@
     :cond_6
     const-string v1, "PHASE_WAIT_FOR_DEFAULT_DISPLAY"
 
-    .line 86
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -113,7 +111,6 @@
 
     if-ne p1, v0, :cond_7
 
-    .line 89
     iget-object p0, p0, Lcom/android/server/VaultKeeperService$LifeCycle;->mVaultKeeperService:Lcom/android/server/VaultKeeperService;
 
     invoke-virtual {p0}, Lcom/android/server/VaultKeeperService;->systemReady()V
@@ -129,10 +126,8 @@
 
     const-string/jumbo v1, "onStart()"
 
-    .line 53
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     new-instance v0, Lcom/android/server/VaultKeeperService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -145,7 +140,6 @@
 
     const-string v1, "VaultKeeperService"
 
-    .line 55
     invoke-virtual {p0, v1, v0}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void

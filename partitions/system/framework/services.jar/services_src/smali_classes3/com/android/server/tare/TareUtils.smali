@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 29
     invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
 
     move-result-object v0
@@ -24,7 +23,6 @@
 .method public static appToString(ILjava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,7 +51,6 @@
 
     const-wide/32 v0, 0x3b9aca00
 
-    .line 36
     div-long/2addr p0, v0
 
     long-to-int p0, p0
@@ -77,10 +74,8 @@
     :cond_0
     const-wide/32 v2, 0x3b9aca00
 
-    .line 44
     rem-long v2, p0, v2
 
-    .line 45
     invoke-static {p0, p1}, Lcom/android/server/tare/TareUtils;->cakeToArc(J)I
 
     move-result p0
@@ -97,7 +92,6 @@
 
     if-nez p0, :cond_1
 
-    .line 48
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +108,6 @@
 
     goto :goto_0
 
-    .line 49
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -133,13 +126,11 @@
     :goto_0
     return-object p0
 
-    .line 51
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 52
     invoke-virtual {v4, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     cmp-long v0, v2, v0
@@ -148,7 +139,6 @@
 
     const-string v1, "."
 
-    .line 54
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {v2, v3}, Ljava/lang/Math;->abs(J)J
@@ -178,7 +168,6 @@
     :cond_3
     const-string v1, " ARC"
 
-    .line 56
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     cmp-long p0, p0, v5
@@ -190,10 +179,8 @@
     :cond_4
     const-string/jumbo p0, "s"
 
-    .line 58
     invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 60
     :cond_5
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -205,7 +192,6 @@
 .method public static getCurrentTimeMillis()J
     .locals 2
 
-    .line 32
     sget-object v0, Lcom/android/server/tare/TareUtils;->sSystemClock:Ljava/time/Clock;
 
     invoke-virtual {v0}, Ljava/time/Clock;->millis()J

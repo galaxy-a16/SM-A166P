@@ -19,7 +19,6 @@
 
     const-string v1, "NONE"
 
-    .line 586
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -36,7 +35,6 @@
 
     const-string v1, "CN"
 
-    .line 587
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -45,7 +43,6 @@
 
     const-string v1, "US"
 
-    .line 588
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0

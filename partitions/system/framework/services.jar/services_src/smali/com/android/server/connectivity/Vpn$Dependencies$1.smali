@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/connectivity/Vpn$Dependencies;Ljava/lang/String;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
-    .line 716
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$Dependencies$1;->this$0:Lcom/android/server/connectivity/Vpn$Dependencies;
 
     iput-object p2, p0, Lcom/android/server/connectivity/Vpn$Dependencies$1;->val$endpoint:Ljava/lang/String;
@@ -35,7 +34,6 @@
 .method public bridge synthetic onAnswer(Ljava/lang/Object;I)V
     .locals 0
 
-    .line 716
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/connectivity/Vpn$Dependencies$1;->onAnswer(Ljava/util/List;I)V
@@ -46,7 +44,6 @@
 .method public onAnswer(Ljava/util/List;I)V
     .locals 2
 
-    .line 720
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
@@ -57,7 +54,6 @@
 
     move v0, p2
 
-    .line 722
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -65,7 +61,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 723
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -74,7 +69,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 724
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +99,6 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 725
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$Dependencies$1;->val$result:Ljava/util/concurrent/CompletableFuture;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -123,7 +116,6 @@
 
     goto :goto_0
 
-    .line 730
     :cond_1
     iget-object p0, p0, Lcom/android/server/connectivity/Vpn$Dependencies$1;->val$result:Ljava/util/concurrent/CompletableFuture;
 
@@ -137,7 +129,6 @@
 
     goto :goto_1
 
-    .line 732
     :cond_2
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$Dependencies$1;->val$result:Ljava/util/concurrent/CompletableFuture;
 
@@ -156,7 +147,6 @@
 .method public onError(Landroid/net/DnsResolver$DnsException;)V
     .locals 2
 
-    .line 742
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,7 +165,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 743
     iget-object p1, p0, Lcom/android/server/connectivity/Vpn$Dependencies$1;->val$result:Ljava/util/concurrent/CompletableFuture;
 
     new-instance v0, Ljava/net/UnknownHostException;

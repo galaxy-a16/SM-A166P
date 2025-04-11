@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$q1NKfXWDxBCUTdtfDANc8h8632I(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->lambda$new$0(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result p0
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 150
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -45,20 +43,16 @@
 
     const-string v0, ""
 
-    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->mDeviceTypes:Ljava/util/HashSet;
 
-    .line 207
     iput-object p1, p0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->mName:Ljava/lang/String;
 
-    .line 210
     new-instance v1, Ljava/io/File;
 
     const-string v2, "/sys/class/extcon"
@@ -73,7 +67,6 @@
 
     move-result-object v1
 
-    .line 212
     array-length v2, v1
 
     const-string v3, "This probably means the selinux policies need to be changed."
@@ -82,7 +75,6 @@
 
     if-nez v2, :cond_0
 
-    .line 213
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +97,6 @@
 
     invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     :cond_0
     array-length p1, v1
 
@@ -120,7 +111,6 @@
 
     const/4 v7, 0x0
 
-    .line 221
     :try_start_0
     invoke-virtual {v6}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -128,7 +118,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 222
     :try_start_1
     new-instance v9, Ljava/io/File;
 
@@ -142,7 +131,6 @@
 
     const-string v7, "\n"
 
-    .line 223
     invoke-virtual {v6, v7, v0}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v6
@@ -153,7 +141,6 @@
 
     move-result-object v6
 
-    .line 227
     iget-object v7, p0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->mDeviceTypes:Ljava/util/HashSet;
 
     invoke-virtual {v7, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -172,7 +159,6 @@
     :catch_1
     move-exception v6
 
-    .line 229
     :goto_1
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -208,26 +194,21 @@
 .method public static getExtconInfoForTypes([Ljava/lang/String;)Ljava/util/List;
     .locals 9
 
-    .line 184
     sget-object v0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 185
     :try_start_0
     invoke-static {}, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->initExtconInfos()V
 
-    .line 186
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 188
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 189
     sget-object v1, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->sExtconInfos:[Lcom/android/server/ExtconUEventObserver$ExtconInfo;
 
     array-length v2, v1
@@ -241,7 +222,6 @@
 
     aget-object v5, v1, v4
 
-    .line 190
     array-length v6, p0
 
     move v7, v3
@@ -251,14 +231,12 @@
 
     aget-object v8, p0, v7
 
-    .line 191
     invoke-virtual {v5, v8}, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->hasCableType(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    .line 192
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -280,7 +258,6 @@
     :catchall_0
     move-exception p0
 
-    .line 186
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -292,14 +269,12 @@
 .method public static initExtconInfos()V
     .locals 7
 
-    .line 158
     sget-object v0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->sExtconInfos:[Lcom/android/server/ExtconUEventObserver$ExtconInfo;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 162
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -307,7 +282,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 163
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
@@ -316,7 +290,6 @@
 
     if-nez v1, :cond_1
 
-    .line 165
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,7 +300,6 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 166
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -358,17 +330,14 @@
 
     const-string v1, "ExtconUEventObserver"
 
-    .line 165
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     new-array v0, v2, [Lcom/android/server/ExtconUEventObserver$ExtconInfo;
 
-    .line 169
     sput-object v0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->sExtconInfos:[Lcom/android/server/ExtconUEventObserver$ExtconInfo;
 
     goto :goto_1
 
-    .line 171
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -376,7 +345,6 @@
 
     invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 172
     array-length v3, v1
 
     move v4, v2
@@ -386,7 +354,6 @@
 
     aget-object v5, v1, v4
 
-    .line 173
     new-instance v6, Lcom/android/server/ExtconUEventObserver$ExtconInfo;
 
     invoke-virtual {v5}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -404,7 +371,6 @@
     :cond_2
     new-array v1, v2, [Lcom/android/server/ExtconUEventObserver$ExtconInfo;
 
-    .line 175
     invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -422,7 +388,6 @@
 
     const-string p0, "cable."
 
-    .line 211
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -444,7 +409,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 252
     iget-object v3, p0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->mName:Ljava/lang/String;
 
     const/4 v4, 0x0
@@ -455,31 +419,26 @@
 
     move-result-object v1
 
-    .line 253
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 254
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 255
     invoke-virtual {v2}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "/devices"
 
-    .line 256
     invoke-virtual {v1, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 257
     invoke-virtual {v1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -494,7 +453,6 @@
     :catch_0
     move-exception v1
 
-    .line 261
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -521,7 +479,6 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 239
     iget-object p0, p0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->mName:Ljava/lang/String;
 
     return-object p0
@@ -530,7 +487,6 @@
 .method public getStatePath()Ljava/lang/String;
     .locals 1
 
-    .line 268
     iget-object p0, p0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->mName:Ljava/lang/String;
 
     filled-new-array {p0}, [Ljava/lang/Object;
@@ -549,7 +505,6 @@
 .method public hasCableType(Ljava/lang/String;)Z
     .locals 0
 
-    .line 203
     iget-object p0, p0, Lcom/android/server/ExtconUEventObserver$ExtconInfo;->mDeviceTypes:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z

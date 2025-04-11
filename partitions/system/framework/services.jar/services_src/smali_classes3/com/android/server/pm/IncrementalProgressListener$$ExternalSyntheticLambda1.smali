@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/pkg/mutate/PackageStateWrite;
 
     invoke-static {p1}, Lcom/android/server/pm/IncrementalProgressListener;->$r8$lambda$OmcdTi2d7RsBZHeEWGNKlU2_SV0(Lcom/android/server/pm/pkg/mutate/PackageStateWrite;)V

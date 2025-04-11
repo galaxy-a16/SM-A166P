@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -20,13 +19,11 @@
 
     const-string v0, "/efs/FactoryApp/earjack_count"
 
-    .line 48
     :try_start_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -38,7 +35,6 @@
 
     if-nez v2, :cond_0
 
-    .line 50
     :try_start_1
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
@@ -46,12 +42,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 51
     invoke-static {v0, v3}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 54
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -65,7 +59,6 @@
 
     move-result-object v1
 
-    .line 56
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -74,7 +67,6 @@
 
     goto :goto_0
 
-    .line 57
     :cond_1
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -84,12 +76,10 @@
 
     add-long/2addr v1, v3
 
-    .line 56
     invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 58
     :goto_0
     invoke-static {v0, v3}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
@@ -101,7 +91,6 @@
     :catch_0
     move-exception v0
 
-    .line 61
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,7 +121,6 @@
 .method public static isFactoryMode()Z
     .locals 1
 
-    .line 37
     sget-boolean v0, Lcom/samsung/android/server/audio/FactoryHelper;->sIsFactoryMode:Z
 
     return v0
@@ -143,14 +131,12 @@
 
     const-string/jumbo v0, "phone"
 
-    .line 41
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 43
     invoke-static {p0, v0}, Landroid/os/FactoryTest;->isFactoryMode(Landroid/content/Context;Landroid/telephony/TelephonyManager;)Z
 
     move-result p0

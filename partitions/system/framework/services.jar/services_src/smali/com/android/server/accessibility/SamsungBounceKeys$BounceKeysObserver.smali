@@ -17,22 +17,18 @@
 .method public constructor <init>(Lcom/android/server/accessibility/SamsungBounceKeys;ILandroid/os/Handler;)V
     .locals 0
 
-    .line 116
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->this$0:Lcom/android/server/accessibility/SamsungBounceKeys;
 
-    .line 117
     invoke-direct {p0, p3}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const-string p1, "bounce_keys_period"
 
-    .line 112
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mBounceKeysSettingsUri:Landroid/net/Uri;
 
-    .line 118
     iput p2, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mUserId:I
 
     return-void
@@ -43,7 +39,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    .line 143
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mBounceKeysSettingsUri:Landroid/net/Uri;
 
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -52,7 +47,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 145
     iget-object p1, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string p2, "bounce_keys_period"
@@ -65,7 +59,6 @@
 
     move-result p1
 
-    .line 147
     iget-object p0, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->this$0:Lcom/android/server/accessibility/SamsungBounceKeys;
 
     const/high16 p2, 0x447a0000    # 1000.0f
@@ -83,17 +76,14 @@
 .method public start(Landroid/content/ContentResolver;)V
     .locals 3
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 129
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mBounceKeysSettingsUri:Landroid/net/Uri;
 
     const/4 v1, 0x0
@@ -104,14 +94,12 @@
 
     const/4 p1, 0x1
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mBounceKeysSettingsUri:Landroid/net/Uri;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->onChange(ZLandroid/net/Uri;)V
 
     return-void
 
-    .line 126
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -121,7 +109,6 @@
 
     throw p0
 
-    .line 123
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -135,17 +122,14 @@
 .method public stop()V
     .locals 1
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungBounceKeys$BounceKeysObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     if-eqz v0, :cond_0
 
-    .line 138
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     return-void
 
-    .line 136
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

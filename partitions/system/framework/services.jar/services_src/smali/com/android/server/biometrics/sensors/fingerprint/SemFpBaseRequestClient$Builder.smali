@@ -35,29 +35,22 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/log/BiometricContext;Ljava/util/function/Supplier;I)V
     .locals 0
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mContext:Landroid/content/Context;
 
-    .line 62
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mBiometricContext:Lcom/android/server/biometrics/log/BiometricContext;
 
-    .line 63
     iput-object p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mLazyDaemon:Ljava/util/function/Supplier;
 
-    .line 64
     iput p4, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mSensorId:I
 
     const/4 p1, 0x0
 
-    .line 65
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mUserId:I
 
     const-string p1, "FingerprintRequestClient"
 
-    .line 66
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mOwner:Ljava/lang/String;
 
     return-void
@@ -68,7 +61,6 @@
 .method public build()Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;
     .locals 15
 
-    .line 125
     new-instance v14, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mContext:Landroid/content/Context;
@@ -107,7 +99,6 @@
 .method public setCommand(I)Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;
     .locals 0
 
-    .line 95
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mCommand:I
 
     return-object p0
@@ -116,7 +107,6 @@
 .method public setInputBuffer([B)Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;
     .locals 0
 
-    .line 107
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mInputBuffer:[B
 
     return-object p0
@@ -125,7 +115,6 @@
 .method public setOutputBuffer([B)Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;
     .locals 0
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mOutputBuffer:[B
 
     return-object p0
@@ -134,7 +123,6 @@
 .method public setParam(I)Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;
     .locals 0
 
-    .line 101
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mParam:I
 
     return-object p0
@@ -145,7 +133,6 @@
 
     const/4 v0, 0x1
 
-    .line 119
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mUseScheduler:Z
 
     return-object p0
@@ -154,7 +141,6 @@
 .method public setUserId(I)Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;
     .locals 0
 
-    .line 77
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpBaseRequestClient$Builder;->mUserId:I
 
     return-object p0

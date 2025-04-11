@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/pkg/PackageUserStateImpl;Lcom/android/server/pm/pkg/PackageUserStateImpl;Lcom/android/server/utils/Watchable;)V
     .locals 0
 
-    .line 103
     iput-object p1, p0, Lcom/android/server/pm/pkg/PackageUserStateImpl$1;->this$0:Lcom/android/server/pm/pkg/PackageUserStateImpl;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/utils/SnapshotCache;-><init>(Ljava/lang/Object;Lcom/android/server/utils/Watchable;)V
@@ -24,7 +23,6 @@
 .method public createSnapshot()Lcom/android/server/pm/pkg/PackageUserStateImpl;
     .locals 2
 
-    .line 106
     new-instance v0, Lcom/android/server/pm/pkg/PackageUserStateImpl;
 
     iget-object v1, p0, Lcom/android/server/pm/pkg/PackageUserStateImpl$1;->this$0:Lcom/android/server/pm/pkg/PackageUserStateImpl;
@@ -45,7 +43,6 @@
 .method public bridge synthetic createSnapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 103
     invoke-virtual {p0}, Lcom/android/server/pm/pkg/PackageUserStateImpl$1;->createSnapshot()Lcom/android/server/pm/pkg/PackageUserStateImpl;
 
     move-result-object p0

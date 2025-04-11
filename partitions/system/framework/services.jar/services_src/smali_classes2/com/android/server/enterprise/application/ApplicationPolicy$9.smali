@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/application/ApplicationPolicy;)V
     .locals 0
 
-    .line 7812
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$9;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,15 +27,12 @@
 
     const-string p2, "ACTION_LOCKED_BOOT_COMPLETED"
 
-    .line 7814
     invoke-static {p1, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7815
     iget-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$9;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/application/ApplicationPolicy;->-$$Nest$menablePreventStart(Lcom/android/server/enterprise/application/ApplicationPolicy;)V
 
-    .line 7818
     iget-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$9;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-static {p1}, Lcom/android/server/enterprise/application/ApplicationPolicy;->-$$Nest$fgetmProcessStats(Lcom/android/server/enterprise/application/ApplicationPolicy;)Lcom/android/server/enterprise/application/ProcessStats;
@@ -45,7 +41,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/application/ProcessStats;->init()V
 
-    .line 7819
     iget-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$9;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget-object p1, p1, Lcom/android/server/enterprise/application/ApplicationPolicy;->mContext:Landroid/content/Context;
@@ -58,7 +53,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/enterprise/utils/SecContentProviderUtil;->notifyPolicyChangesAllUser(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 7822
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$9;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy;->mContext:Landroid/content/Context;

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowState;)V
     .locals 1
 
-    .line 6057
     invoke-direct {p0}, Landroid/view/IWindowId$Stub;-><init>()V
 
-    .line 6064
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -27,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState$WindowId-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowState$WindowId;-><init>(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -38,7 +35,6 @@
 .method public isFocused()Z
     .locals 1
 
-    .line 6083
     iget-object p0, p0, Lcom/android/server/wm/WindowState$WindowId;->mOuter:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -49,7 +45,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 6085
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -58,7 +53,6 @@
 
     monitor-enter v0
 
-    .line 6086
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->isFocused()Z
 
@@ -75,7 +69,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6087
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -94,7 +87,6 @@
 .method public registerFocusObserver(Landroid/view/IWindowFocusObserver;)V
     .locals 0
 
-    .line 6069
     iget-object p0, p0, Lcom/android/server/wm/WindowState$WindowId;->mOuter:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -105,7 +97,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 6071
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowState;->registerFocusObserver(Landroid/view/IWindowFocusObserver;)V
 
     :cond_0
@@ -115,7 +106,6 @@
 .method public unregisterFocusObserver(Landroid/view/IWindowFocusObserver;)V
     .locals 0
 
-    .line 6076
     iget-object p0, p0, Lcom/android/server/wm/WindowState$WindowId;->mOuter:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -126,7 +116,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 6078
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowState;->unregisterFocusObserver(Landroid/view/IWindowFocusObserver;)V
 
     :cond_0

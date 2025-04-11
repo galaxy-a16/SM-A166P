@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/android/server/location/provider/LocationProviderManager;Landroid/location/LocationRequest;Landroid/location/util/identity/CallerIdentity;Lcom/android/server/location/provider/LocationProviderManager$LocationPendingIntentTransport;I)V
     .locals 7
 
-    .line 1158
     iput-object p1, p0, Lcom/android/server/location/provider/LocationProviderManager$LocationPendingIntentRegistration;->this$0:Lcom/android/server/location/provider/LocationProviderManager;
 
-    .line 1159
     sget-object v4, Lcom/android/internal/util/ConcurrentUtils;->DIRECT_EXECUTOR:Ljava/util/concurrent/Executor;
 
     move-object v0, p0
@@ -42,7 +40,6 @@
 .method public onCanceled(Landroid/app/PendingIntent;)V
     .locals 1
 
-    .line 1206
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +72,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1209
     invoke-virtual {p0}, Lcom/android/server/location/listeners/RemovableListenerRegistration;->remove()V
 
     return-void
@@ -84,7 +80,6 @@
 .method public onOperationFailure(Lcom/android/internal/listeners/ListenerExecutor$ListenerOperation;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 1191
     invoke-virtual {p0, p2}, Lcom/android/server/location/provider/LocationProviderManager$LocationPendingIntentRegistration;->onTransportFailure(Ljava/lang/Exception;)V
 
     return-void
@@ -93,7 +88,6 @@
 .method public onProviderOperationFailure(Lcom/android/internal/listeners/ListenerExecutor$ListenerOperation;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 1185
     invoke-virtual {p0, p2}, Lcom/android/server/location/provider/LocationProviderManager$LocationPendingIntentRegistration;->onTransportFailure(Ljava/lang/Exception;)V
 
     return-void
@@ -102,10 +96,8 @@
 .method public onRegister()V
     .locals 2
 
-    .line 1167
     invoke-super {p0}, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration;->onRegister()V
 
-    .line 1168
     invoke-virtual {p0}, Lcom/android/server/location/listeners/RemovableListenerRegistration;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -120,7 +112,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1169
     invoke-virtual {p0}, Lcom/android/server/location/listeners/RemovableListenerRegistration;->remove()V
 
     :cond_0
@@ -130,12 +121,10 @@
 .method public final onTransportFailure(Ljava/lang/Exception;)V
     .locals 2
 
-    .line 1195
     instance-of v0, p1, Landroid/app/PendingIntent$CanceledException;
 
     if-eqz v0, :cond_0
 
-    .line 1196
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,12 +157,10 @@
 
     invoke-static {v1, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1197
     invoke-virtual {p0}, Lcom/android/server/location/listeners/RemovableListenerRegistration;->remove()V
 
     return-void
 
-    .line 1199
     :cond_0
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -185,7 +172,6 @@
 .method public onUnregister()V
     .locals 1
 
-    .line 1178
     invoke-virtual {p0}, Lcom/android/server/location/listeners/RemovableListenerRegistration;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -194,7 +180,6 @@
 
     invoke-virtual {v0, p0}, Landroid/app/PendingIntent;->removeCancelListener(Landroid/app/PendingIntent$CancelListener;)V
 
-    .line 1179
     invoke-super {p0}, Lcom/android/server/location/provider/LocationProviderManager$LocationRegistration;->onUnregister()V
 
     return-void

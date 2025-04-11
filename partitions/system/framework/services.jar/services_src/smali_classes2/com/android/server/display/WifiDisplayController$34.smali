@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayController;)V
     .locals 0
 
-    .line 2396
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .line 2399
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "com.samsung.keyguard.KEYGUARD_STATE_UPDATE"
 
-    .line 2400
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -46,7 +43,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2401
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmContext(Lcom/android/server/display/WifiDisplayController;)Landroid/content/Context;
@@ -61,7 +57,6 @@
 
     check-cast p1, Landroid/os/PowerManager;
 
-    .line 2402
     invoke-virtual {p1}, Landroid/os/PowerManager;->isInteractive()Z
 
     move-result p1
@@ -72,12 +67,10 @@
 
     const/4 v0, 0x0
 
-    .line 2403
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 2404
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +89,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2406
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$mgetScreenLockType(Lcom/android/server/display/WifiDisplayController;)Ljava/lang/String;
@@ -107,7 +99,6 @@
 
     goto :goto_0
 
-    .line 2408
     :cond_0
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -121,21 +112,18 @@
 
     check-cast p1, Landroid/app/KeyguardManager;
 
-    .line 2409
     invoke-virtual {p1}, Landroid/app/KeyguardManager;->semIsKeyguardShowingAndNotOccluded()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 2410
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-virtual {p0, v4, v1}, Lcom/android/server/display/WifiDisplayController;->setParam(Ljava/lang/String;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 2412
     :cond_1
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -148,14 +136,12 @@
     :cond_2
     const-string p2, "android.intent.action.SCREEN_ON"
 
-    .line 2416
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
-    .line 2417
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmScreenWakeUpByUser(Lcom/android/server/display/WifiDisplayController;)Z
@@ -166,10 +152,8 @@
 
     const-string p1, "Received ACTION_SCREEN_ON by user"
 
-    .line 2418
     invoke-static {v3, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2419
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmContext(Lcom/android/server/display/WifiDisplayController;)Landroid/content/Context;
@@ -182,14 +166,12 @@
 
     check-cast p1, Landroid/app/KeyguardManager;
 
-    .line 2420
     invoke-virtual {p1}, Landroid/app/KeyguardManager;->semIsKeyguardShowingAndNotOccluded()Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    .line 2421
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-virtual {p0, v4, v1}, Lcom/android/server/display/WifiDisplayController;->setParam(Ljava/lang/String;Ljava/lang/Object;)V
@@ -199,10 +181,8 @@
     :cond_3
     const-string p1, "Received ACTION_SCREEN_ON by controller"
 
-    .line 2424
     invoke-static {v3, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2425
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const/4 p1, 0x1
@@ -214,7 +194,6 @@
     :cond_4
     const-string p2, "android.intent.action.SCREEN_OFF"
 
-    .line 2427
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -223,10 +202,8 @@
 
     const-string p1, "Received ACTION_SCREEN_OFF"
 
-    .line 2428
     invoke-static {v3, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2429
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$34;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const-string/jumbo p1, "screen_off"

@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$5h0bcfuuxMorNYh7YTuDhyD4duE(Lcom/android/server/pm/StagingManager$StagedSession;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->lambda$containsApexSession$0(Lcom/android/server/pm/StagingManager$StagedSession;)Z
 
     move-result p0
@@ -25,7 +24,6 @@
 .method public static synthetic $r8$lambda$VyybwOQlIa01qyiNP-jTe4J09wE(Ljava/util/function/Predicate;Lcom/android/server/pm/PackageInstallerSession;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->lambda$sessionContains$1(Ljava/util/function/Predicate;Lcom/android/server/pm/PackageInstallerSession;)Z
 
     move-result p0
@@ -36,7 +34,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 0
 
-    .line 598
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +44,6 @@
 .method public static synthetic lambda$containsApexSession$0(Lcom/android/server/pm/StagingManager$StagedSession;)Z
     .locals 0
 
-    .line 636
     invoke-interface {p0}, Lcom/android/server/pm/StagingManager$StagedSession;->isApexSession()Z
 
     move-result p0
@@ -58,7 +54,6 @@
 .method public static synthetic lambda$sessionContains$1(Ljava/util/function/Predicate;Lcom/android/server/pm/PackageInstallerSession;)Z
     .locals 0
 
-    .line 710
     iget-object p1, p1, Lcom/android/server/pm/PackageInstallerSession;->mStagedSession:Lcom/android/server/pm/PackageInstallerSession$StagedSession;
 
     invoke-interface {p0, p1}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
@@ -73,7 +68,6 @@
 .method public abandon()V
     .locals 0
 
-    .line 730
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->abandon()V
@@ -84,7 +78,6 @@
 .method public containsApexSession()Z
     .locals 1
 
-    .line 636
     new-instance v0, Lcom/android/server/pm/PackageInstallerSession$StagedSession$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/pm/PackageInstallerSession$StagedSession$$ExternalSyntheticLambda0;-><init>()V
@@ -99,7 +92,6 @@
 .method public getChildSessions()Ljava/util/List;
     .locals 5
 
-    .line 601
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iget-object v1, v0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
@@ -108,12 +100,10 @@
 
     if-nez v1, :cond_0
 
-    .line 602
     sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     return-object p0
 
-    .line 604
     :cond_0
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$fgetmLock(Lcom/android/server/pm/PackageInstallerSession;)Ljava/lang/Object;
 
@@ -121,7 +111,6 @@
 
     monitor-enter v0
 
-    .line 605
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
@@ -133,7 +122,6 @@
 
     move-result v1
 
-    .line 606
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(I)V
@@ -143,7 +131,6 @@
     :goto_0
     if-ge v3, v1, :cond_1
 
-    .line 608
     iget-object v4, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {v4}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$fgetmChildSessions(Lcom/android/server/pm/PackageInstallerSession;)Landroid/util/SparseArray;
@@ -164,7 +151,6 @@
 
     goto :goto_0
 
-    .line 610
     :cond_1
     monitor-exit v0
 
@@ -173,7 +159,6 @@
     :catchall_0
     move-exception p0
 
-    .line 611
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -184,7 +169,6 @@
 .method public getCommittedMillis()J
     .locals 2
 
-    .line 705
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->getCommittedMillis()J
@@ -197,7 +181,6 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
-    .line 641
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->getPackageName()Ljava/lang/String;
@@ -210,7 +193,6 @@
 .method public getParentSessionId()I
     .locals 0
 
-    .line 685
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->getParentSessionId()I
@@ -223,7 +205,6 @@
 .method public hasParentSessionId()Z
     .locals 0
 
-    .line 680
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->hasParentSessionId()Z
@@ -236,19 +217,16 @@
 .method public installSession()Ljava/util/concurrent/CompletableFuture;
     .locals 2
 
-    .line 672
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$massertCallerIsOwnerOrRootOrSystem(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    .line 673
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     const-string v1, "StagedSession#installSession"
 
     invoke-static {v0, v1}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$massertNotChild(Lcom/android/server/pm/PackageInstallerSession;Ljava/lang/String;)V
 
-    .line 674
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->isCommitted()Z
 
     move-result v0
@@ -271,7 +249,6 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 675
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$minstall(Lcom/android/server/pm/PackageInstallerSession;)Ljava/util/concurrent/CompletableFuture;
@@ -284,7 +261,6 @@
 .method public isApexSession()Z
     .locals 1
 
-    .line 626
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
@@ -311,7 +287,6 @@
 .method public isCommitted()Z
     .locals 0
 
-    .line 690
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->isCommitted()Z
@@ -324,7 +299,6 @@
 .method public isDestroyed()Z
     .locals 0
 
-    .line 700
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->isDestroyed()Z
@@ -337,7 +311,6 @@
 .method public isInTerminalState()Z
     .locals 0
 
-    .line 695
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$misInTerminalState(Lcom/android/server/pm/PackageInstallerSession;)Z
@@ -350,7 +323,6 @@
 .method public isMultiPackage()Z
     .locals 0
 
-    .line 621
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
@@ -363,7 +335,6 @@
 .method public isSessionFailed()Z
     .locals 0
 
-    .line 725
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->isSessionFailed()Z
@@ -376,7 +347,6 @@
 .method public isSessionReady()Z
     .locals 0
 
-    .line 715
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->isSessionReady()Z
@@ -389,7 +359,6 @@
 .method public sessionContains(Ljava/util/function/Predicate;)Z
     .locals 1
 
-    .line 710
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     new-instance v0, Lcom/android/server/pm/PackageInstallerSession$StagedSession$$ExternalSyntheticLambda1;
@@ -406,7 +375,6 @@
 .method public sessionId()I
     .locals 0
 
-    .line 631
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iget p0, p0, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
@@ -417,7 +385,6 @@
 .method public sessionParams()Landroid/content/pm/PackageInstaller$SessionParams;
     .locals 0
 
-    .line 616
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
@@ -428,7 +395,6 @@
 .method public setSessionFailed(ILjava/lang/String;)V
     .locals 0
 
-    .line 651
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageInstallerSession;->setSessionFailed(ILjava/lang/String;)V
@@ -439,7 +405,6 @@
 .method public setSessionReady()V
     .locals 0
 
-    .line 646
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession;->setSessionReady()V
@@ -450,19 +415,16 @@
 .method public verifySession()V
     .locals 1
 
-    .line 741
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$massertCallerIsOwnerOrRootOrSystem(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    .line 742
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->isCommitted()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 743
     invoke-virtual {p0}, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->isInTerminalState()Z
 
     move-result v0
@@ -471,7 +433,6 @@
 
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 744
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$StagedSession;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$mverify(Lcom/android/server/pm/PackageInstallerSession;)V

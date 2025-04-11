@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssMetrics;)V
     .locals 0
 
-    .line 607
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssMetrics$StatsPullAtomCallbackImpl;->this$0:Lcom/android/server/location/gnss/GnssMetrics;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,12 +36,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 613
     iget-object v2, v0, Lcom/android/server/location/gnss/GnssMetrics$StatsPullAtomCallbackImpl;->this$0:Lcom/android/server/location/gnss/GnssMetrics;
 
     iget-object v2, v2, Lcom/android/server/location/gnss/GnssMetrics;->mLocationFailureReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 614
     invoke-virtual {v2}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getCount()I
 
     move-result v2
@@ -53,7 +50,6 @@
 
     iget-object v4, v4, Lcom/android/server/location/gnss/GnssMetrics;->mLocationFailureReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 615
     invoke-virtual {v4}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getLongSum()J
 
     move-result-wide v4
@@ -62,7 +58,6 @@
 
     iget-object v6, v6, Lcom/android/server/location/gnss/GnssMetrics;->mTimeToFirstFixMilliSReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 616
     invoke-virtual {v6}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getCount()I
 
     move-result v6
@@ -73,7 +68,6 @@
 
     iget-object v8, v8, Lcom/android/server/location/gnss/GnssMetrics;->mTimeToFirstFixMilliSReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 617
     invoke-virtual {v8}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getLongSum()J
 
     move-result-wide v8
@@ -82,7 +76,6 @@
 
     iget-object v10, v10, Lcom/android/server/location/gnss/GnssMetrics;->mPositionAccuracyMetersReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 618
     invoke-virtual {v10}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getCount()I
 
     move-result v10
@@ -93,7 +86,6 @@
 
     iget-object v12, v12, Lcom/android/server/location/gnss/GnssMetrics;->mPositionAccuracyMetersReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 619
     invoke-virtual {v12}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getLongSum()J
 
     move-result-wide v12
@@ -102,7 +94,6 @@
 
     iget-object v15, v15, Lcom/android/server/location/gnss/GnssMetrics;->mTopFourAverageCn0DbmHzReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 620
     invoke-virtual {v15}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getCount()I
 
     move-result v15
@@ -113,7 +104,6 @@
 
     iget-object v1, v1, Lcom/android/server/location/gnss/GnssMetrics;->mTopFourAverageCn0DbmHzReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 621
     invoke-virtual {v1}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getLongSum()J
 
     move-result-wide v16
@@ -122,7 +112,6 @@
 
     iget-object v1, v1, Lcom/android/server/location/gnss/GnssMetrics;->mL5TopFourAverageCn0DbmHzReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 622
     invoke-virtual {v1}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getCount()I
 
     move-result v1
@@ -137,7 +126,6 @@
 
     iget-object v1, v1, Lcom/android/server/location/gnss/GnssMetrics;->mL5TopFourAverageCn0DbmHzReportsStatistics:Lcom/android/server/location/gnss/GnssMetrics$Statistics;
 
-    .line 623
     invoke-virtual {v1}, Lcom/android/server/location/gnss/GnssMetrics$Statistics;->getLongSum()J
 
     move-result-wide v20
@@ -164,7 +152,6 @@
 
     move-wide/from16 v2, v30
 
-    .line 613
     invoke-static/range {v1 .. v29}, Lcom/android/internal/util/FrameworkStatsLog;->buildStatsEvent(IJJJJJJJJJJJJJJ)Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -186,7 +173,6 @@
 
     if-ne v2, v1, :cond_3
 
-    .line 627
     iget-object v1, v0, Lcom/android/server/location/gnss/GnssMetrics$StatsPullAtomCallbackImpl;->this$0:Lcom/android/server/location/gnss/GnssMetrics;
 
     invoke-static {v1}, Lcom/android/server/location/gnss/GnssMetrics;->-$$Nest$fgetmGnssNative(Lcom/android/server/location/gnss/GnssMetrics;)Lcom/android/server/location/gnss/hal/GnssNative;
@@ -195,7 +181,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/location/gnss/hal/GnssNative;->requestPowerStats()V
 
-    .line 628
     iget-object v0, v0, Lcom/android/server/location/gnss/GnssMetrics$StatsPullAtomCallbackImpl;->this$0:Lcom/android/server/location/gnss/GnssMetrics;
 
     invoke-static {v0}, Lcom/android/server/location/gnss/GnssMetrics;->-$$Nest$fgetmGnssNative(Lcom/android/server/location/gnss/GnssMetrics;)Lcom/android/server/location/gnss/hal/GnssNative;
@@ -217,17 +202,14 @@
 
     new-array v13, v1, [D
 
-    .line 634
     invoke-virtual {v0}, Lcom/android/server/location/gnss/GnssPowerStats;->getOtherModesEnergyMilliJoule()[D
 
     move-result-object v3
 
-    .line 635
     array-length v4, v3
 
     if-ge v4, v1, :cond_2
 
-    .line 636
     array-length v1, v3
 
     const/4 v14, 0x0
@@ -239,10 +221,8 @@
     :cond_2
     const/4 v14, 0x0
 
-    .line 640
     invoke-static {v3, v14, v13, v14, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 645
     :goto_0
     invoke-virtual {v0}, Lcom/android/server/location/gnss/GnssPowerStats;->getElapsedRealtimeUncertaintyNanos()D
 
@@ -254,7 +234,6 @@
 
     move-wide v1, v3
 
-    .line 646
     invoke-virtual {v0}, Lcom/android/server/location/gnss/GnssPowerStats;->getTotalEnergyMilliJoule()D
 
     move-result-wide v3
@@ -265,7 +244,6 @@
 
     double-to-long v3, v3
 
-    .line 647
     invoke-virtual {v0}, Lcom/android/server/location/gnss/GnssPowerStats;->getSinglebandTrackingModeEnergyMilliJoule()D
 
     move-result-wide v5
@@ -274,7 +252,6 @@
 
     double-to-long v5, v5
 
-    .line 649
     invoke-virtual {v0}, Lcom/android/server/location/gnss/GnssPowerStats;->getMultibandTrackingModeEnergyMilliJoule()D
 
     move-result-wide v7
@@ -283,7 +260,6 @@
 
     double-to-long v7, v7
 
-    .line 651
     invoke-virtual {v0}, Lcom/android/server/location/gnss/GnssPowerStats;->getSinglebandAcquisitionModeEnergyMilliJoule()D
 
     move-result-wide v9
@@ -292,7 +268,6 @@
 
     double-to-long v9, v9
 
-    .line 653
     invoke-virtual {v0}, Lcom/android/server/location/gnss/GnssPowerStats;->getMultibandAcquisitionModeEnergyMilliJoule()D
 
     move-result-wide v17
@@ -415,7 +390,6 @@
 
     move-wide/from16 v1, v35
 
-    .line 644
     invoke-static/range {v0 .. v32}, Lcom/android/internal/util/FrameworkStatsLog;->buildStatsEvent(IJJJJJJJJJJJJJJJJ)Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -427,7 +401,6 @@
     :goto_1
     return v34
 
-    .line 666
     :cond_3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/GoodCatchManager;)V
     .locals 0
 
-    .line 130
     iput-object p1, p0, Lcom/samsung/android/server/audio/GoodCatchManager$2;->this$0:Lcom/samsung/android/server/audio/GoodCatchManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onStart(Ljava/lang/String;)V
     .locals 2
 
-    .line 133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,7 +44,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     iget-object p0, p0, Lcom/samsung/android/server/audio/GoodCatchManager$2;->this$0:Lcom/samsung/android/server/audio/GoodCatchManager;
 
     const/4 p1, 0x1
@@ -59,7 +56,6 @@
 .method public onStop(Ljava/lang/String;)V
     .locals 2
 
-    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,7 +74,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     iget-object p0, p0, Lcom/samsung/android/server/audio/GoodCatchManager$2;->this$0:Lcom/samsung/android/server/audio/GoodCatchManager;
 
     const/4 p1, 0x0

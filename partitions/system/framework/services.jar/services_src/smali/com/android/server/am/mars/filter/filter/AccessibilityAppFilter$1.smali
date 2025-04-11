@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;Landroid/os/Handler;)V
     .locals 0
 
-    .line 110
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 113
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;
 
     invoke-static {p0}, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->-$$Nest$mgetEnabledAccessibilityPackage(Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;)V

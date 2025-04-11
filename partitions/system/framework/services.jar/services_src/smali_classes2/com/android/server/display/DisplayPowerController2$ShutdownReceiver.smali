@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayPowerController2;)V
     .locals 0
 
-    .line 4352
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/DisplayPowerController2;Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver;-><init>(Lcom/android/server/display/DisplayPowerController2;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 4355
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmInteractiveModeBrightnessMapper(Lcom/android/server/display/DisplayPowerController2;)Lcom/android/server/display/BrightnessMappingStrategy;
@@ -42,21 +39,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 4356
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "android.intent.action.ACTION_SHUTDOWN"
 
-    .line 4357
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 4358
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmAppliedForceDimming(Lcom/android/server/display/DisplayPowerController2;)Z
@@ -71,7 +65,6 @@
 
     move-result-object p1
 
-    .line 4359
     invoke-virtual {p1}, Lcom/android/server/display/brightness/strategy/AutomaticBrightnessStrategy;->shouldUseAutoBrightness()Z
 
     move-result p1
@@ -84,14 +77,12 @@
 
     move-result p1
 
-    .line 4360
     invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 4361
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmTag(Lcom/android/server/display/DisplayPowerController2;)Ljava/lang/String;
@@ -102,19 +93,16 @@
 
     invoke-static {p1, p2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4362
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$mupdateLastBrightnessSettingChangedTime(Lcom/android/server/display/DisplayPowerController2;)V
 
-    .line 4363
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fputmAppliedForceDimming(Lcom/android/server/display/DisplayPowerController2;Z)V
 
-    .line 4364
     iget-object p1, p0, Lcom/android/server/display/DisplayPowerController2$ShutdownReceiver;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmDisplayBrightnessController(Lcom/android/server/display/DisplayPowerController2;)Lcom/android/server/display/brightness/DisplayBrightnessController;

@@ -25,7 +25,6 @@
 .method public static synthetic $values()[Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
     .locals 7
 
-    .line 413
     sget-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->NONE:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     sget-object v1, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->ALREADY_DIED:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
@@ -50,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 414
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     const-string v1, "NONE"
@@ -61,7 +59,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->NONE:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
-    .line 415
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     const-string v1, "ALREADY_DIED"
@@ -72,7 +69,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->ALREADY_DIED:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
-    .line 416
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     const-string v1, "EXECUTING_SERVICE"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->EXECUTING_SERVICE:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
-    .line 417
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     const-string v1, "RUNNING_INTENT"
@@ -94,7 +89,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->RUNNING_INTENT:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
-    .line 418
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     const-string v1, "ACTIVITY_TIME"
@@ -105,7 +99,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->ACTIVITY_TIME:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
-    .line 419
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     const-string v1, "VISIBLE_ADJ"
@@ -116,7 +109,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->VISIBLE_ADJ:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
-    .line 420
     new-instance v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     const-string v1, "HAS_CONNECTION_PROVIDER"
@@ -127,7 +119,6 @@
 
     sput-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->HAS_CONNECTION_PROVIDER:Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
-    .line 413
     invoke-static {}, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->$values()[Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     move-result-object v0
@@ -140,7 +131,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 413
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -149,7 +139,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
     .locals 1
 
-    .line 413
     const-class v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -164,7 +153,6 @@
 .method public static values()[Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
     .locals 1
 
-    .line 413
     sget-object v0, Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->$VALUES:[Lcom/android/server/chimera/PolicyHandler$ProtectedReason;
 
     invoke-virtual {v0}, [Lcom/android/server/chimera/PolicyHandler$ProtectedReason;->clone()Ljava/lang/Object;

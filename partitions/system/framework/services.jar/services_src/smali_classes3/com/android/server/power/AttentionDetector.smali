@@ -47,7 +47,6 @@
 .method public static synthetic $r8$lambda$CFUMUAi2PArgAy3-AcsT4BeraDE(Lcom/android/server/power/AttentionDetector;Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/AttentionDetector;->lambda$systemReady$0(Landroid/provider/DeviceConfig$Properties;)V
 
     return-void
@@ -56,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/power/AttentionDetector;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -65,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/power/AttentionDetector;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -74,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmOnUserAttention(Lcom/android/server/power/AttentionDetector;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mOnUserAttention:Ljava/lang/Runnable;
 
     return-object p0
@@ -83,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRequested(Lcom/android/server/power/AttentionDetector;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object p0
@@ -92,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWakefulness(Lcom/android/server/power/AttentionDetector;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/power/AttentionDetector;->mWakefulness:I
 
     return p0
@@ -101,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$mresetConsecutiveExtensionCount(Lcom/android/server/power/AttentionDetector;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->resetConsecutiveExtensionCount()V
 
     return-void
@@ -110,10 +103,8 @@
 .method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
     .locals 3
 
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v1, 0x0
@@ -122,13 +113,10 @@
 
     iput-object v0, p0, Lcom/android/server/power/AttentionDetector;->mConsecutiveTimeoutExtendedCount:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 155
     iput-object p1, p0, Lcom/android/server/power/AttentionDetector;->mOnUserAttention:Ljava/lang/Runnable;
 
-    .line 156
     iput-object p2, p0, Lcom/android/server/power/AttentionDetector;->mLock:Ljava/lang/Object;
 
-    .line 157
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 p2, 0x0
@@ -137,12 +125,10 @@
 
     iput-object p1, p0, Lcom/android/server/power/AttentionDetector;->mRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 158
     iput p2, p0, Lcom/android/server/power/AttentionDetector;->mRequestId:I
 
     const/4 p1, 0x1
 
-    .line 161
     iput p1, p0, Lcom/android/server/power/AttentionDetector;->mWakefulness:I
 
     return-void
@@ -151,7 +137,6 @@
 .method private synthetic lambda$systemReady$0(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 198
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
     move-result-object p1
@@ -166,7 +151,6 @@
 .method public final cancelCurrentRequestIfAny()V
     .locals 2
 
-    .line 290
     iget-object v0, p0, Lcom/android/server/power/AttentionDetector;->mRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -175,14 +159,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 291
     iget-object v0, p0, Lcom/android/server/power/AttentionDetector;->mAttentionManager:Landroid/attention/AttentionManagerInternal;
 
     iget-object v1, p0, Lcom/android/server/power/AttentionDetector;->mCallback:Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;
 
     invoke-virtual {v0, v1}, Landroid/attention/AttentionManagerInternal;->cancelAttentionCheck(Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;)V
 
-    .line 292
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x0
@@ -198,10 +180,8 @@
 
     const-string v0, "AttentionDetector:"
 
-    .line 313
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 314
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -220,7 +200,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 315
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -239,7 +218,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 316
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,7 +236,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,7 +254,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 318
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -296,7 +272,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 319
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -317,7 +292,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 320
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -344,7 +318,6 @@
 
     const-string/jumbo v0, "max_extension_millis"
 
-    .line 355
     iget-wide v1, p0, Lcom/android/server/power/AttentionDetector;->mDefaultMaximumExtensionMillis:J
 
     const-string v3, "attention_manager_service"
@@ -376,10 +349,8 @@
 
     const-string v1, "Bad flag value supplied for: max_extension_millis"
 
-    .line 360
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     iget-wide v0, p0, Lcom/android/server/power/AttentionDetector;->mDefaultMaximumExtensionMillis:J
 
     return-wide v0
@@ -394,7 +365,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 341
     invoke-static {p0, v0, v1, v2}, Landroid/provider/DeviceConfig;->getLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v3
@@ -420,7 +390,6 @@
 
     const-string v0, "Bad flag value supplied for: post_dim_check_duration_millis"
 
-    .line 346
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-wide v1
@@ -435,7 +404,6 @@
 
     const-wide/16 v1, 0x7d0
 
-    .line 326
     invoke-static {p0, v0, v1, v2}, Landroid/provider/DeviceConfig;->getLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v3
@@ -463,7 +431,6 @@
 
     const-string v0, "Bad flag value supplied for: pre_dim_check_duration_millis"
 
-    .line 331
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-wide v1
@@ -472,7 +439,6 @@
 .method public isAttentionServiceSupported()Z
     .locals 0
 
-    .line 309
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mAttentionManager:Landroid/attention/AttentionManagerInternal;
 
     if-eqz p0, :cond_0
@@ -497,7 +463,6 @@
 .method public final onDeviceConfigChange(Ljava/util/Set;)V
     .locals 3
 
-    .line 368
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -515,7 +480,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 369
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -577,7 +541,6 @@
     :goto_1
     packed-switch v2, :pswitch_data_0
 
-    .line 376
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -598,7 +561,6 @@
 
     goto :goto_0
 
-    .line 373
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->readValuesFromDeviceConfig()V
 
@@ -647,7 +609,6 @@
 
     return p0
 
-    .line 263
     :cond_0
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mConsecutiveTimeoutExtendedCount:Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -657,14 +618,11 @@
 
     return p0
 
-    .line 269
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->cancelCurrentRequestIfAny()V
 
-    .line 270
     iput-wide p1, p0, Lcom/android/server/power/AttentionDetector;->mLastUserActivityTime:J
 
-    .line 271
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->resetConsecutiveExtensionCount()V
 
     return v0
@@ -673,17 +631,14 @@
 .method public onWakefulnessChangeStarted(I)V
     .locals 1
 
-    .line 282
     iput p1, p0, Lcom/android/server/power/AttentionDetector;->mWakefulness:I
 
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
 
-    .line 284
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->cancelCurrentRequestIfAny()V
 
-    .line 285
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->resetConsecutiveExtensionCount()V
 
     :cond_0
@@ -693,28 +648,24 @@
 .method public final readValuesFromDeviceConfig()V
     .locals 3
 
-    .line 382
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->getMaxExtensionMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/AttentionDetector;->mMaximumExtensionMillis:J
 
-    .line 383
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->getPreDimCheckDurationMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/AttentionDetector;->mPreDimCheckDurationMillis:J
 
-    .line 384
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->getPostDimCheckDurationMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/power/AttentionDetector;->mRequestedPostDimTimeoutMillis:J
 
-    .line 386
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -757,7 +708,6 @@
 .method public final resetConsecutiveExtensionCount()V
     .locals 4
 
-    .line 297
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mConsecutiveTimeoutExtendedCount:Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v0, 0x0
@@ -772,7 +722,6 @@
 
     const/16 p0, 0xa8
 
-    .line 299
     invoke-static {p0, v2, v3}, Lcom/android/internal/util/FrameworkStatsLog;->write(IJ)V
 
     :cond_0
@@ -782,20 +731,16 @@
 .method public systemReady(Landroid/content/Context;)V
     .locals 5
 
-    .line 171
     iput-object p1, p0, Lcom/android/server/power/AttentionDetector;->mContext:Landroid/content/Context;
 
-    .line 172
     invoke-virtual {p0, p1}, Lcom/android/server/power/AttentionDetector;->updateEnabledFromSettings(Landroid/content/Context;)V
 
-    .line 173
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/power/AttentionDetector;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 174
     const-class v0, Landroid/attention/AttentionManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -806,7 +751,6 @@
 
     iput-object v0, p0, Lcom/android/server/power/AttentionDetector;->mAttentionManager:Landroid/attention/AttentionManagerInternal;
 
-    .line 175
     const-class v0, Lcom/android/server/wm/WindowManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -817,7 +761,6 @@
 
     iput-object v0, p0, Lcom/android/server/power/AttentionDetector;->mWindowManager:Lcom/android/server/wm/WindowManagerInternal;
 
-    .line 176
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -832,7 +775,6 @@
 
     iput-wide v0, p0, Lcom/android/server/power/AttentionDetector;->mDefaultMaximumExtensionMillis:J
 
-    .line 180
     :try_start_0
     new-instance v0, Lcom/android/server/power/AttentionDetector$UserSwitchObserver;
 
@@ -840,7 +782,6 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/power/AttentionDetector$UserSwitchObserver;-><init>(Lcom/android/server/power/AttentionDetector;Lcom/android/server/power/AttentionDetector$UserSwitchObserver-IA;)V
 
-    .line 181
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object v1
@@ -851,7 +792,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 186
     :catch_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -867,7 +807,6 @@
 
     new-instance v3, Landroid/os/Handler;
 
-    .line 188
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v4
@@ -880,13 +819,10 @@
 
     const/4 v4, 0x0
 
-    .line 186
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 195
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->readValuesFromDeviceConfig()V
 
-    .line 197
     invoke-virtual {p1}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
@@ -897,7 +833,6 @@
 
     const-string p0, "attention_manager_service"
 
-    .line 196
     invoke-static {p0, p1, v0}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     return-void
@@ -906,7 +841,6 @@
 .method public updateEnabledFromSettings(Landroid/content/Context;)V
     .locals 3
 
-    .line 166
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -936,7 +870,6 @@
 .method public updateUserActivity(JJ)J
     .locals 8
 
-    .line 203
     iget-wide v0, p0, Lcom/android/server/power/AttentionDetector;->mLastActedOnNextScreenDimming:J
 
     cmp-long v0, p1, v0
@@ -947,7 +880,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 205
     invoke-virtual {p0}, Lcom/android/server/power/AttentionDetector;->isAttentionServiceSupported()Z
 
     move-result v0
@@ -956,7 +888,6 @@
 
     iget-object v0, p0, Lcom/android/server/power/AttentionDetector;->mWindowManager:Lcom/android/server/wm/WindowManagerInternal;
 
-    .line 206
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerInternal;->isKeyguardShowingAndNotOccluded()Z
 
     move-result v0
@@ -965,18 +896,15 @@
 
     goto :goto_0
 
-    .line 210
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 211
     iget-wide v2, p0, Lcom/android/server/power/AttentionDetector;->mPreDimCheckDurationMillis:J
 
     sub-long v2, p1, v2
 
-    .line 212
     iget-wide v4, p0, Lcom/android/server/power/AttentionDetector;->mLastUserActivityTime:J
 
     iget-wide v6, p0, Lcom/android/server/power/AttentionDetector;->mMaximumExtensionMillis:J
@@ -996,7 +924,6 @@
 
     return-wide p1
 
-    .line 224
     :cond_2
     iget-object v0, p0, Lcom/android/server/power/AttentionDetector;->mRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -1008,7 +935,6 @@
 
     return-wide v2
 
-    .line 235
     :cond_3
     iget-object v0, p0, Lcom/android/server/power/AttentionDetector;->mRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -1016,17 +942,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 236
     iget v0, p0, Lcom/android/server/power/AttentionDetector;->mRequestId:I
 
     add-int/2addr v0, v1
 
     iput v0, p0, Lcom/android/server/power/AttentionDetector;->mRequestId:I
 
-    .line 237
     iput-wide p1, p0, Lcom/android/server/power/AttentionDetector;->mLastActedOnNextScreenDimming:J
 
-    .line 238
     new-instance p1, Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;
 
     iget p2, p0, Lcom/android/server/power/AttentionDetector;->mRequestId:I
@@ -1035,7 +958,6 @@
 
     iput-object p1, p0, Lcom/android/server/power/AttentionDetector;->mCallback:Lcom/android/server/power/AttentionDetector$AttentionCallbackInternalImpl;
 
-    .line 239
     iget-wide p1, p0, Lcom/android/server/power/AttentionDetector;->mRequestedPostDimTimeoutMillis:J
 
     invoke-static {p1, p2, p3, p4}, Ljava/lang/Math;->min(JJ)J
@@ -1044,7 +966,6 @@
 
     iput-wide p1, p0, Lcom/android/server/power/AttentionDetector;->mEffectivePostDimTimeoutMillis:J
 
-    .line 241
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1065,7 +986,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     iget-object p1, p0, Lcom/android/server/power/AttentionDetector;->mAttentionManager:Landroid/attention/AttentionManagerInternal;
 
     iget-wide p2, p0, Lcom/android/server/power/AttentionDetector;->mPreDimCheckDurationMillis:J
@@ -1082,7 +1002,6 @@
 
     if-nez p1, :cond_4
 
-    .line 246
     iget-object p0, p0, Lcom/android/server/power/AttentionDetector;->mRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 p1, 0x0

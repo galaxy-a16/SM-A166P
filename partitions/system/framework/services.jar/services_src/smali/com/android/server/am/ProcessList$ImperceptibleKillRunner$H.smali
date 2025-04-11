@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;Landroid/os/Looper;)V
     .locals 0
 
-    .line 6412
     iput-object p1, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$H;->this$1:Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;
 
-    .line 6413
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 6418
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_2
@@ -40,7 +37,6 @@
 
     goto :goto_0
 
-    .line 6426
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$H;->this$1:Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;
 
@@ -52,7 +48,6 @@
 
     goto :goto_0
 
-    .line 6423
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$H;->this$1:Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;
 
@@ -62,7 +57,6 @@
 
     goto :goto_0
 
-    .line 6420
     :cond_2
     iget-object p0, p0, Lcom/android/server/am/ProcessList$ImperceptibleKillRunner$H;->this$1:Lcom/android/server/am/ProcessList$ImperceptibleKillRunner;
 

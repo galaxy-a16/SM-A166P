@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$9vCHYGQWZWxZ-hJoohHKT4xlpVU(Ljava/lang/RuntimeException;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/provider/LocationProviderManager$ExternalWakeLockReleaser;->lambda$sendResult$0(Ljava/lang/RuntimeException;)V
 
     return-void
@@ -22,13 +21,10 @@
 .method public constructor <init>(Landroid/location/util/identity/CallerIdentity;Landroid/os/PowerManager$WakeLock;)V
     .locals 0
 
-    .line 3134
     invoke-direct {p0}, Landroid/os/IRemoteCallback$Stub;-><init>()V
 
-    .line 3135
     iput-object p1, p0, Lcom/android/server/location/provider/LocationProviderManager$ExternalWakeLockReleaser;->mIdentity:Landroid/location/util/identity/CallerIdentity;
 
-    .line 3136
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -43,7 +39,6 @@
 .method public static synthetic lambda$sendResult$0(Ljava/lang/RuntimeException;)V
     .locals 1
 
-    .line 3154
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -56,12 +51,10 @@
 .method public sendResult(Landroid/os/Bundle;)V
     .locals 5
 
-    .line 3141
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3143
     :try_start_0
     iget-object p1, p0, Lcom/android/server/location/provider/LocationProviderManager$ExternalWakeLockReleaser;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -70,7 +63,6 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3159
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -84,7 +76,6 @@
     :catch_0
     move-exception p1
 
-    .line 3147
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -96,7 +87,6 @@
 
     const-string v2, "LocationManagerService"
 
-    .line 3148
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,7 +110,6 @@
     :goto_1
     return-void
 
-    .line 3153
     :cond_0
     invoke-static {}, Lcom/android/server/location/LocationServiceThread;->getExecutor()Ljava/util/concurrent/Executor;
 
@@ -132,15 +121,12 @@
 
     invoke-interface {p0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 3156
     throw p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3159
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3160
     throw p0
 .end method

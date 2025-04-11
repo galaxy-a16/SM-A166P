@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/people/data/UserData;
 
     invoke-static {p1}, Lcom/android/server/people/data/DataManager$ShutdownBroadcastReceiver;->$r8$lambda$ITzYUwE_jSoY5OGVltcdG8HsPoU(Lcom/android/server/people/data/UserData;)V

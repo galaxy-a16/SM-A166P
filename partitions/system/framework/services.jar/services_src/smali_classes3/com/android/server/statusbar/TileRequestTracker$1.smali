@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/statusbar/TileRequestTracker;)V
     .locals 0
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     const/4 v0, 0x0
 
-    .line 58
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -37,20 +35,17 @@
 
     return-void
 
-    .line 62
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 63
     invoke-virtual {p1}, Landroid/net/Uri;->getEncodedSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "android.intent.extra.UID"
 
-    .line 65
     invoke-virtual {p2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v1
@@ -64,7 +59,6 @@
 
     const/4 v2, -0x1
 
-    .line 68
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -73,7 +67,6 @@
 
     move-result p2
 
-    .line 69
     iget-object v1, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
     invoke-static {v1}, Lcom/android/server/statusbar/TileRequestTracker;->-$$Nest$fgetmLock(Lcom/android/server/statusbar/TileRequestTracker;)Ljava/lang/Object;
@@ -82,7 +75,6 @@
 
     monitor-enter v1
 
-    .line 70
     :try_start_0
     iget-object v2, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
@@ -92,7 +84,6 @@
 
     invoke-virtual {v2}, Landroid/util/ArraySet;->clear()V
 
-    .line 71
     iget-object v2, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
     invoke-static {v2}, Lcom/android/server/statusbar/TileRequestTracker;->-$$Nest$fgetmTrackingMap(Lcom/android/server/statusbar/TileRequestTracker;)Landroid/util/SparseArrayMap;
@@ -103,7 +94,6 @@
 
     move-result v2
 
-    .line 72
     iget-object v3, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
     invoke-static {v3}, Lcom/android/server/statusbar/TileRequestTracker;->-$$Nest$fgetmTrackingMap(Lcom/android/server/statusbar/TileRequestTracker;)Landroid/util/SparseArrayMap;
@@ -119,7 +109,6 @@
     :goto_0
     if-ge v4, v2, :cond_3
 
-    .line 74
     iget-object v5, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
     invoke-static {v5}, Lcom/android/server/statusbar/TileRequestTracker;->-$$Nest$fgetmTrackingMap(Lcom/android/server/statusbar/TileRequestTracker;)Landroid/util/SparseArrayMap;
@@ -132,7 +121,6 @@
 
     check-cast v5, Landroid/content/ComponentName;
 
-    .line 75
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -143,7 +131,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 76
     iget-object v6, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
     invoke-static {v6}, Lcom/android/server/statusbar/TileRequestTracker;->-$$Nest$fgetmComponentsToRemove(Lcom/android/server/statusbar/TileRequestTracker;)Landroid/util/ArraySet;
@@ -157,7 +144,6 @@
 
     goto :goto_0
 
-    .line 79
     :cond_3
     iget-object p1, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
@@ -172,7 +158,6 @@
     :goto_1
     if-ge v0, p1, :cond_4
 
-    .line 81
     iget-object v2, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
     invoke-static {v2}, Lcom/android/server/statusbar/TileRequestTracker;->-$$Nest$fgetmComponentsToRemove(Lcom/android/server/statusbar/TileRequestTracker;)Landroid/util/ArraySet;
@@ -185,7 +170,6 @@
 
     check-cast v2, Landroid/content/ComponentName;
 
-    .line 82
     iget-object v3, p0, Lcom/android/server/statusbar/TileRequestTracker$1;->this$0:Lcom/android/server/statusbar/TileRequestTracker;
 
     invoke-static {v3}, Lcom/android/server/statusbar/TileRequestTracker;->-$$Nest$fgetmTrackingMap(Lcom/android/server/statusbar/TileRequestTracker;)Landroid/util/SparseArrayMap;
@@ -198,7 +182,6 @@
 
     goto :goto_1
 
-    .line 84
     :cond_4
     monitor-exit v1
 

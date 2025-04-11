@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayController;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 2046
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$26;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     iput p2, p0, Lcom/android/server/display/WifiDisplayController$26;->val$event:I
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 4
 
-    .line 2049
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$26;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmHandler(Lcom/android/server/display/WifiDisplayController;)Landroid/os/Handler;
@@ -52,12 +50,10 @@
 
     move-result-object v0
 
-    .line 2050
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$26;->val$data:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 2051
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$26;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmHandler(Lcom/android/server/display/WifiDisplayController;)Landroid/os/Handler;

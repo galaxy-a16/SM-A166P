@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 25
     invoke-static {}, Lcom/android/server/firewall/IntentFirewall;->getRulesDir()Ljava/io/File;
 
     move-result-object v0

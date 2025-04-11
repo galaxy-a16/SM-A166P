@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;Landroid/media/projection/IMediaProjectionCallback;)V
     .locals 0
 
-    .line 1072
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;->this$1:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     iput-object p2, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;->val$callback:Landroid/media/projection/IMediaProjectionCallback;
@@ -31,7 +30,6 @@
 .method public binderDied()V
     .locals 2
 
-    .line 1075
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;->this$1:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     iget-object v0, v0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
@@ -44,7 +42,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->remove(Landroid/media/projection/IMediaProjectionCallback;)V
 
-    .line 1076
     iget-object p0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;->this$1:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     invoke-virtual {p0}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->stop()V

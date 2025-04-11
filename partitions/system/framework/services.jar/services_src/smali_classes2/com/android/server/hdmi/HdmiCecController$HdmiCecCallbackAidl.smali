@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;)V
     .locals 0
 
-    .line 1674
     invoke-direct {p0}, Landroid/hardware/tv/hdmi/cec/IHdmiCecCallback$Stub;-><init>()V
 
-    .line 1675
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallbackAidl;->mHdmiCecCallback:Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
 
     return-void
@@ -32,7 +30,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1685
     monitor-exit p0
 
     return-object v0
@@ -48,7 +45,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -57,7 +53,6 @@
 .method public onCecMessage(Landroid/hardware/tv/hdmi/cec/CecMessage;)V
     .locals 2
 
-    .line 1680
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallbackAidl;->mHdmiCecCallback:Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
 
     iget-byte v0, p1, Landroid/hardware/tv/hdmi/cec/CecMessage;->initiator:B

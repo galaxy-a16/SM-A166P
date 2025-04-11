@@ -7,7 +7,6 @@
 .method public static toAIDL(Landroid/net/ipmemorystore/OnL2KeyResponseListener;)Landroid/net/ipmemorystore/IOnL2KeyResponseListener;
     .locals 1
 
-    .line 34
     new-instance v0, Landroid/net/ipmemorystore/OnL2KeyResponseListener$1;
 
     invoke-direct {v0, p0}, Landroid/net/ipmemorystore/OnL2KeyResponseListener$1;-><init>(Landroid/net/ipmemorystore/OnL2KeyResponseListener;)V

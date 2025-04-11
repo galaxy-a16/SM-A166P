@@ -17,7 +17,6 @@
 .method public createGestureCalibrator(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
     .locals 0
 
-    .line 120
     new-instance p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureCalibrator;-><init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
@@ -28,7 +27,6 @@
 .method public getSemStatusBarManager(Landroid/content/Context;)Landroid/app/SemStatusBarManager;
     .locals 0
 
-    .line 115
     const-class p0, Landroid/app/SemStatusBarManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -43,7 +41,6 @@
 .method public isDexMode(Landroid/content/Context;)Z
     .locals 0
 
-    .line 124
     invoke-static {p1}, Lcom/android/server/biometrics/Utils;->isDexMode(Landroid/content/Context;)Z
 
     move-result p0
@@ -60,7 +57,6 @@
 
     const/4 v1, -0x2
 
-    .line 138
     invoke-static {p1, p0, v0, v1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
@@ -69,14 +65,12 @@
 
     if-ne p0, v2, :cond_2
 
-    .line 141
     sget-boolean p0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SUPPORT_GESTURE_CALIBRATION:Z
 
     if-eqz p0, :cond_1
 
     const-string p0, "fingerprint_gesture_spay_visible"
 
-    .line 142
     invoke-static {p1, p0, v2, v1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
@@ -104,7 +98,6 @@
 
     const/4 v1, 0x0
 
-    .line 132
     invoke-static {p1, v0, v1, p0}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
@@ -122,7 +115,6 @@
 .method public isFoldedInFlipType(Landroid/content/Context;)Z
     .locals 0
 
-    .line 128
     invoke-static {p1}, Lcom/android/server/biometrics/Utils;->isFlipFolded(Landroid/content/Context;)Z
 
     move-result p0
@@ -133,7 +125,6 @@
 .method public isInteractive(Landroid/content/Context;)Z
     .locals 0
 
-    .line 86
     const-class p0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -142,7 +133,6 @@
 
     check-cast p0, Landroid/os/PowerManager;
 
-    .line 87
     invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
 
     move-result p0
@@ -153,7 +143,6 @@
 .method public isProximityPositive()Z
     .locals 0
 
-    .line 91
     const-class p0, Landroid/os/PowerManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -162,7 +151,6 @@
 
     check-cast p0, Landroid/os/PowerManagerInternal;
 
-    .line 92
     invoke-virtual {p0}, Landroid/os/PowerManagerInternal;->isProximityPositive()Z
 
     move-result p0
@@ -177,7 +165,6 @@
 
     const/4 v0, -0x1
 
-    .line 110
     invoke-virtual {p1, p2, p0, p3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     return-void
@@ -188,7 +175,6 @@
 
     const-string p0, "FingerprintService.Gesture"
 
-    .line 102
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -203,7 +189,6 @@
     :catch_0
     const-string p1, "Unable to register user switch observer"
 
-    .line 104
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -213,7 +198,6 @@
 .method public sendBigDataForCollapseStatusBar()V
     .locals 4
 
-    .line 159
     invoke-static {}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->get()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p0
@@ -234,7 +218,6 @@
 .method public sendBigDataForExpandQuickSetting()V
     .locals 4
 
-    .line 171
     invoke-static {}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->get()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p0
@@ -255,7 +238,6 @@
 .method public sendBigDataForExpandStatusBar()V
     .locals 4
 
-    .line 165
     invoke-static {}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->get()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p0
@@ -276,7 +258,6 @@
 .method public sendBigDataForSamsungPay()V
     .locals 4
 
-    .line 153
     invoke-static {}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->get()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p0
@@ -297,7 +278,6 @@
 .method public userActivityTouchEvent(Landroid/content/Context;)V
     .locals 3
 
-    .line 96
     const-class p0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -306,7 +286,6 @@
 
     check-cast p0, Landroid/os/PowerManager;
 
-    .line 97
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0

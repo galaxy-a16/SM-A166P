@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 0
 
-    .line 4823
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$8;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageLoadingProgressCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onPackageLoadingProgressChanged(F)V
     .locals 2
 
-    .line 4826
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerSession$8;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$fgetmProgressLock(Lcom/android/server/pm/PackageInstallerSession;)Ljava/lang/Object;
@@ -33,20 +31,17 @@
 
     monitor-enter v0
 
-    .line 4827
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerSession$8;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {v1, p1}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$fputmIncrementalProgress(Lcom/android/server/pm/PackageInstallerSession;F)V
 
-    .line 4828
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerSession$8;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     const/4 p1, 0x1
 
     invoke-static {p0, p1}, Lcom/android/server/pm/PackageInstallerSession;->-$$Nest$mcomputeProgressLocked(Lcom/android/server/pm/PackageInstallerSession;Z)V
 
-    .line 4829
     monitor-exit v0
 
     return-void

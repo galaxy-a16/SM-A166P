@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/DragState;)V
     .locals 1
 
-    .line 1323
     iput-object p1, p0, Lcom/android/server/wm/DragState$1;->this$0:Lcom/android/server/wm/DragState;
 
     const/4 v0, 0x0
@@ -26,14 +25,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1326
     iget-object p1, p0, Lcom/android/server/wm/DragState$1;->this$0:Lcom/android/server/wm/DragState;
 
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Lcom/android/server/wm/DragState;->endAnimator(I)V
 
-    .line 1329
     iget-object p0, p0, Lcom/android/server/wm/DragState$1;->this$0:Lcom/android/server/wm/DragState;
 
     iget-object p0, p0, Lcom/android/server/wm/DragState;->mDragDropController:Lcom/android/server/wm/DragDropController;

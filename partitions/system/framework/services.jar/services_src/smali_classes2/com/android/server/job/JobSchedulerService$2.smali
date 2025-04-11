@@ -7,7 +7,6 @@
 .method public constructor <init>(Ljava/time/ZoneId;)V
     .locals 0
 
-    .line 262
     invoke-direct {p0, p1}, Lcom/android/server/job/JobSchedulerService$MySimpleClock;-><init>(Ljava/time/ZoneId;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public millis()J
     .locals 2
 
-    .line 265
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

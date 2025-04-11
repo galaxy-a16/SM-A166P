@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/textclassifier/IconsUriHelper;->$r8$lambda$XBms8Xe-RBU7GqcU8VdyTW9Tt9A()Ljava/lang/String;
 
     move-result-object p0

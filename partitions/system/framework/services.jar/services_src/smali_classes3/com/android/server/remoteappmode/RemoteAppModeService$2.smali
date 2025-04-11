@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/remoteappmode/RemoteAppModeService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 310
     iput-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$2;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,15 +23,12 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 313
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 314
     iget-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$2;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-static {p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->-$$Nest$minitializeStates(Lcom/android/server/remoteappmode/RemoteAppModeService;)V
 
-    .line 315
     iget-object p1, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$2;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     invoke-static {p1}, Lcom/android/server/remoteappmode/RemoteAppModeService;->-$$Nest$fgetmResolver(Lcom/android/server/remoteappmode/RemoteAppModeService;)Landroid/content/ContentResolver;
@@ -41,7 +37,6 @@
 
     invoke-virtual {p1, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 316
     iget-object p0, p0, Lcom/android/server/remoteappmode/RemoteAppModeService$2;->this$0:Lcom/android/server/remoteappmode/RemoteAppModeService;
 
     const/4 p1, 0x0

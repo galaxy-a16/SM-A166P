@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/mars/database/MARsDBManager;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1353
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsDBManager$SmartManagerSettingsObserver;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 
-    .line 1354
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,12 +23,10 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 1359
     sget-boolean p1, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_ENG:Z
 
     if-eqz p1, :cond_0
 
-    .line 1360
     iget-object p1, p0, Lcom/android/server/am/mars/database/MARsDBManager$SmartManagerSettingsObserver;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 
     invoke-static {p1}, Lcom/android/server/am/mars/database/MARsDBManager;->-$$Nest$fgetTAG(Lcom/android/server/am/mars/database/MARsDBManager;)Ljava/lang/String;
@@ -41,7 +37,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1361
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsDBManager$SmartManagerSettingsObserver;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 

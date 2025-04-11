@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/companion/CompanionDeviceManagerService;)V
     .locals 0
 
-    .line 1402
     iput-object p1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$1;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAssociationChanged(ILandroid/companion/AssociationInfo;)V
     .locals 0
 
-    .line 1405
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$1;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$monAssociationChangedInternal(Lcom/android/server/companion/CompanionDeviceManagerService;ILandroid/companion/AssociationInfo;)V

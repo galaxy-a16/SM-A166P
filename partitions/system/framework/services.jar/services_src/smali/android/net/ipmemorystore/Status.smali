@@ -25,10 +25,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput p1, p0, Landroid/net/ipmemorystore/Status;->resultCode:I
 
     return-void
@@ -37,7 +35,6 @@
 .method public constructor <init>(Landroid/net/ipmemorystore/StatusParcelable;)V
     .locals 0
 
-    .line 45
     iget p1, p1, Landroid/net/ipmemorystore/StatusParcelable;->resultCode:I
 
     invoke-direct {p0, p1}, Landroid/net/ipmemorystore/Status;-><init>(I)V
@@ -50,7 +47,6 @@
 .method public isSuccess()Z
     .locals 0
 
-    .line 57
     iget p0, p0, Landroid/net/ipmemorystore/Status;->resultCode:I
 
     if-nez p0, :cond_0
@@ -69,12 +65,10 @@
 .method public toParcelable()Landroid/net/ipmemorystore/StatusParcelable;
     .locals 1
 
-    .line 51
     new-instance v0, Landroid/net/ipmemorystore/StatusParcelable;
 
     invoke-direct {v0}, Landroid/net/ipmemorystore/StatusParcelable;-><init>()V
 
-    .line 52
     iget p0, p0, Landroid/net/ipmemorystore/Status;->resultCode:I
 
     iput p0, v0, Landroid/net/ipmemorystore/StatusParcelable;->resultCode:I
@@ -85,7 +79,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 63
     iget p0, p0, Landroid/net/ipmemorystore/Status;->resultCode:I
 
     const/4 v0, -0x4

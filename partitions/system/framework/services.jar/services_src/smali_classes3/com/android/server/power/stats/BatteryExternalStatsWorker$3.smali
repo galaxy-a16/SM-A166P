@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryExternalStatsWorker;)V
     .locals 0
 
-    .line 550
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryExternalStatsWorker$3;->this$0:Lcom/android/server/power/stats/BatteryExternalStatsWorker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 555
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void

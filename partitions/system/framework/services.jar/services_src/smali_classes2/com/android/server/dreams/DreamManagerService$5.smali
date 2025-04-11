@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/dreams/DreamManagerService;)V
     .locals 0
 
-    .line 829
     iput-object p1, p0, Lcom/android/server/dreams/DreamManagerService$5;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDreamStarted(Landroid/os/Binder;)V
     .locals 0
 
-    .line 836
     iget-object p0, p0, Lcom/android/server/dreams/DreamManagerService$5;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {p0}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$mreportDreamingStarted(Lcom/android/server/dreams/DreamManagerService;)V
@@ -38,7 +36,6 @@
 .method public onDreamStopped(Landroid/os/Binder;)V
     .locals 2
 
-    .line 841
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$5;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$fgetmLock(Lcom/android/server/dreams/DreamManagerService;)Ljava/lang/Object;
@@ -47,7 +44,6 @@
 
     monitor-enter v0
 
-    .line 842
     :try_start_0
     iget-object v1, p0, Lcom/android/server/dreams/DreamManagerService$5;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
@@ -67,18 +63,15 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 843
     iget-object p1, p0, Lcom/android/server/dreams/DreamManagerService$5;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {p1}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$mcleanupDreamLocked(Lcom/android/server/dreams/DreamManagerService;)V
 
-    .line 845
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 847
     iget-object p0, p0, Lcom/android/server/dreams/DreamManagerService$5;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {p0}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$mreportDreamingStopped(Lcom/android/server/dreams/DreamManagerService;)V
@@ -88,7 +81,6 @@
     :catchall_0
     move-exception p0
 
-    .line 845
     :try_start_1
     monitor-exit v0
     :try_end_1

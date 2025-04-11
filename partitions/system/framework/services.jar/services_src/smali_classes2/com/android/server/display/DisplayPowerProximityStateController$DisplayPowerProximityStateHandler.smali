@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayPowerProximityStateController;Landroid/os/Looper;)V
     .locals 1
 
-    .line 544
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerProximityStateController$DisplayPowerProximityStateHandler;->this$0:Lcom/android/server/display/DisplayPowerProximityStateController;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 545
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 550
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -42,7 +39,6 @@
 
     goto :goto_0
 
-    .line 556
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerProximityStateController$DisplayPowerProximityStateHandler;->this$0:Lcom/android/server/display/DisplayPowerProximityStateController;
 
@@ -50,7 +46,6 @@
 
     goto :goto_0
 
-    .line 552
     :cond_1
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerProximityStateController$DisplayPowerProximityStateHandler;->this$0:Lcom/android/server/display/DisplayPowerProximityStateController;
 

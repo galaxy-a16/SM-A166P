@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/service/dreams/DreamManagerInternal$DreamManagerStateListener;
 
     invoke-static {p1}, Lcom/android/server/dreams/DreamManagerService;->$r8$lambda$Y1K0uhZC2yrk2RJryk6gUpi9svs(Landroid/service/dreams/DreamManagerInternal$DreamManagerStateListener;)V

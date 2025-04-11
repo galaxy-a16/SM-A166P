@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 81
     new-instance v0, Lcom/android/server/pm/ApexManager$1;
 
     invoke-direct {v0}, Lcom/android/server/pm/ApexManager$1;-><init>()V
@@ -32,7 +31,6 @@
 .method public static getInstance()Lcom/android/server/pm/ApexManager;
     .locals 1
 
-    .line 100
     sget-object v0, Lcom/android/server/pm/ApexManager;->sApexManagerSingleton:Landroid/util/Singleton;
 
     invoke-virtual {v0}, Landroid/util/Singleton;->get()Ljava/lang/Object;

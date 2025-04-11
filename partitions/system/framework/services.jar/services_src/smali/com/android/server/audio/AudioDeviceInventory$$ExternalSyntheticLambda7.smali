@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/audio/AudioDeviceInventory;->$r8$lambda$7_F3hy0xWM467PfGCzNYI81g_wE(Ljava/lang/Integer;)I

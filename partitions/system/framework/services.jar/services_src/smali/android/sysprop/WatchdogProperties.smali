@@ -9,12 +9,10 @@
 
     const-string v0, "framework_watchdog.fatal_count"
 
-    .line 164
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 165
     invoke-static {v0}, Landroid/sysprop/WatchdogProperties;->tryParseInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -31,12 +29,10 @@
 
     const-string v0, "framework_watchdog.fatal_window.second"
 
-    .line 169
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 170
     invoke-static {v0}, Landroid/sysprop/WatchdogProperties;->tryParseInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -53,12 +49,10 @@
 
     const-string/jumbo v0, "persist.debug.framework_watchdog.fatal_ignore"
 
-    .line 174
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 175
     invoke-static {v0}, Landroid/sysprop/WatchdogProperties;->tryParseBoolean(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -79,7 +73,6 @@
 
     return-object v0
 
-    .line 22
     :cond_0
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -166,13 +159,11 @@
 
     return-object v0
 
-    .line 25
     :pswitch_0
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
 
-    .line 28
     :pswitch_1
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
@@ -198,7 +189,6 @@
 .method public static tryParseInteger(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 0
 
-    .line 36
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 

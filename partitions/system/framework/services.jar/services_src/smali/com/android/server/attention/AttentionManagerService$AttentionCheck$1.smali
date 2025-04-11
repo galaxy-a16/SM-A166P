@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/attention/AttentionManagerService$AttentionCheck;Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;Lcom/android/server/attention/AttentionManagerService;)V
     .locals 0
 
-    .line 615
     iput-object p1, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->this$0:Lcom/android/server/attention/AttentionManagerService$AttentionCheck;
 
     iput-object p2, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->val$callbackInternal:Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;
@@ -34,7 +33,6 @@
 
     const/16 p0, 0x8f
 
-    .line 640
     invoke-static {p0, p1}, Lcom/android/internal/util/FrameworkStatsLog;->write(II)V
 
     return-void
@@ -43,7 +41,6 @@
 .method public onFailure(I)V
     .locals 2
 
-    .line 631
     iget-object v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->this$0:Lcom/android/server/attention/AttentionManagerService$AttentionCheck;
 
     invoke-static {v0}, Lcom/android/server/attention/AttentionManagerService$AttentionCheck;->-$$Nest$fgetmIsFulfilled(Lcom/android/server/attention/AttentionManagerService$AttentionCheck;)Z
@@ -54,7 +51,6 @@
 
     return-void
 
-    .line 634
     :cond_0
     iget-object v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->this$0:Lcom/android/server/attention/AttentionManagerService$AttentionCheck;
 
@@ -62,12 +58,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/attention/AttentionManagerService$AttentionCheck;->-$$Nest$fputmIsFulfilled(Lcom/android/server/attention/AttentionManagerService$AttentionCheck;Z)V
 
-    .line 635
     iget-object v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->val$callbackInternal:Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;
 
     invoke-virtual {v0, p1}, Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;->onFailure(I)V
 
-    .line 636
     invoke-virtual {p0, p1}, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->logStats(I)V
 
     return-void
@@ -76,7 +70,6 @@
 .method public onSuccess(IJ)V
     .locals 7
 
-    .line 618
     iget-object v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->this$0:Lcom/android/server/attention/AttentionManagerService$AttentionCheck;
 
     invoke-static {v0}, Lcom/android/server/attention/AttentionManagerService$AttentionCheck;->-$$Nest$fgetmIsFulfilled(Lcom/android/server/attention/AttentionManagerService$AttentionCheck;)Z
@@ -87,7 +80,6 @@
 
     return-void
 
-    .line 621
     :cond_0
     iget-object v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->this$0:Lcom/android/server/attention/AttentionManagerService$AttentionCheck;
 
@@ -95,20 +87,16 @@
 
     invoke-static {v0, v1}, Lcom/android/server/attention/AttentionManagerService$AttentionCheck;->-$$Nest$fputmIsFulfilled(Lcom/android/server/attention/AttentionManagerService$AttentionCheck;Z)V
 
-    .line 622
     iget-object v0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->val$callbackInternal:Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/attention/AttentionManagerInternal$AttentionCallbackInternal;->onSuccess(IJ)V
 
-    .line 623
     invoke-virtual {p0, p1}, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->logStats(I)V
 
-    .line 624
     iget-object p0, p0, Lcom/android/server/attention/AttentionManagerService$AttentionCheck$1;->val$service:Lcom/android/server/attention/AttentionManagerService;
 
     new-instance v6, Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;
 
-    .line 625
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
@@ -121,7 +109,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;-><init>(JIJ)V
 
-    .line 624
     invoke-static {p0, v6}, Lcom/android/server/attention/AttentionManagerService;->-$$Nest$mappendResultToAttentionCacheBuffer(Lcom/android/server/attention/AttentionManagerService;Lcom/android/server/attention/AttentionManagerService$AttentionCheckCache;)V
 
     return-void

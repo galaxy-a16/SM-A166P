@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 36
     sget-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->DBG:Z
 
     sput-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
@@ -34,38 +33,30 @@
 .method public constructor <init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;)V
     .locals 1
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 37
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 38
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 39
     iput-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 48
     iput-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mStorageHelper:Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;
 
-    .line 49
     new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 50
     new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 51
     new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -78,19 +69,16 @@
 .method public static getInstance(Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;
     .locals 1
 
-    .line 63
     sget-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mInstance:Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;
 
     if-nez v0, :cond_0
 
-    .line 64
     new-instance v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;-><init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;)V
 
     sput-object v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mInstance:Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;
 
-    .line 66
     :cond_0
     sget-object p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mInstance:Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;
 
@@ -106,7 +94,6 @@
 
     const/4 v1, -0x1
 
-    .line 300
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -118,7 +105,6 @@
 
     if-nez v2, :cond_0
 
-    .line 302
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -139,20 +125,17 @@
 
     return p0
 
-    .line 305
     :cond_0
     invoke-static {p2, p3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->getTransformedVendorName(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 306
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
     const-string v5, "activeState"
 
-    .line 307
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -169,7 +152,6 @@
 
     if-ne v7, p4, :cond_1
 
-    .line 309
     :try_start_1
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getFlowTypeForProfile()I
 
@@ -186,7 +168,6 @@
     :cond_1
     if-nez p4, :cond_2
 
-    .line 311
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -201,7 +182,6 @@
 
     if-ne v7, p4, :cond_3
 
-    .line 314
     :try_start_2
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getIntervalValueForProfile()I
 
@@ -218,14 +198,12 @@
     :cond_3
     if-nez p4, :cond_4
 
-    .line 316
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
 
     invoke-virtual {v4, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 319
     :cond_4
     :goto_1
     new-instance v5, Landroid/content/ContentValues;
@@ -234,12 +212,10 @@
 
     const-string/jumbo v8, "profileName"
 
-    .line 320
     invoke-virtual {v5, v8, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v8, "op_userid"
 
-    .line 321
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -248,14 +224,12 @@
 
     const-string p3, "adminUid"
 
-    .line 322
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
 
     invoke-virtual {v5, p3, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 324
     iget-object p3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mStorageHelper:Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;
 
     const-string v8, "NAPProfileTable"
@@ -264,7 +238,6 @@
 
     move-result v1
 
-    .line 325
     sget-boolean p3, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz p3, :cond_5
@@ -288,7 +261,6 @@
     :cond_5
     if-lez v1, :cond_f
 
-    .line 327
     iget-object p3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p3, v3}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -299,7 +271,6 @@
 
     if-eqz p3, :cond_a
 
-    .line 328
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -308,12 +279,10 @@
 
     check-cast p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;
 
-    .line 329
     invoke-virtual {p0, p4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationState(I)V
 
     if-ne v7, p4, :cond_6
 
-    .line 331
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getFlowTypeForProfile()I
 
     move-result p1
@@ -325,14 +294,12 @@
     :cond_6
     if-nez p4, :cond_7
 
-    .line 333
     invoke-virtual {p0, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationFlowType(I)V
 
     :cond_7
     :goto_2
     if-ne v7, p4, :cond_8
 
-    .line 336
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getIntervalValueForProfile()I
 
     move-result p1
@@ -344,7 +311,6 @@
     :cond_8
     if-nez p4, :cond_9
 
-    .line 338
     invoke-virtual {p0, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationIntervalValue(I)V
 
     :cond_9
@@ -353,7 +319,6 @@
 
     goto :goto_6
 
-    .line 342
     :cond_a
     new-instance p3, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;
 
@@ -367,12 +332,10 @@
 
     invoke-direct {p3, p0, p2, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;-><init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;I)V
 
-    .line 343
     invoke-virtual {p3, p4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationState(I)V
 
     if-ne v7, p4, :cond_b
 
-    .line 345
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getFlowTypeForProfile()I
 
     move-result p1
@@ -384,14 +347,12 @@
     :cond_b
     if-nez p4, :cond_c
 
-    .line 347
     invoke-virtual {p3, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationFlowType(I)V
 
     :cond_c
     :goto_4
     if-ne v7, p4, :cond_d
 
-    .line 350
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getIntervalValueForProfile()I
 
     move-result p1
@@ -403,10 +364,8 @@
     :cond_d
     if-nez p4, :cond_e
 
-    .line 352
     invoke-virtual {p3, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationIntervalValue(I)V
 
-    .line 354
     :cond_e
     :goto_5
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -422,10 +381,8 @@
 
     const-string p1, "activateProfile: Exception "
 
-    .line 359
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 361
     :cond_f
     :goto_6
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
@@ -461,7 +418,6 @@
 
     const-string p0, "addProfileToDatabase: Invalid admin userId"
 
-    .line 91
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, -0x4
@@ -473,21 +429,18 @@
 
     const/4 v2, 0x0
 
-    .line 98
     invoke-virtual {p2, v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v3, "package_name"
 
-    .line 99
     invoke-virtual {p2, v3, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string/jumbo v4, "package_signature"
 
-    .line 100
     invoke-virtual {p2, v4, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -496,26 +449,22 @@
 
     const/4 v6, -0x1
 
-    .line 101
     invoke-virtual {p2, v5, v6}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 103
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
     const-string/jumbo v8, "profileName"
 
-    .line 104
     invoke-virtual {v7, v8, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v8, "client_userid"
 
     const/16 v9, -0x3e7
 
-    .line 105
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -524,7 +473,6 @@
 
     const-string/jumbo v8, "op_userid"
 
-    .line 106
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -533,7 +481,6 @@
 
     const-string v8, "adminUid"
 
-    .line 107
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -542,15 +489,12 @@
 
     const-string/jumbo v8, "pkgName"
 
-    .line 108
     invoke-virtual {v7, v8, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v8, "pkgSign"
 
-    .line 109
     invoke-virtual {v7, v8, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 110
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -559,14 +503,12 @@
 
     const-string v5, "jsondata"
 
-    .line 111
     invoke-virtual {v7, v5, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v5, "activeState"
 
     const/4 v8, 0x0
 
-    .line 112
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -575,7 +517,6 @@
 
     const-string v5, "flowType"
 
-    .line 113
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -584,14 +525,12 @@
 
     const-string v5, "intervalValue"
 
-    .line 114
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
 
     invoke-virtual {v7, v5, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 116
     iget-object v5, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mStorageHelper:Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;
 
     const-string v10, "NAPProfileTable"
@@ -600,7 +539,6 @@
 
     move-result v2
 
-    .line 117
     sget-boolean v5, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v5, :cond_1
@@ -624,49 +562,36 @@
     :cond_1
     if-eqz v2, :cond_5
 
-    .line 119
     new-instance v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
     invoke-direct {v2, p0, v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;-><init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;Ljava/lang/String;)V
 
-    .line 120
     invoke-virtual {v2, p4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->opUserId(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 121
     invoke-virtual {v2, p3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->jsonString(Ljava/lang/String;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 122
     invoke-virtual {v2, v3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->packageName(Ljava/lang/String;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 123
     invoke-virtual {v2, v4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->packageSignature(Ljava/lang/String;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 124
     invoke-virtual {v2, p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->adminUid(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 125
     invoke-virtual {v2, p2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->flags(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 126
     invoke-virtual {v2, v9}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->userId(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 127
     invoke-virtual {v2, v9}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->flowTypeForProfile(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 128
     invoke-virtual {v2, v9}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->intervalValueForProfile(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 129
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->build()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object p2
 
-    .line 130
     iget-object p3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p3, v1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
     iget-object p3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -683,19 +608,15 @@
 
     const-string p3, "addProfileToDatabase: adminToProfileMap.get(adminUid) = null"
 
-    .line 133
     invoke-static {v0, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     :cond_2
     new-instance p3, Ljava/util/ArrayList;
 
     invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 135
     invoke-virtual {p3, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 136
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -711,10 +632,8 @@
 
     const-string p3, "addProfileToDatabase: adminToProfileMap.get(adminUid) is present"
 
-    .line 139
     invoke-static {v0, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     :cond_4
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -736,7 +655,6 @@
     :cond_5
     if-eqz v5, :cond_6
 
-    .line 144
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -760,7 +678,6 @@
 .method public doesAdminOwnProfile(ILjava/lang/String;)I
     .locals 2
 
-    .line 649
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -773,7 +690,6 @@
 
     if-nez p0, :cond_0
 
-    .line 652
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -794,7 +710,6 @@
 
     return p0
 
-    .line 655
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getAdminUid()I
 
@@ -802,7 +717,6 @@
 
     if-eq p0, p1, :cond_1
 
-    .line 658
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -846,12 +760,10 @@
 
     const-string p0, "getActiveStateForName: Null profile Name."
 
-    .line 466
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 469
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -865,7 +777,6 @@
 
     const-string p0, "getActiveStateForName: Invalid profile Name."
 
-    .line 471
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -877,7 +788,6 @@
 .method public getAllActiveKeysForPackage(Ljava/lang/String;)Ljava/util/List;
     .locals 5
 
-    .line 515
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -886,19 +796,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 516
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
 
     if-lez v1, :cond_2
 
-    .line 517
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 518
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -917,7 +824,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 519
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -928,7 +834,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 521
     invoke-virtual {v3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getProfile()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object v4
@@ -945,14 +850,12 @@
 
     const/4 v4, 0x1
 
-    .line 522
     invoke-virtual {v3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getActivationState()I
 
     move-result v3
 
     if-ne v4, v3, :cond_0
 
-    .line 523
     sget-boolean v3, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v3, :cond_1
@@ -975,7 +878,6 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 524
     :cond_1
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -991,7 +893,6 @@
 .method public getAllActiveKeysForProfile(Ljava/lang/String;)Ljava/util/List;
     .locals 5
 
-    .line 487
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1000,19 +901,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 488
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
 
     if-lez v1, :cond_2
 
-    .line 489
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 490
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1031,7 +929,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 491
     invoke-static {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->getVendorNameFromTransformedName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -1042,7 +939,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 492
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1055,14 +951,12 @@
 
     const/4 v4, 0x1
 
-    .line 494
     invoke-virtual {v3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getActivationState()I
 
     move-result v3
 
     if-ne v4, v3, :cond_0
 
-    .line 495
     sget-boolean v3, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v3, :cond_1
@@ -1085,7 +979,6 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     :cond_1
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1101,7 +994,6 @@
 .method public getAllProfilesForPackage(Ljava/lang/String;)Ljava/util/List;
     .locals 4
 
-    .line 429
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1110,7 +1002,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 430
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
@@ -1119,13 +1010,11 @@
 
     goto :goto_1
 
-    .line 433
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 434
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1144,7 +1033,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 435
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1155,7 +1043,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 436
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -1166,7 +1053,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 437
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -1184,7 +1070,6 @@
 .method public getAllProfilesForPackageinUser(Ljava/lang/String;I)Ljava/util/List;
     .locals 4
 
-    .line 447
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1193,7 +1078,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 448
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
@@ -1202,13 +1086,11 @@
 
     goto :goto_1
 
-    .line 451
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 452
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1227,7 +1109,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 453
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1238,7 +1119,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 454
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -1249,14 +1129,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 455
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getOpUserId()I
 
     move-result v3
 
     if-ne v3, p2, :cond_1
 
-    .line 456
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -1274,7 +1152,6 @@
 .method public getAllProfilesForUser(I)Ljava/util/List;
     .locals 4
 
-    .line 281
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1283,7 +1160,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 282
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
@@ -1292,13 +1168,11 @@
 
     goto :goto_1
 
-    .line 285
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 286
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1317,7 +1191,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 287
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1328,14 +1201,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 288
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getOpUserId()I
 
     move-result v3
 
     if-ne v3, p1, :cond_1
 
-    .line 289
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -1353,7 +1224,6 @@
 .method public getClientProfileNames(I)Ljava/util/List;
     .locals 2
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1384,12 +1254,10 @@
 
     if-lez v0, :cond_0
 
-    .line 190
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 191
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1419,7 +1287,6 @@
 
     check-cast p1, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
-    .line 192
     invoke-virtual {p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getProfileName()Ljava/lang/String;
 
     move-result-object p1
@@ -1438,7 +1305,6 @@
 .method public getClientProfiles(II)Ljava/util/List;
     .locals 2
 
-    .line 201
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1469,12 +1335,10 @@
 
     if-lez v0, :cond_1
 
-    .line 202
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 203
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1505,14 +1369,12 @@
 
     check-cast p1, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
-    .line 204
     invoke-virtual {p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getOpUserId()I
 
     move-result v1
 
     if-ne v1, p2, :cond_0
 
-    .line 205
     invoke-virtual {p1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getJsonString()Ljava/lang/String;
 
     move-result-object p1
@@ -1531,7 +1393,6 @@
 .method public getClientProfiles(Ljava/lang/String;I)Ljava/util/List;
     .locals 6
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1544,7 +1405,6 @@
 
     if-lez v0, :cond_0
 
-    .line 217
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -1554,7 +1414,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 219
     :goto_0
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1580,7 +1439,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 220
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1591,7 +1449,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 222
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -1604,14 +1461,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 223
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getOpUserId()I
 
     move-result v3
 
     if-ne p2, v3, :cond_1
 
-    .line 224
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1639,13 +1494,11 @@
 
     goto :goto_2
 
-    .line 225
     :cond_3
     invoke-virtual {v3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getActivationState()I
 
     move-result v3
 
-    .line 226
     :goto_2
     new-instance v4, Lcom/samsung/android/knox/net/nap/Profile;
 
@@ -1670,21 +1523,18 @@
 .method public getJSonObjectFromString(Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 0
 
-    .line 724
     new-instance p0, Lorg/json/JSONObject;
 
     invoke-direct {p0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     const-string p1, "NETWORK_ANALYTICS_PARAMETERS"
 
-    .line 725
     invoke-virtual {p0, p1}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p0
 
     const-string/jumbo p1, "profile_attribute"
 
-    .line 726
     invoke-virtual {p0, p1}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p0
@@ -1697,7 +1547,6 @@
 
     const/4 p0, 0x0
 
-    .line 704
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -1705,21 +1554,18 @@
 
     const-string p2, "NETWORK_ANALYTICS_PARAMETERS"
 
-    .line 705
     invoke-virtual {v0, p2}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p2
 
     const-string/jumbo v0, "profile_attribute"
 
-    .line 706
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 708
     invoke-virtual {p2, p1, p0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -1742,12 +1588,10 @@
 
     const-string p0, "getPackageForProfile: Null profile Name."
 
-    .line 369
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 372
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1761,7 +1605,6 @@
 
     const-string p0, "getPackageForProfile: Invalid profile Name."
 
-    .line 374
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -1773,7 +1616,6 @@
 .method public getSetActivatedProfiles()Ljava/util/Set;
     .locals 0
 
-    .line 535
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1786,7 +1628,6 @@
 .method public getUserIdLocationOfPackage(Ljava/lang/String;)I
     .locals 4
 
-    .line 582
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1795,14 +1636,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 583
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    .line 584
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1820,7 +1659,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 585
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1831,14 +1669,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 587
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getProfile()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 589
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -1851,14 +1687,12 @@
 
     const/4 v3, 0x1
 
-    .line 590
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getActivationState()I
 
     move-result v1
 
     if-ne v3, v1, :cond_0
 
-    .line 591
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getUserId()I
 
     move-result p0
@@ -1876,7 +1710,6 @@
 
     const-string v0, "NetworkAnalytics:ConfigStore"
 
-    .line 780
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mStorageHelper:Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;
 
@@ -1890,14 +1723,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 781
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
     if-lez v2, :cond_2
 
-    .line 782
     sget-boolean v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v2, :cond_0
@@ -1906,7 +1737,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
     :cond_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1927,14 +1757,12 @@
 
     const-string/jumbo v3, "profileName"
 
-    .line 784
     invoke-virtual {v2, v3}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string/jumbo v4, "op_userid"
 
-    .line 785
     invoke-virtual {v2, v4}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1945,7 +1773,6 @@
 
     const-string v5, "adminUid"
 
-    .line 786
     invoke-virtual {v2, v5}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v5
@@ -1956,7 +1783,6 @@
 
     const-string v6, "activeState"
 
-    .line 787
     invoke-virtual {v2, v6}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1967,7 +1793,6 @@
 
     const-string v7, "flowType"
 
-    .line 788
     invoke-virtual {v2, v7}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v7
@@ -1978,7 +1803,6 @@
 
     const-string v8, "intervalValue"
 
-    .line 789
     invoke-virtual {v2, v8}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1987,7 +1811,6 @@
 
     move-result v2
 
-    .line 790
     sget-boolean v8, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v8, :cond_1
@@ -2014,7 +1837,6 @@
 
     invoke-static {v0, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 791
     :cond_1
     new-instance v8, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;
 
@@ -2028,16 +1850,12 @@
 
     invoke-direct {v8, p0, v9, v5}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;-><init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;I)V
 
-    .line 792
     invoke-virtual {v8, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationState(I)V
 
-    .line 793
     invoke-virtual {v8, v7}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationFlowType(I)V
 
-    .line 794
     invoke-virtual {v8, v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->setActivationIntervalValue(I)V
 
-    .line 795
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->getTransformedVendorName(Ljava/lang/String;I)Ljava/lang/String;
@@ -2048,7 +1866,6 @@
 
     goto/16 :goto_0
 
-    .line 798
     :cond_2
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
@@ -2065,7 +1882,6 @@
     :catch_0
     move-exception p0
 
-    .line 800
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2096,7 +1912,6 @@
 
     const-string v0, "NetworkAnalytics:ConfigStore"
 
-    .line 734
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mStorageHelper:Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;
 
@@ -2110,14 +1925,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 735
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
     if-lez v2, :cond_3
 
-    .line 736
     sget-boolean v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v2, :cond_0
@@ -2126,7 +1939,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 737
     :cond_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2147,35 +1959,30 @@
 
     const-string/jumbo v3, "profileName"
 
-    .line 738
     invoke-virtual {v2, v3}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string/jumbo v4, "pkgName"
 
-    .line 739
     invoke-virtual {v2, v4}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string/jumbo v5, "pkgSign"
 
-    .line 740
     invoke-virtual {v2, v5}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v6, "jsondata"
 
-    .line 741
     invoke-virtual {v2, v6}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     const-string v7, "client_userid"
 
-    .line 742
     invoke-virtual {v2, v7}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v7
@@ -2186,7 +1993,6 @@
 
     const-string/jumbo v8, "op_userid"
 
-    .line 743
     invoke-virtual {v2, v8}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v8
@@ -2197,7 +2003,6 @@
 
     const-string v9, "adminUid"
 
-    .line 744
     invoke-virtual {v2, v9}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v9
@@ -2208,7 +2013,6 @@
 
     const-string v10, "flags"
 
-    .line 745
     invoke-virtual {v2, v10}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v10
@@ -2219,7 +2023,6 @@
 
     const-string v11, "flowType"
 
-    .line 746
     invoke-virtual {v2, v11}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v11
@@ -2230,7 +2033,6 @@
 
     const-string v12, "intervalValue"
 
-    .line 747
     invoke-virtual {v2, v12}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v2
@@ -2239,44 +2041,32 @@
 
     move-result v2
 
-    .line 748
     new-instance v12, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
     invoke-direct {v12, p0, v3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;-><init>(Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;Ljava/lang/String;)V
 
-    .line 749
     invoke-virtual {v12, v8}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->opUserId(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 750
     invoke-virtual {v12, v6}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->jsonString(Ljava/lang/String;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 751
     invoke-virtual {v12, v4}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->packageName(Ljava/lang/String;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 752
     invoke-virtual {v12, v5}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->packageSignature(Ljava/lang/String;)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 753
     invoke-virtual {v12, v9}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->adminUid(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 754
     invoke-virtual {v12, v10}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->flags(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 755
     invoke-virtual {v12, v7}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->userId(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 756
     invoke-virtual {v12, v11}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->flowTypeForProfile(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 757
     invoke-virtual {v12, v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->intervalValueForProfile(I)Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;
 
-    .line 758
     invoke-virtual {v12}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$Builder;->build()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object v2
 
-    .line 759
     sget-boolean v4, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v4, :cond_1
@@ -2297,13 +2087,11 @@
 
     invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 760
     :cond_1
     iget-object v4, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v4, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 762
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2316,15 +2104,12 @@
 
     if-nez v3, :cond_2
 
-    .line 763
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 764
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 765
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2335,7 +2120,6 @@
 
     goto/16 :goto_0
 
-    .line 767
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2353,7 +2137,6 @@
 
     goto/16 :goto_0
 
-    .line 770
     :cond_3
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
@@ -2370,7 +2153,6 @@
     :catch_0
     move-exception p0
 
-    .line 772
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2399,10 +2181,8 @@
 .method public initializeTables()V
     .locals 0
 
-    .line 78
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->initializeProfileTable()V
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->initializeActivationTable()V
 
     return-void
@@ -2411,7 +2191,6 @@
 .method public isActivatedPackage(Ljava/lang/String;)Z
     .locals 3
 
-    .line 542
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -2420,14 +2199,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 543
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    .line 544
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2445,7 +2222,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 545
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2456,14 +2232,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 547
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getProfile()Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 549
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -2474,7 +2248,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 550
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getActivationState()I
 
     move-result v1
@@ -2495,7 +2268,6 @@
 .method public isAddedPackage(Ljava/lang/String;)Z
     .locals 3
 
-    .line 564
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -2504,14 +2276,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 565
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    .line 566
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2529,7 +2299,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 567
     iget-object v2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2540,7 +2309,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 569
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -2565,12 +2333,10 @@
 .method public isProfileActivatedForUser(Ljava/lang/String;I)I
     .locals 0
 
-    .line 684
     invoke-static {p1, p2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->getTransformedVendorName(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 685
     iget-object p2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p2, p1}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -2579,7 +2345,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 686
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2590,7 +2355,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 688
     invoke-virtual {p0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPProfileActivation;->getActivationState()I
 
     move-result p0
@@ -2607,7 +2371,6 @@
 .method public removeProfileFromDatabase(ILjava/lang/String;)I
     .locals 5
 
-    .line 237
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2618,7 +2381,6 @@
 
     if-nez v0, :cond_0
 
-    .line 239
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2639,7 +2401,6 @@
 
     return p0
 
-    .line 243
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mStorageHelper:Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;
 
@@ -2659,7 +2420,6 @@
 
     move-result v0
 
-    .line 247
     sget-boolean v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v2, :cond_1
@@ -2683,7 +2443,6 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 249
     invoke-virtual {p0, p1, p2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->updateTablesForProfileRemoval(ILjava/lang/String;)V
 
     const/4 p0, 0x0
@@ -2700,7 +2459,6 @@
 .method public updateBindUserIdForProfile(Ljava/lang/String;II)I
     .locals 5
 
-    .line 390
     sget-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     const-string v1, "NetworkAnalytics:ConfigStore"
@@ -2732,7 +2490,6 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 393
     :try_start_0
     new-instance v2, Landroid/content/ContentValues;
 
@@ -2740,33 +2497,28 @@
 
     const-string v3, "client_userid"
 
-    .line 394
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 396
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
     const-string/jumbo v4, "profileName"
 
-    .line 397
     invoke-virtual {v3, v4, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v4, "op_userid"
 
-    .line 398
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
     invoke-virtual {v3, v4, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 400
     iget-object p2, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->mStorageHelper:Lcom/android/server/enterprise/nap/NetworkAnalyticsStorageHelper;
 
     const-string v4, "NAPProfileTable"
@@ -2777,7 +2529,6 @@
 
     if-gez v0, :cond_1
 
-    .line 402
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2796,7 +2547,6 @@
 
     return v0
 
-    .line 405
     :cond_1
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2808,7 +2558,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 407
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2825,7 +2574,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 408
     invoke-virtual {p0, p3}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->setUserId(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2837,10 +2585,8 @@
 
     const-string/jumbo p1, "updateBindUserIdForProfile: Exception "
 
-    .line 412
     invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 414
     :cond_2
     :goto_0
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
@@ -2870,7 +2616,6 @@
 .method public updateTablesForProfileRemoval(ILjava/lang/String;)V
     .locals 5
 
-    .line 258
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2885,7 +2630,6 @@
 
     const/4 v1, 0x0
 
-    .line 259
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -2895,14 +2639,12 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 260
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;
 
-    .line 261
     invoke-virtual {v2}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getProfileName()Ljava/lang/String;
 
     move-result-object v4
@@ -2919,7 +2661,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 262
     sget-boolean v0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -2944,7 +2685,6 @@
 
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->adminToProfileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2967,21 +2707,18 @@
 
     goto :goto_0
 
-    .line 267
     :cond_2
     :goto_1
     iget-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 268
     iget-object p1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
 
     move-result-object p1
 
-    .line 269
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -3000,7 +2737,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 270
     invoke-static {v0}, Lcom/android/server/enterprise/nap/NetworkAnalyticsService;->getVendorNameFromTransformedName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -3011,7 +2747,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 271
     sget-boolean v1, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz v1, :cond_4
@@ -3032,7 +2767,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     :cond_4
     iget-object v1, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->activationMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -3053,7 +2787,6 @@
 
     const-string/jumbo p0, "validateJsonContent: Invalid parameters"
 
-    .line 159
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, -0x4
@@ -3067,7 +2800,6 @@
 
     const/4 v2, 0x0
 
-    .line 165
     invoke-virtual {p1, v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -3078,12 +2810,10 @@
 
     const-string/jumbo p0, "validateJsonContent: Invalid profile name."
 
-    .line 167
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
 
-    .line 170
     :cond_1
     iget-object p0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -3093,7 +2823,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 171
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3117,14 +2846,12 @@
     :cond_2
     const-string/jumbo p0, "package_name"
 
-    .line 174
     invoke-virtual {p1, p0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string/jumbo v1, "package_signature"
 
-    .line 175
     invoke-virtual {p1, v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -3133,7 +2860,6 @@
 
     const/4 v4, -0x1
 
-    .line 176
     invoke-virtual {p1, v2, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result p1
@@ -3147,7 +2873,6 @@
     :cond_3
     const-string/jumbo p0, "validateJsonContent: Invalid flags or packageName or signature."
 
-    .line 178
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -3162,14 +2887,12 @@
 .method public validatePkgSignForAllProfiles(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 4
 
-    .line 602
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 603
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -3189,7 +2912,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 604
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3200,7 +2922,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 605
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -3211,7 +2932,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 606
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageSignature()Ljava/lang/String;
 
     move-result-object v3
@@ -3222,22 +2942,18 @@
 
     if-nez v3, :cond_0
 
-    .line 607
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz p0, :cond_1
 
     const-string/jumbo p0, "validatePkgSignForAllProfiles: Signatures Dont match!!! "
 
-    .line 608
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo p0, "validatePkgSignForAllProfiles: Signatures in profile"
 
-    .line 609
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 610
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageSignature()Ljava/lang/String;
 
     move-result-object p0
@@ -3246,10 +2962,8 @@
 
     const-string/jumbo p0, "validatePkgSignForAllProfiles: Signatures in parameter "
 
-    .line 611
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 612
     invoke-static {v2, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -3257,7 +2971,6 @@
 
     return p0
 
-    .line 618
     :cond_2
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
@@ -3288,14 +3001,12 @@
 .method public validatePkgSignForSingleProfile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 4
 
-    .line 625
     iget-object v0, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 626
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -3315,14 +3026,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 627
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 628
     iget-object v3, p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->profileMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3333,7 +3042,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 629
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -3344,7 +3052,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 630
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageSignature()Ljava/lang/String;
 
     move-result-object v3
@@ -3355,22 +3062,18 @@
 
     if-nez v3, :cond_0
 
-    .line 631
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 
     if-eqz p0, :cond_1
 
     const-string/jumbo p0, "validatePkgSignForAllProfiles: Signatures Dont match!!! "
 
-    .line 632
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo p0, "validatePkgSignForAllProfiles: Signatures in profile"
 
-    .line 633
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     invoke-virtual {v1}, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore$NAPConfigProfile;->getPackageSignature()Ljava/lang/String;
 
     move-result-object p0
@@ -3379,10 +3082,8 @@
 
     const-string/jumbo p0, "validatePkgSignForAllProfiles: Signatures in parameter "
 
-    .line 635
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 636
     invoke-static {v2, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -3390,7 +3091,6 @@
 
     return p0
 
-    .line 643
     :cond_2
     sget-boolean p0, Lcom/android/server/enterprise/nap/NetworkAnalyticsConfigStore;->DBG:Z
 

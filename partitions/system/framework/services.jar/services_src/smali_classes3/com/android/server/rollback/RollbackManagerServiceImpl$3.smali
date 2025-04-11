@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
     .locals 0
 
-    .line 290
     iput-object p1, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$3;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 293
     iget-object p1, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$3;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$massertInWorkerThread(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
 
-    .line 295
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -46,7 +43,6 @@
 
     const/4 v0, -0x1
 
-    .line 296
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -55,7 +51,6 @@
 
     return-void
 
-    .line 300
     :cond_0
     iget-object p0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$3;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 

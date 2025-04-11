@@ -18,16 +18,12 @@
 .method public constructor <init>(Ljava/util/HashMap;Lcom/android/server/wm/ActivityTaskManagerService;I)V
     .locals 0
 
-    .line 662
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 663
     iput-object p1, p0, Lcom/android/server/wm/TaskPersister$DedicatedProcessWriteQueueItem;->mProcToPkgList:Ljava/util/HashMap;
 
-    .line 664
     iput-object p2, p0, Lcom/android/server/wm/TaskPersister$DedicatedProcessWriteQueueItem;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 665
     iput p3, p0, Lcom/android/server/wm/TaskPersister$DedicatedProcessWriteQueueItem;->mUserId:I
 
     return-void
@@ -38,10 +34,8 @@
 .method public process()V
     .locals 6
 
-    .line 697
     iget-object v0, p0, Lcom/android/server/wm/TaskPersister$DedicatedProcessWriteQueueItem;->mProcToPkgList:Ljava/util/HashMap;
 
-    .line 699
     iget-object v1, p0, Lcom/android/server/wm/TaskPersister$DedicatedProcessWriteQueueItem;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -52,7 +46,6 @@
 
     const/4 v2, 0x0
 
-    .line 701
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/wm/TaskPersister$DedicatedProcessWriteQueueItem;->saveToXml(Ljava/util/HashMap;)[B
 
@@ -71,7 +64,6 @@
     :catch_0
     move-object v0, v2
 
-    .line 704
     :goto_0
     :try_start_1
     monitor-exit v1
@@ -82,7 +74,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 711
     :try_start_2
     iget v1, p0, Lcom/android/server/wm/TaskPersister$DedicatedProcessWriteQueueItem;->mUserId:I
 
@@ -90,7 +81,6 @@
 
     move-result-object v1
 
-    .line 712
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v3
@@ -105,7 +95,6 @@
 
     const-string v0, "TaskPersister"
 
-    .line 713
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,7 +121,6 @@
 
     return-void
 
-    .line 717
     :cond_0
     new-instance p0, Landroid/util/AtomicFile;
 
@@ -146,16 +134,13 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 719
     :try_start_3
     invoke-virtual {p0}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v2
 
-    .line 720
     invoke-virtual {v2, v0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 721
     invoke-virtual {p0, v2}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
@@ -181,13 +166,11 @@
     :goto_1
     if-eqz v2, :cond_1
 
-    .line 724
     invoke-virtual {v0, v2}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
     :cond_1
     const-string v1, "TaskPersister"
 
-    .line 726
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -214,7 +197,6 @@
     :goto_2
     return-void
 
-    .line 704
     :goto_3
     :try_start_4
     monitor-exit v1
@@ -229,17 +211,14 @@
 .method public final saveToXml(Ljava/util/HashMap;)[B
     .locals 7
 
-    .line 670
     new-instance p0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 671
     invoke-static {p0}, Landroid/util/Xml;->resolveSerializer(Ljava/io/OutputStream;)Lcom/android/modules/utils/TypedXmlSerializer;
 
     move-result-object v0
 
-    .line 674
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v2, 0x0
@@ -248,10 +227,8 @@
 
     const-string v1, "dedicated_process"
 
-    .line 676
     invoke-interface {v0, v2, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 678
     invoke-virtual {p1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -275,15 +252,12 @@
 
     const-string/jumbo v5, "task"
 
-    .line 679
     invoke-interface {v0, v2, v5}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string/jumbo v6, "process_name"
 
-    .line 680
     invoke-interface {v0, v2, v6, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 681
     invoke-virtual {p1, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -294,22 +268,17 @@
 
     invoke-interface {v0, v2, v6, v4}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 682
     invoke-interface {v0, v2, v5}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    .line 685
     :cond_0
     invoke-interface {v0, v2, v1}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 687
     invoke-interface {v0}, Lcom/android/modules/utils/TypedXmlSerializer;->endDocument()V
 
-    .line 688
     invoke-interface {v0}, Lcom/android/modules/utils/TypedXmlSerializer;->flush()V
 
-    .line 690
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0

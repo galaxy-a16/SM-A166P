@@ -27,31 +27,22 @@
 .method public constructor <init>(Ljava/util/List;Ljava/util/Map;Lcom/android/server/pm/InstallRequest;Lcom/android/server/pm/DeletePackageAction;Ljava/util/List;Landroid/content/pm/SigningDetails;ZZ)V
     .locals 0
 
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lcom/android/server/pm/ReconciledPackage;->mInstallRequests:Ljava/util/List;
 
-    .line 54
     iput-object p2, p0, Lcom/android/server/pm/ReconciledPackage;->mAllPackages:Ljava/util/Map;
 
-    .line 55
     iput-object p3, p0, Lcom/android/server/pm/ReconciledPackage;->mInstallRequest:Lcom/android/server/pm/InstallRequest;
 
-    .line 56
     iput-object p4, p0, Lcom/android/server/pm/ReconciledPackage;->mDeletePackageAction:Lcom/android/server/pm/DeletePackageAction;
 
-    .line 57
     iput-object p5, p0, Lcom/android/server/pm/ReconciledPackage;->mAllowedSharedLibraryInfos:Ljava/util/List;
 
-    .line 58
     iput-object p6, p0, Lcom/android/server/pm/ReconciledPackage;->mSigningDetails:Landroid/content/pm/SigningDetails;
 
-    .line 59
     iput-boolean p7, p0, Lcom/android/server/pm/ReconciledPackage;->mSharedUserSignaturesChanged:Z
 
-    .line 60
     iput-boolean p8, p0, Lcom/android/server/pm/ReconciledPackage;->mRemoveAppKeySetData:Z
 
     return-void
@@ -62,12 +53,10 @@
 .method public getCombinedAvailablePackages()Ljava/util/Map;
     .locals 3
 
-    .line 69
     new-instance v0, Landroid/util/ArrayMap;
 
     iget-object v1, p0, Lcom/android/server/pm/ReconciledPackage;->mAllPackages:Ljava/util/Map;
 
-    .line 70
     invoke-interface {v1}, Ljava/util/Map;->size()I
 
     move-result v1
@@ -82,12 +71,10 @@
 
     invoke-direct {v0, v1}, Landroid/util/ArrayMap;-><init>(I)V
 
-    .line 72
     iget-object v1, p0, Lcom/android/server/pm/ReconciledPackage;->mAllPackages:Ljava/util/Map;
 
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->putAll(Ljava/util/Map;)V
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/pm/ReconciledPackage;->mInstallRequests:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -107,7 +94,6 @@
 
     check-cast v1, Lcom/android/server/pm/InstallRequest;
 
-    .line 75
     invoke-virtual {v1}, Lcom/android/server/pm/InstallRequest;->getScannedPackageSetting()Lcom/android/server/pm/PackageSetting;
 
     move-result-object v2
@@ -116,12 +102,10 @@
 
     move-result-object v2
 
-    .line 76
     invoke-virtual {v1}, Lcom/android/server/pm/InstallRequest;->getParsedPackage()Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     move-result-object v1
 
-    .line 75
     invoke-virtual {v0, v2, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0

@@ -31,15 +31,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 81
     iput v0, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mFpScreenStatus:I
 
-    .line 82
     iput v0, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mFpAlphaMaskLvl:I
 
     return-void
@@ -48,7 +45,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;-><init>()V
 
     return-void
@@ -59,7 +55,6 @@
 .method public getFpOpticalInfo()Ljava/lang/String;
     .locals 2
 
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,35 +85,29 @@
 .method public final sendBroadcast(Landroid/content/Context;Landroid/content/Intent;Z)V
     .locals 2
 
-    .line 157
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_0
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mTouchMap:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     const-string/jumbo v1, "touch_map"
 
-    .line 159
     invoke-virtual {p2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_0
     const-string/jumbo v0, "screen_status"
 
-    .line 162
     invoke-virtual {p2, v0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const-string/jumbo p3, "pkg_name"
 
-    .line 163
     iget-object p0, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p2, p3, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 165
     :try_start_0
     sget-object p0, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
@@ -133,7 +122,6 @@
     :catch_0
     move-exception p0
 
-    .line 167
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,7 +151,6 @@
 .method public sendCaptureFailedInfo(Landroid/content/Context;Z)V
     .locals 3
 
-    .line 136
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.intent.action.BIOMETRIC_EXTRA_INFO"
@@ -174,17 +161,14 @@
 
     const/4 v2, 0x3
 
-    .line 137
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo v1, "quality_value"
 
-    .line 138
     iget v2, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mExtra:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 139
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->sendBroadcast(Landroid/content/Context;Landroid/content/Intent;Z)V
 
     return-void
@@ -193,7 +177,6 @@
 .method public sendMatchInfo(Landroid/content/Context;IZ)V
     .locals 3
 
-    .line 143
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.intent.action.BIOMETRIC_EXTRA_INFO"
@@ -204,15 +187,12 @@
 
     const/4 v2, 0x1
 
-    .line 144
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v1, "id"
 
-    .line 145
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 146
     invoke-virtual {p0, p1, v0, p3}, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->sendBroadcast(Landroid/content/Context;Landroid/content/Intent;Z)V
 
     return-void
@@ -221,7 +201,6 @@
 .method public sendNoMatchInfo(Landroid/content/Context;IZ)V
     .locals 3
 
-    .line 150
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.intent.action.BIOMETRIC_EXTRA_INFO"
@@ -232,15 +211,12 @@
 
     const/4 v2, 0x2
 
-    .line 151
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo v1, "no_match_reason"
 
-    .line 152
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 153
     invoke-virtual {p0, p1, v0, p3}, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->sendBroadcast(Landroid/content/Context;Landroid/content/Intent;Z)V
 
     return-void
@@ -249,7 +225,6 @@
 .method public toDumpFormat()Ljava/lang/String;
     .locals 8
 
-    .line 100
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -258,7 +233,6 @@
 
     invoke-direct {v0, v2, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 103
     :try_start_0
     iget-wide v2, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mResultTime:J
 
@@ -272,7 +246,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_0
     new-instance v2, Ljava/util/Date;
 
@@ -291,7 +264,6 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 105
     iget-object v5, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mType:Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -310,7 +282,6 @@
 
     invoke-direct {v5, v6, v7}, Ljava/util/Date;-><init>(J)V
 
-    .line 109
     invoke-virtual {v0, v5}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
@@ -325,7 +296,6 @@
 
     iget-wide v5, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mLatency:J
 
-    .line 111
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -336,7 +306,6 @@
 
     iget v0, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mExtra:I
 
-    .line 112
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -347,7 +316,6 @@
 
     iget v0, p0, Lcom/android/server/biometrics/SemBioLoggingManager$LoggingInfo;->mBadQualityCount:I
 
-    .line 113
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -362,7 +330,6 @@
 
     aput-object p0, v4, v0
 
-    .line 105
     invoke-static {v1, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -374,7 +341,6 @@
     :catch_0
     move-exception p0
 
-    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -405,7 +371,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -486,7 +451,6 @@
 .method public updateTouchMapData()V
     .locals 3
 
-    .line 127
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sys/class/sec/tsp/fod_pos"
@@ -499,14 +463,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 128
     array-length v1, v0
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
-    .line 131
     :cond_0
     new-instance v1, Ljava/lang/String;
 

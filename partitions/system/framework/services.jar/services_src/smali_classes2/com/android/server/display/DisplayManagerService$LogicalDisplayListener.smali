@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService;)V
     .locals 0
 
-    .line 4821
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/DisplayManagerService;Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;-><init>(Lcom/android/server/display/DisplayManagerService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onDisplayGroupEventLocked(II)V
     .locals 0
 
-    .line 4857
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$msendDisplayGroupEvent(Lcom/android/server/display/DisplayManagerService;II)V
@@ -51,7 +48,6 @@
 
     goto :goto_0
 
-    .line 4850
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -59,7 +55,6 @@
 
     goto :goto_0
 
-    .line 4846
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -67,7 +62,6 @@
 
     goto :goto_0
 
-    .line 4842
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -75,7 +69,6 @@
 
     goto :goto_0
 
-    .line 4838
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -83,7 +76,6 @@
 
     goto :goto_0
 
-    .line 4834
     :pswitch_4
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -91,7 +83,6 @@
 
     goto :goto_0
 
-    .line 4830
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -99,7 +90,6 @@
 
     goto :goto_0
 
-    .line 4826
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -123,7 +113,6 @@
 .method public onTraversalRequested()V
     .locals 2
 
-    .line 4862
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {v0}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fgetmSyncRoot(Lcom/android/server/display/DisplayManagerService;)Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -132,7 +121,6 @@
 
     monitor-enter v0
 
-    .line 4863
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$LogicalDisplayListener;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -140,7 +128,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$mscheduleTraversalLocked(Lcom/android/server/display/DisplayManagerService;Z)V
 
-    .line 4864
     monitor-exit v0
 
     return-void

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/graphics/fonts/FontManagerService;)V
     .locals 0
 
-    .line 75
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 76
     iput-object p1, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     return-void
@@ -23,18 +21,15 @@
 .method public static parseFontFamilyUpdateXml(Ljava/io/InputStream;)Ljava/util/List;
     .locals 6
 
-    .line 458
     :try_start_0
     invoke-static {p0}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object p0
 
-    .line 459
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 461
     :cond_0
     :goto_0
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -51,13 +46,11 @@
 
     goto :goto_0
 
-    .line 465
     :cond_1
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v1
 
-    .line 466
     invoke-interface {p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -68,7 +61,6 @@
 
     const-string v1, "fontFamilyUpdateRequest"
 
-    .line 468
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -77,7 +69,6 @@
 
     goto :goto_0
 
-    .line 469
     :cond_2
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -104,29 +95,24 @@
 
     const-string v1, "family"
 
-    .line 474
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 475
     new-instance v1, Landroid/graphics/fonts/FontUpdateRequest;
 
-    .line 476
     invoke-static {p0}, Landroid/graphics/fonts/FontUpdateRequest$Family;->readFromXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/graphics/fonts/FontUpdateRequest$Family;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Landroid/graphics/fonts/FontUpdateRequest;-><init>(Landroid/graphics/fonts/FontUpdateRequest$Family;)V
 
-    .line 475
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 478
     :cond_4
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -157,7 +143,6 @@
     :catch_0
     move-exception p0
 
-    .line 485
     new-instance v0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
     const/4 v1, 0x0
@@ -174,12 +159,10 @@
 .method public final clear(Landroid/os/ShellCommand;)I
     .locals 0
 
-    .line 490
     iget-object p0, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/graphics/fonts/FontManagerService;->clearUpdates()V
 
-    .line 491
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -196,14 +179,12 @@
 .method public final dump(Landroid/os/ShellCommand;)I
     .locals 3
 
-    .line 312
     iget-object v0, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/graphics/fonts/FontManagerService;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 314
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v1
@@ -220,11 +201,9 @@
 
     return p0
 
-    .line 317
     :cond_0
     new-instance v0, Landroid/util/IndentingPrintWriter;
 
-    .line 318
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object v1
@@ -233,12 +212,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 319
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 320
     iget-object v1, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/graphics/fonts/FontManagerService;->getSystemFontConfig()Landroid/text/FontConfig;
@@ -247,18 +224,15 @@
 
     if-nez p1, :cond_1
 
-    .line 322
     invoke-virtual {p0, v0, v1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->dumpFontConfig(Landroid/util/IndentingPrintWriter;Landroid/text/FontConfig;)V
 
     goto :goto_0
 
-    .line 325
     :cond_1
     invoke-static {v1}, Landroid/graphics/fonts/SystemFonts;->buildSystemFallback(Landroid/text/FontConfig;)Ljava/util/Map;
 
     move-result-object v1
 
-    .line 326
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -267,7 +241,6 @@
 
     if-nez v1, :cond_2
 
-    .line 328
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -290,7 +263,6 @@
 
     goto :goto_0
 
-    .line 330
     :cond_2
     invoke-virtual {p0, v0, v1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->dumpFallback(Landroid/util/IndentingPrintWriter;[Landroid/graphics/fonts/FontFamily;)V
 
@@ -303,14 +275,12 @@
 .method public dumpAll(Landroid/util/IndentingPrintWriter;)V
     .locals 1
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/graphics/fonts/FontManagerService;->getSystemFontConfig()Landroid/text/FontConfig;
 
     move-result-object v0
 
-    .line 126
     invoke-virtual {p0, p1, v0}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->dumpFontConfig(Landroid/util/IndentingPrintWriter;Landroid/text/FontConfig;)V
 
     return-void
@@ -319,7 +289,6 @@
 .method public final dumpFallback(Landroid/util/IndentingPrintWriter;[Landroid/graphics/fonts/FontFamily;)V
     .locals 3
 
-    .line 244
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -329,7 +298,6 @@
 
     aget-object v2, p2, v1
 
-    .line 245
     invoke-virtual {p0, p1, v2}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->dumpFamily(Landroid/util/IndentingPrintWriter;Landroid/graphics/fonts/FontFamily;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -343,14 +311,12 @@
 .method public final dumpFamily(Landroid/util/IndentingPrintWriter;Landroid/graphics/fonts/FontFamily;)V
     .locals 3
 
-    .line 250
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Family:"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 251
     invoke-virtual {p2}, Landroid/graphics/fonts/FontFamily;->getLangTags()Ljava/lang/String;
 
     move-result-object v1
@@ -359,17 +325,14 @@
 
     const-string v1, " langTag = "
 
-    .line 252
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 253
     invoke-virtual {p2}, Landroid/graphics/fonts/FontFamily;->getLangTags()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 255
     :cond_0
     invoke-virtual {p2}, Landroid/graphics/fonts/FontFamily;->getVariant()I
 
@@ -379,10 +342,8 @@
 
     const-string v1, " variant = "
 
-    .line 256
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 257
     invoke-virtual {p2}, Landroid/graphics/fonts/FontFamily;->getVariant()I
 
     move-result v1
@@ -397,7 +358,6 @@
 
     const-string v1, "UNKNOWN"
 
-    .line 265
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -405,7 +365,6 @@
     :cond_1
     const-string v1, "Elegant"
 
-    .line 262
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -413,10 +372,8 @@
     :cond_2
     const-string v1, "Compact"
 
-    .line 259
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 270
     :cond_3
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -427,7 +384,6 @@
 
     const/4 v0, 0x0
 
-    .line 271
     :goto_1
     invoke-virtual {p2}, Landroid/graphics/fonts/FontFamily;->getSize()I
 
@@ -435,10 +391,8 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 272
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 274
     :try_start_0
     invoke-virtual {p2, v0}, Landroid/graphics/fonts/FontFamily;->getFont(I)Landroid/graphics/fonts/Font;
 
@@ -448,7 +402,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 276
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     add-int/lit8 v0, v0, 0x1
@@ -460,7 +413,6 @@
 
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 277
     throw p0
 
     :cond_4
@@ -470,17 +422,14 @@
 .method public final dumpFont(Landroid/util/IndentingPrintWriter;Landroid/graphics/fonts/Font;)V
     .locals 2
 
-    .line 282
     invoke-virtual {p2}, Landroid/graphics/fonts/Font;->getFile()Ljava/io/File;
 
     move-result-object p0
 
-    .line 283
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 284
     invoke-virtual {p2}, Landroid/graphics/fonts/Font;->getStyle()Landroid/graphics/fonts/FontStyle;
 
     move-result-object v1
@@ -489,7 +438,6 @@
 
     const-string v1, ", path = "
 
-    .line 285
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     if-nez p0, :cond_0
@@ -498,7 +446,6 @@
 
     goto :goto_0
 
-    .line 286
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -507,7 +454,6 @@
     :goto_0
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 287
     invoke-virtual {p2}, Landroid/graphics/fonts/Font;->getTtcIndex()I
 
     move-result p0
@@ -516,17 +462,14 @@
 
     const-string p0, ", index = "
 
-    .line 288
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 289
     invoke-virtual {p2}, Landroid/graphics/fonts/Font;->getTtcIndex()I
 
     move-result p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 291
     :cond_1
     invoke-virtual {p2}, Landroid/graphics/fonts/Font;->getAxes()[Landroid/graphics/fonts/FontVariationAxis;
 
@@ -534,17 +477,14 @@
 
     if-eqz p0, :cond_2
 
-    .line 292
     array-length p2, p0
 
     if-eqz p2, :cond_2
 
     const-string p2, ", axes = \""
 
-    .line 293
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 294
     invoke-static {p0}, Landroid/graphics/fonts/FontVariationAxis;->toFontVariationSettings([Landroid/graphics/fonts/FontVariationAxis;)Ljava/lang/String;
 
     move-result-object p0
@@ -553,10 +493,8 @@
 
     const-string p0, "\""
 
-    .line 295
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 297
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -570,20 +508,16 @@
 .method public final dumpFontConfig(Landroid/util/IndentingPrintWriter;Landroid/text/FontConfig;)V
     .locals 9
 
-    .line 164
     invoke-virtual {p2}, Landroid/text/FontConfig;->getFontFamilies()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "Named Family List"
 
-    .line 167
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 168
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 169
     invoke-virtual {p2}, Landroid/text/FontConfig;->getNamedFamilyLists()Ljava/util/List;
 
     move-result-object v1
@@ -592,7 +526,6 @@
 
     move v3, v2
 
-    .line 170
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -600,14 +533,12 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 171
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/text/FontConfig$NamedFamilyList;
 
-    .line 172
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -632,17 +563,14 @@
 
     invoke-virtual {p1, v5}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 173
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 174
     invoke-virtual {v4}, Landroid/text/FontConfig$NamedFamilyList;->getFamilies()Ljava/util/List;
 
     move-result-object v4
 
     move v5, v2
 
-    .line 175
     :goto_1
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -650,7 +578,6 @@
 
     if-ge v5, v6, :cond_1
 
-    .line 176
     invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -659,20 +586,16 @@
 
     const-string v7, "Family"
 
-    .line 178
     invoke-virtual {p1, v7}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 179
     invoke-virtual {v6}, Landroid/text/FontConfig$FontFamily;->getFontList()Ljava/util/List;
 
     move-result-object v6
 
-    .line 180
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     move v7, v2
 
-    .line 181
     :goto_2
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -680,7 +603,6 @@
 
     if-ge v7, v8, :cond_0
 
-    .line 182
     invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -693,7 +615,6 @@
 
     goto :goto_2
 
-    .line 184
     :cond_0
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -701,7 +622,6 @@
 
     goto :goto_1
 
-    .line 186
     :cond_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -709,23 +629,19 @@
 
     goto :goto_0
 
-    .line 188
     :cond_2
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string v1, "Dump Fallback Families"
 
-    .line 191
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 192
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     move v1, v2
 
     move v3, v1
 
-    .line 194
     :goto_3
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -733,14 +649,12 @@
 
     if-ge v1, v4, :cond_8
 
-    .line 195
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/text/FontConfig$FontFamily;
 
-    .line 198
     invoke-virtual {v4}, Landroid/text/FontConfig$FontFamily;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -749,7 +663,6 @@
 
     goto :goto_6
 
-    .line 200
     :cond_3
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -759,15 +672,12 @@
 
     add-int/lit8 v6, v3, 0x1
 
-    .line 201
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v3, "]: lang=\""
 
-    .line 202
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 203
     invoke-virtual {v4}, Landroid/text/FontConfig$FontFamily;->getLocaleList()Landroid/os/LocaleList;
 
     move-result-object v3
@@ -780,10 +690,8 @@
 
     const-string v3, "\""
 
-    .line 204
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 205
     invoke-virtual {v4}, Landroid/text/FontConfig$FontFamily;->getVariant()I
 
     move-result v3
@@ -792,10 +700,8 @@
 
     const-string v3, ", variant="
 
-    .line 206
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 207
     invoke-virtual {v4}, Landroid/text/FontConfig$FontFamily;->getVariant()I
 
     move-result v3
@@ -810,7 +716,6 @@
 
     const-string v3, "Unknown"
 
-    .line 215
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_4
@@ -818,7 +723,6 @@
     :cond_4
     const-string v3, "Elegant"
 
-    .line 212
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_4
@@ -826,10 +730,8 @@
     :cond_5
     const-string v3, "Compact"
 
-    .line 209
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 219
     :cond_6
     :goto_4
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -838,17 +740,14 @@
 
     invoke-virtual {p1, v3}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 221
     invoke-virtual {v4}, Landroid/text/FontConfig$FontFamily;->getFontList()Ljava/util/List;
 
     move-result-object v3
 
-    .line 222
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     move v4, v2
 
-    .line 223
     :goto_5
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -856,7 +755,6 @@
 
     if-ge v4, v5, :cond_7
 
-    .line 224
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -869,7 +767,6 @@
 
     goto :goto_5
 
-    .line 226
     :cond_7
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -880,24 +777,19 @@
 
     goto/16 :goto_3
 
-    .line 228
     :cond_8
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p0, "Dump Family Aliases"
 
-    .line 231
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 232
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 233
     invoke-virtual {p2}, Landroid/text/FontConfig;->getAliases()Ljava/util/List;
 
     move-result-object p0
 
-    .line 234
     :goto_7
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -905,14 +797,12 @@
 
     if-ge v2, p2, :cond_9
 
-    .line 235
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Landroid/text/FontConfig$Alias;
 
-    .line 236
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -941,7 +831,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 237
     invoke-virtual {p2}, Landroid/text/FontConfig$Alias;->getWeight()I
 
     move-result p2
@@ -952,14 +841,12 @@
 
     move-result-object p2
 
-    .line 236
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_7
 
-    .line 239
     :cond_9
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -969,17 +856,14 @@
 .method public final dumpSingleFontConfig(Landroid/util/IndentingPrintWriter;Landroid/text/FontConfig$Font;)V
     .locals 1
 
-    .line 133
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v0, "style = "
 
-    .line 134
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getStyle()Landroid/graphics/fonts/FontStyle;
 
     move-result-object v0
@@ -988,10 +872,8 @@
 
     const-string v0, ", path = "
 
-    .line 136
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 137
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getFile()Ljava/io/File;
 
     move-result-object v0
@@ -1002,7 +884,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getTtcIndex()I
 
     move-result v0
@@ -1011,17 +892,14 @@
 
     const-string v0, ", index = "
 
-    .line 139
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getTtcIndex()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 142
     :cond_0
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getFontVariationSettings()Ljava/lang/String;
 
@@ -1035,17 +913,14 @@
 
     const-string v0, ", axes = "
 
-    .line 143
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 144
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getFontVariationSettings()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 146
     :cond_1
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getFontFamilyName()Ljava/lang/String;
 
@@ -1055,17 +930,14 @@
 
     const-string v0, ", fallback = "
 
-    .line 147
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 148
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getFontFamilyName()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 150
     :cond_2
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1073,17 +945,14 @@
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 152
     invoke-virtual {p2}, Landroid/text/FontConfig$Font;->getOriginalFile()Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    .line 153
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 154
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1104,7 +973,6 @@
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 155
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     :cond_3
@@ -1118,7 +986,6 @@
 
     const/4 p0, 0x0
 
-    .line 518
     invoke-virtual {p1, p0}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
@@ -1128,7 +995,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 522
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
@@ -1236,14 +1102,12 @@
     :goto_1
     packed-switch v1, :pswitch_data_0
 
-    .line 538
     invoke-virtual {p1, p2}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
 
     goto :goto_2
 
-    .line 536
     :pswitch_0
     invoke-virtual {p0, p1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->installCert(Landroid/os/ShellCommand;)I
 
@@ -1251,7 +1115,6 @@
 
     return p0
 
-    .line 534
     :pswitch_1
     invoke-virtual {p0, p1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->status(Landroid/os/ShellCommand;)I
 
@@ -1259,7 +1122,6 @@
 
     return p0
 
-    .line 532
     :pswitch_2
     invoke-virtual {p0, p1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->restart(Landroid/os/ShellCommand;)I
 
@@ -1267,7 +1129,6 @@
 
     return p0
 
-    .line 530
     :pswitch_3
     invoke-virtual {p0, p1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->clear(Landroid/os/ShellCommand;)I
 
@@ -1275,7 +1136,6 @@
 
     return p0
 
-    .line 528
     :pswitch_4
     invoke-virtual {p0, p1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->updateFamily(Landroid/os/ShellCommand;)I
 
@@ -1283,7 +1143,6 @@
 
     return p0
 
-    .line 526
     :pswitch_5
     invoke-virtual {p0, p1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->update(Landroid/os/ShellCommand;)I
 
@@ -1291,7 +1150,6 @@
 
     return p0
 
-    .line 524
     :pswitch_6
     invoke-virtual {p0, p1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->dump(Landroid/os/ShellCommand;)I
 
@@ -1305,7 +1163,6 @@
     :catch_0
     move-exception p2
 
-    .line 541
     invoke-virtual {p0, p1, p2}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->writeCommandResult(Landroid/os/ShellCommand;Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;)V
 
     return v0
@@ -1336,19 +1193,16 @@
 .method public final installCert(Landroid/os/ShellCommand;)I
     .locals 4
 
-    .line 337
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_3
 
-    .line 340
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 344
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
@@ -1357,29 +1211,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 350
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 351
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 357
     iget-object v1, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {v1, v0}, Lcom/android/server/graphics/fonts/FontManagerService;->addDebugCertificate(Ljava/lang/String;)V
 
-    .line 358
     iget-object p0, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/graphics/fonts/FontManagerService;->restart()V
 
-    .line 359
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -1392,7 +1241,6 @@
 
     return p0
 
-    .line 352
     :cond_0
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -1418,7 +1266,6 @@
 
     throw p0
 
-    .line 346
     :cond_1
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -1428,7 +1275,6 @@
 
     throw p0
 
-    .line 341
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1438,7 +1284,6 @@
 
     throw p0
 
-    .line 338
     :cond_3
     new-instance p0, Ljava/lang/SecurityException;
 
@@ -1452,7 +1297,6 @@
 .method public onCommand(Ljava/lang/String;)I
     .locals 2
 
-    .line 81
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -1463,7 +1307,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 84
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -1476,7 +1319,6 @@
 
     return p0
 
-    .line 87
     :cond_0
     invoke-virtual {p0, p0, p1}, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->execCommand(Landroid/os/ShellCommand;Ljava/lang/String;)I
 
@@ -1488,140 +1330,110 @@
 .method public onHelp()V
     .locals 1
 
-    .line 92
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Font service (font) commands"
 
-    .line 93
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "help"
 
-    .line 94
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 95
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 96
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "dump [family name]"
 
-    .line 97
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Dump all font files in the specified family name."
 
-    .line 98
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Dump current system font configuration if no family name was specified."
 
-    .line 99
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 100
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string/jumbo v0, "update [font file path] [signature file path]"
 
-    .line 101
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Update installed font files with new font file."
 
-    .line 102
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 103
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string/jumbo v0, "update-family [family definition XML path]"
 
-    .line 104
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Update font families with the new definitions."
 
-    .line 105
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "install-debug-cert [cert file path]"
 
-    .line 107
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Install debug certificate file. This command can be used only on"
 
-    .line 108
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    debuggable device with root user."
 
-    .line 109
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 110
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "clear"
 
-    .line 111
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Remove all installed font files and reset to the initial state."
 
-    .line 112
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 113
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string/jumbo v0, "restart"
 
-    .line 114
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Restart FontManagerService emulating device reboot."
 
-    .line 115
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    WARNING: this is not a safe operation. Other processes may misbehave if"
 
-    .line 116
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    they are using fonts updated by FontManagerService."
 
-    .line 117
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    This command exists merely for testing."
 
-    .line 118
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 119
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string/jumbo v0, "status"
 
-    .line 120
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Prints status of current system font configuration."
 
-    .line 121
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -1630,12 +1442,10 @@
 .method public final restart(Landroid/os/ShellCommand;)I
     .locals 0
 
-    .line 496
     iget-object p0, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/graphics/fonts/FontManagerService;->restart()V
 
-    .line 497
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -1652,10 +1462,8 @@
 .method public final status(Landroid/os/ShellCommand;)I
     .locals 4
 
-    .line 502
     new-instance v0, Landroid/util/IndentingPrintWriter;
 
-    .line 503
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p1
@@ -1664,14 +1472,12 @@
 
     invoke-direct {v0, p1, v1}, Landroid/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 504
     iget-object p1, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/graphics/fonts/FontManagerService;->getSystemFontConfig()Landroid/text/FontConfig;
 
     move-result-object p1
 
-    .line 506
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1692,7 +1498,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 507
     invoke-virtual {p1}, Landroid/text/FontConfig;->getLastModifiedTimeMillis()J
 
     move-result-wide v1
@@ -1705,7 +1510,6 @@
 
     move-result-object p1
 
-    .line 509
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1728,14 +1532,12 @@
 
     invoke-virtual {v0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 511
     iget-object p0, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/graphics/fonts/FontManagerService;->getFontFileMap()Ljava/util/Map;
 
     move-result-object p0
 
-    .line 512
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1764,7 +1566,6 @@
 
     const-string/jumbo v0, "r"
 
-    .line 364
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v1
@@ -1773,7 +1574,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 370
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v3
@@ -1782,7 +1582,6 @@
 
     const/4 v2, 0x0
 
-    .line 377
     :try_start_0
     invoke-virtual {p1, v1, v0}, Landroid/os/ShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
@@ -1790,7 +1589,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 378
     :try_start_1
     invoke-virtual {p1, v3, v0}, Landroid/os/ShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
@@ -1804,7 +1602,6 @@
 
     const/16 v3, -0x2714
 
-    .line 392
     :try_start_2
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -1817,7 +1614,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 393
     :try_start_3
     invoke-virtual {v4}, Ljava/io/FileInputStream;->available()I
 
@@ -1827,10 +1623,8 @@
 
     if-gt v5, v6, :cond_1
 
-    .line 399
     new-array v6, v5, [B
 
-    .line 400
     invoke-virtual {v4, v6, v2, v5}, Ljava/io/FileInputStream;->read([BII)I
 
     move-result v7
@@ -1839,14 +1633,12 @@
 
     if-ne v7, v5, :cond_0
 
-    .line 405
     :try_start_4
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 410
     :try_start_5
     iget-object p0, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
@@ -1854,19 +1646,16 @@
 
     invoke-direct {v3, v1, v6}, Landroid/graphics/fonts/FontUpdateRequest;-><init>(Landroid/os/ParcelFileDescriptor;[B)V
 
-    .line 411
     invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
 
     const/4 v4, -0x1
 
-    .line 410
     invoke-virtual {p0, v4, v3}, Lcom/android/server/graphics/fonts/FontManagerService;->update(ILjava/util/List;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 412
     :try_start_6
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_6
@@ -1879,7 +1668,6 @@
 
     goto :goto_3
 
-    .line 401
     :cond_0
     :try_start_8
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
@@ -1890,7 +1678,6 @@
 
     throw p0
 
-    .line 395
     :cond_1
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -1907,7 +1694,6 @@
     :catchall_0
     move-exception p0
 
-    .line 392
     :try_start_9
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_9
@@ -1930,7 +1716,6 @@
     :catch_0
     move-exception p0
 
-    .line 406
     :try_start_b
     new-instance v4, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -1940,7 +1725,6 @@
 
     throw v4
 
-    .line 386
     :cond_2
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -1952,7 +1736,6 @@
 
     throw p0
 
-    .line 380
     :cond_3
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -1971,7 +1754,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 377
     :try_start_c
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_c
@@ -2022,10 +1804,8 @@
 
     const-string v1, "Error while closing files"
 
-    .line 415
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 418
     :goto_3
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -2037,7 +1817,6 @@
 
     return v2
 
-    .line 372
     :cond_6
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -2047,7 +1826,6 @@
 
     throw p0
 
-    .line 366
     :cond_7
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -2061,7 +1839,6 @@
 .method public final updateFamily(Landroid/os/ShellCommand;)I
     .locals 3
 
-    .line 423
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
@@ -2071,14 +1848,12 @@
     :try_start_0
     const-string/jumbo v1, "r"
 
-    .line 431
     invoke-virtual {p1, v0, v1}, Landroid/os/ShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 432
     :try_start_1
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -2094,20 +1869,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 433
     :try_start_2
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 438
     iget-object p0, p0, Lcom/android/server/graphics/fonts/FontManagerShellCommand;->mService:Lcom/android/server/graphics/fonts/FontManagerService;
 
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/graphics/fonts/FontManagerService;->update(ILjava/util/List;)V
 
-    .line 439
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -2125,7 +1897,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 431
     :try_start_3
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_3
@@ -2148,7 +1919,6 @@
     :catch_0
     move-exception p0
 
-    .line 434
     new-instance p1, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
     const/16 v0, -0x2716
@@ -2159,7 +1929,6 @@
 
     throw p1
 
-    .line 425
     :cond_1
     new-instance p0, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;
 
@@ -2175,26 +1944,22 @@
 .method public final writeCommandResult(Landroid/os/ShellCommand;Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;)V
     .locals 1
 
-    .line 302
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
-    .line 303
     invoke-virtual {p2}, Lcom/android/server/graphics/fonts/FontManagerService$SystemFontException;->getErrorCode()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 304
     invoke-virtual {p2}, Landroid/util/AndroidException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 308
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$5D1tXloCxGtB3ZgeObUrFVS54GY(Ljava/util/Map;Landroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onParametersUpdated$7(Ljava/util/Map;Landroid/hardware/radio/ITunerCallback;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$7U8XmTpg7wMTyLx1KrjTz_a52eY(Lcom/android/server/broadcastradio/hal2/RadioModule$1;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onParametersUpdated$8(Ljava/util/ArrayList;)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public static synthetic $r8$lambda$9bhMG9UsQmr-IIUPki5E7YA6hRY(ILandroid/hardware/radio/ProgramSelector;Landroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onTuneFailed$0(ILandroid/hardware/radio/ProgramSelector;Landroid/hardware/radio/ITunerCallback;)V
 
     return-void
@@ -38,7 +35,6 @@
 .method public static synthetic $r8$lambda$Gy35uNc_oQNDYYXsPAieEp-vi1c(Lcom/android/server/broadcastradio/hal2/RadioModule$1;Landroid/hardware/broadcastradio/V2_0/ProgramSelector;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onTuneFailed$1(Landroid/hardware/broadcastradio/V2_0/ProgramSelector;I)V
 
     return-void
@@ -47,7 +43,6 @@
 .method public static synthetic $r8$lambda$KMS2kveih3_zSuAnqhjXzKzFPEM(Lcom/android/server/broadcastradio/hal2/RadioModule$1;Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onProgramListUpdated$4(Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;)V
 
     return-void
@@ -56,7 +51,6 @@
 .method public static synthetic $r8$lambda$NgukAJLALPUa4uUgayJXYvPfRx4(Lcom/android/server/broadcastradio/hal2/RadioModule$1;Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onCurrentProgramInfoChanged$3(Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)V
 
     return-void
@@ -65,7 +59,6 @@
 .method public static synthetic $r8$lambda$boW532MvhjLSm8NaxbweZlP4N3U(ZLandroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onAntennaStateChange$5(ZLandroid/hardware/radio/ITunerCallback;)V
 
     return-void
@@ -74,7 +67,6 @@
 .method public static synthetic $r8$lambda$mIeXR4pLCfYeiz8rPyYfjwc7lLE(Landroid/hardware/radio/RadioManager$ProgramInfo;Landroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onCurrentProgramInfoChanged$2(Landroid/hardware/radio/RadioManager$ProgramInfo;Landroid/hardware/radio/ITunerCallback;)V
 
     return-void
@@ -83,7 +75,6 @@
 .method public static synthetic $r8$lambda$oFQK8ceZANEjXBvX67rtu5KWEKo(Lcom/android/server/broadcastradio/hal2/RadioModule$1;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->lambda$onAntennaStateChange$6(Z)V
 
     return-void
@@ -92,7 +83,6 @@
 .method public constructor <init>(Lcom/android/server/broadcastradio/hal2/RadioModule;)V
     .locals 0
 
-    .line 86
     iput-object p1, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     invoke-direct {p0}, Landroid/hardware/broadcastradio/V2_0/ITunerCallback$Stub;-><init>()V
@@ -103,7 +93,6 @@
 .method public static synthetic lambda$onAntennaStateChange$5(ZLandroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 131
     invoke-interface {p1, p0}, Landroid/hardware/radio/ITunerCallback;->onAntennaState(Z)V
 
     return-void
@@ -112,7 +101,6 @@
 .method private synthetic lambda$onAntennaStateChange$6(Z)V
     .locals 3
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     invoke-static {v0}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fgetmLock(Lcom/android/server/broadcastradio/hal2/RadioModule;)Ljava/lang/Object;
@@ -121,7 +109,6 @@
 
     monitor-enter v0
 
-    .line 130
     :try_start_0
     iget-object v1, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
@@ -131,7 +118,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fputmAntennaConnected(Lcom/android/server/broadcastradio/hal2/RadioModule;Ljava/lang/Boolean;)V
 
-    .line 131
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     new-instance v1, Lcom/android/server/broadcastradio/hal2/RadioModule$1$$ExternalSyntheticLambda6;
@@ -140,7 +126,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$mfanoutAidlCallbackLocked(Lcom/android/server/broadcastradio/hal2/RadioModule;Lcom/android/server/broadcastradio/hal2/RadioModule$AidlCallbackRunnable;)V
 
-    .line 132
     monitor-exit v0
 
     return-void
@@ -158,7 +143,6 @@
 .method public static synthetic lambda$onCurrentProgramInfoChanged$2(Landroid/hardware/radio/RadioManager$ProgramInfo;Landroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 105
     invoke-interface {p1, p0}, Landroid/hardware/radio/ITunerCallback;->onCurrentProgramInfoChanged(Landroid/hardware/radio/RadioManager$ProgramInfo;)V
 
     return-void
@@ -167,7 +151,6 @@
 .method private synthetic lambda$onCurrentProgramInfoChanged$3(Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)V
     .locals 2
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     invoke-static {v0}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fgetmLock(Lcom/android/server/broadcastradio/hal2/RadioModule;)Ljava/lang/Object;
@@ -176,7 +159,6 @@
 
     monitor-enter v0
 
-    .line 103
     :try_start_0
     iget-object v1, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
@@ -186,14 +168,12 @@
 
     invoke-static {v1, p1}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fputmCurrentProgramInfo(Lcom/android/server/broadcastradio/hal2/RadioModule;Landroid/hardware/radio/RadioManager$ProgramInfo;)V
 
-    .line 104
     iget-object p1, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     invoke-static {p1}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fgetmCurrentProgramInfo(Lcom/android/server/broadcastradio/hal2/RadioModule;)Landroid/hardware/radio/RadioManager$ProgramInfo;
 
     move-result-object p1
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     new-instance v1, Lcom/android/server/broadcastradio/hal2/RadioModule$1$$ExternalSyntheticLambda8;
@@ -202,7 +182,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$mfanoutAidlCallbackLocked(Lcom/android/server/broadcastradio/hal2/RadioModule;Lcom/android/server/broadcastradio/hal2/RadioModule$AidlCallbackRunnable;)V
 
-    .line 107
     monitor-exit v0
 
     return-void
@@ -220,7 +199,6 @@
 .method public static synthetic lambda$onParametersUpdated$7(Ljava/util/Map;Landroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 141
     invoke-interface {p1, p0}, Landroid/hardware/radio/ITunerCallback;->onParametersUpdated(Ljava/util/Map;)V
 
     return-void
@@ -229,12 +207,10 @@
 .method private synthetic lambda$onParametersUpdated$8(Ljava/util/ArrayList;)V
     .locals 2
 
-    .line 139
     invoke-static {p1}, Lcom/android/server/broadcastradio/hal2/Convert;->vendorInfoFromHal(Ljava/util/List;)Ljava/util/Map;
 
     move-result-object p1
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     invoke-static {v0}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fgetmLock(Lcom/android/server/broadcastradio/hal2/RadioModule;)Ljava/lang/Object;
@@ -243,7 +219,6 @@
 
     monitor-enter v0
 
-    .line 141
     :try_start_0
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
@@ -253,7 +228,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$mfanoutAidlCallbackLocked(Lcom/android/server/broadcastradio/hal2/RadioModule;Lcom/android/server/broadcastradio/hal2/RadioModule$AidlCallbackRunnable;)V
 
-    .line 142
     monitor-exit v0
 
     return-void
@@ -271,12 +245,10 @@
 .method private synthetic lambda$onProgramListUpdated$4(Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;)V
     .locals 2
 
-    .line 115
     invoke-static {p1}, Lcom/android/server/broadcastradio/hal2/Convert;->programListChunkFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;)Landroid/hardware/radio/ProgramList$Chunk;
 
     move-result-object p1
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     invoke-static {v0}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fgetmLock(Lcom/android/server/broadcastradio/hal2/RadioModule;)Ljava/lang/Object;
@@ -285,7 +257,6 @@
 
     monitor-enter v0
 
-    .line 117
     :try_start_0
     iget-object v1, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
@@ -295,7 +266,6 @@
 
     invoke-virtual {v1, p1}, Lcom/android/server/broadcastradio/hal2/ProgramInfoCache;->filterAndApplyChunk(Landroid/hardware/radio/ProgramList$Chunk;)Ljava/util/List;
 
-    .line 119
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     invoke-static {p0}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fgetmAidlTunerSessions(Lcom/android/server/broadcastradio/hal2/RadioModule;)Ljava/util/Set;
@@ -319,12 +289,10 @@
 
     check-cast v1, Lcom/android/server/broadcastradio/hal2/TunerSession;
 
-    .line 120
     invoke-virtual {v1, p1}, Lcom/android/server/broadcastradio/hal2/TunerSession;->onMergedProgramListUpdateFromHal(Landroid/hardware/radio/ProgramList$Chunk;)V
 
     goto :goto_0
 
-    .line 122
     :cond_0
     monitor-exit v0
 
@@ -343,7 +311,6 @@
 .method public static synthetic lambda$onTuneFailed$0(ILandroid/hardware/radio/ProgramSelector;Landroid/hardware/radio/ITunerCallback;)V
     .locals 0
 
-    .line 94
     invoke-interface {p2, p0, p1}, Landroid/hardware/radio/ITunerCallback;->onTuneFailed(ILandroid/hardware/radio/ProgramSelector;)V
 
     return-void
@@ -352,17 +319,14 @@
 .method private synthetic lambda$onTuneFailed$1(Landroid/hardware/broadcastradio/V2_0/ProgramSelector;I)V
     .locals 2
 
-    .line 91
     invoke-static {p1}, Lcom/android/server/broadcastradio/hal2/Convert;->programSelectorFromHal(Landroid/hardware/broadcastradio/V2_0/ProgramSelector;)Landroid/hardware/radio/ProgramSelector;
 
     move-result-object p1
 
-    .line 92
     invoke-static {p2}, Lcom/android/server/broadcastradio/hal2/Convert;->halResultToTunerResult(I)I
 
     move-result p2
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     invoke-static {v0}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$fgetmLock(Lcom/android/server/broadcastradio/hal2/RadioModule;)Ljava/lang/Object;
@@ -371,7 +335,6 @@
 
     monitor-enter v0
 
-    .line 94
     :try_start_0
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
@@ -381,7 +344,6 @@
 
     invoke-static {p0, v1}, Lcom/android/server/broadcastradio/hal2/RadioModule;->-$$Nest$mfanoutAidlCallbackLocked(Lcom/android/server/broadcastradio/hal2/RadioModule;Lcom/android/server/broadcastradio/hal2/RadioModule$AidlCallbackRunnable;)V
 
-    .line 95
     monitor-exit v0
 
     return-void
@@ -401,7 +363,6 @@
 .method public onAntennaStateChange(Z)V
     .locals 2
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     new-instance v1, Lcom/android/server/broadcastradio/hal2/RadioModule$1$$ExternalSyntheticLambda3;
@@ -416,7 +377,6 @@
 .method public onCurrentProgramInfoChanged(Landroid/hardware/broadcastradio/V2_0/ProgramInfo;)V
     .locals 2
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     new-instance v1, Lcom/android/server/broadcastradio/hal2/RadioModule$1$$ExternalSyntheticLambda4;
@@ -431,7 +391,6 @@
 .method public onParametersUpdated(Ljava/util/ArrayList;)V
     .locals 2
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     new-instance v1, Lcom/android/server/broadcastradio/hal2/RadioModule$1$$ExternalSyntheticLambda2;
@@ -446,7 +405,6 @@
 .method public onProgramListUpdated(Landroid/hardware/broadcastradio/V2_0/ProgramListChunk;)V
     .locals 2
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     new-instance v1, Lcom/android/server/broadcastradio/hal2/RadioModule$1$$ExternalSyntheticLambda1;
@@ -461,7 +419,6 @@
 .method public onTuneFailed(ILandroid/hardware/broadcastradio/V2_0/ProgramSelector;)V
     .locals 2
 
-    .line 89
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$1;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     new-instance v1, Lcom/android/server/broadcastradio/hal2/RadioModule$1$$ExternalSyntheticLambda0;

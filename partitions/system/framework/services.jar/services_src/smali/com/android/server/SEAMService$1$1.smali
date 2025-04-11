@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/SEAMService$1;)V
     .locals 0
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/SEAMService$1$1;->this$1:Lcom/android/server/SEAMService$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,20 +26,16 @@
 .method public run()V
     .locals 3
 
-    .line 67
     invoke-static {}, Lcom/android/server/ServiceKeeper;->getServiceKeeper()Lcom/android/server/ServiceKeeper;
 
-    .line 68
     invoke-static {}, Lcom/android/server/ServiceKeeper;->authorizeLoadProcedure()Z
 
     move-result p0
 
-    .line 69
     sget-boolean v0, Lcom/samsung/android/knox/seams/SEAMSPolicy;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 70
     invoke-static {}, Lcom/android/server/SEAMService;->-$$Nest$sfgetmSKLog()Lcom/android/server/SKLogger;
 
     move-result-object v0

@@ -18,7 +18,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 20
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,10 +46,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -63,7 +60,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;-><init>()V
 
     return-void
@@ -72,7 +68,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;
     .locals 1
 
-    .line 31
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter$JobSchedulerPackageFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;
 
     move-result-object v0
@@ -87,12 +82,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->mRunningJobSet:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 56
     invoke-static {}, Lcom/android/server/am/FreecessHandler;->getInstance()Lcom/android/server/am/FreecessHandler;
 
     move-result-object p0
@@ -116,14 +109,12 @@
 .method public deInit()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 41
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->isRunningJobPkg(Ljava/lang/String;)Z
 
     move-result p0
@@ -143,7 +134,6 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -152,7 +142,6 @@
 
     const/4 v0, 0x0
 
-    .line 62
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->mRunningJobSet:Ljava/util/Set;
 
@@ -164,7 +153,6 @@
 
     return v0
 
-    .line 65
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->mRunningJobSet:Ljava/util/Set;
 
@@ -187,7 +175,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 67
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->getService()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -211,7 +198,6 @@
     :catch_0
     move-exception p0
 
-    .line 73
     sget-object p1, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -243,7 +229,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 49
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->mRunningJobSet:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z

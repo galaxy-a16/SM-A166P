@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareLogging;->$r8$lambda$9SxpA8q0fLhNp5pnhii1yJQgBYM(I)[Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareLogging$ModulePropertySummary;
 
     move-result-object p0

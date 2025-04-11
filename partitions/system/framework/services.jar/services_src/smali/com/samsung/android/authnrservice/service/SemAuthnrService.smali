@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 46
     invoke-direct {p0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;-><init>()V
 
-    .line 47
     iput-object p1, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +23,6 @@
 .method public deleteFile(Ljava/lang/String;)Z
     .locals 2
 
-    .line 158
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -34,7 +31,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 160
     :try_start_0
     invoke-static {}, Lcom/samsung/android/authnrservice/service/FileOperation;->getInstance()Lcom/samsung/android/authnrservice/service/FileOperation;
 
@@ -51,7 +47,6 @@
     :catch_0
     move-exception p0
 
-    .line 162
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +77,6 @@
 .method public getDrkKeyHandle()[B
     .locals 2
 
-    .line 136
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -91,7 +85,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 138
     :try_start_0
     invoke-static {}, Lcom/samsung/android/authnrservice/service/DrkOperation;->getInstance()Lcom/samsung/android/authnrservice/service/DrkOperation;
 
@@ -108,7 +101,6 @@
     :catch_0
     move-exception p0
 
-    .line 140
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,7 +133,6 @@
 .method public getFiles(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
     .locals 2
 
-    .line 169
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -150,7 +141,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 171
     :try_start_0
     invoke-static {}, Lcom/samsung/android/authnrservice/service/FileOperation;->getInstance()Lcom/samsung/android/authnrservice/service/FileOperation;
 
@@ -167,7 +157,6 @@
     :catch_0
     move-exception p0
 
-    .line 173
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +179,6 @@
 
     invoke-static {p1, p0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 175
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -201,7 +189,6 @@
 .method public getMatchedFilePaths(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
     .locals 2
 
-    .line 212
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -210,7 +197,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
     :try_start_0
     invoke-static {}, Lcom/samsung/android/authnrservice/service/FileOperation;->getInstance()Lcom/samsung/android/authnrservice/service/FileOperation;
 
@@ -227,7 +213,6 @@
     :catch_0
     move-exception p0
 
-    .line 216
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,7 +235,6 @@
 
     invoke-static {p1, p0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 218
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -261,7 +245,6 @@
 .method public getVersion()I
     .locals 2
 
-    .line 52
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -270,7 +253,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -297,7 +279,6 @@
 .method public getWrappedObject([B)[B
     .locals 3
 
-    .line 103
     iget-object v0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -306,7 +287,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 105
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
@@ -325,7 +305,6 @@
     :catch_0
     move-exception p0
 
-    .line 107
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -358,7 +337,6 @@
 .method public initialize(Landroid/os/ParcelFileDescriptor;JJ)Z
     .locals 0
 
-    .line 63
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string p2, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -371,10 +349,8 @@
 
     const-string p2, "SAS"
 
-    .line 64
     invoke-static {p2, p0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p0
@@ -387,7 +363,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 68
     :try_start_0
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_0
@@ -398,7 +373,6 @@
     :catch_0
     const-string p0, "failed to close"
 
-    .line 70
     invoke-static {p2, p0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -411,7 +385,6 @@
 .method public initializeDrk()Z
     .locals 3
 
-    .line 114
     iget-object v0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -420,7 +393,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     :try_start_0
     invoke-static {}, Lcom/samsung/android/authnrservice/service/DrkOperation;->getInstance()Lcom/samsung/android/authnrservice/service/DrkOperation;
 
@@ -439,7 +411,6 @@
     :catch_0
     move-exception p0
 
-    .line 118
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -474,10 +445,8 @@
 
     const-string v0, "SAS"
 
-    .line 223
     invoke-static {v0, p1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string p1, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -488,7 +457,6 @@
 
     const-string p0, "initializePreloadedTa not supported"
 
-    .line 225
     invoke-static {v0, p0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -499,7 +467,6 @@
 .method public initializeWithPreloadedTa()Z
     .locals 2
 
-    .line 180
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -512,7 +479,6 @@
 
     const-string v0, "initializeWithPreloadedTa not supported"
 
-    .line 181
     invoke-static {p0, v0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -523,7 +489,6 @@
 .method public process([B)[B
     .locals 1
 
-    .line 85
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string p1, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -536,7 +501,6 @@
 
     const-string/jumbo p1, "process not supported"
 
-    .line 86
     invoke-static {p0, p1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -553,10 +517,8 @@
 
     const-string p2, "SAS"
 
-    .line 239
     invoke-static {p2, p1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string p1, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -567,7 +529,6 @@
 
     const-string/jumbo p0, "processPreloadedTa not supported"
 
-    .line 241
     invoke-static {p2, p0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -580,7 +541,6 @@
 .method public processWithPreloadedTa([BLjava/lang/String;)[B
     .locals 0
 
-    .line 194
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string p1, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -593,7 +553,6 @@
 
     const-string/jumbo p1, "processWithPreloadedTa not supported"
 
-    .line 195
     invoke-static {p0, p1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -606,7 +565,6 @@
 .method public readFile(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 201
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -615,7 +573,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 203
     :try_start_0
     invoke-static {}, Lcom/samsung/android/authnrservice/service/FileOperation;->getInstance()Lcom/samsung/android/authnrservice/service/FileOperation;
 
@@ -632,7 +589,6 @@
     :catch_0
     move-exception p0
 
-    .line 205
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -663,7 +619,6 @@
 .method public setChallenge([B)Z
     .locals 3
 
-    .line 92
     iget-object v0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -672,7 +627,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 94
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
@@ -691,7 +645,6 @@
     :catch_0
     move-exception p0
 
-    .line 96
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -722,7 +675,6 @@
 .method public terminate()Z
     .locals 2
 
-    .line 78
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -735,7 +687,6 @@
 
     const-string/jumbo v0, "terminate not supported"
 
-    .line 79
     invoke-static {p0, v0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -746,7 +697,6 @@
 .method public terminateDrk()Z
     .locals 2
 
-    .line 125
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -755,7 +705,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     :try_start_0
     invoke-static {}, Lcom/samsung/android/authnrservice/service/DrkOperation;->getInstance()Lcom/samsung/android/authnrservice/service/DrkOperation;
 
@@ -772,7 +721,6 @@
     :catch_0
     move-exception p0
 
-    .line 129
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -807,10 +755,8 @@
 
     const-string v0, "SAS"
 
-    .line 231
     invoke-static {v0, p1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 232
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string p1, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -821,7 +767,6 @@
 
     const-string/jumbo p0, "terminatePreloadedTa not supported"
 
-    .line 233
     invoke-static {v0, p0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -832,7 +777,6 @@
 .method public terminateWithPreloadedTa()Z
     .locals 2
 
-    .line 187
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -845,7 +789,6 @@
 
     const-string/jumbo v0, "terminateWithPreloadedTa not supported"
 
-    .line 188
     invoke-static {p0, v0}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -856,7 +799,6 @@
 .method public writeFile([BLjava/lang/String;)Z
     .locals 2
 
-    .line 147
     iget-object p0, p0, Lcom/samsung/android/authnrservice/service/SemAuthnrService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.samsung.android.permission.REQUEST_AUTHNR_SERVICE"
@@ -865,7 +807,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
     :try_start_0
     invoke-static {}, Lcom/samsung/android/authnrservice/service/FileOperation;->getInstance()Lcom/samsung/android/authnrservice/service/FileOperation;
 
@@ -882,7 +823,6 @@
     :catch_0
     move-exception p0
 
-    .line 151
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

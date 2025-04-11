@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;)V
     .locals 0
 
-    .line 615
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-direct {p0}, Landroid/os/ContainerStateReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "SdpManagerImpl"
 
-    .line 618
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,7 +43,6 @@
 
     const-string p1, "Workspace for user %d has been created"
 
-    .line 620
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -60,7 +57,6 @@
 
     invoke-static {p1}, Lcom/android/server/knox/dar/sdp/SDPLog;->i(Ljava/lang/String;)V
 
-    .line 622
     invoke-static {p2}, Lcom/samsung/android/knox/SemPersonaManager;->isDarDualEncryptionEnabled(I)Z
 
     move-result p1
@@ -69,7 +65,6 @@
 
     return-void
 
-    .line 627
     :cond_0
     iget-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
@@ -79,7 +74,6 @@
 
     monitor-enter p1
 
-    .line 628
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
@@ -89,7 +83,6 @@
 
     if-nez v0, :cond_1
 
-    .line 630
     new-instance p0, Ljava/lang/Exception;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -110,25 +103,21 @@
 
     invoke-static {p0}, Lcom/android/server/knox/dar/sdp/SDPLog;->e(Ljava/lang/Exception;)V
 
-    .line 632
     monitor-exit p1
 
     return-void
 
-    .line 634
     :cond_1
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 636
     iget-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {p1, p2}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$mgetUserInfo(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;I)Landroid/content/pm/UserInfo;
 
     move-result-object p1
 
-    .line 637
     invoke-static {p1}, Lcom/android/server/knox/dar/DarUtil;->isLegacyContainerUser(Landroid/content/pm/UserInfo;)Z
 
     move-result p1
@@ -137,7 +126,6 @@
 
     const-string p1, "On created - User %d workspace identified as old-fashioned"
 
-    .line 639
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -146,7 +134,6 @@
 
     move-result-object p2
 
-    .line 638
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -157,19 +144,16 @@
 
     const/4 p2, 0x0
 
-    .line 641
     invoke-virtual {p3, p1, p2}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 642
     invoke-static {p1}, Lcom/android/server/knox/dar/SecureUtil;->isEmpty(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 644
     iget-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {p1}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$fgetmSdpEngineDbLock(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;)Ljava/lang/Object;
@@ -178,7 +162,6 @@
 
     monitor-enter p1
 
-    .line 645
     :try_start_1
     invoke-virtual {v0}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->getFlag()I
 
@@ -186,10 +169,8 @@
 
     or-int/lit8 p2, p2, 0x1
 
-    .line 646
     invoke-virtual {v0, p2}, Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;->setFlag(I)V
 
-    .line 648
     iget-object p2, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {p2}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$fgetmSdpEngineMap(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;)Landroid/util/SparseArray;
@@ -202,7 +183,6 @@
 
     invoke-virtual {p2, p3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 649
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-static {p0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->-$$Nest$fgetmSdpEngineDb(Lcom/android/server/knox/dar/sdp/SdpManagerImpl;)Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;
@@ -211,7 +191,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;->-$$Nest$mstoreEngineInfoLocked(Lcom/android/server/knox/dar/sdp/SdpManagerImpl$SdpEngineDatabase;Lcom/samsung/android/knox/sdp/core/SdpEngineInfo;)I
 
-    .line 650
     monitor-exit p1
 
     goto :goto_0
@@ -232,7 +211,6 @@
     :catchall_1
     move-exception p0
 
-    .line 634
     :try_start_2
     monitor-exit p1
     :try_end_2
@@ -244,7 +222,6 @@
 .method public onContainerLocked(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 667
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,21 +240,18 @@
 
     invoke-static {p3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 668
     invoke-static {p2}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 669
     invoke-static {p2}, Lcom/samsung/android/knox/SemPersonaManager;->isDarDualEncryptionEnabled(I)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 670
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -294,7 +268,6 @@
 
     invoke-static {p3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 671
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-virtual {p0, p2}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->lockSdpIfRequired(I)V
@@ -306,7 +279,6 @@
 .method public onContainerShutdown(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 657
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -325,21 +297,18 @@
 
     invoke-static {p3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 658
     invoke-static {p2}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 659
     invoke-static {p2}, Lcom/samsung/android/knox/SemPersonaManager;->isDarDualEncryptionEnabled(I)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 660
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -356,7 +325,6 @@
 
     invoke-static {p1}, Lcom/android/server/knox/dar/sdp/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 661
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpManagerImpl$3;->this$0:Lcom/android/server/knox/dar/sdp/SdpManagerImpl;
 
     invoke-virtual {p0, p2}, Lcom/android/server/knox/dar/sdp/SdpManagerImpl;->lockSdpIfRequired(I)V
@@ -368,7 +336,6 @@
 .method public onContainerUnlocked(Landroid/content/Context;ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 677
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

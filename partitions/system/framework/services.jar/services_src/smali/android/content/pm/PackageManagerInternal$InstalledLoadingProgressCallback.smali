@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 2
 
-    .line 1183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1176
     new-instance v0, Landroid/content/pm/PackageManagerInternal$InstalledLoadingProgressCallback$LoadingProgressCallbackBinder;
 
     const/4 v1, 0x0
@@ -27,7 +25,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1185
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -36,7 +33,6 @@
 
     invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1187
     :cond_0
     new-instance v0, Landroid/os/HandlerExecutor;
 
@@ -52,7 +48,6 @@
 .method public final getBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 1195
     iget-object p0, p0, Landroid/content/pm/PackageManagerInternal$InstalledLoadingProgressCallback;->mBinder:Landroid/content/pm/PackageManagerInternal$InstalledLoadingProgressCallback$LoadingProgressCallbackBinder;
 
     return-object p0

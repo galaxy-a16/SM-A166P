@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/os/IDeviceIdleController;
 
     invoke-static {p1}, Lcom/android/server/chimera/SystemRepositoryDefault;->$r8$lambda$Dx3rfrNLhrFobhrcUbnsEEDaLSo(Landroid/os/IDeviceIdleController;)[Ljava/lang/String;

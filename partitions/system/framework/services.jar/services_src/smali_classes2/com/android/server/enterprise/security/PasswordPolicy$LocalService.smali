@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/security/PasswordPolicy;)V
     .locals 0
 
-    .line 3567
     iput-object p1, p0, Lcom/android/server/enterprise/security/PasswordPolicy$LocalService;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
 
     invoke-direct {p0}, Lcom/samsung/android/knox/localservice/PasswordPolicyInternal;-><init>()V
@@ -24,7 +23,6 @@
 .method public isChangeRequestedAsUser(I)I
     .locals 0
 
-    .line 3570
     iget-object p0, p0, Lcom/android/server/enterprise/security/PasswordPolicy$LocalService;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
 
     invoke-static {p0}, Lcom/android/server/enterprise/security/PasswordPolicy;->-$$Nest$fgetmPolicyCache(Lcom/android/server/enterprise/security/PasswordPolicy;)Lcom/android/server/enterprise/security/PasswordPolicyCache;

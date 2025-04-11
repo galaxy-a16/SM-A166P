@@ -17,10 +17,8 @@
 .method public constructor <init>(Ljava/util/Set;)V
     .locals 1
 
-    .line 526
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 521
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -29,13 +27,10 @@
 
     const/4 v0, 0x0
 
-    .line 523
     iput-object v0, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mStartEvent:Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
 
-    .line 524
     iput-object v0, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mLastVisibleEvent:Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
 
-    .line 527
     iput-object p1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mExemptPkgs:Ljava/util/Set;
 
     return-void
@@ -46,7 +41,6 @@
 .method public addEvent(Ljava/lang/String;ILjava/lang/String;ILcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;)V
     .locals 7
 
-    .line 559
     new-instance v6, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
 
     move-object v0, v6
@@ -67,7 +61,6 @@
 
     move p2, p1
 
-    .line 562
     :goto_0
     iget-object p3, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
@@ -77,7 +70,6 @@
 
     if-ge p2, p3, :cond_2
 
-    .line 563
     iget-object p3, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {p3, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -86,14 +78,12 @@
 
     check-cast p3, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
 
-    .line 564
     invoke-virtual {p3, v6}, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->equalsExceptDuration(Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;)Z
 
     move-result p4
 
     if-eqz p4, :cond_1
 
-    .line 565
     iget-object p0, v6, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mOpEvent:Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;
 
     iget-wide p1, p0, Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;->mNoteDuration:J
@@ -104,7 +94,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 566
     iput-object p0, p3, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mOpEvent:Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;
 
     :cond_0
@@ -115,7 +104,6 @@
 
     goto :goto_0
 
-    .line 572
     :cond_2
     iget-object p2, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
@@ -133,7 +121,6 @@
 
     goto :goto_2
 
-    .line 574
     :cond_3
     invoke-virtual {p0, v6}, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->isStart(Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;)Z
 
@@ -141,14 +128,12 @@
 
     if-eqz p2, :cond_4
 
-    .line 575
     iget-object p2, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1, v6}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     goto :goto_3
 
-    .line 578
     :cond_4
     :goto_1
     iget-object p2, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
@@ -159,7 +144,6 @@
 
     if-ge p1, p2, :cond_a
 
-    .line 579
     iget-object p2, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -168,7 +152,6 @@
 
     check-cast p2, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
 
-    .line 580
     invoke-virtual {p0, p2}, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->isStart(Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;)Z
 
     move-result p3
@@ -190,7 +173,6 @@
     :cond_5
     iget-object p3, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
-    .line 582
     invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
 
     move-result p3
@@ -205,7 +187,6 @@
 
     if-eqz p2, :cond_7
 
-    .line 583
     :cond_6
     iget-object p2, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
@@ -213,7 +194,6 @@
 
     goto :goto_3
 
-    .line 585
     :cond_7
     iget-object p2, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
@@ -225,7 +205,6 @@
 
     if-ne p1, p2, :cond_8
 
-    .line 586
     iget-object p1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -237,14 +216,12 @@
 
     goto :goto_1
 
-    .line 573
     :cond_9
     :goto_2
     iget-object p1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 591
     :cond_a
     :goto_3
     invoke-virtual {p0}, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->isComplete()Z
@@ -267,7 +244,6 @@
     :goto_4
     iput-object p1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mStartEvent:Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
 
-    .line 592
     invoke-virtual {p0}, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->isComplete()Z
 
     move-result p1
@@ -287,7 +263,6 @@
 .method public final getLastVisible()Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
     .locals 4
 
-    .line 548
     iget-object v0, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -299,7 +274,6 @@
     :goto_0
     if-lez v0, :cond_1
 
-    .line 549
     iget-object v1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -308,7 +282,6 @@
 
     check-cast v1, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
 
-    .line 550
     iget-object v2, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mExemptPkgs:Ljava/util/Set;
 
     iget-object v3, v1, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mPkgName:Ljava/lang/String;
@@ -335,7 +308,6 @@
 .method public final getStart()Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
     .locals 2
 
-    .line 543
     iget-object v0, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -384,7 +356,6 @@
 .method public isComplete()Z
     .locals 3
 
-    .line 531
     iget-object v0, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mChain:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -435,7 +406,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 596
     iget-object p0, p1, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mOpEvent:Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;
 
     iget p0, p0, Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;->mAttributionFlags:I
@@ -460,7 +430,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 601
     iget-object p0, p1, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mOpEvent:Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;
 
     iget p0, p0, Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;->mAttributionFlags:I
@@ -483,7 +452,6 @@
 .method public isStart(Ljava/lang/String;ILjava/lang/String;ILcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;)Z
     .locals 6
 
-    .line 536
     iget-object v0, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain;->mStartEvent:Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;
 
     if-eqz v0, :cond_1
@@ -503,7 +471,6 @@
 
     move-object v5, p5
 
-    .line 539
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->matches(Ljava/lang/String;ILjava/lang/String;ILcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;)Z
 
     move-result p0

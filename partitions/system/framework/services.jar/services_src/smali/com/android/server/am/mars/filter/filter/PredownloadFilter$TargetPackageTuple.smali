@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/am/mars/filter/filter/PredownloadFilter;ILjava/lang/String;)V
     .locals 0
 
-    .line 114
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;->this$0:Lcom/android/server/am/mars/filter/filter/PredownloadFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
     iput p2, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;->uid:I
 
-    .line 116
     iput-object p3, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;->pkgName:Ljava/lang/String;
 
     return-void
@@ -34,7 +31,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 121
     instance-of v0, p1, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;
 
     const/4 v1, 0x0
@@ -43,11 +39,9 @@
 
     return v1
 
-    .line 123
     :cond_0
     check-cast p1, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;->pkgName:Ljava/lang/String;
 
     if-eqz v0, :cond_2
@@ -58,7 +52,6 @@
 
     goto :goto_0
 
-    .line 126
     :cond_1
     iget p0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;->uid:I
 
@@ -82,7 +75,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 131
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,7 +95,6 @@
 
     move-result-object p0
 
-    .line 132
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result p0

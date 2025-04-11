@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/AppProfiler;Ljava/lang/String;)V
     .locals 0
 
-    .line 2293
     iput-object p1, p0, Lcom/android/server/am/AppProfiler$ProcessCpuThread;->this$0:Lcom/android/server/am/AppProfiler;
 
-    .line 2294
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public run()V
     .locals 8
 
-    .line 2299
     iget-object v0, p0, Lcom/android/server/am/AppProfiler$ProcessCpuThread;->this$0:Lcom/android/server/am/AppProfiler;
 
     invoke-static {v0}, Lcom/android/server/am/AppProfiler;->-$$Nest$fgetmProcessCpuTracker(Lcom/android/server/am/AppProfiler;)Lcom/android/internal/os/ProcessCpuTracker;
@@ -34,7 +31,6 @@
 
     monitor-enter v0
 
-    .line 2300
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/AppProfiler$ProcessCpuThread;->this$0:Lcom/android/server/am/AppProfiler;
 
@@ -44,7 +40,6 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 2301
     iget-object v1, p0, Lcom/android/server/am/AppProfiler$ProcessCpuThread;->this$0:Lcom/android/server/am/AppProfiler;
 
     invoke-static {v1}, Lcom/android/server/am/AppProfiler;->-$$Nest$fgetmProcessCpuTracker(Lcom/android/server/am/AppProfiler;)Lcom/android/internal/os/ProcessCpuTracker;
@@ -53,12 +48,10 @@
 
     invoke-virtual {v1}, Lcom/android/internal/os/ProcessCpuTracker;->init()V
 
-    .line 2302
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2306
     :goto_0
     :try_start_1
     monitor-enter p0
@@ -66,13 +59,11 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 2307
     :try_start_2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 2308
     iget-object v2, p0, Lcom/android/server/am/AppProfiler$ProcessCpuThread;->this$0:Lcom/android/server/am/AppProfiler;
 
     invoke-static {v2}, Lcom/android/server/am/AppProfiler;->-$$Nest$fgetmLastCpuTime(Lcom/android/server/am/AppProfiler;)Ljava/util/concurrent/atomic/AtomicLong;
@@ -89,7 +80,6 @@
 
     sub-long/2addr v2, v0
 
-    .line 2309
     iget-object v4, p0, Lcom/android/server/am/AppProfiler$ProcessCpuThread;->this$0:Lcom/android/server/am/AppProfiler;
 
     invoke-static {v4}, Lcom/android/server/am/AppProfiler;->-$$Nest$fgetmLastWriteTime(Lcom/android/server/am/AppProfiler;)J
@@ -115,7 +105,6 @@
 
     if-lez v0, :cond_1
 
-    .line 2316
     iget-object v0, p0, Lcom/android/server/am/AppProfiler$ProcessCpuThread;->this$0:Lcom/android/server/am/AppProfiler;
 
     invoke-static {v0}, Lcom/android/server/am/AppProfiler;->-$$Nest$fgetmProcessCpuMutexFree(Lcom/android/server/am/AppProfiler;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -126,10 +115,8 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 2317
     invoke-virtual {p0, v2, v3}, Ljava/lang/Object;->wait(J)V
 
-    .line 2319
     :cond_1
     monitor-exit p0
 
@@ -153,7 +140,6 @@
 
     goto :goto_2
 
-    .line 2322
     :catch_1
     :goto_1
     :try_start_4
@@ -170,7 +156,6 @@
 
     const-string v2, "Unexpected exception collecting process stats"
 
-    .line 2324
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -178,7 +163,6 @@
     :catchall_1
     move-exception p0
 
-    .line 2302
     :try_start_5
     monitor-exit v0
     :try_end_5

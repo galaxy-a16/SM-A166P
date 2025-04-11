@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/util/Pair;
 
     invoke-static {p1}, Lcom/android/server/credentials/ProviderGetSession;->$r8$lambda$eIaOfsuN2GrBZol9ejx414zNnuA(Landroid/util/Pair;)Z

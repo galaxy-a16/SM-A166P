@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$maddLocked(Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;Landroid/os/LocaleList;Landroid/os/LocaleList;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->addLocked(Landroid/os/LocaleList;Landroid/os/LocaleList;Z)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$mdumpLocked(Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->dumpLocked(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;Z)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$msetCallerLocked(Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->setCallerLocked(Ljava/lang/String;)V
 
     return-void
@@ -44,24 +41,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 227
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 229
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mCallerInfo:Ljava/lang/ThreadLocal;
 
-    .line 230
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mHistoryList:Ljava/util/List;
 
-    .line 231
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "yyyy/MM/dd HH:mm:ss.SSS zzz"
@@ -70,7 +63,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mDateFormat:Ljava/text/SimpleDateFormat;
 
-    .line 233
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
@@ -83,7 +75,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;-><init>()V
 
     return-void
@@ -94,19 +85,16 @@
 .method public final addLocked(Landroid/os/LocaleList;Landroid/os/LocaleList;Z)V
     .locals 2
 
-    .line 275
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 276
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     if-nez p3, :cond_0
 
-    .line 277
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -115,7 +103,6 @@
 
     return-void
 
-    .line 280
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mCallerInfo:Ljava/lang/ThreadLocal;
 
@@ -149,7 +136,6 @@
 
     move-result-object p1
 
-    .line 283
     iget-object p2, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mHistoryList:Ljava/util/List;
 
     new-instance p3, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory$LocaleChangedEntry;
@@ -158,7 +144,6 @@
 
     invoke-interface {p2, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 285
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mHistoryList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -169,7 +154,6 @@
 
     if-le p1, p2, :cond_1
 
-    .line 286
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mHistoryList:Ljava/util/List;
 
     const/4 p1, 0x0
@@ -183,23 +167,19 @@
 .method public final dumpLocked(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;Z)V
     .locals 7
 
-    .line 240
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     if-eqz p3, :cond_0
 
     const-string p1, "-------------------------------------------------------------------------------"
 
-    .line 242
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_0
     const-string p1, "ACTIVITY MANAGER LOCALE CHANGED HISTORY"
 
-    .line 244
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 246
     iget-object p1, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mHistoryList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -210,7 +190,6 @@
 
     const-string p0, " (nothing) "
 
-    .line 247
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto/16 :goto_3
@@ -220,7 +199,6 @@
 
     move p3, p1
 
-    .line 249
     :goto_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mHistoryList:Ljava/util/List;
 
@@ -230,7 +208,6 @@
 
     if-ge p3, v0, :cond_4
 
-    .line 250
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mHistoryList:Ljava/util/List;
 
     invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -241,7 +218,6 @@
 
     add-int/lit8 p3, p3, 0x1
 
-    .line 252
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -258,31 +234,26 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 254
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory$LocaleChangedEntry;->message:Ljava/lang/String;
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, " at "
 
-    .line 255
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 257
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mDateFormat:Ljava/text/SimpleDateFormat;
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory$LocaleChangedEntry;->timeZone:Ljava/util/TimeZone;
 
     invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 258
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mDate:Ljava/util/Date;
 
     iget-wide v2, v0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory$LocaleChangedEntry;->systemTimeMillis:J
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Date;->setTime(J)V
 
-    .line 259
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mDateFormat:Ljava/text/SimpleDateFormat;
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mDate:Ljava/util/Date;
@@ -293,7 +264,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 262
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory$LocaleChangedEntry;->callstack:Ljava/lang/Throwable;
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
@@ -313,7 +283,6 @@
 
     if-nez v2, :cond_2
 
-    .line 264
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -340,7 +309,6 @@
 
     goto :goto_1
 
-    .line 269
     :cond_3
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
@@ -354,7 +322,6 @@
 .method public final setCallerLocked(Ljava/lang/String;)V
     .locals 0
 
-    .line 236
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerServiceExt$LocaleChangedHistory;->mCallerInfo:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p0, p1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V

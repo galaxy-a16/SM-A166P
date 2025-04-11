@@ -13,10 +13,8 @@
 
     const/4 v0, 0x0
 
-    .line 215
     invoke-direct {p0, p1, v0}, Lcom/android/server/firewall/StringFilter;-><init>(Lcom/android/server/firewall/StringFilter$ValueProvider;Lcom/android/server/firewall/StringFilter-IA;)V
 
-    .line 216
     invoke-static {p2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -31,10 +29,8 @@
 
     const/4 v0, 0x0
 
-    .line 220
     invoke-direct {p0, p1, v0}, Lcom/android/server/firewall/StringFilter;-><init>(Lcom/android/server/firewall/StringFilter$ValueProvider;Lcom/android/server/firewall/StringFilter-IA;)V
 
-    .line 221
     iput-boolean p2, p0, Lcom/android/server/firewall/StringFilter$IsNullFilter;->mIsNull:Z
 
     return-void
@@ -58,7 +54,6 @@
     :cond_0
     move p1, v1
 
-    .line 226
     :goto_0
     iget-boolean p0, p0, Lcom/android/server/firewall/StringFilter$IsNullFilter;->mIsNull:Z
 

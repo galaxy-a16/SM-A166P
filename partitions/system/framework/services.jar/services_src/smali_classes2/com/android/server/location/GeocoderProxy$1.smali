@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/server/location/GeocoderProxy;DDILandroid/location/GeocoderParams;Landroid/location/IGeocodeListener;)V
     .locals 0
 
-    .line 103
     iput-object p1, p0, Lcom/android/server/location/GeocoderProxy$1;->this$0:Lcom/android/server/location/GeocoderProxy;
 
     iput-wide p2, p0, Lcom/android/server/location/GeocoderProxy$1;->val$latitude:D
@@ -47,7 +46,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 113
     :try_start_0
     iget-object p0, p0, Lcom/android/server/location/GeocoderProxy$1;->val$listener:Landroid/location/IGeocodeListener;
 
@@ -70,12 +68,10 @@
 .method public run(Landroid/os/IBinder;)V
     .locals 8
 
-    .line 106
     invoke-static {p1}, Landroid/location/IGeocodeProvider$Stub;->asInterface(Landroid/os/IBinder;)Landroid/location/IGeocodeProvider;
 
     move-result-object v0
 
-    .line 107
     iget-wide v1, p0, Lcom/android/server/location/GeocoderProxy$1;->val$latitude:D
 
     iget-wide v3, p0, Lcom/android/server/location/GeocoderProxy$1;->val$longitude:D

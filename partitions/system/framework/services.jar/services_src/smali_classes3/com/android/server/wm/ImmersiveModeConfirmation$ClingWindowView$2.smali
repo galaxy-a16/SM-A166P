@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;)V
     .locals 0
 
-    .line 364
     iput-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$2;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 
     new-array p1, p1, [I
 
-    .line 365
     iput-object p1, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$2;->mTmpInt2:[I
 
     return-void
@@ -36,7 +34,6 @@
 .method public onComputeInternalInsets(Landroid/view/ViewTreeObserver$InternalInsetsInfo;)V
     .locals 5
 
-    .line 371
     iget-object v0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$2;->this$1:Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-static {v0}, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;->-$$Nest$fgetmClingLayout(Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView;)Landroid/view/ViewGroup;
@@ -49,10 +46,8 @@
 
     const/4 v0, 0x3
 
-    .line 372
     invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
 
-    .line 374
     iget-object p1, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
 
     iget-object v0, p0, Lcom/android/server/wm/ImmersiveModeConfirmation$ClingWindowView$2;->mTmpInt2:[I
@@ -71,7 +66,6 @@
 
     move-result-object v3
 
-    .line 377
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v3
@@ -88,14 +82,12 @@
 
     move-result-object p0
 
-    .line 378
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result p0
 
     add-int/2addr v2, p0
 
-    .line 374
     invoke-virtual {p1, v1, v0, v3, v2}, Landroid/graphics/Region;->set(IIII)Z
 
     return-void

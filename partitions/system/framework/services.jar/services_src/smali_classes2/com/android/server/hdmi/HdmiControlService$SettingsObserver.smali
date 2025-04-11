@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1166
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
-    .line 1167
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -25,12 +23,10 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 3
 
-    .line 1173
     invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1174
     iget-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     const/4 v0, 0x1
@@ -39,7 +35,6 @@
 
     move-result p2
 
-    .line 1175
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -102,7 +97,6 @@
 
     goto :goto_2
 
-    .line 1180
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -120,7 +114,6 @@
 
     goto :goto_2
 
-    .line 1177
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -128,7 +121,6 @@
 
     goto :goto_2
 
-    .line 1183
     :pswitch_2
     iget-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -138,7 +130,6 @@
 
     move-result-object p1
 
-    .line 1184
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$msetDisplayName(Lcom/android/server/hdmi/HdmiControlService;Ljava/lang/String;)V

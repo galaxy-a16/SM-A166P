@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRegisteredFWKClientMap(Lcom/android/server/spay/PaymentManagerService;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$sfgetmContext()Landroid/content/Context;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -41,7 +39,6 @@
 
     const/4 v1, 0x1
 
-    .line 36
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -52,7 +49,6 @@
 
     const-string/jumbo v0, "ro.csc.countryiso_code"
 
-    .line 37
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -65,17 +61,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 8
 
-    .line 64
     invoke-direct {p0}, Landroid/spay/IPaymentManager$Stub;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
-    .line 65
     sget-boolean v0, Lcom/android/server/spay/PaymentManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -86,90 +79,71 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     :cond_0
     sput-object p1, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
 
-    .line 68
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 69
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.PACKAGE_REPLACED"
 
-    .line 70
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo v1, "package"
 
-    .line 71
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     const-string v1, "com.samsung.android.spayfw"
 
     const/4 v2, 0x0
 
-    .line 72
     invoke-virtual {v0, v1, v2}, Landroid/content/IntentFilter;->addDataSchemeSpecificPart(Ljava/lang/String;I)V
 
     const-string v3, "com.samsung.android.spay"
 
-    .line 73
     invoke-virtual {v0, v3, v2}, Landroid/content/IntentFilter;->addDataSchemeSpecificPart(Ljava/lang/String;I)V
 
     const-string v4, "com.samsung.android.spaymini"
 
-    .line 74
     invoke-virtual {v0, v4, v2}, Landroid/content/IntentFilter;->addDataSchemeSpecificPart(Ljava/lang/String;I)V
 
     const-string v5, "com.samsung.android.samsungpay.gear"
 
-    .line 75
     invoke-virtual {v0, v5, v2}, Landroid/content/IntentFilter;->addDataSchemeSpecificPart(Ljava/lang/String;I)V
 
     const-string v6, "com.samsung.android.rajaampat"
 
-    .line 76
     invoke-virtual {v0, v6, v2}, Landroid/content/IntentFilter;->addDataSchemeSpecificPart(Ljava/lang/String;I)V
 
     const/16 v2, 0x3e8
 
-    .line 78
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 79
     new-instance v2, Lcom/android/server/spay/UpdateReceiver;
 
     invoke-direct {v2}, Lcom/android/server/spay/UpdateReceiver;-><init>()V
 
-    .line 80
     sget-object v7, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 82
     invoke-virtual {p0, p1}, Lcom/android/server/spay/PaymentManagerService;->disableSpay(Landroid/content/Context;)V
 
     const/4 p0, 0x1
 
-    .line 83
     invoke-static {p1, v3, p0}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;Z)Z
 
-    .line 84
     invoke-static {p1, v1, p0}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;Z)Z
 
-    .line 85
     invoke-static {p1, v4, p0}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;Z)Z
 
-    .line 86
     invoke-static {p1, v5, p0}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;Z)Z
 
-    .line 87
     invoke-static {p1, v6, p0}, Lcom/android/server/spay/Utils;->backgroundWhitelist(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     return-void
@@ -178,7 +152,6 @@
 .method public static checkCallerPermissionFor(Ljava/lang/String;)I
     .locals 4
 
-    .line 51
     sget-object v0, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -199,14 +172,12 @@
 
     const-string p0, "PaymentManagerService() - Valid Caller"
 
-    .line 57
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 52
     :cond_0
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -258,10 +229,8 @@
 
     const-string p0, "PaymentManagerService() - Invalid Caller"
 
-    .line 54
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     throw v0
 .end method
 
@@ -272,7 +241,6 @@
 
     const-string p0, "KR"
 
-    .line 242
     sget-object v0, Lcom/android/server/spay/PaymentManagerService;->COUNTRYISO_CODE:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -281,19 +249,16 @@
 
     if-nez p0, :cond_0
 
-    .line 243
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 244
     new-instance p0, Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     sget-object v2, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v2}, Lcom/samsung/android/knox/EnterpriseDeviceManager;-><init>(Landroid/content/Context;)V
 
-    .line 245
     invoke-virtual {p0}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getApplicationPolicy()Lcom/samsung/android/knox/application/ApplicationPolicy;
 
     move-result-object p0
@@ -302,7 +267,6 @@
 
     invoke-virtual {p0, v2}, Lcom/samsung/android/knox/application/ApplicationPolicy;->setApplicationUninstallationDisabled(Ljava/lang/String;)V
 
-    .line 246
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :cond_0
@@ -318,14 +282,12 @@
 
     const-string v1, "com.samsung.android.spay"
 
-    .line 92
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
 
     const/4 v2, 0x1
 
-    .line 97
     :try_start_0
     invoke-virtual {p1, p0, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -335,7 +297,6 @@
 
     return-void
 
-    .line 99
     :cond_0
     invoke-virtual {p1, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -345,18 +306,15 @@
 
     return-void
 
-    .line 101
     :cond_1
     invoke-virtual {p1, v1}, Landroid/content/pm/PackageManager;->getApplicationEnabledSetting(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 102
     invoke-virtual {p1, p0}, Landroid/content/pm/PackageManager;->getApplicationEnabledSetting(Ljava/lang/String;)I
 
     move-result p0
 
-    .line 104
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -387,7 +345,6 @@
 
     const/4 p0, 0x0
 
-    .line 107
     invoke-virtual {p1, v1, v3, p0}, Landroid/content/pm/PackageManager;->setApplicationEnabledSetting(Ljava/lang/String;II)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
@@ -398,7 +355,6 @@
     :catch_0
     const-string/jumbo p0, "updater /spay app is not installed"
 
-    .line 112
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -406,7 +362,6 @@
     :catch_1
     move-exception p0
 
-    .line 110
     invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     :cond_2
@@ -419,12 +374,10 @@
 
     const-string p0, "getMeasurementFile"
 
-    .line 237
     invoke-static {p0}, Lcom/android/server/spay/PaymentManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
     const-string p0, "/system/tima_measurement_info"
 
-    .line 238
     invoke-static {p0}, Lcom/android/server/spay/Utils;->readFile(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -435,7 +388,6 @@
 .method public final getPackageNameFromPid(II)Ljava/lang/String;
     .locals 4
 
-    .line 252
     sget-object p0, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
 
     const-string v0, "activity"
@@ -446,7 +398,6 @@
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 253
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v0
@@ -457,7 +408,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 254
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object p0
@@ -479,12 +429,10 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 255
     iget v3, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v3, p2, :cond_0
 
-    .line 256
     iget-object p0, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     move-object v2, p0
@@ -494,7 +442,6 @@
     :cond_1
     const-string p0, "Error: am.getRunningAppProcesses() is null"
 
-    .line 261
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
@@ -503,10 +450,8 @@
 
     const-string p0, "Error: can\'t find processname for PID"
 
-    .line 265
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -520,25 +465,20 @@
 
     const-string/jumbo v0, "registerSPayFW"
 
-    .line 191
     invoke-static {v0}, Lcom/android/server/spay/PaymentManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
 
-    .line 193
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 194
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v6
 
-    .line 195
     invoke-virtual {p0, v5, v6}, Lcom/android/server/spay/PaymentManagerService;->getPackageNameFromPid(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 196
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -569,7 +509,6 @@
 
     invoke-static {v8, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     iget-object v1, p0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -578,7 +517,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 198
     iget-object v1, p0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -587,17 +525,14 @@
 
     check-cast v1, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
-    .line 199
     iget v2, v1, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;->mPid:I
 
     if-eq v6, v2, :cond_0
 
     const-string v2, "Registered Client Died. Need to Rebind"
 
-    .line 201
     invoke-static {v8, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     iget-object v1, v1, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;->mBinderDeathReceiver:Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;
 
     invoke-static {v1}, Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;->-$$Nest$mdeleteClient(Lcom/android/server/spay/PaymentManagerService$FrameworkClient$ClientBinderDeathReceiver;)V
@@ -607,14 +542,12 @@
     :cond_0
     const-string p0, "Error: Framework App is already registered. Re-Registration not allowed"
 
-    .line 204
     invoke-static {v8, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 209
     :cond_1
     :goto_0
     new-instance v9, Landroid/spay/PaymentTZServiceCommnInfo;
@@ -623,10 +556,8 @@
 
     const/16 v1, 0x9
 
-    .line 210
     iput v1, v9, Landroid/spay/PaymentTZServiceCommnInfo;->mServiceVersion:I
 
-    .line 212
     iget-object v1, p1, Landroid/spay/PaymentTZServiceConfig;->mTAConfigs:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -650,7 +581,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 213
     new-instance v3, Lcom/android/server/spay/TAController;
 
     sget-object v4, Lcom/android/server/spay/PaymentManagerService;->mContext:Landroid/content/Context;
@@ -673,7 +603,6 @@
 
     invoke-direct {v3, v4, v7, v10}, Lcom/android/server/spay/TAController;-><init>(Landroid/content/Context;ILandroid/spay/PaymentTZServiceConfig$TAConfig;)V
 
-    .line 214
     iget-object v4, v9, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -686,11 +615,9 @@
 
     goto :goto_1
 
-    .line 217
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/spay/PaymentManagerService;->disablePaymentFrameworkUpdateRemoval()V
 
-    .line 218
     new-instance v10, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;
 
     move-object v1, v10
@@ -705,12 +632,10 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/spay/PaymentManagerService$FrameworkClient;-><init>(Lcom/android/server/spay/PaymentManagerService;Landroid/spay/PaymentTZServiceConfig;Landroid/spay/PaymentTZServiceCommnInfo;IILjava/lang/String;)V
 
-    .line 219
     iget-object p1, p0, Lcom/android/server/spay/PaymentManagerService;->mRegisteredFWKClientMap:Ljava/util/Map;
 
     invoke-interface {p1, v0, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 220
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

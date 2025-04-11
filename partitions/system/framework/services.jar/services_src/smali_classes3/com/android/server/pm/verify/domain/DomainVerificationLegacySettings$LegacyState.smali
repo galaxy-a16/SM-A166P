@@ -25,12 +25,10 @@
 .method public addUserState(II)V
     .locals 2
 
-    .line 213
     iget-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->mUserStates:Landroid/util/SparseIntArray;
 
     if-nez v0, :cond_0
 
-    .line 214
     new-instance v0, Landroid/util/SparseIntArray;
 
     const/4 v1, 0x1
@@ -39,7 +37,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->mUserStates:Landroid/util/SparseIntArray;
 
-    .line 216
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->mUserStates:Landroid/util/SparseIntArray;
 
@@ -51,7 +48,6 @@
 .method public getInfo()Landroid/content/pm/IntentFilterVerificationInfo;
     .locals 0
 
-    .line 195
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->mInfo:Landroid/content/pm/IntentFilterVerificationInfo;
 
     return-object p0
@@ -60,7 +56,6 @@
 .method public getUserState(I)I
     .locals 1
 
-    .line 199
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->mUserStates:Landroid/util/SparseIntArray;
 
     const/4 v0, 0x0
@@ -75,7 +70,6 @@
 .method public getUserStates()Landroid/util/SparseIntArray;
     .locals 0
 
-    .line 205
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->mUserStates:Landroid/util/SparseIntArray;
 
     return-object p0
@@ -84,7 +78,6 @@
 .method public isAttached()Z
     .locals 0
 
-    .line 220
     iget-boolean p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->attached:Z
 
     return p0
@@ -95,7 +88,6 @@
 
     const/4 v0, 0x1
 
-    .line 224
     iput-boolean v0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->attached:Z
 
     return-void
@@ -104,7 +96,6 @@
 .method public setInfo(Landroid/content/pm/IntentFilterVerificationInfo;)V
     .locals 0
 
-    .line 209
     iput-object p1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationLegacySettings$LegacyState;->mInfo:Landroid/content/pm/IntentFilterVerificationInfo;
 
     return-void

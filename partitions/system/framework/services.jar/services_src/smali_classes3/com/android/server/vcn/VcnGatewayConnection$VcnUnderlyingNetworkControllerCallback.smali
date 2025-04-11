@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;)V
     .locals 0
 
-    .line 910
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/vcn/VcnGatewayConnection;Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;-><init>(Lcom/android/server/vcn/VcnGatewayConnection;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onSelectedUnderlyingNetworkChanged(Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;)V
     .locals 5
 
-    .line 916
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-static {v0}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$fgetmVcnContext(Lcom/android/server/vcn/VcnGatewayConnection;)Lcom/android/server/vcn/VcnContext;
@@ -45,7 +42,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/vcn/VcnContext;->ensureRunningOnLooperThread()V
 
-    .line 918
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,7 +60,6 @@
 
     goto :goto_0
 
-    .line 920
     :cond_0
     iget-object v3, p1, Lcom/android/server/vcn/routeselection/UnderlyingNetworkRecord;->network:Landroid/net/Network;
 
@@ -75,7 +70,6 @@
 
     move-result-object v1
 
-    .line 918
     invoke-static {v0, v1}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mlogInfo(Lcom/android/server/vcn/VcnGatewayConnection;Ljava/lang/String;)V
 
     const/high16 v0, -0x80000000
@@ -84,7 +78,6 @@
 
     if-nez p1, :cond_2
 
-    .line 928
     iget-object v3, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-static {v3}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$fgetmDeps(Lcom/android/server/vcn/VcnGatewayConnection;)Lcom/android/server/vcn/VcnGatewayConnection$Dependencies;
@@ -103,7 +96,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 929
     iget-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     new-instance v3, Lcom/android/server/vcn/VcnGatewayConnection$EventUnderlyingNetworkChangedInfo;
@@ -112,7 +104,6 @@
 
     invoke-static {p1, v1, v0, v3}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$msendMessageAndAcquireWakeLock(Lcom/android/server/vcn/VcnGatewayConnection;IILcom/android/server/vcn/VcnGatewayConnection$EventInfo;)V
 
-    .line 933
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     const-string p1, "Underlying Network lost"
@@ -123,7 +114,6 @@
 
     return-void
 
-    .line 938
     :cond_1
     iget-object v2, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
@@ -131,13 +121,11 @@
 
     goto :goto_1
 
-    .line 942
     :cond_2
     iget-object v2, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 
     invoke-static {v2}, Lcom/android/server/vcn/VcnGatewayConnection;->-$$Nest$mcancelDisconnectRequestAlarm(Lcom/android/server/vcn/VcnGatewayConnection;)V
 
-    .line 945
     :goto_1
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnUnderlyingNetworkControllerCallback;->this$0:Lcom/android/server/vcn/VcnGatewayConnection;
 

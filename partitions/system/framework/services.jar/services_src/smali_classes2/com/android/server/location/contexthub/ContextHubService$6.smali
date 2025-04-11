@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubService;)V
     .locals 0
 
-    .line 519
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubService$6;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.bluetooth.adapter.action.STATE_CHANGED"
 
-    .line 522
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 523
     iget-object p0, p0, Lcom/android/server/location/contexthub/ContextHubService$6;->this$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     const/4 p1, 0x0

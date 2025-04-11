@@ -11,7 +11,6 @@
 
     move-wide/from16 v7, p7
 
-    .line 47
     invoke-static {p2, p3, v7, v8}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
@@ -36,7 +35,6 @@
 .method public final isBetterBreakPosition(Ljava/util/List;FI)Z
     .locals 3
 
-    .line 147
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p0
@@ -51,12 +49,10 @@
 
     check-cast p0, Landroid/os/vibrator/RampSegment;
 
-    .line 148
     invoke-virtual {p0}, Landroid/os/vibrator/RampSegment;->getEndAmplitude()F
 
     move-result p0
 
-    .line 149
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -76,7 +72,6 @@
 
     return v0
 
-    .line 159
     :cond_1
     div-int/lit8 p3, p3, 0x2
 
@@ -105,10 +100,8 @@
 
     const-wide/32 v1, 0x800000
 
-    .line 53
     invoke-static {v1, v2, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 57
     :try_start_0
     iget-object v0, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
@@ -120,7 +113,6 @@
 
     move-result v0
 
-    .line 58
     iget-object v3, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
     iget v4, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->segmentIndex:I
@@ -137,7 +129,6 @@
 
     move-result-object v0
 
-    .line 61
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -146,7 +137,6 @@
 
     const-string v0, "VibrationThread"
 
-    .line 62
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -157,7 +147,6 @@
 
     iget-object v4, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->effect:Landroid/os/VibrationEffect$Composed;
 
-    .line 63
     invoke-virtual {v4}, Landroid/os/VibrationEffect$Composed;->getSegments()Ljava/util/List;
 
     move-result-object v4
@@ -174,24 +163,20 @@
 
     move-result-object v3
 
-    .line 62
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 65
     invoke-virtual {p0, v0}, Lcom/android/server/vibrator/AbstractVibratorStep;->nextSteps(I)Ljava/util/List;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 80
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
 
-    .line 72
     :cond_1
     :try_start_1
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -206,7 +191,6 @@
 
     check-cast v3, [Landroid/os/vibrator/RampSegment;
 
-    .line 73
     iget-object v4, p0, Lcom/android/server/vibrator/AbstractVibratorStep;->controller:Lcom/android/server/vibrator/VibratorController;
 
     invoke-virtual {p0}, Lcom/android/server/vibrator/Step;->getVibration()Lcom/android/server/vibrator/HalVibration;
@@ -219,10 +203,8 @@
 
     move-result-wide v4
 
-    .line 74
     invoke-virtual {p0, v4, v5}, Lcom/android/server/vibrator/AbstractVibratorStep;->handleVibratorOnResult(J)J
 
-    .line 75
     invoke-virtual {p0}, Lcom/android/server/vibrator/Step;->getVibration()Lcom/android/server/vibrator/HalVibration;
 
     move-result-object v6
@@ -231,7 +213,6 @@
 
     invoke-virtual {v6, v4, v5, v3}, Lcom/android/server/vibrator/VibrationStats;->reportComposePwle(J[Landroid/os/vibrator/RampSegment;)V
 
-    .line 78
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -242,7 +223,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 80
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-object p0
@@ -252,19 +232,16 @@
 
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 81
     throw p0
 .end method
 
 .method public final unrollRampSegments(Landroid/os/VibrationEffect$Composed;II)Ljava/util/List;
     .locals 7
 
-    .line 100
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 104
     invoke-virtual {p1}, Landroid/os/VibrationEffect$Composed;->getSegments()Ljava/util/List;
 
     move-result-object v1
@@ -273,7 +250,6 @@
 
     move-result v1
 
-    .line 105
     invoke-virtual {p1}, Landroid/os/VibrationEffect$Composed;->getRepeatIndex()I
 
     move-result v2
@@ -282,7 +258,6 @@
 
     move v4, p3
 
-    .line 109
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -296,7 +271,6 @@
 
     move p2, v2
 
-    .line 118
     :cond_0
     invoke-virtual {p1}, Landroid/os/VibrationEffect$Composed;->getSegments()Ljava/util/List;
 
@@ -308,30 +282,24 @@
 
     check-cast v5, Landroid/os/vibrator/VibrationEffectSegment;
 
-    .line 119
     instance-of v6, v5, Landroid/os/vibrator/RampSegment;
 
     if-eqz v6, :cond_2
 
-    .line 120
     check-cast v5, Landroid/os/vibrator/RampSegment;
 
-    .line 121
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 123
     invoke-virtual {p0, v0, v3, p3}, Lcom/android/server/vibrator/ComposePwleVibratorStep;->isBetterBreakPosition(Ljava/util/List;FI)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 125
     invoke-virtual {v5}, Landroid/os/vibrator/RampSegment;->getEndAmplitude()F
 
     move-result v3
 
-    .line 126
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v4
@@ -341,7 +309,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -351,7 +318,6 @@
 
     const/4 p0, 0x0
 
-    .line 136
     invoke-interface {v0, p0, v4}, Ljava/util/List;->subList(II)Ljava/util/List;
 
     move-result-object v0

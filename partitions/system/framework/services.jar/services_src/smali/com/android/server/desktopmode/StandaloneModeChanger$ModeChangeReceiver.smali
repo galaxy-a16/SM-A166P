@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$mregister(Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;->register()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$munregister(Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;->unregister()V
 
     return-void
@@ -29,7 +27,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/StandaloneModeChanger;)V
     .locals 0
 
-    .line 673
     iput-object p1, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +37,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/desktopmode/StandaloneModeChanger;Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;-><init>(Lcom/android/server/desktopmode/StandaloneModeChanger;)V
 
     return-void
@@ -51,12 +47,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 689
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 690
     sget-boolean p2, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz p2, :cond_0
@@ -84,21 +78,18 @@
     :cond_0
     const-string p2, "com.samsung.android.intent.action.WALLPAPER_ENGINE_SHOWN"
 
-    .line 691
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 692
     iget-object p1, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     const/4 p2, 0x1
 
     invoke-static {p1, p2}, Lcom/android/server/desktopmode/StandaloneModeChanger;->-$$Nest$fputmWallpaperShown(Lcom/android/server/desktopmode/StandaloneModeChanger;Z)V
 
-    .line 693
     iget-object p0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/StandaloneModeChanger;->-$$Nest$mscheduleStopLoadingScreenIfPossible(Lcom/android/server/desktopmode/StandaloneModeChanger;)V
@@ -108,14 +99,12 @@
     :cond_1
     const-string p2, "android.intent.action.TIME_TICK"
 
-    .line 694
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 695
     invoke-static {}, Landroid/os/Process;->getFreeMemory()J
 
     move-result-wide p1
@@ -126,7 +115,6 @@
 
     if-gez v0, :cond_3
 
-    .line 697
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_2
@@ -159,7 +147,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 699
     :cond_2
     iget-object p0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
@@ -177,28 +164,23 @@
 .method public final register()V
     .locals 6
 
-    .line 675
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 676
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->FEATURE_STANDALONE_MODE_WALLPAPER:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "com.samsung.android.intent.action.WALLPAPER_ENGINE_SHOWN"
 
-    .line 677
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     :cond_0
     const-string v0, "android.intent.action.TIME_TICK"
 
-    .line 679
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 680
     iget-object v0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     iget-object v0, v0, Lcom/android/server/desktopmode/ModeChanger;->mContext:Landroid/content/Context;
@@ -219,7 +201,6 @@
 .method public final unregister()V
     .locals 1
 
-    .line 684
     iget-object v0, p0, Lcom/android/server/desktopmode/StandaloneModeChanger$ModeChangeReceiver;->this$0:Lcom/android/server/desktopmode/StandaloneModeChanger;
 
     iget-object v0, v0, Lcom/android/server/desktopmode/ModeChanger;->mContext:Landroid/content/Context;

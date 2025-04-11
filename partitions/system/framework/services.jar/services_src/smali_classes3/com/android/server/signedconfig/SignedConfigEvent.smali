@@ -19,26 +19,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 25
     iput v0, p0, Lcom/android/server/signedconfig/SignedConfigEvent;->type:I
 
-    .line 26
     iput v0, p0, Lcom/android/server/signedconfig/SignedConfigEvent;->status:I
 
-    .line 27
     iput v0, p0, Lcom/android/server/signedconfig/SignedConfigEvent;->version:I
 
     const/4 v1, 0x0
 
-    .line 28
     iput-object v1, p0, Lcom/android/server/signedconfig/SignedConfigEvent;->fromPackage:Ljava/lang/String;
 
-    .line 29
     iput v0, p0, Lcom/android/server/signedconfig/SignedConfigEvent;->verifiedWith:I
 
     return-void
@@ -51,7 +45,6 @@
 
     const/16 v0, 0x7b
 
-    .line 35
     iget v1, p0, Lcom/android/server/signedconfig/SignedConfigEvent;->type:I
 
     iget v2, p0, Lcom/android/server/signedconfig/SignedConfigEvent;->status:I

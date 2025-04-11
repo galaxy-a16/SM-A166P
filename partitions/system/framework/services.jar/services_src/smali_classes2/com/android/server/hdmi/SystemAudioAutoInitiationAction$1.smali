@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;)V
     .locals 0
 
-    .line 59
     iput-object p1, p0, Lcom/android/server/hdmi/SystemAudioAutoInitiationAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +28,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/hdmi/SystemAudioAutoInitiationAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;
 
     invoke-static {p0}, Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;->-$$Nest$mhandleSystemAudioModeStatusTimeout(Lcom/android/server/hdmi/SystemAudioAutoInitiationAction;)V

@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 2610
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -24,12 +23,10 @@
 .method public static add(Ljava/lang/String;)V
     .locals 4
 
-    .line 2633
     sget-object v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapLogger;->mHistory:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 2634
     :try_start_0
     new-instance v1, Ljava/text/SimpleDateFormat;
 
@@ -45,7 +42,6 @@
 
     move-result-object v1
 
-    .line 2635
     sget-object v2, Lcom/android/server/chimera/PerProcessNandswap$NandswapLogger;->mHistory:Ljava/util/ArrayList;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -66,7 +62,6 @@
 
     invoke-virtual {v2, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2637
     sget-object p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapLogger;->mHistory:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -77,14 +72,12 @@
 
     if-le p0, v1, :cond_0
 
-    .line 2638
     sget-object p0, Lcom/android/server/chimera/PerProcessNandswap$NandswapLogger;->mHistory:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2640
     :cond_0
     monitor-exit v0
 
@@ -103,12 +96,10 @@
 .method public static print(Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 2644
     sget-object v0, Lcom/android/server/chimera/PerProcessNandswap$NandswapLogger;->mHistory:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 2645
     :try_start_0
     sget-object v1, Lcom/android/server/chimera/PerProcessNandswap$NandswapLogger;->mHistory:Ljava/util/ArrayList;
 
@@ -129,12 +120,10 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 2646
     invoke-virtual {p0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2648
     :cond_0
     monitor-exit v0
 
@@ -153,7 +142,6 @@
 .method public static saveSwapOutLog(Ljava/lang/String;IIIJJJ)V
     .locals 2
 
-    .line 2628
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLimitedVolumeForOverheat(Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;)F
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mLimitedVolumeForOverheat:F
 
     return p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmState(Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mState:Z
 
     return p0
@@ -37,25 +35,20 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/MultiSoundManager;IZ)V
     .locals 0
 
-    .line 1247
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 1244
     iput p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mLimitedVolumeForOverheat:F
 
     const/4 p1, 0x0
 
-    .line 1245
     iput p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mCurDevice:I
 
-    .line 1248
     iput p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mUid:I
 
-    .line 1249
     iput-boolean p3, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mState:Z
 
     return-void
@@ -68,7 +61,6 @@
 
     const v0, 0x186a0
 
-    .line 1265
     rem-int/2addr p1, v0
 
     iget p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mUid:I
@@ -91,7 +83,6 @@
 .method public needLimitVolumeForApp(I)Z
     .locals 1
 
-    .line 1297
     iget-boolean v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mState:Z
 
     if-eqz v0, :cond_0
@@ -116,7 +107,6 @@
 .method public setDevice(I)V
     .locals 1
 
-    .line 1269
     iget v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mCurDevice:I
 
     if-eq v0, p1, :cond_0
@@ -131,10 +121,8 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 1271
     iput p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mCurDevice:I
 
-    .line 1272
     invoke-virtual {p0}, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->setLimitedVolumeForOverheat()V
 
     :cond_1
@@ -146,12 +134,10 @@
 
     const-string v0, "l_volume_prevent_overheat_key;gain"
 
-    .line 1283
     invoke-static {v0}, Lcom/samsung/android/media/SemAudioSystem;->getPolicyParameters(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1288
     :try_start_0
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -165,11 +151,9 @@
     :catch_0
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1291
     :goto_0
     iput v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mLimitedVolumeForOverheat:F
 
-    .line 1293
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     iget p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mUid:I
@@ -182,7 +166,6 @@
 .method public setState(IZ)V
     .locals 2
 
-    .line 1254
     iget v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mUid:I
 
     const/4 v1, -0x1
@@ -196,16 +179,13 @@
     :cond_0
     move v0, v1
 
-    .line 1256
     :goto_0
     iput p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mUid:I
 
-    .line 1257
     iput-boolean p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->mState:Z
 
     if-eq v0, v1, :cond_1
 
-    .line 1260
     iget-object p0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$PreventOverheatState;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->setAppVolumeToNative(I)V
@@ -217,7 +197,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1278
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

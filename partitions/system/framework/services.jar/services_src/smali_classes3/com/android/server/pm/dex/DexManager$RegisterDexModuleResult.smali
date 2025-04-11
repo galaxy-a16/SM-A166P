@@ -13,13 +13,10 @@
 .method public constructor <init>(ZLjava/lang/String;)V
     .locals 0
 
-    .line 887
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 888
     iput-boolean p1, p0, Lcom/android/server/pm/dex/DexManager$RegisterDexModuleResult;->success:Z
 
-    .line 889
     iput-object p2, p0, Lcom/android/server/pm/dex/DexManager$RegisterDexModuleResult;->message:Ljava/lang/String;
 
     return-void

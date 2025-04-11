@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$d9AHH-5KW9mOk6fksY9EfGgPjfk(Landroid/security/rkp/IStoreUpgradedKeyCallback;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->lambda$onError$0(Landroid/security/rkp/IStoreUpgradedKeyCallback;Ljava/lang/Exception;)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public constructor <init>(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;Landroid/security/rkp/IStoreUpgradedKeyCallback;)V
     .locals 0
 
-    .line 159
     iput-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     iput-object p2, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->val$callback:Landroid/security/rkp/IStoreUpgradedKeyCallback;
@@ -38,7 +36,6 @@
 .method public static synthetic lambda$onError$0(Landroid/security/rkp/IStoreUpgradedKeyCallback;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 169
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -53,7 +50,6 @@
 .method public onError(Ljava/lang/Exception;)V
     .locals 2
 
-    .line 168
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     invoke-static {v0}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->-$$Nest$fgetmStoreUpgradedKeyOperations(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;)Ljava/util/Set;
@@ -68,7 +64,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 169
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->val$callback:Landroid/security/rkp/IStoreUpgradedKeyCallback;
@@ -85,7 +80,6 @@
 .method public bridge synthetic onError(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 159
     check-cast p1, Ljava/lang/Exception;
 
     invoke-virtual {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->onError(Ljava/lang/Exception;)V
@@ -96,7 +90,6 @@
 .method public bridge synthetic onResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 159
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->onResult(Ljava/lang/Void;)V
@@ -107,7 +100,6 @@
 .method public onResult(Ljava/lang/Void;)V
     .locals 1
 
-    .line 162
     iget-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     invoke-static {p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->-$$Nest$fgetmStoreUpgradedKeyOperations(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;)Ljava/util/Set;
@@ -122,7 +114,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 163
     iget-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$1;->val$callback:Landroid/security/rkp/IStoreUpgradedKeyCallback;

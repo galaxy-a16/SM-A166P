@@ -47,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/multicontrol/MultiControlManagerService;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -56,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/multicontrol/MultiControlManagerService;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -65,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInputFilter(Lcom/android/server/multicontrol/MultiControlManagerService;)Landroid/view/IInputFilter;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputFilter:Landroid/view/IInputFilter;
 
     return-object p0
@@ -74,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmResolver(Lcom/android/server/multicontrol/MultiControlManagerService;)Landroid/content/ContentResolver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mResolver:Landroid/content/ContentResolver;
 
     return-object p0
@@ -83,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsBootComplete(Lcom/android/server/multicontrol/MultiControlManagerService;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mIsBootComplete:Z
 
     return-void
@@ -92,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$fputmUserSetupCompleteObserver(Lcom/android/server/multicontrol/MultiControlManagerService;Landroid/database/ContentObserver;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mUserSetupCompleteObserver:Landroid/database/ContentObserver;
 
     return-void
@@ -101,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$minitializeStates(Lcom/android/server/multicontrol/MultiControlManagerService;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/multicontrol/MultiControlManagerService;->initializeStates()V
 
     return-void
@@ -110,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$monBootPhase(Lcom/android/server/multicontrol/MultiControlManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->onBootPhase(I)V
 
     return-void
@@ -119,7 +111,6 @@
 .method public static bridge synthetic -$$Nest$monUserStarting(Lcom/android/server/multicontrol/MultiControlManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->onUserStarting(I)V
 
     return-void
@@ -128,7 +119,6 @@
 .method public static bridge synthetic -$$Nest$monUserStopped(Lcom/android/server/multicontrol/MultiControlManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->onUserStopped(I)V
 
     return-void
@@ -137,7 +127,6 @@
 .method public static bridge synthetic -$$Nest$monUserStopping(Lcom/android/server/multicontrol/MultiControlManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->onUserStopping(I)V
 
     return-void
@@ -146,7 +135,6 @@
 .method public static bridge synthetic -$$Nest$monUserSwitching(Lcom/android/server/multicontrol/MultiControlManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->onUserSwitching(I)V
 
     return-void
@@ -155,7 +143,6 @@
 .method public static bridge synthetic -$$Nest$monUserUnlocking(Lcom/android/server/multicontrol/MultiControlManagerService;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->onUserUnlocking(I)V
 
     return-void
@@ -164,7 +151,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -173,7 +159,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -196,7 +181,6 @@
 
     sput-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
-    .line 52
     invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
 
     move-result v0
@@ -233,31 +217,24 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 167
     invoke-direct {p0}, Lcom/samsung/android/multicontrol/IMultiControlManager$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 65
     iput-boolean v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mIsBootComplete:Z
 
-    .line 66
     iput-boolean v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mIsMultiControlEnabled:Z
 
-    .line 67
     iput-boolean v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mIsTriggerDetectionEnabled:Z
 
     const/16 v1, -0x2710
 
-    .line 68
     iput v1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mCurrentUserId:I
 
     const/4 v1, 0x1
 
-    .line 82
     iput v1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mAppProtocolVersion:I
 
-    .line 169
     new-instance v1, Lcom/android/server/ServiceThread;
 
     const-string/jumbo v2, "multicontrol"
@@ -268,10 +245,8 @@
 
     iput-object v1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mThread:Lcom/android/server/ServiceThread;
 
-    .line 170
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 171
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -282,7 +257,6 @@
 
     iput-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mHandler:Landroid/os/Handler;
 
-    .line 173
     const-class v0, Lcom/android/server/wm/WindowManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -295,25 +269,20 @@
 
     const/4 v0, 0x0
 
-    .line 175
     iput-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mLocalService:Lcom/android/server/multicontrol/MultiControlManagerService$LocalService;
 
-    .line 177
     iput-object p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     const v2, 0x103012b
 
-    .line 178
     invoke-virtual {p1, v2}, Landroid/content/Context;->setTheme(I)V
 
-    .line 179
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mResolver:Landroid/content/ContentResolver;
 
-    .line 181
     const-class v2, Lcom/android/server/input/InputManagerInternal;
 
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -324,7 +293,6 @@
 
     iput-object v2, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
-    .line 182
     new-instance v2, Lcom/samsung/android/multicontrol/MCTriggerManager;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -335,26 +303,22 @@
 
     iput-object v2, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mcTriggerManager:Lcom/samsung/android/multicontrol/MCTriggerManager;
 
-    .line 184
     new-instance p1, Lcom/android/server/multicontrol/MultiControlManagerService$Receiver;
 
     invoke-direct {p1, p0, v0}, Lcom/android/server/multicontrol/MultiControlManagerService$Receiver;-><init>(Lcom/android/server/multicontrol/MultiControlManagerService;Lcom/android/server/multicontrol/MultiControlManagerService$Receiver-IA;)V
 
     invoke-virtual {p1}, Lcom/android/server/multicontrol/MultiControlManagerService$Receiver;->register()V
 
-    .line 186
     iget-object p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mLocalService:Lcom/android/server/multicontrol/MultiControlManagerService$LocalService;
 
     if-nez p1, :cond_0
 
-    .line 187
     new-instance p1, Lcom/android/server/multicontrol/MultiControlManagerService$LocalService;
 
     invoke-direct {p1, p0, v0}, Lcom/android/server/multicontrol/MultiControlManagerService$LocalService;-><init>(Lcom/android/server/multicontrol/MultiControlManagerService;Lcom/android/server/multicontrol/MultiControlManagerService$LocalService-IA;)V
 
     iput-object p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mLocalService:Lcom/android/server/multicontrol/MultiControlManagerService$LocalService;
 
-    .line 188
     const-class p0, Lcom/samsung/android/multicontrol/MultiControlManagerInternal;
 
     invoke-static {p0, p1}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
@@ -366,7 +330,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lcom/android/server/multicontrol/MultiControlManagerService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -377,7 +340,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 1
 
-    .line 424
     iget-object p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
@@ -393,7 +355,6 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 426
     array-length p1, p3
 
     if-eqz p1, :cond_1
@@ -410,7 +371,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 427
     :cond_1
     new-instance p1, Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -420,25 +380,18 @@
 
     const-string p2, "MultiControlManagerService (dumpsys multicontrol):"
 
-    .line 428
     invoke-virtual {p1, p2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 429
     invoke-static {p1}, Lcom/android/server/multicontrol/Log;->dump(Ljava/io/PrintWriter;)V
 
-    .line 430
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 431
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 432
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->dumpImpl(Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 433
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 434
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
     :cond_2
@@ -448,7 +401,6 @@
 .method public final dumpImpl(Lcom/android/internal/util/IndentingPrintWriter;)V
     .locals 3
 
-    .line 440
     iget v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mCurrentUserId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -459,10 +411,8 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 441
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 442
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -477,85 +427,68 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 443
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 444
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "display_size_forced"
 
-    .line 445
     invoke-static {v0, v1}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "DISPLAY_SIZE_FORCED"
 
-    .line 444
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 446
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 447
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "display_density_forced"
 
     const/4 v2, 0x0
 
-    .line 448
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "DISPLAY_DENSITY_FORCED"
 
-    .line 447
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 450
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 451
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "screen_off_timeout"
 
     iget v2, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mCurrentUserId:I
 
-    .line 452
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "SCREEN_OFF_TIMEOUT"
 
-    .line 451
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 454
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 455
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "show_ime_with_hard_keyboard"
 
     iget p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mCurrentUserId:I
 
-    .line 456
     invoke-static {v0, v1, p0}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "SHOW_IME_WITH_HARD_KEYBOARD"
 
-    .line 455
     invoke-virtual {p1, v0, p0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 458
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
     return-void
@@ -564,7 +497,6 @@
 .method public enableTriggerDetection(Z)V
     .locals 3
 
-    .line 205
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -583,13 +515,11 @@
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     :try_start_0
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mcTriggerManager:Lcom/samsung/android/multicontrol/MCTriggerManager;
 
     if-eqz p0, :cond_0
 
-    .line 208
     invoke-virtual {p0, p1}, Lcom/samsung/android/multicontrol/MCTriggerManager;->enable(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -599,7 +529,6 @@
     :catch_0
     move-exception p0
 
-    .line 210
     sget-object p1, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     const-string v0, "[enableTriggerDetection]"
@@ -614,20 +543,17 @@
 .method public forceHideCursor(Z)V
     .locals 2
 
-    .line 217
     :try_start_0
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     if-eqz v0, :cond_0
 
-    .line 218
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     const-string v1, "in forceHideCursor"
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/input/InputManagerInternal;->forceHideCursor(Z)V
@@ -639,7 +565,6 @@
     :catch_0
     move-exception p0
 
-    .line 222
     sget-object p1, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -656,7 +581,6 @@
 .method public getProtocolVersion()I
     .locals 2
 
-    .line 367
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     const-string v0, "com.sec.android.permission.USE_MULTI_CONTROL_MANAGER"
@@ -673,19 +597,16 @@
 .method public final initializeStates()V
     .locals 4
 
-    .line 267
     invoke-virtual {p0}, Lcom/android/server/multicontrol/MultiControlManagerService;->isUserSetupComplete()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mUserSetupCompleteObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_0
 
-    .line 269
     new-instance v0, Lcom/android/server/multicontrol/MultiControlManagerService$1;
 
     const/4 v1, 0x0
@@ -694,7 +615,6 @@
 
     iput-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mUserSetupCompleteObserver:Landroid/database/ContentObserver;
 
-    .line 279
     :cond_0
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mResolver:Landroid/content/ContentResolver;
 
@@ -719,7 +639,6 @@
 .method public isAllowed()Z
     .locals 3
 
-    .line 358
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_MULTI_CONTROL_MANAGER"
@@ -728,12 +647,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 360
     invoke-virtual {p0}, Lcom/android/server/multicontrol/MultiControlManagerService;->isSystemReady()Z
 
     move-result p0
 
-    .line 361
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -758,7 +675,6 @@
 .method public final isSystemReady()Z
     .locals 3
 
-    .line 338
     iget-boolean v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mIsBootComplete:Z
 
     if-eqz v0, :cond_0
@@ -785,7 +701,6 @@
 
     return p0
 
-    .line 342
     :cond_0
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
@@ -805,7 +720,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 343
     invoke-static {}, Landroid/os/FactoryTest;->isFactoryBinary()Z
 
     move-result v2
@@ -824,7 +738,6 @@
 
     move-result-object p0
 
-    .line 342
     invoke-static {v0, p0}, Lcom/android/server/multicontrol/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -835,7 +748,6 @@
 .method public final isUserSetupComplete()Z
     .locals 3
 
-    .line 327
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mResolver:Landroid/content/ContentResolver;
 
     iget p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mCurrentUserId:I
@@ -855,7 +767,6 @@
     :cond_0
     if-nez v2, :cond_1
 
-    .line 331
     sget-boolean p0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
     if-eqz p0, :cond_1
@@ -873,7 +784,6 @@
 .method public final onBootPhase(I)V
     .locals 2
 
-    .line 263
     sget-boolean p0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -907,14 +817,12 @@
 .method public final onUserChanged(I)V
     .locals 3
 
-    .line 317
     iget v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mCurrentUserId:I
 
     if-ne p1, v0, :cond_0
 
     return-void
 
-    .line 320
     :cond_0
     sget-boolean v0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
@@ -938,11 +846,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->setCurrentUserId(I)V
 
-    .line 323
     invoke-virtual {p0}, Lcom/android/server/multicontrol/MultiControlManagerService;->initializeStates()V
 
     return-void
@@ -951,7 +857,6 @@
 .method public final onUserStarting(I)V
     .locals 2
 
-    .line 286
     sget-boolean p0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -981,7 +886,6 @@
 .method public final onUserStopped(I)V
     .locals 2
 
-    .line 308
     sget-boolean p0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -1011,7 +915,6 @@
 .method public final onUserStopping(I)V
     .locals 2
 
-    .line 304
     sget-boolean p0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
     if-eqz p0, :cond_0
@@ -1051,7 +954,6 @@
 .method public final onUserSwitching(I)V
     .locals 3
 
-    .line 298
     sget-boolean v0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1074,7 +976,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->onUserChanged(I)V
 
@@ -1084,7 +985,6 @@
 .method public final onUserUnlocking(I)V
     .locals 3
 
-    .line 290
     sget-boolean v0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1120,17 +1020,14 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 291
     iput-boolean v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mIsBootComplete:Z
 
-    .line 292
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
 
     if-ne p1, v0, :cond_1
 
-    .line 293
     invoke-virtual {p0, p1}, Lcom/android/server/multicontrol/MultiControlManagerService;->onUserChanged(I)V
 
     :cond_1
@@ -1140,14 +1037,12 @@
 .method public resetInputFilter()V
     .locals 2
 
-    .line 410
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mWindowManagerService:Lcom/android/server/wm/WindowManagerInternal;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/WindowManagerInternal;->setInputFilter(Landroid/view/IInputFilter;)V
 
-    .line 412
     iput-object v1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputFilter:Landroid/view/IInputFilter;
 
     return-void
@@ -1156,7 +1051,6 @@
 .method public setCurrentUserId(I)V
     .locals 3
 
-    .line 312
     sget-boolean v0, Lcom/android/server/multicontrol/MultiControlManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1179,7 +1073,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     :cond_0
     iput p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mCurrentUserId:I
 
@@ -1189,13 +1082,11 @@
 .method public setCursorPosition(III)V
     .locals 3
 
-    .line 229
     :try_start_0
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     if-eqz v0, :cond_0
 
-    .line 230
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1218,7 +1109,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/input/InputManagerInternal;->setCursorPosition(III)V
@@ -1230,7 +1120,6 @@
     :catch_0
     move-exception p0
 
-    .line 234
     sget-object p1, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -1247,7 +1136,6 @@
 .method public setInputFilter(Landroid/view/IInputFilter;Lcom/samsung/android/multicontrol/IInputFilterInstallListener;)V
     .locals 3
 
-    .line 374
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_MULTI_CONTROL_MANAGER"
@@ -1256,15 +1144,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 376
     iput-object p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputFilter:Landroid/view/IInputFilter;
 
-    .line 378
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mWindowManagerService:Lcom/android/server/wm/WindowManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowManagerInternal;->setInputFilter(Landroid/view/IInputFilter;)V
 
-    .line 381
     :try_start_0
     invoke-interface {p2}, Lcom/samsung/android/multicontrol/IInputFilterInstallListener;->onInstalled()V
     :try_end_0
@@ -1275,7 +1160,6 @@
     :catch_0
     move-exception p0
 
-    .line 383
     sget-object p1, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -1291,20 +1175,17 @@
 .method public setInteractive(Z)V
     .locals 2
 
-    .line 241
     :try_start_0
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     if-eqz v0, :cond_0
 
-    .line 242
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     const-string v1, "in setInteractive"
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/input/InputManagerInternal;->setInteractive(Z)V
@@ -1316,7 +1197,6 @@
     :catch_0
     move-exception p0
 
-    .line 246
     sget-object p1, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -1333,13 +1213,11 @@
 .method public setMultiControlOutOfFocus(Z)V
     .locals 3
 
-    .line 253
     :try_start_0
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     if-eqz v0, :cond_0
 
-    .line 254
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1358,7 +1236,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mInputManagerInternal:Lcom/android/server/input/InputManagerInternal;
 
     invoke-virtual {p0, p1}, Lcom/android/server/input/InputManagerInternal;->setMultiControlOutOfFocus(Z)V
@@ -1370,7 +1247,6 @@
     :catch_0
     move-exception p0
 
-    .line 258
     sget-object p1, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -1387,7 +1263,6 @@
 .method public setProtocolVersion(I)V
     .locals 3
 
-    .line 351
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_MULTI_CONTROL_MANAGER"
@@ -1396,7 +1271,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 353
     iput p1, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mAppProtocolVersion:I
 
     return-void
@@ -1405,7 +1279,6 @@
 .method public setTriggerThreshold(I)V
     .locals 3
 
-    .line 195
     :try_start_0
     sget-object v0, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
@@ -1425,12 +1298,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/multicontrol/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     iget-object p0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mcTriggerManager:Lcom/samsung/android/multicontrol/MCTriggerManager;
 
     if-eqz p0, :cond_0
 
-    .line 197
     invoke-virtual {p0, p1}, Lcom/samsung/android/multicontrol/MCTriggerManager;->setTriggerThreshold(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1440,7 +1311,6 @@
     :catch_0
     move-exception p0
 
-    .line 199
     sget-object p1, Lcom/android/server/multicontrol/MultiControlManagerService;->TAG:Ljava/lang/String;
 
     const-string v0, "[setTriggerThreshold]"
@@ -1455,7 +1325,6 @@
 .method public startDeathChecker(Lcom/samsung/android/multicontrol/IMultiControlDeathChecker;)V
     .locals 3
 
-    .line 391
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.android.permission.USE_MULTI_CONTROL_MANAGER"
@@ -1464,10 +1333,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 393
     invoke-virtual {p0}, Lcom/android/server/multicontrol/MultiControlManagerService;->unlinkListenerToDeath()V
 
-    .line 395
     new-instance v0, Lcom/android/server/multicontrol/MultiControlManagerService$MultiControlAppDeathChecker;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -1482,7 +1349,6 @@
 
     iput-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mAppDeathChecker:Lcom/android/server/multicontrol/MultiControlManagerService$MultiControlAppDeathChecker;
 
-    .line 397
     :try_start_0
     invoke-interface {p1}, Lcom/samsung/android/multicontrol/IMultiControlDeathChecker;->asBinder()Landroid/os/IBinder;
 
@@ -1501,7 +1367,6 @@
     :catch_0
     move-exception p0
 
-    .line 399
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -1511,7 +1376,6 @@
 .method public stopDeathChecker()V
     .locals 0
 
-    .line 405
     invoke-virtual {p0}, Lcom/android/server/multicontrol/MultiControlManagerService;->unlinkListenerToDeath()V
 
     return-void
@@ -1520,17 +1384,14 @@
 .method public final unlinkListenerToDeath()V
     .locals 1
 
-    .line 416
     iget-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mAppDeathChecker:Lcom/android/server/multicontrol/MultiControlManagerService$MultiControlAppDeathChecker;
 
     if-eqz v0, :cond_0
 
-    .line 417
     invoke-virtual {v0}, Lcom/android/server/multicontrol/MultiControlManagerService$MultiControlAppDeathChecker;->unlinkToDeath()V
 
     const/4 v0, 0x0
 
-    .line 418
     iput-object v0, p0, Lcom/android/server/multicontrol/MultiControlManagerService;->mAppDeathChecker:Lcom/android/server/multicontrol/MultiControlManagerService$MultiControlAppDeathChecker;
 
     :cond_0

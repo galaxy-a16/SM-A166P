@@ -153,7 +153,6 @@
 .method public static convScEventToScFlag(I)I
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const/4 p0, 0x0
@@ -194,7 +193,6 @@
 .method public static matchScEventToScFlags(II)Z
     .locals 0
 
-    .line 225
     invoke-static {p0}, Lcom/samsung/android/knox/zt/devicetrust/EndpointMonitorConst;->convScEventToScFlag(I)I
 
     move-result p0
@@ -225,7 +223,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,7 +274,6 @@
 
     packed-switch p0, :pswitch_data_1
 
-    .line 200
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -446,7 +442,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -492,7 +487,6 @@
 .method public static validateTraceType(I)Z
     .locals 2
 
-    .line 0
     const/4 v0, 0x1
 
     if-lt p0, v0, :cond_0

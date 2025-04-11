@@ -25,7 +25,6 @@
 .method public static synthetic $r8$lambda$2Z7kje8Pgr8ADfF4DnAnepTbpsk(Lcom/android/server/wm/WindowManagerConstants;Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowManagerConstants;->onWindowPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
 
     return-void
@@ -34,7 +33,6 @@
 .method public static synthetic $r8$lambda$6xQG7rmn_S0VQJicTQ-AERPZE3M(Lcom/android/server/wm/WindowManagerConstants;Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowManagerConstants;->onAndroidPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
 
     return-void
@@ -43,7 +41,6 @@
 .method public static synthetic $r8$lambda$LVN1tP1QvlbyU32jxwGIE3Rh75s(Lcom/android/server/wm/WindowManagerService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/WindowManagerConstants;->lambda$new$0(Lcom/android/server/wm/WindowManagerService;)V
 
     return-void
@@ -52,32 +49,26 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerGlobalLock;Ljava/lang/Runnable;Landroid/provider/DeviceConfigInterface;)V
     .locals 0
 
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerConstants;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
-    .line 77
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p2, Ljava/lang/Runnable;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerConstants;->mUpdateSystemGestureExclusionCallback:Ljava/lang/Runnable;
 
-    .line 78
     iput-object p3, p0, Lcom/android/server/wm/WindowManagerConstants;->mDeviceConfig:Landroid/provider/DeviceConfigInterface;
 
-    .line 79
     new-instance p1, Lcom/android/server/wm/WindowManagerConstants$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/wm/WindowManagerConstants$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/wm/WindowManagerConstants;)V
 
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerConstants;->mListenerAndroid:Landroid/provider/DeviceConfig$OnPropertiesChangedListener;
 
-    .line 80
     new-instance p1, Lcom/android/server/wm/WindowManagerConstants$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0}, Lcom/android/server/wm/WindowManagerConstants$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/wm/WindowManagerConstants;)V
@@ -90,7 +81,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Landroid/provider/DeviceConfigInterface;)V
     .locals 2
 
-    .line 68
     iget-object v0, p1, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
     new-instance v1, Lcom/android/server/wm/WindowManagerConstants$$ExternalSyntheticLambda2;
@@ -105,7 +95,6 @@
 .method public static synthetic lambda$new$0(Lcom/android/server/wm/WindowManagerService;)V
     .locals 1
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
 
     new-instance v0, Lcom/android/server/wm/WindowManagerConstants$$ExternalSyntheticLambda3;
@@ -124,12 +113,10 @@
 
     const-string v0, "WINDOW MANAGER CONSTANTS (dumpsys window constants):"
 
-    .line 156
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  "
 
-    .line 158
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v1, "system_gesture_exclusion_log_debounce_millis"
@@ -138,42 +125,36 @@
 
     const-string v1, "="
 
-    .line 159
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-wide v2, p0, Lcom/android/server/wm/WindowManagerConstants;->mSystemGestureExclusionLogDebounceTimeoutMillis:J
 
     invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 160
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v2, "system_gesture_exclusion_limit_dp"
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 161
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v2, p0, Lcom/android/server/wm/WindowManagerConstants;->mSystemGestureExclusionLimitDp:I
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 162
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "system_gestures_excluded_by_pre_q_sticky_immersive"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 163
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean p0, p0, Lcom/android/server/wm/WindowManagerConstants;->mSystemGestureExcludedByPreQStickyImmersive:Z
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 164
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -182,14 +163,12 @@
 .method public final onAndroidPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 7
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerConstants;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v0
 
-    .line 97
     :try_start_0
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
@@ -218,7 +197,6 @@
 
     if-nez v3, :cond_0
 
-    .line 99
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -227,7 +205,6 @@
 
     return-void
 
-    .line 101
     :cond_0
     :try_start_1
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
@@ -283,13 +260,11 @@
 
     goto :goto_0
 
-    .line 107
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerConstants;->updateSystemGestureExcludedByPreQStickyImmersive()V
 
     goto :goto_3
 
-    .line 103
     :cond_5
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerConstants;->updateSystemGestureExclusionLimitDp()V
 
@@ -301,12 +276,10 @@
     :cond_6
     if-eqz v2, :cond_7
 
-    .line 115
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerConstants;->mUpdateSystemGestureExclusionCallback:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
-    .line 117
     :cond_7
     monitor-exit v0
     :try_end_1
@@ -332,14 +305,12 @@
 .method public final onWindowPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 4
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerConstants;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v0
 
-    .line 122
     :try_start_0
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
@@ -364,7 +335,6 @@
 
     if-nez v1, :cond_0
 
-    .line 124
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -373,7 +343,6 @@
 
     return-void
 
-    .line 126
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -408,13 +377,11 @@
 
     goto :goto_0
 
-    .line 128
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerConstants;->updateSystemGestureExclusionLogDebounceMillis()V
 
     goto :goto_0
 
-    .line 134
     :cond_4
     monitor-exit v0
     :try_end_1
@@ -440,7 +407,6 @@
 .method public start(Ljava/util/concurrent/Executor;)V
     .locals 3
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerConstants;->mDeviceConfig:Landroid/provider/DeviceConfigInterface;
 
     const-string v1, "android"
@@ -449,7 +415,6 @@
 
     invoke-interface {v0, v1, p1, v2}, Landroid/provider/DeviceConfigInterface;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerConstants;->mDeviceConfig:Landroid/provider/DeviceConfigInterface;
 
     const-string/jumbo v1, "window_manager"
@@ -458,13 +423,10 @@
 
     invoke-interface {v0, v1, p1, v2}, Landroid/provider/DeviceConfigInterface;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerConstants;->updateSystemGestureExclusionLogDebounceMillis()V
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerConstants;->updateSystemGestureExclusionLimitDp()V
 
-    .line 91
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerConstants;->updateSystemGestureExcludedByPreQStickyImmersive()V
 
     return-void
@@ -473,7 +435,6 @@
 .method public final updateSystemGestureExcludedByPreQStickyImmersive()V
     .locals 4
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerConstants;->mDeviceConfig:Landroid/provider/DeviceConfigInterface;
 
     const-string/jumbo v1, "system_gestures_excluded_by_pre_q_sticky_immersive"
@@ -494,7 +455,6 @@
 .method public final updateSystemGestureExclusionLimitDp()V
     .locals 4
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerConstants;->mDeviceConfig:Landroid/provider/DeviceConfigInterface;
 
     const-string/jumbo v1, "system_gesture_exclusion_limit_dp"
@@ -503,14 +463,12 @@
 
     const-string v3, "android"
 
-    .line 145
     invoke-interface {v0, v3, v1, v2}, Landroid/provider/DeviceConfigInterface;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
 
     const/16 v1, 0xc8
 
-    .line 144
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -523,7 +481,6 @@
 .method public final updateSystemGestureExclusionLogDebounceMillis()V
     .locals 5
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerConstants;->mDeviceConfig:Landroid/provider/DeviceConfigInterface;
 
     const-string/jumbo v1, "system_gesture_exclusion_log_debounce_millis"
@@ -532,7 +489,6 @@
 
     const-string/jumbo v4, "window_manager"
 
-    .line 139
     invoke-interface {v0, v4, v1, v2, v3}, Landroid/provider/DeviceConfigInterface;->getLong(Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide v0

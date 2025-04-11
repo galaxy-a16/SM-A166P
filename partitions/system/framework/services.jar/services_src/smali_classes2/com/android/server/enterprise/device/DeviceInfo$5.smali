@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/device/DeviceInfo;)V
     .locals 0
 
-    .line 1929
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$5;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 9
 
-    .line 1934
     iget-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$5;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     const/4 v0, 0x0
@@ -37,13 +35,11 @@
 
     return-void
 
-    .line 1938
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1939
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
@@ -59,7 +55,6 @@
     :cond_1
     const-string v1, "com.samsung.mms.RECEIVED_MSG"
 
-    .line 1947
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -73,7 +68,6 @@
     :cond_2
     const-string v1, "com.samsung.mms.SENT_MSG"
 
-    .line 1949
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -85,14 +79,12 @@
     :goto_0
     const-string/jumbo v0, "msg_type"
 
-    .line 1956
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v1, "mms"
 
-    .line 1957
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -101,40 +93,34 @@
 
     const-string/jumbo v0, "msg_address"
 
-    .line 1959
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "date"
 
-    .line 1960
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v1
 
     const-string/jumbo v3, "msg_subject"
 
-    .line 1961
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string/jumbo v4, "msg_body"
 
-    .line 1962
     invoke-virtual {p2, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "content_location"
 
-    .line 1963
     invoke-virtual {p2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 1965
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,7 +157,6 @@
 
     goto :goto_2
 
-    .line 1966
     :cond_4
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -199,7 +184,6 @@
 
     move-result-object p2
 
-    .line 1967
     iget-object p0, p0, Lcom/android/server/enterprise/device/DeviceInfo$5;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -214,7 +198,6 @@
     :cond_7
     const-string p0, "Unexpected intent arrived at mMessagingReceiver"
 
-    .line 1952
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -223,7 +206,6 @@
     :goto_3
     const-string p0, "No data arrived at mMessagingReceiver"
 
-    .line 1942
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

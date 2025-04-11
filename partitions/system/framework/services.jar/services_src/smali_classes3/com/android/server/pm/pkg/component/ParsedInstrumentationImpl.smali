@@ -24,7 +24,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 93
     new-instance v0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl$1;
 
     invoke-direct {v0}, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl$1;-><init>()V
@@ -37,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 47
     invoke-direct {p0}, Lcom/android/server/pm/pkg/component/ParsedComponentImpl;-><init>()V
 
     return-void
@@ -46,10 +44,8 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
-    .line 85
     invoke-direct {p0, p1}, Lcom/android/server/pm/pkg/component/ParsedComponentImpl;-><init>(Landroid/os/Parcel;)V
 
-    .line 86
     sget-object v0, Lcom/android/server/pm/parsing/pkg/PackageImpl;->sForInternedString:Lcom/android/internal/util/Parcelling$BuiltIn$ForInternedString;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/util/Parcelling$BuiltIn$ForInternedString;->unparcel(Landroid/os/Parcel;)Ljava/lang/String;
@@ -58,7 +54,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->targetPackage:Ljava/lang/String;
 
-    .line 87
     sget-object v0, Lcom/android/server/pm/parsing/pkg/PackageImpl;->sForInternedString:Lcom/android/internal/util/Parcelling$BuiltIn$ForInternedString;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/util/Parcelling$BuiltIn$ForInternedString;->unparcel(Landroid/os/Parcel;)Ljava/lang/String;
@@ -67,7 +62,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->targetProcesses:Ljava/lang/String;
 
-    .line 88
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -88,7 +82,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->handleProfiling:Z
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
@@ -111,7 +104,6 @@
 .method public describeContents()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -120,7 +112,6 @@
 .method public getTargetPackage()Ljava/lang/String;
     .locals 0
 
-    .line 137
     iget-object p0, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->targetPackage:Ljava/lang/String;
 
     return-object p0
@@ -129,7 +120,6 @@
 .method public getTargetProcesses()Ljava/lang/String;
     .locals 0
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->targetProcesses:Ljava/lang/String;
 
     return-object p0
@@ -138,7 +128,6 @@
 .method public isFunctionalTest()Z
     .locals 0
 
-    .line 152
     iget-boolean p0, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->functionalTest:Z
 
     return p0
@@ -147,7 +136,6 @@
 .method public isHandleProfiling()Z
     .locals 0
 
-    .line 147
     iget-boolean p0, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->handleProfiling:Z
 
     return p0
@@ -156,7 +144,6 @@
 .method public setFunctionalTest(Z)Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;
     .locals 0
 
-    .line 163
     iput-boolean p1, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->functionalTest:Z
 
     return-object p0
@@ -165,7 +152,6 @@
 .method public setHandleProfiling(Z)Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;
     .locals 0
 
-    .line 157
     iput-boolean p1, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->handleProfiling:Z
 
     return-object p0
@@ -174,7 +160,6 @@
 .method public setTargetPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;
     .locals 0
 
-    .line 51
     invoke-static {p1}, Landroid/text/TextUtils;->safeIntern(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -187,7 +172,6 @@
 .method public setTargetProcesses(Ljava/lang/String;)Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;
     .locals 0
 
-    .line 56
     invoke-static {p1}, Landroid/text/TextUtils;->safeIntern(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -200,7 +184,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 61
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
@@ -209,10 +192,8 @@
 
     const-string v1, "Instrumentation{"
 
-    .line 62
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 63
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -225,10 +206,8 @@
 
     const/16 v1, 0x20
 
-    .line 64
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 65
     invoke-virtual {p0}, Lcom/android/server/pm/pkg/component/ParsedComponentImpl;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -241,10 +220,8 @@
 
     const/16 p0, 0x7d
 
-    .line 66
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 67
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -255,29 +232,24 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 77
     invoke-super {p0, p1, p2}, Lcom/android/server/pm/pkg/component/ParsedComponentImpl;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 78
     sget-object v0, Lcom/android/server/pm/parsing/pkg/PackageImpl;->sForInternedString:Lcom/android/internal/util/Parcelling$BuiltIn$ForInternedString;
 
     iget-object v1, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->targetPackage:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/android/internal/util/Parcelling$BuiltIn$ForInternedString;->parcel(Ljava/lang/String;Landroid/os/Parcel;I)V
 
-    .line 79
     sget-object v0, Lcom/android/server/pm/parsing/pkg/PackageImpl;->sForInternedString:Lcom/android/internal/util/Parcelling$BuiltIn$ForInternedString;
 
     iget-object v1, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->targetProcesses:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/android/internal/util/Parcelling$BuiltIn$ForInternedString;->parcel(Ljava/lang/String;Landroid/os/Parcel;I)V
 
-    .line 80
     iget-boolean p2, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->handleProfiling:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBoolean(Z)V
 
-    .line 81
     iget-boolean p0, p0, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;->functionalTest:Z
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeBoolean(Z)V

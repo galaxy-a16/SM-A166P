@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/location/gnss/GnssListenerMultiplexer$GnssListenerRegistration;
 
     invoke-static {p1}, Lcom/android/server/location/gnss/GnssListenerMultiplexer;->$r8$lambda$jkZfCc6Bl_dl-NkJVw0LDYeOM_c(Lcom/android/server/location/gnss/GnssListenerMultiplexer$GnssListenerRegistration;)Z

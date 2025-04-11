@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;ILcom/android/server/appprediction/RemoteAppPredictionService$RemoteAppPredictionServiceCallbacks;ZZ)V
     .locals 10
 
-    .line 47
     invoke-virtual {p1}, Landroid/content/Context;->getMainThreadHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -44,12 +43,10 @@
 
     move/from16 v8, p7
 
-    .line 46
     invoke-direct/range {v0 .. v9}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;ILcom/android/internal/infra/AbstractRemoteService$VultureCallback;Landroid/os/Handler;IZI)V
 
     move-object v1, p5
 
-    .line 50
     iput-object v1, v0, Lcom/android/server/appprediction/RemoteAppPredictionService;->mCallback:Lcom/android/server/appprediction/RemoteAppPredictionService$RemoteAppPredictionServiceCallbacks;
 
     return-void
@@ -60,7 +57,6 @@
 .method public executeOnResolvedService(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
     .locals 0
 
-    .line 86
     invoke-virtual {p0, p1}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->executeAsyncRequest(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
 
     return-void
@@ -69,7 +65,6 @@
 .method public getRemoteRequestMillis()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x7d0
 
     return-wide v0
@@ -78,7 +73,6 @@
 .method public bridge synthetic getServiceInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 0
 
-    .line 32
     invoke-virtual {p0, p1}, Lcom/android/server/appprediction/RemoteAppPredictionService;->getServiceInterface(Landroid/os/IBinder;)Landroid/service/appprediction/IPredictionService;
 
     move-result-object p0
@@ -89,7 +83,6 @@
 .method public getServiceInterface(Landroid/os/IBinder;)Landroid/service/appprediction/IPredictionService;
     .locals 0
 
-    .line 55
     invoke-static {p1}, Landroid/service/appprediction/IPredictionService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/appprediction/IPredictionService;
 
     move-result-object p0
@@ -100,7 +93,6 @@
 .method public getTimeoutIdleBindMillis()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -109,12 +101,10 @@
 .method public handleOnConnectedStateChanged(Z)V
     .locals 0
 
-    .line 108
     iget-object p0, p0, Lcom/android/server/appprediction/RemoteAppPredictionService;->mCallback:Lcom/android/server/appprediction/RemoteAppPredictionService$RemoteAppPredictionServiceCallbacks;
 
     if-eqz p0, :cond_0
 
-    .line 109
     invoke-interface {p0, p1}, Lcom/android/server/appprediction/RemoteAppPredictionService$RemoteAppPredictionServiceCallbacks;->onConnectedStateChanged(Z)V
 
     :cond_0
@@ -124,7 +114,6 @@
 .method public reconnect()V
     .locals 0
 
-    .line 72
     invoke-super {p0}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->scheduleBind()V
 
     return-void
@@ -133,7 +122,6 @@
 .method public scheduleOnResolvedService(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
     .locals 0
 
-    .line 79
     invoke-virtual {p0, p1}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->scheduleAsyncRequest(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
 
     return-void

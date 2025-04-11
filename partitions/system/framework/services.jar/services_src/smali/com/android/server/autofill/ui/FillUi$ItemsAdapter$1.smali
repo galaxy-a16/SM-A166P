@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$vpdQf3pCARW9eyEJ6GgahxZmwjs(Ljava/lang/CharSequence;Lcom/android/server/autofill/ui/FillUi$ViewItem;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->lambda$performFiltering$0(Ljava/lang/CharSequence;Lcom/android/server/autofill/ui/FillUi$ViewItem;)Z
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;)V
     .locals 0
 
-    .line 838
     iput-object p1, p0, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->this$1:Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;
 
     invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
@@ -33,7 +31,6 @@
 .method public static synthetic lambda$performFiltering$0(Ljava/lang/CharSequence;Lcom/android/server/autofill/ui/FillUi$ViewItem;)Z
     .locals 0
 
-    .line 843
     invoke-virtual {p1, p0}, Lcom/android/server/autofill/ui/FillUi$ViewItem;->matches(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -46,7 +43,6 @@
 .method public performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
     .locals 1
 
-    .line 842
     iget-object p0, p0, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->this$1:Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;
 
     invoke-static {p0}, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;->-$$Nest$fgetmAllItems(Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;)Ljava/util/List;
@@ -61,12 +57,10 @@
 
     invoke-direct {v0, p1}, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1$$ExternalSyntheticLambda0;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 843
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 844
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object p1
@@ -77,15 +71,12 @@
 
     check-cast p0, Ljava/util/List;
 
-    .line 845
     new-instance p1, Landroid/widget/Filter$FilterResults;
 
     invoke-direct {p1}, Landroid/widget/Filter$FilterResults;-><init>()V
 
-    .line 846
     iput-object p0, p1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
-    .line 847
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -98,7 +89,6 @@
 .method public publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
     .locals 1
 
-    .line 854
     iget-object p1, p0, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->this$1:Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;
 
     invoke-static {p1}, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;->-$$Nest$fgetmFilteredItems(Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;)Ljava/util/List;
@@ -109,7 +99,6 @@
 
     move-result p1
 
-    .line 855
     iget-object v0, p0, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->this$1:Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;->-$$Nest$fgetmFilteredItems(Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;)Ljava/util/List;
@@ -118,17 +107,14 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 856
     iget v0, p2, Landroid/widget/Filter$FilterResults;->count:I
 
     if-lez v0, :cond_0
 
-    .line 858
     iget-object p2, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
     check-cast p2, Ljava/util/List;
 
-    .line 859
     iget-object v0, p0, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->this$1:Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;
 
     invoke-static {v0}, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;->-$$Nest$fgetmFilteredItems(Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;)Ljava/util/List;
@@ -137,7 +123,6 @@
 
     invoke-interface {v0, p2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 861
     :cond_0
     iget-object p2, p0, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->this$1:Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;
 
@@ -161,14 +146,12 @@
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 863
     iget-object p1, p0, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->this$1:Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;
 
     iget-object p1, p1, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;->this$0:Lcom/android/server/autofill/ui/FillUi;
 
     invoke-static {p1}, Lcom/android/server/autofill/ui/FillUi;->-$$Nest$mannounceSearchResultIfNeeded(Lcom/android/server/autofill/ui/FillUi;)V
 
-    .line 865
     :cond_2
     iget-object p0, p0, Lcom/android/server/autofill/ui/FillUi$ItemsAdapter$1;->this$1:Lcom/android/server/autofill/ui/FillUi$ItemsAdapter;
 

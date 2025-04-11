@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/om/wallpapertheme/TemplateManager;)V
     .locals 0
 
-    .line 268
     iput-object p1, p0, Lcom/android/server/om/wallpapertheme/TemplateManager$1;->this$0:Lcom/android/server/om/wallpapertheme/TemplateManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 268
     check-cast p1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;
 
     invoke-virtual {p0, p1}, Lcom/android/server/om/wallpapertheme/TemplateManager$1;->apply(Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;)Ljava/util/List;
@@ -40,7 +38,6 @@
 .method public apply(Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;)Ljava/util/List;
     .locals 6
 
-    .line 272
     iget-object v0, p1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->themes:[Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -57,7 +54,6 @@
     :goto_0
     const/4 v1, 0x0
 
-    .line 275
     aget-object v2, v0, v1
 
     const-string v3, "#"
@@ -70,7 +66,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 276
     aget-object v1, v0, v1
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -83,7 +78,6 @@
 
     goto :goto_2
 
-    .line 278
     :cond_1
     iget-object v2, p0, Lcom/android/server/om/wallpapertheme/TemplateManager$1;->this$0:Lcom/android/server/om/wallpapertheme/TemplateManager;
 
@@ -101,7 +95,6 @@
 
     return-object v4
 
-    .line 280
     :cond_2
     iget-object v2, p0, Lcom/android/server/om/wallpapertheme/TemplateManager$1;->this$0:Lcom/android/server/om/wallpapertheme/TemplateManager;
 
@@ -133,7 +126,6 @@
     :cond_4
     const/4 v2, 0x1
 
-    .line 285
     aget-object v5, v0, v2
 
     invoke-virtual {v5, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -142,7 +134,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 286
     aget-object p0, v0, v2
 
     invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -155,7 +146,6 @@
 
     goto :goto_4
 
-    .line 288
     :cond_5
     iget-object v3, p0, Lcom/android/server/om/wallpapertheme/TemplateManager$1;->this$0:Lcom/android/server/om/wallpapertheme/TemplateManager;
 
@@ -173,7 +163,6 @@
 
     return-object v4
 
-    .line 290
     :cond_6
     iget-object p0, p0, Lcom/android/server/om/wallpapertheme/TemplateManager$1;->this$0:Lcom/android/server/om/wallpapertheme/TemplateManager;
 
@@ -202,7 +191,6 @@
 
     return-object v4
 
-    .line 295
     :cond_8
     iget-object v0, p1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->opacity:Ljava/lang/Integer;
 
@@ -214,7 +202,6 @@
 
     if-eq v0, v2, :cond_9
 
-    .line 296
     iget-object v0, p1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->opacity:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -235,7 +222,6 @@
 
     move-result-object v1
 
-    .line 297
     iget-object p1, p1, Lcom/android/server/om/wallpapertheme/TemplateManager$UidItem;->opacity:Ljava/lang/Integer;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -254,7 +240,6 @@
 
     move-result-object p0
 
-    .line 300
     :cond_9
     new-instance p1, Ljava/util/ArrayList;
 

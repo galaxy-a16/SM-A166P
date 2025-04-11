@@ -13,19 +13,16 @@
 .method public constructor <init>(Ljava/util/Map;Ljava/util/Map;)V
     .locals 1
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-nez p1, :cond_0
 
-    .line 57
     new-instance p1, Ljava/util/LinkedHashMap;
 
     invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
 
     goto :goto_0
 
-    .line 58
     :cond_0
     new-instance v0, Ljava/util/LinkedHashMap;
 
@@ -38,14 +35,12 @@
 
     if-nez p2, :cond_1
 
-    .line 59
     new-instance p1, Ljava/util/LinkedHashMap;
 
     invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
 
     goto :goto_1
 
-    .line 60
     :cond_1
     new-instance p1, Ljava/util/LinkedHashMap;
 
@@ -60,7 +55,6 @@
 .method public static combineTypeCountMaps(Ljava/util/Map;Ljava/util/Map;)Ljava/util/Map;
     .locals 4
 
-    .line 170
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -82,7 +76,6 @@
 
     const/4 v2, 0x0
 
-    .line 171
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -126,7 +119,6 @@
 .method public getCountForEntry(Lcom/android/server/credentials/metrics/EntryEnum;)I
     .locals 1
 
-    .line 125
     iget-object p0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mEntryCounts:Ljava/util/Map;
 
     const/4 v0, 0x0
@@ -151,7 +143,6 @@
 .method public getEntryCountsMap()Ljava/util/Map;
     .locals 0
 
-    .line 80
     iget-object p0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mEntryCounts:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -164,7 +155,6 @@
 .method public getNumEntriesTotal()I
     .locals 1
 
-    .line 133
     iget-object p0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mEntryCounts:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -193,7 +183,6 @@
 .method public getResponseCountsMap()Ljava/util/Map;
     .locals 0
 
-    .line 89
     iget-object p0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mResponseCounts:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -206,7 +195,6 @@
 .method public getUniqueEntries()[I
     .locals 1
 
-    .line 106
     iget-object p0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mEntryCounts:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -235,7 +223,6 @@
 .method public getUniqueEntryCounts()[I
     .locals 1
 
-    .line 115
     iget-object p0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mEntryCounts:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -264,7 +251,6 @@
 .method public getUniqueResponseCounts()[I
     .locals 1
 
-    .line 98
     iget-object p0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mResponseCounts:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -293,7 +279,6 @@
 .method public getUniqueResponseStrings()[Ljava/lang/String;
     .locals 1
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mResponseCounts:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -306,7 +291,6 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 70
     iget-object p0, p0, Lcom/android/server/credentials/metrics/shared/ResponseCollective;->mResponseCounts:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;

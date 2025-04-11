@@ -17,12 +17,10 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenThemeManager;)V
     .locals 0
 
-    .line 408
     iput-object p1, p0, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;->this$0:Lcom/android/server/smartclip/SpenThemeManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 413
     new-instance p1, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo$1;-><init>(Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;)V
@@ -35,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/smartclip/SpenThemeManager;Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;-><init>(Lcom/android/server/smartclip/SpenThemeManager;)V
 
     return-void
@@ -46,7 +43,6 @@
 .method public getPaths()Ljava/lang/String;
     .locals 3
 
-    .line 445
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,7 +59,6 @@
 
     move-result-object v0
 
-    .line 446
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,7 +73,6 @@
 
     move-result-object v0
 
-    .line 447
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,7 +87,6 @@
 
     move-result-object p0
 
-    .line 449
     invoke-static {}, Lcom/android/server/smartclip/SpenThemeManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -124,13 +117,11 @@
 
     return-void
 
-    .line 477
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;->getPaths()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 478
     invoke-static {}, Lcom/android/server/smartclip/SpenThemeManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -151,7 +142,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -160,7 +150,6 @@
 
     const/4 v1, -0x2
 
-    .line 480
     invoke-static {p1, v0, p0, v1}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
     return-void
@@ -173,7 +162,6 @@
 
     return-void
 
-    .line 459
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -183,12 +171,10 @@
 
     const/4 v1, -0x2
 
-    .line 458
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 463
     invoke-static {}, Lcom/android/server/smartclip/SpenThemeManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -209,7 +195,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 465
     invoke-virtual {p0, p1}, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;->setPaths(Ljava/lang/String;)V
 
     return-void
@@ -218,7 +203,6 @@
 .method public setPaths(Ljava/lang/String;)V
     .locals 3
 
-    .line 429
     invoke-static {}, Lcom/android/server/smartclip/SpenThemeManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -239,7 +223,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 430
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -251,14 +234,12 @@
     :cond_0
     const-string v0, ","
 
-    .line 434
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 435
     array-length v0, p1
 
     const/4 v1, 0x2
@@ -270,14 +251,12 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 439
     aget-object v0, p1, v0
 
     iput-object v0, p0, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;->attachSoundPath:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 440
     aget-object p1, p1, v0
 
     iput-object p1, p0, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;->detachSoundPath:Ljava/lang/String;
@@ -290,10 +269,8 @@
 .method public setPaths(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 424
     iput-object p1, p0, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;->attachSoundPath:Ljava/lang/String;
 
-    .line 425
     iput-object p2, p0, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;->detachSoundPath:Ljava/lang/String;
 
     return-void
@@ -302,7 +279,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 490
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -333,7 +309,6 @@
 .method public writeSetting(Landroid/content/Context;)V
     .locals 1
 
-    .line 469
     iget-object p0, p0, Lcom/android/server/smartclip/SpenThemeManager$SoundPathInfo;->mWriteSettingHandler:Landroid/os/Handler;
 
     const/4 v0, 0x0

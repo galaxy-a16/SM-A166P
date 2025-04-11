@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/BleAdvertiserServiceManager;)V
     .locals 0
 
-    .line 89
     iput-object p1, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$2;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-direct {p0}, Lcom/android/server/desktopmode/StateManager$StateListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onUserChanged(Lcom/android/server/desktopmode/State;)V
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/desktopmode/BleAdvertiserServiceManager$2;->this$0:Lcom/android/server/desktopmode/BleAdvertiserServiceManager;
 
     invoke-interface {p1}, Lcom/android/server/desktopmode/State;->getCurrentUserId()I

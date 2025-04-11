@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStats(Lcom/android/server/storage/AppCollector;)Ljava/util/concurrent/CompletableFuture;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/storage/AppCollector;->mStats:Ljava/util/concurrent/CompletableFuture;
 
     return-object p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/storage/AppCollector;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -35,20 +33,16 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/os/storage/VolumeInfo;)V
     .locals 8
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
     new-instance v7, Lcom/android/server/storage/AppCollector$BackgroundHandler;
 
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->get()Lcom/android/internal/os/BackgroundThread;
@@ -59,14 +53,12 @@
 
     move-result-object v2
 
-    .line 66
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
     const-string/jumbo v0, "user"
 
-    .line 67
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -77,7 +69,6 @@
 
     const-string/jumbo v0, "storagestats"
 
-    .line 68
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -104,36 +95,30 @@
 .method public getPackageStats(J)Ljava/util/List;
     .locals 2
 
-    .line 79
     monitor-enter p0
 
-    .line 80
     :try_start_0
     iget-object v0, p0, Lcom/android/server/storage/AppCollector;->mStats:Ljava/util/concurrent/CompletableFuture;
 
     if-nez v0, :cond_0
 
-    .line 81
     new-instance v0, Ljava/util/concurrent/CompletableFuture;
 
     invoke-direct {v0}, Ljava/util/concurrent/CompletableFuture;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/storage/AppCollector;->mStats:Ljava/util/concurrent/CompletableFuture;
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/storage/AppCollector;->mBackgroundHandler:Lcom/android/server/storage/AppCollector$BackgroundHandler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 84
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 88
     :try_start_1
     iget-object p0, p0, Lcom/android/server/storage/AppCollector;->mStats:Ljava/util/concurrent/CompletableFuture;
 
@@ -151,7 +136,6 @@
 
     goto :goto_1
 
-    .line 92
     :catch_0
     sget-object p0, Lcom/android/server/storage/AppCollector;->TAG:Ljava/lang/String;
 
@@ -164,7 +148,6 @@
     :catch_1
     move-exception p0
 
-    .line 90
     sget-object p1, Lcom/android/server/storage/AppCollector;->TAG:Ljava/lang/String;
 
     const-string p2, "An exception occurred while getting app storage"
@@ -180,7 +163,6 @@
     :catchall_0
     move-exception p1
 
-    .line 84
     :try_start_2
     monitor-exit p0
     :try_end_2

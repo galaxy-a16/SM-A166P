@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIndividualEnabled(Lcom/android/server/sensorprivacy/PersistedState$PVersion1;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sensorprivacy/PersistedState$PVersion1;->mIndividualEnabled:Landroid/util/SparseArray;
 
     return-object p0
@@ -20,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$maddState(Lcom/android/server/sensorprivacy/PersistedState$PVersion1;IIZ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/sensorprivacy/PersistedState$PVersion1;->addState(IIZ)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$mupgrade(Lcom/android/server/sensorprivacy/PersistedState$PVersion1;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sensorprivacy/PersistedState$PVersion1;->upgrade()V
 
     return-void
@@ -38,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$smfromPVersion0(Lcom/android/server/sensorprivacy/PersistedState$PVersion0;)Lcom/android/server/sensorprivacy/PersistedState$PVersion1;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/sensorprivacy/PersistedState$PVersion1;->fromPVersion0(Lcom/android/server/sensorprivacy/PersistedState$PVersion0;)Lcom/android/server/sensorprivacy/PersistedState$PVersion1;
 
     move-result-object p0
@@ -49,10 +45,8 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 409
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 407
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -65,7 +59,6 @@
 
     return-void
 
-    .line 411
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -79,7 +72,6 @@
 .method public synthetic constructor <init>(ILcom/android/server/sensorprivacy/PersistedState$PVersion1-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sensorprivacy/PersistedState$PVersion1;-><init>(I)V
 
     return-void
@@ -88,10 +80,8 @@
 .method public static fromPVersion0(Lcom/android/server/sensorprivacy/PersistedState$PVersion0;)Lcom/android/server/sensorprivacy/PersistedState$PVersion1;
     .locals 8
 
-    .line 416
     invoke-static {p0}, Lcom/android/server/sensorprivacy/PersistedState$PVersion0;->-$$Nest$mupgrade(Lcom/android/server/sensorprivacy/PersistedState$PVersion0;)V
 
-    .line 418
     new-instance v0, Lcom/android/server/sensorprivacy/PersistedState$PVersion1;
 
     const/4 v1, 0x1
@@ -100,12 +90,10 @@
 
     const/4 v1, 0x0
 
-    .line 420
     filled-new-array {v1}, [I
 
     move-result-object v2
 
-    .line 422
     :try_start_0
     const-class v3, Lcom/android/server/pm/UserManagerInternal;
 
@@ -126,7 +114,6 @@
     :catch_0
     move-exception v3
 
-    .line 424
     invoke-static {}, Lcom/android/server/sensorprivacy/PersistedState;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
     move-result-object v4
@@ -138,18 +125,15 @@
     :goto_0
     move v3, v1
 
-    .line 428
     :goto_1
     array-length v4, v2
 
     if-ge v3, v4, :cond_1
 
-    .line 429
     aget v4, v2, v3
 
     move v5, v1
 
-    .line 431
     :goto_2
     invoke-static {p0}, Lcom/android/server/sensorprivacy/PersistedState$PVersion0;->-$$Nest$fgetmIndividualEnabled(Lcom/android/server/sensorprivacy/PersistedState$PVersion0;)Landroid/util/SparseArray;
 
@@ -161,7 +145,6 @@
 
     if-ge v5, v6, :cond_0
 
-    .line 432
     invoke-static {p0}, Lcom/android/server/sensorprivacy/PersistedState$PVersion0;->-$$Nest$fgetmIndividualEnabled(Lcom/android/server/sensorprivacy/PersistedState$PVersion0;)Landroid/util/SparseArray;
 
     move-result-object v6
@@ -170,7 +153,6 @@
 
     move-result v6
 
-    .line 433
     invoke-static {p0}, Lcom/android/server/sensorprivacy/PersistedState$PVersion0;->-$$Nest$fgetmIndividualEnabled(Lcom/android/server/sensorprivacy/PersistedState$PVersion0;)Landroid/util/SparseArray;
 
     move-result-object v7
@@ -181,7 +163,6 @@
 
     check-cast v7, Lcom/android/server/sensorprivacy/SensorState;
 
-    .line 435
     invoke-virtual {v7}, Lcom/android/server/sensorprivacy/SensorState;->isEnabled()Z
 
     move-result v7
@@ -206,31 +187,26 @@
 .method public final addState(IIZ)V
     .locals 2
 
-    .line 443
     iget-object v0, p0, Lcom/android/server/sensorprivacy/PersistedState$PVersion1;->mIndividualEnabled:Landroid/util/SparseArray;
 
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    .line 444
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/util/SparseArray;
 
-    .line 445
     iget-object p0, p0, Lcom/android/server/sensorprivacy/PersistedState$PVersion1;->mIndividualEnabled:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 447
     new-instance p0, Lcom/android/server/sensorprivacy/SensorState;
 
     invoke-direct {p0, p3}, Lcom/android/server/sensorprivacy/SensorState;-><init>(Z)V
 
-    .line 448
     invoke-virtual {v0, p2, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     return-void
@@ -239,6 +215,5 @@
 .method public final upgrade()V
     .locals 0
 
-    .line 0
     return-void
 .end method

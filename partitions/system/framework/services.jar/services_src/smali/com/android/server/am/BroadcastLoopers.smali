@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$4MYuc0pFN2-JmQBSNZCOW5D_3Yo(Landroid/os/Looper;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/am/BroadcastLoopers;->lambda$waitForBarrier$3(Landroid/os/Looper;Ljava/util/concurrent/CountDownLatch;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$WIew2HZ0muKHzNdBiHanIn9J4RQ(Ljava/util/concurrent/CountDownLatch;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/BroadcastLoopers;->lambda$waitForIdle$0(Ljava/util/concurrent/CountDownLatch;)Z
 
     move-result p0
@@ -31,7 +29,6 @@
 .method public static synthetic $r8$lambda$dF4GHTHa_LqpPlGCpwnd_oKTMWI(Landroid/os/Looper;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/am/BroadcastLoopers;->lambda$waitForIdle$1(Landroid/os/Looper;Ljava/util/concurrent/CountDownLatch;)V
 
     return-void
@@ -40,7 +37,6 @@
 .method public static synthetic $r8$lambda$x7aU0GJT5g-wwwkfxaHgAK8SyCs(Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/BroadcastLoopers;->lambda$waitForBarrier$2(Ljava/util/concurrent/CountDownLatch;)V
 
     return-void
@@ -49,7 +45,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 44
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -62,19 +57,16 @@
 .method public static addMyLooper()V
     .locals 5
 
-    .line 61
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 63
     sget-object v1, Lcom/android/server/am/BroadcastLoopers;->sLoopers:Landroid/util/ArraySet;
 
     monitor-enter v1
 
-    .line 64
     :try_start_0
     invoke-virtual {v1, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
@@ -84,7 +76,6 @@
 
     const-string v2, "BroadcastLoopers"
 
-    .line 65
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +96,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     :cond_0
     monitor-exit v1
 
@@ -128,7 +118,6 @@
 .method public static synthetic lambda$waitForBarrier$2(Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 94
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
@@ -137,7 +126,6 @@
 .method public static synthetic lambda$waitForBarrier$3(Landroid/os/Looper;Ljava/util/concurrent/CountDownLatch;)V
     .locals 1
 
-    .line 93
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -154,7 +142,6 @@
 .method public static synthetic lambda$waitForIdle$0(Ljava/util/concurrent/CountDownLatch;)Z
     .locals 0
 
-    .line 80
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     const/4 p0, 0x0
@@ -165,12 +152,10 @@
 .method public static synthetic lambda$waitForIdle$1(Landroid/os/Looper;Ljava/util/concurrent/CountDownLatch;)V
     .locals 1
 
-    .line 78
     invoke-virtual {p0}, Landroid/os/Looper;->getQueue()Landroid/os/MessageQueue;
 
     move-result-object p0
 
-    .line 79
     new-instance v0, Lcom/android/server/am/BroadcastLoopers$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p1}, Lcom/android/server/am/BroadcastLoopers$$ExternalSyntheticLambda3;-><init>(Ljava/util/concurrent/CountDownLatch;)V
@@ -183,7 +168,6 @@
 .method public static waitForBarrier(Ljava/io/PrintWriter;)V
     .locals 1
 
-    .line 92
     new-instance v0, Lcom/android/server/am/BroadcastLoopers$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/am/BroadcastLoopers$$ExternalSyntheticLambda0;-><init>()V
@@ -196,18 +180,15 @@
 .method public static waitForCondition(Ljava/io/PrintWriter;Ljava/util/function/BiConsumer;)V
     .locals 9
 
-    .line 105
     sget-object v0, Lcom/android/server/am/BroadcastLoopers;->sLoopers:Landroid/util/ArraySet;
 
     monitor-enter v0
 
-    .line 106
     :try_start_0
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
 
     move-result v1
 
-    .line 107
     new-instance v2, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {v2, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
@@ -217,7 +198,6 @@
     :goto_0
     if-ge v3, v1, :cond_1
 
-    .line 109
     sget-object v4, Lcom/android/server/am/BroadcastLoopers;->sLoopers:Landroid/util/ArraySet;
 
     invoke-virtual {v4, v3}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -226,24 +206,20 @@
 
     check-cast v4, Landroid/os/Looper;
 
-    .line 110
     invoke-virtual {v4}, Landroid/os/Looper;->getQueue()Landroid/os/MessageQueue;
 
     move-result-object v5
 
-    .line 111
     invoke-virtual {v5}, Landroid/os/MessageQueue;->isIdle()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 112
     invoke-virtual {v2}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     goto :goto_1
 
-    .line 114
     :cond_0
     invoke-interface {p1, v4, v2}, Ljava/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
@@ -252,7 +228,6 @@
 
     goto :goto_0
 
-    .line 117
     :cond_1
     monitor-exit v0
     :try_end_0
@@ -262,7 +237,6 @@
 
     move-wide v3, v0
 
-    .line 120
     :goto_2
     invoke-virtual {v2}, Ljava/util/concurrent/CountDownLatch;->getCount()J
 
@@ -272,7 +246,6 @@
 
     if-lez p1, :cond_3
 
-    .line 121
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v5
@@ -285,7 +258,6 @@
 
     if-ltz p1, :cond_2
 
-    .line 124
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,7 +282,6 @@
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 125
     invoke-virtual {p0}, Ljava/io/PrintWriter;->flush()V
 
     move-wide v3, v5
@@ -318,7 +289,6 @@
     :cond_2
     const-wide/16 v5, 0x64
 
-    .line 127
     invoke-static {v5, v6}, Landroid/os/SystemClock;->sleep(J)V
 
     goto :goto_2
@@ -326,10 +296,8 @@
     :cond_3
     const-string p1, "Loopers drained!"
 
-    .line 129
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {p0}, Ljava/io/PrintWriter;->flush()V
 
     return-void
@@ -337,7 +305,6 @@
     :catchall_0
     move-exception p0
 
-    .line 117
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -349,7 +316,6 @@
 .method public static waitForIdle(Ljava/io/PrintWriter;)V
     .locals 1
 
-    .line 77
     new-instance v0, Lcom/android/server/am/BroadcastLoopers$$ExternalSyntheticLambda1;
 
     invoke-direct {v0}, Lcom/android/server/am/BroadcastLoopers$$ExternalSyntheticLambda1;-><init>()V

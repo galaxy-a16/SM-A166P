@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowManagerConstants;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerConstants$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/wm/WindowManagerConstants;
@@ -27,7 +26,6 @@
 .method public final onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerConstants$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/wm/WindowManagerConstants;
 
     invoke-static {p0, p1}, Lcom/android/server/wm/WindowManagerConstants;->$r8$lambda$2Z7kje8Pgr8ADfF4DnAnepTbpsk(Lcom/android/server/wm/WindowManagerConstants;Landroid/provider/DeviceConfig$Properties;)V
